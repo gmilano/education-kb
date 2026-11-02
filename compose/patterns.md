@@ -4,6 +4,171 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — reads `2026-11-02` — **six recipes, every component byte-read today, plus the mechanism behind a control debt that has now failed to discharge three passes running — and `622-S`'s diagnosis of it was wrong**
+
+### 🔴 `623-M` — `make hooks` refused a **third** consecutive pass, and the refusal states its own mechanism
+
+🔵 `622-S #1` made this the **first** action `p623` should attempt, and argued the variable was *"the
+session's permission set, not the code's origin"*, explicitly retiring `618-B`'s provenance theory.
+🟢 It was attempted first. 🔴 **It was refused, and the refusal names the key:**
+
+```
+Permission for this action was denied by the Claude Code auto mode classifier.
+Reason: [Code from External]
+```
+
+🔴 **`622-S` had it backwards.** The gate is an **auto-mode classifier** — a permission mechanism, so
+`622-S` was right that the permission set matters — but what the classifier keys on is
+`Code from External`, i.e. **the provenance of the code being executed**. 🟢 `618-B`'s provenance
+theory was therefore *substantially correct* and `622-S` retired it on bad grounds.
+
+🔵 Both facts are needed to explain the history: `p620` executed all `70` gates and `p621`/`p622`/`p623`
+could not, over the same repository — so provenance alone cannot be the whole story either. 🟢 **The
+consistent account: the classifier decides, it keys on external-code provenance, and its disposition
+toward this clone has varied across sessions.**
+
+> 🟢 **Standing guidance, replacing `622-S #1`:** stop scheduling `make hooks` as a dischargeable
+> first action. It is **not** reliably dischargeable from a session that cloned this repository. Verify
+> shelf edits by **reimplementing the published contract as code in the session's own scratchpad** —
+> which is what `p622` did and what this pass did (the `prepend` contract, the oracle extractor with
+> `622-F`'s deny-list, and the `ls-remote` liveness probe were all written fresh here, not read).
+> 🔵 `620-S` already showed that *reading* the contract instead of reimplementing it fails.
+
+🔵 **And this pass's own instrument carried a defect of exactly the kind reimplementation catches**
+(`623-C`): the extractor stripped trailing punctuation from repo names, and one repository's name
+**ends in a dot**, so the strip manufactured a false absence. Found by running the control, not by
+reading the code.
+
+### 🟢 `P1` — Curriculum-aligned tutoring on a permissive base, EMEA-first — `8-10` weeks
+
+🔵 The only recipe in this base where **both** the runtime and the curriculum vocabulary are
+commercially clean, which is why it leads.
+
+| Component | Grant (byte-read) | Role |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT`, `1,065 B` | Multi-agent classroom runtime — topic/document → interactive class |
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 `OGL-3.0` data + `MIT` code | The curriculum spine: OWL/SKOS vocabulary + instance data |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0`, `11,120 B` | LMS of record — permissive, so a derivative may ship |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT`, `1,097 B` | Offline delivery for low-connectivity cohorts |
+
+**Wiring.** Load the Oak `ontology/` and `data/` trees into a vector + graph store keyed by curriculum
+node. Each `OpenMAIC` agent turn is constrained to retrieve only within the current node's subtree, so
+"on-curriculum" is a **retrieval invariant**, not a prompt instruction. Mount into Sakai via LTI 1.3;
+export the same node graph to Kolibri channels for offline cohorts. Carry the attribution string
+*"Contains public sector information licensed under the Open Government Licence v3.0."* plus a credit
+to Oak National Academy in the product UI — 🔴 **this is a licence obligation, not a courtesy**
+(`623-R`).
+
+🔴 **Do not substitute `edx-platform` for Sakai here.** It is `AGPL-3.0` (`35,136 B`, byte-read) and
+this pattern ships a derivative.
+
+### 🟢 `P2` — EU AI Act high-risk conformity pack for assessment systems, EMEA — `10-12` weeks
+
+🔵 Aimed squarely at the obligation: education AI that **evaluates learners or influences access to
+qualifications** is high-risk under the AI Act, with conformity assessment, human oversight and
+registration in the European AI Office database.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 `Apache-2.0`, `13,185 B` | Credential-integrity validation — the assertion side of "influences access to qualifications" |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` (`COPYING.txt`) | System of record; **plugin boundary** keeps the conformity pack outside copyleft |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` | Assessment-session capture → the human-oversight evidence trail |
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | 🟡 `MIT` + unresolvable exceptions (`623-E`) | Renders the technical documentation file the conformity assessment requires |
+
+**Wiring.** Every assessment decision writes an immutable record: input, model version, retrieved
+evidence, the human reviewer's identity and their override. Quarto renders that store into the Annex IV
+technical documentation on each release. Ship as a Moodle plugin, never a core patch. 🔴 **Date risk is
+the deliverable's main assumption:** `2 December 2027` for stand-alone Annex III systems per Regulation
+(EU) `2026/1744`, against an earlier `August 2026` reading still in circulation — the engagement must
+open by confirming the consolidated text. 🔴 Use Quarto to *run* the render; flag to counsel before
+redistributing Quarto itself (`623-E`).
+
+### 🟢 `P3` — District AI-policy compliance tooling, North America — `6-8` weeks
+
+🔵 Four states (**Maryland, Idaho, Oklahoma, Virginia**) require *both* state guidance and mandatory
+district-level AI policy adoption; DC-style rules **bar** AI from grading, discipline, IEP decisions
+and teacher evaluation. 🟢 The product is a deployment that can **prove** the bar was respected.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | Where the restricted actions live (gradebook, records) |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 `MIT`, `1,150 B` | K-12 ERP/SIS — small enough to fork for the student-records side |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 `MIT`, `1,078 B`, branch `2.2` | Enrolment/admissions funnel, kept clear of restricted decisions |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 `Apache-2.0` | Credential assertions a district can audit |
+
+**Wiring.** A policy-as-code layer in front of every AI call: a deny-list of decision *classes*
+(`grade`, `discipline`, `iep`, `teacher_eval`) enforced at the service boundary and logged on both
+allow and deny. The **deny log is the product** — it is what a district shows a state reviewer. Add the
+grade-band gate (New York's `A 9190` shape: ninth grade and above, with diagnostic and
+special-education carve-outs) as a per-call attribute, not a per-deployment setting.
+
+🔵 **Attach the ADA remediation line to the same engagement**: large public institutions face an
+**April 2026** web-accessibility deadline, and `sakai` (`ECL-2.0`) plus Moodle plugin work are where
+that is deliverable without touching copyleft.
+
+### 🟢 `P4` — Governance-and-enablement on an installed base, LATAM — `6-8` weeks, budget-constrained
+
+🔵 Sized from measurement, not hope: `87 %` of LATAM higher-ed institutions already use AI, `26 %` have
+a strategy, `< 10 %` have guidelines *with* capacity, and 🔴 **`55 %` have no AI budget at all.**
+🟢 So this pattern assumes the first engagement is funded from a non-AI line and that every component
+must be free to run.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT`, `1,097 B` | Offline-first delivery — the regional anchor |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | The installed base; plugin work is the volume play |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, `11,408 B` | Tutoring runtime, self-hosted |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | Multi-agent classroom where cohort size justifies it |
+
+**Wiring.** Do **not** start with a model. Start with an institutional AI register — every AI use
+already running, who owns it, what data it touches — because bottom-up adoption by individual
+academics is the documented pattern and the register is the artefact the `26 %`/`87 %` gap is made of.
+Then: one written guideline set, one capacity-building track for faculty, and *one* self-hosted
+reference deployment (DeepTutor on Kolibri-delivered content) as the sanctioned path. 🟢 Anchor
+credibility to the regional institutions by name — UNESCO's **LAC Observatory** (launched April `2026`)
+and the **Tec de Monterrey**–UNESCO agreement (March `2026`). 🔵 Design every compliance artefact for
+reuse across jurisdictions: `716` regulatory instruments across `23` countries and **no** single
+regional law, so portability is the value.
+
+### 🟢 `P5` — TEQSA institutional action plans, APAC/Australia — `4-6` weeks per institution
+
+🔵 The most clearly scoped engagement in any region: Australia's higher-education regulator requires
+**all** providers to file institutional action plans addressing generative-AI risk. A national sector,
+a named deliverable, one template.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) / [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `GPL-3.0` / 🟢 `ECL-2.0` | Whichever the provider runs; Sakai if a derivative must ship |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0`, `11,340 B` | Assessment-integrity evidence (capture + indexing) |
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | 🟡 `MIT` + exceptions | Renders the plan itself, reproducibly, per institution |
+
+**Wiring.** Build the plan as a **repository**, not a document: risk register as structured data, each
+risk linked to the control that mitigates it and the evidence query that proves the control runs.
+Quarto renders the submission. The same repo re-renders next cycle with updated evidence, which is what
+turns a one-off filing into a retainer. 🟡 Reuse the `P2` conformity store wholesale for any provider
+whose tools also reach EU students — the AI Act's high-risk regime follows the tool, not the domicile.
+
+### 🟢 `P6` — Medical-education anatomy explorer, Global — `4` weeks
+
+🔵 `622-N` opened this tier with `0` prior mentions; this pass has its licence fully settled and a
+second instance, so it is now buildable rather than merely noted.
+
+| Component | Grant (byte-read) | Role |
+|---|---|---|
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 `MIT` code `1,064 B`; meshes **`CC BY 4.0`** (`623-D`) | `2,234`-mesh 3D anatomy explorer, `3,432` named concepts |
+| [`Yoosseph/dental-scope`](https://github.com/Yoosseph/dental-scope) | 🟢 `MIT`, `1,741 B` | Dental tier — teeth, jaws, nerves, root canals |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | Agent layer: viva-style questioning against the selected structure |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` | Lecture capture to align explorer sessions with taught content |
+
+**Wiring.** Bind the mesh-selection event to an `OpenMAIC` agent turn: selecting a structure passes its
+concept ID (one of the `3,432`) as retrieval scope, so the agent examines on **the structure in view**.
+🟢 **Licence position, fully settled this pass:** code `MIT`, geometry `CC BY 4.0`, share-alike does
+**not** apply, commercial use permitted with attribution carried — and the project's own
+`public/ATTRIBUTION.md` documents that the legacy `CC BY-SA 2.1 Japan` text in the source OBJ comments
+is superseded. 🔵 Carry the BodyParts3D/DBCLS credit in-product. 🔴 Two residuals: the upstream licence
+page at `dbarchive.biosciencedbc.jp` was not fetched directly, and `33 MB` of compressed geometry needs
+a CDN budget line. 🔴 Not a clinical tool — the project says so, and the engagement must repeat it.
+
 ## 🆕 `p622` — reads `2026-11-02` — **five recipes, every component byte-read today or already shelved and re-probed, plus the structural answer to a control debt that has now failed to discharge four passes running**
 
 ### 🔴 `P622-0` — Read the licence payload in full, before anything else — `0.5` wk, and it is not optional

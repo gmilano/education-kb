@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — `2026-11-02` — **the trending channel is measured instead of trusted: `topic:` counts are lower bounds, and the two biggest repos in their own tiers are invisible to it**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated `github trending {industry} AI {year}` leg: no official source, and the digests disagree with the API
+
+🔵 The leg returns no GitHub-operated trending page at all — only auto-generated digests
+(`agents-radar`, `ai-radar`, `coddykit`) and SEO posts. 🟢 **Where a digest named a figure this pass,
+channel B was asked the same question the same day:**
+
+| Repo | Digest claim | Channel B, `2026-11-02` | Delta |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | `~52,783★` (Nov 1 digest) | 🟢 `54,272★`, pushed `2026-10-31` | 🔵 `+1,489` in a day or two — digest lag, not error |
+| `patchy631/ai-engineering-hub` | *"about 40K stars, 93+ projects"* | 🟢 `40,933★`, `MIT`, pushed `2026-11-01` | 🟢 Confirmed |
+| `rasbt/LLMs-from-scratch` | `~107K★` | 🟢 `107,703★` | 🟢 Confirmed |
+| `THU-MAIC/OpenMAIC` | *"open-source AI platform from Tsinghua MAIC lab"*, no figure | 🟢 **`42,490★`**, `MIT` byte-read, pushed `2026-11-02` | 🟢 Digest **understated**: this is a `42k★` repo |
+
+🔵 **DeepTutor's single-day gain of `+2,282★`** reported by the Oct 31 digest is consistent with the
+channel-B delta and is the largest in that digest's dataset.
+
+### 🔴 The trending-discovery finding: a `topic:` count is a lower bound, never a tier measurement
+
+🟢 Twelve `topic:`-qualified sweeps were run through channel B this pass, `143` rows returned. The
+counts, published because the *shape* is the finding:
+
+| Query | `total_count` |
+|---|---|
+| `topic:language-learning stars:>300 pushed:>2026-01-01` | `31` |
+| `topic:ai-tutor stars:>50` | `25` |
+| `topic:spaced-repetition stars:>300 pushed:>2026-01-01` | `25` |
+| `topic:lms stars:>300 pushed:>2026-01-01` | `21` |
+| `topic:psychometrics stars:>30` | `20` |
+| `topic:edtech stars:>300 pushed:>2026-01-01` | `16` |
+| `topic:intelligent-tutoring-system stars:>20` | `6` |
+| `topic:grading stars:>100` | `4` |
+| `topic:accessibility topic:education stars:>50` | `4` |
+| `topic:learning-analytics stars:>50` | `3` |
+| `topic:education topic:agent stars:>100` | `2` |
+| `topic:medical-education stars:>100` | 🔴 **`1`** |
+
+🔴 **The last row is the proof.** The medical-education tier's adoption leader is `human-atlas` at
+`4,456★` — and it carries **zero topics**, so the tier query cannot return it. `OpenMAIC`, at
+`42,490★` the largest education-native agent on these shelves, carries zero topics too. 🔵 Both are
+`PRESENT`, both are shelved, and both are invisible to the channel that is supposed to find them.
+
+> 🟢 **Rule for every future trending pass:** publish `topic:` counts as **lower bounds on tier size**
+> and never as tier measurements, and never report a low count as a thin tier. `623-A` carries the
+> calibration.
+
+### 🟢 Trending repos with a real grant, byte-read today
+
+| Repo | Grant | ★ | `pushed_at` | Why it is here |
+|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT`, `1,065 B` | `42,490` | `2026-11-02` | Education-native multi-agent classroom, pushed today, APAC-authored |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, `11,408 B` | `54,272` | `2026-10-31` | The tier's adoption leader, still accelerating |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`**, `11,340 B` | `509` | `2026-11-02` | 🟢 Reached by repairing a dead citation (`623-K`); introduces `ECL-2.0` to this base (`623-I`) |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 `MIT`, `1,150 B` | `55` | `2026-09-23` | School ERP; channel B calls it `NOASSERTION` and is wrong (`623-G`) |
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **dual**: `OGL-3.0` data + `MIT` code | `24` | `2026-10-29` | UK curriculum ontology — the code/content split's fourth instance, and the first with a *government* content licence |
+
+🔴 **Dead-citation note for the trending shelf.** `75` addresses carried on these files are absent as
+of today's full sweep (`623-B`). Two whole families that trending passes have cited as live
+integration targets are **gone from their canonical orgs**: the `1EdTech`/`imsglobal` **Caliper
+Analytics** SDKs (four addresses; only `2018`–`2023` `LGPL-3.0` forks survive) and
+`concentricsky/badgr-server` (only `2016`–`2022` forks). 🔵 `623-K` carries the moved-vs-gone split.
+
 ## 🆕 `p622` — `2026-11-02` — **two `4,000★`-class publishing repos land, one of them under an address this base would have got wrong, and the week's instrument finding is that a licence file can be a bespoke document**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

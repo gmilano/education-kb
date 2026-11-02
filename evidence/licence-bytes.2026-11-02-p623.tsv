@@ -1,0 +1,23 @@
+slug	branch	grant_file	bytes	title_line	graded
+THU-MAIC/OpenMAIC	main	LICENSE	1065	MIT License	MIT
+openeducat/openeducat_erp	19.0	LICENSE	8241	For copyright information, please see the COPYRIGHT file.	LGPL-3.0 (body line 2; COPYRIGHT target 404)
+rasbt/LLMs-from-scratch	main	LICENSE.txt	11505	Apache License	Apache-2.0 (+158B over stock, residual unread)
+idurar/idurar-erp-crm	master	LICENSE	34230	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0
+hcengineering/platform	develop	LICENSE	14197	Eclipse Public License - v 2.0	EPL-2.0
+opencast/opencast	develop	LICENSE	11340	Educational Community License, Version 2.0 (ECL-2.0)	ECL-2.0
+sakaiproject/sakai	master	LICENSE	11120	Educational Community License, Version 2.0 (ECL-2.0)	ECL-2.0
+moodle/moodle	main	COPYING.txt	35147	GNU GENERAL PUBLIC LICENSE	GPL-3.0 (rung 13; 12-rung ladder returned NO-GRANT)
+openedx/edx-platform	master	LICENSE	35136	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0 (channel B 422 - blind)
+learningequality/kolibri	develop	LICENSE	1097	MIT License	MIT
+apache/ofbiz-framework	trunk	LICENSE	11906	Apache License	Apache-2.0 (+559B over stock)
+h5p/h5p-php-library	master	LICENSE.txt	35146	GNU GENERAL PUBLIC LICENSE	GPL
+bigbluebutton/bigbluebutton	v4.0.x-develop	LICENSE	7652	GNU LESSER GENERAL PUBLIC LICENSE	LGPL-3.0
+1EdTech/openbadges-validator-core	develop	LICENSE	13185	Apache License	Apache-2.0
+Gego-K12/gegok12	main	LICENSE	1150	MIT License	MIT (channel B says NOASSERTION - wrong)
+oaknational/oak-curriculum-ontology	main	LICENSE.md	1867	# License	DUAL: OGL-3.0 data + MIT code
+Yoosseph/dental-scope	main	LICENSE	1741	MIT License	MIT
+hluaguo/learn-faster-kit	main	LICENSE	1065	MIT License	MIT
+fchollet/ARC-AGI	master	LICENSE	11347	Apache License	Apache-2.0 (STOCK BAND REFERENCE)
+krayin/laravel-crm	2.2	LICENSE	1078	MIT License	MIT
+ashemag/human-atlas	main	LICENSE	1064	MIT License	MIT (meshes CC BY 4.0 via public/ATTRIBUTION.md 2985B)
+quarto-dev/quarto-cli	main	COPYRIGHT	1262	Quarto	MIT w/ UNENUMERATED exceptions (25 lines, token occurs once)

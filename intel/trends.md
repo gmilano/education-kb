@@ -4,6 +4,120 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — `2026-11-02` — **trends, each with the evidence that would refute it**
+
+### 🟢 `T1` — Adoption is ahead of governance in **every** region that has been measured, and the gap is the product
+
+🔵 Not a forecast — three independent measurements, three regions, same shape: LATAM `87 %` of
+higher-ed institutions using AI against `26 %` with a formal strategy and `< 10 %` with guidelines
+*plus* capacity (UNESCO IESALC, ~`200` institutions, `19` countries); North America `~60 %` of
+teachers using AI tools while most public schools lack a student-facing policy and `55 %` of
+high-school principals have not restricted access; Europe + North America `70 %` of institutions with
+guidance in place or in development (UNESCO-cited).
+
+🔴 **Refuted by:** any region showing governance *leading* adoption, or a measurement where formal
+strategy exceeds use. 🟡 Watch the EMEA high-risk deadline: if `2 December 2027` holds, EMEA may
+become the first region to invert this, and the thesis would then be regional rather than universal.
+
+### 🟢 `T2` — Education's permissive licence family is `ECL-2.0`, and treating it as unknown has been costing this base rows
+
+🔵 `623` passes graded against `MIT`/`Apache-2.0`/`BSD`. 🟢 **Two independent byte-reads this pass**
+establish `ECL-2.0` — the Educational Community License, `Apache-2.0` with a narrowed academic patent
+grant — as the licence of the Apereo-class estate: `sakaiproject/sakai` (`11,120 B`) and
+`opencast/opencast` (`11,340 B`).
+
+🔴 **Refuted by:** `ECL-2.0` turning out to carry an obligation `Apache-2.0` does not, which would move
+it out of the buildable column. 🔵 The patent-clause narrowing was read from the licence title and
+family, **not** clause-by-clause against `Apache-2.0` — that diff is owed.
+
+### 🔴 `T3` — A third party's statement of a licence is wrong often enough to be unusable, and `2026`'s search digests are the worst offender yet
+
+🔵 The series is now long: `622-L` (a package registry asserting a grant the repo does not give),
+`622-D` (a bespoke bilingual licence all three channels are blind to), `623-G` (channel B's
+**sixth** `NOASSERTION` against a real grant). 🔴 **This pass adds the channel a pass is
+*instructed* to research with:** of `3` checkable licence claims in the mandated digests, `3` were
+wrong or unresolvable — `idurar` claimed `MIT`, bytes say `AGPL-3.0`; Huly claimed `Apache-2.0`,
+bytes say `EPL-2.0`; OFBiz claimed both `Apache-2.0` and `GPLv2`, bytes say `Apache-2.0`.
+
+🔴 **Refuted by:** a pass where digest claims and byte reads agree across a comparable sample. 🟢 Until
+then the operating rule stands: **the digest supplies the name, the bytes supply the licence.**
+
+### 🔴 `T4` — The standards layer this industry cites as live integration surface is partly a fork graveyard
+
+🔵 Measured, not asserted (`623-K`). The `1EdTech`/`imsglobal` **Caliper Analytics** reference SDKs
+are absent from their canonical orgs across **four** addresses (`caliper-java`, `caliper-js`,
+`caliper-php`, `caliper-python`); what survives is third-party forks, all `LGPL-3.0`, last pushed
+`2018`–`2023`. `concentricsky/badgr-server` is the same shape, forks from `2016`–`2022`.
+
+🟢 **Important counter-evidence, recorded to stop the overclaim:**
+`1EdTech/openbadges-validator-core` is **live**, `Apache-2.0`, `13,185 B`, branch `develop`. The
+finding is *"the Caliper SDKs are gone"*, **not** *"1EdTech is dead"*.
+
+🔴 **Refuted by:** a canonical, maintained Caliper SDK at a current address — which would mean this
+pass searched the wrong org rather than that the SDKs lapsed.
+
+### 🟢 `T5` — The strongest open-source education supply is now APAC-authored and permissive
+
+🔵 `OpenMAIC` (Tsinghua MAIC, `42,490★`, `MIT` byte-read, pushed `2026-11-02`) and `DeepTutor`
+(HKUDS, `54,272★`, `Apache-2.0`): the two largest education-native agents on these shelves, both
+APAC, both permissive. 🔵 `DeepTutor` has gone `~22k★` → `54,272★` since `p54`, with a digest-reported
+single-day gain of `+2,282★` consistent with the channel-B delta.
+
+🔴 **Refuted by:** a non-APAC education-native agent above `40k★` appearing, or either project
+relicensing. 🟡 Note the measurement caveat: `623-A` proves this base's discovery channels are
+incomplete, so "the largest" means **largest among names it holds**.
+
+### 🔴 `T6` — "Purpose-built, not general-purpose" is the stated direction of travel, and it is still mostly *stated*
+
+🔵 The **OECD 2026 Digital Education Outlook** reportedly advises institutions to move off
+general-purpose assistants onto purpose-built educational AI; vendor and advocacy sources converge on
+curriculum alignment and child safety as the differentiators; `1EdTech` and HolonIQ frame `2026` as a
+year of policy, data limits and workflow-first deployment rather than broad personalisation claims.
+
+🔴 **Refuted by:** procurement data showing general-purpose assistants still winning education deals
+through `2026-27`. 🔴 **Declared weakness:** the sources for this trend are the softest in this file —
+vendor blogs, advocacy pieces and one secondary report of an OECD recommendation that was **not read
+in the original**. It is listed because it is the thesis clients will quote, not because it is well
+evidenced.
+
+### 🟢 `T7` — Statutory deadlines, not pedagogy, are what will fund the next `18` months
+
+🔵 Every region now has at least one dated obligation: **EMEA** high-risk conformity at
+`2 December 2027` under Regulation (EU) `2026/1744` (🔴 dates contested — see `intel/market.md`);
+**APAC** Korea's `AI Basic Act` in force `22 January 2026`, Vietnam's `Decision 33/2026/QD-TTg`
+effective `1 March 2026` with education named high-risk, Australia's TEQSA action plans already due;
+**North America** four states mandating district AI policies plus an **April 2026** ADA
+web-accessibility deadline for large public institutions.
+
+🔴 **Refuted by:** the deadlines slipping as a bloc — and `623`'s EMEA finding is that one already has
+(`August 2026` → `December 2027`), with sources still disagreeing about whether that move is final.
+
+### 🔴 `T8` — The `AGPL` boundary is where education's platform layer actually bites
+
+🔵 Byte-read this pass, not inferred: `openedx/edx-platform` `AGPL-3.0` (`35,136 B`),
+`idurar/idurar-erp-crm` `AGPL-3.0` (`34,230 B`), `HugeCatLab/ChatTutor` `AGPL-3.0`. 🔵 Against them,
+`moodle` is `GPL-3.0` with a **plugin boundary** that keeps client code outside the copyleft surface —
+which is why the whole `moodle-*-mcp` wave this base tracks is commercially viable and an
+`edx-platform` hosted derivative is not, without counsel.
+
+🔴 **Refuted by:** a client deployment shipping a hosted `AGPL` derivative with counsel's sign-off,
+which would reprice the whole tier. 🟢 The practical read: **choose the copyleft *shape*, not just the
+copyleft *strength*** — `GPL-3.0`-with-a-plugin-API is more usable than `AGPL-3.0`-with-none.
+
+### 🟡 `T9` — This base's own instruments are a trend, and this pass is the one that admits the discovery channels are not measurements
+
+🔴 `623-A`: channel-B free text is conjunctive (`total_count` `3` on a four-word education query, `2`
+rows across twelve tier probes); `topic:` discovery has an author-labelling floor and is blind to
+`OpenMAIC` (`42,490★`, zero topics) and `human-atlas` (`4,456★`, zero topics). 🔴 `623-N`: the licence
+ladder graded **Moodle** as having no grant — fifth missing rung in five passes (`COPYING.txt`).
+🔴 `623-O`: channel B `422`s on `openedx/edx-platform`, a fifth channel-failure shape, and
+`622-F`'s canonicity rule would have discarded the industry's second-largest platform.
+
+🟢 **Refuted by:** a pass that finds **no** new instrument defect. 🔵 That has not happened in six
+passes, and the honest reading is that these shelves' defect rate is a property of the environment —
+one broken existence recipe, one blind metadata channel, one incomplete ladder — not of any single
+pass's carelessness.
+
 ## 🆕 `p622` — `2026-11-02` — **trends, each with the evidence that would refute it**
 
 ### 🔴 `T622-1` — A licence is a *document*, not a token, and this is the first instance where every automated channel in use is blind to the term that matters

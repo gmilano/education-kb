@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — reads `2026-11-02` — **🔴 THE LADDER RETURNED "NO GRANT" FOR `moodle/moodle` — THE MOST DEPLOYED PLATFORM IN THIS INDUSTRY — AND THE MISSING RUNG IS `COPYING.txt`. 🔴 AND CHANNEL B IS **TOTALLY BLIND** TO `openedx/edx-platform`, WHICH REFUTES MECHANICAL USE OF `622-F`'s CANONICITY RULE. 🟢 `ECL-2.0` IS CONFIRMED ON A SECOND INSTANCE AND IS EDUCATION'S OWN PERMISSIVE FAMILY.**
+
+### 🔴 `623-N` — the ladder graded **Moodle** as having no grant, and that is a `623`-pass-old hole
+
+🔵 Rule `v4`, extended to `12` rungs this pass, was run over the foundation tier. 🔴 **It returned
+`NO-GRANT-AT-12-RUNGS` for `moodle/moodle`** — the platform with the largest installed base in
+education, `7,574★`, pushed `2026-10-30`.
+
+| Rung probed on `main` | Result |
+|---|---|
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`, `LICENSE-MIT` | 🔴 all `404` at `14 B` |
+| `COPYING`, `COPYING.md`, `COPYING.LESSER`, `COPYING.LIB`, `COPYRIGHT`, `LICENSE.rst` | 🔴 all `404` at `14 B` |
+| 🟢 **`COPYING.txt`** | 🟢 **`200`, `35,147 B`, title `GNU GENERAL PUBLIC LICENSE`** |
+
+🟢 **Rung `13` is `COPYING.txt`.** 🔵 `35,147 B` is the stock `GPL-3.0` band this base measured at
+`621-B` (`usaskulc/cat`, byte-identical size) and corroborated again this pass on
+`h5p/h5p-php-library` (`LICENSE.txt`, `35,146 B`). Channel B's `GPL-3.0` for Moodle is **correct**;
+the ladder was wrong.
+
+🔴 **Five consecutive passes, five missing rungs** — `p620` (`LICENSE-MIT`, `packages/*/LICENSE`),
+`p622` (`COPYING.md`, `COPYRIGHT`), `p623` (`COPYING.txt`). 🔵 `622-H` already concluded the ladder
+*"is not converging by guessing"*. 🟢 This pass is the strongest evidence yet, because the repository
+it failed on is the one any education engagement meets first.
+
+### 🔴 `623-O` — channel B cannot see `openedx/edx-platform` **at all**, and `622-F`'s canonicity rule would therefore discard it
+
+🔵 `622-F` published the rule: *`ls-remote` `PRESENT` **+** channel B `422`/`0` ⇒ **not citable as
+canonical***. 🔴 **Run against the Open edX platform, that rule returns the wrong answer.**
+
+| Channel | Result, `2026-11-02` |
+|---|---|
+| `ls-remote --symref` | 🟢 `PRESENT`, `refs/heads/master`, `f2fc446` |
+| `raw.githubusercontent.com/.../master/LICENSE` | 🟢 `200`, **`35,136 B`**, `GNU AFFERO GENERAL PUBLIC LICENSE` |
+| `gh api search/repositories -f q='repo:openedx/edx-platform'` | 🔴 **`422` Validation Failed** |
+| `gh api search/repositories -f q='edx-platform in:name org:openedx'` | 🔴 **`0` rows** |
+
+🔵 `621-R` attributed channel-B `422` to **renames** and `621-M` to **forks**. 🔴 Neither explains
+this: the repository is live on `master`, serves a `35 KB` `AGPL-3.0` grant, and is the canonical
+home of Open edX. 🟢 **A fifth channel-B failure shape is therefore named: the channel has an
+indexing ceiling that excludes some very large repositories outright**, and nothing in a `422`
+distinguishes it from a rename.
+
+> 🟢 **Rule amendment:** `622-F`'s canonicity test may **demote** an address to *unverified*, never to
+> *not canonical*, and a `422` on a repository whose grant byte-reads at an industry-tier size is a
+> **channel defect**, not a verdict on the repository.
+
+### 🟢 `623-P` — the foundation tier, every grant byte-read today
+
+Default branch resolved by `ls-remote --symref` first — note three non-obvious ones — and the grant
+read at `raw.githubusercontent.com`, graded by rule `v5` (`623-F`). **Ten rows.**
+
+| Repo | Grant (byte-read) | Bytes | Branch | ★ | Globant can build on it? |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | `35,147 B` in **`COPYING.txt`** (`623-N`) | `main` | `7,574` | 🟡 Plugin/extension work only; core is copyleft |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 `AGPL-3.0` | `35,136 B` | `master` | 🔴 channel-blind (`623-O`) | 🟡 Self-hosted deployment + plugins; AGPL network clause binds hosted offerings |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | `11,120 B` | `master` | `1,240` | 🟢 **Yes** — Apache-derived permissive (`623-I`) |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** | `11,340 B` | `develop` | `509` | 🟢 **Yes**; lecture capture / media. Reached by repairing a dead citation (`623-K`) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,097 B` | `develop` | `1,165` | 🟢 **Yes** — offline-first; the low-connectivity anchor for LATAM/EMEA-Africa |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 `Apache-2.0` | `11,906 B` | **`trunk`** | `1,148` | 🟢 **Yes**. 🟡 `+559 B` over stock — residual unread. No education module; CRM/ERP spine only |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` | `8,241 B` | **`19.0`** | `903` | 🟡 Weak copyleft; Odoo-based education ERP. 🔴 Grant is behind a pointer line and a `404` (`623-F`) |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 `Apache-2.0` | `13,185 B` | `develop` | — | 🟢 **Yes** — and it proves `1EdTech` is **not** wholly a graveyard (`623-K` nuance) |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 `GPL` | `35,146 B` | `master` | — | 🟡 Copyleft. Interactive content primitives |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 `LGPL-3.0` | `7,652 B` | **`v4.0.x-develop`** | `9,263` | 🟡 Weak copyleft; virtual classroom. 🔵 Non-standard default branch — a `main`/`master` assumption `404`s every rung |
+
+🔵 **Three of ten repositories do not default to `main` or `master`** (`trunk`, `19.0`,
+`v4.0.x-develop`). 🟢 `619-E`'s branch-resolution-first discipline is what makes this table readable
+at all; a ladder that assumes `main` would have published `3` false absences out of `10` in the
+foundation tier alone.
+
+### 🟢 `623-Q` — the permissive core of this industry, restated with `ECL-2.0` added
+
+🔵 The buildable set this base grades against was `MIT` / `Apache-2.0` / `BSD`. 🟢 **`ECL-2.0` joins
+it**, and the education estate is where it lives — byte-read on **two** independent instances this
+pass (`sakaiproject/sakai` `11,120 B`, `opencast/opencast` `11,340 B`).
+
+| Family | Status for paid client work | Education instances byte-read here |
+|---|---|---|
+| 🟢 `MIT` | Clear | `kolibri`, `OpenMAIC`, `human-atlas` (code), `Gego-K12/gegok12`, `dental-scope`, `laravel-crm`, Oak ontology (code side) |
+| 🟢 `Apache-2.0` | Clear | `DeepTutor`, `ofbiz-framework`, `openbadges-validator-core`, `LLMs-from-scratch`, `ARC-AGI` |
+| 🟢 **`ECL-2.0`** | **Clear** — Apache-2.0 with a narrowed academic patent grant | `sakai`, `opencast` |
+| 🟢 `OGL-3.0` (content) | Clear with attribution wording | Oak curriculum ontology (data side) |
+| 🟢 `CC BY 4.0` (content) | Clear with attribution carried | `human-atlas` meshes (`623-D`) |
+| 🟡 `LGPL-3.0` / `GPL-3.0` | Extension/plugin work; not linkable into shipped product | `openeducat`, `moodle`, `h5p`, `bigbluebutton` |
+| 🔴 `AGPL-3.0` | Network clause binds hosted offerings — counsel before any SaaS build | `edx-platform`, `idurar-erp-crm`, `ChatTutor` |
+| 🔴 No grant | Not buildable at any price | `Mr.-Ranedeer-AI-Tutor`, `taptapgo-app` |
+
 ## 🆕 `p622` — reads `2026-11-02` — **the publishing layer's primitives are permissive where they are *toolchains* and copyleft where they are *platforms*, the `LGPL-2.1` primitive this base asked for is education's own, and a `6,148★` `MIT` grant lives in a file no ladder here had probed**
 
 ### 🟢 `622-J2` — the publishing primitives, and the split is by artefact class rather than by tier

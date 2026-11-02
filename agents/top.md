@@ -4,6 +4,265 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — reads `2026-11-02`, commit `2026-11-02` — **🔴 NEITHER DISCOVERY CHANNEL THIS BASE OWNS IS COMPLETE, AND BOTH PUBLISH FALSE *ABSENCES*: CHANNEL B's FREE TEXT IS **CONJUNCTIVE** (`AI tutor education stars:>500` → `total_count` **`3`**), AND `topic:`-QUALIFIED DISCOVERY HAS AN **AUTHOR-LABELLING FLOOR** — PROVEN BY THE TWO LARGEST MEMBERS OF THE TIERS THEY SHOULD RETURN CARRYING **ZERO TOPICS** EACH. 🟢 THE CITATION SWEEP THREE PASSES DEFERRED IS **RUN IN FULL**: `3,974` ADDRESSES PROBED, `101` ABSENT, `75` GENUINE DEAD — `1.90 %`, WHERE `p622`'s `80`-ADDRESS SAMPLE EXTRAPOLATED `~150` (`3.8 %`) AND THEREFORE **OVER-ESTIMATED BY `2×`**. 🟢 BOTH HANDOFF BYTE-READS DISCHARGED: THE `human-atlas` MESHES ARE `CC BY 4.0` WITH THE `CC BY-SA 2.1` JAPAN CONFLICT **EXPLICITLY SUPERSEDED IN WRITING**, AND QUARTO'S "EXCEPTIONS NOTED BELOW" ARE **NEVER ENUMERATED** — `25`-LINE FULL-FILE READ, THE TOKEN OCCURS ONCE. 🔴 TWO INDEPENDENT **DANGLING LICENCE CROSS-REFERENCES**. 🔴 WEB DIGESTS GOT `2 of 2` PERMISSIVE CLAIMS WRONG. 🟢 `ECL-2.0` — EDUCATION'S OWN APACHE-DERIVED LICENCE — NAMED HERE FOR THE FIRST TIME. EIGHTEEN REGISTERED (`623-A`…`623-R`).**
+
+### 🔴 `623-A` — read this first: **both** of this base's discovery channels publish false absences, for two different reasons
+
+`621-A` retired `curl -sI` as an existence instrument. 🔴 **This pass retires any claim that the two
+surviving *discovery* channels are complete.** They fail in different ways and both failures look
+exactly like an empty tier.
+
+**Failure 1 — channel B's free text is conjunctive over name + description.** Twelve tier queries of
+the shape `early childhood literacy reading tutor stars:>50` were run. 🔴 They returned **`2` rows in
+total.** The control measurement names the cause:
+
+| Query | `total_count` |
+|---|---|
+| `AI tutor education stars:>500` | 🔴 **`3`** |
+| `topic:ai-tutor stars:>50` | 🟢 `25` |
+
+Every term must appear in a short field, so a four-word tier probe is a near-certain nil. 🔵 **A base
+reading those twelve nils as twelve empty tiers would have published twelve false absences in one
+pass** — the same error class as `621-A`, arrived at from the opposite direction.
+
+**Failure 2 — `topic:`-qualified discovery has an author-labelling floor.** Topics are author-supplied,
+so the channel cannot see a repository whose author did not label it. 🔴 Measured on the two
+addresses where it matters most:
+
+| Address | ★ | Topics carried | Visible to its own tier query? |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **`42,490`** | 🔴 **none** | 🔴 No |
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | **`4,456`** | 🔴 **none** | 🔴 No |
+| [`Yoosseph/dental-scope`](https://github.com/Yoosseph/dental-scope) | `114` | 🟢 `13`, incl. `medical-education` | 🟢 Yes |
+
+🔴 **This is why `topic:medical-education stars:>100` returns `total_count` `1`.** The tier's adoption
+leader is `human-atlas` at `4,456★` — `39×` the one repository the query returns — and the channel is
+blind to it. 🔵 The largest education-native agent in this base (`OpenMAIC`, `42,490★`) is invisible
+the same way.
+
+> 🟢 **Standing rule for every future pass:** a `topic:` count is a **lower bound on a tier, never a
+> measurement of it**, and a multi-word channel-B nil is **not evidence of absence**. Tier size may
+> only be stated from a labelled-and-unlabelled union, and this base has no instrument for the
+> unlabelled half except a name already in hand.
+
+### 🟢 `623-B` — the citation sweep `622-S` called this base's largest known defect: run in full, and the sample was wrong by `2×`
+
+🔵 `622-S #3` handed forward `~150` dead and `~98` stale citations, extrapolated from an `80`-address
+sample at `3.8 %`, and called the full sweep *"affordable"*. 🟢 **It was: `3,974` addresses probed by
+`ls-remote` in one pass.**
+
+| Verdict | Count |
+|---|---|
+| 🟢 `PRESENT` | **`3,866`** |
+| 🔴 `ABSENT_OR_PRIVATE` | `101` |
+| 🟡 `INCONCLUSIVE` | `7` |
+
+🔴 **But `101` is not the dead-citation count, and this is the finding.** Classified address by
+address, `26` of the `101` were never citations at all:
+
+| Class | Count | Examples |
+|---|---|---|
+| 🔴 **`E` — genuine dead citation** | **`75`** | `1EdTech/caliper-java`, `concentricsky/badgr-server`, `apereo/opencast` |
+| 🔵 `A` — placeholder / example slug | `10` | `OWNER/REPO`, `owner/name`, `your-username/SafeTutors`, `GIT_USER_ID/GIT_REPO_ID` |
+| 🔵 `B` — deliberate control slug from a prior pass | `8` | `moodle/moodle-definitely-not-a-real-repo-p152`, `zzz-nonexistent-control-9f3a/does-not-exist-kb622` |
+| 🔵 `C` — `api.github.com/repos/{owner}` path artefact | `7` | `repos/HKUDS`, `repos/moodle`, `repos/openedx` |
+| 🔴 `D` — shelf-side address truncation | `1` | `JushBJJ/Mr` |
+
+🟢 **The measured figure: `75` genuine dead of `3,949` citable addresses = `1.90 %`.** Against
+`p622`'s extrapolated `3.8 %` / `~150`, the `80`-address sample **over-estimated by a factor of two**.
+🔵 The lesson is specific, not general: the sample over-counted because small-sample dead rates on
+these shelves are dominated by exactly the placeholder-and-control residue that a full sweep can
+classify out and a sample cannot.
+
+### 🔴 `623-C` — `p614`'s truncation defect is **still in the shelf**, and this pass's own extractor invented a second class of it
+
+🔴 `JushBJJ/Mr` is not an extractor artefact. It is **written into `agents/trending.md` as a
+backticked address** — ``JushBJJ/Mr` `` — a live truncation of `JushBJJ/Mr.-Ranedeer-AI-Tutor`, whose
+name contains a dot. `p614` measured this class; it has not been repaired.
+
+🔴 **And the inverse bit this pass's own instrument.** The extractor stripped trailing `.,);:` from
+captured repo names. One address survived the strip as a different, absent repository:
+
+| Written address | `ls-remote` |
+|---|---|
+| `sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit` | 🔴 `ABSENT_OR_PRIVATE` |
+| `sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit.` — **terminal dot is part of the name** | 🟢 `PRESENT`, `main`, `bb02e0a` |
+
+🔵 A repository name may legitimately **end in a dot**, so a trailing-punctuation strip is a
+false-absence generator. 🟢 Both directions are now named: truncating a name that contains a dot
+(`p614`, still present) and stripping a dot that **is** the name (new, this pass).
+
+### 🟢 `623-D` — handoff `622-S #4` discharged: the meshes are `CC BY 4.0`, and the repository settles the exact conflict `p622` feared
+
+🔵 `622-S #4` flagged that `human-atlas`'s mesh licence was channel-reported, not byte-read, and that
+`CC BY 4.0` versus a `CC BY-SA` Japan variant *"differ on share-alike, and the meshes are the
+product."* 🟢 **The worry was well-posed, the conflict is real, and the project resolved it in
+writing.** `public/ATTRIBUTION.md`, `2,985 B`, byte-read today:
+
+> *"BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0
+> International."*
+> *"Source OBJ comments mention an older **CC BY-SA 2.1 Japan** license. The official current database
+> license linked above **supersedes** that legacy text and explicitly permits redistribution and
+> adaptation under **CC BY 4.0**."*
+
+| Layer | Grant | Evidence | Commercial verdict |
+|---|---|---|---|
+| Application code | 🟢 `MIT` | `LICENSE`, `1,064 B`, byte-read | 🟢 Clear |
+| Mesh geometry (`BodyParts3D 4.0`, `isa_BP3D_4.0_obj_99.zip`) | 🟢 `CC BY 4.0` | `public/ATTRIBUTION.md`, upstream licence page dated `2025-02-27` | 🟢 **Clear with attribution carried; share-alike does _not_ apply** |
+
+🔴 **Residual, and it is narrow:** this is the *downstream* project's reading of an upstream licence
+change, byte-read at the downstream repo. The authoritative text sits at `dbarchive.biosciencedbc.jp`
+and was not fetched. 🔵 Note also that the probe for a root `ATTRIBUTION.md` returned `404` at `14 B`
+— the file is at `public/ATTRIBUTION.md`, named only in the `README`. **A ladder that probes
+repository roots would have recorded this grant as absent.**
+
+### 🟢 `623-E` — handoff `622-S #5` discharged, and the answer is that the exceptions **do not exist as text**
+
+🔵 `622-S #5` shelved Quarto as *`MIT` with exceptions noted* and asked which files the exceptions
+cover. 🟢 **Full-file read, not a sample:** `quarto-dev/quarto-cli` `COPYRIGHT` is **`25` lines,
+`1,262 B`** in total.
+
+| Probe | Result |
+|---|---|
+| `grep -in "exception"` over the whole file | 🔴 **one** hit, line `4`: *"With the exceptions noted below"* |
+| Content below the `MIT` text | 🔴 one line: *"Quarto's source code is at …"* — then **EOF** |
+
+🔴 **There is no "below".** The grant announces a carve-out and then never states it. 🔵 This is
+commercially *worse* than a named exception list: a named carve-out is bounded, and an unenumerated
+one is not. 🟢 **Shelf verdict, corrected from `p622`:** `MIT` **with an unresolvable exceptions
+clause** — usable, and to be flagged to counsel on any engagement that redistributes Quarto itself
+rather than merely running it.
+
+### 🔴 `623-F` — two **dangling licence cross-references** in one pass, and the second one breaks `622-B`'s title-line rule
+
+🔴 `623-E` is one instance. `openeducat/openeducat_erp` is the other, and it is the more dangerous
+because the shelf cites this platform as a **vertical solution**.
+
+| Probe | Result |
+|---|---|
+| `LICENSE` on default branch `19.0` | 🟢 `200`, **`8,241 B`** |
+| **Title line** | 🔴 *"For copyright information, please see the `COPYRIGHT` file."* |
+| The `COPYRIGHT` file it points at | 🔴 **`404` at `14 B` — it does not exist** |
+| Line `2` of the same file | 🟢 *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"* |
+
+🔴 **`622-B`'s title-line rule fails here.** That rule grades a grant by its title line precisely to
+escape filename guessing — and this title line is a *pointer sentence*, not a licence name. Applied
+literally it yields no grade at all on a repository whose grant is plainly stated one line lower.
+
+> 🟢 **Rule `v5`, amending `622-B`:** grade on the title line; **if the title line names no licence
+> family, scan the first `~10` non-blank lines for one before reporting a null.** A pointer sentence
+> is a rung, not an absence.
+
+🔵 And the grant is non-uniform, in the `622-H` family: *"Some external libraries and contributions
+bundled with OpenEduCat may be published under other GPL-compatible licenses."*
+
+### 🔴 `623-G` — channel B's `NOASSERTION` error count reaches **six**, and two of the new ones are this pass's own leads
+
+🔵 `622-P` recorded the `spdx_id` channel as the best cheap proxy this base has while holding four
+`NOASSERTION` errors against real grants. 🔴 **Two more this pass, both byte-read:**
+
+| Address | Channel B | Bytes, byte-read today | Verdict |
+|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🔴 `NOASSERTION` | 🟢 `MIT License`, `LICENSE`, `1,150 B` | 🔴 Channel wrong |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🔴 `NOASSERTION` | 🟢 `Apache License`, `LICENSE.txt`, `11,505 B` | 🔴 Channel wrong |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `NOASSERTION` | 🟢 `LGPL-3.0`, `LICENSE`, `8,241 B` | 🟡 Channel *defensibly* wrong — the title line is a pointer (`623-F`) |
+
+🔵 `rasbt/LLMs-from-scratch` reads `11,505 B` against the stock Apache `11,347 B` measured on
+`fchollet/ARC-AGI` the same pass — a `158 B` excess, so **`Apache-2.0` plus unread residual text**;
+shelved as `Apache-2.0`, residual not enumerated. 🟢 Standing position unchanged and now better
+evidenced: the channel **ranks candidates and never fills a licence column.**
+
+### 🔴 `623-H` — web-search digests asserted permissive licences for `2 of 2` platforms, and the bytes refute both
+
+🔵 The mandated `open source platform {industry} ERP CRM MIT Apache` leg returned two platforms under
+explicit permissive claims. 🔴 **Both claims are false, and both failures run in the dangerous
+direction** — a digest inviting a studio to build on a copyleft platform.
+
+| Platform | Digest claim | Byte-read grant | Delta |
+|---|---|---|---|
+| [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) | 🔴 *"fully open-source under the **MIT** license"* | 🟢 `GNU AFFERO GENERAL PUBLIC LICENSE`, `34,230 B` | 🔴 **`MIT` → `AGPL-3.0`** |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🔴 *"**Apache 2.0** licensed"* | 🟢 `Eclipse Public License - v 2.0`, `14,197 B` | 🔴 **`Apache-2.0` → `EPL-2.0`** |
+
+🔵 This is `622-L`'s family — *a third party asserting a licence the repository does not grant* —
+moved one tier closer to the reader, from a package registry to the search digest a pass is
+**instructed** to research with. 🟢 The instruction's own quality bar is what catches it: the licence
+column is filled from bytes, never from the digest that surfaced the name.
+
+### 🟢 `623-I` — `ECL-2.0`: education has **its own** Apache-derived permissive licence, and this base had never named it
+
+🔴 In `623` passes this base has graded against `MIT` / `Apache-2.0` / `BSD` and treated everything
+else as copyleft risk. 🟢 Resolving a dead citation surfaced a family it had no row for:
+
+> `opencast/opencast` → `LICENSE`, `11,340 B`, byte-read: **`Educational Community License, Version
+> 2.0 (ECL-2.0)`**
+
+🔵 `ECL-2.0` is **Apache-2.0 with its patent grant narrowed** for academic contributors — OSI-approved,
+permissive, and drafted *by* the education sector. 🟢 **Consequence for Globant:** `ECL-2.0` belongs
+on the buildable list beside `MIT`/`Apache-2.0`/`BSD`, with the patent-clause difference flagged.
+🔵 It is carried by the Apereo/education estate, so expect it on the exact platforms an education
+engagement meets first.
+
+### 🟢 `623-J` — the head table, every grant byte-read today
+
+Default branch resolved by `ls-remote --symref` first, grant byte-read at `raw.githubusercontent.com`,
+title graded per rule `v5` (`623-F`), stars and `pushed_at` from channel B. **Nine rows, all real.**
+
+| Agent | Grant (byte-read) | ★ | `pushed_at` | Region | What it is |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, `11,408 B` | **`54,272`** | `2026-10-31` | APAC | Lifelong personalised tutoring agent. The tier's adoption leader; `~22k★` at `p54`, `54k★` now |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT`, `1,065 B` (stock band) | **`42,490`** | `2026-11-02` | APAC | **Open Multi-Agent Interactive Classroom** — Tsinghua MAIC lab. Turns a topic or document into a multi-agent class. 🔴 Zero topics (`623-A`) |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 `MIT` | `40,933` | `2026-11-01` | Global | `93+` worked projects: RAG, agentic workflows, MCP, voice. Curriculum substrate, not a runtime |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **no licence** (channel B `null`) | `29,548` | 🔴 `2025-09-30` | Global | Prompt-based personalised tutor. 🔴 Unlicensed **and** `13` months stale — cite as prior art, **do not build on** |
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 `MIT` `1,064 B` + meshes `CC BY 4.0` | `4,456` | `2026-09-06` | Global | `2,234`-mesh browser 3D anatomy explorer. Medical-education tier leader; licence fully settled (`623-D`) |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🟡 `AGPL-3.0` | `1,321` | `2026-01-09` | Global | Visual, interactive STEM tutor. 🟡 Copyleft — fine self-hosted, blocked for shipped client product |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟡 `GPL-3.0` | `933` | `2026-02-20` | North America | Theory-of-Mind reasoning tutor. 🟢 **The rename target of dead citation `plastic-labs/bloom`** (`623-K`) |
+| [`hluaguo/learn-faster-kit`](https://github.com/hluaguo/learn-faster-kit) | 🟢 `MIT`, `1,065 B` | `400` | `2026-08-04` | Global | AI learning coach over spaced repetition; Claude-Code-native authoring loop |
+| [`Yoosseph/dental-scope`](https://github.com/Yoosseph/dental-scope) | 🟢 `MIT`, `1,741 B` | `114` | `2026-10-26` | Global | Dental anatomy explorer — **second** instance of `622-N`'s medical-education tier, and the only one the topic channel can see |
+
+### 🔴 `623-K` — the dead citations resolve into **moved** and **gone**, and that distinction is the whole repair
+
+🔵 A dead address is not one defect but two, with opposite repairs: a **moved** project needs its
+citation rewritten, a **gone** project needs it withdrawn. All `75` were run through channel B by
+repository name. 🟢 **The high-confidence moves, each `ls-remote`-confirmed live:**
+
+| Dead citation on these shelves | 🟢 Live canonical successor | Evidence |
+|---|---|---|
+| `apereo/opencast` | [`opencast/opencast`](https://github.com/opencast/opencast) | `509★`, `ECL-2.0`, pushed `2026-11-02`, branch `develop` — org move |
+| `plastic-labs/bloom` | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | Same owner, `933★`, `GPL-3.0` — project rename |
+| `GegoK12/gegok12`, `gegok12/gegok12` | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `55★`, `MIT` byte-read (`623-G`) — owner renamed with a hyphen |
+| `fh-yarbouh/oak-curriculum-ontology` | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | `24★`, pushed `2026-10-29` — fork address shelved over the upstream |
+| `dev-cucei-itrans/siiau-api-client` | [`siiau-dev/siiau-api-client`](https://github.com/siiau-dev/siiau-api-client) | Same name, live; `0★`, `2024-05-21` |
+
+🔴 **And the sharpest `gone` result is a whole standards family.** The `1EdTech`/`imsglobal` Caliper
+Analytics reference SDKs are absent from their canonical orgs in **four** addresses —
+`1EdTech/caliper-java`, `1EdTech/caliper-js`, `1edtech/caliper-php`, `imsglobal/caliper-python`. What
+survives are third-party forks, all `LGPL-3.0`, last pushed `2018`–`2023` (`jonespm/caliper-*`).
+🔵 Same shape at `concentricsky/badgr-server`: canonical gone, only `2016`–`2022` forks. 🟢 **A pass
+citing Caliper or Badgr as a live integration target is citing a fork graveyard**, and
+`intel/trends.md` carries the consequence.
+
+🔴 `13` of the `75` return **no repository of that name anywhere** — `yetanalytics/lrspipe`,
+`LongsightGroup/qti3-core`, `superbuilders/timeback-dev-python`, `hablala/hablala`,
+`aule-org/AImauta` and eight more. 🔵 One deserves separate mention: **`anthropics/merlin`** is cited
+on these shelves, does not exist, and no plausible successor of that name exists either — the
+fabrication-class citation this base has warned about since `p569`, found in its own shelves.
+
+### 🟡 `623-L` — what this pass could **not** establish
+
+1. 🔴 **The `98`-odd *stale/non-canonical* half of `622-F` is still not enumerated.** This pass
+   measured **dead** exhaustively; `PRESENT`-but-not-canonical needs `3,866` channel-B calls, and
+   `621-M`'s silent fork omission plus `621-R`'s `422`-on-rename make a channel-B miss ambiguous.
+   The `75`-row repair in `623-K` is the affordable slice, not the sweep.
+2. 🟡 **`7` addresses are `INCONCLUSIVE`** and were not retried: six `*-mcp*` Moodle/Canvas addresses
+   plus `openfresno/edgenuity-aeries-grade-passback`. They are excluded from both numerator and
+   denominator in `623-B`, so `1.90 %` is a **lower** bound by at most `0.18 pp`.
+3. 🟡 **`rasbt/LLMs-from-scratch`'s `158 B` Apache excess is unread** (`623-G`).
+4. 🔴 **The unlabelled half of every tier is unmeasurable with this base's instruments** (`623-A`).
+   Naming it is the finding; closing it needs a channel neither `topic:` nor conjunctive free text
+   provides.
+5. 🔴 **`make hooks` was refused a third consecutive pass**, and the refusal finally names its own
+   mechanism — see `623-M` in `compose/patterns.md`. `622-S #1`'s diagnosis was **wrong**.
+
 ## 🆕 `p622` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED EXISTENCE RECIPE FAILS IN **BOTH** DIRECTIONS: `p621` PROVED IT PUBLISHES FALSE *ABSENCES*, AND THE PROXY'S `HTTP/1.1 200 Connection Established` ON LINE **ONE** MEANS ANY `head -1` OR `grep 200` READING OF THE SAME COMMAND PUBLISHES FALSE *PRESENCES* — INCLUDING FOR A FABRICATED SLUG. 🟢 THE `LGPL-2.1` TREE `p621` ASKED FOR EXISTS AND IT **REFUTES `p621`'s OWN RUNG**: `LGPL-2.1` SHIPS IN `COPYING`, WITH `COPYING.LESSER` AND `COPYING.LIB` BOTH `404`. 🔴 A LICENCE FILE THAT IS A **BESPOKE BILINGUAL DOCUMENT** NAMING `AGPL-3.0` AND THEN ADDING A HOMEPAGE-BRANDING OBLIGATION — ON A SLUG THIS BASE ALREADY SHELVED, AND ALL THREE CHANNELS ARE BLIND TO IT. 🟢 THE RENAME INSTRUMENT `621-R` SAID DID NOT EXIST IS BUILT AND CALIBRATED ON A LIVE INSTANCE. 🔴 AND THIS BASE'S CITATION DECAY IS MEASURED FOR THE FIRST TIME: `3` DEAD AND `2` NON-CANONICAL IN `80` SAMPLED SHELF ADDRESSES. `17` NEW HEAD NAMES, `6` PERMISSIVE GRANTS BYTE-READ, `14 of 15` CHANNELS AGREEING. NINETEEN REGISTERED (`622-A`…`622-S`).**
 
 ### 🔴 `622-A` — read this first: the broken existence recipe fails in the **other** direction too, and that direction looks like success

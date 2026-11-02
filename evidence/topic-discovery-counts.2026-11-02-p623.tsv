@@ -1,0 +1,14 @@
+query	total_count	note
+topic:language-learning stars:>300 pushed:>2026-01-01	31	
+topic:ai-tutor stars:>50	25	
+topic:spaced-repetition stars:>300 pushed:>2026-01-01	25	
+topic:lms stars:>300 pushed:>2026-01-01	21	
+topic:psychometrics stars:>30	20	
+topic:edtech stars:>300 pushed:>2026-01-01	16	
+topic:intelligent-tutoring-system stars:>20	6	
+topic:grading stars:>100	4	
+topic:accessibility topic:education stars:>50	4	
+topic:learning-analytics stars:>50	3	
+topic:education topic:agent stars:>100	2	
+topic:medical-education stars:>100	1	LOWER BOUND: human-atlas (4456*) is in this tier and carries zero topics
+AI tutor education stars:>500	3	free-text control: channel B free text is CONJUNCTIVE over name+description

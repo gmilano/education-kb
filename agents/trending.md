@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — `2026-11-02` — **the `53rd` consecutive global-leg nil, and this pass can finally say what a nil from these channels does and does not mean**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated global legs: `8` head names, `8` held, `0` new — the **53rd** consecutive nil
+
+Proven against the **`3,974`**-slug oracle rebuilt this pass with `622-F`'s path-segment deny-list
+applied (`41` non-repository addresses — `topics/*`, `orgs/*`, `search/*` — now rejected rather than
+counted; see `623-B`).
+
+| Name returned by the mandated legs | Oracle |
+|---|---|
+| `THU-MAIC/OpenMAIC` | 🔴 held |
+| `patchy631/ai-engineering-hub` | 🔴 held |
+| `rasbt/LLMs-from-scratch` | 🔴 held |
+| `openeducat/openeducat_erp` | 🔴 held |
+| `krayin/laravel-crm` | 🔴 held |
+| `idurar/idurar-erp-crm` | 🔴 held |
+| `apache/ofbiz-framework` | 🔴 held |
+| `hcengineering/platform` | 🔴 held |
+
+🟢 **`8 of 8` held. But the interpretation changes this pass** — see `623-A`. A nil from these channels
+is now known to be **uninformative about supply**, for two measured reasons:
+
+- channel B free text is **conjunctive** over name + description (`AI tutor education stars:>500` →
+  `total_count` **`3`**), so the twelve tier probes run this pass returned `2` rows between them;
+- `topic:` discovery has an **author-labelling floor**, and it is blind to `OpenMAIC` (`42,490★`) and
+  `human-atlas` (`4,456★`) because both carry **zero topics**.
+
+🔵 So the `53` nils record *the channels' reach*, not the week's supply. The honest statement is that
+this base cannot measure new education-AI supply with the instruments it has, and has now proven why
+rather than assumed it.
+
+### 🟢 What is genuinely new on the shelf this week, licence byte-read today
+
+🔵 Reached by `topic:`-qualified discovery across twelve tiers — `143` rows, `25` not previously held,
+of which these carry a real grant and sit in the industry rather than adjacent to it.
+
+| Address | Grant (byte-read) | ★ | `pushed_at` | Tier |
+|---|---|---|---|---|
+| [`Yoosseph/dental-scope`](https://github.com/Yoosseph/dental-scope) | 🟢 `MIT`, `1,741 B` | `114` | `2026-10-26` | 🟢 **Medical education** — second instance of the tier `622-N` opened, and the only member the topic channel can see |
+| [`hluaguo/learn-faster-kit`](https://github.com/hluaguo/learn-faster-kit) | 🟢 `MIT`, `1,065 B` | `400` | `2026-08-04` | Spaced repetition / learning coach |
+| [`fchollet/ARC-AGI`](https://github.com/fchollet/ARC-AGI) | 🟢 `Apache-2.0`, `11,347 B` (**stock band reference**) | `4,854` | 🔴 `2025-04-04` | Reasoning assessment — benchmark, not a runtime; stale |
+| [`ZackAkil/immersive-language-learning-with-live-api`](https://github.com/ZackAkil/immersive-language-learning-with-live-api) | 🟡 `Apache-2.0` (channel-reported) | `512` | `2026-04-30` | Language learning — vendor demo |
+| [`StructuralEquationModels/StructuralEquationModels.jl`](https://github.com/StructuralEquationModels/StructuralEquationModels.jl) | 🟡 `MIT` (channel-reported) | `55` | `2026-10-26` | 🟢 **Psychometrics** — SEM in Julia; the tier's only live permissive entry found |
+
+🔴 **And the ones to not shelve, stated so the next pass does not re-surface them as finds:**
+`yldm-tech/taptapgo-app` (`884★`, multilingual typing adventure for schools — 🔴 **no licence**, so
+not buildable); `tswsxk/EduData` (`83★`, `Apache-2.0`, education datasets — 🔴 last pushed
+`2023-05-03`); `rtr46/meikipop`, `pnlpal/dictionariez`, `xxyzz/WordDumb` (live language-learning
+tooling, all 🟡 `GPL-2.0`/`GPL-3.0`). 🔵 `wotakumoe/wotaku`, `ishanvyas22/awesome-open-source-systems`,
+`ArneVogel/listudy` and the `ARC-*` game ports surfaced in-topic but are **out of industry**.
+
+### 🔴 The week's instrument finding: a licence file can point at a file that does not exist
+
+🔵 Two independent instances this pass, in opposite tiers, and both would read as a clean grant to any
+automated channel:
+
+| Address | The cross-reference | Where it points |
+|---|---|---|
+| `quarto-dev/quarto-cli` | *"With the exceptions noted below"* (`COPYRIGHT`, line `4`) | 🔴 **nowhere** — `25`-line file, token occurs once, nothing below but `MIT` and a URL |
+| `openeducat/openeducat_erp` | *"please see the `COPYRIGHT` file"* (`LICENSE`, line `1`) | 🔴 **`404` at `14 B`** |
+
+🟢 `623-E` and `623-F` carry the full reads. 🔵 The second one also breaks this base's own
+`622-B` title-line rule, which is amended to rule `v5` in `623-F`.
+
 ## 🆕 `p622` — `2026-11-02` — **the `52nd` consecutive global-leg nil with a `15 of 15` denominator, and the week's real supply is the medical-education tier the shelf had `0` mentions of**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

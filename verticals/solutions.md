@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p623` — reads `2026-11-02` — **🔴 THE VERTICAL FINDING IS THAT THE SEARCH DIGEST A PASS IS *INSTRUCTED* TO RESEARCH WITH GOT `2 of 2` PERMISSIVE-LICENCE CLAIMS WRONG, BOTH IN THE DIRECTION THAT INVITES A STUDIO TO BUILD ON COPYLEFT. 🟢 AND THE EDUCATION-SPECIFIC PLATFORM TIER HAS ITS OWN PERMISSIVE LICENCE FAMILY, `ECL-2.0`, WHICH THIS BASE HAD NEVER NAMED.**
+
+### 🔴 `623-H` (carried) — the digest said `MIT`; the bytes said `AGPL-3.0`
+
+🔵 The mandated leg `open source platform {industry} ERP CRM MIT Apache` returned two platforms under
+**explicit** permissive claims, which is exactly what the leg is for. 🔴 **Both claims are false.**
+
+| Platform | What the digest asserted | Byte-read grant, `2026-11-02` | Consequence if the digest had been trusted |
+|---|---|---|---|
+| [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) | 🔴 *"fully open-source under the **MIT** license"* | 🟢 `GNU AFFERO GENERAL PUBLIC LICENSE`, `34,230 B`, `master` | 🔴 A hosted client ERP built on `AGPL-3.0` under the belief it was `MIT` — **the worst licence error available** |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🔴 *"**Apache 2.0** licensed"* | 🟢 `Eclipse Public License - v 2.0`, `14,197 B`, `develop` | 🟡 `EPL-2.0` is weak copyleft with a source-availability duty — survivable, but not what was promised |
+
+🔵 The same leg also raised a **conflict it could not settle itself** — one source calling Apache
+OFBiz `Apache-2.0` and another calling its GitHub code `GPLv2`. 🟢 **Settled by bytes:**
+`apache/ofbiz-framework`, branch `trunk`, `LICENSE` `11,906 B`, title `Apache License`. The `GPLv2`
+claim is wrong.
+
+> 🟢 **This is the quality bar working as designed.** The digest surfaces the *name*; only the bytes
+> may fill the *licence column*. `3 of 3` licence claims from this pass's digests were wrong or
+> unresolvable, and `3 of 3` were settled by one `raw.githubusercontent.com` read each.
+
+### 🟢 The vertical platform tier, every grant byte-read today
+
+🔵 Real, customisable systems — the Odoo/OpenMRS/Moodle class the brief asks for — with the branch
+each one actually defaults to, because three of them are not `main`.
+
+| Platform | What it runs | Grant (byte-read) | Branch | ★ | AI-on-top verdict |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS — the industry's largest installed base | 🟡 `GPL-3.0`, `35,147 B` in `COPYING.txt` | `main` | `7,574` | 🟢 **Best AI target in the tier.** Plugin API keeps client code out of the copyleft boundary; the whole `moodle-*-mcp` wave this base tracks sits here |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS / MOOC at scale | 🟡 `AGPL-3.0`, `35,136 B` | `master` | 🔴 channel-blind (`623-O`) | 🟡 Self-host and extend; **AGPL network clause** must be cleared before any hosted client offering |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | Higher-ed LMS / collaboration | 🟢 **`ECL-2.0`**, `11,120 B` | `master` | `1,240` | 🟢 **Permissive.** The tier's cleanest base for a shipped derivative product |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | Lecture capture, media pipeline | 🟢 **`ECL-2.0`**, `11,340 B` | `develop` | `509` | 🟢 Permissive. Natural host for transcription/captioning/indexing agents |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | Offline-first learning platform | 🟢 `MIT`, `1,097 B` | `develop` | `1,165` | 🟢 **Permissive.** The low-connectivity anchor — LATAM, EMEA-Africa, rural APAC |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | Education ERP / SIS on Odoo | 🟡 `LGPL-3.0`, `8,241 B` | **`19.0`** | `903` | 🟡 The Odoo-for-education answer. 🔴 Its `LICENSE` points at a `COPYRIGHT` file that **`404`s** (`623-F`) |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | K-12 school ERP | 🟢 `MIT`, `1,150 B` | `main` | `55` | 🟢 Permissive and small enough to fork outright. 🔴 Channel B calls it `NOASSERTION` and is wrong (`623-G`) |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | Virtual classroom / conferencing | 🟡 `LGPL-3.0`, `7,652 B` | **`v4.0.x-develop`** | `9,263` | 🟡 Integrate, don't embed. Moodle/Sakai-native |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | ERP/CRM spine | 🟢 `Apache-2.0`, `11,906 B` | **`trunk`** | `1,148` | 🟡 Permissive but **no education module** — a build-from-spine option, not a vertical product |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | CRM (admissions / enrolment funnel) | 🟢 `MIT`, `1,078 B` | **`2.2`** | `24,095` | 🟢 Permissive. The admissions-CRM layer an education ERP usually lacks |
+| [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) | ERP/CRM | 🔴 `AGPL-3.0`, `34,230 B` | `master` | `8,934` | 🔴 **Do not use for a hosted client build.** Shelved here only to correct the digest (`623-H`) |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | All-in-one PM / collaboration | 🟡 `EPL-2.0`, `14,197 B` | `develop` | `28,042` | 🟡 Not education-specific; weak copyleft with source-availability duty |
+
+### 🟢 `623-R` — the content/code split, fourth instance, and the first where the content licence is a **government** licence
+
+🔵 `622-I` established that the code/content split is carried on three instances and that *"the
+content is NonCommercial"* is the wrong way to state it. 🟢 **Instance four proves the point from the
+permissive side.** [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology),
+`LICENSE.md`, `1,867 B`, byte-read — title line is `# License`, so rule `v5`'s body scan is what
+grades it:
+
+| Layer | Grant | Applies to | Commercial use |
+|---|---|---|---|
+| Data / ontology | 🟢 **Open Government Licence v3.0** (UK National Archives) | `ontology/`, `data/`, `docs/` | 🟢 **Permitted** — *"Exploit the information commercially and non-commercially"* |
+| Code / scripts | 🟢 `MIT` | `scripts/`, `.github/workflows/`, `pyproject.toml` | 🟢 Permitted |
+
+🔵 Required attribution is prescribed verbatim: *"Contains public sector information licensed under
+the Open Government Licence v3.0."*, plus a credit to **Oak National Academy**. 🟢 **Consequence for
+EMEA engagements:** a nationally curated UK curriculum ontology is commercially reusable with a fixed
+attribution string — the cleanest curriculum-alignment substrate this base has found in any region,
+and the `OGL-3.0` family should be probed on other national curriculum bodies next pass.
+
+🔴 **The standing caution still holds in the other direction**, from `622-I`: ARASAAC's pictograms are
+`MIT` in code and `CC BY-NC-SA` in content, which blocks paid work where the pictograms *are* the
+vocabulary. 🟢 The rule is unchanged and now has instances on both sides: **grade the layer the client
+actually ships, not the repository.**
+
 ## 🆕 `p622` — reads `2026-11-02` — **the vertical finding is a licence file that no automated channel can read: a bespoke bilingual document that names `AGPL-3.0` and then requires a third party's name on the client's home page**
 
 ### 🔴 `622-D2` — ENT Core: the platform of record for French school ENTs, and the branding obligation buried in its grant
