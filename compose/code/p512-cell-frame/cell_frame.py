@@ -36,7 +36,30 @@ import re, sys, collections, os
 
 LIVE = ["agents/top.md", "repos/foundations.md", "verticals/solutions.md",
         "intel/market.md", "intel/trends.md", "compose/patterns.md"]
-ADDR = re.compile(r'github\.com/([A-Za-z0-9][\w.-]*)/([\w.-]+?)(?=[)\]`,.\s]|$)')
+# 🟢 p614-D.  Was a LAZY quantifier with `.` inside its own lookahead:
+#   r'github\.com/([A-Za-z0-9][\w.-]*)/([\w.-]+?)(?=[)\]`,.\s]|$)'
+# 🔴 That stops group 2 at the FIRST dot, so a repository name containing a dot is
+# silently rewritten to a shorter one.  `ACTION TB`'s lazy-quantifier lint has flagged
+# this line for some time; `p614` found the specimen that makes it a defect rather than
+# a smell, and it is the dangerous direction:
+#   `Sobeston/zig.guide`  (MIT, 935★, education -- a Zig learning guide)  ->  `Sobeston/zig`
+#   and `Sobeston/zig` IS A REAL REPOSITORY (branch `master`), same owner.
+# 🔵 So the truncation does not 404 and nothing reports an error: the cell frame would
+# compare one repository's published star count against a DIFFERENT repository's API row.
+# This is `p251-prefix-collision`'s "maia class", and `613-A`'s owner rule again -- the
+# collision is under the same owner.
+# 🟡 Contrast, measured the same way: `processing/p5.js` (LGPL-2.1, 24,290★) truncates to
+# `processing/p5`, which does NOT exist and WOULD have failed loudly.  Same defect, and
+# only one of the two is silent -- which is why a lint, not a 404 sweep, is what caught it.
+# 🟢 Fix: match greedily (the class excludes `)`, backtick, `,` and whitespace, so the
+# address still ends where the prose does) and strip only a TRAILING dot, which is prose
+# punctuation -- GitHub does not allow a repository name to end in one.
+ADDR = re.compile(r'github\.com/([A-Za-z0-9][\w.-]*)/([\w.-]+)')
+
+
+def addr_slug(g):
+    """`owner/repo` from an ADDR match, trailing prose dot removed (p614-D)."""
+    return f"{g.group(1)}/{g.group(2).rstrip('.')}"
 STARHDR = re.compile(r'^\s*(★|stars?)\s*$', re.I)
 NUMCELL = re.compile(r'^\s*\*{0,2}([\d,]+)\*{0,2}\s*★?\s*(?:\s*\*\(.*\)\*)?\s*$')
 
@@ -78,7 +101,7 @@ def column_arm(root='.'):
             for k in range(col):          # the address is left of the star column
                 g = ADDR.search(c[k])
                 if g:
-                    slug = f"{g.group(1)}/{g.group(2)}"
+                    slug = addr_slug(g)
                     break
             if slug:
                 yield f, i + 1, slug, m.group(1)

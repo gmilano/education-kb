@@ -3,6 +3,89 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — `2026-11-02` — channel table run first, and the sweep census that replaces this pass's leg nil
+
+🔵 `569-B`'s standing row. Every arm probed in this session, not inherited.
+
+| channel | arm | result this session | control |
+| --- | --- | --- | --- |
+| 🟢 `git ls-remote --symref` | default-branch resolution | `ref` on `26 of 26`; recovered `master` on `3` (`haxcms-php`, `annotation-tool`, `book-to-skill`) | 🟢 fabricated slug `UNREACHABLE` |
+| 🟢 `raw.githubusercontent.com` | grant bytes | `18 of 18` permissive read; `4` ladder-exhausted | 🟢 `4 of 4` fabricated at `404` |
+| 🟢 `gh api search/repositories` | sweep + metadata | `59` addresses over `5` queries | 🔴 `422` on a batch with an invalid member |
+| 🔴 `curl -sI https://github.com/<slug>` | prompt's prescribed verifier | 🔴 `403` on real addresses | 🔴 inert on this host |
+
+### 🟢 The sweep census — what `59` addresses actually resolve to
+
+🔵 Five queries on the platform's own index, `stars:>=20` and recent pushes, then differenced against
+this base's three sell shelves. 🟢 This is the channel that produced every promotion this pass; the
+web legs produced none.
+
+| step | count | share of `59` |
+| --- | --: | --: |
+| addresses returned by the `5` queries | `59` | `100 %` |
+| already cited **anywhere** in this base, at pristine `HEAD` | `57` | `96.6 %` |
+| absent from all three **sell** shelves | `32` | `54.2 %` |
+| of those, permissive by platform field | `15` | `25.4 %` |
+| 🟢 **permissive confirmed on bytes and promoted** | `13` | `22.0 %` |
+| 🟡 permissive on bytes, measured and parked with a reason | `2` | `3.4 %` |
+| 🔴 field declined or non-permissive, byte-read this pass | `10` | `16.9 %` |
+
+🔴 **`57 of 59` is the number to sit with.** Only `2` addresses in the sweep were wholly unknown to
+this base. 🟢 The yield is not discovery of unseen names — it is **promotion of names the base had
+only ever logged in a backlog or a trending list**, which is `612-A`'s lesson restated: the asset is
+the backlog, and the work is adjudicating it.
+
+🔴 **The figure that matters for how this base spends its next hour:** a `22.0 %` promotion rate from
+the platform index against a **`0 %`** rate from eight web legs. 🟢 `614-I` registers the ask —
+report channel yield beside the leg nil, because the nil has been describing the legs, not the sector,
+for forty-four passes.
+
+### 🟢 Trending repos, dated — permissive and pushed inside `30` days
+
+🔵 `13` were absent from every sell shelf and are promoted this pass. 🟡 The first row was **already shelved** and is listed for its re-measured cell, not as a find.
+
+| repo | ★ | grant (byte-read) | branch | pushed | region | what it is |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | `36,751` | 🟢 `MIT` | 🔴 `master` | `2026-10-28` | Global | 🟡 **Already shelved** (`36,686★` at `p613`); re-measured, not promoted. Technical-book PDF → agent skill |
+| [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) | `262` | 🟢 `MIT` | `main` | `2026-10-21` | Global | Real-time collaborative browser IDE for teaching |
+| [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | `130` | 🟢 `Apache-2.0` | 🔴 `master` | 🟢 `2026-11-02` | North America | Microsite CMS, Penn State |
+| [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | `128` | 🟢 `MIT` | `main` | `2026-10-15` | APAC | Pluggable schedulers + Anki/FSRS |
+| [`onemnemo/mnemo`](https://github.com/onemnemo/mnemo) | `123` | 🟢 `Apache-2.0` | `main` | `2026-10-22` | Global | .NET 10 desktop study app |
+| [`langx/langx`](https://github.com/langx/langx) | `109` | 🟢 `BSD-3-Clause` | `main` | `2026-10-31` | Global | Live language practice |
+| [`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app) | `106` | 🟢 `MIT` | `main` | 🟢 `2026-11-02` | Global | Cross-platform AI flashcards |
+| [`YujxZJCN/teaching-skills`](https://github.com/YujxZJCN/teaching-skills) | `45` | 🟢 `MIT` | `main` | `2026-10-03` | Global | Teaching-lifecycle skill suite for professors |
+| [`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) | `42` | 🟢 `ECL-2.0` | 🔴 `master` | `2026-10-19` | EMEA | Video annotation for teaching and research |
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | `41` | 🟢 `MIT` | `main` | `2026-10-27` | EMEA | Early-grade literacy content delivery |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | `41` | 🟢 `MIT` | `main` | `2026-11-01` | APAC | Local-first adaptive tutoring agent |
+| [`StudentSuite/awesome-student-resources`](https://github.com/StudentSuite/awesome-student-resources) | `35` | 🟢 `MIT` | `main` | 🟢 `2026-11-02` | Global | 🟡 Index, not supply |
+| [`smashburger-dev/socratic-workshop`](https://github.com/smashburger-dev/socratic-workshop) | `23` | 🟢 `MIT` | `main` | `2026-10-28` | Global | Learn-by-explaining tutor skill |
+| [`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) | `23` | 🟢 `MIT` | `main` | `2026-10-31` | Global | Repo → guided course, BKT + SM-2 |
+| [`tong666-bit/liu-xiaoyan-skill`](https://github.com/tong666-bit/liu-xiaoyan-skill) | `20` | 🟢 `MIT` | 🔴 `master` | `2026-10-09` | Global | One instructor's teaching method as a skill — the class's floor specimen |
+
+### 🔴 Trending and **not** shippable — byte-read, so the next pass does not re-measure
+
+| repo | ★ | platform field | grant on bytes | bar |
+| --- | --: | --- | --- | --- |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `6,143` | 🔴 `NOASSERTION` | 🟡 `CC` family `19,347 B` | 🟢 Fit as **data** (`614-G`), 🔴 not as code |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | `459` | `AGPL-3.0` | not re-read — field is a positive assertion | 🔴 network copyleft |
+| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) | `368` | `AGPL-3.0` | not re-read | 🔴 network copyleft |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | 🔴 `NOASSERTION` | 🔴 **Elastic License `2.0`** `3,860 B` | 🔴 bars hosted/managed service — `614-E` |
+| [`senjun-team/senjun-courses`](https://github.com/senjun-team/senjun-courses) | `161` | `GPL-3.0` | not re-read | 🔴 copyleft |
+| [`chipmates/agoracosmica`](https://github.com/chipmates/agoracosmica) | `150` | `AGPL-3.0` | not re-read | 🔴 network copyleft |
+| [`scollovati/awesome-lti`](https://github.com/scollovati/awesome-lti) | `78` | `CC-BY-SA-4.0` | 🟡 `CC` family `20,131 B` | 🟡 hint only, share-alike |
+| [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | `74` | 🟡 `NULL` | 🔴 **no grant file** — `18`-path ladder exhausted | 🔴 ungranted |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | `72` | 🟡 `NULL` | 🔴 **no grant file** | 🔴 ungranted |
+| [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) | `70` | 🟡 `NULL` | 🔴 **no grant file** | 🔴 ungranted |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | `60` | 🔴 `NOASSERTION` | 🔴 `121 B` **pointer** → `AGPL-3.0` | 🔴 `614-F` |
+| [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | `54` | 🔴 `NOASSERTION` | 🔴 byte-identical pointer → `AGPL-3.0` | 🔴 `614-F` |
+| [`ALLENYEUNG365/Guess-the-Flag`](https://github.com/ALLENYEUNG365/Guess-the-Flag) | `46` | 🟡 `NULL` | 🔴 **no grant file** | 🔴 ungranted |
+| [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) | `40` | 🔴 `NOASSERTION` | 🔴 bespoke non-commercial `417 B` | 🔴 all rights reserved; also non-sector |
+
+🔵 **Why the copyleft rows say "not re-read".** Where the platform field makes a *positive* assertion
+it reproduced `110 of 110` across `612`/`613`/`614`, so `612-B`'s rule applies: batch-trust the field
+for triage, byte-read at the point of shipping. 🔴 The rows that were byte-read here are the ones
+where the field **declined** — which is the arm `614-E` exists to measure.
+
 ## 🆕 `p613` — `2026-11-02` — channel table, run first, and the index-yield census that replaces `611-H`
 
 🔵 `569-B`'s standing row. Every arm probed in this session, not inherited.

@@ -1,0 +1,13 @@
+source	channel	result	meaning
+https://www.unesco.org/en/node/256472	curl -sL	000	DNS does not resolve
+https://www.iesalc.unesco.org/...	curl -sL	000	DNS does not resolve
+https://www.iesalc.unesco.org/...	WebFetch	getaddrinfo ENOTFOUND	host outside the session's allowed network domains
+https://eur-lex.europa.eu/eli/reg/2026/1744/oj	curl -sL	000	DNS does not resolve -- the EU AI Act primary text is NOT readable here
+https://www.oecd.org	curl -sL	000	DNS does not resolve
+https://moodledev.io	curl -sL	000	DNS does not resolve
+https://docs.openedx.org	curl -sL	000	DNS does not resolve
+https://www.eversheds-sutherland.com/...	WebFetch	getaddrinfo ENOTFOUND	host outside the session's allowed network domains
+https://github.com/THU-MAIC/OpenMAIC	curl -sL	403	the run prompt's prescribed `curl -sI` verifier is INERT on a REAL address (p613 finding, reproduced)
+https://api.github.com/search/repositories	gh api	200	WORKS -- stars, spdx_id, size, pushed_at, description, homepage
+git ls-remote --symref https://github.com/<slug>	git	ref	WORKS -- real default branch; fabricated slug fails
+https://raw.githubusercontent.com/<slug>/<branch>/<path>	curl -sL	200/404	WORKS -- grant bytes; 4/4 fabricated controls at 404

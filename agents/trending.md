@@ -3,6 +3,74 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — `2026-11-02` — **the forty-fourth consecutive global-leg nil on *new names*, and the first pass where the nil is the wrong question**
+
+🔵 The run prompt mandates four global legs and four regional legs. 🟢 All eight were run; leg-by-leg
+evidence with what each one actually returned: `evidence/websearch-legs.2026-11-02-p614.tsv`.
+
+| leg | arm | new permissive sector supply | what it did return |
+| --- | --- | --- | --- |
+| `1` | global — agents | 🔴 NIL | Listicles and indexes only. In-sector names were general-purpose agents or AI curricula |
+| `2` | global — trending | 🟡 LEAD-ONLY | `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `SirhanMacx/Claw-ED` — 🔴 **all three already on these shelves** |
+| `3` | global — verticals | 🟢 NIL **with a finding** | The leg's own summary states no education ERP under `MIT`/`Apache` was found; it offered `OpenEduCat` (`LGPL-3.0`), ERPNext, OFBiz, Krayin |
+| `4` | global — trends | 🔴 NIL | Trend prose; every market figure secondary |
+| `5` | North America | 🔴 NIL | Policy only: `134` state bills across `31` states; `MD`/`ID`/`OK`/`VA` mandate district policy |
+| `6` | EMEA | 🔴 NIL | The EU AI Act date, 🔴 **served in both forms again** — `614-C` |
+| `7` | APAC | 🔴 NIL | `KR` AI Basic Act in force `2026-01-22`; `VN` `134/2025/QH15` from `2026-03-01` with **education named high-risk**; `AU` TEQSA action plans |
+| `8` | LATAM | 🔴 NIL | Strongest regional evidence of the eight, all secondary: UNESCO IESALC `87 %` adoption vs `26 %` with any framework |
+
+🔴 **`614-I` — the nil has been measured the same way for forty-four passes and it is now measuring the
+wrong thing.** The standing definition counts *new permissive repository names the web legs surface*.
+🟢 This pass's sweep found `11` unshelved permissive rows at `≥ 20★` — none of them from a web leg.
+**Every one came from the platform's own search API**, which is a channel the legs do not touch. 🔵 So
+"forty-fourth nil" is true and nearly uninformative: it describes the legs' yield, not the sector's.
+🟢 **Ask for the next pass:** keep reporting the leg nil as a control, and report **channel yield**
+beside it, so the base stops reading a web-search artefact as a statement about supply.
+
+### 🟢 What moved this pass
+
+| channel | arm | result this session | control |
+| --- | --- | --- | --- |
+| 🟢 `git ls-remote --symref` | default-branch resolution | `ref` on `26 of 26`; recovered `master` on `3` | 🟢 fabricated slug fails |
+| 🟢 `raw.githubusercontent.com` | grant bytes | `18 of 18` permissive grants read; `4` ladder-exhausted proven ungranted | 🟢 `4 of 4` fabricated at `404` |
+| 🟢 `gh api search/repositories` | stars, spdx, pushed, description | the whole sweep; `59` addresses | 🔴 **fails LOUDLY with `422`** when a batched member is invalid — a **third** behaviour beside `613-F`'s two |
+| 🔴 `curl -sI https://github.com/<slug>` | the run prompt's prescribed verifier | 🔴 `403` on a real address | 🔴 **inert on this host** — `p613`'s finding, reproduced |
+| 🔴 `unesco.org`, `iesalc.unesco.org`, `eur-lex.europa.eu`, `oecd.org`, `moodledev.io`, `docs.openedx.org` | authority reads | 🔴 `000` / `ENOTFOUND` | 🔴 `614-H` — fourteenth consecutive pass, **now with a cause** |
+
+🔴 **`613-F` gains a third failure mode.** `613-F` recorded that a batched `repo:` existence probe
+fails silently two ways. 🟢 Measured here: with an invalid member the endpoint can also fail **loudly**,
+returning `422 Validation Failed` for the *whole batch* — so one bad slug discards up to `20` good
+rows. 🟢 Operative: probe existence with `git ls-remote` per address, and use the batched API only for
+metadata on addresses already known to resolve.
+
+### 🟢 The pass's promotions, in one place
+
+| shelf | rows | note |
+| --- | --: | --- |
+| 🟢 `agents/top.md` | `8` | `4` skill-package rows (`614-I`) + `4` application rows; `3` region-placed APAC |
+| 🟢 `repos/foundations.md` | `4` | `pytogether`, `haxcms-php`, `langx`, `elimu-ai/webapp` |
+| 🟢 `verticals/solutions.md` | `1` permissive | `opencast/annotation-tool` (`ECL-2.0`), plus `2` **warning** rows that are not permissive and are shelved as warnings |
+| 🟢 **permissive rows promoted, total** | `13` | reconciles exactly against the `15` permissive-and-unshelved the sweep found: `13` promoted + `2` parked |
+| 🟡 measured, not promoted | `2` permissive + `8` non-permissive | each with its reason on the shelf, so the search is not re-spent |
+| 🔴 corrected in draft | `1` | `virgiliojr94/book-to-skill` was drafted as a new promotion and was **already shelved** at `36,686★`; the differencing caught it and it is now a re-measurement row |
+| 🔴 declared nil | — | no new permissive supply from any of the `8` mandated legs |
+
+### 🔴 Gates: `HEAD` was red on **four** blocking gates before this pass wrote a word
+
+🔵 Recorded because `574-A`'s mechanism is a pass committing against a red field and saying nothing.
+🟢 Every one proven pre-existing by stashing this pass's edits and re-running at pristine `HEAD`.
+
+| gate | finding at `HEAD` | this pass |
+| --- | --- | --- |
+| `gate-offline` → `p253-settled-fact-regression` | 🔴 `REGRESSION intel/open-gaps.md eu-annexiii-date` | 🟢 **FIXED** — `614-A`, a false positive; `7` new controls, suite `32/32` |
+| `gate-offline` → `ACTION TB` lazy lint | 🔴 `compose/code/p512-cell-frame/cell_frame.py:39` | 🟢 **FIXED** — `614-D`, with the specimen that makes it a defect |
+| `recount` | 🔴 `STALE=0 NO-ANCHOR=5 of 5` | 🟡 **Not touched** — this is `Gap 534-J`, already registered: the anchors pin a file layout the base abandoned. 🔵 Repairing a gate one does not understand is how a wrong figure becomes a green one |
+| `gate-region-headings` | 🔴 `11` findings on `intel/market.md` (`9` region blocks, the contract asks `1`) | 🟡 **Not touched** — an artefact of an append-only file accumulating one region block per pass; registered this pass, not papered over |
+
+🔴 **Therefore this commit is made with `SKIP_COMMIT_GATES=1`**, as `ingest/pre-commit` prescribes for
+a deliberate red landing, and it is said here rather than left in a terminal nobody reads. 🟢 Net
+movement is **two inherited reds fixed, two registered**.
+
 ## 🆕 `p613` — `2026-11-02` — **the forty-third consecutive global-leg nil, and the first pass to catch the prescribed verifier being inert**
 
 🔵 The run prompt mandates four global legs and four regional legs. 🟢 All eight were run. 🔴 None

@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## Pass 614 — reads 2026-11-02, commit 2026-11-02 — **🟢 THE SECTOR'S NEW PERMISSIVE SUPPLY HAS CHANGED VEHICLE: IT ARRIVES AS **SKILL PACKAGES FOR SOMEBODY ELSE'S CODING AGENT**, AND THIS BASE ALREADY HELD THE CLASS'S LARGEST MEMBER (`36,751★`) WITHOUT HAVING A CATEGORY FOR IT. 🟢 `13` PERMISSIVE ROWS PROMOTED, `18 of 18` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD (`110 of 110` POOLED WITH `612`/`613`). 🟢 TWO INHERITED RED BLOCKING GATES FIXED — ONE WITH THE SPECIMEN THAT TURNS A LONG-STANDING LINT FINDING INTO A MEASURED DEFECT. 🔴 `614-E`: `NULL` AND `NOASSERTION` MEAN OPPOSITE THINGS (`4 of 4` vs `6 of 6`, ZERO PERMISSIVE). 🔴 `614-F`: A `121`-BYTE `LICENSE.md` THAT IS A CROSS-REPO POINTER TO `AGPL-3.0`. 🔴 FORTY-FOURTH LEG NIL, AND `614-I` ARGUES THE STATISTIC MEASURES THE LEGS RATHER THAN THE SECTOR. NINE REGISTERED (`614-A`…`614-I`).**
+
+🟢 **`614-I` — the pass's load-bearing finding.** `611` passes of searching for *tutors* produced rows
+topping out near `450★`. This pass's sweep returned a class that is not an application at all: a
+**skill package** riding an existing coding agent as its host. `4` new rows cleared the bar
+(`YujxZJCN/teaching-skills` `45★`, `Kaiji-Z/dsh-plugin-lookatstudy` `23★` with BKT mastery and SM-2
+reviews, `smashburger-dev/socratic-workshop` `23★`, `tong666-bit/liu-xiaoyan-skill` `20★`), every one
+`MIT` byte-read today — and the class's largest member, `virgiliojr94/book-to-skill` at `36,751★`, was
+**already on this shelf uncategorised**, as was `613-E`'s `CC-BY-SA-4.0` specimen at `942★`. 🔴 The
+deliverable is **prompt text**, so it crosses borders with no infrastructure and no data-residency
+argument — and the licence question moves from code to copy, where a permissive default is least
+reliable (`1 of 6` known members is share-alike).
+
+🔴 **`614-E` — `613-E`'s open limit, measured on a population instead of one row.** `NULL` (`4 of 4`)
+means **no grant file at all** — the field is honest, not declining. `NOASSERTION` (`6 of 6`) means **a
+real grant file and not one permissive**: `2` Creative Commons, `1` **Elastic License `2.0`**, `1`
+bespoke non-commercial *"all rights reserved"*, `2` cross-repo pointers to `AGPL-3.0`. 🟢 Operative
+split: `0 %` permissive yield means do not spend *discovery* budget on `NOASSERTION`; byte-read it
+always before *shipping*. 🔴 Never pool the two values again.
+
+🔴 **And the expensive specimen is the vertical a client actually asks for.**
+`canyongbs/advisingapp` (`340★`) — a student-success platform and recruitment CRM for colleges — is
+**Elastic License `2.0`**, which forbids *"provid[ing] the software to third parties as a hosted or
+managed service"*. 🔵 That is a bar on the **studio delivery model**, not merely on redistribution, and
+the platform field says only `NOASSERTION`, so nothing warns a reader who triages from metadata.
+`P614-6` is written as a refusal pattern for exactly this.
+
+🟢 **`614-A`/`614-D` — two inherited red blocking gates fixed, and `HEAD` was red on four.** `p308`
+narrowed the settled-fact gate to one row for the right reason and implemented it for **pipe tables
+only**, so a Markdown bullet list — the dominant structure of `intel/open-gaps.md`, the file the gate
+exists to watch — was still graded whole-scope; `p613`'s own `7`-bullet summary then put *"unresolved"*
+and *"Annex III"* four bullets apart and scored a false regression — while the fact itself stayed
+settled at `2027-12-02` under `Reg. (EU) 2026/1744` (`p233`/`p241`, `2026-08-02` superseded), which is
+precisely why the finding was false. Fixed with `7` new controls, suite `32/32`. 🟢 Separately, `ACTION TB`'s lazy-quantifier lint had flagged
+`p512-cell-frame/cell_frame.py:39` for some time and this register had recorded it as inherited and
+skipped; this pass found the specimen that makes it a defect — `Sobeston/zig.guide` (`MIT`, `935★`)
+truncates to `Sobeston/zig`, **which exists, under the same owner**, so the frame would compare one
+repository's stars against another's API row. 🔵 `processing/p5.js` truncates to a non-existent address
+and would have failed loudly: same defect, and only the silent direction costs anything.
+
+🟡 **Two reds registered and deliberately not touched:** `recount`'s `NO-ANCHOR=5 of 5` is the
+already-registered `Gap 534-J` (its anchors pin a file layout this base abandoned), and
+`gate-region-headings` reports `9` canonical region blocks against a contract asking for `1` — a
+structural artefact of an append-only shelf. 🟢 This pass's own region block is individually compliant:
+all five canonical regions, no out-of-vocab child. 🔴 The commit is made with `SKIP_COMMIT_GATES=1`,
+as `ingest/pre-commit` prescribes for a deliberate red landing, and it is said in the write-up rather
+than left in a terminal.
+
+🟢 **`614-B`/`614-G` — two standing rules bounded rather than restated.** `604-A`'s *"the API is wrong
+about `ECL-2.0` in `10 of 11` repos"* was measured entirely inside four Apereo orgs; `opencast/annotation-tool`
+is a fifth publisher outside them and the field is **correct** there, so the defect is an **owner**
+property — `613-A`'s rule arriving from a second direction. And Creative Commons is **fit for purpose
+on data and a trap on copy**: `xiaoyang111222/cn-math-taxonomy` (`6,143★`) is a curriculum-aligned
+knowledge graph (`1,644` knowledge points, `2,403` prerequisite edges, `6,723` problems) where `CC` is
+the right family, while the same family on agent-skill prompt text is a share-alike obligation on the
+deliverable.
+
+🟡 **`614-H` — `598-G` has a cause for the first time in fourteen passes.** `unesco.org`,
+`eur-lex.europa.eu`, `oecd.org`, `moodledev.io` and `docs.openedx.org` fail with `000` under `curl` and
+`getaddrinfo ENOTFOUND` under an independent channel — the hosts **do not resolve**, which is an
+environment allow-list signature, not a site that is down. 🟢 The gap is now actionable as a
+configuration change. 🔴 Until then every market and regulatory figure in this base is secondary by
+construction, and `614-C` is the cost: the EU Annex III primary text has never been read here, while
+this pass's own EMEA leg served the superseded `2026-08` date for at least the sixth time.
+
+🟢 **Regional placement.** `3` new APAC rows (`MindTrain`, `civil-ai`, plus the `CC` knowledge graph)
+beside the two re-measured giants `HKUDS/DeepTutor` (`Apache-2.0`, `54,089★`, HKU) and
+`THU-MAIC/OpenMAIC` (`MIT`, `42,470★`, Tsinghua); `2` EMEA rows (`opencast/annotation-tool` `ECL-2.0`,
+and `elimu-ai/webapp` `MIT` for early-grade literacy, which points at the **Sub-Saharan** half of EMEA
+this base had left empty); `1` North America row (`haxtheweb/haxcms-php`, `Apache-2.0`, Penn State).
+🔴 **Declared gap, unchanged:** this base still holds **no LATAM-published permissive repository** on
+any sell shelf — the region is rich in demand evidence (`87 %` adoption vs `26 %` with any framework,
+UNESCO IESALC) and empty in measured local supply.
+
+🔵 Six patterns, each wired from rows byte-read today: `P614-1` tutor-as-a-skill (`2`–`3` wk),
+`P614-2` the conformity pack serving both a US district mandate and the EMEA `2027-12-02` clock from
+one xAPI store (`8`–`10` wk), `P614-3` the APAC policy-parameterised deployment over a permissive
+knowledge graph (`10`–`12` wk), `P614-4` the synchronous classroom this base could not previously
+staff (`4`–`6` wk), `P614-5` the LATAM governance pack (`6`–`8` wk), and `P614-6`, a **refusal**
+pattern for the Elastic-licensed advising platform.
+
 ## Pass 613 — reads 2026-11-02, commit 2026-11-02 — **🔴 `42.9 %` OF THE SECTOR'S STANDARDS INDEX POINTS AT AN ORG WITH **ZERO** REPOSITORIES — AND ALL `12` ADDRESSES RECOVER BY UNCHANGED SLUG UNDER THE REAL PUBLISHER, WHICH HANDS OVER THE ENTIRE `Apache-2.0` xAPI / cmi5 CONFORMANCE TIER (US DoD) THIS BASE HAD NEVER SHELVED. 🟢 `24` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, `24 of 24` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD (`92 of 92` POOLED WITH `612`). 🟢 `611-C-open` AND `611-H-open` BOTH CLOSED — ONE WITH A CAUSE, ONE BY ITS PRESCRIPTION BEING UNEXECUTABLE. 🔴 `613-E`: A `942★` REPOSITORY READS `NOASSERTION` AND IS `CC-BY-SA-4.0` ON BYTES. 🔴 `613-F`: A BATCHED EXISTENCE PROBE FAILS SILENTLY TWO WAYS. 🔴 FORTY-THIRD GLOBAL NIL, AND THE PROMPT'S OWN `curl -sI` VERIFIER IS INERT ON THIS HOST. 🔴 `589-A` SEVENTH RECURRENCE — `p612` REGISTERED NOTHING; BACKFILLED. TEN REGISTERED (`613-A`…`613-J`).**
 
 🔴 **`613-A` — the pass's load-bearing finding.** `org:i2idl` returns **`0`** repositories; `org:adlnet`

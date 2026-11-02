@@ -3,6 +3,49 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE PASS'S MOST COMMERCIALLY IMPORTANT ROW IS A LICENCE, NOT A PLATFORM: THE SECTOR'S BEST-STARRED OPEN **STUDENT-SUCCESS / RECRUITMENT CRM** (`340★`) IS **ELASTIC LICENSE `2.0`**, WHICH FORBIDS PROVIDING IT AS A HOSTED OR MANAGED SERVICE — A DIRECT BAR ON THE STUDIO DELIVERY MODEL, AND THE PLATFORM FIELD SAYS ONLY `NOASSERTION`. 🟢 PLUS `ECL-2.0` RECOVERED FROM A FIFTH PUBLISHER OUTSIDE APEREO.**
+
+### 🔴 `614-E` (verticals arm) — the ERP/CRM question the run prompt asks, answered with the licence rather than the feature list
+
+🔵 The mandated vertical leg asks for *"real platforms (like Odoo for ERP)"* under `MIT`/`Apache`.
+🟢 **The leg's own summary says no education ERP under `MIT` or `Apache` was found**, and this pass
+confirms that from the supply side rather than restating it: the education vertical's incumbents are
+copyleft or non-OSI, and the interesting rows are the ones that *look* permissive and are not.
+
+| platform | ★ | platform field | grant on bytes | what it is | what a studio may do with it |
+| --- | --: | --- | --- | --- | --- |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | 🔴 `NOASSERTION` | 🔴 **Elastic License `2.0`** `3,860 B` | AI conversational assistant for staff, **student success platform and recruitment CRM** for colleges and universities — the closest thing in open supply to an education CRM | 🔴 **Self-host for the client, yes. Operate it for them, no.** `ELv2`: *"You may not provide the software to third parties as a hosted or managed service."* 🔴 Also forbids disabling the licence-key functionality. A managed-service engagement on this codebase is a licence breach, not a negotiation |
+| [`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) | `42` | 🟢 `ECL-2.0` | 🟢 **`ECL-2.0`** `11,340 B` | Video annotation for research, teaching and learning, from the **Opencast** academic consortium | 🟢 **Build on it.** `ECL-2.0` is `Apache-2.0`-derived and permissive; the sector's own licence. 🔴 Default branch `master` |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) + [`codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | `60` + `54` | 🔴 `NOASSERTION` ×2 | 🔴 `121 B` **pointer** → **`AGPL-3.0`** | UK primary/secondary coding curriculum: a Blockly game for ages `5`–`11` and a Python game for `11`+ | 🔴 **Reference only.** Network copyleft, discovered only by following a Markdown link out of the repository — `614-F` |
+
+🟡 **`OpenEduCat` remains the honest answer to the ERP question and it is still not permissive.** The
+leg surfaced it again at `LGPL-3.0`; `ERPNext` has an education module and is `GPL-3.0`. 🔵 Neither
+moved this pass and neither is re-read here. 🟢 The standing position is unchanged: **the education
+ERP/SIS tier is copyleft, and the permissive opportunity is the seam around it** — `612-D`'s LTI
+launch, `613-B`/`613-C`'s xAPI telemetry, and `614-J`'s classroom-delivery layer.
+
+### 🟢 `614-B` (verticals arm) — `ECL-2.0` outside the Apereo orgs, and why it matters for a procurement
+
+🔵 `604-A` carried *"the API is wrong about `ECL-2.0` in `10 of 11` repos"* as a licence property.
+🟢 `opencast/annotation-tool` is a **fifth publisher**, outside the four orgs that sweep covered, and
+there the platform field is **correct**. 🔵 For a vertical shelf the practical consequence is narrow
+and useful: an `ECL-2.0` component from Apereo needs a byte read before it can be relied on in a bid;
+one from Opencast can be triaged from the field like any `Apache` row. 🔴 `n = 1` outside Apereo —
+this bounds `604-A`'s claim, it does not replace its number.
+
+### 🔵 The customisable-base table, restated with this pass's additions marked
+
+🟢 Unchanged rows are carried, not re-measured; only the marked rows were read today.
+
+| system | layer | licence | region of publisher | AI-on-top fit |
+| --- | --- | --- | --- | --- |
+| Moodle | LMS | 🔴 `GPL-3.0` | EMEA | Launch via LTI (`612-D`), report via xAPI (`613-C`) — never fork |
+| Open edX | LMS | 🔴 `AGPL-3.0` | North America | Same seam strategy; release branches changed convention after Sumac (`612-G`) |
+| Kolibri | offline-first LMS | 🟡 carried | APAC/Global | Offline deployment reference |
+| 🆕 [`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) | classroom video | 🟢 **`ECL-2.0`** (byte-read today) | EMEA | 🟢 Permissive annotation layer over lecture capture — a place to put an AI summariser without touching the LMS |
+| 🆕 [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | course content CMS | 🟢 **`Apache-2.0`** (byte-read today) | North America | 🟢 Microsite-per-course authoring, institutional provenance (Penn State) |
+| 🆕 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | student success / CRM | 🔴 **Elastic `2.0`** (byte-read today) | North America | 🔴 **Warning row.** Shelved so no one proposes it as the managed-service base |
+
 ## 🆕 `p613` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE SECTOR'S STANDARDS INDEX POINTS `12 of 28` ADDRESSES (`42.9 %`) AT AN ORG THAT HAS **ZERO** REPOSITORIES — AND ALL `12` RECOVER, BY SLUG, UNDER THE REAL PUBLISHER. 🟢 THAT RECOVERY IS THE WHOLE `Apache-2.0` xAPI / cmi5 CONFORMANCE TIER, PUBLISHED BY THE US DoD's ADL INITIATIVE, AND THIS BASE HAD NONE OF IT.**
 
 ### 🟢 `613-B` — the conformance tier, recovered from a dead org

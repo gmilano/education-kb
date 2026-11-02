@@ -3,6 +3,190 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read today
+
+🔵 Every repository named below is on a sell shelf with its grant byte-read `2026-11-02` at the real
+default branch (`evidence/api-vs-bytes-grants.2026-11-02-p614.tsv`, `18 of 18` agreeing with the
+platform field). 🔴 Where a pattern has a limit, the limit is in the pattern, not in a footnote.
+
+### 🟢 `P614-1` — ship a tutor as a **skill**, not a deployment (`2`–`3` wk)
+
+🔵 **The problem.** A client wants AI tutoring over their own material. The reflex is to deploy an
+application: hosting, auth, data-residency review, a security questionnaire, and a procurement cycle
+longer than the pilot. 🟢 `614-I` says the sector has stopped doing that.
+
+🟢 **The wiring.** Take [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill)
+(`MIT`, `36,751★`, branch 🔴 `master`) to turn the client's own corpus — course texts, standards
+documents, internal manuals — into an agent skill. Layer
+[`smashburger-dev/socratic-workshop`](https://github.com/smashburger-dev/socratic-workshop) (`MIT`,
+`23★`) for the pedagogy, because learn-by-explaining is a *named method* a faculty committee can be
+argued into rather than a feature list. Add
+[`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) (`MIT`, `23★`)
+for progression: it already implements a gated skill tree with **BKT** mastery estimation and **SM-2**
+review scheduling. For the instructor side, [`YujxZJCN/teaching-skills`](https://github.com/YujxZJCN/teaching-skills)
+(`MIT`, `45★`) covers the teaching lifecycle.
+
+🟢 **Why it is fast.** There is nothing to host. The artefact is text, it runs in the agent host the
+client already licensed, and the data never leaves their estate — so the data-residency conversation
+ends before it starts.
+
+🔴 **Limits, stated.** (a) Every row is single-author at `20`–`45★` except `book-to-skill`; expect to
+own the fork. (b) 🔴 **Licence-read the copy, not the code**: `613-E`'s `GarethManning/education-agent-skills`
+(`942★`) is this same class and is `CC-BY-SA-4.0`, which would attach share-alike to the skill text
+you hand the client. (c) This pattern sells a *capability*, not a system of record — it produces no
+audit trail, which is what `P614-2` is for. (d) `book-to-skill`'s default branch is `master`; a
+`main`-only build script silently gets nothing.
+
+### 🟢 `P614-2` — the conformity pack: one build, two regulators, two different clocks (`8`–`10` wk)
+
+🔵 **The problem.** The same artefact is demanded by both western regions and on different terms.
+In **North America** the binding layer moved to the district: `MD`, `ID`, `OK` and `VA` now mandate
+district-level AI policy adoption in `2026`, against `134` bills in `31` states — and adoption already
+ran ahead of governance (`60 %` of US teachers using AI tools per Gallup, most public schools without
+a formal student policy). In **EMEA** Annex III education obligations bind **`2027-12-02`** under
+`Reg. (EU) 2026/1744`, with AI embedded in regulated products at `2028-08-02`. 🔴 A district wants
+evidence *this school year*; an EU institution wants a conformity file dated before a deadline two
+years out. 🟢 The underlying artefact is the same: a demonstrable record that the AI did what was
+claimed, to whom, with human oversight.
+
+🟢 **The wiring, all permissive.** Make the record of what happened `613-C`'s `Apache-2.0` xAPI
+Learning Record Store ([`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql), `144★`, or
+[`openfun/ralph`](https://github.com/openfun/ralph), `MIT`, `51★`). Prove interoperability with a test
+run rather than an assertion using `613-B`'s `Apache-2.0` **xAPI/cmi5 conformance suites** published by
+the **US DoD's ADL Initiative** — in North America that publisher is itself a procurement argument.
+Populate and load-test the whole thing before any real learner with
+[`yetanalytics/datasim`](https://github.com/yetanalytics/datasim). Carry the assessment-integrity
+trail on `612-E`'s rubric/autograding tier. Launch from the incumbent LMS through `612-D`'s permissive
+LTI `1.3` tier so Moodle (`GPL-3.0`) and Open edX (`AGPL-3.0`) are never forked. Author the policy and
+evidence microsites with [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php)
+(`Apache-2.0`, `130★`, 🔴 `master`), whose Penn State provenance reads as institutional rather than
+vendor.
+
+🟢 **Why one build serves both.** The district deliverable is the *report*; the EU deliverable is the
+*file*. Both are views over the same xAPI statement store, so the regional difference is reporting and
+documentation — not architecture.
+
+🔴 **Limits, stated.** (a) 🔴 The EU dates are a **secondary** read in this base: `eur-lex.europa.eu`
+does not resolve from this session (`614-H`), and the `2028-08-02` embedded-product date is new and
+unverified this pass. Confirm against the Official Journal before contracting. (b) 🔴 The superseded
+`2026-08` date is still being published by secondary sources — this pass's own EMEA leg served it
+(`614-C`). Do not let a client's advisor reintroduce it; the settled value is `2027-12-02` under
+`Reg. (EU) 2026/1744`. (c) `5 of 9` ADL repos last pushed `2024`–`2025` and `xAPIWrapper` in `2022-12`
+(`613-B`'s stated limit): acceptable for a spec and a conformance suite, a risk as a live dependency.
+(d) US state law is `50` jurisdictions, not one — the `4` mandate states are the beachhead, and the
+`134`-bill figure is a tracker count, not a statute count.
+
+### 🟢 `P614-3` — the APAC policy-parameterised deployment, over a permissive knowledge graph (`10`–`12` wk)
+
+🔵 **The problem.** APAC is not one market. Korea's AI Basic Act is in force (`2026-01-22`), Vietnam
+names **education** high-risk from `2026-03-01` including automated assessment, China requires
+registration and content labelling, Australia's TEQSA requires an institutional action plan from every
+provider, while Japan and Singapore remain voluntary. 🔴 One deployment cannot satisfy all five and
+five deployments cannot be maintained.
+
+🟢 **The wiring.** Base the learner model on
+[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) (`MIT`, `41★`, APAC) — it is
+**local-first** by design, which is what makes per-jurisdiction data handling a configuration rather
+than a re-architecture. Take the domain model from
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (`6,143★`,
+`CC` family): `1,644` knowledge points and `2,403` prerequisite edges aligned to a national
+curriculum — the input that normally takes a year of subject-matter expert time. Make the review
+schedule swappable with [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) (`MIT`,
+`128★`), whose scheduler is pluggable and already speaks Anki/FSRS, backed by `613-D`'s permissive
+FSRS tier (`fsrs4anki` `4,122★` `MIT`, `ts-fsrs` `847★`, `py-fsrs` `520★`, `fsrs-rs` `455★` `BSD-3`)
+so the algorithm is a dependency and not a rewrite. Emit telemetry through `613-C`'s `Apache-2.0`
+xAPI LRS (`yetanalytics/lrsql`) so each jurisdiction's evidence requirement is satisfied by
+configuration of one store.
+
+🟢 **Why it holds together.** Policy varies at the edges — residency, assessment automation,
+labelling — and all three of those are configuration points in a local-first stack with a pluggable
+scheduler and an external record store.
+
+🔴 **Limits, stated.** (a) 🔴 The knowledge graph is `CC-?` — **family identified, version not read**
+(`614-G`); read the version before any client delivery, and treat it as data under attribution, never
+vendored as code. (b) It is aligned to the **Chinese** national curriculum; re-alignment to another
+country's standards is real work, not a mapping table. (c) `civil-ai` is `41★` and single-author —
+shelf it as a reference implementation, budget to own it. (d) Vietnam's high-risk designation is a
+**secondary** read in this base; confirm against the decision text before writing it into a contract.
+
+### 🟢 `P614-4` — the synchronous classroom, which this base could not previously staff (`4`–`6` wk)
+
+🔵 **The problem.** Every pattern this base held was asynchronous — a learner, alone, with an agent.
+🔴 Institutions buy *lessons*, which are synchronous and have an instructor in the room.
+
+🟢 **The wiring.** [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) (`MIT`, `262★`) gives a
+browser-based collaborative IDE with real-time co-editing, live drawing and voice chat — the
+instructor and student in one buffer, no install. Author and publish the course material around it
+with [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) (`Apache-2.0`, `130★`, branch
+🔴 `master`), which carries **Penn State** provenance — an institutional publisher, which survives a
+procurement review in a way a single-author repo does not. Capture and annotate the session with
+[`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) (`ECL-2.0`, `42★`, branch
+🔴 `master`), the sector's own licence family from a European academic consortium. Launch all of it
+from the incumbent LMS through `612-D`'s permissive LTI `1.3` tier and report back through `613-C`'s
+xAPI store — so Moodle (`GPL-3.0`) or Open edX (`AGPL-3.0`) stays untouched and un-forked.
+
+🔴 **Limits, stated.** (a) Two of the three new rows default to `master`; a build that assumes `main`
+fails on both. (b) `pytogether` is one author at `262★` — the architecture is the asset. (c) Voice
+chat moves this into a different accessibility and recording-consent conversation; in EMEA that lands
+inside the Annex III scope, not beside it. (d) `ECL-2.0` from a non-Apereo publisher triaged from the
+platform field is safe per `614-B`, but `n = 1` — byte-read it before shipping anyway.
+
+### 🟢 `P614-5` — the LATAM governance pack: sell the evidence, not the tutor (`6`–`8` wk)
+
+🔵 **The problem, quantified.** UNESCO IESALC across ~`200` institutions in `19` countries:
+**`87 %`** use AI in at least one area, **`26 %`** have any formal framework. Brazil at the school
+level: `53 %` of administrators using it, `22 %` with guidelines (Cetic.br). 🔵 **The region does not
+need to be sold AI. It needs to account for the AI it already runs.**
+
+🟢 **The wiring.** Stand up `613-C`'s `Apache-2.0` Learning Record Store
+([`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql), `144★`;
+[`openfun/ralph`](https://github.com/openfun/ralph), `MIT`, `51★`, France Université Numérique) as the
+institution's AI-use register — every agent interaction an xAPI statement, so "what AI is in use
+here" becomes a query rather than a survey. Prove the stack before a single real learner with
+[`yetanalytics/datasim`](https://github.com/yetanalytics/datasim), which generates conformant
+statement volume. Attach `612-E`'s rubric/autograding tier as the assessment-integrity trail, and
+`613-B`'s `Apache-2.0` cmi5/xAPI **conformance test suites** (US DoD ADL) so interoperability is
+answered with a test run rather than an assertion. Deliver it against the vocabulary the region will
+be measured on — UNESCO IESALC's recommendations and the LAC Observatory (Santiago, `2026-04`) —
+through partners with national reach: Ceibal (Uruguay), Cetic.br, CENIA (Chile), Tec de Monterrey.
+
+🔴 **Limits, stated.** (a) 🔴 **Every figure in this pattern is secondary** — `unesco.org` and
+`iesalc.unesco.org` do not resolve from this session (`614-H`), so the `87 %`/`26 %` pair has never
+been read at source by this base. Cite it as UNESCO IESALC's published figure, never as measured.
+(b) 🔴 The `87 %` (institutions, IESALC) and `92 %` (students, Digital Education Council) figures are
+**different populations** and must not be averaged. (c) 🔴 This base holds **no LATAM-published
+permissive repository** on any sell shelf — the stack above is `Apache-2.0`/`MIT` from US and French
+publishers, localised, not regional supply. Say so to the client rather than implying local
+provenance. (d) `5 of 9` ADL repos last pushed `2024`–`2025` (`613-B`'s own stated limit) — fine for
+a spec, a risk for a dependency.
+
+### 🔴 `P614-6` — the pattern that is a **refusal**, and it is the most valuable one this pass
+
+🔵 A client asks for the obvious thing: an open student-success and advising platform with an AI
+assistant, self-hosted, operated by the studio. 🟢 The obvious answer exists and is well-starred:
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (`340★`), a student success
+platform and recruitment CRM built for colleges and universities.
+
+🔴 **Do not sell it as a managed service.** Its grant is **Elastic License `2.0`** (byte-read today,
+`3,860 B`), which states: *"You may not provide the software to third parties as a hosted or managed
+service, where the service provides users with access to any substantial set of the features or
+functionality of the software."* 🔴 It also forbids disabling the licence-key functionality. 🔵 The
+platform's own licence field says only `NOASSERTION`, so **nothing warns a reader who triages from
+metadata** — this is `614-E` with a price attached.
+
+🟢 **What to do instead.** (a) Deploy it **into the client's own tenancy**, with the client as
+licensee and the studio as implementer — permitted, and it is a different statement of work and a
+different commercial model, so price it that way. (b) If a managed service is the requirement, the
+permissive path is to compose it: `613-C`'s xAPI/LRS tier for the record of engagement,
+`612-D`'s LTI seam for launch, and `P614-4`'s delivery layer — more build, and no licence that
+forbids the delivery model. (c) 🔴 Whichever path, **byte-read the grant before the proposal**, not
+before the deployment.
+
+🔵 **Why this belongs beside the build patterns.** Four of the eleven unshelved candidates this pass
+measured were licence traps rather than components (`614-E`, `614-F`), and the `121 B` pointer file of
+`614-F` resolves to `AGPL-3.0` without ever saying so in the repository a reader is looking at. 🟢 The
+cheapest thing this base does for an engagement is name the rows that cost money, early.
+
 ## 🆕 `p613` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read today
 
 🔵 Every repository named below is on a sell shelf with its grant byte-read `2026-11-02` at the real

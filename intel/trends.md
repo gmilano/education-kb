@@ -3,6 +3,107 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🟢 `T614-1` — education's new permissive supply is **prompt text riding somebody else's agent**, not applications
+
+🟢 **Evidence.** `4` new rows this pass are skill packages for an existing coding agent, not programs:
+`YujxZJCN/teaching-skills` (`45★`, a professor's teaching lifecycle), `Kaiji-Z/dsh-plugin-lookatstudy`
+(`23★`, repo → guided course with BKT mastery and SM-2 reviews), `smashburger-dev/socratic-workshop`
+(`23★`, learn-by-explaining), `tong666-bit/liu-xiaoyan-skill` (`20★`, one instructor's method) — every
+one `MIT` byte-read `2026-11-02`. 🔵 And the class's largest member was **already on this shelf
+unrecognised**: `virgiliojr94/book-to-skill` at `36,751★`. 🟢 `613-E`'s `CC-BY-SA` specimen,
+`GarethManning/education-agent-skills` (`942★`), is the same class — so the class spans `20★` to
+`36,751★` and this base has `6` members of it.
+
+🔴 **What would refute it.** A pass that finds the next tranche of permissive education supply arriving
+as deployable applications again, with the skill-package rows going quiet (no pushes, no star growth)
+within two or three passes. 🔵 The cheap check: re-read the `6` addresses' push dates next pass.
+
+🟡 **Why it matters commercially.** The deliverable stops being a deployment and becomes copy. 🟢 That
+collapses delivery cost and crosses borders with no data-residency argument. 🔴 It also moves the
+licence question from code to text, where a permissive default is least reliable — `1 of 6` known
+members is share-alike.
+
+### 🟢 `T614-2` — the sector's buying question in `2026` is **"may we deploy it, and can we prove it"**
+
+🟢 **Evidence.** `5` of this pass's `8` mandated legs returned regulatory substance and `0` returned a
+market figure this base did not already hold. Specifically: `134` US state bills across `31` states
+with `MD`/`ID`/`OK`/`VA` mandating district-level policy; Korea's AI Basic Act in force `2026-01-22`;
+Vietnam's `134/2025/QH15` from `2026-03-01` **naming education high-risk**; Australia's TEQSA
+requiring an institutional gen-AI action plan from every provider; UNESCO IESALC measuring `87 %`
+adoption against `26 %` with any framework. 🔵 Independent corroboration from the leg prose itself:
+OECD's `2026` Digital Education Outlook recommends moving *beyond general-purpose AI tools toward
+purpose-built educational AI*, and `1EdTech`/HolonIQ both frame `2026` as governance and proven
+instructional benefit rather than capability.
+
+🔴 **What would refute it.** Procurement evidence that institutions are still buying on capability —
+for instance a pass where the regional legs return vendor-selection news and no new statutory dates.
+
+🟢 **The inventory this base holds for it**, all permissive and all already shelved: `612-E`'s
+rubric/autograding tier as conformity evidence, `613-B`'s `Apache-2.0` xAPI/cmi5 **conformance test
+suites** (US DoD ADL), `613-C`'s LRS + statement simulator so a stack is demonstrable before a single
+real learner exists. 🔵 That is an unusually good fit: the sector is asking for proof, and the
+permissive supply is disproportionately *proof infrastructure*.
+
+### 🟢 `T614-3` — a platform licence field that **declines** is not a licence fact in either direction, and the two ways it declines mean opposite things
+
+🟢 **Evidence.** `10` rows byte-read where the field declined: `NULL` (`4 of 4`) had **no grant file at
+all** across an `18`-path ladder; `NOASSERTION` (`6 of 6`) had a **real grant file and not one was
+permissive** — `2` Creative Commons, `1` Elastic License `2.0`, `1` bespoke non-commercial, `2`
+cross-repo pointers resolving to `AGPL-3.0`. 🔵 Against this, where the field makes a *positive*
+assertion it reproduced on bytes `18 of 18` this pass and `110 of 110` pooled with `612`/`613`.
+
+🟢 **Operative split, which `613-E` could not make from `n = 1`:** for *discovery*, `NOASSERTION` has
+a `0 %` permissive yield — do not spend search budget on it. For *shipping*, byte-read it always.
+🔴 And never pool `NULL` with `NOASSERTION` again.
+
+🔴 **What would refute it.** A `NOASSERTION` row that byte-reads to `MIT` or `Apache-2.0` — which is
+entirely possible and simply did not occur in `6` cases. 🔵 The honest statement of strength is
+`0 of 6`, not "never".
+
+### 🟢 `T614-4` — licence-metadata defects are **owner-shaped**, and that is now the base's second independent confirmation
+
+🟢 **Evidence.** `604-A` carried *"the API is wrong about `ECL-2.0` in `10 of 11` repos"* as a property
+of the licence; measured here, `opencast/annotation-tool` is a **fifth publisher outside the four
+Apereo orgs that sweep covered, and the field is correct there**. 🔵 Second, independent instance in
+the same pass: the `121 B` pointer `LICENSE.md` of `614-F` is **byte-identical across two repositories
+of one owner** — an owner-level convention, not two coincidences. 🟢 Both point the same way as
+`613-A`, which found `12` dead addresses recovering under one owner and adopted the rule *group by
+owner before writing anything off*. 🔴 `n = 1` outside Apereo, so this **bounds** `604-A`'s number
+rather than replacing it.
+
+🔴 **What would refute it.** A sixth `ECL-2.0` publisher, outside Apereo, where the field is wrong.
+
+### 🟢 `T614-5` — Creative Commons is the **right** family for the sector's scarcest asset and the wrong one for its newest
+
+🟢 **Evidence.** `xiaoyang111222/cn-math-taxonomy` (`6,143★`, `CC`) is a curriculum-aligned knowledge
+graph: `1,644` knowledge points, `2,403` prerequisite edges, `6,723` problems. 🔵 A prerequisite graph
+is the scarcest input an adaptive-learning engagement has and is *data*, where `CC` is the conventional
+and correct family. 🔴 The same family on `613-E`'s agent-skill repository is a share-alike obligation
+on prompt text a studio pastes into a client's agent. 🟢 **So the grade belongs to the asset, not the
+licence** — and a filter that drops every `CC` row loses the sector's best dataset.
+
+🔴 **What would refute it.** A client engagement blocked by the attribution or share-alike terms of a
+`CC` **dataset** — which would mean the data/copy distinction is thinner than this trend claims.
+🔴 Stated limit: this pass's grader returns `CC-?` without a version on all three `CC` rows; the
+version must be read before any delivery.
+
+### 🔴 `T614-6` — a "forty-fourth consecutive nil" can be true and still be measuring the wrong thing
+
+🟢 **Evidence.** All `8` mandated legs returned no new permissive supply, the forty-fourth such
+result. 🔴 In the same hour, the platform's own search index yielded `32` addresses absent from every
+sell shelf, `15` permissive by field, **`13` promoted after a byte read** — a `22.0 %` promotion rate
+against the legs' `0 %`. 🔵 And `57 of 59` swept addresses were already cited somewhere in this base,
+so the yield is not discovery of unseen names but **adjudication of a backlog**, which is `612-A`'s
+finding restated from a new direction.
+
+🟢 **Ask, registered.** Report **channel yield** beside the leg nil every pass. A statistic that has
+read `nil` forty-four times while the base's actual supply arrived through an unmeasured channel is
+not a finding about the sector; it is a finding about the legs.
+
+🔴 **What would refute it.** A pass where the web legs out-yield the platform index.
+
 ## 🆕 `p613` — `2026-11-02` — trends, each with the evidence that would refute it
 
 ### 🟢 `T613-1` — the permissive supply in education is concentrating in **seams and standards**, not in tutors

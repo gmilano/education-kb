@@ -122,6 +122,40 @@ def hedges_in(scope):
     return [h for h in HEDGES if h in low]
 
 
+BULLET = r"[-*+][ \t]+\S"
+
+
+def _is_bullet_list(lines):
+    """A contiguous run of Markdown bullets -- at least two, starting on a bullet.
+
+    🔵 Deliberately conservative (`p614-A`): one bullet is not a list, and a block
+    that does not OPEN on a bullet keeps the old whole-scope grading.  A narrowing
+    that fires where it was not measured would be a new blind spot, not a fix.
+    """
+    import re as _re
+    if not lines or not _re.match(BULLET, lines[0].strip()):
+        return False
+    return sum(1 for l in lines if _re.match(BULLET, l.strip())) > 1
+
+
+def _bullet_units(lines):
+    """Group `lines` into one unit per bullet, continuation lines folded in."""
+    import re as _re
+    units, cur = [], None
+    for l in lines:
+        if _re.match(BULLET, l.strip()):
+            if cur is not None:
+                units.append(cur)
+            cur = l
+        elif cur is not None:
+            cur = cur + "\n" + l
+        else:
+            cur = l
+    if cur is not None:
+        units.append(cur)
+    return units
+
+
 def graded_units(scope):
     """-> [(unit, context)] — what gets matched, and where a citation may live.
 
@@ -147,6 +181,27 @@ def graded_units(scope):
     original defect is not a cheaper gate, it is a blind one.
     """
     lines = [l for l in scope.splitlines() if l.strip()]
+    if _is_bullet_list(lines):
+        # 🟢 `p614-A`.  `p308` narrowed this gate to ONE ROW for exactly the right reason
+        # and implemented it for ONE STRUCTURE.  Its branch is keyed on
+        # `all(startswith("|"))`, so a Markdown BULLET LIST never reached per-row
+        # grading and was graded whole-scope -- which is the very cross-row collision
+        # `p308`'s own docstring says it fixed.
+        #
+        # 🔴 Measured, not reasoned: at `p613` this put `gate-offline` RED at `HEAD`.
+        # `intel/open-gaps.md`'s current section carries a 7-bullet pass-summary list in
+        # which bullet `612-A` holds the hedge *"unresolved"* (about backlog addresses)
+        # and bullet `612-E`, four bullets later, holds the subject *"Annex III"* (about
+        # rubric repos).  Neither bullet is a claim about the Annex III date; together
+        # they scored `REGRESSION` on `eu-annexiii-date`.  A bullet list is in fact the
+        # DOMINANT structure of `intel/open-gaps.md` -- the one file this gate exists to
+        # watch -- so the blind spot sat on the highest-traffic surface it has.
+        #
+        # 🟢 `p308`'s contract is reused verbatim, not re-argued: the subject and the
+        # hedge must meet in ONE UNIT; the authority may be cited anywhere in the list.
+        # Wrapped continuation lines belong to the bullet they continue, so a hedge in
+        # the second line of a bullet is still that bullet's hedge.
+        return [(u, scope) for u in _bullet_units(lines)]
     if lines and all(l.strip().startswith("|") for l in lines):
         sep = r"^\|[\s:|-]+\|?$"
         # The row ABOVE the `|---|` separator is the header: structure, not a

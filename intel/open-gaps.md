@@ -3,6 +3,153 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — `2026-11-02` — **🟢 TWO INHERITED RED BLOCKING GATES FIXED, ONE OF THEM WITH THE SPECIMEN THAT TURNS A LONG-STANDING LINT FINDING INTO A MEASURED DEFECT (`Sobeston/zig.guide` → `Sobeston/zig`, BOTH REAL, SAME OWNER). 🔴 `HEAD` WAS RED ON **FOUR** BLOCKING GATES BEFORE THIS PASS WROTE A WORD, AND EACH FIX REVEALED THE NEXT. 🟢 `613-E`'s OPEN LIMIT MEASURED ON A POPULATION: `NULL` AND `NOASSERTION` MEAN OPPOSITE THINGS (`4 of 4` vs `6 of 6`). 🔴 `614-F`: A `121`-BYTE `LICENSE.md` THAT IS A CROSS-REPO POINTER TO `AGPL-3.0`. 🔴 FORTY-FOURTH LEG NIL — AND `614-I` ARGUES THE STATISTIC IS MEASURING THE LEGS, NOT THE SECTOR. NINE REGISTERED (`614-A`…`614-I`).**
+
+### 🟢 `614-A` — CLOSED (fixed): `p308`'s per-row narrowing was built for pipe tables only, and a bullet list is the structure the gate most needed it on
+
+🔴 **The defect.** `gate-offline` was **RED at pristine `HEAD`**:
+`REGRESSION intel/open-gaps.md eu-annexiii-date unresolved`. 🟢 It is a **false positive**, and of
+exactly the class `p308`'s own docstring says it fixed: *"A subject in row 3 and a hedge in row 17 are
+not one claim."* 🔴 `p308` implemented that narrowing in a branch keyed on
+`all(l.startswith("|"))` — **pipe tables only** — so a Markdown bullet list fell through to
+whole-scope grading.
+
+🔵 **The specimen, from this register's own current section.** `p613`'s `7`-bullet pass summary holds
+the hedge *"unresolved"* in bullet `0` (about `101 of 848` backlog addresses) and the subject
+*"Annex III"* in bullet `4` (about `612-E`'s rubric repos) — four bullets apart, two unrelated claims,
+graded as one scope. 🔵 **The underlying fact is not in dispute and is not reopened here:** Annex III
+education obligations apply `2027-12-02` under `Reg. (EU) 2026/1744`, settled at `p233`/`p241`, with
+`2026-08-02` superseded. That is the point — nothing had re-litigated it, and the gate said otherwise. 🔴 **A bullet list is the dominant structure of `intel/open-gaps.md`**, the one
+file this gate exists to watch, so the blind spot sat on its highest-traffic surface.
+
+🟢 **The fix, reusing `p308`'s contract rather than re-arguing it.** Subject and hedge must meet in
+**one unit**; the authority may be cited anywhere in the list; wrapped continuation lines fold into
+the bullet they continue. Deliberately conservative: a single bullet is not a list, and a block that
+does not *open* on a bullet keeps the old grading — a narrowing that fired where it was not measured
+would be a new blind spot, not a fix. 🟢 `7` new controls including the two that must still be
+**caught** (same-bullet, and a hedge on a wrapped line); suite `32/32`.
+`evidence/bullet-scope-defect.2026-11-02-p614.tsv`.
+
+### 🟢 `614-D` — CLOSED (fixed): the lazy-quantifier lint was right, and the specimen is the silent kind
+
+🔴 **Inherited.** `compose/code/p512-cell-frame/cell_frame.py:39` has been red under `ACTION TB`'s
+lazy-quantifier lint, and this register already recorded it as *"Inherited, not caused here; the commit
+is made with `SKIP_COMMIT_GATES=1` for that reason."* 🟢 This pass asked what it would actually cost.
+
+🔴 **The regex** `([\w.-]+?)(?=[)\]`,.\s]|$)` puts `.` inside its own lookahead, so group `2` stops at
+the **first dot** and a dotted repository name is silently shortened.
+
+| published address | ★ | yielded | truncation exists? | failure |
+| --- | --: | --- | --- | --- |
+| [`Sobeston/zig.guide`](https://github.com/Sobeston/zig.guide) | `935` | 🔴 `Sobeston/zig` | 🔴 **YES** — branch `master`, **same owner** | 🔴 **SILENT.** The cell frame would compare one repo's published stars against another repo's API row |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | `24,290` | `processing/p5` | 🟢 No | 🟢 Loud — would `404` |
+
+🔵 **Why a lint and not a `404` sweep caught it:** the same defect is silent on one address and loud on
+the other, and only the silent one costs anything. 🟢 `p251-prefix-collision`'s "maia class", and
+`613-A`'s owner rule a third time — the collision is under the same owner. 🟢 **Fixed:** greedy match
+(the class already excludes `)`, backtick, `,` and whitespace) plus a trailing-dot strip, since GitHub
+does not permit a repository name to end in one. `6 of 6` cases correct, lint `0` findings.
+🔴 **Honest note:** this pass's first guessed specimen (`h5p/h5p.org`) **does not exist**; it was
+probed, refuted and recorded rather than quietly dropped.
+`evidence/address-truncation.2026-11-02-p614.tsv`.
+
+### 🟡 `614-H` — OPEN, but with a CAUSE for the first time in fourteen passes: `598-G` is an allow-list entry, not a research problem
+
+🔴 `unesco.org`, `iesalc.unesco.org`, `eur-lex.europa.eu`, `oecd.org`, `moodledev.io` and
+`docs.openedx.org` are all unreachable — **fourteenth consecutive pass**. 🟢 **New: the mechanism.**
+`curl` returns `000` and the independent `WebFetch` channel returns `getaddrinfo ENOTFOUND` — the
+hosts **do not resolve**, the signature of a name outside the session's allowed network domains, not of
+a site that is down, rate-limiting or blocking a user agent. 🔵 Every prior pass recorded the symptom
+and inferred an unreachable *site*; two independent channels agreeing on a DNS failure says otherwise.
+🟢 **Ask, now actionable:** add these hosts to the environment's network allow-list. Until then every
+market and regulatory figure in this base is **secondary by construction**, and `614-C` is the cost —
+the EU Annex III primary text has never been read here.
+
+### 🔴 `614-E` — CLOSED (measured): `613-E`'s open limit, and the two API values mean opposite things
+
+🟢 `613-E` measured **one** `NOASSERTION` row and explicitly left the populations unmeasured. `10`
+measured here. 🔴 `NULL` (`4 of 4`): **no grant file at all** — the field is honest, not declining.
+🔴 `NOASSERTION` (`6 of 6`): **a real grant file, and zero permissive** — `2` Creative Commons, `1`
+Elastic License `2.0`, `1` bespoke non-commercial, `2` cross-repo pointers to `AGPL-3.0`.
+🟢 **Operative:** `NOASSERTION` has a `0 %` permissive yield for *discovery* — do not spend search
+budget on it; byte-read it always before *shipping*. 🔴 Never pool the two values again. 🔵 Stated
+strength: `0 of 6`, not "never". `evidence/unasserted-arm.2026-11-02-p614.tsv`.
+
+### 🔴 `614-F` — OPEN (ladder defect): a `121`-byte `LICENSE.md` that is a **cross-repository pointer**, resolving to `AGPL-3.0`
+
+🔴 `codeforlife-education/rapid-router` (`60★`) and `codeforlife-education/codeforlife-portal` (`54★`)
+both ship a `121 B` `LICENSE.md` that is a Markdown **link** to a sibling repository — **byte-identical**
+across the two, i.e. an owner-level convention (`613-A`). 🔴 **`p612`'s ladder accepts it**: the gate
+requires `200` and `size > 100`, and `121 B` clears both, so it reports a grant path containing no
+grant. 🔴 Following the link gives **`AGPL-3.0`** (`32,920 B`). 🔵 A minimal sibling of `604-B`'s
+saved-HTML-page class.
+
+🟢 **And this base's classifier beats the platform on the target.** The pointed-to file is `AGPL-3.0`
+re-wrapped as Markdown with `##` headings, which breaks the platform's template match — the API says
+`NOASSERTION` on the target too. `compose/code/lib/license_family.sh` answers `AGPL-3.0`
+(`affero_lines` `10`, `commercial_use_ok` empty) and `ingest/p612-grade-title-line.py` agrees.
+🟢 `gate-presentation-fold` (`p378`) is vindicated in the wild on the strongest copyleft there is.
+🔵 **Ask:** teach the ladder to recognise a pointer — a payload under ~`400 B` containing a URL and no
+grant verb is not a grant.
+
+### 🟢 `614-B` — CLOSED (rule bounded): `ECL-2.0` metadata failure is an **owner** property, not a licence property
+
+🔵 `604-A` carried *"the API is wrong about `ECL-2.0` in `10 of 11` repos (`90.9 %`)"*, measured
+entirely inside four Apereo-family orgs. 🟢 `opencast/annotation-tool` (`42★`, branch `master`) is a
+**fifth publisher outside that sweep**, and there the platform field is **correct** on bytes.
+🟢 **Cite `604-A`'s number as scoped to the Apereo orgs from now on.** 🔴 Limit: `n = 1` outside
+Apereo — this bounds the claim, it does not replace the number.
+
+### 🟢 `614-G` — CLOSED (distinction adopted): Creative Commons is fit on **data** and a trap on **copy**
+
+🟢 `xiaoyang111222/cn-math-taxonomy` (`6,143★`, `CC`) is a curriculum-aligned knowledge graph —
+`1,644` knowledge points, `2,403` prerequisite edges, `6,723` problems — where `CC` is the conventional
+and correct family. 🔴 The same family on `613-E`'s agent-skill repo is share-alike on prompt text a
+studio pastes into a client's agent. 🟢 **Grade the asset, not the licence**; a filter that drops every
+`CC` row loses the sector's best dataset. 🔴 Stated limit: the grader returns `CC-?` — family
+identified, **version not read** — on all three `CC` rows this pass.
+
+### 🔴 `614-I` — OPEN (ask registered): the "forty-fourth consecutive nil" is measuring the legs, not the sector
+
+🟢 All `8` mandated legs returned no new permissive supply — the forty-fourth such result. 🔴 In the
+same hour the platform's own search index yielded `32` addresses absent from every sell shelf, `15`
+permissive by field and **`13` promoted after a byte read**: a `22.0 %` promotion rate against the
+legs' `0 %`. 🔵 And `57 of 59` swept addresses were **already cited somewhere in this base**, so the
+yield is adjudication of a backlog, not discovery — `612-A` from a new direction. 🟢 **Ask:** report
+**channel yield** beside the leg nil every pass. 🔵 A second part of the same finding: the sector's new
+supply arrives as **skill packages for somebody else's coding agent** (`T614-1`), and this base held
+the class's largest member (`36,751★`) without having a category for it — which is why it could not
+see the pattern.
+
+### 🟡 `614-C` — OPEN (unchanged, corroborated): the EU Annex III date was served in **both** forms again
+
+🔴 At least the sixth recorded re-service of the superseded `2026-08` date, by this pass's own EMEA
+leg. 🟢 The same leg independently reached this base's settled value by a different route — Digital
+Omnibus, OJ `2026-07-24`, `Reg. (EU) 2026/1744`, stand-alone Annex III `2027-12-02` — and added
+`2028-08-02` for AI embedded in regulated products, which this base had not recorded. 🔴 **Still
+secondary**: `eur-lex.europa.eu` does not resolve here (`614-H`), so the primary text remains unread
+and the `2028-08-02` date is **new and unverified**.
+
+### 🔴 The gate field at `HEAD`, published rather than left in a terminal
+
+🔵 Recorded because `574-A`'s mechanism is a pass committing against a red field and saying nothing.
+🟢 Each red proven pre-existing by stashing this pass's edits and re-running at pristine `HEAD`.
+🔵 The suite stops at the first failure, so **each fix revealed the next** — which is itself why the
+count was not previously known to be four.
+
+| gate | finding at pristine `HEAD` | disposition |
+| --- | --- | --- |
+| `gate-offline` → `p253-settled-fact-regression` | 🔴 false `REGRESSION` on `eu-annexiii-date` | 🟢 **FIXED** — `614-A` |
+| `gate-offline` → `ACTION TB` lazy lint | 🔴 `p512-cell-frame/cell_frame.py:39` | 🟢 **FIXED** — `614-D` |
+| `recount` | 🔴 `STALE=0 NO-ANCHOR=5 of 5` | 🟡 **Not touched — this is `Gap 534-J`**, already registered: the anchors pin a file layout this base abandoned, and `2` of the `5` claims measure structures that no longer exist. 🔵 Repairing a gate one does not understand is how a wrong figure becomes a green one |
+| `gate-region-headings` | 🔴 `11` findings on `intel/market.md` (`9` canonical blocks; the contract asks `1`) | 🟡 **Not touched** — a structural artefact of an append-only shelf accumulating one region block per pass. 🟢 This pass's own block is **individually compliant**: all five canonical regions, no out-of-vocab child, and it is the file's first block |
+
+🔴 **This commit is therefore made with `SKIP_COMMIT_GATES=1`**, which `ingest/pre-commit` prescribes
+for a deliberate red landing, and it is stated here rather than left in a terminal nobody reads.
+🟢 Net movement: **two inherited reds fixed, two registered with reasons.** 🔵 `574-G`'s standing ask —
+*triage the remaining red gates in one pass that writes nothing else* — is unchanged and this pass does
+not claim to have discharged it.
+
 ## 🆕 `p613` — `2026-11-02` — **🟢 `611-H-open` AND `611-C-open` BOTH CLOSED, ONE BY REFUTING ITS OWN PRESCRIPTION AS UNEXECUTABLE AND ONE WITH A CAUSE ON A THIRD POPULATION. 🟢 `24` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, `24 of 24` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD (`92 of 92` POOLED WITH `612`). 🔴 `613-A`: `42.9 %` OF A CURATED STANDARDS INDEX POINTS AT AN ORG WITH **ZERO** REPOSITORIES, AND ALL `12` RECOVER BY SLUG. 🔴 `613-E`: A `942★` REPO READS `NOASSERTION` AND IS `CC-BY-SA-4.0` ON BYTES. 🔴 `613-F`: A BATCHED EXISTENCE PROBE FAILS SILENTLY TWO WAYS. 🔴 FORTY-THIRD GLOBAL NIL. 🔴 `589-A` RECURS A SEVENTH TIME — `p612` WROTE NO REGISTER ENTRY; BACKFILLED BELOW. NINE REGISTERED (`613-A`…`613-I`).**
 
 ### 🔴 `613-A` — OPEN (rule adopted): `42.9 %` of a curated standards index is **one dead org**, fully recoverable

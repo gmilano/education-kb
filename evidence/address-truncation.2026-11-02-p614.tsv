@@ -1,0 +1,6 @@
+published_address	api_license	stars	lazy_regex_yielded	truncation_exists	failure_mode	note
+Sobeston/zig.guide	MIT	935	Sobeston/zig	YES (branch master)	SILENT -- resolves to a DIFFERENT real repo, same owner	614-D: the specimen that makes the lint a defect
+processing/p5.js	LGPL-2.1	24290	processing/p5	NO	LOUD -- would 404	same defect, harmless direction
+h5p/h5p.org	n/a	n/a	h5p/h5p	NO (neither exists)	n/a	p614's first guess; probed and WRONG, recorded rather than quietly dropped
+h5p/h5p-php-library	GPL-3.0	154	h5p/h5p-php-library	n/a	none -- no dot	the real H5P library address, for the record
+socketio/socket.io	n/a	n/a	socketio/socket	NO	LOUD	non-sector control pair

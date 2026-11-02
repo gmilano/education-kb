@@ -3,6 +3,130 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE SECTOR'S NEW PERMISSIVE AGENT SUPPLY HAS CHANGED SHAPE: IT IS NO LONGER APPLICATIONS BUT **SKILL PACKAGES FOR SOMEBODY ELSE'S CODING AGENT** — `4` NEW THIS PASS AT `20`–`45★`, EVERY ONE `MIT` ON BYTES, JOINING THE `36,751★` ROW THIS SHELF ALREADY HELD, AND `613-E`'s `CC-BY-SA` SPECIMEN WAS THE SAME CLASS. 🔴 THE ASSET IS PROMPT TEXT, SO THE LICENCE QUESTION MOVES FROM CODE TO COPY. 🟢 `18 of 18` GRANTS BYTE-READ AGREE WITH THE PLATFORM FIELD (`110 of 110` POOLED WITH `612`/`613`). 🔴 FORTY-FOURTH GLOBAL NIL ON *NEW* NAMES — BOTH NAMES THE LEGS RETURNED WERE ALREADY ON THIS SHELF. NINE REGISTERED (`614-A`…`614-I`).**
+
+### 🟢 `614-I` — read this first: the supply shifted vehicle, and this base nearly missed it by looking for apps
+
+🔵 `611` passes of searching for *tutors* produced rows topping out near `450★` and mostly
+single-author (`T613-1`). 🟢 This pass's sweep returned a class that is not an application at all:
+a **skill package** that rides an existing coding agent as its host. 🟢 `4` new rows cleared the bar
+below; 🔵 and the class's largest member was **already on this shelf** without being recognised as a
+class — `virgiliojr94/book-to-skill`, re-measured below at `36,751★`. 🔴 That is the finding: the base
+held the biggest specimen and had no category for it, so it could not see the pattern.
+
+| agent | ★ | grant (byte-read) | path | branch | region | what it actually is |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`tong666-bit/liu-xiaoyan-skill`](https://github.com/tong666-bit/liu-xiaoyan-skill) | `20` | 🟢 `MIT` `1,068 B` | `LICENSE` | 🔴 `master` | Global | A single named instructor's teaching method packaged as a skill. 🔵 At exactly the `≥ 20★` bar, and shelved because it is the class's **floor** specimen: the vehicle is cheap enough that one teacher's practice is now a distributable artefact |
+| [`YujxZJCN/teaching-skills`](https://github.com/YujxZJCN/teaching-skills) | `45` | 🟢 `MIT` `1,067 B` | `LICENSE` | `main` | Global | A **teaching-lifecycle suite for university professors** — the instructor-side counterpart to every learner-side row on this shelf, which this base has thin coverage of |
+| [`Kaiji-Z/dsh-plugin-lookatstudy`](https://github.com/Kaiji-Z/dsh-plugin-lookatstudy) | `23` | 🟢 `MIT` `1,081 B` | `LICENSE` | `main` | Global | Turns any markdown folder or learning repo into a guided course with a **gated skill tree, BKT mastery and SM-2 reviews**. 🟢 Consumes two tiers this base already holds — `OATutor`'s BKT and `613-D`'s scheduling family — without naming either |
+| [`smashburger-dev/socratic-workshop`](https://github.com/smashburger-dev/socratic-workshop) | `23` | 🟢 `MIT` `1,072 B` | `LICENSE` | `main` | Global | **Learn-by-explaining**: Socratic hints over books, papers and codebases. The only row here whose pedagogy is a named method rather than a feature list |
+
+🔴 **Why the vehicle change costs money if it is missed.** The deliverable is **prompt text**, not a
+binary. 🟢 That is cheap to ship into a client's existing agent host and needs no deployment. 🔴 And
+it is exactly where `613-E`'s trap bites: `GarethManning/education-agent-skills` (`942★`) is **this
+same class** and is `CC-BY-SA-4.0` on bytes — a share-alike obligation attaching to the thing a
+studio pastes into a client's agent. 🟢 `4 of 4` rows above are `MIT`, byte-read today, so the class
+is not inherently contaminated — but the licence must be read on **copy**, where a permissive
+default is least reliable.
+
+### 🟡 `614-I` (b) — the legs returned `2` names, this shelf already held both, and a third row was nearly double-shelved
+
+🔵 Honest accounting, including of this pass's own first draft, which promoted `book-to-skill` as new before the differencing caught it. Leg `2` printed `HKUDS/DeepTutor` and `THU-MAIC/OpenMAIC`
+as the week's education movers. 🔴 **Neither is new here** — both are on this shelf with cells from
+`p613`. 🟢 What the re-read is worth is *cell reproduction*, so it is recorded as that and not as a
+promotion.
+
+| address | `p613` cell | `p614` first-hand | drift | verdict |
+| --- | --: | --: | --: | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `53,823★` | `54,089★` | `+266` | 🟢 reproduces; `Apache-2.0` `11,408 B` re-read at `main` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `42,423★` | `42,470★` | `+47` | 🟢 reproduces; `MIT` `1,065 B` re-read at `main`, pushed `2026-11-02` |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | `36,686★` | `36,751★` | `+65` | 🟢 reproduces; `MIT` `1,068 B` re-read at 🔴 `master` — the branch `587-D` already recorded |
+
+🔴 **And the secondary channel was wrong about both, in the same direction as `580`.** The trend
+blogs leg `2` surfaced quoted DeepTutor at `52,783★` and `48,268★` and OpenMAIC at *"42K"* — all
+below the live figure, from snapshots dated between `2026-10-29` and `2026-11-01`. 🟢 Standing rule
+reaffirmed: a radar's star count is a **search hint**, never a cell.
+
+### 🟢 `4` new agent rows beyond the skill class — every grant byte-read `2026-11-02` at the real default branch
+
+| agent | ★ | grant (byte-read) | path | branch | pushed | region | what it is |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | `128` | 🟢 `MIT` `1,067 B` | `LICENSE` | `main` | `2026-10-15` | 🟢 APAC | Knowledge-training platform with **pluggable schedulers** and optional **Anki/FSRS**. 🟢 The first row this base holds that names `613-D`'s FSRS tier as a dependency it swaps in and out |
+| [`onemnemo/mnemo`](https://github.com/onemnemo/mnemo) | `123` | 🟢 `Apache-2.0` `11,326 B` | `LICENSE` | `main` | `2026-10-22` | Global | Desktop study application on **.NET 10 / Photino X**. 🔵 The only .NET row on this shelf — relevant where a client's estate is Microsoft and a Python stack is a procurement argument |
+| [`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app) | `106` | 🟢 `MIT` `1,070 B` | `LICENSE` | `main` | 🟢 `2026-11-02` | Global | AI flashcards across **iOS, macOS, Android and web** from one codebase. 🟢 Pushed today |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | `41` | 🟢 `MIT` `1,067 B` | `LICENSE` | `main` | `2026-11-01` | 🟢 APAC | **Local-first adaptive tutoring agent** reference implementation (iOS + web) with a civil-service-exam application on top. 🟢 Local-first is the shape that clears a strict data-residency brief — the same argument `613`'s `LearnKit` row makes, with a named exam vertical attached |
+
+### 🔴 `614-E` — `613-E`'s open limit, measured on a population: `NULL` and `NOASSERTION` are **different failures** and must not be pooled
+
+🔵 `613-E` measured **one** `NOASSERTION` row, found `CC-BY-SA-4.0`, and warned *"the answer may be a
+grant you cannot use."* 🟢 It explicitly left the `NULL` and `NOASSERTION` populations unmeasured.
+This pass measured `10` of them by bytes. 🔴 **The two values mean opposite things.**
+
+| platform field | rows | what the ladder found | permissive | reading |
+| --- | --: | --- | --: | --- |
+| 🟡 `NULL` | `4` | 🔵 **no grant file at all** — `18`-path ladder exhausted at the real default branch, `4 of 4` | `0` | 🟢 The field is **honest**, not declining. `NULL` ⇒ genuinely ungranted |
+| 🔴 `NOASSERTION` | `6` | 🔴 **a real grant file in `6 of 6`** — `2` Creative Commons, `1` Elastic License `2.0`, `1` bespoke non-commercial, `2` cross-repo pointers | 🔴 `0` | 🔴 The field is declining **because the instrument is unrecognisable** — and in `6 of 6` it was something a studio cannot ship |
+
+🟢 **Operative rule, narrowing `613-E` rather than restating it.** For *supply discovery*,
+`NOASSERTION` has a **`0 %`** permissive yield on this population — do not spend search budget
+byte-reading it. 🔴 For *shipping*, byte-read it always: the file is real and carries obligations.
+🔴 Never read `NULL` and `NOASSERTION` as one class again.
+`evidence/unasserted-arm.2026-11-02-p614.tsv`.
+
+🔴 **The two specimens that are sharper than `613-E`'s.**
+
+| address | ★ | platform field | grant on bytes | why it is the expensive kind |
+| --- | --: | --- | --- | --- |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | 🔴 `NOASSERTION` | 🔴 **Elastic License `2.0`** `3,860 B` | A student-success platform **and recruitment CRM for colleges** — precisely the vertical a client asks for. 🔴 `ELv2` forbids *"provid[ing] the software to third parties as a hosted or managed service"*: a direct bar on the **studio delivery model**, not merely on redistribution |
+| [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) | `40` | 🔴 `NOASSERTION` | 🔴 **bespoke source-available** `417 B` | *"All rights reserved"*, non-commercial only, redistribution and competing products forbidden. 🔴 A reader treating `NOASSERTION` as *"no licence file, probably fine"* ships this. 🔵 Also **not sector supply** — a YouTube front-end; recorded so a later pass does not re-spend the leg on it |
+
+### 🔴 `614-F` — a new defect class: a `121`-byte `LICENSE.md` that is a **cross-repository pointer**, and it resolves to `AGPL-3.0`
+
+🔵 `604-B` found a `LICENSE` that was a *saved HTML page* of another repository's licence. 🟢 This is
+the same failure one step more minimal, and it defeats this base's own size floor.
+
+| address | ★ | `LICENSE.md` | what the bytes are | resolves to |
+| --- | --: | --: | --- | --- |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | `60` | `121 B` | 🔴 a Markdown **link** to a sibling repository | 🔴 `AGPL-3.0` |
+| [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | `54` | `121 B` | 🔴 **byte-identical** to the row above | 🔴 `AGPL-3.0` |
+
+🔴 **`p612`'s ladder accepts it.** The gate requires `http 200` and `size > 100`; `121 B` clears both,
+so the ladder stops there and reports a grant path that contains **no grant**. 🟢 Two repositories,
+one owner, byte-identical file — **owner-level, exactly as `613-A` prescribes**: group by owner before
+writing anything off.
+
+🟢 **And this base's own classifier beats the platform on the pointed-to text.** The target
+(`codeforlife-workspace/LICENSE.md`, `32,920 B`) is the full `AGPL-3.0` **re-wrapped as Markdown**
+with `##` headings, which breaks the platform's template match — the API reports `NOASSERTION` on the
+target too. 🔵 `compose/code/lib/license_family.sh` answers `AGPL-3.0` (`affero_lines` `10`,
+`commercial_use_ok` empty), and `ingest/p612-grade-title-line.py` agrees. 🟢 `gate-presentation-fold`
+(`p378`) exists for this class and is vindicated in the wild on the strongest copyleft there is.
+
+### 🟢 `614-G` — Creative Commons is **fit for purpose on data and a trap on copy**, and `613-E` should be read that way
+
+🔵 `613-E` treated a `CC-BY-SA` finding as a defect without qualification. 🟢 The distinction worth
+keeping is the **asset**, not the family.
+
+| address | ★ | grant | asset | verdict |
+| --- | --: | --- | --- | --- |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `6,143` | 🟡 `CC` family `19,347 B` | **data** — a K-12 curriculum **knowledge graph**: `1,644` knowledge points, `2,403` prerequisite edges, `6,723` problems, aligned to the national curriculum | 🟢 **Fit for purpose.** `CC` is the right family for a dataset, and a prerequisite graph is the scarcest input an adaptive-learning engagement has. 🟢 APAC |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (`613-E`) | `942` | 🔴 `CC-BY-SA-4.0` | **copy** — agent skill definitions, i.e. prompt text that is pasted into a client's agent | 🔴 **Trap**, as `613-E` said |
+| [`scollovati/awesome-lti`](https://github.com/scollovati/awesome-lti) | `78` | 🟡 `CC` family `20,131 B` | **index** — a curated LTI list | 🟡 Usable as a search hint; 🔴 share-alike, so not vendorable. Second LTI-adjacent index in the `CC` family, after `613-E`'s |
+
+🔴 **Stated limit, not hidden:** the grader returns `CC-?` without a version on all three — it
+identifies the family, not the specific instrument. For the data row that is sufficient to shelve and
+insufficient to ship; the version must be read before any client delivery.
+
+### 🟡 Measured and not promoted — recorded so the next pass does not re-spend the search
+
+| address | ★ | grant | why not promoted |
+| --- | --: | --- | --- |
+| [`StudentSuite/awesome-student-resources`](https://github.com/StudentSuite/awesome-student-resources) | `35` | 🟢 `MIT` `1,069 B` | 🔵 An **index**, not supply — curated study resources for IB/IGCSE/SAT. Genuinely `MIT`, which is unusual for an index; parked as a search surface |
+| [`rizukirr/no-vibe`](https://github.com/rizukirr/no-vibe) | `44` | 🟢 `MIT` `1,065 B` | 🔵 Learning-adjacent developer tooling rather than education-sector software. Grant is real; the sector fit is not |
+| [`TarrySingh/Artificial-Intelligence-…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | `4,021` | 🟡 `CC` family `20,850 B` | 🔵 Not sector supply — an **AI** curriculum, the class `613` already recorded for `microsoft/ai-agents-for-beginners`. Recorded so the star count is not mistaken for an education finding |
+| [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | `74` | 🔴 none — ladder exhausted | Real maths-grading tool, 🔴 **no grant file at any of `18` paths** at `master`. Unshippable until the author publishes one |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | `72` | 🔴 none — ladder exhausted | School management system, 🔴 ungranted on bytes |
+
 ## 🆕 `p613` — reads `2026-11-02`, commit `2026-11-02` — **🔴 `612-B`'s OWN STATED LIMIT IS NOW A MEASURED DEFECT, AND IT IS THE EXPENSIVE KIND: THE WEEK'S MOST-TRENDING EDUCATION-AGENT REPOSITORY (`942★`) READS `NOASSERTION` ON THE PLATFORM FIELD AND IS **`CC-BY-SA-4.0` ON BYTES** — A SHARE-ALIKE GRANT, ON **PROMPT TEXT**, WHICH A NAIVE PERMISSIVE FILTER DROPS AND A NAIVE "UNGRANTED" FILTER MISREADS. 🟢 ONLY `2` AGENT ROWS PROMOTED, BECAUSE ONLY `2` SURVIVED.**
 
 ### 🔴 `613-E` — `NOASSERTION` does not mean ungranted, and the one case measured is a copyleft trap

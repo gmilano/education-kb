@@ -1,0 +1,21 @@
+address	api_spdx_id	default_branch	grant_path	bytes	byte_read_grade	agree	note
+THU-MAIC/OpenMAIC	MIT	main	LICENSE	1065	MIT	YES	
+HKUDS/DeepTutor	Apache-2.0	main	LICENSE	11408	Apache-2.0	YES	
+haxtheweb/haxcms-php	Apache-2.0	master	LICENSE.md	11362	Apache-2.0	YES	default branch master -- 611-C class
+onemnemo/mnemo	Apache-2.0	main	LICENSE	11326	Apache-2.0	YES	
+kirill-markin/flashcards-open-source-app	MIT	main	LICENSE	1070	MIT	YES	
+langx/langx	BSD-3-Clause	main	LICENSE	1520	BSD-3-Clause	YES	
+SJRiz/pytogether	MIT	main	LICENSE	1073	MIT	YES	
+shigella520/MindTrain	MIT	main	LICENSE	1067	MIT	YES	
+elimu-ai/webapp	MIT	main	LICENSE	1065	MIT	YES	
+opencast/annotation-tool	ECL-2.0	master	LICENSE	11340	ECL-2.0	YES	FIFTH org publishing ECL-2.0, OUTSIDE the four Apereo orgs 604-A swept; API CORRECT here -- 614-B
+zhangl1001/civil-ai	MIT	main	LICENSE	1067	MIT	YES	
+StudentSuite/awesome-student-resources	MIT	main	LICENSE	1069	MIT	YES	index, not supply
+smashburger-dev/socratic-workshop	MIT	main	LICENSE	1072	MIT	YES	
+Kaiji-Z/dsh-plugin-lookatstudy	MIT	main	LICENSE	1081	MIT	YES	
+YujxZJCN/teaching-skills	MIT	main	LICENSE	1067	MIT	YES	
+rizukirr/no-vibe	MIT	main	LICENSE	1065	MIT	YES	
+virgiliojr94/book-to-skill	MIT	master	LICENSE.md	1068	MIT	YES	default branch master
+tong666-bit/liu-xiaoyan-skill	MIT	master	LICENSE	1068	MIT	YES	default branch master
+openai/totally-not-real-edu-repo-p614	-	UNREACHABLE	-	0	FABRICATED-CONTROL	n/a	control held
+anthropics/fabricated-control-p614	-	UNREACHABLE	-	0	FABRICATED-CONTROL	n/a	control held

@@ -1,0 +1,12 @@
+address	api_spdx_id	stars	grant_path	bytes	byte_read_result	permissive	note
+jaltekruse/Free-Math	NULL	74	NO-GRANT	0	UNGRANTED-LADDER-EXHAUSTED	NO	ladder of 18 paths exhausted on real default branch master
+ictinnovations/ICTSchool	NULL	72	NO-GRANT	0	UNGRANTED-LADDER-EXHAUSTED	NO	
+abdullaitcenter-hue/comet-trail-archives	NULL	70	NO-GRANT	0	UNGRANTED-LADDER-EXHAUSTED	NO	
+ALLENYEUNG365/Guess-the-Flag	NULL	46	NO-GRANT	0	UNGRANTED-LADDER-EXHAUSTED	NO	
+xiaoyang111222/cn-math-taxonomy	NOASSERTION	6143	LICENSE	19347	CC-family (Creative Commons)	NO	DATA asset (K-12 knowledge graph): CC is FIT FOR PURPOSE here, unlike 613-E's CC-BY-SA on prompt text
+TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials	NOASSERTION	4021	LICENSE	20850	CC-family	NO	non-sector (AI curriculum), recorded so a later pass does not re-spend the search
+canyongbs/advisingapp	NOASSERTION	340	LICENSE	3860	Elastic License 2.0 (non-OSI)	NO	614-E: hosted/managed-service PROHIBITION -- bars the studio delivery model outright
+codeforlife-education/rapid-router	NOASSERTION	60	LICENSE.md	121	POINTER to another repo -> AGPL-3.0	NO	614-F: 121 B passes p612's size>100 floor and carries NO grant
+codeforlife-education/codeforlife-portal	NOASSERTION	54	LICENSE.md	121	POINTER to another repo -> AGPL-3.0	NO	byte-identical to the row above, same owner -- owner-level convention (613-A)
+No-Suggest/NoSuggest	NOASSERTION	40	LICENSE	417	source-available, non-commercial, no-redistribution	NO	614-E: "All rights reserved"; also NON-SECTOR (a YouTube front-end), not education supply
+scollovati/awesome-lti	CC-BY-SA-4.0	78	LICENSE	20131	CC-family	NO	share-alike index; corroborates 613-E on a SECOND LTI-adjacent index

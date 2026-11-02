@@ -109,6 +109,53 @@ chk("an authority cited in ANOTHER row of the same table still annotates (XT's i
     [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
      for u, c in sf.graded_units(sf.scopes(CITED)[0])][0],
     "ANNOTATED")
+# ── p614-A: the SAME narrowing, for a bullet list ───────────────────────────────────────
+# p308 implemented per-row grading for pipe tables only.  A bullet list fell through to
+# whole-scope grading, which is the cross-row collision p308 says it fixed.  These are the
+# table controls above, restated on bullets — including the one that must still be CAUGHT.
+BCOLLIDE = ("- 🟢 **`612-A`** — `101 of 848` addresses no longer resolve; the unresolved are\n"
+            "  owner-clustered, not attrition.\n"
+            "- 🟢 **`612-E`** — a rubric/autograding tier as Annex III conformity evidence.\n")
+chk("a bullet list is ONE scope (ACTION XT's contiguity is kept)", len(sf.scopes(BCOLLIDE)), 1)
+chk("but it grades as one unit PER BULLET",
+    len(sf.graded_units(sf.scopes(BCOLLIDE)[0])), 2)
+chk("so a hedge in bullet 1 and the subject in bullet 2 is NOT a regression — p613's red",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(BCOLLIDE)[0])],
+    ["CLEAR", "CLEAR"])
+
+BTOGETHER = ("- 🟢 a bullet about something else entirely\n"
+             "- 🔴 the Annex III date is **still a disjunction**\n")
+chk("a subject and a hedge in the SAME bullet is still CAUGHT",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(BTOGETHER)[0])],
+    ["CLEAR", "REGRESSION"])
+
+BWRAP = ("- 🟢 a bullet about something else entirely\n"
+         "- 🔴 the Annex III date is\n"
+         "  **still a disjunction** across this base\n")
+chk("a hedge on a WRAPPED continuation line still belongs to its own bullet",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(BWRAP)[0])],
+    ["CLEAR", "REGRESSION"])
+
+BCITED = ("- 🔴 the Annex III date is **still a disjunction**\n"
+          "- 🔵 settled by `Regulation (EU) 2026/1744`\n")
+chk("an authority cited in ANOTHER bullet of the same list still annotates",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(BCITED)[0])][0],
+    "ANNOTATED")
+
+chk("a SINGLE bullet is not a list — one bullet keeps whole-scope grading",
+    len(sf.graded_units(sf.scopes("- 🔴 Annex III is **still a disjunction**\n")[0])), 1)
+chk("and that single bullet is still caught",
+    sf.grade_scope(*(lambda u, c: (u, FACT["subject"], FACT["authority"], c))(
+        *sf.graded_units(sf.scopes("- 🔴 Annex III is **still a disjunction**\n")[0])[0]))[0],
+    "REGRESSION")
+
+chk("a block that does not OPEN on a bullet keeps the old whole-scope grading",
+    len(sf.graded_units(sf.scopes("prose lead-in about Annex III\n- 🔴 **unresolved**\n")[0])), 1)
+
 chk("item 3b is answered by NOT dropping open-gaps.md from SHELVES",
     "intel/open-gaps.md" in sf.SHELVES, True)
 

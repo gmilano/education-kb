@@ -3,6 +3,65 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p614` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE CLASSROOM-DELIVERY TIER, WHICH THIS BASE HAD NO ROW FOR: A REAL-TIME COLLABORATIVE IDE (`MIT`, `262★`), A MICROSITE CMS FROM PENN STATE (`Apache-2.0`), AND THE LITERACY-CONTENT STACK THAT PLACES A ROW IN **EMEA** RATHER THAN GLOBAL. 🟢 `4` ROWS, `4 of 4` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD.**
+
+### 🟢 `614-J` — what a learner and a teacher actually touch, which is neither an LMS nor an agent
+
+🔵 **Why this is a gap and not a nice-to-have.** `612-D` shelved how a tool **launches** from a
+copyleft LMS (LTI `1.3`), `613-B`/`613-C` shelved how it **reports back** (xAPI, LRS, cmi5
+conformance). 🔴 Both seams are plumbing. Neither answers *what is on the screen during the lesson* —
+and that is the part a client sees in a demo. 🟢 These four rows are that layer, and all four are
+permissive, which the LMS layer itself is not.
+
+| repo | ★ | grant (byte-read) | path | branch | pushed | region | why it is load-bearing |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) | `262` | 🟢 `MIT` `1,073 B` | `LICENSE` | `main` | `2026-10-21` | Global | 🟢 **Browser-based collaborative IDE** — real-time co-editing, live drawing and voice chat, running at `pytogether.org`. 🔵 The highest-starred permissive row this base holds for *synchronous* teaching: a CS classroom where the instructor draws on the same buffer the student types in |
+| [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | `130` | 🟢 `Apache-2.0` `11,362 B` | `LICENSE.md` | 🔴 `master` | 🟢 `2026-11-02` | 🟢 North America | **HAX + CMS** for a *microsite universe* with a PHP backend — from **Penn State**, an institution rather than a single author, which is the provenance an education procurement prefers. 🟢 Pushed today. 🔴 Default branch is `master`, so a `main`-only reader publishes it as ungranted (`611-C` class) |
+| [`langx/langx`](https://github.com/langx/langx) | `109` | 🟢 `BSD-3-Clause` `1,520 B` | `LICENSE` | `main` | `2026-10-31` | Global | Language-learning app connecting learners for live practice. 🟢 **`BSD-3-Clause`** — only the second `BSD` row on this shelf, and the family with the shortest notice obligation of the three permissive ones |
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | `41` | 🟢 `MIT` `1,065 B` | `LICENSE` | `main` | `2026-10-27` | 🟢 **EMEA** | Hosts Android applications and educational content for **early-grade literacy**, aimed at out-of-school children. 🟢 The pass's one genuinely **region-placed** supply row: a Sub-Saharan deployment target, which is EMEA by this base's closed vocabulary, with the country in this sentence rather than in the field |
+
+🔴 **Stated limits, on the shelf and not in a footnote.** `elimu-ai/webapp` is `41★` and
+single-organisation — it is a *content-delivery* reference, not a platform to resell. `langx/langx`
+is a consumer social app whose education use is adjacent rather than designed. `pytogether` is one
+author; its value is the demonstrated architecture, and a studio should expect to own the fork.
+
+### 🟢 `614-B` — `ECL-2.0` is **not** confined to the Apereo orgs, and outside them the platform field is **right**
+
+🔵 `604-A` swept four Apereo-family orgs (`91` repos, `61` grants byte-read) and closed that *"the API
+is wrong about `ECL-2.0` in `10 of 11` repos (`90.9 %`)"* — a figure this base has carried since as a
+property of the **licence**. 🔴 Measured here: that is a property of those **owners**.
+
+| address | ★ | platform field | grant on bytes | branch | org in `604-A`'s sweep? | verdict |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) | `42` | 🟢 `ECL-2.0` | 🟢 **`ECL-2.0`** `11,340 B` | 🔴 `master` | 🔴 **No** — a fifth publisher | 🟢 **API CORRECT.** `1 of 1` outside the Apereo orgs |
+
+🔵 **A second, independent data point in the same direction, from this pass's own provenance check on
+`haxcms-php`.** HAX is developed at **Penn State** (College of Arts and Architecture) and is listed by
+the **Apereo Foundation** under its software programs — so it is an *Apereo-associated* project that
+nonetheless publishes under 🟢 `Apache-2.0`, not `ECL-2.0`, and its field reads correctly. 🟢 That cuts
+against reading `604-A` as a statement about the Apereo **ecosystem**: the defect tracks the four
+specific orgs that sweep covered, not the foundation.
+
+🟢 **Rule revised, with the revision bounded.** `604-A`'s `90.9 %` error rate stands *for the Apereo
+orgs* and must be cited that way from now on. 🔵 On the one publisher measured outside them the field
+is accurate, so `ECL-2.0` is not intrinsically invisible to the platform — those orgs' grant files
+are. 🟢 This is **`613-A`'s owner rule arriving from a second direction**: group by owner before
+generalising, whether the subject is a dead address or a licence-metadata defect. 🔴 Limit: `n = 1`
+outside Apereo. This narrows `604-A`'s scope; it does not replace its number.
+
+🔵 **And `opencast` is worth the row on its own merits** — a video annotation service for research,
+teaching and learning, from the Opencast academic consortium (European universities, which places the
+*publisher* in EMEA even though the software is used globally).
+
+### 🔵 Standing: the tiers this pass did **not** move, so a reader is not misled by a short section
+
+🟢 `612-D` LTI `1.3` (`5` stacks), `613-B` xAPI/cmi5 conformance (`9` repos, US DoD ADL),
+`613-C` LRS + simulation (`5` repos), `613-D` FSRS scheduling (`8` stacks) are all unchanged and
+un-re-read this pass except where a row below cites them. 🔵 Two already-shelved addresses the sweep
+re-surfaced and this pass deliberately did **not** re-promote: `tsugiproject/tsugi` (`Apache-2.0`,
+`377★`, pushed `2026-11-02`) and `jcputney/scorm-again` (`MIT`, `362★`) — both already carry sell-shelf
+cells. 🟢 Recorded here so their appearance in the sweep is not read as a new find.
+
 ## 🆕 `p613` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE TELEMETRY HALF OF THE SEAM: `612-D` SHELVED HOW A TOOL **LAUNCHES** FROM AN LMS; THIS PASS SHELVES HOW IT **REPORTS BACK**, AND IT IS `Apache-2.0` ALL THE WAY DOWN, PUBLISHED BY THE US DoD's ADL INITIATIVE. 🟢 PLUS A COMPLETE **POLYGLOT SCHEDULING TIER** (`8` LANGUAGES, `MIT`/`BSD-3`), THE ALGORITHM `612`'S OWN TOP AGENT ROW ALREADY DEPENDS ON. `24 of 24` GRANTS BYTE-READ AGREE WITH THE PLATFORM FIELD.**
 
 ### 🟢 `613-C` — the xAPI telemetry tier: a permissive Learning Record Store, and the simulator to load-test it

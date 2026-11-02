@@ -1,0 +1,8 @@
+structure	opens_on	units_before_fix	units_after_fix	subject_bullet	hedge_bullet	verdict_before	verdict_after	note
+pipe table	|	1 per row (p308)	unchanged	row n	row m	CLEAR	CLEAR	p308 already narrowed this
+bullet list (intel/open-gaps.md p613 current section, 7 bullets)	-	1 (WHOLE LIST)	7 (one per bullet)	bullet 4 (612-E, "Annex III conformity evidence")	bullet 0 (612-A, "unresolved" re backlog addresses)	REGRESSION	CLEAR	614-A: this is the red that sat on HEAD
+bullet list, subject+hedge in ONE bullet	-	1	n	same bullet	same bullet	REGRESSION	REGRESSION	the gate must still catch this -- control
+bullet list, hedge on a WRAPPED continuation line	-	1	n	bullet k	bullet k line 2	REGRESSION	REGRESSION	continuation folded into its own bullet -- control
+bullet list, authority cited in ANOTHER bullet	-	1	n	bullet 0	bullet 0	ANNOTATED	ANNOTATED	ACTION XT's citation intent preserved
+single bullet	-	1	1	same	same	REGRESSION	REGRESSION	one bullet is not a list -- conservative, unchanged
+block NOT opening on a bullet	prose	1	1	prose	bullet	REGRESSION	REGRESSION	narrowing deliberately does not fire where unmeasured
