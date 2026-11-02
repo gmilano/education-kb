@@ -4,6 +4,111 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — three numbered trends (`77`–`79`), each with the measurement that produced it
+
+## 77. A mature knowledge base's web-search legs become a regression test, and its own backlog becomes the discovery channel (high confidence — 33 consecutive nils against 46 promotions from one re-probe)
+
+🔴 **The claim.** Past some maturity, the mandated demand-side legs stop finding anything, and
+a pass that spends its budget there will report `0 new` and be correct. The marginal
+information has moved to **re-probing what the base already claimed but never shelved**.
+
+🟢 **The measurement.**
+
+| channel | spend | yield |
+| --- | --- | --: |
+| 🔴 `8` mandated web legs (`4` global + `4` regional) | the whole specified research budget | 🔴 `45 of 45` tokens held, **`0` new** — the **33rd** consecutive nil |
+| 🟢 re-probe of the `p436` promotion backlog | `48` repositories, `raw` + git protocol | 🟢 **`46` promoted**, `3` disconfirmed, `2` rows struck as non-repositories |
+
+🔵 **Why the nil is informative rather than embarrassing.** No region returned *silence* —
+every leg came back with dated, sourced, substantive material. 🟢 **The legs are working;
+the base is simply ahead of them.** On LATAM policy it is measurably ahead: `p602` recorded
+the base holding `Santiago, 2026-04-14` where the leg returned only *"April 2026"*.
+
+🟡 **What to do with it, stated as a specification change rather than a complaint.** Keep the
+legs — they are a cheap nil-check and they would catch a genuine market break. 🔴 **But stop
+sizing a pass's expected yield from them.** A base with a `167`-pass-old backlog of
+`108` claimed-but-unshelved addresses has its next `46` findings sitting in its own
+`evidence/` directory, already paid for once.
+
+🔵 **Transfers directly to every other industry KB on this account**, because the rotation
+runs the same eight legs per industry and each one accumulates the same kind of backlog.
+
+## 78. Every single-spelling probe is a silent coverage hole, and fixing one channel does not fix the others (high confidence — `5.7 %` of repositories measured invisible on the README channel, after the licence channel was fixed)
+
+🔴 **The claim.** This base learned, expensively and repeatedly, that filenames vary in case,
+extension and language (`LICENCE`, `license.txt`, `docs/License.txt`). 🔴 **It fixed that on
+the licence channel and left the identical assumption standing on the README channel** — in
+the same file, `40` lines apart.
+
+🟢 **The measurement** (`106` repositories with a README, probed `2026-11-02`,
+[`../evidence/readme-spelling-ladder.2026-11-02-p603.tsv`](../evidence/readme-spelling-ladder.2026-11-02-p603.tsv)):
+
+| channel | rung | payout rate | in the ladder? |
+| --- | --- | --: | --- |
+| licence | `LICENCE` (British) | `1 / 44` | 🟢 yes — bought deliberately |
+| 🔴 README | `readme.md` | 🔴 **`3 / 106`** | 🔴 **no** |
+| 🔴 README | `README.rst` | `2 / 106` | 🔴 no |
+| 🔴 README | `Readme.md` | `1 / 106` | 🔴 no |
+| | 🔴 **total invisible** | 🔴 **`6 / 106` = `5.7 %`** | |
+
+🔴 **The compounding part.** The README rung is not cosmetic — it is the *fallback* the
+licence ladder depends on, the one the library's own header credits with finding
+`OS4ED/openSIS-Classic`'s GPL-2.0 at `docs/License.txt` *"in one request"* where no filename
+ladder would. 🟢 **So a hole in the README channel silently weakens the licence channel that
+was already fixed**, and the repository it hides is exactly the awkward kind the fallback
+exists for. 🔵 `kitschpatrol/yanki` defeats both at once: `license.txt` **and** `readme.md`.
+
+🔵 **The generalisation worth carrying.** A ladder is not a property of a *file*, it is a
+property of a *channel*, and channels do not inherit each other's fixes. 🟡 **When a
+single-spelling assumption is found and fixed, the cheap next move is to grep the same
+instrument for every other hardcoded filename** — not to wait for each one to be discovered
+by its own incident.
+
+## 79. A loose address matcher does not merely mis-measure a corpus — it injects fictitious work that then persists for as long as the ledger does (high confidence — 2 of this base's own file paths carried as promotion candidates for 167 passes)
+
+🔴 **The claim.** `p602` established that too *narrow* an address matcher understates a held
+set. 🔴 **The opposite error is worse in kind, not merely in sign**: too *loose* a matcher
+writes non-addresses into a work queue, where they are indistinguishable from real tasks and
+are re-counted every pass.
+
+🟢 **The measurement.** `evidence/promotion-ledger.2026-10-25-p436.tsv`, `slug` column:
+
+| row | what it actually is |
+| --- | --- |
+| 🔴 `evidence/p333-disposition-ledger` | a real local file — `evidence/p333-disposition-ledger.2026-10-20-p333.tsv` |
+| 🔴 `evidence/p333-silent-random-probe` | a real local file — `evidence/p333-silent-random-probe.2026-10-20-p333.tsv` |
+
+Both graded `UNRESOLVED` on a `HEAD` symref probe for the obvious reason, and both had sat
+typed `BACKLOG` since `p436`. 🔵 **`heldset.sh`'s own header predicted this exact failure** —
+*"a bare `<word>/<word>` match hits every relative path in the prose (`compose/code`,
+`intel/market.md`)"* — 🔴 **but predicted it as a measurement error, so the control was
+placed on the matcher and never on the ledger.**
+
+🟢 **The corrected denominator, which is the practical output:**
+
+| | |
+| --- | --: |
+| 🟡 `p602`'s stated backlog | `44` |
+| distinct ledger slugs typed `BACKLOG` | `142` |
+| 🟢 shelved between `p436` and `p603` | `32` |
+| on no curated shelf | `110` |
+| 🔴 not repositories | `2` |
+| 🟢 **real repository backlog** | **`108`** |
+
+🔵 **Why the sign of the error decides where the control belongs.** An under-counting matcher
+produces *missed* work — bounded, and self-correcting the next time the address appears. 🔴
+**An over-counting matcher produces *invented* work, which is unbounded and self-sustaining:**
+nothing in a backlog ever proves a row false, so a fictitious row survives every pass that
+does not probe it. 🟢 **A work queue therefore needs a liveness check at admission, not just
+a correct matcher** — one `ls-remote --symref` per row at write time would have caught both
+in `167` passes' worth of one second.
+
+🔵 **Third mechanism, same family, found in this pass's own instrument:** a novelty probe
+graded `ilias-ebuch/ilias` as `NEW` — 🔴 **an address `p603` invented** from a prose platform
+name, while the real `ilias-elearning/ilias` has been held since `p191`. 🟢 **Rule:
+only ever grade an address a source actually printed.** A prose-named platform with no
+printed slug is a lookup, never a `NEW`.
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — three numbered trends (`74`–`76`), each with the measurement that produced it
 
 ## 74. A knowledge base's novelty figure is a property of its address matcher, not of the market — and the error runs toward false novelty (high confidence — two independent instruments, both wrong in the same direction, `39.5 %` of the held set invisible to one of them)

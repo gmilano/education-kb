@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE WEEK'S SUPPLY SIGNAL IS NOT ON THE WEB, IT IS IN THIS BASE'S OWN `evidence/` DIRECTORY: A `167`-PASS-OLD PROMOTION BACKLOG RE-PROBED REPO-BY-REPO — `108` REAL ADDRESSES, `86` GRANT-CLEAN, `46` PROMOTED ACROSS THREE SHELVES. 🔴 `p602` SIZED THAT BACKLOG AT `44`. 🔴 AND `2` OF ITS ROWS ARE NOT REPOSITORIES AT ALL — THEY ARE THIS BASE'S OWN FILE PATHS, CARRIED AS WORK-TO-DO SINCE `p436`. 🔴 `603-C`: THE SHARED PROBE LIBRARY READS THE README AT **ONE SPELLING**, AND `5.7 %` OF REPOSITORIES ARE INVISIBLE TO IT.**
+
+### 🔴 The ledger admitted two of this base's own file paths as repository addresses
+
+| ledger `slug` | what it actually is | typed |
+| --- | --- | --- |
+| 🔴 `evidence/p333-disposition-ledger` | `evidence/p333-disposition-ledger.2026-10-20-p333.tsv` — a real local file | `BACKLOG` since `p436` |
+| 🔴 `evidence/p333-silent-random-probe` | `evidence/p333-silent-random-probe.2026-10-20-p333.tsv` — a real local file | `BACKLOG` since `p436` |
+
+🔵 **`heldset.sh`'s own header predicted exactly this** — *"a bare `<word>/<word>` match hits
+every relative path in the prose"* — 🔴 **but predicted it as a measurement error, so the
+control was placed on the matcher and never on the ledger.** An under-counting matcher misses
+work; 🔴 **an over-counting matcher invents work, and nothing in a backlog ever proves a row
+false.** 🟢 One `ls-remote --symref` at admission time would have caught both.
+
+### 🟢 The corrected backlog, regraded repo-by-repo today
+
+| | addresses |
+| --- | --: |
+| 🟡 `p602`'s stated figure | `44` |
+| distinct ledger slugs typed `BACKLOG` at `p436` | `142` |
+| 🟢 shelved between `p436` and `p603` | `32` |
+| on no curated shelf at `HEAD` | `110` |
+| 🔴 not repositories | `2` |
+| 🟢 **real repository backlog** | **`108`** |
+
+| grant verdict | repos | shelvable |
+| --- | --: | --- |
+| 🟢 MIT | `61` | yes |
+| 🟢 Apache-2.0 | `22` | yes |
+| 🟢 BSD | `2` | yes |
+| 🟢 ISC | `1` | yes |
+| 🔴 `NO-PAYLOAD` — no grant at any ladder rung | `14` | 🔴 no |
+| 🟡 AGPL-3.0 | `2` | copyleft |
+| 🟡 MPL-2.0 | `1` | copyleft |
+| 🟡 notice-only / split-scope / other | `4` | case by case |
+| 🔴 `UNRESOLVED` | `1` | 🔴 no — `alpinevibe/quizpulse` is gone |
+
+🟢 **`46` promoted this pass:** `14` agents → [`../agents/top.md`](../agents/top.md),
+`21` foundations → [`../repos/foundations.md`](../repos/foundations.md),
+`11` platforms → [`../verticals/solutions.md`](../verticals/solutions.md).
+Row-level evidence: [`../evidence/backlog-regrade.2026-11-02-p603.tsv`](../evidence/backlog-regrade.2026-11-02-p603.tsv),
+[`../evidence/promotion-tranche.2026-11-02-p603.tsv`](../evidence/promotion-tranche.2026-11-02-p603.tsv).
+
+### 🔴 `603-C` — a single-spelling README probe hides `5.7 %` of repositories
+
+`lib/probe_payload.sh` line `155`: `_raw "$1" "$2" README.md`. 🔴 One spelling. Measured
+across `106` repositories with a README
+([`../evidence/readme-spelling-ladder.2026-11-02-p603.tsv`](../evidence/readme-spelling-ladder.2026-11-02-p603.tsv)):
+
+| README path | repos | visible to a `README.md`-only probe |
+| --- | --: | --- |
+| `README.md` | `100` | 🟢 yes |
+| 🔴 `readme.md` | `3` | 🔴 no |
+| 🔴 `README.rst` | `2` | 🔴 no |
+| 🔴 `Readme.md` | `1` | 🔴 no |
+| **invisible** | 🔴 **`6` of `106` = `5.7 %`** | |
+
+🔴 **The six are not marginal repositories:** `SafeExamBrowser/seb-server` (this base maintains
+**two** dedicated instruments for it), `h5p/h5p-cli`, `openedx/tutor-contrib-aspects`,
+`kitschpatrol/yanki` (🔴 defeats a single-spelling probe on **both** channels — `license.txt`
+*and* `readme.md`), `kbma/gestion-scolaire`, `schild-report/schild.report`.
+
+🔵 **This is the licence-ladder finding one channel over, and the rate is *higher*.** `LICENCE`
+(British) was bought deliberately at **1 payout in 44**; `readme.md` pays **3 in 106** and was
+never in the ladder. 🔴 **And the README rung is the licence ladder's own fallback** — the one
+credited with finding `OS4ED/openSIS-Classic`'s GPL-2.0 at `docs/License.txt` *"in one
+request"*. So the hole silently weakens the channel that was already fixed.
+🟢 Priced ladder order and the one-line fix:
+[`../compose/code/p603-readme-ladder/README.md`](../compose/code/p603-readme-ladder/README.md).
+
+### 🟢 `D1` paid four times — default branches that are not `main` or `master`
+
+| repo | default branch |
+| --- | --- |
+| `chiv-heng/ferpa-guard` | 🔴 `public-release` |
+| `php-xapi/client` | 🔴 `0.7` |
+| `php-xapi/model` | 🔴 `3.x` |
+| `EDUQUEST2026-2027/EDUQUEST` | 🔴 `eduquest-main` |
+
+🔵 A hardcoded `main`/`master` writes all four down as ungranted. 🟢 Resolved by
+`ls-remote --symref`, never assumed — joining this base's existing measured set
+(`v31.0.00`, `2.12`, `mobile`, `MOODLE_503_STABLE`, `19.0`, `develop`).
+
+### 🔴 The `14` ungranted repositories cluster by region, which makes them an ask
+
+`7` francophone school apps (`Bendjou-art/Correct-QCM`, `Emmanuel26-code/cahier-texte-numerique`,
+`NZOKOS06/gestion_school`, `kbma/gestion-scolaire`, `mael12854/preau`, `olibertrand/questionnapp`,
+`Solemntumult/EcoGes`) and `2` Indonesian ones (`nwmustofa/e-rts`, `twakew/e-rapor`). 🟢 **`9 of
+14` sit in the two sub-regions where platform coverage is thinnest** — local supply exists and
+is unusable. 🔵 An upstream licence request is cheaper than finding nine new platforms. Detail
+on [`../verticals/solutions.md`](../verticals/solutions.md) under `603-E`.
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `60`-AXIS SWEEP IN THREE ORDERINGS, `726` ROWS, `653` UNIQUE ADDRESSES. 🔴 NOVELTY WAS FIRST REPORTED AS `55.0 %` AND IS **`50.4 %`** — THIS PASS'S HELD-SET MATCHER WAS URL-ONLY AND MISSED `2,404 of 6,083` HELD ADDRESSES (`39.5 %`), BECAUSE THIS BASE WRITES MOST ADDRESSES AS **BACKTICKED BARE SLUGS IN TABLE CELLS**, NOT AS LINKS. 🟢 THE WEEK'S REAL SUPPLY SIGNAL IS THE **MOODLE PLUGIN ECOSYSTEM**: `8` MAINTAINED PLUGINS BETWEEN `88★` AND `660★`, THREE PUSHED INSIDE `24` HOURS, ALL UNHELD UNTIL TODAY — THE HEALTHIEST IN-DOMAIN SUPPLY THIS PAGE HAS RECORDED.**
 
 ### 🔴 `602-A` — the sweep mis-measured the base it was sweeping against, and the fix is a committed control

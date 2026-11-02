@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `11` PLATFORMS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH, EVERY CONTROL AT `404`. 🟢 THE BEST OF THEM IS A **LATAM** ROW THIS BASE HAD CLAIMED IN `trending` AND NEVER SHELVED: BRAZIL'S **BNCC NATIONAL CURRICULUM** AS AN `npm` PACKAGE, A `PyPI` PACKAGE AND AN **MCP SERVER** — `1,721` VERIFIED LEARNING OBJECTIVES. 🔴 AND IT CARRIES A **SPLIT-SCOPE GRANT WHOSE SECOND HALF IS IN A SUBDIRECTORY**: A ROOT-ONLY READ PUBLISHES "MIT" FOR A PAYLOAD THAT IS CC BY 4.0. 🔴 `603-E`: THE `14` BACKLOG REPOS WITH **NO GRANT AT ALL** ARE NOT RANDOM — `9` OF THEM ARE FRANCOPHONE OR INDONESIAN SCHOOL APPS.**
+
+### 🔴 The BNCC split-scope grant, read to the bottom because the top is misleading
+
+🟢 [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) is the **Base Nacional
+Comum Curricular** — the Brazilian national curriculum — *"consumível em uma linha de
+código"*: `1,721` learning objectives for basic education, verified against the official
+**MEC/CNE** documents, shipped as an npm package, a PyPI package **and an MCP server**.
+
+🔴 **Its root `LICENSE` is not a licence.** It is a `1,298 B` router that says the repository
+uses two, and points elsewhere:
+
+| path | bytes | grant | covers |
+| --- | --: | --- | --- |
+| `LICENSE` (root) | `1,298` | 🔴 **router only — not a grant** | — |
+| `LICENSE-CODIGO.md` | `1,107` | 🟢 **MIT** | `packages/*/src/`, `python/bncc/*.py`, `mcp-worker/src/`, `scripts/`, tests, config |
+| `LICENSE-DADOS.md` | `1,108` | 🟡 **CC BY 4.0** | the curriculum JSON in `packages/bncc/dados/`, `python/bncc/dados/` |
+
+🔵 **The data is not native to that repo**: it is synced from a *pinned commit* of
+[`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) and keeps the grant from
+there. 🔴 **And that upstream repo is where the trap closes** — its root `LICENSE` is a clean
+`1,091 B` **MIT**, while the data grant sits at **`dados/LICENSE.md` (`1,583 B`, CC BY 4.0)**:
+
+| | what a probe reads | what is true |
+| --- | --- | --- |
+| 🔴 root-only read of `bncc-dados` | **MIT** | 🔴 wrong for the payload anyone actually wants |
+| 🟢 root **+ README-linked subdirectory** | MIT *(code in `pipeline/`)* **+ CC BY 4.0** *(`dados/`)* | 🟢 correct |
+
+🟢 **This is `p969-root-only-licence-reach` reproduced live on a platform this base wants**,
+and it is the exact case the library's D2 rung exists for — the README *does* link
+`dados/LICENSE.md`, so the rung would fire here. 🔵 **Both repositories' controls are `404`**
+(`LICENSE-FABRICATED-p603-control`, `dados/LICENSE-FABRICATED-p603.md`), so the reads are
+real absences, not proxy noise.
+
+🟢 **The legal note is worth more to a LATAM engagement than the licence string**, and it is
+in the upstream README: the BNCC's normative texts are **official acts, not protected by
+copyright** under *art. 8º, IV da Lei 9.610/98*; the CC BY 4.0 therefore covers **the
+compilation, structuring and curation**, whose rights belong to **Profy Tecnologias
+Educacionais Ltda** (the holder byte-read in both grant files). 🔵 So attribution is owed to
+the compiler, not to the curriculum.
+
+### 🟢 Platforms promoted to this page — `11` rows
+
+| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+| --- | --- | --- | --- | --- | --- | --- |
+| [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **MIT** (`1,107 B`, `LICENSE-CODIGO.md`) **+ CC BY 4.0** (`1,108 B`, `LICENSE-DADOS.md`) | `main` | `2026-10-15` | `-03:00` | **LATAM** | 🟢 BNCC as npm + PyPI + **MCP server**; `1,721` objectives verified against MEC/CNE |
+| [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | 🟢 **MIT** (`1,118 B`) | `master` | `2026-11-01` | `+08:00` | **APAC** | 🟢 Open-source **gamified** learning platform, Rails; pushed the day of this pass. The most actively maintained platform in the whole backlog |
+| [wort-schule/wort.schule](https://github.com/wort-schule/wort.schule) | 🟢 **MIT** (`1,074 B`) | `main` | `2026-10-26` | `+01:00` | **EMEA** | German vocabulary/word-study school platform on Rails + PostgreSQL |
+| [nvaes/CEB](https://github.com/nvaes/CEB) | 🟢 **MIT** (`1,239 B`) | `main` | `2026-10-25` | `+01:00` | **EMEA** | 🟢 **CEB** revision site (Certificat d'Études de Base, Fédération Wallonie-Bruxelles) built **automatically from the official past-year PDFs** — the same pattern as BNCC, one country over |
+| [diego-costanzo/tournesol-scolaire](https://github.com/diego-costanzo/tournesol-scolaire) | 🟢 **MIT** (`1,070 B`) | `main` | `2026-09-25` | `+02:00` | **EMEA** | *Tournesol* — French smart homework book, timetable and active revision, CM1→Terminale |
+| [RF1705/beste-schule](https://github.com/RF1705/beste-schule) | 🟢 **MIT** (`1,062 B`) | `main` | `2026-10-06` | `+02:00` | **EMEA** | 🔵 **Home Assistant** integration for `beste.schule` — timetables, absences, homework, tests, grade averages. An unusual surface: the school record in home automation |
+| [Antonio-Neves/Gestao-Escolar](https://github.com/Antonio-Neves/Gestao-Escolar) | 🟢 **MIT** (`1,077 B`) | `master` | `2026-10-12` | `-03:00` | **LATAM** | Brazilian *Sistema de Gestão Escolar*. 🟡 **Its own README says "under development"** — carried as such, not as a shippable platform |
+| [telekom/ki-in-schulen](https://github.com/telekom/ki-in-schulen) | 🟢 **MIT** (`1,227 B`) | `master` | `2025-06-04` | `+02:00` | **EMEA** | 🟢 *AI@School* from **Deutsche Telekom** — teaching material bringing AI into schools playfully. A named corporate holder, which matters for reuse |
+| [SaidBySolo/neispy](https://github.com/SaidBySolo/neispy) | 🟢 **MIT** (`1,066 B`) | `master` | `2025-11-19` | `+09:00` | **APAC** | Sync **and** async wrapper for Korea's **NEIS** open education API; a 2020 Korean OSS competition prize-winner |
+| [hisahonakata/roster_hub_for_gigaschool](https://github.com/hisahonakata/roster_hub_for_gigaschool) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2023-08-05` | `+09:00` | **APAC** | Takes **OneRoster CSV** in and serves a **OneRoster API** out — the rostering adapter for Japan's GIGA School estate. 🟡 Dormant since `2023-08` |
+| [schild-report/schild.report](https://github.com/schild-report/schild.report) | 🟢 **MIT** (`1,054 B`) | `master` | `2022-05-22` | `+02:00` | **EMEA** | Replaces the report designer shipped with **SchILD** (the North-Rhine-Westphalia school database). 🔴 **Dormant since `2022-05`** — reference implementation, not a dependency. 🔵 README at `Readme.md`, one of the `603-C` six |
+
+### 🔴 `603-E` — the repos with no grant at all are a *region*, not noise
+
+🟢 `14` of the `108` backlog repositories have **no licence file at any ladder rung** —
+probed today across the full case- and extension-varied ladder plus the README link, with
+the branch resolved by symref. 🔴 **They are not randomly distributed:**
+
+| cluster | repos | addresses |
+| --- | --: | --- |
+| 🔴 **francophone school apps** | `7` | `Bendjou-art/Correct-QCM`, `Emmanuel26-code/cahier-texte-numerique`, `NZOKOS06/gestion_school`, `kbma/gestion-scolaire`, `mael12854/preau`, `olibertrand/questionnapp`, `Solemntumult/EcoGes` |
+| 🔴 **Indonesian school apps** | `2` | `nwmustofa/e-rts`, `twakew/e-rapor` *(e-rapor = report card)* |
+| other / unplaced | `5` | `EDUQUEST2026-2027/EDUQUEST` (branch 🔴 `eduquest-main`), `ProfFranco/check-app`, `quizbankorg/quizbank`, `techpivot25/Educate-AI`, `Naresh1401/education-tutor-agent` |
+
+🔵 **Why this is a finding and not a tidying note.** `9 of 14` ungranted repositories are
+EMEA-francophone or APAC-Indonesian school apps — 🟢 **so in exactly the two sub-regions
+where this page's platform coverage is thinnest, local supply does exist and is
+unusable.** 🔴 The constraint is not that nobody is building school software in francophone
+Africa/Europe or Indonesia; it is that **it ships without a grant**, so Globant cannot
+build on it and neither can anyone else.
+
+🟢 **That makes it an actionable ask rather than a gap**: a maintainer who published public
+code and no licence has usually not refused — the base already distinguishes
+`DECLARED-NOT-GRANTED` from `NO-PAYLOAD` for this reason. 🔵 **An upstream licence request to
+these `9` is the cheapest regional supply this page could gain**, and it is cheaper than
+finding nine new platforms. Full rows, branches and ladder verdicts in
+[`../evidence/backlog-regrade.2026-11-02-p603.tsv`](../evidence/backlog-regrade.2026-11-02-p603.tsv).
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THIS PASS DRAFTED "THE ERP/SIS GAP MOVES — TWO PLATFORMS WERE INVISIBLE BECAUSE OF THEIR BRANCH NAMES" AND IT IS **FALSE**: THIS PAGE ALREADY NAMES `openeducat/openeducat_erp` (BRANCH `19.0`, LGPL-3.0, `8,241 B`) AND `frappe/education` (BRANCH `develop`, `19`-BYTE `license.txt`), BRANCHES AND GRANT BYTES INCLUDED. 🟢 SO THE GAP IS RE-STATED, NOT MOVED — AND WHAT IS GENUINELY NEW IS SMALLER AND HONEST: `2` NEW ADDRESSES, AND A **DISCONFIRMATION** — THE MIT EDUCATION ERP THE WEB NAMES (`GegoK12`) HAS NO SHIPPABLE REPOSITORY AT ALL.**
 
 ### 🔴 The restatement, named before anything new, because this page's gap depends on it

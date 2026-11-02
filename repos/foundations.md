@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `21` FOUNDATION REPOS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, EVERY FABRICATED-PATH CONTROL AT `404`. 🟢 THE ADDITION IS A WHOLE LAYER THIS PAGE WAS THIN ON: THE **INTEROP-STANDARDS SUBSTRATE** — QTI, xAPI, CASE, OneRoster, Open Badges AND LEARNER CREDENTIALS, `9 of 21` ROWS, MOSTLY FROM THE STANDARDS BODIES THEMSELVES (`1EdTech`, `adlnet`, `instructure`, OpenWallet Foundation). 🔴 `603-C`: THE LIBRARY EVERY PASS SOURCES READS THE README AT **ONE SPELLING**, AND `5.7 %` OF REPOSITORIES ARE INVISIBLE TO IT — THE SAME ERROR CLASS THE LICENCE LADDER ALREADY PAID TO FIX.**
+
+### 🔴 `603-C` — `lib/probe_payload.sh` line `155` is a single-spelling README probe
+
+🔵 The library's header calls its README rung the trap that earns its keep — *"No filename
+ladder in this base would have found it — the README's own licence LINK did, in one
+request"* (measured on `OS4ED/openSIS-Classic`, GPL-2.0 at `docs/License.txt`). 🔴 **That
+rung reads exactly one filename:**
+
+    _readme_license_path() { _raw "$1" "$2" README.md ... }
+
+🟢 **Measured across this base's own backlog, `2026-11-02`**
+([`../evidence/readme-spelling-ladder.2026-11-02-p603.tsv`](../evidence/readme-spelling-ladder.2026-11-02-p603.tsv)):
+
+| README path | repos |
+| --- | --: |
+| `README.md` | `100` |
+| 🔴 `readme.md` | `3` |
+| 🔴 `README.rst` | `2` |
+| 🔴 `Readme.md` | `1` |
+| no README at any probed spelling | `1` |
+| 🔴 **invisible to a `README.md`-only probe** | 🔴 **`6` of `106` = `5.7 %`** |
+
+🔴 **The repositories it hides are not marginal.** `SafeExamBrowser/seb-server` is one of the
+six, and this base maintains **two dedicated instruments** for that project
+(`compose/code/seb-proctoring-validator`, `compose/code/sebserver-mcp-gate`). 🔵 Three of
+this pass's own promotions — `h5p/h5p-cli` (`readme.md`), `openedx/tutor-contrib-aspects`
+(`README.rst`), `kitschpatrol/yanki` (`readme.md`) — returned an **empty description** on the
+first read for exactly this reason, and were only described after a ladder was run.
+
+🔵 **Why this is the licence-ladder finding one channel over.** `LICENCE` (British spelling)
+was priced at **1 payout in 44** and is in the ladder. 🔴 `readme.md` pays **3 in 106** —
+a higher rate — and was not. 🟢 Order priced and the one-line fix written out in
+[`../compose/code/p603-readme-ladder/README.md`](../compose/code/p603-readme-ladder/README.md).
+
+🔴 **Why this pass did not patch line `155` itself:** the harness denied executing shell code
+from the cloned repository, so the library could neither be sourced nor exercised, and **a
+patch this pass cannot run is a patch this pass cannot verify.** `p603probe.sh` is an
+independent implementation written against the four defects the library documents by name
+(D1 branch resolution, D2 README licence link, D3 British spelling, D4 title-anchored
+family). 🟢 **D1 paid four times this pass**: default branches `public-release`
+(`chiv-heng/ferpa-guard`), `0.7` (`php-xapi/client`), `3.x` (`php-xapi/model`) and
+`eduquest-main` (`EDUQUEST2026-2027/EDUQUEST`) — 🔴 a hardcoded `main`/`master` writes all
+four down as ungranted.
+
+### 🟢 The interop-standards substrate — `9` rows, the layer this page was thinnest on
+
+🔵 These are the repositories that make an AI layer *portable between institutions* rather
+than bound to one LMS tenancy. 🟢 Mostly published by the standards bodies themselves, which
+is what makes them safe to build on.
+
+| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+| --- | --- | --- | --- | --- | --- | --- |
+| [1EdTech/OpenCASE](https://github.com/1EdTech/OpenCASE) | 🟢 **Apache-2.0** (`11,263 B`) | `main` | `2026-10-29` | `-04:00` | North America | 🟢 **CASE** — curriculum standards, competency frameworks and learning outcomes as structured, addressable documents. From the standards body |
+| [1EdTech/digital-credentials-public-validator](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-27` | `+01:00` | EMEA | Public validator for **Open Badges**; a deployment runs at `vc.1ed.tech` |
+| [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | 🟢 **Apache-2.0** (`11,356 B`) | `master` | `2024-12-16` | `-05:00` | North America | The **xAPI Profiles** spec from ADL. 🟡 Its own README flags a review/upgrade in progress following xAPI 2.0 / IEEE p9274.2.1 — read the IEEE base standard alongside it |
+| [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-08-18` | `-04:00` | North America | **LRSPipe** — xAPI middleware that governs data flow between layers *by xAPI Profile*, not just a statement forwarder |
+| [yetanalytics/re-oidc](https://github.com/yetanalytics/re-oidc) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-16` | `-04:00` | North America | OIDC for `re-frame`/`reagent` ClojureScript apps — the auth rung for the xAPI tooling above |
+| [instructure/qti](https://github.com/instructure/qti) | 🟢 **MIT** (`1,083 B`) | `master` | `2026-09-23` | `+00:00` | North America | 🟢 QTI **1.2 and 2.1** importer gem, published by **Instructure** — the Canvas vendor's own assessment-import path |
+| [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | 🟢 **MIT** (`1,065 B`) | `main` | `2026-02-12` | `-03:00` | LATAM | Framework-agnostic **QTI 3.x** renderer with multi-frontend support; live sandbox demo |
+| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟢 **MIT** (`1,091 B`) | `main` | `2026-06-11` | `-04:00` | North America | Cross-platform iOS/Android wallet for **storing and sharing digital learner credentials**. OpenWallet Foundation Labs |
+| [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | 🟢 **MIT** (`1,065 B`) | `master` | `2026-10-27` | `+01:00` | EMEA | H5P toolkit for running, editing and **developing H5P content types**. 🔵 README at `readme.md` — one of the `603-C` six |
+
+### 🟢 Analytics, assessment and detection — `12` more rows
+
+| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+| --- | --- | --- | --- | --- | --- | --- |
+| [openedx/tutor-contrib-aspects](https://github.com/openedx/tutor-contrib-aspects) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-27` | `-04:00` | North America | 🟢 **Open edX Aspects** learner analytics as a Tutor plugin: ClickHouse + Apache Superset + OpenFUN **Ralph** (LRS, validates and stores xAPI) + Vector. 🔵 README at `README.rst` |
+| [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | 🟢 **MIT** (`1,128 B`) | `main` | `2025-10-03` | `+05:30` | **APAC** | 🟢 Indic-language machine translation from **AI4Bharat / IIT Madras** — the realistic path to multilingual courseware across India's scheduled languages |
+| [Sunbird-Lern/lms-service](https://github.com/Sunbird-Lern/lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2026-01-05` | `+05:30` | **APAC** | LMS micro-service of **Sunbird**, the stack behind India's national education platforms |
+| [project-sunbird/sunbird-lms-service](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2025-12-23` | `-08:00` | **APAC** | Sunbird **User/Org** micro-service. 🔵 Same grant bytes as the row above and a `-08:00` committer offset — a US-based committer on an India-origin platform, so `tz` places the *commit*, not the project |
+| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `-07:00` | North America | **Edu-ConvoKit** — framework for education *conversation* data (NAACL 2024, Systems Track). The pre-processing layer for classroom-discourse analysis |
+| [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 **MIT** (`1,070 B`) | `main` | `2026-02-07` | `+08:00` | APAC | **Fast-DetectGPT** (ICLR 2024) — zero-shot machine-generated-text detection via conditional probability curvature |
+| [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** (`11,357 B`) | `main` | `2024-01-16` | `+09:00` | APAC | Google's **autograding** toolset for programming education (notebook-based) |
+| [Fuann/open-apa](https://github.com/Fuann/open-apa) | 🟢 **BSD** (`1,527 B`) | `master` | `2026-10-08` | `+08:00` | APAC | **OpenAPA** — open benchmark and evaluation toolkit for **pronunciation assessment** in open-response scenarios |
+| [YuanGongND/gopt](https://github.com/YuanGongND/gopt) | 🟢 **BSD** (`1,516 B`) | `master` | `2023-02-13` | `-05:00` | North America | **GOPT** — transformer multi-aspect, multi-granularity pronunciation assessment for non-native English. 🔴 Dormant since `2023-02`: a research artifact to port, not a dependency to adopt |
+| [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** (`1,070 B`) | `master` | `2024-12-10` | `+05:30` | APAC | Automated proctoring over webcam + microphone, split into vision and audio functions. 🟡 Dormant since `2024-12` |
+| [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | 🟢 **MIT** (`1,070 B`, 🔵 `license.txt`) | `main` | `2026-10-27` | `-04:00` | North America | CLI + TypeScript library turning **Markdown into Anki flashcards**. 🔵 Lowercase `license.txt` *and* `readme.md` — this repo defeats a single-spelling probe on **both** channels |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟡 **split scope** — **MIT** (`1,091 B`, root, code in `pipeline/`) **+ CC BY 4.0** (`1,583 B`, 🔴 `dados/LICENSE.md`) | `main` | `2026-10-15` | `-03:00` | **LATAM** | 🟢 Brazil's **BNCC** extracted from official MEC/CNE PDFs by a reproducible pipeline. 🔴 **A root-only read publishes "MIT" for a payload that is CC BY 4.0** — see [`../verticals/solutions.md`](../verticals/solutions.md) |
+
+### 🟡 Grant-clean but **not** promoted to this page, with the reason
+
+| Repo | Grant (byte-read) | Why not |
+| --- | --- | --- |
+| [SafeExamBrowser/seb-server](https://github.com/SafeExamBrowser/seb-server) | 🟡 **MPL-2.0** (`16,724 B`) | Already instrumented on this base (`seb-proctoring-validator`, `sebserver-mcp-gate`); listed here only because it is one of the `603-C` six (`README.rst`) and its grant is now byte-read |
+| [kaldi-asr/kaldi](https://github.com/kaldi-asr/kaldi) | 🔴 notice, not a grant | `COPYING` (`17,263 B`) is a **legal notice clarifying the Apache copyright headers**, not licence text. The grant is Apache-2.0 *by header convention*; **the root file is not the grant** and must not be cited as one |
+| [ajjalti/EvalStudio](https://github.com/ajjalti/EvalStudio), [Lawrence-Public-Schools/OneRoster-1.1-PowerQueries](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | 🟡 AGPL-3.0 (`33,060 B` / `34,522 B`) | Copyleft — usable, but not what Globant can build *on* under the permissive bar |
+| [bgwdotdev/go-oneroster](https://github.com/bgwdotdev/go-oneroster) | MIT (`1,063 B`) | 🔴 Last push **`2019-11-04`** — seven years dormant. OneRoster coverage comes from `roster_hub_for_gigaschool` and the 1EdTech rows instead |
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `26` FOUNDATION REPOS ADDED, EVERY ONE CONFIRMED **NOT HELD** BY A CORRECTED MATCHER, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH, `65 of 65` FABRICATED-PATH CONTROLS AT `404`. 🟢 THE ADDITION IS A WHOLE LAYER: THE **MOODLE PLUGIN SUBSTRATE** — IN-LMS CODE SUBMISSION, AUTO-GRADING, ATTENDANCE, SSO AND OBJECT STORAGE. `11 of 13` NEW. 🔴 AND THE REASON IT WAS MISSING IS NOT A NEW MECHANISM: THIS BASE ALREADY DOCUMENTED BOTH `version.php` SOURCE-HEADER GRANTS AND VERSIONED DEFAULT BRANCHES — IT HAD SIMPLY NEVER SWEPT `topic:moodle` DEEPLY ENOUGH TO USE THEM.**
 
 ### 🔴 Credit where this pass found it already written, because the near-miss is instructive

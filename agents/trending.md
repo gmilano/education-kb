@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE **THIRTY-THIRD** CONSECUTIVE NIL: `45 of 45` SUBSTANTIVE TOKENS ALREADY HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`, GLOBAL `20/20`). 🔴 `603-B`: THIS PASS'S ONE `NEW` WAS AN ADDRESS **THIS PASS INVENTED** — `ilias-ebuch/ilias`, GUESSED FROM A PROSE PLATFORM NAME, WHILE THE REAL `ilias-elearning/ilias` HAS BEEN HELD SINCE `p191`. 🟢 THE WEEK'S REAL AGENT SUPPLY CAME FROM THE OTHER DIRECTION: `14` LMS/MCP CONNECTORS PROMOTED OFF A `167`-PASS-OLD BACKLOG, ALL GRANTS BYTE-READ TODAY.**
+
+### 🔴 `603-B` — a novelty probe that grades an address it invented
+
+The platform leg named **"ILIAS"** in prose with **no slug printed**. 🔴 This pass supplied
+one from memory, probed it, and graded the result `NEW`.
+
+| | address | exists? | held? |
+| --- | --- | --- | --- |
+| 🔴 what `p603` probed | `ilias-ebuch/ilias` | 🔴 **no** | n/a |
+| 🟢 what is real | [`ilias-elearning/ilias`](https://github.com/ilias-elearning/ilias) | 🟢 yes | 🟢 **since `p191`** |
+
+🔵 **Read this with `p602-A` and `p602-C`**, which found two matchers that *understated*
+novelty by being too narrow. 🔴 **This is a third mechanism and it runs the other way:
+fabricating the address under test.** The three together give the rule:
+
+🟢 **Only ever grade an address a source actually printed.** A prose-named platform with no
+printed slug is a **lookup against the held set**, never a candidate for `NEW`.
+
+### 🟢 The legs, itemised per region so they are not re-fetched next pass
+
+| leg | region | tokens | held | new |
+| --- | --- | --: | --: | --: |
+| `top open source AI agents education 2026 github MIT` | Global | `5` | `5` | `0` |
+| `github trending education AI 2026` | Global | `3` | `3` | `0` |
+| `open source platform education LMS SIS MIT Apache Moodle alternative 2026` | Global | `7` | `7` | `0` |
+| `AI education industry trends 2026 market size` | Global | `5` | `5` | `0` |
+| `AI education … adoption regulation players` | **North America** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **EMEA** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **APAC** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **LATAM** | `6` | `6` | `0` |
+| **total** | | **`45`** | 🔴 **`45`** | 🔴 **`0`** |
+
+🟢 **Supply-side tokens the trending legs surfaced, all held:** `HKUDS/DeepTutor` (lifelong
+personalised tutoring, the fastest-rising education repo), `THU-MAIC/OpenMAIC` (multi-agent
+classroom, Tsinghua MAIC), `hugohe3/ppt-master`, `rasbt/LLMs-from-scratch`,
+`ashishpatel26/500-AI-Agents-Projects`, `microsoft/ai-agents-for-beginners`,
+`huggingface/agents-course`. 🟡 **`NousResearch/hermes-agent` was held in *trending only*** and
+is on no curated shelf — grant re-read **MIT `1,069 B`** this pass; it sits in the `p436`
+backlog as a substance-unestablished row, not a promotion.
+
+🔴 **No star counts in any `p603` row.** `api.github.com` and `github.com` HTML/atom both
+return `403` through this session's proxy. 🟢 Liveness is carried by HEAD committer date and
+timezone offset instead — the channel `gate-offset-region` places regions with. Full evidence:
+[`../evidence/websearch-legs.2026-11-02-p603.tsv`](../evidence/websearch-legs.2026-11-02-p603.tsv),
+[`../evidence/promotion-tranche.2026-11-02-p603.tsv`](../evidence/promotion-tranche.2026-11-02-p603.tsv).
+
+### 🟢 Agents promoted to the live shelf this pass — `14`, by region
+
+| region | agents |
+| --- | --- |
+| **APAC** `5` | `thc1006/moodle-mcp`, `toshieji/moodle-grading-mcp`, `Aaradhya-Dev-Tamrakar/google-classroom-mcp` (tz `+05:45`, Nepal), `sonaiengine/ku-portal-mcp`, `chrisryugj/schoolinfo-mcp` |
+| **EMEA** `4` | `falkenslab/moodle-driver`, `EduBase/MCP`, `pablopc05/mcp-usc`, `UKGovernmentBEIS/inspect_ai` |
+| **North America** `3` | `skhdemo/uoft-quercus-mcp` (🟢 first Canada-placed row this pass), `LEARNableLabs/opentutor`, `microsoft/agent-governance-toolkit` |
+| **LATAM** `2` | `nialvape/utn-mcp` (🔵 ISC), `SidneyBissoli/uis-mcp-server` |
+
+🔴 **Three disconfirmations, written down because they were the most promotable-looking rows:**
+`CSOAI-ORG/coppa-ferpa-mcp` (MIT, but its own README: *"an early scaffold, not a production
+compliance assessor"*, five tools returning `status: "stub"`); `automoss/automoss` (MIT
+`LICENSE` vs README *"All Rights Reserved"* — two holders, two years, two postures);
+`alpinevibe/quizpulse` (🔴 `HEAD` symref does not resolve — **struck from the backlog**). Full
+reasoning on [`../agents/top.md`](../agents/top.md) under `603-D`.
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE **THIRTY-SECOND** CONSECUTIVE NIL: `41 of 41` SUBSTANTIVE TOKENS ALREADY HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`). 🟢 ON LATAM THIS BASE IS **MORE PRECISE THAN THE WEB**: THE LEG RETURNED "APRIL 2026"; THE SHELF ALREADY HELD `Santiago, 2026-04-14`. 🔴 `602-C`: THIS PASS'S NOVELTY PROBE PRODUCED A FALSE `NEW` AND IS CORRECTED IN THE EVIDENCE FILE — THE SECOND MEASUREMENT DEFECT THIS PASS FOUND IN ITS OWN INSTRUMENTS.**
 
 ### 🔴 `602-C` — the novelty probe produced a false `NEW`, and exact-phrase matching is why

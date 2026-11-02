@@ -4,6 +4,166 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — four recipes (`P-603-A`…`P-603-D`), every component grant byte-read at its real default branch with a per-repo fabricated-path control at `404`
+
+🔵 **What is new about this pass's recipes.** `p602`'s patterns wrote *into* systems an
+institution already runs (Moodle, Canvas, Open edX, an ERP). 🟢 **These four sit one layer
+out: they make the AI layer portable between institutions, or bind it to a public standard or
+an official national dataset** — because that is what this pass's supply actually is
+(`9` interop-standards repos, `4` LATAM official-data rows, `14` LMS/MCP connectors).
+
+### 🟢 Component grants, all byte-read `2026-11-02` at the real default branch
+
+| component | grant | bytes | branch | control |
+| --- | --- | --: | --- | --- |
+| [1EdTech/OpenCASE](https://github.com/1EdTech/OpenCASE) | Apache-2.0 | `11,263` | `main` | `404` |
+| [1EdTech/digital-credentials-public-validator](https://github.com/1EdTech/digital-credentials-public-validator) | Apache-2.0 | `11,356` | `main` | `404` |
+| [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | Apache-2.0 | `11,356` | `master` | `404` |
+| [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) | Apache-2.0 | `11,356` | `main` | `404` |
+| [yetanalytics/re-oidc](https://github.com/yetanalytics/re-oidc) | Apache-2.0 | `11,356` | `main` | `404` |
+| [openedx/tutor-contrib-aspects](https://github.com/openedx/tutor-contrib-aspects) | Apache-2.0 | `11,356` | `main` | `404` |
+| [instructure/qti](https://github.com/instructure/qti) | **MIT** | `1,083` | `master` | `404` |
+| [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | **MIT** | `1,065` | `main` | `404` |
+| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | **MIT** | `1,091` | `main` | `404` |
+| [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** | `1,080` | `main` | `404` |
+| [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | **MIT** | `1,073` | `main` | `404` |
+| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | **MIT** | `1,063` | `main` | `404` |
+| [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | `1,119` | `main` | `404` |
+| [falkenslab/moodle-driver](https://github.com/falkenslab/moodle-driver) | **MIT** | `1,066` | `main` | `404` |
+| [skhdemo/uoft-quercus-mcp](https://github.com/skhdemo/uoft-quercus-mcp) | **MIT** | `1,085` | `main` | `404` |
+| [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | **MIT** | `1,128` | `main` | `404` |
+| [Sunbird-Lern/lms-service](https://github.com/Sunbird-Lern/lms-service) | **MIT** | `1,071` | `master` | `404` |
+| [hisahonakata/roster_hub_for_gigaschool](https://github.com/hisahonakata/roster_hub_for_gigaschool) | Apache-2.0 | `11,356` | `main` | `404` |
+| [SaidBySolo/neispy](https://github.com/SaidBySolo/neispy) | **MIT** | `1,066` | `master` | `404` |
+| [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | **MIT** *(code)* | `1,107` | `main` | `404` |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟡 CC BY 4.0 *(data, `dados/LICENSE.md`)* | `1,583` | `main` | `404` |
+| [SidneyBissoli/uis-mcp-server](https://github.com/SidneyBissoli/uis-mcp-server) | **MIT** | `1,087` | `main` | `404` |
+| [nialvape/utn-mcp](https://github.com/nialvape/utn-mcp) | **ISC** | `747` | `main` | `404` |
+| [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | **MIT** | `1,070` | `main` | `404` |
+| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | **MIT** | `1,068` | `main` | `404` |
+| [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | **MIT** | `1,065` | `master` | `404` |
+
+---
+
+### `P-603-A` — Curriculum-bound course generation: never let the model invent the standard
+
+🔴 **The failure this prevents.** An LLM asked to *"align this lesson to the curriculum"*
+will produce plausible standard codes that do not exist. The fix is not a better prompt; it
+is **making the standard set a tool call against an authoritative dataset**.
+
+🟢 **Wiring.**
+1. **Standards as data.** For Brazil, [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)
+   — install the npm or PyPI package, or run its **MCP server** directly; `1,721` BNCC objectives
+   verified against MEC/CNE. Elsewhere, [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE)
+   (Apache-2.0) to host your own CASE framework.
+2. **Bind generation to retrieval.** The agent may only emit an objective code **returned by a
+   tool call** in step 1. Reject any code not in the returned set — this is a validation rule,
+   not a prompt instruction.
+3. **Emit assessment in a portable format.** [`instructure/qti`](https://github.com/instructure/qti)
+   (MIT) for QTI 1.2/2.1 import into Canvas; [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player)
+   (MIT) to render QTI 3.x anywhere.
+4. **Gate accuracy before release.** Score the pipeline with
+   [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) (MIT): the
+   eval is *"every emitted code exists in the framework"*, which is pass/fail, not a judgement.
+
+🔴 **Attribution is a build step, not a footnote.** BNCC data is CC BY 4.0 and the attribution
+is owed to **Profy Tecnologias Educacionais Ltda** for the compilation — the normative text
+itself is an official act and uncopyrighted (*art. 8º, IV, Lei 9.610/98*). 🟢 Emit the credit
+line in the generated artefact automatically.
+
+---
+
+### `P-603-B` — Grading assistant with a human-release gate built into the transport
+
+🔵 **Why this composition and not a custom integration.** The gate is the valuable part, and
+one component already implements it.
+
+🟢 **Wiring.**
+1. **Transport.** [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp)
+   (MIT) exposes Moodle Web Services as grading I/O and 🟢 **writes grades as *unreleased
+   drafts*** — so the release decision stays with a human *by construction*, not by policy.
+2. **Reading work the LMS will not hand you cleanly.**
+   [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) (MIT) fetches assignment PDFs;
+   [`falkenslab/moodle-driver`](https://github.com/falkenslab/moodle-driver) (MIT) covers what
+   Web Services do not expose, 🔴 **by driving Moodle with a person's own login — so it inherits
+   that person's permissions and must never be given a service account.**
+3. **Integrity signal, kept advisory.** [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt)
+   (MIT, ICLR 2024). 🔴 **Attach the score to the draft; never let it set a grade or trigger an
+   accusation** — DC OSSE's guidance already bars AI from grading and discipline decisions, and
+   several US states now mandate district policy on exactly this.
+4. **Audit.** Ship xAPI statements through [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe)
+   (Apache-2.0) into [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects)
+   (Apache-2.0: ClickHouse + Superset + Ralph + Vector) for a queryable record of every draft.
+
+🟢 **Governance wrapper for the whole thing:** [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+(MIT) for policy enforcement, identity and sandboxing — 🟡 noting its own **Public Preview**
+label before it goes near a production gradebook.
+
+---
+
+### `P-603-C` — Portable institutional agent: build once, deploy across an LMS estate
+
+🔴 **The failure this prevents.** A tutor built against one LMS's API is rewritten per client.
+🟢 Bind to the **standards**, adapt at the edge.
+
+🟢 **Wiring.**
+1. **Rostering at the edge.** [`hisahonakata/roster_hub_for_gigaschool`](https://github.com/hisahonakata/roster_hub_for_gigaschool)
+   (Apache-2.0) turns **OneRoster CSV into a OneRoster API** — the adapter that makes a CSV-only
+   district look like an API district. 🟡 Dormant since `2023-08`: vendor the code, do not take
+   the dependency.
+2. **Identity.** [`yetanalytics/re-oidc`](https://github.com/yetanalytics/re-oidc) (Apache-2.0)
+   for OIDC in a ClojureScript front end, or the OIDC path your LMS already runs.
+3. **Behaviour as profiled xAPI, not bespoke telemetry.**
+   [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) (Apache-2.0) to define the
+   profile; `xapipe` to route statements *by* profile. 🟡 **Read the IEEE p9274.2.1 base standard
+   alongside it** — the repo's own README flags a review/upgrade in progress after xAPI 2.0.
+4. **Content that is not LMS-shaped.** [`h5p/h5p-cli`](https://github.com/h5p/h5p-cli) (MIT) to
+   develop and build H5P content types; 🔵 its README is at `readme.md`, which is why a
+   single-spelling probe reports it as undescribed.
+5. **Credentials that outlive the institution.**
+   [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+   (Apache-2.0) to validate Open Badges, and
+   [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)
+   (MIT) as the learner-held wallet.
+
+🔵 **Why this is the North American engagement specifically:** `6 of the 9` components are
+published by the standards bodies themselves, and a US multi-campus or state system is the
+buyer that actually needs cross-institution portability rather than per-tenant automation.
+
+---
+
+### `P-603-D` — Official-data-to-agent plumbing (the LATAM and APAC pattern)
+
+🔵 **The pattern this pass's regional evidence actually shows.** `3 of 4` LATAM rows and most
+APAC rows wrap a **public or official data source** — a national curriculum, a UN statistics
+API, a ministry system, a public university's portal. 🟢 **The product is the plumbing, not
+another LMS.**
+
+🟢 **Wiring, as a repeatable shape.**
+1. **Pick the official source and wrap it as MCP.** Working examples to copy rather than
+   design from scratch: [`SidneyBissoli/uis-mcp-server`](https://github.com/SidneyBissoli/uis-mcp-server)
+   (MIT, **UNESCO UIS** statistics, PT-BR docs), [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp)
+   (ISC, **UTN** Argentina), [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy)
+   (MIT, Korea's **NEIS**, sync+async), [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)
+   (MIT code, **BNCC** via npm/PyPI/MCP).
+2. **Pin the dataset, and pin it the way BNCC does.** 🟢 `bncc-pacotes` syncs its JSON from a
+   **pinned commit** of `bncc-dados` and carries that repo's grant with it — 🔵 copy that
+   mechanism, because it is what makes an official-data claim reproducible and auditable.
+3. **Read the grant to the bottom before shipping.** 🔴 `bncc-dados`'s root `LICENSE` is MIT
+   while the data grant is CC BY 4.0 at **`dados/LICENSE.md`**; `bncc-pacotes`'s root `LICENSE`
+   is a **router, not a grant**. A root-only read gets both wrong.
+4. **Localise the content, do not re-author it.** [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2)
+   (MIT) for Indic languages; [`Sunbird-Lern/lms-service`](https://github.com/Sunbird-Lern/lms-service)
+   (MIT) if the delivery target is an India-scale national platform.
+5. **Analyse classroom discourse with a purpose-built toolkit.**
+   [`stanfordnlp/edu-convokit`](https://github.com/stanfordnlp/edu-convokit) (MIT, NAACL 2024).
+
+🔴 **The regional constraint to quote honestly in a proposal.** In francophone EMEA and
+Indonesia the local school-app supply exists and is **ungranted** — `9 of the 14` backlog
+repositories with no licence file at all come from those two clusters (`603-E`). 🟢 **So the
+first move in those markets is an upstream licence ask, not a build**, and it is cheaper than
+either.
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — four recipes (`P-602-A`…`P-602-D`), every component grant byte-read at its real default branch with a per-repo fabricated-path control at `404`
 
 🔵 **What is new about this pass's recipes.** Earlier patterns on this page composed *tutors* and

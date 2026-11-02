@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE LMS-CONNECTOR CATEGORY `p602` NAMED IS NOW ACTUALLY ON THIS SHELF: `14` ROWS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `48 of 48` FABRICATED-PATH CONTROLS AT `404`. 🔴 `603-A`: `p602` SIZED THAT BACKLOG AT `44`; THE REAL FIGURE IS `108` REPOSITORY ADDRESSES — AND `2` MORE LEDGER ROWS ARE NOT REPOSITORIES AT ALL. 🔴 `603-B`: THE WEB LEGS RETURN THE **THIRTY-THIRD** CONSECUTIVE NIL (`45 of 45` TOKENS HELD), AND THIS PASS'S ONE `NEW` WAS A **GUESSED SLUG**, NOT A FINDING.**
+
+### 🔴 `603-A` — the backlog was mis-sized, and two of its rows are this base's own file paths
+
+🟡 `p602` wrote that *"`44` LMS/MCP-shaped addresses sit in `evidence/promotion-ledger.2026-10-25-p436.tsv`
+claimed in `trending` and on no live shelf"*. 🟢 **The claim is directionally right and the
+number is low.** Re-measured at `HEAD` with the corrected matcher (`heldset.sh`, URL form
+**+** backticked bare slug) against the curated shelves only:
+
+| | addresses |
+| --- | --: |
+| ledger rows typed `BACKLOG` at `p436` | `158` |
+| of those, distinct slugs | `142` |
+| 🟢 shelved between `p436` and `p603` | `32` |
+| 🔴 **still on no curated shelf** | **`110`** |
+| 🔴 of those, **not repositories at all** | **`2`** |
+| 🟢 **real repository backlog** | **`108`** |
+
+🔴 **The two non-repositories are `evidence/p333-disposition-ledger` and
+`evidence/p333-silent-random-probe`** — both are *relative paths to real `.tsv` files inside
+this base*, recorded in the ledger's `slug` column and carried as promotion candidates for
+`167` passes. 🔵 **This is precisely the over-correction `heldset.sh`'s own header warns
+about** — *"a bare `<word>/<word>` match hits every relative path in the prose
+(`compose/code`, `intel/market.md`) and inflates `HELD`"* — 🔴 **except it did not inflate a
+measurement, it entered the ledger as work to do.** Both are struck, with the reason, in
+[`../evidence/backlog-regrade.2026-11-02-p603.tsv`](../evidence/backlog-regrade.2026-11-02-p603.tsv).
+
+### 🟢 The regrade — what the `108` actually are, probed today
+
+| verdict | repos | can it be shelved? |
+| --- | --: | --- |
+| 🟢 permissive (MIT / Apache-2.0 / BSD / ISC) | `86` | yes — grant byte-read |
+| 🔴 `NO-PAYLOAD` — no grant file at any ladder rung | `14` | 🔴 no |
+| 🟡 copyleft / split / notice-only | `7` | case by case |
+| 🔴 `UNRESOLVED` — `HEAD` symref does not resolve | `1` | 🔴 no — `alpinevibe/quizpulse` is gone |
+
+🔵 So the backlog was never *"`44` connectors"*: it is `86` grant-clean repositories, of which
+this pass shelves the `14` below and `34` more on
+[`../repos/foundations.md`](../repos/foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md). 🟢 **The remainder stay in the
+backlog with a written reason, not as padding** — see `603-D`.
+
+### 🟢 Promoted to this shelf — `14` rows, grants byte-read `2026-11-02`
+
+🔵 **No star counts in any `p603` row.** `api.github.com` and `github.com` HTML/atom both
+return `403` through this session's proxy; only `raw.githubusercontent.com` and the git
+protocol were open. 🟢 A star figure this pass could not read is one it did not write —
+`pushed` (HEAD committer date) and `tz` carry the liveness instead, and `tz` is the channel
+`gate-offset-region` places regions with.
+
+| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+| --- | --- | --- | --- | --- | --- | --- |
+| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | 🟢 **MIT** (`1,063 B`) | `main` | `2026-10-15` | `+08:00` | APAC | MCP server that lets an LLM agent **use a real Moodle LMS** — read courses, fetch assignment PDFs |
+| [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** (`1,119 B`) | `main` | `2026-09-07` | `+09:00` | APAC | 🟢 Exposes **Moodle Web Services as grading I/O**; the LLM decides grades, the server writes them **as unreleased drafts** — a human-release gate in the design |
+| [falkenslab/moodle-driver](https://github.com/falkenslab/moodle-driver) | 🟢 **MIT** (`1,066 B`) | `main` | `2026-10-25` | `+00:00` | EMEA | Drives Moodle from Node.js **with the person's own login** — no web services, no tokens, no admin |
+| [Aaradhya-Dev-Tamrakar/google-classroom-mcp](https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp) | 🟢 **MIT** (`1,077 B`) | `main` | `2026-10-14` | 🔵 `+05:45` | APAC | MCP server for the Google Classroom API (`+05:45` is Nepal — a one-offset timezone, so the placement is unambiguous) |
+| [EduBase/MCP](https://github.com/EduBase/MCP) | 🟢 **MIT** (`1,063 B`) | `main` | `2026-11-01` | `+01:00` | EMEA | MCP server for the **EduBase** platform; lets MCP clients and LLMs drive a live tenant |
+| [skhdemo/uoft-quercus-mcp](https://github.com/skhdemo/uoft-quercus-mcp) | 🟢 **MIT** (`1,085 B`) | `main` | `2026-09-12` | `-04:00` | North America | Unofficial MCP for **U of Toronto Quercus (Canvas)** via personal access token + Timetable Builder conflict checks |
+| [sonaiengine/ku-portal-mcp](https://github.com/sonaiengine/ku-portal-mcp) | 🟢 **MIT** (`1,067 B`) | `main` | `2026-10-03` | `+09:00` | APAC | **Korea University KUPID** portal MCP — notices, library seats, assignments |
+| [chrisryugj/schoolinfo-mcp](https://github.com/chrisryugj/schoolinfo-mcp) | 🟢 **MIT** (`1,066 B`) | `main` | `2026-10-26` | `+09:00` | APAC | 우리학교 알리미 — Korean **school-information** MCP for parents |
+| [nialvape/utn-mcp](https://github.com/nialvape/utn-mcp) | 🟢 **ISC** (`747 B`) | `main` | `2026-10-26` | `-03:00` | **LATAM** | 🟢 Unofficial MCP for **UTN** (Universidad Tecnológica Nacional, Argentina) student systems. 🔵 The only **ISC** grant on this shelf |
+| [pablopc05/mcp-usc](https://github.com/pablopc05/mcp-usc) | 🟢 **MIT** (`1,065 B`) | `main` | `2026-08-27` | `+02:00` | EMEA | Local + HTTP-first MCP for the **USC (Santiago de Compostela)** Campus Virtual |
+| [SidneyBissoli/uis-mcp-server](https://github.com/SidneyBissoli/uis-mcp-server) | 🟢 **MIT** (`1,087 B`, 🔵 `LICENSE.md`) | `main` | `2026-10-27` | `-03:00` | **LATAM** | 🟢 **UNESCO UIS education-statistics** MCP, with PT-BR docs — turns the UIS indicator set into agent-callable tools |
+| [LEARNableLabs/opentutor](https://github.com/LEARNableLabs/opentutor) | 🟢 **MIT** (`1,078 B`) | `main` | `2026-10-02` | `-04:00` | North America | A personal tutor on the web, on Telegram, **or inside your own agent** |
+| [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** (`1,073 B`) | `main` | `2026-10-30` | `-07:00` | North America | 🟢 Policy enforcement, identity, sandboxing and SRE for autonomous agents, framework-agnostic. 🟡 Self-declared **Public Preview** — may break before GA |
+| [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** (`1,080 B`) | `main` | `2026-11-01` | `+00:00` | EMEA | 🟢 LLM **evaluation** framework from the **UK AI Security Institute** — the natural place to put an education agent's accuracy gate |
+
+### 🔴 `603-B` — the web legs nil for the thirty-third pass, and this pass's one `NEW` was its own guess
+
+`45 of 45` substantive tokens across `8` legs were already held; **no region returned
+silence** (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`, Global `20/20`). Itemised in
+[`../evidence/websearch-legs.2026-11-02-p603.tsv`](../evidence/websearch-legs.2026-11-02-p603.tsv).
+
+🔴 **The one address that graded `NEW` was `ilias-ebuch/ilias`, and it does not exist.** The
+platform leg named *"ILIAS"* in prose without a slug; this pass **guessed** the owner and
+graded the guess. 🟢 The base holds the real one, `ilias-elearning/ilias`, and has since
+`p191`.
+
+| | |
+| --- | --- |
+| 🔴 what `p603` probed | `ilias-ebuch/ilias` — guessed from a prose name |
+| 🟢 what exists and is held | [`ilias-elearning/ilias`](https://github.com/ilias-elearning/ilias) |
+
+🔵 **The lesson generalises past this base:** a novelty probe must only ever grade an address
+a source actually *printed*. `p602` found two matchers that overstated novelty by being too
+narrow; 🔴 **this is the third mechanism and it runs the other way — inventing the address
+being graded.** A prose-named platform with no printed slug is a **lookup**, never a `NEW`.
+
+### 🟢 `603-D` — what this pass did **not** promote, and why
+
+🔵 Fewer real rows beat padding, so the reasons are written down rather than the rows.
+
+| Not promoted | Grant | Reason |
+| --- | --- | --- |
+| [CSOAI-ORG/coppa-ferpa-mcp](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) | MIT `1,068 B` | 🔴 **Its own README disqualifies it**: *"an early scaffold, not a production compliance assessor"*; five named tools return `status: "stub"` with empty `regulation_refs`. A row reading "COPPA/FERPA compliance MCP, MIT" would be **false**, and this is the single most promotable-*looking* row in the backlog |
+| [automoss/automoss](https://github.com/automoss/automoss) | MIT `1,064 B` | 🔴 **Grant/prose contradiction unresolved**: `LICENSE` reads `MIT License / Copyright (c) 2023 AutoMOSS`, the README reads `Copyright ©️ 2021 AutoMOSS. All Rights Reserved.` Two holders, two years, two postures. Last push `2023-06-11` |
+| [naufaldi/teacher-exam](https://github.com/naufaldi/teacher-exam) | MIT `1,070 B` | 🟡 Live (`2026-10-26`) and plausible — Indonesian print-ready exam sheets — but its README attributes core generation to model strings this pass could not confirm against any primary source (`GPT-6 Luna`, `Composer 2`). Substance unestablished, not disqualified |
+| `alpinevibe/quizpulse` | — | 🔴 `HEAD` symref does not resolve: gone, renamed or private. **Struck from the backlog** |
+| `12` others incl. `503496348-ops/herpeakgem`, `sumo1/AI-GAME-COOL`, `karsh482/Gaokao`, `xsx11223/zhibuzhi` | permissive | 🟡 Grant verified, **substance not established this pass**. They stay in the backlog with that reason rather than being padded onto a shelf |
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THIS PASS'S FIRST DRAFT CLAIMED A NEW CATEGORY AND WAS WRONG: THE LMS-CONNECTOR CATEGORY WAS FOUND LONG AGO AND **NEVER PROMOTED** — `44` LMS/MCP-SHAPED ADDRESSES SIT IN `evidence/promotion-ledger.2026-10-25-p436.tsv` CLAIMED IN `trending` AND ON NO LIVE SHELF, WHICH IS WHAT `gate-promotion-ledger` HAS BEEN RED ABOUT FOR ~`165` PASSES. 🟢 SO THIS PASS DOES THE THING THAT WAS ACTUALLY OUTSTANDING: IT **PROMOTES** `5` ROWS OUT OF THAT BACKLOG WITH FRESH BYTE-READ GRANTS, SHELF `69 → 74`. 🔴 `602-A`: THIS PASS'S OWN HELD-SET MATCHER WAS URL-ONLY AND MISSED `39.5 %` OF THE BASE — NOVELTY OVERSTATED `55.0 %` vs `50.4 %`, AND `6` DRAFTED ROWS WERE ALREADY HELD. FIVE REGISTERED (`602-A`…`602-E`).**
 
 ### 🔴 `602-A` — read this first: this pass mis-measured its own base, and the correction is the pass's most portable finding

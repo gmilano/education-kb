@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE DEMAND-SIDE LEGS RETURN THE **THIRTY-THIRD** CONSECUTIVE NIL: `45 of 45` SUBSTANTIVE TOKENS HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`, GLOBAL `20/20`). 🟢 BUT THE **SUPPLY** SIDE MOVED A GAP THIS PAGE HAS CARRIED FOR MONTHS: `p602` CLOSED WITH *"THERE IS STILL NO PERMISSIVE LATAM PLATFORM OF RECORD"* — 🟢 **THERE IS ONE NOW**, AND `4` LATAM-PLACED PERMISSIVE ROWS LANDED THIS PASS. ALL `5` OPPORTUNITY SUBSECTIONS UPDATED UNDER THE SINGLE CANONICAL BLOCK.**
+
+### 🔴 The legs, with the per-region denominator
+
+| leg | region | tokens | held | new |
+| --- | --- | --: | --: | --: |
+| `top open source AI agents education 2026 github MIT` | Global | `5` | `5` | `0` |
+| `github trending education AI 2026` | Global | `3` | `3` | `0` |
+| `open source platform education LMS SIS MIT Apache Moodle alternative 2026` | Global | `7` | `7` | `0` |
+| `AI education industry trends 2026 market size` | Global | `5` | `5` | `0` |
+| `AI education … adoption regulation players` | **North America** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **EMEA** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **APAC** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **LATAM** | `6` | `6` | `0` |
+| **total** | | **`45`** | 🔴 **`45`** | 🔴 **`0`** |
+
+🟢 **No region returned silence** — every leg came back with dated, sourced, substantive
+material that is already on these pages. Itemised once, so it is not re-fetched next pass:
+[`../evidence/websearch-legs.2026-11-02-p603.tsv`](../evidence/websearch-legs.2026-11-02-p603.tsv).
+
+🔵 **The market numbers are unchanged and still disagree by `1.8×` on the current year**, which
+is itself the stable finding: Precedence `USD 9.58 B` (2026) → `136.79 B` (2035) at `34.52 %`;
+Grand View `11.4 B` → `57.2 B` (2033) at `25.9 %`; Resourcera `10.4 B` → `32.27 B` (2030) at
+`31.2 %`; TBRC higher-ed only `4.09 B` → `13.46 B` (2030). 🔴 **Quote the band `USD 6.4–11.4 B`
+with the house attached, never a single figure.** Adoption: student use `88 %`, faculty `77 %`
+(Digital Education Council, Jul-2026); `60 %` of US teachers. Regional share: North America
+`36 %`, APAC fastest at `35.3 %` CAGR.
+
+### 🔴 Thirty-three nils is a measurement about the instrument, not the market
+
+🔵 These eight legs are the ones the run specification mandates. 🔴 **At `45/45` held for the
+thirty-third consecutive pass, they are no longer a discovery channel for this base — they
+are a regression test**, and they pass. 🟢 **The channel that produced every finding in
+`p603` was different: re-reading this base's own `167`-pass-old promotion backlog against
+live `raw.githubusercontent.com` and the git protocol.** `48` repositories byte-read, `46`
+promoted, `3` disconfirmed, `2` ledger rows struck as not being repositories at all.
+
+🟡 **The actionable form of that, for whoever specifies the next run:** the demand legs are
+worth keeping as a cheap nil-check, but a pass that spends its whole budget on them will
+report `0 new` and be right. 🔵 The supply-side instruments — ledger regrade, grant ladder,
+README ladder, symref branch resolution — are where this base's marginal information is.
+
 ## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE **THIRTY-SECOND** CONSECUTIVE NIL: `41 of 41` SUBSTANTIVE TOKENS ALREADY HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`). 🟢 ON LATAM THIS BASE IS NOW **MORE PRECISE THAN THE WEB**. 🟢 THE SUPPLY SIDE MOVED AND IT MOVED THE REGIONAL PICTURE: ALL `5` OPPORTUNITY SUBSECTIONS UPDATED UNDER THE SINGLE CANONICAL BLOCK. 🔴 AND THIS PASS STRUCK ITS OWN DRAFTED CLAIM THAT THE LATAM/ERP GAP HAD MOVED — THE PLATFORMS IT CREDITED WERE ALREADY ON THESE PAGES.**
 
 ### 🔴 The legs, with the per-region denominator
@@ -339,6 +381,26 @@ they are now separate measurements and must stay separate.
 
 ### North America
 
+🆕 **`p603` — the interop-standards layer landed, and it is North-American-published.**
+🟢 `6 of 9` rows on the new interop substrate in [`../repos/foundations.md`](../repos/foundations.md) are
+published from North America by the standards bodies themselves: **1EdTech** (`OpenCASE` for CASE
+curriculum frameworks, and the Open Badges `digital-credentials-public-validator`), **ADL**
+(`xapi-profiles`), **Yet Analytics** (`xapipe`/LRSPipe, `re-oidc`), **Instructure** (`qti`, from the
+Canvas vendor itself) and **OpenWallet Foundation Labs** (`learner-credential-wallet`). 🔵 **This is a
+different engagement shape from `p602`'s Canvas-workflow automation:** not automating inside one
+institution's LMS, but **making the AI layer portable between institutions** — which is what a US
+multi-campus or state-system client actually buys.
+🟢 Also placed here: [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects)
+(Apache-2.0) — Open edX learner analytics as ClickHouse + Superset + Ralph LRS + Vector, i.e. a
+**ready-made xAPI warehouse** rather than a component to assemble; `microsoft/agent-governance-toolkit`
+(MIT, 🟡 self-declared Public Preview) for agent policy/identity/sandboxing; and
+`skhdemo/uoft-quercus-mcp` (MIT) — 🔵 **the first Canada-placed row in this pass**, against U of
+Toronto's Quercus.
+🔴 **Regulatory picture unchanged:** `7 of 7` tokens already held (FutureEd `134` bills across `31`
+states; MD/ID/OK/VA mandating district policy; NY `A 9190`; the K-12 AI Literacy and Readiness Act and
+STUDENTS FIRST Act still proposals; DC OSSE barring AI from grading/discipline/IEP). 🔴 The
+Canada/Mexico primary-source gap (`583-E`) still holds — `uoft-quercus-mcp` is supply, not policy.
+
 🆕 **`p602` — the supply this pass promoted is *Canvas-shaped*, and that is a North American fact.**
 `4 of 5` rows promoted to [`../agents/top.md`](../agents/top.md) target **Canvas**, the dominant North
 American higher-ed LMS. 🟢 **The engagement is instructor-workflow automation inside an LMS the
@@ -454,6 +516,28 @@ found. 🟢 **Lead with the MIT rows above and be able to say why that one is ex
 
 ### EMEA
 
+🆕 **`p603` — EMEA is where the *platform* supply is, and also where the ungranted supply is.**
+🟢 `6 of 11` platforms promoted to [`../verticals/solutions.md`](../verticals/solutions.md) are EMEA:
+`wort-schule/wort.schule` (MIT, Rails/PG), `nvaes/CEB` (MIT, Belgium — 🟢 built **automatically from
+the official Fédération Wallonie-Bruxelles past-paper PDFs**), `diego-costanzo/tournesol-scolaire`
+(MIT, France, CM1→Terminale), `RF1705/beste-schule` (MIT — 🔵 the school record surfaced in **Home
+Assistant**), `telekom/ki-in-schulen` (MIT, **Deutsche Telekom**, a named corporate holder) and
+`schild-report/schild.report` (MIT, NRW SchILD, 🔴 dormant since `2022-05`).
+🟢 Plus `UKGovernmentBEIS/inspect_ai` (MIT, **UK AI Security Institute**) — 🔵 **the natural accuracy
+gate for any education agent sold into a jurisdiction that will ask how it was evaluated**, which under
+the EU AI Act is all of them; `EduBase/MCP` and `pablopc05/mcp-usc` (MIT, Santiago de Compostela);
+`falkenslab/moodle-driver` (MIT); `h5p/h5p-cli` (MIT).
+🔴 **The hard regional fact, and it is new**: `7 of the 14` backlog repositories with **no licence file
+at all** are **francophone school apps** (`603-E`). 🔴 So in the sub-region where this page's platform
+coverage is thinnest, local supply exists and is **unusable** — an upstream licence ask, not a
+discovery problem.
+🔴 **Regulation `6/6` held**, and the one date to carry correctly: Regulation **(EU) 2026/1744**
+(Digital Omnibus) moved high-risk obligations to **Dec-2027** (stand-alone) and **Aug-2028**
+(embedded), *not* Aug-2026 — learner evaluation and admissions remain high-risk. OECD's 2026 Digital
+Education Outlook favours purpose-built educational AI over general chatbots. Gulf: Dubai **KHDA**
+guidance to private schools, UAE MoE active. 🔴 **No Africa-specific regulatory or vendor landscape was
+returned by any leg** — a stated gap, not coverage.
+
 🆕 **`p602` — the EU AI Act's high-risk trigger and this pass's new supply land on the *same function*,
 which makes the EMEA engagement unusually concrete.** The Act classifies AI used for **student
 evaluation and exam scoring** as high-risk. 🟢 **This pass added the open-source stack that performs
@@ -563,6 +647,30 @@ unusable as code today. 🟡 **One repository is not a market.** It is evidence 
 "EMEA" has been going unqueried, and the axis to query again before this section is next rewritten.
 
 ### APAC
+
+🆕 **`p603` — APAC gains the deepest supply of any region this pass: `11` placed rows.**
+🟢 **National-scale stacks:** [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) (MIT,
+IIT Madras) — the realistic path to multilingual courseware across India's scheduled languages — and
+**Sunbird** (`Sunbird-Lern/lms-service`, `project-sunbird/sunbird-lms-service`, both MIT), the stack
+behind India's national education platforms.
+🟢 **National *data* adapters, which is the more interesting pattern:** `SaidBySolo/neispy` (MIT, Korea's
+**NEIS** open API, sync+async), `chrisryugj/schoolinfo-mcp` and `sonaiengine/ku-portal-mcp` (MIT, Korean
+school-info and Korea University KUPID), `hisahonakata/roster_hub_for_gigaschool` (Apache-2.0 —
+**OneRoster CSV in, OneRoster API out** for Japan's GIGA School estate). 🔵 **Each wraps a *national*
+system, not a vendor product** — so the integration target in APAC is frequently a ministry API, which
+is the opposite of the North American pattern of integrating a commercial LMS.
+🟢 Also: `thc1006/moodle-mcp` and `toshieji/moodle-grading-mcp` (MIT — the latter writing grades **as
+unreleased drafts**, a human-release gate in the design), `Coursemology/coursemology2` (MIT, 🟢 the most
+actively maintained platform in the backlog, pushed the day of this pass), `baoguangsheng/fast-detect-gpt`
+(MIT, ICLR 2024), `Fuann/open-apa` (BSD, pronunciation assessment), `google/prog-edu-assistant`
+(Apache-2.0, autograding).
+🔴 **`2 of the 14` ungranted repos are Indonesian school apps** (`nwmustofa/e-rts`, `twakew/e-rapor`) —
+same ask as francophone EMEA.
+🔴 **Regulation `6/6` held**, and two dates are now in force, not pending: **Korea's AI Basic Act
+(2026-01-22)**, which names education as *high-impact*, and **Vietnam's AI law (2026-03-01)** with an
+18-month education transition. Japan light-touch/voluntary; Australia via existing law; ASEAN's guide
+non-binding. 🔵 Ipsos Education Monitor 2026: **AU/NZ show the region's highest support for banning
+classroom AI** — the one APAC market where a consumer-facing pitch meets public resistance.
 
 🆕 **`p602` — the first APAC-placed row on this base's newly promoted LMS-connector shelf, and it is
 the only one that is not Canvas-only.** [`zs-andy/lms-cli`](https://github.com/zs-andy/lms-cli) (MIT,
@@ -679,6 +787,34 @@ University) is 🔴 **CC BY-NC-SA**. 🟢 APAC supplies this page's best permiss
 clearest licence traps; the grant must be read per repository.
 
 ### LATAM
+
+🆕 **`p603` — the standing LATAM gap moved. `p602` closed with *"no permissive LATAM platform of record"*; there is one now.**
+🟢 **The platform of record is [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)**:
+Brazil's **BNCC national curriculum** — `1,721` basic-education learning objectives verified against
+the official **MEC/CNE** documents — shipped as an npm package, a PyPI package **and an MCP server**,
+pushed `2026-10-15` from `-03:00`, holder **Profy Tecnologias Educacionais Ltda**. 🟢 **Permissive where
+it matters:** code **MIT** (`1,107 B`, `LICENSE-CODIGO.md`); the curriculum data **CC BY 4.0**
+(`1,108 B`, `LICENSE-DADOS.md`), synced from a pinned commit of `bncc-dev/bncc-dados`.
+🔴 **Read the grant to the bottom before quoting it.** The root `LICENSE` is a `1,298 B` **router, not a
+grant**, and upstream `bncc-dados` has a clean MIT root (`1,091 B`) with the real data grant at
+🔴 **`dados/LICENSE.md`** (`1,583 B`, CC BY 4.0) — a root-only read publishes "MIT" for a CC BY 4.0
+payload.
+🟢 **The legal note is worth more than the licence string to an engagement:** BNCC normative texts are
+**official acts, not copyright-protected** (*art. 8º, IV, Lei 9.610/98*), so the CC BY 4.0 covers the
+**compilation and curation** — attribution is owed to the compiler, not to the curriculum.
+🟢 **Three more LATAM-placed permissive rows**, which is what turns one platform into a pattern:
+`nialvape/utn-mcp` (🔵 **ISC**, Argentina, UTN student systems), `SidneyBissoli/uis-mcp-server` (MIT,
+**UNESCO UIS** education statistics with PT-BR docs) and `agencyenterprise/qti-3-player` (MIT, QTI 3.x
+renderer, `-03:00`). Carried with its own README's caveat: `Antonio-Neves/Gestao-Escolar` (MIT,
+*"under development"*).
+🔵 **The regional shape this reveals:** `3 of 4` LATAM rows wrap a **public or official data source** —
+a national curriculum, a UN statistics API, a public university's systems. 🟢 **The LATAM opportunity is
+official-data-to-agent plumbing**, not building another LMS. Recipe `P-603-D`.
+🔴 **What has not moved:** `6/6` policy tokens held (UNESCO LAC Observatory, Santiago `2026-04-14`, with
+**CAF**; IESALC/UNU-IAS `200` HEIs across `19` countries — `87 %` using AI, 🔴 only `26 %` with a
+strategy; Universidad de los Andes `716` instruments across `23` countries, `>80 %` since 2023; Brazil
+`53 %` of administrators using AI, 🔴 `22 %` with guidelines). 🔵 **The `87 %`/`26 %` and `53 %`/`22 %`
+splits are the same shape and are the commercial opening: adoption without governance.**
 
 🆕 **`p602` — one new byte-evidenced LATAM row, and a struck claim that the gap had moved.**
 🔴 **Struck from this pass's draft:** that two education ERP/SIS platforms had newly become shippable
@@ -809,6 +945,30 @@ LATAM-origin, all of which are LATAM-deployable.**
 structural one. Re-measure in `10` passes before treating `0.12 %` as the region's ceiling.
 
 ### Global
+
+🆕 **`p603` — the cross-region finding is about instruments, and it transfers to every industry KB.**
+🔴 **Thirty-three consecutive nils** on the mandated demand legs (`45/45` held this pass) means those
+legs now function as a **regression test, not a discovery channel** for a base this mature. 🟢 Every
+finding in `p603` came from the other direction: re-probing this base's own `167`-pass-old promotion
+backlog against live `raw.githubusercontent.com` and the git protocol — `48` repositories byte-read,
+`46` promoted across three shelves, `3` disconfirmed, `2` ledger rows struck as **not being
+repositories at all**.
+🔴 **Three portable instrument defects, all measured rather than asserted:**
+**(i)** a README probe at a **single spelling** misses `5.7 %` of repositories (`6 of 106`) — the same
+error class the licence ladder already paid to fix, and `readme.md` pays at a *higher* rate (`3/106`)
+than the `LICENCE` rung already in the ladder (`1/44`);
+**(ii)** a promotion ledger built with a loose `<word>/<word>` matcher admitted **two of this base's own
+file paths** (`evidence/p333-*`) as repository addresses, where they sat as work-to-do for `167` passes;
+**(iii)** a novelty probe graded `ilias-ebuch/ilias` as `NEW` — 🔴 **an address this pass invented** from
+a prose platform name, while the real `ilias-elearning/ilias` has been held since `p191`. 🔵 A
+prose-named platform with no printed slug is a **lookup, never a `NEW`**.
+🟢 **Market band, unchanged, quote with the house attached:** `USD 6.4–11.4 B` for 2026 (Precedence
+`9.58 B` → `136.79 B` by 2035 @ `34.52 %`; Grand View `11.4 B` → `57.2 B` by 2033 @ `25.9 %`;
+Resourcera `10.4 B` → `32.27 B` by 2030 @ `31.2 %`; TBRC higher-ed only `4.09 B` → `13.46 B` by 2030).
+Student use `88 %`, faculty `77 %` (DEC, Jul-2026). NA `36 %` share; APAC fastest at `35.3 %` CAGR.
+🔴 **No star counts anywhere in `p603`:** `api.github.com` and `github.com` HTML/atom both return `403`
+through this session's proxy. 🟢 Liveness is carried by HEAD committer date **and timezone offset**
+instead — the channel `gate-offset-region` places regions with.
 
 🆕 **`p602` — the finding that applies in every region is about this base's own instruments, not about
 a market.** 🔴 **Two novelty instruments ran this pass and both overstated novelty:** the supply-side
