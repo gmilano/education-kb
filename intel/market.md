@@ -4,6 +4,128 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — reads `2026-11-02` — market map and regional placement, **and `gate-region-headings` is red on this very file: `13` canonical blocks where its contract allows `1`**
+
+### 🔴 `618-L` — the gate that was celebrated for being wired is failing, and nothing reported it
+
+`gate-region-headings` carries the docstring *"the gate existed with a passing suite from `p383` to
+`p337` and was in no target, so `make hooks` never judged this file's region structure at all"* — the
+same defect class `618-A` just closed for `p370-gap-gate`. 🟢 It **is** wired, and in `HOOK_GATES`.
+
+🔴 **And it is red on the live file.** `check_headings.py` emits `P383-MULTIPLE-BLOCKS` for every
+canonical block after the first (`len(bs) > 1`), and this file carried **`13`** of them — one per pass
+from `p604` to `p617`, each a legitimate historical record, accumulating one per pass because every
+pass appended its own block.
+
+🔵 **So `618-A`'s lesson needs its third form.** A gate built and not wired is not a control
+(`617-B`). A gate wired but whose red is never reached is **also** not a control: `616` reported
+`hooks` *"green on every offline licence control"* and red on `recount`, and `recount`'s red is enough
+to stop the runner before this file is ever judged. 🔴 **An inherited red masks every gate ordered
+behind it.**
+
+🟢 **Repaired structurally rather than by suppression.** The `13` historical headings are retitled
+`## Opportunities by region — \`pNNN\` (archived)`, which takes them out of `CANON.match` and leaves
+**exactly one** canonical block — this pass's, below. No prose was removed: every historical region
+subsection keeps its text and its pass attribution, and `blocks()` simply stops parsing archived
+headings as the live contract.
+
+🔴 **Not gate-verified.** Per `618-B` no instrument in this clone can be executed in this session, so
+this repair is reasoned from `check_headings.py`'s source (read, not run) and is **owed one green run**
+by a session that can execute it, together with `gate-declared-gap`.
+
+🟡 **Every figure below is secondary by construction** (`618-K`): `eur-lex.europa.eu`, `oecd.org`,
+`unesco.org`, `moodledev.io` and `docs.openedx.org` do not resolve from this environment, for the
+sixteenth consecutive pass. Vendor market sizings disagree by a factor of three and are reported as a
+**spread**, never as a point estimate.
+
+### 🔴 The global sizing spread, stated as a spread
+Secondary channels put the AI-in-education market at **≈`$6.4B`–`$11B`** for `2025`/`2026` with CAGRs
+of **`21%`–`41%`** — a three-fold disagreement on size and a two-fold one on growth. 🔴 **No figure in
+this band is citable as a point estimate**, and this base should quote the band and its own
+unreachability note rather than pick a vendor.
+
+## Opportunities by region
+
+### North America
+🔵 **Signal.** Secondary channels place North America at **≈`36`–`38%`** of the global market
+(≈`$3.68B` in `2026` on one vendor's basis). The concrete, verifiable items are **policy and funding**,
+not market size: the US Department of Education released **`$169M`** in `FIPSE` awards including
+support for responsible AI use, and a legislative tracker reported **`134` bills across `31` states**
+touching AI in education as of March `2026` — data privacy, classroom use and curriculum.
+🔴 **COPPA** governs child-facing products and is the binding constraint on any K-12 learner-facing
+surface.
+
+🟢 **Where the studio can sell.** The `134`-bill patchwork is the opportunity: a district or system
+buyer needs an **auditable** assessment surface whose deliverable is a decision record, not a model.
+`P617-2`'s audit-first shape applies directly, and `618-D`'s permissive rows supply the learner-facing
+half without a licence bar. 🔴 Avoid pitching a single national compliance story — there is none.
+
+### EMEA
+🔵 **Signal.** The **EU AI Act** is the backdrop, with education uses in the high-risk Annex III class;
+this base's settled compliance date is **`2027-12-02`** (`Reg. (EU) 2026/1744`), 🔴 **carried from
+`p233`/`p241` and never read first-hand here** (`614-C`, unpayable again). The European Commission
+updated its **ethical guidelines on AI in education**, the Council of Europe has run working
+conferences specifically on **regulating AI in education**, and the UK committed **>`£200M`** to AI
+adoption (incl. `£100M` expanding Bridge AI, `£53M` regional).
+
+🟢 **Where the studio can sell.** Sovereignty plus a dated regulatory deadline is the strongest
+engagement driver of any region: an on-premises or EU-hosted stack with documented data residency,
+assembled from permissive components, sold against the `2027-12-02` date. 🟡 `vantaflow`'s French
+skills collection remains the only FR-language row on this shelf, and it is an **index**, not supply.
+
+### APAC
+🔵 **Signal.** Forrester expects **`60%`** of firms and governments in major markets such as India and
+China to run **locally developed LLMs alongside global ones**, naming education among the target
+sectors; regional governance (the **ASEAN Guide on AI Governance and Ethics**) is explicitly
+early-stage, and commentary frames **AI sovereignty** as the pacing factor for `2026`. Australia has a
+National AI Plan and Chief AI Officers, 🔴 not education-specific.
+
+🟢 **Where the studio can sell.** APAC is the one region where this base holds **native-language
+supply** it did not have to translate: `mcxiaoxiao/kaoyan-navigator-skill` (考研 admissions) and
+`ChatGPT3a01/claude-educational-ai-skills`. A local-weights deployment with per-jurisdiction policy
+nodes is the shape; the multi-jurisdiction problem is the billable part.
+
+### LATAM
+🔵 **Signal, and it is the strongest adoption evidence of any region.** A Digital Education Council
+survey with **Tecnológico de Monterrey** (Feb `2026`, `29` universities) reports **`92%` of students**
+and **`79%` of faculty** actively engaging with AI; faculty positive opinion rose **`57%` → `72%`**,
+while `88%` describe their own use as moderate. A **UNESCO IESALC** survey of **`200` institutions
+across `19` countries** (fielded Aug–Oct `2025`) finds the **adoption-versus-governance gap
+particularly pronounced** in the region, and `ILIA` reports LAC at **`14%` of global visits to AI
+tools against `11%` of global internet users**. 🔴 No **binding** regional AI-in-education regulation
+surfaced; Brookings argues the region is a natural **sandbox** instead.
+
+🟢 **Where the studio can sell.** Demand is already there and **governance is the missing half** — the
+inverse of EMEA, where regulation leads. The sellable deliverable is an institutional AI-use policy
+with an attached technical surface, not a pilot. `P617-3`'s shape holds: **attach** to the client's
+existing Open edX estate rather than migrate it.
+
+🔴 **The supply-side gap stands, and is re-typed exactly as `617-C` left it.** The **index** form is
+**withdrawn** — `LabSirius/TutorIA` (`MIT`, Universidad Tecnológica de Pereira, Risaralda, Colombia,
+inside Open edX) was re-measured current this pass at `0★`, pushed `2026-10-27` (`618-I`). The
+**channel** form is **open**: no leg this pass placed a new row in LATAM. The **cause** stands — the
+region publishes and the `LICENSE` file is what is missing (`1 of 8` permissive across `latam-gpt`,
+`7 of 8` with no licence file) — so `616-H`'s remedy stands too: **budget upstream `LICENSE` pull
+requests** instead of waiting for new repositories.
+
+🔴 **And this pass could not have placed a LATAM row even if a leg had found one** (`618-J`):
+`users/{login}` is `403`, so no holder location is readable first-hand, and this base **does not infer
+region from an anthroponym**. All three new rows are filed *holder not placed*.
+
+### Global
+🔵 The **OECD `2026` Digital Education Outlook** is reported to warn that AI aids learning **only when
+pedagogy stays in control** — the single most useful framing for a studio pitch, because it moves the
+deliverable from model choice to instructional design. **OpenAI** launched a country-level education
+programme with **`8` national partners** in Q1 `2026`, which is the competitive backdrop for any
+ministry-level conversation.
+
+🟢 **The durable cross-region asset from this pass** is `614-I`'s class, confirmed again by `618-D`:
+supply arriving as **skill packages riding somebody else's agent**. The deliverable is **prompt text**,
+so it crosses borders with no infrastructure and no data-residency argument — 🔴 which is also why its
+licence must be byte-read every time (`618-E`, `618-F`), since a permissive default is least reliable
+for copy.
+
+
 ## 🆕 `p617` — reads `2026-11-02` — market map and regional placement, **and the LATAM entry is a withdrawal: this base's own index refutes the gap it published yesterday**
 
 🟢 **Channel note first, because it bounds every figure below.** Every market and regulatory number in
@@ -32,7 +154,7 @@ unchanged: the region publishes; the `LICENSE` file is what is missing, so contr
 rather than wait for new repositories.** See `617-B` for why the gate that would have caught the false
 half has never run.
 
-## Opportunities by region
+## Opportunities by region — `p617` (archived)
 
 ### North America
 
@@ -207,7 +329,7 @@ repeat them blind. All run against the GitHub repository search index this pass 
 the region is consistent across the flagship org and the long tail alike: the publishing happens, the
 **licence file does not**.
 
-## Opportunities by region
+## Opportunities by region — `p616` (archived)
 
 ### North America
 
@@ -334,7 +456,7 @@ pooled into one number.
 🔴 **Do not pool these.** They disagree by publisher and method, and this base has no instrument that
 arbitrates between them.
 
-## Opportunities by region
+## Opportunities by region — `p615` (archived)
 
 ### North America
 
@@ -504,7 +626,7 @@ text. 🔵 The `2028-08-02` embedded-product date is recorded here as *new and u
 | Ceibal (Uruguay), Cetic.br (Brazil), CENIA (Chile), Tec de Monterrey | LATAM | National-scale deployment and measurement capacity — the partners a regional engagement actually works through |
 | Google, Microsoft, IBM, Pearson, Byju's | Global | 🟡 Named as key players by a market report; 🔴 vendor-level listing, not a verified ranking |
 
-## Opportunities by region
+## Opportunities by region — `p614` (archived)
 
 ### North America
 
@@ -624,7 +746,7 @@ licence-usable supply**, so star rank is not a shortlist.
 estimate, they are different definitions of the market. 🟢 Quote a **range** (`$3.7B`–`$11B` for `2026`)
 with the publisher attached, never a point estimate, and never average them.
 
-## Opportunities by region
+## Opportunities by region — `p613` (archived)
 
 ### North America
 
@@ -734,7 +856,7 @@ and it is the part that matters for a build-vs-buy decision.
 higher-ed adoption `49 %` → `66 %` in one year (Ellucian) is the most decision-relevant of the three,
 because it is institutional budget rather than individual behaviour.
 
-## Opportunities by region
+## Opportunities by region — `p612` (archived)
 
 ### North America
 
@@ -926,7 +1048,7 @@ instruments this base had never recorded.** The new jurisdictions are 🟢 **Vie
 designation naming education) and 🟢 **Australia** (a regulator-mandated institutional action plan);
 the new quantification is 🟢 **LATAM's, which moves from anecdote to a `19`-country denominator**.
 
-## Opportunities by region
+## Opportunities by region — `p611` (archived)
 
 ### North America
 
@@ -1118,7 +1240,7 @@ across regions:
 | 🟢 Vendor channel shift | OpenAI launched a **country-level** education programme with `8` national partners in Q1 2026 — national infrastructure deals alongside school-by-school sales |
 | 🟢 Pedagogy caveat | OECD **2026 Digital Education Outlook** warns AI helps learning only where pedagogy stays in control |
 
-## Opportunities by region
+## Opportunities by region — `p610` (archived)
 
 ### North America
 
@@ -1220,7 +1342,7 @@ reach is not reliable on its own terms.
 | AI in education, global 2026 | `~$11 B` | analysis blog | 🔴 incompatible definition |
 | K-12 share of segment, 2026 | `~34 %` — largest single segment | report seller | 🟡 directionally consistent across two sources |
 
-## Opportunities by region
+## Opportunities by region — `p609` (archived)
 
 ### North America
 
@@ -1379,7 +1501,7 @@ directly this pass; OECD findings below are from secondary summaries and are lab
 🔴 One vendor claim — *"AI agents will take over 80 % of routine educational labour"* — is an
 unsupported marketing projection and is recorded here only so it is not mistaken for a finding.
 
-## Opportunities by region
+## Opportunities by region — `p608` (archived)
 
 ### North America
 
@@ -1546,7 +1668,7 @@ where this base holds a promoted platform row (`Tangerine`, `606-I`) and a natio
 names it. **The supply evidence for Africa is ahead of the demand evidence, which is the reverse of
 every other region here.**
 
-## Opportunities by region
+## Opportunities by region — `p607` (archived)
 
 ### North America
 
@@ -1705,7 +1827,7 @@ client as a range with that caveat attached. **Operator request, not a research 
 🔵 The spread is the finding. A `4×` disagreement between firms on the same year means the number is
 not usable as a planning input — only as a direction.
 
-## Opportunities by region
+## Opportunities by region — `p606` (archived)
 
 ### North America
 
@@ -1877,7 +1999,7 @@ the single most important thing on this page.
 **direction and rough slope**: a high-`$B` market in `2026` compounding at `25–42 %` into the
 early `2030s`. 🟡 **K-12 is the largest single segment** at `~34 %` of `2026` spend.
 
-## Opportunities by region
+## Opportunities by region — `p604` (archived)
 
 🔵 One `###` per region, every region present. 🔴 Where a region's evidence is weak or its
 supply is absent, that is written down rather than filled in. 🔴 **`598-G` stands: every demand

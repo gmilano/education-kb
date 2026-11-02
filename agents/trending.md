@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — `2026-11-02` — **the forty-eighth consecutive global-leg nil, and the second consecutive pass whose entire yield came from naming a *tier***
+
+🟢 **The mandated nil, with candidates named so the nil is auditable.** Legs `1`–`4`
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) returned
+**`0` new head names.** Every candidate surfaced is **already held**: `OPTIMETA/PAIDEIA`,
+`GarethManning/education-agent-skills`, `ArturoNereu/AI-Study-Group`, `THU-MAIC/OpenMAIC`,
+`1111philo/learn`, `minmaxflow/mini-kode`, `alix`, `microsoft/ai-agents-for-beginners`.
+
+🔴 **The ERP/CRM leg has now paid nothing three times.** It returned no education-specific permissive
+system at all: `OpenEduCat` is **`LGPL-3.0`** (built on Odoo), `RosarioSIS` and `Open Admin` are
+GPL-family, `Kuali` ships no stated grant in the channel, and `.LRN` is not permissive-confirmed.
+🔵 Operative, strengthened from `617-K`: **retire this leg** or re-aim it at a named subsystem
+(`grading`, `SIS`, `proctoring`), because three nils is no longer a sample.
+
+### 🟢 `618-D` — where the yield came from, measured
+The **language-learning / spaced-repetition** tier — a tier this shelf carried **nothing** in — paid
+three permissive rows on one leg: [`m98/fluent`](https://github.com/m98/fluent) (`MIT`, `445★`,
+`FSRS-6`), [`1602WinXP/textbook-tutor`](https://github.com/1602WinXP/textbook-tutor) (`MIT`, `0★`),
+[`felipepenha/morphcards`](https://github.com/felipepenha/morphcards) (**`Apache-2.0`**, `0★`, `FSRS`).
+
+🔵 **The pattern across `617` and `618` is now two-for-two:** a leg that names a **tier**
+(`grading assessment`, `language learning spaced repetition`) pays; a leg that names the **industry**
+does not. Tiers not yet spent and worth the next budget: **proctoring / academic integrity**,
+**special education / IEP**, **SIS / admin agents**.
+
+### 🔴 Two tier legs that returned nothing, recorded so they are not re-run blind
+- **special education / IEP / accessibility** — no repository combining an agent, IEP or accessibility
+  scope and a permissive grant. Closest was a design **gist**, not software.
+- **academic integrity / proctoring** — the open-source members found (`JPlag`, `Dolos`, Web-CAT's
+  `Grass`) are **plagiarism detectors, not agents**, and none stated a permissive grant in the channel.
+  🔴 No open-source **proctoring** tool surfaced at all; the field is commercial (`Proctorio`,
+  `Honorlock`, `Respondus`).
+
+### 🔴 The channel caught lying — see `618-H`
+`github.com` HTML returned `403` for **every** slug including a fabricated control, which would have
+rendered five live repositories as a clean nil. All grades this pass are byte-read at
+`raw.githubusercontent.com`, which discriminates (`404` at `14 B` for the control).
+
+🟡 **Aggregator star counts are not worth budget**: a listing served `373★` / *"maybe MIT"* for
+`GarethManning/education-agent-skills` against this base's re-measured `942★` / `CC-BY-SA-4.0`.
+
+
 ## 🆕 `p617` — `2026-11-02` — **the forty-seventh consecutive global-leg nil, and the first pass where the new rows came from naming a *tier* instead of naming the industry**
 
 🟢 **The mandated nil, with the candidates named so the nil is auditable.** Legs `1`–`4`

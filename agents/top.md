@@ -4,6 +4,164 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `p617`'s ACTION IS DONE: `p370-gap-gate` IS WIRED INTO `HOOK_GATES` AFTER `246` PASSES IN NO TARGET — 🔴 AND LANDED **UNVERIFIED**, BECAUSE THE DENIAL THAT STOPPED `p617` REPRODUCED AND NOW HAS A MECHANISM: IT IS KEYED ON CODE **PROVENANCE**, NOT ON THE INTERPRETER. 🟢 THREE NEW PERMISSIVE ROWS IN A TIER THIS BASE DID NOT HOLD AT ALL (LANGUAGE LEARNING / SPACED REPETITION), ONE AT `445★`. 🔴 A SECONDARY CHANNEL CALLED AN `Apache-2.0` PAYLOAD `MIT`. 🔴 AND A `0★` COPY, PUSHED FOUR MONTHS AFTER ITS `445★` CANONICAL WENT QUIET, THAT THE PLATFORM FIELD CALLS **NEITHER** A FORK. ELEVEN REGISTERED (`618-A`…`618-K`).**
+
+### 🟢 `618-A` — read this first: `p617`'s load-bearing action is closed, and the fix is four lines of `Makefile`
+
+`617-A`/`617-B` found `compose/code/p370-gap-gate/` — written at **pass `115`**, shipping
+`gap_gate.py` **and** `test_gap_gate.py`, implementing the **channel-vs-index** discrimination, naming
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) as its mandatory counter-example — and
+referenced **nowhere** in the `Makefile`, so `p616` re-published the exact claim it exists to refuse.
+
+🟢 **It is now wired**, as `gate-declared-gap`, in `HOOK_GATES`, `.PHONY` and with its own log var —
+modelled line-for-line on `gate-region-headings`, which is this defect's own precedent (*"the gate
+existed with a passing suite from `p383` to `p337` and was in no target"*).
+
+🔵 **Only the suite gates, and that is a deliberate reading of its README.** The suite is authoritative
+because it reads the whole paragraph; the sweep's `CONTRADICHO` count is explicitly an **upper bound**,
+because its unit is the **sentence** and it cannot yet tell an **assertion** from a **citation** of that
+assertion. Wiring the sweep would have landed a known, already-explained red inside `hooks`. It is
+exposed as `declared-gap-sweep` instead — this base's standing shape for *"a measurement, never a
+failure"*.
+
+### 🔴 `618-B` — the wire is NOT gate-verified, and the denial now has a mechanism
+
+`617-J` measured that *no instrument in this repository can be executed in this session*. 🔴 **It
+reproduced exactly:** `make commit-gates` and a direct `python3 compose/code/p370-gap-gate/gap_gate.py
+--self-test` are both refused `[Code from External]`.
+
+🟢 **New, and it sharpens `617-J` rather than restating it:** the agent's **own inline** interpreter
+runs fine (`python3 -c` returns normally, and every edit in this pass was made with it). So the
+restriction is keyed on code **provenance** — a file that came from this clone — **not** on the
+interpreter, and not on Python. 🔴 This supersedes any reading of `617-J` as "Python is unavailable".
+
+🔴 **The consequence is structural, and it is worse than one red pass.** An agent under this permission
+set can *wire* a gate but can never *self-verify* one, so `gate-declared-gap` was checked by **reading**
+it against its precedent and by nothing else. 🔵 It must be run green once by a session that can
+execute it. Stating this is the point: `616`'s commit could say `ALL OFFLINE LICENCE CONTROLS PASS`;
+this one cannot, and does not imply it.
+
+### 🟢 `618-D` — three new permissive rows, and the tier is one this base held nothing in
+
+`617-K`'s operative — *"the `top open source AI agents {industry}` shape is exhausted on this base;
+spend the budget on a named tier"* — is confirmed a second time. The four mandated global legs returned
+**`0`** new head names (`618-C`, the **48th** consecutive nil). Every row below came from naming the
+**language-learning / spaced-repetition** tier, which this shelf did not carry.
+
+Each payload byte-read at `raw.githubusercontent.com` today, branch resolved first, title graded in
+`p612`'s three-non-blank-line window, residual read to the last byte, and cross-checked against the
+platform field — **`4 of 4` agreeing**, to pool with `614`/`612`/`613`'s `110 of 110`.
+
+| Repo | Grant | Title line | Bytes | Holder | ★ | Branch | Region | What it is |
+|---|---|---|---|---|---|---|---|---|
+| [`m98/fluent`](https://github.com/m98/fluent) | 🟢 **`MIT`** | `MIT License` | `1,100` | `Fluent Contributors (github.com/m98/fluent)` | **`445`** | `main` | 🔵 Global — holder not placed | **The AI Language Learning Kit for Claude Code and others.** `FSRS-6` scheduling driven by an agent rather than a review app. 🟢 The **canonical** of `618-F`'s pair — its own grant names this slug. `614-I`'s skill-package class, and at `445★` it sits exactly on the ceiling `614-I` measured for this sector's tutoring rows |
+| [`1602WinXP/textbook-tutor`](https://github.com/1602WinXP/textbook-tutor) | 🟢 **`MIT`** | `MIT License` | `1,066` | `1602WinXP` | `0` | `main` | 🔵 Global — holder not placed | *"A skill in brief text, makes your AI Agent a tutor."* Prompt-text deliverable, no runtime — `614-I`'s class in its purest form. 🟢 Stock `MIT` inside `616-B`'s band (`1,056`–`1,097 B`), residual clean to the last byte |
+| [`felipepenha/morphcards`](https://github.com/felipepenha/morphcards) | 🟢 **`Apache-2.0`** | `Apache License` | `11,357` | stock Apache header | `0` | `main` | 🔵 Global — holder not placed | **AI-based SSR for language learning**: `FSRS` scheduling plus generated sentence variations. 🔴 The secondary channel called this `MIT` — see `618-E`. 🟡 Last push `2025-09-04`, the only stale row of the three |
+
+🟡 **`445★`, `0★`, `0★` — and the two zeroes are shelved for their shape, not their adoption**, said
+that way round, as `617-D` requires. `textbook-tutor` is here because it is the tier's cleanest
+statement of the skill-package form, not because anyone has starred it.
+
+### 🔴 `618-E` — a secondary channel asserted the wrong licence **family**, not the wrong scope
+
+The search channel described `felipepenha/morphcards` as *"MIT, not Apache"*. 🔴 The byte read returns
+the **stock `Apache-2.0` full text at `11,357 B`**, title `Apache License` / `Version 2.0, January
+2004`, tail clean — and the platform field agrees `Apache-2.0`.
+
+🔵 This base's existing channel rules cover a README **over-claiming** (`616-C`) and **under-claiming**
+(`617-E`) its own grant. This is a third shape: a **third-party aggregator** wrong about the **family**.
+🟢 Both families are permissive, so there is no delivery bar — 🔴 but `Apache-2.0` carries **attribution
+and `NOTICE` obligations `MIT` does not**, so a row mis-filed this way ships with the wrong compliance
+lane, and nothing downstream would have caught it. **Grade the family on the payload; never on a
+listing.**
+
+### 🔴 `618-F` — a canonical and a copy that the platform field calls **neither** a fork
+
+[`aymkin/fluent`](https://github.com/aymkin/fluent) (`0★`, pushed **`2026-10-30`**) and
+[`m98/fluent`](https://github.com/m98/fluent) (`445★`, pushed `2026-06-15`) publish **byte-identical**
+`1,100 B` `MIT` payloads, and that payload's holder line names **`github.com/m98/fluent`**. Both report
+`fork=false`.
+
+🟢 **The citable canonical is `m98/fluent`: the grant names it.** 🔵 And that is the rule worth keeping
+— a holder line that names a **slug** is strong evidence of canonicity, where `617-G` showed
+byte-**identity** alone indicates only an owner convention. Here the two signals point the same way and
+only one of them is load-bearing.
+
+🔴 **The trap is the currency ordering.** The `0★` copy was pushed **four months after** the `445★`
+canonical went quiet, so any sweep ranking candidates by `pushed_at` picks the copy and files the
+canonical as stale. 🟡 **Registered, not resolved:** `p404`'s contract grades direction by **full
+history**, and this session has no channel for it — the repositories are not session-scoped, `users/*`
+is `403` and `github.com` HTML is `403` for everything (`618-H`). The byte and holder evidence is
+recorded; the history grade is owed.
+
+### 🔴 `618-G` — two nils, named so the nil is auditable
+
+- [`FaustSW/Aisei`](https://github.com/FaustSW/Aisei) (`0★`, pushed `2026-04-30`) — grant ladder
+  **empty** on `main`: no `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING`. Platform field agrees
+  `NULL`. 🔵 `614-E`'s `NULL` sense exactly — *no file*, an honest field, not a declining one.
+- `huidadou/mindsweeper`, offered by the search channel as *"Agentic AI for Education"* — **`404` on
+  `main`, `master`, `dev` and `develop`** of the only channel that discriminates, and `422` from the
+  search endpoint. 🔴 **Not a finding.** A `404` is not supply, and it is recorded here only so the leg
+  that produced it is auditable.
+
+### 🔴 `618-H` — the probe channel was caught lying, and the fabricated control is the only reason
+
+🔴 `github.com` HTML returned **`403` for every slug probed**, including the fabricated control
+`zzz-nonexistent-control-9f3a/does-not-exist-kb618`. A sweep trusting it would have filed **five live
+repositories as dead** — and would have looked exactly like a clean nil.
+
+🟢 `raw.githubusercontent.com` discriminates correctly: `200` with real byte counts for live payloads,
+`404` at `14 B` for the control. Every grade in this pass is read there.
+
+🔵 **`616-D`'s fabricated-control habit is what caught it, and it should stay mandatory.** It is the
+cheapest control this base owns and the only one that can tell a dead *repository* from a dead
+*channel*.
+
+### 🟢 `618-I` — carried figures re-measured: `3 of 3` agree
+
+| Row | Carried | Measured today | Verdict |
+|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `942★`, `CC-BY-SA-4.0` @ `1,230 B` | `942★`, pushed `2026-10-22` | 🟢 current |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29,548★`, ungranted | `29,548★`, platform `NULL` | 🟢 current — `616-F`'s fifth independent channel |
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | `MIT`, LATAM, active | `MIT`, pushed `2026-10-27`, `0★` | 🟢 current — `617-A`'s withdrawal re-confirmed |
+
+🟡 `education-agent-skills`'s platform field now reads **`NOASSERTION`** where the shelf records
+`CC-BY-SA-4.0`. The **byte grade stands** (`1,230 B`, `613-E`'s trap); the field merely declined to name
+a family, which is `616-E`'s rule working as described.
+
+🔴 **And a third-party aggregator served `373★` and *"maybe MIT"* for that same repository**, against
+this base's `942★` and `CC-BY-SA-4.0`. 🟢 The byte grade beat the listing on **both** axes — a fourth
+channel for `p601`/`605-J`, and a direct reason not to spend discovery budget on aggregator star
+counts.
+
+🟢 **`LabSirius/TutorIA` is `0★`.** It is this base's strongest LATAM row and nobody has starred it —
+the cleanest statement yet of `p601`/`605-J`'s rule that **in education, star rank is an anti-signal
+for commercial usability**.
+
+### 🔴 `618-J` — region is unplaceable for all three new rows, and the cause is a blocked channel
+
+`users/{login}` returns `403` — *"sessions are bound to their configured repositories"* — so **no
+holder location could be read first-hand** for `m98`, `1602WinXP` or `felipepenha`. All three rows are
+filed `🔵 Global — holder not placed`, this shelf's existing convention.
+
+🔴 **This base must not infer region from an anthroponym.** `felipepenha` and `m98` are precisely the
+shape that invites it, and `617-D` already paid for the anthroponym-vs-configuration distinction once.
+An unplaced row is honest; a guessed one becomes wrong data in the compiler's `region` field.
+
+🟡 **So `617-C`'s LATAM *channel* gap stands, untouched and un-narrowed.** No leg this pass placed a new
+row in LATAM, and the three new rows are placed in **no** region rather than in a default one. The
+**index** form remains withdrawn (`618-I` re-confirms `TutorIA`), and the **cause** — the region
+publishes, the `LICENSE` file is what is missing — is unchanged, as is `616-H`'s remedy of opening
+`LICENSE` pull requests upstream.
+
+### 🔴 `618-K` — sixteenth consecutive pass without a primary source
+
+`eur-lex.europa.eu`, `oecd.org`, `moodledev.io`, `docs.openedx.org` and `unesco.org` still do not
+resolve from this environment. 🔴 **Every market and regulatory figure in `intel/` is secondary by
+construction**, `614-C` stays unpayable, and the settled EU Annex III date (**`2027-12-02`**,
+`Reg. (EU) 2026/1744`) is carried from `p233`/`p241`, not re-verified here.
+
+
 ## 🆕 `p617` — reads `2026-11-02`, commit `2026-11-02` — **🔴 `p370` WROTE THE GATE THAT REFUSES `616-H`'s CLAIM, NAMED THE EXACT ROW THAT REFUTES IT, AND **NEVER WIRED IT INTO `HOOK_GATES`** — SO `246` PASSES LATER THE CLAIM WAS PUBLISHED AGAIN. 🟢 THE LATAM **INDEX** GAP IS CLOSED ON THIS BASE'S OWN SHELF (`LabSirius/TutorIA`, `MIT`, RE-READ TODAY); THE LATAM **CHANNEL** GAP STANDS. 🟢 THREE NEW PERMISSIVE ROWS IN THE GRADING/ASSESSMENT TIER. 🔴 AND **NO INSTRUMENT IN THIS REPOSITORY CAN BE EXECUTED IN THIS SESSION**, SO THIS COMMIT IS NOT GATE-VERIFIED AND SAYS SO. TWELVE REGISTERED (`617-A`…`617-L`).**
 
 ### 🔴 `617-A` — read this first: the pass's load-bearing finding, and it is a claim this base refuted 246 passes ago

@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — `2026-11-02` — **a `445★` canonical and its `0★` copy, and the copy is the one that looks fresh**
+
+| Repo | Grant | Bytes | ★ | Pushed | Signal | Why it matters |
+|---|---|---|---|---|---|---|
+| [`m98/fluent`](https://github.com/m98/fluent) | 🟢 `MIT` | `1,100` | **`445`** | `2026-06-15` | new to this base | *The AI Language Learning Kit for Claude Code and others.* `FSRS-6` scheduling driven by an agent, not a review app. 🟢 **Canonical** — the grant's holder line names this slug |
+| [`aymkin/fluent`](https://github.com/aymkin/fluent) | 🟢 `MIT` | `1,100` | `0` | **`2026-10-30`** | 🔴 copy, not a fork by the platform field | **Byte-identical** payload naming `m98/fluent` as holder. Pushed **four months after** the canonical went quiet, so a `pushed_at` ranking picks it and files the canonical stale — see `618-F` |
+| [`1602WinXP/textbook-tutor`](https://github.com/1602WinXP/textbook-tutor) | 🟢 `MIT` | `1,066` | `0` | `2026-06-04` | new to this base | *"A skill in brief text, makes your AI Agent a tutor."* Prompt-text deliverable, no runtime — `614-I`'s skill-package class in its purest form |
+| [`felipepenha/morphcards`](https://github.com/felipepenha/morphcards) | 🟢 `Apache-2.0` | `11,357` | `0` | `2025-09-04` | 🔴 secondary channel said `MIT` | `FSRS` scheduling + generated sentence variations. The byte read returns stock `Apache-2.0`; the **`NOTICE`/attribution lane differs from `MIT`** — see `618-E` |
+| [`FaustSW/Aisei`](https://github.com/FaustSW/Aisei) | 🔴 **`NULL`** — no grant file | — | `0` | `2026-04-30` | measured nil | SM-2-based spaced repetition. Grant ladder **empty** on `main`; platform field agrees. `614-E`'s `NULL` sense: *no file*, not a declining field |
+
+🔴 **`huidadou/mindsweeper`**, offered by the channel as *"Agentic AI for Education"*, is **`404` on
+every branch** and `422` from the search endpoint. **Not a finding** — recorded only so the leg is
+auditable.
+
+🟢 **Carried rows re-measured, `3 of 3` current:** `education-agent-skills` `942★`,
+`Mr.-Ranedeer-AI-Tutor` `29,548★` (still ungranted), `LabSirius/TutorIA` `MIT` and pushed
+`2026-10-27`. 🔵 `TutorIA` is `0★` — this base's strongest LATAM row, unstarred, which is
+`p601`/`605-J`'s anti-signal rule at its sharpest.
+
+
 ## 🆕 `p617` — `2026-11-02` — **the grading/assessment tier, promoted from its edges to three byte-read rows; and a `*-LICENSE.*` sibling that is a notice, not a bar**
 
 🟢 **New this window**, each title-graded per `p612` and residual-checked for clauses beyond stock MIT

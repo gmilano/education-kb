@@ -4,6 +4,28 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — reads `2026-11-02` — **the administrative tier is copyleft by default, and that is a delivery-model constraint rather than a licensing footnote**
+
+### 🔴 `618-N` (companion) — what the ERP/CRM leg actually measured, third pass running
+| Platform | Grant | Shape | Studio consequence |
+|---|---|---|---|
+| [`OpenEduCat`](https://openeducat.org/open-source-education-erp/) | 🔴 `LGPL-3.0` | Education ERP on **Odoo** (admissions, courses, fees, library) | Usable, but the **Odoo** base plus `LGPL` shapes how a derivative ships; the AI layer belongs **beside** it, not inside it |
+| `RosarioSIS` | 🔴 GPL-family | Web SIS for school administration | Attach-only for a studio that must not relicense |
+| `Open Admin` | 🔴 GPL-family | Student + family information | Same |
+| `Kuali` (KFS) | 🟡 not stated in channel | Java enterprise ERP on Apache/Tomcat | 🔴 Ungraded — needs a byte read before any citation |
+| `.LRN` | 🟡 not permissive-confirmed | LMS, MIT-originated | 🔴 "Originated at MIT" is **not** the MIT licence; a trap this base should name explicitly |
+
+🔵 **`.LRN` deserves its own note.** The channel describes it as *"originally developed at MIT"*, which
+is an **institutional provenance**, not a grant. 🔴 This is the licence-family confusion of `618-E` in
+its most seductive form, and any shelf that reads "MIT" out of that sentence publishes unusable supply.
+
+🟢 **The pattern that follows, and it is this base's standing LMS advice sharpened.** The incumbent
+administrative estate (`Moodle`, `Open edX`, `OpenEduCat`, a GPL SIS) is **not** the thing to replace or
+fork. Put the permissive, AI-bearing surface **next to** it, speaking its APIs and `xAPI`, so the
+copyleft boundary is never crossed and the deliverable stays relicensable. `P617-3` and `P618-1` both
+build on exactly this boundary.
+
+
 ## 🆕 `p617` — reads `2026-11-02` — **the grading/assessment vertical acquires a permissive platform row, and the LATAM platform row is confirmed as an Open edX *attachment* rather than a replacement**
 
 🟢 **New vertical row, byte-read this pass:**

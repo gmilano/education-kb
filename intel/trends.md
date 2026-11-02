@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — reads `2026-11-02` — **current trends**
+
+🟡 **Secondary by construction** (`618-K`): no primary source resolved from this environment for the
+sixteenth consecutive pass.
+
+### `T618-1` 🟢 The vehicle has changed again, and the scheduler is the moat
+`614-I` identified **skill packages riding somebody else's agent** as the sector's new supply vehicle.
+`618-D` confirms it and adds the part that makes such a package **retain** a learner: a spaced-repetition
+**scheduler** (`FSRS-6`, `FSRS`, `SM-2`). 🔵 The model is commodity; the scheduling loop and the item
+bank are not. A studio competing on model choice is competing on the wrong axis.
+
+### `T618-2` 🔴 Licence risk has moved from code to **copy**, and the channels are unreliable about it
+When the deliverable is prompt text, the licence question is a **copyright** question about writing, where
+a permissive default is least reliable. This pass alone: a third-party aggregator asserted the wrong
+licence **family** (`618-E`), another served a star count `2.5×` low and a wrong licence for a row this
+base holds correctly (`618-I`), and a `0★` copy carrying the canonical's holder line looked **fresher**
+than its `445★` original (`618-F`). 🔵 **Byte-read the grant, every row, every time.**
+
+### `T618-3` 🔴 Adoption and governance are inverted between LATAM and EMEA
+LATAM shows the strongest **demand** evidence of any region (`92%` of students, `79%` of faculty) with
+**no binding** regional rule and a pronounced governance gap. EMEA has a **dated** obligation
+(`2027-12-02`, high-risk Annex III) driving procurement ahead of demand. 🟢 Same product, opposite sale:
+**governance-as-deliverable** in LATAM, **compliance-as-deadline** in EMEA.
+
+### `T618-4` 🔵 "Pedagogy in control" is becoming the procurement test
+The OECD `2026` Digital Education Outlook is reported to warn that AI aids learning **only** where
+pedagogy stays in control, and US state activity (`134` bills, `31` states) is converging on auditability
+rather than prohibition. 🟢 The sellable artefact is increasingly the **decision record** — why this
+grade, on what evidence, reversible by whom — not the grader.
+
+### `T618-5` 🔴 The administrative tier is copyleft by default
+Three consecutive nils on the ERP/CRM leg (`618-N`) with every member GPL-family or ungranted. 🔵 This
+is a **structural** property of the sector, not a search artefact: the permissive innovation is happening
+in learner-facing surfaces, and the systems of record are not moving.
+
+### `T618-6` 🟡 Star rank remains an anti-signal, now with its cleanest specimen
+`LabSirius/TutorIA` — `MIT`, university-published, education-specific, actively pushed — sits at **`0★`**,
+while the sector's `29,548★` headline row (`Mr.-Ranedeer-AI-Tutor`) remains **ungranted** and unpushed
+since `2025`. 🟢 In education, stars measure **attention**, not usability.
+
+
 ## 🆕 `p617` — reads `2026-11-02` — **three trends, and the first is about control debt rather than the sector**
 
 ### 🔴 `T617-1` — the sector's own pattern, reproduced inside this repository: coverage that looks installed and is not

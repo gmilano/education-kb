@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — reads `2026-11-02` — **four recipes, each wired from rows byte-read today**
+
+### `P618-0` 🔴 Finish the control that `618-A` wired, and sweep for the others like it — `1` wk
+**The gap:** `gate-declared-gap` is now in `HOOK_GATES` but has **never been run** (`618-B`: code from
+this clone cannot execute under this permission set). `gate-region-headings` was wired and **red and
+masked** behind `recount` (`618-L`).
+**Wire it:**
+1. In a session that can execute: `make gate-declared-gap` and
+   `$(PY) -I compose/code/p383-region-heading-gate/check_headings.py intel/market.md`. Both must print
+   green before anything else in this pass is trusted.
+2. `make declared-gap-sweep` — expect `CONTRADICHO` as an **upper bound** (its unit is the sentence and
+   it cannot yet tell an assertion from a citation); the suite is the authoritative reading.
+3. Then the generalisation: `grep -rl "def test_\|unittest" compose/code/*/ | ` each directory, against
+   every target in the `Makefile`. **Any suite in no target is an uninstalled control.** `p370-gap-gate`
+   lived `246` passes that way and `p383`'s lived `54`.
+4. Fix the **masking** separately: `recount`'s inherited red (`Gap 534-J`) stops the runner before later
+   gates are judged. Order `HOOK_GATES` so declared-red gates run **last**, or run each gate
+   independently and report a matrix.
+🔵 **Deliverable:** a one-line census — *"`N` suites exist, `M` are wired, `K` are reachable past the
+first red"* — which is the only number that says whether this repository is actually controlled.
+
+### `P618-1` 🟢 Language-learning surface on a permissive scheduler, beside the incumbent LMS — `2`–`3` wk
+**Components, all byte-read this pass:** [`m98/fluent`](https://github.com/m98/fluent) (`MIT`, `445★`,
+`FSRS-6`) as the scheduling + review loop; [`felipepenha/morphcards`](https://github.com/felipepenha/morphcards)
+(`Apache-2.0`) for the **item-generation** half, which it cleanly separates from scheduling;
+[`1602WinXP/textbook-tutor`](https://github.com/1602WinXP/textbook-tutor) (`MIT`) as the tutor-persona
+skill; the client's `Moodle`/`Open edX` as the system of record.
+**Wiring:** `fluent` owns the review schedule and holds learner state; `morphcards`' generator produces
+item variants from the client's own corpus; `textbook-tutor` supplies the tutoring voice; progress is
+written back to the LMS over **`xAPI`** so the LMS stays the record and the copyleft boundary is never
+crossed (`618-N`).
+🔴 **Two obligations, not one:** `morphcards` is `Apache-2.0`, so the build carries **attribution and
+`NOTICE`** duties `MIT` does not (`618-E`). Generate the `NOTICE` file in CI, not by hand.
+🔴 **Pin `m98/fluent`, not `aymkin/fluent`** — the `0★` copy is the one that looks freshest (`618-F`).
+
+### `P618-2` 🟢 The canonical-resolution step the composition gate is missing — add to `P616-0`
+`P616-0` grades: branch → title family → residual read → enumerate the vendored tree. 🔴 It has **no step
+that asks whether the slug in hand is the canonical one**, and `618-F` is what that costs: two
+`fork=false` repositories, byte-identical `MIT` payloads, the copy pushed four months later.
+**The step, in order:**
+1. Read the grant's **holder line**. If it names a **slug**, that slug is the canonical candidate — this
+   is stronger than byte-identity, which `617-G` showed indicates only an owner convention.
+2. Probe that slug. If its payload is byte-identical, prefer it and record the other as a **copy**.
+3. 🔴 Never rank candidates by `pushed_at` alone.
+4. `p404`'s full-history grade remains owed where the holder line is silent; if the channel is
+   unavailable, **register it** rather than guessing (as `618-F` does).
+
+### `P618-3` 🟢 Governance-as-deliverable for a LATAM institution — `3`–`4` wk
+**Why this shape:** LATAM has the strongest demand evidence of any region (`92%` students / `79%`
+faculty) and **no binding** rule, with a pronounced adoption-versus-governance gap. The client does not
+need a pilot; they need a defensible policy with a working surface attached.
+**Components:** [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (`MIT`, Universidad
+Tecnológica de Pereira, runs **inside Open edX**, re-measured current this pass) **attached** to the
+client's existing Open edX estate rather than migrating it; the `xAPI` decision record from `P617-2` as
+the audit surface.
+**Budget line nobody budgets:** `616-H`'s remedy — **upstream `LICENSE` pull requests**. The region
+publishes; the licence file is what is missing (`1 of 8` permissive across `latam-gpt`), so a few days of
+a senior engineer's time converts unusable regional supply into usable supply, for this engagement and
+every later one.
+🔴 **Do not infer the region of a component from its author's name** (`618-J`). If a holder's location is
+not readable, the row ships *unplaced*.
+
+
 ## 🆕 `p617` — reads `2026-11-02` — **three recipes, each wired from rows byte-read today**
 
 ### 🟢 `P617-0` — the declared-gap gate: install the control this repository already owns

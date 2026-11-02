@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p618` — reads `2026-11-02` — **the scheduling layer named as a foundational primitive, and the ERP/CRM leg retired after a third nil**
+
+### 🟢 `618-M` — `FSRS`/`SM-2` is this sector's load-bearing primitive and this base had never named it as one
+All three of `618-D`'s new rows are built on a **spaced-repetition scheduler** —
+[`m98/fluent`](https://github.com/m98/fluent) on `FSRS-6`,
+[`felipepenha/morphcards`](https://github.com/felipepenha/morphcards) on `FSRS`,
+`FaustSW/Aisei` on `SM-2` — and the base's own carried `Kaiji-Z/dsh-plugin-lookatstudy` pairs `BKT`
+mastery with `SM-2` reviews. 🔵 **The scheduler, not the model, is what makes a tutoring artefact
+retain a learner**, which is why this layer belongs in `foundations` rather than only in `agents`.
+
+| Repo | Grant | Bytes | ★ | Layer | Why foundational |
+|---|---|---|---|---|---|
+| [`m98/fluent`](https://github.com/m98/fluent) | 🟢 `MIT` | `1,100` | `445` | `FSRS-6` + agent host | The tier's only row with real adoption; a reusable scheduling + review loop rather than an app |
+| [`felipepenha/morphcards`](https://github.com/felipepenha/morphcards) | 🟢 `Apache-2.0` | `11,357` | `0` | `FSRS` + generation | Separates **scheduling** from **item generation**, the split a studio actually needs |
+
+🔴 **Stated limit:** both are small, and `morphcards` was last pushed `2025-09-04`. They are
+**foundational by shape, not by adoption**, and are recorded that way round.
+
+### 🔴 `618-N` — the ERP/CRM leg is retired after paying nothing three times
+`open source platform education ERP CRM MIT Apache` returned **no education-specific permissive
+system** for a third consecutive pass. Measured, so the retirement is auditable: **`OpenEduCat`** is
+**`LGPL-3.0`** (built on Odoo), **`RosarioSIS`** and **`Open Admin`** are GPL-family, **`Kuali`** states
+no grant in this channel, **`.LRN`** is not permissive-confirmed, and `ERPNext` remains `GPL-3.0`
+from `p617`.
+
+🔵 **Operative:** three nils is no longer a sample. Re-aim the budget at a **named subsystem** —
+`SIS`, `proctoring`, `scheduling` — or drop the leg. 🟡 The administrative layer of this sector is
+**copyleft by default**, which is a finding about the sector rather than about the leg: it bounds the
+studio's delivery model wherever the client wants to own and relicense the result.
+
+
 ## 🆕 `p617` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE FOUNDATIONAL FINDING IS ABOUT THIS REPOSITORY'S OWN CONTROLS: A GATE BUILT AT PASS `115`, WITH A TEST SUITE AND A NAMED COUNTER-EXAMPLE, WAS **NEVER REFERENCED BY THE `Makefile`** — AND THE CLAIM IT EXISTS TO REFUSE WAS PUBLISHED AGAIN AT `p616`.**
 
 ### 🔴 `617-B` — an uninstalled gate, and what it costs

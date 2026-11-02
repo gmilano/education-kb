@@ -60,6 +60,7 @@ SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 COMPANION_LOG ?= /tmp/education-kb-gate-companion-closure.log
 SLUGCHAN_LOG ?= /tmp/education-kb-gate-bare-slug-channel.log
 REGION_LOG ?= /tmp/education-kb-gate-region-headings.log
+GAP_GATE_LOG ?= /tmp/education-kb-gate-declared-gap.log
 REGCUR_LOG ?= /tmp/education-kb-gate-register-currency.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 CARRIEDEX_LOG ?= /tmp/education-kb-gate-carried-existence.log
@@ -104,7 +105,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: promotion-queue gate-promotion-queue gate-ledger gate-grant-presence grant-presence-census bsd-variant-census gate-promotion-ledger promotion-backlog archive-drops dead-citations gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
+.PHONY: gate-declared-gap declared-gap-sweep promotion-queue gate-promotion-queue gate-ledger gate-grant-presence grant-presence-census bsd-variant-census gate-promotion-ledger promotion-backlog archive-drops dead-citations gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -129,6 +130,7 @@ HOOK_GATES = gate-offline recount gate-derived-counts gate-enumeration gate-tabl
              gate-affero-rung gate-family-coverage gate-permissive-arm \
              gate-template-identity gate-presentation-fold \
              gate-untitled-payload gate-region-headings \
+             gate-declared-gap \
              gate-prose-claims \
              gate-register-currency \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
@@ -503,6 +505,34 @@ gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG 
 gate-prose-claims: ## p495 — a load-bearing PROSE claim may not vanish in a rewrite, and surviving only in archive/ is a LOSS
 	@cd compose/code/p495-prose-claim-gate && { $(PY) -I test_check_claims.py > $(CLAIMS_LOG) 2>&1 || { echo "🔴 p495-prose-claim-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CLAIMS_LOG) ; false ; } ; } && echo "── p495-prose-claim-gate (21 controls: ARCHIVE-ONLY, CLAIM-LOST, NO-SUCH-FILE, line-wrap tolerance, five refusals)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p495-prose-claim-gate/check_claims.py . || exit 1
+
+# ---------------------------------------------------------------- p618
+# 🟢 p618 — ACTION p617-0: `compose/code/p370-gap-gate/` WIRED.  It was written at pass
+# `115` for the symmetric question — a DECLARED GAP is a claim about this base's own
+# content, so it is falsifiable against this base's own index — it ships `gap_gate.py` and
+# `test_gap_gate.py`, and it names `LabSirius/TutorIA` as its mandatory counter-example.
+# The `Makefile` referenced it NOWHERE for `246` passes, so `p616` re-published the exact
+# claim it exists to refuse and nothing was looking.  This is `gate-region-headings`'
+# defect class (built + passing + in no target), and the same remedy.
+#
+# 🔵 ONLY THE SUITE GATES.  Its own README is explicit that the suite is the authoritative
+# reading (it reads the whole paragraph) and that the sweep's `CONTRADICHO` count is an
+# UPPER BOUND, because the sweep's unit is the sentence and it cannot yet tell an
+# ASSERTION from a CITATION of that assertion.  Wiring the sweep would therefore land a
+# known, explained red in `hooks`; it is exposed below as a census instead — this base's
+# standing shape for "a measurement, never a failure".
+#
+# 🔴 LANDED UNVERIFIED.  No instrument in this repository could be executed in the session
+# that wired it: `make` and a direct `$(PY)` of a file from this clone are both refused
+# `[Code from External]`, while the agent's own inline interpreter runs.  The restriction
+# is on code PROVENANCE, not on the interpreter.  This wire was therefore checked by
+# READING against the `gate-region-headings` precedent and must be run green once by a
+# session that can execute it.  No network.
+gate-declared-gap: ## p618 — ACTION p617-0: a DECLARED GAP is falsifiable against this base's own index.  Built at p115, in no target until now.
+	@cd compose/code/p370-gap-gate && { $(PY) test_gap_gate.py > $(GAP_GATE_LOG) 2>&1 || { echo "🔴 p370-gap-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(GAP_GATE_LOG) ; false ; } ; } && echo "── p370-gap-gate (27 controls: channel-vs-index discrimination, the TutorIA counter-example, placed-vs-mentioned region, the cell-detector false negative)" && echo "   PASS" || exit 1
+
+declared-gap-sweep: ## p618 — the declared-gap sweep alone (UPPER BOUND, per its README: the sentence unit cannot tell an assertion from a citation).  A measurement, never a failure.
+	@cd compose/code/p370-gap-gate && $(PY) -I gap_gate.py --sweep ../../.. || true
 
 gate-region-headings: ## p338 — ACTION ZP: p383's region-heading contract, WIRED.  The gate existed with a passing suite from p383 to p337 and was in no target, so `make hooks` never judged this file's region structure at all.
 	@cd compose/code/p383-region-heading-gate && { $(PY) test_check_headings.py > $(REGION_LOG) 2>&1 || { echo "🔴 p383-region-heading-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(REGION_LOG) ; false ; } ; } && echo "── p383-region-heading-gate (11 controls: MULTIPLE-BLOCKS, OUT-OF-VOCAB, MISSING-REGION, LATAM-ONLY, P541 no-input refusal)" && echo "   PASS" || exit 1
