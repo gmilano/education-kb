@@ -4,6 +4,367 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED EXISTENCE RECIPE FAILS IN **BOTH** DIRECTIONS: `p621` PROVED IT PUBLISHES FALSE *ABSENCES*, AND THE PROXY'S `HTTP/1.1 200 Connection Established` ON LINE **ONE** MEANS ANY `head -1` OR `grep 200` READING OF THE SAME COMMAND PUBLISHES FALSE *PRESENCES* — INCLUDING FOR A FABRICATED SLUG. 🟢 THE `LGPL-2.1` TREE `p621` ASKED FOR EXISTS AND IT **REFUTES `p621`'s OWN RUNG**: `LGPL-2.1` SHIPS IN `COPYING`, WITH `COPYING.LESSER` AND `COPYING.LIB` BOTH `404`. 🔴 A LICENCE FILE THAT IS A **BESPOKE BILINGUAL DOCUMENT** NAMING `AGPL-3.0` AND THEN ADDING A HOMEPAGE-BRANDING OBLIGATION — ON A SLUG THIS BASE ALREADY SHELVED, AND ALL THREE CHANNELS ARE BLIND TO IT. 🟢 THE RENAME INSTRUMENT `621-R` SAID DID NOT EXIST IS BUILT AND CALIBRATED ON A LIVE INSTANCE. 🔴 AND THIS BASE'S CITATION DECAY IS MEASURED FOR THE FIRST TIME: `3` DEAD AND `2` NON-CANONICAL IN `80` SAMPLED SHELF ADDRESSES. `17` NEW HEAD NAMES, `6` PERMISSIVE GRANTS BYTE-READ, `14 of 15` CHANNELS AGREEING. NINETEEN REGISTERED (`622-A`…`622-S`).**
+
+### 🔴 `622-A` — read this first: the broken existence recipe fails in the **other** direction too, and that direction looks like success
+
+`621-A` established that the task's mandated verifier — `curl -sI https://github.com/{owner}/{repo}` —
+returns `403` for existent and non-existent slugs alike through this proxy, and that a base reading
+that column as existence publishes **false absences**. 🔴 **Run again this pass, the same command
+has a second failure mode that is strictly more dangerous, because it reports success.**
+
+| What the command returns | Line 1 | Real status | A `head -1` / `grep 200` reading |
+|---|---|---|---|
+| `curl -sI https://github.com/torvalds/linux` | `HTTP/1.1 200 Connection Established` | `403 Forbidden` | 🔴 **PRESENT** (correct by accident) |
+| `curl -sI https://github.com/m98/fluent` (shelved) | `HTTP/1.1 200 Connection Established` | `403 Forbidden` | 🔴 **PRESENT** (correct by accident) |
+| `curl -sI https://github.com/zzz-nonexistent-control-9f3a/does-not-exist-kb622` | `HTTP/1.1 200 Connection Established` | `403 Forbidden` | 🔴 **PRESENT — and the repository does not exist** |
+
+🔵 **The mechanism.** The first status line belongs to the **proxy's `CONNECT` tunnel**, not to
+GitHub. `curl -sI` prints it, then prints GitHub's real `403`. So the same command yields
+`ABSENT` under `-w '%{http_code}'` (`621-A`'s reading) and `PRESENT` under `head -1` — and the
+fabricated control is wrong in both. 🔴 **The recipe does not carry a weak existence signal; it
+carries none, and the parse decides which way the error points.** `3 of 3` controls this pass.
+
+🟢 **Standing instrument, restated because it is the only one that discriminates.** Existence and
+default branch from `git ls-remote --symref` with `GIT_TERMINAL_PROMPT=0` (absent **or** private
+dies on `could not read Username`, which `p293` correctly calls a *measurement*); the grant from
+`raw.githubusercontent.com` (`200` + bytes vs `404` at `14 B`); metadata from
+`gh api search/repositories -f q='repo:{slug}'` (`422` on a fabricated slug). All three ran their
+fabricated control this pass: **`3 of 3` discriminating.**
+
+### 🟢 `622-B` — the `LGPL-2.1` tree `621-K` asked for exists, and it **refutes the rung `621-B` built**
+
+`621-B` found a `COPYING`-first ladder grading an `LGPL-3.0` tree as `GPL-3.0`, prescribed ladder
+`v3` — probe `COPYING.LESSER` and `COPYING.LIB` **before** `COPYING` — and recorded the
+`COPYING.LIB` rung as carried on **zero** real instances. 🟢 **An `LGPL-2.1` tree is now on the
+table, and it is education's own:** `sugarlabs/sugar-toolkit-gtk3`, the Sugar activity toolkit.
+
+| Probe | `sugarlabs/sugar-toolkit-gtk3` |
+|---|---|
+| `LICENSE` / `LICENSE.md` | `404`, `14 B` |
+| `COPYING.LESSER` | 🔴 `404`, `14 B` |
+| `COPYING.LIB` | 🔴 `404`, `14 B` |
+| `COPYING` | 🟢 `200`, **`26,436 B`**, title `GNU LESSER GENERAL PUBLIC LICENSE`, `Version 2.1, February 1999` |
+
+🔵 **The mechanism, and it is the inverse of `621-B`'s.** `LGPL-3.0` is *not* a standalone text — it
+is `GPL-3.0` **plus** additional permissions, so its canonical distribution must ship two files and
+the short grant lands in `COPYING.LESSER`. **`LGPL-2.1` *is* a standalone text.** It ships alone, in
+`COPYING`, and there is no `LESSER` sibling to find. 🔴 So `621-B`'s rung does not fire here, and a
+ladder that trusted filename order would have reported *no grant found* on a tree that carries a
+complete one.
+
+🟢 **Ladder `v4`, and the rung ordering is demoted from a rule to a hint.** The durable rule is the
+one this base has owned since `p612` and keeps rediscovering: **grade on the payload's title line,
+never on the file's name.** Concretely:
+
+1. Probe `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENSE-MIT` (`p620`), **`COPYING.md`**
+   and **`COPYRIGHT`** (`622-H`, new), `COPYING.LESSER`, `COPYING`.
+2. **Read the title line of every payload that answers `200`.**
+3. Fire the `LESSER`-sibling probe **only** when `COPYING`'s title reads `GNU GENERAL PUBLIC LICENSE`
+   *without* the word `LESSER` — that is `621-B`'s case, and the only case it covers.
+4. 🔴 **`COPYING.LIB` is retired.** Two passes have now looked; it has `0` instances, and the one
+   real `LGPL-2.1` tier member does not use it.
+
+### 🟢 `622-C` — and the tree that settled it splits the Sugar estate on the axis that decides linkability
+
+🔴 `sugarlabs/sugar` and `sugarlabs/sugar-toolkit-gtk3` are **not** under the same grant, and the
+difference is the one `621-B` said costs money:
+
+| Repo | Grant (byte-read) | Channel B | ★ | `pushed_at` | Consequence |
+|---|---|---|---|---|---|
+| [`sugarlabs/sugar-toolkit-gtk3`](https://github.com/sugarlabs/sugar-toolkit-gtk3) | `LGPL-2.1`, `COPYING` `26,436 B` | `LGPL-2.1` ✓ | `32` | `2026-10-31` | 🟢 **Linkable from proprietary code.** The activity API a studio would actually build against. |
+| [`sugarlabs/sugar`](https://github.com/sugarlabs/sugar) | 🔴 `GPL-3.0`, `COPYING` `35,149 B`-class text, title `Version 3, 29 June 2007` | `GPL-3.0` ✓ | `314` | `2026-10-22` | 🔴 **Virally copyleft.** The GTK shell. Ship it and the derived work follows. |
+
+🔵 Both byte-read today at the real default branch (`master` for both, `ls-remote --symref`), channel
+B agreeing **`2 of 2`**. 🟢 **Why it matters beyond the licence column:** Sugar is the OLPC learning
+environment behind the largest *public, national* one-laptop deployments in LATAM, so this is the
+rare case where the estate a LATAM ministry already owns can be extended **through a linkable
+toolkit** without the shell's copyleft reaching the new work. That is a wiring instruction, and it
+only exists because the two repositories were graded separately.
+
+### 🔴 `622-D` — a licence that is a bespoke bilingual **document**, naming `AGPL-3.0` and then adding obligations, on a slug this base already shelved
+
+🔴 `opendigitaleducation/entcore` — ENT Core, the French school *espace numérique de travail*
+platform — carries a `LICENSE` of `8,537 B` whose **first line is**
+`///////////////////////////////////////////////////////////`. It is not a stock payload. It is a
+hand-written statement in **English and French** that names the `GNU Affero General Public License
+version 3` and then adds two terms the licence itself does not contain:
+
+1. 🔴 **A homepage branding obligation.** *"You must indicate the name of the software and the
+   company in any production /contribution using the software and indicate on the home page of the
+   software industry in question, `powered by Edifice` with a reference to the website:
+   `https://edifice.io/`."*
+2. 🟡 **A written network-protocol carve-out.** *"any module that communicate over native Web
+   protocols, such as HTTP, with ENT Core is outside the scope of this license"* — a vendor's
+   construction of `AGPL` §13, stated in the grant.
+
+🔵 **Every channel this base owns is blind to it, and that is the finding.**
+
+| Control | Verdict on `entcore` | Why it misses |
+|---|---|---|
+| Title-line grading (`p612`) | 🔴 reads `/////////…` | The first line is a decorative comment banner |
+| Stock byte band (`p616`) | 🔴 `8,537 B` matches no stock text | It is not a stock text |
+| Channel B `spdx_id` (`p620`) | 🔴 `422` — not in the index at all (`622-F`) | Silent |
+| Reading the file (`p619-F`'s rule) | 🟢 `AGPL-3.0` **plus** a branding obligation | Only a human-grade read reaches it |
+
+🔴 **Commercially this is the worst class of term there is**, because it survives every automated
+check and lands at the end of a delivery: a client product built on ENT Core must display a third
+party's name and a backlink **on its home page**. 🔵 Generalisation (`P622-0`): a licence file is a
+*document*, not a token. **Any payload whose title line does not match a known licence title gets
+read in full before a row is written**, and the row records the obligations, not just the name.
+
+### 🔴 `622-E` — the rename instrument `621-R` said did not exist, built and calibrated on a live instance
+
+`621-R` item `5`: *"A sweep comparing shelved slugs' `HEAD` shas against their canonical successors
+is the instrument, and it does not exist yet."* 🟢 **It exists now, it needs no API, and a real
+instance walked into this pass's own candidate list.**
+
+| Address | `ls-remote` | `HEAD` sha | Grant bytes | Channel B |
+|---|---|---|---|---|
+| [`executablebooks/jupyter-book`](https://github.com/executablebooks/jupyter-book) | `PRESENT`, `main` | **`526cfa7e76db`** | `1,520 B` BSD-3-Clause | 🔴 **`422`** |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `PRESENT`, `main` | **`526cfa7e76db`** | `1,520 B` BSD-3-Clause | 🟢 `1` hit, `4,289★`, pushed `2026-11-02` |
+
+🟢 **The discriminator, stated as a rule.** Two addresses whose `ls-remote HEAD` shas are
+**identical** are **one repository under two names**. The one channel B indexes is the canonical
+name; the one it answers `422` for is the stale address. So:
+
+> `ls-remote` `PRESENT` **+** channel B `422`/`0` ⇒ **not citable as canonical.**
+> Add an identical `HEAD` sha against a candidate successor ⇒ **rename, proven.**
+
+🔵 This is stronger than `p618-F`'s byte-identity test, which `617-G` showed indicates only an owner
+convention: byte-identical *files* can be a copy, but an identical `HEAD` **sha** cannot — it is the
+same commit graph. 🔴 **Bound, stated plainly:** this session cannot *name* the successor from the
+stale address. `gh api repos/{slug}`, which returns `full_name` and would resolve a rename in one
+call, is refused here (`622-G`). The instrument flags; a human or a search names.
+
+### 🔴 `622-F` — this base's citation decay, measured for the first time in `622` passes
+
+A systematic sample — every `49th` address of the **`3,919`**-slug oracle extracted from the live
+shelves this pass, `80` addresses — run through channel B, then every miss run through `ls-remote`:
+
+| Class | Count | Rate | Addresses |
+|---|---|---|---|
+| 🟢 Canonical (channel B `1` hit) | `74` | `92.5 %` | — |
+| 🔴 **Dead** (`ABSENT_OR_PRIVATE`, reproduced on `3` probes each) | `3` | **`3.8 %`** | `jaipuriaailabs/moodle-mcp`, `thanh01pmt/interactive-quiz-kit`, `vargontoc/educational-framework` |
+| 🔴 **Not citable as canonical** (`PRESENT` + channel B miss) | `2` | **`2.5 %`** | `bnsoftware/lti-1p3-tool` (B `0`), `opendigitaleducation/entcore` (B `422`) |
+| 🔴 **Not a repository at all** | `1` | `1.3 %` | `topics/qti` — a GitHub *topic* page URL |
+
+🔴 **The last row is a defect in this pass's own instrument, and it reproduces `607-C`.** The oracle
+extractor matched `github.com/topics/qti` as an `owner/repo` pair. So **`3,919` is an upper bound on
+the oracle**, every "new head name" count in this pass included, and the extractor needs a
+path-segment deny-list (`topics`, `orgs`, `sponsors`, `features`, `collections`) before `p623`
+quotes the number again.
+
+🔵 **Bounds on the two red rows.** `ABSENT_OR_PRIVATE` conflates deleted, renamed-away and
+turned-private — `p293`'s rule calls the credential prompt a measurement of *that disjunction*, not
+of deletion. And a channel B miss has a second innocent cause: `621-M` proved the channel **silently
+omits forks**. 🟡 So `3.8 %` is an upper bound on dead and `2.5 %` an upper bound on stale.
+Extrapolated across `3,919` addresses that is on the order of `150` dead and `98` stale citations
+carried on these shelves — **the `dead-citations` gate exists and has graded no commit since `p620`**
+(`622-M2`).
+
+### 🔴 `622-G` — why `600` passes recorded "the per-repo GitHub API is blocked", with the mechanism
+
+🔵 This base has carried *"per-repo GitHub API blocked"* as an environmental fact since `p54` and
+`p600` found a substitute without finding the cause. 🟢 The cause is now named, and it is **not the
+proxy**:
+
+```
+$ gh api repos/m98/fluent
+{"message":"GitHub access to this repository is not enabled for this session.
+  Use add_repo to request access..."}  (HTTP 403)
+```
+
+🔴 That is the **session's own repository-scope gate**, which admits only the repositories this
+session was granted, answering *before* GitHub is reached. It is a different mechanism from the
+proxy `403` on `api.github.com` and `github.com` HTML (`621-A`), and it is **by design**: search is
+the documented exception, which is exactly why `gh api search/repositories` answers and
+`gh api repos/{slug}` never will. 🟢 **Consequence:** `search/repositories` is not a lucky workaround
+to be re-tested each pass — it is the sanctioned channel. Stop spending probes on `repos/{slug}`.
+
+### 🔴 `622-H` — a `6,148★` project with a complete stock `MIT` grant that channel B calls `NOASSERTION`, and the grant says it has **exceptions**
+
+🔴 [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) — `6,148★`, pushed
+**today** — returns `NOASSERTION` from channel B. `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`
+and `COPYING` all `404` at `14 B`. The grant is in **`COPYING.md`**: stock `MIT`,
+`Copyright (c) 2020-2024 Posit Software, PBC`.
+
+🟢 Two rungs added to ladder `v4` by this one repository: **`COPYING.md`** and **`COPYRIGHT`** —
+beside `p620`'s `LICENSE-MIT` and `packages/*/LICENSE`. Four passes, four missing rungs: the ladder
+is not converging by guessing, and `622-B`'s title-line rule is why it does not need to.
+
+🔴 **And the second half is the commercially load-bearing one.** `COPYRIGHT` reads: *"With the
+exceptions noted below, this code is released under the [MIT license]"*. 🔵 **The grant is not
+uniform over the tree.** A row writing `MIT` against Quarto from `COPYING.md` alone publishes an
+over-broad claim — the same family as `620-G` (*the grant is not where the reader looks*), sharpened:
+**the grant itself says where it stops, in a file no ladder on this base probed until today.**
+
+### 🟢 `622-I` — the code/content split is now carried on **three** instances in three tiers, and "the content is NonCommercial" is the wrong statement of it
+
+`620-I` found `PhET` splitting `9 of 9` MIT engine against `9 of 9` ungranted content. Two
+independent instances landed this pass, in unrelated tiers, and together they correct the rule:
+
+| Artefact | Code grant | **Content/data grant** | Commercial consequence |
+|---|---|---|---|
+| `PhET` (`p620`) | `MIT`, byte-read | 🔴 **no grant at all** | Blocked — the simulations are the product |
+| ARASAAC (`622-K`) | `MIT`, byte-read, `Gobierno de Aragón` | 🔴 **`CC BY-NC-SA`** | Blocked **for paid work** — the pictograms are the vocabulary |
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | `MIT`, `1,064 B`, byte-read | 🟡 **`CC BY 4.0`** (channel-reported) | 🟢 Fine, with attribution carried |
+
+🔵 **So the rule is not "content is `NC`".** It is: **the grant on the code and the grant on the
+content are independent questions, and the content answer ranges from harmless to fatal.** A studio
+that reads only the repository's `LICENSE` learns nothing about the half of the deliverable the
+client can actually see. 🟡 `human-atlas`'s `CC BY 4.0` is **channel-reported, not byte-read** —
+`BodyParts3D`, its mesh source, has historically shipped under a `CC BY-SA` Japan variant, and the
+two differ on share-alike. **Marked, not settled**; a dedicated leg for `p623`.
+
+### 🟢 `622-J` — the pass's near-miss: a false generalisation about the publishing tier, caught by one byte read
+
+🔴 **The draft of this section claimed the open-textbook/OER *publishing* tier is copyleft without
+exception**, and the evidence looked complete: `pressbooks/pressbooks` `GPL` (already shelved),
+`pkp/omp` `GPL-3.0` (`145★`, pushed today), `rstudio/bookdown` `GPL-3.0` (`4,091★`), `anvc/scalar`
+**no grant at `5` probes** at `244★`. 🟢 **One more byte read refuted it**:
+`coko-foundation/ketty` is `MIT`, `1,066 B` — inside `p616`'s stock band — and the Open Education
+Network is piloting it.
+
+🔵 **The true shape, which is more useful than the false one.** The split is not by tier, it is by
+**artefact class**: the *platforms* (a server you run, with accounts and workflow) are copyleft or
+ungranted; the *toolchains* (a binary you invoke in a build) are permissive.
+
+| Row | Grant (byte-read) | ★ | `pushed_at` | Class |
+|---|---|---|---|---|
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | 🟢 `BSD-3-Clause`, `1,520 B` | `4,289` | `2026-11-02` | Toolchain — computational textbooks from notebooks |
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | 🟢 `MIT`, `COPYING.md`, **exceptions noted** (`622-H`) | `6,148` | `2026-11-02` | Toolchain — Pandoc-based publishing system |
+| [`coko-foundation/ketty`](https://github.com/coko-foundation/ketty) | 🟢 `MIT`, `1,066 B` | `8` | `2026-03-19` | **Platform, and the only permissive one** — book-production workflow |
+| [`pkp/omp`](https://github.com/pkp/omp) | 🔴 `GPL-3.0`, `35,149 B` | `145` | `2026-11-02` | Platform — scholarly press management |
+| [`rstudio/bookdown`](https://github.com/rstudio/bookdown) | 🔴 `GPL-3.0`, `35,130 B` | `4,091` | `2026-09-18` | Toolchain, and the exception to the exception — copyleft R package |
+| [`anvc/scalar`](https://github.com/anvc/scalar) | 🔴 **no grant at `5` probes**; channel B `NOASSERTION` | `244` | `2026-10-22` | Platform — media-rich scholarly publishing. 🔵 The one case this pass where `NOASSERTION` is **correct** |
+
+🔵 `anvc/scalar` is worth its own line: `614-E` established that `NULL` and `NOASSERTION` mean
+opposite things, and this base has since caught the channel calling real grants `NOASSERTION` three
+times (`613-E`, `621-G`, `622-H`). **Here it is right** — and the only way to know which it was, was
+to probe the tree.
+
+### 🟢 `622-K` — the Spanish and Portuguese legs `621-R` assigned to this pass: run, and the LATAM nil is **not** a language artefact
+
+`621-R` item `3` ordered this pass to re-run `p621`'s three tiers in Spanish and Portuguese, on the
+hypothesis — from `620-C`, where a Spanish-language leg broke the regional pattern and paid — that
+LATAM's `0 of 22` was a language effect. 🟢 **Three legs ran** (`comunicación aumentativa alternativa
+CAA ... licencia MIT`; `software livre educação profissional ... competências`; `mapeo curricular
+plan de estudios software github`), plus a fourth on the Spanish-language AAC symbol estate.
+
+🔴 **The hypothesis is rejected for these tiers, and the reason is specific.** The Spanish-language
+legs returned exactly **one** real new address — and it is **Spanish, not Latin American**:
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | Evidence for the placement |
+|---|---|---|---|---|---|
+| [`juanda99/arasaac-frontend`](https://github.com/juanda99/arasaac-frontend) | 🟢 `MIT`, `1,084 B`, `LICENSE.md` | `16` | `2026-10-24` | **EMEA** | 🟢 The grant's own holder line: `Copyright (c) 2016 Gobierno de Aragon` — the regional **government of Aragón**, Spain. The front end of `arasaac.org`, the sector's reference AAC pictogram portal. |
+
+🔵 **That placement is the methodological gain.** `621-K` item `2` flagged four rows placed on
+**committer timezone offset and vocabulary** — the evidence class `gate-offset-region` exists to
+constrain. This row is placed on the **copyright holder named inside the byte-read grant**, which is
+institutional, immutable and free. 🟢 **Operative: when a grant names an institution, the region
+field is a read, not an inference.** It will not always be available; when it is, nothing else is
+needed.
+
+🔴 **And the honest answer to `621-R` item `3`:** the Portuguese leg returned **no** repository at all
+(only pedagogy-of-GitHub literature), and the Spanish curriculum-mapping leg returned **none** —
+only a Moodle forum thread stating no open-source curriculum-mapping tool existed, which `621-J`
+has already superseded with four real trees. **Spanish-language AAC supply exists and is Iberian.**
+The LATAM repository nil in these three tiers is a property of the region's supply, not of the
+query language. Written down as a gap, not as coverage (`intel/market.md`, LATAM).
+
+### 🔴 `622-L` — a **package registry** asserting a licence the repository does not grant
+
+🔴 `npm` publishes `@resusio/simlab` — a mock patient-laboratory-report generator for medical
+simulation teaching — as **`MIT`**. Its repository, [`resusio/simlab`](https://github.com/resusio/simlab):
+
+- `ls-remote`: `PRESENT`, `main`, `HEAD` `fe33fa213589`
+- `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.LESSER`: 🔴 **`404` at `14 B`, all five**
+- channel B `license.spdx_id`: 🔴 **`null`** — and `614-E`'s rule says `null` is *absence*, not
+  `NOASSERTION`'s *unrecognised*
+
+🔵 **A fifth channel-failure shape, and the one closest to a developer's hands.** `616-C` was a README
+over-claiming, `617-E` a README under-claiming, `618-E` a third-party listing wrong about the
+*family*, `619-G`/`621-H` a listing asserting a licence over a tree with no grant. **This is a
+package registry doing it** — and a registry is not a listing somebody browses, it is the thing
+`npm install` resolves against. A dependency pulled under a registry's `MIT` field, whose source
+tree grants nothing, is an unlicensed dependency in a client deliverable with a paper trail that
+says otherwise. 🟡 Registry metadata is a **publisher's self-declaration**, not a grant. `BLOCK`.
+
+### 🔴 `622-M` — the mandated global legs return the **fifty-second** consecutive nil, and the denominator is now `15 of 15`
+
+The four mandated legs (`top open source AI agents education 2026 github MIT`, `github trending
+education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry
+trends 2026`) surfaced **`15`** head names. 🔴 **All `15` are held** against the `3,919`-slug oracle:
+`microsoft/ai-agents-for-beginners`, `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`rohitg00/ai-engineering-from-scratch`, `rphilipzhang/AI-PhD-S26`, `MadsLorentzen/ai-job-search`,
+`speedyapply/2026-AI-College-Jobs`, `aneelv75/github-trending`, `pguso/agents-from-scratch`,
+`avinash201199/free-ai-agents-resources`, `ashishpatel26/500-ai-agents-projects`,
+`browser-use/browser-use`, `openeducat/openeducat_erp`, `moodle/moodle`, `Koha-Community/Koha`.
+
+🔵 `614-I`'s argument stands and this pass is its cleanest specimen: **the statistic measures the
+legs, not the sector.** The same session, the same proxy and the same hour, pointed at tiers named
+from this shelf's own holes, returned **`17` head names, `17` new**. The legs are a coverage test the
+base has passed `52` times; they are no longer a discovery channel.
+
+### 🟢 `622-N` — the medical-education tier: `0` mentions before this pass, `2` permissive runtimes after it
+
+`medical education`, `simulation nursing`, `STEM lab` and `welding` all returned **`0`** across the
+seven shelf files in this pass's census. The tier is real, and its permissive supply is `3D anatomy`:
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | What it is in a wiring |
+|---|---|---|---|---|---|
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 `MIT`, `1,064 B` (stock band) | **`4,455`** | `2026-09-06` | Global | Browser 3D anatomy explorer over **`2,234` selectable `BodyParts3D` meshes**. The tier's adoption leader by two orders of magnitude. 🔴 Code `MIT`, **meshes separately licensed** (`622-I`). |
+| [`biocat-ugent/Open-Anatomy-Explorer`](https://github.com/biocat-ugent/Open-Anatomy-Explorer) | 🟢 `Apache-2.0`, **`11,357 B` — exactly stock** | `13` | `2025-09-09` | **EMEA** | OPANEX: web anatomy-atlas viewer with **quiz authoring** and labelled-model sharing **between institutions**. Region placed on the publisher — `biocat-ugent` is Ghent University, Belgium. 🟡 `14` months stale. |
+| [`ScreenBasedSimulator/ScreenBasedSimulator`](https://github.com/ScreenBasedSimulator/ScreenBasedSimulator) | 🟡 `Apache-2.0`, `11,325 B`, terms intact, appendix boilerplate **unfilled** | `6` | 🔴 `2015-05-23` | Global | Emergency-scenario trainer for medical students. 🔴 **`REFUSE` on currency** — `11` years stale, README still says *"we are building our Minimum Viable Product"*. Recorded because the grant is real. |
+
+🔵 **`11,357 B` is now confirmed as stock `Apache-2.0` a fourth time on this base** (`p607`, `p619-F`,
+`621-J`, here) — which is what lets the `11,325 B` row be graded as *complete-with-unfilled-appendix*
+rather than truncated. 🔴 **And it narrows `619-F`.** That finding graded a short `Apache-2.0`
+complete partly because its boilerplate was **filled in**; this row's is the literal
+`Copyright {yyyy} {name of copyright owner}` and the grant is still valid — the appendix is
+**instructions**, and an unfilled one is the stock state. **A filled boilerplate is evidence of care,
+never a condition of validity.**
+
+### 🔴 `622-O` — the licence channel's drift about *family*, a fourth instance, and this one was the pass's own lead
+
+🔴 The leg that surfaced the medical tier reported `ScreenBasedSimulator` as **`MIT`**. Both verified
+channels say **`Apache-2.0`**: the byte read returns the stock Apache text at `11,325 B`, and channel
+B returns `Apache-2.0`. 🟢 Agreement `2 of 2` against the digest. 🔵 Fourth instance of `618-E`'s
+shape (`618-E`, `619-U`, `621-H`, here) — and the delivery consequence is unchanged and still
+mis-stated by everyone who repeats it: **both are permissive, so there is no delivery bar — but
+`Apache-2.0` carries attribution and `NOTICE` obligations `MIT` does not**, so the row would have
+entered the wrong compliance lane.
+
+### 🟢 `622-P` — channel agreement this pass, stated as a count because that is the only way it means anything
+
+**`15`** addresses had both a byte-read grant and a channel B answer. 🟢 **`14` agree.** The single
+disagreement is `622-H` (`quarto-cli`: channel B `NOASSERTION`, bytes `MIT` in `COPYING.md`) and its
+cause is named. 🔵 Pooled with `p612`/`p613`/`p614`'s `110 of 110` and the `19 of 19` of `p621`, the
+channel's `spdx_id` remains the best cheap proxy this base has **and** has now produced four
+`NOASSERTION` errors against real grants — so it ranks candidates and **never** fills a licence
+column.
+
+### 🟡 `622-S` — open questions this pass hands forward rather than answers
+
+1. 🔴 **`make hooks` was refused again — and this pass's first draft got the reason wrong.**
+   `620-S` records `p620` executing all `70` gates over this same clone, so `618-B`'s
+   *"keyed on code provenance"* cannot be the mechanism: **the variable is the session's permission
+   set, not the code's origin.** This is the **second** consecutive refusal (`p620` ✓, `p621` ✗,
+   `p622` ✗), the action **is** dischargeable, and `p623` should attempt it **first**. The shelf
+   edits here were checked by reimplementing `p383`'s published contract as code — not by reading,
+   which `620-S` showed fails. See `622-M2` in `compose/patterns.md`.
+2. 🔴 **The oracle extractor has a measured defect** (`622-F`): it accepts `github.com/topics/*` as a
+   slug. `3,919` is an upper bound. Add a path-segment deny-list before `p623` quotes the figure.
+3. 🔴 **`150`-odd dead and `98`-odd stale citations are implied by this pass's sample and have not
+   been enumerated.** The full sweep is `3,919` channel-B calls plus `ls-remote` on the misses —
+   affordable, and the named instrument (`622-E`) now exists. It is the single largest known defect
+   in this base's shelves.
+4. 🟡 **`human-atlas`'s mesh licence is channel-reported, not byte-read** (`622-I`). `CC BY 4.0` vs a
+   `CC BY-SA` Japan variant differ on share-alike, and the meshes are the product.
+5. 🟡 **Quarto's `COPYRIGHT` exceptions are unenumerated** (`622-H`). The row is shelved as `MIT`
+   *with exceptions noted*; which files they cover was not read.
+
 ## 🆕 `p621` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED EXISTENCE RECIPE IS BROKEN IN THIS ENVIRONMENT AND WOULD HAVE PUBLISHED `22` FALSE ABSENCES: `curl -sI github.com/{owner}/{repo}` RETURNS A POLICY `403` FOR EVERY SLUG, EXISTENT OR NOT. 🔴 AND THE SECOND CHANNEL CAUGHT A MISSING RUNG IN **THIS PASS'S OWN** LADDER: A `COPYING`-FIRST PROBE GRADES EVERY `LGPL` PROJECT AS `GPL`. 🟢 THREE TIERS NAMED FROM THE SHELF'S OWN HOLES PAID `21` NEW HEAD NAMES OF `22` AGAINST A `3,906`-SLUG ORACLE, `9` PERMISSIVE GRANTS BYTE-READ. 🔴 `p620`'s NEW DISCOVERY CHANNEL IS CALIBRATED ON THE PASS THAT ADOPTED IT: IT SILENTLY OMITS **FORKS** (PROVEN) AND RETURNS `422` FOR **RENAMED** REPOS (PROVEN BY IDENTICAL `HEAD` SHA). 🔴 A `269 B` PAYLOAD TITLED `Apache License` WHOSE BODY IS THE LITERAL PLACEHOLDER `[Standard Apache 2.0 License Terms Applied]`. 🔴 AND THE INVERSE, WHICH IS THE DANGEROUS ONE: A **REAL** `GPL-3.0` GRANT THE METADATA CHANNEL REPORTS AS `NOASSERTION`. ELEVEN REGISTERED (`621-A`…`621-K`).**
 
 ### 🔴 `621-A` — read this first: the existence instrument this task mandates returns a uniform `403`, and `403` is not `404`

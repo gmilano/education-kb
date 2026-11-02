@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — `2026-11-02` — **two `4,000★`-class publishing repos land, one of them under an address this base would have got wrong, and the week's instrument finding is that a licence file can be a bespoke document**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🟢 Trending-shaped, verified today
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Branch | Why it is here |
+|---|---|---|---|---|---|
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | 🟢 `MIT`, `COPYING.md` | `6,148` | `2026-11-02` | `main` | Highest-adoption new permissive find of the pass, pushed the day it was read. |
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 `MIT`, `1,064 B` | `4,455` | `2026-09-06` | `main` | `2,234`-mesh browser anatomy explorer; opens the medical-education tier. |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | 🟢 `BSD-3-Clause`, `1,520 B` | `4,289` | `2026-11-02` | `main` | Notebook→textbook; **cite this org, not `executablebooks`** (`622-E`). |
+| [`rstudio/bookdown`](https://github.com/rstudio/bookdown) | 🔴 `GPL-3.0`, `35,130 B` | `4,091` | `2026-09-18` | `main` | The incumbent it replaces, and copyleft. |
+| [`iiab/iiab`](https://github.com/iiab/iiab) | 🔴 `GPL-2.0`, `18,092 B` | `2,012` | `2026-11-02` | `master` | Internet-in-a-Box: Raspberry-Pi offline library estate. Pushed today; `GPL-2.0`. |
+| [`sugarlabs/sugar`](https://github.com/sugarlabs/sugar) | 🔴 `GPL-3.0` | `314` | `2026-10-22` | `master` | Sugar shell — the LATAM one-laptop estate's front end. |
+| [`anvc/scalar`](https://github.com/anvc/scalar) | 🔴 **no grant at `5` probes** | `244` | `2026-10-22` | `master` | Actively developed, ungranted, `244★`: the week's clearest `BLOCK`. |
+| [`pkp/omp`](https://github.com/pkp/omp) | 🔴 `GPL-3.0`, `35,149 B` | `145` | `2026-11-02` | `main` | Scholarly-press system of record; pushed today. |
+| [`sugarlabs/sugar-toolkit-gtk3`](https://github.com/sugarlabs/sugar-toolkit-gtk3) | 🟡 `LGPL-2.1`, `COPYING` `26,436 B` | `32` | `2026-10-31` | `master` | The `LGPL-2.1` specimen `621-K` asked for — and it **refutes `621-B`'s rung** (`622-B`). |
+| [`juanda99/arasaac-frontend`](https://github.com/juanda99/arasaac-frontend) | 🟢 `MIT`, `1,084 B` | `16` | `2026-10-24` | `master` | `Gobierno de Aragón` in the holder line: region from the grant (`622-K`). |
+| [`biocat-ugent/Open-Anatomy-Explorer`](https://github.com/biocat-ugent/Open-Anatomy-Explorer) | 🟢 `Apache-2.0`, `11,357 B` | `13` | `2025-09-09` | `main` | Ghent University anatomy viewer with quiz authoring. |
+| [`coko-foundation/ketty`](https://github.com/coko-foundation/ketty) | 🟢 `MIT`, `1,066 B` | `8` | `2026-03-19` | `main` | Only permissive book-production **platform** found. |
+| [`ScreenBasedSimulator/ScreenBasedSimulator`](https://github.com/ScreenBasedSimulator/ScreenBasedSimulator) | 🟡 `Apache-2.0`, `11,325 B` | `6` | 🔴 `2015-05-23` | `master` | Recorded for the family drift (`622-O`), refused on currency. |
+| [`resusio/simlab`](https://github.com/resusio/simlab) | 🔴 **no grant at `5` probes** | `2` | `2021-01-12` | `main` | `npm` says `MIT`; the tree grants nothing (`622-L`). |
+| [`TomMonks/treatment-centre-sim`](https://github.com/TomMonks/treatment-centre-sim) | 🟢 `MIT`, `1,066 B` | `6` | `2023-08-11` | `main` | Real and permissive; **out of scope** (hospital ops, not education). |
+
+### 🔵 Instrument state this week
+
+| Channel | Verdict | Fabricated control |
+|---|---|---|
+| `git ls-remote --symref` + `GIT_TERMINAL_PROMPT=0` | 🟢 open — existence, default branch, `HEAD` sha | 🟢 credential prompt, `1 of 1` |
+| `raw.githubusercontent.com` | 🟢 open — grant bytes | 🟢 `404` at `14 B`, `1 of 1` |
+| `gh api search/repositories -f q='repo:{slug}'` | 🟢 open — `spdx_id`, `★`, `pushed_at` | 🟢 `422`, `1 of 1` |
+| `curl -sI https://github.com/{slug}` | 🔴 **useless in both directions** (`622-A`) | 🔴 reports `PRESENT` for a fabricated slug under `head -1` |
+| `gh api repos/{slug}` | 🔴 refused by the **session's repo-scope gate**, not the proxy (`622-G`) | — |
+| `api.github.com` | 🔴 `403` at the proxy | — |
+
+🟢 Byte-read grants this pass: **`16`**. Channel B answered on `15` of them; **`14` agree**, the one
+disagreement explained (`622-H`). Permissive: `4` `MIT`, `1` `Apache-2.0`, `1` `BSD-3-Clause`.
+
 ## 🆕 `p621` — `2026-11-02` — **`p620`'s new channel is calibrated on the pass after it was adopted: it silently omits **forks** (proven) and returns `422` for **renamed** repos (proven by identical `HEAD` sha). Plus `4` curriculum-alignment primitives under `4` different licences.**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

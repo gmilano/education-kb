@@ -1,0 +1,7 @@
+slug	stars	api_spdx	bytes_verdict	reason_class
+anvc/scalar	244	NOASSERTION	NIL_5_PATHS	active-and-ungranted; NOASSERTION correct for once (614-E family)
+resusio/simlab	2	null	NIL_5_PATHS	package-registry-asserts-MIT-over-tree-with-no-grant (622-L, new shape)
+ScreenBasedSimulator/ScreenBasedSimulator	6	Apache-2.0	11325-complete-unfilled-appendix	currency: pushed 2015-05-23; digest called it MIT (622-O family drift)
+TomMonks/treatment-centre-sim	6	MIT	1066-stock-band	out-of-scope: hospital operations modelling, not clinical education
+libretexts/libretexts	-	-	-	ABSENT_OR_PRIVATE at ls-remote; hosted platform, not this address
+executablebooks/jupyter-book	-	422	1520-byte-identical	stale address: identical HEAD sha to canonical jupyter-book/jupyter-book (622-E)

@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — `2026-11-02` — **trends, each with the evidence that would refute it**
+
+### 🔴 `T622-1` — A licence is a *document*, not a token, and this is the first instance where every automated channel in use is blind to the term that matters
+
+**The claim.** The commercially decisive term in an education open-source licence is increasingly
+**not** the licence's name. `opendigitaleducation/entcore` names `AGPL-3.0` in a hand-written
+bilingual document and adds a requirement that the client's **home page** display a third party's
+name and backlink (`622-D`). Title-line grading reads `/////`; the stock byte band matches nothing;
+channel B returns `422`. **Three controls, three misses, and the term survives all of them.**
+
+**Why it is a trend and not an anecdote.** It is the terminal case of a direction this base has
+measured for six passes: `616-C` (README over-claims), `617-E` (README disowns its own grant),
+`618-E`/`619-U`/`622-O` (listings wrong about the *family*), `620-G` (a valid grant over somebody
+else's copyright), `621-F` (a placeholder body under a real title), `622-H` (the grant says it has
+exceptions, in a second file), `622-L` (a package registry asserting what the tree does not grant).
+**The grant and the reader have been drifting apart the whole time; `622-D` is where they stop
+overlapping at all.**
+
+**What would refute it.** A licence scanner that emits non-standard additional terms from a
+free-text payload. None of the three channels open here does.
+
+### 🟢 `T622-2` — The code grant and the content grant are independent, and the content side is where education deliverables actually die
+
+**The claim.** In education — uniquely among the sectors this programme covers — the *content* is
+the product: pictograms, meshes, simulations, textbooks. And the content carries its **own** grant,
+unrelated to the repository's. Three instances now, in three unrelated tiers:
+
+| Artefact | Code | Content | Verdict for paid client work |
+|---|---|---|---|
+| `PhET` (`620-I`) | `MIT` | 🔴 no grant | Blocked |
+| ARASAAC (`622-K`) | `MIT` (`Gobierno de Aragón`) | 🔴 `CC BY-NC-SA` | Blocked |
+| `human-atlas` (`622-N`) | `MIT` | 🟡 `CC BY 4.0` (channel-reported) | 🟢 Permitted with attribution |
+
+🔵 **The rule is the independence, not a direction.** `620-I` read as *"content is unlicensed"* and
+`622-K` would read as *"content is NonCommercial"*; both are over-fits. The transferable instruction
+is: **grade the content set as a separate artefact with its own probe**, because the answers range
+from free to fatal and the repository's `LICENSE` predicts neither.
+
+**What would refute it.** A tier where the content set's grant is reliably inherited from the
+repository's. Not found in three tiers.
+
+### 🔴 `T622-3` — Open-source education supply splits by **artefact class**, not by tier — toolchains permissive, platforms copyleft
+
+**The claim.** `618-N`/`619-K2` established *pedagogy permissive, administration copyleft*. This
+pass refines it with a cut that predicts better: the thing you **invoke in a build** is permissive;
+the thing you **run with accounts and workflow state** is copyleft or ungranted.
+
+Permissive toolchains: `quarto-cli` `MIT` `6,148★`, `jupyter-book` `BSD-3` `4,289★`,
+`sugar-toolkit-gtk3` `LGPL-2.1` (linkable). Copyleft/ungranted platforms: `pkp/omp` `GPL-3.0`,
+`pressbooks` `GPL`, `anvc/scalar` **ungranted at `244★` and active**, `entcore` `AGPL+branding`,
+`sugar` `GPL-3.0`, `iiab` `GPL-2.0` at `2,012★`. 🔴 One counter-instance, named:
+`rstudio/bookdown` is a `GPL-3.0` **toolchain**. 🟢 One the other way: `coko-foundation/ketty` is an
+`MIT` **platform** — at `8★`.
+
+🔵 **The commercial consequence inverts the usual intuition.** In education a studio should expect
+to **own the workflow layer and lease the render layer**, because the permissive supply is
+concentrated in the part that is cheapest to replace.
+
+**What would refute it.** A permissive, adopted (`>1,000★`), actively-maintained education platform
+with accounts and workflow. Six passes of legs have not produced one.
+
+### 🔴 `T622-4` — A national AI-education mandate is a procurement **risk**, not a procurement guarantee — and APAC has the first catalogued reversal
+
+**The claim.** Every regional section of this base has recorded mandates as demand signals. South
+Korea is the counter-example and it is severe: the National Assembly's **August 2025** amendment to
+the Elementary and Secondary Education Act **reclassified AI Digital Textbooks from "textbook" to
+"supplementary educational material"**, effective on promulgation — removing the legal *and*
+financial basis for their use. Through 2026: adoption rates collapsed, vendors restructured or
+exited, **`14` publishing firms protested outside the National Assembly**, civil suits were filed
+against the Education Ministry and a constitutional challenge is pending (reported `27 June 2026`).
+
+🔵 **Note the mechanism, because the commentary gets it wrong.** It was a **reclassification**, not a
+repeal — the product still exists, it just lost the statutory status that paid for it. A procurement
+built on *status* rather than on *outcome* is one amendment from zero.
+
+🔵 **This inverts the trend every other region supports** (`T620-4`, `T621-6`: adoption outruns
+governance). Here governance ran **ahead** of adoption, then withdrew.
+
+**What would refute it.** Evidence that Korean AIDT procurement recovered during 2026. The sources
+found say the opposite; the litigation outcome is unknown.
+
+### 🔴 `T622-5` — A methodological trend, eighth pass running: the central error is in the measuring instrument — and this pass caught its own ladder *and* its own oracle
+
+**The claim.** For eight consecutive passes the load-bearing finding has been a defect in how this
+base measures, not in what it measured. This pass:
+
+- 🔴 The **mandated** existence recipe fails in **both** directions, and the parse chooses which
+  (`622-A`) — `621-A` found one half, this pass found the half that looks like success.
+- 🔴 `621-B`'s own ladder rung is **refuted by the specimen `621-K` asked for** (`622-B`); the real
+  rule was the older one — grade the title line, never the filename.
+- 🔴 This pass's **own oracle extractor** accepts `github.com/topics/*` as a repository (`622-F`),
+  reproducing `607-C`, so every "new head name" count here is an upper bound.
+- 🔴 `619-F`'s *filled boilerplate* criterion is too strict and is narrowed (`622-N`).
+- 🔴 A **false generalisation** about the publishing tier was drafted and refuted by one more byte
+  read before it shipped (`622-J`).
+
+🔵 **The pattern worth stating:** four passes running, the ladder has gained rungs by being caught
+rather than by being designed (`620`: `LICENSE-MIT`, `packages/*/LICENSE`; `621`: `COPYING.LESSER`;
+`622`: `COPYING.md`, `COPYRIGHT`, minus `COPYING.LIB`). **A ladder of filenames cannot converge by
+enumeration.** The title-line read is the only rung that is not a guess.
+
+**What would refute it.** A pass whose load-bearing finding is about the sector rather than the
+instrument. There has not been one since `p614`.
+
+### 🟡 `T622-6` — Adoption has outrun governance everywhere measured, and the best number for it is now a *prohibition-failure* rate
+
+**The claim.** `T620-4`/`T621-6` held this on institutional-guidance counts. The sharper instrument
+arrived with this pass's dedicated leg on the Lumina–Gallup *State of Higher Education* study
+(released `2 April 2026`; n ≈ `4,000` associate and bachelor's students; fielded by web
+`2–31 October 2025`):
+
+- **`57 %`** of US college students use AI for coursework **at least weekly** (`20–21 %` daily)
+- 🔴 **`48 %`** of students at institutions that **discourage** AI use it weekly anyway
+- 🔴 **`27 %`** of students at institutions that **prohibit** it use it weekly anyway
+- Top uses: understanding coursework (`64 %` daily/weekly), checking homework answers (`60 %`)
+
+🔵 **That is a better instrument than a guidance count**, because it measures whether the governance
+*works* rather than whether it *exists* — and the answer is that a prohibition reduces weekly use by
+roughly half and eliminates nothing. **The product the sector will buy is accountability, not
+prevention** (`T619-1`), and `27 %` is the number that says so.
+
+🔴 **And the `>60 %` misquote is now on its third recurrence** (`619-K`, a fresh North-American
+digest this pass, and a second this pass) — see `622-R` in `intel/market.md`. The drift is a
+property of the channel population, not of one bad source.
+
+**What would refute it.** A study measuring compliance where restrictions are enforced technically
+rather than by policy. None found.
+
 ## 🆕 `p621` — `2026-11-02` — **trends, each with the evidence that would refute it**
 
 ### 🔴 `T621-1` — The licence *metadata* channel is now unreliable in **both** directions, and `NOASSERTION` is the value that proves it

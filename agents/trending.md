@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — `2026-11-02` — **the `52nd` consecutive global-leg nil with a `15 of 15` denominator, and the week's real supply is the medical-education tier the shelf had `0` mentions of**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated global legs: `15` head names, `15` held, `0` new — the **52nd** consecutive nil
+
+Proven row-by-row against a **`3,919`**-slug oracle built this pass from the live shelf files
+(`3,906` at `p621`; the oracle grew `13` addresses in one pass). 🔴 `3,919` is an **upper bound** —
+the extractor accepted one non-repository address (`622-F`).
+
+| Name returned by the mandated legs | Oracle |
+|---|---|
+| `microsoft/ai-agents-for-beginners` | 🔴 held |
+| `OPTIMETA/PAIDEIA` | 🔴 held |
+| `GarethManning/education-agent-skills` | 🔴 held |
+| `rohitg00/ai-engineering-from-scratch` | 🔴 held |
+| `rphilipzhang/AI-PhD-S26` | 🔴 held |
+| `MadsLorentzen/ai-job-search` | 🔴 held |
+| `speedyapply/2026-AI-College-Jobs` | 🔴 held |
+| `aneelv75/github-trending` | 🔴 held |
+| `pguso/agents-from-scratch` | 🔴 held |
+| `avinash201199/free-ai-agents-resources` | 🔴 held |
+| `ashishpatel26/500-ai-agents-projects` | 🔴 held |
+| `browser-use/browser-use` | 🔴 held |
+| `openeducat/openeducat_erp` | 🔴 held |
+| `moodle/moodle` | 🔴 held |
+| `Koha-Community/Koha` | 🔴 held |
+
+🔵 `614-I`'s reading, now on its cleanest specimen: the nil **measures the legs**. The same session
+and hour, pointed at tiers named from this shelf's own census holes, returned `17` head names and
+`17` new.
+
+### 🟢 New this week — the medical-education tier, `0` mentions before this pass
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | Note |
+|---|---|---|---|---|---|
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 `MIT`, `1,064 B` | `4,455` | `2026-09-06` | Global | `2,234` selectable `BodyParts3D` meshes in the browser. 🔴 Mesh licence separate (`622-I`). |
+| [`biocat-ugent/Open-Anatomy-Explorer`](https://github.com/biocat-ugent/Open-Anatomy-Explorer) | 🟢 `Apache-2.0`, `11,357 B` stock | `13` | `2025-09-09` | EMEA | OPANEX, Ghent University: atlas viewer + quiz authoring + cross-institution model sharing. |
+| [`ScreenBasedSimulator/ScreenBasedSimulator`](https://github.com/ScreenBasedSimulator/ScreenBasedSimulator) | 🟡 `Apache-2.0`, `11,325 B` | `6` | 🔴 `2015-05-23` | Global | 🔴 `REFUSE` on currency. Listed because the digest called it `MIT` and it is not (`622-O`). |
+
+### 🟢 New this week — the publishing toolchain, and a correction to a `4,289★` address
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Note |
+|---|---|---|---|---|
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | 🟢 `MIT` in **`COPYING.md`** | `6,148` | `2026-11-02` | 🔴 Channel B says `NOASSERTION`; `COPYRIGHT` notes **exceptions** (`622-H`). |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | 🟢 `BSD-3-Clause`, `1,520 B` | `4,289` | `2026-11-02` | 🔴 **Canonical address.** `executablebooks/jupyter-book` is the same repository — identical `HEAD` sha — and must not be cited (`622-E`). |
+| [`coko-foundation/ketty`](https://github.com/coko-foundation/ketty) | 🟢 `MIT`, `1,066 B` | `8` | `2026-03-19` | The only permissive publishing *platform* found (`622-J`). |
+
+### 🟢 New this week — from the Spanish-language leg, and it is Iberian rather than LATAM
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | Note |
+|---|---|---|---|---|---|
+| [`juanda99/arasaac-frontend`](https://github.com/juanda99/arasaac-frontend) | 🟢 `MIT`, `1,084 B` | `16` | `2026-10-24` | EMEA | Holder line reads `Gobierno de Aragon` — region placed on the **grant**, not a timezone (`622-K`). 🔴 The ARASAAC **pictograms** are `CC BY-NC-SA`. |
+
+### 🔴 Refused this week, with the reason attached
+
+| Address | Verdict | Reason |
+|---|---|---|
+| [`anvc/scalar`](https://github.com/anvc/scalar) | 🔴 `BLOCK — NO GRANT` | No payload at `5` probes; channel B `NOASSERTION` **correctly** (`622-J`). `244★`, active. |
+| [`resusio/simlab`](https://github.com/resusio/simlab) | 🔴 `BLOCK — REGISTRY DRIFT` | `npm` publishes it `MIT`; repo has no payload at `5` probes, channel B `null` (`622-L`). |
+| [`iiab/iiab`](https://github.com/iiab/iiab) | 🟡 `GPL-2.0`, `18,092 B` | Internet-in-a-Box, `2,012★`, pushed today — the offline-distribution leader and **copyleft**. |
+| [`pkp/omp`](https://github.com/pkp/omp) | 🟡 `GPL-3.0`, `35,149 B` | Real grant, copyleft; bounds delivery, not usefulness. |
+| [`rstudio/bookdown`](https://github.com/rstudio/bookdown) | 🟡 `GPL-3.0`, `35,130 B` | Superseded by Quarto from the same publisher. |
+| [`sugarlabs/sugar`](https://github.com/sugarlabs/sugar) | 🟡 `GPL-3.0` | Shell. Use the `LGPL-2.1` toolkit instead (`622-C`). |
+| [`TomMonks/treatment-centre-sim`](https://github.com/TomMonks/treatment-centre-sim) | 🔴 `REFUSE — OUT OF SCOPE` | `MIT`, `1,066 B`, real — but hospital **operations** modelling, not clinical education. |
+| `executablebooks/jupyter-book` | 🔴 `REFUSE — STALE ADDRESS` | Same repository as the canonical row; identical `HEAD` sha (`622-E`). |
+| `libretexts/libretexts` | 🔴 `REFUSE — ABSENT` | `ABSENT_OR_PRIVATE` via `ls-remote`. LibreTexts is a hosted platform, not that address. |
+
+### 🔴 Dead addresses found on this base's own live shelves
+
+`jaipuriaailabs/moodle-mcp`, `thanh01pmt/interactive-quiz-kit`, `vargontoc/educational-framework` —
+`ABSENT_OR_PRIVATE` on **three** probes each. `topics/qti` is not a repository. `3` dead and `2`
+non-canonical in an `80`-address sample: see `622-F`.
+
 ## 🆕 `p621` — `2026-11-02` — **the `51st` consecutive global-leg nil, and the week's real supply is a tier the shelf had `1` mention of: `6` AAC runtimes, `3` grants permissive, `3` copyleft, and the active ones are all the copyleft ones**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

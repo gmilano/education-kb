@@ -1,0 +1,11 @@
+slug	channel_b	ls_remote	class
+# systematic sample: every 49th address of the 3,919-slug oracle extracted from the live shelves = 80 addresses
+# 74 of 80 returned channel_b total_count=1 and are omitted; the 6 misses are enumerated
+bnsoftware/lti-1p3-tool	0	PRESENT master 7e9b1bafa3cf	NOT-CITABLE-AS-CANONICAL
+opendigitaleducation/entcore	422	PRESENT master 933435ba7acc	NOT-CITABLE-AS-CANONICAL
+jaipuriaailabs/moodle-mcp	422	ABSENT_OR_PRIVATE x3 probes	DEAD
+thanh01pmt/interactive-quiz-kit	422	ABSENT_OR_PRIVATE x3 probes	DEAD
+vargontoc/educational-framework	422	ABSENT_OR_PRIVATE x3 probes	DEAD
+topics/qti	422	n/a	NOT-A-REPOSITORY - defect in this pass's own oracle extractor (607-C recurrence)
+# rates: canonical 74/80 = 92.5% | dead 3/79 = 3.8% | non-canonical 2/79 = 2.5% | extractor defect 1/80
+# bounds: ABSENT_OR_PRIVATE conflates deleted/renamed-away/private (p293); channel B omits forks (621-M)

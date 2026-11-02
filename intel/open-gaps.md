@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — `2026-11-02` — **🟢 TWO OF `621-R`'s FIVE ITEMS CLOSE WITH MEASUREMENTS AND ONE CLOSES BY BEING **REFUTED**; 🔴 THE BASE'S OWN CITATION DECAY IS NOW A NUMBER AND IT IS THE LARGEST OPEN DEFECT ON THESE SHELVES**
+
+### 🟢 `622-B` — CLOSED, by refutation: `621-K` item `1` / `621-R` item `2`, the `COPYING.LIB` rung
+
+🟡 **Asked:** *"Ladder `v3` is carried on one instance … A future pass should find an `LGPL-2.1` tree
+or retire the rung."* 🟢 **Answered: both.** `sugarlabs/sugar-toolkit-gtk3` is an `LGPL-2.1` tree, and
+it ships the complete `LGPL-2.1` in **`COPYING`**, with `COPYING.LESSER` and `COPYING.LIB` **`404`**.
+🔵 `LGPL-2.1` is a standalone text; only `LGPL-3.0` needs the `GPL`+`LESSER` pair. **`COPYING.LIB` is
+retired at `0` instances in two passes of looking**, and the `LESSER`-sibling probe is narrowed to
+fire only when `COPYING`'s title reads plain `GNU GENERAL PUBLIC LICENSE`. See `622-B`.
+
+### 🟢 `622-E` — CLOSED: `621-R` item `5`, the rename instrument
+
+🟡 **Asked:** *"A sweep comparing shelved slugs' `HEAD` shas against their canonical successors is the
+instrument, and it does not exist yet."* 🟢 **Built, calibrated on a live instance, committed as
+`scratchpad/p622/rename-probe.sh`.** `executablebooks/jupyter-book` and `jupyter-book/jupyter-book`
+return the **identical** `HEAD` sha `526cfa7e76db`; channel B answers `1` for the second and `422`
+for the first. 🔵 Rule: **`ls-remote` `PRESENT` + channel B `422`/`0` ⇒ not citable as canonical**;
+identical `HEAD` sha against a candidate successor ⇒ **rename, proven**. 🔴 **Bound:** this session
+cannot *name* the successor from the stale address — `gh api repos/{slug}`, which returns
+`full_name`, is refused by the session's repo-scope gate (`622-G`).
+
+### 🟢 `622-K` — CLOSED, and the hypothesis is rejected: `621-R` item `3`, the Spanish/Portuguese legs
+
+🟡 **Asked:** *"`p622` must re-run this pass's three tiers in Spanish and Portuguese. LATAM placed `0`
+of `22` … The nil is probably an artefact of language, not of the region."* 🔴 **Run, and the
+hypothesis does not hold.** Three legs over AAC, vocational/apprenticeship and curriculum mapping
+returned **one** new repository — `juanda99/arasaac-frontend`, whose grant names **`Gobierno de
+Aragón`**, i.e. **EMEA**. The Portuguese leg returned **no repository at all**. 🔵 **The
+Spanish-language supply in these tiers is Iberian, not Latin American**, and `620-C`'s successful
+Spanish leg does not generalise across tiers. Recorded as a measured gap in `intel/market.md`
+(LATAM), not as silence.
+
+🟢 **A method gain came out of it that is worth more than the row:** the placement rests on the
+**copyright holder named inside the byte-read grant**, which is institutional and free — not on
+committer timezone, the evidence class `gate-offset-region` exists to constrain. **When a grant names
+an institution, the region field is a read, not an inference.**
+
+### 🟡 `622-K2` — PARTIALLY CLOSED: `621-K` item `2` / `621-R` item `4`, the timezone-placed rows
+
+🟡 `621-K` flagged four rows placed on committer timezone offset and vocabulary: `FreeAAC`→EMEA,
+`sproutaac`→North America, `PSICAS`→EMEA, `CAME`→EMEA. 🟢 **None of those four was confirmed this
+pass.** What changed is that the *method* for confirming them now has a demonstrated instance
+(`622-K`): read the grant's holder line. 🔴 **Three remain institutionally unconfirmed and are
+carried forward** (the ARASAAC row is a new row, not one of the four). `gate-offset-region` still has
+no green run against them.
+
+### 🔴 `622-F` — NEW, and it is the largest open defect on these shelves: measured citation decay
+
+An `80`-address systematic sample of the `3,919`-slug oracle: **`3` dead** (`3.8 %`), **`2` not
+citable as canonical** (`2.5 %`), **`1` not a repository at all**. Named:
+
+| Address | Class |
+|---|---|
+| `jaipuriaailabs/moodle-mcp` | 🔴 DEAD — `ABSENT_OR_PRIVATE` on `3` probes |
+| `thanh01pmt/interactive-quiz-kit` | 🔴 DEAD — `ABSENT_OR_PRIVATE` on `3` probes |
+| `vargontoc/educational-framework` | 🔴 DEAD — `ABSENT_OR_PRIVATE` on `3` probes |
+| `bnsoftware/lti-1p3-tool` | 🔴 NOT CITABLE AS CANONICAL — `PRESENT`, channel B `0`. Grant real (`Apache-2.0`, `11,343 B`) |
+| `opendigitaleducation/entcore` | 🔴 NOT CITABLE AS CANONICAL — `PRESENT`, channel B `422`. Grant read in full (`622-D`) |
+| `topics/qti` | 🔴 NOT A REPOSITORY — defect in **this pass's own** extractor, reproducing `607-C` |
+
+🔴 **Extrapolated, that is on the order of `150` dead and `98` stale addresses carried across these
+shelves.** The instrument to enumerate them exists (`622-E`) and the sweep is **unrun**: `3,919`
+channel-B calls plus `ls-remote` on the misses. 🟡 Both rates are **upper bounds** —
+`ABSENT_OR_PRIVATE` conflates deleted, renamed-away and private (`p293`), and channel B silently
+omits forks (`621-M`).
+
+### 🔴 `622-M2` — REOPENED WITH A CORRECTED MECHANISM: `621-R` item `1`, the gate suite
+
+🔴 `621-R` called re-running `make hooks` the *"highest-priority action for `p622`"*. It was refused
+again (`[Code from External]`). 🟢 **But the standing explanation is wrong, and `620-S` is the
+disproof: `p620` executed all `70` gates over this same clone.** Code provenance was identical, so
+`618-B`'s provenance theory cannot be the mechanism — **the variable is the session's permission
+set**. Sequence: `p617` ✗, `p618` ✗, `p619` ✗, `p620` ✓, `p621` ✗, `p622` ✗.
+
+🔵 **Consequence for how this is carried:** it is a **lottery**, not a bound. `p623` should attempt
+`make hooks` **first**, because an executing session is the scarce resource. 🔴 `gate-declared-gap`
+and `gate-region-headings` are owed reconciliation across **two** unverified commits (`p621`,
+`p622`). This pass checked the two contracts whose violations reading cannot see by **reimplementing
+`p383`'s published contract as code** — `1` canonical block, children exactly
+`North America / EMEA / APAC / LATAM / Global` — and nothing else.
+
+🟡 **The structural fix is proposed, not built.** `622-M2` in `compose/patterns.md` specifies a
+`.github/workflows/gates.yml` that would run `make hooks` on every push and end the lottery.
+🔴 **It was deliberately not created in this run**, which is a scope decision rather than a
+technical obstacle: adding CI to this repository is outside what this run was asked to change.
+`p623` must not assume it exists.
+
+### 🔴 `622-S2` — NEW, carried forward
+
+1. **The oracle extractor accepts `github.com/topics/*` as a slug** (`622-F`). Add a path-segment
+   deny-list (`topics`, `orgs`, `sponsors`, `features`, `collections`) before any pass quotes a slug
+   count again. **`3,919` is an upper bound.**
+2. **`human-atlas`'s mesh licence is channel-reported, not byte-read** (`622-I`). `CC BY 4.0` vs a
+   `CC BY-SA` Japan variant differ on share-alike, and the meshes are the deliverable.
+3. **Quarto's `COPYRIGHT` exceptions are unenumerated** (`622-H`). The row ships as *`MIT` with
+   exceptions noted*; which files they cover was not read.
+4. **No licensed OSCE/examination-logistics platform could be found** (`622-N3`). Two legs, one
+   vendor page with no licence and no repository, one intranet-only Windows tool. An informed gap,
+   consistent with `exam logistics` returning `0` in the census.
+5. **LATAM has no education-specific AI adoption instrument newer than an August–October 2025
+   fielding** (`intel/market.md`, LATAM). The IDB's `2025`/`2026` instruments measure enterprises and
+   startups; conflating them with education is the error `619-N` warned about.
+6. **Australia's AI-in-education framework is still undated on this base** — `619-P`'s gap,
+   unresolved for a fourth pass.
+
 ## 🆕 `p620` — `2026-11-02` — **🟢 `619-L` CLOSES AFTER THREE PASSES: INSTRUMENTS **DO** EXECUTE IN THIS SESSION, `70` GATES RAN, AND `gate-region-headings` CAUGHT TWO REAL DEFECTS IN THIS PASS'S OWN FILE THAT READING HAD MISSED. 🔴 AND THE PASS'S WORST FINDING IS ABOUT ITSELF: **THREE** OF ITS HEADLINE DISCOVERIES ARE RE-DISCOVERIES OF GATES THIS REPOSITORY ALREADY OWNS AND HAS WIRED. SIX REGISTERED (`620-S`…`620-X`).**
 
 ### 🟢 `620-S` — CLOSED: `619-L` / `618-B` / `617-J` — code from this clone executes, and the gates are green-run for the first time in four passes

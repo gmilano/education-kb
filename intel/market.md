@@ -4,6 +4,232 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — reads `2026-11-02` — market map and regional placement, **and this pass's regional result is a national mandate being withdrawn by statute**
+
+### 🟡 Market size — unchanged in shape, and the spread remains the only honest finding
+
+| Source class | `2026` figure for *AI in education* | Note |
+|---|---|---|
+| Vendor report A | `US$ 11.4 B` (→ `US$ 57.2 B` by `2033`) | — |
+| Vendor report B | `US$ 6.4 B` for `2025` | Different base year |
+| Vendor report C | `US$ 3.7 B` (→ `US$ 14.1 B` by `2033`) | — |
+| Regional split (vendor) | North America `36 %` of global, `US$ 3.68 B` in `2026`; a second source says `38 %` share in `2025` | Share vs growth rate conflated across sources |
+| Segment (vendor) | K-12 ≈ `34 %` share in `2026` | — |
+
+🔴 **A `3×` spread between vendor definitions is not a market size.** `619-O`'s standing limit
+applies to every row above: these are directional, they are not reconciled, and none should be
+quoted to a client without its definition attached. 🔵 The figures that *are* citable on this page
+are the instrument-backed ones in the regional sections below — a survey with a sample and a
+fielding window, or a dated policy instrument.
+
+### 🟢 Players and market map
+
+🔵 Unchanged in structure from `p621`, with the supply-side additions this pass placed.
+
+| Layer | Who is in it | Open-source position after this pass |
+|---|---|---|
+| Publishing / courseware build | Posit (Quarto), Jupyter Book community, Coko Foundation, PKP, Pressbooks | 🟢 **Permissive at the toolchain** (`MIT`, `BSD-3`), 🔴 copyleft at the platform (`622-J`) |
+| Learner desktop / 1:1 estates | Sugar Labs, OLPC successor deployments, Internet-in-a-Box | 🟡 `LGPL-2.1` toolkit, `GPL-3.0` shell, `GPL-2.0` distribution (`622-C`) |
+| Public-sector portal / ENT | Edifice (ENT Core), regional French systems, Apereo orgs | 🔴 `AGPL-3.0` **plus a homepage branding obligation** (`622-D`) |
+| AAC / accessibility | ARASAAC (Gobierno de Aragón), Global Symbols, CoughDrop/SweetSuite | 🟢 `MIT` code, 🔴 `CC BY-NC-SA` symbol sets (`622-I`) |
+| Medical / clinical education | Ghent University (OPANEX), BodyParts3D community | 🟢 Two permissive viewers, 🔴 **no licensed OSCE platform** (`622-N3`) |
+| Institutional AI governance | OECD, European Commission / European Digital Education Hub, UNESCO IESALC, Lumina–Gallup | The demand-side instruments; see regions |
+
+### 🔴 `622-R` — the `>60 %` drift is on its **third** recurrence, and it is now a property of the channel population
+
+🔴 `619-K` caught a digest reporting *">`60 %` of college students use AI weekly"* where the
+instrument says **`57 %`**. This pass's **North American** leg returned the same `>60 %` claim from a
+different newsletter, and a second digest collapsed *"roughly half discourage or prohibit"* out of two
+distinct figures again. 🟢 A dedicated leg settles it: Lumina Foundation–Gallup *State of Higher
+Education*, released **`2 April 2026`**, n ≈ **`4,000`** associate and bachelor's students, fielded by
+web **`2–31 October 2025`** — **`57 %`** weekly, `20–21 %` daily, **`48 %`** weekly at institutions
+that *discourage*, **`27 %`** weekly at institutions that *prohibit*.
+
+🔵 **Three independent recurrences is no longer a bad source — it is the population.** The `>60 %`
+figure propagates because it is rounder and because the two restriction categories are easier to
+quote merged. 🟢 Operative, carried from `619-K` and now justified by frequency: **every statistic
+and every dated instrument gets its own leg before it is written down**, and a figure that appears in
+three digests is not thereby confirmed — it is thereby suspect.
+
+### 🔴 `622-Q` — the regional finding of the pass: a national mandate withdrawn by statute, and it inverts this base's standing trend
+
+🔴 South Korea reclassified **AI Digital Textbooks** from *textbook* to *supplementary educational
+material* by amendment to the Elementary and Secondary Education Act, **August 2025**, effective on
+promulgation — removing the legal and financial basis for classroom use. Through 2026: adoption
+collapsed, vendors restructured or exited, `14` publishers protested at the National Assembly, suits
+were filed against the Education Ministry, a constitutional challenge was reported pending
+`27 June 2026`. 🔵 **A reclassification, not a repeal** — the product survived and its funding
+mechanism did not.
+
+🟢 **Why it belongs on the market page rather than only in trends:** every other region on this
+page treats a mandate as a demand signal. This is the first instance in `622` passes of a mandate
+becoming a **liability**, and it changes how a mandate-driven proposal should be priced
+(`P622-5`). 🔴 It also means APAC's quotable instruments and APAC's *bankable* instruments are not
+the same set — the distinction `T620-3` drew for policy now has a financial case behind it.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The instrument that should anchor a US higher-education conversation**, because it measures
+whether governance works rather than whether it exists — Lumina Foundation–Gallup *State of Higher
+Education* (released `2 April 2026`; n ≈ `4,000` associate and bachelor's students; fielded by web
+`2–31 October 2025`):
+
+- **`57 %`** use AI for coursework **at least weekly**; `20–21 %` daily
+- 🔴 **`48 %`** at institutions that **discourage** AI still use it weekly; **`27 %`** at institutions
+  that **prohibit** it still use it weekly
+- Top uses: understanding coursework `64 %`, checking homework answers `60 %` (daily or weekly)
+
+🟡 **Policy volume, from this pass's legs and not independently verified:** `134` bills tracked
+across `31` states on AI in education as of **March 2026** (privacy, classroom restrictions,
+curriculum); a US Department of Education **`US$ 169 M`** FIPSE award round including responsible-AI
+use. 🔴 One digest's claim that **`86 %`** of educational organisations in the region have adopted
+generative AI is a vendor figure an order of magnitude out of line with every other instrument here
+— **do not quote it**.
+
+🟢 **Opportunity, specific:** the `27 %` figure is a *compliance-evidence* brief, not a blocking
+brief. The sellable product is disclosure-and-accountability workflow around work students are
+already submitting — `P622-2` wires it. 🟢 **Second opportunity:** the accessibility-remediation
+engagement `P621-1` opened now has a permissive medical/anatomy content channel beside it
+(`622-N`), which matters for nursing and allied-health programmes under the same ADA deadlines.
+
+🔴 **Supply gap placed here:** `anvc/scalar` (USC Alliance for Networking Visual Culture) is the
+region's media-rich scholarly publishing platform, is actively developed at `244★`, and **grants
+nothing** — so the region's most distinctive publishing asset cannot be built on (`622-J`).
+
+### EMEA
+
+🟢 **The dated instrument, with its date finally bounded.** The European Commission's updated
+*Ethical guidelines on the use of AI and data in teaching and learning* is a **March 2026**
+publication — second edition, first was `2022`, non-binding, produced by the Working Group on the
+Ethical Use of AI and Data in Education convened through the **European Digital Education Hub**, and
+released as a package of **four** guidelines (AI/data ethics, digital literacy, digital content,
+computer science). 🔴 **Sources give three different days in that month — `5`, `10` and `17 March
+2026` — and the document itself is marked `2026` with the manuscript completed November 2025.**
+🔵 Operative, strengthened from `619-K`: **cite the month and the instrument, never the day**, unless
+the primary document has been read.
+
+🟡 **Not verified, flagged:** commentary blogs state the EU AI Act's high-risk obligations touching
+education apply from `2 August 2026`. No primary source was reached this pass. **Do not put a date on
+an AI Act obligation in a client deliverable from this page.**
+
+🟡 **Funding signals from one newsletter, single-source:** three Advanced Digital Skills grant
+agreements worth **`€25.4 M`**; a UK AI Adoption Summit (`8 June`) committing **`£200 M+`**
+(`£100 M` expanding Bridge AI, `£53 M` regional).
+
+🟢 **Africa and the Middle East, placed here and dated — the part of EMEA this base had left as "the
+EU":**
+
+- **South Africa:** the national AI policy framework envisages AI in curricula from basic to tertiary
+  education; a draft national AI policy was expected in the *Government Gazette* in **March 2026**
+  with finalisation in FY **2026–27**. **North-West University became the first South African
+  university with an official AI policy, January 2026.**
+- **Nigeria:** the federal government directed the Nigerian Educational Research and Development
+  Council (NERDC) to integrate robotics and AI into the **primary** curriculum; an earlier analysis
+  calls the education application *aspirational rather than systemic*.
+- **Kenya:** 🔴 **written down as a gap.** The ICT ministry told parliament it was working with the
+  Communications Authority on curriculum integration, and a lawmaker's question indicated **no formal
+  policy exists**; **no Kenyan public university has adopted a written AI policy.**
+
+🟢 **Opportunity, specific:** the accreditation-evidence engagement (`P621-2`) is now backed by a
+permissive render layer (`622-J2`) and a permissive, institutionally-attributable AAC channel
+(`juanda99/arasaac-frontend`, `Gobierno de Aragón`) — but 🔴 the ARASAAC **pictograms are
+`CC BY-NC-SA`**, so a paid deliverable must substitute a commercially licensed symbol set.
+`P622-1` wires that substitution explicitly rather than hiding it.
+
+🔴 **Supply constraint placed here:** ENT Core — the French school-portal system of record — is
+`AGPL-3.0` **plus a "powered by Edifice" homepage-attribution requirement** (`622-D`). Any EMEA
+public-sector portal engagement that touches it must price that term in at proposal time.
+
+### APAC
+
+🔴 **The region's finding this pass is a reversal, and it is the first in this base's record.**
+South Korea's National Assembly passed an amendment to the Elementary and Secondary Education Act in
+**August 2025** that **reclassified AI Digital Textbooks (AIDT) from "textbook" to "supplementary
+educational material"**, effective on promulgation — removing the legal and financial basis for
+their classroom use. The Education Ministry's proposed sunset clause (use permitted until February
+2026) was opposed by lawmakers. Through 2026: adoption collapsed, vendors restructured or exited,
+**`14` publishing firms protested outside the National Assembly**, companies filed suit against the
+Education Ministry, and a constitutional challenge was reported pending on `27 June 2026`.
+🔵 **Mechanism matters: a reclassification, not a repeal.** Korea's wider commitment continues —
+roughly **`US$ 960 M` through 2030** for AI talent centres and vocational high schools.
+
+🟢 **Two further dated national instruments:**
+
+- **China:** Ministry of Education *Guidance on Strengthening AI Education in Primary and Secondary
+  Schools*, **November 2024**; separate **non-binding** generative-AI guidelines issued mid-May,
+  framed as encouraging experimentation rather than binding rules.
+- **India:** Ministry of Education (Department of School Education and Literacy) AI mandate dated
+  **29 October 2025**; **AI and Computational Thinking entering the curriculum from Class 3 in the
+  2026–27 academic year**, with textbooks and teacher training planned. 🔵 Education sits on the
+  **Concurrent List**, so states and union territories own the AI-lab build-out — which makes the
+  buying unit a **state**, not the union government.
+
+🟡 **Governance context:** the ASEAN Guide on AI Governance and Ethics remains early-stage, so
+compliance is per-jurisdiction; Australia ties public-sector AI agent growth to a National AI Plan
+and new Chief AI Officers. 🔴 **Australia's AI-in-education framework is still undated on this
+base** — `619-P`'s gap stands, unresolved for a fourth pass.
+
+🟢 **Opportunity, specific:** India's Class-3 mandate with state-level execution is a
+**multi-tenant curriculum-alignment and teacher-training** engagement, and `621-J`'s four
+curriculum-mapping trees plus `622-J2`'s permissive render layer are the components. 🔴 **Korea is
+the counter-brief:** price a mandate-driven engagement against statutory risk, and prefer outcome
+contracts over status-dependent ones (`T622-4`).
+
+### LATAM
+
+🔴 **The repository nil in this pass's three tiers is real, and it is not a language artefact — which
+is the question `621-R` assigned to this pass.** Three Spanish- and Portuguese-language legs ran over
+AAC, vocational/apprenticeship and curriculum mapping. They returned **one** new repository, and it
+is **Iberian**: `juanda99/arasaac-frontend`, whose grant names `Gobierno de Aragón` (`622-K`). The
+Portuguese leg returned **no repository at all**. 🔵 **So the Spanish-language supply in these tiers
+exists and is Spanish, not Latin American.** Written down as a measured gap, not left silent.
+
+🟢 **The region's standing education instrument is unchanged and still the best one:** UNU /
+UNESCO IESALC (`1 September 2026`; `200` institutions, `19` countries, fielded August–October 2025;
+peer-reviewed twin DOI `10.54674/ess.v37i2.1278`) — **`55 %`** of universities have no specific AI
+budget, **public** universities fund AI at **`4 %`**, and **`90 %`** of those teaching with AI use
+general-purpose tools.
+
+🔴 **And a gap that must not be filled with the wrong instrument.** This pass's LATAM leg surfaced
+two IDB publications — *fAIr Tech Radar* (**November 2025**, with IDB Lab, NTT DATA and Universidad
+de los Andes) and *Startups x AI* (**May 2026**, `85 %` generative / `75 %` predictive adoption) —
+plus an IDB estimate that broad AI adoption could raise regional GDP by **`5.1 %`** over a decade.
+🔵 **None of the three is an education instrument**: two measure enterprises and startups, one
+measures GDP. **LATAM still has no education-specific AI adoption measurement newer than an
+August–October 2025 fielding**, and conflating the enterprise figures with education is exactly the
+error `619-N` warned about.
+
+🟡 **Structural constraints, consistent across sources:** regulation is fragmented and no country has
+a mature harmonised AI regime; policy is described as a patchwork of pilots vulnerable to
+administration change; UNESCO warns of a severe regional teacher shortage; and effectiveness depends
+on device and connectivity access that remains uneven, with a public/private divergence risk.
+
+🟢 **Opportunity, specific and it is the one asset the region actually owns:** the Sugar/one-laptop
+estate. Extend it through `LGPL-2.1` `sugarlabs/sugar-toolkit-gtk3` — proprietary activities may
+link it — and do **not** fork the `GPL-3.0` shell (`622-C`). Paired with the `4 %` budget figure,
+the engagement that fits is *additive and offline-capable*, not a migration: `P622-3` wires it.
+
+### Global
+
+🔵 **Findings that are not region-bound and should not be filed as if they were.**
+
+- 🔴 **`622-D`: a licence can be a bespoke document.** Any engagement anywhere that inherits an
+  open-source education platform must read the licence payload in full, because the obligations that
+  end deals — homepage branding, backlinks, content carve-outs — are invisible to every licence
+  scanner. This is a **standard delivery step**, not a regional note.
+- 🔴 **`622-I`: the content grant is a separate question from the code grant**, with answers ranging
+  from `CC BY 4.0` (fine) through `CC BY-NC-SA` (fatal for paid work) to no grant at all.
+- 🟢 **`622-J`: permissive supply is concentrated in toolchains, copyleft in platforms** — so plan to
+  own workflow and lease rendering.
+- 🔴 **`622-F`: this base's own citation decay is measured** — `3.8 %` dead, `2.5 %` non-canonical in
+  an `80`-address sample of `3,919`. Any slide built from these shelves should have its addresses
+  re-probed on the day it is built; the instrument costs two commands (`622-E`).
+- 🟡 **OECD *Digital Education Outlook 2026*** argues AI helps learning only where **pedagogy stays
+  in control** — the framing `T618-4` identified as the emerging procurement test, and the one line
+  on this page that every region's buyers repeat back.
+
 ## 🆕 `p621` — reads `2026-11-02` — market map and regional placement, **and this pass inverts `p620`'s result: LATAM returned the most placeable supply last pass and returned `0` rows this one, while North America and EMEA took every placed row**
 
 🔵 Every figure below is attributed, and figures from vendor blogs or market-research marketing
@@ -35,7 +261,7 @@ against: `LTI 1.3`, `xAPI`, Open Badges, and the OECD's 2026 *Digital Education 
 recommendation of **purpose-built educational AI over general-purpose tools** — a recommendation
 that reads as direct procurement cover for exactly the work a studio sells.
 
-## Opportunities by region
+## Opportunities by region — `p621` (archived)
 
 ### North America
 

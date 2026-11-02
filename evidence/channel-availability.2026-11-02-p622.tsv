@@ -1,0 +1,8 @@
+endpoint	result	fabricated_control	note
+git ls-remote --symref https://github.com/SLUG HEAD	200-equivalent	credential prompt 1/1	existence + default branch + HEAD sha; GIT_TERMINAL_PROMPT=0 required
+raw.githubusercontent.com/SLUG/BRANCH/FILE	200	404 at 14 B 1/1	grant payload byte-for-byte
+gh api -X GET search/repositories -f q=repo:SLUG	200	422 1/1	spdx_id, stars, pushed_at, fork, description; omits forks (621-M); 422 on renames
+curl -sI https://github.com/SLUG	403 (line 1 = proxy 200 Connection Established)	reports PRESENT for fabricated slug	USELESS IN BOTH DIRECTIONS (622-A)
+gh api repos/SLUG	403	-	refused by SESSION repo-scope gate, not the proxy, not GitHub (622-G)
+api.github.com/repos/SLUG	403	-	refused at the proxy
+make hooks / python3 FILE-FROM-CLONE	denied [Code from External]	-	session-dependent, NOT provenance: p620 executed all 70 gates (622-M2)

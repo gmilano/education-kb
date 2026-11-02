@@ -4,6 +4,211 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — reads `2026-11-02` — **five recipes, every component byte-read today or already shelved and re-probed, plus the structural answer to a control debt that has now failed to discharge four passes running**
+
+### 🔴 `P622-0` — Read the licence payload in full, before anything else — `0.5` wk, and it is not optional
+
+🔵 **This is the step `622-D` created and it is cheap enough to have no excuse.** For every
+component in every recipe below, and every component in every recipe this base has ever published:
+
+1. `git ls-remote --symref https://github.com/{slug} HEAD` with `GIT_TERMINAL_PROMPT=0` → existence
+   and the **real** default branch. 🔴 Never `curl -sI github.com/{slug}` — it is uninformative in
+   both directions and the parse picks the error (`622-A`).
+2. Walk ladder `v4` at `raw.githubusercontent.com/{slug}/{branch}/`: `LICENSE`, `LICENSE.md`,
+   `LICENSE.txt`, `LICENCE`, `LICENSE-MIT`, **`COPYING.md`**, **`COPYRIGHT`**, `COPYING.LESSER`,
+   `COPYING`. (`COPYING.LIB` retired — `622-B`.)
+3. **Read the title line of every payload that answers `200`**, then **read the whole payload** if
+   the title does not match a known licence title. This is the step that catches
+   `AGPL + homepage branding` (`622-D`), `MIT with exceptions noted` (`622-H`) and a placeholder body
+   under a real title (`621-F`).
+4. Fire the `LESSER`-sibling probe **only** if `COPYING`'s title reads `GNU GENERAL PUBLIC LICENSE`
+   without `LESSER`.
+5. Cross-check `gh api search/repositories -f q='repo:{slug}'`. 🔴 Disagreement is **not** resolved
+   in the channel's favour: `4` of this base's `NOASSERTION` verdicts were wrong against real grants.
+6. 🔴 **Probe the content set separately** (`622-I`). Pictograms, meshes, simulations and textbook
+   bodies carry their own grants, and that is where paid deliverables fail.
+7. Run one **fabricated** slug through every channel in the same batch (`616-D`). `3 of 3`
+   discriminated this pass.
+
+**Deliverable:** a licence register with one row per component carrying grant, byte count, branch,
+content-set grant, and **additional obligations in prose**. The last column is the one that has no
+automated source.
+
+### 🟢 `P622-1` — Permissive AAC channel for a paid EMEA accessibility programme (`8`–`10` wk)
+
+🔴 **The problem this solves, stated honestly:** `621-E` found no actively-maintained permissive AAC
+runtime, and `622-K` found that the sector's reference **symbol set** — ARASAAC — is
+`CC BY-NC-SA`. So a *paid* deliverable cannot ship either the maintained runtimes (copyleft) or the
+default vocabulary (NonCommercial). This recipe routes around both, explicitly.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`juanda99/arasaac-frontend`](https://github.com/juanda99/arasaac-frontend) | `MIT`, `1,084 B`, holder `Gobierno de Aragón` | 🟢 The **code** reference: a real, government-published AAC portal front end to read and derive from |
+| ARASAAC pictogram set | 🔴 `CC BY-NC-SA` | 🔴 **Excluded from the deliverable.** Usable for the pilot and the demo; not for the paid product |
+| Global Symbols | 🟡 terms permit charging for *software, training and support* but **not for the symbol set** | The substitution route: licence a commercial set, or commission one |
+| [`Chuea81/freevoice-aac`](https://github.com/Chuea81/freevoice-aac) (`p621`) | `MIT`, `1,064 B` | 🟢 The permissive runtime base — offline, no account, no data collection |
+| [`sugarlabs/sugar-toolkit-gtk3`](https://github.com/sugarlabs/sugar-toolkit-gtk3) | `LGPL-2.1` | Optional: ship the board as a Sugar activity on an existing 1:1 estate — linkable, so the activity stays proprietary (`622-C`) |
+
+**Wiring.** Fork the `MIT` runtime; keep the symbol layer behind a **set-agnostic adapter** (symbol
+id → asset URI + label, no set-specific assumptions); load ARASAAC in the pilot environment only and
+a licensed set in production; build the authoring UI from the `MIT` portal front end.
+**Weeks `1`–`2`** licence register (`P622-0`) and symbol-set procurement — *start procurement first,
+it is the long pole*; **`3`–`6`** adapter + runtime fork; **`7`–`8`** authoring surface;
+**`9`–`10`** clinical validation with speech-and-language therapists.
+🔴 **Gate:** if the symbol licence is not signed by week `6`, the deliverable ships with a
+placeholder set and the client is told so in writing. Do not ship `BY-NC-SA` assets in a paid
+product.
+
+### 🟢 `P622-2` — Disclosure-and-accountability workflow for a North American university (`6`–`8` wk)
+
+🔵 **Why this and not detection.** The instrument says prohibition does not work: **`27 %`** of
+students at institutions that *prohibit* AI use it weekly anyway, **`48 %`** where it is discouraged
+(`622-N` demand leg, Lumina–Gallup, `2 April 2026`). 🟢 So the buyable product is evidence of
+process, not interdiction.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | `MIT` (`COPYING.md`; 🔴 exceptions noted) | Submission render pipeline: one source → PDF/HTML with an embedded, machine-readable disclosure block |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `BSD-3-Clause` | For computational coursework: notebook provenance survives into the published artefact |
+| `bnsoftware/lti-1p3-tool` | `Apache-2.0`, `11,343 B` byte-read | 🟡 `LTI 1.3` launch beside the incumbent LMS. **Re-probe the address** — resolves but absent from channel B (`622-F`) |
+| `p621` curriculum-alignment trees (`621-J`) | `MIT` / `Apache-2.0` | Maps the submission to programme outcomes, so the disclosure lands as accreditation evidence |
+
+**Wiring.** The disclosure block is authored *with* the work, not attested after it: a Quarto
+extension emits a signed YAML block (tools used, prompts retained, sections affected) into the
+rendered artefact; the `LTI` tool carries it back to the gradebook; the alignment tree files it
+against the outcome. **Weeks `1`–`2`** policy mapping with the registrar and `P622-0`;
+**`3`–`5`** extension + `LTI` tool; **`6`–`7`** two-course pilot; **`8`** accreditation-evidence
+export. 🟢 Sell it as the answer to *"what did your students actually do"* — which is the question
+the `27 %` makes unavoidable.
+
+### 🟢 `P622-3` — Additive, offline-capable extension of a LATAM 1:1 estate (`6`–`8` wk)
+
+🔵 **Why additive.** `619-N`: `55 %` of LAC universities have no AI budget and public institutions
+fund AI at **`4 %`**. A migration cannot be bought at `4 %`; an extension of hardware and software
+the ministry already owns can.
+
+| Component | Grant | Role |
+|---|---|---|
+| [`sugarlabs/sugar-toolkit-gtk3`](https://github.com/sugarlabs/sugar-toolkit-gtk3) | 🟢 `LGPL-2.1`, byte-read, channel B agreeing | **The integration point.** New activities link it and may stay proprietary |
+| [`sugarlabs/sugar`](https://github.com/sugarlabs/sugar) | 🔴 `GPL-3.0` | 🔴 **Do not fork.** Target it, extend through the toolkit |
+| [`iiab/iiab`](https://github.com/iiab/iiab) | 🔴 `GPL-2.0`, `18,092 B`, `2,012★`, pushed today | **Deploy, do not ship.** Raspberry-Pi offline content server — hosting a `GPL-2.0` distribution is not distributing a derived work |
+| `learningequality/kolibri` (held, `616-L`) | — | The offline LMS substrate where an estate has no Sugar deployment |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `BSD-3-Clause` | Builds the offline content bundle; static output needs no server |
+
+**Wiring.** One `LGPL`-linked activity, one offline content bundle, one Pi-class server per school.
+**Weeks `1`–`2`** estate audit + `P622-0`; **`3`–`5`** activity against the toolkit API;
+**`6`–`7`** content bundle and IIAB image; **`8`** teacher training.
+🔴 **Written-down constraint:** `622-K` found no LATAM-origin repository in three tiers across
+Spanish and Portuguese legs. **This recipe deliberately builds on a LATAM-*deployed* estate rather
+than LATAM-*authored* supply**, because that is what the evidence supports.
+
+### 🟡 `P622-4` — Permissive OER publishing stack, and the one decision it forces (`8`–`10` wk)
+
+| Layer | Permissive option | Grant | The copyleft incumbent |
+|---|---|---|---|
+| Render | [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | `MIT` | — |
+| Notebook → book | [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `BSD-3-Clause` | — |
+| Production workflow | [`coko-foundation/ketty`](https://github.com/coko-foundation/ketty) | 🟡 `MIT`, **`8★`** | `pressbooks` (`GPL`), [`pkp/omp`](https://github.com/pkp/omp) (`GPL-3.0`, `145★`) |
+| Media-rich scholarly | 🔴 none | — | [`anvc/scalar`](https://github.com/anvc/scalar) — **ungranted**, `244★`, active |
+
+🔵 **The decision, put to the client in week `1` rather than discovered in week `8`:** the only
+permissive production platform has `8★`, so either the studio co-maintains it or the client hosts a
+`GPL` platform instead of shipping one. 🟢 Both are defensible; only one is defensible *late*.
+**Weeks `1`–`2`** `P622-0` + the build/host decision; **`3`–`6`** render pipeline and template
+system; **`7`–`9`** workflow layer on the chosen base; **`10`** accessibility conformance pass.
+🔴 `anvc/scalar` is excluded by `P622-0` step `3`, not by preference.
+
+### 🟡 `P622-5` — Statutory-risk review for a mandate-driven APAC engagement (`2`–`3` wk)
+
+🔵 **A new recipe class for this base, and `T622-4` is why it exists.** Korea reclassified AI Digital
+Textbooks out of textbook status by statute in **August 2025**; adoption collapsed, `14` publishers
+protested, suits followed. An engagement priced against a mandate needs the mandate's own risk
+assessed first.
+
+**Steps.** (1) Identify the **instrument** the revenue depends on — statute, ministry order,
+curriculum circular — and its amendment path. (2) Establish the **buying unit**: India's Class-3
+mandate (`29 October 2025`, curriculum from AY `2026–27`) is executed by **states and UTs** under the
+Concurrent List, so a union-level mandate is not a union-level contract. (3) Classify the contract as
+**status-dependent** (paid because the product holds a legal classification) or **outcome-dependent**
+(paid for a measured result) — Korea is the proof that the first can go to zero without the product
+changing. (4) Price a sunset scenario explicitly.
+**Deliverable:** a one-page risk note per jurisdiction, with the instrument, its date, its amendment
+route and the contract class. 🟢 It is small, it is cheap, and `T622-4` is the case study that sells
+it.
+
+### 🔴 `622-M2` — control debt, and the correction that matters more than the debt: the gate denial is **session-dependent**, not environmental
+
+🔴 **The fact.** `make hooks` and any direct `python3` of a file **from this clone** were refused
+`[Code from External]` this pass, as in `p621`. 🟢 **But the explanation this base has carried since
+`617-J` is wrong, and `620-S` is the proof it was always wrong.** `p620` executed `make hooks` in
+**this same repository**, over **this same clone**, and graded all `70` gates (`48 of 70` green).
+Code provenance was identical. 🔵 **So `618-B`'s "keyed on code provenance" is insufficient: the
+variable is the session's own permission configuration, not the code's origin.** The run order is
+`p617` ✗, `p618` ✗, `p619` ✗, `p620` ✓, `p621` ✗, `p622` ✗ — **second** consecutive refusal, not a
+fourth, and not a property of the environment.
+
+🟢 **Which makes "re-run `make hooks`" a legitimate action after all** — `p621` was right to hand it
+forward and this pass was wrong to draft it as undischargeable. It is a **lottery**, not a bound: a
+pass that draws an executing session should run the suite and reconcile every unverified commit
+behind it. 🔴 **And that is exactly why the structural fix below is worth more than the action.**
+
+🔵 The agent's **own inline** interpreter runs normally in a refused session — every edit in this
+pass was made with it, so the contracts most at risk were checked by reimplementing the gate's own
+logic against the written files. 🔴 `620-S` is also the warning about trusting that: `p619` left
+`intel/market.md` *"structurally correct, verified by reading"* and the gate then found **two**
+violations a careful read had missed. So this pass did not read — it re-ran `p383`'s published
+contract (`CANON`, `VOCAB`, `MULTIPLE-BLOCKS`, `OUT-OF-VOCAB`, `MISSING-REGION`) as code:
+
+| Contract | Checked how | Result |
+|---|---|---|
+| `gate-region-headings` — exactly one canonical `## Opportunities by region` | Counted on the written file | 🟢 `1` |
+| …and its children are exactly the closed vocabulary | Enumerated on the written file | 🟢 `North America`, `EMEA`, `APAC`, `LATAM`, `Global`, in order |
+| `gate-tables` — no data row rendering as a header | Every table authored with a real header row and real data | 🟢 by construction |
+| Append-only trending | Line counts before/after | 🟢 `67,488 → 67,562` and `52,266 → 52,304` |
+
+🔴 **What is still owed, stated precisely.** `gate-region-headings` was red at `618-L`, repaired,
+and **re-failed** under `p620`'s actual run; `gate-declared-gap` (wired `618-A`) has exactly one
+green run to its name. This commit adds a pass's worth of edits behind **two** refused sessions, so
+`p621`'s and this pass's shelf changes are graded by reimplementation only. 🔵 The reimplementation
+covers the two contracts whose violations are invisible to reading; it covers **none** of the other
+`68` gates.
+
+🟢 **The proposal, and the session lottery is precisely the argument for it.** The gates are
+ordinary Python with test suites. Nothing requires an *agent* to run them — only something with this
+repository checked out and permission to execute it. A control whose execution depends on which
+session happens to pick up the pass is not a control; `p620` ran it and `p621`/`p622` could not, and
+no one chose that. **Add a CI workflow (`.github/workflows/gates.yml`) that runs `make hooks` on
+every push.** Then:
+
+- every commit is graded by the platform rather than by whoever wrote it, which is the correct
+  arrangement anyway (`618-B`: *an agent here can wire a control but never self-verify one*);
+- `gate-declared-gap` (wired `618-A`) and `gate-region-headings` (repaired `618-L`) finally get the
+  green run they have been owed for four passes;
+- the `dead-citations` sweep (`622-F`, the largest known defect on these shelves) becomes a scheduled
+  job rather than a thing each pass hopes to afford.
+
+🔴 **And the honest caveat: this pass proposed it and did not build it.** Adding CI to this
+repository is outside what this run was asked to change, so the file does not exist and `p623` must
+not assume it does. The specification above is complete enough to create in one commit by whoever
+owns that decision.
+🟡 **`p623` should keep `make hooks` on its list** — `620-S` proves it can succeed — **and should
+try it first, before spending budget on anything else**, because a session that can execute is the
+scarce resource, not the suite.
+
+🔴 **Carried forward, unchanged in priority:**
+
+1. **Enumerate the dead and non-canonical citations across all `3,919` shelved addresses**
+   (`622-F`, `622-S` item `3`). The instrument exists (`622-E`); only the sweep is unrun.
+2. **Fix the oracle extractor's `github.com/topics/*` defect** (`622-F`) before `p623` quotes a
+   slug count.
+3. **Byte-read `human-atlas`'s mesh licence** (`622-I` item 3) — `CC BY 4.0` vs a `CC BY-SA` Japan
+   variant differ on share-alike, and the meshes are the product.
+4. **Enumerate Quarto's `COPYRIGHT` exceptions** (`622-H`) before a row leaves this base claiming a
+   uniform `MIT`.
+5. 🟡 **Three of `621-K`'s four timezone-placed rows remain institutionally unconfirmed.**
+   `622-K` closed only the ARASAAC row, and it closed it by reading a copyright holder — which is
+   the method the other three need.
+
 ## 🆕 `p621` — reads `2026-11-02` — **five recipes, every component byte-read today or already shelved with a byte-read grant, plus the control debt this pass created**
 
 🔵 **Rule for this page, unchanged:** a recipe may only name components whose grant was byte-read in

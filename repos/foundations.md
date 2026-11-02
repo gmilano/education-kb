@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — reads `2026-11-02` — **the publishing layer's primitives are permissive where they are *toolchains* and copyleft where they are *platforms*, the `LGPL-2.1` primitive this base asked for is education's own, and a `6,148★` `MIT` grant lives in a file no ladder here had probed**
+
+### 🟢 `622-J2` — the publishing primitives, and the split is by artefact class rather than by tier
+
+`open textbook` returned **`0`** across seven shelf files in this pass's census; `OER` returned
+`113`. 🔵 So the base had the *concept* and none of the *machinery*. The machinery exists, and
+`622-J` records the near-miss that nearly published it as uniformly copyleft. Every grant below
+byte-read today at the real default branch (`ls-remote --symref`), every star count and `pushed_at`
+from channel B today.
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | Primitive it provides |
+|---|---|---|---|---|---|
+| [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) | 🟢 `MIT`, `COPYING.md`, `Posit Software, PBC` — 🔴 `COPYRIGHT` says *"with the exceptions noted below"* (`622-H`) | **`6,148`** | `2026-11-02` | Global | **The publishing engine.** Pandoc-based: one source tree → HTML book, PDF, ePub, Word, slides, with executable code cells in Python/R/Julia. The layer every textbook, courseware and accreditation-evidence product renders through. |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | 🟢 `BSD-3-Clause`, `1,520 B` | `4,289` | `2026-11-02` | Global | **Notebook → textbook.** Publication-quality books from computational notebooks, with cross-references, citations and interactive outputs. 🔴 Cite it at `jupyter-book/`, **not** `executablebooks/` — same repository, stale address (`622-E`). |
+| [`coko-foundation/ketty`](https://github.com/coko-foundation/ketty) | 🟢 `MIT`, `1,066 B` (stock band) | `8` | `2026-03-19` | Global | **The only permissive publishing *platform*** on this evidence: a hosted book-production workflow (ingest → edit → review → typeset → export), piloted by the Open Education Network. `8★` — shelved for its licence and its shape, not its adoption. |
+| [`pkp/omp`](https://github.com/pkp/omp) | 🔴 `GPL-3.0`, `35,149 B` | `145` | `2026-11-02` | Global | Open Monograph Press: the scholarly-press system of record — submissions, peer review, catalogue, distribution. **Pushed today.** Virally copyleft: it bounds the delivery model, not the usefulness. |
+| [`rstudio/bookdown`](https://github.com/rstudio/bookdown) | 🔴 `GPL-3.0`, `35,130 B` | `4,091` | `2026-09-18` | Global | The R-native book toolchain, and **the exception to `622-J`'s rule** — a toolchain that is copyleft. Superseded in practice by Quarto, from the same publisher. |
+| [`anvc/scalar`](https://github.com/anvc/scalar) | 🔴 **no grant payload at `5` probes**; channel B `NOASSERTION` | `244` | `2026-10-22` | North America | Media-rich, born-digital scholarly publishing from USC's Alliance for Networking Visual Culture. **Actively developed and ungranted** — the most-adopted unusable row in the layer. `BLOCK`. |
+
+🔵 **How to read the table in an engagement.** The *render* step is permissive and solved twice over
+(Quarto, Jupyter Book). The *workflow* step — accounts, roles, review state, catalogue — is where the
+supply turns copyleft, with exactly one permissive option at `8★`. **A studio building an OER product
+should expect to own the workflow layer and lease the render layer**, which is the opposite of the
+usual build/buy intuition.
+
+### 🟢 `622-C2` — the `LGPL-2.1` primitive, and why this tier's licence file is the one that matters
+
+[`sugarlabs/sugar-toolkit-gtk3`](https://github.com/sugarlabs/sugar-toolkit-gtk3) — `LGPL-2.1`,
+`COPYING` `26,436 B`, channel B agreeing, `32★`, pushed `2026-10-31` — is **a foundational primitive
+this base has never shelved**: the activity API of the Sugar learning environment, the platform
+behind the largest public one-laptop-per-child deployments on record.
+
+🟢 **It is the rare copyleft row that belongs on a *foundations* shelf**, because `LGPL` is a linking
+licence: a proprietary activity can link the toolkit without the toolkit's terms reaching it.
+🔴 [`sugarlabs/sugar`](https://github.com/sugarlabs/sugar) — the shell, `314★` — is `GPL-3.0` and
+does not offer that (`622-C`). 🔵 **The estate must be graded per repository**, and the two
+repositories sit on opposite sides of the only line a client's legal team cares about.
+
+### 🔴 `622-F2` — three foundational-shelf addresses in this pass's sample are dead, and one is not a repository
+
+The citation sweep (`622-F`) sampled `80` of `3,919` shelved addresses across all files.
+🔴 `jaipuriaailabs/moodle-mcp`, `thanh01pmt/interactive-quiz-kit` and `vargontoc/educational-framework`
+are `ABSENT_OR_PRIVATE` on **three** probes each; `bnsoftware/lti-1p3-tool` resolves but is absent
+from channel B (`Apache-2.0`, `11,343 B`, byte-read today — the grant is real, the address may not be
+canonical). 🔵 **A foundations shelf is a buy-list, so a dead row there is worse than a missing one.**
+The full enumeration is `622-S` item `3` and is the largest outstanding defect on this base.
+
+### 🔴 `622-N2` — the mandated ERP/CRM foundations leg pays nothing a **seventh** consecutive time
+
+The leg (`open source platform education ERP CRM MIT Apache`) returned `openeducat/openeducat_erp`
+(held), `moodle/moodle` (held), `Koha-Community/Koha` (held) and vendor glossary pages. 🔵 `618-N`
+retired this leg and `619-B`/`620-N` confirmed the retirement; the figure is recorded only so the
+count stays honest. 🟡 One datum did come out of it and it is a **licence** datum: the leg's own
+vendor pages state `OpenEduCat` is **`LGPLv3`**, which — unlike `621-B`'s mis-grading of an `LGPL`
+tree as `GPL` — is the publisher's own claim and is consistent with the Odoo base it is built on.
+Linkable, and still not permissive.
+
 ## 🆕 `p621` — reads `2026-11-02` — **the curriculum-alignment layer has three permissive primitives and one of them is retired by its own README; plus an `LGPL` row this pass nearly published as `GPL`**
 
 🔵 **Split criterion, unchanged:** a row lands here if it is a reusable **model, corpus, library or

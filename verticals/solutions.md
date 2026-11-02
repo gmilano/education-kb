@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p622` — reads `2026-11-02` — **the vertical finding is a licence file that no automated channel can read: a bespoke bilingual document that names `AGPL-3.0` and then requires a third party's name on the client's home page**
+
+### 🔴 `622-D2` — ENT Core: the platform of record for French school ENTs, and the branding obligation buried in its grant
+
+[`opendigitaleducation/entcore`](https://github.com/opendigitaleducation/entcore) is the core of the
+*espace numérique de travail* estate deployed across French regional school systems — the closest
+thing EMEA has to a public-sector LMS/portal system of record outside the Apereo orgs. It is on these
+shelves already. 🔴 **Its licence had never been read, and reading it changes the row.**
+
+| Property | Measured today |
+|---|---|
+| `ls-remote --symref` | `PRESENT`, default branch `master`, `HEAD` `933435ba7acc` |
+| `LICENSE` | `200`, **`8,537 B`** |
+| First line of the payload | 🔴 `///////////////////////////////////////////////////////////` |
+| Named licence | `GNU Affero General Public License`, **version 3** |
+| **Additional term 1** | 🔴 *"indicate on the home page … `powered by Edifice` with a reference to the website `https://edifice.io/`"* |
+| **Additional term 2** | 🟡 A written carve-out: modules communicating with ENT Core *"over native Web protocols, such as HTTP"* are *"outside the scope of this license"* |
+| Channel B `spdx_id` | 🔴 `422` — the address is not in the search index (`622-F`) |
+
+🔵 **What it means for a vertical engagement.** The `AGPL` is the ordinary half: it bounds hosting,
+and a studio that knows the licence plans for it. **The branding clause is the one that surprises a
+client at launch** — the deliverable's home page must carry a third-party vendor's name and a
+backlink. It is not in the `AGPL`, it is not in any `spdx_id`, and no licence scanner in existence
+emits it. 🟢 The HTTP carve-out cuts the other way and is genuinely useful: it is the vendor's own
+written statement that an integration speaking HTTP to ENT Core is **not** a covered work, which is
+exactly the architecture a studio would propose.
+
+🔴 **Vertical verdict: `CONDITIONAL`.** Usable as a system of record to integrate *beside* — through
+HTTP, on the vendor's own construction — and a poor base to fork, because the fork inherits both the
+network copyleft and the homepage obligation.
+
+### 🟢 `622-J3` — the OER/textbook-publishing vertical has a platform of record, and it is copyleft; the permissive option is `8★`
+
+| Layer | Platform of record | Grant | Permissive alternative | Grant |
+|---|---|---|---|---|
+| Scholarly press / monograph | [`pkp/omp`](https://github.com/pkp/omp) (`145★`, pushed today) | 🔴 `GPL-3.0` | — | — |
+| Institutional open textbook | `pressbooks/pressbooks` (held, WordPress-based) | 🔴 `GPL` | [`coko-foundation/ketty`](https://github.com/coko-foundation/ketty) (`8★`) | 🟢 `MIT` |
+| Media-rich scholarly | [`anvc/scalar`](https://github.com/anvc/scalar) (`244★`, active) | 🔴 **none at `5` probes** | — | — |
+| Render / build | — | — | [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli) (`6,148★`), [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) (`4,289★`) | 🟢 `MIT` (exceptions noted), `BSD-3-Clause` |
+
+🔵 **The shape a client will hear as a recommendation:** take the permissive render layer, and decide
+deliberately between an `8★` permissive platform you will co-maintain and a mature `GPL` platform you
+will host rather than ship. `622-J` is the evidence; this is the choice it forces.
+
+### 🟡 `622-N3` — the medical-education vertical has runtimes and no platform of record
+
+`medical education` and `simulation nursing` were **`0`** on these shelves before this pass. After it
+there are two usable permissive runtimes (`622-N`: `ashemag/human-atlas` `MIT` `4,455★`,
+`biocat-ugent/Open-Anatomy-Explorer` `Apache-2.0` Ghent University) and **no** platform: nothing that
+manages cohorts, stations, examiners, simulated patients and scoring.
+
+🔴 **The OSCE tier is the named gap.** Two legs ran (`...OSCE station management ... Apache license`,
+`...nursing simulation OSCE ... MIT`). What came back: a **vendor** page describing an "open source"
+OSCE manager built for a Swiss university with **no licence named and no repository linked**; a
+nursing OSCE scorer described as *"Windows-based, limited to an intranet"*; and
+`ScreenBasedSimulator` (`Apache-2.0`, real, **`2015`**). 🔵 **An informed gap:** the examination
+logistics layer of medical education has no open, licensed implementation this base can find — and
+`exam logistics` returned `0` in the census, so the hole is consistent across two instruments.
+
+### 🟢 `622-C3` — the one-laptop estate, re-typed as a vertical with the licence line through it
+
+Sugar is a *vertical platform*, not a library: a complete learner desktop with an activity model,
+journal and collaboration layer, deployed at national scale by LATAM ministries. 🟢 Typed correctly,
+the engagement shape is unusual and good: **extend through `LGPL-2.1`
+[`sugarlabs/sugar-toolkit-gtk3`](https://github.com/sugarlabs/sugar-toolkit-gtk3) (`32★`, pushed
+`2026-10-31`), do not fork `GPL-3.0` [`sugarlabs/sugar`](https://github.com/sugarlabs/sugar)
+(`314★`)** — new activities can be proprietary, the shell cannot (`622-C`).
+
+### 🟢 `622-Q2` — the administrative substrate is unchanged, a seventh consecutive confirmation
+
+No new permissive administrative platform surfaced. `openeducat/openeducat_erp` remains `LGPLv3` by
+its publisher's own statement (`622-N2`), `frappe/education` and the Odoo-based estate are unchanged,
+and the leg that asks for one has now paid nothing **seven** times. 🔵 `618-N`'s standing conclusion
+holds and is the sellable version of it: **education's pedagogy is permissive and its administration
+is copyleft**, so an administrative engagement is a hosting-and-integration engagement, not a
+ship-the-binary one.
+
 ## 🆕 `p621` — reads `2026-11-02` — **the AAC vertical has a platform of record and it is `AGPL`; the curriculum-alignment vertical has no platform at all, and both answers are delivery-model constraints rather than licensing footnotes**
 
 ### 🔴 `621-L` — the AAC vertical's platform of record is `CoughDrop`/`SweetSuite`, and it is network-copyleft

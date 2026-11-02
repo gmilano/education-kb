@@ -1,0 +1,18 @@
+slug	api_spdx	grant_path	bytes	title_line	branch	head_sha	region	verdict
+quarto-dev/quarto-cli	NOASSERTION	COPYING.md	1066	MIT License	main	3190292c7adf	Global	PROMOTED-exceptions-noted
+jupyter-book/jupyter-book	BSD-3-Clause	LICENSE	1520	BSD 3-Clause License	main	526cfa7e76db	Global	PROMOTED
+ashemag/human-atlas	MIT	LICENSE	1064	MIT License	main	1c38bf35c254	Global	PROMOTED-content-grant-separate
+biocat-ugent/Open-Anatomy-Explorer	Apache-2.0	LICENSE	11357	Apache License	main	b117a9cb8297	EMEA	PROMOTED
+coko-foundation/ketty	MIT	LICENSE.md	1066	MIT License	main	-	Global	PROMOTED
+juanda99/arasaac-frontend	MIT	LICENSE.md	1084	The MIT License (MIT)	master	f4274859b198	EMEA	PROMOTED-holder-Gobierno-de-Aragon
+sugarlabs/sugar-toolkit-gtk3	LGPL-2.1	COPYING	26436	GNU LESSER GENERAL PUBLIC LICENSE 2.1	master	f14c100ade64	Global	PROMOTED-linkable-copyleft
+sugarlabs/sugar	GPL-3.0	COPYING	35149	GNU GENERAL PUBLIC LICENSE 3	master	241f4ac3bf95	Global	COPYLEFT-do-not-fork
+iiab/iiab	GPL-2.0	LICENSE	18092	GNU GENERAL PUBLIC LICENSE 2	master	c8b7b2e43aed	Global	COPYLEFT-deploy-not-ship
+pkp/omp	GPL-3.0	LICENSE	35149	GNU GENERAL PUBLIC LICENSE	main	828150a8fe80	Global	COPYLEFT
+rstudio/bookdown	GPL-3.0	LICENSE.txt	35130	GNU GENERAL PUBLIC LICENSE	main	0a38f2cabf65	Global	COPYLEFT
+opendigitaleducation/entcore	422	LICENSE	8537	//////// (banner)	master	933435ba7acc	EMEA	CONDITIONAL-AGPL3-plus-homepage-branding
+bnsoftware/lti-1p3-tool	0	LICENSE.md	11343	Apache License	master	7e9b1bafa3cf	Global	GRANT-REAL-address-not-canonical
+ScreenBasedSimulator/ScreenBasedSimulator	Apache-2.0	LICENSE	11325	Apache License	master	f1a2446e7e1a	Global	REFUSE-currency-2015
+TomMonks/treatment-centre-sim	MIT	LICENSE	1066	MIT License	main	92d8ab819cea	Global	REFUSE-out-of-scope
+anvc/scalar	NOASSERTION	NIL_5_PATHS	0	-	master	daf68e2cca8e	North America	BLOCK-NO-GRANT
+resusio/simlab	null	NIL_5_PATHS	0	-	main	fe33fa213589	Global	BLOCK-registry-drift-npm-says-MIT
