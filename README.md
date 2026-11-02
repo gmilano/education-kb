@@ -1,6 +1,6 @@
 ---
 industry: education
-updated: 2026-11-02
+region: Global
 updated: 2026-11-02
 ---
 
@@ -117,6 +117,12 @@ repository's own validators to run, or the gate suite is decorative.**
 [`intel/market.md`](intel/market.md) is **search-snippet-grade**: `unesco.org`, `oecd.org`,
 `iadb.org` and `unu.edu` were re-measured at `000` today against a control that also returns `000`.
 🟢 Every **supply** figure is byte-read. A client conversation leads with the second.
+
+### 🔴 `605-M` — a second instrument error, and it was this pass's own write path
+
+🔴 **The frontmatter writer used to insert every section above set line index `2` to `updated:` — which is where `region:` lives.** All `10` pages were briefly written with `industry`, **two** `updated` lines and 🔴 **no `region` field at all**. 🟢 Caught in a post-write check, repaired in the same pass, and verified byte-identical to `HEAD~1` on every file.
+
+🔵 **Why it is registered rather than quietly fixed:** `region` is a **closed-vocabulary typed field**, and the whole point of carrying it in frontmatter is that the compiler must not infer region from prose. 🔴 A pass that strips it produces exactly the silent mis-typing the field exists to prevent. 🔴 **And it is the second instrument error in this pass** — `605-D` was the first. Both were in code this pass wrote, not in the corpus it audited. 🟢 **The pattern worth keeping: check your own instruments before you publish, and check them again after you write.**
 
 ### 🔵 Ledgers written this pass
 

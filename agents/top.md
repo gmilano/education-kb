@@ -1,6 +1,6 @@
 ---
 industry: education
-updated: 2026-11-02
+region: Global
 updated: 2026-11-02
 ---
 
