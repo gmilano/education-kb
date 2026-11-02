@@ -3,6 +3,101 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read today
+
+🔵 Every repository named below is on a sell shelf with its grant byte-read `2026-11-02` at the real
+default branch (`evidence/api-vs-bytes-grants.2026-11-02-p613.tsv`, `24 of 24` agreeing with the
+platform field). 🔴 Where a pattern has a limit, the limit is stated in the pattern, not in a footnote.
+
+### 🟢 `P613-1` — the closed loop around a copyleft LMS: launch permissive, report permissive (`6`–`8` wk)
+
+🔵 **The problem.** The incumbent is Moodle (`GPL-3.0`) or Open edX (`AGPL-3.0`). A studio cannot ship
+proprietary work *inside* either, and the client will not replace them.
+
+🟢 **The wiring, all permissive, no incumbent code touched.**
+1. **Launch** — [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (`BSD-3-Clause`, Python) or [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) (`Apache-2.0`, Java) or [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) (`MIT`, TS) — the tool launches from the LMS over LTI `1.3` (`612-D`).
+2. **Emit** — [`xapijs/xapi`](https://github.com/xapijs/xapi) (`MIT`) writes xAPI statements for every learner interaction, against vocabularies from [`adlnet/xapi-authored-profiles`](https://github.com/adlnet/xapi-authored-profiles) (`Apache-2.0`) rather than invented ones.
+3. **Store** — [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (`Apache-2.0`) is the LRS; or [`openfun/ralph`](https://github.com/openfun/ralph) (`MIT`) where the client wants analytics in the same component.
+4. **Prove** — [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) (`MIT`) runs in the client's CI and tests the `MUST` requirements of the spec against the deployed LRS.
+5. **Demo before data** — [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim) (`Apache-2.0`) generates conformant statement volume, so step `3` and `4` are demonstrable in week two with no real learners.
+
+🔵 **Why it closes commercially.** The two seams are the only permissive boundaries around a copyleft
+incumbent, and step `4` converts "we are standards-compliant" from a claim into a test run.
+🔴 **Limit:** `xapijs/*` has not been pushed since `2026-04`; budget to fork it, which `MIT` permits.
+Do **not** use `adlnet/xAPIWrapper` — unmaintained since `2022-12`.
+
+### 🟢 `P613-2` — retention as the asset the incumbent cannot hand over (`4`–`6` wk)
+
+🔵 **The problem.** A tutor built on a prompt is copied in a week. The client asks what they own.
+
+🟢 **The wiring.** [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs)
+(`BSD-3-Clause`) or the stack-matched sibling — [`ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs),
+[`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs), [`go-fsrs`](https://github.com/open-spaced-repetition/go-fsrs),
+[`swift-fsrs`](https://github.com/open-spaced-repetition/swift-fsrs) (all `MIT`) — schedules the review.
+[`fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) (`BSD-3-Clause`) **fits the
+parameters to that client's own accumulated review history.** The LLM is confined to writing items.
+Statements flow into `P613-1`'s LRS, which is where the history that feeds the optimizer comes from.
+
+🔵 **Why it is the strongest answer to "what do we own".** The fitted parameter set is a function of
+retained learner data. It improves monotonically with use and it cannot be reproduced by a competitor
+who does not have the history. 🟢 Benchmark against [`duolingo/halflife-regression`](https://github.com/duolingo/halflife-regression)
+(`MIT`) — 🔴 unmaintained since `2024`, so it is a baseline, never a dependency.
+🔴 **Limit:** worthless before roughly a term of review data exists; sequence it after `P613-1`.
+
+### 🟢 `P613-3` — the EMEA Annex III conformity file, assembled from state-published parts (`8`–`10` wk)
+
+🔵 **The clock.** `(EU) 2026/1744` defers Annex III education high-risk to `2027-12-02` with the
+obligations unchanged; Article `50` transparency is live and watermarking is due `2026-12-02`.
+
+🟢 **The wiring.** `612-E`'s rubric tier (`text2qti`, `otter-grader`, `AdaRubrics`) supplies documented,
+inspectable grading criteria. [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+(`MIT`) supplies interoperability evidence as a test artifact. [`openfun/ralph`](https://github.com/openfun/ralph)
+(`MIT`, France Université Numérique) supplies the analytics and the audit trail, and its provenance is a
+**EU member-state operator**, which is itself procurement-relevant. `612-F`'s UK DfE services are the
+reference implementations to cite.
+
+🔵 **Why this sequencing.** Thirteen months of runway with unchanged obligations means the conformity
+file is built now and cheaply, from parts a regulator already recognises. 🔴 **Limit:** none of these
+parts is a legal opinion, and the `2027-12-02` date is a deferral that can move.
+
+### 🟢 `P613-4` — the North America multi-jurisdiction build, with compliance as CI (`10`–`12` wk)
+
+🔵 **The problem.** `134` bills in `31` states and no federal statute: the deployable unit is one build
+parameterised by jurisdiction, not `31` builds.
+
+🟢 **The wiring.** `611-D`'s [`bcgov/SIMS`](https://github.com/bcgov/SIMS) (`Apache-2.0`) is the
+architecture to copy — a government system of record built so **policy change is not a rewrite**, via an
+explicit business-rules engine. Policy becomes rule data. `P613-1`'s stack carries the learner
+telemetry, and [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+(`MIT`) plus the per-state rule fixtures run as **one CI job per jurisdiction**.
+
+🔵 **Why it wins the procurement.** A state buyer can be handed a green test run scoped to their own
+rules. 🔴 **Limit, stated in `611-D` and still binding:** `SIMS`'s rule *content* is British Columbia
+policy — the architecture transfers, the rules do not.
+
+### 🟢 `P613-5` — the LATAM institutional-policy template (`3`–`5` wk per institution, `6`–`8` wk once)
+
+🔵 **The reframe, and it is this pass's revision of `612-5`.** `612-5` read LATAM's gap as
+Spanish/Portuguese **content**. 🔴 The `2026` LATAM survey says adoption is already `92 %` of students
+and `79 %` of faculty — nobody needs persuading. 🟢 UNESCO IESALC across `200` institutions in `19`
+countries names the real gap: **no formal institutional AI policy**, and it is missing the same way
+everywhere.
+
+🟢 **The wiring, and none of it needs to be LATAM-native.** One parameterised institutional AI-use
+policy (permitted uses, disclosure, assessment integrity, data handling) + `612-E`'s rubric tier for
+assessment-integrity evidence + [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+(`MIT`) for the data-handling claim + `612-3`'s cited-rulebook agent shape
+([`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot),
+`MIT`, `452★`) pointed at the new policy so staff and students can **ask** it with citations.
+
+🔵 **Why the economics work where a content build does not.** The template is built once; each
+institution is parameters plus their own documents. 🟢 The rulebook-agent shape is already built three
+times in APAC, so the engineering risk is near zero. 🔴 **Limit, and it is the honest one:** this base
+has `0 of 24` promoted rows and `0 of 90` index addresses placing to LATAM, so the *delivery* is
+non-LATAM parts configured locally — there is no regional open-source ecosystem to lean on, and a
+partner with the institutional relationships is doing the part the code cannot.
+
+
 ## 🆕 `p612` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read today
 
 🔵 Every repository named below is on a sell shelf with its grant byte-read `2026-11-02` at the real

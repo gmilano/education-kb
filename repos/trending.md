@@ -3,6 +3,83 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — `2026-11-02` — channel table, run first, and the index-yield census that replaces `611-H`
+
+🔵 `569-B`'s standing row. Every arm probed in this session, not inherited.
+
+| channel | arm | result this session | control |
+| --- | --- | --- | --- |
+| 🟢 `git ls-remote --symref` | default-branch resolution | `200`-equivalent on `24 of 24`; recovered `dev`, `develop`, `quartz` | fabricated slug fails |
+| 🟢 `raw.githubusercontent.com` | grant bytes | `24 of 24` grants read | 🟢 `4 of 4` fabricated at `404 14 B` |
+| 🟢 `api.github.com/search/repositories?q=repo:` | stars, size, spdx, push date | `74 of 90` and `24 of 24` | 🔴 silent on invalid members — `613-F` |
+| 🔴 `api.github.com/repos/{owner}/{repo}` | per-repo metadata | `403`, session scope | `611-G`, unchanged |
+| 🔴 `github.com/{owner}/{repo}` HTML | existence (prompt-prescribed) | 🔴 `403` on every real address | 🔴 **inert**, both arms identical |
+| 🟢 `api.github.com/rate_limit` | budget | `core 15000`, `search 30/min` | — |
+
+### 🔴 `613-G` — `611-H-open` is CLOSED, and it is closed by the prescription being unexecutable
+
+🔵 `611-H-open` asked whether curated indexes misstate education licences **generally** — `611-A`'s
+`1 of 5` survival rate was `n = 1` — and prescribed: *"census a second and third index the same way
+(candidates: the `awesome-*` education lists already on the trending shelves)."*
+
+🔴 **Measured first, as `606` requires: none of the named candidates has a per-row licence column.**
+
+| index | bytes | rows with a licence column |
+| --- | --: | --: |
+| `GeminiLight/awesome-ai-llm4education` | `94,916` | 🔴 `0` |
+| `KaynXu/awesome-ai-education` | `8,697` | 🔴 `0` |
+| `tla-ecosystem/awesome-tla` | `15,266` | 🔴 `0` |
+| `open-spaced-repetition/awesome-fsrs` | `47,756` | 🔴 `0` |
+
+🔴 So `611-A`'s rate **cannot** be pooled, and it stays `n = 1` permanently — `611-H`'s question is not
+hard, it is **ill-posed against the available corpus**. 🔵 This is `611-I`'s class a second time: a
+prescription naming inputs nobody checked existed. 🟢 **Standing rule:** a prescription must name the
+field it will read, and the pass that writes it must confirm that field exists in at least one input.
+
+### 🟢 `613-H` — the reframe that *is* answerable: index **address yield**
+
+🔵 What every index does publish is **addresses**. 🟢 So the measurable, repeatable property is: do an
+index's addresses resolve to live, permissively granted repositories? That is also the question a studio
+actually faces in week one. Evidence: `evidence/index-address-yield.2026-11-02-p613.tsv`.
+
+| index | addresses | resolve | permissive (platform field) | arXiv links | verdict |
+| --- | --: | --: | --: | --: | --- |
+| `open-spaced-repetition/awesome-fsrs` | `54` | 🟢 `51` | 🟢 `32` | `0` | 🟢 **Highest yield measured.** A real polyglot implementation tier — `613-D` |
+| `tla-ecosystem/awesome-tla` | `28` | 🔴 `16` | `10` | `0` | 🔴 `12` point at a **dead org**; all `12` recover — `613-A` |
+| `GeminiLight/awesome-ai-llm4education` | `7` | `6` | 🔴 `1` | 🔴 `181` | 🔴 **A literature index, not a supply index** — `25.9 : 1` papers to repositories |
+| `KaynXu/awesome-ai-education` | `2` | `2` | `2` | `0` | 🔵 A list of **hosted products**; `2` addresses in total |
+| 🟢 **POOLED** | `90` | `74` (`82.2 %`) | `45` (`50.0 %`) | `181` | — |
+
+🔴 **The finding that changes how this base reads its own trending shelves.**
+`GeminiLight/awesome-ai-llm4education` has been carried here for many passes as an education-AI supply
+lead. 🔴 It contains `181` arXiv links and `7` GitHub addresses, `1` of them permissive. It is a
+**survey bibliography**. 🔵 A curated index must be classified by its link mix *before* its rows are
+treated as supply — `arXiv : GitHub` ratio is a one-line test and it separates the two kinds cleanly on
+all four indexes measured.
+
+### 🟢 `613-I` — `611-C-open` CLOSED with a cause, on a third independent population
+
+🔵 `611-C-open` carried an unexplained spread: `15.2 %` of addresses on a non-`main`/`master` default
+branch (`p611`, `n = 33`) against `32.4 %` (`p559`, `n = 374`), with the note *"different populations,
+so the two are not comparable."* 🟢 This pass supplies a third: `n = 24`.
+
+| pass | population | neither `main` nor `master` |
+| --- | --- | --: |
+| `p559` | `374` — **platform monoliths** (Odoo, ILIAS, Open edX, OFBiz, BigBlueButton, i-educar) | 🔴 `32.4 %` |
+| `p611` | `33` — mixed | `15.2 %` |
+| 🟢 `p613` | `24` — **libraries and specifications** (`dev`, `develop`, `develop`, `quartz`) | `16.7 %` |
+
+🟢 **The cause, and it reconciles all three.** `p559`'s own evidence names its misses: `odoo` `20.0`,
+`openeducat_erp` `19.0`, `i-educar` `2.12`, `ILIAS` `release_11`. Those are **release branches**, and a
+release branch is a property of a *shipped platform that supports several live versions at once*.
+🟢 Libraries and specs do not carry them: this pass's four exceptions are `dev`, `develop` ×`2` and
+`quartz` — **development and naming conventions, not versions.** 🔵 So the rate is not one number:
+expect `~30 %` on self-hosted platform monoliths and `~15 %` on libraries, and in both cases resolve
+the branch rather than assuming it. `evidence/branch-resolution.2026-11-02-p613.tsv`.
+
+---
+
+
 ## 🆕 `p612` — `2026-11-02` — channel table, run first, with a control on every arm
 
 🔵 `569-B`'s standing row. Every arm probed in this session, not inherited.

@@ -3,6 +3,65 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — `2026-11-02` — **the forty-third consecutive global-leg nil, and the first pass to catch the prescribed verifier being inert**
+
+🔵 The run prompt mandates four global legs and four regional legs. 🟢 All eight were run. 🔴 None
+yielded a new permissive education repository meeting the standing bar. Leg-by-leg evidence with what
+each leg *did* return: `evidence/websearch-legs.2026-11-02-p613.tsv`.
+
+🔴 **The run prompt's own verification step does not work on this host, and this pass measured it.**
+The prompt prescribes `curl -sI` on every URL before writing it. 🔴 `github.com/<owner>/<repo>` returns
+**`403`** for every real address tried, including `adlnet/xAPI-Spec` at `956★`.
+🔵 `p449` recorded this and `p608` measured it inert; 🟢 this pass re-confirms it on `8` fresh addresses
+and states the substitute plainly, because a reader following the prompt literally would grade this
+entire pass's supply as non-existent:
+
+| channel | on a real address | on a fabricated address | usable as an existence test? |
+| --- | --- | --- | --- |
+| 🔴 `curl -sI https://github.com/o/r` (prescribed) | `403` | `403` | 🔴 **No** — identical on both arms |
+| 🟢 `raw.githubusercontent.com/o/r/<branch>/LICENSE` | `200` + bytes | `404` `14 B` | 🟢 Yes, and it returns the grant itself |
+| 🟢 `api.github.com/search/repositories?q=repo:o/r` | `200`, `total_count 1` | dropped silently | 🟡 Only with set-difference arbitration (`613-F`) |
+| 🟢 `git ls-remote --symref` | `ref:` + sha | fails | 🟢 Yes, and it returns the real default branch |
+
+🟢 `4 of 4` fabricated controls at `404 14 B` this pass.
+
+### 🔴 `613-F` — a batched `repo:` existence probe fails silently, in two distinct ways
+
+🟢 Characterised with controls (`evidence/batch-probe-controls.2026-11-02-p613.tsv`):
+
+| batch | input | response | `total_count` | what a `.get("total_count", 0)` reader sees |
+| --- | --: | --- | --- | --- |
+| 🔴 all slugs invalid | `2` | `HTTP 422 Validation Failed` | **absent** | 🔴 `0` — indistinguishable from an honest empty result |
+| 🔴 mixed | `3` (`1` real) | `HTTP 200` | `1` | 🔴 `1`, with **no error**; the `2` invalid slugs vanish |
+| 🟢 all valid | `15` | `HTTP 200` | `15` | correct |
+
+🔵 **Operative rule.** A batched existence probe must be arbitrated by **set-difference against the
+input list**, never by a returned count. 🟢 That is how this pass's own `90`-address sweep reported
+`74` resolved and then correctly identified the missing `16` — had it trusted the count it would have
+reported a clean `74` and never found `613-A`'s dead org. 🔵 `610-E`, `611-B`, `611-I`, `612-C`, now
+`613-F`: **five consecutive passes whose instrument defect was found before publication, not after.**
+
+### 🟡 What the legs returned instead of supply — recorded because an informed gap is information
+
+| leg | scope | new permissive repos | fact yielded |
+| --- | --- | --: | --- |
+| `top open source AI agents education 2026 github MIT` | Global | 🔴 `0` | 🔴 Generic agent-framework listicles only. No education-sector repository at any star level |
+| `github trending education AI 2026` | Global | 🔴 `0` | 🟡 `OPTIMETA/PAIDEIA` (`MIT`, `91★`, stale); 🔴 `GarethManning/education-agent-skills` (`942★`, `CC-BY-SA-4.0` — `613-E`) |
+| `open source platform education ERP CRM MIT Apache SIS` | Global | 🔴 `0` | 🔵 `RosarioSIS` confirmed `GPL-2.0` on branch `mobile`; OpenEduCat and Odoo already shelved since `p557` |
+| `AI education industry trends 2026` | Global | 🔴 `0` | 🟢 OECD *Digital Education Outlook 2026*; US DoE `$169M` FIPSE; `134` bills in `31` US states (`2026-03`) |
+| `AI education {region} 2026 adoption regulation players` | North America | 🔴 `0` | 🟢 `~36 %` of global AI-in-education spend, `~$3.68B` in `2026`; still no federal statute |
+| ″ | EMEA | 🔴 `0` | 🟢 UK AI Adoption Summit `£200M+`; European Commission updated its AI-in-education ethical guidelines `2026-06` |
+| ″ | APAC | 🔴 `0` | 🟢 Forrester: `60 %` of firms and governments in India and China to run **locally developed** LLMs alongside global ones, education named |
+| ″ | LATAM | 🔴 `0` | 🟢 **The pass's most consequential regional fact** — Digital Education Council × Tec de Monterrey LATAM `2026`: `92 %` of students and `79 %` of faculty active; faculty positive opinion `57 % → 72 %`. UNESCO IESALC, `200` institutions across `19` countries: the adoption–governance gap is widest in this region |
+
+🔵 **Why the nil keeps recurring and what would end it.** `612-A` showed the yield came from the
+**backlog**, not the legs. 🟢 This pass confirms it from a third direction: all `24` promoted rows came
+from **curated indexes already on these shelves**, and `12` of them from an address this base had
+published as broken. 🔴 The legs are a *news* channel measured against a *supply* bar they cannot clear.
+
+---
+
+
 ## 🆕 `p612` — `2026-11-02` — **the forty-second consecutive global-leg nil, and the pass that stopped treating the legs as the channel**
 
 🔵 The run prompt mandates four global legs and four regional legs. All eight were run. 🔴 They produced

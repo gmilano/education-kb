@@ -3,6 +3,52 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — reads `2026-11-02`, commit `2026-11-02` — **🔴 `612-B`'s OWN STATED LIMIT IS NOW A MEASURED DEFECT, AND IT IS THE EXPENSIVE KIND: THE WEEK'S MOST-TRENDING EDUCATION-AGENT REPOSITORY (`942★`) READS `NOASSERTION` ON THE PLATFORM FIELD AND IS **`CC-BY-SA-4.0` ON BYTES** — A SHARE-ALIKE GRANT, ON **PROMPT TEXT**, WHICH A NAIVE PERMISSIVE FILTER DROPS AND A NAIVE "UNGRANTED" FILTER MISREADS. 🟢 ONLY `2` AGENT ROWS PROMOTED, BECAUSE ONLY `2` SURVIVED.**
+
+### 🔴 `613-E` — `NOASSERTION` does not mean ungranted, and the one case measured is a copyleft trap
+
+🔵 `612-B` closed with a precise limit it declined to test: *"the `157` `NULL` and `68` `NOASSERTION`
+rows in the same sweep are the API declining to answer, which is a different failure and is **not**
+measured here."* 🟢 This pass measured one, chosen because it is the highest-starred education-agent
+repository either search leg returned.
+
+| address | ★ | platform field | grant on bytes | path | branch | verdict |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `942` | 🔴 `NOASSERTION` | 🔴 **`CC-BY-SA-4.0`** `1,230 B` | `LICENSE` | `main` | 🔴 **NOT PROMOTED** — granted, but share-alike |
+
+🔴 **Two independent readers get this wrong in opposite directions.** A permissive filter keyed on the
+platform field drops the row as unlicensed and never learns it exists. A reader that treats
+`NOASSERTION` as "no licence file, so probably fine to vendor" ships **share-alike** code. 🔴 And the
+asset here is **agent skill definitions — prompt text**, where `CC-BY-SA` is at its most dangerous: the
+obligation attaches to the thing a studio would paste into a client's own agent, not to a library it
+links against.
+
+🟢 **Operative rule, narrowing `612-B` rather than overturning it.** Batch-trust the platform field for
+triage **only on the permissive arm** — where it reproduced `68 of 68` in `612` and `24 of 24` here,
+`92 of 92` pooled. 🔴 Never read `NOASSERTION` or `NULL` as a licence fact in **either** direction: it
+is the API declining to answer, and the answer may be a grant you cannot use.
+
+### 🟢 `2` new agent rows — every grant byte-read `2026-11-02` at the real default branch
+
+🔵 Both came from the mandated search legs, which is itself notable: the legs returned the forty-third
+consecutive nil on *new permissive supply* by the standing definition, and these two clear it only
+because the bar is `≥ 20★` **and** a byte-read grant.
+
+| agent | ★ | grant (byte-read) | path | branch | pushed | region | what it is |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`ctrlaltwill/LearnKit`](https://github.com/ctrlaltwill/LearnKit) | `182` | 🟢 `MIT` `1,068 B` | `LICENSE.md` | `main` | `2026-10-31` | Global | 🟢 Turns an **Obsidian vault** — the learner's own notes, on their own disk — into an active study system. The shape that clears a strict data-residency brief without the offline-Electron cost of `612`'s `study-buddy` |
+| [`campfirium/foliole`](https://github.com/campfirium/foliole) | `144` | 🟢 `Apache-2.0` `11,358 B` | `LICENSE` | 🔴 `dev` | 🟢 `2026-11-02` | Global | **Incremental reading** — the one learning workflow with no mainstream commercial product, and the natural consumer of `613-D`'s FSRS tier. 🟢 Pushed today. 🔴 Default branch is `dev`, so a `main`/`master` reader publishes it as ungranted |
+
+### 🟡 Measured and not promoted — recorded so the next pass does not re-spend the search
+
+| address | ★ | grant | why not promoted |
+| --- | --: | --- | --- |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | `91` | 🟢 `MIT` `1,068 B` (`LICENSE`, `main`) | 🔴 Last pushed `2026-07-11` — `3`½ months quiet, and below the `≥ 100★` bar this shelf applies to single-author exam tooling. Genuinely permissive; park it |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `78,678` | 🟢 `MIT` | 🔵 Not sector supply — it is an **AI** curriculum, not education-sector software. Recorded because two legs surfaced it and a future pass should not mistake the star count for an education finding |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `76,331` | 🟢 `MIT` | 🔵 Same class as above |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `649` | 🔴 `GPL-2.0` | Copyleft SIS. 🔵 Default branch is **`mobile`** — confirming `611-C`'s exact specimen from an independent leg |
+
+
 ## 🆕 `p612` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `611-A` IS RIGHT ABOUT INDEXES AND WRONG AS A GENERAL RULE, AND THE DIFFERENCE IS NOW MEASURED: THE PLATFORM'S OWN `license.spdx_id` REPRODUCES ON THE GRANT BYTES **`68 of 68`** (`100 %`), AGAINST THE CURATED INDEX'S `1 of 5` ON PERMISSIVE CLAIMS. 🟢 AND THE PASS'S YIELD CAME FROM THE **BACKLOG**, NOT THE SEARCH LEGS: `610`'S `848` EDUCATION-SHAPED TRENDING-ONLY ADDRESSES RESOLVE TO **`68` SHIPPABLE-SHAPED** (`8.0 %`) — `16` AGENT ROWS PROMOTED HERE, `9` OF THEM REGION-PLACED. 🔴 `612-C`: THIS PASS'S OWN LADDER WAS CASE-SENSITIVE AND GRADED A `67,644★` MIT REPOSITORY "UNGRANTED". 🔴 THE GLOBAL LEGS RETURN THE **FORTY-SECOND** NIL. SEVEN REGISTERED (`612-A`…`612-G`).**
 
 ### 🟢 `612-B` — read this first: `611-A` must be narrowed, and the narrowing is worth real money

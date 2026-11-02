@@ -3,6 +3,123 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — reads `2026-11-02` — market map and regional placement
+
+🔴 **`598-G` — thirteenth consecutive pass open, control unchanged.** `unesco.org`, `oecd.org` and the
+primary market-research PDFs remain unreachable from this session, as do `moodledev.io` and
+`docs.openedx.org` (`612`). 🔵 Every market figure below is therefore a **secondary** read and is
+labelled with who published it; none is a figure this base measured. 🟢 The *supply* figures — stars,
+grants, branches, push dates — are all first-hand and byte-read today.
+
+### 🔵 What moved this pass
+
+🟢 **The sellable asset moved from the tutor to the seam.** `612-D` shelved the **launch** seam (LTI
+`1.3`, permissive, both incumbents copyleft). `613-B`/`613-C` shelve the **telemetry** seam (xAPI /
+cmi5, `Apache-2.0`, published by the US DoD's ADL Initiative, with a `MIT` conformance test suite and
+two live permissive Learning Record Stores). 🔵 Together those two seams are the whole commercial
+boundary around a copyleft incumbent: a studio can launch into Moodle or Open edX and report out of it
+without touching `GPL-3.0` or `AGPL-3.0` code.
+
+🔴 **And the week's loudest education-agent repository is unsellable.**
+`GarethManning/education-agent-skills` (`942★`) is `CC-BY-SA-4.0` on bytes — share-alike, on prompt
+text (`613-E`). 🔵 The commercially relevant reading: **attention in this sector is not tracking
+licence-usable supply**, so star rank is not a shortlist.
+
+### 🔵 Market size — secondary, and the spread is the finding
+
+| publisher | figure | note |
+| --- | --- | --- |
+| The Business Research Company | `~$10.6B` (`2026`) | 🔵 Carried by this base since `p54` |
+| New Market Pitch | `~$11B` (`2026`) | Independent of the above, close agreement |
+| Persistence Market Research | `$3.7B` (`2026`) → `$14.1B` (`2033`), `~21 %` CAGR | 🔴 **Base year disagrees with the two above by `~3×`** |
+| IMARC (via summary) | `$6.4B` (`2025`) | 🔴 Third incompatible base |
+| Persistence, segment | K-12 `~34 %` share (`2026`) | Largest single segment |
+
+🔴 **`559-D`'s rule applies and is restated because the spread widened:** these are not revisions of one
+estimate, they are different definitions of the market. 🟢 Quote a **range** (`$3.7B`–`$11B` for `2026`)
+with the publisher attached, never a point estimate, and never average them.
+
+## Opportunities by region
+
+### North America
+
+🔵 **Demand.** `~36 %` of global AI-in-education spend, `~$3.68B` in `2026` (Markets and Markets via
+summary). US Department of Education released `$169M` in FIPSE awards including responsible-AI use.
+🔴 **Regulation is a patchwork, not a statute:** `134` bills across `31` states as of `2026-03`, no
+federal instrument.
+
+🟢 **Supply placed here, byte-read today.** [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)
+(`Apache-2.0`, `144★`) and [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim)
+(`Apache-2.0`, `23★`), plus the entire [`adlnet`](https://github.com/adlnet) conformance tier
+(`Apache-2.0`/`MIT`, `12`–`956★`) — a **US federal agency** is the publisher.
+
+🟢 **The opportunity, and it is specific to the patchwork.** `612`'s `P612-4` argued for
+policy-parameterised multi-jurisdiction deployment. 🟢 `613` supplies the evidence layer that makes it
+auditable: `adlnet/lrs-conformance-test-suite` is `MIT`, so a per-state compliance posture can be
+expressed as a **test run inside the client's own CI** rather than a consultant's assertion. `50`
+jurisdictions × one parameterised build is the shape; the conformance suite is what a state procurement
+will actually ask for.
+
+### EMEA
+
+🔵 **Regulation is the clock, and it is already running.** `(EU) 2026/1744` (Digital AI Omnibus, in
+force `2026-07-27`) defers Annex III **education** high-risk obligations to `2027-12-02` without
+changing them; Article `50` transparency is live and watermarking is due `2026-12-02` (`612`). 🟢 New
+this pass: the European Commission updated its **AI-in-education ethical guidelines** in `2026-06`, and
+the UK's AI Adoption Summit committed `£200M+` (`£100M` Bridge AI, `£53M` regional).
+
+🟢 **Supply placed here.** [`openfun/ralph`](https://github.com/openfun/ralph) (`MIT`, `51★`, pushed
+`2026-11-01`) — LRS and learning-analytics toolbox from **France Université Numérique**, the French
+state's higher-education digital operator. 🔵 With `612-F`'s three UK DfE services and Oak National
+Academy's Aila, and `611-D`'s `bcgov/SIMS`, that is **three jurisdictions in three passes publishing
+operational education code under permissive grants** — the pattern is now established, not anecdotal.
+
+🟢 **The opportunity.** The `2027-12-02` deferral is thirteen months of runway, and the obligations are
+unchanged — so the work is building the conformity file now. 🟢 `612-E`'s rubric tier plus `613-B`'s
+conformance suite plus `ralph`'s analytics is a complete Annex III evidence chain assembled entirely
+from permissive, state-published parts.
+
+### APAC
+
+🔵 **Demand and the sovereignty constraint together.** Forrester expects `60 %` of firms and governments
+in major markets including India and China to run **locally developed** LLMs alongside global ones, with
+education named as a target sector. 🔵 Korea's AI Basic Act binds education as a named high-impact
+sector (in force `2026-01`); China's content-labelling rules and `50+` standards apply (`p612` record).
+
+🟢 **Supply placed here.** `612` placed `9` region-tagged agent rows in APAC, led by
+`BenyRonald77/uajy-academic-rag-chatbot` (`452★`, `MIT`, one named Indonesian university's handbook) and
+`callmevanshh/campusask` (IIIT Delhi). 🔴 `613` placed **none** — the xAPI, LRS and FSRS tiers are
+North American, EMEA and Global respectively.
+
+🟢 **The opportunity.** The local-LLM requirement makes the *scheduler* more valuable than the model:
+`613-D`'s FSRS tier is `MIT`/`BSD-3` and model-agnostic, and `fsrs-optimizer` fits to a learner's own
+review history — so the retention asset survives a forced model swap to a domestic LLM. 🔵 That is the
+one architecture where sovereignty is not a tax.
+
+### LATAM
+
+🟢 **The demand side is now quantified, and it inverts the standing read.** Digital Education Council ×
+Tecnológico de Monterrey, *AI in Higher Education LATAM Survey 2026*: **`92 %` of students** and
+**`79 %` of faculty** actively engaging with AI; faculty positive opinion rose **`57 % → 72 %`** in
+`2026`. UNESCO IESALC surveyed **`200` institutions across `19` countries** and found the
+adoption–governance gap **most pronounced in this region**; at the launch, the stated finding was a
+*lack of formal institutional AI policies in Latin American universities*.
+
+🔴 **Supply remains a measured absence, and `613` does not change it.** `612` recorded `0 of 68`
+shippable-shaped candidates placing to LATAM. 🟢 This pass adds an independent confirmation: `0 of 24`
+promoted rows place here, and `0 of 90` curated-index addresses. 🔵 Regional spend `$105.6M` → `$204.7M`
+by `2029` — two orders of magnitude below global.
+
+🟢 **The opportunity, and `613` sharpens what it is.** `612-5` read the gap as **content** (Spanish and
+Portuguese material). 🔴 The LATAM survey says the binding constraint is **governance**: adoption is
+already near-universal at `92 %`/`79 %`, so nobody needs persuading to use AI — what is missing is the
+institutional policy, and `200` institutions in `19` countries are missing the same one. 🟢 That is a
+**template** engagement, not a bespoke one: one AI-use policy plus the `613-B` conformance evidence plus
+`612-E`'s rubric tier, instantiated per institution. 🔵 The architecture gap stays zero — every part is
+already permissive and none of it is LATAM-specific, which is exactly why it can be delivered at
+near-zero marginal cost.
+
+
 ## 🆕 `p612` — reads `2026-11-02` — market map and regional placement
 
 🔴 **`598-G` — twelfth consecutive pass open, control unchanged.** `unesco.org`, `oecd.org` and the

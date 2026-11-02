@@ -3,6 +3,84 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🟢 `T613-1` — the permissive supply in education is concentrating in **seams and standards**, not in tutors
+
+🟢 **Evidence.** Two consecutive passes found whole permissive *tiers* that this base had never shelved,
+and neither is an application: `612-D` LTI `1.3` (`5` stacks, `25`–`203★`), `613-B` xAPI/cmi5
+conformance (`9` repos, `12`–`956★`, `Apache-2.0`, US DoD), `613-C` LRS + simulation (`5` repos),
+`613-D` FSRS scheduling (`8` stacks, `107`–`4,122★`). 🔵 Meanwhile `611` passes of searching for tutors
+produced rows that top out around `450★` and are mostly single-author.
+
+🔴 **What would refute it.** A permissive, multi-contributor, `>1,000★` education *application* —
+tutor, LMS or courseware — appearing and staying maintained. 🔵 `fsrs4anki` at `4,122★` is the closest
+thing on these shelves and it is a **scheduler**, which is the point.
+
+### 🔴 `T613-2` — star rank in education AI does not track licence usability
+
+🟢 **Evidence.** The highest-starred education-agent repository either search leg returned this pass is
+`GarethManning/education-agent-skills` at `942★`, and it is 🔴 `CC-BY-SA-4.0` on bytes — share-alike, on
+prompt text (`613-E`). 🔵 The two `>76,000★` rows the legs returned are AI curricula, not education
+software. 🟢 By contrast the pass's most commercially useful row, `yetanalytics/lrsql`, has `144★`.
+
+🔴 **What would refute it.** A measurement over a larger population showing permissive share rising with
+stars in this sector. 🟡 **Stated limit:** `T613-2` currently rests on `~5` addresses and is a
+*hypothesis with one hard case*, not a rate. The census that would settle it is cheap and is left
+registered rather than claimed.
+
+### 🟢 `T613-3` — governments are now a primary source of permissive education code, in four jurisdictions
+
+🟢 **Evidence, one new jurisdiction per pass for three passes.** `611-D` Government of British Columbia
+(`bcgov/SIMS`, `Apache-2.0`); `612-F` UK Department for Education (three live national services, `MIT`)
+and Oak National Academy (`MIT`); `613-B` US Department of Defense ADL Initiative (`adlnet`, `92`
+repositories, `Apache-2.0`); `613-C` France Université Numérique (`openfun/ralph`, `MIT`, pushed
+`2026-11-01`).
+
+🔵 **Why it is a trend and not a coincidence.** All four publish under **permissive** grants while both
+dominant incumbent platforms are copyleft — states optimise for adoption and reuse, vendors for
+control. 🔴 **What would refute it:** a state education body relicensing to `AGPL`, or the next two
+passes finding no new jurisdiction.
+
+### 🔴 `T613-4` — a curated index must be classified before it is mined, and the test is one ratio
+
+🟢 **Evidence.** `613-H` censused four education indexes. `GeminiLight/awesome-ai-llm4education`:
+`181` arXiv links, `7` GitHub addresses, `1` permissive — a **bibliography**.
+`open-spaced-repetition/awesome-fsrs`: `0` arXiv, `54` addresses, `32` permissive — a **supply index**.
+🔵 The `arXiv : GitHub` ratio separates the two cleanly on all four.
+
+🔴 **What would refute it.** An index with a high paper ratio that nonetheless yields shippable supply.
+🟡 `n = 4`.
+
+### 🟢 `T613-5` — LATAM's binding constraint is **governance**, not content or architecture
+
+🟢 **Evidence.** Digital Education Council × Tec de Monterrey `2026`: `92 %` of students and `79 %` of
+faculty already active, faculty positive opinion `57 % → 72 %`. UNESCO IESALC, `200` institutions in
+`19` countries: adoption–governance gap most pronounced in the region; *no formal institutional AI
+policies*. 🔵 Against `0 of 24` promoted rows and `0 of 90` index addresses placing to LATAM.
+
+🔵 **This revises `612-5`, which read the gap as Spanish/Portuguese content.** 🟢 At `92 %` adoption the
+demand-side work is done; the missing artefact is institutional policy, and it is missing the *same way*
+in `200` institutions — which makes it a template, not a bespoke build.
+
+🔴 **What would refute it.** A LATAM-published permissive education repository above `100★`, or survey
+evidence that institutional policies are in fact widespread. 🔵 `611-F`'s Angolan `kifula` (`MIT`, `0★`)
+is the only Lusophone supply signal this base has ever had.
+
+### 🔴 `T613-6` — five consecutive passes have found their central defect in the **instrument**
+
+🟢 **Evidence.** `610-E`, `611-B` (every `GPL-2.0` file mis-graded as `LGPL`), `611-I` (an upstream step
+that never fired), `612-C` (a case-sensitive ladder grading a `67,644★` MIT repo ungranted), `613-F` (a
+batched existence probe that fails silently in two distinct ways). 🟢 All five were caught **before
+publication**.
+
+🔵 **The reading that matters for delivery.** On this corpus the dominant error source is no longer the
+data; it is the tooling built to read it. 🟢 So the transferable deliverable for a client is **the
+verified ladder and its controls**, not the row list — the rows go stale in weeks, and `612-A` measured
+`11.9 %` of a carried backlog unresolvable within one quarter. 🔴 **What would refute it:** two
+consecutive passes whose central correction is a corpus fact.
+
+
 ## 🆕 `p612` — `2026-11-02` — trends, each with the evidence that would refute it
 
 ### 🟢 `T612-1` — licence metadata is not uniformly unreliable; **curated** licence metadata is

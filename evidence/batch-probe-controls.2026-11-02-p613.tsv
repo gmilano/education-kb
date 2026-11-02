@@ -1,0 +1,6 @@
+probe	input_slugs	valid	response	total_count	reader_sees	verdict
+all-invalid batch	2	0	HTTP 422 Validation Failed	ABSENT	0 (via .get default)	SILENT FAILURE - 422 is indistinguishable from an honest zero
+mixed batch	3	1	HTTP 200	1	1	SILENT DROP - 2 invalid slugs vanish with no error
+all-valid batch	15	15	HTTP 200	15	15	correct
+raw-bytes fabricated control x4	4	0	HTTP 404 14 B	n/a	404 14 B	correct - the byte channel does not lie
+github.com HTML (the prompt-prescribed curl -sI)	8	8	HTTP 403 on every real address	n/a	403	INERT on this host - cannot verify existence, confirms p449/p608

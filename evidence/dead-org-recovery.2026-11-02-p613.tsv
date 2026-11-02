@@ -1,0 +1,17 @@
+published_address	resolves	recovered_address	stars	grant_bytes	size_B	path	branch	pushed
+i2idl/xapi-spec	NO	adlnet/xAPI-Spec	956	Apache-2.0	11525	LICENSE	master	2025-07-03
+i2idl/adl_lrs	NO	adlnet/ADL_LRS	334	Apache-2.0	11357	LICENSE	master	2025-11-14
+i2idl/xapiwrapper	NO	adlnet/xAPIWrapper	224	Apache-2.0	10273	LICENSE	master	2022-12-04
+i2idl/lrs-conformance-test-suite	NO	adlnet/lrs-conformance-test-suite	78	MIT	1046	LICENSE	master	2025-09-04
+i2idl/xapi-dashboard	NO	adlnet/xAPI-Dashboard	66	NOT-READ	-	-	master	2016-06-02
+i2idl/xapi-profiles	NO	adlnet/xapi-profiles	60	Apache-2.0	11357	LICENSE	master	2024-12-16
+i2idl/catapult	NO	adlnet/CATAPULT	59	Apache-2.0	11358	LICENSE	main	2026-01-20
+i2idl/xapi-authored-profiles	NO	adlnet/xapi-authored-profiles	45	Apache-2.0	11357	LICENSE	master	2025-11-17
+i2idl/xapi-lab	NO	adlnet/xapi-lab	38	NOT-READ	-	-	master	2017-04-15
+i2idl/masterobjectmodel	NO	adlnet/MasterObjectModel	12	Apache-2.0	11525	LICENSE	master	2025-07-03
+i2idl/profile-server	NO	adlnet/profile-server	9	NOASSERTION-api	-	-	main	2025-11-14
+i2idl/dodireference	NO	adlnet/dodireference	1	NULL-api	-	-	main	2026-05-06
+arabidopsisdev/word2sentence	NO	NOT-RECOVERED	-	-	-	-	-	-
+darl-genai/instructional_agents	NO	NOT-RECOVERED	-	-	-	-	-	-
+odilient/bilimind-desktop	NO	NOT-RECOVERED	-	-	-	-	-	-
+open-spaced-repetition/obsidian-spaced-repetition-recall	NO	NOT-RECOVERED	-	-	-	-	-	-

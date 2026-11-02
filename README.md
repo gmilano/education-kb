@@ -3,6 +3,101 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## Pass 613 — reads 2026-11-02, commit 2026-11-02 — **🔴 `42.9 %` OF THE SECTOR'S STANDARDS INDEX POINTS AT AN ORG WITH **ZERO** REPOSITORIES — AND ALL `12` ADDRESSES RECOVER BY UNCHANGED SLUG UNDER THE REAL PUBLISHER, WHICH HANDS OVER THE ENTIRE `Apache-2.0` xAPI / cmi5 CONFORMANCE TIER (US DoD) THIS BASE HAD NEVER SHELVED. 🟢 `24` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, `24 of 24` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD (`92 of 92` POOLED WITH `612`). 🟢 `611-C-open` AND `611-H-open` BOTH CLOSED — ONE WITH A CAUSE, ONE BY ITS PRESCRIPTION BEING UNEXECUTABLE. 🔴 `613-E`: A `942★` REPOSITORY READS `NOASSERTION` AND IS `CC-BY-SA-4.0` ON BYTES. 🔴 `613-F`: A BATCHED EXISTENCE PROBE FAILS SILENTLY TWO WAYS. 🔴 FORTY-THIRD GLOBAL NIL, AND THE PROMPT'S OWN `curl -sI` VERIFIER IS INERT ON THIS HOST. 🔴 `589-A` SEVENTH RECURRENCE — `p612` REGISTERED NOTHING; BACKFILLED. TEN REGISTERED (`613-A`…`613-J`).**
+
+🔴 **`613-A` — the pass's load-bearing finding.** `org:i2idl` returns **`0`** repositories; `org:adlnet`
+returns **`92`**. `12 of 28` addresses (`42.9 %`) in `tla-ecosystem/awesome-tla` — the sector's Total
+Learning Architecture index, already on these shelves — are `i2idl/*`, and **all `12` recover by
+unchanged slug** under `adlnet`. 🔵 **Why it revises `612-A`.** `612-A` measured `11.9 %` of a carried
+backlog unresolvable and framed it as *"a wasting asset"*, which implies independent attrition that
+nothing can recover. 🟢 This failure is **owner-level**: one redirect, `12` addresses, `100 %`
+recoverable in one step. 🟢 **Rule adopted:** group unresolved addresses by owner before writing any
+off — several dead addresses under one owner is a *move*, a singleton is attrition. On this population
+it recovers `12 of 16` (`75 %`) of what a per-address sweep discards.
+`evidence/dead-org-recovery.2026-11-02-p613.tsv`.
+
+🟢 **What the recovery was worth: the telemetry half of the commercial seam.** `612-D` shelved how a
+tool **launches** from a copyleft LMS (LTI `1.3`, permissive). 🟢 `613-B`/`613-C` shelve how it
+**reports back**: the `Apache-2.0` xAPI and cmi5 conformance tier published by the **US DoD's ADL
+Initiative** (`9` repos, `12`–`956★`, including a `MIT` **LRS conformance test suite**), plus two live
+permissive Learning Record Stores — `yetanalytics/lrsql` (`Apache-2.0`, `144★`) and `openfun/ralph`
+(`MIT`, `51★`, **France Université Numérique**, pushed yesterday) — and `yetanalytics/datasim`, which
+generates conformant statement volume so the stack is demonstrable before a single real learner exists.
+🔵 Those two seams together bound the whole commercial boundary around a `GPL-3.0`/`AGPL-3.0` incumbent.
+🔴 Stated limit: `5 of 9` ADL repos last pushed `2024`–`2025` and `xAPIWrapper` in `2022-12` — a quiet
+*spec* is expected, an unmaintained *wrapper* is a defect, and the row says so.
+
+🟢 **`613-D` — and this base was already selling the tier it had never shelved.** `p612` promoted
+`Smart-Study-Agent` praising *"RL picks the action, **FSRS** picks the timing"* — and never shelved
+FSRS. It is a complete permissive polyglot tier: `fsrs4anki` (`4,122★`, `MIT`), `ts-fsrs` (`847★`),
+`py-fsrs` (`520★`), `fsrs-rs` (`455★`, `BSD-3`), `go-fsrs`, `swift-fsrs`, and `fsrs-optimizer`, which
+🟢 **fits the algorithm's parameters to one client's own review history** — the clearest answer this
+base holds to "what does the client own that a competitor cannot copy."
+
+🔴 **`613-E` — `612-B`'s stated limit is now a measured defect, and it is the expensive kind.** `612-B`
+closed with *"the `157` `NULL` and `68` `NOASSERTION` rows … are not measured here."* 🟢 One was
+measured: `GarethManning/education-agent-skills`, `942★`, the highest-starred education-agent repository
+either search leg returned, reads 🔴 `NOASSERTION` and is 🔴 **`CC-BY-SA-4.0`** on bytes. **Not
+promoted.** 🔴 A permissive filter drops it unseen; a reader treating `NOASSERTION` as "no licence file"
+ships **share-alike** — and the asset is **prompt text**, where the obligation attaches to the thing a
+studio pastes into a client's own agent. 🟢 Rule narrowing `612-B`: batch-trust the platform field on
+the **permissive arm only** (`92 of 92` pooled); never read `NOASSERTION`/`NULL` as a licence fact in
+either direction.
+
+🟢 **Two carried open items closed, and neither closed the way it was written.** 🟢 **`613-G`** —
+`611-H-open` asked whether curated indexes misstate education licences generally and prescribed
+censusing two more `awesome-*` lists. 🔴 **`0 of 4` candidate indexes has a per-row licence column at
+all**, so `611-A`'s `1 of 5` stays `n = 1` permanently: the question is not hard, it is **ill-posed
+against the corpus it named** — `611-I`'s class a second time. 🟢 Standing rule: a prescription must
+name the field it will read, and confirm that field exists in at least one input. 🟢 **`613-I`** —
+`611-C-open`'s unexplained branch-rate spread (`15.2 %` vs `32.4 %`) is closed with a cause on a third
+population (`16.7 %`, `n = 24`): `p559`'s misses were `odoo 20.0`, `openeducat_erp 19.0`,
+`i-educar 2.12`, `ILIAS release_11` — **release** branches, which only a platform supporting several
+live versions carries. Libraries and specs carry `dev`/`develop`/`quartz` instead. The rate is not one
+number: `~30 %` on monoliths, `~15 %` on libraries.
+
+🟢 **`613-H` — the reframe that was answerable, and it indicts one of this base's own shelf entries.**
+What every index publishes is **addresses**, so the repeatable property is address yield: `90` addresses
+across `4` indexes, `74` resolve (`82.2 %`), `45` permissive (`50.0 %`). 🔴
+`GeminiLight/awesome-ai-llm4education` — carried here for many passes as an education-AI supply lead —
+contains `181` arXiv links and `7` GitHub addresses, `1` permissive. **It is a survey bibliography, not
+a supply index.** 🟢 Rule: classify an index by its `arXiv : GitHub` ratio before mining it; the test
+separates all four cleanly.
+
+🔴 **`613-F` — fifth consecutive pass whose central defect is the instrument, and it was caught before
+publication.** A batched `repo:` existence probe fails two ways: **all members invalid** → `HTTP 422`
+with **no `total_count`**, which a `.get("total_count", 0)` reader renders as a clean `0`; **mixed
+batch** → `HTTP 200` with invalid members silently dropped and no error. 🟢 Rule: arbitrate a batched
+probe by **set-difference against the input list**, never by a returned count — this pass's own
+`90`-address sweep did so and therefore found `613-A`; trusting the count would have reported `74`
+resolved and missed the dead org. 🔵 `610-E`, `611-B`, `611-I`, `612-C`, now `613-F`.
+
+🔴 **Forty-third consecutive global-leg nil — and the run prompt's own verifier does not work here.**
+All `8` mandated legs run; `0` new permissive education repositories
+(`evidence/websearch-legs.2026-11-02-p613.tsv`). 🔴 All `24` promoted rows came from curated indexes
+already on these shelves — third independent confirmation of `612-A`. 🔴 The prompt prescribes
+`curl -sI` on every URL; `github.com/{owner}/{repo}` returns **`403` for every real address** on this
+host, `adlnet/xAPI-Spec` at `956★` included, identical to a fabricated one. 🟢 Substitutes stated on the
+trending shelf; `4 of 4` fabricated controls at `404 14 B`.
+
+🟢 **LATAM: the demand side is finally quantified, and it inverts `612-5`.** Digital Education Council ×
+Tec de Monterrey, *AI in Higher Education LATAM 2026*: **`92 %` of students** and **`79 %` of faculty**
+active, faculty positive opinion `57 % → 72 %`; UNESCO IESALC across **`200` institutions in `19`
+countries** finds the adoption–governance gap widest in the region and **no formal institutional AI
+policies**. 🔴 Supply is still a measured absence — `0 of 24` promoted rows and `0 of 90` index
+addresses place to LATAM. 🔵 `612-5` read the gap as Spanish/Portuguese **content**; at `92 %` adoption
+nobody needs persuading, and the missing artefact is **institutional policy**, missing the same way in
+`200` institutions. 🟢 That makes it a **template** engagement (`P613-5`), not a bespoke one.
+
+🟢 **`5` patterns published**, each wired only from rows byte-read today: `P613-1` the closed loop around
+a copyleft LMS — launch permissive, report permissive (`6`–`8` wk) · `P613-2` retention as the asset the
+incumbent cannot hand over (`4`–`6` wk) · `P613-3` the EMEA Annex III conformity file from state-published
+parts (`8`–`10` wk) · `P613-4` the North America multi-jurisdiction build with compliance as CI
+(`10`–`12` wk) · `P613-5` the LATAM institutional-policy template (`3`–`5` wk per institution).
+
+---
+
+
 ## Pass 612 — reads 2026-11-02, commit 2026-11-02 — **🟢 `611-A` NARROWED AND IT MATTERS COMMERCIALLY: THE PLATFORM'S OWN `license.spdx_id` REPRODUCES ON GRANT BYTES `68 of 68` (`100 %`) WHERE THE CURATED INDEX MANAGED `1 of 5`. 🟢 AND THE YIELD CAME FROM THE **BACKLOG**, NOT THE SEARCH LEGS: `610`'S `848` EDUCATION-SHAPED TRENDING-ONLY ADDRESSES RESOLVE TO `68` SHIPPABLE-SHAPED (`8.0 %`), OF WHICH `40` ARE PROMOTED — INCLUDING TWO WHOLE TIERS THIS BASE HAD NEVER SHELVED. 🔴 `612-C`: A CASE-SENSITIVE LADDER GRADED A `67,644★` MIT REPOSITORY "UNGRANTED". 🔴 FORTY-SECOND GLOBAL-LEG NIL. SEVEN REGISTERED (`612-A`…`612-G`).**
 
 🟢 **`612-B` — the pass's load-bearing correction.** `p611` censused a curated third-party index, found

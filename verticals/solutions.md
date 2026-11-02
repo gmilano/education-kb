@@ -3,6 +3,50 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE SECTOR'S STANDARDS INDEX POINTS `12 of 28` ADDRESSES (`42.9 %`) AT AN ORG THAT HAS **ZERO** REPOSITORIES — AND ALL `12` RECOVER, BY SLUG, UNDER THE REAL PUBLISHER. 🟢 THAT RECOVERY IS THE WHOLE `Apache-2.0` xAPI / cmi5 CONFORMANCE TIER, PUBLISHED BY THE US DoD's ADL INITIATIVE, AND THIS BASE HAD NONE OF IT.**
+
+### 🟢 `613-B` — the conformance tier, recovered from a dead org
+
+🔵 **What this tier is for.** `612-E` shelved rubric/autograding repos and argued they are *"not a
+feature but the Annex III conformity evidence."* 🟢 This is the same argument one layer down and with a
+government behind it: xAPI and cmi5 are the **interoperability standards** an education procurement
+writes into a contract, and the publisher ships a **conformance test suite** that answers "is your
+implementation compliant?" with a test run rather than an assertion.
+
+| repo | ★ | grant (byte-read) | path | branch | pushed | what it is |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `956` | 🟢 `Apache-2.0` `11,525 B` | `LICENSE` | 🟡 `master` | `2025-07-03` | 🟢 The **specification itself**, permissively licensed — so the contract language can be quoted, forked and annotated for a client without permission |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `334` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | 🟡 `master` | `2025-11-14` | The publisher's own reference Learning Record Store — the thing `yetanalytics/lrsql` is a production alternative to |
+| [`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) | `224` | 🟢 `Apache-2.0` `10,273 B` | `LICENSE` | 🟡 `master` | 🔴 `2022-12-04` | Browser wrapper for talking to an LRS. 🔴 **Unmaintained since `2022`** — prefer `xapijs/xapi` (`613-C`) and keep this only as a reference |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | `78` | 🟢 `MIT` `1,046 B` | `LICENSE` | 🟡 `master` | `2025-09-04` | 🟢 **The procurement answer.** A Node suite that tests the `MUST` requirements of the spec against a live LRS. `MIT`, so it ships inside a client's own CI |
+| [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | `60` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | 🟡 `master` | `2024-12-16` | The profile **specification** — how a sector agrees on what a statement means |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | `59` | 🟢 `Apache-2.0` `11,358 B` | `LICENSE` | `main` | `2026-01-20` | 🟢 **cmi5** test application and player — the SCORM replacement's conformance kit |
+| [`adlnet/xapi-authored-profiles`](https://github.com/adlnet/xapi-authored-profiles) | `45` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | 🟡 `master` | `2025-11-17` | The official profile library — reusable vocabularies rather than inventing statement semantics per client |
+| [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | `12` | 🟢 `Apache-2.0` `11,525 B` | `LICENSE` | 🟡 `master` | `2025-07-03` | A profile denoting how a statement is structured — small, but it is the schema a validator keys on |
+| [`AICC/CMI-5_Spec_Current`](https://github.com/AICC/CMI-5_Spec_Current) | `189` | 🟢 `Apache-2.0` `10,824 B` | `LICENSE` | 🔴 `quartz` | `2024-09-06` | The **cmi5 specification** at the standards body. 🔴 Default branch is `quartz` — neither `main` nor `master`, and a third distinct shape after `611-C`'s `produção` |
+
+🟡 **Stated limit, because it bounds how this tier is sold.** Five of the nine were last pushed in `2024`
+or `2025`, and one in `2022`. 🔵 For a *specification* that is close to a non-finding — specs are stable
+by design, and `xAPI-Spec` being quiet is what a ratified standard looks like. 🔴 For `xAPIWrapper`,
+which is **code**, it is a real defect, and the row says so. The live code in this stack is
+`613-C`'s `lrsql`, `ralph` and `datasim`, all pushed within the last `17` days.
+
+### 🔴 `613-A` — the mechanism: `42.9 %` of a curated standards index is one dead org, not scattered rot
+
+🟢 `org:i2idl` returns **`0`** repositories. `org:adlnet` returns **`92`**. Every one of the `12`
+unresolved `i2idl/*` addresses in [`tla-ecosystem/awesome-tla`](https://github.com/tla-ecosystem/awesome-tla)
+recovers **by unchanged slug** under `adlnet`. Evidence:
+`evidence/dead-org-recovery.2026-11-02-p613.tsv`.
+
+🔵 **Why the shape matters more than the count.** `612-A` measured `101 of 848` (`11.9 %`) of a carried
+backlog no longer resolving and concluded *"a carried backlog is a wasting asset."* 🔴 That framing
+implies **attrition** — many small repos dying independently, which nothing can recover. 🟢 This failure
+is the opposite: **one owner-level redirect, `12` addresses, `100 %` recoverable in a single step.**
+🟢 **Operative rule:** before writing off unresolved addresses, group them by owner — an owner with
+several dead addresses is a *move*, and a move is free to follow; only a singleton is attrition.
+🔵 On this population the rule recovers `12 of 16` (`75 %`) of what a per-address sweep discards.
+
+
 ## 🆕 `p612` — reads `2026-11-02`, commit `2026-11-02` — **🟢 A NATIONAL EDUCATION MINISTRY SHIPS **THREE** LIVE SERVICES UNDER `MIT` AND THIS BASE HAD SHELVED NONE OF THEM. 🔴 `612-G`: THE TWO INCUMBENT PLATFORMS BOTH MOVED SOMETHING THAT BREAKS TOOLING — MOODLE DELETED ROOT `version.php` AT `5.x`, OPEN EDX CHANGED ITS RELEASE-BRANCH CONVENTION AFTER SUMAC. BOTH RESOLVED FROM REFS AND BYTES, NOT FROM PROSE. `6` PLATFORM ROWS PROMOTED.**
 
 ### 🟢 `612-F` — the public-sector tier: a ministry's own code, `MIT`, pushed today

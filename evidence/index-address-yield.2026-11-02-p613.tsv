@@ -1,0 +1,6 @@
+index	addresses	resolved	permissive_api	arxiv_links	verdict
+GeminiLight/awesome-ai-llm4education	7	6	1	181	literature index, not a supply index (25.9:1 papers:repos)
+KaynXu/awesome-ai-education	2	2	2	0	link list of hosted products, 2 addresses only
+tla-ecosystem/awesome-tla	28	16	10	0	12 of 28 (42.9%) point at org i2idl, which has 0 repositories
+open-spaced-repetition/awesome-fsrs	54	51	32	0	highest-yield index measured; a real polyglot implementation tier
+POOLED	90	74	45	181	82.2% of addresses resolve; 50.0% permissive by platform field

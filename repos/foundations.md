@@ -3,6 +3,52 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p613` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE TELEMETRY HALF OF THE SEAM: `612-D` SHELVED HOW A TOOL **LAUNCHES** FROM AN LMS; THIS PASS SHELVES HOW IT **REPORTS BACK**, AND IT IS `Apache-2.0` ALL THE WAY DOWN, PUBLISHED BY THE US DoD's ADL INITIATIVE. 🟢 PLUS A COMPLETE **POLYGLOT SCHEDULING TIER** (`8` LANGUAGES, `MIT`/`BSD-3`), THE ALGORITHM `612`'S OWN TOP AGENT ROW ALREADY DEPENDS ON. `24 of 24` GRANTS BYTE-READ AGREE WITH THE PLATFORM FIELD.**
+
+### 🟢 `613-C` — the xAPI telemetry tier: a permissive Learning Record Store, and the simulator to load-test it
+
+🔵 **Why this is the load-bearing row, not a nice-to-have.** `612-D` established that LTI is the
+commercial boundary, because both incumbents are copyleft (Moodle `GPL-3.0`, Open edX `AGPL-3.0`) and
+LTI is the permissive seam a tool launches through. 🔴 But a launch seam alone cannot answer the only
+question an education client actually buys: *did the learner learn anything, and can you prove it?*
+🟢 That is xAPI, and the store it writes to is an **LRS** — and there is a permissive, actively
+maintained one.
+
+| repo | ★ | grant (byte-read) | path | branch | pushed | region | what it is |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `144` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | `main` | `2026-10-27` | 🟢 North America | 🟢 **A SQL-based Learning Record Store** — the permissive system of record for learner evidence. Published by Yet Analytics, a commercial xAPI vendor, which is the rarer vendor-owned-and-permissive combination `612` flagged on `instructure/ims-lti` |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | `51` | 🟢 `MIT` `1,094 B` | `LICENSE.md` | `main` | `2026-11-01` | 🟢 EMEA | LRS **and** learning-analytics toolbox from **France Université Numérique**, the French state's higher-education digital operator. 🟢 Pushed yesterday. Second state-published EMEA row in two passes after `612-F`'s UK DfE |
+| [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim) | `23` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | 🟡 `master` | `2026-10-16` | 🟢 North America | 🟢 **xAPI data simulation** — generates conformant statement volume from a profile. This is how you load-test and demo an LRS before a single real learner exists, which is the week-one blocker on every analytics engagement |
+| [`xapijs/xapi`](https://github.com/xapijs/xapi) | `51` | 🟢 `MIT` `1,071 B` | `LICENSE.md` | 🔴 `develop` | `2026-04-29` | Global | The JS/TS client for talking xAPI from a browser or Node tool |
+| [`xapijs/cmi5`](https://github.com/xapijs/cmi5) | `25` | 🟢 `MIT` `1,070 B` | `LICENSE.md` | 🔴 `develop` | `2026-04-01` | Global | The same client narrowed to the **cmi5** profile — the packaging contract that replaces SCORM |
+
+🟡 **Stated limit.** `xapijs/*` has not been pushed since `2026-04`; both are small client libraries where
+that is survivable, but neither is a maintained dependency in the sense `lrsql` and `ralph` are.
+
+### 🟢 `613-D` — the scheduling tier: `8` languages, one algorithm, and `612` was already selling it
+
+🔵 `p612` promoted `HumphreySun98/Smart-Study-Agent` and called its division of labour *"the cleanest on
+this shelf"* — **RL picks the action, FSRS picks the timing, the LLM only writes the quizzes.** 🔴 This
+base shelved the agent and never shelved **FSRS**, the scheduler the praise was actually about. It is a
+complete permissive implementation tier, one per stack, in the shape `612-D` found for LTI.
+
+| repo | ★ | grant (byte-read) | path | branch | pushed | stack |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `4,122` | 🟢 `MIT` `1,079 B` | `LICENSE` | `main` | `2026-08-14` | 🟢 The reference scheduler, and the highest-starred row this pass touched |
+| [`open-spaced-repetition/ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | `847` | 🟢 `MIT` `1,079 B` | `LICENSE` | `main` | `2026-10-29` | TypeScript / ESM |
+| [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | `520` | 🟢 `MIT` `1,079 B` | `LICENSE` | `main` | `2026-08-09` | Python |
+| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | `455` | 🟢 `BSD-3-Clause` `1,509 B` | `LICENSE` | `main` | `2026-10-28` | Rust — optimizer **and** scheduler |
+| [`open-spaced-repetition/go-fsrs`](https://github.com/open-spaced-repetition/go-fsrs) | `157` | 🟢 `MIT` `1,079 B` | `LICENSE` | `main` | `2026-10-31` | Go |
+| [`open-spaced-repetition/fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | `112` | 🟢 `BSD-3-Clause` `1,509 B` | `LICENSE` | `main` | `2026-08-06` | 🟢 Fits the algorithm's parameters **to one learner's own review history** — the personalisation step |
+| [`open-spaced-repetition/swift-fsrs`](https://github.com/open-spaced-repetition/swift-fsrs) | `107` | 🟢 `MIT` `1,066 B` | `LICENSE` | `main` | `2026-05-25` | Swift / iOS |
+| [`duolingo/halflife-regression`](https://github.com/duolingo/halflife-regression) | `584` | 🟢 `MIT` `1,070 B` | `LICENSE.md` | 🟡 `master` | 🔴 `2024-04-20` | 🔵 **Duolingo's own** published spaced-repetition model. Permissive and citable; 🔴 unmaintained since `2024`, so it is a baseline to benchmark against, not a dependency |
+
+🟢 **Why a scheduling tier is commercially different from a tutor.** A tutor is a prompt and is copied in
+a week. A scheduler is a fitted model over a learner's review history: it improves with retained data,
+which is the one asset an incumbent LMS cannot hand to a competitor. 🔵 `fsrs-optimizer` is the row that
+makes that concrete.
+
+
 ## 🆕 `p612` — reads `2026-11-02`, commit `2026-11-02` — **🟢 TWO WHOLE **TIERS** WERE SITTING IN THE BACKLOG, NOT TWO ROWS: A FIVE-LANGUAGE PERMISSIVE **LTI 1.3 / LTI ADVANTAGE** INTEGRATION TIER (RUBY, PYTHON, JAVA/SPRING, .NET, TYPESCRIPT) AND A SEVEN-REPOSITORY **RUBRIC / AUTOGRADING** TIER. 🔵 THE FIRST IS HOW ANYTHING GLOBANT BUILDS REACHES A LEARNER AT ALL; THE SECOND IS THE ANNEX III CONFORMITY ARTEFACT. `18` FOUNDATION ROWS PROMOTED.**
 
 ### 🟢 `612-D` — the integration tier: `5` permissive LTI implementations, one per stack, none previously shelved
