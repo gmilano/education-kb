@@ -4,6 +4,123 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — `2026-11-02` — **🟢 THE EMEA REGULATORY PICTURE IS NOW NATIONAL, NOT JUST BRUSSELS: UK, GERMANY AND NIGERIA ALL RETURNED DATED MINISTRY-LEVEL POLICY FROM THE **NATIONAL** QUERY LEGS `605-F` ASKED TO BE TESTED HERE. 🔴 KENYA RETURNED NOTHING CONFIRMABLE AND THAT IS WRITTEN DOWN AS A GAP, NOT LEFT AS SILENCE. 🔴 `598-G` STANDS: EVERY MARKET FIGURE ON THIS PAGE IS STILL SEARCH-SNIPPET-GRADE.**
+
+### 🔴 Read this before any figure on this page — `598-G`, eighth pass open
+
+🔴 `unesco.org`, `oecd.org` and `iadb.org` re-measured **`000`** today, with a fabricated host
+control **also `000`** — non-discriminating. 🔵 New diagnostic this pass: the egress proxy reports
+`connect_rejected … host is not allowed for this session`, which separates *policy block* from *host
+down* without separating *exists* from *does not exist*.
+
+🔴 **Consequence, stated plainly:** no market-size number on this page is primary-sourced. They are
+vendor and aggregator snippets, they disagree with each other by `4×`, and they should be quoted to a
+client as a range with that caveat attached. **Operator request, not a research step.**
+
+| what the snippets say for AI-in-education, 2026 | source class |
+| --- | --- |
+| `$10.6 B` 2026 → `$42.48 B` 2030 | market-research firm |
+| `$2.7 B` – `$12.5 B` 2026 (spread across firms) | 🔴 four firms, no reconciliation |
+| `34.52 %` CAGR 2026–2035 | market-research firm |
+| ~`$380 B` broader EdTech 2026 | market-research firm |
+
+🔵 The spread is the finding. A `4×` disagreement between firms on the same year means the number is
+not usable as a planning input — only as a direction.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The regulatory layer moved from guidance to statute in 2026, unevenly, and that unevenness is
+the engagement.**
+
+| signal | detail |
+| --- | --- |
+| 🟢 State statute | **Idaho SB 1227** signed March 2026 — directs a statewide K-12 AI framework covering privacy, procurement safeguards and AI-literacy standards |
+| 🟢 State statute | **Maryland** — law effective **1 June 2026**, state education department must publish AI guidelines that districts adapt |
+| 🟡 Pending | **New York A 9190** would limit direct student AI use to grade `9`+, with diagnostic and special-education exceptions |
+| 🟡 Federal | **K-12 AI Literacy and Readiness Act of 2026** introduced April 2026, advanced by House committee, 🔴 **not passed** |
+| 🔴 Counts disagree | ~`34` states + DC + PR have issued guidance per one tracker; *">28 states + DC"* per Education Commission of the States. `4` states mandate district AI policies |
+| 🟢 Backstop | FERPA + COPPA remain the operative legal constraints |
+
+🟢 **Opportunity:** a **procurement-and-compliance layer**, not a tutor. `50` jurisdictions with
+divergent, newly-statutory requirements and districts that must adapt state guidance locally is a
+configuration problem. Globant's fit is the policy-to-control mapping plus self-hosted deployment so
+student data never leaves the district boundary.
+
+🔵 Adoption figures circulating (`54 %` of K-12 students, `92 %` of university students) are
+secondary-benchmark grade — directionally useful, methodology unverified.
+
+### EMEA
+
+🟢 **The most load-bearing date on this page changed, and stale guides still have the old one.**
+
+| signal | detail |
+| --- | --- |
+| 🟢 **Deadline moved** | **Digital Omnibus, Regulation (EU) 2026/1744** moved stand-alone **high-risk education** AI obligations from `2 Aug 2026` → 🟢 **`2 Dec 2027`**. 🔴 Guides still citing August 2026 predate this |
+| 🟢 In force now | **Art. 50 transparency** duties apply from **`2 Aug 2026`**; systems already on the market have until **`2 Dec 2026`** to add machine-readable marking of generated content |
+| 🟢 In force since | **Emotion-recognition ban in education** — applies since **`2 Feb 2025`** |
+| 🟡 Softened | The **AI-literacy duty** since July 2026 requires *measures to support* staff AI literacy, not a guaranteed level |
+| 🟢 Scope | High-risk covers admission/placement decisions, evaluating learning outcomes, assessing attainable education level, and exam proctoring. **Schools are deployers** — including when the vendor is a third party, and including non-EU vendors reaching EU learners |
+| 🟢 **UK (England)** | DfE *Generative AI in education* policy paper; **Product Safety Standards updated Jan 2026**; support modules **updated May 2026**; 🟢 **KCSIE 2026 makes generative AI part of statutory safeguarding from 1 Sept 2026**. 🔵 Devolved — England only; DfE guidance itself is **non-statutory** |
+| 🟢 **Germany** | **KMK `KI-Kompetenzrahmen`, 16 Oct 2026** — four areas (*bewusst umgehen · kreativ anwenden · gezielt einsetzen · aktiv mitgestalten*), cross-curricular, NRW-led; `22` reflection cards + competence navigator in the shared **AIS.chat**. 🔴 Criticised for no concrete lesson/exam requirements |
+| 🟢 **Nigeria** | **National EdTech Strategy 2025–2030**, six pillars; **Naija Teacher AI** (TRCN + GMind AI) targeting **1.5 M teachers, full adoption Q3 2026**; WAEC/NECO to computer-based testing by 2026. 🔴 **`5.67 %` of public primary schools have computer facilities vs `54.55 %` private** |
+| 🔴 **Kenya — declared gap** | Draft **National AI Strategy 2025–2030** went to consultation; CBC emphasises digital literacy; `M-Shule` and `Eneza Education` named. 🔴 **No confirmed 2026 Kenyan open-source education policy found.** Recorded as a gap |
+
+🟢 **Opportunity, two distinct ones:**
+1. 🟢 **The `2 Dec 2027` runway is the EU sales argument.** A client building an assessment or
+   admissions AI now has `13` months before high-risk obligations bite — long enough to build with
+   logging, human oversight and documentation designed in, far cheaper than retrofitting. The
+   `2 Dec 2026` marking deadline for **already-deployed** systems is the nearer and more urgent one.
+2. 🟢 **Africa is an offline-first platform market, not an LLM market.** `5.67 %` facility coverage
+   makes tablet-based, sync-later assessment the viable shape — which is why **Tangerine** was
+   promoted to `verticals/solutions.md` this pass (`606-I`), the platform Nigeria's own gap analysis
+   names.
+
+### APAC
+
+🟡 **No single regulatory model, and school-level attitudes diverge by country — so a regional
+strategy is the wrong unit.**
+
+| country | regulation | education |
+| --- | --- | --- |
+| 🟢 **South Korea** | **AI Framework Act in force January 2026** — the region's only general AI law | AI curriculum being introduced |
+| 🟡 **China** | No general AI law; specific rules on recommendation algorithms, deepfakes, generative services, and 🟢 **AI-content labelling since Sept 2025** | 🟢 Formal AI-in-education policy; AI curriculum |
+| 🟡 **Japan** | **AI Promotion Act** — promotion-focused, voluntary guidelines, 🔵 **no penalties** | AI curriculum being introduced |
+| 🟡 **India** | No dedicated AI law; relies on guidance + data-protection law; 🟢 amended IT Rules require **AI-content labels from Feb 2026** | — |
+| 🟢 **Singapore** | — | 🟢 Formal AI-in-education policy; AI curriculum |
+
+🔵 **Attitudes (Ipsos):** opposition to banning AI in classrooms runs `23 %` (Indonesia) to `31 %`
+(South Korea), India `26 %`, Japan `29 %` — and **Japan's support for a ban rose `21 % → 29 %`**, so
+the direction of travel differs by country, not just the level.
+
+🟢 **Opportunity:** **jurisdiction-aware policy enforcement as a product feature.** One deployment
+serving Korea (general AI law), China (labelling mandate), Japan (voluntary) and India (IT Rules
+labelling) needs the policy as configuration, not as code. 🔵 `605-F` established that APAC must be
+researched as **national** legs; this page should be read the same way.
+
+### LATAM
+
+🟢 **The capital and the cohort are real; the systemic adoption is not yet.**
+
+| signal | detail |
+| --- | --- |
+| 🟢 Cohort | **HolonIQ 2026 Latin America EdTech 100** — 🟢 **Brazil is nearly half the cohort** and the majority of deal and award activity |
+| 🟢 Players | **Teachy** (Brazil — AI lesson preparation, has expanded into Asia), **Vetto** (Brazil), **Mattilda** (Mexico — billing/collections for private schools), **Ginia** (AI employability matching), **Elevify** (Brazil — seed **US$1.35 M**, led by Newtopia) |
+| 🟡 Capital | *"$2 B into LATAM AI startups in 2026, focused on edtech and fintech, Brazil and Mexico the main recipients"* — 🔴 single less-established outlet, treat as unverified |
+| 🟢 Programme | **Google.org `$4.6 M`** to the Raspberry Pi Foundation's **Experience AI** across `9` countries incl. Brazil and Mexico — target **24,000 educators / 1.25 M students by 2028** |
+| 🟡 Public sector | IDB review of **193** AI initiatives: Rio de Janeiro's secretariat validating school invoices with AI; **Vínculo** for students with disabilities |
+| 🔴 Honest counterweight | OEI/ProFuturo: *"with few exceptions, AI adoption in Latin American education systems is very limited"* — naming **Uruguay** and **Jalisco, Mexico** as standouts. 🔵 That report is 2025, so it may lag the 2026 cohort data above |
+
+🟢 **Opportunity:** the gap between a funded startup cohort and *"very limited"* system-level
+adoption **is** the consulting market — the integration layer between a product that works and a
+ministry that cannot deploy it. 🔵 Concrete asset this base already holds: Brazil's **BNCC national
+curriculum** as npm/PyPI/MCP packages with `1,721` verified learning objectives (`p603`), which is
+the localisation substrate a Brazilian engagement starts from.
+
+🔴 **Next measurement owed:** LATAM **national** legs (Brazil / Mexico / Colombia / Chile). Both
+regions tested so far returned national detail where the acronym leg returned none (`605-F` APAC,
+`606-H` EMEA); LATAM is the untested third.
 ## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `604-H` IS PAID AND IT CHANGES WHAT THIS PAGE CAN SAY ABOUT APAC: THE **ACRONYM** LEG RETURNED LAW-FIRM PDFs FOR A SECOND PASS, AND **FOUR NATIONAL LEGS** RETURNED DATED, SOURCED EDUCATION POLICY FROM CHINA, KOREA, SINGAPORE AND JAPAN. 🔴 THE GLOBAL LEGS RETURN THE **THIRTY-FIFTH** CONSECUTIVE NIL — SO THE NIL IS A PROPERTY OF THE MANDATED **QUERY SHAPE**, NOT OF THE WEB. 🔴 `598-G` UNCHANGED: EVERY DEMAND FIGURE BELOW IS **SEARCH-SNIPPET-GRADE** AND EVERY SUPPLY FIGURE IS BYTE-READ. ALL `5` OPPORTUNITY SUBSECTIONS UPDATED UNDER THE SINGLE CANONICAL BLOCK.**
 
 ### 🟢 The leg table, with the shape axis that `604-H` asked for

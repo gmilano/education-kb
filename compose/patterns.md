@@ -4,6 +4,140 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — `2026-11-02` — **🟢 TWO RECIPES, BOTH BUILT ONLY FROM ROWS BYTE-READ IN THIS PASS OR ALREADY SHELVED: AN **OFFLINE-FIRST EGRA/EGMA ASSESSMENT STACK FOR LOW-CONNECTIVITY AFRICA** (THE `5.67 %` FACILITY CONSTRAINT IS THE DESIGN DRIVER), AND AN **EU HIGH-RISK COMPLIANCE HARNESS** SIZED TO THE `2 Dec 2026` AND `2 Dec 2027` DEADLINES. 🟢 PLUS A REUSABLE **ADDRESS-VERIFICATION RECIPE** FROM `606-E` THAT ANY PASS OR PIPELINE CAN RUN.**
+
+### 🟢 `P606-1` — Offline-first early-grade assessment for low-connectivity systems (EMEA / Africa)
+
+🔵 **Why this shape and not an LMS:** Nigeria's own EdTech gap analysis reports 🔴 **`5.67 %` of
+public primary schools have computer facilities** against `54.55 %` of private. A cloud LMS cannot be
+the entry point. Tablet-based, sync-later assessment can.
+
+```
+  ┌─ FIELD TIER (no connectivity assumed) ────────────────────────────┐
+  │ Tangerine-Community/Tangerine     GPL-3.0  116★  byte-read p606   │
+  │   └── tangy-form                  GPL-3.0   16★  form engine      │
+  │   └── tangy-form-editor           GPL-3.0    5★  authoring UI     │
+  │   instruments: EGRA / EGMA, offline capture on tablet             │
+  └────────────────────────┬──────────────────────────────────────────┘
+                           │  sync when a connection exists
+  ┌────────────────────────▼──────────────────────────────────────────┐
+  │ ANALYTICS TIER                                                     │
+  │ pykt-team/pykt-toolkit            MIT    knowledge tracing        │
+  │ adlnet/ADL_LRS                    Apache-2.0  xAPI statement store│
+  └────────────────────────┬──────────────────────────────────────────┘
+                           │
+  ┌────────────────────────▼──────────────────────────────────────────┐
+  │ LANGUAGE TIER — local, no per-token cost, no data egress          │
+  │ ollama + an open-weight model tuned on national curriculum content│
+  │ bncc-dev/bncc-pacotes (MIT code / CC BY 4.0 data) as the pattern  │
+  │   for curriculum-as-a-package; Nigeria needs its own equivalent   │
+  └───────────────────────────────────────────────────────────────────┘
+```
+
+**Wiring, concretely**
+1. Author EGRA/EGMA instruments in `tangy-form-editor`; they are `tangy-form` web components, so the
+   schema is the integration boundary — nothing needs to be forked to add a field.
+2. Tablets run Tangerine offline. Sync is opportunistic, which is the whole point.
+3. On sync, emit **xAPI** statements into `ADL_LRS` (Apache-2.0, already on `repos/foundations.md`).
+   That decouples the assessment platform from everything downstream.
+4. Feed the statement stream to `pykt-toolkit` for per-learner mastery estimates.
+5. Any generated feedback runs on a **local** open-weight model via `ollama` — required, not
+   preferred: there is no connectivity budget and no data-egress allowance.
+
+🔴 **Licence boundary, stated because it decides the commercial model:** Tangerine and `tangy-form`
+are **GPL-3.0**. This is a *deploy, author and extend* stack, **not** vendorable into a proprietary
+product. Everything on the analytics and language tiers is MIT/Apache-2.0, so the proprietary work
+lives there. 🔵 Estimate: `6–8` weeks to a ministry-demonstrable pilot, dominated by instrument
+authoring, not code.
+
+### 🟢 `P606-2` — EU high-risk compliance harness, sized to the real calendar
+
+🔵 **The deadline that drives this is not the famous one.** `2 Aug 2026` for high-risk education
+moved to 🟢 **`2 Dec 2027`** (Regulation (EU) 2026/1744). The urgent one is 🔴 **`2 Dec 2026`** —
+machine-readable marking of generated content for systems **already deployed**.
+
+```
+  AI Act scope decision          ──► is it admissions / placement / outcome
+  (schools are DEPLOYERS)             evaluation / attainment / proctoring?
+          │                                   │ yes ⇒ high-risk, 2 Dec 2027
+          │                                   │ no  ⇒ Art. 50 only, in force
+          ▼                                   ▼
+  ┌───────────────────────────────────────────────────────────────┐
+  │ PROVENANCE LAYER — the 2 Dec 2026 obligation                  │
+  │ every generated item/feedback carries a machine-readable mark  │
+  │ one field, retrofitted into existing deployments first         │
+  └───────────────────┬───────────────────────────────────────────┘
+  ┌───────────────────▼───────────────────────────────────────────┐
+  │ OVERSIGHT + AUDIT LAYER — the 2 Dec 2027 obligations          │
+  │ LangGraph (MIT)  policy nodes: jurisdiction as configuration   │
+  │ adlnet/ADL_LRS (Apache-2.0)  immutable xAPI decision trail     │
+  │ human-in-the-loop gate before any grade/placement is emitted   │
+  └───────────────────┬───────────────────────────────────────────┘
+  ┌───────────────────▼───────────────────────────────────────────┐
+  │ PLATFORM — whatever the institution already runs               │
+  │ moodle/moodle            GPL-3.0   7,570*                      │
+  │ openedx/openedx-platform AGPL-3.0  8,214*  <-- network copyleft│
+  │   but its extension points are permissive: XBlock (Apache-2.0) │
+  │ 1EdTech LTI 1.3 libs (MIT) · QTI 3.0 toolchain (MIT, p604/605) │
+  └───────────────────────────────────────────────────────────────┘
+```
+
+**Wiring, concretely**
+1. **Classify first.** Art. 50 vs high-risk is the whole cost difference. Admissions, placement,
+   outcome evaluation, attainment assessment and proctoring are high-risk; a study aid is not.
+2. **Ship provenance now** — one field, and it is the only obligation with a `2026` deadline for
+   already-deployed systems.
+3. Put jurisdiction in **LangGraph policy nodes**, not in code branches. The same deployment must
+   satisfy EU Art. 50, China's labelling rules, India's IT Rules and Korea's Framework Act
+   (`T606-2`), and only Germany adds a competence-framework layer on top.
+4. Log every automated decision as xAPI into `ADL_LRS` — that is the "logging and human oversight"
+   evidence an audit asks for, built from a row already on this base's shelves.
+🔴 **Licence note carried from this base, not re-derived:** the LMS of record is
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — **AGPL-3.0**, byte-read
+`512 B` again this pass, control `404`. `openedx/edx-platform` is the **pre-rename** address, it
+returns `422` on the search channel, and it is **not** Apache-2.0. 🟢 What *is* permissive is the
+extension surface — `XBlock` (Apache-2.0) and the LTI/QTI libraries — which is where a studio's own
+code belongs. 🔵 Recorded here because an earlier draft of this section wrote *"Open edX
+(Apache-2.0)"* and that would have regressed a fact this base settled.
+
+5. Keep the **human gate** before any outcome-affecting output. Non-negotiable under high-risk, and
+   it is also what DfE's May 2026 guidance requires of SEND plan drafting in England.
+
+🔵 Estimate: `4` weeks for the provenance layer on an existing deployment; `10–12` weeks for the full
+oversight harness. The `13`-month runway makes the second one a design choice rather than a scramble.
+
+### 🟢 `P606-3` — Address verification that actually certifies something (`606-E`)
+
+🔴 The verifier this base is instructed to use certifies nothing: `curl -sI github.com/{repo}` is
+`403` for real **and** fabricated repositories. 🟢 Replacement, with its control, runnable anywhere:
+
+```bash
+# EXISTENCE: 200 = real, 401 = does not exist.  Validated on 552 probes, perfect separation.
+verify() {
+  curl -s -o /dev/null -w '%{http_code}' \
+    "https://github.com/$1/info/refs?service=git-upload-pack"
+}
+verify HKUDS/DeepTutor              # -> 200
+verify HKUDS/zzq9x-does-not-exist   # -> 401   <-- always run the control
+
+# DEFAULT BRANCH (the search API is blind to transferred repos; git is not)
+GIT_TERMINAL_PROMPT=0 git ls-remote --symref "https://github.com/$1" HEAD
+
+# GRANT: byte-read it, never trust spdx_id (604-A: API wrong on 10 of 11 ECL-2.0 repos)
+curl -s -r 0-511 "https://raw.githubusercontent.com/$1/$BRANCH/LICENSE"
+curl -s -r 0-511 "https://raw.githubusercontent.com/$1/$BRANCH/LICENSE-zzq9x"  # control -> 404 14B
+
+# README: 8 rungs is not enough. .github/README.md and readme.adoc are both real (606-G).
+# Cheaper and complete: enumerate the tree once.
+git clone --bare --depth 1 --filter=blob:none "https://github.com/$1" r && git -C r ls-tree -r --name-only HEAD
+```
+
+🔴 **And two guardrails this pass paid for:**
+- **Batched `repo:` lookups silently drop addresses** (`606-C`). Assert `returned == requested` and
+  re-probe the shortfall singly — otherwise a run reports `0` errors while losing rows.
+- **Never harvest in parallel into one file or with `$$` temp names** (`606-B`). Per-repo output
+  files, then a serial byte-compare on a random sample before any claim is drawn. The corrupt run
+  here scored `2 of 12` mismatches and invented a repository defect; the clean one scored `0 of 14`.
 ## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `4` NEW RECIPES, EVERY COMPONENT BYTE-READ TODAY AND NAMED WITH ITS GRANT, ITS BRANCH AND ITS REGION. 🟢 `R-605-1` IS THE ONE THIS PASS EARNED: A **NATIONAL-CURRICULUM CONFORMANCE HARNESS** BUILT ENTIRELY FROM LATAM ARTEFACTS WITH A LICENCE BOUNDARY THAT RUNS THROUGH THE MIDDLE OF ONE REPOSITORY. 🔴 AND ONE **ANTI-PATTERN** REGISTERED, BECAUSE THIS PASS WALKED INTO IT ITSELF.**
 
 ---

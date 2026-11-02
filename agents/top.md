@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE CAPABILITY QUESTION `605-I` LEFT OPEN IS ANSWERED FOR THIS WHOLE SHELF: `536` README FIRST SCREENS HARVESTED, AND **`0` PROMOTED ROWS** DESCRIBE A THING THAT DOES NOT YET EXIST. 🔴 THE RULE `605-I` PROPOSED TO DETECT THEM IS **REJECTED** — IT FIRES ON `18 of 536` AND IS RIGHT `1` TIME (`5.6 %` PRECISION), BECAUSE `17 of 18` HITS ARE THE WORD `roadmap`, WHICH MARKS A **PUBLISHED PLAN**. 🔴 AND THE PASS RETRACTED ITS OWN HARVESTER: IT CORRUPTED ITS DATA BY CONCURRENCY AND INVENTED A REPOSITORY DEFECT BEFORE A SERIAL RE-FETCH CAUGHT IT. 🟢 STAR DRIFT ON THIS SHELF'S HEADLINE ROW IS `+31,823★` SINCE IT WAS LAST WRITTEN DOWN.**
+
+### 🟢 `606-A` — every row on this shelf now has its capability claim checked
+
+`605-I` registered a real shape — *"a README in the future tense is a specification, not a
+description"* — and closed with the honest admission that **no existing shelf row had been checked
+for it**. This pass checked all of them.
+
+| | `p605` | 🆕 `p606` |
+| --- | --- | --- |
+| scope | `1` repository, found while disqualifying it | 🟢 **all `3` sell shelves** |
+| addresses extracted | — | `546` |
+| README first screens byte-read today | `1` | 🟢 **`536`** |
+| fabricated control on the README arm | `1` | 🟢 **`404 14 B` vs `206`, every arm** |
+| 🔴 future-tense **description** found | `1` | 🟢 **`1` — and it is `p605`'s own disqualified row** |
+| rows **promoted** to a sell shelf carrying the defect | unmeasured | 🟢 **`0`** |
+
+🔵 **Why a second null result earned the budget:** `605-I` is a claim about whether this shelf
+*oversells*. Left open it discounts every capability sentence on the page. One sweep clears `536`.
+
+The single hit is [`muhammadawaisshaikh/Edtech-AI`](https://github.com/muhammadawaisshaikh/Edtech-AI)
+(`20★`, clean MIT) — *"The app **will offer** features like voice note recording, transcription…"* —
+which appears on this page **in `p605`'s disqualification table**, not as a promoted row. The gap
+closes at zero because the one instance was already caught by hand.
+
+### 🔴 The rule is rejected, and the precision figure is the finding
+
+`605-I` proposed adding `will offer` / `will support` / `is planned` / `roadmap` to the promotion
+probe. Measured against the shelf it would govern:
+
+| predicate | fires on | correct | precision |
+| --- | --- | --- | --- |
+| 🔴 `605-I` as literally specified, anywhere in first screen | `18 of 536` (`3.36 %`) | `1` | 🔴 **`5.6 %`** |
+| 🟡 restricted to the description zone (first `600 B`, markdown chrome stripped) | `8 of 536` (`1.49 %`) | `1` | 🔴 **`12.5 %`** |
+| 🟢 reading the description | `1 of 536` (`0.19 %`) | `1` | 🟢 `100 %` |
+
+🔴 **`17 of the 18` literal hits are the bare token `roadmap`** — and on
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp),
+[`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi),
+[`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) and
+[`codelitdev/courselit`](https://github.com/codelitdev/courselit) a roadmap is a **maturity
+signal**: a maintained project publishing where it is going. The rule would have inverted the
+meaning of its own strongest marker.
+
+🔴 Restricting to the description zone does not save it. The surviving false positives are ordinary
+prose in software that demonstrably works: *"Broadway **aims to provide** the following benefits"*
+([`illinois-cs241/broadway`](https://github.com/illinois-cs241/broadway)), *"a commandline tool that
+**will allow** you to perform most common Moodle tasks"*
+([`tmuras/moosh`](https://github.com/tmuras/moosh)), *"The SCORM Adapter **intends to be**
+compatible with SCORM versions 1.2 and 2004"*
+([`Didask/scol-r`](https://github.com/Didask/scol-r)).
+
+🟢 **Verdict: do not implement it.** The class is real and contained at `0.19 %`; the cost of the
+detector exceeds the cost of the defect. This is `605-D`'s lesson applied **before** publication
+rather than after — the first time this base has measured a proposed control's precision before
+adopting it.
+
+### 🔴 `606-B` — this pass corrupted its own data, and nearly published a repository defect that did not exist
+
+The first harvester named its temp files with `$$` and appended `16` workers' output to one file
+under `xargs -P 16`. Both are races. The result cross-assigned README bodies between repositories.
+
+🔴 It produced a clean, specific, **false** finding: that
+[`mnemosyne-proj/mnemosyne`](https://github.com/mnemosyne-proj/mnemosyne) (`605★`, the well-known
+spaced-repetition program) was serving `Edtech-AI`'s README at `master`. A serial re-fetch shows
+mnemosyne's actual README begins *"Mnemosyne: Optimized Flashcards and Research Project"*.
+🔴 **Retracted in full.**
+
+| | corrupt run | 🟢 clean re-run |
+| --- | --- | --- |
+| sampled repos byte-compared against a serial fetch | `2 of 12` **mismatched** | 🟢 **`0 of 14`** |
+| literal-marker hits | `19` | `18` |
+| description-zone hits | `6` | `8` |
+| false repository defects asserted | 🔴 **`1`** | 🟢 `0` |
+
+🔵 The conclusion survived the correction, which is precisely why this is worth a section: a pass
+that had not re-verified would have shipped the right number **and** a fabricated defect against a
+named repository. **Third consecutive pass whose load-bearing error was in instrument code rather
+than the corpus** — `605-D` (selection predicate), `605-M` (frontmatter writer), now `606-B`
+(harvester concurrency). The standing control is per-repo output files and a serial byte-compare
+sample on every harvest, before any claim is drawn from it.
+
+### 🟢 Star drift on this shelf's headline rows, re-measured today
+
+This shelf's figures are carried between passes, so they decay. Re-measured `2026-11-02` on the
+search channel with `fork:true`:
+
+| repo | licence (API) | 🟢 stars today | last pushed |
+| --- | --- | --- | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 🟢 **`53,823★`** | `2026-10-31` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT | 🟢 **`42,423★`** | `2026-11-02` |
+| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | MIT | `60,395★` | `2026-11-01` |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🔴 **CC-BY-4.0** | `61,666★` | `2026-10-28` |
+
+🔴 **The `autogen` row is a standing licence warning, not a new one:** the API reports `CC-BY-4.0`
+for a repository the whole market calls MIT. It is on this shelf and a dependency screen reading
+`spdx_id` will reject it. This is `604-A`'s mechanism in the other direction and it remains
+unresolved.
+
+### 🟡 `606-J` — what this shelf is made of, on a reconciled denominator
+
+First census where the denominator was reconciled rather than assumed (`536` resolved of `546`
+extracted, the shortfall accounted for individually):
+
+| | count | share |
+| --- | --- | --- |
+| 🟢 permissive (MIT `266` · Apache-2.0 `77` · BSD `24` · ISC `2`) | **`370`** | 🟢 **`69.0 %`** |
+| 🔴 `NONE` or `NOASSERTION` | **`101`** | 🔴 **`18.8 %`** |
+| 🟡 copyleft (GPL-3.0 `25` · AGPL-3.0 `23` · GPL-2.0 `5` · MPL-2.0 `2`) | `55` | `10.3 %` |
+| 🟡 ECL-2.0 (the Apereo pool, `604-A`) | `3` | `0.6 %` |
+| 🟢 pushed within `30` days | `299` | `55.8 %` |
+| 🔴 not pushed in over a year | `73` | 🔴 **`13.6 %`** |
+
+🔵 The `101`-row `NONE`/`NOASSERTION` pool is the honest size of `598-C`'s outstanding work, which
+still lists `31` rows unprobed. The remainder is not the whole.
 ## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `604-B` IS CLOSED WITH A DENOMINATOR AND THE ANSWER IS CONTAINMENT: `400` SELL-SHELF ADDRESSES SWEPT, `393` PAYLOADS BYTE-READ TODAY, AND THE HTML-CAPTURE CLASS APPEARS IN **`1 of 393` (`0.25 %`)** — THE SAME REPO `p604` FOUND. NO OTHER WRONG DATA IS SHELVED FROM IT. 🔴 `605-C`: THE SEARCH CHANNEL `p604` PROMOTED TO PRIMARY HAS FALSE NEGATIVES IN `5 of 400` — AND THE `422` THIS BASE PUBLISHED AS THAT CHANNEL'S *DISCRIMINATING FABRICATED CONTROL* IS EXACTLY WHAT `3` REAL, LIVE, SHELVED REPOS RETURN. 🔴 `605-D`: THIS PASS'S OWN SELECTION PREDICATE WAS WRONG ABOUT `59 of 400` ROWS (`14.8 %`) AND THE FIRST DRAFT OF `605-B` WAS RETRACTED BEFORE PUBLICATION. 🟢 `605-F`: `604-H`'S NATIONAL-QUERY FIX WORKS AND WAS THE PASS'S **ONLY** DISCOVERY SUPPLY. `9` AGENT ROWS PROMOTED, `5` DISQUALIFIED WITH THEIR REASONS. ELEVEN REGISTERED (`605-A`…`605-K`).**
 
 🔵 **Channel table, run first (`569-B`'s standing row), fabricated control on every arm.**

@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — `2026-11-02` — **🟢 THE CAPABILITY SWEEP: `536` READMES READ, `0` PROMOTED ROWS OVERSELL. 🔴 THE PROPOSED DETECTOR IS REJECTED AT `5.6 %` PRECISION. 🔴 A RETRACTION: THIS PASS'S HARVESTER CORRUPTED ITSELF BY CONCURRENCY. 🟢 `36`th GLOBAL-LEG NIL — AND THE EMEA **NATIONAL** LEGS PAID, AS `605-F` PREDICTED.**
+
+### 🟢 Agent-shelf signal this pass — star drift, re-measured rather than carried
+
+| repo | licence | stars `2026-11-02` | last pushed | note |
+| --- | --- | --: | --- | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 🟢 **`53,823★`** | `2026-10-31` | Still the most-starred education-native agent held here |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT | 🟢 **`42,423★`** | `2026-11-02` | Tsinghua multi-agent classroom; pushed today |
+| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | MIT | `60,395★` | `2026-11-01` | General orchestration, not education-native |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🔴 **CC-BY-4.0** (API) | `61,666★` | `2026-10-28` | 🔴 A dependency screen reading `spdx_id` **rejects this**. Standing flag |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | MIT | `490★` | — | 🔴 Is a **fork** (`605-C`); `p404`/`p405` fork-direction gates still unrun |
+
+### 🔴 Retracted this pass, before publication
+
+🔴 A corrupt harvester in this pass asserted that
+[`mnemosyne-proj/mnemosyne`](https://github.com/mnemosyne-proj/mnemosyne) (`605★`) served another
+project's README at `master`. **False.** Its README begins *"Mnemosyne: Optimized Flashcards and
+Research Project"*. The cause was this pass's own concurrency (`$$` temp files, `16` parallel appends
+to one file), caught by a serial byte-compare before anything was written. `2 of 12` sampled repos
+were mismatched in the corrupt run; `0 of 14` in the clean one. See `606-B`.
+
+🔵 **Third consecutive pass whose load-bearing error was in instrument code, not the corpus**
+(`605-D`, `605-M`, `606-B`). The trend is worth recording *as* a trend: this base's corpus findings
+are now more reliable than its measurement code.
+
+### 🟢 `606-H` — the EMEA national legs paid, and what they returned
+
+`605-F` closed the APAC query-shape gap and asked for the same test on EMEA. Run here on
+UK / Germany / Nigeria+Kenya:
+
+| leg | dated, ministry-level material returned |
+| --- | --- |
+| 🟢 **UK (England)** | DfE *Generative AI in education* policy paper; **Generative AI: Product Safety Standards updated January 2026**; support modules **updated May 2026** (business operations, inclusion and accessibility, administrative tasks, drafting SEND support plans with the decision staying with the school); 🟢 **KCSIE 2026 brings generative AI into statutory safeguarding guidance from 1 September 2026**. 🔵 Education is devolved — this is England only, and DfE guidance is **non-statutory** |
+| 🟢 **Germany** | **KMK `KI-Kompetenzrahmen`, decided 16 October 2026**, updating *Bildung in der digitalen Welt*. Four competence areas: *Mit KI bewusst umgehen · KI kreativ anwenden · KI gezielt einsetzen · KI aktiv mitgestalten*. Cross-curricular by design, NRW-led. Support layer: `22` reflection cards and a competence navigator in the shared schools chatbot **AIS.chat**. 🔴 Criticised for setting **no concrete requirements** for lessons or exam procedure |
+| 🟢 **Nigeria** | **National EdTech Strategy 2025–2030**, six pillars. 2025 curriculum reform adds AI and digital literacy. **Naija Teacher AI** (TRCN + GMind AI) targeting **1.5 M teachers, full adoption Q3 2026**. WAEC/NECO move to computer-based testing by 2026. 🔴 **`5.67 %` of public primary schools have computer facilities vs `54.55 %` private**. Open-source tooling named: **RTI Tangerine** + open-weight LLMs tuned on Nigerian content |
+| 🟡 **Kenya** | Draft **National AI Strategy 2025–2030** went to public consultation; CBC emphasises digital literacy; `M-Shule` and `Eneza Education` named as AI-driven platforms. 🔴 **Declared gap: no confirmed 2026 Kenyan open-source education policy found.** Said, not hidden |
+
+🔴 **`36`th consecutive nil on the `4` global legs.** Two regions have now independently shown the
+nil is a property of the **query shape** (`605-F` for APAC, `606-H` for EMEA). The decision owed for
+`36` passes: retire the global legs to a quarterly regression test, spend the budget on national
+legs. Next test: LATAM national legs (Brazil / Mexico / Colombia / Chile).
 ## 🆕 `p605` — `2026-11-02` — **APPEND-ONLY. 🟢 `604-B` CLOSED BY SWEEP: `400` SELL-SHELF ADDRESSES, `393` PAYLOADS BYTE-READ, `1` HTML CAPTURE — THE CLASS IS CONTAINED AT `0.25 %`. 🔴 THE SEARCH CHANNEL HAS FALSE NEGATIVES IN `5 of 400` AND THIS BASE'S `422` CONTROL FOR IT IS BLIND. 🔴 THIS PASS RETRACTED ITS OWN FIRST DRAFT: THE SELECTION PREDICATE WAS WRONG ABOUT `59 of 400` ROWS. 🟢 THE `604-H` NATIONAL-QUERY FIX SUPPLIED EVERY NEW ADDRESS IN THE PASS. `9` AGENTS PROMOTED, `5` DISQUALIFIED.**
 
 ### 🟢 What is actually moving this week — and the honest denominator

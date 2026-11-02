@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — `2026-11-02` — **🟢 A WORKING CHEAP EXISTENCE VERIFIER FOUND, WHICH THIS BASE HAS LACKED FOR `16` PASSES: THE GIT SMART-HTTP ENDPOINT RETURNS `200` FOR A REAL REPOSITORY AND `401` FOR A FABRICATED ONE. VALIDATED ON `552` PROBES WITH PERFECT SEPARATION. 🔴 AND IT IMMEDIATELY CAUGHT SOMETHING NO PASS HAD NOTICED: `4` OF THIS BASE'S SHELF "ADDRESSES" ARE NOT REPOSITORIES AT ALL. 🟡 FIRST SHELF-WIDE LICENCE AND LIVENESS CENSUS ON A RECONCILED DENOMINATOR.**
+
+### 🟢 `606-E` — the verifier, and why it matters more than it sounds
+
+The run prompt mandates `curl -sI` against `github.com/{owner}/{repo}` to verify every URL. This
+base has recorded since `p590` that the instruction **cannot be followed usefully**: the call returns
+`403` for a real repository *and* `403` for a fabricated one, so it certifies nothing. `16` passes
+have carried that line without a replacement.
+
+🟢 **There is one, on the same tool, one path deeper:**
+
+| probe | real repo | fabricated repo | verdict |
+| --- | --- | --- | --- |
+| 🔴 `curl -sI github.com/{repo}` (mandated) | `403` | `403` | 🔴 **NON-DISCRIMINATING** |
+| 🟢 🆕 `curl github.com/{repo}/info/refs?service=git-upload-pack` | 🟢 **`200`** | 🟢 **`401`** | 🟢 **DISCRIMINATING** |
+
+🟢 **Validated at scale, not on one example:**
+
+| | result |
+| --- | --- |
+| shelf addresses probed | `546` |
+| 🟢 returned `200` | **`542`** |
+| 🟢 fabricated controls probed | `6` |
+| 🟢 fabricated controls returning `401` | **`6 of 6`** |
+| 🔴 shelf addresses **not** returning `200` | `4` — 🟢 **and all `4` are not repositories** (`606-F`) |
+
+🔵 It needs no token, no API quota and no clone, and it is the only arm in this base's channel table
+that answers *"does this address exist"* on its own. It certifies **existence only** — not canonical
+identity (`606-D`) and not the grant.
+
+### 🔴 `606-F` — `4` shelf "addresses" are not repositories
+
+| address | what it actually is |
+| --- | --- |
+| `github.com/topics/lms` | 🔴 a GitHub **topic page** |
+| `github.com/topics/mooc` | 🔴 a GitHub topic page |
+| `github.com/topics/language-learning` | 🔴 a GitHub topic page |
+| `github.com/topics/student-information-system` | 🔴 a GitHub topic page |
+
+🔴 They match the `github.com/{owner}/{repo}` regex **every address extractor in this base uses**, so
+they enter censuses as repositories named `topics/lms`. This is the same class as `603-A`'s *"`2` more
+ledger rows are not repositories at all"* — 🔴 **recurring, and still unfixed at the extractor.**
+
+🟢 **One-line fix:** exclude GitHub's reserved first path segments from the address regex —
+`topics`, `orgs`, `sponsors`, `collections`, `features`, `marketplace`, `apps`, `settings`, `search`,
+`explore`, `trending`, `about`, `pricing`, `security`, `enterprise`, `login`. 🔵 `606-E` catches them
+for free as a second net, which is how they surfaced here.
+
+### 🟡 `606-J` — shelf-wide licence and liveness census, `536` resolved rows
+
+First census on a **reconciled** denominator: `546` extracted, `535` resolved on the search channel,
+`6` resolved on the git channel, `4` disqualified as non-repositories, `1` short — accounted for
+individually rather than assumed.
+
+| licence (API `spdx_id`) | repos | | liveness | repos |
+| --- | --: | --- | --- | --: |
+| MIT | `266` | | 🟢 pushed ≤ `30` days | `299` (`55.8 %`) |
+| Apache-2.0 | `77` | | 🔴 not pushed in > `365` days | 🔴 **`73` (`13.6 %`)** |
+| 🔴 `NOASSERTION` | `70` | | | |
+| 🔴 `NONE` | `31` | | **grant class** | **share** |
+| GPL-3.0 | `25` | | 🟢 permissive (MIT/Apache/BSD/ISC) | 🟢 **`370` = `69.0 %`** |
+| AGPL-3.0 | `23` | | 🔴 `NONE` / `NOASSERTION` | 🔴 **`101` = `18.8 %`** |
+| BSD-3-Clause | `22` | | 🟡 copyleft | `55` = `10.3 %` |
+| GPL-2.0 `5` · CC0 `3` · ECL-2.0 `3` · BSD-2 `2` · MPL-2.0 `2` · ISC `2` · CC-BY-4.0 `1` | `18` | | | |
+
+🔵 **The `101`-row `NONE`/`NOASSERTION` pool is the honest size of `598-C`'s outstanding work**, which
+still lists `31` rows unprobed. Published here so the remainder is not mistaken for the whole.
+
+🔴 **Star figures carried between passes decay.** Spot-check:
+[`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) was recorded here
+at `70★` and `76★`; it is 🟢 **`116★`** today.
 ## 🆕 `p605` — `2026-11-02` — **APPEND-ONLY. 🟢 THE WHOLE-SHELF PAYLOAD SWEEP, ROW BY ROW: `400` PERMISSIVE-MARKED SELL-SHELF ADDRESSES, `80` BATCHED `repo:` QUERIES, `393` GRANT PAYLOADS RANGE-READ (`0-511`) AT THE REAL DEFAULT BRANCH, `400 of 400` FABRICATED-PATH CONTROLS AT `404 14 B`. 🔴 `1` HTML CAPTURE (`0.25 %`) — THE `p604` REPO, SO THE CLASS IS CONTAINED. 🔴 `6 of 12` `NO-PAYLOAD` VERDICTS WERE A **CASE-BLIND LADDER**, `5` LOWERCASE AND `1` UPPERCASE-EXTENSION. 🔴 `5 of 400` ADDRESSES ARE INVISIBLE TO `search/repositories` BY **TWO** MECHANISMS. 🟢 `10` REPOS PROMOTED TO FOUNDATIONS.**
 
 ### 🟢 The sweep, with its denominators attached

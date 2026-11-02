@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM THIS PAGE GAINS IS ONE THIS BASE HAS HAD IN `trending` SINCE `70★` AND SHELVED NOWHERE — AND IT IS THE OPEN-SOURCE ASSESSMENT PLATFORM **NIGERIA'S OWN EDTECH GAP ANALYSIS NAMES BY NAME**. 🟢 THE ROW AND THE REGIONAL EVIDENCE FOR IT ARRIVED IN THE SAME PASS, FROM THE NATIONAL QUERY LEGS `605-F` ASKED TO BE TESTED ON EMEA. 🔴 `605-K`'S PROMOTION DEBT: `3` PAID, `85` REMAIN.**
+
+### 🟢 `606-I` — Tangerine: an EMEA/Africa field-assessment platform, promoted with its licence flagged
+
+| platform | repo | grant (byte-read `2026-11-02`) | branch | stars | region | what it is |
+| --- | --- | --- | --- | --: | --- | --- |
+| **Tangerine** | [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | 🟡 **GPL-3.0** (`512 B` read, control `404`) | `main` | 🟢 **`116`** | **EMEA** | Offline-first **field data collection for early-grade reading and maths assessment** (EGRA/EGMA), tablet-based, built for low-connectivity classrooms. Pushed `2026-09-04` |
+| **tangy-form** | [`Tangerine-Community/tangy-form`](https://github.com/Tangerine-Community/tangy-form) | 🟡 **GPL-3.0** (`512 B` read, control `404`) | `master` | `16` | **EMEA** | The web-component form engine underneath Tangerine — the reusable half |
+| **tangy-form-editor** | [`Tangerine-Community/tangy-form-editor`](https://github.com/Tangerine-Community/tangy-form-editor) | 🟡 **GPL-3.0** (`512 B` read, control `404`) | `master` | `5` | **EMEA** | Authoring UI for those forms. Pushed `2026-10-22` |
+
+🔴 **Licence posture, stated plainly:** GPL-3.0 is **copyleft**, so this is a *deploy-and-extend*
+platform in the same class as Moodle and Chamilo on this page — **not** a codebase to vendor into a
+proprietary deliverable. A studio runs it, authors instruments for it and builds alongside it.
+🟢 `tangy-form` matters precisely because it is the component layer: an AI scoring or
+item-generation service talks to the form schema over its own boundary.
+
+### 🟢 Why this row is worth a page entry and not a trending line
+
+🔴 It was already in `repos/trending.md` — at `70★`, then `76★`, and on **no sell shelf**. That is
+exactly `605-K`'s shape, and `gate-promotion-ledger` has been red about this class for ~`170`
+passes. It is 🟢 **`116★` today**, so the carried figure was stale by `40★` as well as unshelved.
+
+🟢 **What makes it shelvable now is `606-H`'s evidence, not its star count.** The national query leg
+for Nigeria returned a gap analysis of **Nigeria's National EdTech Strategy (2025–2030)** that names
+open-source tooling to build on — **RTI's Tangerine** among them — and recommends tuning open-weight
+models on Nigerian educational content. So this page gains a platform *and* a sourced reason a
+regional engagement would start from it.
+
+🔵 The constraint that platform choice has to answer, from the same leg: 🔴 **`5.67 %` of Nigerian
+public primary schools have computer facilities, against `54.55 %` of private schools.** An
+offline-first, tablet-based assessment platform is a response to that number. A cloud-first LMS is
+not.
+
+### 🔴 This page's standing gaps, unchanged
+
+| gap | state |
+| --- | --- |
+| 🔴 **ERP / SIS** | Unchanged since `p601`/`p602` re-measured it. `topic:school-management` is `88.9 %` in-domain and yields `0` shippable permissive platforms; `openeducat/openeducat_erp` (LGPL-3.0) and `frappe/education` are the honest ceiling |
+| 🔴 `605-L` residual | The sweep for other root grant payloads that **grant nothing and name paths** is still not run. Population unmeasured |
+| 🟡 `oppia/oppia` on this page | 🟢 Apache-2.0 **re-confirmed byte-read today**, `6,955★`, pushed `2026-11-02` — but see `606-G`: its README is at `.github/README.md` and every capability probe here reads it as absent |
 ## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM LAYER GAINS AN **ASSESSMENT-INTEROPERABILITY** TIER THAT IS NOW COMPLETE ENOUGH TO BUILD ON: `3` QTI 3.0 REPOS AND `2` LTI LIBRARIES, ALL MIT, ALL BYTE-READ TODAY. 🟢 AND THE FIRST ENTRY HERE FOR A **NATIONAL UNIVERSITY'S OWN LMS DEPLOYMENT** RATHER THAN A VENDOR PRODUCT. 🔴 THIS PAGE'S `74` PERMISSIVE-MARKED ROWS WERE PART OF `605-A`'S `400`-ADDRESS PAYLOAD SWEEP: `0` MARKUP DEFECTS FOUND HERE.**
 
 ### 🟢 Where this pass's rows attach to the platforms already on this page

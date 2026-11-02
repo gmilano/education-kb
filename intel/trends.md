@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — `2026-11-02` — **🟢 THE TREND WITH THE MOST COMMERCIAL CONSEQUENCE THIS PASS IS A **DEADLINE THAT MOVED**: EU HIGH-RISK EDUCATION AI SLID FROM `2 Aug 2026` TO `2 Dec 2027`, AND THE NEARER DEADLINE NOBODY IS TALKING ABOUT IS `2 Dec 2026`. 🟢 AND A METHODOLOGICAL TREND WORTH NAMING: `3` CONSECUTIVE PASSES WHOSE CENTRAL ERROR WAS IN MEASUREMENT CODE, NOT IN THE MARKET.**
+
+### 🟢 `T606-1` — the EU education-AI calendar, as it actually stands
+
+🔴 The single most-repeated date in education-AI compliance writing — `2 August 2026` for high-risk
+education systems — **is no longer correct**, and most published guides still carry it.
+
+| date | what applies | status |
+| --- | --- | --- |
+| `2 Feb 2025` | 🟢 Emotion-recognition ban in education | **in force** |
+| `2 Aug 2026` | 🟢 **Art. 50 transparency** duties | **in force now** |
+| 🟢 **`2 Dec 2026`** | 🟢 **Machine-readable marking of generated content for systems already on the market** | 🔴 **the near deadline, and the least discussed** |
+| 🟡 July 2026 | AI-literacy duty **softened** to *"measures to support"* staff literacy | in force |
+| 🟢 **`2 Dec 2027`** | 🟢 Stand-alone **high-risk** education systems (admissions, placement, outcome evaluation, attainment assessment, exam proctoring) — moved by **Regulation (EU) 2026/1744** | 🟢 **`13` months of runway** |
+
+🔵 **Why this is a trend and not a footnote:** the deferral converts a compliance emergency into a
+design window. Teams that build logging, human-oversight hooks and technical documentation in now
+pay a fraction of a 2027 retrofit. Meanwhile `2 Dec 2026` is `~1` month away and applies to systems
+**already deployed** — the opposite of the attention each is getting.
+
+### 🟢 `T606-2` — AI-content labelling is converging as the one globally common obligation
+
+Independent of each other, in different legal styles, four jurisdictions now mandate marking
+machine-generated content:
+
+| jurisdiction | instrument | from |
+| --- | --- | --- |
+| 🇪🇺 EU | AI Act Art. 50 / marking for existing systems | `2 Aug 2026` / `2 Dec 2026` |
+| 🇨🇳 China | Generative-AI and labelling rules | Sept 2025 |
+| 🇮🇳 India | amended IT Rules | Feb 2026 |
+| 🇰🇷 South Korea | AI Framework Act | Jan 2026 |
+
+🟢 **Consequence for education specifically:** provenance marking on generated items, feedback and
+assessment content stops being a differentiator and becomes table stakes. A tutoring or
+item-generation pipeline built in 2026 without a provenance field will need one in every major market
+except the US.
+
+### 🟡 `T606-3` — "AI literacy for students" is becoming a curriculum object, not a policy document
+
+| jurisdiction | shape |
+| --- | --- |
+| 🇩🇪 Germany | 🟢 **KMK `KI-Kompetenzrahmen` (16 Oct 2026)** — four competence areas, explicitly **cross-curricular**, plus `22` reflection cards and a competence navigator in **AIS.chat** |
+| 🇺🇸 Idaho | **SB 1227** mandates statewide AI-literacy **standards** |
+| 🇺🇸 federal | **K-12 AI Literacy and Readiness Act 2026** would amend ESEA to cover AI literacy — 🔴 not passed |
+| 🇳🇬 Nigeria | 2025 curriculum reform adds AI + digital literacy; **Naija Teacher AI** targets `1.5 M` teachers by **Q3 2026** |
+| 🌏 APAC | China, Japan, South Korea, Singapore all introducing AI-focused curricula |
+
+🔴 **The consistent criticism is the same everywhere:** frameworks define competences and decline to
+say what changes in a lesson or an exam. Germany's own commentators say the 16 Oct framework sets no
+concrete requirements for integration or assessment. 🟢 **That is the gap a studio sells into** —
+turning a competence framework into instruments, rubrics and teacher-facing tooling.
+
+### 🟡 `T606-4` — teacher-facing automation, not student-facing tutoring, is where the public money is
+
+🔵 The 2026 national programmes found this pass are **all** teacher-capacity programmes, not tutoring
+deployments: Naija Teacher AI (`1.5 M` teachers), Google.org/Raspberry Pi **Experience AI**
+(`24,000` educators → `1.25 M` students), DfE's May 2026 modules (administrative tasks, SEND plan
+drafting, business operations), Germany's AIS.chat teacher tooling.
+
+🟢 And the open-source shelf matches: `instructional_agents` (ADDIE course-material generation) and
+the `.github`-hidden curriculum estates are teacher-side. 🔵 **The inference for positioning:** a
+public-sector education engagement in 2026 is more likely to be funded as *teacher throughput* than
+as *student tutoring*, even though tutoring is where the star counts are.
+
+### 🔴 `T606-5` — a trend inside this base, not the market: the instruments are now the weak link
+
+| pass | load-bearing error | where |
+| --- | --- | --- |
+| `p605` | selection predicate wrong about `59 of 400` rows | 🔴 instrument |
+| `p605` | frontmatter writer destroyed `region:` on all `10` pages | 🔴 instrument |
+| 🆕 `p606` | README harvester corrupted by its own concurrency; asserted a false repository defect | 🔴 instrument |
+
+🔴 **Three consecutive passes.** Meanwhile the corpus findings in those passes
+(`604-B` containment at `0.25 %`, `605-I` containment at `0.19 %`, `606-G`'s hidden README rung) all
+held up. 🔵 The base's reading of the world is currently **more reliable than its code**, and
+`605-E` — every committed validator in this repository is unrunnable from a pass — is why. Stated as
+a trend because it is now the most likely source of the next wrong number.
 ## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE `604-H` NATIONAL-QUERY FIX TURNED THE APAC NIL INTO FOUR DATED NATIONAL POLICY FINDINGS, AND ONE OF THEM IS THE SECTOR'S FIRST LARGE-SCALE **FAILURE** WITH NUMBERS ATTACHED. 🔴 THE GLOBAL LEGS RETURN THE THIRTY-FIFTH NIL. 🔵 EVERY FIGURE BELOW IS SEARCH-SNIPPET-GRADE (`598-G`) AND LABELLED.**
 
 ### 🔴 `T-605-1` — the first *documented* national AI-education failure, and it is the most useful trend on this page

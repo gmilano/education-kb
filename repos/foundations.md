@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p606` — reads `2026-11-02`, commit `2026-11-02` — **🟢 A `6,955★` APACHE-2.0 EDUCATION REPOSITORY ON THIS BASE'S OWN SHELVES WAS INVISIBLE TO EVERY CAPABILITY PROBE IT OWNS, AND THE THING HIDING IT WAS A **DIRECTORY**: GITHUB RENDERS `.github/README.md` AS THE REPOSITORY README AND NO LADDER HERE ASKS FOR IT. 🟢 `603-C` CORROBORATED INDEPENDENTLY AT `5.4 %` AND EXTENDED BY TWO RUNGS. 🔴 A TRANSFER `p605` RESOLVED IS STILL SHELVED UNDER ITS STALE NAME AND THE CANONICAL ADDRESS IS HELD NOWHERE.**
+
+### 🟢 `606-G` — `603-C`'s defect, measured on a second population and extended
+
+`603-C` found that `lib/probe_payload.sh` reads the README at **one spelling** and that `5.7 %` of
+repositories are invisible to it. This pass harvested README first screens for the entire sell-shelf
+population and got the same answer from different data:
+
+| | `603-C` | 🆕 `p606` |
+| --- | --- | --- |
+| population | the pass's own candidate set | 🟢 **all `3` sell shelves, `536` READMEs** |
+| non-`README.md` spellings | `5.7 %` | 🟢 **`29 of 536` = `5.4 %`** |
+| rungs in the probe | `1` | `8` |
+| 🔴 repositories still unresolved at `8` rungs | — | 🔴 **`5`** |
+| 🟢 resolved by **full-tree enumeration** instead | — | 🟢 **`2 of 5`** |
+
+🟢 **The spellings actually in use**, which is the list a probe should carry:
+
+| spelling | repos |
+| --- | --: |
+| `README.md` | `507` |
+| `README.rst` | `15` |
+| `readme.md` | `8` |
+| `Readme.md` | `3` |
+| `README` · `README.txt` · `docs/README.md` | `1` each |
+| 🆕 **`.github/README.md`** | 🔴 **not in any probe here** |
+| 🆕 **`readme.adoc`** | 🔴 **not in any probe here** |
+
+### 🔴 The `6,955★` repository that reads as README-less
+
+[`oppia/oppia`](https://github.com/oppia/oppia) — **Apache-2.0 byte-read today** (`512 B`, fabricated
+control `404`), 🟢 **`6,955★`**, `5,872` forks, default branch `develop`, **pushed `2026-11-02`** —
+returns `404` for `README.md` at its real default branch. `git ls-tree -r HEAD` shows why: its README
+is at **`.github/README.md`**, one of `26` readme-ish paths in the tree.
+
+🔴 **GitHub renders `.github/README.md` as the repository README.** So the page a human sees exists,
+and every probe this base owns reports absence. For a repository of this size on this shelf that is
+not a cosmetic miss: `605-I`'s capability probe, `603-C`'s README channel and any description-derived
+classification all read it as empty.
+
+🟡 The second recovered rung is `readme.adoc` (AsciiDoc) on
+[`hit-moodle/moodle-local_onlinejudge`](https://github.com/hit-moodle/moodle-local_onlinejudge).
+
+🟢 **`3 of the 5` genuinely have no README at any spelling** — established by enumerating the whole
+tree rather than by exhausting a ladder, which is the difference between *measured absence* and
+*failure to look*:
+
+| repo | root entries | readme-ish paths in tree |
+| --- | --- | --: |
+| [`corleone000000/fluir`](https://github.com/corleone000000/fluir) | `index.html`, `ai.js`, `speech.js`, `sw.js`, … | 🔴 `0` |
+| [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | `LICENSE`, `plugin.xml`, `queries_root`, … | 🔴 `0` |
+| [`Apereo-Learning-Analytics-Initiative/data-loader-library`](https://github.com/Apereo-Learning-Analytics-Initiative/data-loader-library) | `LICENSE`, `pom.xml`, `src` | 🔴 `0` |
+
+🔵 `605-B` recommended tree enumeration for the **grant** ladder and this pass confirms it on the
+**README** ladder: one request per repository answers what six rungs could not, in both places.
+
+### 🟢 Promoted to this shelf — `1` row, grant byte-read `2026-11-02`, control at `404`
+
+| repo | grant (byte-read) | branch | stars | region | why it is here |
+| --- | --- | --- | --: | --- | --- |
+| [`uPortal-Project/CalendarPortlet`](https://github.com/uPortal-Project/CalendarPortlet) | 🟢 **Apache-2.0** (`512 B` read, control `404`) | `master` | `15` | North America | 🟢 The **canonical address** of `Jasig/CalendarPortlet`, which this page has carried under its stale name. Apereo-family JSR-168 calendar portlet, pushed `2026-10-16` |
+
+🔴 **`606-D2`:** `Jasig/CalendarPortlet` has `5` mentions across this page, `agents/top.md` and
+`repos/trending.md`; the canonical address had **`0`** before this row. `605-C` resolved the transfer
+and no pass rewrote the rows — which is the general defect, not a one-off.
+
+🔵 And it closes a loop on `604-B`: the HTML grant payload that pass found is a **saved page of the
+old address** (`saved from url=…Jasig/CalendarPortlet/master/LICENSE`). The transfer is the *cause*
+of the defect class.
+
+### 🟡 Not promoted, with the reason
+
+| repo | measured | why not |
+| --- | --- | --- |
+| [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | 🟢 MIT byte-read (`512 B`, control `404`), `117★`, pushed `2025-04-19` | 🟢 **Already on this page** (line `62`) — `605-C` resolved this transfer *and* rewrote the row. Recorded to show the contrast with `CalendarPortlet` |
+| `Tangerine-Community/Tangerine` | 🟢 GPL-3.0 byte-read (`512 B`, control `404`), `116★` | 🔴 **Copyleft** — belongs on `verticals/solutions.md` with the licence flagged, not on a permissive-foundation page. Promoted there this pass |
 ## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `10` FOUNDATION REPOS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH WITH A PER-REPO FABRICATED CONTROL AT `404`. 🟢 TWO ARE **BRAZILIAN NATIONAL-CURRICULUM AND NATIONAL-EXAM ARTEFACTS** — THE LATAM EVIDENCE LAYER THIS BASE HAS BEEN THIN ON. 🔴 `605-K`: THE `p436` BACKLOG'S REAL PROMOTION DEBT, MEASURED AGAINST **SELL SHELVES** RATHER THAN ANY MENTION, IS `107 of 265` (`40.4 %`) — `p603` SIZED THE LEDGER, NOT THE DEBT. 🟢 `605-L`: A NEW GRANT SHAPE — **SPLIT BY SUBTREE, WITH A POINTER AT THE ROOT**, WRITTEN IN PORTUGUESE.**
 
 ### 🔴 `605-K` — the backlog's real size is a promotion figure, not a ledger figure

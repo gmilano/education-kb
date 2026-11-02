@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-02
 ---
 
+## Pass 606 — reads 2026-11-02, commit 2026-11-02 — **🟢 `605-I` IS CLOSED AT `0` PROMOTED ROWS: `536` README FIRST SCREENS BYTE-READ ACROSS ALL THREE SELL SHELVES, AND NO ROW THIS BASE SELLS DESCRIBES SOFTWARE THAT DOES NOT EXIST. 🔴 THE DETECTOR `605-I` PROPOSED IS **REJECTED WITH A PRECISION FIGURE** (`1 of 18`, `5.6 %`) — THE FIRST TIME THIS BASE HAS MEASURED A PROPOSED CONTROL BEFORE ADOPTING IT. 🟢 `606-E`: A WORKING CHEAP EXISTENCE VERIFIER, WHICH THIS BASE HAS LACKED FOR `16` PASSES. 🔴 AND THE PASS RETRACTED ITS OWN HARVESTER, WHICH CORRUPTED ITS DATA BY CONCURRENCY AND INVENTED A REPOSITORY DEFECT. TWELVE REGISTERED (`606-A`…`606-K`).**
+
+### 🟢 The central result — a second null with a denominator
+
+🟡 `605-I` registered that *a README in the future tense is a specification, not a description*, and
+closed honestly: **no existing shelf row had been checked.** This pass checked all of them.
+
+| | `p605` | 🆕 `p606` |
+| --- | --- | --- |
+| scope | `1` repository, found while disqualifying it | 🟢 **all `3` sell shelves** |
+| addresses extracted | — | `546` |
+| 🟢 addresses confirmed to exist, with a control | — | 🟢 **`542` — and `4` are not repositories** |
+| README first screens byte-read today | `1` | 🟢 **`536`** |
+| 🔴 future-tense **description** found | `1` | **`1` — `p605`'s own disqualified row** |
+| 🟢 **promoted** rows carrying the defect | unmeasured | 🟢 **`0`** |
+
+### 🔴 The rule is rejected, and that is the finding
+
+| predicate | fires on | correct | precision |
+| --- | --- | --- | --- |
+| 🔴 `605-I` as specified | `18 of 536` | `1` | 🔴 **`5.6 %`** |
+| 🟡 restricted to the description zone | `8 of 536` | `1` | 🔴 **`12.5 %`** |
+| 🟢 reading the description | `1 of 536` | `1` | 🟢 `100 %` |
+
+🔴 `17 of 18` literal hits are the bare token **`roadmap`** — which on `openeducat_erp`, `tsugi` and
+`LibreLingo` marks a **published plan**, a maturity signal. The rule would have inverted the meaning
+of its own strongest marker and entered the promotion probe `94 %` wrong.
+
+### 🟢 `606-E` — the verifier this base was told to use, replaced
+
+| probe | real | fabricated | verdict |
+| --- | --- | --- | --- |
+| 🔴 `curl -sI github.com/{repo}` (mandated by the run prompt) | `403` | `403` | 🔴 certifies nothing — carried since `p590` |
+| 🟢 🆕 `curl github.com/{repo}/info/refs?service=git-upload-pack` | 🟢 **`200`** | 🟢 **`401`** | 🟢 **`552` probes, perfect separation** |
+
+🔴 It immediately found what `16` passes had not: **`4` sell-shelf "addresses" are not repositories** —
+`github.com/topics/{lms,mooc,language-learning,student-information-system}`, which match the
+`{owner}/{repo}` regex every extractor here uses (`606-F`, the recurrence of `603-A`).
+
+### 🔴 The retraction, stated before anything built on it
+
+🔴 This pass's first README harvester used `$$` temp names and `16` concurrent appends to one file.
+Both are races. It cross-assigned README bodies between repositories and produced a **false, specific
+finding**: that `mnemosyne-proj/mnemosyne` (`605★`) served another project's README. A serial
+re-fetch refuted it.
+
+| | corrupt run | 🟢 clean re-run |
+| --- | --- | --- |
+| sampled repos byte-compared serially | 🔴 **`2 of 12` mismatched** | 🟢 **`0 of 14`** |
+| false repository defects asserted | 🔴 **`1`** | 🟢 `0` |
+
+🔵 **Third consecutive pass whose load-bearing error was in instrument code, not the corpus**
+(`605-D`, `605-M`, `606-B`) — and `606-K` makes a fourth in the same three passes, a draft that
+nearly republished Open edX as Apache-2.0 when this base had already settled it as **AGPL-3.0**.
+Every committed validator here is unrunnable (`605-E`), so manual verification is the only defence.
+
+### 🟢 What else moved
+
+| | |
+| --- | --- |
+| 🟢 `606-G` | **`603-C` corroborated at `5.4 %`** on a second population and extended by two rungs no probe here has: **`.github/README.md`** and **`readme.adoc`**. 🔴 The first hides [`oppia/oppia`](https://github.com/oppia/oppia) — `6,955★`, Apache-2.0, pushed **today** — from every capability probe this base owns, because GitHub renders it as the repository README |
+| 🟢 `606-C` | **`605-C`'s `fork:true` fix validated at scale** (`110` batched queries, `0` errors, `535 of 546`). 🔴 But batching makes the transfer class **silent**: proven by control, a batch containing a transferred repo is byte-identical to one containing a fabricated address. **Count reconciliation is the only detector** |
+| 🔴 `606-D` | **`605-C`'s *"3 addresses, 1 repository"* is overstated** — HEAD-SHA *and* a `585`-ref list hash are identical for an undiverged **fork**. Fork-vs-transfer is **undecidable** on this session's channels. Declared, not solved |
+| 🟢 `606-D2` | `Jasig/CalendarPortlet` is still shelved under its stale name; canonical [`uPortal-Project/CalendarPortlet`](https://github.com/uPortal-Project/CalendarPortlet) (Apache-2.0 byte-read) had `0` mentions — now promoted. 🔵 And that transfer is the **cause** of `604-B`'s HTML-grant defect |
+| 🟢 `606-H` | **`605-F`'s national-query fix generalises to EMEA** — the test `605-F` asked for. UK, Germany and Nigeria all returned dated ministry-level policy; 🔴 **Kenya returned nothing confirmable and is recorded as a gap.** `36`th global-leg nil |
+| 🟡 `606-I` | **Tangerine** (`116★`, GPL-3.0 byte-read) promoted to `verticals/solutions.md` — in `trending` at `70★` and on no sell shelf, and the platform **Nigeria's own EdTech gap analysis names**. `605-K`: `3` paid, `85` remain |
+| 🟡 `606-J` | First census on a **reconciled** denominator: `69.0 %` permissive, 🔴 `18.8 %` `NONE`/`NOASSERTION` (`101` rows — the honest size of `598-C`'s work, which lists `31`), 🔴 `13.6 %` not pushed in a year |
+| 🔴 `598-G` | **Eighth pass open.** `unesco.org`, `oecd.org`, `iadb.org` re-measured `000` with a `000` control. Every market figure on `intel/market.md` is search-snippet-grade and the firms disagree by `4×`. **Operator request** |
+| 🔴 `605-E` | Unchanged: `make`, `bash` and `python3` on this repository's own committed controls are all **denied**. Every gate verdict here is an inline reimplementation. **Operator request** |
 ## Pass 605 — reads 2026-11-02, commit 2026-11-02 — **🟢 `604-B` IS CLOSED BY A WHOLE-SHELF SWEEP AND THE ANSWER IS CONTAINMENT: `400` ADDRESSES, `393` GRANT PAYLOADS BYTE-READ TODAY, `400 of 400` FABRICATED CONTROLS AT `404`, AND THE HTML-CAPTURE DEFECT APPEARS IN **`1 of 393` (`0.25 %`)** — THE REPO `p604` ALREADY FOUND. 🔴 BUT THE PASS'S LOAD-BEARING RESULT IS A **RETRACTION**: ITS OWN FIRST DRAFT ACCUSED `5` SHELF ROWS OF ASSERTING `MIT` WITHOUT EVIDENCE, AND ALL `5` WERE ALREADY GRADED `BLOCK — NO GRANT` ON THE PAGES IT ACCUSED. 🔴 `605-C`: `search/repositories` HAS FALSE NEGATIVES IN `5 of 400`, ONE CLASS **SILENT**, AND THE `422` THIS BASE PUBLISHED AS THAT CHANNEL'S *DISCRIMINATING CONTROL* IS WHAT `3` REAL SHELVED REPOS RETURN. 🟢 `604-H` PAID: FOUR NATIONAL LEGS SUPPLIED **EVERY** NEW ADDRESS IN THE PASS. `19` ROWS PROMOTED, `5` DISQUALIFIED WITH REASONS. ELEVEN REGISTERED (`605-A`…`605-L`).**
 
 ### 🟢 The central result — a negative with a denominator
