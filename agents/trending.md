@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — `2026-11-02` — **the `54th` consecutive English nil, and the streak is broken *only* on the non-English legs: `3` new names from `8` of them, against `25 of 25` held on English**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated English global legs: nil again — the **54th**
+
+🔵 The four mandated legs returned the names this base already holds. Verified against a
+`4,507`-slug oracle rebuilt this pass from the KB's own citations.
+
+| Name returned by the mandated legs | Oracle |
+|---|---|
+| `HKUDS/DeepTutor` | 🔴 held |
+| `THU-MAIC/OpenMAIC` | 🔴 held |
+| `patchy631/ai-engineering-hub` | 🔴 held |
+| `rasbt/LLMs-from-scratch` | 🔴 held |
+| `openeducat/openeducat_erp` | 🔴 held |
+| `zijinz456/OpenTutor` | 🔴 held |
+| `CAHLR/OATutor` | 🔴 held |
+| `moodle/moodle` | 🔴 held |
+
+> 🟡 **Oracle caveat, so no one reads a delta that is not there.** `4,507` is the count under *this* pass's
+> extraction rules — case-folded, with its own path-segment deny-list. 🔴 It is **not comparable** to
+> `p623`'s `3,974`; the rules differ. Nothing should be inferred from `4,507 − 3,974`.
+
+### 🔴 And the English `topic:` legs did not break the nil either — `25` candidates, `25` held, `0` new
+
+🔵 This is the stronger test, because `623-A` showed `topic:` discovery outperforms free text. Six
+`topic:`-qualified legs were run **with a recency qualifier** (`pushed:>2026-06-01`), which no prior pass
+had combined:
+
+| Leg | `total_count` | New to the base |
+|---|---|---|
+| `topic:ai-tutor stars:>50 pushed:>2026-06-01` | `19` | 🔴 `0` |
+| `topic:intelligent-tutoring-system stars:>20` | `6` | 🔴 `0` |
+| `topic:edtech stars:>500 pushed:>2026-06-01` | `10` | 🔴 `0` |
+| `topic:education topic:ai-agent stars:>100` | `9` | 🔴 `0` |
+| `topic:lms topic:ai stars:>50` | `4` | 🔴 `0` |
+| `topic:grading stars:>100 pushed:>2026-01-01` | `4` | 🔴 `0` |
+
+🟢 **`25` distinct education-native candidates, `25` already held.** 🔵 Every one of `Study-Mate`,
+`anki-mcp-server`, `universal-examprep-skill`, `algo-sensei`, `Bloom`, `universal-diagnostic-tutor-skill`,
+`freelingo`, `tutor-mcp`, `gen-mentor`, `book-to-skill`, `PageLM`, `classroomio`, `get-it`, `Papermorph`,
+`learn-from-materials`, `deep-student`, `PhysicsOS`, `learnhouse`, `brightspace-mcp-server`, `nbgrader`,
+`relate`, `INGInious`, `OpenTutor`, `AI-Marker-Suite` and `feedbacksystem` is on the shelf already.
+
+🟢 **This is the first pass that can say the nil is about *saturation* rather than only about reach.**
+`623-A` proved the channels publish false absences; that remains true. 🟢 But a leg that returns `19` rows
+and hits `19` held names is **not** a reach failure — it is a measurement that the English-discoverable
+education-AI surface is one this base has already swept.
+
+### 🟢 What is genuinely new this week — `3` names, all from the non-English legs, all APAC
+
+| Repository | Grant, byte-read today | ★ | Pushed | Why it is here |
+|---|---|---|---|---|
+| [`Annyfee/agent-craft`](https://github.com/Annyfee/agent-craft) | 🟢 `MIT`, `1,064 B` | `531` | `2026-10-27` | Agent-engineering curriculum (CN) — LangChain / RAG / LangGraph / MCP, runnable |
+| [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) | 🔴 `AGPL-3.0`, `35,184 B` | `1,567` | `2026-10-13` | A real online-education platform (CN): VOD, live, exams, question bank |
+| [`kyungseo/learnstead`](https://github.com/kyungseo/learnstead) | 🟢 `Apache-2.0`, `11,343 B` | `46` | `2026-09-13` | Local-LLM / RAG / agent learning path (KR) |
+
+### 🟡 `624-F` — handoff `#6` measured: the **direction** was right, the **magnitude** was not
+
+🔵 `p623`'s handoff `#6` promoted non-English two-word legs to *"actionable next pass, highest expected
+yield"*, on the evidence that `p620`'s Spanish two-word legs paid `7` names where four-term legs paid `0`.
+🟢 **Eight legs run this pass, five languages never before tried:**
+
+| Language | Leg | `total_count` | New names |
+|---|---|---|---|
+| Mandarin | `智能 教学 stars:>100` | `21` | 🟢 `1` (`agent-craft`) |
+| Mandarin | `AI 教育 stars:>300` | `11` | 🟢 `1` (`roncoo-education`) |
+| Korean | `학습 AI stars:>30` | `6` | 🟢 `1` (`learnstead`) |
+| German | `Lernen KI stars:>30` | `1` | 🔴 `0` — one `35★` course repo, last pushed `2021-10-30` |
+| Japanese | `学習 AI stars:>100` | 🔴 **`0`** | 🔴 `0` |
+| French | `apprentissage IA stars:>30` | 🔴 **`0`** | 🔴 `0` |
+| Arabic | `تعليم ذكاء stars:>10` | 🔴 **`0`** | 🔴 `0` |
+| Portuguese | `educação IA stars:>20` | 🔴 **`0`** | 🔴 `0` |
+
+🟡 **So: `3` names from `8` legs.** 🟢 It was the *only* channel that paid anything this pass, which vindicates
+the direction. 🔴 But `3` is not a high yield, and handoff `#6` should not be re-promoted on these numbers.
+
+🔴 **And the four zeroes are `623-A` repeating itself in other alphabets.** Two CJK tokens are already a
+**conjunction** over a short name-plus-description field, so `学習 AI` → `0` is a statement about the query
+shape, **not** about Japanese education-AI supply. 🔵 The Mandarin legs that did return rows returned them
+mostly off-target — personal book lists, political archives — which is the same conjunctivity working
+against relevance rather than against recall.
+
+> 🟡 **Declared gaps this pass, written down because silence looks like coverage.** No new
+> **Japanese**, **French**, **Arabic** or **Portuguese** education-AI repository was found. 🔴 Read that as
+> *this base cannot currently see one*, not as *there is none* — the instrument that returned those zeroes
+> is the one `623-A` proved publishes false absences. 🟢 The honest next step is a **single**-token
+> non-English leg (`教育`, `学習`, `éducation`), which no pass has tried, because the failure measured here
+> is conjunctivity and a one-word query cannot suffer it.
+
 ## 🆕 `p623` — `2026-11-02` — **the `53rd` consecutive global-leg nil, and this pass can finally say what a nil from these channels does and does not mean**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

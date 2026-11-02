@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — `2026-11-02` — **the trending channel is re-measured with a qualifier no pass had added, and the result is that the English surface is *saturated*, not merely *unreachable***
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated `github trending {industry} AI {year}` leg: still no GitHub-operated source
+
+🔵 Reconfirmed this pass. The leg returns only auto-generated digests (`agents-radar`, `ai-radar`,
+`coddykit`) and SEO posts — there is **no** official GitHub trending endpoint in the results. 🟢 Where a
+digest named a figure, channel B was asked the same question the same day:
+
+| Repository | Digest claim | Channel B, `2026-11-02` | Verdict |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | `~52,783★` (Nov 1 digest); `+2,282★` single-day (Oct 31) | 🟢 `54,290★`, `Apache-2.0`, pushed `2026-10-31` | 🔵 `+1,507` over the digest — lag, not error |
+| `THU-MAIC/OpenMAIC` | *"roughly 42K stars"* | 🟢 `42,492★`, `MIT` byte-read, pushed `2026-11-02` | 🟢 Confirmed |
+| `patchy631/ai-engineering-hub` | `40,466★, 1,191 today` | 🟢 `40,940★`, `MIT`, pushed `2026-11-01` | 🟢 Confirmed |
+| `rasbt/LLMs-from-scratch` | `107,610★` | 🟢 `107,706★` | 🟢 Confirmed. 🔴 But channel B calls its licence `NOASSERTION`; bytes say `Apache-2.0` (`624-H`) |
+
+🟡 **A digest's star figure has now been right four times running, within lag.** 🔴 A digest's *licence* claim
+has been wrong `5` times out of `5` across `p623`–`p624`. 🟢 **Keep using digests for names and magnitudes;
+never for grants.**
+
+### 🟢 The trending-discovery finding: adding `pushed:>` to a `topic:` leg is the test no pass had run
+
+🔵 `623-A` established that a `topic:` count is a **lower bound** (author-labelling floor) and that free text
+is **conjunctive**. 🔵 Neither result said anything about *recency*, and every prior pass's `topic:` legs were
+unqualified by date — so a held name from 2024 and a new name from last month arrived indistinguishable.
+
+🟢 **Six legs, recency-qualified, run this pass:**
+
+| Leg | `total_count` | Candidates extracted | 🔴 New to the base |
+|---|---|---|---|
+| `topic:ai-tutor stars:>50 pushed:>2026-06-01` | `19` | `8` | 🔴 `0` |
+| `topic:edtech stars:>500 pushed:>2026-06-01` | `10` | `8` | 🔴 `0` |
+| `topic:education topic:ai-agent stars:>100` | `9` | `8` | 🔴 `0` |
+| `topic:intelligent-tutoring-system stars:>20` | `6` | `6` | 🔴 `0` |
+| `topic:lms topic:ai stars:>50` | `4` | `4` | 🔴 `0` |
+| `topic:grading stars:>100 pushed:>2026-01-01` | `4` | `4` | 🔴 `0` |
+
+🟢 **`25` distinct education-native candidates; `25` already on the shelf.** 🔵 Measured against a `4,507`-slug
+oracle rebuilt this pass. 🟡 **Oracle caveat:** `4,507` is under *this* pass's extraction rules (case-folded,
+own deny-list) — **not comparable** to `p623`'s `3,974`. Do not read a delta.
+
+> 🟢 **This is a different, better finding than another nil.** A leg that returns `19` rows and hits `19` held
+> names is not a reach failure. 🔵 `623-A` is still true — these channels *do* publish false absences — but
+> saturation and unreachability leave different fingerprints, and this one is **saturation**: the base has
+> already swept the English-discoverable education-AI surface at these star floors.
+
+### 🟡 The live trending shelf, recorded for the week
+
+🔵 Names channel B returns above `1,000★`, education-native, pushed within the window — all held, listed so
+the week's *shape* is on the record even when nothing is new.
+
+| Repository | ★ | Licence (channel B) | Pushed |
+|---|---|---|---|
+| `rasbt/LLMs-from-scratch` | `107,706` | 🔴 `NOASSERTION` → bytes `Apache-2.0` | `2026-10-30` |
+| `HKUDS/DeepTutor` | `54,290` | `Apache-2.0` | `2026-10-31` |
+| `THU-MAIC/OpenMAIC` | `42,492` | `MIT` | `2026-11-02` |
+| `patchy631/ai-engineering-hub` | `40,940` | `MIT` | `2026-11-01` |
+| `virgiliojr94/book-to-skill` | `36,785` | `MIT` | `2026-10-28` |
+| `oppia/oppia` | `6,957` | `Apache-2.0` | `2026-11-02` |
+| `instructure/canvas-lms` | `6,900` | `AGPL-3.0` | 🔴 `2026-04-30` |
+| `xiaoyang111222/cn-math-taxonomy` | `6,206` | 🔴 `NOASSERTION` → `CC-BY-NC-4.0` (`615`) | `2026-11-02` |
+| `moodle/moodle` | `7,574` | `GPL-3.0` | `2026-10-30` |
+| `ashemag/human-atlas` | `4,457` | `MIT` | `2026-09-06` |
+| `open-spaced-repetition/fsrs4anki` | `4,122` | `MIT` | `2026-08-14` |
+| `learnhouse/learnhouse` | `2,441` | `AGPL-3.0` | `2026-11-02` |
+| `CaviraOSS/PageLM` | `2,060` | 🔴 `NOASSERTION` | `2026-10-29` |
+| `classroomio/classroomio` | `1,736` | `AGPL-3.0` | `2026-11-02` |
+| 🆕 `roncoo/roncoo-education` | `1,567` | `AGPL-3.0` (byte-read `35,184 B`) | `2026-10-13` |
+| `jupyter/nbgrader` | `1,370` | `BSD-3-Clause` | `2026-10-28` |
+| `Miaotofu01/Study-Mate` | `1,307` | `MIT` | `2026-10-21` |
+| `dmoshehun-prog/learn-from-materials` | `1,207` | `MIT` | `2026-10-19` |
+| `learningequality/kolibri` | `1,166` | `MIT` | `2026-11-02` |
+| `beltromatti/get-it` | `1,143` | `Apache-2.0` | `2026-06-29` |
+| `DozenTwelve/Papermorph` | `1,085` | `MIT` | `2026-11-01` |
+| `chamilo/chamilo-lms` | `1,020` | `GPL-3.0` | `2026-11-02` |
+
+🔵 **The composition is the signal.** `AGPL-3.0` now holds four of the fastest-moving application-layer
+platforms (`learnhouse`, `classroomio`, `roncoo-education`, plus `freelingo` at `225★`), while the permissive
+column is dominated by **tutor and skill** repositories rather than platforms. 🟡 A studio wanting a
+*platform* to ship is pushed toward copyleft; wanting an *agent* to compose, it has `MIT` in quantity.
+
+### 🟡 Declared gap
+
+🔴 **No new trending education-AI repository was found on any English leg this pass**, and the non-English
+legs returned `3` (see [`../agents/trending.md`](../agents/trending.md) `624-F`). 🔵 Japanese, French, Arabic
+and Portuguese legs each returned `total_count` **`0`** — read as *this base cannot see one*, not as *none
+exists*, per `623-A`.
+
 ## 🆕 `p623` — `2026-11-02` — **the trending channel is measured instead of trusted: `topic:` counts are lower bounds, and the two biggest repos in their own tiers are invisible to it**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

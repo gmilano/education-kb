@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — reads `2026-11-02` — **🟢 EVERY FOUNDATION GRANT RE-ESTABLISHED BY **ENUMERATION** RATHER THAN BY GUESSWORK — `15 of 15`, AND THE THREE REPOSITORIES WHOSE GRANT FILES A LADDER WOULD HAVE MIS-READ ARE NAMED. 🔴 THE BYTE-BAND CORROBORATION THIS PAGE HAS LEANED ON SINCE `621-B` IS WITHDRAWN.**
+
+### 🟢 `624-A` applied to the foundation tier — the complete manifest, not a guess
+
+🔵 Method and full result table are in [`../agents/top.md`](../agents/top.md) `624-A`. What matters on *this*
+page is that the foundation tier's licence column is now derived from **what each repository has**, read in
+one git transport, rather than from a `13`-rung filename ladder that had missed a rung on five consecutive
+passes.
+
+| Foundation repository | Grant, enumerated + byte-read `2026-11-02` | Bytes | Branch | ★ | Pushed | Buildable for a studio? |
+|---|---|---|---|---|---|---|
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🟢 **`Apache-2.0`** (`LICENSE.txt`) | `11,505` | `main` | `107,706` | `2026-10-30` | 🟢 Yes. 🔴 Channel B says `NOASSERTION` — see `624-H` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`Apache-2.0`** | `11,408` | `main` | `54,290` | `2026-10-31` | 🟢 Yes — the tier's adoption leader |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **`MIT`** (© `2026 THU-MAIC`) | `1,065` | `main` | `42,492` | `2026-11-02` | 🟢 Yes — cleanest grant at this scale |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 **`MIT`** | `1,066` | `main` | `40,940` | `2026-11-01` | 🟢 Yes — reference/teaching corpus |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **`Apache-2.0`** + `NOTICE` (`146 B`) | `11,358` | `develop` | `6,957` | `2026-11-02` | 🟢 Yes. Carry the `NOTICE` under §4 |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **`BSD-3-Clause`** | — | `main` | `1,370` | `2026-10-28` | 🟢 Yes — the assignment/grading substrate |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | `1,097` | `develop` | `1,166` | `2026-11-02` | 🟢 Yes — the offline-first anchor |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** + a `licenses/` tree | `11,120` | `master` | `1,240` | `2026-11-02` | 🟢 Yes — `624-E` settles it: **no added obligation** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** + `NOTICES` (`126,439 B`) | `11,340` | `develop` | `509` | `2026-11-02` | 🟢 Yes. 🟡 That `NOTICES` roll is an attribution duty with real size |
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 **`MIT`** (© `2026 ashemag`) | `1,064` | `main` | `4,457` | `2026-09-06` | 🟢 Code yes; 🟡 meshes are `CC BY 4.0` (`623-D`) |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` (`COPYING.txt`) | `35,147` | `main` | `7,574` | `2026-10-30` | 🟡 Plugin API only — see `verticals/solutions.md` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | `35,136` | `master` | 🔴 channel-blind | — | 🔴 Clear the network clause first |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` + `COPYRIGHT` (`621 B`) | `34,520` | `master` | `6,900` | 🔴 **`2026-04-30`** | 🔴 Network copyleft, **and `6` months without a push** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` + `license.txt` (`1,614 B`) | `35,147` | `master` | `1,020` | `2026-11-02` | 🟡 Copyleft; very actively pushed |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 `GPL-3.0` (`LICENSE.txt`) | `35,146` | `master` | `154` | `2026-11-02` | 🟡 Content-type engine; copyleft |
+
+🟢 **Eleven of fifteen are permissive** (`MIT`, `Apache-2.0`, `BSD-3-Clause`, `ECL-2.0`) and are the column a
+studio can build a shipped derivative on.
+
+### 🔴 `624-N1` — the three rows a filename ladder gets wrong *even with every rung this base has found*
+
+| Repository | What the ladder would return | What enumeration returns | Why it matters |
+|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `COPYRIGHT` (`621 B`) — an earlier rung than `LICENSE` in `p622`'s order | 🟢 **both**: `COPYRIGHT` `621 B` *and* `LICENSE` `34,520 B` = `AGPL-3.0` | 🔴 A `621 B` notice read as the grant hides **network copyleft** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `LICENSE` only, and stops | 🟢 **both**: `LICENSE` `GPL-3.0` *and* `license.txt` `1,614 B` BeezNest notice | 🟡 The second file is where the copyright holder actually is |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `LICENSE` only | 🟢 `LICENSE` *and* a whole **`licenses/` tree** | 🟡 Bundled-dependency grants live there; a ladder has no concept of a directory |
+
+### 🔴 `624-C` restated for this page — the byte-band corroboration used here since `621-B` is **withdrawn**
+
+🔵 This page has repeatedly corroborated a grant by noting its size matched a *"stock band"*. 🔴 Six
+measurements this pass show `AGPL-3.0` and `GPL-3.0` sizes **interleaving** (`34,520`A `< 35,136`A
+`< 35,146`G `< 35,147`G `< 35,184`A), and `ECL-2.0` landing **`3` bytes** from `Apache-2.0`
+(`11,340` vs `11,343`). 🟢 Full table and the standing rule in [`../agents/top.md`](../agents/top.md) `624-C`
+and `624-D`.
+
+> 🟢 **What replaces it.** Byte size is kept — it is a good fingerprint for *re-identifying the same file
+> across passes*, which is how drift gets caught. 🔴 It is never again evidence of *which* licence a file is.
+> The title line decides, and `624-A` returns it in the same call that returns the size.
+
+### 🟡 Declared gaps on this page
+
+- 🔴 **No `BSD`-licensed education-native *platform*** was found, only tooling (`nbgrader`). Searched across
+  all four mandated legs and six `topic:` legs.
+- 🔴 **No primary-source document behind any market or adoption figure can be read in this session** —
+  `624-J` proves this across two independent channels. The gap is a network-policy gap, not a research gap.
+- 🟡 `instructure/canvas-lms` has not been pushed since **`2026-04-30`**. Recorded, not explained: this base
+  has no evidence on whether upstream development moved elsewhere.
+
 ## 🆕 `p623` — reads `2026-11-02` — **🔴 THE LADDER RETURNED "NO GRANT" FOR `moodle/moodle` — THE MOST DEPLOYED PLATFORM IN THIS INDUSTRY — AND THE MISSING RUNG IS `COPYING.txt`. 🔴 AND CHANNEL B IS **TOTALLY BLIND** TO `openedx/edx-platform`, WHICH REFUTES MECHANICAL USE OF `622-F`'s CANONICITY RULE. 🟢 `ECL-2.0` IS CONFIRMED ON A SECOND INSTANCE AND IS EDUCATION'S OWN PERMISSIVE FAMILY.**
 
 ### 🔴 `623-N` — the ladder graded **Moodle** as having no grant, and that is a `623`-pass-old hole

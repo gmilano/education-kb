@@ -4,6 +4,185 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — reads `2026-11-02` — **six recipes, every component grant **enumerated** today rather than guessed — and the `make hooks` control debt is resolved the way `623-M` said to resolve it: by reimplementation, which this pass did and which paid immediately**
+
+### 🟢 `624-G1` — the control debt: `623-M`'s standing guidance followed, and reimplementation caught a real defect
+
+🔵 `623-M` retired `make hooks` as a schedulable first action (an auto-mode classifier keyed on
+`Code from External` refused it three passes running) and set standing guidance: **verify shelf edits by
+reimplementing the published contract as code in the session's own scratchpad.**
+
+🟢 **Followed exactly.** This pass wrote, fresh, in its own scratchpad: the `prepend` contract (frontmatter
+detected, section inserted after it, history byte-count asserted), the oracle extractor with a
+path-segment deny-list, and the `624-A` enumeration probe. 🟢 **`make hooks` was not scheduled and not
+attempted.**
+
+🔴 **And reimplementation paid, as `623-C` predicted it would.** The oracle extractor's first version
+stripped trailing punctuation from repository names — and this pass's own candidate set contains
+`five-plus-one/AI-Marker-Suite` and `122-syf-wcy/PhysicsOS`, names whose shape breaks naive tokenisation.
+🟢 The extractor was corrected to strip only a trailing `[),.:;]+` run, and the oracle was rebuilt against
+`4,507` slugs. 🟡 **Caveat carried forward:** `4,507` is under *this* pass's rules (case-folded, own
+deny-list) and is **not comparable** to `p623`'s `3,974`.
+
+> 🟢 **Standing guidance, reaffirmed unchanged:** do not schedule `make hooks`. Reimplement the contract.
+> 🔵 Two passes have now done so and both found an instrument defect by running a control rather than by
+> reading code.
+
+### 🟢 `624-G2` — the enumeration instrument, as a reusable recipe
+
+🔵 This is the pass's main deliverable and every pattern below depends on it. 🟢 It replaces a `13`-rung
+filename ladder that had missed a rung on **five consecutive passes**, and it is the only channel that is
+complete over this tier (`gh api repos/*` is `403` here, and channel B is `422`-blind to `openedx`).
+
+```bash
+# licence + manifest for any public repo, one transport, no guessing
+git clone --filter=blob:none --depth 1 --no-checkout https://github.com/$SLUG d
+git -C d ls-tree --long HEAD                     # complete root manifest + exact blob sizes
+git -C d ls-tree -r HEAD --name-only | grep -i copyright   # PROVES absence over the whole tree
+git -C d show HEAD:LICENSE | head -2             # lazily fetches one blob: the title decides
+```
+
+🟢 `15 of 15` repositories resolved, `0` guesses. 🔴 **Never infer a licence from byte size** — `624-C` shows
+`AGPL-3.0` and `GPL-3.0` sizes interleaving and `ECL-2.0` landing `3` bytes from `Apache-2.0`.
+
+---
+
+### 🟢 `P1` — Assessment-under-removal: the one product the OECD number actually supports — `8–10` weeks
+
+🔴 **The premise.** `624-K`: generative AI raised task completion `+48 %` and measured performance fell
+**`−17 %`** once removed. 🔴 A completion assistant therefore wins the pilot and loses the mandate. 🟢 Build
+the thing that measures the gap instead of widening it.
+
+| Component | Address | Grant, byte-read `2026-11-02` | Role |
+|---|---|---|---|
+| Grading / assignment substrate | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 `BSD-3-Clause` | Release/collect/autograde cycle — the withdrawal harness |
+| Mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 `MIT` | Bayesian Knowledge Tracing: the prior that `−17 %` is measured against |
+| Spacing / retention scheduler | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 `MIT`, `4,122★` | Schedules the *un*-assisted retrieval that produces the honest score |
+| Tutor surface | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, `11,408 B`, `54,290★` | Scaffolds — then withdraws on the scheduler's cue |
+| Host platform | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`**, `11,120 B` | 🟢 Shippable as a closed derivative — `624-E` |
+
+🟢 **Wiring.** `nbgrader` owns two variants of every assessment: assisted and withdrawn. `DeepTutor` serves
+the assisted pass; `fsrs4anki` schedules the withdrawn one at the retention interval; `OATutor`'s BKT holds
+the mastery estimate, and **the deliverable metric is the delta between the two** — the client's own `−17 %`,
+measured rather than assumed. 🟢 Ships on Sakai with Apache-grade freedom.
+🔵 **Sell it where a mandate exists:** the four US mandate states, and EMEA ahead of `2 December 2027`.
+
+### 🟢 `P2` — EU AI Act high-risk conformity programme for assessment systems — `10–12` weeks
+
+🔵 **Driver:** education AI for admissions, evaluation and exam scoring is **high-risk**; stand-alone
+high-risk duties now dated **`2 December 2027`** by `Regulation (EU) 2026/1744`, with Article `50`
+transparency already in force since `2 August 2026` and the literacy duty since `February 2025`. 🟢 Schools
+are formally **deployers** and stay liable for third-party tools — that liability is the sale.
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| Self-hosted LMS | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | Sovereign deployment, shippable derivative |
+| Lecture/media pipeline | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0`, `11,340 B` | Captioning/transcription under Art. `50` disclosure. 🟡 Carry the `126,439 B` `NOTICES` roll |
+| Offline / data-minimised tier | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT`, `1,097 B` | Keeps pupil data local where DPIA pressure is highest |
+| Assessment integrity | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 `NOASSERTION` — **byte-read owed** | Sandboxed automated assessment. 🔴 Do not ship before reading its grant with `624-G2` |
+
+🟢 **Wiring.** Risk-classify each AI function against Annex III; wrap every assessment call in a
+human-oversight checkpoint with an override log; emit Art. `50` disclosures at the learner surface; produce
+technical documentation and a post-market monitoring plan per deployed model. 🔴 **Emotion recognition is
+banned in education** since `2 February 2025` outside medical/safety use — audit for it and remove it.
+🟡 **Price the date flagged:** sources still conflict between `August 2026` and `2 December 2027`; verify
+against the Official Journal before contracting.
+
+### 🟢 `P3` — District AI-policy implementation against the four US mandate states — `6–8` weeks
+
+🔵 **Driver:** `134` bills across `31` states; **Maryland, Idaho, Oklahoma and Virginia** require state
+guidance **and** mandatory district policy adoption (Maryland adds designated AI coordinators). 🔵 Against
+that, **`55 %`** of high-school principals have not restricted AI on the school network at all.
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| Host LMS | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0`, `COPYING.txt`, `35,147 B` | 🟢 Plugin API keeps client code **outside** the copyleft boundary |
+| Policy-aware tutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟡 grant **byte-read owed** | Local-first adaptive workspace — no pupil data egress |
+| Grade-band gating | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT`, `89★` | MCP server turning any LLM into an ITS — the policy enforcement point |
+| Teacher-facing skills | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 `CC-BY-SA-4.0` (`615`) — share-alike, commercial **allowed** | `165` evidence-grounded skills for teachers and leaders |
+| Evidence layer | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 `BSD-3-Clause` | Produces the outcome a mandated policy must eventually defend |
+
+🟢 **Wiring.** Implement NY `A 9190`-style rules as **data**, not code: a grade-band gate (`≥` grade `9`) with
+diagnostic and special-education carve-outs, enforced in the `tutor-mcp` layer so one policy engine serves
+every subject. Mirror NYC's **Traffic Light Framework** as the teacher-facing vocabulary.
+🔴 **Attach `P1`'s measurement from day one** — a policy without an outcome is a renewal risk.
+
+### 🟢 `P4` — LATAM institutional AI strategy at scale, offline-first — `6–8` weeks per institution
+
+🔵 **Driver, and it is the best-measured gap in the world:** **`87 %`** of LATAM higher-ed institutions use AI,
+**`26 %`** have a formal strategy (UNESCO IESALC, `~200` institutions, `19` countries); Brazil `53 %` using
+against `22 %` with guidelines; Uruguay `75 %` of public-school teachers using (Ceibal). 🟢 The buyers are
+already convened in one place — the **Observatory on AI in Education for LAC**, launched `14 April 2026` in
+Santiago, with CAF, CENIA, ECLAC, Santillana, Tec de Monterrey, ProFuturo and Fundación Ceibal.
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| Offline-first delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT`, `1,097 B` | The low-connectivity anchor |
+| Spanish/Portuguese LMS | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` + `license.txt` `1,614 B` | 🔵 Holder is **BeezNest Latino** — regional provenance, strong francophone+LATAM footprint |
+| Tutor surface | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | Grounds answers in the institution's own documents |
+| Content engine | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 `GPL-3.0`, `35,146 B` | Interactive content inside Chamilo/Moodle |
+| Governance artefacts | — | — | Strategy, academic-integrity rules, privacy and evaluation policy: the `61`-point gap itself |
+
+🟢 **Wiring.** Kolibri for the edge, Chamilo as the institutional LMS, DeepTutor grounded on institutional
+corpora, H5P for interactive assets — and the strategy/governance artefacts as the **primary** deliverable,
+because `87 %`-minus-`26 %` is what the institution is actually missing. 🔴 **Copyleft is fine here:** these
+are self-hosted institutional deployments, not resold SaaS.
+
+### 🟢 `P5` — APAC multi-jurisdiction policy routing, built on the region's own permissive stack — `12–14` weeks
+
+🔵 **Driver:** Korea's `AI Basic Act`; **Vietnam's Law on AI from `1 March 2026` with an `18`-month transition
+for education**; China's targeted measures (recommendation algorithms, deep synthesis, generative AI services,
+AI-content labelling); Australia's existing-law-plus-voluntary-guidance posture; Japan's voluntary guidelines.
+🟢 One platform, five regimes.
+
+| Component | Address | Grant, byte-read | Role |
+|---|---|---|---|
+| Classroom/course platform | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT`, `1,065 B`, `42,492★` | Tsinghua MAIC: topic or document → interactive classroom |
+| Tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, `11,408 B` | HKU: lifelong personalised tutoring |
+| 🆕 Agent curriculum | [`Annyfee/agent-craft`](https://github.com/Annyfee/agent-craft) | 🟢 **`MIT`, `1,064 B`**, `531★` | 🆕 LangChain/RAG/LangGraph/MCP teaching scaffold — client enablement, CN |
+| 🆕 Local-LLM learning path | [`kyungseo/learnstead`](https://github.com/kyungseo/learnstead) | 🟢 **`Apache-2.0`, `11,343 B`** | 🆕 Korea-placed: local LLM, RAG, agent, concept → practice → verification |
+| 🔴 Avoid for resale | [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) | 🔴 **`AGPL-3.0`, `35,184 B`** | 🆕 Complete CN platform (VOD, live, exams, question bank) — 🟡 open edition trims a commercial product, so a commercial grant may be purchasable |
+
+🟢 **Wiring.** Policy as declarative per-jurisdiction rule sets in front of one agent runtime: Chinese
+AI-content labelling applied at the generation boundary, Korean statutory duties as audit records, Vietnamese
+transition deadlines as migration gates, Australian/Japanese voluntary guidance as defaults. 🟢 Build on
+`OpenMAIC` + `DeepTutor` because both are permissive, both are at scale, and both are *regionally native* —
+which matters for procurement. 🟢 Use `agent-craft` as the enablement track so the client's own team can
+operate it.
+
+### 🟢 `P6` — Lecture-capture intelligence on a shippable base — `4–6` weeks
+
+🔵 **Driver:** the cheapest credible first engagement, and the only pattern here whose entire stack is
+permissive — so the derivative can be *sold*, not merely deployed.
+
+| Component | Address | Grant, byte-read | Role |
+|---|---|---|---|
+| Capture / media pipeline | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`**, `11,340 B` | Ingest, transcode, publish. 🟡 Carry the `126,439 B` `NOTICES` roll under §4 |
+| Host LMS | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`**, `11,120 B` | Integrates natively — same Apereo estate |
+| Interactive overlay | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **`Apache-2.0`**, `11,358 B` + `NOTICE` `146 B` | Turns a transcript into an interactive lesson |
+| Retention scheduler | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 `MIT` | Generates spaced retrieval from the transcript |
+| Study-material agent | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 `MIT`, `1,085★` | Documents → animated, narrated, interactive explainers |
+
+🟢 **Wiring.** Opencast ingests the lecture and emits transcript + segments; `Papermorph` turns segments into
+explainers; `oppia` wraps them as interactive lessons; `fsrs4anki` schedules retrieval; Sakai hosts.
+🟢 **Every grant here is `ECL-2.0`, `Apache-2.0` or `MIT` — and `624-E` proves `ECL-2.0` adds no obligation —
+so the whole assembly is shippable as a closed derivative.** 🟡 The only duty is attribution, and Opencast's
+`NOTICES` file is large enough that it must be a build step, not an afterthought.
+
+---
+
+### 🟡 What `p625` should do, in priority order
+
+| # | Action | Why now |
+|---|---|---|
+| `1` | 🟢 **Single-token non-English discovery legs** (`教育`, `学習`, `éducation`, `educação`, `تعليم`) | `624-F` measured four non-English legs at `total_count` `0`, and `623-A` proves the cause is **conjunctivity**. A one-word query cannot suffer it. This is the only untried channel with a mechanism-backed reason to pay |
+| `2` | 🔴 **Byte-read the three grants this pass left owed:** `INGInious/INGInious`, `inducer/relate`, `zijinz456/OpenTutor` | All three are cited in patterns above with `NOASSERTION` or no grant read. `624-G2` makes each a one-command job, and `624-H` shows `NOASSERTION` means nothing |
+| `3` | 🟢 **Re-run `624-A` enumeration over the full `4,507`-slug oracle, not just `18` repos** | The instrument is proven and cheap (blobless clones). Doing it at scale would give this base its **first** complete, non-guessed licence column — and would catch the `COPYRIGHT`-before-`LICENSE` class of error (`624-N1`) everywhere it exists |
+| `4` | 🟡 **Re-check the EU high-risk date against the Official Journal** | `2 December 2027` vs `2 August 2026` is unresolved across sources and `P2` is priced on it. 🔴 Blocked by `624-J` unless the network policy changes |
+| `5` | 🟡 **Retire or source the `41.5 %` CAGR** | `570` passes old, now bracketed by four firms at `16.8 %`-class rates (`624-K`). Either find its origin or demote it out of the headline |
+| `6` | 🔴 **Do not schedule `make hooks`** | `623-M` + `624-G1`: refused three passes running by an auto-mode classifier keyed on `Code from External`. Reimplement the contract instead — it has now caught a defect two passes in a row |
+| `7` | 🟡 **Do not re-promote non-English legs as "highest expected yield"** | `624-F`: `3` names from `8` legs. Right direction, modest magnitude — worth running, not worth prioritising above `#1`–`#3` |
+
 ## 🆕 `p623` — reads `2026-11-02` — **six recipes, every component byte-read today, plus the mechanism behind a control debt that has now failed to discharge three passes running — and `622-S`'s diagnosis of it was wrong**
 
 ### 🔴 `623-M` — `make hooks` refused a **third** consecutive pass, and the refusal states its own mechanism

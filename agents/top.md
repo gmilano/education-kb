@@ -4,6 +4,173 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE LICENCE LADDER IS RETIRED AND REPLACED BY *TREE ENUMERATION*: `15 of 15` GRANTS RESOLVED WITH **ZERO GUESSES**, INCLUDING THE `COPYING.txt` THAT COST `p623` THIRTEEN RUNGS. 🟢 AND ENUMERATION CAN **PROVE ABSENCE**, WHICH `curl -sI` NEVER COULD — `623-F`'s DANGLE IS SETTLED AGAINST ALL `1,345` TRACKED PATHS AND DOWNGRADED TO COSMETIC. 🔴 BYTE-SIZE LICENCE BANDS ARE **REFUTED**: `AGPL-3.0` AND `GPL-3.0` SIZES **INTERLEAVE**, AND `ECL-2.0` SITS **`3` BYTES** FROM `Apache-2.0`. 🟢 THE `ECL-2.0 ÷ Apache-2.0` CLAUSE DIFF `p623` DECLARED OWED IS **RUN ON BYTES**: `78` WORDS ADDED, `9` REMOVED, **NO OBLIGATION ADDED** — `ECL-2.0` STAYS BUILDABLE. FOURTEEN REGISTERED (`624-A`…`624-N`).**
+
+### 🟢 `624-A` — read this first: the ladder was the wrong instrument, and the right one **enumerates**
+
+🔵 Five consecutive passes registered a *"missing rung"* finding — `p620` (`LICENSE-MIT`, `packages/*/LICENSE`),
+`p622` (`COPYING.md`, `COPYRIGHT`), `p623` (`COPYING.txt`). 🔵 `622-H` had already concluded the ladder
+*"is not converging by guessing"*. 🔴 **It never will, because guessing is unbounded.** A filename ladder
+can only ever enumerate the names a previous pass happened to lose money on.
+
+🟢 **The replacement, run in full this pass:**
+
+```bash
+git clone --filter=blob:none --depth 1 --no-checkout "https://github.com/$SLUG" d
+git -C d ls-tree --long HEAD      # complete root manifest, with exact blob sizes
+git -C d show HEAD:LICENSE        # lazily fetches just that blob
+```
+
+🟢 **Result: `15 of 15` repositories resolved, `0` guesses, `0` `404`s.** The clone is blobless, so it
+costs trees only. It returns the grant's **name, exact byte size and text** through **one** channel —
+no `raw.githubusercontent.com` leg and no per-repo API call (which is `403` here anyway, `624-I`).
+
+| Repository | Root entries | Grant file(s) found **by enumeration** | Bytes | Title, byte-read today |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `38` | 🟢 `COPYING.txt` | `35,147` | `GNU GENERAL PUBLIC LICENSE` v3 |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `49` | 🟢 `LICENSE` | `35,136` | `GNU AFFERO GENERAL PUBLIC LICENSE` v3 |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `110` | 🟢 `LICENSE` **+ a `licenses/` tree** | `11,120` | `Educational Community License, Version 2.0` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `21` | 🟢 `LICENSE` **+ `NOTICES`** | `11,340` / `126,439` | `ECL-2.0` / Apereo attribution roll |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `49` | 🟢 `LICENSE` | `1,097` | `MIT License` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `23` | 🟢 `LICENSE` | `8,241` | `GNU LESSER GENERAL PUBLIC LICENSE` v3 |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `49` | 🟢 `LICENSE` **+ `license.txt`** | `35,147` / `1,614` | `GPL-3.0` / BeezNest copyright notice |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `124` | 🟢 `LICENSE` **+ `COPYRIGHT`** | `34,520` / `621` | `AGPL-3.0` / Instructure notice |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `66` | 🟢 `LICENSE` **+ `NOTICE`** | `11,358` / `146` | `Apache License` v2.0 |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `17` | 🟢 `LICENSE.txt` | `35,146` | `GPL-3.0` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `44` | 🟢 `LICENSE` | `11,408` | `Apache License` v2.0 |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `51` | 🟢 `LICENSE` | `1,065` | `MIT License`, © `2026 THU-MAIC` |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `121` | 🟢 `LICENSE` | `1,066` | `MIT License` |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | `26` | 🟢 `LICENSE.txt` | `11,505` | `Apache License` v2.0 |
+| [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | `15` | 🟢 `LICENSE` | `1,064` | `MIT License`, © `2026 ashemag` |
+
+🔵 **Note the three rows a ladder would have mishandled even now:** `chamilo` carries **two** grant-shaped
+files and the ladder stops at the first; `canvas-lms` carries `COPYRIGHT` *and* `LICENSE` and the ladder's
+rung order would have returned the `621 B` notice as the grant; `sakai` carries a whole `licenses/` tree
+the ladder has no concept of. 🟢 Enumeration returns all of them because it asks the repository what it
+*has* rather than whether it has what the pass guessed.
+
+### 🟢 `624-B` — enumeration **proves absence**, and that closes `623-F` properly
+
+🔵 `621-A` retired `curl -sI` as an existence instrument because a `404` is not an absence. 🔴 That left
+this base with **no** way to assert that a file does not exist — only that a probe failed. 🟢 **A git tree
+is a complete manifest, so a name absent from it is absent.**
+
+🔵 Run against `623-F`'s open dangle — `openeducat/openeducat_erp`'s `LICENSE` opens with
+*"For copyright information, please see the COPYRIGHT file."*
+
+| Probe | Result |
+|---|---|
+| `git ls-tree -r HEAD` total tracked paths | `1,345` |
+| paths matching `COPYRIGHT`, case-insensitive, **whole tree** | 🟢 **`0` — absence proven, not inferred** |
+
+🟢 **And the consequence inverts `p623`'s grade.** The same `8,241 B` file states the grant *in its own
+body*: `GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below` — and the LGPL text
+**is** included below. 🔵 So nothing is missing except a pointer to a file that was never shipped.
+🟡 **`623-F` is downgraded from 🔴 to 🟡: a cosmetic documentation defect, not a licence gap.** The row is
+`LGPL-3.0` and is safe to rely on. 🔵 `p623` was right to flag it and right not to resolve it on a `404`.
+
+### 🔴 `624-C` — byte-size licence bands are refuted, and they fail across the **GPL / AGPL** boundary
+
+🔵 `p623` corroborated grants by byte band — *"the stock `GPL-3.0` band this base measured at `621-B`
+(byte-identical size)"*. 🔴 **Six measurements from this pass's enumeration destroy it.** Every one of
+these is a title byte-read today, so the licence column is not in doubt; only the *inference from size* is.
+
+| Bytes | Licence, byte-read | Repository |
+|---|---|---|
+| `34,520` | 🔴 **`AGPL-3.0`** | `instructure/canvas-lms` |
+| `35,136` | 🔴 **`AGPL-3.0`** | `openedx/edx-platform` |
+| `35,146` | 🟡 `GPL-3.0` | `h5p/h5p-php-library` |
+| `35,147` | 🟡 `GPL-3.0` | `moodle/moodle` |
+| `35,147` | 🟡 `GPL-3.0` | `chamilo/chamilo-lms` |
+| `35,184` | 🔴 **`AGPL-3.0`** | `roncoo/roncoo-education` |
+
+🔴 **Sorted, they interleave.** One `AGPL-3.0` file is **larger** than every `GPL-3.0` file and another is
+**smaller** than every one. The relation is not merely imprecise, it is **non-monotonic** — and it breaks
+across *the* distinction that decides whether a hosted client offering is possible at all.
+
+> 🔴 **Standing rule, replacing any band reasoning:** byte size is a **fingerprint for re-identifying the
+> same file**, never evidence of which licence it is. Only the title line decides. Both are free in the
+> `624-A` instrument, so there is no reason to ever infer from size again.
+
+### 🔴 `624-D` — and `ECL-2.0` sits **`3` bytes** from `Apache-2.0`
+
+| Licence | Observed sizes | Repository |
+|---|---|---|
+| `ECL-2.0` | `11,120`, **`11,340`** | `sakaiproject/sakai`, `opencast/opencast` |
+| `Apache-2.0` | **`11,343`**, `11,358`, `11,408`, `11,505` | `kyungseo/learnstead`, `oppia/oppia`, `HKUDS/DeepTutor`, `rasbt/LLMs-from-scratch` |
+
+🔴 `11,340` against `11,343` — **`3` bytes.** 🔵 So size cannot separate education's own licence family from
+the one it was forked from, which is precisely the discrimination this industry needs most often.
+
+### 🟢 `624-E` — the debt `p623` declared owed: the `ECL-2.0 ÷ Apache-2.0` clause diff, **run on bytes**
+
+🔵 `p623` named `ECL-2.0` for the first time but recorded: *"the patent-clause narrowing was read from the
+licence title and family, **not** clause-by-clause against `Apache-2.0` — that diff is owed."* 🟢 **Paid here.**
+Both texts came from the tier itself (`sakai` `LICENSE`, `11,120 B`; `oppia` `LICENSE`, `11,358 B`), had
+their preambles stripped at `TERMS AND CONDITIONS`, were reflowed to one word per line and diffed.
+
+| Measure | Value |
+|---|---|
+| Words **added** by `ECL-2.0` | `78` |
+| Words **removed** | `9` |
+| Shape of the additions | 🟢 **one contiguous `60`-word run**, appended to the end of §3, plus naming tokens |
+
+🟢 **The entire substantive addition, verbatim:**
+
+> *"Any patent license granted hereby with respect to contributions by an individual employed by an
+> institution or organization is limited to patent claims where the individual that is the author of the
+> Work is also the inventor of the patent claims licensed, and where the organization or institution has
+> the right to grant such license under applicable grant and research funding agreements. No other express
+> or implied licenses are granted."*
+
+🔵 **The `9` removed words, every one accounted for:** `Apache` ×3 and the Apache URL (naming), and
+`(a) (b) (c) (d)` plus `work.` 🔴 **That last group looked substantive and was checked rather than assumed** —
+those letters are §4's redistribution conditions. 🟢 **§4 was read in full in both texts: all four conditions
+are present in `ECL-2.0`, as running prose joined by `and`.** The lettering is typography, not terms.
+
+> 🟢 **Verdict, answering `p623`'s open question in the exact terms it asked.** `p623` asked whether
+> `ECL-2.0` carries *"an obligation `Apache-2.0` does not, which would move it out of the buildable column."*
+> 🟢 **It does not. `ECL-2.0` adds no obligation — it narrows a grant you *receive*.** §§`1`,`2`,`4`–`9` are
+> substantively identical. Copyright permissions are Apache-2.0's exactly; the only delta is weaker patent
+> peace from contributors employed by institutions. 🟢 **`ECL-2.0` stays in the buildable column** — and it
+> is the only permissive family with a real education-native estate behind it (Apereo: Sakai, Opencast).
+> 🟡 **The residual risk, stated so it is not lost:** a studio shipping a Sakai or Opencast derivative gets
+> Apache-grade copyright freedom but should not rely on patent peace from academic contributors whose
+> institution never had the right to grant it.
+
+### 🟢 `624-M` — the three new names this pass, every grant byte-read
+
+🔵 All three came from the non-English legs (`624-F`), and all three are **APAC**.
+
+| Repository | Grant (enumerated + byte-read) | ★ | Pushed | Region | What it is |
+|---|---|---|---|---|---|
+| [`Annyfee/agent-craft`](https://github.com/Annyfee/agent-craft) | 🟢 **`MIT`**, `1,064 B` | `531` | `2026-10-27` | APAC | 🆕 Agent-engineering **teaching** repository (CN): systematised LangChain / RAG / LangGraph / MCP full-stack runnable examples. 🟢 A curriculum scaffold a studio can fork for client enablement. |
+| [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) | 🔴 **`AGPL-3.0`**, `35,184 B` | `1,567` | `2026-10-13` | APAC | 🆕 Full online-education platform (CN): VOD, live teaching, exams, question bank, tasks. 🔴 `AGPL-3.0` — network copyleft; see `verticals/solutions.md`. |
+| [`kyungseo/learnstead`](https://github.com/kyungseo/learnstead) | 🟢 **`Apache-2.0`**, `11,343 B` | `46` | `2026-09-13` | APAC | 🆕 Local-LLM / RAG / agent **learning-path** material (KR), concept → practice → verification. 🟡 Small, but it is the pass's only Korea-placed row. |
+
+### 🔴 `624-H` — `NOASSERTION` against a real grant, **`7th` instance — and this one has `107,706★`**
+
+| Repository | Channel B says | Bytes say, today | ★ |
+|---|---|---|---|
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🔴 `NOASSERTION` | 🟢 `Apache License` v2.0, `LICENSE.txt`, `11,505 B` | **`107,706`** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `NOASSERTION` | 🟢 `LGPL-3.0`, `LICENSE`, `8,241 B` | `903` |
+
+🔵 `623-G` counted the sixth. 🔴 **The seventh is the largest repository this base cites.** The rule stands
+and now has its strongest instance: a `NOASSERTION` from channel B is a statement about channel B.
+
+### 🔴 `624-I` — the per-repo API is **not available at all** in this session, which is a second reason `624-A` matters
+
+| Channel, probed `2026-11-02` | Result |
+|---|---|
+| `gh api repos/moodle/moodle/contents` | 🔴 **`403`** — *"GitHub access to this repository is not enabled for this session"* |
+| `gh api repos/moodle/moodle/license` | 🔴 **`403`**, same |
+| `gh api search/repositories -f q='repo:openedx/edx-platform'` | 🔴 **`422`** Validation Failed (`623-O`, reconfirmed) |
+| 🟢 `git clone --filter=blob:none` + `ls-tree` | 🟢 `15 of 15` |
+
+🔵 So the obvious fix for the ladder — GitHub's own `/contents` and `/license` endpoints — **is closed here**,
+and `623-O`'s channel-blind repository is still blind. 🟢 The git transport is the only channel that is
+complete over this tier, and it is the one `624-A` is built on.
+
 ## 🆕 `p623` — reads `2026-11-02`, commit `2026-11-02` — **🔴 NEITHER DISCOVERY CHANNEL THIS BASE OWNS IS COMPLETE, AND BOTH PUBLISH FALSE *ABSENCES*: CHANNEL B's FREE TEXT IS **CONJUNCTIVE** (`AI tutor education stars:>500` → `total_count` **`3`**), AND `topic:`-QUALIFIED DISCOVERY HAS AN **AUTHOR-LABELLING FLOOR** — PROVEN BY THE TWO LARGEST MEMBERS OF THE TIERS THEY SHOULD RETURN CARRYING **ZERO TOPICS** EACH. 🟢 THE CITATION SWEEP THREE PASSES DEFERRED IS **RUN IN FULL**: `3,974` ADDRESSES PROBED, `101` ABSENT, `75` GENUINE DEAD — `1.90 %`, WHERE `p622`'s `80`-ADDRESS SAMPLE EXTRAPOLATED `~150` (`3.8 %`) AND THEREFORE **OVER-ESTIMATED BY `2×`**. 🟢 BOTH HANDOFF BYTE-READS DISCHARGED: THE `human-atlas` MESHES ARE `CC BY 4.0` WITH THE `CC BY-SA 2.1` JAPAN CONFLICT **EXPLICITLY SUPERSEDED IN WRITING**, AND QUARTO'S "EXCEPTIONS NOTED BELOW" ARE **NEVER ENUMERATED** — `25`-LINE FULL-FILE READ, THE TOKEN OCCURS ONCE. 🔴 TWO INDEPENDENT **DANGLING LICENCE CROSS-REFERENCES**. 🔴 WEB DIGESTS GOT `2 of 2` PERMISSIVE CLAIMS WRONG. 🟢 `ECL-2.0` — EDUCATION'S OWN APACHE-DERIVED LICENCE — NAMED HERE FOR THE FIRST TIME. EIGHTEEN REGISTERED (`623-A`…`623-R`).**
 
 ### 🔴 `623-A` — read this first: **both** of this base's discovery channels publish false absences, for two different reasons

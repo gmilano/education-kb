@@ -4,6 +4,135 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — `2026-11-02` — **trends, each with the evidence that would refute it**
+
+### 🔴 `T1` — Generative AI raises **output** and lowers **learning**, and this is the single fact that should pick the product
+
+🟢 From the `OECD Digital Education Outlook 2026` (`19 January 2026`), the first primary-source-grade
+citation this base has carried: students were **`48 %` more successful at completing tasks** with generative
+AI, and their **measured performance fell `17 %` once the AI was taken away.** 🔵 Alongside it, TALIS `2024`:
+`37 %` of lower-secondary teachers used AI for their job, and **`72 %` believe AI can harm academic integrity.**
+
+🔴 **Why it dominates every other trend here:** a completion assistant **wins the pilot metric and loses the
+mandate.** Any district or ministry that must adopt a policy (`T3`) must eventually defend an *outcome*, and
+`−17 %` is the number that will be put to it.
+
+🟢 **The product this implies:** assessment-under-removal, scaffolding that withdraws on a schedule, and
+learning-gain measurement — not answer generation. 🔵 This is also why the permissive **tutor** estate
+(`DeepTutor`, `OpenMAIC`, `Bloom`, `tutor-mcp`) is worth more as a *diagnostic* substrate than as a
+chat surface.
+
+🔴 **Refuted by:** a replication showing retention holds after AI withdrawal, or evidence that the `−17 %`
+is an artefact of the specific task set. 🟡 **Stated limit:** the OECD figures reached this base through
+search digests; `624-J` proves the document's own bytes cannot be read in this session.
+
+### 🟢 `T2` — Adoption is ahead of governance in **every** region measured, and the gap is the product
+
+🔵 Four independent measurements, same shape. LATAM: **`87 %`** of higher-ed institutions using AI against
+**`26 %`** with a formal strategy (UNESCO IESALC, `~200` institutions, `19` countries); Brazil **`53 %`** of
+school administrators using against **`22 %`** of schools with guidelines (Cetic.br); Uruguay **`75 %`** of
+public-school teachers using (Ceibal); North America `~60 %` of teachers using while most public schools lack
+a student-facing policy and **`55 %`** of high-school principals have not restricted network access at all.
+Europe + North America: `70 %` of institutions with guidance in place or in development.
+
+🔴 **Refuted by:** any region where formal strategy exceeds use. 🟡 **Watch EMEA:** if `2 December 2027` holds,
+EMEA becomes the first region where governance *leads*, and this thesis turns regional rather than universal.
+
+### 🟢 `T3` — Regulation has moved from guidance to **dated statutory obligation**, and the dates are the engagement
+
+| Region | Instrument | The date that bills |
+|---|---|---|
+| North America | `134` bills, `31` states | 🟢 Maryland, Idaho, Oklahoma, Virginia: state guidance **and** mandatory district policy, now |
+| EMEA | EU AI Act | 🔴 high-risk education duties **`2 December 2027`** (moved by `Regulation (EU) 2026/1744`); Art. `50` transparency **in force** `2 Aug 2026`; literacy duty and emotion-recognition ban in force since `Feb 2025` |
+| APAC | Korea `AI Basic Act`; Vietnam `Law on AI` | 🔴 Vietnam from `1 March 2026`, **`18`-month** transition for education |
+| LATAM | 🔴 none binding regionally | 🔴 `716` instruments across `23` countries, `>80 %` since `2023` — **fragmentation**, not a deadline |
+
+🔴 **Refuted by:** the EU deadline moving again (sources still conflict — several state August `2026`), or a
+US state repealing a mandate. 🟡 `2 December 2027` is carried **flagged**: it must be checked against the
+Official Journal before any engagement is priced on it.
+
+### 🟢 `T4` — Funding is **falling** while the market grows: this is a consolidation window, not a land-grab
+
+🔵 Global EdTech VC `$2.6 B` in `2025`; **H1 `2026` `$1.0 B`, `−26 %`** against `$1.35 B` in H1 `2025`;
+Q1 `2026` `$512 M` across `63` deals (HolonIQ). Meanwhile the total EdTech market is put at
+`$213.2 B`–`$214.58 B` for `2026` by two firms that agree within `0.7 %`.
+
+🟢 **The consequence for a studio:** the buyer is an institution with a budget and a compliance date, not a
+startup with a round. 🔴 **Refuted by:** H2 `2026` VC recovering above `$1.35 B`. 🔴 **Discarded:** a
+`~$12.6 B` `2026` EdTech-VC figure that conflicts with HolonIQ by an order of magnitude.
+
+### 🟢 `T5` — **APAC builds, North America funds** — the capital map inverts the market map
+
+🔵 APAC holds `~34 %` of the market against NA's `~33 %` (`2025`), yet **NA took `62 %` of Q1 `2026` venture
+value.** 🟢 And **all three** new open-source names this pass are APAC: `Annyfee/agent-craft` (`MIT`),
+`roncoo/roncoo-education` (`AGPL-3.0`), `kyungseo/learnstead` (`Apache-2.0`) — joining Tsinghua's `OpenMAIC`
+(`42,492★`) and HKU's `DeepTutor` (`54,290★`), both permissive and both at scale.
+
+🟢 **So APAC engagements are *build* engagements and NA engagements are *fund-and-scale* engagements.**
+🔴 **Refuted by:** a quarter where APAC venture value exceeds NA's, or new permissive education-AI supply
+appearing predominantly from NA or EMEA.
+
+### 🟢 `T6` — `ECL-2.0` is confirmed buildable **at clause level**, and it is education's own permissive family
+
+🔵 `p623` named it; `p624` diffed it. 🟢 `78` words added to `Apache-2.0`, `9` removed, the addition a single
+contiguous `60`-word run appended to §3, and §4's four redistribution conditions **all present** in `ECL-2.0`
+as running prose. 🟢 **`ECL-2.0` adds no obligation — it narrows a patent grant you receive.**
+
+🟢 **Consequence:** `sakaiproject/sakai` and `opencast/opencast` are the only *platforms* in this industry a
+studio can fork, modify and ship as a closed derivative with Apache-grade copyright freedom.
+🔴 **Refuted by:** a clause-level reading of §§`1`,`2`,`4`–`9` finding a divergence this pass's word-stream
+diff missed — the diff was run on normalised word streams, not on a legal-clause parser.
+
+### 🔴 `T7` — A third party's statement of a licence remains unusable, and the instruction to *research with digests* is itself the hazard
+
+🔵 The series is long: `622-L`, `622-D`, `623-G`. 🔴 Across `p623`–`p624`, **`5 of 5`** checkable licence claims
+in the **mandated search digests** were wrong or unresolvable: `idurar` claimed `MIT` (bytes `AGPL-3.0`),
+Huly claimed `Apache-2.0` (bytes `EPL-2.0`), OFBiz claimed both `Apache-2.0` and `GPLv2` (bytes `Apache-2.0`).
+🔴 And channel B produced its **`7th`** `NOASSERTION` against a real grant — on `rasbt/LLMs-from-scratch`,
+**`107,706★`**, whose bytes read `Apache License Version 2.0`.
+
+🟡 **The counter-weight, stated fairly:** digest *star figures* have now been right four times running within
+lag. 🟢 **Keep digests for names and magnitudes; never for grants.**
+🔴 **Refuted by:** a run of digest licence claims that verify.
+
+### 🔴 `T8` — Byte-size licence identification is dead, and it failed across the boundary that decides whether a hosted offering is possible
+
+🔵 This base corroborated grants by byte band from `621-B` onward. 🔴 Six measurements this pass interleave
+`AGPL-3.0` and `GPL-3.0` (`34,520`A `< 35,136`A `< 35,146`G `< 35,147`G `< 35,147`G `< 35,184`A) — one AGPL
+file larger than every GPL file, another smaller than every one. 🔴 And `ECL-2.0` lands **`3` bytes** from
+`Apache-2.0` (`11,340` vs `11,343`).
+
+🟢 **Replaced by enumeration** (`624-A`): a blobless `--no-checkout` clone plus `git ls-tree --long HEAD`
+returns the complete root manifest with sizes, and `git show HEAD:<path>` returns the title — `15 of 15`,
+zero guesses. 🟢 Byte size survives only as a **fingerprint for re-identifying the same file across passes**.
+🔴 **Refuted by:** a case where the title line is itself unreliable, which would leave this base with no
+licence instrument at all.
+
+### 🟡 `T9` — The English-discoverable supply is **saturated**; the remaining supply is non-English and thin
+
+🔵 Six recency-qualified `topic:` legs returned `25` education-native candidates and **`25` were already held**
+— the first pass able to attribute a nil to saturation rather than only to reach. 🔵 Eight non-English legs
+returned **`3`** new names, all APAC; the Japanese, French, Arabic and Portuguese legs each returned
+`total_count` **`0`**.
+
+🔴 **Those four zeroes are query shape, not supply.** Two CJK or two Romance tokens are already a conjunction
+over a short name-plus-description field (`623-A`), so `学習 AI` → `0` says nothing about Japanese supply.
+🟢 **Untried and indicated:** single-token non-English legs (`教育`, `学習`, `éducation`), which cannot suffer
+conjunctivity. 🔴 **Refuted by:** a single-token leg also returning nil, which would make the gap real rather
+than instrumental.
+
+### 🔴 `T10` — Every non-GitHub fact in this base is second-hand **by configuration**, and that is now proven on two channels
+
+🔵 `588-B` recorded that non-GitHub hosts return nothing. 🟢 This pass establishes the **mechanism** and that
+it is not channel-specific: the egress proxy answers `connect_rejected` for `www.oecd.org`,
+`www.unesco.org` and `www.iesalc.unesco.org`, and `WebFetch` answers `ENOTFOUND` for the same host — while
+`api.github.com` returned `200` and `raw.githubusercontent.com` `301` in the same minute.
+
+🟢 **So the gap is a network-policy gap, not a research gap**, and no further pass should spend legs on it.
+🟡 Its cost is exact and now namable: the `OECD Digital Education Outlook 2026` can be **cited** with
+publisher, title and date, but **not read**. 🔴 **Closed by:** allowing those hosts in the session's network
+policy — a configuration change.
+
 ## 🆕 `p623` — `2026-11-02` — **trends, each with the evidence that would refute it**
 
 ### 🟢 `T1` — Adoption is ahead of governance in **every** region that has been measured, and the gap is the product

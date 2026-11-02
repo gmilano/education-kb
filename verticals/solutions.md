@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p624` — reads `2026-11-02` — **🟢 THE WHOLE PLATFORM TIER'S GRANTS ARE RE-ESTABLISHED BY **ENUMERATION**, AND THE TIER GAINS ITS FIRST `AGPL-3.0` CHINESE PLATFORM. 🟢 `ECL-2.0` IS NOW CLAUSE-DIFFED AGAINST `Apache-2.0` AND ADDS **NO OBLIGATION** — SO SAKAI AND OPENCAST ARE THE TIER'S ONLY TRULY SHIPPABLE BASES. 🔴 AND THE `621 B` FILE THAT WOULD HAVE HIDDEN CANVAS'S NETWORK COPYLEFT IS NAMED.**
+
+### 🟢 The vertical platform tier — every grant **enumerated**, not guessed, and byte-read today
+
+🔵 Real, customisable systems — the Odoo / OpenMRS / Moodle class the brief asks for. 🟢 Method: `624-A`.
+Branch is the repository's actual default, because five of these are not `main`.
+
+| Platform | What it runs | Grant (enumerated + byte-read) | Bytes | Branch | ★ | Pushed | AI-on-top verdict |
+|---|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS — largest installed base in education | 🟡 `GPL-3.0` in **`COPYING.txt`** | `35,147` | `main` | `7,574` | `2026-10-30` | 🟢 **Best AI target in the tier.** The plugin API keeps client code outside the copyleft boundary; the `moodle-*-mcp` wave sits here |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS / MOOC at scale | 🔴 `AGPL-3.0` | `35,136` | `master` | 🔴 channel-blind (`623-O`) | — | 🔴 Self-host and extend; the **network clause** must be cleared before any hosted client offering |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | Higher-ed LMS / collaboration | 🟢 **`ECL-2.0`** + a `licenses/` tree | `11,120` | `master` | `1,240` | `2026-11-02` | 🟢 **The tier's cleanest base for a shipped derivative** — and `624-E` now proves why |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | Lecture capture, media pipeline | 🟢 **`ECL-2.0`** + `NOTICES` | `11,340` / `126,439` | `develop` | `509` | `2026-11-02` | 🟢 Permissive. Natural host for transcription / captioning / indexing agents. 🟡 That `126 KB` `NOTICES` roll is a real attribution duty |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | Offline-first learning platform | 🟢 `MIT` | `1,097` | `develop` | `1,166` | `2026-11-02` | 🟢 **Permissive.** The low-connectivity anchor — LATAM, EMEA-Africa, rural APAC |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | Education ERP / SIS on Odoo | 🟡 `LGPL-3.0` | `8,241` | **`19.0`** | `903` | `2026-11-02` | 🟡 The Odoo-for-education answer. 🟢 `623-F`'s dangle is **settled and downgraded** — see below |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS, strong LATAM + francophone footprint | 🟡 `GPL-3.0` + `license.txt` | `35,147` / `1,614` | `master` | `1,020` | `2026-11-02` | 🟡 Copyleft, very actively pushed. 🔵 Holder is **BeezNest Latino**, in the second file |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS — large NA higher-ed share | 🔴 `AGPL-3.0` + `COPYRIGHT` (`621 B`) | `34,520` / `621` | `master` | `6,900` | 🔴 **`2026-04-30`** | 🔴 Network copyleft **and** `6` months without a push |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | Interactive lesson platform | 🟢 **`Apache-2.0`** + `NOTICE` | `11,358` / `146` | `develop` | `6,957` | `2026-11-02` | 🟢 **Permissive and the most actively pushed platform here.** Carry the `NOTICE` under §4 |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | Next-gen OSS learning platform | 🔴 `AGPL-3.0` | — | `main` | `2,441` | `2026-11-02` | 🔴 Modern stack, network copyleft |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | Customer-training / course platform | 🔴 `AGPL-3.0` | — | `main` | `1,736` | `2026-11-02` | 🔴 Closest OSS fit for SaaS customer-education; licence blocks resale-as-a-service |
+| 🆕 [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) | Online-education system (CN): VOD, live, exams, question bank, tasks | 🔴 **`AGPL-3.0`**, byte-read | `35,184` | `master` | `1,567` | `2026-10-13` | 🔴 **New to this tier.** A complete China-market platform; the open edition is a trimmed commercial product — 🟡 dual-licence posture, so a commercial grant may be purchasable |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | Interactive content engine | 🟡 `GPL-3.0` (`LICENSE.txt`) | `35,146` | `master` | `154` | `2026-11-02` | 🟡 Embeds in Moodle / Canvas / Drupal; copyleft |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | Assignment release + autograding | 🟢 **`BSD-3-Clause`** | — | `main` | `1,370` | `2026-10-28` | 🟢 Permissive. The grading substrate for any CS / data curriculum |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | Secure automated exercise assessment | 🟡 `NOASSERTION` (channel B) | — | `master` | `243` | `2026-11-02` | 🟡 Sandboxed code grading. 🔴 Grant **not** byte-read this pass — do not rely on the column |
+
+### 🟢 `624-E` applied here — the tier's licence question is finally answered, not deferred
+
+🔵 `p623` named `ECL-2.0` and flagged that its relation to `Apache-2.0` was *assumed*, not diffed. 🟢 **The
+diff was run on bytes this pass** ([`../agents/top.md`](../agents/top.md) `624-E`): `78` words added, `9`
+removed; the addition is **one contiguous `60`-word run** appended to §3, and §4's four redistribution
+conditions were read in full in both texts and are **all present** in `ECL-2.0`.
+
+> 🟢 **Verdict for this page.** `ECL-2.0` **adds no obligation** over `Apache-2.0`; it *narrows a patent grant
+> you receive* from institutionally-employed contributors. 🟢 So **Sakai and Opencast are the only platforms
+> in this tier a studio can fork, modify and ship as a closed derivative with Apache-grade freedom** —
+> which is a materially different offer from everything else here. 🟡 The residual: do not price patent
+> indemnity against academic contributors whose institution never had the right to grant it.
+
+### 🟢 `623-F` settled — the openeducat dangle is **cosmetic**, and enumeration is what settled it
+
+| Probe | Result |
+|---|---|
+| `openeducat_erp` `LICENSE` opens with | *"For copyright information, please see the COPYRIGHT file."* |
+| `COPYRIGHT` anywhere in the tree (`1,345` tracked paths) | 🟢 **`0` — absence proven by enumeration** |
+| Grant stated in the **same** `8,241 B` file? | 🟢 **Yes** — `GNU LESSER GENERAL PUBLIC LICENSE, Version 3`, full text included below the pointer |
+
+🟡 **Downgraded 🔴 → 🟡.** Nothing is missing but a pointer to a file that was never shipped. The row is
+`LGPL-3.0` and is safe to rely on. 🔵 `p623` was right to flag it and right to refuse to settle it on a `404`.
+
+### 🔴 `624-N1` — the `621 B` file that would have hidden Canvas's network copyleft
+
+🔵 A filename ladder ordered as `p622` ordered it reaches `COPYRIGHT` **before** `LICENSE`. 🔴 On
+`instructure/canvas-lms` that returns a `621 B` Instructure notice as the grant. 🟢 Enumeration returns
+**both** files, and the real one is `LICENSE`, `34,520 B`, `GNU AFFERO GENERAL PUBLIC LICENSE`.
+
+> 🔴 **Concretely: a studio that trusted the ladder could have built a hosted Canvas offering believing the
+> licence was a short permissive notice.** That is the same error class as `623-H`'s `idurar` (`MIT` claimed,
+> `AGPL-3.0` in fact) — reached this time not from a bad digest but from a **good instrument in the wrong
+> order**. 🟢 Enumeration has no order to get wrong.
+
+### 🔴 Carried from `623-H` — the digests' permissive claims, still wrong
+
+| Platform | Digest claimed | Bytes say |
+|---|---|---|
+| [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) | 🔴 `MIT` | 🟢 `AGPL-3.0`, `34,230 B` |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🔴 `Apache-2.0` | 🟢 `EPL-2.0`, `14,197 B` |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟡 both `Apache-2.0` **and** `GPLv2` | 🟢 `Apache License`, `11,906 B` |
+
+🔵 Running total across `p623`–`p624`: **`5 of 5`** checkable licence claims in the mandated digests were
+wrong or unresolvable. 🟢 The digest surfaces the *name*; only the bytes may fill the *licence* column.
+
+### 🟡 Declared gaps
+
+- 🔴 **No permissively-licensed education ERP / SIS exists**, as far as six legs can see. The Odoo-for-education
+  answer is `LGPL-3.0` (`openeducat`); every other integrated platform found is `AGPL-3.0` or `GPL-3.0`.
+  🟢 The permissive column in this industry is **tooling and agents**, not platforms.
+- 🔴 `INGInious` and `inducer/relate` carry `NOASSERTION` and were **not** byte-read this pass. Their licence
+  cells are explicitly unreliable; `624-H` is why that matters.
+
 ## 🆕 `p623` — reads `2026-11-02` — **🔴 THE VERTICAL FINDING IS THAT THE SEARCH DIGEST A PASS IS *INSTRUCTED* TO RESEARCH WITH GOT `2 of 2` PERMISSIVE-LICENCE CLAIMS WRONG, BOTH IN THE DIRECTION THAT INVITES A STUDIO TO BUILD ON COPYLEFT. 🟢 AND THE EDUCATION-SPECIFIC PLATFORM TIER HAS ITS OWN PERMISSIVE LICENCE FAMILY, `ECL-2.0`, WHICH THIS BASE HAD NEVER NAMED.**
 
 ### 🔴 `623-H` (carried) — the digest said `MIT`; the bytes said `AGPL-3.0`
