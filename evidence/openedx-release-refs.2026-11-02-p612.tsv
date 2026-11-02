@@ -1,0 +1,5 @@
+branch	head_sha12	convention	note
+open-release/sumac.master	02f0f03b2f96	open-release/<name>.master	last release under the OLD convention
+release/teak	c4c9043c2593	release/<name>	🔴 convention CHANGED here
+release/ulmo	e8e829e31c68	release/<name>	exists - the "only supported branch" one source named
+release/verawood	484f080fa0cf	release/<name>	exists - the newer release the other source named; T->U->V alphabetical order makes Verawood the latest

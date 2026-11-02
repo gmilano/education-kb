@@ -3,6 +3,101 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `611-A` IS RIGHT ABOUT INDEXES AND WRONG AS A GENERAL RULE, AND THE DIFFERENCE IS NOW MEASURED: THE PLATFORM'S OWN `license.spdx_id` REPRODUCES ON THE GRANT BYTES **`68 of 68`** (`100 %`), AGAINST THE CURATED INDEX'S `1 of 5` ON PERMISSIVE CLAIMS. 🟢 AND THE PASS'S YIELD CAME FROM THE **BACKLOG**, NOT THE SEARCH LEGS: `610`'S `848` EDUCATION-SHAPED TRENDING-ONLY ADDRESSES RESOLVE TO **`68` SHIPPABLE-SHAPED** (`8.0 %`) — `16` AGENT ROWS PROMOTED HERE, `9` OF THEM REGION-PLACED. 🔴 `612-C`: THIS PASS'S OWN LADDER WAS CASE-SENSITIVE AND GRADED A `67,644★` MIT REPOSITORY "UNGRANTED". 🔴 THE GLOBAL LEGS RETURN THE **FORTY-SECOND** NIL. SEVEN REGISTERED (`612-A`…`612-G`).**
+
+### 🟢 `612-B` — read this first: `611-A` must be narrowed, and the narrowing is worth real money
+
+🔵 `p611` censused a curated third-party index and found **`1 of 5`** permissive claims survived a byte
+read. It closed with the rule *"a licence column is a search hint, not a grant."* 🔴 **As written that
+rule generalises to all licence metadata, and this pass measured the layer above it, where it is
+false.**
+
+🟢 Every one of this pass's `68` candidates carries a `license.spdx_id` from the platform's own
+metadata channel. All `68` grants were byte-read today at the **real** default branch. Instrument
+`ingest/p612-grant-gate.sh`; evidence `evidence/api-vs-bytes-grants.2026-11-02-p612.tsv`.
+
+| metadata layer | corpus | permissive claims that survive a byte read |
+| --- | --: | --- |
+| 🔴 curated human index (`611-A`) | `5` | 🔴 **`1 of 5`** — `20.0 %` |
+| 🟢 platform `license.spdx_id` (this pass) | `68` | 🟢 **`68 of 68`** — `100.0 %` |
+
+🟢 `0` contradictions. `0` unclassified. `0` addresses where the API's `default_branch` disagreed with
+the branch `git ls-remote --symref` resolved.
+
+🔵 **Why the distinction pays.** The two layers fail differently because they are produced differently:
+a curated index is a human typing a licence name into a column, and nothing re-reads it; the platform
+field is derived from the file in the repository. 🟢 **Operative rule, replacing `611-A`'s:** batch-trust
+the platform field for **triage** — it is what makes a `848`-address sweep affordable — and byte-read the
+grant at the **point of shipping**, per repository, because `100 %` on `68` is not a guarantee and the
+cost of one wrong row at delivery is the engagement. 🔴 Never trust a curated index at either step.
+
+🟡 **Stated limit, because it bounds the claim.** The `68` are the permissive-by-API survivors of a
+pre-filter, so this measures *reproduction* of permissive claims, not the API's recall. The `157`
+`NULL` and `68` `NOASSERTION` rows in the same sweep are the API declining to answer, which is a
+different failure and is **not** measured here. `611-A`'s own corpus was `20` rows to this pass's `68`;
+neither is large.
+
+### 🟢 `16` new agent rows — every grant byte-read `2026-11-02` at the real default branch
+
+🔵 All `16` come from `610`'s enumerated trending-only backlog, not from a search leg. `9` are
+region-placed.
+
+| agent | ★ | grant (byte-read) | path | branch | pushed | region | what it is |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) | `452` | 🟢 `MIT` `1,068 B` | `LICENSE` | `main` | `2026-09-17` | 🟢 APAC | Production RAG over **one named university's academic handbook** (Universitas Atma Jaya Yogyakarta), FAISS + Streamlit — the "institutional rulebook" shape, already built once |
+| [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | `194` | 🟢 `Apache-2.0` `11,408 B` | `LICENSE` | `main` | `2026-10-09` | 🟢 APAC | 🟢 **Multi-tenant** learning platform for offline training institutions: platform → institution → campus → teacher → student, with per-tenant model **and billing** policy. The only row on this shelf with a commercial tenancy model in it |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `119` | 🟢 `MIT` `1,072 B` | `LICENSE` | `main` | `2026-10-27` | Global | 🟢 **Read-only** MCP server onto Canvas LMS — the least-privilege way to put an assistant next to a system of record |
+| [`heshengtao/exameow`](https://github.com/heshengtao/exameow) | `95` | 🟢 `Apache-2.0` `10,173 B` | `LICENSE` | `main` | `2026-11-02` | Global | Exam-question generation from uploaded material; local-first, cross-platform |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | `78` | 🟢 `MIT` `1,068 B` | `LICENSE` | 🟡 `master` | `2026-11-02` | 🟢 APAC | **EduAgent** — RAG tutor built for grades `1`–`9`, Chinese curriculum |
+| [`OpenStudy-dev/OpenStudy`](https://github.com/OpenStudy-dev/OpenStudy) | `77` | 🟢 `MIT` `1,068 B` | `LICENSE` | `main` | `2026-10-24` | Global | Self-hostable study dashboard **with an MCP server built in** — the student-side counterpart to `canvas-mcp` |
+| [`tanle-mtr/ChinaStudyFree`](https://github.com/tanle-mtr/ChinaStudyFree) | `77` | 🟢 `MIT` `1,066 B` | `LICENSE` | `main` | `2026-10-27` | 🟢 APAC | Four-client (web/desktop/Android/iOS) free platform across four school stages, `148` textbooks, EdgeTTS voice — 🟢 **zero-marginal-cost TTS is the reason it can be free**, and that is the transferable part |
+| [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | `58` | 🟢 `MIT` `1,067 B` | `LICENSE` | `main` | `2026-08-16` | Global | 🟢 **The cleanest division of labour on this shelf**: RL picks the action, **FSRS** picks the timing, the LLM only writes the quizzes. Chrome extension, Anki export, MCP server, runs on Ollama |
+| [`Hyr1sky/TheGrandQuiz`](https://github.com/Hyr1sky/TheGrandQuiz) | `56` | 🟢 `MIT` `1,064 B` | `LICENSE` | `main` | `2026-09-16` | Global | Assessment-driven local-first learning agent on an **observable** agent runtime: grounded ingestion, trace replay, HITL assessment, durable memory |
+| [`Queena34/StudyPilot`](https://github.com/Queena34/StudyPilot) | `50` | 🟢 `MIT` `1,065 B` | `LICENSE` | `main` | `2026-09-04` | Global | Bilingual coach that 🟢 **answers only from the learner's own course material, with citations** |
+| [`callmevanshh/campusask`](https://github.com/callmevanshh/campusask) | `49` | 🟢 `MIT` `1,067 B` | `LICENSE` | `main` | `2026-10-20` | 🟢 APAC | Cited Q&A over **IIIT Delhi** academic rules — official PDFs only, page-level links |
+| [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | `35` | 🟢 `MIT` `1,077 B` | `LICENSE` | `main` | `2026-11-02` | 🟢 EMEA | 🟢 **Aila** — Oak National Academy's AI lesson-planning assistant. A publicly funded national curriculum body shipping its lesson-planning agent under `MIT`, pushed today |
+| [`Bbar0n234/learnflow-ai`](https://github.com/Bbar0n234/learnflow-ai) | `35` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | `main` | `2026-09-02` | 🟢 EMEA | Long-term-memory agent turning an instructor's own material into lectures, notes, handbooks and slides; self-hosted. Russian-language |
+| [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | `23` | 🟢 `MIT` `1,080 B` | `LICENSE` | `main` | `2026-08-29` | Global | 🟢 **Fully offline** Electron tutor on Ollama — no internet required, which is the only shape that clears a strict data-residency brief |
+| [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) | `21` | 🟢 `MIT` `1,071 B` | `LICENSE` | `main` | `2026-11-01` | 🟢 APAC | Print-ready exam sheets for Indonesian **elementary** teachers. 🟢 Print-ready is the requirement, not a limitation |
+| [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) | `20` | 🟢 `MIT` `1,064 B` | `LICENSE` | `main` | `2026-09-29` | 🟢 APAC | Original Taiwanese 學測 mock papers **with solution re-verification** and the official exam layout; delivers paper + worked answers as two PDFs |
+
+🟢 **Controls.** `openai/totally-not-real-edu-repo-p612` and `anthropics/fabricated-control-p612-<epoch>`
+both returned `UNREACHABLE` in the same run as the `68` reads — `2 of 2`. The gate exits `2` and
+publishes nothing if a control resolves (`608-A`).
+
+### 🔴 `612-C` — the ladder was case-sensitive, and it graded a `67,644★` MIT repository "ungranted"
+
+🔴 First run of this pass's gate returned `67 of 68` and one `UNGRANTED-LADDER-EXHAUSTED`:
+[`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations),
+`67,644★`, API says `MIT`. 🔴 Had that been published, this pass's headline would have been *"the
+platform field contradicts the bytes on a 67k-star repository"* — a false and very quotable claim.
+
+🟢 **Mechanism, reproducible.** `raw.githubusercontent.com` is **case-sensitive**. The grant is at
+lowercase `license` — `200`, `1,082 B`, `MIT` on the title line. The ladder carried `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`… 🔴 **every rung upper-case**, so a lower-case
+filename was unreachable at every rung.
+
+🟢 **Fix:** the ladder now carries case variants (`license`, `license.md`, `license.txt`, `licence`,
+`copying`). Re-run over all `68`: 🟢 **exactly one row moved** — the one named above — and the result
+became `68 of 68`. 🔵 `610-E` omitted `COPYING.txt` and graded the official Moodle app ungranted;
+`611-B` graded on a window instead of the title line; this is the third ladder/grader defect in three
+passes. **The instrument, not the corpus** — and each one was caught because the pass re-ran the whole
+corpus after fixing, not just the offending row.
+
+### 🟡 `612-F` — a star figure this base carries is low, and the correction is the method
+
+🟡 Third-party trend radars quoted [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) between
+`45,000` and `52,000` this week. The metadata channel reads **`54,032`** today (`Apache-2.0`, `main`,
+pushed `2026-10-31`). 🔵 Earlier passes on this base carried `~22k` and `~24k`. 🟢 A star count is a
+reading with a timestamp, not an attribute — cite it with the date or do not cite it.
+
+🔵 **Demonstrated inside this pass, not argued.** The same channel read `54,032` at the start of the pass and
+**`54,037`** some twenty minutes later. 🟢 Both are correct; neither is "the" star count. The shelved figure is
+the first, with its timestamp. 🔵 That is also why the `45k`–`52k` radar figures are not *wrong* so much as
+**undated** — and an undated reading of a fast-moving quantity is unusable rather than merely imprecise.
+
+---
+
 ## 🆕 `p611` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE LOAD-BEARING RESULT IS THAT A CURATED LICENCE COLUMN IS NOT EVIDENCE, IN BOTH DIRECTIONS, AND IT IS NOW MEASURED: ON THE HIGHER-ED PLATFORM LIST THIS BASE ALREADY CARRIED, **`1 of 5` PERMISSIVE CLAIMS SURVIVES A BYTE READ** (`20 %`) — ONE IS `AGPL-3.0` AT `84★`, THREE HAVE **NO GRANT PAYLOAD AT ALL** — WHILE A FOURTH ROW PUBLISHED AS `GPL-3.0` IS ACTUALLY **MIT**. 🟢 `6` AGENT ROWS PROMOTED, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `4 of 4` FABRICATED CONTROLS AT `404 14 B`. 🟢 TWO OF THE SIX ARE REGION-PLACED (`EMEA`/NETHERLANDS, `APAC`/INDONESIA). 🔴 `611-B`: THIS PASS'S OWN LICENCE CLASSIFIER MIS-GRADES **EVERY** `GPL-2.0` FILE AS `LGPL` — SELF-CAUGHT, WITH THE MECHANISM. 🔴 THE GLOBAL LEGS RETURN THE **FORTY-FIRST** NIL, NOW WITH A DENOMINATOR: `976` ADDRESSES, `91.6 %` NEW, `4.7 %` SHIPPABLE-SHAPED. SIX REGISTERED (`611-A`…`611-F`).**
 
 ### 🔴 `611-A` — read this first: the curated licence column, measured against the bytes

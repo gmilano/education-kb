@@ -3,6 +3,81 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — reads `2026-11-02`, commit `2026-11-02` — **🟢 A NATIONAL EDUCATION MINISTRY SHIPS **THREE** LIVE SERVICES UNDER `MIT` AND THIS BASE HAD SHELVED NONE OF THEM. 🔴 `612-G`: THE TWO INCUMBENT PLATFORMS BOTH MOVED SOMETHING THAT BREAKS TOOLING — MOODLE DELETED ROOT `version.php` AT `5.x`, OPEN EDX CHANGED ITS RELEASE-BRANCH CONVENTION AFTER SUMAC. BOTH RESOLVED FROM REFS AND BYTES, NOT FROM PROSE. `6` PLATFORM ROWS PROMOTED.**
+
+### 🟢 `612-F` — the public-sector tier: a ministry's own code, `MIT`, pushed today
+
+🔵 `611-D` found the first permissive **provincial** system of record (`bcgov/SIMS`, Government of
+British Columbia) and called the public sector the most transferable asset class in education. 🟢 This
+pass finds the **national** case, and it is three services from one ministry.
+
+| platform | ★ | grant (byte-read) | path | branch | pushed | region | what it actually is |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) | `38` | 🟢 `MIT` `1,094 B` | 🟡 `LICENCE` | `main` | `2026-11-02` | 🟢 EMEA | 🟢 The **live national service** by which candidates apply for teacher training in England. UK Department for Education. A working admissions pipeline at national scale, permissively licensed |
+| [`vincenzo-afk/Proctored-MCQ-Exam-Platform`](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) | `37` | 🟢 `MIT` `1,072 B` | `LICENSE` | `main` | `2026-08-24` | Global | Browser exam platform with camera proctoring, module progression and certificate export. 🔴 Read the Annex III note below before proposing it |
+| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | `27` | 🟢 `MIT` `1,092 B` | `LICENSE` | `main` | `2026-11-02` | 🟢 EMEA | The DfE's free national teaching **job-listing** service — a two-sided marketplace a government runs in the open |
+| [`DFE-Digital/get-into-teaching-app`](https://github.com/DFE-Digital/get-into-teaching-app) | `25` | 🟢 `MIT` `1,091 B` | 🟡 `LICENCE` | 🟡 `master` | `2026-10-29` | 🟢 EMEA | The DfE's recruitment front door — content, events and lead capture |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | `97` | 🟡 `MPL-2.0` `16,725 B` | `LICENSE` | 🟡 `master` | `2026-10-31` | 🟢 EMEA | **SEB Server** — centralised configuration and conduct of exams across Safe Exam Browser clients, integrating with an LMS or exam system. 🟡 `MPL-2.0` is file-level copyleft: link freely, publish changes to *its* files |
+| [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | `251` | 🟢 `MIT` `1,069 B` | `LICENSE` | `main` | `2026-10-24` | Global | Local-first study platform for university lectures: slide ingestion, spaced repetition, exams, optional tutor on a free model tier |
+
+🟡 **Two of the five `MIT` grants are spelled `LICENCE`.** British spelling, and `612-C` is why that is
+worth a line: a case- and spelling-incomplete ladder reports a government service as ungranted.
+
+🔴 **Annex III warning attached to two rows, stated here so it travels with them.** `seb-server` and
+`Proctored-MCQ-Exam-Platform` both *"monitor students for prohibited behaviour during tests"* — that is
+the Annex III high-risk category verbatim. 🟢 They are permissive and real and they are the right
+starting points; 🔴 deploying either into the EU puts the deployer inside the high-risk regime from
+`2027-12-02`. 🟢 Pair them with `612-E`'s rubric tier from day one rather than retrofitting the
+documentation.
+
+### 🔴 `612-G` — both incumbents moved something that breaks tooling, and the prose sources contradicted each other
+
+🔵 The global verticals leg returned three mutually inconsistent claims: *"Moodle 5.3 LTS, released
+2026-10-05"*; *"Verawood (2026-07-30) is the only supported Open edX release"*; *"Ulmo (2026-01-15)
+remains the only supported branch."* 🟢 None of it was resolvable from prose. Resolved from git refs and
+grant/version bytes. Evidence: `evidence/moodle-version-path.2026-11-02-p612.tsv`,
+`evidence/openedx-release-refs.2026-11-02-p612.tsv`.
+
+🔴 **Moodle: root `version.php` is gone at `5.x`.**
+
+| ref | `version.php` | `public/version.php` | what the bytes say |
+| --- | --- | --- | --- |
+| `MOODLE_405_STABLE` | 🟢 `200` `1,641 B` | 🔴 `404` | `$release = '4.5.15+ (Build: 20261030)'`, `$branch = '405'`, `MATURITY_STABLE` |
+| `MOODLE_503_STABLE` | 🔴 **`404`** | 🟢 `200` `1,638 B` | `$release = '5.3+ (Build: 20261030)'`, `$branch = '503'`, `MATURITY_STABLE` |
+| `v5.3.0` (tag) | 🔴 `404` | — | the tag agrees with the stable branch |
+| `main` (real default) | 🔴 `404` | — | absent on the default branch too |
+
+🟢 **The web root moved under `public/` at Moodle `5.x`** — `public/index.php` is `200` at `5.3` and
+`404` at `4.5`. 🔴 **Consequence, and it is the finding:** every version probe, upgrade checker, uptime
+check, CI pin and deployment script that reads root `version.php` returns *nothing* against Moodle `5.x`
+and, depending on how it is written, reports the instance as not-Moodle rather than as 5.x. 🟢 Read
+`public/version.php`, and fall back to root `version.php` for `4.x`.
+
+🔴 **Two prose claims corrected.** `2026-10-05` is `$version`'s **branching date**
+(`2026100500.08`), not a release date. 🔴 And nothing in the refs or bytes marks `5.3` **LTS** — the LTS
+signature in this repository is `4.5`, still built the same day (`4.5.15+ (Build: 20261030)`) three
+minor releases later. 🟡 Recorded as unverified rather than repeated.
+
+🟢 **Open edX: both releases exist, and the branch convention changed.** The two sources were describing
+different moments, and neither was right that only one release exists.
+
+| branch | head | convention |
+| --- | --- | --- |
+| `open-release/sumac.master` | `02f0f03b2f96` | 🟡 the **last** release under `open-release/<name>.master` |
+| `release/teak` | `c4c9043c2593` | 🔴 the convention **changes here** to `release/<name>` |
+| `release/ulmo` | `e8e829e31c68` | `release/<name>` |
+| `release/verawood` | `484f080fa0cf` | `release/<name>` — 🟢 latest, by the project's own alphabetical naming (T → U → V) |
+
+🔴 **Consequence:** any pin, mirror, Tutor config or CI matrix that globs `open-release/*` silently stops
+finding releases after **Sumac** — it does not error, it just never sees Teak, Ulmo or Verawood. 🟢 Pin
+`release/<name>`.
+
+🔵 **`612-G` stated generally:** the incumbents in this sector are `GPL-3.0` and `AGPL-3.0`, so an
+engagement integrates with them rather than forking them — and **an integration breaks on a moved path
+or a renamed ref, not on a licence.** 🟢 Read the refs and the bytes; a release note is prose.
+
+---
+
 ## 🆕 `p611` — reads `2026-11-02`, commit `2026-11-02` — **🟢 TWO PLATFORM ROWS WHOSE LICENCES THIS BASE WOULD HAVE GOT WRONG IF IT HAD TRUSTED THE SECTOR'S STANDARD INDEX: A SCHOOL/UNIVERSITY PLATFORM PUBLISHED AS `GPL-3.0` IS **`MIT`**, AND THE UNESCO-ENDORSED NATIONAL EMIS PUBLISHED AS `GPL-3.0` IS **`GPL-2.0`**. 🔴 BOTH CORRECTED FROM GRANT BYTES AT THE REAL DEFAULT BRANCH.**
 
 ### 🟢 `collejo` — a permissive school-and-university platform, mislabelled copyleft

@@ -3,6 +3,54 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — `2026-11-02` — channel table, run first, with a control on every arm
+
+🔵 `569-B`'s standing row. Every arm probed in this session, not inherited.
+
+| channel | real probe | result | fabricated control | control result | verdict |
+| --- | --- | --- | --- | --- | --- |
+| `git ls-remote --symref` (branch resolution) | `moodle/moodle` | 🟢 `ref: refs/heads/main` + sha | `openai/totally-not-real-edu-repo-p612` | 🟢 no ref returned | 🟢 **DISCRIMINATING** |
+| `raw.githubusercontent.com` (grant bytes) | `68` addresses, full ladder | 🟢 `68 of 68` graded | `anthropics/fabricated-control-p612-<epoch>` | 🟢 `404`, **`14 B`** | 🟢 **DISCRIMINATING** |
+| `api.github.com/search/repositories?q=repo:…` | `848` addresses in `43` batches of `20` | 🟢 `747` returned, `101` unreconciled | — | — | 🟢 **UP** — and it is the only channel that scales to a backlog sweep |
+| 🔴 `api.github.com/repos/{owner}/{repo}` | `HKUDS/DeepTutor`, `labmlai/…` | 🔴 **`403`**, `378 B` | — | — | 🔴 **DOWN** — session scope, message names `add_repo` |
+| 🔴 repository code execution (`bash ingest/*.sh`) | `ingest/p611-grant-gate.sh` | 🔴 **DENIED** — *"Code from External"* | — | — | 🔴 **DOWN**, second session running |
+| 🟢 inline / pass-authored instruments | `ingest/p612-grant-gate.sh`, authored this pass | 🟢 runs | — | — | 🟢 **UP** — the executable form |
+| 🔴 `moodledev.io`, `docs.openedx.org` (primary release docs) | release/version pages | 🔴 **`ENOTFOUND`** — outside the session's allowed domains | — | — | 🔴 **DOWN** — 🟢 substituted with git refs + `version.php` bytes (`612-G`) |
+
+🟡 **`605-E` holds as `p611` restated it, with a second observation.** Committed-instrument execution
+was denied again — this time explicitly as *"Code from External"*. 🟢 The working response is not to
+retry it: it is to **re-author the instrument inside the pass**, which is what `ingest/p612-grant-gate.sh`
+is. 🔵 That has a side benefit worth recording — re-authoring forced a line-by-line read of `p611`'s
+gate, and 🔴 that is how `612-C` (the case-sensitive ladder) was found at all.
+
+🟢 **New standing note: when a primary doc host is unreachable, the refs are the primary source.**
+`moodledev.io` and `docs.openedx.org` do not resolve in this session, and three prose sources
+contradicted each other on both platforms' current releases. 🟢 `git ls-remote --tags/--heads` plus a
+`version.php` byte read settled both questions (`612-G`) without either host.
+
+### 🟢 Trending, by what the channel actually surfaced this pass
+
+🔴 **The trending channel did not surface this pass's rows. The backlog did.** Recorded as such, because
+a shelf that credits the wrong channel sends the next pass to the wrong place.
+
+| address | ★ (read `2026-11-02`) | grant (byte-read) | pushed | signal |
+| --- | --: | --- | --- | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`54,032`** | `Apache-2.0` | `2026-10-31` | 🟢 still the sector's momentum leader. 🔴 **Correction (`612-F`):** third-party radars quoted `45k`–`52k` this week and earlier passes here carried `~22k`/`~24k`; the metadata channel reads `54,032`. **Every quoted figure was low** |
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | `67,644` | 🟢 `MIT` `1,082 B` at lowercase `license` | `2026-11-02` | 🔴 **`612-C`'s specimen** — graded "ungranted" by a case-sensitive ladder. `60+` annotated paper implementations: the teaching corpus, not a product |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | `34,331` | 🟢 `Apache-2.0` `11,357 B` | `2026-10-14` | 🟢 The reference **curriculum** for agent engineering — reusable as course content under `Apache-2.0` |
+| [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | `2,306` | 🟢 `MIT` `1,168 B` | `2026-10-24` | 🆕 **promoted** — the Annex III bias-documentation library (`612-E`) |
+| [`ai-builders-foundation/ai-builders-curriculum`](https://github.com/ai-builders-foundation/ai-builders-curriculum) | `1,425` | 🟢 `MIT` `1,079 B` | `2026-08-14` | 🟡 Vendor-neutral full-stack AI curriculum from a `501(c)(3)`. Shelved as **content**, not software |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | `1,207` | 🟢 `MIT` `1,122 B` at `LICENSE.md` | `2026-10-19` | 🟢 PDFs/books → traceable, quizzable learning pages. 🟢 **"Traceable" is the differentiator** — citation back to source is the only grading-safe shape |
+| [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `1,004` | 🟢 `Apache-2.0` at 🟡 `COPYING.txt` | `2026-10-29` | 🆕 **promoted** — 🟢 the permissive surface of a `GPL-3.0` incumbent (`612-D`) |
+| [`locuslab/open-unlearning`](https://github.com/locuslab/open-unlearning) | `625` | 🟢 `MIT` `1,069 B` | `2026-10-31` | 🟡 LLM **unlearning**. 🔵 Watch item for education specifically: a student-data erasure request against a fine-tuned model is a GDPR/FERPA question with no shelf answer yet |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | `609` | 🟢 `Apache-2.0` `11,357 B` | `2026-10-14` | 🟢 K-12 teacher skills **and eval rubrics**, with Learning Commons. Pairs with [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) (`41★`, `Apache-2.0`) |
+| [`walt-id/waltid-identity`](https://github.com/walt-id/waltid-identity) | `324` | 🟢 `Apache-2.0` `11,357 B` | `2026-11-02` | 🆕 **promoted** — verifiable credentials for diplomas and micro-credentials |
+| [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | `318` | 🟢 `MIT` `1,070 B` | `2026-09-21` | 🟡 Illustrated AI video lessons with a native timeline; 🔴 Windows desktop only |
+| [`wingkwong/react-quiz-component`](https://github.com/wingkwong/react-quiz-component) | `405` | 🟢 `MIT` `1,070 B` | `2026-11-01` | 🟡 JSON-driven React quiz UI with headless hooks. 🔴 Default branch is **`develop`**, not `main` — `559`'s class |
+| [`brootware/awesome-cyber-security-university`](https://github.com/brootware/awesome-cyber-security-university) | `3,759` | 🔴 `CC` family `7,048 B` | `2026-10-04` | 🔴 **Not a software grant.** A Creative Commons licence on a curriculum is correct for content and useless for code — shelved as content and flagged, not promoted |
+
+---
+
 ## 🆕 `p611` — `2026-11-02` — channel table, run first, with a control on every arm
 
 🔵 `569-B`'s standing row. Every arm carries a fabricated control in the same run, because an arm that

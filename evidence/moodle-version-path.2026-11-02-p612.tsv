@@ -1,0 +1,10 @@
+ref	path	http	bytes	note
+MOODLE_405_STABLE	version.php	200	1641	$release = '4.5.15+ (Build: 20261030)'; $branch='405'; MATURITY_STABLE
+MOODLE_405_STABLE	public/version.php	404	14	does not exist at 4.5
+MOODLE_405_STABLE	public/index.php	404	14	does not exist at 4.5
+MOODLE_503_STABLE	version.php	404	14	🔴 GONE at 5.x - every root-version.php probe breaks
+MOODLE_503_STABLE	public/version.php	200	1638	$release = '5.3+ (Build: 20261030)'; $branch='503'; $version=2026100500.08 (20261005 = BRANCHING date, not a release date); MATURITY_STABLE
+MOODLE_503_STABLE	public/index.php	200	6607	web root relocated under public/
+v5.3.0	version.php	404	14	tag agrees with the stable branch
+main	version.php	404	14	default branch is `main`; root version.php absent there too
+MOODLE_503_STABLE	COPYING.txt	200	35147	GPL-3.0, unchanged location

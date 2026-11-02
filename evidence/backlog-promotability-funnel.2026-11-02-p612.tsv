@@ -1,0 +1,7 @@
+stage	definition	rows	share_of_enumerated
+0-enumerated	p610 trending-only AND education_keyword=yes	848	100.0%
+1-addressable	returned by the metadata channel (search/repositories)	747	88.1%
+2-permissive	license.spdx_id in MIT|Apache-2.0|BSD-2/3|ISC|MPL-2.0|CC0-1.0	439	51.8%
+3-live	and archived=false	426	50.2%
+4-recent	and pushed_at >= 2026-08-01	266	31.4%
+5-shippable-shaped	and stargazers >= 20	68	8.0%

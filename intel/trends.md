@@ -3,6 +3,83 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🟢 `T612-1` — licence metadata is not uniformly unreliable; **curated** licence metadata is
+
+🟢 Measured both layers on comparable corpora, all grants byte-read at the real default branch: a curated
+third-party index managed **`1 of 5`** permissive claims (`p611`); the platform's own `license.spdx_id`
+managed **`68 of 68`** (`100 %`), with `0` contradictions and `0` branch disagreements.
+🟢 **Consequence:** triage on the platform field, byte-read at the point of shipping, never trust a
+curated index. 🔴 **What would refute it:** a single contradicted row in a larger platform-field sample —
+`68` is not many, and this measures reproduction of *permissive* claims only, not the API's recall. The
+`157` `NULL` and `68` `NOASSERTION` rows in the same sweep are a different failure and are unmeasured.
+Evidence `evidence/api-vs-bytes-grants.2026-11-02-p612.tsv`.
+
+### 🟢 `T612-2` — in education the **integration seam** is the scarce asset, not the model
+
+🔵 Both incumbents are copyleft (Moodle `GPL-3.0`, Open edX `AGPL-3.0`), so a client's proprietary code
+cannot live inside them; it has to attach via **LTI**. 🟢 `612-D` found a complete permissive LTI tier —
+one implementation per major stack — sitting unshelved in the backlog at `25`–`203★`, two orders of
+magnitude below the tutoring demos that trend. 🔴 **What would refute it:** an engagement that shipped
+education software at institutional scale without an LTI or equivalent SIS/LMS seam. 🔵 This is `601`'s
+star-rank-as-anti-signal finding in its strongest form yet.
+
+### 🟢 `T612-3` — the AI Act's deferral created a `16`-month window, and the deliverable in it is the conformity file
+
+🟢 `(EU) 2026/1744` moved Annex III education high-risk from `2026-08-02` to **`2027-12-02`**; the
+obligations themselves are unchanged, and Article `50` transparency is 🔴 **already live** (with
+watermarking due `2026-12-02`). 🟢 **Consequence:** the market will read the deferral as permission to
+wait and will need risk management, data governance, documentation and human oversight retrofitted onto
+systems not built to emit them. 🟢 `612-E`'s rubric tier plus `fairlearn` makes the evidence a
+by-product. 🔴 **What would refute it:** a further deferral, or guidance narrowing education's Annex III
+scope. 🟡 Secondary sources only — the OJ text was not read from this session.
+
+### 🟢 `T612-4` — the state is the reference implementation in this sector
+
+🟢 Two consecutive passes, two jurisdictions, both permissive: `bcgov/SIMS` (`611-D`, `Apache-2.0`,
+provincial system of record with a business-rules engine) and now **three live UK DfE national services
+under `MIT`** plus Oak National Academy's `MIT` lesson-planning assistant (`612-F`). 🔵 Government
+education code is permissive because procurement rules push it there, and it is *operational* code — a
+national admissions pipeline, not a demo. 🟢 **Consequence:** in EMEA and North America the cheapest
+credibility in a pitch is a working public-sector reference. 🔴 **What would refute it:** finding these
+repositories to be published-but-abandoned mirrors — checked: three of the four were pushed
+`2026-11-02`.
+
+### 🟢 `T612-5` — APAC's winning shape is cited retrieval over an authoritative local document set
+
+🟢 `6 of 9` region-placed rows this pass are APAC, and three of them are the **same** architecture:
+`campusask` (IIIT Delhi rules), `uajy-academic-rag-chatbot` (Universitas Atma Jaya Yogyakarta handbook)
+and `taiwan-exam` (學測 papers) — retrieval restricted to official documents, answers carrying page-level
+citations. 🔵 The generic tutor does not win where the exam is national; the one that knows the local
+curriculum does. 🟢 Korea's walked-back digital-textbook rollout says the same thing from the failure
+side: consent and data posture are shipping dependencies, and offline/on-device is the mitigation.
+🔴 **What would refute it:** a generic multilingual tutor achieving national adoption in an APAC market
+without curriculum-specific grounding.
+
+### 🔴 `T612-6` — a carried backlog decays, and it decays fastest where the value is
+
+🔴 `101 of 848` education-shaped backlog addresses (`11.9 %`) no longer resolve at all since `p610`
+enumerated them — deleted, renamed or made private. 🟢 Only `8.0 %` of the enumerated `848` were
+shippable-shaped to begin with, so **the usable fraction and the decay rate are the same order of
+magnitude.** 🔴 **Consequence:** carrying a backlog is not free storage; it is a wasting asset, and the
+rows that vanish are disproportionately the small, new ones — exactly the band where education's usable
+code lives. 🟢 Sweep on enumeration. 🔴 **What would refute it:** a re-sweep showing most of the `101`
+were renames recoverable by redirect — not attempted here, and recorded as an open gap.
+
+### 🔴 `T612-7` — the instrument fails more often than the corpus, and it is now four passes running
+
+🔴 `610-E` (missing `COPYING.txt` rung), `611-B` (window substring instead of title line), `611-I`
+(upstream detection wrong twice), and this pass's `612-C`: **a case-sensitive ladder that graded a
+`67,644★` `MIT` repository "ungranted"** and would have produced a false and highly quotable headline.
+🟢 Each was caught by the same discipline — **re-run the whole corpus after the fix and report what
+moved**; here exactly one row moved. 🔵 `612`'s own experience adds a mechanism: the defect was found
+because committed-instrument execution was denied and the gate had to be **re-authored line by line**.
+🔴 **What would refute it:** a pass whose corpus error rate exceeds its instrument error rate. Not yet
+observed on this base.
+
+---
+
 ## 🆕 `p611` — `2026-11-02` — trends, each with the evidence that would refute it
 
 ### 🔴 `T611-1` — a curated licence column is not evidence, and the error rate is now measured

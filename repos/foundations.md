@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — reads `2026-11-02`, commit `2026-11-02` — **🟢 TWO WHOLE **TIERS** WERE SITTING IN THE BACKLOG, NOT TWO ROWS: A FIVE-LANGUAGE PERMISSIVE **LTI 1.3 / LTI ADVANTAGE** INTEGRATION TIER (RUBY, PYTHON, JAVA/SPRING, .NET, TYPESCRIPT) AND A SEVEN-REPOSITORY **RUBRIC / AUTOGRADING** TIER. 🔵 THE FIRST IS HOW ANYTHING GLOBANT BUILDS REACHES A LEARNER AT ALL; THE SECOND IS THE ANNEX III CONFORMITY ARTEFACT. `18` FOUNDATION ROWS PROMOTED.**
+
+### 🟢 `612-D` — the integration tier: `5` permissive LTI implementations, one per stack, none previously shelved
+
+🔵 **Why this is a tier and not a list.** Every education engagement answers the same week-one question
+before it writes a feature: *how does our thing appear inside the institution's LMS?* The answer in this
+sector is **LTI** — `1.3` / Advantage — and it is non-negotiable, because Moodle (`GPL-3.0`) and
+Open edX (`AGPL-3.0`) are the incumbents and neither licence lets a client's proprietary code live
+*inside* them. 🟢 LTI is the seam that keeps the client's code out of the copyleft boundary. 🔴 This base
+has shelved tutors and quiz generators for `611` passes and never shelved the seam.
+
+🟢 All five grants byte-read `2026-11-02` at the real default branch.
+
+| LTI implementation | ★ | grant (byte-read) | path | branch | pushed | stack | why this one |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | `203` | 🟢 `MIT` `1,068 B` | `LICENSE.txt` | `main` | `2026-10-02` | Ruby | 🟢 Published by **Instructure itself** — the Canvas vendor's own tool-consumer/provider library |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `73` | 🟢 `BSD-3-Clause` `1,528 B` | `LICENSE` | `main` | `2026-10-05` | Python | Launches **JupyterHub** from an LMS — the path for any notebook-based course |
+| [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) | `35` | 🟢 `MIT` `1,075 B` | `LICENSE.md` | `main` | `2026-10-28` | TypeScript | Harvard's all-in-one Canvas connector: LTI **＋** authorisation **＋** API in one library |
+| [`LtiLibrary/LtiAdvantagePlatform`](https://github.com/LtiLibrary/LtiAdvantagePlatform) | `35` | 🟢 `MIT` `1,068 B` | `LICENSE` | 🟡 `master` | `2026-10-28` | .NET | A reference **platform** (not tool) side — the half you need to test your tool against |
+| [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) | `25` | 🟢 `Apache-2.0` `11,358 B` | `LICENSE.txt` | 🟡 `master` | `2026-10-06` | Java / Spring | 🟢 EMEA — LTI `1.3` on Spring Security's existing OAuth2 support, so it inherits an audited auth stack |
+
+🔵 **Read the star column and then ignore it.** `25`–`203★` across the tier. 🟢 `601` already established
+that in education star rank is an **anti**-signal for commercial usability; this is the strongest case
+yet — the five repositories that decide whether a deliverable can be *installed* sit two orders of
+magnitude below the tutoring demos that trend.
+
+### 🟢 `612-E` — the rubric / autograding tier: `7` permissive repositories, and they are the EMEA compliance artefact
+
+🔵 Annex III of the AI Act makes a system **high-risk** when it *"evaluates learning outcomes"*. 🔴 The
+`2027-12-02` deferral (see `intel/market.md`) does not change the obligation, only the date: risk
+management, data governance, technical documentation and **human oversight** still have to exist.
+🟢 A weighted, versioned, evidence-linked rubric is what turns "the model graded it" into a documented
+decision procedure with a human in it — which is to say, 🟢 **this tier is not a nice-to-have feature,
+it is the conformity evidence.**
+
+| repository | ★ | grant (byte-read) | path | branch | pushed | region | role in the tier |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) | `368` | 🟢 `Apache-2.0` `10,761 B` | `LICENSE` | `main` | `2026-08-24` | Global | Adaptive **dynamic** rubric evaluator over agent *trajectories* — grades the process, not only the answer |
+| [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | `241` | 🟢 `BSD-3-Clause` `1,522 B` | `LICENSE.txt` | 🟡 `master` | `2026-08-21` | Global | Markdown → **QTI**, the interchange format Canvas and most LMSs import. 🟢 The least glamorous row here and the one that makes output *deliverable* |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `161` | 🟢 `BSD-3-Clause` `1,560 B` | `LICENSE` | 🟡 `master` | `2026-11-01` | 🟢 North America | UC Berkeley Data Science's Python **and R** autograder — containerised, used at course scale, pushed yesterday |
+| [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | `130` | 🟢 `Apache-2.0` `11,324 B` | `LICENSE` | `main` | `2026-10-30` | Global | Local-first, 🟢 **evidence-linked** assignment planner — the audit trail an Annex III file needs |
+| [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | `86` | 🟢 `MIT` `1,077 B` | `LICENSE` | `main` | `2026-10-27` | Global | **Weighted**-rubric LLM evaluation as a plain Python library — the component to embed |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | `63` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | `main` | `2026-10-20` | Global | Grades submissions **and generates the report** — the report is the human-oversight surface |
+| [`OpenEnvision/AutoRubric-as-Reward`](https://github.com/OpenEnvision/AutoRubric-as-Reward) | `59` | 🟢 `Apache-2.0` `10,757 B` | `LICENSE` | `main` | `2026-09-25` | Global | Derives **explicit generative criteria** from implicit preference — how to get a defensible rubric out of expert judgements that were never written down |
+
+### 🟢 `6` further foundation rows — platform, analytics and ingestion
+
+| repository | ★ | grant (byte-read) | path | branch | pushed | region | what it gives an engagement |
+| --- | --: | --- | --- | --- | --- | --- | --- |
+| [`jdepoix/youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) | `8,546` | 🟢 `MIT` `1,069 B` | `LICENSE` | 🟡 `master` | `2026-10-30` | Global | Transcript ingestion with **no API key and no headless browser** — the cheapest content intake there is |
+| [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | `2,306` | 🟢 `MIT` `1,168 B` | `LICENSE` | `main` | `2026-10-24` | Global | 🟢 Fairness **assessment and mitigation**. Annex III high-risk education systems need a documented bias position; this is the library that produces one |
+| [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `1,004` | 🟢 `Apache-2.0` `11,358 B` | 🟡 `COPYING.txt` | `main` | `2026-10-29` | Global | 🟢 **The official Moodle app is `Apache-2.0` while Moodle core is `GPL-3.0`.** The permissive surface of a copyleft incumbent is its mobile client — that is where a client's own code can live. 🔵 Its grant is the `COPYING.txt` rung `610-E` had to add |
+| [`walt-id/waltid-identity`](https://github.com/walt-id/waltid-identity) | `324` | 🟢 `Apache-2.0` `11,357 B` | `LICENSE` | `main` | `2026-11-02` | Global | Identity **and wallet** toolkit — verifiable credentials for diplomas, micro-credentials and transcript portability |
+| [`Azure/Moodle`](https://github.com/Azure/Moodle) | `186` | 🟢 `MIT` `1,090 B` | `LICENSE` | 🟡 `master` | `2026-11-02` | Global | Scalable Moodle **cluster** tooling. 🟡 Stated limit: it is Azure-specific; the topology transfers, the templates do not |
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | `37` | 🟢 `Apache-2.0` `11,379 B` | `LICENSE` | 🟡 `master` | `2026-10-27` | 🟢 North America | **MyLA**, University of Michigan — a student-facing learning-analytics dashboard a public university actually runs |
+
+🟢 **Controls `2 of 2` `UNREACHABLE`** in the same run (`openai/totally-not-real-edu-repo-p612`,
+`anthropics/fabricated-control-p612-<epoch>`). Instrument `ingest/p612-grant-gate.sh`; evidence
+`evidence/api-vs-bytes-grants.2026-11-02-p612.tsv`.
+
+---
+
 ## 🆕 `p611` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE FIRST PERMISSIVE **PROVINCIAL** SYSTEM OF RECORD ON THESE SHELVES: A CANADIAN MINISTRY'S STUDENT-FINANCIAL-AID PLATFORM, `Apache-2.0`, BUSINESS-RULES ENGINE INCLUDED, PUSHED `2026-10-31`. 🔴 AND THE DISCOVERY CHANNEL IS MEASURED RATHER THAN DECLARED: `976` ADDRESSES ACROSS `19` AXES, `91.6 %` NEW TO THIS BASE AND ONLY `4.7 %` SHIPPABLE-SHAPED — `14 of 19` AXES YIELD **ZERO**.**
 
 ### 🟢 `611-D` — `bcgov/SIMS`: the public-sector tier gains a permissive system of record

@@ -3,6 +3,123 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read today
+
+🔵 Every repository named below is on a sell shelf with its grant byte-read `2026-11-02` at the real
+default branch (`evidence/api-vs-bytes-grants.2026-11-02-p612.tsv`). 🔴 Where a pattern has a limit, the
+limit is in the pattern, not a footnote.
+
+### 🟢 `P612-1` — "AI inside the LMS the client already runs" — the week-one integration pattern — `4`–`6` weeks
+
+🔵 **The brief this answers:** *"we have Moodle / Canvas / Open edX and we want an AI assistant inside
+it."* 🔴 **The constraint nobody states in the brief:** Moodle is `GPL-3.0` and Open edX is `AGPL-3.0`, so
+the client's own code **cannot** live inside the platform without inheriting copyleft. 🟢 LTI is the seam
+that keeps it outside.
+
+| step | component | grant | why this one |
+| --- | --- | --- | --- |
+| `1` pick the seam by the client's stack | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) (Ruby) · [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (Python) · [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13) (Java/Spring) · [`LtiLibrary/LtiAdvantagePlatform`](https://github.com/LtiLibrary/LtiAdvantagePlatform) (.NET) · [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) (TypeScript) | `MIT` / `BSD-3` / `Apache-2.0` | 🟢 **one per stack, so the seam never dictates the language** |
+| `2` test against a platform you control | [`LtiLibrary/LtiAdvantagePlatform`](https://github.com/LtiLibrary/LtiAdvantagePlatform) | `MIT` | 🟢 the *platform* side, so the tool can be exercised before the client's LMS is touched |
+| `3` read the system of record least-privilege | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `MIT` | 🟢 **read-only** MCP — an assistant beside the gradebook, not inside it |
+| `4` ship the mobile surface permissively | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `Apache-2.0` | 🟢 the one permissive surface of a `GPL-3.0` incumbent |
+| `5` pin the platform correctly | — | — | 🔴 Moodle `5.x`: read **`public/version.php`**, not root (`612-G`). Open edX: pin **`release/<name>`**, not `open-release/*` |
+
+🟢 **Why it is `4`–`6` weeks and not `12`:** steps `1`–`2` are integration, not invention, and step `5`
+is the thing that actually breaks pilots. 🔴 **Limit:** LTI gets the tool launched and identified; grade
+passback and roster sync are Advantage services that need per-LMS verification — budget a week per LMS
+beyond the first.
+
+### 🟢 `P612-2` — "gradeable AI with a conformity file" — the EMEA Annex III pattern — `8`–`10` weeks
+
+🔵 **The brief:** automated or assisted assessment for an EU institution. 🔴 **The clock:**
+`(EU) 2026/1744` defers Annex III education to **`2027-12-02`** but changes none of the obligations, and
+Article `50` transparency is already live with watermarking due **`2026-12-02`**. 🟢 **The pattern's whole
+point is that the conformity evidence is a by-product of the build, not a document written afterwards.**
+
+| step | component | grant | what it produces for the file |
+| --- | --- | --- | --- |
+| `1` derive defensible criteria | [`OpenEnvision/AutoRubric-as-Reward`](https://github.com/OpenEnvision/AutoRubric-as-Reward) | `Apache-2.0` | turns expert judgement that was never written down into **explicit** generative criteria |
+| `2` make the rubric weighted and versioned | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | `MIT` | the decision procedure, as code under version control |
+| `3` grade the process, not only the answer | [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) | `Apache-2.0` | trajectory-level evaluation — the "how" an appeal will ask about |
+| `4` link every judgement to evidence | [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | `Apache-2.0` | 🟢 the **audit trail**, local-first |
+| `5` run it at course scale | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `BSD-3-Clause` | containerised Python **and** R autograding a public university already operates |
+| `6` emit the human-oversight surface | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | `Apache-2.0` | the report a human reviews and signs |
+| `7` deliver into the LMS | [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | `BSD-3-Clause` | Markdown → **QTI**, which Canvas and most LMSs import |
+| `8` state a bias position | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | `MIT` | the documented fairness assessment and mitigation |
+
+🔴 **Limit, and it is the honest one:** this produces the *technical* documentation, data governance and
+human-oversight evidence. 🔴 It does **not** produce the conformity assessment or the registration — those
+are legal acts, and the deployer (the institution) is liable for them whoever built the system.
+
+### 🟢 `P612-3` — "the institution's own rulebook, answerable and cited" — the APAC pattern that is already built three times — `3`–`5` weeks
+
+🔵 **The brief:** *"students and staff cannot find anything in our regulations / handbook / curriculum
+documents."* 🟢 **Three independent teams in three countries converged on the same architecture, and all
+three are `MIT`** — so this is a pattern with three reference implementations, not a proposal.
+
+| reference | region | the authoritative set it is grounded in |
+| --- | --- | --- |
+| [`callmevanshh/campusask`](https://github.com/callmevanshh/campusask) `49★` | 🟢 APAC / India | IIIT Delhi academic rules — **official PDFs only, page-level links** |
+| [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) `452★` | 🟢 APAC / Indonesia | one university's academic handbook, FAISS + Streamlit, described as production-grade |
+| [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) `20★` | 🟢 APAC / Taiwan | the national 學測 format — 🟢 **with solution re-verification**, and it emits the official layout |
+
+🟢 **Wire it as:** [`Queena34/StudyPilot`](https://github.com/Queena34/StudyPilot) (`MIT`) for the
+answer-only-from-supplied-material discipline **＋**
+[`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) (`MIT`) for
+traceable document → learning-page conversion **＋**
+[`jdepoix/youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) (`MIT`) for lecture
+intake with no API key **＋** `P612-1`'s seam to put it inside the LMS.
+
+🟢 **The non-negotiable property is refusal:** all three references answer *only* from the official set
+and cite the page. 🔴 **Limit:** that makes coverage gaps visible as refusals, which is correct behaviour
+and reads as failure in a demo — set that expectation with the client before the demo, not after.
+
+### 🟢 `P612-4` — "policy-parameterised deployment" — the North America multi-jurisdiction pattern — `10`–`12` weeks
+
+🔵 **The brief:** a district consortium or state system, where `134` bills across `31` states mean the
+rules differ by jurisdiction and change by legislative session. 🔴 **A fixed-policy product cannot be
+sold into this and cannot be maintained in it.**
+
+🟢 **Spine:** [`bcgov/SIMS`](https://github.com/bcgov/SIMS) (`Apache-2.0`, `611-D`) — a provincial system
+of record whose **business-rules engine exists expressly so policy change is not a rewrite**. 🟡 Stated
+limit: BC's rule *content* is BC's; the architecture transfers, the policy does not.
+
+🟢 **Wire:** `SIMS`-style rules engine for the per-jurisdiction policy layer **＋**
+[`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)
+(`Apache-2.0`) for the student-facing dashboard a public university already runs **＋**
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (`Apache-2.0`) and
+[`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills)
+(`Apache-2.0`) for the teacher-facing capability and its eval rubrics **＋** `P612-1`'s seam **＋**
+`P612-2`'s rubric tier wherever a jurisdiction touches assessment.
+
+🟢 **Satisfy the two live NA obligations explicitly:** a hard grade-band gate (NY `A.9190` would bar most
+classroom AI below grade `9`) and an AI-literacy module (SUNY requires it in general education from fall
+`2026`). 🔴 **Limit:** federal preemption is *reported* as recommended, not enacted — build the policy
+layer so a preemption event collapses `31` configurations to one rather than invalidating the design.
+
+### 🟢 `P612-5` — "free at the point of use, in Spanish and Portuguese" — the LATAM pattern, built from non-LATAM parts — `6`–`8` weeks
+
+🔴 **Why this pattern is shaped by an absence.** `0 of 68` shippable-shaped candidates placed to LATAM,
+and the region's institutional AI-education spend (`$105.6M` → `$204.7M` by `2029`) is 🔴 two orders of
+magnitude below global while consumer AI use in Brazil and Mexico exceeds `70 %`. 🟢 **So per-seat
+licensing is the wrong instrument and public-sector or large-network programmes are the right one — which
+means marginal cost per learner has to be near zero.**
+
+| step | component | grant | the cost it removes |
+| --- | --- | --- | --- |
+| `1` voice at zero marginal cost | [`tanle-mtr/ChinaStudyFree`](https://github.com/tanle-mtr/ChinaStudyFree) | `MIT` | 🟢 `148` textbooks + **free EdgeTTS** is precisely why that platform can be free; nothing in the approach is language-bound |
+| `2` content without a licensing negotiation | [`callmevanshh/campusask`](https://github.com/callmevanshh/campusask) | `MIT` | cited retrieval over the **ministry's own** public curriculum PDFs |
+| `3` run where connectivity is not assumed | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | `MIT` | fully offline Electron + Ollama — no per-token cost and no connectivity floor |
+| `4` four clients from one codebase | [`tanle-mtr/ChinaStudyFree`](https://github.com/tanle-mtr/ChinaStudyFree) | `MIT` | web / desktop / Android / iOS across four school stages |
+| `5` the policy and record layer | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) · the three UK DfE `MIT` services | `Apache-2.0` / `MIT` | 🟢 operational public-sector architecture, reused rather than rebuilt |
+
+🔴 **Limits, stated plainly.** 🔴 Brazil's `PL 2338/2023` status is **contradicted between sources and
+unresolved** — do not plan around either reading. 🔴 Every component here is non-LATAM; the Spanish and
+Portuguese curriculum content is net-new work and is the bulk of the estimate. 🟢 The architecture gap is
+zero, which is the good news and the reason `6`–`8` weeks is credible for a pilot.
+
+---
+
 ## 🆕 `p611` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read
 
 🔵 Every repository named below is on a sell shelf with its grant byte-read at the real default branch

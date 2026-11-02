@@ -3,6 +3,77 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — `2026-11-02` — **the forty-second consecutive global-leg nil, and the pass that stopped treating the legs as the channel**
+
+🔵 The run prompt mandates four global legs and four regional legs. All eight were run. 🔴 They produced
+**no new permissive education repository** between them. Evidence, leg by leg, with what each *did*
+return: `evidence/websearch-legs.2026-11-02-p612.tsv`.
+
+| leg | yielded a new permissive education repo? | what it returned instead |
+| --- | --- | --- |
+| global — agents | 🔴 no | Generic agent-framework listicles (OpenClaw, OpenHands, CrewAI, MetaGPT, Langflow). 🟡 One useful licence note: AutoGen's **code** is `MIT` while its samples and docs are Creative Commons |
+| global — trending | 🔴 no | `HKUDS/DeepTutor`, already shelved — and 🔴 **every quoted star figure was low** (`612-F`) |
+| global — verticals | 🔴 no | Moodle `GPL-3.0`, Open edX `AGPL-3.0` only. 🔴 Three mutually contradictory version claims, resolved from refs instead (`612-G`) |
+| global — market | 🔴 no | Figures only, and they disagree: four firms place `2026` between **`$6.4B`** and **`$11.4B`** |
+| region — North America | 🔴 no | `134` AI-in-education bills across `31` states; SUNY systemwide policy |
+| region — EMEA | 🔴 no | 🟢 The pass's most consequential external fact: `(EU) 2026/1744` defers Annex III education to **`2027-12-02`** |
+| region — APAC | 🔴 no | Korea's AI Basic Act in force `2026-01-22`; India compulsory AI from Class `3` in `AY2026-27` |
+| region — LATAM | 🔴 **NIL, WRITTEN DOWN** | See the gap below. An informed gap, not silence |
+
+### 🟢 `612-A` — the channel that *did* yield, with a denominator
+
+🔵 `p610` enumerated `2,310` addresses published as rows on this base's **trending** shelves and present
+on no sell shelf, `848` of them education-shaped, and called it backlog debt. 🔴 It did not measure
+whether any of it was usable — so `848` read as `848` problems. 🟢 Swept in full this pass.
+
+| stage | definition | rows | of enumerated |
+| --- | --- | --: | --: |
+| `0` enumerated | `p610` trending-only **and** education-shaped | `848` | `100.0 %` |
+| `1` addressable | returned by the metadata channel | `747` | `88.1 %` |
+| `2` permissive | `license.spdx_id` in `MIT`/`Apache-2.0`/`BSD`/`ISC`/`MPL-2.0`/`CC0` | `439` | `51.8 %` |
+| `3` live | and not archived | `426` | `50.2 %` |
+| `4` recent | and pushed since `2026-08-01` | `266` | `31.4 %` |
+| 🟢 `5` **shippable-shaped** | and `≥ 20★` | 🟢 **`68`** | 🟢 **`8.0 %`** |
+
+🟢 **So the debt is not `848`. It is `68`, and this pass promoted `40` of them** — `16` agents, `18`
+foundations, `6` platforms. Evidence
+`evidence/backlog-promotability-funnel.2026-11-02-p612.tsv`.
+
+🔴 **And the backlog decays while it waits.** `101 of 848` (`11.9 %`) no longer resolve at all — deleted,
+renamed or made private since `p610` listed them. Enumerated in
+`evidence/backlog-decay-unreconciled.2026-11-02-p612.txt`. 🔵 **That is the argument for sweeping a
+backlog rather than carrying it:** at this rate an unswept education backlog loses roughly an eighth of
+its addresses per interval, and the rows that vanish are disproportionately the small new ones, which is
+exactly the band `601` identified as where education's usable code lives.
+
+🟢 **Operative change for the next pass:** run the mandated legs — they are cheap and they are where the
+regulatory facts come from, which is `612`'s whole EMEA result — but 🔴 **stop expecting repositories from
+them.** Forty-two consecutive nils is not noise. The yielding channel is the base's own enumerated
+backlog, and `266` rows of stage-`4` candidates remain unswept below the `20★` bar.
+
+### 🔴 The LATAM gap, written down
+
+🔴 **No permissive LATAM education repository was found, and — new this pass — the backlog does not
+contain one either.** Of `68` shippable-shaped candidates, `0` placed to LATAM. That is a stronger
+statement than a search nil: it says the absence survives a `848`-address census of material this base
+had already collected.
+
+🟡 What the LATAM leg did return, with its reliability stated: enterprise AI adoption Brazil `41 %`,
+Chile `34 %`, Argentina `29 %`, Colombia `24.5 %`, Mexico `20.1 %` (Q1-`2026`, 🔴 low-trust source).
+MarketsandMarkets sizes LATAM AI-in-education at **`$105.6M` (`2024`) → `$204.7M` (`2029`)** — 🔴 two
+orders of magnitude below the global figure, which is the real finding. HolonIQ's LATAM EdTech `100`
+names **Teachy** (Brazil, AI lesson preparation) and **Muyu Education** (Ecuador, teacher training);
+🔴 neither publishes source. OpenAI's *Education for Countries* first cohort of eight includes 🔴 **no
+Latin American country**. 🟡 Brazil's `PL 2338/2023` status is **contradicted** between sources and is
+**not** resolved here.
+
+🟢 The nearest transferable assets remain non-LATAM public-sector code: `bcgov/SIMS` (`611-D`,
+Apache-2.0, provincial) and this pass's three UK DfE `MIT` services (`612-F`) — 🟢 Spanish- and
+Portuguese-language *content* is the gap, not the architecture, and `tanle-mtr/ChinaStudyFree` shows
+the zero-marginal-cost TTS route to filling it.
+
+---
+
 ## 🆕 `p611` — `2026-11-02` — **the forty-first consecutive global-leg nil, and the first one with a denominator on both axes**
 
 🔵 The run prompt mandates four global legs. They were run. 🔴 They produced **no new permissive,

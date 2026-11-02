@@ -3,6 +3,80 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## Pass 612 — reads 2026-11-02, commit 2026-11-02 — **🟢 `611-A` NARROWED AND IT MATTERS COMMERCIALLY: THE PLATFORM'S OWN `license.spdx_id` REPRODUCES ON GRANT BYTES `68 of 68` (`100 %`) WHERE THE CURATED INDEX MANAGED `1 of 5`. 🟢 AND THE YIELD CAME FROM THE **BACKLOG**, NOT THE SEARCH LEGS: `610`'S `848` EDUCATION-SHAPED TRENDING-ONLY ADDRESSES RESOLVE TO `68` SHIPPABLE-SHAPED (`8.0 %`), OF WHICH `40` ARE PROMOTED — INCLUDING TWO WHOLE TIERS THIS BASE HAD NEVER SHELVED. 🔴 `612-C`: A CASE-SENSITIVE LADDER GRADED A `67,644★` MIT REPOSITORY "UNGRANTED". 🔴 FORTY-SECOND GLOBAL-LEG NIL. SEVEN REGISTERED (`612-A`…`612-G`).**
+
+🟢 **`612-B` — the pass's load-bearing correction.** `p611` censused a curated third-party index, found
+`1 of 5` permissive claims survived a byte read, and closed with *"a licence column is a search hint, not
+a grant."* 🔴 As written that generalises to all licence metadata. Measured at the layer above — `68`
+addresses, every grant byte-read today at the real default branch — the platform's own
+`license.spdx_id` reproduces **`68 of 68`**, with `0` contradictions and `0` `default_branch`
+disagreements. 🟢 **Operative rule replacing `611-A`'s:** batch-trust the platform field for *triage*,
+which is what makes an `848`-address sweep affordable in week one; byte-read the grant at the *point of
+shipping*; never trust a curated index at either step. 🟡 Bounded: this measures reproduction of
+permissive claims on `68` rows, not the API's recall — the `157` `NULL` and `68` `NOASSERTION` rows in
+the same sweep are a different, unmeasured failure.
+
+🟢 **`612-A` — the backlog is `68`, not `848`.** `p610` enumerated `2,310` trending-only addresses
+(`848` education-shaped) as debt without measuring usability. Swept in full:
+`848` enumerated → `747` addressable → `439` permissive → `426` live → `266` pushed since `2026-08-01`
+→ 🟢 **`68` at `≥ 20★`** (`8.0 %`). 🔴 And `101 of 848` (`11.9 %`) no longer resolve at all — a carried
+backlog is a wasting asset, and the rows that vanish are the small new ones where education's usable
+code lives. `evidence/backlog-promotability-funnel.2026-11-02-p612.tsv`.
+
+🟢 **`40` rows promoted, and two of them are tiers rather than rows.** 🟢 **`612-D`** — a complete
+permissive **LTI 1.3 / Advantage** integration tier, one implementation per stack: `instructure/ims-lti`
+(Ruby, `MIT`, published by the Canvas vendor), `jupyterhub/ltiauthenticator` (Python, `BSD-3`),
+`oxctl/spring-security-lti13` (Java/Spring, `Apache-2.0`), `LtiLibrary/LtiAdvantagePlatform` (.NET,
+`MIT`), `harvard-edtech/caccl` (TypeScript, `MIT`). 🔵 Both incumbents are copyleft (Moodle `GPL-3.0`,
+Open edX `AGPL-3.0`), so **LTI is the commercial boundary** — and this base shelved tutors for `611`
+passes without shelving the seam, at `25`–`203★`. 🟢 **`612-E`** — a seven-repository **rubric /
+autograding** tier (`AdaRubrics`, `text2qti`, `otter-grader`, `rubrictrail`, `rubric`, `autograder`,
+`AutoRubric-as-Reward`) which is not a feature but the **Annex III conformity evidence**.
+
+🟢 **`612-F` — the state is the reference implementation.** The UK Department for Education publishes
+**three live national services under `MIT`** (`apply-for-teacher-training`, `teaching-vacancies`,
+`get-into-teaching-app`, three of four pushed today) and Oak National Academy publishes its **Aila**
+lesson-planning assistant at `oaknational/oak-ai-lesson-assistant` (`MIT`). 🔵 With `611-D`'s `bcgov/SIMS`
+that is two jurisdictions in two passes: government education code is permissive *and* operational.
+
+🔴 **`612-G` — both incumbents moved something that breaks tooling, resolved from refs and bytes because
+the doc hosts are unreachable.** Moodle **deleted root `version.php` at `5.x`** — it is
+`public/version.php` now (`$release = '5.3+ (Build: 20261030)'`, `$branch = '503'`), so every version
+probe keyed on the old path reports nothing; `4.5` is still built in parallel (`4.5.15+`, same build
+date), which is the LTS signature, 🟡 while *"5.3 LTS"* is **unverified** and `2026-10-05` is a
+*branching* date, not a release date. Open edX **changed its release-branch convention after Sumac** from
+`open-release/<name>.master` to `release/<name>` — so a glob on the old form silently stops at Sumac and
+never sees `teak`, `ulmo` or `verawood`, all three of which exist, settling a contradiction two prose
+sources could not.
+
+🔴 **`612-C` — the instrument failed again, fourth pass running.** This pass's own grant ladder was
+**case-sensitive**; the grant of `labmlai/annotated_deep_learning_paper_implementations` (`67,644★`) is at
+lower-case `license`, so the gate graded it `UNGRANTED` and the pass nearly published *"the platform
+field contradicts the bytes on a 67k-star repository"* — false, and very quotable. 🟢 Ladder now carries
+case variants; re-run over all `68` moved **exactly one row** and produced `68 of 68`. 🔵 `610-E`,
+`611-B`, `611-I`, now `612-C`: **the instrument, not the corpus.** 🟢 New mechanism worth recording — it
+was found *because* committed-instrument execution was denied as external code, forcing the gate to be
+re-authored line by line (`ingest/p612-grant-gate.sh`).
+
+🔴 **Forty-second consecutive global-leg nil, and the LATAM gap is now a measured absence.** All eight
+mandated legs were run; none yielded a new permissive education repository
+(`evidence/websearch-legs.2026-11-02-p612.tsv`). 🟢 They did yield the pass's most consequential external
+fact: **`(EU) 2026/1744`** (Digital AI Omnibus, in force `2026-07-27`) defers Annex III **education**
+high-risk to **`2027-12-02`** while leaving the obligations unchanged — Article `50` transparency is
+already live and watermarking is due `2026-12-02`. 🔴 For LATAM: `0 of 68` shippable-shaped candidates
+placed to the region, which is stronger than a search nil — the absence survives a census of material
+this base had already collected. Regional spend (`$105.6M` → `$204.7M` by `2029`) sits two orders of
+magnitude below global while consumer AI use in Brazil and Mexico exceeds `70 %`; 🟢 the architecture gap
+is zero and the Spanish/Portuguese **content** gap is everything (`P612-5`).
+
+🟢 **`5` patterns published**, each wired only from rows byte-read today: `P612-1` LMS integration via the
+LTI seam (`4`–`6` wk) · `P612-2` gradeable AI with a conformity file (`8`–`10` wk) · `P612-3` the
+institution's cited rulebook, already built three times in APAC (`3`–`5` wk) · `P612-4`
+policy-parameterised NA multi-jurisdiction deployment (`10`–`12` wk) · `P612-5` zero-marginal-cost LATAM
+delivery from non-LATAM parts (`6`–`8` wk).
+
+---
+
 ## Pass 611 — reads 2026-11-02, commit 2026-11-02 — **🔴 A CURATED LICENCE COLUMN IS NOT EVIDENCE, AND IT IS NOW MEASURED IN BOTH DIRECTIONS: ON THE SECTOR'S STANDARD HIGHER-ED INDEX — ALREADY ON THESE SHELVES — `1 of 5` PERMISSIVE CLAIMS SURVIVES A BYTE READ (`20 %`). ONE IS `AGPL-3.0` AT `84★`, THREE HAVE **NO GRANT PAYLOAD AT ALL**, AND A FOURTH ROW PUBLISHED AS `GPL-3.0` IS ACTUALLY **MIT**. 🟢 `9` ROWS PROMOTED (`6` AGENTS, `1` FOUNDATION, `2` VERTICALS), EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `4 of 4` FABRICATED CONTROLS AT `404 14 B`. 🟢 THE FIRST PERMISSIVE **PROVINCIAL** SYSTEM OF RECORD — A CANADIAN MINISTRY'S FINANCIAL-AID PLATFORM WITH A BUSINESS-RULES ENGINE, `Apache-2.0`. 🔴 `611-B`: THIS PASS'S CLASSIFIER MIS-GRADES **EVERY** `GPL-2.0` FILE AS `LGPL`, AND THE MECHANISM IS IN THE LICENCE TEXT. 🔴 `611-C`: A **NON-ASCII** DEFAULT BRANCH. 🟢 ALL FOUR REGIONAL LEGS PAID, TWO NEW JURISDICTIONS (VIETNAM, AUSTRALIA) AND LATAM QUANTIFIED AT `19`-COUNTRY SCALE. 🔴 THE GLOBAL LEGS RETURN THE **FORTY-FIRST** NIL — NOW WITH A DENOMINATOR ON BOTH AXES. NINE REGISTERED (`611-A`…`611-I`).**
 
 🔴 **The pass's load-bearing result is about the sector's information layer, not about a repository.**

@@ -3,6 +3,212 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p612` — reads `2026-11-02` — market map and regional placement
+
+🔴 **`598-G` — twelfth consecutive pass open, control unchanged.** `unesco.org`, `oecd.org` and the
+primary market-research PDFs remain unreachable from this session; 🔴 new this pass, **`moodledev.io` and
+`docs.openedx.org` also fail to resolve** (`ENOTFOUND`, outside the session's allowed domains). 🟢 Every
+figure below is therefore **secondary-source grade and labelled as such** — except the two things this
+pass read directly: grant/version bytes, and git refs.
+
+### 🔴 The market figure is a range, not a number, and the range is the finding
+
+| source | `2026` size | end state | CAGR |
+| --- | --- | --- | --- |
+| spread across four firms (roundup) | 🔴 **`$6.4B` – `$11.4B`** | — | — |
+| Precedence Research | `$9.58B` | `$136.79B` by `2035` | `34.52 %` |
+| Resourcera | `$10.4B` | `$32.27B` by `2030` | `31.2 %` |
+| HolonIQ (as reported) | 🔴 `$23B` **or** `$12.3B` — 🔴 **the same firm cited at two values** | — | — |
+
+🔴 **A `78 %` spread between the low and high `2026` estimate, and one firm quoted at two figures by two
+summaries.** 🟢 **Use the range in a client conversation, never a point.** The honest statement is
+*"independent estimates of AI-in-education for 2026 run from roughly `$6B` to `$11B`, and the
+`2030`-`2035` projections all imply a `31`–`35 %` CAGR"* — the growth rate is where the sources agree,
+and it is the part that matters for a build-vs-buy decision.
+
+🟡 Regional share, secondary: North America ≈ `36 %` of global; APAC fastest at ≈ `35.3 %` CAGR.
+🟡 Adoption, and the sources disagree here too: student use `88 %` / faculty `77 %` in a July-`2026`
+`35`-country survey, against another series showing `34 %` (`2023`) → `61 %` (`2026`). 🟢 Institution-wide
+higher-ed adoption `49 %` → `66 %` in one year (Ellucian) is the most decision-relevant of the three,
+because it is institutional budget rather than individual behaviour.
+
+## Opportunities by region
+
+### North America
+
+🔵 **The regulatory shape is `31` state legislatures, not one federal rule — and that is the
+opportunity.** `134` AI-in-education bills were introduced across `31` states in `2026`, described by
+the tracker as guardrails-and-transparency rather than adoption mandates. Ohio requires districts to
+have adopted a formal AI policy by `2026-07-01`; New York's `A.9190` would bar most classroom AI below
+grade `9`; SUNY (`64` campuses) approved a systemwide policy in spring `2026` with mandatory responsible-use
+training and AI literacy in general-education requirements from fall `2026`. 🔴 A White House national AI
+framework is reported to recommend that Congress **preempt** state law — 🟡 reported, not enacted, and it
+is the single biggest planning uncertainty in this region.
+
+🟢 **The opportunity is a policy-parameterised deployment, not a product.** A district consortium or a
+state system cannot buy a fixed-policy tool when the policy differs by state and changes by session.
+🟢 The architecture already exists, permissively, and this base holds it: `bcgov/SIMS` (`611-D`,
+`Apache-2.0`) ships a **business-rules engine built so policy change is not a rewrite**. 🟡 Stated limit:
+BC's rule *content* does not transfer, only the architecture.
+
+🟢 **The region's own permissive assets, promoted this pass:**
+[`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (`BSD-3-Clause`, `161★`, UC
+Berkeley, Python **and** R autograding at course scale),
+[`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)
+(`Apache-2.0`, University of Michigan's student-facing analytics dashboard),
+[`instructure/ims-lti`](https://github.com/instructure/ims-lti) (`MIT`, the Canvas vendor's own LTI
+library), [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) (`MIT`, Harvard's Canvas
+connector), and [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)
+(`Apache-2.0`, `609★`, with Learning Commons). 🔵 **Note the pattern: in North America the usable
+education code is published by universities and by the LMS vendor, not by startups.**
+
+### EMEA
+
+🟢 **`612`'s most consequential external fact: there is a `16`-month build window, and it closes
+`2027-12-02`.** Regulation **`(EU) 2026/1744`** (the Digital AI Omnibus) was published in the Official
+Journal `2026-07-24` and entered into force `2026-07-27`. It defers Annex III **high-risk** obligations —
+the annex that covers education — from `2026-08-02` to **`2027-12-02`**. Corroborated independently
+across Cooley, DLA Piper and Gibson Dunn. 🔴 **Only the dates moved.** Risk management, data governance,
+technical documentation, human oversight, conformity assessment and registration are unchanged.
+
+| what | date | status |
+| --- | --- | --- |
+| emotion-recognition ban in education; AI-literacy duty | `2025-02-02` | 🔴 **already binding** |
+| Article `50` transparency duties | `2026-08-02` | 🔴 **live and enforceable — not deferred** |
+| machine-readable watermarking, systems already on market | `2026-12-02` | 🔴 transitional period **ends in one month** |
+| Annex III high-risk for education | 🟢 `2027-12-02` | 🟢 deferred from `2026-08-02` |
+| Annex I embedded high-risk | `2028-08-02` | deferred from `2027-08-02` |
+
+🔴 **What is high-risk in education, verbatim:** admissions or placement; evaluating learning outcomes;
+assessing the level of education a person can attain; monitoring students for prohibited behaviour during
+tests. 🔴 **Schools are *deployers* and remain liable when the tool is a third party's**, and a non-EU
+vendor is in scope if its system reaches EU learners.
+
+🟢 **The opportunity is the conformity file, sold as engineering.** Most of the market will read a
+`2027-12-02` deadline as permission to wait, and will then need the documentation retrofitted onto a
+system that was not built to produce it. 🟢 Globant's play is to build the evidence trail as a
+by-product: `612-E`'s rubric tier
+([`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) evidence-linked,
+[`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) weighted,
+[`OpenEnvision/AutoRubric-as-Reward`](https://github.com/OpenEnvision/AutoRubric-as-Reward) for deriving
+defensible criteria from expert judgement) plus
+[`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) (`MIT`, `2,306★`) for the bias position.
+🔴 Note the one-month item above: **watermarking is due `2026-12-02`**, and that is the nearest deadline
+in this table.
+
+🟢 **The region's own permissive assets, promoted this pass:** the UK Department for Education publishes
+**three live national services** under `MIT` —
+[`apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training),
+[`teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies),
+[`get-into-teaching-app`](https://github.com/DFE-Digital/get-into-teaching-app) — and Oak National
+Academy publishes its **Aila** lesson-planning assistant at
+[`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) (`MIT`,
+pushed today). 🟢 Plus [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server)
+(`MPL-2.0`) and [`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13)
+(`Apache-2.0`). 🔵 **In EMEA the state is the reference implementation.** That is the opposite of the
+usual market map and it is the cheapest credibility an engagement can buy.
+
+### APAC
+
+🔵 **The fastest-growing region and the one where "national curriculum" is a literal engineering
+requirement.** South Korea's **AI Basic Act took effect `2026-01-22`** — the second comprehensive
+national AI law after the EU's. India plans compulsory AI and computational thinking **from Class `3` in
+`AY2026-27`**, backed by the IndiaAI Mission and teacher training. China and the UAE are reported as the
+only countries running compulsory national AI curricula since the `2025-26` school year; China also has
+the densest compliance stack (algorithm filings, synthetic-content labelling, security review for public
+models). Japan is deliberately voluntary — guidelines plus school pilots.
+
+🔴 **The cautionary case is Korea, and it is about product management, not policy.** The AI digital
+textbook rollout from `2025` was walked back to optional *"educational material"* status within a year
+after parent and teacher backlash over screen time and data. 🟢 **Read it as a requirement:** in APAC K-12,
+teacher and parent consent is a shipping dependency, and an offline or on-device mode is the mitigation —
+which is exactly what [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy)
+(`MIT`, fully offline on Ollama) demonstrates.
+
+🟢 **This is the region the backlog sweep placed most rows in, by a wide margin** — `6 of 9`
+region-placed agent rows this pass:
+[`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot)
+(Indonesia, `452★`, production RAG over a named university's handbook),
+[`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) (China,
+`Apache-2.0`, 🟢 **multi-tenant with per-tenant billing — the only commercial tenancy model on these
+shelves**), [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) (China, K-9
+RAG tutor), [`tanle-mtr/ChinaStudyFree`](https://github.com/tanle-mtr/ChinaStudyFree) (China, four
+clients, `148` textbooks, 🟢 EdgeTTS for zero-marginal-cost voice),
+[`callmevanshh/campusask`](https://github.com/callmevanshh/campusask) (India, IIIT Delhi rules, page-level
+citations), [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) (Taiwan, 學測 mock papers with
+solution re-verification) and [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam)
+(Indonesia, print-ready sheets for elementary teachers).
+
+🟢 **The transferable insight from the whole APAC set: every one of them is curriculum-specific and
+language-specific, and that is why they exist.** 🔵 The generic tutor does not win here; the one that
+knows the local exam does. 🟢 Three of them (`campusask`, `uajy-…`, `taiwan-exam`) are the *same*
+architecture — cited retrieval over an authoritative local document set — which is the single most
+reusable pattern in this region.
+
+### LATAM
+
+🔴 **This pass's LATAM result is a measured absence, and it is stronger than a search nil.** Of `68`
+shippable-shaped candidates drawn from a `848`-address census of material this base had already
+collected, 🔴 **`0` placed to LATAM.** The search leg also returned no permissive LATAM education
+repository, for the forty-second consecutive pass.
+
+🟡 Figures, with reliability stated. Enterprise AI adoption Q1-`2026`: Brazil `41 %`, Chile `34 %`,
+Argentina `29 %`, Colombia `24.5 %`, Mexico `20.1 %` — 🔴 low-trust source. Consumer/digital-user AI use
+above `70 %` in Brazil (~`76 %`) and Mexico (~`70 %`) per an EFE report. 🔴 **The decisive number:**
+MarketsandMarkets sizes LATAM AI-in-education at **`$105.6M` (`2024`) → `$204.7M` (`2029`)**, with Brazil
+and Mexico more than half — 🔴 **two orders of magnitude below the global `$6`–`11B`.** 🟢 That gap, not
+the growth rate, is the regional thesis: consumer adoption is at world-leading levels while institutional
+education spend is negligible, so the money is in **public-sector and large-private-network programmes**,
+not in per-seat licences.
+
+🟡 Players: HolonIQ's `2026` LATAM EdTech `100` names **Teachy** (Brazil, AI lesson preparation) and
+**Muyu Education** (Ecuador, teacher training); 🔴 neither publishes source. 🔴 OpenAI's *Education for
+Countries* first cohort of eight contains **no Latin American country** — 🟢 an opening, since the
+sovereign-programme slot is unfilled in the region.
+
+🔴 **Regulation: unresolved and recorded as such.** One source states Brazil's `PL 2338/2023` is approved;
+that contradicts other reporting that it remained in Congress. 🔴 **Not resolved here** — do not carry
+either claim into a client conversation. Mexico is described by a Colegio de México expert as lacking both
+regulation and the capacity to build it.
+
+🟢 **What to do about it, concretely.** The architecture gap is `0`; the **content and language** gap is
+everything. 🟢 Reuse the non-LATAM public-sector code — `bcgov/SIMS` (`Apache-2.0`, policy-rules engine)
+and the three UK DfE `MIT` services — and fill the Spanish/Portuguese layer using
+[`tanle-mtr/ChinaStudyFree`](https://github.com/tanle-mtr/ChinaStudyFree)'s route: `148` textbooks plus
+free EdgeTTS voice is why that platform can be free, and nothing in it is language-bound. 🔵 Pair with
+`callmevanshh/campusask`'s cited-retrieval-over-official-PDFs shape, which is how a ministry's own
+curriculum documents become a tutor without a content-licensing negotiation.
+
+### Global
+
+🔴 **The incumbents are copyleft, and that single fact structures every engagement.** Moodle is `GPL-3.0`
+(`7,570★`, default branch `main`); Open edX is `AGPL-3.0`. 🟢 **So the integration seam — LTI — is the
+commercial boundary**, and `612-D` promoted the full permissive tier for it: Ruby
+([`instructure/ims-lti`](https://github.com/instructure/ims-lti)), Python
+([`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)), Java/Spring
+([`oxctl/spring-security-lti13`](https://github.com/oxctl/spring-security-lti13)), .NET
+([`LtiLibrary/LtiAdvantagePlatform`](https://github.com/LtiLibrary/LtiAdvantagePlatform)) and TypeScript
+([`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl)). 🟢 One exception worth knowing:
+**the official Moodle *app* is `Apache-2.0`** ([`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp),
+`1,004★`) — the permissive surface of a copyleft incumbent is its mobile client.
+
+🔴 **Operational: both incumbents moved something that breaks tooling this year** (`612-G`, resolved from
+refs and bytes because the doc hosts are unreachable). Moodle **deleted root `version.php` at `5.x`** —
+it is `public/version.php` now (`$release = '5.3+ (Build: 20261030)'`, `$branch = '503'`), so every
+version probe keyed on the old path returns nothing; `4.5` remains built in parallel (`4.5.15+`, same
+build date), which is the LTS signature, 🟡 while *"5.3 LTS"* is **unverified**. Open edX **changed its
+release-branch convention after Sumac** from `open-release/<name>.master` to `release/<name>`, so a glob
+on the old form silently stops at Sumac and never sees `teak`, `ulmo` or `verawood` — all three of which
+exist, settling a contradiction two prose sources could not.
+
+🟢 **The licence-metadata question is now settled well enough to act on** (`612-B`): the platform's own
+`license.spdx_id` reproduced on grant bytes `68 of 68`, while `p611`'s curated third-party index managed
+`1 of 5` on permissive claims. 🟢 **Triage on the platform field; byte-read at the point of shipping;
+never trust a curated index.** That is what makes an `848`-address sweep affordable in a week-one
+engagement, and it is this pass's most directly billable result.
+
+---
+
 ## 🆕 `p611` — reads `2026-11-02` — market map and regional placement
 
 🔴 **`598-G` — eleventh consecutive pass open, and the control is unchanged.** `unesco.org`,
