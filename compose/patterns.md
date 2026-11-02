@@ -4,6 +4,165 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — reads `2026-11-02` — four recipes, each buildable from rows byte-read this pass
+
+🔵 Every repo named below had its license byte-read at `raw.githubusercontent.com` on the real
+default branch on **2026-11-02**, with `4 of 4` fabricated controls returning `NOT_FOUND` in the
+same pass. Byte counts are in `agents/top.md` under `p608`.
+
+---
+
+### `P608-1` — GDPR-safe AI grading line, no data-residency negotiation (EMEA)
+
+**The problem it solves:** EU institutions want AI-assisted marking but cannot ship identifiable
+student work to a model endpoint, and the school is the **deployer** under the AI Act — liability
+does not transfer to the vendor.
+
+**Wiring, left to right:**
+
+1. **De-identify before anything leaves the browser** —
+   [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) (**MIT**). `PDF.js` + `pdf-lib`, no
+   backend. Set redaction on page 1 per exam, choose **Micro-Text** second-page labels (chosen
+   specifically **not to interfere with vision/LLM OCR**), rasterise at **`2.6× High AI OCR`**.
+   Emits per-exam PDFs (`VER-001.pdf`…), the teacher's decoding key `legenda_docente.pdf`, and
+   `obfusca_grades.csv`. 🔵 **Nothing is uploaded — the residency question never arises.**
+2. **Score the objective items deterministically** — the `axomiya` rule: marking in **plain code,
+   not through the model**, so the numbers are exact and reproducible. Only free-text items go to
+   a model, and only in anonymised form.
+3. **Run the assessment session on a permissive engine** —
+   [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (**BSD-3-Clause**, `2,058 B`) for
+   QTI 3.0 delivery and candidate state.
+4. **Re-identify and write back locally** — join `obfusca_grades.csv` to the decoding key
+   *on the teacher's machine*, then push to the LMS.
+5. **LMS boundary — this is the licensing decision:** write back over API/LTI to
+   **Moodle** (GPL-3.0) or **Canvas**/**Chamilo**/**ILIAS** (**AGPL-3.0**) rather than forking
+   them. If any platform code must be modified, do it in
+   [`openedx/XBlock`](https://github.com/openedx/XBlock) (**Apache-2.0**, `11,358 B` at
+   **uppercase** `LICENSE.TXT`) or on **Sakai** (**ECL-2.0**) — the two permissive surfaces in the
+   tier.
+
+**Why now:** EU **Annex III** high-risk duties for assessment move to **2027-12-02** (Digital
+Omnibus, Reg. (EU) 2026/1744) — ~13 months of runway — while **chatbot transparency** already
+applies from **August 2026**. ⚠️ Confirm dates against the Official Journal before contracting.
+
+---
+
+### `P608-2` — the curriculum-bound citing tutor, built in APAC and retargetable to LATAM
+
+**The problem it solves:** the OECD `-17 %` result. A tutor that answers from the open world
+produces short-term gains that evaporate; a tutor bound to the actual textbook, citing it, does not
+have that failure mode available to it.
+
+**Wiring:**
+
+1. **Ingest the institution's own corpus** —
+   [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) (**MIT**, `v0.9.0`): documents →
+   queryable RAG → reasoning agent → self-maintaining wiki.
+   ⚠️ **Honour the Apache-2.0 third-party appendix inside its `LICENSE`** — attribution
+   obligations survive the MIT header.
+2. **Copy the pedagogy contract from** [`HaoyanZhang123/sproutask`](https://github.com/HaoyanZhang123/sproutask)
+   (**MIT**). Four rules worth lifting verbatim:
+   - every explanatory turn carries **source id + PDF page + printed page**;
+   - the **concept graph is separate from the table of contents**, and prerequisite edges carry a
+     basis — *never derived from chapter order*;
+   - **three independent axes** stored separately — progress, understanding-evidence, review
+     activity — and **self-report never enters a judgement**;
+   - **answers the tutor disclosed are marked as disclosed**, so the evidence stays honest.
+3. **Keep the Socratic default** —
+   [`1Zonghao/Si-Yuan-agent`](https://github.com/1Zonghao/Si-Yuan-agent) (**MIT**): open-ended
+   questioning, no direct answers, with an explicit escape hatch when the learner is stuck.
+4. **Model mastery properly** — [`duaabaig/HiSACKT`](https://github.com/duaabaig/HiSACKT)
+   (**MIT**, WI-IAT 2025) beside the held `pykt-team/pykt-toolkit` / `CAHLR/pyBKT` tier; benchmark
+   both on `ASSIST2015` before choosing.
+5. **Deliver inside the LMS** via **XBlock** (Apache-2.0) — the permissive component boundary
+   inside an AGPL platform.
+
+**🟢 The LATAM retarget, stated as the substitution it is:** swap the **人教版 2024 七年级上册生物学**
+pack for a **BNCC**-aligned corpus (Brazil) or an **SEP**-aligned one (Mexico), keep every rule in
+step 2 unchanged. 🔴 **This is a composition of APAC-origin code against LATAM curriculum, because
+this pass found no LATAM-origin permissive education-AI repository at all** — see
+`intel/market.md` → LATAM.
+
+---
+
+### `P608-3` — attributable AI use, instead of AI detection (North America)
+
+**The problem it solves:** **60 %** of US teachers use AI tools, **72 %** report integrity
+concerns, and most US public schools have **no formal student AI policy**. Detectors do not work.
+Visibility does.
+
+**Wiring:**
+
+1. **Put the tutor inside the assignment** —
+   [`dlealvilla/wildmind-ai-for-education`](https://github.com/dlealvilla/wildmind-ai-for-education)
+   (**MIT**): the teacher sees the prompts and exactly what the AI inserted. The artefact *is* the
+   audit trail, so no detection step is needed.
+2. **Close the assessment boundary** — adopt the
+   [`german-course`](https://github.com/yashvikram30/german-course) (**MIT**) rule: **the AI tutor
+   is disabled during exams**, with mock exams running real timings.
+3. **Keep the evidence separable** — the `sproutask` three-axis store, with disclosed answers
+   marked, so an integrity review can distinguish *the learner demonstrated this* from *the tutor
+   said it*.
+4. **Emit the policy artefacts the statutes actually name** — the deliverable is not a model, it is
+   a document set on dated deadlines: **NC Session Law 2026-41** (state model policy
+   **2026-12-31** → local policies **2027-06-30** → teacher PD **2028-06-30**) and **MD SB 720**
+   (aligned district policy + a designated **AI coordinator**).
+5. **Segment on policy posture, not size** — **SUNY** mandates AI literacy in general education
+   from **fall 2026**; **UC Berkeley Law prohibits** generative AI across most graded work. The
+   same configuration cannot serve both; the lockout in step 2 is what makes one product do it.
+
+---
+
+### `P608-4` — the low-resource-language tutor, where APAC has a real advantage
+
+**The problem it solves:** national-board students studying in a language the generic assistants
+answer poorly — and a mandated curriculum arriving on a fixed date (**India: AI compulsory from
+Class 3, 2026-27**).
+
+**Wiring:**
+
+1. **Language and content layer** —
+   [`LeeLanguageLab/HokkienTranslation`](https://github.com/LeeLanguageLab/HokkienTranslation)
+   (**MIT**) for the low-resource pattern: multimodal generation plus NLP-driven flashcards, with
+   two **NAACL 2025** System Demo papers behind the method (`2025.naacl-demo.2`,
+   `2025.naacl-demo.26`).
+2. **Board-specific loop** —
+   [`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion)
+   (**MIT**) for **SEBA/AHSEC** in **Assamese**: *explain (one local example + 3 exam points) →
+   quiz (3 MCQ) → **grade in plain Python, never by the model** → flag low-scoring topics for
+   revision.* ⚠️ Its generation is bound to the **BharatCode API** (`qwen-3.8-27b`) and its key —
+   **swap this for your own endpoint before any engagement**; that dependency is the one thing in
+   this recipe that is not portable.
+3. **Ground it in national material** — **DIKSHA** (NCERT + CIET) is open-source, curriculum-linked
+   and multilingual; ingest it through **WeKnora** (MIT). 🔵 DIKSHA's own AI surface is thin
+   (in-video keyword search, read-aloud for visually impaired learners) — which is precisely the
+   room to build in.
+4. **Explain visually when text fails** —
+   [`harjothkhara/whiteboard-tutor`](https://github.com/harjothkhara/whiteboard-tutor) (**MIT**):
+   voice in, voice out, drawing the explanation on a **tldraw** canvas one idea at a time.
+5. **Onboarding and newcomer support** —
+   [`ME-Massine/azure-ai-student-support`](https://github.com/ME-Massine/azure-ai-student-support)
+   (**MIT**) for explaining school rules and procedures at the learner's language proficiency.
+   🔵 Holder region **not placed** — no holder evidence in repo, README or license.
+
+---
+
+### 🔴 What cannot be wired yet, and why — so no recipe quietly assumes it
+
+| missing piece | best candidate found this pass | blocker |
+| --- | --- | --- |
+| **Education-agent evaluation** (tool use, policy, safety) | [`wxxxqcy/ai-learning-assistant`](https://github.com/wxxxqcy/ai-learning-assistant) | 🔴 **no license file** — `8,045 B` README, nothing at four names on either branch |
+| **Curriculum-standards index** | [`NBrangerF/curriculum-standards-breakdown`](https://github.com/NBrangerF/curriculum-standards-breakdown) | 🔴 **no license file** (updated today) |
+| **Accessible-format transformation** (US ADA, April 2026) | `PreethamGM04/AccessLearn-` | 🔴 **no license file** |
+| **African-origin education AI** | `abaridodo/ai4africa`, `abaridodo/makaranta` | 🔴 **both unlicensed** — found, unusable |
+| **LATAM-origin education AI** | — | 🔴 **nil across `81` enumerated rows + ES/PT legs** |
+
+🔵 Every one of these is a **grant** problem, not a capability problem. Four of the five have a
+maintainer who could be asked for terms — which makes them the cheapest unblocking work available
+to this base.
+
+---
+
 ## 🆕 `p607` — `2026-11-02` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ IN THIS PASS WITH ITS GRANT, BRANCH AND REGION. 🟢 `P607-1` IS A **PERMISSIVE END-TO-END ASSESSMENT STACK** — ENGINE, PLAYER AND LIBRARIES, FOUR INDEPENDENT HOLDERS, NO COPYLEFT BOUNDARY — WHICH THIS BASE COULD NOT BUILD BEFORE `607-I`. 🟢 `P607-2` IS THE **PROVENANCE LAYER** `T607-1` ARGUES IS THE MOST REGION-PORTABLE COMPONENT IN THE SECTOR. 🟢 `P607-3` REPLACES THIS BASE'S HAND-ROLLED LICENCE GRADING WITH THE APACHE-2.0 CLASSIFIER SITTING IN ITS OWN BACKLOG.**
 
 ### 🟢 Component grants, all byte-read `2026-11-02` at the real default branch, every control `404 14 B`

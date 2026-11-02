@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — reads `2026-11-02` — current trends
+
+### 🔴 The trend that contradicts the other trends
+
+Every vendor source this pass describes 2026 as the year AI became **embedded infrastructure** in
+education. The OECD's *Digital Education Outlook 2026* says the measured learning gain is not
+there: benefits **disappear or reverse when AI access is removed**, with prior-AI-access students
+performing **up to 17 % worse** than never-exposed peers, and the report's own framing is
+*technology does not equal transformation*. ⚠️ Read via secondary summaries — the OECD PDF and
+`digital-skills-jobs.europa.eu` are both unreachable from this session.
+
+🔵 **Hold both at once:** procurement is accelerating while the efficacy evidence is turning
+negative for *unbounded* assistance. That is not a reason to stop selling; it is the reason the
+**bounded** designs below are suddenly the defensible ones.
+
+### The trends, with what this pass actually found attached
+
+| # | trend | what `p608` measured |
+| --- | --- | --- |
+| 1 | **From experimentation to governance** — the question is no longer *whether* but *under what conditions* | 🟢 Confirmed by dates, not opinion: NC **Session Law 2026-41** (2026-12-31 / 2027-06-30 / 2028-06-30), EU Annex III → **2027-12-02**, India **Class 3 from 2026-27**, China **effective 2026-07-15** |
+| 2 | **Bounded > general-purpose** — education-specific platforms beat generic chat | 🟢 **Strongest repository signal of the pass.** `sproutask` binds every explanation to a **verified textbook pack with source id + PDF page + printed page**; `HaoyanZhang123` states the design rule outright — *judgements rest on recorded evidence rather than on message counts* |
+| 3 | **Agentic workflows** — plan a sequence, find resources, draft assessment for teacher review | 🟢 Present, and now with a permissive ingestion layer underneath it: [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) (MIT) |
+| 4 | 🆕 **Attributable AI use replaces AI detection** | 🟢 **New this pass.** [`wildmind-ai-for-education`](https://github.com/dlealvilla/wildmind-ai-for-education) (MIT): *"AI isn't the problem. Invisible AI usage is"* — the tutor lives **inside** the assignment so the teacher sees the prompts and the inserted text. 🔵 This is the architectural reply to the **72 %** integrity figure, and it does not require a detector that does not work |
+| 5 | 🆕 **Integrity boundaries compiled into the product** | 🟢 [`german-course`](https://github.com/yashvikram30/german-course) (MIT) **disables the AI tutor during exams** and runs Goethe A1 Modelltests at real timings. 🔵 Expect this to become a procurement checkbox once EU Annex III assessment duties bite in **2027-12** |
+| 6 | 🆕 **Deterministic grading beside the model, not inside it** | 🟢 [`axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion) (MIT) marks answers in **plain Python, not through the LLM, "so scores are always exact."** 🔵 The cheapest way to make a grading claim auditable |
+| 7 | **Adaptive personalisation** — maturing from promise to proven benefit | 🟡 Shelf effect: a **second** peer-reviewed KT model arrives on the held benchmark surface — [`HiSACKT`](https://github.com/duaabaig/HiSACKT) (MIT, WI-IAT 2025) on `ASSIST2009/2015`, `Algebra2005`, `Statics2011` — so the tier has a challenger, not just a reference impl |
+| 8 | **Privacy-by-construction** | 🟢 [`obfusca`](https://github.com/Bradwave/obfusca) (MIT): identity stripped from exam PDFs **in the browser**, nothing uploaded, redaction codes tuned not to corrupt vision/LLM OCR. 🔵 An EMEA-origin answer to a GDPR constraint that needs **no data-residency negotiation at all** |
+| 9 | **Low-resource language coverage as the APAC differentiator** | 🟢 **Taiwanese Hokkien** ([`HokkienTranslation`](https://github.com/LeeLanguageLab/HokkienTranslation), MIT, 2× NAACL 2025 demos) and **Assamese** (`axomiya`, MIT). 🔵 Both are *national-board or named-dialect* specific — the opposite of the generic multilingual claim |
+| 10 | **Credentials and skills-based pathways** | 🟡 Reported by 1EdTech; **no permissive repository found** on this shelf for credentialing this pass |
+| 11 | **Accessibility compelled by deadline** | 🟡 US **ADA** obligations land **April 2026**. 🔴 The matching code is unusable: `PreethamGM04/AccessLearn-` (accessible-format transformation) ships **no license file** |
+
+### 🔴 The counter-trend nobody is selling: `16 %` of this industry's new code has no grant
+
+`13 of 81` repositories enumerated this pass carry **no license file at any of four names on either
+branch** — README present, grant absent. The unlicensed rate is now this shelf's **largest single
+source of loss**, ahead of copyleft and ahead of irrelevance. The two most painful:
+
+- 🔴 [`wxxxqcy/ai-learning-assistant`](https://github.com/wxxxqcy/ai-learning-assistant) — an
+  **end-to-end evaluation framework for education agents** covering tool use, policy and safety.
+  The exact tier this base has recorded as missing for many passes. **No license.**
+- 🔴 [`NBrangerF/curriculum-standards-breakdown`](https://github.com/NBrangerF/curriculum-standards-breakdown)
+  — a structured, searchable index of the **2022 compulsory-education curriculum standards**,
+  updated **today**, `14,416 B` README. **No license.**
+
+🔵 **The trend statement:** education-AI is being written faster than it is being licensed. For a
+studio, the binding constraint in this industry is shifting from *"does the capability exist"* to
+*"did anyone grant it"* — and that is a question a search engine never answers and a byte-read
+always does.
+
+### 🔴 Measurement caveat on this pass's own instrument
+
+A naive license probe run blind against the platform tier produced **three false negatives**
+(`XBlock` filed ungranted because its grant sits at **uppercase** `LICENSE.TXT`; `moodle` filed
+grantless because GPL-3.0 lives at `COPYING.txt`; `sakai` unclassified because **ECL-2.0 contains
+zero occurrences of the string `Apache License`**). All three were traps this base had already
+registered, and the base's column was right in all three. 🔵 **A license probe under-reports
+permissive grants** — in the one direction that costs a studio options.
+
+---
+
 ## 🆕 `p607` — `2026-11-02` — **🟢 THE TREND WITH THE MOST BUILD VALUE IS A CONVERGENCE: THREE REGIONS, THREE UNRELATED LEGAL TRADITIONS, ONE OBLIGATION — **PROVENANCE LABELLING** — EACH WITH A DATED INSTRUMENT. 🟢 AND THE SECOND IS A GOVERNANCE INVERSION MEASURED ON BOTH SIDES: IN LATAM, TEACHER ADOPTION (`>50 %`) EXCEEDS INSTITUTIONAL POLICY (`<10 %`) BY MORE THAN `5×`. 🔴 A METHODOLOGICAL TREND, FOURTH PASS RUNNING: THE INSTRUMENTS ARE STILL THE WEAK LINK — AND THIS PASS MEASURED ONE OF THIS BASE'S OWN GATES AT `0.0 %` PRECISION.**
 
 ### 🟢 `T607-1` — provenance labelling is the one obligation three legal traditions converge on (high confidence — three dated instruments, three regions)

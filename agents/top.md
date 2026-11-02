@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `11` NEW PERMISSIVE AGENT ROWS, EVERY LICENSE BYTE-READ TODAY, `4 of 4` FABRICATED CONTROLS AT `NOT_FOUND`. 🔴 `608-A`: THE RUN PROMPT'S OWN PRESCRIBED CHECK (`curl -sI github.com/...`) RETURNS `403` FOR A REAL REPO **AND** FOR A FABRICATED ONE — IT CANNOT DISCRIMINATE IN THIS ENVIRONMENT AND WAS REPLACED. 🔴 `608-B`: A FIRST-MATCH LICENSE CLASSIFIER CALLED `Tencent/WeKnora` APACHE; IT IS **MIT** WITH AN APACHE THIRD-PARTY APPENDIX. 🔴 `608-C`: AN `MIT` LICENSE FILE WHOSE OWN README DECLARES THE REPO `PRIVATE`. 🔴 LATAM RETURNS A REPOSITORY-LEVEL NIL, STATED.**
+
+### 🔴 `608-A` — the prescribed verification check is inert here, and that had to be found before any row was written
+
+The run prompt specifies `curl -sI` per URL. Measured this pass, against this session's egress proxy:
+
+| probe | `curl -sI https://github.com/…` | `raw.githubusercontent.com` byte-read |
+| --- | --- | --- |
+| `HKUDS/DeepTutor` (real, held `6×` on this shelf) | 🔴 **`403`** | 🟢 `200`, `11,408 B` |
+| `Tencent/WeKnora` (real, new this pass) | 🔴 `403` | 🟢 `200`, `15,290 B` |
+| `fakeorg-zzz999/fake-education-agent` (fabricated control) | 🔴 **`403`** | 🟢 `NOT_FOUND` |
+| `openai/totally-not-real-edu-repo` (fabricated control) | 🔴 **`403`** | 🟢 `NOT_FOUND` |
+
+🔵 **The rule this leaves:** in this environment a `403` from `github.com` carries **no information about existence** — real and invented slugs are indistinguishable through it. A pass that had treated "not 404" as "verified" would have promoted invented rows while believing it had checked them. The GitHub REST API is also closed to this session (`403`, *"GitHub access to this repository is not enabled for this session"*), so **every license and description below was read from `raw.githubusercontent.com` at the real default branch**, with byte counts recorded, and every row carries `4 of 4` fabricated controls returning `NOT_FOUND` in the same pass.
+
+### 🟢 `11` new rows — all byte-read `2026-11-02`, none previously on this shelf
+
+| Agent | Repo | License (byte-read) | Region | What it actually does |
+| --- | --- | --- | --- | --- |
+| WeKnora | [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 🟢 **MIT** `15,290 B` ⚠️ *Apache-2.0 third-party appendix* | APAC (Tencent) | Turns raw documents into a queryable RAG, an autonomous reasoning agent and a self-maintaining wiki. `v0.9.0`; docs in EN/简体中文/日本語/한국어. The content-ingestion tier the course-generation recipes here kept assuming |
+| SproutAsk · 芽问 | [`HaoyanZhang123/sproutask`](https://github.com/HaoyanZhang123/sproutask) | 🟢 **MIT** `1,093 B` | APAC (China) | Local-first biology tutor on the DSH runtime, bound to a verified 人教版 2024 七年级上册生物学 pack. **Explanatory turns cite source id + PDF page + printed page**; progress, understanding-evidence and review are three separate stored axes; self-report never enters a judgement; **answers the tutor disclosed are marked as disclosed** |
+| 思源 Si-Yuan | [`1Zonghao/Si-Yuan-agent`](https://github.com/1Zonghao/Si-Yuan-agent) | 🟢 **MIT** `1,071 B` | APAC (China) | Socratic questioning agent that **refuses to hand over answers** — multi-turn open-ended questioning to build the argument chain. Python/Flask, bilingual README |
+| ATAIGI / HokkienTranslation | [`LeeLanguageLab/HokkienTranslation`](https://github.com/LeeLanguageLab/HokkienTranslation) | 🟢 **MIT** `1,074 B` | APAC (Taiwan) | Low-resource **Taiwanese Hokkien** learning: multimodal generation + NLP-driven flashcards. **Two NAACL 2025 System Demo papers** (`2025.naacl-demo.2`, `2025.naacl-demo.26`). React Native/Expo |
+| Axomiya Study Companion | [`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion) | 🟢 **MIT** `1,068 B` | APAC (India · Assam) | SEBA/AHSEC companion explaining in **Assamese** with local examples. 🔵 **Grading runs in plain Python, not through the model, so scores are exact** — then flags low-scoring topics for revision. ⚠️ Generation is bound to the BharatCode API (`qwen-3.8-27b`) and its key |
+| HiSACKT | [`duaabaig/HiSACKT`](https://github.com/duaabaig/HiSACKT) | 🟢 **MIT** `1,118 B` | EMEA (INSA Lyon · LIRIS) | Official implementation, **WI-IAT 2025**: hierarchical self-attention + dynamic skill clustering for knowledge tracing. Runs on `ASSIST2009`, `ASSIST2015`, `Algebra2005`, `Statics2011` — the same benchmark surface as the `pyKT` tier already held here |
+| Obfusca | [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) | 🟢 **MIT** `1,071 B` | EMEA (Italy) | **100 % in-browser, GDPR-safe PDF exam anonymiser built for AI-assisted grading.** `PDF.js` + `pdf-lib`, no backend, nothing uploaded. Per-exam redaction, micro-text codes chosen **not to interfere with vision/LLM OCR**, selectable rasterisation (`1.5×`/`2.0×`/`2.6× High AI OCR`), and it emits the teacher's decoding key plus a grades CSV |
+| Deutsch von Anfang an | [`yashvikram30/german-course`](https://github.com/yashvikram30/german-course) | 🟢 **MIT** `1,067 B` | EMEA (German A1) | 13 chapters (~49k words), ~90 self-marking worksheets, ~600-word five-box SRS, **four full Goethe A1 Modelltests at real exam timings**. 🔵 **The AI tutor is disabled during exams** — an integrity boundary built into the product, not bolted on. Next.js + SQLite, fully local |
+| Whiteboard Tutor | [`harjothkhara/whiteboard-tutor`](https://github.com/harjothkhara/whiteboard-tutor) | 🟢 **MIT** `1,499 B` | Global | Voice-in/voice-out tutor that **draws the explanation on a [tldraw](https://tldraw.dev) canvas one idea at a time**, on the tldraw agent starter kit. Model-swappable (Claude / GPT / Gemini) |
+| WildMind AI for Education | [`dlealvilla/wildmind-ai-for-education`](https://github.com/dlealvilla/wildmind-ai-for-education) | 🟢 **MIT** `1,077 B` | 🔵 Global — **holder not placed** | *"AI isn't the problem. Invisible AI usage is."* The tutor lives **inside the assignment**, so the teacher sees the prompts and exactly what the AI inserted. TypeScript/React/Prisma. 🔵 The only row on this shelf whose design target is **attributable** AI use |
+| AI Student Support Navigator | [`ME-Massine/azure-ai-student-support`](https://github.com/ME-Massine/azure-ai-student-support) | 🟢 **MIT** `1,065 B` | 🔵 Global — **holder not placed** | Explains school rules, administrative procedure and support services to **newly arrived and multilingual students**, adapted to age range and language proficiency. Azure AI Language. MVP-stage |
+
+🔵 **Two rows are deliberately left at `Global`.** `wildmind-ai-for-education` and `azure-ai-student-support` carry no holder evidence in repo, README or license — and the newcomer-integration use case of the latter is EMEA-typical without being EMEA-*evidenced*. Guessing a region from a username is how a closed vocabulary turns into wrong data, so both stay unplaced and say so.
+
+### 🔴 `608-B` — a license file that contains a second license defeats a first-match classifier
+
+`Tencent/WeKnora`'s README badge reads `license-MIT`. A first-match scan of its `LICENSE` hit `Apache License` and labelled the repo Apache-2.0. Both readings are wrong about the whole:
+
+| line | content | what it governs |
+| --- | --- | --- |
+| `7` | *" WeKnora is licensed under the MIT except for the third-party components listed below."* | 🟢 **the project — MIT** |
+| `34` | *"builds upon the following open-source software components, each of which remains licensed under its original license"* | the appendix boundary |
+| `49` | `Apache License` | ⚠️ **bundled third-party components only** |
+
+🔵 **The rule this leaves:** file size did not settle it either — `15,290 B` is neither the `1,067 B` of a stock MIT nor the `11,357 B` of a stock Apache, because it is **MIT body + Apache appendix**. A license file must be read for *scope*, not pattern-matched for *family*. This is the same class as `p607`'s `NOASSERTION` findings, arriving from the opposite direction: there the API under-read a real grant, here a classifier over-read an appendix.
+
+### 🔴 `608-C` — `4` rejections measured on terms, not on relevance
+
+| repo | what the byte-read found | verdict |
+| --- | --- | --- |
+| [`shengdabai/Chinese-Learning`](https://github.com/shengdabai/Chinese-Learning) | 🟢 `LICENSE` is a **stock MIT**, `1,080 B`, © 2026 Tony Sheng — 🔴 but its own README states `**Visibility: PRIVATE**`, *"Private/internal repository. Treat it as an internal work asset unless the owner explicitly decides to publish it"*, `License: Private/internal terms` | 🔴 **conflict — not promoted.** An MIT file does not settle terms when the holder's own README withdraws them |
+| [`JonScott79/Pythos`](https://github.com/JonScott79/Pythos) | 🔴 **"PYTHOS FREE EDUCATION LICENSE" v2.0**, `34,087 B`, © 2026 Jon Scott / LANZAR — a custom, non-OSI grant | 🔴 **rejected.** `34,087 B` is GPL-sized and is not a GPL — file size is not family, again |
+| [`ValeraZSD/terramentor`](https://github.com/ValeraZSD/terramentor) | 🔴 **AGPL-3.0**, `34,522 B` | 🔴 **copyleft boundary** — out of scope for the MIT/Apache/BSD build surface this shelf exists to serve |
+| [`nexika/nexika`](https://github.com/nexika/nexika) | 🟢 **MIT**, `1,068 B`, release `0.4` (2026-10-11) | 🔴 **rejected on relevance.** Twelve Claude Code add-ons of which *one* is a coding tutor; it is developer tooling that a topic page filed under education |
+
+### 🔴 `608-D` — the unlicensed tier is where this pass lost the most
+
+`13` enumerated repositories had **no license file at any of `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` on either `main` or `master`** — README present and byte-read, grant absent. They cannot be built on, so they are recorded rather than shelved:
+
+`NBrangerF/curriculum-standards-breakdown` (`14,416 B` README, updated **today**) · `Amitdutta121/Universal_adaptive_trainer` · `wxxxqcy/ai-learning-assistant` · `yahiacuda/Lesson-Rag-Agent` · `jwj1342/Paper2Manim` · `schnitzlermandy85-beep/course-grounded-tutor` · `SherlockMF/lomi-english-learning` (`30,563 B` README) · `AkshunyaB/autograder` · `sarthak-003/AutoGrader` (`27,179 B` README) · `Osigelialex/Automated-Code-Grader-Backend` · `PreethamGM04/AccessLearn-` · `abaridodo/ai4africa` · `abaridodo/makaranta`
+
+🔴 **The one that hurts:** `wxxxqcy/ai-learning-assistant` describes an **end-to-end evaluation framework for education agents covering tool use, policy and safety** — precisely the eval tier this base has recorded as missing for many passes. It has no license file. The gap stays open, and now it is open for a *known* reason.
+
+### 🟢 Prior flags re-read independently this pass — all three hold
+
+| repo | what this base already recorded | `p608` byte-read |
+| --- | --- | --- |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | code-MIT / prompts-CC-BY-4.0 / **corpora CC BY-NC-SA 4.0 — non-commercial** | 🟢 **confirmed verbatim**, `LICENSE.md` `1,614 B`. The NC boundary sits on the annotated **CLEAR** and **PERSUADE 2.0** corpora, not the code |
+| [`brahm-ai-official/brahm-ai`](https://github.com/brahm-ai-official/brahm-ai) | **proprietary, declared**, `21,119 B`, `Ramcoin Foundation` | 🟢 **confirmed**, `21,118 B` read today: *"BRAHM-AI Proprietary License"* v1.0, `LicenseRef-BRAHM-AI-Proprietary`, *"Royal Web 3 Blockchain Ecosystem"* |
+| [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) | ⚠️ **PySilicon Research License** (custom, no OSI) | 🟢 **confirmed**, `1,223 B`: non-commercial research/academic/educational use only, *"may not be used … for commercial purposes without prior written permission"* |
+
+🔵 Three independent re-reads, three matches. Prior passes' license column is holding up under re-measurement — which is the only evidence that makes the rest of this shelf worth trusting.
+
+---
+
 ## 🆕 `p607` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `12` AGENT ROWS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `28 of 28` FABRICATED CONTROLS AT `404 14 B`. 🔴 `607-C`: THE BACKLOG'S DEBT RE-MEASURED AT `104 of 219` (`47.5 %`) AND **`5` OF THOSE SLUGS ARE NOT REPOSITORIES** — `603-A`'s CLASS IN ITS **THIRD** ARTIFACT, THIS TIME INSIDE THE COMMITTED LEDGER, AND TWO OF THEM ARE THIS BASE'S OWN `evidence/` PATHS. 🔴 `607-A`: THE GLOBAL LEGS RETURN THE **THIRTY-SEVENTH** CONSECUTIVE NIL, PROVEN ROW-BY-ROW. 🔴 `1` ROW DISQUALIFIED ON RELEVANCE AT `259,581★`.**
 
 ### 🔴 `607-A` — the thirty-seventh nil, and this time the proof is row-by-row

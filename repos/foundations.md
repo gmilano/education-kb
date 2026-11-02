@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — reads `2026-11-02` — **🟢 THE CONTENT-INGESTION TIER FINALLY HAS A PERMISSIVE, VENDOR-BACKED REPO. 🟢 A SECOND KT MODEL ON THE HELD BENCHMARK SURFACE. 🔴 THE EVAL TIER STAYS EMPTY — THIS TIME BECAUSE THE BEST CANDIDATE SHIPS NO LICENSE.**
+
+### 🟢 The central result — the gap between "documents" and "course" closes permissively
+
+Every course-generation recipe on this base has assumed a step it could not name: get the
+institution's own PDFs, slides and recordings into something an agent can query and cite. `p608`
+fills it with a vendor-maintained MIT project.
+
+| | before `p608` | 🆕 `p608` |
+| --- | --- | --- |
+| permissive doc→RAG→agent→wiki platform | 🔴 **none shelved** | 🟢 [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) — **MIT**, `15,290 B` byte-read, `v0.9.0` |
+| maintainer | — | 🟢 **Tencent** (vendor-backed, not one maintainer) |
+| i18n of the docs | — | 🟢 EN · 简体中文 · 日本語 · 한국어 |
+| 🔴 the catch | — | ⚠️ **bundled third-party components remain Apache-2.0** under an appendix in the same `LICENSE` — attribution obligations survive the MIT header |
+
+### 🟢 New foundational rows — all byte-read `2026-11-02`
+
+| Repo | License (byte-read) | Region | Why it is foundational |
+| --- | --- | --- | --- |
+| [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 🟢 **MIT** `15,290 B` ⚠️ Apache-2.0 appendix | APAC | The ingestion + retrieval + self-maintaining-wiki layer under every "tutor that must cite the course material" recipe here |
+| [`duaabaig/HiSACKT`](https://github.com/duaabaig/HiSACKT) | 🟢 **MIT** `1,118 B` | EMEA (INSA Lyon · LIRIS) | **Second** independent KT model on this base's existing benchmark surface (`ASSIST2009`/`ASSIST2015`/`Algebra2005`/`Statics2011`). Hierarchical self-attention + dynamic skill clustering, **WI-IAT 2025**. Gives the `pyKT`/`pyBKT` tier a peer-reviewed challenger rather than a single reference implementation |
+| [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) | 🟢 **MIT** `1,071 B` | EMEA (Italy) | The **pre-processor** the grading tier never had: strips identity from exam PDFs *in the browser* before anything reaches a model, and is explicitly tuned so its redaction codes do not corrupt vision/LLM OCR. Zero-backend means it adds no data-residency surface |
+| [`harjothkhara/whiteboard-tutor`](https://github.com/harjothkhara/whiteboard-tutor) | 🟢 **MIT** `1,499 B` | Global | Reference wiring for **agent-draws-on-canvas** on the tldraw agent starter kit, with voice both ways. The nearest thing on this shelf to a reusable "explain it visually" substrate |
+
+### 🔴 The eval tier: still empty, and now the reason is on the record
+
+`p607` and several passes before it recorded *"no dominant OSS agent eval/observability"* for this
+industry. This pass enumerated the best-fitting candidate yet found —
+[`wxxxqcy/ai-learning-assistant`](https://github.com/wxxxqcy/ai-learning-assistant), described as an
+**end-to-end evaluation framework for education agents covering tool use, policy and safety tests**
+— and byte-read it: `8,045 B` README, 🔴 **no license file at `LICENSE`, `LICENSE.md`,
+`LICENSE.txt` or `COPYING` on `main` or `master`.**
+
+🔵 **The distinction matters for a studio:** the tier is not empty because nobody built the thing.
+It is empty because the thing that exists carries no grant. That is a *contactable* gap — an
+engagement can ask the author for terms — where "unfound" was not.
+
+### 🟢 Prior license flags re-read, independently — all hold
+
+`learning-commons-org/knowledge-graph` re-read today at `5,788 B`: 🟢 **code MIT**, 🔴 **datasets
+not uniformly licensed** — each carries an access type (`Open`, `Open + Gated`, `Gated`) and the
+file states plainly that *"**Open + Gated** and **Gated** content are not covered by CC BY 4.0, CC0,
+or any other open license referenced here."* The base's existing `knowledge-graph MIT-code`
+shorthand is 🟢 accurate and the gating boundary is 🟢 as recorded.
+
+---
+
 ## 🆕 `p607` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `10` FOUNDATION REPOS PROMOTED, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH WITH A PER-REPO FABRICATED CONTROL AT `404 14 B`. 🟢 `607-D`: A **NEW GRANT SHAPE**, AND THIS PASS FOUND IT AT **BOTH ENDS OF THE FILE** — PROSE *BEFORE* THE LICENCE TEXT (BSD-3-CLAUSE, UNIVERSITY OF EDINBURGH) AND A SCOPE NOTE *AFTER* IT (MIT FOR CODE, NOT FOR DATA). BOTH ARE GRADED `NOASSERTION` BY THE API AND **`MIT`/`BSD` BY EVERY GREP READER HERE**. 🟢 `607-E`: THE LATAM NATIONAL LEG `606-H` ASKED FOR SUPPLIED `2` ADDRESSES THIS BASE HAS NEVER HELD. 🔴 `4` NOT PROMOTED, WITH REASONS.**
 
 ### 🟢 `607-D` — adjacent prose defeats template identity, at either end of the grant

@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — `2026-11-02` — GitHub trending, measured by topic page rather than by roundup
+
+### 🟢 The channel ledger for this pass
+
+`4` topic pages were enumerated at `?o=desc&s=updated`. **`81` rows seen, `44` absent from this
+shelf, `11` ceded a permissive grant, `17` rejected on measured terms, `13` carried no license
+file at all.**
+
+| channel | rows enumerated | absent from shelf | 🟢 promoted | 🔴 rejected (terms) | 🔴 no license file |
+| --- | --- | --- | --- | --- | --- |
+| `github.com/topics/ai-in-education` | `21` | `11` | 🟢 `0` | `2` | `2` |
+| `github.com/topics/ai-for-education` | `19` | `12` | 🟢 `5` | `2` | `3` |
+| `github.com/topics/education-ai` | `20` | `11` | 🟢 `1` | `3` | `5` |
+| `github.com/topics/ai-tutor` | `20` | `10` | 🟢 `5` | `3` | `3` |
+| 🔴 generalist search legs (`4` shapes, global) | — | — | 🔴 **`0`** | — | — |
+| 🔴 `github.com/trending` (official) | 🔴 **not reachable** — `curl -sI` on `github.com` returns `403` for everything in this session | — | — | — | — |
+
+🔵 **Seventh consecutive pass in which the topic pages outperform every other channel, and the
+generalist legs return zero.** The official `github.com/trending` page cannot be read from this
+session at all, so "GitHub trending" on this shelf means **topic pages sorted by recency**, and is
+labelled as such rather than implying the official ranking.
+
+### 🟢 Promoted this pass — license byte-read, region placed
+
+| Repo | ★ | License (byte-read) | Region | Last updated |
+| --- | --- | --- | --- | --- |
+| 🟢 [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | — | 🟢 **MIT** `15,290 B` ⚠️ Apache appendix | APAC | `v0.9.0` |
+| 🟢 [`LeeLanguageLab/HokkienTranslation`](https://github.com/LeeLanguageLab/HokkienTranslation) | `11` | 🟢 **MIT** `1,074 B` | APAC (Taiwan) | 2026-01-06 |
+| 🟢 [`HaoyanZhang123/sproutask`](https://github.com/HaoyanZhang123/sproutask) | `2` | 🟢 **MIT** `1,093 B` | APAC (China) | 2026-10-30 |
+| 🟢 [`1Zonghao/Si-Yuan-agent`](https://github.com/1Zonghao/Si-Yuan-agent) | `2` | 🟢 **MIT** `1,071 B` | APAC (China) | 2026-03-18 |
+| 🟢 [`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion) | `3` | 🟢 **MIT** `1,068 B` | APAC (India · Assam) | 2026-11-02 |
+| 🟢 [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) | `0` | 🟢 **MIT** `1,071 B` | EMEA (Italy) | 2026-10-30 |
+| 🟢 [`duaabaig/HiSACKT`](https://github.com/duaabaig/HiSACKT) | `0` | 🟢 **MIT** `1,118 B` | EMEA (France) | 2025-10-16 |
+| 🟢 [`yashvikram30/german-course`](https://github.com/yashvikram30/german-course) | `2` | 🟢 **MIT** `1,067 B` | EMEA (DE A1) | 2026-11-02 |
+| 🟢 [`harjothkhara/whiteboard-tutor`](https://github.com/harjothkhara/whiteboard-tutor) | `0` | 🟢 **MIT** `1,499 B` | Global | 2026-11-02 |
+| 🟢 [`dlealvilla/wildmind-ai-for-education`](https://github.com/dlealvilla/wildmind-ai-for-education) | `0` | 🟢 **MIT** `1,077 B` | Global (unplaced) | 2026-11-02 |
+| 🟢 [`ME-Massine/azure-ai-student-support`](https://github.com/ME-Massine/azure-ai-student-support) | `0` | 🟢 **MIT** `1,065 B` | Global (unplaced) | 2026-01-07 |
+
+🔵 **Nine of eleven promotions sit under `5 ★`.** This shelf's yield has moved decisively into the
+low-star, recently-updated band — which is exactly the band a roundup article never covers and a
+recency-sorted topic page always does.
+
+### 🔴 Rejected on measured terms
+
+| Repo | ★ | What the byte-read found | Region |
+| --- | --- | --- | --- |
+| 🔴 [`JonScott79/Pythos`](https://github.com/JonScott79/Pythos) | `0` | **"PYTHOS FREE EDUCATION LICENSE" v2.0**, `34,087 B`, LANZAR — custom, non-OSI | Global |
+| 🔴 [`ValeraZSD/terramentor`](https://github.com/ValeraZSD/terramentor) | `4` | **AGPL-3.0**, `34,522 B` | Global |
+| 🔴 [`shengdabai/Chinese-Learning`](https://github.com/shengdabai/Chinese-Learning) | `1` | MIT file `1,080 B` 🔴 **vs README declaring `Visibility: PRIVATE` / "Private/internal terms"** | APAC |
+| 🔴 [`nexika/nexika`](https://github.com/nexika/nexika) | `0` | MIT `1,068 B` — 🔴 **relevance**: dev tooling, 1 of 12 add-ons is a tutor | Global |
+| 🔴 [`awesome-german/ai-tools`](https://github.com/awesome-german/ai-tools) | `5` | **Creative Commons**, `18,657 B` — a list, not software | EMEA |
+| 🔴 [`fedcal/open-jarvis`](https://github.com/fedcal/open-jarvis) · [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) · [`bayshores/godspeed`](https://github.com/bayshores/godspeed) | `6`/`72`/`7` | **AGPL-3.0**, `35,612 B` / `34,522 B` / `34,522 B` | Global |
+
+### 🔴 No license file — `13` repositories, byte-read and recorded
+
+`NBrangerF/curriculum-standards-breakdown` (updated **today**, `14,416 B` README — a structured
+index of the 2022 compulsory-education curriculum standards, 🔴 the most *useful* unlicensed asset
+of the pass) · `wxxxqcy/ai-learning-assistant` (education-agent eval framework) ·
+`Amitdutta121/Universal_adaptive_trainer` · `yahiacuda/Lesson-Rag-Agent` · `jwj1342/Paper2Manim` ·
+`schnitzlermandy85-beep/course-grounded-tutor` · `SherlockMF/lomi-english-learning` ·
+`AkshunyaB/autograder` · `sarthak-003/AutoGrader` · `Osigelialex/Automated-Code-Grader-Backend` ·
+`PreethamGM04/AccessLearn-` · 🔴 `abaridodo/ai4africa` · 🔴 `abaridodo/makaranta`
+
+🔴 **`13 of 81` enumerated rows — 16 % — ship no grant at all.** On a shelf that exists to find
+things Globant can build on, the unlicensed rate is now the single largest source of loss, ahead of
+copyleft and ahead of irrelevance.
+
+### 🔴 Region note
+
+**LATAM: `0` rows across all `81` enumerated.** **North America: `0` promotions** — NA appears in
+this pass only through policy, not code. Both are stated, not implied by omission.
+
+---
+
 ## 🆕 `p607` — `2026-11-02` — what moved on the repository side this week
 
 🟢 **The LATAM national leg — run in Portuguese against Brazilian curriculum vocabulary (`MEC`,

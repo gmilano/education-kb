@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — reads `2026-11-02` — **🟢 THE WHOLE LMS/SIS TIER RE-BYTE-READ FROM SCRATCH BY AN INDEPENDENT INSTRUMENT: `10 of 10` MATCH WHAT THIS BASE ALREADY HELD. 🔴 AND THE INSTRUMENT FELL INTO `3` OF THIS BASE'S OWN PRE-REGISTERED TRAPS, WHICH IS THE RESULT.**
+
+### 🟢 The platform tier, re-measured today against the real default branch
+
+A fresh four-name probe (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` × `main`, `master`) was
+run blind against the customisable-platform tier. **Every grant it resolved matched this base's
+existing column.**
+
+| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+| --- | --- | --- | --- |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **GPL-3.0** — `COPYING.txt`, both branches `200` | 🟢 Largest plugin ecosystem in the industry; the AI subsystem is the supported insertion point |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0**, `35,135 B` | ⚠️ MOOC-grade, but the grant is **network copyleft** — the single most consequential license fact in this tier |
+| **XBlock** | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0**, `11,358 B` | 🟢 **The permissive component boundary inside an AGPL platform** — build the AI component here |
+| **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0**, `34,519 B` | ⚠️ Integrate via API/LTI rather than fork |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **AGPL-3.0**, `35,146 B` | ⚠️ Lighter to operate than Open edX; same copyleft shape |
+| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **AGPL-3.0**, `35,146 B` | ⚠️ Strong EMEA/DACH institutional base |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** (*Educational Community License* v2.0, April 2007), `11,119 B` | 🟢 Permissive, Apache-*derived* — the grant most specific to this industry |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT**, `1,077 B` | 🟢 Django+React course-portal front end — France Université Numérique |
+| **Pupilfirst** | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟡 **split**: `docs/` CC BY-SA 4.0, client-side JS MIT, remainder MIT, third-party components under their own terms, `1,683 B` | 🟢 APAC (India) · ⚠️ read the split before shipping docs |
+| **QTIWorks** | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause**, `2,058 B` at `LICENSE.txt` | 🟢 The QTI 3.0 **engine** `p607` shelved — assessment stack permissive end to end |
+| 🆕 **WeKnora** | [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 🟢 **MIT**, `15,290 B` ⚠️ Apache-2.0 third-party appendix | 🟢 **New this pass.** Not an LMS — the doc→RAG→agent→wiki layer you bolt *beside* one |
+
+### 🔴 The real result — an independent instrument hit `3` pre-registered traps
+
+The probe above was deliberately naive. It produced **three false negatives**, and this base had
+already named all three in advance:
+
+| what the probe reported | truth | the trap, as this base had already registered it |
+| --- | --- | --- |
+| 🔴 `openedx/XBlock` → **`404-NOT-A-REPO`** | 🟢 **Apache-2.0**, `11,358 B` | 🔴 **UPPERCASE extension `LICENSE.TXT`.** `raw.githubusercontent.com` is case-sensitive; `LICENSE.txt` returns `404: Not Found` (`14 B`) three times running, while `LICENSE.TXT` returns `200`. This base's own note reads: *"XBlock was one absent file from being filed ungranted."* 🔵 It very nearly was, again, today |
+| 🔴 `moodle/moodle` → **`NO-LICENSE-FILE`** | 🟢 **GPL-3.0** | 🔴 The grant lives at **`COPYING.txt`** — a fifth name outside a four-name probe |
+| 🔴 `sakaiproject/sakai` → **`OTHER/unclassified`** | 🟢 **ECL-2.0** | 🔴 ECL-2.0's text names *"Apache 2.0 license"* in **lower case** and contains **zero** occurrences of the string `Apache License`, so an `Apache License` matcher cannot see it. This base keeps `compose/code/p1040-ecl-corpus-census` for exactly this |
+
+🔵 **What this is worth.** Three passes' worth of recorded traps were tested blind by an instrument
+that had not read them, and the instrument fell into all three — then the base's column turned out
+right in all three. 🔴 **A naive license probe under-reports permissive grants**, and it
+under-reports them in the direction that costs a studio real options: XBlock would have been filed
+ungranted, Sakai unclassified, Moodle grantless. The correct conclusion from a `404` on a license
+path is **"try another name and another case,"** never *"no license."*
+
+### 🟢 What the tier looks like for an engagement, after re-measurement
+
+- 🔴 **`5 of 11` platforms are AGPL-3.0** (Open edX, Canvas, Chamilo, ILIAS — plus `edgameclaw`,
+  `godspeed`, `open-jarvis`, `terramentor` rejected this pass on the agent shelf). **Network
+  copyleft is the default condition of this industry's platform tier**, not the exception.
+- 🟢 **The permissive path exists and is now continuous:** component layer `XBlock` (Apache-2.0) ·
+  platform `Sakai` (ECL-2.0) · portal `Richie` (MIT) · assessment engine `qtiworks` (BSD-3-Clause) ·
+  ingestion `WeKnora` (MIT) · anonymisation `obfusca` (MIT). An engagement can be assembled
+  end to end without crossing a copyleft boundary.
+- ⚠️ **Moodle (GPL-3.0) is not AGPL.** Plugins distributed to a customer carry GPL obligations;
+  a hosted service does not trigger the network clause Open edX would. The distinction is worth
+  money and is frequently collapsed in vendor comparisons.
+
+---
+
 ## 🆕 `p607` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM FINDING IS AN **ENGINE**, NOT A CONNECTOR: QTIWORKS — A COMPLETE QTI 2.1 ASSESSMENT ENGINE OUT OF THE **UNIVERSITY OF EDINBURGH**, BSD-3-CLAUSE BYTE-READ, MAINTAINED TO `2026-06-30` IN ITS **OPENOLAT FORK** — HAS BEEN IN THIS BASE'S `trending` SHELVES FOR `21` MENTIONS AND ON NO PLATFORM PAGE. 🟢 IT ALSO RETIRES `p604`'s OWN SINGLE-MAINTAINER FLAG ON THE QTI TIER. 🔴 THE API CALLS IT `NOASSERTION` AND A DEPENDENCY SCREEN WOULD REJECT IT. 🟡 `605-K`'s DEBT: `26` PAID THIS PASS, `73` REMAIN.**
 
 ### 🟢 `607-I` — QTIWorks: the assessment **engine** this page has been assuming

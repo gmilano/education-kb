@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p608` — `2026-11-02` — what moved on the agent side this week
+
+🟢 **The nil streak breaks — but not on the channel the run prompt mandates.** The mandated global
+legs returned the **thirty-eighth** consecutive nil. Every promotion this pass came from
+`github.com/topics/*` sorted by `?o=desc&s=updated`.
+
+### 🔴 The mandated global legs — thirty-eighth consecutive nil, proven token by token
+
+| token the global legs returned this week | status |
+| --- | --- |
+| `HKUDS/DeepTutor` | 🔴 held — `6` mentions on `agents/top.md` |
+| `crewAIInc/crewAI` · `microsoft/autogen` | 🔴 held |
+| `ashishpatel26/500-AI-Agents-Projects` | 🔴 held — `83` mentions |
+| `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` | 🔴 held — `38` mentions |
+| `All-Hands-AI/OpenHands` · `OpenClaw` · `NousResearch/hermes-agent` · `browser-use` | 🔴 held / general-purpose, not education |
+| `pykt-team/pykt-toolkit` · `CAHLR/pyBKT` · `bigdata-ustc/EduKTM` · `HFUT-LEC/EduStudio` | 🔴 held — `45`, `39`, `11`, `15` files |
+| `Zenglian990/AI_Tutor_Release` · `zijinz456/OpenTutor` · `rohitg00/ai-engineering-from-scratch` | 🔴 held — `31`, `62`, `39` files |
+| `cloudtoolbox/deeptutor` | 🔴 mirror of a held row |
+
+🔵 **Thirty-eight passes is no longer a run of bad luck; it is a measurement of the channel.** A
+generalist query for *"top open source AI agents education 2026 github MIT"* returns the agent
+canon, and the agent canon has been on this shelf for months. The topic pages, sorted by recency,
+returned `11` licensable rows in the same pass. **The generalist leg is kept for the nil it
+documents, not for the rows it yields.**
+
+### 🟢 `11` promotions, by region
+
+| region | promotions | the signal |
+| --- | --- | --- |
+| **APAC** | 🟢 **`5`** — `Tencent/WeKnora` (MIT), `HaoyanZhang123/sproutask` (MIT), `1Zonghao/Si-Yuan-agent` (MIT), `LeeLanguageLab/HokkienTranslation` (MIT), `prayashcloud/axomiya-study-companion` (MIT) | 🔵 **APAC is now this shelf's strongest region by new permissive rows, for the second pass running.** Two of the five are curriculum-bound to a *named national textbook or board* (人教版 Grade 7 biology; SEBA/AHSEC), and two target low-resource languages (Taiwanese Hokkien, Assamese) |
+| **EMEA** | 🟢 **`3`** — `duaabaig/HiSACKT` (MIT, WI-IAT 2025), `Bradwave/obfusca` (MIT), `yashvikram30/german-course` (MIT) | 🔵 All three are **compliance-shaped**: a KT model from a French lab, a GDPR-safe local anonymiser, and a course whose tutor switches off during exams |
+| **Global / unplaced** | 🟢 `3` — `harjothkhara/whiteboard-tutor`, `dlealvilla/wildmind-ai-for-education`, `ME-Massine/azure-ai-student-support` | 🔵 Two are unplaced **because the holder evidence is absent**, not because the region is Global |
+| **North America** | 🔴 **`0` promotions** | 🔴 NA produced the pass's richest *policy* intel (`134` bills, `31` states) and **no new licensable repository**. The NA repository tier on this shelf remains inherited from earlier passes |
+| **LATAM** | 🔴 **`0` promotions — a stated nil, see below** | 🔴 |
+
+### 🔴 LATAM — repository-level nil, written down rather than left as silence
+
+Legs run this pass, in Spanish and Portuguese as well as English:
+
+| leg | result |
+| --- | --- |
+| `AI educación LATAM América Latina 2026 adopción regulación Brasil México` | 🔴 **policy only** — no repository-level asset |
+| `open source education AI repository Brazil Mexico Argentina 2026 github escuela universidad agente` | 🔴 **`1` Brazilian lead, non-AI**: a TypeScript/Next.js municipal school-management tool tagged LGPD (updated 2026-08-26), no AI layer, no slug resolvable to a license byte-read. **Mexico: nothing. Argentina: nothing** — the only Argentine hit was a currency-exchange API |
+| topic pages (`ai-in-education`, `ai-for-education`, `education-ai`, `ai-tutor`), `81` rows enumerated | 🔴 **no LATAM-held row** |
+
+🔵 **This is the eighth consecutive pass in which LATAM yields regulation but no licensable
+repository.** The asymmetry is itself the finding: a Globant LATAM engagement cannot currently be
+served from a LATAM-origin open-source education asset, and must compose APAC- and EMEA-origin
+permissive rows against LATAM curriculum and LATAM law. 🔴 **It is explicitly not a coverage
+claim** — `agents/top.md` carries no LATAM-origin agent row this pass, and the shelf should not be
+read as if it did.
+
+🔴 **Africa stays unfound, and now for a named reason.** `abaridodo/ai4africa` and
+`abaridodo/makaranta` were both enumerated and both byte-read: **README present, no license file at
+any of four names on either branch**. Earlier passes recorded Africa as returning "no
+repository-level asset"; this pass found the assets and they are **unlicensed**. The gap moves from
+*unfound* to *found and unusable*.
+
+### 🔴 The verification channel changed under this pass — and the old one was inert
+
+`curl -sI https://github.com/…` returned **`403` for real repositories and for fabricated controls
+alike** through this session's proxy, and the GitHub REST API returned `403` on scope. Everything
+above was therefore byte-read at `raw.githubusercontent.com` on the real default branch, with
+`4 of 4` fabricated controls returning `NOT_FOUND` in the same pass. 🔴 **`arxiv.org` does not
+resolve from this session** (`ENOTFOUND`, outside allowed network domains), so the paper tier —
+which several dozen rows on this shelf cite by arXiv id — **could not be re-verified this pass at
+all**, and no paper-only claim was added.
+
+---
+
 ## 🆕 `p607` — `2026-11-02` — what moved on the agent side this week
 
 🔴 **The mandated global agent legs returned the thirty-seventh consecutive nil.** Recorded here as a
