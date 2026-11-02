@@ -3,6 +3,66 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE STOCK-`MIT` BYTE BAND, ESTABLISHED AS A POPULATION: `8` INDEPENDENT PUBLISHERS, `1,056`–`1,097 B`, A `41`-BYTE SPREAD — WHICH IS WHAT MAKES `616-A`'s `2,254 B` DEFECT VISIBLE WITHOUT RE-COMMITTING `p312`.**
+
+### 🟢 `616-I` — the foundational measurement this pass contributes
+
+🔵 This base has byte-read hundreds of grants row by row. 🟢 What it had never done is establish the
+**reference distribution** for the family it most often publishes. Without that, "the file is bigger
+than it should be" is an intuition; with it, it is a threshold.
+
+| payload byte-read today | bytes | publisher is independent of the others |
+| --- | --: | --- |
+| [`vantaflow/claude-skills-collection`](https://github.com/vantaflow/claude-skills-collection) | `1,056` | 🟢 |
+| [`xxf-ai/awesome-benzi`](https://github.com/xxf-ai/awesome-benzi) | `1,063` | 🟢 |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `1,065` | 🟢 |
+| [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | `1,072` | 🟢 |
+| [`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills) | `1,086` | 🟢 |
+| [`Hainrixz/maia-skill`](https://github.com/Hainrixz/maia-skill) | `1,089` | 🟢 |
+| [`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) | `1,093` | 🟢 |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,097` | 🟢 |
+
+🟢 **Band: `1,056`–`1,097 B`. Spread: `41 B`** — attributable to copyright-line length and line
+wrapping, nothing else. 🔴 Against that, `616-A`'s specimen is `2,254 B` and `594-A`'s PageLM is
+`8,563 B`: both **more than double the ceiling**.
+
+🟡 **The one reference point for `Apache-2.0`**, for a future pass to extend into a band:
+[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) at `11,337 B` and
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at `11,408 B`. 🔵 `2` points is not a
+distribution; it is recorded as a start, not used as a threshold.
+
+### 🔴 `616-J` — and the row that proves the band is doing real work rather than describing itself
+
+🟢 Eight payloads inside a `41`-byte band were all graded `MIT` by title **and** by residual, and all
+eight are genuinely stock MIT. 🔴 The ninth titled-`MIT` payload read this pass sits `1,157 B` outside
+the band and is **not** a permissive grant over the tree it ships. 🔵 A control that fires once in
+nine reads, on the one row that was actually wrong, is a control and not a tautology — see `616-A`/
+`616-B` in `agents/top.md` for the mechanism and the explicit limit.
+
+### 🟢 `616-K` — branch resolution earned its cost again, on `2` of `7` reads
+
+🔴 Two of this pass's seven grant reads are **not** on `main`:
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) is on **`develop`** and
+[`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills)
+is on **`master`**. 🟢 A `main`-assuming prober would have filed both as 🔴 `UNGRANTED`, and one of
+them is a `1,165★` foundational row this base has carried for many passes.
+
+🔵 `p559`'s `ls-remote` step is the cheapest control in this repository and this pass is the third
+independent occasion it has prevented a false ungranted verdict. 🟡 Running at roughly `1` row in `4`,
+it should never be optimised away for speed.
+
+### 🔵 `616-L` — `kolibri` re-stated as the LATAM-ready substrate, with the reason attached
+
+🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — `MIT`, `1,097 B`,
+branch `develop`, `1,165★`, pushed `2026-11-02` — is already on this base's shelves. 🟢 What `616-H`
+adds is *why it is the architecturally correct substrate for a LATAM engagement*: the region's binding
+constraint is reported as connectivity, device access and digital literacy, and Kolibri is
+**offline-first by design** and permissive.
+
+🔴 It is **not** LATAM-published, so it does not close `616-H`'s gap — the distinction between *supply
+usable in a region* and *supply published by a region* is kept deliberately, because only the second
+one gives a client local maintainership.
+
 ## 🆕 `p615` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE INTEROPERABILITY TIER, BYTE-READ AS A POPULATION FOR THE FIRST TIME: `8` LIVE PERMISSIVE ROWS (`7` `Apache-2.0`, `1` `MIT`) AND `8` ARCHIVED ONES — INCLUDING THE CANONICAL SCORM→xAPI BRIDGE, WHICH IS BOTH **ARCHIVED AND UNGRANTED**.**
 
 ### 🟢 `615-E` — the xAPI reference tier: what is alive, permissive and safe to build on

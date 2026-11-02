@@ -3,6 +3,95 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## Pass 616 — reads 2026-11-02, commit 2026-11-02 — **🔴 A STOCK `MIT License` TITLE LINE IS NOT A PERMISSIVE GRANT OVER THE TREE IT SHIPS. 🟢 THE STOCK-`MIT` BYTE BAND, MEASURED ON `8` INDEPENDENT PUBLISHERS TODAY (`1,056`–`1,097 B`, `41 B` SPREAD), CATCHES A `2,254 B` COMPOSITION DEFECT THAT `p612`'s TITLE-LINE RULE CANNOT SEE — WITHOUT RE-COMMITTING `p312`. 🔴 THE SECTOR'S RICHEST EDUCATION-SPECIFIC SKILL CORPUS (`111★`, `217 MB`, ACTIVELY MAINTAINED) HAS **NO GRANT PAYLOAD** AND IS ALREADY VENDORED DOWNSTREAM. 🟢 AND THE LATAM SUPPLY GAP HAS A **CAUSE** FOR THE FIRST TIME: `1 of 8` PERMISSIVE ACROSS THE REGION'S FLAGSHIP ORG, `7 of 8` WITH NO LICENCE FILE AT ALL. TWELVE REGISTERED (`616-A`…`616-O`).**
+
+🔴 **`616-A` — the pass's load-bearing finding.** `p611-B`/`p612` moved this base to grading on the
+licence **title line**, and that rule is right — this pass re-read `594-A`'s `CaviraOSS/PageLM`
+(`8,563 B`) and a 3-line title grade correctly returns `MIT-BODY-NO-TITLE`, because its title is
+`# PageLM Community License`. 🔴 But `EtherealMingo/university-teacher-skills` (`17★`) opens with a
+**stock `MIT License`** title, stock copyright line and stock permission sentence — and `1,157` bytes
+lower, in Simplified Chinese, restricts that grant to the project's own original parts, **excluding
+`26` vendored directories**. Two are named and both are fatal to the directory they name:
+`thinking-toolkit` is `CC BY-NC-SA 4.0` (`NonCommercial` **and** `ShareAlike`), and `7`
+`ibook-skills` copies are stated by the publisher to be **未获授权收录 — "included without
+authorization"**. 🟢 The publisher is honest; the package is still not shippable as it stands. The
+risk is a **composition**, not a misrepresentation.
+
+🟢 **`616-B`/`616-I` — the control, and it does not re-commit `p312`.** Family still comes from the
+**template** exactly as `p612` grades it; the byte count only decides whether a residual **must be
+read**. The band was measured, not assumed: `8` titled-MIT payloads byte-read today span
+`1,056`–`1,097 B` — a `41`-byte spread across `8` independent publishers, against a `2,254 B` defect.
+🟡 Stated limit: this catches an instrument that **appends**, not one that substitutes inside the stock
+text at constant length.
+
+🔴 **`616-C` — and the richest thing in the category is unusable.** `dmccreary/ibook-skills` (`111★`,
+`217,874 KB`, pushed `2026-10-30`) is *Agent Skills for Intelligent Textbooks*: a `570`-concept
+learning graph, `31` chapters, `94` p5.js MicroSims, Bloom's 2001, ISO 11179, running across `6` agent
+clients. Its full grant ladder is **empty**, the platform field is `None`, and its README asserts
+`CC BY-NC-SA 4.0` **as a badge only** (`p288`'s README channel). 🟢 Both readings refuse — badge
+honoured ⇒ `NonCommercial`+`ShareAlike`; badge not honoured ⇒ all rights reserved. There is no reading
+in which it ships, and it is already feeding `616-A`'s tree.
+
+🟢 **`616-D` — four new clean permissive rows**, each title-graded and residual-checked, with a
+fabricated control returning `UNREACHABLE` in every sweep: `Hainrixz/maia-skill` (`MIT`, `1,089 B`,
+`151★`, bilingual `EN`/`ES`), `mcxiaoxiao/kaoyan-navigator-skill` (`MIT`, `1,093 B`, `38★`, APAC,
+考研 admissions navigation), `ChatGPT3a01/claude-educational-ai-skills` (`MIT`, `1,086 B`, `34★`,
+APAC, on `master`), `vantaflow/claude-skills-collection` (`MIT`, `1,056 B`, `28★`, EMEA, French —
+🔴 shelved as an **index**, not as education supply).
+
+🟢 **`616-H` — the LATAM gap, converted from an absence into a measured cause.** `latam-gpt` is cited
+twice in this base's own market intel for consortium scale (`8` countries, `30+` institutions) and had
+never been read as **supply**. Its whole public org was enumerated and byte-read today: **`1 of 8`
+permissive** (`anonymization-filter`, `MIT`, `1,072 B`), **`7 of 8` with no licence file at all**,
+**`0 of 8` education-specific**. Eleven Spanish/Portuguese discovery legs returned one non-nil hit
+(`rodrigoborgesmachado/questoesConcursos`, `31★`) and it is ungranted too. 🔵 So the cause is not
+regional silence — the publishing happens and the **licence file does not**, which changes the remedy:
+contribute a `LICENSE` upstream rather than wait for new repositories. 🟡 The gap **stands**, narrowed
+and re-typed: still no LATAM-published, permissive, education-specific row.
+
+🔴 **`616-E` — `614-E`'s `NOASSERTION` rule bounded by its own best counter-example.** `614-E`
+measured `0 %` permissive yield and advised spending no discovery budget there. This pass's
+load-bearing specimen is `NOASSERTION` (`key=other`) and **partially `MIT`** on bytes — the platform
+field was **more correct than the title line**, because it declined to name a family precisely as the
+instrument is non-stock. 🟢 Revision: `NOASSERTION` stays low-yield for **clean rows**, becomes
+high-yield for **risk discovery**. 🔴 `NULL` and `NOASSERTION` still never pooled — `NULL` means *no
+file* (`616-C`), `NOASSERTION` means *a file that needs reading* (`616-A`).
+
+🟢 **`616-K` — branch resolution earned its cost again, on `2` of `7` reads.**
+`learningequality/kolibri` is on **`develop`** and `ChatGPT3a01/claude-educational-ai-skills` on
+**`master`**; a `main`-assuming prober would have filed both as 🔴 ungranted, one of them a `1,165★`
+carried foundational row. 🟡 `p559`'s `ls-remote` step fires on roughly `1` row in `4` and must not be
+optimised away.
+
+🟡 **`616-F`/`616-O` — two standing reds re-measured, neither moved.**
+`JushBJJ/Mr.-Ranedeer-AI-Tutor` (`29,548★`) byte-read again: still **ungranted** — a fourth
+independent channel for `p601`/`605-J`'s rule that 🔴 *in education, star rank is an anti-signal for
+commercial usability*. And `p614`'s `canyongbs/advisingapp` (`340★`) is still **Elastic License 2.0**
+with the platform field showing only `NOASSERTION` — a bar on the **studio delivery model** that no
+metadata triage will reveal.
+
+🔵 **Five patterns, each wired from rows byte-read today:** `P616-0` the **composition gate** (branch →
+title family → residual read → *enumerate the vendored tree and probe each upstream once* — the step
+`P615-0` was missing, and the step that caught `616-A`), `P616-1` tutor-as-a-skill on a grant-clean
+tree (`2`–`3` wk), `P616-2` the **remediation recipe** for taking the usable half of an
+`ADDITIONAL-TERMS` package (`1` wk), `P616-3` offline-first deployment for a connectivity-constrained
+region on `Kolibri`+`OpenOLAT` (`6`–`8` wk), `P616-4` a bilingual `EN`/`ES` learner-facing surface
+(`2` wk).
+
+🟢 **Gate status, stated here rather than left in a terminal.** `make commit-gates` runs green on
+every offline licence control (`ALL OFFLINE LICENCE CONTROLS PASS`) and red on `recount` at
+`NO-ANCHOR=5 of 5`. 🟡 That red is **inherited, not caused by this pass**: it is the registered
+`Gap 534-J` (its anchors pin a file layout this base abandoned), and it was verified red with
+identical output — `STALE=0`, `NO-ANCHOR=5 of 5` — on a pristine `HEAD` with this pass's changes
+stashed. 🟢 `STALE=0` is the load-bearing half: no published claim drifted. 🔴 The commit is therefore
+made with `SKIP_COMMIT_GATES=1`, as `ingest/pre-commit` prescribes for a deliberate red landing.
+
+🔴 **Declared gaps, unchanged.** `598-G`'s hosts (`unesco.org`, `eur-lex.europa.eu`, `oecd.org`,
+`moodledev.io`, `docs.openedx.org`) still do not resolve from this environment, so **every market and
+regulatory figure in this pass is secondary by construction**; `614-C`'s cost is unchanged — the EU
+Annex III primary text has never been read here, and the settled compliance date (**`2027-12-02`**,
+`Reg. (EU) 2026/1744`) is carried from `p233`/`p241`, not re-verified. 🟡 `616-H` remains open.
+
 ## Pass 614 — reads 2026-11-02, commit 2026-11-02 — **🟢 THE SECTOR'S NEW PERMISSIVE SUPPLY HAS CHANGED VEHICLE: IT ARRIVES AS **SKILL PACKAGES FOR SOMEBODY ELSE'S CODING AGENT**, AND THIS BASE ALREADY HELD THE CLASS'S LARGEST MEMBER (`36,751★`) WITHOUT HAVING A CATEGORY FOR IT. 🟢 `13` PERMISSIVE ROWS PROMOTED, `18 of 18` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD (`110 of 110` POOLED WITH `612`/`613`). 🟢 TWO INHERITED RED BLOCKING GATES FIXED — ONE WITH THE SPECIMEN THAT TURNS A LONG-STANDING LINT FINDING INTO A MEASURED DEFECT. 🔴 `614-E`: `NULL` AND `NOASSERTION` MEAN OPPOSITE THINGS (`4 of 4` vs `6 of 6`, ZERO PERMISSIVE). 🔴 `614-F`: A `121`-BYTE `LICENSE.md` THAT IS A CROSS-REPO POINTER TO `AGPL-3.0`. 🔴 FORTY-FOURTH LEG NIL, AND `614-I` ARGUES THE STATISTIC MEASURES THE LEGS RATHER THAN THE SECTOR. NINE REGISTERED (`614-A`…`614-I`).**
 
 🟢 **`614-I` — the pass's load-bearing finding.** `611` passes of searching for *tutors* produced rows

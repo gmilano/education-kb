@@ -3,6 +3,149 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — reads `2026-11-02`, commit `2026-11-02` — **🔴 A STOCK `MIT License` TITLE LINE IS NOT A PERMISSIVE GRANT: `EtherealMingo/university-teacher-skills` TITLES `MIT` AND THEN, `1,157` BYTES LOWER AND IN ANOTHER LANGUAGE, **EXCLUDES 26 OF ITS OWN DIRECTORIES** — TWO OF THEM `NonCommercial` OR ADMITTEDLY UNLICENSED. 🟢 `p612`'s TITLE-LINE RULE CANNOT SEE THIS, AND THE STOCK-`MIT` BYTE BAND MEASURED ON `8` PAYLOADS TODAY (`1,056`–`1,097 B`) CATCHES IT WITHOUT TOUCHING `p312`. 🔴 AND THE SECTOR'S RICHEST EDUCATION-SPECIFIC SKILL CORPUS (`111★`, `217 MB`) HAS **NO GRANT PAYLOAD AT ALL**. SEVEN REGISTERED (`616-A`…`616-G`).**
+
+### 🔴 `616-A` — read this first: the pass's load-bearing finding, and it defeats a rule this base adopted two passes ago
+
+🔵 `p611-B`/`p612` moved this base to **grading on the licence title line**, for a good reason:
+`591-A`/`594-A` had caught `CaviraOSS/PageLM` publishing as 🟢 `MIT` because a *body* match read the
+MIT permission sentence and stopped. 🟢 That rule is correct and it still holds — this pass re-read
+PageLM's `8,563 B` `LICENSE.md` independently and a 3-line title grade returns
+`MIT-BODY-NO-TITLE`, not `MIT`, because its title is `# PageLM Community License`. `594-A` stands.
+
+🔴 **But the title line can be a stock `MIT License` and the instrument still not be MIT.**
+[`EtherealMingo/university-teacher-skills`](https://github.com/EtherealMingo/university-teacher-skills)
+(`17★`, `main`, pushed `2026-10-21`) opens with exactly `MIT License`, the stock copyright line, and
+the stock permission sentence. A title-line grader — this base's own `p612` implementation included —
+returns 🟢 **`MIT`**. 🔴 The file is `2,254 B`. A stock titled MIT is **`1,056`–`1,097 B`**, measured
+on `8` payloads byte-read today. The `1,157`-byte residual is a Simplified-Chinese clause headed
+*適用範圍說明（重要）* — **"scope of application (important)"** — and it says the MIT grant covers
+*only* the project's own original parts.
+
+🔴 **What the residual excludes.** By the publisher's own enumeration, MIT covers the named root
+files, `skills/office-layer/` and the `22` first-party skills — and **does not cover the 26
+third-party "底座" (base-layer) skill directories** also shipped in the same tree. Two carve-outs are
+called out by name, and both are commercially fatal to the directory they name:
+
+| carve-out in the residual | instrument | what it does to a studio build |
+| --- | --- | --- |
+| `skills/learning-education/thinking-toolkit/` | 🔴 **`CC BY-NC-SA 4.0`** | `NonCommercial` **and** `ShareAlike`. The notices state the repository *as a whole*, while it contains this directory, may not be redistributed commercially and derivatives must share alike |
+| `skills/ibook-skills/` — `7` directories | 🔴 **none — all rights reserved** | The publisher states in writing that these copies are **未获授权收录**, *"included without authorization"*. Two of the seven self-declare `CC BY-NC 4.0` in SKILL.md frontmatter while the upstream repository carries no `LICENSE` at all |
+
+🟢 **Every one of those claims was verified here rather than relayed.** The residual is the
+publisher's assertion about third parties, so this pass byte-read the three upstreams it names:
+
+| upstream named in the residual | this pass's independent read | verdict |
+| --- | --- | --- |
+| [`dmccreary/ibook-skills`](https://github.com/dmccreary/ibook-skills) | ladder exhausted, `main`, platform `spdx=None` | 🔴 **ungranted — the claim is true** |
+| [`xxf-ai/awesome-benzi`](https://github.com/xxf-ai/awesome-benzi) | `LICENSE` `1,063 B`, title `MIT License` | 🟢 `MIT` — claim true |
+| [`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills) | `LICENSE` `1,086 B` on `master` | 🟢 `MIT` — claim true |
+
+🔵 **So the publisher is honest and the package is still not shippable as it stands.** That pairing is
+the useful part: the risk here is not a misrepresentation, it is a **composition** — a permissive
+wrapper around a tree that is partly `NonCommercial` and partly unlicensed.
+
+### 🟢 `616-B` — the control, and why it does **not** re-commit `p312`
+
+🔴 `p312`'s `gate-template-identity` forbids identifying `MIT`/`Apache-2.0` **by a byte band**, and
+that prohibition is right. 🟢 This control does not identify a family. The family still comes from
+the **template**, exactly as `p612` grades it. The byte count only decides **whether a residual
+exists that must be read**:
+
+```
+family  := title-line template match      (p612, unchanged — p312 untouched)
+residual := payload_bytes - stock(family)
+if family is permissive and residual > ~100 B  =>  ADDITIONAL-TERMS: read the residual before shelving
+```
+
+🟢 **The band, measured today, not assumed.** Eight titled-MIT payloads byte-read this pass:
+`1,056` (`vantaflow/claude-skills-collection`), `1,063` (`xxf-ai/awesome-benzi`), `1,065`
+(`THU-MAIC/OpenMAIC`), `1,072` (`latam-gpt/anonymization-filter`), `1,086`
+(`ChatGPT3a01/claude-educational-ai-skills`), `1,089` (`Hainrixz/maia-skill`), `1,093`
+(`mcxiaoxiao/kaoyan-navigator-skill`), `1,097` (`learningequality/kolibri`). 🔵 A `41`-byte spread
+across eight independent publishers, against a `2,254 B` defect — the signal is not marginal.
+
+🟡 **Stated limit, so the next pass does not have to rediscover it.** This catches an instrument that
+*appends*. It does **not** catch one that substitutes inside the stock text at constant length, and
+`616-A`'s own PageLM re-read is the reminder that a body-only match must never be graded permissive.
+
+### 🔴 `616-C` — the sector's richest education-specific skill corpus is ungranted, and it is propagating
+
+[`dmccreary/ibook-skills`](https://github.com/dmccreary/ibook-skills) — `111★`, `217,874 KB`, `main`,
+pushed `2026-10-30`, actively maintained — is *Agent Skills for Intelligent Textbooks*: a
+vendor-portable `SKILL.md` library for building Level 2+ intelligent textbooks, with a **`570`-concept
+learning graph**, `31` chapters, `94` p5.js MicroSims, Bloom's Taxonomy (2001 revision) outcomes,
+ISO 11179 terminology and prerequisite DAGs, installable across Claude Code, Codex, Gemini/Antigravity,
+Cursor, Perplexity and Hermes. 🔵 On substance it is the most complete education-specific agent-skill
+corpus this base has measured.
+
+🔴 **It has no grant payload.** The full ladder returns nothing on `main`; the platform field is
+`None`. 🔴 Its README asserts a licence **as a shields.io badge only** — `License: CC BY-NC-SA 4.0`,
+linked to `creativecommons.org/licenses/by-nc-sa/4.0/` — which is precisely `p288`'s README channel: a
+third-channel claim with no instrument behind it.
+
+🟢 **Both readings refuse, which is what makes this decision-grade rather than a caveat:**
+
+- badge **honoured** ⇒ `CC BY-NC-SA 4.0` ⇒ `NonCommercial` + `ShareAlike` ⇒ barred from studio delivery;
+- badge **not honoured** ⇒ no grant ⇒ all rights reserved ⇒ barred from studio delivery.
+
+🔵 There is no reading in which this ships. 🔴 And it is already downstream: `616-A`'s package vendors
+`7` of its directories and says so.
+
+### 🟢 `616-D` — four new clean permissive rows, title-graded and residual-checked
+
+🟢 Every row: default branch resolved by `ls-remote`, grant byte-read from `raw.githubusercontent.com`
+today, graded on the title line, residual checked against `616-B`'s band, and a fabricated control run
+in each sweep returning `UNREACHABLE` every time.
+
+| agent / skill package | grant | bytes | branch | ★ | region | what it is |
+| --- | --- | --: | --- | --: | --- | --- |
+| [`Hainrixz/maia-skill`](https://github.com/Hainrixz/maia-skill) | 🟢 **`MIT`** | `1,089` | `main` | **151** | 🔵 Global — holder not placed | `5` agents analyse crypto, stocks, forex and commodities in parallel against a risk profile and render an **interactive bilingual EN/ES dashboard**; keyless hybrid market data. Publisher labels it *educational market research, not financial advice* — so it is a **financial-literacy** teaching artefact, not an advice product. 🔵 The `ES` half is the only bilingual learner-facing surface on this shelf |
+| [`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) | 🟢 **`MIT`** | `1,093` | `main` | **38** | 🟢 APAC — 考研, China | Graduate-school **selection** navigator for Codex/Claude Code: researches re-exam score lines, national quota counts, recommended-admission and provisional-admission data, then emits risk warnings and a reach/match/safety list. 🔵 An admissions-advisory shape, not a tutor |
+| [`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills) | 🟢 **`MIT`** | `1,086` | 🔵 `master` | **34** | 🟢 APAC — Traditional Chinese | 數位學習與教育科技 skill set aimed at **education researchers, teachers and e-learning platform developers**. 🟡 Pushed `2026-02-12` — the oldest of the four. 🔵 Its default branch is `master`: a `main`-assuming prober reports this row ungranted |
+| [`vantaflow/claude-skills-collection`](https://github.com/vantaflow/claude-skills-collection) | 🟢 **`MIT`** | `1,056` | `main` | **28** | 🟢 EMEA — French-language | `349` skills over `34` domains, published in French, carrying an `education` topic. 🔴 **Not education supply** — a cross-domain index whose education slice is one of thirty-four. Shelved as an index, never as a vertical component |
+
+### 🔴 `616-E` — `p614-E`'s `NOASSERTION` rule, bounded by its own best counter-example
+
+🔵 `p614-E` measured `NOASSERTION` at `6 of 6` non-permissive, `0 %` permissive yield, and concluded:
+*"do not spend discovery budget on `NOASSERTION`; byte-read it always before shipping."*
+
+🟢 **The shipping half is reaffirmed and the discovery half needs a sign change.**
+`616-A`'s specimen is `NOASSERTION` on the platform field (`key=other`, `name=Other`) and
+**partially `MIT`** on bytes. 🔵 Here the platform field was **more correct than the title line** — it
+declined to name a family precisely because the instrument is non-stock, which is exactly what it is.
+
+🟢 Operative revision, replacing `614-E`'s one-way rule:
+
+- `NOASSERTION` remains **low-yield for clean rows** — `614-E`'s `0 of 6` is not disputed;
+- `NOASSERTION` is **high-yield for risk discovery**, because it is the platform's own marker for
+  *non-stock instrument*, and non-stock is where `616-A`-class composition defects live;
+- 🔴 `NULL` and `NOASSERTION` still must never be pooled (`614-E`), and this pass adds the reason from
+  the other side: `NULL` found `dmccreary/ibook-skills`, which has **no file**, while `NOASSERTION`
+  found an instrument that **needed reading**. Different defects, different budgets.
+
+### 🟡 `616-F` — two standing reds re-measured on independent channels, neither moved
+
+🟢 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) (`29,548★`) —
+the sector's most-starred standalone tutor — byte-read again today: **ladder exhausted, no grant**.
+That is now a **fourth** independent channel agreeing, and `p601`/`605-J`'s rule holds unchanged:
+🔴 *in education, star rank is an anti-signal for commercial usability.* The largest thing in the
+category is still the thing you may not ship.
+
+🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) re-measured at `MIT`,
+`1,097 B` — 🔵 and its default branch is **`develop`**. Together with `616-D`'s `master` row, that is
+two of this pass's seven reads where a `main`-assuming probe would have filed a false
+`UNGRANTED`. The `ls-remote` step earns its cost on roughly one row in four.
+
+### 🔴 `616-G` — what this pass did **not** establish
+
+🟡 `598-G`'s host failures are unchanged and were not retested: every market and regulatory figure in
+this pass's `intel/` write-up is **secondary by construction**, and the EU Annex III primary text has
+still never been read on this base.
+
+🔴 The LATAM supply gap is **not closed** — see `616-H` in `intel/market.md`, where it is converted
+from an absence into a measured cause for the first time. 🟡 No row on this shelf is LATAM-published.
+
 ## 🆕 `p615` — reads `2026-11-02`, commit `2026-11-02` — **🔴 `614-G` DECLARED ITS OWN LIMIT IRREDUCIBLE AND IT WAS NOT A LIMIT: THIS BASE'S OWN HARDENED CLASSIFIER RESOLVES ALL `3` CC PAYLOADS TO THE EXACT INSTRUMENT **WITH VERSION**, AND THE COMMERCIAL VERDICT ON THE SECTOR'S SCARCEST INPUT **INVERTS** — `xiaoyang111222/cn-math-taxonomy` (`6,143★`), PUBLISHED LAST PASS AS 🟢 "FIT FOR PURPOSE", IS **`CC-BY-NC-4.0`**: `NonCommercial`. 🔴 THIS IS `P312` RE-COMMITTED IN PROSE, LONG AFTER IT WAS REGISTERED AND FIXED IN CODE. 🟢 AND THE MIRROR-IMAGE ERROR TOO: THE TWO ROWS `614-G` BLOCKED ARE COMMERCIALLY **ALLOWED**. SEVEN REGISTERED (`615-A`…`615-G`).**
 
 ### 🔴 `615-A` — read this first: the library answers the question `614-G` said could not be answered, and it answers it the other way

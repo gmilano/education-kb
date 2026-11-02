@@ -3,6 +3,119 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — `2026-11-02` — patterns wired from rows byte-read today, led by **one control that this pass proved is missing from the gate it belongs in**
+
+### 🟢 `P616-0` — the composition gate — **prerequisite to every pattern below**
+
+🔴 `p615`'s `P615-0` made the grant check a build step. 🟢 This pass found the hole in it: the check
+reads **one file per repository**, and the sector's dominant supply shape is a repository that ships
+`26` other people's directories. 🔵 So `P616-0` extends it rather than replacing it.
+
+**Components:** `git ls-remote --symref` (branch resolution, `p559`) · `raw.githubusercontent.com`
+(grant bytes) · this repository's hardened classifier (`p615`) · the stock-byte band (`616-I`).
+
+**Wiring, as a four-step gate run before any component is accepted:**
+
+```
+1. branch   := ls-remote --symref <repo> HEAD      # never assume main — 2 of 7 reads this pass
+2. family   := classify(title line)                # p612 rule; body-only match => NOT permissive
+3. residual := bytes - stock(family)               # stock MIT = 1056..1097 B (616-I, n=8)
+      residual > ~100 B  =>  ADDITIONAL-TERMS: read it, in its own language, before shelving
+4. tree     := enumerate vendored dirs, probe each distinct upstream once   # <- NEW this pass
+      any upstream ungranted or NC/SA  =>  refuse, or remediate per P616-2
+```
+
+🟢 **Cost, measured:** step `4` took `3` upstream probes — roughly `90` seconds — to move `616-A`'s
+specimen from *"`MIT`, looks shippable"* to *"contains `NonCommercial` and unlicensed copies"*.
+🔴 Steps `1`–`3` alone would have shipped it.
+
+🟡 **Stated limit:** step `3` catches instruments that **append**. It will not catch a substitution
+made inside the stock text at constant length. 🔴 Do not treat a passing residual as proof of a stock
+grant; it is absence of the one defect this control detects.
+
+### 🟢 `P616-1` — tutor-as-a-skill, on a grant-clean tree — `2`–`3` weeks
+
+**Components, every grant byte-read today:**
+[`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills)
+(`MIT`, `1,086 B`, `master`) for the education skill set ·
+[`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill)
+(`MIT`, `1,093 B`) as the worked reference for an **advisory** rather than tutoring shape ·
+[`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (`MIT`, `456★`, re-measured
+today) for mastery estimation.
+
+**Wiring.** Ship the skill set as `SKILL.md` workflows against the client's existing agent client —
+there is no infrastructure to stand up, which is the whole commercial point of this class. Back the
+*"what does this learner know"* question with `pykt` rather than with the model's own guess: the
+skill emits an interaction log, `pykt` returns per-concept mastery, and the skill's next move is
+selected from that vector. 🔵 `kaoyan-navigator` is the pattern to copy for any **selection** problem
+(course, programme, path) — it researches a live data surface, then emits a reach/match/safety
+ranking with explicit risk notes, which is a defensible shape for advice a client is liable for.
+
+🔴 **Do not** vendor `dmccreary/ibook-skills` into this, however good its `570`-concept learning graph
+is — `616-C`, it has no grant.
+
+### 🔴 `P616-2` — the remediation recipe: taking the usable half of an `ADDITIONAL-TERMS` package — `1` week
+
+🟢 `616-A`'s package is **not** a refusal in the way PageLM is. Its publisher enumerated exactly what
+is and is not covered and named the remedy, so the permissive subset is identifiable.
+
+**Recipe:**
+
+```
+1. read the residual clause and list the covered paths   # here: named root files,
+                                                         # skills/office-layer/, 22 first-party skills
+2. delete every directory the clause excludes            # here: the 26 vendored "base-layer" dirs,
+                                                         # incl. thinking-toolkit (CC BY-NC-SA 4.0)
+                                                         # and the 7 ibook-skills copies (unlicensed)
+3. re-probe the remaining tree for any further vendored upstream
+4. record the deletion list in the engagement's licence record, with the clause quoted
+5. re-source the deleted capability from a permissive upstream  # xxf-ai/awesome-benzi (MIT, 1,063 B)
+                                                                # ChatGPT3a01/... (MIT, 1,086 B)
+```
+
+🔵 **Why step `4` is not bureaucracy.** The deleted directories are the ones a future contributor will
+re-add by reflex, because they are the ones that make the package feel complete. 🟢 The deletion list
+*is* the deliverable's licence boundary.
+
+🟡 **When to refuse instead.** If the excluded set is load-bearing for the client's requirement, the
+remediation is a rewrite, not a deletion — price it as such rather than as an integration.
+
+### 🟢 `P616-3` — offline-first deployment for a connectivity-constrained region — `6`–`8` weeks
+
+**Components:** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`,
+`1,097 B`, branch **`develop`** — `616-K`) as the delivery substrate ·
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (`Apache-2.0`, `p615`) where a full LMS with
+`QTI 2.1`/`SCORM 1.2`/`LTI 1.3` is required centrally · `pykt-toolkit` (`MIT`) for mastery · the
+`P616-1` skill tier for content generation **at the centre, never on the edge device**.
+
+**Wiring.** Kolibri at the edge, syncing opportunistically; OpenOLAT as the system of record where one
+is needed; all agent/LLM work batched centrally and shipped to the edge as **generated artefacts**,
+because the edge is defined by not having connectivity. 🔵 This is the architecture the LATAM evidence
+selects: connectivity, device access and digital literacy are the reported limiters (`616-H`), so a
+pattern that assumes a live model call per learner interaction is disqualified before pedagogy is
+discussed.
+
+🟡 **Honest placement caveat.** Kolibri is `MIT` and offline-first and therefore *usable* in LATAM; it
+is **not LATAM-published**, so it gives the client no local maintainership. 🔴 `616-H` is unclosed and
+this pattern does not close it.
+
+### 🔵 `P616-4` — a bilingual `EN`/`ES` learner-facing surface — `2` weeks
+
+**Component:** [`Hainrixz/maia-skill`](https://github.com/Hainrixz/maia-skill) (`MIT`, `1,089 B`,
+`151★`) — `5` agents in parallel over market data, risk-profiled, rendering an interactive
+**bilingual `EN`/`ES`** dashboard, published explicitly as *educational market research, not
+financial advice*.
+
+**Wiring.** Take it for two things and not a third: 🟢 the **bilingual rendering layer**, which is the
+only Spanish learner-facing surface on this base's shelves and is reusable for any subject; and 🟢 the
+**parallel-agents-to-one-dashboard** shape, which is a clean worked example of fan-out plus
+synthesis under a permissive grant. 🔴 Do **not** take its domain logic into a client product without
+the publisher's own disclaimer surviving intact — the artefact is a teaching device about markets, and
+re-presenting it as advice changes its regulatory character entirely.
+
+🟡 It is financial-literacy content on an education shelf, placed `🔵 Global` — holder not placed.
+Its value here is the **layer**, not the subject.
+
 ## 🆕 `p615` — `2026-11-02` — patterns wired from rows byte-read today, plus **one control that belongs in every engagement**
 
 ### 🟢 `P615-0` — the grant gate, as a build step rather than a reminder — **prerequisite to all four patterns below**

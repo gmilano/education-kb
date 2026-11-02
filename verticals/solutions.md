@@ -3,6 +3,58 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PERMISSIVE VERTICAL SUBSTRATE IS SETTLED AND RE-MEASURED: `OpenOLAT` (`Apache-2.0`, `p615`) FOR A FULL LMS, `Kolibri` (`MIT`, `1,097 B`, BRANCH `develop`) FOR OFFLINE-FIRST DELIVERY. 🔴 AND THE SKILL-PACKAGE LAYER THAT SITS ON TOP OF THEM IS WHERE THE LICENCE RISK NOW LIVES.**
+
+### 🟢 `616-M` — the vertical stack, as this base can actually defend it today
+
+🔵 `p615` refuted this base's long-standing position that the education vertical's incumbents are all
+copyleft, by byte-reading `OpenOLAT` as `Apache-2.0` (`10,982 B`) with `QTI 2.1` + `SCORM 1.2` +
+`LTI 1.3` in the box. 🟢 That row is carried unchanged. This pass adds the **delivery-constraint** half
+of the stack and re-measures it:
+
+| layer | row | grant read | when a studio reaches for it |
+| --- | --- | --- | --- |
+| full LMS, permissive | [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` `10,982 B` (`p615`) | Default when the client needs a complete LMS and a permissive licence in the same artefact |
+| offline-first delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` `1,097 B`, branch **`develop`** (re-read today) | 🔵 Low-connectivity, low-device contexts — the binding constraint reported for LATAM and Sub-Saharan deployments |
+| incumbent, copyleft | `Moodle` / `Open edX` | 🔴 `GPL-3.0` / `AGPL-3.0` (carried) | Where the client already runs it; the grant forces the integration boundary, not the choice |
+| education ERP/SIS | `OpenEduCat` | 🔴 `LGPL-3.0` (carried, `p615` leg) | 🟡 Still no `MIT`/`Apache` education-specific ERP found — leg `3` returned the same answer for a fourth pass |
+
+🟡 **Leg `3` repeated verbatim this pass** (`open source platform education LMS ERP CRM MIT Apache`)
+and returned the same shape `p615` recorded: a single vendor's content dominating the index, no
+independent `MIT`/`Apache` education ERP, and nothing at all on CRM. 🔴 Recorded as a **standing
+absence with a known cause** (the index is vendor-captured), not as a new finding.
+
+### 🔴 `616-N` — a refusal pattern for the layer clients will actually ask about
+
+🟢 The skill-package layer is now where new supply arrives (`T616-1`), which means it is where a
+studio gets asked *"can we just drop this in?"*. 🔴 On this layer the answer is governed by the tree,
+not the root, and this pass has two worked examples:
+
+| candidate | root licence | shippable? | the reason |
+| --- | --- | --- | --- |
+| [`EtherealMingo/university-teacher-skills`](https://github.com/EtherealMingo/university-teacher-skills) | 🟢 title `MIT License` | 🔴 **not as shipped** | MIT covers first-party parts only; `26` vendored directories excluded, incl. `CC BY-NC-SA 4.0` content and `7` admittedly-unlicensed copies. 🟢 **Remediable** — see `P616-2` |
+| [`dmccreary/ibook-skills`](https://github.com/dmccreary/ibook-skills) | 🔴 none — badge only | 🔴 **no** | No grant payload. Badge asserts `CC BY-NC-SA 4.0`; honoured ⇒ `NonCommercial`, not honoured ⇒ all rights reserved. **Both readings refuse** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `PageLM Community License` | 🔴 **no** (`594-A`, re-read today at `8,563 B`) | Non-commercial only; redistribution *"strictly prohibited"*; commercial use requires a signed revenue-share. 🟢 Verdict unchanged on an independent re-read |
+
+🔵 **The one genuinely permissive member of that upstream set** —
+[`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills)
+(`MIT`, `1,086 B`, branch `master`) — is the component a studio can actually take from this
+neighbourhood, and it is education-specific by design: skills for education researchers, teachers and
+e-learning platform developers.
+
+### 🟡 `616-O` — a delivery-model bar that metadata will never show you, carried from `p614`
+
+🔴 `p614`'s [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (`340★`) — a
+student-success platform and recruitment CRM, the exact vertical a client asks for — is **Elastic
+License `2.0`**, which forbids *"provid[ing] the software to third parties as a hosted or managed
+service"*. 🟢 Re-confirmed today: platform field still reads only `NOASSERTION`, so nothing warns a
+reader who triages from metadata.
+
+🔵 **That is a bar on the studio's delivery model, not merely on redistribution** — it survives into
+this pass unchanged and generalises: on this shelf, `NOASSERTION` on a *vertical platform* is the
+highest-cost unread cell in the whole base, because the row looks like exactly what the engagement
+needs. 🟢 `616-E`'s revised rule is the reason to always read it.
+
 ## 🆕 `p615` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THIS BASE'S STANDING POSITION THAT THE EDUCATION VERTICAL'S INCUMBENTS ARE COPYLEFT IS **REFUTED ON BYTES**: `OpenOLAT` IS `Apache-2.0` (`10,982 B`, byte-read today) AND SHIPS `QTI 2.1` + `SCORM 1.2` + `LTI 1.3` IN THE BOX. 🔴 AND `614-G`'s GREEN DATA ROW IS `CC-BY-NC-4.0` — THE VERTICAL'S SCARCEST ASSET IS COMMERCIALLY BARRED.**
 
 ### 🟢 `615-F` — a permissive full LMS exists, and three passes' legs have been restating the opposite

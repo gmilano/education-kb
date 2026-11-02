@@ -3,6 +3,51 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — `2026-11-02` — **the forty-sixth consecutive global-leg nil on new head names, and the first pass where the yield came from a *licence* channel rather than a discovery one**
+
+🟢 **The nil is unchanged.** Legs `1`–`4` (`top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education LMS ERP CRM MIT Apache`,
+`AI education industry trends 2026`) returned **no new head name** this base did not already hold.
+🔵 `p615` gave that nil a denominator via GitHub topic pages; this pass adds the complementary
+observation: the nil is now **structural**, because the sector's new supply is no longer shaped like
+a head name.
+
+🟢 **What the legs *did* return is the same class `p614` typed and `p615` counted.** Leg `2` surfaced
+`OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills` and `anandpatikat/guru-latihan-dinamis` —
+🔵 **all three already on this shelf**. Leg `1` returned general-purpose agent rankings with no
+education row at all. 🟡 A `topic:edtech stars:>300` enumeration returned `12` rows of which
+**`10` were already held**; the two that were not are in `616-D`.
+
+🔴 **This pass's actual yield came from reading grants, not from finding names.** `4` new clean
+permissive rows, `1` `ADDITIONAL-TERMS` refusal and `1` ungranted upstream — and the two that matter
+most commercially were found by **following a licence file's own carve-out** to the upstreams it
+names, a channel this shelf has not used before.
+
+### 🟢 new this week — `4` clean permissive rows
+
+| agent / skill package | grant | bytes | branch | ★ | region | note |
+| --- | --- | --: | --- | --: | --- | --- |
+| [`Hainrixz/maia-skill`](https://github.com/Hainrixz/maia-skill) | 🟢 `MIT` | `1,089` | `main` | **151** | 🔵 Global | `5` parallel agents over crypto/stocks/forex/commodities, risk-profiled, **bilingual `EN`/`ES`** dashboard. Financial-literacy teaching artefact; publisher disclaims advice |
+| [`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) | 🟢 `MIT` | `1,093` | `main` | **38** | 🟢 APAC | 考研 graduate-admissions navigator: score lines, quotas, reach/match/safety. Advisory, not tutoring |
+| [`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills) | 🟢 `MIT` | `1,086` | 🔵 `master` | **34** | 🟢 APAC | 數位學習 / edtech skill set for researchers, teachers, platform developers. 🟡 pushed `2026-02-12` |
+| [`vantaflow/claude-skills-collection`](https://github.com/vantaflow/claude-skills-collection) | 🟢 `MIT` | `1,056` | `main` | **28** | 🟢 EMEA | `349` skills / `34` domains, French. 🔴 index, **not** education supply |
+
+### 🔴 new this week — `2` rows that are findings, not supply
+
+| address | read today | why it is here |
+| --- | --- | --- |
+| [`EtherealMingo/university-teacher-skills`](https://github.com/EtherealMingo/university-teacher-skills) | 🔴 `MIT-TITLE+ADDITIONAL-TERMS`, `2,254 B` (residual `1,157 B`), `17★`, APAC | Higher-ed teacher package: `22` sub-skills over teaching, research, supervision, admin and assessment, with a first-party Chinese office layer (native Word annotation, courseware, grade analysis). 🔴 Its MIT covers only first-party parts; `26` vendored directories are excluded, two of them `NonCommercial` or admittedly unlicensed. **`616-A`** |
+| [`dmccreary/ibook-skills`](https://github.com/dmccreary/ibook-skills) | 🔴 **ungranted** — ladder exhausted, platform `None`, `111★`, `217 MB`, pushed `2026-10-30` | *Agent Skills for Intelligent Textbooks*: `570`-concept learning graph, `31` chapters, `94` p5.js MicroSims, Bloom's 2001, ISO 11179, runs on `6` agent clients. 🔴 Richest education-specific corpus measured on this base — and **no grant payload**. README asserts `CC BY-NC-SA 4.0` **by badge only** (`p288` channel). Refuses on both readings. **`616-C`** |
+
+### 🟡 trend note carried forward — the vehicle keeps changing shape and the licence keeps lagging it
+
+🟢 `p614` identified the skill-package class; `p615` counted it; `p616` has now read its **grants as a
+population** and the result is the week's real signal: 🔴 a skill package is a *tree of other people's
+directories*, so every one of them is a **composition** question. `4 of 6` new rows this week are
+clean, `1` is a composition defect and `1` is an ungranted upstream feeding that defect. 🔵 For a
+studio this inverts the triage order — on this class, read the licence **before** evaluating the
+pedagogy, because the pedagogy is usually fine and the tree usually is not.
+
 ## 🆕 `p615` — `2026-11-02` — **the forty-fifth consecutive global-leg nil on *new names*, and the first one with a denominator**
 
 🟢 **The nil is unchanged. What changed is that it is now a measurement rather than an absence.**

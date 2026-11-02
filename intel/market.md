@@ -3,6 +3,182 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — reads `2026-11-02` — market map and regional placement, **and the LATAM supply gap finally has a cause instead of a count**
+
+🟢 **Channel note first, because it bounds everything below.** Every market and regulatory figure in
+this section is **secondary** — survey bodies, regulators, market-research firms and trade press.
+`598-G`'s host failures are unchanged (`unesco.org`, `eur-lex.europa.eu`, `oecd.org`, `moodledev.io`,
+`docs.openedx.org` do not resolve from this environment), so no primary text was read. 🔴 Market-size
+estimates **conflict across publishers** and are reported here as a range with the publisher named,
+never as a single number. 🟢 The only first-hand channel this pass had was the grant channel
+(`ls-remote` + `raw.githubusercontent.com`), and that is what `616-H` is built from.
+
+### 🔴 `616-H` — the LATAM gap converted from an absence into a measured cause
+
+🔵 This base has carried *"no LATAM-published permissive repository on any sell shelf"* as a declared
+gap for many passes, restated each time as a count of nils. 🟢 A count cannot distinguish **"the
+region publishes nothing"** from **"the region publishes and this base cannot see it"**. This pass
+measured the region's own flagship instead of searching for it again.
+
+🟢 **Latam-GPT is already cited twice in this file** — `8` countries, `30+` institutions — as evidence
+of regional *consortium scale*. It had never been read as **supply**. Its full public org was
+enumerated and every repository byte-read today:
+
+| `latam-gpt` repository | grant read today | bytes |
+| --- | --- | --: |
+| [`anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | 🟢 **`MIT`** | `1,072` |
+| [`llm-data-eval`](https://github.com/latam-gpt/llm-data-eval) | 🔴 ungranted — ladder exhausted | `0` |
+| [`toxicity-classifier`](https://github.com/latam-gpt/toxicity-classifier) | 🔴 ungranted — ladder exhausted | `0` |
+| [`language_identifier`](https://github.com/latam-gpt/language_identifier) | 🔴 ungranted — ladder exhausted | `0` |
+| [`training-estimations`](https://github.com/latam-gpt/training-estimations) | 🔴 ungranted — ladder exhausted | `0` |
+| [`data-deduplication`](https://github.com/latam-gpt/data-deduplication) | 🔴 ungranted — ladder exhausted | `0` |
+| [`fasttext-classifiers`](https://github.com/latam-gpt/fasttext-classifiers) | 🔴 ungranted — ladder exhausted | `0` |
+| [`.github`](https://github.com/latam-gpt/.github) | 🔴 ungranted — ladder exhausted | `0` |
+
+🔴 **`1` of `8` permissive. `7` of `8` carry no licence file at all. `0` of `8` are education-specific.**
+
+🟢 **So the cause is now stated, and it is not regional absence of activity.** The region's flagship
+open-source AI programme is real, funded and multi-country — and it **ships code without grant
+files**. 🔵 That is a different problem from "LATAM does not publish", and it has a different remedy: a
+Globant engagement in the region is more likely to unblock supply by **contributing a licence file
+upstream** than by waiting for new repositories to appear.
+
+🟡 **The gap therefore stands, but narrowed and re-typed:** this base still holds **no
+LATAM-published, permissive, *education-specific* row**. The one permissive LATAM grant found
+(`anonymization-filter`, `MIT`, `1★`) is data-preparation infrastructure for an LLM corpus, not
+education supply, and is far below any sell-shelf bar.
+
+🔴 **Discovery legs that returned nil, recorded with their exact queries** so the next pass does not
+repeat them blind. All run against the GitHub repository search index this pass used throughout:
+
+| leg | result |
+| --- | --- |
+| `educacion inteligencia artificial stars:>30` | 🔴 nil |
+| `educação IA tutor stars:>30` | 🔴 nil |
+| `tutor educativo IA aprendizaje stars:>15` | 🔴 nil |
+| `aprendizagem adaptativa stars:>5` | 🔴 nil |
+| `educacion abierta recursos stars:>20` | 🔴 nil |
+| `portugues brasileiro educacao LLM stars:>30` | 🔴 nil |
+| `escola educacional plataforma stars:>40` | 🔴 nil |
+| `universidad curso plataforma educativa stars:>40` | 🔴 nil |
+| `ENEM AI questoes stars:>10` | 🔴 nil |
+| `enem vestibular stars:>20` | 🟡 `1` hit — [`rodrigoborgesmachado/questoesConcursos`](https://github.com/rodrigoborgesmachado/questoesConcursos) (`31★`, Brazilian public-exam question bank) — byte-read today: 🔴 **ungranted, ladder exhausted** |
+| `org:latam-gpt` | 🟢 `8` repos → the census above |
+
+🔵 **Eleven Spanish/Portuguese legs, one non-nil hit, and that hit is ungranted too.** The pattern in
+the region is consistent across the flagship org and the long tail alike: the publishing happens, the
+**licence file does not**.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Scale, with the publisher named.** MarketsandMarkets places North America at **`36 %`** of the
+AI-in-education market, **`$3.68 B`** in `2026`; a separate estimate puts the region at `38 %` of
+`2025` share. 🔴 The two are not reconcilable from the material available and are reported as a range.
+
+🔴 **The operative asymmetry is institutional, not technical.** A Gallup study (April `2026`, reached
+here only in secondary digest) reports **over `60 %` of college students using AI weekly** for
+coursework while **roughly half of their institutions discourage or prohibit it**. 🟢 That gap — heavy
+sanctioned-adjacent use against unresolved policy — is the shape of a governance engagement, and it is
+the region's most reliable near-term demand signal.
+
+🟡 **Regulatory surface is state-level and moving.** `134` bills across `31` states tracked as of
+March `2026` covering privacy, classroom restriction and curriculum; a compliance reading notes
+multinationals must reconcile Canadian requirements against US state law with no federal settlement.
+🟢 Public money is real: the US Department of Education released **`$169 M`** in FIPSE awards including
+responsible-AI support.
+
+🔵 **Supply placement this pass:** `0` new North America rows. 🟡 `616-C`'s ungranted
+`dmccreary/ibook-skills` is the pass's most substantial education-specific corpus and its holder could
+**not** be placed — the profile endpoint returned nothing through this environment's channel, so it is
+shelved `🔵 Global — holder not placed` rather than guessed into this region.
+
+### EMEA
+
+🟢 **Policy is the region's differentiator and this pass's legs reflect it.** The EU Commission
+updated its **ethical guidelines on AI in education** and signed three Advanced Digital Skills grant
+agreements worth **`€25.4 M`** (QS EdTech newsletter; 🟡 the year is not stated in the source and is
+not asserted here). The UK's first AI Adoption Summit committed **`£200 M+`**, of which **`£100 M`**
+expands Bridge AI and **`£53 M`** goes to regional initiatives.
+
+🔴 **The high-risk classification remains the unread fact.** Education is Annex III under the EU AI
+Act, and `614-C`'s cost is unchanged: this base has **never read the primary text**, and its own EMEA
+legs have repeatedly served a superseded date. 🟢 The settled fact on this base remains
+**`2027-12-02` under `Reg. (EU) 2026/1744`** (`p233`/`p241`; `2026-08` superseded) — carried, not
+re-established this pass.
+
+🟢 **Supply placement this pass:** `1` new EMEA row —
+[`vantaflow/claude-skills-collection`](https://github.com/vantaflow/claude-skills-collection) (`MIT`,
+`1,056 B`, `28★`), French-language, `349` skills over `34` domains. 🔴 Shelved explicitly **as an
+index, not as education supply**: its education slice is one domain of thirty-four.
+
+🟡 **Sub-Saharan half, unchanged.** `p614`'s `elimu-ai/webapp` remains this base's only row pointing
+at that half of the region. No new one this pass.
+
+### APAC
+
+🟢 **The region supplies this base more than any other, and did again.** `2` of `4` new clean
+permissive rows are APAC-published:
+[`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) (`MIT`,
+`1,093 B`, `38★`, 考研 admissions navigation) and
+[`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills)
+(`MIT`, `1,086 B`, `34★`, Traditional Chinese, on `master`). 🔴 `616-A`'s
+`ADDITIONAL-TERMS` specimen is APAC-published too — the region leads this base on **both** permissive
+supply and composition risk, which are the same phenomenon seen from two sides.
+
+🟡 **Policy reads as convergent principles, divergent application.** Shared direction on safety,
+transparency and accountability; per-market implementation; the ASEAN Guide on AI Governance and Ethics
+still early-stage; Singapore's financial-sector consultations cited as the template for sectoral
+limits. 🔵 A Forrester-based outlook expects **`60 %`** of firms and governments in major markets such
+as India and China to integrate **locally developed LLMs**, education among the target sectors — which
+is a sovereignty requirement with direct architectural consequences for delivery.
+
+### LATAM
+
+🔴 **Supply: measured, and the finding is `616-H` above** — `1` of `8` permissive across the region's
+flagship org, `0 of 8` education-specific, `11` discovery legs with one non-nil hit that is itself
+ungranted. 🟢 This is the first pass that states a **cause** rather than a count.
+
+🟢 **Demand, by contrast, is the best-evidenced of any region on this base.** UNESCO IESALC with
+UNU-IAS published a working paper (listed September `2026`) mapping AI adoption across Latin American
+and Caribbean universities on five axes — teaching, research, community engagement, administration and
+governance. A TecScience (Tec de Monterrey) post cites an *AI in Higher Education LATAM Survey 2026*
+reporting heavy undergraduate and graduate use. 🔵 The region's standing asymmetry on this base —
+**rich in demand evidence, empty in measured local permissive supply** — is unchanged and now
+explained.
+
+🟡 **Regulation is fragmented by design.** A Baker McKenzie briefing describes countries at different
+stages with no common framework; an ECLAC-based report (October `2025`) names **Chile, Brazil and
+Mexico** as leaders while flagging regional gaps in data, training and regulation.
+
+🔴 **Infrastructure is the binding constraint, and it selects the architecture.** Connectivity,
+device access and digital literacy are reported as the limiters. 🟢 That is why
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, `1,097 B`,
+re-measured today, branch `develop`) matters disproportionately here: it is **offline-first by
+design**, permissive, and already on this base's shelves. 🔵 It is not LATAM-published — so it does
+not close `616-H` — but it is the correct permissive substrate for a LATAM deployment, and
+`616-D`'s bilingual `EN/ES` row is the only learner-facing Spanish surface this base holds.
+
+### Global
+
+🟢 **Market size, as a range with publishers named, never a point estimate.** `2025` valuations of
+**`$6.4 B`** and **`$8.3 B`** from different publishers; `2026` figures of **`$3.7 B`** and
+**`~$11 B`**. 🔴 A spread this wide is a definitional artefact, not measurement noise, and no figure in
+this base should be quoted without its publisher. 🟡 K–12 is reported as the leading segment at
+**`~34 %`** of `2026` share.
+
+🟢 **The structural trend, and it is this pass's own subject.** New permissive education supply keeps
+arriving as **agent-skill packages riding somebody else's coding agent** (`p614`'s class, confirmed
+again: `4 of 4` new rows this pass are skill packages, not applications). 🔴 `616-A` is the cost of
+that vehicle: a skill package is a **tree of vendored directories**, so its licence question is a
+*composition* question, and a single title-line read is structurally insufficient for the dominant
+shape of new supply in this sector.
+
+🔵 **Standing governance signal:** the OECD's `2026` Digital Education Outlook is reported as warning
+that AI helps learning only where pedagogy stays in control — carried as secondary, since `oecd.org`
+does not resolve here.
+
 ## 🆕 `p615` — reads `2026-11-02` — market map and regional placement, **all four regional legs returned substance for the first time in several passes**
 
 🟢 **Channel note first, because it bounds everything below.** Every market figure here is

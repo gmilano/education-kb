@@ -3,6 +3,98 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🔴 `T616-1` — New permissive education supply now arrives as a **tree of other people's directories**, so licence risk has moved from the *row* to the *composition*
+
+🟢 **Evidence.** `4 of 4` new clean permissive rows this pass are agent-skill packages, not
+applications — the third consecutive pass in which the class `p614` first typed supplies all the new
+rows. 🔴 And the pass's two defects are both **composition** defects: `616-A`'s package is `MIT` at the
+root and ships `26` excluded directories, two of them `NonCommercial` or unlicensed; `616-C`'s
+upstream is a `111★`, `217 MB` corpus with no grant file feeding `7` of those directories.
+
+🔵 **Why it matters commercially.** A single licence read per repository was adequate when supply was
+applications. On a skill package the root licence describes a **wrapper**, and the deliverable is the
+tree. 🟢 The operative consequence is an inversion of triage order: on this class, read the grant
+composition **before** evaluating the pedagogy — the pedagogy is usually good and the tree usually is
+not.
+
+🔴 **What would refute this.** A pass where new permissive supply returns to self-contained
+applications, or where enumerating a skill package's vendored directories reliably finds them all
+permissive. 🟡 Three upstream probes refuted it this pass; the honest statement is that the class has
+been measured at `n=1` package, so the *frequency* is unestablished even though the *mechanism* is
+proven.
+
+### 🟢 `T616-2` — The platform licence field is most informative exactly where it refuses to answer
+
+🟢 **Evidence.** `614-E` measured `NOASSERTION` as `6 of 6` non-permissive and advised spending no
+discovery budget on it. 🔴 This pass's load-bearing specimen is `NOASSERTION`
+(`key=other`, `name=Other`) and **partially `MIT`** on bytes — the platform field declined to name a
+family *because the instrument is non-stock*, which is precisely correct, and more correct than the
+title line.
+
+🔵 **Refined claim, not a reversal.** `NOASSERTION` stays low-yield for finding **clean** rows and
+becomes high-yield for finding **risk**. `616-E` records the revision in full. 🔴 `NULL` and
+`NOASSERTION` must still never be pooled: this pass found `NULL` means *no file* (`616-C`) and
+`NOASSERTION` means *a file that needs reading* (`616-A`) — different defects, different budgets.
+
+🟡 **What would refute this.** A population of `NOASSERTION` rows in which none conceals a partial
+permissive grant, measured at `n>10`. This pass has `n=1` on the positive side.
+
+### 🔴 `T616-3` — LATAM's supply gap is a **licence-file** gap, not an activity gap
+
+🟢 **Evidence, first-hand for the first time.** The region's flagship open-source AI programme,
+`latam-gpt`, is cited twice in this base's own market intel for consortium scale (`8` countries,
+`30+` institutions). Enumerated and byte-read today: **`1` of `8` repositories carries a permissive
+grant; `7` of `8` carry no licence file at all; `0` of `8` are education-specific.** Eleven
+Spanish/Portuguese discovery legs returned one non-nil hit, itself ungranted.
+
+🔵 **Why this is a better finding than the count it replaces.** "No LATAM permissive supply" could not
+distinguish regional silence from this base's blindness. 🟢 The census distinguishes them: the
+publishing is happening and **the licence file is not**. That changes the remedy — a regional
+engagement is more likely to unblock supply by contributing a `LICENSE` upstream than by waiting for
+new repositories.
+
+🔴 **What would refute this.** A LATAM-published, permissive, education-specific repository above this
+base's bar — which would close `616-H` outright. 🟡 Also refutable in the other direction: if
+`latam-gpt`'s repositories gain licence files, the cause stated here expires and should be re-measured
+rather than carried.
+
+### 🟡 `T616-4` — Star rank remains an anti-signal for commercial usability in education, now on a fourth channel
+
+🟢 **Evidence.** [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor),
+`29,548★` — the most-starred standalone tutor in the sector — byte-read again today: **ladder
+exhausted, no grant**. `p601`/`605-J` established this; a fourth independent channel now agrees.
+🔴 `616-C` extends the pattern down-rank: `111★` and `217 MB` of the best education-specific skill
+content measured on this base, also ungranted.
+
+🔵 **The usable form of the rule.** Rank orders *attention*, not *licence hygiene*, and in this sector
+the two appear mildly **anti**-correlated: the biggest education repositories are
+prompt/content artefacts, which is where a permissive default is least reliable (`614-G`'s point about
+copy versus code, unchanged).
+
+🔴 **What would refute this.** A measured correlation across the top `20` education repositories
+showing permissive grants concentrated at the top. 🟡 Never attempted on this base; the claim rests on
+individually-read rows, and is stated as a tendency rather than a coefficient.
+
+### 🔵 `T616-5` — Demand-side governance is the best-evidenced engagement surface, and it is not a model problem
+
+🟢 **Evidence.** North America: a Gallup study (April `2026`, secondary) reports **over `60 %` of
+college students using AI weekly** while **roughly half of institutions discourage or prohibit it**,
+against `134` bills in `31` states. EMEA: updated EU ethical guidelines on AI in education plus
+`€25.4 M` in Advanced Digital Skills grants, with education classed Annex III high-risk. LATAM: UNESCO
+IESALC/UNU-IAS mapping adoption across five institutional axes.
+
+🟢 **The shape is consistent across all three regions: usage has outrun policy.** 🔵 That is a
+governance, assessment-redesign and disclosure problem — none of which is solved by a better tutor
+model, and all of which is billable.
+
+🔴 **What would refute this, and the standing weakness.** Every figure above is **secondary**:
+`598-G`'s hosts (`unesco.org`, `eur-lex.europa.eu`, `oecd.org`) do not resolve from this environment,
+so no primary text was read. 🔴 `614-C`'s cost is unchanged — the EU Annex III primary text has never
+been read on this base, and the settled compliance date (**`2027-12-02`**, `Reg. (EU) 2026/1744`) is
+carried from `p233`/`p241` rather than re-verified here.
+
 ## 🆕 `p615` — `2026-11-02` — trends, each with the evidence that would refute it
 
 ### 🔴 `T615-1` — The binding constraint on open-source education AI is the **grant instrument**, and the sector's own curators keep getting it wrong at the clause level

@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p616` — `2026-11-02` — the **agent-skill supply chain**, enumerated upstream for the first time: a `111★` corpus with no licence is feeding packages that are published as `MIT`
+
+🟢 **The pass's one genuinely new surface.** Previous passes enumerated publisher orgs (`p615`: ADL and
+the standards tier). This pass enumerated something different: the **upstream set named inside a
+downstream repository's own licence carve-out**. That is a supply-chain channel, and on this shelf's
+dominant class — skill packages — it is the channel that decides shippability.
+
+🔴 **The finding.** [`dmccreary/ibook-skills`](https://github.com/dmccreary/ibook-skills) (`111★`,
+`217,874 KB`, `main`, pushed `2026-10-30`) is actively maintained, substantively the richest
+education-specific agent-skill corpus this base has measured — and carries **no grant payload**: full
+ladder exhausted, platform field `None`, licence asserted only as a README badge
+(`CC BY-NC-SA 4.0`). 🔵 It is already vendored downstream, and the downstream says so in writing.
+
+### 🟢 the upstream set, byte-read today
+
+| upstream | grant read today | bytes | branch | consequence downstream |
+| --- | --- | --: | --- | --- |
+| [`dmccreary/ibook-skills`](https://github.com/dmccreary/ibook-skills) | 🔴 **ungranted — ladder exhausted** | `0` | `main` | 🔴 `7` directories vendored into `616-A`'s package **without authorization**, by that publisher's own statement |
+| [`xxf-ai/awesome-benzi`](https://github.com/xxf-ai/awesome-benzi) | 🟢 `MIT` | `1,063` | `main` | 🟢 clean to vendor |
+| [`ChatGPT3a01/claude-educational-ai-skills`](https://github.com/ChatGPT3a01/claude-educational-ai-skills) | 🟢 `MIT` | `1,086` | 🔵 `master` | 🟢 clean to vendor; also promoted as a row in its own right (`616-D`) |
+
+🟢 **All three upstream claims were made by the downstream and verified here independently** — the
+carve-out text is an external assertion about third parties, and this base does not relay those. All
+three checked out, which is itself worth recording: the publisher documented their own licence risk
+accurately, including an admission against interest.
+
+### 🔴 the second-order rule this produces
+
+🟢 On the skill-package class, the sell-shelf question is **not** *"what is this repository's
+licence?"* but *"what is the licence of every directory this repository ships?"*. 🔴 A clean
+title-line `MIT` on the root tells you about the root only — and on this class the root is a thin
+wrapper around other people's trees.
+
+🔵 **Operative, and cheap:** before shelving any skill package, enumerate its vendored directories and
+probe each distinct upstream once. `616-A`'s specimen needed exactly `3` upstream probes to move from
+🟢 *"`MIT`, `17★`, looks shippable"* to 🔴 *"contains `NonCommercial` content and unlicensed copies"*.
+🟢 Three probes is roughly `90` seconds of `ls-remote` plus `raw` reads.
+
+### 🟡 what was enumerated and returned nothing new
+
+| leg | result |
+| --- | --- |
+| `topic:edtech stars:>300` | 🟡 `12` rows, **`10` already held**; the `2` new are in `616-D` |
+| `topic:education-ai stars:>80` | 🔴 `1` row (`JuneYaooo/lineage-skill`, `466★`) — already held |
+| `knowledge tracing stars:>100` | 🟢 `12` rows, **all already held**; `pykt-team/pykt-toolkit` re-measured at `456★`, matching this base's published cell exactly |
+| `adaptive learning engine stars:>80` | 🔴 nil on education — returns unrelated optimisation and game-engine repos |
+| `automated grading essay AI stars:>100` | 🔴 nil |
+| `lesson plan generator AI stars:>30` | 🔴 nil |
+| `student success platform open source stars:>100` | 🔴 nil on education |
+| `university course assistant RAG stars:>100` | 🔴 nil |
+| `k12 teacher skills AI stars:>10 pushed:>2026-08-01` | 🔴 nil |
+
+🟢 **`pykt` is the quiet good news.** An independent re-measurement returned `456★` against this
+base's published `456` — 🔵 after the technology KB's experience of pipeline-inflated star cells, a
+clean agreement on a carried row is worth recording rather than assuming.
+
 ## 🆕 `p615` — `2026-11-02` — the standards tier is **mostly archived**, measured on the publisher's own org
 
 🟢 **The pass's one real new surface.** Leg `10` (`open source LTI xAPI SCORM QTI library 2026
