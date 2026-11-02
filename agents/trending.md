@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — `2026-11-02` — **the `51st` consecutive global-leg nil, and the week's real supply is a tier the shelf had `1` mention of: `6` AAC runtimes, `3` grants permissive, `3` copyleft, and the active ones are all the copyleft ones**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated global legs: `13` head names, `13` held, `0` new — the **51st** consecutive nil
+
+Proven row-by-row against a **`3,906`**-slug oracle built this pass from the live shelf files
+(`3,828` at `p620`; the oracle grew `78` addresses in one pass):
+
+| Name returned by the mandated legs | Oracle |
+|---|---|
+| `hkuds/deeptutor` | 🔴 held |
+| `thu-maic/openmaic` | 🔴 held |
+| `hugohe3/ppt-master` | 🔴 held |
+| `rasbt/llms-from-scratch` | 🔴 held |
+| `openeducat/openeducat_erp` | 🔴 held |
+| `frappe/education` | 🔴 held |
+| `apache/ofbiz` | 🔴 held |
+| `krayin/laravel-crm` | 🔴 held |
+| `idurar/idurar-erp-crm` | 🔴 held |
+| `cortezaproject/corteza` | 🔴 held |
+| `hcengineering/platform` | 🔴 held |
+| `arunagirinathan-k/awesome-ai-agents-2026` | 🔴 held |
+| `ashishpatel26/500-ai-agents-projects` | 🔴 held |
+
+🔵 `620-D`'s cause holds: the mandated queries rank by **popularity**, and this base has held the
+sector's popular head for roughly `200` passes. 🟢 **The legs still earn their place as a drift check
+on the digest channel** — `621-H` is this pass's catch and it came from exactly there — but they are
+no longer a supply instrument.
+
+### 🟢 This week's new agent-shaped supply: the AAC tier (`6` rows, all byte-read `2026-11-02`)
+
+Named by censusing the shelf's own holes: `augmentative` appeared **once** across seven files.
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region |
+|---|---|---|---|---|
+| [`Chuea81/freevoice-aac`](https://github.com/Chuea81/freevoice-aac) | `MIT`, `1,064 B` | `14` | `2026-06-30` | Global |
+| [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC) | `Apache-2.0`, `11,357 B` | `34` | `2024-11-22` | Global |
+| [`jeremydpotts/speakeasy-aac`](https://github.com/jeremydpotts/speakeasy-aac) | `MIT`, `1,084 B` | `0` | `2025-12-05` | Global |
+| [`sonicbaume/FreeAAC`](https://github.com/sonicbaume/FreeAAC) | 🔴 `AGPL-3.0`, `34,523 B` | `10` | `2026-10-28` | EMEA |
+| [`sproutaac/app`](https://github.com/sproutaac/app) | 🔴 `GPL-3.0`, `35,149 B` | `1` | `2026-10-30` | North America |
+| [`open-aac/sweet-suite-aac`](https://github.com/open-aac/sweet-suite-aac) | 🔴 `AGPL-3.0`, `34,519 B` | `9` | `2025-04-24` | North America |
+
+🔴 **The week's structural finding: the `3` permissive-vs-copyleft split runs exactly against
+maintenance.** The `2` most-permissive rows are the `2` most stale (`2024-11-22`, `2025-12-05`); all
+`3` actively-developed rows are copyleft. **There is no actively-maintained permissive AAC runtime.**
+
+### 🔴 Refused this week, with reasons — `3` rows
+
+| Repo | Reason |
+|---|---|
+| [`autistic-wiring/aac-system`](https://github.com/autistic-wiring/aac-system) | An `MIT` `shields.io` **badge** in the `README` over a tree with **no grant**: `LICENSE` `404` on `main` *and* `master`, no `license` field in `package.json`, channel B `spdx_id` `NULL`. 🔴 The false claim reached this pass **through the web-search digest** ("its MIT license is noted in the repo header") — `621-H`. |
+| `EdTech-a-thon/aac` | Unreachable on **both** channels — `ls-remote` credential prompt (`ABSENT_OR_PRIVATE`), channel B HTTP `422`. The digest described it with a mobile app, manager dashboard and API. A `404` is not a finding. |
+| `mclearn2025-a11y/Speak-easy-app` | `0★`, `spdx_id` `NULL`, pushed `2026-10-14`. No grant, no traction. Not padding the shelf with it. |
+
+### 🟢 Star-drift check on two rows this shelf already holds
+
+Both confirmed live with byte-read grants and current counts, so the trend is recorded rather than
+re-discovered:
+
+| Repo | Grant (byte-read today) | ★ now | `pushed_at` | Note |
+|---|---|---|---|---|
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `MIT`, `1,065 B` | `364` | `2026-10-27` | Exam-prep coach as an agent skill: teaches from slides with **page citations**, crops figures, quizzes from real homework, targets small/cheap models. Chinese-first, cross-session memory, anti-hallucination by provenance. |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `MIT`, `1,069 B` | `295` | `2026-10-20` | Socratic private-tutor skill plus self-hostable web app, explicitly built on **Bloom's 2-sigma** research. Chinese-first. |
+
+🔵 Both are **agent-skill-shaped rather than application-shaped** — distributed as skills for coding
+agents (Claude Code, Cursor, Codex) rather than as deployable products. That packaging is now the
+fastest-growing education supply shape this shelf tracks, and `364★`/`295★` inside one month is
+traction no AAC row in this tier comes close to. 🔴 The asymmetry is worth stating: the sector's
+*attention* is on exam-cramming for students who can already read, while AAC — software for learners
+who cannot speak — has a `34★` ceiling and two-year-stale permissive trees.
+
 ## 🆕 `p620` — `2026-11-02` — **the fiftieth consecutive global-leg nil, and the first pass that can explain it: the mandated legs are a search *digest*, and a repository *index* was reachable all along**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

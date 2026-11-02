@@ -4,6 +4,223 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED EXISTENCE RECIPE IS BROKEN IN THIS ENVIRONMENT AND WOULD HAVE PUBLISHED `22` FALSE ABSENCES: `curl -sI github.com/{owner}/{repo}` RETURNS A POLICY `403` FOR EVERY SLUG, EXISTENT OR NOT. 🔴 AND THE SECOND CHANNEL CAUGHT A MISSING RUNG IN **THIS PASS'S OWN** LADDER: A `COPYING`-FIRST PROBE GRADES EVERY `LGPL` PROJECT AS `GPL`. 🟢 THREE TIERS NAMED FROM THE SHELF'S OWN HOLES PAID `21` NEW HEAD NAMES OF `22` AGAINST A `3,906`-SLUG ORACLE, `9` PERMISSIVE GRANTS BYTE-READ. 🔴 `p620`'s NEW DISCOVERY CHANNEL IS CALIBRATED ON THE PASS THAT ADOPTED IT: IT SILENTLY OMITS **FORKS** (PROVEN) AND RETURNS `422` FOR **RENAMED** REPOS (PROVEN BY IDENTICAL `HEAD` SHA). 🔴 A `269 B` PAYLOAD TITLED `Apache License` WHOSE BODY IS THE LITERAL PLACEHOLDER `[Standard Apache 2.0 License Terms Applied]`. 🔴 AND THE INVERSE, WHICH IS THE DANGEROUS ONE: A **REAL** `GPL-3.0` GRANT THE METADATA CHANNEL REPORTS AS `NOASSERTION`. ELEVEN REGISTERED (`621-A`…`621-K`).**
+
+### 🔴 `621-A` — read this first: the existence instrument this task mandates returns a uniform `403`, and `403` is not `404`
+
+The standing instruction is *"Verify every URL before writing it (`curl -sI`). A 404 is not a finding."*
+🔴 **Run literally in this environment it is worse than useless.** Probed over the `22` head names
+this pass surfaced, `curl` to `https://github.com/{owner}/{repo}` returned **`403` for `22` of
+`22`** — including `torvalds/linux`. A base that read that column as existence would have recorded
+**`22` false absences** and published an empty pass.
+
+🔵 The `403` is the session's egress policy refusing the host, not GitHub answering about a
+repository, and it is **constant across existent and non-existent slugs** — so it carries *zero*
+existence information. The proxy's own status endpoint is what separates the two: a genuine policy
+denial is logged under `recentRelayFailures` (`connect_rejected`, `gateway answered 403 to CONNECT`),
+and `github.com` HTML pages and `api.github.com` are both refused while the channels below are open.
+
+🟢 **The three channels that do answer, measured this pass:**
+
+| Channel | Verdict this pass | What it establishes |
+|---|---|---|
+| `git ls-remote --symref https://github.com/{slug} HEAD` | **open** | existence, default branch, `HEAD` sha |
+| `raw.githubusercontent.com/{slug}/{branch}/{file}` | **open** (`200`) | the licence payload, byte-for-byte |
+| `gh api search/repositories -f q='repo:{slug}'` | **open** (`p620`'s channel) | stars, `spdx_id`, `pushed_at`, description |
+| `curl -sI https://github.com/{slug}` | **`403`, uninformative** | nothing — do not use |
+| `api.github.com/repos/{slug}` | **`403`** | nothing |
+
+🟢 **And `ls-remote` arrives pre-calibrated by this base's own `p293` rule** — *a credential prompt is
+a MEASUREMENT, not an inconclusive result*. With `GIT_TERMINAL_PROMPT=0` an absent **or** private
+repo dies on `could not read Username for 'https://github.com'`, which is a positive
+`ABSENT_OR_PRIVATE` verdict rather than a timeout. The control pair ran: `torvalds/linux` →
+`refs/heads/master`; `this-org-does-not-exist-zz9/nope-zz9` → credential prompt. `1 of 1` each way.
+
+🔵 **Standing correction for every future pass of this base:** the task's `curl -sI` recipe is
+refused here. Use `ls-remote` for existence and `raw.githubusercontent.com` for the grant. The
+recipe in the instructions is not wrong in general — it is wrong *through this proxy*, and the
+distinction is the whole finding.
+
+### 🔴 `621-B` — a missing rung in **this pass's own** ladder, and the second channel is what caught it
+
+🔴 `usaskulc/cat` ships **both** `COPYING` (`GNU GENERAL PUBLIC LICENSE Version 3`, `35,147 B`) and
+`COPYING.LESSER` (`GNU LESSER GENERAL PUBLIC LICENSE Version 3`, `7,651 B`). This pass's ladder
+probed `LICENSE → LICENSE.md → LICENSE.txt → LICENCE → COPYING`, hit `COPYING`, and graded the repo
+**`GPL-3.0`**. 🟢 Channel B reported **`LGPL-3.0`**, the disagreement was run down, and **channel B
+is right**.
+
+🔵 **The mechanism, and it generalises to every `LGPL` project in existence.** `LGPL-3.0` is not a
+standalone text: it is *`GPL-3.0` plus additional permissions*, so the canonical distribution ships
+the full `GPL` in `COPYING` and the short grant in `COPYING.LESSER`. **Any ladder that probes
+`COPYING` before `COPYING.LESSER` mis-grades every one of them**, and the stock `GPL` text it finds
+is complete and valid — there is no byte-band or template check that can catch this, because the
+file it read really is `GPL-3.0`. Only the *presence of a sibling* resolves it.
+
+🔴 **The error direction matters and it is not the harmless one.** `LGPL-3.0` permits linking from
+proprietary code; `GPL-3.0` does not. Grading `LGPL` as `GPL` wrongly **excludes linkable supply**
+from a client deliverable — the mirror of `p310`'s `CC-BY-NC`-read-as-`CC0` defect, which wrongly
+*included* unusable supply. Both are boundary crossings; this base has now produced one in each
+direction.
+
+🟢 **Ladder `v3`, registered:** probe `COPYING.LESSER` and `COPYING.LIB` **before** `COPYING`, and
+when `COPYING` matches stock `GPL`, probe for the `LESSER` sibling before emitting a verdict.
+`COPYING.LIB` returned `404` here, so the rung is carried on one real instance, not two.
+
+### 🟢 `621-C` — how the three tiers were named, and the yield
+
+🟢 `p619`'s operative held a fourth time: **census the shelf's own holes rather than re-run the
+mandated legs.** A keyword count over the seven live shelf files returned the tiers `p619`/`p620`
+filled as now-covered (`phonics` **`27`**, `sign language` **`28`**, `early literacy` **`9`**) and
+named the next three by their remaining zeroes — `augmentative` **`1`**, `apprenticeship` **`2`**,
+`curriculum mapping` **`2`**, against `proctor` **`555`**, `rubric` **`491`** and `LTI` **`3,058`**.
+
+Those three tiers returned **`22`** head names, **`21`** new against an oracle of **`3,906`**
+distinct addresses extracted this pass from the live shelves, and **`9`** permissive grants —
+`6` `MIT`, `3` `Apache-2.0` — every payload byte-read at `raw.githubusercontent.com` today and
+cross-checked against channel B `19 of 19` where both channels answered.
+
+### 🔴 `621-D` — the mandated global legs return the fifty-first consecutive nil
+
+The four mandated legs (`top open source AI agents education 2026 github MIT`, `github trending
+education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry
+trends 2026`) surfaced **`13`** head names. 🔴 **All `13` are held** against the `3,906`-slug oracle:
+`hkuds/deeptutor`, `thu-maic/openmaic`, `hugohe3/ppt-master`, `openeducat/openeducat_erp`,
+`krayin/laravel-crm`, `idurar/idurar-erp-crm`, `cortezaproject/corteza`, `hcengineering/platform`,
+`rasbt/llms-from-scratch`, `arunagirinathan-k/awesome-ai-agents-2026`,
+`ashishpatel26/500-ai-agents-projects`, `apache/ofbiz`, `frappe/education`.
+
+🔵 The cause named at `620-D` holds: the mandated queries are phrased for *popularity*, and this
+base has held the sector's popular head for ~`200` passes. The legs are still worth running as a
+**drift check on the digest channel** — `621-H` is this pass's catch and it came from exactly there
+— but they are no longer a supply instrument. The hole census is.
+
+### 🟢 `621-E` — the AAC tier: `6` real runtimes where this shelf had `1` mention of the word
+
+`augmentative` appeared **once** across seven shelf files before this pass. AAC — augmentative and
+alternative communication — is the software a nonspeaking learner uses to speak, and it is the
+single most under-shelved learner-facing tier this base has measured. Every grant below byte-read
+today; every `pushed_at` and star count from channel B today.
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | What it is in a wiring |
+|---|---|---|---|---|---|
+| [`Chuea81/freevoice-aac`](https://github.com/Chuea81/freevoice-aac) | `MIT`, `1,064 B`, operative clause + warranty | `14` | `2026-06-30` | Global | Symbol-grid AAC that runs entirely in the browser, offline, no account and no data collection; `649` files, deployed at `freevoiceaac.app`. The **permissive default** for this tier. |
+| [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC) | `Apache-2.0`, `11,357 B`, §2/§4/§9 present | `34` | `2024-11-22` | Global | The **only AI-native** row in the tier: OpenAI vector embeddings translate free text/speech → AAC symbol, with `DALL·E 3` generating and caching a symbol when the vector match is weak. Shipped on the App Store, trialled at `learningo.org`. 🔴 Two years stale. |
+| [`jeremydpotts/speakeasy-aac`](https://github.com/jeremydpotts/speakeasy-aac) | `MIT`, `1,084 B`, operative clause + warranty | `0` | `2025-12-05` | Global | Browser/PWA AAC aimed at nonverbal autistic children; `180` files. 🔴 ~`11` months stale, `0` stars — a starting point, not a dependency. |
+| [`sonicbaume/FreeAAC`](https://github.com/sonicbaume/FreeAAC) | 🔴 `AGPL-3.0`, `34,523 B` | `10` | `2026-10-28` | EMEA | React Native across Android/iOS/web, public beta at `free-aac.org` and on Google Play; `101` files. **The most active row in the tier** — and network-copyleft, so it bounds the delivery model. |
+| [`sproutaac/app`](https://github.com/sproutaac/app) | 🔴 `GPL-3.0`, `35,149 B` | `1` | `2026-10-30` | North America | Flutter AAC for autism, cerebral palsy and developmental delay, explicitly **motor-planning stable** (button positions do not move as vocabulary grows — a real clinical requirement). Pre-release. |
+| [`open-aac/sweet-suite-aac`](https://github.com/open-aac/sweet-suite-aac) | 🔴 `AGPL-3.0`, `34,519 B` | `9` | `2025-04-24` | North America | **The mature one**: `1,892` files, a full web AAC app plus support suite with speech synthesis and communication boards, forked from `CoughDrop`. Network-copyleft. |
+
+🔵 **The tier's shape, and it is the finding rather than any single row.** The two permissive rows
+are the two *least* maintained (`2024-11-22`, `2025-12-05`); the three actively-developed rows are
+all **copyleft** (`AGPL`×2, `GPL`×1). 🔴 A studio that needs a permissive AAC base today must either
+adopt a stale tree and own its maintenance, or take the `AGPL` and accept the delivery constraint.
+There is no actively-maintained permissive AAC runtime in this tier. That is an informed gap, and
+`621-E` is where it is recorded.
+
+### 🔴 `621-F` — a `269 B` payload titled `Apache License` that is a placeholder, not a grant
+
+🔴 [`masood-mashu/git-curriculumai`](https://github.com/masood-mashu/git-curriculumai) ships a
+`LICENSE` of **`269 B`**. Stock `Apache-2.0` is `11,357 B`. The entire body:
+
+```
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+   [Standard Apache 2.0 License Terms Applied]
+```
+
+The title, the version line, the URL and the `TERMS AND CONDITIONS` heading are all present and
+correct — and where ~`11,000 B` of operative terms belong there is a **bracketed English
+placeholder**. Graded against the four operative markers: grant clause **`0`**, `§2 Grant of
+Copyright License` **`0`**, `§4 Redistribution` **`0`**, `§9 Accepting Warranty` **`0`**.
+
+🟢 **Channel B independently agrees**: `spdx_id` = **`NOASSERTION`**. GitHub's own detector refuses
+to name a licence for this file. Two channels, one verdict: **no effective grant**. `p616`'s class
+(*a stock title line is not a permissive grant over the tree it ships*), new instance, and the most
+literal one this base has caught — the file announces its own incompleteness in prose.
+
+### 🔴 `621-G` — the inverse shape, and this is the one that costs money
+
+🔴 [`UBCForestryTLS/curriculum-development-tool`](https://github.com/UBCForestryTLS/curriculum-development-tool)
+ships `LICENSE.md` at `35,477 B`. Channel B reports `spdx_id` **`NOASSERTION`**. 🟢 The byte read
+says otherwise: the file carries a **complete, real `GNU GENERAL PUBLIC LICENSE Version 3`**, title
+at **line 3**, with `11` in-text references to the GPL and the standard `§13` AGPL cross-reference.
+
+🔵 **The mechanism:** the file *leads* with a `<strong>Highcharts Attribution</strong>` third-party
+notice block, so GitHub's template matcher fails on the opening bytes and emits `NOASSERTION`.
+
+🔴 **Why this is the dangerous direction.** `621-F`'s failure makes an ungranted tree *look*
+granted — bad, but it fails closed if anyone reads the payload. This one makes a **real viral
+copyleft grant look like no licence at all**. A studio reading the GitHub sidebar sees
+`NOASSERTION`, and the two readings available to it are both wrong: "unusable, skip it" (loses real
+supply) or "no stated licence, treat as permissive-by-omission" (ships `GPL-3.0` code into a
+proprietary deliverable). 🟢 **Standing rule: `NOASSERTION` is not `no grant`. It is `the matcher
+declined`, and it obliges a byte read.** `621-F` and `621-G` both return `NOASSERTION` and their
+true grants are *no licence* and *`GPL-3.0`* respectively — the metadata value does not discriminate.
+
+### 🔴 `621-H` — second instance: a listing asserts `MIT` over a tree with no grant at all, and the false claim reached this pass through the digest
+
+🔴 [`autistic-wiring/aac-system`](https://github.com/autistic-wiring/aac-system) renders an `MIT`
+`shields.io` badge in its `README`, hyperlinked to `LICENSE`. Measured today:
+
+| Probe | Result |
+|---|---|
+| `main/LICENSE`, `main/LICENSE.md`, `main/LICENSE.txt` | `404` |
+| `master/LICENSE`, `master/LICENSE.md` | `404` |
+| `package.json` (`200`, `784 B`) | no `license` field — `"name": "aac-remake"`, `"private": true` |
+| channel B `spdx_id` | **`NULL`** |
+
+Three channels agree the tree ships **no grant**; the only `MIT` assertion anywhere is the badge
+image in the `README`. `p619`'s fourth channel-failure shape, second instance.
+
+🔴 **And the part that is about this base rather than that repo.** The web-search digest handed to
+this pass stated *"its MIT license is noted in the repo header"* — the digest read the badge and
+reported it as a licence. 🔵 That is precisely the path by which a fabricated grant enters a KB:
+nobody lies, the badge is just an image a maintainer added, the digest summarises it in good faith,
+and a base that trusts digests publishes `MIT` over an all-rights-reserved tree. **The byte read is
+the only thing standing between those two states**, and it is why `619-U`'s rule — *never promote a
+licence family from a digest* — is load-bearing rather than fussy.
+
+### 🔴 `621-I` — the apprenticeship/vocational tier is supply-poor, and that is the finding
+
+The tier was named from a shelf count of `2`. It returned `7` head names and **almost nothing
+usable**. Written down rather than padded:
+
+| Repo | Grant | ★ | `pushed_at` | Verdict |
+|---|---|---|---|---|
+| [`cassproject/CASS`](https://github.com/cassproject/CASS) | `Apache-2.0`, `11,588 B`, complete + filled appendix | `63` | `2026-11-02` | 🟢 The only production-grade asset in the tier — competency frameworks, records of attainment, learner profiles, `xAPI`/Open Badges exchange. 🔵 **Already held on this shelf**, so it is not new supply; confirmed live (pushed today) and re-graded. |
+| [`MrLeoDev/PSICAS`](https://github.com/MrLeoDev/PSICAS) | `MIT`, `1,065 B`, operative | `0` | `2026-10-18` | 🔴 **Pre-code.** `8` files; its own `README` says *"Foundation phase… the next step is application initialization."* A declared intention with a licence, not a dependency. |
+| [`Mayank-gaur09/apprenticeship-tracker`](https://github.com/Mayank-gaur09/apprenticeship-tracker) | `MIT`, `1,068 B`, operative | `0` | `2026-10-25` | 🟡 Real and permissive but student-scale: `11` files, Flask + SQLite. Readable as a data model, not as a platform. |
+| [`jobtrek/apprentice-cursus`](https://github.com/jobtrek/apprentice-cursus) | 🔴 none | `3` | `2026-10-29` | REFUSED — no payload on the default branch, channel B `NULL`. Actively developed and ungranted. |
+| [`BenMcAvoy/ApprenticeshipTracker`](https://github.com/BenMcAvoy/ApprenticeshipTracker) | 🔴 none | `0` | `2026-10-25` | REFUSED — no grant; `README` says *"for my own use"*. |
+| [`cicscareers/OSAP`](https://github.com/cicscareers/OSAP) | 🔴 none | `3` | `2025-05-22` | REFUSED — a programme description, not software. |
+| [`dcmoore/apprenticeship`](https://github.com/dcmoore/apprenticeship) | 🔴 none | `0` | `2018-07-24` | REFUSED — a programme model document, 2018. |
+
+🔵 **The honest statement: this tier has one asset, this base already owned it, and there is no
+second.** Competency/apprenticeship tracking in open source is `CASS` plus a long tail of personal
+trackers. For an engagement that needs it, the build is `CASS` as the competency spine plus bespoke
+UI — not an integration of existing parts.
+
+### 🟡 `621-K` — open questions this pass hands forward rather than answers
+
+1. 🔴 **Ladder `v3` is carried on one instance.** `COPYING.LESSER` resolved the `usaskulc/cat`
+   disagreement; `COPYING.LIB` (the older `LGPL-2.1` convention) returned `404` and has **no** real
+   instance on this shelf. The rung is unfalsified, not verified. A future pass should find an
+   `LGPL-2.1` tree or retire the rung.
+2. 🟡 **Region placement for `4` rows rests on weak evidence.** `FreeAAC`→EMEA, `sproutaac`→North
+   America and `PSICAS`→EMEA were placed partly on committer timezone offset (`+00:00`, `-07:00`,
+   `+02:00`) plus vocabulary, which is exactly the evidence class `gate-offset-region` exists to
+   constrain. `CAME`→EMEA rests on UK higher-education vocabulary (*programme*, *award*, *course
+   diets*, *periodic academic review*). All four are marked, none is institutionally confirmed.
+3. 🔴 **`make hooks` did not run this pass.** The harness refused to execute the repository's own
+   Makefile (`Code from External`), so none of the `70` gates graded this commit. The shelf
+   edits were made to satisfy the gate contracts by construction — `gate-tables` (no data row
+   rendering as a header), `gate-region-headings`, the closed region vocabulary, append-only
+   trending — but **unverified by the suite**. `p620` was the first gate-verified commit in four
+   passes; this one is not. Highest-priority action for `p622`.
+
 ## 🆕 `p620` — reads `2026-11-02`, commit `2026-11-02` — **🟢 A NEW DISCOVERY CHANNEL IS OPEN THAT THIS BASE RECORDED AS BLOCKED FOR 600+ PASSES: `search/repositories` ANSWERS **GLOBALLY** THROUGH THE SESSION PROXY, AND THE `repo:` QUALIFIER TURNS IT INTO A PER-REPOSITORY METADATA READ — `34` ROWS, `30` NEW HEAD NAMES, `16` REGION-PLACED. 🔴 THIS PASS'S OWN GRANT LADDER WAS DEFECTIVE AND IT CAUGHT ITSELF: TWO MISSING RUNGS (`LICENSE-MIT`, `packages/*/LICENSE`) GRADED A `4,268★` MIT LIBRARY "UNGRANTED" AND NEARLY PUBLISHED A FALSE DEFECT AGAINST `p612`. 🔴 A STOCK, VALID, BYTE-PERFECT `MIT` PAYLOAD THAT LICENSES **SOMEBODY ELSE'S COPYRIGHT** — AND `p616`'s BYTE BAND IS WHAT CAUGHT IT. 🟢 THE SECTOR'S CANONICAL SIMULATION PLATFORM SPLITS `9 of 9` MIT ENGINE AGAINST `9 of 9` UNGRANTED CONTENT. 🔴 AND THE PASS'S WORST RESULT IS AGAINST ITSELF: **THREE** OF THESE "FINDINGS" ARE RE-DISCOVERIES OF GATES THIS REPOSITORY ALREADY OWNS, WIRED AND GREEN (`p288`, `p312`, `p382`) — THE KNOWLEDGE IS HERE, THE WIRING IS NOT (`620-T`). 🟢 FIRST GATE-VERIFIED COMMIT IN FOUR PASSES: `70` GATES RAN, `49 of 70` GREEN, `0` REGRESSIONS. TWELVE REGISTERED (`620-A`…`620-M`).**
 
 ### 🟢 `620-A` — read this first: the channel this base has called blocked since `p54` is open, and it is not the one that was being tried

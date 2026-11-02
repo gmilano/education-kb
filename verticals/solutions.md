@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — reads `2026-11-02` — **the AAC vertical has a platform of record and it is `AGPL`; the curriculum-alignment vertical has no platform at all, and both answers are delivery-model constraints rather than licensing footnotes**
+
+### 🔴 `621-L` — the AAC vertical's platform of record is `CoughDrop`/`SweetSuite`, and it is network-copyleft
+
+`619-M2` found the accessibility tier had **no platform of record**. 🟢 The AAC sub-tier named this
+pass **does** have one, and it is unambiguous on every axis this base measures except the one that
+decides a delivery model.
+
+[`open-aac/sweet-suite-aac`](https://github.com/open-aac/sweet-suite-aac) — `1,892` files, a full
+web AAC application plus support suite (speech synthesis, communication boards, supervisor/therapist
+tooling), forked from `CoughDrop`, the long-standing open AAC product. Byte-read grant:
+🔴 **`AGPL-3.0`, `34,519 B`**. Channel B agrees (`AGPL-3.0`, `9★`, pushed `2025-04-24`) — but only
+when queried with `fork:true`, which is `621-M` below.
+
+| Axis | Verdict |
+|---|---|
+| Completeness | 🟢 `1,892` files — the only AAC tree on this shelf that is a product rather than an app |
+| Lineage | 🟢 `CoughDrop` fork; a decade of real clinical deployment behind the codebase |
+| Maintenance | 🟡 Pushed `2025-04-24` — ~`18` months stale; the tier's active trees are smaller |
+| Grant | 🔴 `AGPL-3.0`: network copyleft. Hosting a modified version **for users over a network** triggers source disclosure to those users |
+
+🔵 **What that means for an engagement, stated plainly.** AAC is delivered as a hosted service to
+schools and families far more often than as a shipped binary, and `AGPL`'s §13 is written for exactly
+that case. A studio that forks `SweetSuite`, modifies it, and hosts it for a district **owes the
+modified source to the district's users**. That is a workable model — it is the one `CoughDrop`
+itself runs on — but it must be priced and contracted deliberately, not discovered at delivery.
+🟢 The permissive escape hatch exists and it is `621-E`'s `freevoice-aac` (`MIT`) or `OpenAAC`
+(`Apache-2.0`), at the cost of a far smaller tree and, in both cases, stale maintenance.
+
+🔴 **The vertical's structural problem, measured:** of `6` real AAC trees, the `3` actively developed
+are **all** copyleft (`AGPL`×2, `GPL`×1) and the `2` permissive are the `2` most stale. There is no
+actively-maintained permissive AAC platform. This is the same shape `618-N`/`621-N` found in
+administration — **permissive where the sector is pedagogical, copyleft where the sector is
+operational** — and AAC is operational software.
+
+### 🔴 `621-M` — `p620`'s new discovery channel omits forks, and that nearly cost this pass its platform of record
+
+🟢 `620-A` adopted `gh api search/repositories` as a discovery and per-repository metadata channel
+after `600+` passes of recording it blocked. It works. 🔴 **It is also lossy in a way that is silent,
+and this pass calibrated it on the tier that exposed it.**
+
+| Query | `total_count` |
+|---|---|
+| `repo:open-aac/sweet-suite-aac` | **`0`** |
+| `repo:open-aac/sweet-suite-aac fork:true` | **`1`** — `fork=true`, `AGPL-3.0`, `9★`, `2025-04-24` |
+
+🔵 **Proven mechanism:** GitHub's search index **excludes forks by default**. `SweetSuite` is a
+`CoughDrop` fork, so the default query returns `total_count: 0` — a result shaped exactly like
+"this repository does not exist." Channel A (`git ls-remote`) resolved it to `refs/heads/master`
+throughout, and the byte read returned `34,519 B` of `AGPL-3.0`, so all three channels agree the
+tree is real and granted.
+
+🔴 **Standing rule, registered:** **channel-B absence is not nonexistence.** A `total_count: 0` from
+`search/repositories` means *"not in the default index"*, and for this sector that bites hardest
+exactly where it matters — a mature platform in an under-supplied vertical is disproportionately
+likely to be a fork of the incumbent. Existence verdicts belong to channel A; channel B is for
+metadata and cross-checking only.
+
+### 🟡 `621-O` — the curriculum-alignment vertical has four tools and no platform of record
+
+Unlike AAC, this vertical's answer is a **negative** one, and `619-M2`'s distinction applies: this is
+a *platform* gap, not a repo gap. Four real trees exist (`621-J`) and not one of them is a platform:
+
+| Tree | Why it is not the platform of record |
+|---|---|
+| `cloudpedagogy/…-came` | 🟢 Permissive (`MIT`) and the best pick, but **local-first by design** — no multi-user server, no persistence layer, no integration surface. A reviewing instrument, not a system of record. |
+| `UBCForestryTLS/curriculum-development-tool` | 🔴 Single-institution (UBC Forestry) and `GPL-3.0`; active but not built to be adopted elsewhere. |
+| `usaskulc/cat` | 🔴 `LGPL-3.0`, last pushed `2014`. A survey instrument. |
+| `nsip/curriculum-align` | 🔴 A callable classifier, not an application — **and retired by its own maintainers** (`621-J2`). |
+| `icarnaghan/Mapper21` (ex-`CurriculumStart`) | 🔴 Active (`2026-10-19`) and ships **no grant** (channel B `NULL`). |
+
+🔵 **The consequence for a studio, which is the point of this page.** Curriculum alignment is
+procured constantly — accreditation cycles, programme review, standards migration — and there is
+**no open platform to customise**. The honest engagement shape is: `CAME` (`MIT`) as the alignment
+*model* and gap-detection logic to read and reimplement, `CASS` (`Apache-2.0`, `621-J3`) as the
+competency/standards spine that actually persists and exchanges data, and bespoke application code
+between them. Anyone proposing "deploy and extend the open curriculum-mapping platform" is proposing
+something that does not exist.
+
+### 🟢 `621-Q` — the administrative substrate is unchanged, sixth consecutive confirmation
+
+`621-N` re-measured the education ERP/CRM leg to a sixth nil. The substrate stands as `616-M`/`618-N`
+left it: `OpenOLAT` (`Apache-2.0`) for a full LMS, `Kolibri` (`MIT`) for offline-first delivery,
+and — for administration specifically — a choice between copyleft-with-domain (`OpenEduCat`
+`LGPL-3.0`, `ERPNext`/`Frappe Education` `GPL-3.0`) and permissive-without-domain (`OFBiz` and
+`Corteza`, both `Apache-2.0`). No change this pass, and the leg is retired as a supply instrument.
+
 ## 🆕 `p620` — reads `2026-11-02` — **the science-simulation vertical has a platform of record, and its licence boundary runs *through* the product: MIT engine, ungranted content, `CC-BY` distribution**
 
 ### 🟢 `620-I` — `PhET Interactive Simulations` as the vertical's platform of record, and the split that decides how a studio uses it

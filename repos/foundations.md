@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — reads `2026-11-02` — **the curriculum-alignment layer has three permissive primitives and one of them is retired by its own README; plus an `LGPL` row this pass nearly published as `GPL`**
+
+🔵 **Split criterion, unchanged:** a row lands here if it is a reusable **model, corpus, library or
+build primitive** — something another system calls. Learner-facing runtimes went to `agents/top.md`
+(`6` AAC rows there). No row appears twice. Every grant below byte-read today under ladder `v3`
+(`621-B`).
+
+### 🟢 `621-J` — the curriculum-alignment primitives, and the licence spread is the whole story
+
+`curriculum mapping` appeared **twice** across seven shelf files before this pass. The layer matters
+because every standards-alignment, outcome-coverage and accreditation-evidence product a studio is
+asked to build needs exactly this primitive, and the sector's supply is four real trees under four
+different grants.
+
+| Repo | Grant (byte-read) | ★ | `pushed_at` | Region | Primitive it provides |
+|---|---|---|---|---|---|
+| [`cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine`](https://github.com/cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine) | `MIT`, `1,070 B`, operative | `0` | `2026-10-20` | EMEA | **The permissive pick.** Local-first relational mapping of programmes → modules → learning outcomes → assessments → skills, with structural gap, duplication and misalignment detection; `68` files, no server dependency. Its own `README` states interoperability with Curriculum Studio is **untested** in the open release. |
+| [`usaskulc/cat`](https://github.com/usaskulc/cat) | 🔴 `LGPL-3.0` — `COPYING.LESSER` `7,651 B` beside `COPYING` `35,147 B` (see `621-B`) | `1` | `2014-02-10` | North America | Curriculum Alignment Tool: collects instructor-reported alignment of courses to programme outcomes and assessments. 🔴 Last pushed `2014` — a **data model and survey instrument** to read, not to run. 🟢 `LGPL` permits linking from proprietary code, which `GPL` would not. |
+| [`UBCForestryTLS/curriculum-development-tool`](https://github.com/UBCForestryTLS/curriculum-development-tool) | 🔴 `GPL-3.0` (real grant, title at line 3; channel B says `NOASSERTION` — see `621-G`) | `1` | `2026-11-02` | North America | Curriculum MAP: mapping, analysis and planning over course offerings, surfacing gaps and redundancies. Derived from the University of Calgary Curriculum Links tool. **Pushed today** — the most active row in the layer, and virally copyleft. |
+| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0`, `11,357 B`, §2/§4/§9 present | `2` | `2019-09-02` | APAC | A `tf–idf` document classifier exposed as a web service that aligns **free text** to curriculum standards — the one row here that is a callable component rather than an application. Builds on `nsip/curriculum-mapper`. |
+
+### 🔴 `621-J2` — a complete, valid `Apache-2.0` grant on a tree its own maintainers retired
+
+🔴 `nsip/curriculum-align` is the row a studio would most want — a permissively licensed free-text →
+standards classifier, from Australia's National Schools Interoperability Program — and its `README`
+opens:
+
+> `****DEPRECATED (RETIRED)****` — *"This repository is now retired, archived and no longer
+> maintained — note particularly that security updates are NO LONGER being performed."*
+
+Last commit `2019-09-02`; `14` files; the code self-describes as *"experimental and
+proof-of-concept"*.
+
+🔵 **The generalisable point, and this base has now stated it from three directions:** the grant and
+the dependency are **independent questions**, and this shelf's instruments only measure the first.
+`621-F` found a title with no grant behind it. `621-G` found a grant the metadata channel hides.
+This row has a *perfect* grant — `11,357 B`, all operative sections, permissive, cross-checked
+`2 of 2` — over a tree that is explicitly unmaintained and unpatched. 🟢 **A byte-read grant licenses
+the code; it says nothing about whether the code should be run.** `pushed_at` is the second column,
+and for `621-J2` it is the one that decides: cite the **method** (`tf–idf` alignment as a baseline
+worth reimplementing), never the **artefact**.
+
+### 🟢 `621-J3` — `CASS` confirmed live as the competency primitive
+
+[`cassproject/CASS`](https://github.com/cassproject/CASS) — `Apache-2.0`, `11,588 B` (stock plus a
+filled appendix), `63★`, **pushed `2026-11-02`** — is already held on this shelf and is re-graded
+here rather than re-discovered. It is the sector's competency-framework spine: frameworks, records of
+attainment, learner profiles, and standards-based exchange over `xAPI` and Open Badges, on Node.js +
+Elasticsearch. 🔵 It is the **only** production-grade asset in the apprenticeship/vocational tier
+(`621-I`), which is why that tier's recipe is "CASS plus bespoke UI" rather than an integration.
+
+### 🔴 `621-N` — the mandated ERP/CRM foundations leg pays nothing a **sixth** consecutive time
+
+The leg `open source platform education ERP CRM MIT Apache` returned `openeducat/openeducat_erp`,
+`frappe/education`, `apache/ofbiz`, `krayin/laravel-crm`, `idurar/idurar-erp-crm`,
+`cortezaproject/corteza`, `hcengineering/platform` — **`7` head names, `7` held.**
+
+🔵 `618-N` retired this leg after three nils; `619-B` and `620-N` confirmed; this is the sixth. The
+measurement is stable and worth stating once more in its strongest form: **the education-ERP question
+has a settled answer and it is not a permissive one.** The education-specific systems are copyleft
+(`openeducat` `LGPL-3.0`, `frappe`/`ERPNext` `GPL-3.0`); the permissive systems (`OFBiz`
+`Apache-2.0`, `Corteza` `Apache-2.0`, `Krayin` `MIT`, `iDURAR` `MIT`) are **general-purpose and carry
+no education domain model**. A studio chooses between inheriting copyleft with the domain, or
+building the domain on a permissive substrate. No sixth search will change that.
+
 ## 🆕 `p620` — reads `2026-11-02` — **the music tier's primitives were never missing, they were in the wrong place: a `4,268★` MIT library the platform field calls `NONE`, and a canonical simulation platform that is MIT engine over ungranted content**
 
 🔵 **Split criterion:** a row lands here if it is a reusable **model, corpus, library or build

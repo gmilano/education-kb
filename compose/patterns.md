@@ -4,6 +4,170 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — reads `2026-11-02` — **five recipes, every component byte-read today or already shelved with a byte-read grant, plus the control debt this pass created**
+
+🔵 **Rule for this page, unchanged:** a recipe may only name components whose grant was byte-read in
+this pass or is already shelved with a byte-read grant, and it must say what each component *does* in
+the wiring — not merely that it is relevant. 🔴 Components carried from earlier passes are marked
+`[shelved]` with the pass that read them.
+
+### 🟢 `P621-1` — ADA-deadline accessibility remediation with an AAC channel, North American district (`10`–`12` weeks)
+
+**Why now.** The April 2026 ADA deadline is the strongest budgeted driver on this base's market page,
+and it lands on the tier `621-E` just measured. 🔴 The trap is that the AAC platform of record is
+`AGPL-3.0` and a district deployment is network delivery, so the licence choice must be made in
+week 1, not at delivery.
+
+**Wiring.**
+1. **AAC runtime — [`Chuea81/freevoice-aac`](https://github.com/Chuea81/freevoice-aac)** (`MIT`,
+   `1,064 B`, byte-read today). Fork it. It is the **permissive** symbol-grid AAC that runs entirely
+   in-browser and offline with no account and no data collection — which also disposes of the student-
+   data objection NYC's guidance raises (student data cannot be used to train models; here it never
+   leaves the device). `649` files, deployed at `freevoiceaac.app`, so it is a working product, not a
+   skeleton.
+2. **Symbol search — the method from [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC)**
+   (`Apache-2.0`, `11,357 B`, byte-read today). Reimplement its pipeline rather than depending on the
+   tree (`2024-11-22`, stale): text/speech → vector embedding → nearest AAC symbol, with a generative
+   fallback that **caches** the produced symbol locally so the same utterance never pays twice. 🔵
+   Permissive grant, so the pipeline may be lifted into the `MIT` fork directly.
+3. **Delivery shell — `Kolibri`** (`MIT`, `1,097 B`, branch `develop`) `[shelved p616]` for
+   offline-first distribution to devices that are not reliably online, or **`OpenOLAT`**
+   (`Apache-2.0`) `[shelved p615]` where a full LMS is already the system of record.
+4. **Integration — `LTI 1.3`** as the launch surface into the incumbent LMS (Canvas, Schoology,
+   PowerSchool), so the AAC tool appears inside existing courses without an SIS migration.
+5. **Motor-planning requirement — read, do not link,
+   [`sproutaac/app`](https://github.com/sproutaac/app)** (🔴 `GPL-3.0`, `35,149 B`, byte-read today).
+   Its stable-button-position design is a real clinical requirement most AAC software gets wrong;
+   **take the requirement, not the code** — linking `GPL-3.0` into an `MIT` fork would relicense the
+   deliverable.
+
+🔴 **Licence boundary, explicit:** do **not** pull `open-aac/sweet-suite-aac` or `sonicbaume/FreeAAC`
+into this build. Both are `AGPL-3.0` (`34,519 B` / `34,523 B`, byte-read today) and hosting a
+modified version for district users triggers §13 source disclosure to those users. That is a valid
+model — see `P621-4` — but it is not this recipe.
+
+### 🟢 `P621-2` — Accreditation-evidence curriculum alignment, EMEA university (`8`–`10` weeks)
+
+**Why now.** Under the EU framework, education AI that assigns learners to programmes or influences
+access to qualifications is **high-risk**, carrying conformity-assessment and human-oversight duties.
+Alignment evidence is what a conformity file and an accreditation review both consume. 🔵 The
+`2027-12-02` deferral (`NEEDS-PRIMARY`, see market page) is runway, not a reprieve.
+
+**Wiring.**
+1. **Alignment model — [`cloudpedagogy/…-curriculum-alignment-mapping-engine`](https://github.com/cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine)**
+   (`MIT`, `1,070 B`, byte-read today). The relational model — programme → module → learning outcome
+   → assessment → skill — plus its structural gap, duplication and misalignment detection. 🔴 It is
+   **local-first with no server and no persistence**, so take it as the model and the detection logic
+   and expect to build the multi-user layer. Its own `README` says Curriculum Studio interoperability
+   is untested.
+2. **Persistence and exchange spine — [`cassproject/CASS`](https://github.com/cassproject/CASS)**
+   (`Apache-2.0`, `11,588 B`, byte-read today, pushed `2026-11-02`). This is what actually stores and
+   exchanges: competency frameworks, records of attainment, learner profiles, over `xAPI` and Open
+   Badges. 🟢 Permissive, live, and the standards vocabulary it speaks is the one `1EdTech`
+   procurement language is written in.
+3. **Free-text → standards matching — the `tf–idf` method from
+   [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align)** (`Apache-2.0`, `11,357 B`,
+   byte-read today). 🔴 **Reimplement; do not deploy.** The tree is retired by its own maintainers
+   with no security updates since `2019` (`621-J2`). A `tf–idf` baseline is also the right **human-
+   oversight artefact** under a high-risk classification: it is explainable and auditable in a way an
+   embedding match is not, so run it *beside* any LLM matcher as the justification channel.
+4. **Human oversight — mandatory, not optional.** Every machine-proposed alignment lands in a review
+   queue with the `tf–idf` score and the matched standard text shown; a human confirms. That queue
+   *is* the conformity evidence.
+
+### 🟡 `P621-3` — Apprenticeship competency spine, EMEA vocational system (`8`–`10` weeks)
+
+🔴 **Read `621-I` before quoting this.** This tier has exactly one production-grade open asset and
+this base already held it. Anyone proposing to "integrate the open apprenticeship-tracking stack" is
+proposing something that does not exist.
+
+**Wiring.**
+1. **Competency spine — `cassproject/CASS`** (`Apache-2.0`, byte-read today). Frameworks, attainment
+   records, learner profiles, `xAPI`/Open Badges exchange. It is the whole backend.
+2. **Bespoke apprentice/mentor UI.** There is no open component for this. Budget it as new build.
+3. **Data models to read, not adopt:**
+   [`MrLeoDev/PSICAS`](https://github.com/MrLeoDev/PSICAS) (`MIT`, `1,065 B`, byte-read today) for its
+   training-plan/competency-area/apprentice-assignment model with **versioned plans** — note its own
+   `README` places it in "foundation phase" with `8` files and no application yet; and
+   [`usaskulc/cat`](https://github.com/usaskulc/cat) (🔴 `LGPL-3.0` via `COPYING.LESSER` `7,651 B` —
+   **not** `GPL-3.0`, see `621-B`) for its instructor-reported alignment survey instrument. 🟢 The
+   `LGPL` correction matters here specifically: `LGPL-3.0` permits **linking** from proprietary code,
+   so this one may be linked where a `GPL-3.0` grade would have forbidden it.
+4. **Dual-tracking reality.** Mentor sign-off in most vocational systems is statutory and paper-based;
+   the deliverable must export to the national instrument's format rather than replace it.
+
+### 🟡 `P621-4` — Deliberate-`AGPL` hosted AAC service (`12`–`16` weeks)
+
+**When to choose this.** When the client wants the **mature** AAC product rather than a small
+permissive fork, and the disclosure obligation is acceptable — a public health service, a charity, a
+ministry, or any client whose own policy already favours open publication.
+
+**Wiring.**
+1. **Platform — [`open-aac/sweet-suite-aac`](https://github.com/open-aac/sweet-suite-aac)** (🔴
+   `AGPL-3.0`, `34,519 B`, byte-read today; `1,892` files; `CoughDrop` lineage). A full web AAC app
+   plus supervisor/therapist support suite with speech synthesis and communication boards. 🟡 Pushed
+   `2025-04-24`, so inherit ~`18` months of maintenance debt knowingly.
+2. **§13 compliance designed in from week 1**, not retrofitted: a published source endpoint for the
+   exact running revision, a build that stamps its own commit, and contract language stating the
+   obligation. 🔵 **This is a deliverable line item.** The failure mode is discovering at go-live that
+   the hosted service owes source to every user.
+3. **Mobile reach — [`sonicbaume/FreeAAC`](https://github.com/sonicbaume/FreeAAC)** (🔴 `AGPL-3.0`,
+   `34,523 B`, byte-read today) where native Android/iOS is required. Same copyleft family, so it
+   composes with (1) without adding a *new* licence boundary — the tier's most active tree
+   (`2026-10-28`), in public beta at `free-aac.org`.
+4. 🔴 **Do not mix this recipe with `P621-1`.** An `MIT` fork and an `AGPL` platform in one hosted
+   deliverable collapses to `AGPL` for the combined work. Pick one at week 1.
+
+### 🟢 `P621-5` — Governance-first AI programme, any region, budget-constrained (`6`–`8` weeks)
+
+**Why it generalises.** `T621-6` measured the adoption/governance gap in every region and found the
+**product regionally invariant**; only the authority it cites changes. This is the highest-margin,
+lowest-dependency engagement on this page because it needs almost no software.
+
+**Wiring.**
+1. **Instrument selection — pick the authority first.** North America: state statute (`134` bills /
+   `31` states; Maryland, Idaho, Oklahoma and Virginia mandate district-level policy) plus the April
+   2026 ADA deadline. EMEA: Regulation (EU) 2026/1744 high-risk duties (`NEEDS-PRIMARY` on dates).
+   APAC: Korea's AI Basic Act (in force `2026-01-22`) or Australia's TEQSA institutional action plans.
+   LATAM: UNESCO/accreditation frameworks. 🔵 The document is ~`80%` identical across all four; the
+   citations and the review cadence are what differ.
+2. **Disclosure workflow over detection.** `T619-1` found the sector buys **accountability**, not
+   detection. Deliver a declared-use workflow — students and staff state how AI was used, attached to
+   the submission — and an audit trail, rather than a detector.
+3. **Evidence trail — `CASS`** (`Apache-2.0`, byte-read today) where the client needs the governance
+   record to be machine-readable and exchangeable for accreditation, via `xAPI`/Open Badges. Skip it
+   where a document and a register suffice; most clients at this budget do not need it.
+4. **Offline-capable delivery — `Kolibri`** (`MIT`) `[shelved p616]` for staff capability-building in
+   low-connectivity systems — the LATAM and African constraint, where `619-N` put procurement capacity
+   at `4%`.
+5. **Deliberately no model dependency.** Nothing in this recipe requires a specific LLM vendor, which
+   is what makes it quotable under a data-sovereignty requirement (Malaysia) or a no-training-on-
+   student-data rule (NYC).
+
+### 🔴 `621-R` — control debt: what this pass created and could not discharge
+
+1. 🔴 **`make hooks` did not run.** The harness refused to execute the repository's own Makefile
+   (`Code from External`), so **none of the `70` gates graded this commit**. `p620` was the first
+   gate-verified commit in four passes; this one is **not verified**. The shelf edits were built to
+   satisfy the contracts by construction and checked with an independent reimplementation of the
+   two contracts most at risk (`gate-tables` header-row shape, `gate-region-headings` single
+   canonical block and closed vocabulary) — but the suite's own verdict is absent. **Highest-priority
+   action for `p622`: re-run `make hooks` and reconcile against this commit.**
+2. 🔴 **Ladder `v3` (`621-B`) is carried on one instance.** `COPYING.LESSER` resolved `usaskulc/cat`;
+   `COPYING.LIB` has no real instance on this shelf and the rung is unfalsified. Either find an
+   `LGPL-2.1` tree or retire the rung.
+3. 🔴 **`p622` must re-run this pass's three tiers in Spanish and Portuguese.** LATAM placed **`0`**
+   of `22` head names (market page, LATAM), and a Spanish-language leg was not run — `620-C` found
+   exactly such a leg broke the regional pattern and paid. The nil is probably an artefact of
+   language, not of the region.
+4. 🟡 **Four region placements rest on timezone/vocabulary evidence** (`FreeAAC`, `sproutaac`,
+   `PSICAS` → offsets; `CAME` → UK higher-education vocabulary). `gate-offset-region` exists to
+   constrain exactly this class. None is institutionally confirmed; all four are marked.
+5. 🟡 **An unknown number of shelved citations may be renames** (`T621-5`). `dead-citations` tests for
+   addresses that fail; a renamed address **passes** while naming a repository that no longer exists
+   under that name. A sweep comparing shelved slugs' `HEAD` shas against their canonical successors is
+   the instrument, and it does not exist yet.
+
 ## 🆕 `p620` — reads `2026-11-02` — **five recipes, every component byte-read today, plus the control debt this pass could not discharge and the one it created**
 
 🔵 **Rule for this page, unchanged:** a recipe may only name components whose grant was byte-read in

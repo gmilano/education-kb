@@ -4,6 +4,138 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — `2026-11-02` — **trends, each with the evidence that would refute it**
+
+### 🔴 `T621-1` — The licence *metadata* channel is now unreliable in **both** directions, and `NOASSERTION` is the value that proves it
+
+**Claim.** The sector has crossed a threshold where a repository's machine-readable licence field can
+no longer be used as a grant verdict — not as a shortcut, not even as a negative filter. Two rows
+this pass return the **identical** metadata value `NOASSERTION` and their true grants are *nothing at
+all* and *full viral copyleft*.
+
+**Evidence.** `masood-mashu/git-curriculumai`: `spdx_id` `NOASSERTION`, and the payload is a `269 B`
+placeholder whose body reads `[Standard Apache 2.0 License Terms Applied]` — `0 of 4` operative
+Apache sections (`621-F`). `UBCForestryTLS/curriculum-development-tool`: `spdx_id` `NOASSERTION`, and
+the payload is a complete `GPL-3.0` whose title sits at line `3` behind a leading Highcharts
+attribution block (`621-G`). One value, two opposite realities.
+
+**What would refute it.** A metadata channel that distinguishes *"no licence present"* from *"a
+licence is present and I could not match it"*. GitHub's API does not: both collapse to
+`NOASSERTION`. 🔵 Until it does, **`NOASSERTION` obliges a byte read** and means only *the matcher
+declined*.
+
+**Why it matters commercially.** The cheap direction of this error loses supply; the expensive
+direction ships `GPL-3.0` into a proprietary deliverable because a sidebar said "no licence" and
+somebody inferred permission from silence. **Silence is never a grant.**
+
+### 🔴 `T621-2` — The grant and the *dependency* are independent questions, and this sector's instruments only measure the first
+
+**Claim.** Open-source education supply is now old enough that a perfect licence increasingly sits on
+an abandoned tree, so licence-first selection systematically picks dead software.
+
+**Evidence.** `nsip/curriculum-align` is the most attractive row this pass found on licence alone —
+`Apache-2.0`, `11,357 B`, all operative sections, cross-checked `2 of 2` — and its own `README`
+opens `****DEPRECATED (RETIRED)****` with *"security updates are NO LONGER being performed"*; last
+commit `2019-09-02` (`621-J2`). In the AAC tier the correlation runs the same way and is sharper:
+the `2` permissive rows are the `2` most stale (`2024-11-22`, `2025-12-05`) while all `3` actively
+developed rows are copyleft (`621-E`).
+
+**What would refute it.** An actively-maintained permissive tree in either tier. This pass found
+none in AAC and one in curriculum alignment (`CAME`, `MIT`, pushed `2026-10-20`, `0★`, local-first
+and deliberately un-platformed).
+
+🟢 **Operationally:** `pushed_at` is a mandatory second column beside every grant. A row with a good
+grant and a dead tree is a **method to reimplement**, not a dependency to adopt, and should be
+shelved saying so.
+
+### 🟢 `T621-3` — Open-source education supply is permissive where the sector is *pedagogical* and copyleft where it is *operational*
+
+**Claim.** The licence family of an education project is predicted by what the software *does*, not
+by when or where it was written. Learning content, primitives and pedagogy skew permissive;
+software that runs an institution or a service skews copyleft.
+
+**Evidence, accumulating across four passes.** `619-3` found pedagogy permissive and administration
+copyleft. `621-N` confirms it a sixth time on ERP/CRM: education-specific administrative systems are
+`LGPL-3.0`/`GPL-3.0` (`OpenEduCat`, `ERPNext`), while the permissive alternatives (`OFBiz`,
+`Corteza`, `Krayin`, `iDURAR`) carry **no education domain model**. `621-E`/`621-L` extend it to a
+new tier: **AAC is operational software** — hosted, clinical, service-delivered — and its platform of
+record is `AGPL-3.0`, with `GPL`/`AGPL` on every actively-developed tree.
+
+**What would refute it.** A permissive, actively-maintained, operationally-complete education
+platform. Six consecutive ERP/CRM nils and this pass's AAC census are consistent with its absence.
+
+🔵 **The delivery-model consequence is the trend, not the licences.** `AGPL` §13 is written for
+network delivery, which is how AAC and administration are actually sold to schools. A studio either
+prices copyleft disclosure into the engagement deliberately or builds the operational layer itself on
+a permissive substrate — and this base can now predict which of the two a tier will demand *before*
+the search runs.
+
+### 🔴 `T621-4` — A methodological trend, seventh pass running: the central error is in the measuring instrument, not in the sector
+
+**Claim.** For seven consecutive passes the most consequential finding has been a defect in how this
+base measures, not a change in what it measures.
+
+**Evidence, this pass, three instances.** (1) The task's mandated existence recipe — `curl -sI` on
+`github.com/{owner}/{repo}` — returns a policy `403` for **`22 of 22`** slugs including
+`torvalds/linux`, and a base following it literally publishes `22` false absences (`621-A`).
+(2) This pass's own licence ladder graded `usaskulc/cat` as `GPL-3.0` because it probed `COPYING`
+before `COPYING.LESSER`; the true grant is `LGPL-3.0`, and the ordering **mis-grades every `LGPL`
+project that exists** (`621-B`). (3) `p620`'s brand-new discovery channel silently omits forks and
+returns `422` on renamed repositories — both proven this pass, on the pass immediately after it was
+adopted (`621-M`, `621-E`).
+
+**What would refute it.** A pass whose headline finding is about education, AI or licensing in the
+world rather than about this repository's instruments. 🔴 It has not happened in seven passes.
+
+🔵 The honest reading is **not** that the instruments are unusually bad. It is that this base now
+looks hard enough to find its own defects, and that every defect found so far was *already
+discoverable* — the `LGPL` convention is decades old, fork exclusion is documented GitHub behaviour,
+and `p293` had already established that a credential prompt is a measurement. **The knowledge is
+available; the wiring is what is missing**, which is `620-T`'s conclusion restated on new evidence.
+
+### 🔴 `T621-5` — A stale repository address that still resolves is a **rename**, and citing it is a dead citation that has not failed yet
+
+**Claim.** GitHub's permanent-redirect behaviour creates citations that pass every liveness check a
+KB can run and are nonetheless wrong, because the canonical name has moved.
+
+**Evidence.** `icarnaghan/CurriculumStart` and `icarnaghan/Mapper21` return the **identical `HEAD`
+sha `cb7d7d754931`** — one repository under two names (`621-E`/`621-M`). `git ls-remote` follows the
+redirect and reports success; `search/repositories` with the stale `repo:` qualifier returns HTTP
+`422`; the owner is indexed with `28` repositories and the stale name is not among them, and
+`CurriculumStart in:name` returns `0` globally. The project is alive under the new name, pushed
+`2026-10-19`, and ships **no grant**.
+
+**What would refute it.** A stale slug whose `HEAD` sha differs from the candidate successor's —
+i.e. a genuine distinct repository rather than a rename. The sha comparison is the discriminator and
+it is cheap.
+
+🟢 **Operationally:** a `422` from channel B against a slug that channel A resolves is a **rename
+signal**, not a contradiction. Resolve it by sha comparison and shelve the canonical name. This base
+should expect to hold an unknown number of such citations already — `dead-citations` tests for
+addresses that **fail**, and these pass.
+
+### 🟡 `T621-6` — Adoption has outrun governance in every region measured, and the governance product is regionally invariant
+
+**Claim.** The adoption/governance gap is the sector's most consistent cross-regional fact, and the
+engagement it implies is the same everywhere; only the instrument it is written against differs.
+
+**Evidence.** LATAM higher ed: **`87%`** of institutions use AI in ≥1 area, **`26%`** have any formal
+framework (UNESCO IESALC, ~`200` institutions, `19` countries). Brazilian schools: `53%` of
+administrators use AI, `22%` have guidelines. Chile and Brazil: >`50%` of teachers use the tools,
+<`10%` of institutions have formal guidelines. US: ~`60%` of teachers using AI tools (Gallup, via
+secondary citation) and most public schools without formal student AI policy; `55%` of high-school
+principals have not restricted network access to AI tools. Europe + North America higher ed: `70%`
+have guidance *in place or in development* — a figure whose two halves are not separable.
+
+**What would refute it.** A measured region where formal governance leads adoption. None found in
+four regional legs across two passes.
+
+🔵 **The invariance is the sellable part:** AI-use policy, disclosure workflow, staff capability and
+an accreditor-acceptable evidence trail are the same deliverable in all four regions. Only the
+authority changes — state statute plus the April 2026 ADA deadline in North America, Regulation (EU)
+2026/1744 in EMEA, the Korean AI Basic Act and TEQSA institutional action plans in APAC,
+UNESCO and accreditation frameworks in LATAM.
+
 ## 🆕 `p620` — `2026-11-02` — **trends, each with the evidence that would refute it**
 
 ### 🟢 `T620-1` — The licence boundary inside open education software is moving from the *repository* to the *layer*, and a repo-level licence check now returns the wrong answer

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p621` — `2026-11-02` — **`p620`'s new channel is calibrated on the pass after it was adopted: it silently omits **forks** (proven) and returns `422` for **renamed** repos (proven by identical `HEAD` sha). Plus `4` curriculum-alignment primitives under `4` different licences.**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 Two proven blind spots in the discovery channel this shelf now depends on
+
+`620-A` adopted `gh api search/repositories` after `600+` passes of recording it blocked. 🟢 It
+works. 🔴 **It is also lossy in two ways that both look exactly like "this repository does not
+exist"**, and a shelf built from a ranked index must know them.
+
+**Blind spot 1 — forks are excluded from the default index. Proven:**
+
+| Query | `total_count` |
+|---|---|
+| `repo:open-aac/sweet-suite-aac` | **`0`** |
+| `repo:open-aac/sweet-suite-aac fork:true` | **`1`** — `fork=true`, `AGPL-3.0`, `9★`, `2025-04-24` |
+
+🔴 The cost is concentrated exactly where it hurts: in an under-supplied vertical, the **mature
+platform is disproportionately likely to be a fork of the incumbent**. `SweetSuite` is a `CoughDrop`
+fork and it is the AAC tier's platform of record — invisible to the default query.
+
+**Blind spot 2 — a renamed repository returns `422`, and the stale name still resolves. Proven by
+sha:**
+
+| Slug | `ls-remote HEAD` sha | channel B |
+|---|---|---|
+| `icarnaghan/CurriculumStart` | `cb7d7d754931aaa26b11b58b509ed1eeafa00035` | HTTP `422` |
+| `icarnaghan/Mapper21` | `cb7d7d754931aaa26b11b58b509ed1eeafa00035` | `2★`, `NULL`, `2026-10-19` |
+
+Identical sha — **one repository under two names.** GitHub's permanent redirect makes the stale slug
+resolve for `git` forever, while channel B's `repo:` qualifier requires the canonical name. Owner
+`icarnaghan` is indexed with `28` repositories and the stale name is not among them;
+`CurriculumStart in:name` returns `0` globally.
+
+🟢 **Two standing rules, registered:** (1) **channel-B absence is not nonexistence** — existence
+verdicts belong to `git ls-remote`; channel B is for metadata and cross-checking. (2) **A `422` from
+channel B against a slug channel A resolves is a rename signal** — resolve by sha comparison and
+shelf the canonical name.
+
+### 🔴 And the existence instrument the task mandates is refused outright
+
+`curl -sI https://github.com/{owner}/{repo}` returned **`403` for `22 of 22`** slugs probed this
+pass, `torvalds/linux` included. It is the session egress policy refusing the host, it is **constant
+across existent and non-existent slugs**, and it carries zero existence information. `api.github.com`
+is likewise `403`. 🟢 `raw.githubusercontent.com` answers `200` and is this shelf's grant channel.
+Full treatment at `621-A`.
+
+### 🟢 The week's new repo-shaped supply: curriculum-alignment primitives (`4` rows, `4` licences)
+
+`curriculum mapping` appeared **twice** across seven shelf files before this pass.
+
+| Repo | Grant (byte-read `2026-11-02`) | ★ | `pushed_at` | Region |
+|---|---|---|---|---|
+| [`cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine`](https://github.com/cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine) | `MIT`, `1,070 B` | `0` | `2026-10-20` | EMEA |
+| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0`, `11,357 B` | `2` | `2019-09-02` | APAC |
+| [`usaskulc/cat`](https://github.com/usaskulc/cat) | 🔴 `LGPL-3.0` (`COPYING.LESSER`, `7,651 B`) | `1` | `2014-02-10` | North America |
+| [`UBCForestryTLS/curriculum-development-tool`](https://github.com/UBCForestryTLS/curriculum-development-tool) | 🔴 `GPL-3.0` (channel B says `NOASSERTION`) | `1` | `2026-11-02` | North America |
+
+🔴 **`usaskulc/cat` is the pass's self-caught defect.** This shelf's ladder probed `COPYING` before
+`COPYING.LESSER`, found a complete and valid stock `GPL-3.0` (`35,147 B`), and graded the repo
+`GPL-3.0`. The true grant is `LGPL-3.0`. **Every `LGPL` project ships both files**, so the ordering
+mis-grades all of them, and no byte-band or template check can catch it — only the sibling's
+presence resolves it. Ladder `v3` probes `COPYING.LESSER`/`COPYING.LIB` first (`621-B`).
+
+### 🔴 Refused this week, with reasons — `4` rows
+
+| Repo | Reason |
+|---|---|
+| [`masood-mashu/git-curriculumai`](https://github.com/masood-mashu/git-curriculumai) | `LICENSE` is **`269 B`** titled `Apache License / Version 2.0` whose body is the literal placeholder `[Standard Apache 2.0 License Terms Applied]`. Operative markers: grant clause `0`, `§2` `0`, `§4` `0`, `§9` `0`. Channel B agrees: `NOASSERTION`. **No effective grant** (`621-F`). |
+| [`icarnaghan/Mapper21`](https://github.com/icarnaghan/Mapper21) | Active (`2026-10-19`) curriculum-mapping framework for Expeditionary and Project-Based Learning, and it ships **no grant** (channel B `NULL`). Canonical successor to `CurriculumStart`. |
+| [`commonstandardsproject/standards-alignment-poc`](https://github.com/commonstandardsproject/standards-alignment-poc) | No licence payload on the default branch, channel B `NULL`. Cross-jurisdiction standards matching via embeddings — a method worth reading, not a dependency. |
+| `gmoqa/none` | `5★`, `NOASSERTION`, surfaced by an AAC-tier trending query. Repository literally named `none`. Not shelved. |
+
+### 🔴 A good grant on a dead tree — the row this shelf would otherwise have promoted
+
+[`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) is the most attractive row of the
+week on licence alone: `Apache-2.0`, `11,357 B`, all four operative sections present, cross-checked
+`2 of 2`, from Australia's National Schools Interoperability Program, and it does something genuinely
+useful — `tf–idf` classification of **free text** against curriculum standards. 🔴 Its `README`
+opens `****DEPRECATED (RETIRED)****`: *"no longer maintained — note particularly that security
+updates are NO LONGER being performed."* Last commit `2019-09-02`.
+
+🟢 **`pushed_at` is a mandatory second column beside every grant on this shelf.** A perfect licence
+over an unpatched tree is a **method to reimplement**, not a dependency to adopt, and `621-J2` shelves
+it saying exactly that.
+
 ## 🆕 `p620` — `2026-11-02` — **`28` new addresses from a channel this base recorded as blocked, and the week's most-forked education repo is a `17★` build tool**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
