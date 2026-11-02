@@ -4,6 +4,133 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `12` AGENT ROWS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `28 of 28` FABRICATED CONTROLS AT `404 14 B`. 🔴 `607-C`: THE BACKLOG'S DEBT RE-MEASURED AT `104 of 219` (`47.5 %`) AND **`5` OF THOSE SLUGS ARE NOT REPOSITORIES** — `603-A`'s CLASS IN ITS **THIRD** ARTIFACT, THIS TIME INSIDE THE COMMITTED LEDGER, AND TWO OF THEM ARE THIS BASE'S OWN `evidence/` PATHS. 🔴 `607-A`: THE GLOBAL LEGS RETURN THE **THIRTY-SEVENTH** CONSECUTIVE NIL, PROVEN ROW-BY-ROW. 🔴 `1` ROW DISQUALIFIED ON RELEVANCE AT `259,581★`.**
+
+### 🔴 `607-A` — the thirty-seventh nil, and this time the proof is row-by-row
+
+The mandated global legs ran at the shapes the run prompt specifies. Every substantive token they
+returned was checked against this base by name:
+
+| token the global legs returned | held here? | where |
+| --- | --- | --- |
+| `HKUDS/DeepTutor` | 🔴 held | this shelf, `6` mentions |
+| `THU-MAIC/OpenMAIC` | 🔴 held | this shelf, `3` mentions |
+| `crewAIInc/crewAI` · `microsoft/autogen` | 🔴 held | this shelf |
+| `ashishpatel26/500-AI-Agents-Projects` | 🔴 held | `83` mentions in `agents/trending.md` |
+| `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` | 🔴 held | `38` mentions in `agents/trending.md` |
+| `rasbt/LLMs-from-scratch` | 🔴 held | `repos/foundations.md` |
+| 🟡 `NousResearch/hermes-agent` | 🔴 **already in this base's own `p436` backlog** | ledger row, verdict `BACKLOG` |
+
+🟢 **The last row is the useful one.** `hermes-agent` was the single name the global legs offered as
+*new*, and it was not new — it has been sitting in this base's committed promotion ledger. 🔵 So the
+nil is not "the web has nothing"; it is **the mandated query shape retrieves this base's own
+contents**, which is `p603`'s trend `77` with a named instance instead of a count.
+
+### 🔴 `607-B` — the row disqualified at `259,581★`, and why stars did not save it
+
+| | [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) |
+| --- | --- |
+| grant | 🟢 **MIT**, `1,070 B`, `LICENSE` at `main`, title block present, byte-read `2026-11-02` |
+| fabricated control | 🟢 `404 14 B` |
+| stars | 🟢 **`259,581★`** — re-read twice, `259,580` → `259,581` (a live counter, not a transcription error) |
+| forks · open issues | `57,133` · 🔴 **`52,273`** |
+| created · pushed | `2025-07-22` · `2026-11-02` |
+| description | *"The agent that grows with you"* |
+| 🔴 **verdict** | 🔴 **DISQUALIFIED — relevance.** A general-purpose personal agent with no education-specific surface |
+
+🔵 **Why this is written down rather than dropped silently:** it is the largest-starred address this
+base has ever had to refuse, and it refuses on the one axis stars cannot answer. 🟢 This is
+`605-J`'s shortlisting rule holding in the case it was built for — *grant first, stars second* — with
+a third axis, **relevance**, deciding it. An education shelf carrying a general agent at a quarter of
+a million stars would be the most visible wrong row on the page.
+
+### 🟢 Promoted to this shelf — `12` rows, grants byte-read `2026-11-02`, every control at `404 14 B`
+
+Every branch below came from the search channel, **not** assumed: `datakind/student-success-tool`
+resolves only at `develop`, and a root read at `main` would have returned the `404` that looks like
+"no grant".
+
+| repo | grant (byte-read today) | branch | stars | pushed | region |
+| --- | --- | --- | --: | --- | --- |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟢 **MIT**, `1,072 B`, title block | `main` | **`1,849★`** | `2026-09-19` | LATAM |
+| [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | 🟡 **MIT for CODE ONLY**, `1,218 B` — see `607-D` | `main` | `14★` | `2026-07-24` | LATAM |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 🟢 **MIT**, `1,064 B`, title block | `main` | `27★` | `2026-10-20` | Global |
+| [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 **MIT**, `1,080 B`, `LICENSE.md` | 🔴 **`develop`** | `8★` | `2025-09-24` | North America |
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | 🟢 **ISC**, `746 B`, title block | `master` | `11★` | `2026-03-11` | Global |
+| [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) | 🟢 **MIT**, `1,070 B`, title block | `main` | `0★` | `2026-03-27` | North America |
+| [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) | 🟢 **MIT**, `1,068 B`, title block | `main` | `3★` | `2026-09-27` | APAC |
+| [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 🟢 **MIT**, `1,084 B`, title block | `main` | `4★` | `2026-10-14` | Global |
+| [`a-ariff/canvas-mcp`](https://github.com/a-ariff/canvas-mcp) | 🟢 **MIT**, `1,064 B`, title block | `main` | `0★` | `2026-02-20` | Global |
+| [`Teci-AI/moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) | 🟢 **MIT**, `1,103 B`, title block | `main` | `0★` | `2026-10-23` | Global |
+| [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) | 🟢 **MIT**, `1,063 B`, title block | `main` | `3★` | `2026-09-11` | Global |
+| [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | 🟢 **MIT**, `1,069 B`, title block | `main` | `0★` | `2026-09-17` | Global |
+
+🔴 **`ashleycribb/learnmcp-xapi` is a fork** (`fork: true` on the search channel) and is shelved with
+that flag. 🔵 Per `606-D`, fork-vs-transfer is undecidable on this session's channels, so the flag
+records what the channel says and claims nothing about lineage.
+
+🟡 **`pdg6/bc-curriculum-mcp-server` and `hyunbinseo/neis-school-info` are the two rows worth more
+than their star counts:** one wraps **British Columbia's** provincial curriculum, the other **Korea's
+NEIS** national school information system. Both are *official-data-to-agent* plumbing — `P-603-D`'s
+pattern — and neither is replaceable by a generic connector.
+
+### 🔴 `607-C` — the backlog's debt, re-measured, and `5` of its slugs are not repositories
+
+`605-K` published the debt at `107 of 265` and `88` remaining. Re-measured today against the three
+sell shelves, case-folded on both sides (`605-B`):
+
+| | `605-K` | 🆕 `p607` |
+| --- | --- | --- |
+| ledger rows | `265` | `265` |
+| 🟢 **distinct** slugs | — | 🟢 **`219`** |
+| on a sell shelf | — | `115` |
+| 🔴 debt (on **no** sell shelf) | `107` | 🔴 **`104` = `47.5 %`** |
+| 🔴 **of which: not a repository at all** | unmeasured | 🔴 **`5`** |
+| 🟢 real debt, repositories only | — | 🟢 **`99`** |
+
+🔴 **The `5`, each probed with the `606-E` verifier (`401` against a `200` control):**
+
+| slug in the committed ledger | what it actually is |
+| --- | --- |
+| 🔴 `evidence/p333-disposition-ledger` | **this base's own file path** |
+| 🔴 `evidence/p333-silent-random-probe` | **this base's own file path** |
+| 🔴 `main/license` | a branch-and-path fragment |
+| 🔴 `master/license` | a branch-and-path fragment |
+| 🟡 `alpinevibe/quizpulse` | slug-shaped and plausible, resolves `401` — absent, not malformed |
+
+🔵 **This is the registrable part.** `603-A` found this base's own file paths carried as promotion
+candidates. `606-F` found `github.com/topics/{…}` on the **sell shelves**. `p607` finds both classes
+**inside the committed ledger** — a third artifact, found by a third pass. 🟢 The defect is therefore
+not in any one artifact: it is in the `{owner}/{repo}` extraction step **all three share**, and it
+will keep reappearing in each new artifact until that step rejects a non-repository at extraction
+time rather than at promotion time.
+
+🟡 **A second ledger inconsistency, recorded without a fix:** `27` of the `104` debt rows carry the
+ledger verdict `LANDED`. A row cannot be both landed and on no sell shelf. Either it landed on a
+**trending** shelf (which `gate-promotion-ledger` is explicitly red about) or it was dropped after
+landing. Not adjudicated this pass.
+
+### 🔴 `607-H` — a slug this pass guessed, and the probe caught it before publication
+
+🔴 This pass added `dodona-edu/judge-pythia` to its own candidate list by **inferring** it from
+`dodona-edu/dolos`. The search channel returned `NO-SEARCH-HIT` and the `606-E` existence probe
+returned 🔴 **`401`**: it does not exist. 🟢 Two independent channels agreed, so this is not a
+`605-C` false negative — it is `603-B`'s *"guessed slug, not a finding"*, caught **by this pass, on
+this pass**, before anything was written to a shelf.
+
+🔵 Worth stating because `606-E` was built one pass ago and this is its first use as a **gate on the
+pass's own work** rather than as a census instrument.
+
+### 🟡 `607-G` — on this shelf's headline rows, the web is behind this base
+
+The global trending leg returned `DeepTutor` figures of `51,771★` and `52,783★`, dated `2026-10-31`
+and `2026-11-01`. 🟢 `p606` measured **`53,823★`** on the search channel on `2026-11-02`.
+
+🔵 The automated trend reports the mandated leg retrieves are **lagging aggregators**. This base's own
+re-measurement is fresher than its discovery channel — `p602`'s *"more precise than the web"* finding,
+now true on the supply side for this shelf's single largest row. 🔴 It also means a pass that took
+those snippets as a star update would have **written a number backwards by `~1,000★`**.
+
 ## 🆕 `p606` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE CAPABILITY QUESTION `605-I` LEFT OPEN IS ANSWERED FOR THIS WHOLE SHELF: `536` README FIRST SCREENS HARVESTED, AND **`0` PROMOTED ROWS** DESCRIBE A THING THAT DOES NOT YET EXIST. 🔴 THE RULE `605-I` PROPOSED TO DETECT THEM IS **REJECTED** — IT FIRES ON `18 of 536` AND IS RIGHT `1` TIME (`5.6 %` PRECISION), BECAUSE `17 of 18` HITS ARE THE WORD `roadmap`, WHICH MARKS A **PUBLISHED PLAN**. 🔴 AND THE PASS RETRACTED ITS OWN HARVESTER: IT CORRUPTED ITS DATA BY CONCURRENCY AND INVENTED A REPOSITORY DEFECT BEFORE A SERIAL RE-FETCH CAUGHT IT. 🟢 STAR DRIFT ON THIS SHELF'S HEADLINE ROW IS `+31,823★` SINCE IT WAS LAST WRITTEN DOWN.**
 
 ### 🟢 `606-A` — every row on this shelf now has its capability claim checked

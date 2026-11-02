@@ -4,6 +4,131 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — `2026-11-02` — **🟢 THE TREND WITH THE MOST BUILD VALUE IS A CONVERGENCE: THREE REGIONS, THREE UNRELATED LEGAL TRADITIONS, ONE OBLIGATION — **PROVENANCE LABELLING** — EACH WITH A DATED INSTRUMENT. 🟢 AND THE SECOND IS A GOVERNANCE INVERSION MEASURED ON BOTH SIDES: IN LATAM, TEACHER ADOPTION (`>50 %`) EXCEEDS INSTITUTIONAL POLICY (`<10 %`) BY MORE THAN `5×`. 🔴 A METHODOLOGICAL TREND, FOURTH PASS RUNNING: THE INSTRUMENTS ARE STILL THE WEAK LINK — AND THIS PASS MEASURED ONE OF THIS BASE'S OWN GATES AT `0.0 %` PRECISION.**
+
+### 🟢 `T607-1` — provenance labelling is the one obligation three legal traditions converge on (high confidence — three dated instruments, three regions)
+
+`T606-2` registered AI-content labelling as *"converging as the one globally common obligation."*
+This pass supplies the independent corroboration that claim needed, from a **different region** and a
+**different legal instrument**:
+
+| region | instrument | effective | mechanism |
+| --- | --- | --- | --- |
+| 🟢 APAC — India | IT Rules amendment | 🟢 **`20 Feb 2026`** | **prominent labels + provenance markers** on AI-generated content |
+| 🟢 APAC — China | AI-content labelling measures | 🟢 **since `1 Sep 2025`** | service-specific binding labelling |
+| 🟢 EMEA — EU | AI Act transparency duties, enforcement by the AI Office | 🟢 **since `2 Aug 2026`** | disclosure of AI interaction and synthetic content |
+| 🟡 North America | D.C. OSSE 2026-27 policy | `2026-27` school year | 🟡 **prohibited-use list** — adjacent, not labelling: bans AI from grading, discipline, IEP decisions, teacher evaluation |
+
+🔵 **Why this is a trend and not a list.** India's regime is innovation-first and has no general AI
+law; China's is service-specific and state-directed; the EU's is a horizontal risk statute. 🟢 **Three
+legal philosophies that agree on almost nothing converged on the same technical requirement** — which
+is the strongest available signal that it is a durable build target rather than a policy fashion.
+
+🟢 **Consequence for a studio:** a provenance layer — content tagging, model/version attribution,
+retention of the generating prompt and source citations — is **the single most region-portable
+component in education AI right now.** It is the same artefact in Delhi, Shanghai, Brussels and
+Washington. 🔵 Built as `P607-2` in `compose/patterns.md`.
+
+### 🟢 `T607-2` — adoption has inverted governance, and LATAM is where the ratio is measurable (high confidence — both sides of the ratio sourced, same source)
+
+| | figure | source |
+| --- | --- | --- |
+| 🟢 teachers in **Chile and Brazil** already using AI tools | 🟢 **>`50 %`** | UNESCO |
+| 🔴 institutions **in the region** with formal guidelines | 🔴 **<`10 %`** | UNESCO |
+| ratio | 🔴 **>`5×`** | — |
+
+🟢 **The value is that both numbers come from the same source**, so the gap is not an artefact of
+reconciling two vendors. `T-605-7` registered *"adoption has outrun strategy"* as a trend; this is
+the first time this base can state it as a **ratio** rather than a direction.
+
+🔵 **It corroborates across regions with different numbers but the same sign:** US — `60 %` of
+teachers using AI (Gallup) against *most public schools having no formal student AI policy* (Child
+Trends / Dept. of Education); EMEA — `67 %` of academics weekly (QS) against `70 %` of institutions
+*having or still developing* guidance. 🟢 **Four regions, one direction: the practice is ahead of the
+policy everywhere it has been measured.**
+
+🟢 **Commercial reading:** the engagement is not adoption. Adoption already happened, unsanctioned.
+The work is **retrofitting policy onto behaviour that is already in the building** — and that reframes
+the buyer from an innovation budget to a risk budget.
+
+### 🟡 `T607-3` — the EU calendar is being reported two ways, and the conflict is itself the finding (medium confidence — two sources, direct contradiction, primary channel blocked)
+
+| source class | what it says about high-risk education AI |
+| --- | --- |
+| 🟢 regulation-tracking coverage | **Regulation (EU) 2026/1744** (*Digital Omnibus*, in force late July 2026) moves stand-alone **Annex III** high-risk duties to 🟢 **`2 Dec 2027`**; the **AI Office began enforcement `2 Aug 2026`** |
+| 🔴 vendor compliance guide | high-risk **education** requirements apply from 🔴 **August 2026** |
+
+🔴 **These cannot both be true**, and this base cannot adjudicate them: `598-G` blocks the Official
+Journal and every primary host. 🟢 `T606-1` already recorded the slip from `2 Aug 2026` to
+`2 Dec 2027`; `p607` adds the **regulation number** and the finding that **vendor guidance is still
+selling the old deadline.**
+
+🔵 **Why that matters more than the date.** A buyer reading vendor material believes it is already
+non-compliant. 🟢 That is an *exploitable* information gap in the honest direction: a studio that can
+state the calendar correctly, with the instrument named and the `2 Aug 2026` governance/`2 Dec 2027`
+high-risk split explained, is immediately more credible than the guidance the buyer has been reading.
+
+### 🟡 `T607-4` — national AI-in-education policy is becoming a *district* obligation, not a ministry document (medium-high confidence — 4 states, one survey, one prohibited-use list)
+
+🟢 The 2026 North American data shows the obligation moving **down** the hierarchy:
+
+- 🟢 **`4` states** (Maryland, Idaho, Oklahoma, Virginia) now require **both** state guidance **and
+  mandatory district-level policy adoption** — the duty lands on the district, not the capital.
+- 🟢 **`134` bills** across **`31` states**, concentrated on privacy, classroom restriction and
+  curriculum.
+- 🟢 **D.C. OSSE** shows the *content*: a list of decisions AI may not make (grading, discipline, IEP,
+  teacher evaluation).
+- 🟡 **New York A 9190** shows the other axis: restriction **by grade level** (grade 9+).
+
+🔵 **Why this is a distinct trend from `T-605-2` (compulsory AI curriculum).** That one is about what
+students are taught; this is about **who is liable for the deployment**. 🟢 A per-district policy duty
+multiplies the number of buyers by three orders of magnitude and makes the deliverable a **template
+plus an assessment**, not a platform.
+
+### 🔴 `T607-5` — a trend inside this base: the instruments are the weak link, and one of this base's own gates measures `0.0 %` precision (high confidence — `45` hits enumerated, `0` correct)
+
+`p606` registered *"three consecutive passes whose central error was in measurement code, not in the
+market."* 🔴 **`p607` is the fourth, and this time the defective instrument is a committed gate.**
+
+🟢 This session could execute `python3 ingest/validate-pages.py` — which `605-E` reports as
+impossible. It returns findings on `6` files, the largest class being **"placeholder-as-data rows"**:
+the defect the run prompt singles out, where a header row like `| Nombre | Repo | Licencia |` ships as
+data. Following the norm `605-I` established — **measure a detector before acting on it**:
+
+| | value |
+| --- | --- |
+| hits from the **committed** predicate (`ingest/validate-pages.py` line `35`), enumerated in full | **`45`** |
+| 🔴 genuine header-as-data rows among them | 🔴 **`0`** |
+| 🟢 precision | 🔴 **`0.0 %`** |
+
+🔴 **Every one of the `45` is a vertical key-value row** — this base's own dominant table idiom, where
+`| licence | 🟢 **AGPL-3.0**, as carried |` has `licence` as a **row label** and real data beside it.
+The predicate matches on the first cell alone and cannot tell a label from a header.
+
+🔵 **The classifier used to grade them is stated so the figure is auditable:** a hit is a genuine
+defect only if **every** non-first cell is itself a column label. On `45` hits, that fired `0` times.
+
+🟢 **Verdict: the gate as written cannot fire correctly on this corpus.** It is not under-tuned, it is
+measuring the wrong thing — and it is plausibly a contributor to `Gap 539-F`'s *"`17` of `66` standing
+gates are red."* 🔴 A red gate that is always wrong is worse than no gate, because it trains every
+later pass to ignore it. 🔵 Same lesson as `605-I`, arrived at from the opposite direction: that pass
+refused to **adopt** a detector at `5.6 %`; this one refuses to **believe** one at `0.0 %`.
+
+### 🔵 Method and grade
+
+🟢 **Supply side, first-hand:** `28 of 28` grant payloads byte-read today at the real default branch,
+every one with a per-repo fabricated-path control at 🟢 **`404 14 B`**; `104` existence probes with the
+`606-E` verifier (`200` real / `401` fabricated, validated against controls at the top of the pass).
+
+🔴 **Demand side, snippet-grade:** every figure in `T607-1` – `T607-4` and on `intel/market.md` is a
+search-snippet, several from vendor blogs, and the primary hosts remain blocked (`598-G`, ninth pass
+open). 🔵 Each is labelled 🟡 at the point of use rather than in a footnote.
+
+🔴 **One instrument retraction and one self-caught error, both before publication:** a draft debt
+figure of `73` was wrong because it subtracted promotions from debt without checking that every
+promotion *was* debt (`3` were not — the real figure is `76`), and a slug this pass **guessed**
+(`dodona-edu/judge-pythia`) was refuted by two channels before it reached a shelf (`607-H`).
+
 ## 🆕 `p606` — `2026-11-02` — **🟢 THE TREND WITH THE MOST COMMERCIAL CONSEQUENCE THIS PASS IS A **DEADLINE THAT MOVED**: EU HIGH-RISK EDUCATION AI SLID FROM `2 Aug 2026` TO `2 Dec 2027`, AND THE NEARER DEADLINE NOBODY IS TALKING ABOUT IS `2 Dec 2026`. 🟢 AND A METHODOLOGICAL TREND WORTH NAMING: `3` CONSECUTIVE PASSES WHOSE CENTRAL ERROR WAS IN MEASUREMENT CODE, NOT IN THE MARKET.**
 
 ### 🟢 `T606-1` — the EU education-AI calendar, as it actually stands

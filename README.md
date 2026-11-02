@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## Pass 607 — reads 2026-11-02, commit 2026-11-02 — **🟢 `26` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `28 of 28` FABRICATED CONTROLS AT `404 14 B`. 🟢 THE QTI TIER FINALLY HAS AN **ENGINE** — BSD-3-CLAUSE, UNIVERSITY OF EDINBURGH — AND THE API CALLS IT `NOASSERTION`. 🟢 `607-D`: A NEW GRANT SHAPE, FOUND AT **BOTH ENDS OF THE FILE**. 🔴 `607-C`: `5` SLUGS IN THE COMMITTED LEDGER ARE NOT REPOSITORIES, TWO OF THEM THIS BASE'S OWN FILE PATHS. 🔴 AND ONE OF THIS BASE'S OWN GATES MEASURES **`0.0 %` PRECISION** ON `45` ENUMERATED HITS. EIGHT REGISTERED (`607-A`…`607-I`).**
+
+### 🟢 The central result — the assessment stack is permissive end to end
+
+🟡 `p604` shelved a QTI 3.0 toolchain and flagged it *"one maintainer."* `p601` added a delivery
+tier. 🔴 Neither had an **engine** — the component that runs a session and holds candidate state, so
+every assessment recipe here stopped at rendering an item.
+
+| | before `p607` | 🆕 `p607` |
+| --- | --- | --- |
+| engine | 🔴 **none** | 🟢 [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) — **BSD-3-Clause**, `2,058 B` byte-read, maintained `2026-06-30` |
+| independent holders in the tier | `2` | 🟢 **`4`** |
+| copyleft boundary in the path | — | 🟢 **none** |
+| 🔴 what a `spdx_id` screen says about the engine | — | 🔴 **`NOASSERTION` — it would reject it as unlicensed** |
+
+### 🟢 `607-D` — adjacent prose defeats template identity, at either end
+
+| | leading prose | trailing prose |
+| --- | --- | --- |
+| repository | `qtiworks` | [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) |
+| real family | 🟢 **BSD-3-Clause**, © 2014 University of Edinburgh | 🟢 **MIT**, stock body, diffed against a stock MIT in the same pass |
+| 🔴 API verdict | 🔴 `NOASSERTION` | 🔴 `NOASSERTION` |
+| 🔴 consequence | none — the preface is exhortation, not a condition | 🔴 **the MIT grant does not reach the DATA**, and the data is the product |
+
+🔵 Four grant shapes were already documented here (subtree-split, untitled, source-header,
+HTML-capture). 🟢 This adds the simplest and probably commonest: a **stock** licence body with prose
+touching it. The API's `NOASSERTION` is correct behaviour reported uselessly — it detected "not stock"
+and declined to name the family, in both directions.
+
+### 🔴 `607-C` — the ledger's own population, and `603-A`'s class in a third artifact
+
+| | `605-K` | 🆕 `p607` |
+| --- | --- | --- |
+| distinct slugs | — | `219` |
+| 🔴 debt (on no sell shelf) | `107` | 🔴 **`104` = `47.5 %`** |
+| 🔴 **not repositories at all** | unmeasured | 🔴 **`5`** |
+| 🟢 real debt | — | 🟢 **`99`** → `23` paid → 🟡 **`76` remain** |
+
+🔴 Two of the five are **this base's own `evidence/` paths**; two are branch fragments
+(`main/license`, `master/license`). 🟢 `603-A` found this class in the candidate set, `606-F` on the
+sell shelves, `p607` in the committed ledger. **Three artifacts, three passes, one shared extraction
+step** — which is where the fix belongs.
+
+### 🔴 One of this base's own gates is wrong `45` times out of `45`
+
+🟢 `python3 ingest/validate-pages.py` **runs in this session**, which narrows `605-E`. It reports
+"placeholder-as-data rows" — the defect the run prompt singles out. Measured before being believed,
+per `605-I`'s norm:
+
+| | value |
+| --- | --- |
+| hits from the committed predicate, enumerated in full | **`45`** |
+| 🔴 genuine header-as-data rows | 🔴 **`0`** |
+| 🟢 precision | 🔴 **`0.0 %`** |
+
+🔴 All `45` are **vertical key-value rows** — this base's dominant table idiom, where `licence` is a
+row *label* with real data beside it. 🔵 `605-I` refused to **adopt** a detector at `5.6 %`; `p607`
+refuses to **believe** one at `0.0 %`. 🟢 This pass also renamed a label in two of its own draft
+tables rather than add two fresh instances of the pattern it was criticising.
+
+### 🟢 What else moved
+
+| | |
+| --- | --- |
+| 🔴 `607-A` | **Thirty-seventh consecutive global-leg nil, proven row by row.** The one name offered as *new* — [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent), MIT, 🟢 **`259,581★`** — was already in this base's own `p436` ledger. 🔴 Disqualified on **relevance**: a general-purpose agent. The largest-starred address this base has refused |
+| 🟢 `607-E` | **The LATAM national leg `606-H` named as owed was run, in Portuguese, and supplied every new address in the pass.** `2` never held, `2` held in `trending` only, `1` 🔴 **disconfirmation** — a repo the web calls MIT with **no grant at `7` spellings**. Channel now proven on APAC, EMEA **and** LATAM |
+| 🟢 `607-F` | All four regions returned dated policy. 🟢 NA at **sub-national** resolution (`134` bills / `31` states; `4` states with a mandatory *district* policy duty; D.C. OSSE's prohibited-decision list). 🟢 EMEA named the instrument: **Regulation (EU) 2026/1744**, high-risk `2 Dec 2027`, enforcement since `2 Aug 2026`. 🟢 APAC returned per-country survey data (Ipsos). 🔴 **Africa returned nothing confirmable — recorded as a gap**, second pass running |
+| 🟢 `T607-1` | **Provenance labelling is the one obligation three unrelated legal traditions converge on** — India `20 Feb 2026`, China since `1 Sep 2025`, EU since `2 Aug 2026`. The most region-portable build target in the sector; recipe `P607-2` |
+| 🟢 `T607-2` | **Adoption has inverted governance, and LATAM makes it a ratio:** 🟢 `>50 %` of teachers in Chile and Brazil use AI against 🔴 `<10 %` of institutions having guidelines — **same source, both sides**, `>5×`. Corroborated in NA, EMEA and APAC with different numbers and the same sign |
+| 🟡 `607-G` | **The web is behind this base on its own headline row:** trend reports put `DeepTutor` at `51,771`–`52,783★`; `p606` measured `53,823★`. A pass copying the snippet would have written the number backwards by `~1,000★` |
+| 🔴 `607-H` | A slug **this pass guessed** (`dodona-edu/judge-pythia`) was refuted by two independent channels before publication. `603-B`'s class, self-caught — and `606-E`'s first use as a gate on a pass's own work |
+| 🔴 `598-G` | **Ninth pass open.** Every market figure remains search-snippet-grade; primary hosts blocked, control non-discriminating. **Operator request** |
+| 🟡 `605-E` | **Narrowed, not refuted.** `python3 ingest/validate-pages.py` runs; 🔴 `make` and batch execution of the repo's scripts are **denied by the sandbox classifier**. One instrument is enough to find a `0.0 %`-precision gate |
+
 ## Pass 606 — reads 2026-11-02, commit 2026-11-02 — **🟢 `605-I` IS CLOSED AT `0` PROMOTED ROWS: `536` README FIRST SCREENS BYTE-READ ACROSS ALL THREE SELL SHELVES, AND NO ROW THIS BASE SELLS DESCRIBES SOFTWARE THAT DOES NOT EXIST. 🔴 THE DETECTOR `605-I` PROPOSED IS **REJECTED WITH A PRECISION FIGURE** (`1 of 18`, `5.6 %`) — THE FIRST TIME THIS BASE HAS MEASURED A PROPOSED CONTROL BEFORE ADOPTING IT. 🟢 `606-E`: A WORKING CHEAP EXISTENCE VERIFIER, WHICH THIS BASE HAS LACKED FOR `16` PASSES. 🔴 AND THE PASS RETRACTED ITS OWN HARVESTER, WHICH CORRUPTED ITS DATA BY CONCURRENCY AND INVENTED A REPOSITORY DEFECT. TWELVE REGISTERED (`606-A`…`606-K`).**
 
 ### 🟢 The central result — a second null with a denominator

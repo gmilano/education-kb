@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM FINDING IS AN **ENGINE**, NOT A CONNECTOR: QTIWORKS — A COMPLETE QTI 2.1 ASSESSMENT ENGINE OUT OF THE **UNIVERSITY OF EDINBURGH**, BSD-3-CLAUSE BYTE-READ, MAINTAINED TO `2026-06-30` IN ITS **OPENOLAT FORK** — HAS BEEN IN THIS BASE'S `trending` SHELVES FOR `21` MENTIONS AND ON NO PLATFORM PAGE. 🟢 IT ALSO RETIRES `p604`'s OWN SINGLE-MAINTAINER FLAG ON THE QTI TIER. 🔴 THE API CALLS IT `NOASSERTION` AND A DEPENDENCY SCREEN WOULD REJECT IT. 🟡 `605-K`'s DEBT: `26` PAID THIS PASS, `73` REMAIN.**
+
+### 🟢 `607-I` — QTIWorks: the assessment **engine** this page has been assuming
+
+`p601` added an assessment-*delivery* tier (the layer that renders and scores an item). `p604` and
+`p605` added a QTI 3.0 *toolchain* (players, item banks, libraries). 🔴 **Neither added an engine** —
+the component that actually runs an assessment session, sequences items, and holds candidate state.
+
+| | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) |
+| --- | --- |
+| upstream | [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks), University of Edinburgh |
+| grant | 🟢 **BSD-3-Clause**, `LICENSE.txt`, **`2,058 B`**, byte-read `2026-11-02` at `master` |
+| fabricated control | 🟢 `404 14 B` |
+| 🔴 API `spdx_id` | 🔴 **`NOASSERTION`** — the grant is prefaced by `6` lines of prose (`607-D`) |
+| copyright | © **2014, University of Edinburgh** |
+| maintained | 🟢 **`2026-06-30`** on the fork · 🔴 `2023-01-04` upstream, closed by its own README |
+| channel flag | 🟡 `fork: true` |
+| payload digest | 🟢 `a5c692f120907d58…` — **byte-identical** to upstream |
+
+🟢 **Why the fork and not the upstream.** The upstream is closed by its author's own statement and
+carries the ledger verdict `DECLINED-p436`. 🟢 **That decline was correct and it was about support,
+not licence** — and the ledger already said so, naming the fork as the live carrier and recording the
+same digest this pass recomputed. The platform row belongs to the maintained carrier.
+
+### 🟢 Why this retires a flag `p604` raised against itself
+
+🟡 `p604` shelved the QTI 3.0 toolchain with an explicit caveat: *"`4` repos, **one maintainer**,
+flagged as such."* `p605` reported the tier *"no longer single-maintainer"* on the strength of two
+MIT libraries. 🟢 **With QTIWorks the tier now spans four independent holders**, each byte-read today:
+
+| layer | component | holder | grant |
+| --- | --- | --- | --- |
+| 🟢 **engine** | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | OpenOlat (Switzerland) | 🟢 **BSD-3-Clause**, `2,058 B` |
+| player | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | amp-up.io | 🟢 **MIT**, `1,076 B` |
+| library | [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) | 🟢 **Kennisnet** (Dutch national education-ICT body) | 🟢 **MIT**, `1,066 B` |
+| library | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | Longsight Group | 🟢 **MIT**, `1,072 B`, pushed 🟢 **`2026-11-02`** |
+
+🟢 **`kennisnet/php-qti3` is the row with institutional weight.** Kennisnet is the Netherlands'
+public foundation for ICT in education — a national body publishing an MIT QTI 3.0 library. 🔴 It
+carries `0★`, which is exactly `p601`'s star-anti-signal: the least-starred row in the tier is the
+one with a ministry-adjacent holder behind it.
+
+🔵 **What a studio gets from the four together:** a permissive path from authoring to scoring that
+crosses no copyleft boundary and depends on no vendor — engine (BSD-3-Clause) + player (MIT) + two
+MIT libraries, three of the four maintained within the last `12` months.
+
+### 🟡 Platform-adjacent rows promoted this pass
+
+| row | grant, byte-read `2026-11-02` | why a platform page |
+| --- | --- | --- |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | 🟢 **MIT**, `1,066 B`, `main` | An **xAPI Learning Record Store** — the system of record a platform writes to, not a tool bolted beside it. EMEA (Poland) |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT**, `1,091 B`, `main`, pushed `2026-11-01` | A **national ministry's** benchmarking platform, published permissively and actively developed. EMEA (UK) |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟢 **MIT**, `1,072 B`, `main`, `1,849★` | The Brazilian MCP server collection — the integration surface a LATAM engagement attaches agents through. LATAM |
+
+### 🔴 This page's standing gaps, re-stated honestly
+
+🔴 **The ERP/SIS gap is unchanged and this pass did not move it.** `p601` measured
+`topic:school-management` at `88.9 %` in-domain yielding `0` shippable platforms; `p602` confirmed
+the permissive education ERP the web names (`GegoK12`) has no shippable repository. 🟢 This pass
+probed two more ERP-shaped backlog addresses and both are 🔴 **BLOCK — no grant**
+(`quizbankorg/quizbank`, `eledia/moodle-block_elediaai_tutor`). The permissive education ERP of
+record still does not exist; `openeducat/openeducat_erp` (LGPL-3.0) and `frappe/education` remain the
+answer and both are reciprocal.
+
+🟡 **`605-K` promotion debt after this pass, counted rather than asserted:** the measured debt was
+`99` real repositories (`607-C`). This pass promoted **`26` distinct addresses**, of which 🟢 **`23`
+pay debt** and `3` came from the LATAM national leg and were never in the ledger
+(`eumakerdev/bncc_api`, `dfdb76/bncc-mcp`, `Universidade-Livre/ciencia-da-computacao`). 🟡 **`76`
+remain.**
+
+🔵 A first draft of this line said `73`, by subtracting promotions from debt without checking that
+every promotion *was* debt. `3` were not. The figure is published from a set difference, not a
+subtraction.
+
 ## 🆕 `p606` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM THIS PAGE GAINS IS ONE THIS BASE HAS HAD IN `trending` SINCE `70★` AND SHELVED NOWHERE — AND IT IS THE OPEN-SOURCE ASSESSMENT PLATFORM **NIGERIA'S OWN EDTECH GAP ANALYSIS NAMES BY NAME**. 🟢 THE ROW AND THE REGIONAL EVIDENCE FOR IT ARRIVED IN THE SAME PASS, FROM THE NATIONAL QUERY LEGS `605-F` ASKED TO BE TESTED ON EMEA. 🔴 `605-K`'S PROMOTION DEBT: `3` PAID, `85` REMAIN.**
 
 ### 🟢 `606-I` — Tangerine: an EMEA/Africa field-assessment platform, promoted with its licence flagged

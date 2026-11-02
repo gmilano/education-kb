@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — `2026-11-02` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ IN THIS PASS WITH ITS GRANT, BRANCH AND REGION. 🟢 `P607-1` IS A **PERMISSIVE END-TO-END ASSESSMENT STACK** — ENGINE, PLAYER AND LIBRARIES, FOUR INDEPENDENT HOLDERS, NO COPYLEFT BOUNDARY — WHICH THIS BASE COULD NOT BUILD BEFORE `607-I`. 🟢 `P607-2` IS THE **PROVENANCE LAYER** `T607-1` ARGUES IS THE MOST REGION-PORTABLE COMPONENT IN THE SECTOR. 🟢 `P607-3` REPLACES THIS BASE'S HAND-ROLLED LICENCE GRADING WITH THE APACHE-2.0 CLASSIFIER SITTING IN ITS OWN BACKLOG.**
+
+### 🟢 Component grants, all byte-read `2026-11-02` at the real default branch, every control `404 14 B`
+
+| component | grant | bytes | branch | region |
+| --- | --- | --: | --- | --- |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (API: 🔴 `NOASSERTION`) | `2,058` | `master` | EMEA |
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 MIT | `1,076` | `main` | Global |
+| [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) | 🟢 MIT | `1,066` | `main` | EMEA |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 MIT | `1,072` | `main` | Global |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | 🟢 MIT | `1,066` | `main` | EMEA |
+| [`php-xapi/client`](https://github.com/php-xapi/client) | 🟡 MIT, untitled | `1,068` | 🔴 `0.7` | EMEA |
+| [`php-xapi/model`](https://github.com/php-xapi/model) | 🟡 MIT, untitled | `1,068` | 🔴 `3.x` | EMEA |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 MIT | `1,084` | `main` | EMEA |
+| [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 MIT | `1,080` | 🔴 `develop` | North America |
+| [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 Apache-2.0 | `11,358` | `main` | Global |
+| [`eumakerdev/bncc_api`](https://github.com/eumakerdev/bncc_api) | 🟢 MIT | `1,081` | `main` | LATAM |
+| [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | 🟡 **MIT — CODE ONLY**, data carved out | `1,218` | `main` | LATAM |
+
+### 🟢 `P607-1` — A permissive end-to-end assessment stack (EMEA, `12`–`16` weeks)
+
+🟢 **What is new:** before `607-I` this base held QTI *players* and *libraries* but no **engine**, so
+every assessment recipe here stopped at rendering an item. The engine is the component that runs a
+session, sequences items, and holds candidate state.
+
+**Wiring:**
+
+1. **Engine — [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks)** (BSD-3-Clause, `2,058 B`,
+   `master`, maintained `2026-06-30`). Runs the assessment session and owns candidate state. 🔴 Deploy
+   the **fork**, not `davemckain/qtiworks` — the upstream is closed by its own README (HEAD
+   `2023-01-04`), and the two payloads are byte-identical (`a5c692f120907d58…`), so there is no
+   licence difference to weigh.
+2. **Delivery — [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player)**
+   (MIT) renders QTI 3.0 items in the browser.
+3. **Authoring/transport — [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3)** +
+   **[`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3)** (both MIT) read and write the
+   package format. 🟢 Kennisnet is the Dutch national education-ICT foundation, which is the
+   provenance an EMEA public-sector buyer will ask about.
+4. **Evidence — [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS)** (MIT) as the xAPI Learning
+   Record Store, with **[`php-xapi/client`](https://github.com/php-xapi/client)** (branch `0.7`) and
+   **[`php-xapi/model`](https://github.com/php-xapi/model)** (branch `3.x`) beneath it. 🔴 Both are
+   stale (`2023-11-01`, `2025-01-20`) and **untitled** grants — vendor them and pin them.
+5. **Integrity — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)** (MIT, `356★`) for
+   source-code plagiarism detection on programming items.
+6. **The agent layer** is where the studio builds: item generation and distractor critique proposing
+   QTI, never writing a mark. 🔴 **The human-release gate from `P-603-B` is mandatory here** — under
+   EU Annex III, learner evaluation is high-risk and the `2 Dec 2027` clock applies (`T607-3`).
+
+🟢 **Why it is sellable:** engine BSD-3-Clause, everything else MIT, **four independent holders**,
+no copyleft boundary anywhere in the path. 🔴 **The one licence trap to brief the client on:** a
+dependency screen reading `spdx_id` rejects the **engine** as unlicensed (`NOASSERTION`) — have the
+byte-read `LICENSE.txt` and the `607-D` explanation ready before procurement sees it.
+
+### 🟢 `P607-2` — The provenance layer, built once and sold into three regions (`6`–`10` weeks)
+
+🟢 **The case, from `T607-1`:** India (`20 Feb 2026`), China (since `1 Sep 2025`) and the EU (AI Act
+transparency, enforced since `2 Aug 2026`) impose labelling/provenance duties from three unrelated
+legal traditions. North America's prohibited-use lists (D.C. OSSE) need the same record to
+demonstrate a decision was **not** machine-made.
+
+**Wiring:**
+
+1. **Capture at the boundary.** Every generation event records: model + version, prompt, retrieved
+   sources, timestamp, and the human who requested it. 🟢 Emit it as **xAPI statements** into
+   [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) via
+   [`php-xapi/client`](https://github.com/php-xapi/client) — provenance then lives in the system of
+   record the institution already audits, not in a vendor console.
+2. **Bind claims to an official source, never to model memory.** Per region, the curriculum authority
+   this base now holds byte-read: 🟢 LATAM — [`eumakerdev/bncc_api`](https://github.com/eumakerdev/bncc_api)
+   and the BNCC packages (`p603`); 🟢 North America —
+   [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server); 🟢 APAC —
+   [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info). A claim without a
+   citation into one of these does not ship.
+3. **Label on egress.** Visible marker on learner- and parent-facing output; machine-readable
+   provenance in the record. 🟢 This is the part that satisfies India and China directly.
+4. **Prohibited-decision register.** Encode D.C. OSSE's list as a hard gate: no AI output may be the
+   proximate cause of a grade, a disciplinary action, an IEP decision or a teacher evaluation. 🟢 The
+   register is the deliverable the `4` mandatory-policy US states (`T607-4`) require a district to
+   produce and cannot author itself.
+
+🔴 **The licence boundary to respect, with a worked instance:**
+[`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) is MIT **for code only** — its `LICENSE` is
+stock MIT plus a Portuguese note carving the **data** out to separate provenance
+(`ATTRIBUTION.md`, `200`, `3,331 B`). 🟢 A provenance layer is exactly the component that must get
+this right: it is the thing that would otherwise *assert* a wrong licence in the audit record.
+
+### 🟢 `P607-3` — Stop hand-rolling licence identification (a recipe for this base, not a client)
+
+🔴 **The problem, measured in this pass:** licence family here is decided by title-line greps and
+byte bands. `607-D` found two payloads graded `NOASSERTION` whose bodies are stock BSD-3-Clause and
+stock MIT, defeated only by adjacent prose. And `karsh482/Gaokao` (`11,357 B`) vs
+`google/licenseclassifier` (`11,358 B`) are two different Apache-2.0 files **one byte apart** — a
+one-byte demonstration of why `p312`'s *"identify by template, never by a byte band"* rule exists.
+
+🟢 **The component has been in this base's own `p436` backlog the whole time:**
+[`google/licenseclassifier`](https://github.com/google/licenseclassifier) — 🟢 **Apache-2.0,
+`11,358 B` byte-read `2026-11-02`**, control `404 14 B`, `351★`, `main`. It does normalised,
+confidence-scored licence matching, which is precisely the operation `607-D` shows the grep ladder
+failing at.
+
+**Wiring:**
+
+1. Keep the existing ladder for **discovery** — `606-G`'s spellings (`README.md`, `README.rst`,
+   `readme.md`, `Readme.md`, `.github/README.md`, `readme.adoc`) and `603-C`'s fix are about *finding*
+   the payload, which the classifier does not do.
+2. Pipe the **bytes** to `licenseclassifier` for the family verdict instead of grepping a title line.
+   🟢 It returns a confidence score, which gives this base what it currently lacks: a **graded**
+   verdict rather than a binary one.
+3. 🟢 **Keep the fabricated-path control.** The classifier grades payloads; it cannot tell you a
+   `404` is a real absence. `404 14 B` stays the control on every arm.
+4. 🟡 **Expected yield, stated as a prediction so it can be falsified:** re-grading the `101`
+   `NONE`/`NOASSERTION` rows from `606-J`'s census should recover a non-trivial share as real
+   permissive grants defeated by adjacent prose. `607-D` found `2` such repositories in a sample of
+   `28` (`7.1 %`). 🔴 If the true rate on the `101` is near zero, this recipe is wrong and should be
+   recorded as such.
+
+🔵 **Honest caveat:** `licenseclassifier` is Apache-2.0 and Go, and this base's instruments are
+Python and shell. 🔴 It is also not education software, which is why it is **disqualified as a shelf
+row** and recorded here instead — a tool the base should run, not a row it should sell.
+
 ## 🆕 `p606` — `2026-11-02` — **🟢 TWO RECIPES, BOTH BUILT ONLY FROM ROWS BYTE-READ IN THIS PASS OR ALREADY SHELVED: AN **OFFLINE-FIRST EGRA/EGMA ASSESSMENT STACK FOR LOW-CONNECTIVITY AFRICA** (THE `5.67 %` FACILITY CONSTRAINT IS THE DESIGN DRIVER), AND AN **EU HIGH-RISK COMPLIANCE HARNESS** SIZED TO THE `2 Dec 2026` AND `2 Dec 2027` DEADLINES. 🟢 PLUS A REUSABLE **ADDRESS-VERIFICATION RECIPE** FROM `606-E` THAT ANY PASS OR PIPELINE CAN RUN.**
 
 ### 🟢 `P606-1` — Offline-first early-grade assessment for low-connectivity systems (EMEA / Africa)

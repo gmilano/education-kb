@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — `2026-11-02` — what moved on the agent side this week
+
+🔴 **The mandated global agent legs returned the thirty-seventh consecutive nil.** Recorded here as a
+dated entry rather than as silence, because the nil is now the shelf's longest-running measurement.
+
+| token the global legs returned this week | status |
+| --- | --- |
+| `HKUDS/DeepTutor` | 🔴 held — `6` mentions on `agents/top.md` |
+| `THU-MAIC/OpenMAIC` | 🔴 held — `3` mentions on `agents/top.md` |
+| `crewAIInc/crewAI` · `microsoft/autogen` | 🔴 held |
+| `ashishpatel26/500-AI-Agents-Projects` | 🔴 held — `83` mentions on this shelf |
+| `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` | 🔴 held — `38` mentions on this shelf |
+| 🟡 `NousResearch/hermes-agent` | 🔴 **held in this base's own `p436` ledger** (`BACKLOG`) |
+
+🟡 **`NousResearch/hermes-agent`, recorded with its numbers and its refusal.** 🟢 MIT, `1,070 B`
+byte-read `2026-11-02`, control `404 14 B`; 🟢 **`259,581★`**, `57,133` forks, 🔴 `52,273` open
+issues, created `2025-07-22`, pushed `2026-11-02`; *"The agent that grows with you."* 🔴 **Not
+promoted — relevance.** A general-purpose personal agent with no education surface. The
+largest-starred address this base has refused.
+
+🔴 **The trend reports this leg retrieves are behind this base.** They put `DeepTutor` at `51,771★`
+(`2026-10-31`) and `52,783★` (`2026-11-01`); 🟢 `p606` measured **`53,823★`** on `2026-11-02`. A pass
+that had copied the snippet would have written the number backwards by `~1,000★`.
+
+🟢 **`12` agent rows promoted to `agents/top.md` this pass** out of the `p436` backlog, every grant
+byte-read today at the real default branch with a per-repo fabricated control at `404 14 B`:
+[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (MIT, `1,849★`, LATAM) ·
+[`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) (🟡 MIT **code only**, LATAM) ·
+[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (MIT, `27★`) ·
+[`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) (MIT, branch
+🔴 `develop`, North America) ·
+[`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) (ISC, `746 B`) ·
+[`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) (MIT, North
+America) · [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) (MIT,
+APAC) · [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) (MIT) ·
+[`a-ariff/canvas-mcp`](https://github.com/a-ariff/canvas-mcp) (MIT) ·
+[`Teci-AI/moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) (MIT) ·
+[`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) (MIT) ·
+[`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) (MIT, 🟡 `fork: true`).
+
+🔴 **A slug this pass guessed and the probe refused before publication:** `dodona-edu/judge-pythia`,
+inferred from `dodona-edu/dolos`. Search channel `NO-SEARCH-HIT`, `606-E` existence probe 🔴 `401`.
+Two channels agreeing means this is `603-B`'s guessed-slug class, not a `605-C` false negative.
+
 ## 🆕 `p606` — `2026-11-02` — **🟢 THE CAPABILITY SWEEP: `536` READMES READ, `0` PROMOTED ROWS OVERSELL. 🔴 THE PROPOSED DETECTOR IS REJECTED AT `5.6 %` PRECISION. 🔴 A RETRACTION: THIS PASS'S HARVESTER CORRUPTED ITSELF BY CONCURRENCY. 🟢 `36`th GLOBAL-LEG NIL — AND THE EMEA **NATIONAL** LEGS PAID, AS `605-F` PREDICTED.**
 
 ### 🟢 Agent-shelf signal this pass — star drift, re-measured rather than carried

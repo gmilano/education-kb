@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — `2026-11-02` — what moved on the repository side this week
+
+🟢 **The LATAM national leg — run in Portuguese against Brazilian curriculum vocabulary (`MEC`,
+`BNCC`, `escola`, `código aberto`) — supplied every genuinely new address in the pass.** The four
+mandated global legs supplied none. Third region in a row where this holds (`605-F` APAC, `606-H`
+EMEA, `607-E` LATAM).
+
+| address from the LATAM leg | held here before? | grant, byte-read `2026-11-02` | verdict |
+| --- | --- | --- | --- |
+| [`eumakerdev/bncc_api`](https://github.com/eumakerdev/bncc_api) | 🟢 **no — `0` mentions anywhere** | 🟢 MIT, `1,081 B`, title block | 🟢 **promoted** to `repos/foundations.md`, `17★`, pushed `2026-11-02` |
+| [`financeiroetica01-art/jogos-empreendedorismo-bncc`](https://github.com/financeiroetica01-art/jogos-empreendedorismo-bncc) | 🟢 **no — `0` mentions anywhere** | 🔴 **NONE** at `7` spellings, control `404 14 B` | 🔴 **BLOCK.** The web asserted *"MIT, free for public schools"*; **the payload refutes it** |
+| [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | 🟡 trending only | 🟢 MIT, `1,087 B`, title block | 🟢 **promoted**, 🟢 **`21,000★`** |
+| [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | 🟡 trending only | 🟡 **MIT for CODE, data carved out**, `1,218 B` | 🟢 **promoted with the boundary flagged** (`607-D`) |
+| `bncc-dev/bncc-dados` · `bncc-dev/bncc-pacotes` | 🔴 already shelved (`p603`) | — | 🔴 nil |
+
+🟢 **`607-D` — a new grant shape, found at both ends of the file.** Prose adjacent to a *stock*
+licence body defeats template identity, and the API answers `NOASSERTION` in both directions:
+
+| | leading prose | trailing prose |
+| --- | --- | --- |
+| repository | [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) / [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) |
+| bytes | `2,058` (`LICENSE.txt`) | `1,218` (`LICENSE`) |
+| real family | 🟢 **BSD-3-Clause**, © 2014 University of Edinburgh | 🟢 **MIT**, © 2026 `dfdb76` |
+| 🔴 consequence | none — the preface is exhortation | 🔴 **the MIT grant does not reach the data** |
+
+🟢 **`10` foundation rows and `4` platform rows promoted this pass**, every grant byte-read at the
+real default branch, `28 of 28` fabricated controls at `404 14 B`. Highlights:
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT, `356★`, EMEA) ·
+[`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights)
+(MIT, the **UK Department for Education's** own code, pushed `2026-11-01`) ·
+[`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (🟢 **BSD-3-Clause** — the QTI **engine**
+this base lacked) · [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) (MIT, the Dutch
+national education-ICT foundation, 🔴 `0★`) ·
+[`php-xapi/client`](https://github.com/php-xapi/client) (🟡 MIT untitled, branch 🔴 `0.7`) ·
+[`php-xapi/model`](https://github.com/php-xapi/model) (🟡 MIT untitled, branch 🔴 `3.x`) ·
+[`marcosroriz/sete`](https://github.com/marcosroriz/sete) (MIT, LATAM) ·
+[`karsh482/Gaokao`](https://github.com/karsh482/Gaokao) (Apache-2.0, APAC).
+
+🔴 **`607-C` — `5` of the `104` debt slugs in the committed ledger are not repositories**, each
+probed at `401` against a `200` control: `evidence/p333-disposition-ledger` and
+`evidence/p333-silent-random-probe` (**this base's own file paths**), `main/license` and
+`master/license` (branch-and-path fragments), and `alpinevibe/quizpulse` (slug-shaped, absent).
+🟢 Real debt `99`; `23` paid this pass; 🟡 **`76` remain.**
+
+🔵 **Versioned default branches, four in one pass:** `0.7`, `3.x`, `master`, `develop`. A root read at
+`main` would have published *"no grant"* for all four — the same wrong answer as a real absence.
+
 ## 🆕 `p606` — `2026-11-02` — **🟢 A WORKING CHEAP EXISTENCE VERIFIER FOUND, WHICH THIS BASE HAS LACKED FOR `16` PASSES: THE GIT SMART-HTTP ENDPOINT RETURNS `200` FOR A REAL REPOSITORY AND `401` FOR A FABRICATED ONE. VALIDATED ON `552` PROBES WITH PERFECT SEPARATION. 🔴 AND IT IMMEDIATELY CAUGHT SOMETHING NO PASS HAD NOTICED: `4` OF THIS BASE'S SHELF "ADDRESSES" ARE NOT REPOSITORIES AT ALL. 🟡 FIRST SHELF-WIDE LICENCE AND LIVENESS CENSUS ON A RECONCILED DENOMINATOR.**
 
 ### 🟢 `606-E` — the verifier, and why it matters more than it sounds

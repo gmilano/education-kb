@@ -4,6 +4,107 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p607` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `10` FOUNDATION REPOS PROMOTED, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH WITH A PER-REPO FABRICATED CONTROL AT `404 14 B`. 🟢 `607-D`: A **NEW GRANT SHAPE**, AND THIS PASS FOUND IT AT **BOTH ENDS OF THE FILE** — PROSE *BEFORE* THE LICENCE TEXT (BSD-3-CLAUSE, UNIVERSITY OF EDINBURGH) AND A SCOPE NOTE *AFTER* IT (MIT FOR CODE, NOT FOR DATA). BOTH ARE GRADED `NOASSERTION` BY THE API AND **`MIT`/`BSD` BY EVERY GREP READER HERE**. 🟢 `607-E`: THE LATAM NATIONAL LEG `606-H` ASKED FOR SUPPLIED `2` ADDRESSES THIS BASE HAS NEVER HELD. 🔴 `4` NOT PROMOTED, WITH REASONS.**
+
+### 🟢 `607-D` — adjacent prose defeats template identity, at either end of the grant
+
+Two repositories in this pass carry a licence whose **text** is unambiguous and whose **family** the
+API declines to name. The cause is the same in both and it is positional:
+
+| | leading prose | trailing prose |
+| --- | --- | --- |
+| repository | [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) → maintained fork [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) |
+| payload | `LICENSE.txt`, 🟢 **`2,058 B`**, byte-read `2026-11-02` | `LICENSE`, 🟢 **`1,218 B`**, byte-read `2026-11-02` |
+| fabricated control | 🟢 `404 14 B` | 🟢 `404 14 B` |
+| 🔴 API `spdx_id` | 🔴 **`NOASSERTION`** | 🔴 **`NOASSERTION`** |
+| 🟢 what the bytes say | 🟢 **BSD-3-Clause**, © **2014 University of Edinburgh** | 🟢 **MIT**, © 2026 `dfdb76` |
+| the adjacent prose | `6` lines **above** the text: *"This license is famously liberal. However, you are strongly urged to contribute back to the QTI community…"* | `4` lines **below** the text: *"A licença MIT acima cobre o CÓDIGO deste repositório. Os DADOS embarcados têm proveniência e licenças próprias — veja `ATTRIBUTION.md`."* |
+| 🔴 commercial consequence | none — the grant is permissive and the preface is **exhortation, not a condition** | 🔴 **real — the MIT grant does not reach the data**, and the data is the product |
+
+🟢 **The `bncc-mcp` payload was diffed against a stock MIT byte-read in this same pass**
+([`eumakerdev/bncc_api`](https://github.com/eumakerdev/bncc_api), `1,081 B`). The diff is exactly two
+hunks: the copyright line, and the appended note. 🟢 **The body is stock MIT, character for
+character** — which is precisely why a grep reader passes it and why the `~137 B` that matter are the
+ones it ignores.
+
+🟢 **The pointer resolves:** `ATTRIBUTION.md` at `main` returns **`200`, `3,331 B`**, fabricated
+control `404 14 B`. 🔵 Stated because `gate-evidence-store` is red about a claim that depends on a
+component nobody located — this one was located.
+
+🔵 **The generalisation worth keeping:** this base already documents subtree-split grants (`p382`,
+`605-L`), untitled grants (`p314`), source-header grants (`p602`) and HTML-capture grants (`604-B`).
+🟢 **`607-D` adds the simplest one and the one most likely to be common:** a *stock* licence body with
+prose touching it. Template identity is a **whole-file** operation here, and any prose adjacent to the
+text — at either end — breaks it. 🟢 The API's `NOASSERTION` is therefore *correct behaviour reported
+uselessly*: it has detected "not a stock file" and declined to say which family, in both directions.
+
+### 🟢 `607-E` — the LATAM national leg, which `606-H` named as the measurement owed
+
+`605-F` proved the national-query channel on APAC; `606-H` proved it on EMEA and closed by naming
+LATAM as *"the untested third."* It was tested this pass, in Portuguese, against Brazilian
+curriculum vocabulary (`MEC`, `BNCC`, `escola`, `código aberto`):
+
+| | result |
+| --- | --- |
+| 🟢 addresses returned that this base has **never held** (`0` mentions anywhere) | 🟢 **`2`** |
+| 🟡 returned, held in `trending` only, on no sell shelf | 🟡 **`2`** |
+| 🔴 returned and already shelved | `2` |
+| 🔴 returned, web asserts a licence, **payload refutes it** | 🔴 **`1`** |
+
+🟢 **Third region, third time the national leg out-produced the global legs in the same pass** — which
+returned the thirty-seventh nil (`607-A`). 🔵 The channel is now proven on APAC, EMEA and LATAM; North
+America is the one region where it has not been run as a *supply* leg, only as a demand leg.
+
+### 🟢 Promoted to this page — `10` rows, grants byte-read `2026-11-02`, every control at `404 14 B`
+
+| repo | grant (byte-read today) | branch | stars | pushed | region |
+| --- | --- | --- | --: | --- | --- |
+| [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | 🟢 **MIT**, `1,087 B`, title block | `main` | 🟢 **`21,000★`** | `2026-05-20` | LATAM |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT**, `1,084 B`, title block | `main` | `356★` | `2026-10-31` | EMEA |
+| [`marcosroriz/sete`](https://github.com/marcosroriz/sete) | 🟢 **MIT**, `1,069 B`, title block | `master` | `22★` | `2023-03-20` | LATAM |
+| [`eumakerdev/bncc_api`](https://github.com/eumakerdev/bncc_api) | 🟢 **MIT**, `1,081 B`, title block | `main` | `17★` | 🟢 **`2026-11-02`** | LATAM |
+| [`php-xapi/client`](https://github.com/php-xapi/client) | 🟡 **MIT, untitled** (`p314`) — `1,068 B`, opens on the copyright line | 🔴 **`0.7`** | `23★` | `2023-11-01` | EMEA |
+| [`php-xapi/model`](https://github.com/php-xapi/model) | 🟡 **MIT, untitled** (`p314`) — `1,068 B`, opens on the copyright line | 🔴 **`3.x`** | `3★` | `2025-01-20` | EMEA |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | 🟢 **MIT**, `1,066 B`, title block | `main` | `7★` | `2024-07-10` | EMEA |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT**, `1,091 B`, title block | `main` | `4★` | 🟢 **`2026-11-01`** | EMEA |
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT**, `1,074 B`, title block | `main` | `0★` | `2026-10-21` | LATAM |
+| [`karsh482/Gaokao`](https://github.com/karsh482/Gaokao) | 🟢 **Apache-2.0**, `11,357 B` | `main` | `1★` | `2026-06-29` | APAC |
+
+🔴 **Three of these ten do not resolve at `main`.** `php-xapi/client` is at `0.7`, `php-xapi/model`
+at `3.x`, `marcosroriz/sete` at `master` — and on the agent shelf a fourth,
+`datakind/student-success-tool`, resolves only at `develop`. 🔵 `p602` established versioned default
+branches as a discovery blocker; a root-only read at `main` would have published *"no grant"* for all
+four, which is the same wrong answer as a real absence.
+
+🟡 **The two rows that are institutional rather than popular:**
+[`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights)
+is the **United Kingdom Department for Education's** own benchmarking codebase, MIT, pushed
+`2026-11-01` — a national ministry publishing permissively, which is rarer on this page than any
+star count. [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) is source-code plagiarism
+detection out of the Dodona project (Ghent), `356★`, MIT, and is the only maintained permissive tool
+of its kind this base holds.
+
+🟡 **`php-xapi/client` and `php-xapi/model` complete the xAPI layer** `p604` opened with the H5P
+capture repos: the PHP client and model beneath an LRS, with
+[`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) as the store. 🔴 Both are **untitled** grants —
+`1,068 B` opening directly on *"Copyright (c) 2014-2019 Christian Flothmann"* — the `p314` class,
+and both are **stale**: `2023-11-01` and `2025-01-20`.
+
+### 🔴 Not promoted, with the reason
+
+| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+| --- | --- | --- |
+| [`financeiroetica01-art/jogos-empreendedorismo-bncc`](https://github.com/financeiroetica01-art/jogos-empreendedorismo-bncc) | 🔴 **NONE** — `404` at `LICENSE`, `.md`, `.txt`, `LICENCA`, `LICENÇA`, `COPYING`, `licenca.md`; control `404 14 B` | 🔴 **BLOCK.** The LATAM leg returned it as *"MIT, free access for public schools"*. 🟢 **The payload refutes the web.** A channel-conflict disconfirmation, recorded |
+| [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) | 🔴 **NONE** at `7` spellings on branch 🔴 **`51`**; control `404 14 B` | 🔴 **BLOCK — no grant means no permission.** 🔵 A German Moodle AI-tutor block, and the row this page would most like to have |
+| [`quizbankorg/quizbank`](https://github.com/quizbankorg/quizbank) | 🔴 **NONE** at `7` spellings; control `404 14 B` | 🔴 **BLOCK — no grant** |
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🟡 **GPL-3.0**, `35,149 B`, byte-read at `master` | 🟡 **Not blocked, flagged.** Reciprocal. A Moodle MCP plugin, so the licence is Moodle-consistent and the constraint is the studio's, not the repo's |
+| [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) | 🟢 **BSD-3-Clause**, `2,058 B` (`607-D`) | 🔴 **DECLINE STANDS, on support — not on licence.** Closed by its own README, HEAD `2023-01-04`. 🟢 **Credit where it is written:** the ledger's `reverified_evidence` field already recorded this *and* the payload digest `a5c692f12090`. This pass computed `a5c692f120907d58…` independently and it **matches**. The licence family is the only new fact |
+| [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 **Apache-2.0**, `11,358 B`, `351★` | 🔴 **DISQUALIFIED — relevance.** Not education software. 🟡 **But registered deliberately:** this base grades licences by hand-rolled byte bands and title-line greps, and an Apache-2.0 licence classifier has been sitting in its own `p436` backlog the whole time. See `P607-3` in `compose/patterns.md` |
+
+🔵 **A byte-band coincidence, noted so nobody builds on it:** `karsh482/Gaokao`'s Apache-2.0 payload
+is `11,357 B` and `google/licenseclassifier`'s is `11,358 B`. 🔴 One byte apart, two different files.
+`p312`'s rule — identify by **template**, never by a byte band — with a one-byte demonstration.
+
 ## 🆕 `p606` — reads `2026-11-02`, commit `2026-11-02` — **🟢 A `6,955★` APACHE-2.0 EDUCATION REPOSITORY ON THIS BASE'S OWN SHELVES WAS INVISIBLE TO EVERY CAPABILITY PROBE IT OWNS, AND THE THING HIDING IT WAS A **DIRECTORY**: GITHUB RENDERS `.github/README.md` AS THE REPOSITORY README AND NO LADDER HERE ASKS FOR IT. 🟢 `603-C` CORROBORATED INDEPENDENTLY AT `5.4 %` AND EXTENDED BY TWO RUNGS. 🔴 A TRANSFER `p605` RESOLVED IS STILL SHELVED UNDER ITS STALE NAME AND THE CANONICAL ADDRESS IS HELD NOWHERE.**
 
 ### 🟢 `606-G` — `603-C`'s defect, measured on a second population and extended
