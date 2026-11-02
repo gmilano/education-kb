@@ -1,0 +1,6 @@
+channel	query	total_count	rows_read	already_held	new
+web	4 global + 4 regional legs	-	7	7	0
+search/repositories	education AI agent tutor stars:>200 pushed:>2026-09-01	0	0	0	0
+search/repositories	topic:education topic:ai stars:>150 pushed:>2026-08-01	22	20	20	0
+search/repositories	tutor stars:>300 pushed:>2026-09-01	100	20	20	0
+search/repositories	topic:edtech stars:>100 pushed:>2026-08-01	32	20	20	0

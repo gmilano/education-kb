@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 2026-11-02 — Pass 625 — **THREE QUERY SHAPES, `154` TOTAL MATCHES, `21 of 21` ADJUDICATED ADDRESSES ALREADY HELD — AND A FOUR-TERM QUERY THAT RETURNS `0` AND WOULD HAVE BEEN PUBLISHED AS A NIL**
+
+⏱️ **Append-only.** Nothing below this line was edited.
+
+### 🔴 The query-shape result, which is the methodological finding of the pass
+
+| Query | `total_count` | Verdict |
+|---|---|---|
+| `education AI agent tutor stars:>200 pushed:>2026-09-01` | 🔴 **`0`** | **`4` free-text terms — conjunctive, returns nothing** |
+| `topic:education topic:ai stars:>150 pushed:>2026-08-01` | 🟢 `22` | qualifiers only |
+| `tutor stars:>300 pushed:>2026-09-01` | 🟢 `100` | **`1`** free-text term |
+| `topic:edtech stars:>100 pushed:>2026-08-01` | 🟢 `32` | qualifiers only |
+
+🔴 **Independently reproduces `623-B`.** The four-term query is the natural way to ask the question and it is the
+one that returns nothing. A pass running only that shape publishes a discovery nil that is an artefact of its own
+query — which is exactly the `p600` sampling artefact, rediscovered. 🟢 **Rule: at most one free-text term.**
+
+### 🟢 Trending repos measured `2026-11-02` — the foundation and integration tiers
+
+| Nombre | Repo | Licencia | ★ | `pushed_at` | Señal |
+|---|---|---|---|---|---|
+| OpenMAIC | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | `42,491` | `2026-11-02` | Tsinghua. The sector's largest permissive agent platform |
+| book-to-skill | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 `MIT` | `36,787` | `2026-10-28` | Technical book → agent skill, one command |
+| moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | **`7,574`** | `2026-10-30` | 🟢 **First star figure this base has ever measured for it** — the contents API was `403` |
+| oppia | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` | `6,957` | `2026-11-02` | Permissive, pushed today. The most buildable large LMS-adjacent platform |
+| canvas-lms | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | `6,900` | 🔴 **`2026-04-30`** | **Six months quiet** — the only platform row not pushed this week |
+| cn-math-taxonomy | [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 `NOASSERTION` | `6,211` | `2026-11-02` | `1,644` knowledge points, `2,403` prereq edges. 🔴 `p615` byte-read it **`CC-BY-NC-4.0`** — NonCommercial |
+| echo-loop | [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` | `4,632` | `2026-11-02` | English listening/speaking trainer, spaced repetition |
+| penecho | [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 `AGPL-3.0` | `2,514` | `2026-11-02` | Handwriting canvas + AI, beyond the chat box |
+| learnhouse | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` | `2,441` | `2026-11-02` | Next-gen OSS learning platform |
+| PageLM | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | `2,060` | `2026-10-29` | Community NotebookLM for study |
+| classroomio | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 `AGPL-3.0` | `1,736` | `2026-11-02` | Customer-training platform |
+| sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `1,240` | `2026-11-02` | Apereo. 🟢 `ECL-2.0` proven buildable by `624-E`'s clause diff |
+| kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` | `2026-11-02` | **Offline-first.** The low-connectivity answer; `MIT` at `1,097 B` |
+| chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` | `1,020` | `2026-11-02` | Strong LATAM install base |
+| openeducat_erp | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 field `NOASSERTION` / 🟡 bytes `LGPL-3.0` | `903` | `2026-11-02` | Education ERP on Odoo. **Bytes win over the field** |
+| opencast | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` | `509` | `2026-11-02` | Lecture capture. Canonical after `apereo/opencast` died |
+| frametell | [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 🔴 `AGPL-3.0` | `460` | `2026-11-02` | Material → explainer video |
+| tsugi | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | `2026-11-02` | 🟢 **LTI framework.** The standards-based way into *any* LMS |
+| math-question-bank | [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) | 🔴 `AGPL-3.0` | `368` | `2026-11-02` | LaTeX + OCR + LLM parsing, localized |
+| scorm-again | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | `2026-11-02` | 🟢 **Modern SCORM runtime.** Legacy-courseware bridge |
+| freelingo | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 `AGPL-3.0` | `225` | `2026-11-02` | Self-hosted AI language learning |
+| iblai/lms | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` | `208` | `2026-11-02` | Skills intelligence, competency tracking. `ibl.ai` — the market map's agentic-LMS startup, **shipping `MIT`** |
+| elmsln | [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟡 `GPL-3.0` | `253` | `2026-08-14` | Penn State. Distributed course infrastructure |
+| pytogether | [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) | 🟢 `MIT` | `262` | `2026-10-21` | Browser-based collaborative Python classroom |
+
+### 🟢 The standards layer is the week's most useful *re-read*, even though both rows were already held
+
+🔵 `tsugi` (`Apache-2.0`) and `scorm-again` (`MIT`) are not new to this base, but they are the two rows that most
+change how an engagement should be wired, and both were pushed **today**:
+
+- 🟢 **`tsugi` speaks LTI 1.3 / Advantage.** An agent put behind Tsugi reaches Moodle, Canvas, Blackboard, Sakai,
+  D2L and Open edX *without a per-LMS plugin*. It converts "which LMS does the client run?" from a blocking
+  question into a configuration detail — and it is `Apache-2.0`, so it is buildable.
+- 🟢 **`scorm-again` runs SCORM 1.2 / 2004 and AICC** in the browser under `MIT`. Institutional clients have
+  decades of SCORM courseware; this is the bridge that lets an AI layer wrap existing content instead of
+  demanding re-authoring.
+
+> 🟢 **Carry:** the permissive supply in this sector is thin at the *application* layer and strong at the
+> *standards/integration* layer. That is the opposite of how this base has historically shelved it, and it favours
+> an integration-first engagement shape: `MIT`/`Apache-2.0` glue around a reciprocally-licensed platform the client
+> already runs, rather than a permissive platform replacement that does not exist.
+
+### 🔵 Instrument caveats for this shelf
+
+🔴 `search/repositories` returned **`NO-ROW` for `openedx/edx-platform`** (alive via `ls-remote`,
+`HEAD=f2fc446def69`, branch `master`, `AGPL-3.0` byte-read `p624`) — so **this channel cannot prove absence** and
+`edx-platform` is absent from the table above only as a channel artefact, not as a fact. 🔴 `gh api repos/{slug}`
+is gated per-repository here. 🟢 Licence column is the **platform field** unless marked "bytes"; where field and
+bytes disagree (`openeducat_erp`, `cn-math-taxonomy`), **bytes win**.
+
 ## 🆕 `p624` — `2026-11-02` — **the trending channel is re-measured with a qualifier no pass had added, and the result is that the English surface is *saturated*, not merely *unreachable***
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**

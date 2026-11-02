@@ -4,6 +4,176 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p625` — reads `2026-11-02` — **🔴 THE REGIONAL LEGS RETURNED `0` FACTS THIS BASE DID NOT ALREADY HOLD, AND IN `4` CASES THIS BASE HOLDS THE FACT AT **HIGHER PRECISION THAN THE DIGEST GAVE IT** — INCLUDING THE AMENDING REGULATION NUMBER NO SOURCE NAMED. 🔴 THE `NEEDS-PRIMARY` FLAG ON `Reg. (EU) 2026/1744` IS **UNDISCHARGEABLE FROM THIS SESSION**: `eur-lex`, `ec.europa.eu` AND `unesco.org` ALL FAIL TO RESOLVE. 🟢 SO THE PASS SPENT ITS REGIONAL BUDGET ON **PLACEMENT**, NOT COLLECTION: EVERY REGION BELOW CARRIES ITS STATUTORY CLOCK, ITS MEASURED ADOPTION GAP AND WHAT TO SELL AGAINST BOTH.**
+
+### 🔴 `625-J` — the regional legs are **saturated**, and the base is ahead of the digests
+
+🔵 Four regional searches run `2026-11-02` (`AI education {region} 2026 adoption regulation players`).
+🔴 **Zero facts returned that were not already shelved.** 🟢 And in four cases the digest was *less* precise:
+
+| Fact the digest gave | What this base already carried | Verdict |
+|---|---|---|
+| *"high-risk dates pushed to 2 Dec 2027 / 2 Aug 2028"* | 🟢 Same dates **plus the instrument**: `Regulation (EU) 2026/1744`, OJ **`24 July 2026`** | 🟢 **Base wins — no source named the regulation** |
+| *"Brazil, 65 % of internet users aged 9–17 use AI tools"* | 🟢 `65 %` **plus** `53 %` of school administrators **plus** only `22 %` of schools have guidelines (Cetic.br) | 🟢 Base wins |
+| *"Chile and Brazil, >50 % of teachers"* | 🟢 Uruguay **`75 %`** of public-school teachers, named to **Ceibal** | 🟢 Base wins |
+| *"UNESCO IESALC study of 200 HEIs in 19 countries"* | 🟢 Same, **plus** fielded **Aug–Oct 2025**, published **`1 September 2026`**, launched at Digital Learning Week | 🟢 Base wins |
+
+> 🔴 **Carry:** the web digests are a **lagging** indicator for this sector's regulatory facts. They are still worth
+> running as a control — a nil is only information if someone looked — but they should not be expected to *add*
+> regional intelligence at this base's current depth. Spend the budget on placement and on primary sources, which
+> brings us to the blocker.
+
+### 🔴 `625-K` — the primary-source channel is **closed in this environment**, and the flag should stop costing passes
+
+| Host | DNS | Consequence |
+|---|---|---|
+| `eur-lex.europa.eu` | 🔴 **NO-RESOLVE** | `Reg. (EU) 2026/1744` cannot be byte-read |
+| `digital-strategy.ec.europa.eu` | 🔴 **NO-RESOLVE** | Commission AI Act timeline page unreachable |
+| `unesco.org`, `iesalc.unesco.org` | 🔴 **NO-RESOLVE** | IESALC primary unreachable |
+| `github.com` | 🟢 RESOLVES | repository evidence is the *only* primary channel this base has |
+
+> 🔴 **Instruction, not a complaint:** the `NEEDS-PRIMARY` flag on the Digital Omnibus must **stay** and **no
+> further pass should spend budget attempting it** until `eur-lex.europa.eu` is allowed in the session's network
+> settings. 🟢 This pass adds one more *independent secondary* agreeing on `2 December 2027` / `2 August 2028`,
+> which is the ceiling achievable here. Secondary corroboration count is now `3`.
+
+### 🟢 Market size — carried, with the `p624` bracket intact
+
+| Segmento | 2026 | Horizonte | CAGR | Nota |
+|---|---|---|---|---|
+| AI in Education (global) | `$10.6B`–`$11.4B` | `$57.2B` (2030) | `25.9 %` | Consenso de varias casas |
+| AI in Education (low estimate) | `$3.7B` | — | — | 🔴 Definición más estrecha; el rango refleja desacuerdo de definición, no de crecimiento |
+| K-12 como segmento líder | `~34 %` del mercado | — | — | Segmento de mayor share |
+| 🔴 El outlier | — | — | 🔴 `41.5 %`–`42.8 %` | **Bracketed en `p624` y es el outlier** — no usar como cifra única |
+
+🔴 **El dato que más debería mover una propuesta, y es de fuente primaria citada en `p624`:** el
+**`OECD Digital Education Outlook 2026`** (`19 enero 2026`) midió que la AI generativa subió la *finalización de
+tareas* `48 %` mientras el *desempeño medido* **cayó `17 %`** al retirar la AI. 🟢 Esto convierte "medir aprendizaje,
+no uso" en requisito de diseño, y es el argumento más fuerte contra pilotos que reportan engagement como resultado.
+
+---
+
+## Opportunities by region
+
+🔵 Cada región abajo lleva: **reloj estatutario** (qué obliga y cuándo), **brecha medida** (adopción contra
+gobernanza) y **qué vender**. 🔴 Donde una región no tiene dato, lo dice.
+
+### North America
+
+🟢 **Reloj estatutario — legislación estatal, no federal, y es densa:**
+
+| Instrumento | Estado | Detalle |
+|---|---|---|
+| Proyectos sobre AI en educación `2026` | 🟢 **`134` bills en `31` estados** | Foco en investigación, transparencia y guardrails, no en mandatar adopción |
+| Guía estatal **+ política distrital obligatoria** | 🔴 **`4` estados ya con ley `2026`** | **Maryland, Idaho, Oklahoma, Virginia** — los más prescriptivos |
+| New York `A 9190` | 🟡 En trámite | Restringiría AI en aula a **9.º grado en adelante**, con excepciones de diagnóstico y educación especial |
+| `K-12 AI Literacy and Readiness Act of 2026` | 🟡 Avanzó en comité | House Education and Workforce |
+| `STUDENTS FIRST Act of 2026` | 🔵 Propuesta | Redactada por estudiantes de los `50` estados (Day of AI + AASA); rechaza **tanto** la prohibición **como** la adopción sin límites |
+| `AI Literacy Framework` (Dept. of Labor) | 🟢 `Febrero 2026` | Referencia federal de competencias |
+
+🔴 **Brecha medida — el uso va muy por delante de la política:**
+
+| Medida | Valor |
+|---|---|
+| Docentes de EE. UU. usando herramientas AI | 🟢 **`60 %`** (Gallup) |
+| Escuelas públicas con política formal de AI para estudiantes | 🔴 **La mayoría no tiene** (Child Trends + U.S. Dept. of Education) |
+| Instituciones de educación superior (Europa + NA) con guía hecha o en curso | 🟢 **`70 %`** (UNESCO) |
+
+🟢 **Qué vender:** (1) **cumplimiento distrital como producto** — `4` estados ya obligan política distrital y `31`
+legislan: un paquete de política + registro de decisiones + trazas auditables es repetible por distrito, y el
+comprador tiene fecha; (2) **migración desde Canvas** — el incumbente NA tiene su árbol OSS frío seis meses
+(`625-H`), con Open edX/Moodle + capa agéntica como destino; (3) **medición de aprendizaje, no de uso**, apoyada en
+el resultado OECD `48 %`/`−17 %`; (4) **alfabetización AI docente** alineada al framework del DoL.
+🔵 Señal de presupuesto: `$169M` en premios FIPSE del DoE incluyen uso responsable de AI; earmark de `$10M` a Khan
+Academy en Carolina del Norte (bajo escrutinio — **señal de que el dinero fluye y la gobernanza aún no**).
+
+### EMEA
+
+🟢 **Reloj estatutario — el más duro del mundo, y se movió:**
+
+| Obligación | Fecha | Estado |
+|---|---|---|
+| Entrada en aplicación / supervisión por AI Office y autoridades nacionales | 🟢 **`2 agosto 2026`** | **Vigente** |
+| **Alto riesgo**, Anexo III autónomo (incluye educación) | 🟡 **`2 diciembre 2027`** | 🔴 Movido desde `2 agosto 2026` por **`Reg. (EU) 2026/1744`** (Digital Omnibus, OJ `24 julio 2026`) — 🔴 `NEEDS-PRIMARY`, ver `625-K` |
+| Alto riesgo embebido en productos regulados | 🟡 **`2 agosto 2028`** | Misma norma |
+| **Transparencia** de chatbots | 🟢 **`agosto 2026`** | 🟢 **NO se movió — esto ya obliga hoy** |
+
+🔴 **Los cuatro disparadores de Anexo III en educación** — si el sistema hace esto, es alto riesgo:
+evaluar aprendices · asignarlos a programas · detectar conducta prohibida en exámenes · influir en el acceso a
+titulaciones. 🟢 Es decir: **grading automático, admisiones con scoring y proctoring** caen dentro; un tutor que no
+califica ni decide acceso, no.
+
+🔵 **Resto de EMEA:** 🟡 **Reino Unido** — enfoque ligero, guía sectorial vía reguladores existentes, sin ley AI.
+🟢 **EAU** — primer país del mundo con **curriculum AI nacional obligatorio en K-12** (decisión de Gabinete,
+`mayo 2025`); en Dubái, **KHDA** emitió guía explícita a colegios privados.
+
+🟢 **Qué vender:** (1) **programa de conformidad con fecha `2 diciembre 2027`** — clasificación de riesgo,
+documentación técnica, supervisión humana, FRIA: `2026-27` es exactamente la ventana de preparación y el cliente
+tiene deadline legal, que es el mejor comprador que existe; (2) 🔴 **y lo urgente primero: transparencia de
+chatbots ya obliga desde agosto 2026** — hay un entregable vendible *este trimestre*, no en 2027; (3) **separar
+el sistema en componentes de alto y bajo riesgo** para que el tutor no herede las obligaciones del grader — es
+arquitectura, y es facturable; (4) **Golfo**: implementación de curriculum AI nacional, con EAU como referencia.
+
+### APAC
+
+🟢 **Reloj estatutario — divergente por país, y educación aparece nombrada como alto riesgo:**
+
+| País | Instrumento | Estado |
+|---|---|---|
+| **Corea del Sur** | `AI Basic Act` | 🟢 **Vigente `22 enero 2026`**: transparencia, evaluación de riesgo, supervisión humana, documentación para sistemas de alto impacto. 🟡 Periodo de gracia orientado a guía, no sanción, durante `2026` |
+| **Vietnam** | Ley AI | 🟢 **Vigente `1 marzo 2026`**, marco por riesgo. 🔴 **Educación nombrada entre los sectores de alto riesgo** (evaluación automatizada y conducta) |
+| **China** | Marco más completo de la región | 🟢 Registro obligatorio + **etiquetado de contenido** (desde `2025-09-01`) |
+| **Australia** | Sin ley AI | 🟡 Propuesta `2024` de guardrails obligatorios cubre educación; **TEQSA** ya exige a proveedores planes de riesgo de AI generativa |
+| **Singapur** | Voluntario | `AI Verify` y toolkits |
+| **Japón** | Voluntario | Gobernanza ligera, pro-innovación |
+
+🔴 **Brecha medida — y el dato más instructivo del mundo está aquí, porque es un mandato que se retiró:**
+el plan de **libros de texto AI obligatorios de Seúl** se estancó con adopción **por debajo del `30 %`** a marzo, y
+la Asamblea Nacional **les quitó el estatus oficial por ley**. 🟢 Adopción liderada por **China, India y Japón**.
+
+🟢 **Qué vender:** (1) **conformidad multi-jurisdicción como arquitectura** — un cliente APAC regional enfrenta
+`6` regímenes distintos: nodos de política configurables por jurisdicción, no un producto por país; (2)
+**etiquetado de procedencia** — China lo exige desde `2025-09-01`, India desde `2026-02-20` y la UE desde
+`2026-08-02`: 🟢 **tres tradiciones legales no relacionadas convergen en etiquetado, que lo vuelve el objetivo de
+build más portable del sector**; (3) **spillover del EU AI Act** sobre vendors APAC de edtech que exportan a Europa;
+(4) 🔴 **la lección de Seúl como argumento de venta**: un mandato sin adopción docente se revierte — lo que se
+compra no es el despliegue, es la adopción, y eso es change management medible.
+
+### LATAM
+
+🟢 **Brecha medida — la más documentada y la más grande del mundo:**
+
+| Medida | Valor | Fuente |
+|---|---|---|
+| Instituciones de ES usando AI en al menos un área | 🟢 **`87 %`** | UNESCO IESALC (`200` IES, `19` países; campo ago–oct 2025, publicado `1 sep 2026`) |
+| Las mismas con **algún marco formal** | 🔴 **`26 %`** | idem |
+| Docentes de escuela pública usando AI — Uruguay | 🟢 **`75 %`** | Ceibal |
+| Usuarios de internet `9-17` usando AI — Brasil | 🟢 **`65 %`** | Cetic.br `2026` |
+| Administradores escolares usando AI — Brasil | 🟢 **`53 %`** | Cetic.br |
+| Escuelas con directrices sobre AI — Brasil | 🔴 **`22 %`** | Cetic.br |
+| Instituciones de la región con directrices formales | 🔴 **`<10 %`** | UNESCO LAC |
+
+🔴 **Regulación — fragmentada, no ausente:** un estudio `2026` de la **Universidad de los Andes** contó
+**`716` instrumentos regulatorios de AI** en `23` países y territorios, **más del `80 %` iniciados desde 2023**.
+🔴 Pero lo específico de educación está prácticamente ausente: la brecha es **institucional**, no legislativa.
+
+🟢 **Players, y son inusualmente institucionales:** UNESCO **IESALC**; el **Observatorio de AI en Educación para
+América Latina y el Caribe** (lanzado `14 abril 2026`, evento en CEPAL/ECLAC, Santiago); **Ceibal** (Uruguay);
+**Cetic.br** (Brasil); **CENIA** (Chile); **Tecnológico de Monterrey** (acuerdo con UNESCO, `marzo 2026`);
+**Universidad de los Andes**; **Fundación Santillana**; **ProFuturo**; **CEPAL**; **OCDE**.
+
+🟢 **Qué vender:** (1) 🟢 **la brecha `87 %`/`26 %` *es* el engagement** — la adopción ya ocurrió de abajo hacia
+arriba, sin gobernanza: estrategia institucional de AI, marco de uso, trazabilidad y formación docente, a escala
+de sistema universitario, con el comprador ya convencido de la necesidad; (2) **vía multilateral** — UNESCO IESALC,
+el Observatorio LAC y CEPAL son canal de entrada a ministerios, no sólo a instituciones; (3) **Brasil como mercado
+más medido** (`65 %`/`53 %` de uso contra `22 %` de directrices) y **Uruguay como referencia de implementación**
+(Ceibal, `75 %`); (4) **Kolibri (`MIT`, offline-first)** donde la conectividad es la restricción real.
+
+🔴 **Brecha declarada, sin cerrar:** LATAM devolvió **`0` direcciones de repositorio nuevas** este pass, y **no hay
+plataforma fundacional permisiva de origen LATAM** en esta base. `chamilo` tiene la base instalada pero es
+`GPL-3.0` y de origen europeo. 🔵 El déficit es de **supply de repositorios**, no de inteligencia de mercado —
+exactamente al revés de las otras tres regiones.
+
 ## 🆕 `p624` — reads `2026-11-02` — **🟢 THE MARKET-SIZING GAP `p623` DECLARED IS **NARROWED BY A NAMED PRIMARY SOURCE** — THE `OECD Digital Education Outlook 2026`, PUBLISHED `19 JANUARY 2026` — AND ITS HEADLINE RESULT IS THAT GENERATIVE AI RAISED TASK COMPLETION `48 %` WHILE MEASURED PERFORMANCE **FELL `17 %`** ONCE THE AI WAS REMOVED. 🔴 THE SHELF'S `41.5 %` CAGR IS NOW BRACKETED AND IS THE OUTLIER. 🟢 AND THE CAPITAL MAP INVERTS THE MARKET MAP: APAC FORMS THE COMPANIES, NORTH AMERICA TAKES `62 %` OF THE MONEY.**
 
 ### 🟢 `624-K` — a primary source is finally **named**, and it changes what this base should sell
@@ -79,7 +249,7 @@ magnitude and is not carried.
 > of Q1 venture value. 🟢 For a studio that means APAC engagements are *build* engagements and NA engagements
 > are *fund-and-scale* engagements.
 
-## Opportunities by region
+## Opportunities by region — `p624` (archived)
 
 ### North America
 

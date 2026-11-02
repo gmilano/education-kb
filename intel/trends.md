@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p625` — reads `2026-11-02` — **THE SECTOR'S PERMISSIVE SUPPLY HAS SETTLED AT THE *STANDARDS* LAYER, NOT THE PLATFORM LAYER — WHICH CHANGES THE ENGAGEMENT SHAPE — AND THE TRANSPARENCY CLOCK IS THE ONLY EU OBLIGATION ACTUALLY RUNNING TODAY**
+
+### 🟢 `T625-1` — The permissive supply is integration glue, and every large platform is reciprocal
+
+🟢 Measured on this pass's own shelf re-read (`625-H`, `repos/foundations.md`): **every** education platform large
+enough for an enterprise engagement carries a reciprocal grant — Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas
+`AGPL-3.0`, Chamilo `GPL-3.0`, OpenEduCat `LGPL-3.0`, Sakai/Opencast `ECL-2.0`. 🟢 The `MIT`/`Apache-2.0` rows are
+`oppia`, `kolibri`, `tsugi`, `scorm-again`, `iblai/lms`.
+
+🔴 **Consequence:** the instinct to "start from a permissive platform" has no object in this sector. 🟢 The viable
+pattern is permissive **glue** across a published standard (LTI 1.3, SCORM, xAPI) against a reciprocal platform the
+client already runs — which keeps the agent layer's IP separable and skips the platform's release cycle.
+
+**Señal:** `tsugi` (`Apache-2.0`) and `scorm-again` (`MIT`) both pushed `2026-11-02`; the standards layer is alive.
+
+### 🔴 `T625-2` — EU: the deadline everyone quotes is 2027, and the one that actually bites is already past
+
+🔴 The sector's attention is on `2 December 2027` (Annex III high-risk, moved by `Reg. (EU) 2026/1744`).
+🟢 **But chatbot transparency obligations did *not* move and have applied since `2 August 2026`.**
+
+🟢 **So there is a deliverable this quarter, not in two years:** disclosure, labelling and user-facing AI
+notification on every student-facing conversational surface. 🔵 Firms selling only the 2027 conformity programme
+are leaving the immediately-obligated work on the table.
+
+**Señal:** `3` independent secondary sources now agree on the `2027`/`2028` split; 🔴 primary text still unread
+(`eur-lex` does not resolve from this session — `625-K`).
+
+### 🔴 `T625-3` — Measure learning, not usage: the OECD result that invalidates most pilot metrics
+
+🟢 `OECD Digital Education Outlook 2026` (`19 January 2026`): generative AI raised **task completion `+48 %`**
+while **measured performance fell `17 %`** once the AI was withdrawn.
+
+🔴 **This invalidates the standard pilot scorecard.** Engagement, completion and time-on-task all move the *wrong*
+way relative to learning. 🟢 A credible deployment needs **AI-withdrawn assessment** in its measurement design —
+test without the tool to see what was learned with it. 🔵 This is also the strongest available counter to a
+procurement process that treats usage dashboards as evidence.
+
+### 🟢 `T625-4` — Provenance labelling is the most region-portable build target in the sector
+
+🟢 Three unrelated legal traditions converge on the same obligation: **China** since `2025-09-01`, **India** from
+`2026-02-20`, the **EU** since `2026-08-02`. 🟢 Build content labelling and provenance tracking **once** and it
+satisfies three regimes. 🔵 For a global client this is the rare compliance feature with no per-region rebuild.
+
+### 🔴 `T625-5` — Adoption everywhere outruns governance, and the gap size is now the sales figure
+
+| Region | Adoption | Governance | Gap |
+|---|---|---|---|
+| LATAM (higher ed) | 🟢 `87 %` | 🔴 `26 %` | **`61` pts** |
+| Brazil (schools) | 🟢 `65 %` students / `53 %` admins | 🔴 `22 %` have guidelines | **`~35` pts** |
+| North America | 🟢 `60 %` of teachers | 🔴 most schools have no student policy | large, unquantified |
+| Europe + NA (higher ed) | — | 🟢 `70 %` have or are building guidance | 🟢 **smallest gap** |
+
+🟢 **The gap is the engagement in every region except European/North American higher ed**, which has largely
+closed it — so there the sale is *implementation and conformity*, not strategy. 🔵 Pricing and pitch should differ
+by region accordingly; the same deck does not work in Bogotá and in Helsinki.
+
+### 🔴 `T625-6` — A mandate without teacher adoption gets reversed by statute
+
+🟢 Seoul's compulsory AI-textbook programme: adoption **below `30 %`** by March, and the National Assembly then
+**removed the textbooks' official status by law**. 🔴 The strongest possible mandate — national, statutory,
+funded — lost to non-adoption.
+
+🟢 **Carry:** what a client is buying is not deployment, it is **adoption**. Teacher enablement, change management
+and measured uptake are the deliverable; the platform is the easy part. 🔵 This is the single best-evidenced
+argument in this base against technology-first education programmes.
+
+### 🔴 `T625-7` — Education discovery is saturated; the trend to watch is *consolidation*, not novelty
+
+🔴 `28 of 28` addresses from two independent channels already held (`625-B`). 🔵 Over many passes this base's
+new-name yield has fallen to zero while the *existing* rows grow fast — DeepTutor `+31,823★` since `p54`.
+
+🟢 **Reading:** the sector has passed its proliferation phase. Attention, stars and contribution are concentrating
+into a handful of winners (DeepTutor, OpenMAIC, book-to-skill) rather than spawning new entrants. 🟢 For a studio
+this is good news: the shortlist is stable, so depth on `5` repos beats breadth on `50`.
+🔴 **Caveat on the inference:** saturation is measured against *this base's reach and channels*, which have proven
+false-negative shapes (`625-F`). It is a statement about discoverable supply, not proof that nothing new exists.
+
+### 🔴 `T625-8` — The incumbent's open-source tree is cooling while its commercial product ships AI
+
+🔴 `instructure/canvas-lms`: last push **`2026-04-30`**, six months, against every other platform pushed this week.
+🟢 Canvas is North America's incumbent LMS. 🟢 For clients on Canvas the open-source exit is narrowing, which
+strengthens the Open edX / Moodle + agent-layer migration case and adds urgency to it.
+🔴 **Honest caveat:** a cold `pushed_at` is not abandonment — development may be unpublished. Re-measure before
+putting it in a proposal.
+
 ## 🆕 `p624` — `2026-11-02` — **trends, each with the evidence that would refute it**
 
 ### 🔴 `T1` — Generative AI raises **output** and lowers **learning**, and this is the single fact that should pick the product

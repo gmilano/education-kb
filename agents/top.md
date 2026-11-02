@@ -4,6 +4,219 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p625` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PUSH BLOCK THAT STOPPED `p76`'s TECHNOLOGY RUN IS *FIXED*, NOT WORKED AROUND: THIS SHELF IS WRITTEN TO ITS OWN REMOTE FOR THE FIRST TIME THIS CYCLE. 🔴 AND THE PASS'S LOAD-BEARING RESULT IS A **SATURATION MEASUREMENT**, NOT A FIND: TWO INDEPENDENT DISCOVERY CHANNELS RETURNED `28` ADDRESSES AND **`28 of 28` WERE ALREADY HELD** (`100 %`) — `7 of 7` FROM THE WEB LEGS, `21 of 21` FROM `search/repositories`. 🟢 `p623`'s DEAD-CITATION CENSUS IS **INDEPENDENTLY CORROBORATED `75 of 75`** BY A DIFFERENT INSTRUMENT, AND ALL `432` OF ITS LIVE CITATIONS AUDITED: `405` ARE APPEND-ONLY HISTORY, `27` ARE ON SELL SHELVES AND **ALL `27` WERE ALREADY FLAGGED OR RENAME-RESOLVED** — ZERO DEAD URLS ARE PUBLISHED AS LIVE RECOMMENDATIONS. 🔴 THE `repo:`-QUALIFIER METADATA CHANNEL RETURNS **NO-ROW FOR `openedx/edx-platform`**, ONE OF THE SECTOR'S TWO CANONICAL LMS PLATFORMS, WHICH `ls-remote` PROVES ALIVE. 🔴 AND NO PRIMARY-SOURCE HOST RESOLVES IN THIS SESSION, SO THE `Reg. (EU) 2026/1744` `NEEDS-PRIMARY` FLAG **CANNOT** BE DISCHARGED FROM HERE. NINE REGISTERED (`625-A`…`625-I`).**
+
+### 🟢 `625-A` — read this first: the push block is gone, and it was an *authorization* fact, not a network fact
+
+🔵 `rotation.json`'s `last_status` for the previous cycle ends:
+*"local-commit(b46d379)-technology-kb-push-BLOCKED-access-restriction(session-scoped-to-globant-kb-only)."*
+🔵 The same block was recorded here from `p54`, lifted at `p609`, and recurred.
+
+🔴 The failing mode is specific and worth writing down, because it looks like a network failure and is not:
+
+```
+remote: access denied by the git proxy: gmilano/education-kb is not in this
+session's authorized repository set, so the proxy will not inject a credential
+for it. To fix, add the repository to the session's sources.
+fatal: unable to access '...': The requested URL returned error: 403
+```
+
+🟢 **The fix is one call, and `clone` succeeding is what disguises the problem:** the proxy serves *read* for a
+public repo with no attachment at all, so `git clone` returns `0` and only `git push` reveals that no credential
+exists. Attaching with `access:"push"` cleared it; `git push --dry-run` then returned `Everything up-to-date`
+against a clone that had been made *before* the attachment, so **the existing clone did not need to be re-made** —
+the credential is injected at the proxy, not baked into the clone.
+
+> 🟢 **Carry:** a `403` on push with `clone` working is an authorization fact. Attach with push access and reuse
+> the clone you already have. Do not re-clone, and do not read it as an outbound-network problem.
+
+### 🔴 `625-B` — the pass's real result: **discovery saturation**, measured across two channels with a denominator
+
+🔵 This base has reported a "global nil" on new names for dozens of passes. 🔴 A nil without a denominator is
+indistinguishable from not having looked. This pass gives it one, on both channels it owns.
+
+**Channel 1 — the eight mandated web legs** (`4` global + `4` regional, run `2026-11-02`):
+
+| Leg | Repository names returned | Already held | New |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `2` | `2` | 🔴 `0` |
+| `github trending education AI 2026` | `4` | `4` | 🔴 `0` |
+| `open source platform education ERP CRM MIT Apache` | `2` | `2` | 🔴 `0` |
+| `AI education industry trends 2026` | `0` | — | 🔴 `0` |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 …` | `0` | — | 🔴 `0` |
+| **Total** | **`7`** | **`7`** | 🔴 **`0` (`100 %` held)** |
+
+**Channel 2 — `search/repositories`**, in the qualifier shape `623-B` proved is the only one that works:
+
+| Query | `total_count` | Rows read | Already held | New |
+|---|---|---|---|---|
+| `topic:education topic:ai stars:>150 pushed:>2026-08-01` | `22` | `20` | `20` | 🔴 `0` |
+| `tutor stars:>300 pushed:>2026-09-01` | `100` | `20` | `20` | 🔴 `0` |
+| `topic:edtech stars:>100 pushed:>2026-08-01` | `32` | `20` | `20` | 🔴 `0` |
+| **Distinct education-relevant addresses adjudicated** | — | **`21`** | **`21`** | 🔴 **`0` (`100 %` held)** |
+
+🔴 **`28 of 28` addresses from two unrelated channels were already on this shelf.** Every one checked by substring
+against all `*.md` in the repository, and every one found live on a shelf, not only in the archive.
+
+> 🔴 **Carry, and it is an instruction to the operator, not a lament:** education discovery is **saturated** at this
+> base's current reach. The marginal value of a further discovery pass is near zero. Passes should be spent on
+> **maintenance** (metric refresh, citation decay, grant re-reads) and on **synthesis** (region placement, compose
+> patterns), which is where `p625` spent its remaining budget. A discovery leg should still run — a nil is only
+> informative if someone is looking — but it should be budgeted as a *control*, not as the pass's purpose.
+
+### 🔴 `625-C` — free-text conjunctivity independently reproduced, with the cost stated
+
+🔵 `623-B` found Channel B's free text is **conjunctive**. 🟢 Reproduced here from scratch, and the contrast is stark:
+
+| Query shape | `total_count` |
+|---|---|
+| `education AI agent tutor stars:>200 pushed:>2026-09-01` — `4` free-text terms | 🔴 **`0`** |
+| `topic:education topic:ai stars:>150 pushed:>2026-08-01` — qualifiers only | 🟢 `22` |
+| `tutor stars:>300 pushed:>2026-09-01` — **`1`** free-text term | 🟢 `100` |
+
+🔴 Four plausible terms return **nothing**. A pass that ran only the four-term query would have published a
+discovery nil that was an artefact of its own query, exactly as `p600` discovered after twenty-nine passes.
+
+> 🟢 **Carry:** never put more than **one** free-text term in this channel. Use `topic:` and numeric qualifiers.
+
+### 🟢 `625-D` — `p623`'s dead-citation census corroborated `75 of 75` by a **second instrument**
+
+🔵 `p623` probed `3,974` addresses and classified `75` as `E-genuine-dead`. 🔵 `p621`/`p622` had already proven the
+run prompt's prescribed `curl -sI` is **403-blind in both directions** here, so a census is only as good as its channel.
+
+🟢 **Re-probed all `75` with `git ls-remote`, an instrument `p623` did not use:**
+
+| Result | Count |
+|---|---|
+| `ABSENT` (no repository of that name) | 🟢 **`75 of 75`** |
+| `ALIVE` — i.e. `p623` was wrong | 🟢 **`0`** |
+
+🟢 **And the instrument discriminates**, which is the part `curl -sI` could never do:
+
+```
+ALIVE  OPTIMETA/PAIDEIA                        HEAD=e31672fd0330
+ALIVE  krayin/laravel-crm                      HEAD=5eecae04634a
+ABSENT OPTIMETA/this-repo-does-not-exist-control-xyz
+```
+
+🔵 `apereo/opencast` is `ABSENT` while `opencast/opencast` is alive at `509★` — the Apereo org genuinely no longer
+hosts it, so the rename `p623` recorded at line `397` is correct.
+
+### 🟢 `625-E` — the `432` live citations audited, and the answer is that **nothing is mis-sold**
+
+🔴 All `75` dead addresses are still *cited* in live files — `432` occurrences. 🟢 That sounds like `432` defects.
+It is not, and the distinction is the finding:
+
+| Where | Occurrences | Verdict |
+|---|---|---|
+| `repos/trending.md` | `222` | 🟢 **Legitimate.** Append-only trend history. A repo dying in November does not falsify the record that it trended in October. Deleting these would destroy the trend the file exists to record. |
+| `agents/trending.md` | `183` | 🟢 **Legitimate**, same reason |
+| `agents/top.md` | `25` | 🟢 **All flagged or rename-resolved** — see below |
+| `repos/foundations.md` | `1` | 🟢 Flagged 🔴 at line `193` |
+| `intel/trends.md` | `1` | 🟢 Flagged at line `179` (forks `2016`–`2022`) |
+
+🟢 **Every one of the `27` sell-shelf occurrences was already correct.** Five are rename rows pairing the dead
+address with its **live canonical successor**, all re-verified today:
+
+| Dead address | Live canonical | Measured `2026-11-02` |
+|---|---|---|
+| `apereo/opencast` | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `509★`, `ECL-2.0`, branch `develop` |
+| `GegoK12/gegok12`, `gegok12/gegok12` | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 alive |
+| `fh-yarbouh/oak-curriculum-ontology` | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 alive |
+| `dev-cucei-itrans/siiau-api-client` | [`siiau-dev/siiau-api-client`](https://github.com/siiau-dev/siiau-api-client) | 🟢 alive |
+| `plastic-labs/bloom` | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟡 `GPL-3.0`, same owner |
+
+The remaining `22` are census rows, refusal rows, or `ABSENT_OR_PRIVATE` flags — dead addresses recorded **as dead**.
+
+> 🟢 **Carry:** this base publishes **zero** dead URLs as live recommendations. The quality bar *"a 404 is not a
+> finding"* is met. The `432` figure is a citation count, not a defect count, and a future pass that re-measures it
+> should not read it as `432` repairs owed. **No repair was needed and none was made.**
+
+### 🔴 `625-F` — the `repo:` metadata channel returns **NO-ROW for `openedx/edx-platform`**
+
+🔵 `p620` promoted `search/repositories` with a `repo:` qualifier to a per-repository metadata read. 🔵 `605-C`
+recorded that channel has false negatives in `5 of 400`. 🔴 Here is the expensive instance:
+
+| Slug | `repo:` qualifier channel | `git ls-remote` |
+|---|---|---|
+| `moodle/moodle` | 🟢 `7,574★`, `GPL-3.0`, `main` | 🟢 alive |
+| `sakaiproject/sakai` | 🟢 `1,240★`, `ECL-2.0`, `master` | 🟢 alive |
+| **`openedx/edx-platform`** | 🔴 **`NO-ROW`** | 🟢 **ALIVE**, `HEAD=f2fc446def69`, branch **`master`** |
+
+🔴 **`edx-platform` is one of the two canonical LMS platforms in this sector** and the channel silently returns
+nothing for it. A pass trusting this channel to prove absence would have shelved the sector's MOOC-grade platform
+as gone. 🟢 `p624`'s tree enumeration read its grant as `AGPL-3.0` (`35,136 B`) the same day, so the tree channel
+and `ls-remote` agree and the metadata channel is the outlier.
+
+🔴 **Also note `gh api repos/{owner}/{repo}` is gated per-repository in this session** —
+`"GitHub access to this repository is not enabled for this session"` for `20 of 20` slugs tried — while
+`search/repositories` answers globally. 🟢 So the working metadata route is the `repo:` **qualifier**, with this
+false-negative caveat; the direct endpoint is not available at all.
+
+> 🟢 **Instrument ladder, as it now stands.** Existence: `git ls-remote` **only** (discriminating control proven).
+> Grant: tree enumeration, byte-read (`p624`). Metrics: `search/repositories` with `repo:`, **cannot prove absence**.
+> `curl -sI`: useless here. `gh api repos/{slug}`: gated.
+
+### 🔴 `625-G` — the `NEEDS-PRIMARY` flag on `Reg. (EU) 2026/1744` **cannot be discharged from this session**
+
+🔵 `intel/market.md` carries the Digital Omnibus postponement flagged `NEEDS-PRIMARY` against the Official Journal
+text, and has asked for a primary read for several passes. 🟢 This pass tried and the answer is structural:
+
+| Host | DNS |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 **NO-RESOLVE** |
+| `digital-strategy.ec.europa.eu` | 🔴 **NO-RESOLVE** |
+| `unesco.org`, `iesalc.unesco.org` | 🔴 **NO-RESOLVE** |
+| `github.com` | 🟢 RESOLVES |
+
+🔴 No primary legal or multilateral source resolves. Only GitHub and the search tooling are reachable.
+
+> 🔴 **Carry, to stop the spend:** `Reg. (EU) 2026/1744` and the UNESCO IESALC primary **cannot** be byte-read from
+> this environment at any budget. The flag should stay `NEEDS-PRIMARY` and **no further pass should attempt it**
+> until `eur-lex.europa.eu` is allowed in the session's network settings. Secondary corroboration is the ceiling here,
+> and this pass adds one independent secondary agreeing on `2 December 2027` / `2 August 2028`.
+
+### 🟢 `625-H` — metric refresh on the headline rows, and the shelf is **fresh**
+
+🟢 Measured `2026-11-02`. Drift against what this shelf already carried is **negligible**, which is a good result:
+
+| Repo | ★ measured today | ★ on shelf | Drift | Grant (field) | `pushed_at` |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `54,295` | `54,272` | `+23` | `Apache-2.0` | `2026-10-31` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `42,491` | `42,490` | `+1` | `MIT` | `2026-11-02` |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 `36,787` | — | — | `MIT` | `2026-10-28` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `7,574` | 🔴 was `403`-blocked | **new figure** | `GPL-3.0` | `2026-10-30` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `6,957` | — | — | `Apache-2.0` | `2026-11-02` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 `6,900` | — | — | `AGPL-3.0` | 🔴 **`2026-04-30`** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `1,240` | — | — | `ECL-2.0` | `2026-11-02` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `1,166` | — | — | `MIT` | `2026-11-02` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟢 `1,020` | — | — | `GPL-3.0` | `2026-11-02` |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟢 `942` | — | — | 🔴 `NOASSERTION` | `2026-10-22` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 `903` | — | — | 🔴 `NOASSERTION` *(bytes say `LGPL-3.0`)* | `2026-11-02` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `509` | — | — | `ECL-2.0` | `2026-11-02` |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `377` | — | — | `Apache-2.0` | `2026-11-02` |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `362` | — | — | `MIT` | `2026-11-02` |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `330` | — | — | `Apache-2.0` | `2026-11-02` |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `208` | — | — | `MIT` | `2026-11-02` |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `161` | — | — | `MIT` | `2026-11-02` |
+
+🔴 **One genuine new signal in that table:** `instructure/canvas-lms` was last pushed **`2026-04-30`** — six months
+quiet, against every other platform row pushed today. Canvas's *open-source* repository is going cold while the
+commercial product ships AI. That is a migration argument, and it is measured, not asserted.
+
+🔴 **And `openeducat_erp` re-confirms the `p611`/`p621` class:** the platform field says `NOASSERTION`; `p624`'s byte
+read says `GNU LESSER GENERAL PUBLIC LICENSE v3` at `8,241 B`. 🟢 **Bytes win.** Field `NOASSERTION` means
+*the field does not know*, never *there is no grant*.
+
+### 🔴 `625-I` — what this pass did **not** do, stated so it is not mistaken for coverage
+
+- 🔴 **No new agent row was promoted**, because `28 of 28` candidates were already held. Fewer real rows beat padding.
+- 🔴 **No grant was re-read from bytes**; `p624` byte-read `15 of 15` the same day and drift in one day is not credible.
+- 🔴 **LATAM returned `0` new repository addresses** this pass. The regional *intel* is rich (see `intel/market.md`);
+  the regional *repository supply* remains the standing gap this base has recorded for many passes.
+- 🔴 **No gate was run.** The instrument-execution denial recorded at `p617`/`p618` was not retested, so **this
+  commit is not gate-verified and says so.**
+
 ## 🆕 `p624` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE LICENCE LADDER IS RETIRED AND REPLACED BY *TREE ENUMERATION*: `15 of 15` GRANTS RESOLVED WITH **ZERO GUESSES**, INCLUDING THE `COPYING.txt` THAT COST `p623` THIRTEEN RUNGS. 🟢 AND ENUMERATION CAN **PROVE ABSENCE**, WHICH `curl -sI` NEVER COULD — `623-F`'s DANGLE IS SETTLED AGAINST ALL `1,345` TRACKED PATHS AND DOWNGRADED TO COSMETIC. 🔴 BYTE-SIZE LICENCE BANDS ARE **REFUTED**: `AGPL-3.0` AND `GPL-3.0` SIZES **INTERLEAVE**, AND `ECL-2.0` SITS **`3` BYTES** FROM `Apache-2.0`. 🟢 THE `ECL-2.0 ÷ Apache-2.0` CLAUSE DIFF `p623` DECLARED OWED IS **RUN ON BYTES**: `78` WORDS ADDED, `9` REMOVED, **NO OBLIGATION ADDED** — `ECL-2.0` STAYS BUILDABLE. FOURTEEN REGISTERED (`624-A`…`624-N`).**
 
 ### 🟢 `624-A` — read this first: the ladder was the wrong instrument, and the right one **enumerates**

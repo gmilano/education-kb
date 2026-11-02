@@ -4,6 +4,178 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p625` — reads `2026-11-02` — **TWO NEW PATTERNS, BOTH FORCED BY THIS PASS'S OWN MEASUREMENTS: `P625-1` WIRES THE AGENT LAYER IN OVER **LTI**, BECAUSE EVERY LARGE PLATFORM IN THIS SECTOR IS RECIPROCALLY LICENSED; `P625-2` PARTITIONS THE STACK ON THE **ANNEX III TRIGGER LINE**, BECAUSE THE TRANSPARENCY CLOCK IS ALREADY RUNNING AND THE HIGH-RISK CLOCK IS NOT**
+
+---
+
+## `P625-1` — LMS-agnostic agentic tutoring over LTI 1.3 (the licence-safe wiring)
+
+**Tiempo**: `4-6` sem para el puente + `1` sem por LMS adicional (configuración, no desarrollo)
+**Licencias**: 🟢 `Apache-2.0` (Tsugi) + 🟢 `Apache-2.0` (DeepTutor) + 🟢 `MIT` (scorm-again) — **todo permisivo**
+**Plataforma del cliente**: sin tocar. Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas `AGPL-3.0`, Sakai `ECL-2.0`
+
+### Por qué así, y no con un plugin
+
+🔴 `625-H` midió que **toda** plataforma grande del sector es recíproca, y `AGPL-3.0` (Open edX, Canvas) alcanza el
+**uso en red**. 🔴 Un plugin dentro del árbol de Moodle, o un fork de Open edX, arrastra la capa de agentes a obra
+derivada. 🟢 LTI 1.3 es un **estándar publicado sobre un límite de red**: la IP de la capa de agentes queda limpia
+y permisiva, y una sola integración cubre el parque instalado completo.
+
+### Componentes — todos verificados `2026-11-02`
+
+| Rol | Repo | Licencia | ★ |
+|---|---|---|---|
+| Puente LTI 1.3 / Advantage | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` |
+| Agente tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `54,295` |
+| Alternativa / segundo tutor | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | `42,491` |
+| Courseware heredado | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` |
+| Competencias / skills | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` | `208` |
+| Entrega offline | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` |
+
+### Wiring
+
+```
+[Moodle | Open edX | Canvas | Sakai | Chamilo]   ← recíproco, NO se forkea
+            │  LTI 1.3 Resource Link launch (OIDC + JWT firmado)
+            ▼
+   ┌──────────────────────────────────────────────┐
+   │ Tsugi (Apache-2.0) — LTI tool provider       │
+   │  · valida el JWT del launch                  │
+   │  · resuelve contexto: curso, rol, usuario    │
+   │  · AGS → devuelve notas al gradebook         │
+   │  · NRPS → roster sin integración por LMS     │
+   └───────────────┬──────────────────────────────┘
+                   ▼  (límite de red + estándar publicado)
+   ┌──────────────────────────────────────────────┐
+   │ Capa Globant (MIT / Apache-2.0)              │
+   │  · DeepTutor: tutoría con memoria persistente│
+   │  · scorm-again: envuelve SCORM existente     │
+   │  · iblai/lms: mapa de competencias           │
+   │  · xAPI/Caliper → telemetría de aprendizaje  │
+   └──────────────────────────────────────────────┘
+```
+
+### El launch, concreto
+
+```python
+# tutor_tool/lti_launch.py — el tool provider que Tsugi publica al LMS
+from tsugi import Tsugi                     # Apache-2.0
+from deeptutor import TutorSession          # Apache-2.0
+
+tsugi = Tsugi()                             # valida OIDC + JWT del launch
+
+def launch():
+    ctx = tsugi.require_context()           # curso, usuario, rol — firmado por el LMS
+    # El perfil del estudiante es NUESTRO, no del LMS: sobrevive al cambio de plataforma
+    session = TutorSession(
+        learner_id = ctx.user.stable_id,     # pseudónimo del LMS, no PII
+        course     = ctx.context.label,
+        locale     = ctx.launch_locale,      # es-419 / pt-BR / en-US
+        mode       = "socratic",             # NO "grading" — ver P625-2
+    )
+    return session.render()
+
+def on_mastery(session, score):
+    # AGS: devolver al gradebook del LMS sin plugin específico
+    if tsugi.outcomes_available():
+        tsugi.grade_send(score, comment=session.evidence_url())
+```
+
+🟢 **Lo que esto compra:** "¿qué LMS usa el cliente?" pasa de pregunta bloqueante a línea de configuración. El
+mismo tool corre en Moodle y en Canvas. 🟢 Y el perfil del estudiante vive en la capa Globant, así que una
+migración posterior de LMS **no pierde el modelo del estudiante** — que es el activo real.
+
+---
+
+## `P625-2` — Partir el stack sobre la línea de disparo del Anexo III (conformidad UE con fechas reales)
+
+**Tiempo**: `2-3` sem (transparencia, **ya obligatoria**) + `10-14` sem (programa alto riesgo hacia `2027-12-02`)
+**Driver legal**: EU AI Act `Reg. 2024/1689`; alto riesgo movido a **`2 dic 2027`** por `Reg. (EU) 2026/1744`
+🔴 **Pero transparencia de chatbots NO se movió: obliga desde `2 agosto 2026`.**
+
+### La línea que lo decide todo
+
+🔴 Anexo III marca alto riesgo a la AI educativa que: **evalúa aprendices** · **los asigna a programas** ·
+**detecta conducta prohibida en exámenes** · **influye en el acceso a titulaciones**.
+
+🟢 **Entonces el mismo stack contiene dos regímenes distintos, y mezclarlos hace que el tutor herede las
+obligaciones del grader.** Partirlo es arquitectura, es facturable, y es lo que un auditor va a pedir:
+
+| Componente | Toca un disparador? | Régimen | Qué obliga y cuándo |
+|---|---|---|---|
+| Tutor socrático, explicación, práctica sin nota | 🟢 **No** | Transparencia | 🔴 **Ya, desde `2026-08-02`**: avisar que es AI, etiquetar salidas |
+| Flashcards, resumen, generación de material | 🟢 No | Transparencia | 🔴 Ya |
+| **Grading automático** que entra al expediente | 🔴 **Sí** — evalúa | **Alto riesgo** | `2027-12-02`: doc. técnica, supervisión humana, FRIA, registro |
+| **Scoring de admisiones** | 🔴 **Sí** — acceso | **Alto riesgo** | `2027-12-02` |
+| **Proctoring / detección de conducta** | 🔴 **Sí** | **Alto riesgo** | `2027-12-02` |
+| Predicción de dropout que **dispara tutoría** | 🟢 No* | Transparencia | *🟡 si la predicción decide acceso a un programa, cruza la línea |
+
+### Implementación — la frontera como código, no como documento
+
+```python
+# governance/risk_partition.py
+ANNEX_III_TRIGGERS = {
+    "evaluates_learner",          # grading que entra al expediente
+    "assigns_to_programme",       # tracking / colocación
+    "detects_prohibited_conduct", # proctoring
+    "affects_qualification",      # acceso a titulación
+}
+
+class EducationCapability:
+    def __init__(self, name, triggers:set, region:str):
+        self.name, self.triggers, self.region = name, triggers, region
+
+    @property
+    def is_high_risk(self) -> bool:
+        return bool(self.triggers & ANNEX_III_TRIGGERS)
+
+    def obligations(self) -> list[str]:
+        o = ["ai_disclosure", "output_labelling"]        # ya obligatorio en la UE
+        if self.region in ("EMEA",) and self.is_high_risk:
+            o += ["technical_documentation", "human_oversight",
+                  "fria", "risk_management_system", "event_logging"]
+        if self.region in ("APAC",):                     # China/India/UE convergen
+            o += ["provenance_labelling"]
+        return o
+
+# El tutor y el grader NO son el mismo servicio. Esa es la decisión de diseño.
+tutor  = EducationCapability("socratic_tutor", set(), "EMEA")
+grader = EducationCapability("auto_grader", {"evaluates_learner"}, "EMEA")
+
+assert not tutor.is_high_risk      # 🟢 entregable este trimestre
+assert grader.is_high_risk         # 🔴 programa hacia 2027-12-02
+```
+
+🟢 **Supervisión humana donde cuenta — y sólo donde cuenta:**
+
+```python
+# El grader propone, una persona dispone. Requisito de Anexo III, no una cortesía.
+async def grade_with_oversight(submission, agent, gradebook):
+    proposal = await agent.assess(submission)      # DeepTutor / OpenMAIC
+    record = {
+        "proposed_score": proposal.score,
+        "rationale":      proposal.rationale,      # trazable, auditable
+        "model_version":  agent.version,
+        "provenance":     "ai_generated",          # etiquetado: UE+China+India
+    }
+    if proposal.confidence < 0.85 or submission.is_appeal:
+        return await gradebook.queue_for_human(record)   # revisión obligatoria
+    return await gradebook.post_with_human_signoff(record)
+```
+
+### Qué se entrega, por región
+
+| Región | Entregable inmediato | Programa |
+|---|---|---|
+| **EMEA** | 🔴 Transparencia + etiquetado (**ya obliga**) | Conformidad Anexo III → `2027-12-02` |
+| **North America** | Política distrital + registro de decisiones (`4` estados ya la exigen por ley) | Alineación al `AI Literacy Framework` del DoL |
+| **APAC** | Etiquetado de procedencia (sirve a China, India y UE a la vez) | Nodos de política por jurisdicción (`6` regímenes) |
+| **LATAM** | Marco institucional de uso (`87 %` usa, `26 %` tiene marco) | Formación docente — 🔴 la lección de Seúl: sin adopción, se revierte |
+
+🟢 **Por qué este patrón vende:** la partición convierte una obligación con fecha `2027` en **un entregable este
+trimestre más un programa plurianual**, y evita el error caro de que un tutor sin riesgo herede la carga
+documental de un grader. 🔵 La frontera vive en código, así que el auditor ve la decisión, no una promesa.
+
 ## 🆕 `p624` — reads `2026-11-02` — **six recipes, every component grant **enumerated** today rather than guessed — and the `make hooks` control debt is resolved the way `623-M` said to resolve it: by reimplementation, which this pass did and which paid immediately**
 
 ### 🟢 `624-G1` — the control debt: `623-M`'s standing guidance followed, and reimplementation caught a real defect

@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p625` — reads `2026-11-02` — **THE VERTICAL SHELF RE-MEASURED, AND THE CUSTOMIZATION ENTRY POINT MOVES FROM *PLUGINS* TO *STANDARDS*: `tsugi` (`Apache-2.0`) + `scorm-again` (`MIT`) REACH EVERY PLATFORM BELOW WITHOUT FORKING ANY OF THEM**
+
+### 🟢 Plataformas verticales — medidas `2026-11-02`
+
+| Plataforma | Repo | Licencia | ★ | `pushed_at` | Stack | Caso de uso |
+|---|---|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` (bytes) | `7,574` | `2026-10-30` | PHP + MySQL/PgSQL | LMS universal: K-12, HE, corporativo. `tool_ai` 4.5+ |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` (bytes) | *n/d — canal `NO-ROW`* | — | Python/Django + React | MOOC, corporativo, gobierno. XBlock |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` (bytes) | `6,957` | `2026-11-02` | Python/Angular | 🟢 **La plataforma grande más permisiva.** Lecciones estructuradas, K-12 |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` (bytes) | `6,900` | 🔴 **`2026-04-30`** | Ruby on Rails | ⚠️ Incumbente NA. **Árbol OSS frío 6 meses** |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` (bytes) | `1,240` | `2026-11-02` | Java/Spring | LMS institucional universitario. `ECL-2.0` = `Apache-2.0` en obligaciones (`624-E`) |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` (bytes) | `1,166` | `2026-11-02` | Python/Vue | 🟢 **Offline-first.** Conectividad baja, rural, refugiados |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` (bytes) | `1,020` | `2026-11-02` | PHP | LMS ligero. Base instalada fuerte en LATAM público |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` (bytes) | `903` | `2026-11-02` | Odoo (Python) | 🟢 **El "Odoo de educación":** ERP completo — admisiones, SIS, gradebook, biblioteca |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` (bytes) | `509` | `2026-11-02` | Java | Captura de clase, transcripción, publicación |
+| **ELMS:LN** | [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🟡 `GPL-3.0` | `253` | `2026-08-14` | PHP/Drupal | Penn State. Infraestructura de cursos distribuida |
+
+🔵 **Capa de integración — y aquí está lo permisivo:**
+
+| Componente | Repo | Licencia | ★ | Qué resuelve |
+|---|---|---|---|---|
+| **Tsugi** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | 🟢 **LTI 1.3 / Advantage.** Una integración → Moodle, Canvas, Blackboard, Sakai, D2L, Open edX |
+| **scorm-again** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | 🟢 **SCORM 1.2 / 2004 + AICC** en browser. Puente al courseware heredado |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 `GPL-3.0` (bytes) | — | Tipos de contenido interactivo embebibles |
+| **ibl.ai LMS** | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` | `208` | Inteligencia de skills y competencias bajo `MIT` |
+
+### 🟢 Cómo customizar con AI — el patrón que las licencias **sí** permiten
+
+🔴 **El error estructural a evitar:** forkear la plataforma. Moodle es `GPL-3.0`, Open edX y Canvas son `AGPL-3.0`
+— y `AGPL` alcanza el **uso en red**, no sólo la distribución. Un fork convierte la capa de agentes de Globant en
+obra derivada con obligación recíproca.
+
+🟢 **El patrón correcto — hablar estándares, cruzar un límite de red:**
+
+```
+┌─ Plataforma del cliente (GPL / AGPL / LGPL / ECL) ── NO SE TOCA, NO SE FORKEA ─┐
+│   Moodle · Open edX · Canvas · Sakai · Chamilo · OpenEduCat                    │
+└───────────────┬────────────────────────────────────────────────────────────────┘
+                │  LTI 1.3 / Advantage  (tsugi, Apache-2.0)
+                │  SCORM 1.2 / 2004     (scorm-again, MIT)
+                │  xAPI / Caliper        (analítica de aprendizaje)
+                ▼  ── límite de red + estándar publicado ──
+┌─ Capa Globant: MIT / Apache-2.0, IP separable ────────────────────────────────┐
+│   Tutoría: DeepTutor (Apache-2.0) · OpenMAIC (MIT) · OpenTutor (MIT)          │
+│   Docencia: ai-shifu (Apache-2.0) · Papermorph (MIT) · claudemy (MIT)         │
+│   Competencias: iblai/lms (MIT)                                               │
+│   Gobernanza: registro de decisiones, trazas, FRIA (ver intel/market.md)      │
+└───────────────┬───────────────────────────────────────────────────────────────┘
+                ▼
+[Kolibri (MIT) para entrega offline donde el ancho de banda es la restricción]
+```
+
+🟢 **Por qué esto es lo vendible:** la pregunta "¿qué LMS usa el cliente?" deja de ser bloqueante y pasa a ser
+configuración. Una sola integración LTI cubre el parque instalado completo, y la IP de la capa de agentes queda
+limpia y permisiva. 🔵 Es también la ruta más rápida: no hay que esperar el ciclo de release de la plataforma.
+
+### 🔴 Señal de mercado nueva en esta vertical: el árbol OSS de Canvas se está enfriando
+
+🔴 `instructure/canvas-lms` — último push **`2026-04-30`**, seis meses. 🟢 Medido contra `moodle`, `oppia`, `sakai`,
+`kolibri`, `chamilo`, `openeducat_erp` y `opencast`, **todos con push hoy o esta semana**.
+
+🟢 **Lectura comercial:** el producto comercial de Canvas envía AI; su repositorio abierto no. Para un cliente sobre
+Canvas, la salida open-source se está cerrando — lo que **refuerza** la jugada de migración a Open edX o Moodle con
+capa agéntica, y la vuelve más urgente. 🔴 **Caveat honesto:** un `pushed_at` frío no es abandono (puede haber
+desarrollo interno sin publicar). Re-medir antes de usarlo en una propuesta.
+
+### 🟡 Fuera del mandato permisivo, listadas porque existen y el cliente preguntará
+
+🔴 `AGPL-3.0`: [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) (`2,441★`),
+[`classroomio/classroomio`](https://github.com/classroomio/classroomio) (`1,736★`),
+[`artcc/freelingo`](https://github.com/artcc/freelingo) (`225★`),
+[`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) (`368★`).
+🔴 `NOASSERTION` — **no construir hasta leer bytes**: [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)
+(`2,060★`), [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (`340★`).
+🔴 **NonCommercial, confirmado en bytes por `p615`**: [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)
+(`6,211★`, `CC-BY-NC-4.0`) — el grafo de conocimiento más rico del sector y **no se puede usar comercialmente**.
+
 ## 🆕 `p624` — reads `2026-11-02` — **🟢 THE WHOLE PLATFORM TIER'S GRANTS ARE RE-ESTABLISHED BY **ENUMERATION**, AND THE TIER GAINS ITS FIRST `AGPL-3.0` CHINESE PLATFORM. 🟢 `ECL-2.0` IS NOW CLAUSE-DIFFED AGAINST `Apache-2.0` AND ADDS **NO OBLIGATION** — SO SAKAI AND OPENCAST ARE THE TIER'S ONLY TRULY SHIPPABLE BASES. 🔴 AND THE `621 B` FILE THAT WOULD HAVE HIDDEN CANVAS'S NETWORK COPYLEFT IS NAMED.**
 
 ### 🟢 The vertical platform tier — every grant **enumerated**, not guessed, and byte-read today

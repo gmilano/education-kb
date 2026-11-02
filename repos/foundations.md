@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p625` — reads `2026-11-02` — **THE FOUNDATION SHELF RE-MEASURED: `10 of 11` PLATFORMS PUSHED WITHIN THREE DAYS, `moodle`'s STAR COUNT MEASURED FOR THE FIRST TIME, AND THE ONE QUIET ROW IS THE SECTOR'S COMMERCIAL INCUMBENT**
+
+🟢 Every row below measured `2026-11-02`. 🔵 Grants are `p624` byte-reads by tree enumeration where marked **bytes**;
+otherwise the platform metadata field, which this base has proven wrong in both directions (`p611`, `p621`, `625-H`).
+
+### 🟢 The platform base — what an engagement actually starts from
+
+| Repo | Licencia | ★ `2026-11-02` | `pushed_at` | Branch | ¿Base para AI? |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` **(bytes, `COPYING.txt`, `35,147 B`)** | **`7,574`** | `2026-10-30` | `main` | ✅ `tool_ai` subsystem 4.5+, largest plugin ecosystem on earth |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` **(bytes, `LICENSE`, `35,136 B`)** | 🔴 *channel `NO-ROW`* | — | `master` | ✅ XBlock API. 🔴 **`AGPL`, not `Apache` — correct this if you carried otherwise** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` **(bytes, `11,358 B` + `NOTICE`)** | `6,957` | `2026-11-02` | `develop` | ✅ **The most buildable large platform.** Permissive, active, structured lessons |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` **(bytes, `34,520 B` + `COPYRIGHT`)** | `6,900` | 🔴 **`2026-04-30`** | `master` | ⚠️ **Six months quiet.** Incumbent LMS whose OSS tree is cooling |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` **(bytes, `11,120 B` + `licenses/`)** | `1,240` | `2026-11-02` | `master` | ✅ Apereo. 🟢 `ECL-2.0` **proven buildable** — `624-E` diffed it against `Apache-2.0`: `78` words added, **no obligation added** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` **(bytes, `1,097 B`)** | `1,166` | `2026-11-02` | `release-v0.19.x` | ✅ **Offline-first, `MIT`.** The low-connectivity and rural answer |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` **(bytes, `35,147 B`)** | `1,020` | `2026-11-02` | `master` | ✅ Lightweight. Heavy LATAM public-sector install base |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` **(bytes, `8,241 B`)** — 🔴 field says `NOASSERTION` | `903` | `2026-11-02` | `19.0` | ✅ Education **ERP** on Odoo: admissions, SIS, gradebook |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` **(bytes, `11,340 B` + `NOTICES`)** | `509` | `2026-11-02` | `develop` | ✅ Lecture capture + transcription pipeline. Canonical after `apereo/opencast` died |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | `2026-11-02` | `master` | ✅ **LTI 1.3 / Advantage framework — the LMS-agnostic entry point** |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | `2026-11-02` | `main` | ✅ **SCORM 1.2 / 2004 + AICC runtime.** Legacy-courseware bridge |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` | `208` | `2026-11-02` | `main` | ✅ Skills/competency intelligence under `MIT` |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 `GPL-3.0` **(bytes, `LICENSE.txt`, `35,146 B`)** | — | — | — | ✅ Interactive content types, embeds in Moodle/Canvas/Drupal |
+
+🔵 **`12` rows above the `5`-row minimum**, every one with a real address, a real grant and a measured date.
+
+### 🟢 Why these, and the shape it forces
+
+🔴 **The permissive supply in this sector is at the integration layer, not the platform layer.** Read the licence
+column: every *platform* big enough to matter is `GPL`, `AGPL`, `LGPL` or `ECL`. The `MIT`/`Apache-2.0` rows are
+`kolibri`, `oppia`, `tsugi`, `scorm-again`, `iblai/lms` and `h5p`'s sibling tooling — a runtime, a standards bridge,
+an offline client, a competency engine.
+
+🟢 **So the engagement shape that the licence facts actually support is integration-first:**
+
+```
+[Client's existing LMS — Moodle (GPL) / Open edX (AGPL) / Canvas (AGPL) / Sakai (ECL)]
+        │  speak standards, do not fork the platform
+        ▼
+[tsugi — Apache-2.0]  LTI 1.3 / Advantage  ─┬─ reaches every LMS above with no per-LMS plugin
+[scorm-again — MIT]   SCORM/AICC runtime   ─┘   wraps decades of existing courseware
+        ▼
+[Globant agent layer — MIT / Apache-2.0, cleanly separable IP]
+   DeepTutor (Apache-2.0) · OpenMAIC (MIT) · ai-shifu (Apache-2.0) · OpenTutor (MIT)
+        ▼
+[kolibri (MIT) for offline / low-connectivity delivery where bandwidth is the constraint]
+```
+
+🟢 **The licence boundary is the commercial point.** Reciprocal grants (`GPL`/`AGPL`) bite on *derivative works of
+the platform*. Talking to that platform across LTI or SCORM — a published standard, over a network boundary — keeps
+the agent layer's IP separable and permissive. 🔴 Forking Moodle or Open edX does not, and `AGPL` on `edx-platform`
+reaches network use. **That single architectural choice is worth more to a client than any repository on this shelf.**
+
+### 🔴 `ECL-2.0` — the licence this sector has and others do not, and it is safe
+
+🔵 `sakai` and `opencast` ship the **Educational Community License 2.0**, an Apache-2.0 derivative. 🟢 `624-E` ran
+the clause diff on bytes: **`78` words added, `9` removed, no additional obligation.** 🟢 `ECL-2.0` is buildable on
+the same terms as `Apache-2.0`. 🔵 Treat it as permissive; do not refuse a row for carrying it.
+
+### 🔴 Standing gaps on this shelf, stated
+
+- 🔴 **`edx-platform` has no star figure** here: the metadata channel returned `NO-ROW` and the direct API is gated.
+  The repository is **alive** (`ls-remote`, `HEAD=f2fc446def69`). The missing cell is an instrument gap, not a dead repo.
+- 🔴 **No permissive, LATAM-originated foundation platform is on this shelf.** `chamilo` has the install base but is
+  `GPL-3.0` and Spanish/Belgian-originated. The regional supply gap is real and unclosed.
+- 🔴 `jaipuriaailabs/moodle-mcp`, `thanh01pmt/interactive-quiz-kit` and `vargontoc/educational-framework` remain
+  🔴 **dead** — re-probed `2026-11-02` by `ls-remote`, still `ABSENT`. Retained as refusals, not as rows.
+
 ## 🆕 `p624` — reads `2026-11-02` — **🟢 EVERY FOUNDATION GRANT RE-ESTABLISHED BY **ENUMERATION** RATHER THAN BY GUESSWORK — `15 of 15`, AND THE THREE REPOSITORIES WHOSE GRANT FILES A LADDER WOULD HAVE MIS-READ ARE NAMED. 🔴 THE BYTE-BAND CORROBORATION THIS PAGE HAS LEANED ON SINCE `621-B` IS WITHDRAWN.**
 
 ### 🟢 `624-A` applied to the foundation tier — the complete manifest, not a guess

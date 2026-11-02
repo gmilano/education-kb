@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 2026-11-02 — Pass 625 — **THE WEEK'S AGENT SUPPLY IS SATURATED AT THIS BASE'S REACH: `28 of 28` ADDRESSES FROM TWO INDEPENDENT CHANNELS WERE ALREADY HELD, AND THE ONLY NEW *SIGNAL* IS A PLATFORM GOING QUIET**
+
+⏱️ **Append-only.** Nothing below this line was edited. This section records what the discovery channels returned
+on `2026-11-02`, including that they returned no new names — a nil is only information if the denominator is published.
+
+### 🔴 The nil, with its denominator
+
+| Channel | Addresses returned | Already held | 🆕 New |
+|---|---|---|---|
+| Web legs (`8` searches: `4` global + `4` regional) | `7` | `7` | 🔴 **`0`** |
+| `search/repositories` (`3` qualifier-shaped queries) | `21` | `21` | 🔴 **`0`** |
+| **Total** | **`28`** | **`28`** | 🔴 **`0` — `100 %` held** |
+
+🔵 Every address checked by substring across all `*.md` in this repository, and every one found on a **live** shelf,
+not only in `archive/`. 🔵 The web legs named `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`anandpatikat/guru-latihan-dinamis`, `ArturoNereu/AI-Study-Group`, `rohitg00/ai-engineering-from-scratch`,
+`krayin/laravel-crm` and `hcengineering/platform` — all `7` verified alive by `ls-remote`, all `7` already shelved.
+
+### 🟢 Measured this week — the agent tier, metrics refreshed `2026-11-02`
+
+| Nombre | Repo | Licencia | ★ `2026-11-02` | `pushed_at` | Señal |
+|---|---|---|---|---|---|
+| DeepTutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | **`54,295`** | `2026-10-31` | Still the sector's headline agent. `+23★` in a day; `+31,823★` since `p54` |
+| OpenMAIC | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | **`42,491`** | `2026-11-02` | Tsinghua MAIC. Pushed today, `MIT` byte-read `p624` |
+| book-to-skill | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 `MIT` | **`36,787`** | `2026-10-28` | The skill-package class `p614` identified, now the tier's largest |
+| education-agent-skills | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 `NOASSERTION` | `942` | `2026-10-22` | `165` skills for teachers/leaders. `613-E` byte-read it `CC-BY-SA-4.0` — **share-alike on prompt text** |
+| Papermorph | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 `MIT` | `1,087` | `2026-11-01` | Books → animated narrated lessons |
+| claudemy | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 🟢 `MIT` | `595` | `2026-10-29` | OSS Udemy/Coursera alternative |
+| ai-shifu | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` | `330` | `2026-11-02` | AI-led teaching/Q&A, pushed today |
+| Bloom | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` | `295` | `2026-10-20` | Private AI tutor that adapts to reading behaviour |
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | `161` | `2026-11-02` | Block-based adaptive learning workspace |
+| PageLM | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | `2,060` | `2026-10-29` | Community NotebookLM. Grant unresolved on the field — **do not build on it until byte-read** |
+
+### 🔴 The week's only genuinely new signal is negative, and it is a *migration argument*
+
+🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) — `6,900★`, `AGPL-3.0` — was last pushed
+**`2026-04-30`**. 🔵 Six months quiet, measured against `sakai`, `opencast`, `chamilo`, `moodle`, `kolibri`, `oppia`
+and `openeducat_erp`, **every one of which was pushed today or within three days**.
+
+🟢 **Why it matters commercially:** Canvas is the incumbent this base's market map names first for North American
+higher ed. Its *commercial* product is shipping AI; its *open-source* repository is going cold. For a client on
+Canvas, the open-source escape hatch is quietly closing, which strengthens the Open edX / Moodle migration play
+rather than weakening it. 🔵 Measured, not asserted — and 🔴 **note the instrument caveat**: a quiet `pushed_at`
+is not abandonment, and this base should re-measure before selling the claim.
+
+### 🔴 Refused, published because a supply report without its refusals is advertising
+
+| Repo | ★ | Refused because |
+|---|---|---|
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | `4,632` | 🔴 `AGPL-3.0` — reciprocal; not in the permissive mandate |
+| [`penecho/penecho`](https://github.com/penecho/penecho) | `2,514` | 🔴 `AGPL-3.0` |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `2,441` | 🔴 `AGPL-3.0` |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `1,736` | 🔴 `AGPL-3.0` |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | 🔴 `NOASSERTION` — grant unresolved on the field |
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | `5,531` | 🔴 `MIT` but **off-sector** — robotics, not education delivery |
+| [`rudra496/StealthHumanizer`](https://github.com/rudra496/StealthHumanizer) | `202` | 🔴 `MIT` but **adversarial to the buyer** — markets itself as bypassing Turnitin/GPTZero. An integrity-detection *evasion* tool cannot be sold into an institution whose problem is integrity |
+
+### 🔵 Instrument note carried into next week
+
+🔴 `curl -sI github.com/{owner}/{repo}` is **403-blind** here (`p608`, `p621`). 🔴 `gh api repos/{slug}` is **gated
+per-repository** in this session (`20 of 20` denied). 🔴 `search/repositories` with `repo:` **cannot prove absence** —
+it returned `NO-ROW` for `openedx/edx-platform`, which `ls-remote` proves alive. 🟢 **`git ls-remote` is the only
+existence oracle that discriminated**, with a fabricated control returning `ABSENT`. 🟢 Grants: tree enumeration
+on bytes (`p624`).
+
 ## 🆕 `p624` — `2026-11-02` — **the `54th` consecutive English nil, and the streak is broken *only* on the non-English legs: `3` new names from `8` of them, against `25 of 25` held on English**
 
 🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
