@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `26` FOUNDATION REPOS ADDED, EVERY ONE CONFIRMED **NOT HELD** BY A CORRECTED MATCHER, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH, `65 of 65` FABRICATED-PATH CONTROLS AT `404`. 🟢 THE ADDITION IS A WHOLE LAYER: THE **MOODLE PLUGIN SUBSTRATE** — IN-LMS CODE SUBMISSION, AUTO-GRADING, ATTENDANCE, SSO AND OBJECT STORAGE. `11 of 13` NEW. 🔴 AND THE REASON IT WAS MISSING IS NOT A NEW MECHANISM: THIS BASE ALREADY DOCUMENTED BOTH `version.php` SOURCE-HEADER GRANTS AND VERSIONED DEFAULT BRANCHES — IT HAD SIMPLY NEVER SWEPT `topic:moodle` DEEPLY ENOUGH TO USE THEM.**
+
+### 🔴 Credit where this pass found it already written, because the near-miss is instructive
+
+🔴 **This pass drafted "the grant is in a source header" and "the default branch is a version number"
+as new findings. Both are already on these pages** — `version.php` appears `56` times at `HEAD`, and
+[`../verticals/solutions.md`](../verticals/solutions.md) already names
+`openeducat/openeducat_erp`'s `19.0` branch with the note *"the branch is a version number, which no
+`main` probe reads"*. 🟢 **So the honest account of why `11` maintained Moodle plugins were unheld is
+narrower and more actionable: the knowledge existed and the *sweep* did not.** `topic:moodle` had been
+mentioned `4` times and never walked to depth.
+🔵 **The one branch name genuinely new this pass:** `MOODLE_404_STABLE`
+([catalyst/moodle-tool_objectfs](https://github.com/catalyst/moodle-tool_objectfs)), joining the
+already-held `MOODLE_503_STABLE` and `MOODLE_500_STABLE` — 🟢 confirming the family is **generated per
+Moodle release**, so it is not enumerable and only the symref is a probe.
+
+### 🟢 The Moodle plugin substrate — `11` new rows, grants byte-read `2026-11-02`
+
+🟢 `(hdr)` marks a grant read from `version.php` rather than a grant file — this base's existing
+source-header channel, applied to a layer it had not reached.
+
+| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+| --- | --: | --- | --- | --- | --- |
+| [C0D3D3V/Moodle-DL](https://github.com/C0D3D3V/Moodle-DL) | **660** | 🟢 GPL-3.0 (`35,141 B`) | `main` | Global | 🟢 Bulk course-content extraction — the ingest leg for any Moodle RAG corpus |
+| [tmuras/moosh](https://github.com/tmuras/moosh) | **262** | 🟢 GPL-3.0 (`35,149 B`) | `master` | Global | 🟢 **Moodle shell**: scriptable admin over `100+` commands — an agent's hands inside Moodle |
+| [moodlebox/moodlebox](https://github.com/moodlebox/moodlebox) | `145` | 🟡 AGPL-3.0 (`34,523 B`) | `main` | Global | 🟢 Moodle + Wi-Fi AP on a Raspberry Pi — the offline / low-connectivity deployment shape |
+| [jcrodriguez-dis/moodle-mod_vpl](https://github.com/jcrodriguez-dis/moodle-mod_vpl) | `128` | 🟢 GPL-3.0 (`35,147 B`) | `master` | Global | 🟢 **Virtual Programming Lab**: in-LMS code submission + automatic grading. Pushed `2026-11-01` |
+| [hit-moodle/moodle-local_onlinejudge](https://github.com/hit-moodle/moodle-local_onlinejudge) | `124` | 🟢 GPL-3.0 (`35,147 B`) | `master` | Global | Online-judge scoring backend for `mod_vpl` submissions |
+| [moodle-an-hochschulen/moodle-theme_boost_union](https://github.com/moodle-an-hochschulen/moodle-theme_boost_union) | `106` | 🟢 GPL-3.0 (`35,147 B`) | `main` | **EMEA** | The higher-ed theme layer; German university consortium |
+| [catalyst/moodle-tool_objectfs](https://github.com/catalyst/moodle-tool_objectfs) | `102` | 🟢 GPL-3.0 *(hdr)* | 🔴 `MOODLE_404_STABLE` | Global | Offload Moodle files to S3/Azure — prerequisite for large media at scale |
+| [FMCorz/mdk](https://github.com/FMCorz/mdk) | `99` | 🟢 GPL-3.0 (`35,147 B`) | `master` | Global | Moodle Development Kit — spin instances up and down for CI |
+| [danmarsden/moodle-mod_attendance](https://github.com/danmarsden/moodle-mod_attendance) | `91` | 🟢 GPL-3.0 *(hdr)* | 🔴 `MOODLE_503_STABLE` | Global | Attendance log — the signal most early-warning models actually need |
+| [erseco/alpine-moodle](https://github.com/erseco/alpine-moodle) | `88` | 🟢 **MIT** (`1,072 B`) | `main` | Global | 🟢 **The only permissively licensed Moodle packaging found** — Alpine container image |
+| [catalyst/moodle-auth_saml2](https://github.com/catalyst/moodle-auth_saml2) | `87` | 🟢 GPL-3.0 *(hdr)* | 🔴 `MOODLE_500_STABLE` | Global | SAML SSO entirely inside Moodle — the institutional-identity gate |
+
+🟡 **Reciprocity limit, which decides how these are used.** `10 of 11` are GPL-3.0-or-later or
+AGPL-3.0. 🟢 Correct and safe **as a plugin deployment** inside a GPL host; 🔴 **not a basis for
+lifting code into a proprietary product.** 🟢 **The composable seam is `moosh`** (drive Moodle from
+outside over its CLI) **and `Moodle-DL`** (extract to your own corpus) — not vendoring plugin source.
+`erseco/alpine-moodle` is the one MIT artefact and it is *packaging*.
+🔵 Already held and therefore **not** re-added: `FMCorz/moodle-block_xp`, `h5p/moodle-mod_hvp`.
+
+### 🟢 Open edX substrate — `4` new rows, including the one MIT analytics app
+
+| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives |
+| --- | --: | --- | --- | --- | --- |
+| [openfun/openedx-docker](https://github.com/openfun/openedx-docker) | `142` | 🟡 AGPL-3.0 (`34,520 B`) | `master` | Global | Best-practice Open edX image; 🟡 last push `2025-07-09` — reference, not dependency |
+| [cookiecutter-openedx/cookiecutter-openedx-devops](https://github.com/cookiecutter-openedx/cookiecutter-openedx-devops) | `50` | 🟡 AGPL-3.0 (`35,136 B`) | `main` | Global | Tutor on Kubernetes via Terraform |
+| [appsembler/figures](https://github.com/appsembler/figures) | `44` | 🟢 **MIT** (`1,078 B`) | `main` | Global | 🟢 Reporting + data retrieval for Open edX — **MIT**, so the analytics layer *is* liftable |
+| [eduNEXT/tvm](https://github.com/eduNEXT/tvm) | `24` | 🟡 AGPL-3.0 (`34,523 B`) | `main` | **LATAM** | Tutor version/environment manager — multi-version Open edX operations |
+
+🔵 **The licence split is the plan:** `3 of 4` are AGPL-3.0 — fine to **operate** as a service
+provider, 🔴 fatal to redistribute as a product. 🟢 **`figures` is the commercial surface.**
+
+### 🟢 LTI — `5` new rows on the interoperability layer
+
+🔴 **Caution: `topic:lti` is polysemous.** The axis also returns **Linear Time-Invariant** control and
+DSP libraries ([kmilo17pet/qlibs](https://github.com/kmilo17pet/qlibs), `104★`;
+[jrgenerative/fixed-wing-sim](https://github.com/jrgenerative/fixed-wing-sim), `164★`). 🔵 This base
+already carries the *`tooLTIp` / `muLTI-tenancy`* substring defect as `P831`; 🟢 **the `topic:`-level
+collision between Learning Tools Interoperability and Linear Time-Invariant is new** and is a
+*different* mechanism — a tag two communities both apply correctly.
+
+| Repo | ★ | Grant (byte-read) | Branch | Region | Note |
+| --- | --: | --- | --- | --- | --- |
+| [csev/wa4e](https://github.com/csev/wa4e) | `216` | 🟢 BSD-2-Clause (`1,301 B`) | `master` | Global | 🟢 Course materials from an **LTI spec co-author**; pushed `2026-11-01` |
+| [WebPA/WebPA](https://github.com/WebPA/WebPA) | `37` | 🟢 GPL-3.0 (`35,147 B`, 🔴 `license.txt`) | `master` | Global | Online **peer assessment** — a scoring mode nothing else here covers |
+| [doldsimo/lti-1.3-canvas-lms](https://github.com/doldsimo/lti-1.3-canvas-lms) | `29` | 🟢 MIT (`1,067 B`) | `main` | Global | Minimal LTI 1.3 ↔ Canvas reference |
+| [js-kyle/nodejs-lti-provider](https://github.com/js-kyle/nodejs-lti-provider) | `26` | 🟢 MIT (`1,067 B`, 🔴 `LICENCE`) | `master` | Global | Node LTI provider; 🔵 grant at the **British** spelling |
+| [ucfopen/lti-template-flask](https://github.com/ucfopen/lti-template-flask) | `47` | 🟢 MIT (`1,130 B`) | `master` | Global | 🔴 **Marked `DEPRECATED` in its own description.** Reference only |
+
+### 🟡 Autograding — `4` new rows, real and permissive, and mostly stale
+
+| Repo | ★ | Grant (byte-read) | Branch | Last push | Verdict |
+| --- | --: | --- | --- | --- | --- |
+| [illinois-cs241/broadway](https://github.com/illinois-cs241/broadway) | `19` | 🟢 **MIT** (`1,681 B`) | `master` | `2024-09-04` | 🟢 API said `NOASSERTION`; the bytes say MIT |
+| [tkutcher/jgrade](https://github.com/tkutcher/jgrade) | `26` | 🟢 MIT (`1,070 B`) | 🔴 `dev` | 🔴 `2023-08-16` | 🟡 Java assignment grading; Gradescope JSON |
+| [imgVOID/autograding-api](https://github.com/imgVOID/autograding-api) | `15` | 🟢 Apache-2.0 (`11,357 B`) | `master` | 🔴 `2022-01-10` | 🟡 Pattern, not a dependency |
+| [RiceComp215-Staff/RiceChecks](https://github.com/RiceComp215-Staff/RiceChecks) | `12` | 🟢 Apache-2.0 (`11,357 B`) | `master` | 🔴 `2023-01-09` | 🟡 Gradle-based Java autograder |
+
+🔵 **Read with the Moodle rows, this is the honest state of open autograding:** the **stale** artefacts
+are the standalone services; the **live** one is the LMS plugin (`moodle-mod_vpl`, pushed
+`2026-11-01`). 🟢 **The maintained path for grading runs inside the LMS.**
+
+### 🟡 One grant defect worth recording, caught in this pass's own ladder
+
+🔴 This pass's first ladder carried `LICENSE`, `LICENSE.md`, `LICENSE.txt` and bare lowercase
+`license` — **but not `license.txt`**, which `p600` had already measured on `frappe/education`.
+🔴 The first run therefore reported `WebPA/WebPA` and `navariltd/Junior-School` as grantless.
+🟢 Extending the ladder to lowercase-with-extension recovered both (`35,147 B` GPL-3.0 and
+`34,523 B` AGPL-3.0). 🔵 **`lib/README.md`'s rule landing again: a rule that has to be remembered is
+not a control.** The fix and the `p600` citation are in
+[`../compose/code/p602-axis-sweep/verify.sh`](../compose/code/p602-axis-sweep/verify.sh).
+
+Evidence: [`../evidence/grants-byteread.2026-11-02-p602.tsv`](../evidence/grants-byteread.2026-11-02-p602.tsv)
+(`65` rows, `65 of 65` controls `404`),
+[`../evidence/held-set-matcher-correction.2026-11-02-p602.tsv`](../evidence/held-set-matcher-correction.2026-11-02-p602.tsv).
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 `17` FOUNDATION REPOS ADDED, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH WITH ITS OWN FABRICATED-PATH CONTROL (`55 of 55` AT `404`). 🟢 THE TWO THAT MATTER MOST ARE AN ASSESSMENT-DELIVERY ENGINE (`4,918★` MIT) AND A SECOND, APAC-BUILT ONE (`3,803★` APACHE-2.0, DIDI) — THIS BASE HAD NEITHER, AND BOTH CLOSE THE "SCORING SEAM" IT HAS CARRIED FOR MANY PASSES. 🔴 `TheOdinProject` (`13,200★`), THE LARGEST OPEN CURRICULUM ESTATE FOUND, IS `CC BY-NC-SA` AND IS **NOT** ADDED.**
 
 ### 🟢 Assessment & form delivery — the layer every tutoring recipe on `compose/patterns.md` assumed and none named

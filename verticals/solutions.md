@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THIS PASS DRAFTED "THE ERP/SIS GAP MOVES — TWO PLATFORMS WERE INVISIBLE BECAUSE OF THEIR BRANCH NAMES" AND IT IS **FALSE**: THIS PAGE ALREADY NAMES `openeducat/openeducat_erp` (BRANCH `19.0`, LGPL-3.0, `8,241 B`) AND `frappe/education` (BRANCH `develop`, `19`-BYTE `license.txt`), BRANCHES AND GRANT BYTES INCLUDED. 🟢 SO THE GAP IS RE-STATED, NOT MOVED — AND WHAT IS GENUINELY NEW IS SMALLER AND HONEST: `2` NEW ADDRESSES, AND A **DISCONFIRMATION** — THE MIT EDUCATION ERP THE WEB NAMES (`GegoK12`) HAS NO SHIPPABLE REPOSITORY AT ALL.**
+
+### 🔴 The restatement, named before anything new, because this page's gap depends on it
+
+🔴 **Struck from this pass's draft:** that `openeducat` and `frappe/education` were newly shipped and
+previously invisible. 🟢 **They are already on this page**, with their version-numbered and `develop`
+default branches explicitly called out, and with `openeducat`'s `8,241 B` LGPL-3.0 grant byte-read at
+branch `19.0`. 🔵 **This pass re-measured both independently and agrees with the existing rows** —
+`openeducat` LGPL-3.0 `8,241 B` at `19.0`, `frappe/education` a `19`-byte `license.txt` reading in full
+`License: GNU GPL V3` — 🟢 which is worth something as a **reproduction check** and nothing as a
+discovery. The ERP/SIS gap statement on this page stands as written.
+
+### 🟢 Genuinely new this pass — `2` addresses, both confirmed unheld by the corrected matcher
+
+| Platform | ★ | Grant (byte-read) | Branch | Region | What it is |
+| --- | --: | --- | --- | --- | --- |
+| [Ansarimajid/College-ERP](https://github.com/Ansarimajid/College-ERP) | `201` | 🟢 **MIT** (`1,075 B`) | `main` | Global | 🟡 Django college ERP — **permissive**, but a single-maintainer app, not a platform with a module ecosystem. Pushed `2026-04-28` |
+| [navariltd/Junior-School](https://github.com/navariltd/Junior-School) | `21` | 🟡 AGPL-3.0 (`34,523 B`, 🔴 `license.txt`) | 🔴 `develop` | Global | 🟢 Proof the Frappe path is **extensible in practice**: a third-party app extending `frappe/education`. Pushed `2026-09-14` |
+
+🔵 **Why `Junior-School` earns a row despite `21★`.** This page's standing question about
+`frappe/education` is whether anyone builds on it. 🟢 **Someone does, in public, with a byte-read
+grant** — that is a maintainability signal about the *platform*, which is what a studio is buying.
+
+### 🟢 A disconfirmation: the MIT education ERP the web names does not exist
+
+The mandated leg `open source platform education ERP CRM MIT Apache` returned **GegoK12** as "an open
+source school ERP released under the MIT licence". 🔴 **It does not resolve to a usable repository:**
+
+| address found | ★ | ladder result | control | verdict |
+| --- | --: | --- | --- | --- |
+| [RukkmaniT/gegok12-documentation](https://github.com/RukkmaniT/gegok12-documentation) | `0` | 🔴 no grant file (`25` names, real default branch) | `404` | 🔴 documentation stub |
+| `Gego-K12/.github` | `0` | — | — | 🔴 org profile placeholder only |
+
+🟢 **So this page's oldest gap is confirmed from a new direction:** a *permissive* education ERP at
+platform scale does not exist, and the one the web advertises as MIT is a vendor marketing claim with
+no code behind it. 🔵 **A vendor page claiming a licence is not a licence finding** — resolve the claim
+to an address, then byte-read the address. 🟡 **The only MIT row on this page remains a
+single-maintainer Django app.**
+
+### 🔴 Platform-shaped addresses found and rejected this pass
+
+| address | ★ | grant (byte-read) | why rejected |
+| --- | --: | --- | --- |
+| [ketanchoyal/Our-E-School](https://github.com/ketanchoyal/Our-E-School) | `504` | 🟢 MIT (`1,069 B`) | 🔴 **Abandoned — last push `2021-08-19`.** Flutter app, not a platform |
+| [jobic10/student-management-using-django](https://github.com/jobic10/student-management-using-django) | `393` | 🟢 MIT (`1,075 B`) | 🔴 Last push `2023-11-04`; coursework-scale |
+| [mindsdb/edux](https://github.com/mindsdb/edux) | `6` | 🟢 MIT (`1,068 B`) | 🔴 Last push `2020-07-01`; an Open edX *theme*, not a platform |
+| [codern-org/codern](https://github.com/codern-org/codern) | `29` | 🔴 **grantless** | 🔴 `25`-name ladder misses at `main`; `README.md` has a `## License` heading and **no grant**. Control `404` |
+| [krayin/agent-skills](https://github.com/krayin/agent-skills) | `2` | 🔴 **grantless** | 🔴 Same vendor as this page's MIT `krayin/laravel-crm` — 🔴 **the child does not inherit the parent's grant** |
+
+Evidence: [`../evidence/grants-byteread.2026-11-02-p602.tsv`](../evidence/grants-byteread.2026-11-02-p602.tsv),
+[`../evidence/held-set-matcher-correction.2026-11-02-p602.tsv`](../evidence/held-set-matcher-correction.2026-11-02-p602.tsv).
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 AN ASSESSMENT-DELIVERY PLATFORM TIER, NEW ON THIS PAGE: THE LAYER THAT RENDERS AND SCORES AN ITEM, WHICH `600` PASSES OF TUTOR AND LMS ROWS ASSUMED AND NEVER NAMED. `4` PLATFORMS, `4,918★` DOWN TO `327★`, ALL MIT OR APACHE-2.0, ALL BYTE-READ. 🔴 AND THE ERP/SIS GAP — THIS PAGE'S OLDEST — IS RE-MEASURED AGAINST ITS WHOLE POPULATION FOR THE FIRST TIME: `topic:school-management` IS `88.9 %` IN-DOMAIN AND YIELDS `0` SHIPPABLE PLATFORMS. THE GAP IS CONFIRMED, WITH `18` ADDRESSES OF EVIDENCE.**
 
 ### 🟢 The assessment-delivery tier — platforms a studio attaches AI to, rather than rebuilds

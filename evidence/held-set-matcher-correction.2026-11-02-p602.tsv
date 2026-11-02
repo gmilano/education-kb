@@ -1,0 +1,8 @@
+dimension	variant	value	note
+held_set_matcher	URL-form only (github.com/o/r)	3679	what p602 swept against
+held_set_matcher	URL-form + backticked slug	6083	the correct set at HEAD
+held_set_matcher	addresses invisible to p602 sweep	2404	39.5% of the true held set
+novelty_claim	p602 first reported NEW	359 of 653 (55.0%)	overstated
+novelty_claim	p602 corrected NEW	329 of 653 (50.4%)	measured against HEAD with both forms
+rows_affected	drafted as new finds, already held	6	finereli/yarareads; vishalsachdev/learning-design-pillars; krayin/laravel-crm; cortezaproject/corteza; openeducat/openeducat_erp; frappe/education
+claims_affected	drafted as new, already held	7	MOODLE_503_STABLE; MOODLE_500_STABLE; version.php source-header grants; 2026.9.x bare-semver; frappe 19-byte license.txt; in:...,readme pollution; NonCommercial band rule

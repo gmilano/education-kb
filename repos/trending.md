@@ -4,6 +4,105 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `60`-AXIS SWEEP IN THREE ORDERINGS, `726` ROWS, `653` UNIQUE ADDRESSES. 🔴 NOVELTY WAS FIRST REPORTED AS `55.0 %` AND IS **`50.4 %`** — THIS PASS'S HELD-SET MATCHER WAS URL-ONLY AND MISSED `2,404 of 6,083` HELD ADDRESSES (`39.5 %`), BECAUSE THIS BASE WRITES MOST ADDRESSES AS **BACKTICKED BARE SLUGS IN TABLE CELLS**, NOT AS LINKS. 🟢 THE WEEK'S REAL SUPPLY SIGNAL IS THE **MOODLE PLUGIN ECOSYSTEM**: `8` MAINTAINED PLUGINS BETWEEN `88★` AND `660★`, THREE PUSHED INSIDE `24` HOURS, ALL UNHELD UNTIL TODAY — THE HEALTHIEST IN-DOMAIN SUPPLY THIS PAGE HAS RECORDED.**
+
+### 🔴 `602-A` — the sweep mis-measured the base it was sweeping against, and the fix is a committed control
+
+| held-set matcher | addresses at the same commit |
+| --- | --: |
+| 🔴 `github.com/<owner>/<repo>` only — what the sweep used | `3,679` |
+| 🟢 URL form **+ backticked bare slug** | **`6,083`** |
+| 🔴 invisible to the sweep | **`2,404` (`39.5 %`)** |
+
+🔵 **The mechanism is this base's own house style.** Addresses appear as
+`` | `a-ariff/canvas-mcp` | Canvas | … | `` far more often than as markdown links, so a link-shaped
+matcher reads a dense shelf as a sparse one. 🔴 **Consequences:** novelty `55.0 % → 50.4 %`; `6` rows
+drafted as new finds already held; `7` *claims* drafted as new already carried (including
+`version.php` source-header grants, at `56` prior occurrences).
+🟢 **Control:** [`../compose/code/p602-axis-sweep/heldset.sh`](../compose/code/p602-axis-sweep/heldset.sh),
+with the reason in its header and the over-correction guard written in — 🔵 **a bare `<word>/<word>`
+match hits every relative path in the prose and inflates `HELD`, so the backtick or link delimiter is
+the discriminator.**
+Evidence: [`../evidence/held-set-matcher-correction.2026-11-02-p602.tsv`](../evidence/held-set-matcher-correction.2026-11-02-p602.tsv).
+
+### 🟢 The week's supply signal — `topic:moodle` walked to depth for the first time
+
+🔵 **Not a new repo: a newly *visible* ecosystem.** `topic:moodle` had `4` passing mentions at `HEAD`
+and had never been swept. Every row below is maintained, unambiguously licensed, and 🟢 **confirmed
+unheld by the corrected matcher**:
+
+| repo | ★ | grant (byte-read `2026-11-02`) | branch | last push |
+| --- | --: | --- | --- | --- |
+| [C0D3D3V/Moodle-DL](https://github.com/C0D3D3V/Moodle-DL) | `660` | 🟢 GPL-3.0 (`35,141 B`) | `main` | `2026-10-22` |
+| [tmuras/moosh](https://github.com/tmuras/moosh) | `262` | 🟢 GPL-3.0 (`35,149 B`) | `master` | `2026-10-14` |
+| [moodlebox/moodlebox](https://github.com/moodlebox/moodlebox) | `145` | 🟡 AGPL-3.0 (`34,523 B`) | `main` | 🟢 **`2026-11-01`** |
+| [jcrodriguez-dis/moodle-mod_vpl](https://github.com/jcrodriguez-dis/moodle-mod_vpl) | `128` | 🟢 GPL-3.0 (`35,147 B`) | `master` | 🟢 **`2026-11-01`** |
+| [hit-moodle/moodle-local_onlinejudge](https://github.com/hit-moodle/moodle-local_onlinejudge) | `124` | 🟢 GPL-3.0 (`35,147 B`) | `master` | `2026-10-26` |
+| [moodle-an-hochschulen/moodle-theme_boost_union](https://github.com/moodle-an-hochschulen/moodle-theme_boost_union) | `106` | 🟢 GPL-3.0 (`35,147 B`) | `main` | `2026-10-31` |
+| [catalyst/moodle-tool_objectfs](https://github.com/catalyst/moodle-tool_objectfs) | `102` | 🟢 GPL-3.0 *(hdr)* | 🔴 `MOODLE_404_STABLE` | 🟢 **`2026-11-01`** |
+| [erseco/alpine-moodle](https://github.com/erseco/alpine-moodle) | `88` | 🟢 **MIT** (`1,072 B`) | `main` | `2026-10-22` |
+
+🟢 **Contrast with `p601`'s week** — a forming category of sub-`35★` repos — **with `8` plugins between
+`88★` and `660★`, all pushed inside a month, three inside `24` hours.** 🔴 **It was unheld not because
+it is new but because the axis was never walked**; this base already documented both mechanisms that
+hide such rows (source-header grants, versioned branches).
+
+### 🟡 Forming this week — LMS-resident connectors, and the category is *older than it looks*
+
+🔴 **These are not a new category.** `44` LMS/MCP-shaped addresses sit unpromoted in
+[`../evidence/promotion-ledger.2026-10-25-p436.tsv`](../evidence/promotion-ledger.2026-10-25-p436.tsv),
+claimed on `trending` pages and on no live shelf. 🟢 **New *addresses* this week:**
+
+| repo | ★ | grant (byte-read) | last push |
+| --- | --: | --- | --- |
+| [zs-andy/lms-cli](https://github.com/zs-andy/lms-cli) | `9` | 🟢 MIT (`1,077 B`) | `2026-10-03` |
+| [jasp-nerd/courseforge](https://github.com/jasp-nerd/courseforge) | `3` | 🟢 Apache-2.0 (`11,358 B`) | `2026-07-19` |
+| [tomtranjr/canvas-control](https://github.com/tomtranjr/canvas-control) | `3` | 🟢 MIT (`1,060 B`) | `2026-03-24` |
+| [hunterschep/canvas-lms-codex-plugin](https://github.com/hunterschep/canvas-lms-codex-plugin) | `2` | 🟢 MIT (`1,069 B`) | `2026-04-28` |
+
+🔴 **And `4 of 11` sibling addresses byte-read as grantless** — a `36 %` base rate in the category.
+🟡 **Watch, do not adopt wholesale.**
+
+### 🔴 `602-B` — one genuinely new axis-pollution mechanism, and the others were already held
+
+🔴 **Struck from this pass's draft as already carried:** the `in:…,readme` qualifier pulling in
+awesome-lists (`10` prior occurrences), the `grading`/`upgrading` substring artefact (`P831`'s class),
+and polysemy as a concept. 🟢 **What is new:**
+
+| mechanism | the new instance | why it is distinct |
+| --- | --- | --- |
+| 🟢 **`topic:`-level polysemy** | `topic:lti` returns **Learning Tools Interoperability** *and* **Linear Time-Invariant** — [kmilo17pet/qlibs](https://github.com/kmilo17pet/qlibs) (`104★`), [jrgenerative/fixed-wing-sim](https://github.com/jrgenerative/fixed-wing-sim) (`164★`), [dimigeorgiou/Python-Digital-Signal-Processing-Basics](https://github.com/dimigeorgiou/Python-Digital-Signal-Processing-Basics) | 🔵 `P831` is a *substring* defect inside a word; this is **two communities applying the same tag correctly**. No word-bounding fixes it — only pairing the axis with a sector term |
+| 🟢 **Genre capture** (named here for the first time) | `topic:university` → internship job boards: [SimplifyJobs/Summer2027-Internships](https://github.com/SimplifyJobs/Summer2027-Internships) (`48,262★`), [speedyapply/2027-SWE-College-Jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) (`9,592★`). `topic:lecture-notes` → courseware | 🔴 **Not fixable by narrowing.** The axis is on-topic and one off-topic *genre* owns the ranking; visible at `n=5`, so read the top of the distribution before trusting the axis |
+
+Evidence: [`../evidence/axis-pollution.2026-11-02-p602.tsv`](../evidence/axis-pollution.2026-11-02-p602.tsv).
+
+### 🟢 Sweep parameters, recorded so the next pass can diff rather than re-derive
+
+| parameter | value |
+| --- | --- |
+| axes | `60` (`20` topic-only, `20` agent/MCP-shaped, `20` tightened topic + free-text) |
+| rows returned | `726` |
+| unique addresses | `653` |
+| 🔴 never held — **first (wrong) figure** | `359` (`55.0 %`) |
+| 🟢 never held — **corrected** | **`329` (`50.4 %`)** |
+| axes returning zero rows | 🔴 `10` |
+| unique repos byte-read | `53` |
+| fabricated-path controls | 🟢 **`65 of 65` at `404`** |
+| rows promoted across all pages | `33` |
+
+🔴 **The `10` nil axes, written down because an informed nil is information:**
+`autograder AI language:python stars:>100`, `education ERP open source in:name,description stars:>100`,
+`education skill pack claude in:name,description stars:>100`,
+`lesson plan generator AI in:name,description stars:>50`,
+`teaching assistant agent LLM in:name,description stars:>200`,
+`topic:early-childhood-education stars:>10`, `topic:educational-technology agent stars:>100`,
+`topic:math-education stars:>150`, `topic:sign-language education stars:>50`,
+`topic:teacher-tools stars:>50`.
+🔵 **`8 of 10` are free-text-plus-threshold, and that is the diagnosis:** the nil is the *threshold*,
+not the sector. 🟢 **`topic:teacher-tools` and `topic:math-education` are the two genuine topic nils —
+a labelling fact, not an absence of supply**: `moodle-block_xp` and `moodle-mod_vpl` are both teacher
+tools and carry neither tag.
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 `30`-AXIS TOPIC SWEEP, `864` ADDRESSES, `614` UNHELD (`71.1 %`). 🟢 THE WEEK'S REAL SIGNAL IS A FORMING CATEGORY, NOT A BIG REPO: **AGENT-NATIVE COURSE AUTHORING** — `5` REPOS, ALL PUSHED IN THE LAST `72` HOURS, ALL PERMISSIVE, ALL UNDER `35★`. 🔴 AND THE WEEK'S LARGEST MOVER IS A TRAP: `wdcpclover/ai4paper`, `4,041★`, BYTE-READS AS **GRANTLESS** — NO LICENCE FILE AT `main`, CONTROL `404`.**
 
 ### 🟢 Forming this week — agent-native course authoring and study tooling (all grants byte-read `2026-11-01`)

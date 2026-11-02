@@ -1,0 +1,20 @@
+topic:education topic:mcp
+topic:education topic:agent
+topic:education topic:llm stars:>30
+topic:edtech stars:>80
+topic:ai-education stars:>30
+topic:education-ai stars:>20
+topic:learning-analytics stars:>15
+topic:moodle stars:>5
+topic:openedx stars:>5
+topic:lti stars:>10
+topic:autograder stars:>10
+topic:homework stars:>50
+moodle mcp in:name,description
+canvas lms mcp in:name,description
+tutor agent in:name,description stars:>80
+study agent in:name,description stars:>80
+grading llm in:name,description stars:>15
+topic:question-generation stars:>30
+topic:educational-data-mining stars:>10
+topic:university stars:>150

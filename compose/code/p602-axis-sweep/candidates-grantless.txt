@@ -1,0 +1,12 @@
+catalyst/moodle-tool_objectfs
+danmarsden/moodle-mod_attendance
+catalyst/moodle-auth_saml2
+FMCorz/moodle-block_xp
+WebPA/WebPA
+codern-org/codern
+akshsgaur/CMUCanvasMCPSErver
+orionkabeza/canvas-mcp
+colehollander10-netizen/canvas-student-mcp-server
+frappe/education
+navariltd/Junior-School
+krayin/agent-skills

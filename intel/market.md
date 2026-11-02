@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE **THIRTY-SECOND** CONSECUTIVE NIL: `41 of 41` SUBSTANTIVE TOKENS ALREADY HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`). 🟢 ON LATAM THIS BASE IS NOW **MORE PRECISE THAN THE WEB**. 🟢 THE SUPPLY SIDE MOVED AND IT MOVED THE REGIONAL PICTURE: ALL `5` OPPORTUNITY SUBSECTIONS UPDATED UNDER THE SINGLE CANONICAL BLOCK. 🔴 AND THIS PASS STRUCK ITS OWN DRAFTED CLAIM THAT THE LATAM/ERP GAP HAD MOVED — THE PLATFORMS IT CREDITED WERE ALREADY ON THESE PAGES.**
+
+### 🔴 The legs, with the per-region denominator
+
+| leg | region | tokens | held | new |
+| --- | --- | --: | --: | --: |
+| `top open source AI agents education 2026 github MIT` | Global | `2` | `2` | `0` |
+| `github trending education AI 2026` | Global | `4` | `4` | `0` |
+| `open source platform education ERP CRM MIT Apache` | Global | `6` | `6` | `0` |
+| `AI education industry trends 2026` | Global | `4` | `4` | `0` |
+| `AI education … adoption regulation players` | **North America** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **EMEA** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **APAC** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **LATAM** | `6` | `6` | `0` |
+| **total** | | **`41`** | 🔴 **`41`** | 🔴 **`0`** |
+
+🟢 **No region returned silence.** Each returned dated, sourced, substantive material that is already
+on these pages; the per-region itemisation is in [`../agents/trending.md`](../agents/trending.md) under
+`p602` so it is not re-fetched next pass.
+Evidence: [`../evidence/websearch-legs.2026-11-02-p602.tsv`](../evidence/websearch-legs.2026-11-02-p602.tsv).
+
+### 🔴 Both of this pass's novelty instruments were wrong, and in the same direction
+
+| instrument | defect | effect |
+| --- | --- | --- |
+| held-set matcher (supply side) | 🔴 URL-form only; missed backticked bare slugs | `2,404 of 6,083` held addresses invisible (`39.5 %`); novelty `55.0 %` → **`50.4 %`** |
+| exact-phrase novelty probe (demand side) | 🔴 scored a shorter in-base wording as `NEW` | `1` false `NEW`; corrected to `41 of 41` held |
+
+🔵 **Both errors inflated apparent novelty**, which is the direction that produces *false findings*
+rather than missed ones. 🟢 **Rung: measure novelty with two matchers and take the larger held set.**
+🔴 **What it cost this pass, declared:** `6` drafted rows and `7` drafted claims were struck before
+publication, including a drafted claim on **this page** that the ERP/SIS gap had moved —
+[`../verticals/solutions.md`](../verticals/solutions.md) already names `openeducat/openeducat_erp`
+(branch `19.0`, LGPL-3.0, `8,241 B`) and `frappe/education` (branch `develop`, `19`-byte `license.txt`).
+🟢 **This pass reproduced both grants independently and agrees** — a reproduction check, not a discovery.
+Evidence: [`../evidence/held-set-matcher-correction.2026-11-02-p602.tsv`](../evidence/held-set-matcher-correction.2026-11-02-p602.tsv).
+
+### 🔴 Evidence grade, restated because it caps every regional figure on this page
+
+Unchanged and **secondary**. 🔴 **Two pages returned by the *same* EMEA leg gave the EU high-risk
+education deadline as `2 August 2026` and as `2 December 2027`.** This base already records the
+reconciling instrument (the `2026` Digital Omnibus, Regulation (EU) `2026/1744`). 🟢 **Cite EUR-Lex —
+Regulation (EU) 2024/1689 as amended by 2026/1744 — not a compliance marketing page.** No primary
+legal host resolved from this session this pass either.
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE THIRTY-FIRST CONSECUTIVE NIL, AND FOR THE FIRST TIME WITH A *PER-REGION* DENOMINATOR: `39 of 39` SUBSTANTIVE TOKENS ALREADY HELD — NA `4/4`, EMEA `5/5`, APAC `3/3`, LATAM `5/5`. 🟢 NO REGION RETURNED SILENCE; EVERY REGION RETURNED REAL, DATED MATERIAL THIS BASE ALREADY CARRIES. 🟢 THE SUPPLY SIDE MOVED INSTEAD, AND IT MOVED THE REGIONAL PICTURE: `4` OPPORTUNITY SUBSECTIONS UPDATED UNDER THE SINGLE CANONICAL BLOCK, PLUS `Global`.**
 
 ### 🔴 The legs, with the denominator that makes the nil a measurement rather than an absence of effort
@@ -294,6 +339,25 @@ they are now separate measurements and must stay separate.
 
 ### North America
 
+🆕 **`p602` — the supply this pass promoted is *Canvas-shaped*, and that is a North American fact.**
+`4 of 5` rows promoted to [`../agents/top.md`](../agents/top.md) target **Canvas**, the dominant North
+American higher-ed LMS. 🟢 **The engagement is instructor-workflow automation inside an LMS the
+institution already runs**: syllabus → course build
+([`jasp-nerd/courseforge`](https://github.com/jasp-nerd/courseforge), Apache-2.0, with
+**IMSCC/Common Cartridge** export so the work survives an LMS migration) and scripted bulk operations
+([`tomtranjr/canvas-control`](https://github.com/tomtranjr/canvas-control), MIT). Recipe `P-602-B` in
+[`../compose/patterns.md`](../compose/patterns.md).
+🔴 **Priced caveat, and it is the hard one:** `4 of 11` Canvas-MCP addresses byte-read as **grantless**
+— a `36 %` base rate in the easiest category in this sector to vendor by accident.
+🟢 **US university provenance is unusually legible in this pass's autograding supply** —
+[`illinois-cs241/broadway`](https://github.com/illinois-cs241/broadway) (MIT, byte-read against an API
+`NOASSERTION`), [`RiceComp215-Staff/RiceChecks`](https://github.com/RiceComp215-Staff/RiceChecks)
+(Apache-2.0), and [`csev/wa4e`](https://github.com/csev/wa4e) (BSD-2-Clause, from an **LTI spec
+co-author**, pushed `2026-11-01`). 🟡 **Three of those four are stale**; the live grading path is a
+Moodle plugin, which is an EMEA-weighted stack.
+🔴 **Regulatory picture unchanged:** `7 of 7` tokens already held; the Canada/Mexico primary-source gap
+(`583-E`) still holds.
+
 🆕 **`p600` — the supply side moved here, not the regulation.** The largest permissively-licensed
 **STEM curriculum estate** this base has ever found is a US publisher's:
 [`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources), **`81` repos**,
@@ -390,6 +454,26 @@ found. 🟢 **Lead with the MIT rows above and be able to say why that one is ex
 
 ### EMEA
 
+🆕 **`p602` — the EU AI Act's high-risk trigger and this pass's new supply land on the *same function*,
+which makes the EMEA engagement unusually concrete.** The Act classifies AI used for **student
+evaluation and exam scoring** as high-risk. 🟢 **This pass added the open-source stack that performs
+exactly that function inside the LMS Europe actually runs:**
+[`jcrodriguez-dis/moodle-mod_vpl`](https://github.com/jcrodriguez-dis/moodle-mod_vpl) (GPL-3.0, in-LMS
+code submission + **automatic grading**, pushed `2026-11-01`) and
+[`hit-moodle/moodle-local_onlinejudge`](https://github.com/hit-moodle/moodle-local_onlinejudge)
+(GPL-3.0, the scoring backend). 🔵 **So the sale is not "add AI to grading" — it is "make an existing
+automated-grading deployment conformant"**: logging, human-review gates, transparency notices and an
+Annex III-shaped conformance file around a plugin the institution already has. Recipe `P-602-A`.
+🟢 **One EMEA placement byte-evidenced rather than inferred:**
+[`moodle-an-hochschulen/moodle-theme_boost_union`](https://github.com/moodle-an-hochschulen/moodle-theme_boost_union)
+(GPL-3.0; `Hochschule` and `German` named in its own README — a German university consortium
+maintaining the higher-ed theme layer).
+🟡 **Reciprocity is the constraint on all of it:** `10 of 11` new Moodle rows are GPL-3.0-or-later or
+AGPL-3.0 — safe to **deploy** as plugins, 🔴 not a basis for proprietary redistribution. The billable
+artefact is the conformance layer, not forked plugin source.
+🔴 **Deadline caution:** `2 August 2026` and `2 December 2027` both came back inside a single search
+leg this pass. Cite EUR-Lex, not a vendor compliance page.
+
 🆕 **`p600` — no new regulatory token was served; the opportunity is in sequencing what is already
 known.** All EMEA tokens returned this pass were already held: the **Digital Omnibus**
 (`Regulation (EU) 2026/1744`) deferral of stand-alone Annex III education systems to **`2027-12-02`**,
@@ -479,6 +563,22 @@ unusable as code today. 🟡 **One repository is not a market.** It is evidence 
 "EMEA" has been going unqueried, and the axis to query again before this section is next rewritten.
 
 ### APAC
+
+🆕 **`p602` — the first APAC-placed row on this base's newly promoted LMS-connector shelf, and it is
+the only one that is not Canvas-only.** [`zs-andy/lms-cli`](https://github.com/zs-andy/lms-cli) (MIT,
+`1,077 B` byte-read) is a **multi-school Canvas *and* Blackboard** CLI written explicitly for terminal
+and agent use, placed APAC on byte evidence (Chinese-language README and UI, `54` non-ASCII lines).
+🔵 **Multi-tenant-by-design is a regionally meaningful property**: it is built for a student holding
+accounts at several institutions, which is a different product shape from the single-institution
+Canvas tools that dominate the North American supply. Recipe `P-602-C`.
+🟡 **And an APAC-origin row in the Moodle substrate:**
+[`hit-moodle/moodle-local_onlinejudge`](https://github.com/hit-moodle/moodle-local_onlinejudge)
+(GPL-3.0) — 🔴 **left `Global` on this page, not placed APAC**, because the only regional marker is the
+org initialism and this page does not place rows on initialisms.
+🔴 **Compliance window, all tokens already held:** Korea's `AI Basic Act` in force `22 January 2026`;
+Vietnam's AI law effective `1 March 2026` with an **`18`-month transition specifically for
+education**; India's content-labelling duty from `20 February 2026`. 🟡 **Vietnam's education
+carve-out is the dated, actionable one** — a defined remediation window with a known end.
 
 🆕 **`p600` — APAC is where this pass's new permissive supply actually landed.** **`4 of the 9`** agent
 rows promoted this pass are APAC-placed and **in-language rather than translated**:
@@ -579,6 +679,29 @@ University) is 🔴 **CC BY-NC-SA**. 🟢 APAC supplies this page's best permiss
 clearest licence traps; the grant must be read per repository.
 
 ### LATAM
+
+🆕 **`p602` — one new byte-evidenced LATAM row, and a struck claim that the gap had moved.**
+🔴 **Struck from this pass's draft:** that two education ERP/SIS platforms had newly become shippable
+for the region. [`../verticals/solutions.md`](../verticals/solutions.md) already names both
+(`openeducat/openeducat_erp` at branch `19.0`, `frappe/education` at `develop`), so that was a
+restatement and not a move.
+🟢 **What is genuinely new:** [`eduNEXT/tvm`](https://github.com/eduNEXT/tvm) — Tutor version and
+environment manager for **multi-version Open edX operations**, placed LATAM because the project's own
+documentation URL is `tvm.docs.edunext.co`, a **Colombian ccTLD**. 🔵 **This is a different kind of
+row from the nils this subsection has carried:** not a LATAM *consumer* of foreign tooling, but a
+LATAM-maintained piece of **infrastructure for running other people's platforms** — the shape of a
+regional service economy around Open edX. Recipe `P-602-D`.
+🔴 **What has NOT moved:** `tvm` is **AGPL-3.0**, not permissive; `0 of 5` promoted agent rows are
+LATAM-placed; there is still **no permissive LATAM platform of record**.
+🟢 **A second signal, and it is about this base rather than the market.** The LATAM leg returned
+"UNESCO launched a regional Observatory on AI in Education in April 2026". 🟢 **This base already held
+`Santiago, 2026-04-14`** — more precise than the search produced. 🔵 **On LATAM education-AI policy
+this shelf is ahead of the general web**, which narrows the standing LATAM gap to its real shape:
+coverage of *policy* is dense; the gap is specifically in **permissively licensed, LATAM-originated
+software**.
+🔴 **Gaps re-registered, unclosed:** no education-specific LATAM capital figure beyond the
+`$4.2bn by 2030 (~45 % CAGR)` forecast; no primary-source regulatory instrument for **Mexico**
+reachable from this session.
 
 🆕 **`p600` — recorded as a nil, with the denominator that makes it a measurement.** 🔴 **`0 of the 9`**
 agent rows promoted this pass are LATAM-placed, and 🔴 **`0 of the 11`** platform/curriculum rows are.
@@ -686,6 +809,22 @@ LATAM-origin, all of which are LATAM-deployable.**
 structural one. Re-measure in `10` passes before treating `0.12 %` as the region's ceiling.
 
 ### Global
+
+🆕 **`p602` — the finding that applies in every region is about this base's own instruments, not about
+a market.** 🔴 **Two novelty instruments ran this pass and both overstated novelty:** the supply-side
+held-set matcher read only `github.com/<o>/<r>` and missed `2,404 of 6,083` held addresses (`39.5 %`,
+because this base writes addresses as **backticked bare slugs in table cells**), and the demand-side
+exact-phrase probe scored a shorter in-base wording as `NEW`.
+🟢 **Corrected: novelty `55.0 % → 50.4 %`; mandated legs `41 of 41` held.**
+🔴 **Cost, declared: `6` drafted rows and `7` drafted claims struck before publication**, including
+`version.php` source-header grants (`56` prior occurrences), the `MOODLE_503_STABLE` /
+`MOODLE_500_STABLE` branch names, bare-semver branches such as `2026.9.x`, and `frappe/education`'s
+`19`-byte `license.txt`.
+🔵 **Why this belongs on a market page and not only in a methods note.** A studio reading this base to
+brief an engagement needs to know which rows are *findings* and which are *restatements* — 🟢 **an
+over-counting novelty figure is the one defect that silently converts the second into the first.**
+🟢 **Rung: measure novelty with two matchers and take the larger held set.** Control committed at
+[`../compose/code/p602-axis-sweep/heldset.sh`](../compose/code/p602-axis-sweep/heldset.sh).
 
 🆕 **`p600` — a new permissive tier, and a licence risk that sits at the TOP of the quality ranking.**
 The **spaced-repetition / retention** category is now held as software rather than as a concept

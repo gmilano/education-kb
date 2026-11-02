@@ -4,6 +4,123 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THIS PASS'S FIRST DRAFT CLAIMED A NEW CATEGORY AND WAS WRONG: THE LMS-CONNECTOR CATEGORY WAS FOUND LONG AGO AND **NEVER PROMOTED** — `44` LMS/MCP-SHAPED ADDRESSES SIT IN `evidence/promotion-ledger.2026-10-25-p436.tsv` CLAIMED IN `trending` AND ON NO LIVE SHELF, WHICH IS WHAT `gate-promotion-ledger` HAS BEEN RED ABOUT FOR ~`165` PASSES. 🟢 SO THIS PASS DOES THE THING THAT WAS ACTUALLY OUTSTANDING: IT **PROMOTES** `5` ROWS OUT OF THAT BACKLOG WITH FRESH BYTE-READ GRANTS, SHELF `69 → 74`. 🔴 `602-A`: THIS PASS'S OWN HELD-SET MATCHER WAS URL-ONLY AND MISSED `39.5 %` OF THE BASE — NOVELTY OVERSTATED `55.0 %` vs `50.4 %`, AND `6` DRAFTED ROWS WERE ALREADY HELD. FIVE REGISTERED (`602-A`…`602-E`).**
+
+### 🔴 `602-A` — read this first: this pass mis-measured its own base, and the correction is the pass's most portable finding
+
+The sweep graded every address `NEW`/`HELD` against a held set built by grepping for
+`github.com/<owner>/<repo>`. 🔴 **That is the wrong matcher for this base.** Most addresses here are
+written as a **backticked bare slug** in a table cell — `` | `a-ariff/canvas-mcp` | Canvas | … | `` —
+not as a link.
+
+| held-set matcher | addresses found at the same commit |
+| --- | --: |
+| 🔴 URL form only — what `p602` swept against | `3,679` |
+| 🟢 URL form **+ backticked bare slug** — the correct set | **`6,083`** |
+| 🔴 **invisible to this pass's sweep** | **`2,404` (`39.5 %`)** |
+
+🔴 **What it cost, stated as consequences rather than as a confession:**
+**(i)** novelty was first reported as `359 of 653` (`55.0 %`); corrected it is **`329 of 653`
+(`50.4 %`)**. **(ii)** 🔴 **Six rows were drafted as new finds that this base already held** —
+`finereli/yarareads`, `vishalsachdev/learning-design-pillars`, `krayin/laravel-crm`,
+`cortezaproject/corteza`, `openeducat/openeducat_erp`, `frappe/education`. **(iii)** 🔴 **Seven
+*claims* were drafted as new that this base already carries**, including `MOODLE_503_STABLE` /
+`MOODLE_500_STABLE`, grants read from a **`version.php` source header** (`56` prior occurrences),
+bare-semver branches such as `2026.9.x`, and `frappe/education`'s `19`-byte `license.txt`.
+🟢 **All struck before publication.**
+
+🟢 **The control, so it is not a reminder.** `compose/code/p602-axis-sweep/heldset.sh` builds the set
+from both forms and carries the reason in its header; `sweep.sh` now refuses the URL-only path in
+comment and points at it. 🔵 **And the guard against over-correcting is written in too:** a bare
+`<word>/<word>` match also hits every relative path in the prose (`compose/code`, `intel/market.md`)
+and inflates `HELD` — **the backtick or link delimiter is the discriminator** between an address this
+base holds and a path in a sentence.
+Evidence: [`../evidence/held-set-matcher-correction.2026-11-02-p602.tsv`](../evidence/held-set-matcher-correction.2026-11-02-p602.tsv).
+
+### 🔴 `602-B` — the category was never missing; it was never *promoted*, and a red gate has said so for ~`165` passes
+
+🔴 **The draft claim — "LMS-resident agent connectors, a category this shelf did not have" — is false.**
+[`../evidence/promotion-ledger.2026-10-25-p436.tsv`](../evidence/promotion-ledger.2026-10-25-p436.tsv)
+carries `265` rows, of which 🔴 **`44` are LMS/MCP-shaped**, every one *claimed on a `trending` page*
+and 🔴 **on no live shelf** — `EduardoKrausME/moodle-local_mcp` (`agents/trending.md:954`),
+`Teci-AI/moodle-local_mcpconnector` (`:881`), `aryankeluskar/canvas-mcp` (`:11443`),
+`NiccoloSalvini/mcp-blackboard-ucsc`, `eledia/moodle-block_elediaai_tutor`, four separate
+`classroom-mcp` forks, and more. 🟢 **`p435` had already graded the whole `2,450`-address unpromoted
+surface first-hand** and found it `59.1 %` permissive.
+
+🔵 **So the outstanding work on this category was never discovery — it was adjudication**, and
+`gate-promotion-ledger` has been red on exactly that, with the finding count now at `154`.
+🟢 **This pass therefore promotes rather than announces.** That is a smaller claim and a more useful one.
+
+### 🟢 Promoted — the first LMS-connector rows to reach this shelf, grants byte-read `2026-11-02`
+
+🟢 Every grant byte-read at the **real default branch** (`git ls-remote --symref`), each with its
+**own** fabricated-path control at `404`. 🟢 All five addresses confirmed **not held** at `HEAD` by the
+corrected matcher.
+
+| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+| --- | --: | --- | --- | --- | --- |
+| [bijonai/EchoAI](https://github.com/bijonai/EchoAI) | **61** | 🟢 MIT (`1,064 B`) | `main` | Global | Visual + interactive companion learning partner; largest of the five |
+| [zs-andy/lms-cli](https://github.com/zs-andy/lms-cli) | `9` | 🟢 MIT (`1,077 B`) | `main` | **APAC** | 🟢 Canvas **and** Blackboard, **multi-school**, explicitly built for "终端和 Agent"; read-only by design |
+| [jasp-nerd/courseforge](https://github.com/jasp-nerd/courseforge) | `3` | 🟢 Apache-2.0 (`11,358 B`) | `main` | Global | 🟢 Syllabus → real Canvas course: MCP server + agent skills + **IMSCC/Common Cartridge** export |
+| [tomtranjr/canvas-control](https://github.com/tomtranjr/canvas-control) | `3` | 🟢 MIT (`1,060 B`) | `main` | Global | Canvas as a scriptable download pipeline, exposed over MCP |
+| [hunterschep/canvas-lms-codex-plugin](https://github.com/hunterschep/canvas-lms-codex-plugin) | `2` | 🟢 MIT (`1,069 B`) | `main` | Global | Student-facing Canvas MCP toolset packaged as a Codex plugin |
+
+🟡 **The limit, which bounds every row above.** `4 of 5` are under `11★` and single-maintainer; none
+carries an evaluation harness; and `courseforge`'s **IMSCC export is the only feature here that
+survives a change of LMS**. 🟢 **Read `jasp-nerd/courseforge` and `zs-andy/lms-cli` first** — the
+first writes a course, the second is the only one that is not Canvas-only.
+🔵 **Two addresses that belong to this category were deliberately *not* promoted** because the
+corrected matcher shows this base already holds them: `vishalsachdev/learning-design-pillars` and
+`finereli/yarareads`. They remain where they were.
+
+### 🔴 `602-C` — `4 of 11` Canvas-MCP addresses byte-read as grantless, and one is a vendor's own skill pack
+
+| repo | ★ | ladder result (`25` names, real default branch) | control | usable |
+| --- | --: | --- | --- | --- |
+| [akshsgaur/CMUCanvasMCPSErver](https://github.com/akshsgaur/CMUCanvasMCPSErver) | `8` | 🔴 no grant file; `README.md` + `pyproject.toml` carry **no licence token** | `404` | 🔴 **no** |
+| [orionkabeza/canvas-mcp](https://github.com/orionkabeza/canvas-mcp) | `3` | 🔴 no grant file; `README.md` no token | `404` | 🔴 **no** |
+| [colehollander10-netizen/canvas-student-mcp-server](https://github.com/colehollander10-netizen/canvas-student-mcp-server) | `2` | 🔴 no grant file; `README.md` + `package.json` no token | `404` | 🔴 **no** |
+| [krayin/agent-skills](https://github.com/krayin/agent-skills) | `2` | 🔴 no grant file — 🔴 **and its parent `krayin/laravel-crm` is MIT**, so a studio that cleared the parent would be wrong about the child | `404` | 🔴 **no** |
+
+🔵 **Why this is a gate and not advice.** A grantless MCP server is the easiest artefact in this sector
+to vendor by accident: small, a single file of tool definitions, and it does exactly what an engagement
+needs on day one. 🟢 **`krayin/agent-skills` is the sharpest case** — same vendor, same org, opposite
+licence position.
+
+### 🔴 `602-D` — `topic:question-generation` is live, in-domain, permissive, and *closed*
+
+`5` byte-read permissive repositories, 🔴 **every one last pushed `2021`–`2022`**:
+[clovaai/FocusSeq2Seq](https://github.com/clovaai/FocusSeq2Seq) (`112★`, MIT, `2021-04-15`),
+[teacherpeterpan/Unsupervised-Multi-hop-QA](https://github.com/teacherpeterpan/Unsupervised-Multi-hop-QA)
+(`92★`, MIT, `2022-11-16`),
+[YuxiXie/SG-Deep-Question-Generation](https://github.com/YuxiXie/SG-Deep-Question-Generation)
+(`75★`, MIT, `2022-07-16`), [awslabs/unsupervised-qa](https://github.com/awslabs/unsupervised-qa)
+(`57★`, Apache-2.0, `2021-01-22`),
+[obss/turkish-question-generation](https://github.com/obss/turkish-question-generation) (`47★`, MIT,
+`2022-08-12`).
+
+🔵 **The mechanism.** These are seq2seq-era artefacts; the task they solve was absorbed wholesale by
+general LLMs around `2023`, so the **axis stayed on-topic while the supply stopped being the right
+tool**. 🟢 **An axis can be live, in-domain, permissive and still closed** — distinct from a nil and
+from homonym drift. 🔴 **Shipping these as agents because they are MIT and on-topic was this pass's
+easiest available mistake.** Recorded, promoted nowhere.
+
+### 🟡 `602-E` — region was byte-evidenced for only `3` of this pass's promoted and shipped rows
+
+🔴 **On this page `Global` means *unplaced*, not worldwide.**
+
+| repo | region | the evidence, named |
+| --- | --- | --- |
+| [zs-andy/lms-cli](https://github.com/zs-andy/lms-cli) | **APAC** | 🟢 Chinese-language README and UI (`54` non-ASCII lines); description in Chinese |
+| [eduNEXT/tvm](https://github.com/eduNEXT/tvm) | **LATAM** | 🟢 `tvm.docs.edunext.co` — Colombian ccTLD in the project's own docs URL |
+| [moodle-an-hochschulen/moodle-theme_boost_union](https://github.com/moodle-an-hochschulen/moodle-theme_boost_union) | **EMEA** | 🟢 `Hochschule` + `German` named in README |
+
+🔵 **Left `Global` on purpose, because a name is not evidence:** `h5p/*` (H5P is Norwegian — *not in
+these bytes*), `hit-moodle/*` (initials suggest Harbin — *not in these bytes*), `navariltd/*` (Kenyan
+Frappe partner; the README's only contact marker is a `gmail` address). 🟢 **None is placed on an
+initialism**, which is why the three above can be relied on.
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 `16` AGENT ROWS PROMOTED, SHELF `53 → 69`, AND THEY ARE ALL ONE CATEGORY THIS BASE HAS NEVER HELD: HIGHER-ED RESEARCH & ACADEMIC-WRITING AGENT SKILL PACKS. 🔴 BUT THE PASS'S LOAD-BEARING FINDING IS A TRAP AVOIDED, NOT A ROW SHIPPED: THE SINGLE LARGEST NEW FIND IN THIS SECTOR — `54,881★` — IS `CC BY-NC`, AND SO ARE THE NEXT THREE. 🔴 OF `29` `NOASSERTION` ROWS BYTE-READ, `28` RESOLVED AND `11 of 28` (`39.3 %`) ARE COMMERCIALLY UNUSABLE — AND THE TOP `4` BY STARS ARE ALL IN THAT `11`. 🟢 STAR RANK IS AN *ANTI*-SIGNAL FOR USABILITY IN THIS BAND. SIX REGISTERED (`601-A`…`601-F`).**
 
 ### 🔴 Read this before the promoted rows — the most-starred education find of `601` passes cannot be used

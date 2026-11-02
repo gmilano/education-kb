@@ -1,0 +1,13 @@
+mechanism	axis	polluting_hit	stars	why_it_is_not_education
+POLYSEMY	topic:lti	kmilo17pet/qlibs	104	LTI = Linear Time-Invariant (embedded control lib), not Learning Tools Interoperability
+POLYSEMY	topic:lti	jrgenerative/fixed-wing-sim	164	LTI systems in flight dynamics
+POLYSEMY	topic:lti	dimigeorgiou/Python-Digital-Signal-Processing-Basics	24	LTI systems in DSP
+POLYSEMY	topic:adaptive-learning	codelion/adaptive-classifier	577	adaptive ML classifier, no learner
+POLYSEMY	topic:adaptive-learning	max-baz/wluma	956	adaptive screen backlight
+SUBSTRING	grading llm in:name,description	coaidev/coai	9343	matches "upgrading", not "grading"
+SUBSTRING	grading llm in:name,description	ageerle/ruoyi-ai	5803	same substring artefact
+GENRE-CAPTURE	topic:university	SimplifyJobs/Summer2027-Internships	48262	internship job board, not education tooling
+GENRE-CAPTURE	topic:university	speedyapply/2027-SWE-College-Jobs	9592	job board
+GENRE-CAPTURE	topic:lecture-notes	rossant/awesome-math	16731	courseware/link list
+GENRE-CAPTURE	in:name,description,readme	awesome-selfhosted/awesome-selfhosted	332794	matched BOTH "moodle" and "canvas lms" legs via README body
+GENRE-CAPTURE	in:name,description,readme	jaywcjlove/awesome-mac	117550	README body match only

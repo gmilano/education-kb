@@ -1,0 +1,20 @@
+topic:grading stars:>150
+topic:rubric stars:>20
+topic:assessment education stars:>200
+topic:academic-integrity stars:>30
+topic:student-information-system stars:>50
+topic:school-management stars:>200
+topic:curriculum-development stars:>50
+topic:teacher-tools stars:>50
+topic:special-education stars:>20
+topic:early-childhood-education stars:>10
+topic:vocational-training stars:>10
+topic:exam-generator stars:>30
+topic:lecture-notes stars:>100
+topic:flashcards spaced-repetition stars:>400
+topic:stem-education stars:>100
+topic:math-education stars:>150
+topic:classroom stars:>200
+topic:e-learning stars:>400
+topic:mooc stars:>100
+topic:educational-technology agent stars:>100

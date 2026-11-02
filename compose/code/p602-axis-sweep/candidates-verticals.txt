@@ -1,0 +1,7 @@
+krayin/laravel-crm
+cortezaproject/corteza
+openeducat/openeducat_erp
+frappe/education
+navariltd/Junior-School
+krayin/agent-skills
+RukkmaniT/gegok12-documentation

@@ -1,0 +1,20 @@
+topic:autograding stars:>20
+autograder AI language:python stars:>100
+topic:knowledge-tracing stars:>30
+topic:intelligent-tutoring-system stars:>10
+topic:adaptive-learning stars:>30
+topic:ai-tutor stars:>50
+mcp server moodle in:name,description,readme stars:>5
+mcp server canvas lms in:name,description,readme stars:>5
+education skill pack claude in:name,description stars:>100
+teaching assistant agent LLM in:name,description stars:>200
+topic:quiz-generator stars:>30
+lesson plan generator AI in:name,description stars:>50
+topic:language-learning llm stars:>200
+grading agent rubric in:name,description stars:>30
+topic:school-erp stars:>20
+topic:student-management stars:>100
+education ERP open source in:name,description stars:>100
+topic:sign-language education stars:>50
+topic:accessibility dyslexia stars:>20
+socratic tutor in:name,description stars:>50

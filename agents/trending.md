@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE **THIRTY-SECOND** CONSECUTIVE NIL: `41 of 41` SUBSTANTIVE TOKENS ALREADY HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`). 🟢 ON LATAM THIS BASE IS **MORE PRECISE THAN THE WEB**: THE LEG RETURNED "APRIL 2026"; THE SHELF ALREADY HELD `Santiago, 2026-04-14`. 🔴 `602-C`: THIS PASS'S NOVELTY PROBE PRODUCED A FALSE `NEW` AND IS CORRECTED IN THE EVIDENCE FILE — THE SECOND MEASUREMENT DEFECT THIS PASS FOUND IN ITS OWN INSTRUMENTS.**
+
+### 🔴 `602-C` — the novelty probe produced a false `NEW`, and exact-phrase matching is why
+
+The legs were scored by exact-phrase `grep -F` against the whole base. `40 of 41` came back `HELD`.
+🔴 **The one `NEW` — `"Observatory on Artificial Intelligence in Education"` — was refuted by hand:**
+
+| | text |
+| --- | --- |
+| what the web leg returned | *"In April 2026, UNESCO launched a regional Observatory on AI in Education"* |
+| 🟢 what this base already held | **`UNESCO Observatory on AI in Education for LAC, Santiago, 2026-04-14`** |
+
+🔵 **The base held the fact in a *shorter* wording carrying a *more precise* date** — the phrase
+differed, the knowledge did not. 🔴 **Exact-phrase novelty detection systematically overstates
+novelty**, and a pass reporting `1 new token` would have been reporting its own string comparison.
+🟢 **Corrected in place**, reason in a `note` column:
+[`../evidence/websearch-legs.2026-11-02-p602.tsv`](../evidence/websearch-legs.2026-11-02-p602.tsv).
+🔵 **Read with `602-A`** (the held-set matcher that missed `39.5 %` of the base): 🔴 **both of this
+pass's novelty instruments were wrong in the same direction — they overstated how new things were.**
+🟢 That is the pass's most portable lesson, and it argues for measuring novelty with two matchers and
+taking the *larger* held set.
+
+### 🔴 The legs, with the per-region denominator
+
+| leg | region | tokens | held | new |
+| --- | --- | --: | --: | --: |
+| `top open source AI agents education 2026 github MIT` | Global | `2` | `2` | `0` |
+| `github trending education AI 2026` | Global | `4` | `4` | `0` |
+| `open source platform education ERP CRM MIT Apache` | Global | `6` | `6` | `0` |
+| `AI education industry trends 2026` | Global | `4` | `4` | `0` |
+| `AI education … adoption regulation players` | **North America** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **EMEA** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **APAC** | `6` | `6` | `0` |
+| `AI education … adoption regulation players` | **LATAM** | `6` | `6` | `0` |
+| **total** | | **`41`** | 🔴 **`41`** | 🔴 **`0`** |
+
+🔵 **What each region actually returned, so the nil is not mistaken for an unrun leg.**
+**North America:** `134` AI-in-education bills across `31` states in `2026`; Maryland/Idaho/Oklahoma/
+Virginia mandating both state guidance and district policy; a New York bill restricting classroom AI to
+ninth grade and above; the `K-12 AI Literacy and Readiness Act of 2026` advanced in committee; Gallup's
+`60 %` teacher adoption; Berkeley Law's exam ban from Summer `2026`.
+**EMEA:** the EU AI Act's high-risk classification for admissions/evaluation/exam scoring; the `2026`
+Digital Omnibus, Regulation (EU) `2026/1744`, moving stand-alone high-risk education duties from
+`2 August 2026` to `2 December 2027`; the emotion-recognition ban already live; chatbot transparency
+from `2 August 2026`; the European AI Office in DG CONNECT.
+**APAC:** Korea's `AI Basic Act` in force `22 January 2026`; Vietnam's AI law effective
+`1 March 2026` with an **`18`-month transition specifically for education**; India's content-labelling
+duty from `20 February 2026`; Australia's National AI Plan taking the no-standalone-act route; Ipsos
+`2026` ban support `23 %` (Indonesia) to `31 %` (Korea).
+**LATAM:** Cetic.br's `53 %` of Brazilian school administrators using AI against `22 %` with
+guidelines; UNESCO IESALC/UNU-IAS on `200` HEIs in `19` countries — `87 %` using AI, `26 %` with a
+strategy; Universidad de los Andes' `716` regulatory instruments across `23` jurisdictions.
+
+### 🟢 What this nil should change about how these legs are budgeted
+
+🔵 **Thirty-two consecutive nils is no longer a result about the web — it is a result about this base.**
+The demand-side legs now function as a **regression test** (does the shelf still carry the sector's
+dated facts?) rather than as discovery. 🟢 **They pass.**
+🔴 **Every row this pass shipped came from the supply side**, and the mechanism was not a better query
+— it was walking **`topic:moodle`**, an axis with `4` passing mentions and no sweep behind it.
+🟢 **Recommendation, unchanged from `p601` and now better evidenced: keep `4` global + `4` regional for
+the regression value, and spend the pass's real budget on unswept in-domain axes and on probe
+correctness.** 🔴 **This pass is the argument for the second half** — two of its own instruments were
+measurably wrong, and both errors inflated apparent novelty.
+
+### 🔴 One caution this pass will not let pass unmarked
+
+Every regional figure above comes from **trend pieces, vendor blogs and aggregator trackers**, and
+🔴 **two pages returned by the *same* EMEA leg gave the high-risk education deadline as
+`2 August 2026` and as `2 December 2027`.** 🟢 This base already records the Digital Omnibus as the
+reconciling instrument; a studio quoting either date must cite **EUR-Lex (Regulation (EU) 2024/1689 as
+amended by 2026/1744)**, not a compliance marketing page. 🟡 **Evidence grade on this page's regional
+figures is unchanged: secondary.**
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🔴 `p600`'S HEADLINE NUMBER IS NOT WRONG BUT IT IS NOT A SUPPLY MEASUREMENT: `71.1 %` OF `864` ADDRESSES ARE NEW AND `1.27 %` ARE SHIPPABLE, AND THE GAP IS NOT ATTRITION — IT IS THAT *NOVELTY HAS TWO CAUSES WITH OPPOSITE VALUE*. 🟢 GENUINE UNQUERIED IN-DOMAIN CATEGORIES (`academic-writing`: `100 %` NEW → `7 of 11` SHIPPABLE ROWS) AND HOMONYM DRIFT OUT OF THE SECTOR (`library-management`: `100 %` NEW → `6.7 %` RELEVANT → `0` SHIPPABLE). A SINGLE NOVELTY FIGURE AVERAGES THEM AND CANNOT TELL A CATEGORY GAP FROM A WORD COLLISION. 🔴 AND `gradebook` IS GENUINELY EXHAUSTED: `30 of 30` HELD. SIX REGISTERED (`601-A`…`601-F`).**
 
 ### 🔴 `601-F` — the funnel, with every denominator attached

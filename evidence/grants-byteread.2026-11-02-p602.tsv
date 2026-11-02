@@ -1,0 +1,66 @@
+repo	default_branch	grant_path	bytes	family	holder	ctl404	status
+catalyst/moodle-tool_objectfs	MOODLE_404_STABLE	-	0	-	-	404	NO-GRANT-FILE
+danmarsden/moodle-mod_attendance	MOODLE_503_STABLE	-	0	-	-	404	NO-GRANT-FILE
+catalyst/moodle-auth_saml2	MOODLE_500_STABLE	-	0	-	-	404	NO-GRANT-FILE
+h5p/moodle-mod_hvp	stable	LICENSE	35149	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+FMCorz/moodle-block_xp	master	-	0	-	-	404	NO-GRANT-FILE
+erseco/alpine-moodle	main	LICENSE	1072	MIT	Copyright (c) 2023 Ernesto Serrano	404	OK
+tmuras/moosh	master	LICENSE	35149	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+FMCorz/mdk	master	LICENSE.txt	35147	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+C0D3D3V/Moodle-DL	main	LICENSE	35141	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+jcrodriguez-dis/moodle-mod_vpl	master	LICENSE.txt	35147	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+hit-moodle/moodle-local_onlinejudge	master	COPYING.txt	35147	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+moodlebox/moodlebox	main	LICENSE.md	34523	AGPL-3.0	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)	404	OK
+moodle-an-hochschulen/moodle-theme_boost_union	main	COPYING.txt	35147	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+appsembler/figures	main	LICENSE	1078	MIT	Copyright (c) 2018 Noderabbit Inc., d.b.a. Appsembler	404	OK
+openfun/openedx-docker	master	LICENSE	34520	AGPL-3.0	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)	404	OK
+cookiecutter-openedx/cookiecutter-openedx-devops	main	LICENSE	35136	AGPL-3.0	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)	404	OK
+eduNEXT/tvm	main	LICENSE	34523	AGPL-3.0	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)	404	OK
+mindsdb/edux	master	LICENSE	1068	MIT	Copyright (c) 2020 MindsDB Inc	404	OK
+csev/wa4e	master	LICENSE	1301	BSD	Copyright (c) 2014, Charles Severance	404	OK
+ucfopen/lti-template-flask	master	LICENSE	1130	MIT	Copyright (c) 2017 University of Central Florida - Center for Distributed Learning	404	OK
+doldsimo/lti-1.3-canvas-lms	main	LICENSE	1067	MIT	Copyright (c) 2022 Simon Dold	404	OK
+js-kyle/nodejs-lti-provider	master	LICENCE	1067	MIT	Copyright (c) 2019 Kyle Martin	404	OK
+WebPA/WebPA	master	-	0	-	-	404	NO-GRANT-FILE
+tkutcher/jgrade	dev	LICENSE.md	1070	MIT	Copyright (c) 2019 Tim Kutcher	404	OK
+imgVOID/autograding-api	master	LICENSE	11357	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)	404	OK
+RiceComp215-Staff/RiceChecks	master	LICENSE	11357	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)	404	OK
+codern-org/codern	main	-	0	-	-	404	NO-GRANT-FILE
+illinois-cs241/broadway	master	LICENSE	1681	MIT	Copyright (c) 2018 University of Illinois. All rights reserved. 	404	OK
+bijonai/EchoAI	main	LICENSE	1064	MIT	Copyright (c) 2025 BijonAI	404	OK
+finereli/yarareads	main	LICENSE	1066	MIT	Copyright (c) 2026 Eli Finer	404	OK
+vishalsachdev/learning-design-pillars	main	LICENSE	1071	MIT	Copyright (c) 2024 Vishal Sachdev	404	OK
+zs-andy/lms-cli	main	LICENSE	1077	MIT	Copyright (c) 2026 LMS CLI contributors	404	OK
+tomtranjr/canvas-control	main	LICENSE	1060	MIT	Copyright (c) 2026 Tom	404	OK
+jasp-nerd/courseforge	main	LICENSE	11358	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)	404	OK
+hunterschep/canvas-lms-codex-plugin	main	LICENSE	1069	MIT	Copyright (c) 2026 Hunter Schep	404	OK
+akshsgaur/CMUCanvasMCPSErver	main	-	0	-	-	404	NO-GRANT-FILE
+orionkabeza/canvas-mcp	master	-	0	-	-	404	NO-GRANT-FILE
+colehollander10-netizen/canvas-student-mcp-server	main	-	0	-	-	404	NO-GRANT-FILE
+ketanchoyal/Our-E-School	master	LICENSE	1069	MIT	Copyright (c) 2019 Ketan Choyal	404	OK
+Ansarimajid/College-ERP	main	LICENSE	1075	MIT	Copyright (c) 2020 Owonubi Job Sunday	404	OK
+jobic10/student-management-using-django	main	LICENSE	1075	MIT	Copyright (c) 2020 Owonubi Job Sunday	404	OK
+clovaai/FocusSeq2Seq	master	LICENSE	1064	MIT	Copyright (c) 2019-present NAVER Corp.	404	OK
+awslabs/unsupervised-qa	master	LICENSE	10142	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)	404	OK
+obss/turkish-question-generation	main	LICENSE	1061	MIT	Copyright (c) 2021 obss	404	OK
+YuxiXie/SG-Deep-Question-Generation	master	LICENSE	1063	MIT	Copyright (c) 2020 Sigrid	404	OK
+teacherpeterpan/Unsupervised-Multi-hop-QA	main	LICENSE	1070	MIT	Copyright (c) 2021 Liangming Pan	404	OK
+krayin/laravel-crm	2.2	LICENSE	1078	MIT	Copyright 2010-2025, Webkul Software	404	OK
+cortezaproject/corteza	2026.9.x	LICENSE	11358	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)	404	OK
+openeducat/openeducat_erp	19.0	LICENSE	8241	LGPL-3.0	NOT-APPLICABLE (LGPL-3.0: holder not in the license text by construction)	404	OK
+frappe/education	develop	-	0	-	-	404	NO-GRANT-FILE
+navariltd/Junior-School	develop	-	0	-	-	404	NO-GRANT-FILE
+krayin/agent-skills	main	-	0	-	-	404	NO-GRANT-FILE
+RukkmaniT/gegok12-documentation	main	-	0	-	-	404	NO-GRANT-FILE
+catalyst/moodle-tool_objectfs	MOODLE_404_STABLE	-	0	-	-	404	NO-GRANT-FILE
+danmarsden/moodle-mod_attendance	MOODLE_503_STABLE	-	0	-	-	404	NO-GRANT-FILE
+catalyst/moodle-auth_saml2	MOODLE_500_STABLE	-	0	-	-	404	NO-GRANT-FILE
+FMCorz/moodle-block_xp	master	-	0	-	-	404	NO-GRANT-FILE
+WebPA/WebPA	master	license.txt	35147	GPL-3.0	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)	404	OK
+codern-org/codern	main	-	0	-	-	404	NO-GRANT-FILE
+akshsgaur/CMUCanvasMCPSErver	main	-	0	-	-	404	NO-GRANT-FILE
+orionkabeza/canvas-mcp	master	-	0	-	-	404	NO-GRANT-FILE
+colehollander10-netizen/canvas-student-mcp-server	main	-	0	-	-	404	NO-GRANT-FILE
+frappe/education	develop	license.txt	19	GPL-3.0 (declaracion)	NOT-APPLICABLE (GPL-3.0 (declaracion): a declaration carries no holder -- P179)	404	OK
+navariltd/Junior-School	develop	license.txt	34523	AGPL-3.0	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)	404	OK
+krayin/agent-skills	main	-	0	-	-	404	NO-GRANT-FILE

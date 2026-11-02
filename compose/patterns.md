@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — four recipes (`P-602-A`…`P-602-D`), every component grant byte-read at its real default branch with a per-repo fabricated-path control at `404`
+
+🔵 **What is new about this pass's recipes.** Earlier patterns on this page composed *tutors* and
+*content generators* — things that sit beside an institution's systems. 🟢 **All four below operate, or
+write into, a system the institution already runs** (Moodle, Canvas, Open edX, an ERP), because that is
+what this pass's supply actually is: `11` new Moodle plugins, `4` new Open edX components, `5` promoted
+LMS connectors.
+
+### 🟢 Component grants, all byte-read `2026-11-02` at the real default branch
+
+| component | grant | bytes | branch | control |
+| --- | --- | --: | --- | --- |
+| [jcrodriguez-dis/moodle-mod_vpl](https://github.com/jcrodriguez-dis/moodle-mod_vpl) | GPL-3.0 | `35,147` | `master` | `404` |
+| [hit-moodle/moodle-local_onlinejudge](https://github.com/hit-moodle/moodle-local_onlinejudge) | GPL-3.0 | `35,147` | `master` | `404` |
+| [tmuras/moosh](https://github.com/tmuras/moosh) | GPL-3.0 | `35,149` | `master` | `404` |
+| [C0D3D3V/Moodle-DL](https://github.com/C0D3D3V/Moodle-DL) | GPL-3.0 | `35,141` | `main` | `404` |
+| [erseco/alpine-moodle](https://github.com/erseco/alpine-moodle) | **MIT** | `1,072` | `main` | `404` |
+| [catalyst/moodle-auth_saml2](https://github.com/catalyst/moodle-auth_saml2) | GPL-3.0 *(hdr)* | — | 🔴 `MOODLE_500_STABLE` | `404` |
+| [danmarsden/moodle-mod_attendance](https://github.com/danmarsden/moodle-mod_attendance) | GPL-3.0 *(hdr)* | — | 🔴 `MOODLE_503_STABLE` | `404` |
+| [catalyst/moodle-tool_objectfs](https://github.com/catalyst/moodle-tool_objectfs) | GPL-3.0 *(hdr)* | — | 🔴 `MOODLE_404_STABLE` | `404` |
+| [moodlebox/moodlebox](https://github.com/moodlebox/moodlebox) | AGPL-3.0 | `34,523` | `main` | `404` |
+| [jasp-nerd/courseforge](https://github.com/jasp-nerd/courseforge) | **Apache-2.0** | `11,358` | `main` | `404` |
+| [tomtranjr/canvas-control](https://github.com/tomtranjr/canvas-control) | **MIT** | `1,060` | `main` | `404` |
+| [zs-andy/lms-cli](https://github.com/zs-andy/lms-cli) | **MIT** | `1,077` | `main` | `404` |
+| [hunterschep/canvas-lms-codex-plugin](https://github.com/hunterschep/canvas-lms-codex-plugin) | **MIT** | `1,069` | `main` | `404` |
+| [doldsimo/lti-1.3-canvas-lms](https://github.com/doldsimo/lti-1.3-canvas-lms) | **MIT** | `1,067` | `main` | `404` |
+| [eduNEXT/tvm](https://github.com/eduNEXT/tvm) | AGPL-3.0 | `34,523` | `main` | `404` |
+| [appsembler/figures](https://github.com/appsembler/figures) | **MIT** | `1,078` | `main` | `404` |
+| [cookiecutter-openedx/cookiecutter-openedx-devops](https://github.com/cookiecutter-openedx/cookiecutter-openedx-devops) | AGPL-3.0 | `35,136` | `main` | `404` |
+| [Ansarimajid/College-ERP](https://github.com/Ansarimajid/College-ERP) | **MIT** | `1,075` | `main` | `404` |
+
+🔴 **Do not pull:** `krayin/agent-skills`, `akshsgaur/CMUCanvasMCPSErver`, `orionkabeza/canvas-mcp`,
+`colehollander10-netizen/canvas-student-mcp-server`, `codern-org/codern` — **all byte-read grantless**,
+every fabricated-path control `404`.
+
+### 🟢 `P-602-A` — Conformant automated grading inside an existing Moodle (EMEA, `10`–`14` weeks)
+
+🔵 **The insight that makes this sellable:** the EU AI Act makes **exam scoring** high-risk, and the
+institution is *already doing it* with an open-source plugin. The engagement is **conformance**, not
+capability — an easier budget line than "add AI".
+
+1. **Inventory the existing scoring path.** `moodle-mod_vpl` (submission + automatic grading) and
+   `moodle-local_onlinejudge` (scoring backend). Drive the audit with **`moosh`** so the inventory is
+   reproducible rather than a screenshot exercise.
+2. **Wrap, don't replace.** Add an LLM feedback layer that writes **formative comments only**; the
+   numeric grade stays with the deterministic judge. 🔵 This is the single design decision that keeps
+   the model out of the Annex III "scoring" function.
+3. **Human-review gate.** Any AI-touched grade routes to an instructor queue before release;
+   `moodle-mod_attendance` supplies the engagement signal for prioritising that queue.
+4. **Evidence pack.** Per-submission log (model, prompt, version, reviewer, timestamp), a student
+   transparency notice, and a conformance file citing **EUR-Lex Regulation (EU) 2024/1689 as amended by
+   2026/1744** — 🔴 **not** a vendor compliance blog; two pages in one search leg gave contradictory
+   deadlines this pass.
+5. **Identity and deployment.** `moodle-auth_saml2` for institutional SSO; `erseco/alpine-moodle` (MIT)
+   for the reproducible staging container; `moodle-tool_objectfs` if submission media is large.
+
+🔴 **Branch discipline, or step 1 fails silently:** three components default to
+`MOODLE_<version>_STABLE`. 🟢 **Resolve every ref with `git ls-remote --symref` before cloning** — a
+`main`/`master` checkout returns nothing and a pinning script will report the plugin as absent.
+🟡 **Reciprocity a client must hear:** every Moodle component is GPL-3.0-or-later. Safe as a plugin
+deployment; 🔴 not a basis for lifting code into a proprietary product. The billable artefact is the
+conformance layer and the integration.
+
+### 🟢 `P-602-B` — Canvas instructor-workflow agent for a North American university (`6`–`8` weeks)
+
+1. **Course build.** [`jasp-nerd/courseforge`](https://github.com/jasp-nerd/courseforge) (Apache-2.0):
+   syllabus → a real Canvas course, over MCP. 🟢 **Insist on its IMSCC/Common Cartridge export path** —
+   the only feature in this recipe that survives the university changing LMS.
+2. **Bulk operations and migration.**
+   [`tomtranjr/canvas-control`](https://github.com/tomtranjr/canvas-control) (MIT) for scripted
+   course/file retrieval — the audit and migration leg.
+3. **Student-facing surface, if in scope.**
+   [`hunterschep/canvas-lms-codex-plugin`](https://github.com/hunterschep/canvas-lms-codex-plugin) (MIT).
+4. **Interoperability check.** Validate the LTI 1.3 handoff with
+   [`doldsimo/lti-1.3-canvas-lms`](https://github.com/doldsimo/lti-1.3-canvas-lms) (MIT). 🔴 Do **not**
+   start from [`ucfopen/lti-template-flask`](https://github.com/ucfopen/lti-template-flask) — marked
+   `DEPRECATED` in its own description.
+
+🔴 **Hard gate before any component is pulled:** `4 of 11` Canvas-MCP addresses on GitHub are
+**grantless**. Byte-read the grant at the real default branch, with a fabricated-path control, for
+every component — the four named above are cleared; a third of the category is not.
+🟡 **Size the risk honestly:** `4 of 5` promoted components are under `11★` and single-maintainer.
+🟢 **Fork and own; do not depend on upstream release cadence.**
+
+### 🟢 `P-602-C` — Multi-institution student assistant (APAC, `8`–`10` weeks)
+
+🔵 **The gap this fills:** the Canvas tooling above assumes **one** institution. A student in this
+region may hold accounts at several, across two different LMS products.
+
+1. **The connector.** [`zs-andy/lms-cli`](https://github.com/zs-andy/lms-cli) (MIT) — **multi-school,
+   Canvas *and* Blackboard, read-only by design.** 🟢 The read-only posture is the right default for a
+   student-facing assistant and removes the whole class of write-side incidents.
+2. **Records and operations layer**, where the engagement includes the institution rather than only the
+   student: [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) — **LGPL-3.0**,
+   branch `19.0`. 🟢 **LGPL-3.0 is what makes this commercial**: the studio's own modules stay
+   proprietary while changes to OpenEduCat's files are shared. 🔵 Already on
+   [`../verticals/solutions.md`](../verticals/solutions.md) — cited here, not newly claimed.
+3. **Permissive alternative at app scale.**
+   [`Ansarimajid/College-ERP`](https://github.com/Ansarimajid/College-ERP) (MIT) — 🟡 single-maintainer
+   Django app, not a module ecosystem. Choose it only when the domain is small and MIT is mandatory.
+4. 🔴 **Do not pull `krayin/agent-skills`** — same vendor as this base's MIT `krayin/laravel-crm` and
+   **grantless**. 🔵 The child does not inherit the parent's grant.
+
+### 🟢 `P-602-D` — LATAM Open edX operations practice (`8`–`12` weeks)
+
+🔵 **Why this is the LATAM recipe and not another localisation plan.** This pass's one byte-evidenced
+LATAM row is not courseware — it is **operations tooling**
+([`eduNEXT/tvm`](https://github.com/eduNEXT/tvm), placed by its own `tvm.docs.edunext.co` Colombian
+ccTLD). 🟢 **The regional opportunity is running Open edX for other institutions** — a service
+business, not a content business.
+
+1. **Multi-version estate management.** `eduNEXT/tvm` — Tutor version and environment manager, for
+   several Open edX versions across client tenants from one practice.
+2. **Deployment substrate.**
+   [`cookiecutter-openedx/cookiecutter-openedx-devops`](https://github.com/cookiecutter-openedx/cookiecutter-openedx-devops)
+   (AGPL-3.0, Tutor on Kubernetes via Terraform). 🟡
+   [`openfun/openedx-docker`](https://github.com/openfun/openedx-docker) last pushed `2025-07-09` —
+   reference image, not a dependency.
+3. **The liftable layer.** [`appsembler/figures`](https://github.com/appsembler/figures) — **MIT**, and
+   therefore 🟢 **the one component here a studio can extend into proprietary client reporting.** Build
+   cross-tenant analytics and early-warning on `figures`, not on the AGPL-3.0 plumbing.
+4. **Offline cohorts.** Keep the low-connectivity path from `P-600-B`;
+   [`moodlebox/moodlebox`](https://github.com/moodlebox/moodlebox) (AGPL-3.0) is the Moodle-side
+   equivalent — a server plus Wi-Fi AP on a Raspberry Pi.
+
+🔴 **The licence shape is the whole plan.** `3 of 4` infrastructure components are **AGPL-3.0**: fine to
+**operate** as a service provider, 🔴 **fatal to redistribute as a product.** 🟢 The commercial surface
+is the MIT analytics layer plus the operations practice itself. 🟡 **The gap this recipe does not
+close:** there is still no permissive, LATAM-originated education platform of record.
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — four recipes (`P-601-A`…`P-601-D`), every component grant byte-read at its real default branch with a per-repo fabricated-path control at `404`
 
 🔵 **What is new about these four.** `P-601-A` serves a buyer this file has never addressed — the

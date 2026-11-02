@@ -1,0 +1,42 @@
+leg	region	token	files_matching	verdict	note
+glob-agents	Global	500-AI-Agents-Projects	5	HELD	
+glob-agents	Global	Hugging Face Agents Course	1	HELD	
+glob-trending	Global	OpenMAIC	7	HELD	
+glob-trending	Global	DeepTutor	7	HELD	
+glob-trending	Global	ppt-master	6	HELD	
+glob-trending	Global	LLMs-from-scratch	7	HELD	
+glob-vertical	Global	OpenEduCat	9	HELD	
+glob-vertical	Global	Krayin	6	HELD	
+glob-vertical	Global	Corteza	6	HELD	
+glob-vertical	Global	Dolibarr	7	HELD	
+glob-vertical	Global	GegoK12	4	HELD	
+glob-vertical	Global	Frappe Education	5	HELD	
+glob-trends	Global	42.48	5	HELD	
+glob-trends	Global	10.6	5	HELD	
+glob-trends	Global	1EdTech	8	HELD	
+glob-trends	Global	HolonIQ	5	HELD	
+region	NorthAmerica	134 bills	6	HELD	
+region	NorthAmerica	31 states	6	HELD	
+region	NorthAmerica	K-12 AI Literacy and Readiness	5	HELD	
+region	NorthAmerica	Maryland	6	HELD	
+region	NorthAmerica	Berkeley Law	2	HELD	
+region	NorthAmerica	Gallup	5	HELD	
+region	NorthAmerica	ninth grade	1	HELD	
+region	EMEA	2026/1744	7	HELD	
+region	EMEA	Digital Omnibus	7	HELD	
+region	EMEA	2 December 2027	7	HELD	
+region	EMEA	emotion-recognition	6	HELD	
+region	EMEA	AI Office	6	HELD	
+region	EMEA	2 August 2026	7	HELD	
+region	APAC	AI Basic Act	7	HELD	
+region	APAC	22 January 2026	4	HELD	
+region	APAC	Law on Artificial Intelligence	2	HELD	
+region	APAC	1 March 2026	3	HELD	
+region	APAC	Ipsos	7	HELD	
+region	APAC	20 February 2026	1	HELD	
+region	LATAM	Cetic	6	HELD	
+region	LATAM	IESALC	7	HELD	
+region	LATAM	716	7	HELD	
+region	LATAM	Observatory on Artificial Intelligence in Education	7	HELD	"exact-phrase probe returned NEW; refuted by hand — the base holds ""UNESCO Observatory on AI in Education for LAC, Santiago, 2026-04-14"", a SHORTER wording carrying a MORE precise date. Exact-phrase novelty overstates novelty."
+region	LATAM	Ceibal	7	HELD	
+region	LATAM	Tecnol	7	HELD	

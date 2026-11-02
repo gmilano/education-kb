@@ -1,0 +1,11 @@
+repo	stars	default_branch	family_of_branch_name	main_master_probe_result	symref_confirmed
+krayin/laravel-crm	24089	2.2	BARE-SEMVER	reports grantless	yes
+cortezaproject/corteza	2185	2026.9.x	BARE-SEMVER-WILDCARD	reports grantless	yes
+openeducat/openeducat_erp	903	19.0	BARE-SEMVER	reports grantless	yes
+catalyst/moodle-tool_objectfs	102	MOODLE_404_STABLE	VENDOR-VERSIONED	reports grantless	yes
+danmarsden/moodle-mod_attendance	91	MOODLE_503_STABLE	VENDOR-VERSIONED	reports grantless	yes
+catalyst/moodle-auth_saml2	87	MOODLE_500_STABLE	VENDOR-VERSIONED	reports grantless	yes
+h5p/moodle-mod_hvp	158	stable	WORD	reports grantless	yes
+frappe/education	688	develop	WORD (p601 class)	reports grantless	yes
+navariltd/Junior-School	21	develop	WORD (p601 class)	reports grantless	yes
+tkutcher/jgrade	26	dev	WORD	reports grantless	yes

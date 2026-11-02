@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p602` — reads `2026-11-02`, commit `2026-11-02` — three numbered trends (`74`–`76`), each with the measurement that produced it
+
+## 74. A knowledge base's novelty figure is a property of its address matcher, not of the market — and the error runs toward false novelty (high confidence — two independent instruments, both wrong in the same direction, `39.5 %` of the held set invisible to one of them)
+
+🔴 **The claim.** A pass that reports "`n %` of what I found is new" is reporting its matcher. This
+pass ran two novelty instruments and **both** overstated novelty.
+
+🟢 **The measurement.**
+
+| instrument | variant | result |
+| --- | --- | --- |
+| held-set matcher | 🔴 `github.com/<o>/<r>` only | `3,679` addresses |
+| held-set matcher | 🟢 URL **+ backticked bare slug** | **`6,083`** |
+| | 🔴 **invisible to the first** | **`2,404` (`39.5 %`)** |
+| novelty reported | 🔴 first | `359 of 653` (`55.0 %`) |
+| novelty reported | 🟢 corrected | **`329 of 653` (`50.4 %`)** |
+| demand-side phrase probe | 🔴 exact-phrase `grep -F` | `1` false `NEW` of `41` |
+
+🔵 **Why the direction matters more than the magnitude.** An under-counting matcher produces *missed*
+supply — cheap, recoverable next pass. 🔴 **An over-counting novelty figure produces published
+findings that are restatements**, which is the expensive failure: `6` rows and `7` claims were drafted
+here as new that this base already held, including `version.php` source-header grants at `56` prior
+occurrences. 🟢 **Rung: run two matchers, take the larger held set, and treat a bare `<word>/<word>`
+match as the opposite error — it swallows every relative path in the prose.**
+Evidence: [`../evidence/held-set-matcher-correction.2026-11-02-p602.tsv`](../evidence/held-set-matcher-correction.2026-11-02-p602.tsv).
+
+## 75. A discovery backlog is not a discovery gap — in this sector the LMS-connector category was found, graded and left unshelved for ~`165` passes (high confidence — `44 of 265` ledger rows LMS-shaped, `2,450` addresses graded first-hand at `p435`, `gate-promotion-ledger` red throughout)
+
+🔴 **The claim.** This base's standing instinct on a thin shelf is "sweep harder". 🔴 **For the
+LMS-connector category that was the wrong diagnosis for a very long time**: the addresses were already
+in hand.
+
+🟢 **The measurement.** [`../evidence/promotion-ledger.2026-10-25-p436.tsv`](../evidence/promotion-ledger.2026-10-25-p436.tsv)
+carries `265` rows, 🔴 **`44` of them LMS/MCP-shaped** — `EduardoKrausME/moodle-local_mcp`,
+`Teci-AI/moodle-local_mcpconnector`, `aryankeluskar/canvas-mcp`, `NiccoloSalvini/mcp-blackboard-ucsc`,
+four separate `classroom-mcp` forks — every one *claimed on a `trending` page* and 🔴 **on no live
+shelf**. `p435` had already graded the whole `2,450`-address unpromoted surface first-hand and found it
+`59.1 %` permissive. `gate-promotion-ledger` has been red on exactly this, now at `154` findings.
+
+🔵 **Mechanism: discovery and adjudication are different jobs, and only one of them has a gate that
+fires.** Sweeping produces visible output; promoting requires a judgement per row. 🟢 **So the backlog
+grows silently while the sweep looks productive.** `p602` promoted `5` rows out of it — 🟡 **a first
+instalment against `44`, not a closure.**
+
+## 76. An on-topic, permissive, well-populated axis can still be worthless in two distinct ways that narrowing cannot fix (moderate-to-high confidence — `60` axes, `726` rows; `topic:lti` and `topic:university` measured)
+
+🔴 **The claim.** This base already handles substring collisions (`P831`: `tooLTIp`, `muLTI-tenancy`)
+and homonym drift (`p601`: `library-management`). 🟢 **Two further mechanisms are measured here, and
+neither yields to the existing fixes.**
+
+🟢 **(i) `topic:`-level polysemy.** `topic:lti` returns **Learning Tools Interoperability** *and*
+**Linear Time-Invariant**: [kmilo17pet/qlibs](https://github.com/kmilo17pet/qlibs) (`104★`, embedded
+control), [jrgenerative/fixed-wing-sim](https://github.com/jrgenerative/fixed-wing-sim) (`164★`),
+[dimigeorgiou/Python-Digital-Signal-Processing-Basics](https://github.com/dimigeorgiou/Python-Digital-Signal-Processing-Basics).
+🔵 **Word-bounding cannot help** — both communities apply the tag *correctly*. Only pairing the axis
+with a sector term does.
+
+🟢 **(ii) Genre capture.** `topic:university` is on-topic and is owned by **internship job boards**:
+[SimplifyJobs/Summer2027-Internships](https://github.com/SimplifyJobs/Summer2027-Internships)
+(`48,262★`), [speedyapply/2027-SWE-College-Jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)
+(`9,592★`). `topic:lecture-notes` is owned by courseware. 🔴 **Narrowing does not fix this** — the
+dominant genre is correctly tagged and simply out-ranks everything. The axis must be abandoned or read
+far past page one.
+
+🟡 **Confidence held below the other two trends:** both mechanisms are established on `2` axes each,
+and "genre capture" is a naming of a pattern this base has probably hit before without labelling it.
+🟢 **The practical rung is cheap and independent of the taxonomy: read the top `5` of any new axis
+before trusting its relevance rate** — both mechanisms are visible at `n=5`.
+Evidence: [`../evidence/axis-pollution.2026-11-02-p602.tsv`](../evidence/axis-pollution.2026-11-02-p602.tsv).
+
 ## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — four numbered trends (`70`–`73`), each with the measurement that produced it
 
 ## 70. In education, star rank is an anti-signal for commercial usability — the sector's biggest artefacts are courseware, and courseware picks NonCommercial (high confidence — `29` `NOASSERTION` grants byte-read, top `4` by stars all `BLOCK`, `4 of top 5`)
