@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🟢 `T610-1` — the regulatory deadline has replaced the budget cycle as the buying trigger
+
+🔵 Three regions now carry a **dated statutory obligation** on education AI, and the dates are close
+enough to plan against rather than forecast:
+
+| region | instrument | date | status |
+| --- | --- | --- | --- |
+| 🟢 EMEA | emotion-recognition ban in education, Art. 5(1)(f) | `2025-02-02` | 🟢 **in force** |
+| 🟢 EMEA | AI transparency duties | `2026-08-02` | 🟢 **in force** |
+| 🟢 APAC (India) | IT Rules synthetic-content labelling | `2026-02-20` | 🟢 **in force** |
+| 🟢 NA (Ohio) | mandatory district AI policy | `2026-07-01` | 🟢 **in force** |
+| 🟡 EMEA | education **high-risk** duties, Reg. (EU) 2026/1744 | `2027-12-02` | 🟡 deferred, dated |
+
+🔴 **What would refute it:** a region where adoption spend is growing while no dated instrument
+exists. **LATAM is that case** — `>50 %` teacher adoption against `<10 %` institutional guidelines —
+so the trend is *region-conditional*, not universal, and that is how it is recorded.
+
+### 🟢 `T610-2` — provenance labelling is still the single most portable build target
+
+🔵 Reaffirmed from `T607-1` with a third jurisdiction's date verified: **India `2026-02-20`**, **China
+since `2025-09-01`**, **EU since `2026-08-02`**. 🟢 Three unrelated legal traditions — a common-law
+federal republic, a party-state and a supranational regulator — converge on **labelling
+machine-generated content**. 🔴 They converge on nothing else: China prescribes algorithms, the EU
+grades by risk tier, India amends intermediary rules.
+
+🟢 **Consequence for a build:** a labelling/provenance layer is the one component that ships unchanged
+into all three markets. Everything above it needs regional rework.
+
+### 🟢 `T610-3` — governance inverts adoption everywhere, and only LATAM publishes both sides
+
+🟢 Corroborated in all four regions this pass, with different numbers and the same sign:
+
+| region | adoption | governance | ratio |
+| --- | --- | --- | --: |
+| 🟢 LATAM | `>50 %` of teachers (Chile, Brazil) | `<10 %` of institutions have guidelines | 🔴 **`>5×`** |
+| 🟢 NA | AI use in schools "growing" across trackers | `33`–`35` of `51` jurisdictions publish guidance | 🟡 ~`1.5×` |
+| 🟢 APAC | `2` states with compulsory national curricula | `13 of 19` LAC-equivalent gap not measured here | — |
+| 🟢 EMEA | schools already deployers under the Act | high-risk duties not binding until `2027-12-02` | 🟡 structural |
+
+🔴 **The honest limit:** only the LATAM figure has **both limbs from one source**. The others pair an
+adoption claim from one publisher with a governance count from another, which is a weaker
+construction, and `598-G` applies to all of them.
+
+### 🟢 `T610-4` — the sector's licence risk has moved from copyleft to *bespoke commercial*
+
+🔵 This base has spent hundreds of passes on the copyleft boundary — GPL in Moodle, AGPL in Open edX,
+ECL across Apereo, `CC BY-NC` on the highest-starred research packs (`p601`). 🔴 `610-A` is a
+different shape: a **bespoke paid-commercial grant on a fork of an MIT project**, naming MIT four
+times while permitting nothing deployable, and reported by the API as `NOASSERTION`.
+
+| era | the risk | what catches it |
+| --- | --- | --- |
+| 🔵 copyleft | reciprocal terms propagate to the deliverable | an SPDX id is usually enough |
+| 🔴 **non-commercial research** (`p601`) | `CC BY-NC` on the most-starred rows | reading the family, not the stars |
+| 🔴 🆕 **bespoke commercial fork** (`610-A`) | a proprietary layer over a permissive upstream | 🔴 **reading the grant body, and then the upstream's** |
+
+🟢 **Why it matters now and not earlier:** agent connectors are small, forkable and cheap to relicense.
+`610-A`'s fork is `4,446 KB` against a `105 KB` upstream. 🔴 The fork is what trends; the upstream is
+what is usable.
+
+### 🟡 `T610-5` — discovery has decoupled from promotion, and the gap is the asset
+
+🔴 `2,310` addresses are published as rows on this base's trending shelves and sit on no sell shelf;
+`848` are education-shaped. 🟢 That is not a backlog defect so much as a **standing asset that nobody
+is drawing on**: the expensive part — finding and recording the address — is already paid.
+
+🔴 **What would refute it:** if the backlog were mostly stale or irrelevant. Partly true and measured:
+ranked by stars its head is general infrastructure refused on relevance, and `3` of `23` candidates
+this pass were refused on relevance after a second read. 🟡 So the usable fraction is well under
+`848`, and the pass that measures it properly will be worth more than one that promotes from it.
+
+---
+
 ## 🆕 `p609` — reads `2026-11-02` — current trends
 
 ### 🟢 T`609`-1 — the field moved from building tutors to measuring whether they teach

@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-02
 ---
 
+## Pass 610 — reads 2026-11-02, commit 2026-11-02 — **🟢 `609-A-open` IS CLOSED WITH A DENOMINATOR AND THE ANSWER IS **NO**: A SUBSTRING CENSUS DOES NOT DISTINGUISH A SHELVED ROW FROM A PUBLISHED REFUSAL — `188 of 719` SELL-SHELF ADDRESSES (`26.1 %`) ARE MENTIONED AND NEVER SHELVED. 🔴 BUT THE CAUSE `609-A` NAMED IS `35 of 188`; THE DOMINANT CAUSE IS THIS BASE'S OWN PROSE (`80`) AND MEASUREMENT TABLES (`73`). 🔴 AND THE BACKLOG IS NOT `50`: `2,310` ADDRESSES WERE PUBLISHED AS ROWS ON THE **TRENDING** SHELVES AND ARE ON NO SELL SHELF, `848` EDUCATION-SHAPED. 🟢 `20` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `8 of 8` FABRICATED CONTROLS AT `401`/`404 14 B`. 🔴 `610-A`: A PAID-COMMERCIAL GRANT ON A FORK OF AN MIT PROJECT, NAMING `MIT` FOUR TIMES. 🔴 THREE INSTRUMENT DEFECTS, ALL SELF-CAUGHT. 🔴 THE GLOBAL LEGS RETURN THE **FORTIETH** NIL. TWELVE REGISTERED (`610-A`…`610-L`).**
+
+🟢 **The pass's load-bearing result is a closed question with a corrected cause.** `609-A` left open
+whether a substring census confuses a published row with a published refusal. It does — and the
+refusal case it hypothesised is `18.6 %` of its own effect. The discriminator is the **governing
+table's header**, not markers on the mention's line, which is why `609-A`'s line-level detector
+measured poor precision. Instrument `ingest/p610-census-role.py`; evidence
+`evidence/census-role.2026-11-02-p610.tsv`.
+
+| the `188` by strongest publication role | addresses | share |
+| --- | --: | --: |
+| 🔴 prose only — this base's own narrative | `80` | `42.6 %` |
+| 🔴 measurement tables — censuses, verdict tables, the gap register | `73` | `38.8 %` |
+| 🟡 published refusals — `609-A`'s hypothesis | `35` | `18.6 %` |
+
+🔴 **And the same instrument resizes the backlog by `46×`.** `609-C` adjudicated `50` trending-only
+slugs **within the committed ledger** and concluded "nothing vanished." True of the ledger; the ledger
+holds under `5 %` of what the trending shelves do. Measured on the shelves: `4,779` distinct
+shape-valid addresses, `4,356` on no sell-shelf row, 🔴 **`2,310` published as actual rows**, `848`
+education-shaped. 🟡 **Qualified:** ranked by stars its head is general infrastructure correctly
+refused on relevance, so `2,310` is not `2,310` promotable rows — the usable fraction is unmeasured and
+carried as `610-K-open`.
+
+🟢 **`20` rows promoted, grants byte-read `2026-11-02` at the real default branch.** `8` agents
+(`anthropics/k12-teacher-skills` Apache-2.0 with its eval framework; `dsvi-b/corretor-enem` 🟢 **LATAM**,
+MIT, an `11,147`-essay ENEM corpus; `Sion612/rubrictrail`; `BenyRonald77/uajy-academic-rag-chatbot`
+🟢 **APAC**/Indonesia; `CogitoNTNU/TutorAI` 🟢 **EMEA**/Norway; plus `Haozhe-Xing/agent_learning`,
+`dmoshehun-prog/learn-from-materials`, `cabbage2000-lab/textbook-writer-skills`). `5` foundations
+(`gpoore/text2qti` BSD-3 — 🟢 **the QTI tier finally has an authoring end**, so `p607`'s engine is
+reachable from Markdown; `ucbds-infra/otter-grader` BSD-3, UC Berkeley; `ucfopen/canvasapi`;
+`instructure/ims-lti` — vendor-owned and permissive; `Universidade-Livre/matematica` 🟢 **LATAM**, pt-BR
+curriculum corpus). `5` LMS connectors, `4` of which close debt `609-C` enumerated **by name**. `2`
+verticals (`moodlehq/moodleapp` Apache-2.0 and `Azure/Moodle` MIT — 🟢 the Moodle mobile and deployment
+layers are now permissive while the core stays `GPL-3.0`).
+
+🔴 **`610-A` — a new grant class, and it would have shipped as MIT.**
+`pengusto/google-classroom-mcp` sits on `609-C`'s own promotion-candidate list. Its `LICENSE` is a
+bespoke **`Pengusto Commercial License 1.0`**: source inspection only, and running or deploying
+requires a prior written agreement and fees, *"including internal use by an … educational institution
+… whether nonprofit or commercial."* It names **`MIT` four times** — as the status of its *upstream* —
+so every MIT-token reader grades it MIT, and the API says `NOASSERTION`. 🟢 The upstream it names,
+`adriasantacreu/google-classroom-mcp` (**MIT** `1,073 B`), is promoted in its place. 🔵 **Rule: when a
+grant names an upstream, read the upstream's grant and prefer the upstream.**
+
+🔴 **Three instrument defects, all caught before a row shipped.** `610-C`: a star count scraped from
+this base's own prose read **`11,147★`** for a repository with **`7★`** — `11.147` is the *corpus
+size* in Brazilian decimal-point grouping, so a number harvested from prose is not a metric until it
+is bound to its unit. `610-E`: this pass's grant ladder omitted **`COPYING.txt`** and graded the
+**official Moodle mobile app** ungranted — a rung this base had registered at ~`p460`, so the pass
+rebuilt a committed instrument worse. `610-G`: its reconciler printed `requested=22 returned=22
+unreconciled=15`, impossible, from `comm` on unsorted input that said so on stderr. 🔵 `605-D`,
+`605-M`, `606-B`, `606-K`, `609-M` and now three in one pass — **the instrument, not the corpus.**
+
+🔴 **The mandated global legs are `40 for 40` nil, adjudicated `19 of 19` tokens** — `15` already held,
+`4` new and all four refused with reasons, including `openclaw/openclaw` at 🔴 **`393,687★`** on
+relevance, which replaces `607-B`'s `259,581★` as the largest-starred address this base has refused.
+🟢 Every address promoted this pass came from the trending backlog or from an upstream named inside a
+candidate's grant.
+
+🟢 **All four regional legs returned dated policy** — NA at sub-national resolution (Ohio's
+`2026-07-01` district-policy deadline; `33`–`35` states with guidance; `134` bills / `31` states), EMEA
+with Reg. (EU) 2026/1744 confirmed from a second channel (high-risk `2027-12-02`; emotion-recognition
+ban in education since `2025-02-02`; schools are **deployers** with an Art. 4 literacy duty), APAC
+(China and the UAE the only compulsory national curricula; India compulsory from Class 3 in 2026-27;
+Singapore's agentic-AI framework `2026-01-22`), LATAM (CENIA: `13 of 19` LAC countries teach no early
+AI adoption; Latam-GPT across `8` countries). 🔴 **Africa returned nothing confirmable for the second
+consecutive pass and is recorded as a gap.**
+
+🟢 **`605-E` corrected, not just narrowed:** `python3` and `bash` on this repository's committed
+instruments **run** — `P610-5` in `compose/patterns.md` was executed end to end before being published
+as a recipe. 🔴 `make` remains denied. The standing note that "every committed validator here is
+unrunnable" was too strong.
+
+🔴 **`598-G` — tenth pass open, operator request.** Every non-GitHub host `000` with a `000` control;
+the market firms disagree **`3.1×`** on the *current-year* figure, which is a definitional
+disagreement, not a forecasting one.
+
+🟢 **`610-L` — the push block, reconfirmed with its remedy, and `609-E`'s phrasing corrected.** `git
+push` failed exactly as every pass since `p54` recorded, then succeeded after the host's `add_repo`
+with `access: "push"`. 🔵 `609-E` wrote "the push block is gone," which reads as a **state**; it is an
+**action**. **The block recurs every session and is cleared by `add_repo`.**
+
+🟡 **Index note:** `p609` recorded that this file carried no `Pass 608` entry. Still true — `p608`
+wrote to the shelves and not to the index, and reconstructing its entry from its shelf sections is
+work `p610` did not do. Carried, named, and not silently skipped.
+
+---
+
 ## Pass 609 — reads 2026-11-02, commit 2026-11-02 — **🟢 THE EVAL TIER IS OPEN AFTER SEVERAL PASSES OF BEING RECORDED SHUT — AND IT WAS NEVER EMPTY: `2` PERMISSIVE, BYTE-READ EVAL REPOS WERE SITTING ON THIS BASE'S **TRENDING** SHELVES, NEVER PROMOTED. `11` ROWS PROMOTED (`5` AGENTS, `6` FOUNDATIONS), EVERY GRANT BYTE-READ TODAY, `4 of 4` FABRICATED CONTROLS AT `401`/`404 14 B`. 🟢 LATAM'S REPOSITORY-LEVEL NIL IS BROKEN BY AN ENEM ESSAY GRADER. 🟢 `607-C`'s OPEN ITEM ADJUDICATED (`0` ADDRESSES LOST) AND ITS NAMED FIX BUILT AND VALIDATED `10 of 10`. 🔴 `609-A`: THE DEBT FIGURE CARRIED FOR TWO PASSES (`104`) DOES NOT REPRODUCE UNDER **ANY** OF FOUR INSTRUMENT VARIANTS — IT MEASURES `50`. 🔴 THE MANDATED GLOBAL LEGS RETURN THE **THIRTY-NINTH** NIL, `20 of 20` TOKENS ALREADY HELD. 🟢 THE PUSH BLOCK CARRIED SINCE `p54` IS GONE. ELEVEN REGISTERED (`609-A`…`609-M`).**
 
 🟢 **The pass's load-bearing finding is one mechanism behind two long-standing symptoms.** The eval

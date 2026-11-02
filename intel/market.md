@@ -4,6 +4,105 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — reads `2026-11-02` — market map and regional placement
+
+🔴 **`598-G` — tenth consecutive pass open, and the control is unchanged.** `unesco.org`, `oecd.org`,
+`iadb.org` and `neurips.cc` all return `000 connect_rejected` through the session proxy **and**
+`ENOTFOUND` through the page-fetch tool, with a `000` control. 🔴 **Every market figure on this page is
+search-snippet-grade**, and the firms disagree by more than `3×`:
+
+| source | 2026 | horizon | implied CAGR |
+| --- | --- | --- | --- |
+| Grand View–style | `$11.4 B` | `$57.2 B` by 2033 | ~`26 %` |
+| Persistence-style | `$3.7 B` | `$14.1 B` by 2033 | ~`21 %` |
+| third aggregate | ~`$11 B` | — | — |
+
+🔴 **A `3.1×` disagreement on the current-year figure is not a forecasting difference, it is a
+definitional one**, and none of the three publishes its segment boundary where this session can read
+it. 🔵 **Operator request, tenth pass:** a single primary host (UNESCO, OECD or IADB) reachable from
+the session would settle this page. Until then the figures stay flagged rather than averaged — an
+average of three incompatible definitions is a fourth wrong number.
+
+🟢 **What is *not* snippet-grade this pass** — because it is dated, instrument-level and corroborated
+across regions:
+
+| | |
+| --- | --- |
+| 🟢 K-12 share of the AI-in-education market | ~`34 %` in 2026 — the largest segment |
+| 🟢 US federal | Q1 2026 Department of Education released **`$169 M`** in FIPSE awards including responsible-AI use |
+| 🟢 Vendor channel shift | OpenAI launched a **country-level** education programme with `8` national partners in Q1 2026 — national infrastructure deals alongside school-by-school sales |
+| 🟢 Pedagogy caveat | OECD **2026 Digital Education Outlook** warns AI helps learning only where pedagogy stays in control |
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buying trigger is now a dated statutory deadline, not a budget cycle.** **Ohio** requires
+every district, community school and STEM school to adopt a formal AI policy by **`2026-07-01`**, with
+a state model policy published; **Tennessee** carries the same duty; **Idaho** before 2027-28.
+`33`–`35` states plus Puerto Rico now publish guidance, against ~`28` in early 2025, and **`134`
+bills across `31` states** were introduced in 2026.
+
+| opportunity | the open-source starting point this base now holds | why now |
+| --- | --- | --- |
+| 🟢 **District AI-policy conformance tooling** | `anthropics/k12-teacher-skills` (Apache-2.0) for the classroom artifacts + `ucfopen/canvasapi` (MIT) for the Canvas-side record | A mandated policy needs demonstrable practice behind it; Ohio's deadline has passed and the audit question is next |
+| 🟢 **Autograding at institutional scale** | `ucbds-infra/otter-grader` (BSD-3-Clause, UC Berkeley) — already speaks Canvas **and** Gradescope | Permissive, institution-maintained, and the only autograder on these shelves that abstracts the distribution pipeline |
+| 🟢 **Assessment authoring → delivery, no copyleft** | `gpoore/text2qti` (BSD-3) → `OpenOLAT/qtiworks` (BSD-3) | 🟢 **New this pass:** the stack is permissive end to end, so the toolchain is reusable across client tenancies |
+| 🟡 **Student-data erasure from fine-tuned models** | 🔴 no shelf row — `locuslab/open-unlearning` was **refused on relevance** | California **AB 1159** would bar student data from training. The capability is general ML; the *education* framing is unbuilt and is the gap worth naming |
+| 🔴 **Declared gap** | — | Texas Education Agency publishes no district AI guidance, and tracker bill numbers conflict. The largest US state system is the least legible from here |
+
+### EMEA
+
+🟢 **The compliance calendar is the roadmap, and it is now confirmed from two independent channels.**
+**Regulation (EU) 2026/1744** defers education **high-risk** duties to **`2027-12-02`**. Already in
+force: the **emotion-recognition ban in education** since **`2025-02-02`** (Art. 5(1)(f)), and
+**transparency duties** since **`2026-08-02`**. Schools are **deployers**, carrying an **Article 4
+AI-literacy** duty. High-risk scope is named explicitly: admissions and access, evaluating learning
+outcomes, assigning level of education, and **monitoring students during tests**.
+
+| opportunity | starting point | why now |
+| --- | --- | --- |
+| 🟢 **Build the four high-risk functions correctly before Dec 2027** | `Sion612/rubrictrail` (Apache-2.0) — rubric→plan→**evidence**→human check | The Act demands human oversight and logging. A tool whose design output *is* an evidence trail maps onto the obligation instead of being retrofitted to it |
+| 🟢 **Art. 4 AI-literacy delivery** | `CogitoNTNU/TutorAI` (MIT, NTNU) + `dmoshehun-prog/learn-from-materials` (MIT) | The literacy duty is live **now**, unlike the high-risk duties — it is the nearest-term billable obligation in the region |
+| 🟢 **Proctoring, re-scoped** | 🔴 deliberately **not** emotion inference | Exam monitoring is high-risk and emotion inference is **banned outright**. The defensible product is integrity signals without affect recognition — a redesign, and the Act is what forces it |
+| 🟢 **Permissive deployment layer for EU data residency** | `Azure/Moodle` (MIT) + `moodlehq/moodleapp` (Apache-2.0) | Sovereign-tenancy Moodle with exactly **one** copyleft layer (the core), now that mobile and IaC are shelved permissive |
+| 🔴 **Declared gap** | — | No country-level adoption rates found, and sources disagree on what the Digital Omnibus changed. **Africa returned nothing confirmable for the second consecutive pass** |
+
+### APAC
+
+🟢 **Two national mandates and one agentic-governance first.** **China** and the **UAE** are the only
+states running **compulsory national AI curricula** (since 2025-26). **India** makes AI and
+computational thinking **compulsory from Class 3 in 2026-27**, with IT Rules synthetic-content
+labelling effective **`2026-02-20`**. **Singapore** launched an **agentic-AI** governance framework on
+**`2026-01-22`** — voluntary, and the first in the region aimed at agents rather than models.
+
+| opportunity | starting point | why now |
+| --- | --- | --- |
+| 🟢 **Curriculum-delivery capacity at national scale** | `Haozhe-Xing/agent_learning` (MIT) + `cabbage2000-lab/textbook-writer-skills` (MIT) | A Class-3 mandate across India needs material and teacher capacity, not models. This is a content-production problem with permissive tooling |
+| 🟢 **Institutional handbook assistants, bilingual** | `BenyRonald77/uajy-academic-rag-chatbot` (MIT, Indonesia) | 🟢 Already **region-placed and bilingual** (Bahasa Indonesia / English), hybrid FAISS+BM25 behind a swappable gateway — a template for ASEAN institutions, not a port |
+| 🟢 **Agentic governance as a deliverable** | `Sion612/rubrictrail` (Apache-2.0, ships `zh-CN`) | Singapore's framework is the region's first agent-specific instrument. Being able to evidence agent behaviour is the thing being asked for |
+| 🟢 **Provenance labelling, the portable obligation** | — | India `2026-02-20`, China since `2025-09-01`, EU since `2026-08-02`: 🟢 **three unrelated legal traditions converge on labelling** (`T607-1`). The most region-portable build target in the sector |
+| 🔴 **Declared gap** | — | **No education-specific policy detail for Japan** beyond a penalty-free statute |
+
+### LATAM
+
+🟢 **The governance inversion is now a measured ratio, and the repository-level nil is broken twice.**
+`>50 %` of teachers in **Chile** and **Brazil** use AI tools against `<10 %` of institutions holding
+guidelines — **same source, both sides, `>5×`** (`T607-2`). **CENIA**: `13 of 19` LAC countries do not
+teach early AI adoption in schools. The Latin American AI Index 2026 leading group is **Brazil, Chile,
+Uruguay**; only **Brazil and Colombia** allocate budget inside their national instruments.
+**Latam-GPT** spans `30+` institutions across `8` countries.
+
+| opportunity | starting point | why now |
+| --- | --- | --- |
+| 🟢 **ENEM-grade assessment now has two independent holders** | `dsvi-b/corretor-enem` (MIT, `11,147`-essay local corpus) **+** `tcheld0n/CorrijAI` (MIT, `p609`) | 🟢 **New this pass.** One tier, two unrelated maintainers, both permissive, both Portuguese-first. A Brazilian assessment engagement no longer rests on a single repository |
+| 🟢 **Portuguese-language curriculum corpus** | `Universidade-Livre/matematica` (MIT) | 🟡 Content, not software — and in LATAM the **corpus** is the scarce asset, not the model |
+| 🟢 **Institutional guideline tooling against the `>5×` gap** | `anthropics/k12-teacher-skills` (Apache-2.0) + `Sion612/rubrictrail` (Apache-2.0) | Teachers are already using AI; institutions have no policy. The gap is governance artifacts, which is a smaller build than a platform |
+| 🟢 **Offline-first mobile delivery** | `moodlehq/moodleapp` (Apache-2.0) | 🟢 **New this pass.** Low-connectivity deployment is a mobile-seam problem, and the mobile seam is now permissive and outside Moodle's GPL core |
+| 🔴 **Declared gap** | — | **Brazil's AI bill status is unconfirmed** — sources split between "under consideration" and "enacted 2024". Not resolvable from this session; do not quote a status |
+
+---
+
 ## 🆕 `p609` — reads `2026-11-02` — market map and regional placement
 
 ### 🔴 Source-quality warning, stated before the numbers

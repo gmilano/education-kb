@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `609-A-open` IS ANSWERED WITH A DENOMINATOR AND THE ANSWER IS NO: A SUBSTRING CENSUS DOES **NOT** DISTINGUISH A SHELVED ROW FROM A PUBLISHED REFUSAL — `188 of 719` SELL-SHELF ADDRESSES (`26.1 %`) ARE MENTIONED AND NEVER SHELVED. 🔴 BUT THE REFUSAL HYPOTHESIS `609-A` NAMED IS **`35 of 188`**; THE DOMINANT CAUSE IS THIS BASE'S OWN PROSE AND MEASUREMENT TABLES. 🔴 AND THE BACKLOG IS NOT `50`: `2,310` ADDRESSES WERE PUBLISHED AS ROWS ON THE **TRENDING** SHELVES AND ARE ON NO SELL SHELF, `848` OF THEM EDUCATION-SHAPED. 🟢 `8` AGENT ROWS PROMOTED, `6` OF THEM CLOSING DEBT `609-C` ENUMERATED BY NAME. 🔴 `610-A`: A RELICENSED FORK WHOSE OWN GRANT IS **PAID-COMMERCIAL** AND WHICH NAMES `MIT` FOUR TIMES. 🔴 THE GLOBAL LEGS RETURN THE **FORTIETH** NIL, `19 of 19` TOKENS ADJUDICATED. ELEVEN REGISTERED (`610-A`…`610-L`).**
+
+### 🔴 `610-A` — read this first: a fork that is *less* usable than its upstream, and `MIT` appears four times in the file that says so
+
+[`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) sits on this
+base's trending shelves and on `609-C`'s enumerated `TRENDING-ONLY` list — a standing promotion
+candidate. Its `LICENSE` is `3,053 B`, byte-read today at `master`:
+
+| axis | reading |
+| --- | --- |
+| grant title | 🔴 **`Pengusto Commercial License 1.0`** |
+| what it permits free | 🔴 *source inspection only* — explicitly **not** "running the Extensions, processing course data with them, or providing their functionality to others" |
+| what running it requires | 🔴 **a prior written commercial agreement and payment of fees**, stated to include *"internal use by an organization, **educational institution** or training provider, whether nonprofit or commercial"* |
+| 🔴 occurrences of the token `MIT` in the file | 🔴 **`4`** (lines `15`–`18`) |
+| 🔴 what the API reports | 🔴 `NOASSERTION` — correct, and useless |
+| 🟢 what the bytes actually grant the reader | 🟢 **nothing deployable** |
+
+🔴 **Every MIT-token reader here grades this MIT**, because the file's MIT mentions are a *provenance
+statement about upstream*: the Extensions are proprietary, while `adriasantacreu/google-classroom-mcp`
+at a named commit "remains available under MIT."
+
+🟢 **The fix is a promotion, not just a refusal.** The upstream the grant names is real, permissive and
+live, and it is now on this shelf:
+[`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) —
+**MIT** `1,073 B` byte-read, `master`, `105 KB`, pushed `2026-11-01`.
+
+🔵 **`610-A` stated generally, and new here:** 🔴 **a fork can be strictly less usable than its
+upstream, and the fork is what trends.** `608-B` found a second licence *appended* to a first
+(MIT + Apache third-party notice, harmless). This is the inverse and it is not harmless: a
+**proprietary grant layered over** a permissive one, where the permissive name survives in the prose
+and the permission does not. 🟢 **Rule:** when a candidate's grant names an upstream, read the
+upstream's grant too and prefer the upstream.
+
+### 🟢 `8` new agent rows — every grant byte-read `2026-11-02` at the real default branch, `4 of 4` fabricated controls at `401` / `404 14 B`
+
+| Agent | Repo | Grant (byte-read) | Region | ★ | Size | What it actually does |
+| --- | --- | --- | --- | --: | --: | --- |
+| K-12 Teacher Skills | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** `11,357 B` | 🔵 Global | `609` | `354 KB` | Source **and the evaluation framework** for four shipped K-12 teacher skills: standards-aligned lesson-plan creation; differentiation into tiered below/at/above versions keeping core content constant; a prep partner that works the key student task through with the teacher and leaves a teacher-only note; and a `1`–`3` item formative check whose **distractors are drawn from documented misconceptions**, with a guide routing each response to a next step. 🟢 The rare case where the eval harness ships beside the prompt |
+| Corretor de Redação ENEM | [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | 🟢 **MIT** `1,078 B` | 🟢 **LATAM** (Brazil) | `7` | `5,273 KB` | ENEM essay correction across the **5 official competencies** (`0`–`200` each), anchored in a local SQLite corpus of **`11,147` real board-corrected essays**, following the prompt-driven decomposition of Silva & Araujo (UFPE, 2024) with strict INEP-rubric adherence. 🟢 **No external API and no ML** — runs inside any coding agent. 🟢 Its README states plainly it is a *pedagogical estimate, not an official score*, and that the real ENEM uses two graders plus escalation |
+| RubricTrail | [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | 🟢 **Apache-2.0** `11,324 B` | 🔵 Global (bilingual EN / `zh-CN`) | `130` | `2,862 KB` | Local-first assignment planner that ties an uploaded brief **and its rubric** to confirmed requirements, scheduled work, draft evidence and final human checks — *"turn the brief into a plan you can prove."* Browser demo needs no account, API key or paid service; file contents and project state stay client-side |
+| UAJY Academic RAG | [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) | 🟢 **MIT** `1,068 B` | 🟢 **APAC** (Indonesia) | `452` | `70,067 KB` | Grounded QA for students and faculty over an institution's **official academic handbook** — hybrid retrieval (FAISS + BM25) behind an OpenAI-compatible gateway, so the model is swappable. 🟢 Bilingual Bahasa Indonesia / English, and region is evidenced by the institution in the artifact itself (Universitas Atma Jaya Yogyakarta), not inferred from a username |
+| agent_learning | [`Haozhe-Xing/agent_learning`](https://github.com/Haozhe-Xing/agent_learning) | 🟢 **MIT** `1,068 B` | 🔵 Global — holder not placed | `640` | `107,364 KB` | 🟢 **Closes debt `609-C` named by name.** Agent-learning course and runnable curriculum material; the largest-starred of the six `TRENDING-ONLY` rows `609-C` enumerated and left unpromoted |
+| learn-from-materials | [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT** `1,122 B` (`LICENSE.md`) | 🔵 Global — holder not placed | `1,207` | `22,604 KB` | 🟢 **Closes debt `609-C` named by name.** Turns a learner's own uploaded materials into study artifacts. Grant is at `LICENSE.md`, not `LICENSE` — the rung `603-C` added |
+| TutorAI | [`CogitoNTNU/TutorAI`](https://github.com/CogitoNTNU/TutorAI) | 🟢 **MIT** `1,140 B` | 🟢 **EMEA** (Norway) | `39` | `21,945 KB` | 🟢 **Closes debt `609-C` named by name.** Tutor built by **Cogito NTNU**, the student AI organisation at the Norwegian University of Science and Technology — region evidenced by the owning organisation. 🔵 Shelved at `39★`: a small row that is *placed*, which this base prefers to a large one that is not |
+| textbook-writer-skills | [`cabbage2000-lab/textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) | 🟢 **MIT** `1,064 B` | 🔵 Global — holder not placed | `43` | `1,862 KB` | 🟢 **Closes debt `609-C` named by name.** Agent skill pack for authoring textbook-shaped material |
+
+🟡 **Casing, stated because this base has been bitten by it (`605-B`, `gate-ladder-case`).** Three of
+these resolve to a canonical spelling different from the one carried in `trending`:
+`CogitoNTNU/TutorAI` (not `cogitontnu/tutorai`), `RohanMuppa/brightspace-mcp-server`,
+`vTanco/google-classroom-mcp`. The canonical spelling is what is written above.
+
+### 🔴 `610-B` — `5` refusals, measured, and one is the largest-starred address this base has ever refused
+
+| Not promoted | Grant as read | ★ | 🔴 Reason |
+| --- | --- | --: | --- |
+| [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) | 🔴 **Pengusto Commercial License 1.0** (`3,053 B`) | `1` | 🔴 **`610-A`.** Paid written agreement required to run it, educational institutions explicitly included. Upstream promoted instead |
+| [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | 🟢 MIT | 🔴 **`393,687`** | 🔴 **Relevance — a general-purpose coding agent.** 🔵 It replaces `607-B`'s `259,581★` as **the largest-starred address this base has refused**. The rule is unchanged by the number |
+| [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) | 🟢 Apache-2.0 (`10,761 B`) | `368` | 🔴 **Relevance, caught on the second read.** The token `rubric` put it on this pass's shortlist; the paper is *task-adaptive rubrics for **LLM agent trajectory** evaluation* — WebArena / ToolBench / AgentBench / SWE-bench. **Not education assessment.** A keyword shortlist is not a relevance verdict |
+| [`locuslab/open-unlearning`](https://github.com/locuslab/open-unlearning) | 🟢 MIT (`1,069 B`) | `625` | 🔴 **Relevance.** A general machine-unlearning benchmark (TOFU / MUSE). 🔵 The *education* seam it points at — erasure of student data from a fine-tuned model — is real and is recorded as an opportunity in [`../intel/market.md`](../intel/market.md) rather than as a shelf row |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **no grant** — API `NULL`, `342 KB` | 🔴 **`29,549`** | 🔴 **Ungranted, and `2025-09-30` — `13` months stale.** 🟢 `p601`/`605-J`'s rule holds on a third independent channel: **in education, star rank is an anti-signal for commercial usability** |
+
+### 🔴 `610-C` — this pass published a star count that was a corpus size, and caught it before the row shipped
+
+The shortlist was ranked by a figure scraped from this base's own **trending prose**.
+`dsvi-b/corretor-enem` came back at 🔴 **`11,147★`**, which would have made it the pass's headline row.
+
+| | |
+| --- | --- |
+| 🔴 what the instrument published | 🔴 `11,147★` |
+| 🟢 what the repository has, measured first-hand | 🟢 **`7★`** |
+| 🟢 what `11.147` actually is | 🟢 **`11,147` real board-corrected essays in the corpus** — written `11.147` in Brazilian Portuguese decimal-point grouping |
+
+🔵 **The rule:** 🔴 **a number harvested from prose is not a metric until it is bound to its unit**,
+and locale number formats make the failure silent — `11.147` reads as `11` to an English parser and as
+`11,147` to a grouping-aware one, and neither is a star count. 🟢 `607-G` found the *web* behind this
+base on a star figure; this is the mirror image — **this base's own prose misread by its own
+instrument.** Every figure in this pass's rows is first-hand from `q=repo:owner/name`.
+
+### 🟢 `610-D` — what the shelves are made of now
+
+| | before `p610` | 🆕 after |
+| --- | --: | --: |
+| addresses in a real **SELL** row across the three sell shelves | `531` | 🟢 **`551`** |
+| 🔴 addresses *mentioned* on a sell shelf but never shelved | 🔴 `188` | 🔴 **`191`** — and the `+3` are **this pass's own relevance refusals**, which is `610-A`'s mechanism reproducing itself in the same pass that named it |
+| 🔴 addresses published as rows on **trending**, on no sell shelf | 🔴 `2,310` | 🔴 **`2,291`** |
+| 🟡 of those, education-shaped | 🟡 `848` | 🟡 `830` |
+
+🔴 **Twenty rows is `0.9 %` of that backlog.** Stated so the next pass reads the size of the thing
+rather than the size of the increment.
+
+---
+
 ## 🆕 `p609` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE EVAL TIER IS OPEN AFTER MANY PASSES OF RECORDING IT SHUT — AND IT WAS NEVER EMPTY: `3` OF ITS COMPONENTS WERE SITTING ON THIS BASE'S **TRENDING** SHELVES, NEVER PROMOTED. 🟢 `5` NEW AGENT ROWS, EVERY GRANT BYTE-READ TODAY, `4 of 4` FABRICATED CONTROLS AT `401`/`NOT_FOUND`. 🟢 LATAM'S REPOSITORY-LEVEL NIL IS BROKEN BY AN ENEM ESSAY GRADER. 🔴 `609-A`: THE `p436` DEBT FIGURE CARRIED FOR TWO PASSES (`104`) DOES NOT REPRODUCE UNDER **ANY** OF FOUR INSTRUMENT VARIANTS — TODAY IT MEASURES `50`. 🟢 THE PUSH BLOCK RECORDED SINCE `p54` IS GONE.**
 
 ### 🟢 `609-B` — the eval-tier gap was a promotion failure, not a scarcity

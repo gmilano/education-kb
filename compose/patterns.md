@@ -4,6 +4,142 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read
+
+🔵 Every repository named below is on a sell shelf with its grant byte-read at the real default branch
+on `2026-11-02`. No pattern here names a component this base has not verified.
+
+### 🟢 `P610-1` — Permissive assessment pipeline: Markdown → QTI → delivered session → Canvas gradebook
+
+🔴 **The gap this closes.** `p604` shelved a QTI toolchain, `p607` found the **engine**, but every
+recipe still began with a QTI file that had to already exist, and the Canvas write-back was unstated.
+
+| stage | component | grant | why this one |
+| --- | --- | --- | --- |
+| 1. author | [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | 🟢 BSD-3-Clause | Markdown → **QTI 1.2**; 7 item types, LaTeX math, `siunitx` units |
+| 2. run the session | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 BSD-3-Clause | holds candidate state — the only engine on these shelves (`p607`) |
+| 3. grade code/notebook items | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3-Clause | parallel Docker or LMS-native; speaks Canvas **and** Gradescope |
+| 4. write results back | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 MIT | Canvas REST, institution-maintained |
+| 5. provider-side LTI launch | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | 🟢 MIT | vendor's own LTI implementation |
+
+🟢 **Wiring.** Author items as Markdown in the client's repo; `text2qti` emits a QTI 1.2 package in
+CI on merge. Deploy `qtiworks` as the delivery surface and launch it from Canvas over LTI 1.3 via
+`ims-lti`. For programming items, `otter-grader` runs in its own container and returns a score;
+`canvasapi` posts both QTI and Otter scores into one assignment column keyed on the LTI
+`resource_link_id`.
+
+🟢 **Why it is worth naming:** 🟢 **zero copyleft components end to end** — three BSD-3-Clause and two
+MIT — so the whole toolchain is reusable across client tenancies without a licence review per
+engagement. 🔴 The constraint to state up front: `text2qti` targets **QTI 1.2**, not 3.0, so a client
+demanding QTI 3.0 needs the `p604` toolchain in stage 1 and a different stage-2 contract.
+
+### 🟢 `P610-2` — EU AI Act evidence trail for the four high-risk education functions
+
+🔴 **The deadline.** Reg. (EU) 2026/1744 puts admissions, learning-outcome evaluation, level
+assignment and **exam monitoring** in high-risk from `2027-12-02`, with human-oversight and logging
+duties. Art. 4 AI-literacy is binding **now**.
+
+| obligation | component | grant | how it discharges it |
+| --- | --- | --- | --- |
+| evidence trail + human check | [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | 🟢 Apache-2.0 | brief + rubric → confirmed requirements → scheduled work → **draft evidence** → final human check. Its output *is* the audit artifact |
+| outcome evaluation, defensibly | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 Apache-2.0 | formative checks whose distractors come from **documented misconceptions**, plus a shipped **eval framework** — the oversight evidence, not just the output |
+| Art. 4 literacy delivery | [`CogitoNTNU/TutorAI`](https://github.com/CogitoNTNU/TutorAI) · [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 MIT · MIT | staff/student literacy from the institution's own materials |
+| EU-residency hosting | [`Azure/Moodle`](https://github.com/Azure/Moodle) · [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | 🟢 MIT · Apache-2.0 | IaC + mobile, both **outside** Moodle's GPL core |
+
+🔴 **The design constraint that is the point of the pattern:** exam monitoring is high-risk **and**
+emotion inference in education is **banned outright** since `2025-02-02`. 🟢 So the build target is
+integrity signals with **no affect recognition** — and a proctoring vendor's affect features are a
+compliance liability, not a differentiator. Say this at the architecture stage; it is not a
+post-hoc filter.
+
+### 🟢 `P610-3` — Portuguese-first ENEM assessment on two independent holders
+
+🟢 **New capability this pass:** the ENEM tier has two unrelated permissive maintainers, so a Brazilian
+engagement no longer rests on one repository.
+
+| role | component | grant | what it contributes |
+| --- | --- | --- | --- |
+| corpus-anchored scorer | [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | 🟢 MIT | 5 official competencies, local SQLite corpus of **`11,147`** board-corrected essays, **no external API and no ML** — runs inside a coding agent |
+| calibrated agent + baseline | [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI) | 🟢 MIT | `HistGB` baseline on Essay-BR with SHAP **and** an LLM agent with per-level anchors + RAG; measured QWK `0.750` vs `0.731` |
+| Portuguese curriculum corpus | [`Universidade-Livre/matematica`](https://github.com/Universidade-Livre/matematica) | 🟢 MIT | permissive pt-BR curriculum text for retrieval and item generation |
+
+🟢 **Wiring.** Run `corretor-enem` as the deterministic, offline scorer and `CorrijAI`'s baseline as an
+independent second grader; disagreement beyond a competency threshold escalates to a human — which
+mirrors ENEM's own two-grader-plus-escalation process rather than inventing a workflow.
+
+🔴 **State both honest limits to the client.** `CorrijAI`'s own README reports the **supervised
+baseline beating the calibrated agent** on a known prompt (`0.750` vs `0.731`); and `corretor-enem`
+says plainly it produces a *pedagogical estimate, not an official score*. 🟢 Two artifacts that
+publish their unflattering numbers are the right foundation for an assessment engagement, and the
+disclaimers are the deliverable's language, not a caveat to bury.
+
+### 🟢 `P610-4` — LMS-agnostic agent surface across Canvas, Brightspace and Classroom
+
+| LMS | connector | grant | ★ / size |
+| --- | --- | --- | --- |
+| Canvas (read) | [`semyonfox/canvas-mcp`](https://github.com/semyonfox/canvas-mcp) | 🟢 MIT | `1★` / `356 KB` |
+| Canvas (grading) | [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 MIT | `1★` / `332 KB` |
+| Canvas (full API) | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 MIT | `681★` / `4,849 KB` |
+| D2L Brightspace | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 MIT | `62★` / `2,079 KB` |
+| Google Classroom | [`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) | 🟢 MIT | `2★` / `105 KB` |
+
+🔴 **Read this before wiring it.** Four of the five MCP rows are `1`–`2★` single-maintainer projects of
+`101`–`356 KB`. 🟢 The pattern is sound — one agent, one tool surface, several LMSs — but the
+connectors are **substrate you will own**, not dependencies you can rely on. 🟢 Budget a fork of each
+MCP server and put `ucfopen/canvasapi` on the critical path for anything Canvas-side that matters,
+because it is the only row here with institutional maintenance.
+
+🔴 **And the trap, which is `610-A` and is specific:** do **not** take
+`pengusto/google-classroom-mcp`, the larger and more visible Google Classroom fork. Its grant is a
+**`Pengusto Commercial License 1.0`** requiring a paid written agreement to run it — educational
+institutions explicitly included — while naming MIT four times in describing its upstream. 🟢 The
+upstream `adriasantacreu/google-classroom-mcp` is the MIT row, and it is the one in the table above.
+
+### 🟢 `P610-5` — Draw the backlog instead of searching the web
+
+🔴 **The measured fact this pattern is built on:** the four mandated global search legs have returned
+**`0`** new permissive education-specific addresses for **`40` consecutive passes**, while this base's
+own trending shelves hold **`2,310`** addresses published as rows and never promoted, `848` of them
+education-shaped.
+
+🟢 **The recipe, which is executable here today:**
+
+```
+# 1. census: attribute every address mention to its enclosing table's role
+python3 ingest/p610-census-role.py agents/top.md repos/foundations.md verticals/solutions.md > /tmp/sell.tsv
+python3 ingest/p610-census-role.py agents/trending.md repos/trending.md          > /tmp/trend.tsv
+
+# 2. backlog = published as a row on trending, in no SELL row on a sell shelf
+awk -F'\t' '$4=="SELL"{print $3}' /tmp/sell.tsv  | sort -u > /tmp/rowed.txt
+awk -F'\t' '$4=="SELL"{print $3}' /tmp/trend.tsv | sort -u > /tmp/trend-rows.txt
+comm -23 /tmp/trend-rows.txt /tmp/rowed.txt > /tmp/backlog.txt
+
+# 3. reject non-repositories at extraction time (609-M), not at promotion time
+bash ingest/p609-address-rejector.sh --shape-only $(cat /tmp/backlog.txt) > /tmp/shape.tsv
+
+# 4. metadata, batched, WITH count reconciliation -- a batch drops rows silently (606-C, 610-F)
+bash ingest/p610-batch-metadata.sh /tmp/backlog.txt /tmp/meta.tsv /tmp/unreconciled.txt
+
+# 5. grant byte-read at the REAL default branch, ladder incl. COPYING.txt (610-E)
+bash ingest/p610-grant-harness.sh < /tmp/shortlist.txt
+```
+
+🔴 **Four failure modes this pipeline exists to avoid, each one a measured defect:**
+
+| step skipped | what gets published |
+| --- | --- |
+| 🔴 role attribution (2) | a **published refusal** counted as coverage — `35 of 188` on these shelves |
+| 🔴 shape rejection (3) | `10/10` and `intel/market.md` shelved as repositories (`607-C`, `609-M`) |
+| 🔴 reconciliation (4) | a silent batch drop — `openedx/edx-platform` vanished from a `5`-row batch today |
+| 🔴 first-hand metadata (5) | 🔴 **`11,147★`** for a repository with **`7★`** — a corpus size read as a star count (`610-C`) |
+
+🟡 **Relevance is still a human read.** `3 of 23` candidates this pass survived grant, liveness and
+size and were refused on **relevance** only after a second read — `alphadl/AdaRubrics` is agent-
+trajectory evaluation, not education assessment, and the token `rubric` is what put it on the
+shortlist. 🔴 **A keyword shortlist is not a relevance verdict**, and no step above supplies one.
+
+---
+
 ## 🆕 `p609` — reads `2026-11-02` — four recipes, each buildable from rows byte-read this pass
 
 🔵 Every repo named below had its grant byte-read at `raw.githubusercontent.com` on the **real**

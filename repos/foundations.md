@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `5` FOUNDATION ROWS AND A `5`-ROW **LMS-CONNECTOR** TIER, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH. 🟢 THE QTI TIER NOW HAS AN **AUTHORING** END — BSD-3-CLAUSE — SO `p607`'s ENGINE IS REACHABLE FROM MARKDOWN. 🔴 `610-E`: THIS PASS'S OWN GRANT LADDER OMITTED `COPYING.txt` AND GRADED THE **OFFICIAL MOODLE MOBILE APP** UNGRANTED — A RUNG THIS BASE REGISTERED AT `~p460`. 🟢 `4` OF THE CONNECTOR ROWS CLOSE DEBT `609-C` ENUMERATED BY NAME.**
+
+### 🟢 The assessment stack is now permissive from authoring to delivery
+
+🟡 `p604` shelved a QTI 3.0 toolchain. 🟢 `p607` found the **engine** (`OpenOLAT/qtiworks`,
+BSD-3-Clause). 🔴 Neither gave an **authoring** path: every recipe here began with a QTI file that had
+to already exist.
+
+| stage | before `p610` | 🆕 `p610` |
+| --- | --- | --- |
+| authoring | 🔴 **none — hand-written XML** | 🟢 [`gpoore/text2qti`](https://github.com/gpoore/text2qti) — **BSD-3-Clause** `1,522 B` |
+| engine / delivery | 🟢 `OpenOLAT/qtiworks` (BSD-3-Clause) | unchanged |
+| 🟢 copyleft boundary in the path | — | 🟢 **none, end to end** |
+
+### 🟢 New foundation rows — grants byte-read `2026-11-02`, `4 of 4` fabricated controls at `404 14 B`
+
+| Repo | Grant (byte-read) | Branch | Region | ★ | Size | Why it is a foundation |
+| --- | --- | --- | --- | --: | --: | --- |
+| [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | 🟢 **BSD-3-Clause** `1,522 B` (`LICENSE.txt`) | `master` | 🔵 Global | `241` | `110 KB` | Markdown-based plain text → **QTI 1.2**, importable by Canvas and other LMSs. Multiple-choice, true/false, multiple-answers, numerical, short-answer, essay and file-upload items, with LaTeX math and a `siunitx` subset for units. 🟢 The authoring end the QTI tier lacked |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** `1,560 B` | `master` | 🟢 **North America** (UC Berkeley) | `161` | `52,835 KB` | Autograder from Berkeley's **Data Science Education Program**, built to scale by abstracting the autograding internals away from the distribution pipeline. Grades Python scripts and Jupyter notebooks; runs locally in parallel Docker containers, on a managed grading VM, or through third-party LMS autograders — **Canvas and Gradescope named**. Ships a student-side client for public checks |
+| [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **MIT** `1,130 B` | `develop` | 🟢 **North America** (Univ. of Central Florida) | `681` | `4,849 KB` | The Python client for the Canvas LMS REST API, maintained by **UCF Open** — an institution, not a vendor or a lone author. The default substrate for any Canvas-side agent. 🟡 Default branch is `develop`, a non-`main` name of the class `601-B` tracks |
+| [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | 🟢 **MIT** `1,068 B` (`LICENSE.txt`) | `main` | 🟢 **North America** (Instructure) | `203` | `479 KB` | LTI implementation published by **Instructure itself** — the Canvas vendor. 🔵 Vendor-owned and permissive is the rarer combination in this sector, and it settles the provider side of LTI that `605-I` had to refuse a stale community library for |
+| [`Universidade-Livre/matematica`](https://github.com/Universidade-Livre/matematica) | 🟢 **MIT** `1,086 B` | `main` | 🟢 **LATAM** (Brazil, Portuguese) | `1,426` | `190 KB` | 🟡 **Content, not software, and shelved as such.** An open Brazilian mathematics curriculum in Portuguese, region-evidenced by the artifact's own text (`Brasil`, `Brasileira Livre`). 🟢 Its value here is as a **permissive Portuguese-language corpus** for a LATAM retrieval or item-generation build, where the scarcity is the corpus and not the model |
+
+### 🟢 The LMS-connector tier, extended — `4` of these close debt `609-C` named
+
+🔵 `602-B` opened this tier after `gate-promotion-ledger` had been red about it for ~`165` passes.
+`609-C` then enumerated `15` `TRENDING-ONLY` rows by name. Four of them are here, plus the upstream
+`610-A` rescued.
+
+| Repo | Grant (byte-read) | Branch | ★ | Size | Note |
+| --- | --- | --- | --: | --: | --- |
+| [`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) | 🟢 **MIT** `1,073 B` | `master` | `2` | `105 KB` | 🟢 **`610-A`'s upstream**, promoted in place of the paid-commercial fork that names it |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT** `1,068 B` | `main` | `62` | `2,079 KB` | 🟢 Closes `609-C`. **D2L Brightspace** — the LMS least represented on these shelves |
+| [`semyonfox/canvas-mcp`](https://github.com/semyonfox/canvas-mcp) | 🟢 **MIT** `1,067 B` | `master` | `1` | `356 KB` | 🟢 Closes `609-C` |
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** `1,076 B` | `main` | `1` | `332 KB` | 🟢 Closes `609-C`. Grading-side rather than read-side |
+| [`vTanco/google-classroom-mcp`](https://github.com/vTanco/google-classroom-mcp) | 🟢 **MIT** `1,145 B` | `main` | `1` | `101 KB` | 🟢 Closes `609-C` |
+
+🟡 **Said plainly, because the figures are small:** four of these five are `1`–`2★` single-maintainer
+connectors of `101`–`356 KB`. 🟢 They are real, live, permissive and byte-read, and a connector is a
+thin thing by nature — `609-D`'s size rule refutes a *Kubernetes LMS* at `10 KB`, not an MCP server at
+`105 KB`. 🔴 They are **not** a maintained-platform bet, and no recipe here should put one on the
+critical path without a fork budget. Shelved as substrate, labelled as substrate.
+
+### 🔴 `610-E` — this pass's own grant ladder graded the official Moodle mobile app ungranted
+
+[`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) — Moodle HQ's official mobile client,
+`133,226 KB`, `1,004★`, pushed `2026-10-29` — returned 🔴 `NO-GRANT` from this pass's first harness.
+
+| probe | result |
+| --- | --- |
+| 🔴 `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT` | 🔴 **`404 14 B` at every one** |
+| 🟢 `COPYING.txt` | 🟢 **`200`, `11,358 B` — stock Apache-2.0 body** |
+| 🟢 corroboration 1 — `package.json` | 🟢 `"license": "Apache-2.0"` |
+| 🟢 corroboration 2 — `README.md` | 🟢 "Apache 2.0" with the canonical URL |
+
+🔴 **And `COPYING.txt` was not a new rung.** This base registered it at ~`p460` on `moodle/moodle`
+— *"the grant lives at `COPYING.txt`, a fifth name outside a four-name probe"* — and
+`verticals/solutions.md` has carried it since. 🔴 So this is not a discovery; it is **a pass rebuilding
+an instrument worse than the committed one and reproducing a defect already fixed.**
+🔵 `605-D`, `605-M`, `606-B`, `606-K`, `609-M` and now `610-C` and `610-E`: **the instrument, not the
+corpus, is where this base's errors live.** 🟢 The ladder in `ingest/p610-grant-harness.sh` is
+corrected to carry `COPYING.txt`.
+
+---
+
 ## 🆕 `p609` — reads `2026-11-02` — **🟢 THE EVALUATION/KNOWLEDGE-TRACING TIER GETS `6` PERMISSIVE HOLDERS IN ONE PASS, EVERY GRANT BYTE-READ TODAY. 🔴 THE GITHUB API CALLED `2` OF THEM `NOASSERTION`; BOTH ARE STOCK `MIT` — `598-D` CONFIRMED A THIRD TIME, FROM A THIRD SET OF REPOSITORIES. 🟡 AND THE CITATION LAYER UNDER THESE ROWS CANNOT BE VERIFIED FROM THIS SESSION AT ALL.**
 
 ### 🟢 The central result — the diagnostic layer above `pyKT` now exists, permissively

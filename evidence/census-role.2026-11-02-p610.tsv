@@ -1,0 +1,1383 @@
+file	line	slug	role	header
+agents/top.md	17	microsoft/studentsim	SELL	| component | grant byte-read today | where this base already held it | sell shelf |
+agents/top.md	18	shivanireddyk/tutoreval	SELL	| component | grant byte-read today | where this base already held it | sell shelf |
+agents/top.md	19	kaushal0494/unifyingaitutorevaluation	SELL	| component | grant byte-read today | where this base already held it | sell shelf |
+agents/top.md	31	tcheld0n/corrijai	SELL	| Agent | Repo | License (byte-read) | Region | Size | What it actually does |
+agents/top.md	32	microsoft/studentsim	SELL	| Agent | Repo | License (byte-read) | Region | Size | What it actually does |
+agents/top.md	33	gemlabhku/das2	SELL	| Agent | Repo | License (byte-read) | Region | Size | What it actually does |
+agents/top.md	34	abigail-gh/simlearner	SELL	| Agent | Repo | License (byte-read) | Region | Size | What it actually does |
+agents/top.md	35	rahzero0/edwisely-vivasimulator	SELL	| Agent | Repo | License (byte-read) | Region | Size | What it actually does |
+agents/top.md	46	mkhomytsya/muckeligagentlms	PROSE	
+agents/top.md	67	gmilano/education-kb	PROSE	
+agents/top.md	76	tencent/weknora	PROSE	
+agents/top.md	84	hkuds/deeptutor	METRIC	| probe | `curl -sI https://github.com/…` | `raw.githubusercontent.com` byte-read |
+agents/top.md	85	tencent/weknora	METRIC	| probe | `curl -sI https://github.com/…` | `raw.githubusercontent.com` byte-read |
+agents/top.md	86	fakeorg-zzz999/fake-education-agent	METRIC	| probe | `curl -sI https://github.com/…` | `raw.githubusercontent.com` byte-read |
+agents/top.md	87	openai/totally-not-real-edu-repo	METRIC	| probe | `curl -sI https://github.com/…` | `raw.githubusercontent.com` byte-read |
+agents/top.md	95	tencent/weknora	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	96	haoyanzhang123/sproutask	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	97	1zonghao/si-yuan-agent	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	98	leelanguagelab/hokkientranslation	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	99	prayashcloud/axomiya-study-companion	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	100	duaabaig/hisackt	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	101	bradwave/obfusca	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	102	yashvikram30/german-course	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	103	harjothkhara/whiteboard-tutor	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	104	dlealvilla/wildmind-ai-for-education	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	105	me-massine/azure-ai-student-support	SELL	| Agent | Repo | License (byte-read) | Region | What it actually does |
+agents/top.md	111	tencent/weknora	PROSE	
+agents/top.md	125	shengdabai/chinese-learning	METRIC	| repo | what the byte-read found | verdict |
+agents/top.md	126	jonscott79/pythos	METRIC	| repo | what the byte-read found | verdict |
+agents/top.md	127	valerazsd/terramentor	METRIC	| repo | what the byte-read found | verdict |
+agents/top.md	128	nexika/nexika	METRIC	| repo | what the byte-read found | verdict |
+agents/top.md	134	nbrangerf/curriculum-standards-breakdown	PROSE	
+agents/top.md	134	amitdutta121/universal_adaptive_trainer	PROSE	
+agents/top.md	134	wxxxqcy/ai-learning-assistant	PROSE	
+agents/top.md	134	yahiacuda/lesson-rag-agent	PROSE	
+agents/top.md	134	jwj1342/paper2manim	PROSE	
+agents/top.md	134	schnitzlermandy85-beep/course-grounded-tutor	PROSE	
+agents/top.md	134	sherlockmf/lomi-english-learning	PROSE	
+agents/top.md	134	akshunyab/autograder	PROSE	
+agents/top.md	134	sarthak-003/autograder	PROSE	
+agents/top.md	134	osigelialex/automated-code-grader-backend	PROSE	
+agents/top.md	134	preethamgm04/accesslearn-	PROSE	
+agents/top.md	134	abaridodo/ai4africa	PROSE	
+agents/top.md	134	abaridodo/makaranta	PROSE	
+agents/top.md	136	wxxxqcy/ai-learning-assistant	PROSE	
+agents/top.md	142	learning-commons-org/evaluators	METRIC	| repo | what this base already recorded | `p608` byte-read |
+agents/top.md	143	brahm-ai-official/brahm-ai	METRIC	| repo | what this base already recorded | `p608` byte-read |
+agents/top.md	144	sdrangan/llmgrader	METRIC	| repo | what this base already recorded | `p608` byte-read |
+agents/top.md	159	hkuds/deeptutor	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	160	thu-maic/openmaic	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	161	crewaiinc/crewai	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	161	microsoft/autogen	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	162	ashishpatel26/500-ai-agents-projects	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	163	arunagirinathan-k/awesome-ai-agents-2026	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	164	rasbt/llms-from-scratch	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	165	nousresearch/hermes-agent	METRIC	| token the global legs returned | held here? | where |
+agents/top.md	174	nousresearch/hermes-agent	METRIC	
+agents/top.md	192	datakind/student-success-tool	PROSE	
+agents/top.md	198	mcp-brasil/mcp-brasil	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	199	dfdb76/bncc-mcp	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	200	g36maid/moodle-mcp	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	201	datakind/student-success-tool	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	202	aryankeluskar/canvas-mcp	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	203	pdg6/bc-curriculum-mcp-server	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	204	hyunbinseo/neis-school-info	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	205	felipedias-ie/blackboard-mcp	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	206	a-ariff/canvas-mcp	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	207	teci-ai/moodle-mcp-connector	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	208	ai-for-education/edu-qurating	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	209	ashleycribb/learnmcp-xapi	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+agents/top.md	211	ashleycribb/learnmcp-xapi	PROSE	
+agents/top.md	215	pdg6/bc-curriculum-mcp-server	PROSE	
+agents/top.md	215	hyunbinseo/neis-school-info	PROSE	
+agents/top.md	242	alpinevibe/quizpulse	METRIC	| slug in the committed ledger | what it actually is |
+agents/top.md	258	dodona-edu/judge-pythia	PROSE	
+agents/top.md	259	dodona-edu/dolos	PROSE	
+agents/top.md	297	muhammadawaisshaikh/edtech-ai	PROSE	
+agents/top.md	314	openeducat/openeducat_erp	PROSE	
+agents/top.md	315	tsugiproject/tsugi	PROSE	
+agents/top.md	316	kantord/librelingo	PROSE	
+agents/top.md	317	codelitdev/courselit	PROSE	
+agents/top.md	323	illinois-cs241/broadway	PROSE	
+agents/top.md	325	tmuras/moosh	PROSE	
+agents/top.md	327	didask/scol-r	PROSE	
+agents/top.md	340	mnemosyne-proj/mnemosyne	PROSE	
+agents/top.md	366	hkuds/deeptutor	SELL	| repo | licence (API) | 🟢 stars today | last pushed |
+agents/top.md	367	thu-maic/openmaic	SELL	| repo | licence (API) | 🟢 stars today | last pushed |
+agents/top.md	368	crewaiinc/crewai	SELL	| repo | licence (API) | 🟢 stars today | last pushed |
+agents/top.md	369	microsoft/autogen	SELL	| repo | licence (API) | 🟢 stars today | last pushed |
+agents/top.md	430	uportal-project/feedbackportlet	PROSE	
+agents/top.md	448	openedx/xblock	METRIC	| recovered rung | repos | shelf claim confirmed by the recovered bytes? |
+agents/top.md	450	learninglocker/xapi-service	PROSE	
+agents/top.md	451	learninglocker/xapi-validation	PROSE	
+agents/top.md	452	theodinproject/theodinproject	PROSE	
+agents/top.md	453	kitschpatrol/yanki	PROSE	
+agents/top.md	454	zagortenay333/cronomix	PROSE	
+agents/top.md	468	aaryansamanta/ai-ethos	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	469	krayin/agent-skills	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	470	rodrigoborgesmachado/questoesconcursos	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	471	dmontgomery40/mcp-canvas-lms	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	472	s64965264-code/nexo-ia	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	473	apereo-learning-analytics-initiative/sakaixapi-provider	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	473	598-a/b	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	473	impl/license_header	METRIC	| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+agents/top.md	494	darl-genai/instructional_agents	PROSE	
+agents/top.md	509	edunlp/edu-convokit	METRIC	| shelf address | canonical | HEAD | verdict |
+agents/top.md	509	stanfordnlp/edu-convokit	METRIC	| shelf address | canonical | HEAD | verdict |
+agents/top.md	510	digitalcredentials/learner-credential-wallet	METRIC	| shelf address | canonical | HEAD | verdict |
+agents/top.md	510	openwallet-foundation-labs/learner-credential-wallet	METRIC	| shelf address | canonical | HEAD | verdict |
+agents/top.md	511	project-sunbird/sunbird-lms-service	METRIC	| shelf address | canonical | HEAD | verdict |
+agents/top.md	511	sunbird-lern/lms-service	METRIC	| shelf address | canonical | HEAD | verdict |
+agents/top.md	527	krayin/agent-skills	PROSE	
+agents/top.md	528	krayin/laravel-crm	PROSE	
+agents/top.md	566	learnwise/learnwise	PROSE	
+agents/top.md	584	ai-for-education/fabdata-llm	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	585	ai-for-education/voice-ai-evaluation-framework	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	586	psychquant/che-ntucool-mcp	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	587	omarniazi/classroom-mcp	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	588	glacy/evolutia	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	589	ljchang/marimo-grader	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	589	marimo-team/learn	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	590	metyatech/qti-html-renderer	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	590	metyatech/qti-reporter	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	591	pingakshgaur/tatvax-ai-prototype	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	592	20251123/ai-education-project	SELL	| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+agents/top.md	598	brycewang-stanford/auto-empirical-research-skills	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	599	muhammadawaisshaikh/edtech-ai	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	600	sandiegocodeschool/lti-node-library	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	600	decoylex/ltix	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	600	iamlucasb/lti-core	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	601	kvnloo/tutor-mcp	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	602	learnwise/learnwise	REFUSAL	| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+agents/top.md	639	sakaiproject/sakai	PROSE	
+agents/top.md	643	sakaiproject/sakai	PROSE	
+agents/top.md	644	sakaiproject/genericdao	PROSE	
+agents/top.md	656	uportal-project/feedbackportlet	PROSE	
+agents/top.md	659	jasig/calendarportlet	PROSE	
+agents/top.md	671	jasig/calendarportlet	METRIC	
+agents/top.md	682	apereo/java-cas-client	PROSE	
+agents/top.md	698	sakaiproject/genericdao	PROSE	
+agents/top.md	700	sakaiproject/genericdao	PROSE	
+agents/top.md	716	ucfopen/quiz-extensions	SELL	| Agent | Grant (byte-read) | Branch | Pushed | ★ | tz | Region | What it does |
+agents/top.md	717	ltilibrary/ltiadvantagetool	SELL	| Agent | Grant (byte-read) | Branch | Pushed | ★ | tz | Region | What it does |
+agents/top.md	718	tl-its-umich-edu/instructor-tools	SELL	| Agent | Grant (byte-read) | Branch | Pushed | ★ | tz | Region | What it does |
+agents/top.md	719	cloudpedagogy/cloudpedagogy-moodle-course-auditor	SELL	| Agent | Grant (byte-read) | Branch | Pushed | ★ | tz | Region | What it does |
+agents/top.md	720	metyatech/qti-reporter	SELL	| Agent | Grant (byte-read) | Branch | Pushed | ★ | tz | Region | What it does |
+agents/top.md	726	ucfopen/lti-template-flask-oauth-tokens	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	726	ucfopen/cookiecutter-python-lti	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	762	datnguyenquy94/news-radar	PROSE	
+agents/top.md	765	yaojiejia/agents-radar	PROSE	
+agents/top.md	765	845421145-lang/agents-radar	PROSE	
+agents/top.md	766	bianzhilong2-ctrl/agents-radar	PROSE	
+agents/top.md	769	hkuds/deeptutor	PROSE	
+agents/top.md	769	thu-maic/openmaic	PROSE	
+agents/top.md	770	ashishpatel26/500-ai-agents-projects	PROSE	
+agents/top.md	773	portabilis/i-educar	PROSE	
+agents/top.md	811	alpinevibe/quizpulse	METRIC	| verdict | repos | can it be shelved? |
+agents/top.md	829	thc1006/moodle-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	830	toshieji/moodle-grading-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	831	falkenslab/moodle-driver	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	832	aaradhya-dev-tamrakar/google-classroom-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	833	edubase/mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	834	skhdemo/uoft-quercus-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	835	sonaiengine/ku-portal-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	836	chrisryugj/schoolinfo-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	837	nialvape/utn-mcp	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	838	pablopc05/mcp-usc	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	839	sidneybissoli/uis-mcp-server	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	840	learnablelabs/opentutor	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	841	microsoft/agent-governance-toolkit	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	842	ukgovernmentbeis/inspect_ai	SELL	| Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
+agents/top.md	850	ilias-ebuch/ilias	PROSE	
+agents/top.md	852	ilias-elearning/ilias	PROSE	
+agents/top.md	857	ilias-ebuch/ilias	METRIC	
+agents/top.md	858	ilias-elearning/ilias	METRIC	
+agents/top.md	871	csoai-org/coppa-ferpa-mcp	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	872	automoss/automoss	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	873	naufaldi/teacher-exam	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	874	alpinevibe/quizpulse	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	875	503496348-ops/herpeakgem	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	875	sumo1/ai-game-cool	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	875	karsh482/gaokao	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	875	xsx11223/zhibuzhi	REFUSAL	| Not promoted | Grant | Reason |
+agents/top.md	883	a-ariff/canvas-mcp	PROSE	
+agents/top.md	895	finereli/yarareads	PROSE	
+agents/top.md	895	vishalsachdev/learning-design-pillars	PROSE	
+agents/top.md	895	krayin/laravel-crm	PROSE	
+agents/top.md	896	cortezaproject/corteza	PROSE	
+agents/top.md	896	openeducat/openeducat_erp	PROSE	
+agents/top.md	896	frappe/education	PROSE	
+agents/top.md	899	frappe/education	PROSE	
+agents/top.md	915	eduardokrausme/moodle-local_mcp	PROSE	
+agents/top.md	916	teci-ai/moodle-local_mcpconnector	PROSE	
+agents/top.md	916	aryankeluskar/canvas-mcp	PROSE	
+agents/top.md	917	niccolosalvini/mcp-blackboard-ucsc	PROSE	
+agents/top.md	917	eledia/moodle-block_elediaai_tutor	PROSE	
+agents/top.md	933	bijonai/echoai	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	934	zs-andy/lms-cli	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	935	jasp-nerd/courseforge	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	936	tomtranjr/canvas-control	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	937	hunterschep/canvas-lms-codex-plugin	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	941	jasp-nerd/courseforge	PROSE	
+agents/top.md	941	zs-andy/lms-cli	PROSE	
+agents/top.md	944	vishalsachdev/learning-design-pillars	PROSE	
+agents/top.md	945	finereli/yarareads	PROSE	
+agents/top.md	951	akshsgaur/cmucanvasmcpserver	SELL	| repo | ★ | ladder result (`25` names, real default branch) | control | usable |
+agents/top.md	952	orionkabeza/canvas-mcp	SELL	| repo | ★ | ladder result (`25` names, real default branch) | control | usable |
+agents/top.md	953	colehollander10-netizen/canvas-student-mcp-server	SELL	| repo | ★ | ladder result (`25` names, real default branch) | control | usable |
+agents/top.md	954	krayin/agent-skills	SELL	| repo | ★ | ladder result (`25` names, real default branch) | control | usable |
+agents/top.md	954	krayin/laravel-crm	SELL	| repo | ★ | ladder result (`25` names, real default branch) | control | usable |
+agents/top.md	958	krayin/agent-skills	PROSE	
+agents/top.md	964	clovaai/focusseq2seq	PROSE	
+agents/top.md	965	teacherpeterpan/unsupervised-multi-hop-qa	PROSE	
+agents/top.md	967	yuxixie/sg-deep-question-generation	PROSE	
+agents/top.md	968	awslabs/unsupervised-qa	PROSE	
+agents/top.md	970	obss/turkish-question-generation	PROSE	
+agents/top.md	985	zs-andy/lms-cli	SELL	| repo | region | the evidence, named |
+agents/top.md	986	edunext/tvm	SELL	| repo | region | the evidence, named |
+agents/top.md	987	moodle-an-hochschulen/moodle-theme_boost_union	SELL	| repo | region | the evidence, named |
+agents/top.md	998	imbad0202/academic-research-skills	PROSE	
+agents/top.md	1010	imbad0202/academic-research-skills-codex	PROSE	
+agents/top.md	1018	imbad0202/academic-research-skills	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1019	imbad0202/academic-research-skills-codex	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1020	theodinproject/curriculum	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1021	ahmadhassan-bted/turnitout-humanizer	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1022	attendize/attendize	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1023	aiscientists-dev/academic-humanizer	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1024	wotakumoe/wotaku	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1025	git-learning-game/oh-my-git	SELL	| ★ | repo | grant, byte-read at real default branch | usable |
+agents/top.md	1049	adkid-zephyr/anti-defensive-writing-skill	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1050	aiscientists-dev/academic-humanizer	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1051	opennswm-lab/faros	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1052	pedrohcgs/claude-code-my-workflow	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1053	kiterlin/anti-defensive-writing	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1054	lishix520/academic-paper-skills	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1055	brycewang-stanford/awesome-journal-skills	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1056	spark-to-paper-skills/paperjury	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1057	light0305/light-skills	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1058	wantongc/journal-adapt-writing-skill	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1059	hanlulong/econ-writing-skill	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1060	wenyuchiou/ai-research-skills	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1061	alfonso0512/research-writing-skill	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1062	federicodeponte/opendraft	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1063	appautomaton/latex-arxiv-skill	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1064	jamditis/claude-skills-journalism	SELL	| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+agents/top.md	1078	attendize/attendize	METRIC	| repo | default branch | consequence |
+agents/top.md	1079	pythonarcade/arcade	METRIC	| repo | default branch | consequence |
+agents/top.md	1080	fasiha/ebisu	METRIC	| repo | default branch | consequence |
+agents/top.md	1081	light0305/light-skills	METRIC	| repo | default branch | consequence |
+agents/top.md	1081	federicodeponte/opendraft	METRIC	| repo | default branch | consequence |
+agents/top.md	1081	jamditis/claude-skills-journalism	METRIC	| repo | default branch | consequence |
+agents/top.md	1083	fasiha/ebisu	PROSE	
+agents/top.md	1087	theodinproject/theodinproject	PROSE	
+agents/top.md	1088	techtonica/curriculum	PROSE	
+agents/top.md	1092	latextemplates/scientific-thesis-template	PROSE	
+agents/top.md	1106	liqinling1994-cloud/master-teacher	SELL	| repo | ★ | Grant (byte-read) | Region | What it is |
+agents/top.md	1107	kambere-44/ai-assistant-for-teachers	SELL	| repo | ★ | Grant (byte-read) | Region | What it is |
+agents/top.md	1108	seanmcww/uk-english-lesson-planning	SELL	| repo | ★ | Grant (byte-read) | Region | What it is |
+agents/top.md	1109	jackstar6677-1/edudocente-studio	SELL	| repo | ★ | Grant (byte-read) | Region | What it is |
+agents/top.md	1138	learnaihubc/learndeck	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1139	selftune-dev/selftune	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1140	sizwinz/studysage-offline-online-ai-note-assistant	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1141	terrabyte-dev/openedu	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1142	agenticfabriq/beacon	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1143	fcescob/understand	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1144	rayhaan1345/socratic-tutor	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1145	youngman2007/courseware-cn-annotator	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1146	weidonglang/edunexus-ai	SELL	| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+agents/top.md	1158	mnemosyne-proj/mnemosyne	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1159	hwgilbert16/scholarsome	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1160	olmps/memo	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1161	zagortenay333/cronomix	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1182	garethmanning/education-agent-skills	PROSE	
+agents/top.md	1188	cybercussion/scobot	PROSE	
+agents/top.md	1199	baney75/myelinate	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1200	ethos6/masterly	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1201	2092372408-pixel/edupilot	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+agents/top.md	1206	caviraoss/pagelm	PROSE	
+agents/top.md	1210	optimeta/paideia	PROSE	
+agents/top.md	1212	arturonereu/ai-study-group	PROSE	
+agents/top.md	1223	apereo-learning-analytics-initiative/sakaixapi-provider	PROSE	
+agents/top.md	1223	apereo-lai/sakaixapi-provider	PROSE	
+agents/top.md	1233	s64965264-code/nexo-ia	PROSE	
+agents/top.md	1250	sakaiproject/sakai	PROSE	
+agents/top.md	1258	speedyapply/2026-ai-college-jobs	PROSE	
+agents/top.md	1261	quickfeed/quickfeed	PROSE	
+agents/top.md	1266	owner/repo	PROSE	
+agents/top.md	1284	dilawarshafiq/nietzschian-debugger	SELL	| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1285	chenchenyaqi/learn-anything	SELL	| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1286	syuan03/skill-anything	SELL	| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1287	errrc/kaogong-shuati	SELL	| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1288	preplabsai/interviewmentor	SELL	| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1294	infomark-org/infomark	SELL	| Repo | ★ | Measured `2026-11-01` | Disposition |
+agents/top.md	1294	quickfeed/quickfeed	SELL	| Repo | ★ | Measured `2026-11-01` | Disposition |
+agents/top.md	1295	uportal-project/coursesportlet	SELL	| Repo | ★ | Measured `2026-11-01` | Disposition |
+agents/top.md	1295	uportal-project/newsreaderportlet	SELL	| Repo | ★ | Measured `2026-11-01` | Disposition |
+agents/top.md	1296	apereo-learning-analytics-initiative/sakaixapi-provider	SELL	| Repo | ★ | Measured `2026-11-01` | Disposition |
+agents/top.md	1297	s64965264-code/nexo-ia	SELL	| Repo | ★ | Measured `2026-11-01` | Disposition |
+agents/top.md	1308	digitalcredentials/learner-credential-wallet	PROSE	
+agents/top.md	1315	microsoft/autogen	PROSE	
+agents/top.md	1329	owner/repo	PROSE	
+agents/top.md	1333	darl-genai/instructional_agents	PROSE	
+agents/top.md	1348	microsoft/autogen	METRIC	| repo | API `spdx_id` | byte-read at the real branch | why a screen gets it wrong |
+agents/top.md	1349	crewaiinc/crewai	METRIC	| repo | API `spdx_id` | byte-read at the real branch | why a screen gets it wrong |
+agents/top.md	1350	oaknational/oak-open-curriculum-ecosystem	METRIC	| repo | API `spdx_id` | byte-read at the real branch | why a screen gets it wrong |
+agents/top.md	1356	microsoft/autogen	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1357	crewaiinc/crewai	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1358	juneyaooo/lineage-skill	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1359	r-huijts/canvas-mcp	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1360	peancor/moodle-mcp-server	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1361	simonstang/feifei-companion	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1362	darl-genai/instructional_agents	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1363	darl-genai/instructional_agents_studio	SELL	| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+agents/top.md	1369	anonymousonyx22/brightspace-d2l-mcp	SELL	| Repo | ★ | Measured | Disposition |
+agents/top.md	1370	csmediapro/moodle-mcp-server	SELL	| Repo | ★ | Measured | Disposition |
+agents/top.md	1371	loyaniu/moodle-mcp	SELL	| Repo | ★ | Measured | Disposition |
+agents/top.md	1372	onbirdev/moodle-webservice_mcp	SELL	| Repo | ★ | Measured | Disposition |
+agents/top.md	1373	panaversity/learn-agentic-ai	SELL	| Repo | ★ | Measured | Disposition |
+agents/top.md	1374	littlecookie0722/ai-teaching-agent	SELL	| Repo | ★ | Measured | Disposition |
+agents/top.md	1402	dajarbot/autograder	PROSE	
+agents/top.md	1431	microsoft/ai-agents-for-beginners	PROSE	
+agents/top.md	1432	rohitg00/ai-engineering-from-scratch	PROSE	
+agents/top.md	1483	ximing/aimo	PROSE	
+agents/top.md	1485	sethrobinson/ugtlive	PROSE	
+agents/top.md	1526	caviraoss/pagelm	PROSE	
+agents/top.md	1534	sethrobinson/ugtlive	PROSE	
+agents/top.md	1534	ximing/aimo	PROSE	
+agents/top.md	1550	odoo/odoo	PROSE	
+agents/top.md	1550	claroline/claroline	PROSE	
+agents/top.md	1554	frappe/education	PROSE	
+agents/top.md	1554	frappe/erpnext	PROSE	
+agents/top.md	1555	frappe/lms	PROSE	
+agents/top.md	1557	frappe/education	PROSE	
+agents/top.md	1563	portabilis/i-diario	PROSE	
+agents/top.md	1564	portabilis/pre-matricula-digital	PROSE	
+agents/top.md	1571	idempiere/idempiere	PROSE	
+agents/top.md	1572	thm-mni-ii/feedbacksystem	PROSE	
+agents/top.md	1572	nirholas/lyra-web3-playground	PROSE	
+agents/top.md	1603	microsoft/ai-agents-for-beginners	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1604	rohitg00/ai-engineering-from-scratch	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1605	hugohe3/ppt-master	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1606	hkuds/deeptutor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1607	thu-maic/openmaic	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1608	virgiliojr94/book-to-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1609	oppia/oppia	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1610	designfuchen/word-atlas	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1611	caviraoss/pagelm	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1612	jupyter/nbgrader	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1613	miaotofu01/study-mate	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1614	pguso/agents-from-scratch	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1615	dozentwelve/papermorph	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1616	assafkip/claudemy	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1617	ankimcp/anki-mcp-server	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1618	aaryansamanta/nextgen-ai	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1619	pykt-team/pykt-toolkit	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1620	inducer/relate	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1621	satvik314/educhain	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1622	cvmcosta/ltijs	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1623	zekainie/universal-examprep-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1624	vishalsachdev/canvas-mcp	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1625	karanb192/algo-sensei	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1626	li-evan/bloom	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1627	cahlr/oatutor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1628	orionsheep/wordlink	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1629	senmuuuuw/universal-diagnostic-tutor-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1630	fazmin/ailearningguide	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1631	nichochar/ari	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1632	kewang0622/kaogong-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1633	bigdata-ustc/educdm	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1634	liuliu667/cram-engine	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1635	zijinz456/opentutor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1636	douglasrizzo/catsim	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1637	geminilight/gen-mentor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1638	eribean/girth	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1639	open-tutorai/open-tutor-ai-ce	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1640	selleo/mentingo	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1641	optimeta/paideia	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1642	sirhanmacx/claw-ed	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1643	arnaudguiovanna/tutor-mcp	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1644	emil-a-dev/lama-loca	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1645	bbkjdayup/bctk	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1646	towardsai/ai-tutor-app	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1647	learnaihubc/learndeck	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1648	selftune-dev/selftune	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1649	sizwinz/studysage-offline-online-ai-note-assistant	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1650	terrabyte-dev/openedu	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1651	agenticfabriq/beacon	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1652	fcescob/understand	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1653	rayhaan1345/socratic-tutor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1654	youngman2007/courseware-cn-annotator	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1655	weidonglang/edunexus-ai	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1688	savvides/idstack	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1689	kemalyy/edumints-scorm-mcp	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1690	course-code-framework/coursecode	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1691	giacomomaria81/scorm-mcp-server	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1692	kemalyy/edumints-scorm-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1696	liascript/liascript-exporter	PROSE	
+agents/top.md	1708	anandpatikat/guru-latihan-dinamis	METRIC	| Repo | Measured `p590` | Verdict |
+agents/top.md	1723	rasbt/llms-from-scratch	PROSE	
+agents/top.md	1724	rohitg00/ai-engineering-from-scratch	PROSE	
+agents/top.md	1740	microsoft/generative-ai-for-beginners	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1741	rasbt/llms-from-scratch	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1742	jingyaogong/minimind	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1743	karpathy/nanochat	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1744	ashishpatel26/500-ai-agents-projects	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1745	arunagirinathan-k/awesome-ai-agents-2026	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1746	rphilipzhang/ai-phd-s26	SELL	| Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1749	microsoft/ai-agents-for-beginners	PROSE	
+agents/top.md	1750	rohitg00/ai-engineering-from-scratch	PROSE	
+agents/top.md	1768	pedal-edu/pedal	SELL	| Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
+agents/top.md	1769	thm-mni-ii/feedbacksystem	SELL	| Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
+agents/top.md	1770	terracotta-education/terracotta	SELL	| Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
+agents/top.md	1771	openfun/warren	SELL	| Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
+agents/top.md	1772	csepulvedai/libro-3d-interactivo	SELL	| Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
+agents/top.md	1773	ai-for-education/pedagogy-benchmark	SELL	| Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
+agents/top.md	1788	biuworks/bilibili-digest	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1789	pndaman/cortex	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1790	wansui976/coursepilot	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1791	martinachain/yidu-english-reader	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1792	zinverno/veynrel	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1793	inbeomheo/insight-engine	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1794	davirain-su/empty	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1795	suncloudsmoon/quizzer	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1814	mobinbiback/subify	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1815	lucianoon/llm-course	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1816	tongether/espanol-scenario-learn	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1817	tacianosilva/engenharia-software	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1818	pedroselet/macacodev-5-projetos-python	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1819	dimelim/miniout	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1820	angelapaia/tutor-de-skills	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1821	sae-l/tutor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1822	kenzofujimoto/mackseguro	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1823	escama-code/jacarev3	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1824	belentani7/lingua-aberta	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1825	marcoskoo/poliglota-master	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1826	smartfoods1/tutor-vibe-coding	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+agents/top.md	1835	andresmancilla08/parlo	METRIC	| Repo | Measured `p591` | Verdict |
+agents/top.md	1836	corleone000000/fluir	METRIC	| Repo | Measured `p591` | Verdict |
+agents/top.md	1837	s64965264-code/nexo-ia	METRIC	| Repo | Measured `p591` | Verdict |
+agents/top.md	1838	jccastel12-ctrl/linguaai-coach	METRIC	| Repo | Measured `p591` | Verdict |
+agents/top.md	1839	cryptojones/osaphla	METRIC	| Repo | Measured `p591` | Verdict |
+agents/top.md	1840	rodrigoborgesmachado/questoesconcursos	METRIC	| Repo | Measured `p591` | Verdict |
+agents/top.md	1844	sae-l/tutor	PROSE	
+agents/top.md	1858	agi-is-going-to-arrive/ahadiff	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1859	bob798/speakeasy	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1860	zuzuleinen/algotutor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1861	vancece/word-teacher	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1862	1599570912/ielts-speaking-ai	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1863	fahreziadh/inklish	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1864	hyh926/smart-learn	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1865	idkwhatimd0ing/adapted	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1866	eren23/attocode	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1867	m1908293028-boop/knowledge-teacher	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1868	ayhammouda/mentor	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1869	beret21/teachme	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1870	jerryyy985/blind-review-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1871	uimarch123-arch/ai-pm-atom-lesson	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1872	danielhuang-ning/smartedu-textbook	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1873	apareek89/agentic-learning-skill	SELL	| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+agents/top.md	1876	cabinserver39/quiz-gen	PROSE	
+agents/top.md	1887	googlecloudplatform/aira	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1888	andymatuschak/orbit	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1888	packages/app	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1888	packages/backend	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1889	hugecatlab/chattutor	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1890	24kchengye/human-skill-tree	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1891	aaryansamanta/ai-ethos	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1892	artcc/freelingo	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1893	kantord/librelingo	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1894	a-r007/multi-agent-study-assistant	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1895	bigdata-ustc/agent4edu	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1896	dmontgomery40/mcp-canvas-lms	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1896	vishalsachdev/canvas-mcp	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1897	cybercussion/scobot	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1897	garethmanning/education-agent-skills	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1898	adlnet/scorm-to-xapi-wrapper	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1899	aneelv75/github-trending	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1900	garethmanning/education-agent-skills	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1900	aaryansamanta/nextgen-ai	METRIC	| Repo | Verdict | Evidence |
+agents/top.md	1910	moodle/moodle	REFUSAL	| Need | Channel | Why not the obvious one |
+agents/top.md	1914	apache/openmeetings	REFUSAL	| Need | Channel | Why not the obvious one |
+agents/top.md	1923	24kchengye/human-skill-tree	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1924	aaryansamanta/nextgen-ai	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1925	hugohe3/ppt-master	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1926	dozentwelve/papermorph	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1926	assafkip/claudemy	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1926	zekainie/universal-examprep-skill	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1926	orionsheep/wordlink	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1927	artcc/freelingo	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1928	aaryansamanta/ai-ethos	METRIC	| Row | API said | Licence file says | Direction |
+agents/top.md	1936	ximing/aimo	SELL	| Repo | Body match says | 🔴 Title says | What it actually is |
+agents/top.md	1937	sethrobinson/ugtlive	SELL	| Repo | Body match says | 🔴 Title says | What it actually is |
+agents/top.md	1938	orenoid/babelduck	SELL	| Repo | Body match says | 🔴 Title says | What it actually is |
+agents/top.md	1939	nirholas/lyra-web3-playground	SELL	| Repo | Body match says | 🔴 Title says | What it actually is |
+agents/top.md	1969	openedx/openedx-platform	PROSE	
+agents/top.md	1969	openedx/edx-platform	PROSE	
+agents/top.md	1970	openeducat/openeducat_erp	PROSE	
+agents/top.md	1970	openeducat/openeducat	PROSE	
+agents/top.md	1982	openedx/xblock	METRIC	| Gap | Status | What would close it |
+agents/top.md	1985	virgiliojr94/book-to-skill	METRIC	| Gap | Status | What would close it |
+agents/top.md	1985	thm-mni-ii/feedbacksystem	METRIC	| Gap | Status | What would close it |
+agents/top.md	1985	bigbluebutton/bigbluebutton	METRIC	| Gap | Status | What would close it |
+agents/top.md	1985	openeducat/openeducat_erp	METRIC	| Gap | Status | What would close it |
+agents/top.md	1989	bigdata-ustc/agent4edu	METRIC	| Gap | Status | What would close it |
+agents/top.md	1991	packages/app	METRIC	| Gap | Status | What would close it |
+agents/top.md	1991	packages/backend	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	11	pykt-team/pykt-toolkit	PROSE	
+repos/foundations.md	19	shivanireddyk/tutoreval	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	20	kernelinterrupt/kt-benchmark-diagnosis	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	21	huynhanhkhiem-dms/pooled-auc-knowledge-tracing	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	22	baptiste-alonso/knowledge-tracing-benchmark	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	23	devissaputra/knowledge_tracing_benchmark	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	24	pchi1606/sherpa-simulated-student-audit	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	24	expected/headline_numbers.json	SELL	| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+repos/foundations.md	34	baptiste-alonso/knowledge-tracing-benchmark	METRIC	| repo | API `spdx_id` | byte-read at the real default branch | API verdict |
+repos/foundations.md	35	huynhanhkhiem-dms/pooled-auc-knowledge-tracing	METRIC	| repo | API `spdx_id` | byte-read at the real default branch | API verdict |
+repos/foundations.md	36	zty552252kevin-code/holdfast	METRIC	| repo | API `spdx_id` | byte-read at the real default branch | API verdict |
+repos/foundations.md	77	tencent/weknora	METRIC	| | before `p608` | 🆕 `p608` |
+repos/foundations.md	86	tencent/weknora	SELL	| Repo | License (byte-read) | Region | Why it is foundational |
+repos/foundations.md	87	duaabaig/hisackt	SELL	| Repo | License (byte-read) | Region | Why it is foundational |
+repos/foundations.md	88	bradwave/obfusca	SELL	| Repo | License (byte-read) | Region | Why it is foundational |
+repos/foundations.md	89	harjothkhara/whiteboard-tutor	SELL	| Repo | License (byte-read) | Region | Why it is foundational |
+repos/foundations.md	95	wxxxqcy/ai-learning-assistant	PROSE	
+repos/foundations.md	106	learning-commons-org/knowledge-graph	PROSE	
+repos/foundations.md	123	davemckain/qtiworks	METRIC	| | leading prose | trailing prose |
+repos/foundations.md	123	openolat/qtiworks	METRIC	| | leading prose | trailing prose |
+repos/foundations.md	123	dfdb76/bncc-mcp	METRIC	| | leading prose | trailing prose |
+repos/foundations.md	132	eumakerdev/bncc_api	PROSE	
+repos/foundations.md	169	universidade-livre/ciencia-da-computacao	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	170	dodona-edu/dolos	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	171	marcosroriz/sete	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	172	eumakerdev/bncc_api	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	173	php-xapi/client	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	174	php-xapi/model	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	175	escolalms/lrs	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	176	dfe-digital/education-benchmarking-and-insights	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	177	guilhermescarpini/agente-bncc-professores	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	178	karsh482/gaokao	SELL	| repo | grant (byte-read today) | branch | stars | pushed | region |
+repos/foundations.md	180	php-xapi/client	PROSE	
+repos/foundations.md	180	php-xapi/model	PROSE	
+repos/foundations.md	181	marcosroriz/sete	PROSE	
+repos/foundations.md	182	datakind/student-success-tool	PROSE	
+repos/foundations.md	187	dfe-digital/education-benchmarking-and-insights	PROSE	
+repos/foundations.md	190	dodona-edu/dolos	PROSE	
+repos/foundations.md	194	php-xapi/client	PROSE	
+repos/foundations.md	194	php-xapi/model	PROSE	
+repos/foundations.md	196	escolalms/lrs	PROSE	
+repos/foundations.md	204	financeiroetica01-art/jogos-empreendedorismo-bncc	SELL	| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+repos/foundations.md	205	eledia/moodle-block_elediaai_tutor	SELL	| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+repos/foundations.md	206	quizbankorg/quizbank	SELL	| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+repos/foundations.md	207	eduardokrausme/moodle-local_mcp	SELL	| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+repos/foundations.md	208	davemckain/qtiworks	SELL	| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+repos/foundations.md	209	google/licenseclassifier	SELL	| address | grant, byte-read `2026-11-02` | 🔴 verdict |
+repos/foundations.md	211	karsh482/gaokao	PROSE	
+repos/foundations.md	212	google/licenseclassifier	PROSE	
+repos/foundations.md	219	lib/probe_payload.sh	PROSE	
+repos/foundations.md	245	oppia/oppia	PROSE	
+repos/foundations.md	256	hit-moodle/moodle-local_onlinejudge	PROSE	
+repos/foundations.md	264	corleone000000/fluir	METRIC	| repo | root entries | readme-ish paths in tree |
+repos/foundations.md	265	lawrence-public-schools/oneroster-1.1-powerqueries	METRIC	| repo | root entries | readme-ish paths in tree |
+repos/foundations.md	266	apereo-learning-analytics-initiative/data-loader-library	METRIC	| repo | root entries | readme-ish paths in tree |
+repos/foundations.md	275	uportal-project/calendarportlet	SELL	| repo | grant (byte-read) | branch | stars | region | why it is here |
+repos/foundations.md	275	jasig/calendarportlet	SELL	| repo | grant (byte-read) | branch | stars | region | why it is here |
+repos/foundations.md	277	jasig/calendarportlet	PROSE	
+repos/foundations.md	289	edunlp/edu-convokit	REFUSAL	| repo | measured | why not |
+repos/foundations.md	290	tangerine-community/tangerine	REFUSAL	| repo | measured | why not |
+repos/foundations.md	313	bncc-dev/bncc-benchmark	PROSE	
+repos/foundations.md	319	bncc-dev/bncc-benchmark	METRIC	| subtree | grant | instrument |
+repos/foundations.md	320	bncc-dev/bncc-benchmark	METRIC	| subtree | grant | instrument |
+repos/foundations.md	335	portabilis/i-diario	PROSE	
+repos/foundations.md	345	marimo-team/learn	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	345	ljchang/marimo-grader	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	346	edunlp/edu-convokit	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	346	stanfordnlp/edu-convokit	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	347	lplnufpi/essay-br	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	348	bncc-dev/bncc-benchmark	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	349	yetanalytics/pedestal-oidc	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	350	pie-framework/pie-qti	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	351	sonyccd/qti-playground	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	352	otacke/h5p-theme-picker	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	353	decoylex/ltix	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	354	iamlucasb/lti-core	SELL	| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	357	marimo-team/learn	PROSE	
+repos/foundations.md	380	apereo-learning-analytics-initiative/openlrw-python-api-client	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	381	apereo-learning-analytics-initiative/lai-event	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	382	apereo-learning-analytics-initiative/lai-model	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	383	apereo-learning-analytics-initiative/data-loader-library	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	384	apereo-learning-analytics-initiative/canvas-matthews-data-loader	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	385	apereo-learning-analytics-initiative/lrsloadtest	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	386	sakaiproject/genericdao	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	400	metyatech/markdown-to-qti	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | Region | Role in the chain |
+repos/foundations.md	401	metyatech/qti-xml-core	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | Region | Role in the chain |
+repos/foundations.md	402	metyatech/apply-to-qti-results	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | Region | Role in the chain |
+repos/foundations.md	403	metyatech/tracklms-to-qti-results	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | Region | Role in the chain |
+repos/foundations.md	409	otacke/h5pxapikatchu	SELL	| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+repos/foundations.md	420	uportal-project/feedbackportlet	REFUSAL	| Not shelved | Grant as read | Reason |
+repos/foundations.md	420	jasig/calendarportlet	REFUSAL	| Not shelved | Grant as read | Reason |
+repos/foundations.md	421	apereo-learning-analytics-initiative/sakaixapi-provider	REFUSAL	| Not shelved | Grant as read | Reason |
+repos/foundations.md	422	apereo-lai/maven-repo	REFUSAL	| Not shelved | Grant as read | Reason |
+repos/foundations.md	423	apereo-lai/opendashboard-ux	REFUSAL	| Not shelved | Grant as read | Reason |
+repos/foundations.md	427	lib/probe_payload.sh	PROSE	
+repos/foundations.md	431	os4ed/opensis-classic	PROSE	
+repos/foundations.md	448	safeexambrowser/seb-server	PROSE	
+repos/foundations.md	451	h5p/h5p-cli	PROSE	
+repos/foundations.md	451	openedx/tutor-contrib-aspects	PROSE	
+repos/foundations.md	452	kitschpatrol/yanki	PROSE	
+repos/foundations.md	466	chiv-heng/ferpa-guard	PROSE	
+repos/foundations.md	466	php-xapi/client	PROSE	
+repos/foundations.md	466	php-xapi/model	PROSE	
+repos/foundations.md	467	eduquest2026-2027/eduquest	PROSE	
+repos/foundations.md	478	1edtech/opencase	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	479	1edtech/digital-credentials-public-validator	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	480	adlnet/xapi-profiles	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	481	yetanalytics/xapipe	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	482	yetanalytics/re-oidc	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	483	instructure/qti	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	484	agencyenterprise/qti-3-player	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	485	openwallet-foundation-labs/learner-credential-wallet	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	486	h5p/h5p-cli	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	492	openedx/tutor-contrib-aspects	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	493	ai4bharat/indictrans2	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	494	sunbird-lern/lms-service	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	495	project-sunbird/sunbird-lms-service	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	496	stanfordnlp/edu-convokit	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	497	baoguangsheng/fast-detect-gpt	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	498	google/prog-edu-assistant	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	499	fuann/open-apa	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	500	yuangongnd/gopt	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	501	vardanagarwal/proctoring-ai	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	502	kitschpatrol/yanki	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	503	bncc-dev/bncc-dados	SELL	| Repo | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+repos/foundations.md	509	safeexambrowser/seb-server	REFUSAL	| Repo | Grant (byte-read) | Why not |
+repos/foundations.md	510	kaldi-asr/kaldi	REFUSAL	| Repo | Grant (byte-read) | Why not |
+repos/foundations.md	511	ajjalti/evalstudio	REFUSAL	| Repo | Grant (byte-read) | Why not |
+repos/foundations.md	511	lawrence-public-schools/oneroster-1.1-powerqueries	REFUSAL	| Repo | Grant (byte-read) | Why not |
+repos/foundations.md	512	bgwdotdev/go-oneroster	REFUSAL	| Repo | Grant (byte-read) | Why not |
+repos/foundations.md	521	openeducat/openeducat_erp	PROSE	
+repos/foundations.md	526	catalyst/moodle-tool_objectfs	PROSE	
+repos/foundations.md	537	c0d3d3v/moodle-dl	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	538	tmuras/moosh	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	539	moodlebox/moodlebox	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	540	jcrodriguez-dis/moodle-mod_vpl	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	541	hit-moodle/moodle-local_onlinejudge	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	542	moodle-an-hochschulen/moodle-theme_boost_union	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	543	catalyst/moodle-tool_objectfs	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	544	fmcorz/mdk	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	545	danmarsden/moodle-mod_attendance	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	546	erseco/alpine-moodle	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	547	catalyst/moodle-auth_saml2	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives a studio |
+repos/foundations.md	553	erseco/alpine-moodle	PROSE	
+repos/foundations.md	554	fmcorz/moodle-block_xp	PROSE	
+repos/foundations.md	554	h5p/moodle-mod_hvp	PROSE	
+repos/foundations.md	560	openfun/openedx-docker	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives |
+repos/foundations.md	561	cookiecutter-openedx/cookiecutter-openedx-devops	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives |
+repos/foundations.md	562	appsembler/figures	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives |
+repos/foundations.md	563	edunext/tvm	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | What it gives |
+repos/foundations.md	571	kmilo17pet/qlibs	PROSE	
+repos/foundations.md	572	jrgenerative/fixed-wing-sim	PROSE	
+repos/foundations.md	579	csev/wa4e	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Note |
+repos/foundations.md	580	webpa/webpa	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Note |
+repos/foundations.md	581	doldsimo/lti-1.3-canvas-lms	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Note |
+repos/foundations.md	582	js-kyle/nodejs-lti-provider	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Note |
+repos/foundations.md	583	ucfopen/lti-template-flask	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Note |
+repos/foundations.md	589	illinois-cs241/broadway	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Verdict |
+repos/foundations.md	590	tkutcher/jgrade	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Verdict |
+repos/foundations.md	591	imgvoid/autograding-api	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Verdict |
+repos/foundations.md	592	ricecomp215-staff/ricechecks	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Verdict |
+repos/foundations.md	601	frappe/education	PROSE	
+repos/foundations.md	602	webpa/webpa	PROSE	
+repos/foundations.md	602	navariltd/junior-school	PROSE	
+repos/foundations.md	618	surveyjs/survey-library	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | Role |
+repos/foundations.md	619	didi/xiaoju-survey	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | Role |
+repos/foundations.md	620	nymanjens/quizmaster	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | Role |
+repos/foundations.md	621	2anki/2anki.net	SELL	| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | Role |
+repos/foundations.md	623	agenticfabriq/beacon	PROSE	
+repos/foundations.md	632	git-learning-game/oh-my-git	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	633	cksystemsteaching/selfie	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	634	beir-cellar/beir	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	635	translate-tools/linguist	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	636	open-scratch/teaching-open	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	637	cxli233/online_r_learning	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	638	skaiui2/skrtos_sparrow	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	639	tristcoil/hanabira.org	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	640	rampaa/jl	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	641	danzen/zimjs	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	647	attendize/attendize	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	648	ahmadhassan-bted/attendify	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	649	usnistgov/oscal	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	650	latextemplates/scientific-thesis-template	SELL	| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+repos/foundations.md	656	theodinproject/curriculum	REFUSAL	| Repo | ★ | Grant (byte-read) | Why excluded |
+repos/foundations.md	657	theodinproject/theodinproject	REFUSAL	| Repo | ★ | Grant (byte-read) | Why excluded |
+repos/foundations.md	658	techtonica/curriculum	REFUSAL	| Repo | ★ | Grant (byte-read) | Why excluded |
+repos/foundations.md	659	sobolevn/the-best-python-course	REFUSAL	| Repo | ★ | Grant (byte-read) | Why excluded |
+repos/foundations.md	660	allenpandas/bjtu-cs-notebook	REFUSAL	| Repo | ★ | Grant (byte-read) | Why excluded |
+repos/foundations.md	661	cvut/qtrvsim	REFUSAL	| Repo | ★ | Grant (byte-read) | Why excluded |
+repos/foundations.md	705	mathworks-teaching-resources/computational-fluid-dynamics	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	706	mathworks-teaching-resources/fourier-analysis	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	707	mathworks-teaching-resources/virtual-controls-laboratory	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	708	mathworks-teaching-resources/thermodynamics	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	709	mathworks-teaching-resources/robotic-manipulators	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	710	mathworks-teaching-resources/fundamentals-of-programming	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	711	mathworks-teaching-resources/fluid-mechanics	SELL	| repo | ★ | grant (byte-read) | branch | fab-path control |
+repos/foundations.md	726	reuseman/flashcards-obsidian	SELL	| repo | ★ | grant (byte-read) | branch | disposition |
+repos/foundations.md	727	shaankhosla/repeater	SELL	| repo | ★ | grant (byte-read) | branch | disposition |
+repos/foundations.md	728	lakesare/memcode	SELL	| repo | ★ | grant (byte-read) | branch | disposition |
+repos/foundations.md	729	olmps/memo	SELL	| repo | ★ | grant (byte-read) | branch | disposition |
+repos/foundations.md	730	hwgilbert16/scholarsome	SELL	| repo | ★ | grant (byte-read) | branch | disposition |
+repos/foundations.md	731	mnemosyne-proj/mnemosyne	SELL	| repo | ★ | grant (byte-read) | branch | disposition |
+repos/foundations.md	739	cvmcosta/ltijs	PROSE	
+repos/foundations.md	739	openedx/openedx-platform	PROSE	
+repos/foundations.md	774	cvmcosta/ltijs	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	775	openedx/openedx-platform	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	776	microsoft/ai-agents-for-beginners	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	777	pguso/agents-from-scratch	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	778	vishalsachdev/canvas-mcp	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	779	jupyter/nbgrader	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	780	inducer/relate	SELL	| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+repos/foundations.md	790	openedx/edx-platform	PROSE	
+repos/foundations.md	803	jatin-mehra119/essay-scoring-modeling	PROSE	
+repos/foundations.md	805	wwrwbs/ai_awe	PROSE	
+repos/foundations.md	821	infomark-org/infomark	PROSE	
+repos/foundations.md	824	apereo-learning-analytics-initiative/openlrs	PROSE	
+repos/foundations.md	824	apereo-lai/openlrs	PROSE	
+repos/foundations.md	826	apereo-learning-analytics-initiative/opendashboard-legacy	PROSE	
+repos/foundations.md	841	kabartay/openunivcourses	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Why it is foundational here |
+repos/foundations.md	842	apereo-learning-analytics-initiative/openlrw	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Why it is foundational here |
+repos/foundations.md	843	gradescope/gradescope-utils	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Why it is foundational here |
+repos/foundations.md	844	quickfeed/quickfeed	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Why it is foundational here |
+repos/foundations.md	844	infomark-org/infomark	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Why it is foundational here |
+repos/foundations.md	851	jupyterhub/jupyterhub	PROSE	
+repos/foundations.md	864	jupyterhub/jupyterhub	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	865	autolab/autolab	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	866	anubislms/anubis	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	867	open-spaced-repetition/fsrs-rs	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	868	ed-fi-alliance-oss/edfi-oneroster	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	869	oaknational/oak-open-curriculum-ecosystem	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	870	open-edge-platform/education-ai-suite	SELL	| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+repos/foundations.md	876	formalms/formalms	REFUSAL	| Repo | ★ | Measured | Why not |
+repos/foundations.md	877	1edtech/caliper-spec	REFUSAL	| Repo | ★ | Measured | Why not |
+repos/foundations.md	878	sunbird-ed/sunbirded-portal	REFUSAL	| Repo | ★ | Measured | Why not |
+repos/foundations.md	893	webtech-network/autograder	PROSE	
+repos/foundations.md	894	johnswyou/autograder	PROSE	
+repos/foundations.md	895	scaleapi/researchrubrics	PROSE	
+repos/foundations.md	937	thm-mni-ii/feedbacksystem	SELL	| Repo | API | Real grant, byte-read | Why it was blank |
+repos/foundations.md	938	frappe/education	SELL	| Repo | API | Real grant, byte-read | Why it was blank |
+repos/foundations.md	939	portabilis/i-diario	SELL	| Repo | API | Real grant, byte-read | Why it was blank |
+repos/foundations.md	940	portabilis/pre-matricula-digital	SELL	| Repo | API | Real grant, byte-read | Why it was blank |
+repos/foundations.md	941	odoo/odoo	SELL	| Repo | API | Real grant, byte-read | Why it was blank |
+repos/foundations.md	942	openeducat/openeducat_erp	SELL	| Repo | API | Real grant, byte-read | Why it was blank |
+repos/foundations.md	950	a-r007/multi-agent-study-assistant	PROSE	
+repos/foundations.md	951	cryptojones/osaphla	PROSE	
+repos/foundations.md	952	dmontgomery40/mcp-canvas-lms	PROSE	
+repos/foundations.md	953	os4ed/opensis-classic	PROSE	
+repos/foundations.md	954	aaryansamanta/ai-ethos	PROSE	
+repos/foundations.md	955	adlnet/scorm-to-xapi-wrapper	PROSE	
+repos/foundations.md	956	anandpatikat/guru-latihan-dinamis	PROSE	
+repos/foundations.md	957	andresmancilla08/parlo	PROSE	
+repos/foundations.md	958	aneelv75/github-trending	PROSE	
+repos/foundations.md	959	bigdata-ustc/agent4edu	PROSE	
+repos/foundations.md	960	corleone000000/fluir	PROSE	
+repos/foundations.md	961	jccastel12-ctrl/linguaai-coach	PROSE	
+repos/foundations.md	962	rodrigoborgesmachado/questoesconcursos	PROSE	
+repos/foundations.md	963	s64965264-code/nexo-ia	PROSE	
+repos/foundations.md	967	adlnet/scorm-to-xapi-wrapper	PROSE	
+repos/foundations.md	968	bigdata-ustc/agent4edu	PROSE	
+repos/foundations.md	970	anandpatikat/guru-latihan-dinamis	PROSE	
+repos/foundations.md	978	openedx/openedx-platform	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	978	openedx/edx-platform	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	979	moodle/moodle	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	980	bigbluebutton/bigbluebutton	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	981	apache/openmeetings	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	982	frappe/lms	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	983	learnhouse/learnhouse	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	984	classroomio/classroomio	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	985	prairielearn/prairielearn	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	986	sakaiproject/sakai	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	987	codelitdev/courselit	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	988	overhangio/tutor	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	989	learningequality/kolibri	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	990	chamilo/chamilo-lms	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	991	openeducat/openeducat_erp	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	991	openeducat/openeducat	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	992	francoisjacquet/rosariosis	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	993	pupilfirst/pupilfirst	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	994	ilias-elearning/ilias	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	995	openolat/openolat	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	996	inducer/relate	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	997	academico-sis/academico	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	998	openfun/richie	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	999	inginious/inginious	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1000	iblai/lms	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1001	claroline/claroline	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1002	frappe/education	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1020	openeducat/openeducat_erp	PROSE	
+repos/foundations.md	1021	frappe/education	PROSE	
+repos/foundations.md	1029	krayin/laravel-crm	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1030	dolibarr/dolibarr	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1031	cortezaproject/corteza	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1032	marmelab/atomic-crm	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1033	apache/ofbiz-framework	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1034	idurar/idurar-erp-crm	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1035	idempiere/idempiere	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1041	frappe/education	PROSE	
+repos/foundations.md	1052	shand001/geometry-dsl	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1053	major7apps/pensyve	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1080	openmined/pysyft	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1081	openpatch/hyperbook	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1082	edanalytics/earthmover_edfi_bundles	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1083	missing-elements/h5p-offline-player	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1084	cvmcosta/ltijs-sequelize	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1088	googlecloudplatform/aira	PROSE	
+repos/foundations.md	1097	3ipunt/wordpress-lti-1-3	PROSE	
+repos/foundations.md	1099	adap/flower	PROSE	
+repos/foundations.md	1099	digitalcredentials/did-io	PROSE	
+repos/foundations.md	1109	dream-num/univer	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1110	withmarbleapp/os-taxonomy	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1111	open-spaced-repetition/fsrs4anki	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1112	st3v3nmw/obsidian-spaced-repetition	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1113	adlnet/xapi-spec	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1114	open-spaced-repetition/free-spaced-repetition-scheduler	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1115	1edtech/lti-1-3-php-library	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1115	packbackbooks/lti-1-3-php-library	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1116	openedx/codejail	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1117	openedx/xblock	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1118	cvmcosta/ltijs	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1119	tsugiproject/tsugi	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1120	jcputney/scorm-again	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1121	numbas/numbas	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1122	halleck45/openpronounce	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1123	dmitry-viskov/pylti1.3	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1124	1edtech/openbadges-validator-core	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1125	evoluteur/braille-tools	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1126	safeexambrowser/seb-win-refactoring	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1127	h5p/h5p-php-library	SELL	| Repo | Licence | Stars | Last push | Region | Role |
+repos/foundations.md	1146	microsoft/generative-ai-for-beginners	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1147	rasbt/llms-from-scratch	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1148	microsoft/ai-agents-for-beginners	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1149	rohitg00/ai-engineering-from-scratch	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1150	jingyaogong/minimind	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1151	karpathy/nanochat	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1185	jcputney/scorm-again	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1186	sr258/scorm-h5p-wrapper	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1187	liascript/liascript-exporter	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1188	numbas/numbas	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1189	dhodges47/scorm-learningmanagementsystem	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1190	cybercussion/scobot	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1191	adaptlearning/adapt_framework	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1192	s4-netquest/react-scorm-provider	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1193	gamestdio/scorm	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1194	raccoongang/edx_xblock_scorm	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1195	adlnet/scorm-to-xapi-wrapper	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1200	numbas/numbas	PROSE	
+repos/foundations.md	1215	jcputney/scorm-again	SELL	| Repo | Licence | Stars | Last push | Emit role |
+repos/foundations.md	1216	numbas/numbas	SELL	| Repo | Licence | Stars | Last push | Emit role |
+repos/foundations.md	1217	sr258/scorm-h5p-wrapper	SELL	| Repo | Licence | Stars | Last push | Emit role |
+repos/foundations.md	1218	liascript/liascript-exporter	SELL	| Repo | Licence | Stars | Last push | Emit role |
+repos/foundations.md	1219	kemalyy/edumints-scorm-mcp	SELL	| Repo | Licence | Stars | Last push | Emit role |
+repos/foundations.md	1220	giacomomaria81/scorm-mcp-server	SELL	| Repo | Licence | Stars | Last push | Emit role |
+repos/foundations.md	1268	learninglocker/xapi-service	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1269	berrycloud/xapi-java	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1270	didask/scol-r	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1271	learninglocker/xapi-validation	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1272	ijeffro/laralocker	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1273	yetanalytics/project-pan	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1274	jblough/tincandart	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1280	erseco/python-moodle	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1281	get-bridge/scorm_engine	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1282	dr-rompecabezas/wagtail-lms	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1283	mathworks-teaching-resources/computational-fluid-dynamics	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1284	reuseman/flashcards-obsidian	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1285	shaankhosla/repeater	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1286	lakesare/memcode	SELL	| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+repos/foundations.md	1289	learninglocker/xapi-service	PROSE	
+repos/foundations.md	1297	patil-suraj/question_generation	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1297	ramsrigouthamg/questgen.ai	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1297	kristiyanvachev/question-generation	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1297	asahi417/lm-question-generation	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1297	amontgomerie/question_generator	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1298	kantord/librelingo	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1299	andymatuschak/orbit	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1299	packages/app	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1299	packages/backend	METRIC	| Tier | Verdict | Evidence |
+repos/foundations.md	1309	gmilano/globant-kb	PROSE	
+repos/foundations.md	1320	hugohe3/ppt-master	PROSE	
+repos/foundations.md	1325	frappe/education	PROSE	
+repos/foundations.md	1343	withmarbleapp/os-taxonomy	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1344	foradian/fedena	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1344	mitodl/open-learning-ai-tutor	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1344	mitodl/tutor-mentor	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1347	frappe/education	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1347	academico-sis/academico	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1349	academico-sis/academico	METRIC	| Gap | Status | What would close it |
+repos/foundations.md	1362	openedx/edx-platform	PROSE	
+verticals/solutions.md	33	pacewisdomhq/tutorloom	METRIC	| the one real candidate | verdict |
+verticals/solutions.md	43	mkhomytsya/muckeligagentlms	PROSE	
+verticals/solutions.md	74	moodle/moodle	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	75	openedx/edx-platform	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	76	openedx/xblock	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	77	instructure/canvas-lms	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	78	chamilo/chamilo-lms	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	79	ilias-elearning/ilias	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	80	sakaiproject/sakai	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	81	openfun/richie	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	82	pupilfirst/pupilfirst	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	83	openolat/qtiworks	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	84	tencent/weknora	SELL	| Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
+verticals/solutions.md	93	openedx/xblock	METRIC	| what the probe reported | truth | the trap, as this base had already registered it |
+verticals/solutions.md	94	moodle/moodle	METRIC	| what the probe reported | truth | the trap, as this base had already registered it |
+verticals/solutions.md	95	sakaiproject/sakai	METRIC	| what the probe reported | truth | the trap, as this base had already registered it |
+verticals/solutions.md	95	other/unclassified	METRIC	| what the probe reported | truth | the trap, as this base had already registered it |
+verticals/solutions.md	127	openolat/qtiworks	METRIC	
+verticals/solutions.md	129	davemckain/qtiworks	METRIC	| | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) |
+verticals/solutions.md	151	openolat/qtiworks	SELL	| layer | component | holder | grant |
+verticals/solutions.md	152	amp-up-io/qti3-item-player	SELL	| layer | component | holder | grant |
+verticals/solutions.md	153	kennisnet/php-qti3	SELL	| layer | component | holder | grant |
+verticals/solutions.md	154	longsightgroup/qti3	SELL	| layer | component | holder | grant |
+verticals/solutions.md	156	kennisnet/php-qti3	PROSE	
+verticals/solutions.md	169	escolalms/lrs	METRIC	| row | grant, byte-read `2026-11-02` | why a platform page |
+verticals/solutions.md	170	dfe-digital/education-benchmarking-and-insights	METRIC	| row | grant, byte-read `2026-11-02` | why a platform page |
+verticals/solutions.md	171	mcp-brasil/mcp-brasil	METRIC	| row | grant, byte-read `2026-11-02` | why a platform page |
+verticals/solutions.md	179	quizbankorg/quizbank	PROSE	
+verticals/solutions.md	179	eledia/moodle-block_elediaai_tutor	PROSE	
+verticals/solutions.md	180	openeducat/openeducat_erp	PROSE	
+verticals/solutions.md	180	frappe/education	PROSE	
+verticals/solutions.md	186	eumakerdev/bncc_api	PROSE	
+verticals/solutions.md	186	dfdb76/bncc-mcp	PROSE	
+verticals/solutions.md	186	universidade-livre/ciencia-da-computacao	PROSE	
+verticals/solutions.md	199	tangerine-community/tangerine	SELL	| platform | repo | grant (byte-read `2026-11-02`) | branch | stars | region | what it is |
+verticals/solutions.md	200	tangerine-community/tangy-form	SELL	| platform | repo | grant (byte-read `2026-11-02`) | branch | stars | region | what it is |
+verticals/solutions.md	201	tangerine-community/tangy-form-editor	SELL	| platform | repo | grant (byte-read `2026-11-02`) | branch | stars | region | what it is |
+verticals/solutions.md	230	openeducat/openeducat_erp	METRIC	| gap | state |
+verticals/solutions.md	230	frappe/education	METRIC	| gap | state |
+verticals/solutions.md	232	oppia/oppia	METRIC	| gap | state |
+verticals/solutions.md	242	psychquant/che-ntucool-mcp	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	243	omarniazi/classroom-mcp	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	244	decoylex/ltix	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	244	iamlucasb/lti-core	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	245	otacke/h5p-theme-picker	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	246	pie-framework/pie-qti	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	246	sonyccd/qti-playground	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	246	metyatech/qti-html-renderer	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	247	yetanalytics/pedestal-oidc	SELL	| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+verticals/solutions.md	251	metyatech/qti-reporter	PROSE	
+verticals/solutions.md	256	metyatech/qti-reporter	METRIC	| QTI repo | maintainer | role | ★ |
+verticals/solutions.md	257	metyatech/qti-html-renderer	METRIC	| QTI repo | maintainer | role | ★ |
+verticals/solutions.md	258	pie-framework/pie-qti	METRIC	| QTI repo | maintainer | role | ★ |
+verticals/solutions.md	259	sonyccd/qti-playground	METRIC	| QTI repo | maintainer | role | ★ |
+verticals/solutions.md	268	psychquant/che-ntucool-mcp	PROSE	
+verticals/solutions.md	279	uportal-project/feedbackportlet	PROSE	
+verticals/solutions.md	293	sakaiproject/sakai	SELL	| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+verticals/solutions.md	294	uportal-project/uportal	SELL	| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+verticals/solutions.md	295	apereo/cas	SELL	| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+verticals/solutions.md	296	apereo-learning-analytics-initiative/openlrs	SELL	| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+verticals/solutions.md	297	apereo-learning-analytics-initiative/openlrw	SELL	| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+verticals/solutions.md	298	apereo-learning-analytics-initiative/learninganalyticsprocessor	SELL	| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+verticals/solutions.md	313	apereo/cas	METRIC	
+verticals/solutions.md	313	sakaiproject/sakai	METRIC	
+verticals/solutions.md	324	cloudpedagogy/cloudpedagogy-moodle-course-auditor	SELL	| Platform / tool | Grant (byte-read) | Branch | Region | Role |
+verticals/solutions.md	325	ucfopen/quiz-extensions	SELL	| Platform / tool | Grant (byte-read) | Branch | Region | Role |
+verticals/solutions.md	326	tl-its-umich-edu/instructor-tools	SELL	| Platform / tool | Grant (byte-read) | Branch | Region | Role |
+verticals/solutions.md	327	otacke/h5pxapikatchu	SELL	| Platform / tool | Grant (byte-read) | Branch | Region | Role |
+verticals/solutions.md	331	ucfopen/canvasapi	PROSE	
+verticals/solutions.md	332	ucfopen/obojobo	PROSE	
+verticals/solutions.md	333	ucfopen/materia	PROSE	
+verticals/solutions.md	334	ucfopen/udoit	PROSE	
+verticals/solutions.md	342	bncc-dev/bncc-pacotes	PROSE	
+verticals/solutions.md	357	bncc-dev/bncc-dados	PROSE	
+verticals/solutions.md	369	dados/license-fabricated-p603.md	PROSE	
+verticals/solutions.md	383	bncc-dev/bncc-pacotes	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	384	coursemology/coursemology2	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	385	wort-schule/wort.schule	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	386	nvaes/ceb	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	387	diego-costanzo/tournesol-scolaire	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	388	rf1705/beste-schule	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	389	antonio-neves/gestao-escolar	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	390	telekom/ki-in-schulen	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	391	saidbysolo/neispy	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	392	hisahonakata/roster_hub_for_gigaschool	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	393	schild-report/schild.report	SELL	| Platform | Grant (byte-read) | Branch | Pushed | tz | Region | What it is |
+verticals/solutions.md	403	bendjou-art/correct-qcm	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	403	emmanuel26-code/cahier-texte-numerique	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	403	nzokos06/gestion_school	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	403	kbma/gestion-scolaire	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	403	mael12854/preau	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	403	olibertrand/questionnapp	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	403	solemntumult/ecoges	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	404	nwmustofa/e-rts	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	404	twakew/e-rapor	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	405	eduquest2026-2027/eduquest	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	405	proffranco/check-app	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	405	quizbankorg/quizbank	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	405	techpivot25/educate-ai	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	405	naresh1401/education-tutor-agent	METRIC	| cluster | repos | addresses |
+verticals/solutions.md	421	openeducat/openeducat_erp	PROSE	
+verticals/solutions.md	421	frappe/education	PROSE	
+verticals/solutions.md	425	frappe/education	PROSE	
+verticals/solutions.md	429	frappe/education	PROSE	
+verticals/solutions.md	437	ansarimajid/college-erp	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | What it is |
+verticals/solutions.md	438	navariltd/junior-school	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | What it is |
+verticals/solutions.md	438	frappe/education	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | What it is |
+verticals/solutions.md	441	frappe/education	PROSE	
+verticals/solutions.md	451	rukkmanit/gegok12-documentation	SELL	| address found | ★ | ladder result | control | verdict |
+verticals/solutions.md	452	gego-k12/.github	SELL	| address found | ★ | ladder result | control | verdict |
+verticals/solutions.md	464	ketanchoyal/our-e-school	REFUSAL	| address | ★ | grant (byte-read) | why rejected |
+verticals/solutions.md	465	jobic10/student-management-using-django	REFUSAL	| address | ★ | grant (byte-read) | why rejected |
+verticals/solutions.md	466	mindsdb/edux	REFUSAL	| address | ★ | grant (byte-read) | why rejected |
+verticals/solutions.md	467	codern-org/codern	REFUSAL	| address | ★ | grant (byte-read) | why rejected |
+verticals/solutions.md	468	krayin/agent-skills	REFUSAL	| address | ★ | grant (byte-read) | why rejected |
+verticals/solutions.md	468	krayin/laravel-crm	REFUSAL	| address | ★ | grant (byte-read) | why rejected |
+verticals/solutions.md	479	surveyjs/survey-library	SELL	| Platform | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | What it is, and the AI seam |
+verticals/solutions.md	480	didi/xiaoju-survey	SELL	| Platform | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | What it is, and the AI seam |
+verticals/solutions.md	481	nymanjens/quizmaster	SELL	| Platform | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | What it is, and the AI seam |
+verticals/solutions.md	482	2anki/2anki.net	SELL	| Platform | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | What it is, and the AI seam |
+verticals/solutions.md	495	open-scratch/teaching-open	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | Note |
+verticals/solutions.md	496	tristcoil/hanabira.org	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | Note |
+verticals/solutions.md	497	attendize/attendize	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | Note |
+verticals/solutions.md	498	ahmadhassan-bted/attendify	SELL	| Platform | ★ | Grant (byte-read) | Branch | Region | Note |
+verticals/solutions.md	511	ketanchoyal/our-e-school	METRIC	| | result |
+verticals/solutions.md	518	frappe/education	PROSE	
+verticals/solutions.md	527	theodinproject/curriculum	REFUSAL	| Address | ★ | Grant (byte-read) | Why rejected |
+verticals/solutions.md	528	wdcpclover/ai4paper	REFUSAL	| Address | ★ | Grant (byte-read) | Why rejected |
+verticals/solutions.md	529	ahmadhassan-bted/turnitout-humanizer	REFUSAL	| Address | ★ | Grant (byte-read) | Why rejected |
+verticals/solutions.md	530	yogndrr/mern-school-management-system	REFUSAL	| Address | ★ | Grant (byte-read) | Why rejected |
+verticals/solutions.md	550	reuseman/flashcards-obsidian	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+verticals/solutions.md	551	lakesare/memcode	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+verticals/solutions.md	552	shaankhosla/repeater	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+verticals/solutions.md	553	olmps/memo	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+verticals/solutions.md	554	hwgilbert16/scholarsome	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+verticals/solutions.md	555	mnemosyne-proj/mnemosyne	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+verticals/solutions.md	569	frappe/education	SELL	| Platform | Grant | Branch | Verdict |
+verticals/solutions.md	570	openeducat/openeducat_erp	SELL	| Platform | Grant | Branch | Verdict |
+verticals/solutions.md	573	weidonglang/edunexus-ai	SELL	| Platform | Grant | Branch | Verdict |
+verticals/solutions.md	608	frappe/lms	PROSE	
+verticals/solutions.md	609	overhangio/tutor	PROSE	
+verticals/solutions.md	609	automattic/sensei	PROSE	
+verticals/solutions.md	610	academico-sis/academico	PROSE	
+verticals/solutions.md	616	2092372408-pixel/edupilot	PROSE	
+verticals/solutions.md	632	caviraoss/pagelm	PROSE	
+verticals/solutions.md	639	openeducat/openeducat_erp	SELL	| platform | real default branch | grant byte-read `2026-11-01` | consequence |
+verticals/solutions.md	640	openedx/openedx-platform	SELL	| platform | real default branch | grant byte-read `2026-11-01` | consequence |
+verticals/solutions.md	642	cvmcosta/ltijs	PROSE	
+verticals/solutions.md	653	academico-sis/academico	PROSE	
+verticals/solutions.md	678	guillermoscript/lms-front	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Last push | What you customise |
+verticals/solutions.md	679	edmozley/freeitsm	SELL	| Platform | Repo | ★ | Grant (byte-read) | Branch | Last push | What you customise |
+verticals/solutions.md	685	sakaiproject/sakai	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Last push | Role in an education estate |
+verticals/solutions.md	686	apereo/cas	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Last push | Role in an education estate |
+verticals/solutions.md	687	uportal-project/uportal	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Last push | Role in an education estate |
+verticals/solutions.md	688	apereo-learning-analytics-initiative/openlrw	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Last push | Role in an education estate |
+verticals/solutions.md	690	uportal-project/coursesportlet	PROSE	
+verticals/solutions.md	693	uportal-project/newsreaderportlet	PROSE	
+verticals/solutions.md	723	aureuserp/aureuserp	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Last push | Tier it serves |
+verticals/solutions.md	724	netless-io/flat	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Last push | Tier it serves |
+verticals/solutions.md	725	learningequality/studio	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Last push | Tier it serves |
+verticals/solutions.md	726	sunbird-ed/sunbirded-portal	SELL	| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Last push | Tier it serves |
+verticals/solutions.md	728	autolab/autolab	PROSE	
+verticals/solutions.md	729	anubislms/anubis	PROSE	
+verticals/solutions.md	740	formalms/formalms	METRIC	| Platform | Repo | Measured | Disposition |
+verticals/solutions.md	741	menthorlabs/menthor	METRIC	| Platform | Repo | Measured | Disposition |
+verticals/solutions.md	744	portabilis/i-educar	PROSE	
+verticals/solutions.md	759	folio-org/platform-complete	PROSE	
+verticals/solutions.md	760	folio-org/okapi	PROSE	
+verticals/solutions.md	770	folio-org/okapi	SELL	| Repo | ★ | Licence (byte-read on the real branch) | Branch | Last push | Role |
+verticals/solutions.md	771	folio-org/stripes	SELL	| Repo | ★ | Licence (byte-read on the real branch) | Branch | Last push | Role |
+verticals/solutions.md	772	folio-org/platform-complete	SELL	| Repo | ★ | Licence (byte-read on the real branch) | Branch | Last push | Role |
+verticals/solutions.md	773	folio-org/mod-inventory	SELL	| Repo | ★ | Licence (byte-read on the real branch) | Branch | Last push | Role |
+verticals/solutions.md	774	folio-org/mod-users	SELL	| Repo | ★ | Licence (byte-read on the real branch) | Branch | Last push | Role |
+verticals/solutions.md	796	folio-org/folio-helm	PROSE	
+verticals/solutions.md	828	dajarbot/autograder	PROSE	
+verticals/solutions.md	842	webtech-network/autograder	PROSE	
+verticals/solutions.md	842	johnswyou/autograder	PROSE	
+verticals/solutions.md	843	scaleapi/researchrubrics	PROSE	
+verticals/solutions.md	843	alphadl/adarubrics	PROSE	
+verticals/solutions.md	849	openeducat/openeducat_erp	PROSE	
+verticals/solutions.md	872	odoo/odoo	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	873	frappe/erpnext	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	874	krayin/laravel-crm	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	875	dream-num/univer	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	876	bigbluebutton/bigbluebutton	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	877	dolibarr/dolibarr	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	878	oppia/oppia	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	879	frappe/lms	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	880	learnhouse/learnhouse	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	881	cortezaproject/corteza	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	882	learningequality/kolibri	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	883	apache/ofbiz-framework	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	884	overhangio/tutor	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	885	openeducat/openeducat_erp	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	886	ls1intum/artemis	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	887	portabilis/i-educar	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	888	frappe/education	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	889	francoisjacquet/rosariosis	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	890	gibbonedu/core	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	891	opencast/opencast	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	892	ilias-elearning/ilias	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	893	claroline/claroline	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	894	douglasrizzo/catsim	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	895	portabilis/i-diario	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	896	oat-sa/tao-core	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	897	1edtech/openbadges-validator-core	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	898	thm-mni-ii/feedbacksystem	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	899	portabilis/pre-matricula-digital	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	900	terracotta-education/terracotta	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	901	oat-sa/extension-tao-itemqti	SELL	| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+verticals/solutions.md	913	odoo/odoo	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	914	openeducat/openeducat_erp	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	915	thm-mni-ii/feedbacksystem	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	916	frappe/erpnext	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	916	frappe/lms	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	916	frappe/education	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	917	portabilis/i-educar	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	918	claroline/claroline	METRIC	| Finding | Consequence for an engagement |
+verticals/solutions.md	920	frappe/education	PROSE	
+verticals/solutions.md	947	caviraoss/pagelm	PROSE	
+verticals/solutions.md	964	bigbluebutton/bigbluebutton	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	965	openedx/openedx-platform	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	966	dolibarr/dolibarr	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	967	moodle/moodle	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	968	frappe/lms	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	969	learnhouse/learnhouse	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	970	classroomio/classroomio	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	971	codelitdev/courselit	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	972	sakaiproject/sakai	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	973	overhangio/tutor	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	974	chamilo/chamilo-lms	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	975	pupilfirst/pupilfirst	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	976	francoisjacquet/rosariosis	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	977	ilias-elearning/ilias	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	978	selleo/mentingo	SELL	| platform of record | licence, measured | stars | last push | forkable by a studio? |
+verticals/solutions.md	991	cvmcosta/ltijs	PROSE	
+verticals/solutions.md	993	vishalsachdev/canvas-mcp	PROSE	
+verticals/solutions.md	1008	adlnet/scorm-to-xapi-wrapper	PROSE	
+verticals/solutions.md	1009	raccoongang/edx_xblock_scorm	PROSE	
+verticals/solutions.md	1010	kantord/librelingo	PROSE	
+verticals/solutions.md	1023	idurar/idurar-erp-crm	PROSE	
+verticals/solutions.md	1032	krayin/laravel-crm	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1033	apache/ofbiz-framework	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1034	cortezaproject/corteza	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1035	marmelab/atomic-crm	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1036	openeducat/openeducat_erp	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1037	frappe/education	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1038	idurar/idurar-erp-crm	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1039	dolibarr/dolibarr	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1040	idempiere/idempiere	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1045	frappe/education	PROSE	
+verticals/solutions.md	1050	erseco/python-moodle	PROSE	
+verticals/solutions.md	1064	erseco/python-moodle	SELL	| Tier | Buy / adopt | Grant | Attach AI how |
+verticals/solutions.md	1064	cvmcosta/ltijs	SELL	| Tier | Buy / adopt | Grant | Attach AI how |
+verticals/solutions.md	1085	liascript/liascript-exporter	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1086	numbas/numbas	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1087	erseco/python-moodle	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1088	kemalyy/edumints-scorm-mcp	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1089	didask/scol-r	SELL	| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+verticals/solutions.md	1110	feyst/qti3-validator	PROSE	
+verticals/solutions.md	1110	citolab/qti-playground	PROSE	
+verticals/solutions.md	1123	erseco/python-moodle	PROSE	
+verticals/solutions.md	1145	jcputney/scorm-again	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1146	sr258/scorm-h5p-wrapper	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1147	s4-netquest/react-scorm-provider	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1148	raccoongang/edx_xblock_scorm	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1149	adlnet/scorm-to-xapi-wrapper	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1150	adaptlearning/adapt_framework	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1151	cybercussion/scobot	METRIC	| what a studio needs | what exists | verdict |
+verticals/solutions.md	1180	bigbluebutton/bigbluebutton	PROSE	
+verticals/solutions.md	1188	apache/openmeetings	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1206	frappe/lms	PROSE	
+verticals/solutions.md	1207	openolat/openolat	PROSE	
+verticals/solutions.md	1212	frappe/lms	METRIC	| Row | What the secondary source said | Measured `2026-11-01` | This page already said |
+verticals/solutions.md	1213	openolat/openolat	METRIC	| Row | What the secondary source said | Measured `2026-11-01` | This page already said |
+verticals/solutions.md	1214	francoisjacquet/rosariosis	METRIC	| Row | What the secondary source said | Measured `2026-11-01` | This page already said |
+verticals/solutions.md	1215	chamilo/chamilo-lms	METRIC	| Row | What the secondary source said | Measured `2026-11-01` | This page already said |
+verticals/solutions.md	1234	bigbluebutton/bigbluebutton	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1235	prairielearn/prairielearn	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1236	withmarbleapp/os-taxonomy	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1237	1edtech/lti-1-3-php-library	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1241	os4ed/opensis-classic	PROSE	
+verticals/solutions.md	1264	openeducat/openeducat_erp	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1265	sakaiproject/sakai	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1266	openolat/openolat	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1267	learningequality/kolibri	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1268	inducer/relate	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1269	openedx/openedx-platform	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1269	openedx/xblock	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1269	openedx/codejail	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1269	overhangio/tutor	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1269	openedx/edx-platform	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1270	moodle/moodle	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1270	cvmcosta/ltijs	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1271	instructure/canvas-lms	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1271	vishalsachdev/canvas-mcp	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1272	francoisjacquet/rosariosis	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1273	academico-sis/academico	SELL	| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+verticals/solutions.md	1278	frappe/education	PROSE	
+verticals/solutions.md	1299	cvmcosta/ltijs	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1300	dmitry-viskov/pylti1.3	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1301	openedx/xblock	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1302	openedx/codejail	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1303	vishalsachdev/canvas-mcp	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1304	jcputney/scorm-again	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1305	numbas/numbas	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1306	jupyter/nbgrader	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1307	safeexambrowser/seb-win-refactoring	SELL	| Surface | Repo | Licence | Stars | Last push | What it buys |
+verticals/solutions.md	1322	sakaiproject/sakai	SELL	| Platform | Repo | Licence | Stars | Last push | Region | What you may do with it |
+verticals/solutions.md	1323	learningequality/kolibri	SELL	| Platform | Repo | Licence | Stars | Last push | Region | What you may do with it |
+verticals/solutions.md	1324	openolat/openolat	SELL	| Platform | Repo | Licence | Stars | Last push | Region | What you may do with it |
+verticals/solutions.md	1325	inducer/relate	SELL	| Platform | Repo | Licence | Stars | Last push | Region | What you may do with it |
+verticals/solutions.md	1331	academico-sis/academico	SELL	| Platform | Repo | Licence | Stars | Last push | Region | Role |
+verticals/solutions.md	1332	openfun/richie	SELL	| Platform | Repo | Licence | Stars | Last push | Region | Role |
+verticals/solutions.md	1333	iblai/lms	SELL	| Platform | Repo | Licence | Stars | Last push | Region | Role |
+verticals/solutions.md	1334	pupilfirst/pupilfirst	SELL	| Platform | Repo | Licence | Stars | Last push | Region | Role |
+verticals/solutions.md	1343	openedx/openedx-platform	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1344	moodle/moodle	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1345	frappe/lms	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1345	frappe/education	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1346	chamilo/chamilo-lms	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1347	ilias-elearning/ilias	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1348	claroline/claroline	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1349	inginious/inginious	SELL	| Platform | Licence | Stars | Attach how |
+verticals/solutions.md	1373	frappe/lms	METRIC	| grant | rows | rows named |
+verticals/solutions.md	1373	overhangio/tutor	METRIC	| grant | rows | rows named |
+verticals/solutions.md	1373	hrshadhin/school-management-system	METRIC	| grant | rows | rows named |
+verticals/solutions.md	1374	chamilo/chamilo-lms	METRIC	| grant | rows | rows named |
+verticals/solutions.md	1376	sakaiproject/sakai	METRIC	| grant | rows | rows named |
+verticals/solutions.md	1377	4jean/lav_sms	METRIC	| grant | rows | rows named |
+verticals/solutions.md	1394	sakaiproject/sakai	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1395	francoisjacquet/rosariosis	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1396	academico-sis/academico	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1397	os4ed/opensis-classic	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1398	yukazakiri/koakademy	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1399	kadusic1/e-gradebook-platform	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1400	safeexambrowser/seb-win-refactoring	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1401	eloompty/eloom-lms-international	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1402	laveshparyani/walnutedu-student-management	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1403	sakaicontrib/attendance	SELL	| platform | address | grant | ★ | pushed | tier | note |
+verticals/solutions.md	1406	sanket2000/proctoring	PROSE	
+verticals/solutions.md	1407	elearning-bs23/moodle-quizaccess_proctoring	PROSE	
+verticals/solutions.md	1408	meefik/itmoproctor	PROSE	
+verticals/solutions.md	1440	jupyterhub/ltiauthenticator	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1441	stevenweathers/peregrine-lti	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1442	swisnl/laravel-lti-provider	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1443	adlnet/adl_lrs	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1443	yetanalytics/lrsql	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1444	adlnet/lrs-conformance-test-suite	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1444	adlnet/catapult	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1445	examplary/qti	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1445	metyatech/markdown-to-qti	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1445	rolfis/qti-convert	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1446	citolab/qti-components	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1447	davidpesce/moodle-logstore_xapi	METRIC	| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+verticals/solutions.md	1450	citolab/qti-components	PROSE	
+verticals/solutions.md	1452	ewels/starlight-quiz	PROSE	
+verticals/solutions.md	1461	dmitry-viskov/pylti1.3	PROSE	
+verticals/solutions.md	1486	microsoft/markitdown	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1487	gitbrent/pptxgenjs	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1488	dotnet/open-xml-sdk	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1489	kozea/weasyprint	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1490	excalidraw/excalidraw	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1491	quentinfuxa/whisperlivekit	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1492	liuzhao1225/youdub-webui	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1493	datalab-to/chandra	SELL	| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+verticals/solutions.md	1507	ironcountyschooldistrict/iep-printing-php	SELL	| Repo | Stars | Licence | Last push | Verdict |
+verticals/solutions.md	1508	microsoftarchive/learn-lti	SELL	| Repo | Stars | Licence | Last push | Verdict |
+verticals/solutions.md	1509	tc-imba/canvas-auto-rubric	SELL	| Repo | Stars | Licence | Last push | Verdict |
+verticals/solutions.md	1510	fotinikafida/text-to-moodle	SELL	| Repo | Stars | Licence | Last push | Verdict |
+verticals/solutions.md	1511	academic-innovation/django-lti	SELL	| Repo | Stars | Licence | Last push | Verdict |
+verticals/solutions.md	1511	dmitry-viskov/pylti1.3	SELL	| Repo | Stars | Licence | Last push | Verdict |
+verticals/solutions.md	1526	frappe/education	PROSE	
+verticals/solutions.md	1534	openedx/xblock	PROSE	
+verticals/solutions.md	1534	openedx/codejail	PROSE	
+verticals/solutions.md	1535	tsugiproject/tsugi	PROSE	
+verticals/solutions.md	1536	jcputney/scorm-again	PROSE	
+verticals/solutions.md	1542	yaofanguk/video-subtitle-extractor	SELL	| Platform / library | Licence | Stars | Region | Where it sits in a vertical deployment |
+verticals/solutions.md	1543	nexmoe/vidbee	SELL	| Platform / library | Licence | Stars | Region | Where it sits in a vertical deployment |
+verticals/solutions.md	1544	smacke/ffsubsync	SELL	| Platform / library | Licence | Stars | Region | Where it sits in a vertical deployment |
+verticals/solutions.md	1545	ing-bank/popmon	SELL	| Platform / library | Licence | Stars | Region | Where it sits in a vertical deployment |
+verticals/solutions.md	1546	ifca-advanced-computing/frouros	SELL	| Platform / library | Licence | Stars | Region | Where it sits in a vertical deployment |
+verticals/solutions.md	1573	openedx/openedx-platform	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1574	moodle/moodle	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1575	oppia/oppia	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1576	dspace/dspace	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1577	openeducat/openeducat_erp	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1578	submitty/submitty	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1579	frappe/education	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1580	gibbonedu/core	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1581	openolat/openolat	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1582	os4ed/opensis-classic	SELL	| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+verticals/solutions.md	1587	frappe/education	PROSE	
+verticals/solutions.md	1611	yungifez/skuul	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1611	gibbonedu/core	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1612	openfun/marsha	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1621	academico-sis/academico	SELL	| Platform | Licence | Stars | Shippable without copyleft obligation? |
+verticals/solutions.md	1643	openeducat-inc/openeducat	METRIC	| Cited as | Response | Live address |
+verticals/solutions.md	1643	openeducat/openeducat_erp	METRIC	| Cited as | Response | Live address |
+verticals/solutions.md	1644	openedx/edx-platform	METRIC	| Cited as | Response | Live address |
+verticals/solutions.md	1644	openedx/openedx-platform	METRIC	| Cited as | Response | Live address |
+verticals/solutions.md	1651	t1112000/tutor-management-app	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1661	asia/ho_chi_minh	PROSE	
+verticals/solutions.md	1680	moodle/moodle	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1680	thm-mni-ii/feedbacksystem	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1680	openfun/potsie	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1681	openedx/openedx-platform	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1682	instructure/canvas-lms	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1683	oppia/oppia	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1684	frappe/lms	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1685	learnhouse/learnhouse	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1686	sakaiproject/sakai	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1687	chamilo/chamilo-lms	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1688	openeducat/openeducat_erp	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1689	h5p/h5p-php-library	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1690	jupyter/nbgrader	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1691	cvmcosta/ltijs	SELL	| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+verticals/solutions.md	1733	portabilis/i-educar	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1734	portabilis/i-diario	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1735	portabilis/pre-matricula-digital	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1736	ipti/br.tag	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1743	bncc-dev/bncc-dados	PROSE	
+verticals/solutions.md	1758	openeducat/openeducat_erp	SELL	| Platform | Repo | Licence (read first-hand) | Default branch | Region | What it runs |
+verticals/solutions.md	1764	openedx/edx-platform	PROSE	
+verticals/solutions.md	1782	fotinikafida/text-to-moodle	PROSE	
+verticals/solutions.md	1799	oat-sa/tao-core	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1800	oat-sa/extension-tao-itemqti	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1801	ucfopen/udoit	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1802	cboard-org/cboard	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1832	francoisjacquet/rosariosis	PROSE	
+verticals/solutions.md	1833	academico-sis/academico	PROSE	
+verticals/solutions.md	1834	os4ed/opensis-classic	PROSE	
+verticals/solutions.md	1873	ls1intum/artemis	PROSE	
+verticals/solutions.md	1887	frappe/lms	PROSE	
+verticals/solutions.md	1888	frappe/erpnext	PROSE	
+verticals/solutions.md	1901	ls1intum/artemis	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1902	opencast/opencast	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1903	frappe/erpnext	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1903	frappe/lms	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1904	francoisjacquet/rosariosis	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1905	gibbonedu/core	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1906	odoo/odoo	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1907	frappe/lms	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1908	openeducat/openeducat_erp	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1909	portabilis/i-educar	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1910	academico-sis/academico	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1911	frappe/education	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1912	os4ed/opensis-classic	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1918	moodle/moodle	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1919	learnhouse/learnhouse	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1920	chamilo/chamilo-lms	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1921	openolat/openolat	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1922	selleo/mentingo	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1923	safytech/ulearn	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1924	openfun/richie	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1924	openfun/ralph	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1925	iblai/lms	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1926	pacewisdomhq/tutorloom	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1927	euron-sde-team/euron-open-lms	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1928	artcc/freelingo	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1937	dspace/dspace	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1938	koha-community/koha	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1951	openfun/ralph	SELL	| Component | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1952	openfun/warren	SELL	| Component | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1953	openfun/potsie	SELL	| Component | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	1992	swsgbl/ai-learning-os	SELL	| Platform | Repo | Licence | ★ | Region | What it runs |
+verticals/solutions.md	2006	services/api	PROSE	
+verticals/solutions.md	2013	services/api	PROSE	
+verticals/solutions.md	2014	arize-ai/phoenix	PROSE	
+verticals/solutions.md	2020	services/api	PROSE	
+verticals/solutions.md	2041	gazpachu/hypatia	PROSE	
+verticals/solutions.md	2041	inria/scikit-learn-mooc	PROSE	
+verticals/solutions.md	2042	xiaochong0302/course-tencent-cloud	PROSE	
+verticals/solutions.md	2042	designfuchen/word-atlas	PROSE	
+verticals/solutions.md	2043	mengxi-ream/read-frog	PROSE	
+verticals/solutions.md	2043	echo-loop/echo-loop	PROSE	
+verticals/solutions.md	2043	umlx5h/llplayer	PROSE	
+verticals/solutions.md	2046	umlx5h/llplayer	PROSE	
+verticals/solutions.md	2053	gazpachu/hypatia	PROSE	
+verticals/solutions.md	2054	xiaochong0302/course-tencent-cloud	PROSE	
+verticals/solutions.md	2057	fastai/course-v3	PROSE	
+verticals/solutions.md	2058	inria/scikit-learn-mooc	PROSE	
+verticals/solutions.md	2060	foair/course-crawler	PROSE	
+verticals/solutions.md	2061	moocdownloader/moocdownloader	PROSE	
+verticals/solutions.md	2061	cxorz/chaoxing-signin	PROSE	
+verticals/solutions.md	2102	designfuchen/word-atlas	PROSE	
+verticals/solutions.md	2175	jcputney/scorm-again	PROSE	
+verticals/solutions.md	2194	academico-sis/academico	PROSE	
+verticals/solutions.md	2211	sakaiproject/sakai	PROSE	

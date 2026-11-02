@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — `2026-11-02` — channel table, run first, with a control on every arm
+
+🔵 `569-B`'s standing row. Every arm carries a fabricated control in the same run, because an arm that
+cannot separate a real address from an invented one certifies nothing (`608-A`).
+
+| arm | real | fabricated control | verdict |
+| --- | --- | --- | --- |
+| 🟢 `606-E` existence probe — `github.com/{slug}/info/refs?service=git-upload-pack` | 🟢 **`200`** `4 of 4` | 🟢 **`401`** `4 of 4` | 🟢 **discriminates — the only existence verifier that does** |
+| 🟢 `raw.githubusercontent.com/{slug}/{branch}/{grant}` byte-read | 🟢 **`200`**, `1,064`–`11,408 B` | 🟢 **`404 14 B`** `4 of 4` | 🟢 **discriminates; the grant channel** |
+| 🟢 `search/repositories` with `q=repo:owner/name` | 🟢 `932` hits on a real query | 🟢 **`0`** on a nonsense token | 🟢 **discriminates; the metadata and discovery channel** |
+| 🔴 `curl -sI github.com/{slug}` — **the run prompt's prescribed check** | 🔴 `403` | 🔴 **`403`** | 🔴 **certifies nothing. Carried since `p590`, replaced since `608-A`, re-measured today and unchanged** |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 `403` | 🔴 `403` | 🔴 **closed in this session** |
+| 🔴 every non-GitHub host (`unesco.org`, `oecd.org`, `iadb.org`, `neurips.cc`) | 🔴 `000` | 🔴 `000` | 🔴 **closed on both channels — `598-G` tenth pass, `609-G` confirmed** |
+
+🔴 **`610-F` — batched metadata is silent about what it drops, re-proven.** A `5`-address batch
+returned `4`: [`openedx/edx-platform`](https://github.com/openedx/edx-platform) — a live, shelved,
+headline repository — was **omitted with no error**. A batch containing a fabricated address is
+byte-identical to one containing none. 🟢 `606-C`'s conclusion stands and was applied: **count
+reconciliation is the only detector**, and this pass reconciled `841` requested against `741`
+returned (`100` unreconciled, `11.9 %`, evidence
+`evidence/edu-candidate-metadata.2026-11-02-p610.tsv`).
+
+🟡 **`610-G` — and this pass's own reconciler was wrong before it was right.** The first run reported
+`requested=22 returned=22 unreconciled=15`, which is arithmetically impossible. Cause: `comm` on
+unsorted input, and it **said so on stderr** while the script ignored the exit state. All `22` were in
+fact returned. 🔵 Recorded because an unreconciled count is this base's only defence against a silent
+drop, so a broken reconciler is worse than none.
+
+## 🆕 `p610` — `2026-11-02` — the backlog, measured on the trending shelves themselves
+
+🔴 `609-C` adjudicated `50` `TRENDING-ONLY` slugs **within the committed ledger** (`219` slugs) and
+concluded *"nothing vanished."* 🟢 That is true of the ledger. 🔴 It is not true of these shelves,
+because the ledger tracks under `5 %` of what they hold.
+
+| | ledger scope (`609-C`) | 🆕 trending shelves, measured `p610` |
+| --- | --: | --: |
+| distinct shape-valid addresses | `219` | 🔴 **`4,779`** |
+| on no sell-shelf row | `50` | 🔴 **`4,356`** |
+| 🔴 **published as an actual row** (not prose, not a nil table) | — | 🔴 **`2,310`** |
+| 🟡 of those, education-shaped by slug token | — | 🟡 **`848`** |
+| 🟢 already adjudicated as a published refusal | — | 🟢 `26` |
+
+🔵 **Same mechanism as `609-B` and `609-C`, three orders of magnitude bigger.** `609-B` found `2`
+permissive eval repos sitting on these shelves while the sell shelves recorded the tier empty. The
+general case: 🔴 **this base's discovery has outrun its promotion by ~`2,300` rows**, and a tier
+recorded as empty is evidence about the sell shelves, never about the base.
+
+🟡 **The honest qualifier, because the number invites misreading.** `2,310` is **not** `2,310`
+promotable rows. Ranked by stars, the head of that backlog is general infrastructure this base refuses
+on relevance (`607-B`) — OCR engines, `mermaid-js/mermaid`, `whisper.cpp`, `tesseract.js`,
+`paddleocr`. The education-shaped `848` is the honest working set, and `20` of it was promoted this
+pass (`0.9 %`, leaving `830`). Full list: `evidence/trending-row-backlog.2026-11-02-p610.tsv`.
+
+---
+
 ## 🆕 `p609` — `2026-11-02` — GitHub trending, and the channel ledger for this pass
 
 ### 🔵 The channel table, run first, with a control on every arm (`569-B`'s standing row)

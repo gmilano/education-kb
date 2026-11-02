@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — `2026-11-02` — **the fortieth consecutive global-leg nil, adjudicated row by row**
+
+🔵 The run prompt mandates four global legs. They were run. 🔴 They produced **no new permissive,
+education-specific repository address** — the fortieth consecutive time. Per `603-B`/`607-A`, the nil
+is **proven token by token** rather than asserted, against a held-set of `3,800` addresses matched on
+full slug **and** on bare repository name (`602-A`'s fix, because a URL-only matcher missed `39.5 %`
+of this base).
+
+| leg | token returned | held? | adjudication |
+| --- | --- | --- | --- |
+| `top open source AI agents education 2026 github MIT` | `NousResearch/hermes-agent` | 🟢 held | 🔴 already refused on relevance at `259,581★` by `607-A` |
+| | `All-Hands-AI/OpenHands` · `crewAIInc/crewAI` · `microsoft/autogen` | 🟢 held | general-purpose |
+| | `ashishpatel26/500-AI-Agents-Projects` · `huggingface/agents-course` · `microsoft/ai-agents-for-beginners` | 🟢 held | course / index material |
+| | 🆕 `openclaw/openclaw` | 🔴 **not held** | 🔴 **refused on relevance — `393,687★`.** The largest-starred address this base has ever refused, replacing `607-B`'s record |
+| | 🆕 `FoundationAgents/MetaGPT` (`71,133★`) · `openai/openai-agents-python` (`30,451★`) | 🔴 **not held** | 🔴 refused on relevance — general-purpose agent frameworks |
+| `github trending education AI 2026` | `freeCodeCamp/freeCodeCamp` · `rohitg00/ai-engineering-from-scratch` · `naorpeled/aitutor` · `h9-tect/AI-Roadmaps` · `aneelv75/github-trending` | 🟢 held | all five already on these shelves |
+| | 🆕 `in-the-weeds-hannah-stulberg/substack-articles` | 🔴 **not held** | 🔴 **refused twice over:** API `NOASSERTION` and no grant found, **and** it is a Substack article archive teaching Claude Code workflows — not education-sector software |
+| `open source platform education ERP CRM MIT Apache` | `openeducat/openeducat_erp` · `OS4ED/openSIS-Classic` | 🟢 held | 🔴 and the leg's own summary concedes it *"didn't turn up an education ERP/SIS that is clearly MIT or Apache"* — `LGPL-3.0`, `ECL`, `GPL` |
+| | `Kuali KFS` | 🟢 held (name match) | `ECL-2.0` — the family `604-A` settled across the Apereo orgs |
+| `AI education industry trends 2026` | — | — | 🔴 **returned no repository addresses at all**, only market figures |
+
+🟢 **`19 of 19` tokens adjudicated: `15` held, `4` new and all four refused with a stated reason.**
+🔵 Two of the four were refused on **relevance at very large star counts**, which is `p601`/`605-J`'s
+anti-signal rule showing up in the discovery channel rather than the shortlist.
+
+🔴 **`610-H` — the global legs are now `40 for 40`, and that is a finding about the channel.** Forty
+consecutive passes of four mandated legs have produced zero new permissive education-specific
+addresses. 🟢 Every address promoted in `p610` came from the **backlog on this base's own trending
+shelves** (`p603`'s channel) or from the **upstream named inside a candidate's grant** (`610-A`).
+🔵 **Operator note:** the four global legs are a `0 %`-yield channel over `40` passes and the backlog
+is a `2,310`-row channel. The run prompt mandates the former and does not mention the latter.
+
+## 🆕 `p610` — `2026-11-02` — regional legs: all four returned dated policy, Africa still nil
+
+🟢 The productive discovery and intelligence channel, per `605-F` / `606-H` / `607-E`: national and
+local-language legs rather than global ones.
+
+| region | returned | 🔴 gap |
+| --- | --- | --- |
+| 🟢 **North America** | Sub-national resolution again: **`33`–`35` states plus Puerto Rico** now carry official AI guidance (up from ~`28` in early 2025); **`134` bills across `31` states** in 2026; **Ohio** mandates a district AI policy by **`2026-07-01`** with a state model policy; Tennessee likewise; Idaho before 2027-28; California **AB 1159** would bar student data from training | 🔴 **Texas Education Agency has issued none**; bill numbers conflict across trackers |
+| 🟢 **EMEA** | **Regulation (EU) 2026/1744** confirmed from a second channel: education high-risk duties deferred to **`2027-12-02`**; emotion-recognition ban in education in force since **`2025-02-02`** (Art. 5(1)(f)); transparency duties since **`2026-08-02`**. Schools are **deployers** with an Art. 4 AI-literacy duty. High-risk scope named: admissions, evaluating learning outcomes, level assignment, exam monitoring | 🔴 No country-level adoption rates found; sources disagree on what the Digital Omnibus amendment changed |
+| 🟢 **APAC** | **China and the UAE are the only states running compulsory national AI curricula** (since 2025-26). **India**: AI and computational thinking compulsory **from Class 3 in 2026-27**, plus IT Rules synthetic-content labelling effective **`2026-02-20`**. **Singapore**: an **agentic-AI** governance framework launched **`2026-01-22`** — voluntary. **Japan**: an AI statute with no penalties | 🔴 **No education-specific detail for Japan** beyond the statute |
+| 🟢 **LATAM** | UNESCO's **Observatory on AI in Education for LAC** is live. **CENIA**: `13 of 19` LAC countries do not teach early AI adoption in schools. Latin American AI Index 2026 leading group **Brazil, Chile, Uruguay**; only **Brazil and Colombia** allocate budget inside their national instruments. **Latam-GPT**: `30+` institutions across `8` countries | 🔴 Brazil's AI bill status is **unconfirmed** — sources split between "under consideration" and "enacted 2024" |
+| 🔴 **Africa** | 🔴 **Nothing confirmable, second consecutive pass.** `606-H` recorded Kenya nil; `607-F` recorded Africa nil; `p610` re-ran and records it again | 🔴 **Declared gap, not coverage.** Named so silence is not read as absence of activity |
+
+---
+
 ## 🆕 `p609` — `2026-11-02` — what moved on the agent side this week
 
 🔴 **The mandated global legs return the THIRTY-NINTH consecutive nil — and this time every single

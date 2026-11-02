@@ -4,6 +4,28 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p610` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE MOODLE TIER FINALLY HAS ITS **MOBILE** AND **DEPLOYMENT** LAYERS, BOTH PERMISSIVE, WHILE THE CORE STAYS `GPL-3.0`. 🔴 AND THE OFFICIAL MOBILE CLIENT WAS NEARLY REFUSED AS UNGRANTED BY THIS PASS'S OWN LADDER — `610-E`.**
+
+### 🟢 Why these two rows matter more than their star counts
+
+🔵 This base has carried [`moodle/moodle`](https://github.com/moodle/moodle) as the sector's largest
+plugin ecosystem for hundreds of passes, with the **`GPL-3.0`** boundary stated every time: anything
+linked into the Moodle core inherits it. 🟢 Both rows below sit **outside** that boundary — one is a
+separate mobile client, one is infrastructure-as-code — so a client deliverable built on either does
+not take GPL terms from them.
+
+| Platform | Repo | Grant (byte-read) | Region | ★ | Size | Last push | What it gives a build |
+| --- | --- | --- | --- | --: | --: | --- | --- |
+| **Moodle App** (official) | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | 🟢 **Apache-2.0** `11,358 B` — at **`COPYING.txt`**, see `610-E` | 🔵 Global (Moodle HQ) | `1,004` | `133,226 KB` | `2026-10-29` | 🟢 **Moodle HQ's own mobile client**, Ionic/Angular, with offline course content and submission sync. The one place a Moodle engagement can add an agentic surface **without touching GPL core** — and the mobile seam is where the offline-first requirement in low-connectivity LATAM and African deployments actually lives |
+| **Moodle on Azure** | [`Azure/Moodle`](https://github.com/Azure/Moodle) | 🟢 **MIT** `1,090 B` | 🔵 Global (Microsoft) | `186` | `2,280 KB` | `2026-11-02` | 🟢 ARM/Bicep templates for a scaled Moodle: autoscaled web tier, managed MySQL/PostgreSQL, Redis, shared storage and an optional Elastic stack. 🟢 **MIT on the deployment layer** means the reference architecture is reusable in a client's own tenancy. Pushed **today** |
+
+🟡 **The honest boundary, restated.** Neither row makes Moodle itself permissive. A plugin inside
+`moodle/moodle` is `GPL-3.0` and this base has never said otherwise; what changed is that the
+**mobile** and **deployment** layers are now shelved with permissive grants of their own, so a
+three-layer Moodle engagement has exactly one copyleft layer instead of three unstated ones.
+
+---
+
 ## 🆕 `p609` — reads `2026-11-02` — **🔴 NO NEW PLATFORM ROW THIS PASS, AND THE REASON IS NAMED: THE MANDATED VERTICAL LEG RETURNED ONE VENDOR'S OWN WEBSITE `10 of 10` TIMES. 🟢 THE TIER WAS PROBED THROUGH A SECOND, WORKING CHANNEL ANYWAY, AND THE ONE REAL CANDIDATE IT FOUND IS ALREADY HELD HERE. 🔴 `609-D`: A `10 KB` REPOSITORY CLAIMING A PRODUCTION-READY KUBERNETES LMS, WITH A VALID APACHE GRANT.**
 
 ### 🔴 The mandated vertical leg is captured by a single vendor
