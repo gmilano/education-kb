@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — `2026-11-02` — **the forty-first consecutive global-leg nil, and the first one with a denominator on both axes**
+
+🔵 The run prompt mandates four global legs. They were run. 🔴 They produced **no new permissive,
+education-specific repository address that reached a sell shelf from the search channel alone** — the
+forty-first consecutive time. 🟢 **But this pass stops recording that as a bare nil.** Per `603-B` /
+`607-A` a nil must be adjudicated; `611-E` adjudicates it with numbers on *both* sides.
+
+| the four mandated global legs | what came back |
+| --- | --- |
+| `top open source AI agents education 2026 github MIT` | 🔴 **nil** — general agent roundups (`OpenClaw`, `OpenHands`, `CrewAI`, `MetaGPT`, `LangGraph`): all held, all refused on relevance in prior passes |
+| `github trending education AI 2026` | 🟡 `hkuds/deeptutor` and `thu-maic/openmaic` — 🔴 **both already on a sell shelf**; grants reconfirmed (`Apache-2.0` `11,408 B`, `MIT` `1,065 B`) |
+| `open source platform education ERP CRM MIT Apache` | 🟢 **paid, but as a licence *refutation*** — see `611-A`. Its one "MIT education SIS" is `GPL-3.0` on bytes |
+| `AI education industry trends 2026` | 🟢 paid on **intel**, nil on **supply** — governance-over-hype, operational embedding, skills-based credentials |
+
+### 🔴 The nil, decomposed — `611-E`
+
+| | `p611` |
+| --- | --: |
+| distinct axes queried (`4` mandated + `15`) | `19` |
+| distinct addresses returned | `976` |
+| 🟢 **new** to this base's `3,758` known addresses | 🟢 `894` (**`91.6 %`**) |
+| 🟡 new **and** permissive | 🟡 `196` |
+| 🔴 new, permissive **and** `≥ 10★` | 🔴 **`46` (`4.7 %`)** |
+| 🔴 axes returning **zero** shippable-shaped rows | 🔴 **`14 of 19`** |
+
+🔵 **Read it this way:** the channel is not dry, it is **diluted**. `91.6 %` novelty against `4.7 %`
+usable means the search surface is dominated by single-author coursework, and a star floor is the only
+cheap discriminator — 🔴 which `599` already showed doubles as an accidental licence filter.
+
+### 🔴 A correction to this pass's own instrument, recorded before the numbers are cited
+
+🔴 The first run of the novelty harness reported **`37` axes** for `19` queries, because the harness
+emitted each axis label in two forms (`topic:education+topic:ai` and `topic:education topic:ai`) and
+counted them separately. 🟢 Normalised and recounted; every figure above is post-fix. 🔵 Four instrument
+defects in two passes (`610-C`, `610-E`, `610-G`, now `611-B` and this one) — **the instrument, not
+the corpus**, again.
+
+### 🟡 Addresses seen this pass and deliberately **not** promoted, with reasons
+
+| address | ★ | grant (byte-read) | why not shelved |
+| --- | --: | --- | --- |
+| [`nomadicjosh/eduTrac-SIS`](https://github.com/nomadicjosh/eduTrac-SIS) | — | 🔴 `GPL-3.0` `35,146 B` | copyleft; 🔴 **and it is the row a search summary asserted was `MIT`** |
+| [`hrshadhin/osums`](https://github.com/hrshadhin/osums) | `84` | 🔴 `AGPL-3.0` `34,520 B` | 🔴 network copyleft; the index claims `MIT`; stale `2019` |
+| [`espocrm/espocrm`](https://github.com/espocrm/espocrm) | — | 🔴 `AGPL-3.0` `34,522 B` | 🔴 index claims `GPL-3.0`; network copyleft either way |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | — | 🔴 `Elastic-2.0` `3,860 B` | 🔴 non-OSI; 🟢 the index labels it correctly |
+| [`6t6t-cyberg/kifula`](https://github.com/6t6t-cyberg/kifula) | `0` | 🟢 `MIT` `1,068 B` | 🔴 `0★` coursework — 🟢 **but see `611-F`: it is Angolan, and Africa has been nil for three passes** |
+| [`CarlosArmijos1/tutor-tecnico-agentes`](https://github.com/CarlosArmijos1/tutor-tecnico-agentes) | `0` | 🟢 `MIT` `1,071 B` | 🔴 `0★` coursework; 🟡 a LangGraph multi-agent Socratic tutor — the *shape* LATAM engagements ask for |
+| [`fabriciojunio/permaneia`](https://github.com/fabriciojunio/permaneia) | `0` | 🟢 `MIT` `1,084 B` | 🔴 `0★` coursework; 🟡 RAG study assistant + fuzzy dropout-risk panel (Unisagrado, BR) |
+| [`Belles-hub/UpLearn`](https://github.com/Belles-hub/UpLearn) | `0` | 🟢 `MIT` `1,067 B` | 🔴 `0★` coursework; 🟡 adaptive AI for **inclusive** education (pt-BR) |
+| [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | — | — | 🔴 refused on relevance in `p610` at `393,687★`; not re-adjudicated |
+
+🟢 **Controls on this arm:** `openai/totally-not-real-edu-repo-p611`,
+`anthropics/fabricated-control-p611`, `anthropics/not-real-p611-control` — all `404 14 B`; and
+`parkerj/eduTrac`, a *plausible* address for a real project, is **also unreachable** — 🔵 which is the
+useful control, because it proves the arm cannot distinguish a dead address from an invented one and
+so a nil on a single address is never evidence of absence.
+
+### 🔴 `611-F` — Africa, third consecutive pass, and the first **supply** signal
+
+🔴 `p610` and `p609` recorded Africa as returning nothing confirmable on the **policy** legs. 🔴 That
+holds for a third pass. 🟢 **But the supply leg returned one address this pass**:
+`6t6t-cyberg/kifula`, `MIT`, *"A Inteligência Artificial para a Educação Angolana"* — Angola,
+Portuguese-language academic-work authoring. 🔴 At `0★` it is not shippable and is **not** promoted.
+🔵 **Recorded because a `0★` placed address is still the first thing this base has found in that
+region, and the Portuguese-language axis is what found it** — the same axis shape that pays in Brazil.
+
+---
 
 ## 🆕 `p610` — `2026-11-02` — **the fortieth consecutive global-leg nil, adjudicated row by row**
 

@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🔴 `T611-1` — a curated licence column is not evidence, and the error rate is now measured
+
+🔵 **Claim.** Third-party indexes — the awesome-lists and comparison tables every engagement reads
+first — misstate licences at a rate high enough to change build decisions, **in both directions**.
+
+🟢 **Evidence.** The sector's standard higher-education platform index, censused row by row against
+grant bytes at the real default branch: `20` rows, 🟢 `10` reproduce, 🔴 `4` contradicted, 🟡 `5`
+unverifiable (no grant payload at all), `1` non-OSI and correctly labelled. 🔴 **Of the `5` rows
+claiming a *permissive* grant, `1` survives** — one is `AGPL-3.0` at `84★`; three have no `LICENSE` at
+any ladder rung. 🟢 And one row published as `GPL-3.0` is actually `MIT`.
+`evidence/curated-licence-census.2026-11-02-p611.tsv`.
+
+🔴 **What would refute it.** A second index censused the same way reproducing `> 90 %`. 🔵 Carried as
+`611-H-open`: `n = 1` index. The *rate* is measured; its **generality across indexes is not**.
+
+### 🟢 `T611-2` — the regulatory deadline is now the buying trigger in every region, and `p611` adds two jurisdictions
+
+🔵 **Claim.** `T610-1` said three regions carry a dated statutory obligation. 🟢 Refined: it is now
+**four**, and the newest two name education *explicitly* rather than by implication.
+
+| region | the dated thing | what it forces |
+| --- | --- | --- |
+| North America | `4` states mandate **district** AI policy; DC bars AI grading & discipline `2026-27` | artefact: a policy enforced in code |
+| EMEA | Reg. (EU) 2026/1744 — high-risk `2027-12-02`; Art. 4 literacy duty **live now** | ~13-month build window, live literacy duty |
+| 🆕 APAC | 🆕 **Vietnam `33/2026/QD-TTg`** — education `1` of `6` high-risk sectors, **automated assessment** named | assessment features become regulated features |
+| 🆕 APAC | 🆕 **Australia TEQSA** — *every* HE provider files a gen-AI risk action plan | a deliverable, per institution, now |
+| LATAM | `716` instruments across `23` countries, `> 80 %` since 2023 | no single compliance target |
+
+🔴 **What would refute it.** A region where procurement is still led by capability pilots with no
+dated obligation in sight. 🔵 On this pass's evidence there is none.
+
+### 🔴 `T611-3` — in education, high search novelty and low usable yield are the same measurement
+
+🔵 **Claim.** The discovery channel is **diluted, not dry**. `976` addresses over `19` axes returned
+🟢 `91.6 %` new to a `3,758`-address base and 🔴 only `4.7 %` new-permissive-and-`≥ 10★`, with 🔴 `14 of
+19` axes yielding **zero** shippable-shaped rows.
+
+🔵 **Why this matters more than another nil.** It reconciles `p600`'s `80.3 %` novelty against `p599`'s
+`0 %` in a single table: 🟢 **novelty and value are independent axes**, and a generic education axis
+surfaces the long tail of single-author coursework. 🔴 The modal "new" address is a `0★` CRUD project.
+
+🔴 **What would refute it.** An axis returning high novelty **and** high permissive yield at a usable
+star floor. 🟢 Five axes paid at all this pass, and the one that generalises is 🔵 **a local-language
+axis phrased as a school subject** (`pendidikan AI indonesia`) — `p600`'s "jobs, not technologies"
+restated for language.
+
+### 🔴 `T611-4` — the governance deficit, not the capability gap, is the sellable unit — and LATAM quantifies it
+
+🔵 **Claim.** Demand for education AI is now **governed demand**: institutions are already using AI and
+are unable to evidence how.
+
+🟢 **Evidence, LATAM, with a `19`-country denominator.** `87 %` of ~`200` HEIs use AI in at least one
+area; 🔴 `26 %` have a formal strategy; 🔴 `< 10 %` have guidelines *and* the capacity to apply them;
+🔴 `55 %` have **no AI budget**, and 🔴 public universities **`4 %`**. Brazil: `53 %` of administrators
+use AI, 🔴 `22 %` of schools have guidelines (Cetic.br). Uruguay: `75 %` of public-school teachers use
+the tools (Ceibal).
+
+🔵 **The same shape outside LATAM:** 🔴 `55 %` of US high-school principals have not restricted AI on
+the network while `60 %` of teachers use it (Gallup); most US public schools have no formal student
+policy. 🟢 **So the deficit is global and LATAM is merely the best-measured instance** — which is the
+opposite of the usual direction of this base's regional evidence.
+
+🔴 **What would refute it.** A survey showing strategy adoption converging on usage. 🟡 None found.
+
+### 🟢 `T611-5` — the permissive supply in education is the public sector and the periphery, never the core
+
+🔵 **Claim.** Restated with this pass's two additions and now hard to dislodge: **every education
+platform of record is copyleft**, and permissive grants cluster in (a) government-published systems
+and (b) tools *around* the LMS.
+
+🟢 **Evidence.** 🔴 Copyleft core: `moodle/moodle` `GPL-3.0`, `OpenEMIS/core` `GPL-2.0` (corrected this
+pass), `openeducat_erp` `LGPL-3.0`, `nomadicjosh/eduTrac-SIS` `GPL-3.0`, `hrshadhin/osums` `AGPL-3.0`.
+🟢 Permissive: `bcgov/SIMS` **`Apache-2.0`** — a *ministry's* system of record with a business-rules
+engine; `moodleapp` / `Azure/Moodle` (mobile and deployment, `p610`); `QkeleQ10/Study-Tools` (`MIT`,
+augments the Dutch `Magister` SIS from outside).
+
+🔵 **The actionable form:** 🟢 **the permissive layer is where the integration sits, and the public
+sector is where the permissive *core* comes from.** An engagement that needs to own its core should
+start from a government publication, not from the market leader.
+
+🔴 **What would refute it.** A major LMS or SIS of record relicensing permissively. 🟡 `610` found the
+Moodle *periphery* moving that way, which is weak evidence in the claim's favour, not against it.
+
+### 🔴 `T611-6` — a superseded compliance date is circulating, and it inverts the EMEA sales motion
+
+🔵 **Claim.** Secondary EMEA guidance still publishes *"high-risk education obligations from August
+2026."* 🔴 That date was superseded by Reg. (EU) 2026/1744: stand-alone Annex III moved to
+🟢 `2027-12-02`, embedded-in-product to 🟢 `2028-08-02`.
+
+🔵 **Why it is a trend and not a footnote.** 🔴 An engagement working from August 2026 sells **urgency
+that has passed**; one working from the real timetable sells a **~13-month build window** — while the
+emotion-recognition **prohibition** and the Art. 4 **literacy duty** are enforceable *today*. 🟢 The
+correct pitch is therefore "ban-compliance and literacy now, high-risk conformity by late 2027," and
+anyone pitching an August-2026 cliff is reading a stale guide.
+
+🔴 **What would refute it.** The Omnibus text not carrying those dates. 🔴 `598-G` prevents a primary
+read from this host; 🟡 two independent secondary channels agree, and `p610` confirmed `2027-12-02`
+from a second channel already.
+
+---
 
 ## 🆕 `p610` — `2026-11-02` — trends, each with the evidence that would refute it
 

@@ -1,0 +1,22 @@
+address	real_default_branch	grant_path	grant_bytes_raw	grant_title_line	grade	role_p611
+bcgov/SIMS	main	LICENSE	11358	Apache License Version 2.0	Apache-2.0	PROMOTED foundations (NA public sector)
+rosewang2008/tutor-copilot	main	LICENSE	11357	Apache License Version 2.0	Apache-2.0	PROMOTED agents (stale 2024-10-28)
+sid-thephysicskid/leap	main	LICENSE	11357	Apache License Version 2.0	Apache-2.0	PROMOTED agents
+Visual-Studio-Coder/Recap	master	LICENSE	11354	Apache License Version 2.0	Apache-2.0	PROMOTED agents
+QkeleQ10/Study-Tools	main	LICENSE	1072	MIT License	MIT	PROMOTED agents (EMEA/Netherlands)
+chrisreddington/flight-school	main	LICENSE	1068	MIT License	MIT	PROMOTED agents
+RozhakDev/EduPintarIPAS	main	LICENSE	1092	The MIT License (MIT)	MIT	PROMOTED agents (APAC/Indonesia)
+CodeBreez/collejo	master	LICENSE	1076	MIT License (c) 2016 Anuradha Jayathilaka	MIT	PROMOTED verticals; list said GPL-3.0; STALE 2019-07-16
+OpenEMIS/core	master	LICENSE	15518	GNU GENERAL PUBLIC LICENSE Version 2 June 1991	GPL-2.0	PROMOTED verticals LINK-ONLY; list said GPL-3.0
+thu-maic/OpenMAIC	main	LICENSE	1065	MIT License	MIT	ALREADY SHELVED - reconfirmed
+hkuds/DeepTutor	main	LICENSE	11408	Apache License Version 2.0	Apache-2.0	ALREADY SHELVED - reconfirmed
+nomadicjosh/eduTrac-SIS	master	LICENSE	35146	GNU GENERAL PUBLIC LICENSE Version 3	GPL-3.0	REFUSED copyleft; refutes search-summary MIT claim
+hrshadhin/osums	master	LICENSE	34520	GNU AFFERO GENERAL PUBLIC LICENSE Version 3	AGPL-3.0	REFUSED; list claimed MIT
+fabriciojunio/permaneia	produção	LICENSE	1084	MIT License	MIT	NOT PROMOTED 0 stars coursework; NON-ASCII default branch
+6t6t-cyberg/kifula	main	LICENSE	1068	MIT License	MIT	NOT PROMOTED 0 stars; AFRICA/Angola supply signal
+CarlosArmijos1/tutor-tecnico-agentes	main	LICENSE	1071	MIT License	MIT	NOT PROMOTED 0 stars coursework (LATAM)
+Belles-hub/UpLearn	main	LICENSE	1067	MIT License	MIT	NOT PROMOTED 0 stars coursework (LATAM)
+openai/totally-not-real-edu-repo-p611	UNREACHABLE	-	14	404 Not Found	FABRICATED-CONTROL	CONTROL ok (404 14 B)
+anthropics/fabricated-control-p611	UNREACHABLE	-	14	404 Not Found	FABRICATED-CONTROL	CONTROL ok (404 14 B)
+anthropics/not-real-p611-control	UNREACHABLE	-	14	404 Not Found	FABRICATED-CONTROL	CONTROL ok (404 14 B)
+parkerj/eduTrac	UNREACHABLE	-	0	ls-remote auth prompt	DEAD-OR-ABSENT	CONTROL ok (indistinguishable from fabricated)

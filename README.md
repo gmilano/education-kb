@@ -3,6 +3,126 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## Pass 611 — reads 2026-11-02, commit 2026-11-02 — **🔴 A CURATED LICENCE COLUMN IS NOT EVIDENCE, AND IT IS NOW MEASURED IN BOTH DIRECTIONS: ON THE SECTOR'S STANDARD HIGHER-ED INDEX — ALREADY ON THESE SHELVES — `1 of 5` PERMISSIVE CLAIMS SURVIVES A BYTE READ (`20 %`). ONE IS `AGPL-3.0` AT `84★`, THREE HAVE **NO GRANT PAYLOAD AT ALL**, AND A FOURTH ROW PUBLISHED AS `GPL-3.0` IS ACTUALLY **MIT**. 🟢 `9` ROWS PROMOTED (`6` AGENTS, `1` FOUNDATION, `2` VERTICALS), EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `4 of 4` FABRICATED CONTROLS AT `404 14 B`. 🟢 THE FIRST PERMISSIVE **PROVINCIAL** SYSTEM OF RECORD — A CANADIAN MINISTRY'S FINANCIAL-AID PLATFORM WITH A BUSINESS-RULES ENGINE, `Apache-2.0`. 🔴 `611-B`: THIS PASS'S CLASSIFIER MIS-GRADES **EVERY** `GPL-2.0` FILE AS `LGPL`, AND THE MECHANISM IS IN THE LICENCE TEXT. 🔴 `611-C`: A **NON-ASCII** DEFAULT BRANCH. 🟢 ALL FOUR REGIONAL LEGS PAID, TWO NEW JURISDICTIONS (VIETNAM, AUSTRALIA) AND LATAM QUANTIFIED AT `19`-COUNTRY SCALE. 🔴 THE GLOBAL LEGS RETURN THE **FORTY-FIRST** NIL — NOW WITH A DENOMINATOR ON BOTH AXES. NINE REGISTERED (`611-A`…`611-I`).**
+
+🔴 **The pass's load-bearing result is about the sector's information layer, not about a repository.**
+`ishandutta2007/awesome-higher-education-crm` has sat on this base's trending shelves for many passes
+as the standard higher-education platform index. 🔴 Its licence column had never been checked. Censused
+row by row against grant bytes at the real default branch:
+
+| the index's `20` address-bearing rows | rows | share |
+| --- | --: | --: |
+| 🟢 claim reproduces on the grant bytes | 🟢 `10` | `50.0 %` |
+| 🔴 claim **contradicted** by the bytes | 🔴 `4` | `20.0 %` |
+| 🟡 claim **unverifiable** — no grant payload at any ladder rung | 🟡 `5` | `25.0 %` |
+| 🟡 non-OSI and correctly labelled (`Elastic-2.0`) | 🟡 `1` | `5.0 %` |
+
+🔴 **And the subset that decides whether anything can be built is `1 of 5`.** Of the five rows claiming
+`MIT` or `Apache-2.0`, only `jungang/alumnet` survives: `hrshadhin/osums` (`84★`) is **`AGPL-3.0`**
+(`34,520 B`), and `kunaltyagi9/University-Management-System`,
+`cris-ronaldo7/Alumni-Management-System` and `tripathi-khushi/Alumni-Network` have **no `LICENSE` file
+at any rung of the ladder**. 🟢 The error is not one-directional, which is why the rule is *"read the
+payload"* and not *"distrust permissive claims"*: `CodeBreez/collejo` is published as `GPL-3.0` and is
+**`MIT`** on bytes — a platform this base would have refused on the index's word.
+Instrument `ingest/p611-grant-gate.sh`; evidence `evidence/curated-licence-census.2026-11-02-p611.tsv`.
+🔵 **`611-A` is the layer above `610-A`**: that pass found a *fork* whose grant was less permissive than
+the `MIT` it named; this is a third-party *index* asserting a grant the repository never made.
+
+🟢 **`9` rows promoted, grants byte-read `2026-11-02` at the real default branch.** `6` agents
+(`sid-thephysicskid/leap` Apache-2.0, LangGraph educational animation; `Visual-Studio-Coder/Recap`
+Apache-2.0 at branch `master`; `rosewang2008/tutor-copilot` Apache-2.0 — 🟡 shelved explicitly as a
+**pedagogical reference**, since its README calls itself *"demo code for the tutorial"*;
+`QkeleQ10/Study-Tools` 🟢 **EMEA**/Netherlands, MIT, augments the Dutch `Magister` SIS;
+`chrisreddington/flight-school` MIT; `RozhakDev/EduPintarIPAS` 🟢 **APAC**/Indonesia, MIT, Bahasa
+primary-science tutor). `1` foundation (`bcgov/SIMS`). `2` verticals (`CodeBreez/collejo` MIT with its
+`2019` push date stated; `OpenEMIS/core` with its version corrected to `GPL-2.0`).
+
+🟢 **`611-D` — the first permissive *provincial* system of record, and it is the pass's most
+transferable asset.** [`bcgov/SIMS`](https://github.com/bcgov/SIMS), **`Apache-2.0`** `11,358 B` at
+`main`, Government of British Columbia, `29★`, pushed `2026-10-31`, lifecycle *Maturing*: it replaces
+the province's student financial-aid systems and ships 🟢 **a business-rules engine built expressly so
+policy change is not a rewrite.** 🔵 That is precisely what `4` US states legislated this year, so a
+Canadian ministry has published the architecture a US district consortium needs — wired up as
+`P611-2`. 🟡 Stated limit: the rule *content* is BC policy; the architecture transfers, the policy does
+not. 🔵 And at `29★` it restates `601`: in education, star rank is an **anti**-signal for commercial
+usability — what is scarce is a permissively-licensed system of record with a policy engine.
+
+🔴 **`611-B` — this pass's own licence classifier is wrong on an entire licence family, and the
+mechanism is inside the licence text.** It graded `OpenEMIS/core` as `LGPL-2.1`; it is **`GPL-2.0`**.
+🔴 The classifier tested `GNU LESSER GENERAL PUBLIC` before the plain-GPL test over a `4,000`-character
+window, and **the `GPL-2.0` text itself names the Lesser GPL at line `18`** — so the ordering
+mis-grades *every* `GPL-2.0` payload. 🟢 Closed with a convention: grade on the **title line**, first
+three non-blank lines, never a window substring. 🔴 `611-I` is a second defect in the same pass — the
+upstream-detection step was wrong twice (URL-only, so it never fired on `610-A`'s bare slug; then bare
+slugs at `1 of 4` precision) before a provenance-anchored form measured `1 of 1` true positives and
+`0 of 6` false positives. 🔵 `605-D`, `606-B`, `609-M`, three in `p610`, two here — **the instrument,
+not the corpus.**
+
+🔴 **`611-C` — a default branch this base's ladder had never seen: non-ASCII.** Branch resolution over
+`33` addresses: 🔴 `5` (`15.2 %`) are neither `main` nor `master` — `19.0`, `mobile`, `v31.0.00`,
+`develop`, and 🔴 **`produção`** (`fabriciojunio/permaneia`). 🟢 It resolves through
+`ls-remote --symref`, so the grant was read — 🔴 but a hard-coded `main`/`master` reader, or one that
+ASCII-sanitises branch names, publishes that repository as **ungranted**.
+
+🔴 **The forty-first global nil, and for the first time with a denominator on both axes.** `976`
+distinct addresses over `19` axes: 🟢 `894` (`91.6 %`) **new** to this `3,758`-address base, 🟡 `196`
+new-and-permissive, 🔴 **`46` (`4.7 %`)** new-permissive-and-`≥ 10★`, and 🔴 **`14 of 19` axes yield
+zero**. 🟢 So the channel is **diluted, not dry** — which reconciles `p600`'s `80.3 %` novelty against
+`p599`'s `0 %` in a single table: novelty and value are independent axes, and the modal new address is
+`0★` single-author coursework. 🟢 The one axis shape that generalises is `p600`'s restated for
+language: **a local-language axis phrased as a school subject** (`pendidikan AI indonesia`).
+
+🟢 **All four regional legs paid, and three returned instruments new to this base.** **North America**
+at sub-national resolution — `4` states now require districts to *adopt* an AI policy (Maryland
+`SB 720`, Idaho, Oklahoma, Virginia), NY `A 9190` would bar classroom AI below 9th grade, CA `AB 1159`
+would bar student data for model training, the federal **K-12 AI Literacy and Readiness Act of 2026**
+advanced out of committee, and DC's `2026-27` policy 🔴 **bars AI from grading and from discipline**.
+**EMEA** — Reg. (EU) 2026/1744 published OJ `2026-07-24`, applying since `2026-07-27`, with high-risk
+stand-alone at `2027-12-02` and 🆕 embedded-in-product at `2028-08-02`; 🔴 **the "August 2026" date
+still circulating in secondary guidance is superseded**, which inverts the sales motion (`T611-6`);
+plus Dubai's KHDA guidance to private schools. 🆕 **APAC** — **Vietnam `33/2026/QD-TTg`** names
+education as `1` of `6` high-risk sectors including **automated assessment**, and **Australia's TEQSA**
+requires *every* HE provider to file a generative-AI risk action plan. 🟢 **LATAM**, the biggest intel
+gain of the pass, moves from anecdote to a `19`-country denominator: UNESCO IESALC finds 🟢 `87 %` of
+~`200` HEIs using AI against 🔴 `26 %` with a strategy, 🔴 `< 10 %` with guidelines *and* capacity,
+🔴 `55 %` with **no AI budget** and public universities at 🔴 **`4 %`**; Universidad de los Andes counts
+🟢 `716` regulatory instruments across `23` countries, `> 80 %` since 2023; Ceibal `75 %` of Uruguayan
+public-school teachers; Cetic.br `53 %` of Brazilian administrators using AI against `22 %` with
+guidelines. 🔵 **So the sellable unit is governance, not capability** (`T611-4`, `P611-3`) — and the
+deficit is global, with LATAM merely the best-measured instance.
+
+🔴 **Africa is a third consecutive policy nil, written down rather than left as silence — and it
+produced its first ever supply signal.** `6t6t-cyberg/kifula`, `MIT`, Angolan Portuguese-language
+academic authoring, 🔴 `0★` and **not promoted**. 🔵 Found by the Lusophone axis that pays in Brazil,
+which is the prescription: run Lusophone and Francophone *national* legs instead of an "Africa" region
+leg (`611-F`).
+
+🔴 **LATAM's repository-level supply nil, measured.** The four Iberian-language axes returned `95`
+addresses new to this base and 🔴 **`0` shippable-shaped**. 🟡 Three `0★` finds are the right *shape*
+and are named on `agents/trending.md` for a later pass, explicitly **not** as components.
+
+🟢 **`611-G` — a channel recorded as blocked for many passes is really session scope, and the
+substitute works.** `api.github.com/repos/{owner}/{repo}` returns `403` whose body says *"GitHub access
+to this repository is not enabled for this session."* 🟢 `search/repositories?q=repo:{owner}/{name}`
+returns `200` with stars, forks, size and push date for an unattached repository, and supplied every
+such figure this pass. 🔴 Licences still came from grant bytes, never from the API field.
+
+🟡 **`611-J` — and `605-E` needs restating a third time, as a probe rather than a state.** `p610`
+recorded that this repository's committed instruments **run**; 🔴 this session they are **denied** as
+repository code, `make` included. 🟢 The form that runs is an inline heredoc authored in the pass.
+🔵 **Committed-code execution is a per-session permission: a pass must probe it, not inherit either
+claim.** 🟢 Consequence: `ingest/p611-grant-gate.sh` ships *with* its verbatim transcript in
+`compose/patterns.md`, so the next pass holds the result even if it cannot run the file.
+
+🔴 **`598-G` — eleventh pass open, operator request.** Every non-GitHub host returns `000` with a `000`
+control, so every market **size** figure here stays snippet-grade and the firms disagree `> 3×` on the
+current-year number — a definitional disagreement, not a forecasting one.
+
+🟡 **Index note, carried for a third pass:** this file still has **no `Pass 608` entry**. `p608` wrote
+to the shelves and not to the index, and reconstructing its entry from those sections is work `p611`
+also did not do. Named, not silently skipped.
+
+---
 
 ## Pass 610 — reads 2026-11-02, commit 2026-11-02 — **🟢 `609-A-open` IS CLOSED WITH A DENOMINATOR AND THE ANSWER IS **NO**: A SUBSTRING CENSUS DOES NOT DISTINGUISH A SHELVED ROW FROM A PUBLISHED REFUSAL — `188 of 719` SELL-SHELF ADDRESSES (`26.1 %`) ARE MENTIONED AND NEVER SHELVED. 🔴 BUT THE CAUSE `609-A` NAMED IS `35 of 188`; THE DOMINANT CAUSE IS THIS BASE'S OWN PROSE (`80`) AND MEASUREMENT TABLES (`73`). 🔴 AND THE BACKLOG IS NOT `50`: `2,310` ADDRESSES WERE PUBLISHED AS ROWS ON THE **TRENDING** SHELVES AND ARE ON NO SELL SHELF, `848` EDUCATION-SHAPED. 🟢 `20` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `8 of 8` FABRICATED CONTROLS AT `401`/`404 14 B`. 🔴 `610-A`: A PAID-COMMERCIAL GRANT ON A FORK OF AN MIT PROJECT, NAMING `MIT` FOUR TIMES. 🔴 THREE INSTRUMENT DEFECTS, ALL SELF-CAUGHT. 🔴 THE GLOBAL LEGS RETURN THE **FORTIETH** NIL. TWELVE REGISTERED (`610-A`…`610-L`).**
 

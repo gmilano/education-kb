@@ -3,6 +3,58 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE FIRST PERMISSIVE **PROVINCIAL** SYSTEM OF RECORD ON THESE SHELVES: A CANADIAN MINISTRY'S STUDENT-FINANCIAL-AID PLATFORM, `Apache-2.0`, BUSINESS-RULES ENGINE INCLUDED, PUSHED `2026-10-31`. 🔴 AND THE DISCOVERY CHANNEL IS MEASURED RATHER THAN DECLARED: `976` ADDRESSES ACROSS `19` AXES, `91.6 %` NEW TO THIS BASE AND ONLY `4.7 %` SHIPPABLE-SHAPED — `14 of 19` AXES YIELD **ZERO**.**
+
+### 🟢 `611-D` — `bcgov/SIMS`: the public-sector tier gains a permissive system of record
+
+🔵 `p448` recorded that *"the NA research unit is the **state**"* and returned this base's first
+permissively-licensed system of record. 🟢 This pass returns the **provincial** instance of that same
+shape, and it is larger and live:
+
+| axis | reading, byte-read `2026-11-02` |
+| --- | --- |
+| address | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) |
+| grant | 🟢 **`Apache-2.0`**, `11,358 B`, `LICENSE` at `main` |
+| owner | 🟢 **Government of British Columbia** (`bcgov`) — a ministry, not a vendor |
+| what it is | Student Information Management System: 🟢 **replaces the province's student financial-aid systems** for student, institution and ministry users |
+| 🟢 why it matters beyond a loan portal | it ships a **business rules engine** *"that can accommodate regular changes in alignment with policy"* |
+| state | `29★`, `15` forks, `53.7 MB`, pushed 🟢 `2026-10-31`, lifecycle badge **Maturing** |
+
+🔵 **Why a `29★` row outranks most four-figure ones here.** The scarce artefact in education is not a
+tutor — it is a **permissively-licensed system of record with a policy engine**, owned by a government
+that publishes it. 🟢 Star count measures developer attention; this measures *procurement precedent*.
+🔵 And `601` already established that in this sector star rank is an **anti**-signal for commercial
+usability.
+
+🟡 **Stated limit:** it implements **British Columbia** financial-aid policy. The reusable assets are
+the rules-engine architecture, the three-party (student / institution / ministry) domain model and the
+Apache-2.0 grant — not the policy content.
+
+### 🔴 `611-E` — the discovery channel, measured: high novelty and low yield are the same number
+
+🔵 The run prompt mandates four global legs. They were run, plus `15` further axes.
+Evidence: `evidence/discovery-novelty.2026-11-02-p611.tsv`.
+
+| | `p611` |
+| --- | --: |
+| distinct axes queried | `19` |
+| distinct addresses returned | `976` |
+| 🟢 **new** to this `3,758`-address base | 🟢 `894` (**`91.6 %`**) |
+| 🟡 new **and** permissive | 🟡 `196` (`20.1 %`) |
+| 🔴 new, permissive **and** `≥ 10★` | 🔴 **`46` (`4.7 %`)** |
+| 🔴 axes yielding **zero** shippable-shaped rows | 🔴 **`14 of 19`** |
+
+🔴 **So the forty-first global nil is not a dry channel — it is a channel that returns `91.6 %` novelty
+with almost none of it usable.** 🟢 This sharpens `601`'s reconciliation of `p600`'s `80.3 %` against
+`p599`'s `0 %`: novelty and value are **independent axes**, and this pass separates them in one table.
+🔵 What `91.6 %` actually measures on a generic axis is the **long tail of coursework** — the modal new
+address is a one-student CRUD project at `0★`.
+
+🟢 **The five axes that did pay** were `topic:education topic:ai` (`25`), `student information system`
+(`15`), `rubric grading agent` (`3`), `edutrac` (`2`) and `pendidikan AI indonesia` (`1`) — 🔵 and the
+last one is the pattern `p600` named: **a local-language axis phrased as a school subject.**
+
+---
 
 ## 🆕 `p610` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `5` FOUNDATION ROWS AND A `5`-ROW **LMS-CONNECTOR** TIER, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH. 🟢 THE QTI TIER NOW HAS AN **AUTHORING** END — BSD-3-CLAUSE — SO `p607`'s ENGINE IS REACHABLE FROM MARKDOWN. 🔴 `610-E`: THIS PASS'S OWN GRANT LADDER OMITTED `COPYING.txt` AND GRADED THE **OFFICIAL MOODLE MOBILE APP** UNGRANTED — A RUNG THIS BASE REGISTERED AT `~p460`. 🟢 `4` OF THE CONNECTOR ROWS CLOSE DEBT `609-C` ENUMERATED BY NAME.**
 

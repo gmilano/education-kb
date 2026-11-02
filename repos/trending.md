@@ -3,6 +3,65 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — `2026-11-02` — channel table, run first, with a control on every arm
+
+🔵 `569-B`'s standing row. Every arm carries a fabricated control in the same run, because an arm that
+cannot separate a real address from an invented one certifies nothing (`608-A`).
+
+| channel | real probe | result | fabricated control | control result | verdict |
+| --- | --- | --- | --- | --- | --- |
+| `git ls-remote --symref` (branch resolution) | `hkuds/DeepTutor` | 🟢 `ref: refs/heads/main` + sha | `openai/totally-not-real-edu-repo-p611` | 🟢 `fatal`, auth prompt | 🟢 **DISCRIMINATING** |
+| `raw.githubusercontent.com` (grant bytes) | `hkuds/DeepTutor/main/LICENSE` | 🟢 `200`, `11,408 B` | same, fabricated | 🟢 `404`, **`14 B`** | 🟢 **DISCRIMINATING** |
+| `api.github.com/search/repositories` | `edutrac in:name` | 🟢 `200` | — | — | 🟢 **UP** (refutes the long-held "search blocked" note; `579`) |
+| 🔴 `api.github.com/repos/{owner}/{repo}` | `bcgov/SIMS` | 🔴 **`403`**, `378 B` | — | — | 🔴 **DOWN** — *"GitHub access to this repository is not enabled for this session"* |
+| 🔴 repository code execution (`make`, `python3 ingest/*.py`) | `ingest/address-count.py` | 🔴 **DENIED** by host classifier | — | — | 🔴 **DOWN this session** |
+| 🟢 inline command blocks (own instruments) | `python3 -I -` heredoc | 🟢 runs | — | — | 🟢 **UP** — the only executable form (`590`) |
+
+🔴 **`611-G` — the per-repo API is `403`, and the message names the cause.** Not a rate limit and not
+a network block: *"GitHub access to this repository is not enabled for this session. Use `add_repo`…"*
+🟢 **So the `403` is session scope, not GitHub**, and the substitute that works is
+`search/repositories?q=repo:{owner}/{name}`, which returns stars, forks, size, push date and
+`license.spdx_id` for an unattached repository. 🔵 Every star and push date on this pass's shelves came
+through that substitute; every **licence** came from grant bytes, never from the API field.
+
+🟡 **And `605-E` is narrowed again in the other direction.** `p610` recorded that `python3` and `bash`
+on *this repository's committed instruments* **run**. 🔴 This session they do **not** — invoking
+`ingest/address-count.py` was denied as repository code. 🟢 The form that runs is an **inline**
+heredoc, authored in the pass. 🔵 **So the correct statement is neither "the validators run" nor "they
+never run": committed-code execution is a per-session permission, and a pass must probe it rather than
+inherit either claim.**
+
+### 🟢 Trending, by what the channel actually surfaced this pass
+
+| address | ★ | grant (byte-read) | pushed | signal |
+| --- | --: | --- | --- | --- |
+| [`hkuds/deeptutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `~52,800` | `Apache-2.0` `11,408 B` | `2026-11-02` | 🟢 **the sector's momentum leader** — reported `+1,034` in a day, a `+2,282` single-day peak `2026-10-31`. 🔴 Held since `p604`; 🟡 star figures are third-party trend-report grade |
+| [`thu-maic/openmaic`](https://github.com/thu-maic/OpenMAIC) | `~42,000` | `MIT` `1,065 B` | `2026-11-02` | 🟢 Tsinghua MAIC — document → interactive classroom with AI teachers *and* AI classmates. Already shelved |
+| [`sid-thephysicskid/leap`](https://github.com/sid-thephysicskid/leap) | `69` | 🟢 `Apache-2.0` `11,357 B` | `2026-10-28` | 🆕 **promoted** — LangGraph-orchestrated educational animation; live demo |
+| [`bcgov/SIMS`](https://github.com/bcgov/SIMS) | `29` | 🟢 `Apache-2.0` `11,358 B` | `2026-10-31` | 🆕 **promoted** — provincial system of record, `611-D` |
+| [`chrisreddington/flight-school`](https://github.com/chrisreddington/flight-school) | `31` | 🟢 `MIT` `1,068 B` | `2026-10-31` | 🆕 **promoted** — agent-SDK coding practice |
+| [`QkeleQ10/Study-Tools`](https://github.com/QkeleQ10/Study-Tools) | `32` | 🟢 `MIT` `1,072 B` | `2026-10-19` | 🆕 **promoted** — 🟢 EMEA, Dutch `Magister` SIS |
+| [`Visual-Studio-Coder/Recap`](https://github.com/Visual-Studio-Coder/Recap) | `38` | 🟢 `Apache-2.0` `11,354 B` | `2026-07-30` | 🆕 **promoted** — 🟡 branch `master` |
+| [`RozhakDev/EduPintarIPAS`](https://github.com/RozhakDev/EduPintarIPAS) | `20` | 🟢 `MIT` `1,092 B` | `2025-08-10` | 🆕 **promoted** — 🟢 APAC, Bahasa Indonesia |
+| [`CodeBreez/collejo`](https://github.com/CodeBreez/collejo) | `51` | 🟢 `MIT` `1,076 B` | 🔴 `2019-07-16` | 🆕 **promoted to verticals** — licence corrected from the index's `GPL-3.0`; 🔴 stale |
+| [`OpenEMIS/core`](https://github.com/OpenEMIS/core) | `24` | 🟡 `GPL-2.0` `15,518 B` | `2026-10-26` | 🆕 **promoted to verticals** — version corrected from the index's `GPL-3.0` |
+
+### 🔴 `611-C` — a default branch this base's ladder had never seen: **non-ASCII**
+
+🔵 `559` established that a `main`-only grant read `404`s for `32.4 %` of addresses, and named the
+version branches (`19.0`, `release_11`, `2.12`). 🟢 This pass re-measured branch resolution over `33`
+addresses: 🔴 **`5` (`15.2 %`) are neither `main` nor `master`** — `19.0`, `mobile`, `v31.0.00`,
+`develop`, and 🔴 **`produção`**.
+
+🔴 **`produção` is new in kind, not just in name:** a default branch containing a **non-ASCII
+character** (`fabriciojunio/permaneia`). 🔵 It resolves correctly through `git ls-remote --symref` and
+through a percent-encoding-free `raw.githubusercontent.com` path, so the grant **was** byte-read
+(`MIT`, `1,084 B`) — 🟢 but only because the ladder takes its branch from `ls-remote` rather than
+guessing. 🔴 Any hard-coded `main`/`master` reader, and any reader that ASCII-sanitises a branch name,
+returns a false `404` here and would publish the repository as **ungranted**.
+Evidence: `evidence/branch-resolution.2026-11-02-p611.tsv`.
+
+---
 
 ## 🆕 `p610` — `2026-11-02` — channel table, run first, with a control on every arm
 

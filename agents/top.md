@@ -3,6 +3,84 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE LOAD-BEARING RESULT IS THAT A CURATED LICENCE COLUMN IS NOT EVIDENCE, IN BOTH DIRECTIONS, AND IT IS NOW MEASURED: ON THE HIGHER-ED PLATFORM LIST THIS BASE ALREADY CARRIED, **`1 of 5` PERMISSIVE CLAIMS SURVIVES A BYTE READ** (`20 %`) — ONE IS `AGPL-3.0` AT `84★`, THREE HAVE **NO GRANT PAYLOAD AT ALL** — WHILE A FOURTH ROW PUBLISHED AS `GPL-3.0` IS ACTUALLY **MIT**. 🟢 `6` AGENT ROWS PROMOTED, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `4 of 4` FABRICATED CONTROLS AT `404 14 B`. 🟢 TWO OF THE SIX ARE REGION-PLACED (`EMEA`/NETHERLANDS, `APAC`/INDONESIA). 🔴 `611-B`: THIS PASS'S OWN LICENCE CLASSIFIER MIS-GRADES **EVERY** `GPL-2.0` FILE AS `LGPL` — SELF-CAUGHT, WITH THE MECHANISM. 🔴 THE GLOBAL LEGS RETURN THE **FORTY-FIRST** NIL, NOW WITH A DENOMINATOR: `976` ADDRESSES, `91.6 %` NEW, `4.7 %` SHIPPABLE-SHAPED. SIX REGISTERED (`611-A`…`611-F`).**
+
+### 🔴 `611-A` — read this first: the curated licence column, measured against the bytes
+
+🔵 `ishandutta2007/awesome-higher-education-crm` has sat on this base's **trending** shelves for many
+passes as the sector's standard higher-education platform list. 🔴 Its licence column had never been
+validated here. It is now, row by row, every grant byte-read `2026-11-02` at the **real** default
+branch. Instrument and evidence: `evidence/curated-licence-census.2026-11-02-p611.tsv`.
+
+| the list's `20` address-bearing rows, by verdict | rows | share |
+| --- | --: | --: |
+| 🟢 claim **reproduces** on the grant bytes | 🟢 `10` | `50.0 %` |
+| 🔴 claim **contradicted** by the grant bytes | 🔴 `4` | `20.0 %` |
+| 🟡 claim **unverifiable** — no grant payload at any ladder rung | 🟡 `5` | `25.0 %` |
+| 🟡 non-OSI and correctly labelled (`Elastic-2.0`) | 🟡 `1` | `5.0 %` |
+
+🔴 **And the subset that decides whether Globant can build is far worse than the headline.** Of the
+`5` rows claiming a **permissive** grant, exactly **`1`** survives:
+
+| address | list claims | grant bytes say | |
+| --- | --- | --- | --- |
+| [`jungang/alumnet`](https://github.com/jungang/alumnet) | `MIT` | 🟢 **`MIT`** `1,055 B` | 🟢 confirmed |
+| [`hrshadhin/osums`](https://github.com/hrshadhin/osums) `84★` | `MIT` | 🔴 **`AGPL-3.0`** `34,520 B` | 🔴 **network-copyleft, sold as MIT** |
+| [`kunaltyagi9/University-Management-System`](https://github.com/kunaltyagi9/University-Management-System) | `Apache-2.0` | 🔴 **no grant payload** | 🔴 ungranted |
+| [`cris-ronaldo7/Alumni-Management-System`](https://github.com/cris-ronaldo7/Alumni-Management-System) | `MIT` | 🔴 **no grant payload** | 🔴 ungranted |
+| [`tripathi-khushi/Alumni-Network`](https://github.com/tripathi-khushi/Alumni-Network) | `MIT` | 🔴 **no grant payload** | 🔴 ungranted |
+
+🔵 **`611-A` stated generally, and it is the inverse of `610-A`.** `610-A` found a *fork* whose own
+grant was less permissive than the `MIT` it named. This is the same failure one layer up: 🔴 **a
+third-party index asserts a licence the repository never granted**, and the index is what an
+engagement reads first. 🟢 **Rule: a licence column in an index is a search hint, not a grant. Read the
+payload at the real default branch before a row reaches a client.**
+
+🟢 **The error runs both ways, which is why the rule is "read it," not "distrust permissive claims."**
+[`CodeBreez/collejo`](https://github.com/CodeBreez/collejo) is published by the list as `GPL-3.0` and
+its `LICENSE` is **`MIT`**, `1,076 B`, byte-read at `master` — a Laravel school-and-university
+management platform this base would have refused on the index's word. It is promoted to
+`verticals/solutions.md` this pass, 🔴 with its `2019-07-16` push date stated, because the licence is
+the find and the maintenance is not.
+
+### 🟢 `6` new agent rows — grants byte-read `2026-11-02` at the real default branch
+
+| agent | ★ | grant (byte-read) | branch | pushed | region | what it is |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`sid-thephysicskid/leap`](https://github.com/sid-thephysicskid/leap) | `69` | 🟢 `Apache-2.0` `11,357 B` | `main` | `2026-10-28` | Global | Generates **educational animations** from a prompt — the explainer-video tier this base had no permissive row for |
+| [`Visual-Studio-Coder/Recap`](https://github.com/Visual-Studio-Coder/Recap) | `38` | 🟢 `Apache-2.0` `11,354 B` | 🟡 `master` | `2026-07-30` | Global | Student-side **quiz generation** from arbitrary content, iOS + Android |
+| [`rosewang2008/tutor-copilot`](https://github.com/rosewang2008/tutor-copilot) | `35` | 🟢 `Apache-2.0` `11,357 B` | `main` | 🔴 `2024-10-28` | North America | **Tutor CoPilot** (Stanford; Wang et al., `arXiv:2410.03017`) — human-in-the-loop real-time tutoring guidance. 🔴 **Its README says "demo code for the tutorial": a paper, a Colab and a walkthrough, not a deployable service.** Shelved as the **pedagogical reference** for the human-in-the-loop pattern, and 🔴 two years stale |
+| [`QkeleQ10/Study-Tools`](https://github.com/QkeleQ10/Study-Tools) | `32` | 🟢 `MIT` `1,072 B` | `main` | `2026-10-19` | 🟢 EMEA | Augments **Magister**, the Dutch school SIS — a live permissive integration against a *national* system of record |
+| [`chrisreddington/flight-school`](https://github.com/chrisreddington/flight-school) | `31` | 🟢 `MIT` `1,068 B` | `main` | `2026-10-31` | Global | Personalised coding practice with real-time evaluation, built on an agent SDK |
+| [`RozhakDev/EduPintarIPAS`](https://github.com/RozhakDev/EduPintarIPAS) | `20` | 🟢 `MIT` `1,092 B` | `main` | `2025-08-10` | 🟢 APAC | Indonesian-language **primary-school science tutor** (grade-6 IPAS) — Bahasa Indonesia curriculum content |
+
+🟢 **Controls.** `openai/totally-not-real-edu-repo-p611`, `anthropics/fabricated-control-p611`,
+`anthropics/not-real-p611-control` and `parkerj/eduTrac` are all **unreachable**, at `404 14 B` on the
+raw channel — `4 of 4`. An arm that cannot separate a real address from an invented one certifies
+nothing (`608-A`).
+
+### 🔴 `611-B` — this pass's own classifier mis-grades every `GPL-2.0` file, and the mechanism is in the licence text
+
+🔴 This pass graded [`OpenEMIS/core`](https://github.com/OpenEMIS/core) — the UNESCO-endorsed EMIS —
+as **`LGPL-2.1`**. It is **`GPL-2.0`**: *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"*,
+`15,518 B`, `master`.
+
+🔵 **Mechanism, reproducible.** The classifier tested the substring `GNU LESSER GENERAL PUBLIC` before
+the plain-GPL test, over a `4,000`-character window. 🔴 **The `GPL-2.0` text itself names the Lesser
+GPL — at line `18`:** *"the GNU Lesser General Public License instead.) You can apply it to…"* So the
+ordering mis-grades **every** `GPL-2.0` payload, not one specimen.
+
+🟢 **Fix, and it is a convention not a patch:** grade on the **title line** — the first three non-blank
+lines — never on a window substring. Re-graded that way, all four of the contradictions above hold and
+only `OpenEMIS/core` moved. 🔵 `572` found the copyleft grader wrong on `6 of 8` GPL rows; `610-E`
+omitted a ladder rung; this is the same family again — **the instrument, not the corpus.**
+
+🟡 **Byte-count convention, stated because two of this pass's tables differ by one byte.** The census
+column is `curl --write-out '%{size_download}'` (**raw**); the re-grade column is a shell string length
+(**raw − trailing newline**). `559-A`/`560-A` settled this base on **raw**; the census column is the
+one to cite.
+
+---
 
 ## 🆕 `p610` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `609-A-open` IS ANSWERED WITH A DENOMINATOR AND THE ANSWER IS NO: A SUBSTRING CENSUS DOES **NOT** DISTINGUISH A SHELVED ROW FROM A PUBLISHED REFUSAL — `188 of 719` SELL-SHELF ADDRESSES (`26.1 %`) ARE MENTIONED AND NEVER SHELVED. 🔴 BUT THE REFUSAL HYPOTHESIS `609-A` NAMED IS **`35 of 188`**; THE DOMINANT CAUSE IS THIS BASE'S OWN PROSE AND MEASUREMENT TABLES. 🔴 AND THE BACKLOG IS NOT `50`: `2,310` ADDRESSES WERE PUBLISHED AS ROWS ON THE **TRENDING** SHELVES AND ARE ON NO SELL SHELF, `848` OF THEM EDUCATION-SHAPED. 🟢 `8` AGENT ROWS PROMOTED, `6` OF THEM CLOSING DEBT `609-C` ENUMERATED BY NAME. 🔴 `610-A`: A RELICENSED FORK WHOSE OWN GRANT IS **PAID-COMMERCIAL** AND WHICH NAMES `MIT` FOUR TIMES. 🔴 THE GLOBAL LEGS RETURN THE **FORTIETH** NIL, `19 of 19` TOKENS ADJUDICATED. ELEVEN REGISTERED (`610-A`…`610-L`).**
 

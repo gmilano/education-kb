@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — reads `2026-11-02`, commit `2026-11-02` — **🟢 TWO PLATFORM ROWS WHOSE LICENCES THIS BASE WOULD HAVE GOT WRONG IF IT HAD TRUSTED THE SECTOR'S STANDARD INDEX: A SCHOOL/UNIVERSITY PLATFORM PUBLISHED AS `GPL-3.0` IS **`MIT`**, AND THE UNESCO-ENDORSED NATIONAL EMIS PUBLISHED AS `GPL-3.0` IS **`GPL-2.0`**. 🔴 BOTH CORRECTED FROM GRANT BYTES AT THE REAL DEFAULT BRANCH.**
+
+### 🟢 `collejo` — a permissive school-and-university platform, mislabelled copyleft
+
+| axis | reading, byte-read `2026-11-02` |
+| --- | --- |
+| address | [`CodeBreez/collejo`](https://github.com/CodeBreez/collejo) |
+| 🔴 what the sector index publishes | 🔴 `GPL-3.0` |
+| 🟢 what the grant bytes say | 🟢 **`MIT`**, `1,076 B`, `LICENSE` at `master`, *"Copyright (c) 2016 Anuradha Jayathilaka"* |
+| what it is | Laravel school & university management: student grades, class management, attendance logs, role permissions |
+| state | `51★`, `30` forks, 🔴 **pushed `2019-07-16`** |
+| 🔴 stack age | 🔴 `Laravel 5.6` (2018); the README's build badges point at `astroanu/collejo-workbench` branch `L55` |
+
+🔵 **How to use this row, stated honestly.** 🔴 It is **not** a build recommendation — a seven-year-old
+Laravel 5.6 tree is a migration project, not a foundation. 🟢 It is on this shelf for two reasons that
+survive the staleness: the **`MIT` grant is real**, so its data model and permission scheme can be
+lifted without a copyleft obligation; and it is 🟢 **the counter-example that makes `611-A`'s rule
+symmetric** — an index's licence column errs toward copyleft as well as away from it.
+
+### 🟢 `OpenEMIS Core` — the national EMIS tier, with its grant version corrected
+
+| axis | reading, byte-read `2026-11-02` |
+| --- | --- |
+| address | [`OpenEMIS/core`](https://github.com/OpenEMIS/core) |
+| 🔴 what the sector index publishes | 🔴 `GPL-3.0` |
+| 🟢 what the grant bytes say | 🟢 **`GPL-2.0`** — *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"*, `15,518 B`, `master` |
+| what it is | Education Management Information System for 🟢 **national, district and school-level** data — schools, students, staff |
+| backing | UNESCO-endorsed; *"widely used in many countries"*; vendor-hosted or self-hosted |
+| state | `24★`, `18` forks, `288 MB`, pushed 🟢 `2026-10-26` |
+
+🔵 **Why the version matters commercially, not pedantically.** `GPL-2.0` and `GPL-3.0` differ on
+patent grant and on anti-tivoisation, and 🔴 `GPL-2.0` has **no explicit patent licence** — which is
+exactly the clause a ministry's counsel asks about when a vendor builds on top. 🟢 The engagement shape
+is unchanged (`LINK-ONLY`, client-hosted, AI layer in a separate process communicating over the API),
+but the **advice** changes, and a row carrying the wrong version gives the wrong advice.
+
+🟡 **And this is the row `611-B` nearly broke.** This pass's own classifier graded it `LGPL-2.1`,
+because the `GPL-2.0` text names the Lesser GPL at line `18`. 🟢 Caught on a title-line re-grade before
+it shipped; the mechanism is written up on `agents/top.md`.
+
+### 🔵 The platform tier's licence reality, after this pass
+
+🔵 Restating what these two rows change, because the tier's shape is what an engagement plans against:
+
+| tier | grant family | engagement shape |
+| --- | --- | --- |
+| 🔴 national EMIS of record (`OpenEMIS/core`) | `GPL-2.0` | `LINK-ONLY` — client-hosted, AI in a separate process over the API |
+| 🔴 education ERP (`openeducat_erp`, `odoo`) | `LGPL-3.0` | `LINK-ONLY` — confirmed `p557`; 🟡 default branch `19.0`, **not** `main` |
+| 🔴 LMS of record (`moodle/moodle`) | `GPL-3.0` | `LINK-ONLY`; 🟢 mobile + deployment layers permissive since `p610` |
+| 🟢 provincial financial-aid system of record (`bcgov/SIMS`) | 🟢 **`Apache-2.0`** | 🟢 **fork-and-extend** — this pass, `repos/foundations.md` |
+| 🟢 school/university management (`collejo`) | 🟢 **`MIT`** | 🟢 fork-and-extend, 🔴 but stale since `2019` |
+
+🔴 **The standing conclusion is unchanged and now better evidenced: every education platform of record
+is copyleft, and the permissive rows are the periphery and the public sector** — never the core LMS.
+
+---
 
 ## 🆕 `p610` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE MOODLE TIER FINALLY HAS ITS **MOBILE** AND **DEPLOYMENT** LAYERS, BOTH PERMISSIVE, WHILE THE CORE STAYS `GPL-3.0`. 🔴 AND THE OFFICIAL MOBILE CLIENT WAS NEARLY REFUSED AS UNGRANTED BY THIS PASS'S OWN LADDER — `610-E`.**
 

@@ -3,6 +3,140 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read
+
+🔵 Every repository named below is on a sell shelf with its grant byte-read at the real default branch
+on `2026-11-02`. 🟢 `P611-1` was **executed end to end before publication** and its transcript is
+reproduced verbatim; `611-B`'s and `611-I`'s fixes are both *in* the shipped script.
+
+### 🟢 `P611-1` — The licence gate an engagement stands up in week one (`ingest/p611-grant-gate.sh`)
+
+🔵 **The problem it solves.** `611-A` measured that the sector's standard platform index gets
+🔴 **`4 of 5` permissive claims wrong**. Week one of any education engagement therefore cannot begin
+with a licence spreadsheet — it has to begin with a gate that reads grant bytes. 🟢 Every step below is
+a defect this base *measured*, not a precaution:
+
+| step | why it exists |
+| --- | --- |
+| 1. resolve the **real** default branch via `git ls-remote --symref` | `559`: a `main`-only read `404`s for `32.4 %` of addresses. 🔴 `611-C`: one branch is **`produção`** |
+| 2. walk a **ladder** of grant paths incl. `COPYING.txt` | 🔴 `610-E`: omitting that rung graded the **official Moodle mobile app** ungranted |
+| 3. grade on the **title line** only | 🔴 `611-B`: `GPL-2.0`'s own text names the Lesser GPL at line `18`, so a window substring mis-grades **every** `GPL-2.0` file |
+| 4. flag a **provenance-anchored** upstream slug | 🔴 `610-A`: a fork's grant was paid-commercial while naming `MIT` four times |
+| 5. run a **fabricated control** in the same invocation | `608-A`: an arm that cannot tell a real address from an invented one certifies nothing |
+
+🟢 **Executed, `2026-11-02`, output verbatim:**
+
+```
+$ bash ingest/p611-grant-gate.sh pengusto/google-classroom-mcp \
+      adriasantacreu/google-classroom-mcp bcgov/SIMS QkeleQ10/Study-Tools \
+      OpenEMIS/core CodeBreez/collejo moodlehq/moodleapp
+
+address                              default_branch  grant_path  bytes  grade                     note
+pengusto/google-classroom-mcp        master          LICENSE     3053   UNCLASSIFIED-NEEDS-HUMAN  UPSTREAM-NAMED:adriasantacreu/google-classroom-mcp
+adriasantacreu/google-classroom-mcp  master          LICENSE     1073   MIT
+bcgov/SIMS                           main            LICENSE     11358  Apache-2.0
+QkeleQ10/Study-Tools                 main            LICENSE     1072   MIT
+OpenEMIS/core                        master          LICENSE     15518  GPL-2.0
+CodeBreez/collejo                    master          LICENSE     1076   MIT
+moodlehq/moodleapp                   main            COPYING.txt 11358  Apache-2.0
+openai/totally-not-real-edu-repo-…   UNREACHABLE     -           -      FABRICATED-CONTROL
+exit=0
+```
+
+🟢 **The run reproduces four independently-registered defects cold**, which is the only reason to
+trust it: `610-A` escalated to a human instead of graded `MIT`; `610-E`'s `COPYING.txt` rung found;
+`611-B`'s `GPL-2.0` graded correctly rather than as `LGPL`; `611-C`'s `produção` branch resolved.
+
+🔴 **`611-I` — and step 4 was wrong twice before it was right, both caught here.** Its first form
+matched only `github.com/...` URLs — 🔴 and `610-A`'s upstream is a **bare slug**, so the step silently
+never fired on the one case that motivated it. Its second form matched bare slugs and scored
+🔴 **`1 of 4` precision** (stock `MIT` text contains `and/or`; `Apache-2.0` contains
+`www.apache.org/licenses`). 🟢 The shipped form requires the slug to be **provenance-anchored** —
+within `200` characters of `upstream|fork|original|derived|based on`, or in URL form — and measures
+🟢 **`1 of 1` true positives with `0 of 6` false positives** on the run above. 🔵 Per `606`, a proposed
+control is measured *before* adoption, not after.
+
+### 🟢 `P611-2` — Policy-as-data compliance layer for the US mandatory-adoption states
+
+🔵 **The trigger is dated and statutory**, not a budget cycle: 🟢 `4` states (**Maryland `SB 720`**,
+**Idaho**, **Oklahoma**, **Virginia**) now require districts to *adopt* an AI policy, Ohio's deadline
+was `2026-07-01`, and 🔴 DC's `2026-27` policy **bars AI from grading and from discipline decisions**.
+
+🟢 **Wiring, all permissive, all on these shelves:**
+
+```
+  [ bcgov/SIMS ]  Apache-2.0, byte-read 11,358 B, main
+    └─ lift the BUSINESS RULES ENGINE + the three-party domain model
+       (student / institution / ministry → student / school / district)
+       ↳ this is the asset: policy change must not mean a rewrite        (611-D)
+
+  [ policy as data ]  one rule set per jurisdiction, versioned in git
+    ├─ HARD EXCLUSIONS as deny-rules, enforced in code not in a handbook:
+    │     no_ai_grading = true          ← DC 2026-27
+    │     no_ai_discipline = true       ← DC 2026-27
+    │     min_grade_for_classroom_ai=9  ← NY A 9190 (pending)
+    │     student_data_for_training=deny ← CA AB 1159 (pending)
+    └─ each rule carries: instrument name, date, jurisdiction
+
+  [ LMS / SIS edge ]  the permissive periphery, never the copyleft core   (T611-5)
+    ├─ Canvas / Moodle connectors already shelved (p610 tier)
+    └─ moodlehq/moodleapp Apache-2.0 + Azure/Moodle MIT for mobile+deploy
+
+  [ audit record ]  one row per automated decision: input, rule set version,
+                    model, output, human reviewer  → the compliance artefact
+                    a district is actually obliged to produce
+```
+
+🟡 **Why `bcgov/SIMS` and not a framework:** a Canadian ministry has already published a system of
+record whose stated design goal is *"a business rules engine that can accommodate regular changes in
+alignment with policy."* 🟢 That is the exact requirement `4` US states just legislated. 🔴 **Stated
+limit:** its rule *content* is British Columbia financial-aid policy — the architecture transfers, the
+policy does not.
+
+**Shape:** `8`–`10` weeks. **Licence posture:** 🟢 `Apache-2.0` throughout — fork-and-extend, no
+copyleft obligation, no LMS core touched.
+
+### 🟢 `P611-3` — Governance-as-a-product for LATAM, sized from the UNESCO denominator
+
+🔵 **The arithmetic is the pitch** (`T611-4`): 🟢 `87 %` of ~`200` HEIs across `19` countries use AI in
+at least one area, 🔴 `26 %` have a formal strategy, 🔴 `< 10 %` have guidelines *with* the capacity to
+apply them — and 🔴 `55 %` have **no AI budget**, public universities 🔴 **`4 %`**.
+
+🔴 **So the deliverable is not a tutor.** It is the governance artefact `716` regulatory instruments
+across `23` countries will ask for, and it must be cheap because the budget line does not exist:
+
+```
+  [ inventory ]   what models are already in use, by whom, on what data
+                  ↳ the honest starting point: adoption is bottom-up and
+                    institutions cannot currently answer this question
+
+  [ policy instance ]  P611-2's rule set, re-pointed at regional instruments
+    ├─ BR: LGPD + Cetic.br baseline (53 % admin use / 22 % have guidelines)
+    ├─ UY: Ceibal baseline (75 % of public-school teachers)
+    └─ regional: UNESCO LAC Observatory (launched 2026-04-14) as the
+                 reference framework a ministry will recognise
+
+  [ gate ]        ingest/p611-grant-gate.sh in CI — every dependency's grant
+                  byte-read before it reaches a public institution    (P611-1)
+
+  [ capacity ]    staff training as a shipped deliverable, because
+                  "< 10 % have guidelines AND capacity" says the gap is
+                  people, not documents
+```
+
+🟢 **Sell it at consortium or ministry level, not per institution** — the `4 %` public-university
+funding rate makes a per-institution sale structurally unfundable, while `CENIA`, `Ceibal` and
+`Cetic.br` are the bodies that already hold the data.
+
+🔴 **What this pattern deliberately does *not* promise.** A permissive LATAM-built tutoring stack. The
+four Iberian-language supply axes returned 🔴 **`95` new addresses and `0` shippable-shaped** this pass
+(`611-E`). 🟡 The three correctly-shaped `0★` finds (`CarlosArmijos1/tutor-tecnico-agentes`,
+`fabriciojunio/permaneia`, `Belles-hub/UpLearn`) are named on `agents/trending.md` and are **not**
+components. 🔵 For tutoring itself the regionally-safe choice remains a Global row run against local
+curriculum content — `thu-maic/OpenMAIC` (`MIT`) or `HKUDS/DeepTutor` (`Apache-2.0`) — self-hosted,
+which the region's data-protection posture wants anyway.
+
+---
 
 ## 🆕 `p610` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read
 

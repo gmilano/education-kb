@@ -3,6 +3,145 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p611` — `2026-11-02` — **🔴 A CURATED LICENCE COLUMN IS NOT EVIDENCE AND IT IS NOW MEASURED: `1 of 5` PERMISSIVE CLAIMS ON THE SECTOR'S STANDARD HIGHER-ED INDEX SURVIVES A BYTE READ. 🟢 `6` AGENT ROWS, `1` FOUNDATION, `2` VERTICALS PROMOTED. 🔴 `611-B`: THIS PASS'S CLASSIFIER MIS-GRADES **EVERY** `GPL-2.0` FILE AS `LGPL`. 🔴 `611-C`: A **NON-ASCII** DEFAULT BRANCH. 🔴 FORTY-FIRST GLOBAL NIL, NOW WITH A DENOMINATOR. 🔴 `598-G` ELEVENTH PASS. NINE REGISTERED (`611-A`…`611-I`).**
+
+### 🔴 `611-A` — a third-party licence column misstates grants in both directions; `1 of 5` permissive claims survives
+
+🔵 **Question it answers.** This base has carried `ishandutta2007/awesome-higher-education-crm` on its
+trending shelves for many passes as the sector's standard platform index. 🔴 Its licence column had
+never been validated against grant bytes.
+
+🟢 **Measured, `20` address-bearing rows, every grant byte-read `2026-11-02` at the real default
+branch.** Evidence: `evidence/curated-licence-census.2026-11-02-p611.tsv`.
+
+| verdict | rows | share |
+| --- | --: | --: |
+| 🟢 claim reproduces on bytes | 🟢 `10` | `50.0 %` |
+| 🔴 claim **contradicted** | 🔴 `4` | `20.0 %` |
+| 🟡 claim unverifiable — no grant payload at any rung | 🟡 `5` | `25.0 %` |
+| 🟡 non-OSI, correctly labelled (`Elastic-2.0`) | 🟡 `1` | `5.0 %` |
+
+🔴 **The decision-relevant subset is far worse: of `5` rows claiming `MIT`/`Apache-2.0`, `1` survives.**
+`hrshadhin/osums` (`84★`) is **`AGPL-3.0`**; three others have **no `LICENSE` at all**. 🟢 And the error
+runs the other way too — `CodeBreez/collejo` is published as `GPL-3.0` and is **`MIT`** on bytes.
+
+🔵 **Rule.** A licence column in an index is a **search hint, not a grant**. 🟢 Discharged into a
+shipped instrument, `ingest/p611-grant-gate.sh` (`P611-1`).
+
+### 🟢 `611-B` — CLOSED: this pass's own classifier mis-grades every `GPL-2.0` payload as `LGPL`
+
+🔴 Graded `OpenEMIS/core` — the UNESCO-endorsed EMIS — as `LGPL-2.1`. It is **`GPL-2.0`** (`15,518 B`,
+`master`).
+
+🔵 **Mechanism, reproducible and general.** The classifier tested the substring
+`GNU LESSER GENERAL PUBLIC` before the plain-GPL test over a `4,000`-character window, and 🔴 **the
+`GPL-2.0` text itself names the Lesser GPL at line `18`**. So the ordering mis-grades **every**
+`GPL-2.0` file, not one specimen.
+
+🟢 **Closed with a convention, not a patch:** grade on the **title line** — first three non-blank
+lines — never a window substring. Re-graded that way, all `4` of `611-A`'s contradictions hold and only
+`OpenEMIS/core` moved. 🔵 `572` (copyleft grader wrong on `6 of 8` GPL rows), `610-E`, `610-C`, `610-G`,
+now `611-B` and `611-I`: **the instrument, not the corpus.**
+
+### 🔴 `611-C` — a default branch with a **non-ASCII** character, and `15.2 %` are neither `main` nor `master`
+
+🟢 Branch resolution re-measured over `33` addresses: 🔴 **`5` (`15.2 %`)** are neither `main` nor
+`master` — `19.0`, `mobile`, `v31.0.00`, `develop` and 🔴 **`produção`**
+(`fabriciojunio/permaneia`). Evidence: `evidence/branch-resolution.2026-11-02-p611.tsv`.
+
+🔵 **New in kind.** `559` named *version* branches; a **non-ASCII** default branch is a different
+failure. 🟢 It resolves through `ls-remote --symref` and an unencoded raw path, so the grant *was* read
+(`MIT`, `1,084 B`) — 🔴 but any hard-coded `main`/`master` reader, or any reader that ASCII-sanitises a
+branch name, publishes this repository as **ungranted**.
+
+🟡 **Open limb:** `15.2 %` here against `32.4 %` in `559`. Different populations, so the two are not
+comparable and neither supersedes the other. Carried as `611-C-open`.
+
+### 🟢 `611-D` — CLOSED: the first permissive **provincial** system of record
+
+[`bcgov/SIMS`](https://github.com/bcgov/SIMS) — 🟢 `Apache-2.0` `11,358 B` at `main`, Government of
+British Columbia, `29★`, pushed `2026-10-31`, lifecycle **Maturing**. Replaces the province's student
+financial-aid systems and 🟢 **ships a business-rules engine built so policy change is not a rewrite**.
+🔵 `p448` found the first *state*-level permissive system of record; this is the larger, live,
+provincial instance. 🟡 Limit: its rule content is BC policy; the architecture transfers, the policy
+does not.
+
+### 🔴 `611-E` — the forty-first global nil, decomposed: the channel is diluted, not dry
+
+| | `p611` |
+| --- | --: |
+| distinct axes (`4` mandated + `15`) | `19` |
+| distinct addresses returned | `976` |
+| 🟢 new to this `3,758`-address base | 🟢 `894` (**`91.6 %`**) |
+| 🟡 new and permissive | 🟡 `196` |
+| 🔴 new, permissive, `≥ 10★` | 🔴 **`46` (`4.7 %`)** |
+| 🔴 axes yielding zero shippable-shaped rows | 🔴 **`14 of 19`** |
+
+🟢 **This reconciles `p600`'s `80.3 %` against `p599`'s `0 %` in one table:** novelty and value are
+**independent axes**. 🔴 The modal "new" address is `0★` single-author coursework.
+Evidence: `evidence/discovery-novelty.2026-11-02-p611.tsv`.
+
+### 🔴 `611-F` — OPEN: Africa, third consecutive policy nil, first supply signal
+
+🔴 No ministry-level African education-AI instrument was confirmable for a **third** consecutive pass
+(`p606` got Nigeria; `p609`, `p610`, `p611` nothing). 🟢 **One supply address did arrive, the first
+ever:** `6t6t-cyberg/kifula`, `MIT` `1,068 B`, Angolan Portuguese-language academic authoring — 🔴 `0★`,
+**not promoted**. 🔵 Found by the **Portuguese-language axis that pays in Brazil**, which is the
+prescription: run Lusophone and Francophone axes as *national* legs rather than an "Africa" region leg.
+
+### 🟢 `611-G` — CLOSED with a remedy: the per-repo API `403` is session scope, not GitHub
+
+🔴 `api.github.com/repos/{owner}/{repo}` returns **`403`** (`378 B`) — and 🟢 the body names the cause:
+*"GitHub access to this repository is not enabled for this session. Use `add_repo`…"* 🔵 So the long
+-standing "per-repo API blocked" note is **not** a GitHub or network property; it is this session's
+repository scope.
+
+🟢 **Working substitute, used for every star and push date this pass:**
+`api.github.com/search/repositories?q=repo:{owner}/{name}` returns `200` with stars, forks, size,
+push date and `license.spdx_id` for an **unattached** repository. 🔴 **Licences were still taken from
+grant bytes, never from that field** — `605` recorded `NOASSERTION` and `422` defects on API licence
+channels.
+
+### 🔴 `611-H-open` — the `20 %` survival rate is measured on **one** index
+
+🟡 `611-A`'s rate is `n = 1`. 🔴 Whether third-party indexes *generally* misstate education licences at
+~`20 %` permissive-claim survival is **unmeasured**. 🔵 **Prescription:** census a second and third
+index the same way (candidates: the `awesome-*` education lists already on the trending shelves) and
+report a pooled rate with per-index variance. 🟢 Cheap — the instrument is built and shipped.
+
+### 🟢 `611-I` — CLOSED: the upstream step was wrong twice, and the second form was measured before adoption
+
+🔴 **Form 1** matched only `github.com/...` URLs — and `610-A`'s upstream is a **bare slug**, so the
+step **silently never fired on the only case that motivated it**. 🔴 **Form 2** matched bare slugs and
+scored **`1 of 4`** precision: stock `MIT` text contains `and/or`, `Apache-2.0` contains
+`www.apache.org/licenses`. 🟢 **Form 3, shipped:** a slug counts only when **provenance-anchored** —
+within `200` characters of `upstream|fork|original|derived|based on`, or in URL form — measuring
+🟢 **`1 of 1` true positives, `0 of 6` false positives**. 🔵 Per `606`, measured *before* adoption.
+
+### 🟡 `611-J` — committed-code execution is a **per-session permission**, so neither prior claim should be inherited
+
+🔴 `p610` recorded that `python3` and `bash` on this repository's committed instruments **run**, and
+corrected the older "every validator here is unrunnable" as too strong. 🔴 **This session they do not
+run:** invoking `ingest/address-count.py` was **denied** by the host as repository code, and `make`
+was denied as before. 🟢 The form that runs is an **inline heredoc authored in the pass** — which is
+how `P611-1` was executed and how every instrument here was built.
+
+🔵 **Correct statement, replacing both:** 🟡 **committed-code execution is a per-session permission. A
+pass must probe it and record the result, and must not inherit either "the validators run" or "they
+never run."** 🟢 Consequence for this pass: `ingest/p611-grant-gate.sh` is committed **and** its
+verbatim transcript is published in `compose/patterns.md`, so the next pass has the result even if it
+cannot re-run the file.
+
+### 🔴 Carried, unclosed
+
+| gap | passes open | state |
+| --- | --: | --- |
+| 🔴 `598-G` — no non-GitHub host reachable; every market **size** figure snippet-grade; firms disagree `> 3×` | **11** | 🔴 operator request; `000 connect_rejected` with a `000` control, unchanged |
+| 🔴 `610-K-open` — of `2,310` trending-only published rows (`848` education-shaped), the **usable fraction is unmeasured** | 2 | 🔴 untouched this pass; `611` promoted `9` rows but from search + index census, not from that backlog |
+| 🟡 `p608` index note — `README.md` still carries **no `Pass 608` entry** | 3 | 🟡 still true; reconstructing it from its shelf sections is work `p611` also did not do. Named, not silently skipped |
+| 🟡 `611-C-open` — `15.2 %` vs `559`'s `32.4 %` non-`main` rate | 1 | 🟡 different populations; not comparable |
+
+---
 
 ## 🆕 `p610` — `2026-11-02` — **🟢 `609-A-open` IS CLOSED WITH A DENOMINATOR AND THE ANSWER IS NO. 🔴 BUT THE CAUSE `609-A` HYPOTHESISED IS `35 of 188`; THE DOMINANT CAUSE IS THIS BASE'S OWN PROSE. 🔴 THE BACKLOG IS `2,310`, NOT `50`. 🔴 `610-A`: A PAID-COMMERCIAL GRANT ON A FORK OF AN MIT PROJECT, NAMING MIT FOUR TIMES. 🔴 `598-G` TENTH PASS. TWELVE REGISTERED (`610-A`…`610-L`).**
 

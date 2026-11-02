@@ -1,0 +1,34 @@
+address	resolved_default_branch	is_main_or_master	note
+openeducat/openeducat_erp	19.0	NO	version branch - a main-only grant read 404s
+francoisjacquet/rosariosis	mobile	NO	non-obvious name
+GibbonEdu/core	v31.0.00	NO	tag-shaped release branch
+frappe/education	develop	NO	and no grant payload at any ladder rung
+fabriciojunio/permaneia	produção	NO	611-C NON-ASCII default branch - first on this base
+bcgov/SIMS	main	YES	-
+rosewang2008/tutor-copilot	main	YES	-
+sid-thephysicskid/leap	main	YES	-
+QkeleQ10/Study-Tools	main	YES	-
+chrisreddington/flight-school	main	YES	-
+RozhakDev/EduPintarIPAS	main	YES	-
+thu-maic/OpenMAIC	main	YES	-
+hkuds/DeepTutor	main	YES	-
+6t6t-cyberg/kifula	main	YES	-
+CarlosArmijos1/tutor-tecnico-agentes	main	YES	-
+Belles-hub/UpLearn	main	YES	-
+twentyhq/twenty	main	YES	-
+erxes/erxes	main	YES	-
+BaseMax/StudentGraphQLTS	main	YES	-
+tripathi-khushi/Alumni-Network	main	YES	-
+Visual-Studio-Coder/Recap	master	YES	-
+CodeBreez/collejo	master	YES	-
+espocrm/espocrm	master	YES	-
+civicrm/civicrm-core	master	YES	-
+nomadicjosh/eduTrac-SIS	master	YES	-
+OpenEMIS/core	master	YES	-
+hrshadhin/osums	master	YES	-
+FenixEdu/fenixedu-academic	master	YES	-
+jungang/alumnet	master	YES	-
+OS4ED/openSIS-Classic	master	YES	-
+canyongbs/advisingapp	master	YES	-
+kunaltyagi9/University-Management-System	master	YES	-
+cris-ronaldo7/Alumni-Management-System	master	YES	-
