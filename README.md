@@ -1,8 +1,66 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## Pass 601 — reads 2026-11-01, commit 2026-11-02 — **🟢 A WHOLE AGENT CATEGORY THIS BASE NEVER HELD IS SHIPPED (`16` ROWS, SHELF `53 → 69`): HIGHER-ED RESEARCH & ACADEMIC-WRITING SKILL PACKS, ALL MIT, FROM AN AXIS THAT WAS `100 %` UNHELD. 🔴 BUT THE LOAD-BEARING RESULT IS A TRAP AVOIDED: THE SECTOR'S LARGEST NEW FIND (`54,881★`) IS `CC BY-NC`, AND SO ARE THE NEXT THREE — IN EDUCATION, STAR RANK IS AN *ANTI*-SIGNAL FOR COMMERCIAL USABILITY. 🟢 AND `p600`'S `80.3 %` NOVELTY AND `p599`'S `0 %` ARE RECONCILED: NOVELTY HAS TWO CAUSES WITH OPPOSITE VALUE, AND ONE NUMBER CANNOT TELL A CATEGORY GAP FROM A WORD COLLISION. EIGHT REGISTERED (`601-A`…`601-H`).**
+
+### 🔴 The central result — and it inverts the shortlisting rule, not just one row
+
+`29` rows whose GitHub licence field reads `NOASSERTION` were byte-read at the branch
+`git ls-remote --symref` reports, each with its **own** fabricated-path control:
+
+| | `p600` | 🆕 `p601` |
+| --- | --- | --- |
+| treatment of `NOASSERTION` | 🔴 written off — `310` rows set aside unread | 🟢 **read** — `29` probed |
+| resolved to a readable grant | — | 🟢 **`28 of 29` (`96.6 %`)** |
+| of those, commercially **unusable** | — | 🔴 **`11 of 28` (`39.3 %`)** |
+| top `4` by stars | — | 🔴 **all `4` unusable** (`54,881` / `13,872` / `13,200` / `11,200★`) |
+
+🔵 **Mechanism, which is why it generalises:** the biggest artefacts in education are **courseware**,
+and courseware authors choose `NonCommercial` to stop resale. 🟢 **Rank the shortlist by grant first
+and stars second.**
+
+### 🟢 The reconciliation — `864` addresses, `30` job-phrased axes, every denominator attached
+
+`864` addresses → **`614` new (`71.1 %`)** → `273` education-relevant (`44.5 %`) → 🔴 **`11` permissive
+*and* `≥ 300★` *and* live (`1.27 %`)**. The two causes of novelty, measured side by side:
+
+| axis | % new | % in-domain | shippable | cause |
+| --- | --: | --: | --: | --- |
+| `academic-writing` | 🟢 `100 %` | `40.0 %` | 🟢 **`7`** | **genuine unqueried category** |
+| `library-management` | 🔴 `100 %` | 🔴 `6.7 %` | `0` | **homonym** — dependency managers |
+| `gradebook` | 🔴 `0 %` | — | `0` | 🟢 **genuine saturation (`30 of 30` held)** |
+
+🟢 **Refines `p600`:** job-phrasing is necessary, not sufficient — the discriminator is whether the job
+word is **exclusive to education**.
+
+### 🟢 Shipped this pass
+
+`16` agent rows (the research-writing tier), `17` foundation repos, an **assessment-delivery platform
+tier** that closes the scoring seam `p600` named, `4` numbered trends (`70`–`73`), `4` recipes
+(`P-601-A` research-office pipeline, `P-601-B` generate→deliver→score→retain, `P-601-C` APAC in-region
+stack, `P-601-D` LATAM build-and-localise), and regional opportunity updates for **all five** regions
+under the single canonical block.
+
+### 🔴 Recorded against this pass itself
+
+- **`601-G`** — this pass's first census was wrong: `sort -u -k3,3` deduplicated on the **star-count**
+  key and silently discarded `304` rows, manufacturing a `310`-row total and three simultaneous
+  `0.0 %`-new axes. 🟢 Caught by shape, not by count, and re-run slug-keyed. 🟢 **Rung strengthened
+  beyond `p600-F`: a `0` on an axis the base has historically mined must be confirmed against the
+  un-deduplicated population.**
+- **`601-C`** — the search API over-claims (`theodinproject` → `MIT`, `Techtonica/curriculum` →
+  `CC-BY-SA-4.0`, `ebisu` → `Unlicense`) **and** under-claims (`NOASSERTION` on `28` readable grants).
+  🟢 `5` rows filed **`ABSTAIN`** rather than shipped on an unverifiable claim.
+- **`601-B`** — three further non-`main` default branches (`develop`, `development`, `gh-pages`); 🔴
+  `fasiha/ebisu` has `13` branches and **no `main` and no `master` at all**.
+- 🔴 **`0 of 16`** promoted rows are LATAM-placed. `1` of `864` addresses is (`1★`). 🟢 Recorded as a
+  measured gap with its denominator, not as silence — and `P-601-D` is written for it.
+- 🔴 **Gates: this repository arrived with `22 of 69` red** (`47` green) and exits the same, recorded
+  so a later pass does not attribute them here. `gate-region-headings` was green on arrival and is
+  green on exit.
 
 ## Pass 600 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE TWENTY-NINE-PASS DISCOVERY NIL IS A SAMPLING ARTEFACT, AND `p599`'S DIAGNOSIS WAS WRONG TOO: IT BLAMED THE RANKING FUNCTION, BUT THE SAME SIX AXES AT THE SAME ORDERING YIELD `138 of 334` NEW (`41.3 %`) ONCE READ DEEPER THAN ONE PAGE. 🟢 `28` AXES THIS BASE HAD NEVER QUERIED YIELD `80.3 %`, AND THE NINE THAT YIELD `100 %` ARE ALL PHRASED AS JOBS, NOT TECHNOLOGIES. 🟢 AN `81`-REPO BSD-3-CLAUSE UNIVERSITY CURRICULUM ESTATE WAS INVISIBLE FOR `599` PASSES BECAUSE `59 of 81` OF ITS REPOS DEFAULT TO A BRANCH NAMED `release`. 🟢 AND THE PER-REPO GITHUB API, LONG RECORDED AS BLOCKED, HAS A SUBSTITUTE THAT AGREES WITH `git ls-remote --symref` ON `16 of 16`. EIGHT REGISTERED (`600-A`…`600-H`).**
 

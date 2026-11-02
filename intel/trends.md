@@ -1,8 +1,91 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — four numbered trends (`70`–`73`), each with the measurement that produced it
+
+## 70. In education, star rank is an anti-signal for commercial usability — the sector's biggest artefacts are courseware, and courseware picks NonCommercial (high confidence — `29` `NOASSERTION` grants byte-read, top `4` by stars all `BLOCK`, `4 of top 5`)
+
+🔴 **The measurement.** `29` repositories whose GitHub licence field reads `NOASSERTION` were byte-read
+at the branch `git ls-remote --symref` reports, each with its own fabricated-path control at `404`.
+**`28 of 29` (`96.6 %`) resolved to a readable grant.** Of those `28`: `11` permissive, 🔴 **`11`
+`BLOCK`** (`7` NonCommercial CC, `2` all-rights-reserved, `2` bespoke), `4` reciprocal, `1`
+attribution-only content. 🔴 **Ranked by stars, the top four are all `BLOCK`:**
+`Imbad0202/academic-research-skills` (`54,881★`, CC BY-NC), its codex sibling (`13,872★`, same
+`19,584`-byte grant), `TheOdinProject/curriculum` (`13,200★`, CC BY-NC-SA),
+`AhmadHassan-BTed/Turnitout-Humanizer` (`11,200★`, proprietary).
+
+🔵 **Why it generalises rather than being a sampling accident.** The mechanism is economic, not
+statistical: the largest repositories in *education* are teaching material, and an author who wrote a
+course chooses `NC` to stop someone reselling their course. 🟢 **The operational consequence inverts
+the default heuristic** — in this sector, a shortlist ranked by stars is ranked roughly by *decreasing*
+usability, so the grant must be read before the shortlist exists, not after it is presented.
+🟡 **Bound:** measured on `29` rows in one sector. It is a strong rule for education and should not be
+exported to other industries without its own measurement.
+
+## 71. A discovery nil and a discovery flood can be the same market: novelty has two causes with opposite value, and one number cannot separate them (high confidence — `864` addresses, `71.1 %` new, `1.27 %` shippable, per-axis relevance measured)
+
+🟢 **The funnel, every denominator attached:** `864` addresses from `30` job-phrased topic axes →
+**`614` new** (`71.1 %`, screened by `grep -ril` over every `*.md`/`*.tsv` in the repository) →
+`273` education-relevant by description keyword (`44.5 %`) → 🔴 **`11` permissive **and** `≥ 300★`
+**and** pushed since `2025-06` (`1.27 %` of addresses).**
+
+🔴 **The two causes, measured side by side and indistinguishable on novelty alone:**
+
+| axis | % new | % in-domain | shippable | cause |
+| --- | --: | --: | --: | --- |
+| `academic-writing` | 🟢 `100 %` | `40.0 %` | 🟢 **`7`** | **genuine unqueried category** |
+| `library-management` | 🔴 `100 %` | 🔴 `6.7 %` | `0` | **homonym** — dependency managers |
+| `timetable` | `96.6 %` | 🔴 `7.1 %` | `0` | **homonym** — transit, rotas |
+| `plagiarism-detection` | `66.7 %` | 🔴 `5.0 %` | `0` | **homonym** — code-clone detection |
+| `gradebook` | 🔴 `0 %` | — | `0` | 🟢 **genuine saturation — `30 of 30` held** |
+
+🔵 **So `p599`'s `0 %` and `p600`'s `80.3 %` are both correct and neither is a supply statement.**
+`p600` concluded the productive axes are the ones "phrased as jobs, not technologies"; 🟢 **this refines
+it — job-phrasing is necessary and not sufficient, and the discriminator is whether the job word is
+*exclusive to education*.** A word another industry also uses (`assessment`, `admissions`,
+`curriculum`, `timetable`, `library-management`) imports that industry's supply as false novelty.
+🟡 **Limit stated against this pass's own instrument:** the relevance column is a description-keyword
+proxy with real false negatives — `academic-writing` scores `40 %` because its repositories say
+*paper*, *journal*, *thesis*, words the screen lacks — so `44.5 %` is a **lower bound**.
+
+## 72. Open-source school administration is a structural absence, not a search failure — the cleanest in-domain axis in the sector yields zero shippable platforms (high confidence — `88.9 %` in-domain, `18` unheld addresses, `0` shippable)
+
+🔴 **`topic:school-management` is `88.9 %` education-relevant — the highest clean score measured across
+`30` axes — and returns `0` platforms that are permissive *and* substantial *and* maintained.** The
+population: `ketanchoyal/Our-E-School` at `504★` (MIT, 🔴 last pushed `2021-08-19`), then `17`
+repositories between `43` and `138★`, mostly PHP/Laravel/Flask/MERN coursework, a majority last pushed
+before `2025`.
+
+🔵 **Why the measurement matters more than the absence.** An absence found by one query is a search
+result; 🟢 **an absence found on an axis that is demonstrably unambiguous and well populated is a
+property of the sector.** The credible open anchors remain reciprocal or defective in their grants —
+`frappe/education` (🔴 a `19`-byte `license.txt` that *names* GPL-3 without granting it),
+`OpenEduCat` (LGPLv3, Odoo-coupled), `ERPNext` (GPL-3). 🟢 **SIS/ERP stays buy-or-build**, and this is
+now evidenced rather than asserted — the oldest standing gap on `verticals/solutions.md`, confirmed
+with its population attached.
+
+## 73. Agent-native course authoring is forming now, in public, at under `35★` (low-to-moderate confidence — `6` repositories, `5` pushed inside one `72`-hour window, `2 of 5` grants unread)
+
+🟢 **Converging architecture, not a single project:** `model-systems-labs/latent` (`2★`, Apache-2.0,
+*"build your own learning platform with agents"*), `martinkozle/course-harness` (`0★`, MIT,
+**local-first and source-grounded**), `Phineas1500/Onhand` (`32★`, Apache-2.0, in-page QA over set
+texts), `AegeanWorks/NeuralDeck` (`12★`), `better-vault/better-vault` (`12★`), together with
+`p600`'s `LearnAIHubC/LearnDeck` (`26★`, MIT). 🔵 **All six treat the authoring step as an agent and
+the grounding as the institution's own material** — the opposite of the generate-from-the-model-weights
+shape that dominated `2025` courseware tooling.
+
+🔴 **Why the confidence is deliberately low, and what would raise it.** Five of six are under `35★`,
+`2 of 5` grants are still unread, none is production-ready, and a `72`-hour cluster is exactly what
+hobbyist churn also looks like. 🟢 **Falsifiable test, recorded so a later pass can settle it:**
+re-measure in `10` passes — **if no member has crossed `500★`, this is churn and this trend should be
+struck;** if any has, the category is real and belongs on `agents/top.md`.
+🟡 **`topic:lesson-planning` sits in the same band** — `100 %` unheld, entire population `0–5★`,
+every member created in `2026` — and it is where this pass's only LATAM-placed and only
+sub-Saharan-African addresses came from, so the band is worth watching for *placement* even while its
+code is unshippable.
 
 ## 🆕 `p600` — `2026-11-01` — a saturated index is usually a saturated *query*, and the thing that hides supply is a branch name
 

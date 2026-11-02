@@ -1,0 +1,10 @@
+leg	query	region	substantive_tokens	already_held	new	verdict
+global-1	top open source AI agents education 2026 github MIT	Global	6	6	0	NIL — microsoft/ai-agents-for-beginners, pguso/agents-from-scratch, browser-use, CrewAI, AutoGen, LangGraph all held
+global-2	github trending education AI 2026	Global	5	5	0	NIL — OPTIMETA/PAIDEIA, GarethManning/education-agent-skills, rohitg00/ai-engineering-from-scratch, aneelv75/github-trending, speedyapply/2026-AI-College-Jobs all held
+global-3	open source platform education ERP CRM MIT Apache	Global	4	4	0	NIL — OpenEduCat(LGPLv3), Odoo, Moodle, Koha all held; leg returned vendor-authored glossary pages only
+global-4	AI education industry trends 2026	Global	7	7	0	NIL — 134-bills/31-states, FIPSE $169M, OECD Digital Education Outlook, K-12 34pct, OpenAI 8-partner programme all held
+region-NA	AI education North America 2026 adoption regulation players	North America	4	4	0	NIL — NA 36pct/$3.68B share, 70pct institutional AI guidance, COPPA child-safety framing, Embodied/Miko all held
+region-EMEA	AI education EMEA 2026 adoption regulation players	EMEA	5	5	0	NIL — EU ethical guidelines update, EUR 25.4m Advanced Digital Skills grants, UK GBP 200m+ AI Adoption Summit, QS Europe EdTech 200, ICS.AI all held
+region-APAC	AI education APAC 2026 adoption regulation players	APAC	3	3	0	NIL — ASEAN Guide on AI Governance and Ethics, PH DepEd-Google Gemini teacher certification, Omdia APAC survey all held
+region-LATAM	AI education LATAM 2026 adoption regulation players	LATAM	5	5	0	NIL — DEC/Tec de Monterrey 92pct-students/79pct-faculty, UNESCO IESALC 200-institutions/19-countries, IDB+CEPAL ILIA, Brookings sandbox framing all held
+TOTAL	8 legs (4 global + 4 regional, as mandated)	-	39	39	0	THIRTY-FIRST CONSECUTIVE NIL, with denominator: 39 of 39 substantive tokens already held. No region returned a token this base lacked. Recorded as a measured result, not as silence.

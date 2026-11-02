@@ -1,8 +1,69 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 `30`-AXIS TOPIC SWEEP, `864` ADDRESSES, `614` UNHELD (`71.1 %`). 🟢 THE WEEK'S REAL SIGNAL IS A FORMING CATEGORY, NOT A BIG REPO: **AGENT-NATIVE COURSE AUTHORING** — `5` REPOS, ALL PUSHED IN THE LAST `72` HOURS, ALL PERMISSIVE, ALL UNDER `35★`. 🔴 AND THE WEEK'S LARGEST MOVER IS A TRAP: `wdcpclover/ai4paper`, `4,041★`, BYTE-READS AS **GRANTLESS** — NO LICENCE FILE AT `main`, CONTROL `404`.**
+
+### 🟢 Forming this week — agent-native course authoring and study tooling (all grants byte-read `2026-11-01`)
+
+| Repo | ★ | Pushed | Grant (byte-read) | Region | What it is |
+| --- | --: | --- | --- | --- | --- |
+| [model-systems-labs/latent](https://github.com/model-systems-labs/latent) | `2` | `2026-11-01` | 🟢 Apache-2.0 (`11,358 B`) | Global | *"Build your own learning platform with agents"* — courses + browsing, agent-first by design |
+| [martinkozle/course-harness](https://github.com/martinkozle/course-harness) | `0` | `2026-11-01` | 🟢 MIT (`1,084 B`) | Global | 🟢 **Local-first, source-grounded** course authoring — the provenance-preserving shape |
+| [Phineas1500/Onhand](https://github.com/Phineas1500/Onhand) | `32` | `2026-11-01` | 🟢 Apache-2.0 (`11,359 B`) | Global | Open AI reading assistant (Chrome) — in-page question answering over set texts |
+| [AegeanWorks/NeuralDeck](https://github.com/AegeanWorks/NeuralDeck) | `12` | `2026-11-01` | 🟡 `NOASSERTION` — unread | Global | Offline desktop PDF/Word → deck conversion |
+| [better-vault/better-vault](https://github.com/better-vault/better-vault) | `12` | `2026-11-01` | 🟡 `NOASSERTION` — unread | Global | Open NotebookLM alternative — source-grounded chat |
+
+🔵 **Why `0–32★` repos are the week's headline rather than noise.** These five were all pushed inside
+one `72`-hour window, they are not forks of each other, and they converge on the same architecture:
+**a learning platform whose authoring step is an agent and whose grounding is the institution's own
+source material.** 🟢 That is the shape `p600`'s `LearnAIHubC/LearnDeck` row gestured at with one
+instance; there are now six. 🟡 **Stated as a watch item, not a recommendation** — `2 of 5` grants are
+still unread and none is production-ready. 🔵 Re-measure in `10` passes: if this tier is still `< 50★`
+it is hobbyist churn; if any member crosses `500★` the category is real.
+
+### 🔴 The week's largest mover is unusable, and the licence field told the truth this time
+
+[`wdcpclover/ai4paper`](https://github.com/wdcpclover/ai4paper) — **`4,041★`**, pushed `2026-10-31`,
+full-text PDF translation with layout preservation, `240M`-document literature search, AI close-reading:
+
+- 🔴 **No grant file at `main`.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.md`, `license`,
+  `COPYING` and `9` further paths all `404`; the **fabricated-path control also `404`**, so the probe is
+  working and the absence is real.
+- 🔴 **Grantless means all rights reserved by default** — not "permissive by omission". **Not usable.**
+- 🟢 The search API reported `NONE`, which is accurate here. 🔵 **Contrast with `601-C`:** the API over-claims
+  (`theodinproject` → `MIT`, `Techtonica/curriculum` → `CC-BY-SA-4.0`, `ebisu` → `Unlicense`) *and*
+  under-claims (`NOASSERTION` on `28` readable grants). 🟢 **It is unreliable in both directions, so the
+  byte-read is not an optimisation — it is the only instrument.**
+
+### 🟡 Regionally placed this week — including a first for this page
+
+| Repo | ★ | Grant | Region | Note |
+| --- | --: | --- | --- | --- |
+| [Delkay-byte/SchemeKnit](https://github.com/Delkay-byte/SchemeKnit) | `1` | 🔴 **grantless** (no file at `main`, control `404`) | **EMEA** | 🟢 **AI lesson planning for *Ghanaian* schools — the first sub-Saharan Africa placement measured on this page.** Recorded for the placement; 🔴 unusable as code until a grant appears |
+| [wdcpclover/ai4paper](https://github.com/wdcpclover/ai4paper) | `4,041` | 🔴 grantless | **APAC** | CN-language academic reading stack |
+| [JackStar6677-1/edudocente-studio](https://github.com/JackStar6677-1/edudocente-studio) | `1` | 🟢 MIT (`1,094 B`) | **LATAM** | The only LATAM-placed address in `864` (`601-E`) |
+| [Amey-Thakur/CLAUDE-CERTIFICATIONS](https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS) | `115` | 🟢 MIT | Global | Certification study guide — the vendor-credential prep axis, which this base has not tracked |
+
+🔵 **EMEA is not one market and this page has been treating it as one.** `601` passes of EMEA findings
+have been European (DE, EE, CZ, UK, AT). 🟢 **`SchemeKnit` is the first African address**, and it arrived
+through `topic:lesson-planning` — the axis that is `100 %` unheld and whose entire population is
+`0–5★` repositories created in `2026`. 🟡 **One repository is not a market signal.** It is a reason to
+query the axis again with African-market terms before the next LATAM/EMEA opportunity section is written.
+
+### 🟢 Sweep parameters, recorded so the next pass can diff rather than re-derive
+
+`30` job-phrased axes × `30` addresses, `sort=stars&order=desc`, deduplicated by slug (`864` distinct).
+Every address screened by `grep -ril` over every `*.md` and `*.tsv` in this repository before being
+called new. 🔴 **Axes measured saturated:** `gradebook` (`30 of 30` held — the only clean nil).
+🔴 **Axes measured contaminated by homonym** (keep but discount): `library-management` (`6.7 %`
+in-domain), `plagiarism-detection` (`5.0 %`), `timetable` (`7.1 %`), `assessment` (`13.6 %`),
+`math-education` (`13.6 %`), `question-generation` (`18.2 %`).
+🟢 **Axes measured productive:** `academic-writing` (`100 %` unheld → `7` shippable),
+`teaching` (`3` shippable), `quiz` (`1`).
+Full table: [`../evidence/axis-relevance-funnel.2026-11-01-p601.tsv`](../evidence/axis-relevance-funnel.2026-11-01-p601.tsv).
 
 ## 🆕 `p600` — `2026-11-01` — **🔴 THE `0 %` NIL WAS A SAMPLING ARTEFACT, NOT AN ORDERING ONE: `p599` TOOK `39` ADDRESSES FROM `6` AXES, THIS PASS TOOK `334` FROM THE SAME `6` AND `138` ARE NEW (`41.3 %`) AT THE SAME ORDERING. 🟢 `34` AXES WALKED IN BOTH ORDERINGS, `1,246` ROWS, `1,014` UNIQUE ADDRESSES, `678` NEVER HELD. 🟢 AND AN `81`-REPO BSD-3-CLAUSE UNIVERSITY CURRICULUM ORG WAS INVISIBLE FOR `599` PASSES BECAUSE `59 of 81` OF ITS REPOS DEFAULT TO A BRANCH NAMED `release`.**
 

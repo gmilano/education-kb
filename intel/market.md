@@ -1,8 +1,59 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE THIRTY-FIRST CONSECUTIVE NIL, AND FOR THE FIRST TIME WITH A *PER-REGION* DENOMINATOR: `39 of 39` SUBSTANTIVE TOKENS ALREADY HELD — NA `4/4`, EMEA `5/5`, APAC `3/3`, LATAM `5/5`. 🟢 NO REGION RETURNED SILENCE; EVERY REGION RETURNED REAL, DATED MATERIAL THIS BASE ALREADY CARRIES. 🟢 THE SUPPLY SIDE MOVED INSTEAD, AND IT MOVED THE REGIONAL PICTURE: `4` OPPORTUNITY SUBSECTIONS UPDATED UNDER THE SINGLE CANONICAL BLOCK, PLUS `Global`.**
+
+### 🔴 The legs, with the denominator that makes the nil a measurement rather than an absence of effort
+
+| leg | region | substantive tokens | already held | 🆕 new |
+| --- | --- | --: | --: | --: |
+| `top open source AI agents education 2026 github MIT` | Global | `6` | `6` | `0` |
+| `github trending education AI 2026` | Global | `5` | `5` | `0` |
+| `open source platform education ERP CRM MIT Apache` | Global | `4` | `4` | `0` |
+| `AI education industry trends 2026` | Global | `7` | `7` | `0` |
+| `AI education North America 2026 adoption regulation players` | North America | `4` | `4` | `0` |
+| `AI education EMEA 2026 adoption regulation players` | EMEA | `5` | `5` | `0` |
+| `AI education APAC 2026 adoption regulation players` | APAC | `3` | `3` | `0` |
+| `AI education LATAM 2026 adoption regulation players` | LATAM | `5` | `5` | `0` |
+| **total** | — | **`39`** | 🔴 **`39`** | 🔴 **`0`** |
+
+🔵 **What each region actually returned, recorded so the nil cannot later be mistaken for a gap in
+coverage.** North America: the `36 %`/`$3.68B` regional share, `~70 %` of institutions with AI guidance
+in place or drafting, COPPA-shaped child-safety product constraints. EMEA: the Commission's updated
+ethical guidelines on AI in education, `€25.4m` of Advanced Digital Skills grant agreements, the UK's
+`£200m+` AI Adoption Summit commitment, the QS Europe EdTech `200`, ICS.AI's national higher-ed model.
+APAC: the ASEAN Guide on AI Governance and Ethics (early-stage), the Philippines DepEd–Google Gemini
+teacher-certification programme (`1M+` teachers), Omdia's `1,100`-respondent regional survey. LATAM:
+Digital Education Council with Tec de Monterrey (`92 %` students / `79 %` faculty, February `2026`),
+UNESCO IESALC across `200` institutions in `19` countries (September `2026`), the IDB/CEPAL Latin
+American AI Index, Brookings on regional regulatory strategy.
+🟢 **All `39` were screened by `grep -ril` over every `*.md` and `*.tsv` in this repository before being
+called held.** Evidence: [`../evidence/websearch-legs.2026-11-01-p601.tsv`](../evidence/websearch-legs.2026-11-01-p601.tsv).
+
+### 🟢 What this means for how these legs are budgeted, stated as a recommendation rather than a complaint
+
+🔴 **Thirty-one consecutive passes of `0` new demand-side tokens is itself a finding about the channel,
+not about the market.** The commercial literature on AI in education is produced by a small set of
+market-research vendors and recycled by content farms; this base has held the substantive figures for
+many passes and the queries are stable, so 🟢 **the legs now function as a *currency check* — they
+confirm nothing has moved — and the discovery budget belongs on the supply side,** where this pass's
+`30`-axis topic sweep returned `614` unheld addresses and `28` hand-verified permissive components.
+🟡 **The legs should still be run every pass, exactly as mandated** — a currency check that stops being
+run stops being a check, and the first time a figure *does* move, the nil streak is what makes it
+visible.
+
+### 🔴 One demand-side caution this pass will not let pass unmarked
+
+The `2026` market-size figures this page carries remain **mutually inconsistent at source**: `$11.4B`
+(`2026`) → `$57.2B` (`2033`) from one vendor, `$3.7B` (`2026`) → `$14.1B` (`2033`) from another, and a
+third at *"about `$11B` globally in `2026`"*. 🔴 **A `3×` spread in the base year is not a forecasting
+disagreement, it is a definitional one** — the three are not counting the same thing. 🟢 **Use the
+figures directionally and never quote a single one as the market size**; the regional *shares* and the
+dated institutional surveys under `## Opportunities by region` are the better-grounded numbers and are
+what a client deck should rest on.
 
 ## 🆕 `p600` — `2026-11-01` — the regional legs return a nil with a per-token denominator for the first time, and this page's own "market is covered" instinct is refuted
 
@@ -311,6 +362,32 @@ interop code**, which is the same mechanism `p596` recorded for FOLIO. Paired wi
 both halves of an agent attach point: roster data and LMS actions. 🔴 Unchanged and still the only
 quantified instrument this channel produces: `134` bills across `31` states.
 
+
+#### 🆕 `p601` — `2026-11-01` — the research office, not only the classroom
+
+🟢 **New, and it changes which buyer this region is sold to.** `topic:academic-writing` was an axis
+this base had never queried; it is `100 %` unheld and it supplied `7 of the 11` shippable rows in an
+`864`-address sweep. Its NA-anchored members, grants byte-read `2026-11-01`:
+[`brycewang-stanford/Awesome-Journal-Skills`](https://github.com/brycewang-stanford/Awesome-Journal-Skills)
+(`1,346★`, MIT, per-journal packs for AER/QJE/Nature/Cell + `200`),
+[`pedrohcgs/claude-code-my-workflow`](https://github.com/pedrohcgs/claude-code-my-workflow)
+(`1,676★`, MIT, LaTeX/Beamer + R with replication gates), and
+[`jamditis/claude-skills-journalism`](https://github.com/jamditis/claude-skills-journalism)
+(`444★`, MIT, verification + FOIA).
+🔵 **The engagement this opens is the university research office and the graduate school** — manuscript
+pipeline, journal targeting, pre-submission review — distinct from every K-12 and LMS motion this
+section has carried.
+
+🟢 **And a compliance instrument, public domain:**
+[`usnistgov/OSCAL`](https://github.com/usnistgov/OSCAL) (US worldwide public domain, `LICENSE.md`
+`5,255 B`) gives machine-readable control catalogues — the artefact for evidencing FERPA/COPPA posture
+to a district or system office, which this region's `134`-bills/`31`-states environment keeps asking for.
+
+🔴 **Caution carried into this region specifically:** the single largest new find in the sector,
+`Imbad0202/academic-research-skills` (`54,881★`), is 🔴 **CC BY-NC** and cannot be used in paid
+delivery. It is on-topic, it ranks first by stars, and it is the thing a US client will have already
+found. 🟢 **Lead with the MIT rows above and be able to say why that one is excluded.**
+
 ### EMEA
 
 🆕 **`p600` — no new regulatory token was served; the opportunity is in sequencing what is already
@@ -371,6 +448,35 @@ for. 🔴 Note the spelling: a licence screen probing `LICENSE` only would have 
 🟡 **Demand-side, carried:** €25.4m Advanced Digital Skills grants and the UK's £200m+ adoption
 commitment are **cross-sector** envelopes, and this page continues to refuse to read them as
 education budgets.
+
+
+#### 🆕 `p601` — `2026-11-01` — the densest permissive supply of any region, and EMEA is not Europe
+
+🟢 **Measured, not asserted:** of the permissive platform and foundation rows this pass added,
+EMEA-originated ones outnumber every other region —
+[`surveyjs/survey-library`](https://github.com/surveyjs/survey-library) (`4,918★`, MIT, Devsoft Baltic
+OÜ, **EE**), [`cksystemsteaching/selfie`](https://github.com/cksystemsteaching/selfie) (`2,534★`,
+BSD-2-Clause, **University of Salzburg, AT**),
+[`federicodeponte/opendraft`](https://github.com/federicodeponte/opendraft) (`523★`, MIT, SCAILE
+Technologies GmbH, **DE** — checks citation DOIs against scholarly databases),
+[`latextemplates/scientific-thesis-template`](https://github.com/latextemplates/scientific-thesis-template)
+(`397★`, `0BSD`, **DE**), [`cvut/qtrvsim`](https://github.com/cvut/qtrvsim) (`647★`, 🟡 GPL-3.0,
+**Czech Technical University**).
+🔵 **So an EMEA higher-ed engagement can be assembled almost entirely from in-region, permissive,
+institution-originated code** — which matters where procurement weights data residency and provenance.
+
+🟢 **A national-curriculum-grounded asset, which is rare:**
+[`seanmcww/uk-english-lesson-planning`](https://github.com/seanmcww/uk-english-lesson-planning)
+(Apache-2.0, `11,357 B`) is written against **England KS3/KS4** rather than against "education" in the
+abstract. 🟡 `2★` — an exemplar of the pattern, not a dependency.
+
+🔴 **The correction this pass owes this region.** `601` passes of EMEA findings on this page have been
+*European* (DE, EE, CZ, UK, AT). 🟢 **The first sub-Saharan African address measured here is
+[`Delkay-byte/SchemeKnit`](https://github.com/Delkay-byte/SchemeKnit)** — AI lesson planning for
+**Ghanaian** schools — and it arrived through `topic:lesson-planning`, the most in-domain axis measured
+this pass. 🔴 It is **grantless** (no licence file at `main`, fabricated-path control `404`), so it is
+unusable as code today. 🟡 **One repository is not a market.** It is evidence that the African half of
+"EMEA" has been going unqueried, and the axis to query again before this section is next rewritten.
 
 ### APAC
 
@@ -444,6 +550,33 @@ has not been pushed since `2026-02-21` and is `334 MB`, so it is a reference arc
 not a dependency to track. 🔵 In-language supply grows again with
 [`simonstang/feifei-companion`](https://github.com/simonstang/feifei-companion) (Apache-2.0,
 `10,227 B`, K-12, Chinese), joining DeepTutor, OpenMAIC and pupilfirst.
+
+
+#### 🆕 `p601` — `2026-11-01` — the only region with a permissive, deployable assessment *service*
+
+🟢 **[`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey)** — `3,803★`, **Apache-2.0**
+(`11,412 B` byte-read, `main`), built by **DiDi (CN)**: a questionnaire/exam/quiz platform with
+analytics that deploys as a service rather than linking as a library. 🔵 **This is the strongest
+single answer on this page to "assessment delivery that keeps data in-region"**, and it is the only
+one of the four new assessment rows that is a service.
+
+🟢 **A complete K-12 coding school, permissively licensed:**
+[`open-scratch/teaching-open`](https://github.com/open-scratch/teaching-open) (`633★`, Apache-2.0,
+branch 🔴 `master`) ships Scratch + ScratchJr + Python **with** courses, classes, assignments,
+permissions and community — CN-built and CN-localised.
+🟢 **In-language reading support:** [`rampaa/JL`](https://github.com/rampaa/JL) (`404★`, Apache-2.0,
+JA) and [`tristcoil/hanabira.org`](https://github.com/tristcoil/hanabira.org) (`432★`, MIT, JA **and**
+KO, self-hostable).
+🟢 **Research-writing, CN-authored, all MIT:** `Adkid-Zephyr/anti-defensive-writing-Skill` (`4,676★`),
+`lishix520/academic-paper-skills` (`1,456★`), `alfonso0512/research-writing-skill` (`533★`),
+`liqinling1994-cloud/master-teacher` (`4★`, teacher lesson-design, `152` personas).
+
+🔴 **Two APAC traps, both high-star, both measured:**
+[`wdcpclover/ai4paper`](https://github.com/wdcpclover/ai4paper) — `4,041★`, CN academic reading stack —
+is 🔴 **grantless** (no licence file at `main`, control `404`), and
+[`Allenpandas/BJTU-CS-Notebook`](https://github.com/Allenpandas/BJTU-CS-Notebook) (Beijing Jiaotong
+University) is 🔴 **CC BY-NC-SA**. 🟢 APAC supplies this page's best permissive service *and* two of its
+clearest licence traps; the grant must be read per repository.
 
 ### LATAM
 
@@ -527,6 +660,31 @@ region's permissive platform-of-record tier is empty by measurement, not by omis
 consequence for a LATAM engagement is concrete: **attach over APIs, do not fork**, and budget the
 platform layer as integration rather than customisation.
 
+
+#### 🆕 `p601` — `2026-11-01` — the supply-side gap, measured with a denominator for the first time
+
+🔴 **`1` of `864` addresses (`0.12 %`) in this pass's `30`-axis sweep is LATAM-placed**, and it has
+**`1★`**: [`JackStar6677-1/edudocente-studio`](https://github.com/JackStar6677-1/edudocente-studio)
+(🟢 MIT, `1,094 B` byte-read, `main`) — a Spanish-language generator of print-ready assessments.
+🟢 Recorded as a **measured gap with its denominator**, which is the one thing `p600` asked for here
+after closing with `0 of 9` promoted rows LATAM-placed.
+
+🔵 **Why this matters more than it looks.** The demand side of this region is the best-evidenced on this
+page — Digital Education Council with Tec de Monterrey at `92 %` of students and `79 %` of faculty
+actively using AI, UNESCO IESALC across `200` institutions in `19` countries reporting adoption
+outrunning governance. 🔴 **The supply side is `one 1★` repository.** Those two facts together say the
+LATAM play is **not** "adopt and customise the regional open stack" — 🟢 **there is no regional open
+stack to adopt.**
+
+🟢 **So the defensible LATAM motion is localisation and build**, on the permissive, region-neutral
+foundations this pass verified: `surveyjs/survey-library` (MIT) or `didi/xiaoju-survey` (Apache-2.0)
+for delivery, `translate-tools/linguist` (BSD-3-Clause) for in-language conversion, and the MIT
+research-writing tier for the Spanish- and Portuguese-language university market — **none of which is
+LATAM-origin, all of which are LATAM-deployable.**
+🟡 **And the honest caveat:** `topic:lesson-planning` is `100 %` unheld and its whole population is
+`0–5★` repositories created in `2026`, so this gap may be a *timing* observation rather than a
+structural one. Re-measure in `10` passes before treating `0.12 %` as the region's ceiling.
+
 ### Global
 
 🆕 **`p600` — a new permissive tier, and a licence risk that sits at the TOP of the quality ranking.**
@@ -583,6 +741,30 @@ assembled from rows on these shelves — Aureus ERP (back office), Agora Flat (s
 Autolab/Anubis (course delivery + autograding), JupyterHub (compute), Kolibri Studio (offline
 packaging), FSRS-rs (retention), Learner Credential Wallet (credentialing). 🔵 **That was true before
 this pass and unstatable, because `78.4 %` of what this base had found was dropped.**
+
+
+#### 🆕 `p601` — `2026-11-01` — the cross-region rule this pass establishes: read the grant before the shortlist
+
+🔴 **In education, star rank is an *anti*-signal for commercial usability.** `29` rows whose GitHub
+licence field reads `NOASSERTION` were byte-read at their real default branch, each with its own
+fabricated-path control at `404`. **`28 of 29` (`96.6 %`) resolved to a readable grant** — so
+`NOASSERTION` is **not** "unknown" and must stop being treated as a write-off. Of those `28`:
+
+| disposition | count | share |
+| --- | --: | --: |
+| 🟢 permissive (MIT / Apache-2.0 / BSD / Blue Oak / AAL / public domain) | `11` | `39.3 %` |
+| 🔴 **`BLOCK` — NonCommercial CC, all-rights-reserved, or bespoke** | 🔴 **`11`** | 🔴 **`39.3 %`** |
+| 🟡 reciprocal (CC BY-SA, GPL family) | `4` | `14.3 %` |
+| 🟡 attribution-only content | `1` | `3.6 %` |
+
+🔴 **And the distribution is the finding: the top `4` by stars are all `BLOCK`** — `54,881★`,
+`13,872★`, `13,200★`, `11,200★` — and `4 of the top 5`. 🔵 **Mechanism, which is why it generalises
+across every region above:** the largest artefacts in education are **courseware**, and courseware
+authors choose `NC` to prevent resale. 🟢 **Operational rule for any engagement, any region: rank the
+shortlist by grant first and stars second, and byte-read the grant at the branch
+`git ls-remote --symref` reports — never at `main` by assumption.**
+Evidence: [`../evidence/grants-byteread.2026-11-01-p601.tsv`](../evidence/grants-byteread.2026-11-01-p601.tsv)
+(`55` grants, `55 of 55` controls `404`).
 
 ## 🔴 Declared regional gaps — a nil in prose reads like coverage
 

@@ -1,8 +1,100 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — four recipes (`P-601-A`…`P-601-D`), every component grant byte-read at its real default branch with a per-repo fabricated-path control at `404`
+
+🔵 **What is new about these four.** `P-601-A` serves a buyer this file has never addressed — the
+**university research office**. `P-601-B` closes the **scoring seam** `p600` named and could not fill,
+because the delivery layer did not exist on this base until this pass. `P-601-C` is assembled entirely
+from **in-region APAC** components. `P-601-D` exists because the LATAM supply measurement came back at
+`1` of `864` addresses, so the recipe has to be a *build* recipe rather than an *adopt* recipe.
+🔴 **No component below is NonCommercial, reciprocal or grantless.** Excluded by that rule and named so
+no one re-finds them hopefully: `Imbad0202/academic-research-skills` (`54,881★`, CC BY-NC),
+`TheOdinProject/curriculum` (`13,200★`, CC BY-NC-SA), `wdcpclover/ai4paper` (`4,041★`, grantless).
+
+### 🟢 `P-601-A` — University research-office manuscript pipeline (North America, EMEA higher ed)
+
+**Buyer:** research office / graduate school. **Not** the classroom, which is where every prior recipe
+on this page points.
+
+| Stage | Component | Grant (byte-read) | Wiring |
+| --- | --- | --- | --- |
+| 1. Orchestration | [`OpenNSWM-Lab/FAROS`](https://github.com/OpenNSWM-Lab/FAROS) `3,042★` | 🟢 MIT (`1,075 B`, `main`) | Blueprint runtime: idea → experiment → draft → review. It owns the state machine; everything below is a step inside it |
+| 2. Target-journal conventions | [`brycewang-stanford/Awesome-Journal-Skills`](https://github.com/brycewang-stanford/Awesome-Journal-Skills) `1,346★` | 🟢 MIT (`1,067 B`, `main`) | Load the pack for the target venue (AER, QJE, Nature, Cell, `200+`) as the style contract before drafting |
+| 3. Discipline voice | [`hanlulong/econ-writing-skill`](https://github.com/hanlulong/econ-writing-skill) `693★` | 🟢 MIT (`1,063 B`, `main`) | Swap per faculty. Economics shown; `WenyuChiou/ai-research-skills` (MIT) is the generic catalogue |
+| 4. Prose discipline | [`Kiterlin/anti-defensive-writing`](https://github.com/Kiterlin/anti-defensive-writing) `1,583★` | 🟢 MIT (`1,065 B`, `main`) | Run as a revision pass, not a generation pass — it strips hedging from an existing draft |
+| 5. 🟢 **Citation integrity** | [`federicodeponte/opendraft`](https://github.com/federicodeponte/opendraft) `523★` | 🟢 MIT (`1,081 B`, 🔴 `master`) | **The hallucination gate.** Checks every DOI against scholarly databases. 🔴 Make this a blocking step — it is the only component that can fail the pipeline on a factual ground |
+| 6. Adversarial review | [`Spark-To-Paper-Skills/paperjury`](https://github.com/Spark-To-Paper-Skills/paperjury) `1,214★` | 🟢 MIT (`1,067 B`, `main`) | Pre-submission stress test: review → verdict → revise → verify. Loop to stage 4 on a reject verdict |
+| 7. Output | [`appautomaton/latex-arxiv-SKILL`](https://github.com/appautomaton/latex-arxiv-SKILL) `473★` + [`latextemplates/scientific-thesis-template`](https://github.com/latextemplates/scientific-thesis-template) `397★` | 🟢 MIT (`1,069 B`) + 🟡 `0BSD` (`665 B`) | arXiv-ready LaTeX. 🟡 The template's copyright line is an unfilled `[year] [fullname]` (`601-D`) — fill it before delivery |
+| 8. Retrieval evaluation | [`beir-cellar/beir`](https://github.com/beir-cellar/beir) `2,327★` | 🟢 Apache-2.0 (`11,348 B`, `main`) | If stages 2–5 are RAG-backed, this is the harness that proves the retrieval layer works. `15+` IR datasets |
+
+🟡 **Honest limit:** stages `2`–`6` are **prompt/skill assets**, not services — composable context with
+no runtime or evaluation of their own. `FAROS` (1) and `beir` (8) are the only executable components.
+🔵 **Sequence that matters:** `5` before `6`. Reviewing a draft whose citations are unverified wastes
+the expensive step on text that may be withdrawn.
+
+### 🟢 `P-601-B` — Closing the scoring seam: generate → deliver → score → retain (any region)
+
+🔴 **The gap this fills, stated exactly.** `p600` shelved `agenticfabriq/beacon` as a free-text grading
+harness and recorded that `nbgrader` leaves the scoring seam open. 🔴 **Neither it nor any prior recipe
+named a component that renders an item to a learner and captures the response** — the step was
+hand-waved for `600` passes. `P-601-B` is that step.
+
+| Stage | Component | Grant (byte-read) | Wiring |
+| --- | --- | --- | --- |
+| 1. Item generation | `agenticfabriq/beacon` (`p600` shelf) | 🟢 Apache-2.0 (`11,358 B`) | Emits items **as JSON**, which is the contract stage 2 consumes |
+| 2. 🟢 **Delivery & scoring** | [`surveyjs/survey-library`](https://github.com/surveyjs/survey-library) `4,918★` | 🟢 MIT (`1,102 B`, 🔴 `master`) | **The new layer.** JSON-schema runtime for React/Angular/Vue/vanilla: renders, validates, scores. Embed inside an existing LMS page |
+| 3. Service deployment | [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey) `3,803★` | 🟢 Apache-2.0 (`11,412 B`, `main`) | Use **instead of** stage 2 when the client needs a standalone service with analytics and in-region storage rather than an embedded library |
+| 4. Live / proctored sessions | [`nymanjens/quizmaster`](https://github.com/nymanjens/quizmaster) `327★` | 🟢 Apache-2.0 (`591 B`, 🔴 `master`) | Synchronous multi-participant runs — vivas, in-class checks |
+| 5. 🟢 **Retention loop** | [`2anki/2anki.net`](https://github.com/2anki/2anki.net) `328★` → `p600` spaced-repetition tier | 🟢 MIT (`LICENSE.md`, `1,310 B`, `main`) | Route **missed** items from stages 2–4 into spaced repetition. This is the loop `p600`'s retention tier had no feeder for |
+| 6. Mastery gate | `fcescob/understand` (`p600` shelf) | 🟢 MIT (`1,075 B`) | Advance on mastery, not completion — reads stage 5's recall state |
+
+🟡 **Interchange limit, flagged before anyone promises it:** 🔴 **none of stages 2–4 implements QTI**,
+so integration with an existing institutional assessment estate is bespoke work. Scope it explicitly.
+
+### 🟢 `P-601-C` — APAC in-region, in-language courseware stack (data residency by construction)
+
+🔵 **Every component is APAC-originated or language-neutral, and all are permissive** — so the stack
+answers a sovereignty requirement without a licence exception.
+
+| Stage | Component | Grant (byte-read) | Wiring |
+| --- | --- | --- | --- |
+| 1. Platform of record | [`open-scratch/teaching-open`](https://github.com/open-scratch/teaching-open) `633★` | 🟢 Apache-2.0 (`11,371 B`, 🔴 `master`) | CN-built K-12 platform shipping Scratch + ScratchJr + Python **with** courses, classes, assignments, permissions. The deployable spine |
+| 2. Assessment service | [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey) `3,803★` | 🟢 Apache-2.0 (`11,412 B`, `main`) | 🟢 Self-hosted, analytics included — **no learner response leaves the region** |
+| 3. Courseware conversion | `youngman2007/courseware-cn-annotator` (`p600` shelf) | 🟢 MIT (`1,093 B`) | In-language courseware annotation |
+| 4. Translation | [`translate-tools/linguist`](https://github.com/translate-tools/linguist) `1,082★` | 🟢 BSD-3-Clause (`1,542 B`, 🔴 `master`) | Offline-capable — keeps stage 3 running without an external MT call |
+| 5. Reading support | [`rampaa/JL`](https://github.com/rampaa/JL) `404★` + [`tristcoil/hanabira.org`](https://github.com/tristcoil/hanabira.org) `432★` | 🟢 Apache-2.0 (`11,357 B`) + 🟢 MIT (`1,061 B`) | JA lookup; JA **and** KO self-hostable portal |
+| 6. Teacher-side authoring | [`liqinling1994-cloud/master-teacher`](https://github.com/liqinling1994-cloud/master-teacher) | 🟢 MIT (`1,063 B`, `main`) | 名师问问 lesson-design skill, `152` personas. 🟡 `4★` — a pattern to copy, not a dependency to pin |
+
+🔴 **Excluded from this stack on licence grounds, both APAC and both tempting:**
+`wdcpclover/ai4paper` (`4,041★`, 🔴 **grantless** — no file at `main`, control `404`) and
+`Allenpandas/BJTU-CS-Notebook` (🔴 CC BY-NC-SA).
+
+### 🟢 `P-601-D` — LATAM Spanish/Portuguese-language build (because there is no regional stack to adopt)
+
+🔴 **The measurement that dictates this recipe's shape.** `1` of `864` addresses in this pass's sweep is
+LATAM-placed, and it has `1★`. 🟢 **So this is deliberately a build-and-localise recipe on
+region-neutral permissive foundations — not an adopt-the-local-stack recipe, because no local stack
+exists.** The demand side is the best-evidenced of any region (Digital Education Council with Tec de
+Monterrey: `92 %` of students, `79 %` of faculty; UNESCO IESALC: `200` institutions across `19`
+countries, adoption outrunning governance), which is precisely why the supply gap is an opportunity
+rather than a reason to skip the region.
+
+| Stage | Component | Grant (byte-read) | Wiring |
+| --- | --- | --- | --- |
+| 1. 🟢 **Regional seed** | [`JackStar6677-1/edudocente-studio`](https://github.com/JackStar6677-1/edudocente-studio) | 🟢 MIT (`1,094 B`, `main`) | **The only LATAM-placed address found.** Spanish-language print-ready assessment generator. 🟡 `1★` — fork it as a starting point and expect to own it |
+| 2. Delivery | [`surveyjs/survey-library`](https://github.com/surveyjs/survey-library) `4,918★` | 🟢 MIT (`1,102 B`, 🔴 `master`) | Locale-driven rendering; no regional alternative needed |
+| 3. In-language conversion | [`translate-tools/linguist`](https://github.com/translate-tools/linguist) `1,082★` | 🟢 BSD-3-Clause (`1,542 B`) | ES/PT conversion of existing courseware |
+| 4. University research market | `P-601-A` stages `2`–`6` | 🟢 all MIT | Applies unchanged — the research-writing tier is language-neutral and serves ES/PT-language faculty |
+| 5. Print-first delivery | stage 1, retained deliberately | 🟢 MIT | 🔵 `edudocente-studio` generates **print-ready** output. Low-connectivity classrooms are a real regional constraint; do not replace this with a web-only flow by reflex |
+
+🟡 **Re-measure before treating this as structural.** `topic:lesson-planning` is `100 %` unheld with
+its entire population at `0–5★` and created in `2026`, so the LATAM supply gap may be a timing
+observation. 🟢 **Falsifiable:** re-run the sweep in `10` passes; if LATAM placement is still `≤ 2` of
+`~864`, the gap is structural and stage 1 should be replaced by a Globant-owned asset.
 
 ## 🆕 `p600` — `2026-11-01` — three recipes built from supply that did not exist on these pages yesterday, and every component grant byte-read this pass
 

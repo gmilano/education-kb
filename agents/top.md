@@ -1,8 +1,132 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 `16` AGENT ROWS PROMOTED, SHELF `53 → 69`, AND THEY ARE ALL ONE CATEGORY THIS BASE HAS NEVER HELD: HIGHER-ED RESEARCH & ACADEMIC-WRITING AGENT SKILL PACKS. 🔴 BUT THE PASS'S LOAD-BEARING FINDING IS A TRAP AVOIDED, NOT A ROW SHIPPED: THE SINGLE LARGEST NEW FIND IN THIS SECTOR — `54,881★` — IS `CC BY-NC`, AND SO ARE THE NEXT THREE. 🔴 OF `29` `NOASSERTION` ROWS BYTE-READ, `28` RESOLVED AND `11 of 28` (`39.3 %`) ARE COMMERCIALLY UNUSABLE — AND THE TOP `4` BY STARS ARE ALL IN THAT `11`. 🟢 STAR RANK IS AN *ANTI*-SIGNAL FOR USABILITY IN THIS BAND. SIX REGISTERED (`601-A`…`601-F`).**
+
+### 🔴 Read this before the promoted rows — the most-starred education find of `601` passes cannot be used
+
+[`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) —
+**`54,881★`**, `main`, `LICENSE` **`19,584 B`** byte-read `2026-11-01`, fabricated-path control `404`:
+
+| | value |
+| --- | --- |
+| GitHub `spdx_id` | 🔴 `NOASSERTION` — *carries no information* |
+| what the `19,584` bytes say | 🔴 **`Creative Commons Attribution-NonCommercial`** |
+| usable in a Globant client engagement | 🔴 **No.** `NonCommercial` excludes paid delivery |
+
+🔵 **Why this is the finding and not a footnote.** It is the largest education-adjacent repository this
+base has ever measured — `2.3×` the stars of anything on this shelf — it is squarely on-topic
+(research → write → review → revise), and a studio ranking candidates by stars would reach it first
+and vendor it. Its sibling [`…-skills-codex`](https://github.com/Imbad0202/academic-research-skills-codex)
+(`13,872★`) is the **same `19,584`-byte grant**.
+
+🔴 **And it is not an isolated case — it is the top of the distribution.** `NOASSERTION` rows from this
+pass's sweep, ranked by stars:
+
+| ★ | repo | grant, byte-read at real default branch | usable |
+| --: | --- | --- | --- |
+| **`54,881`** | `Imbad0202/academic-research-skills` | 🔴 CC BY-NC (`19,584 B`) | 🔴 **no** |
+| **`13,872`** | `Imbad0202/academic-research-skills-codex` | 🔴 CC BY-NC (`19,584 B`) | 🔴 **no** |
+| **`13,200`** | `TheOdinProject/curriculum` | 🔴 CC BY-NC-SA (`license.md`, `442 B`) | 🔴 **no** |
+| **`11,200`** | `AhmadHassan-BTed/Turnitout-Humanizer` | 🔴 *"Proprietary License … All rights reserved"* (`800 B`) | 🔴 **no** |
+| `4,283` | `Attendize/Attendize` | 🟢 Attribution Assurance Licence (`2,073 B`, branch **`develop`**) | 🟢 yes |
+| `3,152` | `AIScientists-Dev/academic-humanizer` | 🟢 MIT (`890 B`) | 🟢 yes |
+| `3,113` | `wotakumoe/wotaku` | 🔴 *"All Rights Reserved"* (`266 B`) | 🔴 **no** |
+| `2,906` | `git-learning-game/oh-my-git` | 🟢 Blue Oak Model 1.0.0 (`1,552 B`) | 🟢 yes |
+
+🟢 **`601-A` — the measured rule, with a denominator.** `29` `NOASSERTION` rows byte-read;
+**`28 of 29` (`96.6 %`) resolved to a readable grant**, so 🔴 **`NOASSERTION` is not "unknown" and must
+stop being treated as a write-off** — `p600` set aside `310` such rows unread. Of the `28` resolved,
+**`11` (`39.3 %`) are `BLOCK`** (`7` NonCommercial CC, `2` all-rights-reserved, `2` bespoke), `11` are
+permissive, `4` reciprocal, `1` attribution-only content, `1` unresolved.
+🔴 **`4 of the top 5` by stars are `BLOCK`; `11 of 11` `BLOCK` rows sit above the median star count.**
+🔵 **Mechanism, which is what makes it generalise:** the largest repositories in *education* are
+**courseware**, and courseware authors pick `NC` to stop resale. So in this sector the usual heuristic
+inverts — **more stars means less likely usable**, and the grant must be read *before* the shortlist is
+drawn, not after.
+Evidence: [`../evidence/grants-byteread.2026-11-01-p601.tsv`](../evidence/grants-byteread.2026-11-01-p601.tsv) —
+`55` grants, **`55 of 55` fabricated-path controls `404`**.
+
+### 🟢 Promoted — higher-ed research & academic-writing agent skills, a category this shelf did not have
+
+🔵 **Why it was missing for `600` passes:** `topic:academic-writing` is an axis this base had **never
+queried** — `30 of 30` addresses unheld (`100 %`), and it alone supplied **`7 of the 11`** shippable
+rows the whole `864`-address sweep produced. 🟢 Every grant below was byte-read `2026-11-01` at the
+**real default branch** (`git ls-remote --symref`), each with its **own** fabricated-path control at `404`.
+
+| Agent | ★ | Grant (byte-read) | Branch | Region | Why it earns a row |
+| --- | --: | --- | --- | --- | --- |
+| [Adkid-Zephyr/anti-defensive-writing-Skill](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill) | **4,676** | 🟢 MIT (`1,069 B`) | `main` | APAC | Strips hedging from papers; CN/EN prompt pack |
+| [AIScientists-Dev/academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) | **3,152** | 🟢 MIT (`890 B`) | `main` | Global | 🟢 Permissive counterpart to the proprietary `Turnitout-Humanizer` above |
+| [OpenNSWM-Lab/FAROS](https://github.com/OpenNSWM-Lab/FAROS) | **3,042** | 🟢 MIT (`1,075 B`) | `main` | Global | Blueprint-driven AutoResearch runtime: idea → experiment → paper → review |
+| [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) | **1,676** | 🟢 MIT (`1,078 B`) | `main` | North America | Fork-ready academic template: LaTeX/Beamer + R, quality gates, replication |
+| [Kiterlin/anti-defensive-writing](https://github.com/Kiterlin/anti-defensive-writing) | **1,583** | 🟢 MIT (`1,065 B`) | `main` | Global | Codex-native sibling of the row above — second runtime, same job |
+| [lishix520/academic-paper-skills](https://github.com/lishix520/academic-paper-skills) | **1,456** | 🟢 MIT (`1,068 B`) | `main` | APAC | Splits planning (strategist) from drafting (composer) |
+| [brycewang-stanford/Awesome-Journal-Skills](https://github.com/brycewang-stanford/Awesome-Journal-Skills) | **1,346** | 🟢 MIT (`1,067 B`) | `main` | North America | Per-journal skill packs — AER, QJE, Nature, Cell, `200+` |
+| [Spark-To-Paper-Skills/paperjury](https://github.com/Spark-To-Paper-Skills/paperjury) | **1,214** | 🟢 MIT (`1,067 B`) | `main` | Global | Pre-submission adversarial review: verdict → revise → verify |
+| [Light0305/Light-skills](https://github.com/Light0305/Light-skills) | **845** | 🟢 MIT (`1,066 B`) | 🔴 `master` | APAC | Research/competition/innovation-project pack; `main`-only probe misses it |
+| [WantongC/journal-adapt-writing-skill](https://github.com/WantongC/journal-adapt-writing-skill) | **768** | 🟢 MIT (`1,057 B`) | `main` | Global | Learns a journal's conventions from its own corpus, then revises to match |
+| [hanlulong/econ-writing-skill](https://github.com/hanlulong/econ-writing-skill) | **693** | 🟢 MIT (`1,063 B`) | `main` | Global | Discipline-specific: synthesises `50+` economics writing guides |
+| [WenyuChiou/ai-research-skills](https://github.com/WenyuChiou/ai-research-skills) | **535** | 🟢 MIT (`1,068 B`) | `main` | Global | Cross-agent `SKILL.md` catalogue incl. project memory |
+| [alfonso0512/research-writing-skill](https://github.com/alfonso0512/research-writing-skill) | **533** | 🟢 MIT (`1,092 B`) | `main` | APAC | `30` templates incl. grant applications and reviewer responses |
+| [federicodeponte/opendraft](https://github.com/federicodeponte/opendraft) | **523** | 🟢 MIT (`1,081 B`) | 🔴 `master` | **EMEA** | 🟢 Checks citation DOIs against scholarly databases — the hallucination seam. SCAILE Technologies GmbH (DE) |
+| [appautomaton/latex-arxiv-SKILL](https://github.com/appautomaton/latex-arxiv-SKILL) | **473** | 🟢 MIT (`1,069 B`) | `main` | Global | arXiv-ready review-paper harness for Codex CLI / Claude Code |
+| [jamditis/claude-skills-journalism](https://github.com/jamditis/claude-skills-journalism) | **444** | 🟢 MIT (`1,068 B`) | 🔴 `master` | North America | Verification + FOIA + data journalism — journalism-school adjacent |
+
+🔵 **What the category is, stated plainly, because it changes what this shelf is for.** These are not
+tutors and not LMS plugins — the two shapes that dominate rows `1–53`. They are **researcher-facing**
+agent skill packs, and they put this base in front of the **university research office**, not only the
+classroom. 🟡 **Limit attached:** `14 of 16` are prompt/skill assets rather than services — they are
+composable context, not deployable runtimes, and they carry no evaluation harness of their own.
+
+### 🟢 `601-B` — a fourth and fifth non-`main` default-branch name, and one that has neither
+
+`p600` found `release` (MathWorks). This pass adds, every one confirmed by `git ls-remote --symref`:
+
+| repo | default branch | consequence |
+| --- | --- | --- |
+| `Attendize/Attendize` (`4,283★`) | 🔴 **`develop`** | `main`/`master` probe reports it grantless |
+| `pythonarcade/arcade` | 🔴 **`development`** | same, and no grant file on it either |
+| `fasiha/ebisu` | 🔴 **`gh-pages`** | 🔴 **`13` branches, and *no* `main` and *no* `master` exist at all** |
+| `Light0305/Light-skills`, `federicodeponte/opendraft`, `jamditis/claude-skills-journalism` | `master` | shipped above — caught only because the symref was read first |
+
+🔴 **`601-C` — and the `ebisu` case defeats the byte-read itself, which is new.** `fasiha/ebisu` is
+reported `Unlicense` by the search API; `LICENSE` and `LICENSE.md` return `404` on **all** of
+`gh-pages`, `v3`, `main`, `master`. 🟢 **So the honest disposition is `ABSTAIN`, not `Unlicense` and not
+"grantless"** — the API makes a claim no byte-read can confirm, and this base's rule is that the bytes
+win, which here means *nothing* wins. **It is not shipped.** `TheOdinProject/theodinproject` (`4,675★`,
+API `MIT`) and `Techtonica/curriculum` (`670★`, API `CC-BY-SA-4.0`) are the same shape: `ABSTAIN`, `5` rows total.
+
+### 🔴 `601-D` — a `0BSD` grant on this pass's own shortlist is an unfilled template
+
+[`latextemplates/scientific-thesis-template`](https://github.com/latextemplates/scientific-thesis-template)
+(`397★`, `main`, `LICENSE` `665 B`): *"BSD Zero Clause License — Copyright (c) **`[year]`
+`[fullname]`**"*. 🔵 The placeholders were never filled. `0BSD` demands no attribution, so the grant
+still **operates** — 🟡 **but it is the `gate-template-identity` class caught in a live grant file**, and
+a reviewer who treats an unfilled copyright line as proof of care would be wrong. 🟢 **Recorded, and
+shipped only to `repos/foundations.md` with the defect named** — not onto this shelf.
+
+### 🟡 `601-E` — regionally placed, honestly too small to shelve, recorded so the gap is not silence
+
+`p600` closed with **`0 of 9`** promoted rows LATAM-placed. This pass found the LATAM axis is **not
+empty — it is immature**, which is a different and more useful statement:
+
+| repo | ★ | Grant (byte-read) | Region | What it is |
+| --- | --: | --- | --- | --- |
+| [liqinling1994-cloud/master-teacher](https://github.com/liqinling1994-cloud/master-teacher) | `4` | 🟢 MIT (`1,063 B`) | APAC | 名师问问 v5.4 — teacher lesson-design skill, `152` personas |
+| [Kambere-44/AI-Assistant-For-Teachers](https://github.com/Kambere-44/AI-Assistant-For-Teachers) | `3` | 🟢 MIT | Global | Lesson summaries + quiz generation |
+| [seanmcww/uk-english-lesson-planning](https://github.com/seanmcww/uk-english-lesson-planning) | `2` | 🟢 Apache-2.0 (`11,357 B`) | **EMEA** | 🟢 England **KS3/KS4** English — grounded in a named national curriculum |
+| [JackStar6677-1/edudocente-studio](https://github.com/JackStar6677-1/edudocente-studio) | `1` | 🟢 MIT (`1,094 B`) | **LATAM** | 🟢 **The only LATAM-placed find in `864` addresses.** Spanish-language print-ready assessment generator |
+
+🔴 **The gap, stated with its denominator so it cannot be mistaken for coverage:** `1` of `864`
+addresses (`0.12 %`) is LATAM-placed, and it has **`1★`**. 🟢 `topic:lesson-planning` is `100 %`
+education-relevant and `100 %` unheld — **the most in-domain axis measured this pass** — and its entire
+population is `0–5★` repos created in `2026`. 🔵 **So the category is forming now.** A LATAM engagement
+cannot be staffed from this tier today; it can be *watched* from it, and `edudocente-studio` is the
+address to watch. 🟡 Re-measure in `10` passes before drawing any trend from `1` repository.
 
 ## 🆕 `p600` — `2026-11-01` — `9` agent rows promoted, the shelf goes `44 → 53`, and the discovery nil this page has reported for twenty-nine passes was a sampling artefact
 

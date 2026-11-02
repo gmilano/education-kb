@@ -1,8 +1,74 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 AN ASSESSMENT-DELIVERY PLATFORM TIER, NEW ON THIS PAGE: THE LAYER THAT RENDERS AND SCORES AN ITEM, WHICH `600` PASSES OF TUTOR AND LMS ROWS ASSUMED AND NEVER NAMED. `4` PLATFORMS, `4,918★` DOWN TO `327★`, ALL MIT OR APACHE-2.0, ALL BYTE-READ. 🔴 AND THE ERP/SIS GAP — THIS PAGE'S OLDEST — IS RE-MEASURED AGAINST ITS WHOLE POPULATION FOR THE FIRST TIME: `topic:school-management` IS `88.9 %` IN-DOMAIN AND YIELDS `0` SHIPPABLE PLATFORMS. THE GAP IS CONFIRMED, WITH `18` ADDRESSES OF EVIDENCE.**
+
+### 🟢 The assessment-delivery tier — platforms a studio attaches AI to, rather than rebuilds
+
+| Platform | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | What it is, and the AI seam |
+| --- | --: | --- | --- | --- | --- |
+| [surveyjs/survey-library](https://github.com/surveyjs/survey-library) | **4,918** | 🟢 MIT (`1,102 B`) | 🔴 `master` | **EMEA** | JSON-schema form/quiz runtime (React, Angular, Vue, vanilla). 🟢 **An item generator emits JSON; this renders, validates and scores it.** Devsoft Baltic OÜ (EE) |
+| [didi/xiaoju-survey](https://github.com/didi/xiaoju-survey) | **3,803** | 🟢 Apache-2.0 (`11,412 B`) | `main` | **APAC** | Deployable questionnaire/exam/quiz **service** with analytics — not a library. DiDi (CN). 🟢 The APAC-sovereign option when data must stay in-region |
+| [nymanjens/quizmaster](https://github.com/nymanjens/quizmaster) | `327` | 🟢 Apache-2.0 (`591 B`) | 🔴 `master` | Global | Synchronous multi-participant quiz runner — the live/proctored session shape |
+| [2anki/2anki.net](https://github.com/2anki/2anki.net) | `328` | 🟢 MIT (`LICENSE.md`, `1,310 B`) | `main` | Global | Notion → Anki pipeline; 🟢 feeds the **spaced-repetition tier `p600` opened on this page** from institutional notes |
+
+🔵 **Why this tier was missing, stated plainly.** This page has carried LMS platforms (Moodle,
+Open edX, Sakai, Chamilo, ILIAS, OpenOLAT, Canvas) and `p600` added retention. 🔴 **An LMS stores and
+tracks; it does not author or score free-form items well, which is exactly why every AI-tutor recipe
+on `compose/patterns.md` had to hand-wave the delivery step.** 🟢 These four are that step, under
+permissive grants, and two of them are full services rather than libraries.
+🟡 **Limit:** none implements **QTI**, so interchange with an existing assessment estate is bespoke work.
+
+### 🟢 Teaching platforms — classroom-shaped, permissive, and one is APAC-sovereign
+
+| Platform | ★ | Grant (byte-read) | Branch | Region | Note |
+| --- | --: | --- | --- | --- | --- |
+| [open-scratch/teaching-open](https://github.com/open-scratch/teaching-open) | `633` | 🟢 Apache-2.0 (`11,371 B`) | 🔴 `master` | **APAC** | 🟢 **Scratch + ScratchJr + Python teaching platform with courses, classes, assignments, permissions and community** — a complete K-12 coding school in one deployable, CN-built and CN-localised |
+| [tristcoil/hanabira.org](https://github.com/tristcoil/hanabira.org) | `432` | 🟢 MIT (`1,061 B`) | `main` | **APAC** | Self-hostable Japanese **and** Korean learning portal — language-school shape |
+| [Attendize/Attendize](https://github.com/Attendize/Attendize) | **4,283** | 🟢 Attribution Assurance Licence (`2,073 B`) | 🔴 **`develop`** | Global | Ticketing/attendee management for open days, orientation, CPD. 🟡 AAL is OSI-approved but rare — read its attribution clause before white-labelling |
+| [AhmadHassan-BTed/Attendify](https://github.com/AhmadHassan-BTed/Attendify) | **3,836** | 🟢 MIT (`1,056 B`) | `main` | Global | Attendance **and leave** portal — the only substantial permissive repo in its axis |
+
+### 🔴 The ERP / SIS gap — re-measured against its full population, and confirmed
+
+`p599` and `p600` carried this as this page's oldest open gap. This pass measured the axis exhaustively
+rather than sampling it: **`topic:school-management` + `topic:student-information-system` +
+`topic:student-management`, `30` addresses each.**
+
+| | result |
+| --- | --: |
+| in-domain relevance of `topic:school-management` | 🟢 **`88.9 %`** — the cleanest axis measured this pass |
+| addresses unheld | `18` |
+| 🔴 **shippable platforms** (permissive **and** `≥ 300★` **and** pushed since `2025-06`) | 🔴 **`0`** |
+| largest address in the axis | `ketanchoyal/Our-E-School` — `504★`, MIT, 🔴 **last pushed `2021-08-19`** |
+| remainder | `43–138★`, PHP/Laravel/Flask/MERN coursework projects, majority last pushed before `2025` |
+
+🟢 **So the gap is not an artefact of a narrow search — it is a property of the sector.** The axis is
+unambiguous (no homonym contamination: `88.9 %` in-domain), it is well populated (`18` unheld
+addresses), and it contains **no permissive, maintained, substantial student-information system.**
+🔵 **What that means for an engagement:** SIS/ERP remains **buy-or-build**, and the credible open
+anchors stay the ones this page already names — `frappe/education` (🔴 `19`-byte `license.txt` naming
+GPL-3 without granting it, `600-H`), `OpenEduCat` (LGPLv3, Odoo-dependent) and `ERPNext` (GPL-3) —
+**all three reciprocal or defective, none permissive.** 🟡 Unchanged from `p600`; now evidenced rather
+than asserted.
+
+### 🔴 Platform-shaped addresses found and rejected this pass
+
+| Address | ★ | Grant (byte-read) | Why rejected |
+| --- | --: | --- | --- |
+| [TheOdinProject/curriculum](https://github.com/TheOdinProject/curriculum) | **13,200** | 🔴 CC BY-NC-SA (`license.md`, `442 B`) | NonCommercial **and** ShareAlike — cannot enter paid delivery |
+| [wdcpclover/ai4paper](https://github.com/wdcpclover/ai4paper) | **4,041** | 🔴 **grantless** — no file at `main`, control `404` | All rights reserved by default |
+| [AhmadHassan-BTed/Turnitout-Humanizer](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer) | **11,200** | 🔴 *"Proprietary License … All rights reserved"* (`800 B`) | 🟡 Same author as `Attendify` above, opposite grant — **per-repo probes, never per-author** |
+| [Yogndrr/MERN-School-Management-System](https://github.com/Yogndrr/MERN-School-Management-System) | `648` | 🔴 licence field `NONE` | The axis's second-largest address, and grantless |
+
+🔵 **One author, two grants.** `AhmadHassan-BTed` ships `Attendify` under MIT and
+`Turnitout-Humanizer` as proprietary. 🟢 **Rung for this page: a grant verified on one repository
+tells you nothing about its neighbour, even under the same owner** — every row above was probed
+individually, each with its own fabricated-path control at `404`.
+Evidence: [`../evidence/grants-byteread.2026-11-01-p601.tsv`](../evidence/grants-byteread.2026-11-01-p601.tsv),
+[`../evidence/axis-relevance-funnel.2026-11-01-p601.tsv`](../evidence/axis-relevance-funnel.2026-11-01-p601.tsv).
 
 ## 🆕 `p600` — `2026-11-01` — a permissive, self-hostable retention platform tier finally exists on this page, and the ERP/SIS gap moves for the first time in many passes
 

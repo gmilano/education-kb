@@ -1,8 +1,118 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🔴 `p600`'S HEADLINE NUMBER IS NOT WRONG BUT IT IS NOT A SUPPLY MEASUREMENT: `71.1 %` OF `864` ADDRESSES ARE NEW AND `1.27 %` ARE SHIPPABLE, AND THE GAP IS NOT ATTRITION — IT IS THAT *NOVELTY HAS TWO CAUSES WITH OPPOSITE VALUE*. 🟢 GENUINE UNQUERIED IN-DOMAIN CATEGORIES (`academic-writing`: `100 %` NEW → `7 of 11` SHIPPABLE ROWS) AND HOMONYM DRIFT OUT OF THE SECTOR (`library-management`: `100 %` NEW → `6.7 %` RELEVANT → `0` SHIPPABLE). A SINGLE NOVELTY FIGURE AVERAGES THEM AND CANNOT TELL A CATEGORY GAP FROM A WORD COLLISION. 🔴 AND `gradebook` IS GENUINELY EXHAUSTED: `30 of 30` HELD. SIX REGISTERED (`601-A`…`601-F`).**
+
+### 🔴 `601-F` — the funnel, with every denominator attached
+
+| stage | count | of previous | of addresses |
+| --- | --: | --: | --: |
+| addresses taken (`30` job-phrased axes × `30`, deduped by slug) | **`864`** | — | `100 %` |
+| 🟢 new — unheld by `grep -ril` over every `*.md`/`*.tsv` in this repo | **`614`** | `71.1 %` | `71.1 %` |
+| education-relevant by description keyword | **`273`** | `44.5 %` | `31.6 %` |
+| 🟢 **permissive + `≥ 300★` + pushed since `2025-06`** | 🔴 **`11`** | `4.0 %` | 🔴 **`1.27 %`** |
+
+🔵 **`p600` reported `80.3 %` new on `28` fresh axes and `p599` reported `0 %`. Both measurements are
+sound and neither is a supply figure.** This pass reproduces the novelty (`71.1 %`) and then carries it
+two stages further, and the second stage is where the `30`-pass nil actually lives: 🔴 **`229 of 614`
+(`37.3 %`) new rows carry `NONE` or `NOASSERTION`** as their licence field, and in-domain relevance
+halves the pool before licence is even consulted.
+
+### 🟢 The discriminator — and it is the *word*, not the depth or the ordering
+
+| axis | new | % new | % education-relevant | shippable | reading |
+| --- | --: | --: | --: | --: | --- |
+| `academic-writing` | `30` | 🟢 **`100 %`** | `40.0 %` | 🟢 **`7`** | **genuine category gap** — never queried, in-domain, productive |
+| `library-management` | `30` | 🔴 **`100 %`** | 🔴 **`6.7 %`** | `0` | **homonym** — returns dependency managers (`aspnet/LibraryManager`) |
+| `timetable` | `28` | `96.6 %` | 🔴 **`7.1 %`** | `0` | **homonym** — returns transit and rota tooling |
+| `plagiarism-detection` | `20` | `66.7 %` | 🔴 **`5.0 %`** | `0` | **homonym** — returns code-clone detectors |
+| `assessment` | `22` | `73.3 %` | 🔴 **`13.6 %`** | `0` | **homonym** — returns cloud/security auditors (`Azure/azqr`, `BishopFox/badPods`) |
+| `admissions` | `28` | `93.3 %` | `32.1 %` | `0` | partial — hospital admissions |
+| `curriculum` | `21` | `70.0 %` | `61.9 %` | `0` | partial — *curriculum vitae* (`rbardini/resumed`) |
+| `school-management` | `18` | `66.7 %` | 🟢 **`88.9 %`** | 🔴 `0` | **in-domain and unshippable** — see below |
+| `lesson-planning` | `25` | `83.3 %` | 🟢 **`68.0 %`** | 🔴 `0` | **in-domain, forming now** — whole population `0–5★`, created `2026` |
+| `gradebook` | 🔴 **`0`** | 🔴 **`0.0 %`** | — | `0` | 🟢 **genuinely saturated — `30 of 30` already held** |
+
+🟢 **`601-F` rung: a novelty figure must be reported beside an in-domain figure, or it cannot be acted
+on.** `library-management` and `academic-writing` are indistinguishable at `100 %` new and differ by
+`7` shippable rows to `0`. 🔵 **The cheap test is the word:** a job word that another industry also uses
+(`assessment`, `timetable`, `admissions`, `curriculum`, `library-management`) collects out-of-sector
+supply; a job word that only education uses (`gradebook`, `lesson-planning`, `school-management`,
+`course-authoring`) stays in-sector. 🔴 **This refines `p600`'s "phrased as jobs, not technologies" —
+job-phrasing is necessary and not sufficient, and `p600`'s `9` highest-yield axes were high-yield partly
+*because* they were drifting out of the domain.**
+
+### 🔴 The honest limit of this pass's own instrument, stated because it bounds the table above
+
+The relevance column is a **description-keyword proxy** (`student|teacher|school|course|…`) and it has
+false negatives that matter: `academic-writing` scores `40.0 %` because its repositories say
+*"paper"*, *"journal"*, *"thesis"*, *"manuscript"* — words the screen does not carry — yet `16` of its
+rows were hand-verified in-domain and promoted. 🟢 **So `44.5 %` is a *lower bound* on relevance and
+`11` is a *lower bound* on shippable supply** (`28` rows were hand-verified permissive and in-domain
+across this pass). 🟡 The direction of the homonym finding is unaffected — a false negative cannot
+manufacture `Azure/azqr` under `topic:assessment` — but no one should quote `44.5 %` as the relevance
+of this sector.
+
+### 🔴 `601-G` — this pass broke its own census and caught it, which is the only reason the numbers above are right
+
+The first run of this sweep reported **`310`** new rows, `0.0 %` new for `gradebook`,
+`student-information-system` **and** `study-tool`, and a `41.0 %` relevance. 🔴 **All four figures were
+artefacts of `sort -u -k3,3`** — deduplicating on the *star-count* key, which silently discarded every
+row sharing a star value with a row already kept, `304` rows in all. 🔵 **The tell was not the count, it
+was the shape:** three education-core axes returning a simultaneous perfect nil is not a market fact.
+🟢 **Rung, and it is `p600-F`'s rung arriving from the other direction:** `p600-F` required that *a screen
+returning `0` be shown capable of returning non-`0`*. This failure passed that test — the screen did
+return non-`0`, on `25` other axes — so 🟢 **the rung must be strengthened: a `0` on an axis the base has
+historically mined must be confirmed against the *un-deduplicated* population before it is recorded.**
+Re-run with slug-keyed dedup: `614` new, and `gradebook` alone holds at `0` — now trustworthy, because
+`student-information-system` moved to `19` and `study-tool` to `18`.
+
+### 🟡 `601-H` — `school-management` is the sector's clearest in-domain axis and it is a ghost town
+
+`88.9 %` education-relevant, the highest clean score measured. 🔴 **And `0` shippable rows:** the
+population tops out at `ketanchoyal/Our-E-School` (`504★`, MIT, **last pushed `2021-08-19`**) and the
+remaining `17` are `43–138★` student CRUD projects in PHP/Laravel/Flask, a majority last pushed before
+`2025`. 🔵 **The reading that matters for an engagement:** open-source school administration is **not** a
+build-on-top opportunity the way courseware is — there is no permissive, maintained, substantial SIS in
+this axis, which independently corroborates the standing ERP/SIS gap this base has carried for many
+passes. 🟢 Recorded as a measured absence with its population attached, not as "nothing found".
+
+### 🔴 `601-I` — the verification instrument this task *mandates* is blind in this environment
+
+The standing instruction is to verify every repository URL with `curl -sI` before writing it. Measured
+on this pass's own `56` new URLs:
+
+| probe | real addresses | fabricated control | discriminates? |
+| --- | --- | --- | --- |
+| 🔴 `curl -L https://github.com/<slug>` | 🔴 **`403` on `56 of 56`** | 🔴 **`403`** | 🔴 **no — carries no information** |
+| 🟢 `git ls-remote --symref https://github.com/<slug>` | 🟢 **LIVE on `56 of 56`** | 🟢 `0` refs | 🟢 **yes** |
+| 🟢 `raw.githubusercontent.com/<slug>/<branch>/LICENSE` | 🟢 `200` | 🟢 `404` | 🟢 **yes** |
+| 🟢 `gh api search/repositories -f q='repo:<slug>'` | 🟢 metadata | 🟢 `422` | 🟢 **yes** |
+
+🔵 **This is `600-A`'s finding arriving at a second instrument.** `p600` showed the per-repo API
+returns `403` for real *and* fabricated addresses; the **HTML URL probe behaves identically**, and it is
+the one the task instruction names. 🔴 **A `403`-on-everything probe cannot produce a `404`, so "no
+`404`s found" would have been a vacuous pass** — the exact `p471`/`P541` shape this base screens for.
+🟢 **Every URL written this pass is verified against the three instruments that do discriminate**, each
+with a live fabricated control recorded above. 🟢 **Rung: the `curl -sI` instruction is satisfied by
+`git ls-remote --symref` in this environment, and a pass that reports URL verification by HTML status
+code must publish its fabricated control alongside it or the claim is unfounded.**
+
+Evidence: [`../evidence/axis-relevance-funnel.2026-11-01-p601.tsv`](../evidence/axis-relevance-funnel.2026-11-01-p601.tsv)
+(`30` axes, every stage), [`../evidence/grants-byteread.2026-11-01-p601.tsv`](../evidence/grants-byteread.2026-11-01-p601.tsv)
+(`55` grants, `55/55` controls `404`),
+[`../evidence/websearch-legs.2026-11-01-p601.tsv`](../evidence/websearch-legs.2026-11-01-p601.tsv) (the mandated legs).
+
+### 🔴 The mandated legs — thirty-first consecutive nil, now with a denominator per region
+
+`8` legs run as mandated (`4` global + `4` regional). 🔴 **`39 of 39` substantive tokens already held;
+`0` new.** Per region: North America `4/4` held, EMEA `5/5`, APAC `3/3`, LATAM `5/5`. 🟢 **No region
+returned silence — each returned real, dated material this base already carries**, which is the
+distinction `p600` asked later passes to preserve. 🔵 The legs are now a *currency check* on the demand
+side, not a discovery channel; the discovery channel is the topic sweep above, and it is `30` axes wide.
 
 ## 🆕 `p600` — `2026-11-01` — **🔴 `p599`'S CENTRAL FINDING IS REFUTED, AND NOT IN THE DIRECTION IT GUESSED: THE STAR-RANKED CHANNEL IS NOT EXHAUSTED AND THE *ORDERING* WAS NEVER THE BINDING CONSTRAINT — **PER-AXIS DEPTH** WAS. `p599` DREW `39` ADDRESSES FROM `6` AXES AND GENERALISED; THIS PASS DREW `334` FROM THE *SAME `6`* AND `138` ARE NEW (`41.3 %`), STAR-RANKED. 🔴 ONLY `2 of 6` OF ITS AXES ARE ACTUALLY SATURATED. 🟢 AND THE PER-REPO GITHUB API, RECORDED AS "BLOCKED" FOR MANY PASSES, HAS A WORKING SUBSTITUTE THAT AGREES WITH `git ls-remote --symref` ON `16 of 16`. 🔴 `678` UNHELD ADDRESSES FOUND; ONLY `~15` ARE SHIPPABLE, WHICH IS THE OTHER HALF OF THE FINDING.**
 

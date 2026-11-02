@@ -1,8 +1,66 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p601` — reads `2026-11-01`, commit `2026-11-02` — **🟢 `17` FOUNDATION REPOS ADDED, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH WITH ITS OWN FABRICATED-PATH CONTROL (`55 of 55` AT `404`). 🟢 THE TWO THAT MATTER MOST ARE AN ASSESSMENT-DELIVERY ENGINE (`4,918★` MIT) AND A SECOND, APAC-BUILT ONE (`3,803★` APACHE-2.0, DIDI) — THIS BASE HAD NEITHER, AND BOTH CLOSE THE "SCORING SEAM" IT HAS CARRIED FOR MANY PASSES. 🔴 `TheOdinProject` (`13,200★`), THE LARGEST OPEN CURRICULUM ESTATE FOUND, IS `CC BY-NC-SA` AND IS **NOT** ADDED.**
+
+### 🟢 Assessment & form delivery — the layer every tutoring recipe on `compose/patterns.md` assumed and none named
+
+| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Region | Role |
+| --- | --: | --- | --- | --- | --- |
+| [surveyjs/survey-library](https://github.com/surveyjs/survey-library) | **4,918** | 🟢 MIT (`1,102 B`) | 🔴 `master` | **EMEA** | JSON-driven form/quiz runtime for React, Angular, Vue, vanilla. Devsoft Baltic OÜ (EE). 🟢 **The item-rendering layer — JSON in, scored response out** |
+| [didi/xiaoju-survey](https://github.com/didi/xiaoju-survey) | **3,803** | 🟢 Apache-2.0 (`11,412 B`) | `main` | **APAC** | DiDi's questionnaire/exam/quiz platform *with* analytics — a deployable service, not a library |
+| [nymanjens/quizmaster](https://github.com/nymanjens/quizmaster) | `327` | 🟢 Apache-2.0 (`591 B`) | 🔴 `master` | Global | Live synchronous quiz runner — the proctored-session shape |
+| [2anki/2anki.net](https://github.com/2anki/2anki.net) | `328` | 🟢 MIT (`LICENSE.md`, `1,310 B`) | `main` | Global | Notion → Anki deck conversion; pairs with the spaced-repetition tier `p600` opened on `verticals/solutions.md` |
+
+🔵 **Why this is a foundation and not an agent.** `p600` shelved `agenticfabriq/beacon` as a free-text
+*grading* harness and noted the scoring seam `nbgrader` leaves open. 🟢 **These four are the other half
+of that seam — delivery and capture.** An agent that generates items had nowhere to render them; it
+does now, under MIT and Apache-2.0.
+
+### 🟢 Teaching-systems courseware — permissive, maintained, university-originated
+
+| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+| --- | --: | --- | --- | --- | --- |
+| [git-learning-game/oh-my-git](https://github.com/git-learning-game/oh-my-git) | **2,906** | 🟢 **Blue Oak Model 1.0.0** (`1,552 B`) | `main` | Global | 🟡 Interactive Git game. **A licence class new to this page** — OSI-approved, permissive, patent-explicit |
+| [cksystemsteaching/selfie](https://github.com/cksystemsteaching/selfie) | **2,534** | 🟢 BSD-2-Clause (`1,306 B`) | `main` | **EMEA** | Self-compiling C compiler + RISC-V emulator + hypervisor. **University of Salzburg (AT)** — a whole systems curriculum as runnable code |
+| [beir-cellar/beir](https://github.com/beir-cellar/beir) | **2,327** | 🟢 Apache-2.0 (`11,348 B`) | `main` | Global | 🟢 `15+`-dataset retrieval benchmark — **the missing evaluation harness for any RAG tutor** on this base |
+| [translate-tools/linguist](https://github.com/translate-tools/linguist) | **1,082** | 🟢 BSD-3-Clause (`1,542 B`) | 🔴 `master` | Global | Offline-capable translation engine — the in-language courseware axis |
+| [open-scratch/teaching-open](https://github.com/open-scratch/teaching-open) | `633` | 🟢 Apache-2.0 (`11,371 B`) | 🔴 `master` | **APAC** | Scratch/ScratchJr/Python teaching platform **with** courses, classes, assignments, permissions — CN-built |
+| [cxli233/Online_R_learning](https://github.com/cxli233/Online_R_learning) | `554` | 🟢 **CC0-1.0** (`LICENSE.md`, `7,048 B`) | 🔴 `master` | Global | Applied-statistics course; 🟢 public-domain dedication — the least encumbered content on this page |
+| [skaiui2/SKRTOS_sparrow](https://github.com/skaiui2/SKRTOS_sparrow) | `501` | 🟢 MIT (`1,066 B`) | `main` | Global | Modular RTOS microkernel written to be *taught* — embedded-systems curriculum |
+| [tristcoil/hanabira.org](https://github.com/tristcoil/hanabira.org) | `432` | 🟢 MIT (`1,061 B`) | `main` | **APAC** | Self-hostable Japanese **and** Korean learning portal |
+| [rampaa/JL](https://github.com/rampaa/JL) | `404` | 🟢 Apache-2.0 (`11,357 B`) | 🔴 `master` | **APAC** | Japanese lookup engine — the in-language reading-support primitive |
+| [danzen/zimjs](https://github.com/danzen/zimjs) | — | 🟢 MIT (`LICENSE.txt`, `1,126 B`) | 🔴 `master` | Global | Canvas creative-coding framework used for interactive learning objects |
+
+### 🟢 Institutional & research scaffolding
+
+| Repo | ★ | Grant (byte-read) | Branch | Region | Role |
+| --- | --: | --- | --- | --- | --- |
+| [Attendize/Attendize](https://github.com/Attendize/Attendize) | **4,283** | 🟢 **Attribution Assurance Licence** (`2,073 B`) | 🔴 **`develop`** | Global | Ticketing/attendee management — the open-day, orientation and CPD-event shape. 🟡 AAL is OSI-approved and rare; read the attribution clause before white-labelling |
+| [AhmadHassan-BTed/Attendify](https://github.com/AhmadHassan-BTed/Attendify) | **3,836** | 🟢 MIT (`1,056 B`) | `main` | Global | Attendance **and leave** portal — the one substantial permissive repo in an axis that is otherwise `43–138★` student projects |
+| [usnistgov/OSCAL](https://github.com/usnistgov/OSCAL) | — | 🟢 **US worldwide public domain** (`LICENSE.md`, `5,255 B`) | `main` | **North America** | Machine-readable control catalogues — the instrument for evidencing FERPA/COPPA posture to a US district or system office |
+| [latextemplates/scientific-thesis-template](https://github.com/latextemplates/scientific-thesis-template) | `397` | 🟡 **`0BSD`** (`665 B`) — 🔴 **copyright line is an unfilled template: `[year] [fullname]`** | `main` | **EMEA** | Thesis template estate. 🟢 `0BSD` requires no attribution so the grant still operates; the defect is recorded (`601-D`), not hidden |
+
+### 🔴 Found, larger than anything above, and deliberately NOT added
+
+| Repo | ★ | Grant (byte-read) | Why excluded |
+| --- | --: | --- | --- |
+| [TheOdinProject/curriculum](https://github.com/TheOdinProject/curriculum) | **13,200** | 🔴 **CC BY-NC-SA 4.0** (`license.md`, `442 B`) | 🔴 `NonCommercial` **and** `ShareAlike`. The largest open web-dev curriculum in the sector and it cannot enter paid delivery |
+| [TheOdinProject/theodinproject](https://github.com/TheOdinProject/theodinproject) | `4,675` | 🔴 **no grant file** at `main` (API claims `MIT`) | `601-C` — API asserts what no byte-read can confirm. **`ABSTAIN`** |
+| [Techtonica/curriculum](https://github.com/Techtonica/curriculum) | `670` | 🔴 **no grant file** at `main` (API claims `CC-BY-SA-4.0`) | `601-C`. **`ABSTAIN`** |
+| [sobolevn/the-best-python-course](https://github.com/sobolevn/the-best-python-course) | — | 🔴 CC BY-NC-SA (`19,738 B`) | NonCommercial |
+| [Allenpandas/BJTU-CS-Notebook](https://github.com/Allenpandas/BJTU-CS-Notebook) | — | 🔴 CC BY-NC-SA (`14,978 B`) | NonCommercial — APAC-placed, and still unusable |
+| [cvut/qtrvsim](https://github.com/cvut/qtrvsim) | `647` | 🟡 GPL-3.0 (`35,141 B`) | Reciprocal. Czech Technical University; usable as a *tool*, not as vendored code |
+
+🔵 **The pattern worth carrying forward, because it is the opposite of the usual one.** Across `29`
+`NOASSERTION` rows byte-read this pass, **the four highest star counts were all commercially
+unusable** and the permissive supply sat in the `300–4,900★` band beneath them. 🟢 **In education,
+rank the shortlist by grant first and stars second** — courseware is the sector's biggest artefact
+class and `NC` is its default choice.
+Evidence: [`../evidence/grants-byteread.2026-11-01-p601.tsv`](../evidence/grants-byteread.2026-11-01-p601.tsv).
 
 ## 🆕 `p600` — `2026-11-01` — an `81`-repo BSD-3-Clause university curriculum estate was invisible for `599` passes, and the thing hiding it was a branch name
 
