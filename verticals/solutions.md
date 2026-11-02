@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — reads `2026-11-02` — **the science-simulation vertical has a platform of record, and its licence boundary runs *through* the product: MIT engine, ungranted content, `CC-BY` distribution**
+
+### 🟢 `620-I` — `PhET Interactive Simulations` as the vertical's platform of record, and the split that decides how a studio uses it
+
+`619` found the accessibility tier had **no platform of record**. 🟢 The science-simulation tier
+named this pass has one, it is unambiguous, and it is the most-used science-simulation platform in
+the world: **PhET**, University of Colorado Boulder. 🔴 **What matters commercially is not that it is
+open — it is *where* it is open.** Measured as two populations, every grant byte-read today under
+ladder `v2`:
+
+| Layer | Repos probed | Grant | Bytes | Holder | What a studio may do |
+|---|---|---|---|---|---|
+| 🟢 **Engine, libraries, build tooling** — `chipper`, `joist`, `scenery`, `alpenglow`, `axon`, `dot`, `kite`, `sun`, `tandem` | **`9`** | 🟢 **`MIT`, `9 of 9`** | `1,096`–`1,097 B` | **University of Colorado** (`2014`–`2023`); `PhET Interactive Simulations` for `tandem` | 🟢 **Build on it, fork it, ship it closed-source.** No reciprocity |
+| 🔴 **The simulations themselves** — `circuit-construction-kit-dc`, `-common`, `wave-interference`, `projectile-motion`, `forces-and-motion-basics`, `build-an-atom`, `states-of-matter`, `bending-light`, `example-sim` | **`9`** | 🔴 **no grant payload, `9 of 9`** at `24` paths | — | — | 🔴 **Do not lift a simulation repository.** There is nothing in the tree granting you anything |
+| 🟢 **The published simulations** (via the PhET website, not the repos) | — | 🟢 **`CC-BY`** OER | — | PhET | 🟢 Use and adapt **with attribution** — and [`openzim/phet`](https://github.com/openzim/phet) (`Apache-2.0`, pushed today) is the maintained pipeline that acquires them into offline `ZIM` archives |
+
+🟢 **The vertical finding, stated as a delivery rule:** *the repository is the right acquisition
+channel for PhET's **engine** and the wrong one for PhET's **content**; the website is the right
+channel for the content.* 🔵 A team that clones a sim repo because "PhET is open source" has
+acquired `0` rights; a team that builds on `scenery` + `sun` + `tandem` and pulls published sims
+through `openzim/phet` has a clean chain for both. 🔴 **This is the kind of error that surfaces in
+due diligence, not in development**, which is why it belongs on a vertical page rather than in a
+footnote.
+
+🟢 **`tandem` is the row that makes PhET a platform rather than a toy.** `PhET-iO` instrumentation
+makes simulation state addressable and serialisable — so a simulation can **emit what a learner
+did**, which is precisely the input `p613`'s `Apache-2.0` `xAPI`/`cmi5` conformance tier (US DoD ADL
+Initiative) consumes. 🔵 **Engine → instrumentation → `xAPI` → LMS is a complete, permissive,
+assessment-grade chain**, and every link was already on these shelves except the first two.
+
+### 🟡 `620-O` — the virtual-lab tier below PhET: four shapes, no second platform
+
+🔴 **No second platform of record exists in this tier**, and that is the measurement. What exists is
+four distinct *shapes*, each a single-holder artefact:
+
+| Repo | Grant | ★ | Shape | Region |
+|---|---|---|---|---|
+| [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | 🟢 `MIT`, `1,064 B` | `2` | **Breadth** — `29` sims across chemistry, biology, physics, pharmacy, medicine, plus an AI lab assistant | 🟢 **EMEA** — *"African universities — no physical lab required"* |
+| [`Ghost-ops721/alyra-labs`](https://github.com/Ghost-ops721/alyra-labs) | 🟢 `MIT`, `1,068 B` | `1` | **Reaction simulation** — real chemistry, scientific visualisation | 🔵 Global |
+| [`hlavacs/PhyLab`](https://github.com/hlavacs/PhyLab) | 🟢 `MIT`, `1,071 B` | `5` | **Immersive** — VR laboratory for secondary-school physics | 🔵 Global (holder not placed — `620-E`) |
+| [`AMAN6921/SikhshaBox…Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 🟢 `MIT`, `1,069 B` | `13` | **Infrastructure** — virtualises the lab environment instead of simulating the experiment | 🔵 Global |
+| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | 🔴 **`GPL-3.0`**, `35,147 B` | `22` | **Emergent physics** — virtual microscope over soft-body, low-Reynolds simulation | 🔵 Global |
+
+🔴 **`Open-Microcosm` is the tier's most technically ambitious artefact and the one a studio cannot
+put in a permissive deliverable.** Promoted here from `repos/trending.md` with the boundary stated
+rather than left on a trending shelf where the licence would not be read. 🟢 `AfriLab` is the row to
+take into an EMEA engagement: it is permissive, byte-read, region-placed on its own text, and it
+**states the constraint it was built for** (scarce equipment, expensive consumables) rather than
+assuming a lab exists.
+
+### 🟡 `620-P` — the music-education vertical has a server but no platform of record either
+
+🔵 Same shape as `619`'s accessibility finding and worth recording as a pattern across three
+consecutive passes: **the named tier has primitives and applications and no system of record.**
+
+- 🟢 **Closest thing to a platform:** [`sirged/fermata`](https://github.com/sirged/fermata)
+  (`MIT`, `1,077 B`, `38★`) — a self-hosted sheet-music server with library, search, PDF reading and
+  interactive notation/tab rendering. It is the only row in the tier that stores and serves an
+  institution's **own** content.
+- 🟢 **Rendering substrate:** [`CoderLine/alphaTab`](https://github.com/CoderLine/alphaTab)
+  (🟡 `MPL-2.0`, `1,899★`) — and the `MPL-2.0` boundary is **file-level**: it links into closed
+  deliverables; modifications to its own files must be published. 🔵 That belongs in the engagement's
+  licence matrix on day one, not at delivery.
+- 🔴 **No LMS integration anywhere in the tier.** No `LTI 1.3`, no `xAPI`, no gradebook in any of
+  `14` names surveyed. 🔵 So music education is, on these shelves, **entirely outside** the
+  integration tier `p612`/`p613` built — which is the gap to sell against rather than a gap to fill
+  with filler.
+- 🔴 **The incumbent is copyleft and was not displaced.** `MuseScore` remains the sector's
+  notation incumbent under `GPL-3.0`; nothing surfaced this pass changes that, and it is recorded
+  here so the next pass does not re-derive it.
+
+### 🟢 `620-Q` — the administrative substrate is unchanged, and this is the fifth consecutive confirmation
+
+The mandated ERP/CRM vertical leg ran and paid **nothing** for the fifth pass running (`3` head
+names, `3` held — `620-N`). 🟢 **The standing position, re-stated rather than re-derived:**
+
+| Need | Permissive option | Copyleft incumbent |
+|---|---|---|
+| Full LMS | 🟢 **`OpenOLAT`** — `Apache-2.0`, `QTI 2.1` + `SCORM 1.2` + `LTI 1.3` in the box (`p615`, byte-read `10,982 B`) | `Moodle` (`GPL-3.0`), `Open edX` (`AGPL-3.0`) |
+| Offline-first delivery | 🟢 **`Kolibri`** — `MIT`, `1,097 B`, branch `develop` (`p616`) — 🟢 and now a natural consumer of `openzim/phet`'s `ZIM` archives | — |
+| Assessment engine | 🟢 **`QTIWorks`** — `BSD-3-Clause`, University of Edinburgh (`p607`) | — |
+| Telemetry / conformance | 🟢 **`xAPI` / `cmi5` tier** — `Apache-2.0`, US DoD ADL Initiative (`p613`) | — |
+| Education ERP / SIS | 🔴 **none** | `OpenEduCat` (`LGPL-3.0`), `ERPNext` (`GPL-3.0`), `Odoo` (split) |
+| Student-success CRM | 🔴 **none** — `Elastic License 2.0` **forbids** hosted/managed service (`p614`) | — |
+
+🔴 **The two red rows are the durable commercial finding of this whole shelf**, and five nils on the
+mandated leg is now evidence for it rather than an absence of evidence: **there is no permissive
+education ERP or student-success CRM**, so any studio engagement touching the administrative tier is
+either a copyleft deployment, a licence negotiation, or a build.
+
 ## 🆕 `p619` — reads `2026-11-02` — **the accessibility tier has no platform of record, and that is the vertical finding: the incumbents expose the hook but ship nothing behind it**
 
 ### 🔴 `619-B` (companion) — the ERP/CRM leg's fourth nil, and the leg is now retired

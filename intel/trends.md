@@ -4,6 +4,157 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — `2026-11-02` — **trends, each with the evidence that would refute it**
+
+### 🟢 `T620-1` — The licence boundary inside open education software is moving from the *repository* to the *layer*, and a repo-level licence check now returns the wrong answer
+
+**Claim.** The sector's most significant platforms no longer carry one licence. They carry a
+**permissive engine and differently-licensed content**, and the boundary runs *through* the product
+rather than around it.
+
+**Evidence.** PhET, measured as two populations this pass: **`9 of 9`** engine, library and build
+repositories are `MIT` (byte-read, `1,096`–`1,097 B`, holder University of Colorado); **`9 of 9`**
+simulation repositories carry **no grant payload** at `24` probed paths, while the *published*
+simulations are `CC-BY` OER distributed through the website. Corroborating shapes already on these
+shelves: `Moodle` core `GPL-3.0` with a permissive mobile and deployment layer (`p610`); `Odoo`'s
+`LGPL`/proprietary split; `Mastra`'s `Apache-2.0` core. 🟢 And the **acquisition** layer is a third
+licence again: [`openzim/phet`](https://github.com/openzim/phet) is `Apache-2.0`.
+
+**What would refute it.** A measurement showing that, across a representative sample of education
+platforms, repository-root licence equals the licence of every shipped artefact — or that PhET's
+simulation repositories do in fact carry a grant at some path not in the `24`-rung ladder.
+
+🔵 **Why it matters commercially.** A dependency scan, an SBOM, or a "is this MIT?" question answered
+at repository level will tell a client the PhET stack is permissive. 🔴 **It is, and the simulations
+they actually want are not covered by that answer.** The deliverable is a licence matrix per
+**layer**, not per repo.
+
+### 🔴 `T620-2` — "The grant is not where the reader looks" is now the sector's dominant licensing defect, and it fails in both directions
+
+**Claim.** The most common licensing error on these shelves is no longer a wrong licence. It is a
+**correct licence in an unexpected location**, or a **correct-looking licence belonging to someone
+else** — and automated channels fail on all of it.
+
+**Evidence, five specimens this pass alone.**
+
+| Specimen | Platform field | Ladder verdict | Truth |
+|---|---|---|---|
+| [`tonaljs/tonal`](https://github.com/tonaljs/tonal) (`4,268★`) | 🔴 `NONE` | 🔴 nil (root-only) | 🟢 **`MIT`** at `docs/LICENSE` |
+| [`gregjopa/music.js`](https://github.com/gregjopa/music.js) (`204★`) | 🟢 `MIT` | 🔴 nil (`7`-rung) | 🟢 **`MIT`** at `LICENSE-MIT` |
+| [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) (`186★`) | 🔴 `NONE` | 🔴 nil at `24` paths | 🟢 **`MIT`**, complete, **in the README** |
+| [`VishnuP02/RhythmIQ`](https://github.com/VishnuP02/RhythmIQ) | 🟢 `MIT` | 🟢 clean `200`, `1,106 B` | 🔴 **grants `650 Industries, Inc. (aka Expo)`'s copyright, not the author's** |
+| [`ArthurGorgonio/sonus`](https://github.com/ArthurGorgonio/sonus) | 🟢 `Apache-2.0` | 🔴 nil at `25` paths | 🔴 **no grant, and no source tree either** |
+
+**What would refute it.** A census over a large sample finding that root-path `LICENSE` plus
+`spdx_id` jointly resolve the true grant in, say, `>98 %` of education repositories — making these
+five rare rather than dominant. 🟡 **This pass cannot claim the base rate**, only that it found five
+in `52` slugs probed (`9.6 %`), which is high enough to matter and too small a sample to publish as
+a rate.
+
+🔵 **The asymmetry is the actionable part.** An *under-claim* costs a dropped asset — recoverable.
+🔴 An *over-claim* (`RhythmIQ`, `sonus`) ships a deliverable whose provenance is false, and **passes
+every automated check on the way out**.
+
+### 🟢 `T620-3` — The regions with the most quotable AI-education policy are not the regions with available code
+
+**Claim.** Policy maturity and permissive supply are **anti-correlated** across the four regions on
+these shelves, so a regional engagement strategy built from policy headlines will mis-size the build.
+
+**Evidence (this pass, eight legs).** EMEA: dated instruments and committed money — EC ethical
+guidelines updated `9 June`, `€25.4M` in Advanced Digital Skills grants, UK `£200M+` with `£100M`
+to Bridge AI — and **`1`** region-placed repository. APAC: China's age-six AI mandate across every
+grade plus an `AI + Education` plan to `2030`, Japan at `478` schools (`<2 %`) — and **`1`**
+region-placed repository, which came off this base's own trending shelf rather than from a search
+leg. LATAM: `92 %` student and `79 %` faculty engagement across `29` universities (DEC ×
+Tec de Monterrey), `200` institutions in `19` countries showing an adoption-governance gap
+(UNESCO IESALC) — and **`5`** new region-placed repositories. North America: `134` state bills,
+`$169M` FIPSE, `>60 %` weekly student use — and **`9`**, the whole PhET engine stack.
+
+**What would refute it.** A supply census with non-English and national-platform queries that finds
+EMEA and APAC education repositories at parity with LATAM — which is plausible, since `620`'s own
+Spanish two-word queries outperformed its four-term ones and **no equivalent tuning was done for
+Mandarin, Japanese, Arabic, French or German**. 🟡 **So this trend is stated with its instrument's
+bias declared:** the legs that found LATAM supply were language-tuned, and the APAC/EMEA legs were not.
+
+🔵 **Reading for a studio:** EMEA and APAC are **demand-rich, supply-poor** on this evidence — a
+build posture. LATAM and North America have permissive starting points — an assembly posture.
+
+### 🟢 `T620-4` — Adoption has decisively outrun institutional governance in every region that was measured, and that gap is the sellable engagement
+
+**Claim.** The sector's binding constraint in `2026` is not model capability or teacher willingness.
+It is that **individual use is near-universal while institutional policy is absent**, measured on
+both sides in three regions.
+
+**Evidence.** LATAM: `92 %` students / `79 %` faculty actively engaging, against a UNESCO IESALC
+finding across `200` institutions in `19` countries that the adoption-governance gap is
+"particularly pronounced", and a panel official stating formal university AI policies are
+**lacking**. North America: **`>60 %`** of college students use AI weekly (Gallup, April `2026`)
+while **about half** their institutions discourage or prohibit it. APAC: China **mandates** AI
+instruction from age six and simultaneously **prohibits** independent generative-AI use by primary
+children — governance arriving as restriction rather than as enablement. 🟢 Corroborated on the
+teacher side by LATAM sentiment moving `57 %` → `72 %` positive in `2026`.
+
+**What would refute it.** Institutional policy-coverage surveys showing a majority of institutions
+with published, operative AI policies in `2026` — or evidence that the prohibitions are effective,
+which would make the gap a boundary rather than a vacuum.
+
+🔵 **This is `p607`'s LATAM governance inversion generalising to a global finding**, and it is the
+most direct commercial consequence in this pass: the product to sell is **policy-conformant
+infrastructure** — audit trail, provenance, `LTI` integration, teacher-in-the-loop — not another
+tutor. Patterns `P620-1` and `P620-2` are built on it.
+
+### 🔴 `T620-5` — A methodological trend, sixth pass running: the central error keeps being in the measuring instrument, not in the sector
+
+**Claim.** This base's most expensive mistakes are instrument defects, they recur with a single
+shape, and the shape is that **a ladder's misses are silent and look exactly like findings**.
+
+**Evidence, six consecutive passes.** `610-E`: ladder omitted `COPYING.txt`, failed the official
+Moodle mobile app. `611-B`: classifier mis-graded **every** `GPL-2.0` file as `LGPL`. `612-C`: ladder
+was case-sensitive, graded a `67,644★` `MIT` repository ungranted. `615`: `p312` re-committed in
+prose long after being fixed in code. `619-E`: a branch probe that could not falsify, so a populated
+column looked verified. 🔴 **`620-B`: a `7`-rung ladder graded a `4,268★` `MIT` library ungranted and
+a false defect against `p612` was written up before being caught.**
+
+**What would refute it.** Three consecutive passes whose headline finding is about the sector and
+whose instruments survive their own adversarial re-run.
+
+🔴 **And the sharpest version of this trend was found at the end of the pass, against the pass
+itself.** This base has **not** written the lesson into zero gates — it has written it into
+**three**, all wired and all green: `gate-subtree-grant` (`p382`), `gate-readme-channel` (`p288`) and
+`gate-template-identity` (`p312`). 🔴 **`p620` violated all three, because it hand-rolled a `bash`
+ladder instead of calling them.** So the trend is not "this base fails to learn"; it is that **its
+knowledge lives in gates its passes do not invoke** — a sharper and more fixable claim, registered as
+`620-T`.
+
+🟢 **What changed this pass rather than being merely noted.** Three things. First, **every nil verdict
+issued was re-run under the widened ladder before publication** — not after — and `2` of them
+reversed. Second, `620-A` shows the dual failure mode: a **blocked-channel** verdict carried for
+`566` passes as a property of "the API" was a property of **one route**, and the open route was one
+qualifier away. 🟢 Third, and for the first time in four passes, **the gate suite was actually run**
+(`620-S`): `70` gates executed, and `gate-region-headings` caught two real structural defects in this
+pass's own `intel/market.md` that a careful read had passed.
+
+### 🟡 `T620-6` — Open-source education supply is thin and fast-churning at the application layer and stable at the primitive layer
+
+**Claim.** New education repositories are overwhelmingly `2026`-vintage, single-author, sub-`5★`
+applications, while the reusable primitives beneath them are five to eleven years old and
+well-adopted — so the durable asset is the primitive layer.
+
+**Evidence.** Of `14` music-tier names surfaced, `11` were created or last pushed in `2026` at
+`0`–`3★`; the tier's primitives date to `2015` (`tonal` `4,268★`, `music.js` `204★`) and `2020`
+(`MusicTheoryJS`). The virtual-lab tier repeats it: four `2026`-era single-holder apps at `1`–`13★`
+over a `2014`-rooted PhET engine stack. 🟢 Fork ratio separates them: `phetsims/chipper` `20` forks
+on `17★`, `KrisLamote/dyscalc` `19` forks on `10★` — both above `1.0`, which no `2026` application
+row approaches.
+
+**What would refute it.** A `2026`-founded education repository crossing, say, `1,000★` with a
+primitive-layer role — or a measurement showing fork ratio does not separate the two layers across
+this base's `3,828` addresses. 🟡 **That measurement has never been run here**, and it is cheap now
+that `620-A`'s channel returns `forks_count` on every row.
+
+🔵 **Reading:** build on the old, well-forked primitives; treat the `2026` application layer as
+**design evidence** — what people are trying — rather than as code to adopt.
+
 ## 🆕 `p619` — reads `2026-11-02` — **current trends**
 
 🟡 **Secondary by construction** (`598-G`): no primary source resolved from this environment for the

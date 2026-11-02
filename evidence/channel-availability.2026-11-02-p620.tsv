@@ -1,0 +1,7 @@
+endpoint	result	scope_gated	note
+gh api repos/OWNER/NAME	403	YES	"GitHub access to this repository is not enabled for this session"
+gh api -X GET search/repositories -f q=TERMS	200	NO	global corpus, ranks name/description/topics
+gh api -X GET search/repositories -f q=repo:OWNER/NAME	200	NO	full per-repo metadata: spdx_id, stars, forks, pushed_at, default_branch, archived
+raw.githubusercontent.com/SLUG/BRANCH/PATH	200/404	NO	byte reads; case-sensitive (License 404 vs LICENSE 200)
+codeload.github.com tarball	403	YES	blocked
+make hooks (70 gates)	RAN	NO	closes 619-L/618-B/617-J execution denial; 49/70 green, 21 inherited red

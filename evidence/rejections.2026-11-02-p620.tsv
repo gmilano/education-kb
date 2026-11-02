@@ -1,0 +1,18 @@
+slug	stars	api_spdx	bytes_verdict	reason_class
+ArthurGorgonio/sonus	0	Apache-2.0	NIL_25_PATHS	platform-field-over-claim + absent-source-tree
+PriontoAbdullah/Anushilon-Virtual-Science-Lab	10	NONE	NIL_24_PATHS	curated-index-asserts-MIT-no-grant (619-G class, 2nd channel)
+BarkaviNatraj/learning-disability-app	28	NONE	NIL_24_PATHS	ungranted
+AaryanSpace/Saksham	3	NONE	NIL_24_PATHS	ungranted
+hgd-dev/opentutti	1	NONE	NIL_24_PATHS	ungranted
+raphateixeira/LabVirtual	7	NONE	NIL_24_PATHS	ungranted-LATAM-institutional-loss
+KBGR55/KHAT-TF	5	NONE	NIL_24_PATHS	ungranted
+VishnuP02/RhythmIQ	0	MIT	1106B_VALID_MIT	holder-standing-defect: grants 650 Industries Inc (Expo)
+phetsims/circuit-construction-kit-dc	22	NONE	NIL_24_PATHS	deliberate-platform-split (content vs engine)
+phetsims/circuit-construction-kit-common	17	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/wave-interference	20	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/projectile-motion	16	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/forces-and-motion-basics	14	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/build-an-atom	14	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/states-of-matter	12	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/bending-light	12	NONE	NIL_24_PATHS	deliberate-platform-split
+phetsims/example-sim	23	NONE	NIL_24_PATHS	deliberate-platform-split

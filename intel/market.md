@@ -4,6 +4,208 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — reads `2026-11-02` — market map and regional placement, **and the regional legs invert the usual result: LATAM returned the most placeable supply of any region, while APAC returned policy with no repository behind it**
+
+### 🟡 Market size — the spread is the finding, and it is widening
+
+🔵 Every figure below is attributed, and figures from vendor blogs or market-research marketing
+pages are marked as such. 🔴 **The forecasts do not agree, and quoting a single number from this
+range would be a fabrication by selection.**
+
+| Source (as reported this pass) | Base figure | Forecast | CAGR |
+|---|---|---|---|
+| IMARC Group | `$6.4B` (`2025`) | — | — |
+| Secondary aggregator | `$8.3B` (`2025`) | `$57.2B` by `2033` | `25.9 %` (`2026`–`2033`) |
+| Secondary aggregator | `$3.7B` (`2026`) | — | `21.0 %` (`2026`–`2033`) |
+| Secondary aggregator (AI tutors, educator copilots, assessment) | `~$11B` (`2026`) | — | — |
+| Persistence Market Research | — | — | forecast window `2026`–`2033` |
+
+🔴 **A `$3.7B`–`$11B` spread for the same year and the same sector is a `3×` disagreement**, and the
+reason is visible in the fourth row: the `~$11B` figure is a **sum of three named product
+categories**, while the `$3.7B` figure is a narrower definition. 🟢 **The usable reading is
+directional and should be stated that way to a client:** mid-single-digit to low-double-digit
+billions in `2026`, compounding in the low-to-mid `20 %` range, with **`K-12` the largest segment at
+`~34 %` share (`2026`)**. 🟡 Growth is concentrated in **conversational tutors**, and one report
+describes tutoring moving *into* the LMS rather than sitting beside it as a separate tool — which is
+a structural claim this base can act on (`p612`/`p613`'s `LTI`/`xAPI` tiers are exactly that seam).
+
+🟢 **OECD `2026` Digital Education Outlook**, the one non-commercial source in the set, warns that AI
+helps learning **only when pedagogy stays in control** — which favours education-specific tools over
+generic assistants. 🔵 That is the single most quotable line for a studio pitch in this whole pass,
+because it is the argument *for* vertical build over horizontal adoption.
+
+### 🟢 Players and market map
+
+| Layer | Who | Note |
+|---|---|---|
+| 🔵 **National-scale buyers** | OpenAI's country-level education programme, **`8` national partners** in `Q1 2026` | 🔴 One analysis reads this as splitting the market into **school-by-school sales** versus **national infrastructure deals**. If that holds, mid-market edtech is squeezed from above |
+| 🟢 **Platform incumbents** | `Moodle` (`GPL-3.0`), `Open edX` (`AGPL-3.0`), `Canvas`, `OpenOLAT` (🟢 `Apache-2.0`) | Unchanged; `OpenOLAT` remains the permissive substrate (`p615`) |
+| 🟢 **Simulation / science content** | 🟢 **PhET Interactive Simulations** (University of Colorado) | 🔴 New this pass: MIT engine, ungranted sim repos, `CC-BY` published content — `620-I`, `verticals/solutions.md` |
+| 🟢 **Music / notation** | `MuseScore` (`GPL-3.0`) incumbent; 🟢 `alphaTab` (`MPL-2.0`, `1,899★`), `tonal` (`MIT`, `4,268★`) | 🔴 No LMS integration anywhere in the tier — `620-P` |
+| 🔵 **Multilateral / standards** | UNESCO, UNESCO IESALC, OECD, Council of Europe, IDB, CEPAL | The LATAM and EMEA evidence base this pass rests on |
+| 🔴 **Education ERP / student-success CRM** | 🔴 **no permissive option exists** | Fifth consecutive nil on the mandated leg — `620-N`, `620-Q` |
+
+## Opportunities by region
+
+🔵 **Placement rule, stated so the field is auditable:** a row is placed in a region only on
+**textual or institutional evidence** — a stated country, a named institution, a statutory
+instrument, or a copyright holder that names a public body. Language alone is marked 🟡. Where a
+region returned nothing, that is written down as a measured nil, because an informed gap is
+information and silence looks exactly like coverage.
+
+### North America
+
+🟢 **Demand is measured and the governance gap is the opening.**
+
+- 🟢 **Adoption:** a Gallup study (April `2026`, reached via a secondary newsletter) reports
+  **over `60 %` of college students use AI weekly for coursework** — while **about half their
+  institutions discourage or prohibit it**. 🔴 That inversion *is* the engagement: the behaviour is
+  already universal and the policy is absent.
+- 🟡 Technavio's `2026`–`2030` report claims **`86 %` of regional educational organisations have
+  adopted generative AI**. 🔴 **Not verified** and inconsistent with the Gallup institutional
+  picture — recorded with the flag, not quoted as fact.
+- 🟢 **Regulation:** **`134` bills across `31` states** tracked as of March `2026`, covering privacy,
+  classroom restrictions and curriculum. 🔴 No federal education-AI rule. 🔵 Canadian requirements
+  must be reconciled with US state law — a multi-jurisdiction compliance surface inside one region.
+- 🟢 **Public money:** the US Department of Education released **`$169M` in FIPSE awards** in
+  January `2026` including support for responsible AI use.
+- 🟢 **Market share:** `36 %`–`38 %` of the global AI-in-education market (`2025`, two sources
+  disagreeing), one source citing a `41.7 %` growth contribution.
+- 🟢 **Supply placed here this pass:** **`9` repositories** — the entire `phetsims` MIT engine stack,
+  placed on a copyright holder that names **University of Colorado**. 🔵 This is the first time this
+  base has placed a region from **inside the grant bytes**.
+- 🟢 **Opportunity:** the `>60 %`-use / `~50 %`-prohibition gap plus `134` state bills is a demand
+  for **policy-conformant deployment**, not for another tutor. Wire `p612`'s `LTI 1.3` tier and
+  `p613`'s `xAPI` audit trail onto the PhET engine so a district can show *what a learner did* to a
+  state regulator. Pattern `P620-1`.
+
+### EMEA
+
+🟢 **Dated instruments and committed money — the best-evidenced policy region this pass.**
+
+- 🟢 **EU:** the European Commission **updated its ethical guidelines on AI in education on
+  `9 June`**, and signed **three Advanced Digital Skills grant agreements worth `€25.4M`**.
+- 🟢 **UK:** the first **AI Adoption Summit** (`8 June`) committed **`£200M+`**, including **`£100M`
+  to expand Bridge AI** and **`£53M` for regional initiatives**.
+- 🟡 **Council of Europe** runs a working conference on regulating AI in education. 🔴 **The source
+  surfaced for it is dated `24`–`25 October 2024`**, so it is *older* than the other items here and
+  is **not** evidence of `2026` activity — flagged rather than silently folded in, which is the
+  error `p619` caught the digest channel making on a different EU instrument.
+- 🟡 **Readiness:** Workday reports **`56 %` of EMEA CEOs** say their organisation is prepared for AI
+  adoption, against `48 %` Americas and `45 %` APJ, and links the lead to Europe's policy
+  frontrunner position. 🔵 Enterprise data, not education data — marked.
+- 🔴 **Friction:** a February `2026` Bandwidth-Cavell study finds regulatory uncertainty across EMEA
+  markets produces **fragmented adoption strategies**. 🟡 The regulatory lead and the regulatory
+  fragmentation are the same fact seen from two sides.
+- 🟢 **Supply placed here this pass:** **`1` repository** —
+  [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) (`MIT`, byte-read
+  `1,064 B`), placed on its own README: *"African universities — no physical lab required"*.
+  🔵 **Africa is in EMEA on this base's closed vocabulary**, and this row is the reminder that the
+  region is not only Europe.
+- 🔴 **Measured gap:** the mandated EMEA leg returned **no named education-sector player and no
+  `2026` education adoption figure** — only EU/UK instruments and enterprise-wide readiness data.
+  🔴 **No European education ministry beyond the UK and the EU institutions appeared at all.**
+- 🟢 **Opportunity:** `€25.4M` + `£200M+` is procurement-shaped money attached to **dated
+  instruments**, and the EU high-risk education deadlines this base already tracks
+  (`2 Dec 2026`, `2 Dec 2027` — `p606`) give a compliance calendar. Sell the conformity harness, not
+  the tutor. `AfriLab` + `Kolibri` + `openzim/phet` is a distinct, offline-first African sub-play.
+  Pattern `P620-3`.
+
+### APAC
+
+🔴 **The region returned substantial policy and essentially no supply, and both halves are stated.**
+
+- 🔴 **The mandated APAC leg returned nothing education-specific at all** — enterprise AI commentary
+  only. A dedicated second leg (`China Singapore Japan education ministry AI guidelines schools
+  2026 adoption edtech`) was run to close it, and did.
+- 🟢 **China — the most concrete policy activity of any country this pass.** The Ministry of
+  Education **mandates AI lessons from age six across every grade**, primary through senior high.
+  An **`AI + Education` action plan (April `2026`, through `2030`)** calls for integrating AI
+  education into local curricula nationwide, interdisciplinary AI teaching, and AI in after-school
+  services. 🔴 Ministry guidance **prohibits primary-school children from using generative AI
+  independently**. 🟡 Rollout is explicitly **uneven across the country**. 🔴 Two sources date the
+  same action plan `April 10` and `April 15`, `2026` — recorded as a discrepancy, not resolved.
+- 🟢 **Japan — slow and deliberately bounded.** The generative-AI pilot programme reached
+  **`149` municipalities and `478` schools in FY `2026`** — 🔴 **still under `2 %` of roughly
+  `33,000` schools**. Teacher guidance permits lesson preparation, administrative drafting and
+  communication **provided the teacher can judge the output**.
+- 🟡 **Singapore — thin.** Training on AI in education to be offered to teachers at all levels by
+  `2026`, and an `AI for Students` launch. 🔴 **No `2026` Singapore ministry guideline was found.**
+- 🟡 **Forrester (a `2025` forecast, so treated as a forecast):** `60 %` of firms and governments in
+  major markets including India and China will integrate **locally developed** LLMs alongside global
+  ones, targeting education among other sectors.
+- 🔴 **ASEAN** AI governance guidance remains early-stage, so compliance must be tailored
+  **per country** — the opposite of the EU's single-instrument shape.
+- 🟢 **Supply placed here this pass:** **`1` repository** —
+  [`AyushBinjola1/Swar-Setu`](https://github.com/AyushBinjola1/Swar-Setu) (`MIT`, byte-read
+  `1,070 B`, `15★`), placed on `India 🇮🇳` in its own README. 🔴 **That is the whole APAC supply
+  yield across eight search legs**, and it came off this base's own trending shelf rather than from
+  a search leg.
+- 🟢 **Opportunity:** China's age-six mandate is a **curriculum-scale content and teacher-training
+  demand** with a hard constraint (no independent generative-AI use by primary children) — which
+  points at **deterministic, offline, teacher-mediated** tooling, exactly the shape of
+  `openzim/phet` + `Kolibri` rather than a hosted chat tutor. Japan's `<2 %` penetration is an
+  early-stage market with a stated quality bar. Pattern `P620-4`.
+
+### LATAM
+
+🟢 **The strongest region this pass on both demand evidence and placeable supply — which inverts
+this base's long-standing LATAM gap finding.**
+
+- 🟢 **Adoption, and it is the highest figure in any region this pass:** the **Digital Education
+  Council `2026` survey**, run with **Tecnológico de Monterrey** across **`29` universities**, finds
+  **`92 %` of students and `79 %` of faculty actively engaging with AI**.
+- 🟢 **Teacher sentiment:** positive opinion rose **`57 %` → `72 %` in `2026`**, with `88 %` of
+  teachers reporting moderate use.
+- 🟢 **Governance gap, independently sourced:** a **UNESCO IESALC** regional survey of **`200`
+  institutions across `19` countries** (Aug–Oct `2025`) finds the gap between adoption and
+  institutional governance **particularly pronounced** in the region, and an official on the survey
+  panel states plainly that **formal policies for AI use in universities are lacking**.
+- 🔵 **Instruments and measurement:** the **IDB** publishes the **Latin American AI Index (`ILIA`)**
+  across `19` countries (readiness, adoption, governance), hosted by **CEPAL**. **Brookings**
+  (May `2025`) argues the region is a natural **sandbox** for inclusive AI governance and proposes a
+  phased capacity roadmap.
+- 🔴 **Measured gap:** no **national education-AI law**, no **edtech vendor market share**, and no
+  **`2026` market sizing** for the region was found. 🔴 Also recorded: flawed AI design risks
+  **reinforcing inequality** in education access alongside credit, health and justice.
+- 🟢 **Supply placed here this pass — `5` new repositories, the largest regional supply yield this
+  base has recorded:**
+
+| Repo | Grant (byte-read) | Placed on | What it is |
+|---|---|---|---|
+| [`DusPro/educacao-especial`](https://github.com/DusPro/educacao-especial) | 🟢 `MIT`, `1,081 B` | 🟢 Brazil's **`PEI`** statutory instrument, named | Generates `PEI`, diaries, reports, adapted activities for special education. 🟢 **First LATAM row in the `IEP` tier**, which this base mentions `166` times |
+| [`lnosiqueira/Totem-IA-Educacional`](https://github.com/lnosiqueira/Totem-IA-Educacional) | 🟢 `MIT`, `1,070 B` | 🟢 **`FIAP`** (São Paulo), named | Kiosk-form educational AI totem — the shelf's only physical-installation form factor |
+| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 `MIT`, `1,128 B` | 🟢 Portuguese holder line | Open curriculum for building educational assistants: NLP → ML → transformers |
+| [`Gio0938/CocoMath`](https://github.com/Gio0938/CocoMath) | 🟢 `Apache-2.0`, `11,357 B` | 🟡 **Language only** — country not evidenced | Adaptive algebraic-factorisation practice with a multiclass logistic-regression error classifier |
+| [`Edwin1719/AvatarAcademy`](https://github.com/Edwin1719/AvatarAcademy) | 🟢 `MIT`, `1,078 B` | 🟡 **Language only** — country not evidenced | Avatar video tutors. 🔴 Hosted-model dependent, so not an offline artefact |
+
+- 🔴 **And one placed loss:** [`raphateixeira/LabVirtual`](https://github.com/raphateixeira/LabVirtual)
+  — a dynamic-systems and control virtual lab for **`FEE/UFPA-Tucuruí`**, a Brazilian federal
+  university, actively pushed `2026-10-24` — carries **no grant at `24` paths**. Institutionally
+  placed, genuinely useful, **unusable**. The region's highest-value licence ask.
+- 🟢 **Opportunity:** `92 %`/`79 %` adoption against *absent* institutional policy across `200`
+  institutions in `19` countries is the clearest **governance-first** engagement in this entire
+  pass — the demand has already happened and the controls have not. 🟢 And unlike prior passes, the
+  region now has its own permissive supply to build with, including the `IEP`/`PEI` row, which is
+  the highest-compliance-value artefact found anywhere this pass. Pattern `P620-2`.
+
+### Global
+
+🟡 **Cross-region: the regional legs and the supply legs disagree, consistently — and that is the
+global finding of this pass.**
+
+| Region | Policy/demand evidence | New placeable supply |
+|---|---|---|
+| North America | 🟢 strong | 🟢 `9` (engine stack, holder-placed) |
+| EMEA | 🟢 strong, dated instruments | 🔴 `1` |
+| APAC | 🟢 strong (second leg only) | 🔴 `1`, and it came off this base's own shelf |
+| LATAM | 🟢 strongest | 🟢 `5` |
+
+🔵 **The pattern across `620`'s eight legs:** the regions with the most quotable policy are not the
+regions with the most available code. 🟢 **EMEA and APAC are demand-rich and supply-poor on these
+shelves** — which is a *build* opportunity rather than an assembly one, and sizing it that way is
+more honest than implying a permissive starting point exists for every region.
+
 ## 🆕 `p619` — reads `2026-11-02` — market map and regional placement, **and the dedicated legs caught the digest channel drifting on two dated facts: a `57%` reported as ">60%", and a real EU instrument dated three months wrong**
 
 🟡 **Secondary by construction** (`598-G`, seventeenth consecutive pass): no primary source resolves
@@ -95,7 +297,7 @@ share** by one source and **`38%` share** by another, and Technavio's **`41.7%`*
 *contribution-to-growth* figure that is **not** a share and must not be compared to the others.
 🔵 **Naming that incomparability is the only honest thing this page can do with those numbers.**
 
-## Opportunities by region
+## Opportunities by region — `p619` (archived)
 
 ### North America
 

@@ -4,6 +4,169 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — reads `2026-11-02` — **five recipes, every component byte-read today, plus the control debt this pass could not discharge and the one it created**
+
+🔵 **Rule for this page, unchanged:** a recipe may only name components whose grant was byte-read in
+this pass or is already shelved with a byte-read grant, and it must say what each component *does*
+in the wiring — not merely that it is relevant.
+
+### 🟢 `P620-1` — Policy-conformant science simulation for a North American district (`8`–`10` weeks)
+
+**The demand this is built against.** `>60 %` of students use AI weekly while `~50 %` of
+institutions discourage or prohibit it, and `134` state bills across `31` states are in flight
+(`intel/market.md`, North America). 🔵 **The district does not need a tutor. It needs to be able to
+show a regulator what a learner did.**
+
+| Component | Grant (byte-read) | Role in the wiring |
+|---|---|---|
+| [`phetsims/scenery`](https://github.com/phetsims/scenery) + [`sun`](https://github.com/phetsims/sun) + [`joist`](https://github.com/phetsims/joist) + [`axon`](https://github.com/phetsims/axon) + [`dot`](https://github.com/phetsims/dot) + [`kite`](https://github.com/phetsims/kite) | 🟢 `MIT`, `1,096`–`1,097 B`, Univ. of Colorado | The simulation runtime: scene graph, UI components, shell, observable state, maths, geometry |
+| [`phetsims/chipper`](https://github.com/phetsims/chipper) | 🟢 `MIT`, `1,096 B` | Builds it. Run this first — it is the stack's entry point |
+| 🟢 [`phetsims/tandem`](https://github.com/phetsims/tandem) | 🟢 `MIT`, `1,096 B` | **The load-bearing component.** `PhET-iO` makes simulation state addressable and serialisable, so the sim emits *what the learner did* rather than only a score |
+| `xAPI` / `cmi5` conformance tier (US DoD ADL Initiative, `p613`) | 🟢 `Apache-2.0` | Consumes `tandem`'s event stream as statements; gives the district a standards-based audit trail |
+| `LTI 1.3` / LTI Advantage tier (`p612`, five languages) | 🟢 permissive | Launches the sim from the district's existing LMS with roles and context intact |
+| [`openzim/phet`](https://github.com/openzim/phet) | 🟢 `Apache-2.0`, `11,356 B` | Acquires the **published** `CC-BY` simulations legitimately, as offline `ZIM` archives |
+
+**Wiring.** `chipper` builds a sim from `scenery`/`sun`/`joist`/`axon`/`dot`/`kite` → `tandem`
+instruments every learner-visible property → a thin adapter maps `PhET-iO` events to `xAPI`
+statements → the ADL conformance suite validates them → `LTI 1.3` launches the whole thing from
+the district LMS → `openzim/phet` supplies additional published sims as content.
+
+🔴 **The boundary that must be in the statement of work (`620-I`):** build on the **engine**; do
+**not** clone a simulation repository — `9 of 9` carry no grant. Content comes through
+`openzim/phet` from the `CC-BY` published set, **with attribution**.
+
+🟡 **Why `8`–`10` weeks:** the `PhET-iO`→`xAPI` adapter is genuinely new work (`~2`–`3` weeks); the
+rest is assembly of components that are already permissive and already shelved.
+
+### 🟢 `P620-2` — Governance-first AI programme for a LATAM university consortium (`6`–`8` weeks)
+
+**The demand.** `92 %` of students and `79 %` of faculty actively engaging with AI (DEC ×
+Tec de Monterrey, `29` universities), against a UNESCO IESALC finding across `200` institutions in
+`19` countries that institutional governance is absent, and a panel official stating formal
+university AI policies are **lacking**. 🟢 **The adoption already happened. This recipe sells the
+controls, not the capability** — and `T620-4` is the argument.
+
+| Component | Grant (byte-read) | Role in the wiring |
+|---|---|---|
+| 🟢 [`DusPro/educacao-especial`](https://github.com/DusPro/educacao-especial) | 🟢 `MIT`, `1,081 B` | **`PEI`** (*Plano Educacional Individualizado*) generation — reports, diaries, adapted activities. The highest-compliance-value artefact found this pass, and it speaks Brazil's own statutory instrument |
+| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 `MIT`, `1,128 B` | The faculty-enablement curriculum — NLP → ML → transformers — so the `79 %` already using AI are trained rather than policed |
+| [`Gio0938/CocoMath`](https://github.com/Gio0938/CocoMath) | 🟢 `Apache-2.0`, `11,357 B` | Worked reference for an **explainable** adaptive loop: multiclass logistic regression classifying the learner's error type, not a black-box tutor |
+| `LabSirius/TutorIA` (`MIT`, `p617`) | 🟢 `MIT` | The consortium's Spanish-language tutor row this base already holds, re-read at `p617` |
+| `dsvi-b/corretor-enem` (`MIT`, `1,078 B`, re-read today) | 🟢 `MIT` | ENEM essay grading on `5` competencies, calibrated on `11,147` real essays, **no API and no ML** — the deterministic, auditable grader that a governance programme can actually defend |
+| `xAPI` / `cmi5` tier (`p613`) | 🟢 `Apache-2.0` | The audit trail the `200`-institution governance gap is asking for |
+| `OpenOLAT` (`p615`, `Apache-2.0`, `10,982 B`) | 🟢 `Apache-2.0` | Permissive LMS substrate, `QTI 2.1` + `SCORM 1.2` + `LTI 1.3` in the box |
+
+**Wiring.** `OpenOLAT` as the system of record → `corretor-enem` and `CocoMath` as **explainable,
+auditable** assessment components (both run without a hosted model, which is what makes the audit
+trail meaningful) → `educacao-especial` for the `PEI`/`IEP` compliance surface → `xAPI` statements
+from every component into one store → `LucasSpinola`'s curriculum as the faculty track.
+
+🟢 **Why this is the pass's strongest recipe:** every component is permissive, byte-read, and
+**placed in LATAM on evidence** — a statutory instrument, a named university, or a Portuguese
+holder line. 🔴 **Declared substitution:** `Edwin1719/AvatarAcademy` was considered and **left out**
+— it depends on a hosted frontier model, which contradicts the auditability this recipe is sold on.
+
+### 🟢 `P620-3` — Offline-first science laboratory for African universities (`6`–`8` weeks)
+
+**The demand.** `AfriLab`'s own README states it: *"African universities — no physical lab
+required"*, *"African science education: equipment is scarce, consumables are expensive"* — and EMEA
+has `€25.4M` in EC Advanced Digital Skills grants and `£200M+` of UK adoption money attached to
+dated instruments.
+
+| Component | Grant (byte-read) | Role in the wiring |
+|---|---|---|
+| 🟢 [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | 🟢 `MIT`, `1,064 B` | `29` simulations across chemistry, biology, physics, pharmacy, medicine, plus a lab assistant. 🟢 **EMEA-placed on its own text** |
+| [`openzim/phet`](https://github.com/openzim/phet) | 🟢 `Apache-2.0`, `11,356 B` | Packages the published `CC-BY` PhET simulations into offline `ZIM` archives — the breadth `AfriLab` does not have |
+| `Kolibri` (`MIT`, `1,097 B`, branch `develop`, `p616`) | 🟢 `MIT` | Offline-first delivery and sync. 🟢 Consumes `ZIM` content natively — the two halves were built for each other and this base held both without wiring them |
+| [`Ghost-ops721/alyra-labs`](https://github.com/Ghost-ops721/alyra-labs) | 🟢 `MIT`, `1,068 B` | Reaction-level chemistry depth where `AfriLab` is broad |
+| `QTIWorks` (`BSD-3-Clause`, Univ. of Edinburgh, `p607`) | 🟢 `BSD-3` | Assessment engine so lab work is examinable offline |
+| EU high-risk conformity harness (`p606`) | 🟢 permissive | Sized to the `2 Dec 2026` and `2 Dec 2027` deadlines already tracked here |
+
+**Wiring.** `Kolibri` as the offline delivery shell → `openzim/phet` feeds it `CC-BY` simulation
+content → `AfriLab` and `alyra-labs` provide the locally authored, MIT-licensed sims → `QTIWorks`
+runs the assessments → everything syncs when connectivity appears → the `p606` harness carries the
+EU conformity artefacts.
+
+🟢 **The new wiring this pass contributes** is `openzim/phet` → `Kolibri`: a licensed, maintained
+pipeline from the world's best science-simulation library into an offline-first LMS, discovered only
+because `620-I` forced the question of *where* PhET's content is actually licensed.
+
+### 🟡 `P620-4` — Teacher-mediated, deterministic AI literacy for an APAC primary mandate (`10`–`12` weeks)
+
+**The demand, and the constraint is the design driver.** China's Ministry of Education mandates AI
+instruction **from age six across every grade**, with an `AI + Education` plan running to `2030` —
+and **prohibits independent generative-AI use by primary-school children**. Japan's pilot sits at
+`478` schools, under `2 %` of ~`33,000`, with guidance permitting teacher use *provided the teacher
+can judge the output*.
+
+🔴 **Both constraints point away from a hosted chat tutor** and toward deterministic, offline,
+teacher-in-the-loop tooling.
+
+| Component | Grant (byte-read) | Role in the wiring |
+|---|---|---|
+| `Kolibri` (`MIT`, `p616`) + [`openzim/phet`](https://github.com/openzim/phet) (`Apache-2.0`) | 🟢 | Offline content delivery with **no model call from the child's device** — which is how the primary-school prohibition is satisfied architecturally rather than by policy |
+| 🟢 [`AyushBinjola1/Swar-Setu`](https://github.com/AyushBinjola1/Swar-Setu) | 🟢 `MIT`, `1,070 B` | Multilingual screening for dyslexia, dysgraphia and dyscalculia — 🟢 the only **APAC-placed** supply row this base has, and multilingual is the regional requirement |
+| `dsvi-b/corretor-enem` (`MIT`, re-read today) | 🟢 `MIT` | 🔵 **Named as a technique, not as a product**: a `5`-competency rubric grader calibrated on `11,147` real scripts with **no API and no ML**. It is the reference implementation for a grader a ministry can audit |
+| `LTI 1.3` tier (`p612`) + `xAPI`/`cmi5` tier (`p613`) | 🟢 permissive / `Apache-2.0` | Teacher-facing dashboards; the teacher, not the model, closes every loop |
+| `PhET` engine stack (`MIT`, `9` repos) | 🟢 `MIT` | The AI-literacy and science curriculum content layer |
+
+🔴 **Why `10`–`12` weeks and why this recipe is the weakest of the five:** the per-country
+compliance surface is real — ASEAN guidance is early-stage, so each market is tailored separately,
+and `620`'s APAC supply yield was **`1` repository across eight legs**. 🟡 **This is a build posture,
+not an assembly posture** (`T620-3`), and it is priced and labelled as one.
+
+### 🟢 `P620-5` — Permissive music-education stack (`4`–`6` weeks)
+
+**Why it exists.** `620-C`'s census returned **`0`** for `music education` across all seven shelf
+files, and the tier turned out to have a complete, permissive primitive stack nobody had wired.
+
+| Component | Grant (byte-read) | Role in the wiring |
+|---|---|---|
+| 🟢 [`tonaljs/tonal`](https://github.com/tonaljs/tonal) | 🟢 `MIT`, `1,074 B` at **`docs/LICENSE`** | Theory vocabulary — notes, intervals, scales, chords, keys, progressions. `4,268★`. 🔴 Platform field says `NONE`; see `620-B` before any dependency screen rejects it |
+| 🟡 [`CoderLine/alphaTab`](https://github.com/CoderLine/alphaTab) | 🟡 **`MPL-2.0`**, `16,907 B` | Notation and tablature rendering, `1,899★`. 🔴 **File-level reciprocity**: links into a closed deliverable, but modifications to its own files must be published. Put this in the licence matrix on day one |
+| [`sirged/fermata`](https://github.com/sirged/fermata) | 🟢 `MIT`, `1,077 B` | Self-hosted score library and server — the institution's own content, searchable, with PDF and interactive rendering |
+| 🟡 [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) | 🟡 `MIT` **in README** (`620-F`) | The learner-facing ear-training runtime, `186★` — the tier's best-adopted app. 🔴 Its grant is sound and **not machine-detectable**, so a client's licence scan *will* flag it. Raise the `LICENSE`-file issue before the engagement, not during it |
+| [`Zachacious/MusicTheoryJS`](https://github.com/Zachacious/MusicTheoryJS) | 🟢 `ISC`, `746 B` | Alternative/secondary theory engine — microtonal tunings and MIDI where `tonal` stops |
+
+**Wiring.** `fermata` holds and serves the scores → `alphaTab` renders them → `tonal` supplies the
+theory vocabulary for analysis and exercise generation → `open-ear` drills the learner →
+`MusicTheoryJS` covers microtonal and MIDI cases.
+
+🔴 **Two stated gaps, because this stack is not finished.** There is **no `LTI 1.3`, no `xAPI` and no
+gradebook anywhere in the tier** (`620-P`) — so unlike `P620-1` and `P620-2`, this stack **cannot
+currently report to an LMS**, and wiring it to `p612`/`p613`'s tiers is net-new work. And there is
+no permissive notation **incumbent**: `MuseScore` remains `GPL-3.0`.
+
+### 🔴 `620-R` — control debt: what this pass could not discharge, and the one item it created
+
+🔵 Carried forward explicitly, because `T620-5` says this base has learned the same lesson six times
+and written it into a gate **zero** times.
+
+| # | Debt | Status |
+|---|---|---|
+| `1` | 🔴 **ACTION `620-T`, ranked first: wire the pass-level probe to the gates this repository already owns.** `620-B`, `620-F` and `620-G` were each written up as findings and each is **already encoded in a wired, green gate** — `gate-subtree-grant` (`p382`, `19` controls), `gate-readme-channel` (`p288`, in `HOOK_GATES`), `gate-template-identity` (`p312`, `80` controls, and it records the MIT byte band as **refuted**). 🔴 The instrument is **not** missing; it is **not called**. A pass writes a fresh `bash` ladder in `scratchpad/` and `compose/code/` goes untouched. | 🔴 **the pass's worst result**, open |
+| `2` | 🟡 **Holder-standing is the one real instrument gap.** None of the three gates above tests whether a grant's copyright holder is a party **with standing in the repository** — which is the only check that caught `620-G`'s `650 Industries, Inc. (aka Expo)` payload. This is net-new and belongs beside `gate-template-identity`. | 🟡 **created this pass**, open, narrow and cheap |
+| `2b` | 🔴 **`gate-grant-path` is red on the inherited tree**, and it guards exactly what `620-B` got wrong. A pass hand-rolled a path ladder while the gate for path ladders was failing beside it. | 🔴 inherited red, `21` of `70` — see `620-U` |
+| `3` | 🟡 **Holder-standing check for scaffold licences.** `620-G` found one `MIT` payload granting `650 Industries, Inc.`'s copyright. A census of this shelf's existing `MIT` rows for holder strings naming `Expo`, `Vercel`, `Meta Platforms` and similar would size the class. | 🟡 open, cheap, not run |
+| `4` | 🟡 **`archived` field unused.** `620-A`'s channel returns it on every row; no row this pass read it. `p612`'s `Continue`-archived class is exactly what it catches. | 🟡 open, now trivial |
+| `5` | 🟡 **Fork-ratio census never run.** `620`'s two best adoption signals (`chipper` `20/17`, `dyscalc` `19/10`) came from forks, not stars, and this base has `3,828` addresses on which it has never computed one. | 🟡 open, now trivial |
+| `6` | 🟢 **Non-English query tuning.** `620`'s Spanish **two-word** legs paid `7` new names where four-term legs paid `0`. The same tuning has **never** been applied to Mandarin, Japanese, Arabic, French or German — which is `T620-3`'s declared instrument bias. | 🟢 **actionable next pass**, highest expected yield |
+| `7` | 🔴 **Licence asks never sent.** `619-G` named one (`jonajinga/open-phonics`); `620` adds four of real value: [`BarkaviNatraj/learning-disability-app`](https://github.com/BarkaviNatraj/learning-disability-app) (`28★`), [`raphateixeira/LabVirtual`](https://github.com/raphateixeira/LabVirtual) (UFPA, LATAM), [`PriontoAbdullah/Anushilon-Virtual-Science-Lab`](https://github.com/PriontoAbdullah/Anushilon-Virtual-Science-Lab), [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) (`186★`, needs only a file move). 🔵 **No pass has ever sent one**, so the "ask, not a fix" action has been recorded `5` times and executed `0`. | 🔴 open, and the gap between recording and acting is itself the finding |
+
+🟢 **And three items discharged this pass, all the same lesson in different places:**
+
+1. The **push block** recorded since `p54` and re-recorded at `p615`, `p617` and `p619` is **gone** —
+   this session holds write access and this commit is pushed.
+2. 🟢 **`619-L`'s execution denial is gone**: `make hooks` ran all `70` gates (`620-S`), so this is
+   the first gate-verified commit in four passes. `gate-declared-gap`, wired at `618-A` and
+   **never executed**, got its first green run.
+3. 🟢 **`gate-region-headings` caught two real defects** in this pass's own `intel/market.md` that a
+   careful read had passed — an out-of-vocabulary `###` child and a missing `### Global`. `p619`
+   repaired this file *"by reading, not by running"*; this pass repaired it **by running**.
+
+🔵 **All three were inherited verdicts that were never re-measured — the same shape as `620-A`'s
+`566`-pass "API is blocked". A blocked-channel verdict has a shelf life of one pass.**
+
 ## 🆕 `p619` — reads `2026-11-02` — **five recipes, every component byte-read today, plus the control debt this pass could not discharge**
 
 ### `P619-0` 🔴 Discharge the control debt first — `1` wk, and nothing else in `p618`/`p619` is trusted until it is done

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — `2026-11-02` — **the fiftieth consecutive global-leg nil, and the first pass that can explain it: the mandated legs are a search *digest*, and a repository *index* was reachable all along**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🔴 The mandated global legs: `13` head names, `13` held, `0` new — the **50th** consecutive nil
+
+Proven row-by-row against a `3,828`-slug oracle built this pass from all eight shelf files:
+
+| Name returned by the mandated legs | Oracle |
+|---|---|
+| `microsoft/ai-agents-for-beginners` | 🔴 held |
+| `OPTIMETA/PAIDEIA` | 🔴 held |
+| `GarethManning/education-agent-skills` | 🔴 held |
+| `ArturoNereu/AI-Study-Group` | 🔴 held |
+| `rohitg00/ai-engineering-from-scratch` | 🔴 held |
+| `aneelv75/github-trending` | 🔴 held |
+| `speedyapply/2026-AI-College-Jobs` | 🔴 held |
+| `pguso/agents-from-scratch` | 🔴 held |
+| `anandpatikat/guru-latihan-dinamis` | 🔴 held |
+| `avinash201199/free-ai-agents-resources` | 🔴 held |
+| `krayin/laravel-crm` | 🔴 held |
+| `hcengineering/platform` | 🔴 held |
+| `openeducat/openeducat_erp` | 🔴 held |
+
+🟢 **The nil now has a mechanism rather than a tally** (`620-A`, `620-D`): a search digest ranks on the
+popularity of the *write-up*, so it returns the same canonical set every week **by construction**.
+The same pass, on the same budget, drew `28` new head names from `search/repositories`. 🔵 **Fifty
+nils were measuring the instrument, not the sector.**
+
+### 🟢 New this week — the trending-channel rows this pass surfaced and did **not** promote
+
+🔵 Recorded here so the next pass can promote them with reasons, which is the `p610` debt mechanism
+working as intended rather than accumulating.
+
+| Repo | Grant (byte-read) | ★ | Forks | Pushed | Tier | Why not promoted |
+|---|---|---|---|---|---|---|
+| [`BarkaviNatraj/learning-disability-app`](https://github.com/BarkaviNatraj/learning-disability-app) | 🔴 **nil at `24` paths** | **`28`** | `0` | `2025-09-17` | dyscalculia / dysgraphia | Best-starred artefact in the tier and **ungranted**. The tier's highest-value licence ask |
+| [`AaryanSpace/Saksham`](https://github.com/AaryanSpace/Saksham) | 🔴 nil | `3` | `0` | `2026-04-26` | functional numeracy | Ungranted. The only artefact found targeting **real-world money and number handling** |
+| [`raphateixeira/LabVirtual`](https://github.com/raphateixeira/LabVirtual) | 🔴 nil | `7` | `7` | `2026-10-24` | virtual lab — 🟢 **LATAM** | Ungranted. Institutionally placed (`FEE/UFPA-Tucuruí`, Brazil), actively maintained. **A real LATAM loss** |
+| [`KBGR55/KHAT-TF`](https://github.com/KBGR55/KHAT-TF) | 🔴 nil | `5` | `1` | `2026-01-16` | remote laboratory — 🟡 LATAM (language) | Ungranted |
+| [`hgd-dev/opentutti`](https://github.com/hgd-dev/opentutti) | 🔴 nil | `1` | `0` | `2026-07-28` | music / `K12` | Ungranted, and claims a complete platform at `1★` — `609-D`'s class |
+| [`PriontoAbdullah/Anushilon-Virtual-Science-Lab`](https://github.com/PriontoAbdullah/Anushilon-Virtual-Science-Lab) | 🔴 nil | `10` | `3` | `2022-04-21` | virtual lab | Ungranted — **and a curated index asserts `MIT`**. `619-G`'s class from a second channel |
+| [`VishnuP02/RhythmIQ`](https://github.com/VishnuP02/RhythmIQ) | 🔴 **`MIT` naming `650 Industries, Inc. (aka Expo)`** | `0` | `0` | `2026-10-11` | music | 🔴 **Right licence, wrong holder** — the scaffold's `LICENSE` committed untouched. The author's code is ungranted. `620-G` |
+| [`ArthurGorgonio/sonus`](https://github.com/ArthurGorgonio/sonus) | 🔴 nil at `25` paths, platform field says `Apache-2.0` | `0` | `0` | `2026-07-02` | music | 🔴 The pass's one genuine **platform-field over-claim**, plus an empty tree: no `Cargo.toml`, no `src/` |
+
+### 🟢 Promoted off this shelf this pass — `p610`-class debt, `4` paid
+
+| Repo | Was trending-only since | Promoted to | Region |
+|---|---|---|---|
+| [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | `repos/trending.md` | `agents/top.md` | 🟢 **EMEA** — Africa, README-evidenced |
+| [`AyushBinjola1/Swar-Setu`](https://github.com/AyushBinjola1/Swar-Setu) | `agents/trending.md` | `agents/top.md` | 🟢 **APAC** — India, README-evidenced |
+| [`AMAN6921/SikhshaBox…Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | `repos/trending.md` | `agents/top.md` | 🔵 Global |
+| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | `repos/trending.md` | `verticals/solutions.md` | 🔵 Global — recorded as `GPL-3.0` |
+
+🔵 **Both region-placed promotions came off the trending shelf, not out of the search legs.** The
+addresses were already here; what was missing was the byte read and the placement rule.
+
+### 🟡 Trend to watch — the music-education tier is almost entirely `2026`-vintage single-author apps over libraries a decade old
+
+Of `14` music-tier names surfaced, `11` were created or last pushed in `2026` at `0`–`3★`, while the
+tier's reusable primitives date to `2015` (`tonal`, `music.js`) and `2020` (`MusicTheoryJS`). 🔵 The
+supply is **not** growing at the primitive layer; it is a thin, fast-churning application layer on a
+stable foundation. 🟢 For a studio that is good news: the foundation is the durable asset and it is
+permissive (`620-J`).
+
 ## 🆕 `p619` — `2026-11-02` — **the forty-ninth consecutive global-leg nil, proven against a `3,902`-slug oracle — and three named tiers that paid `20` new head names, `0` held**
 
 🔴 **The mandated nil, and this pass it is a measurement rather than an impression.** Legs `1`–`4`

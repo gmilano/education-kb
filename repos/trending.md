@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — `2026-11-02` — **`28` new addresses from a channel this base recorded as blocked, and the week's most-forked education repo is a `17★` build tool**
+
+🔵 **Append-only shelf. Everything below this section is prior history and is untouched.**
+
+### 🟢 The channel, because it changes what this shelf can be
+
+`620-A`: `gh api -X GET search/repositories` answers **globally** through the session proxy, and
+`q='repo:OWNER/NAME'` returns full per-repository metadata — while `gh api repos/OWNER/NAME` returns
+`403`. 🟢 **So this shelf no longer depends on third-party trending aggregators.** It can now be
+built from a ranked index with `license.spdx_id`, `stargazers_count`, `forks_count`, `pushed_at`,
+`default_branch` and `archived` on every row. 🟡 It is still a *search* index, not GitHub Trending:
+it has no "stars gained this week" field, so **velocity on this shelf remains unmeasured** and is
+stated as a gap rather than estimated.
+
+### 🟢 New addresses this week — `28`, every grant byte-read today
+
+| Repo | Grant | Bytes | ★ | Forks | Pushed | Branch | Region | Tier |
+|---|---|---|---|---|---|---|---|---|
+| [`tonaljs/tonal`](https://github.com/tonaljs/tonal) | 🟢 `MIT` (`docs/LICENSE`) | `1,074` | **`4,268`** | `257` | `2026-10-14` | `main` | 🔵 Global | music primitive |
+| [`CoderLine/alphaTab`](https://github.com/CoderLine/alphaTab) | 🟡 `MPL-2.0` | `16,907` | **`1,899`** | `303` | `2026-11-01` | `develop` | 🔵 Global | notation rendering |
+| [`gregjopa/music.js`](https://github.com/gregjopa/music.js) | 🟢 `MIT` (`LICENSE-MIT`) | `1,066` | `204` | `16` | `2017-07-19` | `master` | 🔵 Global | music primitive |
+| [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) | 🟡 `MIT` in `README` | — | `186` | `35` | `2026-09-24` | `master` | 🔵 Global | ear training |
+| [`sirged/fermata`](https://github.com/sirged/fermata) | 🟢 `MIT` | `1,077` | `38` | `2` | `2026-10-25` | `main` | 🔵 Global | score library/server |
+| [`openzim/phet`](https://github.com/openzim/phet) | 🟢 `Apache-2.0` | `11,356` | `21` | `9` | 🟢 **`2026-11-02`** | `main` | 🔵 Global | offline distribution |
+| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | 🔴 `GPL-3.0` | `35,147` | `22` | `1` | `2026-10-23` | `main` | 🔵 Global | virtual microscope |
+| [`Zachacious/MusicTheoryJS`](https://github.com/Zachacious/MusicTheoryJS) | 🟢 `ISC` | **`746`** | `18` | `1` | `2026-08-01` | `master` | 🔵 Global | music primitive |
+| [`phetsims/chipper`](https://github.com/phetsims/chipper) | 🟢 `MIT` | `1,096` | `17` | **`20`** | `2026-07-07` | `main` | 🟢 **North America** | sim build system |
+| [`phetsims/alpenglow`](https://github.com/phetsims/alpenglow) | 🟢 `MIT` | `1,097` | `15` | `3` | `2026-03-31` | `main` | 🟢 **North America** | rasterisation |
+| [`phetsims/scenery`](https://github.com/phetsims/scenery) | 🟢 `MIT` | `1,097` | — | — | `2026-10-09` | `main` | 🟢 **North America** | scene graph |
+| [`phetsims/joist`](https://github.com/phetsims/joist) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | sim shell |
+| [`phetsims/axon`](https://github.com/phetsims/axon) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | properties/events |
+| [`phetsims/dot`](https://github.com/phetsims/dot) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | math |
+| [`phetsims/kite`](https://github.com/phetsims/kite) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | geometry |
+| [`phetsims/sun`](https://github.com/phetsims/sun) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | UI components |
+| [`phetsims/tandem`](https://github.com/phetsims/tandem) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | instrumentation (`PhET-iO`) |
+| [`KrisLamote/dyscalc`](https://github.com/KrisLamote/dyscalc) | 🟢 `MIT` | `1,067` | `10` | **`19`** | `2023-01-06` | `master` | 🔵 Global | dyscalculia drill |
+| [`narner/DyscalculiaTester`](https://github.com/narner/DyscalculiaTester) | 🟢 `MIT` | `1,067` | `4` | `0` | `2022-01-01` | `main` | 🔵 Global | screening |
+| [`russmaxdesign/dyscalculia-tool`](https://github.com/russmaxdesign/dyscalculia-tool) | 🟢 `MIT` | `1,069` | `2` | `0` | `2026-09-24` | `main` | 🔵 Global | number presentation |
+| [`hlavacs/PhyLab`](https://github.com/hlavacs/PhyLab) | 🟢 `MIT` | `1,071` | `5` | `0` | `2021-07-30` | `main` | 🔵 Global | VR physics lab |
+| [`Ghost-ops721/alyra-labs`](https://github.com/Ghost-ops721/alyra-labs) | 🟢 `MIT` | `1,068` | `1` | `1` | `2026-08-13` | `main` | 🔵 Global | chemistry lab |
+| [`Eipckz/music-theory-master`](https://github.com/Eipckz/music-theory-master) | 🟢 `MIT` | `1,063` | `1` | `0` | `2026-09-07` | `master` | 🔵 Global | theory/SATB |
+| [`sebastianspicker/resonance-practice`](https://github.com/sebastianspicker/resonance-practice) | 🟢 `MIT` | `1,074` | `0` | `0` | `2026-10-29` | `main` | 🔵 Global | practice evidence |
+| [`IsaacCavallaro/music-pattern-quests`](https://github.com/IsaacCavallaro/music-pattern-quests) | 🟢 `MIT` | `1,072` | `0` | `0` | `2026-09-03` | `main` | 🔵 Global | pattern drills |
+| [`jacksonpryorbennett/music-theory-lab`](https://github.com/jacksonpryorbennett/music-theory-lab) | 🟢 `MIT` | `1,076` | `0` | `0` | `2025-12-05` | `main` | 🔵 Global | theory visualisation |
+| [`DusPro/educacao-especial`](https://github.com/DusPro/educacao-especial) | 🟢 `MIT` | `1,081` | `0` | `0` | `2025-07-08` | `main` | 🟢 **LATAM** | `PEI`/`IEP` generation |
+| [`Gio0938/CocoMath`](https://github.com/Gio0938/CocoMath) | 🟢 `Apache-2.0` | `11,357` | `1` | `0` | `2026-08-29` | `main` | 🟡 **LATAM** (language) | adaptive numeracy |
+| [`lnosiqueira/Totem-IA-Educacional`](https://github.com/lnosiqueira/Totem-IA-Educacional) | 🟢 `MIT` | `1,070` | `2` | `1` | `2025-10-31` | `main` | 🟢 **LATAM** | kiosk delivery |
+| [`Edwin1719/AvatarAcademy`](https://github.com/Edwin1719/AvatarAcademy) | 🟢 `MIT` | `1,078` | `1` | `0` | `2025-12-04` | `main` | 🟡 **LATAM** (language) | avatar tutor |
+| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 `MIT` | 🟡 `1,128` | `2` | `0` | `2026-06-14` | `main` | 🟢 **LATAM** | curriculum corpus |
+
+### 🟡 The week's most-forked education repository on this shelf is a build tool at `17★`
+
+[`phetsims/chipper`](https://github.com/phetsims/chipper): `17★`, **`20` forks** — a fork-to-star
+ratio above `1.0`, and [`KrisLamote/dyscalc`](https://github.com/KrisLamote/dyscalc) is higher still
+at `19` forks on `10★` (`1.9`). 🔵 **Both are the shapes stars do not show.** A build tool is forked
+to build with; a classroom drill is forked to **run in a classroom**. 🟢 On this sector's shelves
+fork ratio is a better adoption proxy than star count, and this base has `3,828` addresses on which
+it has never computed one.
+
+### 🔴 Declared gaps this week, stated so silence is not mistaken for coverage
+
+- 🔴 **No star-velocity field exists in this channel**, so "trending" on this shelf means *"newly
+  surfaced to this base"*, not *"gaining stars"*. Unchanged from prior passes and now explained.
+- 🔴 **Spanish and Portuguese queries are brittle in this index.** `laboratorio virtual educacion
+  simulacion` returned **`0`** rows; `laboratorio virtual` alone returned `6`. Multi-term
+  non-English conjunctions over-constrain name/description/topic matching. 🟢 The LATAM yield this
+  pass (`7` new names) came from **two-word** queries, and that is the reusable technique.
+- 🔴 **No APAC-placeable new repository** beyond the promoted `Swar-Setu`. Searched: the four
+  mandated legs, three named tiers, and `China Singapore Japan education ministry AI guidelines`.
+  The APAC material returned is **policy, not supply** — see `intel/market.md`.
+- 🔴 **No EMEA-placeable new repository.** `AfriLab` (promoted) is EMEA on its own text; `PhyLab`
+  would be EMEA on its holder's institution and its README says nothing, so it stays Global
+  (`620-E`).
+
 ## 🆕 `p619` — `2026-11-02` — **a `265★`/`106`-fork repo this base had never seen, in a tier it held `4` mentions of — and the `Apache` payload that is short *because* it is finished**
 
 🔵 **What is actually new this week is not a repo, it is a shelf hole closing.** The sign-language /

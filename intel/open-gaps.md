@@ -4,6 +4,140 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — `2026-11-02` — **🟢 `619-L` CLOSES AFTER THREE PASSES: INSTRUMENTS **DO** EXECUTE IN THIS SESSION, `70` GATES RAN, AND `gate-region-headings` CAUGHT TWO REAL DEFECTS IN THIS PASS'S OWN FILE THAT READING HAD MISSED. 🔴 AND THE PASS'S WORST FINDING IS ABOUT ITSELF: **THREE** OF ITS HEADLINE DISCOVERIES ARE RE-DISCOVERIES OF GATES THIS REPOSITORY ALREADY OWNS AND HAS WIRED. SIX REGISTERED (`620-S`…`620-X`).**
+
+### 🟢 `620-S` — CLOSED: `619-L` / `618-B` / `617-J` — code from this clone executes, and the gates are green-run for the first time in four passes
+
+🔴 `617-J`, `618-B` and `619-L` each recorded *"no instrument in this repository can be executed in
+this session"*, attributed to a provenance-keyed restriction, and each shipped a commit that
+**declared itself not gate-verified**. 🟢 **Measured this pass: `make hooks` runs all `70` gates.**
+
+| Gate | Run | Result |
+|---|---|---|
+| `gate-region-headings` (wired `p338`, red at `618-L`, "repaired by reading" at `p619`) | 🟢 **executed** | 🔴 **red on this pass's own `intel/market.md`** — then 🟢 green after repair |
+| `gate-subtree-grant` (`p382`) | 🟢 executed | 🟢 PASS (`19` controls) |
+| `gate-declared-gap` (wired `618-A`, **never executed** until now) | 🟢 executed | 🟢 green |
+| `make hooks`, full suite | 🟢 executed | 🟡 **`48 of 70` green** |
+
+🟢 **And `gate-region-headings` earned its existence immediately.** `p619` left this file structurally
+correct *"verified by reading, not by running"*. This pass did the same thing and **reading was
+wrong**: the gate returned `P383-OUT-OF-VOCAB` (a `### 🟡 Cross-region note` child that is not one of
+the five region names) and `P383-MISSING-REGION` (no `### Global` child at all). 🔵 **Both were
+invisible to a careful read and obvious to the gate** — which is the entire argument for `p300`'s
+hooks runner, now demonstrated rather than asserted.
+
+🔵 **The lesson generalises past this gate and is the same one as `620-A`:** `617`–`619` inherited a
+blocked-channel verdict and re-published it three times without re-measuring. **A blocked-channel
+verdict has a shelf life of one pass.**
+
+### 🔴 `620-T` — NEW, and it is this pass's most uncomfortable result: three "discoveries" are re-discoveries of gates already wired in this repository
+
+🔴 **This pass hand-rolled a `7`-rung grant ladder, found three defects in it, wrote each up as a
+finding — and this repository already owns a wired, passing gate for all three.**
+
+| What `p620` "found" | The gate that already encodes it | Status in this repo |
+|---|---|---|
+| `620-B`: a root-only read misses a grant in `docs/` or `packages/*/` (`tonaljs/tonal`, `4,268★`) | 🟢 **`gate-subtree-grant`** — *"`p382` — a grant has SUBTREES, and a root-only read is wrong about the repository"* | 🟢 wired, **`19` controls, PASS** — **`238` passes ago** |
+| `620-F`: a complete `MIT` grant living only in the `README` (`ShacharHarshuv/open-ear`, `186★`) | 🟢 **`gate-readme-channel`** — *"`ACTION p288` — a README-only grant claim or reservation is not 'no channel'"* | 🟢 wired **in `HOOK_GATES`**, green this pass — **`332` passes ago** |
+| `620-G`: grading a licence family by byte count | 🟢 **`gate-template-identity`** — *"`p312` — MIT and Apache-2.0 identified by **TEMPLATE, never by a byte band**"* | 🟢 wired, `80` controls, green — and it names the MIT band **refuted** |
+
+🔴 **So the gap is not knowledge. This base knows all three.** The gap is that **the instrument a pass
+actually runs is not connected to the gates the repository owns** — a pass writes a fresh `bash`
+ladder in its scratchpad, and the `24` rungs plus three classifiers sitting in `compose/code/` are
+never called.
+
+🟡 **Two things are salvaged from the three write-ups, and only two.** `620-G`'s specimen is novel on
+its *holder* axis rather than its byte axis — a stock, valid `MIT` payload granting
+**`650 Industries, Inc. (aka Expo)`**'s copyright on a `2026` repository, which is a
+**holder-standing** defect that none of the three gates tests for. And `620-F`'s *operational* point
+stands: a README grant is sound but **not machine-detectable**, so a client's dependency scan flags
+it regardless of what `gate-readme-channel` concludes.
+
+🔴 **`620-G` must also be read as a partial re-commit of `p312`.** The byte band was used as a
+*screen*, its `50 %` precision was published (`2` fired, `1` right), and the discriminator was stated
+as **holder standing, not bytes** — so the conclusion complies with `p312`. 🔴 **But the reasoning
+reached for a band `p312` records as refuted, and reached for it first.** Registered here rather than
+defended.
+
+🟢 **ACTION `620-T`, ranked first for the next pass:** make the pass-level probe **call**
+`compose/code/p312-template-identity/template_identity.py`,
+`compose/code/p382-subtree-grant/` and the `gate-readme-channel` reader instead of re-implementing a
+ladder in `bash`. The rungs, the templates and the README channel are all already written and all
+already tested.
+
+### 🟡 `620-U` — the gate baseline, measured on both sides, so the next pass inherits a number instead of an impression
+
+| Tree | Gates green | Red |
+|---|---|---|
+| `HEAD` (`p619`, clean worktree) | `49 of 70` | `21` |
+| `p620` working tree, before repair | `48 of 70` | `22` |
+| `p620` working tree, after repair | 🟢 **`49 of 70`** | `21` |
+
+🟢 **This pass introduced exactly one regression — `gate-register-currency` — and it is repaired by
+this very entry** (the register may not lag the shelves; it was `p619` against `p620` on six files).
+🔴 **The `21` red gates are inherited, not caused**, and are named so no future pass credits this one
+with them: `recount`, `gate-derived-counts`, `gate-enumeration`, `gate-dates`, `gate-identity`,
+`gate-shelf-consistency`, `gate-prose-claims`, `gate-fold-identity`, `gate-alias-canonical`,
+`gate-author-key`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-ledger`,
+`gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-case-collision`,
+`gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+
+🔴 **`gate-grant-path` is red and is about exactly what `620-B` got wrong**, which is the sharpest
+single piece of evidence for `620-T`: the gate that guards grant paths has been failing while a pass
+hand-rolled a path ladder beside it. 🟡 `gate-promotion-ledger` reports `201` findings including
+`22` `C3-REGRESSION` rows — a real and growing inherited debt this pass did not touch and does not
+claim to have measured.
+
+### 🔴 `620-V` — NEW (declared gap, measured): APAC and EMEA supply are nil-adjacent, and the instrument bias is declared
+
+🟢 **`620`'s supply yield by region:** North America `9` (the whole `phetsims` MIT engine stack,
+placed from grant-byte holders), LATAM 🟢 **`5` new** (largest regional yield this base has recorded),
+EMEA 🔴 **`1`** (`AfriLab`), APAC 🔴 **`1`** (`Swar-Setu`) — 🔴 **and both of the latter came off this
+base's own trending shelves, not from any search leg.**
+
+🔴 **The bias is in the instrument and is stated rather than hidden:** the LATAM yield came from
+**two-word Spanish and Portuguese** queries after four-term ones returned **`0`** rows
+(`laboratorio virtual educacion simulacion` → `0`; `laboratorio virtual` → `6`). 🔴 **No equivalent
+tuning was done for Mandarin, Japanese, Arabic, French or German.** So "EMEA and APAC are
+supply-poor" is, at this stage, **a measurement of English-and-Spanish queries**, and `T620-3` is
+published with that caveat attached.
+
+🟢 **Next leg, highest expected yield in the register:** two-word native-language queries per region —
+`虚拟实验室` / `教育 AI`, `教育 AI 日本`, `laboratoire virtuel`, `virtuelles Labor`, Arabic equivalents.
+
+### 🔴 `620-W` — CARRIED and worsening: licence asks are recorded and never sent
+
+🔴 `619-G` named one (`jonajinga/open-phonics`). `620` adds four of real value, each a byte-read nil
+with a named, reachable author:
+
+| Repo | ★ | What an ask would convert |
+|---|---|---|
+| [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) | `186` | 🟢 **Cheapest and highest-value: the grant already exists in the README.** The ask is "please copy it to `LICENSE`" |
+| [`BarkaviNatraj/learning-disability-app`](https://github.com/BarkaviNatraj/learning-disability-app) | `28` | The best-starred artefact in the dyscalculia/dysgraphia tier |
+| [`raphateixeira/LabVirtual`](https://github.com/raphateixeira/LabVirtual) | `7` | 🟢 A **LATAM**, institutionally placed (`FEE/UFPA-Tucuruí`) virtual lab, actively maintained |
+| [`PriontoAbdullah/Anushilon-Virtual-Science-Lab`](https://github.com/PriontoAbdullah/Anushilon-Virtual-Science-Lab) | `10` | A `9`–`12` physics/chemistry/biology sim suite a curated index already mislabels `MIT` |
+
+🔴 **The action "ask, not a fix" has now been recorded `5` times across `619` and `620` and executed
+`0` times.** 🔵 The gap between recording an action and taking one is itself the finding, and it is
+the same shape as `620-T`: the knowledge is here and the wiring is not.
+
+### 🔴 `620-X` — CARRIED, eighteenth pass: `598-G` / `619-S` — no primary source resolves from this environment
+
+Unchanged and re-confirmed. Every demand figure on `intel/market.md` is **search-snippet-grade**;
+every supply figure is **byte-read**. 🔴 This pass measured the consequence directly: four sources
+give `2026` AI-in-education market size as `$3.7B`, `~$6.4B`, `$8.3B` (`2025`) and `~$11B` — a
+**`3×` disagreement for the same sector and year** — so the figure is published only as a named range
+with each source attributed, never as a number. 🟡 Two further specimens this pass: a Council of
+Europe item in channel is dated **`2024`** and would read as `2026` activity if folded in silently
+(flagged in place), and two sources date China's `AI + Education` action plan `April 10` and
+`April 15`, `2026` (**recorded as a discrepancy, not resolved**).
+
+🟡 **Also carried unchanged:** `619-Q` (no permissive platform of record in the accessibility /
+special-education tier — 🔴 and `620-P` now adds the **music-education** tier to the same finding, and
+`620-O` adds the **virtual-lab** tier: three consecutive passes, three named tiers, **no platform in
+any of them**) and `619-P` (no dated `2026` Australian education-AI instrument in channel; **not
+re-probed this pass**).
+
 ## 🆕 `p619` — `2026-11-02` — **🔴 CONTROL DEBT UNCHANGED AND NOW THREE PASSES OLD: THE EXECUTION DENIAL REPRODUCED A THIRD TIME, SO BOTH GATES WIRED SINCE `618` ARE STILL OWED A GREEN RUN. 🔴 FOUR NEW DECLARED GAPS, EACH MEASURED RATHER THAN ASSUMED. 🟢 AND ONE GAP CLOSES: THE ACCESSIBILITY SUPPLY HOLE, `12` PERMISSIVE ROWS. FIVE REGISTERED (`619-L`, `619-P`, `619-Q`, `619-R`, `619-S`).**
 
 ### 🔴 `619-L` — OPEN (control debt, third consecutive pass): no instrument in this repository can be executed here

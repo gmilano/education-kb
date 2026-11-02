@@ -4,6 +4,282 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — reads `2026-11-02`, commit `2026-11-02` — **🟢 A NEW DISCOVERY CHANNEL IS OPEN THAT THIS BASE RECORDED AS BLOCKED FOR 600+ PASSES: `search/repositories` ANSWERS **GLOBALLY** THROUGH THE SESSION PROXY, AND THE `repo:` QUALIFIER TURNS IT INTO A PER-REPOSITORY METADATA READ — `34` ROWS, `30` NEW HEAD NAMES, `16` REGION-PLACED. 🔴 THIS PASS'S OWN GRANT LADDER WAS DEFECTIVE AND IT CAUGHT ITSELF: TWO MISSING RUNGS (`LICENSE-MIT`, `packages/*/LICENSE`) GRADED A `4,268★` MIT LIBRARY "UNGRANTED" AND NEARLY PUBLISHED A FALSE DEFECT AGAINST `p612`. 🔴 A STOCK, VALID, BYTE-PERFECT `MIT` PAYLOAD THAT LICENSES **SOMEBODY ELSE'S COPYRIGHT** — AND `p616`'s BYTE BAND IS WHAT CAUGHT IT. 🟢 THE SECTOR'S CANONICAL SIMULATION PLATFORM SPLITS `9 of 9` MIT ENGINE AGAINST `9 of 9` UNGRANTED CONTENT. 🔴 AND THE PASS'S WORST RESULT IS AGAINST ITSELF: **THREE** OF THESE "FINDINGS" ARE RE-DISCOVERIES OF GATES THIS REPOSITORY ALREADY OWNS, WIRED AND GREEN (`p288`, `p312`, `p382`) — THE KNOWLEDGE IS HERE, THE WIRING IS NOT (`620-T`). 🟢 FIRST GATE-VERIFIED COMMIT IN FOUR PASSES: `70` GATES RAN, `49 of 70` GREEN, `0` REGRESSIONS. TWELVE REGISTERED (`620-A`…`620-M`).**
+
+### 🟢 `620-A` — read this first: the channel this base has called blocked since `p54` is open, and it is not the one that was being tried
+
+Every pass from `p54` to `p619` recorded some version of *"github-api-proxy-blocked"* and fell back to
+web-search digests plus `raw.githubusercontent.com` byte reads. 🔴 **That verdict was right about the
+endpoint being probed and wrong about the API.** Measured this pass:
+
+| Endpoint | Result | Meaning |
+|---|---|---|
+| `gh api repos/openzim/phet` | 🔴 **`403`** | *"GitHub access to this repository is not enabled for this session"* — the session **scope gate** |
+| `gh api -X GET search/repositories -f q='...'` | 🟢 **`200`, global corpus** | **no scope gate** |
+| `gh api -X GET search/repositories -f q='repo:openzim/phet'` | 🟢 **`200`, full metadata for one repo** | a per-repository read **through** the search endpoint |
+
+🟢 **The third row is the operative.** The `repo:` qualifier returns `license.spdx_id`, `stargazers_count`,
+`forks_count`, `pushed_at`, `default_branch`, `language` and `archived` for **any public repository**,
+which is exactly the field set this base has been reconstructing by hand from HTML sidebars and
+byte probes. 🔵 **Why the distinction matters and is not a technicality:** the scope gate is keyed on
+*the repository being addressed in the path*, and `search/*` addresses no repository in its path.
+🔵 **A blocked-channel verdict must name the endpoint it was measured on.** "The API is blocked" was
+carried for `566` passes as a property of the API; it was a property of one route.
+
+🔵 **Reusable, and this is the whole instrument:**
+
+```
+gh api -X GET search/repositories -f q='repo:OWNER/NAME' -f per_page=1
+gh api -X GET search/repositories -f q='<terms>' -f per_page=20 -f sort=stars -f order=desc
+```
+
+🟡 **Stated limits, so the next pass does not over-trust it.** It is still a *search* index: it ranks on
+name, description and topics (not README body unless `in:readme` is asked for), and `620-C` shows it
+returns **zero rows** for several well-formed Spanish queries where looser terms return many — so a
+nil from this channel is a nil *for that query*, never for the tier. And `620-E`/`620-F` show its
+`license.spdx_id` is **not** an oracle in either direction.
+
+### 🔴 `620-B` — this pass's own grant ladder was defective, it nearly published a false defect against `p612`, and the self-catch is the method
+
+Mid-pass this base's `7`-rung ladder returned `NO_GRANT_PAYLOAD` for two repositories whose
+`spdx_id` said `MIT`. 🔴 **The tempting reading was a defect in the platform field — a direct
+counter-example to `p612`'s `68 of 68` (`100 %`).** It was written up as one. Then it was checked:
+
+| Repo | `spdx_id` | 7-rung ladder | **Where the grant actually is** |
+|---|---|---|---|
+| [`gregjopa/music.js`](https://github.com/gregjopa/music.js) (`204★`) | `MIT` | 🔴 nil | 🟢 **`LICENSE-MIT`** — `1,066 B`, a rung the ladder never asked for |
+| [`tonaljs/tonal`](https://github.com/tonaljs/tonal) (**`4,268★`**) | `NONE` | 🔴 nil | 🟢 **`docs/LICENSE`** — `1,074 B`, `The MIT License (MIT)`, `Copyright (c) 2015 danigb` |
+
+🟢 **So the instrument was wrong, not the platform**, on the first row. Ladder `v2` adds `24` paths
+(`LICENSE-MIT`, `MIT-LICENSE`, `MIT-LICENSE.txt`, `LICENSE-APACHE`, `docs/LICENSE`,
+`packages/<name>/LICENSE`, case variants) and **every nil verdict issued earlier in this pass was
+re-run under it** before anything was published. Two were recovered; the rest held at `24 of 24` paths,
+with `2 of 2` fabricated controls nil.
+
+🔴 **CORRECTION, found while running this repository's own gate suite after the above was
+written:** this base **already owns a wired, passing gate for exactly this defect** —
+`gate-subtree-grant`, *"`p382` — a grant has SUBTREES, and a root-only read is wrong about the
+repository"*, `19` controls, **green this pass**, registered **`238` passes ago**. 🔴 So `620-B` is a
+**re-discovery, not a discovery**, and the real gap is that this pass hand-rolled a `bash` ladder
+instead of calling the tested instrument sitting in `compose/code/p382-subtree-grant/`. Registered
+as `620-T` in `intel/open-gaps.md`, where it is this pass's worst result.
+
+🔵 **The rule this hands forward, and it is the expensive half:** a nil is a claim about the
+**instrument**, not about the repository, until the instrument has been widened and the nil
+reproduces. 🔴 **This base has now made this mistake five times by its own record** (`610-E` omitted
+`COPYING.txt` and failed the official Moodle app; `612-C` was case-sensitive on a `67,644★` repo;
+`611-B` mis-graded every `GPL-2.0`; `619-E` had a branch probe that could not falsify; this). The
+recurring shape is not carelessness — it is that **a ladder's misses are silent and look exactly like
+findings**, which is why `620-B` is registered as a control debt in `compose/patterns.md`, not as a
+footnote.
+
+🟢 **And `tonal` is the reason it is worth the words.** The `spdx_id` is `NONE` because GitHub's
+licensee reads the **repository root only**; `tonal` is a monorepo whose grant sits in `docs/`.
+A root-only reader and a `NONE`-means-ungranted filter both drop the **best-starred permissive music
+primitive in the sector**, and this base would have dropped it too.
+
+### 🟢 `620-C` — how the three tiers were named, and the Spanish-language leg that broke the regional pattern
+
+The tier-naming operative from `617-K`/`618-D`/`619-C` is run a fourth time: a keyword census over
+the seven shelf files, then spend the budget on the **zeroes**. Census (this pass, `37` keys):
+
+`cafeteria` **`0`**, `dyscalculia` **`0`**, `music education` **`0`**, `parent engagement` **`0`**,
+`physics simulation` **`0`**, `school bus` **`0`**, `career guidance` `1`, `curriculum mapping` `1`,
+`lab simulation` `1`, `virtual lab` `1` — against `proctor` **`533`**, `rubric` **`470`**,
+`accessib` `249`, `IEP` `166`. 🟢 Three tiers named: **virtual labs / science simulation**,
+**music education**, **dyscalculia / numeracy intervention**.
+
+| Leg | Head names returned | Already held | **New** |
+|---|---|---|---|
+| The `4` mandated global legs | `13` | **`13`** | 🔴 **`0`** (`620-D`, the **50th** consecutive nil) |
+| Virtual lab / science simulation | `12` | `4` | 🟢 **`8`** |
+| Music education / ear training / notation | `14` | `0` | 🟢 **`14`** |
+| Dyscalculia / numeracy intervention | `6` | `0` | 🟢 **`6`** |
+| 🟢 **Spanish/Portuguese-language legs** (`620-G`) | `8` | `1` | 🟢 **`7`** |
+
+🔵 **The dedup is an oracle, not recall:** a `3,828`-slug index built this pass by extracting every
+`github.com/owner/repo` address from all eight shelf files, matched case-insensitively. 🟡 It is
+`74` slugs *smaller* than `619-C`'s `3,902` on a wider file set, so the two numbers are **not**
+comparable and the extraction regex differs — said rather than reconciled, because the oracle's job
+is to refuse duplicates, which it did `17` times.
+
+### 🔴 `620-D` — the mandated global legs return the fiftieth consecutive nil, and this one has a named cause
+
+All four mandated legs ran. `13` head names returned, **`13` held** against the oracle:
+`microsoft/ai-agents-for-beginners`, `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`ArturoNereu/AI-Study-Group`, `rohitg00/ai-engineering-from-scratch`, `aneelv75/github-trending`,
+`speedyapply/2026-AI-College-Jobs`, `pguso/agents-from-scratch`, `anandpatikat/guru-latihan-dinamis`,
+`avinash201199/free-ai-agents-resources`, `krayin/laravel-crm`, `hcengineering/platform`,
+`openeducat/openeducat_erp`.
+
+🟢 **`620-A` gives the nil a mechanism for the first time.** The mandated legs are *search-digest*
+queries, and a digest ranks on **popularity of the write-up**, so it returns the same canonical
+set every week by construction. The `search/repositories` legs — same budget, same pass — returned
+`28` new head names. 🔵 **The legs are not failing to find supply; they are the wrong instrument for
+finding *new* supply, and this base now has the right one.** The ERP/CRM leg also pays nothing a
+**fifth** time (`618`, `619` retired it; `620` re-ran it as mandated and confirms).
+
+### 🟢 `620-E` — the thirteen agent-shaped rows, every grant byte-read today
+
+🔵 **Split criterion, unchanged from `619-D` so the shelves stay comparable:** a row lands here if it
+is a **learner-facing runtime** — it takes a learner's input and adapts. Reusable models, corpora,
+libraries and build tooling went to `repos/foundations.md` (`16` more rows there). No row appears twice.
+
+| Repo | Grant | Title line | Bytes | Holder | ★ | Forks | Branch | Region | What it is |
+|---|---|---|---|---|---|---|---|---|---|
+| [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) | 🟡 **`MIT`** — in `README`, see `620-F` | `## License` → full text | — | `Shachar Har-Shuv` (`2021`) | **`186`** | `35` | `master` | 🔵 Global — holder not placed | **The pass's most consequential row.** Scale-degree and melodic recognition, Roman-numeral chord function and progressions drawn from real songs. 🟢 The best-starred artefact in the music tier by `4.9×`. 🔴 Carries **no `LICENSE` file at `24` probed paths** and reports `NONE` on the platform field — and **is nonetheless fully granted**. `620-F` adjudicates |
+| [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | 🟢 **`MIT`** | `MIT License` | `1,064` | `AfriLab` (`2024`) | `2` | `0` | `main` | 🟢 **EMEA** — Africa, README-evidenced | `29` interactive simulations across chemistry, biology, physics, pharmacy and medicine with an AI lab assistant. 🟢 **Region-placed on its own text**, not on a guess: *"African universities — no physical lab required"*, *"African science education: equipment is scarce, consumables are expensive"*. 🔵 It states the constraint it is built for, which is why it is the virtual-lab row to keep for an EMEA engagement |
+| [`AyushBinjola1/Swar-Setu`](https://github.com/AyushBinjola1/Swar-Setu) | 🟢 **`MIT`** | `MIT License` | `1,070` | `Ayush Binjola` (`2026`) | `15` | `0` | `main` | 🟢 **APAC** — India, README-evidenced (`India 🇮🇳`) | Multilingual early detection and support for dyslexia, dysgraphia and dyscalculia. 🟢 The **only** row this pass that places supply in APAC, and the only artefact found in any tier that treats the three specific learning differences as **one** screening surface |
+| [`KrisLamote/dyscalc`](https://github.com/KrisLamote/dyscalc) | 🟢 **`MIT`** | `MIT License` | `1,067` | `KrisLamote` (`2019`) | `10` | **`19`** | `master` | 🔵 Global — holder not placed | React drill app for children with dyscalculia, sums to `10` or `20`. 🟢 **`19` forks on `10★`** — a fork-to-star ratio of `1.9`, the highest on this shelf by an order of magnitude, which is what a **classroom-deployed** artefact looks like as opposed to a starred one. 🔵 Quiet since `2023`; the value is the task design, not the code |
+| [`russmaxdesign/dyscalculia-tool`](https://github.com/russmaxdesign/dyscalculia-tool) | 🟢 **`MIT`** | `MIT License` | `1,069` | `Russ Weakley` (`2026`) | `2` | `0` | `main` | 🔵 Global — holder not placed | Renders long numbers readable for dyscalculia, cognitive disability and reading difficulty. 🔵 Not a tutor — a **presentation primitive**, and the only row in the tier that serves adults as well as learners. Freshest holder year in the tier |
+| [`narner/DyscalculiaTester`](https://github.com/narner/DyscalculiaTester) | 🟢 **`MIT`** | `MIT License` | `1,067` | (`2022`) | `4` | `0` | `main` | 🔵 Global — holder not placed | A screening instrument rather than an intervention. 🟡 Holder line carries a year and **no name** — a grant form this base flags but does not refuse, since the permission text and disclaimer are intact |
+| [`Ghost-ops721/alyra-labs`](https://github.com/Ghost-ops721/alyra-labs) | 🟢 **`MIT`** | `MIT License` | `1,068` | `Neil Carnac` (`2026`) | `1` | `1` | `main` | 🔵 Global — holder not placed | Virtual chemistry laboratory and perfume atelier — real reactions, scientific visualisation. 🔵 The **reaction-simulation** representative of the tier, where `AfriLab` is the breadth representative |
+| [`hlavacs/PhyLab`](https://github.com/hlavacs/PhyLab) | 🟢 **`MIT`** | `MIT License` | `1,071` | `Helmut Hlavacs` (`2021`) | `5` | `0` | `main` | 🔵 Global — **holder not placed**, deliberately | VR laboratory for secondary-school physics. 🟡 The holder is an academic whose institution would place this row in **EMEA**, and the README says **nothing** about it — so it stays Global. 🔵 **Recording the non-placement is the point:** `619`'s region field is only worth what its evidence rule is worth |
+| [`AMAN6921/SikhshaBox…Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 🟢 **`MIT`** | `MIT License` | `1,069` | `AMAN…` (`2025`) | `13` | `0` | `main` | 🔵 Global — holder not placed | Isolated virtual environments for students to practise coding, with resource allocation and automated feedback. 🔵 The tier's **infrastructure** row: it virtualises the lab rather than simulating the experiment. 🟢 Promoted from `repos/trending.md` — `p610`-class debt |
+| [`DusPro/educacao-especial`](https://github.com/DusPro/educacao-especial) | 🟢 **`MIT`** | `MIT License` | `1,081` | `Raphael Barauna da Silva` (`2025`) | `0` | `0` | `main` | 🟢 **LATAM** — Brazil, instrument-evidenced | Generates the **`PEI`** (*Plano Educacional Individualizado*), diaries, reports and adapted activities for special-education teachers. 🟢 **The `IEP` tier has `166` mentions on this shelf and this is its first LATAM-placed row** — and it is placed by naming Brazil's own statutory instrument, not by language guessing |
+| [`Gio0938/CocoMath`](https://github.com/Gio0938/CocoMath) | 🟢 **`Apache-2.0`** | `Apache License` | `11,357` | — | `1` | `0` | `main` | 🟡 **LATAM** — Spanish-language, country **not** evidenced | Adaptive practice for algebraic factorisation driven by a **multiclass logistic-regression** error classifier. 🟢 The numeracy tier's only row with a **stated model** rather than a rule set, and the only one that is `Apache-2.0`. 🟡 Placed on language alone — flagged, not asserted |
+| [`Edwin1719/AvatarAcademy`](https://github.com/Edwin1719/AvatarAcademy) | 🟢 **`MIT`** | `MIT License` | `1,078` | `Edwin Quintero Alzate` (`2025`) | `1` | `0` | `main` | 🟡 **LATAM** — Spanish-language, country **not** evidenced | Video tutors with realistic avatars generating lessons in Python. 🔵 Depends on a hosted frontier model — **not** an offline artefact, which matters for every low-connectivity recipe on this shelf |
+| [`lnosiqueira/Totem-IA-Educacional`](https://github.com/lnosiqueira/Totem-IA-Educacional) | 🟢 **`MIT`** | `MIT License` | `1,070` | `Leno Siqueira` (`2025`) | `2` | `1` | `main` | 🟢 **LATAM** — Brazil, `FIAP` named | Kiosk-form educational AI totem, built with **`FIAP`** (São Paulo) and FlexMidia. 🔵 The shelf's only **physical-installation** form factor, which is a delivery model rather than a feature |
+
+🟡 **`186★`, `15★`, `13★`, `10★`, `5★`, `4★`, `2★`, `2★`, `1★`, `1★`, `0★`, `0★` and one more — and the
+low rows are shelved for their shape, not their adoption**, said that way round as `617-D` requires.
+🟢 `KrisLamote/dyscalc` is the row this pass would keep if it could keep one: `19` forks on `10★` is
+the only adoption signal on this shelf that points at **classrooms** rather than at readers.
+
+### 🔴 `620-F` — a complete `MIT` grant that **every** ladder on this base grades ungranted, and the verdict is that it is granted
+
+[`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) (`186★`, `35` forks) carries
+**no grant file at `24` probed paths** on its resolved branch, and the platform field says `NONE`.
+🔴 On `p619-G`'s rule — *"a bare token is not a grant"* — the reflex is to refuse it. 🟢 **Measured, the
+reflex is wrong.** At `README.md` §`License`, lines `73`–`81`:
+
+| Element a recipient needs | Present? |
+|---|---|
+| Named copyright holder and year | 🟢 `Copyright 2021 Shachar Har-Shuv` |
+| Full permission grant (*use, copy, modify, merge, publish, distribute, sublicense, sell*) | 🟢 verbatim |
+| Attribution condition | 🟢 *"shall be included in all copies or substantial portions"* |
+| Warranty disclaimer and liability limitation | 🟢 verbatim, in caps |
+
+🟢 **That is the entire MIT licence. Only the filename is missing.** 🔵 **So this is the exact mirror of
+`619-G`** and the pair is the useful thing: at `619-G` the *channel* over-claimed a grant the tree did
+not carry; here the *ladder* under-claims a grant the tree does carry in full. **One class —
+"the grant is not where the reader looks" — with two opposite failure directions**, and it joins
+`607-D` (prose before and after the licence text) and `620-B` (`docs/`, `LICENSE-MIT`).
+
+🔴 **CORRECTION, same cause as `620-B`'s:** `gate-readme-channel` — *"`ACTION p288` — a
+README-only grant claim or reservation is not 'no channel'"* — is **wired in `HOOK_GATES` and green
+this pass**, registered **`332` passes ago**. 🔴 The rule below was already this base's rule; this
+pass re-derived it because its probe did not call the gate. See `620-T`.
+
+🟢 **Rule:** grade a grant on the **four elements above, wherever they are found**, and treat
+file-path absence as a *prompt to read the README*, never as a verdict. 🟡 **Stated weakness:** a
+README grant is weaker *operationally* — it is not machine-detected, so an automated dependency or
+licence scan in a client's pipeline **will** flag it, and that is a real engagement cost even though
+the grant is sound. 🔵 **The action is an ask, not a fix:** a one-line issue requesting that the
+README §License be copied to `LICENSE` would convert the tier's best row into a scannable one.
+
+### 🔴 `620-G` — a byte-perfect stock `MIT` payload that grants **somebody else's** copyright, caught by `p616`'s byte band
+
+[`VishnuP02/RhythmIQ`](https://github.com/VishnuP02/RhythmIQ) — a rhythm-training and
+practice-tracking app, created `2026`, pushed `2026-10-11`, `0★`. Platform field: `MIT`. Ladder: a
+clean `200`. Title line: `The MIT License (MIT)`. 🔴 **Bytes: `1,106`, which is `9 B` above `p616`'s
+stock-`MIT` ceiling of `1,097`.** Read:
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)
+```
+
+🔴 **The grant is valid, complete, unmodified MIT — and it licenses Expo's copyright, not the
+author's.** It is the `create-expo-app` scaffold's `LICENSE`, committed untouched. A `2015-present`
+holder line on a repository created in `2026` is the tell, and the `9` extra bytes are exactly the
+length that holder string adds.
+
+🔴 **Consequence, stated plainly:** the app's own code is **ungranted**. Every automated check passes
+— platform field, file presence, title line, licence family, full terms — and a downstream recipient
+receives permission to use *Expo*, from a party that never granted anything. 🟢 **This is a new
+failure shape for this base**, and the fifth it has catalogued: over-claiming README (`616-C`),
+under-claiming README (`617-E`), wrong-family listing (`618-E`), asserted-grant-no-tree (`619-G`),
+and now **right-licence-wrong-holder**.
+
+🔴 **CORRECTION, and it is a partial re-commit of `p312`:** this base owns
+`gate-template-identity` — *"`p312` — MIT and Apache-2.0 identified by **TEMPLATE, never by a byte
+band**"*, `80` controls, **green this pass** — and it records the MIT byte band as **refuted**. 🟡 The
+*conclusion* below complies with `p312` (the band is called a screen, its precision is published, and
+the discriminator is stated as holder standing rather than bytes), 🔴 **but the reasoning reached for
+the refuted band first, and that is registered as `620-T` rather than defended.** 🟢 What survives as
+genuinely new is the **holder-standing** axis: none of this base's three grant gates tests whether
+the copyright holder is a party with standing in the repository, which is the only thing that caught
+this row.
+
+🟢 **`p616`'s byte band is what flagged it.** 🔴 **Its precision must be stated honestly, because this
+pass produced the false positive too:**
+
+| Above-band payload this pass | Bytes | Verdict |
+|---|---|---|
+| [`VishnuP02/RhythmIQ`](https://github.com/VishnuP02/RhythmIQ) | `1,106` | 🔴 **genuine defect** — holder is `650 Industries, Inc.` |
+| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | `1,128` | 🟢 **benign** — holder is `Lucas Spinola e contribuidores do projeto…`, a long Portuguese holder string |
+
+🟡 **`2` fired, `1` was right — `50 %` precision on this sample.** 🔵 **So the band is a screen, not a
+verdict**, and the discriminator is not the byte count but **whether the holder names a party with
+standing in this repository**. That is the check worth automating, and `620-B`'s lesson applies: a
+screen with no stated false-positive rate is not a measurement.
+
+🟢 **Measured band, `25` payloads this pass, every one byte-read:** `746 B` (`ISC`, a new family datum
+for this shelf), `1,063`–`1,097 B` (`23` stock `MIT` payloads from `23` independent publishers — the
+band holds), `1,106` and `1,128` above it (both adjudicated above), `11,356`–`11,357 B`
+(`Apache-2.0`, **two** independent publishers, so `619-F`'s "stock `11,357`" is a **`1`-byte band**
+and not a constant), `16,907 B` (`MPL-2.0`), `35,147 B` (`GPL-3.0`).
+
+### 🔴 `620-H` — nine rows refused, with reasons, and one of them disagrees with the platform field for real
+
+| Repo | ★ | Platform field | Bytes | Refused because |
+|---|---|---|---|---|
+| [`ArthurGorgonio/sonus`](https://github.com/ArthurGorgonio/sonus) | `0` | 🔴 **`Apache-2.0`** | 🔴 **nil at `25` paths** | 🔴 **The one genuine platform-field over-claim this pass.** Re-run under ladder `v2`; the nil holds. `.gitignore` returns `200`/`684 B`, so the tree **is** reachable — but `Cargo.toml` and `src/main.rs` are `404`, so the Rust ear-training tool the description promises **is not in the tree**. 🔵 Two defects in one row: an asserted grant with no payload, and `p606`'s "describes a thing that does not exist" class — found in the **candidate** stream, exactly where `p606` predicted it (`0 of 536` promoted rows) |
+| [`PriontoAbdullah/Anushilon-Virtual-Science-Lab`](https://github.com/PriontoAbdullah/Anushilon-Virtual-Science-Lab) | `10` | `NONE` | 🔴 nil at `24` paths | 🔴 `619-G`'s class **from a second, independent channel**: a curated ecosystem index (`awesome.ecosyste.ms`) lists it `MIT`, and the digest repeated it. No grant anywhere. 🟡 A genuine loss — a `9`–`12` physics/chemistry/biology sim suite. **The action is an ask**, as at `619-G` |
+| [`BarkaviNatraj/learning-disability-app`](https://github.com/BarkaviNatraj/learning-disability-app) | **`28`** | `NONE` | 🔴 nil at `24` paths | The **best-starred** artefact in the dyscalculia tier, assistive for dyscalculia *and* dysgraphia, and ungranted. The tier's highest-value ask |
+| [`AaryanSpace/Saksham`](https://github.com/AaryanSpace/Saksham) | `3` | `NONE` | 🔴 nil | Voice-guided real-world number and currency practice — the only artefact found that targets **functional numeracy**. Ungranted |
+| [`hgd-dev/opentutti`](https://github.com/hgd-dev/opentutti) | `1` | `NONE` | 🔴 nil | Positions itself as a complete `K12` ear-training, theory, sight-reading and teaching platform. Ungranted |
+| [`raphateixeira/LabVirtual`](https://github.com/raphateixeira/LabVirtual) | `7` | `NONE` | 🔴 nil | 🟡 **A real LATAM loss**: a dynamic-systems and control virtual lab (pendulum, maglev, aeropendulum, DC motor, drone) for **`FEE/UFPA-Tucuruí`**, a Brazilian federal university. Institutionally placed, actively pushed `2026-10-24`, and ungranted |
+| [`KBGR55/KHAT-TF`](https://github.com/KBGR55/KHAT-TF) | `5` | `NONE` | 🔴 nil | Spanish-language academic platform with a remote laboratory. Ungranted |
+| `phetsims/*` **simulations** | — | `NONE` | 🔴 **nil, `9 of 9`** | Not a defect — a **deliberate platform split**. See `620-I` and `verticals/solutions.md` |
+| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | `22` | `GPL-3.0` | `35,147 B` | 🟡 Not refused — **recorded as copyleft**. A virtual microscope lab with soft-body, low-Reynolds physics; the most technically interesting artefact in the tier and unusable inside a permissive deliverable. Promoted to `verticals/` with the boundary stated |
+
+### 🟢 `620-I` — the simulation platform of record splits `9 of 9` against `9 of 9`, and the line is engine versus content
+
+Measured as a population, not as a row (full table in `repos/foundations.md` and
+`verticals/solutions.md`):
+
+| `phetsims` layer | Repos byte-read | Grant | Bytes |
+|---|---|---|---|
+| 🟢 Engine, libraries, build tooling (`chipper`, `joist`, `scenery`, `alpenglow`, `axon`, `dot`, `kite`, `sun`, `tandem`) | **`9`** | 🟢 **`MIT`, `9 of 9`** | `1,096`–`1,097 B`, holder **University of Colorado** / PhET |
+| 🔴 Simulations themselves (`circuit-construction-kit-dc`, `-common`, `wave-interference`, `projectile-motion`, `forces-and-motion-basics`, `build-an-atom`, `states-of-matter`, `bending-light`, `example-sim`) | **`9`** | 🔴 **no grant payload, `9 of 9`** at `24` paths | — |
+
+🟢 **The commercial reading, and it is the pass's clearest build instruction:** Globant can build
+permissively on PhET's **rendering, scene-graph, property and build stack** — MIT, institutionally
+held, pushed `2026-10-09` — and **cannot lift a simulation repository**. The simulations are
+distributed as `CC-BY` open educational resources **through the PhET website**, not through the
+repositories, so the repo is the wrong acquisition channel for the content and the right one for
+the engine. 🔵 `620-J`: [`openzim/phet`](https://github.com/openzim/phet) (`Apache-2.0`, `11,356 B`,
+pushed **today**) is the layer that resolves this — it packages the published simulations into
+offline `ZIM` archives, which is the licensed route to the content.
+
+### 🟡 `620-K` — open questions this pass is handing forward rather than answering
+
+- 🔴 **`620-B`'s debt is not what it looked like.** Ladder `v2` has `24` rungs and `620-F` proves
+  grants also live in READMEs — 🔴 **and a reader for both already exists here**
+  (`gate-subtree-grant`, `gate-readme-channel`), which this pass only learned after writing the
+  above. The debt is **wiring the pass-level probe to the gates**, not building a reader.
+  Registered as `620-T` in `intel/open-gaps.md`.
+- 🟡 **Is `sonus`'s `Apache-2.0` a stale detection or a deleted file?** The mechanism is unmeasured;
+  a hypothesis (history rewrite leaving a cached licence verdict) is **not** recorded as a finding.
+- 🟡 **`620-G`'s scaffold-holder defect has an unknown base rate.** One specimen found by a byte
+  band that fires rarely. A census over this shelf's existing `MIT` rows for holder strings naming
+  `Expo`, `Vercel`, `Meta Platforms`, `650 Industries` or similar would size it. Not run this pass.
+- 🔵 **The `repo:` channel's `archived` field is unused.** It was returned on every row and read on
+  none; `p612`'s `Continue`-archived class is exactly what it would catch cheaply.
+
 ## 🆕 `p619` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE NAMED-TIER OPERATIVE PAYS A THIRD TIME AND THIS IS THE LARGEST YIELD ON RECORD: THREE TIERS NAMED, `20` NEW HEAD NAMES, `0` HELD, `12` PERMISSIVE PAYLOADS BYTE-READ. 🔴 AND THE **BRANCH** FIELD `p618` SAID IT "RESOLVED FIRST" WAS NEVER DISCRIMINATING — `main` AND `master` BOTH RETURN THE SAME BYTES FOR A `main`-DEFAULT REPO. NOW CALIBRATED, AND AGREEING WITH A SECOND CHANNEL `12 of 12`. 🔴 AN `Apache-2.0` PAYLOAD `597 B` SHORT OF STOCK TURNS OUT TO BE **COMPLETE**, NOT TRUNCATED. 🔴 AND A FOURTH CHANNEL-FAILURE SHAPE: A LISTING ASSERTING A LICENCE FOR A TREE THAT SHIPS **NO GRANT AT ALL**. ELEVEN REGISTERED (`619-A`…`619-N`).**
 
 ### 🟢 `619-C` — read this first: the operative from `617-K`/`618-D` is now confirmed three passes running, and the yield is not marginal

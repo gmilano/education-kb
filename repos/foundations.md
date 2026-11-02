@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p620` — reads `2026-11-02` — **the music tier's primitives were never missing, they were in the wrong place: a `4,268★` MIT library the platform field calls `NONE`, and a canonical simulation platform that is MIT engine over ungranted content**
+
+🔵 **Split criterion:** a row lands here if it is a reusable **model, corpus, library or build
+primitive** — something another system calls. Learner-facing runtimes went to `agents/top.md`
+(`13` rows there). No row appears twice. Every grant below byte-read today under ladder `v2`
+(`620-B`), with `2 of 2` fabricated controls nil.
+
+### 🟢 `620-J` — the music tier has a complete permissive primitive stack, and this base held none of it
+
+🔵 **Why this is a *foundations* finding and not a supply finding.** `620-C` named music education
+because the census returned **`0`**. The named leg returned learner-facing apps — but underneath them
+sits a **library layer** that is older, better-starred and reusable across every row in the tier, and
+the tier's two best primitives are precisely the two the platform field describes wrongly.
+
+| Repo | Grant | Title line | Bytes | Holder | ★ | Forks | Branch | Region | What it is |
+|---|---|---|---|---|---|---|---|---|---|
+| [`tonaljs/tonal`](https://github.com/tonaljs/tonal) | 🟢 **`MIT`** at **`docs/LICENSE`** | `The MIT License (MIT)` | `1,074` | `danigb` (`2015`) | **`4,268`** | `257` | `main` | 🔵 Global — holder not placed | **The tier's keystone.** A music-theory library for JavaScript: notes, intervals, scales, chords, keys, progressions — the vocabulary every ear-training, sight-reading and notation row above needs and none of them ships. 🔴 **Platform field says `NONE`** because GitHub's licensee reads the repository **root only** and this is a monorepo with its grant in `docs/`. A `NONE`-means-ungranted filter drops the best permissive primitive in the sector — see `620-B` |
+| [`CoderLine/alphaTab`](https://github.com/CoderLine/alphaTab) | 🟡 **`MPL-2.0`** | `alphaTab is licensed under MPL-2.0.` | `16,907` | `Daniel Kuschny` (`2025`) | **`1,899`** | `303` | `develop` | 🔵 Global — holder not placed | Cross-platform music-notation and guitar-tablature **rendering** engine. 🔴 Platform field says `NOASSERTION`; the bytes name the instrument in the **title line itself**. 🟡 **`MPL-2.0` is weak copyleft and a new family on this shelf**: file-level reciprocity, so it links into a proprietary deliverable but modifications *to its own files* must be published. 🔵 That is a boundary, not a bar — and it must be in the engagement's licence matrix before anyone renders a stave |
+| [`gregjopa/music.js`](https://github.com/gregjopa/music.js) | 🟢 **`MIT`** at **`LICENSE-MIT`** | 🔴 `Copyright (c) 2015 Greg Jopa, Piers Titus` | `1,066` | `Greg Jopa, Piers Titus` (`2015`) | `204` | `16` | `master` | 🔵 Global — holder not placed | Music theory for JavaScript — notes, intervals, scales, chords. 🔴 **Its title line *is* its copyright line**, so `p612`'s three-non-blank-line title-window grades it on a holder string and learns nothing; the **filename** carries the family instead. 🟢 A new rung for the title-line rule: when the title line names a person, read the filename. 🔵 Quiet since `2017` — shelved as a reference implementation, not a dependency |
+| [`Zachacious/MusicTheoryJS`](https://github.com/Zachacious/MusicTheoryJS) | 🟢 **`ISC`** | `ISC License` | **`746`** | `Zach Moore` (`2020-2026`) | `18` | `1` | `master` | 🔵 Global — holder not placed | Chord parsing, key analysis, microtonal tunings, MIDI and notation. 🟢 **`ISC` is permissive and functionally MIT-equivalent**, and `746 B` is this base's **first recorded `ISC` byte reference** — far below the `MIT` band, which is expected: `ISC` drops the redundant *"use, copy, modify, merge, publish, distribute, sublicense"* enumeration |
+| [`sirged/fermata`](https://github.com/sirged/fermata) | 🟢 **`MIT`** | `MIT License` | `1,077` | `Fermata contributors` (`2026`) | `38` | `2` | `main` | 🔵 Global — holder not placed | Self-hosted sheet-music **server**: library organisation, search, PDF reading plus interactive notation and tab rendering. 🔵 The tier's only **system of record** for scores, and the natural host for `alphaTab`. 🟡 Holder is a project collective, so `618-F`'s "holder names the slug ⇒ canonical" test does not apply |
+
+🟢 **Stack reading:** `tonal` (theory vocabulary) → `alphaTab` (notation rendering) → `fermata`
+(score library and server) → the `agents/top.md` rows (learner drills). **Four independent holders,
+one weak-copyleft boundary, no strong copyleft anywhere.** Wired as a recipe in `compose/patterns.md`.
+
+### 🟢 `620-I` — the `phetsims` engine: `9 of 9` MIT, University of Colorado, and it is separable from the content
+
+🔵 **The measurement that matters is the split**, and `agents/top.md` `620-I` states the other half
+(`9 of 9` simulations carry **no grant payload** at `24` paths). This is the permissive half.
+
+| Repo | Grant | Title line | Bytes | Holder | ★ | Forks | Branch | Region | What it is |
+|---|---|---|---|---|---|---|---|---|---|
+| [`phetsims/chipper`](https://github.com/phetsims/chipper) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | `University of Colorado` (`2014`) | `17` | **`20`** | `main` | 🟢 **North America** — holder-evidenced in the grant bytes | The **build system** for PhET simulations. 🔵 The entry point: whoever builds on this stack runs `chipper` first |
+| [`phetsims/scenery`](https://github.com/phetsims/scenery) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,097` | `University of Colorado` (`2014`) | — | — | `main` | 🟢 **North America** | HTML5 **scene graph** — the rendering core. 🟡 At `1,097 B` it sits **exactly on `p616`'s band ceiling**, which is a corroboration of where that ceiling comes from: `The MIT License (MIT)` plus a long institutional holder line |
+| [`phetsims/joist`](https://github.com/phetsims/joist) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | `University of Colorado` (`2014`) | — | — | `main` | 🟢 **North America** | Simulation **shell and lifecycle**: navigation bar, screens, preferences, about dialogs |
+| [`phetsims/axon`](https://github.com/phetsims/axon) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | `University of Colorado` (`2014`) | — | — | `main` | 🟢 **North America** | **Observable properties** and event system — the state primitive the sims are written against |
+| [`phetsims/dot`](https://github.com/phetsims/dot) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | `University of Colorado` (`2014`) | — | — | `main` | 🟢 **North America** | Mathematics: vectors, matrices, transforms, bounds |
+| [`phetsims/kite`](https://github.com/phetsims/kite) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | `University of Colorado` (`2014`) | — | — | `main` | 🟢 **North America** | Computational **geometry** — shapes, intersections, boolean operations |
+| [`phetsims/sun`](https://github.com/phetsims/sun) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | `University of Colorado` (`2014`) | — | — | `main` | 🟢 **North America** | The **UI component library** — sliders, buttons, panels, accordion boxes, built for touch and for accessibility |
+| [`phetsims/tandem`](https://github.com/phetsims/tandem) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,096` | 🔵 `PhET Interactive Simulations` (`2015`) | — | — | `main` | 🟢 **North America** | **Instrumentation and serialisation** (`PhET-iO`): addressable simulation state. 🟢 **This is the row that makes the stack interesting for assessment** — it is how a simulation emits what a learner did, which is what `p613`'s `xAPI`/`cmi5` tier needs as input. 🔵 Note the holder changes to the project at `2015` |
+| [`phetsims/alpenglow`](https://github.com/phetsims/alpenglow) | 🟢 **`MIT`** | `The MIT License (MIT)` | `1,097` | `University of Colorado` (`2023`) | `15` | `3` | `main` | 🟢 **North America** | Experimental **rasterisation engine**. 🔵 Freshest holder year in the stack and the only forward-looking component |
+
+🟢 **`9 of 9` byte-read `MIT`, `9` region-placed on grant-byte evidence** — the holder line names a
+named public institution, which is the strongest provenance signal this base can get without
+leaving the payload. 🔵 This is the first time a region field on these shelves has been set from
+**inside the grant** rather than from README prose.
+
+### 🟢 `620-L` — the offline-distribution layer, and the only licensed route to the simulation content
+
+| Repo | Grant | Title line | Bytes | ★ | Forks | Pushed | Branch | Region | What it is |
+|---|---|---|---|---|---|---|---|---|---|
+| [`openzim/phet`](https://github.com/openzim/phet) | 🟢 **`Apache-2.0`** | `Apache License` | `11,356` | `21` | `9` | 🟢 **`2026-11-02`** (today) | `main` | 🔵 Global — holder not placed | Scraper that packages the published PhET simulations into offline **`ZIM`** archives. 🟢 **The load-bearing row of `620-I`:** the simulation *repositories* are ungranted, but the *published* simulations are `CC-BY` OER, and this is the maintained, permissively licensed pipeline that acquires them legitimately. 🟢 Pushed **today** — the freshest row this pass. 🔵 openZIM is the Kiwix ecosystem, so the output drops straight into the offline-first delivery tier this base already holds (`Kolibri`, `MIT`) |
+
+🟡 **`11,356 B` against `619-F`'s stock `11,357 B`** (reconfirmed exactly this pass on
+`Gio0938/CocoMath`). 🟢 **So stock `Apache-2.0` is a `1`-byte band, not a constant** — two
+independent publishers, one byte apart, almost certainly a trailing newline. `619-F`'s rule stands
+and is strengthened: **grade `Apache-2.0` on terms text plus filled boilerplate, never on byte count.**
+
+### 🟢 `620-M` — one LATAM foundation row: a teaching corpus rather than a runtime
+
+| Repo | Grant | Bytes | Holder | ★ | Pushed | Region | What it is |
+|---|---|---|---|---|---|---|---|
+| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 **`MIT`** | 🟡 `1,128` | `Lucas Spinola e contribuidores do projeto…` (`2026`) | `2` | `2026-06-14` | 🟢 **LATAM** — Portuguese | An open, free curriculum for building educational assistants: NLP → ML → deep learning → transformers. 🔵 Shelved as a **foundation** because it is a syllabus and corpus, not a runtime — the kind of asset `p614` identified as the sector's new supply shape (prompt and copy, not code). 🟡 Its `1,128 B` is the **benign** above-band payload in `620-G`'s precision table |
+
+### 🔴 `620-N` — the mandated ERP/CRM foundations leg pays nothing a fifth consecutive time
+
+Re-run as mandated. `3` head names returned (`krayin/laravel-crm`, `hcengineering/platform`,
+`openeducat/openeducat_erp`) and **`3` held**. 🔵 `618` and `619` retired this leg after three nils;
+`620` confirms with the oracle rather than from memory. 🟢 **The substantive answer is on the record
+and has not changed:** the education administrative tier is **copyleft by default**
+(`618`: `OpenEduCat` `LGPL-3.0`, `ERPNext` `GPL-3.0`, `Odoo` `LGPL`/proprietary split), and the
+permissive substrate for a full LMS remains `OpenOLAT` (`Apache-2.0`, `p615`) with `Kolibri`
+(`MIT`) for offline delivery.
+
 ## 🆕 `p619` — reads `2026-11-02` — **the recognition model is this sector's missing accessibility primitive, and the ERP/CRM leg pays nothing a fourth time**
 
 ### 🟢 `619-D2` — six foundational rows, and the layer they add is one this shelf had `4` mentions of
