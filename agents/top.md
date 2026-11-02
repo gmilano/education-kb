@@ -1,8 +1,233 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `604-B` IS CLOSED WITH A DENOMINATOR AND THE ANSWER IS CONTAINMENT: `400` SELL-SHELF ADDRESSES SWEPT, `393` PAYLOADS BYTE-READ TODAY, AND THE HTML-CAPTURE CLASS APPEARS IN **`1 of 393` (`0.25 %`)** — THE SAME REPO `p604` FOUND. NO OTHER WRONG DATA IS SHELVED FROM IT. 🔴 `605-C`: THE SEARCH CHANNEL `p604` PROMOTED TO PRIMARY HAS FALSE NEGATIVES IN `5 of 400` — AND THE `422` THIS BASE PUBLISHED AS THAT CHANNEL'S *DISCRIMINATING FABRICATED CONTROL* IS EXACTLY WHAT `3` REAL, LIVE, SHELVED REPOS RETURN. 🔴 `605-D`: THIS PASS'S OWN SELECTION PREDICATE WAS WRONG ABOUT `59 of 400` ROWS (`14.8 %`) AND THE FIRST DRAFT OF `605-B` WAS RETRACTED BEFORE PUBLICATION. 🟢 `605-F`: `604-H`'S NATIONAL-QUERY FIX WORKS AND WAS THE PASS'S **ONLY** DISCOVERY SUPPLY. `9` AGENT ROWS PROMOTED, `5` DISQUALIFIED WITH THEIR REASONS. ELEVEN REGISTERED (`605-A`…`605-K`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row), fabricated control on every arm.**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` (`repo:` / `topic:` / `user:`) | 🟢 **`80` batched `repo:` queries → `395 of 400` resolved**; serves `stargazers_count`, `default_branch`, `license.spdx_id` |
+| 🔴 🆕 **false negatives on that channel** | 🔴 **`5 of 400` (`1.25 %`)** — `2` silent (`total_count: 0`), `3` loud (`422`). See `605-C` |
+| 🔴 🆕 fabricated control on the search channel | 🔴 **NON-DISCRIMINATING for the transfer class** — `p598` published `422` as this channel's discriminating control; `3` real shelved repos return `422` |
+| 🟢 fabricated control, topic arm | 🟢 **DISCRIMINATING** — `total_count: 0` vs `3` |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 **`403`** — unchanged since `p584` |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{default_branch}/{path}` | 🟢 **`393` grants + `12` READMEs + `10` manifests served** |
+| 🟢 fabricated control on `raw` | 🟢 **DISCRIMINATING** — `404 14 B` vs `200`/`206`; run on **every one** of the `400` sweep arms |
+| 🔴 `curl -sI` → `github.com` (the run prompt's mandated verifier) | 🔴 **`403` real AND `403` fabricated** — certifies nothing; carried from `p590`, re-measured today |
+| 🟢 `git ls-remote --symref`, `git clone --bare --depth 1 --filter=blob:none` | 🟢 **RUNS** — symref, **full-tree enumeration** and the committer tz offset (the region channel) |
+| 🟢 fabricated control on the git channel | 🟢 **DISCRIMINATING** — `fatal: could not read Username` vs a resolved symref |
+| 🔴 🆕 `python3 -I compose/code/**/*.py` — **this base's own committed controls** | 🔴 **DENIED** (`[Code from External]`) — new this pass; `604-E` recorded `python3 -I` as running |
+| 🔴 `make`, `bash ingest/*.sh`, `bash compose/code/**/*.sh` | 🔴 DENIED — carried |
+| 🟢 inline `grep` / `awk` / `curl` / `python3 -I` on a heredoc | 🟢 **RUNS** |
+| 🟡 `WebSearch` ×12 (4 mandated global + 4 mandated regional + 4 national) | 🔴 `0` new addresses from the `4` global legs (**35th nil**); 🟢 **`3` from one national leg** — `605-F` |
+
+### 🟢 `605-A` — `604-B` closed, and the answer is containment
+
+🟡 `604-B` registered a new defect class — a grant payload that is a **saved HTML page of another
+repository's licence** — and left the load-bearing question open: *"sweep the base's existing
+permissive rows for the same shape — unmeasured, and the only way to know if wrong data is
+already shelved."* 🟢 **That sweep is done, across all three sell shelves.**
+
+| | figure |
+| --- | --: |
+| addresses selected from `agents/top.md` + `repos/foundations.md` + `verticals/solutions.md` | `400` |
+| 🔵 of which genuinely **claim** a permissive grant (see `605-D`) | `341` |
+| 🔵 of which are blocked / `REVIEW` rows swept anyway — a deliberate superset | `59` |
+| 🟢 payloads byte-read today at the real default branch | 🟢 **`393`** |
+| 🟢 fabricated-path control `404` on every arm | 🟢 **`400 of 400`** |
+| 🟢 **clean** | 🟢 **`392`** |
+| 🔴 **`MARKUP`** (`<html` / `<!DOCTYPE` / `saved from url` in the first `512 B`) | 🔴 **`1`** |
+
+🔴 The one hit is [`uPortal-Project/FeedbackPortlet`](https://github.com/uPortal-Project/FeedbackPortlet)
+— **the repository `p604` already found.** 🟢 **So the class is contained: prevalence
+`1 of 393` (`0.25 %`), and no *other* wrong data is shelved from it.** Ledger:
+[`../evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv`](../evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv).
+
+🔵 **Why a negative result was worth the budget:** `604-B` is the kind of finding that, left open,
+silently discounts every permissive row on the base. One sweep converts *"we do not know"* into a
+number, and the number exonerates `392` rows.
+
+### 🔴 `605-B` — the ladder that found those payloads is case-blind, in **both** directions
+
+🔴 `12` of the `400` returned `NO-PAYLOAD` on the `6`-rung ladder (`LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING`, `COPYING.txt`, `LICENCE`). 🔴 **Six of those twelve were a case
+artefact, not an absence** — and the blindness runs both ways:
+
+| recovered rung | repos | shelf claim confirmed by the recovered bytes? |
+| --- | --: | --- |
+| 🔴 lowercase `license` / `license.txt` / `license.md` | `5` | 🟢 yes — all `5` byte-read `MIT` (`1,062`–`1,072 B`), all clean |
+| 🔴 UPPERCASE extension `LICENSE.TXT` ([`openedx/XBlock`](https://github.com/openedx/XBlock)) | `1` | 🟢 yes — `Apache-2.0`, and the API agrees |
+
+The five recovered on a lowercase rung: [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service),
+[`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation),
+[`TheOdinProject/theodinproject`](https://github.com/TheOdinProject/theodinproject),
+[`kitschpatrol/yanki`](https://github.com/kitschpatrol/yanki),
+[`zagortenay333/cronomix`](https://github.com/zagortenay333/cronomix).
+
+🔵 `p283`'s `gate-ladder-case` asks *"which path ladders can find an **uppercase** extension?"* —
+🟢 it was right that case matters and 🔴 **wrong about which direction costs more here: the live
+defect is a case-**sensitive** ladder returning a false absence on a lowercase filename, `5` times
+against `1`.** 🟢 **The fix is one line: case-fold the rung, or enumerate the tree instead of
+probing a ladder.**
+
+🟢 **And the remaining six re-confirm this base's existing verdicts on stronger evidence.** Each
+was enumerated with `git ls-tree -r` over the **whole tree** — not a rung ladder — plus the README
+(`p288`) and manifest (`p280`) channels:
+
+| row | this base already grades it | grant-shaped files in the WHOLE tree | 🟢 p605 verdict |
+| --- | --- | --- | --- |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 🔴 `BLOCK — no grant` | 🔴 **`0`** | 🟢 **re-confirmed**, now by enumeration |
+| [`krayin/agent-skills`](https://github.com/krayin/agent-skills) | 🔴 `grantless` | 🔴 **`0`** | 🟢 **re-confirmed** |
+| [`rodrigoborgesmachado/questoesConcursos`](https://github.com/rodrigoborgesmachado/questoesConcursos) | 🔴 `BLOCK — no grant` | 🔴 **`0`** | 🟢 **re-confirmed** |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 `Do not gate on "MIT"` | 🔴 **`0`** | 🟢 **re-confirmed** — 🔵 and its README links a `LICENSE` that is **not in the tree**, so the dangling pointer is now established by enumeration rather than by `8` failed probes |
+| [`s64965264-code/nexo-ia`](https://github.com/s64965264-code/nexo-ia) | 🟡 `REVIEW, NOT PROMOTED` (`598-B`) | 🔴 **`0`** | 🟢 **re-confirmed** — manifest field alone |
+| [`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🟡 `REVIEW` / `NO-PAYLOAD` (`598-A/B`) | 🔴 `LICENSE_HEADER`, `impl/LICENSE_HEADER` — **no instrument** | 🟢 **re-confirmed** — 🔵 `p604` reached this on `6` rungs; this is the first **full-tree** confirmation |
+
+🔵 **So the honest shape of the result is: `6` recoveries and `6` confirmations, zero rows
+mis-shelved.** 🟢 The base's own `BLOCK`/`REVIEW` grading on these six was correct and is now
+resting on enumeration instead of probing. Ledgers:
+[`../evidence/instrumentless-shelf-rows.2026-11-02-p605.tsv`](../evidence/instrumentless-shelf-rows.2026-11-02-p605.tsv),
+[`../evidence/ladder-case-recovery.2026-11-02-p605.tsv`](../evidence/ladder-case-recovery.2026-11-02-p605.tsv).
+
+### 🔴 `605-C` — the search channel has false negatives, and this base's control for it is blind
+
+🟡 `p604` promoted `gh api -X GET search/repositories` to the replacement for the blocked
+`repos/{owner}/{repo}` endpoint, and it is the right call — but 🔴 **it drops repositories that
+exist.** `5 of 400` (`1.25 %`) shelf addresses were invisible to it while `git ls-remote` resolved
+every one. **Two mechanisms, and only one of them is noisy:**
+
+| mechanism | repos | what `repo:` returns | the tell | fix |
+| --- | --: | --- | --- | --- |
+| 🔴 **fork exclusion** | `2` | `total_count: 0` — 🔴 **indistinguishable from "does not exist"** | 🔴 none | 🟢 add `fork:true` to every `repo:` lookup |
+| 🔴 **transfer-redirect** | `3` | `422 Validation Failed` | 🟢 the **owner** is searchable (`51` / `77` / `34` repos) | 🟢 resolve the canonical address |
+
+🔴 **The first mechanism hits this base's own headline row.**
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) — the
+EACL 2026 ADDIE multi-agent row, `490★`, `MIT` — **is a fork**, which is why it vanished.
+🔵 `p404`/`p405`'s fork-direction gates exist for exactly this question and have never been
+pointed at it.
+
+🔴 **The second mechanism breaks an instrument.** `p598` published, as this channel's
+**DISCRIMINATING fabricated control**, *"`422 Validation Failed` against `200`"*. 🔴 **Three real,
+live, shelved repositories return `422`.** 🟢 So for the transfer class that control certifies
+nothing — the same defect shape as the `curl -sI` verifier carried since `p590`. 🟢 **A control
+has to be re-earned against each new failure mode, not inherited.**
+
+🟢 **Transfers proven by HEAD-SHA identity (`p283`'s test), not by name resemblance:**
+
+| shelf address | canonical | HEAD | verdict |
+| --- | --- | --- | --- |
+| `stanfordnlp/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `d845ffdafda3` == `d845ffdafda3` | 🟢 **SAME REPO** |
+| `openwallet-foundation-labs/learner-credential-wallet` | 🟢 [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) (also `ryjones/`) | `1c46a82ba384` == `1c46a82ba384` | 🟢 **SAME REPO — `3` addresses, `1` repository** |
+| `project-sunbird/sunbird-lms-service` | 🔴 `Sunbird-Lern/lms-service` **REFUTED** | `48c79a862038` != `628b36fcce8c` | 🔴 **UNEXPLAINED this pass — said, not hidden** |
+
+🔵 **`p348`'s fold-identity question gets a third address class:** not a casing variant, but a
+**transfer alias**, invisible to search and resolvable only on the git channel. Ledger:
+[`../evidence/search-channel-false-negatives.2026-11-02-p605.tsv`](../evidence/search-channel-false-negatives.2026-11-02-p605.tsv).
+
+### 🔴 `605-D` — this pass's own selection predicate was wrong, and the first draft of `605-B` was retracted
+
+🔴 **The first draft of `605-B` claimed `5` live rows were "published greener than their
+evidence" — asserting `MIT` with no instrument. That claim was false and is retracted here
+rather than shipped.** All five are already graded 🔴 `BLOCK — no grant` / 🟡 `REVIEW` on the very
+pages the draft accused, several of them under a heading that reads *"`BLOCK` — no grant means no
+permission."*
+
+🔵 **The mechanism, which is the registrable part.** The predicate was *"a table row naming a
+permissive licence token"*. 🔴 On this base that does not mean what it sounds like, because
+**a do-not-ship row names the licence it does not have** — [`krayin/agent-skills`](https://github.com/krayin/agent-skills)'s
+row says *"its parent `krayin/laravel-crm` **is MIT**, so a studio that cleared the parent would
+be wrong about the child"*. A token-anywhere matcher reads that as an MIT claim.
+
+| | figure |
+| --- | --: |
+| addresses the predicate selected | `400` |
+| 🔴 appearing **only** on rows carrying a negative marker (`BLOCK`, `grantless`, `REVIEW`, `NOASSERTION`, `ShareAlike`, `NOT PROMOTED`, …) | 🔴 **`59`** |
+| 🔴 **false-inclusion rate** | 🔴 **`14.8 %`** |
+| 🟢 rows genuinely claiming a permissive grant | 🟢 `341` |
+
+🟢 **Why the sweep still stands:** a false *inclusion* widens a defect hunt, it does not corrupt
+it. Every one of the `400` was byte-read with its own control, so `605-A`'s `1 of 393` holds over
+a **superset** of the permissive population. 🔴 **What it corrupts is any claim about what the
+shelves *assert*** — which is precisely what the retracted draft tried to say.
+
+🔵 **This is `602-A`'s shape recurring one pass later** (*"this pass's own held-set matcher was
+URL-only and missed `39.5 %` of the base"*). 🟢 **The standing lesson, now twice-paid: a pass's
+own instruments need a control before its findings do.** The control that caught this one was
+cheap and should be standing — **read the rows the predicate selected and check that the shelf
+agrees with the predicate before writing a word about them.**
+
+### 🟢 `605-F` — `604-H`'s fix works, and it was the only discovery supply in the pass
+
+🔴 The mandated **APAC acronym** leg returned law-firm regulatory PDFs and consultancy briefs for
+the second pass running, including one UK story mis-filed as APAC — `604-H`'s diagnosis
+**confirmed**, and it is a *query-shape* defect, not regional silence. 🟢 So this pass ran
+`604-H`'s proposed fix: **four national legs.**
+
+| leg shape | legs | new repository addresses | education substance |
+| --- | --: | --: | --- |
+| 🔴 global (mandated) | `4` | 🔴 **`0`** | 🟡 prose, plus already-held repos |
+| 🟡 regional acronym (mandated) | `4` | 🔴 **`0`** | 🟢 policy for NA / EMEA / LATAM; 🔴 **nil for APAC** |
+| 🟢 **national (`604-H` fix)** | `4` | 🟢 **`3`** | 🟢 **China / Korea / Singapore+Japan / India, all substantive** |
+
+🟢 **All three new addresses in the entire pass came from the India national leg.** 🔵 And the fix
+paid in policy where the acronym leg had returned nothing usable — see
+[`../intel/trends.md`](../intel/trends.md) for the China, Korea, Singapore and Japan findings.
+
+🔴 **`605-G` — a fourth "new" token was a guessed slug, not a finding.** `learnwise/learnwise` was
+inferred from a vendor domain in a search result; the git channel refutes it with **the same
+signature as the fabricated control**. 🟢 That is the `p603` error class caught **before**
+publication. `35 of 39` substantive tokens held (`89.7 %`). Itemised in
+[`../evidence/websearch-legs.2026-11-02-p605.tsv`](../evidence/websearch-legs.2026-11-02-p605.tsv).
+
+🔵 **`605-H` — the nil is a property of the mandated query shape, not of the web channel.** Stated
+precisely: **thirty-fifth consecutive nil on the global legs**, and the national legs broke it on
+their first run. 🟢 That reframes the `598-E` / `594-G` decision owed at `35` nils: the question is
+not *"keep the web legs or drop them"* but **"keep them in the shape that has never paid, or in
+the shape that paid immediately"**.
+
+### 🟢 Promoted to this shelf — `9` rows, grants byte-read `2026-11-02`, every control at `404`
+
+🔵 Region is the **HEAD committer tz offset**, not a guess from the owner's name.
+
+| Agent | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | What it does |
+| --- | --- | --- | --- | --: | --- | --- | --- |
+| [AI-for-Education/fabdata-llm](https://github.com/AI-for-Education/fabdata-llm) | 🟢 **MIT** (`1,064 B`) | `main` | `2026-06-09` | `9` | `+01:00` | EMEA | 🟢 Provider-agnostic LLM toolkit built **by an education org for education work** — one interface over several model vendors with caching, structured output and cost accounting. 🟢 Carries CI **and** coverage reporting, which almost nothing at this star count does |
+| [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 **MIT** (`1,073 B`) | `main` | `2026-09-23` | `1` | `+00:00` | EMEA | 🟢 Evaluates ASR models for **early-grade reading assessment (EGRA) on Kiswahili child speech** — the hardest and least-served case in speech-for-education. 🔵 Shelved for the **axis**: sub-Saharan African child-speech literacy assessment, on which this base held nothing |
+| [psychquant/che-ntucool-mcp](https://github.com/psychquant/che-ntucool-mcp) | 🟢 **MIT** (`1,065 B`) | `main` | `2026-10-18` | `1` | `+08:00` | APAC | 🟢 CLI **and MCP server** for **NTU COOL**, National Taiwan University's Canvas deployment, verified against the live instance. 🔵 The concrete pattern for putting an agent on a *national university's* LMS rather than on vanilla Canvas |
+| [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | 🟢 **MIT** (`1,066 B`) | `main` | `2026-10-07` | `0` | `+05:00` | APAC | MCP server over **Google Classroom** — courses, rosters, coursework and submissions exposed as agent tools. 🟡 `0★`, single maintainer; shelved for the **connector surface**, and flagged as such |
+| [glacy/evolutIA](https://github.com/glacy/evolutIA) | 🟢 **Apache-2.0** (`11,563 B`) | `main` | `2026-02-13` | `1` | `-06:00` | LATAM | 🟢 **Spanish-language** exam-item generator for *Métodos Matemáticos para Física e Ingeniería*, written against the problem it names: students memorise past semesters' exercises, so items must be regenerated rather than reused. 🔵 Domain-anchored and in-language |
+| [ljchang/marimo-grader](https://github.com/ljchang/marimo-grader) | 🟢 **MIT** (`1,066 B`) | `main` | `2026-10-21` | `1` | `-04:00` | North America | Auto-grader for **marimo** notebooks — the grading half of [`marimo-team/learn`](https://github.com/marimo-team/learn), promoted to [`../repos/foundations.md`](../repos/foundations.md) in this same pass. 🟢 The two compose directly |
+| [metyatech/qti-html-renderer](https://github.com/metyatech/qti-html-renderer) | 🟢 **MIT** (`1,066 B`) | `main` | `2026-09-20` | `0` | `+09:00` | APAC | Renders **QTI 3.0** assessment items to HTML. 🟢 The declared companion of [`metyatech/qti-reporter`](https://github.com/metyatech/qti-reporter), shelved `p604` — 🔵 so `p604`'s `0★` standards row now has its pair, and `p364`'s companion-closure question is answered for this platform |
+| [pingakshgaur/TatvaX-AI-PROTOTYPE](https://github.com/pingakshgaur/TatvaX-AI-PROTOTYPE) | 🟢 **MIT** (`1,070 B`) | `main` | `2026-01-02` | `2` | `+05:30` | APAC | Tutoring across **8 Indian languages** (Hindi, Bengali, Marathi, Telugu, Tamil, Gujarati, Kannada, English). 🔴 **Flagged twice:** its own title says `[PROTOTYPE]`, and its HEAD committer date is `2026-01-02` against an API `pushed_at` of `2026-10-22` — the `604-D` channel divergence. 🔵 Shelved for the **axis**, not the code |
+| [20251123/ai-education-project](https://github.com/20251123/ai-education-project) | 🟢 **MIT** (`1,065 B`) | `main` | `2026-10-17` | `0` | `+08:00` | APAC | Interactive web courseware teaching AI / ML / GenAI fundamentals, README in **Traditional Chinese and English**. 🔴 **Flagged:** `0★`, and an owner handle that is a bare date string. 🔵 Shelved only because it sits exactly on this pass's APAC policy finding — **mandated AI literacy** — and this base held no in-language Chinese AI-literacy courseware |
+
+### 🔴 `605-I` — `5` rows disqualified, and the rule the second one establishes
+
+| Not promoted | Grant (byte-read) | ★ | 🔴 Reason |
+| --- | --- | --: | --- |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🔴 **CC BY-SA 4.0** (`619 B`) | **`4,872`** | 🔴 **ShareAlike — reciprocal, not permissive.** A client deliverable built on it carries the licence forward. 🔵 The holder is `CoPaper.AI`, **a company**, under a `-stanford` personal namespace |
+| [muhammadawaisshaikh/Edtech-AI](https://github.com/muhammadawaisshaikh/Edtech-AI) | 🟢 MIT (`1,071 B`) | `20` | 🔴 **Its README is in the future tense** — *"The app **will offer** features like voice note recording, transcription…"* — so it states **intent, not capability**; and its HEAD committer date is `2024-02-23`, `2.7` years stale |
+| [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | 🟢 MIT (`1,077 B`) | `30` | 🔴 **HEAD committer date `2019-08-06` — seven years.** LTI 1.3 moved underneath it; [`../repos/foundations.md`](../repos/foundations.md) takes [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) and [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) instead |
+| [kvnloo/tutor-mcp](https://github.com/kvnloo/tutor-mcp) | 🟢 MIT (`1,072 B`) | `0` | 🔴 **A fork at `0★`** with no independent substance established. 🔵 Visible only *because* of `605-C`'s `fork:true` arm |
+| `learnwise/learnwise` | — | — | 🔴 **Not a repository.** A slug **guessed** from a vendor domain; the git channel answers with the fabricated control's own signature |
+
+🔵 **`605-I`, stated generally and new here:** 🔴 **a README in the future tense is a
+specification, not a description.** `will offer`, `will support`, `is planned` grade a row 🟡
+`REVIEW` however clean its grant and however recent its last push — the same lesson as `604-G`
+(*support status is a README fact, not a push-date fact*) moved from the liveness axis to the
+**capability** axis. 🟢 Prior occurrences of *"future tense"* in this base: `1`, about a credential
+issuer's page — **never as a promotion rule.**
+
+🔵 **And `605-J`:** 🟢 `p601`'s rule — *in education, star rank is an **anti**-signal for commercial
+usability* — now has evidence from a **second, independent channel.** `p601` measured it on
+web-discovered `NOASSERTION` rows; the `p436` **backlog's** own star leader (`4,872★`, `19×` the
+next row promoted here) is likewise reciprocal. 🟢 Two channels, one verdict: **rank the shortlist
+by grant first and stars second.**
 
 ## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `598-D` IS SETTLED AT SCALE AND IT WAS POINTING AT THE WRONG ORGS: SWEPT ALL FOUR APEREO-FAMILY ORGS (`91` REPOS, `61` GRANTS BYTE-READ, EVERY FABRICATED CONTROL AT `404`). THE THREE ORGS `598-D` NAMED HOLD `2` ECL REPOS; THE ORG IT DID **NOT** NAME HOLDS `9`. 🔴 ACROSS ALL FOUR THE API IS WRONG ABOUT ECL-2.0 IN `10 of 11` REPOS (`90.9 %`). 🔴 `604-B`: A NEW DEFECT CLASS — A `LICENSE` FILE THAT IS A **SAVED HTML PAGE OF ANOTHER REPOSITORY'S LICENCE**; `0` PRIOR OCCURRENCES IN THIS BASE AND EVERY GREP-BASED READER HERE GRADES IT `Apache-2.0`. 🔴 `604-C`: THIS BASE'S OWN `java-cas-client` ROW IS INCOMPLETE — THE FILE CARRIES **TWO** GRANTS. 🔴 `604-F`: **THIRTY-FOURTH** CONSECUTIVE WEB-LEG NIL. `5` AGENT ROWS PROMOTED, `1` DISQUALIFIED WITH ITS REASON. SEVEN REGISTERED (`604-A`…`604-G`).**
 

@@ -1,8 +1,187 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `4` NEW RECIPES, EVERY COMPONENT BYTE-READ TODAY AND NAMED WITH ITS GRANT, ITS BRANCH AND ITS REGION. 🟢 `R-605-1` IS THE ONE THIS PASS EARNED: A **NATIONAL-CURRICULUM CONFORMANCE HARNESS** BUILT ENTIRELY FROM LATAM ARTEFACTS WITH A LICENCE BOUNDARY THAT RUNS THROUGH THE MIDDLE OF ONE REPOSITORY. 🔴 AND ONE **ANTI-PATTERN** REGISTERED, BECAUSE THIS PASS WALKED INTO IT ITSELF.**
+
+---
+
+## 🟢 `R-605-1` — "Does the model know *our* national curriculum?" — a conformance harness, LATAM
+
+🔵 **The question a Brazilian ministry or university actually asks**, and which no vendor demo
+answers: *before* we deploy a tutor, does this model answer our curriculum correctly, and can it
+mark our exam?
+
+**Components, all byte-read `2026-11-02`:**
+
+| role | component | grant | branch | region |
+| --- | --- | --- | --- | --- |
+| curriculum item bank + per-round model answers + methodology | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🔴 **split — see the boundary below** | `main` | LATAM `-03:00` |
+| human-scored essay ground truth (ENEM criteria) | [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) | 🟢 MIT (`1,113 B`) | `main` | LATAM `-03:00` |
+| item generation for the gaps the benchmark exposes | [`glacy/evolutIA`](https://github.com/glacy/evolutIA) | 🟢 Apache-2.0 (`11,563 B`) | `main` | LATAM `-06:00` |
+| model-vendor abstraction + cost accounting | [`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm) | 🟢 MIT (`1,064 B`) | `main` | EMEA `+01:00` |
+| system of record for delivery | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 AGPL-3.0 — **boundary, see below** | — | LATAM |
+
+**Wiring:**
+
+```
+[bncc-benchmark: itens/ ]──┐
+                           ├──> [fabdata-llm: one interface, N vendors, cost per run]
+[essay-br: scored essays]──┘              │
+                                          ├──> per-item verdict + per-criterion essay score
+                                          │
+                        [bncc-benchmark: harness/ + METODOLOGIA.md]
+                                          │
+                                 curriculum conformance report
+                                          │
+                        ┌─────────────────┴─────────────────┐
+                 gaps exposed                        gaps acceptable
+                        │                                   │
+              [evolutIA: regenerate items]          ship the tutor, with the
+              for the weak BNCC strands             conformance report as the
+                                                    acceptance artefact
+```
+
+🔴 **The licence boundary runs *through* `bncc-benchmark`, not around it** (`605-L` on
+[`../repos/foundations.md`](../repos/foundations.md)):
+
+| what you take | grant | what that permits |
+| --- | --- | --- |
+| `harness/`, `test/`, config | 🟢 **MIT** | 🟢 fork it, embed it in a client deliverable, relicense your changes |
+| `itens/`, `resultados/`, `METODOLOGIA.md` | 🟡 **CC BY 4.0** | 🟢 use and redistribute **with attribution**; 🔴 the attribution travels into the client report |
+
+🟢 **So the deliverable is the harness (MIT) plus a *cited* item bank (CC BY 4.0).** 🔴 A studio
+that vendors the item bank into a closed product without the attribution notice is in breach, and
+the root `LICENSE` will not tell it so — the root file is a **POINTER** that grants nothing. 🔵 And
+🔴 `i-educar` is **AGPL-3.0**: integrate across a process/network boundary (its REST API), never by
+linking into proprietary code.
+
+---
+
+## 🟢 `R-605-2` — Assessment interoperability: an agent that reads and writes the standard, not the vendor
+
+🔵 **The problem:** every LMS migration and every assessment-automation engagement dies on item
+format. QTI 3.0 is the interchange standard institutions mandate and almost nobody implements.
+🟢 As of this pass the permissive toolchain is complete enough to build on, **with three
+independent maintainers** (`p604` flagged it as one).
+
+| stage | component | grant |
+| --- | --- | --- |
+| parse / transform QTI | [`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti) | 🟢 MIT (`1,096 B`) |
+| render items to HTML | [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | 🟢 MIT (`1,066 B`) |
+| results → per-respondent HTML + aggregate CSV | [`metyatech/qti-reporter`](https://github.com/metyatech/qti-reporter) (`p604`) | 🟢 ISC (`740 B`) |
+| human inspect / edit / learn the standard | [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) | 🟢 MIT (`1,069 B`) |
+| launch from the LMS | [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) (Elixir) / [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) | 🟢 MIT |
+| LTI 1.3 reference to read first | [`LtiLibrary/LtiAdvantageTool`](https://github.com/LtiLibrary/LtiAdvantageTool) (`p604`) | 🟢 MIT |
+| auth under the record service | [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) | 🟢 Apache-2.0 |
+
+```
+LMS (Moodle / Canvas / Open edX)
+   │  LTI 1.3 launch  ── ltix | lti-core, validated against LtiAdvantageTool
+   ▼
+[agent tool surface]
+   ├── pie-qti ............. read the institution's existing QTI item pool
+   ├── <your generator> .... author new items (evolutIA pattern, in-language)
+   ├── qti-html-renderer ... show the item exactly as the standard specifies
+   └── qti-reporter ........ emit results, honouring qti-time-limits@max-time
+   ▼
+xAPI statements ──> LRS (Learning Locker) ── pedestal-oidc for auth
+```
+
+🟡 **Flag honestly to the client:** four of these repos are at `0`–`4★`. 🟢 They are shelved for
+the **standard** they implement, which is institution-mandated and stable, not for their
+community size. 🔵 Budget a fork and a maintainer, not a dependency.
+
+---
+
+## 🟢 `R-605-3` — Executable courseware with automated grading
+
+🔵 **The problem:** slide decks and notebooks drift apart from the code students actually run.
+
+| role | component | grant | ★ |
+| --- | --- | --- | --: |
+| the courseware, which *is* the runtime | [`marimo-team/learn`](https://github.com/marimo-team/learn) | 🟢 MIT (`1,062 B`) | `362` |
+| grading those notebooks | [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) | 🟢 MIT (`1,066 B`) | `1` |
+| delivery shell | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) via [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 Apache-2.0 (`LICENSE.TXT` — see `605-B`) | — |
+| course hygiene before and after | [`cloudpedagogy/cloudpedagogy-moodle-course-auditor`](https://github.com/cloudpedagogy/cloudpedagogy-moodle-course-auditor) (`p604`) | 🟢 MIT | — |
+
+```
+[marimo notebook: lesson + runnable code in one reactive document]
+        │ student edits and runs; no separate "exercise repo"
+        ▼
+[marimo-grader] ── per-cell assertions ──> score + feedback
+        │
+        ├──> XBlock wrapper ──> Open edX gradebook
+        └──> LTI 1.3 launch  ──> Moodle / Canvas gradebook
+```
+
+🟢 **Why this pairing and not a notebook+CI rig:** marimo is reactive, so the lesson cannot be in a
+stale execution state when it is graded — the failure mode that makes Jupyter autograding brittle.
+🔵 `marimo-team/learn` is the only `>100★` component; `marimo-grader` at `1★` is the thin, forkable
+part. That asymmetry is the right shape: heavy upstream, light glue.
+
+---
+
+## 🟢 `R-605-4` — Early-grade reading assessment in an under-served language
+
+🔵 **The problem:** EGRA is administered one child at a time by a trained assessor. It does not
+scale, and ASR trained on adult Western speech fails on child speech in African languages.
+
+| role | component | grant | region |
+| --- | --- | --- | --- |
+| 🟢 the evaluation harness that makes this honest | [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 MIT (`1,073 B`) | EMEA `+00:00` |
+| model-vendor abstraction + cost per run | [`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm) | 🟢 MIT (`1,064 B`) | EMEA `+01:00` |
+| in-language tutoring precedent to copy | [`pingakshgaur/TatvaX-AI-PROTOTYPE`](https://github.com/pingakshgaur/TatvaX-AI-PROTOTYPE) (`8` Indian languages) | 🟢 MIT (`1,070 B`) | APAC `+05:30` |
+| record store | xAPI / LRS + [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) | 🟢 Apache-2.0 | NA |
+
+```
+child reads a passage aloud
+        ▼
+[ASR candidate models]  <-- you must provide the model + the child-speech dataset
+        ▼
+[voice-ai-evaluation-framework] ── WER / fluency / accuracy, per model, per age band
+        ▼
+   model selected WITH its measured error on THIS population
+        ▼
+[tutor]  ── in-language, TatvaX's multi-language structure as the precedent
+        ▼
+[xAPI statements] ──> LRS ──> district dashboard
+```
+
+🔴 **Say the dependency out loud:** the framework evaluates models, it does not supply them, and
+**the Kiswahili child-speech dataset is the client's to provide or collect.** 🟢 That is the
+engagement's first phase and its real cost. 🔵 Starting with the *evaluation* harness rather than a
+model choice is the whole point — it is the only way to know the system works for the children in
+front of you rather than for a benchmark.
+
+---
+
+## 🔴 `R-605-ANTI` — the anti-pattern this pass walked into itself
+
+🔴 **Do not infer a shelf's claim from a keyword on the row.** This pass's first draft selected
+"permissive rows" by matching a licence token anywhere in the table row, then accused `5` live rows
+of asserting `MIT` without evidence. 🔴 **All five were already graded `BLOCK — no grant` on the
+very pages the draft accused**, several under a heading reading *"`BLOCK` — no grant means no
+permission"*. Measured false-inclusion rate: 🔴 **`59 of 400` (`14.8 %`)**.
+
+🔵 **Why the trap is specific to a well-maintained KB:** a careful shelf **names the licence a row
+does *not* have**, in order to warn —
+[`krayin/agent-skills`](https://github.com/krayin/agent-skills)'s row says *"its parent
+`krayin/laravel-crm` **is MIT**, so a studio that cleared the parent would be wrong about the
+child"*. 🔴 A token matcher reads that as an MIT claim. **The better a base documents its
+exclusions, the more a keyword matcher will mistake them for inclusions.**
+
+🟢 **The control, which costs one step:** before writing a claim about what a shelf asserts, read
+the selected rows and check the shelf agrees with the predicate. 🟢 A negative marker set
+(`BLOCK`, `grantless`, `REVIEW`, `NOASSERTION`, `ShareAlike`, `NOT PROMOTED`) is enough to catch it.
+
+🔵 **Generalised for client work:** the same mistake in a client codebase audit is a licence scan
+that greps `LICENSE` files for family names and reports a repository as `Apache-2.0` because its
+`NOTICE` cites Apache. 🟢 Grade the **instrument**, not the mention — which is also `604-B`'s
+lesson from the opposite direction, where the bytes were an HTML page and the grep said
+`Apache-2.0`.
 
 ## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — four recipes (`P-604-A`…`P-604-D`), every component grant byte-read at its real default branch with a fabricated-path control at `404`
 

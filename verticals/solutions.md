@@ -1,8 +1,58 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM LAYER GAINS AN **ASSESSMENT-INTEROPERABILITY** TIER THAT IS NOW COMPLETE ENOUGH TO BUILD ON: `3` QTI 3.0 REPOS AND `2` LTI LIBRARIES, ALL MIT, ALL BYTE-READ TODAY. 🟢 AND THE FIRST ENTRY HERE FOR A **NATIONAL UNIVERSITY'S OWN LMS DEPLOYMENT** RATHER THAN A VENDOR PRODUCT. 🔴 THIS PAGE'S `74` PERMISSIVE-MARKED ROWS WERE PART OF `605-A`'S `400`-ADDRESS PAYLOAD SWEEP: `0` MARKUP DEFECTS FOUND HERE.**
+
+### 🟢 Where this pass's rows attach to the platforms already on this page
+
+🔵 This page's job is the **customisable system of record**. This pass did not find a new
+platform; it found the **integration tier** that lets an agent reach the platforms already listed.
+
+| Platform already here | 🆕 what `p605` adds beneath it | Grant | Region |
+| --- | --- | --- | --- |
+| **Canvas** (Instructure) | 🟢 [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) — CLI **and MCP server** for **NTU COOL**, National Taiwan University's Canvas deployment, verified live as a customised Canvas | 🟢 MIT (`1,065 B`) | APAC |
+| **Google Classroom** | [`OmarNiazi/classroom-mcp`](https://github.com/OmarNiazi/classroom-mcp) — courses, rosters, coursework, submissions as agent tools. 🟡 `0★`, flagged | 🟢 MIT (`1,066 B`) | APAC |
+| **Moodle / Open edX / Canvas** (LTI consumers) | [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) (Elixir, on Hex) and [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) | 🟢 MIT | NA / APAC |
+| **H5P** | 🟢 [`otacke/h5p-theme-picker`](https://github.com/otacke/h5p-theme-picker) — 🔵 exists because **H5P.com ships a theme picker and H5P Group did not release the code** | 🟢 MIT (`1,072 B`) | EMEA |
+| **QTI 3.0** (the assessment interchange standard) | [`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti), [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground), [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | 🟢 MIT | NA / APAC |
+| **xAPI / LRS** (Learning Locker, Yet Analytics) | [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) — the auth rung under a learning-record service | 🟢 Apache-2.0 (`11,356 B`) | NA |
+
+### 🟢 The QTI 3.0 toolchain is no longer single-maintainer — which was `p604`'s own flag
+
+🟡 `p604` shelved [`metyatech/qti-reporter`](https://github.com/metyatech/qti-reporter) at `0★` and
+flagged the whole QTI axis as **one maintainer**. 🟢 That flag is now partly discharged:
+
+| QTI repo | maintainer | role | ★ |
+| --- | --- | --- | --: |
+| [metyatech/qti-reporter](https://github.com/metyatech/qti-reporter) | `metyatech` | 🟢 results → HTML + aggregate CSV (`p604`) | `0` |
+| 🆕 [metyatech/qti-html-renderer](https://github.com/metyatech/qti-html-renderer) | `metyatech` | 🟢 items → HTML — the declared companion | `0` |
+| 🆕 [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) | 🟢 **`pie-framework`** | 🟢 parsing / transformation inside an assessment-element framework | `4` |
+| 🆕 [sonyccd/qti-playground](https://github.com/sonyccd/qti-playground) | 🟢 **`sonyccd`** | 🟢 view / edit / learn the standard | `4` |
+
+🟢 **Three independent maintainers now, not one** — 🔵 and `p364`'s companion-closure question is
+answered for this platform: the companion `qti-reporter` declared does exist and is now shelved
+beside it. 🟡 All four remain small; the axis is shelved for **the standard**, which is
+institution-mandated, not for the star counts.
+
+### 🟢 Why an MCP server against *one university's* LMS belongs on a platform page
+
+🔵 [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) targets a single
+institution — NTU COOL — which looks like the opposite of a platform row. 🟢 **It is on this page
+because of what it proves:** a national university's LMS is a **customised** Canvas, and the
+customisation is discoverable and scriptable. 🔵 That is the generalisable fact. A client's "we run
+Canvas" almost never means vanilla Canvas, and this repo is a worked example of finding the
+delta and wrapping it as tools rather than assuming the vendor API.
+
+### 🔴 This page in `605-A`'s sweep
+
+🔵 `74` of the `400` addresses swept for `604-B`'s HTML-capture defect came from this page.
+🟢 **`0` defects found here.** 🔵 The single base-wide hit,
+[`uPortal-Project/FeedbackPortlet`](https://github.com/uPortal-Project/FeedbackPortlet), is on
+[`../repos/trending.md`](../repos/trending.md), not on a platform shelf. Ledger:
+[`../evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv`](../evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv).
 
 ## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM FINDING OF THIS PASS IS A LICENCE ONE: THE APEREO STACK — SAKAI, uPORTAL, CAS, AND THE WHOLE LEARNING-ANALYTICS TIER — IS THE DEEPEST POOL OF **INSTITUTION-GRADE PERMISSIVE** EDUCATION SOFTWARE, AND A DEPENDENCY SCREEN READING `spdx_id` REJECTS `10 of 11` OF ITS ECL-2.0 REPOSITORIES AS UNLICENSED. 🟢 MEASURED ACROSS `91` REPOSITORIES, `61` GRANTS BYTE-READ.**
 

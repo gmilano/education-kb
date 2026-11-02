@@ -1,8 +1,131 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## Pass 605 — reads 2026-11-02, commit 2026-11-02 — **🟢 `604-B` IS CLOSED BY A WHOLE-SHELF SWEEP AND THE ANSWER IS CONTAINMENT: `400` ADDRESSES, `393` GRANT PAYLOADS BYTE-READ TODAY, `400 of 400` FABRICATED CONTROLS AT `404`, AND THE HTML-CAPTURE DEFECT APPEARS IN **`1 of 393` (`0.25 %`)** — THE REPO `p604` ALREADY FOUND. 🔴 BUT THE PASS'S LOAD-BEARING RESULT IS A **RETRACTION**: ITS OWN FIRST DRAFT ACCUSED `5` SHELF ROWS OF ASSERTING `MIT` WITHOUT EVIDENCE, AND ALL `5` WERE ALREADY GRADED `BLOCK — NO GRANT` ON THE PAGES IT ACCUSED. 🔴 `605-C`: `search/repositories` HAS FALSE NEGATIVES IN `5 of 400`, ONE CLASS **SILENT**, AND THE `422` THIS BASE PUBLISHED AS THAT CHANNEL'S *DISCRIMINATING CONTROL* IS WHAT `3` REAL SHELVED REPOS RETURN. 🟢 `604-H` PAID: FOUR NATIONAL LEGS SUPPLIED **EVERY** NEW ADDRESS IN THE PASS. `19` ROWS PROMOTED, `5` DISQUALIFIED WITH REASONS. ELEVEN REGISTERED (`605-A`…`605-L`).**
+
+### 🟢 The central result — a negative with a denominator
+
+🟡 `604-B` found a `LICENSE` file that was a **saved HTML page of another repository's licence**,
+noted that every grep-based reader in this base grades it `Apache-2.0`, and left the question that
+mattered open: *is wrong data already shelved?*
+
+| | `p604` | 🆕 `p605` |
+| --- | --- | --- |
+| scope | `1` repository, found by accident | 🟢 **all `3` sell shelves** |
+| addresses selected | — | `400` |
+| grant payloads byte-read today | `1` | 🟢 **`393`** |
+| fabricated-path control on every arm | `1` | 🟢 **`400 of 400` → `404 14 B`** |
+| 🔴 `MARKUP` found | `1` | 🔴 **`1` — the same one** |
+| prevalence | unmeasured | 🟢 **`0.25 %`, contained** |
+
+🔵 **Why a null result earned the budget:** an open defect class of unknown prevalence silently
+discounts every permissive row on the base. One sweep exonerates `392` of them.
+
+### 🔴 The retraction, stated before anything built on it
+
+🔴 **This pass's first draft of `605-B` was false and is withdrawn.** It selected "permissive
+rows" by matching a licence token anywhere in a table row, found `5` with no grant instrument
+anywhere in their trees, and concluded that `5` live rows were *"published greener than their
+evidence."*
+
+🟢 **They were not.** All five are already graded 🔴 `BLOCK — no grant` / 🟡 `REVIEW` on the very
+pages the draft accused — three of them under a heading that reads *"`BLOCK` — no grant means no
+permission."*
+
+🔵 **The mechanism is the registrable part, and it is specific to a base that documents its
+exclusions well.** A careful shelf **names the licence a row does not have**, in order to warn:
+[`krayin/agent-skills`](https://github.com/krayin/agent-skills)'s row says *"its parent
+`krayin/laravel-crm` **is MIT**, so a studio that cleared the parent would be wrong about the
+child."* 🔴 A token matcher reads that as an MIT claim. Measured false-inclusion rate:
+🔴 **`59 of 400` (`14.8 %`)**.
+
+🟢 **The sweep itself survives** — a false *inclusion* widens a defect hunt rather than corrupting
+it, and all `400` were byte-read with their own controls. 🔴 What it corrupts is any claim about
+what the shelves **assert**, which is exactly what the draft tried to say. 🔵 **This is `602-A`'s
+shape one pass later: a pass's own instruments need a control before its findings do.**
+
+### 🔴 `605-C` — the channel `p604` promoted to primary drops repositories, and one class is silent
+
+| mechanism | repos | `repo:` returns | fix |
+| --- | --: | --- | --- |
+| 🔴 **fork exclusion** | `2` | `total_count: 0` — 🔴 **indistinguishable from "does not exist"** | 🟢 `fork:true` |
+| 🔴 **transfer-redirect** | `3` | `422 Validation Failed` — 🔴 **`p598`'s published "discriminating" control** | 🟢 resolve the canonical address on the git channel |
+
+🔴 The silent class hides this base's own headline row:
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents), the
+EACL 2026 ADDIE multi-agent entry at `490★` MIT — **it is a fork.** 🟢 Transfers were proven by
+HEAD-SHA identity, not name resemblance: `stanfordnlp/edu-convokit` ≡
+[`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit), and
+`openwallet-foundation-labs/learner-credential-wallet` ≡
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet)
+— `3` addresses, `1` repository. 🔴 `project-sunbird/sunbird-lms-service` returns `422`, resolves on
+git, and its near-name candidate is **refuted on HEAD** — unexplained, and said rather than hidden.
+
+### 🟢 `604-H` closed — the regional acronym is the wrong handle
+
+| leg shape | legs | new addresses | education substance |
+| --- | --: | --: | --- |
+| 🔴 global (mandated) | `4` | 🔴 **`0`** | 🟡 prose and already-held repos — **35th consecutive nil** |
+| 🟡 regional acronym (mandated) | `4` | 🔴 **`0`** | 🟢 paid for NA / EMEA / LATAM; 🔴 **nil for APAC, twice running** |
+| 🟢 **national (`604-H`'s fix)** | `4` | 🟢 **`3`** | 🟢 **China, Korea, Singapore, Japan, India — all dated and ministry-level** |
+
+🔵 **The acronym retrieves trade press written for general counsel; a national handle retrieves the
+education ministry.** 🟢 And the policy yield was the richest of any pass: China's **AI + Education
+Action Plan** (all school levels, `2030`, rural delivery via national platforms, `≥ 8` class-hours
+a year in Beijing); 🔴 **Korea's AI digital textbook programme legally downgraded to optional
+supplementary material**, adoption `37 % → 19 %`, ~`10` publishers suing for ~`₩200 bn`, an audit
+citing skipped pilots and late standards; 🟢 Singapore MOE's **Authoring Copilot and Learning
+Assistant live since January 2026**, AI competency across all IHLs from AY `2027`.
+
+🔵 **So the `598-E`/`594-G` decision owed for `35` passes is not "keep or drop the web legs" — it is
+"keep them in the shape that has never paid, or the shape that paid on first run."**
+
+### 🟢 Promoted — `19` rows, every grant byte-read `2026-11-02`, every control at `404`
+
+🟢 **`9` to [`agents/top.md`](agents/top.md)** · 🟢 **`10` to [`repos/foundations.md`](repos/foundations.md)**.
+🔵 Region from the HEAD committer tz offset, not from the owner's name.
+
+| region | rows | highlights |
+| --- | --: | --- |
+| APAC | `6` | [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) — MCP server for **National Taiwan University's Canvas**, verified live; [`pingakshgaur/TatvaX-AI-PROTOTYPE`](https://github.com/pingakshgaur/TatvaX-AI-PROTOTYPE) — 8 Indian languages |
+| North America | `7` | [`marimo-team/learn`](https://github.com/marimo-team/learn) `362★`; [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) `117★` — 🔵 **the canonical address of a row this base already held under a transferred name** |
+| LATAM | `3` | 🟢 [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) — Brazilian essays **human-scored to ENEM criteria**; 🟢 [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) — hallucination benchmark over the **BNCC**, Brazil's national curriculum |
+| EMEA | `3` | 🟢 [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) — ASR evaluation for **early-grade reading assessment on Kiswahili child speech**, an axis this base held nothing on |
+
+🔴 **`5` disqualified with their reasons**, including 🔴
+[`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills)
+at **`4,872★`** — **CC BY-SA 4.0, reciprocal**, which confirms `p601`'s *star rank is an anti-signal
+for commercial usability* from a **second, independent channel**; and 🔴
+[`muhammadawaisshaikh/Edtech-AI`](https://github.com/muhammadawaisshaikh/Edtech-AI), whose README
+is written in the **future tense** — *"The app **will offer** features like…"* — establishing a new
+rule: **a README in the future tense is a specification, not a description.**
+
+### 🔴 What this pass could not do
+
+🔴 **This base's own committed controls cannot be executed at all.** `604-E` recorded `make` and
+`bash compose/code/**/*.sh` denied with `python3 -I` still running; 🔴 **`python3 -I
+compose/code/**/*.py` is now denied too.** Every gate verdict here is therefore a
+**reimplementation from the script's own docstring**, with the contract published beside the
+measurement — done for `p383`'s region-heading gate (`1` canonical block, `5` regions, `0`
+out-of-vocab, `0` missing) and `p277`'s table-structure gate. 🔴 **Operator request: allow the
+repository's own validators to run, or the gate suite is decorative.**
+
+🔴 **And `598-G` is unchanged at `7` passes.** Every demand and market figure on
+[`intel/market.md`](intel/market.md) is **search-snippet-grade**: `unesco.org`, `oecd.org`,
+`iadb.org` and `unu.edu` were re-measured at `000` today against a control that also returns `000`.
+🟢 Every **supply** figure is byte-read. A client conversation leads with the second.
+
+### 🔵 Ledgers written this pass
+
+[`evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv`](evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv) ·
+[`evidence/ladder-case-recovery.2026-11-02-p605.tsv`](evidence/ladder-case-recovery.2026-11-02-p605.tsv) ·
+[`evidence/instrumentless-shelf-rows.2026-11-02-p605.tsv`](evidence/instrumentless-shelf-rows.2026-11-02-p605.tsv) ·
+[`evidence/search-channel-false-negatives.2026-11-02-p605.tsv`](evidence/search-channel-false-negatives.2026-11-02-p605.tsv) ·
+[`evidence/backlog-promotion-probe.2026-11-02-p605.tsv`](evidence/backlog-promotion-probe.2026-11-02-p605.tsv) ·
+[`evidence/websearch-legs.2026-11-02-p605.tsv`](evidence/websearch-legs.2026-11-02-p605.tsv)
 
 ## Pass 601 — reads 2026-11-01, commit 2026-11-02 — **🟢 A WHOLE AGENT CATEGORY THIS BASE NEVER HELD IS SHIPPED (`16` ROWS, SHELF `53 → 69`): HIGHER-ED RESEARCH & ACADEMIC-WRITING SKILL PACKS, ALL MIT, FROM AN AXIS THAT WAS `100 %` UNHELD. 🔴 BUT THE LOAD-BEARING RESULT IS A TRAP AVOIDED: THE SECTOR'S LARGEST NEW FIND (`54,881★`) IS `CC BY-NC`, AND SO ARE THE NEXT THREE — IN EDUCATION, STAR RANK IS AN *ANTI*-SIGNAL FOR COMMERCIAL USABILITY. 🟢 AND `p600`'S `80.3 %` NOVELTY AND `p599`'S `0 %` ARE RECONCILED: NOVELTY HAS TWO CAUSES WITH OPPOSITE VALUE, AND ONE NUMBER CANNOT TELL A CATEGORY GAP FROM A WORD COLLISION. EIGHT REGISTERED (`601-A`…`601-H`).**
 

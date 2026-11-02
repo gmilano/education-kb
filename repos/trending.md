@@ -1,8 +1,83 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — `2026-11-02` — **APPEND-ONLY. 🟢 THE WHOLE-SHELF PAYLOAD SWEEP, ROW BY ROW: `400` PERMISSIVE-MARKED SELL-SHELF ADDRESSES, `80` BATCHED `repo:` QUERIES, `393` GRANT PAYLOADS RANGE-READ (`0-511`) AT THE REAL DEFAULT BRANCH, `400 of 400` FABRICATED-PATH CONTROLS AT `404 14 B`. 🔴 `1` HTML CAPTURE (`0.25 %`) — THE `p604` REPO, SO THE CLASS IS CONTAINED. 🔴 `6 of 12` `NO-PAYLOAD` VERDICTS WERE A **CASE-BLIND LADDER**, `5` LOWERCASE AND `1` UPPERCASE-EXTENSION. 🔴 `5 of 400` ADDRESSES ARE INVISIBLE TO `search/repositories` BY **TWO** MECHANISMS. 🟢 `10` REPOS PROMOTED TO FOUNDATIONS.**
+
+### 🟢 The sweep, with its denominators attached
+
+| stage | predicate | figure |
+| --- | --- | --: |
+| population | a table row on a **sell shelf** naming a permissive licence token | `400` |
+| 🔴 of which falsely included (`605-D`) | address appears **only** on `BLOCK` / `REVIEW` / `ShareAlike` rows | 🔴 **`59` (`14.8 %`)** |
+| 🟢 genuine permissive claims | — | `341` |
+| branch resolution | `gh api -X GET search/repositories` `repo:` ×`80` batches | `395` |
+| 🔴 unresolved by search, resolved by git | `605-C` | 🔴 **`5`** |
+| payload read | `curl -r 0-511` over a `6`-rung ladder at the default branch | 🟢 **`388`** |
+| 🟢 recovered on a wider `15`-rung ladder | `605-B` | 🟢 **`5`** |
+| 🟢 **total byte-read** | — | 🟢 **`393`** |
+| controls | fabricated path at the same rung | 🟢 **`400 / 400` → `404 14 B`** |
+| 🟢 clean | no markup in the first `512 B` | 🟢 **`392`** |
+| 🔴 `MARKUP` | `<html` / `<!DOCTYPE` / `saved from url` / `<head` / `<body` / `<pre` / `<meta` | 🔴 **`1`** |
+
+🔴 The single hit: [`uPortal-Project/FeedbackPortlet`](https://github.com/uPortal-Project/FeedbackPortlet),
+`master`, `LICENSE`, first bytes
+`<!-- saved from url=(0059)https://raw.github.com/Jasig/CalendarPortlet/master/LICENSE -->`.
+🟢 **Already known from `p604`. No second instance exists on this base.** Full row-by-row ledger:
+[`../evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv`](../evidence/shelf-payload-markup-sweep.2026-11-02-p605.tsv).
+
+### 🔴 The case-blind ladder, row by row
+
+| Repo | `6`-rung verdict | 🟢 recovered at | bytes | grant | shelf claim |
+| --- | --- | --- | --: | --- | --- |
+| [LearningLocker/xapi-service](https://github.com/LearningLocker/xapi-service) | 🔴 `NO-PAYLOAD` | 🟢 `license` | `1,069` | 🟢 MIT | 🟢 confirmed |
+| [LearningLocker/xapi-validation](https://github.com/LearningLocker/xapi-validation) | 🔴 `NO-PAYLOAD` | 🟢 `license` | `1,069` | 🟢 MIT | 🟢 confirmed |
+| [TheOdinProject/theodinproject](https://github.com/TheOdinProject/theodinproject) | 🔴 `NO-PAYLOAD` | 🟢 `license.txt` | `1,072` | 🟢 MIT | 🟢 confirmed |
+| [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | 🔴 `NO-PAYLOAD` | 🟢 `license.txt` | `1,070` | 🟢 MIT | 🟢 confirmed |
+| [zagortenay333/cronomix](https://github.com/zagortenay333/cronomix) | 🔴 `NO-PAYLOAD` | 🟢 `license.md` | `1,068` | 🟢 MIT | 🟢 confirmed |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | 🔴 `NO-PAYLOAD` | 🟢 `LICENSE.TXT` (full-tree enum) | — | 🟢 Apache-2.0 | 🟢 confirmed |
+
+🔵 **`p283`'s `gate-ladder-case` asked about uppercase extensions and found the smaller half.**
+🔴 Lowercase misses outnumber uppercase-extension misses `5 : 1` on this base's own rows. 🟢 The
+cheap fix is to case-fold the rung; the correct fix is to **enumerate the tree** —
+`git ls-tree -r` answered all six without a ladder. Ledger:
+[`../evidence/ladder-case-recovery.2026-11-02-p605.tsv`](../evidence/ladder-case-recovery.2026-11-02-p605.tsv).
+
+### 🔴 `5` addresses this base shelves that `search/repositories` cannot see
+
+| shelf address | `repo:` | `repo: … fork:true` | `git ls-remote` | mechanism |
+| --- | --- | --- | --- | --- |
+| [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | 🔴 `total_count: 0` | 🟢 `fork=true` MIT `490★` | 🟢 `refs/heads/main` | 🔴 **FORK EXCLUSION** |
+| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | 🔴 `total_count: 0` | 🟢 `fork=true` MIT `0★` | 🟢 `refs/heads/main` | 🔴 **FORK EXCLUSION** |
+| `stanfordnlp/edu-convokit` | 🔴 `422` | 🔴 `422` | 🟢 `refs/heads/main` | 🔴 **TRANSFER** → [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) |
+| `openwallet-foundation-labs/learner-credential-wallet` | 🔴 `422` | 🔴 `422` | 🟢 `refs/heads/main` | 🔴 **TRANSFER** → [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) |
+| `project-sunbird/sunbird-lms-service` | 🔴 `422` | 🔴 `422` | 🟢 `refs/heads/master` | 🔴 **UNEXPLAINED** — the near-name candidate is refuted on HEAD |
+
+🔴 **`total_count: 0` is indistinguishable from "does not exist"**, so the fork class is a *silent*
+false negative — and it hides this base's own `490★` EACL-2026 row. 🔴 **And `422` is what `p598`
+published as this channel's DISCRIMINATING fabricated control**, so for the transfer class that
+control certifies nothing. 🟢 Owner-level controls confirm the owners are searchable
+(`user:stanfordnlp` `51`, `user:project-sunbird` `77`, `user:openwallet-foundation-labs` `34`).
+Ledger: [`../evidence/search-channel-false-negatives.2026-11-02-p605.tsv`](../evidence/search-channel-false-negatives.2026-11-02-p605.tsv).
+
+### 🟢 Promoted to foundations this pass — `10` rows
+
+🔵 Rows, grants and controls on [`./foundations.md`](./foundations.md).
+[marimo-team/learn](https://github.com/marimo-team/learn) `362★` MIT ·
+[EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) `117★` MIT ·
+[lplnufpi/essay-br](https://github.com/lplnufpi/essay-br) `17★` MIT ·
+[bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) `12★` MIT + CC BY 4.0 (split) ·
+[yetanalytics/pedestal-oidc](https://github.com/yetanalytics/pedestal-oidc) `10★` Apache-2.0 ·
+[pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) `4★` MIT ·
+[sonyccd/qti-playground](https://github.com/sonyccd/qti-playground) `4★` MIT ·
+[otacke/h5p-theme-picker](https://github.com/otacke/h5p-theme-picker) `3★` MIT ·
+[DecoyLex/ltix](https://github.com/DecoyLex/ltix) `2★` MIT ·
+[iamlucasb/lti-core](https://github.com/iamlucasb/lti-core) `1★` MIT.
+
+🔵 Probe ledger for all `22` candidates, including the `5` rejected:
+[`../evidence/backlog-promotion-probe.2026-11-02-p605.tsv`](../evidence/backlog-promotion-probe.2026-11-02-p605.tsv).
 
 ## 🆕 `p604` — `2026-11-02` — **APPEND-ONLY. 🟢 THE FULL FOUR-ORG APEREO SWEEP, ROW BY ROW: `91` REPOSITORIES ENUMERATED VIA `search/repositories`, `61` GRANTS BYTE-READ AT THE REAL DEFAULT BRANCH, EVERY FABRICATED CONTROL AT `404`. 🟢 STAR COUNTS ARE BACK — THE SEARCH CHANNEL SERVES `stargazers_count` AND `default_branch` WHERE `repos/{owner}/{repo}` RETURNS `403`. 🔴 `30` ROWS HAVE NO GRANT FILE AT ANY RUNG AND ARE NAMED AS SUCH.**
 

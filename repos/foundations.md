@@ -1,8 +1,79 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `10` FOUNDATION REPOS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH WITH A PER-REPO FABRICATED CONTROL AT `404`. 🟢 TWO ARE **BRAZILIAN NATIONAL-CURRICULUM AND NATIONAL-EXAM ARTEFACTS** — THE LATAM EVIDENCE LAYER THIS BASE HAS BEEN THIN ON. 🔴 `605-K`: THE `p436` BACKLOG'S REAL PROMOTION DEBT, MEASURED AGAINST **SELL SHELVES** RATHER THAN ANY MENTION, IS `107 of 265` (`40.4 %`) — `p603` SIZED THE LEDGER, NOT THE DEBT. 🟢 `605-L`: A NEW GRANT SHAPE — **SPLIT BY SUBTREE, WITH A POINTER AT THE ROOT**, WRITTEN IN PORTUGUESE.**
+
+### 🔴 `605-K` — the backlog's real size is a promotion figure, not a ledger figure
+
+🟡 `p603` corrected `p602` and sized `evidence/promotion-ledger.2026-10-25-p436.tsv` at **`108`
+repository addresses**. 🟢 That count is right and it answers a different question from the one
+`gate-promotion-ledger` has been red about for ~`166` passes.
+
+| question | predicate | figure |
+| --- | --- | --: |
+| 🟡 how big is the ledger? | rows whose `slug` is a repository address | `265` |
+| 🟡 how many addresses does this base not mention at all? | address absent from `agents`, `repos`, `verticals`, `intel`, `compose` | 🟢 **`0`** |
+| 🔴 **how many are claimed but never *sold*?** | address absent from the **three sell shelves** | 🔴 **`107` (`40.4 %`)** |
+
+🔵 **The middle row is the trap.** Measured against *any* mention the backlog looks absorbed,
+because a row mentioned in [`./trending.md`](./trending.md) counts as held — and *"claimed in
+`trending` and on no live shelf"* is the exact condition the gate objects to. 🟢 **The promotion
+debt is the third row, and this pass pays `19` of it** (`10` here, `9` on
+[`../agents/top.md`](../agents/top.md)), leaving `88`.
+
+### 🟢 `605-L` — a grant split by subtree, with a pointer at the root, in Portuguese
+
+🟢 [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) carries a root
+`LICENSE` of `910 B` that **contains no grant text at all.** It opens `# Licenças` and partitions
+the repository:
+
+| subtree | grant | instrument |
+| --- | --- | --- |
+| `harness/`, `test/`, config files | 🟢 **MIT** | [`LICENSE-CODIGO.md`](https://github.com/bncc-dev/bncc-benchmark/blob/main/LICENSE-CODIGO.md) — `1,286 B`, resolves `200` |
+| `itens/`, `resultados/`, `METODOLOGIA.md`, docs | 🟢 **CC BY 4.0** | [`LICENSE-DADOS.md`](https://github.com/bncc-dev/bncc-benchmark/blob/main/LICENSE-DADOS.md) — `577 B`, resolves `200` |
+
+🔵 **Three of this base's registered classes meet in one file.** 🟢 `p307`'s three-valued
+classifier grades the root `LICENSE` a **`POINTER`**, not a `GRANT`. 🟢 `p354`'s
+`gate-grant-path` is satisfied — both named paths resolve at the asserted branch, and the
+fabricated control at the same rung returns `404 14 B`. 🔴 The API reads the whole thing as
+`NOASSERTION`.
+
+🔵 **And it is `604-C`'s sibling, not its twin.** `604-C` found **two grants stacked in one file**
+from two holders; this is **one file pointing at two grants partitioned by directory**. 🟢 The
+mechanical difference matters: a reader that stops at the first declaration (`594-F` stage 2)
+returns *nothing* here rather than a half-answer, because there is no declaration to stop at.
+🟢 **The general control: a payload that names other paths and grants nothing itself is a
+`POINTER`, and the verdict lives one rung down — per subtree, not per repository.**
+
+🔵 The grant is written in **Portuguese**, which is the [`portabilis/i-diario`](https://github.com/portabilis/i-diario)
+class carried since `p319`. 🟢 That class now has a second instance and a second shape.
+
+### 🟢 Promoted to this shelf — `10` rows, grants byte-read `2026-11-02`, every control at `404`
+
+🔵 Region is the **HEAD committer tz offset**. 🔵 `★` from the `fork:true` arm of
+`search/repositories` (`605-C`).
+
+| Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
+| --- | --- | --- | --- | --: | --- | --- | --- |
+| [marimo-team/learn](https://github.com/marimo-team/learn) | 🟢 **MIT** (`1,062 B`) | `main` | `2026-04-30` | `362` | `-07:00` | North America | 🟢 Curated **executable courseware** — reactive marimo notebooks across Python, data science and optimisation. 🔵 The notebook *is* the lesson *and* the runtime, so there is no slide-to-code gap to maintain. Pairs with [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) on [`../agents/top.md`](../agents/top.md) |
+| [EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `117` | `-07:00` | North America | 🟢 The open framework for **education conversation data** — de-identification, annotation and analysis of classroom talk. 🔵 **This is the canonical address of a row this base already shelved as `stanfordnlp/edu-convokit`**; `605-C` proved them one repository by HEAD identity. 🟡 HEAD is `2025-04-18`: a stable research library, flagged |
+| [lplnufpi/essay-br](https://github.com/lplnufpi/essay-br) | 🟢 **MIT** (`1,113 B`) | `main` | `2023-05-07` | `17` | `-03:00` | LATAM | 🟢 **Extended Essay-BR** — Brazilian high-school essays **graded by human professionals against the ENEM criteria**. 🔵 A scored corpus in Portuguese is the one thing an automated-essay-scoring engagement cannot synthesise. 🟡 HEAD `2023-05-07`: a **dataset**, which does not rot the way code does — flagged rather than disqualified |
+| [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **MIT** (code) **+ CC BY 4.0** (items/results) — split, see `605-L` | `main` | `2026-09-19` | `12` | `-03:00` | LATAM | 🟢 A **hallucination benchmark over the BNCC**, Brazil's national curriculum: an item bank, per-round model answers, and a written methodology. 🔵 The missing instrument for *"does this model actually know the national curriculum we are paid to teach?"* — and it is the only artefact here that measures an LLM against a **national** curriculum |
+| [yetanalytics/pedestal-oidc](https://github.com/yetanalytics/pedestal-oidc) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-16` | `10` | `-04:00` | North America | OIDC authentication interceptors for Clojure/Pedestal services, from **Yet Analytics** — the xAPI/LRS vendor whose capture layer this base already shelves. 🟢 The auth rung under a learning-record service |
+| [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) | 🟢 **MIT** (`1,096 B`) | `master` | `2026-10-26` | `4` | `-07:00` | North America | QTI parsing and transformation inside the **PIE** assessment-element framework. 🟢 A *second maintainer* on the QTI axis, which `p604`'s one-maintainer QTI flag explicitly asked for |
+| [sonyccd/qti-playground](https://github.com/sonyccd/qti-playground) | 🟢 **MIT** (`1,069 B`) | `main` | `2025-08-11` | `4` | `-04:00` | North America | Web app to **view, edit and learn** QTI 3.0 items, with the standard documented alongside. 🟢 The onboarding surface for a team that has never touched QTI. 🟡 HEAD `2025-08-11`, flagged |
+| [otacke/h5p-theme-picker](https://github.com/otacke/h5p-theme-picker) | 🟢 **MIT** (`1,072 B`) | `master` | `2026-10-28` | `3` | `+01:00` | EMEA | 🟢 A custom element for H5P theme and density selection — 🔵 written because **H5P.com ships one and H5P Group did not release the code**, so every other H5P integration overrides themes by hand. A gap-filler, not a reimplementation |
+| [DecoyLex/ltix](https://github.com/DecoyLex/ltix) | 🟢 **MIT** (`1,067 B`) | `main` | `2026-10-30` | `2` | `-07:00` | North America | **LTI** for Elixir, published on Hex with docs and CI. 🟢 The first BEAM-language LTI rung on this base; replaces the `2019` Node library disqualified on [`../agents/top.md`](../agents/top.md) |
+| [iamlucasb/lti-core](https://github.com/iamlucasb/lti-core) | 🟢 **MIT** (`1,069 B`) | `main` | `2026-10-29` | `1` | `+08:00` | APAC | A minimal LTI core library, pushed `2026-10-29`. 🟡 `1★` and single-maintainer — shelved for the **standard** and the APAC placement, flagged as such |
+
+🔵 **What the batch is, taken together:** 🟢 the **assessment-interoperability** layer (`3` QTI
+repos + `2` LTI libraries + OIDC), the **executable-courseware** layer (`marimo-team/learn` +
+its grader), and 🟢 **two LATAM evidence artefacts** — a human-scored Portuguese essay corpus and
+a national-curriculum benchmark. 🔵 The second group is the one Globant cannot buy: regional
+ground truth with a licence attached.
 
 ## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `11` FOUNDATION REPOS PROMOTED, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH WITH A PER-REPO FABRICATED CONTROL AT `404`. 🟢 `3` OF THEM ARE **ECL-2.0 REPOS THE API CALLS `NOASSERTION`** — RECOVERED BY THE `604-A` SWEEP, NOT BY SEARCH. 🟢 A COMPLETE **QTI 3.0 TOOLCHAIN** (`4` REPOS, ONE MAINTAINER, FLAGGED AS SUCH) AND THE **xAPI CAPTURE LAYER** FOR H5P. 🔴 `1` REPO IN THE SWEEP IS NOT SHELVED BECAUSE ITS GRANT PAYLOAD IS A SAVED WEB PAGE (`604-B`).**
 

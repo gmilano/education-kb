@@ -1,0 +1,13 @@
+slug	shelf_claim	payload_6_rung	payload_21_rung	full_tree_grant_files	api_spdx	readme_channel	manifest_channel	correct_verdict
+openedx/XBlock	Apache-2.0	NO-PAYLOAD	NO-PAYLOAD	LICENSE.TXT; NOTICE.txt	Apache-2.0	-	-	GRANT — ladder missed an UPPERCASE extension (p283 class)
+LearningLocker/xapi-service	MIT	NO-PAYLOAD	license (1069B, MIT License)	-	MIT	-	-	GRANT — ladder is case-sensitive, missed lowercase
+LearningLocker/xapi-validation	MIT	NO-PAYLOAD	license (1069B, MIT License)	-	MIT	-	-	GRANT — ladder is case-sensitive, missed lowercase
+TheOdinProject/theodinproject	MIT	NO-PAYLOAD	license.txt (1072B, MIT License)	-	MIT	-	-	GRANT — ladder is case-sensitive, missed lowercase
+kitschpatrol/yanki	MIT	NO-PAYLOAD	license.txt (1070B, MIT License)	-	MIT	-	-	GRANT — ladder is case-sensitive, missed lowercase
+zagortenay333/cronomix	MIT	NO-PAYLOAD	license.md (1068B, MIT License)	-	MIT	-	-	GRANT — ladder is case-sensitive, missed lowercase
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	ECL-2.0	NO-PAYLOAD	NO-PAYLOAD	LICENSE_HEADER; impl/LICENSE_HEADER	NOASSERTION	-	pom.xml only (carried 598-A/B)	REVIEW — re-confirmed on a FULL-TREE enumeration
+DMontgomery40/mcp-canvas-lms	MIT	NO-PAYLOAD	NO-PAYLOAD	0 grant-shaped files	null	claims MIT, POINTS AT A LICENSE FILE NOT IN THE TREE	package.json "license":"MIT"	REVIEW — manifest-only + dangling pointer
+s64965264-code/nexo-ia	MIT	NO-PAYLOAD	NO-PAYLOAD	0 grant-shaped files	null	silent	package.json "license":"MIT"	REVIEW — manifest field alone, never green (598-A/B)
+aaryansamanta/ai-ethos	MIT	NO-PAYLOAD	NO-PAYLOAD	0 grant-shaped files	null	silent	none	NO GRANT IN ANY CHANNEL
+krayin/agent-skills	MIT	NO-PAYLOAD	NO-PAYLOAD	0 grant-shaped files	null	silent	none	NO GRANT IN ANY CHANNEL
+rodrigoborgesmachado/questoesConcursos	MIT	NO-PAYLOAD	NO-PAYLOAD	0 grant-shaped files	null	silent	package.json, silent	NO GRANT IN ANY CHANNEL

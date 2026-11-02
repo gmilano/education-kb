@@ -1,8 +1,77 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — `2026-11-02` — **APPEND-ONLY. 🟢 `604-B` CLOSED BY SWEEP: `400` SELL-SHELF ADDRESSES, `393` PAYLOADS BYTE-READ, `1` HTML CAPTURE — THE CLASS IS CONTAINED AT `0.25 %`. 🔴 THE SEARCH CHANNEL HAS FALSE NEGATIVES IN `5 of 400` AND THIS BASE'S `422` CONTROL FOR IT IS BLIND. 🔴 THIS PASS RETRACTED ITS OWN FIRST DRAFT: THE SELECTION PREDICATE WAS WRONG ABOUT `59 of 400` ROWS. 🟢 THE `604-H` NATIONAL-QUERY FIX SUPPLIED EVERY NEW ADDRESS IN THE PASS. `9` AGENTS PROMOTED, `5` DISQUALIFIED.**
+
+### 🟢 What is actually moving this week — and the honest denominator
+
+🔵 The trend legs printed the same story as `p604`: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+climbing hard (third-party digests put it between `48,268★` on `2026-10-29` and `52,783★` on
+`2026-11-01`, gaining `~2,300/day`, with one day's single largest spike on the whole of GitHub),
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) at `~42k★` turning any document into
+an interactive classroom, and [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master)
+adjacent to it. 🔴 **All three are already held, and so are the five "AI Open Source Trends"
+digest bots that reported them** — `datnguyenquy94/news-radar`, `bianzhilong2-ctrl/agents-radar`,
+`845421145-lang/agents-radar`, `kouweizhu/agents-radar`, `HuggerHustle/ai-radar`. 🔵 Two of those
+five were new *bots* to this base's trend legs and still rejected on `p202-topic-relevance-gate`:
+**a bot that prints education projects as content is not education software.**
+
+🟡 **Star figures above are third-party-digest grade, not measured here.** `p604` established
+that `gh api repos/{owner}/{repo}` is `403` for this session and that
+`search/repositories` serves `stargazers_count`; the DeepTutor figures come from the digests
+themselves and the digests **disagree with each other**, which is the citation this pass can
+honestly make.
+
+### 🔴 The thirty-fifth nil — and the fix that broke it on first run
+
+| leg shape | legs | substantive tokens | held | 🟢 new addresses |
+| --- | --: | --: | --: | --: |
+| 🔴 global (mandated) | `4` | `25` | `25` | 🔴 **`0`** |
+| 🟡 regional acronym (mandated) | `4` | `2` | `2` | 🔴 **`0`** |
+| 🟢 **national (`604-H` fix)** | `4` | `12` | `8` | 🟢 **`3` + `1` refuted** |
+| **total** | **`12`** | **`39`** | **`35` (`89.7 %`)** | 🟢 **`3`** |
+
+🟢 **Every new address in the entire pass came from one national leg (India).** 🔴 The APAC
+*acronym* leg returned law-firm regulatory PDFs for the second pass running, plus a UK story
+mis-filed as APAC — `604-H` confirmed as a **query-shape** defect, not regional silence.
+
+🔴 **And one token that looked new was a guessed slug.** `learnwise/learnwise` was inferred from a
+vendor domain in a search result; `git ls-remote` answers it with the **same signature as the
+fabricated control**. 🟢 That is `p603`'s error class, caught before publication rather than after.
+
+🔵 **So the `598-E` / `594-G` decision owed at `35` nils should be re-phrased.** Not *"keep the
+web legs or drop them"* but **"keep them in the shape that has never paid, or in the shape that
+paid on its first run"**. 🟢 The global legs remain worth running as a **regression test** —
+`p604`'s argument — and the mandated query set should gain the national legs.
+
+### 🟢 New this week on the agent shelf — `9` rows
+
+🔵 Full rows, grants and controls on [`./top.md`](./top.md). In one line each:
+
+| Agent | Grant | ★ | Region | Signal |
+| --- | --- | --: | --- | --- |
+| [AI-for-Education/fabdata-llm](https://github.com/AI-for-Education/fabdata-llm) | 🟢 MIT | `9` | EMEA | An education org shipping its own provider-agnostic LLM layer, with CI and coverage |
+| [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 MIT | `1` | EMEA | 🟢 **Kiswahili child-speech EGRA** — a wholly unheld axis on this base |
+| [psychquant/che-ntucool-mcp](https://github.com/psychquant/che-ntucool-mcp) | 🟢 MIT | `1` | APAC | 🟢 An MCP server against a **national university's** Canvas deployment, verified live |
+| [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | 🟢 MIT | `0` | APAC | Google Classroom as agent tools; `0★`, flagged |
+| [glacy/evolutIA](https://github.com/glacy/evolutIA) | 🟢 Apache-2.0 | `1` | LATAM | 🟢 Spanish-language exam-item generation, anchored in one real course |
+| [ljchang/marimo-grader](https://github.com/ljchang/marimo-grader) | 🟢 MIT | `1` | North America | Grades the courseware promoted to foundations in the same pass |
+| [metyatech/qti-html-renderer](https://github.com/metyatech/qti-html-renderer) | 🟢 MIT | `0` | APAC | 🟢 Closes `p604`'s QTI companion gap (`p364`) |
+| [pingakshgaur/TatvaX-AI-PROTOTYPE](https://github.com/pingakshgaur/TatvaX-AI-PROTOTYPE) | 🟢 MIT | `2` | APAC | 8 Indian languages; 🔴 flagged `[PROTOTYPE]` by its own title |
+| [20251123/ai-education-project](https://github.com/20251123/ai-education-project) | 🟢 MIT | `0` | APAC | Traditional-Chinese AI-literacy courseware; 🔴 flagged `0★` |
+
+### 🔴 Rejected this week, with the reason attached
+
+| Address | Grant | ★ | 🔴 Why not |
+| --- | --- | --: | --- |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🔴 CC BY-SA 4.0 | `4,872` | 🔴 Reciprocal. 🟢 `p601`'s star-anti-signal rule, now confirmed from the **backlog** channel as well as the web channel |
+| [muhammadawaisshaikh/Edtech-AI](https://github.com/muhammadawaisshaikh/Edtech-AI) | 🟢 MIT | `20` | 🔴 README in the **future tense** — intent, not capability; HEAD `2024-02-23` |
+| [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | 🟢 MIT | `30` | 🔴 HEAD `2019-08-06` — seven years |
+| [kvnloo/tutor-mcp](https://github.com/kvnloo/tutor-mcp) | 🟢 MIT | `0` | 🔴 A fork at `0★`, no independent substance |
+| `learnwise/learnwise` | — | — | 🔴 Not a repository — a **guessed** slug |
 
 ## 🆕 `p604` — `2026-11-02` — **APPEND-ONLY. 🟢 `598-D` SETTLED AND RELOCATED (`91` REPOS, `61` GRANTS BYTE-READ, `4` ORGS): THE ECL-2.0 POOL IS IN THE ONE ORG `598-D` DID NOT NAME, AND THE API IS WRONG THERE `9 of 9`. 🔴 A NEW DEFECT CLASS: A `LICENSE` THAT IS A SAVED WEB PAGE OF ANOTHER REPO'S LICENCE. 🔴 THIRTY-FOURTH NIL. 🔴 THIS BASE'S OWN SCRIPTS WERE DENIED EXECUTION AND HAD TO BE REIMPLEMENTED INLINE.**
 

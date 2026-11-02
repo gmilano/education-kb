@@ -1,8 +1,117 @@
 ---
 industry: education
-region: Global
+updated: 2026-11-02
 updated: 2026-11-02
 ---
+
+## 🆕 `p605` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE `604-H` NATIONAL-QUERY FIX TURNED THE APAC NIL INTO FOUR DATED NATIONAL POLICY FINDINGS, AND ONE OF THEM IS THE SECTOR'S FIRST LARGE-SCALE **FAILURE** WITH NUMBERS ATTACHED. 🔴 THE GLOBAL LEGS RETURN THE THIRTY-FIFTH NIL. 🔵 EVERY FIGURE BELOW IS SEARCH-SNIPPET-GRADE (`598-G`) AND LABELLED.**
+
+### 🔴 `T-605-1` — the first *documented* national AI-education failure, and it is the most useful trend on this page
+
+🟢 Every trend this base has recorded for a year has been an adoption curve. 🔴 **Korea supplies
+the other half**, and with figures:
+
+| | Korea's AI digital textbook (AIDT) programme |
+| --- | --- |
+| legal status | 🔴 **downgraded from *textbook* to *optional supplementary material*** |
+| adoption, semester over semester | 🔴 **`37 % → 19 %`** (alternatively `4,095 → 1,686` schools) |
+| regional spread | 🔴 `98 %` (Daegu) to `8 %` (Sejong) |
+| industry response | 🔴 **~`10` publishers suing the government, ~`₩200 bn`**, June `2026` |
+| audit findings | 🔴 **skipped pilots, late standards, weak screening controls** |
+| what continues | 🟢 AI-focused schools, AI teaching materials, and a **different** textbook set piloted in semester 1 of `2027` |
+
+🔵 **Why it is a trend and not an anecdote:** it is the first instance of a national programme
+being **legally reclassified downward** after deployment. 🟢 The three audit findings are
+*procurement* failures, not model failures — which means they are the failures a delivery partner
+is actually hired to prevent. 🟡 Figures are secondary-outlet grade; the Korea Times, Yonhap and
+Ministry of Education primary sources are outside this session's network policy.
+
+### 🟢 `T-605-2` — AI literacy is becoming compulsory curriculum, not optional enrichment
+
+🟢 **China** issued an **AI + Education Action Plan** in spring `2026` from five central
+departments led by the Ministry of Education: AI literacy across all school levels and lifelong
+learning, integration into local curricula, interdisciplinary teaching, after-school provision,
+demonstration schools, and 🟢 **national platforms to deliver AI courses into rural and remote
+schools**. Target `2030`. 🔵 Beijing reports **≥ `8` class-hours per student per academic year**
+already. 🟢 **Singapore** will give all students in institutes of higher learning **in-discipline
+AI competency development from academic year `2027`**. 🔵 **The shared design choice matters more
+than the mandates:** both embed AI *inside existing subjects* rather than creating an "AI class".
+🟡 China's announcement date is reported variously as `2`, `10` or mid-April `2026`.
+
+### 🟢 `T-605-3` — the teacher-facing copilot ships before the learner-facing tutor
+
+🟢 **Singapore MOE's rollout order is the signal:** an **Authoring Copilot** for lesson and
+assessment materials and a **Learning Assistant** platform, both from **January `2026`**, with
+lower-primary pupils given **no** AI tools and upper-primary use supervised and gradual. 🔵 The
+same ordering appears in this pass's supply: the permissive rows that exist are
+**instructor-side** — [`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm),
+[`glacy/evolutIA`](https://github.com/glacy/evolutIA) (item generation),
+[`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) (grading),
+[`cloudpedagogy/cloudpedagogy-moodle-course-auditor`](https://github.com/cloudpedagogy/cloudpedagogy-moodle-course-auditor)
+(course audit, `p604`). 🟢 **Build order follows deployment order: author, assess, then tutor.**
+
+### 🟢 `T-605-4` — "experimentation to governance" is the year's consensus, and the sources converge from different directions
+
+🟢 1EdTech frames `2026` as the shift **from experimentation to governance** — explicit policies
+and data boundaries. Tutorflow describes the same move as experimentation → **operational use
+inside repeatable workflows**: lesson prep, formative feedback. 🔵 The regulatory record agrees
+independently: 🟢 DC's OSSE bars AI from **grading, discipline, IEP decisions and teacher
+evaluation**; `4` US states now require districts to *have* a policy; Australia's TEQSA requires
+**every** higher-education provider to file a generative-AI action plan; the EU AI Act requires
+human oversight that can **override or shut the system down**. 🟢 **Four jurisdictions, one
+pattern: the deliverable is now the boundary, not the capability.**
+
+### 🟡 `T-605-5` — the EU's high-risk clock moved, and the sector has not caught up
+
+🔴 Enforcement of the AI Act by the AI Office and national authorities began **`2 August 2026`**.
+🔴 But the **Digital Omnibus** — **Regulation (EU) 2026/1744**, Official Journal `24 July 2026`,
+applying from `27 July 2026` — **postpones high-risk obligations to `December 2027`** for
+standalone Annex III systems and **`August 2028`** for embedded ones. 🔴 A second source published
+this pass still states `August 2026`. 🟢 **Recorded as an unresolved conflict**, with the
+Omnibus-dated source preferred on recency and specificity. 🔵 **The planning consequence is the
+same either way:** the obligation is unchanged and the window to build human oversight *into* the
+architecture is now `12`–`24` months wide instead of closed.
+
+### 🟢 `T-605-6` — purpose-built education platforms are displacing generic assistants
+
+🟢 TeachBetter's reading: **education-specific platforms are replacing generic AI tools**, and
+high-cost enterprise-first products fail to scale in budget-constrained schools, pulling demand
+toward all-in-one. 🔵 This base's own supply measurement says the same thing from the other side:
+the rows that survive promotion are **narrow and domain-anchored** —
+[`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) targets *one
+university's* Canvas; [`glacy/evolutIA`](https://github.com/glacy/evolutIA) targets *one course*;
+[`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) targets *one national
+curriculum*. 🟢 **Specificity is the moat, and it is also what makes a repo shippable.**
+
+### 🔴 `T-605-7` — adoption has outrun strategy, and the gap is measured
+
+🟢 UNESCO IESALC / UNU-IAS, `200` institutions, `19` countries: **`87 %` use AI in at least one
+area; `26 %` have a formal AI strategy** — and adoption is driven **bottom-up by individual
+academics, researchers and students.** 🟢 QS, for EMEA: **`67 %` of academics and `62 %` of
+students** use generative AI weekly, with guidance outnumbering bans ~`2 : 1`. 🟢 Gallup, for the
+US: **`60 %` of teachers** use AI tools while **most public schools have no student AI policy**.
+🔵 **Three regions, three instruments, one finding: the technology is already inside the
+institution and the governance is not.** 🟢 That is the most reliably sellable observation in this
+document, because it is the only one three independent surveys agree on.
+
+### 🟡 `T-605-8` — the counter-current, recorded rather than discounted
+
+🟡 HolonIQ expects **selective** acceleration — more weight on demonstrated instructional value
+and ethics — and notes countries piloting AI companions **with strict boundaries** (UK, Greece).
+🟡 Berkeley Law banned AI on all exams and credited coursework from summer `2026`. 🔴 Korea's
+`19 %` floor is the same signal with a number on it. 🟢 **Read together: growth is in governed,
+narrow deployments. A forecast of general-purpose AI tutoring at national scale now has a
+documented counter-example.**
+
+### 🔵 Method and grade
+
+🔵 `12` legs: `4` mandated global, `4` mandated regional, `4` national (`604-H`'s fix). 🔴 The
+global legs returned `0` new repository addresses — **thirty-fifth consecutive nil**. 🟢 The
+national legs returned every new address in the pass and all four findings above that are dated.
+🔴 **Every demand and policy figure on this page is search-snippet-grade**: `unesco.org`,
+`oecd.org`, `iadb.org` and `unu.edu` are outside this session's network policy, re-measured `000`
+today against a non-discriminating control (`598-G`, `583-E`). 🟢 Leg-by-leg ledger:
+[`../evidence/websearch-legs.2026-11-02-p605.tsv`](../evidence/websearch-legs.2026-11-02-p605.tsv).
 
 ## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — three numbered trends (`80`–`82`), each with the measurement that produced it
 

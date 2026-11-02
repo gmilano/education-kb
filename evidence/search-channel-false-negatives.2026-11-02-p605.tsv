@@ -1,0 +1,10 @@
+shelf_address	search_repo_qualifier	with_fork_true	git_ls_remote	mechanism	canonical_address	head_sha_identity
+DaRL-GenAI/instructional_agents	total_count=0 (SILENT)	fork=true MIT 490*	ref: refs/heads/main	FORK-EXCLUSION	(itself; is a fork)	n/a
+thc1006/moodle-mcp	total_count=0 (SILENT)	fork=true MIT 0*	ref: refs/heads/main	FORK-EXCLUSION	(itself; is a fork)	n/a
+stanfordnlp/edu-convokit	422 Validation Failed	422 Validation Failed	ref: refs/heads/main	TRANSFER-REDIRECT	EduNLP/edu-convokit	d845ffdafda3 == d845ffdafda3 SAME-REPO
+openwallet-foundation-labs/learner-credential-wallet	422 Validation Failed	422 Validation Failed	ref: refs/heads/main	TRANSFER-REDIRECT	digitalcredentials/learner-credential-wallet (also ryjones/)	1c46a82ba384 == 1c46a82ba384 SAME-REPO
+project-sunbird/sunbird-lms-service	422 Validation Failed	422 Validation Failed	ref: refs/heads/master	UNEXPLAINED	Sunbird-Lern/lms-service REFUTED	48c79a862038 != 628b36fcce8c DIFFERS
+CONTROL user:stanfordnlp	total_count=51	-	-	owner IS searchable	-	-
+CONTROL user:project-sunbird	total_count=77	-	-	owner IS searchable	-	-
+CONTROL user:openwallet-foundation-labs	total_count=34	-	-	owner IS searchable	-	-
+CONTROL zzqq-fabricated-owner-9x/zzqq-fabricated-repo-9x	-	-	fatal: could not read Username	FABRICATED	-	-
