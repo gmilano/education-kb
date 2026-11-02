@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — reads `2026-11-02` — **🔴 NO NEW PLATFORM ROW THIS PASS, AND THE REASON IS NAMED: THE MANDATED VERTICAL LEG RETURNED ONE VENDOR'S OWN WEBSITE `10 of 10` TIMES. 🟢 THE TIER WAS PROBED THROUGH A SECOND, WORKING CHANNEL ANYWAY, AND THE ONE REAL CANDIDATE IT FOUND IS ALREADY HELD HERE. 🔴 `609-D`: A `10 KB` REPOSITORY CLAIMING A PRODUCTION-READY KUBERNETES LMS, WITH A VALID APACHE GRANT.**
+
+### 🔴 The mandated vertical leg is captured by a single vendor
+
+The run prompt's vertical query — `open source platform education ERP CRM MIT Apache` — returned ten
+results. All ten were pages on **`openeducat.org`**: the same vendor glossary served at `/ar/`,
+`/fr/`, `/pt-BR/`, `/zh/`, `/de/`, `/es/` and the bare path. 🔵 A leg that cannot return a second
+vendor is measuring one SEO estate, not a market.
+
+🟡 **And the product it points to does not satisfy the query it answered.** **OpenEduCat** is an
+education ERP on the Odoo framework, held on this shelf for many passes, and its own site states
+**LGPL-3.0** — a copyleft grant, not the MIT/Apache surface the query asked for. The vendor's pages
+also cite Gartner, European Commission and CISA studies for its cost and security claims; none of
+those is reachable from this session (`609-G`), so they are **restatements, not verifications**.
+
+### 🟢 The tier probed through the channel that works — and it genuinely did not move
+
+Narrow permissive queries (`609`'s productive channel) against the platform tier:
+
+| query | `total_count` | what it actually contained |
+| --- | --: | --- |
+| `student information system school management license:mit pushed:>2026-01-01` | `19` | 🔴 coursework — console C programs, Django CRUD exercises, one Home Assistant integration, one single-school monorepo |
+| `LMS learning management system license:apache-2.0 pushed:>2026-01-01` | `29` | 🔴 coursework — `Mini-LMS` ×2 for a database course, an early-alpha Rust LMS, a university assignment |
+
+| the one real candidate | verdict |
+| --- | --- |
+| [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) — 🟢 **Apache-2.0**, `11,362 B` byte-read today, `63★`, multi-tenant self-hosted LMS for institutes and training teams (Django 6 / DRF / PostgreSQL / React 19 / Flutter), *"one installation serves many organisations, every query scoped to the organisation"* | 🔴 **already held on this shelf** — re-byte-read today and the grant **confirmed** |
+
+🟢 **So the nil is informed.** The vertical tier did not gain a holder this week; it also did not lose
+one, and the single platform worth having was re-measured rather than assumed. 🔵 `p608` made the
+same shape of statement about this tier from the other direction — `10 of 10` platform rows
+re-byte-read and matching — so two consecutive passes now agree the LMS/SIS tier here is **stable and
+correctly recorded**, which is the condition under which a nil is a result.
+
+### 🔴 `609-D` — the vapour row, and why a grant-first screen cannot catch it
+
+[`mkhomytsya/MuckeligAgentLMS`](https://github.com/mkhomytsya/MuckeligAgentLMS) is the row this tier
+would have been wrong to take, and it would have been taken on terms:
+
+| axis | reading |
+| --- | --- |
+| claims | *"The first cloud-native Learning Management System powered by autonomous AI agents"* — autonomous course generation, AI personalisation, self-managing administration, **built-in xAPI LRS**, real-time dashboards, *"Kubernetes-Native, scalable, production-ready"* |
+| grant | 🟢 **Apache-2.0**, `11,366 B`, byte-read `2026-11-02` — a real, stock, permissive grant |
+| existence | 🟢 `606-E` probe `200` — the address is real |
+| 🔴 **repository size** | 🔴 **`10 KB`, total** |
+| 🔴 history | 🔴 created `2026-02-12`, pushed `2026-02-12`, `0` open issues, `0` topics — one day, never touched since |
+
+🔵 **Every gate this base runs on the vertical tier would have passed it.** The grant is genuine, the
+address resolves, the README is specific and confident, and an xAPI LRS is exactly the capability this
+tier wants. Only **size** refutes it: `10 KB` cannot contain a multi-tenant Kubernetes LMS, so the
+README describes an intention in the present tense. 🟢 Size is free on a channel this base already
+calls, and from `p609` it is run on every platform candidate **before** the grant, because it is the
+only one of these axes that measures whether the software exists.
+
+---
+
+
 ## 🆕 `p608` — reads `2026-11-02` — **🟢 THE WHOLE LMS/SIS TIER RE-BYTE-READ FROM SCRATCH BY AN INDEPENDENT INSTRUMENT: `10 of 10` MATCH WHAT THIS BASE ALREADY HELD. 🔴 AND THE INSTRUMENT FELL INTO `3` OF THIS BASE'S OWN PRE-REGISTERED TRAPS, WHICH IS THE RESULT.**
 
 ### 🟢 The platform tier, re-measured today against the real default branch

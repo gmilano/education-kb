@@ -4,6 +4,165 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — reads `2026-11-02` — market map and regional placement
+
+### 🔴 Source-quality warning, stated before the numbers
+
+The regional legs ran at the mandated shapes, once globally and once per region. They returned
+**market-research and policy material, and zero repository-level findings** — the repository side of
+this pass came from a different channel entirely (`609`, `repos/trending.md`). Two defects in what
+they did return must be stated before any figure is used:
+
+🔴 **The 2026 market-size estimates do not agree, and not within a rounding margin.** For the same
+year, the same segment: **`$3.7 B`** (one house, rising to `$14.1 B` by 2033), **`~$11 B`** (another),
+**`$6.4 B` for 2025** (a third). This base has carried `$9.58 B → $42.48 B (2030, CAGR 41.5 %)` since
+`p65`. 🔵 **The spread is roughly 3×, which means the segment definition is doing the work, not the
+measurement.** Every figure below is attributed; none is averaged, because averaging incompatible
+definitions manufactures a number nobody measured.
+
+🔴 **One source states the EU AI Act "entered into force progressively from August 2026."** That is
+wrong and checkably so: the Act entered into force **2024-08-01**, with prohibited practices and
+AI-literacy obligations applying from **2025-02-02** — dates two other sources in the same harvest
+state correctly. 🔵 Recorded because it is a *date* error in a *regulatory* claim, the class most
+likely to be copied into a client deck, and because it demonstrates the aggregator tier these legs
+reach is not reliable on its own terms.
+
+### Market frame carried and amended
+
+| segment | figure | source class | status here |
+| --- | --- | --- | --- |
+| AI in education, global 2026 | `$9.58 B → $42.48 B` by 2030, CAGR `41.5 %` | report seller, carried since `p65` | 🟡 **carried, now contested** — see the spread above |
+| AI in education, global 2026 | `$3.7 B → $14.1 B` by 2033 | report seller | 🔴 incompatible definition |
+| AI in education, global 2026 | `~$11 B` | analysis blog | 🔴 incompatible definition |
+| K-12 share of segment, 2026 | `~34 %` — largest single segment | report seller | 🟡 directionally consistent across two sources |
+
+## Opportunities by region
+
+### North America
+
+🔵 **The structural fact is regulatory volume, not market size.** As of **March 2026**, policymakers
+were tracking **`134` bills across `31` states** touching AI in education — privacy, classroom
+restrictions, curriculum. The **US Department of Education** released **`$169 M`** in FIPSE awards
+including support for responsible AI use (Q1 2026), and **COPPA** alignment is reported as the gate
+that lets child-facing products expand at all.
+
+🟡 Regional share estimates conflict: `36 %` of the global segment at `$3.68 B` (2026) from one house,
+`38 %` share (2025) from another, `~$951 M` regional (2024) from a third, and a `41.7 %` forecast
+*growth* figure from a fourth — 🔴 note that the last is a growth rate being reported alongside share
+figures, which is how a growth number becomes a market size in a deck. Sources agree only on rank:
+the region leads.
+
+🟢 **Where the opportunity actually sits for a studio:** `134` bills in `31` states means **no single
+compliance target**, so per-state configurability is the product requirement, not a feature. The
+rows this pass promoted that serve it directly: [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool)
+(held, MIT) for institutional risk modelling, and 🆕 [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval)
+— **deterministic, no network calls, no API key** — which is the only eval instrument on this base
+that can run **inside** a district's boundary without a data-sharing review.
+
+🔴 **Stated gap:** both legs returned essentially **no named K-12 or higher-ed vendors** — the only
+companies named anywhere in the harvest were two children's-robot makers. A market map of this region
+cannot be built from these legs.
+
+### EMEA
+
+🟢 **This is the region where the policy layer is concrete and dated.** The **European Commission**
+updated its **ethical guidelines on AI in education** (9 June) and signed **three Advanced Digital
+Skills grant agreements worth `€25.4 M`**. The **UK** held its first **AI Adoption Summit** (8 June),
+committing **`£200 M+`**, of which **`£100 M`** expands **Bridge AI**. The **EU AI Act** is in force
+from **2024-08-01**, with prohibited practices and **AI-literacy obligations** live since
+**2025-02-02** — the literacy obligation is the one that lands on education providers directly.
+
+🟢 **New permissive EMEA holder this pass:** [`baptiste-alonso/knowledge-tracing-benchmark`](https://github.com/baptiste-alonso/knowledge-tracing-benchmark)
+— **MIT** (the API called it `NOASSERTION`; see `609-F`) — seven **interpretable** KT models on
+`110,101` real interactions from **Cleverlearn**, a French EdTech firm, run as a **CentraleSupélec**
+project course. 🔵 **Interpretability was the client's requirement**, which is why DKT was excluded by
+design. That is the EU-AI-Act posture expressed as an architecture choice rather than a compliance
+memo, and it is the most directly reusable EMEA artifact this base holds for a regulated engagement.
+
+🟡 Also EMEA, carried from `p608` and still the cleanest fit for an exam-integrity engagement:
+[`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) — **MIT**, `100 %` in-browser, GDPR-safe PDF
+exam anonymiser with nothing uploaded.
+
+🔴 **Stated gap:** no 2026 school- or university-level AI **adoption rate** for the region, and
+nothing on how the AI Act **classifies** education systems by risk tier. The one adoption figure in
+the harvest (`56 %` of EMEA CEOs report readiness vs `48 %` Americas, `45 %` APJ) is 🔴 **enterprise,
+undated, and vendor-published** — it is not an education figure and is not used here.
+
+### APAC
+
+🟢 **Fastest-growing region on the one estimate available:** `$591.6 M` (2024) → `$1,848.1 M` (2029),
+**CAGR `20.9 %`** — 🟡 a single vendor-style estimate, and 🔵 note it implies a *far* lower growth
+rate than the `41.5 %` global CAGR this base carries, which is a second reason to distrust the global
+figure rather than to revise the regional one.
+
+🔵 **Regulatory shape: fragmentation that is now enforced rather than drafted.** At least **`16`
+jurisdictions** have AI guidance or regulation, some binding, some principles-only; early 2026 is
+characterised as the shift **from drafting to active enforcement**, and Forrester's read is that a
+common APAC-wide framework *"will remain a distant dream."* 🟢 **The Philippines' Department of
+Education partnered with Google to certify more than one million teachers** — the largest single
+teacher-certification commitment in the harvest, in any region.
+
+🟢 **Two new permissive APAC holders this pass**, both with real holder evidence rather than a username
+inference: [`huynhanhkhiem-dms/pooled-auc-knowledge-tracing`](https://github.com/huynhanhkhiem-dms/pooled-auc-knowledge-tracing)
+(**MIT**, **Ton Duc Thang University**, Vietnam, ORCID in README) and
+[`GEMLabHKU/DAS2`](https://github.com/GEMLabHKU/DAS2) (**MIT**, placed on org-login-plus-ICCE-venue
+evidence, stated as such in `agents/top.md`).
+
+🟢 **Opportunity:** `16` jurisdictions moving to enforcement is the **policy-routing** engagement —
+`P6`'s multi-jurisdiction pattern on the technology shelf, applied to education. The held
+[`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) (**MIT**, Korea's
+**NEIS** national school information system) remains the reference for official-data-to-agent plumbing
+that cannot be replaced by a generic connector.
+
+### LATAM
+
+🟢 **The repository-level nil is broken.** `p608` recorded a repository-level nil for LATAM. This pass
+promotes [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI) — **MIT**, `1,338 KB` — an
+**ENEM** essay grader scoring `C1`–`C5` with reasoned pedagogical feedback anchored in the *Cartilha
+do Participante*, trained/evaluated on **Essay-BR**, measured against a supervised `HistGB` baseline
+on the same 65 essays (baseline QWK `0.750`, calibrated agent `0.731`), served over FastAPI with a
+Streamlit demo. 🔵 It joins the held [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil)
+(**MIT**, `1,849★`) and [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) (**MIT**, code only),
+so the region now has **curriculum (BNCC) → assessment (ENEM) → delivery** covered permissively.
+
+🔵 **Demand and constraint, from the better sources in this harvest.** A **UNU** working paper surveys
+**`200` higher-education institutions across `19` countries** (fieldwork Aug–Oct 2025) on AI use in
+teaching, research, administration and governance; the **IDB**'s *fAIr Tech Radar* describes adoption
+advancing *"in a context marked by structural gaps, developing regulatory frameworks and heterogeneous
+digital capabilities."* **UNESCO** warns of a severe regional **teacher shortage**. Investment in
+regional AI startups is projected at **`$2.5 B`** by end-2026. `Ednova` (Chile) is the one edtech
+company named.
+
+🔴 **Regulatory position:** *"no Latin American country currently has a fully mature, harmonized AI
+regime across all sectors"* (Baker McKenzie), with education named as a sector where the rules matter.
+Several commentaries describe the risk as *"a patchwork of pilot policies, vulnerable to being tossed
+out with each new administration."*
+
+🔴 **Adoption figures refused.** The harvest offered `70 %`, `85 %` and `47 %` adoption for
+overlapping populations in the same region, all from low-quality aggregators, none with a stated
+denominator. 🔵 They are irreconcilable and none is carried. The UNU and IDB studies are the only
+LATAM sources here with a visible method, and the honest regional statement is that **connectivity and
+device access remain the binding constraint**, which is why `Kolibri`'s offline tier (held, MIT) still
+matters more here than any model choice.
+
+### Global
+
+🟢 **The cross-regional movement this pass is the `609-B` cluster**: five independent groups — in
+Hong Kong, Vietnam, France, the US and one unplaced — shipped instruments for **evaluating a tutor
+against a student who is not idealised**, within roughly eight weeks of each other, all permissive.
+🔵 That is a market signal independent of any report seller: the field has moved from *building*
+tutors to *measuring whether they teach*, and the measuring layer is open source.
+
+🟡 Direction-of-travel claims that recur across regions and are consistent with each other: AI tutors
+moving **inside** existing LMS environments rather than alongside them; administrative and
+back-office use growing faster than instructional use; and the stated pressure shifting from
+*"how do we stop cheating"* to pedagogy and cost justification. 🔵 The **OECD Digital Education
+Outlook 2026** is cited for the first two in several places, but 🔴 the report itself was not
+reachable from this session (`609-G`), so it is recorded as **reported, not read**.
+
+---
+
+
 ## 🆕 `p608` — reads `2026-11-02` — market map and regional placement
 
 ### 🔴 Source-quality warning, stated before the numbers

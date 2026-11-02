@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-02
 ---
 
+## Pass 609 — reads 2026-11-02, commit 2026-11-02 — **🟢 THE EVAL TIER IS OPEN AFTER SEVERAL PASSES OF BEING RECORDED SHUT — AND IT WAS NEVER EMPTY: `2` PERMISSIVE, BYTE-READ EVAL REPOS WERE SITTING ON THIS BASE'S **TRENDING** SHELVES, NEVER PROMOTED. `11` ROWS PROMOTED (`5` AGENTS, `6` FOUNDATIONS), EVERY GRANT BYTE-READ TODAY, `4 of 4` FABRICATED CONTROLS AT `401`/`404 14 B`. 🟢 LATAM'S REPOSITORY-LEVEL NIL IS BROKEN BY AN ENEM ESSAY GRADER. 🟢 `607-C`'s OPEN ITEM ADJUDICATED (`0` ADDRESSES LOST) AND ITS NAMED FIX BUILT AND VALIDATED `10 of 10`. 🔴 `609-A`: THE DEBT FIGURE CARRIED FOR TWO PASSES (`104`) DOES NOT REPRODUCE UNDER **ANY** OF FOUR INSTRUMENT VARIANTS — IT MEASURES `50`. 🔴 THE MANDATED GLOBAL LEGS RETURN THE **THIRTY-NINTH** NIL, `20 of 20` TOKENS ALREADY HELD. 🟢 THE PUSH BLOCK CARRIED SINCE `p54` IS GONE. ELEVEN REGISTERED (`609-A`…`609-M`).**
+
+🟢 **The pass's load-bearing finding is one mechanism behind two long-standing symptoms.** The eval
+tier was recorded as empty while [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim)
+(**MIT**, `80★`) and [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval)
+(**MIT**) sat on the trending shelves; and `607-C`'s `LANDED`-but-not-on-a-sell-shelf rows are the
+same thing counted differently. Measured over all `219` committed ledger slugs: `169` on a sell
+shelf, 🟡 **`50` trending-only**, 🟢 **`0` on no shelf at all**. *An absence keyed on the sell
+shelves is not an absence of the base.*
+
+🟢 **`11` rows promoted, grants byte-read at the real default branch 2026-11-02.** Agents:
+`tcheld0n/CorrijAI` (**MIT**, 🟢 **LATAM** — ENEM `C1`–`C5` scoring with reasoned feedback,
+QWK `0.750` baseline vs `0.731` calibrated agent), `microsoft/StudentSim`, `GEMLabHKU/DAS2`
+(**MIT**, APAC — simulated students that game the system, wheel-spin and go off-task at empirically
+matched rates), `abigail-gh/simlearner` (**MIT** — fixes *competency bias* with a symbolic mastery
+gate), `RahZero0/Edwisely-VivaSimulator` (**MIT**, Ollama-default oral exams). Foundations:
+`shivanireddyk/tutoreval`, `KernelInterrupt/kt-benchmark-diagnosis`,
+`huynhanhkhiem-dms/pooled-auc-knowledge-tracing` (**MIT**, APAC, Ton Duc Thang University),
+`baptiste-alonso/knowledge-tracing-benchmark` (**MIT**, EMEA, CentraleSupélec — DKT excluded because
+**interpretability was the client's requirement**), `devissaputra/knowledge_tracing_benchmark`,
+`pchi1606/sherpa-simulated-student-audit` (**MIT**, at `master`).
+
+🔴 **`609-F`: the search channel's `license.spdx_id` was wrong on `2 of 3` `NOASSERTION` verdicts**,
+and both misses were real **MIT** grants whose *copyright line* is non-standard — which also kills
+byte-size as a family check from the under-reading side, where `608-B` had killed it from the over-
+reading side. **Size is not family in either direction; only the body is.**
+
+🔴 **`609-D`: a stock Apache-2.0 grant on a `10 KB` repository** claiming a production-ready
+Kubernetes-native LMS with a built-in xAPI LRS. Every terms-based gate passes it; only **repository
+size** refutes it. Size is free on a channel already in use and is now run before the grant.
+
+🔴 **`609-I`: a new disposition class — the *dangling* grant.** `AIM-SCU/GRADE`'s README states
+*"MIT — see LICENSE"* and that `LICENSE` `404`s at every name on both branches, with no build
+manifest either (`598-A` satisfied). Not "no grant": a grant that points somewhere empty.
+
+🔴 **`609-G`: citation liveness has no channel in this session.** `curl` → `connect_rejected` and the
+page-fetch tool → `ENOTFOUND` for every non-GitHub host, so the NeurIPS/ICCE/*JEDM* claims under four
+new rows stand as **repo-declared**, per `gate-restatement`. Grants, branches, existence and sizes are
+unaffected.
+
+🟡 **Index note:** this file carries no `Pass 608` entry — `p608` wrote its findings to the shelves
+and not to the index, the same lag `589-A` tracks for `intel/open-gaps.md`, where `p607` **and**
+`p608` are now backfilled.
+
+---
+
+
 ## Pass 607 — reads 2026-11-02, commit 2026-11-02 — **🟢 `26` ROWS PROMOTED ACROSS ALL THREE SELL SHELVES, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `28 of 28` FABRICATED CONTROLS AT `404 14 B`. 🟢 THE QTI TIER FINALLY HAS AN **ENGINE** — BSD-3-CLAUSE, UNIVERSITY OF EDINBURGH — AND THE API CALLS IT `NOASSERTION`. 🟢 `607-D`: A NEW GRANT SHAPE, FOUND AT **BOTH ENDS OF THE FILE**. 🔴 `607-C`: `5` SLUGS IN THE COMMITTED LEDGER ARE NOT REPOSITORIES, TWO OF THEM THIS BASE'S OWN FILE PATHS. 🔴 AND ONE OF THIS BASE'S OWN GATES MEASURES **`0.0 %` PRECISION** ON `45` ENUMERATED HITS. EIGHT REGISTERED (`607-A`…`607-I`).**
 
 ### 🟢 The central result — the assessment stack is permissive end to end

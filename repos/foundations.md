@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — reads `2026-11-02` — **🟢 THE EVALUATION/KNOWLEDGE-TRACING TIER GETS `6` PERMISSIVE HOLDERS IN ONE PASS, EVERY GRANT BYTE-READ TODAY. 🔴 THE GITHUB API CALLED `2` OF THEM `NOASSERTION`; BOTH ARE STOCK `MIT` — `598-D` CONFIRMED A THIRD TIME, FROM A THIRD SET OF REPOSITORIES. 🟡 AND THE CITATION LAYER UNDER THESE ROWS CANNOT BE VERIFIED FROM THIS SESSION AT ALL.**
+
+### 🟢 The central result — the diagnostic layer above `pyKT` now exists, permissively
+
+This base has held [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (**MIT**,
+`456★`) as the knowledge-tracing benchmark floor for many passes. What it never had was the layer
+**above** it: instruments that say whether a KT benchmark is saturated, whether a pooled score means
+what it appears to mean, and whether a tutor evaluated against a simulated student was evaluated
+honestly. Six rows, all byte-read `2026-11-02`:
+
+| Repo | Grant (byte-read) | Branch | Region | Size | What it contributes |
+| --- | --- | --- | --- | --: | --- |
+| [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) | 🟢 **MIT** `1,074 B` | `main` | 🔵 Global | `69 KB` | 🟢 **PROMOTED off the trending shelf** (`609-B`). *"Measuring whether an AI tutor teaches, rather than whether it answers."* 🔵 **Deterministic, no network calls, no API key, no GPU**, and every score it returns carries **the span of text that caused it** — so it is auditable, re-runnable in CI, and free, which no LLM-judge harness is |
+| [`KernelInterrupt/kt-benchmark-diagnosis`](https://github.com/KernelInterrupt/kt-benchmark-diagnosis) | 🟢 **MIT** `1,066 B` | `main` | 🔵 Global — holder not placed | `391 KB` | *An Information-Theoretic Evaluation Framework for Benchmark and Model Diagnosis in Knowledge Tracing.* Aggregate AUC hides **where** errors originate and whether a benchmark is near saturation; this estimates the **Local Irreducible Uncertainty** of each interaction using Context Tree Weighting as a causal anchor and projects predictions onto it. Ships its own `pykt/` fork with the CTW/LIU estimators |
+| [`huynhanhkhiem-dms/pooled-auc-knowledge-tracing`](https://github.com/huynhanhkhiem-dms/pooled-auc-knowledge-tracing) | 🟢 **MIT** `1,143 B` — 🔴 API said `NOASSERTION` | `main` | 🟢 **APAC** (Vietnam) | `123 KB` | *Pooled AUC Does Not Identify Within-Learner Predictive Discrimination in Knowledge Tracing.* Decomposes AUC across **14 scoring rules** — GlobalMean, ItemMean, SkillMean, FrozenAbility, FrozenIRT, RunningAbility, PFA-shared, BKT, Best-LR(+I), DKT(+I), SAKT(+I). 🔵 **Ton Duc Thang University**, ORCID in README — holder evidence, not a username. Deliberately does **not** redistribute benchmark files; `fetch_data.sh` pulls the Gervet et al. (2020) release |
+| [`baptiste-alonso/knowledge-tracing-benchmark`](https://github.com/baptiste-alonso/knowledge-tracing-benchmark) | 🟢 **MIT** `1,298 B` — 🔴 API said `NOASSERTION` | `main` | 🟢 **EMEA** (France) | `2,681 KB` | Seven **interpretable** KT models on `110,101` real interactions / `267` learners / `102` skills from **Cleverlearn**, a French EdTech firm, under one protocol — **CentraleSupélec** project course, Mar–Jun 2026. Interpretability was a *client requirement*, so DKT was excluded by design. Optimised PFA wins at AUC `0.789 ± 0.006`. 🔵 Client data is private and **not** shipped; a synthetic generator with the same schema runs every model end to end |
+| [`devissaputra/knowledge_tracing_benchmark`](https://github.com/devissaputra/knowledge_tracing_benchmark) | 🟢 **MIT** `1,076 B` | `main` | 🔵 Global — holder not placed | `424 KB` | A **learner-disjoint** comparison on ASSISTments 2009 (`4,148` learners, `274,331` interactions): priors vs fixed BKT vs validation-tuned BKT vs PFA vs GRU. Held-out GRU ROC-AUC `0.7470` / Brier `0.1800` against PFA `0.6982` / `0.1976`, three seeds, sample SD `0.0008`. 🔵 **Dataset pinned to a revision hash** (`c72a664…`), leakage safeguards and model-selection boundaries documented, and the README states what it did *not* rerun |
+| [`pchi1606/sherpa-simulated-student-audit`](https://github.com/pchi1606/sherpa-simulated-student-audit) | 🟢 **MIT** `1,069 B` | 🔴 **`master`** | 🔵 Global — holder not placed | `1,484 KB` | A **preregistered validity audit** of a student simulator, reproduction package for a manuscript prepared for the *Journal of Educational Data Mining*. `bash reproduce.sh` recomputes every preregistered metric from banked artifacts — 300 simulated episodes against 5,000 real ASSISTments sequences, 24 two-sample KS tests with Holm–Bonferroni, bootstrap CIs — then **verifies each headline number against `expected/headline_numbers.json` and prints PASS/FAIL**. ~2 minutes |
+
+🔴 **`sherpa-simulated-student-audit` resolves only at `master`** — its grant *and* its README `404`
+at `main`. A root read at `main` would have returned the `404` that looks exactly like "no grant",
+which is `p607`'s branch lesson arriving on a new row rather than being remembered.
+
+### 🔴 `609-F` — the API's licence field is wrong again, and the error is one-directional
+
+| repo | API `spdx_id` | byte-read at the real default branch | API verdict |
+| --- | --- | --- | --- |
+| `baptiste-alonso/knowledge-tracing-benchmark` | 🔴 `NOASSERTION` | 🟢 **MIT**, `1,298 B` — stock body, five named copyright holders | 🔴 **wrong** |
+| `huynhanhkhiem-dms/pooled-auc-knowledge-tracing` | 🔴 `NOASSERTION` | 🟢 **MIT**, `1,143 B` — stock body, © 2026 *"The Authors"* | 🔴 **wrong** |
+| `zty552252kevin-code/holdfast` | `NOASSERTION` | 🔴 custom non-commercial (see `intel/measured-unusable.md`) | 🟢 right |
+
+🔵 **`2 of 3`, and the two misses are the expensive direction.** Both rejected repositories were real
+permissive grants that a `spdx_id` screen would have discarded as unlicensed — the same direction as
+`p607`'s `NOASSERTION` findings, now on a third disjoint set. 🟢 **Why the API is wrong is now
+visible:** both bodies are stock MIT whose *copyright line* is non-standard — five names across two
+lines in one, the literal string `The Authors` in the other. The classifier keys on the whole file,
+so an unusual holder line costs the repository its licence. 🔴 That also kills **byte-size** as a
+family check from the other end: `1,143 B` and `1,298 B` sit above the stock-MIT band of
+`1,064–1,084 B` purely because the copyright line is longer, and `608-B` had already killed size
+from the *over*-reading side. **Size is not family in either direction; only the body is.**
+
+### 🟡 `609-G` — the citations under these rows are repo-declared and unverifiable from this session
+
+Four rows above cite an external venue: NeurIPS 2026 (with a poster URL), ICCE 2026, *JEDM*, and
+NAACL for a prior row. This base runs `gate-dead-citation`. It could not run today:
+
+| channel | `neurips.cc` | `icce2026.apsce.net` | `microsoft.github.io` |
+| --- | --- | --- | --- |
+| `curl` via the session proxy | 🔴 `000` — `connect_rejected` | 🔴 `000` — `connect_rejected` | 🔴 `000` — `connect_rejected` |
+| the host's page-fetch tool | 🔴 `ENOTFOUND` | — | — |
+
+🔵 **Both channels are closed for every non-GitHub host**, so no venue claim on this page was verified.
+Per this base's own `gate-restatement` rule — *a restatement of an unreachable authority is not a
+verified grant* — every venue above is marked **repo-declared**. 🟢 What **was** verified is the part
+that governs reuse: the grant bytes, the branch, the existence probe and the repository size. A
+NeurIPS claim that turns out to be aspirational would not change the licence under any of these rows.
+
+---
+
+
 ## 🆕 `p608` — reads `2026-11-02` — **🟢 THE CONTENT-INGESTION TIER FINALLY HAS A PERMISSIVE, VENDOR-BACKED REPO. 🟢 A SECOND KT MODEL ON THE HELD BENCHMARK SURFACE. 🔴 THE EVAL TIER STAYS EMPTY — THIS TIME BECAUSE THE BEST CANDIDATE SHIPS NO LICENSE.**
 
 ### 🟢 The central result — the gap between "documents" and "course" closes permissively

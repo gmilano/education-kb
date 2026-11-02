@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — `2026-11-02` — GitHub trending, and the channel ledger for this pass
+
+### 🔵 The channel table, run first, with a control on every arm (`569-B`'s standing row)
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `curl github.com/{slug}/info/refs?service=git-upload-pack` (`606-E`) | 🟢 **DISCRIMINATING** — `14 of 14` real addresses `200`; 🟢 **`4 of 4` fabricated controls `401`**. Re-measured today, unchanged since `p606` |
+| 🟢 `raw.githubusercontent.com` grant byte-read at the real default branch | 🟢 **DISCRIMINATING** — `13 of 14` returned a grant; 🟢 fabricated controls `404 14 B` |
+| 🟢 `gh api -X GET search/repositories` with `repo:… fork:true` | 🟢 `12 of 12` resolved individually, `0` errors. 🔴 But see `609-F`: its `license.spdx_id` was **wrong on `2 of 3`** `NOASSERTION` verdicts |
+| 🔴 `curl -sI github.com/{slug}` (the run prompt's mandated verifier) | 🔴 **`403` real AND `403` fabricated** — certifies nothing. Carried from `p590`, re-confirmed at `p608`, not re-run as a verifier today |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 **`403`** — *"GitHub access to this repository is not enabled for this session"*. Unchanged since `p584` |
+| 🔴 🆕 **any non-GitHub host**, both channels | 🔴 **CLOSED.** `curl` → `connect_rejected`; the host page-fetch tool → `ENOTFOUND`. `neurips.cc`, `icce2026.apsce.net`, `microsoft.github.io` all unreachable. See `609-G` |
+| 🟢 🆕 **repository size** via the search channel | 🟢 **A free claims check.** Refuted a `10 KB` repo claiming a production-ready Kubernetes LMS. See `609-D` |
+| 🟢 🆕 **narrow `in:name,description` queries** | 🟢 **THE PASS'S PRODUCTIVE CHANNEL** — `9` of `11` new addresses. `total_count` in single/double digits |
+| 🔴 the four mandated global legs | 🔴 **THIRTY-NINTH CONSECUTIVE NIL**, `20 of 20` tokens already held, proven by name in `agents/trending.md` |
+| 🔴 the mandated vertical leg (`open source platform education ERP CRM MIT Apache`) | 🔴 **SINGLE-VENDOR CAPTURE** — `10 of 10` results were pages on `openeducat.org`, the vendor's own glossary. See below |
+
+### 🔴 The vertical leg returned one vendor's own website, ten times out of ten
+
+Every result for the mandated vertical query was a page on `openeducat.org` — the same vendor's
+glossary in ten different language paths (`/ar/`, `/fr/`, `/pt-BR/`, `/zh/`, `/de/`, `/es/`, …).
+🔵 **That is not a market survey; it is one SEO estate.** The product it describes, **OpenEduCat**, is
+already held here and is **LGPL-3.0** — copyleff, not the MIT/Apache surface the query asked for. The
+leg is recorded as a **nil with a named cause**, which is worth more than the ten rows it appeared to
+return.
+
+🟡 Probed anyway, so the nil is informed rather than assumed: a narrow permissive LMS/SIS query
+returned `19` + `29` rows of which essentially all are coursework projects (console C programs,
+course-assignment CRUD apps). The one real candidate,
+[`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) (**Apache-2.0** `11,362 B`
+byte-read today, `63★`, multi-tenant self-hosted LMS), is 🔴 **already held on this base's vertical
+shelf** — so the vertical tier genuinely did not move this week.
+
+### 🟢 Trending repos promoted this pass — `11` addresses, grants byte-read `2026-11-02`
+
+| repo | grant | branch | size | region |
+| --- | --- | --- | --: | --- |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 MIT `1,074 B` | `main` | `5,760 KB` | Global |
+| [`baptiste-alonso/knowledge-tracing-benchmark`](https://github.com/baptiste-alonso/knowledge-tracing-benchmark) | 🟢 MIT `1,298 B` | `main` | `2,681 KB` | EMEA |
+| [`pchi1606/sherpa-simulated-student-audit`](https://github.com/pchi1606/sherpa-simulated-student-audit) | 🟢 MIT `1,069 B` | 🔴 `master` | `1,484 KB` | Global |
+| [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI) | 🟢 MIT `1,071 B` | `main` | `1,338 KB` | 🟢 **LATAM** |
+| [`devissaputra/knowledge_tracing_benchmark`](https://github.com/devissaputra/knowledge_tracing_benchmark) | 🟢 MIT `1,076 B` | `main` | `424 KB` | Global |
+| [`KernelInterrupt/kt-benchmark-diagnosis`](https://github.com/KernelInterrupt/kt-benchmark-diagnosis) | 🟢 MIT `1,066 B` | `main` | `391 KB` | Global |
+| [`GEMLabHKU/DAS2`](https://github.com/GEMLabHKU/DAS2) | 🟢 MIT `1,116 B` | `main` | `223 KB` | 🟡 APAC |
+| [`huynhanhkhiem-dms/pooled-auc-knowledge-tracing`](https://github.com/huynhanhkhiem-dms/pooled-auc-knowledge-tracing) | 🟢 MIT `1,143 B` | `main` | `123 KB` | 🟢 APAC |
+| [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) | 🟢 MIT `1,074 B` | `main` | `69 KB` | Global |
+| [`RahZero0/Edwisely-VivaSimulator`](https://github.com/RahZero0/Edwisely-VivaSimulator) | 🟢 MIT `1,069 B` | `main` | `62 KB` | Global |
+| [`abigail-gh/simlearner`](https://github.com/abigail-gh/simlearner) | 🟢 MIT `1,067 B` | `main` | `22 KB` | Global |
+
+🟡 **A metadata anomaly, recorded not resolved:** `GEMLabHKU/DAS2` reports `created_at 2026-08-05`
+with `pushed_at 2026-05-21` — **pushed before created**. Both come from the same search-channel
+payload read in one call. Nothing on this shelf depends on either date, and the grant, existence probe
+and size were all measured directly, so the row stands with the anomaly noted.
+
+🔴 **`0★` on ten of eleven rows, stated plainly.** Only `StudentSim` (`80★`) carries a star count. Per
+`605-J`'s shortlisting rule — *grant first, stars second* — these were taken on grant, relevance and
+substance; the star column is reported, not used. `607-B` disqualified a `259,581★` address on
+relevance in the same ledger, so the rule cuts both ways and did.
+
+---
+
+
 ## 🆕 `p608` — `2026-11-02` — GitHub trending, measured by topic page rather than by roundup
 
 ### 🟢 The channel ledger for this pass

@@ -4,6 +4,170 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — reads `2026-11-02` — four recipes, each buildable from rows byte-read this pass
+
+🔵 Every repo named below had its grant byte-read at `raw.githubusercontent.com` on the **real**
+default branch on **2026-11-02**, with `4 of 4` fabricated controls returning `401` on the existence
+probe and `404 14 B` on the grant read in the same pass. Byte counts, branches and repository sizes
+are in `agents/top.md` and `repos/foundations.md` under `p609`.
+
+---
+
+### 🟢 `P609-1` — Measure the incumbent before proposing a replacement (Global, `3`–`5` weeks)
+
+**The problem it solves:** a client already has an AI tutor — bought, or built last year — and the
+question on the table is whether it works. Every party in the room has a demo and nobody has a
+measurement. 🔵 This pass made that engagement buildable for the first time: the **evaluation layer
+is now open source and the tutor does not have to be**.
+
+**Wiring, left to right:**
+
+1. **Score the transcripts you already have, deterministically** —
+   [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) (**MIT**, `1,074 B`).
+   Feed it `Exchange(uid, student, tutor, answer)` records exported from the incumbent. 🔵 **No
+   network calls, no API key, no GPU** — so it runs inside the client's boundary with no
+   data-sharing review, and **every score carries the span of text that caused it**, which is what
+   makes the output defensible in a steering committee rather than merely numeric.
+2. **Then stress it against students who misbehave** —
+   [`GEMLabHKU/DAS2`](https://github.com/GEMLabHKU/DAS2) (**MIT**, `1,116 B`). Drive the incumbent
+   with simulators that **game the system**, **wheel-spin** and go **off-task** at rates matched to
+   ASSISTments09/12, EdNet-KT1 and Eedi-NeurIPS distributions. This is where bought tutors fail,
+   because they were accepted against idealised students.
+3. **Guard against the simulator flattering you** —
+   [`abigail-gh/simlearner`](https://github.com/abigail-gh/simlearner) (**MIT**, `1,067 B`) for the
+   opposite failure: LLMs told to role-play a struggling learner **solve the problem too well**
+   (*competency bias*). Its semi-Markov controller + **BKT** + **Mastery Gate** (Unknown always
+   inject, Partial `50 %`, Mastered never) means the injected error only reaches the tutor when the
+   learner model says it should. Run both simulators; a tutor that scores well on one and badly on
+   the other is telling you which.
+4. **Scale to per-student questions if the client has records** —
+   [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) (**MIT**, `80★`, `5,760 KB`):
+   one simulator per student from sparse records, scoring **guidance responsiveness** separately
+   from **behavioral fidelity**. This answers *which guidance helps which student*, which is the
+   question a pilot report is usually asked for and cannot answer.
+5. **Audit your own harness before you bill for it** —
+   [`pchi1606/sherpa-simulated-student-audit`](https://github.com/pchi1606/sherpa-simulated-student-audit)
+   (**MIT**, `1,069 B`, 🔴 at **`master`**) is the template: preregistered metrics, `24` two-sample
+   KS tests with Holm–Bonferroni, bootstrap CIs, `bash reproduce.sh`, and **PASS/FAIL printed per
+   headline number** against `expected/headline_numbers.json`. Copy the shape — a validity audit of
+   your own simulator is the deliverable that distinguishes this from a vendor bake-off.
+
+**What you hand over:** a per-competency score with text spans, two disengagement-stress profiles, and
+a reproduction script the client can re-run after any model change. 🟢 **Nothing in the chain requires
+replacing the incumbent**, which is why it can be sold before a platform decision.
+
+---
+
+### 🟢 `P609-2` — ENEM-grade essay scoring with a defensible rubric (LATAM, `6`–`8` weeks)
+
+**The problem it solves:** Brazilian secondary assessment runs on ENEM's five competencies, graders
+are scarce (UNESCO flags a severe regional teacher shortage), and a score without a justification is
+unusable — contestable by the student and useless pedagogically.
+
+**Wiring:**
+
+1. **Start from the measured baseline, not the model** —
+   [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI) (**MIT**, `1,071 B`, `1,338 KB`)
+   ships **both** arms on one harness: a supervised `HistGB` regressor on **Essay-BR** with SHAP
+   interpretability, and an LLM agent doing per-competency scoring with per-level anchors and RAG
+   over the normative corpus. 🔵 **Use the baseline for the number and the agent for the
+   *devolutiva*** — the README's own measurement says so: on a *known* prompt the baseline wins
+   (QWK `0.750` vs calibrated agent `0.731`, `n=65`, `sabiá-4` at `temp=0`). A proposal that leads
+   with the LLM for scoring is contradicted by the repo it is built on.
+2. **Keep the post-hoc calibration.** The raw agent's total bias is `−106.5`; calibrated it is
+   `−28.9`. 🔵 That single step is the difference between a scoring service and a complaint queue.
+3. **Bind the feedback to the curriculum** —
+   [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) (**MIT for code only** — the `607-D`
+   scope flag applies, so treat the curriculum **data** separately) plus
+   [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (**MIT**, `1,849★`) for
+   Brazilian official-data access. Feedback that cites **BNCC** skills is what a secretaria can act
+   on.
+4. **Deliver where connectivity is the binding constraint** — **Kolibri** (**MIT**) for offline-first
+   distribution, not a web app. The IDB's regional read is *"structural gaps … heterogeneous digital
+   capabilities"*; the device and bandwidth assumption decides adoption here more than model choice.
+5. **Write back to the LMS over API/LTI** — **Moodle** (GPL-3.0) without forking it, per the standing
+   copyleft boundary on this base.
+
+**Why now:** this is the first pass in which the region's permissive chain is complete —
+**curriculum (BNCC) → assessment (ENEM) → delivery (offline)** — and `p608` recorded a
+repository-level LATAM nil, so this recipe did not exist one pass ago.
+
+---
+
+### 🟢 `P609-3` — The interpretable-by-contract learner model (EMEA, `8`–`10` weeks)
+
+**The problem it solves:** under the AI Act the institution is the **deployer**, and an opaque learner
+model that routes students is the part a regulator asks about. The usual answer is a post-hoc
+explainability layer over a black box, which is the expensive answer.
+
+**Wiring:**
+
+1. **Take the model set a client already imposed this constraint on** —
+   [`baptiste-alonso/knowledge-tracing-benchmark`](https://github.com/baptiste-alonso/knowledge-tracing-benchmark)
+   (**MIT**, `1,298 B` — 🔴 the API calls it `NOASSERTION`, see `609-F`). Seven **interpretable** KT
+   models under one protocol on `110,101` real interactions from a French EdTech firm; **DKT was
+   excluded because the client required readable parameters**. Optimised PFA wins at AUC
+   `0.789 ± 0.006` — 🔵 **so the interpretable model is not the compromise option here**, which is
+   the finding that makes this sellable.
+2. **Run it on your own data with the client's data withheld** — the repo ships a **synthetic
+   generator with the same schema**, so the pipeline is demonstrable before any DPA is signed.
+3. **Report the metric the literature now requires** —
+   [`huynhanhkhiem-dms/pooled-auc-knowledge-tracing`](https://github.com/huynhanhkhiem-dms/pooled-auc-knowledge-tracing)
+   (**MIT**, `1,143 B`, Ton Duc Thang University): pooled AUC **does not** identify within-learner
+   discrimination. Decompose across its `14` scoring rules before quoting a single number.
+4. **Say whether the benchmark is saturated** —
+   [`KernelInterrupt/kt-benchmark-diagnosis`](https://github.com/KernelInterrupt/kt-benchmark-diagnosis)
+   (**MIT**, `1,066 B`): CTW-anchored **Local Irreducible Uncertainty** per interaction, so "we
+   improved AUC by `0.01`" can be stated as a share of the headroom that actually existed.
+5. **Keep identifiable work out of the model path** —
+   [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) (**MIT**, carried from `p608`):
+   in-browser exam anonymisation, nothing uploaded.
+6. **Floor and engine** — **pyKT** ([`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit),
+   **MIT**, `456★`) for the model implementations, and
+   [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (**BSD-3-Clause**) for QTI delivery
+   and candidate state. 🟢 **No copyleft anywhere in this path.**
+
+---
+
+### 🟢 `P609-4` — A recipe for this base, not a client: reject a non-repository at extraction time
+
+**The problem it solves:** `603-A` found this base's own file paths carried as promotion candidates;
+`606-F` found `github.com/topics/{…}` on the sell shelves; `607-C` found both classes **inside the
+committed ledger**, and concluded the defect *"is in the `{owner}/{repo}` extraction step all three
+share, and it will keep reappearing in each new artifact until that step rejects a non-repository at
+extraction time rather than at promotion time."* 🟢 `p609` builds it.
+
+**Wiring:** [`ingest/p609-address-rejector.sh`](ingest/p609-address-rejector.sh), two stages, cheapest
+first:
+
+1. **`SHAPE`** — offline and free. Rejects: not exactly two path segments (kills the
+   `github.com/topics/education` class); an owner that is one of this repository's own directories
+   (`evidence`, `ingest`, `agents`, `repos`, `intel`, `verticals`, `compose`, `archive`, …); an owner
+   that is a git ref or a `github.com` path prefix (`main`, `master`, `blob`, `tree`, `topics`,
+   `users`, …); a repo segment that is a file or ref fragment (`license`, `readme`, `copying`, …);
+   and any owner or repo violating GitHub's charset.
+2. **`EXISTENCE`** — the `606-E` probe, run **only** on shape-passers:
+   `curl github.com/{slug}/info/refs?service=git-upload-pack` → `200` real, `401` absent. Anything
+   else is returned as `INDETERMINATE`, never as a pass.
+
+**Validated against the known answer, `10 of 10`:** all `5` non-repositories `607-C` enumerated are
+rejected — `4` of them free at `SHAPE` (`evidence/p333-disposition-ledger`,
+`evidence/p333-silent-random-probe`, `main/license`, `master/license`) and `alpinevibe/quizpulse` at
+`EXISTENCE` (`401`) — plus `606-F`'s topics class at `SHAPE`; `3` real controls
+(`HKUDS/DeepTutor`, `pykt-team/pykt-toolkit`, `tcheld0n/CorrijAI`) pass at `200`; the fabricated
+control rejects at `401`.
+
+**Swept over the whole committed ledger** (`219` distinct slugs, `ingest/p609-address-rejector.sh
+--shape-only`): `215` pass, 🟢 **`4` rejected at shape — exactly the four shape-detectable slugs
+`607-C` named, and no others**, which bounds the class rather than merely finding instances. Evidence:
+`evidence/address-shape-rejector.2026-11-02-p609.tsv`.
+
+🔵 **Call it at extraction, not at promotion.** The stage is free, it runs with no network, and it is
+the only point at which the three artifacts that share the defect can be fixed at once.
+
+---
+
+
 ## 🆕 `p608` — reads `2026-11-02` — four recipes, each buildable from rows byte-read this pass
 
 🔵 Every repo named below had its license byte-read at `raw.githubusercontent.com` on the real

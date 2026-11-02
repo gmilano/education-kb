@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — `2026-11-02` — what moved on the agent side this week
+
+🔴 **The mandated global legs return the THIRTY-NINTH consecutive nil — and this time every single
+token is accounted for by name.** The four global searches the run prompt specifies were executed at
+the shapes it specifies. They returned `20` substantive repository tokens. Every one of them is
+already held in this base:
+
+| token returned by the mandated global legs | held here | mentions |
+| --- | --- | --: |
+| `microsoft/ai-agents-for-beginners` | 🔴 held | `261` |
+| `rohitg00/ai-engineering-from-scratch` | 🔴 held | `357` |
+| `crewAIInc/crewAI` | 🔴 held | `272` |
+| `microsoft/autogen` | 🔴 held | `240` |
+| `GarethManning/education-agent-skills` | 🔴 held | `232` |
+| `OpenClaw` | 🔴 held | `218` |
+| `LangGraph` | 🔴 held | `213` |
+| `pguso/agents-from-scratch` | 🔴 held | `206` |
+| `ashishpatel26/500-AI-Agents-Projects` | 🔴 held | `144` |
+| `rasbt/LLMs-from-scratch` | 🔴 held | `127` |
+| `browser-use` | 🔴 held | `94` |
+| `aneelv75/github-trending` | 🔴 held | `66` |
+| `speedyapply/2026-AI-College-Jobs` | 🔴 held | `63` |
+| `avinash201199/free-ai-agents-resources` | 🔴 held | `62` |
+| `OPTIMETA/PAIDEIA` | 🔴 held | `58` |
+| `MadsLorentzen/ai-job-search` | 🔴 held | `31` |
+| `DietrichGebert/ponytail` | 🔴 held | `5` |
+| `OpenEduCat` · `Moodle` · `Koha` | 🔴 held | `1,048` · `3,893` · `51` |
+
+🟢 **`20 of 20`. Zero new addresses.** `p607-A` proved the thirty-seventh nil row-by-row and concluded
+*"the mandated query shape retrieves this base's own contents."* `p609` can now say **why**, because
+it ran the two shapes side by side in the same hour:
+
+| query shape | `total_count` | what came back |
+| --- | --: | --- |
+| 🔴 `education agent benchmark evaluation LLM in:name,description,readme` | `4,827` | 🔴 `public-apis`, `awesome-selfhosted`, `free-for-dev`, `awesome-mcp-servers`, `awesome-public-datasets`, `sglang` — **GitHub's global popularity ranking**, not an education result set |
+| 🟢 `tutor evaluation benchmark pedagogy in:name,description` | 🟢 **`3`** | 🟢 **all three education-specific**, one of them the permissive eval harness this base had recorded as missing |
+
+🔵 **The finding is about *breadth*, not terms.** A broad query over `readme` with popular words in it
+ranks the whole of GitHub by stars, and the top of that list is the same twenty repositories every
+week — which is exactly the nil streak. A query narrowed to `name,description` with a domain noun
+phrase returns a handful of rows, most of them real. 🟢 **Fewer results is the signal of a working
+query here, not a failing one.** Nine of the eleven addresses promoted this pass came from queries
+whose `total_count` was in single or double digits.
+
+### 🟢 New agent-side signals this week — all byte-read `2026-11-02`
+
+🟢 **The eval/simulation cluster is the week's real movement**, and it is a cluster rather than a
+repo: five independent groups shipped instruments for *evaluating a tutor against a student who is
+not idealised*, within about eight weeks of each other.
+
+| signal | why it matters this week |
+| --- | --- |
+| [`GEMLabHKU/DAS2`](https://github.com/GEMLabHKU/DAS2) — **MIT** | Simulated students that **game the system, wheel-spin and go off-task** at rates matched to ASSISTments/EdNet/Eedi distributions. The premise is that every ITS benchmark to date is optimistic |
+| [`abigail-gh/simlearner`](https://github.com/abigail-gh/simlearner) — **MIT** | Names the failure the other direction: **competency bias** — LLMs told to role-play a struggling student solve the problem too well — and fixes it with a symbolic mastery gate rather than a better prompt |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) — **MIT**, `80★` | A vendor-scale version of the same idea: one simulator **per student**, and *guidance responsiveness* scored separately from *behavioral fidelity* |
+| [`pchi1606/sherpa-simulated-student-audit`](https://github.com/pchi1606/sherpa-simulated-student-audit) — **MIT** | The adversarial counterweight: a **preregistered audit** of whether a published student simulator was valid at all, with a one-command PASS/FAIL reproduction |
+| [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI) — **MIT** | 🟢 **Breaks LATAM's repository-level nil.** ENEM `C1`–`C5` grading with pedagogical feedback, and it **publishes the result where its LLM agent loses to a supervised baseline** |
+
+🟡 **A trending-shelf caution this pass turns into a rule.** `microsoft/StudentSim` and
+`shivanireddyk/tutoreval` have been on *this* shelf for passes while `agents/top.md` recorded the eval
+tier as empty. A row on a trending shelf is a **signal**, never a holding — and this base read its own
+signals as coverage for several passes. See `609-B` and `609-C`. 🔵 Both are now on the sell shelf.
+
+---
+
+
 ## 🆕 `p608` — `2026-11-02` — what moved on the agent side this week
 
 🟢 **The nil streak breaks — but not on the channel the run prompt mandates.** The mandated global

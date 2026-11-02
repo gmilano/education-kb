@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE EVAL TIER IS OPEN AFTER MANY PASSES OF RECORDING IT SHUT — AND IT WAS NEVER EMPTY: `3` OF ITS COMPONENTS WERE SITTING ON THIS BASE'S **TRENDING** SHELVES, NEVER PROMOTED. 🟢 `5` NEW AGENT ROWS, EVERY GRANT BYTE-READ TODAY, `4 of 4` FABRICATED CONTROLS AT `401`/`NOT_FOUND`. 🟢 LATAM'S REPOSITORY-LEVEL NIL IS BROKEN BY AN ENEM ESSAY GRADER. 🔴 `609-A`: THE `p436` DEBT FIGURE CARRIED FOR TWO PASSES (`104`) DOES NOT REPRODUCE UNDER **ANY** OF FOUR INSTRUMENT VARIANTS — TODAY IT MEASURES `50`. 🟢 THE PUSH BLOCK RECORDED SINCE `p54` IS GONE.**
+
+### 🟢 `609-B` — the eval-tier gap was a promotion failure, not a scarcity
+
+`p608` closed with *"the eval tier stays empty — this time because the best candidate ships no license."*
+Several passes before it recorded the same absence. Measured today at slug level, the absence was
+never true of the **base**; it was true only of its **sell shelves**:
+
+| component | grant byte-read today | where this base already held it | sell shelf |
+| --- | --- | --- | --- |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 **MIT**, `1,074 B` | `agents/trending.md` ×`5`, `repos/trending.md` ×`2` | 🔴 **never** |
+| [`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) | 🟢 **MIT**, `1,074 B` | `agents/trending.md` ×`2` | 🔴 **never** |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | 🔴 **no grant file** | `agents/trending.md` ×`8`, `repos/trending.md` ×`5` | 🔴 unlicensed — stays off |
+
+🔵 **The rule this leaves:** an absence claim keyed on the sell shelves is not an absence claim about
+the base. Two of the three were permissive, byte-read, and had been in the building for passes —
+visible to the trending shelves and invisible to every recipe. `609-C` below shows this is not an
+anecdote but a **measurable class of `50` addresses**, and it is the same mechanism behind `607-C`'s
+unadjudicated `LANDED` rows.
+
+### 🟢 `5` new agent rows — grants byte-read `2026-11-02`, plus the `2` promotions above
+
+| Agent | Repo | License (byte-read) | Region | Size | What it actually does |
+| --- | --- | --- | --- | --: | --- |
+| CorrijAI | [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI) | 🟢 **MIT** `1,071 B` | 🟢 **LATAM** (Brazil) | `1,338 KB` | ENEM essay grader returning **a score per competency `C1`–`C5` with a reasoned pedagogical response**, anchored in the *Cartilha do Participante*. Two approaches in one measured harness: a supervised `HistGB` baseline on **Essay-BR** with SHAP, and an LLM agent with per-level anchors + RAG over the normative corpus. Golden test `n=65`, `sabiá-4` at `temp=0`: baseline **QWK `0.750`**, calibrated agent **`0.731`** — and the README states plainly that on a *known* prompt the baseline wins, which is the honest result, not the flattering one. FastAPI + Streamlit + Docker Compose, reproducible by `make` |
+| StudentSim | [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 **MIT** `1,074 B` | 🔵 Global (Microsoft) | `5,760 KB` | 🟢 **PROMOTED off the trending shelf.** Builds **one simulator per student** from sparse records — pooled training then per-student specialisation — to answer *which guidance helps which student* when real-learner feedback is slow and costly. Three domains: chess, second-language, maths. Scores **behavioral fidelity** and **guidance responsiveness** as separate axes. `80★`, the largest-starred row in this tier |
+| DAS² | [`GEMLabHKU/DAS2`](https://github.com/GEMLabHKU/DAS2) | 🟢 **MIT** `1,116 B` | 🟡 **APAC** — see the placement note | `223 KB` | Controllable LLM student simulators that reproduce **three empirically grounded disengagement patterns** — gaming the system, wheel spinning, off-task — with rates matched to real distributions from ASSISTments09/12, EdNet-KT1 and Eedi-NeurIPS. Exists because ITSs are evaluated against idealised students: *"a tutor that looks great against engaged students may fail completely once real students walk in"* |
+| SimLearner | [`abigail-gh/simlearner`](https://github.com/abigail-gh/simlearner) | 🟢 **MIT** `1,067 B` | 🔵 Global — holder not placed | `22 KB` | Neuro-symbolic learner simulator for simultaneous equations, built to evaluate LLM-ITSs without real students. 🔵 **Attacks competency bias architecturally**, not by prompting: six LLM calls per turn gated by three symbolic components — a semi-Markov metacognitive controller (Planning/Enacting/Monitoring/Reflecting, Gamma-distributed durations), **BKT** per-KC mastery, and a **Mastery Gate** that decides whether an injected error actually reaches the learner (Unknown always, Partial `50 %`, Mastered never). Scores the tutor on 8 pedagogical dimensions |
+| Edwisely Viva Simulator | [`RahZero0/Edwisely-VivaSimulator`](https://github.com/RahZero0/Edwisely-VivaSimulator) | 🟢 **MIT** `1,069 B` | 🔵 Global — holder not placed | `62 KB` | Adaptive **oral-exam (viva)** simulator for engineering students: upload subject PDFs, get RAG-grounded questions, answer by text or voice, get evaluation and a session summary. Three modes, and the useful one is **Peer Mode** — two students alternate while the AI moderates and evaluates. React/Vite + FastAPI + LlamaIndex, **default LLM is Ollama**, so it runs without a vendor key |
+
+🟡 **The `DAS²` placement, stated rather than assumed.** The only region evidence is the organisation
+login `GEMLabHKU` and an ICCE 2026 / APSCE venue — an Asia-Pacific society's conference. There is
+**no affiliation line in the README**, and its own BibTeX block carries **no `author` field** at all.
+That is name-plus-venue evidence, not an affiliation, and it is recorded as such. `608`'s rule stands
+for the other two: `simlearner` and `Edwisely-VivaSimulator` carry no holder evidence in repo, README
+or grant, so they stay `Global` and say so rather than being placed off a username.
+
+### 🔴 `609-D` — a valid permissive grant on an empty repository, and the cheap axis that catches it
+
+[`mkhomytsya/MuckeligAgentLMS`](https://github.com/mkhomytsya/MuckeligAgentLMS) declares itself *"the
+first cloud-native Learning Management System powered by autonomous AI agents"* — autonomous course
+generation, built-in xAPI LRS, *"Kubernetes-Native, scalable, production-ready."* It carries a real
+**Apache-2.0** grant, `11,366 B`, byte-read today. A grant-first screen passes it.
+
+| axis | reading |
+| --- | --- |
+| grant | 🟢 **Apache-2.0**, stock body |
+| 🔴 **repository size** | 🔴 **`10 KB` in total** |
+| history | 🔴 created `2026-02-12`, pushed `2026-02-12` — one day, never touched again |
+
+🔵 **The rule this leaves:** a grant certifies *terms*, never *existence of the thing*. `10 KB` cannot
+hold a multi-tenant Kubernetes LMS with an LRS, so the README is a claim about an intention. Repo size
+is free on the channel this base already uses and refutes the loudest class of candidate outright, so
+it was applied to **this pass's own rows before publication**: the eleven above measure `22 KB` to
+`5,760 KB`, the smallest being a pure-Python simulator whose README accounts for its own file list.
+
+### 🟢 The push block recorded since `p54` is gone — `609-E`
+
+Every education pass from `p54` onward closed with a variant of *"push-blocked — access
+restriction / session scoped to `globant-kb`."* Measured today: `git push` to this repository failed
+exactly as recorded — *"`gmilano/education-kb` is not in this session's authorized repository set"* —
+and then **succeeded** once the repository was added to the session's sources via the host's
+`add_repo`. 🔵 So the block was a **session-scope** condition with a remedy inside the session, not a
+property of the repository. `p609` is the first education pass in that run to commit from the clone it
+read. Recorded here because the note it replaces was carried, unexamined, for dozens of passes.
+
+---
+
+
 ## 🆕 `p608` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `11` NEW PERMISSIVE AGENT ROWS, EVERY LICENSE BYTE-READ TODAY, `4 of 4` FABRICATED CONTROLS AT `NOT_FOUND`. 🔴 `608-A`: THE RUN PROMPT'S OWN PRESCRIBED CHECK (`curl -sI github.com/...`) RETURNS `403` FOR A REAL REPO **AND** FOR A FABRICATED ONE — IT CANNOT DISCRIMINATE IN THIS ENVIRONMENT AND WAS REPLACED. 🔴 `608-B`: A FIRST-MATCH LICENSE CLASSIFIER CALLED `Tencent/WeKnora` APACHE; IT IS **MIT** WITH AN APACHE THIRD-PARTY APPENDIX. 🔴 `608-C`: AN `MIT` LICENSE FILE WHOSE OWN README DECLARES THE REPO `PRIVATE`. 🔴 LATAM RETURNS A REPOSITORY-LEVEL NIL, STATED.**
 
 ### 🔴 `608-A` — the prescribed verification check is inert here, and that had to be found before any row was written

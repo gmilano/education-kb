@@ -1,8 +1,93 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p609` — `2026-11-02` — `4` dispositions, and the first **dangling** grant this base has recorded
+
+🔵 **`598-A`'s rule earned its keep this pass.** It requires that a row is only called *"no grant"*
+once its **build manifest** has been read as well as its grant filenames. Applied to this pass's one
+apparent no-grant row, it did not confirm the absence — it **reclassified** it into a category this
+base has not held before.
+
+### 🔴 `609-I` — `AIM-SCU/GRADE`: a README that grants MIT and links a file that does not exist
+
+[`AIM-SCU/GRADE`](https://github.com/AIM-SCU/GRADE) — *Generalizable Reasoning-Aware Dialogue
+Evaluation for AI Tutors*.
+
+| channel | reading `2026-11-02` |
+| --- | --- |
+| existence (`606-E`) | 🟢 `200` — the address is real |
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` × `main` **and** `master` | 🔴 **`404 14 B` on all ten** |
+| build manifests — `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `requirements.txt` × both branches | 🔴 **`404 14 B` on all ten** (`598-A` satisfied: there is no manifest channel to read) |
+| 🔴 **README, `16,117 B`, final section** | 🔴 *"## License — **MIT** — see [LICENSE](LICENSE)."* |
+
+🔵 **This is not `608-D`'s class.** `608-D` recorded `13` repositories with **no grant claim anywhere**.
+This one makes an explicit MIT claim **and points at a file that is not in the repository on either
+branch**. `p288`'s `gate-readme-channel` holds that a README-only grant claim *"is not no channel"* —
+🔴 but a README that *delegates* to a `LICENSE` file is weaker than one that states terms inline: it
+asserts the operative text lives elsewhere, and elsewhere is empty. There is no copyright holder line,
+no year and no warranty text anywhere in the repository.
+
+🟡 **Verdict: NOT PROMOTED — recoverable.** A single commit adding the file the README already links
+would make this shelvable, because the rest of the row is strong: a BEA 2025 shared-task pipeline
+scoring tutor responses on four dimensions (**Mistake Identification**, **Mistake Location**,
+**Providing Guidance**, **Actionability**, 3-way labels plus a joint multitask head), **`184` logged
+runs** in `master_metrics.csv` across Llama-3.1-8B, Mistral-7B, Qwen3-14B, Gemma3-12B and Gemma3-27B,
+with **per-run CodeCarbon kWh/CO₂ tracking** joined to the results table. 🔵 On capability it belongs
+in `609-B`'s eval tier; on terms it cannot be built on.
+
+🟡 **And its region is disclosed only inside an HTML comment.** `**Affiliation:** Santa Clara
+University — CSEN-346, Spring 2026`, with three named authors, sits in a commented-out block that
+renders nowhere. 🔵 Recorded because this base places rows on holder evidence and declines to infer
+region from usernames (`608`): had the row been promotable, **North America** would have been
+evidenced — by a string no reader of the rendered page can see.
+
+### 🔴 `609-J` — `zty552252kevin-code/holdfast`: a conjunctive grant, non-commercial on both arms
+
+| | reading |
+| --- | --- |
+| grant | 🔴 **"HoldFast 执迷 — License (v1.0)"**, `1,711 B`, byte-read today — custom, not OSI |
+| arm 1 | material derived from `MalruleLib` (scaffolds, rendered dialogues, probe sets, DPO pairs, generator/probe code, evaluation outputs) **inherits MalruleLib's terms: non-commercial, share-alike, attribution**, pinned to commit `8ddedfb` |
+| arm 2 | all other original content — *"released for non-commercial research use"* |
+| API `spdx_id` | `NOASSERTION` — 🟢 **right, for once** (see `609-F`, where it was wrong on the other two) |
+| 🔴 verdict | 🔴 **REJECTED — non-commercial on every arm.** Out of scope for the MIT/Apache/BSD build surface |
+
+🔵 Worth the entry for its *shape*: this is `p427`'s `gate-conjunctive-grant` class — **one payload,
+two licence regimes, and a notice obligation under both** — and the two regimes happen to agree on the
+boundary that disqualifies it. Attribution is also an **academic** citation (Chen, Liu & Sonkar,
+arXiv:2601.03217, ACL Main 2026), not a copyright notice, so satisfying it is a paper citation rather
+than a `NOTICE` file. Capability-wise it is relevant: Qwen3 student simulators (`0.6B`–`14B`) trained
+to **hold an assigned maths misconception**, which is `609-B`'s cluster exactly.
+
+### 🔴 `609-D` — `mkhomytsya/MuckeligAgentLMS`: a valid Apache-2.0 grant on a `10 KB` repository
+
+Full entry in `verticals/solutions.md` and `agents/top.md` under `p609`. Summary: claims *"the first
+cloud-native LMS powered by autonomous AI agents"*, autonomous course generation, **built-in xAPI
+LRS**, *"Kubernetes-Native, scalable, production-ready"*; carries a **stock Apache-2.0**,
+`11,366 B`, byte-read today; probe `200`. 🔴 **`10 KB` total, created and last pushed `2026-02-12`,
+`0` issues, `0` topics.** Verdict: 🔴 **NOT PROMOTED — the grant is real and the software is not.**
+🟢 The axis that caught it (**repository size**, free on the search channel) is now run before the
+grant on platform candidates.
+
+### 🟡 `609-K` — `Nadia1160/cognitive-student-simulator-tutor`: permissive, relevant, and not yet a project
+
+| | reading |
+| --- | --- |
+| grant | 🟢 **Apache-2.0**, `11,357 B` — stock body, byte-read today |
+| relevance | 🟢 on-topic: *"LLM-Based Intelligent Tutoring System with Error-Aware Feedback for Math Education"* — would sit inside `609-B`'s tier |
+| size · history | `277 KB` · 🔴 created `2026-03-02`, pushed `2026-03-02` — a single day, nothing since |
+| 🔴 README | 🔴 **Docker boilerplate only** — prerequisites, a PowerShell launcher menu, and a build path reading `D:\Nadia\Nadia\Python\Python Projects\…`. It documents **how to start a container**, and says nothing about the simulator, its student model, or how it is evaluated |
+| 🟡 verdict | 🟡 **NOT PROMOTED — unassessable on its own documentation.** The grant is clean and the topic is wanted; there is no described evaluation surface to compose against, and a leaked local build path is the signature of a repository published once rather than maintained |
+
+🔵 **Why this is a disposition and not a rejection.** Nothing here is wrong — it is a permissive,
+relevant, under-documented repository. It is recorded so that a later pass searching this exact tier
+finds the **prior assessment** instead of re-deciding it, which is the function `608-D`'s unlicensed
+list is already serving.
+
+---
+
 
 ## 🆕 `p598` — `2026-11-01` — `4` dispositions, and one of them is a repository this base would have called unlicensed that is in fact permissively licensed
 

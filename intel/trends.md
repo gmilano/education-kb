@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — reads `2026-11-02` — current trends
+
+### 🟢 T`609`-1 — the field moved from building tutors to measuring whether they teach
+
+This is the pass's load-bearing trend and it is evidenced by repositories, not by a report. Five
+independent groups shipped **open, permissive instruments for honest tutor evaluation** within roughly
+eight weeks: [`GEMLabHKU/DAS2`](https://github.com/GEMLabHKU/DAS2) (simulated students that game the
+system, wheel-spin and go off-task at empirically matched rates),
+[`abigail-gh/simlearner`](https://github.com/abigail-gh/simlearner) (neuro-symbolic learner that
+fixes **competency bias** with a symbolic mastery gate instead of a prompt),
+[`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) (one simulator per student;
+behavioral fidelity and guidance responsiveness as separate axes),
+[`pchi1606/sherpa-simulated-student-audit`](https://github.com/pchi1606/sherpa-simulated-student-audit)
+(a **preregistered audit** of whether a published simulator was valid at all), and
+[`shivanireddyk/tutoreval`](https://github.com/shivanireddyk/tutoreval) (deterministic pedagogical
+scoring, no network, no key, every score carrying the span that caused it).
+
+🔵 **The shared premise is the trend:** a tutoring response can be factually perfect and
+pedagogically useless, and an ITS benchmarked against students who always respond on-task has not
+been benchmarked. *"A tutor that looks great against engaged students may fail completely once real
+students walk in."* 🟢 For a studio this inverts the usual order: the **evaluation harness is now
+available before the tutor**, so a client engagement can open with a measurement of the incumbent
+rather than a demo of a replacement.
+
+### 🟢 T`609`-2 — the knowledge-tracing literature turned on its own metrics
+
+Three of this pass's six foundation rows are not models; they are **critiques of how models are
+scored**. `pooled-auc-knowledge-tracing` argues pooled AUC *does not identify within-learner
+predictive discrimination* and decomposes it across `14` scoring rules. `kt-benchmark-diagnosis`
+argues aggregate AUC hides where errors originate and whether a benchmark is **near saturation**,
+and estimates per-interaction irreducible uncertainty as the anchor. `knowledge_tracing_benchmark`
+rebuilds the comparison **learner-disjoint** with a pinned dataset revision and reports that a GRU
+beats PFA by about `0.05` AUC with a seed SD of `0.0008`.
+
+🔵 **Why it matters commercially:** "our model gets `0.78` AUC" is now a claim with a published
+rebuttal attached. 🟢 An engagement that quotes a KT metric without a within-learner decomposition is
+quoting a number this literature has already addressed, and the rebuttals are **MIT-licensed and
+runnable**.
+
+### 🟡 T`609`-3 — interpretability is arriving as a client requirement, not a research preference
+
+`baptiste-alonso/knowledge-tracing-benchmark` excluded DKT **by design** because *"interpretability
+was a requirement of the client"* — a French EdTech firm — so only models with readable parameters
+were admitted. 🔵 That is the EU AI Act's posture showing up as an architecture constraint at the
+procurement stage, in the region where the Act applies, written down in a repository rather than in a
+policy memo. 🟢 It is the cleanest artifact this base holds for an EMEA regulated engagement: the
+constraint, the seven admissible models, the protocol and the scores, with the client's own data
+withheld and a synthetic generator shipped in its place.
+
+### 🟢 T`609`-4 — the integrity boundary is being built into products, not bolted on
+
+A pattern now visible across three passes' rows: `p608`'s `german-course` **disables its AI tutor
+during exams**; `obfusca` anonymises exam PDFs **entirely in-browser so nothing is uploaded**;
+`wildmind-ai-for-education` puts the tutor *inside* the assignment so the teacher sees what the AI
+inserted; and this pass's `Edwisely-VivaSimulator` defaults to **Ollama**, so an oral exam can be run
+without a vendor key. 🔵 The design target has shifted from *detecting* misuse to making
+attributable use the default path. 🟡 This is consistent with the market harvest's claim that the
+pressure has moved from *"how do we stop cheating"* to pedagogy and cost — though note that claim is
+aggregator-sourced, while the four repositories are byte-read.
+
+### 🔴 T`609`-5 — discovery breadth, not search terms, is what has been failing
+
+`39` consecutive nils on the mandated global legs, and this pass ran the two shapes side by side:
+a broad `in:name,description,readme` query returned `4,827` hits topped by `public-apis`,
+`awesome-selfhosted` and `free-for-dev`; a narrow `in:name,description` domain phrase returned **`3`**,
+all three education-specific and one of them the missing eval harness. 🔵 **A broad query ranks the
+whole of GitHub by stars, and the top of that list does not change week to week** — which is the nil
+streak, exactly. 🟢 `9` of this pass's `11` promotions came from queries whose `total_count` was in
+single or double digits. For this domain, a small result set is the evidence the query is working.
+
+### 🔴 T`609`-6 — a permissive grant is not evidence that software exists
+
+[`mkhomytsya/MuckeligAgentLMS`](https://github.com/mkhomytsya/MuckeligAgentLMS) claims the *"first
+cloud-native LMS powered by autonomous AI agents"* with a built-in xAPI LRS, *"Kubernetes-Native,
+production-ready"* — and carries a genuine **Apache-2.0** grant on a real address. It is **`10 KB`
+in total**, created and last pushed on the same day. 🔵 Every terms-based gate passes it; only
+**repository size** refutes it. 🟢 Size costs nothing on a channel already in use, so it is now run
+before the grant on platform candidates — including on this pass's own rows, which measure `22 KB`
+to `5,760 KB`.
+
+### 🟡 T`609`-7 — the regional policy layer is diverging in *kind*, not just in pace
+
+🔵 **North America** is accumulating **volume**: `134` bills across `31` states (March 2026), plus
+`$169 M` in federal FIPSE awards — so the compliance target is plural and per-state configurability
+is a product requirement. 🔵 **EMEA** is accumulating **obligations**: the AI Act in force since
+2024-08-01 with AI-literacy duties live since 2025-02-02, updated Commission guidelines for
+education, `€25.4 M` in skills grants, `£200 M+` in the UK. 🔵 **APAC** is moving from drafting to
+**enforcement** across at least `16` jurisdictions with no prospect of a common framework, alongside
+the single largest teacher-certification commitment in the harvest (>`1 M` teachers, Philippines
+DepEd with Google). 🔵 **LATAM** has *"no fully mature, harmonized AI regime"* in any country, with
+the stated risk being *"a patchwork of pilot policies, vulnerable to being tossed out with each new
+administration."*
+
+🟢 **The consequence for a studio is a build-order difference, not a messaging difference:** EMEA
+engagements start from the interpretability/eval constraint, North American ones from per-state
+configurability, APAC ones from jurisdiction routing, LATAM ones from offline and
+connectivity-tolerant delivery.
+
+### 🔴 T`609`-8 — this base's own absence claims need a denominator
+
+The eval tier was recorded as empty for several passes while two permissive, byte-read eval
+repositories sat on this base's **trending** shelves, and `50` of `219` ledger addresses are in that
+same state today (`609-C`). 🔵 **An absence keyed on the sell shelves is not an absence of the base.**
+Carried forward as a standing instrument requirement: an absence claim states which shelves it was
+measured over.
+
+---
+
+
 ## 🆕 `p608` — reads `2026-11-02` — current trends
 
 ### 🔴 The trend that contradicts the other trends

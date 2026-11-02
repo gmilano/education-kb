@@ -4,6 +4,197 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p609` — `2026-11-02` — **🔴 `589-A` RECURS A SIXTH TIME AND IS REPAIRED HERE: THIS REGISTER WAS `2` PASSES BEHIND (`p607`, `p608` NEVER WRITTEN). 🟢 `607-C`'s OPEN ITEM IS ADJUDICATED AND ITS NAMED FIX IS BUILT AND VALIDATED `10 of 10`. 🔴 `609-A`: THE DEBT FIGURE CARRIED FOR TWO PASSES (`104`) DOES NOT REPRODUCE UNDER ANY OF FOUR INSTRUMENT VARIANTS. 🟢 THE EVAL-TIER ABSENCE WAS NEVER TRUE OF THE BASE. ELEVEN REGISTERED (`609-A`…`609-K`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row), with a control on every arm.** Full table in
+`repos/trending.md` under `p609`. Headline: 🟢 the `606-E` existence probe (`14/14` real `200`,
+`4/4` fabricated `401`) and the `raw.githubusercontent.com` grant read (`4/4` controls `404 14 B`)
+both discriminate; 🔴 `curl -sI github.com/{slug}` still certifies nothing (`403` real **and**
+fabricated); 🔴 `gh api repos/{owner}/{repo}` still `403`; 🔴 🆕 **every non-GitHub host is closed on
+both channels**; 🟢 🆕 narrow `in:name,description` queries are the productive discovery channel;
+🔴 the four mandated global legs return the **thirty-ninth** consecutive nil, `20 of 20` tokens held.
+
+### 🔴 `609-A` — the `p436` debt figure is not reproducible, and it was carried for two passes
+
+`605-K` published the debt at `107 of 265`. `607-C` re-published it at `104 of 219` distinct slugs
+(`47.5 %`). Re-measured today against the same committed ledger and the same three sell shelves:
+
+| instrument variant | not on a sell shelf |
+| --- | --: |
+| `3` sell shelves, case-folded, distinct slugs | 🟢 **`50`** |
+| `3` sell shelves, **case-sensitive**, distinct slugs | `56` |
+| `3` sell shelves, case-folded, **all `266` ledger rows** | `60` |
+| **+`compose/patterns.md`** as a fourth sell shelf, case-folded, distinct | `49` |
+| 🔴 **`607-C`'s published figure** | 🔴 **`104`** |
+
+🔴 **No variant reproduces `104`, and the band `49`–`60` is less than two-thirds of it.** Partial
+explanation: `p607` and `p608` promoted `12` + `11` rows to the sell shelves after the figure was
+taken, which accounts for about `23`. That leaves roughly **`30` unexplained**, so the figure was
+overstated when published, not merely stale. 🔵 The denominator is **not** in dispute: this pass
+independently measures `219` distinct slugs, exactly `607-C`'s count. The disagreement is entirely in
+the numerator.
+
+🟡 **A candidate cause this pass could NOT establish.** A slug may appear on a sell-shelf page inside
+a **rejection table** or an **unlicensed list** rather than as a shelved row, which would make any
+substring census over-count coverage and under-count debt. 🔴 The detector built to measure that
+effect flagged `12 of 40` sampled hits, and inspection shows its precision is poor — `autolab/autolab`
+and `bgwdotdev/go-oneroster` are plainly shelved rows that merely carry a red cell elsewhere on the
+line. 🔵 **The hypothesis is therefore neither confirmed nor refuted, and is registered as open rather
+than reported as a result.** Carried as `609-A-open`: *does a substring census distinguish a published
+row from a published refusal?* It bears on `605-K`, `607-C` and this pass's own `50`.
+
+### 🟢 `609-C` — `607-C`'s unadjudicated `LANDED` rows, adjudicated
+
+`607-C` recorded, *"`27` of the `104` debt rows carry the ledger verdict `LANDED`. A row cannot be
+both landed and on no sell shelf … Not adjudicated this pass."* Adjudicated now, at slug level, over
+all `219` distinct slugs — evidence: `evidence/landed-adjudication.2026-11-02-p609.tsv`:
+
+| disposition | slugs |
+| --- | --: |
+| 🟢 `ON-SELL-SHELF` | `169` |
+| 🟡 `TRENDING-ONLY` | `50` |
+| 🟢 **`ON-NO-SHELF`** | 🟢 **`0`** |
+
+🟢 **The adjudication: nothing vanished.** Every address the ledger carries is on a shelf; the `50`
+are on a **trending** shelf, which `gate-promotion-ledger` is explicitly red about counting as a
+promotion. Of the rows whose verdict includes `LANDED`, `28` are on a sell shelf and 🟡 **`15` are
+trending-only** — `122-syf-wcy/physicsos`, `cabbage2000-lab/textbook-writer-skills`,
+`cogitontnu/tutorai`, `dmoshehun-prog/learn-from-materials`, `haozhe-xing/agent_learning`,
+`jhostinaleck/brightspace-mcp`, `kaushikgunasekaren/canvas-grader-mcp`, `kaveheng/genai-in-education`,
+`pengusto/google-classroom-mcp`, `rohanmuppa/brightspace-mcp-server`, `semyonfox/canvas-mcp`,
+`vtanco/google-classroom-mcp`, `wenflow-org/wenflow`, `zenglian990/ai_tutor_release`,
+`zhangl1001/civil-ai`. 🔵 `LANDED` in this ledger means *landed somewhere*, so the contradiction
+`607-C` flagged is a **vocabulary** defect, not lost data.
+
+🔵 **Reproducibility of this measurement.** `ingest/p609-landed-adjudication.sh` run against the
+**committed** tree regenerates `evidence/landed-adjudication.2026-11-02-p609.tsv` exactly. Re-running
+it against the pre-write tree shifts `3` trending-hit *counts* by `+1` each —
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch` — because this pass's own nil table in `agents/trending.md`
+cites them by name. 🟢 **All three dispositions are invariant** (`169`/`50`/`0`), so no published
+figure depends on the ordering of the measurement and the write.
+
+🟢 **And it is the same mechanism as the eval-tier gap** (`609-B`, `agents/top.md`): two permissive,
+byte-read eval repositories sat on the trending shelves for passes while the sell shelves recorded the
+tier as empty. One mechanism, two symptoms, both now named.
+
+### 🔴 `609-L` — `6` slugs carry conflicting verdicts in the committed ledger
+
+Found while reconciling this pass's own slug count (`225`) against `607-C`'s (`219`): the difference
+was **not** a normalisation disagreement but 🔴 **`6` slugs that carry two different verdicts across
+ledger rows** — `LANDED` *and* `MOVED` for each of `haozhe-xing/agent_learning`,
+`kaushikgunasekaren/canvas-grader-mcp`, `kaveheng/genai-in-education`, `mcp-brasil/mcp-brasil`, and
+🔴 for `main/license` and `master/license`, which are not repositories at all (`607-C`'s class).
+🔵 **Registered, not fixed:** choosing between `LANDED` and `MOVED` for a given slug requires the
+history each verdict was written from. 🟡 Also a note on this pass's own instrument — deduplicating on
+`(slug, verdict)` rather than on `slug` silently inflated a denominator by `6`, which is how the
+conflict was found, and is recorded so the next pass reads the right column.
+
+### 🟢 `609-M` — `607-C`'s named fix, built and validated against the known answer
+
+`607-C` concluded the defect *"is in the `{owner}/{repo}` extraction step all three share, and it will
+keep reappearing in each new artifact until that step rejects a non-repository at extraction time
+rather than at promotion time."* Built: `ingest/p609-address-rejector.sh`, two stages — `SHAPE`
+(offline, free) then `EXISTENCE` (the `606-E` probe, only for shape-passers; anything other than
+`200`/`401` returns `INDETERMINATE`, never a pass). Recipe and rule set: `compose/patterns.md`,
+`P609-4`.
+
+🟢 **Validation `10 of 10`:** all `5` non-repositories `607-C` enumerated reject — `4` free at `SHAPE`,
+`alpinevibe/quizpulse` at `EXISTENCE` (`401`) — plus `606-F`'s `github.com/topics/{…}` class at
+`SHAPE`; `3` real controls pass at `200`; `1` fabricated control rejects at `401`.
+
+🟢 **Swept over the whole ledger** (`219` slugs, shape-only): `215` pass, **`4` reject — exactly the
+four shape-detectable slugs already named, and no others**. Evidence:
+`evidence/address-shape-rejector.2026-11-02-p609.tsv`. 🔵 This **bounds** the class rather than
+sampling it: within the committed ledger there is no fifth shape-detectable non-repository.
+
+### 🔴 `609-G` — citation liveness has no working channel in this session
+
+| host | `curl` via the session proxy | the host's page-fetch tool |
+| --- | --- | --- |
+| `neurips.cc` | 🔴 `000` `connect_rejected` | 🔴 `ENOTFOUND` |
+| `icce2026.apsce.net` | 🔴 `000` `connect_rejected` | — |
+| `microsoft.github.io` | 🔴 `000` `connect_rejected` | — |
+
+🔴 **`gate-dead-citation` cannot run against any non-GitHub host from this session.** Four rows
+promoted this pass cite an external venue (NeurIPS 2026 with a poster URL, ICCE 2026, *JEDM*); all are
+marked **repo-declared**, per `gate-restatement`. 🔵 `github.com` and `raw.githubusercontent.com`
+remain open, so grants, branches, existence and sizes are unaffected — the gap is confined to
+*third-party* claims. Carried open.
+
+### 🔴 `609-H` — the region-heading gate's contract is unsatisfiable on an append-only page
+
+`gate-region-headings` requires **exactly one** `## Opportunities by region` block per file.
+`intel/market.md` is append-only and every pass that places opportunities writes one:
+
+| | blocks | gate |
+| --- | --: | --- |
+| at `HEAD` (`p608`, before this pass) | `4` | 🔴 already red — `P383-MULTIPLE-BLOCKS` ×`3` |
+| after `p609` | `5` | 🔴 red — `P383-MULTIPLE-BLOCKS` ×`4` |
+
+🔵 **The count is a function of the number of passes, not of correctness**, so this gate cannot go
+green while the page convention holds — and it was **already red before this pass touched the file**,
+which is why it is registered rather than treated as a regression. 🟡 The gate's one *substantive*
+finding — `P383-MISSING-REGION: Global` — sits inside a **committed historical** pass block. 🔴 This
+pass declines to repair it: supplying a `### Global` subsection for a pass that recorded nothing under
+it would be writing findings into another pass's section. Carried open, with the decision stated:
+**either the gate's predicate becomes per-section, or the contract is wrong about this file.**
+
+### 🟢 `609-E` — the push block carried since `p54` is a session-scope condition, with a remedy
+
+Every education pass from `p54` onward closed with *"push-blocked"* / *"access restriction"*. Measured
+today: `git push` failed exactly as recorded — *"`gmilano/education-kb` is not in this session's
+authorized repository set"* — and 🟢 **succeeded after the repository was added to the session's
+sources**. 🔵 The note was a *session* property with an in-session remedy, carried unexamined for
+dozens of passes. `p609` is the first education pass in that run to commit from the clone it read.
+
+### Dispositions registered this pass
+
+| id | row | verdict |
+| --- | --- | --- |
+| 🔴 `609-I` | `AIM-SCU/GRADE` — README grants **MIT** and links a `LICENSE` that `404`s on both branches; no manifest channel either (`598-A` satisfied) | 🔴 **not promoted — dangling grant, recoverable in one commit.** New class |
+| 🔴 `609-J` | `zty552252kevin-code/holdfast` — custom conjunctive grant, **non-commercial on both arms** | 🔴 rejected — non-commercial boundary |
+| 🔴 `609-D` | `mkhomytsya/MuckeligAgentLMS` — stock **Apache-2.0** on a **`10 KB`** repository claiming a production-ready Kubernetes LMS | 🔴 not promoted — grant real, software absent |
+| 🟡 `609-K` | `Nadia1160/cognitive-student-simulator-tutor` — stock **Apache-2.0**, on-topic, README is Docker boilerplate with a leaked `D:\…` build path | 🟡 not promoted — unassessable on its own documentation |
+| 🔴 `609-F` | the search channel's `license.spdx_id` was **wrong on `2 of 3`** `NOASSERTION` verdicts; both misses were real **MIT** grants whose *copyright line* is non-standard | 🔴 `598-D` confirmed on a third disjoint set |
+| 🔴 `609-D`′ | **size is not family in either direction** — `1,143 B` and `1,298 B` are stock MIT with long copyright lines; `608-B` had killed size from the over-reading side | rule |
+
+### Carried open into `p610`
+
+| gap | state |
+| --- | --- |
+| 🔴 `609-A-open` | does a substring census distinguish a **published row** from a **published refusal**? Bears on `605-K`, `607-C` and this pass's own `50`. The detector built for it measured poor precision and was withdrawn |
+| 🔴 `609-L` | `6` slugs with conflicting ledger verdicts — needs the history each verdict was written from |
+| 🔴 `609-G` | no citation-liveness channel for non-GitHub hosts; `4` venue claims stand as repo-declared |
+| 🔴 `609-H` | `gate-region-headings` structurally red on an append-only page; predicate or contract must change |
+| 🟡 `609-C`-residual | `50` trending-only addresses are the real drain target, now bounded and enumerated |
+| 🔴 `608-D` | the eval repo `wxxxqcy/ai-learning-assistant` still ships **no licence**; 🟢 but the tier it blocked is **no longer empty** (`609-B`) |
+| 🔴 `589-A` | sixth recurrence — this register lagged `p607` and `p608` entirely. 🟢 Repaired here, including the backfill below |
+
+### 🔴 `589-A` backfill — `p607` and `p608` were never registered here
+
+🔴 Both passes wrote their findings to the sell shelves and **not** to this register, so for two passes
+the gap register named nothing that happened. Reconstructed from the committed shelf sections, and
+marked as a backfill rather than as contemporaneous notes — 🟡 `p607` declares `607-A`…`607-I` in its
+own headline and only `A`–`D`, `G`, `H` are recoverable from the sell shelves, so this backfill is
+**partial by construction** and does not invent the identifiers it cannot read:
+
+| id | registered content | state |
+| --- | --- | --- |
+| `608-A` | `curl -sI github.com/{slug}` returns `403` for real **and** fabricated slugs — the run prompt's mandated verifier is **inert** here | 🟢 re-confirmed `p609` |
+| `608-B` | a first-match licence classifier called `Tencent/WeKnora` Apache; it is **MIT with an Apache third-party appendix** — read a grant for **scope**, not family | 🟢 extended by `609-F` |
+| `608-C` | `4` rejections measured on terms: an `MIT` file whose README declares the repo **private**; a custom `34,087 B` "free education license"; an **AGPL-3.0**; one rejected on relevance | closed |
+| `608-D` | `13` enumerated repositories with **no licence file** at any of `4` names on either branch — including the education-agent **eval** framework the base had recorded as missing | 🔴 open; see above |
+| `607-A` | the **thirty-seventh** nil, proven row-by-row; the mandated query shape retrieves this base's own contents | 🔴 open — `39` now, with the mechanism named (`T609-5`) |
+| `607-B` | `NousResearch/hermes-agent` disqualified on **relevance** at `259,581★` — grant first, stars second, relevance decides | closed |
+| `607-C` | backlog debt `104 of 219`; `5` slugs are **not repositories**; `27` `LANDED` rows unadjudicated | 🟢 **adjudicated and bounded this pass** (`609-C`, `609-M`); 🔴 the figure itself refuted (`609-A`) |
+| `607-D` | adjacent prose defeats template identity **at either end of the file**; the API returned `NOASSERTION` for two real grants | 🟢 confirmed again (`609-F`) |
+| `607-G` | on this base's headline rows, the public web's figures lag this base's own measurements | carried |
+| `607-H` | a slug this base **guessed** (`dodona-edu/judge-pythia`) caught by two independent channels before publication | closed — 🟢 and now enforced by `609-M` at extraction |
+
+---
+
+
 ## 🆕 `p606` — `2026-11-02` — **🟢 `605-I` IS CLOSED AT `0` PROMOTED ROWS AND THE CONTROL IT PROPOSED IS **REJECTED WITH A PRECISION FIGURE** (`1 of 18`). 🔴 BUT THE PASS'S LOAD-BEARING RESULT IS AGAIN A **RETRACTION**: THIS PASS'S OWN README HARVESTER CORRUPTED ITS DATA THROUGH CONCURRENCY AND MANUFACTURED A FALSE FINDING — **THIRD CONSECUTIVE PASS WHOSE CENTRAL ERROR WAS IN INSTRUMENT CODE, NOT THE CORPUS.** 🟢 `606-E`: A WORKING CHEAP EXISTENCE VERIFIER, WHICH THIS BASE HAS LACKED SINCE `p590`. 🟢 `605-C` HALF-FIXED, HALF-REFRAMED: `fork:true` KILLED THE `422`s, BUT BATCHING MAKES THE TRANSFER CLASS **SILENT**. 🔴 `606-F`: `4` SHELF "ADDRESSES" ARE NOT REPOSITORIES. TWELVE REGISTERED (`606-A`…`606-K`).**
 
 🔵 **Channel table, run first (`569-B`'s standing row), with a fabricated control on every arm.**
