@@ -1,0 +1,20 @@
+address	stars_rounded_webfetch	archived	branch_measured	grant_path	family_library	grant_bytes	commercial	note
+adlnet/xAPI-Spec	956	no	master	LICENSE	Apache-2.0	11525	ALLOWED	the xAPI specification itself
+adlnet/ADL_LRS	334	no	master	LICENSE	Apache-2.0	11357	ALLOWED	reference Learning Record Store (Python)
+adlnet/xAPIWrapper	224	no	master	LICENSE	Apache-2.0	10273	ALLOWED	the JS client most xAPI integrations start from
+adlnet/SCORM-to-xAPI-Wrapper	99	YES	master	LADDER-EXHAUSTED-7-NAMES	none on bytes	0	n/a	archived AND ungranted on 7 probed names
+adlnet/lrs-conformance-test-suite	78	no	master	LICENSE	MIT	1046	ALLOWED	the only MIT row in this tier; conformance harness
+adlnet/xapi-profiles	60	no	master	LICENSE	Apache-2.0	11357	ALLOWED	profile spec + tooling
+adlnet/CATAPULT	59	no	main	LICENSE	Apache-2.0	11358	ALLOWED	cmi5 reference suite; only row on main
+adlnet/xapi-authored-profiles	45	YES	-	not probed	-	-	n/a	archived
+adlnet/xAPI-SCORM-Profile	42	YES	-	not probed	-	-	n/a	archived
+adlnet/xapi-launch	41	YES	-	not probed	-	-	n/a	archived
+adlnet/Unity-xAPI-Wrapper	32	YES	-	not probed	-	-	n/a	archived; the only game-engine binding in the tier
+adlnet/xapi-statement-viewer	28	YES	-	not probed	-	-	n/a	archived
+adlnet/xAPI-Workshop	23	YES	-	not probed	-	-	n/a	archived
+adlnet/xapi-jqm	21	YES	-	not probed	-	-	n/a	archived
+adlnet/xapi-ontology	18	no	master	LICENSE	Apache-2.0	11525	ALLOWED	RDF/OWL ontology for xAPI
+adlnet/MasterObjectModel	12	no	master	LICENSE	Apache-2.0	11525	ALLOWED	TLA data model
+adlnet/xAPI-Java	n/a	n/a	UNREACHABLE	-	-	-	n/a	NAMED BY SECONDARY SOURCE (Wikipedia xAPI table); git ls-remote does not resolve it. A 404 is not a finding
+OpenOLAT/OpenOLAT	n/a (not on adlnet)	no	master	LICENSE	Apache-2.0	10982	ALLOWED	full LMS with QTI 2.1 + SCORM 1.2 + LTI 1.3 under a permissive grant
+RusticiSoftware/TinCanPHP	n/a	no	master	LICENSE	Apache-2.0	11358	ALLOWED	PHP xAPI client, vendor-published not ADL

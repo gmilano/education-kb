@@ -1,0 +1,5 @@
+surface	population_reported	rows_read	rows_at_or_above_20_star_bar	already_on_shelf	new_to_this_base
+github.com/topics/ai-tutor (default sort, stars)	849 public repos	20	20	20	0
+github.com/topics/education-ai (default sort, stars)	70 public repos	20	3 (466, 63, 21)	3	0
+github.com/topics/ai-tutor?o=desc&s=updated (freshness)	849 public repos	20	3 (225, 104, 86)	3	0
+POOLED	—	60	23 distinct (22 addresses, 1 dup)	22	0

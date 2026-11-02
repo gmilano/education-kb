@@ -3,6 +3,122 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — `2026-11-02` — patterns wired from rows byte-read today, plus **one control that belongs in every engagement**
+
+### 🟢 `P615-0` — the grant gate, as a build step rather than a reminder — **prerequisite to all four patterns below**
+
+🔴 This base published a `NonCommercial` dataset as shippable last pass (`615-A`) because a grader
+written inside that pass answered `CC-?` while the shared, hardened, tested classifier in this
+repository answers `CC-BY-NC-4.0`. 🟢 So the first recipe is a **control**, not a solution.
+
+```bash
+# in any studio repo that vendors third-party education assets
+. compose/code/lib/license_family.sh          # never inline a licence classifier (P171, pase 77)
+
+br=$(git ls-remote --symref "https://github.com/$REPO" HEAD \
+      | awk '/^ref:/{sub("refs/heads/","",$2);print $2;exit}')   # MEASURE the branch (p509/p517)
+curl -sS -o grant.txt "https://raw.githubusercontent.com/$REPO/$br/LICENSE"
+
+family_of "$(cat grant.txt)"                   # -> CC-BY-NC-4.0, not "CC-?"
+if commercial_use_ok "$(cat grant.txt)"; then  # EXIT CODE, not stdout -- stdout is empty for MIT too
+  echo "shippable"; else echo "BLOCKED: $(family_of "$(cat grant.txt)")"; exit 1; fi
+```
+
+🟢 **Wire it as a CI gate on the dependency manifest, failing the build on non-zero.** 🔴 The two
+ways to get this wrong are both measured in this base: reading `commercial_use_ok` from stdout
+(this pass's own first error, `615-B`), and assuming `main` (`8 of 12` addresses probed today were
+`master`). 🔵 Cost: under a day. 🔵 It is the cheapest item in this file and the only one whose
+absence has already produced a wrong published verdict.
+
+### 🟢 `P615-1` — Permissive white-label LMS with provable standards conformance — **the pattern the sector was told did not exist**
+
+🔵 **Who it is for:** any client that wants its own branded platform delivered and hosted by the
+studio — which `GPL`/`AGPL` incumbents make awkward and Elastic License `2.0` forbids outright.
+
+| layer | component | grant (byte-read `2026-11-02`) |
+| --- | --- | --- |
+| platform | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` `10,982 B` `master` |
+| analytics store | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 `Apache-2.0` `11,357 B` |
+| client instrumentation | [`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) | 🟢 `Apache-2.0` `10,273 B` |
+| 🟢 **conformance proof** | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | 🟢 `MIT` `1,046 B` |
+| sector vocabulary | [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | 🟢 `Apache-2.0` `11,357 B` |
+
+🟢 **Wiring.** `OpenOLAT` emits `xAPI` via its `LTI 1.3` / `SCORM 1.2` surfaces into `ADL_LRS`;
+`xAPIWrapper` instruments any custom activity; `xapi-profiles` pins the client's vocabulary; then
+**`lrs-conformance-test-suite` is run in CI as an acceptance test**. 🟢 That last row is what makes
+this different from every prior LMS pattern here: interoperability becomes a **passing test suite in
+the handover**, not a claim in a slide. 🔵 `6`–`9` weeks. 🟢 Every grant permissive, so white-label
+and hosted delivery are both clean.
+🔴 **Stated risk:** `OpenOLAT`'s `QTI 2.1`/`SCORM`/`LTI` support is **vendor-stated**; this pass
+verified the grant on bytes, not the feature matrix. Verify against a client's real content early.
+
+### 🔴 `P615-2` — Legacy SCORM migration, costed honestly as a **build**
+
+🔵 **Who it is for:** any institution with a decade of `SCORM` courseware moving to analytics.
+
+🔴 **The canonical path is gone.** [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper)
+(`99★`) is **archived** and has **no grant file at any of `7` probed names** at `master`. 🔴 So it
+cannot be adopted *or* legally vendored, and `adlnet/xAPI-SCORM-Profile` (`42★`), the profile it
+implements, is archived too.
+
+| layer | component | status |
+| --- | --- | --- |
+| profile semantics | `adlnet/xAPI-SCORM-Profile` | 🔴 archived — read as **specification**, not dependency |
+| cmi5 path forward | [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | 🟢 `Apache-2.0` `11,358 B`, 🔵 `main` — **live** |
+| destination | `adlnet/ADL_LRS` + `lrs-conformance-test-suite` | 🟢 live, permissive |
+| server-side bridge | [`RusticiSoftware/TinCanPHP`](https://github.com/RusticiSoftware/TinCanPHP) | 🟢 `Apache-2.0` `11,358 B` — independent implementation |
+
+🟢 **The honest recipe: do not migrate `SCORM`→`xAPI` through the dead bridge — target `cmi5` via the
+live `CATAPULT` suite**, using the archived profile as a reference document and `TinCanPHP` for
+server-side emission. 🔵 `8`–`12` weeks, of which the bridge is a **build line, not an integration
+line**. 🟢 Naming that in a proposal is worth more than a lower estimate that discovers it in week
+three.
+
+### 🟡 `P615-3` — Adaptive learning in APAC, with the prerequisite layer **scoped as work**
+
+🔵 **Who it is for:** APAC K-12 adaptive-learning briefs.
+
+🔴 **The shortcut is closed.** [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)
+(`6,143★`) — `1,644` knowledge points, `2,403` prerequisite edges, `6,723` problems, curriculum-aligned
+— is **`CC-BY-NC-4.0`** (`615-A`). 🟢 Use it to *validate* a graph's shape and to argue the design;
+🔴 do **not** ship it, and do not plan the engagement as if the graph were free.
+
+| layer | component | grant | role |
+| --- | --- | --- | --- |
+| mastery model | `OATutor` (BKT, shelf row) | 🟢 `MIT` | the estimator |
+| scheduling | `613-D` FSRS/Anki tier; [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 permissive (shelf) | spaced review |
+| 🔴 prerequisite graph | — | — | 🔴 **BUILD**: author with client curriculum staff, or licence `cn-math-taxonomy` separately from its author |
+| delivery | `OpenOLAT` + `ADL_LRS` | 🟢 `Apache-2.0` | platform + telemetry |
+| 🟢 gate | `P615-0` | — | run on **every** vendored asset before it enters the manifest |
+
+🔵 `12`–`16` weeks, the graph authoring dominating. 🟢 The pattern's value is that the expensive item
+is visible in week one instead of at legal review.
+
+### 🟢 `P615-4` — LATAM governance retrofit, sized by the region's own measured gap
+
+🔵 **Who it is for:** LATAM universities already running AI without a framework — `87 %` use vs
+`26 %` with any formal framework (UNESCO IESALC, `200` HEIs / `19` countries); Brazil `53 %` vs `22 %`
+at school level (Cetic.br `2026`).
+
+| layer | component | grant | role |
+| --- | --- | --- | --- |
+| evidence spine | `adlnet/ADL_LRS` + `xAPIWrapper` | 🟢 `Apache-2.0` | the audit trail a framework needs to be checkable |
+| vocabulary | `adlnet/xapi-profiles` | 🟢 `Apache-2.0` | encode the institution's own policy terms |
+| conformance | `adlnet/lrs-conformance-test-suite` | 🟢 `MIT` | prove the trail is standards-valid |
+| platform | `OpenOLAT` | 🟢 `Apache-2.0` | permissive, so the toolkit is portable across institutions |
+| 🟢 licence control | `P615-0` | — | and it is **the deliverable's own compliance story**, not just hygiene |
+
+🟢 **Wiring and why it is portable.** `716` AI regulatory instruments across `23` countries, >`80 %`
+initiated since `2023`, and regional commentary pushing **interoperability** over one regional law —
+so build a **policy-as-configuration** toolkit: `xapi-profiles` carries the institution's definitions
+and risk categories, the LRS carries the evidence, the conformance suite proves it. 🔵 `6`–`10` weeks
+per institution, with the second deployment materially cheaper because only the profile changes.
+🟢 UNESCO's LAC Observatory (launched April `2026`, ECLAC Santiago) and its Tecnológico de Monterrey
+partnership are the natural reference channel.
+🔴 **Declared gap:** no `MIT`/`Apache` LATAM-origin education repository surfaced this pass, so every
+component above is non-regional. 🔵 The region is a demand market in this base's measurements, not a
+supply one.
+
 ## 🆕 `p614` — `2026-11-02` — patterns, each wired from rows this base holds and byte-read today
 
 🔵 Every repository named below is on a sell shelf with its grant byte-read `2026-11-02` at the real

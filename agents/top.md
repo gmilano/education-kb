@@ -3,6 +3,163 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — reads `2026-11-02`, commit `2026-11-02` — **🔴 `614-G` DECLARED ITS OWN LIMIT IRREDUCIBLE AND IT WAS NOT A LIMIT: THIS BASE'S OWN HARDENED CLASSIFIER RESOLVES ALL `3` CC PAYLOADS TO THE EXACT INSTRUMENT **WITH VERSION**, AND THE COMMERCIAL VERDICT ON THE SECTOR'S SCARCEST INPUT **INVERTS** — `xiaoyang111222/cn-math-taxonomy` (`6,143★`), PUBLISHED LAST PASS AS 🟢 "FIT FOR PURPOSE", IS **`CC-BY-NC-4.0`**: `NonCommercial`. 🔴 THIS IS `P312` RE-COMMITTED IN PROSE, LONG AFTER IT WAS REGISTERED AND FIXED IN CODE. 🟢 AND THE MIRROR-IMAGE ERROR TOO: THE TWO ROWS `614-G` BLOCKED ARE COMMERCIALLY **ALLOWED**. SEVEN REGISTERED (`615-A`…`615-G`).**
+
+### 🔴 `615-A` — read this first: the library answers the question `614-G` said could not be answered, and it answers it the other way
+
+🔵 `614-G` published this, verbatim: *"the grader returns `CC-?` without a version on all three — it
+identifies the family, not the specific instrument. For the data row that is sufficient to shelve and
+insufficient to ship; the version must be read before any client delivery."* 🟢 That was registered
+as an honest stated limit, which is why it was worth spending this pass's first leg on.
+
+🔴 **It is not a limit. `compose/code/lib/license_family.sh` — this base's own shared, hardened,
+`12/12`-tested classifier — returns the exact instrument with its version on all three payloads, in
+one call, offline, from bytes this base had already downloaded.**
+
+| address | grant bytes | `p614` cell | `family_of` (library) | `commercial_use_ok` | `p614` verdict | `p615` verdict |
+| --- | --: | --- | --- | --- | --- | --- |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `19,347 B` | 🟡 `CC` family | 🔴 **`CC-BY-NC-4.0`** | 🔴 **`DENIED` (exit `1`)** | 🟢 *"Fit for purpose"* | 🔴 **COMMERCIALLY BARRED** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `1,230 B` | 🔴 `CC-BY-SA-4.0` | 🟢 `CC-BY-SA-4.0` | 🟢 `ALLOWED` (exit `0`) | 🔴 *"Trap"*, unqualified | 🟡 **NARROWED** — commercial use permitted; share-alike is the only bar |
+| [`scollovati/awesome-lti`](https://github.com/scollovati/awesome-lti) | `20,131 B` | 🟡 `CC` family | 🟢 `CC-BY-SA-4.0` | 🟢 `ALLOWED` (exit `0`) | 🟡 *"not vendorable"* | 🟡 **NARROWED** — same; share-alike, not commerciality |
+| [`YujxZJCN/teaching-skills`](https://github.com/YujxZJCN/teaching-skills) 🔵 *control* | `1,067 B` | — | 🟢 `MIT` | 🟢 `ALLOWED` | — | 🟢 control passes |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) 🔵 *control* | `11,408 B` | — | 🟢 `Apache-2.0` | 🟢 `ALLOWED` | — | 🟢 control passes |
+
+🟢 **The two controls are why the gate's `DENIED` is a reading and not an artefact.** A gate that
+returns `DENIED` on everything proves nothing; `MIT` and `Apache-2.0` return `ALLOWED` through the
+same call in the same shell. 🔴 Only the `NonCommercial` row is refused.
+
+🟢 **The bytes are the same bytes `p614` held.** `19,347 B` and `20,131 B` are `614-G`'s own recorded
+sizes, reproduced to the byte (`sha256` prefixes `41003d4a74749c02` and `7abe19ec9bb73b36`). 🔴 So
+this is not a better read of a different file. It is the **same file, correctly classified** — the
+title block of the first payload reads `Attribution-NonCommercial 4.0 International` on line `1`,
+with `NonCommercial` appearing `9` times and `ShareAlike` `0` times.
+`evidence/cc-instrument-resolution.2026-11-02-p615.tsv`.
+
+### 🔴 `615-B` — what it costs, and why this is the expensive direction
+
+🔵 `614-G`'s own prose names the stake better than this pass could: a K-12 prerequisite graph is
+*"the scarcest input an adaptive-learning engagement has"* — `1,644` knowledge points, `2,403`
+prerequisite edges, `6,723` problems, aligned to China's national curriculum. 🟢 That assessment of
+**value** stands and is not disputed here.
+
+🔴 **What is disputed is that a studio may ship it. `CC-BY-NC-4.0` forbids commercial use, and a
+paid client engagement is commercial use.** The row was published green, under the heading *"fit for
+purpose"*, on the single axis that decides whether it can be delivered at all.
+
+🔴 **And `P312` is this defect, already registered, already fixed.** `license_family.sh` carries the
+note at pase `101`: the gate *"razona «familia OSI identificada → permite uso comercial POR
+DEFINICIÓN»"* and the CC branch sits behind it, so **`CC-BY-NC-4.0`, a family whose name says
+NonCommercial, returned commercial use PERMITTED**. The library's own comment calls this *"la
+dirección peligrosa… INVENTA permiso sobre un texto que lo prohíbe en su nombre — cuesta el
+entregable."* 🟢 The code fix landed. 🔴 `p614` reproduced the defect **in prose** by not running the
+code, which is exactly the failure mode pase `77` wrote this directory to prevent: *"una regla que
+hay que recordar no es un control."*
+
+🟢 **Operative rule, and it is a one-liner, not a reminder.** No CC verdict is published from a
+grader written in the pass that publishes it. `. compose/code/lib/license_family.sh`, then
+`family_of` **and** `commercial_use_ok` — and `commercial_use_ok` is read from its **exit status**.
+
+🔴 **This pass's own first measurement got that wrong and is recorded, not quietly fixed.** The
+first run read `commercial_use_ok` off **stdout**, which is empty — and it is empty for `MIT` and
+`Apache-2.0` too, so the misreading looked like a uniform "no answer" rather than an error. The
+function signals by **exit code**. 🟢 Re-measured before anything was written; the table above is the
+re-measurement. 🔵 Recorded because a successor reading stdout will reach the same wrong conclusion.
+
+### 🟡 `615-C` — a grant-file sub-class distinct from `614-F`: a **deed summary**, not the legal code
+
+🔵 `614-F` found a `121 B` `LICENSE.md` that was a cross-repository *pointer* and defeated this
+base's size floor from below. 🟢 This is a different object at a size the floor waves through.
+
+`GarethManning/education-agent-skills`' grant is `1,230 B` and its last two lines say so outright:
+*"This is a human-readable notice. The full legal terms are available at
+`https://creativecommons.org/licenses/by-sa/4.0/legalcode`."*
+
+| property | this file | the full `CC-BY-SA-4.0` legal code |
+| --- | --: | --: |
+| bytes | `1,230 B` | `20,131 B` (measured on `awesome-lti`, same instrument) |
+| operative terms present | 🔴 no — a deed summary | 🟢 yes |
+| classifier answer | 🟢 `CC-BY-SA-4.0` (correct) | 🟢 `CC-BY-SA-4.0` |
+
+🟢 **The classifier is right and the byte count is still misleading.** `family_of` reads the title
+block and gets the instrument right from a summary. 🔴 But any heuristic that reads *size* as
+*completeness* — and this base has one — scores a `1,230 B` summary as a thin-but-real grant when it
+is a **reference to terms held elsewhere**. 🟢 For shipping, the legalcode at the URL is the
+instrument, not this file. 🔵 Also worth keeping: the summary states *"even commercially"* **twice**,
+which is the textual basis for narrowing `614-G`'s verdict rather than a judgement call.
+
+### 🔴 `615-D` — no exact star cell is measurable on this pass's egress, and every figure below is labelled rounded
+
+🔵 This base has `614` passes of exact star cells (`54,089★`, `36,751★`). 🔴 This pass cannot produce
+one, and will not synthesise one.
+
+| channel | probe | result |
+| --- | --- | --- |
+| `api.github.com` (curl, unauth) | `/repos/HKUDS/DeepTutor` | 🔴 `HTTP 403` |
+| `gh api` (proxy-configured CLI) | same | 🔴 `HTTP 403` — not in session's authorized set |
+| `github.com` HTML (curl) | `/HKUDS/DeepTutor` | 🔴 `HTTP 403`, `378 B` |
+| `github.com` HTML (WebFetch) | same | 🟡 `200` — but shows `54.1k`; page states no exact figure |
+| 🟢 `raw.githubusercontent.com` (curl) | `…/main/LICENSE` | 🟢 `200`, `11,408 B` — **byte-exact** |
+| 🟢 `git ls-remote --symref` | `HEAD`, `12` addresses | 🟢 answers; `8 of 12` resolved to `master` |
+
+🟢 **This reproduces `p539`'s channel note exactly** (*"`api.github.com` is HTTP 403 to this
+session's egress… a successor should not plan on it"*). 🔴 It does **not** reproduce `p614`, which
+compared radar figures *"with the API"* — that egress state is not available here. 🔵 A third-party
+API mirror was attempted once, **denied by the sandbox classifier**, and not worked around; recorded
+in `evidence/channel-availability.2026-11-02-p615.tsv`.
+
+🟢 **So the division of labour for this pass is explicit:** grants are **byte-exact** and carry the
+findings; star figures are **rounded display values** and carry only ordering.
+
+### 🟢 `615-E` — `0` new agent rows promoted, and for the first time that nil is **measured against a channel independent of WebSearch**
+
+🔵 `p614` recorded the forty-fourth consecutive global-leg nil on *new* names and left the obvious
+question open: is this base **blind** or is the sector's head **exhausted**? 🟢 A search leg cannot
+answer that about itself. An enumeration can.
+
+🟢 GitHub **topic pages** enumerate the sector directly, independent of any listicle or radar:
+`topics/ai-tutor` states **`849` public repositories**, `topics/education-ai` states **`70`**.
+
+| surface | stated population | rows read | at/above the `≥ 20★` bar | already shelved | 🔴 new |
+| --- | --: | --: | --: | --: | --: |
+| `topics/ai-tutor` (by stars) | `849` | `20` | `20` | `20` | `0` |
+| `topics/education-ai` (by stars) | `70` | `20` | `3` | `3` | `0` |
+| `topics/ai-tutor` (re-sorted by freshness) | `849` | `20` | `3` | `3` | `0` |
+| **pooled** | — | `60` | `22` distinct | 🟢 **`22`** | 🔴 **`0`** |
+
+🔴 **`22 of 22` already held.** Differenced by fixed-string match over every `.md` and `.tsv` in this
+repository — `Selleo/mentingo` alone appears `1,293` times, `zijinz456/OpenTutor` `954`. 🟢 **The nil
+streak is saturation of the head, not channel blindness.** That is a question this base has carried
+for `44` passes, and it is now answered with a denominator.
+
+🟡 **And the tail is real but sub-bar.** Re-sorting the same `849` addresses by freshness returns
+`17 of 20` below `20★` — nine at `0★`. 🔵 The sector has continuous new supply; it enters at a size
+this base's bar excludes by design. 🟢 Recorded so the bar is a **choice** a successor can revisit,
+not an invisible filter. `evidence/topic-enumeration-difference.2026-11-02-p615.tsv`.
+
+### 🟡 `615-F` — measured, not promoted, so the next pass does not re-spend the leg
+
+| address | rounded ★ | disposition |
+| --- | --: | --- |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `40k+` | 🔵 **not sector supply** — an AI curriculum, the class `613` registered for `microsoft/ai-agents-for-beginners`. Recorded so the star count is not mistaken for an education finding |
+| [`mahseema/aibooks`](https://github.com/mahseema/aibooks) | `95` | 🔵 an **index** (book list), not supply |
+| [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | n/a | 🔵 an index, and not sector-specific |
+| `adlnet/xAPI-Java` | n/a | 🔴 **`UNREACHABLE`** — `git ls-remote` does not resolve it. Named by a secondary source (Wikipedia's xAPI library table). 🟢 A `404` is not a finding, and the secondary channel was wrong again |
+
+### 🔴 `615-G` — stated limits of this pass, in full
+
+🔴 `commercial_use_ok` was read off stdout before it was read off the exit code — corrected within
+the pass, recorded in `615-B`.
+🔴 No exact star cell; no `archived` flag, no `pushed_at` and no `license.spdx_id` from the platform,
+because the metadata channel is `403`. 🔵 **So this pass makes no platform-vs-bytes agreement claim
+at all** — `p612`/`p613`/`p614`'s running `110 of 110` tally is **not extended here**, because the
+left-hand side of the comparison was unavailable. A successor must not read this pass's silence as a
+tally of zero.
+🔴 The `CC-BY-NC-4.0` instrument is resolved to version `4.0`; the **jurisdiction port** is not read,
+and `CC` `4.0` is unported by design, so this is stated as sufficient rather than verified.
+🟡 `topics/` enumeration read only the first `20` of each surface — `60` of `919` stated addresses,
+`6.5 %`. The saturation claim is therefore about the **head**, which is what it says, and not about
+the population.
+
 ## 🆕 `p614` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE SECTOR'S NEW PERMISSIVE AGENT SUPPLY HAS CHANGED SHAPE: IT IS NO LONGER APPLICATIONS BUT **SKILL PACKAGES FOR SOMEBODY ELSE'S CODING AGENT** — `4` NEW THIS PASS AT `20`–`45★`, EVERY ONE `MIT` ON BYTES, JOINING THE `36,751★` ROW THIS SHELF ALREADY HELD, AND `613-E`'s `CC-BY-SA` SPECIMEN WAS THE SAME CLASS. 🔴 THE ASSET IS PROMPT TEXT, SO THE LICENCE QUESTION MOVES FROM CODE TO COPY. 🟢 `18 of 18` GRANTS BYTE-READ AGREE WITH THE PLATFORM FIELD (`110 of 110` POOLED WITH `612`/`613`). 🔴 FORTY-FOURTH GLOBAL NIL ON *NEW* NAMES — BOTH NAMES THE LEGS RETURNED WERE ALREADY ON THIS SHELF. NINE REGISTERED (`614-A`…`614-I`).**
 
 ### 🟢 `614-I` — read this first: the supply shifted vehicle, and this base nearly missed it by looking for apps

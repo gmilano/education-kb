@@ -3,6 +3,46 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — `2026-11-02` — **the forty-fifth consecutive global-leg nil on *new names*, and the first one with a denominator**
+
+🟢 **The nil is unchanged. What changed is that it is now a measurement rather than an absence.**
+`p614` asked whether `44` nils meant this base was blind or the sector's head was exhausted, and a
+search leg cannot answer that about itself.
+
+🟢 **This pass used an enumeration channel independent of WebSearch: GitHub topic pages.**
+`topics/ai-tutor` states `849` public repositories; `topics/education-ai` states `70`.
+
+| surface | stated population | rows read | at/above `≥ 20★` | already shelved | 🔴 new |
+| --- | --: | --: | --: | --: | --: |
+| `topics/ai-tutor` (by stars) | `849` | `20` | `20` | `20` | `0` |
+| `topics/education-ai` (by stars) | `70` | `20` | `3` | `3` | `0` |
+| `topics/ai-tutor` (by freshness) | `849` | `20` | `3` | `3` | `0` |
+| **pooled** | — | `60` | `22` distinct | 🟢 `22` | 🔴 `0` |
+
+🟢 **`22 of 22` already held** — fixed-string differenced against every `.md` and `.tsv` here.
+🔵 The heaviest-held were `Selleo/mentingo` (`1,293` mentions), `zijinz456/OpenTutor` (`954`),
+`ankimcp/anki-mcp-server` (`891`), `ArnaudGuiovanna/tutor-mcp` (`840`).
+
+🟡 **The tail is real and enters below the bar.** The freshness re-sort returned `17 of 20` under
+`20★`, nine of them at `0★` (`rever273/adaptive-english-lab`, `graffegiraffe/TOEFLY`,
+`vieanderes/understory`, `Jasame/Flow`, `dlealvilla/wildmind-ai-for-education`,
+`SherlockMF/lomi-english-learning`, `WoChiNingMeng12138/professor-skill`,
+`aitutor5566-maker/STUDYAI`, `Alaa-1983/Code-Mentor-AI`). 🟢 So the sector's supply is *continuous*;
+this base's `≥ 20★` bar excludes it by design. 🔵 Recorded so the bar stays a visible choice.
+
+🔴 **What this pass could not measure, stated plainly.** `api.github.com` and `github.com` HTML are
+`HTTP 403` to this egress, so there is **no exact star cell in this section** — every figure above is
+a rounded WebFetch display value and carries ordering only. `raw.githubusercontent.com` and
+`git ls-remote --symref` answer, which is why the **grant** findings this week are byte-exact and the
+star findings are not. `evidence/channel-availability.2026-11-02-p615.tsv`.
+
+🔴 **And the secondary channel was wrong again, in a new way.** Last week it was star counts; this
+week it was an **address**. Wikipedia's xAPI library table names `adlnet/xAPI-Java`; `git ls-remote`
+does not resolve it. 🟢 Standing rule extended: a secondary source's *repository name* is a search
+hint, exactly like its star count. Verify the address, not just the figure.
+
+---
+
 ## 🆕 `p614` — `2026-11-02` — **the forty-fourth consecutive global-leg nil on *new names*, and the first pass where the nil is the wrong question**
 
 🔵 The run prompt mandates four global legs and four regional legs. 🟢 All eight were run; leg-by-leg

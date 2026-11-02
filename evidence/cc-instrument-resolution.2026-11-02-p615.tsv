@@ -1,0 +1,6 @@
+address	bytes	sha256_16	title_block_line1	noncommercial_hits	sharealike_hits	noderivatives_hits	library_family_of	commercial_use_ok_exitcode	commercial_verdict	p614_published_verdict	p615_status
+xiaoyang111222/cn-math-taxonomy	19347	41003d4a74749c02	Attribution-NonCommercial 4.0 International	9	0	0	CC-BY-NC-4.0	1	DENIED	FIT FOR PURPOSE (green)	FLIPPED — commercially barred
+GarethManning/education-agent-skills	1230	f952182df4eb7dd4	Creative Commons Attribution-ShareAlike 4.0 International	0	3	0	CC-BY-SA-4.0	0	ALLOWED	TRAP, unqualified (red)	NARROWED — commercial OK, share-alike is the only bar
+scollovati/awesome-lti	20131	7abe19ec9bb73b36	Attribution-ShareAlike 4.0 International	0	5	0	CC-BY-SA-4.0	0	ALLOWED	not vendorable (amber)	NARROWED — same; share-alike only
+YujxZJCN/teaching-skills	1067	CONTROL-MIT	(MIT permission grant)	0	0	0	MIT	0	ALLOWED	n/a	CONTROL — gate must say ALLOWED
+HKUDS/DeepTutor	11408	CONTROL-APACHE	Apache License Version 2.0	0	0	0	Apache-2.0	0	ALLOWED	n/a	CONTROL — gate must say ALLOWED

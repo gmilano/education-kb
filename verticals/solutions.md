@@ -3,6 +3,60 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THIS BASE'S STANDING POSITION THAT THE EDUCATION VERTICAL'S INCUMBENTS ARE COPYLEFT IS **REFUTED ON BYTES**: `OpenOLAT` IS `Apache-2.0` (`10,982 B`, byte-read today) AND SHIPS `QTI 2.1` + `SCORM 1.2` + `LTI 1.3` IN THE BOX. 🔴 AND `614-G`'s GREEN DATA ROW IS `CC-BY-NC-4.0` — THE VERTICAL'S SCARCEST ASSET IS COMMERCIALLY BARRED.**
+
+### 🟢 `615-F` — a permissive full LMS exists, and three passes' legs have been restating the opposite
+
+🔴 This pass's leg `3` (`open source platform education ERP CRM MIT Apache`) returned, in its own
+words, that no education-specific ERP under `MIT`/`Apache` was found, offering `OpenEduCat`
+(`LGPL-3.0`), `ERPNext` (`GPL-3.0`), Apache OFBiz and Krayin (both generic). 🟢 That matches what
+this base has recorded for several passes.
+
+🔴 **It is wrong, and the counterexample was already on this shelf under `5,005` mentions.**
+
+| platform | grant (byte-read `2026-11-02`) | bytes | branch | standards in the box | why it matters |
+| --- | --- | --: | --- | --- | --- |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | `10,982 B` | `master` | 🟢 `QTI 2.1`, `SCORM 1.2`, `LTI 1.3` | 🟢 A **complete LMS under a permissive grant**. Forkable, white-labellable, deliverable as a managed service — none of which `Moodle` (`GPL-3.0`), `Open edX` (`AGPL-3.0`), `ERPNext` (`GPL-3.0`) or `OpenEduCat` (`LGPL-3.0`) permit on the same terms |
+| [`RusticiSoftware/TinCanPHP`](https://github.com/RusticiSoftware/TinCanPHP) | 🟢 `Apache-2.0` | `11,358 B` | `master` | xAPI client (PHP) | 🔵 Vendor-published rather than ADL — a second, independent permissive implementation of the same standard |
+
+🟢 **`commercial_use_ok` → `ALLOWED` on both**, via `compose/code/lib/license_family.sh`.
+🔴 **Correction to the standing position, stated precisely:** the vertical's *most-adopted*
+incumbents are copyleft — that part holds. The claim that *no* permissive full-LMS option exists
+does not. `OpenOLAT` is the permissive option, and a brief that hinges on hosted delivery or
+white-labelling should start there rather than at a `Moodle` fork.
+
+### 🔴 `615-A` — the vertical's scarcest input is `NonCommercial`, and this base published it green
+
+🔵 `614-G` shelved a K-12 curriculum **knowledge graph** — `1,644` knowledge points, `2,403`
+prerequisite edges, `6,723` problems, aligned to China's national curriculum — and called it
+🟢 *"fit for purpose"*, correctly noting it is *"the scarcest input an adaptive-learning engagement
+has"*.
+
+| address | bytes | instrument (library-resolved) | commercial | status |
+| --- | --: | --- | --- | --- |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `19,347 B` | 🔴 **`CC-BY-NC-4.0`** | 🔴 `DENIED` (exit `1`) | 🔴 **verdict inverted** |
+
+🔴 **`NonCommercial` appears `9` times in the payload; `ShareAlike` `0`.** A paid client engagement is
+commercial use. 🟢 The asset's **value** assessment stands untouched — a prerequisite graph is
+genuinely the scarce input. 🔴 Its **shippability** does not: it cannot go into a delivered system.
+🟢 The honest consequence for the vertical: an adaptive-learning engagement in APAC must either
+license this graph separately from its author, or **build the prerequisite layer**, and that is a
+scoped work item rather than a free dependency. Full working in `agents/top.md` `615-A`/`615-B`.
+
+### 🟡 Standing vertical table — grant axis, unchanged this pass and restated because it is the axis that decides delivery
+
+| platform | grant | hosted-delivery by a studio |
+| --- | --- | --- |
+| 🟢 `OpenOLAT` | `Apache-2.0` | 🟢 permitted outright |
+| 🟡 `Moodle` | `GPL-3.0` | 🟡 permitted; modifications must be published |
+| 🟡 `Open edX` | `AGPL-3.0` | 🔴 network-use clause reaches the hosted service itself |
+| 🟡 `OpenEduCat` | `LGPL-3.0` | 🟡 permitted; linking boundary matters |
+| 🟡 `ERPNext` / Frappe Education | `GPL-3.0` | 🟡 as `Moodle` |
+| 🔴 `canyongbs/advisingapp` (`614`) | **Elastic License `2.0`** | 🔴 **forbidden** — bars providing the software as a hosted or managed service |
+
+🔵 `Kolibri`, `Canvas`, `BigBlueButton`, `H5P`, `Sakai`, `Richie` and `Tutor-CLI` rows stand from
+earlier passes and were not re-read this pass; their grants are **not** re-asserted here.
+
 ## 🆕 `p614` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE PASS'S MOST COMMERCIALLY IMPORTANT ROW IS A LICENCE, NOT A PLATFORM: THE SECTOR'S BEST-STARRED OPEN **STUDENT-SUCCESS / RECRUITMENT CRM** (`340★`) IS **ELASTIC LICENSE `2.0`**, WHICH FORBIDS PROVIDING IT AS A HOSTED OR MANAGED SERVICE — A DIRECT BAR ON THE STUDIO DELIVERY MODEL, AND THE PLATFORM FIELD SAYS ONLY `NOASSERTION`. 🟢 PLUS `ECL-2.0` RECOVERED FROM A FIFTH PUBLISHER OUTSIDE APEREO.**
 
 ### 🔴 `614-E` (verticals arm) — the ERP/CRM question the run prompt asks, answered with the licence rather than the feature list

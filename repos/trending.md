@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — `2026-11-02` — the standards tier is **mostly archived**, measured on the publisher's own org
+
+🟢 **The pass's one real new surface.** Leg `10` (`open source LTI xAPI SCORM QTI library 2026
+github Apache MIT education standards`) returned the finding that no single library spans all four
+standards, and pointed at ADL — the publisher of xAPI itself. 🟢 Enumerating that org is the first
+time this base has looked at the interoperability tier as a **population** rather than row by row.
+
+🔴 **Of the `30` source repositories listed on page `1` of `2`, roughly two-thirds are archived.**
+
+| live, byte-verified | rounded ★ | grant (library-classified) | bytes | branch |
+| --- | --: | --- | --: | --- |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `956` | 🟢 `Apache-2.0` | `11,525 B` | `master` |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `334` | 🟢 `Apache-2.0` | `11,357 B` | `master` |
+| [`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) | `224` | 🟢 `Apache-2.0` | `10,273 B` | `master` |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | `78` | 🟢 **`MIT`** | `1,046 B` | `master` |
+| [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | `60` | 🟢 `Apache-2.0` | `11,357 B` | `master` |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | `59` | 🟢 `Apache-2.0` | `11,358 B` | 🔵 `main` |
+| [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) | `18` | 🟢 `Apache-2.0` | `11,525 B` | `master` |
+| [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | `12` | 🟢 `Apache-2.0` | `11,525 B` | `master` |
+
+| 🔴 archived | rounded ★ | why it matters that it is dead |
+| --- | --: | --- |
+| `adlnet/SCORM-to-xAPI-Wrapper` | `99` | 🔴 The canonical SCORM→xAPI bridge. **Archived AND ungranted** — the grant ladder exhausted all `7` probed names |
+| `adlnet/xapi-authored-profiles` | `45` | archived |
+| `adlnet/xAPI-SCORM-Profile` | `42` | archived — the profile the bridge above implements |
+| `adlnet/xapi-launch` | `41` | archived |
+| `adlnet/Unity-xAPI-Wrapper` | `32` | 🔴 archived — the **only game-engine binding** in the tier |
+| `adlnet/xapi-statement-viewer` | `28` | archived |
+| `adlnet/xAPI-Workshop` | `23` | archived |
+| `adlnet/xapi-jqm` | `21` | archived |
+
+🟢 **Why this is intel and not trivia.** A studio proposing xAPI interoperability will reach for the
+publisher's reference implementations first. 🟢 The **spec, the LRS, the JS client, the conformance
+harness and the profile tooling are all live and all permissive** — that is a usable foundation.
+🔴 But the **SCORM migration path and the Unity binding are archived**, and the SCORM bridge has no
+grant at all. 🔵 Those are the two places a legacy-content or simulation brief lands, so they are the
+two places to budget a build rather than an adoption.
+
+🟢 `8 of 8` live rows byte-read today; `7` `Apache-2.0`, `1` `MIT`; `commercial_use_ok` `ALLOWED` on
+all `8`. 🔵 `CATAPULT` is the tier's only `main` — the other seven are `master`, which is why the
+default branch is resolved by `git ls-remote --symref` and never assumed.
+🔵 All `8` addresses were **already on this base's shelves**; what is new is the archival census and
+the byte-read grants. `evidence/standards-tier-archival.2026-11-02-p615.tsv`.
+
+🔴 **Not a finding, recorded as such:** `adlnet/xAPI-Java`, named by Wikipedia's xAPI library table,
+is `UNREACHABLE` on `git ls-remote`. A `404` is not a finding.
+
+---
+
 ## 🆕 `p614` — `2026-11-02` — channel table run first, and the sweep census that replaces this pass's leg nil
 
 🔵 `569-B`'s standing row. Every arm probed in this session, not inherited.

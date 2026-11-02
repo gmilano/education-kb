@@ -3,6 +3,49 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE INTEROPERABILITY TIER, BYTE-READ AS A POPULATION FOR THE FIRST TIME: `8` LIVE PERMISSIVE ROWS (`7` `Apache-2.0`, `1` `MIT`) AND `8` ARCHIVED ONES — INCLUDING THE CANONICAL SCORM→xAPI BRIDGE, WHICH IS BOTH **ARCHIVED AND UNGRANTED**.**
+
+### 🟢 `615-E` — the xAPI reference tier: what is alive, permissive and safe to build on
+
+🔵 Every row below was already on this base's shelves. 🟢 What is new is that the tier has been read
+as a **population**, with its archival state and its grant bytes measured in the same sweep.
+
+| repo | rounded ★ | grant | bytes | branch | what it is, and when a studio reaches for it |
+| --- | --: | --- | --: | --- | --- |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `956` | 🟢 `Apache-2.0` | `11,525 B` | `master` | The xAPI specification itself. 🟢 The normative reference for any learning-analytics brief |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `334` | 🟢 `Apache-2.0` | `11,357 B` | `master` | Reference **Learning Record Store** (Python). 🟢 A permissive LRS you can host — the piece clients assume must be bought |
+| [`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) | `224` | 🟢 `Apache-2.0` | `10,273 B` | `master` | The JS client most xAPI integrations actually start from |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | `78` | 🟢 **`MIT`** | `1,046 B` | `master` | 🟢 Conformance harness — the tier's **only `MIT`** row, and the one that lets a studio *prove* an integration rather than assert it |
+| [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | `60` | 🟢 `Apache-2.0` | `11,357 B` | `master` | Profile specification and tooling — how a sector vocabulary is pinned down |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | `59` | 🟢 `Apache-2.0` | `11,358 B` | 🔵 `main` | **cmi5** reference suite. 🔵 The tier's only `main` branch |
+| [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) | `18` | 🟢 `Apache-2.0` | `11,525 B` | `master` | RDF/OWL ontology for xAPI |
+| [`adlnet/MasterObjectModel`](https://github.com/adlnet/MasterObjectModel) | `12` | 🟢 `Apache-2.0` | `11,525 B` | `master` | TLA data model |
+
+🟢 `8 of 8` grants byte-read `2026-11-02` at the branch `git ls-remote --symref` reported.
+`commercial_use_ok` returns `ALLOWED` on all `8` through `compose/code/lib/license_family.sh`.
+
+### 🔴 `615-E` (b) — the two gaps in the tier, and they are exactly where the work lands
+
+| archived address | rounded ★ | consequence |
+| --- | --: | --- |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `99` | 🔴 **Archived *and* ungranted** — the grant ladder exhausted `7` names at `master`. The canonical legacy-migration bridge is unmaintained and unshippable |
+| [`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) | `32` | 🔴 Archived. The **only game-engine binding** in the tier — so simulation and VR-training briefs have no maintained reference path |
+
+🟢 **Read it as a budget line, not a disappointment.** The spec, LRS, client, conformance suite and
+profile tooling are live and permissive, so the *backbone* is adoptable. 🔴 The **SCORM migration
+path** and the **engine binding** must be budgeted as a build. 🔵 Six further archived rows
+(`xapi-authored-profiles` `45`, `xAPI-SCORM-Profile` `42`, `xapi-launch` `41`,
+`xapi-statement-viewer` `28`, `xAPI-Workshop` `23`, `xapi-jqm` `21`) are recorded in the evidence
+file so a successor does not re-probe them.
+
+### 🔴 `615-D` — stars in this section are **rounded**, by channel failure, not by choice
+
+`api.github.com` and `github.com` HTML are `HTTP 403` to this egress; `raw.githubusercontent.com`
+and `git ls-remote` answer. 🟢 Hence: **grants byte-exact, stars rounded.** No `archived` flag came
+from the platform either — archival state above is read from the org's rendered repository list, and
+is therefore a **display** reading, not an API field.
+`evidence/channel-availability.2026-11-02-p615.tsv`.
+
 ## 🆕 `p614` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE CLASSROOM-DELIVERY TIER, WHICH THIS BASE HAD NO ROW FOR: A REAL-TIME COLLABORATIVE IDE (`MIT`, `262★`), A MICROSITE CMS FROM PENN STATE (`Apache-2.0`), AND THE LITERACY-CONTENT STACK THAT PLACES A ROW IN **EMEA** RATHER THAN GLOBAL. 🟢 `4` ROWS, `4 of 4` GRANTS BYTE-READ AGREEING WITH THE PLATFORM FIELD.**
 
 ### 🟢 `614-J` — what a learner and a teacher actually touch, which is neither an LMS nor an agent

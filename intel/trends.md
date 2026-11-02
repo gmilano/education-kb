@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+## 🆕 `p615` — `2026-11-02` — trends, each with the evidence that would refute it
+
+### 🔴 `T615-1` — The binding constraint on open-source education AI is the **grant instrument**, and the sector's own curators keep getting it wrong at the clause level
+
+🟢 **Evidence.** This base — purpose-built for exactly this check — published a `CC-BY-NC-4.0`
+dataset as 🟢 *"fit for purpose"* for commercial delivery last pass, and in the same table
+over-restricted two `CC-BY-SA-4.0` rows whose text permits commercial use *"even commercially"*
+twice. Both errors came from identifying the **family** (`CC`) and not the **clause** (`NC` vs `SA`).
+🔴 **Refuted if** a population read shows family-level classification is sufficient to decide
+shippability. 🟢 It is not: `CC-BY-NC` and `CC-BY-SA` share a family and sit on **opposite sides** of
+the commercial question. `evidence/cc-instrument-resolution.2026-11-02-p615.tsv`.
+
+### 🔴 `T615-2` — A curated licence column is not evidence, and neither is a curated **address**
+
+🟢 **Evidence.** `p611` measured `1 of 5` permissive claims surviving a byte read on a standard
+higher-ed index. This pass extends the failure mode from *figures* to *identifiers*: Wikipedia's xAPI
+library table names `adlnet/xAPI-Java`, and `git ls-remote` does not resolve it. Trend blogs quoted
+`DeepTutor` at `52,783★` and `48,268★` against a live `54.1k`.
+🔴 **Refuted if** a secondary source's licence, star count and repository name all reproduce
+first-hand across a sample. 🟢 Across `615`, none of the three has.
+
+### 🟢 `T615-3` — The sector's head is **saturated**; its new supply enters below every sensible star bar
+
+🟢 **Evidence.** First enumeration independent of WebSearch: `topics/ai-tutor` (`849` stated) and
+`topics/education-ai` (`70` stated), `60` rows read, `22` distinct addresses at or above `20★`,
+**`22 of 22` already shelved, `0` new**. Re-sorted by freshness, `17 of 20` fall **below** `20★`,
+nine at `0★`.
+🔴 **Refuted if** an enumeration channel returns addresses this base does not hold. 🟢 This one
+returned none — which is why `45` consecutive leg nils is now read as **saturation of the head**
+rather than channel blindness. 🔵 The corollary: growth is in the sub-`20★` tail, so the bar is a
+visible choice with a known cost.
+
+### 🟢 `T615-4` — Supply is shifting from applications to **prompt text**, which moves the licence question from code to copy
+
+🟢 **Evidence.** `p614` recorded `4` new `MIT` skill packages at `20`–`45★` and the class's largest
+member at `~36.7k★`. This pass's enumeration found the same class dominating both topic surfaces
+(`JuneYaooo/lineage-skill` `466`, `ZeKaiNie/universal-examprep-skill` `364`,
+`SenmuuuuW/universal-diagnostic-tutor-skill` `256`, `KeWang0622/kaogong-skill` `216`,
+`flysheep-ai/education-skills` `121`, `bobuel/bloom-taxonomy-quiz-builder-skill`,
+`tanghua-git/skill-instructional-design`).
+🔴 **Refuted if** the licence family distribution on skill packages matches that of applications.
+🟡 It does not: the class's most-trending member (`GarethManning/education-agent-skills`, `942★`) is
+`CC-BY-SA-4.0` — a **share-alike obligation on text a studio pastes into a client's agent**. 🟢 And
+`615-C` adds the sub-finding that its grant file is a **deed summary, not the legal code**.
+
+### 🟡 `T615-5` — The permissive full-LMS option exists and the sector's own discovery channels do not surface it
+
+🟢 **Evidence.** This pass's ERP/platform leg stated outright that no education-specific MIT/Apache
+platform was found, offering only copyleft incumbents. `OpenOLAT` is `Apache-2.0` on bytes
+(`10,982 B`, `master`, byte-read `2026-11-02`) with `QTI 2.1` + `SCORM 1.2` + `LTI 1.3` built in.
+🔴 **Refuted if** `OpenOLAT`'s grant reads copyleft on bytes, or if its standards support is
+vendor-claimed only. 🟢 The grant reproduces; the standards claim is still **vendor-stated** and is
+flagged as such.
+
+### 🟢 `T615-6` — The interoperability tier is permissive at the backbone and **archived at the edges**
+
+🟢 **Evidence.** `adlnet` org census: `8` live rows byte-read (`7` `Apache-2.0`, `1` `MIT`), and
+~two-thirds of the `30` listed source repositories archived — including the canonical
+`SCORM-to-xAPI-Wrapper` (`99★`, archived **and** ungranted on `7` probed names) and
+`Unity-xAPI-Wrapper` (`32★`), the tier's only game-engine binding.
+🔴 **Refuted if** maintained permissive alternatives exist for the SCORM bridge and the engine
+binding. 🟡 This pass did not find them and **did not run a dedicated leg for them** — stated as an
+open question, not a conclusion.
+
+### 🟢 `T615-7` — Adoption leads governance in every region measured, and the gap is the procurable artefact
+
+🟢 **Evidence.** LATAM: `87 %` of HEIs use AI, `26 %` have any formal framework (UNESCO IESALC,
+`200` HEIs / `19` countries) — a `61`-point gap; Brazil `53 %` vs `22 %` at school level (Cetic.br).
+North America: `~60 %` of US teachers use AI (Gallup, `n ≈ 2,200`) while most public schools lack a
+formal student policy; `134` bills in `31` states; `4` states now mandate district policy.
+APAC: Korea's AI Basic Act in force, Vietnam classifying education as high-risk, TEQSA requiring
+plans from **all** Australian providers. EMEA: EU AI Act enforcement live since `2026-08-02`.
+🔴 **Refuted if** any region shows governance leading adoption. 🟢 None measured does.
+
+### 🔴 `T615-8` — Measurement channels are not stable between passes, so a pass that does not state its channel cannot be audited
+
+🟢 **Evidence.** `p539` recorded `api.github.com` as `HTTP 403` to this egress; `p614` compared
+figures *"with the API"*; this pass measures `403` again on both `api.github.com` and `gh api`, and
+`403` on `github.com` HTML via curl. `raw.githubusercontent.com` and `git ls-remote --symref` answer.
+🟢 Consequence, applied rather than noted: **no exact star cell appears anywhere in `p615`** — every
+figure is a rounded display value, and every grant is byte-exact.
+🔴 **Refuted if** star cells can be reproduced first-hand on this egress. 🟢 They cannot, and the
+honest move is to publish the rounded figure labelled rounded rather than inherit a precise-looking
+number from a prior pass's different channel. `evidence/channel-availability.2026-11-02-p615.tsv`.
+
 ## 🆕 `p614` — `2026-11-02` — trends, each with the evidence that would refute it
 
 ### 🟢 `T614-1` — education's new permissive supply is **prompt text riding somebody else's agent**, not applications
