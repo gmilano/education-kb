@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p629` — reads `2026-11-03` — **🟢 TWO NEW RECIPES, BOTH BUILT ONLY FROM ROWS BYTE-VERIFIED TODAY: THE **FULLY-PERMISSIVE DISCONNECTED SCIENCE CLASSROOM** (NO COPYLEFT ANYWHERE IN THE STACK, WHICH THIS BASE COULD NOT SPECIFY BEFORE TODAY) AND THE **RENAME-RESOLVING ADDRESS AUDIT** AS A RUNNABLE PIPELINE WITH ITS CONTROLS.**
+
+### 🟢 `P629-1` — the fully-permissive disconnected science classroom
+
+🔵 **Why it is new.** Every prior classroom recipe on this page had to cross an LTI boundary to keep Globant's
+deliverable permissive, because the LMS underneath was `GPL`/`AGPL` (`626-N`). 🟢 This stack has **no copyleft
+component at all** — so the whole thing can be delivered, relicensed and embedded in a client product without an
+LTI firewall. The missing piece until today was a permissive lab and a permissive offline server.
+
+**Target:** a school with intermittent or no connectivity that must teach a lab science curriculum.
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Delivery substrate | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | 🟢 `MIT` | Offline-first education **server** on local hardware. Serves everything below over the school LAN; assumes no upstream link. |
+| Content library | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | Offline content library + learner progress. Channels authored with [`learningequality/studio`](https://github.com/learningequality/studio) and packed with [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker). |
+| Lab — browser | [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | 🟢 `MIT` | `40+` physics/chemistry/biology experiments, Next.js + Three.js. Static-exportable, so it ships **inside** the Kolibri channel. |
+| Lab — desktop | [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | 🟢 `MIT` | Qt6 desktop chemistry sim for machines with no browser. |
+| Assessment | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 `BSD-3-Clause` | QTI delivery + scoring. 🟢 Only usable here because `628-F` read its grant from bytes — the metadata channel says `NOASSERTION`. |
+| Accessibility | [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | 🟢 `Apache-2.0` | AAC board for non-verbal learners. 🔴 Clone `search_for_picture`, **not** `main` — that is the default branch (`629-F`). |
+| Language | [`Berzerker5653/open-language-learning`](https://github.com/Berzerker5653/open-language-learning) | 🟢 `Apache-2.0` | Offline language packs where instruction language ≠ home language. |
+
+**Wiring:**
+
+1. 🟢 Provision `Ta3alam` on the local server; it owns identity and the LAN HTTP surface.
+2. 🟢 `npm run build && next export` `sciencelab3d` to static assets. Author a Kolibri channel in `studio`, pack it
+   with `ricecooker`, and include the exported lab as an HTML5 app node — **no network egress at run time**.
+3. 🟢 Import the channel into `kolibri` behind `Ta3alam`. Learner progress stays on the local server.
+4. 🟢 Deploy `qtiworks` beside it for assessment; author items as QTI so they outlive the stack. `BSD-3-Clause` lets
+   you fork the renderer into the client's own product.
+5. 🟢 Install `virtual-chem-lab` and `open-aac` as local clients for machines that cannot run the browser build.
+6. 🔴 **Expect to extend, not adopt.** `Ta3alam`, `open-aac` and `open-language-learning` are `0★`
+   single-maintainer trees. Budget for ownership of those three; `kolibri` and `qtiworks` are the mature halves.
+
+🟢 **Why it closes commercially:** every grant above is `MIT`, `Apache-2.0` or `BSD-3-Clause`, each **read from
+`raw` bytes today** (`evidence/grant-byteread.2026-11-03-p629.tsv`). There is **no reciprocity obligation anywhere
+in the stack**, so the integrated result can be relicensed into a client deliverable — which no Moodle- or
+Open edX-based recipe on this page can claim.
+
+🔵 **Fit:** EMEA (Jordan-authored substrate, data residency) and LATAM (`4 %` public AI funding — the offline,
+hardware-light profile matches the money). Shippable in **`8`–`10` weeks** for a single-subject pilot, most of it
+content authoring rather than code.
+
+### 🟢 `P629-2` — the rename-resolving address audit, with its controls
+
+🔵 `627-J` specified the canonical-address audit as a pipeline. 🟢 It could flag a stale address but not **resolve**
+the live half. `629-C`/`629-D` supply the discriminator, so the audit now returns successors instead of a defect
+count.
+
+**Stage 1 — extract, and strip what is not a repository.**
+
+```bash
+grep -ohE 'github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+' "$@" \
+  | sed -E 's#.*github\.com/##; s/[.),:;]+$//' \
+  | grep -viE '^(topics|orgs|search|sponsors|features|collections|trending|apps|marketplace)/' \
+  | tr 'A-Z' 'a-z' | sort -u > addresses.txt
+```
+
+🔴 **The filter is load-bearing, not hygiene:** `628-B` measured that `41` of `236` raw misses — **`17.4 %`** —
+were `topics/`, `orgs/` and `search/` documentation links that no instrument can distinguish from dead repos.
+
+**Stage 2 — census in OR-batches, one fabricated control per batch.**
+
+```bash
+# 99 real addresses + 1 fabricated control per query; fork:true is REQUIRED (628-A)
+q=$(printf 'repo:%s ' $batch); q="$q repo:zzz-p629-fab-control/nope fork:true"
+gh api -X GET search/repositories -f q="$q" --jq '.items[].full_name'
+```
+
+🔴 **If the control ever comes back, discard the batch.** `628-A` ran `41` batches with `0` leaks.
+
+**Stage 3 — adjudicate each miss. This is the part `p629` adds.**
+
+```bash
+out=$(git ls-remote "https://github.com/$slug" HEAD 2>&1); rc=$?   # 629-E: capture BEFORE any pipe
+if [ $rc -eq 0 ]; then
+  echo "$slug RENAME-CANDIDATE $(echo "$out" | awk '{print $1}')"   # 422 + alive => renamed
+else
+  echo "$slug UNREACHABLE"                                          # 422 + 128  => stop
+fi
+```
+
+🔴 **`629-E` is why the `rc=$?` sits on its own line.** `git ls-remote … | head -1` captures the **pipe's** status,
+so every address scores alive — a column with no failing case.
+
+**Stage 4 — name the successor. Only the page can.**
+
+🟢 `WebFetch` the **old** address: GitHub serves the renamed repository through its redirect and the page states the
+current name. 🔴 `ls-remote` follows the same redirect and reports only a SHA, so it proves *reachability* and hides
+*identity* (`626-B`); the `repo:` channel reports `422` and names no successor (`629-C`).
+
+🟢 **Confirm on identical `HEAD`** — the proof standard `628-C` set and this pass used twice:
+
+| Old | New | `HEAD` |
+|---|---|---|
+| `ahmadarrabee/offline-learning-hub` | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | `e431c3e9bfce764f2e03e7c3d5949dd32949772f` |
+| `tytsxai/virtual-chem-lab` | [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | `24ec93543f24e1a7498e5230fd7179a54d123263` |
+
+**Stage 5 — read the grant from bytes, never from metadata.**
+
+```bash
+for p in LICENSE LICENSE.md LICENSE.txt COPYING COPYING.txt LICENCE; do
+  curl -s -o f -w '%{http_code}' "https://raw.githubusercontent.com/$slug/master/$p"
+done
+```
+
+🟢 **Probe `master`, not `main`** — `629-F` proved `raw` aliases `master` onto the default branch while `main` is
+not aliased, so `master` reaches `main`-default repos too. 🔴 **But never report the default branch from this
+probe** (`svankamamidi/open-aac`: both refs `200`, default actually `search_for_picture`). 🔴 And grade the payload
+on its **terms text and boilerplate, never byte count** — `619-F` found a valid grant `597 B` short of stock,
+`629-G` found one `17 B` long.
+
+🔵 **Sellable as an engagement:** `4.83 %` of this base's `3,956` censused addresses are not canonical, `2.43 %` are
+live-but-renamed and recoverable by Stage 3–4. A client's architecture docs, READMEs and dependency manifests decay
+identically and nobody measures it. **`2`–`3` weeks** for a first audit of a mid-size estate.
+
 ## 🆕 `p628` — reads `2026-11-03` — **🟢 TWO ADDRESSES IN THESE RECIPES WERE STALE AND BOTH ARE NOW RENAME-PROVEN AND RE-POINTED. 🟢 AND THE QTI ASSESSMENT ENGINE IS CONFIRMED `BSD-3-Clause` ON BYTES, WHICH MAKES A FULLY-PERMISSIVE ASSESSMENT RECIPE POSSIBLE FOR THE FIRST TIME.**
 
 ### 🟢 Address corrections landing in these recipes

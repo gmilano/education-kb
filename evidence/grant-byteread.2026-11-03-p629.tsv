@@ -1,0 +1,14 @@
+# p629 — 2026-11-03 — every grant read from raw.githubusercontent.com bytes. Metadata channel never trusted (628-F).
+# Apache-2.0 stock constant on this base = 11,357 B / sha256(16) c71d239df91726fc  (corroborated twice this pass)
+repo	ref	path	http	bytes	sha256_16	grant_on_bytes	boilerplate	verdict
+rudra496/sciencelab3d	main	LICENSE	200	1069	c4161f1cc9be519f	MIT	Copyright (c) 2026 Rudra Sarker	ACCEPT
+ahmadarrabee/Ta3alam	main	LICENSE	200	1116	-	MIT	Copyright (c) 2026 Ahmad Arrabee and Offline Village Learning Hub contributors	ACCEPT
+qilaidev/virtual-chem-lab	main	LICENSE	200	1080	-	MIT	Copyright (c) 2025 VirtualChemLab Team	ACCEPT
+Berzerker5653/open-language-learning	main	LICENSE	200	11374	178e3c8b100fc055	Apache-2.0	FILLED: Copyright 2026 the Open Language Learning Platform authors	ACCEPT (stock+1 blank line+filled boilerplate; terms intact to END OF TERMS AND CONDITIONS)
+STAR2023d/open-source-tutor	main	LICENSE	200	11357	c71d239df91726fc	Apache-2.0	UNFILLED: Copyright [yyyy] [name of copyright owner]	ACCEPT (stock byte-exact; boilerplate unfilled = cosmetic, grant stands)
+svankamamidi/open-aac	search_for_picture	LICENSE	200	11357	c71d239df91726fc	Apache-2.0	UNFILLED	ACCEPT (default branch is NEITHER main NOR master)
+kanishkkkansal/Open-Experiment-Space-	main+master	7 filenames each	404 x14	-	-	NONE	-	REJECT: no grant at any probe
+bhoomika-254/virtual-lab	main+master	7 filenames each	404 x14	-	-	NONE	-	REJECT: no grant at any probe
+Texriya/physicshub.github.io	main	LICENSE	-	-	-	MIT (metadata)	-	REJECT: fork=true, not a head name
+otsimo-archive/aac	master	LICENSE	200	-	-	AGPL-3.0	-	REJECT for build-on: copyleft AND archived 2021-09-01; reference code only
+jangirsoham07/OfflineU	-	-	-	-	-	-	-	REJECT: unreachable on both channels

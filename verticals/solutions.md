@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p629` — reads `2026-11-03` — **🟢 THE VERTICAL SHELF GAINS A CATEGORY THE SECTOR'S PLATFORMS DO NOT COVER: THE **VIRTUAL SCIENCE LAB**, WHICH NO LMS SHIPS AND EVERY SCIENCE CURRICULUM NEEDS. 🔴 AND THE ERP/CRM LEG — RETIRED AT `619-B` AFTER FOUR NILS — WAS RE-RUN ONCE AS A CONTROL AND RETURNED `0 of 6` UNHELD FOR A FIFTH TIME, WHICH CLOSES THE QUESTION.**
+
+### 🟢 The platform tier — unchanged, and re-stated because engagements quote it
+
+🔵 No row below changed its grant this pass. `p628` measured the maintenance split and it stands: **Open edX and
+Moodle were pushed this week; Canvas has not accepted a push in `187` days.**
+
+| Platform | Repo | Licence | Role |
+|---|---|---|---|
+| Moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | The sector's default LMS. 🔵 Copyleft — integrate across the LTI boundary (`626-N`). |
+| Open edX | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `AGPL-3.0` | MOOC-scale LMS. 🔵 Canonical address since `625-F`/`626-A`'s rename. |
+| Sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | Higher-ed LMS. 🟢 `ECL-2.0` is education's Apache-derivative and `624-D` proved it adds **no obligation** over `Apache-2.0` — **buildable**. 🔴 Not `Apache-2.0`, which a web leg asserted at `628-I`. |
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LGPL-3.0` | Education **ERP** on Odoo — SIS, attendance, fees, timetabling. |
+| Frappe Education | [`frappe/education`](https://github.com/frappe/education) | `AGPL-3.0` | Education module on the ERPNext stack; inherits ERP + CRM. |
+| RosarioSIS | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `GPL-2.0` | K-12 student information system, PHP + PostgreSQL. |
+| openSIS | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `GPL-2.0` | SIS for K-12, trade schools and higher ed. |
+| Gibbon | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `GPL-3.0` | School management for schools and education departments. |
+| QTIWorks | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 `BSD-3-Clause` | QTI assessment delivery engine. 🟢 Confirmed on bytes at `628-F` (metadata says `NOASSERTION`); the **only fully permissive assessment tier** this base holds. |
+| Kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | Offline-first learning platform for low/no-connectivity deployments; UNESCO-documented in Uganda refugee settlements. |
+
+### 🟢 New vertical category — the virtual science lab
+
+🔵 **Why it is a category and not a feature:** every platform above manages *enrolment, content and assessment*.
+**None of them simulates an experiment.** A science curriculum without lab access therefore has no open-source
+answer inside its own LMS, and the gap is permissive and live.
+
+| Solution | Repo | Licence | Customisation surface |
+|---|---|---|---|
+| ScienceLab 3D | [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | 🟢 `MIT` | `40+` experiments, Next.js + TypeScript + Three.js. Browser-delivered, so it embeds in Moodle/Open edX via LTI without touching their copyleft. `25★`, pushed `2026-11-01`. |
+| VirtualChemLab | [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | 🟢 `MIT` | Python + PySide6/Qt6 **desktop** — runs where there is no browser and no network. Bilingual (EN/中文). `2★`. |
+| Ta3alam | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | 🟢 `MIT` | Offline-first education **server** — the delivery substrate the two labs above need in a disconnected school. `0★`. |
+| open-aac | [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | 🟢 `Apache-2.0` | AAC board with picture search + drag-and-drop editing; the accessibility surface no LMS above ships. 🔴 Default branch `search_for_picture`. |
+
+🔴 **Maturity flag, stated plainly:** three of these four are `0`–`2★`. As **vertical solutions** they are patterns
+and starting code, not products — unlike Moodle or Odoo, a client cannot be handed one and told it is supported.
+
+### 🔴 The ERP/CRM leg: retired at `619-B`, re-run once, nil a fifth time
+
+🟢 The mandated vertical-platform leg was run once more as a **control on the retirement decision**, not in hope:
+`open source platform education ERP CRM MIT Apache student information system`. It returned `6` names —
+OpenEduCat, RosarioSIS, Frappe Education, openSIS, Gibbon, Fedena — and 🔴 **`0` were unheld.**
+
+🔴 **And the leg repeated `619-J`'s fourth channel-failure shape on the way.** It described **Fedena** as *"a
+free, open-source school management package"*. Measured:
+[`projectfedena/fedena`](https://github.com/projectfedena/fedena) is `547★` with 🔴 **no licence at all** and last
+pushed `2020-05-18` — **`6.5` years quiet**; [`foradian/fedena`](https://github.com/foradian/fedena) is `4★`, no
+grant, last pushed `2012-10-12`. 🟢 Only the smaller forks
+[`projectfedena/project_fedena`](https://github.com/projectfedena/project_fedena) (`66★`, `Apache-2.0`, `2019`) and
+[`mazhar266/fedena`](https://github.com/mazhar266/fedena) (`5★`, `Apache-2.0`, `2019`) carry a grant, and all of
+them are abandoned. 🔵 **"Open source" in a digest is a description of intent, not a grant** — this is the fifth
+instance of a channel asserting a licence for a tree that has none, and it is the shape that would have shipped.
+
+🔴 **The licence picture the leg returns is the standing finding of this tier, not news:** every education ERP/SIS it
+surfaced is `GPL`/`LGPL`/`AGPL`. 🔵 There is **no permissive education ERP**, five legs deep. The operative is
+unchanged and now five-times evidenced: **build the AI layer permissively and meet the ERP across a process or LTI
+boundary** — never inside its source tree.
+
 ## 🆕 `p628` — reads `2026-11-03` — **🔴 THE SECTOR'S TWO CANONICAL LMS PLATFORMS HAVE DIVERGED ON MAINTENANCE: OPEN edX AND MOODLE WERE PUSHED THIS WEEK, CANVAS HAS NOT ACCEPTED A PUSH IN `187` DAYS. 🟢 AND THE QTI ASSESSMENT TIER IS CONFIRMED PERMISSIVE ON BYTES.**
 
 ### 🔴 Platform maintenance, measured today — the fact that decides a platform recommendation

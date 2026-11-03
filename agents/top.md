@@ -4,6 +4,166 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p629` — reads `2026-11-03` — **🟢 "SUPPLY IS SATURATED" IS WRONG AND THIS PASS FALSIFIES IT: THE *LEGS* ARE SATURATED (`16 of 17` HELD, A FOURTH CONSECUTIVE NIL), BUT RE-RUNNING `p619-C`'s HOLE CENSUS NAMED THREE TIERS AND RETURNED **`6` NEW PERMISSIVE ROWS**, EVERY GRANT BYTE-READ. 🔴 `628-G` IS CORRECTED ON THE `repo:` CHANNEL'S NEGATIVE: IT IS AN **HTTP `422`**, NOT SILENT ABSENCE, AND ITS TEXT CONFLATES *ABSENT* WITH *NO PERMISSION* — SO THAT CHANNEL SHARES THE AMBIGUITY `628-G` BLAMED ONLY ON `ls-remote`. 🟢 AND THAT `422` TURNS OUT TO BE A **RENAME SIGNATURE**, WHICH GIVES `p628`'s `96`-STRONG "ALIVE" BUCKET A POSITIVE PROCEDURE: `2 of 3` RESOLVED ON IDENTICAL `HEAD`. 🔴 `raw`'s BRANCH ALIASING IS **ASYMMETRIC** — `master` IS ALIASED ONTO THE DEFAULT, `main` IS NOT — WHICH MAKES `619-E`'s CALIBRATED RULE SOUND FOR BYTES AND UNSOUND FOR DEFAULTS, WITH A NAMED COUNTER-EXAMPLE. 🔴 AND A DEFECT IN THIS PASS'S OWN FIRST MEASUREMENT IS NAMED RATHER THAN HIDDEN. ELEVEN REGISTERED (`629-A`…`629-K`).**
+
+🔵 Every figure below is measured today, every instrument ran against a **fabricated control**, and the pass is
+committed as evidence —
+`evidence/websearch-legs.2026-11-03-p629.tsv`,
+`evidence/tier-hole-census.2026-11-03-p629.tsv`,
+`evidence/instrument-calibration.2026-11-03-p629.tsv`,
+`evidence/rename-resolution.2026-11-03-p629.tsv`,
+`evidence/grant-byteread.2026-11-03-p629.tsv`.
+
+### 🟢 `629-G` — the shelf: `6` new permissive rows, each grant read from bytes
+
+🔵 These are **additions**, not replacements. Nothing below was removed, and the stars are measured, never copied
+(`628-I`'s lesson). All six are `fork=false`, `archived=false`.
+
+| Name | Repo | Licence | Description | Stars | Pushed | Region (by subject) |
+|---|---|---|---|---|---|---|
+| ScienceLab 3D | [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | 🟢 `MIT` | Browser-based 3D virtual lab — `40+` experiments across physics, chemistry and biology. Next.js + TypeScript + Three.js. Fills the shelf's largest measured hole: `physics simulation` scored **`1`** across nine files. | `25★` | `2026-11-01` | Global |
+| Ta3alam (Offline Village Learning Hub) | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | 🟢 `MIT` | Offline-first educational **server** platform for rural communities in Northern Jordan — local hardware, no upstream connectivity assumed. 🟢 Resolved from a stale address this pass (`629-D`). | `0★` | `2026-10-23` | 🟢 **EMEA** |
+| VirtualChemLab | [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | 🟢 `MIT` | Gamified virtual chemistry lab for teaching and simulation; Python + PySide6/Qt6 desktop, bilingual UI (游戏化虚拟化学实验室). 🟢 Owner-rename resolved this pass (`629-D`). | `2★` | `2026-08-30` | 🟢 **APAC** |
+| Open Language Learning | [`Berzerker5653/open-language-learning`](https://github.com/Berzerker5653/open-language-learning) | 🟢 `Apache-2.0` | Offline-first language-learning engine with authored language packs. Public alpha, Linux-tested only. 🔵 Its `Apache-2.0` is `11,374 B` — stock **plus** a filled copyright boilerplate (`629-G`). | `0★` | `2026-11-02` | Global |
+| open-source-tutor | [`STAR2023d/open-source-tutor`](https://github.com/STAR2023d/open-source-tutor) | 🟢 `Apache-2.0` | Tutor scaffold; grant is the byte-exact stock `Apache-2.0` (`11,357 B`, `sha` `c71d239df91726fc`) with the boilerplate **unfilled**. Hobby-scale — priced as a starting point, not a dependency. | `0★` | `2026-11-01` | Global |
+| open-aac | [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | 🟢 `Apache-2.0` | AAC picture-exchange communication board with picture search and drag-and-drop editing. 🔴 **Default branch is `search_for_picture`** — neither `main` nor `master` — the live case behind `629-F`. | `0★` | `2026-08-16` | Global |
+
+🔴 **Four of the six are `0★`.** They are written down anyway because the grant is real and byte-read, and they are
+priced honestly: **hobby-scale starting points, not dependencies.** `25★` `ScienceLab 3D` is the only row here an
+engagement could lean on today.
+
+### 🟢 `629-B` — the hole census pays a second time, and it corrects `628-I`'s framing
+
+🔴 `628-I` concluded *"open-source supply in this sector is **saturated**"*. 🟢 **That generalises from the wrong
+denominator.** The mandated legs are saturated; the sector is not. A keyword count over the nine shelf files —
+`p619-C`'s operative, re-run — found the holes, and the holes paid:
+
+| Keyword | Hits across 9 shelves | Tier named | Candidates | New | 🟢 Accepted |
+|---|---|---|---|---|---|
+| `refugee` | 🔴 **`0`** (the only true zero) | refugee / displaced / offline-first | `8` | `4` | 🟢 `2` |
+| `physics simulation` / `lab simulation` | 🔴 **`1`** / **`2`** | virtual science labs | `6` | `5` | 🟢 `2` |
+| `autism` / `augmentative` | 🔴 **`4`** / **`5`** | AAC & autism support | `6` | `2` | 🟢 `2` |
+| — against `proctor` | `627` | saturated | — | — | — |
+| — against `rubric` | `543` | saturated | — | — | — |
+
+🔵 **The generalisation (`P629-0`):** a nil on a *discovery channel* is a fact about the **channel**, not about the
+sector. Before any pass writes "saturated", it owes a census of its own holes — because this base has now run that
+census twice (`p619`, `p629`) and it has yielded **`20`** and **`6`** permissive rows respectively.
+
+🔴 Tokens the census cannot read: `SIS` `3,203`, `ECE` `1,171`, `library` `894`, `blind` `377`, `OCR` `295`,
+`AAC` `243`, `IEP` `226` are substring-inflated (`analysis`, `received`, `double-blind`). **Recorded as unreliable
+in the TSV rather than used.**
+
+### 🔴 `629-A` — the mandated legs are nil for a **fourth** consecutive pass
+
+🟢 Four global legs plus four regional legs, all run today, all logged with their queries.
+
+| Pass | Channels | New names |
+|---|---|---|
+| `p625` | 2 | 🔴 `0 of 28` |
+| `p626` | 1 | 🔴 `0 of 12` |
+| `p628` | 4 + 4 regional | 🔴 `0 of 11` |
+| 🔴 **`p629`** | **4 + 4 regional** | 🔴 **`1 of 17`, and the one is not an education artefact** |
+
+🔴 The single unheld name is [`yaojiejia/agents-radar`](https://github.com/yaojiejia/agents-radar) — an
+auto-generated AI-trend digest bot that surfaced *because* it publishes the digests the leg reads. 🔵 **A discovery
+leg that returns its own source is a closed loop**, and it is the mechanism behind this four-pass series: the
+digests the legs index are themselves generated from the digests. 🟢 The four regional legs returned **`0`**
+repository addresses for a **fourth** consecutive pass and paid on the demand side instead (`intel/market.md`).
+
+### 🔴 `629-C` — `628-G` corrected: the `repo:` channel's negative is a `422`, and it is ambiguous
+
+🔴 `628-G` tabulated the `repo:` + `fork:true` control as *"silently absent"* and scored the channel a clean
+`YES`. 🟢 **Measured today it is an HTTP `422 Validation Failed`**, and the shape does **not** depend on owner
+existence:
+
+| Probe | Result |
+|---|---|
+| `repo:moodle/moodle fork:true` | 🟢 `total_count 1` |
+| `repo:moodle/zzz-p629-control-does-not-exist` — 🔵 **real owner**, fake repo | 🔴 `HTTP 422` |
+| `repo:openedx/zzz-p629-control-does-not-exist` — 🔵 **real owner**, fake repo | 🔴 `HTTP 422` |
+| `repo:zzz-p629-no-such-owner-xyz/zzz-p629-control` | 🔴 `HTTP 422` |
+
+🔴 **And the `422` body is the finding:** *"the resources do not exist **or you do not have permission to view
+them**."* 🔵 So the `repo:` channel **cannot separate absent from private** — the exact limitation `628-G` wrote
+down for `ls-remote` alone while promoting `repo:` as the clean oracle. **Both channels share it.** A census that
+reads `422` as "dead" over-reports absence by its whole private-and-renamed population.
+
+### 🟢 `629-D` — and the `422` is a **rename signature**: a positive procedure for `p628`'s "alive" bucket
+
+🔵 `628-A` split `191` misses into `96` *"alive (rename or unindexed)"* and `95` unreachable — a **label**, with no
+procedure to tell the two apart. 🟢 This pass supplies one, from three cases:
+
+| Published address | `repo:` | `ls-remote` | 🟢 Canonical today | Proof |
+|---|---|---|---|---|
+| `ahmadarrabee/offline-learning-hub` | 🔴 `422` | 🟢 exit `0` | 🟢 [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | 🟢 identical `HEAD` **`e431c3e9bfce764f2e03e7c3d5949dd32949772f`** |
+| `tytsxai/virtual-chem-lab` | 🔴 `422` | 🟢 exit `0` | 🟢 [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | 🟢 identical `HEAD` **`24ec93543f24e1a7498e5230fd7179a54d123263`** (🔴 **owner** changed) |
+| `jangirsoham07/OfflineU` | 🔴 `422` | 🔴 exit `128` | 🔴 **UNRESOLVED** | both channels negative → rejected |
+
+> 🟢 **The procedure, stated so it can be run:** `422` **and** `ls-remote` exit `0` ⇒ **rename**; `WebFetch` the
+> **old** address and read the name GitHub's redirect serves. `422` **and** exit `128` ⇒ unreachable, and stop.
+> 🔵 This is `628-C`'s instrument lesson — *only the page names the target* — promoted from an anecdote about one
+> slug to a **discriminator over the whole bucket**.
+
+🔴 A third-order defect found in passing: `qilaidev/virtual-chem-lab`'s own README still clones
+`tytsxai/lab-virtualchem` — **a third name, stale inside the renamed repository itself.** A repo's own docs are
+not an address oracle.
+
+### 🔴 `629-F` — `raw`'s branch aliasing is **asymmetric**, and `619-E`'s rule has a counter-example
+
+🔵 `628-G` warned the `raw` oracle *"needs the branch name, so a repo on neither `master` nor `main` reads as
+absent."* 🔴 **That limit does not reproduce, because `master` is an alias.** Proven in both directions with an
+invented-ref control:
+
+| Repo | Default | Has `main` head? | `raw/main/…` | `raw/master/…` | Reading |
+|---|---|---|---|---|---|
+| `moodle/moodle` | `main` | 🟢 yes | 🟢 `200` | 🟢 **`200`** | 🔴 **`master` is aliased onto the default** — moodle has **no `master` head** |
+| `OpenOLAT/qtiworks` | `master` | 🔴 no | 🔴 **`404`** | 🟢 `200` | 🟢 `main` is **not** aliased |
+| `davemckain/qtiworks` | `master` | 🔴 no | 🔴 **`404`** | 🟢 `200` | 🟢 second confirmation |
+| `otsimo-archive/aac` | `master` | 🔴 no | 🔴 **`404`** | 🟢 `200` | 🟢 third confirmation |
+| any of the above | — | — | 🟢 invented ref `404` | 🟢 invented ref `404` | 🟢 the oracle still discriminates |
+
+🔴 **The counter-example to `619-E`.** `svankamamidi/open-aac` has heads `before_drag_and_drop`,
+`edit_name_picture`, `main`, `search_for_picture`, one tag `Progressive_Web_App`, and its default branch is
+🔴 **`search_for_picture`**. Both `main` and `master` return `200`. `619-E`'s calibrated rule — *both `200` ⇒
+`main`* — therefore concludes `main`, and **is wrong about the default branch.**
+
+🔵 **The split that resolves it:** `619-E`'s rule is **sound for reading bytes** (any served ref gives you the
+licence) and **unsound for reporting a default branch** (`master` 200s whether or not it exists). 🟢 A pass that
+needs the default branch must ask the metadata channel or `ls-remote --heads`; the `Branch` column must never be
+filled from `raw` alone.
+
+### 🔴 `629-E` — a defect in *this* pass's own first measurement, named rather than quietly fixed
+
+🔴 My first existence sweep ran `git ls-remote … 2>&1 | head -1` and read `$?`. **That captures the exit status of
+`head`, not of `git`** — so `jangirsoham07/OfflineU` was reported `exit=0` **ALIVE** while its output was
+`fatal: could not read Username`. Re-measured without the pipe it is `exit 128`, matching the fabricated control.
+
+🔵 **Why it is registered and not just corrected:** a pipe makes the negative unreachable, so the column has **no
+failing case** — `P619-0`'s class exactly, reproduced by the instrument that was built to honour it. 🟢 Operative:
+**capture `ls-remote`'s status before any pipe**, and prove it on the fabricated control in the same run.
+
+### 🔴 `629-H` — `5` of `11` candidates rejected, each with a named cause
+
+| Candidate | Cause | Class |
+|---|---|---|
+| `kanishkkkansal/Open-Experiment-Space-` | 🔴 **no grant** at `7` filenames × `2` branches (`14` probes, all `404`) | `619-J`'s dominant failure mode: plain absence |
+| `bhoomika-254/virtual-lab` | 🔴 **no grant** at `14` probes; `1★`, `16.4` months quiet | plain absence + abandoned |
+| `Texriya/physicshub.github.io` | 🔴 **`fork = true`** — not a head name | `627-G`'s personal-fork class |
+| [`otsimo-archive/aac`](https://github.com/otsimo-archive/aac) | 🔴 `AGPL-3.0` **and archived `2021-09-01`** | copyleft + read-only; **reference code only** |
+| `jangirsoham07/OfflineU` | 🔴 `422` **and** `ls-remote` `128` | a channel describing an address it cannot reach |
+
+🔵 `6` accepted of `11` adjudicated is a **`55 %`** yield in tiers the shelf scored `0`–`5` on — against `0 of 17`
+from the mandated legs. 🟢 The budget belongs in the holes.
+
+### 🔴 `629-K` — the execution denial reproduces a **fifth** consecutive pass; this commit is not gate-verified
+
+🔴 `make commit-gates` is refused `[Code from External]`, reproducing `617-J` / `618-B` / `619-L`. The agent's own
+inline interpreter runs normally, so the restriction remains keyed on code **provenance**. 🔴 `gate-declared-gap`
+and `gate-region-headings` are **still owed a green run**, now for the twelfth pass. 🟢 `intel/market.md` was left
+with exactly **one** canonical `## Opportunities by region` block and its five closed-vocabulary children —
+**verified by reading, not by running.**
+
 ## 🆕 `p628` — reads `2026-11-03` — **🟢 BOTH ITEMS `p627` LEFT OPEN ARE DISCHARGED. `project-sunbird/sunbird-lms-service` RESOLVES TO [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) ON IDENTICAL `HEAD` — THE RENAME CHANGED **OWNER AND NAME BOTH**, WHICH IS WHY THREE PASSES OF BASENAME GUESSING REFUTED CORRECTLY AND NEVER FOUND IT. 🟢 AND THE CENSUS IS RE-RUN WITH `fork:true` OVER THE **WHOLE BASE**, NOT 812 ROWS: `3,956` ADDRESSES, `41` BATCHES, `0` CONTROL LEAKS. 🔴 A DENOMINATOR DEFECT THIS BASE HAS NEVER NAMED — `41` OF ITS "ADDRESSES" ARE **NOT REPOSITORIES AT ALL** AND ALL `41` SCORED AS ABSENT, `17.4 %` OF THE RAW MISS POPULATION. 🟢 GENUINE MISSES ON LIVE SELL ROWS: `2 of 913`, AND BOTH ARE NOW CLOSED — `0` RESIDUAL. 🟢 THE `p607` QTI LICENCE DEBT IS PAID ON BYTES. 🟢 AND `gate-ledger` IS **FIXED**, NOT DECLARED: `p627` READ THE GATE'S PASS NUMBERS AS LINE NUMBERS. TEN REGISTERED (`628-A`…`628-J`).**
 
 🔵 Every figure below is measured today with a fabricated control in every batch, and the census is **committed** —

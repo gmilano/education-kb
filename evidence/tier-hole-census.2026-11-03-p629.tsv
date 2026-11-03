@@ -1,0 +1,50 @@
+# p629 — 2026-11-03 — keyword census over the 9 shelf files, re-running p619-C's operative
+# substring-matched (grep -ioF); tokens marked UNRELIABLE are inflated by substring hits
+keyword	hits	reading
+refugee	0	HOLE (only true zero)
+physics simulation	1	HOLE
+school bus	1	HOLE
+lab simulation	2	HOLE
+autism	4	HOLE
+exam generation	4	HOLE
+augmentative	5	HOLE
+music education	6	HOLE
+speech therapy	6	thin (p619-C tier)
+curriculum mapping	7	thin
+kindergarten	7	thin
+low-bandwidth	7	thin
+numeracy	8	thin
+individualized education	8	thin
+virtual lab	9	thin
+early literacy	10	covered (p619-C)
+screen reader	11	covered
+chemistry	12	covered
+braille	16	covered
+apprenticeship	18	covered
+dyslexia	20	covered
+dyscalculia	20	covered
+deaf	20	covered
+accreditation	25	covered
+phonics	30	covered (p619-C)
+special education	30	covered
+sign language	31	covered (p619-C)
+vocational	40	covered
+workforce	44	covered
+plagiarism	46	covered
+handwriting	46	covered
+student information system	64	covered
+spaced repetition	67	covered
+timetable	70	covered
+scheduling	82	covered
+flashcard	105	covered
+attendance	132	covered
+offline-first	161	covered
+IEP	226	UNRELIABLE (substring)
+AAC	243	UNRELIABLE (substring)
+OCR	295	UNRELIABLE (substring)
+blind	377	UNRELIABLE (substring: double-blind)
+rubric	543	saturated
+proctor	627	saturated
+library	894	UNRELIABLE (substring)
+ECE	1171	UNRELIABLE (substring: received)
+SIS	3203	UNRELIABLE (substring: analysis)

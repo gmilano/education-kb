@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p629` — reads `2026-11-03` — **🔴 `p628`'s HEADLINE TREND — *"OPEN-SOURCE SUPPLY IN THIS SECTOR IS SATURATED"* — IS **WITHDRAWN**: IT MEASURED THE CHANNEL, NOT THE SECTOR. THE MANDATED LEGS ARE SATURATED (FOURTH CONSECUTIVE NIL) WHILE A CENSUS OF THE SHELF'S OWN HOLES RETURNED `6` NEW PERMISSIVE REPOSITORIES THE SAME DAY. 🔴 AND THE GOVERNANCE DEFICIT `p628` NAMED IS CONFIRMED ON A FIFTH INSTRUMENT AND IS NOW `87 %` USE AGAINST `26 %` STRATEGY IN LATAM.**
+
+### 🔴 Trend 1 — the saturation claim was a measurement of the instrument
+
+| Pass | Claim | Status |
+|---|---|---|
+| `p628` | *"open-source supply in this sector is **saturated** — three consecutive passes, eight channels, zero new names"* | 🔴 **WITHDRAWN** as stated |
+| 🟢 `p629` | The **discovery legs** are saturated; a hole census on the same day yielded `6` permissive repositories | 🟢 replaces it |
+
+🔵 **The real trend, and it is a trend about trend-reporting:** the one unheld name the legs produced all pass was
+[`yaojiejia/agents-radar`](https://github.com/yaojiejia/agents-radar) — **the bot that generates the AI-trend
+digests the legs index.** The discovery channel has closed a loop on its own output. 🟢 That is why four passes of
+digest-reading found nothing and one afternoon of counting keywords found six repositories: *the digests cover what
+the digests already covered.*
+
+🔵 **Operative for any pass reporting sector-level supply:** a nil on a discovery channel is a fact about the
+**channel**. Census your own holes before concluding anything about the world.
+
+### 🔴 Trend 2 — the governance deficit, confirmed and sharpened
+
+🟢 `p628` put teacher adoption at `50–60 %` against institutional policy at `10–26 %`. Measured again today on
+independent instruments, the gap is **wider at the top of the stack than the bottom**:
+
+| Region | Use | Governance | Instrument |
+|---|---|---|---|
+| 🔴 **LATAM** | **`87 %`** of institutions use AI in ≥ 1 area | 🔴 **`26 %`** have a formal AI strategy | UNESCO IESALC + UNU-IAS, `200` institutions / `19` countries |
+| North America | `60 %` of K-12 teachers used AI in `2024-25`; `32 %` weekly | 🔴 most public schools still have **no** formal student AI policy; `55 %` of HS principals had not restricted access | Gallup; Child Trends / US Dept. of Education |
+| EMEA | `85 %` of teachers, `86 %` of students used AI in `2024-25` | 🔴 EU high-risk obligations **deferred to `2027-12-02`** (`629-I`) — a two-year governance vacuum *by statute* | CDT; Digital Omnibus on AI |
+| APAC | varies by country, no single figure | 🟢 **binding** statutes arrived this year (Korea `2026-01-22`, Vietnam `2026-03-01`) | national instruments |
+
+🔵 **The shape that matters commercially:** this is a `61`-point gap in LATAM and a statutory *deferral* in the EU.
+Both say the same thing — **the buyer's unmet need in 2026 is governance scaffolding, not model capability.**
+
+### 🟢 Trend 3 — binding law arrives in APAC while the EU defers
+
+🔴 The sector's regulatory centre of gravity moved **east** this year, and it is the inverse of the usual story:
+
+- 🟢 **South Korea** — `AI Basic Act`, **effective `2026-01-22`**; the region's first comprehensive AI statute,
+  covering *"high-impact"* AI in education with **human-oversight and user-disclosure duties**.
+- 🟢 **Vietnam** — `Law on Artificial Intelligence`, **effective `2026-03-01`**.
+- 🟢 **India** — amended IT Rules on **synthetic-content labelling**, **effective `2026-02-20`**.
+- 🔴 **EU** — Annex III high-risk duties, which cover education, **pushed from `2026-08` to `2027-12-02`** by the
+  `Digital Omnibus on AI` (published `2026-07`). 🔴 Flagged `NEEDS-PRIMARY`: see `629-I`.
+- 🔴 **Australia / Japan** — no standalone statute; voluntary guidance only.
+
+🔵 So in `2026` an APAC education deployment can face **binding** duties that an EU one does not yet face. 🟢 That
+inverts the default assumption of most delivery playbooks and it is the single most actionable regulatory fact on
+this page.
+
+### 🔴 Trend 4 — public opinion is turning against classroom AI in three of four APAC markets
+
+🔵 Ipsos `Education Monitor 2026`, support for **banning** AI in education, year on year:
+
+| Market | Change |
+|---|---|
+| 🔴 Japan | `21 %` → **`29 %`** |
+| 🔴 Australia | `47 %` → **`52 %`** (majority) |
+| 🔴 South Korea | `27 %` → **`31 %`** |
+| 🟢 Indonesia | `30 %` → **`23 %`** |
+
+🔵 **Why it belongs on a trends page and not only a market one:** adoption curves in this sector are mediated by
+*parental and public consent*, not procurement alone. A majority-ban sentiment in Australia is a delivery risk for
+any student-facing deployment there, regardless of what the statute permits.
+
+### 🔴 Trend 5 — the supply that exists is hobby-scale, and that is itself the finding
+
+🔵 Of `6` new permissive repositories found today: `4` at `0★`, `1` at `2★`, `1` at `25★`. Three tiers with real
+permissive code and **no incumbent above `25★`**:
+
+| Tier | Best permissive option | Stars |
+|---|---|---|
+| Virtual science lab | [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | `25★` |
+| AAC / augmentative communication | [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | `0★` |
+| Offline-first beyond Kolibri | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | `0★` |
+
+🔴 **Read correctly, this is not weak supply — it is an unoccupied tier.** The sector's mature open source is all
+*administrative* (LMS, SIS, ERP, every one of them copyleft); its *pedagogical* open source is embryonic and
+permissive. 🟢 That asymmetry is the most durable trend this base has measured, and it points straight at where a
+studio can build something that does not yet have an incumbent.
+
 ## 🆕 `p628` — reads `2026-11-03` — **🔴 THE SECTOR'S REAL 2026 TREND IS A GOVERNANCE DEFICIT, NOT A CAPABILITY ONE: TEACHER ADOPTION IS `50–60 %` IN THREE REGIONS WHILE INSTITUTIONAL POLICY SITS AT `10–26 %`. 🔴 AND OPEN-SOURCE SUPPLY IN THIS SECTOR IS **SATURATED** — THREE CONSECUTIVE PASSES, EIGHT CHANNELS, ZERO NEW NAMES.**
 
 ### 🔴 `T-628-1` — the adoption/governance scissor, quantified in all four regions

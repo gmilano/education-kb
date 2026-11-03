@@ -1,0 +1,14 @@
+# p629 — 2026-11-03 — every instrument run against a LIVE target AND a fabricated control
+# corrects 628-G on the repo: channel's negative shape; establishes raw's asymmetric branch aliasing
+instrument	live_target	live_result	control	control_result	discriminating	note
+search/repositories repo:+fork:true	moodle/moodle	total_count 1	zzz-p629-no-such-owner-xyz/zzz-p629-control	HTTP 422 Validation Failed	YES	628-G called this negative "silently absent"; it is a 422 ERROR
+search/repositories repo:+fork:true	moodle/moodle	total_count 1	moodle/zzz-p629-control-does-not-exist	HTTP 422 Validation Failed	YES	REAL owner + fake repo also 422 -> shape does NOT depend on owner existence
+search/repositories repo:+fork:true	OpenOLAT/qtiworks	total_count 1	openedx/zzz-p629-control-does-not-exist	HTTP 422 Validation Failed	YES	422 text conflates "do not exist" with "you do not have permission"
+git ls-remote HEAD	moodle/moodle	exit 0 + SHA	zzz-p629-fab-control/nope	exit 128 fatal: could not read Username	YES-positive-only	proves presence, never absence (628-G reproduced)
+git ls-remote HEAD (piped to head -1)	jangirsoham07/OfflineU	exit 0 REPORTED	same	n/a	NO	629-E DEFECT: $? captures the PIPELINE, not git. Scores every address alive.
+curl raw .../{ref}/LICENSE	moodle/moodle main	200	moodle/moodle zzz-p629-no-such-ref	404	YES	path+ref oracle
+curl raw .../master/...	moodle/moodle (default=main, NO master head)	200	zzz-p629-no-such-ref	404	ALIAS	master IS aliased onto default branch
+curl raw .../main/...	OpenOLAT/qtiworks (default=master, NO main head)	404	n/a	n/a	NO-ALIAS	main is NOT aliased -> aliasing is ASYMMETRIC
+curl raw .../main/...	davemckain/qtiworks (default=master, no main head)	404	n/a	n/a	NO-ALIAS	second confirmation
+curl raw .../main/...	otsimo-archive/aac (default=master, no main head)	404	n/a	n/a	NO-ALIAS	third confirmation
+curl -sI github.com HTML	any	403	any	403	NO	627-F / 628-G reproduced

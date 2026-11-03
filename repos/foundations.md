@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p629` — reads `2026-11-03` — **🟢 THE FOUNDATION SHELF GAINS A TIER IT HAS NEVER CARRIED — **VIRTUAL SCIENCE LABS**, PERMISSIVE AND LIVE — AND THE OFFLINE-FIRST TIER GAINS A SECOND INDEPENDENT IMPLEMENTATION BESIDE `kolibri`. 🔴 AND THE INSTRUMENT THIS SHELF VERIFIES GRANTS WITH IS RE-CHARACTERISED: `raw` ALIASES `master` ONTO THE DEFAULT BRANCH BUT NOT `main`, SO THE `Branch` COLUMN MUST NEVER BE FILLED FROM `raw` ALONE.**
+
+### 🟢 New foundation rows — `6`, every grant read from `raw` bytes today
+
+| Repo | Licence (on bytes) | Bytes / `sha256`(16) | Stars | Pushed | What it founds |
+|---|---|---|---|---|---|
+| [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | 🟢 `MIT` | `1,069` / `c4161f1cc9be519f` | `25★` | `2026-11-01` | 🟢 **Virtual science lab** — `40+` physics/chemistry/biology experiments, Next.js + Three.js. First permissive row in this tier. |
+| [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | 🟢 `MIT` | `1,116` | `0★` | `2026-10-23` | Offline-first education **server** on local hardware — a second implementation beside `kolibri`, built for rural Northern Jordan. |
+| [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | 🟢 `MIT` | `1,080` | `2★` | `2026-08-30` | Desktop chemistry simulator (Qt6) — the offline half of the lab tier. |
+| [`Berzerker5653/open-language-learning`](https://github.com/Berzerker5653/open-language-learning) | 🟢 `Apache-2.0` | `11,374` / `178e3c8b100fc055` | `0★` | `2026-11-02` | Offline-first language engine with **authored language packs** — a content-pack model, not a model-inference model. |
+| [`STAR2023d/open-source-tutor`](https://github.com/STAR2023d/open-source-tutor) | 🟢 `Apache-2.0` | `11,357` / `c71d239df91726fc` | `0★` | `2026-11-01` | Tutor scaffold. |
+| [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | 🟢 `Apache-2.0` | `11,357` / `c71d239df91726fc` | `0★` | `2026-08-16` | AAC board with picture search. 🔴 Default branch `search_for_picture`. |
+
+🔴 **Maturity, stated rather than implied:** only `sciencelab3d` (`25★`) is a row an engagement could lean on this
+quarter. The other five are `0`–`2★` single-maintainer trees whose value is a **clean permissive grant plus a
+working shape to copy**, and they are priced that way.
+
+### 🟢 The `Apache-2.0` stock constant, corroborated twice more
+
+🟢 `11,357 B` / `sha256` `c71d239df91726fc` reproduced byte-exactly on **two independent repositories**
+(`STAR2023d/open-source-tutor`, `svankamamidi/open-aac`). 🔵 That is now a reliable fingerprint for *unmodified
+stock* `Apache-2.0` on this base.
+
+🔵 **And the variance case, which is `619-F` mirrored.** `Berzerker5653/open-language-learning` is `11,374 B` —
+**`17 B` longer** than stock: one leading blank line, plus the boilerplate **filled in**
+(`Copyright 2026 the Open Language Learning Platform authors` replacing `[yyyy] [name of copyright owner]`), terms
+intact through `END OF TERMS AND CONDITIONS`. 🟢 `619-F` found a **short** payload that was the *more* finished one;
+this is a **long** payload that is also the more finished one. **Grade an `Apache-2.0` on its terms text and its
+boilerplate, never on byte count — in either direction.**
+
+### 🔴 The grant instrument re-characterised — `master` is an alias, `main` is not
+
+🔴 `628-G` recorded that the `raw` oracle *"needs the branch name, so a repo on neither `master` nor `main` reads as
+absent."* 🟢 **Measured with controls, that is wrong in one direction:**
+
+| Repo | Default branch | `main` head exists? | `raw/main/…` | `raw/master/…` |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🟢 yes | 🟢 `200` | 🟢 **`200`** — 🔴 yet there is **no `master` head** |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `master` | 🔴 no | 🔴 `404` | 🟢 `200` |
+| [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) | `master` | 🔴 no | 🔴 `404` | 🟢 `200` |
+| invented ref on any of them | — | — | 🟢 `404` | 🟢 `404` |
+
+🔵 **Consequence for this shelf:** reading a grant at `master` works on almost every repository, including
+`main`-default ones, so the licence column is safe. 🔴 **The `Branch` column is not** — `master` returning `200`
+proves nothing about the default, and `svankamamidi/open-aac` is the counter-example that shows it
+(`main` and `master` both `200`, default actually `search_for_picture`). **Fill `Branch` from the metadata channel
+or `ls-remote --heads`, never from `raw`.**
+
+### 🔴 Standing gaps on this shelf, restated
+
+🔴 No permissive row in the **virtual-lab** tier above `25★`, so the tier is *buildable* but has **no incumbent** —
+that is an opportunity, and it is written down as one rather than as coverage. 🔴 The `refugee` / displaced-learner
+tier scored **`0`** keyword hits across nine shelves before today and now has `2` rows, both at `0★`:
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) remains the only mature option, and
+Globant should expect to **extend** it rather than find a permissive rival.
+
 ## 🆕 `p628` — reads `2026-11-03` — **🟢 THE ONE GENUINELY UNRESOLVED ADDRESS ON THIS SHELF IS RESOLVED: `project-sunbird/sunbird-lms-service` → [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service), PROVEN ON IDENTICAL `HEAD`. 🟢 AND THE QTI TIER'S LICENCE IS READ FROM BYTES AFTER BEING OWED SINCE `p607`: IT IS `BSD-3-Clause`, NOT `NOASSERTION`.**
 
 ### 🟢 `p627`'s open item, discharged

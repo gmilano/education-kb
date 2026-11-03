@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p629` — **🟢 THE FOUR-PASS DISCOVERY NIL IS BROKEN, BUT NOT BY THE MANDATED LEGS: `6` NEW PERMISSIVE AGENTS CAME OUT OF THREE TIERS NAMED BY CENSUSING THE SHELF'S OWN HOLES (`16 of 17` LEG NAMES HELD; THE ONE UNHELD IS A TREND-DIGEST BOT). 🟢 AND TWO STALE ADDRESSES RESOLVED AS RENAMES ON IDENTICAL `HEAD` VIA A NEW `422`-SIGNATURE PROCEDURE.**
+
+🔵 Append-only record of what was true on this date.
+
+### 🟢 New this week — `6` permissive rows, every grant byte-read
+
+| Name | Repo | Licence | Why it is new to this base | Stars | Pushed |
+|---|---|---|---|---|---|
+| ScienceLab 3D | [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | `MIT` | `40+` browser 3D experiments; the shelf scored `physics simulation` **`1`** before today | `25★` | `2026-11-01` |
+| Ta3alam | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | `MIT` | offline-first education **server** for rural Northern Jordan; the shelf scored `refugee` **`0`** | `0★` | `2026-10-23` |
+| VirtualChemLab | [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | `MIT` | gamified chemistry simulator, Qt6 desktop, bilingual | `2★` | `2026-08-30` |
+| Open Language Learning | [`Berzerker5653/open-language-learning`](https://github.com/Berzerker5653/open-language-learning) | `Apache-2.0` | offline-first language engine with authored packs; pushed **yesterday** | `0★` | `2026-11-02` |
+| open-source-tutor | [`STAR2023d/open-source-tutor`](https://github.com/STAR2023d/open-source-tutor) | `Apache-2.0` | tutor scaffold, stock grant byte-exact | `0★` | `2026-11-01` |
+| open-aac | [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | `Apache-2.0` | AAC board; the shelf scored `augmentative` **`5`** | `0★` | `2026-08-16` |
+
+🔴 **Priced honestly:** `4 of 6` are `0★` and single-maintainer. They are recorded because the **grant is real and
+read from bytes**, not because they are ready to depend on.
+
+### 🔴 The mandated legs, fourth consecutive nil
+
+`0 of 17` usable new names. The one unheld address —
+[`yaojiejia/agents-radar`](https://github.com/yaojiejia/agents-radar) — is the **generator of the digests the leg
+reads**. 🔵 A discovery channel that returns its own source has closed the loop, which is the mechanism behind
+`p625`→`p629`'s series (`0/28`, `0/12`, `0/11`, `1/17`).
+
+### 🟢 Renames closed on identical `HEAD`
+
+| Was | Now | `HEAD` |
+|---|---|---|
+| `ahmadarrabee/offline-learning-hub` | [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | `e431c3e9bfce764f2e03e7c3d5949dd32949772f` |
+| `tytsxai/virtual-chem-lab` | [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | `24ec93543f24e1a7498e5230fd7179a54d123263` |
+
+### 🔴 Rejected this week, with cause
+
+`kanishkkkansal/Open-Experiment-Space-` and `bhoomika-254/virtual-lab` — **no grant** at `14` probes each.
+`Texriya/physicshub.github.io` — **fork**. [`otsimo-archive/aac`](https://github.com/otsimo-archive/aac) —
+`AGPL-3.0` **and archived `2021-09-01`**, reference only. `jangirsoham07/OfflineU` — unreachable on both channels.
+
 ## 🆕 `2026-11-03` · `p628` — **🟢 TWO STALE ADDRESSES ON THIS BASE'S SELL ROWS RENAME-PROVEN AND CLOSED; DISCOVERY NIL FOR THE THIRD CONSECUTIVE PASS (`0 of 11` NEW NAMES ACROSS EIGHT WEB LEGS).**
 
 🔵 Append-only. This section records what was true on `2026-11-03`; nothing below it is edited.

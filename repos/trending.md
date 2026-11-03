@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p629` — **🔴 GITHUB TRENDING RETURNED `0` UNHELD EDUCATION REPOSITORIES FOR A FOURTH CONSECUTIVE PASS, AND THE ONE UNHELD NAME IS THE BOT THAT GENERATES THE TRENDING DIGESTS. 🟢 THE REAL MOVEMENT THIS WEEK IS IN THREE TIERS NO DIGEST COVERS: VIRTUAL SCIENCE LABS, OFFLINE-FIRST / DISPLACED-LEARNER DELIVERY, AND AAC.**
+
+🔵 Append-only record of what was true on this date.
+
+### 🔴 What the trending legs actually returned
+
+| Leg | Names | Unheld |
+|---|---|---|
+| `github trending education AI 2026` | `6` | 🔴 `1` ([`yaojiejia/agents-radar`](https://github.com/yaojiejia/agents-radar) — a digest bot) |
+| `top open source AI agents education 2026 github MIT` | `10` | 🔴 `0` |
+| `open source platform education ERP CRM MIT Apache …` | `6` | 🔴 `0` |
+
+🔵 Names the digests surfaced that this base **already holds**: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor),
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC),
+[`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub),
+[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch),
+[`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners),
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai),
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis),
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp),
+[`frappe/education`](https://github.com/frappe/education),
+[`GibbonEdu/core`](https://github.com/GibbonEdu/core),
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic),
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri).
+
+### 🟢 Repositories trending in the tiers the digests miss
+
+| Repo | Licence | Stars | Pushed | Tier |
+|---|---|---|---|---|
+| [`rudra496/sciencelab3d`](https://github.com/rudra496/sciencelab3d) | 🟢 `MIT` | `25★` | `2026-11-01` | virtual science lab |
+| [`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) | 🟢 `MIT` | `2★` | `2026-08-30` | virtual chemistry lab |
+| [`Berzerker5653/open-language-learning`](https://github.com/Berzerker5653/open-language-learning) | 🟢 `Apache-2.0` | `0★` | `2026-11-02` | offline-first language |
+| [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam) | 🟢 `MIT` | `0★` | `2026-10-23` | offline-first delivery |
+| [`STAR2023d/open-source-tutor`](https://github.com/STAR2023d/open-source-tutor) | 🟢 `Apache-2.0` | `0★` | `2026-11-01` | tutor scaffold |
+| [`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) | 🟢 `Apache-2.0` | `0★` | `2026-08-16` | AAC |
+
+🔴 **`4 of 6` at `0★`.** These are *early* rather than *trending* in the star sense; the signal is that three tiers
+with live permissive work received **zero** digest coverage, not that these repos are popular.
+
+### 🔴 An address-hygiene note for this shelf
+
+`qilaidev/virtual-chem-lab`'s own README clones a **third** name, `tytsxai/lab-virtualchem`. 🔵 A repository's own
+documentation is not an address oracle — which is a second instance of the class `628-C` established for rename resolution.
+
 ## 🆕 `2026-11-03` · `p628` — **🟢 THE WHOLE-BASE CENSUS, RE-RUN WITH `fork:true`: `3,956` REAL ADDRESSES, `95.17 %` CANONICAL, `0` CONTROL LEAKS IN `41` BATCHES. 🔴 AND `17.4 %` OF THE RAW MISSES ARE NOT REPOSITORIES AT ALL.**
 
 🔵 Append-only. This section records what was true on `2026-11-03`; nothing below it is edited.

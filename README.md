@@ -1,8 +1,96 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
 ---
+
+## Pass 629 — reads 2026-11-03, commit 2026-11-03 — **🔴 THIS FILE WAS NINE PASSES STALE AND NO GATE NOTICED: ITS HEAD SECTION READ `Pass 619` AND ITS FRONTMATTER `2026-11-02` WHILE ALL EIGHT SHELVES WERE AT `p628`. 🟢 `p628`'s HEADLINE TREND IS WITHDRAWN AND REPLACED — "SUPPLY IS SATURATED" MEASURED THE **CHANNEL**, NOT THE SECTOR: THE MANDATED LEGS WENT NIL A FOURTH TIME (`16 of 17` HELD) WHILE A CENSUS OF THE SHELF'S OWN HOLES RETURNED **`6` NEW PERMISSIVE REPOSITORIES THE SAME DAY**. 🔴 `628-G` CORRECTED ON TWO INSTRUMENTS: THE `repo:` CHANNEL'S NEGATIVE IS AN HTTP `422` THAT CONFLATES *ABSENT* WITH *NO PERMISSION*, AND `raw`'s BRANCH ALIASING IS **ASYMMETRIC**. 🟢 AND THAT `422` IS A **RENAME SIGNATURE**, WHICH GIVES `p628`'s `96`-STRONG "ALIVE" BUCKET A PROCEDURE INSTEAD OF A LABEL. ELEVEN REGISTERED (`629-A`…`629-K`).**
+
+🟢 **`629-J` — the defect in this file, and it is a missing control rather than a typo.** The eight shelves have
+carried `p620`→`p628` sections; this README's newest section was **`Pass 619`** and its frontmatter said
+`2026-11-02`. 🔵 `SHELF_FILES` in the `Makefile` lists the nine shelves and **not `README.md`**, so no gate compares
+this file's pass number against theirs — the same class as `617-B` (*a gate built and not wired is not a control*)
+and `618-L` (*a gate wired but whose red is never reached is also not a control*). 🔴 **A file outside every gate's
+target set is not verified by anything**, and this one is the first thing a reader opens. 🟢 Repaired by writing
+this section; registered as an open gap because **the gate is still missing** — the fix is to add `README.md` to a
+currency gate's targets, which cannot be self-verified here (`629-K`).
+
+🟢 **`629-B` — the pass's load-bearing move, and it overturns the previous pass's headline.** `628-I` concluded
+*"open-source supply in this sector is **saturated** — three consecutive passes, eight channels, zero new names."*
+🔴 **That generalises from the wrong denominator.** A keyword count over the nine shelves — `p619-C`'s operative,
+re-run — found `refugee` **`0`**, `physics simulation` **`1`**, `lab simulation` **`2`**, `autism` **`4`**,
+`augmentative` **`5`**, against `proctor` **`627`** and `rubric` **`543`**. Three tiers named from the zeroes
+returned **`19`** candidates, **`9`** unheld, and 🟢 **`6` permissive rows accepted** — `3` `MIT`, `3`
+`Apache-2.0`, **no copyleft**, every grant byte-read at `raw.githubusercontent.com` today. 🔵 The generalisation
+(`P629-0`): **a nil on a discovery channel is a fact about the channel, not the sector.**
+
+🔴 **`629-A` — and the legs themselves went nil a fourth consecutive time, with the mechanism now visible.** Four
+global legs plus four regional legs surfaced `17` distinct repository names; **`16` are held**, and 🔴 the one
+unheld name is [`yaojiejia/agents-radar`](https://github.com/yaojiejia/agents-radar) — **the bot that generates the
+AI-trend digests the legs index.** 🔵 A discovery channel that returns its own source has closed a loop, which is
+why `p625`→`p629` reads `0/28`, `0/12`, `0/11`, `1/17`.
+
+🔴 **`629-C` — `628-G` is corrected on the channel this base censuses with.** `628-G` tabulated the
+`repo:` + `fork:true` control as *"silently absent"*. Measured today it is an **HTTP `422 Validation Failed`**, and
+the shape does **not** depend on owner existence — `moodle/<fake>` and `openedx/<fake>` both `422`. 🔴 Worse, the
+`422` body reads *"the resources do not exist **or you do not have permission to view them**"*, so the `repo:`
+channel **cannot separate absent from private** — the exact limitation `628-G` recorded for `ls-remote` alone while
+promoting `repo:` as the clean oracle. **Both channels share it.**
+
+🟢 **`629-D` — and the `422` turns out to be the rename signature, which is the pass's most reusable result.**
+`628-A` split `191` misses into `96` *"alive (rename or unindexed)"* and `95` unreachable — a **label with no
+procedure**. 🟢 This pass supplies one: **`422` + `ls-remote` exit `0` ⇒ rename**, then `WebFetch` the **old**
+address, because only the page names the target (`628-C`). Proven twice on identical `HEAD`:
+`ahmadarrabee/offline-learning-hub` → [`ahmadarrabee/Ta3alam`](https://github.com/ahmadarrabee/Ta3alam)
+(`e431c3e9…`) and `tytsxai/virtual-chem-lab` →
+[`qilaidev/virtual-chem-lab`](https://github.com/qilaidev/virtual-chem-lab) (`24ec9354…`, **owner** changed).
+🔴 `422` + exit `128` ⇒ unreachable, and stop: `jangirsoham07/OfflineU` is rejected on exactly that.
+
+🔴 **`629-F` — `raw`'s branch aliasing is asymmetric, and `619-E`'s calibrated rule has a counter-example.**
+`moodle/moodle` has **no `master` head** yet `raw/master/COPYING.txt` returns `200`, while three `master`-default
+repos (`OpenOLAT/qtiworks`, `davemckain/qtiworks`, `otsimo-archive/aac`) all `404` on `main`; an invented ref `404`s
+throughout. 🟢 So **`master` is aliased onto the default branch and `main` is not.** 🔴 The counter-example:
+[`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac) has heads `before_drag_and_drop`,
+`edit_name_picture`, `main`, `search_for_picture` and its default is **`search_for_picture`** — both refs `200`, so
+`619-E`'s rule concludes `main` and **is wrong about the default**. 🔵 The split: the rule is **sound for reading
+bytes**, **unsound for reporting a default branch**. Fill a `Branch` column from the metadata channel or
+`ls-remote --heads`, never from `raw`.
+
+🔴 **`629-E` — a defect in this pass's own first measurement, named rather than quietly fixed.** The first existence
+sweep ran `git ls-remote … | head -1` and read `$?` — which captures **`head`'s** status, not `git`'s — and so
+reported an unreachable repository as `exit=0` **ALIVE**. Re-measured without the pipe it is `exit 128`, matching
+the fabricated control. 🔵 A pipe makes the negative unreachable, so the column has **no failing case** — `P619-0`'s
+class, reproduced by an instrument built to honour it.
+
+🟢 **`629-G` — the `Apache-2.0` stock constant corroborated twice more, and `619-F` mirrored.** `11,357 B` /
+`sha256` `c71d239df91726fc` reproduced byte-exactly on two independent repositories.
+[`Berzerker5653/open-language-learning`](https://github.com/Berzerker5653/open-language-learning) is `11,374 B` —
+**`17 B` longer**: one leading blank line plus the boilerplate **filled in**, terms intact through
+`END OF TERMS AND CONDITIONS`. 🔵 `619-F` found a **short** payload that was the more finished one; this is a
+**long** one that is also more finished. **Grade an `Apache-2.0` on its terms and boilerplate, never on byte count,
+in either direction.**
+
+🔴 **`629-H` — `5` of `11` candidates rejected, each with a named cause.**
+`kanishkkkansal/Open-Experiment-Space-` and `bhoomika-254/virtual-lab`: **no grant** at `7` filenames × `2`
+branches — `619-J`'s dominant failure mode. `Texriya/physicshub.github.io`: **`fork = true`**, not a head name.
+[`otsimo-archive/aac`](https://github.com/otsimo-archive/aac): `AGPL-3.0` **and archived `2021-09-01`**, reference
+only. `jangirsoham07/OfflineU`: unreachable on both channels. 🔴 And a fifth instance of a channel asserting a
+licence for a tree with none — a leg called **Fedena** *"free, open-source"* while
+[`projectfedena/fedena`](https://github.com/projectfedena/fedena) carries **no licence at all** at `547★`, last
+pushed `2020-05-18`.
+
+🟢 **`629-I` — all four regions returned dated, placeable instruments, and the regional picture inverts.** APAC's
+duties are **binding now** (South Korea `AI Basic Act` `2026-01-22`, Vietnam `2026-03-01`, India `2026-02-20`)
+while the EU's Annex III education obligations are **deferred to `2027-12-02`** by the `Digital Omnibus on AI`.
+🔴 That EU date stays flagged `NEEDS-PRIMARY`: `eur-lex.europa.eu` is refused by this session's egress allowlist on
+two independent paths (`628-H`), and the remedy is a network-settings entry, **not another probe**. 🔴 **Africa
+returned nothing and is written down as a declared gap** rather than folded silently into EMEA.
+
+🔴 **`629-K` — the execution denial reproduces a fifth consecutive pass.** `make commit-gates` is refused
+`[Code from External]` (`617-J`, `618-B`, `619-L`); the agent's own inline interpreter runs normally, so the
+restriction stays keyed on code **provenance**. `gate-declared-gap` and `gate-region-headings` are **still owed a
+green run**. `intel/market.md` was left with exactly one canonical `## Opportunities by region` block and its five
+closed-vocabulary children — **verified by reading, not by running. This commit is not gate-verified.**
 
 ## Pass 619 — reads 2026-11-02, commit 2026-11-02 — **🟢 THE NAMED-TIER OPERATIVE IS CONFIRMED A THIRD TIME AND THIS IS THE LARGEST SUPPLY YIELD ON RECORD: THREE TIERS NAMED BY CENSUSING THE SHELF'S OWN HOLES, `20` NEW HEAD NAMES, `0` HELD AGAINST A `3,902`-SLUG ORACLE, `12` PERMISSIVE PAYLOADS BYTE-READ. 🔴 THE `Branch` COLUMN `p618` CALLED "RESOLVED" WAS FILLED BY A PROBE THAT COULD NOT FALSIFY IT; NOW CALIBRATED AND AGREEING WITH A SECOND CHANNEL `12 of 12`. 🔴 AN `Apache-2.0` PAYLOAD `597 B` SHORT OF STOCK IS **COMPLETE**, NOT TRUNCATED. 🔴 A FOURTH CHANNEL-FAILURE SHAPE: A LISTING ASSERTING A LICENCE FOR A TREE WITH NO GRANT AT ALL. 🔴 AND THE FIRST CATALOGUED **DEMAND-SIDE** DRIFT — A `57%` REPORTED AS ">60%", AND A REAL EU INSTRUMENT DATED THREE MONTHS WRONG. TWELVE REGISTERED (`619-A`…`619-U`).**
 

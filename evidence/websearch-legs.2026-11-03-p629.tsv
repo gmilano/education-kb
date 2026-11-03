@@ -1,0 +1,14 @@
+# p629 — 2026-11-03 — mandated discovery legs (4 global + 4 regional) and the tier legs that replaced them
+# verdict: HELD = address already in the 3,927-slug shelf oracle extracted this pass
+leg_class	leg_query	names_surfaced	new_vs_oracle	verdict
+global	top open source AI agents education 2026 github MIT	10	0	NIL
+global	github trending education AI 2026	6	1	NIL-effective (yaojiejia/agents-radar = trend-digest bot, not an education artefact)
+global	open source platform education ERP CRM MIT Apache student information system	6	0	NIL
+global	AI education industry trends 2026	0 repo addresses	0	NIL (demand-side only)
+regional-NA	AI education North America 2026 adoption regulation players	0 repo addresses	0	NIL supply / YIELD demand
+regional-EMEA	AI education EMEA Europe Middle East Africa 2026 adoption regulation players	0 repo addresses	0	NIL supply / YIELD demand / AFRICA GAP
+regional-APAC	AI education APAC Asia Pacific 2026 adoption regulation players	0 repo addresses	0	NIL supply / YIELD demand
+regional-LATAM	AI education LATAM Latin America 2026 adoption regulation players	0 repo addresses	0	NIL supply / YIELD demand
+tier-refugee	open source refugee displaced learners education offline-first low bandwidth github	8	4	YIELD
+tier-virtual-lab	open source virtual science lab simulation physics chemistry education github MIT Apache	6	5	YIELD
+tier-aac	open source AAC augmentative alternative communication autism education app github	6	2	YIELD

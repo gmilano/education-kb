@@ -1,0 +1,6 @@
+# p629 — 2026-11-03 — a 422 from the repo: channel on an address ls-remote proves ALIVE is a RENAME signature.
+# Positive procedure for p628's 96-strong "alive (rename or unindexed)" bucket. Proof = identical HEAD SHA.
+published_address	repo_channel	ls_remote	canonical_today	head_sha	proof	licence_on_bytes
+ahmadarrabee/offline-learning-hub	HTTP 422	exit 0 (ALIVE)	ahmadarrabee/Ta3alam	e431c3e9bfce764f2e03e7c3d5949dd32949772f	identical HEAD	MIT (1116 B, byte-read)
+tytsxai/virtual-chem-lab	HTTP 422	exit 0 (ALIVE)	qilaidev/virtual-chem-lab	24ec93543f24e1a7498e5230fd7179a54d123263	identical HEAD (OWNER changed)	MIT (1080 B, byte-read)
+jangirsoham07/OfflineU	HTTP 422	exit 128 (UNREACHABLE)	UNRESOLVED	-	both channels negative	n/a - rejected
