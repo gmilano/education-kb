@@ -4,6 +4,33 @@ region: Global
 updated: 2026-11-03
 ---
 
+
+## 🆕 The national reference-data tier — added `p633` (`APAC`/Indonesia)
+
+🔵 A tier this base did not hold: not a platform and not an agent, but the **reference data an education
+agent has to resolve against** — school identifiers, programme catalogues, administrative regions, the national
+dictionary. Found via `632-F`'s publisher operative (`org:prodhokter`). Every grant byte-read `2026-11-03` at
+the metadata-declared default branch, every fabricated-path control `404`.
+
+| Repo | Licence | Description | Stars | ¿Base para AI? |
+|------|---------|-------------|-------|----------------|
+| [prodhokter/dataset-sekolah-indonesia](https://github.com/prodhokter/dataset-sekolah-indonesia) | MIT (byte-read, `1,068 B`) | `547,019` Indonesian educational units from Dapodik Kemendikbud across `51` unit types, with Top-1000 LTMPT ranking. 🟡 `DATA-TERMS-UNSTATED`. | 4 | ✅ entity resolution + school-level targeting |
+| [prodhokter/dataset-program-studi-indonesia](https://github.com/prodhokter/dataset-program-studi-indonesia) | MIT (byte-read, `1,068 B`) | `4,971` study programmes with quota, demand, selectivity and passing grades. 🟡 `DATA-TERMS-UNSTATED`. | 4 | ✅ ground truth for advising/admissions agents |
+| [prodhokter/dataset-perguruan-tinggi-indonesia](https://github.com/prodhokter/dataset-perguruan-tinggi-indonesia) | MIT (byte-read, `1,068 B`) | `143` universities in SNPMB 2024 with applicant statistics. 🟡 `DATA-TERMS-UNSTATED`. | 4 | ✅ institution master data |
+| [prodhokter/dataset-kbbi-indonesia](https://github.com/prodhokter/dataset-kbbi-indonesia) | MIT (byte-read, `1,068 B`) | `209,868` KBBI entries with senses and word classes — the authoritative Indonesian lexicon. | 4 | ✅ in-language grading, readability, vocabulary |
+| [prodhokter/dataset-wilayah-indonesia](https://github.com/prodhokter/dataset-wilayah-indonesia) | MIT (byte-read, `1,068 B`) | Administrative regions per Kepmendagri 2025 — the join key that places every school row. | 4 | ✅ regional rollups, equity analysis |
+| [prodhokter/api-datasets-indonesia](https://github.com/prodhokter/api-datasets-indonesia) | MIT (byte-read, `1,068 B`) | Public REST API over all of the above — removes the ETL step for a prototype. | 4 | ✅ drop-in tool endpoint for an agent |
+
+🟡 **Read the flag before using these.** The `MIT` files are stock and valid, and they license the
+*publisher's* packaging. The underlying rows are the Indonesian ministry's: the README names Dapodik Kemendikbud
+and the Top-1000 LTMPT list as sources and never states their redistribution terms. For a client deliverable the
+primary-source terms must be confirmed first — `p620` recorded this exact shape and this base does not treat a
+stock MIT payload as a grant over somebody else's data.
+
+🔵 **Why the tier matters anyway.** `6` of this base's long-standing gaps are placement gaps, not capability
+gaps: an advising or dropout-prediction agent is only as good as the institution and programme data it joins
+against, and for `APAC`/Indonesia that join table is now identified, permissively packaged and byte-verified.
+
 ## 🆕 `p632` — reads `2026-11-03` — **🟢 A `131`-REPOSITORY, `52`-STRONG `Apache-2.0` HIGHER-EDUCATION **ADMINISTRATIVE** ESTATE, PUBLISHED BY A FRENCH PUBLIC-SECTOR CONSORTIUM, UNHELD FOR `631` PASSES — WHILE THIS BASE ALREADY HELD BOTH `apereo` AND `openfun`. 🔴 THE COVERAGE BIAS IS NAMED AND MEASURED: LEARNING-FACING CONSORTIUM CODE IS HELD, ADMINISTRATIVE CONSORTIUM CODE WAS NOT.**
 
 🔵 Enumeration: `evidence/esup-org-enumeration.2026-11-03-p632.tsv` (`131` rows, one API call per page, licence

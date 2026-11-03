@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-03
 ---
 
+
+## 🆕 `p633` — one addition to `APAC`, and an explicit nil for the other three regions
+
+🔵 Read with the live `## Opportunities by region` section below, which this does not replace.
+
+### APAC — national reference data is an unclaimed layer
+
+🟢 Indonesia's education administration publishes at a scale this base had not placed: `547,019`
+educational units (Dapodik Kemendikbud), `4,971` study programmes with selectivity and passing grades, `143`
+SNPMB universities — all packaged permissively and queryable through one `MIT` API
+([`prodhokter/api-datasets-indonesia`](https://github.com/prodhokter/api-datasets-indonesia), byte-read
+`2026-11-03`). 🔵 **The opportunity is the join, not the data**: an advising, placement or dropout-prediction
+engagement in Indonesia can resolve against real institution and programme ground truth on day one instead of
+spending the first sprint building a school registry. 🟡 Gate: the ministry's own redistribution terms are
+unstated in the packaging (`633-E`), so the primary-source check is a prerequisite for a client deliverable, not
+a formality.
+
+🔵 Market context for the region is unchanged from the live section below and was re-queried this pass
+without new numbers: APAC holds roughly `20 %` of global AI-in-education spend, South Korea's `AI Basic Act`
+has been in force since `2026-01-22` and Vietnam's AI law since `2026-03-01`, and education-specific binding
+rules remain thin across the region.
+
+### North America, EMEA, LATAM — nil this pass, stated rather than left silent
+
+🔴 The per-region legs ran for all four regions and returned **no new placed finding** for these three. The
+regulatory and adoption facts they did return are already held in this base, in volume — `Reg. (EU) 2026/1744`
+(`895` hits), the UNESCO IESALC LATAM study (`1,203`), the US `134`-bills-across-`31`-states count (`294`/`352`),
+`California AB 1159` (`521`), South Korea's `AI Basic Act` (`722`). 🔵 This is an informed gap, not coverage:
+the legs were run, the controls discriminated, and the answer was that this base already knew. 🔴 It is also
+`633-C`-caveated — the multi-word in-language legs for all three regions were AND-collapsed, so their nils are
+evidence about the query and not about the regions.
+
 ## 🆕 `p632` — reads `2026-11-03` — market: the legs' **seventh** supply nil and their demand half at **`0 of 21`**, against a supply channel that paid twice
 
 🔵 Figures below are what the named sources published; spreads are reported rather than averaged away.

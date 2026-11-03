@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-03
 ---
 
+
+## 🆕 `p633` — Pattern: APAC student-advising agent grounded in national reference data
+
+🔵 Concrete wiring, all components permissive and byte-verified `2026-11-03`. This exists because the
+missing piece for an Indonesian advising engagement was never the model — it was the join table.
+
+**Problem.** An advising or placement agent that recommends a study programme has to name real institutions,
+real programmes and real selectivity. Hallucinating a passing grade is the one failure a client will not accept.
+
+**Components**
+
+| Role | Component | Licence |
+|---|---|---|
+| Institution + programme ground truth | [`prodhokter/dataset-program-studi-indonesia`](https://github.com/prodhokter/dataset-program-studi-indonesia) (`4,971` programmes w/ quota, demand, selectivity, passing grades) + [`prodhokter/dataset-perguruan-tinggi-indonesia`](https://github.com/prodhokter/dataset-perguruan-tinggi-indonesia) (`143` SNPMB universities) | `MIT` 🟡 `DATA-TERMS-UNSTATED` |
+| School registry + placement | [`prodhokter/dataset-sekolah-indonesia`](https://github.com/prodhokter/dataset-sekolah-indonesia) (`547,019` units) joined on [`prodhokter/dataset-wilayah-indonesia`](https://github.com/prodhokter/dataset-wilayah-indonesia) | `MIT` 🟡 same flag |
+| Zero-ETL access for the prototype | [`prodhokter/api-datasets-indonesia`](https://github.com/prodhokter/api-datasets-indonesia) | `MIT` |
+| In-language quality gate | [`prodhokter/dataset-kbbi-indonesia`](https://github.com/prodhokter/dataset-kbbi-indonesia) (`209,868` KBBI entries) | `MIT` |
+| Learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) — already on this base's foundations shelf | `MIT` |
+| Delivery surface | the institution's existing LMS (Moodle/Open edX rows on `verticals/solutions.md`) | per that shelf |
+
+**Wiring**
+
+1. Load the four `prodhokter` datasets into one store; join school → region on the `wilayah` codes so every
+   learner row is regionally placed. Do **not** call the ministry API per turn — snapshot it, because the
+   data-terms flag below means provenance has to be auditable.
+2. Expose programme lookup, selectivity lookup and school lookup as **three narrow tools**, not one
+   free-text search. The agent must be unable to answer a selectivity question except from a row.
+3. Keep `pykt-toolkit` as the learner-state model and let the agent read its prediction; the recommendation is
+   `learner state × programme selectivity`, which is exactly the pair neither component can compute alone.
+4. Gate every generated Indonesian explanation against the KBBI lexicon before it reaches a student — cheap,
+   and it is the difference between a demo and something a ministry will look at.
+5. Surface inside the institution's LMS rather than as a new destination.
+
+🔴 **Before this ships — the prerequisite, not a footnote.** The `MIT` grants cover the publisher's
+packaging. The rows are Dapodik Kemendikbud's and the Top-1000 LTMPT list's, and their redistribution terms are
+**not stated** anywhere in the repositories (`633-E`). Confirm the ministry's terms from the primary source
+before a client deliverable depends on the data. The pattern is sound either way — the join key and the schema
+are the reusable part — but the data layer may have to be re-sourced under the ministry's own licence.
+
 ## 🆕 `p632` — reads `2026-11-03` — `4` patterns, each wired only from rows byte-verified this pass
 
 🔵 Every repository named below was measured today: grant read from bytes on the metadata-declared default

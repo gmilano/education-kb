@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-03
 ---
 
+
+## 🆕 `2026-11-03` · `p633` — **🔴 THE MANDATED WEB LEGS RETURN AN **EIGHTH** STRAIGHT NIL AND THIS PASS PUTS A DENOMINATOR ON IT: `5 of 5` CANDIDATE ADDRESSES THE GLOBAL AND PER-REGION LEGS SURFACED ARE **ALREADY ON THIS SHELF**, AND EVERY REGULATORY FACT THEY RETURNED IS ALREADY HELD (`895` HITS FOR `Reg. (EU) 2026/1744` ALONE). 🔴 AND THE REASON THE *IN-LANGUAGE* LEGS READ NIL IS NOT THINNESS — IT IS **AND-SEMANTICS**, NOW QUANTIFIED AGAINST AN OR-FORM COUNTERFACTUAL: `3,044` VS `5`, A `609×` COLLAPSE. 🟢 `p613`'s `CC-BY-SA-4.0` READING IS REPRODUCED ON A SECOND DAY BY A SECOND INSTRUMENT. 🟢 `0` NEW AGENT ROWS, STATED RATHER THAN PADDED.**
+
+🔵 Append-only record of what was true on this date. Nothing below this section was edited.
+
+### 🔴 `633-A` — the mandated legs are saturated, with a denominator this base had not put on them
+
+🔵 Every leg the run prompt prescribes was run: the four global legs and the per-region leg for each of
+North America, EMEA, APAC and LATAM. They returned candidate addresses. **Every one was already held.**
+
+| Candidate the legs surfaced | Stars | Platform licence | Byte-read grant | Already on a sell shelf? |
+|---|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `943★` | `NOASSERTION` | 🟡 `CC-BY-SA-4.0` (`1,230 B`) | 🔴 HELD — `agents/top.md`, `intel/market.md`, `intel/trends.md`, `compose/patterns.md` |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `76,497★` | `MIT` | held, read `p612`+ | 🔴 HELD — `5` shelves |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `78,786★` | `MIT` | held | 🔴 HELD — `3` shelves |
+| [`ArturoNereu/AI-Study-Group`](https://github.com/ArturoNereu/AI-Study-Group) | `1,376★` | `NOASSERTION` | 🔴 **no grant payload at any of `5` names, `main` or `master`** | 🔴 HELD — `agents/top.md` |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | `91★` | `MIT` | held | 🔴 HELD — `3` shelves |
+
+🔵 The discriminating control ran in the same batch: a fabricated slug returns HTTP `422` on the metadata
+channel and a fabricated path returns `404` on the byte channel, so the instrument can tell absence from
+presence. The `5 of 5` is a measurement, not a silence.
+
+🟢 **`633-B` — `p613` is independently corroborated.** `p613` recorded the week's most-trending education
+agent repository at `942★` reading `NOASSERTION` on the platform field and `CC-BY-SA-4.0` on bytes. Today the
+same address reads `943★` and the byte-read reproduces exactly — `1,230 B`, title `Creative Commons
+Attribution-ShareAlike 4.0 International`, identical on **both** `main` and `master`. A share-alike grant over
+prompt text: still not shippable as permissive, and still the most-trending thing in the sector.
+
+### 🔴 `633-C` — the in-language legs' nils were manufactured by the query, not the population
+
+🔵 `p623` named this channel's free text **conjunctive**. This pass quantifies it, which changes what a
+nil from a multi-word leg is allowed to mean.
+
+| Query | `total_count` |
+|---|---|
+| `escola` | `422` |
+| `escola professor` | `21` |
+| 🔴 `escola professor turma` | `5` |
+| `onderwijs` | `10` |
+| 🔴 `onderwijs leerling` | `0` |
+| 🔴 `onderwijs leerling school` | `0` |
+| 🟢 `escola OR professor OR turma` | **`3,044`** |
+
+🔴 **Three tokens that the prompt's own phrasing style would join returns `5`; the same three tokens
+OR-joined return `3,044`.** A `609×` collapse. `8 of 11` token legs in this pass's census read `total=0`, and the
+bare-query calibrations prove the tiers behind them are **not** empty. 🟢 The operative: **a multi-word leg's
+nil is evidence about the query, never about the sector** — and every "forty-fourth consecutive nil" this base
+has recorded from a multi-word web leg inherits that caveat.
+
+### 🟢 `633-D` — `0` new agent rows, and that is the finding
+
+🔵 `27` previously-unheld permissive addresses were returned by the census (`repos/trending.md`, same
+date). **None is an AI agent and none was promoted here.** They are school-fee apps, Blogger templates, a baby
+tracker, an Arduino memory game, a quadruped-robot TCC project. Lowering the star floor to `>=3` buys volume and
+no agents. Per the run prompt's own bar, fewer real rows beat padding: this shelf gains nothing this pass and
+says so. 🟢 What the census *did* pay is **reference data**, which is shelved in `repos/foundations.md`.
+
 ## 🆕 `2026-11-03` · `p632` — **🟢 `17` NEW PERMISSIVE ROWS FROM THE IN-REGION SUPPLY CHANNEL ON ITS **SECOND** RUN (`11` + `6`), SO `631-F` IS AN ASSET AND NOT A ONE-OFF. 🟢 ELEVEN OF THEM COME FROM ONE PUBLISHER — A FRENCH HE CONSORTIUM WITH `131` REPOSITORIES THIS BASE HAD NEVER SEEN. 🔴 THE MANDATED LEGS RETURN `0 of 17` FOR A **SEVENTH** STRAIGHT PASS AND THEIR DEMAND HALF IS NOW `0 of 21` — WORSE THAN `p631`'s `1 of 17`.**
 
 🔵 Append-only record of what was true on this date. Nothing below this section was edited.

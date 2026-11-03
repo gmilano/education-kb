@@ -4,6 +4,24 @@ region: Global
 updated: 2026-11-03
 ---
 
+
+## 🆕 `p633` — the supply-side trend this base can now state in two regions
+
+🟢 **Permissive education software is increasingly published by institutions, as estates.** `p632`
+established it in EMEA (`EsupPortail`, a French higher-education consortium: `131` repositories, `52`
+`Apache-2.0`). `p633` reproduces it in APAC with a different asset class (`prodhokter`: `20` repositories, `8`
+`MIT`, national reference data). 🔵 Neither was reachable by keyword search: both were reached by finding one
+address and then querying **its publisher**. For a studio this is a sourcing trend, not a trivia item — the
+permissive supply in this sector is concentrated behind a small number of institution-accountable orgs, and the
+discovery cost is one `org:` query once you have any member of the estate.
+
+🔴 **The counter-trend, measured:** the open-web discovery route is exhausted for this sector. This pass's
+mandated global and per-region legs surfaced `5` candidate addresses and `5 of 5` were already held, an eighth
+consecutive nil. 🔵 The sector's *news* is still moving — agentic advising and enrolment, EU high-risk
+obligations for education deferred to `2027-12-02` by `Reg. (EU) 2026/1744`, the governance-behind-adoption gap
+UNESCO IESALC measured in LATAM — but all of it is already recorded here, and none of it arrived as a new
+buildable repository this pass.
+
 ## 🆕 `p632` — reads `2026-11-03` — current trends
 
 🔵 Each trend is tied to something measured this pass or to a named source from this pass's eight mandated legs

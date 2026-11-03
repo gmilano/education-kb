@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-03
 ---
 
+
+## 🆕 `2026-11-03` · `p633` — **🟢 `p632`'s "QUERY THE PUBLISHER, NOT THE KEYWORD" OPERATIVE IS CONFIRMED IN A **SECOND REGION**: AN INDONESIAN EDUCATION-DATA PUBLISHER WITH `20` REPOSITORIES, `8` OF THEM `MIT`, UNHELD FOR `632` PASSES — AND THE ASSET CLASS IS **NATIONAL REFERENCE DATA**, NOT CODE. 🔴 `8 of 11` TOKEN LEGS READ `total=0` AND THE BARE-QUERY CALIBRATIONS PROVE EVERY ONE OF THOSE NILS WAS **MANUFACTURED BY AND-SEMANTICS** (`3,044` OR-FORM VS `5` AND-FORM). 🟡 AND THE `MIT` GRANTS ON THAT ESTATE SIT OVER **GOVERNMENT DATA WHOSE OWN TERMS ARE UNSTATED** — SHELVED FLAGGED, NOT CLEAN.**
+
+🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below
+it is edited — including `p`-numbered rows this pass reclassifies, which are corrected by **this entry**.
+
+### 🔴 What the census returned, per leg — and why most of it is a query defect
+
+| Leg | Region | Query shape | `total_count` | Rows read | Permissive | 🟢 Accepted | Verdict |
+|---|---|---|---|---|---|---|---|
+| `LATAM-pt-escola` | LATAM | `escola professor turma` | `5` | `5` | `2` | `0` | 🔴 AND-collapsed; bare `escola` is `422` |
+| `LATAM-es-docente` | LATAM | `docente aula educativa` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed, not empty |
+| `LATAM-pt-educacao` | LATAM | `educacao basica escolar` | `1` | `1` | `0` | `0` | 🔴 AND-collapsed |
+| `EMEA-fr-ent` | EMEA | `enseignement scolaire etablissement` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed |
+| `EMEA-de-schule` | EMEA | `schule unterricht lehrer` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed |
+| `EMEA-nl-onderwijs` | EMEA | `onderwijs leerling school` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed; bare `onderwijs` is `10` |
+| `APAC-id-sekolah` | APAC | `sekolah guru siswa` | `7` | `7` | `1` | `0` | 🟡 on-tier but thin |
+| `APAC-id-madrasah` | APAC | `madrasah pesantren santri` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed |
+| `APAC-hi-vidyalaya` | APAC | `vidyalaya shiksha chhatra` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed |
+| `APAC-ja-gakko` | APAC | `gakko kyouiku jugyou` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed (and romaji is the wrong unit) |
+| `NA-en-district` | North America | `school district sis gradebook` | `0` | `0` | `0` | `0` | 🔴 AND-collapsed |
+| 🟢 `CAL-bare-sekolah` | APAC | `sekolah` | `291` | `40` | `15` | 🟢 **`6`** | the pass. Calibration outperformed every token leg |
+| 🟢 `CAL-bare-escola` | LATAM | `escola` | `422` | `40` | `9` | `0` | volume, zero quality — see `633-D` |
+| `CAL-bare-onderwijs` | EMEA | `onderwijs` | `10` | `10` | `1` | `0` | genuinely thin tier, honestly stated |
+
+🔴 **The calibrations beat the legs they were built to calibrate.** `631-E` added bare-query controls to
+tell a thin tier from a token collision; here they became the only productive legs in the run. Three of the four
+mandated regions returned `0` accepted rows from their prescribed in-language leg, and `North America` returned
+`0` from both its web leg and its token leg.
+
+### 🟢 The find — `org:prodhokter`, an Indonesian education reference-data estate (`APAC`)
+
+🔵 Reached exactly the way `632-F` prescribes: a bare token leg (`sekolah`) surfaced two addresses from one
+owner, and the `org:` leg behind them returned the other `18`. Every grant below byte-read today at the
+metadata-declared default branch (`master`), every fabricated-path control `404`, every `MIT` payload `1,068 B`
+— inside the stock-`MIT` band `p616` measured (`1,056`–`1,097 B`).
+
+| Repo | Licence | What it holds | Stars | Pushed |
+|---|---|---|---|---|
+| [`prodhokter/dataset-sekolah-indonesia`](https://github.com/prodhokter/dataset-sekolah-indonesia) | `MIT` (byte-read) | **`547,019`** Indonesian educational units from Dapodik Kemendikbud, `51` unit types, Top-1000 LTMPT ranking | `4★` | `2026-10-11` |
+| [`prodhokter/dataset-perguruan-tinggi-indonesia`](https://github.com/prodhokter/dataset-perguruan-tinggi-indonesia) | `MIT` (byte-read) | `143` universities in SNPMB 2024 with applicant statistics | `4★` | `2026-10-11` |
+| [`prodhokter/dataset-program-studi-indonesia`](https://github.com/prodhokter/dataset-program-studi-indonesia) | `MIT` (byte-read) | `4,971` study programmes with quota, demand, selectivity and passing grades | `4★` | `2026-10-11` |
+| [`prodhokter/dataset-kbbi-indonesia`](https://github.com/prodhokter/dataset-kbbi-indonesia) | `MIT` (byte-read) | `209,868` KBBI dictionary entries with senses and word classes | `4★` | `2026-10-11` |
+| [`prodhokter/dataset-wilayah-indonesia`](https://github.com/prodhokter/dataset-wilayah-indonesia) | `MIT` (byte-read) | administrative regions per Kepmendagri 2025 — the join key for the school data | `4★` | `2026-10-11` |
+| [`prodhokter/api-datasets-indonesia`](https://github.com/prodhokter/api-datasets-indonesia) | `MIT` (byte-read) | public REST API over all of the above | `4★` | `2026-10-11` |
+
+🟡 **`633-E` — the flag, and it is the `620` class again.** Each `LICENSE` is a valid, byte-perfect, stock
+`MIT` payload. But the **content** is the Indonesian ministry's: `dataset-sekolah-indonesia`'s own
+`## Sumber & lisensi` names `Data Pokok Pendidikan (Dapodik), Kemendikbud` and the `Top 1000 LTMPT` list as
+sources and **never states the terms under which they may be redistributed**. The packaging is MIT; the data's
+terms are unstated. 🔴 Do not treat these as permissive *data* on the strength of the `MIT` file — the grant
+licenses the publisher's work, and `620` recorded this exact shape (a stock MIT payload over somebody else's
+copyright). Shelved as `DATA-TERMS-UNSTATED`, and the primary-source check is owed.
+
+🟢 **`633-F` — the generalisation `632-F` opened now holds in two regions.** `p632`: permissive education
+supply is published by **institutions**, and institutions publish **estates**. `p633` reproduces it in APAC with
+a different asset class — EMEA's estate was administrative *code* (`EsupPortail`), APAC's is national *reference
+data* (`prodhokter`). 🔵 The common factor is neither region nor language: it is that the publisher is
+accountable to an institution, so one `org:` leg is worth more than ten keyword legs.
+
+### 🔴 Returned, previously unheld, and NOT shelved — recorded so a later pass does not re-find them
+
+🔵 `21` further permissive addresses were new to this base and were all rejected on relevance. Named so the
+rejection is not re-done: `gludugbanyu/cbt-eschool`, `javawebmedia/websitesekolah`, `ikhsan-rfl/api-sekolah`,
+`fitri-hy/data-sekolah-indonesia`, `amuadib/saku`, `pangeran-droid/webgis-sekolah`, `cipansor/cipansor`,
+`sekolahkit/sekolah-app`, `IshikawaUta/aplikasi-spp-sekolah`, `RiskiAfendi/optimasi-cms-sekolahku`,
+`ibnu-anjang/NBPay`, `muhammadiqbal29-cyber/SIAKAD`, `alpinjolala/SimpleLibrary_Blogger_Templates`,
+`daniellopezcano/I-Escola-de-Inverno-do-IFUSP`, `Escola-Nova-Era/BabyTracker`, `isairey/AppEscritorioControl-Escolar`,
+`devgabrielrodrigues/skills-escola-do-breno`, `escola-mundo-dev/vibe-engineer-tools`, `RenanHornet/FuteEscola`,
+`FrankSteps/arcace-arduino-memory-game`, `Gabrielcalderon-2022327/Desercion_Escolar`, `MathLou/Lui-ABC`,
+`Vinisetim/conecta_barueri`. 🔴 `progressonderwijs/ProgressOnderwijsUtils` (`Apache-2.0` byte-read, `11,357 B`,
+EMEA/Netherlands) is **institution-accountable and on-sector** but its `org:` leg returned only `2` repositories,
+one last pushed `2020` — an estate of one, so it is recorded here rather than shelved.
+
 ## 🆕 `2026-11-03` · `p632` — **🟢 THE IN-REGION SUPPLY CHANNEL IS CONFIRMED ON RUN TWO AND IMPROVED BY CHANGING THE QUERY UNIT: `17` LEGS, `263` ROWS, `107` PERMISSIVE, `17` ACCEPTED — AND `11` OF THE `17` CAME FROM ONE `org:` LEG. 🔴 TWO LEGS WERE KILLED BY **TOKEN COLLISION** RATHER THAN THINNESS, AND THE BARE-QUERY CALIBRATION IS WHAT TOLD THEM APART.**
 
 🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below it is
