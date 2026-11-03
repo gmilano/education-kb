@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — the permissive foundation layer: 15 verified components
+
+These are the building blocks a studio composes *under* an agent — grading engines, the LTI handshake,
+the learning-record spine, the SCORM bridge. Unlike the platform layer (where every incumbent is
+copyleft), **13 of these 15 are permissive**, which is why education work is economically viable for
+Globant at all. Verified this pass with `search/repositories` + `fork:true` and a `422` control; licence,
+stars, push date and archive flag are API fields. 0 of 15 `archived`.
+
+| Component | Repo | Licence | Stars | Pushed | Layer | Why it is a foundation |
+|---|---|---|---|---|---|---|
+| nbgrader | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `BSD-3-Clause` | 1370 | 2026-11-03 | Assessment | Assign and autograde Jupyter notebooks. The default for CS/data-science courses; Jupyter-governed, so maintenance risk is low. |
+| otter-grader | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `BSD-3-Clause` | 162 | 2026-11-01 | Assessment | Python **and R** autograding (UC Berkeley). The one to pick when the course is statistics rather than programming. |
+| Autolab | [`autolab/Autolab`](https://github.com/autolab/Autolab) | `Apache-2.0` | 808 | 2026-11-03 | Assessment | Course management + autograded programming assignments (CMU). Supplies the submission/queue/roster layer the graders lack. |
+| codejail | [`openedx/codejail`](https://github.com/openedx/codejail) | `Apache-2.0` | 477 | 2026-11-03 | Sandboxing | Secure sandbox for running untrusted learner-submitted code. Permissive primitive extracted from an `AGPL-3.0` core — reuse it directly. |
+| lrsql | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `Apache-2.0` | 144 | 2026-11-03 | Learning records | SQL-backed Learning Record Store. **The live LRS choice**: actively pushed, permissive, and the alternative (`LearningLocker`) is `GPL-3.0` and stale since 2024-05. |
+| xAPI-Spec | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `Apache-2.0` | 955 | 2025-07-03 | Learning records | The xAPI specification itself — the data contract for learner activity. A spec, so a 2025 push date is maturity, not rot. |
+| ADL_LRS | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `Apache-2.0` | 334 | 2025-11-14 | Learning records | ADL's reference LRS. Use as a conformance target to test against, with `lrsql` in production. |
+| scorm-again | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `MIT` | 362 | 2026-11-02 | Legacy bridge | Modern SCORM JS runtime. The bridge that lets a 2026 agent drive a client's 15-year-old SCORM catalogue — a recurring migration ask. |
+| pylti1.3 | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `MIT` | 138 | 2024-08-18 | Integration | LTI 1.3 Advantage tool implementation in Python. 🟡 Last push 2024-08 — pin the version and budget maintenance; the LTI spec itself is stable. |
+| ltiauthenticator | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `BSD-3-Clause` | 73 | 2026-11-02 | Integration | LTI authenticator for JupyterHub. The live, maintained path for LTI launch into a notebook environment. |
+| Tsugi | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `Apache-2.0` | 377 | 2026-11-03 | Integration | Framework for hosting LTI tools across any compliant LMS. Written by the LTI spec's own co-author; the fastest route to "works in Moodle *and* Canvas *and* Sakai". |
+| canvasapi | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | `MIT` | 681 | 2026-04-16 | Integration | Python wrapper for the Canvas REST API. Covers bulk/admin operations the Canvas MCP servers do not expose. 🟡 Push 2026-04. |
+| XBlock | [`openedx/XBlock`](https://github.com/openedx/XBlock) | `Apache-2.0` | 471 | 2026-11-02 | Content | Open edX component architecture. Permissive, although **XBlocks published against it are predominantly `AGPL-3.0`** — the contract is free, the ecosystem is not. |
+| Paragon | [`openedx/paragon`](https://github.com/openedx/paragon) | `Apache-2.0` | 141 | 2026-11-03 | UI | Open edX React design system. Permissive UI kit reusable outside Open edX entirely. |
+| fsrs4anki | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `MIT` | 4123 | 2026-08-14 | Learning science | FSRS spaced-repetition scheduler. The strongest evidence-backed retention algorithm available permissively; drop-in for any review/retention feature. |
+
+**The rule these 15 encode.** Education's permissive supply sits in *components*, not in *platforms*. A
+studio that tries to start from a permissive LMS core has a short and small list; a studio that starts
+from a copyleft core the client already runs and assembles permissive components around it has this
+list. Price engagements the second way.
+
+🟡 **Stale but still correct to cite:** `xAPI-Spec` (2025-07), `ADL_LRS` (2025-11), `pylti1.3` (2024-08),
+`canvasapi` (2026-04). Specs and protocol libraries age differently from applications; none is
+`archived`, which is the flag that actually blocks a fork.
+
 ## 🆕 `p637` — the foundational row that cannot be upstreamed, and the measurement channel that cannot see absence
 
 🔴 **`637-A` applied to this file, and it costs this file its most attractive row.**

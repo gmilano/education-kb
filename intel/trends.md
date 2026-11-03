@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — current trends
+
+### 1. MCP has become education's integration substrate — measured, not asserted
+
+The strongest signal in this pass is structural rather than editorial. Searching the GitHub API for
+education agents returns, as *independent* projects: three Canvas MCP servers
+([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) `MIT` 317★,
+[`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) `MIT` 119★,
+`DMontgomery40/mcp-canvas-lms` 104★), a Moodle MCP server
+([`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) `MIT`), and a generic tutoring MCP server
+([`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) `MIT`, ~50 tools). Five
+separate teams independently chose MCP as the boundary to the LMS in the same year. **The architectural
+question "how does an agent reach the LMS?" is settled in practice**, and it is settled in a way that
+keeps the integration permissive while the LMS stays copyleft.
+
+### 2. Pilots → infrastructure
+
+Industry-leader consensus (Campus Technology's 2026 roundup) is that AI stops being a standalone pilot
+and becomes embedded across **admissions, advising and administration**. HolonIQ frames 2026 investment
+as more *selective* — buyers asking for proven instructional value rather than capability demos. For a
+studio this changes the sale from innovation budget to operations budget, with the procurement rigour
+that implies.
+
+### 3. Governance is the gating function, and it lags adoption in every single region
+
+This is the one finding that reproduced in all four regions this pass:
+
+| Region | Adoption | Governance |
+|---|---|---|
+| LATAM (UNESCO IESALC, 200 HEIs / 19 countries) | 87% use AI somewhere; 74% in teaching | **26%** have any formal framework; 55% no AI budget |
+| LATAM schools (Cetic.br, Brazil) | 53% of administrators use AI | **22%** report school guidelines |
+| North America (Gallup / Child Trends) | ~60% of US teachers use AI | Most US public schools lack formal student AI policy |
+| EMEA (vendor survey, 450+ institutions) | — | ~**10%** have formal guidelines |
+| North America + Europe (higher ed) | — | ~70% have or are developing guidance |
+
+1EdTech puts it precisely: the question has moved from *whether* to use AI to *how and under what
+conditions*. 🟡 The EMEA 10% and the teacher-preparedness figure (85% of teachers reportedly feel
+unprepared for generative AI) come from vendor roundups without clear primary citation — directionally
+consistent with the rest, but do not quote them to a client as fact.
+
+### 4. Purpose-built beats general-purpose — now an official recommendation
+
+The OECD's 2026 Digital Education Outlook recommends moving **beyond general-purpose AI tools toward
+purpose-built educational AI** designed to produce durable learning gains. Vendors report the same
+shift: schools moving off generic chatbots onto tools with curriculum alignment and safeguards. This is
+the demand-side justification for curriculum-structure assets — e.g.
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (1,644 concepts,
+2,403 prerequisite edges) — which are what separate a purpose-built tutor from a wrapped chatbot.
+
+### 5. Credentials and skills-based pathways
+
+Digital credentials and skills-based hiring pathways keep gaining ground as employer expectations
+shift; **Pearson agreed to acquire Workera** to verify AI skills, which is the credentialing thesis
+being bought rather than argued. Permissive asset aligned to this:
+[`iblai/lms`](https://github.com/iblai/lms) (`MIT`) — course discovery, competency tracking, credentials.
+
+### 6. Regulation is now dated and jurisdiction-specific — the compliance calendar is the pipeline
+
+Four hard dates emerged this pass, and each is a sales trigger rather than a constraint:
+
+| Date | Jurisdiction | What lands |
+|---|---|---|
+| in force `2026-01-22` | South Korea | AI Basic Act; decrees pending, 2026 is guidance-first |
+| in force `2026-03-01` | Vietnam | Risk-based AI law; education named high-risk (assessment, behavioural) |
+| applies `2026-08-02` | EU | AI Act **Article 50 transparency — already in force, not deferred** |
+| applies `2027-12-02` | EU | Annex III stand-alone high-risk **including education** (deferred from 2026-08-02 by Reg. (EU) 2026/1744) |
+| by `2027-08-02` | EU Member States | Each must host ≥1 national AI regulatory sandbox |
+| applies `2028-08-02` | EU | Annex I embedded high-risk |
+
+🟡 The commonly repeated claim that EU high-risk education obligations bite in August 2026 is **out of
+date** — the Digital Omnibus moved it to 2 December 2027. Article 50 transparency, however, *did* start
+in August 2026, so "nothing applies yet" is equally wrong. Both errors are in circulation.
+
+### 7. What did not show up
+
+- 🔴 **APAC adoption data**: nil for the fourth consecutive pass. Regulatory detail is abundant;
+  behavioural data is absent. Now recorded as a standing gap, not a search miss.
+- 🔴 **Supply-side novelty**: of 59 addresses verified this pass, only 3 were new to this base
+  (`X-isdoingreat/canvas-pilot`, `THU-KEG/MOOCCubeX`, `llaske/sugarizer`). The permissive education
+  corpus is close to fully enumerated here after 637 passes; further supply sweeps have low expected
+  yield and the research effort is better spent on regulation, buyers and composition.
+
 ## 🆕 `p637` — two trends, and one of them is about this base rather than the sector
 
 🔴 **Trend A — `archived` is becoming the decisive liveness signal in education open source, because the

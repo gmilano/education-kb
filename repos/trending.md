@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 (p638) — repository movement
+
+**Yield:** 59 verified, **3 new to this base**, 0 `archived: true` across the publish set.
+
+**New to this base:**
+
+| Repo | Licence | Stars | Pushed | Why it matters |
+|---|---|---|---|---|
+| [`llaske/sugarizer`](https://github.com/llaske/sugarizer) | `Apache-2.0` | 232 | 2026-11-01 | Web implementation of the Sugar platform (OLPC lineage) — permissive primary-education activity layer, runs on any device. Fits the offline/low-connectivity pattern. |
+| [`THU-KEG/MOOCCubeX`](https://github.com/THU-KEG/MOOCCubeX) | 🔴 `GPL-3.0` | 202 | 2023-12-27 | APAC/Tsinghua large-scale knowledge repository for adaptive learning and knowledge tracing. A dataset/graph, not code. 🔴 Stale since 2023-12 and copyleft. |
+| [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | 🔴 `AGPL-3.0` | 125 | 2026-07-31 | Local-first Canvas LMS agent (also recorded in `agents/trending.md`). |
+
+**Live readings on the foundation layer** — all pushed within days, all permissive:
+
+| Repo | Licence | Stars | Pushed |
+|---|---|---|---|
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `BSD-3-Clause` | 1370 | 2026-11-03 |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | `Apache-2.0` | 808 | 2026-11-03 |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `Apache-2.0` | 144 | 2026-11-03 |
+| [`openedx/codejail`](https://github.com/openedx/codejail) | `Apache-2.0` | 477 | 2026-11-03 |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `Apache-2.0` | 377 | 2026-11-03 |
+| [`openedx/paragon`](https://github.com/openedx/paragon) | `Apache-2.0` | 141 | 2026-11-03 |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `BSD-3-Clause` | 73 | 2026-11-02 |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `Apache-2.0` | 471 | 2026-11-02 |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `MIT` | 362 | 2026-11-02 |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `BSD-3-Clause` | 162 | 2026-11-01 |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `MIT` | 4123 | 2026-08-14 |
+
+**Stale but not archived** — these four are cited correctly and none is read-only, so forks remain
+viable; specs and protocol libraries age differently from applications:
+`adlnet/xAPI-Spec` (`Apache-2.0`, 2025-07-03), `adlnet/ADL_LRS` (`Apache-2.0`, 2025-11-14),
+`dmitry-viskov/pylti1.3` (`MIT`, 2024-08-18), `ucfopen/canvasapi` (`MIT`, 2026-04-16).
+
+**Platform-layer confirmations:** `openedx/openedx-platform` (`AGPL-3.0`, 8,218★, 2026-11-03) —
+the pre-rename `openedx/edx-platform` still returns `422` and remains the wrong address to cite;
+`moodle/moodle` (`GPL-3.0`, 7,578★), `instructure/canvas-lms` (`AGPL-3.0`, 6,901★, pushed 2026-04-30),
+`sakaiproject/sakai` (`ECL-2.0`, 1,240★, 2026-11-03), `learningequality/kolibri` (`MIT`, 1,168★).
+
+**Measured rule, restated with this pass's numbers.** Across the 28 platform rows verified, the five
+highest-deployment incumbents are copyleft **5 for 5** (`GPL-3.0`/`AGPL-3.0`), while 13 of the 15
+foundation-layer components are permissive. Education's permissive supply is in *components*, not
+*platforms* — which is why the viable engagement shape is permissive components assembled around a
+copyleft core the client already operates.
+
 ## 🆕 `2026-11-03` · `p637` — **🔴 `0` UNHELD ADDRESSES FOR THE TWELFTH CONSECUTIVE PASS, AND THIS PASS MEASURED WHY THE SEARCH-API SUBSTITUTE CANNOT BE RUN OVER THE WHOLE SURFACE: `30` REQUESTS PER MINUTE AGAINST `988` PUBLISHED ADDRESSES = `≈33` MINUTES. 🟢 `p636`'s `20`-ROW COHORT RE-READ: `20 of 20` RESOLVE, `20 of 20` `MIT`, `0` DRIFT.**
 
 🔴 **`github trending education AI 2026` via WebSearch returned `0` unheld addresses for the twelfth

@@ -1,0 +1,8 @@
+method	target	result	usable_for_absence	note
+curl -sI	github.com/moodle/moodle (real)	403	no	prescribed by ingest instruction; returns 403 for repos that EXIST
+gh api repos/{slug}	moodle/moodle (real)	403	no	session GitHub scope blocks non-attached repos
+gh api repos/{slug}	fabricated control	403	no	identical to real -> cannot distinguish presence from absence
+search/repositories repo:X fork:true	moodle/moodle (real)	total_count=1	yes	SOUND ORACLE
+search/repositories repo:X fork:true	fabricated control	HTTP 422	yes	control returned 422 in this pass's sweep
+search/repositories repo:X fork:true	openedx/edx-platform (pre-rename)	HTTP 422	yes	true absence: canonical slug is openedx/openedx-platform
+gh stdout behaviour	422 error body	written to STDOUT not STDERR	n/a	NEW p638: absence tests checking output-emptiness silently record error JSON as data; check EXIT STATUS

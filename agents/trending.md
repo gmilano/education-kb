@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 (p638) — what moved
+
+**Yield, stated first:** 59 addresses verified, **3 new to this base** — so this entry is mostly a
+current-readings snapshot, not discovery. After 637 passes the permissive education agent supply is
+close to fully enumerated here.
+
+**New to this base (1 of 3 is an agent):**
+
+| Agent | Repo | Licence | Stars | Pushed | Note |
+|---|---|---|---|---|---|
+| canvas-pilot | [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | 🔴 `AGPL-3.0` | 125 | 2026-07-31 | Local-first Canvas agent that learns a course's recurring assignment workflow. Copyleft — study, don't ship. |
+
+**Cohort drift on agents this base already held** (prior reading → today):
+
+| Agent | Licence | Stars today | Pushed | Movement |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `MIT` | **317** | 2026-11-03 | **Flat at 317** — 10th observation. The 272→317 climb recorded through p636 has stopped; this confirms p637's reading rather than extending the series. |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `MIT` | 94 | 2026-11-03 | Pushed today; LMS-independent ITS over MCP, ~50 tools |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `MIT` | 106 | 2026-11-03 | Pushed today; still the only MIT AI-native LMS in this base |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `Apache-2.0` | 330 | 2026-11-03 | Pushed today (APAC) |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 none | 944 | 2026-11-03 | Largest agent row by stars, still **no licence grant** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION` | 340 | 2026-11-03 | Pushed today; licence still undeclared in metadata |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `CC0-1.0` | 136 | 2026-10-23 | WWW '25 oral; peer-reviewed multi-agent learning-path framework |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | `MIT` | 81 | 2026-11-02 | APAC, curriculum-aligned K-9 RAG tutor |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `MIT` | 119 | 2026-10-27 | Read-only Canvas MCP — the pilot-safe variant |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 24 | 2026-11-03 | EMEA/Germany, pushed today |
+
+**The pattern worth recording:** of 16 education agents verified, **5 carry no usable licence grant
+(31%), and that set includes the two largest by stars** (944★ and 2,061★). Star count and reusability
+are close to uncorrelated in this sector — sort candidate lists by licence before stars.
+
+**Method note (supersedes the ingest instruction for this base).** `curl -sI` cannot verify URLs in this
+session: it returns `403` for repositories that exist. `gh api repos/{slug}` returns `403` identically
+for real and fabricated slugs, so it cannot detect absence either. The sound oracle is
+`gh api -X GET search/repositories -f q='repo:<slug> fork:true'` — `total_count` 1 for live, HTTP `422`
+for absent — with `fork:true` mandatory (a fork reads as absent without it) and a fabricated control in
+every sweep. 🔴 New this pass: **`gh` writes the `422` error body to `stdout`, not `stderr`**, so an
+absence test that checks for empty output silently records the error JSON as data. Check the **exit
+status**, not output emptiness. That defect was caught by the control in this pass's own sweep.
+
 ## 🆕 `2026-11-03` · `p637` — **🔴 NOTHING IS TRENDING THIS WEEK THAT THIS BASE DOES NOT ALREADY HOLD: `14 of 14` ADDRESSES AND `14 of 14` FACTS RETURNED HELD, THE FIRST PASS NIL ON **BOTH** HALVES. 🔴 AND THE WEEK'S REAL MOVEMENT IS BACKWARDS — `8` ROWS IN THE STALE TAIL ARE `archived: true`, `4` OF THEM UNFLAGGED. 🟢 `p636`'s COHORT: `20 of 20` LIVE, `0` DRIFT, `317★` HEAD FLAT.**
 
 🔴 **`637-B` — the mandated legs are now nil on both halves, and that is the trend.** `635-E` recorded

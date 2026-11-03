@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — platform layer: what you can customise, and what it costs you in licence terms
+
+28 platforms verified this pass (`search/repositories` + `fork:true`, `422` control; 0 `archived`).
+The split below is the single most decision-relevant fact in this file.
+
+### The incumbents are copyleft, 5 for 5
+
+| Platform | Repo | Licence | Stars | Pushed | Region strength |
+|---|---|---|---|---|---|
+| Moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` | 7578 | 2026-10-30 | Global — the most deployed LMS on earth; dominant in EMEA + LATAM public sector |
+| Open edX | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | 8218 | 2026-11-03 | Global — MOOCs, national platforms. ⚠️ Canonical slug is `openedx/openedx-platform`; the pre-rename `openedx/edx-platform` returns `422` |
+| Canvas | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | 6901 | 2026-04-30 | North America — dominant in US higher ed |
+| Chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` | 1020 | 2026-11-03 | LATAM + EMEA — strong Spanish/French public-sector base |
+| ILIAS | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` | 507 | 2026-11-03 | EMEA — German-speaking universities, public administration |
+
+**Consequence:** on any engagement where the client already runs one of these, the viable commercial
+shape is an agent or tool attaching over **REST, LTI or xAPI** — a network boundary that does not
+trigger copyleft on your own code. In-process plugins (Moodle plugins, XBlocks) do.
+
+### Permissive platform alternatives — available, but smaller
+
+| Platform | Repo | Licence | Stars | Pushed | Fit |
+|---|---|---|---|---|---|
+| Kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `MIT` | 1168 | 2026-11-02 | **Offline-first** learning platform for low-connectivity deployment. Real LATAM/Africa field history. The strongest permissive platform in this base. |
+| Sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `ECL-2.0` | 1240 | 2026-11-03 | Higher-ed LMS under the Educational Community Licence — an Apache-2.0 derivative, i.e. **permissive**. The only incumbent-scale non-copyleft LMS. |
+| Oppia | [`oppia/oppia`](https://github.com/oppia/oppia) | `Apache-2.0` | 6963 | 2026-11-03 | Interactive lesson platform with built-in pedagogy; strong for basic-education and underserved-learner programmes. |
+| Project NOMAD | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | `Apache-2.0` | 42059 | 2026-11-01 | Offline-first knowledge/education server (Wikipedia + book corpora). Largest permissive address in the sector by stars. |
+| Flat | [`netless-io/flat`](https://github.com/netless-io/flat) | `MIT` | 6442 | 2026-10-30 | APAC — interactive virtual classroom client (web/Windows/macOS), Agora-based. |
+| OpenVidu | [`OpenVidu/openvidu`](https://github.com/OpenVidu/openvidu) | `Apache-2.0` | 2141 | 2026-11-03 | Self-hosted real-time video/audio — the permissive live-classroom primitive. Spanish-origin, strong EMEA/LATAM fit. |
+| Marsha | [`openfun/marsha`](https://github.com/openfun/marsha) | `MIT` | 151 | 2026-11-01 | EMEA — LTI learning-content management system (France Université Numérique). Permissive and LTI-native. |
+| Richie | [`openfun/richie`](https://github.com/openfun/richie) | `MIT` | 318 | 2026-11-03 | EMEA — CMS for building course catalogue/portal front ends over Open edX. |
+| Academico | [`academico-sis/academico`](https://github.com/academico-sis/academico) | `MIT` | 411 | 2026-10-28 | School management (Laravel/Filament) for small and mid institutions — permissive SIS. |
+| IBL LMS | [`iblai/lms`](https://github.com/iblai/lms) | `MIT` | 208 | 2026-11-03 | Skills-intelligence platform: course discovery, competency tracking, credentials. Aligns with the 2026 skills-based-credential trend. |
+| Sugarizer | [`llaske/sugarizer`](https://github.com/llaske/sugarizer) | `Apache-2.0` | 232 | 2026-11-01 | Web Sugar platform (OLPC lineage) for primary education on any device. **New to this base.** |
+| Tutor | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `AGPL-3.0` | 1131 | 2026-11-03 | The standard Docker distribution for operating Open edX. Operationally near-essential; licence is `AGPL-3.0`. |
+
+### Education ERP / SIS — the Odoo-style customisable systems
+
+| System | Repo | Licence | Stars | Pushed | Note |
+|---|---|---|---|---|---|
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `NOASSERTION` | 905 | 2026-11-02 | Education ERP built natively on **Odoo** — the closest analogue to "Odoo for ERP" in this sector. 🔴 Licence undeclared in API metadata; byte-read `LICENSE` before any engagement. |
+| RosarioSIS | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `GPL-2.0` | 650 | 2026-11-03 | Student Information System for school management; mature, multi-language. |
+| i-Educar | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `GPL-2.0` | 723 | 2026-10-29 | **LATAM / Brazil** — the largest Brazilian free-software school-management system, used by municipal education networks. Highest-value LATAM public-sector reference in this file. |
+| openSIS Classic | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 none declared | 349 | 2026-10-26 | SIS with commercial editions. No licence grant in metadata — treat as unavailable until verified. |
+
+### Other live platforms worth knowing
+
+| Platform | Repo | Licence | Stars | Pushed | Note |
+|---|---|---|---|---|---|
+| Frappe LMS | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 `AGPL-3.0` | 3369 | 2026-11-03 | Integrates with the Frappe/ERPNext stack — relevant when the client already runs ERPNext. |
+| LearnHouse | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` | 2446 | 2026-11-03 | Modern next-gen learning platform, very actively developed. |
+| ClassroomIO | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 `AGPL-3.0` | 1737 | 2026-11-03 | Customer-training platform — the B2B/academy use case rather than schools. |
+| OpenOLAT | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION` | 449 | 2026-11-03 | EMEA — Swiss/German university LMS. Licence undeclared in metadata (project states Apache-2.0; verify by byte-read). |
+| INGInious | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 `NOASSERTION` | 243 | 2026-11-03 | EMEA — secure containerised automated exercise assessment (UCLouvain). The pick when submitted code must run safely. |
+| Adapt Framework | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 `GPL-3.0` | 632 | 2026-11-02 | Authoring toolkit for responsive, accessible, multi-language HTML5 courses. |
+| MOOCCubeX | [`THU-KEG/MOOCCubeX`](https://github.com/THU-KEG/MOOCCubeX) | 🔴 `GPL-3.0` | 202 | 2023-12-27 | **APAC** — Tsinghua large-scale knowledge repository for adaptive learning and knowledge tracing. A *dataset/graph*, not a platform. 🔴 Stale since 2023-12. **New to this base.** |
+| cn-math-taxonomy | [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 `NOASSERTION` | 6376 | 2026-11-03 | **APAC** — curriculum-aligned knowledge graph for Chinese maths/English/physics: 1,644 concepts, 2,403 prerequisite edges, 6,723 items. Rare curriculum-structure asset; licence undeclared. |
+
 ## 🆕 `p637` — the largest address in this file is read-only, and the platform question gains a third column
 
 🔴 **`637-A` lands hardest here.** This file publishes

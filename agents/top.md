@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — education-specific agent layer: 16 verified rows, and it is MCP-shaped
+
+**How these were verified.** The ingest instruction prescribes `curl -sI`. In this session that is
+unusable: it returns `403` for repositories that exist (`github.com/moodle/moodle` → `403`), and
+`gh api repos/{slug}` returns `403` identically for real and fabricated slugs, so neither can see
+absence. Every row below was read with `gh api -X GET search/repositories -f q='repo:<slug> fork:true'`,
+which returns `total_count` 1 for a live repository and HTTP `422` for one that does not exist. A
+fabricated control slug was run in the same sweep and returned `422`. `fork:true` is required — without
+it a real fork reads as absent. Licence, stars, push date and `archived` are the API's own fields, not
+inferred from prose. **0 of these 16 are `archived: true`.**
+
+**The structural finding, and it is a buying signal.** The education agent layer that exists in 2026 does
+not replace the LMS — it *wraps* it over a network boundary. Three independent Canvas MCP servers, a
+Moodle MCP server and a generic tutoring MCP server all appeared as separate projects, and 7 of the 16
+rows are MIT. That matters for licensing: the incumbent LMS cores are copyleft without exception
+(Moodle `GPL-3.0`, Canvas `AGPL-3.0`, Open edX `AGPL-3.0`, Chamilo `GPL-3.0`, ILIAS `GPL-3.0`), but an
+agent that talks to them over REST/LTI does not inherit that. **The permissive opportunity in education
+is at the boundary, not in the core.**
+
+| Agent | Repo | Licence | Stars | Pushed | Region | What it actually does |
+|---|---|---|---|---|---|---|
+| canvas-mcp (Sachdev) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `MIT` | 317 | 2026-11-03 | North America | Canvas LMS MCP server, up to 102 tools + 8 agent skills, for students and educators. The most complete LMS boundary in this base. |
+| tutor-mcp | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `MIT` | 94 | 2026-11-03 | Global | MCP server that turns any LLM into an Intelligent Tutoring System; ~50 tools. LMS-independent pedagogy layer. |
+| Mentingo | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `MIT` | 106 | 2026-11-03 | EMEA | AI-native LMS with AI Mentor and role-play; self-hosted Moodle alternative. The only **MIT AI-native LMS** found. |
+| GenMentor | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `CC0-1.0` | 136 | 2026-10-23 | Global | LLM multi-agent framework for goal-oriented personalised learning paths. Peer-reviewed (WWW '25 oral). |
+| ai-shifu | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `Apache-2.0` | 330 | 2026-11-03 | APAC | AI-led teaching and Q&A driven by typed scripts rather than free chat. |
+| EduAgent / AI_Tutor | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | `MIT` | 81 | 2026-11-02 | APAC | RAG tutor purpose-built for Chinese grades 1–9, aligned to national curriculum. |
+| canvas-mcp (read-only) | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `MIT` | 119 | 2026-10-27 | North America | **Read-only** MCP server for Canvas. The low-risk variant for a first client demo. |
+| canvas-pilot | [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | `AGPL-3.0` | 125 | 2026-07-31 | North America | Local-first Canvas agent that learns each course's recurring assignment workflow. 🔴 `AGPL-3.0` — do not link into client code. **New to this base.** |
+| moodle-ai-skill-navigator | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | `GPL-3.0` | 259 | 2026-10-25 | Global | In-process Moodle plugin: tutoring, quizzes, mind maps, RAG over course material. 🔴 `GPL-3.0`, and in-process means the plugin contract binds. |
+| spbstu-mcp | [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | `MIT` | 24 | 2026-11-02 | EMEA | MCP server over a university Moodle plus mail — the Moodle-side counterpart to canvas-mcp. |
+| education-agent-skills | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 none declared | 944 | 2026-11-03 | Global | 165 evidence-grounded skills for teachers and school leaders. Largest by stars — but **no licence grant, so not reusable**. |
+| Advising App | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION` | 340 | 2026-11-03 | North America | AI conversational assistant for student advising/retention in higher ed. Licence needs a byte-read before any engagement. |
+| PageLM | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | 2061 | 2026-10-29 | Global | Open NotebookLM-style study platform: turns material into quizzes, notes, flashcards. |
+| Claudemy | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | `MIT` | 605 | 2026-10-29 | Global | Generates a full course from a topic — course-authoring agent, not a tutor. |
+| Tutorbot-Spock | [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 none declared | 56 | 2024-11-04 | North America | Tutoring chatbot built on learning-science principles (Rice/OpenStax). 🔴 Stale since 2024-11 and unlicensed — cite as research, not as a dependency. |
+| feedbacksystem | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 24 | 2026-11-03 | EMEA | Personalised AI student feedback, TH Mittelhessen. Small but live; useful as a German-market reference. |
+
+**Licence split of the agent layer, measured on these 16:** 9 permissive (7 `MIT`, 1 `Apache-2.0`,
+1 `CC0-1.0`), 2 copyleft (`AGPL-3.0`, `GPL-3.0`), **5 with no usable grant** (`NOASSERTION` or none).
+🔴 The no-grant share is 31% and it includes the two largest rows by stars (944 and 2,061) — in this
+sector popularity and reusability are close to uncorrelated, so star count is the wrong sort key for a
+studio. Sort by licence first.
+
+**Honest yield.** Of 59 addresses verified this pass across all shelves, only **3** were absent from this
+base at `HEAD` (`X-isdoingreat/canvas-pilot`, `THU-KEG/MOOCCubeX`, `llaske/sugarizer`). After 637 passes
+the discoverable permissive supply in education is close to exhausted; the rows above are therefore
+mostly **re-verified current readings** (licence, stars, liveness, archive flag), not new discovery. The
+marginal value of another supply sweep is low and this is the measurement that says so.
+
 ## 🆕 `p637` — reads `2026-11-03` — **🔴 `637-A`: THIS BASE GRADES LIVENESS BY PUSH DATE, AND PUSH DATE DOES NOT DETECT ARCHIVAL. A `45`-ROW STALE COHORT RETURNS `8` `archived: true` (`17.8%`) AGAINST THIS BASE'S OWN PUBLISHED `3 of 192` (`1.6%`) — AN `11×` UNDERSTATEMENT CONCENTRATED IN THE STALE TAIL. `4 of 8` CARRY NO `archived` TOKEN ANYWHERE, INCLUDING THE `504★` LARGEST ADDRESS IN ITS AXIS AND THE ROW THIS BASE ITSELF CALLS *"THE ROW A STUDIO WOULD MOST WANT"*. 🔴 `637-C`: THIS PASS'S OWN CENSUS MANUFACTURED A FALSE ABSENCE AND `627-A` PREDICTED IT. 🔴 MANDATED LEGS NIL ON **BOTH** HALVES FOR THE FIRST TIME. EIGHT REGISTERED (`637-A`…`637-H`).**
 
 🔵 Every reading below came from `gh api -X GET search/repositories -f q='repo:X fork:true'`, each run

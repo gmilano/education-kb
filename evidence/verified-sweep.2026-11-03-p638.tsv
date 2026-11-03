@@ -1,0 +1,61 @@
+slug	license	stars	pushed	archived	description
+ArnaudGuiovanna/tutor-mcp	MIT	94	2026-11-03	false	An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive scienc
+vishalsachdev/canvas-mcp	MIT	317	2026-11-03	false	Canvas LMS MCP server — up to 102 tools and 8 agent skills for students & educators. Works with Claude, Cursor
+Selleo/mentingo	MIT	106	2026-11-03	false	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Th
+GeminiLight/gen-mentor	CC0-1.0	136	2026-10-23	false	[WWW '25 Oral - GenMentor] Official code of our paper "LLM-powered Multi-agent Framework for Goal-oriented Lea
+Zenglian990/AI_Tutor_Release	MIT	81	2026-11-02	false	EduAgent: Open-Source RAG AI Tutor for K-9 Education. 国内首个专为1-9年级量身定制的开源 RAG AI 教辅智能体
+ai-shifu/ai-shifu	Apache-2.0	330	2026-11-03	false	Get AI to teach and answer questions for you - just by typing!
+boyuchengz/canvas-mcp	MIT	119	2026-10-27	false	Read-only MCP server that connects Claude, ChatGPT and other AI assistants to Canvas LMS.
+X-isdoingreat/canvas-pilot	AGPL-3.0	125	2026-07-31	false	Local-first Canvas LMS AI agent that learns each course's recurring assignment workflow and reuses it through 
+Berserk-hub150/moodle-ai-skill-navigator	GPL-3.0	259	2026-10-25	false	AI-powered Moodle plugin for tutoring, quizzes, mind maps, RAG course materials and more.
+canyongbs/advisingapp	NOASSERTION	340	2026-11-03	false	Advising App® by Canyon GBS® is an AI-powered conversational assistant for staff, student success platform, an
+GarethManning/education-agent-skills	NOASSERTION	944	2026-11-03	false	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders—pedagogy, learning science, c
+kad-xyz/spbstu-mcp	MIT	24	2026-11-02	false	MCP server for SPbPU (Polytech) students: dl.spbstu.ru Moodle, university mail and openedu.ru for Claude
+luffycodes/Tutorbot-Spock	NONE	56	2024-11-04	false	An Education Tutoring Chatbot based on Learning Science Principles powered by Large Language Models
+CaviraOSS/PageLM	NOASSERTION	2061	2026-10-29	false	PageLM is a community driven version of NotebookLM & a education platform that transforms study materials into
+assafkip/claudemy	MIT	605	2026-10-29	false	Claudemy: an open-source alternative to Udemy and Coursera. Give Claude a topic, it researches the web and bui
+thm-mni-ii/feedbacksystem	NOASSERTION	24	2026-11-03	false	Intelligent, personalized feedback for students using artificial intelligence
+jupyter/nbgrader	BSD-3-Clause	1370	2026-11-03	false	A system for assigning and grading notebooks
+ucbds-infra/otter-grader	BSD-3-Clause	162	2026-11-01	false	A Python and R autograding solution
+autolab/Autolab	Apache-2.0	808	2026-11-03	false	Course management service that enables auto-graded programming assignments.
+yetanalytics/lrsql	Apache-2.0	144	2026-11-03	false	A SQL-based Learning Record Store
+adlnet/xAPI-Spec	Apache-2.0	955	2025-07-03	false	The xAPI Specification describes communication about learner activity and experiences between technologies.
+adlnet/ADL_LRS	Apache-2.0	334	2025-11-14	false	ADL's Open Source Learning Record Store (LRS) is used to store learning data collected with the Experience API
+openedx/XBlock	Apache-2.0	471	2026-11-02	false	Framework for building custom learning components that run in the Open edX LMS!
+openedx/codejail	Apache-2.0	477	2026-11-03	false	Secure code execution
+openedx/paragon	Apache-2.0	141	2026-11-03	false	💎 An accessible, theme-ready design system built for learning applications and Open edX.
+dmitry-viskov/pylti1.3	MIT	138	2024-08-18	false	LTI 1.3 Advantage Tool
+jupyterhub/ltiauthenticator	BSD-3-Clause	73	2026-11-02	false	A JupyterHub authenticator for LTI
+tsugiproject/tsugi	Apache-2.0	377	2026-11-03	false	Tsugi Admin, Developer, and Management Console (pls join the dev list)
+jcputney/scorm-again	MIT	362	2026-11-02	false	A modern SCORM JavaScript runtime library.
+ucfopen/canvasapi	MIT	681	2026-04-16	false	Python API wrapper for Instructure's Canvas LMS. Easily manage courses, users, gradebooks, and more.
+open-spaced-repetition/fsrs4anki	MIT	4123	2026-08-14	false	A modern Anki custom scheduling based on Free Spaced Repetition Scheduler algorithm
+learningequality/kolibri	MIT	1168	2026-11-02	false	Kolibri Learning Platform: the offline app for universal education
+sakaiproject/sakai	ECL-2.0	1240	2026-11-03	false	Sakai is a freely available, feature-rich technology solution for learning, teaching, research and collaborati
+oppia/oppia	Apache-2.0	6963	2026-11-03	false	A free, online learning platform to make quality education accessible for all.
+moodle/moodle	GPL-3.0	7578	2026-10-30	false	Moodle - the world's open source learning platform
+openedx/openedx-platform	AGPL-3.0	8218	2026-11-03	false	The Open edX LMS & Studio, powering education sites around the world!
+instructure/canvas-lms	AGPL-3.0	6901	2026-04-30	false	The open LMS by Instructure, Inc.
+frappe/lms	AGPL-3.0	3369	2026-11-03	false	Easy to Use, 100% Open Source Learning Management System
+openfun/marsha	MIT	151	2026-11-01	false	:clapper: An opensource LTI Learning Content Management System (LCMS)
+openfun/richie	MIT	318	2026-11-03	false	:pencil: An opensource CMS to build education portals
+academico-sis/academico	MIT	411	2026-10-28	false	Laravel & Filament-based school management platform for small and medium institutions
+iblai/lms	MIT	208	2026-11-03	false	Skills intelligence platform — discover courses, track competencies, earn credentials, and accelerate workforc
+openeducat/openeducat_erp	NOASSERTION	905	2026-11-02	false	Comprehensive Open Source ERP for Educational Institutes
+portabilis/i-educar	GPL-2.0	723	2026-10-29	false	Lançando o maior software livre de educação do Brasil!
+francoisjacquet/rosariosis	GPL-2.0	650	2026-11-03	false	RosarioSIS Student Information System for school management. GitLab mirror: https://gitlab.com/francoisjacquet
+Crosstalk-Solutions/project-nomad	Apache-2.0	42059	2026-11-01	false	Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps
+netless-io/flat	MIT	6442	2026-10-30	false	Project flat is the Web, Windows and macOS client of Agora Flat open source classroom.
+OpenVidu/openvidu	Apache-2.0	2141	2026-11-03	false	OpenVidu Platform: self-hosted real-time video and audio for your apps, built on LiveKit and mediasoup
+llaske/sugarizer	Apache-2.0	232	2026-11-01	false	Sugarizer is a web implementation of the Sugar platform to run on any device or browser
+overhangio/tutor	AGPL-3.0	1131	2026-11-03	false	The Docker-based Open edX distribution designed for peace of mind
+chamilo/chamilo-lms	GPL-3.0	1020	2026-11-03	false	Chamilo is a learning management system focused on ease of use and accessibility
+learnhouse/learnhouse	AGPL-3.0	2446	2026-11-03	false	The Next-gen Open Source learning platform for everyone ✨
+classroomio/classroomio	AGPL-3.0	1737	2026-11-03	false	ClassroomIO is an  Intelligent Customer Training Platform that helps SaaS companies use education to grow thei
+ILIAS-eLearning/ILIAS	GPL-3.0	507	2026-11-03	false	GitHub repository for official ILIAS release branches and development branches (trunk)
+OpenOLAT/OpenOLAT	NOASSERTION	449	2026-11-03	false	Learning Management System OpenOlat
+INGInious/INGInious	NOASSERTION	243	2026-11-03	false	INGInious is a secure and automated exercises assessment platform using your own tests, also providing a plugg
+THU-KEG/MOOCCubeX	GPL-3.0	202	2023-12-27	false	A large-scale knowledge repository for adaptive learning, learning analytics, and knowledge discovery in MOOCs
+xiaoyang111222/cn-math-taxonomy	NOASSERTION	6376	2026-11-03	false	数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。
+adaptlearning/adapt_framework	GPL-3.0	632	2026-11-02	false	A toolkit for creating responsive, accessible, multilanguage HTML5 e-learning courses.
+OS4ED/openSIS-Classic	NONE	349	2026-10-26	false	openSIS Student Information System (verified separately)

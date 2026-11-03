@@ -4,6 +4,152 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — seven composition recipes, named repos and wiring
+
+Every repo named below was verified live this pass (licence, stars, push date, archive flag from the
+GitHub API; `422` control run). Licences are stated because they determine whether Globant can ship the
+result.
+
+### Pattern 1 — Canvas-attached teaching/study copilot `North America` `EMEA`
+
+**Buyer:** US higher-ed institution already running Canvas (the NA incumbent).
+
+```
+Claude / any LLM
+      │  MCP
+      ├── vishalsachdev/canvas-mcp   (MIT, 317*, 102 tools + 8 skills)  ← primary boundary
+      ├── ArnaudGuiovanna/tutor-mcp  (MIT,  94*, ~50 tools)             ← pedagogy / ITS layer
+      └── ucfopen/canvasapi          (MIT, 681*)                        ← bulk + admin ops MCP lacks
+                │  REST (network boundary — no copyleft inheritance)
+                └── instructure/canvas-lms  (AGPL-3.0, client-operated)
+```
+
+**Why it works commercially:** `canvas-lms` is `AGPL-3.0`, but you never link it — you call its REST
+API. All three components you ship are `MIT`. **De-risking the first demo:** swap the primary boundary
+for [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`MIT`, read-only) so the pilot
+cannot mutate grades or enrolments. Promote to the read-write server only after sign-off.
+🔴 Do **not** reach for [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) —
+it is `AGPL-3.0`; useful to study, not to ship.
+
+### Pattern 2 — Autograding service for CS / data-science courses `Global`
+
+```
+autolab/Autolab        (Apache-2.0, 808*)   ← submissions, queue, roster, feedback UI
+      │
+      ├── jupyter/nbgrader      (BSD-3-Clause, 1370*)  ← notebook autograding (Python)
+      ├── ucbds-infra/otter-grader (BSD-3-Clause, 162*) ← Python AND R (pick for statistics courses)
+      └── openedx/codejail      (Apache-2.0, 477*)      ← sandbox for untrusted learner code
+            + LLM feedback step (rubric-constrained, scored offline, never auto-released)
+```
+
+**Fully permissive, end to end** — `Apache-2.0` + `BSD-3-Clause` only, so this can ship as a managed
+Globant service with no reciprocal obligations. `codejail` is the piece people miss: it is the
+permissive sandbox primitive carved out of an `AGPL-3.0` platform, so you get Open edX's hardening
+without Open edX. When arbitrary code execution is the core risk, substitute
+[`INGInious/INGInious`](https://github.com/INGInious/INGInious) (containerised, EMEA/UCLouvain) —
+🔴 but its licence reads `NOASSERTION` in API metadata, so byte-read `LICENSE` first.
+
+### Pattern 3 — Offline-first deployment `LATAM` `APAC`
+
+**Buyer:** ministry or NGO programme in a low-connectivity region. Directly addressed by the LATAM
+87%-adoption / 26%-governance gap where connectivity is also the constraint.
+
+```
+learningequality/kolibri          (MIT, 1168*)    ← learning platform, offline by design
+      + Crosstalk-Solutions/project-nomad (Apache-2.0, 42059*) ← offline knowledge server (Wikipedia, books)
+      + local model served on-device (no egress)
+      + llaske/sugarizer           (Apache-2.0, 232*)  ← primary-education activity layer
+```
+
+Both core pieces are permissive, and Kolibri has genuine field history in the region. The local-model
+requirement is not a preference here — it is what makes the deployment work without bandwidth, and it
+sidesteps cross-border data transfer questions at the same time.
+
+### Pattern 4 — Learning-record spine for analytics and audit `Global`
+
+```
+any LMS / agent ──xAPI──► yetanalytics/lrsql   (Apache-2.0, 144*, pushed 2026-11-03)
+                             │  contract: adlnet/xAPI-Spec (Apache-2.0, 955*)
+                             │  conformance target: adlnet/ADL_LRS (Apache-2.0, 334*)
+                             └── legacy catalogue: jcputney/scorm-again (MIT, 362*)
+```
+
+🔴 **Do not use `LearningLocker/learninglocker`** — `GPL-3.0` and last pushed 2024-05-30. `lrsql` is the
+live, permissive replacement and was pushed today. `scorm-again` is the pattern's quiet money-maker: it
+lets a 2026 agent drive a client's decade-old SCORM catalogue instead of re-authoring it, which is a
+recurring migration ask.
+
+**This pattern doubles as the compliance artefact** for Patterns 6 and 7 — an xAPI statement stream *is*
+the record-keeping and human-oversight evidence that EU Annex III and US district policies demand.
+
+### Pattern 5 — Vendor-neutral LTI agent: build once, sell into every LMS `Global`
+
+```
+your agent
+   │
+   ├── dmitry-viskov/pylti1.3   (MIT, 138*)          ← LTI 1.3 Advantage handshake (Python)
+   │     or jupyterhub/ltiauthenticator (BSD-3, 73*) ← if the target is a notebook environment
+   └── tsugiproject/tsugi       (Apache-2.0, 377*)   ← LTI tool host/console
+         │  LTI 1.3 (network boundary)
+         └── Moodle | Canvas | Open edX | Sakai | Blackboard  (any compliant LMS)
+```
+
+**The strategic pattern in this file.** LTI is the only boundary that works across every incumbent, so
+one permissive build addresses the whole copyleft incumbent set at once — Moodle (`GPL-3.0`), Canvas
+(`AGPL-3.0`), Open edX (`AGPL-3.0`), Chamilo (`GPL-3.0`), ILIAS (`GPL-3.0`). Tsugi is written by an
+LTI specification co-author, which is the shortest path to real conformance.
+🟡 `pylti1.3` last pushed 2024-08-18 — pin the version and budget maintenance; the LTI 1.3 spec itself
+is stable, so this is low-risk staleness.
+
+### Pattern 6 — Greenfield permissive LMS with native AI `Global`
+
+When there is no incumbent to attach to and the client wants to own the stack outright:
+
+```
+Selleo/mentingo   (MIT, 106*, pushed 2026-11-03)  ← AI-native LMS, AI Mentor + role-play
+   or sakaiproject/sakai (ECL-2.0, 1240*)         ← higher-ed scale, Apache-derived permissive licence
+   or oppia/oppia        (Apache-2.0, 6963*)      ← interactive-lesson pedagogy, basic education
+      + openedx/paragon  (Apache-2.0, 141*)       ← permissive React design system (usable standalone)
+      + Pattern 4 for records
+```
+
+`mentingo` is the **only MIT AI-native LMS** found in this base, and `sakai`'s `ECL-2.0` is the only
+permissive licence on an incumbent-scale LMS. 🟡 The honest trade-off: permissive cores in education are
+smaller and younger than the copyleft incumbents. Recommend Pattern 1 or 5 when an incumbent already
+exists, and Pattern 6 only when greenfield is genuinely on the table.
+
+### Pattern 7 — EU AI Act high-risk conformity wrapper `EMEA`
+
+**Trigger:** admissions, assessment and exam-scoring AI are Annex III high-risk. Stand-alone systems
+must conform by **`2027-12-02`** (Reg. (EU) 2026/1744), while **Article 50 transparency already applies
+since `2026-08-02`**. That is roughly a 13-month runway on the first and an existing obligation on the
+second.
+
+```
+assessment/admissions AI
+   ├── human-in-the-loop override UI          ← Annex III requires staff can monitor, intervene,
+   │                                             override and shut down; this is a UI deliverable
+   ├── yetanalytics/lrsql (Apache-2.0)        ← immutable decision + intervention log (Pattern 4)
+   ├── technical documentation + risk register ← the paperwork is the deliverable
+   └── ucfopen/UDOIT (GPL-3.0, 117*)          ← accessibility conformance checking
+         🔴 GPL-3.0: run as a separate service over HTTP, do not link into client code
+```
+
+Sell the override UI and the audit trail together — Annex III's operative requirement is that a
+*qualified human* can intervene, which is a product surface, not a policy document.
+🟡 **Date confidence:** 10 independent secondary sources read this pass converge on `2027-12-02`; a
+primary read is still missing because `eur-lex.europa.eu` does not resolve in this session. Confirm
+against the Official Journal before contracting to the date.
+
+### Regional quick-reference
+
+| Region | Start from | Because |
+|---|---|---|
+| North America | Pattern 1, then Pattern 4 | Canvas incumbency + four states now mandating district AI policy |
+| EMEA | Pattern 7, then Pattern 5 | `2027-12-02` Annex III deadline on assessment/admissions; EU-origin permissive stack available |
+| APAC | Pattern 5, then Pattern 3 | Fragmented LMS landscape rewards vendor-neutral LTI; TEQSA/CHED plans are dated obligations |
+| LATAM | Pattern 3 + governance package | 87% adoption vs 26% governance (UNESCO IESALC); connectivity constraints; accreditation lever |
+
 ## 🆕 `p637` — two recipes: the archive-aware diligence gate, and the writable-boundary build
 
 ### 🟢 `P637-1` — the two-channel liveness gate, runnable in one pass over the stale tail
