@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p631` — reads `2026-11-03`, commit `2026-11-03` — **🟢 `629-K` IS CLOSED: THIS FILE IS NOW INSIDE A CURRENCY GATE, AND THE FIX NEEDED NO NEW CODE — ONLY THE CANONICAL HEADER FORM IT HAD NEVER USED. 🟢 A SECOND PRODUCTIVE DISCOVERY CHANNEL EXISTS — THE SEARCH API RUN **IN-REGION** — AND IT PAID `6` ROWS ON ITS FIRST RUN WHILE THE MANDATED REGIONAL WEB LEGS WENT NIL A **SIXTH** TIME. 🔴 AND THE LEGS ARE NOW SATURATED ON **BOTH** HALVES: SUPPLY `0 of 19`, DEMAND `1 of 17`.**
+
+🟢 **`631`'s headline, and it is a channel result rather than a row count.** Six passes have run the mandated
+`AI education {region} 2026 adoption regulation players` legs and got **`0` repository addresses** every time.
+This pass searched the **supply side itself** in-region — GitHub's search API, in-language, per region — and
+got `46` rows, `16` permissive, **`6` accepted**, plus one generalisation no web leg has ever produced:
+🔴 **Chinese education supply exists at scale and is copyleft-or-ungranted** (`0 of 10` permissive;
+[`edusoho`](https://github.com/edusoho/edusoho) `1,866★` has **no grant at `20` filenames**), with
+[`StarTraining`](https://github.com/zhistaredu/StarTraining) (`Apache-2.0`, `1,239★`) the single exception.
+
+🟢 **`28` new permissive rows, every grant byte-read on the metadata-declared default branch** — `22` from six
+shelf holes (typing/keyboard literacy `7`, classroom captioning `5`, interactive fiction `4`, school
+administration `2`, teacher evaluation `2`, ear training `1`, financial aid `1`) and `6` from the new regional
+channel. 🔴 **`7` of `17` tiers stayed declared holes** rather than being filled: e-portfolio, school
+nutrition, adult literacy, prison education, school safety, sight-reading and mother-tongue each returned
+nothing granted and on-tier, and each says so.
+
+🔴 **Three of this pass's own instruments manufactured false results, and the controls caught all three.**
+(`631-B`) A `10`-name licence-filename probe reported `NO-GRANT` for two repositories that **do** carry grants
+— `LICENCE.md` and a bare lowercase `license` — a **`2 of 25` = `8 %`** false-absence rate on verdicts that
+look exactly like real absences. (`631-E`) The first regional census manufactured **`8` nils out of `9` legs**
+through over-narrow queries; the bare-query calibration proved the nil was the query, not the region.
+(`631-A`) `gh api` writes its `422` error body to **stdout**, so an emptiness test did not fire and the error
+JSON was written into data columns — the same class as `630-D`, now **two consecutive passes**.
+
+🔴 **`631-C`/`631-D` — the licence grader is wrong three different ways, and this pass built the second one.**
+`p630` recorded that leftmost-match misgrades dual-licensed payloads. The obvious fix — union of all titles —
+is wrong in the **opposite** direction, because `GPL-3.0` §13 **names** the AGPL and `MPL-2.0`'s Exhibit names
+Secondary Licenses. Head-title is wrong too: [`vgwb/Antura`](https://github.com/vgwb/Antura)'s head title is
+`Creative Commons` while its **code** grant is `BSD-2-Clause` at byte `560`, under **two** institutional
+holders (`TH Köln`, `Video Games Without Borders` — an EMEA read under `622-K`).
+🟢 **`P631-0`: a licence payload is not a label, it is a document with scope.** Antura is a **split grant by
+asset class** — `CC-BY-4.0` content, `BSD-2-Clause` code — and in education **the content is the product**, so
+a column reading `BSD-2-Clause` actively misinforms. The grading unit is `(family, asset class)` and it is
+read, not matched. 🔵 One mechanical rule survives: `GPL-3.0` ≈ `35,147 B` head `GNU GENERAL PUBLIC LICENSE`;
+`AGPL-3.0` ≈ `34,522 B` head `GNU AFFERO…`.
+
+🟢 **`629-K` closed, and this file's own defect with it.** `629-J` found this README nine passes stale and
+`629-K` asked for it to be put inside a currency gate, calling that unverifiable in-session. 🟢
+`gate_register.py` was already general — `REGISTER SHELF [SHELF ...]`, pass number from any
+`^## 🆕 \`pN\`` header — so the wiring is a **second invocation of the existing gate** with `README.md` in the
+register position. 🔵 The reason it could not simply be added: this file used `## Pass 629 — …`, which that
+regex does not match, so a naive wiring would have reported `P418-NO-HEADER` instead of currency. The header
+form is corrected above. 🔴 It is committed **wired and unrun**: `make hooks` is refused in this session
+(`[Code from External]`, `p631` ✗ — now `14` of the last `15` passes), which is itself registered as `631-L`,
+the third distinct way a gate can fail to be a control.
+
+🔴 **The gap register was nine passes stale** (`p622` against shelves at `p630`) and `gate-register-currency`
+exists precisely to catch that. Both this file and `intel/open-gaps.md` are brought to `p631`.
+
+🟢 **What a studio should take from this pass.** Three regional plays are dated and specific: North Carolina's
+Session Law `2026-41` requires a state model policy by **`2026-12-31`** — eight weeks out — with local policies
+by `2027-06-30` and teacher training by `2028-06-30`, repeatable across the `31` US states now legislating;
+the EU's Digital Omnibus moved Annex III education obligations to **`2027-12-02`**, which is long enough to
+**design** for conformity rather than retrofit it; and in APAC an engagement that plans to fork the local
+platform is wrong by default — the buildable surface is **interoperation with state platforms**, the pattern
+[`tchMaterial-parser`](https://github.com/happycola233/tchMaterial-parser) (`MIT`, `7,660★`) already
+demonstrates. 🔴 And across all of them: the four largest education platforms are **all copyleft**, while `27`
+of `28` rows accepted today are narrow permissive tools — so "put an agent on the LMS" crosses a copyleft
+boundary by construction. 🟡 `MPL-2.0` ([`rsschool-app`](https://github.com/rolling-scopes/rsschool-app),
+`10,392★`) is the new middle term: fork it, keep your IP, publish only the files you modify.
+
+🔵 Evidence for every figure above: `evidence/websearch-legs.2026-11-03-p631.tsv`,
+`evidence/tier-hole-census.2026-11-03-p631.tsv`, `evidence/grant-byteread.2026-11-03-p631.tsv`,
+`evidence/instrument-calibration.2026-11-03-p631.tsv`, `evidence/region-supply-census.2026-11-03-p631.tsv`.
+
 ## Pass 629 — reads 2026-11-03, commit 2026-11-03 — **🔴 THIS FILE WAS NINE PASSES STALE AND NO GATE NOTICED: ITS HEAD SECTION READ `Pass 619` AND ITS FRONTMATTER `2026-11-02` WHILE ALL EIGHT SHELVES WERE AT `p628`. 🟢 `p628`'s HEADLINE TREND IS WITHDRAWN AND REPLACED — "SUPPLY IS SATURATED" MEASURED THE **CHANNEL**, NOT THE SECTOR: THE MANDATED LEGS WENT NIL A FOURTH TIME (`16 of 17` HELD) WHILE A CENSUS OF THE SHELF'S OWN HOLES RETURNED **`6` NEW PERMISSIVE REPOSITORIES THE SAME DAY**. 🔴 `628-G` CORRECTED ON TWO INSTRUMENTS: THE `repo:` CHANNEL'S NEGATIVE IS AN HTTP `422` THAT CONFLATES *ABSENT* WITH *NO PERMISSION*, AND `raw`'s BRANCH ALIASING IS **ASYMMETRIC**. 🟢 AND THAT `422` IS A **RENAME SIGNATURE**, WHICH GIVES `p628`'s `96`-STRONG "ALIVE" BUCKET A PROCEDURE INSTEAD OF A LABEL. ELEVEN REGISTERED (`629-A`…`629-K`).**
 
 🟢 **`629-J` — the defect in this file, and it is a missing control rather than a typo.** The eight shelves have

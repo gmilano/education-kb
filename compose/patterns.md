@@ -4,6 +4,151 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p631` — reads `2026-11-03` — `4` patterns, each wired only from rows byte-verified this pass
+
+🔵 Every repository named below was measured today: grant read from bytes on the metadata-declared default
+branch, existence confirmed with a fabricated control in the same run. 🔴 No pattern crosses a copyleft
+boundary without saying so, and no ungranted row is used as a capability.
+
+### 🟢 `631-M1` — Deaf and hard-of-hearing classroom access, on-device (`6–8` weeks)
+
+**The gap.** The shelf scored `hearing impaired` at 🔴 **`0`** before today — `sign language` was covered,
+live **captioning** was not. Institutions buy captioning as a per-minute cloud service, which puts minors'
+classroom audio on a third-party processor and makes the cost scale with teaching hours.
+
+**The stack, all byte-read today:**
+
+1. **[`lgy1027/matrix-live-diarizer`](https://github.com/lgy1027/matrix-live-diarizer)** (`MIT`, `1,063 B`,
+   `133★`) is the spine, and it is chosen for its **privacy posture**, not its stars: transcription with
+   speaker diarization where **audio never leaves the machine**. Diarization is the part that matters in a
+   classroom — a transcript that cannot say whether the teacher or a pupil spoke is not a record of a lesson.
+2. **[`XimilalaXiang/DeLive`](https://github.com/XimilalaXiang/DeLive)** (`Apache-2.0`, `11,346 B`, `268★`)
+   supplies **system-audio capture plus multi-provider ASR** behind one interface. Take it for the provider
+   abstraction: it is what lets a district swap a local model for a cloud one per-site without a rewrite.
+3. **[`yuxino/Mimi`](https://github.com/yuxino/Mimi)** (`MIT`, `1,062 B`, `790★`) adds **live translation** of
+   those captions — the same component serves a deaf pupil and a newly-arrived pupil, which is how one budget
+   line covers two mandates.
+4. **[`Zerg00s/Live-Captions-Saver`](https://github.com/Zerg00s/Live-Captions-Saver)** (`MIT`, `1,071 B`,
+   `115★`) is the shortcut where the institution **already runs Teams**: export the captions it is already
+   generating instead of deploying anything. Offer it as the two-week option.
+
+**How they wire.** `DeLive`'s capture + ASR abstraction runs as a local service; `matrix-live-diarizer` owns
+the transcript and the speaker labels; `Mimi` subscribes to the caption stream for translation; output goes to
+a per-lesson record keyed to the timetable. `Live-Captions-Saver` is a parallel ingest path for Teams-only
+sites, writing into the same record.
+
+🔴 **What is deliberately *not* in this recipe.**
+[`Mentra-Community/MentraOS`](https://github.com/Mentra-Community/MentraOS) (`Apache-2.0`, `2,397★`, default
+branch 🔴 **`dev`**) is the most capable row in the tier and the **only one whose grant names an institution**
+(`Mentra Labs, Inc.` → North America). 🟢 It belongs here as a **priced hardware option** — captions in the
+pupil's field of view rather than on a shared screen — and not as the baseline, because it makes the
+deployment a device-procurement programme. 🔴 Pin a commit: the default branch is `dev`.
+
+**Placement.** North America (`MentraOS`, institutional read). The rest is unplaced and labelled so.
+
+### 🟢 `631-M2` — Narrative-based learning that a teacher can author (`8–10` weeks)
+
+**The gap.** `interactive fiction` scored 🔴 **`0`**. Branching-scenario learning — ethics cases, clinical
+triage, language immersion, safeguarding training — is normally bought as a proprietary authoring suite, and
+the content dies with the vendor.
+
+**The stack, all `MIT`, all byte-read:**
+
+1. **[`curiousdannii/parchment`](https://github.com/curiousdannii/parchment)** (`1,074 B`, `491★`) is the
+   **runtime**, and it is the load-bearing choice: it plays standard Z-machine/Glulx story files in a browser
+   with no install. Those formats are decades old and have multiple independent interpreters, so **the content
+   outlives the runtime** — the same property that puts `LiaScript` on the foundations shelf.
+2. **[`jeremyfa/loreline`](https://github.com/jeremyfa/loreline)** (`1,071 B`, `312★`) is the **authoring
+   language**: branching narrative and state as plain text, so a scenario diffs and code-reviews like source
+   and a subject-matter expert's edit is a pull request.
+3. **[`Kirilllive/tuesday-js`](https://github.com/Kirilllive/tuesday-js)** (`1,067 B`, `698★`) is the
+   **no-toolchain path** — a browser visual-novel editor for the teacher who will never run a build step.
+   Two authoring tiers, one runtime.
+4. **[`zenstory-ai/novel-to-game`](https://github.com/zenstory-ai/novel-to-game)** (`1,080 B`, `960★`) drafts
+   scenarios from source documents **with citations**. 🔵 The citation behaviour is the educational
+   requirement, not a feature: an ungrounded generated case study is unusable in assessment.
+
+**How they wire.** Source material (a policy, a case file, a set text) goes through `novel-to-game` to a cited
+draft; the draft lands in `loreline` for an SME to edit as text, or in `tuesday-js` for a teacher to edit
+visually; both compile to story files that `parchment` serves. Completion and branch choices emit `xAPI` to
+whatever LRS the institution runs — the LMS is never forked.
+
+🔴 **The licence trap this pattern must not walk into (`T6`).** The code above is `MIT`. The **content** you
+build on may not be: [`vgwb/Antura`](https://github.com/vgwb/Antura) is the specimen — `BSD-2-Clause` code and
+🔴 `CC-BY-4.0` **content**, two holders (`TH Köln`, `Video Games Without Borders`). 🟢 In education the content
+*is* the product, so grade every content dependency as `(family, asset class)` and budget the attribution.
+
+### 🟢 `631-M3` — Foundational-skills drill with a measurement layer (`4–6` weeks)
+
+**The gap.** `typing/keyboard literacy` scored 🔴 **`0`**, and it is the deepest hole the census found — seven
+accepted rows. It matters more than it sounds: keyboard fluency gates **every** computer-based assessment, and
+a pupil who cannot type is measured as a pupil who cannot write.
+
+**The stack:**
+
+1. **[`susam/quickqwerty`](https://github.com/susam/quickqwerty)** (`MIT`, `1,103 B`, `81★`) is the baseline
+   lesson progression, and the reason to pick it over flashier rows is **maintenance**: `2008`→`2026`, the
+   longest-lived instance on this base. A drill app a school deploys must still work in five years.
+2. **[`linkage-rs/linkage`](https://github.com/linkage-rs/linkage)** (`MIT`, `1,067 B`, `161★`, 🔴 default
+   branch **`core`**) is the desktop/offline path for labs without reliable connectivity. Pin a commit.
+3. **[`tanciaku/ttypr`](https://github.com/tanciaku/ttypr)** (`MIT`, `1,066 B`, `76★`) and
+   **[`alexylon/clavirio`](https://github.com/alexylon/clavirio)** (`Apache-2.0`, `11,357 B`, `35★`) are the
+   terminal paths — they drop into an existing CS lab image with no browser stack.
+4. **[`denisk20/programmer-dvorak`](https://github.com/denisk20/programmer-dvorak)** (`Apache-2.0`,
+   `11,323 B`, `112★`) covers the **accessibility/RSI** case: alternative layouts, which a speed-focused
+   product silently excludes.
+5. **[`cwklurks/codesprint`](https://github.com/cwklurks/codesprint)** (`MIT`, `1,064 B`, `61★`) is the
+   upper-secondary bridge — typing practice **on real algorithm problems**, so motor fluency and CS content
+   accrue in one drill.
+6. **[`Talljack/echo-type`](https://github.com/Talljack/echo-type)** (`MIT`, `1,064 B`, `320★`) extends the
+   same keystroke loop to **listening, speaking, reading and writing** for language learning.
+
+**How they wire.** One progression model and one event schema (keystroke, latency, error class) shared across
+all six front ends; the web, desktop and terminal clients are deployment choices, not products.
+`codesprint` and `echo-type` emit the same events against different content. The analytics layer sees one
+stream, and `xAPI` carries it to the LMS.
+
+🔴 **Not in this recipe:** [`ryanatkn/earbetter`](https://github.com/ryanatkn/earbetter) (ear training) is the
+adjacent drill and is `The Unlicense` — a public-domain dedication with **no explicit patent grant**. 🟡 Fine
+for most buyers, worth naming before a procurement review finds it.
+
+### 🟢 `631-M4` — School system of record with a bounded-copyleft core (`10–12` weeks)
+
+**The gap.** `fee management` and `financial aid` both scored 🔴 **`0`**, and `631-F` refuted the leg's claim
+that no permissive education ERP exists.
+
+**The stack, and the licence posture is the design decision:**
+
+1. **[`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app)** (🟡 `MPL-2.0`,
+   `16,724 B`, `10,392★`) is the **process** core — cohorts, mentor assignment, task distribution, cross-check
+   review rounds, certificates. 🟡 File-level weak copyleft: link from proprietary code freely; **modified
+   `MPL` files stay `MPL`**; no hosted-service trigger. 🟢 This is the one licence where *fork it* and *keep
+   our IP* are both true, and the obligation is pricable — publish diffs to the files you touched.
+2. **[`adigunsherif/Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System)**
+   (`MIT`, `1,069 B`, `395★`) or **[`yungifez/skuul`](https://github.com/yungifez/skuul)** (`MIT`, `471★`,
+   held) is the **registry and fees** layer where a fully permissive core is required instead.
+3. **[`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker)** (`MIT`, `1,088 B`,
+   `115★`) owns **scholarships, bursaries and deadlines** — the first row this base has in that tier.
+4. **[`lilynex/libris-flow`](https://github.com/lilynex/libris-flow)** (`MIT`, `1,063 B`, `63★`) adds library
+   circulation, and pairs with the held `MCLD/greatreadingadventure` reading-programme ledger.
+5. **[`FadyCoding/EPEPEP-`](https://github.com/FadyCoding/EPEPEP-)** (`Apache-2.0`, `11,356 B`, `5★`) handles
+   **marking at scale** — one instructor against many student projects. Small, and the only on-tier row.
+
+**How they wire.** `rsschool-app` owns the process and the calendar; the `MIT` registry owns pupils, staff and
+money, exposed over its ORM schema; `opportunity-tracker` runs as a service against the registry's pupil
+records; `EPEPEP-` consumes assessment submissions and returns scored queues. 🔴 Keep the `MPL` boundary at a
+**service** edge, not a file edge: integrate over HTTP and the weak-copyleft obligation never reaches your
+code at all.
+
+🔴 **Named and excluded:** [`gtn/exaport`](https://github.com/gtn/exaport) (e-portfolio) and
+[`edusoho/edusoho`](https://github.com/edusoho/edusoho) (`1,866★`) are **ungranted** — no payload at `20`
+licence filenames. 🔴 There is nothing to build on, whatever the star count, and **the e-portfolio tier stays a
+declared hole** rather than being filled with an ungranted row.
+
+**Placement.** Unplaced (`631-G`: the leg that returned `rsschool-app` was the English query, not a French
+one). For an **APAC** variant substitute [`zhistaredu/StarTraining`](https://github.com/zhistaredu/StarTraining)
+(`Apache-2.0`, `1,239★`) — the single permissive platform in a tier that is otherwise copyleft or ungranted.
+
 ## 🆕 `p630` — reads `2026-11-03` — `4` patterns, each wired only from rows byte-verified this pass
 
 🔵 Every repository named below was measured today: grant read from bytes on the metadata-declared default

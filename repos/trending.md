@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p631` — **🟢 A SECOND PRODUCTIVE DISCOVERY CHANNEL EXISTS AND IT IS THE SEARCH API RUN **IN-REGION**: `46` ROWS, `16` PERMISSIVE, `6` ACCEPTED ON ITS FIRST RUN. 🔴 AND THREE OF THIS PASS'S OWN INSTRUMENTS MANUFACTURED FALSE RESULTS — `2` FALSE ABSENCES AND `8` FALSE NILS — EACH CAUGHT BY A CONTROL IN THE SAME RUN.**
+
+🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below it is
+edited — including `p`-numbered rows this pass reclassifies, which are corrected by **this entry**, not in place.
+
+### 🟢 What the tier-hole census returned, per tier
+
+| Tier (shelf score before) | Returned | Permissive on-tier | Unheld | 🟢 Accepted |
+|---|---|---|---|---|
+| typing / keyboard literacy (`0`) | `24` | `9` | `7` | 🟢 **`7`** |
+| classroom captioning / HoH access (`0`) | `12` | `8` | `5` | 🟢 **`5`** |
+| interactive fiction / narrative (`0`) | `12` | `6` | `5` | 🟢 **`4`** |
+| school fees / administration (`0–1`) | `12` | `5` | `2` | 🟢 **`2`** |
+| peer / teacher evaluation at scale (`1–2`) | `12` | `4` | `2` | 🟢 **`2`** |
+| solfège / ear training (`0`) | `8` | `1` | `1` | 🟢 **`1`** |
+| financial aid / scholarship (`0`) | `12` | `3` | `1` | 🟢 **`1`** |
+| music education (`9`) | `7` | `2` | `0` | — already held (`p630`) |
+| 🔴 e-portfolio (`0`) | `3` | `0` | `1` | 🔴 `0` — only return is **ungranted**; tier stays a hole |
+| 🔴 school meals / nutrition (`0`) | `9` | `6` | `6` | 🔴 `0` — all six are a **McDonald's-MCP contest cohort** |
+| 🔴 adult literacy (`3`) | `12` | `3` | `0` | 🔴 `0` — every permissive return is *AI*-literacy curriculum |
+| 🔴 prison / correctional education (`0`) | `2` | `1` | `1` | 🔴 `0` — lexical match only |
+| 🔴 school safety (`0`) | `2` | `0` | `0` | 🔴 `0` — both ungranted |
+| 🔴 sight-reading (`0`) | `7` | `0` | `0` | 🔴 `0` — only real instrument is `GPL-3.0` |
+| 🔴 mother tongue / multilingual (`2`) | `1` | `0` | `0` | 🔴 `0` |
+| 🔴 early childhood / preschool (`1`) | `3` | `2` | `2` | 🔴 `0` — a site template and a preschool **map**, not learning |
+| 🔴 braille (`9`) | `1` | `0` | `1` | 🔴 `0` — real ESP32 trainer, **ungranted** |
+| **TOTAL** | **`139`** | **`50`** | **`34`** | 🟢 **`22`** |
+
+🟢 **Fourth consecutive payout:** `p619` `20`, `p629` `6`, `p630` `13`, `p631` **`22`**. 🔴 **`7` of `17` tiers
+stay declared holes** rather than being filled with rows that pass every mechanical filter.
+
+### 🟢 What the **new** in-region supply census returned (`631-F`)
+
+| Leg | Bare `total_count` | Returns | Permissive | 🟢 Accepted |
+|---|---|---|---|---|
+| APAC (ja/zh channels) | — / `177` | `22` | `4` | 🟢 **`3`** |
+| LATAM (pt) | — | `6` | `2` | `0` — both **already held** (`Universidade-Livre` lines, `21,006★` + `1,427★`) |
+| LATAM (es) | — | `1` | `1` | `0` — held |
+| 🔴 EMEA (de) | `2` | `1` | `0` | `0` — **calibrated** thin tier |
+| 🔴 EMEA (ar) | `4` | `0` | `0` | `0` — **calibrated** thin tier |
+| 🔴 EMEA (Africa curriculum) | `5` | `0` | `0` | `0` — **calibrated** thin tier |
+| 🔴 APAC (in / NCERT) | `3` | `4` | `0` | `0` — **calibrated** thin tier |
+| 🔴 APAC (id) | — | `0` | `0` | `0` |
+| 🔴 "EMEA-fr" | — | `12` | `9` | `1` — 🔴 **not a regional leg at all** (`631-G`) |
+
+🔴 **The placed finding the web legs never produced in six passes:** the Chinese platform tier is
+**`0 of 10` permissive** — [`edusoho/edusoho`](https://github.com/edusoho/edusoho) (`1,866★`) ungranted,
+[`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) (`1,567★`) and
+[`zijian-optics/SolaireEPDA`](https://github.com/zijian-optics/SolaireEPDA) `AGPL-3.0`,
+[`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) `GPL-3.0` (default branch
+`dev`) — with [`zhistaredu/StarTraining`](https://github.com/zhistaredu/StarTraining) (`Apache-2.0`, `1,239★`)
+the single permissive exception.
+
+### 🔴 This pass's own instrument failures, each caught by a control
+
+| id | Instrument | What it manufactured | Caught by |
+|---|---|---|---|
+| `631-A` | metadata-channel emptiness test | `gh api` writes its `422` body to **stdout**, so the error JSON was written into the **branch and holder columns as data** | the fabricated address `p631-control/this-repo-does-not-exist` |
+| `631-B` | `10`-name licence-filename probe | **`2` false absences in `25` reads (`8 %`)** — `LICENCE.md` and bare lowercase `license` | a `20`-name re-probe on the same branches |
+| `631-C` | union-of-all-titles licence grader, **built this pass** to fix `p630` | grades `GPL-3.0` as `GPL`+`AGPL` (§13 **names** the AGPL) and `MPL-2.0` as `MPL`+`GPL` (Exhibit names Secondary Licenses) | the payloads' own head titles at byte `0` |
+| `631-D` | head-title rule | **also wrong**: `Antura`'s head title is `Creative Commons` while its **code** grant is `BSD-2-Clause` at byte `560` | byte-offset listing of every family title |
+| `631-E` | in-region census, 3-term AND queries | **`8` false nils out of `9` legs** — bare counts were `2`–`11`, so the nil was the query | bare-query `total_count` calibration before publishing any absence |
+| `631-G` | regional language filter | GitHub search is **accent-insensitive**; the `EMEA-fr` leg **was the English query** and returned `ossu/computer-science` at `210,676★` | the returned rows' own English descriptions |
+
+🟢 **`631-J` corroborates `630-J` on a fresh sample:** `4 of 36` addresses (`11 %`) default to neither `main`
+nor `master` — `linkage-rs/linkage` → `core`, `Mentra-Community/MentraOS` → `dev`, `oppia/oppia` → `develop`,
+`five-plus-one/AI-Marker-Suite` → `dev`. `p630` measured `12 %` on `25`.
+
+🔴 **`631-K` bounds `622-K`:** of `28` accepted rows, only **`3`** name an institution in the grant
+(`Mentra Labs, Inc.`, `ElemeFE`, and `TH Köln` + `Video Games Without Borders` on `Antura`). `Apache-2.0`
+payloads carry a holder only when the author fills the appendix — `1 of 4` did. **The hole census yields
+capability, almost never region.**
+
 ## 🆕 `2026-11-03` · `p630` — **🟢 `18` ADDRESSES NEW TO THIS BASE OUT OF SIX TIER QUERIES THE SHELF HAD NEVER RUN, `13` ACCEPTED. 🔴 AND THE TREE-ENUMERATION ORACLE `p624` BUILT THIS BASE'S ABSENCE CLAIMS ON **CANNOT RUN IN THIS SESSION** — HTTP `403` ON EVERY THIRD-PARTY ADDRESS.**
 
 🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below it is

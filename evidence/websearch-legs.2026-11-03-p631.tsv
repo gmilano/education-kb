@@ -1,0 +1,11 @@
+leg	shape	query	addresses_surfaced	held	new	verdict
+1	global	top open source AI agents education 2026 github MIT	5	5	0	NIL — 500-AI-Agents-Projects, awesome-ai-agents-2026, OpenClaw, OpenHands, CrewAI: all held; no education-specific permissive agent named
+2	global	github trending education AI 2026	10	10	0	NIL — DeepTutor, OpenMAIC, ai-engineering-hub, LLMs-from-scratch, ppt-master + 5 radar/digest bots, all held
+3	global	open source platform education ERP CRM MIT Apache	7	7	0	NIL — openeducat_erp(LGPL-3.0), erpnext(GPL-3.0), ofbiz, corteza, huly, krayin, idurar: all held. Leg ASSERTED no MIT/Apache education ERP exists; REFUTED on this base (see 631-F)
+4	global	AI education industry trends 2026	0	0	0	NIL on supply. Demand: three 2026 market bases (11.4 / 12.5 / 12.3 USD B) — spread 1.1x, vs p630's 3.1x on a different source set
+5	region:North America	AI education North America 2026 adoption regulation players	0	0	0	NIL on supply. Demand: 134 bills/31 states, NC SL 2026-41, SUNY fall-2026, Gallup 60% teachers, UNESCO 70% institutions — ALL HELD
+6	region:EMEA	AI education EMEA 2026 adoption regulation players	0	0	0	NIL on supply. Demand: Digital Omnibus high-risk move to 2027-12-02/2028-08-02 — HELD (independent corroboration). Pearson/Workera — NEW
+7	region:APAC	AI education APAC 2026 adoption regulation players	0	0	0	NIL on supply. Demand: Korea AI Basic Act 2026-01-22 + grace period, Vietnam education high-risk, TEQSA action plans, AI Verify — ALL HELD
+8	region:LATAM	AI education LATAM 2026 adoption regulation players	0	0	0	NIL on supply. Demand: UNESCO LAC Observatory + partner list, CONALEP/DGETI pilot, ECLAC ILIA, IDB note — ALL HELD
+TOTAL	-	4 global + 4 regional	19	19	0	SUPPLY: 0/19 unheld, SIXTH consecutive nil (p625-p631: 0/28, 0/12, 0/11, 1/17, 0/11, 0/19)
+TOTAL-DEMAND	-	demand half, first time counted	17	16	1	DEMAND: 1/17 unheld. The legs are now measured saturated on BOTH halves

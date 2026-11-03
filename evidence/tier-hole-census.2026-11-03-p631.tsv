@@ -1,0 +1,19 @@
+tier	shelf_keyword_score_before	query_run	returned	permissive_on_tier	unheld	accepted	note
+e-portfolio	0	eportfolio stars:>10	3	0	1	0	gtn/exaport is the only on-tier return; NONE metadata and no grant at 20 filenames -> REJECTED ungranted. Tier STAYS a hole.
+typing/keyboard literacy	0	typing-tutor stars:>10 + typing practice stars:>40	24	9	7	7	Deepest payout of the pass. 18-year-maintained instance (quickqwerty, 2008-2026).
+sight-reading	0	sight-reading stars:>10	7	0	0	0	NIL permissive. midicoach (GPL-3.0) is the only real on-tier instrument -> copyleft flag.
+solfege / ear-training	0	ear-training stars:>10	8	1	1	1	earbetter (Unlicense). Grant found only at bare lowercase `license` - see 631-B.
+music-education	9	music-education stars:>20	7	2	0	0	sightkick and erhu-annotator both ALREADY HELD (p630). Tier is covered.
+interactive fiction / narrative	0	interactive-fiction stars:>40	12	6	5	4	parchment is the canonical IF web interpreter; loreline and tuesday-js are authoring tools a teacher can run.
+peer/teacher evaluation at scale	1-2	teacher-evaluation stars:>3	12	4	2	2	Mostly lexical noise (RL-RobotLab matched "evaluation"). 2 real.
+school fees / administration	0-1	school-management-system stars:>40	12	5	2	2	REFUTES leg 3's absence claim: MIT education ERPs exist (skuul, College-ERP both held; Django-SMS new).
+school meals / nutrition	0	meal-planner nutrition stars:>20	9	6	6	0	ALL SIX are McDonald's-MCP contest entries (Oct 2026 wave). A contest flooding a keyword is a channel artifact, not supply. Tier STAYS a hole.
+classroom captioning / HoH access	0	live-captions stars:>20	12	8	5	5	Second-deepest payout. MentraOS default branch is `dev`.
+financial aid / scholarship	0	scholarship stars:>20	12	3	1	1	opportunity-tracker only. Noria/Women-in-Technology/diversify-me are lexical matches.
+adult literacy	3	literacy stars:>40	12	3	0	0	NIL on tier: every permissive return is AI-literacy curriculum, not adult literacy. Lexical collision on the word. Tier STAYS a hole.
+prison / correctional education	0	correctional education stars:>3	2	1	1	0	NIL on tier. course-navigator (MIT) is a Chinese video-course workspace, not correctional. Tier STAYS a hole.
+school safety	0	anti-bullying stars:>3	2	0	0	0	NIL permissive; both returns ungranted. Tier STAYS a hole.
+early childhood / preschool	1-10	preschool stars:>10	3	2	2	0	Both weak: one is a website template, one is a Taiwan preschool map. Not learning capability. NOT accepted.
+mother tongue / multilingual	2	multilingual-education stars:>5	1	0	0	0	NIL permissive. Tier STAYS a hole.
+braille	9	(from literacy leg)	1	0	1	0	braillewave-esp32-trainer: real on-tier ESP32 braille trainer, 57 stars, NONE + no grant at 20 names -> REJECTED. Hardware braille tier STAYS ungranted.
+TOTALS	-	16 tier queries	139	50	34	22	22 accepted permissive rows. The census pays a FOURTH consecutive time (p619:20, p629:6, p630:13, p631:22). 7 of 17 tiers stay holes AND ARE DECLARED.

@@ -61,6 +61,7 @@ COMPANION_LOG ?= /tmp/education-kb-gate-companion-closure.log
 SLUGCHAN_LOG ?= /tmp/education-kb-gate-bare-slug-channel.log
 REGION_LOG ?= /tmp/education-kb-gate-region-headings.log
 GAP_GATE_LOG ?= /tmp/education-kb-gate-declared-gap.log
+READMECUR_LOG ?= /tmp/education-kb-gate-readme-currency.log
 REGCUR_LOG ?= /tmp/education-kb-gate-register-currency.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 CARRIEDEX_LOG ?= /tmp/education-kb-gate-carried-existence.log
@@ -491,6 +492,22 @@ gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG 
 	  repos/foundations.md verticals/solutions.md compose/patterns.md > $(REGCUR_LOG) 2>&1 \
 	  && echo "   PASS — the register is current against every live shelf" \
 	  || { echo "   🔴 THE GAP REGISTER IS STALE:"; cat $(REGCUR_LOG); exit 1; }
+# 🟢 p631 — ACTION 629-K, CLOSED BY WIRING.  `629-J` found this base's README nine passes
+# stale (its newest section read `Pass 619` while every shelf was at `p628`) and `629-K`
+# registered the fix as "add README.md to a currency gate's targets", calling it
+# unverifiable in-session.  No new code was needed: gate_register.py takes
+# `REGISTER SHELF [SHELF ...]` and derives the pass number from any `^## 🆕 \`pN\`` header,
+# so README.md is wired by a SECOND invocation with README.md in the register position.
+#
+# 🔴 The reason it could not simply be added before: README.md used `## Pass 629 — ...`,
+# which that regex does not match, so a naive wiring reports P418-NO-HEADER instead of
+# currency.  p631 corrected the header form to `## 🆕 \`p631\``, which is the half of this
+# fix that lives in the file rather than in the Makefile.
+	@$(PY) -I compose/code/p418-register-currency-gate/gate_register.py \
+	  README.md agents/top.md intel/market.md intel/trends.md \
+	  repos/foundations.md verticals/solutions.md compose/patterns.md > $(READMECUR_LOG) 2>&1 \
+	  && echo "   PASS — README.md is current against every live shelf (p631, ACTION 629-K)" \
+	  || { echo "   🔴 README.md IS STALE AGAINST THE SHELVES:"; cat $(READMECUR_LOG); exit 1; }
 
 # 🟢 p495 — the DETECTOR p494 could only name.  `p493` proved a full-file rewrite drops
 # TABLE ROWS and found eight by grepping repo URLs.  `p494` proved it also drops PROSE and

@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p631` — reads `2026-11-03` — **🔴 THE PLATFORM LEG'S *ABSENCE* CLAIM IS REFUTED ON THIS BASE'S OWN ROWS, AND `MPL-2.0` ENTERS THIS SHELF AS A THIRD LICENCE POSTURE BETWEEN PERMISSIVE AND COPYLEFT.**
+
+🔵 Every licence below was read from payload bytes on the metadata-declared default branch. Evidence:
+`evidence/grant-byteread.2026-11-03-p631.tsv`.
+
+### 🔴 The platform leg claimed no permissive education ERP exists. Three do.
+
+| Platform | Repo | Byte-read licence | Stars | Status |
+|---|---|---|---|---|
+| **skuul** | [`yungifez/skuul`](https://github.com/yungifez/skuul) | 🟢 `MIT` | `471★` | held, re-confirmed |
+| **College-ERP** | [`Ansarimajid/College-ERP`](https://github.com/Ansarimajid/College-ERP) | 🟢 `MIT` | `201★` | held, re-confirmed |
+| **Django-School-Management-System** | [`adigunsherif/Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System) | 🟢 `MIT` | `395★` | 🟢 **new this pass** |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `LGPL-3.0` | — | held — the leg got this one **right** |
+| **ERPNext (education)** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `GPL-3.0` | — | held — right again |
+
+🟢 **What the leg got right and wrong is itself the lesson.** It graded the two *named, well-known* education
+ERPs correctly and concluded from their copyleft that **no permissive one exists**. 🔴 The three `MIT` systems
+above are smaller, unbranded and absent from listicles — so the leg's absence claim is really a statement about
+**what gets written about**, not about what is published. See `631-F`.
+
+### 🟡 `MPL-2.0` — a third posture this shelf has not carried, and it is not a footnote
+
+🔵 [`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app) (`16,724 B`, `10,392★`,
+pushed `2026-11-02`) runs a complete education process: cohorts, mentor assignment, task distribution,
+cross-check review rounds, certificates.
+
+| | `Apache-2.0` / `MIT` | 🟡 `MPL-2.0` | `GPL-3.0` / `AGPL-3.0` |
+|---|---|---|---|
+| Link from proprietary code | 🟢 yes | 🟢 **yes** | 🔴 no (derivative work) |
+| Modify a source file | 🟢 keep it closed | 🟡 **that file stays `MPL`** | 🔴 whole work becomes copyleft |
+| Hosted service trigger | 🟢 none | 🟢 **none** | 🔴 `AGPL` only |
+
+🟢 **Operative for a studio:** `MPL-2.0` is the one posture where *"fork the platform"* and *"keep our IP"* are
+**both** true, with a bounded obligation — publish your diffs to **the files you touched**, nothing more. That
+is a materially different conversation from Moodle or Open edX, and it is cheaper to price than either
+extreme. 🔴 The trap is treating it as permissive in a procurement sheet: it is not, and the obligation is
+real even though it is narrow.
+
+### 🔴 The platform tier by region, measured on the supply channel today (`631-F`)
+
+🔵 `p631` ran the **supply** census in-region for the first time (`evidence/region-supply-census.2026-11-03-p631.tsv`).
+The platform-tier result is the sharpest regional statement this shelf can make:
+
+| Region | Platform-tier supply found | Licence posture |
+|---|---|---|
+| 🔴 **APAC (China)** | [`edusoho/edusoho`](https://github.com/edusoho/edusoho) `1,866★`; [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) `1,567★`; [`zijian-optics/SolaireEPDA`](https://github.com/zijian-optics/SolaireEPDA) `90★` | 🔴 `0 of 10` permissive: one **ungranted**, two `AGPL-3.0`, one `GPL-3.0` |
+| 🟢 **APAC (China), permissive exception** | [`zhistaredu/StarTraining`](https://github.com/zhistaredu/StarTraining) `1,239★` | 🟢 `Apache-2.0` — the only buildable platform the leg returned in-region |
+| 🟡 **LATAM** | `Universidade-Livre` lines (`MIT`, `21,006★` + `1,427★`) — **held** | 🟢 permissive, but **curriculum corpora, not platforms** |
+| 🔴 **EMEA** | nil permissive across `de`, `ar` and Africa legs, each **calibrated** against a bare-query count | an informed gap, not silence |
+
+🟢 **Operative:** a China engagement that assumes it can fork the local platform is wrong by default —
+the local platform tier is copyleft or ungranted, and `StarTraining` is the single permissive exception.
+
 ## 🆕 `p630` — reads `2026-11-03` — **🔴 THIS PASS'S OWN WEB LEG GOT `2 of 2` PLATFORM LICENCE CLAIMS WRONG, BOTH REFUTED ON BYTES: CHAMILO IS `GPL-3.0` NOT `Apache-2.0`, AND SAKAI IS `ECL-2.0` NOT `Apache 2.0`. 🟢 AND `openedx/edx-platform`'s RENAME IS RESOLVED BY NAME ON IDENTICAL `HEAD`.**
 
 🔵 Every licence in the table below was read from the payload bytes on the repository's metadata-declared

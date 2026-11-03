@@ -1,0 +1,12 @@
+leg	query	bare_total_count	filtered_returns	permissive	unheld_accepted	placement_basis	verdict
+LATAM-es	educacion stars:>15	-	1	1	0	-	cortega26/chile-hub (MIT, 137*) is curated Chilean public data, HELD. On-tier for teaching data, not a learning tool.
+LATAM-pt	educacao stars:>15	-	6	2	0	-	Universidade-Livre/ciencia-da-computacao (MIT, 21,006*) and /matematica (MIT, 1,427*) are Brazilian-Portuguese OSSU lines - both ALREADY HELD. Genuine LATAM permissive supply at scale, already on the base.
+EMEA-fr	education stars:>15	-	12	9	1	REFUSED	631-G: accent-insensitive search, this leg is the ENGLISH query. Rows NOT placed EMEA. rsschool-app accepted on capability only.
+EMEA-de	Bildung stars:>10	2	1	0	0	-	NIL permissive.
+EMEA-ar	(arabic) stars:>10	4	0	0	0	-	NIL. Bare total_count 4 - the tier is genuinely thin, not a query artifact (calibrated).
+EMEA-africa	curriculum Africa stars:>10	5	0	0	0	-	NIL permissive. Bare count 5; calibrated, so this is a measured thin tier, NOT silence.
+APAC-ja	education(ja) stars:>80	-	12	4	3	repo+holder	Deepest regional payout. tchMaterial-parser (MIT, 7,660*) HELD. Accepted: Ac-Wiki, aetherviz-master, StarTraining.
+APAC-in	NCERT stars:>5	3	4	0	0	-	NIL permissive. Bare count 3 - India-specific curriculum tooling is thin on this channel.
+APAC-id	pendidikan sekolah stars:>10	-	0	0	0	-	NIL.
+APAC-zh	education(zh) platform stars:>30	177	10	0	0	-	0 PERMISSIVE of 10. edusoho (1,866*) ungranted; roncoo-education (AGPL-3.0, 1,567*); SolaireEPDA (AGPL-3.0); AI-Marker-Suite (GPL-3.0). PLACED FINDING: Chinese education supply exists at scale and is copyleft-or-ungranted.
+TOTALS	9 calibrated legs	-	46	16	6	1 institutional	FIRST RUN of this channel returns 6 accepted rows and 1 placed regional generalisation, against 0 addresses from 4 mandated regional WEB legs across SIX passes.

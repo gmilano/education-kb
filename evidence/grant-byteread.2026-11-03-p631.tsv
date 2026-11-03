@@ -1,0 +1,38 @@
+repo	branch_from_metadata	grant_file	bytes	family_titles_in_payload	spdx_metadata	stars	pushed	copyright_holder
+linkage-rs/linkage	core	LICENSE	1067	MIT License;	MIT	161	2026-03-07	Copyright (c) 2026 Clark Moody;
+denisk20/programmer-dvorak	master	LICENSE.txt	11323	Apache License;	Apache-2.0	112	2026-07-07	
+alexylon/clavirio	main	LICENSE	11357	Apache License;	Apache-2.0	35	2026-10-18	
+tanciaku/ttypr	main	LICENSE	1066	MIT License;	MIT	76	2026-11-02	Copyright (c) 2025 Mikhail S.;
+Talljack/echo-type	main	LICENSE	1064	MIT License;	MIT	320	2026-11-01	Copyright (c) 2026 Talljack;
+cwklurks/codesprint	main	LICENSE	1064	MIT License;	MIT	61	2026-10-13	Copyright (c) 2025 cwklurks;
+curiousdannii/parchment	master	LICENSE	1074	MIT License;	MIT	491	2026-08-23	Copyright (c) 2020, Dannii Willis;
+jeremyfa/loreline	main	LICENSE	1071	MIT License;	MIT	312	2026-10-31	Copyright (c) 2025 Jérémy Faivre;
+Kirilllive/tuesday-js	master	LICENSE	1067	MIT License;	MIT	698	2026-10-23	Copyright (c) 2025 Kirill Live;
+zenstory-ai/novel-to-game	main	LICENSE	1080	MIT License;	MIT	960	2026-11-02	Copyright (c) 2026 NovelToGame contributors;
+siipo/midicoach	master	LICENSE	35148	GNU Affero General Public License;GNU GENERAL PUBLIC LICENSE;GNU General Public License;	GPL-3.0	2	2026-08-26	Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>;
+Mentra-Community/MentraOS	dev	LICENSE	11346	Apache License;	Apache-2.0	2397	2026-11-03	Copyright 2026 Mentra Labs, Inc.;
+yuxino/Mimi	main	LICENSE	1062	MIT License;	MIT	790	2026-11-02	Copyright (c) 2026 yuxino;
+XimilalaXiang/DeLive	main	LICENSE	11346	Apache License;	Apache-2.0	268	2026-10-22	Copyright 2026 XimilalaXiang;
+lgy1027/matrix-live-diarizer	main	LICENSE	1063	MIT License;	MIT	133	2026-08-03	Copyright (c) 2026 lgy1027;
+Zerg00s/Live-Captions-Saver	master	LICENSE	1071	MIT License;	MIT	115	2026-10-08	Copyright (c) 2025 Denis Molodtsov;
+adigunsherif/Django-School-Management-System	master	LICENSE.txt	1069	MIT License;	MIT	395	2026-01-31	Copyright (c) 2020 Adigun Sherif;
+lilynex/libris-flow	main	LICENSE	1063	MIT License;	MIT	63	2026-08-18	Copyright (c) 2024 LilyNex;
+lumiis2/opportunity-tracker	main	LICENSE	1088	MIT License;	MIT	115	2026-11-02	Copyright (c) 2026 Opportunity Tracker contributors;
+el-ev/BUAA-Teacher-Evaluation	main	LICENSE	1068	MIT License;	MIT	23	2026-07-02	Copyright (c) 2024 Jianhua Heng;
+FadyCoding/EPEPEP-	main	LICENSE	11356	Apache License;	Apache-2.0	5	2026-01-04	
+moodle/moodle-UNION-SCAN-OUTPUT	main	COPYING.txt	35146	GNU Affero General Public License;GNU GENERAL PUBLIC LICENSE;GNU General Public License;	GPL-3.0	7576	2026-10-30	Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>;	DEFECTIVE INSTRUMENT OUTPUT - union scan, retained as the specimen for 631-C
+Ac-Wiki/Ac-Wiki	main	LICENSE	1068	MIT License;	MIT	1897	2026-10-28	Copyright (c) 2024-2025 Ac-Wiki;
+andyhuo520/aetherviz-master	master	LICENSE	1062	MIT License;	MIT	1668	2026-04-20	Copyright (c) 2026 andyhu;
+zhistaredu/StarTraining	main	LICENSE	12069	Apache License;	Apache-2.0	1239	2026-03-04	
+rolling-scopes/rsschool-app	master	LICENSE	16724	GNU General Public License;Mozilla Public License;	MPL-2.0	10392	2026-11-02	
+zijian-optics/SolaireEPDA	master	LICENSE	34522	GNU AFFERO GENERAL PUBLIC LICENSE;GNU Affero General Public License;GNU General Public License;	AGPL-3.0	90	2026-06-27	Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>;
+loiane/javascript-datastructures-algorithms	main	LICENSE	1069	MIT License;	MIT	4884	2026-11-03	Copyright (c) 2024 Loiane Groner;
+hug-sun/element3	master	LICENSE	1081	MIT License;	MIT	3268	2026-02-27	Copyright (c) 2016-present ElemeFE;
+vgwb/Antura	main	LICENSE.md	2002	Creative Commons Attribution @60;Creative Commons Attribution @352;BSD 2-Clause @560	NOASSERTION	127	2026-10-21	TH Koln; Video Games Without Borders
+susam/quickqwerty	main	LICENCE.md	1103	MIT License @4	MIT	81	2026-05-03	Copyright (c) 2008-2026 Susam Pal
+ryanatkn/earbetter	main	license	1226	The Unlicense @0; unlicense @1211	Unlicense	17	2026-09-04	(public domain dedication, no holder)
+gtn/exaport	main	NO-GRANT-AT-20-NAMES	0	-	NONE	15	2026-11-03	REJECTED-ungranted
+vikyytor/braillewave-esp32-trainer	main	NO-GRANT-AT-20-NAMES	0	-	NONE	57	2026-11-03	REJECTED-ungranted
+edusoho/edusoho	master	NO-GRANT-AT-20-NAMES	0	-	NONE	1866	2026-02-20	REJECTED-ungranted (1866 stars, APAC platform)
+moodle/moodle	main	COPYING.txt	35146	GNU GENERAL PUBLIC LICENSE @head; GNU Affero (cross-ref sec.13)	GPL-3.0	7576	2026-10-30	POSITIVE CONTROL - passed
+p631-control/this-repo-does-not-exist	-	-	0	-	HTTP-422	-	-	NEGATIVE CONTROL - search channel 422, probe can fail

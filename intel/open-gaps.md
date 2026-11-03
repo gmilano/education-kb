@@ -1,8 +1,74 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
 ---
+
+## 🆕 `p631` — `2026-11-03` — **🔴 THIS REGISTER WAS **NINE PASSES STALE** (`p622` AGAINST SHELVES AT `p630`) AND `gate-register-currency` EXISTS PRECISELY TO CATCH THAT — SO THE GATE IS BUILT, WIRED, AND **NOT RUNNABLE IN THIS SESSION**, WHICH IS A THIRD FAILURE MODE THE BASE HAD NOT NAMED. 🟢 `629-K` IS CLOSED BY WIRING. ELEVEN NEW GAPS REGISTERED (`631-A`…`631-K`).**
+
+### 🔴 `631-L` — NEW, and it is about the gate suite rather than the shelves
+
+🔵 `617-B` established *a gate built and not wired is not a control*; `618-L` added *a gate wired but whose red
+is never reached is also not a control*. 🔴 This register demonstrates the third: **a gate wired, whose red IS
+reachable, and which cannot be executed in the session that would have to act on it.**
+
+🔵 The evidence is this file. `gate-register-currency` (`p418`, `16` controls) compares the register's newest
+`## 🆕 \`pN\`` header against every live shelf and exits `1` when the register lags. The shelves reached `p630`
+on `2026-11-03`; this file's newest header read **`p622`**. 🔴 That is `9` passes of lag, and the gate would
+have been **red on every one of them**.
+
+🔴 **Why it never fired:** `make hooks` has been refused in this session on the same grounds recorded since
+`p617` — `[Code from External]`. The sequence is now `p617` ✗, `p618` ✗, `p619` ✗, `p620` ✓, `p621` ✗,
+`p622` ✗, … `p631` ✗. 🟢 `620-S` remains the disproof of the provenance theory — `p620` executed all `70`
+gates over this same clone — so the variable is the **session's permission set**, not the code.
+
+🟡 **Operative, and it is a process statement not a technical one:** on this base a gate's value is bounded by
+the probability that the session which commits can also run it. Until that is better than it has been for
+`14` of the last `15` passes, **every pass must restate the currency facts the gate would have checked, in
+prose, in the commit**. This pass does: shelves `p631`, register `p631`, README `p631`.
+
+### 🟢 `629-K` — CLOSED by wiring, and the fix needed no new code
+
+🟡 **Asked (`629-J`/`629-K`):** *"`README.md`'s newest section read `Pass 619` while all eight shelves were at
+`p628` … `SHELF_FILES` lists the nine shelves and **not `README.md`**, so no gate compares this file's pass
+number against theirs … the fix is to add `README.md` to a currency gate's targets, which cannot be
+self-verified here."*
+
+🟢 **Done, and the instrument was already general.** `gate_register.py` takes
+`REGISTER SHELF [SHELF ...]` and derives the pass number from any `^## +🆕 +\`p(\d+)\`` header — nothing in it
+is specific to `intel/open-gaps.md`. 🟢 So `README.md` is wired by adding a **second invocation of the same
+gate** with `README.md` in the register position, and by giving `README.md` the canonical header form it was
+missing (it used `## Pass 629 — …`, which the regex does not match — so a naive wiring would have reported
+`P418-NO-HEADER` rather than currency).
+
+🔴 **What stays open about it:** the wiring **cannot be executed in this session** (`631-L`), so it is
+committed as wired-and-unrun. 🔵 The first session that can run `make hooks` should expect this gate to be
+**green on `README.md`** and should treat a red as a real finding, not as this pass's error.
+
+### 🟢 Registered this pass
+
+| id | What | Status |
+|---|---|---|
+| `631-A` | `gh api` writes its `422` error body to **stdout**, so an emptiness test does not fire and the error JSON lands in data columns | 🟢 REPAIRED; same class as `630-D`, **two consecutive passes** of this failure |
+| `631-B` | A `10`-name licence-filename probe produced **`2` false absences in `25` reads (`8 %`)** — `LICENCE.md`, bare lowercase `license` | 🟢 REPAIRED (set widened to `20`); 🔴 the **bound itself stays open** — absence is still an upper bound over a named filename set |
+| `631-C` | The union-of-all-titles licence grader, **built this pass**, over-reports: `GPL-3.0` §13 names the AGPL, `MPL-2.0`'s Exhibit names Secondary Licenses | 🔴 OPEN — named, not solved |
+| `631-D` | The head-title rule is **also** wrong: `Antura`'s head title is `Creative Commons`, its code grant `BSD-2-Clause` at byte `560`. The payload is a **split grant by asset class** | 🔴 OPEN — `P631-0`: the grading unit is `(family, asset class)` and must be **read**, not matched |
+| `631-E` | The in-region supply census's first run manufactured **`8` false nils of `9` legs** via 3-term AND queries | 🟢 REPAIRED by a bare-query calibration control, now mandatory before publishing any regional absence |
+| `631-F` | 🟢 NEW CHANNEL: the search API run **in-region** returns placed supply — `46` rows, `16` permissive, `6` accepted on first run | 🟢 OPEN AS AN ASSET — needs a second run to establish it is not a one-off |
+| `631-G` | GitHub search is **accent-insensitive**; `éducation` is the English query, so the `EMEA-fr` leg was never a regional channel | 🟢 NAMED — its rows are explicitly **not placed** |
+| `631-H` | A web digest's **absence** claim is a lead, not a finding: the platform leg said no `MIT`/`Apache` education ERP exists; **three** are on this base | 🟢 CLOSED by refutation (`631-F` in `repos/foundations.md`) |
+| `631-I` | A **contest cohort** can satisfy every mechanical filter — `MIT`, recent, triple-digit stars, on-keyword — and be off-tier entirely (`6` McDonald's-MCP entries in the school-nutrition tier) | 🔴 OPEN — the only discriminator found is capability read from prose |
+| `631-J` | `630-J` corroborated on a fresh sample: `4 of 36` (`11 %`) default to neither `main` nor `master` | 🟢 HELD |
+| `631-K` | `622-K`'s region-from-grant-holder method is **bounded**: `25 of 28` accepted rows name a person or nothing; `Apache-2.0` carries a holder only when the appendix is filled (`1 of 4`) | 🔴 OPEN — the hole census yields capability, almost never region |
+
+### 🔴 Carried forward, unchanged by this pass
+
+| id | What | Why it is still open |
+|---|---|---|
+| `622-F` | Measured citation decay: an `80`-address sample gave `3.8 %` dead, `2.5 %` not citable as canonical — on the order of `150` dead and `98` stale addresses across these shelves | 🔴 The enumerating sweep (`3,919` channel-B calls) is **still unrun**. Both rates remain upper bounds. |
+| `622-K2` | Three rows placed on committer timezone rather than an institutional grant holder (`FreeAAC`, `PSICAS`, `CAME`) | 🔴 Still institutionally unconfirmed. 🔵 `631-K` explains why this is hard rather than neglected: the method only works when a grant names an institution, and `25 of 28` do not. |
+| `630-H` | The `CLIENT-ONLY` class — permissively-licensed thin clients for proprietary services | 🔴 No census of the existing shelves against it yet; `p630` named `2` instances. |
+| `624`/`630` | Tree enumeration as an absence oracle is HTTP `403` for every third-party address in this session | 🔴 Unchanged. `631-B` now attaches a **measured `8 %` false-absence rate** to the fallback. |
 
 ## 🆕 `p622` — `2026-11-02` — **🟢 TWO OF `621-R`'s FIVE ITEMS CLOSE WITH MEASUREMENTS AND ONE CLOSES BY BEING **REFUTED**; 🔴 THE BASE'S OWN CITATION DECAY IS NOW A NUMBER AND IT IS THE LARGEST OPEN DEFECT ON THESE SHELVES**
 

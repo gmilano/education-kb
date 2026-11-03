@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p631` — **🟢 `28` NEW PERMISSIVE ROWS FROM TWO GITHUB-CHANNEL CENSUSES — `22` FROM SHELF HOLES AND `6` FROM A **NEW IN-REGION SUPPLY CHANNEL** THAT PAID ON ITS FIRST RUN. 🔴 THE MANDATED LEGS RETURN `0 of 19` FOR A **SIXTH** STRAIGHT PASS, AND THEIR *DEMAND* HALF IS MEASURED SATURATED TOO: `1 of 17`.**
+
+🔵 Append-only record of what was true on this date. Nothing below this section was edited.
+
+### 🟢 New this week — `22` permissive rows from six shelf holes, every grant byte-read
+
+| Name | Repo | Licence | Why it is new to this base | Stars | Pushed |
+|---|---|---|---|---|---|
+| parchment | [`curiousdannii/parchment`](https://github.com/curiousdannii/parchment) | `MIT` | interactive-fiction tier scored `0`; this is the browser **interpreter** for standard story formats | `491★` | `2026-08-23` |
+| loreline | [`jeremyfa/loreline`](https://github.com/jeremyfa/loreline) | `MIT` | branching-narrative **language**, diffable as source | `312★` | `2026-10-31` |
+| tuesday-js | [`Kirilllive/tuesday-js`](https://github.com/Kirilllive/tuesday-js) | `MIT` | browser visual-novel editor — the no-toolchain authoring tier | `698★` | `2026-10-23` |
+| novel-to-game | [`zenstory-ai/novel-to-game`](https://github.com/zenstory-ai/novel-to-game) | `MIT` | **cited** source-grounded scenario drafting | `960★` | `2026-11-02` |
+| MentraOS | [`Mentra-Community/MentraOS`](https://github.com/Mentra-Community/MentraOS) | `Apache-2.0` | `hearing impaired` scored `0`; live captions in field of view. Default branch `dev` | `2,397★` | `2026-11-03` |
+| Mimi | [`yuxino/Mimi`](https://github.com/yuxino/Mimi) | `MIT` | live **translated** captions — accessibility + language access in one component | `790★` | `2026-11-02` |
+| DeLive | [`XimilalaXiang/DeLive`](https://github.com/XimilalaXiang/DeLive) | `Apache-2.0` | multi-provider ASR behind one interface | `268★` | `2026-10-22` |
+| matrix-live-diarizer | [`lgy1027/matrix-live-diarizer`](https://github.com/lgy1027/matrix-live-diarizer) | `MIT` | local-first transcription **with diarization**; audio never leaves the machine | `133★` | `2026-08-03` |
+| Live-Captions-Saver | [`Zerg00s/Live-Captions-Saver`](https://github.com/Zerg00s/Live-Captions-Saver) | `MIT` | exports Teams captions — the two-week option where Teams already runs | `115★` | `2026-10-08` |
+| echo-type | [`Talljack/echo-type`](https://github.com/Talljack/echo-type) | `MIT` | one keystroke loop across listening/speaking/reading/writing | `320★` | `2026-11-01` |
+| quickqwerty | [`susam/quickqwerty`](https://github.com/susam/quickqwerty) | `MIT` | typing tier scored `0`; **maintained `2008`→`2026`**, longest-lived row on this base. Grant at `LICENCE.md` (`631-B`) | `81★` | `2026-05-03` |
+| linkage | [`linkage-rs/linkage`](https://github.com/linkage-rs/linkage) | `MIT` | offline desktop typing tutor. Default branch `core` | `161★` | `2026-03-07` |
+| ttypr | [`tanciaku/ttypr`](https://github.com/tanciaku/ttypr) | `MIT` | terminal typing practice — drops into a CS lab image | `76★` | `2026-11-02` |
+| programmer-dvorak | [`denisk20/programmer-dvorak`](https://github.com/denisk20/programmer-dvorak) | `Apache-2.0` | alternative layouts — the accessibility/RSI case | `112★` | `2026-07-07` |
+| clavirio | [`alexylon/clavirio`](https://github.com/alexylon/clavirio) | `Apache-2.0` | terminal typing tutor (Rust/ratatui) | `35★` | `2026-10-18` |
+| codesprint | [`cwklurks/codesprint`](https://github.com/cwklurks/codesprint) | `MIT` | typing drill on real algorithm problems | `61★` | `2026-10-13` |
+| earbetter | [`ryanatkn/earbetter`](https://github.com/ryanatkn/earbetter) | `The Unlicense` | solfège/ear-training tier scored `0`. Grant at bare lowercase `license` (`631-B`); no explicit patent grant | `17★` | `2026-09-04` |
+| Django-School-Management-System | [`adigunsherif/Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System) | `MIT` | `fee management` scored `0`; refutes the leg's absence claim (`631-F`) | `395★` | `2026-01-31` |
+| libris-flow | [`lilynex/libris-flow`](https://github.com/lilynex/libris-flow) | `MIT` | school library circulation | `63★` | `2026-08-18` |
+| opportunity-tracker | [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) | `MIT` | `financial aid` scored `0`; first row in the tier | `115★` | `2026-11-02` |
+| BUAA-Teacher-Evaluation | [`el-ev/BUAA-Teacher-Evaluation`](https://github.com/el-ev/BUAA-Teacher-Evaluation) | `MIT` | teacher-evaluation reference implementation | `23★` | `2026-07-02` |
+| EPEPEP | [`FadyCoding/EPEPEP-`](https://github.com/FadyCoding/EPEPEP-) | `Apache-2.0` | marking at scale — one instructor, many projects | `5★` | `2026-01-04` |
+
+### 🟢 New this week — `6` rows from the in-region supply census (`631-F`, first run)
+
+| Name | Repo | Licence | Placement basis | Stars |
+|---|---|---|---|---|
+| Ac-Wiki | [`Ac-Wiki/Ac-Wiki`](https://github.com/Ac-Wiki/Ac-Wiki) | `MIT` | APAC (China) — channel + description | `1,897★` |
+| aetherviz-master | [`andyhuo520/aetherviz-master`](https://github.com/andyhuo520/aetherviz-master) | `MIT` | APAC (China) — channel + description | `1,668★` |
+| StarTraining | [`zhistaredu/StarTraining`](https://github.com/zhistaredu/StarTraining) | `Apache-2.0` | APAC (China) — the **only** permissive platform in a copyleft tier | `1,239★` |
+| element3 | [`hug-sun/element3`](https://github.com/hug-sun/element3) | `MIT` | APAC — 🟢 **institutional read**, grant holder `ElemeFE` | `3,268★` |
+| javascript-datastructures-algorithms | [`loiane/javascript-datastructures-algorithms`](https://github.com/loiane/javascript-datastructures-algorithms) | `MIT` | LATAM (Brazil) — 🔴 **personal** holder, an inference not a read | `4,884★` |
+| rsschool-app | [`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app) | 🟡 `MPL-2.0` | 🔴 **unplaced** (`631-G`: the leg was the English query) | `10,392★` |
+
+### 🔴 What the mandated legs returned — `0 of 19`, sixth consecutive nil
+
+| Leg | Addresses | Held | New |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `5` | `5` | `0` |
+| `github trending education AI 2026` | `10` | `10` | `0` |
+| `open source platform education ERP CRM MIT Apache` | `7` | `7` | `0` — and its **absence claim is refuted** (`631-F`) |
+| `AI education industry trends 2026` | `0` | — | `0` |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 …` | `0` | — | `0` each |
+
+🔴 **Demand half, counted for the first time: `1 of 17` new** — only Pearson/Workera (`2026-09-29`).
+
+### 🔴 Rejected this week, named with the reason
+
+| Address | Stars | Reason |
+|---|---|---|
+| [`gtn/exaport`](https://github.com/gtn/exaport) | `15★` | ungranted at `20` filenames — e-portfolio tier **stays a hole** |
+| [`edusoho/edusoho`](https://github.com/edusoho/edusoho) | `1,866★` | ungranted — nothing to build on |
+| [`vikyytor/braillewave-esp32-trainer`](https://github.com/vikyytor/braillewave-esp32-trainer) | `57★` | ungranted — hardware-braille tier stays ungranted |
+| `mcd-*` (five addresses) | `104–150★` | 🔴 `MIT`, recent, on-keyword — and a **McDonald's-MCP contest cohort**, not school nutrition (`T8`) |
+
 ## 🆕 `2026-11-03` · `p630` — **🟢 `13` NEW PERMISSIVE AGENT/TOOL ROWS OUT OF SIX SHELF HOLES (`54 %` YIELD), WHILE THE MANDATED LEGS RETURN `0 of 11` FOR A FIFTH STRAIGHT PASS. 🔴 AND TWO OF THE THIRTEEN ARE `MIT` CLIENTS FOR CLOSED SERVICES — A CLASS THIS BASE HAD NOT NAMED.**
 
 🔵 Append-only record of what was true on this date. Nothing below this section was edited.

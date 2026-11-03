@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p631` — reads `2026-11-03` — foundations: `5` additions, and the **only** interpreter-class row this base has in the narrative tier
+
+🔵 Every grant below was read from bytes on the repository's **metadata-declared default branch**, never on an
+assumed `main` (`630-J`, corroborated today at `631-J`: `4 of 36` addresses default to neither `main` nor
+`master`). Evidence: `evidence/grant-byteread.2026-11-03-p631.tsv`.
+
+### 🟢 Added this pass
+
+| Repo | Licence | Bytes | Default branch | Why it is a foundation, not an agent | Stars | Pushed |
+|---|---|---|---|---|---|---|
+| [`curiousdannii/parchment`](https://github.com/curiousdannii/parchment) | 🟢 `MIT` | `1,074` | `master` | An **interpreter**. Stories are standard Z-machine/Glulx files, so the content outlives any runtime and predates — by decades — every tool that will render it. Same class as `LiaScript` on this shelf: the format is the asset. | `491★` | `2026-08-23` |
+| [`jeremyfa/loreline`](https://github.com/jeremyfa/loreline) | 🟢 `MIT` | `1,071` | `main` | A **language**, not an app: branching narrative and state in plain text, diffable and reviewable like source. | `312★` | `2026-10-31` |
+| [`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app) | 🟡 `MPL-2.0` | `16,724` | `master` | A **system of record for an education process** — cohorts, mentors, task assignment, cross-check rounds, certificates. The largest-starred non-copyleft-platform row in this tier. 🟡 File-level weak copyleft. | `10,392★` | `2026-11-02` |
+| [`zhistaredu/StarTraining`](https://github.com/zhistaredu/StarTraining) | 🟢 `Apache-2.0` | `12,069` | `main` | A **training platform** — on-demand, live, exams, question banks, in-person scheduling. Vocational/corporate rather than K-12, and permissive where this tier is otherwise `AGPL-3.0`. | `1,239★` | `2026-03-04` |
+| [`adigunsherif/Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System) | 🟢 `MIT` | `1,069` (`LICENSE.txt`) | `master` | A **system of record** for a school: students, staff, classes, results, fees. Django/ORM, so the schema is the contract. | `395★` | `2026-01-31` |
+
+### 🔴 `631-F` — the platform leg asserted an **absence**, and this base refutes it
+
+🔵 The mandated leg `open source platform education ERP CRM MIT Apache` concluded: *"I found no open source
+education-specific ERP/CRM platform under MIT or Apache 2.0 … you would likely need to build education workflows
+on top of one of these general platforms."*
+
+🔴 **That is false, and this base already held the counter-examples:**
+
+| Address | Licence | Stars | What it is |
+|---|---|---|---|
+| [`yungifez/skuul`](https://github.com/yungifez/skuul) | 🟢 `MIT` | `471★` | multi-school management system |
+| [`Ansarimajid/College-ERP`](https://github.com/Ansarimajid/College-ERP) | 🟢 `MIT` | `201★` | college ERP, `200+` features |
+| [`adigunsherif/Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System) | 🟢 `MIT` | `395★` | added above |
+
+🟢 **The generalisation, and it extends `T2` rather than repeating it:** this base has twice measured that a web
+digest's licence **claim** is a lead, not a finding. 🔴 `631-F` is the first measurement that a web digest's
+**absence claim** is also only a lead — and an absence is the more dangerous of the two, because it closes a
+line of enquiry instead of opening one. A studio that had taken this leg at its word would have costed an
+education ERP engagement as *build on a general platform* when three `MIT` education ERPs exist.
+
+### 🔵 What `p624`'s retired licence ladder still cannot do, now with a number
+
+🔴 `631-B`: a `10`-name filename probe produced **`2` false absences in `25` reads (`8 %`)** — `LICENCE.md` and
+bare lowercase `license`. The set is widened to `20` names. 🟢 Both affected rows
+([`susam/quickqwerty`](https://github.com/susam/quickqwerty), [`ryanatkn/earbetter`](https://github.com/ryanatkn/earbetter))
+carry real grants and are accepted. 🔴 Absence remains a **bounded upper bound over a named filename set**, and
+this is the first pass that attaches a measured error rate to the bound instead of a caveat.
+
 ## 🆕 `p630` — reads `2026-11-03` — foundations: `6` additions from the hole census, and one flagship's **default branch** nearly cost it its grant
 
 🔵 Every grant below was read from bytes on the repository's **metadata-declared default branch**, never on an

@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p631` — reads `2026-11-03` — current trends
+
+🔵 Each trend is tied to something measured this pass or to a named source from this pass's eight legs.
+🔴 Where a trend is an opinion rather than a measurement, it says so.
+
+### `T1` — 🟢 Still true, now with a sharper denominator: the permissive layer is **single-purpose tools**
+
+🔵 `27` of the `28` rows accepted this pass are narrow tools — a typing drill, an IF interpreter, a caption
+saver, a scholarship tracker, an ear trainer. The one platform-shaped row is `MPL-2.0`. Meanwhile Moodle was
+re-byte-read today at `7,576★` `GPL-3.0`, and Open edX, Canvas and Chamilo remain `AGPL-3.0`/`GPL-3.0`.
+🟢 **Operative, unchanged across three passes:** build permissive tools *alongside* the platform over
+`LTI`/`xAPI`; cost it as integration, never as a fork.
+
+### `T2` — 🔴 Extended: a web digest's **absence** claim is a lead too, and it is the more dangerous kind
+
+🔵 `p623` and `p630` each measured web digests getting `2 of 2` licence **claims** wrong. 🔴 This pass the
+platform leg asserted an **absence** — *"no open source education-specific ERP/CRM under MIT or Apache"* — and
+three `MIT` education ERPs are on this base ([`skuul`](https://github.com/yungifez/skuul) `471★`,
+[`College-ERP`](https://github.com/Ansarimajid/College-ERP) `201★`,
+[`Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System) `395★`).
+🔵 It graded the two *famous* ones (OpenEduCat `LGPL-3.0`, ERPNext `GPL-3.0`) correctly and generalised from
+them. 🟢 **Operative:** a wrong claim opens a line of enquiry you then check; a wrong absence **closes** one
+and nobody checks. Treat a digest's "there is no X" as the weakest sentence in the document.
+
+### `T3` — 🟢 Discovery saturation measured on **both** halves for the first time
+
+| Channel | `p625`→`p631` yield |
+|---|---|
+| 🔴 Mandated web legs — **supply** | `0/28`, `0/12`, `0/11`, `1/17`, `0/11`, `0/19` (**six nils**) |
+| 🔴 Mandated web legs — **demand** | `1/17` (first time counted, `p631`) |
+| 🟢 Tier-hole census | `20`, `6`, `13`, **`22`** accepted (`p619`, `p629`, `p630`, `p631`) |
+| 🟢 In-region supply census | **`6`** accepted, **first run** (`p631`) |
+
+🟢 **`P631-1`:** the legs are saturated on both halves. 🔵 This does not retire them — a nil that is
+*calibrated* is evidence, and the demand half is how this base learns about regulators at all. It retires the
+expectation that they will **discover** anything.
+
+### `T4` — 🟢 NEW: the supply channel can be searched **in-region**, and nobody was doing it
+
+🔵 Six passes have run `AI {industry} {region} {year} adoption regulation players` on the web and got `0`
+repository addresses every time. 🟢 Searching GitHub itself in-region returned `46` rows, `16` permissive,
+`6` accepted on its **first run** — plus one generalisation no web leg produced: **Chinese education supply
+exists at scale and is copyleft-or-ungranted** (`0 of 10` permissive), with
+[`StarTraining`](https://github.com/zhistaredu/StarTraining) the single `Apache-2.0` exception.
+
+🔴 **Two hard limits, both measured today.** (`631-E`) Three-term AND queries manufactured `8` nils out of `9`
+legs — the bare-query counts were `2`–`11`, so the nil was the *query*. Every regional absence must be
+calibrated against a bare count before publication. (`631-G`) GitHub search is **accent-insensitive**, so
+`éducation` is not a French filter — it **is** the English query, and the leg labelled `EMEA-fr` returned
+`ossu/computer-science` at `210,676★`. 🔴 Those rows are **not placed EMEA**, and a naive reading would have
+filed nine global English repositories as French supply.
+
+### `T5` — 🔴 NEW: region is the field this base cannot fill from supply, and the number is `3 of 28`
+
+🔵 `622-K` established the sound method: read the **institution named in the grant's copyright line**, because
+that is a read rather than an inference. 🔴 Applied to all `28` accepted rows: **`25` name a person or nothing.**
+Three are institutional reads — `Mentra Labs, Inc.` (North America), `ElemeFE` (APAC), and `TH Köln` +
+`Video Games Without Borders` (EMEA, on `Antura`). 🔵 Worse, `Apache-2.0` payloads carry a holder **only if the
+author filled the appendix template**, and `1 of 4` did.
+
+🟢 **Operative:** the hole census yields **capability**, almost never **region**. Stop expecting it to, and
+place rows from the in-region channel (`T4`) where placement is what you need. 🔴 An unplaced row published as
+`Global` is honest; an unplaced row placed by guessing from a personal name is the failure
+`gate-offset-region` exists to prevent.
+
+### `T6` — 🔴 NEW: a licence payload has **scope**, and no title regex reads it
+
+🔵 Three graders, three ways wrong, measured on real payloads today (`631-C`, `631-D`): leftmost-match reads
+`Antura` as `Creative Commons`; union-of-titles reads `moodle` as `GPL`+`AGPL` because `GPL-3.0` §13 **names**
+the AGPL and `MPL-2.0`'s Exhibit names Secondary Licenses; head-title reads `Antura` as `Creative Commons`
+again. 🟢 `Antura` is a **split grant by asset class** — `CC-BY-4.0` content, `BSD-2-Clause` code, two holders.
+
+🟢 **Operative for a studio, and this is the commercial point:** in education the **content is the product**.
+A payload that grants the code permissively and the content under `CC-BY` has not given you a product you can
+ship unattributed — and a licence column that reads `BSD-2-Clause` will tell you it has. 🔵 Keep one mechanical
+rule only: `GPL-3.0` ≈ `35,147 B` head `GNU GENERAL PUBLIC LICENSE`; `AGPL-3.0` ≈ `34,522 B` head
+`GNU AFFERO…`. Everything else is read, not matched.
+
+### `T7` — 🟡 `MPL-2.0` is the posture the "fork or integrate" argument has been missing
+
+🔵 [`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app) (`10,392★`) runs a whole
+education process under file-level weak copyleft: link from proprietary code freely, publish diffs **only to
+files you modify**, no hosted-service trigger. 🟢 It is the one licence on this shelf where *fork the platform*
+and *keep our IP* are both true with a bounded, pricable obligation. 🔴 Not permissive, and a procurement sheet
+that lists it as permissive is wrong.
+
+### `T8` — 🔴 NEW: a contest can flood a keyword tier and look exactly like supply
+
+🔵 The `school meals / nutrition` tier scored `0` on the shelf. The census returned `9` rows, `6` permissive —
+and **all six are McDonald's-MCP contest entries** from an October `2026` wave (`mcd-agent-gourmet`,
+`mcd-meal-mate`, `mcd-fit-planner`, `mcd-dual-budget-coach`, `mcd-nutrition-expert`). 🔴 `MIT`, recently
+pushed, triple-digit stars, on-keyword, and **nothing to do with school nutrition**.
+
+🟢 **Operative, and it generalises past this tier:** star count, licence and recency are all **satisfied** by a
+hackathon cohort. The discriminator is **capability read from the description**, which is why `7` of this pass's
+`17` tiers stayed declared holes instead of being filled with rows that pass every mechanical filter. 🔵 Same
+class as `629-A`'s closed loop, where the discovery channel returned the bot that writes the digests.
+
 ## 🆕 `p630` — reads `2026-11-03` — current trends
 
 🔵 Each trend below is tied to something measured this pass or to a named source from this pass's eight legs.

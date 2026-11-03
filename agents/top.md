@@ -4,6 +4,137 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p631` — reads `2026-11-03` — **🟢 A NEW DISCOVERY CHANNEL PAYS ON ITS FIRST RUN: SEARCHING THE *SUPPLY* SIDE IN-REGION RETURNS PLACED REPOSITORIES, AFTER THE MANDATED REGIONAL WEB LEGS HAVE RETURNED `0` ADDRESSES FOR **SIX** CONSECUTIVE PASSES. 🔴 AND THE LEGS ARE NOW MEASURED SATURATED ON **BOTH** HALVES — SUPPLY `0 of 19`, DEMAND `1 of 17` — A NUMBER THIS BASE HAD NEVER PUT ON THE DEMAND SIDE. 🔴 THREE OF THIS PASS'S OWN INSTRUMENTS WERE DEFECTIVE AND THE CONTROLS CAUGHT ALL THREE: A `10`-NAME LICENCE PROBE MANUFACTURED **TWO FALSE ABSENCES**, THE ALL-TITLES GRADER BUILT *THIS PASS* TO FIX `p630`'s LEFTMOST-MATCH DEFECT **OVER-REPORTS INSTEAD**, AND THE FIRST REGIONAL CENSUS MANUFACTURED **`8` NILS OUT OF `9` LEGS**. 🟢 `28` NEW PERMISSIVE ROWS, EVERY GRANT BYTE-READ. ELEVEN REGISTERED (`631-A`…`631-K`).**
+
+🔵 Every figure below is measured today, each channel with a fabricated control in the same run —
+`evidence/websearch-legs.2026-11-03-p631.tsv`,
+`evidence/tier-hole-census.2026-11-03-p631.tsv`,
+`evidence/grant-byteread.2026-11-03-p631.tsv`,
+`evidence/instrument-calibration.2026-11-03-p631.tsv`,
+`evidence/region-supply-census.2026-11-03-p631.tsv`.
+
+### 🔴 `631-C`/`631-D` — the licence grader is wrong **three different ways**, and this pass built the second one
+
+🔵 `p630` recorded that a **leftmost-match** licence-title regex misgrades dual-licensed payloads: it read
+`vgwb/Antura` as `Creative Commons` when the code grant is `BSD-2-Clause` further down the file. 🔴 This pass
+built the obvious fix — **scan the payload for every family title and take the union** — and the union grader
+is wrong in the opposite direction:
+
+| Grader | Specimen | Verdict it gives | Why it is wrong |
+|---|---|---|---|
+| 🔴 leftmost match (`p630`) | `vgwb/Antura` `LICENSE.md` | `Creative Commons` | the **code** grant is `BSD-2-Clause`, at byte `560` |
+| 🔴 union of all titles (`p631`, built today) | `moodle/moodle` `COPYING.txt` `35,146 B` | `GPL-3.0` **+ `AGPL-3.0`** | `GPL-3.0` **§13 names the AGPL**; it is a cross-reference, not a grant |
+| 🔴 union of all titles | `rolling-scopes/rsschool-app` `16,724 B` | `MPL-2.0` **+ `GPL`** | `MPL-2.0`'s Exhibit names **Secondary Licenses**; same mechanism |
+| 🔴 head title at byte `0` | `vgwb/Antura` `LICENSE.md` | `Creative Commons` | the head title governs the **content**, not the code |
+
+🟢 **The generalisation (`P631-0`), and it is the pass's most reusable result:** *a licence payload is not a
+label, it is a document with **scope**.* A single file can grant **different families to different asset
+classes** — Antura grants `CC-BY-4.0` over content and `BSD-2-Clause` over source, with **two holders**
+(`TH Köln` and `Video Games Without Borders`) — and it can **name** families it does not grant. 🔴 No regex
+over titles recovers which family governs the **code**: not leftmost, not union, not head-title. **The grading
+unit is the pair (family, asset class), and it is read from the payload's prose.**
+
+🟢 **One mechanical discriminator did survive, and it is worth keeping:** `GPL-3.0` ≈ `35,147 B` with
+`GNU GENERAL PUBLIC LICENSE` at the head; `AGPL-3.0` ≈ `34,522 B` with `GNU AFFERO…` at the head. **Byte size
+plus head title separates the two reliably** — measured today on `moodle/moodle`, `siipo/midicoach` and
+`zijian-optics/SolaireEPDA`.
+
+🔵 **And `p630`'s Antura reading is corroborated and refined.** `p630` said the `BSD-2-Clause` grant "sits
+second in the file" and the shelf's claim was corroborated. 🟢 True — but it is **not a dual licence over one
+asset**, it is a **split by asset class**, and for an education product that distinction is the whole
+question: the content *is* the product, and the content carries attribution obligations the code does not.
+
+### 🔴 `631-B` — a `10`-name licence probe reported **`NO-GRANT`** for two repositories that carry grants
+
+🔴 `p624` retired the licence ladder in favour of tree enumeration; `p630` found enumeration is HTTP `403` in
+this session, leaving every absence a **bounded upper bound over a named filename set**. 🔴 This pass measured
+what that bound actually costs:
+
+| Address | `10`-name verdict | Grant found at `20` names | Why the probe missed it |
+|---|---|---|---|
+| [`susam/quickqwerty`](https://github.com/susam/quickqwerty) | 🔴 `NO-GRANT-AT-10-NAMES` | 🟢 `LICENCE.md`, `1,103 B`, `MIT License` | **British spelling *and* `.md`** — the set had `LICENCE` but not `LICENCE.md` |
+| [`ryanatkn/earbetter`](https://github.com/ryanatkn/earbetter) | 🔴 `NO-GRANT-AT-10-NAMES` | 🟢 `license`, `1,226 B`, `The Unlicense` | **bare lowercase, no extension** — the set had `license.txt` but not `license` |
+
+🟢 **False-absence rate measured at `2 of 25` = `8 %`**, and both verdicts were **indistinguishable from a real
+absence** on their face. 🔵 The set is widened to `20` names and the two rows are accepted. 🔴 **What does not
+change:** every absence this base publishes is still an upper bound, and `631-B` is the first time the bound has
+a **measured error rate** attached rather than a caveat.
+
+### 🟢 `631-A` — the defect in *this* pass's own first measurement, named rather than quietly fixed
+
+🔵 The fabricated control `p631-control/this-repo-does-not-exist` did its job: the metadata channel returned
+HTTP `422`. 🔴 But `gh api` writes its error body to **stdout**, so an emptiness test on the captured variable
+did **not** fire, and the `422` JSON was written **into the branch and holder columns as if it were data**.
+🟢 Caught by the control in the same run, repaired, and registered — the same class as `630-D`, which is now
+**two consecutive passes** where this base's own first probe read an error as a reading.
+
+### 🔴 `631-M` — the mandated `curl -sI` URL check is **not executable in this session**, and the uniformity is the proof
+
+🔵 The standing instruction is to verify every published URL with `curl -sI` before writing it. 🔴 Run over the
+`43` repository addresses this pass publishes, `github.com` returns HTTP **`403` for all `43`** — including
+[`frappe/erpnext`](https://github.com/frappe/erpnext), [`vgwb/Antura`](https://github.com/vgwb/Antura) and
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), which are certainly real and
+already on this base.
+
+🟢 **`43 of 43` identical is itself the finding:** no real absence distribution is uniform. The `403` is the
+session's egress policy on `github.com` HTML, not a statement about any repository — and reading it as absence
+is exactly the trap `630-C` fell into, where this base's own probe took a `403` as proof of absence.
+
+🟢 **Replaced, not skipped.** Existence is established on the two channels that do answer, both controlled in
+the same run — `search/repositories` metadata (`43/43` served a `full_name`; fabricated control
+`p631-control/does-not-exist-xyz` → HTTP `422`; positive control `frappe/erpnext` → served) and
+`raw.githubusercontent.com` (`41/43` serve a `README.md` on the metadata-declared default branch; the `2`
+that `404` lack **that filename**, not the repository). Evidence:
+`evidence/existence-two-channel.2026-11-03-p631.tsv`.
+
+### 🟢 Accepted this pass — `22` permissive rows from six shelf holes, every grant byte-read
+
+| Agent / tool | Repo | Licence | Bytes | Branch | What it does | Stars | Pushed |
+|---|---|---|---|---|---|---|---|
+| **parchment** | [`curiousdannii/parchment`](https://github.com/curiousdannii/parchment) | 🟢 `MIT` | `1,074` | `master` | The interactive-fiction **web interpreter** — runs Z-machine/Glulx stories in a browser with no install. The runtime a narrative-learning product needs. | `491★` | `2026-08-23` |
+| **loreline** | [`jeremyfa/loreline`](https://github.com/jeremyfa/loreline) | 🟢 `MIT` | `1,071` | `main` | A **scripting language** for interactive fiction — branching dialogue and state as plain text an instructional designer can edit. | `312★` | `2026-10-31` |
+| **tuesday-js** | [`Kirilllive/tuesday-js`](https://github.com/Kirilllive/tuesday-js) | 🟢 `MIT` | `1,067` | `master` | Browser-based **visual-novel editor** — a teacher authors a branching scenario with no toolchain. | `698★` | `2026-10-23` |
+| **novel-to-game** | [`zenstory-ai/novel-to-game`](https://github.com/zenstory-ai/novel-to-game) | 🟢 `MIT` | `1,080` | `main` | Agent skills for **source-grounded** narrative adaptation with citations — the grounding is the educational part. | `960★` | `2026-11-02` |
+| **MentraOS** | [`Mentra-Community/MentraOS`](https://github.com/Mentra-Community/MentraOS) | 🟢 `Apache-2.0` | `11,346` | 🔴 **`dev`** | Smart-glasses OS with **live captions** in the wearer's field of view. The only accessibility row here whose grant names an institution (`Mentra Labs, Inc.`). | `2,397★` | `2026-11-03` |
+| **Mimi** | [`yuxino/Mimi`](https://github.com/yuxino/Mimi) | 🟢 `MIT` | `1,062` | `main` | Live **translated** subtitles from system or microphone audio — captioning plus language access in one pass. | `790★` | `2026-11-02` |
+| **DeLive** | [`XimilalaXiang/DeLive`](https://github.com/XimilalaXiang/DeLive) | 🟢 `Apache-2.0` | `11,346` | `main` | System-audio capture + **multi-provider ASR** + a local-first review workspace. Provider-swappable by design. | `268★` | `2026-10-22` |
+| **matrix-live-diarizer** | [`lgy1027/matrix-live-diarizer`](https://github.com/lgy1027/matrix-live-diarizer) | 🟢 `MIT` | `1,063` | `main` | Local-first transcription **with speaker diarization** — audio never leaves the machine. The one row whose privacy posture suits **minors** without a DPA. | `133★` | `2026-08-03` |
+| **Live-Captions-Saver** | [`Zerg00s/Live-Captions-Saver`](https://github.com/Zerg00s/Live-Captions-Saver) | 🟢 `MIT` | `1,071` | `master` | Captures and exports **Teams** live captions — lecture capture where the institution already runs Teams. | `115★` | `2026-10-08` |
+| **echo-type** | [`Talljack/echo-type`](https://github.com/Talljack/echo-type) | 🟢 `MIT` | `1,064` | `main` | Language learning across **listening, speaking, reading and writing** in one loop, keyboard-driven. | `320★` | `2026-11-01` |
+| **quickqwerty** | [`susam/quickqwerty`](https://github.com/susam/quickqwerty) | 🟢 `MIT` | `1,103` | `main` | Touch-typing tutor that runs entirely in a browser. **Maintained `2008`→`2026`** — an 18-year single-maintainer instance, the longest-lived row this base has accepted. | `81★` | `2026-05-03` |
+| **linkage** | [`linkage-rs/linkage`](https://github.com/linkage-rs/linkage) | 🟢 `MIT` | `1,067` | 🔴 **`core`** | Desktop typing tutor in Rust, lesson-progression model. | `161★` | `2026-03-07` |
+| **ttypr** | [`tanciaku/ttypr`](https://github.com/tanciaku/ttypr) | 🟢 `MIT` | `1,066` | `main` | Terminal typing practice — drops into a shell-based lab with no browser. | `76★` | `2026-11-02` |
+| **programmer-dvorak** | [`denisk20/programmer-dvorak`](https://github.com/denisk20/programmer-dvorak) | 🟢 `Apache-2.0` | `11,323` | `master` | Typing tutor for an **alternative layout** — the accessibility/RSI case, not the speed case. | `112★` | `2026-07-07` |
+| **clavirio** | [`alexylon/clavirio`](https://github.com/alexylon/clavirio) | 🟢 `Apache-2.0` | `11,357` | `main` | Terminal typing tutor (Rust/ratatui). | `35★` | `2026-10-18` |
+| **codesprint** | [`cwklurks/codesprint`](https://github.com/cwklurks/codesprint) | 🟢 `MIT` | `1,064` | `main` | Typing practice **on real algorithm problems** — motor fluency and CS content in the same drill. | `61★` | `2026-10-13` |
+| **earbetter** | [`ryanatkn/earbetter`](https://github.com/ryanatkn/earbetter) | 🟢 `The Unlicense` | `1,226` | `main` | Ear trainer — interval and chord identification. 🔵 Public-domain dedication: permissive, but it carries **no explicit patent grant**, which some procurement reviews treat differently from `MIT`. | `17★` | `2026-09-04` |
+| **Django-School-Management-System** | [`adigunsherif/Django-School-Management-System`](https://github.com/adigunsherif/Django-School-Management-System) | 🟢 `MIT` | `1,069` | `master` | Students, staff, classes, results, **fees** — a permissive school system of record. | `395★` | `2026-01-31` |
+| **libris-flow** | [`lilynex/libris-flow`](https://github.com/lilynex/libris-flow) | 🟢 `MIT` | `1,063` | `main` | Library management for schools and colleges — circulation and catalogue. | `63★` | `2026-08-18` |
+| **opportunity-tracker** | [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) | 🟢 `MIT` | `1,088` | `main` | Tracks **scholarships, research internships and graduate deadlines** — the first row on this base in the financial-aid tier. | `115★` | `2026-11-02` |
+| **BUAA-Teacher-Evaluation** | [`el-ev/BUAA-Teacher-Evaluation`](https://github.com/el-ev/BUAA-Teacher-Evaluation) | 🟢 `MIT` | `1,068` | `main` | Teacher-evaluation tooling from a Beihang University context. Thin, and accepted as a **reference implementation**, not a platform. | `23★` | `2026-07-02` |
+| **EPEPEP** | [`FadyCoding/EPEPEP-`](https://github.com/FadyCoding/EPEPEP-) | 🟢 `Apache-2.0` | `11,356` | `main` | Lets one instructor evaluate **many student projects** at once — the marking-at-scale gap, small but on-tier. | `5★` | `2026-01-04` |
+
+### 🟢 Accepted from the new regional supply channel — `6` rows (`631-F`)
+
+| Agent / tool | Repo | Licence | Bytes | Placement | What it does | Stars |
+|---|---|---|---|---|---|---|
+| **Ac-Wiki** | [`Ac-Wiki/Ac-Wiki`](https://github.com/Ac-Wiki/Ac-Wiki) | 🟢 `MIT` | `1,068` | APAC (China) | Open higher-education foundational-knowledge corpus. | `1,897★` |
+| **aetherviz-master** | [`andyhuo520/aetherviz-master`](https://github.com/andyhuo520/aetherviz-master) | 🟢 `MIT` | `1,062` | APAC (China) | Turns any teaching topic into an **immersive 3D interactive page** — generated explainers, not a fixed library. | `1,668★` |
+| **StarTraining** | [`zhistaredu/StarTraining`](https://github.com/zhistaredu/StarTraining) | 🟢 `Apache-2.0` | `12,069` | APAC (China) | Enterprise/vocational training LMS: on-demand, live, exams, question banks. 🟢 The **permissive** counterpart to the `AGPL-3.0` platforms that dominate this tier. | `1,239★` |
+| **element3** | [`hug-sun/element3`](https://github.com/hug-sun/element3) | 🟢 `MIT` | `1,081` | APAC (**institutional read**: `ElemeFE`) | Vue 3 UI toolkit built **for IT education**. | `3,268★` |
+| **javascript-datastructures-algorithms** | [`loiane/javascript-datastructures-algorithms`](https://github.com/loiane/javascript-datastructures-algorithms) | 🟢 `MIT` | `1,069` | LATAM (Brazil, **personal** holder — not an institutional read) | CS teaching corpus in JS/TS, actively pushed. | `4,884★` |
+| **rsschool-app** | [`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app) | 🟡 `MPL-2.0` | `16,724` | — (`631-G`: **not** placed) | Runs an entire **education process** — cohorts, mentors, tasks, cross-checks. 🟡 `MPL-2.0` is **file-level weak copyleft**: link freely, but modified MPL files stay MPL. | `10,392★` |
+
+### 🔴 Rejected, named with the reason — an ungranted row is not a finding
+
+| Address | Stars | Why rejected |
+|---|---|---|
+| [`gtn/exaport`](https://github.com/gtn/exaport) | `15★` | Metadata `NONE` **and** no grant at `20` filenames on `main`. The **only** on-tier e-portfolio return — so the e-portfolio tier **stays a declared hole**. |
+| [`edusoho/edusoho`](https://github.com/edusoho/edusoho) | `1,866★` | No grant at `20` names. A substantial Chinese online-school platform with **nothing to build on**. |
+| [`vikyytor/braillewave-esp32-trainer`](https://github.com/vikyytor/braillewave-esp32-trainer) | `57★` | Metadata `NONE`, no grant. A real ESP32 **braille** literacy trainer — and the hardware-braille tier stays ungranted. |
+| [`siipo/midicoach`](https://github.com/siipo/midicoach) | `2★` | 🟡 Not rejected — **flagged**: `GPL-3.0`, `35,148 B`. The only real sight-reading instrument found, and it is copyleft. |
+| [`zijian-optics/SolaireEPDA`](https://github.com/zijian-optics/SolaireEPDA) | `90★` | 🟡 Flagged: `AGPL-3.0`, `34,522 B`. K-12 exam-paper automation — **network copyleft**, so a hosted service built on it must offer source. |
+
 ## 🆕 `p630` — reads `2026-11-03` — **🔴 `p624` RETIRED THE LICENCE LADDER FOR *TREE ENUMERATION* AND THAT ORACLE **CANNOT RUN IN THIS SESSION AT ALL**: `gh api repos/{owner}/{repo}/git/trees/…` IS HTTP `403` FOR EVERY THIRD-PARTY ADDRESS, WHILE `search/repositories` IS UNSCOPED — SO ABSENCE IS BACK TO A BOUNDED UPPER BOUND, AND THIS BASE'S AUTHORITATIVE ABSENCE INSTRUMENT IS UNAVAILABLE. 🔴 THIS PASS'S OWN FIRST PROBE READ THAT `403` **AS PROOF OF ABSENCE**, AND THE CONTROL CAUGHT IT. 🔴 A LEFTMOST-MATCH LICENCE-TITLE REGEX **MISGRADES EVERY DUAL-LICENSED PAYLOAD** — IT GRADED `vgwb/Antura` `Creative Commons` WHEN THE CODE GRANT IS `BSD-2-Clause` SITTING SECOND IN THE FILE; THE SHELF'S CLAIM IS **CORROBORATED** AND MY INSTRUMENT WAS WRONG. 🟢 THE MANDATED LEGS ARE NIL A **FIFTH** CONSECUTIVE PASS (`11 of 11` HELD) AND THE HOLE CENSUS PAYS A **THIRD** TIME: `13` NEW PERMISSIVE ROWS FROM SIX TIERS, EVERY GRANT BYTE-READ. 🟢 AND A NEW CLASS NAMED: **PERMISSIVELY-LICENSED THIN CLIENTS FOR PROPRIETARY SERVICES**. ELEVEN REGISTERED (`630-A`…`630-K`).**
 
 🔵 Every figure below is measured today, each channel with a fabricated control in the same run —
