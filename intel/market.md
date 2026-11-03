@@ -4,6 +4,109 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — the regional legs returned no unheld fact in any region, and that is now the market finding
+
+🔴 **`637-B`: all four regional legs ran, and `0 of 14` facts came back unheld.** Previous passes
+recorded the fact half of these legs as the productive one (`4 of 12` at `p635`, `2 of 15` at `p636`).
+This pass it closed. 🔵 Every candidate was grepped against the base rather than assumed new:
+
+| Region | Fact the leg surfaced | Heldness (files) | Verdict |
+|---|---|---|---|
+| LATAM | Digital Education Council LATAM survey — `92%` students, `79%` faculty, `29` universities | `40` / `13` | 🔴 HELD |
+| LATAM | UNESCO Santiago + CENIA (Chile) cooperation agreement, Feb `2026` | `41` | 🔴 HELD |
+| LATAM | UNESCO Regional AI-in-Education Observatory for LAC | `17` | 🔴 HELD |
+| LATAM | Tec de Monterrey — `44` redesigned degree programmes | `29` | 🔴 HELD |
+| EMEA | EU `AI Act` Annex III postponed to `2027-12-02` (Digital Omnibus, Reg. (EU) `2026/1744`) | `37` / `57` | 🔴 HELD |
+| EMEA | LEGO Education K–8 AI classroom platform, April `2026` | `4` | 🔴 HELD |
+| EMEA | European University Association report, Jan `2026` | `6` | 🔴 HELD |
+| EMEA | Fosway `2026` AI market assessment for digital learning | `8` | 🔴 HELD |
+| North America | `36%` of global market share, `USD 3.68B` in `2026` | `40` | 🔴 HELD |
+| North America | COPPA as the binding constraint on child-facing AI | `20` | 🔴 HELD |
+| APAC | Acer Edu Summit Asia Pacific `2026` | `5` | 🔴 HELD |
+
+🟢 **`637-F` — the one thing the legs did produce: a date conflict, resolved against what this base
+already holds.** The EMEA leg returned **three different dates** for when the `AI Act` binds education:
+*"enforceable from February 2026"*, *"key provisions start applying in 2026"*, and the original
+`2026-08-02`. 🔴 All three are wrong or stale. This base already holds the correct position — the
+**Digital Omnibus on AI**, Regulation (EU) `2026/1744`, in force `2026-07-27`, moved Chapter III
+Sections 1–3 for **Annex III** systems (education is an Annex III area) to **`2027-12-02`**, with
+Annex I at `2028-08-02`. 🔵 Held at `903` occurrences across `57` files, so the base is `~16` months
+ahead of its own secondary sources.
+🔴 **`635-E` does NOT close.** Its open item was that the `AI Act` education claim had never been read
+against the Regulation itself. It still has not: `artificialintelligenceact.eu` does **not resolve** in
+this session (`ENOTFOUND` — outside the allowed network domains), and no `EUR-Lex` primary read was
+obtained. The position above is corroborated across independent secondary channels and consistent with
+what this base holds; it is **not** a legal reading. Carried.
+
+## Opportunities by region
+
+### Global
+
+🟢 **The commercially usable finding this pass produces is a due-diligence step, and it sells.** A studio
+quoting an open-source starting point must answer two questions, not one: *is anyone working on it?*
+(push date) and *can anyone work on it?* (`archived`). `637-A` measured `8` archived rows in a `45`-row
+stale cohort — `17.8%` — and `4` of them are published here with no read-only flag. 🔵 For an engagement
+this is the difference between "fork and own it" and "fork and upstream it": the second is impossible on
+an archived repository, and a plan that assumed it would need rewriting mid-project.
+🟡 Offer it as a one-hour input to any diligence: `archived` arrives free in the same API response as
+stars and licence, so the marginal cost of checking is zero calls.
+
+### North America
+
+🔴 **Nil for unheld facts this pass, stated rather than left silent.** The leg returned `36%` global
+share / `USD 3.68B` for `2026` and COPPA as the binding child-data constraint — both already held
+(`40` and `20` files). 🟡 No `2026` federal or state instrument was reachable through the leg; its own
+sources concede *"guidance is proliferating, hard regulation remains limited"*, and the specific
+adoption figure it offered (`86%` of educational organisations on generative AI) was unsourced in the
+channel that carried it. 🔵 Recorded as a channel limit, not as an absence of regulation.
+🟢 Opportunity unchanged and unaffected by this pass: the Canvas/Brightspace **network-boundary** channel
+(`637-A`'s writable column) is the North American `LMS` estate's permissive surface, and both heads are
+live — `317★` and `62★`, both pushed on the read date.
+
+### EMEA
+
+🟢 **The region with the clearest sellable timeline, and this pass sharpens it.** Annex III education
+obligations bind on **`2027-12-02`**, not `2026-08-02` — a `16`-month extension that three separate
+secondary sources got wrong this pass. 🔵 That is a concrete advisory opening: clients who budgeted for
+an August `2026` deadline have re-planning to do, and clients who read the delay as cancellation are
+wrong, because the obligations did not change, only their date.
+🟢 Supply side: [`openfun/marsha`](https://github.com/openfun/marsha) (France Université Numérique,
+`MIT`, `151★`, pushed `2026-11-01`) is the only row in this base that is both permissively licensed and
+**writable upstream** at the platform tier — the single best EMEA starting point for an `LTI` content
+platform.
+
+### APAC
+
+🔴 **Explicit nil, and it is the third pass running.** The mandated leg
+(`AI education APAC 2026 adoption regulation players`) returned **no education-specific policy
+instrument and no market sizing**. What it returned was cross-sector enterprise material — AI
+sovereignty, Singapore's *financial* sector consultations, Omdia's `1,100`-respondent enterprise survey
+across AU/NZ/SG/MY/PH. The sole education item was the Acer Edu Summit Asia Pacific `2026`, already held.
+🔵 Written down because an unrecorded nil looks exactly like coverage: this base has **no** APAC
+education regulatory instrument, in any pass, and the gap is in the channel, not necessarily in the
+region. 🟡 The leg's own closing advice is the next experiment — query national education ministries
+(Singapore, Australia, Korea, China) directly rather than the regional aggregate.
+🔴 **And APAC takes the sharpest hit from `637-A`:** `nsip/curriculum-align` — this base's one callable
+`Apache-2.0` free-text→curriculum-standards component, placed `APAC`, named here as the row a studio
+would most want — is **archived**. The region's most attractive permissive component is read-only.
+
+### LATAM
+
+🔴 **Nil for unheld facts, with the densest heldness of any region.** All four candidates the leg
+surfaced are held at `17`–`41` files: the Digital Education Council `2026` survey (`92%` of students,
+`79%` of faculty, `29` universities, run with Tec de Monterrey's Institute for the Future of Education),
+the UNESCO Santiago–CENIA agreement, the UNESCO Regional Observatory for LAC, and Tec de Monterrey's
+`44` redesigned degrees. 🟢 This is the one region where the base's coverage is demonstrably ahead of
+what the public channel can offer.
+🟡 The leg did restate the constraint worth quoting to a client: demand is extraordinarily high
+(`67%` of students using AI at least weekly) while *"many regions lack the digital infrastructure to
+support high-quality AI tutor platforms"* — connectivity, devices, digital literacy. 🔵 That gap is the
+LATAM engagement shape: offline-capable and low-bandwidth delivery, which is why `Kolibri` keeps earning
+its place in this base's vertical shelf.
+🔴 No LATAM national AI-in-education statute was reachable through the leg; the academic comparative
+sources (Ibero-American regulatory analyses) were abstract-only. Carried as a gap.
+
+
 ## 🆕 `p636` — the integration boundary is the commercial question, and an eleventh nil on the mandated legs
 
 🟢 **Supply, measured this pass.** The pass graded the **agent boundary across platforms** rather than

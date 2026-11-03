@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — reads `2026-11-03`, commit `2026-11-03` — **🔴 THIS BASE GRADES LIVENESS BY PUSH DATE AND PUSH DATE DOES NOT DETECT ARCHIVAL: `8 of 45` STALE ROWS ARE READ-ONLY (`17.8%` vs THE `1.6%` THIS BASE PUBLISHES), AND `4` CARRY NO FLAG — INCLUDING THE `504★` LARGEST ADDRESS IN ITS AXIS AND THE ROW THIS BASE CALLS *"THE ROW A STUDIO WOULD MOST WANT"*. 🔴 `p636` CLAIMED EIGHT REGISTRATIONS AND WROTE `0` INTO THE REGISTER OR THIS FILE — BOTH WERE STALE BY A PASS; BACKFILLED. 🔴 MANDATED LEGS NIL ON **BOTH** HALVES FOR THE FIRST TIME (`0 of 14` ADDRESSES, `0 of 14` FACTS). 🔴 `make hooks` DENIED A SECOND PASS — DECLARED, NOT CONCEALED.**
+
+🔴 **`637`'s headline is a channel this base never read.** Liveness here is graded on `pushed_at`, and
+it is graded well — every row below is correctly marked stale. But `archived: true` is a different and
+stronger fact: the repository is **read-only**. No issue, no pull request, no upstreamed patch. For a
+studio deciding *"can we fork this and maintain it?"*, that is the deciding bit, and half the rows
+carrying it do not say so.
+
+| Measured `2026-11-03` | Reading |
+|---|---|
+| Stale-tail cohort (pre-`2024` dates on the three curated shelves) | `45` addresses, `45 of 45` resolved, `0` absent |
+| 🔴 `archived: true` | 🔴 **`8` (`17.8%`)** |
+| This base's own published whole-surface figure | `3 of 192` (`1.6%`) — 🟢 not wrong, a different population |
+| 🔴 Archived **and unflagged** | 🔴 **`4`** |
+| Of the `8`: permissively licensed | 🟢 `7 of 8` — the frozen catalogue is buildable, just not upstreamable |
+
+🔴 The four unflagged rows are [`ketanchoyal/Our-E-School`](https://github.com/ketanchoyal/Our-E-School)
+(`504★`, `MIT`), [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) (`Apache-2.0`, the
+one callable free-text→curriculum-standards component here, `APAC`),
+[`imgVOID/autograding-api`](https://github.com/imgVOID/autograding-api) and
+[`mindsdb/edux`](https://github.com/mindsdb/edux). 🔵 **The four the base *did* catch are the four whose
+owner namespace announces it** — `microsoftarchive`, `otsimo-archive`, `adlnet`, `raccoongang` — so the
+coverage is a naming accident rather than an instrument, and it will keep missing every archived
+repository whose owner did not rename itself.
+
+🟡 **Why education specifically.** The sector's permissive supply is disproportionately institutional —
+`Apereo`, `NSIP`, `ADL`, `openfun`, university labs — and when a grant or programme ends the output is
+not sold or forked, it is **archived** in one administrative action with the licence intact. `5 of 8`
+archived rows have institutional or consortium owners. 🟢 Quote that catalogue as **fork-and-own**,
+never as fork-and-contribute.
+
+🔴 **`p636` registered nothing.** Its headline claimed *"Eight registered (`636-A`…`636-H`)"*; all eight
+live in shelf prose and `0` reached `intel/open-gaps.md` or this file, both of which sat at `p635` while
+all eight shelves sat at `p636`. 🟡 A finding that lives only in shelf prose cannot be closed by a later
+pass, because no later pass knows it is open. `p634` built `gate-register-currency` to stop exactly
+this; the gate has now been un-runnable for **three** consecutive passes, and `637-D` is what broke in
+the dark. 🟢 All eight are backfilled this pass, declared as reconstruction rather than
+re-adjudication.
+
+🔴 **The mandated legs are now nil on both halves.** `0 of 14` unheld addresses (twelfth consecutive
+nil) and, for the first time, `0 of 14` unheld facts — the half `635-E` called *"live"*. Series:
+`4 of 12` → `2 of 15` → **`0 of 14`**. 🟢 And `636-F`'s self-pollution trap was avoided *and proven
+avoided*: every heldness figure was re-verified with `git grep` against `HEAD`, where all are nonzero,
+against an inflated working tree. **Heldness is a `HEAD` measurement.**
+
+🔴 **This pass's own instrument failed first, and the base's own register predicted it.** The archive
+census scored `OpenOLAT/qtiworks` ABSENT; it is a **fork**, and the metadata channel excludes forks by
+default — `627-A`, now reproduced a third time. With `fork:true`: `0 of 45` absent.
+🔴 And the verification method this base's ingest instruction prescribes, `curl -sI`, returns **`403`
+for repositories that exist**; `gh api repos/{slug}` returns an identical `403` for real and fabricated
+slugs, so it cannot see absence at all. The only sound channel is
+`search/repositories` + `fork:true` + a `422` control — capped at `30`/minute, which is `≈33` minutes
+for the `988` addresses the three shelves carry.
+
+🟢 **Unchanged and re-confirmed:** the permissive education-agent class is the `LMS` **network
+boundary**. [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) `317★` `MIT`,
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) `62★`, and
+[`openfun/marsha`](https://github.com/openfun/marsha) (`MIT`, `151★`, EMEA) is the only row in this base
+that is permissive **and** live **and** at the platform tier. 🔴 The `317★` head is **flat** on a
+same-day re-read, so `p636`'s `+7` was the end of a climb rather than a rate.
+
+🔴 **`make hooks` could not be executed** — sandbox denial, second consecutive pass. `p634`'s
+`48 of 70` green at `HEAD` remains the last known reading. 🟢 No gate was relaxed, removed or edited.
+Every claim on this page is byte- or API-backed; none is gate-backed.
+
+
 ## 🆕 `p635` — reads `2026-11-03`, commit `2026-11-03` — **🔴 `P634-0` IS FALSIFIED ON THE EXPERIMENT `p634` ITSELF NAMED AS NEXT: `Moodle` ESTATES PUBLISH `0` PERMISSIVE THEMES OF `9` GRADED, AGAINST OPEN EDX'S `12 of 12` `MIT`. 🔴 AND THE INSTRUMENT FOUND SOMETHING WORSE THAN THE COUNTER-EXAMPLE — FOR A `Moodle` PLUGIN THE `LICENSE` PAYLOAD **AND** GITHUB'S METADATA ARE BOTH WRONG, BECAUSE ONE IS DERIVED FROM THE OTHER: `3 of 3` "`MIT`" THEMES CARRY `GPL-3.0-or-later` SOURCE HEADERS. 🟢 `619-Q` CLOSES AFTER SIXTEEN PASSES. 🔴 `make hooks` COULD NOT BE EXECUTED — DECLARED, NOT CONCEALED.**
 
 🟢 **`635`'s headline, and it is a falsification rather than a find.** `p634` graded the Chilean Open edX

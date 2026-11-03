@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — two trends, and one of them is about this base rather than the sector
+
+🔴 **Trend A — `archived` is becoming the decisive liveness signal in education open source, because the
+sector's permissive supply is old.** This base's `45`-row stale tail runs `17.8%` read-only against
+`1.6%` across the whole surface. 🔵 The mechanism is sector-specific: education tooling is
+disproportionately produced by **institutions and grant-funded consortia** (`Apereo`, `NSIP`, `ADL`,
+`openfun`, university labs) rather than by companies. When a grant ends or a programme closes, the
+output is not sold or forked — it is **archived**, in one administrative action, with the licence intact
+and the code frozen. 🟡 So the sector's permissive back-catalogue is unusually rich in
+*correctly-licensed, technically-sound, permanently-read-only* components. That is a real asset class,
+but it must be quoted as **fork-and-own**, never as fork-and-contribute.
+
+| Signal | Reading `2026-11-03` | What it implies |
+|---|---|---|
+| Archived share, stale tail (`45` rows) | 🔴 **`17.8%`** (`8`) | Due diligence must read `archived`, not just `pushed_at` |
+| Archived share, whole surface (`192` rows, earlier pass) | `1.6%` (`3`) | Risk is concentrated, not uniform |
+| Of the `8` archived: institutional / consortium owners | `5` — `adlnet`, `nsip`, `otsimo-archive`, `raccoongang`, `microsoftarchive` | 🔵 confirms the grant-cycle mechanism |
+| Of the `8`: permissively licensed | 🟢 `7 of 8` (`MIT` ×`3`, `Apache-2.0` ×`3`, `BSD`-adjacent) | 🟢 The frozen catalogue is **buildable**, just not upstreamable |
+| Archived rows this base flags | 🔴 `4 of 8` | And the `4` it caught are the `4` whose **owner name** says so |
+
+🔵 **Trend A's uncomfortable corollary, recorded because it is checkable:** this base's archive coverage
+is an artefact of naming, not of instrumentation. `microsoftarchive` and `otsimo-archive` were caught
+because the string is in the owner; `ketanchoyal/Our-E-School` (`504★`) and `mindsdb/edux` were missed
+because it is not. Any corpus that relies on the same accident will have the same blind spot.
+
+🔴 **Trend B — the public web has stopped being a source of education-AI addresses for this base, and the
+fact channel has now closed too.** Twelve consecutive passes of `0` unheld addresses; this pass `0`
+unheld facts as well, across four global and four regional legs (`28` candidates measured for heldness).
+🔵 Two distinct causes, worth separating because they have different fixes:
+
+| Cause | Evidence this pass | Fix |
+|---|---|---|
+| 🔴 **Saturation** — the base already holds what the public channel can name | `ai-agents-for-beginners` held in `50` files; AI Act Omnibus in `57` | 🟢 Move the query unit off keywords: the publisher-estate operative (`P632-0`) still pays |
+| 🔴 **Channel degradation** — the legs now return aggregators, sales pages and auto-generated blogs | `github trending` leg reached only `trendshift.io`, `gittrend.io` and Telegram reposts; trends leg reached only market-research sales pages | 🟢 Go to the API and to primary institutional sources directly |
+
+🟡 **The sector trend inside Trend B, not about this base:** there is no published ranking of
+"top open source AI agents for education". The leg written to find one returns general-purpose agent
+lists (Hermes, OpenHands, MetaGPT, CrewAI) with education as a use-case tag. 🔵 Stated plainly: this
+base's own `agents/top.md` is closer to that artefact than anything the public channel offers, which is
+an argument for its existence and against expecting the legs to feed it.
+
+🟢 **Unchanged from `p636` and re-confirmed:** the permissive education-agent class is the `LMS`
+**network boundary** — Canvas and Brightspace `MCP` servers, `MIT`, head `317★`, second platform `62★`.
+🔴 The head is **flat** on a same-day re-read, so `p636`'s `+7` was the end of a climb, not a rate.
+
+
 ## 🆕 `p636` — reads `2026-11-03`
 
 🔴 **`T-agent-boundary` — revised, and the revision is larger than the trend was.** `p635` recorded this

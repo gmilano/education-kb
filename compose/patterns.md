@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — two recipes: the archive-aware diligence gate, and the writable-boundary build
+
+### 🟢 `P637-1` — the two-channel liveness gate, runnable in one pass over the stale tail
+
+🔵 **The problem it solves.** This base grades liveness by `pushed_at` and misses `archived: true`, which
+is the channel that decides whether a fork can be upstreamed. `637-A` found `8` archived rows in `45`,
+`4` unflagged. This recipe is the instrument, with the two defects that broke it already fixed.
+
+```bash
+# 1. Build the archive-risk cohort: published addresses on lines carrying a pre-2024 date.
+cd /tmp/education-kb
+grep -rhE 'github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+' \
+     agents/top.md repos/foundations.md verticals/solutions.md \
+  | grep -E '(201[0-9]|202[0-3])-[0-9]{2}-[0-9]{2}' \
+  | grep -o 'github\.com/[A-Za-z0-9_.-]\+/[A-Za-z0-9_.-]\+' \
+  | sed 's|github\.com/||' | sort -u > /tmp/cohort.txt
+
+# 2. Measure.  fork:true is LOAD-BEARING (627-A, reproduced a 3rd time as 637-C):
+#    without it every forked row reads ABSENT.  Pace at 24/min: search is capped at 30/min.
+printf 'slug\tstars\tlicense\tpushed\tarchived\tfork\n' > /tmp/census.tsv
+n=0
+while read -r s; do
+  n=$((n+1)); [ $((n % 24)) -eq 0 ] && sleep 65
+  out=$(gh api -X GET search/repositories -f q="repo:$s fork:true" \
+        --jq '.items[]|[.full_name,(.stargazers_count|tostring),
+                        (.license.spdx_id // "NONE"),.pushed_at,
+                        (.archived|tostring),(.fork|tostring)]|@tsv' 2>/dev/null)
+  [ -z "$out" ] && out=$(printf '%s\tABSENT\tABSENT\tABSENT\tABSENT\tABSENT' "$s")
+  printf '%s\n' "$out" >> /tmp/census.tsv
+done < /tmp/cohort.txt
+
+# 3. CONTROL — must return 422, or the ABSENT column means nothing:
+gh api -X GET search/repositories -f q='repo:owner/fabricated-control-xyz99 fork:true' --jq '.total_count'
+
+# 4. Which archived rows does the base fail to flag?  Count the LITERAL token only:
+#    owner strings like `microsoftarchive` / `otsimo-archive` match `archiv` and inflate coverage.
+awk -F'\t' '$5=="true"{print $1}' /tmp/census.tsv | while read -r s; do
+  n=$(grep -rn "$s" --include=*.md agents repos verticals intel compose README.md | grep -co "archived")
+  [ "$n" -eq 0 ] && echo "UNFLAGGED $s"
+done
+```
+
+🔴 **Three traps this recipe has already paid for.** (a) Omitting `fork:true` → false absences
+(`637-C`). (b) `curl -sI`, the method the ingest instruction prescribes, returns `403` for repositories
+that exist, and `gh api repos/{slug}` returns an identical `403` for real and fabricated slugs — neither
+can see absence (`637-E`). (c) Grepping `archiv` instead of `archived` counts owner names as flags.
+🟡 Deduplicate before computing rates: this pass's own census wrote `67` rows for `45` slugs when a
+paced background run and a foreground completion overlapped. 🟢 The duplicate pairs agreed on every
+field, which is a free reproducibility check — `0` disagreements across `22` re-measured slugs.
+
+### 🟢 `P637-2` — the writable-boundary education stack, named end to end
+
+🔵 **The rule, now two-dimensional.** `p636` established that what a studio can own is set by the
+extension **substrate** (network vs in-process), not the core licence. `637-A` adds: and by whether the
+repository still accepts a pull request. Wire only rows that answer 🟢 to both.
+
+| Layer | Repo | Grant | Boundary | Writable | Why this one |
+|---|---|---|---|---|---|
+| `LMS` of record | Canvas (`AGPL-3.0` core) | — | 🟢 network (`REST`/`LTI`) | n/a — not forked | Extensions are **network clients**, so your code stays yours |
+| Agent surface | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `MIT` | 🟢 network | 🟢 `2026-11-03` | `102` tools, `8` agent skills; the channel head at `317★` |
+| Second `LMS` | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 `MIT` | 🟢 network | 🟢 `2026-11-03` | Proves the pattern ports off Canvas |
+| Content platform | [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 `MIT` | 🟢 `LTI` `LCMS` | 🟢 `2026-11-01` | The only permissive **and** live platform-tier row this base holds (EMEA) |
+| `LTI` plumbing | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) · [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 `MIT` | 🟢 network | 🟢 `2026-10-02` · 🟡 `2024-08-18` | Vendor-published and the reference Python `1.3` implementation |
+| Offline delivery | `Kolibri` | 🟢 `MIT` | 🟢 standalone | 🟢 live | The LATAM infrastructure constraint (`67%` weekly use, thin connectivity) |
+
+🔴 **Wire these as fork-and-own only — they are read-only upstream.**
+[`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) (`Apache-2.0`, free-text →
+curriculum-standards aligner, `APAC`) is still the best component of its kind here, and it is
+**archived**: vendor it into your own repository, keep the `Apache-2.0` NOTICE, and do not plan a
+PR. Same for [`imgVOID/autograding-api`](https://github.com/imgVOID/autograding-api) (`Apache-2.0`) and
+[`mindsdb/edux`](https://github.com/mindsdb/edux) (`MIT`).
+🔴 **Do not wire** [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) —
+archived **and** ungranted — or [`ketanchoyal/Our-E-School`](https://github.com/ketanchoyal/Our-E-School)
+(`504★` is the most misleading number in this base: `MIT`, archived, and a Flutter app rather than a
+platform).
+
+
 ## 🆕 `p636` — three recipes at the network boundary, and one pre-flight check that stops a bad bid
 
 ### 🟢 `p636-R1` — The governed Canvas agent: extend the `317★` incumbent instead of rebuilding it

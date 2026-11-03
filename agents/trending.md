@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p637` — **🔴 NOTHING IS TRENDING THIS WEEK THAT THIS BASE DOES NOT ALREADY HOLD: `14 of 14` ADDRESSES AND `14 of 14` FACTS RETURNED HELD, THE FIRST PASS NIL ON **BOTH** HALVES. 🔴 AND THE WEEK'S REAL MOVEMENT IS BACKWARDS — `8` ROWS IN THE STALE TAIL ARE `archived: true`, `4` OF THEM UNFLAGGED. 🟢 `p636`'s COHORT: `20 of 20` LIVE, `0` DRIFT, `317★` HEAD FLAT.**
+
+🔴 **`637-B` — the mandated legs are now nil on both halves, and that is the trend.** `635-E` recorded
+them as *"dead for addresses, live for facts"*. The fact half has now closed too:
+
+| Pass | Addresses unheld | Facts unheld | Fact leg verdict |
+|---|---|---|---|
+| `p635` | 🔴 `0 of 9` | 🟡 `4 of 12` | live |
+| `p636` | 🔴 `0 of 12` | 🟡 `2 of 15` | thinning |
+| 🆕 `p637` | 🔴 **`0 of 14`** (twelfth consecutive nil) | 🔴 **`0 of 14`** | 🔴 **closed** |
+
+🔵 What the four global legs returned, every candidate measured for heldness rather than assumed:
+
+| Leg | Candidates surfaced | Already held (files) | Unheld |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | Hermes, OpenHands, MetaGPT, CrewAI, AutoGen, `500-AI-Agents-Projects` | all | 🔴 `0` |
+| `github trending education AI 2026` | `guru-latihan-dinamis` (`8`), `PAIDEIA` (`14`), `ai-engineering-from-scratch` (`40`), `ChinaTextbook` (`8`), `ai-agents-for-beginners` (`50`) | all | 🔴 `0` |
+| `open source platform education ERP CRM MIT Apache` | `OpenEduCat` (`100`), Krayin (`34`), Huly (`26`) | all | 🔴 `0` |
+| `AI education industry trends 2026` | — market-research sales pages and auto-generated blogs only | n/a | 🔴 `0` |
+
+🟡 **The agents leg returned no education-specific ranked list at all** — the lists it surfaced are
+general-purpose agent rankings (Hermes for personal automation, OpenHands for coding) with education
+mentioned only as a use-case tag. 🔵 Stated rather than left silent: the "top open source AI agents for
+education" the leg is written to find does not exist as a published ranking, and this base's own
+`agents/top.md` is closer to one than anything the leg can reach.
+
+🔴 **What actually moved this week, and it moved the wrong way.** The trending surface for the permissive
+education-agent class is unchanged from `p636` — the Canvas `MCP` channel, head
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at **`317★`**, flat against
+`p636`'s same-day reading, so the `272→317` climb has stopped. The week's measurable movement is
+`637-A`'s archive census:
+
+| Archived this week's census found | Grant | Stars | Pushed | Flagged in base |
+|---|---|---|---|---|
+| [`ketanchoyal/Our-E-School`](https://github.com/ketanchoyal/Our-E-School) | `MIT` | `504` | `2021-08-19` | 🔴 **no** |
+| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | `MIT` | `132` | `2023-05-03` | 🟢 yes |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 none | `99` | `2017-10-02` | 🟢 yes |
+| [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | `Apache-2.0` | `32` | `2023-05-26` | 🟢 yes |
+| [`otsimo-archive/aac`](https://github.com/otsimo-archive/aac) | `AGPL-3.0` | `25` | `2021-09-01` | 🟢 yes |
+| [`imgVOID/autograding-api`](https://github.com/imgVOID/autograding-api) | `Apache-2.0` | `15` | `2022-01-10` | 🔴 **no** |
+| [`mindsdb/edux`](https://github.com/mindsdb/edux) | `MIT` | `6` | `2020-07-01` | 🔴 **no** |
+| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0` | `2` | `2019-09-02` | 🔴 **no** |
+
+🔵 This supersedes the earlier census line in this file (*"`archived: true` found | `192` | `3`"*) for
+the stale tier: that reading sampled the whole surface at `1.6%`; the stale tail runs at `17.8%`.
+Both numbers stand, for different populations.
+
+
 ## 🆕 `2026-11-03` · `p636` — **🔴 THE TREND `p635` RECORDED AS "GREENFIELD, NO CONSOLIDATION, MAXIMUM `42★`" IS THE SAME WEEK'S TREND MEASURED ON THE WRONG PLATFORM. ON CANVAS THE PERMISSIVE LMS-AGENT CLASS HAS A `317★` HEAD THAT GREW `+7` SINCE THIS BASE LAST LOOKED, AND A `62★` BRIGHTSPACE SECOND PLATFORM. 🟢 `8 of 8` BYTE-VERIFIED `MIT`, CONTROL `404`. 🔴 MANDATED LEGS NIL FOR ADDRESSES AN **ELEVENTH** TIME.**
 
 🟢 **New this week, and it is the correction of last week's entry rather than a new class.** `p635`

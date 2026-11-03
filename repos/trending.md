@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p637` — **🔴 `0` UNHELD ADDRESSES FOR THE TWELFTH CONSECUTIVE PASS, AND THIS PASS MEASURED WHY THE SEARCH-API SUBSTITUTE CANNOT BE RUN OVER THE WHOLE SURFACE: `30` REQUESTS PER MINUTE AGAINST `988` PUBLISHED ADDRESSES = `≈33` MINUTES. 🟢 `p636`'s `20`-ROW COHORT RE-READ: `20 of 20` RESOLVE, `20 of 20` `MIT`, `0` DRIFT.**
+
+🔴 **`github trending education AI 2026` via WebSearch returned `0` unheld addresses for the twelfth
+pass.** Every candidate it surfaced was already in this base, with heldness measured rather than assumed:
+`guru-latihan-dinamis` (`8` files), `OPTIMETA/PAIDEIA` (`14`), `rohitg00/ai-engineering-from-scratch`
+(`40`), `TapXWorld/ChinaTextbook` (`8`), `microsoft/ai-agents-for-beginners` (`50`).
+🟡 The leg also could not reach an authoritative trending list at all — the results were third-party
+trackers (`trendshift.io`, `gittrend.io`) and Telegram channel reposts, several undated.
+
+🟢 **`p636`'s cohort, re-read today with `fork:true` and a `422` control.** `0` drift on any channel:
+
+| Repo | Grant | Stars | Pushed | Archived |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `MIT` | **`317`** | `2026-11-03T02:35Z` | 🟢 no |
+| [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | `MIT` | `203` | `2026-10-02` | 🟢 no |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | `MIT` | `151` | `2026-11-01` | 🟢 no |
+| [`lmcggg/Data-Driven-MPC`](https://github.com/lmcggg/Data-Driven-MPC) | `MIT` | `149` | `2026-02-03` | 🟢 no — 🔴 and it is `LTI`-collision pollution (`636-E`), not education |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `MIT` | `138` | `2024-08-18` | 🟢 no |
+| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | `MIT` | `132` | `2023-05-03` | 🔴 **`true`** |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `MIT` | `119` | `2026-10-27` | 🟢 no |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `MIT` | `62` | `2026-11-03T17:31Z` | 🟢 no — freshest row in the cohort |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | `MIT` | `18` | `2026-08-14` | 🟢 no |
+| [`NUS-ALSET/achievements`](https://github.com/NUS-ALSET/achievements) | `MIT` | `17` | `2023-01-04` | 🟢 no |
+| [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) | `MIT` | `13` | `2026-10-03` | 🟢 no |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | `MIT` | `12` | `2026-09-21` | 🟢 no |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `MIT` | `10` | `2026-11-03T00:24Z` | 🟢 no |
+| [`kc0506/ntucool`](https://github.com/kc0506/ntucool) | `MIT` | `10` | `2026-07-10` | 🟢 no |
+| [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | `MIT` | `8` | `2021-07-22` | 🟢 no |
+| [`DegrangeM/Skreen`](https://github.com/DegrangeM/Skreen) | `MIT` | `6` | `2023-07-15` | 🟢 no |
+| [`easyteachlms/plugin`](https://github.com/easyteachlms/plugin) | `MIT` | `5` | `2022-09-29` | 🟢 no |
+| [`Marius-Roed/lighter-lms`](https://github.com/Marius-Roed/lighter-lms) | `MIT` | `2` | `2026-09-30` | 🟢 no |
+| [`nayemspecial/lessonLMS`](https://github.com/nayemspecial/lessonLMS) | `MIT` | `1` | `2026-10-19` | 🟢 no |
+| [`Velocity-Developer/ecoursity`](https://github.com/Velocity-Developer/ecoursity) | `MIT` | `0` | `2026-08-11` | 🟢 no |
+| [`devMiguelCarrero/lms-matic-extender`](https://github.com/devMiguelCarrero/lms-matic-extender) | `MIT` metadata | `0` | `2024-01-27` | 🟢 no — 🔴 `OSLv3` source header under an `MIT` `LICENSE` (`636-C`) |
+
+🔵 `0` licence changes, `0` deletions, `0` new archives since `p636`. 🟡 The `317★` head is **flat** on a
+same-day re-read, so `p636`'s `+7` was the end of the climb rather than a rate.
+
+🔴 **`637-E` — why this channel cannot be swept over the whole base.** `search/repositories` is capped at
+`30` requests/minute (measured; exhausted twice this pass). The three curated shelves carry **`988`**
+unique addresses → `≈33` minutes for one full census. 🔴 `gh api repos/{slug}`, which has a
+`15,000`/hour budget, is unusable: it returns an identical session-scope `403` for a **real** and a
+**fabricated** slug, so it cannot distinguish absence. 🟡 Hence `637-A` scoped its census to the stale
+tail (`45` rows), which is where the defect concentrates.
+
+
 ## 🆕 `2026-11-03` · `p636` — **🟢 THE TRENDING SURFACE THIS PASS IS THE CANVAS `MCP` CHANNEL: `6` REPOSITORIES PUSHED ON THE DAY OF THE READ, A `317★` HEAD STILL GROWING (`+7` SINCE THIS BASE LAST RECORDED IT), AND A SECOND PLATFORM (BRIGHTSPACE, `62★`) ENTERING THE TIER. 🔴 GITHUB-TRENDING-VIA-WEBSEARCH RETURNED `0` UNHELD ADDRESSES FOR THE ELEVENTH PASS; EVERY NEW ROW CAME FROM THE SEARCH API.**
 
 🟢 **What is actually moving, dated.** Sorting `canvas lms mcp license:mit` by recency:

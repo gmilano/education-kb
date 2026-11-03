@@ -4,6 +4,150 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — `2026-11-03` — **🔴 `637-D`: `p636` CLAIMED "EIGHT REGISTERED (`636-A`…`636-H`)" AND WROTE `0` OF THEM INTO THIS REGISTER OR INTO `README.md` — BOTH SAT AT `p635` WHILE ALL EIGHT SHELVES SAT AT `p636`. THE ONE CHECK THAT CATCHES THIS (`gate-register-currency`) HAS BEEN UN-RUNNABLE FOR THREE CONSECUTIVE PASSES. 🟢 BACKFILLED BELOW. 🔴 `637-A`: `archived` IS A LIVENESS CHANNEL THIS BASE DOES NOT READ — `8 of 45`, `4` UNFLAGGED. 🔴 `637-B`: MANDATED LEGS NIL ON BOTH HALVES. EIGHT REGISTERED (`637-A`…`637-H`).**
+
+🔴 Currency, stated honestly: this register and `README.md` were **stale by one pass** when `p637`
+opened, and `make hooks` could not be executed this pass either (`637-G`), so currency below is again
+asserted by construction rather than gate-verified.
+
+### 🔴 `637-D` — NEW: the register was not written, and the claim that it was is in `p636`'s own headline
+
+🔵 Measured by reading the newest `## 🆕` section header and the `636-[A-H]` tokens in each file.
+Evidence: `evidence/register-currency.2026-11-03-p637.tsv`.
+
+| File | Newest pass section | `636-*` ids held |
+|---|---|---|
+| `agents/top.md` | `p636` | `636-A`, `636-B`, `636-C`, `636-H` |
+| `repos/foundations.md` | `p636` | `636-D`, `636-E`, `636-G`, `636-H` |
+| `verticals/solutions.md` | `p636` | `636-B`, `636-C`, `636-E` |
+| `intel/market.md` | `p636` | `636-B`, `636-C`, `636-F` |
+| `intel/trends.md` | `p636` | `636-A`, `636-F` |
+| `compose/patterns.md` | `p636` | `636-C`, `636-E` |
+| `agents/trending.md` | `p624` (append-only, `· p636` form) | `636-A`, `636-F` |
+| `repos/trending.md` | `p624` (append-only, `· p636` form) | `636-A`, `636-F` |
+| 🔴 **`intel/open-gaps.md`** | 🔴 **`p635`** | 🔴 **none** |
+| 🔴 **`README.md`** | 🔴 **`p635`** | 🔴 **none** |
+
+🔴 **Why it matters beyond tidiness.** This register is the only place a gap is *adjudicated* — opened,
+narrowed, closed. Eight findings that live only in shelf prose cannot be closed by a later pass, because
+no later pass will know they are open. 🟡 `p634` found this register stale and built
+`gate-register-currency` to stop it; `p635` could not run the gate (sandbox), `p636` evidently did not,
+and `p637` cannot either. 🔵 **The defect is therefore structural, not clerical:** the check exists and
+has been dark for three passes, which is exactly long enough for the thing it checks to break twice.
+🟢 **Discharged in part:** `636-A`…`636-H` are backfilled below.
+🔴 OPEN: the gate itself remains unverified, and no pass since `p634` has a gate-backed green.
+
+### 🟡 `636-A`…`636-H` — BACKFILLED from the shelves, reconstructed and **not** re-adjudicated
+
+🔵 Stated plainly: the titles below are read out of `p636`'s shelf prose so a later pass can close them.
+They were **not** re-measured this pass, except where `p637` says so explicitly.
+
+| Id | Finding as `p636` stated it | Status |
+|---|---|---|
+| `636-A` | `p635` measured one platform (`moodle plugin license:mit`) and published a class ceiling of `42★`; the real channel head is `317★` on Canvas — `7.5×`. Rule: the **platform/substrate** dominates, not the licence or the repository count | 🟢 Re-confirmed `p637`: head flat at `317★` |
+| `636-B` | `635-A` tested outside Moodle and **splits**: the rule is *"grade the source header because it can disagree"*, not *"expect `GPL`"* | 🟡 OPEN |
+| `636-C` | `devMiguelCarrero/lms-matic-extender` declares `OSLv3` (GPL-incompatible copyleft) in-source under an `MIT` `LICENSE` and `MIT` metadata. Rule: grade all three channels and expect disagreement | 🟡 OPEN — row re-measured live `p637`, grant channel not re-read |
+| `636-D` | Substrate census: permissive share tracks plugin-contract **enforcement**, not core licence — Moodle in-process `PHP` `10.0%` (`138`/`1,239`), Open edX `XBlock` `25.0%` (`76`/`228`), WordPress `LMS` `40.0%` (`12`/`18`) | 🟡 OPEN — WordPress row rests on `12`+`18`, directional only |
+| `636-E` | The network-boundary half could not be measured: `lti` is unusable as a denominator — `610` acronym vs `11` exact-phrase (`55×`), top hits a webcam library and an iOS scrollview | 🔴 OPEN |
+| `636-F` | The heldness instrument is **self-polluting** — it counts a pass's own writing as prior knowledge (`post-market-surveillance` read `5` in the working tree, `0` at `HEAD~1`) | 🟢 **Acted on `p637`** — see `637-B` |
+| `636-G` | The maintenance split a studio must price: `2 of 6` pushed in `2026` | 🟡 OPEN |
+| `636-H` | Instrument limit: `repos/{slug}/contents` unavailable in this session | 🟢 Superseded by `637-E`, which measures the whole channel matrix |
+
+### 🔴 `637-A` — NEW, and it is the pass's finding: `archived` is an ungraded liveness channel
+
+`45`-row stale cohort (addresses on `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`
+appearing on a line with a pre-`2024` date). `45 of 45` resolved, `0` absent, **`8` `archived: true`**
+(`17.8%`) against this base's own published whole-surface figure of `3 of 192` (`1.6%`).
+🔴 `4 of 8` carry no literal `archived` token anywhere: `ketanchoyal/Our-E-School` (`504★`, `MIT`),
+`nsip/curriculum-align` (`Apache-2.0` — named by this base as *"the row a studio would most want"*),
+`imgVOID/autograding-api` (`Apache-2.0`), `mindsdb/edux` (`MIT`).
+🟡 **Rule:** `pushed_at` answers *is anyone working on it?*; `archived` answers *can anyone work on it?*
+A fork-and-upstream plan needs the second, and `archived` costs `0` extra API calls.
+🔵 The `4` the base did catch are the `4` whose **owner namespace** contains the string — so coverage is
+a naming accident, not an instrument.
+🟢 **Repaired in place this pass** (`626-E`'s "flag in place" class): all `4` shelf rows now carry
+🔴 **ARCHIVED (read-only) — measured `p637`** — `verticals/solutions.md` ×`2`, `repos/foundations.md` ×`2`.
+Column counts were asserted unchanged before writing, so `p239-table-integrity` is not disturbed.
+🔴 OPEN: (a) the repair covers the `4` rows this census found, not any archived row outside the
+stale tail, and the remaining prose mentions of these slugs were left untouched;
+(b) the census covered the stale tail of three shelves, not the `988` addresses they carry nor the
+`~3,956` of `p628`, so no base-wide archived rate is publishable.
+
+### 🔴 `637-B` — NEW: the mandated legs are nil on **both** halves, measured at `HEAD`
+
+`0 of 14` addresses unheld (twelfth consecutive nil) **and** `0 of 14` facts unheld. Series for the fact
+half: `4 of 12` (`p635`) → `2 of 15` (`p636`) → **`0 of 14`** (`p637`).
+🟢 **`636-F`'s trap was avoided and the avoidance was proven, not asserted.** Every heldness reading was
+taken before any edit, then re-verified against `HEAD` with `git grep` after writing:
+
+| Term | `HEAD` (pre-edit) | Working tree (post-edit) |
+|---|---|---|
+| `Digital Omnibus` | 🟢 `586` | `588` |
+| `2026/1744` | 🟢 `881` | `883` |
+| `Digital Education Council` | 🟢 `426` | `428` |
+| `CENIA` | 🟢 `353` | `355` |
+| `Acer Edu Summit` | 🟢 `6` | `8` |
+| `ketanchoyal/Our-E-School` | 🟢 `4` | `10` |
+
+🔵 Every `HELD` verdict is nonzero at `HEAD`, so none is this pass reading its own writing. 🟡 The
+inflation in the right-hand column is `636-F` operating exactly as described — which is why the rule is
+now: **heldness is a `HEAD` measurement, never a working-tree one.**
+🔴 OPEN: `637-B` closes the *keyword* legs, not discovery. `P632-0` (publisher estates) is the operative
+that still pays and was **not** run this pass.
+
+### 🔴 `637-C` — NEW: this pass's own census manufactured a false absence; `627-A` predicted it
+
+`repo:OpenOLAT/qtiworks` → `total_count 0`; with `fork:true` → `1` (`3★`, fork, pushed `2026-06-30`).
+🔴 Third independent reproduction of `627-A` (after `p626`'s census, corrected at `53%`, and `p628`'s
+re-proof on this same slug) — and the first by an instrument whose author had already read the rule.
+🟡 **Rule:** `fork:true` belongs in the instrument, not in the register. 🟢 Control returned `422` with
+and without the qualifier, so absence stays distinguishable once it is present. 🟢 CLOSED as a reading;
+carried as a standing instrument requirement.
+
+### 🔴 `637-E` — NEW: the mandated verification method does not work, and the working one is rate-capped
+
+| Channel | Real repo | Fabricated control | Sees absence? |
+|---|---|---|---|
+| `curl -sI` (**the method this base's ingest instruction prescribes**) | 🔴 `403` | 🔴 `403` | 🔴 NO |
+| `gh api repos/{slug}` | 🔴 `403` session-scope | 🔴 `403` session-scope | 🔴 NO |
+| `gh api search/repositories -f q='repo:X'` | 🟢 `200` | 🟢 `422` | 🟡 forks read absent |
+| `gh api search/repositories -f q='repo:X fork:true'` | 🟢 `200` | 🟢 `422` | 🟢 **YES** |
+
+🔵 Refines `587-C`: the defect in the direct endpoint is not that it errors, it is that it errors
+**identically** for a real and a fabricated slug. 🔴 `search` is capped at `30`/minute (exhausted twice
+this pass) against `988` published addresses on the three shelves → `≈33` minutes for a full census;
+`repos/{slug}` would do it inside the `15,000`/hour core budget but is session-scoped out.
+🔴 OPEN: the ingest instruction's `curl -sI` requirement should be restated to the `search` + `fork:true`
++ `422`-control form, and no pass can edit that instruction from inside this repository.
+
+### 🟡 `637-F` — `635-E` does **not** close: the `AI Act` claim still has no primary reading
+
+🔵 The EMEA leg returned three mutually inconsistent dates for when the `AI Act` binds education
+(*"February 2026"*, *"key provisions in 2026"*, `2026-08-02`). 🟢 All resolve against what this base
+already holds: the **Digital Omnibus on AI**, Reg. (EU) `2026/1744`, in force `2026-07-27`, moves
+Chapter III §§1–3 for **Annex III** (education) to **`2027-12-02`** and Annex I to `2028-08-02`; held at
+`881` occurrences at `HEAD`.
+🔴 But `635-E`'s open item was that the claim had never been read **against the Regulation**, and it
+still has not: `artificialintelligenceact.eu` returns `ENOTFOUND` in this session (outside the allowed
+network domains) and no `EUR-Lex` read was obtained. 🔴 CARRIED, unchanged, now `3` passes old.
+
+### 🔴 `637-G` — `make hooks` denied for the **second** consecutive pass
+
+🔴 Attempted before any edit; denied by the execution sandbox (`compose/code` is external code this
+session may not run). 🟢 No gate was relaxed, removed or edited to manufacture a green.
+🔴 Consequences, stated rather than concealed: `p634`'s `48 of 70` green at `HEAD` is still the last
+known reading; `gate-register-currency` has now been un-runnable for three passes and `637-D` is what
+broke in the dark; `634-B`'s repair remains unverified. 🔴 OPEN and still the highest-priority
+inherited item.
+
+### 🟢 `637-H` — `p636`'s cohort re-measured: `0` drift
+
+`20 of 20` resolve, `20 of 20` `MIT`, `0` absent, `0` licence drift, `1` archived and correctly flagged
+(`microsoftarchive/Learn-LTI`). `vishalsachdev/canvas-mcp` **flat at `317★`** — ninth observation,
+identical to `p636`'s same-day reading, so the `272→317` climb has stopped.
+🟢 CLOSED. 🔵 Recorded so the next pass does not re-spend the budget on a drift check.
+
+
 ## 🆕 `p635` — `2026-11-03` — **🔴 `P634-0` IS FALSIFIED ON ITS OWN NAMED NEXT EXPERIMENT, AND THE INSTRUMENT THAT FALSIFIED IT EXPOSED A GRANT-CHANNEL DEFECT: FOR A `Moodle` PLUGIN THE `LICENSE` PAYLOAD **AND** THE PLATFORM METADATA ARE BOTH WRONG, BECAUSE ONE IS DERIVED FROM THE OTHER. 🟢 `619-Q` CLOSES AFTER SIXTEEN PASSES ON A THREE-PART ANSWER. 🔴 `make hooks` COULD NOT BE EXECUTED THIS PASS — SANDBOX DENIAL, DECLARED NOT CONCEALED. EIGHT REGISTERED (`635-A`…`635-H`).**
 
 🔵 Currency: shelves `p635`, this register `p635`, `README.md` `p635` — asserted by construction, **not**

@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — the foundational row that cannot be upstreamed, and the measurement channel that cannot see absence
+
+🔴 **`637-A` applied to this file, and it costs this file its most attractive row.**
+[`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) is published here as *"the row a
+studio would most want — a permissively licensed free-text → curriculum-standards aligner"*, graded
+`Apache-2.0`, `11,357 B`, `2★`, pushed `2019-09-02`, `APAC`. 🔵 All of that is correct. 🔴 What this
+file does not say is that the repository is **`archived: true`** — read-only on GitHub. Measured today:
+
+| Row | Grant | Stars | Pushed | `archived` | Consequence for a studio |
+|---|---|---|---|---|---|
+| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0` | `2` | `2019-09-02` | 🔴 **`true`** | Fork and own it outright. 🔴 The published *"builds on `nsip/curriculum-mapper`"* path cannot be walked upstream — no PR can be merged |
+| [`imgVOID/autograding-api`](https://github.com/imgVOID/autograding-api) | `Apache-2.0` | `15` | `2022-01-10` | 🔴 **`true`** | Already graded *"pattern, not a dependency"* — the archive flag makes that verdict stronger, not weaker |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 none | `99` | `2017-10-02` | 🔴 `true` | 🟢 Already flagged **BLOCK — no grant AND archived** |
+| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | `MIT` | `132` | `2023-05-03` | 🔴 `true` | 🟢 Already flagged **ARCHIVED — design reference only** |
+
+🟡 **The rule for this file, and it is cheap to apply:** a row whose push date is already printed red
+must also be read for `archived`. The two channels answer different questions — *is anyone working on
+it?* versus *can anyone work on it?* — and a studio that plans to fork-and-maintain needs the second.
+🔵 `archived` arrives free in the same `search/repositories` response this base already uses for stars
+and licence, so the cost of adding it is zero calls.
+
+### 🔴 `637-E` — the verification channel, measured, and the mandated method does not work here
+
+🔴 This base's ingest instruction prescribes `curl -sI` for URL verification. **It returns `403` in this
+environment for a repository that demonstrably exists**, so following it as written would score the
+entire surface dead. Full probe, with controls:
+
+| Channel | Real repo | Fabricated control | Can it see absence? |
+|---|---|---|---|
+| `curl -sI https://github.com/{slug}` | 🔴 `403` | 🔴 `403` | 🔴 **NO** — and it is the mandated method |
+| `gh api repos/{slug}` | 🔴 `403` session-scope | 🔴 `403` session-scope | 🔴 **NO** — identical response, absence-blind |
+| `gh api search/repositories -f q='repo:{slug}'` | 🟢 `200` + full metadata | 🟢 `422` | 🟡 yes, **but forks read as absent** (`637-C`) |
+| `gh api search/repositories -f q='repo:{slug} fork:true'` | 🟢 `200` + `fork` field | 🟢 `422` | 🟢 **YES — the only sound channel** |
+
+🔵 `637-E` also prices the full-surface census this base keeps wanting. `search` is rate-limited to
+**`30` requests per minute** (measured: `limit 30`, and the budget was exhausted twice this pass). The
+three main shelves carry **`988`** unique addresses, so a complete `archived` census is `≈33` minutes of
+wall clock. 🟡 That is affordable for one pass but not for every pass — which is the argument for
+scoping it to the stale tail, as `637-A` did, rather than to the whole surface.
+🔴 `gh api repos/{slug}` has a `15,000`/hour budget and would make the full census trivial; it is
+unusable here because the session scopes the direct repository endpoint to attached repositories only.
+This refines `587-C`, which recorded the endpoint as returning "an authorisation error" — the defect
+that matters is not the error, it is that the error is **identical for a real and a fabricated slug**.
+
+
 ## 🆕 `p636` — the foundations that sit at the network boundary, and the denominator that cannot grade them
 
 🟢 **`636-D` — the substrate rule from `635-B`, measured instead of asserted.** `p635` left this base
@@ -804,7 +849,7 @@ different grants.
 | [`cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine`](https://github.com/cloudpedagogy/cloudpedagogy-curriculum-alignment-mapping-engine) | `MIT`, `1,070 B`, operative | `0` | `2026-10-20` | EMEA | **The permissive pick.** Local-first relational mapping of programmes → modules → learning outcomes → assessments → skills, with structural gap, duplication and misalignment detection; `68` files, no server dependency. Its own `README` states interoperability with Curriculum Studio is **untested** in the open release. |
 | [`usaskulc/cat`](https://github.com/usaskulc/cat) | 🔴 `LGPL-3.0` — `COPYING.LESSER` `7,651 B` beside `COPYING` `35,147 B` (see `621-B`) | `1` | `2014-02-10` | North America | Curriculum Alignment Tool: collects instructor-reported alignment of courses to programme outcomes and assessments. 🔴 Last pushed `2014` — a **data model and survey instrument** to read, not to run. 🟢 `LGPL` permits linking from proprietary code, which `GPL` would not. |
 | [`UBCForestryTLS/curriculum-development-tool`](https://github.com/UBCForestryTLS/curriculum-development-tool) | 🔴 `GPL-3.0` (real grant, title at line 3; channel B says `NOASSERTION` — see `621-G`) | `1` | `2026-11-02` | North America | Curriculum MAP: mapping, analysis and planning over course offerings, surfacing gaps and redundancies. Derived from the University of Calgary Curriculum Links tool. **Pushed today** — the most active row in the layer, and virally copyleft. |
-| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0`, `11,357 B`, §2/§4/§9 present | `2` | `2019-09-02` | APAC | A `tf–idf` document classifier exposed as a web service that aligns **free text** to curriculum standards — the one row here that is a callable component rather than an application. Builds on `nsip/curriculum-mapper`. |
+| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0`, `11,357 B`, §2/§4/§9 present | `2` | `2019-09-02` | APAC | A `tf–idf` document classifier exposed as a web service that aligns **free text** to curriculum standards — the one row here that is a callable component rather than an application. Builds on `nsip/curriculum-mapper`. 🔴 **ARCHIVED (read-only) — measured `p637`** |
 
 ### 🔴 `621-J2` — a complete, valid `Apache-2.0` grant on a tree its own maintainers retired
 
@@ -2053,7 +2098,7 @@ collision between Learning Tools Interoperability and Linear Time-Invariant is n
 | --- | --: | --- | --- | --- | --- |
 | [illinois-cs241/broadway](https://github.com/illinois-cs241/broadway) | `19` | 🟢 **MIT** (`1,681 B`) | `master` | `2024-09-04` | 🟢 API said `NOASSERTION`; the bytes say MIT |
 | [tkutcher/jgrade](https://github.com/tkutcher/jgrade) | `26` | 🟢 MIT (`1,070 B`) | 🔴 `dev` | 🔴 `2023-08-16` | 🟡 Java assignment grading; Gradescope JSON |
-| [imgVOID/autograding-api](https://github.com/imgVOID/autograding-api) | `15` | 🟢 Apache-2.0 (`11,357 B`) | `master` | 🔴 `2022-01-10` | 🟡 Pattern, not a dependency |
+| [imgVOID/autograding-api](https://github.com/imgVOID/autograding-api) | `15` | 🟢 Apache-2.0 (`11,357 B`) | `master` | 🔴 `2022-01-10` | 🟡 Pattern, not a dependency 🔴 **ARCHIVED (read-only) — measured `p637`** |
 | [RiceComp215-Staff/RiceChecks](https://github.com/RiceComp215-Staff/RiceChecks) | `12` | 🟢 Apache-2.0 (`11,357 B`) | `master` | 🔴 `2023-01-09` | 🟡 Gradle-based Java autograder |
 
 🔵 **Read with the Moodle rows, this is the honest state of open autograding:** the **stale** artefacts

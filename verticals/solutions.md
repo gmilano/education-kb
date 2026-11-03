@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — the largest address in this file is read-only, and the platform question gains a third column
+
+🔴 **`637-A` lands hardest here.** This file publishes
+[`ketanchoyal/Our-E-School`](https://github.com/ketanchoyal/Our-E-School) as *"the largest address in
+the axis"* — `504★`, `MIT` (`1,069 B`), correctly marked *"Abandoned — last push `2021-08-19`"*.
+🔴 Measured today it is also **`archived: true`**, which this file does not say in any of its `4`
+mentions. 🟡 The existing verdict (*"Flutter app, not a platform"*) already steers a studio away from
+it, so no quote is at risk — but the `504★` figure is the one a client sees, and *"abandoned"* invites
+the obvious question *"so can we pick it up?"*, whose answer is **no, not upstream**.
+
+| This file's row | Stars | Grant | Published verdict | Measured `archived` | Change |
+|---|---|---|---|---|---|
+| [`ketanchoyal/Our-E-School`](https://github.com/ketanchoyal/Our-E-School) | **`504`** | `MIT` | 🔴 Abandoned, last push `2021-08-19` | 🔴 **`true`** | 🔴 add **read-only** |
+| [`mindsdb/edux`](https://github.com/mindsdb/edux) | `6` | `MIT` | 🔴 Last push `2020-07-01`; Open edX *theme* | 🔴 **`true`** | 🔴 add **read-only** |
+| [`otsimo-archive/aac`](https://github.com/otsimo-archive/aac) | `25` | `AGPL-3.0` | 🔴 abandoned by declaration | 🔴 `true` | 🟢 already flagged |
+| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | `132` | `MIT` | 🔴 abandoned by declaration | 🔴 `true` | 🟢 already flagged |
+
+🔵 **The pattern in the FLAGGED column is worth naming.** The two rows this base caught are the two
+whose **owner namespace announces it** — `microsoftarchive`, `otsimo-archive`. The two it missed are
+owned by `ketanchoyal` and `mindsdb`, names that say nothing. 🟡 So the base's archive coverage is not
+the product of an instrument; it is the product of a naming coincidence, and it will keep missing every
+archived repository whose owner did not rename itself.
+
+🟢 **The platform table from `p636` gains the column that decides a fork.** `p636` established that what
+a studio can own is set by the **extension substrate**, not the core licence. `637-A` adds the second
+axis: whether the thing you would fork is still **writable**.
+
+| Platform / row | Core licence | Boundary | Writable upstream? | What a studio can do |
+|---|---|---|---|---|
+| **Canvas** | `AGPL-3.0` | 🟢 network (`REST`/`LTI`) | 🟢 yes — `MCP` head `317★`, pushed on the read date | Build client-side and upstream freely |
+| **Brightspace (`D2L`)** | proprietary | 🟢 network | 🟢 yes — `62★`, pushed `2026-11-03T17:31Z` | `MIT` tooling against the API |
+| **Open edX** | `AGPL-3.0` | 🔴 in-process `XBlock` | 🟡 mixed — `raccoongang/edx_xblock_scorm` (`32★`) is **archived** | Themes `MIT`; `XBlock`s `AGPL` and the SCORM one is read-only |
+| **Moodle** | `GPL-3.0` | 🔴 in-process `PHP` | 🟢 yes, but `GPL` headers bind (`635-A`) | Own only what sits outside the plugin boundary |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 `MIT` | 🟢 `LTI` `LCMS` | 🟢 **yes** — `151★`, pushed `2026-11-01` | 🟢 The one permissive `LTI` platform here, and it is live |
+
+🔵 **Quote accordingly:** ask for the integration boundary, then ask whether the repository still accepts
+a pull request. `openfun/marsha` is the only row in this file that answers 🟢 to both.
+
+
 ## 🆕 `p636` — the platform question, answered with a number, and the one `LTI` `LMS` that is `MIT`
 
 🟢 **`p635` left this base a question to ask of any `LMS` before quoting — *what substrate does it
@@ -1882,9 +1921,9 @@ single-maintainer Django app.**
 
 | address | ★ | grant (byte-read) | why rejected |
 | --- | --: | --- | --- |
-| [ketanchoyal/Our-E-School](https://github.com/ketanchoyal/Our-E-School) | `504` | 🟢 MIT (`1,069 B`) | 🔴 **Abandoned — last push `2021-08-19`.** Flutter app, not a platform |
+| [ketanchoyal/Our-E-School](https://github.com/ketanchoyal/Our-E-School) | `504` | 🟢 MIT (`1,069 B`) | 🔴 **Abandoned — last push `2021-08-19`.** Flutter app, not a platform 🔴 **ARCHIVED (read-only) — measured `p637`** |
 | [jobic10/student-management-using-django](https://github.com/jobic10/student-management-using-django) | `393` | 🟢 MIT (`1,075 B`) | 🔴 Last push `2023-11-04`; coursework-scale |
-| [mindsdb/edux](https://github.com/mindsdb/edux) | `6` | 🟢 MIT (`1,068 B`) | 🔴 Last push `2020-07-01`; an Open edX *theme*, not a platform |
+| [mindsdb/edux](https://github.com/mindsdb/edux) | `6` | 🟢 MIT (`1,068 B`) | 🔴 Last push `2020-07-01`; an Open edX *theme*, not a platform 🔴 **ARCHIVED (read-only) — measured `p637`** |
 | [codern-org/codern](https://github.com/codern-org/codern) | `29` | 🔴 **grantless** | 🔴 `25`-name ladder misses at `main`; `README.md` has a `## License` heading and **no grant**. Control `404` |
 | [krayin/agent-skills](https://github.com/krayin/agent-skills) | `2` | 🔴 **grantless** | 🔴 Same vendor as this page's MIT `krayin/laravel-crm` — 🔴 **the child does not inherit the parent's grant** |
 

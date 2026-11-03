@@ -1,0 +1,10 @@
+channel	probe	result	usable_for_absence	note
+curl -sI github.com/{slug}	real repo vishalsachdev/canvas-mcp	403	NO	the task-mandated verification method returns 403 for a REAL repo in this environment
+gh api repos/{slug}	real repo microsoftarchive/Learn-LTI	403 session-scope	NO	identical 403 for real AND fabricated slug - absence-blind
+gh api repos/{slug}	fabricated control	403 session-scope	NO	same response as real repo
+gh api search/repositories repo:X	real repo	200 full metadata	YES	stars license pushed archived fork in one call
+gh api search/repositories repo:X	fabricated control	422 Validation Failed	YES	absence distinguishable
+gh api search/repositories repo:X	fork OpenOLAT/qtiworks WITHOUT fork:true	total_count 0	NO	FALSE ABSENCE - reproduces 627-A a third time
+gh api search/repositories repo:X fork:true	same fork	200 fork=true	YES	fork:true is load-bearing
+WebFetch artificialintelligenceact.eu	implementation timeline	ENOTFOUND	n/a	host outside session allowed domains - primary AI Act text unreadable here
+make hooks	gate suite	sandbox denial	n/a	second consecutive pass denied - 635-G still open

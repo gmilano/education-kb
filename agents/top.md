@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p637` — reads `2026-11-03` — **🔴 `637-A`: THIS BASE GRADES LIVENESS BY PUSH DATE, AND PUSH DATE DOES NOT DETECT ARCHIVAL. A `45`-ROW STALE COHORT RETURNS `8` `archived: true` (`17.8%`) AGAINST THIS BASE'S OWN PUBLISHED `3 of 192` (`1.6%`) — AN `11×` UNDERSTATEMENT CONCENTRATED IN THE STALE TAIL. `4 of 8` CARRY NO `archived` TOKEN ANYWHERE, INCLUDING THE `504★` LARGEST ADDRESS IN ITS AXIS AND THE ROW THIS BASE ITSELF CALLS *"THE ROW A STUDIO WOULD MOST WANT"*. 🔴 `637-C`: THIS PASS'S OWN CENSUS MANUFACTURED A FALSE ABSENCE AND `627-A` PREDICTED IT. 🔴 MANDATED LEGS NIL ON **BOTH** HALVES FOR THE FIRST TIME. EIGHT REGISTERED (`637-A`…`637-H`).**
+
+🔵 Every reading below came from `gh api -X GET search/repositories -f q='repo:X fork:true'`, each run
+with a fabricated-path control that returned `422`. Evidence:
+`evidence/archive-census.2026-11-03-p637.tsv`,
+`evidence/archive-flag-coverage.2026-11-03-p637.tsv`,
+`evidence/cohort-drift.2026-11-03-p637.tsv`,
+`evidence/register-currency.2026-11-03-p637.tsv`,
+`evidence/channel-probe.2026-11-03-p637.tsv`,
+`evidence/websearch-legs.2026-11-03-p637.tsv`,
+`evidence/leg-fact-heldness.2026-11-03-p637.tsv`.
+
+### 🔴 `637-A` — NEW, and it is the pass's finding: `archived` is a liveness channel this base does not read
+
+🔵 This base grades a row's liveness by `pushed_at`, and it does so well — the four rows below are all
+correctly marked stale. 🔴 But `archived: true` is a **different and stronger** fact: the repository is
+**read-only**. No issue can be opened, no pull request can be merged, no patch can be upstreamed. For a
+studio deciding *"can we fork this and maintain it?"* that is decisive in a way a push date is not, and
+this base does not record it for half the rows that carry it.
+
+🔵 Cohort definition, stated so it can be re-run: every address on `agents/top.md`,
+`repos/foundations.md` and `verticals/solutions.md` that appears on a line also carrying a pre-`2024`
+date — `45` unique slugs, the archive-risk tail. `45 of 45` resolved, `0` absent.
+
+| Archived row | Grant | Stars | Pushed | Mentions | `archived` token in base | Verdict |
+|---|---|---|---|---|---|---|
+| [`ketanchoyal/Our-E-School`](https://github.com/ketanchoyal/Our-E-School) | `MIT` | **`504`** | `2021-08-19` | `4` | 🔴 **`0`** | 🔴 **UNFLAGGED** — and `verticals/solutions.md` calls it *"the largest address in the axis"* |
+| [`nsip/curriculum-align`](https://github.com/nsip/curriculum-align) | `Apache-2.0` | `2` | `2019-09-02` | `8` | 🔴 **`0`** | 🔴 **UNFLAGGED** — and `repos/foundations.md` calls it *"the row a studio would most want"* |
+| [`imgVOID/autograding-api`](https://github.com/imgVOID/autograding-api) | `Apache-2.0` | `15` | `2022-01-10` | `1` | 🔴 **`0`** | 🔴 **UNFLAGGED** |
+| [`mindsdb/edux`](https://github.com/mindsdb/edux) | `MIT` | `6` | `2020-07-01` | `1` | 🔴 **`0`** | 🔴 **UNFLAGGED** |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 none | `99` | `2017-10-02` | `46` | 🟢 `23` | 🟢 FLAGGED |
+| [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | `Apache-2.0` | `32` | `2023-05-26` | `11` | 🟢 `9` | 🟢 FLAGGED |
+| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | `MIT` | `132` | `2023-05-03` | `7` | 🟢 `1` | 🟢 FLAGGED |
+| [`otsimo-archive/aac`](https://github.com/otsimo-archive/aac) | `AGPL-3.0` | `25` | `2021-09-01` | `5` | 🟢 `2` | 🟢 FLAGGED |
+
+🟡 **The two most commercially consequential rows are the two unflagged ones**, which is the opposite of
+what a sampling story would predict. `nsip/curriculum-align` is `Apache-2.0`, is the only callable
+free-text→curriculum-standards component this base holds, is named by this base as the most attractive
+row in its file — and it is read-only, so the "builds on `nsip/curriculum-mapper`" extension path
+published beside it cannot be walked upstream.
+
+🔴 **The denominator correction.** `agents/trending.md` publishes an earlier census: *"`archived: true`
+found | `192` | `3`"* — `1.6%`. 🟢 That census is not wrong; it sampled the whole surface. This one
+sampled the **stale tail** and found `17.8%`. 🔵 The rule: archive risk is not uniform over a corpus, it
+concentrates exactly where this base already prints a red push date — so the cheap instrument is to read
+`archived` for every row that is **already** flagged stale, which is a bounded set.
+
+🟡 **Honest limits.** (a) `45` is the stale tail of three shelves, not of the base's `988` published
+addresses on those shelves, and not of the `~3,956` the `p628` census counted; the `17.8%` is the rate
+*in that tail*, not a base-wide rate. (b) The flag test is a token search for `archived` on lines
+mentioning the slug — it cannot tell a flag from a passing mention, so `FLAGGED` is an upper bound on
+real coverage. (c) The owner strings `microsoftarchive` and `otsimo-archive` contain `archiv` and
+polluted the first run of the instrument; the published column counts the literal token `archived` only.
+
+### 🔴 `637-C` — this pass's own census manufactured a false absence, and `627-A` predicted it
+
+| Probe | `repo:OpenOLAT/qtiworks` | with `fork:true` |
+|---|---|---|
+| `total_count` | 🔴 **`0`** | 🟢 **`1`** |
+| reading a naïve census takes | 🔴 **ABSENT — dead address** | 🟢 `3★`, `NOASSERTION`, pushed `2026-06-30`, `fork: true` |
+
+🔴 The first run of this pass's census scored `OpenOLAT/qtiworks` **ABSENT**. It is not absent; it is a
+**fork**, and the metadata channel excludes forks by default. 🔵 `627-A` recorded exactly this and
+`p627` corrected `p626`'s census on it — *"`53%` of its own flags were forks, not defects"* — and `p628`
+re-proved it on this very slug. 🟡 **This is therefore the third independent reproduction, and the first
+by an instrument whose author had already read the rule.** The lesson this base keeps paying for is not
+the rule, it is that `fork:true` must be in the *instrument*, not in the register.
+🟢 Re-run with `fork:true`: `0 of 45` absent, `2 of 45` forks. Control returned `422` **with and
+without** the qualifier, so absence stays distinguishable once it is present.
+
+### 🟢 `637-H` — `p636`'s cohort re-measured: no drift
+
+🟢 All `20` addresses `p636` published re-read today: `20 of 20` resolve, `20 of 20` `MIT`, `0` absent,
+`0` licence drift. [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) holds at
+**`317★`** — the ninth observation in the series and identical to `p636`'s same-day reading, so the
+`272→317` climb has flattened rather than continued. [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+`62★`, pushed `2026-11-03T17:31Z`, the freshest row in the cohort.
+🔵 Recorded because a negative drift result stops the next pass re-spending the budget.
+
+
 ## 🆕 `p636` — reads `2026-11-03` — **🔴 `635-F` IS A SINGLE-PLATFORM DENOMINATOR GENERALISED TO A CLASS, AND THIS BASE'S OWN FILES REFUTE IT: p635 PUBLISHED A `42★` CEILING FOR THE PERMISSIVE LMS-AGENT CHANNEL WHILE HOLDING [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) AT `310★` IN `189` PLACES. MEASURED TODAY: `317★` — `7.5×` THE PUBLISHED CEILING. 🟢 `635-A` DOES NOT PORT TO `WordPress` AS A `GPL` MECHANISM (`0 of 4` HEADERS) BUT **DOES** PORT AS A CHANNEL CONFLICT: AN `OSLv3` HEADER UNDER AN `MIT` `LICENSE`. 🔴 THE `lti` CHANNEL IS UNUSABLE (`55×` SPREAD). EIGHT REGISTERED (`636-A`…`636-H`).**
 
 🔵 Every grant below was read first-hand at `raw.githubusercontent.com` this pass, each cohort with a
