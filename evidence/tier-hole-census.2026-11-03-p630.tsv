@@ -1,0 +1,9 @@
+tier	shelf_score_lines	query	total_count	adjudicated	accepted
+parent communication	0	topic:parent-communication fork:false	8	4	2
+mother tongue	0	(no GitHub topic exists — tier searched, nothing to query)	0	0	0
+adult literacy	1	topic:literacy fork:false stars:>10	8	4	2
+open textbook / OER	3	topic:oer fork:false stars:>5	62	4	2
+TVET / vocational	4	topic:vocational-training fork:false	47	3	2
+music education	6	topic:music-education fork:false stars:>20	8	4	2
+speech therapy	6	topic:speech-therapy fork:false	69	5	3
+TOTAL	-	6 queries run	202	24	13

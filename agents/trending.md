@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p630` — **🟢 `13` NEW PERMISSIVE AGENT/TOOL ROWS OUT OF SIX SHELF HOLES (`54 %` YIELD), WHILE THE MANDATED LEGS RETURN `0 of 11` FOR A FIFTH STRAIGHT PASS. 🔴 AND TWO OF THE THIRTEEN ARE `MIT` CLIENTS FOR CLOSED SERVICES — A CLASS THIS BASE HAD NOT NAMED.**
+
+🔵 Append-only record of what was true on this date. Nothing below this section was edited.
+
+### 🟢 New this week — `13` permissive rows, every grant byte-read
+
+| Name | Repo | Licence | Why it is new to this base | Stars | Pushed |
+|---|---|---|---|---|---|
+| LiaScript | [`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript) | `BSD-3-Clause` | OER authored as extended Markdown; the shelf scored `open textbook` **`3`** | `287★` | `2026-11-03` |
+| pandoc-lecture | [`cagix/pandoc-lecture`](https://github.com/cagix/pandoc-lecture) | `MIT` | single-source slides + handouts + exams, TH Köln | `108★` | `2026-06-22` |
+| vowel-practice | [`fulldecent/vowel-practice`](https://github.com/fulldecent/vowel-practice) | `MIT` | formant finder for speech drill; the shelf scored `speech therapy` **`6`** | `67★` | `2026-10-13` |
+| sightkick | [`tonygoldcrest/sightkick`](https://github.com/tonygoldcrest/sightkick) | `MIT` | e-drum sight-reading practice; the shelf scored `music education` **`6`** | `63★` | `2026-10-28` |
+| erhu-annotator | [`jing-wu-ai/erhu-annotator`](https://github.com/jing-wu-ai/erhu-annotator) | `MIT` | browser-only score-snippet cutter for music teaching | `21★` | `2026-06-03` |
+| Great Reading Adventure | [`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure) | `MIT` | public-library reading programs; the shelf scored `adult literacy` **`1`** | `17★` | `2026-09-28` |
+| VR4VET | [`vr4vet/vr4vet`](https://github.com/vr4vet/vr4vet) | `MIT` | VR for vocational education, EU Erasmus+; the shelf scored `TVET` **`4`** | `16★` | `2026-04-07` |
+| Litera-AI | [`MuhammadLutfiMuzakiiVY/Litera-AI-Web`](https://github.com/MuhammadLutfiMuzakiiVY/Litera-AI-Web) | `MIT` | adaptive reading-literacy diagnostic, Indonesian | `16★` | `2026-08-25` |
+| class-teacher-skills | [`PIGU-PPPgu/class-teacher-skills`](https://github.com/PIGU-PPPgu/class-teacher-skills) | `MIT` | homeroom-teacher agent skills; the shelf scored `parent communication` **`0`** | `10★` | `2026-07-27` |
+| parro-cli | [`anneschuth/parro-cli`](https://github.com/anneschuth/parro-cli) | `MIT` | school-comms SDK, pushed **today**. 🔴 `CLIENT-ONLY` | `9★` | `2026-11-03` |
+| ortholyse | [`assinscreedFC/ortholyse`](https://github.com/assinscreedFC/ortholyse) | `MIT` | speech-therapist transcription + metrics, Whisper/spaCy | `5★` | `2026-06-13` |
+| vocametrix-python | [`Vocametrix/vocametrix-python`](https://github.com/Vocametrix/vocametrix-python) | `MIT` | clinical voice measures SDK. 🔴 `CLIENT-ONLY` | `2★` | `2026-10-26` |
+| AI Skill Assessment (RPL) | [`SabarishR08/SIH26242-AI-Skill-Assessment-RPL`](https://github.com/SabarishR08/SIH26242-AI-Skill-Assessment-RPL) | `MIT` | Recognition of Prior Learning assessor, India MSDE | `1★` | `2026-10-28` |
+
+🟢 **Placed:** EMEA `5`, APAC `4`, Global `3`, North America `1`. 🔴 **LATAM `0` — declared, not hidden:**
+neither the LATAM leg nor any of the six tier queries returned a Latin American address this pass.
+
+🔴 **Priced honestly:** `5 of 13` are under `17★` and single-maintainer. The grants are stock payloads read from
+bytes (`11` × `MIT` in the `1,056`–`1,103 B` band, one `BSD-3-Clause` at `1,523 B`), which is why they are here —
+not because they are all ready to depend on.
+
+### 🔴 The new class: `MIT` on a client for a service you cannot have
+
+`anneschuth/parro-cli` and `Vocametrix/vocametrix-python` both carry clean stock `MIT` and both are **unusable
+without a proprietary backend** — Parro's tenancy and Vocametrix's hosted API respectively. 🟢 Every licence
+instrument was right and both readings answer the wrong question. They are marked `CLIENT-ONLY`: composable as
+an **integration**, never as a **capability**. Full statement at `agents/top.md` `630-H`.
+
+### 🔴 The mandated legs, fifth consecutive nil
+
+`0 of 11` usable new names. Global legs returned `9` addresses, **all `9` held**; the four regional legs returned
+🔴 **`0` addresses each**. Two of the names that looked unheld failed adjudication anyway —
+`ArturoNereu/AI-Study-Group` (`1,375★`) has **no grant** at `7` filenames, and `1111philo/learn` is
+`NOASSERTION` **and archived `true`**. 🔵 Series across `p625`→`p630`: `0/28`, `0/12`, `0/11`, `1/17`, `0/11`.
+
+### 🔴 Rejected this week, with cause
+
+[`dcostenco/prism-aac`](https://github.com/dcostenco/prism-aac) — `AGPL-3.0`, byte-read at `35,326 B`;
+reference only. `shuklabhay/tessera` — `MIT` but `14.8` months quiet. `lipd/muse-training` — `MIT` but
+**`5.4` years** quiet. `Itzzs6571/teacher-skill` — `0★`, thin. `ishandutta2007/Awesome-Parent-Communication` —
+a list, not software. `ArturoNereu/AI-Study-Group` — no grant at `7` probes. `1111philo/learn` —
+`NOASSERTION` + archived.
+
+### 🟢 One existing row corroborated, one reclassified
+
+🟢 [`vgwb/Antura`](https://github.com/vgwb/Antura) — this base's `BSD-2-Clause` + `CC-BY-4.0` claim is
+**confirmed on a full `2,002`-byte read**, against a metadata channel saying `NOASSERTION` and against this
+pass's own first-match title reader saying `Creative Commons`. The shelf was right; the instrument was wrong
+(`630-F`).
+
+🔴 [`csev/py4e`](https://github.com/csev/py4e) (`3,112★`) — **no grant at `19` filenames** with a passing
+positive control. Reclassified **reference-only**; it is a teaching corpus, not a build-on row (`630-I`).
+
 ## 🆕 `2026-11-03` · `p629` — **🟢 THE FOUR-PASS DISCOVERY NIL IS BROKEN, BUT NOT BY THE MANDATED LEGS: `6` NEW PERMISSIVE AGENTS CAME OUT OF THREE TIERS NAMED BY CENSUSING THE SHELF'S OWN HOLES (`16 of 17` LEG NAMES HELD; THE ONE UNHELD IS A TREND-DIGEST BOT). 🟢 AND TWO STALE ADDRESSES RESOLVED AS RENAMES ON IDENTICAL `HEAD` VIA A NEW `422`-SIGNATURE PROCEDURE.**
 
 🔵 Append-only record of what was true on this date.

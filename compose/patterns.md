@@ -4,6 +4,131 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p630` — reads `2026-11-03` — `4` patterns, each wired only from rows byte-verified this pass
+
+🔵 Every repository named below was measured today: grant read from bytes on the metadata-declared default
+branch, existence confirmed on two channels with a fabricated control. 🔴 No pattern crosses a copyleft
+boundary without saying so, and no `CLIENT-ONLY` row is used as a capability.
+
+### 🟢 `630-M1` — Speech-and-language therapy triage for school districts (`6–8` weeks)
+
+**The gap.** Districts have waiting lists for speech-language pathologist (`SLP`) assessment because the
+assessment itself is manual: record a language sample, transcribe it, compute metrics, score. The shelf scored
+`speech therapy` at 🔴 **`6` lines** before today.
+
+**The stack, all `MIT`, all byte-read:**
+
+1. **[`assinscreedFC/ortholyse`](https://github.com/assinscreedFC/ortholyse)** (`MIT`, `1,071 B`, `5★`) is the
+   spine. It already does Whisper transcription → spaCy/NLTK language-sample metrics. Take the **pipeline**,
+   not the PySide6 desktop shell: the shell is one maintainer's UI, the pipeline is the asset.
+2. **[`fulldecent/vowel-practice`](https://github.com/fulldecent/vowel-practice)** (`MIT`, `1,083 B`, `67★`,
+   self-labelled `mature`) supplies **formant extraction**. This is the measurement layer every pronunciation
+   judgement needs and the one part nobody should reimplement.
+3. **[`svankamamidi/open-aac`](https://github.com/svankamamidi/open-aac)** (`Apache-2.0`, from `p629`) is the
+   learner-facing board for children who need augmentative communication rather than articulation drill —
+   the triage has to have somewhere to route them. 🔴 Its default branch is `search_for_picture`, so pin a
+   commit, do not track a branch name.
+
+**How they wire.** `ortholyse`'s pipeline runs as a queue worker over uploaded samples; `vowel-practice`'s
+formant code is lifted as a library and called per utterance; the metric output drives a triage score that
+either books an `SLP` slot or provisions an `open-aac` board. The `SLP` sees a ranked queue, not a recording.
+
+🔴 **What is deliberately *not* in this recipe.**
+[`Vocametrix/vocametrix-python`](https://github.com/Vocametrix/vocametrix-python) (`MIT`) computes exactly the
+clinical measures this pattern wants — AVQI, DSI, jitter/shimmer — and is 🔴 **`CLIENT-ONLY`**: the measures run
+on Vocametrix's hosted API, so the `MIT` grant covers the client and nothing that matters (`630-H`). 🟢 It
+belongs here as a **priced option** — "buy the clinical measures, integrate in a week" — never as the capability
+the district is told it owns. [`dcostenco/prism-aac`](https://github.com/dcostenco/prism-aac) is excluded too:
+`AGPL-3.0`, byte-read at `35,326 B`.
+
+**Deliverable.** A triage service plus the explicit build-vs-buy line on clinical acoustics.
+
+### 🟢 `630-M2` — Grant-funded OER authoring chain for an EMEA consortium (`8–10` weeks)
+
+**The gap.** Erasmus+ and national grant consortia must publish open educational resources and have no
+authoring chain, so output ends up as PDFs nobody can revise. The shelf scored `open textbook` at 🔴 **`3`**.
+
+**The stack:**
+
+1. **[`cagix/pandoc-lecture`](https://github.com/cagix/pandoc-lecture)** (`MIT`, `1,074 B`, `108★`, TH Köln) is
+   the **single-source build**: one Markdown tree → slides, handouts, lecture notes, homework sheets, exams,
+   via Lua Pandoc filters. 🔴 Default branch `master`.
+2. **[`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript)** (`BSD-3-Clause`, `1,523 B`, `287★`,
+   pushed today) is the **interactive renderer**: the same extended-Markdown document becomes a self-contained
+   interactive course served from a URL with no backend. 🔴 Default branch is **`development`** — pin a commit
+   (`630-J`).
+3. **[`learningequality/kolibri`](https://github.com/learningequality/kolibri)** (`MIT`, `1,097 B`, `1,167★`)
+   is the **offline distribution** target for partner institutions without reliable connectivity. 🔴 Default
+   branch `develop`.
+
+**How they wire.** Content lives in git as Pandoc Markdown. CI runs `pandoc-lecture` for the print and slide
+artefacts and emits a LiaScript-flavoured variant for the interactive one; a packaging step produces a Kolibri
+channel for offline partners. One source, three outputs, every artefact regenerable from the repository — which
+is what a funder's open-access condition actually requires.
+
+🟢 **Why this is the EMEA pattern specifically.** All three carry permissive grants because their funders
+required it (`T5`), and none has a product team, so a studio's engineering is additive rather than competitive.
+
+🔴 **The boundary.** If the consortium insists on Moodle delivery, the Moodle side is `GPL-3.0`
+(`COPYING.txt`, `35,147 B`) — integrate over `LTI`, ship no modified Moodle core (`T1`).
+
+### 🟢 `630-M3` — Recognition-of-Prior-Learning assessor for an APAC skills ministry (`10–12` weeks)
+
+**The gap.** Informal-sector workers have real skills and no credential. `RPL` is policy in India and across
+ASEAN, and assessment capacity is the bottleneck. The shelf scored `TVET` at 🔴 **`4`**.
+
+**The stack:**
+
+1. **[`SabarishR08/SIH26242-AI-Skill-Assessment-RPL`](https://github.com/SabarishR08/SIH26242-AI-Skill-Assessment-RPL)**
+   (`MIT`, `1,066 B`, `1★`) is the **domain skeleton** — it was written against India MSDE problem statement
+   `SIH26242`, so its competency model already matches the ministry's own vocabulary. 🔴 `1★` and single
+   maintainer: take it as a **specification artefact**, not a dependency.
+2. **[`vr4vet/vr4vet`](https://github.com/vr4vet/vr4vet)** (`MIT`, `1,063 B`, `16★`, EU Erasmus+) supplies the
+   **practical-assessment scenarios** in Unity — demonstrating a trade beats answering questions about it, and
+   this is a framework for building such scenarios rather than one fixed scenario.
+3. **[`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure)** (`MIT`, `1,088 B`) is the
+   **participant system of record** — enrolments, challenges, badges, multi-branch. Built for library reading
+   programmes, and an `RPL` cohort has the same shape: many participants, many centres, staged achievements.
+
+**How they wire.** `SIH26242`'s competency model becomes the schema; `vr4vet` scenarios become the evidence
+capture per competency; `greatreadingadventure` holds candidate records, centre assignment and credential
+issuance. Assessors review evidence against the model rather than running every assessment live — which is the
+only way the capacity arithmetic works.
+
+🟢 **Why it is credible here.** The teacher-certification precedent is already at scale in the region — the
+Philippines DepEd–Google programme certifies 🟢 **over one million teachers**. Credentialing volume is the
+business case.
+
+### 🟢 `630-M4` — Reading-literacy remediation with the parent in the loop (`6–8` weeks)
+
+**The gap.** Remediation fails when the household is not in the loop, and the shelf scored
+`parent communication` at 🔴 **`0` lines** — the tier it covered least of all.
+
+**The stack:**
+
+1. **[`MuhammadLutfiMuzakiiVY/Litera-AI-Web`](https://github.com/MuhammadLutfiMuzakiiVY/Litera-AI-Web)**
+   (`MIT`, `1,103 B`, `16★`) is the **adaptive diagnostic**: Next.js + Prisma + Gemini, built for reading-literacy
+   remediation with adaptive diagnostic assessment. Indonesian — the pedagogy is localised, which is the point.
+2. **[`PIGU-PPPgu/class-teacher-skills`](https://github.com/PIGU-PPPgu/class-teacher-skills)** (`MIT`,
+   `1,056 B`, `10★`) is the **teacher-side workflow**: student records, class ledgers, home–school communication,
+   and — the detail that matters — a 🟢 **confirm-before-send** step before anything reaches a parent.
+3. **[`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure)** (`MIT`) supplies the
+   **out-of-school reading programme** the remediation plan prescribes, with the library as delivery partner.
+
+**How they wire.** `Litera-AI` diagnoses and produces a per-child plan; `class-teacher-skills` renders it as a
+teacher action list and a parent message held for teacher approval; `greatreadingadventure` tracks the
+at-home/at-library reading the plan calls for and feeds completion back as diagnostic input.
+
+🟢 **The `confirm-before-send` gate is the architecture, not a feature.** An AI-drafted message about a child's
+reading difficulty, sent to a parent unreviewed, is the failure mode that ends a programme. `class-teacher-skills`
+already encodes a human approval step and the whole pattern should be built around it — which is the OECD's
+*"pedagogy stays in control"* made concrete.
+
+🔴 **Excluded, with cause.** [`anneschuth/parro-cli`](https://github.com/anneschuth/parro-cli) (`MIT`) is the
+obvious parent-messaging transport and is 🔴 **`CLIENT-ONLY`** — it requires a Parro tenancy. 🟢 It is the right
+**adapter** for a district that already licenses Parro, and must not be presented as the messaging capability
+(`630-H`).
+
 ## 🆕 `p629` — reads `2026-11-03` — **🟢 TWO NEW RECIPES, BOTH BUILT ONLY FROM ROWS BYTE-VERIFIED TODAY: THE **FULLY-PERMISSIVE DISCONNECTED SCIENCE CLASSROOM** (NO COPYLEFT ANYWHERE IN THE STACK, WHICH THIS BASE COULD NOT SPECIFY BEFORE TODAY) AND THE **RENAME-RESOLVING ADDRESS AUDIT** AS A RUNNABLE PIPELINE WITH ITS CONTROLS.**
 
 ### 🟢 `P629-1` — the fully-permissive disconnected science classroom

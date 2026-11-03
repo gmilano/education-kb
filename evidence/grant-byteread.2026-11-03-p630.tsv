@@ -1,0 +1,26 @@
+slug	stars	metadata_spdx	pushed	fork	default_branch	archived	grant_file	bytes	title_in_bytes	verdict
+fulldecent/vowel-practice	67	MIT	2026-10-13	false	main	false	LICENSE	1083	MIT License	ACCEPT
+tonygoldcrest/sightkick	63	MIT	2026-10-28	false	main	false	LICENSE	1089	MIT License	ACCEPT
+LiaScript/LiaScript	287	BSD-3-Clause	2026-11-03	false	development	false	LICENSE	1523	BSD 3-Clause	ACCEPT
+cagix/pandoc-lecture	108	MIT	2026-06-22	false	master	false	LICENSE.md	1074	MIT License	ACCEPT
+MCLD/greatreadingadventure	17	MIT	2026-09-28	false	main	false	LICENSE	1088	MIT License	ACCEPT
+jing-wu-ai/erhu-annotator	21	MIT	2026-06-03	false	main	false	LICENSE	1067	MIT License	ACCEPT
+MuhammadLutfiMuzakiiVY/Litera-AI-Web	16	MIT	2026-08-25	false	main	false	LICENSE	1103	MIT License	ACCEPT
+vr4vet/vr4vet	16	MIT	2026-04-07	false	main	false	LICENSE.md	1063	MIT License	ACCEPT
+PIGU-PPPgu/class-teacher-skills	10	MIT	2026-07-27	false	main	false	LICENSE	1056	MIT License	ACCEPT
+anneschuth/parro-cli	9	MIT	2026-11-03	false	main	false	LICENSE	1068	MIT License	ACCEPT-CLIENT-ONLY
+assinscreedFC/ortholyse	5	MIT	2026-06-13	false	main	false	LICENSE	1071	MIT License	ACCEPT
+Vocametrix/vocametrix-python	2	MIT	2026-10-26	false	master	false	LICENSE	1072	MIT License	ACCEPT-CLIENT-ONLY
+SabarishR08/SIH26242-AI-Skill-Assessment-RPL	1	MIT	2026-10-28	false	main	false	LICENSE	1066	MIT License	ACCEPT
+dcostenco/prism-aac	3	AGPL-3.0	2026-11-02	false	main	false	LICENSE	35326	GNU AFFERO GENERAL PUBLIC LICENSE	REJECT-copyleft
+shuklabhay/tessera	4	MIT	2025-08-09	false	main	false	LICENSE	1069	MIT License	REJECT-14.8mo-quiet
+lipd/muse-training	38	MIT	2021-06-08	false	master	false	LICENSE	1064	MIT License	REJECT-5.4yr-quiet
+Itzzs6571/teacher-skill	0	MIT	2026-10-14	false	main	false	LICENSE	1066	MIT License	REJECT-0-star-thin
+ishandutta2007/Awesome-Parent-Communication	0	MIT	2026-08-29	false	main	false	LICENSE	1068	MIT License	REJECT-list-not-software
+ArturoNereu/AI-Study-Group	1375	NO-SPDX	2026-10-23	false	main	false	NO-GRANT	0	-	REJECT-no-grant-7-probes
+1111philo/learn	1	NOASSERTION	2026-03-31	false	main	true	LICENSE	35240	-	REJECT-noassertion-and-archived
+csev/py4e	3112	NO-SPDX	2026-11-01	false	master	false	NO-GRANT	0	-	REJECT-no-grant-19-probes (630-I, HELD row)
+vgwb/Antura	127	NOASSERTION	2026-10-21	false	main	false	LICENSE.md	2002	BSD-2-Clause code + CC-BY-4.0 assets	HELD-shelf-CORROBORATED (630-F)
+plastic-labs/tutor-gpt	933	GPL-3.0	2026-02-20	false	main	false	LICENSE	35149	GNU GENERAL PUBLIC LICENSE	HELD-copyleft
+ManifoldScholar/manifold	260	GPL-3.0	2026-10-30	false	main	false	LICENSE.md	35141	GNU GENERAL PUBLIC LICENSE	HELD-copyleft
+learningequality/kolibri	1167	MIT	2026-11-02	false	develop	false	LICENSE	1097	MIT License	HELD (630-J branch case)

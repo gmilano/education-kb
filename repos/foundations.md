@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p630` — reads `2026-11-03` — foundations: `6` additions from the hole census, and one flagship's **default branch** nearly cost it its grant
+
+🔵 Every grant below was read from bytes on the repository's **metadata-declared default branch**, never on an
+assumed `main` (`630-J`). Evidence: `evidence/grant-byteread.2026-11-03-p630.tsv`.
+
+### 🟢 Added this pass
+
+| Repo | Licence | Bytes | Default branch | Why it is a foundation, not an agent | Stars | Pushed |
+|---|---|---|---|---|---|---|
+| [`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript) | 🟢 `BSD-3-Clause` | `1,523` | 🔴 **`development`** | An **interpreter**: courses are plain extended-Markdown documents, so content outlives any runtime. Elm; renders interactive OER from a URL with no server. | `287★` | `2026-11-03` |
+| [`cagix/pandoc-lecture`](https://github.com/cagix/pandoc-lecture) | 🟢 `MIT` | `1,074` | `master` | A **toolchain**: one Markdown source → slides, handouts, lecture notes, homework sheets, exams, via Pandoc filters in Lua. TH Köln. | `108★` | `2026-06-22` |
+| [`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure) | 🟢 `MIT` | `1,088` | `main` | A **system of record** for library reading programs — participants, challenges, badges, branches — ASP.NET Core + EF Core. | `17★` | `2026-09-28` |
+| [`vr4vet/vr4vet`](https://github.com/vr4vet/vr4vet) | 🟢 `MIT` | `1,063` | `main` | A Unity **framework** for career-guidance and VET scenarios, not a single course. EU Erasmus+ funded, multi-institution. | `16★` | `2026-04-07` |
+| [`fulldecent/vowel-practice`](https://github.com/fulldecent/vowel-practice) | 🟢 `MIT` | `1,083` | `main` | **Formant extraction** from spoken sound — the signal-processing layer any pronunciation drill needs. Self-labelled `mature`. | `67★` | `2026-10-13` |
+| [`assinscreedFC/ortholyse`](https://github.com/assinscreedFC/ortholyse) | 🟢 `MIT` | `1,071` | `main` | A **pipeline**: Whisper transcription → spaCy/NLTK language-sample metrics for speech therapists. Reusable independent of its PySide6 shell. | `5★` | `2026-06-13` |
+
+### 🔴 `kolibri` is the sharpest branch case this base has hit
+
+🔵 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) is one of the oldest `MIT`
+foundation rows here. 🔴 **Its default branch is `develop`** — not `main`, not `master`. A grant probe that
+assumed either would have returned `404` on every filename and reported **the flagship as ungranted**.
+
+🟢 Re-measured today on `develop`: `LICENSE`, `1,097 B`, title in bytes 🟢 **`MIT License`**, `1,167★`,
+pushed `2026-11-02`. 🔵 `3` of the `25` addresses byte-read this pass — `12 %` — default to something that is
+neither `main` nor `master`. Full statement at `agents/top.md` `630-J`.
+
+### 🔴 `csev/py4e` — reclassified **reference-only** on this shelf too
+
+`3,112★`, no grant at `19` licence filenames on `master`, positive control passing, metadata `NO-SPDX`
+(`630-I`). 🟢 It stays on the base as a **teaching corpus** and is removed from any build-on reading: without a
+grant there is nothing to build on, whatever the star count.
+
 ## 🆕 `p629` — reads `2026-11-03` — **🟢 THE FOUNDATION SHELF GAINS A TIER IT HAS NEVER CARRIED — **VIRTUAL SCIENCE LABS**, PERMISSIVE AND LIVE — AND THE OFFLINE-FIRST TIER GAINS A SECOND INDEPENDENT IMPLEMENTATION BESIDE `kolibri`. 🔴 AND THE INSTRUMENT THIS SHELF VERIFIES GRANTS WITH IS RE-CHARACTERISED: `raw` ALIASES `master` ONTO THE DEFAULT BRANCH BUT NOT `main`, SO THE `Branch` COLUMN MUST NEVER BE FILLED FROM `raw` ALONE.**
 
 ### 🟢 New foundation rows — `6`, every grant read from `raw` bytes today

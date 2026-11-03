@@ -4,6 +4,157 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p630` — reads `2026-11-03` — market, and the regional legs' fifth consecutive **supply** nil against a substantive **demand** return
+
+🔵 Figures below are what the named sources published; the spread between them is reported rather than averaged
+away. 🔴 Market-research houses disagree by `3×` on this sector's `2026` base, and that disagreement is the
+finding — not a number to pick from.
+
+### 🔴 The `2026` base is not a number, it is a range of three
+
+| Source | `2026` base | Horizon | CAGR |
+|---|---|---|---|
+| Persistence Market Research | `USD 11.4 B` | `USD 57.2 B` by `2033` | `25.9 %` |
+| A second house (same leg) | 🔴 `USD 3.7 B` | `USD 14.1 B` by `2033` | — |
+| A third (tutors + copilots + assessment build-up) | `~USD 11 B` | — | — |
+
+🔴 **A `3.1×` spread on the current year.** 🟢 Operative for a studio: never quote a single AI-in-education
+market size to a client. Quote the **segment** — K-12 is reported at `~34 %` share in `2026`, the largest
+single segment — and the **adoption rate**, which the regional surveys measure directly and consistently.
+
+### 🟢 What the regional legs actually returned
+
+🔴 All four regional legs returned **`0` repository addresses** for the fifth consecutive pass. 🟢 Their
+demand intel was substantive and is placed below. 🔵 The distinction is the point: these legs are a
+**demand** channel and a **supply** control, and this base now has five passes of evidence for both halves.
+
+## Opportunities by region
+
+### Global
+
+🔵 **Measured:** the OECD's `2026` Digital Education Outlook warned that AI helps learning **only when
+pedagogy stays in control** — a governance finding, not a technology one. OpenAI launched a country-level
+education programme with **eight national partners** in Q1 `2026`.
+
+🟢 **The opportunity Globant can sell everywhere:** the gap between *adoption* and *governance*. Every region
+below reports high usage and absent institutional policy — the same shape, with different regulators. A
+**policy-to-pipeline** engagement (institutional AI-use policy, then the instrumentation that evidences
+compliance against it) is the one offer that travels without rework.
+
+🔴 **The supply-side gap, declared:** this pass's `13` new permissive rows include **no** general-purpose
+education agent framework. The permissive layer in education is narrow single-purpose tools; the platforms are
+`GPL`/`AGPL` (`verticals/solutions.md` `p630`). Any "compose an agent onto the LMS" offer therefore crosses a
+copyleft boundary by construction, and must be costed as an **integration**, not a fork.
+
+### North America
+
+🔵 **Measured:** the largest regional market — reported at `36 %` global share, `USD 3.68 B` in `2026`
+projecting to `USD 32 B` by `2030`; a second read puts `2025` share at `38 %`. `86 %` of educational
+organisations in the region report adopting generative AI. `~70 %` of institutions in Europe **and** North
+America have or are developing AI guidance.
+
+🔴 **Regulation is fragmented by design:** AI rules are *"driven primarily by a collection of state laws
+rather than comprehensive federal legislation"*, and `COPPA` governs K-12 product confidence. Federal money is
+flowing to adoption, not restriction — `USD 169 M` in FIPSE awards including responsible-AI support,
+and `USD 169 M` committed to responsible AI in higher education in Q1 `2026`.
+
+🟢 **Opportunity:** a **fifty-jurisdiction compliance surface** is a software problem, and it is Globant's
+kind. Build the policy-variance layer once — state rules, district policy, `COPPA` age gating — and sell it
+into districts that cannot each build it. 🟢 This pass's one North American row,
+[`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure) (`MIT`), is the concrete opening:
+public libraries run reading programmes at district scale with no AI layer and a permissive codebase to add one to.
+
+🔴 **The constraint, named:** adoption *"is often restrained by tight educational budgets"*, particularly in
+public school systems. Engagements here are won on cost-per-seat, not capability.
+
+### EMEA
+
+🔵 **Measured:** the EU Commission updated its **ethical guidelines on AI in education** (`9 June`) and signed
+three Advanced Digital Skills grant agreements worth **`EUR 25.4 M`**. The UK's first AI Adoption Summit
+committed **over `GBP 200 M`**, including `GBP 100 M` expanding Bridge AI and `GBP 53 M` for regional
+initiatives. `56 %` of EMEA CEOs say their organisation is ready for AI adoption — ahead of the Americas
+(`48 %`) and APAC/Japan (`45 %`). `94 %` of organisations are at least somewhat likely to invest in
+AI-specific training in `2026`.
+
+🔴 **Fragmentation is the measured barrier:** a February `2026` study found *"regulatory uncertainty across
+EMEA markets creates fragmented adoption strategies"*. The EU AI Act is the anchor; national implementation is
+not uniform.
+
+🟢 **Opportunity, and this pass makes it concrete.** EMEA produced `5` of the `13` new permissive rows — the
+largest regional share — and all five are **publicly funded or institutionally authored**:
+[`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript) (`BSD-3-Clause`, German academic),
+[`cagix/pandoc-lecture`](https://github.com/cagix/pandoc-lecture) (`MIT`, TH Köln),
+[`vr4vet/vr4vet`](https://github.com/vr4vet/vr4vet) (`MIT`, **EU Erasmus+ funded**),
+[`assinscreedFC/ortholyse`](https://github.com/assinscreedFC/ortholyse) (`MIT`, French clinical),
+[`anneschuth/parro-cli`](https://github.com/anneschuth/parro-cli) (`MIT`, Dutch — 🔴 `CLIENT-ONLY`).
+🟢 **The reading:** EMEA's permissive education software comes out of grant-funded consortia, which means the
+licences are clean by funder mandate and the projects are under-engineered by design. That is the ideal shape
+for a studio: real pedagogy, real grant, no product team.
+
+### APAC
+
+🔵 **Measured:** Australia and New Zealand are reported to lead global generative-AI adoption, with `92 %` of
+firms prioritising trust, governance and decision efficiency over cost savings. Forrester projected `60 %` of
+firms and governments in India and China would integrate **locally developed** LLMs alongside global ones,
+naming education as a target sector. In the Philippines, the Department of Education partnered with Google to
+certify **over one million teachers** in Gemini AI through Project `S.I.N.A.G.`
+
+🔴 **Regulation is per-country, and the regional frame is immature:** the ASEAN Guide on AI Governance and
+Ethics is *"still early-stage, requiring APAC organizations to invest in compliance tailored to each country's
+regulations"*. Singapore consults sector by sector.
+
+🟢 **Opportunity, concrete from this pass.** APAC produced `4` of the `13` new rows, and every one is a
+**national-programme artefact rather than a product**:
+[`MuhammadLutfiMuzakiiVY/Litera-AI-Web`](https://github.com/MuhammadLutfiMuzakiiVY/Litera-AI-Web) (Indonesian
+reading-literacy remediation),
+[`PIGU-PPPgu/class-teacher-skills`](https://github.com/PIGU-PPPgu/class-teacher-skills) (Chinese 班主任
+workflows),
+[`SabarishR08/SIH26242-AI-Skill-Assessment-RPL`](https://github.com/SabarishR08/SIH26242-AI-Skill-Assessment-RPL)
+(India MSDE **Smart India Hackathon** problem statement, Recognition of Prior Learning),
+[`jing-wu-ai/erhu-annotator`](https://github.com/jing-wu-ai/erhu-annotator) (Chinese music pedagogy).
+🟢 **The reading:** APAC's permissive supply is **national-curriculum shaped and locally-authored** — the
+`1 M`-teacher certification programme and the `RPL` assessor are the same policy impulse at two scales. A
+studio entering APAC should expect to localise pedagogy, not translate UI, and the teacher-certification
+volume is where the services money is.
+
+### LATAM
+
+🔵 **Measured, and the adoption numbers are the highest of any region.** The Digital Education Council's
+**AI in Higher Education LATAM Survey 2026** (run with Tecnológico de Monterrey) reports 🟢 **`92 %` of
+students and `79 %` of faculty actively engaging with AI**, which its authors say *"would seem to surpass the
+global trends identified in our previous survey"*. Teacher optimism rose from `57 %` to 🟢 **`72 %`** in
+`2026`, though most teachers use AI only moderately.
+
+🔴 **And governance is the lowest.** A UNESCO IESALC study of **`200` institutions across `19` countries**
+found the gap between adoption and institutional governance *"is particularly pronounced in the region"*, and a
+Tec de Monterrey summary quotes it plainly: 🔴 *"There is a lack of formal policies for the use of AI in
+universities in Latin America."* UNESCO IESALC and UNU-IAS published a September `2026` working paper mapping
+AI use across LAC universities in teaching, research, community engagement, administration and governance
+(author: Arianna Valentini). Brookings argues the region is *"a natural sandbox for inclusive and
+forward-looking AI governance"* and proposes a phased roadmap. The IDB/CEPAL **Latin American AI Index (ILIA)**
+measures readiness, adoption and governance across `19` countries.
+
+🟢 **Opportunity:** the **widest adoption-to-governance gap measured anywhere** — `92 %` student usage against
+an explicit absence of institutional policy. That is a governance-instrumentation engagement with a quantified
+business case, and the ILIA gives a per-country readiness baseline to scope it against.
+
+🔴 **The supply gap, declared explicitly rather than left silent.** Neither the LATAM leg nor **any of the six
+tier queries** returned a single Latin American repository address this pass. LATAM's row count in
+`630-G` is 🔴 **`0` of `13`**. This base has now recorded strong LATAM **demand** intel and **zero** LATAM
+permissive supply in the same pass, repeatedly. 🟢 The honest reading: a LATAM engagement is served by
+**EMEA- and APAC-authored** permissive code plus local pedagogy and localisation — not by a regional open-source
+ecosystem, because the measurement does not show one. 🔵 An informed gap, per the standing instruction, and
+not a hole dressed as coverage.
+
+## 🔴 `630-H` — why two of this pass's new rows cannot be sold as capability
+
+[`anneschuth/parro-cli`](https://github.com/anneschuth/parro-cli) and
+[`Vocametrix/vocametrix-python`](https://github.com/Vocametrix/vocametrix-python) carry clean byte-read `MIT`
+grants and **neither runs without a proprietary backend** (Parro's tenancy; Vocametrix's hosted API, where the
+clinical measures are computed server-side). 🟢 Marked `CLIENT-ONLY`: billable as an **integration**, never
+quoted as a **capability** the client owns. 🔵 A grant is a fact about the bytes in the repository, and a thin
+client's bytes are the part with no value — the full statement is `agents/top.md` `630-H`.
+
 ## 🆕 `p629` — reads `2026-11-03` — **🔴 THE `2026` MARKET RANGE WIDENS RATHER THAN NARROWS — A FOURTH FIRM PUTS IT ABOVE `$12.5B` AGAINST `p628`'s `$9.58B`–`$11.4B`, SO THE SPREAD IS NOW `~30 %` AND THE NUMBER IS STILL A RANGE. 🟢 ALL FOUR REGIONS RETURNED DATED, PLACEABLE INSTRUMENTS, AND APAC'S ARE **BINDING** WHILE THE EU'S ARE **DEFERRED TO `2027-12-02`**. 🔴 AFRICA RETURNED NOTHING AND IS WRITTEN DOWN AS A GAP RATHER THAN FOLDED SILENTLY INTO EMEA.**
 
 ### 🔴 Market size — a range, and it is widening
@@ -55,7 +206,7 @@ is written down because **an informed gap is information and silence looks exact
 above are *European and Gulf* rows. Any engagement in Africa starts from this base with **zero** regional
 intelligence, and the next pass should run a dedicated Africa leg rather than a broader EMEA one.
 
-## Opportunities by region
+## Opportunities by region — `p629` (archived)
 
 🔵 One canonical block, five closed-vocabulary children (`gate-region-headings`).
 

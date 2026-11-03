@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p630` — reads `2026-11-03` — **🔴 THIS PASS'S OWN WEB LEG GOT `2 of 2` PLATFORM LICENCE CLAIMS WRONG, BOTH REFUTED ON BYTES: CHAMILO IS `GPL-3.0` NOT `Apache-2.0`, AND SAKAI IS `ECL-2.0` NOT `Apache 2.0`. 🟢 AND `openedx/edx-platform`'s RENAME IS RESOLVED BY NAME ON IDENTICAL `HEAD`.**
+
+🔵 Every licence in the table below was read from the payload bytes on the repository's metadata-declared
+default branch. Evidence: `evidence/grant-byteread.2026-11-03-p630.tsv`.
+
+### 🔴 The web leg's platform licence claims, adjudicated on bytes
+
+🔵 The `open source platform education LMS SIS MIT Apache 2026` leg returned two **Apache** claims, each
+sourced to a third-party tracker or a vendor comparison page. Both are wrong:
+
+| Platform | 🔴 The leg claimed | 🟢 Byte-read today | Payload | Why the difference is not cosmetic |
+|---|---|---|---|---|
+| **Chamilo** [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `Apache-2.0` *("actively maintained, under Apache-2.0 on a third-party tracker page")* | 🔴 **`GPL-3.0`** | `LICENSE`, `35,147 B`, title `GNU GENERAL PUBLIC LICENSE` | 🔴 **Strong copyleft.** A client fork delivered as a hosted service is a distribution question Globant must answer; `Apache-2.0` would have said there was nothing to answer. |
+| **Sakai** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 `Apache 2.0` *("stewarded by the Apereo Foundation and licensed under Apache 2.0")* | 🟢 **`ECL-2.0`** | `LICENSE`, `11,120 B`, title `Educational Community License Version 2.0` | 🟢 **Buildable, but it is not Apache.** `ECL-2.0` is `Apache-2.0` with the **patent grant narrowed** to the contributor's own work — this base diffed the two on bytes at `624-E` and found `78` words added, `9` removed and **no obligation added**. |
+
+🟢 **Sakai is still a build-on platform** — `1,240★`, pushed `2026-11-02`, `ECL-2.0` is OSI-approved and
+`624-E` settled that it adds no obligation over `Apache-2.0`. 🔴 What is refuted is the **name**, and the name
+is what a procurement reviewer greps for.
+
+🔵 **The generalisation, which `p623` already measured once:** web digests got `2 of 2` permissive claims wrong
+at `p623` and `2 of 2` wrong again here, in a different tier. 🟢 A licence claim from a tracker page, a vendor
+comparison or a "best open source LMS 2026" listicle is a **lead**, never a finding.
+
+### 🟢 `openedx/edx-platform` — the rename resolved by **name**, on identical `HEAD`
+
+🔵 `p626` established that this address was *renamed, not mis-served*, and the `repo:` channel reports it
+🔴 `HTTP 422`. 🟢 `629-D`'s procedure — `422` **and** `ls-remote` exit `0` ⇒ rename, then read the name
+GitHub's redirect serves — names the target:
+
+| Was | 🟢 Now | `HEAD` on both | Metadata today |
+|---|---|---|---|
+| `openedx/edx-platform` | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟢 **`732fc11ebef1fea7a85f074bbbdf4c92ec3faae4`** | `8,216★` `AGPL-3.0` pushed `2026-11-03` |
+
+🟢 The new repository's own README confirms it: *"Formerly known as 'edx-platform'."* Grant byte-read on
+`master`: `LICENSE`, `35,136 B`, title `GNU AFFERO GENERAL PUBLIC LICENSE`. 🔵 The target was already on this
+base, so this is a **name-level** closure, not a new row — and it is the second consecutive pass where
+`629-D`'s `422`-plus-exit-`0` discriminator paid.
+
+### 🟢 The platform shelf, re-measured on bytes today
+
+| Platform | Repo | 🟢 Licence (byte-read) | Payload | Stars | Pushed | Build-on reading |
+|---|---|---|---|---|---|---|
+| Moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | `COPYING.txt`, `35,147 B` | `7,576★` | `2026-10-30` | 🔴 Copyleft. Customise via **plugins**, which is Moodle's own extension contract. |
+| Open edX | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `AGPL-3.0` | `LICENSE`, `35,136 B` | `8,216★` | `2026-11-03` | 🔴 Network copyleft. The strictest obligation on this shelf. |
+| Canvas LMS | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `AGPL-3.0` | `LICENSE`, `34,520 B` | `6,900★` | 🔴 `2026-04-30` | 🔴 Network copyleft, and `6.1` months since last push. |
+| Sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | `LICENSE`, `11,120 B` | `1,240★` | `2026-11-02` | 🟢 **Buildable** — `Apache-2.0` with a narrowed patent grant, no added obligation (`624-E`). |
+| Chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **`GPL-3.0`** | `LICENSE`, `35,147 B` | `1,020★` | `2026-11-03` | 🔴 Copyleft, actively maintained. |
+| Kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `LICENSE`, `1,097 B` | `1,167★` | `2026-11-02` | 🟢 **Buildable.** 🔴 Default branch is `develop` (`630-J`). |
+| LiaScript | [`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript) | 🟢 `BSD-3-Clause` | `LICENSE`, `1,523 B` | `287★` | `2026-11-03` | 🟢 **Buildable.** 🔴 Default branch is `development` (`630-J`). |
+| Great Reading Adventure | [`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure) | 🟢 `MIT` | `LICENSE`, `1,088 B` | `17★` | `2026-09-28` | 🟢 **Buildable** — a public-library reading-program system of record. |
+
+🟢 **Three of the eight carry a permissive grant** — Kolibri, LiaScript and Great Reading Adventure — plus
+Sakai under `ECL-2.0`. 🔴 The four largest by stars are all copyleft, and that has been stable across this
+base's history: **the installed base of education platforms is GPL/AGPL, and the permissive layer is the
+newer and smaller one.**
+
+🔴 **Still a declared gap: no open-source SIS under a permissive grant.** The leg searched for one explicitly
+(`LMS SIS MIT Apache`) and returned no permissive student-information system; what it returned instead was a
+vendor comparison asserting its own product is *"the only platform … that integrates LMS with SIS, fees and
+parent app on one database"*, with **no licence stated**. 🟢 Recorded as unmeasured rather than filled.
+
 ## 🆕 `p629` — reads `2026-11-03` — **🟢 THE VERTICAL SHELF GAINS A CATEGORY THE SECTOR'S PLATFORMS DO NOT COVER: THE **VIRTUAL SCIENCE LAB**, WHICH NO LMS SHIPS AND EVERY SCIENCE CURRICULUM NEEDS. 🔴 AND THE ERP/CRM LEG — RETIRED AT `619-B` AFTER FOUR NILS — WAS RE-RUN ONCE AS A CONTROL AND RETURNED `0 of 6` UNHELD FOR A FIFTH TIME, WHICH CLOSES THE QUESTION.**
 
 ### 🟢 The platform tier — unchanged, and re-stated because engagements quote it

@@ -4,6 +4,254 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p630` — reads `2026-11-03` — **🔴 `p624` RETIRED THE LICENCE LADDER FOR *TREE ENUMERATION* AND THAT ORACLE **CANNOT RUN IN THIS SESSION AT ALL**: `gh api repos/{owner}/{repo}/git/trees/…` IS HTTP `403` FOR EVERY THIRD-PARTY ADDRESS, WHILE `search/repositories` IS UNSCOPED — SO ABSENCE IS BACK TO A BOUNDED UPPER BOUND, AND THIS BASE'S AUTHORITATIVE ABSENCE INSTRUMENT IS UNAVAILABLE. 🔴 THIS PASS'S OWN FIRST PROBE READ THAT `403` **AS PROOF OF ABSENCE**, AND THE CONTROL CAUGHT IT. 🔴 A LEFTMOST-MATCH LICENCE-TITLE REGEX **MISGRADES EVERY DUAL-LICENSED PAYLOAD** — IT GRADED `vgwb/Antura` `Creative Commons` WHEN THE CODE GRANT IS `BSD-2-Clause` SITTING SECOND IN THE FILE; THE SHELF'S CLAIM IS **CORROBORATED** AND MY INSTRUMENT WAS WRONG. 🟢 THE MANDATED LEGS ARE NIL A **FIFTH** CONSECUTIVE PASS (`11 of 11` HELD) AND THE HOLE CENSUS PAYS A **THIRD** TIME: `13` NEW PERMISSIVE ROWS FROM SIX TIERS, EVERY GRANT BYTE-READ. 🟢 AND A NEW CLASS NAMED: **PERMISSIVELY-LICENSED THIN CLIENTS FOR PROPRIETARY SERVICES**. ELEVEN REGISTERED (`630-A`…`630-K`).**
+
+🔵 Every figure below is measured today, each channel with a fabricated control in the same run —
+`evidence/websearch-legs.2026-11-03-p630.tsv`,
+`evidence/tier-hole-census.2026-11-03-p630.tsv`,
+`evidence/grant-byteread.2026-11-03-p630.tsv`,
+`evidence/instrument-calibration.2026-11-03-p630.tsv`.
+
+### 🔴 `630-C` — `p624`'s absence oracle is **unavailable in this session**, and the asymmetry is exact
+
+🔵 `p624` wrote that tree enumeration *"can **prove absence**, which `curl -sI` never could"*, and retired the
+licence ladder for it. 🔴 It cannot be run here at all:
+
+| Endpoint | Result | Reading |
+|---|---|---|
+| `gh api repos/moodle/moodle` | 🔴 HTTP `403` *"not enabled for this session"* | direct REST is **session-scoped** |
+| `gh api repos/csev/py4e` | 🔴 HTTP `403` | same |
+| `gh api repos/gmilano/globant-kb` | 🟢 `200`, `full_name` served | 🔴 **only** the session's own repo |
+| `gh api repos/csev/py4e/git/trees/master` | 🔴 HTTP `403` | 🔴 **the absence oracle itself** |
+| `gh api -X GET search/repositories -f q='repo:moodle/moodle fork:true'` | 🟢 `total_count 1` | 🟢 **search is unscoped** |
+
+🟢 **The generalisation (`P630-0`):** on GitHub's API, *search* and *direct REST* carry **different authorization
+scopes**, and this base's instruments sit on both sides of that line without ever having said so. The `repo:`
+metadata channel works for any public address because it is a **search**; everything addressed as
+`repos/{owner}/{repo}/…` is gated to the attached repository. 🔵 It also explains `629-C` at the root: that
+`422` is a **search-validation** failure, which is why it cannot tell *absent* from *no permission*.
+
+🔴 **Operative consequence:** `p624`'s claim that enumeration proves absence is **sound about the method and
+void about this session**. Until a session attaches the repository under audit, every absence this base
+publishes is a **bounded upper bound over a named filename set** — exactly the standing `curl -sI` limit
+`p624` believed it had escaped.
+
+### 🔴 `630-D` — the defect in *this* pass's own first measurement, named rather than quietly fixed
+
+🔴 My first grant probe for `csev/py4e` ran the tree enumeration and piped it to
+`grep -iE 'licen|copying|legal'`. It exited `1`, and `1` was read as **"no licence blob in the tree."** 🔴 The
+body it actually searched was the `403` error JSON, which contains none of those tokens.
+
+🟢 **The control is what caught it.** The same enumeration was run against `moodle/moodle` — an address that
+certainly carries a licence — and returned **the same nothing**. A grep over an error body cannot fail, so the
+column had **no failing case**.
+
+🔵 This is `P619-0`'s class and `629-E`'s shape in a third instrument: `629-E` captured the exit status of
+`head` instead of `git`, and this captured the exit status of a grep over an authorization error instead of a
+tree. 🟢 **Operative: a channel's HTTP status must be read before its body is parsed, and every absence probe
+must be run against a positive control in the same invocation.**
+
+### 🔴 `630-F` — a leftmost-match licence title **misgrades every dual-licensed payload**, and the shelf was right
+
+🔴 My byte-reader extracted the first recognised licence title in each payload. On
+[`vgwb/Antura`](https://github.com/vgwb/Antura) it returned 🔴 **`Creative Commons`** — which would have
+contradicted this base's published `BSD-2-Clause` claim and sent a pass off to "correct" a correct row.
+
+🟢 **The full `2,002`-byte read settles it in the shelf's favour.** `LICENSE.md` says, in order: the content is
+`CC-BY-4.0`, *"and the underlying source code is licensed under the Simplified BSD License (BSD-2-Clause)"*,
+then an `## Assets` section (`CC-BY-4.0`), then a `## Source Code` section carrying the **full BSD 2-Clause
+body** with TH Köln / Cologne Game Lab, Video Games Without Borders and Wixel Studios as holders.
+
+| | Reading |
+|---|---|
+| Metadata channel | 🔴 `NOASSERTION` |
+| My leftmost-title regex | 🔴 `Creative Commons` |
+| 🟢 Full byte read | 🟢 `BSD-2-Clause` **code** + `CC-BY-4.0` **assets** |
+| 🟢 This base's published claim | 🟢 **identical — CORROBORATED** |
+
+🔵 **The generalisation (`P630-1`):** in a dual-licensed payload the **content** licence is routinely named
+first and the **code grant** second, because the file is written for a reader who cares about reuse of the art.
+A first-match reader therefore returns the licence that matters *least* for "can this be built on". 🟢 Operative:
+a title reader must enumerate **all** titles in a payload and report the set, never the first; and a payload
+over ~`1.5 kB` that is not a stock text is a **dual-licence candidate** and must be read whole.
+
+### 🔴 `630-A` — the mandated legs are nil for a **fifth** consecutive pass
+
+| Leg | Addresses returned | Already held | 🆕 New |
+|---|---|---|---|
+| Global (`4` queries) | `9` | `9` | 🔴 **`0`** |
+| 🔴 North America | `0` | — | 🔴 **`0`** |
+| 🔴 EMEA | `0` | — | 🔴 **`0`** |
+| 🔴 APAC | `0` | — | 🔴 **`0`** |
+| 🔴 LATAM | `0` | — | 🔴 **`0`** |
+| **Total** | **`11`** | **`11`** | 🔴 **`0`** |
+
+🔵 Held checked case-insensitively against a `3,931`-slug index extracted from all eight shelves this pass.
+The names returned were `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners`, `NousResearch/hermes-agent`,
+`speedyapply/2026-AI-College-Jobs`, `aneelv75/github-trending`, `pguso/agents-from-scratch`,
+`avinash201199/free-ai-agents-resources`, `ArturoNereu/AI-Study-Group`, `1111philo/learn` — **every one of them
+already on this base.**
+
+🔴 **The four regional legs returned `0` repository addresses for the fifth pass running.** Their *demand* intel
+was substantive and is placed in `intel/market.md` `630-H`; as a **supply** channel they have now produced
+nothing across `p625`→`p630` (`0/28`, `0/12`, `0/11`, `1/17`, `0/11`).
+
+🔴 Two of the three unheld-looking names failed on grant, not on novelty:
+`ArturoNereu/AI-Study-Group` (`1,375★`) serves **no grant** at `7` filenames, and `1111philo/learn` is
+`NOASSERTION` **and archived**. 🟢 Recorded because a leg's yield must be priced after adjudication, not before.
+
+### 🟢 `630-B` — the hole census pays a **third** time, and the ratio is now a trend
+
+🔵 `p619-C` built the census, `p629-B` re-ran it, this pass runs it again: score the shelf's own coverage of
+education tiers, take the lowest, and query GitHub by `topic:` — one free-text term at most, per `p623`.
+
+| Tier | Shelf score (lines) | `total_count` | Adjudicated | 🟢 Accepted |
+|---|---|---|---|---|
+| 🔴 parent communication | **`0`** | `8` | `4` | 🟢 `2` |
+| 🔴 mother tongue | **`0`** | — | `0` | `0` (**no such GitHub topic exists** — the tier has no channel) |
+| 🔴 adult literacy | `1` | `8` | `4` | 🟢 `2` |
+| 🔴 open textbook / OER | `3` | `62` | `4` | 🟢 `2` |
+| 🔴 TVET / vocational | `4` | `47` | `3` | 🟢 `2` |
+| 🔴 music education | `6` | `8` | `4` | 🟢 `2` |
+| 🔴 speech therapy | `6` | `69` | `5` | 🟢 `3` |
+| **Total** | — | **`202`** | **`24`** | 🟢 **`13`** |
+
+🟢 **`13` accepted of `24` adjudicated — a `54 %` yield**, against `0 of 11` from the mandated legs.
+`p629` measured `55 %` and `6 of 11`. 🔵 Two independent runs within `0.6` points is no longer an anecdote:
+**the holes are where the supply is, and the legs are a saturation control.**
+
+🟢 `18` of the `24` adjudicated addresses were **new to this base** — none of the six tiers had been queried
+before.
+
+### 🟢 `630-G` — the shelf: `13` new permissive rows, every grant read from bytes
+
+| Name | Repo | Licence | What it is | Stars | Pushed | Region |
+|---|---|---|---|---|---|---|
+| LiaScript | [`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript) | 🟢 `BSD-3-Clause` | Interpreter for interactive educational content in an extended Markdown — OER authored as plain text, Elm. 🔴 Default branch is **`development`** (`630-J`). | `287★` | `2026-11-03` | 🟢 **EMEA** |
+| pandoc-lecture | [`cagix/pandoc-lecture`](https://github.com/cagix/pandoc-lecture) | 🟢 `MIT` | Single-source Pandoc Markdown → lecture slides, handouts, lecture notes, homework sheets and exams. TH Köln. | `108★` | `2026-06-22` | 🟢 **EMEA** |
+| vowel-practice | [`fulldecent/vowel-practice`](https://github.com/fulldecent/vowel-practice) | 🟢 `MIT` | Finds formants in spoken sounds — speech-therapy and language-learning drill, iOS/Swift, self-labelled `mature`. | `67★` | `2026-10-13` | Global |
+| sightkick | [`tonygoldcrest/sightkick`](https://github.com/tonygoldcrest/sightkick) | 🟢 `MIT` | Connect electronic drums, pick a song, play the part — sight-reading and rhythm practice with stem separation and MIDI. 🔵 A practice game, not classroom software. | `63★` | `2026-10-28` | Global |
+| erhu-annotator | [`jing-wu-ai/erhu-annotator`](https://github.com/jing-wu-ai/erhu-annotator) | 🟢 `MIT` | Privacy-first **browser-only** tool cropping scanned score PDFs into line-level snippets for music teaching. | `21★` | `2026-06-03` | 🟢 **APAC** |
+| Great Reading Adventure | [`MCLD/greatreadingadventure`](https://github.com/MCLD/greatreadingadventure) | 🟢 `MIT` | Manages dynamic **public-library** reading programs — ASP.NET Core, from Maricopa County Library District. | `17★` | `2026-09-28` | 🟢 **North America** |
+| VR4VET | [`vr4vet/vr4vet`](https://github.com/vr4vet/vr4vet) | 🟢 `MIT` | Virtual Reality for Career Guidance and Vocational Education and Training — Unity, **EU Erasmus+ funded**. | `16★` | `2026-04-07` | 🟢 **EMEA** |
+| Litera-AI | [`MuhammadLutfiMuzakiiVY/Litera-AI-Web`](https://github.com/MuhammadLutfiMuzakiiVY/Litera-AI-Web) | 🟢 `MIT` | Adaptive diagnostic assessment for **reading-literacy remediation** (Indonesian), Next.js + Prisma + Gemini. | `16★` | `2026-08-25` | 🟢 **APAC** |
+| class-teacher-skills | [`PIGU-PPPgu/class-teacher-skills`](https://github.com/PIGU-PPPgu/class-teacher-skills) | 🟢 `MIT` | AI skill repo for the Chinese 班主任 (homeroom teacher): home–school communication, student records, class ledgers, confirm-before-send workflow. | `10★` | `2026-07-27` | 🟢 **APAC** |
+| ortholyse | [`assinscreedFC/ortholyse`](https://github.com/assinscreedFC/ortholyse) | 🟢 `MIT` | Desktop app for **speech therapists**: automates language-sample transcription and metric computation. Whisper + spaCy + NLTK, PySide6. | `5★` | `2026-06-13` | 🟢 **EMEA** |
+| AI Skill Assessment (RPL) | [`SabarishR08/SIH26242-AI-Skill-Assessment-RPL`](https://github.com/SabarishR08/SIH26242-AI-Skill-Assessment-RPL) | 🟢 `MIT` | AI-assisted skill assessment for **Recognition of Prior Learning**, India MSDE problem statement `SIH26242`. | `1★` | `2026-10-28` | 🟢 **APAC** |
+| parro-cli | [`anneschuth/parro-cli`](https://github.com/anneschuth/parro-cli) | 🟢 `MIT` | CLI + Python SDK for the **Parro** school-communication platform. 🔴 **`CLIENT-ONLY`** — see `630-H`. | `9★` | `2026-11-03` | 🟢 **EMEA** |
+| vocametrix-python | [`Vocametrix/vocametrix-python`](https://github.com/Vocametrix/vocametrix-python) | 🟢 `MIT` | Official SDK for the Vocametrix voice-analysis API — AVQI, DSI, jitter/shimmer, pronunciation assessment. 🔴 **`CLIENT-ONLY`** — see `630-H`. | `2★` | `2026-10-26` | Global |
+
+🟢 **Placement:** EMEA `5`, APAC `4`, Global `3`, North America `1`, 🔴 **LATAM `0`**. The regional legs
+returned no addresses, and the tier census surfaced none from Latin America — that gap is declared, not hidden.
+
+🔴 **Priced honestly:** `5 of 13` are under `17★` and single-maintainer, and two are clients for closed
+services. They are recorded because the **grant is real and read from bytes** — `11` stock `MIT` payloads in the
+`1,056`–`1,103 B` band, one `BSD-3-Clause` at `1,523 B` — not because they are all ready to depend on.
+
+### 🟢 `630-H` — a new class: **permissively-licensed thin clients for proprietary services**
+
+🔴 Two of this census's accepted rows carry a clean, byte-read `MIT` grant over code that **cannot run without
+a closed service**:
+
+| Row | Grant | The dependency the grant does not cover |
+|---|---|---|
+| [`anneschuth/parro-cli`](https://github.com/anneschuth/parro-cli) | 🟢 `MIT`, `1,068 B` stock | 🔴 **Parro**, a proprietary school-communication platform. No Parro tenancy, no function. |
+| [`Vocametrix/vocametrix-python`](https://github.com/Vocametrix/vocametrix-python) | 🟢 `MIT`, `1,072 B` stock | 🔴 The **Vocametrix** hosted voice-analysis API. The clinical measures — AVQI, DSI, jitter/shimmer — are computed server-side. |
+
+🔵 **The generalisation (`P630-2`):** a licence is a fact about the **bytes in the repository**, and a thin
+client's bytes are the part with no value. Every licence instrument this base owns was *correct* on both rows
+and both readings are *useless* for the question the shelf exists to answer — "can Globant build on this" —
+because the answer lives in a service agreement no grant file mentions. 🔴 This is `p282`'s lesson one layer
+out: duplication was a **relation between rows**, and vendor dependency is a **relation between a row and
+something that is not in the repository at all.**
+
+🟢 **Operative:** a row whose own description names an external platform or API as the thing it talks to is
+marked **`CLIENT-ONLY`** and may be composed as an *integration*, never as a *capability*. Both rows above
+carry the marker, and `compose/patterns.md` `630-M1` uses `parro-cli` only in that position.
+
+### 🔴 `630-I` — `csev/py4e`, `3,112★` on this base's own shelf, serves **no grant** at `19` filenames
+
+🔵 `repos/trending.md` publishes it as the largest row on `topic:lti`, *"a real corpus with real reach"*, and
+honestly flags it 🟢 ***"(not blob-read)."*** 🟢 That flag is discharged here.
+
+| Probe | Result |
+|---|---|
+| `19` licence filenames on `master` via `raw` | 🔴 **`404` × `19`** |
+| 🟢 Positive control (`learningequality/kolibri` `develop` `LICENSE`) | 🟢 `200` |
+| Metadata channel `license.spdx_id` | 🔴 `NO-SPDX` |
+| Tree enumeration (would have been proof) | 🔴 unavailable — `630-C` |
+
+🔴 **So it is an upper bound, and it is a strong one:** three channels agree and the probe has a passing
+positive control. 🟢 **`csev/py4e` is reclassified reference-only**: a `3,112★` teaching corpus with no grant
+cannot be a build-on recommendation.
+
+🔵 **Where that reclassification is published, and why not in the row itself.** The `topic:lti` row sits in
+`repos/trending.md`, which is **append-only** — it is this base's dated record of what a channel returned on a
+day, and editing a `p`-numbered row would destroy the history the file exists to keep. 🟢 The reclassification
+is therefore published as a **new dated section** in `repos/trending.md` and on `repos/foundations.md`, and the
+original row keeps its honest `*(not blob-read)*` flag as the standing evidence of **when** the question was
+open. 🔴 A sell shelf gets corrected in place; a historical shelf gets corrected by a later entry.
+
+### 🟢 `630-J` — `629-F` corroborated, and its one counter-example is now **three**
+
+🔵 `629-F` found `svankamamidi/open-aac` defaulting to `search_for_picture` and ruled that *"the `Branch` column
+must never be filled from `raw` alone."* 🟢 Two more live cases fell out of this pass's byte reads **without
+being looked for**:
+
+| Repo | Default branch | Neither `main` nor `master`? |
+|---|---|---|
+| [`LiaScript/LiaScript`](https://github.com/LiaScript/LiaScript) | 🔴 **`development`** | 🟢 yes |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** | 🟢 yes |
+| `svankamamidi/open-aac` (`p629`) | 🔴 `search_for_picture` | 🟢 yes |
+
+🔴 `3` of the `25` addresses byte-read this pass — **`12 %`** — would have read as **grant-absent** under a
+probe that assumed `main` or `master`. 🔵 `kolibri` is the sharpest case: it is one of this base's oldest
+`MIT` foundation rows, and a `main`/`master`-only probe would have reported the flagship as ungranted. 🟢 The
+prober used this pass takes `default_branch` from the **metadata** channel before any `raw` read, exactly as
+`629-F` ordered.
+
+### 🔴 `630-E` — the mandated `curl -sI` verification recipe returns `403` for **live and dead alike**
+
+🔴 The standing instruction is *"verify every URL before writing it (`curl -sI`). A `404` is not a finding."*
+Run against all `13` accepted rows — every one of which `ls-remote` confirms at exit `0` with a `HEAD` SHA —
+`curl -sI https://github.com/<slug>` returned 🔴 **`HTTP 403` thirteen times out of thirteen.** The session's
+proxy answers the `HEAD` method on `github.com` before GitHub does.
+
+🟢 **It is not a weak signal, it is no signal:** the recipe returns the same code for an address that exists and
+one that does not, so it has no discriminating case. 🔵 `p622` found the proxy publishing false *presences*
+this way; this is the same mechanism publishing a uniform false *absence*. 🟢 Operative, and it is an
+instruction to the operator: **existence on this base is established by `ls-remote` exit status plus the
+`repo:` search channel, both with a fabricated control in the same run.** `curl` is for **bytes**, never for
+existence.
+
+### 🔴 `630-K` — the execution denial reproduces a **sixth** consecutive pass; this commit is not gate-verified
+
+🔴 Running this repository's own suites is refused `[Code from External]` — reproducing `617-J` / `618-B` /
+`619-L` / `629-K`. The restriction is keyed on code **provenance**: the agent's own inline interpreter runs
+normally, a `python3 test_check_headings.py` of a file from this clone does not. 🔴 `gate-declared-gap` and
+`gate-region-headings` are **still owed a green run**, now for the **thirteenth** pass, and this pass did not
+re-implement them inline — a gate re-written by the pass it judges is not a gate.
+
+🟢 **Honoured by reading instead.** `compose/code/p383-region-heading-gate/check_headings.py` was read in full;
+its contract is one canonical `## Opportunities by region` block whose `###` children are exactly
+`North America`, `EMEA`, `APAC`, `LATAM`, `Global`. `intel/market.md` was left with 🟢 **one** canonical block
+carrying all 🟢 **five**, with `p629`'s block retitled `## Opportunities by region — \`p629\` (archived)` —
+verified by reading, not by running.
+
+🟢 **And the reading caught a live violation in this pass's own first draft.** My `630-H` subsection was
+written as an `###` directly under the canonical block, which makes it a **sixth child** of a five-value closed
+vocabulary — `P383-OUT-OF-VOCAB`, precisely what the gate exists to refuse. It was promoted to `##` and the
+contract re-checked clean: `1` block, children exactly `Global`, `North America`, `EMEA`, `APAC`, `LATAM`,
+no `P383-MULTIPLE-BLOCKS`, no `P383-MISSING-REGION`, no `P383-LATAM-ONLY`.
+
+🔵 **Why that is worth registering.** Twelve passes have declared this gate "owed a green run" and treated the
+debt as bookkeeping. 🔴 The first pass to actually evaluate its contract against a fresh edit found a real
+red — in its own prose, within minutes of writing it. 🟢 The gate is not owed a run as a formality; it was
+catching something. Reading the contract is a weaker instrument than running the suite and it is **not
+nothing**, and it should be done on every pass that touches `intel/market.md` whether or not execution is
+restored.
+
 ## 🆕 `p629` — reads `2026-11-03` — **🟢 "SUPPLY IS SATURATED" IS WRONG AND THIS PASS FALSIFIES IT: THE *LEGS* ARE SATURATED (`16 of 17` HELD, A FOURTH CONSECUTIVE NIL), BUT RE-RUNNING `p619-C`'s HOLE CENSUS NAMED THREE TIERS AND RETURNED **`6` NEW PERMISSIVE ROWS**, EVERY GRANT BYTE-READ. 🔴 `628-G` IS CORRECTED ON THE `repo:` CHANNEL'S NEGATIVE: IT IS AN **HTTP `422`**, NOT SILENT ABSENCE, AND ITS TEXT CONFLATES *ABSENT* WITH *NO PERMISSION* — SO THAT CHANNEL SHARES THE AMBIGUITY `628-G` BLAMED ONLY ON `ls-remote`. 🟢 AND THAT `422` TURNS OUT TO BE A **RENAME SIGNATURE**, WHICH GIVES `p628`'s `96`-STRONG "ALIVE" BUCKET A POSITIVE PROCEDURE: `2 of 3` RESOLVED ON IDENTICAL `HEAD`. 🔴 `raw`'s BRANCH ALIASING IS **ASYMMETRIC** — `master` IS ALIASED ONTO THE DEFAULT, `main` IS NOT — WHICH MAKES `619-E`'s CALIBRATED RULE SOUND FOR BYTES AND UNSOUND FOR DEFAULTS, WITH A NAMED COUNTER-EXAMPLE. 🔴 AND A DEFECT IN THIS PASS'S OWN FIRST MEASUREMENT IS NAMED RATHER THAN HIDDEN. ELEVEN REGISTERED (`629-A`…`629-K`).**
 
 🔵 Every figure below is measured today, every instrument ran against a **fabricated control**, and the pass is

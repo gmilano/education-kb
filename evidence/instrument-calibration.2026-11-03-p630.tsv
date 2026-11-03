@@ -1,0 +1,14 @@
+channel	probe	result	reading
+repo-search	repo:zzz-p630-no-such-owner-qq/zzz-p630-control fork:true	HTTP 422	fabricated control rejected — channel discriminates
+repo-search	repo:moodle/zzz-p630-control-does-not-exist fork:true	HTTP 422	real owner + fake repo also 422 — 629-C's ambiguity reproduced
+repo-search	repo:moodle/moodle fork:true	total_count=1	positive control
+ls-remote	https://github.com/zzz-p630-control/zzz-nope	exit 128	status captured BEFORE any pipe (629-E honoured)
+ls-remote	https://github.com/moodle/moodle	exit 0 HEAD=058099166981	positive control
+gh-api-direct	repos/moodle/moodle	HTTP 403 not-enabled-for-session	630-C: direct REST is session-scoped
+gh-api-direct	repos/csev/py4e	HTTP 403 not-enabled-for-session	630-C
+gh-api-direct	repos/gmilano/globant-kb	200 full_name served	630-C: only the session's own repo
+gh-api-trees	repos/csev/py4e/git/trees/master	HTTP 403	630-C: p624's absence oracle UNAVAILABLE this session
+gh-api-trees	repos/moodle/moodle/git/trees/main	HTTP 403 (grep found no licence)	630-D: control proves the grep read 403 AS ABSENCE
+curl-I	HEAD https://github.com/<any of 13 live repos>	HTTP 403 x13	630-E: mandated curl -sI recipe cannot discriminate live from dead
+raw	raw.githubusercontent.com/learningequality/kolibri/develop/LICENSE	200	positive control for the filename probe
+raw	raw.githubusercontent.com/csev/py4e/master/<19 filenames>	404 x19	630-I: bounded absence, upper bound not proof

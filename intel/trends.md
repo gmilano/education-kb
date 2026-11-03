@@ -4,6 +4,113 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p630` — reads `2026-11-03` — current trends
+
+🔵 Each trend below is tied to something measured this pass or to a named source from this pass's eight legs.
+🔴 Where a trend is an opinion rather than a measurement, it says so.
+
+### `T1` — 🟢 The permissive layer in education is **single-purpose tools**, and the platforms are copyleft
+
+🔵 Measured on bytes today across the eight-platform shelf: the four largest education platforms by stars —
+Moodle (`7,576★` `GPL-3.0`), Open edX (`8,216★` `AGPL-3.0`), Canvas (`6,900★` `AGPL-3.0`), Chamilo
+(`1,020★` `GPL-3.0`) — are **all copyleft**. Every permissive row this pass added is a narrow tool: a formant
+extractor, a score cropper, a transcription pipeline, a reading-programme ledger.
+
+🟢 **Operative:** "put an agent on the LMS" crosses a copyleft boundary **by construction**. The buildable
+pattern is a permissive tool alongside the platform, talking to it over `LTI`/`xAPI` — not a fork. Costed as
+integration, not as a product.
+
+### `T2` — 🔴 Web digests are a **lead generator**, not a licence source: `2 of 2` wrong again
+
+🔵 `p623` measured web digests getting `2 of 2` permissive claims wrong. This pass, in a different tier, the
+platform leg got `2 of 2` wrong again: it claimed **Chamilo** is `Apache-2.0` (byte-read: 🔴 `GPL-3.0`) and
+**Sakai** is `Apache 2.0` (byte-read: 🟢 `ECL-2.0`). 🔵 Sakai's case is the subtler failure — `ECL-2.0` *is*
+buildable, so the claim was *harmless in conclusion and wrong in fact*, which is the kind of error that
+survives review.
+
+🟢 **Operative, unchanged and now twice-measured:** a licence from a tracker page, vendor comparison or
+"best open source X 2026" listicle is a **lead**. The finding is the payload.
+
+### `T3` — 🟢 Discovery saturation is a property of the **channel**, measured at five passes
+
+| Channel | `p625`→`p630` yield |
+|---|---|
+| 🔴 Mandated web legs (`4` global + `4` regional) | `0/28`, `0/12`, `0/11`, `1/17`, `0/11` |
+| 🟢 Tier-hole census (`p619`, `p629`, `p630`) | `20`, `6`, `13` accepted rows |
+
+🔴 The regional legs specifically have returned **`0` repository addresses five passes running**. 🟢 They are
+not useless — their *demand* intel is the substance of `intel/market.md` — but as a **supply** channel they are
+a control that confirms saturation, and the budget belongs in the holes. `54 %` / `55 %` acceptance on two
+independent census runs is the reason.
+
+### `T4` — 🟢 **New:** a permissive grant on a thin client says nothing about the dependency
+
+🔵 Named this pass as `630-H`. Two of `13` accepted rows — `anneschuth/parro-cli`,
+`Vocametrix/vocametrix-python` — carry clean stock `MIT` over code that **cannot run without a proprietary
+service**. Every licence instrument on this base was correct about both, and both readings answer the wrong
+question.
+
+🟢 **Operative:** a row whose own description names an external platform or API as its counterparty is marked
+`CLIENT-ONLY` and may be composed as an **integration**, never quoted as a **capability**. 🔴 `~15 %` of this
+pass's accepted rows fell in this class, so it is not an edge case.
+
+### `T5` — 🟢 EMEA's permissive education code comes out of **grant-funded consortia**
+
+🔵 `5` of `13` new rows are EMEA and all five are publicly funded or institutionally authored — `vr4vet`
+is **EU Erasmus+** funded outright; `pandoc-lecture` and `LiaScript` are German academic; `ortholyse` is
+French clinical. Backing it: `EUR 25.4 M` in EU Advanced Digital Skills grants, the Commission's updated
+ethical guidelines on AI in education (`9 June`), and the UK's `GBP 200 M+` AI Adoption Summit commitments.
+
+🟢 **The studio reading:** funder mandates make the licences clean, and the absence of a product team makes the
+software under-engineered. Real pedagogy, real grant, no roadmap — the ideal shape to build on.
+
+### `T6` — 🟢 APAC's supply is **national-curriculum shaped**, not product shaped
+
+🔵 `4` of `13` new rows are APAC and each is a national-programme artefact: an Indonesian reading-literacy
+remediation platform, Chinese 班主任 workflow skills, an India MSDE Smart India Hackathon `RPL` assessor,
+Chinese music pedagogy. Policy at the other end of the same impulse: the Philippines DepEd–Google programme
+certifying 🟢 **over one million teachers** in Gemini AI.
+
+🟢 **Operative:** entering APAC means localising **pedagogy**, not translating UI, and teacher certification at
+`10^6` scale is where the services revenue is. 🔴 Regional governance is immature — the ASEAN AI guide is
+early-stage — so compliance is per-country and must be scoped that way.
+
+### `T7` — 🔴 The adoption-to-governance gap is now the sector's defining shape, and LATAM is its extreme
+
+| Region | Adoption measured | Governance measured |
+|---|---|---|
+| LATAM | 🟢 `92 %` students, `79 %` faculty | 🔴 *"a lack of formal policies … in Latin America"* (`200` institutions, `19` countries) |
+| North America | `86 %` of organisations | `~70 %` have or are **developing** guidance |
+| EMEA | `56 %` CEOs ready | 🔴 regulatory uncertainty → fragmented strategies |
+| APAC | `92 %` ANZ firms | 🔴 ASEAN guide early-stage |
+
+🟢 Every region reports the same shape with a different regulator, which makes **policy-to-pipeline** the one
+offer that travels. 🔵 The OECD's `2026` Digital Education Outlook states the governing constraint: AI helps
+learning **only when pedagogy stays in control**.
+
+### `T8` — 🔴 The market size is not a number, and quoting one is a mistake
+
+🔵 Three sources from one leg put the `2026` base at `USD 11.4 B`, `USD 3.7 B` and `~USD 11 B` — a 🔴 `3.1×`
+spread **on the current year**. 🟢 Operative: quote the **segment** (K-12, `~34 %` share in `2026`) and the
+**adoption rate**, which the regional surveys measure directly and agree on. 🔴 Treat *"the conversation has
+moved from how to stop cheating to how to justify the cost of traditional instruction"* as the opinion it is.
+
+### `T9` — 🔴 An instrument trend, and it is the most expensive one here
+
+🔵 Three separate instruments failed this pass in the **same way** — by having no failing case:
+
+| Instrument | How it could not fail |
+|---|---|
+| 🔴 `p624`'s tree enumeration (`630-C`/`630-D`) | `grep` over a `403` error body matched nothing → read as **proof of absence** |
+| 🔴 `629-E`'s `ls-remote` (prior pass) | `… | head -1` captured `head`'s exit status, never `git`'s |
+| 🔴 The leftmost-match licence title (`630-F`) | returned the **first** title in a dual-licence file — always a title, never a failure |
+
+🟢 Plus a fourth caught in flight: a `[ -z "$db" ]` guard tested a default-branch variable for **emptiness**
+when the failure mode was a non-empty `422` **error body**, which passed the guard and was interpolated into a
+URL. 🟢 **Operative, and it is this base's most reusable rule: read a channel's status before parsing its body,
+and run every absence probe against a positive control in the same invocation.** `630-D` is the case where the
+control is the only reason the error was found at all.
+
 ## 🆕 `p629` — reads `2026-11-03` — **🔴 `p628`'s HEADLINE TREND — *"OPEN-SOURCE SUPPLY IN THIS SECTOR IS SATURATED"* — IS **WITHDRAWN**: IT MEASURED THE CHANNEL, NOT THE SECTOR. THE MANDATED LEGS ARE SATURATED (FOURTH CONSECUTIVE NIL) WHILE A CENSUS OF THE SHELF'S OWN HOLES RETURNED `6` NEW PERMISSIVE REPOSITORIES THE SAME DAY. 🔴 AND THE GOVERNANCE DEFICIT `p628` NAMED IS CONFIRMED ON A FIFTH INSTRUMENT AND IS NOW `87 %` USE AGAINST `26 %` STRATEGY IN LATAM.**
 
 ### 🔴 Trend 1 — the saturation claim was a measurement of the instrument

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p630` — **🟢 `18` ADDRESSES NEW TO THIS BASE OUT OF SIX TIER QUERIES THE SHELF HAD NEVER RUN, `13` ACCEPTED. 🔴 AND THE TREE-ENUMERATION ORACLE `p624` BUILT THIS BASE'S ABSENCE CLAIMS ON **CANNOT RUN IN THIS SESSION** — HTTP `403` ON EVERY THIRD-PARTY ADDRESS.**
+
+🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below it is
+edited — including `p`-numbered rows this pass reclassifies, which are corrected by **this entry**, not in place.
+
+### 🟢 What the `topic:` channel returned, per tier
+
+| Tier (shelf score) | Query | `total_count` | Top returns measured today |
+|---|---|---|---|
+| 🔴 `parent communication` (**`0`**) | `topic:parent-communication fork:false` | `8` | `PIGU-PPPgu/class-teacher-skills` `10★` `MIT`; `anneschuth/parro-cli` `9★` `MIT`; `ishandutta2007/Awesome-Parent-Communication` `0★` `MIT`; `api-evangelist/brightwheel` `0★` `NO-SPDX` |
+| 🔴 `adult literacy` (`1`) | `topic:literacy fork:false stars:>10` | `8` | `plastic-labs/tutor-gpt` `933★` `GPL-3.0` 🔵 held; `vgwb/Antura` `127★` 🔵 held; `MCLD/greatreadingadventure` `17★` `MIT`; `MuhammadLutfiMuzakiiVY/Litera-AI-Web` `16★` `MIT` |
+| 🔴 `open textbook / OER` (`3`) | `topic:oer fork:false stars:>5` | `62` | `csev/py4e` `3,112★` 🔴 **`NO-SPDX`**; `learningequality/kolibri` `1,167★` `MIT` 🔵 held; `LiaScript/LiaScript` `287★` `BSD-3-Clause`; `ManifoldScholar/manifold` `260★` `GPL-3.0`; `cagix/pandoc-lecture` `108★` `MIT` |
+| 🔴 `TVET / vocational` (`4`) | `topic:vocational-training fork:false` | `47` | `vr4vet/vr4vet` `16★` `MIT`; `SabarishR08/SIH26242-AI-Skill-Assessment-RPL` `1★` `MIT`; `kapete23/Arduino-Trainer-Elektronika-Digital` `GPL-3.0`, `4.0` yr quiet |
+| 🔴 `music education` (`6`) | `topic:music-education fork:false stars:>20` | `8` | `vpavlenko/study-music` `2,343★` `NO-SPDX`; `seehiong/noteflow` `194★` `NO-SPDX`; `tonygoldcrest/sightkick` `63★` `MIT`; `jing-wu-ai/erhu-annotator` `21★` `MIT`; `lipd/muse-training` `38★` `MIT` 🔴 `5.4` yr quiet |
+| 🔴 `speech therapy` (`6`) | `topic:speech-therapy fork:false` | `69` | `fulldecent/vowel-practice` `67★` `MIT`; `assinscreedFC/ortholyse` `5★` `MIT`; `dcostenco/prism-aac` `3★` 🔴 `AGPL-3.0`; `Vocametrix/vocametrix-python` `2★` `MIT`; `shuklabhay/tessera` `4★` `MIT` 🔴 quiet |
+| 🔴 `mother tongue` (**`0`**) | — | 🔴 **no such GitHub topic** | 🔴 The tier the shelf covers least has **no channel to query**. Recorded as an informed gap. |
+
+🟢 **`202` returns, `24` adjudicated, `13` accepted — `54 %`.** `p629`'s independent run of the same method
+measured `55 %`. 🔴 The mandated web legs, same pass: **`0 of 11`.**
+
+### 🔴 The instrument news, and it is bad for this base's absence claims
+
+🔴 `p624` retired the licence ladder in favour of **tree enumeration**, on the ground that enumeration *"can
+prove absence."* 🔴 In this session it cannot run:
+
+| Endpoint | Result |
+|---|---|
+| `gh api repos/csev/py4e/git/trees/master` | 🔴 HTTP `403` — *"not enabled for this session"* |
+| `gh api repos/moodle/moodle` | 🔴 HTTP `403` |
+| `gh api repos/gmilano/globant-kb` | 🟢 `200` — 🔴 only the session's **own** repository |
+| `gh api -X GET search/repositories -f q='repo:…'` | 🟢 works for **any** public address |
+
+🟢 **Search and direct REST carry different authorization scopes**, and this base's instruments sit on both
+sides of that line. Every absence published from here is a **bounded upper bound over a named filename set**
+until a session attaches the repository under audit. Full statement at `agents/top.md` `630-C`.
+
+🔴 And this pass's own first probe **read that `403` as proof of absence** — a `grep` for licence paths over an
+error body cannot match, so it exited `1` and `1` was read as "no licence." The positive control
+(`moodle/moodle`, which certainly has one) returned the same nothing and caught it. `630-D`.
+
+### 🔴 `csev/py4e` — the largest row this shelf ever put on `topic:lti`, and it has **no grant**
+
+🔵 The `p`-numbered row above reads *"`3.1k` · **(not blob-read)** · Largest row on `topic:lti`. Python for
+Everybody — a real corpus with real reach."* 🟢 That honest flag is discharged today:
+
+`19` licence filenames probed on `master` via `raw` → 🔴 **`404` × `19`**. Positive control
+(`kolibri` `develop` `LICENSE`) → 🟢 `200`. Metadata → 🔴 `NO-SPDX`. Tree enumeration, which would have been
+proof → 🔴 unavailable (`630-C`).
+
+🟢 **Reclassified reference-only.** A `3,112★` teaching corpus with no grant is not a build-on row. 🔵 The
+original row is left exactly as written: it is the record of **when** this was an open question, and
+append-only means a later entry corrects it, not an edit.
+
+### 🔴 Two `MIT` rows that are clients for closed services
+
+`anneschuth/parro-cli` (Parro, proprietary school-comms) and `Vocametrix/vocametrix-python` (hosted
+voice-analysis API) both carry clean stock `MIT` payloads and **neither runs without a vendor**. Marked
+`CLIENT-ONLY`. 🟢 A licence describes the bytes in the repository, and a thin client's bytes are the part with
+no value (`630-H`).
+
 ## 🆕 `2026-11-03` · `p629` — **🔴 GITHUB TRENDING RETURNED `0` UNHELD EDUCATION REPOSITORIES FOR A FOURTH CONSECUTIVE PASS, AND THE ONE UNHELD NAME IS THE BOT THAT GENERATES THE TRENDING DIGESTS. 🟢 THE REAL MOVEMENT THIS WEEK IS IN THREE TIERS NO DIGEST COVERS: VIRTUAL SCIENCE LABS, OFFLINE-FIRST / DISPLACED-LEARNER DELIVERY, AND AAC.**
 
 🔵 Append-only record of what was true on this date.
