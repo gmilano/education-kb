@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p628` — **🟢 TWO STALE ADDRESSES ON THIS BASE'S SELL ROWS RENAME-PROVEN AND CLOSED; DISCOVERY NIL FOR THE THIRD CONSECUTIVE PASS (`0 of 11` NEW NAMES ACROSS EIGHT WEB LEGS).**
+
+🔵 Append-only. This section records what was true on `2026-11-03`; nothing below it is edited.
+
+### 🟢 Rename resolutions proven this pass
+
+| Published address | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `project-sunbird/sunbird-lms-service` | [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | `48c79a862038` | `31★` `MIT` `2026-03-02` |
+| `Changochen/slide-to-video` | [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) | `dd5ab179d565` | `12★` `MIT` `2025-09-12` |
+
+🔴 The Sunbird rename moved **owner and name both** (`project-sunbird`→`Sunbird-Lern`,
+`sunbird-lms-service`→`userorg-service`). 🟢 `WebFetch` on the **old** address is the only channel that names a
+rename target; `ls-remote` follows the redirect and shows only a SHA, and the `repo:` channel reports absence
+without a successor (`628-C`).
+
+### 🔴 Discovery: nothing new, measured rather than assumed
+
+| Name returned by a web leg | Held? | 🟢 Measured today |
+|---|---|---|
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | 🔴 held | `122,872★` `MIT` `2026-11-02` |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🔴 held | `76,420★` `MIT` `2026-11-02` |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🔴 held | `39,255★` `MIT` `2026-07-27` |
+| [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | 🔴 held | `14,140★` `NOASSERTION` 🔴 `2024-05-16` |
+| [`aicademyorg/aicademy`](https://github.com/aicademyorg/aicademy) | 🔴 held | `308★` `MIT` `2026-02-18` |
+| [`ATOM00blue/machine-learning-library`](https://github.com/ATOM00blue/machine-learning-library) | 🔴 held | `261★` `NOASSERTION` `2026-08-10` |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | 🔴 held | `91★` `MIT` `2026-07-11` |
+
+🟢 Plus `freeCodeCamp/freeCodeCamp`, `speedyapply/2026-AI-College-Jobs`, `All-Hands-AI/OpenHands` and
+`crewAIInc/crewAI` — also held. 🔴 **`11 of 11`.** Third pass running (`p625` `0/28`, `p626` `0/12`).
+🔴 `microsoft/ai-edu` is `2.5` years unpushed and carries no SPDX grant — it is a reference corpus, not a
+dependency.
+
+### 🔴 Agent-tier rows re-measured
+
+| Repo | 🟢 Stars | Licence | Pushed |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `54,378` | `Apache-2.0` | `2026-10-31` |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `490` | `MIT` | `2026-10-31` |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `93` | `MIT` | `2026-11-02` |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | `27` | `MIT` | `2026-10-20` |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `16` | `MIT` | `2025-08-29` |
+
 ## 2026-11-03 — Pass 627 — **🔴 THE SUPPLY NIL IS NOW THREE CONSECUTIVE PASSES (`8 of 8` HELD), AND THE WEEK'S ONLY REAL MOVEMENT IN AGENT SUPPLY IS THAT `3` OF THIS SHELF'S OWN AGENT ROWS POINTED AT `0★` PERSONAL FORKS**
 
 ⏱️ **Append-only.** Nothing below this line was edited. This section records what the discovery channels returned

@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p628` — **🟢 THE WHOLE-BASE CENSUS, RE-RUN WITH `fork:true`: `3,956` REAL ADDRESSES, `95.17 %` CANONICAL, `0` CONTROL LEAKS IN `41` BATCHES. 🔴 AND `17.4 %` OF THE RAW MISSES ARE NOT REPOSITORIES AT ALL.**
+
+🔵 Append-only. This section records what was true on `2026-11-03`; nothing below it is edited.
+
+### 🟢 Census result (supersedes `p626`'s unreproducible `23`/`25`/`26`)
+
+| Class | Count | Share of `3,956` |
+|---|---|---|
+| 🟢 CANONICAL | `3,765` | 🟢 `95.17 %` |
+| 🔴 MISS — alive (rename or unindexed) | `96` | `2.43 %` |
+| 🔴 MISS — unreachable | `95` | `2.40 %` |
+| 🔴 **On live sell rows** | 🔴 **`2` of `913`** | 🔴 `0.22 %` |
+| 🟢 **Unresolved sell-row addresses after this pass** | 🟢 **`0`** | 🟢 `0.00 %` |
+
+🔵 Evidence: `evidence/census-fork-true.2026-11-03-p628.tsv`,
+`evidence/miss-reachability.2026-11-03-p628.tsv`.
+
+### 🔴 The denominator defect: `41` censused "addresses" are documentation links
+
+🔴 `github.com/topics/…` (`38`), `github.com/orgs/…` and `github.com/search/…` (`3`). A `repo:` qualifier can
+never match one, and `ls-remote` cannot reach one either — **all `41` scored ABSENT on both instruments.**
+🔴 That is `41 of 236` raw misses, `17.4 %`. Any dead-address rate published without stripping these
+**over-reports absence by that margin**.
+
+### 🟢 Instrument calibration, re-run with a fabricated control
+
+| Instrument | Live | Fabricated | Discriminating? |
+|---|---|---|---|
+| `curl -sI github.com/{owner}/{repo}` | 🔴 `403` | 🔴 `403` | 🔴 NO |
+| `gh api repos/{owner}/{repo}` | 🔴 `403` | 🔴 `403` | 🔴 NO |
+| `search/repositories` `repo:`+`fork:true` | 🟢 row | 🟢 absent | 🟢 YES |
+| `git ls-remote … HEAD` | 🟢 SHA | 🟢 `fatal`/`128` | 🟢 YES |
+| 🟢 `curl raw.githubusercontent.com/…` | 🟢 `200` | 🟢 `404` | 🟢 YES |
+
+🟢 **`curl` works on `raw`, not on `github.com` HTML** — a refinement of `627-F`, and it restores the byte-read
+leg for licences. 🔴 It is a path oracle, not a repository oracle.
+
 ## 2026-11-03 — Pass 627 — **🔴 `p626`'s CENSUS INSTRUMENT HAS A DEFECT THAT INVERTS ITS HEADLINE: `search/repositories` EXCLUDES FORKS BY DEFAULT, SO `8 of 15` OF THIS PASS'S FLAGS WERE FORKS AND NOT DEFECTS — AND DEAD ADDRESSES ON LIVE SELL ROWS MEASURE `0`, NOT `1.9 %`**
 
 ⏱️ **Append-only.** Nothing below this line was edited.

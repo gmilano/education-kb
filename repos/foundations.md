@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p628` — reads `2026-11-03` — **🟢 THE ONE GENUINELY UNRESOLVED ADDRESS ON THIS SHELF IS RESOLVED: `project-sunbird/sunbird-lms-service` → [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service), PROVEN ON IDENTICAL `HEAD`. 🟢 AND THE QTI TIER'S LICENCE IS READ FROM BYTES AFTER BEING OWED SINCE `p607`: IT IS `BSD-3-Clause`, NOT `NOASSERTION`.**
+
+### 🟢 `p627`'s open item, discharged
+
+| Was cited | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `project-sunbird/sunbird-lms-service` | [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | `48c79a862038289787471e2c05251d5bbdbf1c1f` | `31★` `MIT` pushed `2026-03-02` |
+
+🔴 **The rename changed both owner and repository name**, which is why every basename-similarity candidate this
+base tried was correctly refuted and none was correct. 🟢 Resolved by `WebFetch` on the old address, which
+GitHub serves through its rename redirect (`628-C`). 🔵 The table row on this shelf is re-pointed; the `p627`
+flag above it is superseded.
+
+### 🟢 The QTI tier is permissive after all — and the metadata channel is wrong on both addresses
+
+| Repo | Metadata channel | 🟢 Grant from bytes | Evidence |
+|---|---|---|---|
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (`3★`, `fork=true`) | 🔴 `NOASSERTION` | 🟢 **`BSD-3-Clause`** | `2,058 B`, `sha256 a5c692f1…` |
+| [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) (`68★`, parent) | 🔴 `NOASSERTION` | 🟢 **`BSD-3-Clause`** | 🟢 **byte-identical to the fork** |
+
+🟢 *"The QTIWorks source code is distributed under the 3-clause BSD license… Copyright (c) 2014, University of
+Edinburgh."* — `p607`'s attribution is **corroborated and no longer owed**.
+🔴 **Mechanism:** a `6`-line prose preamble above the stock BSD text defeats GitHub's licence classifier.
+🟢 **Disposition unchanged, reason upgraded:** [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) remains
+the maintained line (pushed `2026-06-30`; the parent has been quiet since `2023-01-04`), and it is now **known
+buildable** rather than licence-unknown.
+
+### 🔴 Still withdrawn from recommendation
+
+🔴 [`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) (`32★`, `Apache-2.0`) remains
+**archived read-only since `2026-03-26`**, and its parent `vbhayden/unity-xapi-wrapper` (`4★`) is four years
+quiet. 🔴 The whole Unity-xAPI wrapper tier is unmaintained: tell a client the tier is dead and point at the xAPI
+spec plus a thin in-house emitter.
+
+### 🟢 Foundation rows re-measured today
+
+| Repo | 🟢 Stars | Licence | Pushed | Buildable for client delivery? |
+|---|---|---|---|---|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,216` | 🔴 `AGPL-3.0` | 🟢 `2026-11-03` | 🟡 copyleft — host it, don't link it |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `9,263` | 🔴 `LGPL-3.0` | 🟢 `2026-11-03` | 🟡 integrate over API |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `7,575` | 🔴 `GPL-3.0` | `2026-10-30` | 🟡 plugin boundary |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6,900` | 🔴 `AGPL-3.0` | 🔴 `2026-04-30` | 🔴 `6.1` months quiet — price the risk |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `4,289` | 🟢 `BSD-3-Clause` | `2026-11-02` | 🟢 **yes** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1,240` | 🟢 `ECL-2.0` | `2026-11-02` | 🟢 **yes** — no obligation over `Apache-2.0` (`624-D`) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,166` | 🟢 `MIT` | `2026-11-02` | 🟢 **yes** — offline-first |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `377` | 🟢 `Apache-2.0` | 🟢 `2026-11-03` | 🟢 **yes** — LTI 1.3 |
+| [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | `31` | 🟢 `MIT` | `2026-03-02` | 🟢 **yes** — APAC (India) DPI |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `3` | 🟢 `BSD-3-Clause` (bytes) | `2026-06-30` | 🟢 **yes** — QTI engine |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `154` | 🔴 `GPL-3.0` | `2026-11-02` | 🟡 copyleft |
+
+🔵 Eleven rows, each measured today with a fabricated control in the batch. 🟢 **Five are permissive**
+(`MIT` / `BSD-3-Clause` / `Apache-2.0` / `ECL-2.0`) and are the rows to build on; the copyleft rows are
+integration targets, not embedding targets.
+
 ## 🆕 `p627` — reads `2026-11-03` — **🟢 `10` ADDRESS CORRECTIONS LANDED ON THIS SHELF, `3` OF THEM ON THE PLATFORM ROW EVERY ENGAGEMENT QUOTES. 🔴 ONE FOUNDATION ROW IS ARCHIVED READ-ONLY AND IS WITHDRAWN FROM RECOMMENDATION.**
 
 ### 🟢 Corrections applied to this shelf's table rows
@@ -34,12 +88,13 @@ new supply.
 `3.8` years. 🔴 Both read `NOASSERTION` on the metadata channel, so `p607`'s `BSD-3-Clause` / University of
 Edinburgh attribution is **not corroborated** and remains owed a byte read of the actual `LICENSE.txt`.
 
-### 🔴 The one genuinely unresolved address on this shelf
+### 🟢 ~~The one genuinely unresolved address on this shelf~~ — **RESOLVED by `p628`**
 
-🔴 [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) is **alive**
-(`ls-remote` returns `HEAD 48c79a862038`) but is indexed under no name this pass could find, and no candidate
-shares its `HEAD` — `Sunbird-Lern/lms-service` (`2★` `MIT`) and `sunbird-cb/sunbird-lms-service` both differ.
-🟢 Declared rather than guessed: re-pointing it on basename similarity is exactly the error `627-D` caught.
+🟢 `project-sunbird/sunbird-lms-service` is [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service),
+proven on identical `HEAD` `48c79a862038289787471e2c05251d5bbdbf1c1f` (`31★` `MIT` pushed `2026-03-02`).
+🔴 `p627`'s candidates failed because the rename changed **owner and name both**, and every candidate held one
+component fixed. 🟢 `p627`'s refusal to guess was correct — the fix was a different **channel**, not a better
+guess: `WebFetch` on the old address, which GitHub serves through its rename redirect (`628-C`).
 
 
 ## 🆕 `p626` — reads `2026-11-03` — **🔴 THIS PAGE WAS CITING `2` STALE ADDRESSES AND BOTH ARE NOW FLAGGED IN PLACE; THE CENSUS THAT FOUND THEM COVERED ALL `1,331` SELL-SHELF ADDRESSES IN `27` QUERIES. 🟢 NO FOUNDATION ROW CHANGED ITS GRANT, AND NO ROW WAS REMOVED.**
@@ -1527,7 +1582,7 @@ is what makes them safe to build on.
 | [openedx/tutor-contrib-aspects](https://github.com/openedx/tutor-contrib-aspects) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-27` | `-04:00` | North America | 🟢 **Open edX Aspects** learner analytics as a Tutor plugin: ClickHouse + Apache Superset + OpenFUN **Ralph** (LRS, validates and stores xAPI) + Vector. 🔵 README at `README.rst` |
 | [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | 🟢 **MIT** (`1,128 B`) | `main` | `2025-10-03` | `+05:30` | **APAC** | 🟢 Indic-language machine translation from **AI4Bharat / IIT Madras** — the realistic path to multilingual courseware across India's scheduled languages |
 | [Sunbird-Lern/lms-service](https://github.com/Sunbird-Lern/lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2026-01-05` | `+05:30` | **APAC** | LMS micro-service of **Sunbird**, the stack behind India's national education platforms |
-| [project-sunbird/sunbird-lms-service](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2025-12-23` | `-08:00` | **APAC** | Sunbird **User/Org** micro-service. 🔵 Same grant bytes as the row above and a `-08:00` committer offset — a US-based committer on an India-origin platform, so `tz` places the *commit*, not the project |
+| [Sunbird-Lern/userorg-service](https://github.com/Sunbird-Lern/userorg-service) 🟢 *(was `project-sunbird/sunbird-lms-service`, re-pointed `628-C` on identical `HEAD` `48c79a862038`)* | 🟢 **MIT** (`1,071 B`) | `master` | `2026-03-02` | `-08:00` | **APAC** | Sunbird **User/Org** micro-service. 🔵 Same grant bytes as the row above and a `-08:00` committer offset — a US-based committer on an India-origin platform, so `tz` places the *commit*, not the project |
 | [EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, same `HEAD`) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `-07:00` | North America | **Edu-ConvoKit** — framework for education *conversation* data (NAACL 2024, Systems Track). The pre-processing layer for classroom-discourse analysis |
 | [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 **MIT** (`1,070 B`) | `main` | `2026-02-07` | `+08:00` | APAC | **Fast-DetectGPT** (ICLR 2024) — zero-shot machine-generated-text detection via conditional probability curvature |
 | [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** (`11,357 B`) | `main` | `2024-01-16` | `+09:00` | APAC | Google's **autograding** toolset for programming education (notebook-based) |

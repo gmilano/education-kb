@@ -74,8 +74,16 @@ PASS_IN_HEAD = re.compile(
 # Headings that NAME a pass without BEING that pass's section: forward
 # registrations, and the roll-up blocks that sit inside a section.
 # `Actions opened by pN` is p531's addition; see the docstring.
+# 🔴 `p628`: the `REGISTERED BY` dialect was MISSING, and it cost a red gate for two
+# passes.  `intel/open-gaps.md:4081` — `## `p550`'s six gaps — REGISTERED BY `p551`,
+# lost by `p550`` — is p551's roll-up OF p550's gaps, not p550's own section, so the
+# pointer reset to 550 and the next real p551 heading read as ASCENDING.  🔵 p627 read
+# the violation tuple `(…, 550, 551)` as LINE numbers and declined to act; they are
+# PASS numbers, as the KNOWN_VIOLATIONS comment states in terms.  The history was
+# never mis-ordered.  Fixed in the matcher, not allowlisted, per p531's precedent:
+# 1593 -> 1592 sections, exactly ONE heading newly excluded, C1 still reproduces 2/2.
 NOT_A_SECTION = re.compile(
-    r"(🔜|Registered for|Pre-registered|Gaps OPEN after|Gaps CLOSED|"
+    r"(🔜|Registered\s+(?:for|by)|Pre-registered|Gaps OPEN after|Gaps CLOSED|"
     r"gaps opened|(Actions|Gaps)\s+(opened|closed)\s+(by|after)|"
     r"(Live\s+)?gaps\s+declared\s+(by|after)|"
     r"Verdicts on|rows pass|The rows? \S+ changed|one row pass)", re.I)

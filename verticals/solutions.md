@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p628` — reads `2026-11-03` — **🔴 THE SECTOR'S TWO CANONICAL LMS PLATFORMS HAVE DIVERGED ON MAINTENANCE: OPEN edX AND MOODLE WERE PUSHED THIS WEEK, CANVAS HAS NOT ACCEPTED A PUSH IN `187` DAYS. 🟢 AND THE QTI ASSESSMENT TIER IS CONFIRMED PERMISSIVE ON BYTES.**
+
+### 🔴 Platform maintenance, measured today — the fact that decides a platform recommendation
+
+| Platform | Repo | 🟢 Stars | Licence | Pushed | Verdict |
+|---|---|---|---|---|---|
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,216` | `AGPL-3.0` | 🟢 `2026-11-03` | 🟢 **active** — stewarded by Axim Collaborative |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `9,263` | `LGPL-3.0` | 🟢 `2026-11-03` | 🟢 **active** — virtual classroom |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `7,575` | `GPL-3.0` | 🟢 `2026-10-30` | 🟢 **active** |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6,900` | `AGPL-3.0` | 🔴 `2026-04-30` | 🔴 **`187` days / `6.1` months quiet** |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1,240` | 🟢 `ECL-2.0` | 🟢 `2026-11-02` | 🟢 **active** — permissive |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,166` | 🟢 `MIT` | 🟢 `2026-11-02` | 🟢 **active** — offline-first |
+| **Tsugi** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `377` | 🟢 `Apache-2.0` | 🟢 `2026-11-03` | 🟢 **active** — LTI 1.3 broker |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `154` | `GPL-3.0` | 🟢 `2026-11-02` | 🟢 **active** — interactive content |
+| **Sunbird (User/Org)** | [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | `31` | 🟢 `MIT` | `2026-03-02` | 🟢 India DPI tier (`628-C`) |
+| **QTIWorks** | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `3` | 🟢 `BSD-3-Clause` (bytes) | `2026-06-30` | 🟢 QTI engine, **buildable** (`628-F`) |
+
+🔴 **Canvas is the finding.** It is one of the two platforms every higher-education engagement asks about, and its
+open-source repository has been static for half a year while Moodle and Open edX both took pushes this week.
+🟢 **Recommendation:** lead with Moodle (institutional familiarity) or Open edX (course-scale, Axim-stewarded);
+if a client is already on Canvas, scope against the commercial SaaS and **not** against the AGPL repository.
+
+### 🟢 The permissive customisation surface, after this pass
+
+🟢 Five platform-tier rows carry grants Globant can build on and ship: **Sakai** (`ECL-2.0`), **Kolibri**
+(`MIT`), **Tsugi** (`Apache-2.0`), **Sunbird userorg-service** (`MIT`) and **QTIWorks** (`BSD-3-Clause`).
+🔵 `624-D` byte-proved `ECL-2.0` adds **no obligation** over `Apache-2.0`, so Sakai is a genuine permissive LMS —
+the only one at platform scale on this shelf, and worth saying out loud because the web digests get it wrong
+(one called it `Apache-2.0` this pass; `628-I`).
+
+🔴 **The copyleft tier is for integration, not embedding:** Moodle (`GPL-3.0`), Open edX and Canvas (`AGPL-3.0`),
+BigBlueButton (`LGPL-3.0`), H5P (`GPL-3.0`). Cross the boundary with LTI 1.3, xAPI or REST — never by linking
+client-proprietary code into the tree. 🟢 Tsugi exists precisely to be that boundary and is `Apache-2.0`.
+
+### 🔴 An unmaintained tier a client should be warned off
+
+🔴 **Unity + xAPI:** [`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) is archived
+read-only (`2026-03-26`) and its parent is four years quiet. 🟢 Emit xAPI statements from a thin in-house client
+against the spec instead; do not adopt either address.
+
 ## 🆕 `p627` — reads `2026-11-03` — **🟢 `7` ADDRESS CORRECTIONS ON THIS SHELF, INCLUDING THE FRENCH ENT PLATFORM ROW AND `6` OCCURRENCES OF THE OPEN edX PLATFORM ADDRESS.**
 
 ### 🟢 Corrections applied to this shelf's table rows

@@ -1,0 +1,7 @@
+instrument	live_repo_result	fabricated_control_result	discriminating	note
+curl -sI https://github.com/{owner}/{repo}	403	403	NO	627-F reproduced exactly; prompt-mandated recipe is inert
+gh api repos/{owner}/{repo}	403	403	NO	session-scope refusal, identical both ways
+search/repositories repo:+fork:true	row returned	silently absent (no 422)	YES	bad slug dropped, not errored
+git ls-remote {url} HEAD	SHA, exit 0	fatal: could not read Username, exit 128	YES	cannot separate ABSENT from PRIVATE; follows rename redirects silently
+curl raw.githubusercontent.com/{r}/{br}/{path}	200	404	YES	628-F: PATH oracle, not REPOSITORY oracle
+WebFetch github.com/{owner}/{repo}	renders, names rename successor	-	YES	628-C: only channel that names a rename target

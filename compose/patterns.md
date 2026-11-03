@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p628` — reads `2026-11-03` — **🟢 TWO ADDRESSES IN THESE RECIPES WERE STALE AND BOTH ARE NOW RENAME-PROVEN AND RE-POINTED. 🟢 AND THE QTI ASSESSMENT ENGINE IS CONFIRMED `BSD-3-Clause` ON BYTES, WHICH MAKES A FULLY-PERMISSIVE ASSESSMENT RECIPE POSSIBLE FOR THE FIRST TIME.**
+
+### 🟢 Address corrections landing in these recipes
+
+| Was cited | 🟢 Canonical today | Proof (`HEAD`) | Where |
+|---|---|---|---|
+| `project-sunbird/sunbird-lms-service` | [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | `48c79a862038` | APAC/India stack recipe |
+| `Changochen/slide-to-video` | [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) | `dd5ab179d565` | local-voice pipeline (already flagged by `626-E`) |
+
+### 🟢 `P-628-A` — a fully-permissive QTI assessment path (new; `628-F` unlocked it)
+
+🔵 Every prior assessment recipe on this shelf had to route around a copyleft LMS or an unknown licence. This one
+does not: **every component is `MIT`, `BSD-3-Clause`, `Apache-2.0` or `ECL-2.0`.**
+
+| Layer | Component | Licence |
+|---|---|---|
+| QTI item rendering + scoring | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 `BSD-3-Clause` (bytes, `628-F`) |
+| LMS / course host | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` (no obligation over `Apache-2.0`, `624-D`) |
+| Tool boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` |
+| Learner evidence trail | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 `MIT` |
+| Mastery estimate | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `MIT` |
+
+**Wiring.** Deploy Sakai as the course host. Register QTIWorks as an **LTI 1.3 tool through Tsugi**, so Sakai
+never links QTIWorks code — Tsugi owns the launch, the grade passback and the `ECL-2.0`/`BSD` boundary. On each
+item submission, QTIWorks returns an outcome; Tsugi passes the grade back to Sakai and **simultaneously** emits
+an xAPI statement through `learnmcp-xapi` to the LRS. Feed that statement stream into `pykt-toolkit` to maintain
+a per-learner knowledge-state vector, and use the vector — not the raw score — to select the next item.
+
+🟢 **Why it matters commercially:** this is the first recipe here that can be **shipped inside a client's
+proprietary product** without a copyleft obligation anywhere in the tree. 🔴 Pin QTIWorks at a reviewed commit:
+it is `3★`, `fork=true`, and pushed `2026-06-30` — permissive and buildable, but not actively developed.
+
+### 🟢 `P-628-B` — policy-to-controls for a North America district (new; built from `628` NA findings)
+
+🔵 Driven by a measured gap: `134` state bills in 2026, four states mandating district AI policy, yet most
+districts have no student policy and `55 %` of high schools do not restrict network access.
+
+| Layer | Component | Licence |
+|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` (integrate, don't embed) |
+| Boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` |
+| LMS agent access | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 🟢 `MIT` |
+| Tutor | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` |
+| Audit trail | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 `MIT` |
+
+**Wiring.** Stand `tutor-mcp` and `moodle-mcp` behind one MCP gateway and make the gateway the **policy
+enforcement point**, not the model. Encode the district policy as deny rules at that gateway — and take
+Washington DC's 2026-27 list as the starting specification of what must be **refused**: no AI in grading, no AI
+in discipline, no AI in IEP decisions, no AI in teacher evaluation. Every allowed call and every refusal emits an
+xAPI statement via `learnmcp-xapi`, so the district can evidence compliance rather than assert it. Moodle is
+reached only over its REST API through Tsugi, keeping `GPL-3.0` out of the deliverable.
+
+🟢 **The refusal log is the product.** A district that must adopt a policy needs to show the policy is operating;
+nothing else in this stack produces that artefact.
+
+### 🟢 `P-628-C` — EMEA conformity-ready assessment, sequenced to the deferral
+
+🔵 Driven by the `2027-12-02` Annex III deferral: a `13`-month window on admissions, grading and proctoring.
+
+**Wiring.** Ship the tutor first — tutoring, practice feedback and information chatbots are treated as generally
+**outside** high-risk in the Commission's May 2026 draft guidelines, so `tutor-mcp` + `learnmcp-xapi` can go live
+under transparency obligations only, with AI-interaction disclosure at the UI. Keep the **grader a separate
+deployable** behind the same Tsugi boundary, so its Annex III duties never contaminate the tutor's release path.
+In the grader, make human-in-the-loop structural: QTIWorks produces a provisional outcome, a teacher confirms or
+overrides, and `learnmcp-xapi` logs **both** the machine outcome and the human decision. That log is the
+conformity evidence the deferred deadline will demand.
+
+🔴 Every EU date in this recipe is secondary-sourced — `eur-lex.europa.eu` is refused by this session's egress
+allowlist (`628-H`). Confirm against the Official Journal before contracting on a date.
+
+### 🟢 `P-628-D` — APAC/India DPI extension, on the corrected address
+
+**Wiring.** Build on the Sunbird tiers, both `MIT`:
+[`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) for user and organisation
+identity, [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) for content.
+Add `tutor-mcp` as the learner-facing agent and `pykt-toolkit` for mastery estimation, and emit xAPI through
+`learnmcp-xapi`. 🔴 **Use the `Sunbird-Lern/userorg-service` address** — `project-sunbird/sunbird-lms-service`
+redirects but is not canonical, and three passes of this base mis-cited it (`628-C`).
+🟡 `userorg-service` was last pushed `2026-03-02`; pin a commit and budget for maintenance.
+
+### 🟢 `P-628-E` — LATAM offline-first governance delivery
+
+**Wiring.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, pushed
+`2026-11-02`) is the host, chosen for intermittent connectivity. Run the tutor locally against a small model so
+no learner interaction requires egress; batch xAPI statements through `learnmcp-xapi` and sync on reconnect.
+🟢 **Pair it with the governance artefact, because that is the measured gap:** `26 %` of LATAM institutions have a
+formal AI strategy and `<10 %` have formal guidelines, against `>50 %` teacher adoption in Chile and Brazil. Ship
+the policy, the enforcement point and the reporting as deliverables alongside the software — and anchor them to
+the UNESCO LAC Observatory framework (launched April 2026) rather than to a national statute, because this pass
+found **no binding national edtech AI statute** for Brazil, Mexico or Colombia.
+
 ## 🆕 `p627` — reads `2026-11-03` — **🟢 TWO RECIPES: `626-N`'s LTI-BOUNDARY TUTOR RE-SPECIFIED ON CORRECTED ADDRESSES (`9` OF THIS FILE'S ROWS POINTED AT STALE ONES), AND THE CANONICAL-ADDRESS AUDIT AS A RUNNABLE PIPELINE WITH ITS CONTROLS.**
 
 ### 🟢 `627-K` — LTI-boundary AI tutor: the client's LMS stays copyleft, the Globant deliverable stays permissive

@@ -4,6 +4,133 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p628` — reads `2026-11-03` — **🔴 THE 2026 AI-IN-EDUCATION MARKET IS A `$9.58B`–`$11.4B` RANGE, NOT A NUMBER, AND THE SPREAD IS `19 %` BETWEEN FIRMS. 🟢 ALL FOUR REGIONS RETURNED PLACEABLE REGULATORY FACTS THIS PASS. 🔴 AND THE EU ANNEX III DATE REMAINS SECONDARY-SOURCED: `eur-lex.europa.eu` IS REFUSED BY THE SESSION'S EGRESS ALLOWLIST ON TWO INDEPENDENT PATHS.**
+
+### 🔴 Market size — the range, with each firm named
+
+| Firm | 2026 | Horizon | CAGR |
+|---|---|---|---|
+| Precedence Research | `$9.58B` | `$136.79B` by 2035 | `34.52 %` |
+| ResearchAndMarkets | `$10.6B` | `$42.48B` by 2030 | — |
+| Grand View Research | `$11.4B` | `$57.2B` by 2033 | `~25.9 %` |
+| Coherent Market Insights | `$11.40B` | `$57.25B` by 2033 | `16.8 %` |
+
+🔴 **Do not quote a single 2026 figure.** The low and high differ by `19 %`, and the CAGRs by more than `2×`
+(`16.8 %` to `34.52 %`) — the firms are not measuring the same thing. 🟢 Quote the **range** and name the firm.
+🔵 Segment anchors that recur: higher education `$4.09B` in 2026 → `$13.46B` by 2030 (The Business Research
+Company); cloud deployment `71 %` of 2026 share (Coherent).
+
+🔴 **All market figures on this shelf are institutional/secondary.** No primary filing was readable from this
+session.
+
+## Opportunities by region
+
+### Global
+
+🟢 **The market is a range, not a number** — `$9.58B`–`$11.4B` for 2026 across four firms, with CAGRs from
+`16.8 %` to `34.52 %`. Quote the range and name the firm; the spread is `19 %` on size and more than `2×` on
+growth.
+🔴 **Open-source supply in this sector is saturated**, and that is a global finding, not a regional one: three
+consecutive passes across eight channels this pass returned `0` new in-sector repository names
+(`p625` `0/28`, `p626` `0/12`, `p628` `0/11`). There is still **no ranked list of education-specific
+open-source agents** anywhere the web legs reach — the general lists return general-purpose frameworks.
+🟢 **Opportunity:** the global shortage is not supply, it is *composition and assurance*. The permissive
+education tier is small, verified and stable — `MIT`/`BSD-3-Clause`/`Apache-2.0`/`ECL-2.0` across tutoring,
+LTI, QTI, xAPI and knowledge-tracing — so the differentiator is a wired, licence-clean, auditable stack
+(`compose/patterns.md`), not a novel model.
+🔴 **And a global delivery caution:** `NOASSERTION` in a metadata channel is a reading failure, not a licence
+(`628-F`). Two `NOASSERTION` repositories byte-read as textbook `BSD-3-Clause` this pass. Any licence filter
+built on the metadata field alone **excludes usable supply** — the single most expensive recurring error this
+base has measured.
+
+### North America
+
+🟢 **Largest regional share: `36–38 %`** of the global market (sources differ; Coherent says `38.0 %`).
+🔴 **The buying trigger is a compliance gap, and it is measurable:** `134` AI-in-education bills were introduced
+across `31` states in the 2026 session, yet most US public schools still have **no formal student AI policy**
+(Child Trends / US Dept. of Education), and `55 %` of high-school principals say AI access is not restricted on
+the school network. `60 %` of US teachers already use AI tools (Gallup, `2,200+` educators).
+
+🔵 **Named statutory hooks to scope against:** Maryland `SB 720` (state guidance + mandatory district AI
+policy) — Maryland is one of **four** states (with Idaho, Oklahoma and Virginia) requiring *both*; New York
+`A 9190` would restrict student AI use to grade 9 and above; the federal **K-12 AI Literacy and Readiness Act
+of 2026** advanced out of the House Education and Workforce Committee. Washington DC's non-mandatory 2026-27
+policy **bans AI from grading, discipline, IEP decisions and teacher evaluation**.
+
+🟢 **Opportunity:** policy-to-controls implementation — take a district's adopted AI policy and realise it as
+enforced guardrails over an existing LMS. The permissive stack for it is on this base:
+[`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (`Apache-2.0`) as the LTI boundary,
+[`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (`MIT`) for the evidence trail.
+🔴 **The DC list is the specification of what must be refused** — build the refusal, not just the feature.
+
+### EMEA
+
+🔵 **Regulatory position (secondary sources; see the flag below):** emotion recognition in education has been
+**banned since `2025-02-02`**, as has the Article 4 AI-literacy duty — which the July 2026 amendment **softened**
+to "take measures to support" with no guaranteed competence level. Article 50 transparency duties began
+`2026-08-02`; generative systems already on the market have until `2026-12-02` to add machine-readable marking.
+🟡 The **Digital Omnibus** (`Reg. (EU) 2026/1744`, in force `2026-07-27`) deferred Annex III high-risk education
+systems — admissions, grading, exam proctoring — to **`2027-12-02`**. The Commission's May 2026 draft guidelines
+treat tutoring, practice feedback and information chatbots as **generally outside** high-risk.
+
+🔴 **`NEEDS-PRIMARY` — unchanged and now explained.** `eur-lex.europa.eu` is refused by this session's egress
+allowlist on two independent paths (`curl`: `connect_rejected`; `WebFetch`: `ENOTFOUND`, *"outside the session's
+allowed network domains"*). 🔴 That is an allowlist fact, **not** a dead host and not transient, so every date in
+this subsection remains secondary-sourced. 🟢 The remedy is a network-settings entry, not another probe
+(`628-H`).
+
+🟢 **Opportunity:** the `2027-12-02` deferral is a `13`-month procurement window on exactly the three systems that
+*will* be high-risk. Sell conformity-ready assessment: human-in-the-loop grading with a logged override path, and
+the audit trail designed in from the start. 🟢 `70 %` of institutions in Europe and North America already have or
+are developing AI guidance — in EMEA the buyer has the policy and needs the implementation.
+
+### APAC
+
+🟢 **Fastest-growing region** (one source: `35.3 %` CAGR; `~20 %` of global share) and the only region with
+**binding, in-force AI statutes that name education**:
+
+| Jurisdiction | Instrument | Status |
+|---|---|---|
+| South Korea | **AI Basic Act** — region's first comprehensive AI statute; education a named "high-impact" sector | 🟢 in force `2026-01-22` |
+| Vietnam | **Law on Artificial Intelligence** | 🟢 passed `2025-12-10`, in force `2026-03-01` |
+| India | AI-generated content **labelling** rules | 🟢 in force `2026-02-20` |
+| China, Singapore | Established "AI in Education" policies and guidelines (UNESCO) | 🟢 in place |
+| Japan, Australia | Light-touch / voluntary; Australia relies on existing law | 🟡 guidance only |
+
+🔵 Regional players named: Squirrel AI, Byju's, alongside Google, Microsoft, IBM and Pearson.
+🔴 One report claims `~45 %` of APAC AI-EdTech platforms lack adequate data protection — **unverified**, source
+not traceable; do not quote it to a client.
+
+🟢 **Opportunity:** South Korea's "high-impact" classification is the region's sharpest near-term driver — it is
+in force *now*, where the EU's equivalent is deferred to late 2027. 🟢 And India is the strongest permissive-stack
+fit on this base: [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) (`MIT`) and
+[`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) are the DIKSHA tiers,
+both `MIT`, both buildable. 🔴 Note the `userorg-service` address — it is **not** `project-sunbird/…` any more
+(`628-C`).
+
+### LATAM
+
+🔴 **The region's defining number is a governance gap, and it is the widest of the four:** UNESCO IESALC
+(September 2026) found only **`26 %`** of institutions have a formal AI strategy, and **`45 %`** of institutions
+in Latin America and the Caribbean have or are developing AI guidance against **`70 %`** in Europe and North
+America. 🔴 Adoption is running far ahead of it: in Chile and Brazil **more than `50 %` of teachers already use
+these tools** while **fewer than `10 %` of institutions have formal guidelines**.
+
+🔵 Anchors: UNESCO launched its **Observatory on AI in Education for Latin America and the Caribbean** in April
+2026, giving governments a shared framework; the IDB reviewed **`193`** regional initiatives and found **`59 %`**
+used generative AI, naming responsible scalable implementation as the region's chief obstacle; the Digital
+Education Council's 2026 LATAM survey drew **`30,000+`** responses across `29` institutions.
+
+🟢 **Opportunity:** institutional AI governance as a delivered artefact — the policy, the controls and the
+reporting — because the demand is already proven by teacher adoption and the supply of institutional capacity is
+not there. 🟢 Offline-capable delivery is a real differentiator here:
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, `1,166★`, pushed `2026-11-02`)
+is built for intermittent connectivity.
+🔴 **Gap, stated rather than left silent:** this pass found **no specific national edtech AI statute** for Brazil,
+Mexico or Colombia. The regional legs returned UNESCO/IDB institutional research and a 2026 `EPAA` review of `52`
+documents, but no binding national instrument. 🔴 Treat LATAM as **guidance-driven, not statute-driven** — and
+verify before telling a client otherwise.
+
 ## 🆕 `p627` — reads `2026-11-03` — **🔴 THE REGIONAL LEGS RETURN `0` REPOSITORY ADDRESSES FOR A THIRD CONSECUTIVE PASS, SO THE DEMAND-SIDE NIL IS NOW A THREE-DAY SERIES. 🟢 `626-L`'s CANONICAL-ADDRESS OFFER IS RE-PRICED ON A CORRECTED DEFECT RATE — THE SELLABLE NUMBER IS `0.74 %` STALE AND `0 %` DEAD, NOT `1.7 %` AND `1.9 %`, AND THE HONEST PITCH IS NOW THE **FORK** CLASS AT `0.99 %`. THREE REGISTERED (`627-H`…`627-J`).**
 
 ### 🔴 `627-H` — the regional legs, with a per-region denominator
@@ -65,7 +192,7 @@ provenance, not link rot.
 not changed. 🔴 `NEEDS-PRIMARY` stays on `Reg. (EU) 2026/1744` and on the UNESCO IESALC primary; secondary
 corroboration remains the ceiling. 🔴 **No research budget was spent on either primary this pass.**
 
-## Opportunities by region
+## Opportunities by region — `p627` (archived)
 
 🔵 Placement only. Every demand figure below is **search-snippet-grade** (`598-G`, still open); every supply figure
 is byte-read or field-measured with its date. Region names are the closed vocabulary: `North America`, `EMEA`,
@@ -326,8 +453,9 @@ education agents in the sector and both are APAC-origin.
    agent tooling, not licences.
 3. 🟢 **India stack integration** — and the canonical address is
    [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform), not
-   `project-sunbird/knowledge-platform` (`626-E`). 🔴 `project-sunbird/sunbird-lms-service` is reachable but
-   unindexed and **unresolved** — verify it directly before quoting it.
+   `project-sunbird/knowledge-platform` (`626-E`). 🟢 And the LMS tier is **resolved**: cite
+   [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) (`31★` `MIT`), not
+   `project-sunbird/sunbird-lms-service` — proven on identical `HEAD` `48c79a862038` (`628-C`).
 4. 🔴 **Licence discipline matters most in this region's supply:** `cn-math-taxonomy` (`6,216★`) is
    `CC-BY-NC-4.0` on bytes — NonCommercial, unusable for client delivery despite the star count.
 

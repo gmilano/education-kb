@@ -1,0 +1,4 @@
+published_address	canonical_today	proof_head	stars	license	pushed_at	disposition
+project-sunbird/sunbird-lms-service	Sunbird-Lern/userorg-service	48c79a862038289787471e2c05251d5bbdbf1c1f	31	MIT	2026-03-02	RE-POINTED (628-C); owner AND name both changed
+Changochen/slide-to-video	llm-believer/slide-to-video	dd5ab179d565b16a7efd5eb6b0aac94f7138add5	12	MIT	2025-09-12	rename PROVEN (628-D); already flagged in place by 626-E
+OpenOLAT/qtiworks	OpenOLAT/qtiworks	(unchanged)	3	BSD-3-Clause BY BYTES	2026-06-30	628-E: metadata says NOASSERTION; LICENSE.txt is BSD-3-Clause, Univ. of Edinburgh

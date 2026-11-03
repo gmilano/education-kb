@@ -4,6 +4,277 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p628` — reads `2026-11-03` — **🟢 BOTH ITEMS `p627` LEFT OPEN ARE DISCHARGED. `project-sunbird/sunbird-lms-service` RESOLVES TO [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) ON IDENTICAL `HEAD` — THE RENAME CHANGED **OWNER AND NAME BOTH**, WHICH IS WHY THREE PASSES OF BASENAME GUESSING REFUTED CORRECTLY AND NEVER FOUND IT. 🟢 AND THE CENSUS IS RE-RUN WITH `fork:true` OVER THE **WHOLE BASE**, NOT 812 ROWS: `3,956` ADDRESSES, `41` BATCHES, `0` CONTROL LEAKS. 🔴 A DENOMINATOR DEFECT THIS BASE HAS NEVER NAMED — `41` OF ITS "ADDRESSES" ARE **NOT REPOSITORIES AT ALL** AND ALL `41` SCORED AS ABSENT, `17.4 %` OF THE RAW MISS POPULATION. 🟢 GENUINE MISSES ON LIVE SELL ROWS: `2 of 913`, AND BOTH ARE NOW CLOSED — `0` RESIDUAL. 🟢 THE `p607` QTI LICENCE DEBT IS PAID ON BYTES. 🟢 AND `gate-ledger` IS **FIXED**, NOT DECLARED: `p627` READ THE GATE'S PASS NUMBERS AS LINE NUMBERS. TEN REGISTERED (`628-A`…`628-J`).**
+
+🔵 Every figure below is measured today with a fabricated control in every batch, and the census is **committed** —
+`evidence/census-fork-true.2026-11-03-p628.tsv` (`4,001` rows),
+`evidence/miss-reachability.2026-11-03-p628.tsv`,
+`evidence/instrument-calibration.2026-11-03-p628.tsv`,
+`evidence/canonical-propagation-ledger.2026-11-03-p628.tsv`,
+`evidence/qtiworks-licence-byteread.2026-11-03-p628.tsv`.
+
+### 🟢 `628-A` — `p626`'s unreproducible split is replaced, over the whole base and with `fork:true`
+
+🔵 `p627` re-derived only the `812` addresses sitting in table rows and said so. This pass censuses **every**
+`github.com` address the eight shelves cite, in `41` OR-batches of `99` real addresses plus **one fabricated
+control each**.
+
+| | Count | Share |
+|---|---|---|
+| Raw `github.com` paths extracted | `4,001` | — |
+| 🔴 less: non-repository paths (`628-B`) | `41` | — |
+| 🔴 less: this base's own published fabricated controls | `4` | — |
+| 🟢 **Real repository addresses (denominator)** | 🟢 **`3,956`** | `100 %` |
+| 🟢 CANONICAL | 🟢 **`3,765`** | 🟢 **`95.17 %`** |
+| 🔴 MISS | `191` | `4.83 %` |
+| — of those, alive (rename or unindexed) | `96` | `2.43 %` |
+| — of those, unreachable | `95` | `2.40 %` |
+
+🟢 **`0` control leaks across `41` batches.** 🟢 `fork:true` is load-bearing and was re-proven independently:
+`repo:OpenOLAT/qtiworks` returns `total_count 0` without it and `1` with it. 🔵 `627-A`'s rule holds.
+
+### 🔴 `628-B` — the defect no pass has named: `41` censused "addresses" are not repositories
+
+🔴 `github.com/topics/…`, `github.com/orgs/…` and `github.com/search/…` are **documentation links**, not
+repository addresses — and a `repo:` qualifier can never match one. All `41` scored **ABSENT**, and all `41` are
+`UNREACHABLE` on `ls-remote` too, so **no instrument catches this; only the extractor can.**
+
+| Class | Count | Fate in a naïve census |
+|---|---|---|
+| `topics/…` (topic pages) | `38` | 🔴 counted as dead addresses |
+| `orgs/…`, `search/…` | `3` | 🔴 counted as dead addresses |
+
+🔴 **`41 of 236` raw misses — `17.4 %` — are this artefact.** Any pass that reports a dead-address rate without
+stripping non-repository paths first **over-reports absence by that margin**, and `p626` published such a rate.
+🟢 The fix is one line in the extractor, and it is why the denominator above is `3,956` and not `4,001`.
+
+### 🟢 `628-C` — `p627`'s named open item, resolved on identical `HEAD`
+
+| | |
+|---|---|
+| Published address | `project-sunbird/sunbird-lms-service` |
+| 🟢 **Canonical today** | 🟢 [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) |
+| Proof | 🟢 identical `HEAD` **`48c79a862038289787471e2c05251d5bbdbf1c1f`** — the exact SHA `p627` recorded |
+| Metadata | `31★` · `MIT` · pushed `2026-03-02` · not a fork · not archived |
+
+🔴 **Why three passes missed it, and it is a method lesson, not bad luck.** The rename changed **both** components:
+`project-sunbird` → `Sunbird-Lern` *and* `sunbird-lms-service` → `userorg-service`. Every candidate the base tried
+held one component fixed — `Sunbird-Lern/lms-service` (refuted on `HEAD` by an earlier pass, correctly),
+`Sunbird-Lern/sunbird-lms-service`, `sunbird-cb/sunbird-lms-service`. 🟢 **The refusals were right**; the search
+space was wrong.
+
+> 🟢 **The instrument that answers it:** `WebFetch` the **OLD** address. GitHub serves the renamed repository
+> through its redirect and the page states the current name. `ls-remote` follows the same redirect but reports only
+> a SHA, so it proves *reachability* and hides *identity* (`626-B`); the `repo:` channel reports the old name
+> absent and names no successor. 🔵 **Only the page names the target** — the same conclusion `627-D` reached for
+> fork parentage, now established for renames too.
+
+### 🟢 `628-D` — the second sell-row miss, rename-proven
+
+| Published address | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `Changochen/slide-to-video` | [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) | `dd5ab179d565b16a7efd5eb6b0aac94f7138add5` | `12★` `MIT` pushed `2025-09-12` |
+
+🟢 `626-E` had already flagged this one in place with the right successor; this pass adds the **`HEAD` proof** the
+flag lacked. 🔴 The successor is itself `12★` and `13.7` months quiet, so the row stays priced as unmaintained —
+resolving an address is not the same as recommending it.
+
+### 🟢 `628-E` — the live sell shelves are clean, and the residual is `0`
+
+| | Count |
+|---|---|
+| Table-row addresses across the six sell shelves | `913` |
+| 🔴 Genuine misses among them | 🔴 **`2`** (`0.22 %`) |
+| 🟢 Resolved this pass | 🟢 **`2`** |
+| 🟢 **Unresolved sell-row addresses at end of pass** | 🟢 **`0`** |
+| History-only misses (append-only, not sold) | `189` (`94` alive · `95` dead) |
+
+🔵 The `189` sit in `agents/trending.md` and `repos/trending.md`, which are append-only records of what was true
+on a date. 🟢 `p625` settled that these are **history, not recommendations**; they are left verbatim by design.
+
+### 🟢 `628-F` — the `p607` QTI licence debt is paid, on bytes, and the metadata channel is wrong
+
+🟢 Both files read in full from `raw.githubusercontent.com` and they are **byte-identical**:
+
+| Repo | Path | Bytes | `sha256` (16) | Metadata channel | 🟢 Actual grant |
+|---|---|---|---|---|---|
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `master/LICENSE.txt` | `2,058` | `a5c692f120907d58` | 🔴 `NOASSERTION` | 🟢 **`BSD-3-Clause`** |
+| [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) | `master/LICENSE.txt` | `2,058` | `a5c692f120907d58` | 🔴 `NOASSERTION` | 🟢 **`BSD-3-Clause`** |
+
+> *"The QTIWorks source code is distributed under the 3-clause BSD license… Copyright (c) 2014, University of
+> Edinburgh. All rights reserved."*
+
+🟢 **`p607`'s `BSD-3-Clause` / University of Edinburgh attribution is CORROBORATED** and no longer owed.
+🔴 **The mechanism, which generalises:** the file opens with a `6`-line prose preamble *above* the stock BSD text.
+GitHub's classifier needs a close match to a known template, the preamble pushes similarity below threshold, and
+the result is `NOASSERTION` on a textbook permissive grant — the same shape `621-K` found for a real `GPL-3.0`.
+🟢 **A `NOASSERTION` is a prompt to read bytes, never a finding.** The QTI engine tier is **buildable**.
+
+### 🟢 `628-G` — a byte-read channel that discriminates, which refines `627-F` rather than repeating it
+
+| Instrument | Live target | Fabricated control | Discriminating? |
+|---|---|---|---|
+| `curl -sI https://github.com/{owner}/{repo}` | 🔴 `403` | 🔴 `403` | 🔴 **NO** (`627-F` reproduced) |
+| `gh api repos/{owner}/{repo}` | 🔴 `403` | 🔴 `403` | 🔴 **NO** |
+| `search/repositories` `repo:` + `fork:true` | 🟢 row | 🟢 silently absent | 🟢 **YES** |
+| `git ls-remote … HEAD` | 🟢 SHA, exit `0` | 🟢 `fatal`, exit `128` | 🟢 **YES** |
+| 🟢 **`curl raw.githubusercontent.com/{repo}/{branch}/{path}`** | 🟢 **`200`** | 🟢 **`404`** | 🟢 **YES** |
+
+🟢 **So `curl` is not inert in this environment — it is inert on `github.com` *HTML* and functional on `raw`.**
+That is a sharper statement than `627-F`'s and it restores the byte-read leg this base needs for licences.
+🔴 **Two limits, stated so the channel is not over-trusted:** it is a **path** oracle, not a **repository** oracle
+— a live repo with no `LICENSE` also returns `404` — and it needs the branch name, so a repo on neither `master`
+nor `main` reads as absent. 🔴 And `ls-remote`'s negative is **`fatal: could not read Username`**, not silence:
+it cannot separate *absent* from *private*, so it proves presence and never proves absence.
+
+### 🔴 `628-H` — `625-G` is closed as far as this session can close it, with the mechanism named
+
+🔴 `eur-lex.europa.eu` was probed on **two independent egress paths** and refused by both:
+
+| Path | Result |
+|---|---|
+| `curl` via the session proxy | 🔴 `HTTP 000` — `connect_rejected` (*"the host is not allowed for this session"*) |
+| `WebFetch` | 🔴 `ENOTFOUND` — *"outside the session's allowed network domains"* |
+
+🟢 **This is an allowlist fact, not a network fault and not a dead host** — which is what `625-G` could not
+distinguish. 🔴 The `NEEDS-PRIMARY` flag on `Reg. (EU) 2026/1744` therefore **stays**, and its `2027-12-02`
+Annex III date remains **secondary-sourced only**. 🟢 **The named remedy is a session network-settings entry for
+`eur-lex.europa.eu`, not another probe.** 🔵 Recorded in this form so no later pass re-spends budget rediscovering
+a refusal: *every* `eur-lex` probe from this environment will fail identically until that entry exists.
+
+### 🔴 `628-I` — discovery is nil for the **third consecutive pass**, and the web legs mis-state figures again
+
+🟢 Four web legs (open-source agents, GitHub trending, vertical platforms, industry trends) plus four regional legs
+returned `11` distinct repository names. 🔴 **`11 of 11` were already held by this base.**
+
+| Pass | Channels | New names |
+|---|---|---|
+| `p625` | 2 | 🔴 `0 of 28` |
+| `p626` | 1 | 🔴 `0 of 12` |
+| 🔴 **`p628`** | **4 + 4 regional** | 🔴 **`0 of 11`** |
+
+🔴 **The discovery legs the prompt mandates are saturated for this sector.** Three passes, three instruments,
+zero new supply. 🟢 Recorded as a measurement so the budget moves to verification, where it is still paying.
+
+🔴 **And the digests got figures wrong a third time**, which is why star counts are measured here and never copied:
+
+| Row | Web leg claimed | 🟢 Measured today | Error |
+|---|---|---|---|
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | `112,628★` | 🟢 **`122,872★`** | 🔴 `-8.3 %` |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `60.6k★` | 🟢 **`76,420★`** | 🔴 `-20.7 %` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | "`Apache-2.0`" | 🟢 **`ECL-2.0`** | 🔴 wrong licence |
+
+🟢 The Sakai error matters: `ECL-2.0` is education's own Apache-derived licence, and `624-D` proved it adds
+**no obligation** over `Apache-2.0`. The conclusion is the same — buildable — but a cell that says `Apache-2.0`
+is still false.
+
+### 🟢 `628-J` — `gate-ledger` is **fixed**, and `p627` misread the gate it declined to touch
+
+🔴 `p627` reported the failure as *"`intel/open-gaps.md` lines `550`/`551`"* and left it open rather than reorder
+`1,593` sections on a guess. 🟢 **The caution was right and the reading was wrong.** The gate keys a violation
+`(file, prev_pass, this_pass)` and its own source says so in terms:
+
+> 🔴 **NOT** keyed on the line number, and that is deliberate… these files are APPEND-ONLY at the top, so every
+> pass shifts every line below its new section.
+
+🟢 So `550` and `551` are **pass numbers**. Lines `550`/`551` of that file are a sentence and a blank line.
+The real site is **`intel/open-gaps.md:4081`**:
+
+> `## 🔴 `p550`'s six gaps — REGISTERED BY `p551`, lost by `p550``
+
+🟢 **That heading is `p551`'s roll-up *of* `p550`'s gaps — it is not `p550`'s section.** It is exactly the class
+`NOT_A_SECTION` exists to exclude, in a dialect the matcher did not carry: it held `Registered for` and
+`Gaps registered by`, but not **`REGISTERED BY`**. The pointer reset to `550`, and `p551`'s next real heading
+then read as ascending.
+
+🟢 **Of the gate's two stated explanations, the second holds: the pass dialect mis-read a heading. The history was
+never mis-ordered, and no history was reordered.** 🟢 Fixed in the **matcher**, per `p531`'s own precedent that an
+allowlist entry *"would have made the defect permanent"*:
+
+| | Pristine | 🟢 After fix |
+|---|---|---|
+| `##` sections counted | `1,593` | 🟢 `1,592` (`-1`) |
+| Headings newly excluded | — | 🟢 **exactly `1`** (`open-gaps.md:4081`) |
+| `C1` known violations reproduced | `2 of 2` | 🟢 **`2 of 2`** |
+| New ascending violations | 🔴 `1` | 🟢 **`0`** |
+| `p531` unit controls (`19` checks) | `PASS` | 🟢 `PASS` |
+| `gate-ledger` | 🔴 **RED** | 🟢 **GREEN** |
+
+🔵 The bounded scope was measured before editing: **`2`** headings in the whole corpus use the `registered by`
+dialect, and the other was already excluded by its `🔜` token. One dialect, one heading, one section.
+
+### 🟢 `628-K` — metric refresh on the headline rows, measured not assumed
+
+| Repo | 🟢 Stars today | Licence | Pushed | Note |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `54,378` | `Apache-2.0` | `2026-10-31` | 🟢 `+44` on `p627`'s measurement — no drift finding |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,216` | `AGPL-3.0` | 🟢 `2026-11-03` | pushed today |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `9,263` | 🔴 `LGPL-3.0` | 🟢 `2026-11-03` | copyleft — integrate, don't embed |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `7,575` | 🔴 `GPL-3.0` | `2026-10-30` | |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6,900` | `AGPL-3.0` | 🔴 `2026-04-30` | 🔴 **`187` days / `6.1` months quiet** |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `4,289` | 🟢 `BSD-3-Clause` | `2026-11-02` | |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1,240` | 🟢 `ECL-2.0` | `2026-11-02` | buildable (`624-D`) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,166` | 🟢 `MIT` | `2026-11-02` | offline-first |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `490` | 🟢 `MIT` | `2026-10-31` | `fork=true`, retained (`627-E`) |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `456` | 🟢 `MIT` | `2026-10-18` | exact, no drift |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `377` | 🟢 `Apache-2.0` | 🟢 `2026-11-03` | LTI, pushed today |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `154` | 🔴 `GPL-3.0` | `2026-11-02` | |
+| [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `117` | 🟢 `MIT` | `2025-04-19` | |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `116` | 🟢 `BSD-3-Clause` | `2026-06-26` | |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `93` | 🟢 `MIT` | `2026-11-02` | 🟢 `+3`; the parent `627-D` re-pointed to |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | `27` | 🟢 `MIT` | `2026-10-20` | parent, per `627-D` |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `16` | 🟢 `MIT` | `2025-08-29` | parent, per `627-D` |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `3` | 🟢 **`BSD-3-Clause` (bytes)** | `2026-06-30` | `628-F`; metadata says `NOASSERTION` |
+
+🔴 **`canvas-lms` is now `6.1` months quiet, confirmed on a third day by a third instrument.** `p626` found the
+six-month quiet, `p627` reproduced it, and it has not moved since `2026-04-30`. 🔴 For a sector whose two
+canonical LMS platforms are this and Moodle, that is the single most important maintenance fact on the shelf:
+**quote Moodle (`2026-10-30`) or Open edX (`2026-11-03`) as the active platform line, and price any Canvas
+engagement against a repository that has not accepted a push in half a year.**
+
+### 🔴 `628-P` — the gate field at `HEAD`, published rather than left in a terminal
+
+🔵 Recorded because `574-A`'s mechanism is a pass committing against a red field and saying nothing.
+
+| | Result |
+|---|---|
+| 🟢 Instruments execute in this session | `70` gates ran, none masked (`p300` runner) |
+| Gate field **before** this pass wrote a word (pristine `HEAD` = `p627`) | 🔴 **`48/70` green, `22` red** |
+| 🟢 Gate field **after** this pass | 🟢 **`49/70` green, `21` red** |
+| 🟢 Red gates **fixed** by this pass | 🟢 **`1`** — `gate-ledger` (`628-J`) |
+| 🟢 Red gates **introduced** by this pass | 🟢 **`0`** |
+
+🟢 **Method, so the claim is falsifiable:** the baseline was taken with `git worktree add --detach … HEAD` into a
+clean checkout of `p627` and `make hooks` run **there**, not by reasoning about which gates my edits could touch.
+The baseline red set reproduced `p627`'s `22` gate-for-gate, in the same order.
+
+🔴 **This pass's first write introduced `2` reds, and they are disclosed rather than quietly repaired** — the
+baseline diff is the only reason they were caught, which is the whole argument for taking one. Both were fixed
+before commit and the final field above is the re-measured one. 🟢 Both are **conventions a future pass needs**,
+so they are stated as rules and not as apologies:
+
+| Gate I broke | Cause | 🟢 The rule it enforces |
+|---|---|---|
+| `gate-region-headings` | My `## Opportunities by region` block made **two** live blocks, and omitted `### Global` | 🟢 A new pass must **archive** its predecessor's block (retitle it `## Opportunities by region — \`pNNN\` (archived)`, as `p627` did to `p626`'s) and must carry **all five** regions — `Global` included |
+| `gate-fold-identity` | I wrote `aicademyorg/AIcademy`; this base publishes `aicademyorg/aicademy` | 🟢 The live section may not introduce a **new casing** for an already-published address. GitHub resolves `owner/repo` case-insensitively, so the link works either way and the published casing is the one to use |
+
+🟢 **`gate-ledger` is the first red this base has retired in three passes** (`p626`: `0` fixed; `p627`: `0`
+fixed). 🔵 Baseline ledger figures for the record: `FILED 909`, `PROSE 503`, `HISTORY 4,770`, `UNION 4,931`,
+filing rate `18.4 %`, promotion queue `76`, ratchet `909 ≥ 258`. 🔵 `p627` reported its filing count as `910`;
+measured at its own committed `HEAD` it is `909` — a `1`-row overstatement, recorded rather than carried.
+
+> **Open for `p629`:**
+> 1. 🔴 `21` red gates remain, unchanged from `p627`'s set less `gate-ledger`. The next cheapest is
+>    `gate-case-collision`, which is a name-normalisation question and not a content edit.
+> 2. 🔴 The extractor that produced `628-B`'s `41` non-repository paths is **still unfixed** — this pass stripped
+>    them in the census, it did not stop the shelves citing them. One regex in the address sweep closes it.
+> 3. 🟢 The `94` history-only **alive-but-unindexed** addresses are now listed in
+>    `evidence/miss-reachability.2026-11-03-p628.tsv`. They are append-only history and are not mis-sold, but a
+>    pass with budget could `WebFetch` them to recover rename successors in bulk — `628-C` proves the channel
+>    works and is the only one that does.
+> 4. 🔴 `eur-lex.europa.eu` stays unreachable by allowlist (`628-H`). **Do not re-probe it**; ask for the
+>    network-settings entry instead.
+
 ## 🆕 `p627` — reads `2026-11-03` — **🟢 `626-E`'s "FLAGGED IN PLACE" IS DISCHARGED: `50` STALE ADDRESSES REWRITTEN ACROSS `5` SHELVES, `0` RESIDUAL. 🔴 AND `p626`'s CENSUS IS CORRECTED ON ITS LARGEST NUMBER — `53 %` OF ITS OWN FLAGS WERE **FORKS**, NOT DEFECTS, BECAUSE THE METADATA CHANNEL EXCLUDES FORKS BY DEFAULT. 🔴 DEAD ADDRESSES ON LIVE SELL ROWS: `0`, NOT `1.9 %`. 🟢 A NEW REAL DEFECT CLASS INSTEAD: `3` SELL ROWS CITE A `0★` PERSONAL FORK OF A LIVING UPSTREAM. SEVEN REGISTERED (`627-A`…`627-G`).**
 
 🔵 Every figure below is measured today with controls, and the census is **committed** —

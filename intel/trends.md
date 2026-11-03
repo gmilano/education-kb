@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p628` — reads `2026-11-03` — **🔴 THE SECTOR'S REAL 2026 TREND IS A GOVERNANCE DEFICIT, NOT A CAPABILITY ONE: TEACHER ADOPTION IS `50–60 %` IN THREE REGIONS WHILE INSTITUTIONAL POLICY SITS AT `10–26 %`. 🔴 AND OPEN-SOURCE SUPPLY IN THIS SECTOR IS **SATURATED** — THREE CONSECUTIVE PASSES, EIGHT CHANNELS, ZERO NEW NAMES.**
+
+### 🔴 `T-628-1` — the adoption/governance scissor, quantified in all four regions
+
+| Region | Practitioner adoption | Institutional governance | Gap |
+|---|---|---|---|
+| North America | `60 %` of teachers use AI (Gallup) | most public schools have **no** student AI policy; `55 %` of HS principals do not restrict network access | 🔴 wide |
+| EMEA | — | 🟢 `70 %` of institutions have or are developing guidance | 🟢 narrowest |
+| APAC | `78 %` weekly AI use reported regionally | binding statutes in Korea, Vietnam, India; China and Singapore have policies | 🟡 mixed |
+| LATAM | `>50 %` of teachers in Chile and Brazil | 🔴 `26 %` have a formal AI strategy; `<10 %` have formal guidelines | 🔴 **widest** |
+
+🟢 **This is the sector's commercial centre of gravity.** The capability is adopted; the controls are not built.
+Every regional leg this pass returned the same shape independently, which is why it leads.
+
+### 🔴 `T-628-2` — regulation has split into "in force" and "deferred", and the map inverted
+
+🟢 **In force now:** South Korea's AI Basic Act (`2026-01-22`, education a named high-impact sector); Vietnam's
+AI Law (`2026-03-01`); India's content-labelling rules (`2026-02-20`); the EU's emotion-recognition ban in
+education (`2025-02-02`) and Article 50 transparency (`2026-08-02`).
+🟡 **Deferred:** the EU's Annex III high-risk education duties — admissions, grading, proctoring — to
+`2027-12-02` via the Digital Omnibus.
+🔴 **So APAC now regulates education AI more bindingly than the EU does**, which reverses the assumption most
+engagement planning still carries. 🔴 EU dates here remain secondary-sourced (`628-H`).
+
+### 🟢 `T-628-3` — tutoring and chatbots are being classified OUT of high-risk
+
+🔵 The Commission's May 2026 draft guidelines treat tutoring, practice feedback and information chatbots as
+generally **outside** Annex III high-risk. 🟢 **Consequence for build sequencing:** the tutoring tier ships under
+transparency obligations only, while assessment and admissions carry the heavy duties. 🟢 Lead an EMEA engagement
+with the tutor, not the grader — and keep the grader architecturally separate so its obligations do not
+contaminate the tutor's release path.
+
+### 🔴 `T-628-4` — open-source supply in this sector is saturated
+
+| Pass | Discovery channels | New in-sector names |
+|---|---|---|
+| `p625` | 2 | 🔴 `0 of 28` |
+| `p626` | 1 | 🔴 `0 of 12` |
+| `p628` | 4 global + 4 regional | 🔴 **`0 of 11`** |
+
+🔴 **Three passes, eight channels this pass alone, zero new supply.** The named repositories returned by every
+general "best open-source AI agents 2026" leg are **general-purpose** (OpenHands, CrewAI, Langflow, MetaGPT) —
+there is still **no ranked list of education-specific open-source agents**, which is itself the finding.
+🟢 The budget belongs in verification and composition, not discovery.
+
+### 🔴 `T-628-5` — the platform tier is diverging on maintenance, and one leader has stalled
+
+🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) has not accepted a push in **`187` days**
+(`2026-04-30`), while [`moodle/moodle`](https://github.com/moodle/moodle) (`2026-10-30`) and
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (`2026-11-03`) are active.
+🟢 Confirmed on a third day by a third instrument. 🔴 **Platform choice in 2026 is a maintenance question, not a
+feature question.**
+
+### 🟢 `T-628-6` — the MCP tutor tier is real, small, and mostly mis-cited
+
+🟢 A working education-MCP tier exists — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+(`93★`, `MIT`, pushed `2026-11-02`), [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (`27★`, `MIT`)
+and [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (`16★`, `MIT`) — all permissive, all
+small. 🔴 **`627-D` found this base citing `0★` personal forks of all three.** The tier's signal is thin enough
+that a fork outranks the original in a naïve search, so cite parentage from the repository page and nothing else.
+
+### 🟢 `T-628-7` — `NOASSERTION` is a reading failure, not a licence
+
+🟢 `628-F` byte-read two `NOASSERTION` repositories and found a textbook `BSD-3-Clause` in both, byte-identical,
+defeated by a `6`-line preamble above the stock text. 🔵 With `621-K`'s real `GPL-3.0` read as `NOASSERTION`, the
+pattern is established across licence families. 🔴 **A `NOASSERTION` cell is an instruction to read bytes.**
+Treating it as "unlicensed" has cost this base a buildable tier for twenty-one passes.
+
 ## 🆕 `p627` — reads `2026-11-03` — **🔴 THE SECTOR'S SUPPLY SIGNAL IS SATURATED FOR A THIRD PASS, SO THE REAL TREND THIS BASE CAN MEASURE IS IN ITS OWN DATA LAYER: ADDRESS CANONICALITY DECAYS AND NO STANDARD PROBE DETECTS IT.**
 
 ### 🔴 `627-L` — the measurable trend: canonicality decay, which is invisible to reachability
