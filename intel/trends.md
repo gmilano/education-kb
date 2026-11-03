@@ -1,7 +1,85 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 🆕 `p626` — reads `2026-11-03` — **🔴 THE SECTOR'S OPEN-SOURCE TREND THIS WEEK IS NOT A NEW CAPABILITY, IT IS **ADDRESS DECAY**: `1.7 %` OF THIS BASE'S CITED REPOSITORIES ARE STALE BEHIND LIVE REDIRECTS AND `1.9 %` ARE DEAD. 🟢 AND THE INCUMBENT-GOING-QUIET TREND IS CONFIRMED ON A SECOND INSTRUMENT: CANVAS'S OPEN-SOURCE REPO IS SIX MONTHS COLD WHILE EVERY PERMISSIVE RIVAL PUSHED THIS WEEK.**
+
+### 🔴 Trend 1 — platform consolidation is visible in the *addresses*, not the announcements
+
+🟢 Measured this pass across `1,331` cited addresses: **`23` renames**, and the education-relevant ones are all the
+same shape — a project leaving a founder's or a legacy org's namespace for a **project-dedicated or
+foundation-style org**:
+
+| From | To | Reading |
+|---|---|---|
+| `openedx/edx-platform` | `openedx/openedx-platform` | Brand alignment inside the same foundation |
+| `executablebooks/jupyter-book` | `jupyter-book/jupyter-book` | Project graduates to its own org |
+| `frdel/agent-zero` | `agent0ai/agent-zero` | Founder namespace → company org |
+| `stanfordnlp/edu-convokit` | `EduNLP/edu-convokit` | Lab → topic-community org |
+| `jasig/calendarportlet` | `uPortal-Project/CalendarPortlet` | Legacy org → live project org |
+| `opendigitaleducation/entcore` | `edificeio/entcore` | Vendor rename, French ENT estate |
+| `project-sunbird/knowledge-platform` | `Sunbird-Knowlg/knowledge-platform` | National stack re-orgs by component |
+| `iterative/dvc` | `treeverse/dvc` | 🔴 Ownership change, `15,956★` |
+| `kamranahmedse/developer-roadmap` | `nilbuild/developer-roadmap` | 🔴 Ownership change, **`371,096★`** |
+
+🟢 **Why it is a trend and not bookkeeping:** two of the largest repositories in this census changed *owner*, not
+just name. 🔴 For a client, a transferred repository is a **governance event** — the maintainer set, the funding
+model and sometimes the licence posture change with it — and nothing in a reachability check reports it.
+
+> 🟢 **Operational consequence:** re-verify canonical addresses on a schedule, not on failure. A stale address does
+> not fail; it redirects, which is why `p623`'s `3,974`-address census found zero of these.
+
+### 🟢 Trend 2 — the incumbent/permissive divergence, now corroborated
+
+| Platform | Licence | ★ | `pushed_at` `2026-11-03` |
+|---|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | `6,900` | 🔴 **`2026-04-30`** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` | `1,020` | 🟢 **`2026-11-03`** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | `8,216` | 🟢 `2026-11-02` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` | `6,957` | 🟢 `2026-11-02` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `1,240` | 🟢 `2026-11-02` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` | 🟢 `2026-11-02` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | `7,574` | 🟢 `2026-10-30` |
+
+🔴 **One row is six months cold and it is the North American incumbent.** 🟢 Measured twice now, on two days with
+two instruments (`625-H`, `626-F`). The commercial Canvas product ships AI; the open-source repository does not
+move. 🔴 **Still not abandonment** — `archived=false`, and a quiet `pushed_at` is not a death certificate — but it
+is a defensible migration argument, which is more than this base could say last pass.
+
+### 🟢 Trend 3 — the supply side has stopped producing new names, and that is itself the signal
+
+🔴 `12 of 12` education-relevant addresses from `8` web legs were already held — the second consecutive pass at
+`100 %`, on a different leg population (`626-G`). 🔴 All four regional legs returned `0` repository addresses.
+
+🟢 **Read it as maturity, not as a search failure:** the category's headline agents (`DeepTutor` `54,312★`,
+`OpenMAIC` `42,496★`, `book-to-skill` `36,789★`) drifted `+25★` combined in a day and none changed shape. The
+open question for the sector has moved from *what exists* to *what is licensed, canonical and maintained* — which
+is exactly where this pass's defects were found.
+
+### 🔴 Trend 4 — licence posture, unchanged and still the gate
+
+🟢 Nothing moved on grants this pass (no bytes re-read — `p624` read `15 of 15`). The standing shape holds:
+🔴 the sector's largest LMS platforms are reciprocal (`AGPL-3.0` for Open edX and Canvas, `GPL-3.0` for Moodle and
+Chamilo), 🟢 while the *permissive* layer is the integration tier — `tsugi` (`Apache-2.0`), `scorm-again` (`MIT`),
+`kolibri` (`MIT`), `oppia` (`Apache-2.0`), `iblai/lms` (`MIT`) — plus the APAC agent tier.
+🔴 And `NOASSERTION` still means *the field does not know*, never *there is no grant*: `openeducat_erp`'s bytes say
+`LGPL-3.0`. **Bytes win over the field.**
+
+### 🟢 Trend 5 — the demand side: governance is the deliverable, everywhere
+
+🟢 `14 of 14` regional tokens held (`626-J`), and the pattern is one sentence: **adoption is ahead of governance in
+every region that has been measured.** LATAM has it quantified most sharply (`87 %` institutional use vs `26 %`
+with any formal framework, UNESCO IESALC); North America shows ~`86 %` adoption against ~`70 %` of institutions
+only *developing* guidance; EMEA has the opposite problem — a binding literacy obligation in force since
+`2026-02-02` ahead of institutional capability.
+
+🟢 **And the one primary source worth quoting stays the `OECD Digital Education Outlook 2026`** (`2026-01-19`):
+task completion `+48 %`, measured performance `−17 %` once the AI was removed. 🟢 It reframes the sale from
+deployment to **outcome instrumentation**, and it is dated, named and primary — which almost nothing else on these
+pages is.
+
 ---
 
 ## 🆕 `p625` — reads `2026-11-02` — **THE SECTOR'S PERMISSIVE SUPPLY HAS SETTLED AT THE *STANDARDS* LAYER, NOT THE PLATFORM LAYER — WHICH CHANGES THE ENGAGEMENT SHAPE — AND THE TRANSPARENCY CLOCK IS THE ONLY EU OBLIGATION ACTUALLY RUNNING TODAY**

@@ -1,7 +1,211 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 🆕 `p626` — reads `2026-11-03`, commit `2026-11-03` — **🔴 `625-F` IS WITHDRAWN AND REPLACED: `openedx/edx-platform` IS NOT A METADATA-CHANNEL FALSE NEGATIVE, IT IS A **RENAME** — `openedx/openedx-platform`, `8,216★`, `AGPL-3.0`, PROVEN BY IDENTICAL `HEAD`. 🔴 AND THE CLASS IS GENERAL: A `repo:`-QUALIFIER MISS IS A **CANONICALITY SIGNAL**, NOT A CHANNEL DEFECT — WHICH MEANS `ls-remote`, THE INSTRUMENT THIS BASE PROMOTED TO SOLE EXISTENCE ORACLE, **CANNOT SEE RENAMES AT ALL** BECAUSE IT SILENTLY FOLLOWS GITHUB'S REDIRECT. 🟢 `repo:` QUALIFIERS **OR-BATCH**, AND A BATCH SILENTLY DROPS BAD ADDRESSES INSTEAD OF `422`-ING — SO ALL `1,331` SELL-SHELF ADDRESSES WERE CENSUSED IN **`27` QUERIES** AGAINST `p623`'s `3,974` SERIAL PROBES. 🔴 THE CENSUS FINDS **`23` RENAMES** AND `25` DEAD, AND **`7` OF THEM ARE ON LIVE RECOMMENDATION SHELVES RIGHT NOW**. 🟢 CANVAS-LMS'S SIX-MONTH QUIET REPRODUCED ON A SECOND DAY BY A SECOND INSTRUMENT. 🔴 DISCOVERY NIL AGAIN: `12 of 12` HELD. NINE REGISTERED (`626-A`…`626-I`).**
+
+### 🔴 `626-A` — `625-F` is **withdrawn**: the sector's MOOC platform was renamed, not mis-served
+
+🔵 `625-F` published this as the pass's expensive instrument defect: *"the `repo:` metadata channel returns
+NO-ROW for `openedx/edx-platform`"*, and concluded the channel *"silently returns nothing for it"* while
+`ls-remote` proved it alive. 🔴 That diagnosis is **wrong**, and the correct one was one query away:
+
+| Query | Result |
+|---|---|
+| `repo:openedx/edx-platform` | 🔴 `422 Validation Failed` — *"the listed users and repositories cannot be searched"* |
+| `org:openedx stars:>1000` | 🟢 **`openedx/openedx-platform`** — `8,216★`, `AGPL-3.0`, pushed `2026-11-02`, `fork=false` |
+| `ls-remote openedx/edx-platform` | 🟢 `HEAD=f2fc446def6912f156ed66c8d5dd39bc3d3f05ba` |
+| `ls-remote openedx/openedx-platform` | 🟢 `HEAD=f2fc446def6912f156ed66c8d5dd39bc3d3f05ba` — **identical** |
+
+🟢 **Identical `HEAD` is identity.** The repository was renamed `edx-platform` → `openedx-platform` inside the same
+org. The index knows only the canonical name, so the `422` is the channel being *correct*. The old address keeps
+working because GitHub redirects renames at the git layer.
+
+> 🔴 **Carry:** `AGPL-3.0` is unchanged, so no licence conclusion moves. What moves is the **address this base
+> publishes**, and it has been publishing a non-canonical one.
+
+### 🔴 `626-B` — the general class, with controls: `ls-remote` proves **reachability, not canonicality**
+
+🔴 This is the load-bearing correction, because it invalidates an instrument ruling this base has carried since `p623`.
+`625-F`'s ladder says *"Existence: `git ls-remote` **only** (discriminating control proven)"*. 🟢 The control is
+genuine — a fabricated address returns `ABSENT`, re-proven today — but existence is **not** the question the shelves ask.
+
+| Address | `repo:` channel | `git ls-remote` | Verdict |
+|---|---|---|---|
+| `moodle/moodle` | 🟢 row (`7,574★`) | 🟢 ALIVE | 🟢 live **canonical** |
+| `openedx/edx-platform` | 🔴 `422` | 🟢 ALIVE, same `HEAD` as `openedx/openedx-platform` | 🔴 **RENAMED** — stale address |
+| `apereo/opencast` | 🔴 `422` | 🔴 ABSENT | 🔴 **DEAD** (agrees with `p623`) |
+| `OPTIMETA/this-repo-does-not-exist-control-xyz` | 🔴 `422` | 🔴 ABSENT | 🟢 **control discriminates** |
+
+🔴 **`ls-remote` follows the rename redirect silently and reports the stale address as alive.** So `p623`'s census of
+`3,974` addresses — run on `ls-remote` alone — was **structurally incapable** of finding a single rename. Its `75`
+dead are still dead (`625-D` corroborated them `75 of 75`); the class it could not see is the one found here.
+
+> 🟢 **Corrected ladder.** Existence: `ls-remote`. **Canonicality: the `repo:` qualifier.** A rename is
+> `422`/no-row **and** `ls-remote` ALIVE. Death is `422`/no-row **and** `ls-remote` ABSENT. Neither instrument
+> answers alone, and the base has been running only one of them.
+
+### 🟢 `626-C` — the instrument that makes a full census affordable: `repo:` qualifiers **OR-batch**
+
+🔵 `p620` used the `repo:` qualifier one address per query, which is why a census cost thousands of calls and was
+run on the cheaper, wrong instrument instead. 🟢 Measured today — the qualifier **repeats as an OR**:
+
+| Batch size | Query length | Rows returned |
+|---|---|---|
+| `3` | `96 B` | 🟢 `3 of 3` |
+| `25` | `879 B` | 🟢 `25 of 25` |
+| `40` | `1,605 B` | 🟢 `40 of 40` |
+| `100` | `3,463 B` | 🟢 `98 of 100` — the `2` misses are real, not truncation |
+
+🔴 **`3,463 B` is `13×` GitHub's documented `256`-character query limit, and it is honoured.** The documented limit
+does not bind this qualifier; it was never tested here before.
+
+🟢 **And the decisive behaviour — a batch does *not* `422` on a bad member, it silently drops it:**
+
+```
+repo:moodle/moodle repo:openedx/edx-platform repo:oppia/oppia   ->  total=2  (moodle, oppia)
+```
+
+🟢 So the census is **batch, then set-difference**: what was sent minus what came back is exactly the set with no
+indexed canonical row. Cost measured: **`1,331` addresses in `27` queries**, about one minute, inside the `30/min`
+search budget — against `p623`'s `3,974` serial probes.
+
+🔴 **One trap, self-caught:** a *single* missing `repo:` returns `422`, but `repo:laion-ai/desktop_bud-e` and
+`repo:bnsoftware/lti-1p3-tool` return **`total=0`** instead. Two response shapes for one condition.
+> 🟢 **Rule: never branch on the error shape. Branch on the set difference.**
+
+### 🔴 `626-D` — the census, with its denominator and this pass's **own** artefacts declared
+
+🟢 All `1,331` addresses cited on the **sell** shelves (`agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `intel/*.md`, `compose/patterns.md`); `1,323` after case-folding:
+
+| Class | Count | Share |
+|---|---|---|
+| 🟢 Indexed canonical row returned | **`1,239`** | `93.7 %` |
+| 🔴 No indexed row | **`84`** | `6.3 %` |
+
+🔴 Breaking down the `84`, **including two artefacts of this pass's own extractor, declared rather than hidden**:
+
+| Class | Count | Evidence |
+|---|---|---|
+| 🔴 **RENAMED** — alive, stale address, canonical successor proven | **`23`** | same `HEAD`, successor `fork=false`, no competing indexed row |
+| 🔴 **DEAD** — `ls-remote` ABSENT | **`25`** | agrees with `p623`'s instrument where they overlap |
+| 🟡 **Alive, unindexed, no successor found** | **`26`** | `ls-remote` ALIVE, `0` indexed rows, name search found no `HEAD` match |
+| 🔴 *Artefact* — `github.com/topics/*` | `8` | 🔴 **this pass's regex.** Topic pages, never repositories |
+| 🔴 *Artefact* — `.git` suffix captured | `2` | 🔴 **this pass's regex.** Both resolve fine without it (`Cvmcosta/ltijs`) |
+
+🔴 **`10 of 84` flagged addresses were this pass's own fault.** A census that does not publish its own false
+positives is a census grading itself.
+
+### 🔴 `626-E` — the `7` that **mis-sell right now**, each with its fix, and the defect is *propagation*
+
+🔴 Of the `23` renames and `25` deaths, these sit in **live recommendation rows**, not append-only history:
+
+| Stale / dead address | Canonical successor measured today | Where it still mis-sells |
+|---|---|---|
+| `openedx/edx-platform` | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — `8,216★`, `AGPL-3.0`, pushed `2026-11-02` | `agents/top.md` grant table |
+| `stanfordnlp/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) — `117★`, `MIT` | `repos/foundations.md:1449`, `compose/patterns.md:3175` |
+| `opendigitaleducation/entcore` | 🟢 [`edificeio/entcore`](https://github.com/edificeio/entcore) — `24★`, `NOASSERTION`, pushed `2026-11-02` | `verticals/solutions.md:232` |
+| `Changochen/slide-to-video` | 🟡 [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) — `12★`, `MIT`, pushed **`2025-09-12`** | `compose/patterns.md:7411` — sold as *"the sovereignty pick"* |
+| `digitalcredentials/learner-credential-wallet` | 🔴 [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) — `91★`, `MIT` — **LOW CONFIDENCE** | `compose/patterns.md:3912` |
+| `openwallet-foundation-labs/learner-credential-wallet` | 🔴 same successor — **LOW CONFIDENCE** | `repos/foundations.md:1438`, `compose/patterns.md:3159` |
+| `CabinServer39/quiz-gen` | 🔴 **DEAD** — `ls-remote` ABSENT `2026-11-03` | `agents/top.md:4565` still reads *"is real (`23★`, MIT…)"* |
+
+🔴 **Two of these the base already knew, and that is the worse finding.** `agents/top.md:3198` already records
+`stanfordnlp/edu-convokit` → `EduNLP/edu-convokit` by the same `HEAD` test, and `compose/code/p406-…/README.md:144`
+already pairs `edificeio/entcore` ↔ `opendigitaleducation/entcore`. 🔴 The rename was **found and then not
+propagated** to the shelves that sell the row. The defect class is not ignorance, it is **incomplete propagation**.
+
+🔴 **And `agents/top.md:788` is the smoking gun for `626-B`:** it files `opendigitaleducation/entcore` as
+*"🔴 Not citable as canonical (`PRESENT` + channel B miss … B `422`)"*. 🟢 The `422` was never a channel miss. It
+was the channel **reporting the rename**, and this base has been logging that signal as an instrument defect for
+roughly twenty passes — `605-C`'s *"false negatives in `5 of 400`"* is very likely the same class, mis-filed.
+
+🟡 **The wallet row is published at LOW CONFIDENCE on purpose.** Two institutional addresses
+(`digitalcredentials`, `openwallet-foundation-labs`) both resolve to a `91★` personal namespace with the same
+`HEAD`. Same-`HEAD` + `fork=false` is the best evidence reachable here, but `91★` is small for a project with two
+prior institutional homes, and an undiverged fork would present identically. **Do not re-address the shelf row to
+`ryjones/` on this evidence** — flag it and keep the institutional address until a stronger instrument exists.
+
+### 🟢 `626-F` — metric refresh, and `625-H`'s one open request is **discharged**
+
+🟢 Measured `2026-11-03` in the batched channel. `625-H` closed asking that canvas-lms's quiet be re-measured
+*"before selling the claim"*:
+
+| Repo | ★ `2026-11-03` | ★ `p625` | Drift | Grant | `pushed_at` |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `54,312` | `54,295` | `+17` | `Apache-2.0` | `2026-10-31` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `42,496` | `42,491` | `+5` | `MIT` | `2026-11-02` |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 `36,789` | `36,787` | `+2` | `MIT` | `2026-10-28` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `7,574` | `7,574` | `0` | `GPL-3.0` | `2026-10-30` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `6,957` | `6,957` | `0` | `Apache-2.0` | `2026-11-02` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 `6,900` | `6,900` | `0` | `AGPL-3.0` | 🔴 **`2026-04-30`** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟢 `1,020` | `1,020` | `0` | `GPL-3.0` | 🟢 `2026-11-03` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `1,166` | `1,166` | `0` | `MIT` | `2026-11-02` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `1,240` | `1,240` | `0` | `ECL-2.0` | `2026-11-02` |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🟢 `2,060` | `2,060` | `0` | 🔴 `NOASSERTION` | `2026-10-29` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 `903` | `903` | `0` | 🔴 field `NOASSERTION` / bytes `LGPL-3.0` | `2026-11-02` |
+
+🟢 **`instructure/canvas-lms` reproduces at `pushed_at = 2026-04-30`** — a second day, a second instrument
+(batched `repo:` census, not the single-row read `p625` used), `archived=false`, `fork=false`. **Six months and
+three days quiet** while `chamilo` pushed *today* and `moodle`, `oppia`, `sakai`, `kolibri`, `opencast`,
+`openeducat_erp` all pushed within four days. 🟢 The migration argument is now corroborated and **sellable**.
+
+### 🔴 `626-G` — the discovery control: `12 of 12` held, and the one new name is **out of sector**
+
+🟢 All `8` mandated legs run `2026-11-03` (`4` global + `4` regional), year computed, not hardcoded:
+
+| Leg | Addresses returned | Already held | 🆕 New |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `6` | `6` | 🔴 `0` |
+| `github trending education AI 2026` | `7` | `7` | 🔴 `0` |
+| `open source platform education ERP CRM MIT Apache` | `1` | `1` | 🔴 `0` |
+| `AI education industry trends 2026` | `0` | — | 🔴 `0` |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🔴 `0` | — | 🔴 `0` |
+| **Total, education-relevant** | **`12`** | **`12`** | 🔴 **`0` — `100 %` held** |
+
+🔴 **`block/goose` was the only unheld name and it is refused on relevance** — a general coding agent donated to the
+Linux Foundation's Agentic AI Foundation. It belongs to the technology KB, not this one. 🟢 Published so the nil is
+not mistaken for having found nothing: it found something, and the something was out of scope.
+
+🔴 **All four regional legs returned `0` repository addresses.** Their *intel* was rich and `14 of 14` tokens were
+already held (see `intel/market.md` `626-J`). 🟢 Independently reproduces `625-B`'s saturation measurement on a
+different day with a different leg population.
+
+### 🟢 `626-H` — `625-K` honoured, re-tested once, and **confirmed closed**
+
+🔵 `625-K` instructed that no further pass attempt the `Reg. (EU) 2026/1744` primary read *"until
+`eur-lex.europa.eu` is allowed in the session's network settings"*. 🟢 Honoured: no research budget was spent on it.
+🟢 A single `getent hosts` was spent to test whether the *precondition* had changed, because the instruction keys on
+a session setting and sessions differ:
+
+| Host | DNS `2026-11-03` |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 NO-RESOLVE |
+| `unesco.org` | 🔴 NO-RESOLVE |
+| `digital-strategy.ec.europa.eu` | 🔴 NO-RESOLVE |
+| `github.com` | 🟢 RESOLVES |
+
+> 🔴 **`NEEDS-PRIMARY` stays, and the standing instruction stays.** Cost of this check: `4` DNS lookups. That is the
+> right price for re-testing a precondition; a *research* attempt is still forbidden.
+
+### 🔴 `626-I` — what this pass did **not** do, stated so it is not mistaken for coverage
+
+- 🔴 **No new agent row promoted.** `12 of 12` candidates held, `1` refused on relevance. Fewer real rows beat padding.
+- 🔴 **No grant re-read from bytes.** `p624` byte-read `15 of 15`; the census refreshed *fields*, not bytes. Where
+  field and bytes disagree (`openeducat_erp`), **bytes still win** and the shelf is unchanged.
+- 🔴 **The `26` alive-but-unindexed addresses are NOT resolved.** `9` of them sit on live shelves
+  (`adlnet/unity-xapi-wrapper`, `ajjalti/evalstudio`, `bigdata-ustc/edudata`, `galaxyproject/video-lectures`,
+  `open-aac/sweet-suite-aac`, `openolat/qtiworks`, `packbackbooks/lti-1-3-php-library`,
+  `project-sunbird/sunbird-lms-service`, `thc1006/moodle-mcp`). They are reachable on git and absent from the index,
+  and this pass could not determine which. **Open for `p627`.**
+- 🔴 **The `23` renames are recorded but only the `7` live-shelf ones are flagged in place.** The other `16` are in
+  append-only history, where `625-E`'s rule applies: history is not falsified by a later rename.
+- 🔴 **`605-C`'s "`5 of 400` false negatives" was not re-audited.** `626-E` argues it is the same mis-filed rename
+  class; `2 of 2` checked support that, but `400` addresses were not re-run. **Open for `p627`.**
+
 ---
 
 ## 🆕 `p625` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PUSH BLOCK THAT STOPPED `p76`'s TECHNOLOGY RUN IS *FIXED*, NOT WORKED AROUND: THIS SHELF IS WRITTEN TO ITS OWN REMOTE FOR THE FIRST TIME THIS CYCLE. 🔴 AND THE PASS'S LOAD-BEARING RESULT IS A **SATURATION MEASUREMENT**, NOT A FIND: TWO INDEPENDENT DISCOVERY CHANNELS RETURNED `28` ADDRESSES AND **`28 of 28` WERE ALREADY HELD** (`100 %`) — `7 of 7` FROM THE WEB LEGS, `21 of 21` FROM `search/repositories`. 🟢 `p623`'s DEAD-CITATION CENSUS IS **INDEPENDENTLY CORROBORATED `75 of 75`** BY A DIFFERENT INSTRUMENT, AND ALL `432` OF ITS LIVE CITATIONS AUDITED: `405` ARE APPEND-ONLY HISTORY, `27` ARE ON SELL SHELVES AND **ALL `27` WERE ALREADY FLAGGED OR RENAME-RESOLVED** — ZERO DEAD URLS ARE PUBLISHED AS LIVE RECOMMENDATIONS. 🔴 THE `repo:`-QUALIFIER METADATA CHANNEL RETURNS **NO-ROW FOR `openedx/edx-platform`**, ONE OF THE SECTOR'S TWO CANONICAL LMS PLATFORMS, WHICH `ls-remote` PROVES ALIVE. 🔴 AND NO PRIMARY-SOURCE HOST RESOLVES IN THIS SESSION, SO THE `Reg. (EU) 2026/1744` `NEEDS-PRIMARY` FLAG **CANNOT** BE DISCHARGED FROM HERE. NINE REGISTERED (`625-A`…`625-I`).**
@@ -4562,7 +4766,7 @@ than a noted trend. 🟢 Every grant byte-read, title-anchored.
 | **agentic-learning-skill** | [APareek89/agentic-learning-skill](https://github.com/APareek89/agentic-learning-skill) | 🟢 **MIT (text, 1,069 B)** | **4** | `2026-06-30` | Global | 🆕 Topic → self-contained interactive HTML lesson, **or** a brief → an installable Agent Skill. Runs on the client's own Claude, **no server** — the zero-hosting shape `P586-1` is built on. |
 
 🔵 **Measured and shelved nowhere, recorded so it is not re-found:**
-[`CabinServer39/quiz-gen`](https://github.com/CabinServer39/quiz-gen) is real (`23★`, MIT
+[`CabinServer39/quiz-gen`](https://github.com/CabinServer39/quiz-gen) 🔴 **IS NOW DEAD — `ls-remote` ABSENT `2026-11-03` (`626-E`); the description below was true when measured and is retained as history.** It was real (`23★`, MIT
 byte-read at `1,077 B`, pushed `2026-10-18`, C#) but its **entire description is
 `"Published: 2026-10-18"`** and it carries no README claims to characterise. 🔴 A row this
 base cannot describe is not a row it can recommend.

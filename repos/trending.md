@@ -1,7 +1,94 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 2026-11-03 — Pass 626 — **THE METADATA CHANNEL TURNS OUT TO OR-BATCH: `1,331` ADDRESSES CENSUSED IN `27` QUERIES, AND IT FINDS A DEFECT CLASS NO PRIOR PASS COULD SEE — `23` STALE ADDRESSES BEHIND LIVE REDIRECTS**
+
+⏱️ **Append-only.** Nothing below this line was edited.
+
+### 🟢 The query-shape result, which is the methodological finding of the pass
+
+| Shape | Result | Verdict |
+|---|---|---|
+| `repo:a/b repo:c/d repo:e/f` | 🟢 `3 of 3` rows | **The `repo:` qualifier repeats as an OR** |
+| `repo:` × `100`, query `3,463 B` | 🟢 `98 of 100` rows | 🟢 **`13×` the documented `256`-char limit, honoured** |
+| Batch containing `1` bad address | 🟢 `total=2` of `3` sent | 🟢 **Silently drops it — no `422`** |
+| Single bad `repo:` | 🔴 `422` …or 🔴 `total=0` | 🔴 **Two shapes for one condition** |
+
+> 🟢 **Rule: census by batch + set-difference. Never branch on the error shape.**
+> 🟢 Cost: **`1,331` addresses / `27` queries / ~`1` minute**, against `p623`'s `3,974` serial probes.
+
+🔵 `p625`'s standing rule still holds for *discovery* queries: **at most one free-text term** (`625-C`). The
+batching result above applies to the `repo:` **qualifier** channel, which carries no free text at all.
+
+### 🔴 Census result, with this pass's own artefacts declared
+
+| Class | Count | Share |
+|---|---|---|
+| 🟢 Indexed canonical row | **`1,239`** | `93.7 %` |
+| 🔴 **RENAMED** — alive, stale address, successor proven by identical `HEAD` | **`23`** | `1.7 %` |
+| 🔴 **DEAD** — `ls-remote` ABSENT | **`25`** | `1.9 %` |
+| 🟡 Alive, unindexed, no successor found | **`26`** | `2.0 %` |
+| 🔴 *This pass's own regex artefacts* (`github.com/topics/*`, `.git` suffix) | `10` | `0.8 %` |
+
+### 🟢 Renames resolved this pass — `23` stale addresses → `22` canonical successors, each proven by identical `HEAD`
+
+| Stale address | Canonical successor | Successor measured |
+|---|---|---|
+| `openedx/edx-platform` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,216★` `AGPL-3.0` `2026-11-02` |
+| `kamranahmedse/developer-roadmap` | [`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap) | **`371,096★`** `NOASSERTION` |
+| `frdel/agent-zero` | [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) | `19,666★` `NOASSERTION` |
+| `iterative/dvc` | [`treeverse/dvc`](https://github.com/treeverse/dvc) | `15,956★` `Apache-2.0` |
+| `executablebooks/jupyter-book` | [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `4,289★` `BSD-3-Clause` |
+| `stanfordnlp/edu-convokit` | [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `117★` `MIT` |
+| `project-sunbird/knowledge-platform` | [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) | APAC / India stack |
+| `opendigitaleducation/entcore` | [`edificeio/entcore`](https://github.com/edificeio/entcore) | `24★` `2026-11-02`, EMEA / France |
+| `ucl-ingi/inginious` | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | EMEA / Belgium, auto-grader |
+| `jasig/calendarportlet` | [`uPortal-Project/CalendarPortlet`](https://github.com/uPortal-Project/CalendarPortlet) | Apereo family |
+| `edu-sharing/edu-sharing` | [`edu-sharing/edu-sharing-community-repository`](https://github.com/edu-sharing/edu-sharing-community-repository) | EMEA / Germany |
+| `davepacheco/node-extsprintf` | [`TritonDataCenter/node-extsprintf`](https://github.com/TritonDataCenter/node-extsprintf) | `36★` `MIT` |
+| `changochen/slide-to-video` | [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) | 🔴 `12★`, pushed `2025-09-12` |
+| `kurwjan/lanisapi` | [`lanis-mobile/LanisAPI`](https://github.com/lanis-mobile/LanisAPI) | EMEA / Germany |
+| `nikolasschaeffner/lehrer-agent` | [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) | EMEA / Germany |
+| `thiagoudweb/techtutor` | [`Assistentes-de-estudo-Agentes/techTutor`](https://github.com/Assistentes-de-estudo-Agentes/techTutor) | LATAM / Brazil |
+| `openemis/openemis-core` | [`OpenEMIS/core-docker`](https://github.com/OpenEMIS/core-docker) | EMIS, multi-country |
+| `theopenem/oneroster.net` | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | OneRoster connector |
+| `vosslab/qti_package_maker` | [`vosslab/qti-package-maker`](https://github.com/vosslab/qti-package-maker) | 🔵 underscore → hyphen, same owner |
+| `tokenaii/horus-taleeq-0.2b-base` | [`tokenaillc/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaillc/Horus-Taleeq-0.2B-Base) | Arabic-language model, EMEA |
+| `dymayo/moodler-mcp` | [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | Moodle MCP |
+| `digitalcredentials/learner-credential-wallet` **and** `openwallet-foundation-labs/learner-credential-wallet` | 🔴 `ryjones/learner-credential-wallet` (`91★`, `MIT`) | 🔴 **LOW CONFIDENCE — both map to one successor** |
+
+🔴 **The wallet row is deliberately not acted on.** Two institutional addresses resolve to one `91★` personal
+namespace with the same `HEAD`; an undiverged fork presents identically. Flagged on the shelves, **not re-addressed**.
+
+### 🟡 Alive on git, absent from the index, no successor found — `9` of them on live shelves
+
+`adlnet/unity-xapi-wrapper` · `luisricar-do/portugol-ai-tutor` · `ajjalti/evalstudio` · `bigdata-ustc/edudata` · `galaxyproject/video-lectures` ·
+`open-aac/sweet-suite-aac` · `openolat/qtiworks` · `packbackbooks/lti-1-3-php-library` ·
+`project-sunbird/sunbird-lms-service` · `thc1006/moodle-mcp`
+
+🔴 Also `bnsoftware/lti-1p3-tool`, which `agents/top.md:788` already filed as a *"channel B miss"*. 🟢 `626-E`
+argues that whole category was mis-filed: a `422` is the channel reporting a rename, not failing. **Open for `p627`.**
+
+### 🟢 Platform tier, metrics refreshed `2026-11-03`
+
+| Nombre | Repo | Licencia | ★ | `pushed_at` | Señal |
+|---|---|---|---|---|---|
+| openedx-platform | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | **`8,216`** | `2026-11-02` | 🟢 **Canonical address, corrected this pass** |
+| moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | `7,574` | `2026-10-30` | Largest install base |
+| oppia | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` | `6,957` | `2026-11-02` | The most buildable large platform |
+| canvas-lms | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | `6,900` | 🔴 **`2026-04-30`** | **Six months quiet, re-measured** |
+| sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `1,240` | `2026-11-02` | Apereo; `ECL-2.0` buildable (`624-E`) |
+| kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` | `2026-11-02` | **Offline-first** |
+| chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` | `1,020` | 🟢 `2026-11-03` | **Pushed today.** Strong LATAM base |
+| openeducat_erp | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 field `NOASSERTION` / 🟡 bytes `LGPL-3.0` | `903` | `2026-11-02` | Education ERP on Odoo. **Bytes win** |
+| opencast | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` | `509` | `2026-11-02` | Lecture capture |
+| tsugi | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | `2026-11-02` | 🟢 **LTI framework** — standards-based way into any LMS |
+| scorm-again | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | `2026-11-02` | SCORM/AICC/xAPI runtime |
+| iblai/lms | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` | `208` | `2026-11-02` | Open edX-derived, permissive |
+
 ---
 
 ## 2026-11-02 — Pass 625 — **THREE QUERY SHAPES, `154` TOTAL MATCHES, `21 of 21` ADJUDICATED ADDRESSES ALREADY HELD — AND A FOUR-TERM QUERY THAT RETURNS `0` AND WOULD HAVE BEEN PUBLISHED AS A NIL**

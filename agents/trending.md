@@ -1,7 +1,76 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 2026-11-03 — Pass 626 — **THE WEEK'S SUPPLY IS SATURATED FOR A SECOND CONSECUTIVE PASS (`12 of 12` HELD), AND THE REAL MOVEMENT IS IN THE *ADDRESSES* THIS SHELF PUBLISHES: `23` OF THEM ARE STALE AND `7` ARE ON LIVE SELL ROWS**
+
+⏱️ **Append-only.** Nothing below this line was edited. This section records what the discovery channels returned
+on `2026-11-03`, including that they returned no new education name — a nil is only information with a denominator.
+
+### 🔴 The nil, with its denominator
+
+| Channel | Addresses returned | Already held | 🆕 New |
+|---|---|---|---|
+| Web legs (`8`: `4` global + `4` regional) | `13` | `12` | 🔴 **`1`, refused on relevance** |
+| **Education-relevant subtotal** | **`12`** | **`12`** | 🔴 **`0` — `100 %` held** |
+
+🔵 The legs named `microsoft/ai-agents-for-beginners`, `avinash201199/free-ai-agents-resources`,
+`pguso/agents-from-scratch`, `speedyapply/2026-AI-College-Jobs`, `aneelv75/github-trending`,
+`ArturoNereu/AI-Study-Group`, `rohitg00/ai-engineering-from-scratch`, `anandpatikat/guru-latihan-dinamis`,
+`GarethManning/education-agent-skills`, `OPTIMETA/PAIDEIA`, `openeducat/openeducat_erp`, `browser-use/browser-use`
+— **all `12` already on this base**, checked by case-insensitive substring across every `*.md`.
+
+🔴 **`block/goose` was the one unheld name, and it is refused:** a general coding agent donated to the Linux
+Foundation's Agentic AI Foundation. Out of sector. 🟢 Recorded because a refusal withheld is a supply report
+pretending to be complete.
+
+🔴 **All four regional legs returned `0` repository addresses.** Their *intel* was substantive and `14 of 14`
+tokens were already held — see `intel/market.md` `626-J`.
+
+### 🟢 Measured this week — the agent tier, metrics refreshed `2026-11-03`
+
+| Nombre | Repo | Licencia | ★ `2026-11-03` | `pushed_at` | Señal |
+|---|---|---|---|---|---|
+| DeepTutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | **`54,312`** | `2026-10-31` | Still the sector's headline agent. `+17★` in a day |
+| OpenMAIC | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | **`42,496`** | `2026-11-02` | Tsinghua MAIC. `+5★` |
+| book-to-skill | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 `MIT` | **`36,789`** | `2026-10-28` | Skill-package class; `+2★` |
+| PageLM | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | `2,060` | `2026-10-29` | Community NotebookLM. **Still do not build on it until byte-read** |
+| Papermorph | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 `MIT` | `1,089` | `2026-11-01` | Books → animated narrated lessons; `+2★` |
+| education-agent-skills | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 `NOASSERTION` / bytes `CC-BY-SA-4.0` | `942` | `2026-10-22` | Share-alike **on prompt text** (`613-E`) |
+| claudemy | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 🟢 `MIT` | `596` | `2026-10-29` | OSS Udemy/Coursera alternative; `+1★` |
+| ai-shifu | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` | `330` | `2026-11-02` | AI-led teaching/Q&A |
+| Bloom | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` | `295` | `2026-10-20` | Private AI tutor adapting to reading behaviour |
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | `161` | `2026-11-02` | Block-based adaptive learning workspace |
+
+🟢 Star drift across the whole tier is `+25★` in one day. **The supply side is quiet and the shelf is fresh.**
+
+### 🔴 The week's real movement: the shelf's own addresses are decaying, and `ls-remote` could not see it
+
+🔴 A full census of all `1,331` addresses on the sell shelves (`27` batched queries — see `agents/top.md` `626-C`)
+found **`23` stale addresses and `25` dead**, of which **`7` are in live recommendation rows**:
+
+| Stale / dead | Canonical successor `2026-11-03` |
+|---|---|
+| `openedx/edx-platform` | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — `8,216★`, `AGPL-3.0` |
+| `stanfordnlp/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) — `117★`, `MIT` |
+| `opendigitaleducation/entcore` | 🟢 [`edificeio/entcore`](https://github.com/edificeio/entcore) — `24★`, pushed `2026-11-02` |
+| `Changochen/slide-to-video` | 🟡 [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) — `12★`, pushed `2025-09-12` |
+| `digitalcredentials/…/learner-credential-wallet` | 🔴 `ryjones/learner-credential-wallet` — `91★` — **LOW CONFIDENCE, do not re-address** |
+| `CabinServer39/quiz-gen` | 🔴 **DEAD** — `ls-remote` ABSENT |
+
+🔴 **Why this never surfaced before:** `git ls-remote` follows GitHub's rename redirect and reports a stale address
+as alive. `p623` censused `3,974` addresses on that instrument alone and was structurally unable to see a rename.
+
+### 🔴 The negative signal from `p625`, re-measured and now sellable
+
+🟢 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) — `6,900★`, `AGPL-3.0` — reproduces at
+`pushed_at = 2026-04-30` on a **second day with a second instrument**, `archived=false`, `fork=false`.
+**Six months and three days quiet** while `chamilo` pushed today and `moodle`, `oppia`, `sakai`, `kolibri`,
+`opencast`, `openeducat_erp` all pushed within four days. 🟢 `625-H` asked for this re-measure before the claim was
+sold; it is discharged, and the Open edX / Moodle migration argument is now corroborated.
+
 ---
 
 ## 2026-11-02 — Pass 625 — **THE WEEK'S AGENT SUPPLY IS SATURATED AT THIS BASE'S REACH: `28 of 28` ADDRESSES FROM TWO INDEPENDENT CHANNELS WERE ALREADY HELD, AND THE ONLY NEW *SIGNAL* IS A PLATFORM GOING QUIET**

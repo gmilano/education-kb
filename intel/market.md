@@ -1,7 +1,191 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 🆕 `p626` — reads `2026-11-03` — **🔴 THE REGIONAL LEGS RETURN `14 of 14` TOKENS ALREADY HELD AND `0` REPOSITORY ADDRESSES — THE DEMAND-SIDE NIL IS NOW REPRODUCED ON A SECOND CONSECUTIVE DAY WITH A DIFFERENT LEG POPULATION. 🟢 `625-K`'s NETWORK PRECONDITION RE-TESTED FOR THE PRICE OF `4` DNS LOOKUPS AND IT IS STILL CLOSED, SO THE FLAG STAYS AND THE STANDING "DO NOT ATTEMPT" HOLDS. 🟢 THE PASS'S REGIONAL BUDGET WENT TO **PLACEMENT**, AND IT ADDS ONE OFFER THIS PAGE HAS NEVER CARRIED: A **CANONICAL-ADDRESS AUDIT**, WHICH THIS PASS PROVED IS A REAL AND MEASURABLE CLIENT DEFECT AT `1.7 %` OF CITED REPOSITORIES.**
+
+### 🔴 `626-J` — the regional legs are saturated, with a per-region denominator
+
+🟢 All four mandated regional legs run `2026-11-03`. 🔴 Every substantive token returned was already on this base:
+
+| Region | Tokens returned | Already held | 🆕 New | Repository addresses |
+|---|---|---|---|---|
+| North America | `4` | `4` | 🔴 `0` | 🔴 `0` |
+| EMEA | `5` | `5` | 🔴 `0` | 🔴 `0` |
+| APAC | `3` | `3` | 🔴 `0` | 🔴 `0` |
+| LATAM | `2` | `2` | 🔴 `0` | 🔴 `0` |
+| **Total** | **`14`** | **`14`** | 🔴 **`0` — `100 %` held** | 🔴 **`0`** |
+
+🔵 Tokens checked by case-insensitive substring across every `*.md`: the `€25.4 m` Advanced Digital Skills grants,
+the UK `£200 m` commitment, `ICS.AI`'s national higher-education model, the QS *Europe EdTech 200+*, the
+`$169 m` FIPSE award, `134` bills across `31` states, the `OECD Digital Education Outlook 2026`, the Philippines /
+Google million-teacher certification, the `ASEAN Guide on AI Governance and Ethics`, UNESCO `IESALC`, `Platzi`,
+and the MarketsandMarkets LATAM `$18.2 m` figure — **all held, several at higher precision than the digests gave them.**
+
+🔴 **No region produced a repository address this pass.** That is a *supply* nil, stated per region so silence is
+not read as coverage: 🔴 North America `0`, 🔴 EMEA `0`, 🔴 APAC `0`, 🔴 LATAM `0`.
+
+> 🔴 **Carry, consistent with `625-B`:** the demand-side legs are a **control**, not a source. Budget them as one
+> cheap pass each cycle and spend the rest on placement and on supply-side maintenance, which is where this pass's
+> value came from.
+
+### 🟢 `626-K` — `625-K`'s precondition re-tested at the cost of `4` DNS lookups, and it is still closed
+
+| Host | DNS `2026-11-03` |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 NO-RESOLVE |
+| `unesco.org` | 🔴 NO-RESOLVE |
+| `digital-strategy.ec.europa.eu` | 🔴 NO-RESOLVE |
+| `github.com` | 🟢 RESOLVES |
+
+🔵 `625-K` said no pass should attempt the `Reg. (EU) 2026/1744` primary *"until `eur-lex.europa.eu` is allowed in
+the session's network settings"*. 🟢 Because that condition is a **session** property and sessions differ, the
+*precondition* was re-tested — not the research. It has not changed.
+
+> 🔴 **`NEEDS-PRIMARY` stays on `Reg. (EU) 2026/1744` and on the UNESCO IESALC primary.** Secondary corroboration
+> remains the ceiling. **Re-test the precondition, never the research** — `4` lookups, once per pass, is the price.
+
+### 🟢 `626-L` — a new offer, and this pass measured the defect it sells against
+
+🔵 Every region block below has sold migration, sovereignty and compliance work. 🟢 This pass adds a fifth offer
+that applies in **all four regions** and is backed by a number measured on this base's own shelves:
+
+🔴 **`1.7 %` of cited repository addresses are stale** — alive behind a GitHub rename redirect, so every
+reachability check passes and the address is still wrong — and **`1.9 %` are dead**. On a client's own dependency
+inventory, architecture docs or procurement list, the same census costs `27` API queries (see `agents/top.md`
+`626-C`) and finds the same class. 🔴 **And the instrument most teams use — an HTTP or `git` reachability probe —
+is structurally blind to it**, which is exactly how this base carried `23` stale addresses for `~20` passes.
+
+🟢 **Sell it as a two-day engagement**, not a product: enumerate addresses, census in batches, `ls-remote` the
+misses, resolve successors by identical `HEAD`, flag low-confidence matches instead of rewriting them.
+
+## Opportunities by region
+
+🔵 Placement only. Every demand figure below is **search-snippet-grade** (`598-G`, still open); every supply figure
+is byte-read or field-measured with its date. Region names are the closed vocabulary: `North America`, `EMEA`,
+`APAC`, `LATAM`, `Global`.
+
+### North America
+
+🟢 **Statutory / policy clock:** `134` bills across `31` states (March `2026`), with `4` states carrying a
+*mandatory district policy* duty; `COPPA`-aligned child-safety expectations gate anything K-12 and consumer-facing;
+`$169 m` of FIPSE awards released in Q1 `2026` include responsible-AI use.
+
+🔴 **Measured gap:** institutional adoption is reported around `86 %` for administrative and instructional use
+while roughly `70 %` of institutions in Europe *and* North America only *have or are developing* guidance — the
+adoption-ahead-of-governance pattern this page has carried for many passes.
+
+🟢 **What to sell, and it changed this pass:**
+1. 🟢 **The Canvas migration play is now corroborated, not asserted.** `instructure/canvas-lms` reproduces at
+   `pushed_at = 2026-04-30` — **six months and three days quiet**, `archived=false` — on a second day with a second
+   instrument, while `moodle`, `oppia`, `sakai`, `kolibri` and `chamilo` all pushed within four days. Canvas is the
+   incumbent for North American higher ed and its *open-source* escape hatch is closing while its commercial product
+   ships AI. 🟢 Sell the **Open edX or Moodle migration**, with [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)
+   (`Apache-2.0`, `377★`) as the LTI bridge so the move is incremental rather than a cutover.
+2. 🔴 **Correct the address before you quote it:** the platform is
+   [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (`8,216★`, `AGPL-3.0`, pushed
+   `2026-11-02`). `openedx/edx-platform` still resolves and is **not** the canonical name (`626-A`).
+3. 🟢 **State-policy compliance tooling** against the `31`-state patchwork — the one place a `134`-bill spread is an
+   asset rather than a cost, because per-district policy generation is repeatable work.
+4. 🟢 **Canonical-address audit** (`626-L`) — well suited here, where procurement and accreditation documents cite
+   repositories by name and are rarely re-verified.
+
+### EMEA
+
+🟢 **Statutory clock:** the EU AI Act's AI-literacy obligations have applied since `2026-02-02`; the high-risk
+regime for education is the `Annex III` clock this base tracks, amended by 🔴 **`Reg. (EU) 2026/1744`**, whose
+dates (`2 December 2027` / `2 August 2028`) remain 🔴 **`NEEDS-PRIMARY`** — secondary-corroborated only, and
+`626-K` confirms the primary is unreachable from this environment.
+
+🟢 **Policy money and movement, all held:** the European Commission updated its ethical guidelines on AI in
+education (June `2026`); `€25.4 m` in Advanced Digital Skills grant agreements; the UK committed over `£200 m`
+to AI adoption; `ICS.AI` launched a national higher-education model giving UK students campus-tool access; the
+QS *Europe EdTech 200+* names the regional vendor field.
+
+🟢 **What to sell:**
+1. 🟢 **Sovereign, self-hosted stacks** — the region's regulatory posture makes data residency the entry
+   requirement, not an upsell. [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+   (`MIT`, `1,166★`, offline-first) and [`oppia/oppia`](https://github.com/oppia/oppia) (`Apache-2.0`, `6,957★`)
+   are the permissive bases.
+2. 🟢 **Public-sector portal work on the French ENT estate** — and use the canonical address
+   [`edificeio/entcore`](https://github.com/edificeio/entcore) (`24★`, pushed `2026-11-02`), **not**
+   `opendigitaleducation/entcore`, which is stale (`626-E`). 🔴 Its grant field reads `NOASSERTION`; the branding
+   obligation `622-D2` found still applies.
+3. 🟢 **AI-literacy compliance programmes** — a dated, in-force obligation with a named deliverable, which is the
+   easiest education-AI sale in the region.
+4. 🔴 **Do not promise a primary-source legal read from this base.** Quote the clock as secondary and route the
+   client to counsel.
+
+### APAC
+
+🟢 **Policy clock:** the `ASEAN Guide on AI Governance and Ethics` remains principles-level and early; national
+instruments carry the weight (China, Korea, Singapore and Japan all have dated education-specific instruments on
+this page); the Philippines' education department partnered with Google to certify over `1 million` teachers.
+🟢 Forrester expects `60 %` of firms and governments in markets such as India and China to run **locally developed**
+LLMs alongside global ones — and AI *sovereignty* is the stated regional theme for `2026`.
+
+🟢 **Supply is strongest here**, and it is the region's real advantage:
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (`MIT`, `42,496★`, Tsinghua) and
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (`Apache-2.0`, `54,312★`) are the two largest permissive
+education agents in the sector and both are APAC-origin.
+
+🟢 **What to sell:**
+1. 🟢 **Local-LLM education stacks** — the sovereignty requirement and the permissive supply point the same way.
+   `OpenMAIC` or `DeepTutor` on a locally hosted model, with the LMS reached through `tsugi`'s LTI.
+2. 🟢 **National teacher-enablement programmes** at the scale the Philippines/Google deal sets — curriculum plus
+   agent tooling, not licences.
+3. 🟢 **India stack integration** — and the canonical address is
+   [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform), not
+   `project-sunbird/knowledge-platform` (`626-E`). 🔴 `project-sunbird/sunbird-lms-service` is reachable but
+   unindexed and **unresolved** — verify it directly before quoting it.
+4. 🔴 **Licence discipline matters most in this region's supply:** `cn-math-taxonomy` (`6,216★`) is
+   `CC-BY-NC-4.0` on bytes — NonCommercial, unusable for client delivery despite the star count.
+
+### LATAM
+
+🟢 **Measured gap — still the best-documented and widest in the world:** UNESCO IESALC (`200` HEIs, `19` countries;
+field Aug–Oct 2025, published `2026-09-01`) finds `87 %` of institutions using AI in at least one area and
+🔴 only `26 %` with any formal framework. Uruguay's Ceibal reports `75 %` of public-school teachers using AI;
+Cetic.br reports `65 %` of `9`–`17` internet users and `53 %` of school administrators in Brazil.
+
+🟢 **Regulation:** Colombia's `Ley 2626 de 2026` remains the region's one binding instrument on this page;
+Baker McKenzie characterises the wider landscape as fragmented, and ECLAC (Oct `2025`) names gaps in data,
+training and regulation. 🔴 This base's own `p576` refutation stands: AI is **not** mandatory in Argentine schools.
+
+🔴 **Market size:** the MarketsandMarkets LATAM figure (`$18.2 m` in 2024 → `~$36 m` by 2029) is held and
+🔴 **still implausible by three orders of magnitude** against the adoption numbers above — `p574`'s finding,
+unchanged. Do not quote it.
+
+🟢 **What to sell:**
+1. 🟢 **Governance-first engagements.** The `87 %` / `26 %` gap is a governance deliverable with a number attached:
+   policy frameworks, assessment-integrity rules and teacher guidance, before any platform work.
+2. 🟢 **Chamilo is the region's live platform of record** — [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms)
+   (`GPL-3.0`, `1,020★`) **pushed today**. 🟡 `GPL-3.0` is reciprocal: keep customisation at the plugin and service
+   boundary, or use `oppia` where a permissive base is required.
+3. 🟢 **Offline-first and low-connectivity delivery** with `kolibri` (`MIT`) — the infrastructure constraint the
+   region's own reports name repeatedly.
+4. 🟢 **Portuguese- and Spanish-language agent work.** `Assistentes-de-estudo-Agentes/techTutor` is the canonical
+   address for the Brazilian tutor row (`626-E`); 🔴 `luisricar-do/portugol-ai-tutor` is reachable but unindexed
+   and **unresolved** — verify before quoting.
+
+### Global
+
+🟢 **The one primary source this base has:** the `OECD Digital Education Outlook 2026` (published `2026-01-19`) —
+generative AI raised task completion `48 %` while measured performance **fell `17 %`** once the AI was removed.
+🟢 That is the single most useful sentence on this page for a client conversation: it converts "adopt AI" into
+"instrument the learning outcome", and it is a named, dated primary.
+
+🔴 **Market sizing stays a spread, not a number** — publishers disagree by roughly `3×` on the current-year base and
+this base's carried `41.5 %` CAGR is the bracketed outlier (`p624`). 🔴 Every demand figure here is
+search-snippet-grade (`598-G`, open).
+
+🟢 **Cross-region offers:** the canonical-address audit (`626-L`); outcome instrumentation built on the OECD
+finding; and LTI-first integration via [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) plus
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (`MIT`, `362★`), which together reach almost any
+LMS estate without committing to one platform's licence.
+
 ---
 
 ## 🆕 `p625` — reads `2026-11-02` — **🔴 THE REGIONAL LEGS RETURNED `0` FACTS THIS BASE DID NOT ALREADY HOLD, AND IN `4` CASES THIS BASE HOLDS THE FACT AT **HIGHER PRECISION THAN THE DIGEST GAVE IT** — INCLUDING THE AMENDING REGULATION NUMBER NO SOURCE NAMED. 🔴 THE `NEEDS-PRIMARY` FLAG ON `Reg. (EU) 2026/1744` IS **UNDISCHARGEABLE FROM THIS SESSION**: `eur-lex`, `ec.europa.eu` AND `unesco.org` ALL FAIL TO RESOLVE. 🟢 SO THE PASS SPENT ITS REGIONAL BUDGET ON **PLACEMENT**, NOT COLLECTION: EVERY REGION BELOW CARRIES ITS STATUTORY CLOCK, ITS MEASURED ADOPTION GAP AND WHAT TO SELL AGAINST BOTH.**
@@ -53,7 +237,7 @@ no uso" en requisito de diseño, y es el argumento más fuerte contra pilotos qu
 
 ---
 
-## Opportunities by region
+## Opportunities by region — `p625` (archived)
 
 🔵 Cada región abajo lleva: **reloj estatutario** (qué obliga y cuándo), **brecha medida** (adopción contra
 gobernanza) y **qué vender**. 🔴 Donde una región no tiene dato, lo dice.

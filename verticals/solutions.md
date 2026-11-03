@@ -1,7 +1,53 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 🆕 `p626` — reads `2026-11-03` — **🔴 THE FRENCH ENT ROW ON THIS PAGE CITES A STALE ADDRESS AND IS NOW FLAGGED: THE CANONICAL HOME IS `edificeio/entcore`, PUSHED `2026-11-02`. 🟢 THE VERTICAL PLATFORM TIER IS OTHERWISE UNCHANGED AND FRESH — EVERY PLATFORM BELOW EXCEPT CANVAS PUSHED WITHIN FOUR DAYS.**
+
+🔵 Method and controls: `agents/top.md` `626-A`…`626-E`.
+
+### 🔴 The address correction that affects a recommendation on this page
+
+| Cited here | Status `2026-11-03` | Action |
+|---|---|---|
+| [`opendigitaleducation/entcore`](https://github.com/opendigitaleducation/entcore) | 🔴 **STALE** — canonical [`edificeio/entcore`](https://github.com/edificeio/entcore), `24★`, pushed `2026-11-02`, identical `HEAD` | 🟢 Flagged in place at `622-D2` |
+
+🔴 **This base already held the pair** in `compose/code/p406-carried-existence/README.md:144` and never propagated
+it to the page that sells the row. 🔴 And `agents/top.md:788` filed the very same address as a *"channel B miss
+(`422`)"* — the `422` was the channel **reporting the rename**, not failing (`626-B`).
+🔵 The branding obligation `622-D2` found in its grant is unaffected; the field still reads `NOASSERTION`.
+
+### 🟢 The vertical platform tier — real systems that can be customised with AI on top, measured `2026-11-03`
+
+| Platform | Repo | Licencia | ★ | `pushed_at` | What it actually is |
+|---|---|---|---|---|---|
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | `8,216` | `2026-11-02` | MOOC-grade LMS. 🟢 **Canonical address corrected this pass** |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | `7,574` | `2026-10-30` | The world's largest LMS install base; plugin API is the integration surface |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` | `6,957` | `2026-11-02` | 🟢 The **permissive** large platform — structured interactive lessons |
+| **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | `6,900` | 🔴 `2026-04-30` | 🔴 **Six months quiet.** Migrate off, don't build on |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `1,240` | `2026-11-02` | Apereo higher-ed LMS; `ECL-2.0` proven buildable (`624-E`) |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` | `2026-11-02` | 🟢 **Offline-first** — the low-connectivity answer |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` | `1,020` | 🟢 `2026-11-03` | **Pushed today.** Strong LATAM install base |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 field `NOASSERTION` / 🟡 bytes `LGPL-3.0` | `903` | `2026-11-02` | 🟢 **The education ERP** — built on Odoo; admissions, fees, HR, CRM |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` | `509` | `2026-11-02` | Lecture capture and video pipeline |
+| **ENT Core** | [`edificeio/entcore`](https://github.com/edificeio/entcore) | 🔴 `NOASSERTION` | `24` | `2026-11-02` | French school ENT estate; 🔴 branding obligation in grant |
+| **Tsugi** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | `2026-11-02` | 🟢 **LTI framework** — reaches *any* conformant LMS |
+| **scorm-again** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | `2026-11-02` | SCORM / AICC / xAPI runtime |
+| **ibl LMS** | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` | `208` | `2026-11-02` | Open edX-derived under a **permissive** grant |
+
+### 🟢 The licence shape of this tier, restated because it decides the engagement
+
+🔴 **Every large platform of record is reciprocal** — `AGPL-3.0` (Open edX, Canvas) or `GPL-3.0` (Moodle, Chamilo).
+🟢 **The permissive options are real but smaller**: `oppia` (`Apache-2.0`, `6,957★`) is the only large one;
+`kolibri`, `iblai/lms` and `scorm-again` are `MIT`; `sakai` and `opencast` are `ECL-2.0`.
+
+> 🟢 **The pattern that keeps Globant's work permissive on a reciprocal platform:** build at the **LTI boundary**
+> with `tsugi` (`Apache-2.0`) rather than inside the platform tree. The AI service stays a separate, independently
+> licensed tool that any conformant LMS can launch — Moodle, Open edX, Sakai or Canvas — and no reciprocal grant
+> reaches it. 🔵 This is the recipe `compose/patterns.md` `626-M` specifies end to end.
+
 ---
 
 ## 🆕 `p625` — reads `2026-11-02` — **THE VERTICAL SHELF RE-MEASURED, AND THE CUSTOMIZATION ENTRY POINT MOVES FROM *PLUGINS* TO *STANDARDS*: `tsugi` (`Apache-2.0`) + `scorm-again` (`MIT`) REACH EVERY PLATFORM BELOW WITHOUT FORKING ANY OF THEM**
@@ -229,7 +275,7 @@ actually ships, not the repository.**
 
 ### 🔴 `622-D2` — ENT Core: the platform of record for French school ENTs, and the branding obligation buried in its grant
 
-[`opendigitaleducation/entcore`](https://github.com/opendigitaleducation/entcore) is the core of the
+[`opendigitaleducation/entcore`](https://github.com/opendigitaleducation/entcore) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`edificeio/entcore`](https://github.com/edificeio/entcore) (`24★`, pushed `2026-11-02`, same `HEAD`) — this base already held the pair in `compose/code/p406-carried-existence/README.md:144` and never propagated it here (`626-E`). It is the core of the
 *espace numérique de travail* estate deployed across French regional school systems — the closest
 thing EMEA has to a public-sector LMS/portal system of record outside the Apereo orgs. It is on these
 shelves already. 🔴 **Its licence had never been read, and reading it changes the row.**

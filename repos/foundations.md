@@ -1,7 +1,51 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 🆕 `p626` — reads `2026-11-03` — **🔴 THIS PAGE WAS CITING `2` STALE ADDRESSES AND BOTH ARE NOW FLAGGED IN PLACE; THE CENSUS THAT FOUND THEM COVERED ALL `1,331` SELL-SHELF ADDRESSES IN `27` QUERIES. 🟢 NO FOUNDATION ROW CHANGED ITS GRANT, AND NO ROW WAS REMOVED.**
+
+🔵 Full method and controls: `agents/top.md` `626-A`…`626-E`. Summary of what applies to **this** page:
+
+| Address cited here | Status `2026-11-03` | Action taken |
+|---|---|---|
+| [`stanfordnlp/edu-convokit`](https://github.com/stanfordnlp/edu-convokit) | 🔴 **STALE** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, identical `HEAD`) | 🟢 Flagged in the row at line ~`1449`. 🔴 This base already recorded the pair in `agents/top.md:3198` and never propagated it here |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟡 **UNINDEXED** — same `HEAD` as `ryjones/learner-credential-wallet` (`91★`, `MIT`), 🔴 **LOW CONFIDENCE** | 🟢 Flagged in place, 🔴 **address deliberately NOT changed** — an undiverged fork presents identically |
+
+🟢 **The `EduNLP/edu-convokit` row already on this page (line ~`1299`, `117★`, `MIT`) is the correct one** — so this
+page holds both the stale and the canonical address for the same project. 🔴 That is the `626-E` defect class in its
+clearest form: the rename was *found*, a correct row was *added*, and the stale row was never retired.
+
+### 🔴 `9` addresses on live shelves are reachable on git but absent from the metadata index
+
+`adlnet/unity-xapi-wrapper` · `ajjalti/evalstudio` · `bigdata-ustc/edudata` · `galaxyproject/video-lectures` ·
+`open-aac/sweet-suite-aac` · `openolat/qtiworks` · `packbackbooks/lti-1-3-php-library` ·
+`project-sunbird/sunbird-lms-service` · `thc1006/moodle-mcp`
+
+🔴 `ls-remote` ALIVE, `0` indexed rows, and a name-plus-`HEAD` search found no successor. They are **not** declared
+dead and **not** declared canonical. 🟢 **Verify directly before quoting any of them to a client.** Open for `p627`.
+
+### 🟢 Foundation-tier metrics, refreshed `2026-11-03`
+
+| Repo | Licencia | ★ | `pushed_at` | Note |
+|---|---|---|---|---|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | `8,216` | `2026-11-02` | 🟢 **Canonical address, corrected this pass (`626-A`)** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | `7,574` | `2026-10-30` | Largest install base |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` | `6,957` | `2026-11-02` | Most buildable large platform |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | `6,900` | 🔴 `2026-04-30` | **Six months quiet, re-measured** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `1,240` | `2026-11-02` | `ECL-2.0` buildable (`624-E`) |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` | `2026-11-02` | Offline-first |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` | `1,020` | 🟢 `2026-11-03` | **Pushed today**; LATAM base |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 field `NOASSERTION` / 🟡 bytes `LGPL-3.0` | `903` | `2026-11-02` | Education ERP on Odoo — **bytes win** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` | `509` | `2026-11-02` | Lecture capture; canonical after `apereo/opencast` died |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | `2026-11-02` | 🟢 LTI framework — the standards-based way into any LMS |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | `2026-11-02` | SCORM / AICC / xAPI runtime |
+| [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | 🟢 `MIT` | `117` | `2025-04-19` | Education conversation data (NAACL 2024) |
+
+🔴 **No grant was re-read from bytes this pass.** The table refreshes *fields* only; where field and bytes disagree
+the shelf keeps the byte reading (`openeducat_erp`).
+
 ---
 
 ## 🆕 `p625` — reads `2026-11-02` — **THE FOUNDATION SHELF RE-MEASURED: `10 of 11` PLATFORMS PUSHED WITHIN THREE DAYS, `moodle`'s STAR COUNT MEASURED FOR THE FIRST TIME, AND THE ONE QUIET ROW IS THE SECTOR'S COMMERCIAL INCUMBENT**
@@ -1435,7 +1479,7 @@ is what makes them safe to build on.
 | [yetanalytics/re-oidc](https://github.com/yetanalytics/re-oidc) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-16` | `-04:00` | North America | OIDC for `re-frame`/`reagent` ClojureScript apps — the auth rung for the xAPI tooling above |
 | [instructure/qti](https://github.com/instructure/qti) | 🟢 **MIT** (`1,083 B`) | `master` | `2026-09-23` | `+00:00` | North America | 🟢 QTI **1.2 and 2.1** importer gem, published by **Instructure** — the Canvas vendor's own assessment-import path |
 | [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | 🟢 **MIT** (`1,065 B`) | `main` | `2026-02-12` | `-03:00` | LATAM | Framework-agnostic **QTI 3.x** renderer with multi-frontend support; live sandbox demo |
-| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟢 **MIT** (`1,091 B`) | `main` | `2026-06-11` | `-04:00` | North America | Cross-platform iOS/Android wallet for **storing and sharing digital learner credentials**. OpenWallet Foundation Labs |
+| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | 🟢 **MIT** (`1,091 B`) | `main` | `2026-06-11` | `-04:00` | North America | Cross-platform iOS/Android wallet for **storing and sharing digital learner credentials**. OpenWallet Foundation Labs |
 | [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | 🟢 **MIT** (`1,065 B`) | `master` | `2026-10-27` | `+01:00` | EMEA | H5P toolkit for running, editing and **developing H5P content types**. 🔵 README at `readme.md` — one of the `603-C` six |
 
 ### 🟢 Analytics, assessment and detection — `12` more rows
@@ -1446,7 +1490,7 @@ is what makes them safe to build on.
 | [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | 🟢 **MIT** (`1,128 B`) | `main` | `2025-10-03` | `+05:30` | **APAC** | 🟢 Indic-language machine translation from **AI4Bharat / IIT Madras** — the realistic path to multilingual courseware across India's scheduled languages |
 | [Sunbird-Lern/lms-service](https://github.com/Sunbird-Lern/lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2026-01-05` | `+05:30` | **APAC** | LMS micro-service of **Sunbird**, the stack behind India's national education platforms |
 | [project-sunbird/sunbird-lms-service](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2025-12-23` | `-08:00` | **APAC** | Sunbird **User/Org** micro-service. 🔵 Same grant bytes as the row above and a `-08:00` committer offset — a US-based committer on an India-origin platform, so `tz` places the *commit*, not the project |
-| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `-07:00` | North America | **Edu-ConvoKit** — framework for education *conversation* data (NAACL 2024, Systems Track). The pre-processing layer for classroom-discourse analysis |
+| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, same `HEAD`) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `-07:00` | North America | **Edu-ConvoKit** — framework for education *conversation* data (NAACL 2024, Systems Track). The pre-processing layer for classroom-discourse analysis |
 | [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 **MIT** (`1,070 B`) | `main` | `2026-02-07` | `+08:00` | APAC | **Fast-DetectGPT** (ICLR 2024) — zero-shot machine-generated-text detection via conditional probability curvature |
 | [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** (`11,357 B`) | `main` | `2024-01-16` | `+09:00` | APAC | Google's **autograding** toolset for programming education (notebook-based) |
 | [Fuann/open-apa](https://github.com/Fuann/open-apa) | 🟢 **BSD** (`1,527 B`) | `master` | `2026-10-08` | `+08:00` | APAC | **OpenAPA** — open benchmark and evaluation toolkit for **pronunciation assessment** in open-response scenarios |

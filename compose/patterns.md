@@ -1,7 +1,99 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-03
+---
+
+## 🆕 `p626` — reads `2026-11-03` — **🟢 ONE NEW PATTERN, SPECIFIED END TO END AND BUILT ONLY FROM ROWS RE-MEASURED TODAY: THE **LTI-BOUNDARY AI TUTOR**, WHICH KEEPS GLOBANT'S DELIVERABLE PERMISSIVE WHILE THE CLIENT'S LMS STAYS `AGPL-3.0` OR `GPL-3.0`. 🔴 AND `4` ROWS ON THIS PAGE WERE CITING STALE OR UNMAINTAINED ADDRESSES — ALL FLAGGED IN PLACE, ONE OF THEM THE "SOVEREIGNTY PICK".**
+
+### 🔴 First, the corrections on this page, because they change what a build would pull
+
+| Cited here | Status `2026-11-03` | Action |
+|---|---|---|
+| `stanfordnlp/edu-convokit` (line ~`3175`) | 🔴 **STALE** → [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) `117★` `MIT` | 🟢 Flagged in place |
+| `openwallet-foundation-labs/learner-credential-wallet` (~`3159`) | 🟡 **UNINDEXED**; successor 🔴 LOW CONFIDENCE | 🟢 Flagged, address kept |
+| `digitalcredentials/learner-credential-wallet` (~`3912`) | 🟡 **UNINDEXED**; same successor, 🔴 LOW CONFIDENCE | 🟢 Flagged, address kept |
+| `Changochen/slide-to-video` (~`7411`) | 🔴 **STALE** → [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) — 🔴 `12★`, **last pushed `2025-09-12`** | 🟢 Flagged, and **re-priced** |
+
+🔴 **The slide-to-video correction is the one that changes a recommendation.** It was sold on this page as
+*"🟢 the sovereignty pick"* for local voice synthesis. Its canonical home has `12★` and has not been pushed in
+**fourteen months**. 🟡 It is still the only local-voice option on these shelves, so it stays — but it is now
+priced as **unmaintained**: budget to fork and own it, or keep synthesis out of scope.
+
+### 🟢 `626-M` — **Pattern: the LTI-boundary AI tutor** (licence-safe on a reciprocal LMS)
+
+🔴 **The problem it solves.** Every large LMS of record in this sector is reciprocal: Open edX and Canvas are
+`AGPL-3.0`, Moodle and Chamilo are `GPL-3.0`. 🔴 A tutor built *inside* the platform tree inherits that grant, and
+`AGPL-3.0` reaches network-served derivatives — which is exactly what an AI tutor is. 🟢 The LTI boundary is a
+process and protocol boundary, so the tool is not a derivative work of the LMS at all.
+
+🟢 **Every component re-measured `2026-11-03`. All permissive. No `NOASSERTION` row is load-bearing.**
+
+| Layer | Component | Licencia | ★ | `pushed_at` | Why this one |
+|---|---|---|---|---|---|
+| LMS reached, not modified | [`moodle/moodle`](https://github.com/moodle/moodle) · [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) · [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `GPL-3.0` / 🔴 `AGPL-3.0` / 🟢 `ECL-2.0` | `7,574` / `8,216` / `1,240` | `2026-10-30` / `2026-11-02` / `2026-11-02` | Client's existing estate. **Not forked, not patched** |
+| LTI 1.3 tool boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377` | `2026-11-02` | The grant firewall. One tool, every conformant LMS |
+| Tutor agent | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `54,312` | `2026-10-31` | Sector's headline agent, permissive, patent grant |
+| Tutor agent (alternative) | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | `42,496` | `2026-11-02` | Pick for APAC / local-LLM sovereignty work |
+| Activity + attainment telemetry | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | `362` | `2026-11-02` | SCORM / AICC / **xAPI** — carries the outcome signal back |
+| Offline / low-connectivity edge | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166` | `2026-11-02` | LATAM and EMEA-Africa delivery without connectivity |
+| Conversation analysis | [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | 🟢 `MIT` | `117` | `2025-04-19` | Education-specific conversation data toolkit |
+
+🟢 **Wiring, concretely:**
+
+1. 🟢 **Register the tutor as an LTI 1.3 tool with `tsugi`.** `tsugi` implements the LTI Advantage services
+   (Deep Linking, Names and Roles, Assignment and Grade Services) so the LMS launches the tool with a signed JWT.
+   🔴 **Nothing is installed into the LMS tree** — this is the whole licence argument, and it is also why one build
+   serves Moodle, Open edX, Sakai and Canvas estates.
+2. 🟢 **Put `DeepTutor` behind that launch** as the tutoring service. Map the LTI `roles` claim to tutor behaviour
+   (learner vs instructor) and the `context_id` claim to the course so sessions are scoped per course, not per user.
+3. 🟢 **Emit xAPI statements through `scorm-again`** on every tutoring turn — attempt, hint taken, item answered —
+   to the client's LRS. 🟢 This is the layer that makes the `OECD Digital Education Outlook 2026` finding
+   actionable: task completion `+48 %` with measured performance `−17 %` once AI is removed means you **must**
+   instrument unaided attainment, not engagement. Emit an unaided-checkpoint statement type from day one.
+4. 🟢 **Write grades back via LTI AGS**, not into the LMS database. The gradebook stays the LMS's.
+5. 🟢 **For offline estates, mirror the tutor behind `kolibri`** on the edge device and queue xAPI for sync.
+   `kolibri` is `MIT`, so the edge build stays permissive too.
+6. 🟢 **For APAC sovereignty work, swap `DeepTutor` for `OpenMAIC`** against a locally hosted model. Both are
+   permissive, so the swap is a configuration decision rather than a licence re-review.
+7. 🟡 **Analyse transcripts with `EduNLP/edu-convokit`** — the canonical address (`626-E`); `stanfordnlp/edu-convokit`
+   is stale. 🔴 Note it was last pushed `2025-04-19`: usable library, not an active project.
+
+🔴 **What this pattern does NOT do, stated so it is not oversold:**
+- 🔴 It does **not** make the client's LMS permissive. The estate stays `AGPL-3.0`/`GPL-3.0`; only Globant's
+  deliverable sits outside it.
+- 🔴 It requires the LMS to be **LTI 1.3 conformant**. Moodle, Open edX, Sakai and Canvas are; a bespoke or legacy
+  platform may not be, and then this pattern does not apply.
+- 🔴 It assumes an **LRS exists or is in scope.** Without one, step `3` is a build, not a configuration — and step
+  `3` is where the measurable outcome lives, so do not cut it to fit a budget.
+- 🔴 **No `NOASSERTION` component is in the critical path.** `PageLM` (`2,060★`) and
+  `GarethManning/education-agent-skills` (`CC-BY-SA-4.0` on bytes — share-alike on *prompt text*) are deliberately
+  excluded. 🟡 `edificeio/entcore` is `NOASSERTION` and is only relevant for the French ENT estate; resolve its
+  grant before it enters any build.
+
+🟢 **Typical shape:** `6`–`8` weeks for one LMS plus one tutor behaviour with xAPI instrumentation;
+`+2`–`3` weeks per additional LMS estate (configuration, not a new build, which is the point of the boundary).
+
+### 🟢 `626-N` — Pattern: the **canonical-address audit**, which this pass ran on itself
+
+🔵 `626-L` in `intel/market.md` sells this; here is the recipe, exactly as executed on `1,331` addresses:
+
+1. 🟢 **Enumerate** every repository address cited in the client's dependency manifests, architecture docs and
+   procurement records (`grep -ohE 'github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+'`).
+2. 🟢 **Census in batches** — the GitHub search `repo:` qualifier **repeats as an OR** and a batch silently drops
+   bad members instead of erroring. `50` addresses per query, `per_page=100`. Set difference between sent and
+   returned is the suspect set. 🔴 **Never branch on the error shape**: a single miss returns `422` *or* `total=0`.
+3. 🟢 **`git ls-remote` the misses.** ABSENT ⇒ **dead**. ALIVE ⇒ **stale address behind a rename redirect**.
+4. 🟢 **Resolve successors** with `<name> in:name` (🔴 one free-text term only — `625-C`) and match **identical
+   `HEAD`**. Confirm the successor has `fork=false` and no competing indexed row.
+5. 🔴 **Flag low-confidence matches; do not rewrite them.** An undiverged fork is indistinguishable from a transfer
+   on this evidence. Rewriting a client's address on a fork is worse than leaving a stale one flagged.
+6. 🔴 **Publish your own false positives.** This pass's extractor produced `10 of 84` bad flags
+   (`github.com/topics/*` pages, `.git` suffixes). An audit that hides its own artefacts cannot be graded.
+
+🟢 **Measured cost:** `1,331` addresses in `27` queries, about one minute, inside a `30/min` API budget.
+🟢 **Measured yield on a well-maintained corpus:** `1.7 %` stale, `1.9 %` dead.
+
 ---
 
 ## 🆕 `p625` — reads `2026-11-02` — **TWO NEW PATTERNS, BOTH FORCED BY THIS PASS'S OWN MEASUREMENTS: `P625-1` WIRES THE AGENT LAYER IN OVER **LTI**, BECAUSE EVERY LARGE PLATFORM IN THIS SECTOR IS RECIPROCALLY LICENSED; `P625-2` PARTITIONS THE STACK ON THE **ANNEX III TRIGGER LINE**, BECAUSE THE TRANSPARENCY CLOCK IS ALREADY RUNNING AND THE HIGH-RISK CLOCK IS NOT**
@@ -3156,7 +3248,7 @@ an official national dataset** — because that is what this pass's supply actua
 | [openedx/tutor-contrib-aspects](https://github.com/openedx/tutor-contrib-aspects) | Apache-2.0 | `11,356` | `main` | `404` |
 | [instructure/qti](https://github.com/instructure/qti) | **MIT** | `1,083` | `master` | `404` |
 | [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | **MIT** | `1,065` | `main` | `404` |
-| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | **MIT** | `1,091` | `main` | `404` |
+| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | **MIT** | `1,091` | `main` | `404` |
 | [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** | `1,080` | `main` | `404` |
 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | **MIT** | `1,073` | `main` | `404` |
 | [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | **MIT** | `1,063` | `main` | `404` |
@@ -3172,7 +3264,7 @@ an official national dataset** — because that is what this pass's supply actua
 | [SidneyBissoli/uis-mcp-server](https://github.com/SidneyBissoli/uis-mcp-server) | **MIT** | `1,087` | `main` | `404` |
 | [nialvape/utn-mcp](https://github.com/nialvape/utn-mcp) | **ISC** | `747` | `main` | `404` |
 | [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | **MIT** | `1,070` | `main` | `404` |
-| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) | **MIT** | `1,068` | `main` | `404` |
+| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | **MIT** | `1,068` | `main` | `404` |
 | [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | **MIT** | `1,065` | `master` | `404` |
 
 ---
@@ -3909,7 +4001,7 @@ nothing platform-shaped: it packages content, schedules retention and issues a c
 | --- | --- | --- | --- | --- |
 | Retention engine | [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **BSD-3-Clause** (`1,509 B`) | `main` | `455★`. FSRS **optimiser and scheduler** — fits per-learner parameters from real review logs. 🟢 A published algorithm, not a prompt |
 | Content packaging | [learningequality/studio](https://github.com/learningequality/studio) | 🟢 **MIT** (`1,115 B`) | 🔴 **`unstable`** | `211★`, pushed `2026-11-01`. Curate and export channels for Kolibri's offline delivery. 🔴 **Pin a SHA — the default branch is `unstable`** |
-| Credential issuance | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** (`1,092 B`) | `main` | Digital Credentials Consortium wallet — verifiable credentials on completion. 🔴 The search API `422`s on this address; it is alive |
+| Credential issuance | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | 🟢 **MIT** (`1,092 B`) | `main` | Digital Credentials Consortium wallet — verifiable credentials on completion. 🔴 The search API `422`s on this address; it is alive |
 | Source → teachable unit | [juneyaooo/lineage-skill](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** (`11,358 B`) | `main` | `466★`. Distils videos, PDFs and transcripts into **source-backed** Agent Skills — every generated item keeps its citation |
 | Edge inference (optional) | [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (`11,351 B`) | `main` | Intel reference apps for on-prem inference where learner data cannot leave the institution |
 
@@ -7408,7 +7500,7 @@ pattern is the pipeline **with the TTS stage swapped**.
 | --- | --- | --- | --- |
 | Reference pipeline | [galaxyproject/video-lectures](https://github.com/galaxyproject/video-lectures) | **MIT** (1,071 B, "Galaxy Project") | Pandoc → HTML slides → `wkhtmltoimage` page images → script extraction → mux. 🔴 **Replace its Polly stage.** |
 | Narration/assembly engine | [jhudsl/ari](https://github.com/jhudsl/ari) | **MIT** (declared in `DESCRIPTION`) | R package, **Johns Hopkins Data Science Lab**. ⚠️ Its grant is **not** in `LICENSE` — that file is a 40 B stub. |
-| Local-voice pipeline | [Changochen/slide-to-video](https://github.com/Changochen/slide-to-video) | **MIT** (1,070 B) | 🟢 **The sovereignty pick** — PDF deck + script, slides split on `NEWSLIDE`, with **optional local voice cloning**. The only row on this axis that needs no cloud TTS at all. |
+| Local-voice pipeline | [Changochen/slide-to-video](https://github.com/Changochen/slide-to-video) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) — 🔴 and the canonical home measures only `12★`, **last pushed `2025-09-12`** (`626-E`), so price this as unmaintained | **MIT** (1,070 B) | 🟡 **The sovereignty pick, now with a maintenance risk** — PDF deck + script, slides split on `NEWSLIDE`, with **optional local voice cloning**. The only row on this axis that needs no cloud TTS at all. |
 | Script drafting | [htlin222/slides-to-video](https://github.com/htlin222/slides-to-video) | **MIT** (1,065 B) | Drafts **speaker notes** from the slides, then TTS + `ffmpeg`. Use when the client has decks but no narration scripts. |
 | Captioned audio | [denizsafak/abogen](https://github.com/denizsafak/abogen) | **MIT** | 🟢 Emits **synchronised captions** — the EAA/WCAG deliverable, not an extra. |
 | On-device TTS | [Blaizzy/mlx-audio](https://github.com/Blaizzy/mlx-audio) | **MIT** | Apple Silicon. ⚠️ `supertonic` (MIT, on-device) is **archived** — grant perpetual, patches not. |
