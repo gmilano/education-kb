@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — the publisher channel pays in the two remaining regions, and the mandated legs go nil a ninth time
+
+🟢 **Supply, by region, measured this pass.** `LATAM` and `North America` were the two regions the
+publisher-estate operative had not been run against. Both paid, and both were unheld:
+[`eol-uchile`](https://github.com/eol-uchile) (Universidad de Chile, `113` repositories, `23`
+permissive, `63` pushed in `2026`) and
+[`inclusive-design`](https://github.com/inclusive-design) (OCAD University, Toronto, `81` repositories,
+`29` permissive, `23` of those pushed in `2026`). Neither had a single ledger row or shelf mention
+before today.
+
+🔴 **Demand, by region: nil for the ninth consecutive pass, and this time exhaustively.** The global leg
+and all four regional legs returned `0` repository addresses, and `16 of 16` regulatory or market facts
+they surfaced are already on this base. The legs are not finding nothing — they are finding **what this
+base already knows**, which is a currency check rather than a discovery channel.
+
+🔵 **The `2026` market base, unchanged and not re-litigated.** The spread across vendor sources remains
+the finding: `$9.58 B` (Precedence) to `$10.6 B` (Research and Markets) for AI-in-education, with the
+agentic subsegment at `$2.37 B` for `2026` and `37.9 %` `CAGR` to `2031` (Mordor). 🟡 Three definitions,
+three numbers; quote the range and the definition, never one figure.
+
+## Opportunities by region
+
+### Global
+
+🟢 **The standing global opportunity, restated from the supply side and now four-region.** The
+adoption-versus-governance gap is unchanged: high usage, thin institutional policy, everywhere. Its
+supply-side twin — **the gap between what institutions run and what institutions publish** — is now
+measured in four regions: `345` repositories across four institutional estates, `112` permissive, and
+`0` of them held by this base before the pass that queried the publisher directly. 🔵 If `633` passes of
+curation missed four institutional estates, a client's own build-versus-buy analysis has missed them too.
+That is a diligence offer a studio can make on day one of an engagement.
+
+🔴 **The supply constraint to price into every region, now with a functional qualifier.** The four
+largest education platforms remain copyleft — Moodle (`GPL-3.0`), Open edX (`AGPL-3.0`), Canvas
+(`AGPL-3.0`), Chamilo (`GPL-3.0`). 🆕 `p634` adds the rule that decides whether an *estate* around one of
+them helps: if the estate **extends** the copyleft core, its permissive half is themes and deployment and
+its functional half is copyleft (`eol-uchile`: `15 of 15` `XBlock`s `AGPL-3.0`, `12 of 12` themes `MIT`,
+zero overlap). If the estate sits **beside** the core — administrative systems, reference data — it can be
+permissive all the way down (the `EMEA` estate's `52` `Apache-2.0` repositories). 🟡 The ladder to quote
+is unchanged — `permissive tool alongside the platform` → `MPL fork` → `LGPL link` → `AGPL/GPL, do not` —
+but the new first question is *does this estate extend the platform or stand next to it?*
+
+### North America
+
+🔵 **Measured and held:** `134` AI-in-education bills across `31` states in `2026`, with states favouring
+guardrails over mandated adoption; North Carolina Session Law `2026-41` requires state model policy by
+**`2026-12-31`**, local policies by `2027-06-30`, teacher training by `2028-06-30`. Idaho `SB 1227`
+mandates a statewide K-12 framework and AI-literacy standards and bars AI from replacing teachers;
+Maryland's statewide-guidelines law took effect `2026-06-01`; Florida's State Board approved rules for
+K-12 and the `28` state colleges; the `K-12 AI Literacy and Readiness Act of 2026` has advanced out of
+House committee but is not law; California `AB 1159` would bar training on student data absent direct
+school benefit. North America holds `36–41.7 %` of the global market by two independent vendor sources.
+🟢 All of it re-confirmed by this pass's legs and **already on this base** — no new fact.
+
+🟢 **The new opportunity, and it is a partnering instruction.** The permissive publisher in this region is
+a **university research centre, not a government agency**: three enumerable state education departments
+published `18` repositories with `1` permissive grant between them, while
+[`inclusive-design`](https://github.com/inclusive-design) (OCAD University) published `81` with `29`.
+🔵 A studio seeking a credible accessibility or responsible-AI co-author in North America should go to
+the university centres; a studio seeking *reusable administrative code* will not find it in state-DOE
+repositories and should price that as a build.
+
+🔴 **The risk to name in any US K-12 estimate, now with a denominator rather than an impression.** A
+permissive `IEP` system does not exist: `7` `MIT` and `0` `Apache-2.0` repositories worldwide in the
+education-context channel, maximum `5★`, and that maximum is ungranted and unpushed since `2016`.
+🟢 The `AAC` half of the same gap **does** have permissive supply (`BSD-3-Clause`, institutional, pushed
+this week), so special-education work splits: accessibility is an adoption, compliance is a build.
+
+### EMEA
+
+🔵 **Measured and held:** `Reg. (EU) 2026/1744` moved stand-alone high-risk education obligations from
+`2026-08-02` to **`2027-12-02`**; admissions, grading and proctoring are high-risk while tutoring and
+practice feedback are generally outside per the Commission's May `2026` draft guidance; emotion
+recognition in education has been prohibited since `2025-02-02`; Article `50` transparency duties apply
+from `2026-08-02` with existing systems due machine-readable marking by `2026-12-02`; the Digital Omnibus
+softened the staff AI-literacy duty to "take measures to support". Schools carry **deployer**
+obligations even when they buy. 🟢 Re-confirmed, already held, no new fact (`321` hits for the regulation
+alone).
+
+🟢 **The opportunity, carried and now contrasted.** The `2027-12-02` deferral is an eighteen-month window
+to build conformity evidence rather than retrofit it, and the `2026-12-02` marking deadline is four
+weeks out and binding on systems **already deployed** — a near-term, unglamorous, schedulable piece of
+work. 🔵 `p632`'s administrative estate remains this region's distinguishing asset: permissive
+higher-education software for signature circuits, attendance, card issuance, MFA, academic recruitment,
+accommodations and student-records integration, and `p634` explains *why* it is permissive where the
+Chilean estate is not — it stands beside the platform rather than extending it.
+
+### APAC
+
+🔵 **Measured and held:** no regional model. Korea's `AI Basic Act` is the first comprehensive statute and
+names education as high-impact; Vietnam's Law on Artificial Intelligence took effect `2026-03-01`;
+Australia's National AI Plan (December `2025`) relies on existing law; Japan is on voluntary guidelines.
+Education-specific binding rules remain thin across the region. Fastest-growing region by market
+estimates (`≈ 35.3 %` `CAGR`, `≈ $2.85 B` in `2026`, one vendor). Ipsos `2026` finds support for banning
+AI in education rising in Japan (`21 %` → `29 %`), Australia (`47 %` → `52 %`) and South Korea
+(`27 %` → `31 %`) and falling in Indonesia. 🟢 Re-confirmed, already held, no new fact.
+
+🟢 **The opportunity, carried from `p633`:** national reference data as an unclaimed grounding layer, with
+the `MIT`-granted Indonesian estate as the entry point — and `p633`'s flag still standing, that a
+permissive grant over **government data whose own terms are unstated** is shelved flagged, not clean.
+🔵 `p634` adds a second entry point by analogy rather than by measurement: the publisher channel paid in
+three of three regions where it was run against an *institution*, so the untested APAC publishers are
+ministries and national universities, not vendors. Not yet run.
+
+### LATAM
+
+🔵 **Measured and held:** UNESCO launched the regional Observatory on AI in Education for Latin America
+and the Caribbean on `2026-04-14` in Santiago at the ECLAC forum; UNESCO reports more than `50 %` of
+teachers already using AI tools in countries such as Chile and Brazil against fewer than `10 %` of
+institutions holding formal guidelines; `IESALC` finds adoption driven by faculty and students rather
+than institutional policy; roughly `45 %` of LAC institutions have or are developing guidance against
+`≈ 70 %` in Europe and North America; one vendor sizes the region at `$0.67 B` in `2026` growing at
+`33.5 %` to `$2.1 B` by `2030`. 🟢 Re-confirmed, already held, no new fact.
+
+🟢 **The new opportunity, and it is the strongest LATAM supply finding this base has recorded.** A
+decade of national-scale Open edX operation is published under `MIT` by
+[`eol-uchile`](https://github.com/eol-uchile): deployment images, `12` themes, container and ops
+practice, `63` repositories pushed in `2026`. 🔵 For a ministry or public-university engagement anywhere
+in the region, this is a working reference deployment from a peer institution in the same regulatory and
+language environment — worth more than a vendor reference architecture and free to fork.
+🔴 **And the constraint that must be in the estimate:** the functional layer of that estate is
+`AGPL-3.0`, so a client who wants to own its pedagogy privately cannot build it inside the platform.
+`compose/patterns.md` `p634` wires the permissive route; there is no arrangement of these repositories
+that produces a private `XBlock`.
+🟡 **Also measured, as an informed negative:** [`IFRS`](https://github.com/IFRS) (Brazil) publishes `22`
+repositories with `0` permissive grants, and the Chilean public-school-service and Argentine provincial
+education orgs surfaced by the discovery leg were either single-repository or returned HTTP `422`. The
+LATAM publisher channel paid **once** out of five publishers probed; it is productive, not abundant.
 
 ## 🆕 `p633` — one addition to `APAC`, and an explicit nil for the other three regions
 
@@ -76,7 +204,7 @@ unheld for `631` passes — `repos/foundations.md` `632-F`. 🔴 No demand-side 
 named a publisher of permissive education software. The two channels do not substitute for each other: the
 demand legs describe **buyers and rules**, the supply channel finds **what you build with**.
 
-## Opportunities by region
+## Opportunities by region — `p632` (archived)
 
 ### Global
 

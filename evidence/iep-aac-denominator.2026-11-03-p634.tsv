@@ -1,0 +1,10 @@
+leg	form	total	note
+individualized education program IEP	AND-form phrase	11	discarded as AND-semantics artefact per p633
+"individualized education program"	exact phrase	11	same bound
+IEP	bare token	3373	near-entirely false friends (iepy, clevr-iep, Netflix IEP, IEPF, NIEM IEPD)
+IEP special education	education context	116	the defensible population; max 5 stars, ungranted, dead 2016
+special education IEP license:mit	licence-filtered	7	the permissive IEP population worldwide
+special education IEP license:apache-2.0	licence-filtered	0	no Apache-2.0 IEP instrument exists
+special education software	adjacent	16	context only
+educacion especial	in-language LATAM	92	context only
+augmentative alternative communication AAC	education context	144	permissive supply EXISTS here: BSD-3-Clause institutional + Apache-2.0 + MIT

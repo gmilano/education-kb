@@ -484,12 +484,18 @@ absence-census: ## ACTION p279 — the whole-corpus arm: a measurement, never a 
 DATES_LOG ?= /tmp/education-kb-gate-dates.log
 
 gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG the shelves it registers gaps for.  Four real failures (p411, p414-p416); red at p414 on the real commits, where nothing was looking.
+# 🔴 p634 — ACTION 634-B: the file list above was SIX of EIGHT shelves.  It omitted
+# agents/trending.md and repos/trending.md — the two APPEND-ONLY shelves, the two that
+# advance on EVERY pass and therefore always carry the highest pass number.  A pass that
+# touched only those two would leave the register stale and this gate GREEN.  p633 was
+# caught today only because it also touched market/trends/patterns.  Both are now in.
 	@cd compose/code/p418-register-currency-gate && $(PY) -I test_gate.py > $(REGCUR_LOG) 2>&1 || { \
 	  echo "── p418-register-currency (16 controls) "; cat $(REGCUR_LOG); exit 1; }
 	@echo "── p418-register-currency (16 controls: the four historical shapes, the lead-is-fine case, three parser negatives, p541 refusal)"
 	@$(PY) -I compose/code/p418-register-currency-gate/gate_register.py \
 	  intel/open-gaps.md agents/top.md intel/market.md intel/trends.md \
-	  repos/foundations.md verticals/solutions.md compose/patterns.md > $(REGCUR_LOG) 2>&1 \
+	  repos/foundations.md verticals/solutions.md compose/patterns.md \
+	  agents/trending.md repos/trending.md > $(REGCUR_LOG) 2>&1 \
 	  && echo "   PASS — the register is current against every live shelf" \
 	  || { echo "   🔴 THE GAP REGISTER IS STALE:"; cat $(REGCUR_LOG); exit 1; }
 # 🟢 p631 — ACTION 629-K, CLOSED BY WIRING.  `629-J` found this base's README nine passes

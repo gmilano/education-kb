@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — reads `2026-11-03` — **🟢 `P632-0` ("INSTITUTIONS PUBLISH ESTATES") REPRODUCES IN A **THIRD AND FOURTH** REGION — `LATAM` (`113` REPOSITORIES, UNIVERSIDAD DE CHILE) AND `NORTH AMERICA` (`81`, OCAD UNIVERSITY) — BOTH UNHELD FOR `633` PASSES. 🔴 BUT THE LATAM ESTATE'S PERMISSIVE HALF IS THE **NON-FUNCTIONAL** HALF: `15 of 15` GRADED `XBlock`s ARE `AGPL-3.0` AND `12 of 12` GRADED THEMES ARE `MIT`, WITH **ZERO OVERLAP**. 🟢 `619-Q` SPLITS ON A DENOMINATOR: THE `AAC` HALF HAS PERMISSIVE INSTITUTIONAL SUPPLY, THE `IEP` HALF IS `7` `MIT` AND `0` `Apache-2.0` REPOSITORIES WORLDWIDE. EIGHT REGISTERED (`634-A`…`634-H`).**
+
+🔵 Six new rows below, every one read first-hand at `raw.githubusercontent.com` this pass. `7 of 7`
+payloads **agreed** with the platform's `license.spdx_id` — so `632-A`'s "the metadata was right and the
+bytes misled" does not reproduce today, and neither channel is promoted on one day's agreement.
+
+| Agent / instrument | Grant | Payload read | Stars | Pushed | What it is |
+|---|---|---|---|---|---|
+| [`inclusive-design/baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot) | `BSD-3-Clause` | `1,518 B`, `LICENSE@main`, © `2023-2024` Inclusive Design Institute | `7` | `2026-09-18` | 🟢 Generative-AI exploration for **Bliss-symbol `AAC`** users — the only permissive *AI* instrument this base has found facing non-speaking learners |
+| [`inclusive-design/adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) | `BSD-3-Clause` | `1,562 B`, `LICENSE@main`, © `2023-2026` Inclusive Design Research Centre | `2` | `2026-11-02` | 🟢 Customisable `AAC` communication palette. Pushed **yesterday** — the live half of the pair above |
+| [`inclusive-design/responsible-ai`](https://github.com/inclusive-design/responsible-ai) | `BSD-3-Clause` | `1,502 B`, `LICENSE@main`, © `2026` OCAD University | `0` | `2026-11-01` | 🟡 Institutional responsible-AI material under a permissive grant. `0★`: an asset for a governance deliverable, not a dependency |
+| [`TuriSc/voxease`](https://github.com/TuriSc/voxease) | `MIT` | `1,108 B`, `LICENSE@main` | `8` | `2026-04-25` | 🟢 Web `AAC` communication aid. Single-author but `MIT` and the cleanest small `AAC` base found |
+| [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC) | `Apache-2.0` | `11,357 B`, `LICENSE@main` | `34` | `2024-11-22` | 🔴 The most-starred permissive `AAC` repository — and **two years unpushed**. Cite as prior art, not as a base |
+| [`b33kman/special-education-due-process-complaint`](https://github.com/b33kman/special-education-due-process-complaint) | `MIT` | `1,069 B`, `LICENSE@main` | `1` | `2026-10-10` | 🟡 AI writer for US special-education **due-process complaints**. `1★`: evidence that the `IEP` demand is being met by one-person projects |
+
+🔴 **The licence tier that matters commercially, and it is a new rule rather than a new row.** The LATAM
+estate found this pass — [`eol-uchile`](https://github.com/eol-uchile), Educación Online of the Universidad
+de Chile, `113` repositories — is `24` `AGPL-3.0`, `22` `MIT`, `1` `Apache-2.0` and `66` ungranted. Split by
+**function** rather than by count, the two licences do not overlap at all:
+
+| Component class | `AGPL-3.0` | `MIT` | `Apache-2.0` | No grant |
+|---|---|---|---|---|
+| `XBlock` — functional learning components | `15` | `0` | `0` | `5` |
+| Theme — presentation | `0` | `12` | `0` | `5` |
+| Container / deploy / ops | `0` | `2` | `0` | `6` |
+| Everything else | `9` | `8` | `1` | `50` |
+
+🟡 **`P634-0`, registered as `634-A`:** in an estate built **on** a copyleft core, the permissive subset is
+the layer the core's licence cannot reach — themes, images, deployment. Every component that *does
+pedagogy* inherits `AGPL-3.0` from Open edX. 🔴 So "`23 of 113` permissive" is a true count and a
+misleading one: for a studio, the reusable functionality in this estate is `0`, and the reusable
+**deployment practice** is `23`. 🔵 Confirmed on bytes, not inferred:
+[`eol_learner_profiles`](https://github.com/eol-uchile/eol_learner_profiles) — learner profiling and
+personalised recommendation, exactly the component a client would want — reads `AGPL-3.0` at `34,523 B`,
+while [`eol-uchile-theme-2020`](https://github.com/eol-uchile/eol-uchile-theme-2020) reads `MIT` at
+`1,097 B`, © *Educación Online - Universidad De Chile*.
+
+🟢 **`HKUDS/DeepTutor` re-measured:** `54,650★` today against `54,378` published at `p632` (`+272`,
+`0.50 %`), `Apache-2.0`, pushed `2026-10-31`. No drift finding; the row stands.
+🔴 **And one correction to a figure this base nearly took on trust.**
+[`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) was surfaced by a
+secondary roundup as a notable `ai-in-education` entry. Measured: `MIT`, **`5★`**, pushed `2026-08-31`.
+🟡 A GitHub *topic-page listing* is not traction, and a blog that lists it beside a `41,037★` repository
+is not a ranking. Registered as `634-F`.
+
 ## 🆕 `p632` — reads `2026-11-03` — **🟢 `631-F` IS CONFIRMED ON ITS SECOND RUN AND IT PAID BETTER: `11` ACCEPTED ROWS AGAINST `6`, SO THE IN-REGION SUPPLY CHANNEL IS NOT A ONE-OFF. 🟢 THE PASS'S FIND IS AN **ESTATE**, NOT A ROW: A FRENCH HIGHER-EDUCATION CONSORTIUM PUBLISHING `131` REPOSITORIES, `52` OF THEM `Apache-2.0` AND `25` PUSHED IN `2026`, UNHELD FOR `631` PASSES — WHILE THIS BASE ALREADY HELD **BOTH** OF THE FAMOUS FRENCH AND US HE CONSORTIA. 🔴 SO THE GAP WAS NEVER "FRANCE" OR "CONSORTIA": IT IS **ADMINISTRATION vs LEARNING**. 🔴 AND THIS PASS'S OWN LICENCE LADDER MIS-GRADED AN `LGPL-3.0` PAYLOAD AS `GPL-3.0` BECAUSE THE LGPL SHIPS AS A **PAIR** — THE METADATA WAS RIGHT AND THE BYTES MISLED. SEVEN REGISTERED (`632-A`…`632-G`).**
 
 🔵 Every figure below is measured today, each channel with a fabricated control in the same run —

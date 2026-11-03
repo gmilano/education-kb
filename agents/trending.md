@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p634` — **🟢 THE PERMISSIVE `AAC` TIER EXISTS AND IT IS INSTITUTIONAL: `BSD-3-Clause` `AAC` INSTRUMENTS FROM A CANADIAN UNIVERSITY RESEARCH CENTRE, ONE OF THEM PUSHED YESTERDAY, UNHELD FOR `633` PASSES. 🔴 THE `IEP` HALF OF THE SAME GAP IS A MEASURED SECTOR-WIDE ABSENCE — `7` `MIT`, `0` `Apache-2.0`, MAXIMUM `5★` AND THAT MAXIMUM DEAD SINCE `2016`. 🔴 AND THE MANDATED WEB LEGS GO NIL A **NINTH** TIME WITH A `16 of 16` DENOMINATOR. 🟢 `6` NEW AGENT ROWS, ALL PAYLOAD-VERIFIED.**
+
+🟢 **New this week — permissive `AAC`, and it is a publisher rather than a repository.**
+[`inclusive-design`](https://github.com/inclusive-design) (Inclusive Design Research Centre, OCAD
+University, Toronto) publishes `81` repositories, `28` `BSD-3-Clause` and `1` `MIT`, `23` of the
+permissive ones pushed in `2026`. The two that matter for agents:
+[`adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) (`BSD-3-Clause`, `1,562 B`
+payload, © `2023-2026` Inclusive Design Research Centre, pushed **`2026-11-02`**) and
+[`baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot) (`BSD-3-Clause`, `1,518 B`,
+generative AI for Bliss-symbol communication). 🔵 This base held `cboard` (`GPL-3.0`) and `FreeAAC`
+(`AGPL-3.0`) and therefore held `AAC` as a copyleft-only class. That reading is now wrong.
+
+🔴 **The `IEP` half, measured properly after a false start.** The exact-phrase leg returns `11`
+repositories worldwide, which looked decisive — but `p633`'s AND-semantics finding says a phrase leg
+cannot carry an absence claim, so the counterfactual was run: bare `IEP` returns `3,373`. 🟡 Those
+`3,373` are overwhelmingly false friends (`machinalis/iepy` information extraction at `903★`,
+`facebookresearch/clevr-iep` at `804★`, Netflix's Insight Engineering Platform, `IEPF` line extraction,
+`NIEM` Information Exchange Package Documentation). 🟢 Placed in education context the population is
+`116`, its maximum is [`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP) at `5★`,
+ungranted and unpushed since `2016`, and the licence-filtered counts are `7` `MIT` and `0`
+`Apache-2.0`. 🔵 The absence is real and it is an absence of **scale**, not of attempts — at least six
+single-author AI `IEP` assistants carry `2026` push dates.
+
+🔴 **The mandated legs, ninth consecutive nil, exhaustively this time.** `0` repository addresses from
+the global leg and all four regional legs, and `16 of 16` facts they surfaced already held: Idaho
+`SB 1227` (`63` hits), Maryland (`146`), Florida (`31`), `K-12 AI Literacy and Readiness Act` (`38`),
+`Reg. (EU) 2026/1744` (`321`), Korea `AI Basic Act` (`187`), Vietnam (`532`), Australia National AI Plan
+(`20`), UNESCO `IESALC` (`428`), LAC Observatory (`3`), Digital Education Council (`97`), Ipsos (`58`),
+Squirrel AI (`9`), California `AB 1159` (`104`).
+
+🟢 **Re-measured, no drift finding.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+`Apache-2.0`, `54,650★` against `54,378` published at `p632` (`+272`, `0.50 %`), pushed `2026-10-31`.
+
+🔴 **One figure corrected before it entered the base.**
+[`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) was presented by a
+secondary roundup as a notable `ai-in-education` entry. Measured: `MIT`, **`5★`**, pushed `2026-08-31`.
+A topic-page listing is not traction.
+
+🔵 **Instrument note.** `github.com` HTML `HEAD` returned `403` for `7 of 7` addresses probed through
+this session's proxy while `raw.githubusercontent.com` returned `200` for every one of them. Liveness was
+therefore established on the `raw` channel, consistent with what `p624`/`p630` recorded. A `403` here is
+a proxy fact, never a repository fact.
 
 ## 🆕 `2026-11-03` · `p633` — **🔴 THE MANDATED WEB LEGS RETURN AN **EIGHTH** STRAIGHT NIL AND THIS PASS PUTS A DENOMINATOR ON IT: `5 of 5` CANDIDATE ADDRESSES THE GLOBAL AND PER-REGION LEGS SURFACED ARE **ALREADY ON THIS SHELF**, AND EVERY REGULATORY FACT THEY RETURNED IS ALREADY HELD (`895` HITS FOR `Reg. (EU) 2026/1744` ALONE). 🔴 AND THE REASON THE *IN-LANGUAGE* LEGS READ NIL IS NOT THINNESS — IT IS **AND-SEMANTICS**, NOW QUANTIFIED AGAINST AN OR-FORM COUNTERFACTUAL: `3,044` VS `5`, A `609×` COLLAPSE. 🟢 `p613`'s `CC-BY-SA-4.0` READING IS REPRODUCED ON A SECOND DAY BY A SECOND INSTRUMENT. 🟢 `0` NEW AGENT ROWS, STATED RATHER THAN PADDED.**
 

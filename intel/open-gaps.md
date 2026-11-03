@@ -4,6 +4,176 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — `2026-11-03` — **🔴 THIS REGISTER WAS STALE AND ITS OWN GATE SAYS SO: `gate-register-currency` REDS AT `register=p632` vs `shelves=p633`, SO `p633` EITHER DID NOT RUN `make hooks` OR SHIPPED IT RED. 🔴 AND THE GATE'S DENOMINATOR IS `6 of 8` — IT NEVER READS THE TWO APPEND-ONLY TRENDING SHELVES, THE TWO GUARANTEED TO CARRY THE NEWEST PASS. 🟢 `P632-0` REPRODUCES IN `LATAM` AND `NORTH AMERICA`. 🟢 `619-Q` SPLITS WITH DENOMINATORS. EIGHT REGISTERED (`634-A`…`634-H`), AND `make hooks` WAS RUN ON BOTH SIDES: `48 of 70` GREEN AT `HEAD`, `49 of 70` AFTER.**
+
+🔵 Currency: shelves `p634`, this register `p634`, `README.md` `p634` — and unlike `p632`'s prose
+restatement, asserted this pass because `make gate-register-currency` was **executed** here and its
+report is quoted below.
+
+### 🔴 `634-B` — NEW, and it is the gate's own blind spot rather than a missed pass
+
+🔵 `gate-register-currency` has existed since `p418` to stop exactly what happened at `p633`. Run today,
+before any edit, it reported:
+
+| File compared | Finding | Detail |
+|---|---|---|
+| `intel/open-gaps.md` | `P418-REGISTER-STALE` | register newest `p632`; `intel/market.md` newest `p633`; stale by `1` pass |
+| `intel/open-gaps.md` | `P418-REGISTER-STALE` | register newest `p632`; `intel/trends.md` newest `p633`; stale by `1` pass |
+| `intel/open-gaps.md` | `P418-REGISTER-STALE` | register newest `p632`; `compose/patterns.md` newest `p633`; stale by `1` pass |
+
+🔴 **So the gate worked and was not run** — `p633` advanced four shelves and left the register behind.
+🔴 **The structural half is worse than the missed pass.** The `Makefile` invokes the gate over **six**
+files: `agents/top.md`, `intel/market.md`, `intel/trends.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `compose/patterns.md`. It omits [`agents/trending.md`] and
+[`repos/trending.md`] — the two **append-only** shelves that advance on *every* pass and therefore always
+carry the highest pass number. 🟡 A pass that touched only the trending shelves would leave the register
+stale and the gate **green**. Today it reds only because `p633` happened to also touch `market`, `trends`
+and `patterns`.
+🟢 **Repaired this pass:** both trending shelves added to the gate's argument list. 🔴 OPEN, and it is the
+general form: `gate-register-currency` is not the only gate invoked over a hand-written file list. No
+census exists of which gates read which shelves, so other gates may carry the same short denominator.
+
+### 🟢 `634-A` — NEW: `P634-0`, and it qualifies `P632-0` rather than extending it
+
+🔵 `P632-0` (*"permissive supply is published by institutions, and institutions publish estates"*) is
+`4 for 4` on regions where it was run against an institution — `EMEA` `131` repositories, `APAC` `20`,
+`LATAM` `113`, `North America` `81`; `345` total, `112` permissive, `0` held beforehand.
+🔴 **But counting permissive repositories in an estate measures the wrong thing when the estate extends a
+copyleft core.** In [`eol-uchile`](https://github.com/eol-uchile), split by component class:
+
+| Component class | `AGPL-3.0` | `MIT` | `Apache-2.0` | No grant |
+|---|---|---|---|---|
+| `XBlock` — functional | `15` | `0` | `0` | `5` |
+| Theme — presentation | `0` | `12` | `0` | `5` |
+| Container / deploy | `0` | `2` | `0` | `6` |
+| Other | `9` | `8` | `1` | `50` |
+
+🟡 **`P634-0`:** an estate built **on** a copyleft core supplies permissive *presentation and deployment*
+and copyleft *function*; an estate built **beside** one can be permissive throughout (the `EMEA`
+estate's `52` `Apache-2.0` administrative systems). The discriminator is derivation, not region and not
+publisher type.
+🔴 OPEN: tested on exactly one copyleft-core estate. Moodle plugin estates (`GPL-3.0` core) are the
+obvious second specimen and were not run. Until they are, `P634-0` is a one-specimen rule.
+
+### 🟢 `634-C` — `619-Q` SPLITS, with denominators on both halves — and the first measurement was wrong
+
+🔵 `619-Q` has carried since `p619` as *"no permissive K-12 `IEP`/`AAC`/Deaf-education instrument"*,
+narrowed at `p632` by an `Apache-2.0` accommodations platform of record.
+🟢 **The `AAC` half closes as supply.** [`inclusive-design`](https://github.com/inclusive-design) (OCAD
+University) publishes `AAC` instruments under `BSD-3-Clause` —
+[`adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) pushed `2026-11-02` and
+[`baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot), generative AI for Bliss-symbol
+communication — plus [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC) (`Apache-2.0`, `34★`, but
+unpushed since `2024-11-22`) and [`TuriSc/voxease`](https://github.com/TuriSc/voxease) (`MIT`). This base
+had held only `cboard` (`GPL-3.0`) and `FreeAAC` (`AGPL-3.0`) and had therefore mis-read `AAC` as a
+copyleft-only class.
+🔴 **The `IEP` half stands as an absence, and the route to it corrects this pass's own first reading.**
+The exact-phrase leg returned `total=11` worldwide, which looked like a decisive population bound. 🟡 It
+is not one: `p633` measured a `609×` AND-semantics collapse, so the counterfactual was run and bare
+`IEP` returns `3,373`. Those are near-entirely false friends — information extraction (`machinalis/iepy`
+`903★`), `facebookresearch/clevr-iep` (`804★`), Netflix's Insight Engineering Platform, `IEPF` line
+extraction, `NIEM` Information Exchange Package Documentation. 🟢 The defensible measurement is the
+education-context channel: `116` repositories, maximum `5★`
+([`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP), ungranted, dead since `2016`), and
+licence-filtered `7` `MIT` / `0` `Apache-2.0`.
+🟡 So `619-Q` is restated: **`AAC` has permissive institutional supply; `IEP` has demand without scale** —
+at least six single-author AI `IEP` assistants carry `2026` push dates.
+🔴 OPEN: Deaf-education `LMS`, the third instrument named in `619-Q`, was not probed this pass.
+
+### 🔴 `634-D` — NEW: in North America the publisher that pays is a university, not a government
+
+🔵 `EMEA`'s paying publisher was a state-funded consortium; `APAC`'s was a national data publisher. The
+analogous North American channel — state education departments — was probed and is near-empty: `tnedu`
+`10` repositories with `0` graded grants and nothing pushed since `2019`; `OregonEdu` `6`, `0` graded,
+SharePoint administration; `MSDE-OCCE` `2`, one of them `MIT`
+([`pre-k-calc`](https://github.com/MSDE-OCCE/pre-k-calc), © Maryland State Department of Education).
+`18` repositories, `1` permissive. Against that, one university research centre published `81` with `29`.
+🔴 OPEN as a bound, not a conclusion: `usedgov` and `ok-sde` returned HTTP `422`, so `2 of 5` probed
+publishers are unmeasured and `18` is a floor. `50` US states exist and `3` were enumerated.
+
+### 🔴 `634-E` — NEW: the mandated web legs are a dead channel for addresses and a live one for currency
+
+🔵 Ninth consecutive nil, and the first with an exhaustive denominator: `0` repository addresses from the
+global leg and all four regional legs, and `16 of 16` regulatory or market facts they surfaced already
+held on this base — Idaho `SB 1227` `63` hits, Maryland `146`, Florida `31`, `K-12 AI Literacy and
+Readiness Act` `38`, `Reg. (EU) 2026/1744` `321`, Korea `AI Basic Act` `187`, Vietnam `532`, Australia
+National AI Plan `20`, UNESCO `IESALC` `428`, LAC Observatory `3`, Digital Education Council `97`, Ipsos
+`58`, Squirrel AI `9`, California `AB 1159` `104`.
+🟡 The legs are not useless — `16 of 16` *held* is a currency confirmation that nothing on the regulatory
+shelves has gone stale. 🔴 OPEN: the task specification treats them as a discovery channel, and nine
+passes of measurement say they are not one. The recommendation is to run them as a **currency check** and
+to run the `org:` channel for discovery, but this base cannot change its own mandate and records the
+divergence instead.
+
+### 🔴 `634-F` — NEW: a topic-page listing arrived dressed as traction
+
+🔵 A secondary roundup surfaced [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education)
+as a notable `ai-in-education` entry alongside a `41,037★` repository. Measured: `MIT`, **`5★`**, pushed
+`2026-08-31`.
+🟡 The mechanism, worth a rule: GitHub **topic pages** list by tag, not by adoption, and a roundup that
+reads a topic page reports membership as prominence. 🔴 OPEN: this base's `agents/trending.md` and
+`repos/trending.md` have taken candidate rows from roundups for many passes, and no census exists of how
+many shelved rows entered through a topic-page listing rather than a measurement.
+
+### 🔴 `634-G` — NEW: the standing check has been shipping **red** and this pass measured it on both sides
+
+🔵 `make hooks` was run before any edit and again after, so the two readings are the same instrument on
+the same machine:
+
+| Reading | Gates green | Red |
+|---|---|---|
+| Clean `HEAD` — what `p633` shipped | `48 of 70` | `21` |
+| After `p634`'s edits | `49 of 70` | `20` |
+
+🟢 The only difference between the two lists is `gate-register-currency`, red at `HEAD` and green after.
+Every other red is identical in both — so this pass introduced **no** new failure and repaired one.
+🔴 **But `20` gates are red at `HEAD`**, among them `gate-enumeration`, `gate-dates`, `gate-identity`,
+`gate-prose-claims`, `gate-shelf-consistency`, `gate-promotion-ledger` (`202` findings) and
+`gate-cell-reproduction` (reporting a parse fault, `0` published cells parsed). 🟡 This independently
+corroborates `634-B`: a pass that had run `make hooks` and read it would not have left the register
+stale, because the runner prints the stale-register line in its own summary.
+🔴 OPEN, and deliberately not attempted here: `20` inherited reds are not one pass's work, and clearing
+them by relaxing the gates would be the wrong direction. What `p634` adds is the **baseline measurement**
+— `48 of 70` at `HEAD` — so a later pass can tell repair from drift instead of guessing.
+
+### 🔴 `634-H` — NEW: the address ledger **cannot be regenerated**, and the blocker is the gate's premise rather than the data
+
+🔵 `evidence/address-ledger.tsv` is a generated index (`ingest/address-ledger.py --out`). Regenerated this
+pass it reported `addresses: 4016, filed: 1097, unfiled: 2919` against the committed file's `3,174` rows —
+**`842` addresses this base has published somewhere and never indexed.** `gate-promotion-ledger` held at
+`202` findings either way, so the regeneration does not grow the promotion backlog.
+🔴 **It does red `gate-ledger`, on exactly one row:**
+
+| Channel | `HugeCatLab/ChatTutor` `filed_on` | Verdict |
+|---|---|---|
+| Committed ledger (`HEAD`) | `-` | 🔴 false — see below |
+| Generator output | `agents/top.md,intel/trends.md` | 🟢 true |
+| `gate-ledger` `C5` | demands `-`, *"is `AGPL-3.0` and unshelvable"* | 🔴 premise too strong |
+
+🟢 **Adjudicated against the shelves rather than between the two instruments.** The address is a live
+table row at `agents/top.md:1932`, labelled `🟡 AGPL-3.0` with a copyleft caution, and again at
+`intel/trends.md:4298`. The generator is right and the committed `-` is false.
+🔴 **And the gate's rule does not survive its own corpus:** `moodle/moodle` (`GPL-3.0`),
+`openedx/edx-platform` (`AGPL-3.0`), `instructure/canvas-lms` (`AGPL-3.0`) and `chamilo/chamilo-lms` all
+carry populated `filed_on` values and the gate passes them. This base **does** shelve copyleft rows, with
+a flag — so "`AGPL-3.0` and therefore unshelvable" is not this base's rule, it is one fixture's.
+🟡 **What `p634` did, and why.** The ledger was reverted to `HEAD`. Keeping the regeneration would have
+traded a real repair for a new red; hand-editing the row to `-` would have published a datum this pass
+has just shown to be false. Neither is acceptable, so the file is left untouched and the conflict is
+registered instead.
+🔴 OPEN, with the fix named: `gate-ledger`'s `C5` fixture needs to distinguish *unshelvable* from
+*copyleft-and-flagged*, and until it does, `842` addresses stay unindexed and this pass's `~20` new
+addresses have no ledger rows. 🔵 Consequence to state plainly: `evidence/address-ledger.tsv` is **one
+pass stale by construction** from `p634` onward, and the `0`-ledger-row "unheld" checks this pass relied
+on were run against the committed file, which is the conservative direction — a stale ledger can only
+make a held address look unheld by omission, and both estates were also `0` on a full-text shelf sweep.
+
+🔵 **Instrument note, not a gap.** `github.com` HTML `HEAD` returned `403` for `7 of 7` addresses probed
+through this session's proxy while `raw.githubusercontent.com` returned `200` for all seven. Liveness was
+established on the `raw` channel, consistent with `p624`/`p630`. A `403` here is a proxy fact, never a
+repository fact. 🟢 `632-A` did **not** reproduce: `7 of 7` payload reads agreed with
+`license.spdx_id`, and neither channel is promoted on one day's agreement.
+
 ## 🆕 `p632` — `2026-11-03` — **🟢 `631-F` CLOSES AS AN ASSET ON ITS SECOND RUN (`17` ACCEPTED vs `6`), `630-H` IS CENSUSED AT LAST AND SPLITS INTO FOUR SUBCLASSES, AND `619-Q` NARROWS WITH A COUNTER-EXAMPLE. 🔴 `632-A`: THIS PASS'S OWN LADDER MIS-GRADED AN `LGPL-3.0` PAYLOAD BECAUSE THE LGPL SHIPS AS A **PAIR** — AND THE PLATFORM METADATA WAS THE CORRECT CHANNEL. SEVEN NEW GAPS REGISTERED (`632-A`…`632-G`).**
 
 🔵 Currency, restated in prose per `631-L`'s operative because the gate suite still cannot be executed here:

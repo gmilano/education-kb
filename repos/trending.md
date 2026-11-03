@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p634` — **🟢 THE PUBLISHER-ESTATE OPERATIVE IS NOW `4 for 4` ON REGIONS WHERE IT WAS RUN AGAINST AN INSTITUTION: `113` REPOSITORIES IN CHILE AND `81` IN CANADA, BOTH UNHELD FOR `633` PASSES. 🔴 BUT THE CHILEAN ESTATE'S PERMISSIVE HALF IS THE **NON-FUNCTIONAL** HALF — `15 of 15` `XBlock`s `AGPL-3.0` AGAINST `12 of 12` THEMES `MIT`, ZERO OVERLAP. 🔴 AND THE US STATE-DOE CHANNEL IS MEASURED NEAR-NIL: `18` REPOSITORIES, `1` PERMISSIVE, WITH `2 of 5` PUBLISHERS RETURNING HTTP `422`.**
+
+🟢 **`LATAM` — [`eol-uchile`](https://github.com/eol-uchile), Educación Online, Universidad de Chile.**
+`113` repositories; `24` `AGPL-3.0`, `22` `MIT`, `1` `Apache-2.0`, `66` ungranted; `63` pushed in `2026`,
+three of them pushed `2026-11-02`/`2026-11-03`. `0` ledger rows and `0` shelf mentions before this pass.
+Seven payloads read first-hand, all agreeing with the platform metadata:
+[`eol-uchile-theme-2020`](https://github.com/eol-uchile/eol-uchile-theme-2020) `MIT` `1,097 B`,
+[`edx-openuchile`](https://github.com/eol-uchile/edx-openuchile) `MIT` `1,091 B`,
+[`edx_photo_verification`](https://github.com/eol-uchile/edx_photo_verification) `MIT` `1,097 B`,
+[`edx-cla`](https://github.com/eol-uchile/edx-cla) `MIT` `1,072 B`,
+[`eol-edx`](https://github.com/eol-uchile/eol-edx) `MIT` `1,097 B`,
+[`edx-fluentbit-tracking`](https://github.com/eol-uchile/edx-fluentbit-tracking) `Apache-2.0`
+`10,173 B`, [`eol_learner_profiles`](https://github.com/eol-uchile/eol_learner_profiles) `AGPL-3.0`
+`34,523 B`.
+
+🔴 **And the finding that makes the count misleading.** Split by component class rather than by total,
+the two licences do not overlap: `XBlock`s (functional) `15` `AGPL-3.0` and `0` permissive; themes
+(presentation) `12` `MIT` and `0` copyleft; containers and deploy `2` `MIT`. 🟡 `P634-0`: an estate built
+**on** a copyleft core publishes permissive **presentation and deployment** and copyleft **function**.
+`23 of 113` permissive is true; `0` reusable functionality is the operative number.
+
+🟢 **`North America` — [`inclusive-design`](https://github.com/inclusive-design), Inclusive Design
+Research Centre, OCAD University.** `81` repositories; `28` `BSD-3-Clause`, `1` `MIT`, `3` `GPL-2.0`,
+`49` ungranted or `NOASSERTION`; `23` permissive repositories pushed in `2026`, several pushed
+`2026-11-03`. `0` ledger rows and `0` shelf mentions before this pass. Payloads verified:
+[`adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) `BSD-3-Clause` `1,562 B`,
+[`baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot) `BSD-3-Clause` `1,518 B`,
+[`responsible-ai`](https://github.com/inclusive-design/responsible-ai) `BSD-3-Clause` `1,502 B` ©
+`2026` OCAD University, [`idrc-wcag-reporter`](https://github.com/inclusive-design/idrc-wcag-reporter)
+`MIT` `1,073 B`.
+
+🔴 **The US state-DOE channel, measured and published as a near-nil rather than skipped.** `tnedu`
+(Tennessee) `10` repositories, `0` graded, accountability models last pushed `2019`; `OregonEdu` `6`,
+`0` graded, SharePoint administration scripts; `MSDE-OCCE` (Maryland) `2`, of which
+[`pre-k-calc`](https://github.com/MSDE-OCCE/pre-k-calc) is `MIT` (`1,095 B`, © `2024` Maryland State
+Department of Education, pushed `2026-08-07`) — `18` repositories and `1` permissive grant in total.
+🟡 `usedgov` and `ok-sde` returned HTTP `422` *"the listed users and repositories cannot be searched"*,
+`p629`'s signature that conflates absent with no-permission, so `18` is a **lower bound** and the
+negative is reported as one.
+
+🔵 **Also probed, also published as negatives.** [`IFRS`](https://github.com/IFRS) (Instituto Federal do
+Rio Grande do Sul, Brazil): `22` repositories, `0` permissive, `GPL-3.0` WordPress themes throughout.
+`slepch` (Chilean public school service): `1` repository, an ungranted Odoo addon fork.
+`Educacion-Bogota` and `EducacionRN` (Argentina, Río Negro): HTTP `422`. 🟡 The LATAM publisher channel
+paid once in five probes — productive, not abundant.
+
+🟢 **General-purpose, verified, and not education-specific — recorded as context rather than shelved as
+an education foundation.** [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub)
+`MIT`, `41,037★`, pushed `2026-11-01`: tutorial estate for `LLM`, `RAG`, agent and `MCP` work. It is
+cited across this week's roundups as an education repository; it teaches AI engineering rather than
+serving education institutions, and this base records the distinction instead of the headline.
 
 ## 🆕 `2026-11-03` · `p633` — **🟢 `p632`'s "QUERY THE PUBLISHER, NOT THE KEYWORD" OPERATIVE IS CONFIRMED IN A **SECOND REGION**: AN INDONESIAN EDUCATION-DATA PUBLISHER WITH `20` REPOSITORIES, `8` OF THEM `MIT`, UNHELD FOR `632` PASSES — AND THE ASSET CLASS IS **NATIONAL REFERENCE DATA**, NOT CODE. 🔴 `8 of 11` TOKEN LEGS READ `total=0` AND THE BARE-QUERY CALIBRATIONS PROVE EVERY ONE OF THOSE NILS WAS **MANUFACTURED BY AND-SEMANTICS** (`3,044` OR-FORM VS `5` AND-FORM). 🟡 AND THE `MIT` GRANTS ON THAT ESTATE SIT OVER **GOVERNMENT DATA WHOSE OWN TERMS ARE UNSTATED** — SHELVED FLAGGED, NOT CLEAN.**
 

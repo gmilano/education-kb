@@ -1,0 +1,17 @@
+repo	file@branch	bytes	head_title	graded	metadata_spdx	agree
+eol-uchile/eol-uchile-theme-2020	LICENSE@master	1097	MIT License (c) 2020 Educacion Online - Universidad De Chile	MIT	MIT	yes
+eol-uchile/edx-openuchile	LICENSE@main	1091	MIT License (c) 2021 Open UChile - Universidad De Chile	MIT	MIT	yes
+eol-uchile/edx_photo_verification	LICENSE@master	1097	MIT License (c) 2019 Educacion Online - Universidad De Chile	MIT	MIT	yes
+eol-uchile/edx-cla	LICENSE@master	1072	MIT License (c) 2021 eol-virtuallabx	MIT	MIT	yes
+eol-uchile/eol-edx	LICENSE@master	1097	MIT License (c) 2020 Educacion Online - Universidad De Chile	MIT	MIT	yes
+eol-uchile/edx-fluentbit-tracking	LICENSE@master	10173	Apache License Version 2.0 January 2004	Apache-2.0	Apache-2.0	yes
+eol-uchile/eol_learner_profiles	LICENSE@main	34523	GNU AFFERO GENERAL PUBLIC LICENSE Version 3	AGPL-3.0	AGPL-3.0	yes
+inclusive-design/adaptive-palette	LICENSE@main	1562	BSD 3-Clause License (c) 2023-2026 Inclusive Design Research Centre	BSD-3-Clause	BSD-3-Clause	yes
+inclusive-design/baby-bliss-bot	LICENSE@main	1518	BSD 3-Clause License (c) 2023-2024 Inclusive Design Institute	BSD-3-Clause	BSD-3-Clause	yes
+inclusive-design/responsible-ai	LICENSE@main	1502	BSD 3-Clause License (c) 2026 OCAD University	BSD-3-Clause	BSD-3-Clause	yes
+inclusive-design/idrc-wcag-reporter	LICENSE@main	1073	MIT License (c) 2024 OCAD University	MIT	MIT	yes
+MSDE-OCCE/pre-k-calc	LICENSE@main	1095	MIT License (c) 2024 Maryland State Department of Education	MIT	MIT	yes
+TuriSc/voxease	LICENSE@main	1108	MIT License	MIT	MIT	yes
+RonanOD/OpenAAC	LICENSE@main	11357	Apache License Version 2.0 January 2004	Apache-2.0	Apache-2.0	yes
+dg13788/iep-system	LICENSE@main	1066	MIT License (c) 2026	MIT	MIT	yes
+b33kman/special-education-due-process-complaint	LICENSE@main	1069	MIT License	MIT	MIT	yes

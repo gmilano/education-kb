@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — Pattern: a LATAM Open edX engagement that stays on the permissive side of the line
+
+🟢 **The problem this pattern solves.** A LATAM public university or ministry asks for a branded,
+national-scale online learning platform with AI tutoring. The reflex is Open edX, and Open edX is
+`AGPL-3.0`: anything the studio builds *inside* it is a network-served derivative and its source must be
+offered. This pass measured an estate that has run exactly this deployment for a decade
+([`eol-uchile`](https://github.com/eol-uchile), Universidad de Chile, `113` repositories) and the licence
+line inside it is sharp enough to design against.
+
+**The wiring, and which repository supplies each part:**
+
+1. 🟢 **Platform and deployment — take, do not build.**
+   [`eol-uchile/edx-openuchile`](https://github.com/eol-uchile/edx-openuchile) (`MIT`, `1,091 B` payload,
+   pushed `2026-10-29`) and [`eol-uchile/eol-edx`](https://github.com/eol-uchile/eol-edx) (`MIT`, pushed
+   `2026-11-03`) are national-scale Open edX deployment images under a permissive grant. The platform
+   underneath stays `AGPL-3.0` and is **run**, not modified — which triggers nothing.
+2. 🟢 **Branding — take.** `12` `MIT` themes in the same estate
+   ([`eol-uchile-theme-2020`](https://github.com/eol-uchile/eol-uchile-theme-2020), `1,097 B`, © Educación
+   Online - Universidad De Chile). Fork and rebrand.
+3. 🔴 **In-platform pedagogy — do not build here.** Every graded `XBlock` in the estate is `AGPL-3.0`
+   (`15 of 15`), including [`eol_learner_profiles`](https://github.com/eol-uchile/eol_learner_profiles)
+   (`34,523 B` payload). An `XBlock` the studio writes is a derivative. If the client wants to own it
+   privately, it cannot live here.
+4. 🟢 **AI tutoring — put it beside the platform, not inside it.**
+   [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (`Apache-2.0`, `54,650★` measured `2026-11-03`)
+   runs as its own service and is reached from the course through `LTI 1.3`. The tutor stays
+   `Apache-2.0`, the studio's orchestration stays the client's, and the `AGPL` boundary is never crossed.
+5. 🟢 **Accessibility, which a public-sector tender will require.**
+   [`inclusive-design/idrc-wcag-reporter`](https://github.com/inclusive-design/idrc-wcag-reporter) (`MIT`)
+   for conformance evidence, and
+   [`inclusive-design/adaptive-palette`](https://github.com/inclusive-design/adaptive-palette)
+   (`BSD-3-Clause`, pushed `2026-11-02`) where `AAC` learners are in scope.
+6. 🟡 **Identity and records.** Where the client runs `CAS`/Shibboleth, the `EMEA` administrative estate
+   held since `p632` supplies the permissive integration layer rather than the LATAM one — the Chilean
+   estate's `uchileedxlogin` and `eol_sso` are **ungranted** (`NOASSERTION`), so they are reference, not
+   dependency.
+
+🔴 **What this pattern does not do, stated so nobody quotes it as coverage.** It does not give the client
+a private, proprietary pedagogy layer inside Open edX — no arrangement of these repositories does. If
+that is the requirement, the platform choice is wrong, and the honest alternative is a permissive
+`LMS`-adjacent build with Open edX used only as a content host.
+
+🔵 **Estimate shape:** deployment and branding from the estate is weeks, not months; the `LTI`-bridged
+tutor is the real build; accessibility evidence is a parallel stream that a public tender will score.
 
 ## 🆕 `p633` — Pattern: APAC student-advising agent grounded in national reference data
 

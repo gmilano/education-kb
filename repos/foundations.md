@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 Two institutional estates — added `p634` (`LATAM`/Chile and `North America`/Canada)
+
+🟢 **`P632-0` reproduces twice more, and the operative is now tested in four regions.** `p632` found a
+French higher-education consortium (`EMEA`), `p633` an Indonesian education-data publisher (`APAC`).
+This pass ran the same `org:` channel against `LATAM` and `North America` and both paid, against `0`
+repository addresses from the four mandated regional **web** legs on the same day — the **ninth**
+consecutive nil for those legs.
+
+| Estate | Region | Repos | Permissive | Pushed `2026` | Held before `p634` |
+|---|---|---|---|---|---|
+| [`eol-uchile`](https://github.com/eol-uchile) — Educación Online, Universidad de Chile | `LATAM` | `113` | `22` `MIT` + `1` `Apache-2.0` | `63` | 🔴 `0` ledger rows, `0` shelf mentions |
+| [`inclusive-design`](https://github.com/inclusive-design) — Inclusive Design Research Centre, OCAD University, Toronto | `North America` | `81` | `28` `BSD-3-Clause` + `1` `MIT` | `23` permissive | 🔴 `0` ledger rows, `0` shelf mentions |
+
+🔵 Both were invisible to `633` passes of curation while this base already held their **dependencies** —
+`openedx/edx-platform` and the accessibility-standards layer. That is `p632`'s finding exactly: the
+dependency is held and the estate built on it is not.
+
+### Foundation rows added this pass — `5` real, all payload-verified
+
+| Repo | Grant | Payload read | Pushed | Why it is a foundation |
+|---|---|---|---|---|
+| [`eol-uchile/edx-openuchile`](https://github.com/eol-uchile/edx-openuchile) | `MIT` | `1,091 B`, © `2021` Open UChile | `2026-10-29` | 🟢 A **national-scale Open edX deployment image** under `MIT` — the permissive artefact an AGPL core cannot taint, and the fastest legitimate route to a running LATAM-shaped Open edX |
+| [`eol-uchile/eol-edx`](https://github.com/eol-uchile/eol-edx) | `MIT` | `1,097 B`, © `2020` Educación Online | `2026-11-03` | 🟢 The sibling distribution, pushed **today**. Live deployment practice, not an archive |
+| [`inclusive-design/design-system`](https://github.com/inclusive-design/design-system) | `BSD-3-Clause` | estate-graded `BSD-3-Clause` | `2026-06-10` | 🟢 An accessibility-first design system from the centre that co-authored the `AChecker`/`ATAG` lineage |
+| [`inclusive-design/idrc-wcag-reporter`](https://github.com/inclusive-design/idrc-wcag-reporter) | `MIT` | `1,073 B`, © `2024` OCAD University | `2026-01-06` | 🟢 `WCAG` conformance reporting under `MIT` — the audit-evidence half of an accessibility engagement |
+| [`MSDE-OCCE/pre-k-calc`](https://github.com/MSDE-OCCE/pre-k-calc) | `MIT` | `1,095 B`, © `2024` Maryland State Department of Education | `2026-08-07` | 🟡 Small (`1,268 KB`) but it is a **US state education agency** publishing `MIT` — the only permissive row the state-DOE channel produced |
+
+🔴 **And the honest half: the US state-DOE channel is near-nil and now has a number.** Three of five
+state-level education publishers were enumerable (`tnedu`, `OregonEdu`, `MSDE-OCCE`): `18` repositories
+between them, **`1`** permissive, and `tnedu`'s accountability models were last pushed in `2019`.
+`usedgov` and `ok-sde` returned HTTP `422` *"the listed users and repositories cannot be searched"* — the
+signature `p629` identified, which conflates *absent* with *no permission*, so `18` is a **lower bound**.
+🟡 Registered as `634-D`: in North America the publisher that pays is a **university research centre**,
+not a government body — the inverse of `EMEA`, where the payer was a state-funded consortium.
+
+🔵 **Not a foundation, recorded so a later pass does not re-find it:**
+[`IFRS`](https://github.com/IFRS) (Instituto Federal do Rio Grande do Sul, Brazil) — `22` repositories,
+`0` permissive, `GPL-3.0` WordPress themes throughout. A real institutional estate in `LATAM` with
+nothing a studio can build on.
 
 ## 🆕 The national reference-data tier — added `p633` (`APAC`/Indonesia)
 

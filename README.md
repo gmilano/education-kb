@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — reads `2026-11-03`, commit `2026-11-03` — **🟢 `P632-0` IS NOW `4 for 4`: THE PUBLISHER-ESTATE CHANNEL PAID IN `LATAM` (`113` REPOSITORIES, UNIVERSIDAD DE CHILE) AND `NORTH AMERICA` (`81`, OCAD UNIVERSITY), BOTH UNHELD FOR `633` PASSES. 🔴 BUT THE RULE NEEDED A QUALIFIER: AN ESTATE BUILT **ON** A COPYLEFT CORE PUBLISHES PERMISSIVE PRESENTATION AND COPYLEFT FUNCTION — `15 of 15` `XBlock`s `AGPL-3.0` vs `12 of 12` THEMES `MIT`, ZERO OVERLAP. 🔴 THIS REGISTER WAS STALE AND ITS OWN GATE READS `6 of 8` SHELVES. 🟢 `619-Q` SPLITS WITH DENOMINATORS ON BOTH HALVES.**
+
+🟢 **`634`'s headline, and it finishes a four-pass arc.** `p632` opened the publisher-estate operative in
+`EMEA` and `p633` confirmed it in `APAC`. `p634` ran it against the two regions it had never been run
+against, and both paid: [`eol-uchile`](https://github.com/eol-uchile) — Educación Online of the
+Universidad de Chile, `113` repositories, `22` `MIT` + `1` `Apache-2.0`, `63` pushed in `2026` — and
+[`inclusive-design`](https://github.com/inclusive-design) — the Inclusive Design Research Centre at OCAD
+University, Toronto, `81` repositories, `28` `BSD-3-Clause` + `1` `MIT`, `23` permissive pushed in
+`2026`. 🔵 Neither had a single ledger row or shelf mention beforehand. Across four regions the operative
+has surfaced `345` repositories and `112` permissive grants that `633` passes of keyword curation never
+reached.
+
+🔴 **The qualifier, and it is the pass's real finding.** Counting permissive repositories inside an
+estate measures the wrong thing when the estate **extends** a copyleft core. Split by component class,
+`eol-uchile`'s two licences do not overlap at all: `15 of 15` graded `XBlock`s — the functional,
+pedagogical components — are `AGPL-3.0`, while `12 of 12` graded themes are `MIT` and the container and
+deployment repositories are `MIT`. 🟡 `P634-0`: *the permissive subset of a platform-derived estate is
+the layer the core's licence cannot reach.* So `23 of 113 permissive` is a true count and a misleading
+one — the reusable **functionality** is `0` and the reusable **deployment practice** is `23`. 🔵 The
+`EMEA` estate is the counter-case that keeps this from being a law: its `52` `Apache-2.0` repositories
+are administrative systems standing *beside* a platform rather than deriving from one, and they are
+permissive all the way down. The discriminator is derivation.
+
+🔴 **This base's own housekeeping failed and its own instrument caught it.** `make gate-register-currency`
+was executed before any edit this pass and reported `intel/open-gaps.md` at `p632` against three shelves
+at `p633` — stale by one pass, so `p633` either did not run `make hooks` or shipped it red. 🔴 The
+structural half is worse: the gate is invoked over **six** files and omits `agents/trending.md` and
+`repos/trending.md`, the two append-only shelves that advance on every pass and therefore always carry
+the highest pass number. A pass touching only those two would leave the register stale and the gate
+green. 🟢 Both files are added to the gate's argument list this pass; `634-B` carries the general
+question of which other gates hold a short file list.
+
+🟢 **`619-Q` splits after fifteen passes, with a denominator on each half.** The `AAC` half has permissive
+institutional supply — `BSD-3-Clause` `AAC` instruments from OCAD University, one pushed `2026-11-02`,
+plus `Apache-2.0` and `MIT` smaller bases — correcting this base's reading of `AAC` as a copyleft-only
+class inherited from holding only `cboard` (`GPL-3.0`) and `FreeAAC` (`AGPL-3.0`). 🔴 The `IEP` half is a
+measured sector-wide absence: `116` repositories in the education-context channel, maximum `5★` and that
+maximum ungranted and dead since `2016`, licence-filtered `7` `MIT` and `0` `Apache-2.0`. 🟡 And the
+route to that number corrected this pass's own first reading — the exact-phrase leg's `total=11` was
+discarded as an AND-semantics artefact per `p633`, after the bare-token counterfactual returned `3,373`
+rows that are almost all false friends.
+
+🔴 **North America's publisher is a university, not a government.** Three enumerable US state education
+departments published `18` repositories with `1` permissive grant between them (`tnedu` nothing since
+`2019`; `OregonEdu` SharePoint scripts; `MSDE-OCCE`'s `MIT` `pre-k-calc`), while one Canadian university
+research centre published `81` with `29`. 🟡 `usedgov` and `ok-sde` returned HTTP `422`, so `18` is a
+floor and `3 of 50` states were enumerated. That inverts `EMEA`, where the payer was state-funded, and it
+changes who a studio partners with per region.
+
+🔴 **The mandated web legs read nil a ninth time, now exhaustively.** `0` repository addresses from the
+global leg and all four regional legs, and `16 of 16` regulatory and market facts they surfaced already
+held — `321` hits for `Reg. (EU) 2026/1744` alone, `532` for Vietnam's AI law, `428` for UNESCO
+`IESALC`. 🟡 `634-E` records the divergence rather than resolving it: nine passes say these legs are a
+currency check, not a discovery channel.
+
+🔴 **And the standing check was run on both sides of this pass, which is how `634-B` was found at all.**
+`make hooks` reads `48 of 70` gates green at clean `HEAD` — what `p633` shipped — and `49 of 70` after
+this pass's edits. The single difference is `gate-register-currency`, red before and green after; every
+other red is identical in both lists, so `p634` introduced none of them. 🔴 `20` gates are red at `HEAD`,
+`gate-enumeration`, `gate-dates`, `gate-identity`, `gate-prose-claims` and `gate-promotion-ledger`
+(`202` findings) among them. 🟡 `634-G` records the baseline rather than attempting the repair: `20`
+inherited reds are not one pass's work, and clearing them by relaxing the gates would be the wrong
+direction. 🔴 `634-H` is the one repair this pass **declined**: the address ledger regenerates to `4,016`
+addresses against the committed `3,174` — `842` never indexed — but doing so reds `gate-ledger` on a
+single row whose committed value this pass proved false. Reverted and registered rather than shipped
+either way.
+
+🔵 **Declared gaps, stated rather than left silent.** Deaf-education `LMS` — the third instrument named in
+`619-Q` — was not probed. Moodle plugin estates, the second specimen `P634-0` needs, were not run. The
+`APAC` and `LATAM` publisher channels were probed at five publishers and paid at one: productive, not
+abundant. And `IFRS` (Brazil, `22` repositories, `0` permissive) and `slepch` (Chile, `1` ungranted
+repository) are published here as negatives so a later pass does not re-find them.
+
 ## 🆕 `p632` — reads `2026-11-03`, commit `2026-11-03` — **🟢 `631-F` IS CONFIRMED ON RUN TWO AND PAID BETTER (`17` ACCEPTED ROWS vs `6`), AND THE OPERATIVE CHANGED FROM *TOKEN* TO *PUBLISHER*: ONE `org:` LEG RETURNED A `131`-REPOSITORY FRENCH HIGHER-EDUCATION ESTATE, `52` OF IT `Apache-2.0`, UNHELD FOR `631` PASSES. 🔴 THE GAP WAS NEVER "FRANCE" OR "CONSORTIA" — IT IS **ADMINISTRATION vs LEARNING**. 🔴 AND THIS PASS'S OWN LADDER MIS-GRADED AN `LGPL-3.0` PAYLOAD, WITH THE PLATFORM METADATA THE CORRECT CHANNEL.**
 
 🟢 **`632`'s headline, and it is an estate rather than a row.** `p631` opened an in-region supply channel and

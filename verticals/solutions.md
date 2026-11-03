@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — the Open edX **institutional estate** is a vertical starting point, and its licence line runs through the middle of it
+
+🟢 **What is new.** This base has held `openedx/edx-platform` (`AGPL-3.0`) as a vertical since `p2` and has
+priced it as copyleft-and-therefore-hard. The LATAM estate found this pass changes the shape of that
+advice: [`eol-uchile`](https://github.com/eol-uchile) — `113` repositories, Universidad de Chile — shows
+what a decade of **running** Open edX at national scale publishes, and `23` of it is permissive.
+
+🔴 **But the licence line is functional, not arbitrary**, and it is measured rather than assumed:
+
+| What a client asks for | Where it sits in the estate | Grant | Consequence for an engagement |
+|---|---|---|---|
+| A themed, branded institutional portal | `12` graded themes | `MIT` | 🟢 Fork, rebrand, ship. No notice obligation beyond attribution |
+| A reproducible deployment of the platform | `edx-openuchile`, `eol-edx`, containers | `MIT` | 🟢 The highest-value permissive artefact here: proven national-scale deployment practice |
+| A new graded activity, quiz type, tutoring block | `15` graded `XBlock`s | `AGPL-3.0` | 🔴 Derivative of the `AGPL` core. Network-served, so the source obligation **triggers**. Quote as a build or as a client-owned contribution |
+| Learner profiling / recommendation | `eol_learner_profiles` | `AGPL-3.0` | 🔴 Precisely the component a client wants and the one that cannot be taken proprietary |
+
+🟡 **The sentence to put in an estimate:** *in an Open edX estate the presentation and deployment layers
+are reusable and the pedagogy layer is not.* That is `634-A`, and it generalises beyond this estate as an
+open question — Moodle plugin estates (`GPL-3.0` core) are the obvious next test and have not been run.
+
+🟢 **`619-Q` narrows again, and this time on the supply side rather than by counter-example.** The
+accessibility half of the gap has a **permissive institutional publisher**:
+[`inclusive-design`](https://github.com/inclusive-design) (OCAD University) publishes `28`
+`BSD-3-Clause` repositories, `23` of them pushed in `2026`, covering `AAC` palettes
+([`adaptive-palette`](https://github.com/inclusive-design/adaptive-palette), pushed `2026-11-02`),
+generative-AI `AAC` ([`baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot)), `WCAG`
+reporting and `ATAG` material. 🔵 This is the first time this base can name a permissive **system of
+practice** for accessibility rather than a single repository.
+
+🔴 **The `IEP` half does not narrow — it is now a measured sector-wide absence.** See `634-C`: `7` `MIT`
+and `0` `Apache-2.0` repositories worldwide in the education-context channel, maximum `5★`, and that
+maximum is ungranted and dead since `2016`
+([`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP)). US special-education compliance
+remains a **build**, and that is a finding about the sector, not about this shelf.
+
 ## 🆕 `p632` — reads `2026-11-03` — **🟢 THE "NO PERMISSIVE PLATFORM OF RECORD" FINDING NARROWS TWICE IN ONE PASS: AN `Apache-2.0` HIGHER-ED **ACCOMMODATIONS** SYSTEM OF RECORD EXISTS (`619-Q`), AND A `521★` `MIT` **SCHOOL** SYSTEM OF RECORD EXISTS. 🟢 `630-H` IS CENSUSED FOR THE FIRST TIME AND THE CLASS SPLITS INTO FOUR WITH OPPOSITE COMMERCIAL CONSEQUENCES. 🔴 THE CENSUS INSTRUMENT IS REJECTED WITH A PRECISION FIGURE RATHER THAN ADOPTED.**
 
 ### 🟡 `619-Q` NARROWED, not closed — the accessibility tier has a permissive platform of record, in the wrong segment

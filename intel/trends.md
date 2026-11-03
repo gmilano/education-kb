@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p634` — the supply-side trend now holds in four regions, and its licence shape is the new part
+
+🟢 **`T-supply` (carried from `p632`, now four-region).** Permissive education software is published by
+**institutions**, and institutions publish **estates** rather than repositories. Measured by running the
+same `org:` channel region by region:
+
+| Region | Publisher found | Repos | Permissive | Pass |
+|---|---|---|---|---|
+| `EMEA` | French higher-education consortium | `131` | `52` `Apache-2.0` | `p632` |
+| `APAC` | Indonesian national education-data publisher | `20` | `8` `MIT` | `p633` |
+| `LATAM` | [`eol-uchile`](https://github.com/eol-uchile), Universidad de Chile | `113` | `23` | `p634` |
+| `North America` | [`inclusive-design`](https://github.com/inclusive-design), OCAD University | `81` | `29` | `p634` |
+
+🔵 Four regions, four publishers, `345` repositories, `112` permissive — none of it reachable from the
+keyword legs that this base is mandated to run, and none of it held before the pass that queried the
+publisher.
+
+🔴 **The new and uncomfortable half — `T-supply` needed a licence qualifier and did not have one.**
+Counting permissive repositories in an estate measures the wrong thing when the estate is built on a
+copyleft core. In `eol-uchile`, `15 of 15` graded functional components (`XBlock`s) are `AGPL-3.0` and
+`12 of 12` graded themes are `MIT`, with **zero overlap**. 🟡 The trend is therefore restated:
+*institutional estates supply permissive **deployment and presentation** practice; the functional layer
+carries the core's licence.* The `EMEA` estate is the counter-case that keeps this from being a law —
+its `52` `Apache-2.0` repositories are administrative systems that are **not** derivatives of a copyleft
+platform, so they are permissive all the way down. 🔵 The discriminator is whether the estate extends a
+copyleft core or sits beside it.
+
+🟢 **`T-NA-publisher` — new.** In North America the institutional publisher that produces permissive
+education software is a **university research centre**, not a government agency. Three enumerable US
+state education departments published `18` repositories between them with `1` permissive grant; one
+Canadian university research centre published `81` with `29`. 🔵 That inverts the `EMEA` pattern, where
+the paying publisher was a state-funded consortium, and it changes who a studio partners with per region.
+
+🔴 **`T-mandated-legs-dead` — now a ninth consecutive measurement, with a full denominator.** The global
+and four per-region web legs returned `0` repository addresses and `16 of 16` of the regulatory and
+market facts they surfaced are **already held on this base** — Idaho `SB 1227` (`63` hits), Maryland
+(`146`), Florida (`31`), the `K-12 AI Literacy and Readiness Act` (`38`), `Reg. (EU) 2026/1744` (`321`),
+Korea's `AI Basic Act` (`187`), Vietnam's AI law (`532`), Australia's National AI Plan (`20`), UNESCO
+`IESALC` (`428`), the LAC Observatory (`3`), the Digital Education Council surveys (`97`), Ipsos (`58`),
+Squirrel AI (`9`), California `AB 1159` (`104`). 🟡 Registered as `634-E`: these legs are a **dead
+channel for addresses** and a **live channel for currency confirmation**, and they should be run and
+read as the latter.
+
+🔵 **`T-IEP-greenfield` — new, and it is a demand signal read off a supply absence.** The education-context
+`IEP` channel holds `116` repositories whose maximum is `5★` (ungranted, dead since `2016`) and whose
+permissive population is `7` `MIT` and `0` `Apache-2.0`. 🟢 What is *not* absent is attempts: at least
+six single-author **AI** `IEP` assistants carry `2026` push dates. 🟡 Demand exists, no project has
+consolidated it, and nothing permissive has scale — the definition of greenfield.
 
 ## 🆕 `p633` — the supply-side trend this base can now state in two regions
 
