@@ -1,0 +1,5 @@
+slug	plugin_component	platform_metadata	LICENSE_payload	payload_bytes	source_file_GPL_header_lines	file_checked	verdict
+WSYUTeam/adaptable	theme_adaptable	MIT License	MIT License, (c) 2018 Wuchang Shouyi University	1074	5	version.php	REJECT — GPL-3.0-or-later headers under an MIT LICENSE file
+bensampaio/moodle-theme_cubic	theme_cubic (plugin->version 2012070801)	MIT License	MIT License	1079	5	version.php	REJECT — GPL-3.0-or-later headers under an MIT LICENSE file; also dead since 2012
+maxoffon/moodle_theme_plugin	theme_max	MIT License	MIT License	1091	5	config.php	REJECT — GPL-3.0-or-later headers under an MIT LICENSE file
+TOTAL	3 candidates	3 of 3 reported MIT	3 of 3 MIT payload read	-	3 of 3 carry GPL headers	-	0 clean permissive Moodle theme plugins

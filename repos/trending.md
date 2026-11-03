@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p635` — **🟢 THE `Moodle` ESTATE CHANNEL PAYS A FIFTH TIME (`learnweb`, UNIVERSITY OF MÜNSTER, `64` REPOSITORIES, `0` HITS ON THIS BASE BEFORE TODAY). 🔴 BUT ALL THREE ESTATES GRADE THE SAME WAY AND IT IS THE OPPOSITE OF `p634`: `0` PERMISSIVE THEMES OF `9`, AND THE ONLY PERMISSIVE LAYER IS INFRASTRUCTURE. 🔴 `3 of 3` "`MIT`" THEMES IN THE WILD CARRY `GPL` HEADERS. 🟢 `619-Q` CLOSES ON A THREE-PART ANSWER.**
+
+🟢 **`EMEA` — [`learnweb`](https://github.com/learnweb), University of Münster, Learnweb by `ZHLdigital.`**
+`64` repositories, enumerated completely across three pages. `0` grep hits anywhere on this base before
+this pass — the fifth institutional estate the publisher operative has surfaced and the fourth that
+`634` passes of keyword curation never reached. Graded:
+
+| Class | Count | Grant | Channel |
+|---|---|---|---|
+| Functional plugins (`mod_`, `block_`, `local_`, `tool_`, `lifecycletrigger_`, `repository_`, …) | ~`30` | `GPL-3.0` or `Other` | [`moodle-mod_moodleoverflow`](https://github.com/learnweb/moodle-mod_moodleoverflow) byte-read `GPL-3.0` at `35,140 B` |
+| Theme | `1` | 🔴 **NO GRANT** | [`moodle-theme_wwu2019`](https://github.com/learnweb/moodle-theme_wwu2019): `404` on five licence paths, `version.php` `200` on `master` and `main` |
+| Infrastructure outside the plugin boundary | `1` | 🟢 `MIT` | [`moodledocker-nginx-proxy`](https://github.com/learnweb/moodledocker-nginx-proxy) byte-read `MIT` at `1,078 B` |
+
+🟢 **`EMEA` — [`Moodle-An-Hochschulen`](https://github.com/Moodle-An-Hochschulen), the German
+higher-education Moodle consortium.** `38` repositories, **completely enumerated** (`30` + `8`), which
+makes it this pass's primary specimen because the denominator is exact rather than sampled. `20`
+functional plugins all `GPL-3.0`; `3` graded themes all `GPL-3.0` — including
+[`theme_boost_union`](https://github.com/Moodle-An-Hochschulen/moodle-theme_boost_union) and its child
+theme, both byte-read at `35,146 B` `COPYING.txt`; and exactly `1` permissive repository,
+[`moodle-provisioner-frontend`](https://github.com/Moodle-An-Hochschulen/moodle-provisioner-frontend)
+(`MIT`, `1,065 B`), which is `TypeScript` and not a plugin.
+
+🟡 **`APAC` — [`catalyst`](https://github.com/catalyst), Catalyst IT, New Zealand.** `668` repositories,
+`37` sampled rather than enumerated, so its figures are a sample and are labelled as one. `68`
+repositories match `moodle-mod_` alone. `7` match `theme`, of which `5` show `GPL-3.0` and
+[`catalyst/moodle-theme_boost_union`](https://github.com/catalyst/moodle-theme_boost_union) byte-reads
+the **same `35,146 B` payload** as the German consortium's — `635-H`: two unrelated publishers shipping a
+byte-identical `COPYING.txt` is a copied skeleton, not two licensing decisions.
+🔵 `catalyst`'s `BSD-3-Clause` repositories (`silverstripe-*`) are a different product line and are
+**not** evidence about Moodle; recorded so a later pass does not read them as such.
+
+🔴 **The cross-estate grade, which is the pass's reason for existing.** `p634` named Moodle plugin
+estates as the next test of `P634-0` and predicted permissive presentation. Measured across all three
+estates: `0` permissive themes of `9` graded, and `2` of the `3` permissive repositories found are
+infrastructure (`nginx` proxy, provisioner frontend). 🟡 `P634-0`'s presentation/function split is an
+**Open edX artefact**. `635-B` restates it: the permissive subset is what sits outside the platform's
+extension mechanism, and Moodle's mechanism swallows presentation because a theme there is `PHP`.
+
+🔴 **`635-A` — and the wild population is worse than the estates.** `18` repositories match `moodle theme
+license:mit`; maximum `7★`; the top entries are **Stylus userstyles and browser extensions**, not
+plugins. The three that are genuinely plugins each carry `GPL-3.0-or-later` headers in their own source
+under an `MIT` `LICENSE` file, with GitHub reporting `MIT` for all three. 🔵 Clean permissive `Moodle`
+theme plugins found: **`0`**.
+
+🟢 **`635-C` — `619-Q`'s last unprobed instrument, and the question can now close.** The Deaf-education
+channel holds `27` repositories, maximum `5★`, and the two most-starred are **ungranted**
+([`SignLearn`](https://github.com/Abhishek-singh-007/SignLearn) `5★`,
+[`VieSign-Web`](https://github.com/chauvuha/VieSign-Web) `2★`, both `404` on five licence paths across
+both branches). Three `Apache-2.0` instruments exist —
+[`sign-language-universe`](https://github.com/sign-language-universe/sign-language-universe) (`10,341 B`,
+**non-canonical** Apache text, carried as `Apache-2.0-VARIANT`),
+[`baseera-ai`](https://github.com/mnbakryw/baseera-ai) (`11,356 B`),
+[`SignTogether`](https://github.com/TMTien31/SignTogether) (`11,356 B`) — all `≤2★`, none an `LMS`.
+🟡 So all three of `619-Q`'s instruments are now measured: `AAC` has permissive institutional supply
+(`p634`), `IEP` is a sector-wide absence (`p634`), Deaf-education has permissive **components** at
+near-zero traction and **no platform** (`p635`).
+
 ## 🆕 `2026-11-03` · `p634` — **🟢 THE PUBLISHER-ESTATE OPERATIVE IS NOW `4 for 4` ON REGIONS WHERE IT WAS RUN AGAINST AN INSTITUTION: `113` REPOSITORIES IN CHILE AND `81` IN CANADA, BOTH UNHELD FOR `633` PASSES. 🔴 BUT THE CHILEAN ESTATE'S PERMISSIVE HALF IS THE **NON-FUNCTIONAL** HALF — `15 of 15` `XBlock`s `AGPL-3.0` AGAINST `12 of 12` THEMES `MIT`, ZERO OVERLAP. 🔴 AND THE US STATE-DOE CHANNEL IS MEASURED NEAR-NIL: `18` REPOSITORIES, `1` PERMISSIVE, WITH `2 of 5` PUBLISHERS RETURNING HTTP `422`.**
 
 🟢 **`LATAM` — [`eol-uchile`](https://github.com/eol-uchile), Educación Online, Universidad de Chile.**

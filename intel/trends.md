@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — the supply trend holds, its licence qualifier does not, and a new class appears with dates on it
+
+🔴 **`T-supply-licence` — `p634`'s qualifier is withdrawn and replaced.** `p634` restated the
+institutional-estate trend as *"estates supply permissive **deployment and presentation** practice; the
+functional layer carries the core's licence."* Tested against three `Moodle` estates in two regions, the
+presentation half fails:
+
+| Platform | Presentation substrate | Graded themes | Permissive themes | Permissive layer that remains |
+|---|---|---|---|---|
+| Open edX (`p634`, `eol-uchile`) | assets + configuration | `12` | 🟢 `12` `MIT` | presentation **and** deployment |
+| `Moodle` (`p635`, `3` estates) | `PHP` plugin | `9` | 🔴 `0` | deployment only |
+
+🟡 **`T-extension-substrate` — new, and it is the trend restated so it survives both specimens.** What
+determines an estate's permissive subset is not component *role* but whether the component sits inside
+the platform's **extension mechanism**, and that is a property of the mechanism's substrate. Assets and
+configuration escape the core's licence; code that calls the core's APIs does not. 🔵 So the question to
+ask of a platform is *what substrate does it extend in?* — and it is answerable before an engagement is
+quoted, which the role-based version was not.
+
+🔴 **`T-licence-channel-inversion` — new, and it is the most consequential trend for this base's own
+method.** This base's grant channels have been revised three times in four passes:
+
+| Pass | Finding | Authoritative channel |
+|---|---|---|
+| `p632` | `LGPL` ships as a **pair**, so the payload mis-grades | 🟢 platform metadata |
+| `p634` | `7 of 7` payloads agreed with `license.spdx_id` | 🟡 either, neither promoted |
+| `p635` | `3 of 3` `MIT` `Moodle` themes carry `GPL-3.0-or-later` **source headers** | 🔴 **neither** — the source header |
+
+🟡 The `p635` case is qualitatively different from the other two: payload and metadata agree *with each
+other* and are both contradicted by the code, because `license.spdx_id` is **derived from** the payload.
+🔴 Two channels agreeing is not corroboration when one is computed from the other — and for any platform
+whose plugin contract mandates a licence header (`Moodle`, `WordPress`, `Drupal`), the header is the
+grant. 🔵 This generalises well past education and is the pass's most portable finding.
+
+🟢 **`T-agent-boundary` — new, dateable, and it is a supply class rather than a repository.** The
+permissive `Moodle` population in late `2026` is **agent tooling**: `138` repositories match `moodle
+plugin license:mit`, and sorted by recency the top ten are `MCP` servers, Claude Code plugins and agent
+skills — four of them touched within `24` hours of this read, the freshest `1 hour` before it.
+🔴 **With no traction whatsoever:** maximum `42★`, median `0★`. 🟡 This is the `p634` `IEP` shape in a new
+tier — many independent attempts, no consolidation, nothing permissive at scale. 🔵 The structural reason
+it is happening on the *permissive* side is `T-extension-substrate`: an `MCP` server talks to Moodle's
+web-services API, so it is a consumer of `GPL` software and its author may licence it `MIT`. The licence
+boundary and the architectural boundary are the same line, and the market is finding it.
+
+🔵 **`T-mandated-legs-dead` — tenth consecutive measurement, and it is refined rather than repeated.**
+`0` of `9` repository addresses unheld across eight legs. 🟢 But `4 of 12` *facts* were **not** held —
+Microsoft `Elevate for Educators`, the `Acer Edu Summit Asia Pacific 2026`, Tec de Monterrey's `44`
+redesigned degree programmes, and the EU `AI Act` post-market-surveillance duty applied to schools.
+🟡 `634-E` said these legs are "a currency check, not a discovery channel". At a third fact-yield that is
+too strong: they are dead for **addresses** and live for **facts**. `635-E`.
+
+🔴 **`T-accessibility-absence` — complete, after sixteen passes.** `619-Q`'s three instruments are all now
+measured: `AAC` has permissive institutional supply (`BSD-3-Clause`, OCAD University, `p634`); `IEP` is a
+sector-wide absence (`7` `MIT`, `0` `Apache-2.0`, maximum `5★` dead since `2016`, `p634`);
+Deaf-education has `3` `Apache-2.0` **components** at `≤2★`, its two most-starred repositories
+**ungranted**, and **no `LMS`** (`p635`). 🟡 The trend is not "we have not looked hard enough" — it is
+that the accessibility tier has components and no platform of record, in all three arms, worldwide.
+
 ## 🆕 `p634` — the supply-side trend now holds in four regions, and its licence shape is the new part
 
 🟢 **`T-supply` (carried from `p632`, now four-region).** Permissive education software is published by

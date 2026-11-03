@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — `Moodle` as a vertical starting point: the licence line runs around the plugin boundary, not through the middle of the estate
+
+🟢 **What is new.** This base has held `Moodle` as its first vertical since `p1` and has priced it as
+"`GPL-3.0` core, therefore careful". `p634` graded the Open edX estate and produced a more optimistic
+rule — permissive presentation, copyleft function — and named `Moodle` plugin estates as the test. The
+test was run this pass against three estates (`770` repositories, `EMEA` and `APAC`) and **`Moodle` does
+not behave like Open edX.**
+
+🔴 **The measured comparison, and it changes the advice rather than extending it:**
+
+| What a client asks for | Open edX estate (`p634`) | `Moodle` estates (`p635`) | Consequence for a `Moodle` engagement |
+|---|---|---|---|
+| A themed, branded institutional portal | 🟢 `12 of 12` themes `MIT` — fork and ship | 🔴 `0` permissive of `9` graded themes; `GPL-3.0` at an identical `35,146 B` payload, or ungranted | 🔴 A rebranded Moodle theme is a `GPL-3.0` derivative. **`p634`'s advice must not be reused here** |
+| A reproducible deployment of the platform | 🟢 `MIT` | 🟢 `MIT` — [`moodledocker-nginx-proxy`](https://github.com/learnweb/moodledocker-nginx-proxy), [`moodle-provisioner-frontend`](https://github.com/Moodle-An-Hochschulen/moodle-provisioner-frontend) | 🟢 The one permissive layer, and it is real: proven university-scale practice |
+| A new graded activity, quiz type, tutoring block | 🔴 `AGPL-3.0` | 🔴 `GPL-3.0` | 🔴 Derivative either way. Quote as a client-owned contribution |
+| Learner analytics | 🔴 `AGPL-3.0` in-platform | 🟡 `GPL-3.0` as a `local_` plugin, or `MIT` outside via `MCP` | 🟢 **The choice exists in Moodle** — see [`compose/patterns.md`](../compose/patterns.md) `p635` |
+
+🟡 **`635-B`, the rule that now covers both platforms:** *the permissive subset of a platform-derived
+estate is whatever sits outside the platform's own **extension mechanism**.* Presentation is not
+inherently safe — it was safe in Open edX because a theme there is assets and configuration, and it is
+unsafe in Moodle because a theme there is a `PHP` plugin. 🔵 The question to ask of any `LMS` before
+quoting is *what substrate does this platform extend in?*, and the answer is checkable in an afternoon.
+
+🔴 **The grant-reading rule that has to go in front of all of it (`635-A`).** For a `Moodle` plugin,
+neither the `LICENSE` payload nor GitHub's licence badge is the grant. `3 of 3` candidate `MIT` themes
+carry `GPL-3.0-or-later` headers in their own source files while reporting `MIT` on both channels — a
+fork can replace a repository `LICENSE` and `license.spdx_id` follows the file. 🟡 Grade `version.php` /
+`config.php` headers. 🔵 This is the first case on this base where payload and metadata **agree with each
+other and are both wrong**, which is why two-channel agreement is no longer sufficient corroboration.
+
+🟢 **The vertical that genuinely opened this pass is not a platform — it is the agent boundary.** `138`
+repositories match `moodle plugin license:mit`, maximum `42★`, median `0★`, and the freshest cohort is
+`MCP` servers and agent skills updated within hours of this read.
+[`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) (`MIT`, `9★`) is the cleanest
+permissive entry point to an `LMS` this base holds, because Moodle's web-services API makes an `MCP`
+server a **consumer** of `GPL` software rather than a derivative of it. 🟡 Unclaimed and maintained by
+individuals: a vertical opportunity rather than a vertical solution.
+
+🟢 **`619-Q` can close.** Its third and last instrument was probed this pass: the Deaf-education channel
+holds `27` repositories, maximum `5★`, top two **ungranted**, and three `Apache-2.0` instruments at `≤2★`
+of which **none is an `LMS`** — they are sign-language translation and practice components. 🔵 Final
+three-part answer: `AAC` has permissive institutional supply (`p634`), `IEP` is a measured sector-wide
+absence (`p634`), Deaf-education has permissive components with no platform and no traction (`p635`).
+🔴 In all three arms a permissive **platform of record** for the accessibility / special-education tier
+remains absent — which is the answer, not a failure to find one.
+
 ## 🆕 `p634` — the Open edX **institutional estate** is a vertical starting point, and its licence line runs through the middle of it
 
 🟢 **What is new.** This base has held `openedx/edx-platform` (`AGPL-3.0`) as a vertical since `p2` and has

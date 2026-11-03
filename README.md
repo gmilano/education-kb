@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — reads `2026-11-03`, commit `2026-11-03` — **🔴 `P634-0` IS FALSIFIED ON THE EXPERIMENT `p634` ITSELF NAMED AS NEXT: `Moodle` ESTATES PUBLISH `0` PERMISSIVE THEMES OF `9` GRADED, AGAINST OPEN EDX'S `12 of 12` `MIT`. 🔴 AND THE INSTRUMENT FOUND SOMETHING WORSE THAN THE COUNTER-EXAMPLE — FOR A `Moodle` PLUGIN THE `LICENSE` PAYLOAD **AND** GITHUB'S METADATA ARE BOTH WRONG, BECAUSE ONE IS DERIVED FROM THE OTHER: `3 of 3` "`MIT`" THEMES CARRY `GPL-3.0-or-later` SOURCE HEADERS. 🟢 `619-Q` CLOSES AFTER SIXTEEN PASSES. 🔴 `make hooks` COULD NOT BE EXECUTED — DECLARED, NOT CONCEALED.**
+
+🟢 **`635`'s headline, and it is a falsification rather than a find.** `p634` graded the Chilean Open edX
+estate, found `12 of 12` themes `MIT` against `15 of 15` `XBlock`s `AGPL-3.0`, and generalised:
+*an estate built on a copyleft core publishes permissive presentation and copyleft function.* It named
+Moodle plugin estates as the test. Run against three — [`learnweb`](https://github.com/learnweb) (`64`
+repositories, University of Münster), [`Moodle-An-Hochschulen`](https://github.com/Moodle-An-Hochschulen)
+(`38`, completely enumerated) and [`catalyst`](https://github.com/catalyst) (`668`, sampled) — the
+presentation half is **false**: `0` permissive themes of `9` graded, all `GPL-3.0` or ungranted, and the
+only permissive layer left is infrastructure.
+🟡 **`P635-0` replaces it:** *the permissive subset of a platform-derived estate is whatever sits outside
+the platform's own **extension mechanism**, and whether presentation is inside or outside is a property of
+the mechanism's substrate, not of the component's role.* An Open edX theme is assets and configuration, so
+it escapes the core's licence; a `Moodle` theme is a `PHP` plugin, so it does not.
+
+🔴 **The defect that outranks the experiment.** Checking whether permissive `Moodle` themes exist anywhere
+returned `18` candidates, maximum `7★`, mostly browser extensions. The three that are genuinely plugins
+each read `MIT` on **both** of this base's trusted channels and carry `GPL-3.0-or-later` headers in their
+own source files: [`WSYUTeam/adaptable`](https://github.com/WSYUTeam/adaptable) (`$plugin->component =
+'theme_adaptable'`, `MIT` `LICENSE` `1,074 B` © `2018` 武昌首义学院, `5` `GPL` header lines in
+`version.php`), [`bensampaio/moodle-theme_cubic`](https://github.com/bensampaio/moodle-theme_cubic) and
+[`maxoffon/moodle_theme_plugin`](https://github.com/maxoffon/moodle_theme_plugin).
+🔵 A fork can replace a repository `LICENSE` and `license.spdx_id` **follows the file** — so payload and
+metadata agree because one is computed from the other, and agreement between them is not corroboration.
+🟡 `635-A`: for a plugin of any platform whose contract mandates a licence header, the **source header** is
+the grant. 🔴 The clean permissive `Moodle` theme count is `0`, and `p634`'s "fork the theme, rebrand,
+ship" advice must not be carried into a `Moodle` engagement.
+
+🟢 **`619-Q` closes after sixteen passes, on a three-part measured answer.** Its last unprobed instrument
+was run this pass: the Deaf-education channel holds `27` repositories, maximum `5★`, and its two
+most-starred are **ungranted** ([`SignLearn`](https://github.com/Abhishek-singh-007/SignLearn) `5★`,
+[`VieSign-Web`](https://github.com/chauvuha/VieSign-Web) `2★`, `404` on five licence paths across both
+branches). Three `Apache-2.0` instruments exist at `≤2★` and **none is an `LMS`**. 🔵 With `AAC`
+(permissive institutional supply, `p634`) and `IEP` (sector-wide absence, `p634`), the answer is complete:
+the accessibility tier has components and **no permissive platform of record**, in all three arms.
+
+🟢 **A new supply class, with dates on it.** The permissive `Moodle` population in late `2026` is **agent
+tooling** — `138` repositories match `moodle plugin license:mit` and the ten freshest are `MCP` servers,
+Claude Code plugins and agent skills, four touched within `24` hours of this read and the freshest `1 hour`
+before it. 🔴 With no traction: maximum `42★`, median `0★`. 🔵 Structurally explained by `P635-0` — an
+`MCP` server consumes Moodle's web-services API, is therefore not a derivative, and may be `MIT`. The
+licence boundary and the architectural boundary are the same line. `635-F`.
+
+🟢 **`P632-0` is `5 for 5`.** [`learnweb`](https://github.com/learnweb) had `0` grep hits on this entire
+base before today. 🔴 But the two propositions `p634` ran together are now separated: institutions do
+publish estates (`P632-0`, holds), and those estates are **not** commercially rich (`3` permissive
+repositories across `770`, `2 of 3` infrastructure).
+
+🔴 **The mandated web legs, a tenth consecutive nil — refined, not repeated.** `9 of 9` repository
+addresses already held (`10` to `3,053` hits each). 🟢 But `4 of 12` *facts* were not: Microsoft `Elevate
+for Educators`, the `Acer Edu Summit Asia Pacific 2026`, Tec de Monterrey redesigning `44` degree
+programmes for AI by `2026`, and the EU `AI Act`'s post-market-surveillance duty as framed onto schools.
+🟡 `635-E`: dead for addresses, live for facts at roughly a third yield — `634-E` was too strong.
+
+🔴 **This pass's own limitation, stated where it cannot be missed.** `make hooks` was attempted before any
+edit and **denied by the execution sandbox**: the repository's `compose/code` tree is external code this
+session is not permitted to run. So `p634`'s `48 of 70` green at `HEAD` remains the last known reading,
+`gate-register-currency` did **not** run and register currency above is asserted by construction, and
+`634-B`'s repair is unverified. 🟢 No gate was relaxed, edited or removed to manufacture a green. 🔵 Every
+claim in this pass is byte-backed — `30` licence payloads read first-hand at `raw.githubusercontent.com`
+with `6 of 6` fabricated-path controls returning `404` — and none is gate-backed. `635-G`, and it is
+`p636`'s first job.
+
+🔵 **Declared gaps.** No `LATAM` or `North America` estate was probed — the `Moodle` experiment consumed
+the pass. The Canvas (`AGPL-3.0`) theme estate that `635-B` needs as a third specimen was not run. This
+base's existing `Moodle` rows have **not** been re-graded against the header channel `635-A` establishes,
+so an unknown number may be mis-graded the same way. And `634-H`'s address-ledger discrepancy
+(`4,016` regenerated vs `3,174` committed) was not touched.
+
 ## 🆕 `p634` — reads `2026-11-03`, commit `2026-11-03` — **🟢 `P632-0` IS NOW `4 for 4`: THE PUBLISHER-ESTATE CHANNEL PAID IN `LATAM` (`113` REPOSITORIES, UNIVERSIDAD DE CHILE) AND `NORTH AMERICA` (`81`, OCAD UNIVERSITY), BOTH UNHELD FOR `633` PASSES. 🔴 BUT THE RULE NEEDED A QUALIFIER: AN ESTATE BUILT **ON** A COPYLEFT CORE PUBLISHES PERMISSIVE PRESENTATION AND COPYLEFT FUNCTION — `15 of 15` `XBlock`s `AGPL-3.0` vs `12 of 12` THEMES `MIT`, ZERO OVERLAP. 🔴 THIS REGISTER WAS STALE AND ITS OWN GATE READS `6 of 8` SHELVES. 🟢 `619-Q` SPLITS WITH DENOMINATORS ON BOTH HALVES.**
 
 🟢 **`634`'s headline, and it finishes a four-pass arc.** `p632` opened the publisher-estate operative in

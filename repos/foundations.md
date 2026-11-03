@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — a fifth institutional estate, and the licence rule that governs all five
+
+🟢 **`P632-0` is `5 for 5`.** `p632` found a French higher-education consortium (`EMEA`), `p633` an
+Indonesian education-data publisher (`APAC`), `p634` a Chilean university and a Canadian research centre
+(`LATAM`, `North America`). This pass ran the same `org:` channel against `Moodle`-operating institutions
+and found [`learnweb`](https://github.com/learnweb) — the University of Münster's Learnweb, run by
+`ZHLdigital` — `64` repositories, **`0` ledger rows and `0` shelf mentions before this pass**.
+
+| Estate | Region | Institution | Repos | Permissive | Held before `p635` |
+|---|---|---|---|---|---|
+| [`learnweb`](https://github.com/learnweb) | `EMEA` | University of Münster, Learnweb by `ZHLdigital` | `64` | 🔴 `1` (`MIT`) | 🔴 `0` hits on the whole base |
+| [`Moodle-An-Hochschulen`](https://github.com/Moodle-An-Hochschulen) | `EMEA` | German higher-education Moodle consortium | `38` | 🔴 `1` (`MIT`) | 🟡 `24` hits, never graded |
+| [`catalyst`](https://github.com/catalyst) | `APAC` | Catalyst IT, New Zealand | `668` | 🟡 `1` Moodle + `3` non-Moodle | 🟡 `35` hits, never graded |
+
+🔴 **And this is where `p634`'s advice has to be withdrawn for `Moodle`.** `p634` graded the Open edX
+estate and found `12 of 12` themes `MIT` against `15 of 15` `XBlock`s `AGPL-3.0`, concluding that *an
+estate built on a copyleft core publishes permissive presentation and copyleft function*. Run against
+three `Moodle` estates in two regions, the presentation half is **false**:
+
+| Component class | Open edX estate (`p634`) | `Moodle` estates (`p635`, `3` estates) |
+|---|---|---|
+| Presentation / theme | 🟢 `12 of 12` `MIT` | 🔴 `0` permissive of `9` graded — `GPL-3.0`, or ungranted |
+| Functional learning component | 🔴 `15 of 15` `AGPL-3.0` | 🔴 `GPL-3.0` throughout |
+| Deployment / infrastructure | 🟢 `MIT` | 🟢 `MIT` — and it is the **only** permissive layer |
+
+🟡 **`635-B`, the restatement that survives both specimens:** *the permissive subset of a
+platform-derived estate is whatever sits **outside the platform's own extension mechanism**.* Whether
+presentation falls inside or outside is platform-specific and not a matter of role — an Open edX theme is
+assets and configuration, so it escapes the core's licence; a `Moodle` theme is a `PHP` plugin calling
+Moodle APIs, so it does not. 🔵 The discriminator is the extension mechanism's **substrate**, which
+refines `p634`'s "derivation" to something a studio can check before quoting.
+
+### Foundation rows added this pass — `3` real, all payload-verified, and a stated reason there are only three
+
+| Repo | Grant | Payload read | Why it is a foundation |
+|---|---|---|---|
+| [`learnweb/moodledocker-nginx-proxy`](https://github.com/learnweb/moodledocker-nginx-proxy) | `MIT` | `1,078 B`, `LICENSE@master` | 🟢 The permissive half of a `64`-repository university Moodle estate: reverse-proxy infrastructure for containerised Moodle. Reusable without touching the `GPL` boundary |
+| [`Moodle-An-Hochschulen/moodle-provisioner-frontend`](https://github.com/Moodle-An-Hochschulen/moodle-provisioner-frontend) | `MIT` | `1,065 B`, `LICENSE@main` | 🟢 `TypeScript` provisioning frontend — the single permissive repository in a national HE consortium's estate, and the template for "build beside Moodle, not inside it" |
+| [`catalyst/block_acclaim`](https://github.com/catalyst/block_acclaim) | `MIT` | `1,076 B`, `LICENSE@master`, © `2020` Credly, Inc. | 🟡 A **functional** `block_` plugin under a clean `MIT` grant. Proof that `635-A`'s `GPL` uniformity is a publishing convention, not a legal necessity — `MIT` is `GPL`-compatible in this direction |
+
+🔴 **Why three and not five.** The mandated minimum is five, and padding it would mean admitting rows
+that failed this pass's own header test. `3 of 3` candidate `MIT` `Moodle` **themes** were rejected
+(`635-A`), and the remaining permissive population in these estates is the three rows above. 🟡 Stating
+three with a reason is the honest result; the `9` additional `MIT` rows this pass verified are agent
+tooling and are shelved in [`agents/trending.md`](../agents/trending.md), not here, because an `MCP`
+wrapper is not a foundation.
+
+🔵 **Negatives published so a later pass does not re-find them:**
+[`learnweb/moodle-theme_wwu2019`](https://github.com/learnweb/moodle-theme_wwu2019) — a live institutional
+theme (`version.php` returns `200` on both `master` and `main`) with **no licence payload at all**, `404`
+across five candidate paths. Ungranted, therefore unusable.
+`adaptable-theme/moodle-theme_adaptable` — **absent**, and the basis is stated rather than asserted:
+`404` on `README.md`, `readme.md` and `version.php` across both `main` and `master`, plus `404` on five
+licence paths — `10` probes, no `200`. 🟡 Not published as a link, because it is not an address. This base
+should not carry it as the canonical Adaptable upstream, and the canonical upstream was **not** located
+this pass.
+🔴 The identical `35,146 B` `COPYING.txt` appears in both `catalyst` and `Moodle-An-Hochschulen`, two
+unrelated publishers — so the `GPL` in these estates is a **copied plugin skeleton**, not `70`
+independent licensing decisions. `635-H`.
+
 ## 🆕 Two institutional estates — added `p634` (`LATAM`/Chile and `North America`/Canada)
 
 🟢 **`P632-0` reproduces twice more, and the operative is now tested in four regions.** `p632` found a

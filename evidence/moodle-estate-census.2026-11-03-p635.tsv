@@ -1,0 +1,12 @@
+estate	region	institution	repos_total	enumerated	component_class	count	grant	payload_bytes	channel
+Moodle-An-Hochschulen	EMEA	German higher-education Moodle consortium	38	38	theme (PHP plugin)	3 graded	GPL-3.0	35146	byte-read COPYING.txt
+Moodle-An-Hochschulen	EMEA	German higher-education Moodle consortium	38	38	functional plugin (local_/block_/availability_/auth_/tool_/atto_)	20	GPL-3.0	35146	byte-read COPYING.txt
+Moodle-An-Hochschulen	EMEA	German higher-education Moodle consortium	38	38	outside plugin boundary (TypeScript provisioner frontend)	1	MIT	1065	byte-read LICENSE
+learnweb	EMEA	University of Muenster, Learnweb by ZHLdigital	64	64	theme (moodle-theme_wwu2019)	1	NO GRANT	0	404 on 5 paths, version.php 200
+learnweb	EMEA	University of Muenster, Learnweb by ZHLdigital	64	64	functional plugin	~30	GPL-3.0 / Other	35140	byte-read LICENSE
+learnweb	EMEA	University of Muenster, Learnweb by ZHLdigital	64	64	outside plugin boundary (Python nginx proxy)	1	MIT	1078	byte-read LICENSE
+catalyst	APAC	Catalyst IT (New Zealand), mixed-product vendor	668	37 sampled	theme (PHP plugin)	5 graded	GPL-3.0	35146	byte-read COPYING.txt
+catalyst	APAC	Catalyst IT (New Zealand), mixed-product vendor	668	37 sampled	functional plugin	68 mod_ alone	GPL-3.0	35102	byte-read COPYING
+catalyst	APAC	Catalyst IT (New Zealand), mixed-product vendor	668	37 sampled	third-party vendor plugin (block_acclaim, (c) Credly Inc)	1	MIT	1076	byte-read LICENSE
+catalyst	APAC	Catalyst IT (New Zealand), mixed-product vendor	668	37 sampled	non-Moodle product line (silverstripe-*)	3 graded	BSD-3-Clause	-	search-html metadata
+TOTAL	EMEA+APAC	3 estates	770	139	permissive INSIDE plugin boundary	1 of 9 graded themes = 0; 1 vendor block_	-	-	0 clean permissive themes

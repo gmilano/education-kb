@@ -1,0 +1,10 @@
+leg	query	region	repo_addresses_returned	addresses_unheld	note
+global-agents	top open source AI agents education 2026 github MIT	Global	2	0	microsoft/ai-agents-for-beginners (729 hits held), no education-specific list exists
+global-trending	github trending education AI 2026	Global	4	0	ChinaTextbook(10) PAIDEIA(106) guru-latihan-dinamis(67) ai-engineering-from-scratch(799) — all held
+global-vertical	open source platform education ERP CRM MIT Apache	Global	3	0	openeducat(3053) krayin(337) huly(107) — all held; no education ERP under MIT/Apache surfaced
+global-trends	AI education industry trends 2026	Global	0	0	market figures only; $7.52B 2025 -> $10.6B 2026 @40.9% CAGR already held
+region-na	AI education North America 2026 adoption regulation players	North America	0	0	vendor market reports; 36% regional share / $3.68B 2026 claim unsourced
+region-emea	AI education EMEA 2026 adoption regulation players	EMEA	0	0	EU AI Act high-risk education obligations Aug-2026; Workday 56/48/45 CEO readiness (enterprise, not education)
+region-apac	AI education APAC 2026 adoption regulation players	APAC	0	0	no ministry-level education rules surfaced; enterprise AI context only
+region-latam	AI education LATAM 2026 adoption regulation players	LATAM	0	0	DEC LATAM survey 92% students / 79% faculty (held, 53/46 hits); UNESCO LAC Observatory (3 hits)
+TOTAL	8 legs	Global+4	9	0	TENTH consecutive nil for unheld repository addresses

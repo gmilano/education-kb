@@ -1,0 +1,45 @@
+slug	branch	path	http	bytes	payload_first_match	class	cohort
+learnweb/moodledocker-nginx-proxy	master	LICENSE	200	1078	MIT License	moodle-estate	P635-0-test
+SaadRahman01/claude-moodle-dev	main	LICENSE	200	1067	MIT License	moodle-estate	P635-0-test
+EdmundD28/moodle-codex	main	LICENSE	200	1066	MIT License	moodle-estate	P635-0-test
+IsaacAnwar/moodle-mcp	main	LICENSE	200	1067	MIT License	moodle-estate	P635-0-test
+rudini/claude-edu-plugins	main	LICENSE	200	1067	MIT License	moodle-estate	P635-0-test
+kltn-moolde/moodle-adaptive-learning-plugin	main	LICENSE	200	1085	MIT License	moodle-estate	P635-0-test
+YourAcclaim/block_acclaim	master	LICENSE	200	1076	Copyright 2020 Credly, Inc. <http://youracclaim.com>	moodle-estate	P635-0-test
+NinjasCL/airnotifier-moodle-bridge	main	LICENSE	200	1103	MIT License	moodle-estate	P635-0-test
+SaadRahman01/fabricated-control-p635	main	-	404	0	NO-LICENCE-PAYLOAD	moodle-estate	P635-0-test
+learnweb/not-a-real-repo-p635	main	-	404	0	NO-LICENCE-PAYLOAD	moodle-estate	P635-0-test
+Sm4rtSt1ck/mospolytech-lms-claude-plugin	main	LICENSE	200	1066	MIT License	agent-tier	635-F
+Cyprien-png/HEIG-Kit	main	LICENSE	200	1093	MIT License	agent-tier	635-F
+moodle-by-kelsoncm/moodle-plugin-skill	main	LICENSE	200	1080	MIT License	agent-tier	635-F
+arnoutvree/moodle-plugin-scaffold	main	LICENSE	200	1067	MIT License	agent-tier	635-F
+arnoutvree/moodle-plugin-vibe-review	main	LICENSE	200	1067	MIT License	agent-tier	635-F
+Ennero/moodle-local_metrics	main	LICENSE	200	1077	MIT License	agent-tier	635-F
+JaxisReal/Moodle-Reporte-Limpio	main	LICENSE	200	1085	MIT License	agent-tier	635-F
+zarify/moodle-course-banner	main	LICENSE	200	1067	MIT License	agent-tier	635-F
+arnoutvree/control-fabricated-p635	main	-	404	0	NO-LICENCE-PAYLOAD	agent-tier	635-F
+bensampaio/moodle-theme_cubic	master	LICENSE	200	1079	MIT License	theme-or-deaf	635-A/635-C
+maxoffon/moodle_theme_plugin	main	LICENSE.txt	200	1091	MIT License	theme-or-deaf	635-A/635-C
+WSYUTeam/adaptable	master	LICENSE	200	1074	MIT License	theme-or-deaf	635-A/635-C
+Abhishek-singh-007/SignLearn	main+master	-	404	0	NO-LICENCE-PAYLOAD	theme-or-deaf	635-A/635-C
+chauvuha/VieSign-Web	main+master	-	404	0	NO-LICENCE-PAYLOAD	theme-or-deaf	635-A/635-C
+DoPri/gebaerden	main	LICENSE	200	35148	GNU GENERAL PUBLIC LICENSE	theme-or-deaf	635-A/635-C
+sign-language-universe/sign-language-universe	main	LICENSE	200	10341	Apache License	theme-or-deaf	635-A/635-C
+mnbakryw/baseera-ai	main	LICENSE	200	11356	Apache License	theme-or-deaf	635-A/635-C
+TMTien31/SignTogether	main	LICENSE	200	11356	Apache License	theme-or-deaf	635-A/635-C
+bensampaio/fabricated-p635-control	main	-	404	0	NO-LICENCE-PAYLOAD	theme-or-deaf	635-A/635-C
+Moodle-An-Hochschulen/moodle-theme_boost_union	main	COPYING.txt	200	35146	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+Moodle-An-Hochschulen/moodle-theme_boost_union_child	main	COPYING.txt	200	35146	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+Moodle-An-Hochschulen/moodle-local_staticpage	main	COPYING.txt	200	35146	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+Moodle-An-Hochschulen/moodle-availability_cohort	main	COPYING.txt	200	35146	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+catalyst/moodle-theme_boost_union	main	COPYING.txt	200	35146	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+catalyst/moodle-mod_facetoface	master	COPYING	200	35102	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+learnweb/moodle-mod_moodleoverflow	main	LICENSE	200	35140	GNU GENERAL PUBLIC LICENSE	estate-grade	P635-0-test
+learnweb/moodle-theme_wwu2019	main	-	404	0	NO-LICENCE-PAYLOAD	estate-grade	P635-0-test
+learnweb/moodle-theme_wwu2019	master	-	404	0	NO-LICENCE-PAYLOAD	estate-grade	P635-0-test
+Moodle-An-Hochschulen/THIS-REPO-DOES-NOT-EXIST-p635	main	-	404	0	NO-LICENCE-PAYLOAD	estate-grade	P635-0-test
+catalyst/fabricated-control-p635	master	-	404	0	NO-LICENCE-PAYLOAD	estate-grade	P635-0-test
+HKUDS/DeepTutor	main	README.md	200	-	EXISTENCE-PROBE-OK	inherited-link-check	p634-carried
+satvik314/educhain	main	README.md	200	-	EXISTENCE-PROBE-OK	inherited-link-check	p634-carried
+inclusive-design/idrc-wcag-reporter	main	README.md	200	-	EXISTENCE-PROBE-OK	inherited-link-check	p634-carried
+adaptable-theme/moodle-theme_adaptable	main+master	README.md/readme.md/version.php + 5 licence paths	404	0	ABSENT-10-PROBES	negative-address	p635-correction

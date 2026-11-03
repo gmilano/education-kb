@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — Pattern: a `Moodle` AI engagement that stays outside the `GPL` boundary
+
+🟢 **The problem this pattern solves.** A university or ministry already runs `Moodle` — the most-deployed
+`LMS` in the world — and wants AI tutoring, analytics and course-authoring help on top of it. The reflex
+is to write plugins. `p635` measured why that reflex is expensive: `Moodle`'s core is `GPL-3.0`, its
+extension mechanism is `PHP` plugins, and in three institutional estates (`770` repositories, `EMEA` and
+`APAC`) **every** plugin class is `GPL-3.0` — themes included. Anything the studio writes as a plugin is
+a derivative the client cannot take proprietary.
+
+🔴 **And the trap that comes first, before any architecture.** `p634`'s Open edX advice — *fork the
+`MIT` theme and rebrand* — does not transfer. `3 of 3` repositories GitHub reports as `MIT` `Moodle`
+themes carry `GPL-3.0-or-later` headers in their own source files
+([`WSYUTeam/adaptable`](https://github.com/WSYUTeam/adaptable),
+[`bensampaio/moodle-theme_cubic`](https://github.com/bensampaio/moodle-theme_cubic),
+[`maxoffon/moodle_theme_plugin`](https://github.com/maxoffon/moodle_theme_plugin)). 🟡 **Step zero of the
+pattern is therefore a grant check that reads source headers**, not `LICENSE` files and not licence
+badges.
+
+**The wiring, and which repository supplies each part:**
+
+1. 🟢 **Run the platform, do not modify it.** Containerise with
+   [`learnweb/moodledocker-nginx-proxy`](https://github.com/learnweb/moodledocker-nginx-proxy) (`MIT`,
+   `1,078 B` payload) in front of the University of Münster's Moodle Docker practice, and provision with
+   [`Moodle-An-Hochschulen/moodle-provisioner-frontend`](https://github.com/Moodle-An-Hochschulen/moodle-provisioner-frontend)
+   (`MIT`, `1,065 B`). 🔵 Both are permissive precisely because neither is a plugin — they are the
+   `635-B` layer.
+2. 🟢 **Read the LMS through `MCP`, not through a plugin.**
+   [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) (`MIT`, `1,067 B`, `9★`, updated
+   `9 hours` before this read) exposes courses, materials, deadlines and grades read-only to any `MCP`
+   client. This is the single most important choice in the pattern: the integration boundary becomes
+   Moodle's **web services API**, which is a consumer of `GPL` software, not a derivative of it.
+3. 🟢 **Put the tutoring agent on the `MCP` side and keep it `MIT`.** Compose `moodle-mcp` with the
+   agent frameworks this base already holds — [`DeepTutor`](https://github.com/HKUDS/DeepTutor)
+   (`Apache-2.0`, `54,650★` re-measured `p634`) for the tutoring loop and
+   [`Educhain`](https://github.com/satvik314/educhain) (`MIT`) for content generation. 🔵 Everything in
+   this layer is the client's to own.
+4. 🟡 **Author plugins with agents instead of hand-writing them, and expect to ship them `GPL`.** When a
+   plugin genuinely is required, [`moodle-by-kelsoncm/moodle-plugin-skill`](https://github.com/moodle-by-kelsoncm/moodle-plugin-skill)
+   (`MIT`, `1,080 B`) targets Marketplace review, [`arnoutvree/moodle-plugin-scaffold`](https://github.com/arnoutvree/moodle-plugin-scaffold)
+   scaffolds the skeleton with a `CLAUDE.md` context layer, and
+   [`arnoutvree/moodle-plugin-vibe-review`](https://github.com/arnoutvree/moodle-plugin-vibe-review)
+   reviews changes against Moodle's coding, security and API conventions before commit. 🔴 The *skills*
+   are `MIT`; the plugin they produce is `GPL-3.0`. Quote it as a client-owned contribution, not as
+   studio IP.
+5. 🟡 **Analytics: choose the side deliberately.**
+   [`Ennero/moodle-local_metrics`](https://github.com/Ennero/moodle-local_metrics) (`MIT` file, `1,077 B`,
+   `0★`) is a `local_` plugin and therefore sits **inside** the boundary — run step zero's header check on
+   it before adopting. The permissive alternative is to pull the same telemetry through `moodle-mcp` and
+   compute outside.
+6. 🔵 **For a Spanish-language deployment**, [`JaxisReal/Moodle-Reporte-Limpio`](https://github.com/JaxisReal/Moodle-Reporte-Limpio)
+   (`MIT`, `1,085 B`, `0★`) is the only in-region reporting row this base holds. `0★` means read it as a
+   starting point, not a dependency.
+
+🔴 **What this pattern does not solve, stated rather than implied.** It leaves the `GPL` boundary intact
+rather than crossing it, so any requirement that *must* live in the Moodle UI — a new graded activity
+type, a question type, a gradebook change — is still `GPL-3.0` work. 🟡 The pattern's value is that it
+makes that list short and explicit at quoting time instead of discovering it at delivery.
+
+🔵 **Second specimen still owed.** `635-B` now rests on two platforms (Open edX, `Moodle`). The obvious
+third is a `GPL` platform whose presentation layer is *not* code — a Canvas (`AGPL-3.0`) theme estate —
+and it has not been run.
+
 ## 🆕 `p634` — Pattern: a LATAM Open edX engagement that stays on the permissive side of the line
 
 🟢 **The problem this pattern solves.** A LATAM public university or ministry asks for a branded,

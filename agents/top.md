@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — reads `2026-11-03` — **🔴 `P634-0` DOES NOT GENERALISE AND THE INSTRUMENT THAT TESTED IT FOUND A WORSE DEFECT: IN A `Moodle` ESTATE THE `LICENSE` FILE IS **NOT THE GRANT**. `3 of 3` APPARENT `MIT` `Moodle` THEMES CARRY `GPL-3.0-or-later` HEADERS IN THEIR OWN SOURCE FILES, AND GITHUB REPORTED ALL THREE AS `MIT`. 🟢 `619-Q`'s THIRD AND LAST INSTRUMENT IS MEASURED, SO THE QUESTION CAN CLOSE. 🟢 A FIFTH INSTITUTIONAL ESTATE (`learnweb`, `64` REPOSITORIES) WAS UNHELD FOR `634` PASSES. EIGHT REGISTERED (`635-A`…`635-H`).**
+
+🔵 Every grant below was read first-hand at `raw.githubusercontent.com` this pass, each cohort with a
+fabricated-path control in the same run — `6 of 6` controls returned `404`. Evidence:
+`evidence/grant-byteread.2026-11-03-p635.tsv`,
+`evidence/moodle-header-conflict.2026-11-03-p635.tsv`,
+`evidence/moodle-estate-census.2026-11-03-p635.tsv`,
+`evidence/deaf-education-census.2026-11-03-p635.tsv`,
+`evidence/websearch-legs.2026-11-03-p635.tsv`,
+`evidence/leg-fact-heldness.2026-11-03-p635.tsv`.
+
+🔴 **`635-A`, and it is the pass's finding: a `Moodle` plugin's `LICENSE` file can be swapped and the
+platform metadata follows it.** `p634` closed by naming Moodle plugin estates as the next test of
+`P634-0`. Run, the test produced a counter-example to `P634-0` *and* a defect in the channel this base
+grades with. `Moodle`'s plugin contract requires `GPL-3.0-or-later` headers in plugin source; a fork can
+replace the repository-level `LICENSE` without touching them, and `license.spdx_id` reports the file.
+
+| Candidate | `plugin->component` | GitHub metadata | `LICENSE` payload read | `GPL` header lines | File checked | Verdict |
+|---|---|---|---|---|---|---|
+| [`WSYUTeam/adaptable`](https://github.com/WSYUTeam/adaptable) | `theme_adaptable` | `MIT License` | `MIT`, `1,074 B`, © `2018` 武昌首义学院 | `5` | `version.php` | 🔴 **REJECT** — `GPL-3.0-or-later` under an `MIT` file |
+| [`bensampaio/moodle-theme_cubic`](https://github.com/bensampaio/moodle-theme_cubic) | `theme_cubic` | `MIT License` | `MIT`, `1,079 B` | `5` | `version.php` | 🔴 **REJECT** — same defect; also `$plugin->version = 2012070801`, dead since `2012` |
+| [`maxoffon/moodle_theme_plugin`](https://github.com/maxoffon/moodle_theme_plugin) | `theme_max` | `MIT License` | `MIT`, `1,091 B` | `5` | `config.php` | 🔴 **REJECT** — same defect |
+
+🟡 **So the authoritative channel for a `Moodle` plugin's grant is the source-file header** — not the
+`LICENSE` payload and not the platform metadata. 🔵 This is the third revision of this base's channel
+hierarchy in four passes and the first in which *both* previously-trusted channels are wrong together:
+`p632` found metadata right and bytes misleading (`LGPL` ships as a pair), `p634` confirmed metadata and
+payload agreeing `7 of 7`, and `p635` finds payload and metadata agreeing with **each other** and both
+contradicted by the code. 🔴 Agreement between two channels is not corroboration when one is derived
+from the other.
+
+🟢 **Six new rows — the permissive population that survives the header test, because none of it is a
+`Moodle` plugin.** This is `635-B` stated as a shelf: what is permissive in a `Moodle` estate sits
+*outside* the plugin boundary.
+
+| Agent / instrument | Grant | Payload read | Stars | Updated | What it is |
+|---|---|---|---|---|---|
+| [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) | `MIT` | `1,067 B`, `LICENSE@main` | `9` | `9 hours ago` | 🟢 Read-only `MCP` access to Moodle courses, materials, deadlines and grades. The cleanest agent-side entry point to an LMS this base holds |
+| [`SaadRahman01/claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | `MIT` | `1,067 B`, `LICENSE@main` | `42` | — | 🟢 Moodle development toolkit for AI coding assistants. **Channel maximum** at `42★` |
+| [`EdmundD28/moodle-codex`](https://github.com/EdmundD28/moodle-codex) | `MIT` | `1,066 B`, `LICENSE@main` | `10` | — | 🟡 Local-first, read-only Moodle plugin for Codex. Unheld before this pass |
+| [`Moodle-An-Hochschulen/moodle-provisioner-frontend`](https://github.com/Moodle-An-Hochschulen/moodle-provisioner-frontend) | `MIT` | `1,065 B`, `LICENSE@main` | — | — | 🟢 The **only** permissive repository in a `38`-repository German HE consortium estate — and the only one that is not Moodle `PHP` |
+| [`learnweb/moodledocker-nginx-proxy`](https://github.com/learnweb/moodledocker-nginx-proxy) | `MIT` | `1,078 B`, `LICENSE@master` | — | — | 🟢 Same shape one estate over: `Python` infrastructure beside the platform, permissive. Unheld for `634` passes |
+| [`catalyst/block_acclaim`](https://github.com/catalyst/block_acclaim) | `MIT` | `1,076 B`, `LICENSE@master`, © `2020` Credly, Inc. | `7` upstream | — | 🟡 The exception that proves `635-A` is convention and not law: a **functional** `block_` plugin under a clean `MIT` grant, published by a US vendor rather than a consortium. `MIT` is `GPL`-compatible, so this is legitimate |
+
+🔴 **And the honest half of the row count.** Of `18` repositories GitHub returns for `moodle theme
+license:mit`, the maximum is `7★`, the top entries are **browser extensions and Stylus userstyles rather
+than plugins**, and all three that are genuinely plugins failed the header test above. 🟡 The count of
+clean permissive `Moodle` theme plugins found this pass is **`0`**, against `12 of 12` `MIT` themes in the
+Open edX estate `p634` graded. That is `635-B`.
+
+🟢 **`635-C` — `619-Q`'s third instrument, probed at last, and it closes the question.** `p634` left
+Deaf-education `LMS` explicitly unprobed. Measured: the channel holds `27` repositories, maximum `5★`,
+and the top two are **ungranted** — [`SignLearn`](https://github.com/Abhishek-singh-007/SignLearn) (`5★`,
+`404` on five licence paths across both branches) and
+[`VieSign-Web`](https://github.com/chauvuha/VieSign-Web) (`2★`, same). 🟡 Permissive instruments *do*
+exist in the tier — [`sign-language-universe`](https://github.com/sign-language-universe/sign-language-universe)
+(`Apache-2.0`, `10,341 B`), [`baseera-ai`](https://github.com/mnbakryw/baseera-ai) (`Apache-2.0`,
+`11,356 B`), [`SignTogether`](https://github.com/TMTien31/SignTogether) (`Apache-2.0`, `11,356 B`) — but
+all are `≤2★` and **none is an LMS**: they are translation and practice components.
+🔵 `sign-language-universe`'s payload is `10,341 B` against the canonical Apache `11,357 B`, so its text
+is modified and the row is carried as `Apache-2.0-VARIANT` rather than clean.
+
 ## 🆕 `p634` — reads `2026-11-03` — **🟢 `P632-0` ("INSTITUTIONS PUBLISH ESTATES") REPRODUCES IN A **THIRD AND FOURTH** REGION — `LATAM` (`113` REPOSITORIES, UNIVERSIDAD DE CHILE) AND `NORTH AMERICA` (`81`, OCAD UNIVERSITY) — BOTH UNHELD FOR `633` PASSES. 🔴 BUT THE LATAM ESTATE'S PERMISSIVE HALF IS THE **NON-FUNCTIONAL** HALF: `15 of 15` GRADED `XBlock`s ARE `AGPL-3.0` AND `12 of 12` GRADED THEMES ARE `MIT`, WITH **ZERO OVERLAP**. 🟢 `619-Q` SPLITS ON A DENOMINATOR: THE `AAC` HALF HAS PERMISSIVE INSTITUTIONAL SUPPLY, THE `IEP` HALF IS `7` `MIT` AND `0` `Apache-2.0` REPOSITORIES WORLDWIDE. EIGHT REGISTERED (`634-A`…`634-H`).**
 
 🔵 Six new rows below, every one read first-hand at `raw.githubusercontent.com` this pass. `7 of 7`

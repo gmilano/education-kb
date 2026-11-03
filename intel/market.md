@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p635` — the licence line through a `Moodle` engagement, and a tenth nil on the mandated legs
+
+🟢 **Supply, measured this pass.** The publisher-estate operative paid a fifth time:
+[`learnweb`](https://github.com/learnweb) (University of Münster, `64` repositories, `EMEA`), with
+[`Moodle-An-Hochschulen`](https://github.com/Moodle-An-Hochschulen) (`38`, `EMEA`) graded completely for
+the first time and [`catalyst`](https://github.com/catalyst) (`668`, `APAC`) sampled. 🔴 But unlike
+`p632`–`p634`, the estates are **commercially thin**: `3` permissive repositories across `770`, and
+`2 of 3` are infrastructure rather than learning functionality.
+
+🔴 **The number that changes a quote.** `p634` told this base that an Open edX theme is `MIT` and can be
+forked, rebranded and shipped. For `Moodle` that is false, and three repositories in the wild already
+carry the mistake: `3 of 3` apparent `MIT` `Moodle` themes have `GPL-3.0-or-later` headers in their own
+source files under an `MIT` `LICENSE` file, with GitHub's metadata reporting `MIT` for all three. 🟡 A
+studio that rebrands Moodle on the strength of a repository licence badge ships a `GPL` obligation it
+did not price.
+
+🔵 **The mandated legs, tenth consecutive nil for addresses, with one refinement.** Eight legs returned
+`9` repository addresses, `0` unheld. But `4 of 12` *facts* were **not** held — Microsoft `Elevate for
+Educators`, the `Acer Edu Summit Asia Pacific 2026`, Tec de Monterrey redesigning `44` degree programmes
+for AI by `2026`, and the EU `AI Act` post-market-surveillance duty as applied to schools. 🟡 `635-E`
+corrects `634-E`: dead for addresses, live for facts at roughly a third yield.
+
+## Opportunities by region
+
+### Global
+
+🟢 **The `LMS`-agent boundary is the opportunity, and it is open.** `138` repositories match `moodle
+plugin license:mit`; the maximum is `42★` and the median `0★`. The freshest cohort is entirely agent
+tooling — `MCP` servers, Claude Code plugins, agent skills — four of them touched within `24` hours of
+this read. 🟡 Nothing has consolidated, so the opportunity is to be the permissive, maintained
+`MCP`/agent layer for the world's most-deployed `LMS` rather than to build another plugin.
+🔵 **Priced correctly it is also a licence arbitrage:** work on the agent side of the boundary is `MIT`
+and ownable; work inside the plugin boundary is `GPL-3.0` and is not.
+
+🔴 **What a studio must put in every Moodle estimate** (`635-A`): grade the plugin's **source headers**,
+not its `LICENSE` file and not the platform badge. For Moodle the three channels disagree and the header
+is authoritative.
+
+### North America
+
+🟡 **`IEP` remains the measured greenfield** (`p634`: `7` `MIT`, `0` `Apache-2.0`, maximum `5★` and that
+maximum dead since `2016`) and nothing this pass changes it. 🔵 Microsoft `Elevate for Educators` is
+**new to this base** and is the kind of first-party incumbent move that closes a window; it is recorded
+as a fact, not yet as a market position, because the leg that surfaced it is a vendor channel.
+🟢 The permissive accessibility publisher found at `p634` ([`inclusive-design`](https://github.com/inclusive-design),
+OCAD University) remains the region's best partner-shaped asset.
+
+### EMEA
+
+🟢 **The region supplies the estates and therefore the deployment practice.** Three of the five
+institutional estates this base now holds are `EMEA`, and two were found this pass. For an engagement
+that must run Moodle at university scale, `learnweb` and `Moodle-An-Hochschulen` are proven practice —
+but the reusable part is the **containerisation and provisioning** (`MIT`), not the plugins (`GPL-3.0`).
+🔴 **Regulatory, and new to this base:** the EU `AI Act`'s post-market-surveillance duty is being framed
+onto schools as an ongoing audit obligation. 🟡 Carried as a *claim from a secondary source*, not as a
+reading of the Regulation — but if it holds, the deliverable is an audit-evidence pipeline, and `p634`'s
+[`idrc-wcag-reporter`](https://github.com/inclusive-design/idrc-wcag-reporter) (`MIT`) is the nearest
+permissive starting point this base holds.
+
+### APAC
+
+🟡 **`catalyst` (New Zealand) is a vendor, not a consortium, and that is the regional shape.** `668`
+repositories, the deepest `Moodle` plugin catalogue found in any region, licensed `GPL-3.0` throughout —
+and the one clean `MIT` functional plugin in it,
+[`block_acclaim`](https://github.com/catalyst/block_acclaim), came from a **US** vendor upstream
+(© `2020` Credly, Inc.). 🔵 So in `APAC` the partner is a systems integrator with a maintained catalogue;
+the permissive asset has to be built beside it.
+🔴 **Gap stated rather than left silent:** the `APAC` leg returned `0` repository addresses and no
+ministry-level education AI rule. The `Acer Edu Summit Asia Pacific 2026` is the single new regional fact
+and it is a vendor event, which is weak evidence about policy.
+
+### LATAM
+
+🟢 **One in-region row, and it is small and honest.**
+[`JaxisReal/Moodle-Reporte-Limpio`](https://github.com/JaxisReal/Moodle-Reporte-Limpio) — `MIT`,
+`1,085 B` byte-read, `0★`, updated `2 days` before this read — Spanish-language activity-completion
+reporting and dashboards for Moodle. 🟡 `0★` is not traction; it is evidence that the regional demand is
+being met by individuals, the same shape `p634` measured for `IEP` in North America.
+🔵 **New fact, not previously held:** Tec de Monterrey is redesigning `44` degree programmes to integrate
+AI by `2026`. Together with the held `92%` student / `79%` faculty engagement figure from the Digital
+Education Council's `LATAM` survey, the region's constraint is **not** appetite.
+🔴 **And the honest gap:** `p634` found `eol-uchile` (`113` repositories, Chile) and this pass did not
+extend the `LATAM` estate channel at all — the Moodle test consumed the pass. `IFRS` (Brazil, `22`
+repositories, `0` permissive) stays a published negative. No new `LATAM` estate was probed, and that is a
+declared omission rather than a nil result.
+
 ## 🆕 `p634` — the publisher channel pays in the two remaining regions, and the mandated legs go nil a ninth time
 
 🟢 **Supply, by region, measured this pass.** `LATAM` and `North America` were the two regions the
@@ -24,7 +110,7 @@ the finding: `$9.58 B` (Precedence) to `$10.6 B` (Research and Markets) for AI-i
 agentic subsegment at `$2.37 B` for `2026` and `37.9 %` `CAGR` to `2031` (Mordor). 🟡 Three definitions,
 three numbers; quote the range and the definition, never one figure.
 
-## Opportunities by region
+## Opportunities by region — `p634` (archived)
 
 ### Global
 

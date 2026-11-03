@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p635` — **🟢 A NEW AND DATEABLE SUPPLY CLASS: THE PERMISSIVE `Moodle` POPULATION IN LATE `2026` IS **AGENT TOOLING**, NOT PLUGINS — `MCP` SERVERS AND AGENT SKILLS, THE FRESHEST PUSHED `1 HOUR` BEFORE THE READ. 🔴 AND IT HAS NO TRACTION: `138` `MIT` REPOSITORIES, MAXIMUM `42★`, MEDIAN `0★`. 🔴 `3 of 3` APPARENT `MIT` `Moodle` THEMES CARRY `GPL` HEADERS UNDER THE `MIT` FILE. 🔴 THE MANDATED WEB LEGS GO NIL A **TENTH** TIME, `9 of 9` ADDRESSES ALREADY HELD.**
+
+🟢 **New this week, and it is a class rather than a repository.** Sorting the `moodle plugin license:mit`
+population by *most recently updated* returns, at the top, almost nothing that is a Moodle plugin in the
+traditional sense. Nine of the ten freshest permissive entries are **agent instruments** — `MCP` servers,
+Claude Code plugins and agent skills built *around* an LMS. Every grant below was byte-read this pass at
+`raw.githubusercontent.com`; the cohort's fabricated-path control returned `404`.
+
+| Repo | Grant | Payload | Stars | Updated | What it is |
+|---|---|---|---|---|---|
+| [`Sm4rtSt1ck/mospolytech-lms-claude-plugin`](https://github.com/Sm4rtSt1ck/mospolytech-lms-claude-plugin) | `MIT` | `1,066 B` | `0` | **`1 hour ago`** | Claude Code plugin for Moodle lab work at Moscow Polytech — course context, GOST-style reports in Typst, submission after confirmation |
+| [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) | `MIT` | `1,067 B` | `9` | `9 hours ago` | Read-only `MCP` access to Moodle courses, materials, deadlines, grades |
+| [`Cyprien-png/HEIG-Kit`](https://github.com/Cyprien-png/HEIG-Kit) | `MIT` | `1,093 B` | `2` | `11 hours ago` | Student toolkit — course knowledge base as `CLI`, `MCP` server and Claude Code plugin |
+| [`Ennero/moodle-local_metrics`](https://github.com/Ennero/moodle-local_metrics) | `MIT` | `1,077 B` | `0` | `22 hours ago` | Student telemetry, performance metrics, academic activity reports |
+| [`moodle-by-kelsoncm/moodle-plugin-skill`](https://github.com/moodle-by-kelsoncm/moodle-plugin-skill) | `MIT` | `1,080 B` | `1` | `yesterday` | Agent skill for building, reviewing and releasing plugins that pass Marketplace review |
+| [`JaxisReal/Moodle-Reporte-Limpio`](https://github.com/JaxisReal/Moodle-Reporte-Limpio) | `MIT` | `1,085 B` | `0` | `2 days ago` | 🔵 Activity-completion reporting and dashboards, Spanish-language — the one `LATAM`-shaped entry in the cohort |
+| [`arnoutvree/moodle-plugin-scaffold`](https://github.com/arnoutvree/moodle-plugin-scaffold) | `MIT` | `1,067 B` | `0` | `3 days ago` | Agent skill scaffolding a plugin project with a `CLAUDE.md` context layer |
+| [`arnoutvree/moodle-plugin-vibe-review`](https://github.com/arnoutvree/moodle-plugin-vibe-review) | `MIT` | `1,067 B` | `1` | `11 days ago` | Agent skill reviewing plugin changes against coding, security and API conventions |
+| [`zarify/moodle-course-banner`](https://github.com/zarify/moodle-course-banner) | `MIT` | `1,067 B` | `0` | `6 days ago` | Course banner images by default URL, category or course |
+
+🔴 **The trend's own counterweight, and it has to be published next to it.** `138` repositories match
+`moodle plugin license:mit` in total; the maximum is
+[`claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) at `42★`, and six of the nine
+rows above sit at `0★` or `1★`. 🟡 This is the `p634` `IEP` shape repeating in a different tier: demand
+visible as a burst of independent attempts, no consolidation, nothing permissive at scale. `635-F`
+records it as greenfield rather than as momentum. 🔵 The dates are the real signal — four of these were
+touched inside `24` hours of the read, which is a *live* class, not an archive.
+
+🔴 **`635-A` — the licence defect found while testing `p634`'s named next experiment.** `3 of 3`
+repositories that GitHub reports as `MIT` `Moodle` themes carry `GPL-3.0-or-later` headers in their own
+source: [`WSYUTeam/adaptable`](https://github.com/WSYUTeam/adaptable) (`$plugin->component =
+'theme_adaptable'`, `MIT` `LICENSE` `1,074 B` © `2018` 武昌首义学院, `5` `GPL` header lines in
+`version.php`), [`bensampaio/moodle-theme_cubic`](https://github.com/bensampaio/moodle-theme_cubic) and
+[`maxoffon/moodle_theme_plugin`](https://github.com/maxoffon/moodle_theme_plugin). 🟡 A fork can replace
+a repository `LICENSE` and `license.spdx_id` follows the file, so **payload and metadata agree and are
+both wrong**. For Moodle plugins the source header is the grant.
+
+🔴 **The mandated legs, a tenth consecutive nil — and this time with a complete address denominator.**
+Eight legs (global `×4`, then North America, EMEA, APAC, LATAM) returned `9` repository addresses and
+`0` of them unheld: `microsoft/ai-agents-for-beginners` (`729` hits), `openeducat` (`3,053`),
+`ai-engineering-from-scratch` (`799`), `krayin` (`337`), `PAIDEIA` (`106`), `huly` (`107`),
+`guru-latihan-dinamis` (`67`), `ChinaTextbook` (`10`), `moodlehq` (`358`).
+🟢 **One refinement rather than a repetition:** `4 of 12` *facts* the legs surfaced are **not** held —
+Microsoft `Elevate for Educators`, the `Acer Edu Summit Asia Pacific 2026`, Tec de Monterrey redesigning
+`44` degree programmes for AI by `2026`, and the EU `AI Act`'s post-market-surveillance duty as applied
+to schools. 🟡 So `634-E` is too strong: these legs are dead for addresses and **live for facts**, at
+roughly a third yield. `635-E`.
+
 ## 🆕 `2026-11-03` · `p634` — **🟢 THE PERMISSIVE `AAC` TIER EXISTS AND IT IS INSTITUTIONAL: `BSD-3-Clause` `AAC` INSTRUMENTS FROM A CANADIAN UNIVERSITY RESEARCH CENTRE, ONE OF THEM PUSHED YESTERDAY, UNHELD FOR `633` PASSES. 🔴 THE `IEP` HALF OF THE SAME GAP IS A MEASURED SECTOR-WIDE ABSENCE — `7` `MIT`, `0` `Apache-2.0`, MAXIMUM `5★` AND THAT MAXIMUM DEAD SINCE `2016`. 🔴 AND THE MANDATED WEB LEGS GO NIL A **NINTH** TIME WITH A `16 of 16` DENOMINATOR. 🟢 `6` NEW AGENT ROWS, ALL PAYLOAD-VERIFIED.**
 
 🟢 **New this week — permissive `AAC`, and it is a publisher rather than a repository.**

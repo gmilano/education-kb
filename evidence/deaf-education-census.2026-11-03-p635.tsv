@@ -1,0 +1,8 @@
+slug	stars	grant	payload_bytes	channel	is_LMS	note
+Abhishek-singh-007/SignLearn	5	NO GRANT	0	404 on 5 paths, main+master	partial	e-learning platform for deaf/mute users — channel maximum and it is ungranted
+chauvuha/VieSign-Web	2	NO GRANT	0	404 on 5 paths, main+master	no	Vietnamese sign-language learning platform
+DoPri/gebaerden	1	GPL-3.0	35148	byte-read LICENSE	no	German Sign Language app on SignDict
+sign-language-universe/sign-language-universe	2	Apache-2.0	10341	byte-read LICENSE	no	monorepo, learning platform + scoring service. NOTE non-canonical Apache byte count (canonical 11357)
+mnbakryw/baseera-ai	1	Apache-2.0	11356	byte-read LICENSE	no	multimodal AI accessibility platform, voice-first tutoring for blind students
+TMTien31/SignTogether	0	Apache-2.0	11356	byte-read LICENSE	no	Vietnamese Sign Language learning platform
+CHANNEL	27 repos total	max 5 stars	-	search-html	0	619-Q third instrument: permissive sign-language COMPONENTS exist at <=2 stars; a permissive Deaf-education LMS is NOT found
