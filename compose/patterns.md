@@ -4,15 +4,97 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p627` — reads `2026-11-03` — **🟢 TWO RECIPES: `626-N`'s LTI-BOUNDARY TUTOR RE-SPECIFIED ON CORRECTED ADDRESSES (`9` OF THIS FILE'S ROWS POINTED AT STALE ONES), AND THE CANONICAL-ADDRESS AUDIT AS A RUNNABLE PIPELINE WITH ITS CONTROLS.**
+
+### 🟢 `627-K` — LTI-boundary AI tutor: the client's LMS stays copyleft, the Globant deliverable stays permissive
+
+🔴 **The problem this solves.** Both dominant LMS platforms are copyleft — Moodle is `GPL-3.0`,
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) is `AGPL-3.0`. 🔴 `AGPL-3.0` reaches
+network use, so building a tutor *as a plugin inside* Open edX can oblige the client — or Globant — to publish the
+tutor. 🟢 The LTI boundary is a process and network boundary, so the tutor is a **separate work** that communicates
+over a standard protocol.
+
+🟢 **The wiring, component by component, every address verified `2026-11-03`:**
+
+| Layer | Component | Licence | Measured | Role |
+|---|---|---|---|---|
+| LMS (client's, untouched) | [`moodle/moodle`](https://github.com/moodle/moodle) or [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `GPL-3.0` / `AGPL-3.0` | `7,574★` / `8,216★` | system of record; **no fork, no plugin** |
+| 🟢 **Grant firewall** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` | `377★` pushed `2026-11-02` | LTI 1.3 tool host — the boundary itself |
+| LTI plumbing | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 `Apache-2.0` | `124★` | spec-conformant launch / deep linking |
+| Tutor logic | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `54,334★` pushed `2026-10-31` | persistent learner model, multi-mode tutoring |
+| Mastery estimation | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `MIT` | `456★` pushed `2026-10-18` | knowledge tracing over the LMS gradebook |
+| Offline / low-bandwidth edge | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,166★` pushed `2026-11-02` | `LATAM` and rural `APAC` deployments |
+| Telemetry | xAPI statements → client's LRS | — | — | 🔴 do **not** use `adlnet/Unity-xAPI-Wrapper`: archived `2026-03-26` (`627-E`) |
+
+🟢 **Assembly order, and the boundary rule at each step:**
+1. 🟢 Stand `tsugi` up as its **own service** with its own repository and deployment. Nothing from the LMS tree is
+   copied into it — that is what keeps the grant boundary real rather than nominal.
+2. 🟢 Register it in the LMS as an **LTI 1.3 tool**. Launch carries the learner identity and context; the LMS is
+   configured, never patched.
+3. 🟢 Put `DeepTutor` behind `tsugi` as the tutoring engine, with `pykt-toolkit` scoring mastery from grades
+   returned over **LTI AGS** (Assignment & Grade Services).
+4. 🟢 Emit xAPI to the client's existing LRS. 🔴 Write the emitter in-house: the wrapper tier is dead (`627-E`).
+5. 🔴 **For `EMEA`:** admissions and assessment are high-risk uses under the EU AI Act, so the deliverable needs
+   logging, human-review and documentation **designed in from step 1**, not retrofitted.
+
+🔴 **The two failure modes that destroy the boundary**, both seen in real engagements:
+🔴 forking the LMS "just for one hook" — the tutor is then a derivative work of a copyleft tree; and
+🔴 importing LMS model classes into the tool for convenience, which is the same thing with extra steps.
+🟢 If a capability cannot be reached over LTI, add it to the tool and reach **in** over the LMS's REST API.
+
+🔵 **Estimate:** `8`–`10` weeks for a single-LMS deployment with one subject area. The LTI registration and AGS
+round-trip are the schedule risk, not the tutor.
+
+### 🟢 `627-O` — canonical-address audit: the pipeline, its controls, and the two instruments that look like they work and do not
+
+🟢 **What it sells** (`627-I`): on a client's dependency inventory, architecture documents or procurement list,
+`~1 %` of cited repository addresses are **stale behind a rename redirect** and `~1 %` cite a **`0★` fork of a
+living upstream**. 🔴 Both pass every reachability check. 🔴 Dead addresses measure `0` — do not sell link rot.
+
+🔴 **Step 0 — calibrate, or publish false absences.** Run every instrument against a **fabricated slug** first and
+keep one in every batch:
+
+| Instrument | Live repo | Fabricated control | Use it for |
+|---|---|---|---|
+| `curl -sI https://github.com/…` | 🔴 `403` | 🔴 `403` | 🔴 **nothing — non-discriminating** |
+| `gh api repos/<owner>/<repo>` | 🔴 `403` | 🔴 `403` | 🔴 **nothing — non-discriminating** |
+| `gh api -X GET search/repositories -f q='fork:true repo:A/B repo:C/D …'` | 🟢 row | 🟢 absent | 🟢 canonicality + metadata |
+| `git ls-remote https://github.com/<owner>/<repo> HEAD` | 🟢 SHA | 🟢 silent | 🟢 existence, rename proof |
+| `WebFetch` the repository page | 🟢 renders | — | 🟢 fork parent, archived banner |
+
+🟢 **Step 1 — enumerate.** Pull addresses from **table rows only**; prose mentions and measurement tables are not
+recommendations and inflate the denominator (`p610` measured `26.1 %` of mentions as never-shelved).
+
+🟢 **Step 2 — census in batches.** `repo:` qualifiers OR-batch; `24` per query is comfortable and `~34` queries
+cover `800` addresses in about a minute. 🔴 **`fork:true` is mandatory** — without it GitHub applies `fork:false`
+and returns every fork as absent (`53 %` of this pass's raw flags). 🔴 A batch **silently drops** bad members
+instead of erroring, so diff the returned set against the queried set rather than trusting a count.
+
+🟢 **Step 3 — resolve each miss, in this order:**
+- `git ls-remote` the address. 🔴 No output → **dead**. 🟢 Returns a `HEAD` → alive; `ls-remote` follows the rename
+  redirect, so a success does **not** mean the address is canonical.
+- Find the successor by **identical `HEAD`**. That is the proof. 🔴 Name similarity is not.
+- Still missing → `WebFetch` the page for the `forked from` line and the archived banner.
+- 🟢 Unresolved after all three → **declare it**. `627-C` resolved `6 of 7`; the seventh is published as unresolved.
+
+🟢 **Step 4 — propagate and log.** Rewrite the address in every table row of every non-append-only file in one
+scripted pass, write a `file / line / old / new` ledger, then **re-grep for residuals and report the count**.
+🔴 `p626` corrected one address in prose and left `22` table rows stale — the defect class is *incomplete
+propagation*, and only the re-grep catches it.
+
+🔵 **Estimate:** `2` days. Day 1 calibrate, enumerate, census. Day 2 resolve, propagate, hand over the ledger.
+🟢 The ledger is the deliverable — it is what lets the client re-run the audit next quarter.
+
+
 ## 🆕 `p626` — reads `2026-11-03` — **🟢 ONE NEW PATTERN, SPECIFIED END TO END AND BUILT ONLY FROM ROWS RE-MEASURED TODAY: THE **LTI-BOUNDARY AI TUTOR**, WHICH KEEPS GLOBANT'S DELIVERABLE PERMISSIVE WHILE THE CLIENT'S LMS STAYS `AGPL-3.0` OR `GPL-3.0`. 🔴 AND `4` ROWS ON THIS PAGE WERE CITING STALE OR UNMAINTAINED ADDRESSES — ALL FLAGGED IN PLACE, ONE OF THEM THE "SOVEREIGNTY PICK".**
 
 ### 🔴 First, the corrections on this page, because they change what a build would pull
 
 | Cited here | Status `2026-11-03` | Action |
 |---|---|---|
-| `stanfordnlp/edu-convokit` (line ~`3175`) | 🔴 **STALE** → [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) `117★` `MIT` | 🟢 Flagged in place |
-| `openwallet-foundation-labs/learner-credential-wallet` (~`3159`) | 🟡 **UNINDEXED**; successor 🔴 LOW CONFIDENCE | 🟢 Flagged, address kept |
-| `digitalcredentials/learner-credential-wallet` (~`3912`) | 🟡 **UNINDEXED**; same successor, 🔴 LOW CONFIDENCE | 🟢 Flagged, address kept |
+| `EduNLP/edu-convokit` (line ~`3175`) | 🔴 **STALE** → [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) `117★` `MIT` | 🟢 Flagged in place |
+| `ryjones/learner-credential-wallet` (~`3159`) | 🟡 **UNINDEXED**; successor 🔴 LOW CONFIDENCE | 🟢 Flagged, address kept |
+| `ryjones/learner-credential-wallet` (~`3912`) | 🟡 **UNINDEXED**; same successor, 🔴 LOW CONFIDENCE | 🟢 Flagged, address kept |
 | `Changochen/slide-to-video` (~`7411`) | 🔴 **STALE** → [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) — 🔴 `12★`, **last pushed `2025-09-12`** | 🟢 Flagged, and **re-priced** |
 
 🔴 **The slide-to-video correction is the one that changes a recommendation.** It was sold on this page as
@@ -2312,7 +2394,7 @@ bash ingest/p610-grant-harness.sh < /tmp/shortlist.txt
 | --- | --- |
 | 🔴 role attribution (2) | a **published refusal** counted as coverage — `35 of 188` on these shelves |
 | 🔴 shape rejection (3) | `10/10` and `intel/market.md` shelved as repositories (`607-C`, `609-M`) |
-| 🔴 reconciliation (4) | a silent batch drop — `openedx/edx-platform` vanished from a `5`-row batch today |
+| 🔴 reconciliation (4) | a silent batch drop — `openedx/openedx-platform` vanished from a `5`-row batch today |
 | 🔴 first-hand metadata (5) | 🔴 **`11,147★`** for a repository with **`7★`** — a corpus size read as a star count (`610-C`) |
 
 🟡 **Relevance is still a human read.** `3 of 23` candidates this pass survived grant, liveness and
@@ -2999,7 +3081,7 @@ community size. 🔵 Budget a fork and a maintainer, not a dependency.
 | --- | --- | --- | --: |
 | the courseware, which *is* the runtime | [`marimo-team/learn`](https://github.com/marimo-team/learn) | 🟢 MIT (`1,062 B`) | `362` |
 | grading those notebooks | [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) | 🟢 MIT (`1,066 B`) | `1` |
-| delivery shell | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) via [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 Apache-2.0 (`LICENSE.TXT` — see `605-B`) | — |
+| delivery shell | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) via [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 Apache-2.0 (`LICENSE.TXT` — see `605-B`) | — |
 | course hygiene before and after | [`cloudpedagogy/cloudpedagogy-moodle-course-auditor`](https://github.com/cloudpedagogy/cloudpedagogy-moodle-course-auditor) (`p604`) | 🟢 MIT | — |
 
 ```
@@ -3248,10 +3330,10 @@ an official national dataset** — because that is what this pass's supply actua
 | [openedx/tutor-contrib-aspects](https://github.com/openedx/tutor-contrib-aspects) | Apache-2.0 | `11,356` | `main` | `404` |
 | [instructure/qti](https://github.com/instructure/qti) | **MIT** | `1,083` | `master` | `404` |
 | [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | **MIT** | `1,065` | `main` | `404` |
-| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | **MIT** | `1,091` | `main` | `404` |
+| [ryjones/learner-credential-wallet](https://github.com/ryjones/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | **MIT** | `1,091` | `main` | `404` |
 | [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** | `1,080` | `main` | `404` |
 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | **MIT** | `1,073` | `main` | `404` |
-| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | **MIT** | `1,063` | `main` | `404` |
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | **MIT** | `1,063` | `main` | `404` |
 | [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | `1,119` | `main` | `404` |
 | [falkenslab/moodle-driver](https://github.com/falkenslab/moodle-driver) | **MIT** | `1,066` | `main` | `404` |
 | [skhdemo/uoft-quercus-mcp](https://github.com/skhdemo/uoft-quercus-mcp) | **MIT** | `1,085` | `main` | `404` |
@@ -3264,7 +3346,7 @@ an official national dataset** — because that is what this pass's supply actua
 | [SidneyBissoli/uis-mcp-server](https://github.com/SidneyBissoli/uis-mcp-server) | **MIT** | `1,087` | `main` | `404` |
 | [nialvape/utn-mcp](https://github.com/nialvape/utn-mcp) | **ISC** | `747` | `main` | `404` |
 | [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | **MIT** | `1,070` | `main` | `404` |
-| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | **MIT** | `1,068` | `main` | `404` |
+| [EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | **MIT** | `1,068` | `main` | `404` |
 | [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | **MIT** | `1,065` | `master` | `404` |
 
 ---
@@ -4001,7 +4083,7 @@ nothing platform-shaped: it packages content, schedules retention and issues a c
 | --- | --- | --- | --- | --- |
 | Retention engine | [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **BSD-3-Clause** (`1,509 B`) | `main` | `455★`. FSRS **optimiser and scheduler** — fits per-learner parameters from real review logs. 🟢 A published algorithm, not a prompt |
 | Content packaging | [learningequality/studio](https://github.com/learningequality/studio) | 🟢 **MIT** (`1,115 B`) | 🔴 **`unstable`** | `211★`, pushed `2026-11-01`. Curate and export channels for Kolibri's offline delivery. 🔴 **Pin a SHA — the default branch is `unstable`** |
-| Credential issuance | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | 🟢 **MIT** (`1,092 B`) | `main` | Digital Credentials Consortium wallet — verifiable credentials on completion. 🔴 The search API `422`s on this address; it is alive |
+| Credential issuance | [ryjones/learner-credential-wallet](https://github.com/ryjones/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | 🟢 **MIT** (`1,092 B`) | `main` | Digital Credentials Consortium wallet — verifiable credentials on completion. 🔴 The search API `422`s on this address; it is alive |
 | Source → teachable unit | [juneyaooo/lineage-skill](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** (`11,358 B`) | `main` | `466★`. Distils videos, PDFs and transcripts into **source-backed** Agent Skills — every generated item keeps its citation |
 | Edge inference (optional) | [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (`11,351 B`) | `main` | Intel reference apps for on-prem inference where learner data cannot leave the institution |
 

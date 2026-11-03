@@ -4,6 +4,166 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p627` — reads `2026-11-03` — **🟢 `626-E`'s "FLAGGED IN PLACE" IS DISCHARGED: `50` STALE ADDRESSES REWRITTEN ACROSS `5` SHELVES, `0` RESIDUAL. 🔴 AND `p626`'s CENSUS IS CORRECTED ON ITS LARGEST NUMBER — `53 %` OF ITS OWN FLAGS WERE **FORKS**, NOT DEFECTS, BECAUSE THE METADATA CHANNEL EXCLUDES FORKS BY DEFAULT. 🔴 DEAD ADDRESSES ON LIVE SELL ROWS: `0`, NOT `1.9 %`. 🟢 A NEW REAL DEFECT CLASS INSTEAD: `3` SELL ROWS CITE A `0★` PERSONAL FORK OF A LIVING UPSTREAM. SEVEN REGISTERED (`627-A`…`627-G`).**
+
+🔵 Every figure below is measured today with controls, and the census is **committed** —
+`evidence/sell-row-canonicality-census.2026-11-03-p627.tsv` (`812` rows),
+`evidence/miss-resolution.2026-11-03-p627.tsv`, `evidence/canonical-propagation-ledger.2026-11-03-p627.tsv`.
+
+### 🔴 `627-A` — the metadata channel excludes forks, so every canonicality census this base has run over-reported absence
+
+🟢 `812` distinct addresses were extracted from **table rows only** across the three sell shelves and censused in
+`34` batches of `24` with a fabricated control in every batch. 🟢 `0` control leaks. Result: `796` CANONICAL,
+`16` MISS (`2.0 %`).
+
+🔴 Then the same `16` were re-queried with `fork:true` added, and **`8` of them came back**:
+
+| Address | `fork:true` result | Class |
+|---|---|---|
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `490★` `MIT` pushed `2026-10-31` | 🟢 fork, alive, retained |
+| [`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) | `32★` `Apache-2.0` 🔴 **archived** | 🔴 archived `2026-03-26` |
+| [`open-aac/sweet-suite-aac`](https://github.com/open-aac/sweet-suite-aac) | `9★` `AGPL-3.0` | 🔴 copyleft, flagged |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | `3★` `NOASSERTION` pushed `2026-06-30` | 🟢 fork is the maintained line |
+| [`ajjalti/EvalStudio`](https://github.com/ajjalti/EvalStudio) | `0★` `NOASSERTION` | 🔴 not sellable |
+| [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | `0★` `MIT` | 🔴 fork mis-cite |
+| [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | `0★` `MIT` | 🔴 fork mis-cite |
+| [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) | `0★` `MIT` | 🔴 fork mis-cite |
+
+> 🔴 **The rule, and it invalidates a number `p626` sold.** `search/repositories` with `repo:` qualifiers applies
+> GitHub's default `fork:false`. A canonicality census without `fork:true` reports **forks as absent**. `8 of 15`
+> real flags here (`53 %`) were this artefact. 🔴 `p626` reported `23 RENAMED` / `25 DEAD` / `26 unindexed` over
+> `1,323` addresses and **persisted no evidence file**, so its split cannot be re-derived — but its instrument had
+> this defect, so the three sub-classes were not separable by it.
+
+### 🟢 `627-B` — the true split on live sell rows, and `dead` is `0`
+
+| Class | Count | Share of `812` |
+|---|---|---|
+| 🟢 CANONICAL | `796` | `98.0 %` |
+| 🔴 RENAMED (successor proven by identical `HEAD`) | `6` | `0.74 %` |
+| 🟢 Fork, excluded by the channel's default | `8` | `0.99 %` |
+| 🟢 This base's own published fabricated control | `1` | `0.12 %` |
+| 🔴 Alive, unindexed, successor unresolved | `1` | `0.12 %` |
+| 🔴 **DEAD** | 🟢 **`0`** | 🟢 **`0.00 %`** |
+
+🔴 **`p626`'s `1.9 %` dead does not reproduce on live recommendation rows.** Nothing this base *sells* is a dead
+address. The defect was always staleness and mis-citation, which are cheaper to fix and worse to leave.
+
+### 🟢 `627-C` — the six renames, each proven by identical `HEAD`, and all `50` row occurrences rewritten
+
+| Published address | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `openedx/edx-platform` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `f2fc446def69` | `8,216★` `AGPL-3.0` `2026-11-02` |
+| `executablebooks/jupyter-book` | [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `526cfa7e76db` | `4,289★` `BSD-3-Clause` `2026-11-02` |
+| `stanfordnlp/edu-convokit` | [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `d845ffdafda3` | `117★` `MIT` `2025-04-19` |
+| `opendigitaleducation/entcore` | [`edificeio/entcore`](https://github.com/edificeio/entcore) | `933435ba7acc` | `24★` `NOASSERTION` `2026-11-02` |
+| `digitalcredentials/learner-credential-wallet` | [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | `1c46a82ba384` | `91★` `MIT` `2026-10-15` |
+| `openwallet-foundation-labs/learner-credential-wallet` | [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | `1c46a82ba384` | `91★` `MIT` `2026-10-15` |
+
+🟢 **`626-E`'s deferred item is resolved.** `p626` published the `learner-credential-wallet` pair as **LOW
+CONFIDENCE** and deliberately did not re-address it. It is now a **three-way alias chain**: both published
+addresses *and* `ryjones/learner-credential-wallet` return the identical `HEAD` `1c46a82ba384`, only the last is
+indexed, and it reads `fork=false` — so it is the repository, transferred, not a fork of it.
+
+🟢 **Propagation, which is the half `626-E` left open:** `50` substitutions across `agents/top.md` (`20`),
+`compose/patterns.md` (`9`), `repos/foundations.md` (`10`), `verticals/solutions.md` (`7`), `intel/trends.md` (`4`).
+🟢 Residual non-canonical addresses in the six shelves' table rows: **`0 of 9`**, verified by re-grep. 🔵 The two
+trending shelves are append-only and were **not** rewritten; this section is the correction of record for them.
+
+### 🔴 `627-D` — a defect class this base has never named: a sell row citing a `0★` personal fork of a living upstream
+
+| Row cited | Stars | 🟢 Fork parent (the real project) | Parent metadata |
+|---|---|---|---|
+| `kvnloo/tutor-mcp` | 🔴 `0★` | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `90★` `MIT` pushed `2026-11-02` |
+| `ashleycribb/learnmcp-xapi` | 🔴 `0★` | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `16★` `MIT` pushed `2025-08-29` |
+| `thc1006/moodle-mcp` | 🔴 `0★` | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | `27★` `MIT` pushed `2026-10-20` |
+
+🔴 **All three are re-pointed to the parent.** A `0★` fork is not a recommendation-grade address: it carries no
+community signal, no release discipline and no guarantee the fork owner will accept a patch.
+
+🔴 **And the cheap way to find the parent is wrong.** An `in:name` search guessed `loyaniu/moodle-mcp` (`55★`) for
+`thc1006/moodle-mcp`; the repository page says the parent is **`G36maid/moodle-mcp`** (`27★`). 🟢 Same-basename
+popularity is **not** parentage — only the page states it, so `WebFetch` is the channel of record for this field.
+
+### 🟢 `627-E` — two forks deliberately **not** re-pointed, with the reason
+
+| Row | Why it stays |
+|---|---|
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) `3★` | 🟢 The fork pushed `2026-06-30`; the parent [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) (`68★`) pushed `2023-01-04` — **`3.8` years quiet**. The fork is the maintained line. 🔴 Both read `NOASSERTION`, so `p607`'s `BSD-3-Clause` Edinburgh attribution is **not** confirmed by this channel and stays owed. |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) `490★` | 🟢 `fork=true`, but it is the EACL `2026` paper's own org at `490★` and pushed `2026-10-31`. Retained; the `fork` flag is recorded so no later pass reads the retention as an oversight. |
+
+🔴 **One row is withdrawn from recommendation rather than re-pointed:**
+[`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) was **archived by its owner on
+`2026-03-26` and is read-only**. Its parent `vbhayden/unity-xapi-wrapper` is `4★` and `4` years quiet. 🔴 The whole
+Unity-xAPI tier is unmaintained — state that to a client rather than shipping either address.
+
+### 🔴 `627-F` — the mandated `curl -sI` verifier is inert here, and so is the `repos/` endpoint
+
+| Instrument | Live repo | Fabricated control | Discriminating? |
+|---|---|---|---|
+| `curl -sI https://github.com/…` | 🔴 `403` | 🔴 `403` | 🔴 **NO** |
+| `gh api repos/OWNER/REPO` | 🔴 `403` | 🔴 `403` | 🔴 **NO** |
+| `search/repositories` `repo:` + `fork:true` | 🟢 row | 🟢 absent | 🟢 **YES** |
+| `git ls-remote … HEAD` | 🟢 SHA | 🟢 no output | 🟢 **YES** |
+| `WebFetch` repository page | 🟢 renders | — | 🟢 **YES** (only source of fork parent) |
+
+🔴 The prompt's own `curl -sI` recipe returns `403` for `moodle/moodle` **and** for a fabricated slug — it cannot
+tell them apart and would have published false absences for every row. 🔴 `gh api repos/…` fails the same way on a
+session-scope refusal. 🟢 Both refusals were caught by carrying a fabricated control, not by inspection.
+See `evidence/instrument-calibration.2026-11-03-p627.tsv`.
+
+### 🟢 `627-G` — star figures on this shelf are **clean**, checked rather than assumed
+
+🔵 A drift check was run because an upstream mirror looked stale. On this base the published figures hold:
+`HKUDS/DeepTutor` `54,312` published vs `54,334` measured (`+22`, `0.04 %`), `pykt-team/pykt-toolkit` `456` exact,
+`instructure/canvas-lms` `6,900` exact, `tsugiproject/tsugi` `377` exact, `Open-TutorAi/open-tutor-ai-CE` `114` vs
+`116`. 🟢 **No drift finding.** Recorded because a negative result stops the next pass re-spending the budget.
+
+🔴 **The stale mirror is elsewhere:** `globant-kb`'s own `education/` directory is frozen at `v6` / `2026-07-14` and
+publishes `DeepTutor` at `22k` (`2.5×` low), `pykt-toolkit` at `1.2k` (`2.6×` high) and `open-tutor-ai-CE` at
+`~800` (`7×` high). 🔴 Anything compiling that directory is serving figures wrong by multiples. Flagged upstream.
+
+### 🔴 `627-P` — the gate field at `HEAD`, published rather than left in a terminal
+
+🔵 Recorded because `574-A`'s mechanism is a pass committing against a red field and saying nothing.
+
+| | Result |
+|---|---|
+| 🟢 Instruments execute in this session | `70` gates ran, none masked (`p300` runner) |
+| Gate field **before** this pass wrote a word (pristine `HEAD` = `p626`) | 🔴 **`48/70` green, `22` red** |
+| Gate field **after** this pass | 🔴 **`48/70` green, `22` red** |
+| 🟢 Red gates **introduced** by this pass | 🟢 **`0`** |
+| Red gates **fixed** by this pass | 🔴 `0` |
+
+🟢 **Method, so the claim is falsifiable:** the baseline was taken by `git worktree add … HEAD` into a clean
+checkout of `p626` and running `make hooks` there — not by reasoning about which gates my edits could touch. The
+two red sets are **identical**, gate for gate: `gate-offline`, `recount`, `gate-derived-counts`,
+`gate-enumeration`, `gate-dates`, `gate-identity`, `gate-shelf-consistency`, `gate-prose-claims`,
+`gate-register-currency`, `gate-alias-canonical`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`,
+`gate-census-union`, `gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-case-collision`, `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+
+🔴 **`p626` committed against `22` red gates and its commit message does not mention the gate field at all.**
+That is `574-A` recurring, and it is the reason this disclosure is a standing section rather than a courtesy.
+
+🔵 **One red diagnosed but deliberately not fixed.** `gate-ledger` fails on
+`intel/open-gaps.md` lines `550`/`551`: *"NEW ascending section(s): history is no longer newest-first, or the pass
+dialect mis-read a heading"*. 🔴 The gate names its own alternative explanation, and the file holds `1,593` parsed
+sections of audit history. 🟢 Reordering that history on a guess about `p531`'s heading dialect is a worse outcome
+than an open red, so it is declared and left. 🔵 The named next step is to decide **which** of the gate's two
+explanations holds before touching the file — a one-pass instrument question, not a content edit.
+
+🔵 **One measured side-effect of this pass, stated because it looks like a regression and is not.** The
+`gate-promotion-ledger` filing count moved `914` → `910`. 🟢 Cause: `6` non-canonical addresses were replaced by
+successors this base **already** had filed, so the distinct-address count fell by `4` while `0` rows were lost.
+🟢 The ratchet still passes (`910` ≥ baseline `258`).
+
+> **Open for `p628`:** `project-sunbird/sunbird-lms-service` is alive (`HEAD 48c79a862038`) but indexed under no
+> name this pass could find and has no same-`HEAD` successor — the one genuinely unresolved address. And `p626`'s
+> `1,323`-address census should be re-run **with `fork:true`** so its `23`/`25`/`26` split is replaced by a
+> reproducible one; this pass only re-derived the `812` that sit in table rows.
+
+
 ## 🆕 `p626` — reads `2026-11-03`, commit `2026-11-03` — **🔴 `625-F` IS WITHDRAWN AND REPLACED: `openedx/edx-platform` IS NOT A METADATA-CHANNEL FALSE NEGATIVE, IT IS A **RENAME** — `openedx/openedx-platform`, `8,216★`, `AGPL-3.0`, PROVEN BY IDENTICAL `HEAD`. 🔴 AND THE CLASS IS GENERAL: A `repo:`-QUALIFIER MISS IS A **CANONICALITY SIGNAL**, NOT A CHANNEL DEFECT — WHICH MEANS `ls-remote`, THE INSTRUMENT THIS BASE PROMOTED TO SOLE EXISTENCE ORACLE, **CANNOT SEE RENAMES AT ALL** BECAUSE IT SILENTLY FOLLOWS GITHUB'S REDIRECT. 🟢 `repo:` QUALIFIERS **OR-BATCH**, AND A BATCH SILENTLY DROPS BAD ADDRESSES INSTEAD OF `422`-ING — SO ALL `1,331` SELL-SHELF ADDRESSES WERE CENSUSED IN **`27` QUERIES** AGAINST `p623`'s `3,974` SERIAL PROBES. 🔴 THE CENSUS FINDS **`23` RENAMES** AND `25` DEAD, AND **`7` OF THEM ARE ON LIVE RECOMMENDATION SHELVES RIGHT NOW**. 🟢 CANVAS-LMS'S SIX-MONTH QUIET REPRODUCED ON A SECOND DAY BY A SECOND INSTRUMENT. 🔴 DISCOVERY NIL AGAIN: `12 of 12` HELD. NINE REGISTERED (`626-A`…`626-I`).**
 
 ### 🔴 `626-A` — `625-F` is **withdrawn**: the sector's MOOC platform was renamed, not mis-served
@@ -14,9 +174,9 @@ NO-ROW for `openedx/edx-platform`"*, and concluded the channel *"silently return
 
 | Query | Result |
 |---|---|
-| `repo:openedx/edx-platform` | 🔴 `422 Validation Failed` — *"the listed users and repositories cannot be searched"* |
+| `repo:openedx/openedx-platform` | 🔴 `422 Validation Failed` — *"the listed users and repositories cannot be searched"* |
 | `org:openedx stars:>1000` | 🟢 **`openedx/openedx-platform`** — `8,216★`, `AGPL-3.0`, pushed `2026-11-02`, `fork=false` |
-| `ls-remote openedx/edx-platform` | 🟢 `HEAD=f2fc446def6912f156ed66c8d5dd39bc3d3f05ba` |
+| `ls-remote openedx/openedx-platform` | 🟢 `HEAD=f2fc446def6912f156ed66c8d5dd39bc3d3f05ba` |
 | `ls-remote openedx/openedx-platform` | 🟢 `HEAD=f2fc446def6912f156ed66c8d5dd39bc3d3f05ba` — **identical** |
 
 🟢 **Identical `HEAD` is identity.** The repository was renamed `edx-platform` → `openedx-platform` inside the same
@@ -35,7 +195,7 @@ genuine — a fabricated address returns `ABSENT`, re-proven today — but exist
 | Address | `repo:` channel | `git ls-remote` | Verdict |
 |---|---|---|---|
 | `moodle/moodle` | 🟢 row (`7,574★`) | 🟢 ALIVE | 🟢 live **canonical** |
-| `openedx/edx-platform` | 🔴 `422` | 🟢 ALIVE, same `HEAD` as `openedx/openedx-platform` | 🔴 **RENAMED** — stale address |
+| `openedx/openedx-platform` | 🔴 `422` | 🟢 ALIVE, same `HEAD` as `openedx/openedx-platform` | 🔴 **RENAMED** — stale address |
 | `apereo/opencast` | 🔴 `422` | 🔴 ABSENT | 🔴 **DEAD** (agrees with `p623`) |
 | `OPTIMETA/this-repo-does-not-exist-control-xyz` | 🔴 `422` | 🔴 ABSENT | 🟢 **control discriminates** |
 
@@ -105,12 +265,12 @@ positives is a census grading itself.
 
 | Stale / dead address | Canonical successor measured today | Where it still mis-sells |
 |---|---|---|
-| `openedx/edx-platform` | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — `8,216★`, `AGPL-3.0`, pushed `2026-11-02` | `agents/top.md` grant table |
-| `stanfordnlp/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) — `117★`, `MIT` | `repos/foundations.md:1449`, `compose/patterns.md:3175` |
-| `opendigitaleducation/entcore` | 🟢 [`edificeio/entcore`](https://github.com/edificeio/entcore) — `24★`, `NOASSERTION`, pushed `2026-11-02` | `verticals/solutions.md:232` |
+| `openedx/openedx-platform` | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — `8,216★`, `AGPL-3.0`, pushed `2026-11-02` | `agents/top.md` grant table |
+| `EduNLP/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) — `117★`, `MIT` | `repos/foundations.md:1449`, `compose/patterns.md:3175` |
+| `edificeio/entcore` | 🟢 [`edificeio/entcore`](https://github.com/edificeio/entcore) — `24★`, `NOASSERTION`, pushed `2026-11-02` | `verticals/solutions.md:232` |
 | `Changochen/slide-to-video` | 🟡 [`llm-believer/slide-to-video`](https://github.com/llm-believer/slide-to-video) — `12★`, `MIT`, pushed **`2025-09-12`** | `compose/patterns.md:7411` — sold as *"the sovereignty pick"* |
-| `digitalcredentials/learner-credential-wallet` | 🔴 [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) — `91★`, `MIT` — **LOW CONFIDENCE** | `compose/patterns.md:3912` |
-| `openwallet-foundation-labs/learner-credential-wallet` | 🔴 same successor — **LOW CONFIDENCE** | `repos/foundations.md:1438`, `compose/patterns.md:3159` |
+| `ryjones/learner-credential-wallet` | 🔴 [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) — `91★`, `MIT` — **LOW CONFIDENCE** | `compose/patterns.md:3912` |
+| `ryjones/learner-credential-wallet` | 🔴 same successor — **LOW CONFIDENCE** | `repos/foundations.md:1438`, `compose/patterns.md:3159` |
 | `CabinServer39/quiz-gen` | 🔴 **DEAD** — `ls-remote` ABSENT `2026-11-03` | `agents/top.md:4565` still reads *"is real (`23★`, MIT…)"* |
 
 🔴 **Two of these the base already knew, and that is the worse finding.** `agents/top.md:3198` already records
@@ -345,7 +505,7 @@ recorded that channel has false negatives in `5 of 400`. 🔴 Here is the expens
 |---|---|---|
 | `moodle/moodle` | 🟢 `7,574★`, `GPL-3.0`, `main` | 🟢 alive |
 | `sakaiproject/sakai` | 🟢 `1,240★`, `ECL-2.0`, `master` | 🟢 alive |
-| **`openedx/edx-platform`** | 🔴 **`NO-ROW`** | 🟢 **ALIVE**, `HEAD=f2fc446def69`, branch **`master`** |
+| **`openedx/openedx-platform`** | 🔴 **`NO-ROW`** | 🟢 **ALIVE**, `HEAD=f2fc446def69`, branch **`master`** |
 
 🔴 **`edx-platform` is one of the two canonical LMS platforms in this sector** and the channel silently returns
 nothing for it. A pass trusting this channel to prove absence would have shelved the sector's MOOC-grade platform
@@ -445,7 +605,7 @@ no `raw.githubusercontent.com` leg and no per-repo API call (which is `403` here
 | Repository | Root entries | Grant file(s) found **by enumeration** | Bytes | Title, byte-read today |
 |---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | `38` | 🟢 `COPYING.txt` | `35,147` | `GNU GENERAL PUBLIC LICENSE` v3 |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `49` | 🟢 `LICENSE` | `35,136` | `GNU AFFERO GENERAL PUBLIC LICENSE` v3 |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `49` | 🟢 `LICENSE` | `35,136` | `GNU AFFERO GENERAL PUBLIC LICENSE` v3 |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `110` | 🟢 `LICENSE` **+ a `licenses/` tree** | `11,120` | `Educational Community License, Version 2.0` |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | `21` | 🟢 `LICENSE` **+ `NOTICES`** | `11,340` / `126,439` | `ECL-2.0` / Apereo attribution roll |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `49` | 🟢 `LICENSE` | `1,097` | `MIT License` |
@@ -495,7 +655,7 @@ these is a title byte-read today, so the licence column is not in doubt; only th
 | Bytes | Licence, byte-read | Repository |
 |---|---|---|
 | `34,520` | 🔴 **`AGPL-3.0`** | `instructure/canvas-lms` |
-| `35,136` | 🔴 **`AGPL-3.0`** | `openedx/edx-platform` |
+| `35,136` | 🔴 **`AGPL-3.0`** | `openedx/openedx-platform` |
 | `35,146` | 🟡 `GPL-3.0` | `h5p/h5p-php-library` |
 | `35,147` | 🟡 `GPL-3.0` | `moodle/moodle` |
 | `35,147` | 🟡 `GPL-3.0` | `chamilo/chamilo-lms` |
@@ -581,7 +741,7 @@ and now has its strongest instance: a `NOASSERTION` from channel B is a statemen
 |---|---|
 | `gh api repos/moodle/moodle/contents` | 🔴 **`403`** — *"GitHub access to this repository is not enabled for this session"* |
 | `gh api repos/moodle/moodle/license` | 🔴 **`403`**, same |
-| `gh api search/repositories -f q='repo:openedx/edx-platform'` | 🔴 **`422`** Validation Failed (`623-O`, reconfirmed) |
+| `gh api search/repositories -f q='repo:openedx/openedx-platform'` | 🔴 **`422`** Validation Failed (`623-O`, reconfirmed) |
 | 🟢 `git clone --filter=blob:none` + `ls-tree` | 🟢 `15 of 15` |
 
 🔵 So the obvious fix for the ladder — GitHub's own `/contents` and `/license` endpoints — **is closed here**,
@@ -964,7 +1124,7 @@ instance walked into this pass's own candidate list.**
 
 | Address | `ls-remote` | `HEAD` sha | Grant bytes | Channel B |
 |---|---|---|---|---|
-| [`executablebooks/jupyter-book`](https://github.com/executablebooks/jupyter-book) | `PRESENT`, `main` | **`526cfa7e76db`** | `1,520 B` BSD-3-Clause | 🔴 **`422`** |
+| [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `PRESENT`, `main` | **`526cfa7e76db`** | `1,520 B` BSD-3-Clause | 🔴 **`422`** |
 | [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `PRESENT`, `main` | **`526cfa7e76db`** | `1,520 B` BSD-3-Clause | 🟢 `1` hit, `4,289★`, pushed `2026-11-02` |
 
 🟢 **The discriminator, stated as a rule.** Two addresses whose `ls-remote HEAD` shas are
@@ -989,7 +1149,7 @@ shelves this pass, `80` addresses — run through channel B, then every miss run
 |---|---|---|---|
 | 🟢 Canonical (channel B `1` hit) | `74` | `92.5 %` | — |
 | 🔴 **Dead** (`ABSENT_OR_PRIVATE`, reproduced on `3` probes each) | `3` | **`3.8 %`** | `jaipuriaailabs/moodle-mcp`, `thanh01pmt/interactive-quiz-kit`, `vargontoc/educational-framework` |
-| 🔴 **Not citable as canonical** (`PRESENT` + channel B miss) | `2` | **`2.5 %`** | `bnsoftware/lti-1p3-tool` (B `0`), `opendigitaleducation/entcore` (B `422`) |
+| 🔴 **Not citable as canonical** (`PRESENT` + channel B miss) | `2` | **`2.5 %`** | `bnsoftware/lti-1p3-tool` (B `0`), `edificeio/entcore` (B `422`) |
 | 🔴 **Not a repository at all** | `1` | `1.3 %` | `topics/qti` — a GitHub *topic* page URL |
 
 🔴 **The last row is a defect in this pass's own instrument, and it reproduces `607-C`.** The oracle
@@ -3099,7 +3259,7 @@ resolves only at `develop`, and a root read at `main` would have returned the `4
 | [`a-ariff/canvas-mcp`](https://github.com/a-ariff/canvas-mcp) | 🟢 **MIT**, `1,064 B`, title block | `main` | `0★` | `2026-02-20` | Global |
 | [`Teci-AI/moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) | 🟢 **MIT**, `1,103 B`, title block | `main` | `0★` | `2026-10-23` | Global |
 | [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) | 🟢 **MIT**, `1,063 B`, title block | `main` | `3★` | `2026-09-11` | Global |
-| [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | 🟢 **MIT**, `1,069 B`, title block | `main` | `0★` | `2026-09-17` | Global |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT**, `1,069 B`, title block | `main` | `0★` | `2026-09-17` | Global |
 
 🔴 **`ashleycribb/learnmcp-xapi` is a fork** (`fork: true` on the search channel) and is shelved with
 that flag. 🔵 Per `606-D`, fork-vs-transfer is undecidable on this session's channels, so the flag
@@ -3399,8 +3559,8 @@ has to be re-earned against each new failure mode, not inherited.**
 
 | shelf address | canonical | HEAD | verdict |
 | --- | --- | --- | --- |
-| `stanfordnlp/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `d845ffdafda3` == `d845ffdafda3` | 🟢 **SAME REPO** |
-| `openwallet-foundation-labs/learner-credential-wallet` | 🟢 [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) (also `ryjones/`) | `1c46a82ba384` == `1c46a82ba384` | 🟢 **SAME REPO — `3` addresses, `1` repository** |
+| `EduNLP/edu-convokit` | 🟢 [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `d845ffdafda3` == `d845ffdafda3` | 🟢 **SAME REPO** |
+| `ryjones/learner-credential-wallet` | 🟢 [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (also `ryjones/`) | `1c46a82ba384` == `1c46a82ba384` | 🟢 **SAME REPO — `3` addresses, `1` repository** |
 | `project-sunbird/sunbird-lms-service` | 🔴 `Sunbird-Lern/lms-service` **REFUTED** | `48c79a862038` != `628b36fcce8c` | 🔴 **UNEXPLAINED this pass — said, not hidden** |
 
 🔵 **`p348`'s fold-identity question gets a third address class:** not a casing variant, but a
@@ -3491,7 +3651,7 @@ the shape that paid immediately"**.
 | [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🔴 **CC BY-SA 4.0** (`619 B`) | **`4,872`** | 🔴 **ShareAlike — reciprocal, not permissive.** A client deliverable built on it carries the licence forward. 🔵 The holder is `CoPaper.AI`, **a company**, under a `-stanford` personal namespace |
 | [muhammadawaisshaikh/Edtech-AI](https://github.com/muhammadawaisshaikh/Edtech-AI) | 🟢 MIT (`1,071 B`) | `20` | 🔴 **Its README is in the future tense** — *"The app **will offer** features like voice note recording, transcription…"* — so it states **intent, not capability**; and its HEAD committer date is `2024-02-23`, `2.7` years stale |
 | [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | 🟢 MIT (`1,077 B`) | `30` | 🔴 **HEAD committer date `2019-08-06` — seven years.** LTI 1.3 moved underneath it; [`../repos/foundations.md`](../repos/foundations.md) takes [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) and [`iamlucasb/lti-core`](https://github.com/iamlucasb/lti-core) instead |
-| [kvnloo/tutor-mcp](https://github.com/kvnloo/tutor-mcp) | 🟢 MIT (`1,072 B`) | `0` | 🔴 **A fork at `0★`** with no independent substance established. 🔵 Visible only *because* of `605-C`'s `fork:true` arm |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT (`1,072 B`) | `0` | 🔴 **A fork at `0★`** with no independent substance established. 🔵 Visible only *because* of `605-C`'s `fork:true` arm |
 | `learnwise/learnwise` | — | — | 🔴 **Not a repository.** A slug **guessed** from a vendor domain; the git channel answers with the fabricated control's own signature |
 
 🔵 **`605-I`, stated generally and new here:** 🔴 **a README in the future tense is a
@@ -3719,7 +3879,7 @@ protocol were open. 🟢 A star figure this pass could not read is one it did no
 
 | Agent | Grant (byte-read) | Branch | Pushed | tz | Region | What it does |
 | --- | --- | --- | --- | --- | --- | --- |
-| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | 🟢 **MIT** (`1,063 B`) | `main` | `2026-10-15` | `+08:00` | APAC | MCP server that lets an LLM agent **use a real Moodle LMS** — read courses, fetch assignment PDFs |
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | 🟢 **MIT** (`1,063 B`) | `main` | `2026-10-15` | `+08:00` | APAC | MCP server that lets an LLM agent **use a real Moodle LMS** — read courses, fetch assignment PDFs |
 | [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** (`1,119 B`) | `main` | `2026-09-07` | `+09:00` | APAC | 🟢 Exposes **Moodle Web Services as grading I/O**; the LLM decides grades, the server writes them **as unreleased drafts** — a human-release gate in the design |
 | [falkenslab/moodle-driver](https://github.com/falkenslab/moodle-driver) | 🟢 **MIT** (`1,066 B`) | `main` | `2026-10-25` | `+00:00` | EMEA | Drives Moodle from Node.js **with the person's own login** — no web services, no tokens, no admin |
 | [Aaradhya-Dev-Tamrakar/google-classroom-mcp](https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp) | 🟢 **MIT** (`1,077 B`) | `main` | `2026-10-14` | 🔵 `+05:45` | APAC | MCP server for the Google Classroom API (`+05:45` is Nepal — a one-offset timezone, so the placement is unambiguous) |

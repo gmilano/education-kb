@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — Pass 627 — **🔴 THE SUPPLY NIL IS NOW THREE CONSECUTIVE PASSES (`8 of 8` HELD), AND THE WEEK'S ONLY REAL MOVEMENT IN AGENT SUPPLY IS THAT `3` OF THIS SHELF'S OWN AGENT ROWS POINTED AT `0★` PERSONAL FORKS**
+
+⏱️ **Append-only.** Nothing below this line was edited. This section records what the discovery channels returned
+on `2026-11-03`, including that they returned no new education agent — a nil is only information with a denominator.
+
+### 🔴 The nil, with its denominator
+
+| Channel | Addresses returned | Already held | 🆕 New |
+|---|---|---|---|
+| Global legs (`4`) | `8` | `7` | 🔴 **`1`, out of sector** |
+| Regional legs (`4`: NA / EMEA / APAC / LATAM) | `0` | — | 🔴 **`0`** |
+| **Education-relevant subtotal** | **`8`** | **`7`** | 🔴 **`0` agents** |
+
+🔵 The global legs named `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`rohitg00/ai-engineering-from-scratch`, `NousResearch/hermes-agent`, `microsoft/ai-agents-for-beginners`,
+`browser-use/browser-use`, `mem0ai/mem0` — **all `7` already on this base**, checked case-insensitively against a
+`3,916`-slug index extracted from every shelf this pass.
+
+🔴 **`FlowiseAI/Flowise` was the one unheld name and it is refused:** a general LLM-flow builder, not education.
+🟢 Recorded because a refusal withheld is a supply report pretending to be complete.
+
+🔴 **All four regional legs returned `0` repository addresses — again.** North America `0`, EMEA `0`, APAC `0`,
+LATAM `0`. Their *demand* intel was substantive and is placed in `intel/market.md` `627-H`.
+
+> 🔴 **Carry, third pass running:** the web discovery legs are a **control on saturation**, not a source of supply.
+> They cost ~`8` queries and have now returned `0` new education agents across `p625`, `p626` and `p627`.
+
+### 🔴 What actually changed in agent supply this week: the addresses, not the agents
+
+🔴 `3` agent rows on the sell shelf cited a **`0★` personal fork** of a living upstream. All three re-pointed:
+
+| Was cited | 🟢 Now cited | Upstream |
+|---|---|---|
+| `kvnloo/tutor-mcp` `0★` | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `90★` `MIT` pushed `2026-11-02` |
+| `ashleycribb/learnmcp-xapi` `0★` | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `16★` `MIT` pushed `2025-08-29` |
+| `thc1006/moodle-mcp` `0★` | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | `27★` `MIT` pushed `2026-10-20` |
+
+🔴 **The MCP-for-LMS tier is where this keeps happening.** All three are Model Context Protocol servers wrapping an
+LMS or an xAPI store — a tier with many near-identical names and many forks, and therefore the tier where
+same-basename search guesses wrong. 🔵 Mechanism and controls in `agents/top.md` `627-D`.
+
+### 🟢 Agent rows re-addressed by rename this pass
+
+| Was cited | 🟢 Canonical today | Metadata |
+|---|---|---|
+| `stanfordnlp/edu-convokit` | [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `117★` `MIT` |
+| `digitalcredentials/learner-credential-wallet` | [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | `91★` `MIT` |
+| `executablebooks/jupyter-book` | [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | `4,289★` `BSD-3-Clause` |
+
+
 ## 2026-11-03 — Pass 626 — **THE WEEK'S SUPPLY IS SATURATED FOR A SECOND CONSECUTIVE PASS (`12 of 12` HELD), AND THE REAL MOVEMENT IS IN THE *ADDRESSES* THIS SHELF PUBLISHES: `23` OF THEM ARE STALE AND `7` ARE ON LIVE SELL ROWS**
 
 ⏱️ **Append-only.** Nothing below this line was edited. This section records what the discovery channels returned

@@ -4,14 +4,52 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p627` — reads `2026-11-03` — **🟢 `10` ADDRESS CORRECTIONS LANDED ON THIS SHELF, `3` OF THEM ON THE PLATFORM ROW EVERY ENGAGEMENT QUOTES. 🔴 ONE FOUNDATION ROW IS ARCHIVED READ-ONLY AND IS WITHDRAWN FROM RECOMMENDATION.**
+
+### 🟢 Corrections applied to this shelf's table rows
+
+| Was cited | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `openedx/edx-platform` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `f2fc446def69` | `8,216★` `AGPL-3.0` pushed `2026-11-02` |
+| `stanfordnlp/edu-convokit` | [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `d845ffdafda3` | `117★` `MIT` pushed `2025-04-19` |
+| `openwallet-foundation-labs/learner-credential-wallet` | [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | `1c46a82ba384` | `91★` `MIT` pushed `2026-10-15` |
+
+🔵 Each successor is proven by **identical `HEAD`** against the published address, not by name similarity. Full
+ledger: `evidence/canonical-propagation-ledger.2026-11-03-p627.tsv`.
+
+### 🔴 Withdrawn from recommendation
+
+🔴 [`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) (`32★`, `Apache-2.0`) was
+**archived by its owner on `2026-03-26` and is read-only.** Its fork parent `vbhayden/unity-xapi-wrapper` is `4★`
+and pushed `2022-04-20`. 🔴 **The whole Unity-xAPI wrapper tier is unmaintained.** A client wanting xAPI from a
+Unity build should be told the tier is dead and pointed at the xAPI spec plus a thin in-house emitter — not handed
+either address. 🔵 The row is retained *with this flag* rather than deleted, so no later pass re-discovers it as
+new supply.
+
+### 🔴 An attribution that stays owed
+
+🔴 The QTI engine tier: [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (`3★`, `fork=true`, pushed
+`2026-06-30`) is **retained as the maintained line** because its parent
+[`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) (`68★`) has been quiet since `2023-01-04` —
+`3.8` years. 🔴 Both read `NOASSERTION` on the metadata channel, so `p607`'s `BSD-3-Clause` / University of
+Edinburgh attribution is **not corroborated** and remains owed a byte read of the actual `LICENSE.txt`.
+
+### 🔴 The one genuinely unresolved address on this shelf
+
+🔴 [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) is **alive**
+(`ls-remote` returns `HEAD 48c79a862038`) but is indexed under no name this pass could find, and no candidate
+shares its `HEAD` — `Sunbird-Lern/lms-service` (`2★` `MIT`) and `sunbird-cb/sunbird-lms-service` both differ.
+🟢 Declared rather than guessed: re-pointing it on basename similarity is exactly the error `627-D` caught.
+
+
 ## 🆕 `p626` — reads `2026-11-03` — **🔴 THIS PAGE WAS CITING `2` STALE ADDRESSES AND BOTH ARE NOW FLAGGED IN PLACE; THE CENSUS THAT FOUND THEM COVERED ALL `1,331` SELL-SHELF ADDRESSES IN `27` QUERIES. 🟢 NO FOUNDATION ROW CHANGED ITS GRANT, AND NO ROW WAS REMOVED.**
 
 🔵 Full method and controls: `agents/top.md` `626-A`…`626-E`. Summary of what applies to **this** page:
 
 | Address cited here | Status `2026-11-03` | Action taken |
 |---|---|---|
-| [`stanfordnlp/edu-convokit`](https://github.com/stanfordnlp/edu-convokit) | 🔴 **STALE** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, identical `HEAD`) | 🟢 Flagged in the row at line ~`1449`. 🔴 This base already recorded the pair in `agents/top.md:3198` and never propagated it here |
-| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟡 **UNINDEXED** — same `HEAD` as `ryjones/learner-credential-wallet` (`91★`, `MIT`), 🔴 **LOW CONFIDENCE** | 🟢 Flagged in place, 🔴 **address deliberately NOT changed** — an undiverged fork presents identically |
+| [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | 🔴 **STALE** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, identical `HEAD`) | 🟢 Flagged in the row at line ~`1449`. 🔴 This base already recorded the pair in `agents/top.md:3198` and never propagated it here |
+| [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | 🟡 **UNINDEXED** — same `HEAD` as `ryjones/learner-credential-wallet` (`91★`, `MIT`), 🔴 **LOW CONFIDENCE** | 🟢 Flagged in place, 🔴 **address deliberately NOT changed** — an undiverged fork presents identically |
 
 🟢 **The `EduNLP/edu-convokit` row already on this page (line ~`1299`, `117★`, `MIT`) is the correct one** — so this
 page holds both the stale and the canonical address for the same project. 🔴 That is the `626-E` defect class in its
@@ -58,7 +96,7 @@ otherwise the platform metadata field, which this base has proven wrong in both 
 | Repo | Licencia | ★ `2026-11-02` | `pushed_at` | Branch | ¿Base para AI? |
 |---|---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` **(bytes, `COPYING.txt`, `35,147 B`)** | **`7,574`** | `2026-10-30` | `main` | ✅ `tool_ai` subsystem 4.5+, largest plugin ecosystem on earth |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` **(bytes, `LICENSE`, `35,136 B`)** | 🔴 *channel `NO-ROW`* | — | `master` | ✅ XBlock API. 🔴 **`AGPL`, not `Apache` — correct this if you carried otherwise** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` **(bytes, `LICENSE`, `35,136 B`)** | 🔴 *channel `NO-ROW`* | — | `master` | ✅ XBlock API. 🔴 **`AGPL`, not `Apache` — correct this if you carried otherwise** |
 | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` **(bytes, `11,358 B` + `NOTICE`)** | `6,957` | `2026-11-02` | `develop` | ✅ **The most buildable large platform.** Permissive, active, structured lessons |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` **(bytes, `34,520 B` + `COPYRIGHT`)** | `6,900` | 🔴 **`2026-04-30`** | `master` | ⚠️ **Six months quiet.** Incumbent LMS whose OSS tree is cooling |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` **(bytes, `11,120 B` + `licenses/`)** | `1,240` | `2026-11-02` | `master` | ✅ Apereo. 🟢 `ECL-2.0` **proven buildable** — `624-E` diffed it against `Apache-2.0`: `78` words added, **no obligation added** |
@@ -137,7 +175,7 @@ passes.
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** + `NOTICES` (`126,439 B`) | `11,340` | `develop` | `509` | `2026-11-02` | 🟢 Yes. 🟡 That `NOTICES` roll is an attribution duty with real size |
 | [`ashemag/human-atlas`](https://github.com/ashemag/human-atlas) | 🟢 **`MIT`** (© `2026 ashemag`) | `1,064` | `main` | `4,457` | `2026-09-06` | 🟢 Code yes; 🟡 meshes are `CC BY 4.0` (`623-D`) |
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` (`COPYING.txt`) | `35,147` | `main` | `7,574` | `2026-10-30` | 🟡 Plugin API only — see `verticals/solutions.md` |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | `35,136` | `master` | 🔴 channel-blind | — | 🔴 Clear the network clause first |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | `35,136` | `master` | 🔴 channel-blind | — | 🔴 Clear the network clause first |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` + `COPYRIGHT` (`621 B`) | `34,520` | `master` | `6,900` | 🔴 **`2026-04-30`** | 🔴 Network copyleft, **and `6` months without a push** |
 | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 `GPL-3.0` + `license.txt` (`1,614 B`) | `35,147` | `master` | `1,020` | `2026-11-02` | 🟡 Copyleft; very actively pushed |
 | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 `GPL-3.0` (`LICENSE.txt`) | `35,146` | `master` | `154` | `2026-11-02` | 🟡 Content-type engine; copyleft |
@@ -207,7 +245,7 @@ canonical***. 🔴 **Run against the Open edX platform, that rule returns the wr
 |---|---|
 | `ls-remote --symref` | 🟢 `PRESENT`, `refs/heads/master`, `f2fc446` |
 | `raw.githubusercontent.com/.../master/LICENSE` | 🟢 `200`, **`35,136 B`**, `GNU AFFERO GENERAL PUBLIC LICENSE` |
-| `gh api search/repositories -f q='repo:openedx/edx-platform'` | 🔴 **`422` Validation Failed** |
+| `gh api search/repositories -f q='repo:openedx/openedx-platform'` | 🔴 **`422` Validation Failed** |
 | `gh api search/repositories -f q='edx-platform in:name org:openedx'` | 🔴 **`0` rows** |
 
 🔵 `621-R` attributed channel-B `422` to **renames** and `621-M` to **forks**. 🔴 Neither explains
@@ -228,7 +266,7 @@ read at `raw.githubusercontent.com`, graded by rule `v5` (`623-F`). **Ten rows.*
 | Repo | Grant (byte-read) | Bytes | Branch | ★ | Globant can build on it? |
 |---|---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` | `35,147 B` in **`COPYING.txt`** (`623-N`) | `main` | `7,574` | 🟡 Plugin/extension work only; core is copyleft |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 `AGPL-3.0` | `35,136 B` | `master` | 🔴 channel-blind (`623-O`) | 🟡 Self-hosted deployment + plugins; AGPL network clause binds hosted offerings |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟡 `AGPL-3.0` | `35,136 B` | `master` | 🔴 channel-blind (`623-O`) | 🟡 Self-hosted deployment + plugins; AGPL network clause binds hosted offerings |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | `11,120 B` | `master` | `1,240` | 🟢 **Yes** — Apache-derived permissive (`623-I`) |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** | `11,340 B` | `develop` | `509` | 🟢 **Yes**; lecture capture / media. Reached by repairing a dead citation (`623-K`) |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1,097 B` | `develop` | `1,165` | 🟢 **Yes** — offline-first; the low-connectivity anchor for LATAM/EMEA-Africa |
@@ -1340,7 +1378,7 @@ class carried since `p319`. 🟢 That class now has a second instance and a seco
 | Repo | Grant (byte-read) | Branch | HEAD | ★ | tz | Region | Why it is a foundation |
 | --- | --- | --- | --- | --: | --- | --- | --- |
 | [marimo-team/learn](https://github.com/marimo-team/learn) | 🟢 **MIT** (`1,062 B`) | `main` | `2026-04-30` | `362` | `-07:00` | North America | 🟢 Curated **executable courseware** — reactive marimo notebooks across Python, data science and optimisation. 🔵 The notebook *is* the lesson *and* the runtime, so there is no slide-to-code gap to maintain. Pairs with [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) on [`../agents/top.md`](../agents/top.md) |
-| [EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `117` | `-07:00` | North America | 🟢 The open framework for **education conversation data** — de-identification, annotation and analysis of classroom talk. 🔵 **This is the canonical address of a row this base already shelved as `stanfordnlp/edu-convokit`**; `605-C` proved them one repository by HEAD identity. 🟡 HEAD is `2025-04-18`: a stable research library, flagged |
+| [EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `117` | `-07:00` | North America | 🟢 The open framework for **education conversation data** — de-identification, annotation and analysis of classroom talk. 🔵 **This is the canonical address of a row this base already shelved as `EduNLP/edu-convokit`**; `605-C` proved them one repository by HEAD identity. 🟡 HEAD is `2025-04-18`: a stable research library, flagged |
 | [lplnufpi/essay-br](https://github.com/lplnufpi/essay-br) | 🟢 **MIT** (`1,113 B`) | `main` | `2023-05-07` | `17` | `-03:00` | LATAM | 🟢 **Extended Essay-BR** — Brazilian high-school essays **graded by human professionals against the ENEM criteria**. 🔵 A scored corpus in Portuguese is the one thing an automated-essay-scoring engagement cannot synthesise. 🟡 HEAD `2023-05-07`: a **dataset**, which does not rot the way code does — flagged rather than disqualified |
 | [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🟢 **MIT** (code) **+ CC BY 4.0** (items/results) — split, see `605-L` | `main` | `2026-09-19` | `12` | `-03:00` | LATAM | 🟢 A **hallucination benchmark over the BNCC**, Brazil's national curriculum: an item bank, per-round model answers, and a written methodology. 🔵 The missing instrument for *"does this model actually know the national curriculum we are paid to teach?"* — and it is the only artefact here that measures an LLM against a **national** curriculum |
 | [yetanalytics/pedestal-oidc](https://github.com/yetanalytics/pedestal-oidc) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-16` | `10` | `-04:00` | North America | OIDC authentication interceptors for Clojure/Pedestal services, from **Yet Analytics** — the xAPI/LRS vendor whose capture layer this base already shelves. 🟢 The auth rung under a learning-record service |
@@ -1479,7 +1517,7 @@ is what makes them safe to build on.
 | [yetanalytics/re-oidc](https://github.com/yetanalytics/re-oidc) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-16` | `-04:00` | North America | OIDC for `re-frame`/`reagent` ClojureScript apps — the auth rung for the xAPI tooling above |
 | [instructure/qti](https://github.com/instructure/qti) | 🟢 **MIT** (`1,083 B`) | `master` | `2026-09-23` | `+00:00` | North America | 🟢 QTI **1.2 and 2.1** importer gem, published by **Instructure** — the Canvas vendor's own assessment-import path |
 | [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | 🟢 **MIT** (`1,065 B`) | `main` | `2026-02-12` | `-03:00` | LATAM | Framework-agnostic **QTI 3.x** renderer with multi-frontend support; live sandbox demo |
-| [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | 🟢 **MIT** (`1,091 B`) | `main` | `2026-06-11` | `-04:00` | North America | Cross-platform iOS/Android wallet for **storing and sharing digital learner credentials**. OpenWallet Foundation Labs |
+| [ryjones/learner-credential-wallet](https://github.com/ryjones/learner-credential-wallet) 🔴 **ADDRESS UNINDEXED `2026-11-03` (`626-E`)** — same `HEAD` as [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, `MIT`), but that successor is **LOW CONFIDENCE**; keep this institutional address until a stronger instrument exists. | 🟢 **MIT** (`1,091 B`) | `main` | `2026-06-11` | `-04:00` | North America | Cross-platform iOS/Android wallet for **storing and sharing digital learner credentials**. OpenWallet Foundation Labs |
 | [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | 🟢 **MIT** (`1,065 B`) | `master` | `2026-10-27` | `+01:00` | EMEA | H5P toolkit for running, editing and **developing H5P content types**. 🔵 README at `readme.md` — one of the `603-C` six |
 
 ### 🟢 Analytics, assessment and detection — `12` more rows
@@ -1490,7 +1528,7 @@ is what makes them safe to build on.
 | [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | 🟢 **MIT** (`1,128 B`) | `main` | `2025-10-03` | `+05:30` | **APAC** | 🟢 Indic-language machine translation from **AI4Bharat / IIT Madras** — the realistic path to multilingual courseware across India's scheduled languages |
 | [Sunbird-Lern/lms-service](https://github.com/Sunbird-Lern/lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2026-01-05` | `+05:30` | **APAC** | LMS micro-service of **Sunbird**, the stack behind India's national education platforms |
 | [project-sunbird/sunbird-lms-service](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 **MIT** (`1,071 B`) | `master` | `2025-12-23` | `-08:00` | **APAC** | Sunbird **User/Org** micro-service. 🔵 Same grant bytes as the row above and a `-08:00` committer offset — a US-based committer on an India-origin platform, so `tz` places the *commit*, not the project |
-| [stanfordnlp/edu-convokit](https://github.com/stanfordnlp/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, same `HEAD`) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `-07:00` | North America | **Edu-ConvoKit** — framework for education *conversation* data (NAACL 2024, Systems Track). The pre-processing layer for classroom-discourse analysis |
+| [EduNLP/edu-convokit](https://github.com/EduNLP/edu-convokit) 🔴 **STALE ADDRESS (`626-E`)** — canonical is [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (`117★`, `MIT`, same `HEAD`) | 🟢 **MIT** (`1,068 B`) | `main` | `2025-04-18` | `-07:00` | North America | **Edu-ConvoKit** — framework for education *conversation* data (NAACL 2024, Systems Track). The pre-processing layer for classroom-discourse analysis |
 | [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 **MIT** (`1,070 B`) | `main` | `2026-02-07` | `+08:00` | APAC | **Fast-DetectGPT** (ICLR 2024) — zero-shot machine-generated-text detection via conditional probability curvature |
 | [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** (`11,357 B`) | `main` | `2024-01-16` | `+09:00` | APAC | Google's **autograding** toolset for programming education (notebook-based) |
 | [Fuann/open-apa](https://github.com/Fuann/open-apa) | 🟢 **BSD** (`1,527 B`) | `master` | `2026-10-08` | `+08:00` | APAC | **OpenAPA** — open benchmark and evaluation toolkit for **pronunciation assessment** in open-response scenarios |
@@ -1972,7 +2010,7 @@ mandated legs surfaced this pass** — and it has no grant, so the nil stands ei
 
 | Repo | Licence | Stars | Last push | Region | Shippable? | Role |
 |---|---|--:|---|---|---|---|
-| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0 (text)** | **8,214** | `2026-11-01` | North America | 🔴 network copyleft | The LMS of record. 🔴 **Cite this address** — `openedx/edx-platform` is the pre-rename name and the API rejects it with `422`. |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0 (text)** | **8,214** | `2026-11-01` | North America | 🔴 network copyleft | The LMS of record. 🔴 **Cite this address** — `openedx/openedx-platform` is the pre-rename name and the API rejects it with `422`. |
 | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | **7,569** | `2026-10-30` | EMEA | 🔴 copyleft | The other LMS of record; 7,690 forks. Australia-origin, EMEA-anchored governance. |
 | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0 (text)** | **9,262** | `2026-10-31` | Global | 🔴 lesser copyleft | 🆕 **The virtual-classroom platform of record** — web conferencing purpose-built for teaching (breakouts, whiteboard, polls, recordings). 🟡 LGPL-3.0 is the mildest copyleft on this tier: a studio may **link** proprietary code against it, but modifications to BBB itself carry back. 🔴 **Default branch is `v4.0.x-develop`** — a licence probe on `main` returns `404` (see `587-D`). Re-found 18× in history and never filed. |
 | [apache/openmeetings](https://github.com/apache/openmeetings) | 🟡 **Apache-2.0 + a declared third-party block (text)** | **688** | `2026-10-26` | EMEA | 🟡 **yes, with one read** | 🆕 **The PERMISSIVE virtual-classroom platform — the tier this base recorded as copyleft-only.** Video conferencing, whiteboard, polls, recording and collaborative docs under ASF governance. 🔴 Its `LICENSE` carries an in-payload dependency block (MIT, BSD, EPL, EDL, some `NOASSERTION`, and **Oracle Free Use Terms** — not an open-source grant) exactly as `P1024` predicts; the **ASF's own code is Apache-2.0**, the bundle is the question. 🔵 API said `NOASSERTION`; default branch `master`; carried unfiled since `p525`. |

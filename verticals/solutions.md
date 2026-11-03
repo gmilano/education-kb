@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p627` — reads `2026-11-03` — **🟢 `7` ADDRESS CORRECTIONS ON THIS SHELF, INCLUDING THE FRENCH ENT PLATFORM ROW AND `6` OCCURRENCES OF THE OPEN edX PLATFORM ADDRESS.**
+
+### 🟢 Corrections applied to this shelf's table rows
+
+| Was cited | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `opendigitaleducation/entcore` | [`edificeio/entcore`](https://github.com/edificeio/entcore) | `933435ba7acc` | `24★` `NOASSERTION` pushed `2026-11-02` |
+| `openedx/edx-platform` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `f2fc446def69` | `8,216★` `AGPL-3.0` pushed `2026-11-02` |
+
+🟢 **The `entcore` correction matters regionally.** It is the platform behind French regional *ENT* deployments and
+the row is the EMEA sovereignty pick on this shelf; `opendigitaleducation` → `edificeio` is an organisation rename
+(same `HEAD`), so the old address still resolves and quietly misattributes the publisher in any client document
+that cites it.
+
+🔴 **`edificeio/entcore` reads `NOASSERTION`.** `24★` is also thin for a platform row. 🟢 Sell it as *the* French
+ENT integration target — which it is — but do not sell it as a permissive base until the grant is byte-read.
+
+### 🔵 Vertical platform currency, checked today
+
+| Platform | Licence | Stars | Pushed | Verdict |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | `7,574` | `2026-10-30` | 🟢 current |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `AGPL-3.0` | `8,216` | `2026-11-02` | 🟢 current |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `GPL-3.0` | `1,020` | `2026-11-03` | 🟢 pushed today |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `ECL-2.0` | `1,240` | `2026-11-02` | 🟢 current |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `MIT` | `1,166` | `2026-11-02` | 🟢 current, permissive |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `Apache-2.0` | `6,957` | `2026-11-02` | 🟢 current, permissive |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `AGPL-3.0` | `6,900` | 🔴 `2026-04-30` | 🔴 six months quiet |
+
+🔴 **Canvas is the only incumbent going quiet**, now reproduced on a third separate day with the metadata channel.
+🟢 `archived=false`, so this is a *cadence* signal rather than an end-of-life announcement — but it is the
+migration argument, and `627-H` prices it for North America.
+
+🟢 **Only `kolibri` (`MIT`) and `oppia` (`Apache-2.0`) are permissive.** Everything else on this shelf is copyleft,
+which is why the LTI boundary in `compose/patterns.md` `627-K` is the load-bearing pattern for this industry.
+
+
 ## 🆕 `p626` — reads `2026-11-03` — **🔴 THE FRENCH ENT ROW ON THIS PAGE CITES A STALE ADDRESS AND IS NOW FLAGGED: THE CANONICAL HOME IS `edificeio/entcore`, PUSHED `2026-11-02`. 🟢 THE VERTICAL PLATFORM TIER IS OTHERWISE UNCHANGED AND FRESH — EVERY PLATFORM BELOW EXCEPT CANVAS PUSHED WITHIN FOUR DAYS.**
 
 🔵 Method and controls: `agents/top.md` `626-A`…`626-E`.
@@ -12,7 +49,7 @@ updated: 2026-11-03
 
 | Cited here | Status `2026-11-03` | Action |
 |---|---|---|
-| [`opendigitaleducation/entcore`](https://github.com/opendigitaleducation/entcore) | 🔴 **STALE** — canonical [`edificeio/entcore`](https://github.com/edificeio/entcore), `24★`, pushed `2026-11-02`, identical `HEAD` | 🟢 Flagged in place at `622-D2` |
+| [`edificeio/entcore`](https://github.com/edificeio/entcore) | 🔴 **STALE** — canonical [`edificeio/entcore`](https://github.com/edificeio/entcore), `24★`, pushed `2026-11-02`, identical `HEAD` | 🟢 Flagged in place at `622-D2` |
 
 🔴 **This base already held the pair** in `compose/code/p406-carried-existence/README.md:144` and never propagated
 it to the page that sells the row. 🔴 And `agents/top.md:788` filed the very same address as a *"channel B miss
@@ -57,7 +94,7 @@ it to the page that sells the row. 🔴 And `agents/top.md:788` filed the very s
 | Plataforma | Repo | Licencia | ★ | `pushed_at` | Stack | Caso de uso |
 |---|---|---|---|---|---|---|
 | **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 `GPL-3.0` (bytes) | `7,574` | `2026-10-30` | PHP + MySQL/PgSQL | LMS universal: K-12, HE, corporativo. `tool_ai` 4.5+ |
-| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` (bytes) | *n/d — canal `NO-ROW`* | — | Python/Django + React | MOOC, corporativo, gobierno. XBlock |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` (bytes) | *n/d — canal `NO-ROW`* | — | Python/Django + React | MOOC, corporativo, gobierno. XBlock |
 | **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` (bytes) | `6,957` | `2026-11-02` | Python/Angular | 🟢 **La plataforma grande más permisiva.** Lecciones estructuradas, K-12 |
 | **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` (bytes) | `6,900` | 🔴 **`2026-04-30`** | Ruby on Rails | ⚠️ Incumbente NA. **Árbol OSS frío 6 meses** |
 | **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` (bytes) | `1,240` | `2026-11-02` | Java/Spring | LMS institucional universitario. `ECL-2.0` = `Apache-2.0` en obligaciones (`624-E`) |
@@ -137,7 +174,7 @@ Branch is the repository's actual default, because five of these are not `main`.
 | Platform | What it runs | Grant (enumerated + byte-read) | Bytes | Branch | ★ | Pushed | AI-on-top verdict |
 |---|---|---|---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | LMS — largest installed base in education | 🟡 `GPL-3.0` in **`COPYING.txt`** | `35,147` | `main` | `7,574` | `2026-10-30` | 🟢 **Best AI target in the tier.** The plugin API keeps client code outside the copyleft boundary; the `moodle-*-mcp` wave sits here |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS / MOOC at scale | 🔴 `AGPL-3.0` | `35,136` | `master` | 🔴 channel-blind (`623-O`) | — | 🔴 Self-host and extend; the **network clause** must be cleared before any hosted client offering |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS / MOOC at scale | 🔴 `AGPL-3.0` | `35,136` | `master` | 🔴 channel-blind (`623-O`) | — | 🔴 Self-host and extend; the **network clause** must be cleared before any hosted client offering |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | Higher-ed LMS / collaboration | 🟢 **`ECL-2.0`** + a `licenses/` tree | `11,120` | `master` | `1,240` | `2026-11-02` | 🟢 **The tier's cleanest base for a shipped derivative** — and `624-E` now proves why |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | Lecture capture, media pipeline | 🟢 **`ECL-2.0`** + `NOTICES` | `11,340` / `126,439` | `develop` | `509` | `2026-11-02` | 🟢 Permissive. Natural host for transcription / captioning / indexing agents. 🟡 That `126 KB` `NOTICES` roll is a real attribution duty |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | Offline-first learning platform | 🟢 `MIT` | `1,097` | `develop` | `1,166` | `2026-11-02` | 🟢 **Permissive.** The low-connectivity anchor — LATAM, EMEA-Africa, rural APAC |
@@ -235,7 +272,7 @@ each one actually defaults to, because three of them are not `main`.
 | Platform | What it runs | Grant (byte-read) | Branch | ★ | AI-on-top verdict |
 |---|---|---|---|---|---|
 | [`moodle/moodle`](https://github.com/moodle/moodle) | LMS — the industry's largest installed base | 🟡 `GPL-3.0`, `35,147 B` in `COPYING.txt` | `main` | `7,574` | 🟢 **Best AI target in the tier.** Plugin API keeps client code out of the copyleft boundary; the whole `moodle-*-mcp` wave this base tracks sits here |
-| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS / MOOC at scale | 🟡 `AGPL-3.0`, `35,136 B` | `master` | 🔴 channel-blind (`623-O`) | 🟡 Self-host and extend; **AGPL network clause** must be cleared before any hosted client offering |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS / MOOC at scale | 🟡 `AGPL-3.0`, `35,136 B` | `master` | 🔴 channel-blind (`623-O`) | 🟡 Self-host and extend; **AGPL network clause** must be cleared before any hosted client offering |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | Higher-ed LMS / collaboration | 🟢 **`ECL-2.0`**, `11,120 B` | `master` | `1,240` | 🟢 **Permissive.** The tier's cleanest base for a shipped derivative product |
 | [`opencast/opencast`](https://github.com/opencast/opencast) | Lecture capture, media pipeline | 🟢 **`ECL-2.0`**, `11,340 B` | `develop` | `509` | 🟢 Permissive. Natural host for transcription/captioning/indexing agents |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | Offline-first learning platform | 🟢 `MIT`, `1,097 B` | `develop` | `1,165` | 🟢 **Permissive.** The low-connectivity anchor — LATAM, EMEA-Africa, rural APAC |
@@ -1045,7 +1082,7 @@ existing column.**
 | Platform | Repo | License (byte-read `2026-11-02`) | Customisable with AI on top? |
 | --- | --- | --- | --- |
 | **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **GPL-3.0** — `COPYING.txt`, both branches `200` | 🟢 Largest plugin ecosystem in the industry; the AI subsystem is the supported insertion point |
-| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0**, `35,135 B` | ⚠️ MOOC-grade, but the grant is **network copyleft** — the single most consequential license fact in this tier |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0**, `35,135 B` | ⚠️ MOOC-grade, but the grant is **network copyleft** — the single most consequential license fact in this tier |
 | **XBlock** | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0**, `11,358 B` | 🟢 **The permissive component boundary inside an AGPL platform** — build the AI component here |
 | **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0**, `34,519 B` | ⚠️ Integrate via API/LTI rather than fork |
 | **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **AGPL-3.0**, `35,146 B` | ⚠️ Lighter to operate than Open edX; same copyleft shape |
@@ -2239,7 +2276,7 @@ taken from the GitHub API, which reports `NOASSERTION` for two of these rows.
 | **LMS of record** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0 (text)** | 449 | `2026-10-30` | 🟢 **Yes** | Swiss-governed, used across DACH higher education. API says `NOASSERTION`; the licence text says Apache-2.0. **Re-read and confirmed at `p586`.** |
 | **Offline-first platform** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT (text)** | 1,163 | `2026-11-01` | 🟢 **Yes** | 🟢 **The highest-leverage permissive platform for LATAM, Africa and rural APAC** — built for the connectivity conditions that defeat cloud LMSs. Branch `develop`. |
 | **Course environment** | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** | 437 | `2026-11-01` | 🟢 **Yes** | Git-versioned course content and auto-graded work. UIUC. |
-| **LMS of record** | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | **8,213** | `2026-11-01` | 🔴 **No** | 🟢 **But the extension points are permissive**: [`XBlock`](https://github.com/openedx/XBlock) (Apache-2.0) and [`codejail`](https://github.com/openedx/codejail) (Apache-2.0) let proprietary AI plug in **without inheriting network copyleft**. Stand it up with [`overhangio/tutor`](https://github.com/overhangio/tutor). 🔴 Cite *this* address — `openedx/edx-platform` is the pre-rename name and returns `422`. |
+| **LMS of record** | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | **8,213** | `2026-11-01` | 🔴 **No** | 🟢 **But the extension points are permissive**: [`XBlock`](https://github.com/openedx/XBlock) (Apache-2.0) and [`codejail`](https://github.com/openedx/codejail) (Apache-2.0) let proprietary AI plug in **without inheriting network copyleft**. Stand it up with [`overhangio/tutor`](https://github.com/overhangio/tutor). 🔴 Cite *this* address — `openedx/openedx-platform` is the pre-rename name and returns `422`. |
 | **LMS of record** | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | 7,567 | `2026-10-30` | 🔴 **No** | The largest installed base in EMEA and LATAM public education. 🟢 Attach via **LTI 1.3** ([`ltijs`](https://github.com/Cvmcosta/ltijs), Apache-2.0) and the AI stays outside the GPL boundary entirely. |
 | **LMS of record** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | 6,893 | 🟡 `2026-04-30` | 🔴 **No** | North American higher-ed default. 🟡 **~6 months since last public push — the slowest-moving platform of record on this page.** Attach via LTI or [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 310★, FERPA-aware). |
 | **SIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 649 | `2026-10-28` | 🔴 **No** | 🆕 Scheduling, grades, attendance, billing. Strong francophone and LATAM base. 🔵 Default branch is **`mobile`**. |
@@ -2614,7 +2651,7 @@ it is AGPL, so hosting it obliges you to publish the modifications.
 | Cited as | Response | Live address |
 |---|---|---|
 | `OpenEduCat-Inc/OpenEduCat` | **`422`** — the owner no longer resolves | `openeducat/openeducat_erp` (**LGPL-3.0**, `903★`) |
-| `openedx/edx-platform` | **`422`** — moved | `openedx/openedx-platform` (**AGPL-3.0**, `8,213★`) |
+| `openedx/openedx-platform` | **`422`** — moved | `openedx/openedx-platform` (**AGPL-3.0**, `8,213★`) |
 
 
 ## p578 — 2026-10-31 — one addition, and it is the first *permissive* operations system on this page

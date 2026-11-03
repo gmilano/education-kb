@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p627` — reads `2026-11-03` — **🔴 THE SECTOR'S SUPPLY SIGNAL IS SATURATED FOR A THIRD PASS, SO THE REAL TREND THIS BASE CAN MEASURE IS IN ITS OWN DATA LAYER: ADDRESS CANONICALITY DECAYS AND NO STANDARD PROBE DETECTS IT.**
+
+### 🔴 `627-L` — the measurable trend: canonicality decay, which is invisible to reachability
+
+🔵 This base now has three independent measurements of its own address layer:
+
+| Pass | What was measured | Result |
+|---|---|---|
+| `p622` | citation decay | `3.8 %` dead citations |
+| `p623` / `p625` | citation sweep, corroborated | `75/75`, `432` live citations clean |
+| 🟢 `p627` | **canonicality** of `812` live sell-row addresses | 🟢 `98.0 %` canonical, 🔴 `0.74 %` renamed, 🔴 `0.00 %` dead |
+
+🔴 **The trend worth telling a client:** link rot is *not* the problem in `2026` — GitHub's rename redirect means a
+stale address passes every HTTP and `git` check forever. 🔴 The failure mode is **silent misattribution**: the
+address resolves, the publisher named in it is wrong, and the defect is undetectable by the tools teams actually
+run. 🟢 Two of this pass's six renames moved a project **between organisations** (`executablebooks` →
+`jupyter-book`, `opendigitaleducation` → `edificeio`) and one moved it from a **foundation to a personal account**
+(`openwallet-foundation-labs` → `ryjones`) — which is a governance signal, not a cosmetic one.
+
+### 🔴 `627-M` — the fork-citation trend, concentrated in one tier
+
+🔴 `3` of `812` sell-row addresses (`0.37 %`) cited a `0★` personal fork of a living upstream, and **all three are
+MCP servers wrapping an LMS or xAPI store**: `tutor-mcp`, `learnmcp-xapi`, `moodle-mcp`. 🟢 The mechanism is the
+tier's shape — MCP wrappers proliferate under near-identical names, so whoever curates picks whichever copy a
+search surfaced first.
+
+> 🟢 **Standing implication for this base and for clients:** in any fast-growing wrapper tier, verify the **fork
+> flag and the fork parent** before shelving, not just the licence and the star count. Only the repository page
+> states parentage — `627-D` records an `in:name` search guessing the wrong parent.
+
+### 🔵 `627-N` — demand-side trend lines, snippet-grade, placed by region
+
+| Trend | Region | Confidence |
+|---|---|---|
+| Pedagogy-control framing: AI helps learning only where pedagogy stays in control (`OECD Digital Education Outlook 2026`) | `North America` | 🔴 secondary |
+| Focus moved from policing academic integrity to instructional design and cognitive load | `Global` | 🔴 secondary |
+| AI-literacy duties live; admissions and assessment are the high-risk education uses | `EMEA` | 🟢 held, statutory |
+| Locally developed LLMs run alongside global ones in major markets, education named (`60 %`, Forrester) | `APAC` | 🔴 secondary |
+| Institution-level survey base now exists: `200` HEIs across `19` countries (UNU) | `LATAM` | 🔴 secondary |
+| K-12 is the leading segment at roughly `34 %` | `Global` | 🔴 secondary |
+
+🔴 **Market sizing remains unquotable as a point estimate:** houses put `2026` between `$3.7 bn` and `$11.4 bn`, a
+`3×` spread. 🟢 Quote the range or quote nothing — `619`'s demand-side drift finding (a `57 %` reported as
+">60 %") is why this base does not launder a snippet into a figure.
+
+
 ## 🆕 `p626` — reads `2026-11-03` — **🔴 THE SECTOR'S OPEN-SOURCE TREND THIS WEEK IS NOT A NEW CAPABILITY, IT IS **ADDRESS DECAY**: `1.7 %` OF THIS BASE'S CITED REPOSITORIES ARE STALE BEHIND LIVE REDIRECTS AND `1.9 %` ARE DEAD. 🟢 AND THE INCUMBENT-GOING-QUIET TREND IS CONFIRMED ON A SECOND INSTRUMENT: CANVAS'S OPEN-SOURCE REPO IS SIX MONTHS COLD WHILE EVERY PERMISSIVE RIVAL PUSHED THIS WEEK.**
 
 ### 🔴 Trend 1 — platform consolidation is visible in the *addresses*, not the announcements
@@ -14,12 +60,12 @@ foundation-style org**:
 
 | From | To | Reading |
 |---|---|---|
-| `openedx/edx-platform` | `openedx/openedx-platform` | Brand alignment inside the same foundation |
-| `executablebooks/jupyter-book` | `jupyter-book/jupyter-book` | Project graduates to its own org |
+| `openedx/openedx-platform` | `openedx/openedx-platform` | Brand alignment inside the same foundation |
+| `jupyter-book/jupyter-book` | `jupyter-book/jupyter-book` | Project graduates to its own org |
 | `frdel/agent-zero` | `agent0ai/agent-zero` | Founder namespace → company org |
-| `stanfordnlp/edu-convokit` | `EduNLP/edu-convokit` | Lab → topic-community org |
+| `EduNLP/edu-convokit` | `EduNLP/edu-convokit` | Lab → topic-community org |
 | `jasig/calendarportlet` | `uPortal-Project/CalendarPortlet` | Legacy org → live project org |
-| `opendigitaleducation/entcore` | `edificeio/entcore` | Vendor rename, French ENT estate |
+| `edificeio/entcore` | `edificeio/entcore` | Vendor rename, French ENT estate |
 | `project-sunbird/knowledge-platform` | `Sunbird-Knowlg/knowledge-platform` | National stack re-orgs by component |
 | `iterative/dvc` | `treeverse/dvc` | 🔴 Ownership change, `15,956★` |
 | `kamranahmedse/developer-roadmap` | `nilbuild/developer-roadmap` | 🔴 Ownership change, **`371,096★`** |

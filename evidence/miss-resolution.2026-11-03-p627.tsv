@@ -1,0 +1,17 @@
+queried_address	class	canonical_or_parent	stars	license	pushed	evidence	live_rows_fixed
+openedx/edx-platform	RENAMED	openedx/openedx-platform	8216	AGPL-3.0	2026-11-02	HEAD f2fc446def69 identical; absent with fork:true	22
+executablebooks/jupyter-book	RENAMED	jupyter-book/jupyter-book	4289	BSD-3-Clause	2026-11-02	HEAD 526cfa7e76db identical; absent with fork:true	2
+stanfordnlp/edu-convokit	RENAMED	EduNLP/edu-convokit	117	MIT	2025-04-19	HEAD d845ffdafda3 identical; absent with fork:true	8
+opendigitaleducation/entcore	RENAMED	edificeio/entcore	24	NOASSERTION	2026-11-02	HEAD 933435ba7acc identical; absent with fork:true	4
+digitalcredentials/learner-credential-wallet	RENAMED	ryjones/learner-credential-wallet	91	MIT	2026-10-15	HEAD 1c46a82ba384 identical, 3-way alias chain; fork=false	4
+openwallet-foundation-labs/learner-credential-wallet	RENAMED	ryjones/learner-credential-wallet	91	MIT	2026-10-15	HEAD 1c46a82ba384 identical, 3-way alias chain; fork=false	6
+kvnloo/tutor-mcp	FORK-MISCITE	ArnaudGuiovanna/tutor-mcp	90	MIT	2026-11-02	fork parent read from repo page; fork is 0 stars	1
+ashleycribb/learnmcp-xapi	FORK-MISCITE	DavidLMS/learnmcp-xapi	16	MIT	2025-08-29	fork parent read from repo page; fork is 0 stars	1
+thc1006/moodle-mcp	FORK-MISCITE	G36maid/moodle-mcp	27	MIT	2026-10-20	fork parent read from repo page; in:name guess (loyaniu) was WRONG	2
+OpenOLAT/qtiworks	FORK-RETAINED	davemckain/qtiworks	3 (fork) / 68 (parent)	NOASSERTION both	fork 2026-06-30 / parent 2023-01-04	fork is the MAINTAINED line; parent 3.8y quiet. NOT re-pointed	0
+adlnet/Unity-xAPI-Wrapper	ARCHIVED	vbhayden/unity-xapi-wrapper	32 (archived) / 4 (parent)	Apache-2.0 / MIT	2025-07-03 / 2022-04-20	archived by owner 2026-03-26, read-only. Parent 4y quiet	0
+project-sunbird/sunbird-lms-service	UNRESOLVED	-	-	-	-	ls-remote alive HEAD 48c79a862038; no same-HEAD successor found	0
+DaRL-GenAI/instructional_agents	FORK-RETAINED	-	490	MIT	2026-10-31	fork=true but 490 stars and the paper's own org; retained	0
+ajjalti/EvalStudio	FORK-RETAINED	-	0	NOASSERTION	2026-10-17	fork=true, 0 stars, NOASSERTION; flagged not sold	0
+open-aac/sweet-suite-aac	FORK-RETAINED	-	9	AGPL-3.0	2025-04-24	fork=true, AGPL-3.0 (copyleft, not Globant-buildable)	0
+zzz-nonexistent-control-9f3a/does-not-exist-kb622	CONTROL	-	-	-	-	this base's own published fabricated control; correctly absent	0

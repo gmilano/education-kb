@@ -1,0 +1,7 @@
+instrument	live_repo_result	fabricated_control_result	discriminating	verdict
+curl -sI https://github.com/OWNER/REPO	403	403	NO	INERT on this host - would publish false absences (reproduces p613/p622)
+gh api repos/OWNER/REPO	403 session-scope	403 session-scope	NO	INERT - identical refusal for real and fabricated (new endpoint, p621 class)
+gh api search/repositories repo: qualifier (default)	returns row	absent	PARTIAL	EXCLUDES FORKS - over-reports absence; 8 of 15 flags were forks
+gh api search/repositories repo: + fork:true	returns row	absent	YES	CALIBRATED - use this for canonicality/metadata
+git ls-remote https://github.com/OWNER/REPO HEAD	returns SHA	no output	YES	CALIBRATED for existence; follows rename redirect so NOT a canonicality oracle
+WebFetch github.com/OWNER/REPO	renders page	n/a	YES	only channel that yields FORK PARENT and archived banner

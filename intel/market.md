@@ -4,6 +4,194 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p627` — reads `2026-11-03` — **🔴 THE REGIONAL LEGS RETURN `0` REPOSITORY ADDRESSES FOR A THIRD CONSECUTIVE PASS, SO THE DEMAND-SIDE NIL IS NOW A THREE-DAY SERIES. 🟢 `626-L`'s CANONICAL-ADDRESS OFFER IS RE-PRICED ON A CORRECTED DEFECT RATE — THE SELLABLE NUMBER IS `0.74 %` STALE AND `0 %` DEAD, NOT `1.7 %` AND `1.9 %`, AND THE HONEST PITCH IS NOW THE **FORK** CLASS AT `0.99 %`. THREE REGISTERED (`627-H`…`627-J`).**
+
+### 🔴 `627-H` — the regional legs, with a per-region denominator
+
+🟢 All four mandated regional legs run `2026-11-03`.
+
+| Region | Repository addresses | Demand tokens returned | Already held | 🆕 New |
+|---|---|---|---|---|
+| North America | 🔴 `0` | `6` | `5` | 🔴 `1` |
+| EMEA | 🔴 `0` | `5` | `4` | 🔴 `1` |
+| APAC | 🔴 `0` | `4` | `2` | 🔴 `2` |
+| LATAM | 🔴 `0` | `5` | `3` | 🔴 `2` |
+| **Total** | 🔴 **`0`** | **`20`** | **`14`** | 🔴 **`6`, all demand-side** |
+
+🔴 **No region produced a repository address this pass**, stated per region so silence is not read as coverage:
+🔴 North America `0`, 🔴 EMEA `0`, 🔴 APAC `0`, 🔴 LATAM `0`. 🔵 This is the **third** consecutive pass at `0`
+(`p625`, `p626`, `p627`).
+
+🟢 **Six genuinely new demand tokens**, all search-snippet-grade (`598-G` still open) and marked as such below:
+the `OECD Digital Education Outlook 2026`'s pedagogy-control finding; the European Commission's `9 June` update to
+its ethical guidelines on AI in education; the UNU working paper surveying `200` higher-education institutions
+across `19` LAC countries; the IDB `fAIr Tech Radar`; UNESCO's `Observatory on AI in Education for Latin America
+and the Caribbean`; and Forrester's `60 %`-local-LLM projection for India and China.
+
+> 🔴 **Carry, unchanged and now three passes old:** the demand legs are a **control**, not a source. One cheap pass
+> per cycle; spend the rest on placement and supply-side maintenance.
+
+### 🔴 `627-I` — `626-L`'s offer is re-priced, because the defect rate it quoted was measured with a broken instrument
+
+🔴 `626-L` sold the canonical-address audit on **`1.7 %` stale and `1.9 %` dead**. Re-measured today with
+`fork:true` and a fabricated control in every batch, over `812` addresses in live sell rows:
+
+| Class | `p626` sold | 🟢 `p627` measured | Sellable? |
+|---|---|---|---|
+| Stale (renamed, redirect still resolves) | `1.7 %` | 🟢 `0.74 %` (`6 of 812`) | 🟢 yes — and it is invisible to every reachability probe |
+| Dead | `1.9 %` | 🔴 **`0.00 %`** | 🔴 **no — withdraw this claim** |
+| Fork mis-citation (a `0★` fork of a living upstream) | not named | 🟢 `0.99 %` (`8 of 812`) | 🟢 **yes — the strongest of the three** |
+
+🟢 **Re-pitch it on the fork class.** It is the most common, the most embarrassing on a client's own architecture
+document, and the only one a search-based check actively *hides* — GitHub's API returns forks as absent unless
+`fork:true` is passed, so a naive audit reports them as dead and a reachability probe reports them as fine.
+
+🟢 **Still a two-day engagement**, now with a corrected script: enumerate addresses from table rows, census in
+batches of `24` **with `fork:true`**, `ls-remote` the misses, resolve successors by identical `HEAD`, read the
+repository page for fork parentage, and flag low-confidence matches instead of rewriting them.
+
+🔴 **Price the honesty in:** tell the client the dead-address rate is usually `0`. The value is canonicality and
+provenance, not link rot.
+
+### 🟢 `627-J` — the `NEEDS-PRIMARY` flags, re-tested at the price of `3` DNS lookups
+
+| Host | DNS `2026-11-03` |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 NO-RESOLVE |
+| `unesco.org` | 🔴 NO-RESOLVE |
+| `github.com` | 🟢 RESOLVES |
+
+🔵 `625-K` / `626-K`'s standing instruction is honoured: **re-test the precondition, never the research.** It has
+not changed. 🔴 `NEEDS-PRIMARY` stays on `Reg. (EU) 2026/1744` and on the UNESCO IESALC primary; secondary
+corroboration remains the ceiling. 🔴 **No research budget was spent on either primary this pass.**
+
+## Opportunities by region
+
+🔵 Placement only. Every demand figure below is **search-snippet-grade** (`598-G`, still open); every supply figure
+is byte-read or field-measured with its date. Region names are the closed vocabulary: `North America`, `EMEA`,
+`APAC`, `LATAM`, `Global`.
+
+### North America
+
+🟢 **Statutory / policy clock:** `134` bills across `31` states (March `2026`), `4` of them carrying a *mandatory
+district policy* duty; `COPPA`-aligned child-safety expectations gate anything K-12 or consumer-facing; `$169 m` of
+FIPSE awards released in Q1 `2026` include responsible-AI use. 🔵 The `$169 m` figure is snippet-grade and was not
+confirmable against a primary this pass.
+
+🔵 **New this pass:** the `OECD Digital Education Outlook 2026` reports that AI improves learning **only where
+pedagogy stays in control** — a finding worth quoting in a discovery deck, because it reframes the buy from tooling
+to instructional design. 🔴 Secondary-sourced; the OECD primary was not reachable.
+
+🔴 **Measured gap:** institutional adoption reported around `86 %` for administrative and instructional use while
+roughly `70 %` of institutions in Europe *and* North America only *have or are developing* guidance — the
+adoption-ahead-of-governance pattern this page has carried for many passes. 🔵 Market share of global AI-in-education
+spend is reported between `36 %` and `41.7 %` depending on the house; `$3.68 bn` at the `36 %` reading. 🔴 The
+spread is wide enough that only the *range* is quotable.
+
+🟢 **What to sell:**
+1. 🟢 **The Canvas migration play, corroborated on a third day.** [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms)
+   reads `pushed_at = 2026-04-30` — **six months quiet**, `archived=false` — while `moodle`, `oppia`, `sakai`,
+   `kolibri` and `chamilo` all pushed within four days of today. Canvas is the North American higher-ed incumbent
+   and its open-source line is going quiet while its commercial product ships AI. 🟢 Sell the **Open edX or Moodle
+   migration** with [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (`Apache-2.0`, `377★`, pushed
+   `2026-11-02`) as the LTI bridge, so the move is incremental rather than a cutover.
+2. 🟢 **Quote the canonical address:** the platform is
+   [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (`8,216★`, `AGPL-3.0`, pushed
+   `2026-11-02`). `openedx/edx-platform` still resolves and is **not** canonical (`626-A`, `627-C`).
+3. 🟢 **State-policy compliance tooling** against the `31`-state patchwork — per-district policy generation is
+   repeatable work, which makes a `134`-bill spread an asset rather than a cost.
+4. 🟢 **Canonical-address audit** (`627-I`), pitched on the **fork** class: accreditation and procurement documents
+   cite repositories by name and are almost never re-verified.
+
+### EMEA
+
+🟢 **Statutory clock:** the EU AI Act's AI-literacy obligations have applied since `2026-02-02`; the high-risk
+regime for education is the `Annex III` clock this base tracks, amended by 🔴 **`Reg. (EU) 2026/1744`**, whose dates
+(`2 December 2027` / `2 August 2028`) remain 🔴 **`NEEDS-PRIMARY`** — `627-J` confirms the primary is still
+unreachable from this environment. Admissions and assessment are the two education uses that land in high-risk.
+
+🔵 **New this pass:** the European Commission updated its **ethical guidelines on AI in education on `9 June`** and
+signed three Advanced Digital Skills grant agreements worth **`€25.4 m`**. 🔴 The snippet did not state the year;
+treat `2026` as unconfirmed until a primary is reachable.
+
+🟢 **What to sell:**
+1. 🟢 **Annex III conformity work** — the only region where the compliance deliverable is statutory rather than
+   discretionary, and therefore budgeted. Pair it with documentation-grade provenance on every component.
+2. 🟢 **Sovereignty-constrained deployment.** Self-hosting is the default posture, so an LMS-side AI tutor must run
+   against a local inference endpoint. 🟢 [`edificeio/entcore`](https://github.com/edificeio/entcore) is the
+   canonical address for the French ENT platform (`24★`, pushed `2026-11-02`) — `opendigitaleducation/entcore` is a
+   rename and was corrected on `4` rows this pass (`627-C`).
+3. 🔴 **Licence-boundary care is the regional differentiator.** Open edX is `AGPL-3.0` and Moodle is `GPL-3.0`; a
+   Globant deliverable that must stay permissive has to sit **behind the LTI boundary** — see
+   `compose/patterns.md` `627-K`.
+4. 🔵 The QS *Europe EdTech 200+* list and the UK `£200 m` commitment remain the two held demand anchors.
+
+### APAC
+
+🔵 **New this pass:** Forrester projects that **`60 %` of firms and governments in major markets such as India and
+China will run locally developed LLMs alongside global ones**, naming education among the target sectors. 🟢 That is
+the region's defining architectural constraint and it is a *procurement* constraint, not a preference.
+
+🟢 **Regulatory posture:** fragmented and early. The `ASEAN Guide on AI Governance and Ethics` is non-binding;
+Singapore's financial-sector AI consultations are the clearest concrete instrument but are not education-specific.
+🔵 Australia has a National AI Plan and has appointed Chief AI Officers across public-sector agencies — the nearest
+thing to an education-reachable mandate in the region.
+
+🔴 **Declared gap, explicitly:** the legs returned **no** ministry-level education AI guideline for Singapore,
+Australia, China, India, Japan or Korea, and **no** repository address. 🔴 This is an informed gap, not coverage:
+the searches were run and came back without education-specific regulation. The named follow-up is a per-ministry
+leg rather than a regional one.
+
+🟢 **What to sell:**
+1. 🟢 **Multi-jurisdiction policy routing** — one tutor, per-market inference and retention rules, because the
+   local-LLM requirement is per-country and will not consolidate.
+2. 🟢 **Local-model integration on a permissive base**, so the client is not re-platforming when the mandated model
+   changes. 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (`MIT`, `456★`, pushed
+   `2026-10-18`) remains the region's strongest education-specific permissive asset and is model-agnostic.
+
+### LATAM
+
+🔵 **New this pass, and it is the region's first institution-grade denominator on this page:** a **UNU working
+paper surveys `200` higher-education institutions across `19` LAC countries** on AI in teaching, research,
+administration and governance. 🔵 The IDB **`fAIr Tech Radar`** describes regional adoption as advancing *amid
+structural gaps and still-developing regulatory frameworks*. 🔵 UNESCO launched an **Observatory on AI in Education
+for Latin America and the Caribbean** in `2026`. 🔴 All three are snippet-grade; the UNESCO primary is unreachable
+(`627-J`).
+
+🔴 **Regulatory posture:** no LATAM country has a mature harmonised AI regime, and education is named among the
+sectors where that gap bites. 🔴 Policy is a patchwork of pilots vulnerable to each change of administration —
+which is a real delivery risk to price, not a talking point.
+
+🔴 **Structural constraints to design around, not around which to apologise:** uneven connectivity and device
+access, and a UNESCO-flagged severe teacher shortage. 🟢 Both argue for **offline-first** and for
+teacher-augmentation over learner-facing chat.
+
+🟢 **What to sell:**
+1. 🟢 **Offline-first deployment** is the regional default, not a downgrade.
+   [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, `1,166★`, pushed `2026-11-02`)
+   is purpose-built for intermittent connectivity and is permissive.
+2. 🟢 **Teacher-augmentation** ahead of student-facing tutoring, which the teacher shortage makes the higher-value
+   and lower-risk buy.
+3. 🟢 **Spanish / Portuguese-first** delivery, where Globant has a structural advantage no global competitor
+   matches on price.
+4. 🔴 **Supply reality, carried from `616` and unchanged:** the region's permissive repository supply is thin — the
+   flagship regional org measured `1 of 8` permissive, `7 of 8` with no licence file at all. 🔴 Expect to *build*,
+   not to adopt, and price it that way.
+
+### Global
+
+🟢 **Cross-region offers**, each applying in all four regions:
+1. 🟢 **Canonical-address and provenance audit** (`627-I`) — re-priced on the fork class at `0.99 %`, with the
+   dead-address claim withdrawn.
+2. 🟢 **LTI-boundary AI tutor** (`compose/patterns.md` `627-K`) — the pattern that keeps a Globant deliverable
+   permissive while the client's LMS stays `AGPL-3.0` / `GPL-3.0`.
+3. 🟢 **Licence-boundary review** before any LMS engagement, because the two dominant platforms are both copyleft
+   and most clients have not traced where that obligation lands.
+
+🔵 **Market size, range only:** houses put AI-in-education at `$3.7 bn` to `$11.4 bn` for `2026` — a `3×` spread,
+so only the range is quotable. K-12 is reported as the leading segment at roughly `34 %`.
+
+
 ## 🆕 `p626` — reads `2026-11-03` — **🔴 THE REGIONAL LEGS RETURN `14 of 14` TOKENS ALREADY HELD AND `0` REPOSITORY ADDRESSES — THE DEMAND-SIDE NIL IS NOW REPRODUCED ON A SECOND CONSECUTIVE DAY WITH A DIFFERENT LEG POPULATION. 🟢 `625-K`'s NETWORK PRECONDITION RE-TESTED FOR THE PRICE OF `4` DNS LOOKUPS AND IT IS STILL CLOSED, SO THE FLAG STAYS AND THE STANDING "DO NOT ATTEMPT" HOLDS. 🟢 THE PASS'S REGIONAL BUDGET WENT TO **PLACEMENT**, AND IT ADDS ONE OFFER THIS PAGE HAS NEVER CARRIED: A **CANONICAL-ADDRESS AUDIT**, WHICH THIS PASS PROVED IS A REAL AND MEASURABLE CLIENT DEFECT AT `1.7 %` OF CITED REPOSITORIES.**
 
 ### 🔴 `626-J` — the regional legs are saturated, with a per-region denominator
@@ -61,7 +249,7 @@ is structurally blind to it**, which is exactly how this base carried `23` stale
 🟢 **Sell it as a two-day engagement**, not a product: enumerate addresses, census in batches, `ls-remote` the
 misses, resolve successors by identical `HEAD`, flag low-confidence matches instead of rewriting them.
 
-## Opportunities by region
+## Opportunities by region — `p626` (archived)
 
 🔵 Placement only. Every demand figure below is **search-snippet-grade** (`598-G`, still open); every supply figure
 is byte-read or field-measured with its date. Region names are the closed vocabulary: `North America`, `EMEA`,

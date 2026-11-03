@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 2026-11-03 — Pass 627 — **🔴 `p626`'s CENSUS INSTRUMENT HAS A DEFECT THAT INVERTS ITS HEADLINE: `search/repositories` EXCLUDES FORKS BY DEFAULT, SO `8 of 15` OF THIS PASS'S FLAGS WERE FORKS AND NOT DEFECTS — AND DEAD ADDRESSES ON LIVE SELL ROWS MEASURE `0`, NOT `1.9 %`**
+
+⏱️ **Append-only.** Nothing below this line was edited.
+
+### 🔴 The instrument result, which is the methodological finding of the pass
+
+| Query shape | Misses on the same `16` addresses | Verdict |
+|---|---|---|
+| `repo:` qualifiers, as `p626` ran them | `16` | 🔴 includes `8` forks as "absent" |
+| `repo:` qualifiers **+ `fork:true`** | `8` | 🟢 calibrated |
+| Fabricated control, both shapes | absent | 🟢 `0` leaks in `34` batches |
+
+> 🔴 **GitHub's search API applies `fork:false` unless told otherwise.** Any canonicality census this base has run
+> without `fork:true` counted forks as missing. `53 %` of this pass's raw flags were that artefact.
+
+### 🟢 The census, committed this time
+
+🔵 `812` distinct addresses extracted from **table rows only** across the three sell shelves, `34` batches of `24`,
+a fabricated control in every batch, `0` leaks. 🟢 `796` CANONICAL (`98.0 %`), `16` MISS (`2.0 %`).
+
+🔴 **`p626` persisted no evidence file for its `1,331`-address census**, so its `23`/`25`/`26` split cannot be
+re-derived by anyone. 🟢 This pass commits five:
+`evidence/sell-row-canonicality-census.2026-11-03-p627.tsv` (`812` rows),
+`evidence/miss-resolution.2026-11-03-p627.tsv`,
+`evidence/canonical-propagation-ledger.2026-11-03-p627.tsv` (`50` rows),
+`evidence/head-identity.2026-11-03-p627.tsv`,
+`evidence/instrument-calibration.2026-11-03-p627.tsv`.
+
+### 🟢 Foundation / vertical repos re-addressed by rename
+
+| Was cited | 🟢 Canonical today | Proof (`HEAD`) | Metadata |
+|---|---|---|---|
+| `openedx/edx-platform` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `f2fc446def69` | `8,216★` `AGPL-3.0` `2026-11-02` |
+| `opendigitaleducation/entcore` | [`edificeio/entcore`](https://github.com/edificeio/entcore) | `933435ba7acc` | `24★` `NOASSERTION` `2026-11-02` |
+| `openwallet-foundation-labs/learner-credential-wallet` | [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | `1c46a82ba384` | `91★` `MIT` `2026-10-15` |
+
+🟢 **`50` row occurrences rewritten across `5` shelves; `0 of 9` residual.** The two trending shelves are
+append-only and were not rewritten — this section is their correction of record.
+
+### 🔴 One foundation row withdrawn, one retained against its fork flag
+
+🔴 [`adlnet/Unity-xAPI-Wrapper`](https://github.com/adlnet/Unity-xAPI-Wrapper) (`32★` `Apache-2.0`) was
+**archived by its owner on `2026-03-26`** and is read-only; its parent `vbhayden/unity-xapi-wrapper` is `4★` and
+pushed `2022-04-20`. 🔴 The Unity-xAPI tier is unmaintained end to end — say so rather than shipping an address.
+
+🟢 [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (`3★`, `fork=true`) is **retained**: it pushed
+`2026-06-30` while the parent [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) (`68★`) has been quiet
+since `2023-01-04`. 🔴 Both read `NOASSERTION`, so `p607`'s `BSD-3-Clause` / Edinburgh attribution for the QTI
+engine is **not** corroborated by this channel and stays owed.
+
+### 🟢 A negative result, recorded so it is not re-bought
+
+🔵 Published star figures on this base were drift-checked against today's measurements and are **clean**:
+`DeepTutor` `54,312` vs `54,334`, `pykt-toolkit` `456` exact, `canvas-lms` `6,900` exact, `tsugi` `377` exact.
+🔴 The badly stale copy is `globant-kb`'s `education/` directory, frozen at `v6` / `2026-07-14`, off by `2.5×`–`7×`.
+
+
 ## 2026-11-03 — Pass 626 — **THE METADATA CHANNEL TURNS OUT TO OR-BATCH: `1,331` ADDRESSES CENSUSED IN `27` QUERIES, AND IT FINDS A DEFECT CLASS NO PRIOR PASS COULD SEE — `23` STALE ADDRESSES BEHIND LIVE REDIRECTS**
 
 ⏱️ **Append-only.** Nothing below this line was edited.
