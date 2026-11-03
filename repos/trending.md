@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p636` — **🟢 THE TRENDING SURFACE THIS PASS IS THE CANVAS `MCP` CHANNEL: `6` REPOSITORIES PUSHED ON THE DAY OF THE READ, A `317★` HEAD STILL GROWING (`+7` SINCE THIS BASE LAST RECORDED IT), AND A SECOND PLATFORM (BRIGHTSPACE, `62★`) ENTERING THE TIER. 🔴 GITHUB-TRENDING-VIA-WEBSEARCH RETURNED `0` UNHELD ADDRESSES FOR THE ELEVENTH PASS; EVERY NEW ROW CAME FROM THE SEARCH API.**
+
+🟢 **What is actually moving, dated.** Sorting `canvas lms mcp license:mit` by recency:
+
+| Repo | Grant | Stars | Pushed | Note |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `MIT`, `1,071 B` byte-read | **`317`** | `2026-11-03` | The head, pushed on the read date |
+| [`rbrtlol/canvas-readonly-mcp`](https://github.com/rbrtlol/canvas-readonly-mcp) | `MIT` metadata | `0` | `2026-11-03` | Brand new |
+| [`Fireiscoolsolo/canvas-lms-mcp-local`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local) | `MIT` metadata | `1` | `2026-11-03` | `211` tools, local |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | `MIT` metadata | `1` | `2026-11-03` | `211` tools, self-hosted |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `MIT`, `1,070 B` byte-read | `10` | `2026-11-03` | Write surface — grades and comments |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `MIT`, `1,068 B` byte-read | `62` | `2026-11-03` | 🔵 Brightspace, not Canvas |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | `MIT` metadata | `0` | `2026-11-01` | Read-only student view |
+| [`arthurcuri/mcp-instructure-canvas`](https://github.com/arthurcuri/mcp-instructure-canvas) | `MIT` metadata | `2` | `2026-10-30` | `REST` + `GraphQL` |
+| [`Ryfter/canvas-toolchain`](https://github.com/Ryfter/canvas-toolchain) | `MIT` metadata | `1` | `2026-10-29` | 🟡 Course **design**, not reading |
+| [`NeerAeron/canvas-reader`](https://github.com/NeerAeron/canvas-reader) | `MIT` metadata | `0` | `2026-10-29` | Local-first reader |
+
+🟡 **`6 of 10` pushed on the read date; `9 of 10` within eight days.** 🔵 Grants: `4` byte-read at
+`raw.githubusercontent.com` with a `404` control, `6` carried on platform metadata only and **labelled
+as such** — after `635-A` this base does not promote a metadata-only grant to a verified one.
+
+🔴 **The shape of the tail, because the head is not the story on its own.** `8 of 10` rows sit at `≤2★`
+while the head holds `317★`. 🟡 That is a **consolidating** channel, not a greenfield one: one winner,
+a second platform entering, and a wide tail of independent re-implementations — several of which
+(`canvas-readonly-mcp`, `canvas-lms-student-mcp`, `canvas-reader`) are the *same read-only product*
+built three times in six days. 🔵 `p635` saw the equivalent Moodle tail and concluded greenfield; the
+difference is that the Canvas tail has something to consolidate **towards**.
+
+🟢 **The growth measurement, which is the trend proper.** The channel maximum as this base has recorded
+it, across eight observations: `272` → `288` → `289` → `295` → `308` → `309` → `310` → **`317`**.
+🔵 Monotonic, `+45` over the series, `+7` since the last recorded figure. Evidence:
+`evidence/agent-ceiling-starseries.2026-11-03-p636.tsv`.
+
+🔴 **What did not trend, measured.** `edx mcp license:mit` returns **`0`** repositories. Open edX is the
+estate `p634` graded as the permissive-friendly one (`12 of 12` `MIT` themes) and it has **no** `MIT`
+`MCP` channel at all. 🟡 Permissive licensing upstream did not produce agent supply downstream — install
+base did. Recorded as the negative control for `636-A`.
+
+🔴 **The web-trending channel, eleventh consecutive nil.** `github trending education AI 2026` returned
+six repository addresses — `GarethManning/education-agent-skills` (`942★`, held in `158` places),
+`OPTIMETA/PAIDEIA`, `TapXWorld/ChinaTextbook`, `anandpatikat/guru-latihan-dinamis`,
+`rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners` — and `0` unheld. 🟡 No live
+GitHub Trending snapshot was reachable; the results were aggregator and Telegram-digest pages, several
+undated. 🔵 This base should stop costing that leg as a discovery channel for repositories: eleven passes,
+zero addresses. It is retained because it still yields **facts** at roughly an eighth (`636-F`).
+
 ## 🆕 `2026-11-03` · `p635` — **🟢 THE `Moodle` ESTATE CHANNEL PAYS A FIFTH TIME (`learnweb`, UNIVERSITY OF MÜNSTER, `64` REPOSITORIES, `0` HITS ON THIS BASE BEFORE TODAY). 🔴 BUT ALL THREE ESTATES GRADE THE SAME WAY AND IT IS THE OPPOSITE OF `p634`: `0` PERMISSIVE THEMES OF `9`, AND THE ONLY PERMISSIVE LAYER IS INFRASTRUCTURE. 🔴 `3 of 3` "`MIT`" THEMES IN THE WILD CARRY `GPL` HEADERS. 🟢 `619-Q` CLOSES ON A THREE-PART ANSWER.**
 
 🟢 **`EMEA` — [`learnweb`](https://github.com/learnweb), University of Münster, Learnweb by `ZHLdigital.`**

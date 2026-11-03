@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p636` — the platform question, answered with a number, and the one `LTI` `LMS` that is `MIT`
+
+🟢 **`p635` left this base a question to ask of any `LMS` before quoting — *what substrate does it
+extend in?* — and said the answer was checkable in an afternoon. It was. Here it is as a table.**
+
+| Platform | Core licence | Extension substrate | Boundary | Permissive share of its extension estate | What a studio can own |
+|---|---|---|---|---|---|
+| **Moodle** | `GPL-3.0` | `PHP` plugin, in-process | 🔴 in-process | `10.0%` (`138` `MIT` / `1,239` `GPL-3.0`) | Only what sits outside the plugin boundary — `MCP` servers, provisioning, containerisation |
+| **Open edX** | `AGPL-3.0` | `Python` `XBlock`, in-process | 🔴 in-process | `25.0%` (`76` `MIT` / `228` `AGPL-3.0`) | Themes (assets and configuration, `12 of 12` `MIT` at `p634`); **not** `XBlock`s |
+| **WordPress `LMS`** | `GPL-2.0+` | `PHP` plugin, in-process | 🔴 in-process | `40.0%` (`12` `MIT` / `18` `GPL-3.0`) — small denominator | Nominally more, but the contract is unenforced and the grants are unreliable (`636-C`) |
+| **Canvas** | `AGPL-3.0` | `REST`/`GraphQL` API + `LTI`, over the network | 🟢 **network** | Not measurable (`636-E`), but the `MCP` channel head is `317★` `MIT` | Everything on the client side of the API |
+| **Brightspace (`D2L`)** | proprietary | `REST` API + `LTI`, over the network | 🟢 **network** | n/a — core is not open | `MIT` tooling against the API (`62★` head) |
+
+🔵 **The rule, now with a mechanism and a number.** The core's licence does not predict what a studio can
+own; the **substrate the extension runs in** does. Moodle and WordPress are both `GPL` cores with `PHP`
+plugin substrates and sit a factor of four apart on permissive share, because enforcement differs — and
+Canvas, whose core is the *most* restrictive licence in the table (`AGPL-3.0`), is the one platform whose
+extension ecosystem is permissive almost throughout, because its extensions are **network clients**.
+🟡 Quote accordingly: ask for the integration boundary before asking for the licence.
+
+🟢 **The vertical solution this pass actually adds, and it is a real platform.**
+[`openfun/marsha`](https://github.com/openfun/marsha) — an open-source **`LTI` Learning Content
+Management System** from France Université Numérique, `MIT` (`1,078 B` payload read at
+`raw.githubusercontent.com`, `151★`, pushed `2026-11-01`). 🔵 This is the rarest shape in this base's
+holdings: an `LMS`-class system that is **permissive**, where Moodle is `GPL-3.0`, Open edX `AGPL-3.0`,
+Chamilo `GPL`, Sakai `Apache-2.0`-but-dormant and Canvas `AGPL-3.0`. 🟡 It is an `LCMS` — it manages
+content and plugs into an existing `LMS` over `LTI` rather than replacing it — so it fits beside Moodle
+or Canvas, not instead of them. 🔴 `EMEA`-institutional and single-publisher: price the bus-factor.
+
+🟢 **The boundary layer, also real and also permissive.**
+[`instructure/ims-lti`](https://github.com/instructure/ims-lti) (`MIT`, `1,068 B`, `203★`, pushed
+`2026-10-02`) is maintained by Canvas's own vendor and implements both sides of `LTI`;
+[`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (`MIT`, `1,070 B`, `138★`) is the
+`Python` `LTI` `1.3` Advantage entry point but has been untouched since `2024`. 🔴
+[`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) (`MIT`, `132★`) is
+**archived** — a design reference, not a dependency.
+
+🔴 **The grant-reading rule, revised again and now in its portable form.** `p635` said: for a Moodle
+plugin, grade the source header because it says `GPL` under an `MIT` `LICENSE`. Tested on `WordPress`
+this pass, the `GPL` half does not hold — `0 of 4` graded `WordPress` `LMS` plugins carry a `GPL` header
+— but the **disagreement** does: [`devMiguelCarrero/lms-matic-extender`](https://github.com/devMiguelCarrero/lms-matic-extender)
+reports `MIT` on GitHub, reads `MIT` in a `1,073 B` byte-read `LICENSE`, and declares `License: OSLv3` in
+its own plugin header. 🟡 `Open Software License 3.0` is copyleft **and `GPL`-incompatible** — a licence
+that is neither of the two a reviewer would be looking for. 🔵 So the rule to carry into an engagement is
+**"grade all three channels and expect them to disagree"**, not "expect `GPL`". `636-B`/`636-C`.
+
+🟡 **Unchanged and still the honest ceiling:** no permissive **platform of record** exists for the
+accessibility / special-education tier (`619-Q`, closed at `p635`), and nothing this pass changes it.
+
 ## 🆕 `p635` — `Moodle` as a vertical starting point: the licence line runs around the plugin boundary, not through the middle of the estate
 
 🟢 **What is new.** This base has held `Moodle` as its first vertical since `p1` and has priced it as

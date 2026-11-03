@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p636` — the foundations that sit at the network boundary, and the denominator that cannot grade them
+
+🟢 **`636-D` — the substrate rule from `635-B`, measured instead of asserted.** `p635` left this base
+with a rule — *the permissive subset of a platform-derived estate is whatever sits outside the
+platform's extension mechanism* — and a question to ask of any `LMS`: *what substrate does it extend
+in?* Graded across the three in-process extension substrates this base holds, where the search terms are
+unambiguous:
+
+| Platform | Extension substrate | Permissive (`MIT`) | Copyleft | Permissive share | Plugin contract, as observed |
+|---|---|---|---|---|---|
+| Moodle | in-process `PHP` plugin | `138` | `1,239` (`GPL-3.0`) | **`10.0%`** | 🔴 **enforced** — `3 of 3` `GPL` source headers (`p635`) |
+| Open edX | in-process `Python` `XBlock` | `76` | `228` (`AGPL-3.0`) | **`25.0%`** | 🟡 partial — `15 of 15` `AGPL` `XBlock`s, `12 of 12` `MIT` themes (`p634`) |
+| WordPress `LMS` | in-process `PHP` plugin | `12` | `18` (`GPL-3.0`) | **`40.0%`** | 🟢 **not enforced** — `0 of 4` `GPL` source headers (`p636`) |
+
+🔵 **The ordering is the finding.** The permissive share of an extension estate rises as the platform's
+plugin contract goes unenforced in the wild — `10%` where headers are policed, `40%` where they are
+absent. 🟡 It does **not** track the core's licence: Moodle and WordPress are both `GPL` cores with
+`PHP` plugin substrates and they are a factor of four apart. 🔴 Honest limit: the `WordPress` row rests
+on `12` and `18` repositories, the result set is polluted (one row is a **theme**, `636-H`), and `4 of 7`
+candidates could be graded at all. The `40%` is directional, the `10%` is solid.
+
+🔴 **`636-E` — the network-boundary half of the same rule could not be measured, and the reason is an
+instrument defect worth more than the measurement.** `LTI` is the `LMS` world's network-boundary
+substrate and the natural comparison against the table above. Both available denominators are wrong:
+
+| Query | `n` | Defect |
+|---|---|---|
+| `lti license:mit` | `610` | 🔴 **acronym collision** — `4 of` the top `10` by stars are not `LTI` |
+| `"lti 1.3" license:mit` | `58` | 🟡 version-qualified; excludes `LTI` `1.1` tooling still in service |
+| `"learning tools interoperability" license:mit` | `11` | 🔴 **under-counts** — misses the two largest real repositories |
+
+🟡 The collisions are not marginal: [`sarxos/webcam-capture`](https://github.com/sarxos/webcam-capture)
+(`2,358★`, a `USB` webcam library) is the **top hit**, followed by
+[`ltebean/LTInfiniteScrollView`](https://github.com/ltebean/LTInfiniteScrollView) (`877★`, an iOS
+scrollview — `LTI` is a substring of `LTInfinite`),
+[`lmcggg/Data-Driven-MPC`](https://github.com/lmcggg/Data-Driven-MPC) (`149★`) and
+[`kmilo17pet/qlibs`](https://github.com/kmilo17pet/qlibs) (`104★`), where `LTI` means *linear
+time-invariant*. 🔴 And the exact phrase drops [`instructure/ims-lti`](https://github.com/instructure/ims-lti)
+(`203★`) and [`openfun/marsha`](https://github.com/openfun/marsha) (`151★`), which are the real ones.
+🔵 The spread between the two denominators is **`55×`**, so no permissive-share figure for the network
+boundary is publishable this pass. Declared, not estimated.
+
+🟢 **What is publishable: the real `LTI` foundations, byte-verified.** These are the rows the broken
+denominator was hiding, and they are the permissive network-boundary layer a studio can actually build
+on. Cohort control returned `404`.
+
+| Repo | Grant | Payload read | Stars | Pushed | Why it is foundational |
+|---|---|---|---|---|---|
+| [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | `MIT` | `1,068 B`, `LICENSE.txt@main`, © `2014` Instructure | `203` | `2026-10-02` | 🟢 `Ruby` library for `LTI` tool consumers **and** providers, published by Canvas's own vendor and still maintained. The reference implementation of the boundary |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | `MIT` | `1,078 B`, `LICENSE@master` | `151` | `2026-11-01` | 🟢 An open-source `LTI` **Learning Content Management System**, from France Université Numérique. `EMEA`, institutional, pushed two days before this read — and `MIT` where an `LMS` would normally be copyleft |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `MIT` | `1,070 B`, `LICENSE@master` | `138` | `2024-08-18` | 🟡 `LTI` `1.3` Advantage tool library for `Python` — the canonical `Python` entry point, but untouched since `2024` |
+| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | `MIT` | `1,141 B`, `LICENSE@main` | `132` | `2023-05-03` | 🔴 **ARCHIVED** — Microsoft Learn catalogue as an `LTI` tool. Read as a design reference; do not adopt |
+| [`NUS-ALSET/achievements`](https://github.com/NUS-ALSET/achievements) | `MIT` | `1,066 B`, `LICENSE@master` | `17` | `2023-01-04` | 🔵 `APAC` (National University of Singapore) — institutional, permissive, and dormant since `2023` |
+| [`macewan-cs/lti`](https://github.com/macewan-cs/lti) | `MIT` | `1,108 B`, `LICENSE@main` | `8` | `2021-07-22` | 🟡 `Go` implementation of `LTI` from MacEwan University, `North America`. The only `Go` row; dormant |
+
+🔴 **`636-G` — the maintenance split a studio must price.** `2 of 6` were pushed in `2026`
+(`instructure/ims-lti`, `openfun/marsha`); `1 of 6` is **archived** by its publisher; `3 of 6` have been
+dormant for two to five years. 🟡 So the permissive `LTI` layer exists and is `MIT` throughout — `6 of 6`
+payload-verified — but it is **two live repositories wide**. The boundary is open and almost unstaffed.
+
 ## 🆕 `p635` — a fifth institutional estate, and the licence rule that governs all five
 
 🟢 **`P632-0` is `5 for 5`.** `p632` found a French higher-education consortium (`EMEA`), `p633` an

@@ -1,0 +1,22 @@
+slug	branch	path	http	bytes	payload_first_match	class	cohort
+vishalsachdev/canvas-mcp	main	LICENSE	200	1071	MIT License	lms-mcp	636-A-agent-ceiling
+boyuchengz/canvas-mcp	main	LICENSE	200	1072	MIT License	lms-mcp	636-A-agent-ceiling
+RohanMuppa/brightspace-mcp-server	main	LICENSE	200	1068	MIT License	lms-mcp	636-A-agent-ceiling
+bruchris/canvas-lms-mcp	main	LICENSE	200	1070	MIT License	lms-mcp	636-A-agent-ceiling
+r1ckyIn/canvas-ed-mcp	main	LICENSE	200	1056	MIT License	lms-mcp	636-A-agent-ceiling
+SonAIengine/ku-portal-mcp	main	LICENSE	200	1068	MIT License	lms-mcp	636-A-agent-ceiling
+r-huijts/canvas-mcp	main	LICENSE	200	1065	MIT License	lms-mcp	636-A-agent-ceiling
+kc0506/ntucool	main	LICENSE	200	1066	MIT License	lms-mcp	636-A-agent-ceiling
+CONTROL-vishalsachdev/canvas-mcp	main	LICENCE-p636-control-not-real	404	0	-	control	636-A-agent-ceiling
+instructure/ims-lti	main	LICENSE.txt	200	1068	Copyright (c) 2014 Instructure	lti-network	636-E-lti-denominator
+openfun/marsha	master	LICENSE	200	1078	MIT License	lti-network	636-E-lti-denominator
+dmitry-viskov/pylti1.3	master	LICENSE	200	1070	MIT License	lti-network	636-E-lti-denominator
+microsoftarchive/Learn-LTI	main	LICENSE	200	1141	MIT License	lti-network	636-E-lti-denominator
+NUS-ALSET/achievements	master	LICENSE	200	1066	MIT License	lti-network	636-E-lti-denominator
+macewan-cs/lti	main	LICENSE	200	1108	MIT License	lti-network	636-E-lti-denominator
+CONTROL-openfun/marsha	master	LICENSE-p636-control-not-real	404	0	-	control	636-E-lti-denominator
+easyteachlms/plugin	main	LICENSE	200	1088	MIT License	wordpress-lms	636-B-header-port
+Marius-Roed/lighter-lms	main	LICENSE.txt	200	1074	MIT License	wordpress-lms	636-B-header-port
+Velocity-Developer/ecoursity	main	LICENSE	200	1075	MIT License	wordpress-lms	636-B-header-port
+devMiguelCarrero/lms-matic-extender	main	LICENSE	200	1073	MIT License	wordpress-lms	636-B-header-port
+CONTROL-devMiguelCarrero/lms-matic-extender	main	LICENSE-p636-control-not-real	404	0	-	control	636-B-header-port

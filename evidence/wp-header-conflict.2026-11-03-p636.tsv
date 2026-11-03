@@ -1,0 +1,9 @@
+slug	main_plugin_file	discovery	platform_metadata	LICENSE_payload_read	payload_bytes	source_header_License_field	GPL_header_lines_first_60	verdict
+easyteachlms/plugin	easyteachlms.php	filename-convention	MIT	MIT License	1088	ABSENT	0	NO CONFLICT — no licence header at all; WordPress GPL convention not followed
+Marius-Roed/lighter-lms	lighter-lms.php	filename-convention	MIT	MIT License	1074	ABSENT	0	NO CONFLICT — no licence header at all
+Velocity-Developer/ecoursity	ecoursity.php	filename-convention	MIT	MIT License	1075	MIT (License URI opensource.org/licenses/MIT)	0	CLEAN — all three channels agree on MIT
+devMiguelCarrero/lms-matic-extender	lms-matic-extender.php	filename-convention	MIT	MIT License	1073	OSLv3	0	CONFLICT — Open Software License 3.0 declared in source under an MIT LICENSE file and MIT platform metadata
+Zyron-Tech/Tutor-LMS-Auto-SEO-Booster	NOT-FOUND	filename-convention failed (4 names)	MIT	-	-	-	-	UNGRADED — main file not discoverable without contents API
+payzum-dev/tutor-lms-payzum	NOT-FOUND	filename-convention failed (4 names)	MIT	-	-	-	-	UNGRADED — main file not discoverable without contents API
+nayemspecial/lessonLMS	style.css (Theme Name: LessonLMS)	filename-convention	MIT	-	-	-	-	MIS-FILED — a THEME returned by a "wordpress lms plugin" query; no plugin main file exists
+TOTAL	4 of 7 graded	-	4 of 4 report MIT	4 of 4 MIT payload	-	1 OSLv3, 1 MIT, 2 absent	0 of 4 carry GPL headers	Moodle was 3 of 3 GPL headers; WordPress is 0 of 4 — mechanism does NOT port, channel conflict DOES (1 of 4)

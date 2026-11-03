@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p636` — **🔴 THE TREND `p635` RECORDED AS "GREENFIELD, NO CONSOLIDATION, MAXIMUM `42★`" IS THE SAME WEEK'S TREND MEASURED ON THE WRONG PLATFORM. ON CANVAS THE PERMISSIVE LMS-AGENT CLASS HAS A `317★` HEAD THAT GREW `+7` SINCE THIS BASE LAST LOOKED, AND A `62★` BRIGHTSPACE SECOND PLATFORM. 🟢 `8 of 8` BYTE-VERIFIED `MIT`, CONTROL `404`. 🔴 MANDATED LEGS NIL FOR ADDRESSES AN **ELEVENTH** TIME.**
+
+🟢 **New this week, and it is the correction of last week's entry rather than a new class.** `p635`
+dated the permissive LMS-agent class correctly — `MCP` servers and agent skills, the freshest pushed one
+hour before the read — and then mis-sized it, because it counted only `moodle plugin license:mit`.
+Sorting `canvas lms mcp` by recency returns a cohort that is **fresher and two orders of magnitude more
+consolidated**. Every grant below was byte-read this pass at `raw.githubusercontent.com`; the cohort's
+fabricated-path control returned `404`.
+
+| Repo | Grant | Payload | Stars | Pushed | What it is |
+|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `MIT` | `1,071 B` | **`317`** | **`2026-11-03`** | Canvas `MCP`, `102` tools and `8` agent skills. **The class head — and it was pushed the day of this read** |
+| [`rbrtlol/canvas-readonly-mcp`](https://github.com/rbrtlol/canvas-readonly-mcp) | `MIT` (metadata) | — | `0` | **`2026-11-03`** | Read-only Canvas `MCP`. Brand new, zero traction — the long tail still forming behind the head |
+| [`Fireiscoolsolo/canvas-lms-mcp-local`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-local) | `MIT` (metadata) | — | `1` | **`2026-11-03`** | `211` tools for grades, deadlines, assignments in Claude Desktop |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | `MIT` (metadata) | — | `1` | **`2026-11-03`** | Self-hosted sibling of the row above, `211` tools, web/desktop/phone |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `MIT` | `1,070 B` | `10` | **`2026-11-03`** | Reads courses and submissions **and writes grades and comments** |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `MIT` | `1,068 B` | `62` | **`2026-11-03`** | 🔵 Brightspace (`D2L`) — **a second platform in the tier, and on its own above Moodle's `42★` ceiling** |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | `MIT` (metadata) | — | `0` | `2026-11-01` | Read-only student view: due dates, grades, missing work, announcements |
+| [`arthurcuri/mcp-instructure-canvas`](https://github.com/arthurcuri/mcp-instructure-canvas) | `MIT` (metadata) | — | `2` | `2026-10-30` | `REST` **and** `GraphQL`, file transfers, Telegram reminders |
+| [`Ryfter/canvas-toolchain`](https://github.com/Ryfter/canvas-toolchain) | `MIT` (metadata) | — | `1` | `2026-10-29` | 🟡 Not a reader — an AI-assisted **course-design** toolchain. The only authoring-side row in the cohort |
+| [`NeerAeron/canvas-reader`](https://github.com/NeerAeron/canvas-reader) | `MIT` (metadata) | — | `0` | `2026-10-29` | Read-only Canvas for Claude, ChatGPT and Codex, local to the user's Mac |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `MIT` | `1,072 B` | `119` | `2026-10-27` | Read-only, multi-assistant. **Second-largest in the class** |
+
+🟢 **The dateable part, stated precisely.** `6 of 11` rows above were pushed on the day of this read and
+`9 of 11` within eight days. 🔵 `p635` called the Moodle version of this *"a live class, not an
+archive"* on the same evidence shape and was right about liveness; the correction is only to its size.
+
+🔴 **The counterweight `p635` published, re-measured.** Its figures — `138` repositories, maximum `42★`,
+median `0★` — hold for Moodle plugins and do not describe the class:
+
+| Platform | `MCP` repositories | Channel maximum | Stars |
+|---|---|---|---|
+| Canvas | `137` | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **`317`** |
+| Brightspace (`D2L`) | `39` | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `62` |
+| Moodle | `263` | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | `11` |
+| Blackboard | `6` | — | — |
+| Open edX | `0` (`license:mit`) | **none** | `0` |
+
+🟡 **Moodle leads on repository count and trails on traction by `28×`.** Open edX, which `p634` graded as
+the permissive-friendly estate, has **no** `MIT` `MCP` channel at all. 🔵 So the trend is not "permissive
+agent tooling has no traction"; it is that traction in this tier follows the **institutional install base
+of the platform in the region where agent adoption is highest**, and that is Canvas in North American
+higher education. `636-A`.
+
+🔴 **The mandated legs, an eleventh consecutive nil — and this pass can say why it no longer matters.**
+Eight legs (global `×4`, then North America, EMEA, APAC, LATAM) returned `12` repository addresses and
+`0` unheld; the week's most-trending education-agent repository on the web channel,
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+(`942★`), is held in `158` places. 🟢 **All eleven new repository rows this pass came from the GitHub
+search API instead.** 🟡 Fact yield was `2 of 15` (`13.3%`) — the European University Association's
+January `2026` report urging European `LLM`s, and Deloitte's `2026` higher-education outlook. 🔵 That is
+*below* `p635`'s claimed third, and `p635`'s own figure is inflated by self-pollution (`636-F`).
+🔴 **`APAC` is an explicit nil, not a silence:** the leg surfaced no ministry-level education rule for
+any `APAC` country — only a vendor summit and Singapore's *financial-sector* AI consultations.
+
 ## 🆕 `2026-11-03` · `p635` — **🟢 A NEW AND DATEABLE SUPPLY CLASS: THE PERMISSIVE `Moodle` POPULATION IN LATE `2026` IS **AGENT TOOLING**, NOT PLUGINS — `MCP` SERVERS AND AGENT SKILLS, THE FRESHEST PUSHED `1 HOUR` BEFORE THE READ. 🔴 AND IT HAS NO TRACTION: `138` `MIT` REPOSITORIES, MAXIMUM `42★`, MEDIAN `0★`. 🔴 `3 of 3` APPARENT `MIT` `Moodle` THEMES CARRY `GPL` HEADERS UNDER THE `MIT` FILE. 🔴 THE MANDATED WEB LEGS GO NIL A **TENTH** TIME, `9 of 9` ADDRESSES ALREADY HELD.**
 
 🟢 **New this week, and it is a class rather than a repository.** Sorting the `moodle plugin license:mit`

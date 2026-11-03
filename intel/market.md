@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p636` — the integration boundary is the commercial question, and an eleventh nil on the mandated legs
+
+🟢 **Supply, measured this pass.** The pass graded the **agent boundary across platforms** rather than
+one more publisher estate: `canvas lms mcp` (`137` repositories), `moodle mcp` (`263`), `brightspace mcp`
+(`39`), `blackboard lms mcp` (`6`), `edx mcp license:mit` (`0`). `8` grants byte-read at
+`raw.githubusercontent.com`, `3 of 3` fabricated controls `404`.
+
+🔴 **The number that changes a quote, and it corrects this base's own last pass.** `p635` published a
+`42★` ceiling for the permissive LMS-agent channel and concluded *"nothing permissive at scale"*. The
+class head is [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at **`317★`**,
+`MIT`, pushed the day of this read — `7.5×` that ceiling — and this base already held the row in `189`
+places at `310★`. 🟡 A studio told "greenfield" would have bid to **build**; the correct bid is to
+**extend or partner**, because a `102`-tool `MIT` incumbent with `100` forks already exists.
+
+🟢 **The commercial rule this pass can defend with numbers.** What a studio can own is set by the
+**substrate a platform's extensions run in**, not by the core's licence: Moodle's in-process `PHP`
+plugin estate is `10.0%` permissive (`138` `MIT` / `1,239` `GPL-3.0`), Open edX's `XBlock` estate
+`25.0%` (`76` / `228` `AGPL-3.0`), and Canvas — the most restrictively licensed core in the comparison
+(`AGPL-3.0`) — has a permissive client ecosystem because its extensions are network clients.
+🔵 **Price the integration boundary, then the licence.**
+
+🔴 **The mandated legs, eleventh consecutive nil for addresses.** Eight legs returned `12` repository
+addresses, `0` unheld. Fact yield `2 of 15` (`13.3%`): the **European University Association**'s January
+`2026` report urging European `LLM`s, and **Deloitte**'s `2026` higher-education outlook. 🟡 `635-E`
+claimed roughly a third; at `13.3%` that is too generous — and `p635`'s own count is inflated, because
+`636-F` shows the heldness instrument counts a pass's own writing as prior knowledge.
+
+## Opportunities by region
+
+### Global
+
+🟢 **The opportunity is the agent boundary, and it is now a position to take rather than a gap to fill.**
+`137` Canvas `MCP` repositories, a `317★` `MIT` head growing `+7` since this base last looked, a `62★`
+Brightspace entrant, and a tail where `8 of 10` rows sit at `≤2★` and three of them are the *same*
+read-only product rebuilt in six days. 🟡 The duplication is the opening: not another reader, but the
+**write-safe, auditable, multi-tenant** layer — only [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp)
+(`10★`) writes grades at all, and a prior pass measured the head's write surface at `41.4%` of its tool
+declarations, which is a governance problem a studio can be paid to solve.
+🔵 **And it is licence arbitrage:** work on the network side of an `LMS` boundary is `MIT` and ownable;
+work inside the plugin boundary is `GPL-3.0` and is not.
+
+🔴 **What must go in every estimate** (`636-B`/`636-C`): grade the `LICENSE` payload, the platform badge
+**and** the source header, and expect them to disagree. Moodle hides `GPL-3.0` under `MIT`; WordPress
+hid `OSLv3` — `GPL`-incompatible copyleft — under `MIT` on both other channels.
+
+### North America
+
+🟢 **The region that owns this pass's finding.** Canvas's install base in US higher education is why the
+permissive agent tier consolidated here and not on Moodle, and the head
+([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), `317★`) plus
+[`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) and
+[`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`119★`) are the engagement-ready
+assets. 🟡 Demand-side figures are held but conflict: regional share estimates run `36%`–`41.7%`, one
+vendor putting the region at `$3.68B` in `2026`. 🔵 **New to this base this pass:** Deloitte's `2026`
+higher-education outlook (administrative load, student experience, skills gap). 🟡 Gallup's April `2026`
+finding — over `60%` of college students using AI weekly while roughly half their institutions
+discourage or prohibit it — is held and is the clearest statement of the governance gap a studio sells
+into. 🔴 Hard regulation remains thin; state-level legislative activity is the thing to watch.
+
+### EMEA
+
+🟢 **The region supplies the one permissive `LMS`-class platform this base holds.**
+[`openfun/marsha`](https://github.com/openfun/marsha) (`MIT`, `1,078 B` payload read, `151★`, pushed
+`2026-11-01`), an `LTI` `LCMS` from France Université Numérique — permissive where every other `LMS` in
+this base is `GPL` or `AGPL`. 🔵 With `p635`'s `learnweb` and `Moodle-An-Hochschulen` estates, `EMEA`
+remains where institutional deployment practice is published. 🔴 **Regulatory:** the EU `AI Act`'s
+post-market-surveillance duty on schools and universities — continuing audits against discriminatory
+outcomes — is the compliance work; obligation dates are reported inconsistently across sources
+(February `2026` versus "key provisions during `2026`") and must be checked against primary EU texts
+before being quoted. 🟢 **New to this base:** the **European University Association**'s January `2026`
+report urging prioritisation of European `LLM`s against US-centric bias — a procurement signal for any
+EMEA higher-education bid. 🟡 Also held: Microsoft `Elevate for Educators`, LEGO Education's K-8
+computer-science and AI platform (shipping April `2026`), Instructure's EMEA `AI Act` webinar series,
+and Fosway's `2026` AI Market Assessment for digital learning.
+
+### APAC
+
+🔴 **An explicit nil, recorded as a gap rather than left as silence.** The `APAC` leg surfaced **no**
+ministry-level education AI rule for any country in the region — no curriculum policy, no named
+education regulator, no leading regional edtech vendor. What it returned was a vendor summit (`Acer Edu
+Summit Asia Pacific 2026`, held), Singapore's consultations on AI in **financial** institutions (not
+education), and general enterprise-AI commentary on AI sovereignty and bot-disclosure rules.
+🟡 This base has now recorded a thin `APAC` education-policy channel for multiple consecutive passes;
+the gap is in the **web channel**, not necessarily in the region. 🟢 The region's supply side is real and
+institution-built: [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) (Korea
+University, `MIT`, `13★`), [`kc0506/ntucool`](https://github.com/kc0506/ntucool) (`NTU COOL`, `Rust`,
+`MIT`, `10★`) and [`NUS-ALSET/achievements`](https://github.com/NUS-ALSET/achievements) (National
+University of Singapore, `MIT`, `17★`, dormant since `2023`). 🔵 **The actionable reading:** `APAC`
+universities build their own portal-agent integrations in-house and publish them permissively. That is a
+partner channel, and it is reachable without the policy intelligence the legs failed to supply.
+
+### LATAM
+
+🟢 **The demand side remains the strongest-evidenced of any region and all of it is held.** Digital
+Education Council with Tec de Monterrey (February `2026`, `29` universities): `92%` of students and `79%`
+of faculty actively engaging with AI. UNESCO's regional AI-in-Education Observatory for Latin America and
+the Caribbean; the UNESCO–CENIA cooperation agreement with Chile; Tec de Monterrey redesigning `44`
+degree programmes for AI by `2026`; Chile and Mexico as the policy pioneers. 🔴 **Binding regulation is
+still absent** — the literature is comparative and academic (Ibero-American higher-education studies),
+with no national rule in force surfaced for `2026`. 🟡 Constraints are the familiar ones: connectivity,
+device access, digital literacy. 🔵 **Supply remains the regional weakness, and it is thin by
+measurement:** the only `LATAM`-shaped permissive row this base found in the adjacent Moodle cohort was
+[`JaxisReal/Moodle-Reporte-Limpio`](https://github.com/JaxisReal/Moodle-Reporte-Limpio) (`p635`, `0★`),
+and no `LATAM`-published row appears in this pass's Canvas cohort at all. 🟡 Highest adoption, lowest
+local permissive supply — a build-and-localise engagement rather than an extend-the-incumbent one.
+
 ## 🆕 `p635` — the licence line through a `Moodle` engagement, and a tenth nil on the mandated legs
 
 🟢 **Supply, measured this pass.** The publisher-estate operative paid a fifth time:

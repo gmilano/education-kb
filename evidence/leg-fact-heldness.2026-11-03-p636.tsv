@@ -1,0 +1,17 @@
+fact	region	source_leg	grep_hits_working_tree	held	note
+European University Association Jan-2026 report urging European LLMs	EMEA	region-emea	0	UNHELD	NEW TO BASE — first of two new facts this pass
+Deloitte 2026 higher-education outlook	Global	global-trends	0	UNHELD	NEW TO BASE — second of two
+Gallup Apr-2026 over 60pct of college students use AI weekly	North America	region-na	57	HELD	-
+OECD Digital Education Outlook 2026	Global	region-na	61	HELD	-
+Microsoft Elevate for Educators	EMEA	region-emea	4	HELD	graded UNHELD by p635, written by p635 — see heldness-selfpollution
+Acer Edu Summit Asia Pacific 2026	APAC	region-apac	5	HELD	graded UNHELD by p635, written by p635 — same caveat
+Tec de Monterrey 44 degree programmes redesigned for AI	LATAM	region-latam	56	HELD	graded UNHELD by p635; 56 hits predate it
+EU AI Act post-market-surveillance duty applied to schools	EMEA	region-emea	5	HELD	0 hits at HEAD~1 — p635's own writing; SELF-POLLUTED
+LEGO Education K-8 computer-science and AI platform Apr-2026	EMEA	region-emea	1	HELD	thin
+ICS.AI national higher-education AI model for UK students	EMEA	region-apac	100	HELD	surfaced by the APAC leg but is a UK fact — leg-region mismatch
+Digital Education Council 92pct students / 79pct faculty LATAM	LATAM	region-latam	53	HELD	-
+UNESCO-CENIA cooperation agreement	LATAM	region-latam	73	HELD	-
+MultiState state-level AI education legislation increase 2026	North America	region-na	38	HELD	-
+Singapore financial-institution AI consultations	APAC	region-apac	-	N/A	not an education fact; recorded to show the APAC leg's education yield was nil
+US DoEd 169M responsible AI in higher education	North America	global-trends	15	HELD	-
+TOTAL	-	-	-	2 of 15 UNHELD	fact yield 13.3pct, against p635's claimed 33pct — and p635's own count is inflated by self-pollution

@@ -1,0 +1,4 @@
+fact_probe	working_tree_hits	HEAD~1_hits	interpretation
+post-market-surveillance	5	0	SELF-POLLUTED — p635 graded it UNHELD then wrote it; it now reads HELD against the working tree
+post-market surveillance (space variant)	0	0	HYPHENATION-SENSITIVE — the same fact reads UNHELD when the separator differs
+remedy	-	-	grade heldness with git show HEAD~1:<file>, and probe both hyphen and space variants

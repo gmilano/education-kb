@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p636` — three recipes at the network boundary, and one pre-flight check that stops a bad bid
+
+### 🟢 `p636-R1` — The governed Canvas agent: extend the `317★` incumbent instead of rebuilding it
+
+**Why this and not a build.** `p635` would have told a studio this tier was greenfield. It is not:
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (`MIT`, `1,071 B` payload
+read, `317★`, `100` forks, pushed `2026-11-03`) already ships `102` tools and `8` agent skills, and
+`8 of 10` of its competitors sit at `≤2★`. 🔴 The gap is **governance, not capability**: a prior pass
+measured `48` of `116` extracted tool declarations as mutating (`41.4%`), the heaviest write surface in
+the tier, and only [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (`MIT`, `10★`)
+writes grades at all among the rest.
+
+**Wire it:**
+1. Fork [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (`MIT` — ownable; the
+   `AGPL-3.0` Canvas core is **not** touched, because you talk to it over `REST`/`GraphQL`).
+2. Split the `102` tools into a read plane and a write plane. Keep the read plane as-is; put every
+   mutating tool behind an approval step. The `41.4%` figure is your scoping input.
+3. Borrow the read-only shape from [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp)
+   (`MIT`, `1,072 B`, `119★`) for the student-facing tier — read-only by construction is the easier
+   accreditation conversation.
+4. Take grade-write semantics from [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp)
+   (`MIT`, `1,070 B`) rather than inventing them.
+5. Audit-log every write against the EU `AI Act` post-market-surveillance duty if the estate is `EMEA`.
+
+🟡 **Deliverable:** the write-safe, multi-tenant, auditable layer the channel does not have. 🔵 Second
+platform for the same recipe: [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(`MIT`, `1,068 B`, `62★`) — Brightspace is proprietary, so **all** the ownable work is client-side.
+
+### 🟢 `p636-R2` — The permissive `LTI` content stack: an `LMS`-class system you can actually rebrand
+
+**Why this is rare.** Every `LMS` in this base is copyleft — Moodle `GPL-3.0`, Open edX `AGPL-3.0`,
+Canvas `AGPL-3.0` — except one. [`openfun/marsha`](https://github.com/openfun/marsha) is an `LTI`
+**Learning Content Management System** under `MIT` (`1,078 B` payload read, `151★`, pushed
+`2026-11-01`, France Université Numérique).
+
+**Wire it:**
+1. [`openfun/marsha`](https://github.com/openfun/marsha) (`MIT`) as the content plane — rebrandable,
+   unlike a Moodle theme (`635-A`: `3 of 3` apparent `MIT` Moodle themes carry `GPL-3.0-or-later`
+   headers).
+2. Plug it into the client's existing `LMS` over `LTI` — it is an `LCMS`, it sits **beside** Moodle or
+   Canvas, not instead of it. No migration in scope.
+3. Implement the consumer side with [`instructure/ims-lti`](https://github.com/instructure/ims-lti)
+   (`MIT`, `1,068 B`, `203★`, maintained by Canvas's vendor) for `Ruby`, or
+   [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (`MIT`, `1,070 B`, `138★`) for
+   `Python` — 🔴 the latter untouched since `2024`, so fork it and own the maintenance.
+4. Add the agent layer from `p636-R1` over the top; both planes are `MIT`, so the composite is ownable.
+
+🔴 **Price the bus factor:** `marsha` is single-publisher and institutional, and `3 of 6` repositories in
+this pass's `LTI` cohort are dormant while `1` ([`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI))
+is **archived** by Microsoft. The permissive `LTI` layer is two live repositories wide.
+
+### 🟢 `p636-R3` — The `APAC` university-portal pattern: partner rather than prospect
+
+**Why.** The `APAC` leg yielded no policy intelligence for an eleventh pass, but the region's supply side
+is real and institution-built — `APAC` universities write their own portal-agent bridges and publish
+them permissively.
+
+**Wire it:** start from [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp)
+(Korea University `KUPID` **plus** Canvas, `MIT`, `1,068 B`, `13★`) as the reference for a campus-system
+bridge that is not just the `LMS`; [`kc0506/ntucool`](https://github.com/kc0506/ntucool) (`NTU COOL`,
+`Rust`, `MIT`, `1,066 B`, `10★`) for a `CLI`-plus-`MCP` surface where latency matters; and
+[`NUS-ALSET/achievements`](https://github.com/NUS-ALSET/achievements) (`MIT`, `1,066 B`, `17★`) as the
+`LTI`-era precedent — 🔴 dormant since `2023`, reference only. 🟡 The pattern: one bridge per institution,
+covering notices, schedules and library systems alongside the `LMS`. Sell it as a template, not a product.
+
+### 🔴 `p636-C1` — The pre-flight licence check, and it is now three channels wide
+
+Run this before quoting any platform-derived work. It takes an afternoon and it has changed the answer
+in three of the last four passes.
+
+1. **Platform badge** — `gh api search/repositories` / the repository page. Necessary, not sufficient.
+2. **`LICENSE` payload** — byte-read it at `raw.githubusercontent.com` and record the byte count. 🔵 Run a
+   fabricated path in the same batch; if it does not `404`, the channel is lying to you (`3 of 3`
+   controls `404` this pass).
+3. **Source header** — 🔴 **the one that costs money.** Moodle: `version.php` / `config.php` (`635-A`:
+   `3 of 3` `MIT`-badged themes carry `GPL-3.0-or-later`). WordPress: the main plugin file's `License:`
+   field (`636-C`: `1 of 4` declares `OSLv3`, copyleft and **`GPL`-incompatible**, under `MIT` on both
+   other channels; `2 of 4` declare nothing at all).
+
+🟡 **Then ask the question that decides the bid:** *what substrate do this platform's extensions run in?*
+In-process code inherits the core's copyleft — Moodle `10.0%` permissive, Open edX `25.0%`. Network
+clients do not — which is why `AGPL-3.0` Canvas has the permissive ecosystem and `GPL-3.0` Moodle does
+not. 🔵 **Bid on the network side of the boundary.**
+
+🔴 **Two instrument cautions for whoever runs this next.** `repos/{slug}/contents` was scope-gated in this
+session (`7 of 7` denied), so main-plugin-file discovery fell back to filename convention and graded
+`4 of 7` — declare the ungraded rather than assume them clean. And do not trust a bare repository count:
+`lti license:mit` returns `610` of which the top hits are a webcam library and an iOS scrollview, against
+`11` for the exact phrase, which drops the two largest real repositories (`636-E`).
+
 ## 🆕 `p635` — Pattern: a `Moodle` AI engagement that stays outside the `GPL` boundary
 
 🟢 **The problem this pattern solves.** A university or ministry already runs `Moodle` — the most-deployed

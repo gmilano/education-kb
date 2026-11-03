@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p636` — reads `2026-11-03` — **🔴 `635-F` IS A SINGLE-PLATFORM DENOMINATOR GENERALISED TO A CLASS, AND THIS BASE'S OWN FILES REFUTE IT: p635 PUBLISHED A `42★` CEILING FOR THE PERMISSIVE LMS-AGENT CHANNEL WHILE HOLDING [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) AT `310★` IN `189` PLACES. MEASURED TODAY: `317★` — `7.5×` THE PUBLISHED CEILING. 🟢 `635-A` DOES NOT PORT TO `WordPress` AS A `GPL` MECHANISM (`0 of 4` HEADERS) BUT **DOES** PORT AS A CHANNEL CONFLICT: AN `OSLv3` HEADER UNDER AN `MIT` `LICENSE`. 🔴 THE `lti` CHANNEL IS UNUSABLE (`55×` SPREAD). EIGHT REGISTERED (`636-A`…`636-H`).**
+
+🔵 Every grant below was read first-hand at `raw.githubusercontent.com` this pass, each cohort with a
+fabricated-path control in the same run — `3 of 3` controls returned `404`. Evidence:
+`evidence/grant-byteread.2026-11-03-p636.tsv`,
+`evidence/agent-boundary-ceiling.2026-11-03-p636.tsv`,
+`evidence/agent-ceiling-starseries.2026-11-03-p636.tsv`,
+`evidence/wp-header-conflict.2026-11-03-p636.tsv`,
+`evidence/substrate-census.2026-11-03-p636.tsv`,
+`evidence/lti-acronym-collision.2026-11-03-p636.tsv`,
+`evidence/heldness-selfpollution.2026-11-03-p636.tsv`,
+`evidence/websearch-legs.2026-11-03-p636.tsv`,
+`evidence/leg-fact-heldness.2026-11-03-p636.tsv`.
+
+🔴 **`636-A`, and it is the pass's finding: p635 measured one platform and published a class.** `635-F`
+and `T-agent-boundary` recorded the permissive LMS-agent channel as *"greenfield rather than momentum —
+maximum `42★`, median `0★`, nothing permissive at scale"*. That is true of `moodle plugin license:mit`,
+which is the only population p635 counted. Change the `LMS` and it inverts. 🔵 The correction did not
+require a discovery: `vishalsachdev/canvas-mcp` is held in **`189`** places in this base and a prior pass
+recorded it at `310★`. The defect is internal consistency, not coverage.
+
+| Agent / instrument | Grant | Payload read | Stars | Pushed | What it is |
+|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `MIT` | `1,071 B`, `LICENSE@main` | **`317`** | `2026-11-03` | 🟢 Canvas `LMS` `MCP` server, up to `102` tools and `8` agent skills for students and educators. **The channel maximum, and `7.5×` the ceiling p635 published** |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | `MIT` | `1,072 B`, `LICENSE@main` | `119` | `2026-10-27` | 🟢 Read-only `MCP` server connecting Claude, ChatGPT and other assistants to Canvas. Read-only by design — the safest shape in the tier |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `MIT` | `1,068 B`, `LICENSE@main` | `62` | `2026-11-03` | 🟢 `MCP` server for Brightspace (`D2L`) — grades, due dates, assignments, announcements, rosters. **A third `LMS` in the tier, above the Moodle maximum on its own** |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | `MIT` | `1,056 B`, `LICENSE@main` | `18` | `2026-08-14` | 🟡 Canvas `LMS` plus Ed Discussion integration — the only row that spans two systems |
+| [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) | `MIT` | `1,068 B`, `LICENSE@main` | `13` | `2026-10-03` | 🔵 Korea University `KUPID` portal and Canvas — notices, schedules, library seats. **`APAC`, and institution-specific: the shape a university builds for itself** |
+| [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | `MIT` | `1,065 B`, `LICENSE@main` | `12` | `2026-09-21` | 🟡 `MCP` server for Canvas `LMS`, generic |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `MIT` | `1,070 B`, `LICENSE@main` | `10` | `2026-11-03` | 🟡 Reads courses, assignments, submissions, rubrics, quizzes — **and grades and comments**, so it is a write-surface row |
+| [`kc0506/ntucool`](https://github.com/kc0506/ntucool) | `MIT` | `1,066 B`, `LICENSE@main` | `10` | `2026-07-10` | 🔵 `NTU COOL` `CLI` plus `MCP` server in `Rust` — Taiwan, `APAC`, and the only non-Python/TS entry |
+
+🟢 **The star series, which is why this is momentum and not a snapshot.** This base has recorded the
+channel maximum eight times: `272` → `288` → `289` → `295` → `308` → `309` → `310` → **`317`** (`p636`).
+🔵 Monotonic across every observation, `+7` since the last recorded figure. 🟡 The `42★` figure p635
+published as the class ceiling was the Moodle maximum; the class maximum was `310★` in the same files.
+
+🔴 **The honest denominators, because volume and traction are not the same axis.** `moodle mcp` returns
+`263` repositories against `canvas lms mcp`'s `137` — Moodle has **roughly twice the repositories and a
+twenty-eighth of the traction** (`SaadRahman01/moodle-mcp`, `11★`, is the Moodle `MCP` maximum).
+`brightspace mcp` holds `39`, `blackboard lms mcp` `6`, and `edx mcp license:mit` **`0`**. 🟡 So the
+tier's consolidation tracks the platform's institutional install base in the region where agent adoption
+is highest, not the licence and not the repository count. That is `636-A` stated as a rule.
+
+🟢 **`636-B` / `636-C` — `635-A` tested outside Moodle, and it splits.** p635 closed by naming
+`WordPress` and `Drupal` as the platforms its header rule should generalise to. Graded on `WordPress`:
+
+| Candidate | Main plugin file | GitHub metadata | `LICENSE` payload read | Source `License:` header | `GPL` header lines | Verdict |
+|---|---|---|---|---|---|---|
+| [`devMiguelCarrero/lms-matic-extender`](https://github.com/devMiguelCarrero/lms-matic-extender) | `lms-matic-extender.php` | `MIT` | `MIT`, `1,073 B` | **`OSLv3`** | `0` | 🔴 **CONFLICT** — `Open Software License 3.0` declared in source under an `MIT` file and `MIT` metadata |
+| [`Velocity-Developer/ecoursity`](https://github.com/Velocity-Developer/ecoursity) | `ecoursity.php` | `MIT` | `MIT`, `1,075 B` | `MIT` (+ `License URI`) | `0` | 🟢 **CLEAN** — all three channels agree |
+| [`easyteachlms/plugin`](https://github.com/easyteachlms/plugin) | `easyteachlms.php` | `MIT` | `MIT`, `1,088 B` | **absent** | `0` | 🟡 No licence header at all — `WordPress`'s own convention is simply not followed |
+| [`Marius-Roed/lighter-lms`](https://github.com/Marius-Roed/lighter-lms) | `lighter-lms.php` | `MIT` | `MIT`, `1,074 B` | **absent** | `0` | 🟡 Same — no header to grade |
+
+🟡 **So the mechanism does not port and the risk does.** `0 of 4` graded `WordPress` `LMS` plugins carry
+a `GPL` header line, against Moodle's `3 of 3` — `WordPress`'s `GPL` header convention is unenforced in
+this cohort, so "the header says `GPL`" is a **Moodle** fact. 🔴 But `1 of 4` still disagrees with both
+other channels, and it disagrees *worse*: `OSLv3` is neither `MIT` nor `GPL`, it is a copyleft grant that
+is **`GPL`-incompatible**, and nothing on the repository page says so. 🔵 The portable form of `635-A` is
+therefore **"grade the source header because it can disagree"**, not "expect `GPL`". `636-B` is the
+negative half, `636-C` the positive half.
+
+🔴 **Four new addresses, and they are the small ones.** The `WordPress` cohort above is **unheld** after
+`635` passes (`easyteachlms`, `lighter-lms`, `ecoursity`, `lms-matic-extender` — `0` hits each). 🟡 Their
+maximum is `5★`. The eight rows that carry this pass were all already held; the four genuinely new rows
+are commercially negligible. Both halves are published because the ratio is the finding.
+
+🔴 **`636-H` — an instrument limit that shaped this pass and must be recorded.** `repos/{slug}/contents`
+is **scope-gated** in this session: `7 of 7` calls returned *"GitHub access to this repository is not
+enabled for this session"*, while `search/repositories` and `raw.githubusercontent.com` answered freely.
+🟡 Main-plugin-file discovery fell back to filename convention and succeeded `4 of 7`. 🔵 One miss is not
+a miss but a mis-filing: [`nayemspecial/lessonLMS`](https://github.com/nayemspecial/lessonLMS) is a
+**theme** (`Theme Name: LessonLMS` in `style.css`), returned by a query for `wordpress lms plugin`. The
+remaining two are ungraded and are declared so rather than assumed clean.
+
+🔴 **And the existence check itself is broken in this environment, which later passes must know.**
+`curl -sI https://github.com/<slug>` returns `403` for **all `34`** URLs written this pass *and* `403`
+for a deliberately fabricated slug — real and fake are indistinguishable, so the conventional check
+silently passes anything. 🟢 Substituted a discriminating channel: `gh api search/repositories` with the
+`repo:` qualifier returns `total_count=1` for **`34 of 34`** URLs here and `HTTP 422` *"resources do not
+exist"* for the fabricated control. 🔵 `18 of 34` are additionally confirmed by a `200` `LICENSE`
+byte-read with a recorded byte count, against `3 of 3` cohort controls at `404`. Evidence:
+`evidence/url-verification.2026-11-03-p636.tsv`.
+
 ## 🆕 `p635` — reads `2026-11-03` — **🔴 `P634-0` DOES NOT GENERALISE AND THE INSTRUMENT THAT TESTED IT FOUND A WORSE DEFECT: IN A `Moodle` ESTATE THE `LICENSE` FILE IS **NOT THE GRANT**. `3 of 3` APPARENT `MIT` `Moodle` THEMES CARRY `GPL-3.0-or-later` HEADERS IN THEIR OWN SOURCE FILES, AND GITHUB REPORTED ALL THREE AS `MIT`. 🟢 `619-Q`'s THIRD AND LAST INSTRUMENT IS MEASURED, SO THE QUESTION CAN CLOSE. 🟢 A FIFTH INSTITUTIONAL ESTATE (`learnweb`, `64` REPOSITORIES) WAS UNHELD FOR `634` PASSES. EIGHT REGISTERED (`635-A`…`635-H`).**
 
 🔵 Every grant below was read first-hand at `raw.githubusercontent.com` this pass, each cohort with a

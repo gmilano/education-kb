@@ -1,0 +1,15 @@
+query	n	note
+lti license:mit	610	ACRONYM CHANNEL — inflated; 4 of top-10 by stars are not LTI
+"lti 1.3" license:mit	58	version-qualified; intermediate
+"lti" "lms" license:mit	40	co-term qualified
+"learning tools interoperability" license:mit	11	EXACT PHRASE — under-counts; misses instructure/ims-lti and openfun/marsha
+"learning tools interoperability"	40	exact phrase, all licences
+"learning tools interoperability" license:gpl-3.0	5	exact phrase, GPL-3.0
+"learning tools interoperability" license:apache-2.0	2	exact phrase, Apache-2.0
+FALSE-POSITIVE sarxos/webcam-capture	2358	MIT, top hit for "lti license:mit" — a USB webcam library
+FALSE-POSITIVE ltebean/LTInfiniteScrollView	877	MIT — an iOS paged scrollview; "LTI" is a substring of LTInfinite
+FALSE-POSITIVE lmcggg/Data-Driven-MPC	149	MIT — MATLAB model predictive control; LTI = linear time-invariant
+FALSE-POSITIVE kmilo17pet/qlibs	104	MIT — embedded systems library; LTI = linear time-invariant
+FALSE-NEGATIVE instructure/ims-lti	203	MIT, real LTI, absent from the exact-phrase result set
+FALSE-NEGATIVE openfun/marsha	151	MIT, real LTI LCMS, absent from the exact-phrase result set
+SPREAD	55x	610 acronym vs 11 exact phrase — neither denominator is usable

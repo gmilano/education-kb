@@ -1,0 +1,8 @@
+platform	query	n_repos	channel_maximum_repo	channel_max_stars	grant	measured
+moodle	moodle plugin license:mit	138	SaadRahman01/claude-moodle-dev	42	MIT	p635
+moodle	moodle mcp	263	SaadRahman01/moodle-mcp	11	MIT	p636
+canvas	canvas lms mcp	137	vishalsachdev/canvas-mcp	317	MIT (1071 B byte-read)	p636
+canvas	canvas lms mcp license:mit	69	vishalsachdev/canvas-mcp	317	MIT	p636
+brightspace	brightspace mcp	39	RohanMuppa/brightspace-mcp-server	62	MIT (1068 B byte-read)	p636
+blackboard	blackboard lms mcp	6	-	-	-	p636
+open edx	edx mcp license:mit	0	NONE	0	-	p636

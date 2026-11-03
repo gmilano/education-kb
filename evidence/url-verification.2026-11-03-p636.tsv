@@ -1,0 +1,8 @@
+check	target	result	discriminating
+curl -sI https://github.com/<slug>	all 34 URLs written this pass	403 (uniform)	NO
+curl -sI https://github.com/<slug>	gmilano-p636/this-repo-does-not-exist-control (fabricated)	403 (identical)	NO — real and fabricated are indistinguishable
+gh api search/repositories q=repo:<slug>	all 34 URLs written this pass	total_count=1 for 34 of 34	YES
+gh api search/repositories q=repo:<slug>	gmilano-p636/this-repo-does-not-exist-control (fabricated)	HTTP 422 "resources do not exist"	YES
+raw.githubusercontent.com LICENSE byte-read	18 of the 34	HTTP 200 with payload and byte count	YES
+raw.githubusercontent.com fabricated path	3 cohort controls	HTTP 404	YES
+CONCLUSION	-	34 of 34 URLs verified to exist via a discriminating channel; the mandated curl -sI check is non-functional behind this session's agent proxy and must not be relied on by later passes	-

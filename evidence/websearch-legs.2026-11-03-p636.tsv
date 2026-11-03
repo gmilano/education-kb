@@ -1,0 +1,10 @@
+leg	query	region	repo_addresses_returned	addresses_unheld	note
+global-agents	top open source AI agents education 2026 github MIT	Global	2	0	ashishpatel26/500-AI-Agents-Projects and microsoft/ai-agents-for-beginners — both held; no education-specific MIT agent ranking exists on the open web
+global-trending	github trending education AI 2026	Global	6	0	GarethManning/education-agent-skills (158 hits held, 942 stars), PAIDEIA, ChinaTextbook, guru-latihan-dinamis, ai-engineering-from-scratch, microsoft/ai-agents-for-beginners — all held
+global-vertical	open source platform education ERP CRM MIT Apache	Global	4	0	openeducat, krayin, huly, CK-ERP — all held; no education ERP under MIT/Apache surfaced, eleventh consecutive nil on this leg
+global-trends	AI education industry trends 2026	Global	0	0	market figures only; 7.52B 2025 -> 10.6B 2026 at 40.9pct CAGR already held
+region-na	AI education North America 2026 adoption regulation players	North America	0	0	share estimates conflict 36-41.7pct; Gallup 60pct weekly student use HELD; OECD Digital Education Outlook 2026 HELD; no primary regulation surfaced
+region-emea	AI education EMEA 2026 adoption regulation players	EMEA	0	0	EU AI Act post-market surveillance for HE; European University Association Jan-2026 European-LLM report UNHELD; Microsoft Elevate for Educators HELD; LEGO Education K-8 CS/AI Apr-2026 HELD
+region-apac	AI education APAC 2026 adoption regulation players	APAC	0	0	THIN — no ministry-level education rule surfaced for any APAC country; only Acer Edu Summit APAC 2026 (HELD) and Singapore financial-sector AI consultations (not education). Explicit gap, not coverage
+region-latam	AI education LATAM 2026 adoption regulation players	LATAM	0	0	richest regional leg; Digital Education Council 92pct students / 79pct faculty, UNESCO-CENIA, UNESCO LAC Observatory, Tec de Monterrey 44 programmes — all held
+TOTAL	8 legs	-	12	0	ELEVENTH CONSECUTIVE NIL for repository addresses. All 8 new repository rows this pass came from the GitHub search API, not from the web legs

@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p636` — reads `2026-11-03`
+
+🔴 **`T-agent-boundary` — revised, and the revision is larger than the trend was.** `p635` recorded this
+as *"a supply class with no traction: maximum `42★`, median `0★`, greenfield rather than momentum"*.
+Re-measured across platforms:
+
+| Platform | `MCP` repositories | Channel maximum | Stars | Pass |
+|---|---|---|---|---|
+| Canvas | `137` | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **`317`** | `p636` |
+| Brightspace (`D2L`) | `39` | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `62` | `p636` |
+| Moodle | `263` | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | `11` | `p636` |
+| Moodle (plugin channel) | `138` | [`SaadRahman01/claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | `42` | `p635` |
+| Open edX | `0` (`license:mit`) | **none** | `0` | `p636` |
+
+🟡 The class **has** consolidated; `p635` measured the one platform where it has not. 🔵 Moodle carries
+roughly twice Canvas's repository count and a twenty-eighth of its traction, so repository volume is not
+a traction proxy in this tier — and Open edX, the estate `p634` graded as permissive-friendly, has no
+`MIT` `MCP` channel at all. 🔴 **What traction follows is institutional install base in the region where
+agent adoption is highest**, which is Canvas in North American higher education. Not licence, not
+freshness, not count. `636-A`.
+
+🟢 **`T-extension-substrate` — promoted from rule to measurement.** `p635` asked *what substrate does a
+platform extend in?* and predicted the permissive subset sits outside the extension mechanism. Graded:
+Moodle in-process `PHP` `10.0%` permissive (`138` `MIT` / `1,239` `GPL-3.0`), Open edX in-process
+`Python` `25.0%` (`76` / `228` `AGPL-3.0`), WordPress `LMS` in-process `PHP` `40.0%` (`12` / `18`, small
+denominator). 🔵 The ordering tracks **how strictly the platform's plugin contract is enforced in the
+wild**, not the core's licence — Moodle and WordPress are both `GPL` cores with `PHP` plugin substrates
+and sit a factor of four apart, because Moodle's `GPL` header convention is policed (`3 of 3` at `p635`)
+and WordPress's is not (`0 of 4` at `p636`). 🟡 Canvas is the limit case and the proof: the most
+restrictive core in the comparison (`AGPL-3.0`) with the most permissive extension ecosystem, because
+its extensions are network clients rather than in-process code.
+
+🔴 **`T-licence-channel-inversion` — survives, but its `GPL` form was Moodle-specific.** `p635` called
+this its most portable finding and named `WordPress` and `Drupal` as the generalisation test. Run on
+`WordPress`: `0 of 4` graded `LMS` plugins carry a `GPL` source header, so the *mechanism* does not
+port. 🟢 The *inversion* does, and in a form a reviewer is less likely to catch:
+[`devMiguelCarrero/lms-matic-extender`](https://github.com/devMiguelCarrero/lms-matic-extender) reads
+`MIT` on GitHub's badge, `MIT` in a `1,073 B` byte-read `LICENSE`, and `License: OSLv3` in its own plugin
+header — `Open Software License 3.0`, copyleft and **`GPL`-incompatible**. 🟡 Two of the other three
+carry **no** licence header at all, so there is nothing to corroborate against. 🔵 The trend's durable
+statement: *a repository has three licence channels and they disagree in platform-specific ways; grade
+all three and expect the third to be the one that costs money.*
+
+🔴 **`T-acronym-denominator` — new, and it invalidates a measurement this pass wanted to make.** The
+network-boundary half of the substrate table could not be filled, because `LTI` has no usable
+denominator: `lti license:mit` returns `610` and `"learning tools interoperability" license:mit` returns
+`11` — a **`55×`** spread. The acronym channel's top hits are
+[`sarxos/webcam-capture`](https://github.com/sarxos/webcam-capture) (`2,358★`, a webcam library),
+[`ltebean/LTInfiniteScrollView`](https://github.com/ltebean/LTInfiniteScrollView) (`877★`), and two
+control-theory libraries where `LTI` means *linear time-invariant*; the exact-phrase channel drops
+[`instructure/ims-lti`](https://github.com/instructure/ims-lti) (`203★`) and
+[`openfun/marsha`](https://github.com/openfun/marsha) (`151★`), which are the real ones. 🟡 Both
+directions of error at once, so no share figure is publishable. 🔵 This generalises to every
+three-letter technology term this base counts — the defect is the *query*, and a count without a
+precision check is not a measurement.
+
+🔴 **`T-heldness-selfpollution` — new, and it is about this base's own instrument.** The leg-fact
+heldness grep measures "has any pass written this", not "did the base know this before the legs ran".
+Demonstrated: `post-market-surveillance` reads `5` hits against the working tree and **`0` against
+`HEAD~1`**, because `p635` graded it unheld and then wrote it. 🟡 The same probe is also
+**hyphenation-sensitive** — the space-separated variant reads `0` where the hyphenated one reads `5`.
+🔵 Remedy, for the next pass: grade heldness with `git show HEAD~1:<file>` and probe both separators.
+🔴 Consequence: `635-E`'s "roughly a third fact-yield" is not safe. This pass measures `2 of 15`
+(`13.3%`) against `HEAD`, and that figure is itself an upper bound on reliability until the remedy runs.
+`636-F`.
+
+🔵 **`T-mandated-legs-dead` — eleventh consecutive measurement, and the conclusion should now be acted
+on.** `0 of 12` repository addresses unheld across eight legs; all eleven new repository rows this pass
+came from the GitHub search API. 🟡 Eleven passes, zero addresses. The legs retain value for **facts**
+only, at `13.3%` this pass. 🔴 **`APAC` is the standing substantive gap**: no ministry-level education AI
+rule for any country in the region surfaced again, only a vendor summit and financial-sector
+consultations. Recorded as an informed gap, not as coverage.
+
 ## 🆕 `p635` — the supply trend holds, its licence qualifier does not, and a new class appears with dates on it
 
 🔴 **`T-supply-licence` — `p634`'s qualifier is withdrawn and replaced.** `p634` restated the

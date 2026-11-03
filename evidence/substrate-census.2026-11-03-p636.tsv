@@ -1,0 +1,4 @@
+substrate	boundary_type	query_permissive	n_permissive	query_copyleft	n_copyleft	permissive_share_pct	contract_enforcement_observed
+moodle plugin	in-process PHP	moodle plugin license:mit	138	moodle plugin license:gpl-3.0	1239	10.0	ENFORCED — p635 measured 3 of 3 GPL source headers
+xblock	in-process Python	xblock license:mit	76	xblock license:agpl-3.0	228	25.0	partial — p634 measured 15 of 15 AGPL XBlocks, 12 of 12 MIT themes
+wordpress lms plugin	in-process PHP	wordpress lms plugin license:mit	12	wordpress lms plugin license:gpl-3.0	18	40.0	NOT ENFORCED — p636 measured 0 of 4 GPL source headers
