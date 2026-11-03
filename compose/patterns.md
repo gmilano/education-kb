@@ -4,6 +4,129 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03` — `4` patterns, each wired only from rows byte-verified this pass
+
+🔵 Every repository named below was measured today: grant read from bytes on the metadata-declared default
+branch, with a fabricated address and a fabricated branch returning `404 14 B` in the same run. Where a
+pattern uses a row verified on an **earlier** pass, the row says so and carries its earlier byte count.
+🔴 No pattern crosses a copyleft boundary without saying so, and no ungranted row is used as a capability.
+
+### 🟢 `632-M1` — EMEA higher education: accommodation-request triage on a permissive estate (`8–10` weeks)
+
+**The gap.** `619-Q` has stood since `p619`: no permissive platform of record in the accessibility /
+special-education tier, so every disability-services engagement was priced as a build. A university's
+accommodations office runs on spreadsheets and email, and the volume is seasonal — request campaigns open,
+hundreds of files arrive in two weeks, a commission reviews them, accommodations are issued and must be
+evidenced later.
+
+**The stack, all `Apache-2.0`, all byte-read today, all one publisher — so one legal review covers the set:**
+
+1. **[`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis)** (`Apache-2.0`, `11,357 B`,
+   `main`, `6★`, pushed `2026-10-21`) is the **system of record** and the reason this pattern exists: student
+   requests against manager-defined campaigns, commission review, beneficiary file, accommodation plans,
+   interview minutes. 🔴 Do not put an agent on the *file* — it holds disability data. Put it on the queue.
+2. **[`EsupPortail/esup-signature`](https://github.com/EsupPortail/esup-signature)** (`Apache-2.0`,
+   `11,361 B`, `master`, `36★`, pushed `2026-10-14`) carries the approvals. Accommodation decisions need a
+   signed, auditable circuit, and this is that circuit already built for French HE paperwork.
+3. **[`EsupPortail/esup-otp-api`](https://github.com/EsupPortail/esup-otp-api)** +
+   **[`esup-otp-manager`](https://github.com/EsupPortail/esup-otp-manager)** (`Apache-2.0`, `11,359 B` each,
+   pushed `2026-11-02` / `2026-10-30`) supply MFA. A student self-service portal holding medical
+   documentation needs a second factor before anything else is discussed.
+4. **[`EsupPortail/esup-siscol`](https://github.com/EsupPortail/esup-siscol)** (`Apache-2.0`, `11,359 B`,
+   `main`, `7★`, pushed `2026-11-02`) resolves enrolment, programme and cohort from the **national**
+   student-records web services rather than re-keying them. 🟡 `CLIENT`, **state** counterparty (`632-C`):
+   free to interoperate, and the counterparty outlives the engagement.
+
+**The agent, and the only place it goes.** A triage agent over the request queue: classify each incoming
+request by the accommodation types it implies, flag incomplete evidence, draft the commission's agenda, and
+propose the accommodation set by precedent from closed files. 🔴 It recommends; the commission decides and
+`esup-signature` records who decided. 🔵 Build it as a service beside the estate speaking to `esup-oasis`'s
+API — not as a fork — so the consortium's upstream releases keep applying.
+
+**Why this is quotable.** Every component is `Apache-2.0` with a patent grant, deployed in production by
+French universities today, and pushed within the last eight weeks. 🔴 **Grade per repository, not per
+organisation:** `6` repositories in this estate are `CECILL-2.1` and `Esup-Pod` is `LGPL-3.0` (`632-A`).
+🟡 And `619-Q` is **narrowed, not closed** — this is higher education and EMEA; a permissive K-12 `IEP`
+system still does not exist, so a US K-12 special-education engagement cannot reuse this pattern.
+
+### 🟢 `632-M2` — APAC Indonesia: fork the school system of record, which is the one region where forking is right (`6–8` weeks to a pilot)
+
+**The gap.** `p631`'s APAC operative was *do not plan to fork the local platform — interoperate with the
+state one*. Indonesia is the measured exception: the `sekolah` leg is the deepest token tier in the whole
+census (bare `total_count` `74`) and it contains complete, permissive school systems.
+
+**The stack:**
+
+1. **[`adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel`](https://github.com/adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel)**
+   (`MIT`, `1,069 B`, `master`, `521★`) is the **widest** base: a full SIAKAD academic information system in
+   PHP/Laravel. 🔴 Last pushed `2023-07-30` — adopt it as a base **to fork**, never as a dependency to track.
+2. **[`ugunNet21/hypervel-web-school`](https://github.com/ugunNet21/hypervel-web-school)** (`MIT`,
+   `1,097 B`, `master`, `75★`, pushed `2026-09-02`) is the **maintained** alternative — administration,
+   teaching and reporting on a current Laravel-family stack. 🟡 Pick by whether the client values feature
+   breadth (row `1`) or an upstream that is still moving (row `2`); both are `MIT`, so the choice is
+   technical, not legal.
+3. 🔴 **What to leave out, and why it matters to the estimate.**
+   [`ikhsan3adi/absensi-sekolah-qr-code`](https://github.com/ikhsan3adi/absensi-sekolah-qr-code) is the
+   best-starred Indonesian attendance system (`495★`, pushed `2026-10-25`) and it is `GPL-3.0`
+   (`35,149 B`, byte-read today). Linking it into a forked `MIT` platform makes the result reciprocal.
+   Build attendance, or run it as a separate deployed service over HTTP.
+   [`andes2912/sekolahku`](https://github.com/andes2912/sekolahku) (`189★`) and
+   [`mrizkimaulidan/inven-bs`](https://github.com/mrizkimaulidan/inven-bs) (`82★`, pushed `2026-11-01`) look
+   adoptable and have **no grant at `20` filenames in trees that resolve** (`632-B`) — all rights reserved.
+
+**The agent.** Enrolment and records assistance in Bahasa Indonesia over the forked platform's own data:
+answer parent and student queries about schedules, grades and fees, and draft the administrative replies a
+school office writes hundreds of times a term. 🔵 The platform is yours after the fork, so the agent reads
+the database directly — no integration layer to negotiate.
+
+### 🟢 `632-M3` — LATAM Brazil: an ENEM exam-prep and exam-analytics chain, entirely permissive and in-curriculum
+
+**The gap.** LATAM's permissive repository supply is thin, and `632`'s census shows what shape it does take:
+the permissive Brazilian rows are **exam-shaped**, around ENEM, the national admission exam.
+
+**The stack:**
+
+1. **[`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor)** (`MIT`, `1,073 B`, `master`,
+   `36★`) is the **ingestion** step: a CLI that turns published ENEM papers into JSON questions. This is the
+   unglamorous piece every exam-prep build otherwise writes from scratch.
+2. **[`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem)** (`MIT`, `1,068 B`, `main`, `54★`)
+   is the **evaluation harness**: code and data to score a model against real ENEM items. 🟢 It is what lets
+   a studio state a tutoring claim as a number against the client's own curriculum, in Portuguese.
+3. **[`gpassero/uol-redacoes-xml`](https://github.com/gpassero/uol-redacoes-xml)** (`Apache-2.0`,
+   `11,357 B` — byte-verified on an **earlier** pass, re-surfaced by this pass's `enem` leg) adds a
+   **graded essay** bank, which is the other half of ENEM and the half models do worst on.
+4. 🔴 **Excluded with reasons:** [`yunger7/enem-api`](https://github.com/yunger7/enem-api) is `GPL-2.0` and
+   [`gustavoguanabara/assistente-enem`](https://github.com/gustavoguanabara/assistente-enem) is `GPL-3.0`
+   (`35,149 B`, byte-read today) — both reciprocal, both tempting because they are the most complete.
+
+**The agent.** A tutoring agent whose claims are measurable: `enem-extractor` builds the item bank,
+`gpt-4-enem` benchmarks the model on it before anything ships, the essay bank trains and checks the writing
+path. 🟡 **The commercial point is the harness, not the tutor.** Anyone can offer a Portuguese tutor; this
+chain lets the offer carry a per-topic score on the actual national exam, produced by `MIT` code the client
+can re-run themselves.
+
+### 🟢 `632-M4` — EMEA Italy: spend a national teacher entitlement inside your own product (`2–3` weeks)
+
+**The gap.** Education products in Europe lose deals at checkout, because the buyer is a teacher holding a
+state entitlement rather than a card. Italy's **Carta del Docente** is exactly that: an annual per-teacher
+allowance, redeemable only through an official voucher flow.
+
+**The stack:**
+
+1. **[`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente)** (`MIT`, `1,099 B`,
+   `main`, `7★`, pushed `2026-06-22`) is an unofficial PHP package that integrates the voucher flow into a
+   product's checkout. 🔵 Small, single-purpose, permissive — and it touches a **national funding
+   instrument**, which no other row in this base does.
+2. **[`DegrangeM/Skreen`](https://github.com/DegrangeM/Skreen)** (`MIT`, `1,073 B`, `master`, `6★`) pairs
+   with it as the thing being sold: a teacher-side classroom screen-monitoring web app, the kind of small
+   tool a teacher buys with their own allowance rather than through a procurement cycle.
+
+**Why it is worth a pattern at `7★`.** 🟡 It changes the **route to market**, not the product: an Italian
+teacher-facing tool that accepts the Carta is bought by individual teachers, with no tender and no district
+sale. 🔴 Treat the package as a **lead, not a dependency**: it is unofficial, single-maintainer, and the
+voucher API behind it is the state's to change. Verify the current flow against the official service before
+quoting a date.
+
 ## 🆕 `p631` — reads `2026-11-03` — `4` patterns, each wired only from rows byte-verified this pass
 
 🔵 Every repository named below was measured today: grant read from bytes on the metadata-declared default

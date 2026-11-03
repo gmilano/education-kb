@@ -1,0 +1,36 @@
+repo	branch_from_metadata	grant_file	bytes	family_read_from_bytes	spdx_metadata	agree	stars	pushed	copyright_holder_in_payload
+EsupPortail/esup-signature	master	LICENSE	11361	Apache-2.0	Apache-2.0	yes	36	2026-10-14	(stock appendix, unfilled)
+EsupPortail/esup-oasis	main	LICENSE	11357	Apache-2.0	Apache-2.0	yes	6	2026-10-21	(stock appendix, unfilled)
+EsupPortail/esup-emargement	master	LICENSE	11358	Apache-2.0	Apache-2.0	yes	12	2026-10-21	(stock appendix, unfilled)
+EsupPortail/esup-sgc	master	LICENSE	11358	Apache-2.0	Apache-2.0	yes	10	2026-10-12	(stock appendix, unfilled)
+EsupPortail/esup-otp-api	master	LICENSE	11359	Apache-2.0	Apache-2.0	yes	12	2026-11-02	(stock appendix, unfilled)
+EsupPortail/esup-otp-manager	master	LICENSE	11359	Apache-2.0	Apache-2.0	yes	9	2026-10-30	(stock appendix, unfilled)
+EsupPortail/esup-dematec	master	LICENSE	11358	Apache-2.0	Apache-2.0	yes	6	2026-09-11	(stock appendix, unfilled)
+EsupPortail/esup-siscol	main	LICENCE	11359	Apache-2.0	Apache-2.0	yes	7	2026-11-02	(stock appendix, unfilled)
+EsupPortail/esup-pay	master	LICENSE	11358	Apache-2.0	Apache-2.0	yes	6	2026-10-19	(stock appendix, unfilled)
+EsupPortail/esup-nfc-tag-server	master	LICENSE	11358	Apache-2.0	Apache-2.0	yes	16	2026-06-08	(stock appendix, unfilled)
+EsupPortail/Esup-Pod	main	COPYING.LESSER	7652	LGPL-3.0	LGPL-3.0	yes	48	2026-10-26	(stock)
+EsupPortail/Esup-Pod	main	COPYING	35149	GPL-3.0 (the LGPL's companion file)	LGPL-3.0	NO — instrument defect 632-A	48	2026-10-26	Copyright (C) 2007 Free Software Foundation
+DegrangeM/Skreen	master	LICENSE	1073	MIT	MIT	yes	6	2023-07-15	Copyright (c) 2020 Degrange Mathieu
+datomatic/carta-del-docente	main	LICENSE.md	1099	MIT	MIT	yes	7	2026-06-22	Copyright (c) datomatic <info@albertoperipolli.com>
+piresramon/gpt-4-enem	main	LICENSE	1068	MIT	MIT	yes	54	2024-12-06	Copyright (c) 2023 Ramon Pires
+diaslui/enem-extractor	master	LICENSE	1073	MIT	MIT	yes	36	2025-02-16	Copyright (c) 2024 Pedro Luis Dias
+emersonmello/modelos-latex	master	LICENSE	6554	CC0-1.0	CC0-1.0	yes	87	2026-10-21	(CC0 dedication, no holder)
+adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel	master	LICENSE	1069	MIT	MIT	yes	521	2023-07-30	Copyright (c) 2021 Adhi Ariyadi
+ugunNet21/hypervel-web-school	master	LICENSE	1097	MIT	MIT	yes	75	2026-09-02	Copyright (c) 2025 Gugun Gunawan / HyperWebScholl
+TeamDMU/DMU-Android	develop	LICENSE	11352	Apache-2.0	Apache-2.0	yes	11	2025-08-12	(stock appendix, unfilled)
+autonomous-minicar-battle/togikaidrive	main	LICENSE	1063	MIT	MIT	yes	16	2024-08-31	Copyright (c) 2024 Romihi
+haruharo101/Programming_Contest_Hosting_Guide	main	LICENSE	1065	MIT	MIT	yes	14	2026-04-16	Copyright (c) 2026 Haru_101
+romadebrian/WEB-Sekolah	master	LICENSE	1093	MIT — but NOT over this project's code	MIT	yes on family, NO on scope	66	2025-06-03	Copyright (c) 2013-2018 Blackrock Digital LLC (the Start Bootstrap theme vendor)
+prefeiturasp/SME-SGP	master	LICENSE	34442	AGPL-3.0	AGPL-3.0	yes	8	2018-03-05	Copyright (C) 2007 Free Software Foundation
+gustavoguanabara/assistente-enem	main	LICENSE	35149	GPL-3.0	GPL-3.0	yes	121	2025-05-07	Copyright (C) 2007 Free Software Foundation
+ikhsan3adi/absensi-sekolah-qr-code	master	LICENSE	35149	GPL-3.0	GPL-3.0	yes	495	2026-10-25	Copyright (C) 2007 Free Software Foundation
+Desarrollo-CeSPI/kimkelen	master	LICENSE.txt	697	GPL-2.0-only — served as a per-file HEADER NOTICE, not licence text	NOASSERTION	explains the NOASSERTION	37	2024-04-27	Copyright (C) 2013 CeSPI - UNLP
+5d-jh/school-menu-api	master	NO-GRANT-AT-20-NAMES	-	none	NULL	-	45	2023-07-04	-
+andes2912/sekolahku	1.x	NO-GRANT-AT-20-NAMES	-	none	NULL	-	189	2025-06-16	-
+mrizkimaulidan/inven-bs	main	NO-GRANT-AT-20-NAMES	-	none	NULL	-	82	2026-11-01	-
+nurfachmi/perpustakaan	main	NO-GRANT-AT-20-NAMES	-	none	NULL	-	82	2025-08-07	-
+CONTROL-fabricated-repo	main	NO-GRANT-AT-20-NAMES	-	-	-	-	-	-	zzz-not-a-real-owner-632/zzz-not-a-real-repo — 404 14 B at all 20 names
+CONTROL-fabricated-repo-2	main	NO-GRANT-AT-20-NAMES	-	-	-	-	-	-	EsupPortail/esup-oasis-NOT-REAL — 404 14 B at all 20 names
+CONTROL-fabricated-branch	zzz-not-a-branch	NO-GRANT-AT-20-NAMES	-	-	-	-	-	-	EsupPortail/esup-oasis at a branch that does not exist — 404 14 B at all 20 names
+CONTROL-positive-known	main	LICENSE	1088	MIT	MIT	yes	-	-	facebook/react — the channel returns real bytes in the same run

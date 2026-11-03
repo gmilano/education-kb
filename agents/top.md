@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03` — **🟢 `631-F` IS CONFIRMED ON ITS SECOND RUN AND IT PAID BETTER: `11` ACCEPTED ROWS AGAINST `6`, SO THE IN-REGION SUPPLY CHANNEL IS NOT A ONE-OFF. 🟢 THE PASS'S FIND IS AN **ESTATE**, NOT A ROW: A FRENCH HIGHER-EDUCATION CONSORTIUM PUBLISHING `131` REPOSITORIES, `52` OF THEM `Apache-2.0` AND `25` PUSHED IN `2026`, UNHELD FOR `631` PASSES — WHILE THIS BASE ALREADY HELD **BOTH** OF THE FAMOUS FRENCH AND US HE CONSORTIA. 🔴 SO THE GAP WAS NEVER "FRANCE" OR "CONSORTIA": IT IS **ADMINISTRATION vs LEARNING**. 🔴 AND THIS PASS'S OWN LICENCE LADDER MIS-GRADED AN `LGPL-3.0` PAYLOAD AS `GPL-3.0` BECAUSE THE LGPL SHIPS AS A **PAIR** — THE METADATA WAS RIGHT AND THE BYTES MISLED. SEVEN REGISTERED (`632-A`…`632-G`).**
+
+🔵 Every figure below is measured today, each channel with a fabricated control in the same run —
+`evidence/websearch-legs.2026-11-03-p632.tsv`,
+`evidence/region-supply-census.2026-11-03-p632.tsv`,
+`evidence/grant-byteread.2026-11-03-p632.tsv`,
+`evidence/instrument-calibration.2026-11-03-p632.tsv`,
+`evidence/client-only-census.2026-11-03-p632.tsv`,
+`evidence/esup-org-enumeration.2026-11-03-p632.tsv`.
+
+### 🟢 `632-F` — `631-F` confirmed: the in-region supply channel is reproducible, and the operative is now **query the publisher, not the keyword**
+
+🔵 `p631` opened this channel and asked for a second run before treating it as an asset. It is run, on `17`
+legs (`6` of them bare-query calibrations per `631-E`), and it pays **more** than the first time.
+
+| Run | Legs | Rows read | Permissive | Accepted new | Mandated regional **web** legs, same day |
+|---|---|---|---|---|---|
+| `p631` first run | `9` | `46` | `16` | `6` | `0` addresses |
+| 🟢 `p632` second run | `17` | `263` | `107` | `11` | `0` addresses |
+
+🟢 **What changed between the runs is the unit of the query.** `p631` searched *tokens* in-language. This pass
+searched tokens **and then the organisation a token surfaced** — `org:EsupPortail` — and that single leg
+returned `131` repositories, `11` of them accepted here. 🔵 The generalisation (`P632-0`): **in education,
+permissive supply is published by institutions, and institutions publish estates rather than repositories.**
+A token leg finds one repository; the org leg behind it finds the other `130`.
+
+🟡 **And it fixes the placement problem `631-K` left open.** `631-K` measured that `25 of 28` accepted rows
+name a person or nothing in the grant, so region could not be read from the payload. Every `Apache-2.0`
+payload read today has an **unfilled appendix** — `11 of 11`, corroborating `631-K` exactly — yet all `11`
+rows are confidently **EMEA**, because the *publisher* is a French public-sector HE consortium. The placement
+basis is the org, not the grant.
+
+### 🔴 `632-A` — this pass's licence ladder mis-graded an `LGPL-3.0` payload, and the **metadata was right**
+
+🔵 This base's standing rule since `p611` is *a curated licence column is not evidence*. 🔴 Here the rule
+inverts: the platform's `license.spdx_id` read `LGPL-3.0` and the **bytes** returned `GPL-3.0`.
+
+| What was read | Bytes | Head title | Verdict it produced |
+|---|---|---|---|
+| 🔴 `COPYING` (ladder stopped here) | `35,149 B` | `GNU GENERAL PUBLIC LICENSE` | `GPL-3.0` — **wrong** |
+| 🟢 `COPYING.LESSER` (not in the `20`-name set) | `7,652 B` | `GNU LESSER GENERAL PUBLIC LICENSE` | `LGPL-3.0` — matches metadata |
+
+🟢 **The mechanism, and it is structural rather than a typo:** the LGPL is published as a **pair** — the
+Lesser text plus the GPL text it incorporates by reference — so `COPYING` in an LGPL project *is* the GPL and
+reading it alone is guaranteed to mis-grade. 🔵 This is the same mechanism `611-B` hit from the other side
+(every `GPL-2.0` file graded `LGPL`), and it is a third entry in the `631-C`/`631-D` grader table: the
+grading unit is not a file, it is the **file set**. Ladder repaired: `COPYING.LESSER` and `COPYING.LIB` now
+rank **above** `COPYING`.
+
+🔵 `631-B`'s widening paid in the same run and is worth recording as a positive: `EsupPortail/esup-siscol`
+serves its grant at **`LICENCE`** — the British spelling `631-B` added. Under `p631`'s `10`-name set this row
+would have been published `NO-GRANT`.
+
+### 🟢 `632-B` — a working positive control for absence, which this base has lacked since `p624`
+
+🔴 `624`/`630` recorded that tree enumeration — the authoritative absence oracle — is HTTP `403` for every
+third-party address here, leaving absence as an upper bound over a filename set. 🔴 `631-B` then attached an
+`8 %` false-absence rate to that fallback. 🟢 The missing piece was never the filename set: it was that a
+`NO-GRANT` verdict could not be told apart from a **wrong address or branch**, which return the identical
+`404 14 B` at all `20` names.
+
+| Address | Licence probe | Positive probe (same channel) | Cause, now separated |
+|---|---|---|---|
+| `5d-jh/school-menu-api` | `NO-GRANT` at `20` names | 🟢 `README.md` `3,729 B` | genuinely ungranted |
+| `andes2912/sekolahku` | `NO-GRANT` at `20` names | 🟢 `README.md` `1,288 B` | genuinely ungranted |
+| `mrizkimaulidan/inven-bs` | `NO-GRANT` at `20` names | 🟢 `README.md` `2,314 B` | genuinely ungranted |
+| `nurfachmi/perpustakaan` | `NO-GRANT` at `20` names | 🟢 `README.md` `5,972 B` | genuinely ungranted |
+| 🔵 fabricated address | `NO-GRANT` at `20` names | 🔴 `TREE-DOES-NOT-RESOLVE` | address does not exist |
+
+🟡 **What it does and does not buy.** It removes the *address* ambiguity entirely, on the channel that is
+`403` for enumeration. It does **not** close `631-B`'s remaining bound — a grant at a `21`st filename, or
+stated only in README prose, still reads as absence. The verdict to publish is therefore
+*"no grant at `20` names in a tree that resolves"*, which is a measurement; `"unlicensed"` is not.
+
+### 🟢 Accepted this pass — `11` permissive rows from the in-region channel, every grant byte-read
+
+| Agent / tool | Repo | Licence | Bytes | Placement | What it does | Stars | Pushed |
+|---|---|---|---|---|---|---|---|
+| esup-signature | [`EsupPortail/esup-signature`](https://github.com/EsupPortail/esup-signature) | 🟢 `Apache-2.0` | `11,361 B` | 🟢 **EMEA** (French HE consortium) | Dematerialised signature and visa circuits for an institution's paperwork — the piece every HE back-office workflow needs before any of it can be automated | `36★` | `2026-10-14` |
+| esup-oasis | [`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis) | 🟢 `Apache-2.0` | `11,357 B` | 🟢 **EMEA** | System of record for students needing individual accommodation — disability, high-level athletes, student officers, working students: student-side requests against manager-defined campaigns, commission review, beneficiary file, accommodations, interview records. 🟢 **Narrows `619-Q`** | `6★` | `2026-10-21` |
+| esup-emargement | [`EsupPortail/esup-emargement`](https://github.com/EsupPortail/esup-emargement) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 **EMEA** | Multi-context attendance and presence control wired into the institution's information system, CAS-authenticated | `12★` | `2026-10-21` |
+| esup-sgc | [`EsupPortail/esup-sgc`](https://github.com/EsupPortail/esup-sgc) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 **EMEA** | NFC student-card lifecycle management — issue, encode, revoke | `10★` | `2026-10-12` |
+| esup-nfc-tag-server | [`EsupPortail/esup-nfc-tag-server`](https://github.com/EsupPortail/esup-nfc-tag-server) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 **EMEA** | Server half of the NFC tag estate; Android, desktop and Arduino clients ship beside it | `16★` | `2026-06-08` |
+| esup-otp-api | [`EsupPortail/esup-otp-api`](https://github.com/EsupPortail/esup-otp-api) | 🟢 `Apache-2.0` | `11,359 B` | 🟢 **EMEA** | REST API to send and validate one-time passwords — the MFA spine for a campus | `12★` | `2026-11-02` |
+| esup-otp-manager | [`EsupPortail/esup-otp-manager`](https://github.com/EsupPortail/esup-otp-manager) | 🟢 `Apache-2.0` | `11,359 B` | 🟢 **EMEA** | Web application for users and admins to manage that MFA estate | `9★` | `2026-10-30` |
+| esup-dematec | [`EsupPortail/esup-dematec`](https://github.com/EsupPortail/esup-dematec) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 **EMEA** | Dematerialises academic recruitment (lecturer-researcher and ATER posts) against the national recruitment application | `6★` | `2026-09-11` |
+| Skreen | [`DegrangeM/Skreen`](https://github.com/DegrangeM/Skreen) | 🟢 `MIT` | `1,073 B` | 🟢 **EMEA** (France) | Web app letting a teacher watch their pupils' screens — classroom management, no agent required | `6★` | `2023-07-15` |
+| carta-del-docente | [`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente) | 🟢 `MIT` | `1,099 B` | 🟢 **EMEA** (Italy) | PHP package integrating Italy's **Carta del Docente** teacher-spending entitlement into a vendor's checkout — the rare permissive row that touches a *national funding instrument* | `7★` | `2026-06-22` |
+| gpt-4-enem | [`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem) | 🟢 `MIT` | `1,068 B` | 🟢 **LATAM** (Brazil) | Code and data to evaluate LLMs against **ENEM**, Brazil's national university-admission exam — an in-language, in-curriculum eval harness | `54★` | `2024-12-06` |
+
+### 🟢 Accepted — `6` further rows, APAC and LATAM, same channel
+
+| Agent / tool | Repo | Licence | Bytes | Placement | What it does | Stars | Pushed |
+|---|---|---|---|---|---|---|---|
+| SIAKAD Laravel | [`adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel`](https://github.com/adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel) | 🟢 `MIT` | `1,069 B` | 🟢 **APAC** (Indonesia) | Full school academic information system (SIAKAD) in PHP/Laravel — the most-starred permissive school system of record found in any region this pass | `521★` | `2023-07-30` |
+| hypervel-web-school | [`ugunNet21/hypervel-web-school`](https://github.com/ugunNet21/hypervel-web-school) | 🟢 `MIT` | `1,097 B` | 🟢 **APAC** (Indonesia) | Web school-management platform: administration, teaching, reporting. Actively pushed | `75★` | `2026-09-02` |
+| esup-siscol | [`EsupPortail/esup-siscol`](https://github.com/EsupPortail/esup-siscol) | 🟢 `Apache-2.0` | `11,359 B` | 🟢 **EMEA** | Overlay and generic data-source model over **APOGEE** / national student-records web services. 🟡 `CLIENT`, **state counterparty** — see `632-C` | `7★` | `2026-11-02` |
+| DMU-Android | [`TeamDMU/DMU-Android`](https://github.com/TeamDMU/DMU-Android) | 🟢 `Apache-2.0` | `11,352 B` | 🟢 **APAC** (Korea) | Student-facing campus information app for a Korean university | `11★` | `2025-08-12` |
+| togikaidrive | [`autonomous-minicar-battle/togikaidrive`](https://github.com/autonomous-minicar-battle/togikaidrive) | 🟢 `MIT` | `1,063 B` | 🟢 **APAC** (Japan) | Control software for an ultrasonic-sensor self-driving minicar, written for outreach classes and the minicar battle competition — STEM robotics with a real syllabus behind it | `16★` | `2024-08-31` |
+| enem-extractor | [`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) | 🟢 `MIT` | `1,073 B` | 🟢 **LATAM** (Brazil) | CLI that extracts ENEM exam questions to JSON — the ingestion half of any Brazilian exam-prep agent | `36★` | `2025-02-16` |
+
+### 🔴 Rejected, named with the reason — and one of them is a licence shape this base had no rule for
+
+| Repo | Stars | Why not | Class |
+|---|---|---|---|
+| [`romadebrian/WEB-Sekolah`](https://github.com/romadebrian/WEB-Sekolah) | `66★` | Serves a valid `MIT` payload (`1,093 B`) whose holder is **`Blackrock Digital LLC`, `2013-2018`** — the Start Bootstrap theme vendor. The file grants the **theme**; nobody granted the project's own PHP | 🔴 **`632-D` MIS-ATTRIBUTED GRANT** — new |
+| [`5d-jh/school-menu-api`](https://github.com/5d-jh/school-menu-api) | `45★` | No grant at `20` filenames; tree resolves (`632-B`), so the absence is real | 🔴 ungranted |
+| [`andes2912/sekolahku`](https://github.com/andes2912/sekolahku) | `189★` | No grant at `20` filenames; tree resolves | 🔴 ungranted |
+| [`mrizkimaulidan/inven-bs`](https://github.com/mrizkimaulidan/inven-bs) | `82★` | No grant at `20` filenames; tree resolves. Pushed `2026-11-01` — **actively maintained and ungranted** | 🔴 ungranted |
+| [`nurfachmi/perpustakaan`](https://github.com/nurfachmi/perpustakaan) | `82★` | No grant at `20` filenames; tree resolves | 🔴 ungranted |
+| [`ikhsan3adi/absensi-sekolah-qr-code`](https://github.com/ikhsan3adi/absensi-sekolah-qr-code) | `495★` | `GPL-3.0` (`35,149 B`, byte-read). The best-starred Indonesian attendance system found, and it is copyleft | 🔴 reciprocal |
+| [`gustavoguanabara/assistente-enem`](https://github.com/gustavoguanabara/assistente-enem) | `121★` | `GPL-3.0` (`35,149 B`). Brazilian ENEM essay-theme and correction assistant | 🔴 reciprocal |
+| [`prefeiturasp/SME-SGP`](https://github.com/prefeiturasp/SME-SGP) | `8★` | `AGPL-3.0` (`34,442 B`). **São Paulo municipal education secretariat** — an institutional LATAM system of record, and the strongest copyleft placement found this pass | 🔴 reciprocal, 🟢 placed |
+| [`Desarrollo-CeSPI/kimkelen`](https://github.com/Desarrollo-CeSPI/kimkelen) | `37★` | Metadata `NOASSERTION`; the payload is a **`697 B` per-file header notice** naming `GNU General Public License v2.0` with no "or later", held by **CeSPI – UNLP** (Argentina). 🟢 Explains the `NOASSERTION`: it is a notice, not licence text | 🔴 `GPL-2.0-only`, 🟢 `632-G` new grant shape |
+| [`haruharo101/Programming_Contest_Hosting_Guide`](https://github.com/haruharo101/Programming_Contest_Hosting_Guide) | `14★` | `MIT` (`1,065 B`), Korea, `2026-04-16` — but it is a **guide**, not software. Filed as content, not an agent | 🟡 content |
+
 ## 🆕 `p631` — reads `2026-11-03` — **🟢 A NEW DISCOVERY CHANNEL PAYS ON ITS FIRST RUN: SEARCHING THE *SUPPLY* SIDE IN-REGION RETURNS PLACED REPOSITORIES, AFTER THE MANDATED REGIONAL WEB LEGS HAVE RETURNED `0` ADDRESSES FOR **SIX** CONSECUTIVE PASSES. 🔴 AND THE LEGS ARE NOW MEASURED SATURATED ON **BOTH** HALVES — SUPPLY `0 of 19`, DEMAND `1 of 17` — A NUMBER THIS BASE HAD NEVER PUT ON THE DEMAND SIDE. 🔴 THREE OF THIS PASS'S OWN INSTRUMENTS WERE DEFECTIVE AND THE CONTROLS CAUGHT ALL THREE: A `10`-NAME LICENCE PROBE MANUFACTURED **TWO FALSE ABSENCES**, THE ALL-TITLES GRADER BUILT *THIS PASS* TO FIX `p630`'s LEFTMOST-MATCH DEFECT **OVER-REPORTS INSTEAD**, AND THE FIRST REGIONAL CENSUS MANUFACTURED **`8` NILS OUT OF `9` LEGS**. 🟢 `28` NEW PERMISSIVE ROWS, EVERY GRANT BYTE-READ. ELEVEN REGISTERED (`631-A`…`631-K`).**
 
 🔵 Every figure below is measured today, each channel with a fabricated control in the same run —

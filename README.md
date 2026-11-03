@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03`, commit `2026-11-03` — **🟢 `631-F` IS CONFIRMED ON RUN TWO AND PAID BETTER (`17` ACCEPTED ROWS vs `6`), AND THE OPERATIVE CHANGED FROM *TOKEN* TO *PUBLISHER*: ONE `org:` LEG RETURNED A `131`-REPOSITORY FRENCH HIGHER-EDUCATION ESTATE, `52` OF IT `Apache-2.0`, UNHELD FOR `631` PASSES. 🔴 THE GAP WAS NEVER "FRANCE" OR "CONSORTIA" — IT IS **ADMINISTRATION vs LEARNING**. 🔴 AND THIS PASS'S OWN LADDER MIS-GRADED AN `LGPL-3.0` PAYLOAD, WITH THE PLATFORM METADATA THE CORRECT CHANNEL.**
+
+🟢 **`632`'s headline, and it is an estate rather than a row.** `p631` opened an in-region supply channel and
+asked for a second run before treating it as an asset. Run two: `17` legs (`6` of them bare-query
+calibrations), `263` rows read, `107` permissive, **`17` accepted** — against `9`/`46`/`16`/`6` on run one and
+against `0` repository addresses from the four mandated regional **web** legs on the same day, for the
+**seventh** consecutive pass. 🟢 What improved is the **unit of the query**: a token leg (`enseignant`)
+returned `2` rows, and the organisation behind one of them —
+[`EsupPortail`](https://github.com/EsupPortail), the shared-software consortium of the French
+higher-education and research establishments — returned **`131` repositories**, `52` of them `Apache-2.0`,
+`25` pushed in `2026`, and `11` accepted here. 🟡 **`P632-0`: in education, permissive supply is published by
+institutions, and institutions publish estates rather than repositories.**
+
+🔴 **The uncomfortable half is about this base, not the sector.** A substring census for `esup` over every
+curated page returns exactly one hit, and it is the `é` in *CentraleSupélec* — while `openfun/richie`,
+`marsha`, `ralph`, `joanie`, `arnold`, `openedx-docker` and `apereo/cas`, `phpCAS`, `java-cas-client` are
+**all already shelved** (`7 of 8` and `3 of 8` of those orgs' starred repositories). All three publishers are
+higher-education consortia and two are French, so the missing variable is neither region nor publisher type:
+the held code **faces a learner** and the missed code **faces an administrator** — signature circuits,
+attendance control, card issuance, MFA, academic recruitment, accommodation case files, student-records
+integration. 🔵 The sharpest instance: `apereo/cas` has been shelved for many passes and
+`EsupPortail/esup-apereo-cas-docker` was not — **the dependency was held and the estate built on it was not.**
+
+🟢 **`619-Q` narrows after fourteen passes, and in the segment that matters commercially.**
+[`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis) (`Apache-2.0`, `11,357 B` byte-read,
+pushed `2026-10-21`) is a permissive **platform of record** for students needing individual accommodation.
+🔴 It does not close `619-Q`, whose three named misses are US K-12 statutory instruments (`IEP`, `AAC`,
+Deaf-education LMS); this is higher education and EMEA. 🟡 Revised: the tier gap is **segment specific**.
+
+🔴 **This pass's own instrument was wrong, and the channel this base distrusts was right.** The platform field
+read `LGPL-3.0` for `Esup-Pod`; the `20`-name ladder returned `GPL-3.0` from `COPYING` (`35,149 B`). 🟢 The
+grant is at `COPYING.LESSER` (`7,652 B`), which was not in the set — because **the LGPL ships as a pair** and
+`COPYING` in an LGPL project *is* the GPL. A ladder that reaches it first mis-grades every LGPL repository,
+always. 🟡 Extending `P631-0`: the grading unit is not a file and not a title but the **file set**
+(`632-A`). 🔵 `631-B`'s widening paid in the same run — `esup-siscol` serves its grant at `LICENCE`, the
+British spelling, and would have been published `NO-GRANT` under `p631`'s `10`-name set.
+
+🟢 **`630-H` is censused at last, and the census resolves a contradiction between two of this base's own
+operatives.** Over `1,577` sell-shelf rows the `CLIENT-ONLY` class splits four ways by **counterparty**:
+🔴 `VENDOR` (`esup-pay` needs a Paybox contract) is the only real risk; 🟢 `STATE`
+(`neispy`/Korea NEIS, `esup-siscol`/APOGEE) is free to interoperate and outlives the engagement;
+🟡 `OPEN` (`canvasapi`) has no lock-in; 🔵 `PROTOCOL` (`4` xAPI/SCORM wrappers) is not an instance at all.
+That matters because `p631`'s APAC operative — *interoperate with the state platform rather than fork the
+local one* — **produces** thin clients by construction, so under `630-H` as written the recommended play
+looked like the flagged risk. 🔴 The keyword instrument is **rejected with a number** (`54.5 %` precision,
+recall unknown) rather than adopted; the full census is priced at `1,577` upstream README reads.
+
+🟢 **A working positive control for absence, which this base has lacked since `p624`** (`632-B`). Tree
+enumeration is `403` here, so absence has been an upper bound over a filename set — and a `NO-GRANT` verdict
+was indistinguishable from a wrong address. A one-request probe of a path that must exist separates them:
+`4 of 4` real ungranted repositories resolved, `2 of 2` fabricated addresses did not. 🟡 The publishable
+verdict is *"no grant at `20` names in a tree that resolves"*; `"unlicensed"` still is not.
+
+🔴 **Two corrections to published claims, both narrowings rather than withdrawals.** `p631`'s *"Chinese
+education supply is copyleft-or-ungranted"* does not reproduce — a teaching-shaped leg returns `3 of 10`
+permissive, the largest at `82,223★` — but all three are **content**, so the claim narrows to Chinese
+**platform** supply (`632-E`); and the largest asset in the region,
+[`ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) (`84,065★`, every school textbook as PDF),
+carries no grant at all. And the `2026` market spread is `3.1×` again (`3.7`–`11.4 USD B`) after `p631`
+measured `1.1×`, so a narrow spread is a **sampling artefact** of the source set, measured three times.
+
+🟢 **What a studio should take from this pass.** An EMEA higher-education engagement can now be quoted as
+*extend an `Apache-2.0` consortium estate* rather than greenfield, with `esup-siscol` showing the seam into
+the national student-records system and the consortium's own deployments as the reference argument — but
+**grade per repository, not per organisation** (`6` of that estate is `CECILL-2.1`, `1` is `LGPL-3.0`). In
+APAC, Indonesia is the measured exception to *don't fork*: the `sekolah` tier is the deepest in the census
+(bare `74`) and holds a `521★` `MIT` complete school system of record. In LATAM the permissive supply is
+**exam-shaped** — `enem-extractor` and `gpt-4-enem`, both `MIT` — so the sellable offer is a tutor whose
+claims carry a score on the actual national exam; the region's **institutional** systems
+(São Paulo's `AGPL-3.0`, UNLP's `GPL-2.0`-only) are integration targets, not forks. And in North America the
+dated play is unchanged and eight weeks out: North Carolina's model policy by `2026-12-31`, repeatable across
+`31` legislating states, with the differentiator being audit evidence rather than content.
+
+🔴 **Not gate-verified, and it says so.** `make hooks` is refused in this session on the same
+`[Code from External]` grounds recorded since `p617` — `p632` ✗, now `15` of the last `16` passes
+(`631-L`). Per that entry's operative the currency facts are restated in prose instead: shelves `p632`,
+`intel/open-gaps.md` `p632`, this file `p632`.
+
+🔵 Evidence for every figure above: `evidence/websearch-legs.2026-11-03-p632.tsv`,
+`evidence/region-supply-census.2026-11-03-p632.tsv`,
+`evidence/grant-byteread.2026-11-03-p632.tsv`,
+`evidence/instrument-calibration.2026-11-03-p632.tsv`,
+`evidence/client-only-census.2026-11-03-p632.tsv`,
+`evidence/esup-org-enumeration.2026-11-03-p632.tsv`,
+`evidence/address-verification.2026-11-03-p632.tsv` (`36 of 36` cited addresses `200`, `2 of 2` fabricated
+controls unresolved — the mandated `curl -sI` verifier returns `403` for live and dead alike on this host,
+so existence is verified by byte read instead).
+
 ## 🆕 `p631` — reads `2026-11-03`, commit `2026-11-03` — **🟢 `629-K` IS CLOSED: THIS FILE IS NOW INSIDE A CURRENCY GATE, AND THE FIX NEEDED NO NEW CODE — ONLY THE CANONICAL HEADER FORM IT HAD NEVER USED. 🟢 A SECOND PRODUCTIVE DISCOVERY CHANNEL EXISTS — THE SEARCH API RUN **IN-REGION** — AND IT PAID `6` ROWS ON ITS FIRST RUN WHILE THE MANDATED REGIONAL WEB LEGS WENT NIL A **SIXTH** TIME. 🔴 AND THE LEGS ARE NOW SATURATED ON **BOTH** HALVES: SUPPLY `0 of 19`, DEMAND `1 of 17`.**
 
 🟢 **`631`'s headline, and it is a channel result rather than a row count.** Six passes have run the mandated

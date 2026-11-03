@@ -4,6 +4,152 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03` — market: the legs' **seventh** supply nil and their demand half at **`0 of 21`**, against a supply channel that paid twice
+
+🔵 Figures below are what the named sources published; spreads are reported rather than averaged away.
+
+### 🔴 Both halves of the mandated legs are now saturated, and the demand half moved the wrong way
+
+| Half | `p631` | 🆕 `p632` | What it means |
+|---|---|---|---|
+| supply | `0 of 19` unheld | 🔴 `0 of 17` | seventh consecutive nil: `p625`–`p632` = `0/28`, `0/12`, `0/11`, `1/17`, `0/11`, `0/19`, `0/17` |
+| demand | `1 of 17` unheld | 🔴 `0 of 21` | `21` demand items surfaced today — market bases, programmes, instruments, surveys — and **every one** was already on a sell shelf |
+
+🔵 **The sharpest instance:** the LATAM leg surfaced *"Google.org commits `$4.6 M` to AI education across Latin
+America"* as its headline. That figure is on `intel/market.md` at **four separate lines**, with the recipient
+(Raspberry Pi Foundation's *Experience AI*), the country count (`9`) and the `2028` target (`24,000`
+educators / `1.25 M` students) — none of which the leg carried. 🟡 The legs are not merely saturated; they are
+**thinner than the shelf they are supposed to be feeding**.
+
+### 🔴 The `2026` market base: `p631`'s `1.1×` spread does not hold, and `p630`'s `3.1×` does
+
+| Source shape | `2026` base | Note |
+|---|---|---|
+| vendor A (Persistence) | `USD 3.7 B` | 🔴 the low outlier `p631` could not reproduce — **reproduced today** |
+| vendor B (New Market Pitch) | `≈ USD 11.0 B` | |
+| vendor C (Korean-distributed TBRC) | `USD 11.4 B` | |
+| vendor D (Grand View–lineage) | `USD 10.6 B` | |
+
+🔴 **Spread `3.1×`.** `p630` measured `3.1×`, `p631` measured `1.1×`, and `p632` measures `3.1×` again on a
+source set drawn by the identical query. 🟢 That settles the question `p631` left open: the spread is a
+property of the **source set**, not a trend in the sector, and a pass that happens to draw four
+similar vendors will report false convergence. 🟡 **The operative stands and is now triply evidenced:** do not
+quote a single market number. Quote the segment (K-12 at `≈ 34 %` share) and the regional adoption rates,
+which the surveys measure directly.
+
+### 🟢 What the supply channel found that the demand legs cannot see
+
+🔵 A `131`-repository French higher-education consortium estate (`52` `Apache-2.0`, `25` pushed in `2026`),
+unheld for `631` passes — `repos/foundations.md` `632-F`. 🔴 No demand-side leg in `44`-plus attempts has ever
+named a publisher of permissive education software. The two channels do not substitute for each other: the
+demand legs describe **buyers and rules**, the supply channel finds **what you build with**.
+
+## Opportunities by region
+
+### Global
+
+🟢 **The opportunity that holds everywhere, restated from the supply side.** The gap between *adoption* and
+*governance* is this base's standing global finding and it is unchanged: every region reports high usage
+against thin institutional policy. 🆕 `p632` adds the supply-side twin of it — **the gap between what
+institutions run and what institutions publish**. A French HE consortium publishes `52` `Apache-2.0`
+repositories covering signature circuits, attendance, card issuance, MFA, academic recruitment,
+accommodations and student-records integration, and this base — which already held both Apereo and
+France Université Numérique — had none of them. 🔵 If `631` passes of curation missed one consortium's
+entire administrative estate, a client's own build-vs-buy analysis has missed it too.
+
+🔴 **The supply constraint to price into every region (`T1`, unchanged and re-measured):** the four largest
+education platforms are **all copyleft** — Moodle (`GPL-3.0`), Open edX (`AGPL-3.0`), Canvas (`AGPL-3.0`),
+Chamilo (`GPL-3.0`). 🆕 `p632` adds the two milder middle terms, both found today: `LGPL-3.0`
+(`EsupPortail/Esup-Pod`) — link against it and keep your own code — and `p631`'s `MPL-2.0`
+(`rsschool-app`) — fork it and publish only the files you modify. 🟡 The ladder a studio should actually
+quote is `permissive tool alongside the platform` → `MPL fork` → `LGPL link` → `AGPL/GPL, do not`.
+
+🟢 **And a buyable asset class this base had been seeing only in fragments:** permissive **administrative**
+higher-education software. `verticals/solutions.md` `632-C` splits it by counterparty so an estimate can
+tell a free integration from a contracted one.
+
+### North America
+
+🔵 **Measured and held:** `134` AI-in-education bills across `31` states in `2026`, states favouring
+guardrails over mandated adoption. North Carolina Session Law `2026-41` is the dated one — state model policy
+by **`2026-12-31`**, local policies by `2027-06-30`, teacher training by `2028-06-30`. SUNY requires
+AI-literacy in general education for incoming undergraduates from **fall `2026`**. Teacher AI use `≈ 60 %`
+(Gallup-sourced); `70 %` of institutions in Europe and North America have or are developing AI guidance
+(UNESCO). `$169 M` of US DoE FIPSE awards include responsible-AI work. No comprehensive federal law.
+🆕 Corroborated today: North America holds `36–41.7 %` of the global AI-in-education market by two
+independent vendor sources, and COPPA-aligned child-safety design is being reported as an **adoption
+enabler** rather than a brake.
+
+🟢 **The opportunity:** the `2026-12-31` North Carolina deadline is eight weeks out, and `31` states are
+legislating the same shape. A model-policy-to-implementation offer is repeatable across them, and the
+differentiator is evidence, not content — districts must show *what the policy does*, which is a logging,
+audit and reporting build.
+🔴 **The risk to name in any estimate:** a permissive **K-12 `IEP`** system still does not exist
+(`619-Q`, narrowed today but not closed). Special-education compliance in the US is a build, not an adoption.
+
+### EMEA
+
+🔵 **Measured and held:** the EU Digital Omnibus moved the Annex III high-risk education obligations to
+**`2027-12-02`** (with `2028-08-02` in the second form the channel serves). The European Commission updated
+its ethical guidelines on AI in education (`9` June); three Advanced Digital Skills grant agreements worth
+**`EUR 25.4 M`** are signed; the UK's first AI Adoption Summit (`8` June) committed **`GBP 200 M+`**;
+`56 %` of EMEA CEOs report AI readiness (Workday), ahead of the Americas and APJ.
+
+🟢 **The opportunity, and `p632` changes its shape.** `2027-12-02` is far enough out to **design** for
+conformity rather than retrofit it — that was `p631`'s read and it stands. 🆕 What is new is that the EMEA
+build now has a permissive **base layer**: `EsupPortail`'s `Apache-2.0` estate is the administrative spine of
+French universities, and `esup-siscol` shows the integration seam to the **national** student-records system.
+🔵 An EMEA higher-education engagement can now be quoted as *extend a consortium estate under `Apache-2.0`*
+rather than *greenfield*, and the consortium's own deployment base is the reference-customer argument.
+🔴 **Two cautions:** `6` repositories in that estate are `CECILL-2.1` (French-law copyleft) and `1` is
+`LGPL-3.0` — the estate is not uniformly permissive, so it must be graded per repository, not per
+organisation. And `esup-pay` needs a **Paybox** commercial contract (`632-C`).
+
+### APAC
+
+🔵 **Measured and held:** Korea's AI Basic Act in force `2026-01-22` with a grace period; Vietnam classifies
+education AI as high-risk; TEQSA action plans in Australia; Singapore's AI Verify. 🆕 Added today: the
+**ASEAN Guide on AI Governance and Ethics** is explicitly early-stage rather than binding, Australia has a
+**National AI Plan** with public-sector Chief AI Officers, and the regional analyst read is that APAC
+harmonises on *principles* (safety, transparency, accountability) executed differently per market.
+🔴 The leg returned **no** education-specific `2026` instrument for the region beyond what is already held —
+enterprise material crowds it out, which is `619-P`'s shape widened from Australia to the region.
+
+🟢 **The opportunity, and this is the region where `p632`'s supply result bites hardest.** `p631`'s operative
+was *do not plan to fork the local platform — interoperate with the state platform*, and the supply census
+now shows the pattern twice in two countries: `neispy` (Korea NEIS) and, in EMEA,
+`esup-siscol` (APOGEE). 🆕 **Indonesia is the exception that pays differently:** the `sekolah` tier is the
+deepest token tier in the whole census (bare `74`) and it contains a `521★` `MIT` **complete school system of
+record** plus a maintained `75★` alternative. In Indonesia a studio can fork a permissive platform; in Korea
+and Japan it should integrate with the state one.
+🔴 **The China caution, corrected today (`632-E`):** Chinese education *platform* supply is
+copyleft-or-ungranted, but Chinese education *content* supply is permissive at enormous scale
+(`d2l-zh` `Apache-2.0` `82,223★`) — with the largest asset of all, every school textbook as PDF
+(`ChinaTextbook` `84,065★`), carrying **no grant at all**. In a sector where the content is the product, grade
+the asset class, not the repository.
+
+### LATAM
+
+🔵 **Measured and held:** UNESCO's LAC Observatory and partner list; the CONALEP/DGETI pilot; ECLAC's ILIA
+index; the IDB note; Chile's CENIA and `Latam-GPT`; Google.org's **`$4.6 M`** *Experience AI* across `9`
+countries targeting `24,000` educators and `1.25 M` students by `2028`. 🆕 Added today: IAPP's `2026`
+legislative prediction that the region is finalising **risk-based** AI laws; Baker McKenzie's read that no
+LATAM country yet has a mature harmonised regime; and the Brazil/Argentina divergence — Brazil regulating,
+Argentina declining to.
+
+🟢 **The opportunity, re-pointed by the supply census.** LATAM's permissive **repository** supply remains
+thin, but today's census shows what the region *does* publish: **institutional systems of record, under
+reciprocal licences.** The São Paulo municipal education secretariat publishes its pedagogical management
+system (`AGPL-3.0`); CeSPI at UNLP publishes a school management system (`GPL-2.0-only`). 🔵 That is a
+procurement fact, not a licence complaint: LATAM public buyers already run and publish their own systems, so
+the entry is **integration and extension of a public-sector estate**, and the licence answer is a separate
+deployed service over a documented interface rather than a fork.
+🟡 **The permissive LATAM rows that do exist are exam-shaped** — `gpt-4-enem` and `enem-extractor` both target
+Brazil's national admission exam. An exam-prep or exam-analytics offer has in-language, in-curriculum
+permissive components available today.
+🔴 **And `GPL-2.0-only` is the strictest combination in this base:** `kimkelen` has no "or later" clause, so
+it cannot even be taken forward to `GPL-3.0`. Any estimate that assumes an upgrade path there is wrong.
+
 ## 🆕 `p631` — reads `2026-11-03` — market: the regional legs' **sixth** supply nil, and the first pass to measure their **demand** half
 
 🔵 Figures below are what the named sources published; spreads are reported rather than averaged away.
@@ -50,7 +196,7 @@ source set, not of the sector* — which is a stronger reason not to quote a sin
 was. Quote the **segment** (K-12 at `~34 %` share) and the **adoption rate**, which the regional surveys
 measure directly.
 
-## Opportunities by region
+## Opportunities by region — `p631` (archived)
 
 ### Global
 

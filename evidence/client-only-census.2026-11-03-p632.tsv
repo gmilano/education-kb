@@ -1,0 +1,15 @@
+repo	shelf	licence	counterparty	counterparty_type	adjudication
+anneschuth/parro-cli	agents/top.md	MIT	Parro school-communication platform (commercial, NL)	VENDOR	TRUE CLIENT-ONLY — already labelled 630-H
+Vocametrix/vocametrix-python	agents/top.md	MIT	Vocametrix voice-analysis API (commercial)	VENDOR	TRUE CLIENT-ONLY
+get-bridge/scorm_engine	verticals/solutions.md	MIT	Rustici SCORM Engine (commercial)	VENDOR	TRUE CLIENT-ONLY — the shelf already says "client only"
+SaidBySolo/neispy	agents/top.md	MIT	Korea NEIS open education API (state)	STATE	TRUE CLIENT, but the counterparty is a public platform — no contract, no lock-in
+ucfopen/canvasapi	repos/foundations.md	MIT	Canvas LMS REST API	OPEN	TRUE CLIENT, counterparty is itself open source (AGPL core)
+Apereo-LAI/OpenLRW-python-api-client	repos/foundations.md	ECL-2.0	OpenLRW	OPEN	TRUE CLIENT, counterparty open source
+xapijs/xapi	repos/foundations.md	MIT	the xAPI SPECIFICATION	PROTOCOL	FALSE POSITIVE for 630-H — the counterparty is a standard, so there is no proprietary service at all
+adlnet/xAPIWrapper	repos/foundations.md	Apache-2.0	the xAPI specification	PROTOCOL	FALSE POSITIVE
+gamestdio/scorm	repos/foundations.md	MIT	SCORM 1.2 / 2004 specification	PROTOCOL	FALSE POSITIVE (and dead since 2019)
+jblough/TinCanDart	repos/foundations.md	Apache-2.0	xAPI specification	PROTOCOL	FALSE POSITIVE
+ucbds-infra/otter-grader	repos/foundations.md	BSD-3-Clause	none — it IS the grader	NOT A CLIENT	FALSE POSITIVE: matched on the prose "ships a student-side client for public checks"
+NEW-THIS-PASS EsupPortail/esup-pay	verticals/solutions.md (p632)	Apache-2.0	Paybox online payment (commercial)	VENDOR	TRUE CLIENT-ONLY — found in a brand-new estate, so the class is not an artefact of old rows
+NEW-THIS-PASS EsupPortail/esup-siscol	verticals/solutions.md (p632)	Apache-2.0	APOGEE / PEGASE national student-records systems	STATE	TRUE CLIENT, state counterparty — the EMEA twin of neispy
+TOTALS	1,577 sell-shelf rows scanned by keyword	-	-	-	11 hits: 6 true (3 VENDOR, 1 STATE, 2 OPEN) + 5 false. Precision 54.5%, recall unknown. Plus 2 true instances found independently this pass, both in one new estate

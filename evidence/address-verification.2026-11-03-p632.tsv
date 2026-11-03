@@ -1,0 +1,40 @@
+http_code	repo	resolved_at	note
+200	5d-jh/school-menu-api	master/README.md	cited in a p632 section
+200	DegrangeM/Skreen	master/README.md	cited in a p632 section
+200	Desarrollo-CeSPI/kimkelen	master/README.md	cited in a p632 section
+200	EsupPortail/Esup-Pod	main/README.md	cited in a p632 section
+200	EsupPortail/esup-dematec	master/README.md	cited in a p632 section
+200	EsupPortail/esup-emargement	master/README.md	cited in a p632 section
+200	EsupPortail/esup-nfc-tag-server	master/README.md	cited in a p632 section
+200	EsupPortail/esup-oasis	main/README.md	cited in a p632 section
+200	EsupPortail/esup-otp-api	master/README.md	cited in a p632 section
+200	EsupPortail/esup-otp-manager	master/README.md	cited in a p632 section
+200	EsupPortail/esup-pay	master/README.md	cited in a p632 section
+200	EsupPortail/esup-sgc	master/README.md	cited in a p632 section
+200	EsupPortail/esup-signature	master/README.md	cited in a p632 section
+200	EsupPortail/esup-siscol	main/README.md	cited in a p632 section
+200	PlexPt/awesome-chatgpt-prompts-zh	main/README.md	cited in a p632 section
+200	TapXWorld/ChinaTextbook	master/README.md	cited in a p632 section
+200	TeamDMU/DMU-Android	main/README.md	cited in a p632 section
+200	adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel	master/README.md	cited in a p632 section
+200	andes2912/sekolahku	master/README.md	cited in a p632 section
+200	autonomous-minicar-battle/togikaidrive	main/README.md	cited in a p632 section
+200	d2l-ai/d2l-zh	master/README.md	cited in a p632 section
+200	datomatic/carta-del-docente	main/README.md	cited in a p632 section
+200	diaslui/enem-extractor	master/README.md	cited in a p632 section
+200	emersonmello/modelos-latex	master/.gitignore	cited in a p632 section
+200	gpassero/uol-redacoes-xml	master/README.md	cited in a p632 section
+200	gustavoguanabara/assistente-enem	main/README.md	cited in a p632 section
+200	haruharo101/Programming_Contest_Hosting_Guide	main/README.md	cited in a p632 section
+200	ikhsan3adi/absensi-sekolah-qr-code	master/README.md	cited in a p632 section
+200	mrizkimaulidan/inven-bs	main/README.md	cited in a p632 section
+200	nurfachmi/perpustakaan	main/README.md	cited in a p632 section
+200	piresramon/gpt-4-enem	main/README.md	cited in a p632 section
+200	prefeiturasp/SME-SGP	master/README.md	cited in a p632 section
+200	romadebrian/WEB-Sekolah	master/README.md	cited in a p632 section
+200	ugunNet21/hypervel-web-school	master/README.md	cited in a p632 section
+200	wistbean/learn_python3_spider	master/README.md	cited in a p632 section
+200	yunger7/enem-api	main/README.md	cited in a p632 section
+UNRESOLVED	zzz-not-a-real-owner-632/zzz-not-a-real-repo	-	FABRICATED CONTROL — discriminates
+UNRESOLVED	EsupPortail/esup-oasis-NOT-REAL	-	FABRICATED CONTROL on a real owner — discriminates
+TOTAL	36 of 36 cited addresses return 200	-	2 of 2 fabricated controls UNRESOLVED. curl -sI on github.com returns 403 for live and dead alike on this host (630-E), so existence is verified by raw byte read instead

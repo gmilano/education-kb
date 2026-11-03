@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03` — current trends
+
+🔵 Each trend is tied to something measured this pass or to a named source from this pass's eight mandated legs
+and `17` census legs. 🔴 Where a trend is an opinion rather than a measurement, it says so.
+
+### `T1` — 🟡 Narrowed, and the narrowing is the sellable part: the permissive layer is single-purpose tools **in learning**, and whole systems **in administration**
+
+🔵 `T1` has read "the permissive layer is single-purpose tools" for three passes and today it breaks in one
+place. `17` rows accepted this pass and `11` of them come from one publisher's **administrative** estate:
+signature circuits, attendance control, card issuance, an MFA estate, academic recruitment, an accommodations
+system of record, a student-records connector — all `Apache-2.0`, all pushed in `2026`. Add a `521★` `MIT`
+complete school academic system from Indonesia.
+🟢 **The revised operative.** In the **learning** path `T1` holds exactly as written: the big platforms are
+copyleft (Moodle `GPL-3.0`, Open edX / Canvas `AGPL-3.0`, Chamilo `GPL-3.0`), so build permissive tools
+*alongside* over `LTI`/`xAPI` and cost it as integration. In the **administrative** path the opposite is now
+true: permissive whole systems exist and the honest quote is *extend an existing estate*, not *greenfield*.
+🔵 Which path an engagement is on is therefore the first question of the estimate, and it was invisible while
+`T1` was stated at sector level.
+
+### `T2` — 🟢 Confirmed on a second run: the productive discovery channel is the **publisher**, not the keyword
+
+🔵 `p631` opened the in-region supply channel and asked for a second run before calling it an asset. Run two:
+`17` legs, `263` rows, `107` permissive, `17` accepted — against `9`/`46`/`16`/`6` on run one, and against
+`0` repository addresses from the mandated regional web legs on the same day for the **seventh** consecutive
+pass. 🟢 **What improved is the query unit.** A token leg (`enseignant`) returned two rows; the `org:` leg
+behind one of them returned `131` repositories and `11` accepted rows.
+🟡 **Operative (`P632-0`):** in education, permissive supply is published by **institutions**, and
+institutions publish **estates**. When a leg surfaces one repository from a university, ministry, consortium
+or secretariat, the next query is that organisation — not a synonym of the keyword.
+
+### `T3` — 🔴 New and uncomfortable: curation bias runs along **function**, not geography
+
+🔵 Measured today. This base already held `7 of 8` starred repositories in the `openfun` org (France
+Université Numérique) and `3 of 8` in `apereo` — and **`0 of 131`** in `EsupPortail`. A substring census for
+`esup` over every curated page returns one hit, and it is the `é` in *CentraleSupélec*.
+🔴 The three orgs are all higher-education consortia and two of them are French, so the missing variable is
+not region or publisher type: it is that the held code **faces a learner** (CMS, LCMS, learning-record store,
+headless education ERP, SSO) and the missed code **faces an administrator**.
+🟡 **Opinion, flagged as such:** the same bias is likely in a client's own build-vs-buy analysis, because the
+search terms that surface education software are learning terms. Stated as a hypothesis; the measurement
+that would test it is a second administrative-estate find in another jurisdiction.
+
+### `T4` — 🔴 Corrected: "Chinese education supply is copyleft-or-ungranted" is true of **platforms** and false of **content**
+
+🔵 `p631` published `0 of 10` permissive on a platform-shaped Chinese leg. A teaching-shaped leg today
+(bare `total_count` `1,026`) returns `3 of 10` permissive, including `d2l-ai/d2l-zh` at `82,223★`
+(`Apache-2.0`). 🟢 Both measurements are sound and they sampled different things.
+🔴 **The number that matters most is neither:** `TapXWorld/ChinaTextbook` (`84,065★`) — every Chinese school
+and university textbook as PDF — carries **no grant at all**.
+🟡 **Operative, and it is `P631-0` applied:** grade the `(family, asset class)` pair. In a sector where the
+content *is* the product, a repository-level licence verdict can be exactly backwards.
+
+### `T5` — 🟢 New: the `CLIENT-ONLY` risk and the APAC/EMEA integration play are the **same artefact**, separated by counterparty
+
+🔵 `630-H` named *permissively-licensed thin clients for proprietary services* as a risk class; `p631`'s APAC
+operative was *interoperate with the state platform rather than fork the local one*. 🔴 Those two statements
+were in conflict, because the recommended play produces thin clients by construction.
+🟢 Censused today (`1,577` sell-shelf rows, `evidence/client-only-census.2026-11-03-p632.tsv`) the class
+splits four ways: **VENDOR** (`3` shelved + `esup-pay`, needs a commercial contract — the real risk),
+**STATE** (`neispy`/Korea NEIS, `esup-siscol`/APOGEE — free to interoperate, counterparty outlives the
+engagement), **OPEN** (`canvasapi`, `OpenLRW` client — fork the server if you must), **PROTOCOL** (`4` xAPI /
+SCORM wrappers — no service to be locked out of, and not a `630-H` instance at all).
+🟡 **Operative:** in an estimate, a client row is priced by **what it talks to**. Ask for the counterparty
+before pricing the integration, and treat a protocol wrapper as a library, not a dependency on a vendor.
+
+### `T6` — 🔴 Unchanged and now triply measured: the `2026` market number is a `3.1×` spread, and a narrow spread is a sampling artefact
+
+🔵 `p630` measured `3.1×`, `p631` measured `1.1×`, `p632` measures `3.1×` — same query, different source sets
+(`3.7` / `10.6` / `11.0` / `11.4` `USD B` for `2026`). 🟢 The spread is a property of the source set, not of
+the sector, which is a stronger reason to refuse a single number than a wide spread was.
+🟡 **Operative:** quote the segment (K-12 `≈ 34 %` share) and the regional adoption rates, which the surveys
+measure directly. Never a point estimate of market size.
+
+### `T7` — 🔴 The mandated legs' **demand** half is saturated too, and the shelf is now richer than the leg
+
+🔵 `p631` first counted the demand half at `1 of 17` unheld. 🆕 `p632`: `0 of 21`. The LATAM leg's headline —
+Google.org's `$4.6 M` AI-education commitment — appears at **four separate lines** of `intel/market.md`, each
+carrying detail the leg did not (recipient, `9` countries, `24,000` educators / `1.25 M` students by `2028`).
+🟡 **Operative, and it is about this pipeline rather than the sector:** the mandated web legs now function as
+a **regression test** — they confirm the shelf is current — and no longer as a discovery channel on either
+half. Discovery budget belongs in the supply census (`T2`). This is the answer to `614-I`'s open question.
+
 ## 🆕 `p631` — reads `2026-11-03` — current trends
 
 🔵 Each trend is tied to something measured this pass or to a named source from this pass's eight legs.

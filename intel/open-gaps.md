@@ -4,6 +4,176 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — `2026-11-03` — **🟢 `631-F` CLOSES AS AN ASSET ON ITS SECOND RUN (`17` ACCEPTED vs `6`), `630-H` IS CENSUSED AT LAST AND SPLITS INTO FOUR SUBCLASSES, AND `619-Q` NARROWS WITH A COUNTER-EXAMPLE. 🔴 `632-A`: THIS PASS'S OWN LADDER MIS-GRADED AN `LGPL-3.0` PAYLOAD BECAUSE THE LGPL SHIPS AS A **PAIR** — AND THE PLATFORM METADATA WAS THE CORRECT CHANNEL. SEVEN NEW GAPS REGISTERED (`632-A`…`632-G`).**
+
+🔵 Currency, restated in prose per `631-L`'s operative because the gate suite still cannot be executed here:
+shelves `p632`, this register `p632`, `README.md` `p632`.
+
+### 🔴 `632-A` — NEW, and it inverts this base's oldest rule: the **bytes** misled and the **metadata** was right
+
+🔵 Since `p611` this base has held that *a curated licence column is not evidence* — measured at `1 of 5`
+surviving a byte read on a curated index, then at `68 of 68` reproducing for the platform's own
+`license.spdx_id` (`p612`). 🔴 Today the platform field read `LGPL-3.0` for
+[`EsupPortail/Esup-Pod`](https://github.com/EsupPortail/Esup-Pod) and this pass's `20`-name ladder returned
+**`GPL-3.0`**, from `COPYING` at `35,149 B` with the head title `GNU GENERAL PUBLIC LICENSE`.
+
+| File | Bytes | Head title | Grade |
+|---|---|---|---|
+| 🔴 `COPYING` — where the ladder stopped | `35,149 B` | `GNU GENERAL PUBLIC LICENSE` | `GPL-3.0`, **wrong** |
+| 🟢 `COPYING.LESSER` — absent from the `20`-name set | `7,652 B` | `GNU LESSER GENERAL PUBLIC LICENSE` | `LGPL-3.0`, matches metadata |
+
+🟢 **Mechanism, and it is structural.** The LGPL is published as a **pair**: the Lesser text plus the GPL text
+it incorporates by reference. So `COPYING` in any LGPL project *is* the GPL, and a ladder that reaches it
+first is **guaranteed** to mis-grade every LGPL repository — not occasionally, always. 🔵 `611-B` hit the
+same mechanism from the opposite direction (every `GPL-2.0` file graded `LGPL`). 🟢 Repaired: `COPYING.LESSER`
+and `COPYING.LIB` now rank **above** `COPYING`.
+🟡 **The general statement, extending `631-C`/`631-D`:** the grading unit is not a file and not a title — it is
+the **file set**. `P631-0` said a payload is a document with scope; `632-A` adds that a grant can be
+**split across files**, and reading any one of them alone produces a confident wrong answer.
+🔴 OPEN as a rule-boundary question: `622-B` closed the `COPYING.LIB` rung *by refutation* on a different
+specimen. `632-A` is a counter-example to that closure's generality, and the two need reconciling.
+
+### 🟢 `632-B` — NEW, and it is the control this base has lacked since `p624`: a working positive probe for absence
+
+🔵 `624`/`630` recorded tree enumeration — the authoritative absence oracle — as HTTP `403` for every
+third-party address in this session. `631-B` then measured an `8 %` false-absence rate on the filename-set
+fallback and left *"the bound itself stays open"*. 🔴 The unaddressed half was that a `NO-GRANT` verdict and a
+**wrong address or branch** return the identical `404 14 B` at all `20` names.
+
+🟢 **The fix costs one request and runs on the same channel.** Probe a path that must exist (`README.md`,
+then `readme.md`, `README`, `README.rst`, `.gitignore`). `4 of 4` real ungranted repositories returned
+`TREE-RESOLVES-AT README.md` (`1,288`–`5,972 B`); a fabricated address and a fabricated branch both returned
+`TREE-DOES-NOT-RESOLVE`.
+🟡 **What it does not buy, stated so the next pass does not over-claim it:** a grant at a `21`st filename, or
+stated only in README prose, still reads as absence. 🟢 The publishable verdict is therefore
+*"no grant at `20` names in a tree that resolves"* — a measurement. `"unlicensed"` is not, and
+`631-B`'s filename bound stays open.
+
+### 🟢 `632-C` — `630-H` CENSUSED, and the class is four classes with opposite commercial signs
+
+🔵 `630-H` has carried *"no census of the existing shelves against it yet"* since `p630`. Censused today over
+`1,577` sell-shelf rows (`649` + `466` + `462`): `evidence/client-only-census.2026-11-03-p632.tsv`.
+
+| Subclass | Counterparty | Rows | Consequence |
+|---|---|---|---|
+| 🔴 `VENDOR` | commercial service | `3` shelved + `1` new (`esup-pay`/Paybox) | permissive code, **contract required** — the only subclass `630-H` warned about |
+| 🟢 `STATE` | public platform | `neispy` (NEIS) + `esup-siscol` (APOGEE) | not a risk: free to interoperate, counterparty outlives the engagement |
+| 🟡 `OPEN` | open-source server | `canvasapi`, `OpenLRW` client | no lock-in |
+| 🔵 `PROTOCOL` | a **specification** | `4` xAPI/SCORM wrappers | **not a `630-H` instance at all** |
+
+🔴 **And the census instrument is REJECTED with a number, per `606`'s rule.** The keyword sweep scored
+**precision `6/11` = `54.5 %`, recall unknown**; its `5` false positives are `4` protocol wrappers and one
+autograder whose row reads *"ships a student-side client for public checks"*. 🟡 It measures this base's
+vocabulary, not the class. 🔴 **OPEN:** `630-H` is now specified but not enumerated — the census that would
+settle it is the `606` method over `1,577` upstream README first screens, and that is its price.
+🟢 The load-bearing consequence is a contradiction resolved: `p631`'s APAC *"interoperate with the state
+platform"* operative produces `CLIENT-ONLY` artefacts by construction, so under `630-H` as written the
+recommended play looked like the flagged risk. Split by counterparty they separate cleanly.
+
+### 🟡 `619-Q` — NARROWED by counter-example, and the narrowing is segment-shaped
+
+🔵 **`619-Q` as written:** no permissive **platform of record** in the accessibility / special-education tier;
+searched and not found — an `IEP` management system, an `AAC` platform, a Deaf-education LMS.
+🟢 **Counter-example:** [`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis) (`Apache-2.0`,
+`11,357 B`, pushed `2026-10-21`) is a platform of record for students needing individual accommodation —
+request campaigns, commission review, beneficiary file, accommodation plans, interview minutes.
+🔴 **Why it does not close.** `619-Q`'s three misses are **US K-12** instruments; `IEP` is a statutory artefact
+of US special education. `esup-oasis` is **higher education** and **EMEA**. 🟡 Revised claim: the gap is
+**segment specific** — a permissive HE accommodations platform exists, a permissive K-12 `IEP` system is
+still not found. 🔵 Commercially the better half, since HE is where these engagements sit.
+
+### 🔴 `632-D` — NEW: a **mis-attributed grant** — a valid `MIT` file that grants somebody else's code
+
+🔵 [`romadebrian/WEB-Sekolah`](https://github.com/romadebrian/WEB-Sekolah) (`66★`) serves a well-formed `MIT`
+payload at `LICENSE`, `1,093 B`, inside the stock byte band. 🔴 Its holder is
+**`Blackrock Digital LLC`, `2013-2018`** — the vendor of the Start Bootstrap theme the project vendored. The
+grant covers the **theme**; the project's own PHP is granted by nobody.
+🟡 **Why this is a distinct class.** `616-C` found a README **disowning** its own stock `MIT` grant and `617`
+found the inverse. Both were about a *mismatch between the file and the project's intent*. This is a
+mismatch between the file and the **work it covers**, and it is invisible to every instrument this base
+owns — family, byte band, title line and metadata all read `MIT` correctly.
+🟢 **The discriminator is one field already being read:** the copyright holder. A holder that is a
+**third-party vendor** with a date range ending years before the project's activity is the signature.
+🔴 OPEN: no census. This base reads the holder field but has never used it as a **validity** check, and
+`631-K` measured that `25 of 28` payloads name a person or nothing — so the check only fires on the minority
+of rows that name an institution or a company.
+
+### 🔴 `632-E` — `p631`'s Chinese-supply generalisation does not reproduce, and the corrected claim is narrower
+
+🔵 `p631` published *"Chinese education supply exists at scale and is copyleft-or-ungranted (`0 of 10`
+permissive)"*. 🔴 A teaching-shaped Chinese leg today (bare `total_count` `1,026`) returns **`3 of 10`
+permissive**, the largest [`d2l-ai/d2l-zh`](https://github.com/d2l-ai/d2l-zh) at `82,223★` (`Apache-2.0`).
+🟢 **Both are sound and they sampled different asset classes:** `p631`'s leg was *platform*-shaped, this one
+*teaching-content*-shaped. Corrected claim: Chinese education **platform** supply is copyleft-or-ungranted;
+Chinese education **content** supply is permissive at enormous scale.
+🔴 And the largest asset of all, [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook)
+(`84,065★`, every Chinese school and university textbook as PDF), carries **no grant at all**.
+🟡 Under `P631-0` these are not one finding. 🔵 Recorded as a correction **in a new entry**, not edited into
+`p631`'s row, per the append-only rule.
+
+### 🟢 `632-F` — `631-F` CLOSES as an asset, and the operative changes from token to **publisher**
+
+🔵 `631-F` was registered *"OPEN AS AN ASSET — needs a second run to establish it is not a one-off"*.
+
+| Run | Legs | Rows | Permissive | Accepted | Mandated regional web legs, same day |
+|---|---|---|---|---|---|
+| `p631` | `9` | `46` | `16` | `6` | `0` addresses |
+| 🟢 `p632` | `17` | `263` | `107` | `17` | `0` addresses |
+
+🟢 **CLOSED as an asset, and improved.** What changed is the query unit: a token leg (`enseignant`) returned
+`2` rows; the `org:` leg behind one of them returned `131` repositories and `11` accepted rows.
+🟡 **`P632-0`:** in education, permissive supply is published by **institutions**, and institutions publish
+**estates**. When a leg surfaces one repository from a university, ministry, consortium or secretariat, the
+next query is that organisation.
+🟢 It also settles `631-K`'s placement problem without refuting it: `11 of 11` `Apache-2.0` payloads read
+today have an **unfilled appendix** — exactly `631-K`'s finding — yet all `11` rows place confidently as EMEA
+because the **publisher** is a French public-sector consortium. Placement moves from the grant to the org.
+🔵 A second placement channel is named as `632-E2` on `repos/foundations.md`: `CECILL-2.1` is written by CEA,
+CNRS and Inria under French law and is close to unseen outside French public bodies, so a licence *family*
+can place a row where the licence *text* cannot. 🔴 It is reciprocal, so it places rows this base cannot sell.
+
+### 🔴 `632-G` — NEW grant shape: a per-file **header notice** served as the `LICENSE` file, and it explains a `NOASSERTION`
+
+🔵 [`Desarrollo-CeSPI/kimkelen`](https://github.com/Desarrollo-CeSPI/kimkelen) (`37★`) reads `NOASSERTION` in
+metadata. Its `LICENSE.txt` is **`697 B`** of C-comment-prefixed text — the per-file notice normally pasted
+at the top of a source file — naming `GNU General Public License v2.0` **without** an "or later" clause, held
+by **`CeSPI – UNLP`** (Argentina).
+🟢 Two results from one file: the `NOASSERTION` is **explained** (it is a notice, not licence text, so no
+classifier can match it — `614-E`'s distinction extended), and the row is **placed institutionally in
+LATAM from the grant payload itself**, one of the `3 of 28` cases `631-K` said are rare.
+🔴 `GPL-2.0`-**only** is the most restrictive combination this base has recorded: with no "or later" it cannot
+be taken forward to `GPL-3.0`.
+🔴 OPEN: byte-size banding cannot see this shape at all. A `697 B` payload is far below every band this base
+has measured, and `p631`'s mechanical rule (`GPL-3.0 ≈ 35,147 B`, `AGPL-3.0 ≈ 34,522 B`) would simply fail to
+match rather than warn.
+
+### 🟢 Registered this pass
+
+| id | What | Status |
+|---|---|---|
+| `632-A` | This pass's `20`-name ladder graded `Esup-Pod` `GPL-3.0`; the grant is `LGPL-3.0` at `COPYING.LESSER`. The LGPL ships as a **pair** and `COPYING` is its GPL half | 🟢 REPAIRED (rungs reordered); 🔴 OPEN as a boundary question against `622-B`'s closure |
+| `632-B` | A same-channel **positive** probe separates *no grant in this tree* from *this address does not exist* — `4 of 4` real, `2 of 2` fabricated | 🟢 ADOPTED; 🔴 `631-B`'s filename bound unchanged |
+| `632-C` | `630-H` censused over `1,577` rows; the class splits `VENDOR`/`STATE`/`OPEN`/`PROTOCOL` with opposite consequences | 🟢 SPECIFIED; 🔴 the keyword instrument REJECTED at `54.5 %` precision, full census unrun |
+| `632-D` | A valid `MIT` payload whose holder is a **theme vendor** — the grant covers vendored third-party code, not the project | 🔴 OPEN — new class, no census; discriminator is the holder field |
+| `632-E` | `p631`'s *"Chinese supply is copyleft-or-ungranted"* does not reproduce: `3 of 10` permissive on a teaching-shaped leg, all of it **content** | 🟢 CORRECTED by narrowing to **platforms** |
+| `632-F` | `631-F` confirmed on run two (`17` accepted vs `6`); the productive unit is the **publisher**, not the token | 🟢 CLOSED as an asset. `P632-0` registered |
+| `632-G` | A `697 B` per-file **header notice** served as `LICENSE.txt`; explains a `NOASSERTION`, places a row in LATAM, and is `GPL-2.0`-**only** | 🔴 OPEN — no instrument in this base detects this shape |
+| `619-Q` | Permissive accessibility **platform of record** — counter-example found in **HE/EMEA** | 🟡 NARROWED to US K-12 `IEP`; HE arm closed |
+| `631-B` | The `LICENCE` (British) rung added by `631-B` is what found `esup-siscol`'s grant | 🟢 The fix PAID — recorded as a positive |
+| `631-K` | `Apache-2.0` payloads carry no holder: `11 of 11` unfilled appendices today | 🟢 CORROBORATED, and 🟢 **routed around** by `632-F` (place by publisher) |
+| `631-L` | A gate wired, red-reachable, and not executable in the committing session | 🔴 HELD — `make hooks` refused again (`p632` ✗, now `15` of the last `16`) |
+
+### 🔴 Carried forward, unchanged by this pass
+
+| id | What | Why it is still open |
+|---|---|---|
+| `622-F` | Measured citation decay: `3.8 %` dead, `2.5 %` not canonical on an `80`-address sample — order of `150` dead and `98` stale across these shelves | 🔴 The enumerating sweep is **still unrun**. Both rates remain upper bounds. 🔵 `632-B` now gives it a cheap per-address existence probe, which is the instrument it was missing |
+| `622-K2` | Three rows placed on committer timezone rather than an institutional grant holder (`FreeAAC`, `PSICAS`, `CAME`) | 🔴 Still institutionally unconfirmed. 🟢 `632-F` offers the method that would settle them: query the publisher org |
+| `631-C` / `631-D` | The licence grader is wrong by leftmost match, by union of titles, and by head title | 🔴 OPEN, and 🔴 `632-A` adds a **fourth** way — by file set |
+| `631-I` | A cohort can satisfy every mechanical filter and be off-tier | 🔴 OPEN. 🟡 Reached by a second door today — **token collision** (`enem` ⊂ `enemy`, `CBSE` ⊂ `cbsecurity`) — and the free discriminator is the repository's own language |
+| `624`/`630` | Tree enumeration as an absence oracle is HTTP `403` for every third-party address | 🔴 Unchanged. 🟢 `632-B` is a partial substitute on the address half only |
+| `617-I` / `619-S` / `620-X` | No primary source resolves from this environment | 🔴 Unchanged, nineteenth pass. `curl -sI` on `github.com` returns `403` for live and dead alike |
+
 ## 🆕 `p631` — `2026-11-03` — **🔴 THIS REGISTER WAS **NINE PASSES STALE** (`p622` AGAINST SHELVES AT `p630`) AND `gate-register-currency` EXISTS PRECISELY TO CATCH THAT — SO THE GATE IS BUILT, WIRED, AND **NOT RUNNABLE IN THIS SESSION**, WHICH IS A THIRD FAILURE MODE THE BASE HAD NOT NAMED. 🟢 `629-K` IS CLOSED BY WIRING. ELEVEN NEW GAPS REGISTERED (`631-A`…`631-K`).**
 
 ### 🔴 `631-L` — NEW, and it is about the gate suite rather than the shelves

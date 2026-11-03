@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p632` — **🟢 THE IN-REGION SUPPLY CHANNEL IS CONFIRMED ON RUN TWO AND IMPROVED BY CHANGING THE QUERY UNIT: `17` LEGS, `263` ROWS, `107` PERMISSIVE, `17` ACCEPTED — AND `11` OF THE `17` CAME FROM ONE `org:` LEG. 🔴 TWO LEGS WERE KILLED BY **TOKEN COLLISION** RATHER THAN THINNESS, AND THE BARE-QUERY CALIBRATION IS WHAT TOLD THEM APART.**
+
+🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below it is
+edited — including `p`-numbered rows this pass reclassifies, which are corrected by **this entry**, not in place.
+
+### 🟢 What the in-region supply census returned, per leg
+
+| Leg | Query shape | Bare `total_count` | Rows read | Permissive | 🟢 Accepted | Verdict |
+|---|---|---|---|---|---|---|
+| `EMEA-org-esup` | `org:` | `131` | `131` | `52` | 🟢 **`11`** | the pass. A French HE consortium estate, entirely unheld |
+| `APAC-id` | `sekolah` | `74` | `10` | `5` | 🟢 **`2`** | deepest **token** tier of the pass; `3` more rows ungranted |
+| `LATAM-pt-enem` | `enem` | `103` | `20` | `6` | 🟢 **`2`** | 🔴 token collision with `enemy` — `8 of 20` rows are game code |
+| `APAC-ko` | `(hakkyo)` | `7` | `7` | `4` | 🟢 **`2`** | thin **and** on-tier; the useful shape |
+| `EMEA-fr` | `enseignant` | `20` | `15` | `3` | 🟢 **`2`** | the leg that surfaced the `org:` leg above |
+| `LATAM-es-docente` | `docente` | `25` | `20` | `3` | 🟢 **`2`** | also returned two institutional **copyleft** systems of record |
+| `APAC-ja2` | `(jugyo)` | `14` | `12` | `3` | 🟢 **`1`** | calibrated thin |
+| `APAC-zh` | `(jiaoxue)` | `1,026` | `10` | `3` | `0` | 🔴 permissive at scale, **all content** — see below |
+| `APAC-in` | `CBSE` | `16` | `10` | `2` | `0` | 🔴 token collision: `cbsecurity`, `cbsensor`, `cbsexploder` |
+| `LATAM-es-colegio` | `colegio` | `11` | `12` | `4` | `0` | calibrated thin; single-school pages and coursework |
+| `EMEA-de-bare` | `Unterricht` | **`2`** | `2` | `0` | `0` | 🔴 **genuinely near-empty**, corroborating `p631` on a different token |
+| `EMEA-de` | `Schule Lehrer` | — | `0` | `0` | `0` | 🔴 the `631-E` shape: `0` against a bare `2`. Not published as an absence |
+| `LATAM-pt-bare` | `escola` | `29` | `3` | `2` | `0` | calibration |
+| `LATAM-es-bare` | `aula` | `102` | `3` | `1` | `0` | calibration — bare count high, tier off |
+| `APAC-ja` | `(gakushu)` | `69` | `12` | `6` | `0` | off-tier: ML textbooks |
+| `EMEA-org-openfun` | `org:` | `35` | `8` | `7` | `0` | 🟢 `7 of 8` **already held** |
+| `EMEA-org-apereo` | `org:` | `20` | `8` | `6` | `0` | 🟢 `3 of 8` already held, rest off-tier |
+| **TOTAL** | `17` legs, `6` of them bare calibrations | — | **`263`** | **`107`** | 🟢 **`17`** | vs `p631`: `9` legs, `46` rows, `16` permissive, `6` accepted |
+
+### 🔴 `632-E` — `p631`'s Chinese-supply generalisation does **not** reproduce, and the correct claim is narrower
+
+🔵 **`p631` published:** *"Chinese education supply exists at scale and is copyleft-or-ungranted (`0 of 10`
+permissive)."* 🔴 Re-run today on a different Chinese token (`教学`, *teaching*; bare `total_count` `1,026`):
+**`3 of 10` permissive**, two `MIT` and one `Apache-2.0`, the largest at `82,223★`.
+
+| Row | Licence | What it actually is |
+|---|---|---|
+| [`d2l-ai/d2l-zh`](https://github.com/d2l-ai/d2l-zh) `82,223★` | 🟢 `Apache-2.0` | *Dive into Deep Learning*, Chinese edition — a **textbook**, used in `500+` universities |
+| [`PlexPt/awesome-chatgpt-prompts-zh`](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) `64,357★` | 🟢 `MIT` | a Chinese prompt guide — **content** |
+| [`wistbean/learn_python3_spider`](https://github.com/wistbean/learn_python3_spider) `22,262★` | 🟢 `MIT` | a Python course — **content** |
+| [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) `84,065★` | 🔴 none | every Chinese school and university textbook as PDF — **ungranted**, and the largest row either run has seen |
+
+🟢 **The narrowed claim, and why the narrowing matters commercially.** `p631`'s leg was
+*platform*-shaped (`education platform`); this one is *teaching*-shaped. Both are right about what they
+sampled: Chinese education **platform** supply is copyleft-or-ungranted (`p631`: `edusoho` `1,866★`
+ungranted, `roncoo-education` `AGPL-3.0`), and Chinese education **content** supply is permissive at
+enormous scale. 🔴 Under `P631-0` — *the grading unit is `(family, asset class)`* — those are not the same
+finding, and the sector where "the content is the product" is exactly the sector where that distinction
+decides whether a row is sellable. 🔵 Carried as `632-E` rather than overwriting `p631`'s row, per the
+append-only rule.
+
+### 🔵 What the token collisions cost, and the cheap discriminator
+
+🔴 Two legs of `17` returned nothing **not** because the tier is empty but because the token is ambiguous in
+English: `enem` ⊂ `enemy` (game AI), `CBSE` ⊂ `cbsecurity` / `cbsensor` / `cbsexploder`. That is `631-I`'s
+class — a cohort passing every mechanical filter while being off-tier — reached through a different door.
+🟢 The discriminator that worked both times is free: **read the repository's own language**. An `enem` row
+written in Portuguese is on-tier; one written in English about Unity is not. 🟡 It generalises only for legs
+where the regional token is also the disambiguator, which is most of them.
+
 ## 🆕 `2026-11-03` · `p631` — **🟢 A SECOND PRODUCTIVE DISCOVERY CHANNEL EXISTS AND IT IS THE SEARCH API RUN **IN-REGION**: `46` ROWS, `16` PERMISSIVE, `6` ACCEPTED ON ITS FIRST RUN. 🔴 AND THREE OF THIS PASS'S OWN INSTRUMENTS MANUFACTURED FALSE RESULTS — `2` FALSE ABSENCES AND `8` FALSE NILS — EACH CAUGHT BY A CONTROL IN THE SAME RUN.**
 
 🔵 Append-only. This section records what the discovery channels returned on `2026-11-03`. Nothing below it is

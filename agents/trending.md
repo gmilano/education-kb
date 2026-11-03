@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `2026-11-03` · `p632` — **🟢 `17` NEW PERMISSIVE ROWS FROM THE IN-REGION SUPPLY CHANNEL ON ITS **SECOND** RUN (`11` + `6`), SO `631-F` IS AN ASSET AND NOT A ONE-OFF. 🟢 ELEVEN OF THEM COME FROM ONE PUBLISHER — A FRENCH HE CONSORTIUM WITH `131` REPOSITORIES THIS BASE HAD NEVER SEEN. 🔴 THE MANDATED LEGS RETURN `0 of 17` FOR A **SEVENTH** STRAIGHT PASS AND THEIR DEMAND HALF IS NOW `0 of 21` — WORSE THAN `p631`'s `1 of 17`.**
+
+🔵 Append-only record of what was true on this date. Nothing below this section was edited.
+
+### 🟢 New this week — `17` permissive rows, every grant byte-read on the metadata-declared default branch
+
+| Name | Repo | Licence | Region | Why it is new to this base | Stars | Pushed |
+|---|---|---|---|---|---|---|
+| esup-signature | [`EsupPortail/esup-signature`](https://github.com/EsupPortail/esup-signature) | `Apache-2.0` | EMEA | HE signature/visa circuits — the administrative tier this base had no permissive row in | `36★` | `2026-10-14` |
+| esup-oasis | [`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis) | `Apache-2.0` | EMEA | accommodations system of record — the `619-Q` counter-example | `6★` | `2026-10-21` |
+| esup-emargement | [`EsupPortail/esup-emargement`](https://github.com/EsupPortail/esup-emargement) | `Apache-2.0` | EMEA | attendance/presence against the institution's SI | `12★` | `2026-10-21` |
+| esup-sgc | [`EsupPortail/esup-sgc`](https://github.com/EsupPortail/esup-sgc) | `Apache-2.0` | EMEA | NFC student-card lifecycle | `10★` | `2026-10-12` |
+| esup-nfc-tag-server | [`EsupPortail/esup-nfc-tag-server`](https://github.com/EsupPortail/esup-nfc-tag-server) | `Apache-2.0` | EMEA | server half of a four-part permissive NFC estate | `16★` | `2026-06-08` |
+| esup-otp-api | [`EsupPortail/esup-otp-api`](https://github.com/EsupPortail/esup-otp-api) | `Apache-2.0` | EMEA | campus MFA spine | `12★` | `2026-11-02` |
+| esup-otp-manager | [`EsupPortail/esup-otp-manager`](https://github.com/EsupPortail/esup-otp-manager) | `Apache-2.0` | EMEA | admin/self-service over that MFA API | `9★` | `2026-10-30` |
+| esup-dematec | [`EsupPortail/esup-dematec`](https://github.com/EsupPortail/esup-dematec) | `Apache-2.0` | EMEA | academic recruitment dematerialisation | `6★` | `2026-09-11` |
+| esup-siscol | [`EsupPortail/esup-siscol`](https://github.com/EsupPortail/esup-siscol) | `Apache-2.0` | EMEA | APOGEE student-records connector. 🟡 `CLIENT`, **state** counterparty | `7★` | `2026-11-02` |
+| esup-pay | [`EsupPortail/esup-pay`](https://github.com/EsupPortail/esup-pay) | `Apache-2.0` | EMEA | payment forms. 🔴 `CLIENT-ONLY`, **vendor** counterparty (Paybox) | `6★` | `2026-10-19` |
+| Skreen | [`DegrangeM/Skreen`](https://github.com/DegrangeM/Skreen) | `MIT` | EMEA | teacher-side pupil screen monitoring | `6★` | `2023-07-15` |
+| carta-del-docente | [`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente) | `MIT` | EMEA | integrates Italy's teacher-spending entitlement — a **national funding instrument**, not a tool | `7★` | `2026-06-22` |
+| SIAKAD Laravel | [`adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel`](https://github.com/adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel) | `MIT` | APAC | `521★` — the most-starred permissive **school** system of record found in any region to date | `521★` | `2023-07-30` |
+| hypervel-web-school | [`ugunNet21/hypervel-web-school`](https://github.com/ugunNet21/hypervel-web-school) | `MIT` | APAC | the maintained Indonesian alternative to the row above | `75★` | `2026-09-02` |
+| DMU-Android | [`TeamDMU/DMU-Android`](https://github.com/TeamDMU/DMU-Android) | `Apache-2.0` | APAC | Korean campus information app | `11★` | `2025-08-12` |
+| togikaidrive | [`autonomous-minicar-battle/togikaidrive`](https://github.com/autonomous-minicar-battle/togikaidrive) | `MIT` | APAC | Japanese STEM-outreach self-driving minicar, with a competition behind it | `16★` | `2024-08-31` |
+| gpt-4-enem | [`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem) | `MIT` | LATAM | LLM eval harness against Brazil's national admission exam | `54★` | `2024-12-06` |
+| enem-extractor | [`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) | `MIT` | LATAM | ENEM question extraction to JSON | `36★` | `2025-02-16` |
+
+🔵 `18` rows are listed and `17` is the accepted count: `esup-pay` is filed on `verticals/solutions.md` as a
+`CLIENT-ONLY` row rather than as an agent, and is listed here because the trending record is a record of what
+the channel returned.
+
+### 🔴 Named and not accepted — what the same channel returned and the shelves refused
+
+| Repo | Licence read from bytes | Refused because |
+|---|---|---|
+| [`romadebrian/WEB-Sekolah`](https://github.com/romadebrian/WEB-Sekolah) | `MIT` `1,093 B` | holder is **`Blackrock Digital LLC` `2013-2018`** — the Start Bootstrap theme vendor. The grant covers the theme, not the project (`632-D`) |
+| [`andes2912/sekolahku`](https://github.com/andes2912/sekolahku) | none at `20` names | `189★`, tree resolves — ungranted |
+| [`mrizkimaulidan/inven-bs`](https://github.com/mrizkimaulidan/inven-bs) | none at `20` names | pushed `2026-11-01`, tree resolves — actively maintained and ungranted |
+| [`nurfachmi/perpustakaan`](https://github.com/nurfachmi/perpustakaan) | none at `20` names | tree resolves — ungranted |
+| [`5d-jh/school-menu-api`](https://github.com/5d-jh/school-menu-api) | none at `20` names | tree resolves — ungranted |
+| [`ikhsan3adi/absensi-sekolah-qr-code`](https://github.com/ikhsan3adi/absensi-sekolah-qr-code) | `GPL-3.0` `35,149 B` | reciprocal — `495★`, the best-starred Indonesian attendance system |
+| [`gustavoguanabara/assistente-enem`](https://github.com/gustavoguanabara/assistente-enem) | `GPL-3.0` `35,149 B` | reciprocal |
+| [`prefeiturasp/SME-SGP`](https://github.com/prefeiturasp/SME-SGP) | `AGPL-3.0` `34,442 B` | reciprocal — São Paulo municipal secretariat |
+| [`Desarrollo-CeSPI/kimkelen`](https://github.com/Desarrollo-CeSPI/kimkelen) | `GPL-2.0-only`, served as a `697 B` header notice | reciprocal, and **not upgradeable** — no "or later" clause (`632-G`) |
+| [`emersonmello/modelos-latex`](https://github.com/emersonmello/modelos-latex) | `CC0-1.0` `6,554 B` | 🟡 content, not code — teacher exam/assignment LaTeX templates. Fit under `614-G`, filed as content |
+
+### 🔴 The mandated legs, seventh consecutive nil — and the demand half got worse
+
+| Half | `p631` | 🆕 `p632` | Reading |
+|---|---|---|---|
+| supply (repository addresses) | `0 of 19` | 🔴 `0 of 17` | seventh straight nil (`p625`–`p632`) |
+| demand (figures, instruments, programmes) | `1 of 17` | 🔴 `0 of 21` | `p631`'s single unheld item is not repeated; every one of `21` demand items today was already on a sell shelf — **including the `$4.6 M` LATAM figure, at four separate lines of `intel/market.md`** |
+
+🔵 `614-I` asked whether that statistic measures the legs or the sector. Two productive runs of a **different**
+channel on the same days answers it: it measures the legs.
+
 ## 🆕 `2026-11-03` · `p631` — **🟢 `28` NEW PERMISSIVE ROWS FROM TWO GITHUB-CHANNEL CENSUSES — `22` FROM SHELF HOLES AND `6` FROM A **NEW IN-REGION SUPPLY CHANNEL** THAT PAID ON ITS FIRST RUN. 🔴 THE MANDATED LEGS RETURN `0 of 19` FOR A **SIXTH** STRAIGHT PASS, AND THEIR *DEMAND* HALF IS MEASURED SATURATED TOO: `1 of 17`.**
 
 🔵 Append-only record of what was true on this date. Nothing below this section was edited.

@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03` — **🟢 THE "NO PERMISSIVE PLATFORM OF RECORD" FINDING NARROWS TWICE IN ONE PASS: AN `Apache-2.0` HIGHER-ED **ACCOMMODATIONS** SYSTEM OF RECORD EXISTS (`619-Q`), AND A `521★` `MIT` **SCHOOL** SYSTEM OF RECORD EXISTS. 🟢 `630-H` IS CENSUSED FOR THE FIRST TIME AND THE CLASS SPLITS INTO FOUR WITH OPPOSITE COMMERCIAL CONSEQUENCES. 🔴 THE CENSUS INSTRUMENT IS REJECTED WITH A PRECISION FIGURE RATHER THAN ADOPTED.**
+
+### 🟡 `619-Q` NARROWED, not closed — the accessibility tier has a permissive platform of record, in the wrong segment
+
+🔵 **`619-Q` as written:** *"no permissive platform of record exists in the accessibility / special-education
+tier … searched and not found: an `IEP` management system, an `AAC` platform, a Deaf-education LMS … the
+components are permissive and already built; the platform is not."*
+
+🟢 **Counter-example found today.** [`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis) —
+`Apache-2.0`, `11,357 B` byte-read, pushed `2026-10-21` — is a platform of record for students who need
+individual accommodation: student-submitted requests against manager-defined campaigns, commission review,
+a beneficiary file, accommodation plans, interview minutes. That is the case-management spine of a
+disability-services office, permissively licensed and live.
+
+🔴 **Why `619-Q` stays open rather than closing.** `619-Q`'s three named misses are all **K-12 US**
+instruments — `IEP` is a statutory artefact of US special education, and `AAC` is a device category.
+`esup-oasis` is **higher education**, **EMEA**, and organised around *accommodation campaigns*, not around a
+legally-mandated individualised education programme. 🟡 So the honest revision is: the tier gap is **segment
+specific**. A permissive HE accommodations platform exists; a permissive K-12 `IEP` system is still not found.
+🔵 Commercially this is the better news of the two, because HE is where Globant's education engagements sit.
+
+### 🟢 Platforms filed this pass
+
+| Platform | Repo | Licence | Bytes | Region | Segment | What a studio does with it | Stars | Pushed |
+|---|---|---|---|---|---|---|---|---|
+| **Oasis** | [`EsupPortail/esup-oasis`](https://github.com/EsupPortail/esup-oasis) | 🟢 `Apache-2.0` | `11,357 B` | 🟢 EMEA | Higher ed | Accommodations system of record. Customise the campaign model; put an agent on the request triage, not on the file | `6★` | `2026-10-21` |
+| **SIAKAD Laravel** | [`adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel`](https://github.com/adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel) | 🟢 `MIT` | `1,069 B` | 🟢 APAC (Indonesia) | K-12 | A whole permissive school academic system. 🔴 Last pushed `2023-07-30`: adopt as a **base to fork**, not a dependency to track | `521★` | `2023-07-30` |
+| **Hyper Web School** | [`ugunNet21/hypervel-web-school`](https://github.com/ugunNet21/hypervel-web-school) | 🟢 `MIT` | `1,097 B` | 🟢 APAC (Indonesia) | K-12 | The maintained alternative to the row above — administration, teaching, reporting; Laravel-family stack | `75★` | `2026-09-02` |
+| **esup-signature** | [`EsupPortail/esup-signature`](https://github.com/EsupPortail/esup-signature) | 🟢 `Apache-2.0` | `11,361 B` | 🟢 EMEA | Higher ed | Signature/visa circuits. The highest-leverage permissive HE back-office component found to date | `36★` | `2026-10-14` |
+| **esup-emargement** | [`EsupPortail/esup-emargement`](https://github.com/EsupPortail/esup-emargement) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 EMEA | Higher ed | Attendance and presence control against the institution's SI | `12★` | `2026-10-21` |
+| **esup-dematec** | [`EsupPortail/esup-dematec`](https://github.com/EsupPortail/esup-dematec) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 EMEA | Higher ed | Academic recruitment dematerialisation, wired to the national recruitment application | `6★` | `2026-09-11` |
+| **esup-pay** | [`EsupPortail/esup-pay`](https://github.com/EsupPortail/esup-pay) | 🟢 `Apache-2.0` | `11,358 B` | 🟢 EMEA | Higher ed | Online payment forms for enrolments, conference fees, donations. 🔴 **`CLIENT-ONLY`, vendor counterparty**: it executes payment through **Paybox**, a commercial service. Permissive code, contract required | `6★` | `2026-10-19` |
+
+### 🔴 Copyleft platforms of record found the same day — placed, and not sellable as a base
+
+| Platform | Repo | Licence | Bytes | Region | Why it matters anyway |
+|---|---|---|---|---|---|
+| **SME-SGP** | [`prefeiturasp/SME-SGP`](https://github.com/prefeiturasp/SME-SGP) | 🔴 `AGPL-3.0` | `34,442 B` | 🟢 **LATAM** (Brazil) | The **São Paulo municipal education secretariat's** pedagogical management system. Proof that LATAM public bodies publish their systems of record — and that they publish them reciprocally |
+| **Kimkëlen** | [`Desarrollo-CeSPI/kimkelen`](https://github.com/Desarrollo-CeSPI/kimkelen) | 🔴 `GPL-2.0-only` | `697 B` notice | 🟢 **LATAM** (Argentina) | *Sistema Integral de Gestión de Colegios*, held by **CeSPI – UNLP**. `GPL-2.0` **without** "or later" is the most restrictive combination in this base: not even upgradeable to `GPL-3.0` |
+| **Esup-Pod** | [`EsupPortail/Esup-Pod`](https://github.com/EsupPortail/Esup-Pod) | 🔴 `LGPL-3.0` | `7,652 B` | 🟢 **EMEA** | The estate's video platform. 🟡 `LGPL` is the mildest of the three: link against it, keep your own code — the `MPL-2.0` argument from `p631`, one notch stricter |
+| **absensi-sekolah-qr-code** | [`ikhsan3adi/absensi-sekolah-qr-code`](https://github.com/ikhsan3adi/absensi-sekolah-qr-code) | 🔴 `GPL-3.0` | `35,149 B` | 🟢 **APAC** (Indonesia) | `495★`, pushed `2026-10-25` — QR attendance with WhatsApp notification. The best-starred Indonesian attendance system, and reciprocal |
+
+### 🟢 `632-C` — `630-H` censused at last, and the class is really **four** classes
+
+🔵 `630-H` named *"permissively-licensed thin clients for proprietary services"* and the register has carried
+*"no census of the existing shelves against it yet"* ever since. 🟢 Censused today over `1,577` sell-shelf
+rows — `649` on `agents/top.md`, `466` on `repos/foundations.md`, `462` here —
+`evidence/client-only-census.2026-11-03-p632.tsv`.
+
+| Subclass | What the client talks to | Rows found | Commercial consequence |
+|---|---|---|---|
+| 🔴 **VENDOR** | a commercial service | `3` shelved + `1` new (`esup-pay`) | Permissive code, **useless without a contract**. This is the only subclass `630-H` actually warned about |
+| 🟢 **STATE** | a public-sector platform | `1` shelved (`neispy`, Korea NEIS) + `1` new (`esup-siscol`, APOGEE) | **The opposite of a risk.** Free to interoperate, and the counterparty outlives the engagement |
+| 🟡 **OPEN** | software that is itself open source | `2` (`canvasapi`, `OpenLRW` client) | No lock-in; worst case you fork the server too |
+| 🔵 **PROTOCOL** | a *specification* (xAPI, SCORM) | `4` | **Not a client-only risk at all** — there is no service to be locked out of |
+
+🔴 **And the census instrument is rejected, with a number.** A keyword sweep for client-shaped prose returned
+`11` hits of which `6` are true clients: **precision `54.5 %`, recall unknown**. The `5` false positives are
+`4` standard-protocol wrappers and one autograder whose row happens to read *"ships a student-side client for
+public checks"*. 🟡 Following `606`'s rule — measure a proposed control before adopting it — the keyword
+sweep is **not adopted**: it measures this base's vocabulary, not the class. 🔵 The census that would settle
+`630-H` is the `606` method, `1,577` upstream README first screens, and that is its price.
+
+🟢 **The finding that makes the split worth the work.** `p631`'s APAC operative was *"don't fork the local
+platform — interoperate with the state platform"*. That play **produces** `CLIENT-ONLY` artefacts by
+construction. Under `630-H` as written, the recommended pattern looked like the flagged risk. Split by
+counterparty, the two separate cleanly: interoperating with a **state** platform is the play, and depending
+on a **vendor** platform is the risk. `esup-siscol` (APOGEE, France) and `neispy` (NEIS, Korea) are the same
+artefact in two regions, and `esup-pay` sits in the other column in the same estate.
+
 ## 🆕 `p631` — reads `2026-11-03` — **🔴 THE PLATFORM LEG'S *ABSENCE* CLAIM IS REFUTED ON THIS BASE'S OWN ROWS, AND `MPL-2.0` ENTERS THIS SHELF AS A THIRD LICENCE POSTURE BETWEEN PERMISSIVE AND COPYLEFT.**
 
 🔵 Every licence below was read from payload bytes on the metadata-declared default branch. Evidence:

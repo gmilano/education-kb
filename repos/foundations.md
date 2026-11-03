@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-03
 ---
 
+## 🆕 `p632` — reads `2026-11-03` — **🟢 A `131`-REPOSITORY, `52`-STRONG `Apache-2.0` HIGHER-EDUCATION **ADMINISTRATIVE** ESTATE, PUBLISHED BY A FRENCH PUBLIC-SECTOR CONSORTIUM, UNHELD FOR `631` PASSES — WHILE THIS BASE ALREADY HELD BOTH `apereo` AND `openfun`. 🔴 THE COVERAGE BIAS IS NAMED AND MEASURED: LEARNING-FACING CONSORTIUM CODE IS HELD, ADMINISTRATIVE CONSORTIUM CODE WAS NOT.**
+
+🔵 Enumeration: `evidence/esup-org-enumeration.2026-11-03-p632.tsv` (`131` rows, one API call per page, licence
+field taken from the platform and byte-verified on `11` of them in `evidence/grant-byteread.2026-11-03-p632.tsv`).
+
+### 🟢 `632-F` — the estate, and why `631` passes missed it
+
+🔵 **EsupPortail** is the shared software consortium of the French higher-education and research
+establishments — the publisher of the `esup-*` application family that French universities run as their
+back office. Its GitHub organisation holds `131` repositories.
+
+| Licence (platform field) | Repos | Note |
+|---|---|---|
+| 🟢 `Apache-2.0` | `52` | **`25` of them pushed in `2026`**; `11` byte-read today, `11 of 11` agreeing with the field |
+| 🟡 `NULL` (no grant detected) | `51` | mostly overlays, templates and archived branches |
+| 🟡 `NOASSERTION` | `14` | per `614-E` this means a payload exists and was not recognised — each needs a byte read |
+| 🔴 `GPL-3.0` | `6` | |
+| 🔴 `CECILL-2.1` | `6` | the French public-sector copyleft licence — see `632-E2` |
+| 🔴 `LGPL-3.0` | `1` | `Esup-Pod`, the video platform. 🔴 This is the row that caught `632-A` |
+| 🔴 `GPL-2.0` | `1` | |
+
+🔴 **The diagnosis is uncomfortable and it is about this base, not the sector.** A substring census for
+`esup` over every curated page returns exactly one hit, and it is the `é` in *CentraleSupélec*. Meanwhile
+`apereo/cas`, `apereo/phpCAS`, `apereo/java-cas-client`, `openfun/richie`, `openfun/marsha`, `openfun/ralph`,
+`openfun/joanie`, `openfun/arnold` and `openfun/openedx-docker` are **all already shelved** — `7 of 8` of the
+`openfun` org's starred repositories and `3 of 8` of Apereo's. 🟢 So the gap was never *France* and never
+*consortia*: the base holds consortium code that **faces a learner** (a CMS, an LCMS, a learning-record
+store, a headless education ERP, SSO) and held none that faces an **administrator** — signature circuits,
+attendance control, card issuance, MFA estate management, academic recruitment, accommodation case files,
+payment forms, student-records connectors.
+
+🔵 **The sharpest single illustration:** this base has held `apereo/cas` — the HE single-sign-on server — for
+many passes, and `EsupPortail/esup-apereo-cas-docker` (`Apache-2.0`, pushed `2026-08-27`) is in the estate it
+missed. **The dependency was shelved and the estate built on top of it was not.**
+
+### 🟢 Foundations filed this pass — the permissive, `2026`-live core of the estate
+
+| Repo | Licence | Bytes | Branch | Placement | What it is foundational **for** | Stars | Pushed |
+|---|---|---|---|---|---|---|---|
+| [`EsupPortail/esup-otp-api`](https://github.com/EsupPortail/esup-otp-api) | 🟢 `Apache-2.0` | `11,359 B` | `master` | 🟢 **EMEA** | MFA/OTP issuance and validation for a campus — the auth floor under any student-facing agent | `12★` | `2026-11-02` |
+| [`EsupPortail/esup-otp-manager`](https://github.com/EsupPortail/esup-otp-manager) | 🟢 `Apache-2.0` | `11,359 B` | `master` | 🟢 **EMEA** | Admin and self-service UI over that API | `9★` | `2026-10-30` |
+| [`EsupPortail/esup-signature`](https://github.com/EsupPortail/esup-signature) | 🟢 `Apache-2.0` | `11,361 B` | `master` | 🟢 **EMEA** | Signature/visa workflow engine — the gate every automated HE process has to pass through | `36★` | `2026-10-14` |
+| [`EsupPortail/esup-siscol`](https://github.com/EsupPortail/esup-siscol) | 🟢 `Apache-2.0` | `11,359 B` | `main` | 🟢 **EMEA** | Generic data-source model over **APOGEE** national student-records web services — the integration seam | `7★` | `2026-11-02` |
+| [`EsupPortail/esup-sgc`](https://github.com/EsupPortail/esup-sgc) + [`esup-nfc-tag-server`](https://github.com/EsupPortail/esup-nfc-tag-server) | 🟢 `Apache-2.0` | `11,358 B` each | `master` | 🟢 **EMEA** | Card and NFC identity estate: server, desktop, Android and Arduino halves all permissive | `10★` / `16★` | `2026-10-12` / `2026-06-08` |
+| [`adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel`](https://github.com/adhiariyadi/Sistem-Informasi-Akademik-Sekolah-Laravel) | 🟢 `MIT` | `1,069 B` | `master` | 🟢 **APAC** (Indonesia) | A complete permissive **school** system of record — the thing `619-Q` and the LMS-copyleft constraint both say is normally missing | `521★` | `2023-07-30` |
+
+### 🔵 `632-E2` — a licence family that carries a region, where the grant text does not
+
+🟡 `631-K` measured that a grant payload almost never names an institution, so region cannot be read from it:
+`11 of 11` `Apache-2.0` payloads read today have an **unfilled appendix**, corroborating that exactly.
+🟢 But `6` repositories in this estate are **`CECILL-2.1`** — the copyleft licence written by CEA, CNRS and
+Inria for French public-sector software, in French law, with a French choice of forum. 🔵 Unlike `MIT` or
+`Apache-2.0`, that licence family **is** a jurisdiction signal: it is published by French public bodies and
+is close to unseen outside them. 🟡 Narrow but real: a licence *family* can place a row when the licence
+*text* cannot. 🔴 It is a reciprocal licence, so it places rows this base cannot sell — the signal is for
+`intel/`, not for a build.
+
 ## 🆕 `p631` — reads `2026-11-03` — foundations: `5` additions, and the **only** interpreter-class row this base has in the narrative tier
 
 🔵 Every grant below was read from bytes on the repository's **metadata-declared default branch**, never on an
