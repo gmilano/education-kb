@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **FOUR RECIPES, AND `P7` IS THE ONE THIS BASE HAS BEEN UNABLE TO WRITE FOR `648` PASSES: A STANDARDS-GROUNDED ADAPTIVE ENGINE WHOSE CURRICULUM DATA IS AN INPUT, NOT A PROMPT**
+
+Every repository named below was byte-read for its licence and resolved on `git ls-remote` this pass or a
+previous one, with the pass recorded. No recipe names a component this base has not read.
+
+### 🟢 `P7` — the standards-grounded adaptive engine (`10`–`12` weeks)
+
+**The problem it solves.** Every adaptive-learning engine on this shelf models *mastery* and assumes
+somebody already told it what the skills are, where they came from, and which order they go in. For `648`
+passes that input did not exist in open source, so the engine either invented its curriculum in a prompt —
+unciteable, unauditable, and in EMEA a high-risk-system finding waiting to happen — or a human hand-built
+it per client. As of `649-H` all three layers exist permissively.
+
+| Slot | Component | Licence | Why this one |
+|---|---|---|---|
+| Curriculum schema | [`christian-bick/edugraph-ontology`](https://github.com/christian-bick/edugraph-ontology) | `Apache-2.0`, `11 358` B | Authored OWL/Turtle ontology of learning areas, abilities and scopes. The common vocabulary two jurisdictions' curricula can both be expressed in |
+| Standards mapping | [`christian-bick/edugraph-dataset`](https://github.com/christian-bick/edugraph-dataset) | sibling repo | The worked CCSS → ontology mapping. Copy this file's shape for a national curriculum |
+| Standards citation at run time | [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) | `MIT`, `1 065` B (`p648`) | MCP server over CCSS, Singapore MOE and IB MYP. The model **cites** a standard instead of generating a plausible code |
+| Prerequisite ordering | [`zeroa234/cs-math-skill-tree`](https://github.com/zeroa234/cs-math-skill-tree) | `MIT`, `1 065` B (`p648`) | `192` units, `260` prerequisite edges, per-edge course evidence. The DAG the engine walks |
+| Mastery estimate | [`zyy-2001/DisKT`](https://github.com/zyy-2001/DisKT) | `MIT`, `1 066` B | WWW 2025. Disentangles ability from cognitive bias, and was pushed `2026-01` — the most recent permissive KT model filed |
+| Conversational mastery estimate | [`umass-ml4ed/dialogue-kt`](https://github.com/umass-ml4ed/dialogue-kt) | `MIT`, `1 076` B | LAK 2025. Traces mastery over **dialogue turns**, which is the data an LLM tutor already produces and normally throws away |
+| Policy guard | [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | `MIT`, `1 104` B (`p648`) | LangGraph + BKT + a **deterministic policy guard** over the model's proposal. Reuse the guard, not the project |
+| Platform | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `Apache-2.0`, `10 982` B | `449★`, production, Swiss. The only permissive production LMS (`649-N`) |
+
+**Wiring.** Load `edugraph-ontology` into a triple store; map the client's national or state curriculum
+into it using `edugraph-dataset`'s CCSS spec as the template. Import `cs-math-skill-tree`'s edges as the
+prerequisite relation on the mapped terms, which is where the human curriculum work lands and where it
+stops. Stand `standardgraph` up as an MCP server so every tutor turn that references an objective resolves
+to a real standard identifier. Run `DisKT` over answer-level interactions and `dialogue-kt` over the chat
+transcript; the two produce independent mastery estimates on the same skill, so **disagreement between
+them is your highest-value tutor-review signal** and costs nothing extra to compute. Put
+`BloodCoded_Agentic`'s deterministic guard between the model's next-activity proposal and the learner, so
+the policy that selects content is auditable without reading a prompt. Surface it all as `OpenOlat`
+modules.
+
+🔴 **Honest caveats.** `edugraph-ontology` has `18★`, `standardgraph` `5★`, `cs-math-skill-tree` `21★` —
+this is a complete architecture built from near-unknown repositories, adoptable because it is permissive
+and small enough to read end to end, not because it is proven. `cs-math-skill-tree` covers CS and maths
+only; any other subject is a build. And `edugraph-ontology`'s own README scopes it to primary and
+secondary education.
+
+### 🟢 `P8` — the assessment-integrity programme (`6`–`8` weeks)
+
+**The problem it solves.** Three regions legislated on assessment integrity in `2026` (`intel/trends.md`,
+Trend 3) and the supply side is one `23`-star repository. A district with a brand-new AI policy needs
+controls it can evidence, not a tutor.
+
+| Slot | Component | Licence | Role |
+|---|---|---|---|
+| Authoring with review built in | [`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) | `MIT`, `1 062` B | Organise materials → discuss → draft → revise single questions → **review** → **approve** → export student and instructor copies. Review and approve are workflow steps, not settings |
+| Integrity signal | [`umass-ml4ed/dialogue-kt`](https://github.com/umass-ml4ed/dialogue-kt) | `MIT`, `1 076` B | A mastery trace from the tutoring transcript. A submission that is far ahead of the traced mastery is the flag — evidence of *process*, not a detector verdict |
+| Standards anchor | [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) | `MIT` (`p648`) | Every item cites the standard it assesses, which is what a conformity file needs |
+| Audit lifecycle | [`ontoagents/multiagent-lab`](https://github.com/ontoagents/multiagent-lab) | `Apache-2.0`, `11 357` B | Its build → run → **audit** stages are the shape of the evidence trail; lift the audit stage |
+| Delivery | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `MIT`, `1 062` B (`p648`) | `MIT` AI-native LMS, so the whole thing ships as one modifiable product |
+
+**Wiring.** `QuestGen` drafts, a human approves, `standardgraph` stamps each approved item with its
+standard. `dialogue-kt` runs continuously over tutor sessions and writes a mastery trace per learner per
+skill. At submission, compare the graded result against the trace: the deliverable is a **per-assessment
+evidence record** — which standard, who approved the item, what the learner's traced mastery was — not a
+cheating score. 🔵 That distinction is the product. The STUDENTS FIRST Act bars AI *on* graded
+assessments; a mastery trace built from tutoring sessions is evidence about learning that happened
+before the assessment, which is the compliant side of that line. 🔴 Do not sell this as plagiarism
+detection; `648-J` measured that `2.8 %` of census addresses are integrity-violating automation that a
+licence filter admits, and the adversarial supply will always outrun a detector.
+
+### 🟢 `P9` — the workforce-upskilling ladder, `MIT` end to end (`4`–`6` weeks)
+
+**The problem it solves.** The fastest-paying education engagement for a services firm is usually its
+own and its clients' internal enablement, and `649-I` found a `118`-repo, `106`-`MIT` curriculum estate.
+
+| Slot | Component | Licence | Role |
+|---|---|---|---|
+| Curriculum content | [`ai-infra-curriculum`](https://github.com/ai-infra-curriculum) + `ai-engineering-curriculum`, `ml-engineering-curriculum`, `ai-governance-curriculum`, `ai-startup-curriculum`, `ai-workforce-curriculum` | `MIT`, `1 085` B each | A junior → performance → platform → MLOps → architect ladder, plus a governance track. `MIT` means translate, cut and rebrand freely |
+| Interactive practice | [`marvelefe/machinelearning101`](https://github.com/marvelefe/machinelearning101) | `MIT`, `1 066` B | Browser-based, zero-setup ML experimentation. The hands-on half of the ladder |
+| Code comprehension | [`he-yufeng/CodeABC`](https://github.com/he-yufeng/CodeABC) | `MIT`, `1 066` B | Reading code as literacy, for the non-engineer half of a client's workforce |
+| Personal tutor over the material | [`demetrius-edelin/tutor`](https://github.com/demetrius-edelin/tutor) | `MIT`, `1 073` B | Self-hosted, BYO-key: ingests the curriculum repos, maps concepts, tests, teaches the gaps with references |
+| Memory and roadmap | [`007350/memory-agent`](https://github.com/007350/memory-agent) | `MIT`, `1 063` B | LangGraph routing, LightRAG graph RAG, three-layer memory, generated roadmaps. Keeps per-learner state across weeks |
+| Delivery | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `MIT` (`p648`) | `MIT` LMS — the whole stack stays permissive with no copyleft boundary anywhere |
+
+**Wiring.** Fork the curriculum orgs and cut them to the client's role matrix — this is editing content,
+not maintaining a dependency (`649-I`: five of six orgs are near-zero stars, so expect no upstream).
+Point `tutor` at the forked markdown as its corpus. `memory-agent` holds per-learner state and emits the
+roadmap. `machinelearning101` and `CodeABC` are the practice surfaces. Ship inside `mentingo`.
+🟢 The property worth stating to a client: **every component is `MIT` and byte-confirmed**, so the
+delivered platform carries no copyleft obligation at all — which none of the `AGPL-3.0` LMS options can
+offer.
+
+### 🟢 `P10` — the connectivity-floor deployment (`3`–`4` weeks)
+
+**The problem it solves.** Every other pattern on this shelf assumes a browser and a working connection.
+LATAM's `87 %`-adoption figure is higher education; the schools below it are not that. `p648`'s shelf had
+no answer; `p649` has one.
+
+| Slot | Component | Licence | Role |
+|---|---|---|---|
+| E-mail-channel delivery | [`AvaCodeSolutions/django-email-learning`](https://github.com/AvaCodeSolutions/django-email-learning) | `BSD-3-Clause`, `1 515` B | Django platform that delivers learning **over IMAP**, with React components for whoever does have a browser |
+| Offline content | `Kolibri` | `MIT` (carried) | Offline-first content distribution; the established half of this pattern |
+| Curriculum mapping | [`christian-bick/edugraph-ontology`](https://github.com/christian-bick/edugraph-ontology) | `Apache-2.0` | Map the national curriculum once, then both channels serve the same objectives |
+| Local inference | `Ollama` | `MIT` (carried) | The tutor runs on-premise, which is also the data-residency answer |
+
+**Wiring.** `edugraph-ontology` holds the mapped national curriculum. `Kolibri` syncs content to a school
+server. `django-email-learning` turns each objective into an e-mail exchange for learners with no reliable
+browser session, and its IMAP loop is the submission channel back. `Ollama` serves the tutor locally so
+nothing leaves the premises. 🔴 Caveat: `django-email-learning` has `24★` and one corporate author; read
+it before depending on it. 🔵 But the pattern answers a question clients in three of four regions ask and
+this base could not previously answer at all — and e-mail is the one channel that needs no app store, no
+app review and no sustained connection.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **FOUR RECIPES BUILT ONLY FROM ADDRESSES THIS PASS BYTE-READ, INCLUDING THE FIRST ONE THAT FILLS EVERY SLOT OF THE ADAPTIVE-LEARNING ARCHITECTURE WITH A READABLE LICENCE — PLUS THE TWO RESOLVE-FIRST CORRECTIONS EVERY RECIPE ON THIS PAGE NEEDS**
 
 Every address named below was verified live on the existence channel and had its licence payload

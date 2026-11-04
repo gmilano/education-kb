@@ -1,0 +1,174 @@
+007350/memory-agent	21	MIT	main	Multi-agent AI/CS learning assistant: LangGraph routing, LightRAG graph RAG, three-layer memory, learning roadmaps. FastAPI + React.	2026-10-23	2026-08-30	q3
+1111philo/plato	20	NOASSERTION	main	Adaptive Learning Platform - Open Source - Made for Humans - Responsibly Using AI	2026-11-02	2026-03-31	q4
+A7m0spHere/CDU-AI	12	MIT	main	CDU AI｜面向成都大学同学的开放 AI 学习站，提供入门指南、工具资源与术语速查。学生协会发起，非学校官方平台，M0 开发中。	2026-11-02	2026-10-18	q4
+AI20K-Build-Phase/starter-code-template	4	MIT	main	Starter template + technical guidebook cho AI20K Build Phase — LangGraph agent boilerplate, docs và AI usage logging.	2026-10-28	2026-08-11	q1
+Akas333/TYSA	21	AGPL-3.0	main	TYSA (Teach Yourself Anything): an learning harness that finds where your understanding ends and teaches from there. Electron app built on Meta's Muse models.	2026-11-04	2026-10-26	q4
+Alan-Youngzhe/noob2builder	11	NOASSERTION	main	Noob2Builder AI Builder School——由 Agent 在主对话中带学的全选修课程：从电脑与 AI 基础、Git/GitHub 到做出并发布第一个作品、构建 Agent。	2026-09-16	2026-08-15	q1
+Ankit-ku-panda/SAP-ABAP-LocalAI	10	MIT	main	Portable offline AI assistant for SAP/ABAP learning, code drafting, debugging, and development planning. Runs locally with lightweight models, streaming responses, personal note retrieval, and optiona	2026-10-04	2026-10-04	q3
+ApexEDM/knowledge-tracing-papers	11	NONE	main	2022-03-29	2021-12-07	q9	
+AvaCodeSolutions/django-email-learning	24	BSD-3-Clause	master	An open source Django app for creating email-based learning platforms with IMAP integration and React frontend components.	2026-11-04	2025-11-13	q8
+BrosnanYuen/LLM_Circuit_Design_Using_LTSpice_Tutorial	8	GPL-3.0	main	LLM Circuit Design Using LTSpice Tutorial. Create LTSpice .asc with LLMs. 	2026-09-18	2026-07-12	q2
+Chang-Chia-Chi/SaintPlus-Knowledge-Tracing-Pytorch	26	NONE	main	Saint+: A time series transformer model to predict users' performance of future questions.	2021-01-26	2021-01-04	q9
+DMiC-Lab-HFUT/DAGKT	10	NONE	main	This model is described in <<DAGKT: Difficulty and Attempts Boosted Graph-based Knowledge Tracing>>	2023-07-03	2022-09-26	q9
+DQYZHWK/TransKT	8	MIT	main	Contrastive Cross-Course Knowledge Tracing via Concept Graph Guided Semantic Transfer	2025-05-10	2024-08-08	q9
+DoniMoon/LLMKT	11	NONE	main	EDM 2025, Using Large Multimodal Models to Extract Knowledge Components for Knowledge Tracing from Multimedia Question Information	2026-01-26	2024-05-15	q9
+Fusion4233919/DSAKT	10	MIT	main	A pytorch implement of "Application of Deep Self-Attention in Knowledge Tracing"	2021-05-21	2021-04-09	q9
+Gabriel-Ney/llm-socratic-tutor	4	MIT	main	System prompt de tutoria socrática para Lógica de Sistemas e Modelagem de Dados (funciona em qualquer LLM com instruções customizadas).	2026-09-16	2026-09-16	q2
+GruheshKurra/awesome-ai-roadmaps	4	CC0-1.0	main	Learn AI from the best free YouTube videos and GitHub repos, in the right order. Step-by-step roadmaps for ML, deep learning, LLMs, AI agents, computer vision, generative AI, and more, with progress t	2026-11-04	2026-09-02	q1
+Hazrat-Ali9/StudyMate-AI-LangChain-Chatbot	10	NONE	main	🐳 StudyMate 🐬 AI 🦋 LangChain 🐹Chatbot 🐙 is 🌺 an 💐 AI 🏵 powered 🍎 educational 🍋 assistant 🍏 built 🫑 with LangChain 🍑 and 🍔 Large 🌰 Language 🌽 Models 🚃 to ✈ deliver 🚀 personalized 🛫 context 🛸 aware 🚟 an	2026-11-02	2026-08-02	q3
+JIUWANG123/quiet-reader-english-learning	8	MIT	master	QuietReader — an Android English reading learning assistant with EPUB/TXT reader, vocabulary study, dictionary, AI assistance, and downloadable APK.	2026-10-19	2026-09-15	q3
+JSLBen/Knowledge-Query-Network-for-Knowledge-Tracing	24	NONE	master	PyTorch Implementation of Knowledge Query Network for Knowledge Tracing	2019-07-12	2019-03-25	q9
+KiranKalluri268/ThirdEye_Client	17	NONE	main	React frontend for ThirdEye live classrooms, Google sign-in, and student engagement analytics.	2026-09-29	2026-04-05	q8
+LarytheLord/Adventurers-Guild	24	NOASSERTION	main	The Adventurers Guild: A gamified open-source platform transforming CS education through real-world "Quests," XP, and F-to-S ranking for future tech pioneers.	2026-09-28	2025-07-20	q8
+LeavesLi1015/Explainable-Few-shot-Knowledge-Tracing	9	NONE	main	2024-05-26	2024-05-22	q9	
+LouiValley/RayTracing-Tech	28	NONE	master	This is a paper list about the most important techs and some hard core knowledge about ray tracing.	2022-12-23	2020-06-28	q9
+Nikhil-creat/summerize_ai	4	MIT	main	Agentic AI summarizer that compresses source code and technical theory into meaningful summaries. Focus keywords, source tracing, flashcards, multi-format export. Runs in your browser. Designed and De	2026-09-30	2026-09-30	q1
+PCS-PersonalContinuitySystem/PCS	10	GPL-3.0	main	PCS is a user-owned AI continuity layer.  It sits between the user and interchangeable AI models and maintains the longer-lived things that individual model sessions normally lose.	2026-10-23	2026-09-21	q2
+PengLinzhi/DyGKT	45	NONE	main	Dynamic Graph for Adaptive Knowledge Tracing	2024-04-08	2024-03-27	q9
+Pjk-llm/deepagents-learn	9	MIT	main	📚 LangChain Deep Agents 课程式学习项目(deepagents + DeepSeek):minimal-deepagent 基础课(最小智能体→工具→多轮对话→记忆→多智能体→生产化)+ advanced-deepagent 进阶课(组件原理+中间件/Backend/编排/生产化)+ 生产级个人助手综合实战(SaaS 多租户+述职报告自动化)。每课一个可运行示例+中文注释。	2026-08-25	2026-08-23	q1
+Ricardo-SE/university-survival-skill	5	NOASSERTION	main	大学信息差生存指南 · 一个大一新生把上百位学长学姐的经验做成了 AI skill · 保研/转专业/考研/入党/实习 · 持续更新四年	2026-09-10	2026-09-09	q1
+SagarBiswas-MultiHAT/PhishGuard-AI	28	MIT	main	PhishGuard is a fast-paced web game that trains your instincts against email phishing. Powered by a Dual-AI Consensus Engine (OpenRouter & Groq), it generates and verifies highly realistic, unique phi	2026-10-13	2025-05-10	q4
+SamDc73/Talimio	17	AGPL-3.0	main	Learn faster with the power of AI	2026-09-13	2024-11-10	q8
+ShadowQuill/langchain-langgraph-tutorial	9	Apache-2.0	main	LangChain / LangGraph 系统化学习的开源教程：9 个 Phase、26 个可运行示例、双语 VitePress 文档站，递进揭示各 Agent 框架共通的图编排本质。(A structured LangChain / LangGraph course — 9 phases, 26 runnable examples, bilingual VitePress docs, prog	2026-08-16	2026-08-05	q2
+Siddu-119/AI-StudyMate	9	NONE	main	🤖 An AI-powered study assistant designed to support students with smarter learning tools.	2026-10-29	2026-10-13	q3
+Soonwook34/CRKT	11	Apache-2.0	main	Concept map-driven Response disentanglement method for enhancing Knowledge Tracing (CRKT)	2024-12-26	2024-06-12	q9
+Soptq/LANA-pytorch	22	MIT	main	Official Pytorch implementation of "LANA: Towards Personalized Deep Knowledge Tracing Through Distinguishable Interactive Sequences"	2021-04-28	2021-03-05	q9
+SunnyAgrwl05/rural-guardian-intelligence-platform	6	MIT	main	AI-powered multi-agent platform for rural safety, disaster response, agriculture, health, education, and community intelligence.	2026-09-25	2026-09-24	q1
+Ticus0228/Knowledge-Tracing-Datasets	10	NONE	master	Knowledge Tracing (KT) dtasets	2019-09-28	2019-09-28	q9
+UpstageAI/cl4kt	33	NONE	main	This is our implementation for the paper "Contrastive Learning for Knowledge Tracing" (TheWebConf 2022).	2024-05-03	2022-02-02	q9
+VAIXLNS/VAIXLNS	8	NONE	vaixlns-architecture	╔════════════════════════════════════أرى أن هذا أصبح أقرب إلى Blueprint سيادي وليس مجرد مخطط نظام. ومع ذلك، إذا كان الهدف أن يكون هذا الرسم المرجعي النهائي (Master Architecture Blueprint) فلا تزال هنا	2026-09-02	2026-07-01	q5
+YangZhouEdu/DKT_pytorch	10	NONE	master	Deep Knowledge Tracing by Pytorch	2021-05-13	2021-05-12	q9
+ai-infra-curriculum/ai-infra-architect-learning	15	MIT	main	AI Infrastructure Architect Learning Track - System design and architecture patterns for ML	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-engineer-solutions	12	MIT	main	Solutions for AI Infrastructure Engineer Track	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-junior-engineer-learning	259	MIT	main	AI Infrastructure Junior Engineer Learning Track - Comprehensive curriculum for entry-level ML infrastructure engineers (0-2 years experience)	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-ml-platform-learning	16	MIT	main	AI Infrastructure ML Platform Engineer Learning Track - Building self-service ML platforms at scale	2026-11-04	2025-10-25	q4
+ai-infra-curriculum/ai-infra-mlops-learning	15	MIT	main	AI Infrastructure MLOps Engineer Learning Track - MLOps pipelines, CI/CD for ML, and model lifecycle management	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-performance-learning	80	MIT	main	AI Infrastructure Performance Engineer Learning Track - GPU optimization, inference optimization, and cost reduction	2026-11-03	2025-10-25	q4
+apimarta6j/image-api-gateway-tutorial	55	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-02	2026-10-02	q2
+apimartat5/llm-api-tutorial	87	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartc30lq1/unified-ai-tutorial	78	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartcmob0klxg/video-api-gateway-tutorial	55	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-02	2026-10-02	q2
+apimartcmwlrmkd/video-api-tutorial	66	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartcsxei9/llm-api-gateway-tutorial	42	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartcv9m2znkl/model-gateway-tutorial	46	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartftbi/model-api-tutorial	51	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartgz0l/api-relay-tutorial	48	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimarthe2ht/ai-api-proxy-tutorial	63	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimarthuv1qma/llm-api-gateway-tutorial	58	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartjz/ai-api-gateway-tutorial	62	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartkp3iudem/ai-api-tutorial	47	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartldr6o6r3g/api-hub-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartlh08lf9/unified-ai-api-tutorial	59	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartmgu3/api-aggregator-tutorial	54	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartmk8/multi-model-api-tutorial	52	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartmqf3ytv9z/image-api-tutorial	58	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimarto6b/llm-api-tutorial	53	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartpx0d7edg8/llm-gateway-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartq3/openai-compatible-tutorial	46	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartte5mam5j/ai-api-gateway-tutorial	50	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartu1n/llm-api-proxy-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartu3pe/ai-api-tutorial	43	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartuys8r2uo/api-router-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartw94zu4z/ai-gateway-tutorial	50	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartwt/openai-compatible-api-tutorial	46	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartxbp7hw/multi-model-tutorial	40	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartxyv3b6/ai-gateway-tutorial	39	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartyvp957u6/api-proxy-tutorial	43	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+aurafhe-official/mcp	37	MIT	main	Connect AI assistants to Aura encrypted numeric computation. Explore Aura AI, its published GPT-OSS-20B benchmark and public learning demos.	2026-09-24	2026-09-01	q3
+bcaitech1/p4-dkt-no_caffeine_no_gain	17	NONE	main	No-Caffeine-No-Gain's Deep Knowledge Tracing (DKT)	2021-07-29	2021-05-19	q9
+bentw-84/go-tutor	5	NOASSERTION	main	本地围棋复盘工具：KataGo 算事实，LLM 讲道理，外加错手重选训练	2026-08-10	2026-08-05	q2
+bnbu-busa-projects/AI_Learning_Assistant	6	NONE	main	2026-10-08	2026-09-23	q3	
+brian901106/japanese-tutor-mugi	95	MIT	main	倉鼠むぎ陪你一對一練日語會話的手機網頁 App。核心思想：讓 LLM 以 JSON Schema 輸出結構化回覆，日文台詞與中文小提醒分欄位，前端用部分 JSON 解析邊收邊顯示；長時間聊天也維持 prompt 快取與語音快取。漢字讀音由 LLM 標註，漏標的由伺服器端 kuromoji 補上。糾錯自動存成小提醒本，可以開口練到會。語音可選本機 VOICEVOX 或雲端 Google／Azure，	2026-11-02	2026-10-28	q2
+cRED-f/QuestGen-AI-Agent	23	MIT	main	QuestGen lets you organize course materials, discuss them with an AI assistant, draft an assessment, revise individual questions, review and approve the results, and export student or instructor copie	2026-10-29	2025-03-11	q8
+cdavid817/AI-Infra-Tutorial	17	MIT	main	《AI Infra》:面向平台建设方的中文 AI 基础设施书稿——31 章 + 附录 + 结构化数据与证据体系	2026-09-02	2026-08-23	q2
+cdavid817/awesome-agent-tutorial	42	NOASSERTION	main	《企业级 Agent 从入门到专家（2026版）》——从单 Agent 核心机制到多 Agent 与企业落地的工程化实战教程，配套可运行贯穿项目与 CI 验证门禁。	2026-10-12	2026-08-23	q2
+chadyi/StudyOnTV	23	NOASSERTION	main	StudyOnTV (Tiledaoti TV) — open-source Android TV app where kids unlock screen time by answering questions. Runs fully on the TV: no server, no account. Parents scan a QR code and manage questions fro	2026-11-04	2026-11-01	q8
+christian-bick/edugraph-ontology	18	Apache-2.0	main	Open Education Ontology	2026-10-30	2024-11-04	q4
+codingchild2424/MonaCoBERT	16	NONE	master	Monotonic Attention based ConvBERT for Knowledge Tracing	2022-09-14	2022-07-30	q9
+csmberkeley/csm_web	20	MIT	master	Web applications for CS Mentors.	2026-11-03	2018-10-17	q8
+cstar0521/ai-voice-agent	8	NONE	main	A multilingual AI voice agent that automates education loan qualification for study-abroad students. Features intelligent call handling, real-time sentiment analysis, lead qualification, and seamless 	2026-09-19	2026-09-19	q1
+davidoj/deepknowledgetracingTF	9	MIT	master	Tensorflow implementation of deep knowledge tracing (Piech 2015)	2017-08-29	2017-07-19	q9
+demetrius-edelin/tutor	6	MIT	master	Self-hosted AI tutor (bring your own API key) that turns your books, online documentation, and YouTube videos into a course. It maps the concepts, tests what you know, and teaches the rest with refere	2026-11-04	2026-10-02	q2
+dsiufl/WorkshopArchive	32	NONE	main	Repository hosting a series of educational workshops at the University of Florida for 2023-2026 covering topics such as Data Science, Artificial Intelligence and Machine Learning.	2026-10-03	2023-08-20	q4
+dungnotnull/AI-Machine-Learning-Deep-Learning-Tutor-agent-skill	4	NONE	main	🧠 Research-validated, production-grade AI/ML/DL Intelligent Tutoring System harness. Grounded in 25+ peer-reviewed papers (Cognitive Load Theory, Socratic Dialogue, Spaced Retrieval). Features adaptiv	2026-08-11	2026-08-11	q6
+dungnotnull/Child-Protection-Safeguarding-Advisor-agent-skill	4	NONE	main	🛡️ Educational AI skill for child safeguarding & protection education. Grounded in WHO/UNICEF INSPIRE strategies, Belsky's ecological risk-factor model, Olweus bullying prevention, and UNCRC legal fra	2026-08-13	2026-08-13	q1
+dungnotnull/Neurodiversity-Awareness-Early-Signs-Education-Guide-agent-skill	4	NONE	main	🧠 Educational AI skill for neurodiversity awareness & early developmental milestones. Grounded in Singer's Neurodiversity paradigm, DSM-5/ICD-11 educational frameworks, and CDC/AAP milestone tracking.	2026-08-13	2026-08-13	q1
+dxywill/deepknowledgetracing	39	NONE	master	Pytorch implementation for Deep Knowledge tracing	2018-08-28	2018-08-28	q9
+ekinakyurek/influence	40	MIT	master	Code for "Tracing Knowledge in Language Models Back to the Training Data"	2022-12-27	2021-11-11	q9
+engyossefyossry-crypto/autonomous-devsecops-triage-engine	9	MIT	main	An enterprise-grade, asynchronous AI orchestration framework built on n8n that automates production incident response, forensic code analysis, vulnerability assessments, and multi-channel system notif	2026-07-07	2026-07-07	q6
+epicfleasafeguard/ybqhbgvt	22	NONE	main	GPT-Skills — AI-powered assistant that helps you learn, practice, and master any skill with personalized guidance. Real-time feedback, step-by-step tutorials, and adaptive learning paths. Boost your p	2026-09-01	2026-08-09	q3
+farshadfazeli/ai-agent-structure-guide	5	NONE	main	Interactive bilingual (FA/EN) guide to AI agent project structure, with a workflow-vs-skill comparison and a 20-question quiz	2026-10-31	2026-10-24	q1
+githubg0/CoKT	18	NONE	main	Implementation of Improving Knowledge Tracing with Collaborative Information	2021-12-25	2021-12-16	q9
+haxtheweb/edtechjoker	18	Apache-2.0	master	Project EdTechJoker resources / materials	2026-10-14	2021-08-18	q8
+he-yufeng/CodeABC	19	MIT	main	AI-powered code reader for non-programmers | 码上懂 — 不用学编程，也能读懂代码	2026-10-29	2026-04-07	q4
+hyyhf/agent-book-code	59	MIT	main	《从0开始构建 AI 智能体》 一本带你亲手打造属于自己的AI Agent 的实战书	2026-10-03	2026-04-23	q4
+ilyautov/not-a-blogger	5	MIT	main	Toolkit for AI agents that make short videos: recipes, prompts, templates and QA tools. Includes 18 agent skills, a text mini-course for people, two runnable starters and 12 real video breakdowns. 143	2026-11-02	2026-10-24	q1
+janosdios/langteacher	6	NOASSERTION	main	Voice-based language tutor that runs entirely offline — speech-to-text, LLM, and text-to-speech on your own hardware.	2026-09-22	2026-07-15	q2
+jarviszhb/KnowledgeTracing	27	NONE	master	Some implementations of knowledge tracing with pytorch	2020-11-03	2020-02-06	q9
+jilljenn/dktm	8	NONE	master	Deep Knowledge Tracing Machines	2023-07-28	2019-02-24	q9
+john1226966735/HAKT	10	NONE	main	Hierarchical Attention Network based Explainable Knowledge Tracing	2022-05-18	2021-10-09	q9
+kobkrit/thai-llm-tutorials	35	NOASSERTION	main	สอน LLM ภาษาไทยตั้งแต่สมการถึงโค้ดที่รันได้จริง — โน้ตบุ๊กประกอบซีรีส์ 10 ตอนจาก kobkrit.com	2026-07-22	2026-07-19	q2
+kolchinski/student_simulator_policy	9	NONE	master	Student simulation using Deep Knowledge Tracing (LSTM-based model). Learning to present educational material optimally using reinforcement learning (policy gradient methods).	2018-09-27	2017-05-31	q9
+kostyaP-hub/agent-safe-github-lab	5	Apache-2.0	main	Learn to inspect external sources before AI agents use them: inert exercises, static risk receipts, and clear boundaries before execution.	2026-10-04	2026-09-17	q1
+langx/website	18	MIT	main	This is the official website of langx.io	2026-11-02	2023-10-20	q8
+lilstrawberry/MIKT	11	NONE	master	This is the code for the paper "Interpretable Knowledge Tracing with Multiscale State Representation".	2025-01-23	2023-09-30	q9
+lilstrawberry/ReKT	10	NONE	main	This is the code for the paper "Revisiting Knowledge Tracing: A Simple and Powerful Model".	2024-07-21	2024-01-20	q9
+lucky7-code/CORE	12	NONE	main	Do We Fully Understand Students’ Knowledge States? Identifying and Mitigating Answer Bias in Knowledge Tracing	2024-04-03	2023-06-13	q9
+lucky7-code/DKVMN	23	NONE	main	Dynamic Key-Value Memory Networks for Knowledge Tracing	2021-08-24	2021-08-24	q9
+lucy66666/OKT	25	MIT	main	Code for Open-ended Knowledge Tracing	2023-10-18	2022-10-14	q9
+marvelefe/machinelearning101	30	MIT	main	An interactive, browser-based machine learning learning platform designed for beginners. Learn ML concepts through hands-on experimentation with zero setup required	2026-11-01	2025-10-18	q8
+mehullohar07/RUDHRA-AI	6	NONE	main	A Python-based personal AI assistant project focused on learning AI development, LLM integration, and building a modular desktop assistant.	2026-10-30	2026-09-08	q3
+mithun-27/Xynova.ai	18	NONE	main	Xynova.ai is a state-of-the-art personalized learning platform that engineers custom roadmaps for any subject. Powered by advanced AI reasoning, it provides structured modules, interactive tutoring, a	2026-10-31	2026-03-07	q4
+ml-smores/fast	31	GPL-2.0	master	Feature Aware Student knowledge Tracing Toolkit.  Implements HMMs with features for modeling student performance	2026-09-16	2014-09-20	q9
+mlcolab/psi-kt	10	AGPL-3.0	main	Official code for ICLR'24 "Predictive, scalable and interpretable knowledge tracing on structured domains"	2024-03-23	2022-07-30	q9
+mrsser/ASIKT	10	Apache-2.0	main	code for paper: Interpretable Knowledge Tracing with Difficulty-Aware Attention  and Selective State Space Model	2026-02-03	2025-04-17	q9
+msakarvadia/memory_injections	12	MIT	main	Initial Exploratory Works on Knowledge Tracing in Transformer Based Language Models	2024-02-21	2023-03-15	q9
+nhunsaker/github-triage-agent-tutorial	4	NONE	main	Tutorial: build an issue-triage agent on stock GitHub. A rulebook in Actions labels and routes every new issue, investigates the unsure ones, and learns from your corrections.	2026-11-02	2026-09-01	q2
+nju-websoft/HuggingBench	17	Apache-2.0	main	[SIGIR 2025] Benchmarking Recommendation, Classification, and Tracing Based on Hugging Face Knowledge Graph	2025-06-06	2025-02-17	q9
+nkondapa/VisualKnowledgeTracing	20	NONE	main	2022-07-25	2022-07-19	q9	
+oezyurty/ExRec	14	NONE	main	Personalized Exercise Recommendation with Semantically-Grounded Knowledge Tracing	2025-12-25	2025-05-13	q9
+oezyurty/KCQRL	11	NONE	main	Automated Knowledge Concept Annotation and Question Representation Learning for Knowledge Tracing	2025-07-16	2024-09-30	q9
+ontoagents/multiagent-lab	6	Apache-2.0	main	OntoAgents — a personal work & learning assistant grounded on ontologies: build AI agents and their knowledge bases (ontology lifecycle: build → run → audit), fully self-hosted & local. Go · CloudWeGo	2026-11-04	2026-09-18	q3
+philipobiorah/agents-101-workshop	7	NONE	main	A beginner-friendly Google ADK workshop that builds AI agents step by step: a general assistant, a time-aware agent, a search-enabled agent, a learning assistant, and a CSV expense tracker. Includes P	2026-10-19	2026-10-19	q3
+pnnnx/local-code-tutor	20	MIT	main	Fine-tune Qwen2.5-Coder-7B for free (QLoRA on Kaggle T4) and run a local coding agent that runs your code instead of guessing — 8 GB Mac, llama.cpp, LoRA weight analysis with charts	2026-10-21	2026-10-19	q2
+pokerme7777/HiTSKT	8	NONE	main	[Knowledge-Based Systems] HiTSKT: A hierarchical transformer model for session-aware knowledge tracing	2024-09-25	2021-09-14	q9
+qshine/llm-lora-tutorial	25	MIT	main	从零走通 QLoRA 微调与 vLLM 部署的中文实操手册	2026-10-13	2026-10-11	q2
+raphacoh/daily-wow-kit	4	MIT	main	A new interactive lesson for your kids every morning, built overnight by an AI agent: page engine, assistant proxy, and the prompts that run it (Claude Cowork + Claude Code routines).	2026-09-08	2026-09-07	q1
+robert-lindsey/WCRP	24	MIT	master	Weighted Chinese Restaurant Process model for inferring skill labels in Bayesian Knowledge Tracing	2016-06-30	2015-05-30	q9
+rschmucker/Large-Scale-Knowledge-Tracing	41	NONE	master	Efficient implementations for handling large-scale student log data and knowledge tracing algorithms.	2025-11-03	2021-08-31	q9
+rudra496/devroadmaps	20	MIT	master	🗺️ Developer Roadmaps — 20 career paths, 870+ topics, 1,880+ free resources. PWA, certifications, community-driven. Your free guide from beginner to senior dev.	2026-10-28	2026-03-26	q4
+rui9812/KnowTrace	14	NONE	main	[KDD 2025] KnowTrace: Bootstrapping Iterative Retrieval-Augmented Generation with Structured Knowledge Tracing	2025-02-19	2025-02-19	q9
+sanyaden/agents0826	4	NONE	main	AI Agents PRO (FwDays, потік 08.2026) — наскрізний практикум: один запит клієнта, вісім шарів агентної архітектури. Кожен module = попередній + один шар.	2026-09-02	2026-08-15	q1
+scott-pu-pennstate/dktt_light	18	NONE	main	Deep Knowledge Tracing with Transformers (Light Version)	2023-04-29	2021-04-08	q9
+shalini1194/RKT	45	NONE	master	The code corresponding to paper RKT : Relation-Aware Self-Attention for Knowledge Tracing	2021-03-12	2020-08-17	q9
+shivanandmn/Knowledge-Tracing-SAINT	32	NONE	main	Towards an Appropriate Query, Key, and Value Computation for Knowledge Tracing -Paper Implementation on "Riiid! Answer Correctness Prediction", Kaggle Competition	2020-12-17	2020-12-17	q9
+shshen-closer/Convolutional-Knowledge-Tracing	29	NONE	master	2021-09-05	2020-05-22	q9	
+skewondr/FoLiBi	22	NONE	folibi	Forgetting-aware Linear Bias for Attentive Knowledge Tracing	2024-05-09	2023-08-07	q9
+srinivasyadav63020-coder/AI-Study-Assistant	9	NONE	main	AI Study Assistant is a Flutter-based mobile application that uses Artificial Intelligence to provide students with a personalized and interactive learning experience. The application helps students u	2026-09-25	2026-08-24	q3
+super-rick/ai-agent-tutorial	9	NONE	main	从 0 手写 AI Agent —— 完整 Python 教程 不依赖 LangChain / LlamaIndex 等任何 Agent 框架，纯手写实现一个完整的 AI Agent 应用， 覆盖 Agent 的全部核心概念：LLM 调用、工具、ReAct 循环、记忆、RAG、规划、多智能体、评估。	2026-08-04	2026-08-04	q2
+sylhetyhackvenger/BLASTAAR	4	MIT	main	BLASTAAR is an enterprise-grade gray hat hacking platform featuring AI-powered vulnerability detection, zero-day hunting, and comprehensive port scanning across 200+ services. With built-in cloud, con	2026-08-22	2026-07-23	q6
+sylhetyhackvenger/CMSIAF	7	GPL-3.0	main	CMSIAF (Content Management Security Intelligence Framework) is an enterprise-grade penetration testing tool supporting 200+ CMS platforms with 64 token bypass vectors, 14-phase reconnaissance, 10-phas	2026-09-02	2026-08-29	q6
+syunnmo/FGKT	10	NONE	main	Fine-Grained Knowledge Tracing model (FGKT) 	2023-03-22	2022-08-17	q9
+tenstorrent/tt-vscode-toolkit	12	Apache-2.0	main	A complete learning and development environment for Tenstorrent hardware and software	2026-11-02	2025-12-18	q4
+thosgt/kt-algos	13	NONE	master	Implementation of some popular knowledge tracing algorithms	2019-09-27	2019-09-27	q9
+tianlinyang/DKVMN	24	NONE	master	Dynamic Key-Value Memory Networks for Knowledge Tracing	2018-03-28	2018-03-07	q9
+umass-ml4ed/dialogue-kt	42	MIT	main	Code for the paper "Exploring Knowledge Tracing in Tutor-Student Dialogues using LLMs" at LAK2025.	2025-02-12	2024-09-04	q9
+umass-ml4ed/kcgen-kt	8	NONE	main	Official repo for "Automated Knowledge Component Generation and Knowledge Tracing for Coding Problems" (ACL2026 Findings)	2026-06-09	2025-02-25	q9
+uttkarshparmar50/LIBRARY-MANAGEMENT-SYSTEM-L_I_B_R_A-	14	NONE	main	1-Project Title “Library Management System (L_I_B_R_A)” The “Library Management System” has been developed to override the problems prevailing in the practicing manual system. This software is support	2021-10-24	2021-10-24	q9
+veolms/veolms	81	AGPL-3.0	main	Open Source LMS	2026-11-04	2026-08-02	q10
+vinitra-zz/CognitiveTutorPrediction	11	NONE	master	Bayesian Knowledge Tracing for Student Performance Prediction	2017-09-11	2017-09-11	q9
+vinitra-zz/RNNModelingForEdu	10	NONE	master	Deep Knowledge Tracing - RNN modeling for ASSISTment data	2017-11-10	2017-09-25	q9
+wlmiller/BKTSimulatedAnnealing	10	MIT	master	A modification of Baker et al.'s BKT Brute Force code which uses simulated annealing algorithm to more efficiently choose optimal Bayesian Knowledge Tracing parameters.	2022-01-29	2014-05-02	q9
+wondermayank/ai-chat	17	NONE	main	AI study assistant for CUET, Banking, and Commerce students, powered by the Tiny AI model	2026-10-28	2026-06-27	q4
+xbh0720/LBKT	21	NONE	main	Learning Behavior-oriented Knowledge Tracing	2024-04-16	2023-04-13	q9
+xbsheng/deepseek-harness-tutorial	10	NONE	main	从零实现 DeepSeek Harness 教程:mini-dsh 简易版实现	2026-08-17	2026-08-13	q2
+xeniaqian94/SLAM	8	NONE	master	Second-language acquisition modeling, that extends the task of knowledge tracing. PyTorch implementations of neural collaborative filtering, (TODO) deep knowledge tracking (LSTM and Memory Network) on	2018-03-18	2018-02-17	q9
+ybak/ai-tutorial	17	Apache-2.0	main	 一本开源的 AgentScope Java 中文教程：7 篇 44 章、839 页成书体量的完整 Markdown 源稿，由浅入深覆盖从第一个 Agent 到生产级 Agent 平台的全部主题。	2026-11-03	2026-10-11	q2
+yemao616/Bayesian-Knowledge-Tracing	16	NONE	master	2018-03-15	2018-03-15	q9	
+yeshsanchez/Kaiwa	13	AGPL-3.0	main	Kaiwa (会話) — open-source Japanese conversation tutor that runs entirely on your own computer. Chat, voice calls, roleplay, corrections & SRS — free, private, offline-first.	2026-08-14	2026-07-06	q2
+yjhong89/DKVMN	20	NONE	master	Dynamic Key Value Memory Networks for Knowledge Tracing	2018-11-01	2017-07-31	q9
+ze185666/hfut-freshman-agent	9	NONE	main	合工大工科新生 AI 助教 · 免登录 Web SDK 聊天页	2026-10-31	2026-10-31	q1
+zmy-9/MF-DAKT	16	NONE	main	2021 CIKM: source code for the Multi-Factors Aware Dual-Attentional Knowledge Tracing (MF-DAKT)	2023-04-25	2021-04-26	q9
+zxlzxlzxlzxlzxl/SSAKT	8	MIT	main	Sequential Self-Attentive Knowledge Tracing	2021-07-17	2021-06-23	q9
+zyy-2001/DKT2	9	MIT	master	Revisiting Applicable and Comprehensive Knowledge Tracing in Large-Scale Data	2025-06-15	2024-07-24	q9
+zyy-2001/DisKT	26	MIT	master	Disentangled Knowledge Tracing for Alleviating Cognitive Bias	2026-01-13	2024-07-03	q9

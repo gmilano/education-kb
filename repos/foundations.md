@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE CURRICULUM SUBSTRATE NOW HAS ALL THREE LAYERS, AND THE KNOWLEDGE-TRACING *MODEL* CORPUS WAS A STANDING GAP THIS BASE HELD RUNTIMES FOR AND NEVER SAW**
+
+### 🟢 `649-H` — ontology → standards → ordering, and the stack is complete
+
+This base has been assembling a curriculum substrate for three passes without naming it as one:
+
+| Layer | Address | Licence — bytes, grade | ★ | Filed |
+|---|---|---|---|---|
+| **Schema** — what a learning objective *is* | 🆕 [`christian-bick/edugraph-ontology`](https://github.com/christian-bick/edugraph-ontology) | 🟢 `Apache-2.0` — `11 358` B (`649-D`: `+1`, one prepended blank line) | `18` | `p649` |
+| **Standards access** — citing a real standard | [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) | 🟢 `MIT` — `1 065` B, residual `+0` | `5` | `p648` |
+| **Ordering** — which skill comes before which | [`zeroa234/cs-math-skill-tree`](https://github.com/zeroa234/cs-math-skill-tree) | 🟢 `MIT` — `1 065` B, residual `+0` | `21` | `p648` |
+
+`p648` filed the bottom two and said plainly that prerequisite ordering "is not a model output — it is
+curriculum data a human has to assert". `edugraph-ontology` is the layer **under** that assertion: an
+authored OWL/Turtle ontology of learning areas, abilities and scopes, with the mapping from an existing
+standard into those terms demonstrated on **CCSS** in a sibling repository
+([`christian-bick/edugraph-dataset`](https://github.com/christian-bick/edugraph-dataset)), plus labelled
+exercise images and generation tools. Its own README states the generalisation: *the same approach can be
+applied to any curriculum, educational standard, or proprietary* taxonomy.
+
+🔵 Why that completes something. `standardgraph` lets a model **cite** `CCSS.MATH.CONTENT.5.NF.A.1`
+instead of inventing it. `cs-math-skill-tree` says that unit comes after a different one.
+`edugraph-ontology` is what lets both of those be expressed in the same vocabulary as a *second*
+jurisdiction's curriculum — which is the only way an engagement in São Paulo reuses an engagement in
+Texas. All three are permissive, all three were byte-read, and none of them is a model: they are the data
+layer that every adaptive engine on this shelf assumes somebody else already built.
+
+🔴 The honest caveat: `18`, `5` and `21` stars. This is a complete architecture assembled from three
+near-unknown repositories. It is adoptable because it is permissive and small enough to read, not because
+it is proven in production.
+
+### 🟢 `649-G` — eight knowledge-tracing models, and why the gap existed
+
+The `knowledge tracing` census leg returned `100` addresses. The shelf holds the **runtimes** — `pyKT`,
+`pyBKT`, `OATutor`, `adaptive-knowledge-graph` — and almost none of the published **model**
+implementations behind them. Every row below was byte-read this pass.
+
+| Repo | Licence — bytes, grade | ★ | Branch | Paper | Region | What it adds that the runtimes do not |
+|---|---|---|---|---|---|---|
+| [`umass-ml4ed/dialogue-kt`](https://github.com/umass-ml4ed/dialogue-kt) | 🟢 `MIT` — `1 076` B, `+0` | `42` | `main` | LAK 2025 | North America | KT over **dialogue turns** rather than answer logs. The bridge to conversational tutoring |
+| [`zyy-2001/DisKT`](https://github.com/zyy-2001/DisKT) | 🟢 `MIT` — `1 066` B, `+0` | `26` | `master` | WWW 2025, `arXiv:2503.02539` | APAC — Zhejiang Univ. | Disentangles the learner's ability from **cognitive bias** in the interaction record |
+| [`lucy66666/OKT`](https://github.com/lucy66666/OKT) | 🟢 `MIT` — `1 075` B, `+0` | `25` | `main` | EMNLP 2022, `arXiv:2203.03716` | North America — Rice + UMass | **Open-ended** KT: predicts a student's actual free-text/code response, not a correctness bit |
+| [`Soptq/LANA-pytorch`](https://github.com/Soptq/LANA-pytorch) | 🟢 `MIT` — `1 062` B, `+0` | `22` | `main` | RAIEd 2020 | Global — unplaced | Personalised deep KT from **distinguishable interactive sequences** |
+| [`Soonwook34/CRKT`](https://github.com/Soonwook34/CRKT) | 🟢 `Apache-2.0` — `11 357` B, `+0` | `11` | `main` | `arXiv:2408.12996` | APAC — Sungkyunkwan Univ. | **Concept-map-driven** response disentanglement; uses the unchosen options, not just the right answer |
+| [`mrsser/ASIKT`](https://github.com/mrsser/ASIKT) | 🟢 `Apache-2.0` — `11 357` B, `+0` | `10` | `main` | — | Global — unplaced | **Interpretable** KT: difficulty-aware attention plus a selective state-space model |
+| [`zyy-2001/DKT2`](https://github.com/zyy-2001/DKT2) | 🟢 `MIT` — `1 066` B, `+0` | `9` | `master` | — | APAC — Zhejiang Univ. | Re-examines which KT models are **applicable at large-scale data**, which is the deployment question |
+| [`DQYZHWK/TransKT`](https://github.com/DQYZHWK/TransKT) | 🟢 `MIT` — `1 072` B, `+0` after final-NL normalise (`649-C`) | `8` | `main` | — | APAC — China (probe `1`) | **Cross-course** KT via concept-graph-guided semantic transfer — the cold-start case for a new course |
+
+🔵 The reason this gap survived `648` passes: the mandated supply leg asks for *agents* and *trending
+repos*, and a KT model implementation is neither. It is a research artefact with `8`–`42` stars that no
+listicle will ever rank. It only surfaces if you query the **technique** rather than the market, which is
+what the `knowledge tracing` leg did.
+
+🔴 And a caveat with teeth: `LANA` (`2021`), `OKT` (`2023`), `DSAKT`, `SSAKT`, `WCRP` and several others
+in the same leg have not been pushed in two to five years. A permissive licence on stale research code is
+a **starting point for a port**, not a dependency. `DisKT` (pushed `2026-01`), `DKT2` (`2025-06`) and
+`dialogue-kt` are the three that are both recent and permissive.
+
+### 🟡 `649-I` — a `118`-repo MIT workforce-curriculum estate, measured, with the caveat that matters
+
+The census surfaced [`ai-infra-curriculum`](https://github.com/ai-infra-curriculum) and its README named
+five sibling organisations. All six were probed with `org:` queries this pass:
+
+| Organisation | Repos | `MIT` | Stars, total | Flagship |
+|---|---|---|---|---|
+| [`ai-infra-curriculum`](https://github.com/ai-infra-curriculum) | `28` | `26` | `2 277` | [`ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) — `1 840★` |
+| [`ai-engineering-curriculum`](https://github.com/ai-engineering-curriculum) | `26` | `24` | `17` | `agentic-ai-engineer-learning` — `6★` |
+| [`ai-governance-curriculum`](https://github.com/ai-governance-curriculum) | `22` | `20` | `7` | `security-learning` — `4★` |
+| [`ml-engineering-curriculum`](https://github.com/ml-engineering-curriculum) | `20` | `18` | `3` | `ml-engineer-solutions` — `1★` |
+| [`ai-workforce-curriculum`](https://github.com/ai-workforce-curriculum) | `12` | `10` | `0` | — |
+| [`ai-startup-curriculum`](https://github.com/ai-startup-curriculum) | `10` | `8` | `8` | `cto-curriculum` — `1★` |
+
+`118` repositories, `106` of them `MIT`. Three were byte-read directly
+(`ai-infra-junior-engineer-learning`, `ai-infra-performance-learning`, `ai-infra-ml-platform-learning` —
+all `1 085 B`, residual `+0`, identical holder line of `47 B`).
+
+🔴 **The caveat is the finding.** `2 277` of the `2 312` stars in the whole estate sit in one
+organisation, and `1 840` of those in one repository. Five of the six orgs are at or near zero. This is
+one author's curriculum published in bulk across six namespaces, not six adopted projects — and the
+identical `47 B` holder line across three repos is consistent with that. 🔵 It is still usable: a
+permissive, structured, `0`–`2`-years-experience-through-architect ladder is exactly the scaffold an
+engagement needs for internal upskilling, and `MIT` means it can be rebranded and cut down. Adopt it as
+**content to edit**, not as a maintained dependency, and do not cite the estate's size as traction.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **FOUR NEW SUBSTRATE ADDRESSES, AND THE PREREQUISITE GRAPH IS THE ONE THAT MATTERS — IT IS THE INPUT ADAPTIVE LEARNING NEEDS AND THE ONE NOBODY PUBLISHES**
 
 ### 🟢 `648-D2` — the foundational additions, by layer

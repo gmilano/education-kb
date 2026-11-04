@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` DENIED A THIRD CONSECUTIVE PASS, SO THIS DIFF IS ALSO UNJUDGED. 🔴 THE MIT PREDICTOR CONVICTS `3 of 15` PAYLOADS OF BODY MUTATION OVER ONE MISSING NEWLINE BYTE. 🟢 `648-G` IS COHORT-SPECIFIC, NOT A PROPERTY OF THE TEST — `3 of 4` APACHE PAYLOADS OBSERVE `11 357 B` BYTE-EXACTLY. 🟢 `21` ADDRESSES FILED, `23 of 23` LIVE, `23 of 23` PAYLOADS BYTE-READ, `0` NO-PAYLOAD. 🔴 THE LEGS NIL A SEVENTEENTH TIME ON `61 of 61`, AND THE SCORER IS CALIBRATED THIS TIME.**
+
+| `p649` registered | Verdict |
+|---|---|
+| 🔴 `649-A` — `make hooks` denied before execution (`[Code from External]`) for the **third** pass running. No gate count, no red set, no baseline. `p647`'s `52/71` stays carried-forward-unverified, `p648`'s diff was unjudged, and so is this one. Gated contracts satisfied by hand with an out-of-tree verifier. | 🔴 **BLOCKED — instrument unavailable, not failed** |
+| 🔴 `649-C` — the `p646` MIT predictor returns `RESIDUAL-BODY-MUTATED` on `3 of 15` MIT payloads at residual exactly `−1`. All three end `0x2e` with `20` newlines; every residual-`0` payload ends `0x0a` with `21`. The body is byte-identical to canonical — only the terminating newline is absent. Append one byte and the cohort is **`15 of 15` EXACT**. | 🔴 **FALSE CONVICTION — fix specified and measured** |
+| 🟢 `649-D` — `648-G` said the Apache byte-equality test "is not usable", on `0 of 6` observing `11 357 B`. This pass: **`3 of 4` observe `11 357 B` byte-exactly**, and the one deviation (`edugraph-ontology`, `+1`) recovers canonical by dropping a single prepended blank line (`647-F`'s class). The test is usable; `p648` generalised from a six-repo sample. | 🟢 **CORRECTED — 648-G was cohort-specific** |
+| 🔴 `649-E` — `JIUWANG123/quiet-reader-english-learning` declares `MIT` on the metadata channel and its payload is **Expo's** grant: title `The MIT License (MIT)`, holder `650 Industries, Inc. (aka Expo)`. Two defects in one specimen — the predictor refuses a legitimate titled variant (`NOT-MIT-TITLE`), and the holder is not the repo author, so there is no first-hand grant. | 🔴 **DECLARED GAP — not filed as MIT** |
+| 🟢 `649-B` — the **channel map** is measured end to end (`evidence/channel-map.2026-11-04-p649.tsv`). `search/repositories` LIVE; `search/users` LIVE but positive-only; `search/commits` returns no `total_count`; `users/{owner}`, `orgs/{owner}`, `repos/{o}/{r}` and `repos/{o}/{r}/commits` all **BLOCKED** by session binding. `648-K`'s probe is therefore not a poor choice of placement channel — it is the **only** one. | 🟢 **MEASURED — a ceiling, not a preference** |
+| 🔴 `649-L` — `647-L` (false positive) and `648-B` (false negative) are **two faces of one defect**, and it is not the matching mode. A single short needle (`87`, `74`, `mas`, `4 million`) matches anywhere in a `53 MB` shelf; `grep -F` on an orthographic variant misses a present fact. The fix is a **conjunctive windowed** test, and it is calibrated: `5 of 5` negative controls return `0`, every one of `61` real facts returns `n ≥ 2`. | 🔴 **ROOT-CAUSED — needle specificity, not mode** |
+| 🔴 `649-K` — the mandated legs are nil a **seventeenth** consecutive pass, on the largest denominator yet: **`61 of 61`** facts already held at `HEAD` across Global and all four regions, under the calibrated scorer. Fourth consecutive pass where the shelf is **ahead of the source**: `DeepTutor` reported `~48 000★` against `54 833` held, `OpenMAIC` `~42 000★` against `42 630`. | 🔴 **SATURATED — sixth pass to recommend quarterly** |
+| 🟢 `649-F` — census: `10` queries, `338` unique addresses, `164` already held (`48.5 %`), `174` novel (`51.5 %`), `57` novel **and** permissive. `23 of 23` filed candidates LIVE on the existence channel with their own default branch, `23 of 23` licence payloads found and byte-read, `0` NO-PAYLOAD. | 🟢 **MEASURED — supply is not nil** |
+| 🟢 `649-G` — the **knowledge-tracing model corpus** is a standing gap this base never saw. It has carried KT *runtimes* since `p65` (`pyKT`, `pyBKT`, `OATutor`, `adaptive-knowledge-graph`) — every one of which models *how well* a learner knows a skill. The `knowledge tracing` leg returned `100` addresses and the shelf holds almost none of the **published model implementations**. Eight are permissive and paper-backed. | 🟢 **GAP CLOSED — eight addresses filed** |
+| 🔴 `649-J` — placement yield: the `648-K` probe placed `4 of 16` owners (`25 %`); the `12` nils are uninformative by construction. Documentary placement from paper author affiliations placed `3` more. **`9 of 16` remain unplaced** and are filed `Global` with that stated, not inferred into a region. | 🔴 **NAMED — an informed gap, written down** |
+| 🔴 `649-M` — `veolms/veolms` (`81★`, created `2026-08-02`, pushed today) is a brand-new, actively developed OSS LMS under **`AGPL-3.0`** — byte-read at `34 523 B`. It is real supply and Globant **cannot** build a proprietary derivative on it. Recorded on the vertical shelf with the flag, never on a permissive list. | 🔴 **LICENCE-FLAGGED — supply that is not adoptable** |
+| 🟢 `649-N` — the `OpenOlat` licence cell **reproduces** on an independent read: payload `Apache-2.0` at `LICENSE`, API still `NOASSERTION`. `p442`'s `gate-cell-reproduction` satisfied on the most load-bearing licence cell on the vertical shelf — and the one a metadata-only filter discards. | 🟢 **REPRODUCED — shelf confirmed** |
+| 🔴 `649-O` — a **seventh** Apache deviation mechanism, and the first that is **not** presentation. `OpenOLAT/OpenOLAT` is `10 982` B, `−375`: the `APPENDIX` is absent (`0` occurrences, no `Copyright [yyyy]`), two leading blank lines, ends `0x20`, tail replaced by a project addendum. Not recoverable, so `649-D` is bounded: *usually* presentation, not always. | 🔴 **NEW MECHANISM — substantive edit** |
+| 🔴 `649-P` — `p645-D`'s filename guess failed **twice more**: `frappe/lms` serves at `license.txt` (lower-case) and `codelitdev/courselit` at `LICENSE.md`. Three passes, three reproductions (`p648`: `moodle/moodle` at `COPYING.txt`), still unfixed on the licence channel. | 🔴 **REPRODUCED a third pass** |
+| 🟢 `649-Q` — `10 of 10` repositories cited by the four `p649` recipes resolved on `git ls-remote` with their own default branch and a `12`-char `HEAD`, including the five carried from `p648`. No recipe names a component this pass did not read. | 🟢 **RECIPE CITATIONS VERIFIED** |
+
+### 🔴 `649-C` — one byte, and the instrument calls it a mutated body
+
+The `p646` predictor is a good instrument. It predicts `1027 + |title line| + |copyright line|`, the `1027`
+is structural rather than fitted, and a non-zero residual is meant to be an integrity signal — `645-A`
+caught `eduNest` at `+36 B` from a duplicated clause with exactly this test.
+
+It fires wrongly on a `−1`. Three payloads this pass:
+
+| Payload | Bytes | Predicted | Residual | Last byte | Newlines | Verdict returned | Verdict deserved |
+|---|---|---|---|---|---|---|---|
+| [`DQYZHWK/TransKT`](https://github.com/DQYZHWK/TransKT) | `1 072` | `1 073` | `−1` | `0x2e` | `20` | `RESIDUAL-BODY-MUTATED` | 🟢 canonical, no final newline |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `1 062` | `1 063` | `−1` | `0x2e` | `20` | `RESIDUAL-BODY-MUTATED` | 🟢 canonical, no final newline |
+| [`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) | `1 062` | `1 063` | `−1` | `0x2e` | `20` | `RESIDUAL-BODY-MUTATED` | 🟢 canonical, no final newline |
+
+Every residual-`0` payload in the same cohort ends `0x0a` with `21` newlines. Append the missing byte and
+all three go to `+0`: **`12 of 15` as shipped, `15 of 15` after normalisation.**
+
+🔵 This is `647-E`'s class — "no final newline" — which the base already named **on the Apache arm**, where
+the deviation table records it as a presentation mechanism and recovers canonical by adding `+1`. The MIT
+arm meets the same mechanism and calls it a body mutation, because the MIT predictor has no presentation
+layer. The fix is one line: normalise the final newline before grading, and reserve
+`RESIDUAL-BODY-MUTATED` for residuals that survive normalisation.
+
+🔴 It matters beyond tidiness. `Selleo/mentingo` is this base's **only MIT AI-native LMS** and it is on
+four shelves. An instrument that labels its grant "body mutated" is an instrument that would, run as a
+gate, red-flag the single most adoptable vertical asset the base holds.
+
+### 🟢 `649-D` — the Apache test works; `p648` measured a bad cohort
+
+| Pass | Apache payloads | Observe `11 357 B` exactly | Deviations | Spread |
+|---|---|---|---|---|
+| `p648` | `6` | `0 of 6` | `6 of 6`, five distinct mechanisms | `−1 077` to `+201` |
+| 🆕 `p649` | `4` | **`3 of 4`** | `1 of 4`, one mechanism | `+1` |
+
+`mrsser/ASIKT`, `Soonwook34/CRKT` and `ontoagents/multiagent-lab` are `11 357 B` on the nose, `201` lines,
+`LF`, final newline present, appendix placeholder intact. `christian-bick/edugraph-ontology` is `11 358 B`
+and `202` lines because line `1` is blank — drop it and the remainder is byte-identical.
+
+🔵 So `648-G`'s verdict ("the test is **not usable**") does not survive a second cohort. What `p648`
+actually measured is that *its* six payloads were all re-presented, which is a fact about those six repos.
+The honest standing claim: the Apache byte-equality test is usable, it answers directly on most payloads,
+and when it deviates the deviation is almost always presentation and is recoverable — which is what the
+`p648` deviation table itself showed, `6 of 6` recoverable.
+
+### 🟢 The agents filed this pass
+
+Every licence below was byte-read from `raw.githubusercontent.com` this pass
+(`evidence/licence-bytes.2026-11-04-p649.tsv`, `evidence/payload-grade.2026-11-04-p649.tsv`) and every
+address resolved on `git ls-remote` with its own default branch
+(`evidence/existence-ls-remote.2026-11-04-p649.tsv`).
+
+| Agent | Repo | Licence — bytes, grade | ★ | Branch | Region | What it actually does |
+|---|---|---|---|---|---|---|
+| Dialogue-KT | [`umass-ml4ed/dialogue-kt`](https://github.com/umass-ml4ed/dialogue-kt) | 🟢 `MIT` — `1 076` B, residual `+0` | `42` | `main` | North America | LAK2025. Knowledge tracing **over tutor–student dialogue turns** with an LLM, instead of over answer-correctness logs. The only published bridge this base holds between the KT literature and conversational tutoring |
+| QuestGen | [`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) | 🟢 `MIT` — `1 062` B, residual `+0` after final-NL normalise (`649-C`) | `23` | `main` | Global — unplaced | Assessment authoring with the **human in the loop by design**: organise materials, discuss with an assistant, draft an assessment, revise single questions, review, approve, then export student and instructor copies |
+| Tutor | [`demetrius-edelin/tutor`](https://github.com/demetrius-edelin/tutor) | 🟢 `MIT` — `1 073` B, residual `+0` | `6` | `master` | Global — unplaced | Self-hosted, bring-your-own-key. Turns books, docs and YouTube into a course, **maps the concepts**, tests what the learner knows and teaches the rest with references. Pushed `2026-11-04` |
+| Memory-Agent | [`007350/memory-agent`](https://github.com/007350/memory-agent) | 🟢 `MIT` — `1 063` B, residual `+0` | `21` | `main` | Global — unplaced | LangGraph routing + LightRAG graph RAG + a **three-layer memory** + generated learning roadmaps, on FastAPI and React. The closest thing in this pass to a named reference architecture |
+| ML101 | [`marvelefe/machinelearning101`](https://github.com/marvelefe/machinelearning101) | 🟢 `MIT` — `1 066` B, residual `+0` | `30` | `main` | Global — unplaced | Browser-based interactive ML curriculum with **zero setup** — concepts learned by hands-on experiment, not by video. A deployable shell for any technical upskilling track |
+| OntoAgents | [`ontoagents/multiagent-lab`](https://github.com/ontoagents/multiagent-lab) | 🟢 `Apache-2.0` — `11 357` B, residual `+0` (`649-D`) | `6` | `main` | Global — unplaced | A learning assistant **grounded on ontologies** with an explicit lifecycle — build → run → audit. Fully self-hosted and local, written in Go. The `audit` stage is the part nothing else here has |
+| CodeABC | [`he-yufeng/CodeABC`](https://github.com/he-yufeng/CodeABC) | 🟢 `MIT` — `1 066` B, residual `+0` | `19` | `main` | Global — unplaced | 码上懂 — an AI code reader **for non-programmers**. Code comprehension as a literacy task rather than an engineering one; the inverse framing of every coding tutor on this shelf |
+
+🔴 **Declared gaps from this cohort, not filed as agents:**
+
+| Address | Why it is not filed |
+|---|---|
+| [`JIUWANG123/quiet-reader-english-learning`](https://github.com/JIUWANG123/quiet-reader-english-learning) | `649-E`. Metadata says `MIT`; the `1 106 B` payload is Expo's grant (`Copyright (c) 2015-present 650 Industries, Inc.`). No first-hand grant from the repo author |
+| [`umass-ml4ed/kcgen-kt`](https://github.com/umass-ml4ed/kcgen-kt) | ACL 2026 Findings, automated knowledge-component generation — real work from a lab this base now cites twice, and **no licence payload at all**. Research code without a grant is not adoptable |
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` DENIED A SECOND CONSECUTIVE PASS, SO THIS DIFF IS ALSO UNJUDGED. 🟢 A THIRD SUPPLY CHANNEL OPENS IN THE BLIND SPOT BETWEEN THE TWO EXHAUSTED ONES — STAR CEILING `6 500` AGAINST `647-C`'s `6`. 🟢 `47` ADDRESSES FILED, `59 of 59` LIVE, EVERY LICENCE BYTE-READ, MIT PREDICTOR `52 of 52` AT RESIDUAL `0`. 🔴 THE APACHE BYTE-EQUALITY TEST IS DEFEATED `6 of 6` BY FIVE DISTINCT PRESENTATION MECHANISMS. 🟢 NORTH AMERICA SUPPLY IS NOT NIL.**
 
 | `p648` registered | Verdict |

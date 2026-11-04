@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND CHANNEL IS SATURATED A SEVENTEENTH TIME AT `61 of 61`, NOW WITH NEGATIVE CONTROLS. 🟢 THE REAL TREND IS THAT THE MARKET IS COOLING WHILE THE SUBSTRATE IS MATURING — FACULTY INTENT FELL `9` POINTS IN A YEAR AND THE CURRICULUM DATA LAYER COMPLETED ITS THIRD AND LAST MISSING SLOT THIS WEEK.**
+
+### 🔴 The demand-side trend channel is saturated, and the measurement is now calibrated
+
+| Pass | Facts scored | Already held | Effective adoptable yield |
+|---|---|---|---|
+| `p643`–`p644` | — | — | nil |
+| `p645` | `22` | `21` | `0 of 22` |
+| `p646` | `43` | `43` | `0 of 43` |
+| `p647` | `32` | `31` | `0 of 32` |
+| `p648` | `57` | `57` | `0 of 57` |
+| 🆕 `p649` | **`61`** | **`61`** | **`0 of 61`** |
+
+Five passes, `215` facts, `213` held, `0` adoptable. The only two unheld facts in the whole series were
+China's penalty ceiling (`p645`, not education) and a statistic whose own publisher said to verify it
+before use (`p647`). 🟢 And `p649` is the first pass that can say the nil is not a scorer artefact: the
+conjunctive instrument returns `0` on `5 of 5` fabricated controls and `n ≥ 2` on `61 of 61` real facts
+(`649-L`). **Recommend quarterly. Sixth consecutive pass to record it.**
+
+### 🟢 Trend 1 — the market is cooling and the honest number is a decline
+
+This is the first pass where the trend legs carry a **negative** signal worth naming, and it is
+consistent across independent sources:
+
+| Measure | Figure | Source character |
+|---|---|---|
+| Faculty intent to use AI, `2025` → `2026` | `76 %` → **`67 %`**, a `9`-point fall | Digital Education Council Global Survey `2026` |
+| Students saying AI is integrated into many of their courses | **`15 %`** | same survey |
+| AI-education market, `2026` | `$11.40 Bn` (Coherent) against `$12.3 Bn` (HolonIQ) | 🔴 two vendor forecasts, `8 %` apart |
+
+🔵 Read these together with `p65`'s `$9.58 Bn → $42.48 Bn` (`2030`, `41.5 %` CAGR) carried on this shelf
+and the shape changes: the forecast curve is intact, the *behaviour* is not following it this year. The
+sellable reading is not "adoption is failing" — it is that the easy pilot phase is over and the
+`76 % → 67 %` drop is **teachers who tried a general-purpose chatbot and stopped**. Which is exactly what
+the OECD `2026` Digital Education Outlook recommends against and 1EdTech describes as the move from
+experimentation to governance. 🟢 A studio that arrives with a purpose-built, governed, standards-grounded
+system is selling into a market that has just learned the difference; a studio that arrives with a
+chatbot is selling into a `9`-point decline.
+
+### 🟢 Trend 2 — the curriculum data layer is complete, and it completed from the bottom
+
+The structural trend `p648` started naming is now finished. Three passes, three layers, all permissive:
+
+| Layer | Address | Filed | Licence |
+|---|---|---|---|
+| Schema — what a learning objective *is* | [`christian-bick/edugraph-ontology`](https://github.com/christian-bick/edugraph-ontology) | 🆕 `p649` | `Apache-2.0` |
+| Standards access — citing a real standard | [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) | `p648` | `MIT` |
+| Ordering — which skill precedes which | [`zeroa234/cs-math-skill-tree`](https://github.com/zeroa234/cs-math-skill-tree) | `p648` | `MIT` |
+
+🔵 Why this is a trend and not a shopping list: for `648` passes this base recorded adaptive-learning
+engines arriving **without** their input data, and said so repeatedly. The engines model how well a
+learner knows a skill; none of them can say what a skill is, cite the standard it comes from, or order it
+against another. That data was the missing market. In three passes it has shown up, permissively, from
+three unrelated authors with `18`, `5` and `21` stars. 🔴 The maturity signal and the risk signal are the
+same number: this layer exists now, and nobody has adopted it yet.
+
+### 🟢 Trend 3 — assessment integrity has moved from worry to statute, in three regions at once
+
+`p648` named assessment integrity as "the demand signal nobody is publishing". This pass it is in the
+primary sources of three regions simultaneously:
+
+- 🇺🇸 **North America** — the `STUDENTS FIRST Act of 2026`, student-authored and advisory, whose headline
+  provision bars AI use on graded assessments. `134` bills across `31` states.
+- 🇬🇧 **EMEA** — Ofqual published on AI and coursework integrity in March `2026`; the EU AI Act classes
+  assessment and exam scoring as high-risk, with obligations dated **December 2027**.
+- 🇻🇳 **APAC** — Vietnam's AI law, in force `1 March 2026`, names automated assessment in its high-risk
+  designation; Australia's TEQSA requires every provider to file a generative-AI risk action plan.
+
+🔴 And the supply side is still almost empty. `648-J` measured that `17 of 616` census addresses
+(`2.8 %`) were academic-integrity-*violating* automation, `10` of them `MIT` — a licence filter admits
+every one. This pass the one address pointing the other way is
+[`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) (`MIT`, `23★`), and it earns its
+place for a structural reason rather than a feature list: review and approve are **steps in its
+workflow**, not settings. 🔵 Three jurisdictions legislating and one `23`-star repository answering is the
+clearest supply-demand gap on this shelf.
+
+### 🔵 Trend 4 — the open platform layer is consolidating on `AGPL-3.0`, and that is a commercial fact
+
+Four of the seven top-starred open LMS platforms are `AGPL-3.0` by byte-read, and the one that launched
+this quarter (`veolms`, created `2026-08-02`) is too. The permissive exits are `OpenOlat`
+(`Apache-2.0`, `449★`, production) and `mentingo` (`MIT`, `106★`, AI-native). 🔴 The trend is not that
+copyleft is winning on merit — it is that the commercially-backed open platforms choose `AGPL-3.0`
+*because* it forces a paid licence for closed derivatives. Planning for it in the proposal is cheaper than
+discovering it at the architecture review.
+
+### 🔵 Carried forward
+
+The accessibility deadline (April `2026`, ADA, large US public institutions) remains an open budget line.
+`1EdTech`'s digital-credentials and skills-pathways thread is unchanged. LATAM's `87 %`-adoption against
+`26 %`-strategy deficit is the largest governance gap of the four regions and has no legislative forcing
+function arriving, unlike the other three.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND CHANNEL IS SATURATED A SIXTEENTH TIME AND NOW CLEANLY: `57 of 57`. 🟢 THE REAL TREND IS STRUCTURAL AND MEASURABLE — THE FIVE-SLOT ADAPTIVE-LEARNING ARCHITECTURE FILLED ITS LAST PERMISSIVE SLOT THIS WEEK, AND ASSESSMENT INTEGRITY IS THE DEMAND SIGNAL NOBODY IS PUBLISHING.**
 
 ### 🔴 The demand-side trend channel is saturated, and the measurement is now stable

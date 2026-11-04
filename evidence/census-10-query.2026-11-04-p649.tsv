@@ -1,0 +1,338 @@
+007350/memory-agent	21	MIT	main	Multi-agent AI/CS learning assistant: LangGraph routing, LightRAG graph RAG, three-layer memory, learning roadmaps. FastAPI + React.	2026-10-23	2026-08-30	q3
+1111philo/plato	20	NOASSERTION	main	Adaptive Learning Platform - Open Source - Made for Humans - Responsibly Using AI	2026-11-02	2026-03-31	q4
+111aligiant/xiaokun-learn	4	MIT	main	小鲲学编程 · 手机上的 AI 编程私教：本地真跑 Python / SQLite，自带任意 OpenAI 兼容 Key，0 后端；人设、学员画像、课程包都可替换的开源教学模板（PWA + Android）。A forkable, offline-first AI tutor that runs real code on your phone.	2026-10-28	2026-10-26	q2
+A7m0spHere/CDU-AI	12	MIT	main	CDU AI｜面向成都大学同学的开放 AI 学习站，提供入门指南、工具资源与术语速查。学生协会发起，非学校官方平台，M0 开发中。	2026-11-02	2026-10-18	q4
+AI20K-Build-Phase/starter-code-template	4	MIT	main	Starter template + technical guidebook cho AI20K Build Phase — LangGraph agent boilerplate, docs và AI usage logging.	2026-10-28	2026-08-11	q1
+ALLENYEUNG365/AI-GO-Community-English-Learning	47	NONE	main	An AI-enhanced community English learning platform that combines practical language practice, learning habits, AI assistance, and social interaction to create a more accessible and sustainable learnin	2026-09-13	2025-12-17	q8
+ALLENYEUNG365/Guess-the-Flag	46	NONE	main	Guess the Flag — Global Culture Learning Game. An interactive educational web game that combines geography, global culture, and gamification to turn flag recognition into curiosity, exploration, and m	2026-11-02	2025-08-25	q8
+ANFAIA/SkillNet	22	Apache-2.0	main	Turns an organization's internal docs into a living learning system: AI agents generate courses, tutor learners, and adapt content on the fly.	2026-10-15	2026-06-26	q8
+AiFangzhe/Exercise-Recommendation-System	63	NONE	master	we build a student simulator with our concept-aware deep knowledge tracing model, and then use it to train a flexible and scalable personalized exercise recommendation policy with deep reinforcement l	2023-01-19	2019-06-08	q9
+Aisland-SJL/Aisland-teach	16	MIT	main	🎓 A teaching skill for AI coding agents — teaches from your level, then verifies real learning by restatement. Adapted from Matt Pocock's teach (MIT).	2026-08-31	2026-08-31	q1
+Akas333/TYSA	21	AGPL-3.0	main	TYSA (Teach Yourself Anything): an learning harness that finds where your understanding ends and teaches from there. Electron app built on Meta's Muse models.	2026-11-04	2026-10-26	q4
+Alan-Youngzhe/noob2builder	11	NOASSERTION	main	Noob2Builder AI Builder School——由 Agent 在主对话中带学的全选修课程：从电脑与 AI 基础、Git/GitHub 到做出并发布第一个作品、构建 Agent。	2026-09-16	2026-08-15	q1
+AlphaaCode/Popbook	14	MIT	main	Turn any course PDF into an interactive 3D pop-up textbook with your own AI (Claude, OpenAI, Gemini, Ollama or Claude Code). Runs locally, open source.	2026-11-04	2026-11-02	q4
+Ankit-ku-panda/SAP-ABAP-LocalAI	10	MIT	main	Portable offline AI assistant for SAP/ABAP learning, code drafting, debugging, and development planning. Runs locally with lightweight models, streaming responses, personal note retrieval, and optiona	2026-10-04	2026-10-04	q3
+AnonymousOnyx22/brightspace-d2l-mcp	29	NOASSERTION	main	Brightspace D2L MCP server for Claude, ChatGPT, Cursor and Copilot. Knows what you already handed in, so it only tells you what is actually left. Due dates, grades and course files at any school with 	2026-11-01	2026-09-16	q4
+ApexEDM/GIKT	83	NONE	main	GIKT: A Graph-based Interaction Model for Knowledge Tracing	2021-07-17	2020-10-07	q9
+ApexEDM/knowledge-tracing-papers	11	NONE	main		2022-03-29	2021-12-07	q9
+AvaCodeSolutions/django-email-learning	24	BSD-3-Clause	master	An open source Django app for creating email-based learning platforms with IMAP integration and React frontend components.	2026-11-04	2025-11-13	q8
+Bbar0n234/learnflow-ai	35	Apache-2.0	main	AI-платформа подготовки учебных материалов для преподавателей и технических спикеров: агент с долгосрочной памятью превращает ваш авторский материал в лекции, конспекты, методички и слайды. Self-hoste	2026-09-02	2025-06-12	q8
+BrosnanYuen/LLM_Circuit_Design_Using_LTSpice_Tutorial	8	GPL-3.0	main	LLM Circuit Design Using LTSpice Tutorial. Create LTSpice .asc with LLMs. 	2026-09-18	2026-07-12	q2
+CAHLR/pyBKT	291	MIT	master	Python implementation of Bayesian Knowledge Tracing and extensions	2026-11-02	2017-05-25	q9
+CaviraOSS/PageLM	2061	NOASSERTION	main	PageLM is a community driven version of NotebookLM & a education platform that transforms study materials into interactive resources like quizzes, flashcards, notes, and podcasts.	2026-11-04	2025-08-31	q4
+Chang-Chia-Chi/SaintPlus-Knowledge-Tracing-Pytorch	26	NONE	main	Saint+: A time series transformer model to predict users' performance of future questions.	2021-01-26	2021-01-04	q9
+Citolab/qti-components	18	GPL-3.0	main	QTI item renderer web-components. Easy to use and highly customizable	2026-11-02	2023-06-06	q8
+DMiC-Lab-HFUT/DAGKT	10	NONE	main	This model is described in <<DAGKT: Difficulty and Attempts Boosted Graph-based Knowledge Tracing>>	2023-07-03	2022-09-26	q9
+DQYZHWK/TransKT	8	MIT	main	Contrastive Cross-Course Knowledge Tracing via Concept Graph Guided Semantic Transfer	2025-05-10	2024-08-08	q9
+DilawarShafiq/nietzschian-debugger	549	MIT	main	It won't fix your bug. It'll fix you. The debugger that hands the question back instead of the answer.	2026-10-27	2026-02-24	q4
+DoniMoon/LLMKT	11	NONE	main	EDM 2025, Using Large Multimodal Models to Extract Knowledge Components for Knowledge Tracing from Multimedia Question Information	2026-01-26	2024-05-15	q9
+DozenTwelve/Papermorph	1192	MIT	main	An AI skill that turns books into animated, narrated, interactive web experiences	2026-11-04	2026-10-03	q8
+EtherealMingo/university-teacher-skills	18	NOASSERTION	main	高校教师 AI 提效技能包：22 个子技能覆盖教学·科研·指导·行政事务·考核，含自建中文 office 产出层（Word 原生批注 / 课件 / 成绩分析）。适用于 Claude Code、Codex、DSH 等支持 Agent Skills 的客户端。	2026-10-21	2026-09-10	q1
+FIY-pc/vibe-logisim	9	GPL-3.0	main	AI-assisted Logisim workbench for computer organization courses: draw, simulate, and let an AI agent read, wire, debug and explain your circuits. Compatible with Logisim 2.7.1 course packages.	2026-11-04	2026-09-26	q1
+Fusion4233919/DSAKT	10	MIT	main	A pytorch implement of "Application of Deep Self-Attention in Knowledge Tracing"	2021-05-21	2021-04-09	q9
+Gabriel-Ney/llm-socratic-tutor	4	MIT	main	System prompt de tutoria socrática para Lógica de Sistemas e Modelagem de Dados (funciona em qualquer LLM com instruções customizadas).	2026-09-16	2026-09-16	q2
+GarethManning/education-agent-skills	946	NOASSERTION	main	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders—pedagogy, learning science, curriculum, assessment and regeneration. Claude, Codex and Hermes.	2026-11-03	2026-03-01	q8
+GruheshKurra/awesome-ai-roadmaps	4	CC0-1.0	main	Learn AI from the best free YouTube videos and GitHub repos, in the right order. Step-by-step roadmaps for ML, deep learning, LLMs, AI agents, computer vision, generative AI, and more, with progress t	2026-11-04	2026-09-02	q1
+Hazrat-Ali9/StudyMate-AI-LangChain-Chatbot	10	NONE	main	🐳 StudyMate 🐬 AI 🦋 LangChain 🐹Chatbot 🐙 is 🌺 an 💐 AI 🏵 powered 🍎 educational 🍋 assistant 🍏 built 🫑 with LangChain 🍑 and 🍔 Large 🌰 Language 🌽 Models 🚃 to ✈ deliver 🚀 personalized 🛫 context 🛸 aware 🚟 an	2026-11-02	2026-08-02	q3
+HuckleR2003/PC_Workman_HCK	74	MIT	main	System monitor with offline AI (82 intents, 9-layer routing) that learns YOUR PC. TURBO optimization, thermal baselines, voltage SPC, ghost driver detection, 373 process definitions. optimization feat	2026-10-09	2025-11-08	q4
+JIUWANG123/quiet-reader-english-learning	8	MIT	master	QuietReader — an Android English reading learning assistant with EPUB/TXT reader, vocabulary study, dictionary, AI assistance, and downloadable APK.	2026-10-19	2026-09-15	q3
+JSLBen/Knowledge-Query-Network-for-Knowledge-Tracing	24	NONE	master	PyTorch Implementation of Knowledge Query Network for Knowledge Tracing	2019-07-12	2019-03-25	q9
+JudgePeach/math-question-bank	371	AGPL-3.0	main	本地化高中数学题库管理系统，支持 LaTeX 实时渲染、智能大模型 AI 解析与 OCR 公式识别。Localized High School Math Question Bank Management System, supporting real-time LaTeX rendering, smart LLM AI parsing & solving, and formula OCR reco	2026-11-02	2026-06-05	q8
+Kaiji-Z/LookatStudy	10	MIT	main	Turn any GitHub repo into a Duolingo-style course you'll actually finish — AI tutor with per-concept mastery (BKT), spaced repetition, 100% local + BYO LLM key | 把任意仓库变成学得完的多邻国式课程	2026-11-01	2026-08-14	q2
+KiranKalluri268/ThirdEye_Client	17	NONE	main	React frontend for ThirdEye live classrooms, Google sign-in, and student engagement analytics.	2026-09-29	2026-04-05	q8
+LarytheLord/Adventurers-Guild	24	NOASSERTION	main	The Adventurers Guild: A gamified open-source platform transforming CS education through real-world "Quests," XP, and F-to-S ranking for future tech pioneers.	2026-09-28	2025-07-20	q8
+LeavesLi1015/Explainable-Few-shot-Knowledge-Tracing	9	NONE	main		2024-05-26	2024-05-22	q9
+Li-Evan/Bloom	300	MIT	main	Hire a private AI tutor for anything — it reads how you actually learn and teaches the next lesson just for you. Bloom's 2-Sigma research as a Claude Code skill + self-hostable web app · 中文优先 苏格拉底式 AI	2026-10-20	2026-03-10	q8
+LouiValley/RayTracing-Tech	28	NONE	master	This is a paper list about the most important techs and some hard core knowledge about ray tracing.	2022-12-23	2020-06-28	q9
+LovableWind/Text-Tutor	12	MIT	main	旁批 · 讲义伴读——选中讲义里的一句话，只用已讲内容讲解；习题只给提示。Windows/Mac快速版	2026-10-25	2026-10-22	q2
+Luxshan2000/ielts-prep	16	MIT	main	IELTS Prep (BandReady) — free, open-source, offline-first IELTS practice desktop app. Speaking, writing, reading and listening with a live AI voice examiner and band-descriptor scoring, running on loc	2026-10-31	2026-07-25	q8
+Man0dya/Tutor-AI	17	Apache-2.0	main	Tutor AI is a Multi Agent AI Tutoring System (FastAPI + React) that generates study content, question sets, and feedback—powered by Gemini and MongoDB Atlas Vector Search.	2026-10-20	2025-09-23	q8
+Negai-ai/AgentClaw	319	Apache-2.0	main	AgentClaw turns one-sentence ideas into reusable Claw capabilities. Build less boilerplate with declarative workflows, computer browser code file control, MCP, Skills, memory, knowledge bases, tracing	2026-06-08	2026-05-06	q9
+Nikhil-creat/summerize_ai	4	MIT	main	Agentic AI summarizer that compresses source code and technical theory into meaningful summaries. Focus keywords, source tracing, flashcards, multi-format export. Runs in your browser. Designed and De	2026-09-30	2026-09-30	q1
+No-Suggest/NoSuggest	40	NOASSERTION	main	A distraction-free YouTube experience. Your channels, your feed, no algorithm.	2026-10-30	2026-05-01	q8
+OmarZen/scholarship-navigator	14	MIT	main	Find scholarships you can actually win: eligibility checks, fit scores, missing papers and a dated plan. 35 scholarships + 56 Erasmus Mundus programs. Works with AI agents (MCP + skills).	2026-11-02	2026-10-25	q1
+Orenda-Project/rumi-platform	22	Apache-2.0	main	Open-source AI teaching assistant on WhatsApp — classroom coaching, reading assessments, lesson plans, and voice interaction in 9 languages	2026-11-02	2026-01-28	q4
+Oriole-FDU/Wisepen	123	NOASSERTION	main	面向高校教学、学习与科研的开源知识与 AI Agent 协作平台 | Open-source platform for education and research	2026-10-29	2026-05-12	q4
+PCS-PersonalContinuitySystem/PCS	10	GPL-3.0	main	PCS is a user-owned AI continuity layer.  It sits between the user and interchangeable AI models and maintains the longer-lived things that individual model sessions normally lose.	2026-10-23	2026-09-21	q2
+PengLinzhi/DyGKT	45	NONE	main	Dynamic Graph for Adaptive Knowledge Tracing	2024-04-08	2024-03-27	q9
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	537	MIT	main	An ESP32-based open source quadruped robot pet framework for developing Boston Dynamics-style four-legged robots that are perfect for STEM, coding & robotics education, IoT robotics applications, AI-e	2026-10-24	2021-02-19	q4
+Phineas1500/Onhand	32	Apache-2.0	main	Free, open-source AI reading assistant for Chrome. Ask about any webpage, PDF or research paper and Onhand highlights the answer right on the page.	2026-11-04	2026-03-29	q4
+Pjk-llm/deepagents-learn	9	MIT	main	📚 LangChain Deep Agents 课程式学习项目(deepagents + DeepSeek):minimal-deepagent 基础课(最小智能体→工具→多轮对话→记忆→多智能体→生产化)+ advanced-deepagent 进阶课(组件原理+中间件/Backend/编排/生产化)+ 生产级个人助手综合实战(SaaS 多租户+述职报告自动化)。每课一个可运行示例+中文注释。	2026-08-25	2026-08-23	q1
+Ricardo-SE/university-survival-skill	5	NOASSERTION	main	大学信息差生存指南 · 一个大一新生把上百位学长学姐的经验做成了 AI skill · 保研/转专业/考研/入党/实习 · 持续更新四年	2026-09-10	2026-09-09	q1
+RohanMuppa/brightspace-mcp-server	62	MIT	main	MCP server for Brightspace (D2L). Check grades, due dates, assignments, announcements, rosters, syllabus & course content via Claude, ChatGPT, Cursor, Windsurf, or any MCP client. Works with any schoo	2026-11-03	2026-02-06	q4
+SJRiz/pytogether	262	MIT	main	Source code for pytogether.org — A fully browser-based collaborative IDE with real-time editing, live drawing, and voice chat.	2026-10-21	2025-08-14	q8
+SagarBiswas-MultiHAT/PhishGuard-AI	28	MIT	main	PhishGuard is a fast-paced web game that trains your instincts against email phishing. Powered by a Dual-AI Consensus Engine (OpenRouter & Groq), it generates and verifies highly realistic, unique phi	2026-10-13	2025-05-10	q4
+Sage-is/AI-UI	11	AGPL-3.0	develop	Sage.is AI-UI is a feature-rich and user-friendly AI creation platform designed for startups, small teams, and schools. It lets you work and create privately with your own AI Models and Agents. It als	2026-11-03	2025-10-31	q4
+SamDc73/Talimio	17	AGPL-3.0	main	Learn faster with the power of AI	2026-09-13	2024-11-10	q8
+Selleo/mentingo	106	MIT	main	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX.	2026-11-04	2024-08-01	q8
+ShadowQuill/langchain-langgraph-tutorial	9	Apache-2.0	main	LangChain / LangGraph 系统化学习的开源教程：9 个 Phase、26 个可运行示例、双语 VitePress 文档站，递进揭示各 Agent 框架共通的图编排本质。(A structured LangChain / LangGraph course — 9 phases, 26 runnable examples, bilingual VitePress docs, prog	2026-08-16	2026-08-05	q2
+Siddu-119/AI-StudyMate	9	NONE	main	🤖 An AI-powered study assistant designed to support students with smarter learning tools.	2026-10-29	2026-10-13	q3
+SirhanMacx/Claw-ED	63	MIT	main	Local-first AI teaching assistant for editable lesson drafts, student materials, and slides. Uses your curriculum and chosen model. Teacher-reviewed beta.	2026-09-19	2026-03-23	q8
+SonAIengine/ku-portal-mcp	13	MIT	main	MCP server for Korea University KUPID portal & Canvas LMS — notices, schedules, library seats, assignments, grades from Claude	2026-10-03	2026-03-01	q4
+Soonwook34/CRKT	11	Apache-2.0	main	Concept map-driven Response disentanglement method for enhancing Knowledge Tracing (CRKT)	2024-12-26	2024-06-12	q9
+Soptq/LANA-pytorch	22	MIT	main	Official Pytorch implementation of "LANA: Towards Personalized Deep Knowledge Tracing Through Distinguishable Interactive Sequences"	2021-04-28	2021-03-05	q9
+StudentSuite/awesome-student-resources	35	MIT	main	A curated list of the best software, tools, textbooks, channels, and resources for students. IB, IGCSE, SAT, and any student anywhere.	2026-11-02	2026-07-06	q8
+StudentSuite/awesome-study-resources	31	MIT	main	A curated list of the best exam prep, subject study, and learning-tool resources for students. IB, IGCSE, GCSE, A-Level, AP, SAT, ACT: every entry tagged free, freemium, paid, or open source.	2026-11-04	2026-07-22	q8
+SunnyAgrwl05/rural-guardian-intelligence-platform	6	MIT	main	AI-powered multi-agent platform for rural safety, disaster response, agriculture, health, education, and community intelligence.	2026-09-25	2026-09-24	q1
+THUwangcy/HawkesKT	32	MIT	main	WSDM'2021: Temporal Cross-Effects in Knowledge Tracing	2023-09-14	2020-11-02	q9
+Takamatsu-Hikaru/AI-Research-Guide	210	NONE	main	AI 科研入门指南：大学选择、科研 60 问、入门项目、学习路线与论文卡片。A bilingual guide to getting started in AI research.	2026-11-01	2026-10-05	q4
+Tanzania-AI-Community/twiga	54	MIT	development	Twiga is a WhatsApp bot for Tanzanian educators. 	2026-11-03	2024-07-16	q4
+TecFancy/dsh-deeptutor	9	NONE	main	Learning assistant extension for DeepSeek Harness (dsh): brings DeepTutor tutoring to your agent — deep explanations, self-test questions, learning paths, personal knowledge-base search (RAG), and not	2026-10-26	2026-08-13	q2
+TianHongZXY/pytorch-SAKT	38	NONE	master	a simple pytorch implemention of paper A Self-Attentive model for Knowledge Tracing	2023-07-23	2020-02-29	q9
+Ticus0228/Knowledge-Tracing-Datasets	10	NONE	master	Knowledge Tracing (KT) dtasets	2019-09-28	2019-09-28	q9
+Tzxser/aipha-learning-os	6	NOASSERTION	main	AIpha Learning OS — 个性化学习多智能体系统，融合 Multi-Agent、RAG、课程知识构建流水线、Neo4j 知识图谱、学习记忆与任务级 LLM 路由。	2026-08-11	2026-08-11	q1
+UpstageAI/cl4kt	33	NONE	main	This is our implementation for the paper "Contrastive Learning for Knowledge Tracing" (TheWebConf 2022).	2024-05-03	2022-02-02	q9
+VAIXLNS/VAIXLNS	8	NONE	vaixlns-architecture	╔════════════════════════════════════أرى أن هذا أصبح أقرب إلى Blueprint سيادي وليس مجرد مخطط نظام. ومع ذلك، إذا كان الهدف أن يكون هذا الرسم المرجعي النهائي (Master Architecture Blueprint) فلا تزال هنا	2026-09-02	2026-07-01	q5
+Vacademy-io/vacademy_edtech_platform	23	AGPL-3.0	main	Open source comprehensive e-learning platform with a focus on educational content delivery, learner tracking, and assessment management	2026-11-04	2024-10-18	q8
+ValeraZSD/terramentor	5	AGPL-3.0	main	An open-source AI tutor. Learn complex subjects from scratch: the model you connect writes the course, Terramentor plans it to your deadline, asks you to prove each topic and schedules reviews with FS	2026-11-04	2026-09-17	q2
+YangZhouEdu/DKT_pytorch	10	NONE	master	Deep Knowledge Tracing by Pytorch	2021-05-13	2021-05-12	q9
+YujxZJCN/teaching-skills	45	MIT	main	Teaching Skills for Claude Code — teaching lifecycle suite for university professors	2026-10-03	2026-06-10	q8
+ZYT64/KuroTutor	5	MIT	main	QQ 私聊里的 AI 家教：拍照解题、作业批改、错题复习、个性化出题、定时上课	2026-09-25	2026-08-29	q2
+Zenglian990/AI_Tutor_Release	82	MIT	master	EduAgent: Open-Source RAG AI Tutor for K-9 Education. 国内首个专为1-9年级量身定制的开源 RAG AI 教辅智能体	2026-11-02	2026-06-29	q8
+ZhijieXiong/pyedmine	82	MIT	main	A library of algorithms for reproducing knowledge tracing, cognitive diagnosis, exercise recommendation and learning path recommendation models.	2026-10-22	2025-03-03	q9
+aaryansamanta/ai-ethos	496	NONE	main	501(c)(3) nonprofit delivering ethical, inclusive, multilingual AI tutoring for underserved learners — low-income, rural, multilingual & neurodiverse students. 1,500+ students reached across 7 languag	2026-09-20	2025-12-01	q8
+abdullaitcenter-hue/comet-trail-archives	70	NONE	main	Tiny Comet History RPG API Profile: Educational Simulation Games Guide 2026	2026-11-04	2026-09-22	q8
+affromero/Sotto	31	NOASSERTION	main	Self-hosted, open source AI language learning. CEFR courses, adaptive listening, and speaking practice built from your notes, work, and interests, with your own agent and keys (BYOK).	2026-11-02	2026-02-08	q4
+ai-infra-curriculum/ai-infra-architect-learning	15	MIT	main	AI Infrastructure Architect Learning Track - System design and architecture patterns for ML	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-engineer-learning	1840	MIT	main	AI Infrastructure Engineer Learning Track - Production ML infrastructure curriculum (2-4 years experience)	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-engineer-solutions	12	MIT	main	Solutions for AI Infrastructure Engineer Track	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-junior-engineer-learning	259	MIT	main	AI Infrastructure Junior Engineer Learning Track - Comprehensive curriculum for entry-level ML infrastructure engineers (0-2 years experience)	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-ml-platform-learning	16	MIT	main	AI Infrastructure ML Platform Engineer Learning Track - Building self-service ML platforms at scale	2026-11-04	2025-10-25	q4
+ai-infra-curriculum/ai-infra-mlops-learning	15	MIT	main	AI Infrastructure MLOps Engineer Learning Track - MLOps pipelines, CI/CD for ML, and model lifecycle management	2026-11-03	2025-10-25	q4
+ai-infra-curriculum/ai-infra-performance-learning	80	MIT	main	AI Infrastructure Performance Engineer Learning Track - GPU optimization, inference optimization, and cost reduction	2026-11-03	2025-10-25	q4
+ai-shifu/ai-shifu	331	Apache-2.0	main	Get AI to teach and answer questions for you - just by typing!	2026-11-04	2024-07-23	q4
+apimarta6j/image-api-gateway-tutorial	55	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-02	2026-10-02	q2
+apimartat5/llm-api-tutorial	87	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartc30lq1/unified-ai-tutorial	78	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartcmob0klxg/video-api-gateway-tutorial	55	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-02	2026-10-02	q2
+apimartcmwlrmkd/video-api-tutorial	66	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartcsxei9/llm-api-gateway-tutorial	42	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartcv9m2znkl/model-gateway-tutorial	46	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartftbi/model-api-tutorial	51	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartgz0l/api-relay-tutorial	48	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimarthe2ht/ai-api-proxy-tutorial	63	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimarthuv1qma/llm-api-gateway-tutorial	58	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartjz/ai-api-gateway-tutorial	62	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartkp3iudem/ai-api-tutorial	47	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartldr6o6r3g/api-hub-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartlh08lf9/unified-ai-api-tutorial	59	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartmgu3/api-aggregator-tutorial	54	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartmk8/multi-model-api-tutorial	52	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartmqf3ytv9z/image-api-tutorial	58	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimarto6b/llm-api-tutorial	53	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartpx0d7edg8/llm-gateway-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartq3/openai-compatible-tutorial	46	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartte5mam5j/ai-api-gateway-tutorial	50	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartu1n/llm-api-proxy-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartu3pe/ai-api-tutorial	43	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartuys8r2uo/api-router-tutorial	49	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartw94zu4z/ai-gateway-tutorial	50	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartwt/openai-compatible-api-tutorial	46	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+apimartxbp7hw/multi-model-tutorial	40	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartxyv3b6/ai-gateway-tutorial	39	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-11-03	2026-10-02	q2
+apimartyvp957u6/api-proxy-tutorial	43	NOASSERTION	main	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens. USD settlement, pay-as-you-go, $1 minimum top-up	2026-10-12	2026-10-02	q2
+arshadshk/Last_Query_Transformer_RNN-PyTorch	45	NONE	main	Implementation of the paper "Last Query Transformer RNN for knowledge tracing" in PyTorch. (Kaggle 1st place solution)	2021-04-08	2021-03-04	q9
+arshadshk/SAKT-pytorch	50	NONE	main	Implementation of paper "A Self-Attentive model for Knowledge Tracing" 	2020-12-10	2020-12-09	q9
+artcc/freelingo	235	AGPL-3.0	main	Open-source, self-hosted AI language learning platform with local or cloud LLMs, CEFR study plans, an AI tutor, voice conversations, flashcards, and spaced repetition.	2026-11-02	2026-04-30	q8
+assafkip/claudemy	608	MIT	main	Claudemy: an open-source alternative to Udemy and Coursera. Give Claude a topic, it researches the web and builds a course of 2-minute audio lessons with cited sources. A free Claude Code skill.	2026-10-29	2026-10-14	q8
+aurafhe-official/mcp	37	MIT	main	Connect AI assistants to Aura encrypted numeric computation. Explore Aura AI, its published GPT-OSS-20B benchmark and public learning demos.	2026-09-24	2026-09-01	q3
+bcaitech1/p4-dkt-no_caffeine_no_gain	17	NONE	main	No-Caffeine-No-Gain's Deep Knowledge Tracing (DKT)	2021-07-29	2021-05-19	q9
+bentw-84/go-tutor	5	NOASSERTION	main	本地围棋复盘工具：KataGo 算事实，LLM 讲道理，外加错手重选训练	2026-08-10	2026-08-05	q2
+bigdata-ustc/EduKTM	267	Apache-2.0	main	The Model Zoo of Knowledge Tracing  Models	2024-01-02	2021-03-17	q9
+bnbu-busa-projects/AI_Learning_Assistant	6	NONE	main		2026-10-08	2026-09-23	q3
+brian901106/japanese-tutor-mugi	95	MIT	main	倉鼠むぎ陪你一對一練日語會話的手機網頁 App。核心思想：讓 LLM 以 JSON Schema 輸出結構化回覆，日文台詞與中文小提醒分欄位，前端用部分 JSON 解析邊收邊顯示；長時間聊天也維持 prompt 快取與語音快取。漢字讀音由 LLM 標註，漏標的由伺服器端 kuromoji 補上。糾錯自動存成小提醒本，可以開口練到會。語音可選本機 VOICEVOX 或雲端 Google／Azure，	2026-11-02	2026-10-28	q2
+cRED-f/QuestGen-AI-Agent	23	MIT	main	QuestGen lets you organize course materials, discuss them with an AI assistant, draft an assessment, revise individual questions, review and approve the results, and export student or instructor copie	2026-10-29	2025-03-11	q8
+caijimiao345/study-abroad-planner	6	NOASSERTION	main	AI-agent skill that exhaustively searches worldwide degree programmes, verifies every figure against official university pages, and outputs a filterable comparison page + Notion board. Optional: Cloud	2026-10-11	2026-10-02	q1
+canyongbs/advisingapp	340	NOASSERTION	main	Advising App® by Canyon GBS® is an AI-powered conversational assistant for staff, student success platform, and recruitment CRM designed specifically for colleges and universities to enhance student e	2026-11-04	2023-02-18	q8
+cdavid817/AI-Infra-Tutorial	17	MIT	main	《AI Infra》:面向平台建设方的中文 AI 基础设施书稿——31 章 + 附录 + 结构化数据与证据体系	2026-09-02	2026-08-23	q2
+cdavid817/awesome-agent-tutorial	42	NOASSERTION	main	《企业级 Agent 从入门到专家（2026版）》——从单 Agent 核心机制到多 Agent 与企业落地的工程化实战教程，配套可运行贯穿项目与 CI 验证门禁。	2026-10-12	2026-08-23	q2
+chadyi/StudyOnTV	23	NOASSERTION	main	StudyOnTV (Tiledaoti TV) — open-source Android TV app where kids unlock screen time by answering questions. Runs fully on the TV: no server, no account. Parents scan a QR code and manage questions fro	2026-11-04	2026-11-01	q8
+chipmates/agoracosmica	150	AGPL-3.0	main	A Living Library You Can Talk To. Thirty historical figures, their lives narrated, their ideas open to conversation, in English and German. Nonprofit, open source.	2026-11-04	2026-02-24	q8
+chrispiech/DeepKnowledgeTracing	313	NONE	master	source code for the paper Deep Knowledge Tracing	2015-12-16	2015-07-08	q9
+chrisreddington/flight-school	31	MIT	main	AI-powered coding practice platform built with the GitHub Copilot SDK. Personalized challenges, real-time evaluation, and learning guidance based on your GitHub profile.	2026-10-31	2026-01-24	q4
+christian-bick/edugraph-ontology	18	Apache-2.0	main	Open Education Ontology	2026-10-30	2024-11-04	q4
+ckyeungac/deep-knowledge-tracing-plus	124	NONE	master	It is the DKT+ model implemented in python3 and tensorflow1.2	2019-01-08	2018-02-11	q9
+classroomio/classroomio	1738	AGPL-3.0	main	ClassroomIO is an  Intelligent Customer Training Platform that helps SaaS companies use education to grow their business.	2026-11-04	2023-11-01	q8
+codeforlife-education/codeforlife-portal	54	NOASSERTION	master	The portal code for Code for Life: an online platform providing free educational resources, materials and games to teach about coding and technology.	2026-10-27	2014-07-23	q8
+codeforlife-education/rapid-router	60	NOASSERTION	master	Two games: a Blockly game (Rapid Router) for ages 5-11, and a Python game (Python Den) for ages 11+.	2026-10-23	2014-04-03	q8
+codelitdev/courselit	1294	AGPL-3.0	main	Create/Sell courses and digital downloads and publish blogs on your own branded website. An open source alternative to Teachable, Thinkific, Podia and the likes.	2026-11-03	2019-07-31	q10
+codingchild2424/MonaCoBERT	16	NONE	master	Monotonic Attention based ConvBERT for Knowledge Tracing	2022-09-14	2022-07-30	q9
+csmberkeley/csm_web	20	MIT	master	Web applications for CS Mentors.	2026-11-03	2018-10-17	q8
+cstar0521/ai-voice-agent	8	NONE	main	A multilingual AI voice agent that automates education loan qualification for study-abroad students. Features intelligent call handling, real-time sentiment analysis, lead qualification, and seamless 	2026-09-19	2026-09-19	q1
+davidoj/deepknowledgetracingTF	9	MIT	master	Tensorflow implementation of deep knowledge tracing (Piech 2015)	2017-08-29	2017-07-19	q9
+demetrius-edelin/tutor	6	MIT	master	Self-hosted AI tutor (bring your own API key) that turns your books, online documentation, and YouTube videos into a course. It maps the concepts, tests what you know, and teaches the rest with refere	2026-11-04	2026-10-02	q2
+deneyapkart/deneyapkart-arduino-core	54	LGPL-2.1	master	Arduino Core for Deneyap DevKits	2026-10-28	2021-04-20	q8
+dsiufl/WorkshopArchive	32	NONE	main	Repository hosting a series of educational workshops at the University of Florida for 2023-2026 covering topics such as Data Science, Artificial Intelligence and Machine Learning.	2026-10-03	2023-08-20	q4
+dungnotnull/AI-Machine-Learning-Deep-Learning-Tutor-agent-skill	4	NONE	main	🧠 Research-validated, production-grade AI/ML/DL Intelligent Tutoring System harness. Grounded in 25+ peer-reviewed papers (Cognitive Load Theory, Socratic Dialogue, Spaced Retrieval). Features adaptiv	2026-08-11	2026-08-11	q6
+dungnotnull/Child-Protection-Safeguarding-Advisor-agent-skill	4	NONE	main	🛡️ Educational AI skill for child safeguarding & protection education. Grounded in WHO/UNICEF INSPIRE strategies, Belsky's ecological risk-factor model, Olweus bullying prevention, and UNCRC legal fra	2026-08-13	2026-08-13	q1
+dungnotnull/Neurodiversity-Awareness-Early-Signs-Education-Guide-agent-skill	4	NONE	main	🧠 Educational AI skill for neurodiversity awareness & early developmental milestones. Grounded in Singer's Neurodiversity paradigm, DSM-5/ICD-11 educational frameworks, and CDC/AAP milestone tracking.	2026-08-13	2026-08-13	q1
+dxywill/deepknowledgetracing	39	NONE	master	Pytorch implementation for Deep Knowledge tracing	2018-08-28	2018-08-28	q9
+echo-loop/Echo-Loop	4652	AGPL-3.0	main	Echo Loop 是一款科学、高效的 AI 英语听说训练 App，通过精听、跟读、盲听、复述和间隔复习，自动驱动学习者把每一段音频真正练懂、练熟、练到会说。	2026-11-04	2026-05-07	q4
+ekinakyurek/influence	40	MIT	master	Code for "Tracing Knowledge in Language Models Back to the Training Data"	2022-12-27	2021-11-11	q9
+elimu-ai/webapp	41	MIT	main	🖥  Web application for hosting Android applications and educational content	2026-10-27	2016-01-02	q8
+engyossefyossry-crypto/autonomous-devsecops-triage-engine	9	MIT	main	An enterprise-grade, asynchronous AI orchestration framework built on n8n that automates production incident response, forensic code analysis, vulnerability assessments, and multi-channel system notif	2026-07-07	2026-07-07	q6
+epicfleasafeguard/ybqhbgvt	22	NONE	main	GPT-Skills — AI-powered assistant that helps you learn, practice, and master any skill with personalized guidance. Real-time feedback, step-by-step tutorials, and adaptive learning paths. Boost your p	2026-09-01	2026-08-09	q3
+eren23/attocode	17	MIT	main	A series of lessons, 0 to hero ai coding agent building guide.	2026-11-04	2026-01-21	q4
+eugeniughelbur/doceo	16	MIT	master	Claude Code skill that teaches you anything in one screen: visual lessons with memory and a feedback loop	2026-10-25	2026-07-03	q4
+f3an/kodeida	25	Apache-2.0	main	Kodeida — a game where your code moves the hero: LeetCode techniques in the worlds of Ukrainian literature. TypeScript, JavaScript and Python, offline.	2026-10-29	2026-10-15	q8
+fallingcat/ComputeRayTracingSamples	79	MIT	master	This project collects multiple compute shader based ray tracing samples for Unity. The main purpose of this project is demonstrating how the ray tracing works. It is very helpful for the people who wa	2022-10-09	2021-03-10	q9
+fangyuan-3149/book-learning-tutor	14	NOASSERTION	main	授业 · Book Learning Tutor — Turn any book on your drive into a personal AI tutor (Agent Skill)	2026-10-26	2026-08-10	q1
+farshadfazeli/ai-agent-structure-guide	5	NONE	main	Interactive bilingual (FA/EN) guide to AI agent project structure, with a workflow-vs-skill comparison and a 20-question quiz	2026-10-31	2026-10-24	q1
+five-plus-one/AI-Marker-Suite	115	GPL-3.0	dev	AI 批改助手 — 多模态 AI 在线阅卷自动批改油猴脚本，支持智学网、七天网络、好分数、五岳阅卷、阅小二、华翰云、光大阅卷、九科星、乐华阅卷、鑫考、C30教育云、AMEQP、海云智评、九五优评、上进教育服务云、南昊AI教学提分、鑫考校园、酷鱼网、A佳教育、云阅卷(开州)等 33 个阅卷平台。自动识别手写答案、智能评分、自动填分提交，支持普通/试改/无人值守/双评仲裁四种模式、分小题评分、分数纠错	2026-11-03	2026-02-05	q4
+frappe/lms	3371	AGPL-3.0	develop	Easy to Use, 100% Open Source Learning Management System	2026-11-04	2021-02-15	q10
+githubg0/CoKT	18	NONE	main	Implementation of Improving Knowledge Tracing with Collaborative Information	2021-12-25	2021-12-16	q9
+godz1llla/awesome-kazakhstan-dev	39	CC0-1.0	main	🇰🇿 Кураторский список IT-ресурсов Казахстана: компании, гранты, обучение, комьюнити, API и датасеты	2026-09-06	2026-09-05	q8
+gotonote/awesome-agent-boom	25	MIT	main	AI Agent 开源书单/教程合集 | Awesome list of LLM Agent books & courses	2026-11-03	2026-08-22	q1
+guillermoscript/lms-front	44	MIT	master	Open-source multi-tenant LMS for creators and schools: sell courses on your own subdomain. Next.js 16 + React 19 + Supabase (RLS) + Stripe Connect, an AI tutor over MCP, gamification, certificates, i1	2026-11-02	2023-07-12	q8
+gygy-open/question-bank	89	AGPL-3.0	main	AI-native question bank & paper composition system: smart import from Word/Markdown/images, LaTeX, review workflow, MCP. Desktop(Windows, Mac) & Docker. | AI 原生题库与组稿系统：多学科、智能导入、知识点匹配、MCP，支持桌面版（Windows	2026-11-04	2026-07-14	q4
+haxtheweb/edtechjoker	18	Apache-2.0	master	Project EdTechJoker resources / materials	2026-10-14	2021-08-18	q8
+haxtheweb/haxcms-php	130	Apache-2.0	master	HAX + CMS to manage your microsite universe with PHP backend	2026-11-04	2018-07-19	q8
+hcnoh/knowledge-tracing-collection-pytorch	194	MIT	main	A collection of Knowledge Tracing model implementations with PyTorch	2022-06-16	2021-03-06	q9
+he-yufeng/CodeABC	19	MIT	main	AI-powered code reader for non-programmers | 码上懂 — 不用学编程，也能读懂代码	2026-10-29	2026-04-07	q4
+hxwujinze/federated-deep-knowledge-tracing	10	NONE	main		2021-12-21	2020-12-31	q9
+hyyhf/agent-book-code	59	MIT	main	《从0开始构建 AI 智能体》 一本带你亲手打造属于自己的AI Agent 的实战书	2026-10-03	2026-04-23	q4
+iblai/lms	208	MIT	main	Skills intelligence platform — discover courses, track competencies, earn credentials, and accelerate workforce development. Built with Next.js 15, React 19, and the ibl.ai SDK.	2026-11-03	2026-03-04	q8
+ictinnovations/ICTSchool	72	NONE	main	School Management Software with unified communications and  Computer telephony integeration (CTI) 	2026-11-01	2021-06-29	q8
+ictinnovations/ictexam-mcp	17	MIT	main	MCP server for ICTExam — read exams, gradebooks and item analysis; parse papers with AI and publish exams. By ICT Innovations.	2026-10-26	2026-09-01	q8
+ilyautov/not-a-blogger	5	MIT	main	Toolkit for AI agents that make short videos: recipes, prompts, templates and QA tools. Includes 18 agent skills, a text mini-course for people, two runnable starters and 12 real video breakdowns. 143	2026-11-02	2026-10-24	q1
+isra-moussaoui/Multi-Agent-Tutoring-Systems	5	NONE	main	Research project investigating whether multi-agent LLM architectures reduce pedagogical sycophancy and over-validation in AI tutoring. Built with LangGraph and evaluated on the BEA 2026 propositional 	2026-09-15	2026-07-08	q2
+jaltekruse/Free-Math	74	NONE	master	An offline React web application for managing digital math homework	2026-10-16	2016-02-12	q8
+janosdios/langteacher	6	NOASSERTION	main	Voice-based language tutor that runs entirely offline — speech-to-text, LLM, and text-to-speech on your own hardware.	2026-09-22	2026-07-15	q2
+jarviszhb/KnowledgeTracing	27	NONE	master	Some implementations of knowledge tracing with pytorch	2020-11-03	2020-02-06	q9
+jcputney/scorm-again	362	MIT	master	A modern SCORM JavaScript runtime library.	2026-11-02	2019-11-10	q8
+jdxyw/deepKT	28	MIT	master	A repo for knowledge tracing implementation by PyTorch	2021-11-05	2021-05-12	q9
+jennyzhang0215/DKVMN	146	NONE	master	Dynamic Key-Value Memory Networks for Knowledge Tracing 	2019-10-21	2017-03-29	q9
+jhljx/GKT	141	MIT	master	Graph-based Knowledge Tracing: Modeling Student Proficiency Using Graph Neural Network	2021-03-19	2020-09-18	q9
+jilljenn/dktm	8	NONE	master	Deep Knowledge Tracing Machines	2023-07-28	2019-02-24	q9
+jilljenn/ktm	140	MIT	master	Knowledge Tracing Machines: Factorization Machines for Knowledge Tracing	2025-08-12	2018-03-06	q9
+john1226966735/HAKT	10	NONE	main	Hierarchical Attention Network based Explainable Knowledge Tracing	2022-05-18	2021-10-09	q9
+juno-hwang/juno-dkt	14	NONE	master	Scikit-learn style implementation of Deep Knowledge Tracing models based on pytorch.	2022-01-27	2021-08-16	q9
+kirill-markin/flashcards-open-source-app	106	MIT	main	AI-powered flashcards app built for serious daily study on iOS, MacOS, Android, and the web. Use it to prepare for exams, learn vocabulary, memorize technical terms and facts, improve your material wi	2026-11-04	2026-03-02	q8
+klausners/course-builder	18	MIT	main	Research-driven course generator for Claude Code. Reads real articles. Writes real courses.	2026-10-27	2026-03-27	q4
+kobkrit/thai-llm-tutorials	35	NOASSERTION	main	สอน LLM ภาษาไทยตั้งแต่สมการถึงโค้ดที่รันได้จริง — โน้ตบุ๊กประกอบซีรีส์ 10 ตอนจาก kobkrit.com	2026-07-22	2026-07-19	q2
+kolchinski/student_simulator_policy	9	NONE	master	Student simulation using Deep Knowledge Tracing (LSTM-based model). Learning to present educational material optimally using reinforcement learning (policy gradient methods).	2018-09-27	2017-05-31	q9
+kostyaP-hub/agent-safe-github-lab	5	Apache-2.0	main	Learn to inspect external sources before AI agents use them: inert exercises, static risk receipts, and clear boundaries before execution.	2026-10-04	2026-09-17	q1
+langx/langx	109	BSD-3-Clause	main	We connect language learners worldwide. Practice and immerse yourself in different languages.	2026-11-03	2023-07-27	q8
+langx/website	18	MIT	main	This is the official website of langx.io	2026-11-02	2023-10-20	q8
+lccasagrande/Deep-Knowledge-Tracing	107	MIT	master	An implementation of the Deep Knowledge Tracing (DKT) using Tensorflow 2.0	2020-12-04	2018-02-14	q9
+learnhouse/learnhouse	2447	AGPL-3.0	dev	The Next-gen Open Source learning platform for everyone ✨	2026-11-04	2022-05-10	q4
+learning-commons-org/evaluators	88	NOASSERTION	main	Evaluation for AI outputs against trusted educational rubrics. Measure and improve content quality with research-backed rubrics — ensuring rigor, reliability, and alignment to classroom needs.	2026-11-04	2025-09-22	q8
+learning-commons-org/knowledge-graph	167	NOASSERTION	main	The data layer for smarter educational AI. Integrate trusted instructional content and research directly into your AI-powered tools — improving precision, relevance, and instructional alignment.	2026-10-28	2025-09-17	q8
+learningequality/kolibri	1168	MIT	develop	Kolibri Learning Platform: the offline app for universal education	2026-11-02	2016-01-19	q8
+lilstrawberry/MIKT	11	NONE	master	This is the code for the paper "Interpretable Knowledge Tracing with Multiscale State Representation".	2025-01-23	2023-09-30	q9
+lilstrawberry/ReKT	10	NONE	main	This is the code for the paper "Revisiting Knowledge Tracing: A Simple and Powerful Model".	2024-07-21	2024-01-20	q9
+lingochamp/tensorflow-dkt	49	NONE	master	Build DKT (Deep Knowledge Tracing) model with TensorFlow	2021-12-25	2017-03-23	q9
+llwand1/xuelian-agent	24	MIT	main	学练agent-应试学习,学习ai,题库搜索,练习反馈。StudentBuddy：面向编程入门与自学的开源 AI 学习 Agent，串联资料共读、出题作答、逐题解析与知识复习；支持 Windows 本地版和自托管。	2026-10-27	2026-09-05	q1
+lowwwbank/anything-to-course	31	MIT	main	Universal AI agent skill that turns any material into learning-science-based self-study courses with retrieval practice, spaced repetition, and tutor mode.	2026-07-07	2026-07-03	q2
+lucky7-code/CORE	12	NONE	main	Do We Fully Understand Students’ Knowledge States? Identifying and Mitigating Answer Bias in Knowledge Tracing	2024-04-03	2023-06-13	q9
+lucky7-code/DKVMN	23	NONE	main	Dynamic Key-Value Memory Networks for Knowledge Tracing	2021-08-24	2021-08-24	q9
+lucy66666/OKT	25	MIT	main	Code for Open-ended Knowledge Tracing	2023-10-18	2022-10-14	q9
+mantou6666/Math-Modeling-Agent-Flow	26	MIT	main	Math Modeling AI Agent Flow | 数学建模全流程 AI 助手（国赛 CUMCM / 美赛 MCM-ICM）。四阶段流水线 Solver→Paper→Finalizer→Growth：解题认证、论文写作、提交终检、赛后复盘。防 AI 幻觉、防版本冲突，可安装到 Claude Code / Codex。	2026-08-20	2026-08-19	q1
+maplexrain/unyra	77	MIT	main	归一 Unyra · 探索式学习：本地优先的 AI 学习辅助桌面应用（Electron + React）	2026-11-04	2026-09-29	q4
+marvelefe/machinelearning101	30	MIT	main	An interactive, browser-based machine learning learning platform designed for beginners. Learn ML concepts through hands-on experimentation with zero setup required	2026-11-01	2025-10-18	q8
+mehmetkahya0/AI-Catalog	502	GPL-3.0	main	Huge AI models catalog. A curated list of AI tools, platforms, and resources across various domains.	2026-11-01	2023-06-30	q4
+mehullohar07/RUDHRA-AI	6	NONE	main	A Python-based personal AI assistant project focused on learning AI development, LLM integration, and building a modular desktop assistant.	2026-10-30	2026-09-08	q3
+mithun-27/Xynova.ai	18	NONE	main	Xynova.ai is a state-of-the-art personalized learning platform that engineers custom roadmaps for any subject. Powered by advanced AI reasoning, it provides structured modules, interactive tutoring, a	2026-10-31	2026-03-07	q4
+ml-smores/fast	31	GPL-2.0	master	Feature Aware Student knowledge Tracing Toolkit.  Implements HMMs with features for modeling student performance	2026-09-16	2014-09-20	q9
+mlcolab/psi-kt	10	AGPL-3.0	main	Official code for ICLR'24 "Predictive, scalable and interpretable knowledge tracing on structured domains"	2024-03-23	2022-07-30	q9
+mmkhajah/dkt	103	MIT	master	Our implementation of the LSTM version of Deep Knowledge Tracing (DKT)	2019-05-25	2016-03-08	q9
+mrsser/ASIKT	10	Apache-2.0	main	code for paper: Interpretable Knowledge Tracing with Difficulty-Aware Attention  and Selective State Space Model	2026-02-03	2025-04-17	q9
+msakarvadia/memory_injections	12	MIT	main	Initial Exploratory Works on Knowledge Tracing in Transformer Based Language Models	2024-02-21	2023-03-15	q9
+nakafaai/nakafa.com	81	NOASSERTION	main	AI Native Free High-Quality Learning Platform (K-12 to University)	2026-11-02	2025-02-20	q4
+nhunsaker/github-triage-agent-tutorial	4	NONE	main	Tutorial: build an issue-triage agent on stock GitHub. A rulebook in Actions labels and routes every new issue, investigates the unsure ones, and learns from your corrections.	2026-11-02	2026-09-01	q2
+ningkaikok/dotty-tutor	10	Apache-2.0	main	AI 教材数字化与互动辅导平台：PDF/扫描教材经 MinerU OCR 结构化出题，文本 + 视觉双模型审校与确定性质量门禁；学生端七种题型互动、分层提示与错题多轮陪练闭环；FastAPI + PostgreSQL JSONB + React 19	2026-10-24	2026-08-01	q2
+nju-websoft/HuggingBench	17	Apache-2.0	main	[SIGIR 2025] Benchmarking Recommendation, Classification, and Tracing Based on Hugging Face Knowledge Graph	2025-06-06	2025-02-17	q9
+nkondapa/VisualKnowledgeTracing	20	NONE	main		2022-07-25	2022-07-19	q9
+oaknational/oak-ai-lesson-assistant	35	MIT	main	Oak's AI Projects including our AI Lesson Planning Assistant (Aila)	2026-11-04	2024-08-21	q4
+oezyurty/ExRec	14	NONE	main	Personalized Exercise Recommendation with Semantically-Grounded Knowledge Tracing	2025-12-25	2025-05-13	q9
+oezyurty/KCQRL	11	NONE	main	Automated Knowledge Concept Annotation and Question Representation Learning for Knowledge Tracing	2025-07-16	2024-09-30	q9
+onemnemo/mnemo	123	Apache-2.0	main	Mnemo is a free, open-source study application built with Photino X and .NET 10, designed to help students, researchers, and lifelong learners master any subject.	2026-10-22	2025-07-30	q8
+ontoagents/multiagent-lab	6	Apache-2.0	main	OntoAgents — a personal work & learning assistant grounded on ontologies: build AI agents and their knowledge bases (ontology lifecycle: build → run → audit), fully self-hosted & local. Go · CloudWeGo	2026-11-04	2026-09-18	q3
+opencast/annotation-tool	42	ECL-2.0	master	A video annotation service that is suitable for research, teaching and learning	2026-10-19	2018-01-10	q8
+pacewisdomhq/TutorLoom	77	Apache-2.0	main	Self-hosted, multi-tenant learning management system (LMS) for training institutes and teams: course builder, trainer and student portals, progress tracking. Django + React. Apache-2.0.	2026-11-04	2026-10-07	q8
+particify/arsnova-server	67	GPL-3.0	master	The backend components of ARSnova. ARSnova is a modern, web-based approach to Audience Response Systems (ARS).	2026-11-04	2013-07-24	q8
+penecho/penecho	2512	AGPL-3.0	main	Think with AI beyond the chat box. A shared canvas for handwriting, equations, diagrams, and spatial reasoning.	2026-11-02	2026-07-14	q4
+philipobiorah/agents-101-workshop	7	NONE	main	A beginner-friendly Google ADK workshop that builds AI agents step by step: a general assistant, a time-aware agent, a search-enabled agent, a learning assistant, and a CSV expense tracker. Includes P	2026-10-19	2026-10-19	q3
+pnnnx/local-code-tutor	20	MIT	main	Fine-tune Qwen2.5-Coder-7B for free (QLoRA on Kaggle T4) and run a local coding agent that runs your code instead of guessing — 8 GB Mac, llama.cpp, LoRA weight analysis with charts	2026-10-21	2026-10-19	q2
+pokerme7777/HiTSKT	8	NONE	main	[Knowledge-Based Systems] HiTSKT: A hierarchical transformer model for session-aware knowledge tracing	2024-09-25	2021-09-14	q9
+princechhimpachhimpasaab-lang/omega-epsilon-problem-forge	56	NONE	main	Olympiad Problem Generator 2026: Create Infinite Spanish Math Olympiad-Style Challenges	2026-11-04	2026-08-25	q4
+pydaxing/Deep-Knowledge-Tracing-DKT-Pytorch	91	NONE	master		2024-06-21	2019-07-15	q9
+pykt-team/pykt-toolkit	457	MIT	main	pyKT: A Python Library to Benchmark Deep Learning based Knowledge Tracing Models	2026-10-18	2022-05-14	q9
+qshine/llm-lora-tutorial	25	MIT	main	从零走通 QLoRA 微调与 vLLM 部署的中文实操手册	2026-10-13	2026-10-11	q2
+raphacoh/daily-wow-kit	4	MIT	main	A new interactive lesson for your kids every morning, built overnight by an AI agent: page engine, assistant proxy, and the prompts that run it (Claude Cowork + Claude Code routines).	2026-09-08	2026-09-07	q1
+roVeloupe/essay-grader	20	NONE	main	Essay Grader: photo to OCR to proofreading to rubric-based grading to Word/Markdown/PDF export. Electron desktop app with a built-in free model channel, no API key required.	2026-10-22	2026-09-07	q4
+robert-lindsey/WCRP	24	MIT	master	Weighted Chinese Restaurant Process model for inferring skill labels in Bayesian Knowledge Tracing	2016-06-30	2015-05-30	q9
+robocode-dev/tank-royale	270	Apache-2.0	main	Git repository for Robocode Tank Royale	2026-11-03	2022-02-09	q4
+rschmucker/Large-Scale-Knowledge-Tracing	41	NONE	master	Efficient implementations for handling large-scale student log data and knowledge tracing algorithms.	2025-11-03	2021-08-31	q9
+rudra496/StealthHumanizer	202	MIT	master	🔓 Free open-source AI text humanizer — bypass GPTZero, Turnitin & AI detectors with 16+ Languages support. 35 providers, 4 rewrite levels, 6 Writing Styles, 9 Text Purposes, 13 Tone Presets, multi-pas	2026-11-03	2026-03-31	q4
+rudra496/devroadmaps	20	MIT	master	🗺️ Developer Roadmaps — 20 career paths, 870+ topics, 1,880+ free resources. PWA, certifications, community-driven. Your free guide from beginner to senior dev.	2026-10-28	2026-03-26	q4
+rudra496/sciencelab3d	25	MIT	main	🔬 ScienceLab 3D — Interactive STEM education platform with 40+ virtual experiments in physics, chemistry & biology. Learn science by doing, right in your browser.	2026-11-01	2026-03-23	q8
+rui9812/KnowTrace	14	NONE	main	[KDD 2025] KnowTrace: Bootstrapping Iterative Retrieval-Augmented Generation with Structured Knowledge Tracing	2025-02-19	2025-02-19	q9
+sakaiproject/sakai	1240	ECL-2.0	master	Sakai is a freely available, feature-rich technology solution for learning, teaching, research and collaboration. Sakai is an open source software suite developed by a diverse and global adopter commu	2026-11-04	2014-12-29	q10
+sanyaden/agents0826	4	NONE	main	AI Agents PRO (FwDays, потік 08.2026) — наскрізний практикум: один запит клієнта, вісім шарів агентної архітектури. Кожен module = попередній + один шар.	2026-09-02	2026-08-15	q1
+scollovati/awesome-lti	78	CC-BY-SA-4.0	main	List of awesome resources for learning and developing tools according to the Learning Tools Interoperability (LTI ©) standard created by the 1EdTech Consortium.	2026-10-05	2020-12-22	q8
+scott-pu-pennstate/dktt_light	18	NONE	main	Deep Knowledge Tracing with Transformers (Light Version)	2023-04-29	2021-04-08	q9
+scriptology/open-course-cli	17	Apache-2.0	main	A terminal AI tutor for language learning. It runs in the terminal; exercises, lessons, and answer analysis are generated by a chosen LLM provider.	2026-09-21	2026-07-16	q2
+sdsrss/code-graph-mcp	90	MIT	main	AST knowledge graph MCP server for Claude Code — semantic search, call graph traversal, HTTP route tracing, impact analysis. Auto-indexes 10 languages via Tree-sitter.	2026-11-03	2026-03-10	q9
+seehiong/eduvis	28	NOASSERTION	main	An open, curriculum-aware schema and reference SVG renderer for educational content.	2026-10-11	2026-06-13	q8
+seewoo5/KT	90	NONE	master	Knowledge Tracing Models with PyTorch	2024-08-11	2020-03-28	q9
+selmetwa/parallel-arabic	26	NONE	master	Arabic language practice platform	2026-11-04	2024-01-06	q8
+senjun-team/senjun-courses	161	GPL-3.0	main	Курсы от программистов для программистов	2026-10-24	2023-05-01	q8
+shalini1194/RKT	45	NONE	master	The code corresponding to paper RKT : Relation-Aware Self-Attention for Knowledge Tracing	2021-03-12	2020-08-17	q9
+shigella520/MindTrain	128	MIT	main	AI-driven knowledge training platform with pluggable schedulers, Codex Skill integration, and optional Anki/FSRS support.	2026-10-15	2026-07-17	q8
+shivanandmn/Knowledge-Tracing-SAINT	32	NONE	main	Towards an Appropriate Query, Key, and Value Computation for Knowledge Tracing -Paper Implementation on "Riiid! Answer Correctness Prediction", Kaggle Competition	2020-12-17	2020-12-17	q9
+shivanandmn/SAINT_plus-Knowledge-Tracing-	62	NONE	main	Implementation of [SAINT+: Integrating Temporal Features for EdNet Correctness Prediction](https://arxiv.org/abs/2010.12042)	2021-11-16	2020-12-25	q9
+shshen-closer/Convolutional-Knowledge-Tracing	29	NONE	master		2021-09-05	2020-05-22	q9
+sitor-ai/frametell	471	AGPL-3.0	main	Frametell: turn your ideas and material into vivid explainer videos with an AI director agent. Local-first, any model.	2026-11-03	2026-10-10	q1
+siyuanzhao/2016-EDM	58	NONE	master	Source code and data sets for Going Deeper with Deep Knowledge Tracing (EDM-2016)	2017-02-16	2016-03-04	q9
+skewondr/FoLiBi	22	NONE	folibi	Forgetting-aware Linear Bias for Attentive Knowledge Tracing	2024-05-09	2023-08-07	q9
+srinivasyadav63020-coder/AI-Study-Assistant	9	NONE	main	AI Study Assistant is a Flutter-based mobile application that uses Artificial Intelligence to provide students with a personalized and interactive learning experience. The application helps students u	2026-09-25	2026-08-24	q3
+sulingling123/Knowledge_Tracing	78	NONE	master	自适应学习模型 - 知识追踪	2019-10-08	2019-02-19	q9
+super-rick/ai-agent-tutorial	9	NONE	main	从 0 手写 AI Agent —— 完整 Python 教程 不依赖 LangChain / LlamaIndex 等任何 Agent 框架，纯手写实现一个完整的 AI Agent 应用， 覆盖 Agent 的全部核心概念：LLM 调用、工具、ReAct 循环、记忆、RAG、规划、多智能体、评估。	2026-08-04	2026-08-04	q2
+sylhetyhackvenger/BLASTAAR	4	MIT	main	BLASTAAR is an enterprise-grade gray hat hacking platform featuring AI-powered vulnerability detection, zero-day hunting, and comprehensive port scanning across 200+ services. With built-in cloud, con	2026-08-22	2026-07-23	q6
+sylhetyhackvenger/CMSIAF	7	GPL-3.0	main	CMSIAF (Content Management Security Intelligence Framework) is an enterprise-grade penetration testing tool supporting 200+ CMS platforms with 64 token bypass vectors, 14-phase reconnaissance, 10-phas	2026-09-02	2026-08-29	q6
+syunnmo/FGKT	10	NONE	main	Fine-Grained Knowledge Tracing model (FGKT) 	2023-03-22	2022-08-17	q9
+tenstorrent/tt-vscode-toolkit	12	Apache-2.0	main	A complete learning and development environment for Tenstorrent hardware and software	2026-11-02	2025-12-18	q4
+thosgt/kt-algos	13	NONE	master	Implementation of some popular knowledge tracing algorithms	2019-09-27	2019-09-27	q9
+tianlinyang/DKVMN	24	NONE	master	Dynamic Key-Value Memory Networks for Knowledge Tracing	2018-03-28	2018-03-07	q9
+tjayze/olympiad-problem-forge	57	NONE	main	Best Open-Source Math Olympiad Problem Generator 2026	2026-11-04	2026-09-21	q4
+tong666-bit/song-hao-math	4	MIT	main	大学数学/考研数学 AI 陪练：微积分、线代、概率统计、复变；分步板书、15个例题、反例与定理条件。宋浩风格，非官方。Chinese mathematics tutoring Agent Skill.	2026-10-09	2026-08-04	q1
+tsugiproject/tsugi	377	Apache-2.0	master	Tsugi Admin, Developer, and Management Console (pls join the dev list)	2026-11-04	2013-11-28	q8
+tswsxk/TKT	14	MIT	master	Multiple Knowledge Tracing models implemented by pytorch	2021-08-22	2019-12-11	q9
+tswsxk/XKT	19	MIT	master	Multiple Knowledge Tracing models implemented by mxnet	2022-10-20	2019-07-02	q9
+ucfopen/Materia	52	AGPL-3.0	master	Engage students with easily embedded apps for online courses. Supercharge your course with compelling experiences and game mechanics.	2026-10-30	2013-11-07	q8
+ucfopen/Obojobo	72	AGPL-3.0	master	Next generation course content for your LMS. Easy for beginners, but powerful enough for researchers.	2026-10-14	2018-09-04	q8
+ucfopen/UDOIT	117	GPL-3.0	main	The Universal Design Online content Inspection Tool, or UDOIT (pronounced, “You Do It”) enables faculty to identify accessibility issues in their Learning Management System. It will scan a course, gen	2026-10-30	2015-06-10	q8
+ucfopen/quiz-extensions	16	MIT	master	A self-service LTI for faculty to easily extend time for multiple users for all quizzes at once.	2026-11-02	2018-05-14	q8
+umass-ml4ed/dialogue-kt	42	MIT	main	Code for the paper "Exploring Knowledge Tracing in Tutor-Student Dialogues using LLMs" at LAK2025.	2025-02-12	2024-09-04	q9
+umass-ml4ed/kcgen-kt	8	NONE	main	Official repo for "Automated Knowledge Component Generation and Knowledge Tracing for Coding Problems" (ACL2026 Findings)	2026-06-09	2025-02-25	q9
+utkarshsrivastava/ParallelSparseMatrixFactorization	12	NONE	master	Sparse Matrix Factorization (SMF) is a key component in many machine learning problems  and there exist a verity a applications in real-world problems such as recommendation systems,  estimating missi	2016-01-25	2015-11-30	q9
+uttkarshparmar50/LIBRARY-MANAGEMENT-SYSTEM-L_I_B_R_A-	14	NONE	main	1-Project Title “Library Management System (L_I_B_R_A)” The “Library Management System” has been developed to override the problems prevailing in the practicing manual system. This software is support	2021-10-24	2021-10-24	q9
+veolms/veolms	81	AGPL-3.0	main	Open Source LMS	2026-11-04	2026-08-02	q10
+vinitra-zz/CognitiveTutorPrediction	11	NONE	master	Bayesian Knowledge Tracing for Student Performance Prediction	2017-09-11	2017-09-11	q9
+vinitra-zz/RNNModelingForEdu	10	NONE	master	Deep Knowledge Tracing - RNN modeling for ASSISTment data	2017-11-10	2017-09-25	q9
+virgiliojr94/book-to-skill	36936	MIT	master	Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.	2026-11-03	2026-05-01	q8
+weishao2/tizhuang-agent-skills	36	MIT	main	2000万+中小学K12真题题库 Skill：免费注册、免费抽题、教材/章节/知识点检索、练习测验与AI智能组卷。	2026-10-18	2026-08-11	q1
+wixette/leibniz-stepped-reckoner	34	Apache-2.0	main	Interactive 3D simulator of Leibniz's stepped reckoner, the first mechanical calculator to add, subtract, multiply and divide. Lessons in 10 languages, in the browser.	2026-10-29	2026-10-18	q8
+wlmiller/BKTSimulatedAnnealing	10	MIT	master	A modification of Baker et al.'s BKT Brute Force code which uses simulated annealing algorithm to more efficiently choose optimal Bayesian Knowledge Tracing parameters.	2022-01-29	2014-05-02	q9
+wondermayank/ai-chat	17	NONE	main	AI study assistant for CUET, Banking, and Commerce students, powered by the Tiny AI model	2026-10-28	2026-06-27	q4
+xbh0720/LBKT	21	NONE	main	Learning Behavior-oriented Knowledge Tracing	2024-04-16	2023-04-13	q9
+xbsheng/deepseek-harness-tutorial	10	NONE	main	从零实现 DeepSeek Harness 教程:mini-dsh 简易版实现	2026-08-17	2026-08-13	q2
+xeniaqian94/SLAM	8	NONE	master	Second-language acquisition modeling, that extends the task of knowledge tracing. PyTorch implementations of neural collaborative filtering, (TODO) deep knowledge tracking (LSTM and Memory Network) on	2018-03-18	2018-02-17	q9
+xiaofengShi/DKT-TensorFlow	50	NONE	master	Deep Knowledge Tracing in TensorFlow for adaptive-learning experiments.	2018-03-04	2018-03-04	q9
+xiaopengguo/ATKT	34	NONE	main	"Enhancing Knowledge Tracing via Adversarial Training", ACM MM 2021 (Oral).	2021-11-01	2021-11-01	q9
+xiaoyang111222/cn-math-taxonomy	6509	NOASSERTION	main	数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。	2026-11-04	2026-10-18	q8
+xxxhhhccc458/course-helper	13	MIT	main	课程学习 Agent Skill：PDF → 复习大纲 / 作业解答 / 学习进度 / 提示词库。Coursework skill for any AI agent — revision outlines, homework solving, progress tracking.	2026-10-21	2026-10-21	q1
+ybak/ai-tutorial	17	Apache-2.0	main	 一本开源的 AgentScope Java 中文教程：7 篇 44 章、839 页成书体量的完整 Markdown 源稿，由浅入深覆盖从第一个 Agent 到生产级 Agent 平台的全部主题。	2026-11-03	2026-10-11	q2
+yemao616/Bayesian-Knowledge-Tracing	16	NONE	master		2018-03-15	2018-03-15	q9
+yeshsanchez/Kaiwa	13	AGPL-3.0	main	Kaiwa (会話) — open-source Japanese conversation tutor that runs entirely on your own computer. Chat, voice calls, roleplay, corrections & SRS — free, private, offline-first.	2026-08-14	2026-07-06	q2
+yjhong89/DKVMN	20	NONE	master	Dynamic Key Value Memory Networks for Knowledge Tracing	2018-11-01	2017-07-31	q9
+ystemsrx/mini-nanoGPT	386	MIT	master	One-click training of your own GPT. Training a GPT has never been easier for beginners. / 一键预训练+SFT一个属于自己的LLM，0基础训练GPT原来可以这么简单？	2026-10-12	2024-12-29	q4
+yxonic/DTransformer	46	NONE	main	Tracing Knowledge Instead of Patterns: Stable Knowledge Tracing with Diagnostic Transformer (WWW '23)	2025-03-24	2022-09-11	q9
+ze185666/hfut-freshman-agent	9	NONE	main	合工大工科新生 AI 助教 · 免登录 Web SDK 聊天页	2026-10-31	2026-10-31	q1
+zijinz456/OpenTutor	166	MIT	main	The first block-based adaptive learning workspace that runs locally. Upload any material → get AI-generated notes, quizzes, flashcards, and an adaptive tutor. Open source, self-hosted, 10+ LLM provide	2026-11-03	2026-02-26	q4
+zmy-9/MF-DAKT	16	NONE	main	2021 CIKM: source code for the Multi-Factors Aware Dual-Attentional Knowledge Tracing (MF-DAKT)	2023-04-25	2021-04-26	q9
+zoonk/zoonk	157	MIT	main	Turn your goal into a daily learning plan	2026-11-04	2025-01-30	q4
+zxlzxlzxlzxlzxl/SSAKT	8	MIT	main	Sequential Self-Attentive Knowledge Tracing	2021-07-17	2021-06-23	q9
+zyy-2001/DKT2	9	MIT	master	Revisiting Applicable and Comprehensive Knowledge Tracing in Large-Scale Data	2025-06-15	2024-07-24	q9
+zyy-2001/DisKT	26	MIT	master	Disentangled Knowledge Tracing for Alleviating Cognitive Bias	2026-01-13	2024-07-03	q9

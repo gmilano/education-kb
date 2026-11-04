@@ -4,6 +4,125 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — `2026-11-04` — **🔴 THE REGISTER WAS `3` PASSES STALE ON ARRIVAL (`p646` AGAINST SHELVES AT `p648`) AND `p647` AND `p648` BOTH LEFT IT BEHIND. 🟢 `p649` BRINGS IT CURRENT. 🟢 TWO PUBLISHED CONCLUSIONS FALSIFIED (`648-G`, AND THE MIT PREDICTOR'S OWN VERDICT STRING), ONE NEW EXCLUSION CLASS NAMED, `648-K`'s COMPLAINT RESOLVED INTO A MEASURED CEILING.**
+
+🔵 **Currency, stated plainly.** This register sat at `p646` while the shelves advanced to `p647` and
+`p648`. That is `639-C`'s class, reopened: `gate-register-currency` exists precisely to catch it and
+`make hooks` has been denied for three passes, so nothing was looking. 🟢 `p649` brings the register to
+`p649`; `README.md` was at `p648` and is also brought current.
+
+### 🔴 `649-R1` — OPEN, NEW: the `p646` MIT predictor convicts on a presentation artefact
+
+`3 of 15` MIT payloads this pass return `RESIDUAL-BODY-MUTATED` at residual exactly `−1`
+(`DQYZHWK/TransKT`, `Selleo/mentingo`, `cRED-f/QuestGen-AI-Agent`). All three end `0x2e` with `20`
+newlines; every residual-`0` payload in the cohort ends `0x0a` with `21`. The bodies are byte-identical
+to canonical and the missing byte is the terminating newline — `647-E`'s class, which the base already
+names as **presentation** on the Apache arm. Append the byte and the cohort is `15 of 15` EXACT.
+
+🔴 **Why it is load-bearing and not cosmetic:** `Selleo/mentingo` is this base's only `MIT` AI-native LMS
+and sits on four shelves. Run as a gate, this instrument would red-flag the most adoptable vertical asset
+the base holds.
+
+🟢 **The fix is specified and measured:** normalise the final newline before grading, and reserve
+`RESIDUAL-BODY-MUTATED` for residuals that survive normalisation. Registered as `ACTION 649-R1`, to be
+applied to `ingest/p646-mit-predictor.py` with an offline control per payload class.
+
+### 🔴 `649-R2` — OPEN, NEW: the MIT predictor refuses the titled variant
+
+`JIUWANG123/quiet-reader-english-learning` carries a `1 106 B` payload titled `The MIT License (MIT)`.
+The predictor requires `title.strip().lower() == b"mit license"` and returns `NOT-MIT-TITLE`, so a
+legitimate MIT payload is ungraded. 🔵 `p314` built an arm for titled-versus-untitled grants
+(`gate-untitled-payload`) and the MIT predictor does not implement it. Registered as `ACTION 649-R2`.
+
+🔴 **Separately, and more serious for this specimen:** the holder line reads
+`Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)`. The grant is **Expo's**, vendored, not the
+repo author's. Filed as a declared gap on `agents/top.md`, not as `MIT`. This is the inverse of `646-I`
+and the near-twin of `648-L`: a metadata channel asserting a grant no first-party payload corroborates.
+
+### 🟢 `649-R3` — CLOSED: `Gap 648-G` ("the Apache byte-equality test is not usable")
+
+`648-G` graded the test `FALSIFIED` on `0 of 6` payloads observing `11 357 B`. A second cohort refutes
+the generalisation: **`3 of 4` observe `11 357 B` byte-exactly** this pass (`mrsser/ASIKT`,
+`Soonwook34/CRKT`, `ontoagents/multiagent-lab` — `201` lines, `LF`, final newline present, appendix
+placeholder intact), and the `+1` deviation (`christian-bick/edugraph-ontology`) recovers canonical by
+dropping one prepended blank line. What `p648` measured is that **its six payloads** were all
+re-presented. 🟢 `Gap 648-G` CLOSED as cohort-specific.
+
+🔴 **But bounded, not reversed — see `649-R4`.**
+
+### 🔴 `649-R4` — OPEN, NEW: a seventh Apache deviation mechanism, and the first that is substantive
+
+`OpenOLAT/OpenOLAT` serves `10 982 B` at `LICENSE`, `−375` from canonical. The
+`APPENDIX: How to apply the Apache License to your work` is **absent** (`0` occurrences, no
+`Copyright [yyyy]` placeholder), there are two leading blank lines, the file ends `0x20`, and the tail is
+a project addendum pointing at `openolat.org`. All six of `p648`'s mechanisms were presentation and
+`6 of 6` recovered canonical; this one does not recover. 🔵 So the standing claim is: the Apache byte test
+answers directly on most payloads, and a deviation is *usually* presentation — **not always**. A
+deviation-handling instrument must therefore be able to return "substantively edited", which neither arm
+currently can.
+
+### 🟢 `649-R5` — CLOSED: `Gap 648-K` becomes a measured ceiling rather than a complaint
+
+`648-K` registered that the location probe is "positive-only and string-literal". `p649` measured the
+whole channel map (`evidence/channel-map.2026-11-04-p649.tsv`): `users/{owner}` and `orgs/{owner}` return
+*"sessions are bound to their configured repositories"*; `repos/{o}/{r}` and `repos/{o}/{r}/commits`
+return *"GitHub access to this repository is not enabled for this session"* for every out-of-scope
+address; `search/commits` returns no `total_count`. 🟢 `search/users q='user:X location:"Y"'` is therefore
+the **only** API placement channel available, control-validated (`Selleo` → Poland `1`, United States
+`0`). Its `25 %` yield this pass (`4 of 16`) is a ceiling, not a poor choice. 🟢 `Gap 648-K` CLOSED as
+measured; the residual placement work is documentary, not API.
+
+### 🟢 `649-R6` — CLOSED: `Gap 647-L` and `Gap 648-B` are one defect, and it is not the matching mode
+
+`647-L` recorded a false **positive** and switched the leg scorer to `grep -F`. `648-B` then recorded a
+false **negative** from `grep -F` on `high school` versus `high-school` and called it a trade-off. 🔵 It
+is not a trade-off: both are **needle specificity**. A short needle (`87`, `74`, `mas`, `4 million`)
+matches somewhere in a `53 MB` shelf regardless of mode; a long literal needle misses an orthographic
+variant. 🟢 The fix is a conjunctive windowed test — every token-group of a fact must co-occur inside
+`600` characters of the case- and punctuation-folded shelf — and it is calibrated both ways: `5 of 5`
+fabricated controls return `n = 0`, `61 of 61` real facts return `n ≥ 2`. Both scorings are committed
+side by side (`evidence/leg-scores-single-needle` and `evidence/leg-scores-conjunctive`,
+`2026-11-04-p649`) and they agree at `61/61`, so the saturation finding does not depend on the
+instrument. 🟢 `Gap 647-L` and `Gap 648-B` CLOSED together.
+
+### 🔴 `649-R7` — CARRIED, third reproduction: the licence-channel filename guess
+
+`p645-D` was closed at `p646` by `ingest/p646-readme-resolver.sh` — **for the README channel**. The
+licence channel still guesses. `p648` recorded `moodle/moodle` serving at `COPYING.txt` after `7`
+filename misses; `p649` adds `frappe/lms` at `license.txt` (lower-case) and `codelitdev/courselit` at
+`LICENSE.md`. 🔵 The resolver's own lesson applies unchanged: `p645`'s filename set was four candidates
+short on READMEs, and the licence set is short on the lower-case and `.md` forms. Registered as
+`ACTION 649-R7`: port the README resolver's walk to the licence channel.
+
+### 🔴 `649-R8` — CARRIED, and now with a third data point: `make hooks` unavailable
+
+Denied before execution (`[Code from External]`) at `p647`, `p648` and `p649`. `p647`'s `52/71` remains
+carried-forward-unverified and three consecutive diffs are **unjudged** by the standing gate. 🟢 `p649`
+satisfied the gated contracts by hand with an out-of-tree verifier, now committed as
+`ingest/p649-out-of-tree-verifier.py`: `25` tables, `184` rows, `0` ragged, `0` placeholder-as-data,
+`0` unescaped `|` inside a code span, `82` cited GitHub addresses all resolved this pass or carried from
+a pass that read them, and the `market.md` region contract satisfied (one `## Opportunities by region`,
+four `###` subsections in the closed vocabulary). 🔴 This is not a substitute for the gate: it checks what
+this pass knew to check.
+
+### 🔴 `649-R9` — OPEN, CARRIED: the mandated legs are saturated and the cadence has not changed
+
+Seventeenth consecutive nil, `61 of 61`, now calibrated. Five passes, `215` facts, `213` held, `0`
+adoptable. 🔵 Sixth consecutive pass to recommend **quarterly** for the mandated demand legs and to
+redirect the hour into the census and technique channels, which produced every new thing on these shelves
+this week. The recommendation has no mechanism to act on it, which is why it is still open.
+
+### 🔴 `649-R10` — OPEN, NEW: LATAM supply is nil and the demand evidence is the strongest of four regions
+
+Not one of `338` census addresses placed to Latin America, by probe or by document. The `q1`–`q10` legs
+returned Chinese, English, Japanese and Vietnamese descriptions and no Spanish or Portuguese ones above
+the star floors. 🔵 Meanwhile the UNESCO IESALC / UNU-IAS study (`200` institutions, `19` countries) is
+the most specific demand document on the shelf: `87 %` adoption, `26 %` with a formal strategy. The gap
+is not demand and it is not interest — it is that the census channel as currently queried cannot see
+Spanish- and Portuguese-language supply. Registered as `ACTION 649-R10`: run the census legs with
+Spanish and Portuguese query terms and measure the yield before concluding the supply is absent.
+
+
 ## 🆕 `p646` — `2026-11-04` — **🟢 THREE REGISTERED ITEMS CLOSE WITH INSTRUMENTS RATHER THAN RULES (`645-D`, `645-A1`, AND `645-A1`'s FITTED-CONSTANT HALF BY MEASUREMENT), TWO PUBLISHED CONCLUSIONS ARE FALSIFIED (`645-E`, `645-F`), AND THE REGISTER'S OWN STALENESS IS REPAIRED ON BOTH FILES FOR THE FIRST TIME SINCE `p640`.**
 
 🔵 **Currency, stated plainly because this register has mis-stated it before.** `README.md` was

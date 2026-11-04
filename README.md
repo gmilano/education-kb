@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` DENIED A THIRD CONSECUTIVE PASS, SO THIS DIFF IS UNJUDGED BY THE STANDING GATE. 🔴 THE MIT PREDICTOR CONVICTS `3 of 15` PAYLOADS OF BODY MUTATION OVER ONE MISSING NEWLINE BYTE. 🟢 `648-G` IS COHORT-SPECIFIC — `3 of 4` APACHE PAYLOADS OBSERVE `11 357 B` BYTE-EXACTLY. 🟢 `21` ADDRESSES FILED, `33 of 33` LIVE, `23 of 23` PAYLOADS BYTE-READ, `0` NO-PAYLOAD. 🟢 THE CURRICULUM SUBSTRATE COMPLETES ITS THIRD LAYER. 🔴 THE LEGS NIL A SEVENTEENTH TIME ON `61 of 61`, CALIBRATED THIS TIME. 🔴 LATAM SUPPLY IS NIL AND SAID SO.**
+
+| `p649` registered | Verdict |
+|---|---|
+| 🔴 `649-A` — `make hooks` denied before execution (`[Code from External]`), third pass running. Three diffs now unjudged. Contracts satisfied by hand with `ingest/p649-out-of-tree-verifier.py` | 🔴 **BLOCKED — instrument unavailable** |
+| 🔴 `649-C` — the `p646` MIT predictor returns `RESIDUAL-BODY-MUTATED` on `3 of 15` payloads at residual `−1`, which is entirely the absent final newline (`0x2e` / `20` newlines against `0x0a` / `21`). `15 of 15` EXACT after normalising | 🔴 **FALSE CONVICTION — fix specified** |
+| 🟢 `649-D` — `3 of 4` Apache payloads observe `11 357 B` byte-exactly against `p648`'s `0 of 6`. `648-G` generalised from one cohort | 🟢 **CORRECTED** |
+| 🔴 `649-O` — a seventh Apache deviation mechanism and the first that is **substantive**: `OpenOLAT` at `10 982 B`, `−375`, appendix absent, not recoverable | 🔴 **NEW MECHANISM** |
+| 🟢 `649-N` — the `OpenOlat` licence cell reproduces independently: payload `Apache-2.0`, API `NOASSERTION`. `p442`'s reproduction gate satisfied on the vertical shelf's most load-bearing cell | 🟢 **REPRODUCED** |
+| 🔴 `649-E` — `quiet-reader-english-learning` declares `MIT` and ships **Expo's** grant (`650 Industries, Inc.`). No first-hand grant; filed as a declared gap | 🔴 **DECLARED GAP** |
+| 🟢 `649-B` — the channel map measured end to end: `search/repositories` and `search/users` live, `search/commits` dead, `users/`, `orgs/`, `repos/{o}/{r}` and `repos/{o}/{r}/commits` all blocked. `648-K`'s probe is the **only** API placement channel | 🟢 **A CEILING, NOT A PREFERENCE** |
+| 🔴 `649-L` — `647-L` (false positive) and `648-B` (false negative) are one defect: needle specificity, not matching mode. The conjunctive windowed scorer is calibrated `5 of 5` negative, `61 of 61` positive | 🔴 **ROOT-CAUSED** |
+| 🔴 `649-K` — the mandated legs nil a seventeenth consecutive pass on `61 of 61`, the largest denominator yet. Fourth pass running where the shelf is **ahead** of the trending digests | 🔴 **SATURATED — sixth recommendation of quarterly** |
+| 🟢 `649-F` — census: `10` queries, `338` unique addresses, `164` held (`48.5 %`), `174` novel, `57` novel **and** permissive | 🟢 **SUPPLY IS NOT NIL** |
+| 🟢 `649-G` — the knowledge-tracing **model** corpus was a standing gap: the base held the runtimes and none of the published models. Eight permissive, paper-backed implementations filed | 🟢 **GAP CLOSED** |
+| 🟢 `649-H` — the curriculum substrate completes: `edugraph-ontology` (schema) under `p648`'s `standardgraph` (standards) and `cs-math-skill-tree` (ordering). All three permissive | 🟢 **ARCHITECTURE COMPLETE** |
+| 🟡 `649-I` — a `118`-repo, `106`-`MIT` workforce-curriculum estate across six orgs, measured — and `2 277` of `2 312` stars sit in one org. One author's estate, not six adopted projects | 🟡 **MEASURED WITH ITS CAVEAT** |
+| 🔴 `649-J` — placement: `4 of 16` by probe, `3` more documentary, **`9 of 16` unplaced** and filed `Global` with that stated | 🔴 **AN INFORMED GAP** |
+| 🔴 `649-M` — `veolms/veolms` (`81★`, created `2026-08-02`) is real new LMS supply under `AGPL-3.0`, byte-read `34 523 B`. Four of seven top-starred open LMS platforms are now network-copyleft | 🔴 **LICENCE-FLAGGED** |
+| 🔴 `649-P` — `p645-D`'s filename guess reproduces a third pass: `frappe/lms` at `license.txt`, `codelitdev/courselit` at `LICENSE.md`. The `p646` resolver closed the README channel, not the licence channel | 🔴 **REPRODUCED** |
+| 🟢 `649-Q` — `10 of 10` repositories cited by the four new recipes resolved on `git ls-remote` with their own default branch and `HEAD` | 🟢 **RECIPE CITATIONS VERIFIED** |
+| 🔴 `649-R10` — LATAM supply is **nil**: not one of `338` addresses placed there, by probe or by document, while LATAM carries the strongest demand evidence of the four regions (`87 %` adoption, `26 %` strategy). The census legs cannot see Spanish- and Portuguese-language supply as queried | 🔴 **NAMED — action registered** |
+
+🟢 **Four new compose patterns**, every component byte-read and existence-checked: `P7` the
+standards-grounded adaptive engine (`10`–`12` wk), `P8` the assessment-integrity programme (`6`–`8` wk),
+`P9` the `MIT`-end-to-end workforce ladder (`4`–`6` wk), `P10` the connectivity-floor deployment
+(`3`–`4` wk).
+
+🟢 **Register currency:** `intel/open-gaps.md` was `3` passes stale on arrival (`p646`); `p647` and
+`p648` both left it behind. `p649` brings the register and this file to `p649`, closes `Gap 648-G`,
+`Gap 648-K`, `Gap 647-L` and `Gap 648-B`, and opens `649-R1`, `649-R2`, `649-R4` and `649-R10`.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` DENIED A SECOND CONSECUTIVE PASS: NO GATE STATE, AND THIS DIFF IS ALSO UNJUDGED. 🟢 A THIRD SUPPLY CHANNEL OPENS IN THE BLIND SPOT BETWEEN THE TWO EXHAUSTED ONES — `69.8 %` NOVEL, STAR CEILING `6 500` AGAINST `647-C`'s `6`. 🟢 `47` ADDRESSES FILED, `59 of 59` LIVE, MIT PREDICTOR `52 of 52` AT RESIDUAL `0`. 🔴 THE APACHE BYTE-EQUALITY TEST IS DEFEATED `6 of 6`. 🟢 NORTH AMERICA AND LATAM BOTH NON-NIL. 🔴 LEGS NIL A SIXTEENTH TIME, `57 of 57`.**
 
 | `p648` registered | Verdict |

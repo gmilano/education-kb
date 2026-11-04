@@ -1,0 +1,11 @@
+channel	endpoint_or_tool	status	note
+census	gh api search/repositories	LIVE	license, stars, default_branch, description, created_at, pushed_at arrive free with the result
+placement	gh api search/users q='user:X location:"Y"'	LIVE-POSITIVE-ONLY	648-K: string-literal; a 0 is uninformative. Control: Selleo/Poland=1, Selleo/United States=0
+commits	gh api search/commits	DEAD	returns no total_count under this session's scope
+owner	gh api users/{owner}	BLOCKED	"sessions are bound to their configured repositories"
+org	gh api orgs/{owner}	BLOCKED	same binding
+repo-object	gh api repos/{owner}/{repo}	BLOCKED-OUT-OF-SCOPE	"GitHub access to this repository is not enabled for this session"
+repo-commits	gh api repos/{owner}/{repo}/commits	BLOCKED-OUT-OF-SCOPE	same; so commit-author email is NOT an available placement channel
+existence	git ls-remote --symref https://github.com/{slug} HEAD	LIVE	23 of 23 resolved with default branch
+licence-bytes	curl raw.githubusercontent.com/{slug}/{branch}/{file}	LIVE	23 of 23 payloads found and byte-read; 0 NO-PAYLOAD
+gate	make hooks	DENIED	[Code from External], third consecutive pass

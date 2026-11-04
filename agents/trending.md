@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE TRENDING CHANNEL REPORTED TWO FLAGSHIPS AND THE SHELF IS AHEAD OF IT ON BOTH, A FOURTH PASS RUNNING. 🟢 WHAT IS GENUINELY NEW THIS WEEK CAME FROM THE CENSUS, AND IT IS A RESEARCH CORPUS, NOT A PRODUCT.**
+
+### 🔴 What the trending leg reported, and what the shelf already held
+
+| Reported this week | Source figure | Held at `HEAD` | Verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) named the education flagship | `~48 000★` | `54 833★` | 🔴 Shelf **ahead** by `~6 800★` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — AI teachers and AI classmates | `~42 000★` | `42 630★` | 🔴 Shelf **ahead** |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) — `~93` tutorial projects | `~40 000★` | held | 🔵 Not education-vertical; AI-engineering training content |
+| `hugohe3/ppt-master` — documents and topics into narrated decks | — | held | 🔵 Adjacent; teacher-prep tooling, not a tutor |
+
+🔴 Four consecutive passes where the week's own trending digests report **lower** star counts than this
+base carries. Write-through automation of this leg would have regressed `DeepTutor` and `OpenMAIC` again.
+The digests are auto-generated and their "today" figures disagree with each other; the shelf's figures
+came from the repositories.
+
+### 🟢 What is actually new this week — the knowledge-tracing corpus
+
+The movement this week is not a product launch. It is that a query on the **technique** rather than the
+market returns a corpus of permissive, paper-backed knowledge-tracing implementations that `648` passes of
+agent-and-trending queries never surfaced. Filed on `repos/foundations.md` under `649-G`:
+`dialogue-kt` (LAK 2025, `42★`), `DisKT` (WWW 2025, `26★`), `OKT` (EMNLP 2022, `25★`),
+`LANA-pytorch` (`22★`), `CRKT` (`11★`), `ASIKT` (`10★`), `DKT2` (`9★`), `TransKT` (`8★`).
+
+🔵 The one with the clearest near-term use is `dialogue-kt`: it traces mastery over **tutor–student
+dialogue turns**, which is the data every LLM tutor on this shelf already produces and none of them
+currently scores.
+
+### 🟢 New agents on the shelf this week
+
+| Agent | Repo | Licence | ★ | Pushed | Region | One line |
+|---|---|---|---|---|---|---|
+| QuestGen | [`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) | 🟢 `MIT` | `23` | `2026-10-29` | Global — unplaced | Assessment drafting with review-and-approve built in, then export |
+| Memory-Agent | [`007350/memory-agent`](https://github.com/007350/memory-agent) | 🟢 `MIT` | `21` | `2026-10-23` | Global — unplaced | LangGraph + LightRAG + three-layer memory + roadmaps |
+| CodeABC | [`he-yufeng/CodeABC`](https://github.com/he-yufeng/CodeABC) | 🟢 `MIT` | `19` | `2026-10-29` | Global — unplaced | Code comprehension for non-programmers |
+| Tutor | [`demetrius-edelin/tutor`](https://github.com/demetrius-edelin/tutor) | 🟢 `MIT` | `6` | `2026-11-04` | Global — unplaced | Self-hosted BYO-key: books and video into a mapped, tested course |
+| OntoAgents | [`ontoagents/multiagent-lab`](https://github.com/ontoagents/multiagent-lab) | 🟢 `Apache-2.0` | `6` | `2026-11-04` | Global — unplaced | Ontology-grounded learning agents with a build → run → **audit** lifecycle |
+
+🔴 **Not filed:** `JIUWANG123/quiet-reader-english-learning` — declares `MIT`, ships **Expo's** licence
+payload (`649-E`). `umass-ml4ed/kcgen-kt` — ACL 2026 Findings, no licence payload at all.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE WEEK'S MOVEMENT IS A CHANNEL, NOT A ROW: `430` NOVEL ADDRESSES FROM A SORT KEY NOBODY HAD TRIED, LED BY A `1 977★` SYSTEM-DESIGN SIMULATOR — AND `2.8 %` OF WHAT THE CHANNEL RETURNS IS BUILT TO *DEFEAT* COURSEWORK**
 
 ### 🟢 What is actually new this week

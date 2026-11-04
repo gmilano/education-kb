@@ -4,6 +4,171 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL A SEVENTEENTH TIME ON `61 of 61` FACTS, AND THIS TIME THE SCORER IS CALIBRATED AGAINST NEGATIVE CONTROLS. 🟢 THE SUPPLY HALF PLACES `7 of 16` OWNERS, NORTH AMERICA AND APAC BOTH NON-NIL. 🔴 EMEA SUPPLY IS ONE ADDRESS AND LATAM SUPPLY IS NIL — WRITTEN DOWN, NOT GLOSSED.**
+
+### 🔴 `649-K` — the mandated regional legs, scored with a denominator and a calibrated instrument
+
+| Region | Facts scored | Already held at `HEAD` | New | Effective adoptable yield |
+|---|---|---|---|---|
+| Global | `19` | `19` | `0` | `0 of 19` |
+| North America | `12` | `12` | `0` | `0 of 12` |
+| EMEA | `9` | `9` | `0` | `0 of 9` |
+| APAC | `12` | `12` | `0` | `0 of 12` |
+| LATAM | `9` | `9` | `0` | `0 of 9` |
+| **Total** | **`61`** | **`61`** | **`0`** | **`0 of 61`** |
+
+Five passes, `215` facts scored, `213` held, `0` adoptable. 🔴 Seventeenth consecutive nil, on the largest
+denominator this base has run — and `p648`'s `57` was itself the largest at the time.
+
+🟢 **`649-L` — and this time the instrument is calibrated, which `p647` and `p648` could not claim.**
+`647-L` recorded a false **positive** and switched to `grep -F`; `648-B` then recorded a false **negative**
+from `grep -F` on `high school` versus `high-school` and called it a trade-off. It is not a trade-off, it
+is one defect: **needle specificity**. A single short needle (`87`, `74`, `mas`, `4 million`) matches
+somewhere in a `53 MB` shelf no matter what, and a long literal needle misses an orthographic variant.
+The scorer this pass requires **every** token-group of a fact to co-occur inside a `600`-character window
+of the case- and punctuation-folded shelf. It is validated both ways:
+
+| Control | Result |
+|---|---|
+| `5` fabricated facts the shelf cannot hold (`Patagonia AI Act 2031`, `Ofqual banned coursework 2029`, `Vietnam AI law repealed`, bill `A 99999`, `Fundación Imaginaria`) | 🟢 `5 of 5` return `NEW` at `n = 0` |
+| `61` real facts from this pass's eight legs | 🟢 `61 of 61` return `HELD` at `n ≥ 2` |
+
+Both scorings are committed — `evidence/leg-scores-single-needle.2026-11-04-p649.tsv` and
+`evidence/leg-scores-conjunctive.2026-11-04-p649.tsv` — so the two instruments can be compared directly.
+🔵 They agree at `61/61` here, which is the useful result: the saturation finding does **not** depend on
+which scorer you believe.
+
+🔴 **Fourth consecutive pass where the shelf is ahead of the source.** `DeepTutor` reported `~48 000★`
+against `54 833` held; `OpenMAIC` `~42 000★` against `42 630` held. Both of this week's trending digests
+are auto-generated and disagree with each other. An overwriting pipeline would have regressed these cells
+four passes running.
+
+### 🟢 `649-J` — supply placement: `7 of 16`, and the channel ceiling is now measured
+
+| Channel | Placed | Note |
+|---|---|---|
+| `648-K` probe — `search/users q='user:X location:"Y"'` | `4 of 16` (`25 %`) | `umass-ml4ed` → United States, `haxtheweb` → United States, `DQYZHWK` → China, `veolms` → India. Control held: `Selleo` answers `1` on Poland and `0` on United States |
+| Documentary — paper author affiliations read from the repository's own `README` | `3` more | `zyy-2001` → Zhejiang University (China), `Soonwook34` → Sungkyunkwan University (Korea), `lucy66666` → Rice University and UMass Amherst (United States) |
+| Unplaced | **`9 of 16`** | Filed `Global` with that stated. The probe's `12` nils are uninformative by construction — a `0` on a synonym says nothing |
+
+🟢 **`649-B` — and the `25 %` is a ceiling, not a choice.** The channel map was measured end to end this
+pass (`evidence/channel-map.2026-11-04-p649.tsv`). `users/{owner}` and `orgs/{owner}` return
+*"sessions are bound to their configured repositories"*. `repos/{o}/{r}` and `repos/{o}/{r}/commits`
+return *"GitHub access to this repository is not enabled for this session"* for every out-of-scope
+address, so **commit-author e-mail domain is not an available placement channel** — which was this pass's
+first idea for getting past `648-K`. `search/commits` returns no `total_count` at all. Three passes have
+now complained about the placement probe; this one establishes that it is the only API placement channel
+that exists here, and that the remaining `9` can only be placed from documents.
+
+## Opportunities by region
+
+### North America — `p649`
+
+🟢 **Supply is not nil, and it is the strongest region this pass.** `umass-ml4ed` (UMass Amherst ML4Ed)
+placed by probe, and the `OKT` author line places Rice University alongside it. Two of the eight
+knowledge-tracing models filed under `649-G` are North American academic work with permissive grants:
+[`dialogue-kt`](https://github.com/umass-ml4ed/dialogue-kt) (`MIT`, LAK 2025) and
+[`OKT`](https://github.com/lucy66666/OKT) (`MIT`, EMNLP 2022). `haxtheweb/edtechjoker` (`Apache-2.0`)
+placed United States by probe.
+
+🔵 **The opportunity.** The demand side here is a **governance** market, not a tooling market: `134`
+AI-in-education bills across `31` states, four states (Maryland, Idaho, Oklahoma, Virginia) now requiring
+*both* state guidance and district-level policy, a `K-12 AI Literacy and Readiness Act of 2026` advanced
+in committee, and a student-authored `STUDENTS FIRST Act of 2026` whose headline provision is that AI may
+not be used on graded assessments. Meanwhile `60 %` of teachers use AI and `55 %` of high-school
+principals have not restricted it. 🔴 That gap — near-universal informal use against district policy that
+does not exist yet — is the engagement: **policy-to-control translation**. A district does not need a
+tutor, it needs the assessment-integrity controls its new policy obliges it to have, and
+`649-G`'s `dialogue-kt` plus `QuestGen`'s review-and-approve flow are the permissive parts to build it
+from. The April `2026` ADA accessibility deadline for large public institutions is the second budget line
+already open.
+
+### EMEA — `p649`
+
+🟡 **Supply is thin but non-nil: one address.** `AvaCodeSolutions/django-email-learning`
+(`BSD-3-Clause`, `24★`) places EMEA on documentary evidence — the licence payload's holder is
+`AvaCode Solutions LLC-FZ`, a United Arab Emirates free-zone company. The probe returned nil for it, as it
+did for `christian-bick/edugraph-ontology` (Germany tested, nil), so `edugraph-ontology` is filed `Global`
+despite being, on the evidence of its naming and tooling, probably European work.
+
+🔴 **Written-down gap.** `p647-M` recorded that the EMEA leg has an Africa gap. This pass the EMEA leg
+returned `9` facts and **not one** of them concerns Sub-Saharan Africa: the leg's own sources discuss the
+EU, the UK and the Gulf. The region field says EMEA and the evidence says Europe-plus-Gulf. Two passes
+have now recorded this and it has not closed.
+
+🔵 **The opportunity.** The EMEA demand side is the most *scheduled* of the four regions, and that is
+what makes it sellable. The Digital Omnibus on AI (`Regulation (EU) 2026/1744`) took effect in late July
+`2026` and moved the high-risk obligations for stand-alone education systems to **December 2027** — and
+education access, assessment and exam scoring are squarely in the high-risk class. That is a dated
+conformity-assessment and human-oversight programme with a deadline a client can be invoiced against,
+`13` months out. The UK runs a parallel, lighter track: DfE generative-AI product safety standards from
+January `2026`, Ofqual on AI and coursework integrity from March `2026`. 🟢 The permissive stack to meet
+it is on this shelf: `OpenOlat` (`Apache-2.0`, Swiss, already deployed in European universities) as the
+platform, `edugraph-ontology` plus `standardgraph` for standards-grounded citation instead of model
+invention, and an `audit` stage of the kind `ontoagents/multiagent-lab` builds in. Finland, Estonia and
+the Netherlands are the named K-12 reference accounts; the UK's `£4M` lesson-planning and marking spend is
+the proven budget shape.
+
+### APAC — `p649`
+
+🟢 **Supply is not nil, and it is the broadest research supply of any region.** Four addresses placed:
+`DQYZHWK` → China by probe, `veolms` → India by probe, `zyy-2001` → Zhejiang University and
+`Soonwook34` → Sungkyunkwan University by documentary read. Three of the eight knowledge-tracing models
+filed this pass are APAC academic work under permissive licences
+([`DisKT`](https://github.com/zyy-2001/DisKT) WWW 2025, [`DKT2`](https://github.com/zyy-2001/DKT2),
+[`CRKT`](https://github.com/Soonwook34/CRKT) `Apache-2.0`), plus
+[`TransKT`](https://github.com/DQYZHWK/TransKT). 🔵 The region that publishes the adaptive-learning
+*models* is APAC; the region that publishes the *platforms* is EMEA. That asymmetry is stable across
+three passes now.
+
+🔵 **The opportunity, and it is a compliance one.** APAC is the only region where education is being
+named a high-risk category in **new primary law** rather than in guidance. Vietnam's AI law came into
+force on `1 March 2026` with a risk-based framework, and its high-risk designation reaches education
+explicitly — automated assessment and behavioural systems. Australia's proposed mandatory guardrails name
+education alongside health, employment and finance, and TEQSA already requires **every** higher-education
+provider to file an institutional action plan on generative-AI risk. Korea's AI Basic Act took effect in
+January `2026`, with MSIT signalling `2026` as a pilot year of guidance rather than penalties — a grace
+window that is a reason to start now, not later. 🔴 The hard constraint: China enforces the Generative AI
+Services Management Measures plus synthetic-content identification rules, and Japan stays
+principles-based, so a single APAC delivery cannot be built. The pattern is one engine with
+per-jurisdiction policy nodes, which is `p648`'s `P6` and still the right answer.
+
+### LATAM — `p649`
+
+🔴 **Supply is nil this pass, and that is the finding, not an omission.** Not one of the `338` census
+addresses placed to Latin America — by probe (Brazil tested, nil for every candidate) or by document. The
+`q1`–`q10` legs returned Chinese, English, Japanese and Vietnamese project descriptions and no Spanish or
+Portuguese ones above the star floors. 🔵 `p647` placed one LATAM address by confirming it from inside its
+own repository; that channel still works and it is the one to use next pass, but it does not scale to
+`338` addresses and it found nothing here.
+
+🔵 **The opportunity, and LATAM has the clearest demand evidence of the four regions.** The UNESCO
+IESALC and UNU-IAS study of `200` higher-education institutions across `19` countries is the most
+specific demand document on this whole shelf: **`87 %`** of institutions use AI in at least one area,
+**`74 %`** in teaching and learning, and only **`26 %`** have a formal AI strategy. Adoption is explicitly
+bottom-up — individual academics, researchers and students, not institutional programmes. 🔴 That `87 %`
+against `26 %` is a `61`-point governance deficit, and it is a larger gap than North America's, with far
+less legislation arriving to force it closed: the Universidad de los Andes count of `716` AI regulatory
+instruments across `23` countries, over `80 %` of them since `2023`, is breadth without convergence, and
+the region is drifting toward fragmentation rather than a single deadline.
+
+The institutional buyer exists and is named. UNESCO launched the Observatory on AI in Education for Latin
+America and the Caribbean in **April 2026**, and its partner list is the region's entire decision-making
+layer in one place: CAF (Development Bank of Latin America and the Caribbean), CENIA (Chile's national AI
+centre), CETIC.br (Brazil), ECLAC, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad
+del Desarrollo, Fundación Ceibal (Uruguay) and IRCAI.
+
+🟢 **So the LATAM engagement is a strategy-and-governance engagement with a delivery tail, and the
+delivery part can be built from a shelf that contains no LATAM code.** `26 %` strategy coverage means the
+first deliverable is the strategy, the accreditation and quality-assurance integration, and the AI-literacy
+programme — which is where `649-I`'s `MIT` curriculum ladder is directly reusable because it can be
+translated and rebranded. The tooling tail is `OpenOlat` or `mentingo` on the platform side,
+`edugraph-ontology` for mapping a *national* curriculum rather than CCSS, and
+`django-email-learning` for the connectivity floor. 🔴 None of it is Spanish- or Portuguese-language
+software today, and that localisation is real unpriced work — say so in the proposal rather than
+discovering it in sprint three.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL A SIXTEENTH TIME ON THE LARGEST DENOMINATOR YET: `57 of 57` FACTS ALREADY HELD. 🟢 THE SUPPLY HALF PLACES `13 of 59`, AND *BOTH* NORTH AMERICA AND LATAM ARE NON-NIL — NORTH AMERICA FOR THE FIRST TIME SINCE `p646`. 🟢 AND AN ADVERSARIAL LAYER NAMES THE APAC LMS INCUMBENTS BETTER THAN ANY VENDOR PAGE.**
 
 ### 🔴 `648-M` — the mandated regional legs, scored with a denominator

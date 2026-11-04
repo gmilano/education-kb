@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE OPEN LMS ESTATE IS AN `AGPL-3.0` MONOCULTURE: `4 of 7` TOP-STARRED PLATFORMS ARE NETWORK-COPYLEFT AND THE NEWEST ARRIVAL IS TOO. 🟢 THE TWO PERMISSIVE EXITS ARE BOTH BYTE-CONFIRMED, AND ONE OF THEM IS INVISIBLE TO A METADATA FILTER.**
+
+### 🔴 The licence census of the platform layer
+
+Every row byte-read this pass (`evidence/licence-bytes.2026-11-04-p649.tsv`). This is the table to put in
+front of a client before anyone picks a base platform.
+
+| Platform | Licence — payload, bytes | ★ | What it is | Customisable with AI on top? |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` — `LICENSE`, `10 982` B | `449` | Java LMS, modular course tools, assessment and compliance tracking. Swiss, in production in European universities | 🟢 **Yes, and a studio may keep its modifications.** The one production-grade permissive LMS in the set |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` — `LICENSE`, `1 062` B | `106` | AI-native LMS with an AI Mentor and role-play; self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable, Open edX | 🟢 Yes. Young, but AI-native out of the box rather than retrofitted |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 `AGPL-3.0` — `license.txt`, `33 893` B | `3 371` | The most-starred open LMS; Frappe/ERPNext stack, so it inherits a real ERP underneath | 🔴 Deploy-and-offer-source only |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` — `LICENSE`, `34 523` B | `2 447` | Next-generation course platform, modern stack, very active | 🔴 No proprietary derivative |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🔴 `AGPL-3.0` — `LICENSE.md`, `34 143` B | `1 294` | Course and digital-download commerce on your own branded site; Teachable/Thinkific/Podia alternative | 🔴 No |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `ECL-2.0` — `LICENSE`, `11 120` B | `1 240` | Long-lived HiEd suite for teaching, research and collaboration; global adopter community | 🟡 Apache-derived; `ECL-2.0` adds an educational-community patent and attribution framing — legal review, not a blocker |
+| 🆕 [`veolms/veolms`](https://github.com/veolms/veolms) | 🔴 `AGPL-3.0` — `LICENSE`, `34 523` B | `81` | Brand-new OSS LMS, created `2026-08-02`, pushed `2026-11-04`. Placement probe: **India** | 🔴 No (`649-M`) |
+
+🔵 **The decision this table forces.** Four of the seven top-starred open LMS platforms are
+`AGPL-3.0`, and so is the one that launched this quarter. A studio that needs to ship a modified,
+closed-source platform to a client has exactly **two** candidates — `OpenOlat` for production weight,
+`mentingo` for AI-native design — and `OpenOlat` is reported `NOASSERTION` by the GitHub API
+(`649-N`), so any procurement screen that reads metadata instead of the payload will throw away the
+better of the two. That is the single most expensive mistake available on this shelf.
+
+### 🟢 New vertical substrate this pass
+
+| Address | Licence — bytes | ★ | Region | Why it is on this shelf |
+|---|---|---|---|---|
+| [`AvaCodeSolutions/django-email-learning`](https://github.com/AvaCodeSolutions/django-email-learning) | 🟢 `BSD-3-Clause` — `1 515` B | `24` | EMEA — holder is a UAE free-zone company (`LLC-FZ`); probe nil | A Django platform that **delivers learning over IMAP e-mail**, with React components for the web side. The only delivery channel on this shelf that survives a slow connection and a shared handset |
+| [`haxtheweb/edtechjoker`](https://github.com/haxtheweb/edtechjoker) | 🟢 `Apache-2.0` — `11 357` B, residual `+0` | `18` | North America — probe: United States | Open EdTech course resources and materials. Teaching *about* ed-tech, permissively licensed, so it can be lifted into a client's own enablement track |
+| [`ai-infra-curriculum`](https://github.com/ai-infra-curriculum) and five sibling orgs | 🟢 `MIT` — `1 085` B each | `2 277` org total | Global — unplaced | A `118`-repo, `106`-`MIT` workforce curriculum ladder from junior engineer to architect, with a governance track. See `649-I` for the caveat: it is one author's estate, not six adopted projects |
+
+### 🔵 Carried forward, unchanged this pass
+
+`Moodle` (`GPL-3.0`, `COPYING.txt` — `p648`), `Open edX` (`AGPL-3.0`), `Canvas` (`AGPL-3.0`),
+`Chamilo` (`GPL-3.0`), `Kolibri` (`MIT`, offline-first), `OpenEduCat` (`LGPL-3.0`, ERP),
+`BigBlueButton`, `H5P`, `Richie`, `Tutor CLI`, `pacewisdomhq/TutorLoom` (`Apache-2.0`, multi-tenant,
+`p648`). 🔴 `ERPNext` and `Odoo` remain the ERP anchors and neither was re-read this pass.
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **A PERMISSIVE *MULTI-TENANT* LMS ENTERS THE ESTATE, WHICH IS THE ONE SHAPE EVERY INCUMBENT ON THIS PAGE WITHHOLDS — AND THE MOODLE ESTATE GAINS BOTH A DEPLOYER AND AN EXTRACTOR**
 
 ### 🟢 The verticals this pass's addresses attach to

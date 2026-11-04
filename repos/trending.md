@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **`338` CENSUS ADDRESSES, `51.5 %` NOVEL. 🔴 AND THE LMS TRENDING PICTURE IS A COPYLEFT MONOCULTURE WITH EXACTLY TWO PERMISSIVE EXCEPTIONS.**
+
+### 🟢 `649-F` — the census, with a denominator
+
+| Leg | Query shape | Addresses |
+|---|---|---|
+| `q1` | `education AI agent created:>2026-08-01 stars:>3` | `30` |
+| `q2` | `tutor LLM created:>2026-07-01 stars:>3` | `58` |
+| `q3` | `learning assistant AI created:>2026-08-01 stars:>5` | `12` |
+| `q4` | `topic:education topic:ai pushed:>2026-10-01 stars:>10` | `57` |
+| `q5` | `adaptive learning engine stars:>5 pushed:>2026-09-01` | `1` |
+| `q6` | `grading assessment AI created:>2026-06-01 stars:>3` | `4` |
+| `q7` | `curriculum generator AI stars:>5 pushed:>2026-09-01` | `1` |
+| `q8` | `topic:edtech pushed:>2026-09-01 stars:>15` | `78` |
+| `q9` | `knowledge tracing stars:>3` | `100` |
+| `q10` | `LMS open source pushed:>2026-10-01 stars:>50` | `6` |
+| **Total** | — | **`347` raw, `338` unique** |
+
+`164` already held (`48.5 %`), `174` novel (`51.5 %`), `57` novel **and** permissive.
+🔴 Note `q5` and `q7`: `1` address each. "Adaptive learning engine" and "curriculum generator" are the two
+phrases a client uses and GitHub does **not** index as a topic — the supply exists under other names.
+🟢 `q9` at `100` is the pass's whole yield story (`649-G`).
+
+### 🔴 The LMS layer, byte-read: copyleft with two exceptions, and the metadata channel is wrong about one
+
+The `LMS open source` leg at `stars:>50` returns six live addresses. Every payload below was fetched and
+byte-read this pass, because the metadata channel is **not** reliable here:
+
+| Repo | Payload read | Licence — bytes | API metadata | ★ | Pushed | Adoptable by a studio? |
+|---|---|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `license.txt` | 🔴 `AGPL-3.0` — `33 893` B | `AGPL-3.0` | `3 371` | `2026-11-04` | 🔴 No — network copyleft |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `LICENSE` | 🔴 `AGPL-3.0` — `34 523` B | `AGPL-3.0` | `2 447` | `2026-11-04` | 🔴 No |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `LICENSE.md` | 🔴 `AGPL-3.0` — `34 143` B | `AGPL-3.0` | `1 294` | `2026-11-03` | 🔴 No |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `LICENSE` | 🟡 `ECL-2.0` — `11 120` B | `ECL-2.0` | `1 240` | `2026-11-04` | 🟡 Apache-derived, educational-community terms |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `LICENSE` | 🟢 `Apache-2.0` — `10 982` B | 🔴 **`NOASSERTION`** | `449` | `2026-11-04` | 🟢 **Yes** |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `LICENSE` | 🟢 `MIT` — `1 062` B | `MIT` | `106` | `2026-11-04` | 🟢 Yes — held since `p648` |
+| 🆕 [`veolms/veolms`](https://github.com/veolms/veolms) | `LICENSE` | 🔴 `AGPL-3.0` — `34 523` B | `AGPL-3.0` | `81` | `2026-11-04` | 🔴 No (`649-M`) |
+
+🟢 **`649-N` — the OpenOlat cell reproduces.** This base already records `OpenOlat` as
+"`Apache-2.0` by byte-read, `NOASSERTION` by API" and places it Switzerland. An independent read this pass
+returns exactly that: the `LICENSE` payload is the Apache License 2.0 and the API still says
+`NOASSERTION`. This is `p442`'s `gate-cell-reproduction` satisfied on the single most load-bearing licence
+cell on the vertical shelf — the **only** production-grade permissive LMS in the top-starred set — and it
+is the cell a metadata-only filter would discard.
+
+🔴 **`649-O` — a seventh Apache deviation mechanism, and this one is not presentation.** OpenOlat's
+payload is `10 982` B against canonical `11 357`, a deviation of `−375`. It is **not** recoverable: the
+`APPENDIX: How to apply the Apache License to your work` is absent (`0` occurrences, no `Copyright [yyyy]`
+placeholder), the file carries two leading blank lines, ends on `0x20`, and the tail is a project
+addendum pointing at `openolat.org`. All six of `p648`'s mechanisms were presentation and `6 of 6`
+recovered canonical; this is a **substantive** edit to the text, so `649-D`'s claim is bounded: the Apache
+byte test answers directly on most payloads, and a deviation is *usually* presentation — not always.
+
+🔴 **`649-P` — `p645-D`'s filename guess failed twice more.** `frappe/lms` serves at `license.txt`
+(lower-case) and `codelitdev/courselit` at `LICENSE.md`; a seven-filename probe found neither on its first
+pass. `p648` recorded the same defect on `moodle/moodle` (`COPYING.txt`). Three passes, three
+reproductions, still unfixed on the licence channel — the probe needs the lower-case and `.md` forms in
+its list, not just the upper-case ones.
+
+🔵 The shape to carry into an engagement: the **large** open LMS estate is `AGPL-3.0`, so a studio either
+deploys it unmodified with source offered, or builds on `Apache-2.0` `OpenOlat` (`449★`, production, Swiss,
+and invisible to a licence filter that trusts GitHub metadata), or on `MIT` `mentingo` (`106★`,
+AI-native, young). There is no fourth way, and `veolms` arriving `AGPL-3.0` this quarter says the default
+is not shifting.
+
+### 🟢 New foundational repos this week
+
+| Repo | Licence — bytes | ★ | Layer |
+|---|---|---|---|
+| [`christian-bick/edugraph-ontology`](https://github.com/christian-bick/edugraph-ontology) | 🟢 `Apache-2.0` — `11 358` B | `18` | Curriculum **schema** (`649-H`) |
+| [`AvaCodeSolutions/django-email-learning`](https://github.com/AvaCodeSolutions/django-email-learning) | 🟢 `BSD-3-Clause` — `1 515` B | `24` | Delivery over **IMAP e-mail** — the low-bandwidth channel |
+| [`haxtheweb/edtechjoker`](https://github.com/haxtheweb/edtechjoker) | 🟢 `Apache-2.0` — `11 357` B | `18` | Open EdTech course materials (probe: United States) |
+| [`ai-infra-curriculum/*`](https://github.com/ai-infra-curriculum) | 🟢 `MIT` — `1 085` B each | `2 277` org total | Workforce curriculum ladder (`649-I`) |
+| Eight knowledge-tracing models | 🟢 `MIT` ×`5`, `Apache-2.0` ×`2`, plus `dialogue-kt` | `8`–`42` each | KT **models**, not runtimes (`649-G`) |
+
+
 ## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE CENSUS CHANNEL ITSELF IS THE WEEK'S RESULT: `69.8 %` NOVEL AGAINST `3.0 %`, AND A STAR CEILING THREE ORDERS OF MAGNITUDE ABOVE THE CHANNEL IT REPLACES**
 
 ### 🟢 Channel comparison, measured on the same index and the same vocabulary
