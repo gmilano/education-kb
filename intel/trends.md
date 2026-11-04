@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE MANDATED WEB LEGS ARE NIL FOR THE FOURTEENTH CONSECUTIVE PASS, NOW ON THE LARGEST DENOMINATOR EVER RUN (`43 of 43` HELD), AND ON TWO LEGS THE BASE IS MEASURABLY *AHEAD* OF THE SOURCE**
+
+🔵 **Run in full, scored against `HEAD`, and recorded with a denominator** —
+`evidence/websearch-legs.2026-11-04-p646.tsv`. All four mandated global legs plus one leg per region.
+
+| Leg | Region | Facts probed | Already held at `HEAD` | 🟢 New |
+|---|---|--:|--:|--:|
+| `open source AI agents education 2026 github MIT` | Global | `3` | `3` | `0` |
+| `github trending education AI 2026` | Global | `4` | `4` | `0` |
+| `open source platform education ERP CRM MIT Apache` | Global | `3` | `3` | `0` |
+| `AI education industry trends 2026` | Global | `3` | `3` | `0` |
+| `AI education {region} 2026 adoption regulation players` | North America | `7` | `7` | `0` |
+| `AI education {region} 2026 adoption regulation players` | EMEA | `7` | `7` | `0` |
+| `AI education {region} 2026 adoption regulation players` | APAC | `7` | `7` | `0` |
+| `AI education {region} 2026 adoption regulation players` | LATAM | `9` | `9` | `0` |
+| **Total** | — | **`43`** | **`43`** | 🔴 **`0`** |
+
+🔴 **No region returned anything unheld — and that is written down explicitly, because an unexamined
+region and a saturated one look identical in a file that simply says nothing.** The legs reached
+`Regulation (EU) 2026/1744` and the `2 December 2027` Annex III deferral, Vietnam's Decision
+`33/2026/QD-TTg`, Korea's AI Basic Act at `22 January 2026`, the UNESCO IESALC `87 % / 26 %` split,
+Universidad de los Andes' `716` instruments, Ceibal's `75 %`, Cetic.br's `65 %`, Dubai's KHDA,
+TEQSA's action plans and the OECD's `2026` Digital Education Outlook. **Every one was already on the
+shelves**, most in `5`–`20` files.
+
+🟢 **And on the two supply legs the base is now demonstrably ahead of the channel, which is a
+stronger statement than "nil".** The web leg reported `HKUDS/DeepTutor` at *"about `48K` stars"* and
+a second source at *"about `45K`"*; this base holds `54,833★` measured `2026-10-31`. It reported
+`THU-MAIC/OpenMAIC` at *"about `42K`"*; this base holds `42,630★` with the licence byte-read at
+`1,065 B`. 🔵 **The legs are not merely returning held facts — they are returning *staler* values of
+held facts**, so adopting them would regress the shelf. That is the operative reason to stop
+treating them as a supply channel, over and above the fourteen-pass nil.
+
+🔵 **Recommendation, restated from `645-G` and now on `43` facts rather than `22`:** the mandated
+leg set is a **quarterly** instrument, not an hourly one. The hourly budget belongs on the channels
+that paid this pass — the resolver (`54` rows rescued) and `topic:` + `sort=updated` (`293` novel
+addresses, `7` filed).
+
+### 🔴 A standing trend this pass can now state: curated taxonomies do not solve pollution, they relocate it
+
+`643-C` and `644-A` measured that education's **token** vocabulary is polluted. `645-E` moved to
+`topic:` and published that *"the pollution does not occur, because a topic is opted into by the
+maintainer."* 🔴 **Measured this pass: `4 of 18` filtered candidates (`22 %`) are not education, and
+the two largest novel addresses of the week are a screen-brightness daemon (`max-baz/wluma`, `956★`)
+and a text-classification library (`codelion/adaptive-classifier`, `577★`).** Both arrived on
+`topic:adaptive-learning`; two more arrived on `topic:lms`, which in the wider world means **Logitech
+Media Server**.
+
+🔵 **The mechanism, and why it will not be fixed by a better vocabulary:** the polluting maintainers
+tagged their projects *correctly*. `lms` is the right tag for a Logitech Media Server client and
+`adaptive-learning` is the right tag for an algorithm that adapts. Curation removes substring
+collisions; it cannot remove **homonymy**, because homonymy is a property of the words and not of the
+index. 🔵 The durable consequence for this base is a sequencing rule rather than a vocabulary
+change: **a domain check on the description is mandatory before a row from a homonymous topic is
+filed, and star rank must never be used as a proxy for relevance on such a topic.**
+
+### 🟢 An ecosystem-age signal, newly measurable: README form and branch name move together
+
+🟢 `646-A` and `646-C` give this base a cheap age/ecosystem marker it did not have. Of the `54`
+addresses whose README is not at `main/README.md`, **`70.4 %` are on a non-`main` branch, against
+`35.1 %` across the whole live population** — the two drift together because both track project
+vintage. 🔵 **Operationally:** `README.rst` + `master` reads as pre-`2020` Python-stack
+infrastructure (the Open edX, LTI, xAPI and psychometrics layers); `README.md` + `main` reads as the
+`2025`+ agent cohort. 🔵 For the vertical platform estate the skew is extreme — **`1 of 14`
+platforms is on `main`** — so any instruction to "clone `main`" is wrong for `13` of the `14`
+systems this KB most often recommends.
+
 ## 🆕 `p645` — `2026-11-04` — three trends this pass can evidence from its own measurements
 
 🔵 **Each is backed by a count taken this pass, not by a vendor blog.** Where the only source is

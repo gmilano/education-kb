@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **FOR THE VERTICAL PLATFORM ESTATE, `main` IS THE EXCEPTION: `1 of 14`. AND ONE PLATFORM'S DEFAULT BRANCH IS A VERSION NUMBER, SO ANY PINNED BRANCH IN A RECIPE ROTS AT ITS NEXT RELEASE.**
+
+🟢 **`646-A`'s resolver returns the default branch as a measurement, so for the first time this page
+can state the real checkout target for every platform it recommends** — rather than the `main` that
+`35.1 %` of this base's addresses do not have.
+
+| Platform | Repo | 🟢 Real default branch | README serves as | Note for a recipe |
+|---|---|---|---|---|
+| Moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `main` | `README.md` (`1,903 B`) | The **only** one of the `14` on `main`. |
+| Open edX | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `README.rst` (`12,381 B`) | Both corrections needed: `master` **and** `.rst`. |
+| Open edX installer | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `release` | `README.rst` (`4,332 B`) | The supported install path, and the hardest to probe. |
+| Oppia | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` | 🔴 `.github/README.md` (`4,042 B`) | README is not even at the repo root. |
+| Canvas | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `README.md` (`702 B`) | Smallest README of the estate; the docs live off-repo. |
+| Sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `README.md` (`8,429 B`) | — |
+| Chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `README.md` (`10,741 B`) | — |
+| ILIAS | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `release_11` | `README.md` (`1,919 B`) | Release-pinned default; moves on major release. |
+| BigBlueButton | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 `v4.0.x-develop` | `README.md` (`1,410 B`) | Version **and** stream in one branch name. |
+| Kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` | `README.md` (`2,295 B`) | Offline-first; `develop` is the default. |
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** | `README.md` (`5,269 B`) | 🔴 **A bare version number.** See below. |
+| ERPNext | [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | `README.md` (`7,442 B`) | — |
+| H5P core | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔴 `README.txt` (`796 B`) | The one `README.txt` in `1,210` addresses. |
+| Safe Exam Browser | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | `master` | `README.rst` (`13,361 B`) | — |
+
+🔴 **`openeducat/openeducat_erp`'s default branch is `19.0`, and that is a different kind of fact
+from `master`.** It tracks the Odoo major version the ERP is built against, so it **changes with
+each release**: a recipe, submodule pin or CI job that hardcodes `19.0` does not merely become
+stale, it silently keeps building the old major while the project has moved. 🔵 The correct
+instruction for an OpenEduCat engagement is *resolve the default branch at build time*
+(`git ls-remote --symref … HEAD`), never a literal. The same applies in weaker form to
+`ILIAS-eLearning/ILIAS` (`release_11`) and `bigbluebutton/bigbluebutton` (`v4.0.x-develop`).
+
+### 🟢 One new vertical platform this pass, byte-graded
+
+| Platform | Repo | Licence (channel + bytes) | ★ | Region | What it customises into |
+|---|---|---|---|---|---|
+| ARSnova | [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | 🟢 `MIT` — `raw LICENSE`, `1,079 B`, predictor residual `0` | `8` | **EMEA** | Audience-response: live quizzes, polling, question boards for lectures and organisations. German-language, ARSnova lineage. 🟢 `MIT` makes it the permissive answer in a slot otherwise held by hosted SaaS, and it composes with H5P for content and an LRS for evidence. |
+| Student administration | [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | 🟢 `Apache-2.0` — `raw LICENSE`, `11,357 B` canonical | `6` | **North America** | Staff administration of students and personal-education-number requests, run by the Government of British Columbia. 🟢 Government-operated SIS-adjacent code under a permissive licence is rare; it is a reference implementation for a public-sector student-records engagement rather than a product. |
+
 ## 🆕 `p645` — `2026-11-04` — a standards-native authoring row, and a branch correction that affects every platform pin
 
 ### 🟢 New platform row

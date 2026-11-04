@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE OLD README CHANNEL'S BLIND SPOT WAS NOT RANDOM: IT LANDED ALMOST EXACTLY ON THIS PAGE'S SUBJECT MATTER, AND THE WHOLE OPEN edX ESTATE SITS INSIDE IT**
+
+🟢 **`646-A`'s resolver was run over all `1,214` published addresses and the `54` it rescued are
+biased — hard — toward foundational infrastructure.** That is the finding this page has to record,
+because it means the readable-README rate this base has been quoting was lowest precisely where the
+foundations live.
+
+| Measured `2026-11-04` | Whole live population | 🔴 The `54` rescued rows |
+|---|---|---|
+| Addresses | `1,210` | `54` |
+| On a branch that is **not** `main` | `425` — `35.1 %` | 🔴 **`38` — `70.4 %`** |
+
+🔴 **The two guesses compound.** An address that fails the filename guess is **twice as likely** to
+also fail the branch guess, because both failures have the same cause: age and ecosystem. Python-era
+and pre-`main` projects write `README.rst` on `master`; the `2025`+ AI-agent cohort writes
+`README.md` on `main`. So a channel that assumed `main/README.md` was not losing a random `4.5 %` of
+the shelf — it was losing the **old, load-bearing, widely-deployed** end of it and keeping the new end.
+
+### 🔴 The Open edX estate was invisible to it, entirely
+
+`9` addresses of one platform family, and **not one** of them serves `main/README.md`:
+
+| Repo | Default branch | README serves as |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `README.rst` (`12,381 B`) |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` | `README.rst` (`12,381 B`) |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `master` | `README.rst` (`7,455 B`) |
+| [`openedx/codejail`](https://github.com/openedx/codejail) | `master` | `README.rst` (`10,469 B`) |
+| [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | `main` | `README.rst` (`12,994 B`) |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `release` | `README.rst` (`4,332 B`) |
+| [`cookiecutter-openedx/cookiecutter-openedx-devops`](https://github.com/cookiecutter-openedx/cookiecutter-openedx-devops) | `main` | `README.rst` (`25,256 B`) |
+| [`appsembler/figures`](https://github.com/appsembler/figures) | `main` | `README.rst` (`14,229 B`) |
+| [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) | `master` | `Readme.md` (`1,249 B`) |
+
+🔵 `overhangio/tutor` is the sharpest single case: its default branch is **`release`**, so a probe
+needs *both* corrections — `release`, not `main`, and `.rst`, not `.md` — and `tutor` is the
+supported installation path for Open edX, i.e. the first thing a studio touches on an Open edX
+engagement.
+
+### 🟢 The standards layer this page depends on, now with its real README addresses
+
+| Layer | Repo | Branch | README | Why it is foundational |
+|---|---|---|---|---|
+| LTI 1.3 | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `master` | `README.rst` (`23,150 B`) | The Python LTI 1.3 tool implementation; how anything launches inside an LMS. |
+| LTI 1.3 | [`pymsglobal/pylti1p3next`](https://github.com/pymsglobal/pylti1p3next) | `main` | `README.rst` (`22,977 B`) | 1EdTech-side continuation of the same library. |
+| xAPI / LRS | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` | `readme.md` (`1,755 B`) | ADL's reference Learning Record Store — the xAPI conformance anchor. |
+| xAPI | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | `master` | `readme.md` (`3,379 B`) | Statement service; the ingest half of learning analytics. |
+| xAPI | [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | `master` | `readme.md` (`1,951 B`) | Statement validation, which is what makes an LRS auditable. |
+| H5P | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔴 `README.txt` (`796 B`) | The H5P core; the only address in the population serving `README.txt`. |
+| H5P | [`h5p/h5p-cli`](https://github.com/h5p/h5p-cli) | `master` | `readme.md` (`2,409 B`) | Build/package tooling for H5P content types. |
+| Assessment | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `main` | `README.rst` (`6,369 B`) | Secure code-grading platform (UCLouvain). |
+| Assessment | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | `master` | `README.rst` (`13,361 B`) | Exam-session service behind Safe Exam Browser. |
+| Psychometrics | [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy) | `master` | `README.rst` (`4,730 B`) | IRT / cognitive-diagnosis models in Python. |
+| Fairness | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | `main` | `README.rst` (`6,082 B`) | The assessment-bias toolkit an Annex III conformity file needs. |
+| Causal | [`py-why/dowhy`](https://github.com/py-why/dowhy) | `main` | `README.rst` (`16,855 B`) | Causal inference — what an efficacy claim rests on. |
+| Accessibility | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | `master` | `readme.md` (`2,871 B`) | NVDA screen reader; the accessibility conformance reference. |
+
+🟡 **A fork family surfaced as a by-product and is recorded, not resolved.** Four `Fedena` addresses
+all serve `README.markdown` and three of them are within `5 B` of each other —
+[`foradian/fedena`](https://github.com/foradian/fedena) `1,096 B`,
+[`projectfedena/fedena`](https://github.com/projectfedena/fedena) `1,096 B`,
+[`mazhar266/fedena`](https://github.com/mazhar266/fedena) `1,101 B`,
+[`projectfedena/project_fedena`](https://github.com/projectfedena/project_fedena) `892 B`. 🔵 Byte
+equality across owners is a fork signature the same way `644-B`'s `1,065 B` licence was; which of
+the four is canonical is **not** settled by this pass and should not be read as settled.
+
+🔵 **`9` addresses remain genuinely unresolved** — `404` across all `9` candidates — and are named in
+`evidence/readme-filename-resolution.2026-11-04-p646.tsv`. They are small or
+institution-internal (`1602WinXP/textbook-tutor`, `Ropaxyz/EaseView`, `corleone000000/fluir`,
+`ArthurGorgonio/sonus`, `kunaltyagi9/University-Management-System`,
+`hit-moodle/moodle-local_onlinejudge`, `eol-uchile/eol-uchile-theme-2020`,
+`Apereo-Learning-Analytics-Initiative/data-loader-library`,
+`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`), and **no-README is a plausible true state for
+all nine**, so the walk is reported exhausted rather than negative.
+
 ## 🆕 `p645` — `2026-11-04` — the foundations layer, re-graded on a READ branch instead of a guessed one
 
 🔴 **`645-B` changes how every foundation row on this shelf must be verified.** `69` of the `203`

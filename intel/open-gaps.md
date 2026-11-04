@@ -4,6 +4,111 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — `2026-11-04` — **🟢 THREE REGISTERED ITEMS CLOSE WITH INSTRUMENTS RATHER THAN RULES (`645-D`, `645-A1`, AND `645-A1`'s FITTED-CONSTANT HALF BY MEASUREMENT), TWO PUBLISHED CONCLUSIONS ARE FALSIFIED (`645-E`, `645-F`), AND THE REGISTER'S OWN STALENESS IS REPAIRED ON BOTH FILES FOR THE FIRST TIME SINCE `p640`.**
+
+🔵 **Currency, stated plainly because this register has mis-stated it before.** `README.md` was
+`5` passes stale on arrival (`p640` against shelves at `p645`) and this register was `1` pass stale
+(`p645`). 🟢 **`p646` brings BOTH to `p646`** — the first pass since `p640` to leave neither behind.
+`639-C`'s class is closed for this pass, not permanently.
+
+### 🟢 `646-A` — CLOSED: `Gap 645-D` (*"the filename guess is unfixed"*) closes with a SCRIPT, not a rule
+
+🔴 **`645-D` resolved `8` specimens by hand and left the resolver unbuilt**, so the channel still
+guessed in general. 🟢 **`ingest/p646-readme-resolver.sh` is the resolver and it ran over the whole
+published population — `1,214` addresses in `70 s`:** `1,147` direct, 🟢 **`54` resolved under
+another filename**, `9` walk-exhausted, `4` `NOT-PUBLIC`, `0` inconclusive. It reproduces `645-D`'s
+four hand-measured byte counts exactly (`796`, `1,755`, `12,381`, `4,042`). 🔴 **And `645-D`'s own
+filename set was `4` candidates short:** `Readme.md`, `README.markdown`, `README` and
+`docs/README.md` account for `13 of 54`, so `p645`'s set would still have mis-called `24 %` of them.
+🟢 **`Gap 645-D` CLOSED.** See `agents/top.md` `646-A`,
+`evidence/readme-filename-resolution.2026-11-04-p646.tsv`.
+
+### 🟢 `646-B` — CLOSED: `Gap 645-A1`, BOTH halves, one by measurement and one by a committed instrument
+
+`645-A1` registered two things. Both are done.
+
+🟢 **Half one — the constant is structural, not fitted.** `645-A1` worried that `1027` was *"derived
+from this cohort"*. Measured this pass on five independent payloads, `total − |title| − |copyright|`
+is **exactly `1027` in all five** (`OpenMAIC` `1,065`, `gptwrapper` `1,111`,
+`word-learning-system` `1,070`, `pyBKT` `1,132`, `Popbook` `1,084`). 🟢 It is the invariant MIT
+template body, newlines included — a known constant, and the worry is answered by arithmetic rather
+than argument.
+
+🟢 **Half two — it is an instrument now, and a standing one.** `ingest/p646-mit-predictor.py` is pure
+and offline, with **`12` controls** including the two shapes `p640`'s grader got wrong (an `Apache`
+title and a `GNU` title must **decline**, not be graded `MIT`), three ungradeable shapes, a mutated
+body at `+36` and a truncated one at `−5`, and a **meta-control pinning the constant** so the suite
+cannot be made to pass by editing `1027`. 🟢 It passes under `python3 -I` **from any directory**,
+which is `p355`/`p229`'s portability requirement and the reason it is a single self-contained file
+with no sibling imports. 🟢 Wired into `HOOK_GATES` as `gate-mit-predictor`, so it is standing rather
+than a one-off. 🟢 **`Gap 645-A1` CLOSED.**
+
+🔵 **Denominator note, declared:** `HOOK_GATES` grows by one this pass, so the suite's total moves
+from `70` to `71`. The new gate is green; the inherited red set is unchanged.
+
+### 🔴 `646-C` — FALSIFIED: `645-E`'s *"`topic:` is curated so it cannot be polluted"*
+
+🔴 Measured: `4 of 18` filtered candidates (`22 %`) are not education, and the **two highest-starred
+novel addresses of the week are both off-domain** — `max-baz/wluma` (`956★`, a screen-brightness
+daemon) and `codelion/adaptive-classifier` (`577★`), both via `topic:adaptive-learning`; two more via
+`topic:lms`, which in the wider world means **Logitech Media Server**. 🔵 The mechanism is
+**homonymy, not substring matching**, and it cannot be fixed by a better vocabulary because the
+polluting maintainers tagged *correctly*. 🟢 **`645-E` stands as to substring pollution and is
+qualified as to relevance.** 🔵 **NEW STANDING RULE:** a row from `topic:lms` or
+`topic:adaptive-learning` requires a description-level domain check before filing, and **star rank
+must never be used as a relevance proxy on a homonymous topic**. See `repos/trending.md`,
+`evidence/topic-homonym-pollution.2026-11-04-p646.tsv`.
+
+### 🟢 `646-D` — FALSIFIED, in this base's favour: `645-F`'s *"yield and placement are disjoint"*
+
+🔴 `645-F` measured `0 of 10` placeable rows and concluded the two channels were disjoint and both
+must be run. 🟢 **`5 of 8` of this pass's finds place, and all `5` place on fields that arrive inside
+the search response at zero cost** — owner namespace is an institution (`3`:
+`UniversityOfHelsinkiCS`, `bcgov`, `ScilifelabDataCentre`) or the description names a language or
+market (`2`: `arsnova.eu` German, `word-learning-system` Chinese as a Foreign Language). 🔵 `645-F`'s
+nil was an artefact of looking for provenance in the **README**, the one expensive channel.
+🔵 **NEW STANDING RULE:** place on `owner` first, `description` second, and fetch a README only for
+the residue.
+
+### 🔴 `646-E` — NEW: a published row was dead and no gate caught it
+
+[`jonajinga/open-phonics`](https://github.com/jonajinga/open-phonics) is carried on these shelves as
+a live licence-nil near-miss (`619-G`) and is **gone**. 🟢 The discriminator is account-level:
+`user:jonajinga` returns `422` — the **whole namespace** is unsearchable, matching the known-dead
+`CabinServer39/quiz-gen` — and `open-phonics in:name` returns `0` globally, so it was not renamed or
+transferred. 🔵 `629` established that a repo-scoped `422` can be a *rename* signature; the
+`user:`-scoped probe separates rename from erasure, and it is cheaper. 🔴 **`AGREE-ABSENT` was
+previously this base's two fabricated controls and nothing else; `open-phonics` is the first real
+address in it.** 🔴 **OPEN:** `gate-carried-existence` did not catch this, and the `1,210`-address
+existence sweep this pass ran as a by-product of `646-A` is the channel that would — it should be
+promoted into the standing suite rather than left as a side effect of a README resolver.
+
+### 🔴 `646-F` — NEW: `NOASSERTION` is published on these shelves as if it were a licence state
+
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) — the LTI 1.3 layer in most of this base's
+recipes — was held `NOASSERTION` and reads a **complete `Apache-2.0`** at `11,361 B` (canonical
+`+4`). 🔵 This is the **inverse** of the `PageLM` error: rather than publishing a permissive licence
+the payload does not support, the shelf withheld one the payload does, which costs a studio a usable
+component. 🔴 **OPEN:** every `NOASSERTION` on these shelves should be byte-read and resolved;
+`1` of an unknown number is done. See `evidence/noassertion-resolved.2026-11-04-p646.tsv`.
+
+### 🔴 `646-G` — the mandated legs, fourteenth consecutive nil, now on `43 of 43`
+
+🔴 `43` facts probed across the four global legs and one leg per region; **`43` already held at
+`HEAD`**. 🔴 **And on two supply legs the web is staler than the shelf** — `DeepTutor` reported at
+*"about `48K`"* against `54,833★` held; `OpenMAIC` at *"about `42K`"* against `42,630★` held — so
+adopting the leg output would **regress** the shelf. 🔵 **OPEN, and restated from `645-G` with a
+denominator twice the size: the mandated leg set is a quarterly instrument, not an hourly one.** The
+recommendation has now been recorded by three consecutive passes and acted on by none, and that gap
+is itself the finding.
+
+### 🟡 `646-H` — NEW, SMALL: `9` addresses have no README and that is reported as exhausted, not absent
+
+🟡 `9 of 1,210` return `404` across all `9` filename candidates at their own default branch. 🔵 No
+README is a plausible true state for all nine (they are small or institution-internal), so the walk
+is reported **exhausted** rather than negative — but the two cases are not yet distinguished, and
+distinguishing them needs a tree listing rather than a filename walk. **OPEN.**
+
 ## 🆕 `p645` — `2026-11-04` — **🟢 THREE REGISTERED ITEMS CLOSE WITH REPLACEMENTS RATHER THAN RESTATEMENTS (`642-C`, `642-B`, `644-A`), ONE IS RECLASSIFIED FROM A RESEARCH GAP TO A NETWORK-POLICY GAP (`637-F`), AND TWO NEW ONES OPEN.**
 
 🔵 **Currency.** This register and `README.md` were current at `p640`; `p644` brought the register to

@@ -1,0 +1,9 @@
+slug	branch	file	bytes	http	title_len	copyright_len	predicted	residual	verdict
+UniversityOfHelsinkiCS/gptwrapper	main	LICENSE	1111	200	11	73	1111	0	EXACT-MIT-predictor-residual-0
+bcgov/EDUC-STUDENT-ADMIN	master	LICENSE	11357	200	47	0	-	-	NON-MIT-title[                                 Apache ]
+kqc-real/arsnova.eu	main	LICENSE	1079	200	11	41	1079	0	EXACT-MIT-predictor-residual-0
+AlphaaCode/Popbook	main	LICENSE	1084	200	11	46	1084	0	EXACT-MIT-predictor-residual-0
+kzw-ai/word-learning-system	main	LICENSE	1070	200	11	32	1070	0	EXACT-MIT-predictor-residual-0
+astrapi69/adaptive-learner	develop	LICENSE	1105	200	11	67	1105	0	EXACT-MIT-predictor-residual-0
+learn-ninja/learn.ninja	main	LICENSE	11358	200	47	0	-	-	NON-MIT-title[                                 Apache ]
+CAHLR/pyBKT	master	LICENSE	1132	200	11	94	1132	0	EXACT-MIT-predictor-residual-0

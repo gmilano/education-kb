@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `2026-11-04` — `p646` — the week's new permissive supply, and the first measurement of where this channel places
+
+🔵 **Appended, not rewritten.** Same channel as `p645` (`topic:` + `sort=updated`), run `10` topics
+wide, `50` each: `447` rows, `423` distinct, **`293` novel** against a corpus holding `4,769`
+addresses. `7` filed after a byte-read of every licence.
+
+| New this week | Licence (byte-read) | ★ | `pushed_at` | Region | Shape |
+|---|---|--:|---|---|---|
+| [`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) | 🟢 `MIT` `1,070 B` residual `0` | `26` | `2026-11-02` | **APAC** | Adaptive vocabulary for Chinese as a Foreign Language. Flask. |
+| [`AlphaaCode/Popbook`](https://github.com/AlphaaCode/Popbook) | 🟢 `MIT` `1,084 B` residual `0` | `13` | `2026-11-04` | Global | Course PDF → interactive 3D pop-up textbook, bring-your-own key. |
+| [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) | 🟢 `MIT` `1,111 B` residual `0` | `11` | `2026-11-04` | **EMEA** | University-operated LLM chat for staff and students, RAG. |
+| [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | 🟢 `MIT` `1,079 B` residual `0` | `8` | `2026-11-04` | **EMEA** | Audience-response: quizzes, polling, question boards. German. |
+| [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | 🟢 `Apache-2.0` `11,357 B` canonical | `6` | `2026-10-27` | **North America** | Student + PEN request administration, BC Government. |
+| [`astrapi69/adaptive-learner`](https://github.com/astrapi69/adaptive-learner) | 🟢 `MIT` `1,105 B` residual `0` | `5` | `2026-11-03` | Global | Adaptive platform, `6` methods / `7`-step cycle. Branch `develop`. |
+| [`learn-ninja/learn.ninja`](https://github.com/learn-ninja/learn.ninja) | 🟢 `Apache-2.0` `11,358 B` canonical `+1` | `3` | `2026-11-04` | Global | Agent turning an article, doc or code file into a lesson. |
+
+🟢 **`645-F` is falsified, and the mechanism is a one-line change to where you look.** `p645`
+measured *"`0 of 10` new rows are regionally placeable"* and concluded *"the yield channel and the
+placement channel are disjoint — a pass must run both."* It looked for institutional provenance in
+the **README**. 🟢 **The signal is in the search result itself:** `5 of 8` of this pass's finds place,
+and every one of them places on metadata that arrived with the row at zero extra cost:
+
+| Placement signal | Rows | Example |
+|---|---|---|
+| 🟢 **Owner namespace is an institution** | `3` | `UniversityOfHelsinkiCS` (FI), `bcgov` (CA), `ScilifelabDataCentre` (SE) |
+| 🟢 **Description names a language or market** | `2` | `arsnova.eu` (German), `word-learning-system` (Chinese as a Foreign Language) |
+| 🔴 Not placeable | `3` | `Popbook`, `adaptive-learner`, `learn.ninja` — individual owners, English descriptions |
+
+🔵 **So the rule to carry forward:** place on `owner` first and `description` second, and only fall
+back to a README fetch for the residue. `p645`'s nil was a consequence of fetching the expensive
+channel and ignoring the free one.
+
 ## 🆕 `2026-11-04` — `p645` — the week's new permissive tutor/grader supply, from a channel that is not token-based
 
 🔵 **Appended, not rewritten.** `p645` replaced the token census with `topic:` + `sort=updated`

@@ -3,6 +3,61 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — **🟢 `645-D` CLOSES AS A SCRIPT OVER `1,214` ADDRESSES: `54` FALSE ABSENCES BECOME READS, `6.4x` WHAT IT TESTED BY HAND, AND THE BLIND SPOT TURNS OUT TO SIT ON THE FOUNDATIONS — THE WHOLE OPEN edX ESTATE IS INSIDE IT. 🔴 THE RESOLVER'S OWN FIRST DRAFT REPORTED `1,214` FALSE ABSENCES FROM ONE UNEXPORTED VARIABLE. 🔴 `645-E`'s *"`topic:` CANNOT BE POLLUTED"* IS FALSIFIED BY HOMONYMY AND THE WEEK'S TOP NOVEL ADDRESS IS A BRIGHTNESS DAEMON. 🟢 `645-F`'s *"YIELD AND PLACEMENT ARE DISJOINT"* IS FALSIFIED: `5 of 8` PLACE, FREE. 🔴 A PUBLISHED ADDRESS'S WHOLE ACCOUNT IS GONE. 🔴 `ltijs` WAS HELD `NOASSERTION` AND IS `Apache-2.0`. 🔴 THE LEGS ARE NIL A FOURTEENTH TIME ON `43 of 43`.**
+
+🔵 **This register was `5` passes stale on arrival** — its newest entry read `p640` while all eight
+shelves were at `p645`, which is what `gate-register-currency` reports and `p634` recorded as
+happening before. 🟢 Repaired by this entry.
+
+| `p646` registered | Verdict |
+|---|---|
+| 🟢 `646-A` — `645-D` closed: `ingest/p646-readme-resolver.sh` over `1,214` addresses in `70 s`; `1,147` direct, 🟢 **`54` resolved under another filename**, `9` walk-exhausted, `4` `NOT-PUBLIC`, `0` inconclusive. Reproduces `645-D`'s `4` hand-measured byte counts exactly. `13 of 54` sit on candidates `645-D` never tried. | 🟢 **CLOSED** |
+| 🔴 `646-B` — the resolver's first draft reported `1,214` false absences: `CANDIDATES` was set, not exported, so the walk iterated an empty list inside `xargs bash -c`. Caught against a known positive; the script now refuses to run unless its control resolves. | 🔴 **the instrument reproduced the defect it was built to end** |
+| 🟢 `646-C` — `7` new rows filed, every licence byte-read; `1` found and deliberately **not** filed (`ScilifelabDataCentre/…`, metadata `MIT`, no payload at `12` probes, `619-G` class). | 🟢 **FILED** |
+| 🟢 `646-D` — `645-A`'s predictor `1027 + |title| + |copyright|` holds on `5` **unseen** `MIT` payloads at residual `0`; now `23 of 24`. `pyBKT` re-read as an independent reproduction of `645-A`'s own falsifier, not counted as new. `Apache-2.0` canonical `11,357 B` confirmed from the other side by `bcgov/EDUC-STUDENT-ADMIN` exactly. | 🟢 **CONFIRMED** |
+| 🔴 `646-E` — [`jonajinga/open-phonics`](https://github.com/jonajinga/open-phonics) is gone and this base carried it as live. `user:`-scoped `422` shows the **whole account** is unsearchable, matching the known-dead comparator; `open-phonics in:name` is `0` globally, so it was not renamed. First real address to enter `AGREE-ABSENT`, previously only this base's two fabricated controls. | 🔴 **a live row was dead** |
+| 🔴 `646-F` — mandated legs run in full and scored: **`43 of 43` facts already held**, all four regions plus global. Fourteenth consecutive effective nil, largest denominator yet. On two supply legs the web is **staler than the shelf** (`DeepTutor` `48K` reported vs `54,833` held). | 🔴 **SATURATED — recommend quarterly** |
+| 🟢 `646-G` — `645-F` falsified: `5 of 8` finds place, on `owner` namespace (`3`) and description language (`2`), both free in the search result. `645-F`'s `0 of 10` was an artefact of looking in the README. | 🟢 **FALSIFIED, mechanism named** |
+| 🔴 `646-H` — `topic:` is polluted by **homonymy**, not substring: `topic:lms` → Logitech Media Server, `topic:adaptive-learning` → ML/sensor. `4 of 18` filtered candidates off-domain, and the two highest-starred novel addresses of the week (`956★`, `577★`) are both off-domain. | 🔴 **`645-E` qualified; two topics flagged** |
+| 🔴 `646-I` — `Cvmcosta/ltijs`, the LTI layer in most of this base's recipes, was held `NOASSERTION` and reads a complete `Apache-2.0` at `11,361 B` (canonical `+4`). `NOASSERTION` is a metadata artefact, not a licence state. | 🟢 **RESOLVED on bytes** |
+| 🟢 `646-J` — the blind spot is **biased**, not random: `70.4 %` of the `54` are on a non-`main` branch vs `35.1 %` of the population, because filename form and branch name both track project vintage. All `9` Open edX estate addresses are inside it; `overhangio/tutor` needs both corrections (`release` + `.rst`). For the `14` vertical platforms, 🔴 **`1` is on `main`**. | 🟢 **MEASURED** |
+
+🔵 **The address census, re-derived as the LAST act before the commit — restated, not back-fitted.**
+🔴 **All three currency gates were RED ON ARRIVAL at `HEAD`**, and that is `p641`–`p645`'s staleness
+rather than this pass's: the live write-up still carried `p445`-era figures while five passes had
+written to the shelves. 🟢 Re-derived against this pass's own writes with
+`make address-shape-census` and `make union-currency`:
+
+🟢 **The shape census, stated in the governed form:** **4 171** harvested shapes, of which
+**56** are not addresses, leaving **4 115 addresses**.
+
+🟢 **The union census, stated in its own governed form:** **4 115** channel-U addresses and
+**4 815** channel-B survivors give **5 335 addresses over both channels**.
+
+| cell | published anchor on arrival | 🟢 re-derived at `p646` |
+|---|---|---|
+| harvested_folded | 2 878 | 🟢 4 171 |
+| rejected_non_addresses | 39 | 🟢 56 |
+| addresses_corrected | 2 839 | 🟢 4 115 |
+| channel_u | 2 839 | 🟢 4 115 |
+| channel_b_survivors | 3 351 | 🟢 4 815 |
+| union_addresses | 3 727 | 🟢 5 335 |
+
+🔵 **The inflation figure the shape census reports is `1.34 %`**, and the rejected classes are
+`NAV-NAMESPACE` (`48` — GitHub `topics/`, `trending/` navigation paths), `OWNER-ELLIDED` (`3`),
+`EMPTY-NAME` (`2`), `OWNER-TEMPLATE-VAR` (`1`), `PLACEHOLDER-NAME` (`1`) and `PLACEHOLDER-OWNER`
+(`1` — `your-username/SafeTutors`). 🟢 **So the base's own placeholder detection is working**, which
+matters because a placeholder compiled as an entity is this operation's documented recurring
+failure; `p646`'s own address extractor independently hit the same class and found
+`github.com/owner/repo` in prose, correctly **not** on any shelf.
+
+🔵 **Channel calibration recorded for successors:** `github.com` HTML returns `403` through this
+session's proxy even for **live** repositories, so it cannot witness absence here; `repos/{slug}` is
+scope-blocked, so all metadata must come through `search/repositories`; and `$(curl …) | wc -c`
+under-reports a payload by `1 B` because command substitution strips the trailing newline — read
+size from `curl`'s `%{size_download}`.
+
 ## 🆕 `p640` — reads `2026-11-04`, commit `2026-11-04` — **🟢 THE LICENCE CELL IS NOW A SCRIPTED TWO-CHANNEL MEASUREMENT: `37` ADDRESSES IN ONE SHELL CALL, EVERY CELL CITING ITS CHANNEL AND BYTE COUNT, WHICH IS WHAT `639-A` LEFT OPEN AS A RULE. 🔴 AND THE PASS'S OWN FIRST GRADER FAILED TWICE — MIS-GRADING THE `GNU` FAMILY AND RE-PUBLISHING `PageLM` AS `MIT`, THIS BASE'S DOCUMENTED FIVE-PASS ERROR. 🔴 THE EXISTENCE ORACLE `p639` TRUSTED RETURNS A FALSE ABSENT FOR **OPEN edX**. 🔴 `639-H`'s PREDICTION ABOUT `EMEA` IS FALSIFIED. 🟢 VIETNAM HAS APAC'S FIRST BINDING EDUCATION AI REGIME AND IT IS LIVE `15` MONTHS BEFORE THE EU's.**
 
 🟢 **The pass's main result is an instrument, and the three things it found by being cheap.**

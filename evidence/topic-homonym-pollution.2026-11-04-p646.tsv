@@ -1,0 +1,5 @@
+slug	stars	licence	topic_that_surfaced_it	actual_domain	collision_class
+max-baz/wluma	956	ISC	adaptive-learning	screen-brightness daemon (ALS sensor)	SEMANTIC-adaptive-learning-means-ML
+codelion/adaptive-classifier	577	Apache-2.0	adaptive-learning	dynamic text classification (ML lib)	SEMANTIC-adaptive-learning-means-ML
+mtxmiller/LyrPlay	45	MIT	lms	Squeezebox iOS audio player	ACRONYM-lms-is-Logitech-Media-Server
+oweitman/ioBroker.squeezeboxrpc	18	MIT	lms	Logitech Media Server RPC adapter	ACRONYM-lms-is-Logitech-Media-Server

@@ -133,7 +133,7 @@ HOOK_GATES = gate-offline recount gate-derived-counts gate-enumeration gate-tabl
              gate-untitled-payload gate-region-headings \
              gate-declared-gap \
              gate-prose-claims \
-             gate-register-currency \
+             gate-register-currency gate-mit-predictor \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
@@ -482,6 +482,9 @@ absence-census: ## ACTION p279 — the whole-corpus arm: a measurement, never a 
 # they are bound now.  Annex III point 3 applies `2027-12-02`; `2026-08-02` is Article 50
 # transparency and IS live.  No network.
 DATES_LOG ?= /tmp/education-kb-gate-dates.log
+
+gate-mit-predictor: ## p646 — 645-A1: the MIT byte predictor as a committed instrument with OFFLINE controls
+	@$(PY) -I ingest/p646-mit-predictor.py --selftest || exit 1
 
 gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG the shelves it registers gaps for.  Four real failures (p411, p414-p416); red at p414 on the real commits, where nothing was looking.
 # 🔴 p634 — ACTION 634-B: the file list above was SIX of EIGHT shelves.  It omitted

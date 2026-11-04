@@ -4,6 +4,153 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — **🟢 `645-D` CLOSES: THE README FILENAME GUESS IS NOW A SCRIPTED RESOLVER OVER THE WHOLE POPULATION, AND IT TURNS `54` FALSE ABSENCES INTO READS — `6.4x` WHAT `645-D` TESTED BY HAND. 🔴 THE RESOLVER'S OWN FIRST DRAFT REPORTED `1,214` FALSE ABSENCES BECAUSE A VARIABLE WAS SET AND NOT EXPORTED. 🔴 `645-E`'s *"`topic:` IS CURATED SO IT CANNOT BE POLLUTED"* IS TRUE AND MISLEADING: THE VOCABULARY IS HOMONYMOUS, AND THE HIGHEST-STARRED NOVEL ADDRESS IN THIS PASS IS A SCREEN-BRIGHTNESS DAEMON. 🟢 `645-F`'s *"YIELD AND PLACEMENT ARE DISJOINT"* IS FALSIFIED — PLACEMENT RIDES THE OWNER NAMESPACE, `5 of 8` vs `0 of 10`. 🔴 A PUBLISHED ADDRESS'S WHOLE GITHUB ACCOUNT IS GONE AND THIS BASE STILL CARRIES IT AS LIVE.**
+
+### 🟢 `646-A` — `645-D` closes: the filename guess is a measurement now, over `1,214` addresses in `70 s`
+
+`645-D` measured that `17 of 203` published addresses `404` on `README.md` at their own default
+branch, resolved `8` of them by hand against `7` filenames, found `8 of 8` serve under another name
+and concluded: *"`0` of the `17` is an absence and the filename guess is unfixed."* It left the
+resolver unbuilt. `ingest/p646-readme-resolver.sh` is the resolver, and it runs over the **whole
+published population** rather than a specimen set.
+
+| Measured `2026-11-04` over `1,214` published addresses | Reading |
+|---|---|
+| Wall-clock, `PAR=12` | 🟢 `70 s` |
+| `README.md` serves directly at the resolved default branch | `1,147` |
+| 🟢 **`404` on `README.md` but a README RESOLVED under another name** | 🟢 **`54`** — every one of which the old channel would have called an absence |
+| `404` across all `9` candidates — walk exhausted | `9` |
+| `NOT-PUBLIC` on the git channel, so no README claim is made at all | `4` |
+| `INCONCLUSIVE` (network) | 🟢 `0` |
+
+🟢 **It reproduces `645-D`'s hand-measured bytes exactly** — `h5p/h5p-php-library` `796 B`,
+`adlnet/ADL_LRS` `1,755 B`, `openedx/openedx-platform` `12,381 B`, `oppia/oppia` `4,042 B` — so the
+script is a cheaper channel onto the same quantity, not a different one.
+
+🔴 **And `645-D`'s own filename set was short.** The `54` resolve as:
+
+| filename that served | count | in `645-D`'s set? |
+|---|---|---|
+| `README.rst` | `21` | yes |
+| `readme.md` (lowercase — `raw` is case-sensitive) | `18` | yes |
+| `Readme.md` | `4` | 🔴 no |
+| `README.markdown` | `4` | 🔴 no |
+| `README` (extensionless) | `3` | 🔴 no |
+| `docs/README.md` | `2` | 🔴 no |
+| `README.txt` | `1` | yes |
+| `.github/README.md` | `1` | yes |
+
+🔴 So `13 of 54` — **`24 %`** — sit on candidates `645-D` never tried, and `p645`'s set would still
+have mis-called them absent. The resolver's set is `9` and the `9` walk-exhausted rows are what
+remains genuinely unresolved, named in `evidence/readme-filename-resolution.2026-11-04-p646.tsv`.
+
+### 🔴 `646-B` — the resolver's first draft reported `1,214` false absences, silently
+
+`CANDIDATES` was **set, not exported**, and the walk runs inside `xargs bash -c`. The `for` loop
+therefore iterated an **empty list**, fell through to `NO-README-walk-exhausted`, and reported a
+clean-looking `404` for every address — including `THU-MAIC/OpenMAIC`, whose README serves
+`55,386 B`. 🔴 **That is `645-D`'s own defect class — a filename guess published as an absence —
+reproduced by the instrument built to end it.** It was caught by smoke-testing against an address
+whose README is *known* to serve, and the script now carries that control as a `SELFTEST` that
+refuses to run the population if the control does not resolve `README.md`. 🔵 **The rule this
+leaves:** an instrument whose failure mode is a plausible negative must assert a known positive
+before it is trusted, because nothing downstream can tell a measured `0` from a broken loop.
+
+### 🟢 `646-C` — the new rows: `7` filed, every licence byte-read, `5` regionally placeable
+
+`293` addresses novel against the whole corpus (`4,769` held), filtered to permissive + pushed
+inside `60` days + `>=3★`, graded on the `raw` byte channel with `645-A`'s predictor.
+
+| Agent | Repo | Licence (channel + bytes) | ★ | Branch | Region | What it is |
+|---|---|---|---|---|---|---|
+| gptwrapper | [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) | 🟢 `MIT` — `raw LICENSE`, `1,111 B`, predictor residual `0` | `11` | `main` | **EMEA** | LLM chat built for University of Helsinki staff and students, for teaching and research. RAG. The reference shape for an institution-operated tutor front end. |
+| EDUC-STUDENT-ADMIN | [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | 🟢 `Apache-2.0` — `raw LICENSE`, `11,357 B` = canonical, nothing appended | `6` | `master` | **North America** | Staff administration of students and PEN (personal education number) requests, Government of British Columbia. Government-grade student-admin provenance. |
+| arsnova.eu | [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | 🟢 `MIT` — `raw LICENSE`, `1,079 B`, predictor residual `0` | `8` | `main` | **EMEA** | Audience-response system for education and organisations: quizzes, polling, question boards. German-language, ARSnova lineage. |
+| word-learning-system | [`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) | 🟢 `MIT` — `raw LICENSE`, `1,070 B`, predictor residual `0` | `26` | `main` | **APAC** | Adaptive vocabulary learning for Chinese as a Foreign Language. Flask. The largest-starred of this pass's filed rows. |
+| Popbook | [`AlphaaCode/Popbook`](https://github.com/AlphaaCode/Popbook) | 🟢 `MIT` — `raw LICENSE`, `1,084 B`, predictor residual `0` | `13` | `main` | Global | Turns a course PDF into an interactive 3D pop-up textbook against your own AI key. Bring-your-own-model, so no per-seat inference cost. |
+| adaptive-learner | [`astrapi69/adaptive-learner`](https://github.com/astrapi69/adaptive-learner) | 🟢 `MIT` — `raw LICENSE`, `1,105 B`, predictor residual `0` | `5` | `develop` | Global | Adaptive learning platform, `6` learning methods on a `7`-step cycle. FastAPI + Dexie. 🟡 Default branch is `develop`, not `main`. |
+| learn.ninja | [`learn-ninja/learn.ninja`](https://github.com/learn-ninja/learn.ninja) | 🟢 `Apache-2.0` — `raw LICENSE`, `11,358 B` = canonical `+1` | `3` | `main` | Global | An agent that turns an article, doc or code file into a short interactive lesson. |
+
+🔴 **One found and NOT filed, deliberately.**
+[`ScilifelabDataCentre/scilifelab-ai-agent-mcp-workshop-2026-11-02`](https://github.com/ScilifelabDataCentre/scilifelab-ai-agent-mcp-workshop-2026-11-02)
+(`4★`, SciLifeLab, Sweden — **EMEA**) has GitHub metadata asserting `MIT` and **no payload at `12`
+filename probes**. That is `619-G`'s class, and this base has a documented five-pass error from
+publishing a metadata-only `MIT` (`PageLM`), so it is recorded here and kept off the shelf.
+
+### 🟢 `646-D` — `645-A`'s MIT byte predictor holds on `5` addresses it has never seen
+
+`645-A` established `bytes = 1027 + |title| + |copyright|`, exact on `18 of 19`. This pass read `5`
+further `MIT` payloads, none of them in `p645`'s cohort:
+
+| Repo | title len | copyright len | predicted | measured | residual |
+|---|---|---|---|---|---|
+| [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) | `11` | `73` | `1,111` | `1,111` | 🟢 `0` |
+| [`astrapi69/adaptive-learner`](https://github.com/astrapi69/adaptive-learner) | `11` | `67` | `1,105` | `1,105` | 🟢 `0` |
+| [`AlphaaCode/Popbook`](https://github.com/AlphaaCode/Popbook) | `11` | `46` | `1,084` | `1,084` | 🟢 `0` |
+| [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | `11` | `41` | `1,079` | `1,079` | 🟢 `0` |
+| [`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) | `11` | `32` | `1,070` | `1,070` | 🟢 `0` |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | `11` | `94` | `1,132` | `1,132` | 🟢 `0` — 🔵 **not new: `645-A`'s own falsifier, reproduced independently here** |
+
+🟢 **`5 of 5` unseen payloads at residual `0`, so the predictor stands at `23 of 24` exact** — and `pyBKT`, which `642-C` had used to break the old band, reproduces `p645`'s figure exactly on a second read. 🟢 **And the
+`Apache-2.0` baseline is confirmed from the other side:** `bcgov/EDUC-STUDENT-ADMIN` reads
+`11,357 B`, which is exactly the canonical figure this base's `DeepTutor` cell implies
+(`11,408 B` = canonical `+51`, appended copyright), and `learn-ninja/learn.ninja` reads
+`11,358 B` = canonical `+1`. `Apache-2.0` interpolates no name, so it is flat — `645-B`'s mechanism,
+reproduced on a second licence family.
+
+### 🔴 `646-E` — a published address's whole GitHub account is gone, and this base carries it as live
+
+[`jonajinga/open-phonics`](https://github.com/jonajinga/open-phonics) is held here as a live
+licence-nil near-miss (`619-G`, *"bare token `MIT` in README, no payload at `8` probes"*). It is
+now **gone**, and the probe that settles it is account-level rather than repo-level:
+
+| Channel | `jonajinga/open-phonics` | `CabinServer39/quiz-gen` (known dead, `626-E`) | `ShacharHarshuv/open-ear` (live control) |
+|---|---|---|---|
+| `ls-remote --symref` | 🔴 `NOT-PUBLIC` | 🔴 `NOT-PUBLIC` | 🟢 `PUBLIC-LIVE`, `master` |
+| `repo:` scoped search | 🔴 `422` | 🔴 `0` | 🟢 `1` |
+| 🟢 **`user:` scoped search — the whole account** | 🔴 **`422`** | 🔴 **`422`** | not probed |
+| `open-phonics in:name` globally | 🔴 `0` hits | n/a | n/a |
+
+🟢 **So it was not renamed and not transferred — the account itself is unsearchable, exactly as the
+known-dead comparator's is.** `629` established that a `repo:` `422` can be a *rename signature*;
+this pass adds the discriminator that separates the two cases, and it is cheaper than per-repo
+probing: 🔵 **`user:` `422` means no rename can revive the address, because the namespace is gone.**
+`AGREE-ABSENT` (`NOT-PUBLIC` + `422`) was previously this base's **two fabricated controls and
+nothing else**; `open-phonics` is the first real address to enter that bucket.
+
+🔴 **Calibration this pass had to make first, and it matters for any successor:** `github.com` HTML
+returns `403` through this session's proxy for **live** repositories — `open-ear` included — so the
+HTML channel cannot witness absence here at all. Only `ls-remote` and `raw` can.
+🔴 **And `repos/{slug}` is scope-blocked this session** (*"GitHub access to this repository is not
+enabled for this session"*), so every metadata cell above came through `search/repositories`.
+
+
+### 🔴 `646-I` — a `NOASSERTION` on these shelves is a metadata artefact, and one of them is load-bearing
+
+🔵 This pass needed `Cvmcosta/ltijs` for `646-P1` (it is the LTI 1.3 layer, so it is in almost every
+recipe this base writes) and found it held here as 🔴 **`NOASSERTION`** — GitHub's metadata answer
+when its classifier declines. 🟢 **Read on bytes it is a complete `Apache-2.0`:**
+
+| Repo | Branch | Base held | Payload read `2026-11-04` | Bytes | vs canonical | Resolved |
+|---|---|---|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `master` | 🔴 `NOASSERTION` | Full `Apache License, Version 2.0` text | `11,361 B` | canonical `+4` | 🟢 **`Apache-2.0`** |
+
+🟢 **`645-B`'s mechanism predicts this exactly.** `Apache-2.0` interpolates no name, so its payload is
+flat — this base's canonical figure is `11,357 B`, confirmed independently this pass by
+`bcgov/EDUC-STUDENT-ADMIN` at `11,357 B` exactly. `ltijs` at `+4` and `learn-ninja/learn.ninja` at
+`+1` are whitespace, not clause changes. 🔵 **So `NOASSERTION` is not a licence state and must never
+be published as one** — it is the metadata channel declining to answer a question the byte channel
+answers in one `curl`. 🔴 This matters more than one row: `ltijs` is permissively licensed and this
+base's own shelf implied it might not be, which is the inverse of the `PageLM` error and would have
+cost a studio a usable component rather than handing it an unusable one.
+
+🔵 **A measurement note for successors, because it cost this pass a wrong number first.**
+`$(curl …) | wc -c` under-reports a payload by `1 B`, because command substitution strips the
+trailing newline — it graded `pyBKT` at `1,131 B` and residual `-1`. `curl`'s own
+`%{size_download}` gives `1,132 B` and residual `0`. 🟢 **The byte channel must read its size from
+`curl`, never from a shell round-trip**; `ingest/p646-readme-resolver.sh` and
+`ingest/licence-bytes-p640.sh` both already do.
+
 ## 🆕 `p645` — reads `2026-11-04` — **🟢 `645-A`: THE `MIT` BYTE BAND IS NOT A BAND AND NEVER WAS — IT IS `1027 + |title| + |copyright|`, AN EXACT PREDICTOR, CONFIRMED `18 of 19` AT RESIDUAL `+0` INCLUDING EVERY ONE OF THE THREE FALSIFIERS `p640`/`p641`/`p642` WIDENED IT ON. 🟢 `645-B`: `git ls-remote --symref` IS AN EXISTENCE ORACLE INDEPENDENT OF THE SEARCH INDEX, `38×` FASTER AND NOT RATE-LIMITED, AND IT RETURNS THE DEFAULT BRANCH — WHICH `34.0 %` OF THIS BASE'S PUBLISHED ADDRESSES NEED, BECAUSE THEY ARE NOT ON `main`. 🔴 `645-C`: `642-B`'s FALSE ABSENT WAS **TRANSIENT**. MEASURED OVER THE WHOLE PUBLISHED POPULATION THE RATE IS `0 of 203`.**
 
 🔵 **`p645` is an instrument pass and it ends three standing arguments with measurements rather than

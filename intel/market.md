@@ -4,6 +4,42 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL ON `43 of 43` FACTS ACROSS ALL FOUR REGIONS, THE LARGEST DENOMINATOR THIS BASE HAS RUN. 🟢 THE SUPPLY HALF PAID, AND `5 of 8` NEW ROWS PLACE — ON METADATA THAT ARRIVES FREE WITH THE SEARCH RESULT.**
+
+### 🔴 `646-F` — the mandated regional legs, scored with a denominator
+
+| Region | Facts probed | Held at `HEAD` | 🟢 New | Reading |
+|---|--:|--:|--:|---|
+| North America | `7` | `7` | `0` | Statutory detail (NC `2026-41`, MD `SB 720`, NYC traffic-light, `134` bills / `31` states) all held. |
+| EMEA | `7` | `7` | `0` | Including `Regulation (EU) 2026/1744` and the `2 December 2027` deferral. |
+| APAC | `7` | `7` | `0` | Including Vietnam's Decision `33/2026/QD-TTg` and Korea's `22 January 2026`. |
+| LATAM | `9` | `9` | `0` | Including IESALC's `87 % / 26 %` and Los Andes' `716` instruments. |
+| **Total** | **`43`** | **`43`** | 🔴 **`0`** | Fourteenth consecutive effective nil. |
+
+🔵 **Written down explicitly rather than left silent**, because a region that was searched and
+returned nothing unheld is a *measurement*, and a region nobody searched is an *absence of one* —
+and in a file that simply omits both they are indistinguishable. 🟢 **All four regions were searched
+this pass and all four are saturated against this base's current holdings.**
+
+### 🟢 `646-G` — placement is not a separate channel, and `645-F` over-charged for it
+
+`645-F` concluded *"the yield channel and the placement channel are disjoint — a pass must run
+both"*, on a measurement of `0 of 10` placeable rows. 🔴 **That was an artefact of looking in the
+README.** `5 of 8` of this pass's finds place, and all `5` place on fields that arrive **inside the
+search response**, costing nothing:
+
+| Placement signal | Rows | Cost | Example |
+|---|--:|---|---|
+| 🟢 Owner namespace is an institution | `3` | free — in the result | `UniversityOfHelsinkiCS` → **EMEA** (FI); `bcgov` → **North America** (CA); `ScilifelabDataCentre` → **EMEA** (SE) |
+| 🟢 Description names a language or market | `2` | free — in the result | `arsnova.eu` (German) → **EMEA**; `word-learning-system` (Chinese as a Foreign Language) → **APAC** |
+| 🔴 Neither | `3` | — | individual owners, English descriptions — correctly filed `Global` |
+
+🔵 **The engagement consequence:** an institution-owned repository is worth more than its star count
+suggests, because it is simultaneously an asset *and* a named reference customer in a region.
+`bcgov/EDUC-STUDENT-ADMIN` at `6★` is a weaker project and a stronger **public-sector reference**
+than a `500★` individual project, and `UniversityOfHelsinkiCS/gptwrapper` at `11★` is a working
+university deployment of exactly the thing EMEA institutions are procuring.
+
 ## 🆕 `p645` — `2026-11-04` — **🔴 `645-G`: THE MANDATED WEB LEGS ARE SATURATED WITH A DENOMINATOR — `21 of 22` FACTS ACROSS ALL FOUR REGIONS WERE ALREADY HELD AT `HEAD`, AND THE ONE UNHELD FACT IS NOT EDUCATION. 🟡 `645-H`: `p640`'s VIETNAM CLAIM HOLDS ON ONE OF TWO ANCHORS, AND THE TWO DIFFER BY `5.5` MONTHS.**
 
 ### 🔴 `645-G` — the demand half, measured rather than asserted
@@ -100,6 +136,15 @@ student data to train models (NY Education Law §2-d, FERPA) and California's `A
 generalise that — so **local-first or no-train-by-default is a compliance feature here**, which is
 exactly the shape `645-E`'s `10` new desktop rows have.
 
+
+🟢 **New this pass, and it is a public-sector reference rather than a product.**
+[`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) (🟢 `Apache-2.0`, byte-read
+`11,357 B` = canonical, `6★`, branch `master`) is the Government of British Columbia's own staff
+administration of students and personal-education-number requests. 🔵 **Why it outranks its star
+count:** a permissively-licensed student-records system *operated by a provincial government* is
+both a build-on component and a citable precedent in exactly the procurement conversations that NC
+`2026-41` and MD `SB 720` are about to create. It pairs with `quickfeed/quickfeed` for assessment
+audit trails and `CAHLR/pyBKT` for a defensible mastery model.
 ### EMEA
 
 🟡 **The dominant fact is a delay, and the delay is the opportunity.** Stand-alone Annex III
@@ -119,6 +164,20 @@ tutoring. 🟢 **Build-on:** `Cvmcosta/ltijs` (the LTI 1.3 layer) plus
 `1EdTech/openbadges-validator-core` for verifiable credentials; `ArtVsMark/Stepik-Python-Grader`
 (MIT) is the one new in-region row.
 
+
+🟢 **Two new in-region rows this pass, both byte-graded.**
+[`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) (🟢 `MIT`,
+`1,111 B`, predictor residual `0`, `11★`) is a **university-operated** LLM chat for staff and
+students with RAG — i.e. a working deployment of the thing EMEA institutions are currently
+procuring, from an institution that can be named. 🟢
+[`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) (🟢 `MIT`, `1,079 B`, residual `0`,
+`8★`, German-language, ARSnova lineage) is the permissive audience-response layer, a slot otherwise
+held by hosted SaaS. 🔵 **The `~25`-month Annex III runway is what makes these buildable rather than
+buyable:** a `MIT` tutor front end plus `fairlearn/fairlearn` for assessment-bias evidence and
+`1EdTech/openbadges-validator-core` for credentials is a conformity file a studio can assemble now.
+🟡 Also found and **not** filed: `ScilifelabDataCentre/scilifelab-ai-agent-mcp-workshop-2026-11-02`
+(SciLifeLab, SE) asserts `MIT` in metadata with **no payload at `12` probes** — recorded, kept off
+the shelf (`619-G` class).
 ### APAC
 
 🟢 **APAC is the only region with binding, education-specific, already-live obligations, and this is
@@ -140,6 +199,15 @@ incident reporting and registration in a national AI database, which is a concre
 🔴 **Data sovereignty is a hard requirement, not a preference** — Malaysia frames sovereign cloud as
 foundational — so self-hostable components beat hosted APIs on every APAC bid.
 
+
+🟢 **New this pass, and it is the largest-starred of them.**
+[`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) (🟢 `MIT`, `1,070 B`,
+predictor residual `0`, `26★`) is an adaptive vocabulary system for **Chinese as a Foreign
+Language** — a language-acquisition slot distinct from the classroom-simulation work
+`THU-MAIC/OpenMAIC` occupies, and permissive, so it can be white-labelled. 🔵 Against Vietnam's
+~`1 September 2027` education deadline and Decree `142/2026/ND-CP`'s documentation list, a
+self-hostable `MIT` component with Chinese-institution provenance is the right shape for a
+data-sovereignty bid: nothing leaves the estate.
 ### LATAM
 
 🟢 **The region's defining number is a governance gap with a denominator, and it is a services gap by
@@ -161,6 +229,36 @@ AI-in-education agreement with UNESCO in March 2026. 🟢 **Build-on:** `learnin
 (MIT, byte-confirmed `1,097 B`, default branch `develop`) is the right substrate because it is
 offline-first, and `v1tzor/StudyAssistant`'s offline-first property (`644`) matters for the same
 reason — connectivity assumptions a hosted tutor makes do not hold.
+
+
+🔴 **Supply into this region went nil again this pass, and that is reported rather than padded.**
+The `topic:` + `sort=updated` channel returned `293` novel addresses and **not one** placed in
+LATAM on either placement signal — no institutional owner in the region, no Spanish- or
+Portuguese-language description among the permissive, recently-pushed candidates. 🟡 The one LATAM
+address this pass touched at all, `eol-uchile/eol-uchile-theme-2020` (Universidad de Chile, branch
+`eol-release/koa`), is a `404` across all `9` README candidates. 🔵 **So the `87 % / 26 %` governance
+gap remains a services opportunity with no new local open-source supply behind it** — the build-on
+components for a LATAM engagement are still the global permissive ones, localised, and the honest
+framing for a proposal is capacity-building rather than a regional ecosystem.
+
+### Global
+
+🟢 **Three of this pass's `7` filed rows carry no regional signal and are correctly filed `Global`** —
+[`AlphaaCode/Popbook`](https://github.com/AlphaaCode/Popbook) (`MIT`, `1,084 B`, `13★`, course PDF →
+interactive 3D pop-up textbook, **bring-your-own API key**),
+[`astrapi69/adaptive-learner`](https://github.com/astrapi69/adaptive-learner) (`MIT`, `1,105 B`,
+`5★`, `6` learning methods on a `7`-step cycle, branch `develop`) and
+[`learn-ninja/learn.ninja`](https://github.com/learn-ninja/learn.ninja) (`Apache-2.0`, `11,358 B`,
+`3★`, article/doc/code → interactive lesson).
+
+🔵 **The cross-region commercial point is the licence, not the feature.** All three are permissive
+and all three are **bring-your-own-model**, so inference cost sits with the client's existing
+provider contract instead of a per-seat vendor fee. 🟢 That is the one property that travels across
+every regime above unchanged: it is a procurement answer in North America (no student data leaves
+the district), in EMEA (no new processor to document under Annex III), in APAC (data sovereignty by
+construction) and in LATAM (no FX-denominated per-seat licence). 🔴 **The constraint that also
+travels:** at `3`–`26★` these are components to fork and own, not products to deploy — none carries
+a support contract, and `adaptive-learner` does not even default to `main`.
 
 ## 🆕 `p644` — reads `2026-11-04` — **🟢 THE REGIONAL LEGS PAID FOR THE FIRST TIME IN FOUR PASSES: `18` UNHELD FACTS OF `33`. THE APAC REGULATORY PICTURE IS NOW CONCRETE, AND LATAM HAS A MEASURED DENOMINATOR THAT DOES NOT COME FROM A BROKEN RULER.**
 

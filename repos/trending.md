@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `2026-11-04` — `p646` — 🔴 the curated channel IS polluted, and the highest-starred novel address this week is a screen-brightness daemon
+
+🔵 **Appended.** `p645` published, on this page, that with `topic:` *"the pollution does not occur,
+because a topic is opted into by the maintainer."* 🔴 **That is falsified, and the reason is the
+opposite of a tagging error: the polluting maintainers tagged correctly.** A curated vocabulary
+removes *substring* matching (`644-A`'s defect) and does nothing about **homonymy** — two fields
+that legitimately share a word.
+
+`423` distinct addresses over `10` topics; after filtering to permissive + `>=3★` + pushed inside
+`60` days, `18` candidates remained and **`4` of them (`22 %`) are not education at all**:
+
+| Off-domain address | ★ | Licence | Surfaced by | What it actually is | Collision |
+|---|--:|---|---|---|---|
+| [`max-baz/wluma`](https://github.com/max-baz/wluma) | `956` | `ISC` | `topic:adaptive-learning` | Automatic screen-brightness daemon driven by an ambient-light sensor | 🔴 **SEMANTIC** — "adaptive learning" in the ML sense |
+| [`codelion/adaptive-classifier`](https://github.com/codelion/adaptive-classifier) | `577` | `Apache-2.0` | `topic:adaptive-learning` | Dynamic text-classification library | 🔴 **SEMANTIC** — same word, ML sense |
+| [`mtxmiller/LyrPlay`](https://github.com/mtxmiller/LyrPlay) | `45` | `MIT` | `topic:lms` | Squeezebox audio player for iOS | 🔴 **ACRONYM** — `LMS` = Logitech Media Server |
+| [`oweitman/ioBroker.squeezeboxrpc`](https://github.com/oweitman/ioBroker.squeezeboxrpc) | `18` | `MIT` | `topic:lms` | Logitech Media Server JSON/RPC adapter | 🔴 **ACRONYM** — tags `logitech-media-server` explicitly |
+
+🔴 **The cost is not the four rows — it is the ranking.** The two highest-starred novel addresses
+this channel returned all week are `wluma` (`956★`) and `adaptive-classifier` (`577★`), and
+**neither is education**. The largest genuine find is `kzw-ai/word-learning-system` at `26★`. 🔵 A
+pass that had ranked this channel by stars and filed the top rows — the obvious reading, and the one
+a star floor invites — would have published a brightness daemon as education's leading new permissive
+asset. 🟢 **`643-C`/`644-A`'s token-pollution finding therefore survives the move to `topic:`; only
+its mechanism changes, from substring to homonym.**
+
+🔵 **The two polluted topics are now named, and the discriminator is cheap:** `topic:lms` and
+`topic:adaptive-learning` require a domain check on the description before any row from them is
+filed. The other `8` topics (`ai-tutor`, `intelligent-tutoring-system`, `education-ai`,
+`ai-in-education`, `edtech`, `learning-analytics`, `student-management`, `grading-automation`)
+returned no off-domain rows at this threshold. 🟡 `topic:grading-automation` returned only `2`
+addresses in total, so it is nearly empty rather than clean.
+
 ## 🆕 `2026-11-04` — `p645` — trending, measured on a curated channel instead of a token
 
 🔵 **Appended.** `644-A` established that education's token vocabulary is polluted (`rubric`,

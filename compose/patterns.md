@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — **🟢 TWO RECIPES BUILT ONLY FROM ROWS THIS PASS BYTE-READ, PLUS THE ONE-LINE CORRECTION EVERY EXISTING RECIPE IN THIS FILE NEEDS**
+
+### 🔴 `646-H` — the correction that applies to every recipe already on this page
+
+🔴 **Any recipe step that clones `main`, or fetches `main/README.md`, is wrong for most of the
+platforms this file recommends.** `646-A` measured the real default branch of all `1,210` live
+published addresses: **`425` (`35.1 %`) are not on `main`**, and across the `14` vertical platforms
+this KB most often composes, **`1` is** (`moodle/moodle`).
+
+🔵 **The fix is one line and it belongs at the top of every build script:**
+
+```bash
+# resolve the default branch instead of assuming it (p646)
+BR=$(git ls-remote --symref "https://github.com/$SLUG" HEAD \
+     | sed -n 's|^ref: refs/heads/\([^[:space:]]*\).*|\1|p' | head -1)
+git clone --depth 1 --branch "$BR" "https://github.com/$SLUG"
+```
+
+🔴 **And it is not optional for `openeducat/openeducat_erp`, whose default branch is `19.0`** — a
+bare Odoo major version that moves at each release, so a hardcoded branch keeps building the old
+major **silently**. Same class, weaker form: `overhangio/tutor` (`release`),
+`ILIAS-eLearning/ILIAS` (`release_11`), `bigbluebutton/bigbluebutton` (`v4.0.x-develop`),
+`learningequality/kolibri` and `frappe/erpnext` (`develop`).
+
+### 🟢 Pattern `646-P1` — an institution-operated tutor an EMEA university can actually run
+
+🔵 **Every component byte-read this pass or already byte-confirmed on these shelves. No hosted
+dependency, no per-seat licence.**
+
+| Step | Component | Licence (channel + bytes) | Role |
+|---|---|---|---|
+| `1` | [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) | 🟢 `MIT`, `raw LICENSE` `1,111 B`, residual `0` | The chat front end, and it is **already a university deployment** — not a demo. Branch `main`. |
+| `2` | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` — `raw LICENSE` `11,361 B` = canonical `+4`, read this pass. 🔴 **This base held it as `NOASSERTION`; see `646-I`.** Branch `master`. | LTI 1.3 launch, so it appears *inside* Moodle or Canvas rather than beside it. |
+| `3` | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | held — 🔴 README at `master/README.txt` | Interactive content types for the exercises the tutor sets. |
+| `4` | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | held — 🔴 README at `master/readme.md` | xAPI Learning Record Store: the evidence trail. Branch `master`. |
+| `5` | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | held — README at `main/README.rst` | Assessment-bias measurement, i.e. the Annex III conformity artefact. |
+| `6` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 `MIT` — `raw LICENSE` `1,132 B`, predictor residual `0`, read this pass. UC Berkeley (CAHL). Branch `master`. | Bayesian knowledge tracing, so mastery is a defensible model and not a prompt. |
+
+🔵 **Wiring:** `ltijs` terminates the LTI launch and hands the verified user context to `gptwrapper`;
+`gptwrapper` serves the dialogue and emits an xAPI statement per turn to `ADL_LRS`; `pyBKT` consumes
+those statements to maintain per-skill mastery and gates progression; `h5p` supplies the exercises;
+`fairlearn` runs offline over the `ADL_LRS` store to produce the bias report. 🟢 **Why it fits the
+regime:** the `2 December 2027` Annex III date under Regulation (EU) `2026/1744` gives a `~25`-month
+runway, and steps `4`–`6` *are* the conformity evidence — built as a by-product rather than
+retrofitted. 🔴 **Known gap:** `gptwrapper` is `11★`; this is a fork-and-own component, not a
+supported product, and the engagement must be priced that way.
+
+### 🟢 Pattern `646-P2` — zero-marginal-cost courseware conversion, for a budget-constrained estate
+
+🔵 **The property that makes this work in every region is that both AI components are
+bring-your-own-key**, so inference bills land on the client's existing provider contract.
+
+| Step | Component | Licence (channel + bytes) | Role |
+|---|---|---|---|
+| `1` | [`AlphaaCode/Popbook`](https://github.com/AlphaaCode/Popbook) | 🟢 `MIT`, `1,084 B`, residual `0` | Course PDF → interactive 3D pop-up textbook. BYO key. |
+| `2` | [`learn-ninja/learn.ninja`](https://github.com/learn-ninja/learn.ninja) | 🟢 `Apache-2.0`, `11,358 B` (canonical `+1`) | Article/doc/code → short interactive lesson. BYO key. |
+| `3` | [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | 🟢 `MIT`, `1,079 B`, residual `0` | Live audience response over the generated material. |
+| `4` | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` (held) — 🟢 branch `main` | Delivery. 🔴 Copyleft: integrate **over LTI/web**, never by linking. |
+| `5` | [`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) | 🟢 `MIT`, `1,070 B`, residual `0` | Optional APAC arm: spaced vocabulary for language courses. |
+
+🔵 **Wiring:** a batch job walks the estate's existing PDFs through `Popbook` and loose docs through
+`learn.ninja`, publishing both as static bundles; `arsnova.eu` runs the live layer in lectures;
+Moodle delivers and records completion. 🔴 **The licence boundary is load-bearing:** Moodle is
+`GPL-3.0`, so steps `1`–`3` stay separate services reached over LTI or HTTP — combining them into a
+Moodle plugin would pull the permissive code into copyleft, and `635` already measured that three
+"`MIT`" Moodle themes carry `GPL-3.0-or-later` source headers, so the boundary is not theoretical on
+this platform.
+
+🔵 **Honest sizing for both patterns:** the new components are `3`–`26★`. These are recipes for
+*owning* a stack cheaply, and the cost moved rather than disappeared — from licence fees to
+maintenance. The byte-read licence column is what makes that trade safe to make.
+
 ## 🆕 `p645` — `2026-11-04` — three recipes, and a correction that affects every existing recipe on this shelf
 
 ### 🔴 First, the correction: pins on this shelf that point at a ref that does not exist
