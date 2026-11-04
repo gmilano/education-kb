@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p643` — reads `2026-11-04` — **🟢 TWO RECIPES, AND BOTH EXIST BECAUSE `p643` FOUND THE PLUMBING. THE FIRST REPLACES A BUILD THIS BASE HAS RECOMMENDED FOR DOZENS OF PASSES.**
+
+### 🟢 `P643-1` — put any shelved agent *inside* Canvas, Moodle, Blackboard or D2L without writing LTI
+
+🔵 **The problem a client actually brings.** *"We like the tutor. Our students live in Canvas. Make
+it appear there, and make the grades land in the gradebook."*
+
+🔴 **What this base used to answer.** That the LMS is **AGPL-3.0** (Canvas, Open edX) or **GPL-3.0**
+(Moodle), that the join is LTI 1.3, and that the client should build the LTI tool provider. 🔴 **That
+was a `6`–`10` week build quoted on every education engagement, and it was unnecessary.**
+
+🟢 **What to wire instead.**
+
+| # | Component | Licence (byte-read `2026-11-04`) | Role |
+|--:|---|---|---|
+| 1 | [`hypothesis/lms`](https://github.com/hypothesis/lms) | 🟢 **BSD-2-Clause** (`LICENSE`, `1,320 B`) | **The boundary service.** Fork it, strip the annotation domain, keep the LTI layer. Verified in-tree: `lms/product/{canvas,moodle,blackboard,d2l}/` all present, `lms/product/plugin/` is the documented extension point, `lms/services/lti_grading/` exposes `LTIGradingService`. `docs/setting-up-a-region.md` gives a multi-region deployment story out of the box. |
+| 2 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 — re-measured `54,813★`, `main`, pushed `2026-10-31` | The tutoring agent, mounted **behind** the boundary. Swap for `Educhain` (MIT) where the job is content generation rather than dialogue. |
+| 3 | [`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools) | 🟢 **MIT** (`LICENSE`, `1,077 B`) | **LLM-as-a-judge gate in CI.** Nothing the agent generates reaches a learner until it clears the rubric. New this pass; this base previously had no permissive education eval harness at all. |
+| 4 | The client's Canvas / Moodle / Blackboard / D2L | 🔴 AGPL-3.0 / GPL-3.0 / proprietary | **Unmodified, across a network boundary.** |
+
+🟢 **Why the licence geometry *is* the architecture, and not a footnote.** The boundary service is
+the only component that touches both sides. At **BSD-2-Clause** it can be modified and delivered
+without source obligations, so the studio's work product stays the studio's. 🔴 **Invert the
+stack — extend Moodle with a plugin instead — and GPL-3.0 reaches the extension.** The permissive
+LTI tool provider is what keeps the copyleft on the far side of the wire.
+
+🔵 **Grades flow back through LTI AGS, so no gradebook is built and no student roster is copied** —
+which is also the cheapest answer to the data-protection question every one of these engagements
+asks in week one.
+
+**Effort: `6`–`8` weeks** (`2` boundary fork and strip, `3` agent mount and AGS writeback, `1` eval
+harness in CI, `1`–`2` per additional LMS family beyond the first).
+
+🔴 **Regional constraint, and ship it as a feature on day one rather than retrofitting it.** Writing
+a grade back is *evaluating a student*, which is **Annex III high-risk** under the EU AI Act.
+Regulation (EU) 2026/1744 moved enforcement for stand-alone systems to **`2027-12-02`**, so an EMEA
+build designed in `2026` will be enforced against inside two years. 🔴 **Article 50 transparency
+duties already apply (`2026-08-02`).** So: **human-confirm on every AGS writeback in EMEA**, an
+immutable decision log, and a disclosure string on learner-facing output — in all four regions, so
+there is one codebase. 🟡 NA adds state-level variation (NY `A 9190` restricts classroom AI below
+grade 9); LATAM adds nothing binding, which is precisely why the audit trail is a **selling point**
+there against the `87 %`-adopt / `26 %`-governed gap.
+
+---
+
+### 🟢 `P643-2` — permissive examination delivery for a client who cannot buy an AI proctoring platform
+
+🔵 **The problem a client actually brings.** *"We need to run secure online exams at scale. We were
+told to buy an AI proctoring product. Procurement rejected it."*
+
+🟢 **This is the first all-permissive route this base can offer on the `585-B`/`585-G` gap**, and it
+became possible this pass.
+
+| # | Component | Licence | Role |
+|--:|---|---|---|
+| 1 | [`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) | 🟢 **MIT** (`LICENSE`, `1,072 B`) | **Examination delivery core** — question banks, paper assembly, sittings, auto-marking, admin/teacher/student roles. `1,691★`, **`568` forks**, Java/Spring Boot. 🔴 **First commit of the fork: delete the public demo and rotate the three published accounts the repository advertises.** |
+| 2 | `SafeExamBrowser` | 🟡 **MPL-2.0** — weak, file-level copyleft; usable | Lockdown client on the candidate's machine. Current (`2026-10-30`). |
+| 3 | [`netless-io/flat-server`](https://github.com/netless-io/flat-server) | 🟢 **MIT** (`LICENSE`, `1,064 B`) | **Live human invigilation channel** — rooms, recording, storage. New this pass. |
+| 4 | [`grwth404/Quiznote`](https://github.com/grwth404/Quiznote) or Educhain | 🟢 MIT | Item generation from source material, feeding the bank in (1). 🟡 `Quiznote` is `28★` / `0` forks — a starting point, not a dependency. |
+| 5 | [`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools) | 🟢 MIT | Judge generated items for quality and bias **before** they enter the bank. |
+
+🔴 **What this recipe deliberately does not contain, and the reason is law rather than taste.** No
+webcam affect detection, no gaze estimation, no "attention scoring". 🔴 **The EU AI Act's ban on
+emotion recognition in education has applied since `2025-02-02` and was *not* delayed by Regulation
+(EU) 2026/1744** — unlike the Annex III high-risk duties, which moved to `2027-12-02`. 🟢 **So the
+missing AI-proctoring layer this base has carried as an opportunity for twenty-plus passes is
+partly a market that cannot legally exist in EMEA**, and a studio should stop reading `585-B` as a
+build backlog item.
+
+🟢 **Integrity without emotion recognition, which is what to sell instead:** item randomisation and
+per-candidate paper assembly from (1), lockdown from (2), **human** invigilation over (3), full
+keystroke-and-submission audit trail, and post-hoc similarity analysis on submissions. All
+permissive, all defensible, none of it regulated as high-risk emotion inference.
+
+**Effort: `8`–`10` weeks** (`3` exam core fork, hardening and localisation — the UI is
+Chinese-first; `2` SEB integration; `2` invigilation channel; `2`–`3` item generation and eval gate).
+
+🟡 **Regional fit.** 🟢 **APAC** — both platform components are APAC-origin and the exam core is
+already localised there. 🟢 **LATAM** — the strongest fit commercially: no binding regional
+constraint, and the `87 %`-adopt / `26 %`-governed gap means the audit trail is the differentiator.
+🟡 **EMEA** — ships as above with the emotion-recognition layer absent by design; the exam core's
+grade output is Annex III from `2027-12-02`, so reuse `P643-1`'s human-confirm step.
+🟡 **North America** — viable, but this is the one region with incumbent commercial proctoring
+procurement already in place, so lead with cost and data residency rather than with capability.
 ## 🆕 `p642` — reads `2026-11-04` — **🟢 ONE RECIPE, AND IT IS THE FIRST IN THIS BASE WHERE THE *HUMAN* IN THE LOOP IS A LICENCE-AND-REGULATION REQUIREMENT RATHER THAN A DESIGN PREFERENCE.**
 
 ### 🟢 `P642-1` — rubric-graded assessment with a defensible audit trail

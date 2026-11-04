@@ -3,6 +3,165 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p643` — reads `2026-11-04` — **🔴 `643-D`: THIS BASE'S SPANISH- AND PORTUGUESE-LANGUAGE DISCOVERY LEGS DO NOT MEASURE LATAM SUPPLY. ONE MEASURES A DISCLAIMER IDIOM, THE OTHER AN ENGLISH HOMOGRAPH — SO EVERY LATAM SUPPLY NIL RESTING ON THEM IS AN UPPER BOUND, NOT A FINDING.**
+
+🔵 **This is the most consequential thing this pass found, and it is about this base's instrument for
+one region.** The four mandated regional legs ran; `19` of `20` facts they returned were already
+held (the one new fact is below). 🟢 **The yield was elsewhere: in discovering that the region whose
+engagements this programme exists to serve has been measured with a broken ruler.**
+
+### 🔴 `643-D` — why `educacion OR educativo OR docente` finds no education software
+
+| Rows | Class | Specimens |
+|--:|---|---|
+| `7 / 25` 🔴 **`28 %`** | **The phrase *"con fines educativos"*** — *"for educational purposes only"*, the disclaimer pinned to a clone or a security tool | `midudev/landing-gta-vi` (GTA VI landing page, `396★`), `midudev/tiktok-clone` (`173★`), `mat1520/telegram-bot-cc-checker-` (credit-card checker, `102★`), `xyzprogramador/olho-de-deus` (*"pentesting / hackeamento etico … FINS EDUCATIVOS SOMENTE"*, `46★`), `zr0n/zcpf-finder` (CPF recovery, `78★`) |
+| remainder | Course material, bootcamp repos, teaching clones | `c215714n/educacionit`, `codeutnfra/programacion_1_laboratorio_1`, `anndreloopez012/campuslands-devs-typescript` |
+| 🔴 **`0 / 25`** | **Education software** | — |
+
+🔵 **The mechanism, stated so it transfers to the other eleven industries in this programme:** in
+Spanish and Portuguese, *"educativo"* is the standard word in a **liability disclaimer**. The
+idiom is far more productive on GitHub than the sector noun is, so a query on the word returns the
+disclaimer population, which is overwhelmingly *security tooling and clones*. 🔴 **An English query
+on `education` has no equivalent trap**, which is exactly why no pass caught this.
+
+### 🔴 And `educação OR professor OR ensino` fails differently — `professor` is an English word
+
+| Rows | Class | Specimens |
+|--:|---|---|
+| `13 / 25` 🔴 **`52 %`** | **`professor` used in English** — a person's title or a GitHub handle | `professor-lee/stonebadge`, `professor-plum/reflective-driver-loader`, `dmitriz/functional-examples` (*"Professor Frisby's course"*), `ziyu-deep/awesome-information-bottleneck` (*"in memory of Professor Naftali Tishby"*), `deskool/nlp-class` (*"taught by Professor Ghassemi"*), `hanmekim/scenelib2` (*"Professor Andrew Davison"*) |
+| `9 / 25` | Actually Portuguese | `pythonprobr/pythonbirds`, `opensource-university/opensource-articles`, `ayrtonteshima/ead-api`, `nicklessone/osib-frontend-pt` — all course material or teaching demos, mostly `2022`–`2024` |
+| 🔴 **`0 / 25`** | **Education software** | — |
+
+### 🟡 What this pass can therefore say about LATAM supply, honestly
+
+🔴 **It still found no LATAM-origin open-source education *software*.** The two best
+Spanish/Portuguese-language rows in a `327`-candidate census were
+[`datascienceresearchperu/opensource-roadmap-datascience`](https://github.com/datascienceresearchperu/opensource-roadmap-datascience)
+(Apache-2.0, `808★`, Peru — **a roadmap, not software**, last pushed `2024-08-30`) and
+`gc-lab-gonzalo/proto-synth-v2` (Chile — an ESP32 synthesiser).
+
+🟢 **But the status of that nil has changed, and this is the point.** Before `p643` it was *"LATAM
+has no supply"*. After `p643` it is *"LATAM has no supply **that two broken queries could have
+found**"*, and the queries have been replaced. 🔵 **The replacement legs a future pass must run** —
+written down so this is a scheduled correction and not an aspiration:
+
+| Instead of | Run |
+|---|---|
+| `educacion OR educativo OR docente` | `"gestión escolar" OR "plataforma educativa" OR "sistema de gestión académica" OR SIGA OR "libreta de calificaciones"` |
+| `educação OR professor OR ensino` | `"gestão escolar" OR "diário de classe" OR "secretaria escolar" OR ENEM OR "plano de aula"` |
+| — | `location:brazil`/`location:mexico`/`location:argentina`/`location:chile`/`location:colombia` on `users`, then enumerate their education repositories |
+| — | **Gitee's equivalent for LATAM does not exist, but GitLab does** — `spring-boot-online-exam` was under-counted here precisely because it mirrors to Gitee, and the same mirror effect is plausible for public-sector LATAM code on self-hosted GitLab |
+
+🔵 **Generalisation for the other industries in this programme:** a non-English discovery leg must be
+validated against a **known-positive** in that language before its nil is believed. Neither of these
+two was, for `643` passes.
+
+## Opportunities by region
+
+### North America
+
+🟢 **One new fact, and `p643` states the ratio rather than implying novelty: `19` of the `20` regional
+facts the four legs returned were already on this page.** The new one:
+
+🆕 **The `STUDENT FIRST Act of 2026`** — a national framework for AI in US schools **authored by
+students from all 50 states**, released by **AASA (The School Superintendents Association) on
+`2026-08-03`**. It explicitly rejects *both* an outright ban on AI *and* unrestricted adoption.
+🔵 **Why it is worth a row on a commercial intelligence page:** it is the first US artefact in this
+base where the **demand side defined the guardrails**, and superintendents — the people who sign
+district contracts — are the ones publishing it. An NA pitch that reads only the `134` bills across
+`31` states is reading the supply of regulation and not the buyer's own stated position.
+
+🔵 Carried and re-confirmed, not restated at length: Multistate's `134` bills / `31` states
+(Apr `2026`); Maryland, Idaho, Oklahoma and Virginia as the four states requiring **both** state
+guidance and mandatory district AI policy; NY `A 9190` (classroom AI restricted to grade 9+, with
+diagnostic and special-education carve-outs); the `K-12 AI Literacy and Readiness Act of 2026`
+advanced from the House Education and Workforce Committee; Gallup's `60 %` of **teachers** using AI
+tools (and `640-J`'s warning not to reconcile that with the `57 %` **student** figure).
+
+🟢 **Supply placed here this pass:** [`hypothesis/lms`](https://github.com/hypothesis/lms)
+(BSD-2-Clause, LTI 1.3, US nonprofit), [`popcodeorg/popcode`](https://github.com/popcodeorg/popcode)
+(MIT, Chicago), [`freeCodeCamp/classroom`](https://github.com/freeCodeCamp/classroom) (BSD-3-Clause),
+[`rundel/ghclass`](https://github.com/rundel/ghclass) (🔴 GPL-3.0, Duke). **`3` of `4` permissive** —
+NA remains the region where the grant geometry is easiest.
+
+### EMEA
+
+🔵 Carried: **Regulation (EU) 2026/1744** moved stand-alone Annex III high-risk education systems
+from `2026-08-02` to **`2027-12-02`**, with AI embedded in regulated products at `2028-08-02`;
+🔴 **the emotion-recognition ban in education has applied since `2025-02-02` and was not delayed**;
+Article 50 transparency duties apply from `2026-08-02`, i.e. **now**; the AI-literacy duty was
+softened to *supporting* literacy rather than guaranteeing a level; the KMK
+`KI-Kompetenzrahmen` (`2026-10-16`) and `56` German rule-sets, `16` of them Länder-level.
+
+🟢 **EMEA took `4` of this pass's `12` new addresses — the largest regional share, and the licence
+split is the story.** [`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools)
+(🟢 MIT, UK, government-backed curriculum body) and
+[`tough-dev-school/education-backend`](https://github.com/tough-dev-school/education-backend)
+(🟢 MIT) against [`veyon/veyon`](https://github.com/veyon/veyon) (🔴 GPL-2.0, Germany) and
+[`classroombookings`](https://github.com/classroombookings/classroombookings) (🔴 AGPL-3.0, UK).
+🔵 **The two public-institution outputs are permissive; the two long-lived community projects are
+copyleft.** That is a repeatable sourcing heuristic for EMEA, not a coincidence of four rows.
+
+🔴 **The opportunity, dated:** the `2027-12-02` deadline is now close enough to sell against. A
+deployment designed in `2026` that writes grades back to an LMS is designing an Annex III high-risk
+function for a market that will enforce it inside two years. **Human-confirm on grade writeback is a
+feature to ship now, not a retrofit** — `P643-1` on [`../compose/patterns.md`](../compose/patterns.md).
+
+### APAC
+
+🔵 Carried: South Korea's **AI Basic Act in force `2026-01-22`**; **Vietnam's AI law `2026-03-01`**;
+Australia and Japan on existing law plus voluntary guidance; very few binding national
+AI-in-education rules; the Ipsos Education Monitor `2026` finding lower support for school AI bans
+across Asian markets, with support *rising* in Japan and Australia and *falling* in Indonesia.
+
+🟢 **APAC produced the two highest-utility platform rows of the pass**, and both were previously
+invisible to this base:
+[`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) (🟢 MIT,
+`1,691★`, **`568` forks**, China) and
+[`netless-io/flat-server`](https://github.com/netless-io/flat-server) (🟢 MIT, `683★`, Agora).
+
+🔴 **And a channel finding that places them: `spring-boot-online-exam` mirrors to Gitee, and that is
+why it was missing.** A census run only against GitHub's index systematically under-counts Chinese
+education software, because the canonical home is often the mirror. 🔵 **This base cannot reach Gitee
+(`588-B`), so the undercount is a standing, quantified limit on the APAC shelf — not a conclusion
+about APAC supply.**
+
+### LATAM
+
+🔴 **Explicit nil on supply, and this pass is the first that can say what the nil is worth.** `0`
+LATAM-origin education-software repositories across a `327`-candidate, `16`-facet census. 🔴 **But
+per `643-D` above, the two legs that were supposed to find them were measuring a liability disclaimer
+(`28 %` of rows) and an English homograph (`52 %` of rows) respectively.** The nil is an **upper
+bound**. The replacement legs are specified in `643-D` and are owed by the next pass.
+
+🔵 Carried on demand, which is where LATAM's numbers are strong and well-sourced: UNESCO IESALC's
+study of **200 higher-education institutions across 19 countries** — **`87 %`** using AI in at least
+one area, **`74 %`** in teaching and learning, but only **`26 %`** with a formal AI strategy;
+**`45 %`** of LAC institutions have or are developing AI guidance against **~`70 %`** in Europe and
+North America; Universidad de los Andes' count of **`716`** AI regulatory instruments across **`23`**
+countries and territories, **over `80 %` initiated since `2023`**; the UNESCO **Observatory on AI in
+Education for Latin America and the Caribbean**, launched **`2026-04-14`** in Santiago with CAF,
+CENIA, Cetic.br/NIC.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey,
+ProFuturo, Universidad del Desarrollo and IRCAI.
+
+🟢 **The commercial reading, unchanged by the instrument correction and arguably strengthened by
+it.** LATAM's defining number is the **`87 %` adopt / `26 %` governed** gap — the widest
+adoption-to-governance spread of the four regions. 🔴 **There is no regional open-source supply to
+build on, so a LATAM engagement imports its stack** — and the importable stack is now materially
+better than it was yesterday: the examination-delivery and virtual-classroom layers are **MIT** and
+come from APAC, and the LTI boundary is **BSD-2-Clause** and comes from NA. 🔵 **What LATAM needs
+built, and nobody has built: the governance layer** — the policy, audit trail and academic-integrity
+instrumentation that `74 %` of institutions are operating without.
+
+### Global
+
+🟢 **`9` of this pass's `12` new addresses are permissive (MIT ×`7`, BSD-2-Clause, BSD-3-Clause);
+`3` are copyleft (GPL-2.0, GPL-3.0, AGPL-3.0); `0` are bespoke or source-available.** 🔵 Worth
+recording against this base's own history: the bespoke-licence trap that consumed `p591`–`p599`
+(`PageLM`, `BabelDuck`, `aimo`, `nextgen-ai`) **did not appear once in twelve fresh reads.** It is a
+hazard of the *AI-wrapper* layer, not of education software generally — platform-layer projects
+overwhelmingly use stock grants.
 ## 🆕 `p642` — reads `2026-11-04` — **🟢 `642-A`: THE `GERMANY` DECLARED GAP ON THIS PAGE WAS STALE AND IS CORRECTED WHERE IT STOOD, NOT RESTATED HERE.**
 
 🔵 **This note is deliberately short, and that is the point.** `641-M` found that this base publishes

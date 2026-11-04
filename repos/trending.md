@@ -3,6 +3,57 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 2026-11-04 — `p643`: deep knowledge tracing is a dead axis, graded as a cohort
+
+🔵 **Appended, not rewritten** — the history below this line is intact.
+
+🔴 **The `knowledge tracing` facet surfaced `14` unheld addresses. `3` are not knowledge tracing at
+all — `tracing` is a third polluted token (`negai-ai/agentclaw`, `sdsrss/code-graph-mcp` *"call graph
+traversal, HTTP route **tracing**"*, `fallingcat/computeraytracingsamples` *"compute shader based **ray
+tracing**"*), which belongs with `grading` and `exam` in `643-C`.** 🔴 **Of the `11` that are
+knowledge tracing, not one was pushed in `2026`.** Graded as a cohort — the shape `p642` used for
+essay scoring — this is the clearest dead axis this base has filed.
+
+| Repo | Licence (API + probe) | ★ | `pushed_at` | Age at `2026-11-04` |
+|---|---|--:|---|---|
+| [`chrispiech/deepknowledgetracing`](https://github.com/chrispiech/deepknowledgetracing) | 🔴 `null` | `313` | `2015-12-16` | **~10.9 yr** |
+| [`siyuanzhao/2016-edm`](https://github.com/siyuanzhao/2016-edm) | 🔴 `null` | `58` | `2017-02-16` | ~9.7 yr |
+| [`xiaofengshi/dkt-tensorflow`](https://github.com/xiaofengshi/dkt-tensorflow) | 🔴 `null` | `50` | `2018-03-04` | ~8.7 yr |
+| [`mmkhajah/dkt`](https://github.com/mmkhajah/dkt) | 🟢 **`MIT`** | `103` | `2019-05-25` | **~7.4 yr** |
+| [`sulingling123/knowledge_tracing`](https://github.com/sulingling123/knowledge_tracing) | 🔴 `null` | `78` | `2019-10-08` | ~7.1 yr |
+| [`jennyzhang0215/dkvmn`](https://github.com/jennyzhang0215/dkvmn) | 🔴 `null` | `146` | `2019-10-21` | ~7.0 yr |
+| [`arshadshk/sakt-pytorch`](https://github.com/arshadshk/sakt-pytorch) | 🔴 `null` | `50` | `2020-12-10` | ~5.9 yr |
+| [`shivanandmn/saint_plus-knowledge-tracing-`](https://github.com/shivanandmn/saint_plus-knowledge-tracing-) | 🔴 `null` | `62` | `2021-11-16` | ~5.0 yr |
+| [`lingochamp/tensorflow-dkt`](https://github.com/lingochamp/tensorflow-dkt) | 🔴 `null` | `49` | `2021-12-25` | ~4.9 yr |
+| [`aifangzhe/exercise-recommendation-system`](https://github.com/aifangzhe/exercise-recommendation-system) | 🔴 `null` | `63` | `2023-01-19` | ~3.8 yr |
+| [`pydaxing/deep-knowledge-tracing-dkt-pytorch`](https://github.com/pydaxing/deep-knowledge-tracing-dkt-pytorch) | 🔴 `null` | `91` | `2024-06-21` | ~2.4 yr |
+
+🔴 **`1 of 11` carries a usable grant** (`mmkhajah/dkt`, MIT) **and it is ~7.4 years stale.** Ten are
+`license: null` — and per `591-B` that is the base's one **reliable** block: `null` meant "no licence
+file" in `10 of 10` probed cases. 🔵 So this is not an unknown to resolve; it is an absence to accept.
+
+🟢 **This settles a question this base keeps re-opening.** `585-A` has carried
+[`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) as an unlicensed learner-simulation
+gap across fourteen-plus passes, re-probing it each time. 🔴 **The cohort above shows the gap is not
+one repository's missing `LICENSE` file — it is the whole academic knowledge-tracing lane**, which
+publishes paper code and then stops. **Adaptive mastery is a BUILD on `OATutor`'s BKT** (MIT,
+UC Berkeley, maintained) **and not an adopt from the DKT literature**, and no further probe of
+`Agent4Edu` will change that.
+
+### 🔵 Census composition, so the next pass can reuse or discard the facets
+
+`16` facets, `in:name,description`, `2026-11-04`: **`327` candidates · `113` already held ·
+`214` new · `12` new *and* education software.** Two facets were pure waste —
+`grading` (`84 %` matched `production-grade`/`enterprise-grade`) and `exam` (`88 %` matched
+`example`). Controls `student` and `curriculum` polluted at `0 %`. Full rates on
+[`../agents/top.md`](../agents/top.md) `643-C`.
+
+🟢 **Facets that paid:** `classroom` (`6` of the `12`), `learning management` (`2`),
+`knowledge tracing` (the cohort above), `lesson plan`, `quiz generator`, `student`.
+🔴 **Facets that returned nothing usable:** `grading`, `exam`, `topic:edtech` (**`0` rows new** — the
+topic is fully harvested by this base), and both LATAM-language legs — see
+[`../intel/market.md`](../intel/market.md) `643-D`, where the reason is a language fact, not a supply fact.
 ## 2026-11-04 — `p642`: the essay-scoring axis, graded as a cohort for the first time
 
 🔵 **Appended, not rewritten** — the history below this line is intact.

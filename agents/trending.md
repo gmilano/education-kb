@@ -3,6 +3,45 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 2026-11-04 — `p643`: the nil streak ends at `15`, and the instrument was the cause
+
+🔵 **Appended, not rewritten** — the history below this line is intact.
+
+🔴 **The mandated web legs failed again, for the `16th` consecutive pass, and this time the failure is
+fully characterised.** `top open source AI agents education 2026 github MIT` returned nine results, of
+which **nine were general-purpose agent roundups** (`agenta.ai`, `dev.to`, `sim.ai`,
+`openalternative.co`, `securityboulevard.com`, `toolradar.com`, `agnt.gg`, plus Wikipedia on `CrewAI`
+and `OpenClaw`) and **`0` named an education repository**. The search engine's own summary conceded
+the point: *"The search didn't turn up anything specific to education."*
+
+🟢 **`github trending education AI 2026` paid, but only in names this base already holds.** It
+surfaced `HKUDS/DeepTutor`, `OpenMAIC` (Tsinghua MAIC), `Claw-ED`, `JetBrains/thinkrail` and
+`rasbt/LLMs-from-scratch`. 🔴 **All five were already on these shelves** — `5 of 5` held, which is
+the fifteenth consecutive web-leg nil for *addresses*.
+
+🟢 **And then the GitHub census broke the streak, because the census was wrong, not the vertical.**
+`12` previously unheld, byte-verified addresses, `9` of them permissive. The full shelf with every
+licence cell, byte count and branch is on [`./top.md`](./top.md) `p643`; the instrumental cause —
+`in:…,readme` dredging awesome-lists, and `grading`/`exam` matching `production-grade`/`example` at
+`84 %`/`88 %` — is `643-B` and `643-C` there.
+
+🔵 **What a future pass should take from this entry, stated plainly:** *fifteen consecutive nils were
+reported as a fact about education's open-source supply, and published as a trend with a denominator.
+They were a fact about four query strings.* A nil is only as strong as the instrument that produced
+it, and a denominator computed from a broken instrument makes a wrong claim look measured.
+
+🟢 **One genuinely new agent-layer row, and it is the smallest of the twelve:**
+[`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools) — **MIT**
+(`LICENSE`, `1,077 B`), `17★`, `8` forks, pushed `2026-06-11`, `main`, **EMEA** — LLM-as-a-judge
+evaluation of lesson plans and resources, from **Oak National Academy**, the UK's
+government-backed curriculum body. 🔵 Before this entry this base held **no** education-specific
+permissive **eval harness** on any shelf, which is why a `17★` repository is worth a paragraph.
+
+🔴 **Measured against supply, not against stars: `DeepTutor` re-measured `2026-11-04` at `54,813★`**
+(Apache-2.0, `main`, pushed `2026-10-31`). Secondary trend trackers reported `48,268★` on `2026-10-29`
+and `54,730★` on `2026-11-04`; the first-hand figure is `54,813`. 🔵 **The trackers were close, and
+close is not a channel** — cite the measurement.
 ## 2026-11-04 — `p642`: no new agent supply, and the denominator is published
 
 🔵 **Appended, not rewritten** — the history below this line is intact.

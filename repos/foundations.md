@@ -3,6 +3,33 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p643` — reads `2026-11-04` — **🟢 THE MISSING FOUNDATION WAS NEVER A MODEL OR A FRAMEWORK. IT WAS THE `LTI` BOUNDARY, AND IT HAS BEEN SITTING AT `53★` UNDER `BSD-2-Clause` THE WHOLE TIME.**
+
+🔵 **Why this is a *foundation* row and not an agent row.** Every recipe this base has published ends
+at the same wall: the agent is permissive, the LMS it must live inside is **AGPL-3.0** (Canvas,
+Open edX) or **GPL-3.0** (Moodle), and the join between them is `LTI`. Prior patterns
+(`P587`-era onward) have described that join in prose and left the client to build it. 🟢 **There is a
+maintained, permissive implementation of it, and this base had never filed it.**
+
+| Repo | Licence — byte-read `2026-11-04` | ★ | `pushed_at` | Branch | Region | Why it is a foundation |
+|---|---|--:|---|---|---|---|
+| [`hypothesis/lms`](https://github.com/hypothesis/lms) | 🟢 **BSD-2-Clause** — `LICENSE`, `1,320 B`, title line *"BSD 2-Clause License"*; API `BSD-2-Clause` agrees | `53` | `2026-11-03` | `main` | North America | **LTI 1.3 tool provider**, Python/Pyramid, `16` forks, Hypothesis (US nonprofit). 🟢 **Verified in the tree, not from the README:** `lms/product/canvas/`, `lms/product/moodle/`, `lms/product/blackboard/` and `lms/product/d2l/` each resolve `200` on `raw`; `lms/product/plugin/` is an explicit extension point; `lms/services/lti_grading/` exports an `LTIGradingService` interface over `lti_grading/factory.py`. It also ships `docs/setting-up-a-region.md` — **a documented multi-region deployment story**, which matters for a studio selling the same build into four regions. |
+| [`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools) | 🟢 **MIT** — `LICENSE`, `1,077 B`, title line *"MIT License"*; API `MIT` agrees | `17` | `2026-06-11` | `main` | EMEA | 🟢 **The first education-specific permissive eval harness on any shelf of this base.** LLM-as-a-judge over **lesson plans and resources**, Python, `8` forks, from **Oak National Academy** — the UK's government-backed curriculum body (`labs.thenational.academy`). 🟡 `17★` and last pushed `2026-06-11`; it is filed for *what it is* and *who maintains it*, and both of those are stated rather than implied by a star count. |
+
+🔵 **The rest of this pass's `12` new addresses are platform-layer and sit on
+[`../verticals/solutions.md`](../verticals/solutions.md) `p643`; the full shelf with every licence
+cell is on [`../agents/top.md`](../agents/top.md) `p643`.** Only these two are foundations, and the
+distinction is deliberate: a foundation is something every engagement in the vertical needs, not
+something one engagement needs badly.
+
+### 🟢 What this closes, and what it does not
+
+| Claim | Before `p643` | After |
+|---|---|---|
+| *"The LMS–agent boundary is the opportunity, and it is open"* — carried on [`../intel/market.md`](../intel/market.md) | 🔴 Stated as an **unfilled** opportunity | 🟡 **Half-closed.** The *integration* is no longer a build: `hypothesis/lms` is a permissive, maintained, four-family `LTI 1.3` implementation. 🔴 **The opportunity is still open on the other half** — nobody has mounted an agent behind it, and that composition is `P643-1` on [`../compose/patterns.md`](../compose/patterns.md). |
+| *No permissive education eval harness* | 🔴 Never filed as a gap, which is itself the defect — the absence was invisible | 🟢 **Closed by `oak-ai-autoeval-tools`.** 🔵 Noting the shape: this base can only close gaps it has *named*, and this one was closed by accident while looking for something else. |
+| *Adaptive mastery / knowledge tracing* | 🔴 Carried as `585-A`, re-probed for 14+ passes as one repository's missing `LICENSE` | 🔴 **Worse than carried — it is a dead lane.** `11` knowledge-tracing repositories graded as a cohort on [`./trending.md`](./trending.md) `p643`: `1 of 11` has a usable grant, `0 of 11` pushed in `2026`. **BUILD on `OATutor`'s BKT.** |
 ## 🆕 `p642` — reads `2026-11-04` — **🔴 `642-C`: THE `MIT` BYTE BAND THIS PAGE PUBLISHES IS FALSIFIED BY `+35 B` AND SHOULD BE RETIRED, NOT WIDENED A THIRD TIME.**
 
 🔵 **The band has now been widened by two consecutive passes instead of being questioned.** `640-A`

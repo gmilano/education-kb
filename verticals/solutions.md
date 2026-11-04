@@ -3,6 +3,48 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p643` — reads `2026-11-04` — **🟢 EIGHT NEW PLATFORM ROWS, AND THE `585-B`/`585-G` ASSESSMENT GAP FINALLY HAS A PERMISSIVE *DELIVERY* LAYER — `1,691★`, `568` FORKS, `MIT`.**
+
+🔵 **Every cell byte-read `2026-11-04`** via `raw.githubusercontent.com/{slug}/{default_branch}/{file}`,
+branch taken from `search/repositories` and never guessed (`587-D` — `4` of these `8` are `master`).
+
+| Platform | Repo | Licence — file, bytes | ★ | `pushed_at` | Branch | Region | What it actually is |
+|---|---|---|--:|---|---|---|---|
+| **Spring Boot Online Exam** | [`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) | 🟢 **MIT** — `LICENSE`, `1,072 B` | **`1,691`** | `2026-10-10` | 🔴 `master` | APAC | 🟢 **Examination *delivery*: question banks, paper assembly, sittings, auto-marking, roles for admin/teacher/student.** Java/Spring Boot, **`568` forks** — the most-forked row this pass, and forks are the better signal here because this is a thing people *deploy*, not a thing people star. Mirrored on Gitee, which is why it is under-represented in Western censuses. 🔴 **Before any client sees a fork: the repository advertises a public demo with three published accounts sharing one password.** Rotate and remove. |
+| **Veyon** | [`veyon/veyon`](https://github.com/veyon/veyon) | 🔴 **GPL-2.0** — `COPYING`, `18,812 B` | `2,017` | `2026-10-30` | `main` | EMEA | Classroom computer monitoring, screen broadcast, remote control, lock/unlock. C++, `480` forks, Germany (`veyon.io`), cross-platform. 🟢 **The mature answer to in-room supervision and it is genuinely deployed in schools.** 🔴 **Licence geometry is the worst case on this page:** it is a **desktop agent installed on student and teacher machines**, so GPL-2.0 reaches into the client's estate rather than staying behind a network boundary where AGPL at least stays containable. Ship it *as* Veyon, unmodified, or not at all. |
+| **Agora Flat (server)** | [`netless-io/flat-server`](https://github.com/netless-io/flat-server) | 🟢 **MIT** — `LICENSE`, `1,064 B` | `683` | `2026-08-13` | `main` | APAC | Node.js/TypeScript backend for the Flat open-source virtual classroom — rooms, scheduling, recording, cloud storage, identity. `276` forks. 🟢 **A permissive virtual-classroom backend**, which this page previously had only as `OpenVidu` (Apache-2.0, media primitive) and `BigBlueButton` (LGPL-3.0, full platform). Flat sits between them: more than a media server, less than BBB. 🟡 Last push `2026-08-13` — ~3 months, the oldest of this pass's twelve. |
+| **freeCodeCamp Classroom** | [`freeCodeCamp/classroom`](https://github.com/freeCodeCamp/classroom) | 🟢 **BSD-3-Clause** — `LICENSE.md`, `1,513 B` | `156` | **`2026-11-04`** | `main` | Global | Teacher-facing cohort and progress view over freeCodeCamp's curriculum. TypeScript, `141` forks, **pushed today**. 🟡 **The repository sets no description**, so this row is placed on its organisation, its code and its grant — stated, not inferred. |
+| **classroombookings** | [`classroombookings/classroombookings`](https://github.com/classroombookings/classroombookings) | 🔴 **AGPL-3.0** — `LICENSE.txt`, `34,520 B` | `225` | `2026-10-30` | 🔴 `master` | EMEA | Room and resource booking for schools — timetable-aware, holiday calendars, multi-site. PHP, `58` forks, UK (`classroombookings.com`). 🔴 Network copyleft: same containment rules this page already applies to Canvas and Open edX. 🔵 Filed because **facilities booking is a real line item in a school engagement and this page had nothing in that layer.** |
+| **Popcode** | [`popcodeorg/popcode`](https://github.com/popcodeorg/popcode) | 🟢 **MIT** — `LICENSE`, `1,087 B` | `190` | `2026-10-26` | 🔴 `master` | North America | In-browser HTML/CSS/JS editor **designed for the classroom**: beginner-legible error messages, no install, teacher-visible student work. `143` forks, Chicago. 🟢 The permissive answer when a client asks for "a coding environment our teachers can actually run". |
+| **tough-dev-school education-backend** | [`tough-dev-school/education-backend`](https://github.com/tough-dev-school/education-backend) | 🟢 **MIT** — `LICENSE`, `1,097 B` | `489` | `2026-10-31` | 🔴 `master` | EMEA | Django LMS backend — orders, cohorts, homework, certificates. `82` forks, Russian-language (`tough-dev.school`). 🟡 **Read as a reference implementation, not a platform**: it encodes one school's commercial model, and a client's does not match. Its value is as a worked Django domain model for people who would otherwise start from an empty `models.py`. |
+| **ghclass** | [`rundel/ghclass`](https://github.com/rundel/ghclass) | 🔴 **GPL-3.0** — `LICENSE.md`, `34,887 B` | `148` | `2026-10-16` | `main` | North America | R package for running a course on GitHub — roster to repositories, team assignment, bulk collection and feedback. Duke University, `22` forks. 🔴 Copyleft **and** R, which together narrow this to university CS/stats departments. Filed for completeness of the layer, not as a recommendation. |
+
+### 🟢 What this does to `585-B` / `585-G`, the assessment-integrity gap
+
+🔵 **The gap as this base has carried it:** *"no permissive proctoring **platform**"* —
+`Proctoring-AI` (MIT, `633★`) is a component and ~23 months stale; `SafeExamBrowser` is **MPL-2.0**
+and current. The standing conclusion was *"a studio ships SEB + an agent, not a platform."*
+
+🟡 **That conclusion is narrowed, not overturned, and the distinction matters.**
+`spring-boot-online-exam` is **not** proctoring — it does no identity assurance and no behavioural
+monitoring. It is the **examination delivery** platform underneath proctoring, and it is MIT,
+maintained and forked `568` times. 🟢 **So the honest statement is now:**
+
+| Layer | Permissive option as of `2026-11-04` |
+|---|---|
+| Item authoring / generation | 🟢 `grwth404/Quiznote` (MIT, `28★` — thin), Educhain (MIT) |
+| **Examination delivery** | 🟢 **`lsgwr/spring-boot-online-exam` (MIT, `1,691★`, `568` forks) — new this pass, previously `none`** |
+| Lockdown client | 🟡 `SafeExamBrowser` (**MPL-2.0** — weak copyleft, file-level; usable) |
+| Live invigilation channel | 🟢 `netless-io/flat-server` (MIT) — new this pass |
+| In-room supervision | 🔴 `veyon/veyon` (**GPL-2.0**, desktop agent) — new this pass, flagged |
+| **AI proctoring / identity assurance** | 🔴 **Still `none`. The gap survives, and it is now precisely located.** |
+
+🔴 **And the remaining gap should stay open on purpose, not just by default.** The EU AI Act's
+**ban on emotion recognition in education has applied since `2025-02-02`**, so the AI-proctoring
+layer that is missing is also the layer that is **unsellable in EMEA**. 🔵 A studio that treats
+`585-B` as a build opportunity should read the regulation before the backlog — see
+[`../compose/patterns.md`](../compose/patterns.md) `P643-2`.
 ## 🆕 `p642` — reads `2026-11-04` — **🟢 THE ASSESSMENT-INTEGRITY LAYER HAS EXACTLY ONE PERMISSIVE PLATFORM, AND IT IS `BSD-3-Clause`.**
 
 🔵 Recorded as a *vertical platform* row rather than an agent row, because what a client buys here is a

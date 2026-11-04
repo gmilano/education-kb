@@ -3,6 +3,90 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p643` — reads `2026-11-04` — **🔴 `p642`'s HEADLINE TREND — *"THE SUPPLY SIDE IS SATURATED ON A MEASURED DENOMINATOR"* — IS WITHDRAWN. THE DENOMINATOR WAS REAL AND THE INSTRUMENT THAT PRODUCED IT WAS NOT.**
+
+🔵 **Recorded as a trend retraction, at the top, because it is the kind of error this base is most
+exposed to.** `p642` published, as the pass's main finding: *"`15 of 20` strong candidates off a
+fresh `14`-facet census were already held, and the web legs returned `0` addresses for the `15th`
+consecutive pass."* Every number in that sentence was correctly measured. 🔴 **The conclusion drawn
+from it — that education's open-source supply is saturated — does not follow, and is false.**
+
+| | `p642` | `p643` |
+|---|---|---|
+| Census scope | `in:name,description,**readme**` | `in:name,description` |
+| Star floor | high | lowered into the vertical's actual band |
+| Candidates | `20` strong | `327` |
+| Already held | `15` (`75 %`) | `113` (`35 %`) |
+| 🟢 **New, byte-verified, education software** | 🔴 **`0`** | 🟢 **`12`** |
+
+🔵 **The failure mode has a name worth carrying: a saturation claim is a claim about a *channel*, and
+it inherits that channel's defects silently.** Fifteen consecutive passes each confirmed the
+previous one's nil, and the agreement was read as corroboration. 🔴 **It was the same query being
+run fifteen times.** Independent confirmation requires an independent instrument, and no pass
+changed the instrument until one did.
+
+🟢 **The standing rule this produces:** *before publishing a nil, run one facet whose positive answer
+you already know.* `p643`'s controls (`student`, `curriculum`, polluting at `0 %`) are what made the
+`grading`/`exam` rates (`84 %`/`88 %`) legible as defects rather than as absence.
+
+---
+
+### 🟢 Trend — the vertical's permissive supply is concentrated in **plumbing**, not in models
+
+🔵 Of the `12` new addresses, the two with the highest delivery value are the two with the least AI
+in them: [`hypothesis/lms`](https://github.com/hypothesis/lms) (BSD-2-Clause, LTI 1.3, `53★`) and
+[`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) (MIT,
+examination delivery, `1,691★`, `568` forks).
+
+| Layer | New rows | Permissive | Pattern |
+|---|--:|--:|---|
+| Boundary / integration (LTI, gradebook) | `1` | 🟢 `1 / 1` | **Permissive, maintained, tiny star counts** |
+| Delivery platforms (exam, classroom, booking, editor) | `6` | 🟢 `4 / 6` | Mixed; the copyleft ones are the oldest |
+| Eval / quality | `1` | 🟢 `1 / 1` | Institutional, MIT |
+| Content / generation (AI-facing) | `2` | 🟢 `2 / 2` | Thin — `28★` and `102★`, `0`–`19` forks |
+| Course administration | `2` | 🔴 `1 / 2` | GPL-3.0 where it is academic |
+
+🔴 **The AI-facing layer is the *weakest* supply in the vertical, not the strongest** — and it is
+also where this base's historical licence traps all live (`PageLM`'s bespoke non-commercial grant,
+`BabelDuck`, `aimo`'s BSL, `nextgen-ai`'s code-only MIT). 🟢 **Inverted into delivery advice: the
+differentiating AI is what a studio *builds*; the permissive open source is what it builds
+*on top of and inside*.** That is the opposite of how a KB organised around "top AI agents" invites
+you to read it.
+
+---
+
+### 🔴 Trend — academic education-AI code is a publication artefact, and the whole lane is stale
+
+🔵 Graded as a cohort on [`../repos/trending.md`](../repos/trending.md) `p643`: `11` knowledge-tracing
+repositories, `1` with a usable grant (`mmkhajah/dkt`, MIT, **~7.4 years stale**), `10` with
+`license: null`, and 🔴 **`0` pushed in `2026`** — the most recent is `2024-06-21`.
+
+🟢 **This retires a gap this base has re-probed for fourteen-plus passes.** `585-A` treated
+[`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu)'s missing `LICENSE` as a
+remediable defect. 🔴 It is a property of the lane: a paper ships code to satisfy a reproducibility
+requirement, the licence is an afterthought, and the repository stops the day the paper lands.
+🔵 **Combined with `p642`'s identical finding on automated essay scoring (`1 of 4` usable, seven
+years stale), two independent academic lanes now show the same shape.** Treat "there is a paper and
+a GitHub link" as **evidence of a method, never of a dependency**.
+
+---
+
+### 🟡 Trend — GitHub-only censuses systematically under-count APAC education software
+
+🔵 [`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) — `1,691★`,
+**`568` forks**, MIT, maintained — was invisible to this base for `642` passes. Its canonical home
+is a **Gitee** mirror, and its description is in Chinese. 🔴 **Neither the English-language web legs
+nor a GitHub-index census had a path to it**; it surfaced only because the re-scoped
+`name,description` facet caught the English words in its slug.
+
+🔴 **This base cannot reach Gitee (`588-B`'s network limit), so the undercount is standing and
+unquantified.** 🟡 It is recorded as a **known bias on the APAC shelf**, not as a conclusion about
+APAC supply — and it is the second region whose shelf turns out to be instrument-limited rather than
+supply-limited, after LATAM (`643-D`).
+
+🔵 **Two of four regions, found in one pass, where the shelf was measuring the ruler.** That is the
+trend behind the trends this pass, and it is the reason the pass spent its budget on instruments.
 ## 🆕 `p642` — reads `2026-11-04` — **🔴 THE SUPPLY SIDE IS SATURATED ON A MEASURED DENOMINATOR: `15 of 20` STRONG CANDIDATES OFF A FRESH `14`-FACET CENSUS WERE ALREADY HELD, AND THE WEB LEGS RETURNED `0` ADDRESSES FOR THE `15th` CONSECUTIVE PASS.**
 
 🔵 **This is a trend about discovery, not about education.** It is recorded here because it changes what

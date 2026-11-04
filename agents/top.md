@@ -3,6 +3,105 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p643` — reads `2026-11-04` — **🟢 `643-A`: THE `15`-PASS SUPPLY NIL ENDS AT `15`, AND IT WAS AN ARTEFACT OF THE CENSUS FACET SCOPING, NOT OF THE SUPPLY. `12` REAL, BYTE-VERIFIED, PREVIOUSLY UNHELD ADDRESSES — `9` OF THEM PERMISSIVE. 🔴 `643-B`: `in:…,readme` AT A HIGH STAR FLOOR IS NOT A VERTICAL DISCOVERY CHANNEL, IT IS AN AWESOME-LIST DREDGE — MEASURED ON THIS PASS'S OWN FIRST CENSUS. 🔴 `643-C`: `grading` AND `exam` ARE SUBSTRING-POLLUTED TOKENS AND MUST NEVER BE RUN BARE.**
+
+🔵 **This pass contradicts its own fifteen predecessors, and the contradiction is instrumental.**
+`p628`–`p642` each recorded a supply nil and each widened the *claim* — `p642` published it as a
+trend with a denominator (*"`15 of 20` strong candidates already held"*). 🟢 **The nil was real for
+the queries run. It was not a fact about education software.** Re-scoping the census from
+`in:name,description,readme` to `in:name,description` and dropping the star floor into the band
+where vertical software actually lives returned **`12` unheld addresses on the same query budget**.
+
+### 🔴 `643-B` — the `readme` qualifier dredges awesome-lists, and the star floor guarantees it
+
+🔵 **Run first, exactly as the previous fifteen passes would have run it.** `14` facets,
+`in:name,description,readme`, `stars:>50`–`>150`: **`168` candidates, `43` held, `125` "new"**.
+🔴 **Hand-audited, the top `35` of those `125` by stars contain `0` education applications.** The
+list in descending order opens: `codecrafters-io/build-your-own-x` (`559,494★`),
+`awesome-selfhosted/awesome-selfhosted` (`333,501★`), `vinta/awesome-python` (`332,299★`),
+`firecrawl/firecrawl` (`198,387★`), `trekhleb/javascript-algorithms` (`196,721★`),
+`avelino/awesome-go` (`191,955★`), `significant-gravitas/autogpt` (`187,891★`),
+`anthropics/skills` (`187,181★`), `langgenius/dify` (`160,368★`), `langflow-ai/langflow` (`156,307★`),
+`langchain-ai/langchain` (`148,983★`).
+
+🟢 **The mechanism is simple and it generalises to every vertical in this programme.** A README
+*mentions* a word; a name or description *commits* to it. `awesome-python` contains the word
+`autograder` somewhere in 332k stars' worth of links, so it outranks every real education repository
+on every readme-scoped query forever. 🔴 **A star floor makes it worse, not better** — it is a filter
+that selects precisely for the documents most likely to mention everything.
+
+| Census | Scope | Facets | Candidates | Already held | New | **New AND education software** |
+|---|---|--:|--:|--:|--:|--:|
+| First, as the prior passes ran it | `in:name,description,readme` | `14` | `168` | `43` | `125` | 🔴 **`0` in the top `35` by stars** |
+| Second, re-scoped | `in:name,description` | `16` | `327` | `113` | `214` | 🟢 **`12` byte-verified** |
+
+### 🔴 `643-C` — two tokens that cannot be run bare, with rates
+
+| Facet | Query token | Rows | Polluted | Rate | What it actually matched |
+|---|---|--:|--:|--:|---|
+| `G05-grading` | `grading` | `25` | `21` | 🔴 **`84 %`** | `production-grade`, `enterprise-grade`, `industrial-grade` — `kubernetes/kubernetes`, `spring-projects/spring-boot`, `nestjs/nest`, `hyperledger/fabric`, `google/perfetto` |
+| `G15-exam` | `exam` | `25` | `22` | 🔴 **`88 %`** | `example`/`examples` — `kubernetes/examples`, `tensorflow/examples`, `prisma/prisma-examples`, `aws/amazon-sagemaker-examples`, `rust-lang/rust-by-example` |
+| `G07-kt` | `tracing` | `14` | `3` | 🟡 `21 %` | `ray tracing`, `route tracing` — `fallingcat/computeraytracingsamples`, `sdsrss/code-graph-mcp` |
+| `G10-student` | `student` | `25` | `0` | 🟢 `0 %` | control — the token is clean |
+| `G06-curric` | `curriculum` | `25` | `0` | 🟢 `0 %` | control — the token is clean |
+
+🔴 **Two of `16` facets — `50` rows of budget — contributed `0` education addresses, and a third leaked
+`21 %`.** 🟢 **The fix is a conjunction, not a longer stop-list:**
+`grading AND (student OR assignment OR coursework)`, `exam` → `"online exam" OR examination OR proctor`,
+and `tracing` → `"knowledge tracing"` quoted as a phrase. 🔵 Recorded with controls because a pollution
+claim without a clean token beside it is unfalsifiable.
+
+### 🟢 The `12` new addresses — every cell byte-read `2026-11-04`
+
+🔵 **Channel, per `587-C`:** metadata from `gh api -X GET search/repositories -f q='repo:owner/name'`
+(which returns `default_branch`, so no branch was guessed — `587-D`); licence from
+`raw.githubusercontent.com/{slug}/{default_branch}/{file}`, probed at `6` filenames in order
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `LICENSE-MIT`.
+
+| Repo | Licence — file, bytes, title line | ★ | `pushed_at` | Branch | Region | What it is |
+|---|---|--:|---|---|---|---|
+| [`hypothesis/lms`](https://github.com/hypothesis/lms) | 🟢 **BSD-2-Clause** — `LICENSE`, `1,320 B`, *"BSD 2-Clause License"* | `53` | `2026-11-03` | `main` | North America | 🟢 **The most useful row of the twelve and the smallest.** Maintained **LTI 1.3** tool-provider, Python/Pyramid. Verified first-hand in the tree, not from the README: `lms/product/{canvas,moodle,blackboard,d2l}/` all resolve `200`, there is a `lms/product/plugin/` extension point, and `lms/services/lti_grading/` exports an `LTIGradingService` interface. Hypothesis (US nonprofit); `16` forks. See [`../compose/patterns.md`](../compose/patterns.md) `P643-1`. |
+| [`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) | 🟢 **MIT** — `LICENSE`, `1,072 B`, *"MIT License"* | **`1,691`** | `2026-10-10` | 🔴 **`master`** | APAC | 🟢 **The most-forked new row (`568` forks) and it lands on this base's standing `585-B`/`585-G` gap.** Spring Boot online **examination** system, Java, mirrored on Gitee. 🔵 It is *not* proctoring — but examination *delivery* is the layer those clients buy first. 🔴 **A live demo with published credentials (`admin`/`teacher`/`student`, one shared password) is advertised in the repository's own description** — a security note to fix in any fork, not a licence note. |
+| [`veyon/veyon`](https://github.com/veyon/veyon) | 🔴 **GPL-2.0** — `COPYING`, `18,812 B`, *"GNU GENERAL PUBLIC LICENSE"* | `2,017` | `2026-10-30` | `main` | EMEA | Cross-platform classroom computer monitoring and management, C++, `480` forks, Germany (`veyon.io`). 🔴 **Flagged, and the flag is sharper than usual:** this ships as a **desktop agent on student machines**, so the copyleft reaches into the client's own estate rather than staying behind a network boundary. |
+| [`netless-io/flat-server`](https://github.com/netless-io/flat-server) | 🟢 **MIT** — `LICENSE`, `1,064 B`, *"MIT License"* | `683` | `2026-08-13` | `main` | APAC | Node.js/TypeScript server for the **Agora Flat** open-source classroom; `276` forks. 🟢 A **permissive virtual-classroom backend** — the layer `BigBlueButton` (LGPL-3.0) and `OpenVidu` (Apache-2.0) sit beside rather than replace. 🟡 Last push `2026-08-13` — the only new row older than `2026-09`. |
+| [`tough-dev-school/education-backend`](https://github.com/tough-dev-school/education-backend) | 🟢 **MIT** — `LICENSE`, `1,097 B`, *"MIT License"* | `489` | `2026-10-31` | 🔴 **`master`** | EMEA | Django LMS backend, `82` forks, Russian-language (`tough-dev.school`). 🟡 **A single school's own product, read as a reference implementation, not a platform** — it carries that school's domain model. |
+| [`classroombookings/classroombookings`](https://github.com/classroombookings/classroombookings) | 🔴 **AGPL-3.0** — `LICENSE.txt`, `34,520 B`, *"GNU AFFERO GENERAL PUBLIC LICENSE"* | `225` | `2026-10-30` | 🔴 **`master`** | EMEA | Room-booking system for schools, PHP, `58` forks, UK. 🔴 Network copyleft — same geometry as Canvas and Open edX on this base's shelves. |
+| [`popcodeorg/popcode`](https://github.com/popcodeorg/popcode) | 🟢 **MIT** — `LICENSE`, `1,087 B`, *"The MIT License (MIT)"* | `190` | `2026-10-26` | 🔴 **`master`** | North America | In-browser HTML/CSS/JavaScript editor built *for classroom use* — error messages written for beginners, teacher-visible work. `143` forks, Chicago. |
+| [`freeCodeCamp/classroom`](https://github.com/freeCodeCamp/classroom) | 🟢 **BSD-3-Clause** — `LICENSE.md`, `1,513 B`, *"BSD 3-Clause License"* | `156` | **`2026-11-04`** | `main` | Global | freeCodeCamp's teacher-facing classroom, TypeScript, `141` forks. 🟡 **The repository sets no description** — the row is placed on its org, its code and its grant, and that limit is stated rather than papered over. Pushed *today*. |
+| [`rundel/ghclass`](https://github.com/rundel/ghclass) | 🔴 **GPL-3.0** — `LICENSE.md`, `34,887 B`, *"GNU General Public License"* | `148` | `2026-10-16` | `main` | North America | R package for managing GitHub classroom organisations — roster to repo, bulk grading hooks. Duke University. 🔴 Copyleft; also R, which narrows where it fits. |
+| [`internetphysics/live-classroom`](https://github.com/internetphysics/live-classroom) | 🟢 **MIT** — `LICENSE`, `1,072 B`, *"MIT License"* | `102` | `2026-09-02` | `main` | Global | A live channel that renders LLM-planned lessons just-in-time as 1970s-style cartoons. 🔵 **Shelved as a *generative-curriculum* specimen, not a platform** — `19` forks, no institutional backing. It is on the shelf because it is the only member of its class. |
+| [`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools) | 🟢 **MIT** — `LICENSE`, `1,077 B`, *"MIT License"* | `17` | `2026-06-11` | `main` | EMEA | 🟢 **The smallest row here and the one that closes a declared gap.** LLM-as-a-judge evaluation of **lesson plans and resources**, Python, from **Oak National Academy** (UK, government-backed curriculum body; `labs.thenational.academy`). This base has had no education-specific permissive **eval harness** on any shelf. `8` forks. |
+| [`grwth404/Quiznote`](https://github.com/grwth404/Quiznote) | 🟢 **MIT** — `LICENSE`, `1,085 B`, *"MIT License"* | `28` | `2026-10-20` | `main` | Global | Quiz generation from notes and textbooks, TypeScript, Gemini-backed. 🔴 **`0` forks** — filed as supply, not as a recommendation. |
+
+🟢 **Licence distribution: `9 of 12` permissive** — MIT ×`7`, BSD-2-Clause ×`1`, BSD-3-Clause ×`1`.
+🔴 Copyleft ×`3` — GPL-2.0, GPL-3.0, AGPL-3.0. **`0` bespoke, `0` source-available, `0` unlicensed.**
+
+### 🟢 `643-E` — `12 of 12` byte-reads agreed with `license.spdx_id`, and that does **not** refute this base's `~25 %`
+
+🔴 **State the selection bias before the number, because the number is tempting.** These `12` rows
+were pre-selected from census output **that already carried a non-null `spdx_id`**. So this sample
+cannot speak to the `NOASSERTION`/`null` population at all, and this base's standing
+*"the API is wrong for ~`25 %` of rows"* — which `591-B` showed is driven by exactly those blank
+fields — stands untouched.
+
+🟢 **What the sample does say, and it is a usable rule:** *when the API names a specific SPDX
+identifier, it was right `12 of 12` times here, including on both long copyleft texts.* Combined with
+`591-B`'s `0-for-12` on `NOASSERTION` and `10-for-10` on `null`, the grading ladder is now:
+**`null` ⇒ reliable block · a named SPDX id ⇒ reliable, still byte-confirm · `NOASSERTION` ⇒ unknown,
+byte-read mandatory.**
+
+🔴 **`587-D` re-confirmed on a fresh sample: `4 of 12` default branches were `master`** —
+`popcodeorg/popcode`, `classroombookings/classroombookings`,
+`tough-dev-school/education-backend`, `lsgwr/spring-boot-online-exam`. **A probe on `main` would
+have filed four false absences**, at a `33 %` rate.
+
+### 🟡 Channel limits this pass could not clear, stated so they are not re-discovered
+
+| Limit | Effect on this page |
+|---|---|
+| 🔴 `make hooks` **could not be executed in this environment** — running the repository's own make targets is refused by the runner's policy | Every gate contract below was satisfied **by hand against its documented predicate**, not by a passing run. 🔵 `587-C` recorded the same class of limit for `api.github.com`; this one is new and it is about the *suite*, not the data. The rows above were checked against `gate-tables` (no header rendered as data), `gate-region-headings`, `gate-absence` (all `12` greped across the `8` curated pages before filing — `12 of 12` absent) and `gate-shelf-consistency` (no slug on this page carries a licence cell disagreeing with another shelf, because all `12` are new). |
+| 🟡 `588-B` still holds — no non-GitHub primary document is readable here | The regional facts on [`../intel/market.md`](../intel/market.md) remain secondary by channel necessity. 🟢 GitHub metadata and `raw` licence text were fully available this pass, so **every repository cell above is first-hand.** |
 ## 🆕 `p642` — reads `2026-11-04` — **🔴 `642-A`: THE `GERMANY` DECLARED GAP IS STALE — IT WAS CLOSED ON `intel/market.md`'s OWN SHELVES AND IS STILL REGISTERED *OPEN* TWO PAGES AWAY. THIS IS `641-M`'s LAYERING DEFECT IN THE *GAP REGISTER*, WHICH NO PASS HAD CHECKED. 🔴 `642-B`: THE EXISTENCE ORACLE HAS A **SECOND** FALSE ABSENT, AND IT IS **NOT** A RENAME — `repo:` RETURNS `0` FOR A REPOSITORY THAT `ls-remote` RESOLVES AND `raw` SERVES. 🔴 `642-C`: THE `MIT` BYTE BAND IS FALSIFIED AGAIN, BY `+35 B`.**
 
 🔵 **This pass found no new supply and says so with a number.** `20` strong candidates were taken off a
