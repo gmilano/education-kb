@@ -4,6 +4,144 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **FOUR RECIPES BUILT ONLY FROM ADDRESSES THIS PASS BYTE-READ, INCLUDING THE FIRST ONE THAT FILLS EVERY SLOT OF THE ADAPTIVE-LEARNING ARCHITECTURE WITH A READABLE LICENCE — PLUS THE TWO RESOLVE-FIRST CORRECTIONS EVERY RECIPE ON THIS PAGE NEEDS**
+
+Every address named below was verified live on the existence channel and had its licence payload
+read by byte this pass (`evidence/licence-bytes.2026-11-04-p648.tsv`,
+`evidence/existence-ls-remote.2026-11-04-p648.tsv`). 🔴 Every one is between `2` and `1 977` stars
+and most are under `25`. These are **starting points with a readable licence**, and each recipe
+names what it would take to make it production-real.
+
+### 🔴 Before any recipe on this page: resolve the branch, then resolve the licence filename
+
+Two one-line corrections, both measured this pass, both silent when wrong.
+
+**1. Never hardcode a branch.** `645-B` measured `34.0 %` of this base's published addresses off
+`main`; `648-E` measured `9.8 %` for a creation-window cohort, so the hazard concentrates in the
+*older, more institutional* addresses — exactly the ones a recipe depends on.
+`646-J`'s worst case is still live: `openeducat/openeducat_erp`'s default branch is the bare version
+`19.0`, so a pinned `main` keeps building the previous major.
+
+```bash
+# resolve the default branch first; it is not optional and it is not 'main'
+BR=$(git ls-remote --symref "https://github.com/$SLUG" HEAD \
+     | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+git clone --branch "$BR" --depth 1 "https://github.com/$SLUG"
+```
+
+Five of this pass's `51` need it: `GongkaoNaoku`, `recall-memo` and `NokaMan` on `master`,
+`campuslands-cv-rendercv` on `dev`, `trivia-tap` on `develop`.
+
+**2. Never guess the licence filename.** `648-F`: `moodle/moodle` — the most-cited vertical in this
+repository — returns `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `LICENCE`,
+`COPYING` and `LICENSE-MIT`, and serves at **`COPYING.txt`**. A licence check that guesses reports
+this base's flagship as ungranted, silently.
+
+```bash
+for f in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.txt LICENSE.rst license.md; do
+  curl -fsS "https://raw.githubusercontent.com/$SLUG/$BR/$f" && break
+done
+```
+
+🔴 And do not compare an `Apache-2.0` payload to `11 357` by equality — `648-G` measured `0 of 6`
+payloads at canonical, with five distinct presentation mechanisms and a `−1 077`…`+201` spread.
+Normalise line endings, strip leading blank lines and tolerate a filled appendix *before* comparing,
+or grade on the title line instead.
+
+### 🟢 Pattern `648-1` — the complete adaptive tutor, every slot permissive
+
+The first recipe this base can write where no slot is a proprietary dependency or a reciprocal
+licence. 🔵 `intel/trends.md` records the architecture converging; this is the wiring.
+
+| Slot | Repo | Licence (byte-read) | Role in the pipeline |
+|---|---|---|---|
+| Curriculum structure | [`zeroa234/cs-math-skill-tree`](https://github.com/zeroa234/cs-math-skill-tree) | `MIT`, `1 065` B | Load its `192` units and `260` evidenced prerequisite edges as the domain DAG. **Start here** — this is the input the other four assume |
+| Learner model | [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | `MIT`, `1 104` B | LangGraph + BKT over that DAG, with its **deterministic policy guard** retained: the model proposes a teaching move, the guard disposes |
+| Misconception diagnosis | [`NavyashreeNS/ai-tutor`](https://github.com/NavyashreeNS/ai-tutor) | `MIT`, `1 069` B | Two-stage misconception diagnosis and a Socratic engine that refuses to emit the answer. Use as the dialogue policy |
+| Standards grounding | [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) | `MIT`, `1 065` B | MCP server over CCSS / Singapore MOE / IB MYP. Every recommendation cites a published standard |
+| Assessment design | [`OleksiiDotsenko/test-builder`](https://github.com/OleksiiDotsenko/test-builder) | `MIT`, `1 073` B | Blueprints and Bloom matrices for the check items, with classroom psychometrics (P-values) on the results |
+| Review scheduling | [`Mlle-LondonG/agora-skill`](https://github.com/Mlle-LondonG/agora-skill) | `MIT`, `1 069` B | FSRS scheduling; composes with `fsrs4anki`, already held |
+
+**Wiring:** `cs-math-skill-tree`'s edge list becomes the prerequisite graph that
+`BloodCoded_Agentic`'s guard checks a proposed next-topic against — if the proposal's prerequisites
+are not mastered in the BKT state, the guard vetoes it and the DAG supplies the fallback.
+`ai-tutor` owns the turn-level dialogue once a topic is chosen. `test-builder` generates the mastery
+check; `standardgraph` labels both the topic and the item with a standard code so the transcript is
+auditable; `agora-skill` schedules the re-test.
+
+🔴 **What it would take to be real:** the six repositories total under `60` stars and share no
+interfaces, so the DAG format, the BKT state shape and the item schema are all glue the studio
+writes. `cs-math-skill-tree` covers CS and mathematics only — any other subject needs its `260`
+edges authored from scratch, which is weeks of subject-matter expert time, not engineering.
+
+### 🟢 Pattern `648-2` — Moodle to AI-ready, both ends new this week
+
+Two addresses that arrived in the same census and compose end to end, against the vertical this base
+cites more than any other.
+
+| Step | Repo | Licence | What it does |
+|---|---|---|---|
+| 1. Deploy | [`shellharbor/mooship`](https://github.com/shellharbor/mooship) | `MIT`, `1 069` B | Reproducible Moodle on Ubuntu: Docker Compose, PHP-FPM, Nginx, PostgreSQL/MySQL, Redis sessions, Let's Encrypt |
+| 2. Extract | [`estevao-tarifa/moodle2ia`](https://github.com/estevao-tarifa/moodle2ia) | `MIT`, `1 071` B | Any course → clean Markdown: PDFs, quiz answer keys, LaTeX formulas, topic-by-topic |
+| 3. Validate | [`ClydeQue/Project-Silip`](https://github.com/ClydeQue/Project-Silip) | `MIT`, `1 080` B | Inspect and validate SCORM packages before they go back in |
+| 4. Capture recordings | [`Azhonaras/BigBlueSync`](https://github.com/Azhonaras/BigBlueSync) | `MIT`, `1 110` B | Zero-loss BigBlueButton recording download and stream multiplex |
+
+**Wiring:** `mooship` stands the instance up; `moodle2ia`'s topic-by-topic Markdown is the chunk
+boundary for indexing, so the retrieval unit matches the pedagogical unit instead of a fixed token
+window; `BigBlueSync` adds the synchronous sessions to the same corpus; `Project-Silip` gates
+anything authored back into the LMS.
+
+🔴 **What it would take:** `moodle2ia` exports **quiz answer keys**, so the extracted corpus is
+assessment-sensitive by construction and must be split into two indexes — learner-visible and
+staff-only — before anything is served. That is a data-governance decision, not a config flag, and
+it is the first thing to settle. 🔴 And `moodle/moodle`'s grant is at `COPYING.txt` (`648-F`), so
+whatever licence audit wraps this recipe must not guess the filename.
+
+### 🟢 Pattern `648-3` — the North America policy-deadline engagement
+
+Built for the demand structure on `intel/market.md`: `134` bills in `31` states, four states with
+`2026` laws mandating district policy, and most districts with no student-facing policy at all.
+🔵 The deliverable is a governed inventory, not a product.
+
+| Step | Repo | Licence | Role |
+|---|---|---|---|
+| Role decomposition | [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) · [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | `MIT`, `1 063` B each | The reference answer to *what AI roles will exist* — `16` HE specialists under a Campus Assistant, `12` K-12 under a School Assistant. The segment split maps onto how US policy is drafted |
+| Standard of record | [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) | `MIT`, `1 065` B | CCSS grounding, so an advising or assessment output cites a standard a district already recognises |
+| High-stakes guard | [`OleksiiDotsenko/test-builder`](https://github.com/OleksiiDotsenko/test-builder) | `MIT`, `1 073` B | Item validity evidence where a policy clause forbids AI as the sole basis for a high-stakes decision |
+
+**Wiring:** take the `iblai` set as the inventory's first draft, delete the roles the district will
+not authorise, and attach to each surviving role the standard it grounds against and the validity
+evidence it must produce. The artefact is a policy annexe with an agent list, an owner per agent and
+a citation path — which is what the statutory deadline actually demands.
+
+🔴 **What it would take:** the `iblai` repositories are *configurations* for a specific agent
+runtime, not running systems, and nothing in them constitutes compliance. 🔵 They are load-bearing
+as a decomposition and nothing more; the policy work is legal, not engineering.
+
+### 🟢 Pattern `648-4` — multi-tenant training delivery, LATAM and APAC
+
+The licensing shape, not the feature set, is why this recipe is new. `verticals/solutions.md` shows
+every multi-tenant platform this base held was reciprocal or hosted, and every permissive one was
+single-instance.
+
+| Step | Repo | Licence | Role |
+|---|---|---|---|
+| Platform | [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | `Apache-2.0`, `11 362` B (`648-G`: `+5`) | Self-hosted **multi-tenant** LMS — course builder, trainer and student portals, progress tracking. One managed instance, many institutes |
+| Learning tracking | [`i-barbosa/EduCria`](https://github.com/i-barbosa/EduCria) | `MIT`, `1 071` B | Adaptive tracking with collective activities, built for the municipal network of Recife — the LATAM proof that a public network will take one |
+| Employability tail | [`anndreloopez012/campuslands-cv-rendercv`](https://github.com/anndreloopez012/campuslands-cv-rendercv) | `MIT`, `1 068` B (🔴 `dev` branch) | Campuslands' CV toolchain on RenderCV + Git + Docker. The placement end of a bootcamp pipeline |
+| Assessment | [`mergeos-bounties/NokaMan`](https://github.com/mergeos-bounties/NokaMan) | `MIT`, `1 085` B (🔴 `master`) | CEFR-anchored writing assessment, so the output maps to a published scale rather than a private rubric |
+
+**Wiring:** `TutorLoom` is the tenant boundary — one tenant per institute, trainers scoped to it.
+`EduCria`'s tracking model supplies the cohort-level progress view a public-network buyer asks for;
+`NokaMan` grades the language component against CEFR; `campuslands-cv-rendercv` closes the loop into
+placement, which is the outcome a bootcamp or municipal programme is actually funded on.
+
+🔴 **What it would take:** `TutorLoom` is `77` stars and one vendor with no third-party production
+references found, so it is a licence-compatible starting point rather than a platform to stake a
+managed service on — `p641`'s reasoning applies in reverse here: the grant does not disqualify the
+delivery model, which is necessary and not sufficient. 🔴 Two of the four are off `main`, so the
+resolve-first correction at the top of this page is mandatory for this recipe specifically.
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THREE RECIPES BUILT ONLY FROM ADDRESSES THIS PASS BYTE-READ, PLUS THE BRANCH CORRECTION EVERY RECIPE ON THIS PAGE STILL NEEDS**
 
 Every address named below was verified live on the git channel and had its licence payload read by

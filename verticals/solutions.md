@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **A PERMISSIVE *MULTI-TENANT* LMS ENTERS THE ESTATE, WHICH IS THE ONE SHAPE EVERY INCUMBENT ON THIS PAGE WITHHOLDS — AND THE MOODLE ESTATE GAINS BOTH A DEPLOYER AND AN EXTRACTOR**
+
+### 🟢 The verticals this pass's addresses attach to
+
+An address is worth more when it names the platform it plugs into, because that is the engagement
+surface. Seven of this pass's finds do, and one of them changes the shape of the page.
+
+| Address | Licence — bytes, grade | ★ | Attaches to | What it adds to the estate |
+|---|---|---|---|---|
+| [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 🟢 `Apache-2.0` — `11 362` B (`648-G`) | `77` | — (it **is** the platform) | 🟢 A self-hosted **multi-tenant** LMS: course builder, trainer and student portals, progress tracking, Django + React. See below — multi-tenancy is the gap |
+| [shellharbor/mooship](https://github.com/shellharbor/mooship) | 🟢 `MIT` — `1 069` B, residual `+0` | `15` | **Moodle** | Deployment toolkit for Ubuntu: Docker Compose, PHP-FPM, Nginx, PostgreSQL/MySQL, Redis sessions, Let's Encrypt. The install is the first day of every Moodle engagement |
+| [estevao-tarifa/moodle2ia](https://github.com/estevao-tarifa/moodle2ia) | 🟢 `MIT` — `1 071` B, residual `+0` | `4` | **Moodle** | Exports any course to clean AI-ready Markdown — PDFs, quiz answer keys, LaTeX, topic-by-topic. The extraction step every courseware-RAG recipe hand-rolls |
+| [Azhonaras/BigBlueSync](https://github.com/Azhonaras/BigBlueSync) | 🟢 `MIT` — `1 110` B, residual `+0` | `3` | **BigBlueButton** | Zero-loss recording downloader and stream multiplexer. BBB is held here; its recording estate was not |
+| [ClydeQue/Project-Silip](https://github.com/ClydeQue/Project-Silip) | 🟢 `MIT` — `1 080` B, residual `+0` | `4` | **SCORM / any LMS** | Inspect, debug and validate SCORM packages *before* upload. A permissive entrant in a proprietary-dominated category |
+| [jungang/alumnet](https://github.com/jungang/alumnet) | 🟢 `MIT` — `1 055` B, residual `+0` | `167` | — (institutional) | School-history exhibition and alumni management. The **alumni and advancement** end of the estate, which this base has barely held |
+| [thiagomontozo/fluenthub](https://github.com/thiagomontozo/fluenthub) | 🟢 `MIT` — `1 071` B, residual `+0` | `3` | — (institutional) | Full-stack **language-school** management and learning, Go + React. A vertical-within-the-vertical |
+| [swoopeagle/standardgraph](https://github.com/swoopeagle/standardgraph) | 🟢 `MIT` — `1 065` B, residual `+0` | `5` | **CCSS, Singapore MOE, IB MYP** | A standards MCP. The only address this pass that names three *jurisdictions* as its interface |
+| [bwhtech/trivia-tap](https://github.com/bwhtech/trivia-tap) | 🔴 **metadata `MIT`, payload nil** (`648-L`) | `9` | **Frappe / ERPNext** | Live multiplayer quiz with PIN/QR join, no login. 🔴 **BLOCKED pending a readable grant** — attractive fit for the Frappe estate, and not adoptable until the grant is first-hand |
+
+### 🟢 Why multi-tenancy is the find
+
+Read down this page's incumbents and the licences tell one story:
+
+| Platform | Licence | Multi-tenant? |
+|---|---|---|
+| Moodle | 🔴 `GPL-3.0` | Via Moodle Workplace — 🔴 **proprietary** |
+| Open edX | 🔴 `AGPL-3.0` | Via `tutor` plugins, operationally heavy |
+| Canvas | 🔴 `AGPL-3.0` | Instructure-hosted |
+| OpenEduCat | 🔴 `LGPL-3.0` | Odoo multi-company, reciprocal core |
+| Sakai | 🟢 `Apache-2.0` | 🔴 Single-instance by design |
+| Frappe Education | 🟢 — | Frappe multi-tenant, but see `648-L` |
+| 🆕 **TutorLoom** | 🟢 **`Apache-2.0`** | 🟢 **Yes, in the core** |
+
+Every permissive option on this page was single-tenant and every multi-tenant option was reciprocal
+or hosted. 🟢 `TutorLoom` is the first address this base holds that is both. For a studio selling a
+managed service to *training institutes and corporate teams* — not to one university — that
+combination is the whole licensing question, and `p641` already recorded why it matters: an
+`Elastic-2.0` or source-available grant disqualifies the managed-service delivery model outright.
+
+🔴 The caveat is proportionate and must travel with the row: `77` stars, one vendor
+(Pace Wisdom Solutions Pvt. Ltd., placed to APAC by its own licence appendix per `648-H`), and no
+third-party production references found. It is a **starting point whose licence does not block the
+delivery model**, which is a different claim from "production-ready", and the base should not let
+the first claim be read as the second.
+
+### 🟢 The Moodle estate now has both ends of its AI pipeline
+
+`mooship` and `moodle2ia` arrived in the same week and compose directly:
+deploy Moodle reproducibly → extract its courses to clean Markdown → index → serve. Neither is
+large, both are `MIT`, and together they remove the two steps that every Moodle-plus-AI engagement
+currently writes from scratch. The wiring is in `compose/patterns.md`.
+
+🔴 Both must resolve the branch before they are pinned. `648-E` and `646-J` between them establish
+that `moodle/moodle` is on `main` but `openeducat/openeducat_erp`'s default branch is the bare
+version `19.0`, so a hardcoded branch in a Moodle-or-OpenEduCat recipe silently keeps building the
+previous major. 🟢 And `648-F` adds the licence-channel version of the same hazard: `moodle/moodle`
+serves its grant at `COPYING.txt`, not at any `LICENSE*` spelling, so a licence check that guesses
+the filename reports this page's flagship as ungranted.
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE ASSESSMENT-PLATFORM ESTATE GETS ITS FIRST PERMISSIVE AUTOGRADING SUBSTRATE, AND THE WEEK'S FINDS NAME THE VERTICALS THEY ATTACH TO — INCLUDING ONE THIS BASE DOES NOT HOLD**
 
 ### 🟢 The verticals this pass's `28` addresses actually attach to

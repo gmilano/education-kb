@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE WEEK'S MOVEMENT IS A CHANNEL, NOT A ROW: `430` NOVEL ADDRESSES FROM A SORT KEY NOBODY HAD TRIED, LED BY A `1 977★` SYSTEM-DESIGN SIMULATOR — AND `2.8 %` OF WHAT THE CHANNEL RETURNS IS BUILT TO *DEFEAT* COURSEWORK**
+
+### 🟢 What is actually new this week
+
+The star-floor channel was closed by measurement at `p647` (`97 of 100` already held) and the
+update-sorted channel has a `6`-star ceiling. So for two passes "what is new this week" could only
+be answered with addresses nobody had starred. `648-C` changes that: filtering on **creation date**
+and sorting by stars returns `616` unique addresses, `430` of them novel, with a ceiling of
+`6 500` stars. The week's movement, in descending order of reception:
+
+| Address | ★ | Created | Licence | Reading |
+|---|---|---|---|---|
+| [workersio/breakscale](https://github.com/workersio/breakscale) | `1 977` | `2026-08-23` | 🟢 `MIT` | Build a system, load it until it breaks, watch *why*. Distributed-systems teaching by **failure injection** rather than explanation — the week's clearest new idea |
+| [smithjohn78390/tongjiang-lab](https://github.com/smithjohn78390/tongjiang-lab) | `1 561` | — | 🔴 `NOASSERTION` | Free interactive 3D science lessons for high school. The second-largest on-domain newcomer and **not permissive**, so it is intelligence and not supply |
+| [hyqzz/Solar-Wanderer](https://github.com/hyqzz/Solar-Wanderer) | `764` | `2026-06-12` | 🟢 `MIT` | 1:1 real-time solar-system explorer on NASA JPL ephemerides, in a browser. Science visualisation at research fidelity, MIT |
+| [Derssa/Torollo](https://github.com/Derssa/Torollo) | `449` | `2026-06-15` | 🟢 `MIT` | Local-only interactive playground for system design and networking |
+| [JudgePeach/math-question-bank](https://github.com/JudgePeach/math-question-bank) | `371` | — | 🔴 `AGPL-3.0` | High-school maths item bank, LaTeX rendering, formula OCR. Reciprocal |
+| [zorost/AI-Engineering-Lab](https://github.com/zorost/AI-Engineering-Lab) | `314` | `2026-08-17` | 🟢 `MIT` | 24-week AI-engineering course, 43 runnable notebooks, one continuous case study |
+| [fengyanhao/3D_Magnetic_Pieces](https://github.com/fengyanhao/3D_Magnetic_Pieces) | `307` | `2026-07-24` | 🟢 `MIT` | Interactive 3D magnetic-tile building and tutorial platform for children and parents |
+| [int64ago/vistep](https://github.com/int64ago/vistep) | `244` | `2026-09-05` | 🟢 `MIT` | Bilingual visual explanation with interactive models and synchronised narration |
+| [oil-oil/vibe-hub-skill](https://github.com/oil-oil/vibe-hub-skill) | `239` | `2026-07-23` | 🟢 `MIT` | Jargon detection with plain explanation and a traceable term link |
+| [jungang/alumnet](https://github.com/jungang/alumnet) | `167` | — | 🟢 `MIT` | AI school-history exhibition and alumni management. The **alumni** end of the estate, which this base barely holds |
+| [EricWang1358/dsh-web-studyhub](https://github.com/EricWang1358/dsh-web-studyhub) | `165` | `2026-09-12` | 🟢 `MIT` | Own material into questions plus spaced review |
+| [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | `77` | — | 🟢 `Apache-2.0` | Self-hosted **multi-tenant** LMS for training institutes, Django + React. See `verticals/solutions.md` — multi-tenancy is the gap |
+| [YujxZJCN/teaching-skills](https://github.com/YujxZJCN/teaching-skills) | `45` | — | 🟢 `MIT` | Teaching-lifecycle suite for university faculty. **Teacher-facing**, where this cohort is overwhelmingly learner-facing |
+
+### 🔴 The trend inside the trend: an adversarial layer, `2.8 %` of the channel
+
+`17 of 616` addresses this week are auto-play / auto-answer automation aimed at the Chinese MOOC
+estate (`648-J`), `10` of them `MIT`. Counted as a trend rather than as noise, this is the week's
+second real signal: **the APAC online-course estate is large enough, and compulsory enough, to
+sustain its own open-source counter-industry.** Six of the `17` were created or pushed inside the
+last `30` days.
+
+They are excluded from this base on policy and are not recipes. What they contribute is a target
+list — see `intel/market.md`.
+
+### 🟢 The permissive assessment-authoring layer filled in this week
+
+`p647` recorded the permissive *assessment* layer becoming complete on the grading side
+(`gitgrader`, `autograde-classroom`, the Manchester JUnit harness). This week the **authoring and
+design** side arrived, which is the half that was still proprietary:
+
+- [OleksiiDotsenko/test-builder](https://github.com/OleksiiDotsenko/test-builder) `MIT` — blueprints,
+  Bloom matrices, format-rule item writing, review checklists, classroom psychometrics (P-values).
+  Test *construction* as a discipline, not a form.
+- [wzsisshadiao-crypto/dq-questionbank-core](https://github.com/wzsisshadiao-crypto/dq-questionbank-core)
+  `Apache-2.0` — LaTeX question-bank authoring, import, review, Word/DOCX publishing.
+- [mergeos-bounties/NokaMan](https://github.com/mergeos-bounties/NokaMan) `MIT` — learning-ability
+  assessment from CEFR writing samples, so the output maps to a published scale.
+- [ClydeQue/Project-Silip](https://github.com/ClydeQue/Project-Silip) `MIT` — SCORM package
+  validation before upload. 🔵 Note the shape: this is `p630`'s *permissively-licensed thin client
+  for a proprietary standard estate*, now on the packaging layer.
+
+With `p647`'s three grading repos, education now has a readable-licence path from item design →
+item bank → delivery → capture → grading → psychometrics. 🔴 It is a path of `3`-to-`77`-star
+repositories, not a product.
+
+### 🟢 And one genuinely scarce artefact: the prerequisite graph
+
+Two addresses this week publish **prerequisite structure**, which is the input adaptive learning
+actually needs and the thing nobody open-sources:
+
+- [zeroa234/cs-math-skill-tree](https://github.com/zeroa234/cs-math-skill-tree) `MIT` — `192`
+  learning units and `260` declared prerequisite edges, each with course evidence and stated
+  division boundaries. Static, offline, bilingual.
+- [sohan1611/BloodCoded_Agentic](https://github.com/sohan1611/BloodCoded_Agentic) `MIT` — LangGraph
+  plus Bayesian knowledge tracing plus a prerequisite DAG, with a deterministic policy guard
+  disposing of what the model proposes. 🔵 That guard is the architecture this base has argued for
+  across several passes: the model proposes a teaching move, a deterministic layer vetoes it.
+
+Together with [NavyashreeNS/ai-tutor](https://github.com/NavyashreeNS/ai-tutor) `MIT` (knowledge
+dependency graph + BKT + two-stage misconception diagnosis) that is three independent BKT
+implementations arriving in one week, against the single `pyBKT`/`OATutor` lineage this base has
+carried since `p65`.
+
 ## 🆕 `2026-11-04` — `p647` — 🔴 the star-floor channel is EXHAUSTED for this industry, and the only channel still yielding has a measured ceiling of `6` stars
 
 **The week's new permissive supply: `28` addresses, all live, all licence byte-read.** The full

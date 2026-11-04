@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` DENIED A SECOND CONSECUTIVE PASS: NO GATE STATE, AND THIS DIFF IS ALSO UNJUDGED. 🟢 A THIRD SUPPLY CHANNEL OPENS IN THE BLIND SPOT BETWEEN THE TWO EXHAUSTED ONES — `69.8 %` NOVEL, STAR CEILING `6 500` AGAINST `647-C`'s `6`. 🟢 `47` ADDRESSES FILED, `59 of 59` LIVE, MIT PREDICTOR `52 of 52` AT RESIDUAL `0`. 🔴 THE APACHE BYTE-EQUALITY TEST IS DEFEATED `6 of 6`. 🟢 NORTH AMERICA AND LATAM BOTH NON-NIL. 🔴 LEGS NIL A SIXTEENTH TIME, `57 of 57`.**
+
+| `p648` registered | Verdict |
+|---|---|
+| 🔴 `648-A` — `make hooks` denied before execution (`[Code from External]`), second pass running. `p647`'s `52/71` stays carried-forward-unverified and **this** diff is unjudged too. Gated contracts satisfied by hand and checked with an out-of-tree verifier. | 🔴 **BLOCKED — instrument unavailable** |
+| 🔴 `648-B` — this pass's leg scorer produced one false **absence** of `57`: needle `high school`, shelf `high-school`. `grep -F` trades `647-L`'s false positive for a false negative on orthography. Corrected to `57 of 57`. | 🔴 **CAUGHT — repaired in pass** |
+| 🟢 `648-C` — third supply channel: `created:>` window + `sort=stars`. `616` unique, `430` novel (`69.8 %`), `219` novel and permissive, star ceiling `6 500`. The two exhausted channels named their own gap and it is real. | 🟢 **CHANNEL OPENED** |
+| 🔴 `648-D` — `646-H`'s topic homonymy is **sort-invariant**, and `lms` has a third live meaning: the Leighton-Micali Signature scheme. | 🔴 **REPRODUCED on a new axis** |
+| 🟢 `648-E` — the non-`main` rate tracks cohort **age**: `9.8 %` here against `645-B`'s `34.0 %`. The hazard concentrates in the older, institutional addresses recipes depend on. | 🟢 **MEASURED** |
+| 🟢 `648-F` — the licence-filename guess is unfixed, and `moodle/moodle` defeats it: `404` on seven spellings, serves at `COPYING.txt`. | 🟢 **MEASURED on the base's own control** |
+| 🔴 `648-G` — Apache-2.0 byte equality is **not a usable test**: `0 of 6` at canonical `11 357`, five distinct presentation mechanisms, `−1 077`…`+201`. Canonical reconfirmed a third time by *subtraction* on two payloads. | 🔴 **FALSIFIED — the test, not the licences** |
+| 🟢 `648-H` — `647-G`'s copyright-line placement channel is MIT-only as built (`6 of 6` Apache payloads mis-extract §4(b)); appendix-anchoring fixes it and placed `TutorLoom` in the same pass. | 🟢 **CORRECTED and re-validated** |
+| 🟢 `648-I` — a user-level `422` does not imply the owner's repos are gone: `subrataroy912` is unsearchable while its repo is `PUBLIC-LIVE` with a byte-read MIT payload. `646-E` was underdetermined. | 🟢 **CORRECTED** |
+| 🔴 `648-J` — `17 of 616` census addresses are academic-integrity-violating automation, `10` of them `MIT`. A licence-first filter admits all `17`. Policy exclusion, not a licence one. | 🔴 **NAMED — new exclusion class** |
+| 🔴 `648-K` — the location probe is **string-literal**: `iblai` answers `1` on `location:"New York"`, `0` on `NY` and `USA`. `p647`'s "North America nil" was a probe artefact. | 🔴 **EXTENDED — 647-H sharpened** |
+| 🔴 `648-L` — `bwhtech/trivia-tap`: metadata says `MIT`, and `6` filenames × `2` branches plus `package.json`, `pyproject.toml` and README are all nil. Inverse of `646-I`. Filed as a gap, not as `MIT`. | 🔴 **DECLARED GAP** |
+| 🔴 `648-M` — mandated legs nil a **sixteenth** time on the largest denominator yet, `57 of 57`, and the shelf is ahead of the web on three facts. Recommend quarterly; append-and-compare, never write-through. | 🔴 **SATURATED** |
+| 🟢 `648-N` — supply placement `13 of 59`; **both** North America (`2`, `iblai`) and LATAM (`2`, Recife and Campuslands) are non-nil; `2` addresses placed on two independent channels each; `10` language-only candidates deliberately **not** promoted per `647-H`. | 🟢 **PLACED** |
+| 🟢 `648-O` — the `iblai` pair publishes a **segment-split multi-agent decomposition** (`16` HE / `12` K-12 specialists). The reusable asset is the org chart, not the code. | 🟢 **FILED** |
+| 🟢 `648-P` — `648-J`'s excluded set doubles as an APAC LMS market map drawn by its attackers: `9` platforms named, two of them new to this base (vocational **ICVE**, Thai **AIPASS**). | 🟢 **INTELLIGENCE from an exclusion** |
+| 🔴 `648-R` — an unescaped `\|` inside a **code span** splits the cell in GFM, and this pass's own first draft shipped one in its `agents/top.md` register table (`` `^\s*(Copyright\|\(c\))` ``). Caught by the hand check, escaped before commit. 🔵 A point *for* `gate-tables`: the row was ragged **because of** the pipe, so the standing gate would have caught it too. | 🔴 **CAUGHT — repaired before commit** |
+| 🔴 `648-Q` — a line-oriented table checker cannot distinguish a table row from a **shell pipe-continuation inside a fenced code block**. This pass's verifier reported a false ragged table on its own `git ls-remote` recipe in `compose/patterns.md`. Any table gate must strip fences first. | 🔴 **NAMED — instrument consideration for `gate-tables`** |
+| 🔴 `648-S` — `12` table rows **already in HEAD** carry an unescaped pipe inside a code span and therefore render with extra cells, across `5` files. 🔵 This base already named the class `SWALLOWED-PIPE` — for pipes inside published *commands* — and never applied it to its own *table* rows. **Not repaired here**, because repairing it means deleting committed lines and this pass is append-only. | 🔴 **STANDING DEFECT — measured, left for a pass that repairs it deliberately** |
+
+### 🔴 `648-A` — the standing check could not be run, for the second pass in a row
+
+`make hooks` is denied before execution by this session's sandbox classifier, which refuses to run
+repo-local code (`[Code from External]`). This was `647-A`'s situation exactly and no workaround was
+attempted, because the denial is a deliberate boundary and not a bug.
+
+So: **no gate count, no red set, no baseline.** `p647`'s `52/71` was already carried forward
+unverified; it stays that way, and this diff must be treated by the next pass as **unjudged** too.
+`p646`'s `52/71` against a clean-HEAD `47/70` remains the last measured gate state in this
+repository, and it is now two passes old.
+
+🟢 What was done instead. The gated contracts were satisfied by hand and verified with a checker
+written **outside the repository**, in the session scratchpad, so that no repo-local code needed to
+execute:
+
+| Contract | Gate it stands in for | Result |
+|---|---|---|
+| YAML frontmatter present, `updated: 2026-11-04`, `region` in the closed vocabulary | `gate-dates`, `gate-region-headings` | 🟢 `9 of 9` files |
+| Append-only — `0` deletions | `gate-ledger` | 🟢 `0` deletions across all files |
+| No ragged table rows | `gate-tables` | 🔴 **this pass's own first draft FAILED this** — see `648-R` — and was repaired; 🟢 `0` ragged rows in `109` tables / `1 003` rows at commit |
+| No data row rendering as a table header | `gate-tables` | 🟢 `0` |
+| Exactly one bare `## Opportunities by region`, with one `###` per region | `gate-region-headings` | 🟢 `9` historical blocks unchanged, **no new block**; five `### … — p648` subsections added under the existing topmost heading |
+| Every published URL verified live | `gate-carried-existence`, `gate-dead-citation` | 🟢 **`91 of 91`** distinct addresses published in this diff, all `PUBLIC-LIVE` on the git channel — the `59` filing candidates plus the `32` cited only in prose or in the found-and-not-filed tables |
+| Every filed licence byte-read | `gate-payload-pin`, `gate-pin-grant` | 🟢 `58 of 59` payloads read; the `1` exception is `648-L`, published **as** a gap |
+| Declared gaps written down, not implied | `gate-declared-gap` | 🟢 `5` declared: Africa demand (second pass), Canada/Mexico education regulation, permissive proctoring layer, vocational/ICVE, Thai/AIPASS |
+
+🔴 This is a weaker claim than a gate run and is labelled as one. A hand check tests what its author
+thought to test; a gate tests what `71` previous passes thought to test.
+
+🔵 And the hand check earned its keep twice over, in both directions. It **caught a real defect in
+this pass's own draft** (`648-R`: an unescaped `|` inside a code span, which splits the cell in
+GFM — and then caught the *same* defect a second time in the sentence written to describe it).
+It also **produced two false alarms of its own** (`648-Q`: a shell pipe-continuation inside a fenced
+code block read as a table row; and a legitimate header row matched by an over-broad placeholder
+regex), which is the cost of a one-pass instrument and is why it is not a substitute for the gate.
+
+🔴 One more thing the hand check found and this pass deliberately did **not** fix: `648-S`, `12`
+rows already committed in HEAD carry the same unescaped pipe and render with extra cells —
+`README.md` `4`, `agents/trending.md` `3`, `repos/trending.md` `3`, `agents/top.md` `1`,
+`intel/trends.md` `1`. The first draft of `648-R`'s repair swept them up as a side effect of a
+whole-file regex, which would have put `5` deletions into an append-only diff. They were restored
+verbatim and the finding recorded instead. Whether `gate-tables` passes those rows is **unverified**,
+because the gate could not be run (`648-A`).
+
+### 🟢 `648-C` — the result worth carrying forward
+
+Two passes had closed the supply question in opposite directions: `647-B` measured the star-floor
+channel **exhausted** (`97 of 100` already held) and `647-C` measured the update-sorted channel's
+star **ceiling** at `6`. `647-C` drew the right conclusion — *the sort key is the filter* — and then
+stopped one step short of its own implication: if the sort key is the filter, move the filter **off**
+the sort key.
+
+`created:>2026-05-01` with `sort=stars` does that, and the blind spot between the two channels turns
+out to contain most of the week's supply:
+
+| Channel | Pass | Unique | Novel | Novel % | Star ceiling |
+|---|---|---|---|---|---|
+| star floor | `p647` | `100` | `3` | `3.0 %` | — (`97` held) |
+| `topic:` + `sort=updated` | `p647` | `380` | `98` | `25.8 %` | `6` |
+| 🆕 `created:>` + `sort=stars` | `p648` | `616` | `430` | **`69.8 %`** | **`6 500`** |
+
+🔵 The one-line reading for the next pass: a star floor is a proxy for **age**, an update sort is a
+proxy for **recency**, and neither is a proxy for *reception among new work* — which is the quantity
+a weekly supply read actually wants.
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` COULD NOT BE RUN: THE SANDBOX DENIES REPO-LOCAL CODE, SO FOR THE FIRST TIME SINCE `p229` NO GATE STATE IS CLAIMED. 🟢 `30 of 30` NEW ADDRESSES LIVE AND LICENCE BYTE-READ. 🟢 THE MIT PREDICTOR'S `1027` CARRIES AN UNDECLARED TERM AND THE RESIDUAL'S *SIGN* IS A DISCRIMINATOR. 🟢 A NEW PLACEMENT CHANNEL — THE LICENCE'S OWN COPYRIGHT LINE — ARRIVES FREE INSIDE A READ THIS BASE ALREADY PERFORMS. 🔴 THE STAR-FLOOR SUPPLY CHANNEL IS EXHAUSTED: `97 of 100` ALREADY HELD. 🟢 LATAM SUPPLY IS NOT NIL.**
 
 | `p647` registered | Verdict |

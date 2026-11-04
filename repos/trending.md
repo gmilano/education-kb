@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE CENSUS CHANNEL ITSELF IS THE WEEK'S RESULT: `69.8 %` NOVEL AGAINST `3.0 %`, AND A STAR CEILING THREE ORDERS OF MAGNITUDE ABOVE THE CHANNEL IT REPLACES**
+
+### 🟢 Channel comparison, measured on the same index and the same vocabulary
+
+| Channel | Pass | Queries | Unique | Novel | Novel % | Permissive & novel | Star ceiling | Star mode |
+|---|---|---|---|---|---|---|---|---|
+| `in:name,description` + star floor | `p647` | `12` | `100` | `3` | `3.0 %` | `0` on-domain | — | — |
+| `topic:` + `sort=updated` | `p647` | `~10` | `380` | `98` | `25.8 %` | `98` | `6` | `0`–`1` |
+| 🆕 `topic:` + `created:>` + `sort=stars` | `p648` | `18` | `616` | `430` | **`69.8 %`** | `219` | **`6 500`** | `3`–`5` |
+
+`647-C` concluded that the star-floor and update-sorted channels "are disjoint in star space and a
+single census structurally cannot see both — the sort key is the filter." That is right, and it
+implies something `p647` did not take: if the sort key is the filter, then **moving the filter off
+the sort key entirely** should see both. Filtering on creation date and then sorting by stars does
+exactly that, and the measurement is unambiguous.
+
+🔵 The honest caveat is that the ceiling is one address. The ceiling is
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) at `6 500`,
+and the star *mode* of this channel is `3`–`5`, so the channel is not "high-star": it is **wide**,
+and it happens not to be truncated at the top. That is the property that matters for a weekly read,
+because a channel truncated at `6` stars cannot tell you what the field received.
+
+### 🟢 GitHub trending, read against the shelf rather than copied from it
+
+The mandated `github trending {industry} AI {year}` leg returned four addresses. 🔴 All four were
+**already held**, and on three of them the shelf is **ahead of the source**:
+
+| Address | Web reported | Shelf holds | Reading |
+|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `52 783★` (`2026-11-01`) | `54 833★` | 🔴 Shelf ahead by `2 050`. An overwriting pipeline regresses it |
+| OpenMAIC (Tsinghua MAIC) | `~42 000★` | `42 630★` | 🔴 Shelf ahead. Same class |
+| [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub) | `~40 000★` | held | 🟢 No change |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | `>107 000★` | held | 🟢 No change |
+
+🔵 This is the third consecutive pass on which the trending leg has been *stale relative to the
+shelf*, and it is the strongest argument in the register for `648-M`'s recommendation: the leg
+should run quarterly, and when it runs its output must be **appended and compared**, never written
+through. A pipeline that trusted this week's leg would have published two star counts lower than
+the ones already committed.
+
+🔴 Note also what the leg could not do: it returned `0` addresses that were novel. Every genuinely
+new repository recorded on this page this week came from `648-C`'s census, not from the trending
+leg. The web leg measures *coverage* of what is already famous; the census measures *supply*.
+
+### 🟢 The week's novel permissive repositories, by what they are for
+
+Beyond the agent and tutor layer (`agents/trending.md`) the census returned infrastructure:
+
+| Repo | ★ | Licence | Branch | Layer |
+|---|---|---|---|---|
+| [shellharbor/mooship](https://github.com/shellharbor/mooship) | `15` | 🟢 `MIT` | `main` | **Moodle deployment**: Docker Compose, PHP-FPM, Nginx, PostgreSQL/MySQL, Redis sessions, Let's Encrypt. Automates the install this base's largest vertical needs |
+| [Azhonaras/BigBlueSync](https://github.com/Azhonaras/BigBlueSync) | `3` | 🟢 `MIT` | `main` | **BigBlueButton recordings**: zero-loss downloader and stream multiplexer. BBB is held in `verticals/solutions.md`; its recording estate was not |
+| [estevao-tarifa/moodle2ia](https://github.com/estevao-tarifa/moodle2ia) | `4` | 🟢 `MIT` | `main` | **Moodle → AI-ready Markdown**: PDFs, quiz answer keys, LaTeX formulas, topic-by-topic. The extraction step every RAG-over-courseware recipe currently hand-rolls |
+| [ClydeQue/Project-Silip](https://github.com/ClydeQue/Project-Silip) | `4` | 🟢 `MIT` | `main` | **SCORM validation** before upload to an LMS |
+| [hariharanboss/Study-mate](https://github.com/hariharanboss/Study-mate) | `4` | 🟢 `MIT` | `main` | **Edge-native personal LMS** on Cloudflare Workers, KV and R2, PWA offline |
+| [codexanjan/nexora-lmz-quiz](https://github.com/codexanjan/nexora-lmz-quiz) | `3` | 🟢 `MIT` | `main` | **Server-authoritative quizzing** with remediation loop and native `6`-language i18n |
+
+🔵 Three of the six attach to a platform this base already holds (`moodle/moodle` twice,
+BigBlueButton once), which is the shape `647` recorded as most valuable: *an address is worth more
+when it names the platform it plugs into, because that is the engagement surface.* The Moodle
+deployment and Moodle extraction repos are the two ends of the same pipeline and neither existed in
+this base a week ago.
+
 ## 🆕 `2026-11-04` — `p647` — 🔴 `97 of 100` star-floor results already held: the top of this market is read, and the novel tail tops out at `6` stars
 
 ### 🔴 The two channels, side by side

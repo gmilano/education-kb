@@ -1,0 +1,7 @@
+repo	bytes	lines	vs_canonical_11357	mechanism	canonical_recovered_by
+wixette/leibniz-stepped-reckoner	10280	73	-1077	presentation fold: the 80-column hard wrap is REMOVED (p378 class, on the licence body)	re-wrapping (not attempted)
+suwonleee/llmwiki	11339	201	-18	re-wrapped at a different column in 4(a)/(b)/(d) PLUS appendix filled in ("Copyright 2026 suwonleee")	n/a (two independent edits)
+wzsisshadiao-crypto/dq-questionbank-core	11356	200	-1	no final newline (647-E's class, now on the Apache family); last byte is "."	+1 final newline = 11357
+baem-oss/Syzeteo	11358	202	+1	one PREPENDED blank line (647-F's themakerrobot/edge-lab class, reconfirmed)	drop line 1 = 11357 EXACT
+pacewisdomhq/TutorLoom	11362	202	+5	one prepended blank line (+1) PLUS appendix filled in ("Copyright 2026 Pace Wisdom Solutions Pvt. Ltd.", +4)	drop line 1 and placeholder = 11357
+jangviktor-web/GongkaoNaoku	11558	201	+201	CRLF line endings: +1 byte per line, and 201 is EXACTLY the line count	tr -d '\r' = 11357 BYTE-IDENTICAL

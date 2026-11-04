@@ -4,6 +4,239 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` DENIED A SECOND CONSECUTIVE PASS, SO THIS DIFF IS ALSO UNJUDGED. 🟢 A THIRD SUPPLY CHANNEL OPENS IN THE BLIND SPOT BETWEEN THE TWO EXHAUSTED ONES — STAR CEILING `6 500` AGAINST `647-C`'s `6`. 🟢 `47` ADDRESSES FILED, `59 of 59` LIVE, EVERY LICENCE BYTE-READ, MIT PREDICTOR `52 of 52` AT RESIDUAL `0`. 🔴 THE APACHE BYTE-EQUALITY TEST IS DEFEATED `6 of 6` BY FIVE DISTINCT PRESENTATION MECHANISMS. 🟢 NORTH AMERICA SUPPLY IS NOT NIL.**
+
+| `p648` registered | Verdict |
+|---|---|
+| 🔴 `648-A` — `make hooks` denied before execution (`[Code from External]`) for the second pass running. No gate count, no red set, no baseline. `p647`'s `52/71` remains carried-forward-unverified; this diff must also be treated as **unjudged**. | 🔴 **BLOCKED — instrument unavailable, not failed** |
+| 🔴 `648-B` — this pass's own leg scorer reported one false absence out of `57` because its needle read `high school` and the shelf reads `high-school`. `grep -F` cannot produce `647-L`'s false positive, and in exchange it produces false **negatives** on orthography. Corrected tally `57 of 57`. | 🔴 **CAUGHT — instrument defect, repaired in pass** |
+| 🟢 `648-C` — a **third** supply channel: `created:>` window with `sort=stars`. `616` unique addresses, `430` novel (`69.8 %`), `219` novel **and** permissive, star ceiling `6 500`. `647-B`'s star floor is a proxy for age and `647-C`'s update sort has a `6`-star ceiling, so neither can see a repo that is both new and starred. This one looks exactly there. | 🟢 **MEASURED — channel opened** |
+| 🔴 `648-D` — `646-H`'s topic homonymy is **sort-invariant**: on a third sort key `topic:lms` returns Lyrion Music Server again *and* a Solana post-quantum vault, where `LMS` is the Leighton-Micali Signature scheme. Three live meanings of one curated tag. | 🔴 **REPRODUCED on a new axis** |
+| 🟢 `648-E` — the non-`main` rate is a function of cohort **age**, not of population: `5 of 51` (`9.8 %`) here against `645-B`'s `34.0 %` over the published base. A creation-window cohort post-dates `main` becoming the default. | 🟢 **MEASURED** |
+| 🟢 `648-F` — `645-D`'s filename guess is **still unfixed on the licence channel**, and the specimen that defeats it is this base's own flagship vertical: `moodle/moodle` returns `404` on seven licence filenames and serves at `COPYING.txt`. | 🟢 **MEASURED on the base's own control** |
+| 🔴 `648-G` — the Apache-2.0 byte-equality test is **not usable**. `6 of 6` payloads deviate from canonical `11 357 B`; `0 of 6` observe it directly; the spread is `−1 077` to `+201`. Five distinct mechanisms, all presentation, none substantive. | 🔴 **FALSIFIED — the test, not the licences** |
+| 🟢 `648-H` — `647-G`'s copyright-line placement channel is **MIT-only as built**: on `6 of 6` Apache payloads the first line matching `^\s*(Copyright\|\(c\))` is a §4(b) obligation sentence, not the notice. Anchoring on the **appendix** instead fixes it, and the fix placed `pacewisdomhq/TutorLoom` in the same pass. | 🟢 **CORRECTED and re-validated** |
+| 🟢 `648-I` — a user-level `422` does **not** imply the owner's repositories are gone. `subrataroy912` is unsearchable while `subrataroy912/Campus-Mind` is `PUBLIC-LIVE` on `main` with a `1 070 B` MIT payload at residual `0`. `646-E` inferred erasure from a case where both were dead; the two signals are independent. | 🟢 **CORRECTED — 646-E was underdetermined** |
+| 🔴 `648-J` — `17 of 616` census addresses (`2.8 %`) are academic-integrity-violating automation against the APAC LMS estate, and `10` of those `17` are `MIT`. A licence-first filter admits every one. This is a **policy** exclusion the licence gate structurally cannot make. | 🔴 **NAMED — new exclusion class** |
+| 🔴 `648-K` — the `647-H` location probe is not only positive-only, it is **string-literal**: `iblai` answers `1` on `location:"New York"` and `0` on both `location:NY` and `location:USA`. A `0` on a synonym is uninformative, which is `648-B`'s orthography sensitivity at the placement layer. | 🔴 **EXTENDED — 647-H sharpened** |
+| 🔴 `648-L` — `bwhtech/trivia-tap`: the metadata channel asserts `MIT` and **no payload corroborates it** — `6` filenames × `2` branches, plus `package.json`, `pyproject.toml` and the README, all nil. The inverse of `646-I`. Filed as a declared gap, not as `MIT`. | 🔴 **DECLARED GAP — not filed as permissive** |
+| 🔴 `648-M` — the mandated legs are nil a **sixteenth** consecutive time on the **largest denominator yet**: `57 of 57` facts already held at HEAD across Global and all four regions. On three facts the shelf is measurably ahead of the web, so an overwriting pipeline would have regressed this base again. | 🔴 **SATURATED — recommend quarterly, fifth pass to record it** |
+| 🔴 `648-R` — an unescaped `\|` inside a code span splits the cell in GFM, and this pass's own first draft shipped one in the register table above. Caught by the hand check and escaped before commit; `0` ragged rows in `109` tables at commit. | 🔴 **CAUGHT — repaired before commit** |
+| 🔴 `648-Q` — a line-oriented table checker cannot tell a table row from a shell **pipe-continuation inside a fenced code block**; this pass's verifier reported a false ragged table on its own `git ls-remote` recipe. Strip fences first. | 🔴 **NAMED — instrument consideration** |
+
+### 🟢 `648-C` — the channel that sits in the blind spot
+
+`647-B` closed the star-floor channel for education by measurement: `12` queries, `100` unique
+addresses, `97` already held. `647-C` kept the update-sorted channel alive but measured its star
+**ceiling** at `6`. Those two results together are more specific than either alone, and they name
+their own gap: a star floor is a proxy for *age*, and an update sort surfaces whatever was touched
+most recently regardless of reception. Neither sort can see a repository that is **both** new
+**and** starred.
+
+`created:>2026-05-01` with `sort=stars` looks exactly there, and the gap is real:
+
+| Channel | Pass | Unique | Novel | Novel % | Star ceiling |
+|---|---|---|---|---|---|
+| star floor | `p647` | `100` | `3` | `3.0 %` | — (`97` held) |
+| `topic:` + `sort=updated` | `p647` | `380` | `98` | `25.8 %` | `6` |
+| 🆕 `created:>` + `sort=stars` | `p648` | `616` | `430` | `69.8 %` | **`6 500`** |
+
+Three orders of magnitude of star ceiling between two channels searching the same index over the
+same vocabulary. The sort key is the filter, as `647-C` said — and the filter has a third setting
+nobody had tried.
+
+### 🔴 `648-D` — the curated vocabulary has three live meanings of `lms`
+
+`646-H` falsified *"`topic:` is curated so it cannot be polluted"* by homonymy, on the
+update-sorted channel. It reproduces here on a third sort key, and worse:
+
+| Address | ★ | What `topic:lms` actually returned |
+|---|---|---|
+| [stiefenm/spoton](https://github.com/stiefenm/spoton) | `36` | A Spotify plugin for **Lyrion Music Server** — `646-H`'s specimen class, again |
+| [hjelev/lyrtui](https://github.com/hjelev/lyrtui) | `27` | A TUI for **Lyrion Music Server** |
+| [Lamport-Robotics/lamport-vault](https://github.com/Lamport-Robotics/lamport-vault) | `4` | Post-quantum custody for Solana — `LMS` is the **Leighton-Micali Signature** scheme, RFC 8554 |
+
+Three meanings, three correct taggings by their own maintainers, and no better vocabulary fixes it.
+The third is new to this base and is the most instructive, because it is not a product name
+collision but an **acronym** collision in a different technical field.
+
+### 🟢 `648-D1` — `47` addresses filed, every cell measured
+
+`59` addresses were verified on the existence channel (`645-B`) and had their licence payload
+byte-read. `47` are filed below; the other `12` are recorded under *found and not filed*. Stars,
+licence family, byte count, branch and `pushed_at` all come from the search response or the payload
+itself — no cell is a judgement. Evidence:
+`evidence/filed-addresses.2026-11-04-p648.tsv`, `evidence/licence-bytes.2026-11-04-p648.tsv`,
+`evidence/mit-predictor.2026-11-04-p648.tsv`,
+`evidence/existence-ls-remote.2026-11-04-p648.tsv`.
+
+🔴 Every address below is between `1` and `1 977` stars and most are under `20`. These are
+**starting points with a readable licence**, not incumbents.
+
+| Agent / tool | Licence — file, bytes, grade | ★ | Branch | Region | What it actually does |
+|---|---|---|---|---|---|
+| [workersio/breakscale](https://github.com/workersio/breakscale) | 🟢 `MIT` — `LICENSE`, `1 080` B, predictor residual `+0` | `1977` | `main` | Global | Load a distributed system until it breaks and watch *why*. A system-design simulator — the highest-starred novel address this base has filed in weeks. |
+| [Derssa/Torollo](https://github.com/Derssa/Torollo) | 🟢 `MIT` — `LICENSE`, `1 071` B, predictor residual `+0` | `449` | `main` | Global | Browser-local interactive playground for system design and networking. Runs with no backend, so it drops into a classroom with no infrastructure. |
+| [zorost/AI-Engineering-Lab](https://github.com/zorost/AI-Engineering-Lab) | 🟢 `MIT` — `LICENSE`, `1 080` B, predictor residual `+0` | `314` | `main` | Global | A 24-week self-paced AI-engineering course: 43 runnable notebooks over one continuous case study. Curriculum **and** lab in one repo. |
+| [int64ago/vistep](https://github.com/int64ago/vistep) | 🟢 `MIT` — `LICENSE`, `1 090` B, predictor residual `+0` | `244` | `main` | Global | Bilingual visual explanations with interactive models and synchronised narration — an explanation *renderer*, not a chatbot. |
+| [oil-oil/vibe-hub-skill](https://github.com/oil-oil/vibe-hub-skill) | 🟢 `MIT` — `LICENSE`, `1 064` B, predictor residual `+0` | `239` | `main` | Global | Detects jargon in technical discussion and returns a plain explanation with a **traceable** term link. The traceability is the pedagogy. |
+| [EricWang1358/dsh-web-studyhub](https://github.com/EricWang1358/dsh-web-studyhub) | 🟢 `MIT` — `LICENSE`, `1 066` B, predictor residual `+0` | `165` | `main` | Global | Turns the learner's own material into questions plus a spaced-review schedule. Agent-skill shaped, so it composes rather than replaces. |
+| [lu0973-cb02d/ClassCue](https://github.com/lu0973-cb02d/ClassCue) | 🟢 `MIT` — `LICENSE`, `1 078` B, predictor residual `+0` | `102` | `main` | Global | Local-first Android classroom assistant: offline lecture transcription, roll-call alerting, searchable post-class replay. Offline-first by construction. |
+| [itsAalaa7/adhd-study-coach](https://github.com/itsAalaa7/adhd-study-coach) | 🟢 `MIT` — `LICENSE`, `1 069` B, predictor residual `+0` | `92` | `main` | Global | ADHD-oriented study companion — spaced repetition, small-chunk teaching, Feynman reflection. The only **accessibility-first** tutor in this cohort. |
+| [jangviktor-web/GongkaoNaoku](https://github.com/jangviktor-web/GongkaoNaoku) | 🟢 `Apache-2.0` — `LICENSE`, `11 558 B` 🔴 `CRLF` (+201 = line count) | `76` | 🔴 `master` | Global | SM-2 spaced repetition over 27,506 real Chinese civil-service exam items. A rare case of a permissive engine shipping with a populated item bank. |
+| [NFRohan/Deskemy](https://github.com/NFRohan/Deskemy) | 🟢 `MIT` — `LICENSE`, `1 070` B, predictor residual `+0` | `58` | `main` | Global | Offline course player: progress tracking, resume, subtitle search, native playback. The piece every downloaded-course estate lacks. |
+| [OnePathToFreedom/smart-notes-skill](https://github.com/OnePathToFreedom/smart-notes-skill) | 🟢 `MIT` — `LICENSE`, `1 074` B, predictor residual `+0` | `36` | `main` | Global | Lecture transcripts and readings into linked notes, adaptive flashcards and a **gap tracker**. The gap tracker is the part that is hard to buy. |
+| [yamz8/omanki](https://github.com/yamz8/omanki) | 🟢 `MIT` — `LICENSE`, `1 062` B, predictor residual `+0` | `35` | `main` | Global | Spaced-repetition flashcards as a shell-panel plugin — review surfaced where the learner already is, not behind an app. |
+| [wixette/leibniz-stepped-reckoner](https://github.com/wixette/leibniz-stepped-reckoner) | 🟢 `Apache-2.0` — `LICENSE`, `10 280 B` 🔴 **unfolded** (−1 077 vs canonical) | `34` | `main` | Global | Interactive 3D simulator of Leibniz's stepped reckoner with lessons in **10 languages**. Multilingual at authoring time, not by translation. |
+| [thecopybookhare-cmd/lingua-miner](https://github.com/thecopybookhare-cmd/lingua-miner) | 🟢 `MIT` — `LICENSE`, `1 072` B, predictor residual `+0` | `26` | `main` | Global | Mine language learning from video: word-by-word subtitles, one-click Anki cards, fully offline. A permissive take on a proprietary category. |
+| [Xue-Wu-Zhi/xuewuzhi-downloader](https://github.com/Xue-Wu-Zhi/xuewuzhi-downloader) | 🟢 `MIT` — `LICENSE`, `1 067` B, predictor residual `+0` | `23` | `main` | APAC | Course-material client for the Chinese MOOC estate — China University MOOC, Chaoxing, XuetangX, Zhihuishu. Names the APAC incumbents as its own targets. |
+| [Miracle-0v0/ielts-codex-cli](https://github.com/Miracle-0v0/ielts-codex-cli) | 🟢 `MIT` — `LICENSE`, `1 068` B, predictor residual `+0` | `22` | `main` | Global | Zero-dependency IELTS vocabulary trainer for the terminal. Zero dependencies is the deployment story. |
+| [Shalaby-VBS/tube-scholar](https://github.com/Shalaby-VBS/tube-scholar) | 🟢 `MIT` — `LICENSE`, `1 068` B, predictor residual `+0` | `22` | `main` | EMEA | Any YouTube video into an Arabic/English study guide: timestamped explanation, summary, concept visuals, quiz, flashcards. |
+| [zeroa234/cs-math-skill-tree](https://github.com/zeroa234/cs-math-skill-tree) | 🟢 `MIT` — `LICENSE`, `1 065` B, predictor residual `+0` | `21` | `main` | Global | 192 learning units and **260 declared prerequisites** with course evidence per edge. A prerequisite DAG is the scarce asset in adaptive learning. |
+| [whiteOsky/build-exam-anki](https://github.com/whiteOsky/build-exam-anki) | 🟢 `MIT` — `LICENSE`, `1 085` B, predictor residual `+0` | `19` | `main` | Global | PDFs, OCR, lecture notes and legacy cards into **auditable** recitation assets. Auditability is what separates this from a converter. |
+| [suwonleee/llmwiki](https://github.com/suwonleee/llmwiki) | 🟢 `Apache-2.0` — `LICENSE`, `11 339 B` 🔴 re-wrapped + appendix filled (−18) | `17` | `main` | Global | Captures coding-agent sessions into a compounding local wiki that quizzes the author back on a forgetting curve. Workplace learning from real work. |
+| [Luxshan2000/ielts-prep](https://github.com/Luxshan2000/ielts-prep) | 🟢 `MIT` — `LICENSE`, `1 074` B, predictor residual `+0` | `16` | `main` | Global | Offline-first IELTS practice across all four skills with a live AI voice examiner and **band-descriptor** scoring. Rubric-anchored, bring-your-own model. |
+| [MuhammadLutfiMuzakiiVY/Litera-AI-Android](https://github.com/MuhammadLutfiMuzakiiVY/Litera-AI-Android) | 🟢 `MIT` — `LICENSE`, `1 103` B, predictor residual `+0` | `16` | `main` | Global | Indonesian-language literacy app with an adaptive decision engine; Flutter client, FastAPI backend, monorepo. |
+| [Arthur-Miyano/recall-memo](https://github.com/Arthur-Miyano/recall-memo) | 🟢 `MIT` — `LICENSE`, `1 070` B, predictor residual `+0` | `16` | 🔴 `master` | Global | Local interview-prep drill: AI item generation and grading, mock interview, end-game review, forgetting-curve scheduling. |
+| [mergeos-bounties/NokaMan](https://github.com/mergeos-bounties/NokaMan) | 🟢 `MIT` — `LICENSE`, `1 085` B, predictor residual `+0` | `14` | 🔴 `master` | Global | Multi-language learning-ability assessment from CEFR writing samples. CEFR-anchored, so the output maps to a recognised scale. |
+| [Mobin-Karam/moshaver](https://github.com/Mobin-Karam/moshaver) | 🟢 `MIT` — `LICENSE`, `1 068` B, predictor residual `+0` | `11` | `main` | EMEA | Role-aware education platform — student planning, learning, assessment, communication, reporting, follow-up. React/NestJS/Tauri. |
+| [OleksiiDotsenko/test-builder](https://github.com/OleksiiDotsenko/test-builder) | 🟢 `MIT` — `LICENSE`, `1 073` B, predictor residual `+0` | `5` | `main` | Global | Evidence-based **test construction**: blueprints, Bloom matrices, format-rule item writing, review checklists, classroom psychometrics (P-values). Assessment *design*, which almost nothing permissive covers. |
+| [swoopeagle/standardgraph](https://github.com/swoopeagle/standardgraph) | 🟢 `MIT` — `LICENSE`, `1 065` B, predictor residual `+0` | `5` | `main` | Global | Education-standards MCP — CCSS, Singapore MOE, IB MYP. A grounding layer so an LLM tool can cite a standard instead of inventing one. |
+| [OleksiiDotsenko/lesson-in-game](https://github.com/OleksiiDotsenko/lesson-in-game) | 🟢 `MIT` — `LICENSE`, `1 073` B, predictor residual `+0` | `4` | `main` | Global | A teacher describes a lesson in plain words; it becomes a live multiplayer game the class joins by QR over the room's Wi-Fi, and hands back a what-to-reteach report. |
+| [ClydeQue/Project-Silip](https://github.com/ClydeQue/Project-Silip) | 🟢 `MIT` — `LICENSE`, `1 080` B, predictor residual `+0` | `4` | `main` | Global | Desktop tool to inspect, debug and validate **SCORM** packages before they reach an LMS. SCORM validation is proprietary-dominated; this is the permissive one. |
+| [baem-oss/Syzeteo](https://github.com/baem-oss/Syzeteo) | 🟢 `Apache-2.0` — `LICENSE`, `11 358 B` 🔴 leading blank line (+1) | `4` | `main` | Global | Team-based active-recall game for the classroom. Active recall as a group mechanic rather than a solo drill. |
+| [0xdtee/eeclass](https://github.com/0xdtee/eeclass) | 🟢 `MIT` — `LICENSE`, `1 061` B, predictor residual `+0` | `4` | `main` | Global | Live lecture into structured searchable notes in real time: on-device captions, speaker diarisation and voiceprints, LLM summaries, exam-point prediction. |
+| [yuanmingze2008/human-aware-teaching-skill](https://github.com/yuanmingze2008/human-aware-teaching-skill) | 🟢 `MIT` — `LICENSE`, `1 071` B, predictor residual `+0` | `3` | `main` | Global | Reasons about the learner's current understanding and chooses the next **teaching move**, grounded in cognitive and learning science. Pedagogy as the control loop. |
+| [Mlle-LondonG/agora-skill](https://github.com/Mlle-LondonG/agora-skill) | 🟢 `MIT` — `LICENSE`, `1 069` B, predictor residual `+0` | `3` | `main` | Global | Diagnostic, 12-week plan, daily Socratic sessions, metrics and **FSRS** scheduling, in any language. Composes with `fsrs4anki`, already held. |
+| [NavyashreeNS/ai-tutor](https://github.com/NavyashreeNS/ai-tutor) | 🟢 `MIT` — `LICENSE`, `1 069` B, predictor residual `+0` | `2` | `main` | Global | Socratic engine that refuses to give the answer: knowledge-dependency graph, **Bayesian knowledge tracing**, two-stage misconception diagnosis. The BKT lineage this base already holds, in one small MIT repo. |
+| [sohan1611/BloodCoded_Agentic](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 `MIT` — `LICENSE`, `1 104` B, predictor residual `+0` | `2` | `main` | Global | A tutoring agent that rewrites its own objective once it infers *why* the learner is failing — LangGraph plus BKT plus a prerequisite DAG, with a deterministic policy guard over the model's proposal. |
+| [arnaud-6562/durian-rush](https://github.com/arnaud-6562/durian-rush) | 🟢 `MIT` — `LICENSE`, `1 074` B, predictor residual `+0` | `3` | `main` | APAC | Live multiplayer supply-chain game for classrooms and keynotes; teaches the bullwhip effect and demand sensing. Business-school simulation, free to deploy. |
+| [i-barbosa/EduCria](https://github.com/i-barbosa/EduCria) | 🟢 `MIT` — `LICENSE`, `1 071` B, predictor residual `+0` | `3` | `main` | LATAM | Adaptive learning-tracking platform with collective activities, built for the **municipal school network of Recife, Brazil**. First place, HackEdu FPR 2026. |
+| [anndreloopez012/campuslands-cv-rendercv](https://github.com/anndreloopez012/campuslands-cv-rendercv) | 🟢 `MIT` — `LICENSE`, `1 068` B, predictor residual `+0` | `6` | 🔴 `dev` | LATAM | Employability toolchain for **Campuslands** (Colombian bootcamp): CV templates on RenderCV, Git and Docker. The placement end of the learning pipeline. |
+| [KrithinP/vanguard-inductions-2026](https://github.com/KrithinP/vanguard-inductions-2026) | 🟢 `MIT` — `LICENSE`, `1 096` B, predictor residual `+0` | `7` | `main` | APAC | Mission-based ROS 2 induction curriculum for the **BITS Pilani Hyderabad** Mars-rover team, with a CI-graded flight-readiness gate and staged releases. Curriculum as a CI pipeline. |
+| [PiotrKajor/QuizScanner](https://github.com/PiotrKajor/QuizScanner) | 🟢 `MIT` — `LICENSE`, `1 068` B, predictor residual `+0` | `3` | `main` | Global | Camera-read classroom response system using ArUco markers — an open alternative to a proprietary incumbent, needing no student devices. |
+| [jethac/os-taxonomy-japanese](https://github.com/jethac/os-taxonomy-japanese) | 🟢 `MIT` — `LICENSE`, `1 096` B, predictor residual `+0` | `5` | `main` | Global | Open Japanese-language taxonomy with an interactive learning atlas. The taxonomy is the reusable part. |
+| [wzsisshadiao-crypto/dq-questionbank-core](https://github.com/wzsisshadiao-crypto/dq-questionbank-core) | 🟢 `Apache-2.0` — `LICENSE`, `11 356 B` 🔴 no final newline (−1) | `5` | `main` | Global | Local-first visual question-bank workspace: LaTeX authoring, import, review, edit, Word/DOCX publishing. The authoring half of assessment. |
+| [blossom-rt/kg-intelligent-tutoring-system](https://github.com/blossom-rt/kg-intelligent-tutoring-system) | 🟢 `MIT` — `LICENSE`, `1 098` B, predictor residual `+0` | `3` | `main` | Global | Knowledge-graph intelligent tutoring system, built as a web-application coursework project — the classic ITS architecture in a readable MIT repo. |
+| [iblai/higher-education-agents](https://github.com/iblai/higher-education-agents) | 🟢 `MIT` — `LICENSE`, `1 063` B, predictor residual `+0` | `14` | `main` | North America | Drop-in agent configuration for the higher-education segment: a Campus Assistant orchestrator plus **16 specialist subagents**. Segment-shaped multi-agent config, which is exactly the studio's starting artefact. |
+| [iblai/k-12-agents](https://github.com/iblai/k-12-agents) | 🟢 `MIT` — `LICENSE`, `1 063` B, predictor residual `+0` | `9` | `main` | North America | The K-12 counterpart: a School Assistant orchestrator plus **12 specialist subagents**. Same shape, different segment — so the split itself is the reusable design. |
+| [YujxZJCN/teaching-skills](https://github.com/YujxZJCN/teaching-skills) | 🟢 `MIT` — `LICENSE`, `1 067` B, predictor residual `+0` | `45` | `main` | Global | Teaching-lifecycle skill suite aimed at university faculty rather than students. The supply side of this base is overwhelmingly learner-facing; this is not. |
+| [Visol-456/ai-study-coach](https://github.com/Visol-456/ai-study-coach) | 🟢 `MIT` — `LICENSE`, `1 064` B, predictor residual `+0` | `1` | `main` | APAC | Agent study workflow for Chinese high-school STEM: textbook sourcing, note generation, one-question tutoring with symbolic verification, diagram generation. |
+
+### 🔴 `648-G` — the Apache byte-equality test is defeated six times out of six
+
+`647-F` reconfirmed canonical Apache-2.0 at `11 357 B` on three payloads and broke the test once,
+on a `+1` prepended blank line. This pass read six Apache payloads and **not one** is `11 357`:
+
+| Repo | Bytes | Lines | vs canonical | Mechanism |
+|---|---|---|---|---|
+| [wixette/leibniz-stepped-reckoner](https://github.com/wixette/leibniz-stepped-reckoner) | `10 280` | `73` | `−1 077` | The 80-column hard wrap is **removed**. `p378`'s presentation fold, on the licence body |
+| [suwonleee/llmwiki](https://github.com/suwonleee/llmwiki) | `11 339` | `201` | `−18` | Re-wrapped at a different column in §4(a)/(b)/(d), **and** the appendix filled in |
+| [wzsisshadiao-crypto/dq-questionbank-core](https://github.com/wzsisshadiao-crypto/dq-questionbank-core) | `11 356` | `200` | `−1` | No final newline — `647-E`'s class, now on the Apache family. Last byte is `.` |
+| [baem-oss/Syzeteo](https://github.com/baem-oss/Syzeteo) | `11 358` | `202` | `+1` | One prepended blank line — `647-F` reconfirmed independently |
+| [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | `11 362` | `202` | `+5` | Prepended blank line (`+1`) plus appendix filled in (`+4`) |
+| [jangviktor-web/GongkaoNaoku](https://github.com/jangviktor-web/GongkaoNaoku) | `11 558` | `201` | `+201` | `CRLF` line endings: `+1` byte per line, and `201` is **exactly** the line count |
+
+🟢 The canonical value is nonetheless reconfirmed a **third** time, by subtraction rather than by
+observation, and on two independent payloads:
+
+- `jangviktor-web/GongkaoNaoku` with its `201` carriage returns stripped is `11 357 B` and
+  **byte-identical** to the canonical body.
+- `baem-oss/Syzeteo` with its leading blank line dropped is `11 357 B` **exactly**.
+
+🔴 So the finding is about the *test*, not the licences. All six are valid, unmodified
+Apache-2.0 grants, and a byte-equality gate would have refused all six. Contrast `MIT` in the same
+pass: `52 of 52` at predictor residual `0`.
+
+🔵 And the mechanism inverts `645-A`'s reasoning in a way worth stating, because `645-A` is right
+about AGPL and incomplete about Apache. `645-A` said a flat band works for `AGPL-3.0` (`34 523 B`,
+three repos) *because its payload interpolates nothing*, and cannot work for `MIT` *because MIT
+contains a name*. Apache-2.0 also interpolates nothing in its operative text — and a band still
+fails, because its payload is `202` lines of hard-wrapped prose with a fillable appendix. That
+gives presentation five degrees of freedom: wrap column, leading whitespace, trailing newline,
+line-ending convention, and appendix completion. **Interpolation is not the only thing that moves
+bytes; layout is.** `AGPL-3.0`'s band survives because its payload happens to be transmitted
+verbatim, not because it has no variables.
+
+### 🟢 `648-H` — `647-G`'s placement channel inherits the fold, and anchoring on the appendix fixes it
+
+`647-G` registered the licence payload's own copyright line as a free placement channel, because
+`645-A1` already byte-reads that line for its *length* and discards its *content*. It was validated
+on MIT payloads. It is **MIT-only as built**, and this pass measured that at `6 of 6`:
+
+on every Apache payload, the first line matching `^\s*(Copyright|\(c\))` is not the notice — it is
+§4(b)'s obligation sentence, *"You must retain … all copyright, patent, trademark, and attribution
+notices…"*. On the five folded payloads the channel emits the fragment *"copyright notice that is
+included in or attached to the work"* as a copyright holder; on the one **unfolded** payload
+(`wixette`) it emits a `227`-byte sentence. Both are silent and both look like data.
+
+🟢 The fix is to anchor on the **appendix** — the `Copyright [yyyy] [name of copyright owner]`
+placeholder line near the end — rather than on the first match. That is a diff against canonical
+rather than a regex over the whole file, and it was validated in this same pass: it read
+`Copyright 2026 Pace Wisdom Solutions Pvt. Ltd.` out of `pacewisdomhq/TutorLoom`, whose `Pvt. Ltd.`
+is the Indian corporate form, placing the address to APAC on exactly `647-G`'s own stated mechanism.
+
+### 🔴 `648-J` — a `2.8 %` sub-population no licence gate can exclude
+
+`17` of the `616` census addresses are automation built to *defeat* coursework: auto-advancing
+video, auto-answering quizzes and background "course farming" against the Chinese MOOC estate.
+`10 of 17` are `MIT`, so they pass every licence check this base owns. They are **excluded on
+policy**, written down rather than silently dropped, because the exclusion is not inferable from
+any field:
+
+[`1REDfriend/aipass-lms-auto-read`](https://github.com/1REDfriend/aipass-lms-auto-read) `MIT` ·
+[`huanweide/zhihuishu-helper`](https://github.com/huanweide/zhihuishu-helper) `MIT` ·
+[`atvkh/ICVE_Toolkit`](https://github.com/atvkh/ICVE_Toolkit) `NOASSERTION` ·
+[`vibe-GIF/chaoxing`](https://github.com/vibe-GIF/chaoxing) `GPL-3.0` ·
+[`sqyCoder/ai-course-helper`](https://github.com/sqyCoder/ai-course-helper) `MIT` ·
+[`xxxx773/ZJY-next`](https://github.com/xxxx773/ZJY-next) `NONE` ·
+[`HONGHUTECHNOLOGY/honghueasystudy`](https://github.com/HONGHUTECHNOLOGY/honghueasystudy) `MIT` ·
+[`sansssssss1/auto-online-course-agent-skill`](https://github.com/sansssssss1/auto-online-course-agent-skill) `MIT` ·
+[`Wanbao114514/chaoxing-watch`](https://github.com/Wanbao114514/chaoxing-watch) `MIT` ·
+[`Uooc-Nanashi/uooc-helper`](https://github.com/Uooc-Nanashi/uooc-helper) `GPL-3.0` ·
+[`YAOsy040101/chaoxing-auto-course`](https://github.com/YAOsy040101/chaoxing-auto-course) `MIT` ·
+[`ljj13/UOOC-FUCK-expand`](https://github.com/ljj13/UOOC-FUCK-expand) `NOASSERTION` ·
+[`1049133/xuetangx-autolearn`](https://github.com/1049133/xuetangx-autolearn) `MIT` ·
+[`zhaoxinyi02/uooconline`](https://github.com/zhaoxinyi02/uooconline) `NONE` ·
+[`five-plus-one/CourseFlow`](https://github.com/five-plus-one/CourseFlow) `NONE` ·
+[`menghuanshiguang/chaoxing-cli`](https://github.com/menghuanshiguang/chaoxing-cli) `MIT` ·
+[`ggooaappee/welearn-focus`](https://github.com/ggooaappee/welearn-focus) `NONE`
+
+🔵 The exclusion is a loss on the supply side and a **gain on the intelligence side** — see
+`intel/market.md`. An adversarial layer names its targets, and these `17` name the APAC LMS
+incumbents more reliably than any vendor page.
+
+### 🔴 `648-L` — one metadata grant that no payload corroborates
+
+[`bwhtech/trivia-tap`](https://github.com/bwhtech/trivia-tap) (`9★`, live multiplayer quiz on
+Frappe) is reported `MIT` by the search response's `license.spdx_id`. First-hand, nothing supports
+it: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt` and `license.md` all `404`
+on **both** of its branches (`develop`, `main`), and neither `package.json`, `pyproject.toml` nor
+the README carries a licence statement.
+
+This is the exact inverse of `646-I`, where `Cvmcosta/ltijs` was held `NOASSERTION` while its
+payload read a complete `Apache-2.0`. There the shelf withheld a grant the bytes supported; here
+the metadata asserts a grant the bytes do not. 🔴 **Filed as a declared gap, not as `MIT`** — the
+repository is otherwise an attractive fit for the Frappe estate and is recorded on
+`verticals/solutions.md` as blocked pending a readable grant.
+
+### 🟡 Found and not filed — recorded so the absence is not mistaken for a gap
+
+| Address | ★ | Licence | Why not filed |
+|---|---|---|---|
+| [smithjohn78390/tongjiang-lab](https://github.com/smithjohn78390/tongjiang-lab) | `1 561` | 🔴 `NOASSERTION` | Free interactive 3D science lessons for high school. The highest-starred genuinely on-domain novel address of the week, and **not permissive** |
+| [JudgePeach/math-question-bank](https://github.com/JudgePeach/math-question-bank) | `371` | 🔴 `AGPL-3.0` | High-school maths item bank with LaTeX rendering and formula OCR. Reciprocal |
+| [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | `29` | 🔴 `NOASSERTION` | Brightspace/D2L MCP server — the one major LMS this base has no MCP client for. No grant |
+| [avps82/mentar](https://github.com/avps82/mentar) | `0` | 🔴 `AGPL-3.0` | Local-first children's tutor, no child data leaving the device. Reciprocal |
+| [AnkitClassicVision/tutor-engine](https://github.com/AnkitClassicVision/tutor-engine) | `4` | 🔴 `AGPL-3.0` | Adaptive tutor for ages 5–14 with per-family encryption. Reciprocal |
+| [threos/mcp4lms](https://github.com/threos/mcp4lms) | `4` | 🔴 `AGPL-3.0` | Read-only Moodle MCP for any MCP client. Reciprocal — the **fourth** consecutive pass where education MCP arrives `AGPL-3.0` |
+| [openklas/openklas](https://github.com/openklas/openklas) | `10` | 🔴 `NONE` | MCP server for KLAS, a Korean university LMS. No grant; recorded as APAC market intelligence instead |
+| [jhondados/ai-education-adaptive-learning](https://github.com/jhondados/ai-education-adaptive-learning) | `3` | 🔴 `NOASSERTION` | DKT knowledge tracing, curriculum generation, gap detection. No grant |
+| [bwhtech/trivia-tap](https://github.com/bwhtech/trivia-tap) | `9` | 🔴 **metadata `MIT`, payload nil** | `648-L` |
+| [Speech-Synthesis/AAA_Baselines](https://github.com/Speech-Synthesis/AAA_Baselines) | `19` | 🟢 `MIT` | Permissive, but off-domain: voice biometrics and deepfake detection. Adjacent to remote proctoring, not education |
+| [stiefenm/spoton](https://github.com/stiefenm/spoton) | `36` | 🟢 `MIT` | Permissive and off-domain — `648-D`, Lyrion Music Server |
+| [Lamport-Robotics/lamport-vault](https://github.com/Lamport-Robotics/lamport-vault) | `4` | 🟢 `MIT` | Permissive and off-domain — `648-D`, `LMS` as a signature scheme |
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` COULD NOT BE RUN AT ALL THIS PASS, SO NO GATE STATE IS CLAIMED — A FIRST. 🟢 `30 of 30` NEW ADDRESSES LIVE ON TWO CHANNELS, EVERY LICENCE BYTE-READ. 🟢 THE MIT PREDICTOR HOLDS `24 of 25` AND THE `25th` IS **NOT** A DEFECT: IT IS A MISSING FINAL NEWLINE, SO THE RESIDUAL'S *SIGN* IS A DISCRIMINATOR AND `1027` CARRIES AN UNDECLARED TERM. 🟢 A NEW PLACEMENT CHANNEL ARRIVES FREE INSIDE A READ THIS BASE ALREADY PERFORMS — THE LICENCE'S OWN COPYRIGHT LINE.**
 
 ### 🔴 `647-A` — the standing check could not be run, and this pass does not pretend otherwise

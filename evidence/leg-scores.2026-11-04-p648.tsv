@@ -1,0 +1,60 @@
+region	fact	needle	hits	verdict
+Global	deeptutor-stars	DeepTutor	818	HELD
+Global	openmaic	OpenMAIC	343	HELD
+Global	ai-engineering-hub	patchy631	13	HELD
+Global	llms-from-scratch	LLMs-from-scratch	124	HELD
+Global	ms-agents-beginners	ai-agents-for-beginners	241	HELD
+Global	hf-agents-course	huggingface/agents-course	17	HELD
+Global	hermes-agent	Hermes	123	HELD
+Global	frappe-education	frappe/education	208	HELD
+Global	rosariosis	RosarioSIS	81	HELD
+Global	opensis	openSIS	235	HELD
+Global	aleksis	AlekSIS	9	HELD
+Global	gibbon	Gibbon	128	HELD
+Global	fedena	Fedena	75	HELD
+Global	openeducat	openeducat	350	HELD
+Global	moodle	moodle/moodle	279	HELD
+Global	coherent-market	57.25	6	HELD
+Global	k12-83pct	83%	6	HELD
+Global	instructure-canvas-coach	Instructure	41	HELD
+Global	pearson-workera	Workera	10	HELD
+APAC	ched-mo21	Memorandum Order	3	HELD
+NorthAmerica	134-bills-31-states	134 bills	76	HELD
+NorthAmerica	md-id-ok-va	Oklahoma	101	HELD
+NorthAmerica	ny-a9190	A 9190	36	HELD
+NorthAmerica	k12-literacy-act	AI Literacy and Readiness Act	46	HELD
+NorthAmerica	gallup-60pct	60% of US teachers	4	HELD
+NorthAmerica	principals-55pct	55% of high school principals	0	NOT-HELD
+NorthAmerica	students-first	STUDENTS FIRST	21	HELD
+NorthAmerica	khan-nc-10m	Khan Academy	21	HELD
+NorthAmerica	canada-wfw4	Working for Workers	5	HELD
+NorthAmerica	unesco-70pct	70% of institutions	3	HELD
+EMEA	eu-enforce-aug2026	2 August 2026	71	HELD
+EMEA	digital-omnibus	Digital Omnibus	168	HELD
+EMEA	eu-edu-market	2.64	36	HELD
+EMEA	fi-ee-nl	Estonia	23	HELD
+EMEA	ten-pct-guidelines	450+	20	HELD
+EMEA	dubai-khda	KHDA	46	HELD
+EMEA	ai-continent-plan	AI Continent Action Plan	6	HELD
+EMEA	apply-ai-strategy	Apply AI Strategy	1	HELD
+APAC	korea-basic-act	AI Basic Act	182	HELD
+APAC	vietnam-mar2026	Vietnam	453	HELD
+APAC	china-synthetic	synthetic content	5	HELD
+APAC	japan-principles	Japan	317	HELD
+APAC	singapore-risk-guidelines	Singapore	232	HELD
+APAC	teqsa-action-plans	TEQSA	84	HELD
+APAC	australia-guardrails	guardrails	31	HELD
+APAC	indonesia-presidential	Indonesia	189	HELD
+APAC	omnibus-dec2027	2 December 2027	99	HELD
+LATAM	iesalc-87pct	87	1458	HELD
+LATAM	strategy-26pct	26%	86	HELD
+LATAM	no-budget-55pct	55%	42	HELD
+LATAM	uruguay-ceibal-75	Ceibal	87	HELD
+LATAM	brazil-cetic-65	Cetic	73	HELD
+LATAM	brazil-admin-53	53%	51	HELD
+LATAM	andes-716	716	77	HELD
+LATAM	unesco-observatory	Observatory	126	HELD
+LATAM	tec-monterrey	Monterrey	110	HELD
+LATAM	cenia-chile	CENIA	76	HELD
+CONTROL-MUSTFAIL	nonsense-control	zzqxvv-no-such-string-9173	0	NOT-HELD
+CONTROL-MUSTHOLD	known-held-control	Moodle	1434	HELD

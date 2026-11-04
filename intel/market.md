@@ -4,6 +4,133 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL A SIXTEENTH TIME ON THE LARGEST DENOMINATOR YET: `57 of 57` FACTS ALREADY HELD. 🟢 THE SUPPLY HALF PLACES `13 of 59`, AND *BOTH* NORTH AMERICA AND LATAM ARE NON-NIL — NORTH AMERICA FOR THE FIRST TIME SINCE `p646`. 🟢 AND AN ADVERSARIAL LAYER NAMES THE APAC LMS INCUMBENTS BETTER THAN ANY VENDOR PAGE.**
+
+### 🔴 `648-M` — the mandated regional legs, scored with a denominator
+
+All eight mandated legs ran: four global and one per region. Every extracted fact was grepped
+against the nine live shelves. Full scoring in `evidence/leg-scores.2026-11-04-p648.tsv`.
+
+| Pass | Facts scored | Already held | Adoptable yield |
+|---|---|---|---|
+| `p645` | `22` | `21` | `0 of 22` |
+| `p646` | `43` | `43` | `0 of 43` |
+| `p647` | `32` | `31` | `0 of 32` |
+| 🆕 `p648` | **`57`** | **`57`** | **`0 of 57`** |
+
+`57 of 57`. Sixteen consecutive effective nils, and this is both the largest denominator and the
+first clean sweep. 🔴 On three facts the shelf is **ahead of the web** — `DeepTutor` reported
+`52 783★` against `54 833` held, `OpenMAIC` `~42 000` against `42 630`, and the UNESCO LAC
+Observatory dated only to "April 2026" against `2026-04-14` held — so an overwriting pipeline would
+have regressed this base a third pass running. 🔵 Any automation of these legs must be
+**append-and-compare**, never write-through. Recommend quarterly; fifth consecutive pass to record
+it.
+
+🟢 `648-B` — the scorer's own defect is recorded rather than absorbed. Its first run reported
+`56 of 57`, with `55% of high school principals` apparently unheld. The shelf reads
+`55% of high-school principals`. The fact was held in three places and the needle was one hyphen
+short. `647-L` established that an instrument whose failure mode is a plausible **positive** needs a
+control that contradicts its expected answer; this pass adds the mirror — `grep -F` cannot produce
+`647-L`'s empty-alternation positive, and in exchange it produces false **negatives** on
+orthography. Both controls behaved (`zzqxvv-…` → `0`, `Moodle` → `1 434`), and neither would have
+caught this: the needle was well-formed, it just was not the shelf's spelling.
+
+### 🟢 `648-N` — supply placement: `13 of 59`, and two regions come off nil
+
+| Region | Placed | Channel | Addresses |
+|---|---|---|---|
+| **North America** | `2` | `647-H` location probe | `iblai/higher-education-agents`, `iblai/k-12-agents` — `location:"New York"` = `1` |
+| **APAC** | `7` | `647-G` copyright line (`3`), `647-H` probe (`4`), description anchor (`2`) | `KrithinP/vanguard-inductions-2026`, `arnaud-6562/durian-rush`, `pacewisdomhq/TutorLoom`, `codexanjan/nexora-lmz-quiz`, `hariharanboss/Study-mate`, `Xue-Wu-Zhi/xuewuzhi-downloader`, `Visol-456/ai-study-coach` |
+| **EMEA** | `2` | `647-H` probe | `Mobin-Karam/moshaver` (Iran), `Shalaby-VBS/tube-scholar` (Egypt) |
+| **LATAM** | `2` | description place anchor, `647-G` copyright line | `i-barbosa/EduCria` (Recife, Brazil), `anndreloopez012/campuslands-cv-rendercv` (Campuslands, Colombia) |
+| Global / unplaced | `46` | — | The remainder. `10` are **deliberately not promoted** — see below |
+
+🟢 Two addresses were placed on **two independent channels each**, which is the strongest placement
+this base has recorded: `KrithinP/vanguard-inductions-2026` reads
+`Copyright 2026 Project Vanguard, BITS Pilani Hyderabad` in its own licence **and** answers
+`location:India` = `1`; `arnaud-6562/durian-rush` reads `Copyright 2026 TetriXX Pte. Ltd.`
+(Singapore corporate form) **and** answers `location:Singapore` = `1`. Evidence:
+`evidence/placement.2026-11-04-p648.tsv`.
+
+🔴 `10` addresses carry a language or personal-name signal and **nothing else**, and are recorded
+unplaced rather than promoted, because `647-H` measured that this signal mis-places: it would have
+sent the lusophone `marcelogdomingues/avalia-platform` to LATAM when `location:Portugal` = `1` and
+`location:Brazil` = `0`. The ten are `PiotrKajor/QuizScanner` (Polish),
+`OleksiiDotsenko/test-builder` and `/lesson-in-game` (Ukrainian), `estevao-tarifa/moodle2ia` and
+`thiagomontozo/fluenthub` (lusophone), `fazt/academia` (hispanophone),
+`MuhammadLutfiMuzakiiVY/Litera-AI-Android` (Indonesian), `ClydeQue/Project-Silip` (Tagalog),
+`Azhonaras/BigBlueSync` (Persian) and `mergeos-bounties/NokaMan` (Vietnamese). Named here so the
+next pass starts from them rather than re-deriving them.
+
+### 🔴 `648-K` — the location probe is string-literal, so a `0` on a synonym means nothing
+
+`647-H` established that the probe is **positive-only**: a `0` can mean the profile field is unset,
+so it carries no information. This pass sharpens that, because the failure is narrower and more
+dangerous than "unset":
+
+| Query | Result |
+|---|---|
+| `user:iblai location:"New York"` | `1` 🟢 |
+| `user:iblai location:NY` | `0` 🔴 |
+| `user:iblai location:USA` | `0` 🔴 |
+
+The field is **set**, and two of three correct descriptions of the same place return `0`. So the
+probe matches the profile string's own spelling and nothing else. 🔵 This is `648-B`'s defect at the
+placement layer — the same class of error (a well-formed needle that is not the data's spelling)
+arriving on an entirely different channel in the same pass. Practically: before recording a region
+as nil, the probe must be run on **several spellings** of the place, and `location:USA` = `0` is not
+evidence about the United States.
+
+🟢 It also means `p647`'s *"North America's supply nil"* should be read as a statement about
+`p647`'s probe spellings, not about North American supply. This pass found North American supply on
+the first retry.
+
+### 🟢 `648-O` — the `iblai` find is the shape a studio actually starts from
+
+[`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) (`14★`, MIT,
+`1 063 B`, residual `+0`) and [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) (`9★`,
+MIT, `1 063 B`, residual `+0`) publish **drop-in multi-agent configurations split by education
+segment**: a Campus Assistant orchestrator plus `16` specialist subagents for higher education, a
+School Assistant orchestrator plus `12` for K-12.
+
+🔵 Why that matters more than its star count. This base holds `546` agent rows and almost all of
+them are a *single* capability — a tutor, a grader, a flashcard engine. What a studio needs on day
+one of an engagement is the **decomposition**: which specialists exist, who orchestrates them, and
+how the set differs between a university and a school district. These two repositories publish that
+decomposition twice, under MIT, with the segment difference made explicit by the fact that the two
+sets are different sizes. The reusable asset is the *org chart*, not the code.
+
+🔴 Proportionate caveat: `14` and `9` stars, one vendor (ibl.ai), configurations rather than running
+systems, and they target a specific agent runtime. They are a **reference decomposition**, not a
+dependency.
+
+### 🟢 `648-P` — an adversarial layer names the APAC LMS incumbents
+
+`648-J` excluded `17` census addresses on policy: they are auto-play and auto-answer automation
+built to defeat coursework. The exclusion is a loss on the supply side and a gain here, because
+**an attack surface is a market map drawn by people with no incentive to flatter anyone.** The `17`
+name their targets:
+
+| Platform | Named as | Addresses targeting it | Reading |
+|---|---|---|---|
+| 超星学习通 / Chaoxing Xuexitong | Chaoxing | `6` | The most-attacked platform in the census, so on this evidence the largest compulsory-coursework estate in China |
+| 智慧树 / 知到 Zhihuishu | Zhihuishu | `3` | Consortium courseware |
+| 中国大学MOOC (icourse163) | China University MOOC | `3` | The national MOOC platform |
+| 学堂在线 / XuetangX | XuetangX | `2` | Tsinghua-originated; note `OpenMAIC` comes from the same institution |
+| UOOC 联盟 | UOOC | `3` | Regional university union |
+| 职教云 / ICVE | ICVE | `2` | **Vocational** education — a segment this base holds almost nothing on |
+| 雨课堂 / Yuketang | Yuketang | `1` | In-class response |
+| WeLearn | WeLearn | `1` | Foreign-language courseware |
+| AIPASS | AIPASS | `1` | Thai LMS — the only non-Chinese target in the set |
+
+🔵 Two of these are new intelligence rather than confirmation. **ICVE / 职教云** places vocational
+education as a distinct, platform-bearing APAC segment, and this base's shelves are built almost
+entirely around K-12 and higher education. And **AIPASS** is the first Thai LMS to appear anywhere
+in this repository. Both are recorded as demand-side gaps below.
+
+🔴 Stated plainly so it is not mistaken for an endorsement: these `17` repositories are excluded
+from this base and are not in any recipe. Only their **target list** is used.
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL A FIFTEENTH TIME: `31 of 32` FACTS ALREADY HELD, AND THE ONE UNHELD FACT IS A STATISTIC ITS OWN PUBLISHER SAID TO VERIFY. 🟢 THE SUPPLY HALF PLACES `9 of 30`, AND LATAM SUPPLY IS **NOT** NIL — ONE ADDRESS CONFIRMED FROM INSIDE ITS OWN REPO.**
 
 ### 🔴 `647-K` — the mandated regional legs, scored with a denominator
@@ -68,6 +195,174 @@ not monotone — it tracks how many addresses in a cohort have an **institutiona
 zero-star tail mostly does not.
 
 ## Opportunities by region
+
+### North America — `p648`
+
+🔵 **Demand:** `10 of 10` facts held, nothing new adoptable. The procurement structure is unchanged
+and now corroborated a third time: `134` AI-in-education bills across `31` states in `2026`; four
+states (Maryland, Idaho, Oklahoma, Virginia) with `2026` laws requiring **both** state guidance and
+mandatory district policy; New York's `A 9190` restricting classroom AI to grade `9` and above
+except for diagnostics and special-education intervention; the federal **K-12 AI Literacy and
+Readiness Act of 2026** advanced out of the House Education and Workforce Committee. Against that,
+Gallup puts teacher AI use at `60 %`, `55 %` of high-school principals say AI is not blocked or
+restricted on the school network, and most districts still have no student-facing policy.
+
+🟢 **Supply is no longer nil, and it answers the governance question directly.** `p647` recorded
+North American supply as `0 of 30`; `648-K` shows that was a probe-spelling artefact.
+[`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) and
+[`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) (both MIT, both placed to New York)
+publish a **segment-split multi-agent decomposition** — `16` higher-education specialists under a
+Campus Assistant, `12` K-12 specialists under a School Assistant.
+
+🟢 **The engagement:** a district or system facing a statutory policy deadline needs an inventory of
+*what AI roles will exist*, an owner for each, and an audit trail — before it needs a build. The
+`iblai` pair is a reference answer to the first question, under a licence that permits
+modification, and the K-12/higher-education split maps onto the way US policy itself is written.
+Combine with [`OleksiiDotsenko/test-builder`](https://github.com/OleksiiDotsenko/test-builder) for
+the assessment-validity half, which is what a policy clause on high-stakes decisions actually
+constrains.
+
+🔵 **Declared gap:** no Canadian or Mexican education-specific AI regulation surfaced this pass. The
+only Canadian instrument found is the workplace-facing *Working for Workers Four Act, 2024*, which
+is not education. Written down rather than left as silence.
+
+### EMEA — `p648`
+
+🔵 **Demand:** `8 of 8` facts held. The EU AI Act timeline is settled in this base and reconfirmed:
+the AI Office and national authorities began enforcing from `2026-08-02`, while the **Digital
+Omnibus** moves stand-alone Annex III high-risk systems to `2027-12-02` and embedded systems to
+`2028-08-02`. Education access and assessment remain Annex III. Only `10 %` of `450+` surveyed
+institutions have formal AI guidelines; the European market reads `$2.64B` for `2026` at a `31.9 %`
+CAGR; Finland, Estonia and the Netherlands lead on K-12 integration; Dubai's KHDA has issued
+explicit private-school guidance; the EU's **AI Continent Action Plan** and **Apply AI Strategy**
+are the funding vehicles.
+
+🟢 **Supply:** `2` placed, both on the location probe —
+[`Mobin-Karam/moshaver`](https://github.com/Mobin-Karam/moshaver) (Iran, MIT): a role-aware platform
+covering planning, assessment, communication, reporting and follow-up, which is the administrative
+spine rather than a tutor; and [`Shalaby-VBS/tube-scholar`](https://github.com/Shalaby-VBS/tube-scholar)
+(Egypt, MIT): Arabic/English bilingual study-guide generation.
+
+🟢 **The engagement:** the `10 %`-guidelines figure and the `2027-12-02` date are the same clock.
+An Annex III readiness engagement needs documented human oversight over any system touching access
+or assessment — and `648-O`'s decomposition plus
+[`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) (standards grounding, so
+a recommendation cites a published standard rather than inventing one) is a defensible shape for
+exactly that. 🔵 Arabic-language capability is scarce in this base and `tube-scholar` is the first
+permissive bilingual Arabic generator it holds.
+
+🔴 **Declared gap, a second consecutive pass:** the EMEA leg returned **no Africa-specific
+regulation or adoption data**. `647-M` recorded the same nil and answered it from the supply side
+with `MooketsiMagwaza/university-cs-docs` (Botswana). This pass adds no African address and finds
+no African demand data, so the gap is unchanged and is in the **demand** channel, not the
+territory. Written down explicitly.
+
+### APAC — `p648`
+
+🔵 **Demand:** `9 of 9` facts held. Korea's **AI Basic Act** in force `2026-01-22` with a guidance-
+first grace period through `2026`; Vietnam's risk-based law effective `2026-03-01` naming education
+among six high-risk sectors, with the education deadline (`~2027-09-01`) still three months ahead
+of the EU's — `645-H`'s engagement date stands; China's generative-AI measures and synthetic-content
+labelling from `2025-09-01`; Japan principles-based; Singapore consulting on AI Risk Management
+Guidelines; **Australia's TEQSA requiring every higher-education provider to file an institutional
+action plan on generative AI**, plus proposed mandatory guardrails naming education; Indonesia's
+Presidential Regulation expected in the first half; the Philippines' CHED **Memorandum Order 21**.
+
+🟢 **Supply is this region's strongest, `7` placed** — and `3` of those on the licence payload's own
+copyright line, which costs nothing because `645-A1` already reads that line for its length:
+[`KrithinP/vanguard-inductions-2026`](https://github.com/KrithinP/vanguard-inductions-2026)
+(BITS Pilani Hyderabad — a **CI-graded curriculum**, which is a genuinely transferable idea),
+[`arnaud-6562/durian-rush`](https://github.com/arnaud-6562/durian-rush) (Singapore),
+[`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) (India — the permissive
+multi-tenant LMS, see `verticals/solutions.md`),
+[`codexanjan/nexora-lmz-quiz`](https://github.com/codexanjan/nexora-lmz-quiz),
+[`hariharanboss/Study-mate`](https://github.com/hariharanboss/Study-mate),
+[`Xue-Wu-Zhi/xuewuzhi-downloader`](https://github.com/Xue-Wu-Zhi/xuewuzhi-downloader) and
+[`Visol-456/ai-study-coach`](https://github.com/Visol-456/ai-study-coach).
+
+🟢 **The engagement:** TEQSA's filed action plans and Korea's grace period are both documentation
+deadlines with no procurement attached, which is the cheapest possible entry point. `TutorLoom`
+makes the *delivery* model viable where it was not: multi-tenant, `Apache-2.0`, so a studio can run
+one managed platform across many training institutes without a reciprocal or hosted licence —
+see the licence table on `verticals/solutions.md`.
+
+🟢 **Two new segments, from `648-P`'s adversarial map:** **ICVE / 职教云** places **vocational**
+education as a platform-bearing segment this base has almost no coverage of, and **AIPASS** is the
+first Thai LMS to appear in this repository. Both are demand-side gaps worth a dedicated leg.
+
+🔴 **Recorded, not sold:** `648-J`'s `17` integrity-violating repositories are excluded on policy.
+Their existence is a real market fact — compulsory online coursework at a scale that sustains a
+counter-industry — and it is also the clearest signal in this region that **assessment integrity**,
+not content generation, is where APAC demand will land.
+
+### LATAM — `p648`
+
+🔵 **Demand:** `10 of 10` facts held, the richest regional shelf this base has and all of it
+already committed. UNESCO IESALC across `~200` institutions in `19` countries: `87 %` use AI in at
+least one area, `26 %` have a formal AI strategy, `55 %` have no dedicated AI budget. Uruguay at
+`75 %` of public-school teachers (Ceibal, `2026`); Brazil at `65 %` of internet users aged `9`–`17`
+(Cetic.br, `2026`) and `53 %` of school administrators using AI against `22 %` whose school has
+guidelines. A Universidad de los Andes study counts `716` AI regulatory instruments across `23`
+countries and territories, `>80 %` initiated since `2023`. UNESCO's **Observatory on AI in
+Education for LAC** launched `2026-04-14` at ECLAC in Santiago; UNESCO also has an agreement with
+Tecnológico de Monterrey; Ceibal, Cetic.br and CENIA are the national data sources.
+
+🟢 **Supply is not nil for a second consecutive pass, and this time on a *place* anchor inside the
+repository's own description** — which is a better channel than `647-I`'s `README.pt-BR.md` because
+it arrives free inside the search response:
+[`i-barbosa/EduCria`](https://github.com/i-barbosa/EduCria) (MIT, `1 071 B`, residual `+0`) is an
+adaptive learning-tracking platform with collective activities **built for the municipal school
+network of Recife, Brazil**, and took first place at HackEdu FPR 2026. Second,
+[`anndreloopez012/campuslands-cv-rendercv`](https://github.com/anndreloopez012/campuslands-cv-rendercv)
+(MIT, `dev` branch) reads `Copyright 2026 Campuslands` — a named Colombian bootcamp — in its own
+licence, placing it on `647-G`'s channel.
+
+🟢 **The engagement is the `87 %` / `26 %` gap, and it has not moved in three passes:** adoption is
+driven by individual academics and students, not institutional strategy, and `55 %` of universities
+have no AI budget at all. So the sellable unit is **governance and measurement over AI that is
+already in use**, not a new platform — there are ten times more universities using AI than
+measuring what it delivers. `EduCria` is the proof that a municipal network will take a
+learning-tracking system; `standardgraph` and `test-builder` are the measurement half.
+
+🔴 **Four candidates deliberately not promoted**, continuing `647-I`'s discipline:
+`estevao-tarifa/moodle2ia`, `thiagomontozo/fluenthub`, `fazt/academia` and
+`souzataniya/Proof-Of-Synergy` are lusophone or hispanophone and the probe returns `0` on every
+spelling tried. `647-H` proved that signal mis-places, so they stay unplaced and named.
+
+
+### Global — `p648`
+
+🔵 **Demand:** `20 of 20` global facts held. AI-in-education is consistently described as moving
+from pilots to embedded infrastructure across admissions, advising, assessment and administration;
+governance and bounded use cases are the stated discipline; education-specific tooling is displacing
+generic chatbots; digital credentials and skills-based pathways are gaining ground. 🔴 Market sizing
+remains irreconcilable across publishers — `$11.4B` `2026` → `$57.25B` `2033` at `16.8 %` CAGR on
+one method against a `25.9 %` CAGR on another — and this base continues to carry both with their
+sources rather than pick one.
+
+🟢 **Supply, and the structural read of the week.** `46` of this pass's `59` verified addresses are
+unplaced and belong here. The pattern across them is not a product category, it is an
+**architecture converging**: three independent Bayesian-knowledge-tracing implementations arrived in
+one week ([`NavyashreeNS/ai-tutor`](https://github.com/NavyashreeNS/ai-tutor),
+[`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic),
+[`blossom-rt/kg-intelligent-tutoring-system`](https://github.com/blossom-rt/kg-intelligent-tutoring-system)),
+against the single `pyBKT`/`OATutor` lineage this base has carried since `p65`. Two of the three
+pair BKT with a **prerequisite graph**, and `BloodCoded_Agentic` adds a deterministic policy guard
+over the model's proposed teaching move.
+
+🟢 **So the reusable global asset is the decomposition, not any one repo:** a learner model (BKT), a
+curriculum structure (`zeroa234/cs-math-skill-tree`, `260` evidenced prerequisite edges), a
+standards grounding layer (`swoopeagle/standardgraph`, three jurisdictions), an assessment-design
+layer (`OleksiiDotsenko/test-builder`), and a deterministic guard between the model and the learner.
+Every one of those five slots now has a readable-licence occupant, which was not true a week ago.
+🔴 Every one is also under `25` stars.
+
+🔵 **Cross-region, and worth noting as a placement result in itself:**
+`swoopeagle/standardgraph` is the only address this pass that names three *jurisdictions* — CCSS
+(North America), Singapore MOE (APAC) and IB MYP (international) — as its own interface. A
+standards-grounding layer is the rare education asset whose value **rises** with the number of
+regions an engagement spans, because the grounding is the part that otherwise has to be rewritten
+per market.
 
 ### North America
 

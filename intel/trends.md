@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND CHANNEL IS SATURATED A SIXTEENTH TIME AND NOW CLEANLY: `57 of 57`. 🟢 THE REAL TREND IS STRUCTURAL AND MEASURABLE — THE FIVE-SLOT ADAPTIVE-LEARNING ARCHITECTURE FILLED ITS LAST PERMISSIVE SLOT THIS WEEK, AND ASSESSMENT INTEGRITY IS THE DEMAND SIGNAL NOBODY IS PUBLISHING.**
+
+### 🔴 The demand-side trend channel is saturated, and the measurement is now stable
+
+| Pass | Facts scored | Already held | Effective adoptable yield |
+|---|---|---|---|
+| `p643`–`p644` | — | — | nil |
+| `p645` | `22` | `21` | `0 of 22` |
+| `p646` | `43` | `43` | `0 of 43` |
+| `p647` | `32` | `31` | `0 of 32` |
+| 🆕 `p648` | **`57`** | **`57`** | **`0 of 57`** |
+
+Four passes, `154` facts, `152` held, `0` adoptable. The two unheld facts across the whole series
+were China's penalty ceiling (`p645`, not education) and a statistic whose own publisher said to
+verify it before use (`p647`). 🔵 This is no longer a run of nils that might break — it is a
+property of the channel. The mandated legs measure **coverage**, and coverage is complete; they do
+not measure **supply**, and every genuinely new thing on these shelves this week came from the
+census instead. Recommend quarterly. Fifth consecutive pass to record it.
+
+🔴 And a third consecutive pass where the shelf is **ahead of the source**: `DeepTutor` reported
+`52 783★` against `54 833` held, `OpenMAIC` `~42 000` against `42 630`, the UNESCO LAC Observatory
+dated to "April 2026" against `2026-04-14`. Write-through automation of these legs would have
+regressed this base three passes running.
+
+### 🟢 The trend that is actually new: the five-slot architecture is permissively complete
+
+Across the last several passes this base has recorded adaptive-learning repositories arriving with
+pieces missing. This week the last permissive slot filled. Stated as a table because the point is
+the **completeness**, not any one row:
+
+| Slot | What it does | Permissive occupant | Arrived |
+|---|---|---|---|
+| Learner model | Estimates mastery per skill | `pyBKT`, `OATutor`, 🆕 `NavyashreeNS/ai-tutor`, 🆕 `sohan1611/BloodCoded_Agentic` | held since `p65`; **three** new BKT implementations this week |
+| Curriculum structure | Asserts what precedes what | 🆕 [`zeroa234/cs-math-skill-tree`](https://github.com/zeroa234/cs-math-skill-tree) — `192` units, `260` evidenced edges | 🆕 `p648` |
+| Standards grounding | Cites a published standard instead of inventing one | 🆕 [`swoopeagle/standardgraph`](https://github.com/swoopeagle/standardgraph) — CCSS, Singapore MOE, IB MYP | 🆕 `p648` |
+| Assessment design | Builds valid items, not just graded ones | 🆕 [`OleksiiDotsenko/test-builder`](https://github.com/OleksiiDotsenko/test-builder) — Bloom matrices, P-values | 🆕 `p648` |
+| Grading substrate | Executes and scores submissions | `gitgrader` (Apache-2.0), `autograde-classroom` (MIT), Manchester JUnit harness (BSD-3) | `p647` |
+| Deterministic guard | Vetoes the model's proposed teaching move | 🆕 `sohan1611/BloodCoded_Agentic` — policy guard over a LangGraph proposal | 🆕 `p648` |
+
+🔵 Two weeks ago three of these six slots had no permissive occupant at all. 🔴 The honest reading
+of the completion is that the occupants are hobby-scale — `2` to `21` stars, no institutional
+maintainer except the Manchester harness — so the trend is **availability of a reference
+implementation per slot**, which is what a studio needs to avoid designing from nothing, and not
+the arrival of a stack anyone should depend on.
+
+🔵 The convergence itself is the signal worth carrying to a client conversation: three unrelated
+authors independently paired knowledge tracing with a prerequisite graph and a deterministic guard
+in the same week. That is a field settling on an architecture, and it is a much better argument than
+any market-size figure on this page.
+
+### 🟢 Assessment integrity is the demand signal nobody is publishing
+
+Every market source read this pass frames the `2026` story as *governance of AI use by students and
+teachers*. None of them quantifies the **counter-pressure**. `648-J` does, accidentally: `17 of 616`
+census addresses (`2.8 %`) are automation built to defeat coursework — auto-advancing video,
+auto-answering quizzes, background course farming — and `10` of the `17` are `MIT`, with six
+created or pushed inside `30` days.
+
+🔵 Read as a trend rather than as noise, that is the most concrete demand statement in this pass:
+
+- Compulsory online coursework in APAC is at a scale that sustains its own open-source
+  counter-industry. The `17` name `9` platforms (`intel/market.md`, `648-P`).
+- The pressure point is **not** content generation, where every vendor is competing. It is
+  *evidence that a learner did the work* — which is proctoring, provenance, and assessment design.
+- This base holds almost nothing on it. `p647` filed the grading substrate; `p648` adds
+  `test-builder` for item validity and [`ClydeQue/Project-Silip`](https://github.com/ClydeQue/Project-Silip)
+  for package integrity. Nothing permissive covers attribution of authorship.
+
+🔴 Declared gap, named rather than implied: **no permissive assessment-integrity or proctoring
+layer** was found in `616` census addresses. The nearest address,
+[`Speech-Synthesis/AAA_Baselines`](https://github.com/Speech-Synthesis/AAA_Baselines) (`19★`, MIT,
+voice biometrics with deepfake detection), is off-domain and was recorded as found-and-not-filed on
+`agents/top.md` precisely because borrowing it would be an inference, not a finding.
+
+### 🔵 Two segments entering this base for the first time
+
+From `648-P`'s adversarial target map, both APAC, both previously absent from every shelf here:
+
+- **Vocational education** as a platform-bearing segment — 职教云 / **ICVE**. This base's shelves are
+  built around K-12 and higher education; vocational has its own platforms, its own compulsory
+  completion model and, on this evidence, its own integrity problem.
+- **Thailand** — **AIPASS**, the first Thai LMS to appear in this repository at all.
+
+Both are recorded as demand-side gaps rather than written up as findings, because the only evidence
+for either is that someone built a tool to defeat it.
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE MANDATED LEGS ARE NIL A FIFTEENTH TIME (`31 of 32` HELD) AND THE SHELF IS AHEAD OF THE SOURCE ON THREE FACTS. 🟢 THE REAL TREND THIS WEEK IS STRUCTURAL: THE PERMISSIVE SUPPLY OF *ASSESSMENT* INFRASTRUCTURE OPENED, AND THE MCP INTEGRATION PATTERN REACHED EDUCATION WITH A READABLE LICENCE.**
 
 ### 🔴 The demand-side trend channel is saturated, and that is now a stable measurement

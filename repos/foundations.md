@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p648` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **FOUR NEW SUBSTRATE ADDRESSES, AND THE PREREQUISITE GRAPH IS THE ONE THAT MATTERS — IT IS THE INPUT ADAPTIVE LEARNING NEEDS AND THE ONE NOBODY PUBLISHES**
+
+### 🟢 `648-D2` — the foundational additions, by layer
+
+Of this pass's `47` filed addresses, these are **substrate** — something another system is built
+*on*, as distinct from an application a learner opens. Every licence was byte-read this pass
+(`evidence/licence-bytes.2026-11-04-p648.tsv`) and every address resolved on the existence channel
+with its own default branch (`evidence/existence-ls-remote.2026-11-04-p648.tsv`).
+
+| Repo | Licence — file, bytes, grade | ★ | Branch | Layer | Why it is substrate |
+|---|---|---|---|---|---|
+| [zeroa234/cs-math-skill-tree](https://github.com/zeroa234/cs-math-skill-tree) | 🟢 `MIT` — `LICENSE`, `1 065` B, residual `+0` | `21` | `main` | **Curriculum structure** | `192` units and `260` prerequisite edges with per-edge course evidence. A prerequisite DAG is the input every adaptive engine assumes and almost none ships |
+| [swoopeagle/standardgraph](https://github.com/swoopeagle/standardgraph) | 🟢 `MIT` — `LICENSE`, `1 065` B, residual `+0` | `5` | `main` | **Standards grounding** | An MCP server over CCSS, Singapore MOE and IB MYP. Lets an LLM tool *cite* a standard instead of inventing one — and it spans three jurisdictions, so it is a cross-region asset |
+| [sohan1611/BloodCoded_Agentic](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 `MIT` — `LICENSE`, `1 104` B, residual `+0` | `2` | `main` | **Tutoring control loop** | LangGraph + Bayesian knowledge tracing + prerequisite DAG, with a **deterministic policy guard** over the model's proposal. The guard is the reusable architecture |
+| [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 🟢 `Apache-2.0` — `LICENSE`, `11 362` B (`648-G`: `+5`, leading blank + appendix) | `77` | `main` | **Multi-tenant LMS** | Self-hosted, multi-tenant, Django + React. Also on `verticals/solutions.md`: multi-tenancy under a permissive licence is a real gap in this base's estate |
+
+### 🔵 Why the prerequisite graph is the find, stated plainly
+
+This base has carried knowledge-tracing implementations since `p65` — `pyBKT`, `OATutor`,
+`adaptive-knowledge-graph`, and the IRT/BKT line generally. Every one of them models *how well a
+learner knows a skill*. None of them answers *which skill comes before which*, and that ordering is
+not a model output — it is curriculum data a human has to assert.
+
+Three passes have recorded adaptive-learning repositories arriving without it. `cs-math-skill-tree`
+publishes `260` such assertions with evidence attached to each edge, and `BloodCoded_Agentic`
+publishes the runtime that consumes one. 🔴 Both are under `25` stars and neither is maintained by
+an institution, so the honest reading is that the *scarce* artefact in this industry is now
+available in a readable licence at hobby scale — which is a starting point for a studio, and not a
+dependency to take.
+
+### 🟢 `648-F` — the licence-filename guess is still unfixed, and this base's flagship proves it
+
+`645-D` found that the README filename is a guess and `p646` closed it with a scripted resolver
+over `1 214` addresses. The **licence** filename was never given the same treatment, and this pass
+measured the cost on its own control:
+
+`moodle/moodle` — `PUBLIC-LIVE` on `main`, the single most-cited vertical in this repository —
+returns `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `LICENCE`, `COPYING` and
+`LICENSE-MIT`. It serves at **`COPYING.txt`**.
+
+🔵 The defect class is exactly `646`'s: a filename set that is one spelling short produces a
+*silent* nil, and the nil is indistinguishable from an absent grant. `p646` found `Readme.md`,
+`README.markdown`, `README` and `docs/README.md` carried `13 of 54` of its blind spot; here the
+missing spelling is a single trailing `.txt` on a GNU-era filename, and it costs the base its most
+important address. The resolver `p646` built should be extended to the licence channel with
+`COPYING.txt` and `LICENSE.rst` in its set; this pass carried the correction by hand.
+
+### 🟢 `648-E` — a creation-window cohort is `3.5×` less likely to be off `main`
+
+`645-B` measured `34.0 %` of this base's published addresses on a non-`main` default branch
+(`49 master`, `9 develop`, `5 dev`, `6` release refs) and `646-J` found that blind spot is
+*biased*, because filename form and branch name both track project vintage. This pass gives the
+other end of that relationship a number:
+
+| Cohort | Pass | Addresses | Off `main` | Rate |
+|---|---|---|---|---|
+| whole published base | `p645` | `203` | `69` | `34.0 %` |
+| 🆕 creation-window (`created:>2026-05-01`) | `p648` | `51` | `5` | **`9.8 %`** |
+
+The five are [`jangviktor-web/GongkaoNaoku`](https://github.com/jangviktor-web/GongkaoNaoku)
+(`master`), [`Arthur-Miyano/recall-memo`](https://github.com/Arthur-Miyano/recall-memo) (`master`),
+[`mergeos-bounties/NokaMan`](https://github.com/mergeos-bounties/NokaMan) (`master`),
+[`anndreloopez012/campuslands-cv-rendercv`](https://github.com/anndreloopez012/campuslands-cv-rendercv)
+(`dev`) and [`bwhtech/trivia-tap`](https://github.com/bwhtech/trivia-tap) (`develop`).
+
+🔵 This confirms `646-J`'s mechanism from the opposite direction and it has a practical consequence
+for this base's recipes: the **older** and more institutional an address is, the more likely a
+hardcoded `main` silently builds the wrong thing. `646-J` already measured the worst case —
+`openeducat/openeducat_erp`'s default branch is the bare version `19.0`, so a pinned `main` keeps
+building the previous major. The branch must be resolved, never assumed; `compose/patterns.md`
+carries the one-line fix.
+
 ## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE AUTOGRADING SUBSTRATE IS NOW A POPULATED LAYER, NOT A GAP — AND ONE NEW FOUNDATION'S DEFAULT BRANCH IS `development`, SO A RECIPE PINNING `main` ROTS ON IT**
 
 ### 🟢 `647-D1` — the foundational additions, by layer
