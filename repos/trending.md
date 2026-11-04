@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p651) — a headline claim falls: there **is** a permissive production learning platform. Also: the 404'd ERP was a wrong address, not a dead project, and spaced repetition is permissive and already shipped
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and archive status from the repository page via page fetch. `curl` to `github.com` and the GitHub API are HTTP 403 in this session.
+
+### 🟢 `openeducat/openeducat_erp` is live at 905 ★ — last pass removed the right row from the wrong address
+
+Last pass removed `OpenEduCat-Inc/OpenEduCat` as **HTTP 404** after three candidate renames also failed to resolve, and concluded that "this KB no longer holds a verified open source education ERP". The removal was correct and the conclusion was wrong: the project is live at a fourth address that was not among the three tried.
+
+| Channel | Reading 2026-11-04 |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves; real default branch is **`19.0`** — a bare version number, not `main` or `master` |
+| Grant payload (`LICENSE`, branch `19.0`) | **8,241 B**, opens *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* with the full LGPLv3 text and the GPL appended beneath it |
+| Stars / forks | **905 / 787** |
+| Description | "Comprehensive Open Source ERP for Educational Institutes" |
+| Branches present | `7.0` … `20.0`, plus `master`, `18.0-pp-opt`, `19.0-fix-admission-multi-create` — **`20.0` exists but `19.0` is default** |
+
+**Two defects found inside the repaired row, both of which a name-lookup would hide:**
+
+1. 🔴 **The grant delegates copyright attribution to a file that does not exist.** The first line of `LICENSE` reads *"For copyright information, please see the COPYRIGHT file."* `COPYRIGHT` returns **404** on branch `19.0`. The licence terms themselves are complete and unambiguous LGPL-3.0 — what is missing is the holder identification the grant itself points at. This is the near-twin of the class this base recorded at `609-I`, inverted: there, a README granted MIT and linked a missing `LICENSE`; here, a complete `LICENSE` delegates the copyright line to a missing `COPYRIGHT`.
+2. 🔴 **A hardcoded `main` or `master` silently builds nothing, and a hardcoded `19.0` silently builds the old major.** The default branch is a bare version. `20.0` already exists. Any ingest or deployment script that pins either a branch name *or* today's default will drift, in opposite directions.
+
+**Why it matters commercially:** LGPL-3.0 is weaker copyleft than the GPL-3.0 and AGPL-3.0 that dominate this shelf. Linking against an LGPL library from separately-licensed code is permitted provided the LGPL portion stays replaceable — so an Odoo-based education ERP is a materially easier licensing position for a client engagement than Open edX or Moodle. The "Odoo-for-education" slot this KB declared empty one pass ago is occupied, at real adoption, on terms that are workable.
+
+### 🔴 `learningequality/kolibri` is MIT — and this KB has been publishing the opposite in three files
+
+The claim, carried in `repos/foundations.md`, `verticals/solutions.md` and `intel/trends.md` **T6**: *"there is no permissively-licensed, production-grade open source LMS."*
+
+| Channel | Reading 2026-11-04 |
+|---|---|
+| Grant payload (`LICENSE`, branch `develop`) | **1,097 B**, title `MIT License`, holder `Copyright (c) 2021 Learning Equality and other contributors` |
+| Repository page sidebar | `MIT license` |
+| Stars / forks | **1.2k / 1.0k** |
+| Description | "Kolibri Learning Platform: the offline app for universal education" |
+| README | "the offline-first platform for teaching and learning with technology **without requiring the Internet**" |
+| Default branch | **`develop`** — release lines are `release-v0.19.x` and `release-v0.20.x` |
+
+🔵 **Why it stayed invisible for so many passes, which is the more useful part of this finding.** Every pass asked *"is there a permissive LMS?"*, enumerated the institutional LMS field (Moodle, Open edX, Chamilo, ILIAS, Sakai, Frappe, Veo), found it uniformly copyleft, and generalised to "no permissive platform exists". Kolibri is not an institutional LMS — it has no enrolment-at-scale, no gradebook of the Moodle kind, no large third-party plugin ecosystem — so it never entered the comparison set. **The question's framing excluded the answer.** It surfaced at p651 only because an EMEA-Africa opportunity needed an offline-first base, and the search was for *offline*, not for *licence*.
+
+🟢 **The corrected claim, stated narrowly so it stays true:** there is no permissive platform *of the Moodle/Open edX class*. There **is** a permissive, adopted, production platform for **offline-first learning delivery**, and it permits a closed derivative. For low-connectivity markets — Sub-Saharan Africa, rural South Asia, the Pacific — that changes the recommended base from "stock copyleft platform plus out-of-tree agent" to "permissive platform all the way down". `compose/patterns.md` gains **P7** for exactly this, and `verticals/solutions.md` carries the full correction.
+
+🔴 **A note on how this base generalises.** Three passes of "nine of ten rows are copyleft" measurements were all individually correct and the conclusion drawn from them was wrong, because the sample was selected by a definition that excluded the counter-example. When a claim is of the form "there is no X", the measurement that supports it is only as good as the enumeration — and an enumeration built from one product class cannot support a claim about all of open source.
+
+### 🟢 New foundation class — spaced-repetition scheduling, and it is permissive *and* in production
+
+This base has had `pykt-team/pykt-toolkit` (MIT, 457★) for knowledge tracing and nothing at all for review scheduling, which is the other half of any retention system. Two verified rows close it:
+
+| Repo | Licence (payload) | Stars / forks | Branch | What it is |
+|---|---|---|---|---|
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (1,079 B) | **4.1k** / 165 | `main` | The Free Spaced Repetition Scheduler for Anki, in two parts: a scheduler that replaces Anki's built-in review timing, and an optimiser that machine-learns the parameters from a user's own review history. |
+| [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause** (1,509 B) | 456 / 47 | `main` | FSRS in Rust: scheduler, parameter optimiser, simulation, SM-2 migration helpers and a cost-policy trainer. Bindings for C, Python, Node.js, Dart and PHP live in sibling repositories. This is the embeddable engine. |
+
+🟢 **The adoption fact that makes this the strongest permissive row added this pass:** per the project README, **FSRS ships inside Anki itself from version 23.10 onwards** — it is in the settings of mainstream production software, not a research prototype awaiting integration. Measured against everything else on this shelf, that is unusual: pyKT is a 457-star research library, OATutor is a 276-star peer-reviewed system, and the education platforms are all copyleft. FSRS is permissive (MIT for the Anki-facing project, BSD-3-Clause for the engine), independently optimisable per learner, and already proven at consumer scale.
+
+**Where it belongs architecturally:** pyKT/BKT answers *"does this learner know X?"*. FSRS answers *"when should this learner see X again?"*. They are complementary, not competing, and `ArnaudGuiovanna/tutor-mcp` (MIT, 96★) already packages both behind one MCP tool surface. See `compose/patterns.md` **P6**.
+
+### 🟢 The SIS and school-ERP shelf, measured for the first time
+
+Four rows verified; two of them are permissive, which is the first permissive *administrative* layer this base has been able to record.
+
+| Repo | Licence (payload) | Stars / forks | Branch | Note |
+|---|---|---|---|---|
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** (15,214 B — payload reads `Version 2, June 1991`) | **651 / 397** | **`mobile`** | Previously held with the licence family inferred from payload size; now read from the version line. Real adoption at 651★. 🔴 **The default branch is `mobile`**, among 44 branches that are otherwise version numbers (`4.2-release` … `12.9`) plus `master`. A default `git clone` does not give you the release line. The repository description names a **GitLab mirror as the project's other home**. |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **GPL-2.0** — but see below | 349 / 289 | `master` | PHP/MySQL student information system, single or multi-institution in one installation. 🔴 **No grant file at any of the fifteen root filenames probed**, and the repository page names no licence in the sidebar. The README's Licence section links to **`docs/License.txt`**, which does exist and reads `GNU GENERAL PUBLIC LICENSE / Version 2, June 1991`. So the row is genuinely GPL-2.0 — but only a reader who follows the README link finds out, and every automated root-filename probe, including this base's own, calls it licence-nil. |
+| [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | **MIT** (1,150 B) | 55 / **107** | `main` | Laravel school-management system, "Mobile Apps Ready. API First Design." 🔵 Note the shape of the adoption signal: **107 forks against 55 stars**. Forks exceeding stars by 2× is the signature of software people *deploy* rather than software people *follow* — consistent with a self-hosted school ERP. Low absolute adoption either way; MIT, so it is the only education-administration row on this shelf that permits a closed derivative. |
+| [CodeBreez/collejo](https://github.com/CodeBreez/collejo) | MIT (1,076 B) | 51 / 30 | `master` | Laravel school and university management system. 🔴 **Archived by the owner on 2024-05-16 and read-only.** Permissive and dead. Recorded so a later pass does not file it as a live option. |
+
+### 🔴 Correction to a byte count this KB publishes — `openedx/XBlock`
+
+`repos/foundations.md` carried `openedx/XBlock` with its grant file identified (`LICENSE.TXT`, Apache-2.0) and the byte count left blank. Measured this pass:
+
+| Reading | Value |
+|---|---|
+| `LICENSE.TXT` on branch `master`, raw | **11,358 B** |
+| Same payload with leading blank lines stripped | **11,357 B** — canonical Apache-2.0 exactly |
+
+So XBlock is canonical Apache-2.0 **plus one prepended blank line**. This reproduces, on a row this KB actively publishes and recommends as the licence-containment point for every Open edX engagement, the presentation-fold mechanism this base previously found only on dredged candidates. The practical consequence is narrow but real: a byte-equality Apache test run over this shelf fails on XBlock, and the failure is cosmetic. 🔵 Logged against the Apache-payload register in `intel/open-gaps.md`, where a second and *substantive* deviation mechanism found this pass is also recorded.
+
+### 🟡 Verified, and classified out rather than filed
+
+| Repo | Licence | Why it is not an education foundation |
+|---|---|---|
+| [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub) | MIT (1,066 B), `main` | Surfaced by two separate trending sources this pass as an education-adjacent repository at roughly 40k stars — a 93-project curriculum for production AI skills. It is **developer upskilling, not education-sector software**: there is no learner model, no institution, no LMS surface, nothing a school or university would deploy. Recorded explicitly so a later pass does not file a developer curriculum as an education asset on the strength of the word "learning". The same classification applies to `minicoohei/ai-agent-camp` (347★, and no licence file in any case). |
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** (10,785 B), branch **`dev`** | Automated personalised student feedback from **Technische Hochschule Mittelhessen, Germany** — placed to **EMEA** on the licence payload's own copyright line (`Copyright 2021 Technische Hochschule Mittelhessen`), which is the cheapest placement channel this base has and the only one that is documentary. Permissive and genuinely education-sector, but 24 stars and a last-copyright-year of 2021: too little adoption and too little recent activity to put in front of a client. Watch-listed, not filed. 🔴 Note its default branch is **`dev`**, the third row this pass whose default is neither `main` nor `master`. |
+
+### 🔵 Three of the repositories measured this pass default to something other than `main`/`master`
+
+`openeducat/openeducat_erp` → **`19.0`**; `francoisjacquet/rosariosis` → **`mobile`**; `thm-mni-ii/feedbacksystem` → **`dev`**. A fourth case is worse than a non-standard default: `GeminiLight/gen-mentor`'s `main` is a browser-only Next.js app, and **the multi-agent Python implementation its WWW '25 paper describes is on branch `v0.1-demo`** — so cloning the default gets you a demo, not the system the paper evaluates. Resolve the branch with `ls-remote --symref` before cloning, and read the README for which branch carries the artefact you actually want.
+
 ## 🆕 2026-11-04 — the Open edX licence cell was wrong in three files, and one published platform is a 404
 
 **Verification channels:** existence via `git ls-remote --symref`; licence by reading the grant payload from `raw.githubusercontent.com`; stars from the repository page. GitHub API and `curl` to `github.com` are HTTP 403 in this session.

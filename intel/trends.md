@@ -40,11 +40,18 @@ A Chilean university reported **194 pedagogical agents across ~100 courses servi
 
 **Confidence: medium** (single secondary source, institution unnamed in the reporting). Worth verifying directly; if it holds, it is the strongest reference case available for the region.
 
-## T6 — Open source education has no permissive platform, only permissive components
+## T6 — Permissive platforms exist in open source education, but only outside the institutional LMS class
 
-Measured this pass across ten platform rows: **nine are copyleft** (GPL-3.0: Moodle, Chamilo, ILIAS, Gibbon; AGPL-3.0: Open edX, Frappe LMS, Veo; ECL-2.0: Sakai; GPL: RosarioSIS), **one is permissive** (Richie, MIT).
+🔴 **This entry previously read "open source education has no permissive platform, only permissive components." That was wrong and is withdrawn.** `learningequality/kolibri` is **MIT** (1,097 B payload read 2026-11-04), **1.2k ★ / 1.0k forks**, and a production offline-first learning platform.
 
-Meanwhile every leading *agent* is permissive (MIT or Apache-2.0). The architecture that follows is not a preference, it is forced: **stock platform, permissive agent layer, integrate over REST or MCP.** Modifying an AGPL platform for a managed service pulls network-disclosure obligations onto the service. **Confidence: high** (licence payloads read byte-for-byte).
+Measured across fourteen platform rows: **ten are copyleft** (GPL-3.0: Moodle, Chamilo, ILIAS, Gibbon; AGPL-3.0: Open edX, Frappe LMS, Veo; GPL-2.0: RosarioSIS, openSIS; LGPL-3.0: OpenEduCat), **four are permissive** (MIT: Kolibri, Richie, GegoK12; ECL-2.0: Sakai).
+
+The accurate claim, stated at the width the evidence supports:
+
+- **No permissive platform of the Moodle / Open edX class.** Institutional course management — enrolment at scale, gradebook, SIS integration, large plugin ecosystem, multi-tenant MOOC delivery — is copyleft only. For those engagements the forced architecture is unchanged: **stock platform, permissive agent layer, integrate over REST or MCP**, because modifying an AGPL platform for a managed service pulls network-disclosure obligations onto the service.
+- **A permissive platform does exist for offline-first learning delivery**, and it permits a closed derivative. In low-connectivity markets the recommended base changes accordingly.
+
+🔵 **How the error survived several passes, because the mechanism generalises:** each pass enumerated the institutional LMS field, found it uniformly copyleft, and generalised to all of open source education. Kolibri was never in the comparison set, because it is not an institutional LMS — **the question's framing excluded the answer.** When a trend entry claims "there is no X", its strength is bounded by the enumeration behind it, and an enumeration drawn from one product class cannot support a claim about a whole field. **Confidence: high** on the corrected statement (all fourteen licence payloads read byte-for-byte); the previous entry's confidence was high and the entry was still wrong, which is the part worth remembering.
 
 ## T7 — The EU's high-risk deadline moved to December 2027, and most guidance is stale
 
@@ -65,9 +72,11 @@ A single global compliance posture is no longer achievable. Multi-region clients
 
 ## T9 — Knowledge tracing is still research-grade, not productised
 
-pyKT (MIT) is the field's reference implementation at **457 stars** — not the 1.2k this KB previously published. OATutor (MIT, 276★) is the main production-grade BKT system. `tutor-mcp` packages BKT as an MCP server but has **0 stars**.
+pyKT (MIT) is the field's reference implementation at **457 stars** — not the 1.2k this KB previously published. OATutor (MIT, 276★) is the main production-grade BKT system.
 
-The honest read: knowledge tracing is scientifically mature and commercially immature. Budget real integration effort; do not promise adaptive mastery modelling as an off-the-shelf component. **Confidence: high** (star counts measured directly). This corrects an over-optimistic trend entry this KB carried previously.
+🔴 **One piece of evidence in this entry is withdrawn.** It previously read "`tutor-mcp` packages BKT as an MCP server but has **0 stars**". That measured `kvnloo/tutor-mcp`, which the repository page states is a **fork**; the upstream `ArnaudGuiovanna/tutor-mcp` has **96 ★ / 13 forks** and packages BKT *and* FSRS spaced repetition behind one MCP tool surface. The broader claim stands on pyKT (457★) and OATutor (276★); the 0-star datum does not.
+
+The honest read: knowledge tracing is scientifically mature and commercially immature. Budget real integration effort; do not promise adaptive mastery modelling as an off-the-shelf component. **Confidence: high** (star counts measured directly) — but see **T13**, because the adjacent problem of *review scheduling* has an answer that knowledge tracing does not.
 
 ## T10 — The evidence base remains the sector's weak point
 
@@ -81,8 +90,44 @@ Ipsos Education Monitor 2026, support for a ban: South Korea 31%, Japan 29% (**u
 
 Roughly a quarter to a third of the public in major APAC markets would ban AI in schools outright. Visible, teacher-in-the-loop designs are the commercially safer posture there. **Confidence: high** (single reputable polling source).
 
+## T12 — Binding, education-specific AI regulation is no longer only a European phenomenon
+
+**South Korea's AI Basic Act (Law No. 20676) has been in force since 22 January 2026**, and its "high-impact AI" definition names **AI used for student assessment in early-childhood, elementary and secondary education**. Operators must determine whether their system qualifies before deployment and must make efforts to assess its impact on fundamental rights beforehand. MSIT has signalled a grace period of at least one year before administrative fines, putting the enforcement edge around **January 2027** — *earlier* than the EU's deferred high-risk date of 2 December 2027. Vietnam's Law on AI has been in force since 1 March 2026.
+
+**Why this matters more than a second data point:** until this pass, "conformity by design" was an EMEA offer and APAC was characterised as service-specific, labelling-first and voluntary. That characterisation is now incomplete. The same engagement shape — risk classification, documentation, human oversight, impact assessment on the assessment and placement use cases — is sellable in two jurisdictions against two dates, and the Asian one lands first. A client operating in both needs **one conformity programme with two jurisdictional profiles**, which is a larger and more defensible engagement than either alone.
+
+**Confidence: high** on the statute, its date and the education clause (multiple independent legal-practice sources and the official text's definition agree). **Medium** on the grace-period length, which is reported as "at least one year" and should be confirmed with MSIT before being relied on contractually.
+
+## T13 — Spaced repetition is the one permissive education algorithm that is already in production
+
+The pattern across this KB has been permissive-but-research-grade (pyKT, 457★) or adopted-but-copyleft (every institutional platform). **FSRS breaks it in both directions at once.**
+
+| | Reading |
+|---|---|
+| `open-spaced-repetition/fsrs4anki` | **MIT**, 4.1k ★ — scheduler plus an optimiser that machine-learns parameters from a learner's own review history |
+| `open-spaced-repetition/fsrs-rs` | **BSD-3-Clause**, 456 ★ — the embeddable Rust engine; bindings for C, Python, Node.js, Dart, PHP |
+| Adoption | **The algorithm ships inside Anki itself from v23.10** — mainstream production software, consumer scale, not awaiting integration |
+
+Knowledge tracing answers *"does this learner know X?"*. FSRS answers *"when should this learner see X again?"* — and the second question is the one that drives retention, which is the outcome institutions actually measure. The two are complementary, and `ArnaudGuiovanna/tutor-mcp` (MIT, 96★) already exposes both behind one MCP tool surface.
+
+**Why it is commercially interesting:** it is permissive, per-learner optimisable, computable on-device with no model call, and already validated at scale. It is therefore the cheapest credible "measured outcome" a pilot can ship — see **T10**, where the sector's weak evidence base makes measurable retention the difference between a pilot that renews and one that does not. **Confidence: high** (licence payloads read byte-for-byte; the Anki integration is stated in the project README).
+
+## T14 — African education AI is real, offline-first, and built on open weights rather than released as open source
+
+Previous passes recorded "no Africa-specific data" as a gap. The gap was in the search, not the territory — and what the territory contains has a consistent shape:
+
+- **Demand and public investment are moving.** Google launched a free, **offline-capable** AI and digital-skills training platform for Nigeria and other African markets around **3 November 2026** (English, Swahili, Arabic; Hausa being added; lessons downloadable over Wi-Fi then usable without mobile data). Saudi Arabia and the UAE, at the other end of EMEA, have made AI literacy a mandatory or system-wide part of education.
+- **Builders exist and are product companies, not projects.** **Mdali** (Johannesburg) adapts open-source models into an offline-first CAPS Grades 10–12 maths tutor that runs on basic phones and keeps student data on-device. Nigeria's EDAT piloted offline-sync tutoring across 60+ Edo State secondary schools. Kenya's M-Shule and Ghana/Côte d'Ivoire's Chalkboard Education are older precedents in the same mould.
+- **But the code is not open.** No African open-source education repository was found at any adoption level. These products are built *on* open weights and released as **proprietary applications**.
+
+**The commercial reading, which is different from every other region:** elsewhere the motion is "adopt the regional open source stack and extend it". For Africa there is no stack to adopt, so the motion is **co-development with existing product teams**, and the differentiating capability is offline-first architecture rather than model work. The one thing that would change this is the stated Google/Fab AI programme with innovators in Kenya, Ghana and South Africa, under which **datasets, evaluation suites and open-source models are to be published**. Worth watching specifically.
+
+**Confidence: medium.** Every item rests on secondary reporting; `blog.google` does not resolve under this session's network policy, so Google's own announcements could not be read first-hand. The *absence* of African open-source supply is the better-evidenced half, since it survived a dedicated search.
+
 ## 🔴 What this page does not claim
 
-- **No verified star counts for `richie`, `chamilo-lms` or `sakai`** this pass; licence payloads were read, stars were not.
+- **No verified star counts for `richie`, `chamilo-lms` or `sakai`**; licence payloads were read, stars were not. Unchanged for three passes.
+- **No first-hand reading of any primary regulatory text.** The EU Digital Omnibus, the Korean AI Basic Act and the Vietnamese AI law are all carried from legal-practice and secondary summaries. They agree with one another, which is why confidence is high on the dates — but no Commission, MSIT or Vietnamese National Assembly document was fetched. Verify before quoting a clause to a client.
+- **No country-level education AI regulation for any Sub-Saharan African state** was found. CESA 16-25 is a continental strategy, not a rule. Searched; recorded as absent rather than as covered.
 - **The "agentic university" framing** carried by earlier versions of this page rested on a single arXiv preprint. It is a useful taxonomy, not measured adoption, and has been demoted accordingly.
 - **No evidence was found of a dominant open source assessment-integrity or proctoring tool.** Given this is the most heavily regulated use case in the sector, the absence of permissive supply is notable and is recorded as a gap rather than a finding.

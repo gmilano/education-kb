@@ -4,6 +4,123 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p651` — `2026-11-04` — **🔴 A HEADLINE CLAIM THIS BASE PUBLISHED IN THREE FILES IS FALSIFIED BY A `1.2k★` `MIT` PLATFORM, AND THE MECHANISM IS THE ENUMERATION, NOT THE MEASUREMENTS. 🟢 `649-R4`'s APACHE REGISTER GAINS AN EIGHTH MECHANISM AND ITS FIRST FULLY-EXPLAINED NEGATIVE RESIDUAL. 🔴 A NEW IDENTITY CHANNEL NAMED AFTER THIS BASE PUBLISHED A VERDICT AGAINST THE WRONG ADDRESS.**
+
+### 🔴 `651-R1` — FALSIFIED, and it was this base's most-repeated conclusion: *"there is no permissively-licensed production open source LMS"*
+
+Published in `repos/foundations.md`, `verticals/solutions.md` and `intel/trends.md` **T6**, at **confidence: high**, supported by licence payloads read byte-for-byte across ten platform rows.
+
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri):
+
+| channel | reading `2026-11-04` |
+| --- | --- |
+| `ls-remote --symref` | 🟢 resolves; real default branch **`develop`**; release lines `release-v0.19.x`, `release-v0.20.x` |
+| grant payload (`LICENSE`, `develop`) | 🟢 **`1,097 B`**, title `MIT License`, holder `Copyright (c) 2021 Learning Equality and other contributors` |
+| repository page sidebar | 🟢 `MIT license` |
+| stars / forks | 🟢 **`1.2k` / `1.0k`** |
+| README | *"the offline-first platform for teaching and learning with technology **without requiring the Internet**"* |
+
+🔴 **Every supporting measurement was correct and the conclusion was still wrong.** The ten payloads were read accurately; nine *were* copyleft. The defect is in the **enumeration**: each pass asked "is there a permissive LMS?", populated the comparison set with the institutional LMS field (Moodle, Open edX, Chamilo, ILIAS, Sakai, Frappe, Veo, Gibbon, RosarioSIS, Richie), found it uniformly copyleft, and generalised to *all of open source education*. Kolibri was never a candidate, because it is not an institutional LMS — no enrolment-at-scale, no Moodle-class gradebook, no large third-party plugin ecosystem. 🔵 **The question's framing excluded its own answer.**
+
+🟢 **Corrected claim, stated at the width the evidence supports:** there is no permissive platform **of the Moodle/Open edX class**. There **is** a permissive, adopted, production platform for **offline-first learning delivery**, and it permits a closed derivative.
+
+🔴 **The standing rule this earns, and it is about `∄` claims generally.** A measurement establishes a property of the thing measured. A **"there is no X"** claim is a property of the *search*, and its strength is bounded by the enumeration — never by the number of payloads read inside it. 🔵 This base has a strong instrument for byte-level verification and **no instrument at all for enumeration adequacy**, which is why a universally-quantified claim could sit at `confidence: high` across several passes on ten correct readings. **Registered as `ACTION 651-R1`:** every `∄` claim on a curated shelf must state the enumeration it was taken over, so the next pass can attack the enumeration rather than re-measure the payloads. The three affected files now carry the corrected claim with its boundary named.
+
+🔵 **How it surfaced is itself the method result:** not from a licence census, but from an **EMEA-Africa opportunity search for an offline-first base**. The counter-example was found by a question about *capability*, by someone not looking for a licence. A census structurally cannot find what its own category scheme excludes — `647-C` said the sort key is the filter; `651-R1` says **the category is the filter**, and it is the more expensive of the two.
+
+### 🟢 `651-R2` — `649-R4`'s Apache register: an eighth mechanism, and the first negative residual that is fully explained
+
+`649-R3` closed `648-G` as cohort-specific (`3 of 4` at `11,357 B`); `649-R4` held the register open on `OpenOLAT/OpenOLAT` at `−375`, the first **substantive** deviation. Two further payloads this pass, in opposite directions, and both resolve:
+
+| repo | bytes | Δ canonical | mechanism | recovers? |
+| --- | --- | --- | --- | --- |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `11,358` | **`+1`** | 🟢 **one prepended blank line.** `sed '/./,$!d'` yields exactly `11,357` | 🟢 yes — presentation |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `11,342` | **`−15`** | 🟢 **the appendix placeholder is filled in.** Canonical carries `Copyright [yyyy] [name of copyright owner]` (`32` ch); this payload carries `Copyright 2024 ai-shifu.com` (`17` ch). `32 − 17 = 15`, exactly | 🔴 no — and it is **correct** |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `10,785` | `−572` | 🟡 appendix in filled short form; `Copyright 2021 Technische Hochschule Mittelhessen` | 🔴 no; not decomposed further this pass |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `11,408` | `+51` | 🟢 one prepended blank line (`→ 11,407`) plus a `50 B` appended attribution | 🟡 partially |
+
+🔴 **The eighth mechanism matters because it defeats the sign discriminator on the Apache arm.** `647-E` established, for MIT, that the **sign** of the residual is informative: positive means a body anomaly, `−1` means check the last byte. `651-R2` shows the Apache arm does not share that property. `ai-shifu` is a **genuine, unmodified Apache-2.0 grant, correctly applied** — the appendix placeholder substituted with a real copyright line, which is precisely what the appendix instructs a licensor to do — and it reads **`15 B` short**. So on Apache payloads a negative residual can mean *the licensor followed the instructions*, while `649-R4`'s `−375` means the appendix was deleted. 🔵 Same sign, opposite verdicts, and the magnitude alone does not separate them.
+
+🟢 **The decomposition that does separate them, specified for implementation:**
+1. strip leading blank lines → recovers all `+1`-class payloads (`XBlock`, `649-R3`'s `edugraph-ontology`);
+2. count occurrences of `APPENDIX: How to apply the Apache License` → `0` means deleted (`OpenOLAT` class, substantive);
+3. if the appendix is present, extract its `Copyright` line and compare its length against the canonical placeholder's `32` characters → a deficit equal to that difference is **benign substitution** (`ai-shifu` class);
+4. only a residual surviving all three is a body anomaly.
+
+🔴 **And a standing hazard, stated plainly:** `openedx/XBlock` is the row every Open edX recommendation in this base is built on — `compose/patterns.md` **P3** exists specifically to put client code inside it. A byte-equality Apache gate over this shelf **fails on that row**, cosmetically. `646-B` warned that an instrument whose failure mode is a plausible positive needs a contradicting control; this is the mirror: an instrument whose failure mode is a plausible **negative** on the base's most load-bearing row.
+
+### 🔴 `651-R3` — OPEN, NEW: the fork notice is an identity channel this base does not read, and it published a verdict against the wrong address
+
+`p650` filed [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) under "real, and deliberately not filed", with the verdict *"zero stars, zero forks: no adoption, no external review. Watch; do not stake an engagement on it."*
+
+| channel | `kvnloo/tutor-mcp` | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) |
+| --- | --- | --- |
+| licence payload | `MIT`, **`1,073 B`** | `MIT`, **`1,073 B`** — 🔴 identical |
+| description string | identical | 🔴 identical |
+| `ls-remote --symref` | `main` | `main` |
+| stars / forks | `0` / `0` | 🟢 **`96` / `13`** |
+| 🔴 repository page, fork notice | 🔴 **"forked from ArnaudGuiovanna/tutor-mcp"** | 🟢 none |
+
+🔴 **Every channel this base measures agreed, which is exactly the failure condition.** The licence payload is byte-identical — necessarily so, since a fork copies it — and so is the description. The **one** channel that distinguishes the pair is the fork notice, and this base does not read it. The published verdict was therefore sound reasoning attached to the wrong object: the project it described has `96` stars and `13` forks.
+
+🟢 **Registered as `ACTION 651-R3`:** when two addresses agree on licence payload bytes **and** description string, treat them as a fork pair and read the fork notice before publishing any adoption verdict. 🔵 Note the asymmetry that makes this cheap — the probe need only run on **collisions**, which are rare, and a collision on payload bytes alone is not enough to trigger it (canonical MIT at `1,073 B` is common; `1,073 B` *and* an identical description is not).
+
+🔴 **Downstream corrections made this pass:** `agents/top.md` files the upstream at `96★` and retains the fork row pointing here; `intel/trends.md` **T9** withdraws the `0`-star datum it used as evidence for the commercial immaturity of knowledge tracing (the claim survives on pyKT `457★` and OATutor `276★`); `compose/patterns.md` withdraws its exclusion of `tutor-mcp` and builds the new **P6** on the upstream.
+
+### 🟢 `651-R4` — CLOSED: `p650`'s "the education-ERP slot has no verified occupant"
+
+`p650` removed `OpenEduCat-Inc/OpenEduCat` as `404`, confirmed three candidate renames also fail to resolve, and concluded the slot was empty. The removal was correct; the conclusion was not.
+
+| channel | reading |
+| --- | --- |
+| `ls-remote --symref` on `openeducat/openeducat_erp` | 🟢 resolves; default branch **`19.0`** |
+| grant payload | 🟢 **`8,241 B`** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*, full LGPLv3 with the GPL appended |
+| stars / forks | 🟢 **`905` / `787`** |
+| branches | `7.0`…`20.0`, `master`, `18.0-pp-opt`, `19.0-fix-admission-multi-create` — 🔴 **`20.0` exists while `19.0` is default** |
+| 🔴 `COPYRIGHT` (the file `LICENSE` delegates attribution to) | 🔴 **`404`** |
+
+🔵 **A rename probe searches the space the reader imagines; it does not search the space that exists.** Three imagined renames returning `404` was treated as sufficient to declare a project dead. One search on the project's own name returned the live address immediately. 🟢 **Registered as `ACTION 651-R4`:** a `∄`-by-address finding requires a **name search** before the project is declared gone, not only an address walk — which is `651-R1`'s enumeration rule arriving on the identity channel instead of the category channel. **The same defect twice in one pass, in two different shelves.**
+
+🔴 **New sub-class recorded:** `openeducat_erp`'s `LICENSE` is complete and unambiguous on **terms** while delegating **holder identification** to a `COPYRIGHT` file that does not exist. That is the inverse of `609-I` (README grants MIT, links a missing `LICENSE`): there the terms were missing and the claim present; here the terms are present and the attribution dangles. Neither is caught by a licence-name lookup, and only the `609-I` direction is disqualifying.
+
+### 🔴 `651-R5` — OPEN, NEW: resolving the default branch is necessary and **not sufficient**
+
+This base's standing rule is to resolve the default branch with `ls-remote --symref` before cloning. Three rows this pass confirm why (`openeducat_erp` → `19.0`; `rosariosis` → `mobile` among 44 otherwise-version branches; `kolibri` → `develop`; `feedbacksystem` → `dev`). 🔴 A fourth defeats the rule itself:
+
+[`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) — `WWW '25` Industry Track oral, `CC0-1.0`, `136★`. Its default branch **is** `main`, so the rule reports success. But `main` is a **browser-only Next.js application with no server-side database**, and the README states that **the multi-agent Python implementation the paper evaluates is on branch `v0.1-demo`**. Resolving the default therefore yields a demo, not the artefact — and a reproduction attempt against `main` would measure the wrong system entirely while every branch check passed.
+
+🟢 **Registered as `ACTION 651-R5`:** for any row filed on the strength of a paper or a specific capability, resolve the default branch **and** read the README for which branch carries that artefact. `compose/patterns.md` carries the four live cases as a table so the warning sits where someone is about to clone.
+
+### 🔵 `651-R7` — gate state: `make hooks` denied again, contracts satisfied by an independent checker, diff declared **UNJUDGED**
+
+🔴 `make hooks` is refused by the sandbox for repo-local code (`[Code from External]`), as at `p647`, `p648`, `p649` and `p650`. **No gate state is claimed.** `p646`'s `52/71` remains carried forward unverified because nobody has been able to re-measure it for five passes, and this diff should be treated as **UNJUDGED**, not as passing.
+
+🟢 **The gated contracts were instead satisfied by hand and checked with an instrument written outside the repository** (so it is not repo-local code), run under `python3 -I` per `p355`:
+
+| contract | reading |
+| --- | --- |
+| frontmatter present, `industry: education`, `updated: 2026-11-04` | 🟢 `10 of 10` files |
+| `region` in the closed vocabulary | 🟢 `10 of 10` (`Global` on every file) |
+| exactly one `## Opportunities by region` | 🟢 `1`, with subsections `North America`, `EMEA`, `APAC`, `LATAM` — all four present, no out-of-vocabulary heading, **no new block added** |
+| ragged table rows **among added lines** | 🟢 `0` across all ten files |
+| header-looking data rows among added lines | 🟢 `0` |
+| append-only on `agents/trending.md`, `repos/trending.md`, `intel/open-gaps.md`, `intel/measured-unusable.md` | 🟢 `0` content deletions. The single deleted line in the whole set is `intel/measured-unusable.md`'s frontmatter `updated:` field, which the frontmatter contract **requires** to change — recorded explicitly rather than reported as a clean zero |
+| published URL verification | 🟢 **`27 of 27`** repository addresses added this pass resolve on `git ls-remote --symref`, and every default branch asserted in prose matches the one returned (`rosariosis`→`mobile`, `kolibri`→`develop`, `openeducat_erp`→`19.0`, `feedbacksystem`→`dev`) |
+| 🟡 pre-existing ragged rows | 🟡 inherited counts remain in the long register files, and the checker's own two-column reading form accounts for most of them. Not addressed, because these files are append-only and cannot be repaired in place |
+
+🔴 **Channel availability this pass, recorded because it bounds everything above:** `raw.githubusercontent.com` `200` (licence payloads read directly); `git ls-remote` available (existence and real default branch); **`curl` to `github.com` `403`** and **`api.github.com` `403`**; `gh api` refuses these repositories as out of session scope; stars and fork counts obtained through page fetch, which also supplied the fork notice that `651-R3` turns on. **`blog.google` does not resolve under this session's network policy**, so Google's own Africa education announcements could not be read first-hand and `T14` is flagged `confidence: medium` for that reason.
+
+### 🔵 `651-R6` — the mandated web legs: nil on the supply arm for a sixteenth pass, but **not nil** on the demand arm
+
+🟢 **Supply arm: nil again.** Global and per-region searches for open source education agents and repos returned candidates this base already holds, plus the novel rows recorded on the trending shelves. No leg produced an adoptable address this base lacked and could file on terms — the sixteenth consecutive effective nil on that arm, consistent with `647-K`.
+
+🔴 **Demand arm: three facts adopted that this base did not hold, and they are not marginal.**
+1. **South Korea's AI Basic Act** (in force `2026-01-22`) names AI for **student assessment in early-childhood, elementary and secondary education** inside its high-impact definition, with administrative fines expected from around `2027-01`. This base characterised APAC as service-specific, labelling-first and voluntary across China, India and Japan — a characterisation that was **incomplete, not merely incomplete in detail**: the region has a binding horizontal statute that names education, and its enforcement edge falls *before* the EU's `2027-12-02`.
+2. **LATAM denominators.** UNESCO IESALC with UNU-IAS across ~200 institutions in 19 countries: `87%` use AI, `26%` have a formal strategy, **`55%` have no specific AI budget**. The budget figure changes how an engagement must be *sized*, not just how it is argued.
+3. **The Africa gap is located rather than declared** — demand and open-weight activity are documented; African builders ship **proprietary applications on open models**, so there is no open-source stack to adopt.
+
+🔵 **And `651-A` records a fourth kind of yield the scorer has no column for: a leg that returned a plausible, specific, dated regulatory claim which one check falsified, keeping three false statutory deadlines out of `intel/market.md`.** 🟢 **Recommendation revised.** Fifteen passes recommended quarterly cadence on the strength of the supply arm's nil. That recommendation should now be **split**: the supply arm is saturated and quarterly is right; the **demand arm is not saturated** and should keep its per-pass cadence, because regulation moves on statutory dates and this pass found a jurisdiction the base had missed entirely for several months after the statute came into force.
+
 ## 🆕 `p649` — `2026-11-04` — **🔴 THE REGISTER WAS `3` PASSES STALE ON ARRIVAL (`p646` AGAINST SHELVES AT `p648`) AND `p647` AND `p648` BOTH LEFT IT BEHIND. 🟢 `p649` BRINGS IT CURRENT. 🟢 TWO PUBLISHED CONCLUSIONS FALSIFIED (`648-G`, AND THE MIT PREDICTOR'S OWN VERDICT STRING), ONE NEW EXCLUSION CLASS NAMED, `648-K`'s COMPLAINT RESOLVED INTO A MEASURED CEILING.**
 
 🔵 **Currency, stated plainly.** This register sat at `p646` while the shelves advanced to `p647` and

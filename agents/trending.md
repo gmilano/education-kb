@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p651) — the KB filed a fork and missed its upstream, and the week's biggest novel find is ShareAlike
+
+**Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars and fork counts from the repository page via page fetch. `curl` to `github.com` and `api.github.com` are both **HTTP 403** in this session, and `gh api` is scoped away from these repositories, so neither was used. `blog.google` does not resolve in this session's network policy and one EMEA source could not be read at first hand because of it.
+
+### 🟢 New this pass — three permissive agents, all verified
+
+| Agent | Repo | Licence (payload) | Stars / forks | Region | Signal |
+|---|---|---|---|---|---|
+| **AI-Shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 (11,342 B) | **331** / 128 | APAC | Course *authoring* plus adaptive delivery, which is a different job from tutoring: an instructor states expertise and teaching intent once, and the system generates per-learner explanations, probing Q&A and an embeddable course for a website or training portal. Hosted at ai-shifu.com, Docker self-hosting. README attributes it to the AI-Shifu Team and the **Research Center of Intelligent Software Engineering at Harbin Institute of Technology** — a documentary basis for APAC, not an inference. |
+| **GenMentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** (7,048 B) | 136 / 23 | Global (unplaced) | Goal-oriented ITS: the learner states a goal, coordinated LLM agents refine it, measure the gap against the learner's background, schedule sessions, draft each session's reading and quiz, and update the learner profile. WWW '25 Industry Track oral. CC0 is a public-domain dedication — the loosest terms on this shelf — but it is not a software licence and carries no patent or trademark grant, so treat it as permissive-with-a-caveat rather than as MIT. |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (1,073 B) | 96 / 13 | Global (unplaced) | MCP server that turns any LLM into an intelligent tutoring system: Bayesian Knowledge Tracing, FSRS spaced repetition, prerequisite skill graphs and a frozen scoring rubric behind one tool surface. **This is the upstream of the row this KB has been publishing** — see the correction below. |
+
+### 🔴 Correction — this KB filed the fork and missed the original
+
+Last pass recorded `kvnloo/tutor-mcp` (MIT, **0 ★**) under "real, and deliberately not filed", with the reasoning that zero stars and zero forks meant no adoption and no external review. The reasoning was sound; the address was not.
+
+| Channel | `kvnloo/tutor-mcp` | `ArnaudGuiovanna/tutor-mcp` |
+|---|---|---|
+| Repository page | **"forked from ArnaudGuiovanna/tutor-mcp"** | no fork notice |
+| Stars / forks | 0 / 0 | **96 / 13** |
+| Licence payload | MIT, 1,073 B | MIT, 1,073 B (identical) |
+| Description | identical string | identical string |
+
+**What went wrong and why it matters:** the two rows are byte-identical on the licence channel and string-identical on the description, so every channel this KB measures agreed — and the fork notice, which is the one channel that separates them, sits on the repository page and was never read. The published conclusion ("0 stars, no adoption, do not stake an engagement on it") was therefore attached to the wrong address: the project it describes has 96 stars and 13 forks and is reasonably reviewed. `intel/trends.md` **T9** carried the same 0-star figure as evidence that knowledge tracing is commercially immature; that specific evidence is withdrawn, though the broader claim still stands on pyKT at 457★ and OATutor at 276★.
+
+**Rule earned:** when two addresses agree on every measured channel, they are a fork pair until the fork notice says otherwise. Read it before publishing an adoption verdict.
+
+### 🟢 Releases shipped since the last pass
+
+| Project | Version | Date | What is in it, and what it costs to adopt |
+|---|---|---|---|
+| **OpenMAIC** | **v1.4.0** | 2026-11-04 | Project-based learning **PBL v3**: the learner builds a project while an AI tutor guides requirements, design and implementation. **Three adoption costs, stated in the release notes:** it requires a configured sandbox provider *and* checkpoint storage; it is **off by default**; and the upgrade is **one-way** — all 1.3.x instances must be stopped first and rolling back needs a database restore. |
+| **OpenMAIC** | v1.3.1 | 2026-11-02 | DeepSeek Token Plan support, so a single DeepSeek key covers chat, web search and web fetch. Asset-upload and leave-page-edit reliability fixes. Also a stop-all-instances upgrade with DB-restore rollback. |
+| **DeepTutor** | v1.7.1 | 2026-11-01 | Desktop previews, broader localisation, password changes. |
+
+**The adoption note that matters more than the feature list:** two consecutive OpenMAIC releases in three days both require stopping every running instance and both make rollback a database-restore operation. On a 42.7k-star MIT codebase moving at this cadence, a client engagement must **pin a version** and schedule upgrades deliberately. Tracking `main` here is not a strategy.
+
+### 🟡 Real, verified, and deliberately not filed — with the reason in each row
+
+| Repo | Licence (payload) | Stars / forks | Why it is not on `agents/top.md` |
+|---|---|---|---|
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **CC BY-SA 4.0** (1,230 B) | **949** / 130 | The highest-starred novel education-agent asset found this pass, and **not usable the way the shelf assumes**. 165 skills across 20 domains in Agent Skills format, plus an MCP server with 157 tools and 165 prompts; v3.1.0 retired the library-operated public MCP service in favour of self-hosting. But CC BY-SA 4.0 is **ShareAlike**: a derivative skill library must itself be CC BY-SA, which rules out folding these skills into a proprietary Globant deliverable. It is also content and prompts, not software, so the usual MIT/Apache reading does not apply. Usable as-is with attribution; not usable as a base for closed IP. |
+| [virtualryder/edu-ai-agents](https://github.com/virtualryder/edu-ai-agents) | **modified MIT, 832 B — see below** | 4 / 1 | Shaped exactly like the governance gap this KB keeps declaring — 8 reference workflows on Amazon Bedrock with deny-by-default authorisation, student-PII masking, human-in-the-loop enforcement and a tamper-evident audit trail, aligned to FERPA, COPPA, IDEA/504 and ADA Title II. Two reasons not to file it: 4 stars and 1 fork is not adoption, and **the grant is not the MIT licence**. The payload carries MIT's permission and notice paragraphs verbatim, then **replaces MIT's limitation-of-liability paragraph** with a bespoke sentence ("This accelerator is decision-support tooling, not a validated student-information system, certified accessibility product, or autonomous decision-maker"). The words "IN NO EVENT SHALL THE AUTHORS … BE LIABLE" do not appear anywhere in the file. A licence that grants broad rights and then drops its own liability cap is not a licence anyone should accept on a client's behalf without counsel. Worth reading for its **workflow taxonomy**: Student & Family Services Concierge, Personalized Tutor & Study Companion, Educator Copilot, Assessment/Grading & Feedback, Student Success & Proactive Engagement, Academic/College & Career Pathway Navigator, Document & Accessibility Services, Operations/IT Service Desk. |
+| [luffycodes/Tutorbot-Spock](https://github.com/luffycodes/Tutorbot-Spock) | **no licence file** | 56 / — | Learning-science-grounded tutoring chatbot with an associated physics variant. Probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `COPYING`, `COPYING.txt`, `LICENCE` and `license` on the real default branch: all 404. No grant means no permission. |
+| [mthatipamula/educational-assessment-ai-agent-platform](https://github.com/mthatipamula/educational-assessment-ai-agent-platform) | **no licence file** | — | K-12 assessment platform with standards-aligned item authoring, rubric scoring with human review and a persistent-memory tutoring agent — the single closest match to this KB's declared assessment gap. Same defect: no grant file on any probed name. |
+| [minicoohei/ai-agent-camp](https://github.com/minicoohei/ai-agent-camp) | **no licence file** | 347 / — | Non-engineer AI-agent training curriculum. 347 stars and no grant. |
+| [Micel357/Edu-mentor-AI](https://github.com/Micel357/Edu-mentor-AI) | **no licence file** | — | **LATAM-anchored on documentary evidence**, which is rare on this shelf: a Portuguese-language multi-agent pedagogical system (explanation, diagnosis, motivation, exercise generation, assessment, reporting) built in the Residência Tecnológica at **Porto Digital, Recife, Brazil**, with Accenture mentorship named in its own README. Real, placed, and unusable — no grant file. |
+| [jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada](https://github.com/jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada) | **bespoke, not OSI** — "Licencia Comunitaria de Uso Profesional" (1,262 B, `LICENSE.md`) | — | Spanish-language agent-and-skills environment for teachers: activity preparation, explanation adaptation, tutoring organisation. The grant is a custom community licence written by the author, not an OSI licence. Recorded so a later pass does not re-spend the search and does not read "free" as "permissive". |
+| [brownplt/LTLTutor](https://github.com/brownplt/LTLTutor) | GPL-3.0 (35,148 B) | 12 / — | Misconception-based tutor for Linear Temporal Logic, Brown University PLT. Copyleft and narrow in scope. |
+
+### 🟢 A stability result — the first pass where the measurements held
+
+Every licence payload this KB publishes for an agent was re-read from bytes this pass, and the two star counts that drive the whole shelf were re-measured:
+
+| Row | Held value | Measured 2026-11-04 (p651) | Verdict |
+|---|---|---|---|
+| HKUDS/DeepTutor | Apache-2.0, 11,408 B, 55,000 ★ | 11,408 B, **55.0k ★**, 6.7k forks | 🟢 holds |
+| THU-MAIC/OpenMAIC | MIT, 1,065 B, 42,700 ★ | 1,065 B, **42.7k ★**, 6.6k forks | 🟢 holds |
+| DaRL-GenAI/instructional_agents | MIT, 1,067 B | 1,067 B | 🟢 holds |
+| vishalsachdev/canvas-mcp | MIT, 1,071 B | 1,071 B | 🟢 holds |
+| Li-Evan/Bloom | MIT, 1,069 B | 1,069 B | 🟢 holds |
+| CAHLR/OATutor | MIT, 1,105 B | 1,105 B | 🟢 holds |
+| Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause, 1,531 B | 1,531 B | 🟢 holds |
+
+**Seven of seven licence payloads and two of two star counts reproduce.** That is worth recording because the pattern this KB carried for several passes was the opposite — star counts inflated several-fold and two false MIT claims. Those were values carried forward from an unverified pipeline. Values *measured* one pass ago reproduced exactly one pass later. The lesson is not "stars are stable", it is **measured-and-dated holds, carried-forward does not**.
+
+### 🔴 Declared gaps this pass — searched, and the result written down
+
+- **The assessment gap is now a licence gap, not a supply gap.** Last pass recorded no permissive assessment-integrity or grading agent and treated it as absent supply. This pass found two real ones — `mthatipamula/educational-assessment-ai-agent-platform` (rubric scoring with human review) and the assessment workflow in `virtualryder/edu-ai-agents` — and **neither carries a usable grant** (no licence file; truncated MIT). The supply exists and is unlicensed. That is a different problem with a different fix: a single upstream commit adding a licence file would move either row onto the shelf.
+- **The Moodle-side agent gap is unchanged.** Canvas has a 317★ MIT MCP server. No permissive Moodle-side equivalent at comparable standing was found this pass either.
+- **LATAM supply is real and licence-nil.** `Edu-mentor-AI` is the second LATAM-anchored education agent this base has been able to place on documentary evidence, and like the first it has no grant. The regional supply problem is not absence of builders — it is that the builders are not licensing their work.
+- **Five of ten filed agents remain unplaced by region.** `instructional_agents`, `canvas-mcp`, `Bloom`, `open-tutor-ai-CE` and `gen-mentor` are filed `Global` because no documentary basis for a region was found. AI-Shifu was placed this pass only because its README names its host institution. Author names and README language are **not** used for placement: this base has measured that signal mis-placing lusophone and hispanophone projects.
+
 ## 🆕 2026-11-04 — OpenMAIC ships v1.4.0 today, and two rows this KB called MIT have no licence at all
 
 **Verification channels this pass:** existence via `git ls-remote --symref` (returns the real default branch); licence by reading the grant payload from `raw.githubusercontent.com`; stars from the repository page. `curl` against `github.com` and the GitHub API are both HTTP 403 in this session, so the API was not used.

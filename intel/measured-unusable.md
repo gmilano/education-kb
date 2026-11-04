@@ -1,8 +1,102 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-02
+updated: 2026-11-04
 ---
+
+## 🆕 `p651` — `2026-11-04` — **🔴 A MANDATED WEB LEG PRODUCED ITS FIRST USEFUL NEGATIVE: A DATED REGULATORY CLAIM TESTED, FALSIFIED, AND KEPT OUT OF `intel/market.md`. PLUS `6` LICENCE-NIL SUPPLY ROWS, `1` BESPOKE SPANISH GRANT, `1` SHAREALIKE AT `949★`, AND `1` TRUNCATED `MIT` PAYLOAD WITH ITS LIABILITY CAP DELETED.**
+
+🔵 **Why this entry matters to the leg-scoring argument.** Fifteen consecutive passes have scored the mandated web legs as effectively nil, on the grounds that the facts they return are already held at HEAD. `p651` records a different kind of value: a leg returned a **wrong** fact, plausible and specific, and the cost of testing it was one search. Had it been adopted, `intel/market.md` would now publish three false statutory deadlines for a US state. **A leg that stops a wrong fact is not nil, and the nil-scoring convention has no column for it.** Recommend the scorer gain one.
+
+### 🔴 `651-A` — North Carolina `SL 2026-41`: a plausible, specific, dated claim that does not survive one check
+
+The North America regulation leg returned, with confidence: *"North Carolina has the most concrete timeline I found: a state model policy due December 31, 2026, local policies due June 30, 2027, and teacher training due June 30, 2028. Its Session Law 2026-41 requires AI-literacy standards along with those deadlines."*
+
+| channel | reading `2026-11-04` |
+| --- | --- |
+| `SL 2026-41` identity | 🔴 **the 2026 Appropriations Act (Senate Bill 257)** — a budget act, per the General Assembly's own summary pages |
+| AI content actually in `SL 2026-41` | 🟡 Sec. 7.50 amends the **AI Pilot Program** created in the 2023 Appropriations Act, requiring DPI to make a directed grant to **Alamance-Burlington Schools**; Sec. 7.39 carries further AI provisions not detailed in the available excerpt |
+| AI-literacy content standards | 🔴 attributed by the legislature's summary to a **different session law — `2026-61` (House Bill 268)** — requiring the State Board to adopt AI content standards in the computer-science standard course of study |
+| the "model policy" | 🔴 appears in **bill drafts only** (DPI *shall develop* a model AI policy; local boards *shall adopt* a policy). Carolina Public Press reports it as pending legislation, not enacted law |
+| the three dates (`2026-12-31`, `2027-06-30`, `2028-06-30`) | 🔴 **not located in any enacted instrument.** The nearest dated item found is `SB 981`'s proposed AI in Education Task Force reporting by `2028-03-15` — also a proposal |
+| 🟡 metadata anomaly worth recording | the General Assembly's own summary pages label `SL 2026-41` under **"Session Year 2024"**, which conflicts with its 2026 designation and is a trap for anyone verifying by URL path |
+
+🔴 **Disposition: NOT PUBLISHED.** `intel/market.md`'s North America block names the claim, states that it does not verify, and points here. The enacted North Carolina facts that *did* survive — the Alamance-Burlington directed grant, and AI content standards under `2026-61` — are too thin to carry an opportunity and are not promoted either.
+
+🔵 **The generalisable shape, and it is not "secondary sources are unreliable".** The leg's error was **attribution, not invention**: every component of the claim exists somewhere in North Carolina's 2025–26 session, and the error was binding them to one session law and presenting proposals as enacted. 🔴 That is the hardest class of regulatory error to catch, because the claim is *checkable and nearly right* — and it is the class most likely to reach a client slide, since a statute number reads as a citation. **Rule: a dated statutory obligation enters this base only against the instrument's own text or its legislature's summary of that instrument, never against a roundup that names the number.** Three further dated claims adopted this pass (Korea `2026-01-22`, Vietnam `2026-03-01`, India `2026-02-20`) rest on legal-practice sources that cite the statute directly and agree with one another, and are flagged in `intel/trends.md` as unverified against primary text.
+
+### 🔴 `651-B` — six supply rows carrying no grant at all, two of them squarely on this base's declared gap
+
+Probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `COPYING`, `COPYING.txt`, `LICENCE` and `license` on each repository's **real** default branch (resolved by `ls-remote --symref`, per this base's standing rule):
+
+| repo | stars | what it is | disposition |
+| --- | --- | --- | --- |
+| [`mthatipamula/educational-assessment-ai-agent-platform`](https://github.com/mthatipamula/educational-assessment-ai-agent-platform) | — | K-12 assessment: standards-aligned item authoring with RAG and self-review, rubric scoring with human review, sandboxed code grading, persistent-memory tutor | 🔴 **no grant.** The closest match this base has ever found to its own declared assessment gap |
+| [`virtualryder/edu-ai-agents`](https://github.com/virtualryder/edu-ai-agents) | 4 | 8 governed Bedrock workflows, FERPA/COPPA/IDEA-504/ADA-aligned | 🔴 grant present but defective — see `651-D` |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56 | learning-science-grounded tutoring chatbot, with a physics variant | 🔴 **no grant** |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | 347 | non-engineer AI-agent training curriculum | 🔴 **no grant**, and out of scope anyway (developer upskilling, not education-sector software) |
+| [`Micel357/Edu-mentor-AI`](https://github.com/Micel357/Edu-mentor-AI) | — | Portuguese-language multi-agent pedagogical system — **LATAM-placed on documentary evidence**: Residência Tecnológica at Porto Digital, Recife, Accenture-mentored, named in its own README | 🔴 **no grant** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 349 | PHP/MySQL student information system | 🟢 **FALSE POSITIVE — see `651-C`** |
+
+🔴 **The finding that changes a gap's category.** This base has recorded "no permissive assessment or grading agent" for several passes and treated it as **absent supply**. It is not: the supply exists and is **unlicensed**. That is a different problem with a cheaper fix — one upstream commit adding a licence file moves either the `mthatipamula` platform or the `edu-ai-agents` assessment workflow onto the shelf. 🔵 Worth an actual approach to the maintainers rather than another pass of searching.
+
+### 🟢 `651-C` — the root-filename probe called a `349★` platform licence-nil, and it was wrong
+
+`OS4ED/openSIS-Classic` returned `404` on **fifteen** root filenames and its repository page names no licence in the sidebar. Under this base's probe it is licence-nil. It is not:
+
+| channel | reading |
+| --- | --- |
+| 15 root filenames × `master` | 🔴 all `404` |
+| repository page sidebar | 🔴 no licence named |
+| 🟢 README `## License` section | 🟢 *"openSIS is an Open Source Project licensed under the GNU General Public License, the full license can be found [here]"* — linking **`docs/License.txt`** |
+| 🟢 `docs/License.txt` | 🟢 serves `GNU GENERAL PUBLIC LICENSE / Version 2, June 1991`, BOM-prefixed |
+
+🔵 **This is `p288`'s `gate-readme-channel` arriving from the opposite direction.** That gate exists because a README-only grant *claim* is not no channel. Here the README does not merely claim — it **resolves**, to a real payload at a non-root path. 🔴 The probe's filename set is the defect: it enumerates root names and never follows the README's own link. `609-I` is the inverse case (README grants MIT, links a `LICENSE` that does not exist), and the two together specify the correct procedure: **read the README's licence link and fetch what it points at, then judge.** A probe that stops at root filenames mis-calls both directions — it called `openSIS` unlicensed when it is GPL-2.0, and would have called `609-I`'s `AIM-SCU/GRADE` MIT had the link resolved to anything.
+
+🟢 **Registered as `ACTION 651-C`:** extend the grant probe with a README-link-resolution arm before any row is recorded licence-nil. Cost is one extra fetch on rows that would otherwise be rejected.
+
+### 🔴 `651-D` — `virtualryder/edu-ai-agents`: an `MIT`-shaped payload with the liability cap deleted
+
+`832 B` at `LICENSE`, branch `main`, byte-read in full this pass.
+
+| paragraph | status |
+| --- | --- |
+| holder line (`Copyright (c) 2026 David Ryder`) | 🟢 present |
+| permission grant ("to deal in the Software without restriction …") | 🟢 **verbatim MIT** |
+| notice-retention clause | 🟢 **verbatim MIT** |
+| warranty disclaimer | 🟡 **truncated** — `THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.` then **stops**, where MIT continues into the specific warranties |
+| 🔴 limitation of liability | 🔴 **ABSENT.** `IN NO EVENT SHALL THE AUTHORS … BE LIABLE` appears **nowhere in the file** |
+| in its place | 🔴 a bespoke sentence: *"This accelerator is decision-support tooling, not a validated student-information system, certified accessibility product, or autonomous decision-maker."* |
+
+🔴 **Why this is a new class and not `p649`'s presentation noise.** `649-R1` and `647-E` concern payloads that are byte-identical to canonical except for a terminating newline — **presentation**. This payload's divergence is **substantive and asymmetric**: it keeps every clause that benefits the licensee and removes the clause that protects the licensor. Whatever the author intended, a grant that confers broad rights and then omits its own liability cap is not MIT, must not be filed as MIT, and should not be accepted on a client's behalf without counsel. 🔵 Note the direction of the hazard: this is the one deviation class where the *licensee* is advantaged on the face of the text, which is exactly why nobody downstream has an incentive to notice it.
+
+🔵 **And a measurement note:** at `832 B` against MIT's `~1,070 B`, the residual is `≈ −240` — far outside the `±1` band `p646`'s predictor treats as presentation. The predictor would have flagged this correctly **as a body anomaly**, which is `647-E`'s positive-sign discriminator working as specified, on a real repository, for the first time.
+
+### 🔴 `651-E` — `949★` and ShareAlike: the week's largest novel find, excluded on terms
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) — 165 skills across 20 domains in Agent Skills format, plus an MCP server exposing 157 tools and 165 prompts; `v3.1.0` retired the library-operated public MCP service in favour of self-hosting. **949 ★ / 130 forks** — higher adoption than six of the ten rows on `agents/top.md`.
+
+| channel | reading |
+| --- | --- |
+| grant payload (`LICENSE`, `main`) | **`1,230 B`**, title `Creative Commons Attribution-ShareAlike 4.0 International` |
+| repository page sidebar | names no licence |
+| README licence section and badge | **CC BY-SA 4.0** for skills, documentation, examples and curriculum |
+
+🔴 **Disposition: NOT PROMOTED to `agents/top.md`, and the reason is not quality.** CC BY-SA 4.0 is **ShareAlike**: a derivative skill library must itself be CC BY-SA, which forecloses folding these skills into a proprietary deliverable — the test this base applies to every row. It is also **content and prompts, not software**, so the MIT/Apache framing does not transfer: there is no patent grant and no warranty structure to reason about. 🟢 It is fully usable *as-is with attribution*, which is worth saying plainly rather than burying, and it is recorded on `agents/top.md`'s not-filed table with that distinction.
+
+🔵 **Pattern across `651-E` and `646-H`:** the highest-starred novel candidate in a window has now twice been unusable for a reason a star-ranked read cannot see. `646-H` found a screen-brightness daemon topping an education topic; `651-E` finds a genuine, excellent education asset on terms that fail the base's licence test. **Rank by adoption, decide by grant** — and never by adoption alone.
+
+### 🟡 `651-F` — a bespoke Spanish-language grant, recorded so "free" is not read as "permissive"
+
+[`jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada`](https://github.com/jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada) — Spanish-language agents-and-skills environment for teachers (activity preparation, explanation adaptation, tutoring organisation).
+
+| channel | reading |
+| --- | --- |
+| grant file | `LICENSE.md`, **`1,262 B`** |
+| title | 🔴 **`# Licencia Comunitaria de Uso Profesional`** — a custom community licence authored by the maintainer |
+| OSI status | 🔴 not an OSI licence; no SPDX identifier applies |
+
+🔴 **Disposition: REJECTED on terms.** Recorded for two reasons. First, so a later pass does not re-spend the search. Second, and more useful: the project presents as **free to use**, and this base's filter is **permissive**, which is a different property. 🔵 A bespoke grant in a language other than English is the shape most likely to be waved through by a reviewer skimming for the word "MIT" — and it is the second non-English-titled payload this base has had to classify by reading rather than by matching.
 
 ## 🆕 `p609` — `2026-11-02` — `4` dispositions, and the first **dangling** grant this base has recorded
 

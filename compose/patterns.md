@@ -26,10 +26,12 @@ updated: 2026-11-04
    OATutor   (MIT, 276★)          — BKT mastery tutoring
    Instructional Agents (MIT, 490★) — course material generation
    Bloom     (MIT, 302★)          — adaptive lesson sequencing
+   AI-Shifu  (Apache-2.0, 331★)   — course authoring from expert intent
+   GenMentor (CC0-1.0, 136★)      — goal-oriented session planning
         ▼
-[Mastery model — pyKT (MIT, 457★) / BKT]
+[Mastery + retention — pyKT (MIT, 457★) / BKT  ·  fsrs-rs (BSD-3, 456★) scheduling]
         ▼
-[Delivery — Richie portal (MIT) · WhatsApp · avatar (Open TutorAI CE, BSD-3) · LMS-native]
+[Delivery — Kolibri (MIT, offline-first) · Richie portal (MIT) · WhatsApp · avatar (Open TutorAI CE, BSD-3) · LMS-native]
 ```
 
 ---
@@ -133,6 +135,55 @@ updated: 2026-11-04
 
 ---
 
+## P6 — Retention engine: mastery + scheduling behind one MCP surface (4–6 weeks)
+**Best fit:** any client whose pilot has to show a measured outcome — which, per `intel/trends.md` **T10**, is now most of them.
+**Licence exposure:** none. Every component is MIT or BSD-3-Clause.
+
+| Component | Repo | Licence |
+|---|---|---|
+| Mastery + scheduling tool surface | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (96★) |
+| Scheduling engine | [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause** (456★) |
+| Reference scheduler + optimiser | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT (4.1k★) |
+| Knowledge-tracing models | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT (457★) |
+| LMS reach | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) or a Moodle REST adapter | MIT |
+
+**Wiring:**
+1. Deploy `tutor-mcp` as the single tool surface. It already packages Bayesian Knowledge Tracing, FSRS spaced repetition, prerequisite skill graphs and a frozen scoring rubric — do not rebuild these.
+2. Link `fsrs-rs` for the scheduling computation. It is the embeddable engine (bindings for C, Python, Node.js, Dart and PHP in sibling repos), and **the computation is local**: no model call, no per-review token cost. Use `fsrs4anki`'s optimiser as the reference for fitting parameters per learner from their own review history.
+3. Train or initialise pyKT models on the client's historical interaction data so mastery priors are not cold.
+4. Pull the review-eligible item set from the LMS over `canvas-mcp` or a Moodle REST adapter, and write completion back.
+5. Report **retention at 30 and 90 days** as the headline metric, not engagement.
+
+**Why this is the pattern to attach to every other one:** FSRS ships inside Anki from v23.10, so this is validated at consumer scale rather than research-grade — unusual on this shelf. It is permissive end to end, it computes on-device or server-side with no inference cost, and retention is the outcome institutions actually measure. It is the cheapest credible answer to "show me it worked".
+
+**Honest scoping:** FSRS schedules *review of known items*. It does not teach, and it needs an item bank with stable identities. If the client has no item bank, that is the first deliverable, and it is content work.
+
+---
+
+## P7 — Offline-first, permissive all the way down (6–8 weeks)
+**Best fit:** Sub-Saharan Africa, rural South Asia, Pacific islands, and any deployment where connectivity cannot be assumed.
+**Licence exposure:** none — and uniquely on this page, **not even at the platform layer**.
+
+| Component | Repo | Licence |
+|---|---|---|
+| Learning platform | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (1.2k★) |
+| Local inference | Ollama | MIT |
+| Review scheduling | [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause** |
+| Tutor (optional, when a device can run it) | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT |
+
+**Wiring:**
+1. Deploy Kolibri on a classroom server or directly on devices. ⚠️ **Resolve the branch first** — the default is `develop`; the release lines are `release-v0.19.x` and `release-v0.20.x`. Deploy from a release line, not from `develop`.
+2. Run a small local model via Ollama on the classroom server. Learner data never leaves the premises, which is a connectivity answer *and* a trust answer — it is the posture African edtech builders have independently converged on.
+3. Compute review scheduling with `fsrs-rs` on the device. This is the part that genuinely requires no network: no model call per review.
+4. Sync to a central instance opportunistically, when connectivity appears. Design every workflow to be correct if the sync never happens.
+5. Keep the proprietary layer in the Kolibri derivative itself — **MIT permits this**, which no other platform on this shelf does.
+
+**Why it is strategically distinct:** every other pattern here keeps a stock copyleft platform and puts the IP in an out-of-tree agent layer. This is the one pattern where Globant can ship a closed product end to end, platform included. For a regional offering sold repeatedly across markets, that difference compounds.
+
+**Honest scoping:** Kolibri is not an institutional LMS. There is no Moodle-class gradebook, no enrolment-at-scale, no large third-party plugin ecosystem. If the client needs institutional course management, this is the wrong base and **P2** is the right one.
+
+---
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
@@ -142,10 +193,34 @@ updated: 2026-11-04
 | MOOC / corporate academy on Open edX | **P3** | Only licence-safe Open edX shape |
 | Wants explainable mastery (STEM) | **P4** | BKT + pyKT; budget content authoring |
 | Uses AI already, controls nothing | **P5** | Sell governance first, then P1–P4 |
+| Pilot must prove an outcome | **P6** | Permissive end to end, retention measurable, no per-review inference cost. Attach it to any other pattern |
+| Connectivity cannot be assumed | **P7** | The only pattern with no copyleft component anywhere, and the only one that works offline |
+| Needs a full education ERP (finance, HR) | **P2 + OpenEduCat** | `openeducat/openeducat_erp` (LGPL-3.0, 905★) on Odoo. ⚠️ default branch is `19.0` and `20.0` exists — resolve it |
 
 ## 🔴 What these patterns deliberately avoid
 
-- **No pattern forks a GPL or AGPL platform.** Nine of ten verified platforms are copyleft; forking one for a managed service is the single most expensive mistake available in this industry.
-- **No pattern depends on `OpenEduCat`** — previously published here as an education-ERP base, now **HTTP 404**. The education-ERP slot has no verified open source occupant; `frappe/lms` (AGPL-3.0) is the nearest substitute.
-- **No pattern depends on `tutor-mcp`** (MIT, **0 stars**), `awesome-ai-llm4education` (**no licence**, 221★) or `eduadapt-ai` (**no licence**, 26★). The latter two were previously published here as MIT and are not.
-- **No pattern includes proctoring or emotion recognition.** Emotion recognition in schools is banned in the EU; exam monitoring is high-risk there. No permissively-licensed open source option was found in any case.
+- **No pattern forks a GPL or AGPL platform.** Ten of fourteen verified platforms are copyleft; forking one for a managed service is the single most expensive mistake available in this industry. **P7 is the exception that proves the rule** — it can own its platform layer precisely because Kolibri is MIT.
+- 🟢 **Two exclusions from the previous version of this list are withdrawn.**
+  - `OpenEduCat` was excluded as **HTTP 404**. The project is live at **`openeducat/openeducat_erp`** (LGPL-3.0, 905★, default branch `19.0`); only the published address was dead. It is now the recommended base when a client needs a full education ERP, and LGPL-3.0 is a better licensing position than the `frappe/lms` (AGPL-3.0) substitute that was recommended in its place.
+  - `tutor-mcp` was excluded at **0 stars**. That measured `kvnloo/tutor-mcp`, which is a **fork**; the upstream `ArnaudGuiovanna/tutor-mcp` has **96★ / 13 forks** and is the backbone of **P6**.
+- **Still excluded:** `awesome-ai-llm4education` (**no licence**, 221★) and `eduadapt-ai` (**no licence**, 26★), both previously published here as MIT and neither of which is. Added to the exclusion list at p651: `GarethManning/education-agent-skills` (949★ but **CC BY-SA 4.0** — ShareAlike, so a derivative skill library cannot be proprietary); `virtualryder/edu-ai-agents` (4★ and a **modified MIT payload with the limitation-of-liability paragraph removed**); `mthatipamula/educational-assessment-ai-agent-platform`, `luffycodes/Tutorbot-Spock` and `Micel357/Edu-mentor-AI` (**no licence file**); `CodeBreez/collejo` (MIT but **archived read-only since 2024-05-16**).
+- **No pattern includes proctoring or emotion recognition.** Emotion recognition in schools is banned in the EU; exam monitoring is high-risk there and, since 22 January 2026, student assessment in K-12 is high-impact under South Korea's AI Basic Act with fines expected from around January 2027. No permissively-licensed open source option was found in any case.
+
+## 🔴 Resolve the branch before you clone — four live cases on this shelf
+
+Every pattern above assumes you check out the right thing, and on this shelf the default branch is frequently not it:
+
+| Repo | Default branch | What goes wrong |
+|---|---|---|
+| `openeducat/openeducat_erp` | **`19.0`** | A hardcoded `main`/`master` builds nothing; a hardcoded `19.0` silently keeps building the old major, because `20.0` already exists |
+| `francoisjacquet/rosariosis` | **`mobile`** | A default clone gives you the mobile branch, not the release line, among 44 branches that are otherwise version numbers |
+| `learningequality/kolibri` | **`develop`** | A default clone gives you development code; deploy from `release-v0.19.x` or `release-v0.20.x` |
+| `GeminiLight/gen-mentor` | `main`, and that is the problem | `main` is a browser-only Next.js demo app. **The multi-agent Python implementation its WWW '25 paper describes is on branch `v0.1-demo`** — so the default gives you a demo, not the evaluated system |
+
+The fix is one command, and it belongs in any ingest or deployment script rather than in a human's memory:
+
+```bash
+git ls-remote --symref https://github.com/<owner>/<repo> HEAD   # returns the real default branch
+```
+
+Then read the README for which branch carries the artefact you actually want — resolving the default is necessary and, as `gen-mentor` shows, not always sufficient.
