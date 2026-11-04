@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE MANDATED LEGS ARE NIL A FIFTEENTH TIME (`31 of 32` HELD) AND THE SHELF IS AHEAD OF THE SOURCE ON THREE FACTS. 🟢 THE REAL TREND THIS WEEK IS STRUCTURAL: THE PERMISSIVE SUPPLY OF *ASSESSMENT* INFRASTRUCTURE OPENED, AND THE MCP INTEGRATION PATTERN REACHED EDUCATION WITH A READABLE LICENCE.**
+
+### 🔴 The demand-side trend channel is saturated, and that is now a stable measurement
+
+| Pass | Facts scored | Already held | Effective adoptable yield |
+|---|---|---|---|
+| `p644` | `33` | `15` | `18` — the last pass that paid |
+| `p645` | `22` | `21` | `0` |
+| `p646` | `43` | `43` | `0` |
+| `p647` | `32` | `31` | 🔴 `0` |
+
+🔵 **Four passes, one reading.** The qualitative trend picture for AI in education has not changed
+since `p644`: pilots to embedded infrastructure, governance and proven instructional benefit over
+broad personalisation, purpose-built educational AI over general-purpose tools (OECD), agentic
+workflows as the headline capability, digital credentials rising. 🔴 Re-running eight legs an hour
+to re-confirm those five sentences costs real tokens and returns nothing. **Recommend quarterly.**
+Fourth consecutive pass to record it.
+
+🔴 **Worse than nil on three facts: the legs are *stale against the shelf*.** `HKUDS/DeepTutor` is
+reported at `~48,268★` against `54,833` held; `THU-MAIC/OpenMAIC` at `~42K` against `42,630`; the
+UNESCO LAC Observatory launch as "April 2026" against `2026-04-14`. 🔵 So a pipeline that
+*overwrites* shelf values with leg values would have **regressed** this base three times in one
+pass. Any future automation of these legs must be **append-and-compare**, never overwrite.
+
+### 🟢 The trend that is real this week, and it is a supply-side structural change
+
+🟢 **Permissive assessment infrastructure appeared.** Until this pass this base's autograding layer
+existed only as *applications*; the incumbents at the substrate level — GitHub Classroom, Gradescope
+— are proprietary and hosted, and the one strong open item, PrairieLearn, is held but **not
+permissive** (payload reads `37,237 B`, `Copyright (c) 2021-present PrairieLearn, Inc.`). This week
+the layer became permissive end to end: submission capture and container-isolated execution
+(`git-grader/gitgrader`, Apache-2.0), course distribution and CI grading
+(`cfcortesmx/autograde-classroom`, MIT), and a rubric harness for a compiled language
+(`JoshMcDonagh/Gradescope-Java-Exam-Autograder`, BSD-3-Clause, University of Manchester).
+
+🔴 **Caveat stated once, loudly, because it governs every use of the paragraph above:** all three are
+between `0` and `6` stars. This is a *licence* trend and an *availability* trend. It is **not** a
+maturity or adoption trend.
+
+🟢 **MCP reached education with a readable licence.** `p645` found three MCP-adjacent tutors and
+filed none, because all three were AGPL-3.0. This pass files
+[studiomeyer-io/mcp-academy](https://github.com/studiomeyer-io/mcp-academy) (MIT, `1,068 B`), which
+exposes next-lesson, quiz, review, certificate and tutor as MCP tools, and
+[sepehr071/faradars-mcp](https://github.com/sepehr071/faradars-mcp) (MIT, `1,071 B`), a read-only MCP
+server over a Persian course platform. 🔵 Two independent authors, same month, same pattern: **the
+LMS becomes a tool surface rather than a UI to scrape.** Worth watching as the integration shape for
+LMS-side agents, and worth noting that the non-Anglophone estate got there first.
+
+🟡 **A third signal, weaker, recorded for the next pass to test:** several of this pass's finds
+expose a number that does not flatter them — `mad707/masar` insisting on **leak-free** evaluation,
+`hammasbuilds/knowledge-tracing` asking how much of deep KT's reported lead survives controls,
+`farroshsy/hcie-system` publishing its own AUC at `0.6051` against BKT. 🔵 If that is a real shift
+toward honest evaluation in educational ML rather than three coincidences, it is the most useful
+trend on this page — but `3` self-selected repos cannot establish it, and it is filed as a
+hypothesis with a stated test: next pass, score what fraction of new KT addresses report a
+**baseline comparison** at all.
+
+### 🔵 One correction to how this page's own numbers should be read
+
+`647-A`: `make hooks` could not be executed this pass — the sandbox denies repo-local code — so
+**no gate state is claimed**, including `gate-dates` and `gate-prose-claims`, which normally defend
+exactly the kind of sentence this page is made of. Every figure above is either byte-read this pass
+or carried with its provenance named, and the diff should be treated by the next pass as
+**unjudged** rather than as passing.
+
 ## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE MANDATED WEB LEGS ARE NIL FOR THE FOURTEENTH CONSECUTIVE PASS, NOW ON THE LARGEST DENOMINATOR EVER RUN (`43 of 43` HELD), AND ON TWO LEGS THE BASE IS MEASURABLY *AHEAD* OF THE SOURCE**
 
 🔵 **Run in full, scored against `HEAD`, and recorded with a denominator** —

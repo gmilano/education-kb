@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE ASSESSMENT-PLATFORM ESTATE GETS ITS FIRST PERMISSIVE AUTOGRADING SUBSTRATE, AND THE WEEK'S FINDS NAME THE VERTICALS THEY ATTACH TO — INCLUDING ONE THIS BASE DOES NOT HOLD**
+
+### 🟢 The verticals this pass's `28` addresses actually attach to
+
+A new address is worth more when it names the platform it plugs into, because that is the
+engagement surface. Four of this pass's finds do:
+
+| New address | Licence (byte-read) | Attaches to | Vertical already held? |
+|---|---|---|---|
+| [setsun-ai/moodle-sync](https://github.com/setsun-ai/moodle-sync) | MIT `1,066 B` | **Moodle** — materials, deadlines, announcements, grades out to disk, Drive and Calendar | 🟢 yes — Moodle is this base's most-published vertical |
+| [pisan-labs/student-journey-check](https://github.com/pisan-labs/student-journey-check) | MIT `1,068 B` | **Tutor LMS** (WordPress) — walks a test student through login, dashboard, lesson video, quiz, certificate after a plugin update | 🟢 yes, thinly — held on `2` shelves only |
+| [quesal-com/quesal-vscode](https://github.com/quesal-com/quesal-vscode) | MIT `1,068 B` | **PrairieLearn** — live question previews in VS Code as you edit | 🟢 yes — held on `6` shelves |
+| [Badvoic3/cedt-grader-vscode](https://github.com/Badvoic3/cedt-grader-vscode) | MIT `1,075 B` | **cafe-grader-web** — submits code from the editor, tracks verdicts | 🔴 **no — `0` shelves** |
+
+🔴 **`cafe-grader-web` is a platform this base does not hold at all.** It surfaced only as the
+*target* of a client tool, which is how a vertical gap becomes visible: the base indexed the plug
+and not the socket. 🔵 Recorded as a **declared gap**, not filled, because this pass did not read
+`cafe-grader-web` itself — no licence byte-read, no existence verdict, no provenance. Filling it is
+one `git ls-remote` plus one licence read next pass, and it should not be filled from this sentence.
+
+### 🟢 Where the autograding layer now sits relative to the held estate
+
+| Layer | Permissive option, byte-read this pass | The held non-permissive incumbent |
+|---|---|---|
+| Submission capture + sandboxed execution | 🟢 [git-grader/gitgrader](https://github.com/git-grader/gitgrader) — Apache-2.0, `11,357 B` | GitHub Classroom (proprietary, hosted) |
+| Course distribution + CI autograding | 🟢 [cfcortesmx/autograde-classroom](https://github.com/cfcortesmx/autograde-classroom) — MIT, `1,070 B` | GitHub Classroom (proprietary, hosted) |
+| Rubric harness for a compiled language | 🟢 [JoshMcDonagh/Gradescope-Java-Exam-Autograder](https://github.com/JoshMcDonagh/Gradescope-Java-Exam-Autograder) — BSD-3-Clause, `1,515 B` | Gradescope (proprietary, hosted) |
+| Item authoring + adaptive delivery | PrairieLearn — held, **not** permissive: payload reads `37,237 B`, `Copyright (c) 2021-present PrairieLearn, Inc.` | — |
+| Multi-tenant LMS over many client estates | 🟢 [euron-sde-team/euron-open-multi-tenant-lms](https://github.com/euron-sde-team/euron-open-multi-tenant-lms) — MIT, `1,145 B` | Moodle Workplace, Open edX multi-site (both GPL/AGPL-family) |
+| Offline-first classroom delivery | 🟢 [themakerrobot/edge-lab](https://github.com/themakerrobot/edge-lab) — Apache-2.0, `11,358 B` | Kolibri (MIT, held, far more mature) |
+
+🔵 **The honest comparison.** Every permissive row above is between `0` and `6` stars; every
+incumbent is production software with institutional deployments. So this is a **licence-clean
+starting point** table, not a replacement table. Where an engagement needs a graded, deployed system
+tomorrow, the held estate — Moodle, Open edX, Kolibri, PrairieLearn, Canvas — is still the answer,
+and `647-B` explains why nothing new and mature appeared: at the mature end this base is saturated.
+
 ## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **FOR THE VERTICAL PLATFORM ESTATE, `main` IS THE EXCEPTION: `1 of 14`. AND ONE PLATFORM'S DEFAULT BRANCH IS A VERSION NUMBER, SO ANY PINNED BRANCH IN A RECIPE ROTS AT ITS NEXT RELEASE.**
 
 🟢 **`646-A`'s resolver returns the default branch as a measurement, so for the first time this page

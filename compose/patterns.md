@@ -4,6 +4,135 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THREE RECIPES BUILT ONLY FROM ADDRESSES THIS PASS BYTE-READ, PLUS THE BRANCH CORRECTION EVERY RECIPE ON THIS PAGE STILL NEEDS**
+
+Every address named below was verified live on the git channel and had its licence payload read by
+byte this pass (`evidence/licence-bytes.2026-11-04-p647.tsv`). 🔴 Every one is also between `0` and
+`6` stars — see `647-C`. These recipes are **starting points with a readable licence**, and each one
+names what it would take to make it production-real.
+
+### 🟢 Recipe `647-R1` — a self-hosted, data-resident autograding stack for a district AI policy
+
+**The engagement it answers.** North America, `647-K`: `134` bills across `31` states, with North
+Carolina requiring local AI policies by `2027-06-30` and Maryland (SB 720) requiring a district AI
+coordinator. A policy with a student-data-residency clause cannot be satisfied by GitHub Classroom
+or Gradescope, both proprietary and hosted.
+
+**Wire it as:**
+
+1. **Submission capture + sandbox** — [git-grader/gitgrader](https://github.com/git-grader/gitgrader)
+   (Apache-2.0, `11,357 B`, branch `main`). Captures immutable submissions over SSH and runs grading
+   in isolated containers. This is the layer that must be self-hosted for residency; take it first.
+2. **Course distribution + CI grading** — [cfcortesmx/autograde-classroom](https://github.com/cfcortesmx/autograde-classroom)
+   (MIT, `1,070 B`, `main`) for private per-student repos and progress dashboards. 🔴 It grades via
+   **GitHub Actions**, so on a residency mandate replace that executor with `gitgrader`'s container
+   runner and keep only the distribution and dashboard halves.
+3. **Rubric harness, compiled languages** — [JoshMcDonagh/Gradescope-Java-Exam-Autograder](https://github.com/JoshMcDonagh/Gradescope-Java-Exam-Autograder)
+   (BSD-3-Clause, `1,515 B`, `main`) for JUnit 5 rubrics. Deterministic output, which is what you
+   evidence to an auditor.
+4. **Assignment robustness, before deployment** — [pisan-labs/assignment-stress-test](https://github.com/pisan-labs/assignment-stress-test)
+   (MIT, `1,068 B`, `main`) runs each assignment through models the way a student would (lazy paste,
+   rubric-aware, multi-turn) and grades the result. 🟢 Run it as a **pre-flight gate on the
+   assignment**, not on the student: it tells a district which assignments are already trivially
+   solvable, which is the question an AI policy actually has to answer.
+5. **Licence posture.** Apache-2.0 + MIT + BSD-3-Clause — three permissive families, no copyleft
+   anywhere, so the composite ships to a district without a disclosure obligation.
+
+🔴 **What makes it production-real:** none of the four has institutional deployment. Budget a real
+security review of the container runner before any student code executes on district hardware.
+
+### 🟢 Recipe `647-R2` — an EU-conformity-shaped assessment path for an Annex III deadline
+
+**The engagement it answers.** EMEA, `647-K`: education access and assessment are Annex III
+high-risk, and the Digital Omnibus puts stand-alone systems at `2027-12-02`. A build started now can
+be designed for conformity instead of retrofitted.
+
+**Wire it as:**
+
+1. **Human oversight as architecture, not policy** — [marcelogdomingues/avalia-platform](https://github.com/marcelogdomingues/avalia-platform)
+   (MIT, `1,074 B`, `main`, **Portugal**) makes human validation of AI-assisted assessment
+   **mandatory by design**. 🟢 Start here specifically because Article-14 human oversight is far
+   cheaper to evidence when the system cannot be configured to skip it.
+2. **Deterministic grading wherever the outcome is consequential** — the Manchester JUnit framework
+   above. A rubric that is code has a reproducible audit trail; a model's judgement does not.
+3. **Mastery estimation with declared uncertainty** — [evlo-malik/adaptive-mastery-engine](https://github.com/evlo-malik/adaptive-mastery-engine)
+   (MIT, `1,069 B`, `main`), a framework-independent TypeScript engine for uncertainty-aware mastery
+   and memory decay. 🟢 It reports uncertainty rather than a bare score, which is the input a
+   conformity assessment wants for an accuracy-and-limitations statement.
+4. **Leak-free evaluation of whatever model you fit** — [mad707/masar](https://github.com/mad707/masar)
+   (MIT, `1,083 B`, `main`) for BKT/IRT/PFA/DKT baselines under leak-free evaluation, cross-checked
+   against [hammasbuilds/knowledge-tracing](https://github.com/hammasbuilds/knowledge-tracing) (MIT,
+   `1,072 B`, `main`), which asks how much of deep KT's reported lead survives controls. 🔵 Use the
+   pair, not either alone: a conformity file needs a *defensible* accuracy claim, and two independent
+   baseline implementations disagreeing is information you want **before** an assessor finds it.
+5. **Regression-test the delivery surface** — [pisan-labs/student-journey-check](https://github.com/pisan-labs/student-journey-check)
+   (MIT, `1,068 B`, `main`) walks a test student through login, dashboard, lesson video, quiz and
+   certificate on a **Tutor LMS** site after a plugin update.
+
+🔴 **What makes it production-real:** `avalia-platform` is one author's MIT repo at low single-digit
+stars. Treat it as a **reference architecture for the oversight requirement**, and expect to
+re-implement its validation loop in whatever stack the client already runs.
+
+### 🟢 Recipe `647-R3` — a curriculum-grounded national tutor, MCP-native, offline-capable
+
+**The engagement it answers.** APAC and LATAM, `647-K`: Vietnam's education deadline lands around
+`2027-09-01`, the earliest binding one anywhere; LATAM shows `87 %` institutional AI use against
+`25 %` governance and `55 %` with no AI budget. Both want a tutor grounded in a **named national
+curriculum**, cheap to run, and auditable.
+
+**Wire it as:**
+
+1. **Curriculum grounding** — [tanviruchahs2580/Bangla-GPT-APP](https://github.com/tanviruchahs2580/Bangla-GPT-APP)
+   (MIT, `1,084 B`, `main`, **Bangladesh**) is a Bangla-first tutor grounded in the NCTB national
+   curriculum on FastAPI + React. 🟢 Take the **grounding pattern** — tutor answers bounded by the
+   national curriculum corpus — and swap the corpus. That bound is what a ministry buys and what
+   makes the output reviewable.
+2. **The LMS as a tool surface, not a UI** — [studiomeyer-io/mcp-academy](https://github.com/studiomeyer-io/mcp-academy)
+   (MIT, `1,068 B`, 🔴 branch `master`) exposes next-lesson, quiz, review, certificate and tutor as
+   **MCP tools**, so any MCP-capable agent drives the course without scraping. Compare
+   [sepehr071/faradars-mcp](https://github.com/sepehr071/faradars-mcp) (MIT, `1,071 B`, `main`) for
+   the read-only shape over an existing course catalogue.
+3. **Prerequisite sequencing from failures** — [Victoroide/axiom-engine](https://github.com/Victoroide/axiom-engine)
+   (MIT, `1,067 B`, `main`), a Go service turning failed assessment topics into prerequisite-ordered
+   study plans over a concept graph. Pair with [2422725977/exam-diag](https://github.com/2422725977/exam-diag)
+   (MIT, `1,064 B`, `main`), which names the root-cause concept behind each wrong answer:
+   `exam-diag` diagnoses, `axiom-engine` sequences the remedy.
+4. **Run it where there is no connectivity** — [themakerrobot/edge-lab](https://github.com/themakerrobot/edge-lab)
+   (Apache-2.0, `11,358 B`, `main`) runs 16 vision and language models, Blockly and Python **fully
+   offline**; [kalebehai/localnexus-ed](https://github.com/kalebehai/localnexus-ed) (MIT, `1,071 B`,
+   `main`) is the offline-first school platform around it. 🔵 For a graded, deployed offline
+   requirement today, the held incumbent **Kolibri** (MIT) is still the answer — these two are the
+   permissive *AI-capable* edge, which Kolibri is not.
+5. **Serve many client estates from one deployment** — [euron-sde-team/euron-open-multi-tenant-lms](https://github.com/euron-sde-team/euron-open-multi-tenant-lms)
+   (MIT, `1,145 B`, `main`): operator console over tenants, tenant admin, learner tier. The
+   multi-tenant shape almost no open LMS ships.
+6. **Teacher-training content, already in Spanish** — [kapumota/CC-0F4](https://github.com/kapumota/CC-0F4)
+   (Apache-2.0, `11,357 B`, `main`) is a full university course on agentic AI and multimodal
+   retrieval with runnable notebooks. 🟢 For the LATAM governance gap, the enablement half of the
+   mandate has a permissive Spanish-language curriculum off the shelf.
+
+🔴 **What makes it production-real:** `axiom-engine` and `exam-diag` are `0★`; the concept graph in
+each is small and will need the client's own curriculum graph. Scope that as the first sprint, not
+as configuration.
+
+### 🔴 The one-line correction every recipe on this page needs, restated
+
+`645-B` measured `69 of 203` published addresses — **`34.0 %`** — as **not** on `main`, and this
+pass adds three more (`MAPS-research/kiwi` on `development`, `studiomeyer-io/mcp-academy` and
+`espinafr/verifica` on `master`). 🔵 `git clone` is unaffected because it resolves the default branch
+itself. **Anything that builds a URL or pins a ref is wrong on a third of this base's addresses**
+unless it resolves the branch first:
+
+```
+BR=$(git ls-remote --symref https://github.com/<owner>/<repo> HEAD \
+     | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+# then: raw.githubusercontent.com/<owner>/<repo>/$BR/...
+```
+
+🔴 And `646-J`'s sharper edge still holds: `openeducat/openeducat_erp`'s default branch is the bare
+version `19.0`, so a hardcoded branch there does not fail loudly — it **silently keeps building the
+old major**.
+
 ## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — **🟢 TWO RECIPES BUILT ONLY FROM ROWS THIS PASS BYTE-READ, PLUS THE ONE-LINE CORRECTION EVERY EXISTING RECIPE IN THIS FILE NEEDS**
 
 ### 🔴 `646-H` — the correction that applies to every recipe already on this page

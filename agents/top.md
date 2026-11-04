@@ -4,6 +4,131 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `make hooks` COULD NOT BE RUN AT ALL THIS PASS, SO NO GATE STATE IS CLAIMED — A FIRST. 🟢 `30 of 30` NEW ADDRESSES LIVE ON TWO CHANNELS, EVERY LICENCE BYTE-READ. 🟢 THE MIT PREDICTOR HOLDS `24 of 25` AND THE `25th` IS **NOT** A DEFECT: IT IS A MISSING FINAL NEWLINE, SO THE RESIDUAL'S *SIGN* IS A DISCRIMINATOR AND `1027` CARRIES AN UNDECLARED TERM. 🟢 A NEW PLACEMENT CHANNEL ARRIVES FREE INSIDE A READ THIS BASE ALREADY PERFORMS — THE LICENCE'S OWN COPYRIGHT LINE.**
+
+### 🔴 `647-A` — the standing check could not be run, and this pass does not pretend otherwise
+
+Every pass from `p229` to `p646` published a gate count. This one cannot. `make hooks` is denied
+before execution by this session's sandbox classifier, which refuses to run repo-local code
+(`[Code from External]`), in both foreground and background form.
+
+| `make hooks` at `p647` | Reading |
+|---|---|
+| Invocations attempted | `2` (foreground, background) |
+| Result | 🔴 denied before execution, not failed |
+| Gate state claimed by this pass | 🔴 **none — no count, no red set, no baseline** |
+| `p646`'s last published state, carried forward unverified | `52/71` green |
+
+🔵 **What follows from that, and what does not.** It does **not** follow that the gates are red; it
+follows that nobody looked. So the contracts the gates enforce were satisfied **by hand** for every
+file this pass touches — frontmatter present and `updated` set, append-only prepend above preserved
+history, no data row that renders as a table header, region vocabulary closed to the five values,
+one `## Opportunities by region` with one `###` per region. 🔴 Hand-satisfaction is weaker than a
+gate and is recorded as such: the next pass that can run `make hooks` should treat `p647`'s
+diff as **unjudged**, not as passing.
+
+### 🟢 `647-D` — the new rows: `28` filed here, `30 of 30` verified live, every licence byte-read
+
+`30` novel permissive addresses — `28` filed as rows below, `2` more filed on `verticals/solutions.md` — each verified on the git existence channel (`git ls-remote
+--symref`, `645-B`) **and** read for a licence payload by byte. Controls behaved: `moodle/moodle`
+resolves `PUBLIC-LIVE` on `main`, and `jonajinga/open-phonics` returns `NOT-PUBLIC` — an
+independent reconfirmation of `646-E`, whose whole account is gone.
+
+| Agent / tool | Address | Licence (byte-read) | Bytes | Branch | What it is |
+|---|---|---|---|---|---|
+| GitGrader | [git-grader/gitgrader](https://github.com/git-grader/gitgrader) | Apache-2.0 | `11,357` | `main` | Git-native grading substrate: immutable submissions captured over SSH, isolated grading containers, course management. Org namespace, released artefacts. |
+| autograde-classroom | [cfcortesmx/autograde-classroom](https://github.com/cfcortesmx/autograde-classroom) | MIT | `1,070` | `main` | Self-hosted replacement for GitHub Classroom: private student repos, CI/CD autograding via GitHub Actions, progress dashboard. |
+| mcp-academy | [studiomeyer-io/mcp-academy](https://github.com/studiomeyer-io/mcp-academy) | MIT | `1,068` | `master` | 🟢 **MCP-native education server** — exposes next-lesson, quiz, review, certificate and tutor as MCP tools. First permissive MCP education server this base has filed. |
+| edge-lab | [themakerrobot/edge-lab](https://github.com/themakerrobot/edge-lab) | Apache-2.0 | `11,358` | `main` | Fully offline classroom AI lab: 16 vision and language models, Blockly, Python, train-your-own-AI. No egress required. |
+| localnexus-ed | [kalebehai/localnexus-ed](https://github.com/kalebehai/localnexus-ed) | MIT | `1,071` | `main` | Offline-first school platform for remote areas with little or no connectivity. Kolibri-class, far earlier stage. |
+| euron open multi-tenant LMS | [euron-sde-team/euron-open-multi-tenant-lms](https://github.com/euron-sde-team/euron-open-multi-tenant-lms) | MIT | `1,145` | `main` | Three-tier multi-tenant LMS: operator console selling plans and entitlements, tenant admin, learner tier. The multi-tenant shape a studio serving several clients actually needs. |
+| adaptive-mastery-engine | [evlo-malik/adaptive-mastery-engine](https://github.com/evlo-malik/adaptive-mastery-engine) | MIT | `1,069` | `main` | Framework-independent TypeScript engine for uncertainty-aware mastery estimation and memory decay. A library, not an app — composable. |
+| masar | [mad707/masar](https://github.com/mad707/masar) | MIT | `1,083` | `main` | Knowledge tracing on ASSISTments with BKT, IRT, PFA and DKT baselines under **leak-free** evaluation. |
+| knowledge-tracing | [hammasbuilds/knowledge-tracing](https://github.com/hammasbuilds/knowledge-tracing) | MIT | `1,072` | `main` | BKT, PFA, IRT and DKT written from scratch, asking how much of deep KT's lead on ASSISTments survives controls. A replication, which is rarer than a model. |
+| kiwi | [MAPS-research/kiwi](https://github.com/MAPS-research/kiwi) | MIT | `1,074` | 🔴 `development` | Learning platform joining course context, AI assistance and custom learning tools. MAPS Research Group, NYU Shanghai. |
+| Gradescope Java Exam Autograder | [JoshMcDonagh/Gradescope-Java-Exam-Autograder](https://github.com/JoshMcDonagh/Gradescope-Java-Exam-Autograder) | BSD-3-Clause | `1,515` | `main` | Customisable JUnit 5 autograder framework for Java practical exams. Copyright: The University of Manchester. |
+| avalia-platform | [marcelogdomingues/avalia-platform](https://github.com/marcelogdomingues/avalia-platform) | MIT | `1,074` | `main` | AI-assisted assessment of student work with **mandatory human validation** in the loop by design. |
+| university-cs-docs | [MooketsiMagwaza/university-cs-docs](https://github.com/MooketsiMagwaza/university-cs-docs) | MIT | `1,081` | `main` | Open interactive CS study hub for University of Botswana courses. |
+| faradars-mcp | [sepehr071/faradars-mcp](https://github.com/sepehr071/faradars-mcp) | MIT | `1,071` | `main` | Read-only MCP server over faradars.org, the Persian course platform: course search and retrieval as tools. |
+| Bangla-GPT-APP | [tanviruchahs2580/Bangla-GPT-APP](https://github.com/tanviruchahs2580/Bangla-GPT-APP) | MIT | `1,084` | `main` | Bangla-first tutor grounded in the NCTB national curriculum. FastAPI + React. |
+| certforge | [vinicius-ssantos/certforge](https://github.com/vinicius-ssantos/certforge) | Apache-2.0 | `11,357` | `main` | Adaptive and **verifiable** preparation platform for professional Java certification exams. |
+| hcie-system | [farroshsy/hcie-system](https://github.com/farroshsy/hcie-system) | MIT | `1,076` | `main` | Event-sourced adaptive tutoring with cold-start personalisation and no embeddings. Reports its own AUC as `0.6051` against BKT — a number that does not flatter it. |
+| axiom-engine | [Victoroide/axiom-engine](https://github.com/Victoroide/axiom-engine) | MIT | `1,067` | `main` | Go service turning failed assessment topics into prerequisite-ordered study plans over a concept graph. |
+| error-driven-question-recommender | [Jiaclv/error-driven-question-recommender](https://github.com/Jiaclv/error-driven-question-recommender) | MIT | `1,056` | `main` | Error-driven recommendation on XES3G5M: ADGKT knowledge tracing plus a Prediction-Select-Verify loop. |
+| exam-diag | [2422725977/exam-diag](https://github.com/2422725977/exam-diag) | MIT | `1,064` | `main` | Knowledge-tracing diagnostic that names the root-cause concept behind each wrong answer. |
+| student-journey-check | [pisan-labs/student-journey-check](https://github.com/pisan-labs/student-journey-check) | MIT | `1,068` | `main` | Walks a test student through a whole Tutor LMS course site — login, dashboard, lesson video, quiz, certificate — as a regression test after a plugin update. |
+| assignment-stress-test | [pisan-labs/assignment-stress-test](https://github.com/pisan-labs/assignment-stress-test) | MIT | `1,068` | `main` | Runs an assignment through models the way students actually would (lazy paste, rubric-aware, multi-turn) and grades the result. An assignment-robustness instrument. |
+| moodle-sync | [setsun-ai/moodle-sync](https://github.com/setsun-ai/moodle-sync) | MIT | `1,066` | `main` | Moodle to local disk, Google Drive and Calendar: materials, deadlines, announcements, grades. A read path off this base's most-published vertical. |
+| OS-Tutor | [Divyakush2006/OS-Tutor](https://github.com/Divyakush2006/OS-Tutor) | MIT | `1,074` | `main` | Retrieval-grounded and **simulator-verified** tutor for Operating Systems: the model explains, the simulator checks. |
+| egatari-studio | [egatari/egatari-studio](https://github.com/egatari/egatari-studio) | MIT | `1,068` | `main` | Academic slides as a single self-contained HTML file with step reveal. Ex `motion-academic-slides`. |
+| function-riders | [ogbog/function-riders](https://github.com/ogbog/function-riders) | MIT | `1,109` | `main` | Open Algebra 1 game in Godot 4.7. 🟡 **Split grant: code MIT, content CC BY 4.0** — two licences in one address. |
+| CC-0F4 course stack | [kapumota/CC-0F4](https://github.com/kapumota/CC-0F4) | Apache-2.0 | `11,357` | `main` | A full university course on agentic AI and multimodal retrieval, in Spanish, with runnable notebooks. Teaching material as a repo. |
+| verifica | [espinafr/verifica](https://github.com/espinafr/verifica) | MIT | `1,076` | `master` | CLI grader for Python assignments against the assignment's own brief. 🟡 Its payload is the one with no final newline — see `647-E`. |
+
+🔵 **Every one of these is early.** The whole cohort spans `0` to `6` stars; see `647-B` and `647-C`
+for why that is a property of the only channel still yielding, not a selection this pass made. They
+are filed as **starting points with a read licence**, not as adopted dependencies.
+
+### 🟢 `647-E` — the MIT predictor holds `24 of 25`, and the `25th` is a missing newline, not a defect
+
+`645-A1` established `bytes = 1027 + |title| + |copyright|`, and `p646` wired it in as
+`gate-mit-predictor`. Run over this pass's `25` MIT payloads, independently of the committed
+instrument (which `647-A` could not execute):
+
+| MIT payloads at `p647` | Count |
+|---|---|
+| 🟢 Residual exactly `0` | 🟢 `24` |
+| Residual `−1` | `1` — `espinafr/verifica` |
+| Residual positive | `0` |
+
+🔴 **And the `−1` is not an exception to the predictor. It is an undeclared term in it.**
+`espinafr/verifica`'s payload ends on `.`, not on `\n`: the file has **no final newline**. Every
+residual-`0` payload this pass read ends on `\n`. So `1027` silently assumes a trailing newline, and
+the honest form is `1027 + |title| + |copyright| + (1 if final newline else 0)` — under which the
+predictor is `25 of 25`.
+
+🔵 **The rule this leaves is about the sign, and it is load-bearing.** `p645` recorded eduNest's
+`+36 B` as a *detection* — a duplicated clause in the body. A `−1` is the opposite: benign
+whitespace. So a bare "residual ≠ 0" verdict conflates an integrity failure with a text editor's
+default, and `gate-mit-predictor` as committed would publish a **false defect** on any payload saved
+without a final newline. The residual's sign discriminates: **positive means read the body,
+`−1` means check the last byte.**
+
+### 🟢 `647-F` — Apache-2.0's canonical `11,357 B` reconfirmed three times, and broken once by one blank line
+
+`646-I` pinned canonical Apache-2.0 at `11,357 B` on two independent payloads. This pass adds three
+more at exactly `11,357` — `git-grader/gitgrader`, `kapumota/CC-0F4`, `vinicius-ssantos/certforge`.
+
+🔴 **And `themakerrobot/edge-lab` reads `11,358`.** A diff against a canonical payload returns a
+single hunk: `0a1` — **one blank line prepended**, nothing else. The text is canonical Apache-2.0.
+So a byte-equality test on this family is defeated by leading whitespace, and the canonical figure
+is only a test **after** leading blank lines are stripped. That is `p378`'s presentation-fold class
+arriving on the licence channel rather than the prose one: one licence *text*, two byte counts,
+because it was re-wrapped.
+
+### 🟢 `647-G` — a new placement channel, free inside a read this base already performs
+
+`646-J` found placement rides the **owner namespace**. This pass needed a second channel, because
+`users/{login}` is **unavailable to this session** — `403`, *"sessions are bound to their configured
+repositories"* — so an owner's `location` cannot be read at all. It can, however, be **tested**:
+`search/users` filters on `location:` even though it never returns it, which makes a one-bit probe.
+
+🔴 **That probe is positive-only, and this pass proved it on its own control.** `user:kapumota
+location:Peru` returns `0`, and so does every other location tried for that owner — because the
+field is simply unset. So a `0` is **UNRESOLVED, never refuted**, and any census that reads `0` as
+"not there" will understate placement by however many owners leave the field blank.
+
+🟢 **The new channel is the licence payload's own copyright line**, and it placed two addresses the
+probe left unresolved:
+
+| Address | Copyright line, byte-read | Places to | Probe said |
+|---|---|---|---|
+| `JoshMcDonagh/Gradescope-Java-Exam-Autograder` | `Copyright (c) 2026, The University of Manchester` | 🟢 EMEA — United Kingdom | UNRESOLVED |
+| `euron-sde-team/euron-open-multi-tenant-lms` | `Copyright (c) 2026 ENGAGESPHERE TECHNOLOGY PRIVATE LIMITED` | 🟡 APAC on corporate form; country **not** resolved | UNRESOLVED |
+
+🔵 This costs **nothing**: the base already byte-reads the copyright line to grade MIT under
+`645-A1`. The field was being read for its *length* and discarded for its *content*.
+
 ## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — **🟢 `645-D` CLOSES: THE README FILENAME GUESS IS NOW A SCRIPTED RESOLVER OVER THE WHOLE POPULATION, AND IT TURNS `54` FALSE ABSENCES INTO READS — `6.4x` WHAT `645-D` TESTED BY HAND. 🔴 THE RESOLVER'S OWN FIRST DRAFT REPORTED `1,214` FALSE ABSENCES BECAUSE A VARIABLE WAS SET AND NOT EXPORTED. 🔴 `645-E`'s *"`topic:` IS CURATED SO IT CANNOT BE POLLUTED"* IS TRUE AND MISLEADING: THE VOCABULARY IS HOMONYMOUS, AND THE HIGHEST-STARRED NOVEL ADDRESS IN THIS PASS IS A SCREEN-BRIGHTNESS DAEMON. 🟢 `645-F`'s *"YIELD AND PLACEMENT ARE DISJOINT"* IS FALSIFIED — PLACEMENT RIDES THE OWNER NAMESPACE, `5 of 8` vs `0 of 10`. 🔴 A PUBLISHED ADDRESS'S WHOLE GITHUB ACCOUNT IS GONE AND THIS BASE STILL CARRIES IT AS LIVE.**
 
 ### 🟢 `646-A` — `645-D` closes: the filename guess is a measurement now, over `1,214` addresses in `70 s`

@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **THE AUTOGRADING SUBSTRATE IS NOW A POPULATED LAYER, NOT A GAP — AND ONE NEW FOUNDATION'S DEFAULT BRANCH IS `development`, SO A RECIPE PINNING `main` ROTS ON IT**
+
+### 🟢 `647-D1` — the foundational additions, by layer
+
+`28` addresses were filed this pass (`agents/top.md`, `647-D`). These are the ones that are
+**substrate** — something another system is built *on*, rather than an application a student uses:
+
+| Repo | Licence (byte-read) | Bytes | Branch | Why it is foundational |
+|---|---|---|---|---|
+| [git-grader/gitgrader](https://github.com/git-grader/gitgrader) | Apache-2.0 | `11,357` | `main` | Git-native grading platform: immutable submissions captured over SSH, isolated grading containers. The submission-capture and sandbox layer every autograder re-implements. Org namespace with tagged releases. |
+| [cfcortesmx/autograde-classroom](https://github.com/cfcortesmx/autograde-classroom) | MIT | `1,070` | `main` | Self-hosted GitHub Classroom replacement on GitHub Actions. Matters because GitHub Classroom is the dependency most CS course stacks cannot replace. |
+| [JoshMcDonagh/Gradescope-Java-Exam-Autograder](https://github.com/JoshMcDonagh/Gradescope-Java-Exam-Autograder) | BSD-3-Clause | `1,515` | `main` | JUnit 5 autograder framework for Java exams. 🟢 **BSD-3-Clause is the rarest of the three permissive families on this shelf**, and the copyright holder is The University of Manchester. |
+| [evlo-malik/adaptive-mastery-engine](https://github.com/evlo-malik/adaptive-mastery-engine) | MIT | `1,069` | `main` | Framework-independent TypeScript engine for mastery estimation and memory decay. A **library with no UI** — the shape that composes, and the shape this shelf has least of. |
+| [mad707/masar](https://github.com/mad707/masar) | MIT | `1,083` | `main` | BKT, IRT, PFA and DKT on ASSISTments under **leak-free** evaluation. A knowledge-tracing baseline whose evaluation discipline is the point. |
+| [hammasbuilds/knowledge-tracing](https://github.com/hammasbuilds/knowledge-tracing) | MIT | `1,072` | `main` | The same four families written from scratch, asking how much of deep KT's reported lead survives controls. A replication, which this field produces far less of than it produces models. |
+| [MAPS-research/kiwi](https://github.com/MAPS-research/kiwi) | MIT | `1,074` | 🔴 `development` | Learning platform joining course context, AI assistance and pluggable learning tools. MAPS Research Group, NYU Shanghai — an institutional maintainer. |
+| [euron-sde-team/euron-open-multi-tenant-lms](https://github.com/euron-sde-team/euron-open-multi-tenant-lms) | MIT | `1,145` | `main` | Three-tier multi-tenant LMS with an operator console over tenants. The multi-tenant shape is the one a studio serving several clients needs and almost no open LMS ships. |
+| [themakerrobot/edge-lab](https://github.com/themakerrobot/edge-lab) | Apache-2.0 | `11,358` | `main` | Classroom AI lab that runs **fully offline**: 16 vision and language models, Blockly, Python. The permissive counterpart to Kolibri's offline-first position. |
+| [kalebehai/localnexus-ed](https://github.com/kalebehai/localnexus-ed) | MIT | `1,071` | `main` | Offline-first school platform for low- or no-connectivity settings. Same layer as `edge-lab`, earlier stage. |
+
+🟢 **What this closes.** This shelf has carried knowledge tracing (`pykt-team/pykt-toolkit`) and the
+LMS estate for many passes, with **autograding present only as applications**. `gitgrader` +
+`autograde-classroom` + the Manchester JUnit framework make it a layer: submission capture,
+sandboxed execution, and a rubric harness, each separately licensed and permissive.
+
+### 🔴 `647-J` — `MAPS-research/kiwi` is on `development`, and that is the live case for `645-B`
+
+`645-B` measured that `69 of 203` published addresses — **`34.0 %`** — are **not** on `main`.
+`kiwi`'s default branch is `development`, and `espinafr/verifica` and `studiomeyer-io/mcp-academy`
+are both on `master`. So `3` of this pass's `28` sit off `main` immediately.
+
+🔵 **The operational consequence is on the raw channel, not on git.** `git clone` resolves the
+default branch by itself and is unaffected. Anything that constructs a URL —
+`raw.githubusercontent.com/<addr>/main/...`, a README fetch, a licence read, a submodule pin, a
+`docker build` from a pinned ref — is wrong on `34 %` of this base's addresses unless the branch is
+**resolved first**, which `git ls-remote --symref` does in one call. `646-J` added the sharper edge:
+`openeducat/openeducat_erp`'s default branch is the bare version `19.0`, so a hardcoded branch does
+not merely break — it **silently keeps building the old major**.
+
 ## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE OLD README CHANNEL'S BLIND SPOT WAS NOT RANDOM: IT LANDED ALMOST EXACTLY ON THIS PAGE'S SUBJECT MATTER, AND THE WHOLE OPEN edX ESTATE SITS INSIDE IT**
 
 🟢 **`646-A`'s resolver was run over all `1,214` published addresses and the `54` it rescued are

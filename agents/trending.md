@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `2026-11-04` — `p647` — 🔴 the star-floor channel is EXHAUSTED for this industry, and the only channel still yielding has a measured ceiling of `6` stars
+
+**The week's new permissive supply: `28` addresses, all live, all licence byte-read.** The full
+cohort with licences and branches is on `agents/top.md` under `647-D`; this page records what the
+*channels* did, because this week the channel result is the finding.
+
+### 🔴 `647-B` — the star-floor channel returns nothing new for education
+
+Twelve queries, six on curated `topic:` vocabulary with star floors and six on
+`in:name,description` keywords with `stars:>100..300` and `pushed:>2026-08-01`:
+
+| Star-floor census, `2026-11-04` | Count |
+|---|---|
+| Result rows returned | `112` |
+| Unique addresses | `100` |
+| 🔴 Already held at `HEAD` | 🔴 **`97`** |
+| Novel | `3` |
+| 🔴 Novel **and** on-domain | 🔴 **`0`** |
+
+🔴 **All three novel addresses are off-domain, and all three match for the same reason:** `tutor`
+is a substring of `tutorial`. `MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials` (`2,946★`,
+licence `nil`), `DataTalksClub/production-ai-agents-for-media-generation` (`231★`, MIT) and
+`amitshekhariitbhu/ai-agents-tutorial` (`208★`, Apache-2.0) are AI-agent **tutorials**, not
+education tools. That is `644-A`'s token pollution, recurring one layer up: `646-H` found the
+*curated topic vocabulary* polluted by homonymy, and this pass finds the *keyword* layer polluted by
+substring — the same defect, two different channels, and neither is fixed by a better word list.
+
+🔵 **So the reading is not "there is no supply".** It is that **this base has saturated the
+substantial-supply channel for education**: `97 of 100` already held is a coverage result, and a
+good one. The top of the market is read.
+
+### 🟢 `647-C` — the update-sorted channel still yields, and its ceiling is `6` stars
+
+`645-E` found that sorting by `updated` instead of imposing a star floor surfaces this month's work,
+because a star floor is a proxy for age. Re-run over `10` education topics at `40` each:
+
+| Update-sorted harvest, `2026-11-04` | Count |
+|---|---|
+| Rows returned (`10` topics x `40`) | `400` |
+| Unique addresses | `380` |
+| Permissive (MIT / Apache-2.0 / BSD) | `160` |
+| 🟢 **Novel and permissive** | 🟢 **`98`** |
+| 🔴 Highest star count in the whole novel cohort | 🔴 **`6`** |
+| Modal star count | `0`–`1` |
+
+🔴 **That ceiling is the new number.** `p645` reported its largest genuine find at `26★`; this pass
+cannot reach `7`. The channel is open **only** at the zero-star end, so every pass that works it is
+choosing between filing early-stage addresses and filing nothing. This pass files `28` of the `98`
+and says plainly that they are early: a read licence and a working idea, not an adopted dependency.
+
+🔵 **What the triage selected on, since stars could not do it:** org or lab namespace over personal
+account, infrastructure over application, a library over a demo, an in-repo institutional anchor,
+and a claim the repo exposes itself to — `mad707/masar`'s *leak-free* evaluation,
+`hammasbuilds/knowledge-tracing` asking how much of deep KT's lead survives controls,
+`farroshsy/hcie-system` publishing its own AUC at `0.6051`, `Divyakush2006/OS-Tutor` verifying the
+tutor against a simulator, `marcelogdomingues/avalia-platform` requiring human validation by design.
+
+### 🔴 `647-L` — this pass's own leg scorer reported `HELD` on three facts it never tested
+
+The web-leg scorer greps the eight shelves per fact. Its first draft read `HELD` for *every* fact,
+including three whose patterns ended in a `|` — a delimiter artefact. In ERE an empty alternation
+branch matches the **empty string**, so those three patterns matched **every line of every shelf**:
+`166,902` lines "matched" for a single fact.
+
+🔵 It was caught by the implausible line count, then pinned by adding a nonsense control
+(`zzqqxx-not-a-fact-p647`, which must return `NOT-HELD`) and re-running. 🔴 **This is `646-B`'s rule
+re-earned at one remove:** `646-B` was an instrument whose failure mode was a plausible *negative*,
+and it now has a `SELFTEST` asserting a known positive. This was an instrument whose failure mode is
+a plausible **positive** — a saturation result is exactly what fourteen prior passes led one to
+expect — and nothing downstream could have told a real `31 of 32` from a broken regex. **An
+instrument needs the control that contradicts its expected answer, whichever sign that is.**
+
 ## 🆕 `2026-11-04` — `p646` — the week's new permissive supply, and the first measurement of where this channel places
 
 🔵 **Appended, not rewritten.** Same channel as `p645` (`topic:` + `sort=updated`), run `10` topics

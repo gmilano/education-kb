@@ -4,6 +4,190 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p647` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL A FIFTEENTH TIME: `31 of 32` FACTS ALREADY HELD, AND THE ONE UNHELD FACT IS A STATISTIC ITS OWN PUBLISHER SAID TO VERIFY. 🟢 THE SUPPLY HALF PLACES `9 of 30`, AND LATAM SUPPLY IS **NOT** NIL — ONE ADDRESS CONFIRMED FROM INSIDE ITS OWN REPO.**
+
+### 🔴 `647-K` — the mandated regional legs, scored with a denominator
+
+All eight mandated legs ran: four global and one per region. Each extracted fact was grepped
+against the eight live shelves. Full scoring in
+`evidence/websearch-legs.2026-11-04-p647.tsv`.
+
+| Leg | Facts scored | Already held at `HEAD` | Unheld | Adoptable |
+|---|---|---|---|---|
+| Global (`4` legs) | `6` | `6` | `0` | `0` |
+| North America | `7` | `7` | `0` | `0` |
+| EMEA | `6` + `1` declared gap | `6` | `0` | `0` |
+| APAC | `7` | `6` | `1` | 🔴 `0` — see below |
+| LATAM | `7` | `7` | `0` | `0` |
+| **Total** | **`32`** | 🔴 **`31`** | `1` | 🔴 **`0`** |
+
+🔴 **The single unheld fact is not adoptable.** The APAC leg returned *"nearly 45 % of AI-powered
+EdTech platforms operating in Asia-Pacific were found to lack adequate data protection measures"* —
+and the same result flagged it as **not from a primary source and to be checked before use**. This
+base does not file a statistic on that footing. So effective yield is `0 of 32`, the **fifteenth
+consecutive effective nil**, and `p645`'s and `p646`'s recommendation stands: **quarterly, not
+hourly.** This pass's denominator (`32`) is smaller than `p646`'s (`43`), so this is not a new
+largest — it is a fourth consecutive pass recording the same saturation at a different size.
+
+🔴 **And on two legs the shelf is measurably *ahead* of the web** — a third consecutive pass where
+adopting the leg output would have **regressed** the base:
+
+| Fact | Web leg says | Shelf holds | Direction |
+|---|---|---|---|
+| `HKUDS/DeepTutor` stars | `~48,268` | `54,833` | 🔴 leg is stale by `~6,500` |
+| `THU-MAIC/OpenMAIC` stars | `~42K` | `42,630` | 🔴 leg is coarser |
+| UNESCO LAC Observatory launch | "April 2026" | `2026-04-14` | 🔴 leg is coarser |
+
+### 🔵 `647-M` — the EMEA leg's Africa gap, written down, and then answered from the supply side
+
+🔴 **The EMEA leg returned no Africa-specific regulation or adoption data at all.** That is recorded
+as a **declared gap** rather than left as silence, because an unwritten gap is indistinguishable
+from coverage. The leg surfaced EU, UK and Gulf material (UAE KHDA guidance to private schools) and
+nothing south of the Sahara.
+
+🟢 **The supply half answered what the demand half could not.**
+[MooketsiMagwaza/university-cs-docs](https://github.com/MooketsiMagwaza/university-cs-docs) — MIT,
+`1,081 B` byte-read — is an open CS study hub for **University of Botswana** courses, placed to EMEA
+on **two independent channels**: the owner-location probe returns `location:Botswana` = `1`, and the
+repository's own description names the institution. 🔵 One address is not an adoption picture, and
+it is not presented as one. It is the first Africa-anchored address this base has filed, and it
+means the gap is in the *demand* channel, not in the territory.
+
+### 🟢 `647-G1` — supply placement: `9 of 30`, and the channel that paid is one the base already runs
+
+| Placement, `2026-11-04` | Count |
+|---|---|
+| Addresses verified and filed | `30` |
+| 🟢 Placed to a region | 🟢 **`9`** (`30.0 %`) |
+| Of those, confirmed on two independent channels | `1` |
+| Of those, placed by the **licence copyright line** — a new channel | 🟢 `2` |
+| Left `Global` as **UNRESOLVED**, named with the reason | `21` |
+
+Against `646-J`'s `5 of 8` (`62.5 %`) and `645-F`'s `0 of 10` (`0 %`), the placement rate is real but
+not monotone — it tracks how many addresses in a cohort have an **institutional** owner, which the
+zero-star tail mostly does not.
+
+## Opportunities by region
+
+### North America
+
+🔵 **Demand:** fully held, `7 of 7` facts. The actionable structure is unchanged and now
+corroborated a second time: `134` AI-in-education bills across `31` states in `2026`, with hard
+dates that create procurement windows — **North Carolina Session Law 2026-41** requires a model
+policy by `2026-12-31`, local policies by `2027-06-30` and teacher training by `2028-06-30`;
+**Maryland SB 720** requires district AI policies and a designated AI coordinator. Gallup puts
+teacher AI use at `60 %` while most districts still lack formal student-facing policy.
+
+🟢 **The opportunity is the gap between those two facts**, and it is a *policy-and-enablement*
+engagement before it is a build: a district needs a policy, a coordinator role, a training path and
+an audit trail by a statutory date. 🟢 **New this pass:** the permissive autograding layer
+(`gitgrader`, Apache-2.0 `11,357 B`; `autograde-classroom`, MIT `1,070 B`) makes a
+self-hosted, data-resident alternative to GitHub Classroom and Gradescope buildable — which is
+exactly what a district AI policy with a student-data-residency clause will ask for.
+
+🔵 **Supply placement: `0` of this pass's `30` confirmed to North America.** `pisan-labs` (two
+addresses, copyright *Yusuf Pisan*) is the likeliest candidate and is **deliberately not promoted** —
+no institution in the README, and the owner-location probe is unset. Named here so the next pass
+starts from it rather than re-deriving it.
+
+### EMEA
+
+🔵 **Demand:** `6 of 6` held, plus one declared gap. The EU AI Act treats education access and
+assessment as Annex III high-risk; the **Digital Omnibus** amendment moves stand-alone Annex III
+systems to `2027-12-02` and embedded systems to `2028-08-02`. The UK stays light-touch and
+principle-based, with £4 million committed for lesson planning and marking tools. The UAE's KHDA
+has issued explicit private-school guidance. Only `10 %` of `450+` surveyed institutions have
+formal AI guidelines; the European market reads `$2.64B` for `2026`.
+
+🟢 **The conformity-assessment obligation is the engagement.** Any system scoring, placing or
+admitting a student in the EU needs a conformity assessment before it goes to market, and the date
+is now far enough out (`2027-12-02`) that a build started in `2026` can be designed *for* it rather
+than retrofitted. 🟢 Two of this pass's finds are unusually well shaped for that:
+[marcelogdomingues/avalia-platform](https://github.com/marcelogdomingues/avalia-platform) (MIT,
+`1,074 B`, **Portugal**) makes **human validation mandatory by design** — which is the Article-14
+human-oversight posture expressed as architecture rather than as policy text — and
+[JoshMcDonagh/Gradescope-Java-Exam-Autograder](https://github.com/JoshMcDonagh/Gradescope-Java-Exam-Autograder)
+(BSD-3-Clause, `1,515 B`, **The University of Manchester**) is a rubric-deterministic grader, where
+a deterministic rubric is far cheaper to evidence to an assessor than a model's judgement.
+
+🟢 **Africa:** the demand leg is a declared nil (`647-M`). The first Africa-anchored supply address
+is `MooketsiMagwaza/university-cs-docs` (Botswana). 🔴 Treat the territory as **unmeasured**, not as
+empty — one repo is a foothold for the next pass's legs, not a market reading.
+🟡 **Iran:** [sepehr071/faradars-mcp](https://github.com/sepehr071/faradars-mcp) (MIT, `1,071 B`)
+wraps faradars.org, the Persian course platform, as MCP tools — evidence that the MCP integration
+pattern is being applied to non-Anglophone course estates first.
+
+### APAC
+
+🔵 **Demand:** `6 of 7` held; the unheld one is unsourced (`647-K`). The binding instruments are
+real and dated: **South Korea's AI Basic Act** in effect `2026-01-22`; **Vietnam's Law on Artificial
+Intelligence** in force `2026-03-01` with an `18`-month transition for education, which per `645-H`
+puts the education deadline around `2027-09-01` — **three months before the EU's `2027-12-02`**.
+China regulates by targeted rules; Australia, Japan and Singapore rely on voluntary frameworks.
+Ipsos Education Monitor `2026` shows support for *banning* AI rising in Japan (`21 %`→`29 %`),
+Australia (`47 %`→`52 %`) and South Korea (`27 %`→`31 %`). Fastest-growing region at `35.3 %` CAGR.
+
+🟢 **Vietnam is the first binding education deadline in the world, and it is the engagement date.**
+A compliance-and-conformity practice built for Vietnam ships before the EU work starts, and the
+artefacts transfer. 🔵 Note the tension that should shape positioning: adoption is fastest where
+public support for a ban is *rising*, so an APAC engagement needs a defensible transparency story,
+not only a capability story.
+
+🟢 **Supply placement is strongest here — `4` of this pass's `9`:**
+[MAPS-research/kiwi](https://github.com/MAPS-research/kiwi) (MIT, `1,074 B`, **NYU Shanghai**, branch
+`development`), [farroshsy/hcie-system](https://github.com/farroshsy/hcie-system) (MIT, `1,076 B`,
+**Indonesia**), [tanviruchahs2580/Bangla-GPT-APP](https://github.com/tanviruchahs2580/Bangla-GPT-APP)
+(MIT, `1,084 B`, **Bangladesh**, grounded in the NCTB national curriculum) and
+[euron-sde-team/euron-open-multi-tenant-lms](https://github.com/euron-sde-team/euron-open-multi-tenant-lms)
+(MIT, `1,145 B`, APAC on corporate form). 🟢 The Bangla address matters out of proportion to its
+star count: **a tutor grounded in a named national curriculum** is the localisation pattern a
+ministry engagement actually buys, and it is MIT.
+
+### LATAM
+
+🔵 **Demand:** `7 of 7` held — the adoption-outruns-governance picture is settled and this base has
+it at full precision. UNESCO IESALC: `87 %` of ~`200` higher-education institutions across `19`
+countries use AI in at least one area, ~`25 %` have a formal framework, `55 %` have no specific AI
+budget. Brazil (Cetic.br): `53 %` of school administrators use AI, `22 %` have guidelines. Chile and
+Brazil: over `50 %` of teachers using AI, under `10 %` of institutions with formal guidelines.
+Universidad de los Andes counts `716` AI regulatory instruments across `23` countries. The UNESCO
+**Observatory on AI in Education for LAC** launched `2026-04-14` at ECLAC, Santiago.
+
+🟢 **LATAM supply is NOT nil this pass, and this is the first time that can be said with a
+confirmation rather than an inference.**
+[vinicius-ssantos/certforge](https://github.com/vinicius-ssantos/certforge) — Apache-2.0, payload
+byte-read at exactly `11,357 B` — is placed to **Brazil** from inside its own repository: it ships a
+`README.pt-BR.md` and links it as *"Português (Brasil)"*. That is a content anchor, not a guess
+about a name.
+
+🔴 **And four further LATAM-plausible addresses are named and deliberately NOT promoted**, because
+the only evidence for them is name or language and `647-H` demonstrates that evidence mis-places:
+`kapumota/CC-0F4` (Apache-2.0 `11,357 B`; a Spanish-language university course on agentic AI, with a
+LATAM-convention term code `2026-2`, but **no institution named** in its README),
+`cfcortesmx/autograde-classroom`, `espinafr/verifica`, `Victoroide/axiom-engine`. 🔵 The governance
+gap is the engagement — `87 %` using, `25 %` governed, `55 %` unfunded is a *framework-and-enablement*
+mandate, and `kapumota/CC-0F4` is a ready Spanish-language agentic-AI curriculum for the
+teacher-training half of it, whatever country its author sits in.
+
+### Global
+
+🔵 **Demand:** `6 of 6` held. The qualitative consensus is stable across sources — AI in education
+is moving from pilots to embedded infrastructure, with governance and *proven instructional benefit*
+displacing broad personalisation claims, and the OECD recommending purpose-built educational AI over
+general-purpose tools. 🔴 Market sizing remains irreconcilable between sources (`$11.4B` for `2026`
+toward `$57B` by `2033` in one, "past `$12.5B` in `2026`" in another), and this base's own
+four-region decomposition (`641-E`) summed to `$9.84B` with the published global band as the
+outlier. **No global figure is adopted this pass.**
+
+🟢 **The cross-regional opportunity this pass creates is the permissive assessment stack**, because
+it is the one layer where a licence-clean option did not exist last week and now does:
+`gitgrader` (Apache-2.0) for submission capture and sandboxed execution, `autograde-classroom` (MIT)
+for distribution and CI grading, the Manchester JUnit framework (BSD-3-Clause) for the rubric
+harness, `adaptive-mastery-engine` (MIT) for mastery estimation, and `mcp-academy` (MIT) as the
+first permissive MCP-native education server. 🔴 Every one is between `0` and `6` stars — these are
+**starting points with a readable licence**, not adopted dependencies, and `647-B`/`647-C` explain
+why nothing mature and novel was available to file.
+
 ## 🆕 `p646` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE DEMAND HALF IS NIL ON `43 of 43` FACTS ACROSS ALL FOUR REGIONS, THE LARGEST DENOMINATOR THIS BASE HAS RUN. 🟢 THE SUPPLY HALF PAID, AND `5 of 8` NEW ROWS PLACE — ON METADATA THAT ARRIVES FREE WITH THE SEARCH RESULT.**
 
 ### 🔴 `646-F` — the mandated regional legs, scored with a denominator

@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `2026-11-04` — `p647` — 🔴 `97 of 100` star-floor results already held: the top of this market is read, and the novel tail tops out at `6` stars
+
+### 🔴 The two channels, side by side
+
+| Channel, `2026-11-04` | Unique addresses | Already held | Novel | Novel and on-domain | Max stars among novel |
+|---|---|---|---|---|---|
+| Star floor (`topic:` + `stars:>N`, `in:name,description` + `stars:>100..300`) | `100` | 🔴 `97` | `3` | 🔴 `0` | `2,946` — but off-domain |
+| Update-sorted (`topic:` x `10`, `sort=updated`) | `380` | `282` | 🟢 `98` permissive | 🟢 `98` | 🔴 `6` |
+
+🔵 **Read together these say one thing:** the two channels are **disjoint in star space**, not
+merely in yield. Above roughly `100★` this base is saturated for education; below `10★` it is not,
+and nothing is in between. A single census cannot see both, because the sort key *is* the filter —
+`sort=stars` ranks by accumulated age, `sort=updated` ranks by this week.
+
+### 🔴 The off-domain novel results, named, so nobody re-finds them as discoveries
+
+All three novel star-floor results matched because **`tutor` is a substring of `tutorial`**:
+
+| Address | Stars | Licence | Why it is off-domain |
+|---|---|---|---|
+| [MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials](https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials) | `2,946` | 🔴 `nil` | Agent tutorials — multi-agent systems, memory, planning. Not education software. No licence payload declared in metadata. |
+| [DataTalksClub/production-ai-agents-for-media-generation](https://github.com/DataTalksClub/production-ai-agents-for-media-generation) | `231` | MIT | A free course *about* building agents. Course **content**, not an education **tool**. |
+| [amitshekhariitbhu/ai-agents-tutorial](https://github.com/amitshekhariitbhu/ai-agents-tutorial) | `208` | Apache-2.0 | Step-by-step agent tutorial. Same class. |
+
+🔴 **`646-H` found homonymy in the curated `topic:` vocabulary** — `topic:lms` returning Logitech
+Media Server, and a screen-brightness daemon as the week's highest-starred novel address. This pass
+finds the **keyword** layer failing the same way by substring. 🔵 The generalisation worth keeping:
+*every* discovery channel this base has tried pollutes, each by a different mechanism, and the
+defect is never in the word list — it is that an education tool and a tutorial about agents are
+genuinely described by the same tokens. Only reading the repo separates them, which is why this
+base reads the repo.
+
+### 🟢 Trending, honestly: the three in-cohort signals worth a second look next week
+
+Not star velocity — nothing in this cohort has any. These are the addresses whose **shape** is
+unusual enough to be worth re-measuring:
+
+| Address | Licence | Signal to re-measure |
+|---|---|---|
+| [studiomeyer-io/mcp-academy](https://github.com/studiomeyer-io/mcp-academy) | MIT `1,068 B` | 🟢 The first **permissive MCP-native** education server this base has filed. `p645` found `3` MCP-adjacent tutors and all were AGPL-3.0, so they were found and not filed. If MCP becomes the integration surface for LMS-side agents, this is the licence-clean starting point. |
+| [git-grader/gitgrader](https://github.com/git-grader/gitgrader) | Apache-2.0 `11,357 B` | Org namespace, tagged releases, CI badge, container-isolated execution. The only new address this pass that already looks like infrastructure rather than a project. |
+| [evlo-malik/adaptive-mastery-engine](https://github.com/evlo-malik/adaptive-mastery-engine) | MIT `1,069 B` | A **framework-independent library** for mastery estimation. Composes into anything; `0★` is the wrong instrument for judging a library this young. |
+
 ## 🆕 `2026-11-04` — `p646` — 🔴 the curated channel IS polluted, and the highest-starred novel address this week is a screen-brightness daemon
 
 🔵 **Appended.** `p645` published, on this page, that with `topic:` *"the pollution does not occur,

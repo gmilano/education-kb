@@ -1,0 +1,26 @@
+payload	bytes	predicted_1027_plus_title_plus_copyright	residual	title_line	final_byte	verdict
+2422725977_exam-diag	1064	1064	0	MIT License	\n	residual-0
+Badvoic3_cedt-grader-vscode	1075	1075	0	MIT License	\n	residual-0
+Divyakush2006_OS-Tutor	1074	1074	0	MIT License	\n	residual-0
+Jiaclv_error-driven-question-recommender	1056	1056	0	MIT License	\n	residual-0
+MAPS-research_kiwi	1074	1074	0	MIT License	\n	residual-0
+MooketsiMagwaza_university-cs-docs	1081	1081	0	MIT License	\n	residual-0
+Victoroide_axiom-engine	1067	1067	0	MIT License	\n	residual-0
+cfcortesmx_autograde-classroom	1070	1070	0	MIT License	\n	residual-0
+egatari_egatari-studio	1068	1068	0	MIT License	\n	residual-0
+espinafr_verifica	1076	1077	-1	MIT License	.	residual--1-NO-FINAL-NEWLINE-benign
+euron-sde-team_euron-open-multi-tenant-lms	1145	1145	0	MIT License	\n	residual-0
+evlo-malik_adaptive-mastery-engine	1069	1069	0	MIT License	\n	residual-0
+farroshsy_hcie-system	1076	1076	0	MIT License	\n	residual-0
+hammasbuilds_knowledge-tracing	1072	1072	0	MIT License	\n	residual-0
+kalebehai_localnexus-ed	1071	1071	0	MIT License	\n	residual-0
+mad707_masar	1083	1083	0	MIT License	\n	residual-0
+marcelogdomingues_avalia-platform	1074	1074	0	MIT License	\n	residual-0
+ogbog_function-riders	1109	1109	0	MIT License	\n	residual-0
+pisan-labs_assignment-stress-test	1068	1068	0	MIT License	\n	residual-0
+pisan-labs_student-journey-check	1068	1068	0	MIT License	\n	residual-0
+quesal-com_quesal-vscode	1068	1068	0	MIT License	\n	residual-0
+sepehr071_faradars-mcp	1071	1071	0	MIT License	\n	residual-0
+setsun-ai_moodle-sync	1066	1066	0	MIT License	\n	residual-0
+studiomeyer-io_mcp-academy	1068	1068	0	MIT License	\n	residual-0
+tanviruchahs2580_Bangla-GPT-APP	1084	1084	0	MIT License	\n	residual-0

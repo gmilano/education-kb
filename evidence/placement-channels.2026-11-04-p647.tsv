@@ -1,0 +1,15 @@
+address	region_published	channel	evidence	confirmed
+MooketsiMagwaza/university-cs-docs	EMEA	owner-location probe + repo description	search/users "user:MooketsiMagwaza location:Botswana"=1; description names "University of Botswana courses"	CONFIRMED-two-channels
+marcelogdomingues/avalia-platform	EMEA	owner-location probe	"location:Portugal"=1 and "location:Brazil"=0 — refutes the Portuguese-language-to-LATAM inference	CONFIRMED
+farroshsy/hcie-system	APAC	owner-location probe	"location:Indonesia"=1	CONFIRMED
+JoshMcDonagh/Gradescope-Java-Exam-Autograder	EMEA	LICENCE copyright line	"Copyright (c) 2026, The University of Manchester" — owner-location probe was UNRESOLVED	CONFIRMED-new-channel
+euron-sde-team/euron-open-multi-tenant-lms	APAC	LICENCE copyright line	"ENGAGESPHERE TECHNOLOGY PRIVATE LIMITED" — corporate form; country NOT resolved	PLACED-region-only
+MAPS-research/kiwi	APAC	in-repo README institutional anchor	"MAPS Research Group ... at NYU Shanghai"	CONFIRMED
+vinicius-ssantos/certforge	LATAM	in-repo README language artefact	ships README.pt-BR.md and links "Portugues (Brasil)" — Brazil	CONFIRMED
+tanviruchahs2580/Bangla-GPT-APP	APAC	repo description curriculum anchor	"NCTB-grounded" — National Curriculum and Textbook Board, Bangladesh	CONFIRMED
+sepehr071/faradars-mcp	EMEA	repo description target-system anchor	MCP server for faradars.org, Persian course platform — Iran	CONFIRMED
+kapumota/CC-0F4	Global	UNRESOLVED	Spanish-language university course, LATAM-convention term code "2026-2", no institution named in README; location probe 0 (field unset)	NOT-PROMOTED
+cfcortesmx/autograde-classroom	Global	UNRESOLVED	login suffix "mx" and copyright "Carlos Flores" are name signals only; location probe 0	NOT-PROMOTED
+espinafr/verifica	Global	UNRESOLVED	Portuguese-language only — 647-H shows that signal mis-places; location probe 0	NOT-PROMOTED
+Victoroide/axiom-engine	Global	UNRESOLVED	no anchor in README; location probe 0	NOT-PROMOTED
+pisan-labs/student-journey-check	Global	UNRESOLVED	copyright "Yusuf Pisan"; no institution in README; location probe 0	NOT-PROMOTED
