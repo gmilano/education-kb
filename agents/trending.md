@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p653) — the assessment hole breaks after four passes, a 166★ tutor runs with no API key, and two different projects are called "OpenTutor"
+
+**Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks, commits and fork notices from the repository page via page fetch; **dependency obligations by reading `pom.xml` / manifests verbatim**. `curl` to `github.com` and `api.github.com` remain **HTTP 403** in this session and `gh api` is scoped away from these repositories, so neither was used.
+
+**Still unresolved for a second consecutive pass:** `huggingface.co` does not resolve under this session's network policy, so **OmniEdu's weight licence remains unread**. It is cheap to lift and was not lifted.
+
+### 🟢 Filed this pass — one row, and it is the first local-first-by-default agent on the shelf
+
+| Agent | Repo | Licence (payload) | Stars / forks / commits | Region | Signal |
+|---|---|---|---|---|---|
+| **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT (1,068 B, `Copyright (c) 2026 Zijin Zhang`) | **166** / 40 / 274 | Global (unplaced) | Block-based adaptive learning workspace. Ingests PDF/DOCX/PPTX **or pulls from Canvas LMS**, then generates structured notes, flashcards, quiz items and an adaptive tutor. **Ollama is the default provider** — README: *"no API keys required, no data leaves your machine"* — with OpenAI, Anthropic, DeepSeek, Gemini, Groq, vLLM, LM Studio, OpenRouter or any OpenAI-compatible endpoint as alternatives. **Ships FSRS 4.5 in-tree**, making it the only agent row carrying this KB's own retention primitive rather than needing it bolted on. Python/FastAPI + Next.js. Knowledge graph marked experimental **by its own README**. |
+
+**Why this row matters out of proportion to 166★.** Every other tutor on this shelf assumes a hosted model and treats local inference as a deployment variant. This one inverts the default. The commercial consequence is that *"nothing leaves your hardware"* becomes demonstrable in an afternoon — which is the EMEA public-sector and data-residency conversation, and, per `intel/market.md` p653, the one being had under a 2 December 2027 compliance deadline against a system where only ~30% of teachers have had any AI training.
+
+### 🟢 The four-pass assessment hole breaks — and the channel was the problem, not the field
+
+Three passes searched the **agent ecosystem** for a grader and found nothing usable. p653 searched the **automated-essay-scoring literature** instead and found two permissive, education-specific systems immediately.
+
+| Repo | Licence (payload) | Stars / commits | What it is | Verdict |
+|---|---|---|---|---|
+| [wwrwbs/AI_AWE](https://github.com/wwrwbs/AI_AWE) (**ArguLens**) | **Apache-2.0, notice form, 1,865 B** | **2** / 2 | Scorer **and** label-aware feedback generator: discourse-move classifier + grade-independent LightGBM scorer over 31 linguistic/discourse features + feedback generation. LoRA adapters Apache-2.0; Qwen2.5-7B-Instruct base obtained separately. arXiv:2608.17356 | 🟡 **Not filed as an agent — 2 commits is a paper drop.** But it is the first permissive *education-specific* scorer this base has found, and the *grade-independent* feature design is what makes it portable to an unseen curriculum. Basis of `compose/patterns.md` **P13** |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT (1,069 B) | **0** / 30 | One Markdown source → Lab + Exam package + slides. `WAITING_REVIEW` state requiring explicit human approve/reject; Docker-sandboxed grading; local-only export, no auto-publish; `mcp_server/` with stdio server and tool adapters | 🔴 **Not filed: 0★, and the README declares *"Automatic grading productization"* and *"MCP/Agent expansion"* **frozen** — the two capabilities that would close the gap are not under development.** Read it for the review-state machine, which is the right shape for an Annex III high-risk deployment |
+
+**The restated finding, which is a different *kind* of gap than three passes recorded.** It is no longer "nothing exists"; it is "everything that exists is a research artefact". That is the second time this base has watched a declared supply gap turn out to be an adoption gap — the Moodle bridge made the same move at p652 (seven MIT servers, all capped at 27★). 🔵 **The pattern worth carrying forward: when this KB declares a supply gap, the next move should be to change the *channel*, not to search the same channel harder.** Both breaks came from a channel change, not from effort.
+
+🔴 **The half that did not break:** assessment **integrity** and proctoring — the Annex III high-risk half, with emotion recognition in schools prohibited outright since February 2025 — still has **no permissive supply in any pass.** Permissive supply is appearing where regulatory exposure is lowest.
+
+### 🔴 A new trap, and it runs the opposite way from the fork traps
+
+p651 and p652 each caught a **fork** masquerading as an upstream (`kvnloo/tutor-mcp`, `thc1006/moodle-mcp`), both detected from the copyright line inside the grant payload. p653 caught something different:
+
+| Address | Licence | Stars | Relationship |
+|---|---|---|---|
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | **MIT** (1,068 B) | **166** | Filed above |
+| [tutornew/OpenTutor](https://github.com/tutornew/OpenTutor) | 🔴 **no grant file** at `LICENSE`, `LICENSE.txt`, `LICENSE.md` or `COPYING` | — | **Not a fork. A different project with the same name** |
+
+Neither is derived from the other: same name, different owners, different licence status, and one of the two confers no permission at all. **The lesson is narrower than the fork lesson and just as cheap: "OpenTutor" is not a resolvable identifier.** The fork traps were caught by reading the copyright holder; this one is only caught by never naming a project without its owner. Cite `owner/repo` in every proposal.
+
+### 🟡 Found, real, placed — and declined on the licence split
+
+[braiinz94/braiinz-education](https://github.com/braiinz94/braiinz-education) — **Apache-2.0 code (11,356 B, complete: all sections plus `APPENDIX`) / CC BY-SA 4.0 content**, 0★ / 1 fork / 37 commits. Socratic tutor that asks rather than answers; a diagnostician scheduling reviews with **FSRS**; pluggable curricula including a **French *Seconde* mathematics pack**; Telegram-native with no learner install. README states it is separate from Braiinz, a commercial AI consultancy; no institution named.
+
+Declined on two counts, and the second is the interesting one: 0★ is not adoption, and **the licence split puts the valuable part under ShareAlike.** For a French K-12 engagement the reusable asset is the *curriculum pack*, and that is CC BY-SA 4.0 — so it cannot be folded into closed IP, exactly as `GarethManning/education-agent-skills` (949★, CC BY-SA 4.0) was declined at p651. 🔵 **Two of the three most curriculum-rich education assets this base has measured are ShareAlike.** That is beginning to look like a norm in education content rather than a coincidence, and it is worth stating in a proposal before a client assumes otherwise. The counter-case is `patchy631/ai-engineering-hub` (MIT, 41.1k★), which is why `compose/patterns.md` **P10** is built on that one.
+
+🟢 **Placement channel note:** braiinz is placeable to **EMEA (France)** on a *stated target curriculum* — evidence about the intended market, not the project's origin, and recorded as the weaker variant of the documentary channel.
+
+### 🆕 Sixth grant-defect class — and the repository carrying it has the best licence hygiene on this shelf
+
+`wwrwbs/AI_AWE`'s `LICENSE` is **1,865 bytes** against canonical Apache-2.0's 11,357. A size test calls that truncated; reading it shows otherwise.
+
+> **Class 6 — grant by reference.** The Apache-2.0 **notice** (the short boilerplate Apache prescribes for source headers) stands in for the terms: *"Licensed under the Apache License, Version 2.0 … You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0"*.
+
+**Materially stronger than Class 5** (`frappe/education`'s 19-byte `License: GNU GPL V3`): the operative grant language, the exact version and a canonical immutable URL are all present, so what you may do is unambiguous. What is missing is the copy of the text that Apache-2.0 §4(a) obliges a redistributor to supply. **Verdict: usable, with a one-line upstream fix to request.**
+
+🔵 **Then the inversion.** Those same 1,865 bytes enumerate every component and its licence (project code and LoRA adapters Apache-2.0; vendored `TextComplexityToolkit` MIT with its path given; `TAALED` inside it), state what is deliberately **not** redistributed (Qwen2.5-7B-Instruct; the academic-use-only Persuade 2.0 corpus), and close with a bias notice warning against high-stakes automated use without human oversight. **That is better licence hygiene than any other repository this base has read — while the 42.7k★ repository with a byte-perfect MIT payload quietly builds an LGPL-3.0-or-later component.**
+
+**Operational rule:** a short or unusual grant file is a reason to **read** it, not to reject the project; a perfect grant file is not evidence about the tree. Five of six classes pass a licence-badge check; this one fails the badge and passes on substance. Badges measure neither.
+
+### 🔵 Housekeeping: three contradictory bullets on `agents/top.md` consolidated
+
+That page carried **three** region-placement bullets simultaneously claiming "six of twelve" and (twice) "five of ten" unplaced rows — left standing as rows were added across passes. They are merged into one count recomputed from the table: **placed 5** (DeepTutor, OpenMAIC, OmniEdu, AI-Shifu → APAC; OATutor → North America), **unplaced 8**. 🔴 **The structural fact the ratio hides is worse than the ratio: every placed agent row is APAC except one, so EMEA and LATAM have zero placed agent rows between them.**
+
+
 ## 🆕 2026-11-04 (p652) — the Moodle hole is a consolidation gap, not a supply gap; a 42.7k★ "MIT" agent builds an LGPL-3.0 component; and education now has its own open-weight foundation models
 
 **Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and the fork notice from the repository page via page fetch. `curl` to `github.com` and `api.github.com` are both **HTTP 403** in this session and `gh api` is scoped away from these repositories, so neither was used.

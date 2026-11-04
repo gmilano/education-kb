@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p653) — 🔴 **THE PLATFORM SHELF WAS RANKED BY THE WRONG INSTRUMENT FOR SEVEN PASSES. THERE IS AN APACHE-2.0 INSTITUTIONAL LMS WITH 32,210 COMMITS, IT HAS `langchain4j` IN-TREE, AND A STAR-ORDERED CHANNEL CANNOT SEE IT.**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref`; **release branches and tags via `git ls-remote --heads` / `--tags`**; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and commits from the repository page via page fetch; **dependency obligations by reading `pom.xml` verbatim**. `curl` to `github.com` and the GitHub API remain HTTP 403 in this session.
+
+### 🔴 The headline: this page's longest-standing claim is withdrawn, completely, and for the second time
+
+| Pass | Claim | How it failed |
+|---|---|---|
+| ≤ p650 | "There is no permissively-licensed, production-grade open source LMS" | `learningequality/kolibri` — MIT, 1.2k★, production offline-first platform (p651) |
+| p651–p652 | Narrowed to: "no permissive platform **of the Moodle / Open edX class**" | 🔴 **`OpenOLAT/OpenOLAT` — Apache-2.0, 449★ / 167 forks / 32,210 commits, and squarely institutional** (p653) |
+
+**There is no surviving version of this claim.** OpenOlat is institutional course management by any definition this KB has used: courses, enrolment, assessment and QTI testing, portfolio, curriculum management — descended from the University of Zurich's OLAT 7.1, maintained by frentix GmbH (Zurich), and the LMS of record across much of German-speaking European higher education.
+
+| Channel | Reading 2026-11-04 |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves; real default branch **`master`** |
+| `LICENSE` payload | 🟢 **10,982 B, Apache-2.0.** All nine substantive sections present and unmodified — copyright grant, patent grant, redistribution, trademarks, warranty disclaimer, liability limitation, accepting warranty |
+| Canonical delta | **−375 B, fully explained**: the `APPENDIX: How to apply the Apache License to your work` — boilerplate *instructions*, not terms — is removed and replaced with two provenance statements |
+| Region channel | 🟢 **The payload itself** names *"the OLAT Zentrum at the University of Zurich"* and *"initiated by frentix GmbH"* → **EMEA on documentary evidence**, no inference from author names |
+| Stars / forks / commits | **449 / 167 / 32,210** |
+| Release line | branches `OpenOLAT_18.0` → `OpenOLAT_21.1`; latest tag **`OpenOLAT_21.1.2`** |
+| `pom.xml` declared licence | `Apache 2.0 Open Source L6icense` — 🔵 a stray character in the vendor's own manifest field. Cosmetic, recorded only because an automated licence-name match against this field will fail |
+| Fork notice | none |
+
+### 🔴 Why this base missed it for seven passes — the instrument, not the search
+
+**OpenOlat's star:commit ratio is 1:72** (449 stars, 32,210 commits). Moodle's is roughly 1:13. A star-ordered channel ranks a 32,000-commit university LMS below two dozen "learn to code" tutorial repositories — and this page has spent several passes documenting exactly that pollution in the `topic:education` facet without connecting it to the platform shelf.
+
+🔵 **The damning part is that this base already held the explanation and did not apply it.** `repos/foundations.md` notes that `moodle/moodle` is *"the only row on this shelf with more forks than stars … not a project people watch, a codebase institutions take copies of."* That is a general statement about institutional software, written down, and then never used to question the ranking. **Institutional software is under-starred by construction. For the platform shelf, rank by licence or by commit depth; a star floor is the wrong tool.** The row came back from a single **licence-first** query — "Apache LMS" — not from an adoption-first one.
+
+This is the third consecutive pass whose most consequential finding was a defect in this knowledge base rather than a change in the world (p651: a fork filed as an upstream, an ERP declared dead at a wrong address; p652: inflated carried-forward star counts).
+
+### 🟢 The find under the find: the LLM layer is already in the tree, and it is Apache-2.0
+
+Read verbatim from `pom.xml`, not from a roadmap or a press page:
+
+| Dependency | Version | Licence | Why it matters |
+|---|---|---|---|
+| `dev.langchain4j:langchain4j` | **1.23.0** | Apache-2.0 (**11,357 B — byte-exact canonical**, read this pass) | The LLM framework, in the main build |
+| `langchain4j-open-ai` | 1.23.0 | Apache-2.0 | 🟢 Speaks the **OpenAI-compatible wire protocol**, which Ollama and vLLM both serve — so an in-jurisdiction, no-egress deployment is **configuration, not a fork**, and needs no new dependency |
+| `langchain4j-anthropic` | 1.23.0 | Apache-2.0 | Hosted path where egress is permitted |
+| `langchain4j-embeddings` | 1.23.0 | Apache-2.0 | Embeddings computed **in-process** |
+| Apache Lucene (`-core`, `-queryparser`, `-highlighter`, `-suggest`, `-analyzers-common`) | — | Apache-2.0 | Semantic course search with no external call |
+
+There is **no `langchain4j-ollama` module in the tree, and it is not needed** for the local path — the OpenAI-compatible connector covers it. Recorded explicitly so a later pass does not file its absence as a gap.
+
+### 🟢 The dependency scan — the result that makes the licence *scopeable* rather than merely true
+
+This KB's own rule since p652 is that the licence unit is the dependency graph, not the repository. Applied here to **270 declared dependencies**:
+
+| Check | Result |
+|---|---|
+| **Copyleft items found** | 🔴 **Exactly one:** `com.mysql:mysql-connector-j` **26.10.0** — GPL-2.0 with the Universal FOSS Exception. The exception covers combination with OSI-approved open source licences; it does **not** cover a closed proprietary derivative |
+| **The exit** | 🟢 **Already in the tree at no cost:** `org.postgresql:postgresql` **42.7.14**, BSD-2-Clause, a first-class supported backend. Specify PostgreSQL and the tree is permissive end to end |
+| iText (AGPL-3.0) | 🟢 **absent** |
+| JasperReports (LGPL) | 🟢 **absent** |
+| Hibernate ORM | **7.4.14.Final** — Apache-2.0 era, not the old LGPL-2.1 Hibernate |
+| hibernate-validator | **9.1.6.Final** — Apache-2.0 |
+| Explicit `gpl` / `lgpl` / `affero` strings anywhere in `pom.xml` | none |
+
+🔵 **Worth recording as the counter-case to this page's defect catalogue.** Three entries in that catalogue are permissive badges over trees carrying undisclosed obligations. **This is a permissive badge that survives a manifest read** — and its single exposure is removable with one line in an architecture document. A manifest read is what turns "Apache-2.0" from a claim into a position you can sell.
+
+### ⚠ What this row is *not*, stated so a proposal does not overreach
+
+449★ is real adoption for institutional software, but it is not Moodle's ecosystem. **There is no third-party plugin marketplace at Moodle's scale, and the contributor base is concentrated around one vendor (frentix GmbH).** Scope it as *a platform with a vendor behind it that happens to be Apache-2.0*, not as a community ecosystem. And the installed base is unchanged: Moodle and Chamilo still dominate LATAM and EMEA K-12, Canvas and Blackboard still dominate North America. **OpenOlat changes the greenfield choice, not the installed base** — so `compose/patterns.md` P2 and P3 remain the common case, and new **P11** / **P12** are the greenfield ones.
+
+### 🔴 New gap declared — a third LMS with no agent bridge, and the cleanest greenfield position on this shelf
+
+`openolat-mcp`, `frentix/openolat-mcp` and `OpenOLAT/openolat-mcp` were probed. **None resolves**, and no OpenOlat MCP server was found by search. The bridge picture across the three platforms this base tracks:
+
+| Platform | Dominant where | Agent bridge | Stars |
+|---|---|---|---|
+| Canvas | North American HE | `vishalsachdev/canvas-mcp` (MIT) | **317** |
+| Moodle | LATAM, EMEA K-12 | `G36maid/moodle-mcp` (MIT), 6 further MIT servers | **27** (field ceiling) |
+| **OpenOlat** | German-speaking EMEA HE | 🔴 **none at any address** | **0** |
+
+🔵 **This gap is a different kind from the Moodle one, and the difference is the opportunity.** Moodle's is a *consolidation* gap — seven MIT servers competing at ≤27★, so the work is hardening someone else's code and contributing upstream (**P8**). OpenOlat has **no incumbent at all**, *and* its platform licence permits a closed derivative, *and* its LLM plumbing is already in-tree — so the agent can live in the same Maven build rather than talking over REST to route around copyleft. See **P12**.
+
+### 🔵 Also searched this pass and deliberately not filed
+
+| Repo | Why not |
+|---|---|
+| [tutornew/OpenTutor](https://github.com/tutornew/OpenTutor) | Resolves (`main`); **no grant at `LICENSE`, `LICENSE.txt`, `LICENSE.md` or `COPYING`.** Not a fork — a *different project* sharing a name with the MIT 166★ `zijinz456/OpenTutor` filed in `agents/top.md`. "OpenTutor" is not a resolvable identifier; cite `owner/repo` |
+| `OpenOlat/OpenOlat`, `openolat/openolat` | Both resolve to the **same commit** as `OpenOLAT/OpenOLAT` (GitHub owner/name matching is case-insensitive). Recorded so a later pass does not file them as three projects. `frentix/OpenOlat` does **not** resolve |
+
+
 ## 🆕 2026-11-04 (p652) — three star counts this page left blank for three passes are now measured, one default branch was wrong, and the biggest permissive education asset found is 41.1k★ of curriculum
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and detected licence from the repository page via page fetch. `curl` to `github.com` and the GitHub API are HTTP 403 in this session.

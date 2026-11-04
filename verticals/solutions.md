@@ -9,7 +9,7 @@ updated: 2026-11-04
 > Real, running systems that a client may already have, or that can be stood up and then extended with an agentic layer.
 > Model: start from something that already works, add agents on top. Verified 2026-11-04 via `git ls-remote --symref` + licence payload read.
 
-## Platforms — 14 verified rows
+## Platforms — 15 verified rows
 
 | Platform | Repo | Licence | Branch | Stack | Use case |
 |---|---|---|---|---|---|
@@ -18,6 +18,7 @@ updated: 2026-11-04
 | **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (1,097 B) | **`develop`** | Python/Django + Vue | 🟢 **The permissive production learning platform this KB has repeatedly declared does not exist.** "The offline-first platform for teaching and learning with technology without requiring the Internet." **1.2k ★ / 1.0k forks.** Learning Equality. Content delivery, learner progress and coach tooling that run with **no connectivity at all** — the decisive capability in Sub-Saharan Africa, rural South Asia and the Pacific. ⚠️ Default branch is `develop`; release lines are `release-v0.19.x` / `release-v0.20.x`. |
 | **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | `master` | PHP | Lightweight LMS, strong public-sector adoption in Spanish-speaking LATAM. |
 | **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `master` | Java/Spring | Institutional HE LMS, mostly North American universities. |
+| **OpenOlat** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** (10,982 B) | `master` | Java / Spring / Hibernate 7.4 | 🟢 **The permissive institutional LMS this KB has stated in three files does not exist.** Full institutional course management — courses, enrolment, assessment, QTI tests, portfolio, curriculum management — under **Apache-2.0**, so a closed proprietary derivative is permitted. **449 ★ / 167 forks / 32,210 commits**; live release branches `OpenOLAT_18.0` → `OpenOLAT_21.1`, latest tag `OpenOLAT_21.1.2`. Forked from the University of Zurich's OLAT 7.1 in 2011 by frentix GmbH (Zurich); deep adoption in German-speaking EMEA higher education. 🟢 **Ships an LLM subsystem in-tree**: `langchain4j` 1.23.0 (canonical Apache-2.0, 11,357 B) with `langchain4j-open-ai`, `langchain4j-anthropic` and `langchain4j-embeddings`, plus Apache Lucene for search. ⚠ The only copyleft item in 270 declared dependencies is the **optional** MySQL Connector/J (GPL-2.0 + Universal FOSS Exception) — see the dependency note below. |
 | **ILIAS** | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | `release_11` | PHP | Robust LMS with deep adoption in German-speaking EMEA (DE/AT/CH), incl. public sector and military training. |
 | **Gibbon** | [GibbonEdu/core](https://github.com/GibbonEdu/core) | GPL-3.0 | `v31.0.00` | PHP + MySQL | School management / SIS: enrolment, timetabling, academic records. Complements Moodle rather than competing. |
 | **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** (15,214 B) | **`mobile`** | PHP + PostgreSQL | Student Information System: scheduling, grades, attendance, billing. **651 ★ / 397 forks.** Licence version read from the payload's own version line at p651, no longer inferred from size. ⚠️ The default branch is `mobile`, among 44 branches that are otherwise version numbers — a default `git clone` does not give you the release line. A GitLab mirror is the project's other home. |
@@ -36,6 +37,7 @@ updated: 2026-11-04
 | openedx/edx-platform | `LICENSE` | 35,136 | GNU Affero GPL v3 |
 | chamilo/chamilo-lms | `LICENSE` | 35,147 | GNU GPL v3 |
 | sakaiproject/sakai | `LICENSE` | 11,120 | Educational Community License v2.0 |
+| OpenOLAT/OpenOLAT | `LICENSE` | **10,982** | Apache-2.0 — **all nine substantive sections present and unmodified** (copyright grant, patent grant, redistribution, trademarks, warranty disclaimer, liability limitation, accepting warranty). Canonical **−375 B** and fully explained: the `APPENDIX: How to apply the Apache License to your work` — boilerplate *instructions*, not terms — is removed and replaced with two provenance statements. 🟢 Those statements are also this row's **region channel**: the payload itself names *"the OLAT Zentrum at the University of Zurich"* and *"initiated by frentix GmbH"*, which places the row in EMEA on documentary evidence rather than inference. |
 | ILIAS-eLearning/ILIAS | `LICENSE` | 35,147 | GNU GPL v3 |
 | GibbonEdu/core | `LICENSE` | 35,121 | GNU GPL v3 |
 | francoisjacquet/rosariosis | `LICENSE` | 15,214 | GNU GPL **v2** — read from the payload's `Version 2, June 1991` line, not inferred |
@@ -59,13 +61,18 @@ updated: 2026-11-04
 
 ## 🔴 The licensing reality of this shelf — read before scoping
 
-**Ten of fourteen platform rows are copyleft. Four are permissive: Kolibri (MIT), Richie (MIT), GegoK12 (MIT) and Sakai (ECL-2.0, Apache-derived).**
+**Ten of fifteen platform rows are copyleft. Five are permissive: OpenOlat (Apache-2.0), Kolibri (MIT), Richie (MIT), GegoK12 (MIT) and Sakai (ECL-2.0, Apache-derived).**
+
+🔴 **The headline claim on this page falls a second time, and this time it falls completely.** p651 corrected *"there is no permissively-licensed, production-grade open source LMS"* to the narrower *"there is no permissive platform of the **Moodle / Open edX class**"* — institutional course management, as against Kolibri's offline-first delivery. **That narrower claim is also wrong, and is withdrawn at p653.** `OpenOLAT/OpenOLAT` is **Apache-2.0** (10,982 B payload read from bytes on 2026-11-04; all nine substantive sections present), **449 ★ / 167 forks / 32,210 commits**, with live release branches from `OpenOLAT_18.0` to `OpenOLAT_21.1` — and it is squarely in the institutional class: courses, enrolment, assessment and QTI testing, portfolio, curriculum management, the LMS of record in much of German-speaking European higher education, descended from the University of Zurich's OLAT.
+
+🔵 **Why this base missed it for seven passes, stated so the channel gets fixed and not just the row.** Every pass measured the *most-starred* LMS repositories and generalised from them. OpenOlat has **449 stars and 32,210 commits** — a star:commit ratio of 1:72, against Moodle's 7.6k:~100k. A star-ordered channel ranks it below two dozen tutorial repositories. The signal that would have caught it is the one this page already records about Moodle (*more forks than stars — a codebase institutions take copies of, not a project people watch*): **institutional software is under-starred by construction, so a star floor is the wrong instrument for the platform shelf.** The row was found this pass from a licence-first query — "Apache LMS" — not an adoption-first one.
 
 🔴 **A headline claim this KB has published in three files needs correcting, and this is the correction.** The claim was: *"there is no permissively-licensed, production-grade open source LMS."* **`learningequality/kolibri` is MIT (1,097 B payload read at p651), 1.2k ★ / 1.0k forks, and is a production learning platform.** The claim as written was wrong.
 
 The accurate version, stated carefully because the distinction decides engagements:
 
-- **There is no permissive platform of the Moodle / Open edX class.** Institutional course management — enrolment at scale, gradebook, SIS integration, a large third-party plugin ecosystem, multi-tenant MOOC delivery — is GPL-3.0, AGPL-3.0 or ECL-2.0 only. That part of the old claim holds, and it is why `compose/patterns.md` P2 and P3 exist.
+- 🔴 ~~**There is no permissive platform of the Moodle / Open edX class.**~~ **Withdrawn at p653.** There is one: **OpenOlat, Apache-2.0.** What remains true is narrower and worth stating precisely, because it still decides most engagements: *the LMS the client already runs* is almost always copyleft — Moodle and Chamilo dominate LATAM and much of EMEA K-12, Canvas and Blackboard dominate North America, and neither of those facts changes because a permissive alternative exists. `compose/patterns.md` P2 and P3 therefore remain the common case. What changes is that there is now a **greenfield** option: when the client is *choosing* a platform rather than extending one, Apache-2.0 institutional course management is on the table, and with it a closed derivative. See **Pattern F** below and `compose/patterns.md` **P11**.
+- ⚠ **One honest qualifier on OpenOlat, measured not assumed.** 449 ★ is real adoption for institutional software but it is not Moodle's ecosystem: there is no third-party plugin marketplace of Moodle's scale, and the contributor base is concentrated around frentix GmbH. Scope it as *a platform with a vendor behind it that happens to be Apache-2.0*, not as a community ecosystem. The licence is the differentiator; the ecosystem is not.
 - **But there is a permissive platform for *learning delivery*, and it is the right base for a specific and commercially real segment:** offline-first, low-connectivity, device-resident deployment. Kolibri covers content delivery, learner progress and coach tooling, under MIT, with no connectivity requirement — and a proprietary derivative is permitted.
 
 🔵 **Why the error was easy to make and worth recording:** every pass asked "is there a permissive LMS?", measured the institutional LMS field, found it uniformly copyleft, and generalised. Kolibri is not an institutional LMS and so never entered the comparison — the question's framing excluded the answer. It surfaced at p651 only because an EMEA-Africa opportunity needed an offline-first base and the search was for *that*, not for a licence.
@@ -74,7 +81,7 @@ Richie remains a portal CMS, GegoK12 a 55-star school-administration system, and
 
 | Licence | What it permits | Engagement model it supports |
 |---|---|---|
-| **MIT / Apache-2.0 / BSD / ECL-2.0** | Proprietary derivative, closed distribution | Product, resale, closed IP. At platform level this means **Kolibri** (offline-first delivery), **Richie** (portal), **GegoK12** (administration) — and the whole agent layer |
+| **MIT / Apache-2.0 / BSD / ECL-2.0** | Proprietary derivative, closed distribution | Product, resale, closed IP. At platform level this now means **OpenOlat** (Apache-2.0, **institutional course management** — new at p653), **Kolibri** (offline-first delivery), **Richie** (portal), **GegoK12** (administration) — and the whole agent layer |
 | **GPL-3.0** (Moodle, Chamilo, ILIAS, Gibbon) | Derivatives must be GPL **when distributed** | Client-operated deployment and bespoke plugins are fine; a multi-client closed product is not |
 | **AGPL-3.0** (Open edX, Frappe LMS, Veo) | Network use counts as distribution — modified source owed to **users** | Managed-service / SaaS delivery is directly affected. Keep modifications in permissively-licensed plug-in points (XBlock) or accept disclosure |
 | **GPL-2.0** (RosarioSIS, openSIS) | As GPL-3.0, but **incompatible with GPL-3.0 code** when combining | Fine standalone; do not link GPL-2.0-only SIS code with GPL-3.0 LMS code in one work |
@@ -129,6 +136,28 @@ Kolibri (MIT)  ← the platform itself is permissive: a closed derivative is all
        └── sync when connectivity appears; nothing required in between
 ```
 This is the only pattern on this page with **no copyleft component anywhere**, and the only one that works with no connectivity. It matches the architecture African edtech builders have already converged on — offline-capable, student data resident on the device — which is both a connectivity response and a trust posture. It is also the one pattern where Globant can ship a closed product end to end.
+
+### Pattern F — Permissive institutional LMS, agents in-tree (greenfield HE, EMEA public sector) 🟢 new at p653
+```
+OpenOlat (Apache-2.0)          ← the platform itself is permissive: closed derivative allowed
+  └── langchain4j 1.23.0 (Apache-2.0, already in the pom)
+        ├── langchain4j-open-ai      ──► any OpenAI-compatible endpoint
+        │                                 (Ollama / vLLM on in-jurisdiction hardware)
+        ├── langchain4j-anthropic
+        └── langchain4j-embeddings   ──► embeddings computed in-process
+  └── Apache Lucene (Apache-2.0, already in the pom) ← semantic search, no egress
+  └── PostgreSQL JDBC 42.7.14 (BSD-2-Clause)  ← NOT MySQL: see the note below
+```
+
+**What makes this pattern different from every other one on this page:** it is the only one where **the institutional LMS itself is permissive and the AI plumbing is already in the tree**. Patterns A, B and C all exist to hold proprietary work *outside* a platform that cannot absorb it. Here there is nothing to hold outside — an agent can live in-tree, in the same build, and the deliverable can still be closed.
+
+🟢 **The LLM subsystem is not a roadmap item; it is declared in `pom.xml`.** `langchain4j` 1.23.0 with the OpenAI, Anthropic and embeddings modules, verified by reading the manifest at first hand on 2026-11-04. The practical consequence for a data-residency engagement: **`langchain4j-open-ai` speaks the OpenAI-compatible wire protocol, which Ollama and vLLM both serve** — so an in-jurisdiction, no-egress deployment needs a configuration change and an endpoint, not a code fork and not a new dependency. There is no `langchain4j-ollama` module in the tree and it is not needed for that path.
+
+🔴 **The one dependency that decides whether a closed derivative is actually clean.** Of 270 declared dependencies, exactly one is copyleft: **MySQL Connector/J** (`com.mysql:mysql-connector-j` 26.10.0), which is **GPL-2.0 with the Universal FOSS Exception**. The exception permits combination with OSI-approved open source licences including Apache-2.0 — but it does **not** cover a closed proprietary derivative, which is the entire point of choosing this platform. The fix is already in the tree and costs nothing: **PostgreSQL JDBC 42.7.14 (BSD-2-Clause) is a first-class supported backend.** Specify PostgreSQL in the proposal and the tree is permissive end to end.
+
+Verified absent, because in a Java LMS these are the usual killers and their absence is what makes the above true: **no iText** (AGPL-3.0), **no JasperReports** (LGPL). Hibernate is at **7.4.14** and hibernate-validator at **9.1.6** — both Apache-2.0 eras, not the old LGPL-2.1 Hibernate.
+
+⚠ **Scope it honestly.** Java/Spring/Hibernate is a heavier integration skill-set than PHP-Moodle or Python-Open edX, and the contributor base is concentrated around one vendor. Pattern F buys a licence position, not a cheaper build.
 
 ### Pattern D — SIS + LMS split
 Moodle or Open edX handles learning; the administrative system handles enrolment, timetabling, records and fees. Administrative agents (scheduling, at-risk alerting, enrolment triage) belong on the administrative side, where the data actually lives.

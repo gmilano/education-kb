@@ -265,6 +265,84 @@ updated: 2026-11-04
 
 ---
 
+## P11 — Permissive institutional LMS, closed deliverable (greenfield HE, EMEA public sector: 10–12 weeks) 🟢 new at p653
+
+**The only pattern in this file where the institutional platform itself permits a closed derivative.** Use it when the client is *choosing* a platform rather than extending one — a new faculty, a national programme, a public-sector training body, a migration off a commercial LMS.
+
+```
+OpenOlat  (Apache-2.0, 449★/32,210 commits, branch OpenOLAT_21.1)
+  ├── PostgreSQL JDBC 42.7.14 (BSD-2-Clause)   ← NOT MySQL Connector/J: see below
+  ├── langchain4j 1.23.0 (Apache-2.0, already in pom.xml)
+  │     ├── langchain4j-open-ai     ──► Ollama or vLLM on in-jurisdiction hardware
+  │     │                                (OpenAI-compatible wire protocol: config, not code)
+  │     ├── langchain4j-anthropic   ──► hosted fallback where egress is permitted
+  │     └── langchain4j-embeddings  ──► embeddings computed in-process
+  ├── Apache Lucene (Apache-2.0, already in pom.xml) ← semantic course search, no egress
+  └── fsrs-rs (BSD-3-Clause) via JNI/sidecar  ← review scheduling
+```
+
+**Week 1–2** — stand up OpenOlat from `OpenOLAT_21.1` (never from `master`; see the branch section). Specify **PostgreSQL** in the architecture document and say why in one line.
+**Week 3–5** — wire `langchain4j-open-ai` to a client-hosted Ollama or vLLM endpoint. No new dependency, no fork. Prove the no-egress claim with a network capture, not a diagram.
+**Week 6–8** — course-content semantic search over Lucene + `langchain4j-embeddings`; this is the demo that lands with faculty.
+**Week 9–12** — mastery and scheduling: `fsrs-rs` as a sidecar, exposed through the **P6** MCP surface so the tutor and the LMS share one retention model.
+
+🔴 **The one licence decision that makes or breaks the closed deliverable.** Of 270 declared dependencies, exactly one is copyleft: **MySQL Connector/J (GPL-2.0 + Universal FOSS Exception)**. The exception covers combination with OSI-approved open source licences — it does **not** cover a closed proprietary derivative, which is the whole reason for choosing this platform. PostgreSQL JDBC (BSD-2-Clause) is already in the tree and a first-class backend. **Specify PostgreSQL and the tree is permissive end to end.** Verified absent from the tree: iText (AGPL-3.0) and JasperReports (LGPL), the two usual Java-LMS killers; Hibernate is 7.4.14 and hibernate-validator 9.1.6, both Apache-2.0 eras.
+
+⚠ **Price the skill-set, not the licence.** Java/Spring/Hibernate is heavier than PHP-Moodle or Python-Open edX, there is no plugin marketplace of Moodle's scale, and the contributor base is concentrated around one vendor (frentix GmbH). P11 buys a licence position and a residency story. It does not buy a cheaper build, and a proposal that implies otherwise will be wrong by week 6.
+
+## P12 — The OpenOlat agent bridge: build the thing that does not exist (6–8 weeks) 🟢 new at p653
+
+**The cleanest greenfield position in this KB.** The LMS-bridge picture across the three platforms this base tracks is **Canvas 317★ → Moodle 27★ → OpenOlat 0**: `openolat-mcp`, `frentix/openolat-mcp` and `OpenOLAT/openolat-mcp` were all probed at p653 and **none resolves.**
+
+Why this is a better build than it looks, on three counts that do not usually co-occur:
+
+1. **No incumbent to displace.** Unlike Moodle (seven MIT servers competing at ≤27★, where the work is hardening someone else's code — see **P8**), there is nothing to fork and no upstream to negotiate with.
+2. **No copyleft to route around.** Patterns A, B and C all exist to keep proprietary work *outside* a platform that cannot absorb it. OpenOlat is Apache-2.0, so **the agent can live in-tree, in the same Maven build**, and the deliverable can still be closed.
+3. **The LLM layer is already there.** `langchain4j` with OpenAI, Anthropic and embeddings modules is in `pom.xml` today, so the bridge does not need to ship a model client.
+
+```
+Weeks 1–2   Read OpenOlat's REST surface + the langchain4j wiring already in-tree.
+            Borrow the permission model from GhaithAlHallak8/moodler-mcp (MIT):
+            browser SSO → locally-stored token; writes and grading OFF by default
+            behind explicit env flags. It is the safest default posture this KB
+            has measured in any LMS bridge — copy it rather than re-deriving it.
+Weeks 3–5   MCP server over the official SDK. Tool surface modelled on
+            G36maid/moodle-mcp (MIT, 22 tools: identity, courses, assignments
+            read+submit, forums, files-as-markdown, grades, schedule, messaging)
+            — a proven taxonomy, re-implemented against OpenOlat's API.
+Weeks 6–8   Attach a tutor: zijinz456/OpenTutor (MIT, 166★) for local-first, or
+            Bloom (MIT) for the fastest demo. Gate every write behind the
+            WAITING_REVIEW shape from littlecookie0722/AI-Teaching-Agent.
+```
+
+🟢 **Contribute it upstream under Apache-2.0 and the strategic return exceeds the engagement fee.** This is the one place in this KB where Globant could own the reference integration for an entire platform rather than the third fork of someone else's.
+
+## P13 — Assessment: adopt-and-harden a research decomposition (10–14 weeks) 🟢 new at p653
+
+**The one pattern here where the production artefact does not exist yet and Globant would create it.** Four passes established that there is no adopted permissive education assessment tool; p653 established that there is permissive, education-specific, peer-reviewed *research* supply. That changes the engagement from "build a grader" to "productise a published decomposition", which is scopeable.
+
+```
+ArguLens / wwrwbs/AI_AWE  (Apache-2.0 by reference, arXiv:2608.17356)
+  ├── discourse-move classifier
+  ├── grade-independent LightGBM scorer over 31 linguistic/discourse features
+  └── label-aware feedback generator        ← the part clients actually want
+        │
+        ├── calibration layer  ◄── microsoft/LLM-Rubric (MIT, 45★)
+        │      calibrate rubric outputs against THIS client's human raters
+        │
+        └── human-approval gate ◄── littlecookie0722/AI-Teaching-Agent (MIT)
+               WAITING_REVIEW state + Docker-sandboxed evaluation + no auto-publish
+```
+
+**Why these three and not one.** ArguLens supplies the education-specific decomposition and, unusually, *grade-independent* features — which is what makes it portable to a curriculum it was not trained on. `LLM-Rubric` supplies the mechanism ArguLens lacks and that every institution demands: calibrating machine scores against the client's own markers, so the output is defensible in an appeals process. `AI-Teaching-Agent` supplies the review-state machine, and its shape — explicit approve/reject, sandboxed execution, **no automatic publishing** — is the shape an Annex III high-risk deployment needs anyway.
+
+🔴 **Three constraints to put in the proposal, not discover in week 9.**
+- **The training corpus does not come with it.** Persuade 2.0 is academic-use-only and is deliberately not redistributed. A commercial retrain needs the client's own marked scripts — which is a data-collection workstream, and often the longest one.
+- **Bias is documented by the authors, not discovered by you.** ArguLens's own licence file carries the notice: AES systems inherit bias from training data (Persuade 2.0 is US middle-school argumentative essays), and it is *"intended for research and assistive use, not for high-stakes automated decisions without human oversight."* Quote that in the proposal. It is the authors' own framing and it is the correct one.
+- **Adoption is zero.** 2★ / 2 commits and 0★ / 30 commits. These are artefacts, not projects: budget for reading papers and writing tests, and do not price it as integration.
+
+⚠ **Scope it as assistive scoring with human sign-off, never as autonomous grading.** Under EU AI Act Annex III, evaluating learning outcomes is high-risk; Washington DC's 2026 policy bars AI from grading outright. The deliverable that is legal in both places is the one that scores and explains while a human decides.
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
@@ -280,6 +358,9 @@ updated: 2026-11-04
 | Already on Moodle and wants a **real agent**, not just REST glue | **P8** | Names the bridge P2 left as a placeholder. `G36maid/moodle-mcp` (MIT, 27★) — adopt and harden; **price the hardening, it is not P1** |
 | Data residency, offline, **or** must stay off the graded system of record (Korea, Vietnam) | **P9** | Curriculum knowledge in the weights, FP8 on one GPU, no egress. 🔴 Resolve the OmniEdu weight licence first |
 | Has a funded AI-literacy mandate (Canada, Saudi, Kenya, EU Art. 4) | **P10** | The deliverable is curriculum and teacher capacity, not software. MIT base at 41.1k★ permits a closed client derivative |
+| 🟢 **Choosing a platform rather than extending one** — new faculty, national programme, migration off a commercial LMS | **P11** | The only pattern whose institutional platform is itself permissive. Apache-2.0 course management, `langchain4j` already in-tree. ⚠ Specify PostgreSQL, not MySQL; price the Java skill-set |
+| 🟢 **Wants to own a reference integration rather than rent one** | **P12** | OpenOlat has **no** agent bridge at any address. No incumbent, no copyleft to route around, agent can live in-tree, and the result is contributable upstream under Apache-2.0 |
+| 🟢 **Needs grading or written-feedback at scale** | **P13** | The only pattern where the production artefact does not exist yet. Permissive, education-specific, peer-reviewed *research* supply (ArguLens) + calibration to the client's own markers (`LLM-Rubric`) + an approval gate. ⚠ Assistive scoring with human sign-off only — never autonomous grading |
 
 ## 🔴 What these patterns deliberately avoid
 
@@ -290,20 +371,21 @@ updated: 2026-11-04
 - **Still excluded:** `awesome-ai-llm4education` (**no licence**, 221★) and `eduadapt-ai` (**no licence**, 26★), both previously published here as MIT and neither of which is. Added to the exclusion list at p651: `GarethManning/education-agent-skills` (949★ but **CC BY-SA 4.0** — ShareAlike, so a derivative skill library cannot be proprietary); `virtualryder/edu-ai-agents` (4★ and a **modified MIT payload with the limitation-of-liability paragraph removed**); `mthatipamula/educational-assessment-ai-agent-platform`, `luffycodes/Tutorbot-Spock` and `Micel357/Edu-mentor-AI` (**no licence file**); `CodeBreez/collejo` (MIT but **archived read-only since 2024-05-16**).
 - **No pattern includes proctoring or emotion recognition.** Emotion recognition in schools is banned in the EU; exam monitoring is high-risk there and, since 22 January 2026, student assessment in K-12 is high-impact under South Korea's AI Basic Act with fines expected from around January 2027. No permissively-licensed open source option was found in any case.
 
-## 🔴 Resolve the licence of the *tree*, not the repository — four live cases
+## 🔴 Resolve the licence of the *tree*, not the repository — five live cases
 
-Reading `LICENSE` is necessary and not sufficient. Four components these patterns use carry obligations that their repository badge does not mention, and all four were read from bytes or from a manifest field verbatim on 2026-11-04.
+Reading `LICENSE` is necessary and not sufficient. Four components these patterns use carry obligations their repository badge does not mention; the fifth row is the case where the manifest read came back **clean**, which is the result that makes a pattern scopeable. All five were read from bytes or from a manifest field verbatim on 2026-11-04.
 
 | Component | Badge | Actual obligation in the tree | What to do in a pattern |
 |---|---|---|---|
 | **OpenMAIC** (P10, P3) | MIT | `packages/mathml2omml` is **LGPL-3.0-or-later** (7,652 B), `"workspace:*"` in the root manifest, built as step one of `build:packages` | Keep it dynamically replaceable with source offered, or excise the MathML→OOXML export path. Design-time decision |
 | **OmniEdu weights** (P9) | Apache-2.0 *(code)* | **No named grant for the weights.** README: *"Model weights and third-party datasets and benchmarks retain their respective licenses."* Backbones are Qwen | Read the Hugging Face card before scoping. Gate zero of P9 |
 | **open-moodle** (not used) | MIT | Depends on **PyMuPDF (AGPL-3.0)** | Excluded from P8 for this reason. An AGPL dependency in a network-served agent defeats out-of-tree containment |
+| 🟢 **OpenOlat** (P11, P12) | Apache-2.0 | **Clean, and verified rather than assumed.** 270 declared dependencies contain exactly one copyleft item: the *optional* **MySQL Connector/J** (GPL-2.0 + Universal FOSS Exception), whose exception covers OSI-approved open source licences but **not** a closed derivative. Verified absent: iText (AGPL-3.0), JasperReports (LGPL). Hibernate 7.4.14 / validator 9.1.6 are Apache-2.0 eras, not the old LGPL-2.1 Hibernate | **Specify PostgreSQL JDBC 42.7.14 (BSD-2-Clause), already a first-class in-tree backend.** One line in the architecture document and the tree is permissive end to end. This is the whole cost of the only clean copyleft exit on this shelf |
 | **csmediapro/moodle-mcp-server** (not used) | "free use, no closed-source repackaging" | Plain **AGPL-3.0**, 34,523 B, plus paid Premium Plugins | Excluded from P8. Marketing language is not a licence; read the payload |
 
-**The check to run once per engagement, in week one:** read `LICENSE` from bytes; then read `package.json`, `pyproject.toml` and `Cargo.toml` for every bundled or workspace component; then, for any model, read the weight card separately from the code licence. Four of the five grant-defect classes this KB has catalogued pass a licence-badge check.
+**The check to run once per engagement, in week one:** read `LICENSE` from bytes; then read `package.json`, `pyproject.toml` and `Cargo.toml` for every bundled or workspace component; then, for any model, read the weight card separately from the code licence. Five of the **six** grant-defect classes this KB has catalogued pass a licence-badge check. The sixth — *grant by reference*, where the Apache-2.0 notice stands in for the terms, as in `wwrwbs/AI_AWE` (P13) — **fails** the badge check and is nonetheless usable, so a short grant file is a reason to read it rather than to reject the project.
 
-## 🔴 Resolve the branch before you clone — four live cases on this shelf
+## 🔴 Resolve the branch before you clone — five live cases on this shelf
 
 Every pattern above assumes you check out the right thing, and on this shelf the default branch is frequently not it:
 
@@ -312,6 +394,7 @@ Every pattern above assumes you check out the right thing, and on this shelf the
 | `openeducat/openeducat_erp` | **`19.0`** | A hardcoded `main`/`master` builds nothing; a hardcoded `19.0` silently keeps building the old major, because `20.0` already exists |
 | `francoisjacquet/rosariosis` | **`mobile`** | A default clone gives you the mobile branch, not the release line, among 44 branches that are otherwise version numbers |
 | `learningequality/kolibri` | **`develop`** | A default clone gives you development code; deploy from `release-v0.19.x` or `release-v0.20.x` |
+| `OpenOLAT/OpenOLAT` | `master` | `master` is the development trunk, not a release. **Deploy from `OpenOLAT_21.1`** (latest tag `OpenOLAT_21.1.2`); live release branches run `OpenOLAT_18.0` → `OpenOLAT_21.1`. The naming is `OpenOLAT_<major>.<minor>` — note the all-caps prefix, which differs from the repository's own mixed-case `OpenOlat` branding and from the `OpenOlat_20.0.pre2` tag, so a generated branch name will not match |
 | `GeminiLight/gen-mentor` | `main`, and that is the problem | `main` is a browser-only Next.js demo app. **The multi-agent Python implementation its WWW '25 paper describes is on branch `v0.1-demo`** — so the default gives you a demo, not the evaluated system |
 
 The fix is one command, and it belongs in any ingest or deployment script rather than in a human's memory:
