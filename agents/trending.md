@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## `2026-11-04` · `p641` — fifteenth nil on supply, and the pass found its defect **inside this base** instead
+
+🔴 **`11` candidate addresses surfaced across the web legs and the `search/repositories` leg. `11 of 11`
+were already held.** `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`zijinz456/OpenTutor`, `Pranjulcr7/OpenTutor`, `Gchism94/ai-tutor`, `CAHLR/OATutor`, `oppia/oppia`,
+`CTFd/CTFd`, `JuliaPluto/Pluto.jl`, `processing/p5.js`, `ankidroid/Anki-Android`. 🟢 **`p640`'s
+reinterpretation of the nil as *saturation* rather than blindness now has a second channel's
+confirmation and should be treated as settled.**
+
+🟢 **So this pass spent its budget on the licence column and on internal consistency, and that is where
+it paid.** The agent layer did not move. **This base's own pages disagreed with each other in three
+places.**
+
+### 🟢 The cohort, byte-read `2026-11-04` in a single call
+
+| Agent | Grant (byte-read, title-line graded) | ★ | Reading |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` (`1,065 B`) | `42,607` | Largest-starred agent address this base holds. Tsinghua. |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `MIT` (`1,071 B`) | `317` | The most complete LMS boundary in this base; up to 102 tools. |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` (`1,068 B`) | — | Local-first multi-agent tutor **with Canvas integration** — closest single match to "agent + LMS + permissive". |
+| [`Pranjulcr7/OpenTutor`](https://github.com/Pranjulcr7/OpenTutor) | 🟢 `MIT` (`1,068 B`) | — | 🔵 **Distinct project, identical name.** Block-based adaptive workspace, 10+ LLM providers. Do not merge the rows. |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 `MIT` (`1,105 B`) | — | Peer-reviewed BKT tutor with `LTI` score pass-back. 🔵 Its `1,105 B` falsified `640-D`'s band. |
+| [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | 🟢 `MIT` (`1,070 B`) | — | 🟡 Early-stage; the LMS claim is thin. |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | 🟢 `MIT` (`1,068 B`) | — | Claude Code plugin for local exam readiness. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 `CC-BY-SA-4.0` (`1,230 B`) | `915`–`944` | 🟢 **Byte count reproduces `p640`'s stored figure exactly.** Commercial use allowed, **share-alike**. Content, never closeable code. |
+
+🟢 `8 of 8` live, `0` archived, `8 of 8` with a readable grant. 🟢 **`7 of 8` permissive.**
+
+### 🔴 Four 🔴 rows on the live shelf resolved — and one disqualifies a component
+
+| Repo | Was | 🆕 `2026-11-04` | Consequence |
+|---|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION` | 🔴 **`Elastic License 2.0`** (`3,860 B`) | 🔴 **Source-available, not open source. Forbids hosted/managed-service delivery — this studio's model.** Removed from the recipe vocabulary. `340★`. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 🟢 **`Apache-2.0`** (`10,785 B`) | 🟢 **Promoted to the record-store step in all three `p641` recipes.** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | 🔴 **`"PageLM Community License"`** (`8,563 B`, on `LICENSE.md`) | 🔴 Independently reproduces `640-B`. Opens with MIT's grant sentence; is not MIT. `2,061★`. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 *"none declared, not reusable"* on the live shelf | 🟡 `CC-BY-SA-4.0` (`1,230 B`) | 🟢 Stale row **fixed in place**, not re-stated at the top. |
+
+🔵 **`PageLM` is the standing lesson about sweeps.** Its grant sat on `LICENSE.md`, one filename away
+from `LICENSE`, and read `NOASSERTION` for five passes.
+🟡 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) is now `NO-PAYLOAD` across `50`
+combinations (`38` in `p640`, `12` here) — 🟡 **unresolved, not ungranted**.
+
+### 🔴 The pass's actual finding — `641-M`, layered data
+
+🔴 **`p640` published its corrections by prepending a section and never reconciled the shelves below.**
+Three instances: `education-agent-skills` graded 🟡 `CC-BY-SA-4.0` at line `78` of `agents/top.md` and
+🔴 *"not reusable"* at line `253` of the same file; `oppia` held as the largest permissive platform on
+`repos/foundations.md` while `verticals/solutions.md` awarded that to `kolibri` at a sixth the stars;
+and `640-D`'s `MIT` band excluding a payload `p640` itself graded 🟢 `MIT`.
+
+🔵 **The error class has moved.** It used to be wrong data. It is now **internally inconsistent** data —
+harder to see, because every layer is individually sourced and defensible.
+🟢 **ACTION for `p642`: run `ingest/crosspage-figure-claims.py` as a pre-commit gate, and make a
+correction edit the row it corrects rather than restate it at the top.**
+
 ## `2026-11-04` · `p640` — the agent layer did not move; the **licence column** did, and four `unstated` rows closed
 
 🔴 **Fourteenth consecutive nil on the supply half, and `p640` finally explains it rather than

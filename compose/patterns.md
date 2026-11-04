@@ -3,6 +3,126 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p641` — reads `2026-11-04` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ THIS PASS AT A QUOTED BYTE COUNT. `P641-1` REPLACES `P640-1`'s PLATFORM STEP WITH [`oppia/oppia`](https://github.com/oppia/oppia) — `6.0×` THE STARS, SAME PERMISSIVE CLASS (`641-A`). `P641-2` IS THE FIRST RECIPE IN THIS BASE AGAINST A DEADLINE **FOUR WEEKS OUT** RATHER THAN THIRTEEN MONTHS. `P641-3` IS NEW: AUSTRALIA'S `TEQSA` HAS RUN A FULL NATIONAL COMPLIANCE CYCLE AND IS THE ONLY REGULATOR WITH EVIDENCE OF WHAT COMPLIANCE COSTS.**
+
+🔵 Every address below was verified on **both** channels on `2026-11-04`: existence and metadata via
+`search/repositories`, grant via `curl -s` `GET` on `raw.githubusercontent.com` with `%{http_code}` and
+`%{size_download}`, graded on the **title line** (`640-B`). 🔴 `curl -sI` was not used and must not be —
+the proxy's `CONNECT` reply is `200` for a fabricated slug (`637-E`); the fabricated control returned a
+literal `404` at `14 B` again this pass.
+
+🔴 **Two components were removed from this base's recipe vocabulary this pass and must not appear in a
+statement of work:** [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) is
+🔴 `Elastic-2.0` (`3,860 B`) which **forbids delivery as a hosted or managed service**, and
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) is 🔴 a bespoke *"PageLM Community License"*
+(`8,563 B`) that merely *opens* with MIT's grant sentence.
+
+### 🟢 `P641-1` — Assessment-integrity layer, greenfield (North America and EMEA)
+
+🔴 **What changed from `P640-1`.** Its platform step used `kolibri` on the strength of `640-N`'s
+*"largest permissive platform"* claim. 🟢 `641-A` falsified that: **`oppia/oppia` is `Apache-2.0`
+(`11,358 B`) at `6,965★` — six times `kolibri`'s `1,168★`** — and is the more buildable substrate for
+structured assessment because its content model is already a graded lesson graph.
+🟢 `kolibri` keeps a role, but a narrower and better-justified one: **the offline deployment target**,
+which is a connectivity decision, not a licence one.
+
+**The buyer.** 🟢 **North Carolina Session Law `2026-41`: state model policy due `2026-12-31`
+(`8` weeks), local school-unit policies due `2027-06-30`**, teacher training through `2028`. `MD`, `ID`,
+`OK` and `VA` carry `2026` laws mandating district-level policy adoption; `134` bills moved across `31`
+states this session. 🔴 Nationally `57%` of students use AI for coursework weekly (Lumina–Gallup,
+`n = 3,801`) while most public schools have no student-facing policy: **the institution needs the use
+instrumented, not banned.** 🟢 In EMEA the identical build is `Ofqual` compliance **today** — *AI may
+not be the sole marker* — plus `Annex III` preparation for `2027-12-02`.
+
+**The wiring.**
+1. 🟢 Platform — [`oppia/oppia`](https://github.com/oppia/oppia), `Apache-2.0` (`11,358 B`). Fork and
+   white-label. Its lesson graph is the unit of assessment, so the audit record attaches to a node
+   rather than to a transcript.
+2. 🟢 LMS boundary — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), `MIT`
+   (`1,071 B`), up to 102 tools. The existing gradebook stays the system of record; this is how the
+   agent reads and proposes **without** writing a grade.
+3. 🟢 Tutor layer — [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor), `MIT` (`1,068 B`),
+   multi-agent and already Canvas-aware; or
+   [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor), `MIT` (`1,105 B`) where the client wants
+   peer-reviewed Bayesian Knowledge Tracing and `LTI` score pass-back rather than an LLM.
+4. 🟢 Record store — [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem),
+   🟢 **`Apache-2.0` (`10,785 B`, resolved this pass — `641-L`)**. 🔴 **This replaces `P640-1`'s
+   `Apereo` step for the second pass running:** `OpenLRW` is `14` months stale and `OpenLRS` is
+   **archived** (`640-F`). The licence also improves from `ECL-2.0` fork-and-own to a maintained
+   permissive grant.
+5. 🟢 The control, and it is the deliverable — **graded proposal → human confirmation → immutable
+   record of who decided.** 🔴 Required by `Ofqual` now and by `Annex III` from `2027-12-02`.
+
+**Shape.** `10`–`12` weeks. 🔵 Step `5` is what the client is actually buying; steps `1`–`4` are
+assembly.
+
+### 🔴 `P641-2` — Four-week build: AI-content marking for systems already on the market (EMEA)
+
+🟢 **This is the nearest regulatory deadline in this entire base and the least-discussed one.**
+Regulation `(EU) 2026/1744` (OJ `2026-07-24`, in force `2026-07-27`) requires **marking of
+AI-generated content for systems already placed on the market by `2026-12-02`** — 🔴 **four weeks from
+this read.** Every institution that shipped an AI study tool, content generator or feedback assistant
+before `2026-08-02` is in scope, and the `Annex III` postponement to `2027-12-02` **does not cover
+this obligation**.
+
+**The wiring.** 🔵 Deliberately small — this is a four-week compliance artefact, not a platform.
+1. 🟢 Inventory — enumerate every generating surface. `oppia`/`Moodle`/`Canvas` plugin registries are
+   the practical starting point; the LMS boundary from `P641-1` step `2` enumerates what is installed.
+2. 🟢 Marking at the generation boundary — wrap each generating call so provenance is attached where
+   the content is produced, not where it is displayed. 🔴 Marking at render misses content exported to
+   `PDF`, email or `SCORM` packages, which is most of it.
+3. 🟢 Durable provenance record — the same immutable store as `P641-1` step `4`
+   ([`feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem), `Apache-2.0`, `10,785 B`), so the
+   two engagements share one substrate.
+4. 🟢 Evidence pack — what was marked, from when, by which version. 🔵 The same artefact satisfies
+   `TEQSA`'s action-plan requirement in `P641-3`.
+
+**Shape.** `4`–`6` weeks, and 🔴 the deadline does not move. 🟢 **The commercial argument is that this
+is a forced purchase with a date on it**, and it is the natural door-opener to `P641-1`.
+
+### 🟢 `P641-3` — 🆕 Award-integrity action plan and controls, Australian higher education (APAC)
+
+🟢 **Why this recipe is new and why APAC is now reachable.** `640-L` had no APAC entry on the
+assessment-regulation map. 🟢 `641-G` puts one there, and it is the most mature instrument of the five:
+**`TEQSA` required every Australian higher-education provider to file an institutional action plan on
+gen-AI's impact on award integrity; all `203` providers responded; and from `2026` `TEQSA` examines
+those plans as part of regulatory oversight.** The enforceable layer is the **Higher Education
+Standards Framework (Threshold Standards) `2021`**, which is existing law — so there is no future
+commencement date to wait for.
+
+🔴 **`TEQSA` also states the hardest design constraint in the set: gen-AI *detection software alone
+does not provide sufficient assessment security*, and providers should transform assessment so
+attainment can be demonstrated.** 🔴 **Do not propose a detector.** It is not a question of accuracy;
+it is insufficient as a control.
+
+**The wiring.**
+1. 🟢 Assessment-resilience audit — classify each assessment by whether attainment is demonstrable
+   under assistance. This is the step `TEQSA` actually asks for and the one no tool performs.
+2. 🟢 Redesign the failing items toward demonstrated attainment — oral defence, staged artefacts,
+   process evidence. 🔵 [`CTFd/CTFd`](https://github.com/CTFd/CTFd), `Apache-2.0` (`11,314 B`,
+   `6,896★`) is the open substrate where the discipline is technical: challenges, scoring and progress
+   are *demonstrated*, not asserted.
+3. 🟢 Process evidence over output inspection — capture drafting trajectory through the LMS boundary
+   ([`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), `MIT`, `1,071 B`) rather than
+   inspecting final text.
+4. 🟢 Human-decision record — the shared control from `P641-1` step `5`. 🟢 Satisfies `Ofqual`'s
+   sole-marker ban and `Annex III` at the same time, so an Australian build is EU-ready.
+5. 🟢 The action plan itself, as a maintained document the regulator reads — short, medium and
+   long-term actions, with the evidence pack from `P641-2` step `4` attached.
+
+**Shape.** `8`–`10` weeks. 🟢 **Step `5` is the differentiator: `TEQSA` is the only regulator in this
+set that has already read `203` of these documents, so the expected form is known rather than guessed.**
+
+### 🔵 What all three share, and why that is the commercial point
+
+🟢 **One architecture — graded proposal, human confirmation, immutable record of who decided —
+satisfies the EU, the UK, Vietnam, Australia and Dubai's `KHDA` (`641-G`).** 🟢 One record store
+([`feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem), `Apache-2.0`) and one LMS boundary
+([`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), `MIT`) serve all three recipes.
+🔵 **A studio does not need three products — it needs one substrate and three framings**, and the
+framing is what the client's regulator supplies.
+
 ## 🆕 `p640` — reads `2026-11-04` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ THIS PASS AT A QUOTED BYTE COUNT. `P640-1` REPAIRS `P639-1`, WHOSE RECORD STORE TURNS OUT TO HAVE AN **ARCHIVED** SIBLING AND A `14`-MONTH-STALE PRIMARY. `P640-2` IS THE FIRST RECIPE IN THIS BASE AGAINST A **LIVE** REGULATORY OBLIGATION RATHER THAN A FUTURE ONE. `P640-3` OPENS THE K-12 BUYER THAT `Cetic.br` JUST EVIDENCED.**
 
 🔵 Every address below was verified on **both** channels on `2026-11-04` — existence and metadata via

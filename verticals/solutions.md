@@ -3,6 +3,56 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p641` — reads `2026-11-04` — **🔴 `641-A`: `640-N`'s HEADLINE CLAIM IS FALSE. THE LARGEST PERMISSIVE EDUCATION PLATFORM IS NOT `kolibri` AT `1,168★` — IT IS [`oppia/oppia`](https://github.com/oppia/oppia) AT `6,965★`, `Apache-2.0`, AND IT WAS ALREADY ON THIS BASE'S OWN `repos/foundations.md` WHEN `p640` WROTE THE SENTENCE. 🟢 `641-L`: TWO SHELF ROWS RESOLVED ON BYTES, AND ONE OF THEM — `advisingapp` — IS `Elastic-2.0`, WHICH **FORBIDS THE MANAGED-SERVICE DELIVERY MODEL THIS STUDIO SELLS**.**
+
+🔴 **`640-N` withdrew `p638`'s *"components, not platforms"* rule and was right to.** 🔴 **It then
+under-counted the shelf by a factor of six and did so against data on the facing page.**
+`repos/foundations.md:762` has carried `oppia` since `p640` as 🟢 `Apache-2.0`, byte-read,
+*"the most buildable large platform."* This page, in the same pass, called `kolibri` *"the largest
+permissive platform in education."* 🟢 Both rows were individually correct; **the superlative was not**.
+
+### 🟢 The permissive platform shelf — complete LMS/learning platforms a studio can close, re-ranked
+
+🔵 Every grant below byte-read `2026-11-04` by `curl -s` `GET` on `raw.githubusercontent.com`, graded on
+the **title line** (`640-B`), byte count quoted so a later pass can tell a re-read from a restatement.
+
+| Platform | Grant (byte-read) | ★ | Pushed | Reading |
+|---|---|---|---|---|
+| 🆕 [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **`Apache-2.0`** (`11,358 B`, `develop/LICENSE`, `Δ +1`) | 🟢 **`6,965`** | `2026-11-03` | 🟢 🆕 **The largest permissive education platform there is — `6.0×` `kolibri`.** Structured interactive lessons; nonprofit-governed; deployed for mathematics in India, Brazil and across Africa. Permissive, active, and the most buildable large platform this base holds. **Promoted to the head of this shelf.** Carry the `NOTICE` file under §4. |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** (`1,097 B`, `develop/LICENSE`) | `1,168` | `2026-11-02` | 🟢 **The offline-first answer — the choice when connectivity, not licence, is the constraint.** LATAM and Africa deployments; `Learning Equality` is the institutional owner. 🔵 No longer "the largest"; still the right default where bandwidth is the binding constraint. |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** (`10,982 B`, fully reconciled — `640-E`) | `449` | `2026-11-03` | 🟢 **The standards-complete greenfield default:** `QTI 2.1`, `SCORM 1.2`, `LTI 1.3` in one permissive artefact. Swiss-governed, `DACH` higher education. Forkable, white-labellable, deliverable as a managed service. 🟡 GitHub metadata reads it `NOASSERTION`; it is `Apache-2.0`. |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **`MIT`** (`1,063 B`) | `208` | `2026-11-03` | 🟢 A second permissive LMS. Held since `p73`, still under-used given it answers the permissive-platform question directly. |
+| 🆕 [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | 🟢 **`Apache-2.0`** (`11,314 B`, `Δ −43`) | `6,896` | `2026-11-01` | 🟢 🆕 **The permissive platform for skills *assessment* rather than content delivery.** Capture-the-flag framework: challenges, scoring, teams, progress. 🔵 Relevant now for a specific reason — `Pearson`'s move on `Workera` says the market is paying for **verified skills**, and this is the open-source substrate for exactly that. |
+
+🔵 **Why `oppia` was invisible to this page for a whole pass.** It was filed under *foundations* (a repo
+a studio builds **on**) and never promoted to *verticals* (a platform a studio **closes and delivers**).
+🟢 It is both, and the two pages had no mechanism to notice. 🔴 **That is `641-M`, the pass-level
+defect: `p640` prepended its corrections and never reconciled the shelves below them.**
+
+### 🔴 `641-L` — two shelf rows resolved on bytes, and one is disqualifying
+
+| Platform | Was | 🆕 Byte-read `2026-11-04` | Reading |
+|---|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION`, *"needs a byte-read before any engagement"* | 🔴 **`Elastic License 2.0`** (`3,860 B`) | 🔴 **Resolved, and the answer is no.** Elastic-2.0 is **source-available, not open source**, and it specifically forbids providing the software to others as a **hosted or managed service**. 🔴 **That is Globant's delivery model**, so this is a hard disqualification rather than a caution. `340★`, AI advising/retention for higher ed. Read it for reference; never put it in a statement of work. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 🟢 **`Apache-2.0`** (`10,785 B`, `Δ −572`) | 🟢 **Resolved to a permissive grant and now deliverable.** `TH Mittelhessen`; personalised AI student feedback. The German-market reference, and the `−572 B` is the absent `APPENDIX` — no grant term altered. |
+
+🟡 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) remains 🔴 **unresolved —
+`NO-PAYLOAD`** across `p640`'s `38` combinations and a further `12` this pass. `349★`, live, maintained
+`2026-10-26`. 🟡 **Unresolved, not ungranted.** Do not put it in a client proposal until a maintainer
+states the licence in writing. 🔵 `PageLM` is the standing caution here: its grant was on `LICENSE.md`,
+one filename outside the sweep, for five passes.
+
+### 🔴 The copyleft incumbents — holds, re-verified
+
+🟢 `p638`'s reading of the five highest-deployment incumbents survives intact; only the
+*generalisation* was ever withdrawn. `moodle/moodle` and `chamilo/chamilo-lms` and
+`ILIAS-eLearning/ILIAS` at 🔴 `GPL-3.0` (`35,147 B`); Canvas and Open edX at 🔴 `AGPL-3.0`.
+🔵 `OpenEduCat` — the one platform that bundles **LMS and SIS** in a single Odoo-based education ERP
+(admissions, attendance, gradebook, fees, library, parent app) — is 🔴 **`LGPL-3.0`**, so it is a
+brownfield-extension target, not a fork-and-close one. 🟢 **The permissive shelf above is where a
+greenfield engagement starts; the copyleft shelf is where a brownfield one does.**
+
 ## 🆕 `p640` — reads `2026-11-04` — **🟢 `640-N`: `639-F` FOUND **ONE** PERMISSIVE EDUCATION PLATFORM AND CALLED `p638`'s *"COMPONENTS, NOT PLATFORMS"* RULE FALSE. THERE ARE **THREE**, ALL BYTE-VERIFIED, AND THE LARGEST HAS `1,168★`. 🔴 `640-F`: THE `Apereo` LEARNING-ANALYTICS SHELF — WHICH THIS BASE RECOMMENDS AS A FORK-AND-OWN RECORD STORE — HAS AN **ARCHIVED** SIBLING AND A `14`-MONTH-STALE PRIMARY. REPLACEMENTS ARE ON THE SHELF BELOW.**
 
 🟢 **`639-F` was right and under-counted.** It withdrew `p638`'s generalisation on the strength of one

@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p641` — reads `2026-11-04` — **🔴 `641-M`: `p640` ADDED ITS CORRECTIONS BY *PREPENDING* AND NEVER RECONCILED THE LIVE SHELVES BELOW THEM. THE DATA IS NOW **LAYERED, AND THE LAYERS DISAGREE** — THREE INSTANCES FOUND, ONE OF THEM INSIDE THIS FILE. 🟢 `641-L`: FOUR OF THE LIVE SHELF'S 🔴 ROWS RESOLVED ON BYTES — AND ONE OF THEM, `advisingapp`, IS `Elastic-2.0` **SOURCE-AVAILABLE**, WHICH DISQUALIFIES IT FROM THE MANAGED-SERVICE DELIVERY MODEL THIS STUDIO SELLS. 🔵 `641-B`: `640-D`'s `MIT` BAND IS FALSIFIED BY `p640`'s OWN SHELF.**
+
+🔴 **The defect this pass found is not a wrong figure. It is a wrong *shape*.** `p640` did good work and
+published it the way every pass before it did: a new section at the top. 🔴 **But the tables further
+down the file were never updated to match**, so `agents/top.md` now states a grade at line `78` and
+contradicts it at line `253`. A reader scrolling to the live shelf — which is what the shelf is *for* —
+reads the withdrawn value. 🟢 **The repair is in this pass: the live rows below are corrected in
+place, not re-stated at the top.**
+
+| Instance | Where the correction is | Where the stale value still sat | Status |
+|---|---|---|---|
+| `education-agent-skills` grant | line `78`, 🟡 `CC-BY-SA-4.0` (`1,230 B`), by `639-A` | live shelf, 🔴 *"none declared … not reusable"* | 🟢 **fixed in place this pass** |
+| *"largest permissive platform"* | `repos/foundations.md` holds `oppia` at `6,965★` | `verticals/solutions.md` says `kolibri`, `1,168★` | 🟢 **fixed — see `641-A`** |
+| `MIT` canonical band | `repos/foundations.md` band `1,062`–`1,085 B` | same pass graded `kolibri` 🟢 `MIT` at `1,097 B` | 🟢 **band widened — see `641-B`** |
+
+🔵 **Why this matters more than any single row.** This base's error class has *moved*. It used to be
+wrong data (`p638`'s false reds, the inflated star counts). It is now **internally inconsistent**
+data, which is worse, because every layer is individually sourced and defensible. 🟢 `ingest/crosspage-figure-claims.py`
+already exists to catch exactly this and was not run before `p640` committed. **ACTION for `p642`: run
+it as a pre-commit gate, and make a correction edit the row it corrects.**
+
+### 🟢 `641-L` — the live shelf's unresolved rows, resolved on bytes
+
+🔵 Method as `640-A`/`640-B` prescribe: `curl -s` `GET` on `raw.githubusercontent.com` with
+`%{http_code}` and `%{size_download}`, graded on the **title line**. 🔴 `curl -sI` was not used and must
+not be: the proxy's `CONNECT` reply is `200` for real and fabricated slugs alike (`637-E`), and a
+fabricated control returns a literal `404` at `14 B` — reproduced again this pass.
+
+| Repo | Was | 🆕 Byte-read `2026-11-04` | Reading |
+|---|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION`, *"needs a byte-read"* | 🔴 **`Elastic License 2.0`** (`3,860 B`, `main/LICENSE`) | 🔴 **Source-available, not open source.** Elastic-2.0 forbids providing the software to others as a hosted or managed service. **That is precisely Globant's delivery model**, so this is a hard disqualification, not a caution. `340★`. Readable for reference; not deliverable. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 🟢 **`Apache-2.0`** (`10,785 B`, `main/LICENSE`) | 🟢 **Resolved to a permissive grant and now usable.** `TH Mittelhessen`; the German-market reference for personalised student feedback. `Δ −572 B` against canonical `11,357 B` — the appendix is absent, no grant term is altered. |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | 🔴 **`"PageLM Community License"`** (`8,563 B`, `main/LICENSE.md`) | 🔴 **Bespoke licence, and it independently reproduces `640-B`.** The payload *opens* with MIT's `"Permission is hereby granted, free of charge, to"` — which is why every substring grader calls it `MIT` — but the **title line** names a community licence and the file carries `~7.5 KB` of terms beyond MIT's `1,068 B`. `2,061★`. 🟡 Do not treat as permissive until the extra terms are read. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 *"none declared"* on the live shelf | 🟡 **`CC-BY-SA-4.0`** (`1,230 B`, `main/LICENSE`) | 🟢 **Byte count reproduces `p640`'s stored figure exactly.** Commercial use allowed, **share-alike** — so derivative curriculum must be shared alike. Usable as *content*, never as code a client can close. `915`–`944★`. |
+
+🔵 Three addresses returned no payload on the `12` branch/filename combinations run this pass
+([`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock),
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic), and `PageLM` on `LICENSE` before
+`LICENSE.md` was tried). 🟡 For `openSIS-Classic` this is the **third** pass to fail across a widening
+sweep (`p640`: `38` combinations) — it remains 🟡 **unresolved, not ungranted**. `PageLM` is the lesson:
+the grant was on `LICENSE.md`, one filename away.
+
+### 🟢 The tutor-agent cohort, re-verified on bytes this pass
+
+🔵 All six below were probed in a single call on `2026-11-04`. 🟢 `6 of 6` live, `0` archived, `6 of 6`
+carrying a readable grant.
+
+| Agent | Repo | Grant (byte-read `2026-11-04`) | Region | What it does |
+|---|---|---|---|---|
+| canvas-mcp (Sachdev) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `MIT` (`1,071 B`) | North America | Canvas LMS MCP server, up to 102 tools + 8 agent skills. The most complete LMS boundary in this base. `317★`. |
+| OpenMAIC | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` (`1,065 B`) | APAC | The largest-starred agent address this base holds (`42,607★`). Tsinghua. |
+| OpenTutor (zijinz456) | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` (`1,068 B`) | Global | Self-hosted local-first multi-agent tutor **with Canvas LMS integration** — the closest single match to "agent + LMS + permissive". |
+| OpenTutor (Pranjulcr7) | [`Pranjulcr7/OpenTutor`](https://github.com/Pranjulcr7/OpenTutor) | 🟢 `MIT` (`1,068 B`) | Global | Block-based adaptive workspace, runs locally, 10+ LLM providers. Distinct project, same name — do not merge the two rows. |
+| OATutor | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 `MIT` (`1,105 B`) | North America | Peer-reviewed adaptive tutor with Bayesian Knowledge Tracing and **LTI** score pass-back to Canvas/Moodle. Berkeley. 🔵 Its `1,105 B` is what falsified `640-D`'s band. |
+| ai-tutor (Gchism94) | [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | 🟢 `MIT` (`1,070 B`) | North America | Adaptive quizzes, coding help, ethical guidance; GitHub Classroom hooks. 🟡 Early-stage — the LMS claim is thin. |
+
+### 🔵 `641-B` — `640-D`'s `MIT` band is falsified, by `p640`'s own shelf
+
+🔴 `640-D` published `MIT` as a band of **`1,062`–`1,085 B`** over `19` reads and drew a rule from it:
+*"any payload graded `MIT` outside it is a narrowed derivative."* 🔴 **Two reads this pass sit outside
+the band and are both plainly `MIT`** — and one of them `p640` itself published as 🟢 `MIT` on the
+permissive platform shelf in the same pass:
+
+| Repo | Bytes | Outside `640-D`'s band? | Title line |
+|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,097` | 🔴 yes, `+12` | `MIT License` — graded 🟢 `MIT` by `p640` itself |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `1,105` | 🔴 yes, `+20` | `MIT License` |
+
+🟢 **The mechanism is the copyright line, and it is longer than `640-D` assumed.** `"Learning Equality"`
+and `"The Regents of the University of California"` are longer holder names than the `19` repos the
+band was fitted on. 🟢 **The band widens to `1,062`–`1,105 B`** and is **demoted from an anomaly
+detector to a weak prior**: a payload outside it warrants a title-line read, nothing more. 🔵 The rule
+that survives intact is `640-B`'s — **grade on the title line** — which is what caught `PageLM` at
+`8,563 B` and what no byte count could have done alone.
+
+### 🔵 `641-J` — fifteenth consecutive nil on the supply half, now across two channels and three query shapes
+
+🟢 `11` candidate addresses surfaced this pass across the web legs and the `search/repositories` leg.
+🔴 **`11 of 11` were already held.** `OPTIMETA/PAIDEIA` (🟢 `MIT`, `1,068 B`), `education-agent-skills`,
+`zijinz456/OpenTutor`, `Pranjulcr7/OpenTutor`, `Gchism94/ai-tutor`, `CAHLR/OATutor`, `oppia/oppia`,
+`CTFd/CTFd`, `JuliaPluto/Pluto.jl`, `processing/p5.js`, `ankidroid/Anki-Android`. 🟢 **`p640`'s
+reinterpretation of the nil as saturation rather than blindness is confirmed on a second channel** and
+should now be treated as settled, not re-litigated each pass.
+
 ## 🆕 `p640` — reads `2026-11-04`, commit `2026-11-04` — **🟢 `640-A`: THE LICENCE CELL IS NOW A SCRIPTED TWO-CHANNEL MEASUREMENT, NOT A PER-ADDRESS JUDGEMENT — `36 of 36` REAL ADDRESSES VERIFIED, EVERY CELL CITING ITS CHANNEL AND BYTE COUNT, WHICH IS WHAT `639-A` LEFT OPEN AS A RULE. 🔴 `640-B`: BOTH `p639`'s GRADER **AND `p640`'s OWN FIRST GRADER** MIS-GRADED THE `GNU` FAMILY, IN OPPOSITE DIRECTIONS, FOR THE SAME STRUCTURAL REASON — AND `p640`'s FIRST GRADER PUBLISHED `PageLM` AS `MIT`, RE-COMMITTING THIS BASE'S OWN FIVE-PASS ERROR. 🟢 `640-C`: FOUR LEDGER ROWS CARRYING `unstated` RESOLVED ON BYTES.**
 
 🟢 **`639-A` closed a capability question and left a rule: *"a licence cell cites its channel and its
@@ -250,12 +335,12 @@ is at the boundary, not in the core.**
 | canvas-pilot | [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | `AGPL-3.0` | 125 | 2026-07-31 | North America | Local-first Canvas agent that learns each course's recurring assignment workflow. 🔴 `AGPL-3.0` — do not link into client code. **New to this base.** |
 | moodle-ai-skill-navigator | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | `GPL-3.0` | 259 | 2026-10-25 | Global | In-process Moodle plugin: tutoring, quizzes, mind maps, RAG over course material. 🔴 `GPL-3.0`, and in-process means the plugin contract binds. |
 | spbstu-mcp | [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | `MIT` | 24 | 2026-11-02 | EMEA | MCP server over a university Moodle plus mail — the Moodle-side counterpart to canvas-mcp. |
-| education-agent-skills | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 none declared | 944 | 2026-11-03 | Global | 165 evidence-grounded skills for teachers and school leaders. Largest by stars — but **no licence grant, so not reusable**. |
-| Advising App | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION` | 340 | 2026-11-03 | North America | AI conversational assistant for student advising/retention in higher ed. Licence needs a byte-read before any engagement. |
-| PageLM | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | 2061 | 2026-10-29 | Global | Open NotebookLM-style study platform: turns material into quizzes, notes, flashcards. |
+| education-agent-skills | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 `CC-BY-SA-4.0` (byte-read `1,230 B`, `p641`) | 944 | 2026-11-03 | Global | 165 evidence-grounded skills for teachers and school leaders. Largest by stars. 🟢 **Commercial use allowed, share-alike** — usable as *content*, never as code a client can close. 🔵 `p638`'s *"not reusable"* was withdrawn by `639-A`; this row carried the withdrawn value until `641-L` fixed it in place. |
+| Advising App | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **`Elastic License 2.0`** (byte-read `3,860 B`, `p641`) | 340 | 2026-11-03 | North America | AI conversational assistant for student advising/retention in higher ed. 🔴 **Source-available, NOT open source: Elastic-2.0 forbids providing the software as a hosted or managed service** — this studio's delivery model. **Hard disqualification, not a caution.** Read for reference; never put in a statement of work. |
+| PageLM | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **`"PageLM Community License"`** (byte-read `8,563 B` on `LICENSE.md`, `p641`) | 2061 | 2026-10-29 | Global | Open NotebookLM-style study platform: quizzes, notes, flashcards. 🔴 **Bespoke licence, not MIT.** The payload *opens* with MIT's grant sentence — which is why substring graders call it `MIT` (`640-B`) — but the title line names a community licence and carries `~7.5 KB` of further terms. 🟡 Not permissive until those terms are read. |
 | Claudemy | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | `MIT` | 605 | 2026-10-29 | Global | Generates a full course from a topic — course-authoring agent, not a tutor. |
 | Tutorbot-Spock | [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 none declared | 56 | 2024-11-04 | North America | Tutoring chatbot built on learning-science principles (Rice/OpenStax). 🔴 Stale since 2024-11 and unlicensed — cite as research, not as a dependency. |
-| feedbacksystem | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 24 | 2026-11-03 | EMEA | Personalised AI student feedback, TH Mittelhessen. Small but live; useful as a German-market reference. |
+| feedbacksystem | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **`Apache-2.0`** (byte-read `10,785 B`, `p641`) | 24 | 2026-11-03 | EMEA | Personalised AI student feedback, TH Mittelhessen. 🟢 **Resolved to a permissive grant and now deliverable** — promoted to the record-store step in all three `p641` recipes. `Δ −572 B`: the `APPENDIX` is absent, no grant term altered. The German-market reference. |
 
 **Licence split of the agent layer, measured on these 16:** 9 permissive (7 `MIT`, 1 `Apache-2.0`,
 1 `CC0-1.0`), 2 copyleft (`AGPL-3.0`, `GPL-3.0`), **5 with no usable grant** (`NOASSERTION` or none).

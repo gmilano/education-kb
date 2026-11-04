@@ -3,6 +3,147 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p641` — reads `2026-11-04` — **🟢 `641-C`: `640-K`'s APAC NIL **CLOSES** — `$2.85B` FOR `2026`, TWO SOURCES SHARING THE BASE. 🔴 `641-D`: THE `$4.2B` LATAM FIGURE THIS BASE HAS CARRIED SINCE `p54` IS **FALSE, AND ITS PROVENANCE IS NOW LOCATED** — IT IS THE LATAM ***DIGITAL EDUCATION*** MARKET, A BROADER CATEGORY, FILED AS THE NARROWER ONE. THE REAL FIGURE IS `$0.67B`. 🟢 `641-E`: WITH ALL FOUR REGIONS MEASURED, THE DECOMPOSITION SUMS TO `$9.84B` AND **THE PUBLISHED GLOBAL BAND IS THE OUTLIER.**
+
+🟢 **This is the pass that closes the regional map.** For the first time this base holds a measured
+`2026` figure for **all four** regions. 🔵 And the moment the fourth arrived, it did something no
+individual figure could: it **audited the other five numbers on the shelf**.
+
+### 🟢 The four-region decomposition — complete, `2026`
+
+| Region | `2026` | Path | `CAGR` | Independent reads | Status |
+|---|---|---|---|---|---|
+| North America | `$3.68B` | `→ $32B` (`2030`) | — | `1` (MarketsandMarkets) | 🟡 Carried from `p640`. States `36%` of global. |
+| EMEA (Europe) | `$2.64B` | `→ $8.0B` (`2030`) | `31.9%` | 🟢 **`2`** — `p640` + this pass | 🟢 **Confirmed on a second read.** |
+| 🆕 **APAC** | 🟢 **`$2.85B`** | `→ $9.7B` (`2030`) | `35.3%` | 🟢 **`2`**, sharing the base | 🟢 **`640-K`'s nil closes.** |
+| 🆕 **LATAM** | 🟢 **`$0.67B`** | `→ $2.1B` (`2030`) | `33.5%` | 🟢 **`2`**, sharing the base | 🔴 **Replaces the false `$4.2B`.** |
+| **Sum of four** | 🟢 **`$9.84B`** | — | — | — | 🔴 **Below the published global band of `$11.4B`–`$12.5B`.** |
+
+🔵 **A second, independent arithmetic path reaches the same place.** Three sources state a regional
+*share* of global rather than a dollar figure. Each implies a global total:
+
+| Share statement | Implied global `2026` |
+|---|---|
+| North America `= 36%` of global, at `$3.68B` | `$10.22B` |
+| APAC `= 29.0%` of global, at `$2.85B` | `$9.83B` |
+| LATAM `= 5%` of global, at `$0.55B` | `$11.0B` |
+
+🟢 **So two unrelated methods — summing four measured regions (`$9.84B`) and inverting three share
+statements (`$9.83B`–`$11.0B`) — converge on roughly `$10B`, and the published global band of
+`$11.4B`–`$12.5B` sits above both.** 🔴 **The reading is that the global band is inflated, not that a
+region is missing.** `p640` noticed this for North America alone and left it *"unreconciled and not
+reconciled here"*. 🟢 With four regions it is no longer a single-source anomaly: **three of the five
+published numbers on this shelf cannot all be true, and the two that survive the cross-check are the
+regional ones.** For client sizing, 🟢 **use the regional figures and the `~$10B` global, not the band.**
+
+### 🔴 `641-D` — the `$4.2B` LATAM figure is false, and this is where it came from
+
+🔴 Prior shelves carry LATAM AI-in-education as **`$1.5B → $4.2B`**. Every measurement this pass
+contradicts it:
+
+| Source | LATAM AI-in-education | Note |
+|---|---|---|
+| two aggregators, shared base | 🟢 **`$0.67B` (`2026`) → `$2.1B` (`2030`)**, `33.5%` | The most-cited pair. |
+| share-based | `$0.55B` — LATAM held at `5%` of global across `2026`/`2030`/`2036` | Different method, same order of magnitude. |
+| MarketsandMarkets | `$105.6M` (`2024`) → `$204.7M` (`2029`) | 🔵 An order of magnitude *lower* again. Scope is narrower. |
+
+🟢 **And the `$4.2B` is not a random error — it is a scope substitution, and the source category is
+identifiable.** MarketsandMarkets puts **LATAM *digital education*** at **`$1,567.9M` (`2025`) →
+`$4,976.8M` (`2030`)`. 🔴 **`$1.5B → $4.2B` is that pair**, rounded, with *digital education* — a
+category that includes every LMS seat, every online course and every device — recorded as
+*AI in education*. 🟢 **This is `639-A`'s error class in its most expensive form: not a misread number,
+but a correctly-read number filed against the wrong noun.**
+
+🔵 **It was also arithmetically impossible, and the decomposition would have caught it.** `$4.2B`
+against a `~$10B` global implies LATAM is `42%` of the world AI-in-education market — larger than
+North America. 🟢 **ACTION for `p642`: any regional figure entering these shelves is checked against
+the sum of the other three before it is written.** That test is cheap, it is arithmetic, and it would
+have rejected `$4.2B` on the day it was added.
+
+### 🔵 `641-K` — the region-token mechanism, refined once more
+
+🔴 `640-H` concluded the region-token defect was *"`APAC`-specific"* because `"APAC` is a vendor's sales
+territory and nothing else."* 🔴 **`p641` ran the `APAC` token as prescribed and it paid** — Korea's
+`AI Basic Act`, Vietnam's framework, China's penalty ceiling, Singapore's `AI Verify`, Australia's
+`TEQSA`, a named player list, **and the market report that closed `640-K`**.
+
+🟢 **So the token is not the variable. The query *intent* is.** `640-H` had the observation right and
+the cause wrong:
+
+| Query intent | Does the region token work? | Why |
+|---|---|---|
+| Market size, vendors, players, M&A | 🟢 **yes** | Market-research firms and international law firms **do** self-describe as `APAC` and `EMEA`. It is their unit of sale. |
+| Ministry policy, classroom adoption rates | 🔴 **no** | No education ministry describes itself as an `APAC` body. Named countries are required. |
+
+🟢 **The fix is therefore to pick the shape from the intent, not to retire the token** — and running
+both shapes is still what distinguishes the two cases. `p640`'s `EMEA` success and `p641`'s `APAC`
+success are the same phenomenon: both legs asked a commercial question.
+
+### 🔴 `639-D` still stands, and is now the oldest open condition on these shelves
+
+🔴 Every market figure above is **secondary**. No primary read was possible: `eur-lex.europa.eu` and
+`news.gallup.com` remain `ENOTFOUND` on this session's network. 🟢 **One exception this pass** — the EU
+instrument is now citable by number rather than by description (`641-F`, `intel/trends.md`), which is
+the first time a regulatory claim on these shelves has had a regulation number attached.
+
+### 🟢 Opportunities by region
+
+#### North America
+
+🟢 **The buyer is a statutory deadline.** `134` bills across `31` states in the `2026` session.
+Four states — `MD`, `ID`, `OK`, `VA` — have `2026` laws mandating district-level policy adoption, and
+**North Carolina Session Law `2026-41`** sets a state model policy due **`2026-12-31`** (`8` weeks) and
+local school-unit policies due **`2027-06-30`**, with teacher training running through `2028`.
+Federally, the **`K-12 AI Literacy and Readiness Act of 2026`** has advanced out of House committee.
+🔴 The constraint set is now explicit enough to design against: `DC`'s `2026-27` policy bars AI from
+**grading, discipline, IEP decisions and teacher evaluation**; California `AB 1159` would bar student
+data from training models; Idaho `SB 1227` preserves a **parental opt-out**; a New York bill would
+restrict classroom AI to **grade 9 and above**. 🟢 **The opportunity is policy-to-instrumentation:
+districts must adopt a policy on a date certain and have nothing that enforces it.** `60%` of US
+teachers already use AI tools, and most public schools have no student-facing policy at all.
+
+#### EMEA
+
+🟢 **The buyer is a dated legal obligation with a regulation number** (`641-F`): Regulation
+`(EU) 2026/1744`, in force `2026-07-27`, moves `Annex III` education systems to **`2027-12-02`** and
+embedded systems to `2028-08-02`. 🔴 **But the nearest deadline is sooner and widely missed:
+`2026-12-02` — four weeks out — for marking AI-generated content in systems already on the market.**
+Market `$2.64B → $8.0B` at `31.9%`, the fastest-growing *confirmed* regional `CAGR` on this shelf.
+`Finland`, `Estonia` and the `Netherlands` lead K-12 integration. 🟡 In the UK the enforceable layer is
+`Ofqual`'s guide, live now. 🟢 In the Gulf, **Dubai's `KHDA`** has issued guidance to private schools —
+a named education regulator in a market that buys turnkey.
+
+#### APAC
+
+🟢 **Now the region with a figure, the fastest growth, and the widest uncertainty.** `$2.85B` (`2026`)
+→ `$9.7B` (`2030`) at `35.3%`; Grand View reads `$2,282.9M` (`2025`) → `$18.2B` (`2033`) at `28.1%`.
+🔴 **Published regional `CAGR`s range from `17.5%` to `44.2%` — a `26.7`-point spread, the widest
+disagreement anywhere on these shelves.** Quote the dollar base, never the growth rate.
+China, India and Japan are the leading markets; named players are Google, Microsoft, IBM, Pearson and
+Byju's. 🟢 **The regulatory map is now the most advanced of any region**: Korea's `AI Basic Act` in
+force `2026-01-22`; Vietnam's risk-based framework with education among six high-risk sectors;
+China's registration and content-labelling duties with penalties to `¥50M`; **Australia's `TEQSA`,
+the only education-*specific* regulator examining provider AI plans as part of oversight**; Singapore
+and Japan voluntary. 🔴 **The gap that remains is adoption**: no classroom adoption rate for APAC
+survived this pass's filter. An informed gap — the commercial legs pay, the institutional legs do not.
+
+#### LATAM
+
+🟢 **The region with the best-instrumented evidence and the smallest market — and both facts matter.**
+`$0.67B` (`2026`) → `$2.1B` (`2030`) at `33.5%`, replacing a figure `6×` too large (`641-D`).
+🟢 **The adoption evidence here is the strongest on these shelves because it states its populations:**
+UNESCO IESALC across `~200` institutions in `19` countries finds **`87%` use AI in at least one area,
+`26%` have any formal framework, `55%` have no AI budget at all**; `Cetic.br` (`2026`) finds **`53%` of
+Brazilian school administrators use AI, `22%` have school guidelines**; `Ceibal` (`2026`) finds **`75%`
+of Uruguayan public-school teachers** using these tools. 🟢 Regulatory volume is high and binding force
+low: Universidad de los Andes counts **`716` AI-related instruments across `23` countries, `>80%`
+initiated since `2023`**; Brazil's `PL 2.338/2023` passed the Senate in `December 2024` and is still in
+the Chamber; Colombia went policy-first with `CONPES 4144` (`February 2025`). 🟢 **UNESCO launched the
+Observatory on AI in Education for Latin America and the Caribbean on `2026-04-14`** — an institutional
+counterparty that did not exist a year ago. 🔵 **The opportunity is the `87%`/`26%` gap: the usage is
+already there and the governance is not, and that is a delivery engagement, not a licence sale.**
+
 ## 🆕 `p640` — reads `2026-11-04` — **🔴 `640-H`: `639-H`'s ACTION PREDICTED THE REGION-TOKEN DEFECT ALSO SUPPRESSED `EMEA`. `p640` RAN `EMEA` **AS PRESCRIBED** AND IT PAID ON THE FIRST ATTEMPT — A MARKET SIZE, A `CAGR`, A THREE-COUNTRY RANKING, A GOVERNANCE DENOMINATOR AND A GULF REGULATOR. **THE PREDICTION IS FALSIFIED AND THE DEFECT IS `APAC`-SPECIFIC.** 🟢 `640-I`: `VIETNAM` HAS APAC'S FIRST BINDING, DATED, ENUMERATED EDUCATION AI REGIME — AND IT IS LIVE `15` MONTHS BEFORE THE EU's. 🔵 `640-J`: THE `57%`/`60%` FIGURES ARE **NOT** IN CONFLICT; THEY MEASURE STUDENTS AND TEACHERS.**
 
 🟢 **`639-H` earned its conclusion and over-generalised it.** It proved the `APAC` nil was a

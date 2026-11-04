@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## `2026-11-04` · `p641` — the `topic:education` facet, characterised: its top `16` rows are **"learn to code"**, not edtech
+
+🟢 `p640` moved the discovery operative to `search/repositories` and read the nil as saturation.
+🟢 `p641` ran the same channel on the **`topic:education` facet** (`stars:>100`, `pushed:>2026-09-01`) to
+ask a different question: *is the facet itself the wrong instrument?*
+
+🔴 **It is, above rank `16`.** The head of the facet is programming-education content, not education
+software, and it will return the same seven repos every pass:
+
+| Rank | Repo | Licence (metadata) | ★ | Pushed | What it actually is |
+|---|---|---|---|---|---|
+| 1 | [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | `BSD-3-Clause` | `458,507` | `2026-11-03` | Coding curriculum |
+| 2 | [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | `CC-BY-4.0` | `400,831` | `2026-11-01` | Link list |
+| 3 | [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `MIT` | `225,837` | `2026-11-02` | Algorithm reference |
+| 4 | [`getify/You-Dont-Know-JS`](https://github.com/getify/You-Dont-Know-JS) | `NOASSERTION` | `184,843` | `2026-10-31` | Book |
+| 5 | [`krahets/hello-algo`](https://github.com/krahets/hello-algo) | `NOASSERTION` | `131,921` | `2026-11-03` | Book |
+| 7 | [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners) | `MIT` | `97,092` | `2026-11-01` | Course |
+| 8 | [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | `MIT` | `91,979` | `2026-10-31` | Course |
+
+🟢 **Education-*sector* software begins below that, and this is where the facet pays:**
+
+| Repo | Grant | ★ | Pushed | Held? | Reading |
+|---|---|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` (byte-read `11,358 B`) | **`6,965`** | `2026-11-03` | held `p640` | 🟢 **The find of the pass — and it was already held.** `6.0×` `kolibri`'s stars and permissive. **Promoted to the head of the permissive platform shelf (`641-A`).** |
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | 🟢 `Apache-2.0` (byte-read `11,314 B`) | `6,896` | `2026-11-01` | held | 🟢 **Promoted to the permissive platform shelf** as the substrate for *skills assessment*. Newly relevant: `Pearson`→`Workera` says the market pays for verified skills. |
+| [`JuliaPluto/Pluto.jl`](https://github.com/JuliaPluto/Pluto.jl) | 🟢 `MIT` (byte-read `1,082 B`) | `5,405` | `2026-11-01` | held | 🟢 Reactive notebooks; the permissive teaching-notebook option. |
+| [`ankidroid/Anki-Android`](https://github.com/ankidroid/Anki-Android) | 🔴 `GPL-3.0` | `12,158` | `2026-11-04` | held | 🔴 Copyleft; spaced repetition. Reference, not a dependency. |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | 🟡 `LGPL-2.1` | `24,298` | `2026-11-03` | held | 🟡 Weak copyleft — linkable, not closeable. |
+| [`logisim-evolution/logisim-evolution`](https://github.com/logisim-evolution/logisim-evolution) | 🔴 `GPL-3.0` | `7,886` | `2026-11-03` | 🆕 | 🔴 Digital-logic teaching simulator. Copyleft. |
+| [`hneemann/Digital`](https://github.com/hneemann/Digital) | 🔴 `GPL-3.0` | `6,142` | `2026-10-08` | 🆕 | 🔴 Same category, same constraint. |
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🟡 `NOASSERTION` | `4,912` | `2026-11-02` | held `p117` | 🟡 Carried; grade unchanged this pass. |
+
+🟢 **Net new to this base: `2`**, both `GPL-3.0` teaching simulators — real, but copyleft and therefore
+reference material rather than engagement substrate. 🔵 **Recorded so `p642` does not re-pay for the
+head of the facet:** query the facet below rank `16`, or add `-topic:tutorial`-style exclusions.
+
+### 🟢 Canonical byte counts extended this pass
+
+🟢 `Apache-2.0` gains three independent reads: `oppia` `11,358` (`Δ +1`), `CTFd` `11,314` (`Δ −43`),
+`feedbacksystem` `10,785` (`Δ −572`). 🔵 **The `−572 B` is the absent `APPENDIX`** — the same mechanism
+`640-E` resolved for `OpenOLAT` at `−375 B`, now seen twice, which makes it a **recurring deviation
+class rather than a one-off**. No grant term is altered in either case.
+
+🔴 **`640-D`'s `MIT` band is falsified** (`641-B`): `kolibri` at `1,097 B` — which `p640` itself graded
+🟢 `MIT` — and `OATutor` at `1,105 B` both exceed its `1,085 B` ceiling. 🟢 Band re-fitted to
+**`1,062`–`1,105 B`** over `14` reads and **demoted from an anomaly detector to a weak prior**. The rule
+that survives is `640-B`'s: **grade on the title line.**
+
+### 🔵 Channel note, carried forward
+
+🔴 The `repos/{owner}/{repo}` API endpoint returns `403` in this session (repository not attached);
+🟢 `search/repositories` works and is the channel. 🟢 `curl -s` `GET` on `raw.githubusercontent.com`
+remains the grant oracle — the fabricated control returned a literal `404` at `14 B` again, and
+`curl -sI` remains unusable (`637-E`).
+
 ## `2026-11-04` · `p640` — the supply nil is **saturation**, not blindness, and the API channel proves it
 
 🔵 `p639` changed the discovery operative to the GitHub **topic facet**. 🟢 `p640` changes the

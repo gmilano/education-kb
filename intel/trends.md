@@ -3,6 +3,119 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p641` — reads `2026-11-04` — **🟢 `641-G`: `640-L`'s CONVERGENCE GOES FROM **THREE** JURISDICTIONS TO **FIVE**, AND APAC JOINS THE ASSESSMENT MAP VIA A REGULATOR THAT HAS BEEN DOING THIS SINCE `2024`. 🔴 AUSTRALIA'S `TEQSA` ADDS THE ONE CONSTRAINT NO OTHER INSTRUMENT STATES: **AI DETECTION SOFTWARE ALONE IS NOT SUFFICIENT ASSESSMENT SECURITY** — WHICH KILLS AN ENTIRE PRODUCT CATEGORY. 🔴 `641-H`: `640-M`'s GOVERNANCE DENOMINATOR IS **NOT MEASURABLE** FROM SECONDARY SOURCES — SIX READINGS SPAN `10%` TO `92%` AND THE VARIANCE IS DEFINITIONAL, NOT SAMPLING.**
+
+### 🟢 Trend 1 — assessment is the regulated surface in **five** jurisdictions on **four** continents
+
+🟢 `640-L` identified the convergence and called it the sector's `2026` trend. 🟢 **It holds, and it is
+larger than `p640` measured.** Two more instruments land on the same function, and one of them
+predates every instrument `640-L` listed:
+
+| Jurisdiction | Instrument | What it regulates | Binds from |
+|---|---|---|---|
+| **EU** | 🟢 Regulation `(EU) 2026/1744` amending AI Act `Annex III` | admission, **student evaluation, exam scoring**, programme assignment, prohibited-behaviour detection during assessment | `2027-12-02` stand-alone; `2028-08-02` embedded |
+| **UK** | `Ofqual` guide for schools and colleges, `2026-01-15` | 🔴 AI may not produce material for assessments students sit; 🔴 AI may not be **sole marker** | **live** |
+| **Vietnam** | Decision `33/2026/QĐ-TTg` | 🔴 automated **examination, assessment of learning outcomes, ranking of learners**; biometric behaviour monitoring | **`2026-08-15`** (legacy `2027-09-01`) |
+| 🆕 **Australia** | `TEQSA`, under the **Higher Education Standards Framework (Threshold Standards) `2021`** | 🔴 **award integrity** — providers must hold a credible institutional action plan on gen-AI's impact on assessment | 🟢 **plans filed `2024`; examined in regulatory oversight from `2026`** |
+| 🆕 **UAE (Dubai)** | `KHDA` guidance to private schools | school-level gen-AI use | live (guidance) |
+
+🟢 **Australia changes the shape of this trend in two ways.** First, **APAC is now on the assessment
+map** — `640-L` had the region absent, and `641-K` explains why the earlier legs missed it. Second,
+🟢 **`TEQSA` is the only one of the five that has already run a full compliance cycle**: all `203`
+providers responded with action plans, and from `2026` those plans are examined as part of ongoing
+oversight. 🔵 **So Australia is not the newest data point. It is the only one with evidence of what
+compliance actually looks like at national scale**, which makes it the reference implementation for
+the other four.
+
+🔴 **And `TEQSA` supplies the hardest engineering constraint in the whole set:** *gen-AI detection
+software alone does not provide sufficient assessment security*, together with an instruction to
+**redesign assessment** so attainment can be demonstrated. 🔴 **This disqualifies the detector-based
+product category outright** — not as a matter of accuracy, but as a matter of regulatory sufficiency.
+🟢 `Ofqual` says AI may not be the sole marker; `TEQSA` says a detector may not be the sole control.
+**Together they specify the architecture rather than merely constraining it:** assessment must be
+*designed* to be AI-resilient, and the system must *prove a human decided*.
+
+🟢 **One architecture still satisfies all five** — graded proposal, human confirmation, immutable
+record of who decided — and `TEQSA` adds a fifth requirement to it: **an institutional action plan the
+regulator can read.** That is a document artefact, and it is deliverable.
+
+🔵 **The dates continue to invert the usual assumption.** Vietnam binds now; `Ofqual` and `TEQSA` are
+live; the EU — the instrument everyone plans around — is `13` months away. 🔴 **The nearest EU deadline
+is not `Annex III` at all**: content-marking for systems already on the market falls due
+**`2026-12-02`, four weeks from this read** (`641-F`).
+
+### 🟢 `641-F` — the EU timeline is now citable by number, and `p640`'s dates are confirmed
+
+🟡 `p640` published `2027-12-02` while a source this pass still described the postponement as a
+*"provisional deal, not yet formally adopted."* 🟢 **That caveat is stale and the dates are confirmed.**
+The instrument is **Regulation `(EU) 2026/1744`**, the *Digital Omnibus on AI*: Parliament `2026-06-16`,
+Council `2026-06-29`, signed `2026-07-08`, **Official Journal `2026-07-24`, in force `2026-07-27`**
+(three days, not the standard twenty).
+
+| Obligation | Date | Note |
+|---|---|---|
+| 🔴 **Marking of AI-generated content, systems already on market** | 🔴 **`2026-12-02`** | 🔴 **Four weeks out and the least-discussed date in the set.** |
+| `Annex III` stand-alone high-risk — **education** | `2027-12-02` | Moved from `2026-08-02`. |
+| `Annex I` embedded high-risk | `2028-08-02` | |
+
+🔵 **The delay is not a reprieve.** Sources are consistent that the requirements themselves were not
+lightened and that no extra year accrues after `2027-12-02`. 🟢 **`p640`'s dates stand; what is new is
+that a client-facing claim can now cite a regulation number instead of a press description** — the
+first regulatory claim on these shelves able to do so, and a partial answer to `639-D`.
+
+### 🔴 `641-H` — the governance deficit is real; the denominator is not measurable
+
+🔴 `640-M` reported *"the governance deficit is now measured in four regions."* 🟢 **The direction is
+right and is confirmed again this pass.** 🔴 **But "measured" overstates it.** Six readings of
+essentially the same question, gathered this pass:
+
+| Reading | Figure | What it actually measures |
+|---|---|---|
+| secondary, uncited | `10%` | institutions with *formal guidelines* |
+| secondary, via blog | `19%` | institutions with a *formal AI policy* (`42%` developing) |
+| cites EDUCAUSE `2025` | `<40%` | institutions with a policy that *"functions"* |
+| 🟢 EDUCAUSE, `2026-01`, `n = 1,960` | `54%` | staff *aware of* their institution's policy |
+| 🟢 Strata Information Group, `2026` | `85%` | policy *finished (`30%`) or actively building (`55%`)* |
+| secondary summary | `92%` | institutions with *some work-related AI strategy* |
+
+🔴 **The spread is `10%` to `92%`, and it is definitional, not sampling.** *Having a policy*, *having a
+functioning policy*, *being aware of a policy*, *building a policy* and *having a strategy* are five
+different quantities, and the low-quality sources do not say which they report. 🔴 **A pass that
+averages these manufactures a figure for a quantity nobody measured** — `640-J`'s error class, which
+`p640` correctly refused for the `57%`/`60%` pair and which this shelf then committed anyway by
+calling the deficit "measured."
+
+🟢 **The rule, stated for `p642`: a governance figure enters these shelves only with a stated
+population and a stated instrument.** On that test, six survive:
+
+| Figure | Population & instrument | Region |
+|---|---|---|
+| `94%` use AI at work; `54%` aware of policy | EDUCAUSE, `n = 1,960` HE professionals, fielded `2025-09`/`10` | North America |
+| `30%` finished / `55%` building / `15%` nothing | Strata Information Group pre-EDUCAUSE survey, `2026` | North America |
+| `87%` use AI in ≥1 area; `26%` any framework; `55%` no AI budget | UNESCO IESALC, `~200` institutions, `19` countries | LATAM |
+| `53%` of administrators use AI; `22%` have guidelines | `Cetic.br`, `2026` | LATAM (Brazil) |
+| `75%` of public-school teachers use these tools | `Ceibal`, `2026` | LATAM (Uruguay) |
+| `57%` of students use AI for coursework weekly | Lumina–Gallup, `n = 3,801`, fielded `2025-10` | North America |
+| `60%` of teachers use AI tools | Gallup | North America |
+
+🔴 **Refused this pass for want of a population:** the `10%`, `19%` and `<40%` readings above, and a
+*"68 countries now regulate AI in education"* claim with no primary citation. 🟢 **`640-M`'s substantive
+point survives on the qualifying rows alone** — the deficit is visible in LATAM (`87%`/`26%`), in
+Brazilian K-12 (`53%`/`22%`) and in North America (`94%`/`54%`), **and it is not a university
+artifact.** 🔴 What cannot be said is that it is *quantified*, or that APAC has been measured at all.
+
+### 🔵 Trend 2 — the vendors moved to the gap, not to the capability
+
+🟢 Read together, this quarter's commercial moves target governance and verification rather than
+generation: **Instructure** is building an AI study coach into Canvas (the LMS boundary, where the
+audit trail lives); **Pearson agreed to acquire Workera** to verify AI *skills* — a bet on attestation,
+not tutoring; **Google** added Gemini to its education offerings (`2026-08`); **Anthropic** launched a
+Claude for teachers (`2026-07`). 🔵 **The OECD's `2026` Digital Education Outlook points the same way**,
+recommending a move beyond general-purpose tools toward purpose-built educational AI with durable
+learning gains. 🟢 **The consistent signal across regulators, institutions and vendors is that `2026`
+rewards provable, governed use — and that is the thing a studio builds, not a thing a model provides.**
+
 ## 🆕 `p640` — reads `2026-11-04` — **🔵 `640-L`: THREE JURISDICTIONS, THREE UNRELATED LEGAL INSTRUMENTS, **ONE REGULATED SURFACE** — THE EU's `Annex III`, `Ofqual`'s SOLE-MARKER BAN AND VIETNAM'S DECISION `33` ALL LAND ON **AUTOMATED ASSESSMENT**. THAT CONVERGENCE, NOT ANY CAPABILITY, IS THE SECTOR'S `2026` TREND. 🟢 `640-M`: THE GOVERNANCE DEFICIT IS NOW MEASURED IN **FOUR** REGIONS AND IN **K-12 AS WELL AS HIGHER EDUCATION** — IT IS NOT A UNIVERSITY ARTIFACT.**
 
 ### 🔵 Trend 1 — assessment is the regulated surface, everywhere, independently

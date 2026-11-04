@@ -3,6 +3,82 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p641` — reads `2026-11-04` — **🔴 `641-B`: `640-D`'s `MIT` BAND IS FALSIFIED BY A PAYLOAD `p640` ITSELF GRADED 🟢 `MIT` IN THE SAME PASS. THE BAND WIDENS TO `1,062`–`1,105 B` AND IS **DEMOTED FROM AN ANOMALY DETECTOR TO A WEAK PRIOR**. 🟢 `641-A`: THIS SHELF ALREADY HELD THE RIGHT ANSWER TO THE QUESTION `verticals/solutions.md` GOT WRONG — `oppia` IS THE LARGEST PERMISSIVE EDUCATION PLATFORM AT `6,965★`, AND IT HAS BEEN ON THIS PAGE SINCE `p640`.**
+
+🟢 **`640-D` was a real instrument and it is mostly intact.** The canonical byte count does separate
+the `GNU` families that no substring grader can tell apart, and that result stands. 🔴 **What fails is
+the `MIT` band**, and it fails against `p640`'s own output.
+
+### 🔴 `641-B` — the `MIT` band, re-fitted
+
+🔴 `640-D` published `MIT` as **`1,062`–`1,085 B`** over `19` reads and drew the rule: *"any payload
+graded `MIT` outside it is a narrowed derivative."* 🔴 **Two payloads read this pass are plainly `MIT`
+on the title line and sit above the ceiling** — and `p640` published the first of them as 🟢 `MIT` on
+the permissive platform shelf **in the same pass that defined the band**:
+
+| Repo | Bytes | vs `640-D` ceiling | Title line |
+|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,097` | 🔴 `+12` | `MIT License` — graded 🟢 `MIT` by `p640` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `1,105` | 🔴 `+20` | `MIT License` |
+
+🟢 **The mechanism is the copyright-holder line, and `640-D` under-measured its range.** The `19`
+repos the band was fitted on carry short holder names; `"Learning Equality"` and `"The Regents of the
+University of California"` are longer. 🟢 **Re-fitted band: `1,062`–`1,105 B`** across `14` reads this
+pass. 🔵 **Demoted in status**: a payload outside the band now warrants a title-line read and nothing
+stronger. 🟢 **`640-B`'s rule is the one that survives unqualified — grade on the title line** — and it
+is what caught `PageLM` at `8,563 B`, which no byte count would have flagged as anything but large.
+
+### 🟢 Canonical byte counts — extended, every figure with at least two independent reads
+
+| Licence | Canonical bytes | Reads this pass | Deviations measured `2026-11-04` |
+|---|---|---|---|
+| `MIT` | 🟢 **`1,062`–`1,105`** (re-fitted band) | `14` | `iblai/lms` `1,063`; `OpenMAIC` `1,065`; `PAIDEIA` `1,068`; both `OpenTutor` `1,068`; `ai-tutor` `1,070`; `canvas-mcp` `1,071`; `Pluto.jl` `1,082`; `kolibri` `1,097`; `OATutor` `1,105` |
+| `Apache-2.0` | **`11,357`** | `3` | 🆕 `oppia/oppia` `11,358` (`+1`); 🆕 `CTFd/CTFd` `11,314` (`−43`); 🆕 `feedbacksystem` `10,785` (`−572`, appendix absent) |
+| `GPL-3.0` | **`35,147`** | carried | `moodle`, `chamilo-lms`, `ILIAS` |
+| `AGPL-3.0` | **`34,523`** | carried | `canvas-pilot`, `learnhouse`, `frametell` |
+| `ECL-2.0` | `9,878` / `11,087` | carried | the `Apereo` estate |
+| 🆕 `Elastic-2.0` | 🆕 **`3,860`** | `1` | 🔴 `canyongbs/advisingapp` — **source-available, not open source** |
+| 🆕 bespoke | 🆕 `8,563` | `1` | 🔴 `CaviraOSS/PageLM`, *"PageLM Community License"* — opens with MIT's grant sentence, is not MIT |
+| 🆕 `CC-BY-SA-4.0` short form | 🆕 `1,230` | `1` | 🟡 `education-agent-skills` — byte count reproduces `p640`'s stored figure **exactly** |
+
+🔵 **Two of the three new `Apache` deviations are trivial and one is informative.** `oppia`'s `+1 B` and
+`CTFd`'s `−43 B` are whitespace and copyright-line variation. 🟢 `feedbacksystem`'s `−572 B` is the
+`APPENDIX` absent — the same mechanism `640-E` resolved for `OpenOLAT`, now seen a second time, which
+makes it a **recurring deviation class rather than a one-off**: a missing appendix costs roughly
+`−375` to `−572 B` and alters no grant term.
+
+### 🟢 `641-A` — the largest permissive education platform was already on this shelf
+
+🟢 `repos/foundations.md` has carried [`oppia/oppia`](https://github.com/oppia/oppia) since `p640` as
+🟢 `Apache-2.0`, byte-read, **`"the most buildable large platform"`**. 🔴 In the same pass,
+`verticals/solutions.md` published `kolibri` at `1,168★` as *"the largest permissive platform in
+education."* 🔴 **Both pages were right about their own row and the second claim was false**, by a
+factor of six, against this base's own data.
+
+| Repo | Grant (byte-read `2026-11-04`) | ★ | Multiple of `kolibri` |
+|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` (`11,358 B`, `develop/LICENSE`) | 🟢 **`6,965`** | 🟢 **`6.0×`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` (`1,097 B`, `develop/LICENSE`) | `1,168` | `1.0×` |
+
+🔵 Both were probed in the same call, on the same channel, minutes apart — so this is not a
+measurement artefact. 🟢 **Corrected on the platform shelf in `verticals/solutions.md` this pass.**
+🔴 **The general lesson is `641-M`:** the finding was never missing from this base; it was **unreconciled
+across two pages**, and `ingest/crosspage-figure-claims.py` exists to catch precisely that and was not
+run before `p640` committed.
+
+### 🔵 The education-topic facet is not an edtech channel — characterised, so the next pass stops paying for it
+
+🟢 `p641` ran `search/repositories` over `topic:education`, `stars:>100`, `pushed:>2026-09-01`.
+🔴 **The top of that facet is "learn to code", not education software:** `freeCodeCamp` (`458,507★`),
+`free-programming-books` (`400,831★`), `TheAlgorithms/Python` (`225,837★`),
+`You-Dont-Know-JS` (`184,843★`), `hello-algo` (`131,921★`), `microsoft/Web-Dev-For-Beginners`
+(`97,092★`), `microsoft/ML-For-Beginners` (`91,979★`). 🟢 **Real education-sector software begins around
+rank `17`** — `oppia` (`6,965★`, Apache-2.0), `CTFd` (`6,896★`, Apache-2.0), `Pluto.jl` (`5,405★`, MIT),
+`logisim-evolution` and `hneemann/Digital` (GPL-3.0 teaching simulators), `Anki-Android` (`12,158★`,
+GPL-3.0), `p5.js` (`24,298★`, LGPL-2.1). 🔵 **Record for `p642`: the facet pays, but only below the
+first `16` rows**, and the top of it will return the same seven repos every pass.
+
 ## 🆕 `p640` — reads `2026-11-04` — **🟢 `640-D`: THE CANONICAL LICENCE BYTE COUNT IS AN INSTRUMENT. `35,147 B` IS `GPL-3.0` AND `34,523 B` IS `AGPL-3.0` — A BYTE COUNT ALONE SEPARATES THE TWO FAMILIES EVERY SUBSTRING GRADER CONFUSES, AND A DEVIATION FROM CANONICAL *LOCATES* `639-E`'s MODIFICATION MECHANISMS. 🔵 `640-E`: `OpenOLAT`'s `-375 B` DEVIATION IS FULLY RESOLVED — THE `APACHE` **APPENDIX** WAS DELETED AND **TWO** PROJECT STATEMENTS APPENDED. NO GRANT TERM IS ALTERED.**
 
 🟢 **`639-E` resolved `NOASSERTION` into nine mechanisms by reading payloads. `p640` adds the cheap
