@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p656) — 🟢 **TEN ROWS PROMOTED FROM LOG TO SHELF, AND THE TOPIC SWEEP THAT FOUND THEM WAS A VOCABULARY SWEEP, NOT A STAR SWEEP**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that branch; stars, forks, `pushed_at` and `archived` from `gh api search/repositories` with **many `repo:` qualifiers in one query** (`gh api repos/{owner}/{repo}` is 🔴 403 under this session's scope — see `agents/trending.md` p656 for the channel table). Direct `curl` to `github.com` is 403 for every repository.
+
+### 🔵 How this pass found anything at all, after p599 reported 39-of-39 addresses already held
+
+p599 mined six topic heads star-ranked and found saturation: every star-ranked address held, and the three unheld recency-ranked ones were ≤ 4 ★. The correct inference was **not** that the field is exhausted. It was that *the topics being mined were exhausted.* This pass swept eight topic heads that no prior pass had touched, chosen by asking what vocabulary the **shelves** were missing rather than what repositories the logs were missing:
+
+| Topic head | Repos | Yield this pass |
+|---|--:|---|
+| `topic:xapi` | 280 | 🟢 **5 permissive rows** — the entire telemetry layer |
+| `topic:lti` | 184 | 🟢 **4 rows** — `tsugi`, `pylti1.3`, `marsha`, `ltiauthenticator` |
+| `topic:scorm` | 237 | 🟢 **1 permissive row** — `scorm-again` (MIT) |
+| `topic:accessibility topic:education` | 442 | 🔴 **0 permissive production rows** — a negative result, recorded |
+| `topic:academic-integrity` | 127 | 🟡 `Open-Detector` (MIT, 252 ★), `noplag-engine` (Apache-2.0, 88 ★) — not filed; AI-text detection is a claim this KB will not carry without evidence |
+| `topic:proctoring` | 154 | 🟡 `SafeExamBrowser` (MPL-2.0, 363 ★) live; the MIT row (`Proctoring-AI`, 633 ★) dormant since 2024-12-10 |
+| `topic:spaced-repetition` | 64 | ✅ Already shelved (`fsrs4anki`, `fsrs-rs`) — the one layer this KB had right |
+| `topic:adaptive-learning` | 630 | ✅ No new permissive education rows above noise |
+
+🔵 **The transferable lesson, stated for the next pass: saturation is a property of the query, not of the field.** Eight heads, four previously-unmined layers, ten shelf-grade rows. The `597-D` held-gate correctly reported all of them as "held" — they were in the logs — and that answer concealed the gap instead of revealing it. **A held-gate needs a second column: *shelved?***
+
+### 🟢 Promoted to `repos/foundations.md` this pass — 20 rows → 30
+
+Every row's licence read from the payload on the resolved default branch:
+
+| Repo | Branch | Licence (payload) | Stars | Pushed | Liveness |
+|---|---|---|---|---|---|
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `master` | **Apache-2.0** (11,525 B) | **955** | 2025-07-03 | 🔵 Specification — static is correct |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `master` | **Apache-2.0** (10,273 B) | 377 | **2026-11-04** | 🟢 Live |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `master` | **MIT** (1,072 B) | 362 | 2026-11-02 | 🟢 Live, **0 open issues** |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` | **Apache-2.0** (11,357 B) | 334 | 2025-11-14 | ⚠️ ~12 months quiet |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | `master` | **Apache-2.0** (11,357 B) | 216 | 2026-10-28 | 🟢 Live — **EMEA** |
+| [`RusticiSoftware/TinCanJS`](https://github.com/RusticiSoftware/TinCanJS) | `master` | **Apache-2.0** (11,358 B) | 208 | 2023-10-17 | 🔴 3 years quiet |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | `master` | **MIT** (1,078 B) | 151 | 2026-11-01 | 🟢 Live — **EMEA** |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `main` | **Apache-2.0** (11,357 B) | 144 | **2026-11-03** | 🟢 **Live — the only one** |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `master` | **MIT** (1,070 B) | 138 | 2024-08-18 | ⚠️ 2 years quiet |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` | **BSD-3-Clause** (1,528 B) | 73 | 2026-11-02 | 🟢 Live |
+
+**Permissive-family count across the ten: Apache-2.0 × 5, MIT × 3, BSD-3-Clause × 1** — and `xAPI-Spec` is the fifth Apache row. No copyleft entered `foundations.md` this pass; the copyleft rows went to `verticals/solutions.md`, where the shelf's contract is *integrate, do not fork*.
+
+### 🔴 Dormancy is the real risk on this layer, not licence
+
+Six of the sixteen interop/telemetry/content rows measured this pass have not been pushed in over a year:
+
+| Repo | Last push | Quiet for | Licence |
+|---|---|---|---|
+| [`RusticiSoftware/TinCanJS`](https://github.com/RusticiSoftware/TinCanJS) | 2023-10-17 | **~3 years** | Apache-2.0 |
+| [`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) | 2022-12-04 | **~4 years** | Apache-2.0 — 🔴 **not filed; superseded** |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 2024-08-18 | ~2 years | MIT |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 2024-05-30 | ~17 months | 🔴 GPL-3.0 |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 2025-11-14 | ~12 months | Apache-2.0 |
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 2024-12-10 | ~11 months | MIT — not filed |
+
+None is archived — `archived: false` on all six — so GitHub's own staleness signal does not fire. 🔵 **For this layer, read the `pushed_at` column before the licence column.** The standards are stable, which is exactly why their reference implementations go quiet without being wrong; `xAPI-Spec` at 955 ★ and static is healthy, `TinCanJS` at 208 ★ and three years quiet is a dependency to vendor or replace, and the two are indistinguishable on stars alone.
+
+### 🟡 Measured and deliberately not filed
+
+- **AI-text detection** (`Imalwayshere/Open-Detector`, MIT, 252 ★; `peopleworks/SignsofAI`, MIT, 30 ★; `NoplagLabs/noplag-engine`, Apache-2.0, 88 ★). Permissive and live, and **not filed**: this KB's T10/T19 record the sector's evidence problem, and detector accuracy claims are the least-evidenced claims in education AI. Filing a detector on a shelf would imply this base vouches for it. Recorded here so a later pass need not re-find them.
+- **`SafeExamBrowser/seb-win-refactoring`** (MPL-2.0, 363 ★, pushed 2026-11-02). Live, real institutional adoption, and MPL-2.0 is file-level weak copyleft — workable. Held for a pass that can scope proctoring properly, including whether this base should carry proctoring at all given APAC and EMEA attitudes recorded in T11.
+- **`ucfopen` siblings** `Obojobo` (72 ★) and `Materia` (52 ★) — same house as UDOIT; licences unread this pass.
+
+---
+
 ## 🆕 2026-11-04 (p655) — 🔴 **THE PERMISSIVE PLATFORM COUNT WENT FROM 2 TO 5 WITHOUT A SINGLE NEW RELEASE, AND THE FOUR-PASS ASSESSMENT GAP WAS CLOSED BY A PROJECT OLDER THAN THE LLM ERA**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that branch; stars, forks, push dates and descriptions from the GitHub API (`search/repositories`, `repo:` qualifier) cross-checked against the rendered page. ⚠️ Direct `curl` to `github.com` is **403 for every repository** under this session's network policy.

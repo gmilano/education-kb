@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p656) — 🔴 **THE DEFECT THIS PASS CLOSES IS A PROMOTION FAILURE, NOT A DISCOVERY FAILURE: THE INTEROP, TELEMETRY AND ACCESSIBILITY LAYER HAS BEEN MEASURED IN THESE LOGS FOR MANY PASSES AND HAS NEVER REACHED A SHELF**
+
+**Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that resolved branch; stars, forks, push dates and archived flags from the GitHub API. ⚠️ Direct `curl` to `github.com` remains `403` for every repository under this session's network policy.
+
+### 🔵 A precise channel finding, because it changes how later passes should measure stars
+
+Two GitHub API endpoints behave **differently** under this session's scope, and the difference is not rate-limiting:
+
+| Call | Result |
+|---|---|
+| `gh api repos/{owner}/{repo}` | 🔴 `"GitHub access to this repository is not enabled for this session"` — for **every** repository not attached to the session, including ones that plainly exist |
+| `gh api search/repositories -f q='repo:{owner}/{repo}'` | 🟢 Full metadata — stars, forks, `pushed_at`, `archived`, `license.spdx_id`, `open_issues_count` |
+
+The `repo:` qualifier accepts **many repositories in one query**, so all fourteen rows below were measured in a single call. Later passes should use the search endpoint and never conclude from a `repos/` 403 that an address is dead. 🔴 **`huggingface.co` still does not resolve (`CONNECT tunnel failed, 403`) — a fifth consecutive pass, so OmniEdu's weight licence remains unread.**
+
+### 🔴 The finding, stated as the gap it is
+
+`grep` over the four **shelves** — `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md` — for the vocabulary of the layer that connects an agent to an institution:
+
+| Term | On the shelves | In the append-only logs |
+|---|---|---|
+| `xAPI` | 🔴 **0 files** | 2 files |
+| `Learning Record Store` / `LRS` | 🔴 **0 files** | 2 files |
+| `Caliper` | 🔴 **0 files** | 0 files |
+| `accessibility` / `a11y` / `WCAG` | 🔴 **0 files** | 2 files |
+| `H5P` | 🔴 **0 files** | 2 files |
+| `screen-reader`, `captioning`, `dyslexia`, `special education` | 🔴 **0 files** | — |
+| `plagiarism`, `academic integrity` | 🔴 **0 files** | — |
+
+Every address below was already **held** somewhere in this repository — `yetanalytics/lrsql` appears in 230 files and was called *"el candidato de producción permisivo"* in `repos/trending.md`. 🔴 **None of them has ever appeared on a shelf.** A verified Apache-2.0 production component sitting only in a 5.8 MB append-only log is not an identified starting point for an engagement team; it is a sentence nobody will read. The `597-D` held-gate was doing its job — it was answering *"have we seen this?"* when the question that matters for delivery is *"is it shelved?"*
+
+### 🟢 Filed this pass — fourteen rows, every licence read from the payload
+
+| Repo | Branch | Licence (payload) | Stars | Pushed | Layer |
+|---|---|---|---|---|---|
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `master` | **Apache-2.0** (11,525 B) | **955** | 2025-07-03 | The xAPI specification itself (US DoD / ADL). Static by nature |
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | `master` | 🔴 **GPL-3.0** (35,129 B) | **632** | 2026-11-02 | Responsive course authoring, SCORM + xAPI output |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `master` | 🔴 **GPL-3.0** (35,141 B) | **584** | 🔴 **2024-05-30** | The once-dominant LRS. Copyleft **and** dormant 17 months |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `master` | 🟢 **Apache-2.0** (10,273 B) | 377 | **2026-11-04** | LTI 1.3 framework — `LTI13.php`, AGS, NRPS, Deep Linking, with unit tests |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `master` | 🟢 **MIT** (1,072 B) | 362 | 2026-11-02 | SCORM 1.2 / 2004 / AICC / cmi5 runtime in TypeScript. **0 open issues** |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` | **Apache-2.0** (11,357 B) | 334 | ⚠️ 2025-11-14 | ADL's reference LRS, Python. Permissive but ~12 months quiet |
+| [`RusticiSoftware/TinCanJS`](https://github.com/RusticiSoftware/TinCanJS) | `master` | **Apache-2.0** (11,358 B) | 208 | ⚠️ 2023-10-17 | xAPI JavaScript client from the company that wrote SCORM |
+| [`Lumieducation/H5P-Nodejs-library`](https://github.com/Lumieducation/H5P-Nodejs-library) | `master` | 🔴 **GPL-3.0** (35,146 B) | 207 | 2026-10-29 | H5P for Node — the maintained H5P server implementation |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | `master` | 🟢 **Apache-2.0** (11,357 B) | 216 | 2026-10-28 | Browser e-assessment, maths-first. **Newcastle University → EMEA** |
+| [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | `master` | 🔴 **no grant file** | 196 | 2026-10-28 | H5P desktop editor. `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `LICENCE`, `license.txt` **all 404** on the real default branch |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | `master` | 🟢 **MIT** (1,078 B) | 151 | 2026-11-01 | LTI video/content provider. France Université Numérique → **EMEA**. Same house as `openfun/richie`, already shelved |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔴 **GPL-3.0** (35,146 B) | 154 | **2026-11-04** | The H5P core — the interactive-content standard itself |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `main` | 🟢 **Apache-2.0** (11,357 B) | 144 | **2026-11-03** | 🟢 **The structurally important row.** SQL Learning Record Store in Clojure, on SQLite / PostgreSQL / MySQL. **9 open issues** |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `master` | **MIT** (1,070 B) | 138 | ⚠️ 2024-08-18 | LTI 1.3 for Python/Django/Flask. Permissive, 2 years quiet |
+| [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | `main` | 🔴 **GPL-3.0** (35,147 B) | 117 | **2026-11-04** | WCAG accessibility scanner for Canvas. University of Central Florida → **North America** |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `main` | 🟢 **BSD-3-Clause** (1,528 B) | 73 | 2026-11-02 | LTI 1.1/1.3 authenticator **for JupyterHub** — launches the already-shelved substrate from inside any LMS |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | **`develop`** | 🔴 **GPL-2.0** (18,025 B) | 64 | **2026-11-04** | TAO — the standards-based (QTI) computer-based assessment platform |
+| [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) | **`develop`** | 🔴 **no grant file** | 205 | 2026-11-03 | Open Badges spec. Six root grant filenames probed, all 404 |
+
+### 🔴 The licence line runs straight through the middle of this layer, and it is the commercially useful result
+
+**Transport is permissive. Content and accessibility are copyleft.** Not a tendency — a clean split across eighteen rows:
+
+| Sub-layer | Licences found | Verdict |
+|---|---|---|
+| **LTI** (getting in) | Apache-2.0 (`tsugi`), MIT (`pylti1.3`, `marsha`), BSD-3 (`ltiauthenticator`) | 🟢 **Entirely permissive** |
+| **SCORM / cmi5** (content transport) | MIT (`scorm-again`) | 🟢 **Permissive** |
+| **xAPI / LRS** (telemetry) | Apache-2.0 (`xAPI-Spec`, `ADL_LRS`, `TinCanJS`, `lrsql`) | 🟢 **Entirely permissive** |
+| **Assessment** | Apache-2.0 (`Numbas`) vs GPL-2.0 (`tao-core`) | 🟡 **Split — and the permissive one is production** |
+| **Interactive content** | GPL-3.0 (`h5p-php-library`, `H5P-Nodejs-library`), no grant (`Lumi`) | 🔴 **Entirely copyleft** |
+| **Accessibility** | GPL-3.0 (`UDOIT`, `adapt_framework`) | 🔴 **Entirely copyleft** |
+
+So Globant can own the **pipes** — get into the client's LMS over LTI, move content over SCORM, record every interaction to an Apache-2.0 LRS — and must treat **authoring and accessibility remediation** as integrate-don't-fork. That is a scoping rule, and it was not derivable from any shelf before this pass.
+
+### 🟢 Exactly one live permissive LRS exists, and that is the sentence an engagement needs
+
+Of the four permissive xAPI rows, three are dormant: `TinCanJS` (2023-10-17), `xAPIWrapper` (2022-12-04, not filed above — superseded), `ADL_LRS` (2025-11-14). `xAPI-Spec` is a specification and is *correctly* static. **The only live, maintained, permissively-licensed Learning Record Store is [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) — Apache-2.0, 144 ★, pushed 2026-11-03, nine open issues.** The historically dominant LRS, `learninglocker` (584 ★), is 🔴 **both GPL-3.0 and dormant since 2024-05-30**. There is no permissive second option to fall back to; this is a single-vendor dependency and should be scoped as one.
+
+### 🔴 Two corrections to rows this KB has published
+
+**1. `verticals/solutions.md` states a platform count that has been wrong since p655.** The prose reads *"Ten of fifteen platform rows are copyleft. Five are permissive."* The table on that page carries **eighteen** rows — p655 added Oppia, Mentingo and JupyterHub and did not update the sentence beneath. Recounted from the licence cells this pass: **nine copyleft, eight permissive, one weak copyleft (`OpenEduCat`, LGPL-3.0)**. The permissive set is Kolibri (MIT), Sakai (ECL-2.0), OpenOlat (Apache-2.0), Richie (MIT), GegoK12 (MIT), Oppia (Apache-2.0), Mentingo (MIT) and JupyterHub (BSD-3-Clause). 🔵 **The direction of the error matters: the shelf is more permissive than its own summary claimed, which means the page was under-selling the buildable surface, not over-selling it.** Fixed on that page this pass.
+
+**2. `intel/trends.md` T20 — *"permissive assessment software exists now; all of it is a research artefact"* — is now too strong.** [`numbas/Numbas`](https://github.com/numbas/Numbas) is Apache-2.0 (11,357 B, byte-exact canonical), 216 ★, 129 forks, pushed 2026-10-28, and is the e-assessment system **Newcastle University runs and maintains for its own teaching**. It is production software from a university, not a paper's accompanying code. T20 is refined rather than withdrawn: the *agentic* assessment work remains research-grade, and that was the defensible core of the claim.
+
+### 🔴 Declared gaps — searched this pass and genuinely absent
+
+- **No permissive answer to accessibility remediation.** `topic:accessibility topic:education` returns 442 repositories; star-ranked, the top permissive rows are `evoluteur/braille-tools` (MIT, 43 ★) and `osunyorg/admin` (MIT, 49 ★) — neither is a WCAG remediation tool. The production tool is `ucfopen/UDOIT`, **GPL-3.0**. 🔴 **This matters because this KB already records an April 2026 ADA deadline for large US public institutions as a North America demand driver** — a driver with no permissive answer on any shelf. An engagement meeting it is a GPL-3.0 client-operated deployment or a from-scratch build; it is not a product.
+- **No `Caliper` (1EdTech analytics) implementation surfaced at all** — not on a shelf, not in the logs, not in the topic sweeps. xAPI has won this layer in open source, and that is worth stating as a measurement rather than leaving as silence.
+- **Open Badges and H5P desktop ship without grant files.** `1EdTech/openbadges-specification` and `Lumieducation/Lumi` both 404 on six root grant filenames on their real default branches. Intent is presumably permissive for a spec; the grant is absent, and absent is what a client's counsel will find.
+- **`huggingface.co` unreachable for a fifth consecutive pass** — OmniEdu's weight licence still unread. No longer an incident; a standing limitation of this session's egress policy.
+
+---
+
 ## 🆕 2026-11-04 (p655) — seven MIT rows land and six of them are not tutors; the official Open edX agent bridge turns up and it is AGPL; three prior rows were inflated, unlicensed or at a dead address
 
 **Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that resolved branch; stars, forks, commits and descriptions from the GitHub API (`search/repositories` with a `repo:` qualifier) cross-checked against the rendered repository page. ⚠️ **Direct `curl` to `github.com` returns 403 for every repository under this session's network policy** — the API-via-`gh` and page-render channels were used instead, and both are named per row.

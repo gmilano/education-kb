@@ -407,6 +407,51 @@ ankimcp/anki-mcp-server (MIT, 544★, main, v0.27.0 "active beta")
 
 ⚠️ `anki-mcp-server` self-describes as **active beta at v0.27.0**. Pin the version, read the changelog before upgrading, and do not put it on a critical path for a graded outcome without a fallback.
 
+## P17 — The evidence spine: LTI in, xAPI out, nothing forked (4–6 weeks) 🟢 new at p656
+
+Not a standalone engagement — the layer that goes **underneath** P1–P16 and makes any of them provable. Every pattern above eventually meets the same two questions: how does our thing appear inside the LMS the client already runs, and how do we show it worked. Ten rows added at p656 answer both, and all of them are permissive.
+
+```
+THE CLIENT'S EXISTING LMS  (Moodle GPL-3.0 / Canvas / Brightspace / Open edX AGPL-3.0 / OpenOlat Apache-2.0)
+  │
+  │  ── LTI 1.3 launch ──▶  no fork, no copyleft inherited: an LTI tool is a separate work
+  │
+  ├── tsugiproject/tsugi (Apache-2.0, 377★, master)        → PHP: LTI13, AGS, NRPS, Deep Linking, unit tests
+  ├── dmitry-viskov/pylti1.3 (MIT, 138★, master)           → Python/Django/Flask  ⚠️ 2 yrs quiet, pin it
+  └── jupyterhub/ltiauthenticator (BSD-3, 73★, main)       → launches JupyterHub (BSD-3) + nbgrader (BSD-3)
+       │
+       ▼
+  THE AGENT LAYER  (yours, proprietary — MIT/Apache deps only)
+       │   e.g. HKUDS/DeepTutor (Apache-2.0) · ArnaudGuiovanna/tutor-mcp (MIT) · CAHLR/pyBKT (MIT)
+       │
+       ├── content the client already owns:
+       │     jcputney/scorm-again (MIT, 362★, 0 open issues) → plays SCORM 1.2/2004, AICC, cmi5
+       │     ⚠️ authored in H5P (GPL-3.0) or Adapt (GPL-3.0)? call it, never fork it
+       │
+       ├── assessment:
+       │     numbas/Numbas (Apache-2.0, 216★) → maths/quantitative, randomised, partial credit
+       │     jupyter/nbgrader (BSD-3, 1,370★) → notebook autograding
+       │
+       ▼
+  THE EVIDENCE SPINE  ◀── the deliverable that converts a pilot into a renewal
+       RusticiSoftware/TinCanJS (Apache-2.0, 208★)  → emits xAPI statements from content
+            ⚠️ 3 yrs quiet: vendor and audit it; the protocol is frozen so this is survivable
+       adlnet/xAPI-Spec (Apache-2.0, 955★)          → the statement shapes to conform to
+       yetanalytics/lrsql (Apache-2.0, 144★, main)  → 🔴 THE ONLY LIVE PERMISSIVE LRS
+            runs on SQLite / PostgreSQL / MySQL · actor, verb, object, result, timestamp
+            └── query it for: time-on-task, attempt counts, mastery trajectory, cohort deltas
+```
+
+**Why this is a pattern and not a footnote.** P5 has sold "governance and measurement" since early in this KB's life without naming a single component, and T10 and T19 have recorded for many passes that the evidence base is this sector's weakest point. The gap was never that the measurement substrate did not exist — `lrsql` has been verified in this repository's logs under the words *"el candidato de producción permisivo"* — it was that it had never reached a shelf. **An Apache-2.0 LRS is the difference between "the tutor seems to help" and a queryable statement log a client's own analysts can audit.**
+
+**Timeline 4–6 weeks**, on top of an existing engagement: week 1 stand up `lrsql` against the client's database of record and agree the statement vocabulary (this is the only genuinely hard design step — a vague verb set makes the whole log unanalysable); weeks 2–3 wire the LTI launch so the tool appears inside their LMS with their roster and no second login; week 4 instrument the agent and the content to emit statements; weeks 5–6 build the cohort-delta queries and hand the client the dashboard **plus the SQL**, because a measurement they cannot re-run themselves will not survive a change of sponsor.
+
+🔴 **Two risks to put in the proposal, not discover later.**
+1. **`lrsql` is a single point of failure.** It is the only live, maintained, permissively-licensed LRS. `LearningLocker/learninglocker` (584★) is GPL-3.0 *and* dormant since 2024-05-30; `adlnet/ADL_LRS` is Apache-2.0 but ~12 months quiet. One Clojure project, nine open issues. If the client needs a supported LRS with a vendor SLA, that is a commercial product and this pattern does not apply.
+2. **Four of the ten components are over a year quiet and none is archived**, so GitHub's staleness signal never fires. Read `pushed_at` before `stars` on this layer and pin every version.
+
+**Where this does not apply.** A greenfield build with no incumbent LMS (use P11 or P15 and own the whole stack), and any engagement where the client's measurement requirement is a compliance artefact rather than an analytical one — a regulator wanting a transparency notice under EU AI Act Article 50 is not asking for an LRS.
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
@@ -425,10 +470,12 @@ ankimcp/anki-mcp-server (MIT, 544★, main, v0.27.0 "active beta")
 | 🟢 **Choosing a platform rather than extending one** — new faculty, national programme, migration off a commercial LMS | **P11** | The only pattern whose institutional platform is itself permissive. Apache-2.0 course management, `langchain4j` already in-tree. ⚠ Specify PostgreSQL, not MySQL; price the Java skill-set |
 | 🟢 **Wants to own a reference integration rather than rent one** | **P12** | OpenOlat has **no** agent bridge at any address. No incumbent, no copyleft to route around, agent can live in-tree, and the result is contributable upstream under Apache-2.0 |
 | 🟢 **Needs grading or written-feedback at scale** | **P13** | The only pattern where the production artefact does not exist yet. Permissive, education-specific, peer-reviewed *research* supply (ArguLens) + calibration to the client's own markers (`LLM-Rubric`) + an approval gate. ⚠ Assistive scoring with human sign-off only — never autonomous grading |
+| 🟢 **Has an incumbent LMS and must prove the pilot worked** — i.e. almost every engagement | **P17** | The layer under all the others: LTI 1.3 in (no fork, no copyleft inherited), xAPI out to an Apache-2.0 LRS. **Attach it to any pattern above.** 🔴 `yetanalytics/lrsql` is the only live permissive LRS — scope that dependency explicitly |
+| 🟢 **Must meet the April 2026 US ADA accessibility deadline** | **not a product** | `ucfopen/UDOIT` (GPL-3.0) is the only real tool and there is **no permissive alternative**. Client-operated deployment, bill the remediation, ship no derivative. See `intel/market.md` → North America |
 
 ## 🔴 What these patterns deliberately avoid
 
-- **No pattern forks a GPL or AGPL platform.** Ten of fourteen verified platforms are copyleft; forking one for a managed service is the single most expensive mistake available in this industry. **P7 is the exception that proves the rule** — it can own its platform layer precisely because Kolibri is MIT.
+- **No pattern forks a GPL or AGPL platform.** 🔴 **Count corrected at p656: fifteen of twenty-six** verified platforms on `verticals/solutions.md` are copyleft (this line previously read "ten of fourteen", stale since p655 and again after p656 shelved the H5P, Adapt, UDOIT, TAO and Learning Locker rows); forking one for a managed service is the single most expensive mistake available in this industry. **P7 is the exception that proves the rule** — it can own its platform layer precisely because Kolibri is MIT.
 - 🟢 **Two exclusions from the previous version of this list are withdrawn.**
   - `OpenEduCat` was excluded as **HTTP 404**. The project is live at **`openeducat/openeducat_erp`** (LGPL-3.0, 905★, default branch `19.0`); only the published address was dead. It is now the recommended base when a client needs a full education ERP, and LGPL-3.0 is a better licensing position than the `frappe/lms` (AGPL-3.0) substitute that was recommended in its place.
   - `tutor-mcp` was excluded at **0 stars**. That measured `kvnloo/tutor-mcp`, which is a **fork**; the upstream `ArnaudGuiovanna/tutor-mcp` has **96★ / 13 forks** and is the backbone of **P6**.

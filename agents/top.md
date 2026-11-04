@@ -95,6 +95,17 @@ Recording these is the point. A permissive-looking search result that turns out 
 
 🔴 **One prior address did not resolve.** `Vacademy-io/vacademy_platform`, carried by earlier notes in this programme at "~500★, AGPL-3.0", **is a 404**. The real repository is [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform) — **23★**, AGPL-3.0. Both the address and the adoption figure were wrong, and AGPL-3.0 excludes it from a closed deliverable regardless.
 
+## 🟢 New at p656 — what this shelf still does not give you, and where it now lives
+
+No agent row was added this pass, and none was removed. The twenty rows above are the agents; padding the count would make this page worse. What p656 changed is the layer *beneath* them, and it changes how every row here gets delivered.
+
+🔴 **Until p656 this shelf answered "what can we build" and had no answer to the two questions that follow it in every engagement:** how does the agent appear inside the LMS the client already runs, and how does anyone prove it worked. Both are now answered on `repos/foundations.md`, with ten permissive rows promoted there this pass:
+
+- **Getting in without forking anything.** [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (Apache-2.0, 377 ★), [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT, 138 ★), [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (BSD-3-Clause, 73 ★). An LTI 1.3 tool launches inside Moodle, Canvas, Brightspace, Open edX, Sakai and OpenOlat alike, and because it is a separate work it **inherits copyleft from none of them**. Every agent on this shelf can reach every one of those platforms through one integration.
+- **Proving it worked.** [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (Apache-2.0, 144 ★) with [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (Apache-2.0, 955 ★). Every interaction an agent has becomes a statement — actor, verb, object, result, timestamp — in the client's own database. 🔵 **This is the deliverable that turns a pilot into a renewal**, and it is the direct answer to `intel/trends.md` **T10** and **T19**, which have recorded for many passes that the evidence base is this sector's weakest point.
+
+🔵 **Worth stating plainly, because it was the defect this pass found:** none of those components is new to this repository. They were verified in the append-only logs passes ago — `lrsql` appears in 230 files — and had never reached a shelf. **The agents on this page have always been deliverable; this base simply had not written down how.** Wiring is specified end to end in `compose/patterns.md` **P17**.
+
 ## 🔴 The licence unit is the dependency graph, not the repository
 
 Three of this page's rows carry a permissive badge over a tree that contains obligations the badge does not mention. All three were read at first hand at p652.

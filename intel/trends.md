@@ -188,7 +188,7 @@ The OECD says the same thing from the policy side in the **Digital Education Out
 
 **The convergence is the finding.** Builders, the OECD and students independently describe the same hole: performance has been demonstrated, learning has not, and almost nobody is measuring. Two commercial consequences. First, **measurement is a product** — an evaluation wrapper whose deliverable is the client's own evidence is the one offer that does not require anyone to believe a vendor's efficacy claim, and in a market where 9% of institutions evaluate anything it is close to uncontested. Second, an OECD recommendation to incentivise purpose-built tools over general-purpose chatbots is a policy tailwind under precisely the shelf in `agents/top.md`. **Confidence: high on the quotations and the survey figures; the OECD text is quoted from search excerpts of the PDF because `www.oecd.org` does not resolve in this session.**
 
-## T20 — Permissive assessment software exists now; all of it is a research artefact
+## T20 — Permissive assessment software exists now; the *agentic* half of it is a research artefact 🔴 refined at p656
 
 Four passes of searching produced, in order: nothing; two education-specific graders with **no usable grant**; one permissive general rubric primitive that is **not** education-specific (`microsoft/LLM-Rubric`, MIT, 45★); and at p653, searching the automated-essay-scoring literature rather than the agent ecosystem, **two permissive education-specific systems**.
 
@@ -200,6 +200,8 @@ Four passes of searching produced, in order: nothing; two education-specific gra
 **The trend is the shift in the *kind* of gap, and it is the second time this base has seen that shift.** The Moodle bridge went from "no permissive supply" to "seven MIT servers capped at 27★" — a consolidation gap. Assessment has now made the same move: from absent to present-but-unadopted. **This is a better commercial position than it sounds**, because adopt-and-harden against a peer-reviewed decomposition is scopeable, while building a grader from zero is not. It is also the one place in this KB where the production artefact would be Globant's to create.
 
 🔴 **The half that has not moved is the regulated half.** Scoring now has permissive research supply; **assessment *integrity* and proctoring have none, in any pass** — and under EU AI Act Annex III that is the high-risk half, with emotion recognition in schools prohibited outright since February 2025. Permissive supply is appearing where the regulatory exposure is lowest.
+
+🔴 **Refined at p656, and the original heading was too strong.** This trend read *"all of it is a research artefact"*. [`numbas/Numbas`](https://github.com/numbas/Numbas) is **Apache-2.0** (11,357 B, byte-exact canonical), **216 ★ / 129 forks**, pushed 2026-10-28, and is the browser e-assessment system **Newcastle University builds and runs for its own teaching** — randomised question generation, algebraic answer marking, partial credit, SCORM packaging. That is production university software, not a paper's companion code, and it was already present in this repository's logs when the claim was published. The defensible core of the trend survives and is now the heading: **agentic** assessment — LLM scoring, generated feedback, agent-run marking — remains research-grade, and the two rows in the table above (2 ★ and 0 ★) are still the whole permissive supply for it. 🔵 The regulated half named below has not moved either: assessment *integrity* and proctoring still have no permissive production supply, with `SafeExamBrowser` (MPL-2.0, 363 ★) the nearest thing and deliberately not shelved pending a pass that can scope proctoring properly. Shelved at p656 on `repos/foundations.md` and `verticals/solutions.md`.
 
 ## T21 — Local-first by default is becoming a product category, not a deployment option
 
@@ -250,6 +252,50 @@ Of seven agent rows added at p655, **six generate or schedule content rather tha
 **Two structural reads follow.** First, `anki-mcp-server` completes a chain this KB has been assembling for three passes: FSRS (`fsrs4anki` MIT, `fsrs-rs` BSD-3-Clause) is the retention algorithm, `tutor-mcp` (MIT) is the mastery estimator, and this is the tool surface that lets an agent *write into* the scheduler that already ships inside Anki — see **T13** and `compose/patterns.md` **P6**. Second, `wordlink` is the first row on the shelf that **ships its own task-specific fine-tuned weights small enough to run in a browser tab**, which is the EMEA data-residency and low-connectivity argument demonstrated in working MIT code rather than argued. ⚠️ Its code grant is MIT; the weights carry no separately named licence — the same defect this KB flags on `OmniEdu`, and now visibly a pattern rather than an incident.
 
 **Signal:** 6 of 7 new permissive rows at p655 are delivery-shaped; 1 is a tutor.
+
+## T27 — The interoperability layer is permissive and the content layer is copyleft, and the line between them is clean 🟢 new at p656
+
+p656 read the grant payload of every open source component in the layer that joins an AI tool to an institution. The licence split is not a tendency; it is a clean break along a functional boundary:
+
+| Sub-layer | What it does | Licences measured | Verdict |
+|---|---|---|---|
+| **LTI 1.3** | Launches a tool inside an LMS | Apache-2.0 (`tsugi`), MIT (`pylti1.3`, `marsha`), BSD-3 (`ltiauthenticator`) | 🟢 **Entirely permissive** |
+| **SCORM / cmi5** | Plays existing packaged courseware | MIT (`scorm-again`) | 🟢 Permissive |
+| **xAPI / LRS** | Records what the learner did | Apache-2.0 (`xAPI-Spec`, `lrsql`, `ADL_LRS`, `TinCanJS`) | 🟢 **Entirely permissive** |
+| **Assessment** | Delivers and marks | Apache-2.0 (`Numbas`) vs GPL-2.0 (`tao-core`) | 🟡 Split |
+| **Interactive content authoring** | Builds the content | GPL-3.0 (`h5p-php-library`, `H5P-Nodejs-library`), no grant (`Lumi`) | 🔴 **Entirely copyleft** |
+| **Accessibility remediation** | Finds and fixes WCAG defects | GPL-3.0 (`UDOIT`, `adapt_framework`) | 🔴 **Entirely copyleft** |
+
+**Why the break falls there, and why it is stable.** The permissive half is the half written by *specification bodies and their implementers* — ADL (US Department of Defense), Rustici, 1EdTech's ecosystem, IMS LTI. A specification wants maximum adoption, so its reference implementations are Apache or MIT by design. The copyleft half is the half written by *product communities* — H5P, Adapt, UDOIT — who chose GPL precisely to keep commercial forks out. 🔵 **This is not an accident of sampling and it will not drift: the incentives that produced each half are still in place.**
+
+**The commercial consequence is a scoping rule.** Globant can own the pipes — get in over LTI, move content over SCORM, record to an Apache-2.0 LRS, assess with Numbas — and must treat authoring and accessibility as *integrate, do not fork*. See `compose/patterns.md` **P17** and `verticals/solutions.md` **Pattern I**. **Confidence: high** — every licence in the table was read byte-for-byte from `raw.githubusercontent.com` on the repository's real default branch, not taken from a GitHub sidebar.
+
+## T28 — The sector's measurement problem had a permissive answer the whole time, and there is exactly one of it 🟢 new at p656
+
+T10 and T19 have recorded across many passes that the evidence base is this sector's weakest point — and T19 noted that the sharpest statement of the problem now comes from model builders rather than critics. p656 closes the *supply* half of that gap and replaces it with a narrower, harder one.
+
+**The answer exists:** xAPI is a ratified Apache-2.0 specification, and a Learning Record Store is the database that implements it — every learner interaction as a statement with actor, verb, object, result and timestamp, queryable by the client's own analysts. This is what turns "the tutor seems to help" into a cohort delta somebody can audit. [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) is **Apache-2.0** (11,357 B, byte-exact canonical), 144 ★, pushed **2026-11-03**, nine open issues, running on SQLite, PostgreSQL and MySQL.
+
+🔴 **And there is exactly one.** The field around it is copyleft, dormant, or both:
+
+| LRS | Licence | Last push | Status |
+|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | **2026-11-03** | 🟢 **The only live permissive option** |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | Apache-2.0 | 2025-11-14 | ⚠️ ~12 months quiet — reference, not production |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 GPL-3.0 | 🔴 2024-05-30 | 🔴 Copyleft **and** dormant ~17 months. 584 ★ — the one a client most likely already runs |
+
+**So the gap moves rather than closing.** It was *"no permissive way to measure outcomes."* It is now *"one permissive way to measure outcomes, maintained by one small project, with no permissive fallback."* That is a better problem — it is buildable today — but it is a single-vendor dependency and any proposal selling measurement on a permissive stack should name it. 🔵 **The failure was never discovery: `lrsql` appears in 230 files of this repository's own logs, described there as the permissive production candidate, and had never reached a shelf.** **Confidence: high** on the licences and dates (all measured this pass); **moderate** on `lrsql`'s project health, which rests on commit recency and issue count rather than on any funding or governance signal.
+
+## T29 — The April 2026 US accessibility deadline is the one named demand driver in this KB with no permissive answer 🟢 new at p656
+
+This base records an **April 2026 ADA deadline for large US public institutions** as a North America demand driver, alongside the state-level activity in T3 and T12. p656 swept for the supply side and the result is negative:
+
+- `topic:accessibility topic:education` returns **442 repositories**. Star-ranked, the permissive rows at the top are `evoluteur/braille-tools` (MIT, 43 ★) and `osunyorg/admin` (MIT, 49 ★) — **neither is a WCAG remediation tool.**
+- The production tool is [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) — scans Canvas content for WCAG defects, explains them, fixes many in place, University of Central Florida, 117 ★, pushed 2026-11-04 — and it is 🔴 **GPL-3.0** (35,147 B payload read).
+- The authoring tool with accessibility as a design goal, `adaptlearning/adapt_framework` (632 ★), is also 🔴 **GPL-3.0**.
+- `screen-reader`, `captioning`, `dyslexia` and `special education` return **zero rows on any shelf** of this KB, before and after this pass.
+
+**Why this is a trend and not merely a gap.** Every other regulatory driver this base tracks — the EU AI Act's Article 50 transparency duty, Korea's high-impact assessment scope, US state model policies — creates demand that *permissive software can serve*. Accessibility is the exception: the mandate is hard, dated and enforceable, and the only real tool forbids a proprietary derivative. 🔵 **The engagement shape is therefore different in kind:** deploy UDOIT inside the client's own estate, bill the remediation work and the integration, and ship no derivative. It is a services engagement, not a product one — and saying that up front is more valuable than discovering it after a proposal has promised a platform. **Confidence: high** on the licence and the supply absence (both measured); **moderate** on the deadline itself, which this KB carries from secondary sources and has not read in primary form.
 
 ## 🔴 What this page does not claim
 
