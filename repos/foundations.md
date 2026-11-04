@@ -3,6 +3,40 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p642` — reads `2026-11-04` — **🔴 `642-C`: THE `MIT` BYTE BAND THIS PAGE PUBLISHES IS FALSIFIED BY `+35 B` AND SHOULD BE RETIRED, NOT WIDENED A THIRD TIME.**
+
+🔵 **The band has now been widened by two consecutive passes instead of being questioned.** `640-A`
+published `MIT` as `1,062`–`1,085 B`; `641-B` widened it to `1,097 B` on `kolibri`. Measured
+`2026-11-04`, two further payloads sit outside it and **both are genuine `MIT` on the title line**:
+
+| Repo | Bytes | vs `641-B`'s ceiling | Grant, graded on the title line |
+|---|---|---|---|
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🔴 **`1,132 B`** | `+35` | 🟢 `MIT License` — `master/LICENSE`. `291★`, pushed `2026-11-02` |
+| [`tubban1/eduNest`](https://github.com/tubban1/eduNest) | 🔴 **`1,100 B`** | `+3` | 🟢 `MIT License` — `master/LICENSE`. `105★`, pushed `2026-10-26` |
+
+🔴 **`MIT` cannot have a diagnostic band.** Its only variable text is the copyright line, which is
+unbounded — a long institutional holder (`CAHLR` is *Computational Approaches to Human Learning
+Research*, Berkeley) moves the count arbitrarily. Each widening makes the band weaker as a test while
+making it look better validated.
+🟢 **What the byte count *does* separate reliably is the `GNU` family, and that is the confusion worth
+instrumenting:** `35,147 B` = `GPL-3.0` against `34,523 B` = `AGPL-3.0` — the pair every substring
+grader gets wrong, `624 B` apart, and stable across `3` independent reads each.
+🟢 **ACTION for `p643`: grade `MIT` on the title line only; stop publishing a `MIT` band.**
+
+### 🟢 `642-E` — `EduKTM`'s grant is corroborated, and it was the **ledger** that was stale
+
+🔵 `evidence/address-ledger.tsv` carries [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM)
+with verdict 🔴 `no-grant` (filed `p87`). 🟢 **Byte-read `2026-11-04`: `Apache License`, `11,367 B` on
+`main/LICENSE`** — `+10 B` against canonical `11,357 B`, a copyright-line deviation that alters no grant
+term. 🟢 **`repos/trending.md:46484` already had this right** (`Apache-2.0`), so the shelves were
+correct and the ledger row was the stale one — the opposite direction from `642-A`.
+🔴 **It remains unshippable for a different reason:** last pushed **`2024-01-02`**, dormant `2 y 10 m`,
+and it is a load-bearing component in this base's own recipes. 🟢 Use
+[`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (`MIT`, `1,066 B`, `456★`, pushed
+`2026-10-18`) or [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) instead.
+
+---
+
 
 ## 🆕 `p641` — reads `2026-11-04` — **🔴 `641-B`: `640-D`'s `MIT` BAND IS FALSIFIED BY A PAYLOAD `p640` ITSELF GRADED 🟢 `MIT` IN THE SAME PASS. THE BAND WIDENS TO `1,062`–`1,105 B` AND IS **DEMOTED FROM AN ANOMALY DETECTOR TO A WEAK PRIOR**. 🟢 `641-A`: THIS SHELF ALREADY HELD THE RIGHT ANSWER TO THE QUESTION `verticals/solutions.md` GOT WRONG — `oppia` IS THE LARGEST PERMISSIVE EDUCATION PLATFORM AT `6,965★`, AND IT HAS BEEN ON THIS PAGE SINCE `p640`.**
 

@@ -3,6 +3,33 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p642` — reads `2026-11-04` — **🔴 THE SUPPLY SIDE IS SATURATED ON A MEASURED DENOMINATOR: `15 of 20` STRONG CANDIDATES OFF A FRESH `14`-FACET CENSUS WERE ALREADY HELD, AND THE WEB LEGS RETURNED `0` ADDRESSES FOR THE `15th` CONSECUTIVE PASS.**
+
+🔵 **This is a trend about discovery, not about education.** It is recorded here because it changes what
+a pass should spend its budget on.
+
+| Channel | Run `2026-11-04` | Yield |
+|---|---|---|
+| Mandated web legs (global supply + `4` regions) | 🔴 SEO roundups, vendor blogs, no education-specific agent ranking | 🔴 **`0` new addresses — 15th consecutive nil** |
+| GitHub census, `14` facets | `20` strong candidates | 🔴 **`15` already held**; `5` new, `3` of them unusable |
+| Net usable additions | — | 🟢 **`1`** ([`tubban1/eduNest`](https://github.com/tubban1/eduNest), `MIT`) |
+
+🟢 **Trend 42 — "automated essay scoring is a dead axis for delivery."** 🆕 Graded this pass as a cohort
+for the first time: `4` addresses, **`1` carries a usable grant and it was last pushed `2019`**. One is
+`CC BY-NC` (NonCommercial), one is unlicensed, and Open edX's own *Enhanced AI Scoring Engine*
+([`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease)) is 🔴 **`archived: true`**.
+🔵 **Second instance of `Trend 41`'s shape** — a specification's own organisation abandoning its own
+tooling — after `adlnet/SCORM-to-xAPI-Wrapper`. 🟢 **The commercial reading: scoring is bought as a
+platform feature, not assembled from models.** [`Submitty/Submitty`](https://github.com/Submitty/Submitty)
+(`BSD-3-Clause`, `805★`, pushed `2026-11-03`) is the one deliverable artefact on the axis.
+
+🔴 **Trend 43 — `instructure/canvas-lms` has now been quiet for six months.** Pushed `2026-04-30`,
+re-measured `2026-11-04`. 🔵 `p626` first noticed this and it is reconfirmed on a third instrument.
+The Canvas *boundary* repos remain the active layer — `vishalsachdev/canvas-mcp` pushed `2026-11-04` the
+same day — so **the integration surface is moving while the platform is not.**
+
+---
+
 
 ## 🆕 `p641` — reads `2026-11-04` — **🟢 `641-G`: `640-L`'s CONVERGENCE GOES FROM **THREE** JURISDICTIONS TO **FIVE**, AND APAC JOINS THE ASSESSMENT MAP VIA A REGULATOR THAT HAS BEEN DOING THIS SINCE `2024`. 🔴 AUSTRALIA'S `TEQSA` ADDS THE ONE CONSTRAINT NO OTHER INSTRUMENT STATES: **AI DETECTION SOFTWARE ALONE IS NOT SUFFICIENT ASSESSMENT SECURITY** — WHICH KILLS AN ENTIRE PRODUCT CATEGORY. 🔴 `641-H`: `640-M`'s GOVERNANCE DENOMINATOR IS **NOT MEASURABLE** FROM SECONDARY SOURCES — SIX READINGS SPAN `10%` TO `92%` AND THE VARIANCE IS DEFINITIONAL, NOT SAMPLING.**
 

@@ -3,6 +3,130 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p642` — reads `2026-11-04` — **🔴 `642-A`: THE `GERMANY` DECLARED GAP IS STALE — IT WAS CLOSED ON `intel/market.md`'s OWN SHELVES AND IS STILL REGISTERED *OPEN* TWO PAGES AWAY. THIS IS `641-M`'s LAYERING DEFECT IN THE *GAP REGISTER*, WHICH NO PASS HAD CHECKED. 🔴 `642-B`: THE EXISTENCE ORACLE HAS A **SECOND** FALSE ABSENT, AND IT IS **NOT** A RENAME — `repo:` RETURNS `0` FOR A REPOSITORY THAT `ls-remote` RESOLVES AND `raw` SERVES. 🔴 `642-C`: THE `MIT` BYTE BAND IS FALSIFIED AGAIN, BY `+35 B`.**
+
+🔵 **This pass found no new supply and says so with a number.** `20` strong candidates were taken off a
+`14`-facet GitHub census; 🔴 **`15` were already held**. The mandated web legs returned SEO roundups and
+`0` new addresses — the **15th** consecutive supply nil. 🟢 The pass's value is therefore in three
+corrections to this base's *own instruments*, not in rows.
+
+### 🔴 `642-A` — the gap register lags the shelves it registers gaps for
+
+`640-I` declared 🔴 *"Germany — explicit nil … this base holds **no German instrument**"* and left an
+ACTION: *"name the `KMK` and the Länder individually."* 🟢 **That ACTION was already discharged** —
+`intel/market.md` carries the **KMK `KI-Kompetenzrahmen` of `2026-10-16`** (four areas, cross-curricular,
+NRW-led, `22` reflection cards in the shared `AIS.chat`) at line `5423`, and **`56` German rule-sets,
+`16` of them from the Länder**, at line `8637`.
+
+🔴 **And the gap is still registered OPEN in two places**: `intel/market.md` lines `248`–`252`
+(*"this base holds no German instrument"*) and `intel/open-gaps.md` line `157`. A reader who checks the
+register before the shelf is told the opposite of what the base knows.
+
+| | Says | Where |
+|---|---|---|
+| The shelf | 🟢 KMK framework `2026-10-16`, `56` rule-sets, `16` Länder | `intel/market.md:5423`, `:8637` |
+| The register | 🔴 *"explicit nil … no German instrument"* | `intel/market.md:248`, `intel/open-gaps.md:157` |
+
+🟢 **Corroborated independently this pass before closing it.** The KMK (now *Bildungsministerkonferenz*)
+*Handlungsempfehlung zum Umgang mit KI in schulischen Bildungsprozessen*, **resolved `2024-10-10`**,
+recommends a *konstruktiv-kritischer* approach rather than prohibition across five fields — Didaktik,
+Prüfungen, Lehrerbildung, Regulierung, Chancengerechtigkeit — requires **adapted assessment formats**,
+and rates a broad abstention from language models **in primary school** as *"erörterungsbedürftig"*.
+Implementation is delegated to the Länder, which is why the count is `16`. 🟢 **Both register entries are
+corrected in place in this pass** — per `641-M`, a correction edits the row it corrects.
+
+🔵 **The general lesson, and it is new:** `641-M` found layering between a file's *top* and its *shelves*.
+This is layering between a *page* and the *register that indexes it* — and `gate-register-currency`
+(p418) only checks that the register is not older than the shelves, not that it still **agrees** with them.
+
+### 🔴 `642-B` — `repo:` search is an INDEX, not an existence oracle
+
+`640-G` recorded one false absent (Open edX) and read it as a rename signature. 🔴 **This pass has a
+second instance where the rename reading cannot apply.**
+
+| Channel | Result for [`Pranjulcr7/OpenTutor`](https://github.com/Pranjulcr7/OpenTutor) |
+|---|---|
+| `search/repositories` `repo:` qualifier, **batched** | 🔴 silently dropped from a `10`-address batch |
+| `search/repositories` `repo:` qualifier, **alone** | 🔴 `total_count: 0` |
+| `git ls-remote … HEAD` | 🟢 resolves — `a890519f3632efa14cf24449b366b3b9d901eecf`, `rc=0` |
+| `raw.githubusercontent.com` byte-read | 🟢 **`MIT`, `1,068 B`**, on `main` *and* `master` |
+
+🔴 **The address is live, serving, and granted — and the oracle `p639`/`p640` promoted says it does not
+exist.** `ls-remote` follows redirects silently, so a rename would still resolve there; but a rename
+would **also** have been found by `repo:` under its new name, and the payload would not sit at the
+*old* path. It does. 🟢 **So `0` from `repo:` means "not indexed", which conflates with "absent".**
+🔵 **Consequence for this base:** every absence resting on `repo:` alone is an upper bound, not a
+finding — and `p639`'s *"`16 of 16` LIVE, control `422`"* is sound only because its control was a
+*fabrication* (`422`), never an unindexed real address. A `0` and a `422` are different verdicts.
+
+### 🔴 `642-C` — the `MIT` band is falsified a second time, and should be retired as a discriminator
+
+`640-A` published `MIT` as a **band**, `1,062`–`1,085 B`; `641-B` widened it to `1,097` on `kolibri`.
+🔴 Measured this pass, both genuine `MIT` by title line:
+
+| Repo | Bytes | vs band |
+|---|---|---|
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🔴 **`1,132 B`** | `+35` over `641-B`'s widened ceiling |
+| [`tubban1/eduNest`](https://github.com/tubban1/eduNest) | 🔴 **`1,100 B`** | `+3` |
+
+🔵 **The band is not an instrument for `MIT` and two passes have now widened it rather than retire it.**
+`MIT`'s only variable text is the copyright line, which is unbounded — a long institutional holder
+moves the count arbitrarily. 🟢 **What the byte count *does* separate reliably is the `GNU` family:**
+`35,147 B` = `GPL-3.0`, `34,523 B` = `AGPL-3.0`, and that pair is the confusion every substring grader
+makes. 🟢 **ACTION for `p643`: grade `MIT` on the title line only and stop publishing a `MIT` band.**
+
+### 🟢 `642-D` — two new source-available addresses, both surfaced by an OSS-shaped query
+
+🔵 The `advisingapp`/`Elastic-2.0` class (`641-L`) now has a **third and fourth** instance, and both were
+returned by searches whose qualifiers read as open source.
+
+| Repo | Metadata | 🆕 Byte-read `2026-11-04` | Verdict |
+|---|---|---|---|
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 `NOASSERTION` | 🔴 **`Business Source License 1.1`** (`4,539 B`, `main/LICENSE`) | 🔴 Not open source. 🟢 **Corroborates** `agents/trending.md:7214`, which already graded it `BUSL-1.1` with a consulting-deliverable exclusion — this pass adds the byte count. `123★`, Fudan. |
+| [`July-Tea/EssayMate`](https://github.com/July-Tea/EssayMate) | 🔴 `NOASSERTION` | 🔴 **`CC BY-NC-SA 4.0`** (`20,849 B`, `main/LICENSE`) | 🔴 🆕 **NonCommercial — a hard disqualification for client delivery**, and the base's *fourth* CC-on-software case. IELTS/TOEFL/GRE essay grading. `39★`, pushed `2025-06-19`. |
+
+### 🟢 `642-E` — the automated-essay-scoring axis, measured and mostly unusable
+
+🔵 The census surfaced essay scoring as a coherent axis this base had not graded as one. 🔴 **Graded, it
+is a dead axis for delivery**: `1 of 4` carries a usable grant and that one is seven years stale.
+
+| Repo | Grant (byte-read `2026-11-04`) | State | Reading |
+|---|---|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **`BSD-3-Clause`** (`1,542 B`, `main/LICENSE.md`) | `805★`, pushed `2026-11-03` | 🟢 **The usable one, and it is a platform not a model** — homework submission, automated grading and TA grading, RPI. Already held in `11` files; corroborated here on bytes. |
+| [`siyuanzhao/automated-essay-grading`](https://github.com/siyuanzhao/automated-essay-grading) | 🟢 **`MIT`** (`1,068 B`, canonical) | `121★`, 🔴 pushed `2019-09-02` | 🟡 🆕 Reference implementation of a memory-augmented scoring model. Grant is clean; the code is seven years old. Read it, do not ship it. |
+| [`Xiaochr/LLM-AES`](https://github.com/Xiaochr/LLM-AES) | 🔴 **none** — `12` branch/filename combinations `404` | `34★`, pushed `2025-02-22` | 🔴 🆕 `LAK25` human-AI collaborative scoring. No grant: all rights reserved. |
+| [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) | 🔴 `AGPL-3.0` | `215★`, 🔴 **`archived: true`**, pushed `2022-12-08` | 🔴 Open edX's own *Enhanced AI Scoring Engine*, abandoned by its authors. 🔵 Second instance of `Trend 41`'s shape after `adlnet/SCORM-to-xAPI-Wrapper`: a spec's own org abandoning its own tooling. |
+
+### 🔴 `642-F` — this pass's own instruments manufactured false results twice, and the controls caught both
+
+🔵 Declared rather than hidden, per this base's standing practice.
+- 🔴 **A `14`-facet GitHub census returned `0` on `3` facets** (`grading`, `knowledge-tracing`, `edtech-llm`)
+  because free-text terms **AND** inside `in:name,description`. Re-run loosely, the same facets returned
+  `pyBKT`, `pykt-toolkit`, `EduKTM` and `Submitty` — all of which this base already holds. 🔴 **A
+  manufactured nil, `627-A`'s class, caught by re-running rather than by publishing.**
+- 🔴 **A header-as-data regex reported `6` defects across the `8` curated pages. All `6` are false
+  positives** — they are vertical `| Field | Value |` tables whose *first data cell* reads `Repo` or
+  `Plataforma`. 🟢 **Re-checked by eye: `0` real instances in `768` candidate rows**, so the defect class
+  the ingest brief warns about is **clean** on this base right now.
+- 🔴 **A novelty check manufactured a false *novelty*** — the inverse of the usual failure. Grand View's
+  APAC figure was scored NEW because the probe searched for the literal `18,214`; the shelf writes the
+  same figure as **`$18.2B`** at `intel/market.md:120`, where it has been since `p641`. 🔵 **String
+  identity is not fact identity**, which is the defect `p392`'s `gate-capability-absence` exists for and
+  which this pass re-committed in a one-off probe that did not use it. No false figure was published —
+  the check was run before the row was written, not after.
+
+### 🟡 `642-G` — the gates could not be run, and this is the 6th consecutive pass
+
+🔴 `make hooks` and `ingest/crosspage-figure-claims.py` — the gate `641-M` explicitly assigned to `p642`
+as a pre-commit check — **could not be executed in this session**: the sandbox refuses to run the
+repository's own cloned Python and shell instruments. 🟢 The two checks that *could* be reproduced with
+first-party tooling were, and are reported above (`642-A`'s cross-page disagreement by `grep`,
+`642-F`'s table census by regex + eye). 🔴 **`641-M`'s ACTION is therefore only half discharged:** the
+correction-edits-the-row half is done, the gate-as-pre-commit half is **still open and now blocked on
+environment, not on effort.** Registered for `p643`.
+
+---
+
 
 ## 🆕 `p641` — reads `2026-11-04` — **🔴 `641-M`: `p640` ADDED ITS CORRECTIONS BY *PREPENDING* AND NEVER RECONCILED THE LIVE SHELVES BELOW THEM. THE DATA IS NOW **LAYERED, AND THE LAYERS DISAGREE** — THREE INSTANCES FOUND, ONE OF THEM INSIDE THIS FILE. 🟢 `641-L`: FOUR OF THE LIVE SHELF'S 🔴 ROWS RESOLVED ON BYTES — AND ONE OF THEM, `advisingapp`, IS `Elastic-2.0` **SOURCE-AVAILABLE**, WHICH DISQUALIFIES IT FROM THE MANAGED-SERVICE DELIVERY MODEL THIS STUDIO SELLS. 🔵 `641-B`: `640-D`'s `MIT` BAND IS FALSIFIED BY `p640`'s OWN SHELF.**
 
@@ -6393,6 +6517,7 @@ nine. 🟢 **All eight grants byte-read `2026-11-01`, title-anchored per `591-A`
 | **insight-engine** | [inbeomheo/insight-engine](https://github.com/inbeomheo/insight-engine) | 🟢 **MIT (text, 1,067 B)** | **22** | `2026-09-08` | APAC | 🆕 YouTube video, documents and text → study notes **and a searchable knowledge wiki**; four output styles, **ko/en/ja**, RAG, spaced review, team workspaces. Korea. 🔵 Default branch is `master`. |
 | **empty** | [DaviRain-Su/empty](https://github.com/DaviRain-Su/empty) | 🟢 **MIT (text, 1,064 B)** | **21** | `2026-06-21` | Global | 🆕 **Spoiler-free** EPUB/PDF reading companion with local AI, notes, vocabulary and **cross-book memory**. SwiftUI for macOS, iOS and iPadOS — the only native-Apple row on these shelves. |
 | **quizzer** | [suncloudsmoon/quizzer](https://github.com/suncloudsmoon/quizzer) | 🟢 **MIT (text, 1,070 B)** | **21** | 🟡 `2026-04-06` | Global | 🆕 PDFs → Duolingo-style quiz courses with spaced repetition, adaptive difficulty and tutor chat. 🟡 ~7 months since last push; pin it. |
+| **eduNest** | [tubban1/eduNest](https://github.com/tubban1/eduNest) | 🟢 **MIT (text, 1,100 B)** | **105** | `2026-10-26` | APAC | 🆕 **NEW this pass.** Monorepo for AI-driven interactive teaching **and automated courseware generation** — Next.js 14 + Express, pluggable across Kimi K2 and OpenAI-compatible models. 🔵 The only row in this tier that *authors* courseware rather than digesting a learner's own material, so it sits on the teacher side of the boundary. 🔴 Its `1,100 B` is one of the two counts that falsify the `MIT` band — see `642-C`. Chinese + English. |
 
 ---
 
@@ -6484,6 +6609,8 @@ base cannot describe is not a row it can recommend.
 
 | Repo | Verdict | Evidence |
 |---|---|---|
+| [July-Tea/EssayMate](https://github.com/July-Tea/EssayMate) | 🔴 **`CC BY-NC-SA 4.0` — NONCOMMERCIAL, byte-read** | 🆕 `39★`, pushed `2025-06-19`. IELTS/TOEFL/GRE essay grading with scoring, feedback and suggestions. Metadata said `NOASSERTION`; the `20,849 B` `main/LICENSE` opens `Attribution-NonCommercial-ShareAlike 4.0 International`. 🔴 **NonCommercial excludes client delivery outright** — this is a harder block than ShareAlike, which only propagates an obligation. 🔵 The base's **fourth** CC-on-software case and its **first NonCommercial** one; see `642-D`. |
+| [Xiaochr/LLM-AES](https://github.com/Xiaochr/LLM-AES) | 🔴 **BLOCK — no grant** | 🆕 `34★`, pushed `2025-02-22`. `LAK25` *Human-AI Collaborative Essay Scoring: A Dual-Process Framework with LLMs*. **`12` branch/filename combinations (`LICENSE`/`.md`/`.txt`/`COPYING`/`COPYING.txt`/`LICENCE` × `main`+`master`) all returned no payload**, and metadata reports `spdx_id: NONE`. Peer-reviewed method, unlicensed code. See `642-E`. |
 | [GoogleCloudPlatform/aira](https://github.com/GoogleCloudPlatform/aira) | 🔴 **`596-D` BLOCK — disqualified by its own README, not by its licence** | 🆕 *Artificial Intelligence Reading Assessor* — scores a learner as *Pré-reader / Reader / Advanced* and rolls results up per class, per school, per region. `24★`, last push `2026-07-23`, **Apache-2.0 byte-read at `11,357 B`** on `main`. 🟢 **It clears every screen this page runs**: permissive grant, real organisation, education-core, live, not archived. 🔴 **Its README disqualifies it**: *"an open-source **demo experiment**"*, *"**proof-of-concept only**"*, *"does not reflect a completed system nor a finalized design"*, *"**not an officially supported Google product**"*, *"Please do not use any personal or sensitive data"*, and *"should not be used by children under 13 or to process data from children under 13"* — 🔴 **which excludes K-12, the exact population a reading assessor exists for.** 🔵 **The screen this base was missing:** read the README's own *status and audience* declarations before promoting, and treat a PoC or under-13 disclaimer as a BLOCK regardless of grant and provenance. Filed so `p597` does not promote it on the strength of the Apache-2.0 header. |
 | [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🔴 **Split licence — partly non-OSI** | 1,838★, pushed `2026-10-20`, API `NOASSERTION`. 🟢 **Resolved and now reconciled across pages** (see `586-A`). `LICENSE` reads: all sources **Apache-2.0** *except* `packages/app` and `packages/backend`, which are **AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. 🔴 **BUSL-1.1 is not an open-source licence.** 🟢 Its spaced-repetition *libraries* are buildable; 🔴 its app and backend are not shippable without AGPL or BUSL compliance. |
 | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0 + stale** | 🆕 1,317★ visual/interactive AI tutor — the second-largest tutoring repo after DeepTutor, and unusable in client work. Network copyleft, and last pushed `2026-01-09` (**~10 months**). |

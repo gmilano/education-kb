@@ -3,6 +3,24 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p642` — reads `2026-11-04` — **🟢 THE ASSESSMENT-INTEGRITY LAYER HAS EXACTLY ONE PERMISSIVE PLATFORM, AND IT IS `BSD-3-Clause`.**
+
+🔵 Recorded as a *vertical platform* row rather than an agent row, because what a client buys here is a
+submission-and-grading system they can host, not a model.
+
+| Platform | Repo | Licence (byte-read `2026-11-04`) | ★ | `pushed_at` | What it actually is |
+|---|---|---|--:|---|---|
+| **Submitty** | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **`BSD-3-Clause`** (`1,542 B`, `main/LICENSE.md`) | **805** | `2026-11-03` | Homework submission, **automated grading** and TA/manual grading in one self-hostable system, from Rensselaer Polytechnic Institute. Autograding containers per assignment, plagiarism detection, rubric-based manual grading, student-facing feedback. 🟢 **The most permissive grant of any platform on this page** and the only one that owns the *assessment* workflow end to end. Region: **North America**. |
+
+🟢 **Why it matters for composition.** Every tutor-agent row on `agents/top.md` produces learner work;
+none of them *grade* it against a rubric with an audit trail. Submitty is the missing half, and its
+`BSD-3-Clause` grant carries no reciprocity — so a client's rubric logic, prompts and report templates
+stay closed. 🔴 **The alternatives do not survive a licence screen**: Open edX's own `ease` engine is
+`AGPL-3.0` **and `archived: true`**, and the research-grade scorers are `CC BY-NC` or unlicensed
+(`642-E`). 🔵 **Pattern `P642-1` on `compose/patterns.md` wires this.**
+
+---
+
 
 ## 🆕 `p641` — reads `2026-11-04` — **🔴 `641-A`: `640-N`'s HEADLINE CLAIM IS FALSE. THE LARGEST PERMISSIVE EDUCATION PLATFORM IS NOT `kolibri` AT `1,168★` — IT IS [`oppia/oppia`](https://github.com/oppia/oppia) AT `6,965★`, `Apache-2.0`, AND IT WAS ALREADY ON THIS BASE'S OWN `repos/foundations.md` WHEN `p640` WROTE THE SENTENCE. 🟢 `641-L`: TWO SHELF ROWS RESOLVED ON BYTES, AND ONE OF THEM — `advisingapp` — IS `Elastic-2.0`, WHICH **FORBIDS THE MANAGED-SERVICE DELIVERY MODEL THIS STUDIO SELLS**.**
 

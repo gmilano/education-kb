@@ -3,6 +3,43 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 2026-11-04 — `p642`: the essay-scoring axis, graded as a cohort for the first time
+
+🔵 **Appended, not rewritten** — the history below this line is intact.
+
+🟢 **The census surfaced automated essay scoring as a coherent axis this base had never graded as one.**
+Graded, 🔴 **it is a dead axis for delivery**: `1 of 4` carries a usable grant, and that one is seven
+years stale.
+
+| Repo | Grant, byte-read `2026-11-04` | ★ | `pushed_at` | Verdict |
+|---|---|--:|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **`BSD-3-Clause`** · `1,542 B` · `main/LICENSE.md` | `805` | `2026-11-03` | 🟢 **The one deliverable artefact.** Submission + autograding + rubric-based manual grading, RPI. Promoted to `verticals/solutions.md` as a platform row this pass. |
+| [`siyuanzhao/automated-essay-grading`](https://github.com/siyuanzhao/automated-essay-grading) | 🟢 `MIT` · `1,068 B` (canonical) | `121` | 🔴 `2019-09-02` | 🟡 Reference implementation only. |
+| [`Xiaochr/LLM-AES`](https://github.com/Xiaochr/LLM-AES) | 🔴 **none** · `12` combinations, no payload | `34` | `2025-02-22` | 🔴 Unlicensed. |
+| [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) | 🔴 `AGPL-3.0` | `215` | 🔴 `2022-12-08` | 🔴 **`archived: true`** — Open edX's own *Enhanced AI Scoring Engine*, abandoned by its authors. |
+
+🔵 **Second instance of `Trend 41`'s shape** — a specification's own organisation abandoning its own
+tooling — after `adlnet/SCORM-to-xAPI-Wrapper`. 🟢 **The commercial reading: scoring is bought as a
+platform feature, not assembled from models.**
+
+🔴 **`MIT` byte-band falsified again, `+35 B`.** [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) is
+genuine `MIT` at **`1,132 B`** and [`tubban1/eduNest`](https://github.com/tubban1/eduNest) at
+**`1,100 B`**, both outside `641-B`'s widened `1,097 B` ceiling. 🟢 Two passes have now widened the band
+rather than retire it; `MIT`'s copyright line is unbounded, so the band cannot be diagnostic. The
+`GNU` pair (`35,147 B` `GPL-3.0` / `34,523 B` `AGPL-3.0`) remains the one reliable byte test. See
+`642-C` on `repos/foundations.md`.
+
+🟢 **`bigdata-ustc/EduKTM` — grant corroborated, ledger was stale.** Byte-read `Apache License`,
+**`11,367 B`** (`+10 B` vs canonical, copyright-line only). `evidence/address-ledger.tsv` carried it as
+🔴 `no-grant` since `p87`; 🟢 **this page already had it right** at line `46484`. 🔴 Still unshippable —
+dormant since `2024-01-02`. Use [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit).
+
+🔴 **`instructure/canvas-lms` quiet six months**, pushed `2026-04-30`, re-measured `2026-11-04` on a
+third instrument — while `vishalsachdev/canvas-mcp` pushed `2026-11-04`. **The integration surface is
+moving; the platform is not.**
+
+---
+
 
 ## `2026-11-04` · `p641` — the `topic:education` facet, characterised: its top `16` rows are **"learn to code"**, not edtech
 

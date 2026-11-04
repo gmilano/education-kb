@@ -3,6 +3,50 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 2026-11-04 — `p642`: no new agent supply, and the denominator is published
+
+🔵 **Appended, not rewritten** — the history below this line is intact.
+
+🔴 **The mandated `top open source AI agents education {year} github MIT` and
+`github trending education AI {year}` legs returned `0` new addresses for the `15th` consecutive pass.**
+What they returned was SEO roundups ranking general-purpose agents — `OpenClaw`, `AutoGPT`,
+`LangChain`, `microsoft/ai-agents-for-beginners` — with **no education-specific agent ranking anywhere**,
+and star counts that disagree between blogs by `2×`.
+
+🟢 **A `14`-facet GitHub census was run instead, and it is the useful half of this pass:**
+
+| | Count |
+|---|--:|
+| Strong candidates surfaced | `20` |
+| 🔴 Already held by this base | **`15`** |
+| 🆕 New addresses | `5` |
+| 🟢 New **and** carrying a usable grant | **`1`** |
+
+🆕 **The one usable addition.** [`tubban1/eduNest`](https://github.com/tubban1/eduNest) — 🟢 `MIT`,
+byte-read **`1,100 B`** on `master/LICENSE`, `105★`, pushed `2026-10-26`. AI interactive-teaching and
+**courseware-generation** monorepo (Next.js 14 + Express, Kimi K2 / OpenAI-compatible). 🔵 Filed to the
+local-first study-OS tier as the only row there that *authors* courseware rather than digesting a
+learner's own material. Region: **APAC**.
+
+🔴 **The four that were new and are not deliverable:**
+
+| Repo | Grant, byte-read `2026-11-04` | Why not |
+|---|---|---|
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 **`Business Source License 1.1`** (`4,539 B`) | Source-available, not open source. 🟢 Corroborates this page's own `p551` grading at line `7214`; this pass adds the byte count. `123★`, Fudan. |
+| [`July-Tea/EssayMate`](https://github.com/July-Tea/EssayMate) | 🔴 **`CC BY-NC-SA 4.0`** (`20,849 B`) | 🆕 **NonCommercial** — excludes client delivery outright. The base's 4th CC-on-software case, its **first NonCommercial**. |
+| [`Xiaochr/LLM-AES`](https://github.com/Xiaochr/LLM-AES) | 🔴 **none** — `12` combinations returned no payload | `LAK25` peer-reviewed method, unlicensed code. |
+| [`siyuanzhao/automated-essay-grading`](https://github.com/siyuanzhao/automated-essay-grading) | 🟢 `MIT` (`1,068 B`, canonical) | Grant is clean; 🔴 last pushed `2019-09-02`. Read it, do not ship it. |
+
+🔴 **A liveness correction that matters more than the rows.**
+[`Pranjulcr7/OpenTutor`](https://github.com/Pranjulcr7/OpenTutor) — on this base's live shelves — was
+reported **absent** by `search/repositories`' `repo:` qualifier, batched *and* alone (`total_count: 0`).
+🟢 It is alive: `git ls-remote` resolves `HEAD` at `a890519f3632efa14cf24449b366b3b9d901eecf` and `raw`
+serves `MIT` at `1,068 B` on `main` **and** `master`. 🔴 **So `repo:` is an index, not an existence
+oracle, and a `0` from it conflates "not indexed" with "absent"** — second instance after `640-G`'s
+Open edX false absent, and this one cannot be explained as a rename. See `642-B` on `agents/top.md`.
+
+---
+
 
 ## `2026-11-04` · `p641` — fifteenth nil on supply, and the pass found its defect **inside this base** instead
 

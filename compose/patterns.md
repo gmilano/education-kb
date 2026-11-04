@@ -3,6 +3,53 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p642` — reads `2026-11-04` — **🟢 ONE RECIPE, AND IT IS THE FIRST IN THIS BASE WHERE THE *HUMAN* IN THE LOOP IS A LICENCE-AND-REGULATION REQUIREMENT RATHER THAN A DESIGN PREFERENCE.**
+
+### 🟢 `P642-1` — rubric-graded assessment with a defensible audit trail
+
+🔵 **The problem a client actually brings.** *"Our markers cannot keep up. Can AI grade coursework?"*
+🔴 **In two of this base's four regions the answer is constrained by law, not by taste**, and that is
+what makes this a pattern rather than an integration:
+
+| Region | Binding constraint | Source held on these shelves |
+|---|---|---|
+| **EMEA** | 🔴 `Ofqual`'s regulations **do not permit AI as the SOLE MARKER** of student assessment, and schools may **not** use AI to produce material for assessments they sit | `Ofqual` guide for schools and colleges, `2026-01-15` |
+| **APAC** | 🔴 *"Automated examination, assessment of learning outcomes or **ranking** of learners"* is a named **high-risk** system | Vietnam `Decision 33/2026/QD-TTg`, in force `2026-08-15` |
+| **EMEA** | 🟡 `Annex III` stand-alone high-risk deferred — the conformance window, not an exemption | `Digital Omnibus`, `2027-12-02` |
+| **North America** | 🟡 State model policy + mandatory district policy adoption dates already fixed | NC Session Law `2026-41`; MD, ID, OK, VA |
+
+🟢 **So the deliverable is not a grader. It is a *grading assistant with a human signature and a
+replayable record* — which is the one shape that is compliant in every region above.**
+
+| Step | Component | Grant, byte-read | ★ / `pushed_at` | Role |
+|---|---|---|--:|---|
+| 1 · Submission + autograde | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 `BSD-3-Clause` · `1,542 B` | `805` / `2026-11-03` | Owns submission, per-assignment autograding containers, rubric-based **manual** grading and the student feedback surface. 🟢 **No reciprocity — client rubric logic stays closed.** |
+| 2 · LMS boundary | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `MIT` · `1,071 B` | `317` / `2026-11-04` | Roster, assignment and submission read/write against Canvas, up to `102` tools. 🔵 Swap [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) (`MIT`, `1,200 B`) for a D2L estate. |
+| 3 · LTI placement | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` · `11,361 B` | `373` / `2026-11-03` | `LTI 1.3` launch + **grade pass-back**, so the marker never leaves the LMS. 🟢 The route that avoids forking a reciprocally-licensed platform. |
+| 4 · Mastery estimate | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `MIT` · `1,066 B` | `456` / `2026-10-18` | Knowledge tracing to flag *which* learners a marker should look at first. 🔴 **Not `bigdata-ustc/EduKTM`** — `Apache-2.0` and granted, but dormant since `2024-01-02` (`642-E`). |
+| 5 · Evidence log | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 `Apache-2.0` · `11,357 B` | `144` / `2026-11-03` | Every suggestion, every marker override and every final mark as an **xAPI statement**. 🟢 **This is the component that answers `Ofqual` and `Decision 33`** — it is what makes "AI was not the sole marker" a replayable fact rather than an assertion. |
+| 6 · Tutor-side remediation | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 `MIT` · `1,105 B` | `276` / `2026-11-03` | Peer-reviewed adaptive tutor with Bayesian Knowledge Tracing and **LTI score pass-back** — closes the loop from a bad mark to targeted practice. Pairs with [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) (`MIT`, `1,132 B`). |
+
+🟢 **Wiring.** `ltijs` places the tool in the LMS; `canvas-mcp` pulls the submission set; Submitty
+autogrades what is mechanically checkable and presents the rest to a human against the client's rubric;
+the agent drafts rubric-line comments **as suggestions in Submitty's manual-grading UI, never as a final
+mark**; `pykt-toolkit` orders the marker's queue by predicted mastery; **every suggestion and every
+override is written to `lrsql` as xAPI before the mark is released**, and `ltijs` passes the
+human-signed mark back. Failed outcomes route to `OATutor`.
+
+🔴 **The two components a studio would reach for first, and must not.**
+[`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) is Open edX's own scoring
+engine and is `AGPL-3.0` **and `archived: true`** since `2022-12-08`;
+[`July-Tea/EssayMate`](https://github.com/July-Tea/EssayMate) is byte-read **`CC BY-NC-SA 4.0`** —
+NonCommercial, so it cannot be delivered at all (`642-D`).
+
+🔵 **Effort, stated as a band and not a promise:** `6`–`8` weeks for a single-LMS, single-faculty
+pilot, of which the xAPI evidence model is the long pole because it is the part that has to satisfy a
+regulator rather than a user. 🟡 **Unverified in production by this base** — `Submitty`'s autograding
+containers have not been load-tested here, and that is the first thing a pilot should measure.
+
+---
+
 
 ## 🆕 `p641` — reads `2026-11-04` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ THIS PASS AT A QUOTED BYTE COUNT. `P641-1` REPLACES `P640-1`'s PLATFORM STEP WITH [`oppia/oppia`](https://github.com/oppia/oppia) — `6.0×` THE STARS, SAME PERMISSIVE CLASS (`641-A`). `P641-2` IS THE FIRST RECIPE IN THIS BASE AGAINST A DEADLINE **FOUR WEEKS OUT** RATHER THAN THIRTEEN MONTHS. `P641-3` IS NEW: AUSTRALIA'S `TEQSA` HAS RUN A FULL NATIONAL COMPLIANCE CYCLE AND IS THE ONLY REGULATOR WITH EVIDENCE OF WHAT COMPLIANCE COSTS.**
 

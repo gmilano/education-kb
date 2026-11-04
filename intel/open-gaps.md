@@ -147,17 +147,27 @@ Research *Asia-Pacific AI in Education Market … to 2030* report naming `Google
 on this session's channels**.
 🔴 **OPEN**, narrowed from *"not found"* to *"source identified, figure paywalled."* Vendor list only.
 
-### 🔴 `640-M2` — NEW DECLARED GAP: Germany has no instrument on these shelves
+### 🟢 `640-M2` — CLOSED at `p642` — and it was **already** closed on the shelves when it was registered
 
-🔴 The named-institution query that paid for the European Commission, `Ofqual` and the `DfE` returned
-**nothing** on the `Bildungsministerium` or German federal/*Länder* AI-in-education guidance.
-🔴 Germany is the largest `EMEA` education market represented here —
-[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) is a German university
-reference on the agent shelf — and this base holds **no German instrument at all**.
-🔴 **OPEN. An informed gap, not coverage.** 🟡 **ACTION for the next pass:** name the `KMK`
-(Kultusministerkonferenz) and the *Länder* individually, exactly as `639-H` did for the APAC
-ministries. The `640-H` mechanism predicts this will work, because the `KMK` is self-describing and
-*"Germany"* as a token is competing with `EU`-level content.
+🔴 As registered at `p640`: the named-institution query that paid for the European Commission, `Ofqual`
+and the `DfE` returned **nothing** on the `Bildungsministerium` or German federal/*Länder* guidance, and
+this base was said to hold **no German instrument at all**.
+
+🔴 **That was not true of the base, only of the query.** `intel/market.md` already carried the **KMK
+`KI-Kompetenzrahmen` of `2026-10-16`** and **`56` German rule-sets, `16` of them from the Länder**. The
+gap was registered 🔴 OPEN for two passes against a page that already answered it.
+🟢 **Corroborated independently at `p642`** — KMK (now *Bildungsministerkonferenz*)
+*Handlungsempfehlung*, resolved **`2024-10-10`**: *konstruktiv-kritischer* approach rather than
+prohibition, five fields, **adapted assessment formats**, primary-school abstention rated
+*"erörterungsbedürftig"*, implementation delegated to the Länder.
+🟢 **CLOSED.** `intel/market.md`'s stale paragraph is corrected in the same pass, per `641-M`.
+
+🔵 **`642-A` — what this gap taught, which is worth more than the gap.** `641-M` found layering between
+a file's top and its own shelves. This is layering between a **page and the register that indexes it**,
+and no gate catches it: `gate-register-currency` (`p418`) checks the register is not *older* than the
+shelves, never that it still **agrees** with them. 🟡 **ACTION for `p643`:** extend
+`gate-register-currency` — or `ingest/crosspage-figure-claims.py`, which already compares figures
+across pages — so that a gap registered OPEN whose subject is asserted CLOSED on a shelf is red.
 
 ### 🔵 `640-N` — `639-F` under-counted: there are THREE permissive platforms, not one
 

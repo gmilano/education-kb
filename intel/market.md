@@ -3,6 +3,24 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p642` — reads `2026-11-04` — **🟢 `642-A`: THE `GERMANY` DECLARED GAP ON THIS PAGE WAS STALE AND IS CORRECTED WHERE IT STOOD, NOT RESTATED HERE.**
+
+🔵 **This note is deliberately short, and that is the point.** `641-M` found that this base publishes
+corrections by prepending them and leaves the contradicted text in place. 🟢 **So `p642` edits the rows
+it corrects and this header only says where to look:**
+
+| Correction | Where it was applied |
+|---|---|
+| 🟢 **Germany closed** — KMK `Handlungsempfehlung` `2024-10-10` + `KI-Kompetenzrahmen` `2026-10-16`, `16` Länder | the **EMEA** section's own *"Declared gap — Germany"* paragraph, rewritten in place |
+| 🟢 Same gap closed in the register | `intel/open-gaps.md`, `640-M2` |
+
+🔴 **No market figure changed this pass.** The APAC band (`$2.85B` `2026`; Grand View `$2,282.9M` `2025`
+→ `$18.2B` `2033`) and `641-D`'s corrected LATAM `$0.67B` were **re-checked against four fresh secondary
+sources and reproduced** — the regional `CAGR` spread is confirmed at `17.5%`–`44.2%`. 🟢 `641-E`'s
+finding stands: the four regions sum to `$9.84B` and **the published global band is the outlier.**
+
+---
+
 
 ## 🆕 `p641` — reads `2026-11-04` — **🟢 `641-C`: `640-K`'s APAC NIL **CLOSES** — `$2.85B` FOR `2026`, TWO SOURCES SHARING THE BASE. 🔴 `641-D`: THE `$4.2B` LATAM FIGURE THIS BASE HAS CARRIED SINCE `p54` IS **FALSE, AND ITS PROVENANCE IS NOW LOCATED** — IT IS THE LATAM ***DIGITAL EDUCATION*** MARKET, A BROADER CATEGORY, FILED AS THE NARROWER ONE. THE REAL FIGURE IS `$0.67B`. 🟢 `641-E`: WITH ALL FOUR REGIONS MEASURED, THE DECOMPOSITION SUMS TO `$9.84B` AND **THE PUBLISHED GLOBAL BAND IS THE OUTLIER.**
 
@@ -245,12 +263,20 @@ published, dated standard** — and the `Ofqual` sole-marker rule makes human-in
 `openfun/ralph` (`MIT`, France Université Numérique) is the record store that survives a sovereignty
 question; the Gulf is a separate, faster-moving sub-market with `KHDA` already prescriptive.
 
-🔴 **Declared gap — Germany.** The same query that paid for the Commission, `Ofqual` and the `DfE`
-returned **nothing** on the `Bildungsministerium` or German federal/*Länder* guidance. Germany is the
-largest `EMEA` education market on these shelves — `thm-mni-ii/feedbacksystem` is a German university
-reference — and this base holds **no German instrument**. 🟡 This is an informed gap, not coverage.
-Next pass: name the `KMK` (Kultusministerkonferenz) and the *Länder* individually, exactly as
-`639-H` did for the APAC ministries.
+🟢 **Germany — CLOSED at `p642`, and this paragraph was the stale half of `642-A`.** `640-I` declared an
+explicit nil here and left an ACTION to *"name the `KMK` and the Länder individually."* 🔴 **That ACTION
+had already been discharged elsewhere on this page while this paragraph still read "no German
+instrument"** — see the **KMK `KI-Kompetenzrahmen` of `2026-10-16`** below (four areas, cross-curricular,
+NRW-led, `22` reflection cards in the shared `AIS.chat`) and the **`56` German rule-sets, `16` of them
+from the Länder**. 🟢 **Corroborated independently at `p642`:** the KMK — now *Bildungsministerkonferenz* —
+resolved its *Handlungsempfehlung zum Umgang mit Künstlicher Intelligenz in schulischen
+Bildungsprozessen* on **`2024-10-10`**, recommending a *konstruktiv-kritischer* approach rather than
+prohibition across five fields (Didaktik · Prüfungen · Lehrerbildung · Regulierung ·
+Chancengerechtigkeit), requiring **adapted assessment formats**, and rating broad abstention from
+language models **in primary school** as *"erörterungsbedürftig"*. Implementation is delegated to the
+Länder, which is why the rule-set count is `16` and not one. 🔵 **Germany is a federal buyer with 16
+procurement surfaces, not a single one** — that is the commercial reading, and it is why the
+`thm-mni-ii/feedbacksystem` reference matters more here than its `24★` suggests.
 
 ### APAC
 
