@@ -148,6 +148,32 @@ Three facts shape every engagement:
 
 🟢 **Supply-side change in this region, new at p653:** the Apache-2.0 institutional LMS this base found this pass, **OpenOlat**, is an EMEA asset — descended from the University of Zurich's OLAT, maintained by frentix GmbH in Zurich, with its deepest adoption in German-speaking higher education, and with `langchain4j` already in-tree so an in-jurisdiction no-egress deployment is configuration rather than a fork. For a European public-sector engagement that is the strongest licence-and-residency position on this shelf. See `verticals/solutions.md` **Pattern F** and `compose/patterns.md` **P11**.
 
+**🆕 New at p654 — the private-capital picture, which this section did not hold.** EMEA has been
+covered here through policy and open-source supply. The commercial supply side was absent, and it names
+the competitors and potential partners a Globant engagement meets in the room:
+
+| Company | Round | Detail | Source |
+|---|---|---|---|
+| **Multiverse** (London) | **$70M at a $2.1B valuation**, announced **15 May 2026**, led by **Schroders Capital** | AI workforce training. Tracxn files it as **Series D**; it is the company's **first round since 2022**, and it follows the **January 2026 acquisition of StackFuel** (Germany, data and AI training). Total raised is reported inconsistently — **~$570M** in one source against **$485M over 6 rounds** in Tracxn | FT via secondary reporting; Tracxn |
+| **Ed.ai** | ~$5.8M, September 2026 | AI-assisted grading, expanding across France and Europe | secondary |
+
+🔴 **A name-clash trap worth recording before it causes an error.** **Multiverse** (London, edtech) and
+**Multiverse Computing** (quantum and model compression, $215M Series B in June 2025) are different
+companies, and search results mix them freely. One secondary source already attributes the edtech round to
+"Multiverse Computing". Any funding figure for "Multiverse" must be checked against the business
+description, not the name.
+
+🟡 **Two further EMEA rounds were found and could not be confirmed, so they are filed as unverified
+rather than published as readings:** **Medly AI** (reported $8M seed, August 2026, GCSE exam preparation)
+and **Lucida AI** (reported $5.4M seed, April 2026, voice-first language coach). A targeted follow-up
+search returned nothing on either. Treat as leads, not facts.
+
+🔵 **The market context these sit in cuts against the funding headlines.** HolonIQ counted roughly
+**$1B of global edtech venture funding in H1 2026, down 26% year over year** — so Multiverse's $70M is a
+large share of a shrinking pool, which is a consolidation signal rather than a growth one. A claim that
+Europe captured **62.3% of year-to-date 2026 edtech capital** circulates alongside it; it rests on a
+small sample driven by a few large deals and should not be quoted as a market share.
+
 **Opportunities:**
 - 🟢 **Kenya's unwritten AI-literacy framework is the most specific unfilled deliverable this page holds for Africa.** A national strategy commits to AI literacy across three education levels; no framework implements it; the ministry is at the planning stage as of September 2026; and the published asks are alignment to the Competency-Based Curriculum and to UNESCO's competency frameworks, with teacher training and equitable access. That is a scope statement written by the client.
 - 🟢 **The UK product safety standard is a build-to-spec opportunity with no waiting period.** Unlike the EU, there is nothing to be conformant *by*; there is a published bar to be conformant *to*, now. For a vendor-side client it de-risks procurement into UK schools immediately.
@@ -228,6 +254,28 @@ The APAC search was run and returned **no reading this base did not already hold
 
 🔵 **The named partner list is itself usable intelligence** — it is the shortest available map of who holds convening power on education AI in this region, and `Fundación Ceibal`, `CENIA` and `Tecnológico de Monterrey` are all plausible engagement counterparties or references rather than merely institutions to cite.
 
+**🆕 New at p654 — Brazil's AI sandbox, measured rather than mentioned.** This page has carried
+"a regulatory sandbox launched in 2025" for several passes. It is a named instrument with a published
+end date, a scoring rubric and a result worth recording:
+
+| Reading | Detail | Source |
+|---|---|---|
+| **The ANPD's pilot AI-and-data-protection regulatory sandbox runs until December 2026** | Up to three participants, selected under **Edital/Notice 2/2025**. Testing began **March 2026**; the ANPD published a first partial monitoring report in **early July 2026** and held a public consultation on **13 August 2026** setting four themes | ANPD launch notice + monitoring coverage (secondary) |
+| 🔴 **A participant scored 45 of 100 on the sandbox's ethics framework — against a stated continuation floor of 50 — and was kept in** | The participant is Synapse (metro route recommendation) | ppc.land (secondary, single source) |
+| 🟡 **The participant list does not reconcile across sources** | One list: Synapse, **Prevvine Tecnologia** (STAIDOC, a medical LLM chatbot), **Metatext**. The October 2025 Notice 2/2025 selection list instead names Metatext, Synapse and **IA Greenworld**. The third slot is disputed | two secondary lists, unreconciled |
+| **A follow-on sandbox cycle is signalled but undated** | A legal bulletin refers to the regulator moving on to its next cycle; no dates published | TozziniFreire bulletin (secondary) |
+
+🔴 **None of the participants is an education project, and that is the finding.** The sandbox is a
+**mechanism** precedent, not an education precedent — it does not weaken this page's standing gap that
+Brazil has published no education-sector AI rules. Read correctly it is still the most concrete LATAM
+opportunity on this page, for two reasons. First, **it is a closing window**: a December 2026 end date is
+seven weeks out, so an engagement that intends to use *this* cycle is already late, and the realistic play
+is positioning for the undated next cycle. Second, **the 45-of-100 result is the more durable
+intelligence**: a regulator that keeps a participant below its own published floor is telling the market
+that this cycle is calibration rather than enforcement. Both facts are secondary-sourced and the
+participant list is contradictory, so verify against the ANPD's own site before either goes in front of a
+client.
+
 🔴 **Unchanged and still the sharpest asymmetry in this KB:** no LATAM education agent repository has been found in any pass under a usable licence. The one real, LATAM-placed project (`Micel357/Edu-mentor-AI`, Recife, Brazil) has **no grant file**. The region with the widest adoption gap has the thinnest open source supply.
 
 **Opportunities:**
@@ -237,6 +285,7 @@ The APAC search was run and returned **no reading this base did not already hold
 - 🔵 **Uruguay is the highest-adoption teacher population in this KB (75%, public schools) and it is small enough to be a national reference account.** A country-scale proof point in Spanish, with a public-sector buyer and existing teacher uptake, is worth more as a reference than a larger fragmented market. Note also that Uruguay has academic standing in this field: the **RETUYT-INCO** group (Universidad de la República) published on AI-tutor evaluation with lightweight models at the BEA 2025 shared task — a local research partner rather than an imported one.
 - **The Chilean 194-agent deployment is a reference architecture.** It proves scaled pedagogical agents work in a LATAM university. That is a sellable case pattern for every peer institution in the region.
 - **Moodle and Chamilo are the installed base**, both GPL-3.0 and both reachable with out-of-tree agents over REST. No migration required — the lowest-friction entry in any region.
+- 🟢 **Position for the ANPD's next sandbox cycle, not this one.** The pilot closes December 2026. A sandbox place is the cheapest regulatory cover available in this region for a product that does student profiling or automated assessment, and no education project has held one yet — so the slot is uncontested in this vertical. The deliverable that wins it is the governance artefact this section already recommends selling, which means the same small fixed-fee engagement serves both purposes.
 - **Low regulatory load is a window, not a permanence.** Brazil's bill will pass in some form. Designs that are already EU-AI-Act-shaped will survive it; expedient ones will need rebuilding.
 - Mexico's training-capacity push signals public money moving toward AI skills — adjacent demand for curriculum and platform work.
 
@@ -266,7 +315,7 @@ Three consequences, and they are not cosmetic. **(1)** A client selling educatio
 
 ## 🔴 Declared gaps — searched and not found
 
-- **No education-specific AI regulation found for Brazil, Mexico or Chile.** All three have horizontal AI bills pending; none has published education-sector rules. Searched; genuinely absent, not merely unlocated.
+- **No education-specific AI regulation found for Brazil, Mexico or Chile.** All three have horizontal AI bills pending; none has published education-sector rules. Searched; genuinely absent, not merely unlocated. 🟢 **p654 strengthens this from an absence to a measurement for Brazil:** the ANPD's pilot AI regulatory sandbox — the country's one operating AI-governance instrument — admitted up to three participants under Notice 2/2025 and **none of them is an education project** (mobility routing, a medical LLM chatbot, and an AI-agent security layer; the third slot is disputed across sources). The gap is not that Brazilian education AI rules are unlocated. It is that the regulator's only live sandbox has no education participant to write them from.
 - 🟢 **Partly closed: APAC now has one education-specific binding rule.** South Korea's AI Basic Act names student assessment in early-childhood, elementary and secondary education inside its high-impact definition. The gap as previously stated ("no education-specific AI rules surfaced for China, India or Japan") still holds for those three countries, and the named-player hole in APAC on the demand side is unchanged: the regional player lists available are vendor market-research rankings (Google, Microsoft, IBM, Pearson, Byju's, Squirrel AI), not procurement-grade intelligence.
 - 🟢 **Closed at p652: country-level African AI policy.** The gap as previously stated — "country-level education AI regulation for any Sub-Saharan African state" — is resolved into an accurate statement rather than left as silence: **national AI strategies with explicit education commitments exist (Kenya 2025–2030, Nigeria's digital economy strategy), and education-sector rules do not.** South Africa's draft National AI Policy was published 10 April 2026 and withdrawn seventeen days later. The African Union's own timeline puts Phase 1 (2025–2026) at establishing governance structures and national strategies, so the continent is at the strategy stage **by design, on schedule** — this is not a lag to be explained, it is where the roadmap says it should be. Kenya's unwritten AI-literacy framework is a named, unfilled deliverable inside a published strategy. African *open-source supply* remains genuinely absent (p651): builders ship proprietary apps on open weights.
 - 🟢 **Closed at p652: the Canadian half of the North America leg**, after three consecutive passes of this page admitting that "North America" meant the United States. Canada now has its own block above: the 4 June 2026 national AI strategy, the National AI Literacy Initiative (1M students, 3,000+ educators), the absence of any AI Act after AIDA died on prorogation in January 2025, and K-12 policy ranging from Quebec's suspension directive to Nova Scotia's nothing. **The leg is hereby re-scoped to the United States and Canada explicitly**, and Mexico is covered under LATAM, which resolves the filing inconsistency this page flagged. 🔴 **Still open: Mexican *education-specific* material.** Mexico appears only through capacity-building and horizontal-bill sources (INFOTEC/TecNM training centre, the February 2026 risk-classification bill); no Mexican education AI rule or adoption survey has surfaced in any pass.
