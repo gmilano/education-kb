@@ -93,6 +93,18 @@ Moodle (GPL-3.0)
 ```
 Keep the agent out-of-tree and talk to Moodle over REST. Nothing you write becomes a GPL derivative, and the client keeps a stock, upgradable Moodle.
 
+🟢 **p652 named the MCP server in that diagram, which was a placeholder in every prior pass.** The permissive Moodle-side field was searched properly and it exists — **seven MIT servers in five languages** — but the whole category tops out at **27★**, against `canvas-mcp`'s **317★** for the identical job on Canvas.
+
+| Option | Licence | Stars | Scope | Verdict for this pattern |
+|---|---|---|---|---|
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (1,064 B) | **27** | Rust, 163 commits, 22 tools, read **and** write, `call_ws_function` escape hatch to any Moodle web service, states validation against Moodle 3.7 → 5.x | 🟢 **The base.** Most tools, most commits, broadest version claim, the only one with real write coverage plus an escape hatch. Adopt and harden; do not treat 27★ as production-ready. |
+| [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) | MIT (1,072 B) | 4 | Python, 75 commits. Browser SSO → locally-stored token. Student writes and teacher grading **off by default** behind env flags | 🟡 **The safest default posture in the field**, and 4★ is not adoption. Borrow its permission model even if you build on the Rust one. |
+| 4 further MIT servers | MIT | 0 | TypeScript (read-only by construction), Go (MCP + REST mode), Python (OpenAPI 3.1 bridge), Python (14 tools + CLI) | Not bases. Measured so the search is not re-spent; full table in `agents/trending.md` (p652). |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0 (34,523 B)** | 1 | Open-core; paid Premium Plugins sold separately | ❌ **Not for this pattern.** The whole point of Pattern A is keeping your code out of the GPL's reach; an AGPL agent *is* the network-served component, so it defeats the containment. Secondary write-ups describe its terms as a bespoke "no closed-source repackaging" licence — that is plain AGPL restated in marketing language. |
+| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | MIT | 0 | — | ❌ A **fork** of `G36maid/moodle-mcp`, 43 commits behind, and the top search result for the query. Caught by the copyright line in its own grant payload reading `G36maid`. |
+
+⚠ **Two things to scope honestly in a proposal.** First, the agent bridge for Moodle is an **adopt-and-harden** input, not an install — budget upstream contribution, a security review of the token handling, and your own integration tests against the client's Moodle version. Second, the ~12× open-source investment asymmetry between the Canvas and Moodle agent layers is structural, not temporary: it means **Pattern C is cheaper than Pattern A today**, and a client in LATAM or EMEA running Moodle is paying for that asymmetry. Say so rather than pricing Pattern A as if it were Pattern C.
+
 ### Pattern B — Open edX + XBlock (best fit: corporate academies, national platforms)
 ```
 Open edX (AGPL-3.0)  ← unmodified
@@ -129,5 +141,15 @@ Four verified options, and the licence is what should decide between them:
 | **Gibbon** (GPL-3.0) | GPL-3.0 | K-12 school management with strong timetabling; client-operated deployment. |
 | **RosarioSIS** (651★) | GPL-2.0 | Lean PHP/PostgreSQL SIS. ⚠️ default branch is `mobile`; check out a version branch. 🔴 GPL-2.0-only code cannot be combined into one work with GPL-3.0 code. |
 | **GegoK12** (55★) | **MIT** | The client needs a closed derivative of the administrative layer. The only row that permits one — at the cost of much lower adoption. |
+
+🔴 **Searched at p652 and deliberately not added: `frappe/education`**, the education module of the Frappe/ERPNext stack — the obvious fifth candidate for this slot, and it fails on grant quality rather than on function.
+
+| Channel | Reading 2026-11-04 |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves; real default branch is **`develop`** — not `main`, not `master` |
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` on `develop` | 🔴 **404 on all four** |
+| `license.txt` on `develop` | 🔴 **19 bytes.** Entire contents: `License: GNU GPL V3` |
+
+**A file that names a licence is not a licence.** There is no permission paragraph, no conditions, no warranty disclaimer, no copyright holder and no version pinning beyond "V3" — and GPL-3.0's own terms require the notice and full text to accompany the work. Frappe's intent is obvious and nobody will be surprised by it. But the question a client's legal review asks is what the grant *says*, and here the answer is nineteen bytes, so this slot stays at four verified options. If an engagement needs the Frappe stack, the fix is one upstream commit and it is worth asking for.
 
 For every copyleft option the out-of-tree rule is unchanged: agents talk to the system over its API, in a separate process.

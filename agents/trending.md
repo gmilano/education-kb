@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p652) — the Moodle hole is a consolidation gap, not a supply gap; a 42.7k★ "MIT" agent builds an LGPL-3.0 component; and education now has its own open-weight foundation models
+
+**Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and the fork notice from the repository page via page fetch. `curl` to `github.com` and `api.github.com` are both **HTTP 403** in this session and `gh api` is scoped away from these repositories, so neither was used.
+
+**Hosts that did not resolve under this session's network policy, and what that costs:** `huggingface.co` (so OmniEdu's **weight** licence could not be read at first hand — see the caveat on its row), `www.oecd.org`, `www.unesco.org`, `www.iesalc.unesco.org`, `www.dlapiper.com`. Every claim resting on those is marked secondary in `intel/market.md` rather than presented as read.
+
+### 🟢 New this pass — two agents filed, both verified from bytes
+
+| Agent | Repo | Licence (payload) | Stars / forks | Region | Signal |
+|---|---|---|---|---|---|
+| **OmniEdu** | [haolpku/Omni-Edu](https://github.com/haolpku/Omni-Edu) | Apache-2.0 (11,358 B) — **code only** | **590** / 93 | APAC | A **new layer on this shelf**: not an agent but the education-domain *model* an agent runs on. 4B / 9B / 27B, each in BF16 and FP8, trained for subject competence, curriculum grounding, diagnostic reasoning and pedagogical scaffolding. Backbones Qwen3.5-4B-Base, Qwen3.5-9B-Base, Qwen3.8-27B. 69,999 instruction examples / 15.96M supervised response tokens from 100+ sources. Ships the `omniedu` PyPI toolkit with a 12-benchmark evaluation suite. arXiv:2609.23088, 22 Sep 2026. Peking University + University of the Chinese Academy of Sciences + Zhongguancun Academy. |
+| **moodle-mcp** | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (1,064 B) | **27** / 1 | Global (unplaced) | The permissive Moodle-side agent bridge this KB has declared missing in every prior pass. Rust on the official MCP SDK (`rmcp`), 163 commits, 22 tools (identity, courses, assignments, forums, files-as-markdown, grades, schedule, messaging) plus a `call_ws_function` escape hatch to any Moodle web service. States validation live against **Moodle 3.7 → 5.x**. 27★ is *not* adoption — see the honest framing below. |
+
+### 🔴 The fork trap, caught a second consecutive pass — this time *before* publishing
+
+p651 published a verdict against `kvnloo/tutor-mcp` and learned that it was a fork of the real project. The rule earned there was applied here, and it paid immediately.
+
+Search ranking put **`thc1006/moodle-mcp` first** among Moodle MCP servers. It is MIT, it has 120 commits, and its README makes the strongest claim in the field ("Validated live against Moodle 3.7 → 5.x"). It is also a **fork at 0 ★ / 0 forks**, and the giveaway was readable before any page fetch:
+
+| Channel | `thc1006/moodle-mcp` | `G36maid/moodle-mcp` |
+|---|---|---|
+| Licence payload | MIT, 1,064 B, **`Copyright (c) 2026 G36maid`** | MIT, 1,064 B, `Copyright (c) 2026 G36maid` |
+| Repository page | **"forked from G36maid/moodle-mcp"** | no fork notice |
+| Stars / forks | **0 / 0** | **27 / 1** |
+| Commits on default branch | 120 | **163** |
+
+**A cheaper channel than the fork notice exists, and this pass found it.** The copyright line *inside the grant payload* named `G36maid` while the repository namespace said `thc1006`. A copyright holder who is not the namespace owner is a fork signal available from `raw.githubusercontent.com` alone — one `curl`, no page fetch, and it fires before the adoption verdict is written. p651's rule ("read the fork notice before publishing an adoption verdict") stands; this is a second, cheaper tripwire in front of it.
+
+Note also that the fork is **43 commits behind** its upstream. The fork trap is not only an attribution error — here it would have shipped stale code.
+
+### 🟡 The whole permissive Moodle agent field, measured in one pass
+
+This is the useful artefact of the pass. The gap statement this KB has carried — *"no permissively-licensed Moodle-side agent of comparable standing"* — was half right, and the half it got wrong changes what to do about it.
+
+| Repo | Licence (payload) | Stars / forks | Commits | Language | Scope |
+|---|---|---|---|---|---|
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (1,064 B) | **27** / 1 | 163 | Rust | 22 tools, read **and** write, WS escape hatch, Moodle 3.7→5.x |
+| [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) | MIT (1,072 B) | 4 / 1 | 75 | Python | Browser SSO → local token. Student writes and teacher grading **off by default** behind env flags; instructor tools self-described experimental |
+| [AnonymousOnyx22/moodle-student-mcp](https://github.com/AnonymousOnyx22/moodle-student-mcp) | MIT (1,072 B) | 0 / 0 | 78 | TypeScript | Read-only by construction — "can never submit, edit or delete anything" |
+| [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | MIT (1,063 B) | 0 / 2 | 13 | Go | MCP + REST API mode for non-MCP clients |
+| [duck-5/moodle-mcp](https://github.com/duck-5/moodle-mcp) | MIT (1,072 B) | 0 / 0 | 17 | Python | MCP + OpenAPI 3.1 gateway; stdio/SSE/HTTP. Configured for Tel Aviv University, adaptable |
+| [sonstellar969/open-moodle](https://github.com/sonstellar969/open-moodle) | MIT (1,088 B) | 0 / 0 | 10 | Python | 14 tools + CLI, read-only. ⚠ **depends on PyMuPDF, which is AGPL-3.0** — the dependency, not the repo, sets the obligation |
+| [thc1006/moodle-mcp](https://github.com/thc1006/moodle-mcp) | MIT (1,064 B) | 0 / 0 | 120 | Rust | **Fork** of `G36maid/moodle-mcp`, 43 commits behind |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | **AGPL-3.0 (34,523 B)** | 1 / 0 | 58 | — | Open-core: paid "Premium Plugins" (Advanced Reporting, User Analytics, User Directory, Compliance Pack) sold separately, licence terms for those not stated |
+
+**Seven MIT servers exist. The entire category tops out at 27 stars.** `canvas-mcp` — the same job, for Canvas — sits at **317★**. That is a **~12× asymmetry in open-source agent investment against the LMS that dominates LATAM and much of EMEA**, and in favour of the one that dominates North American higher education.
+
+So the gap is restated, and it is a different kind of gap than this KB has been recording:
+
+- **Not a supply gap.** Permissive Moodle agent code exists, in five languages, including one with real write coverage and a web-service escape hatch.
+- **A consolidation and adoption gap.** No candidate has external review at any meaningful scale. Six of eight have ≤4 stars.
+- **Therefore an actionable one.** `G36maid/moodle-mcp` is the only credible base — most tools, most commits, broadest version claim, genuine write support — and adopting it means hardening and contributing upstream, not installing it. That is a weeks-scale engagement input, not a build-from-zero. See `compose/patterns.md` **P8**.
+
+🔴 **And one widely-repeated characterisation of this field is wrong.** Secondary summaries describe `csmediapro/moodle-mcp-server` as permitting free use and source modification while barring closed-source competing repackaging — phrased as though it were a bespoke source-available licence. The payload is **34,523 bytes of plain AGPL-3.0**. Those are simply AGPL's terms restated in marketing language. It is not permissive, and for a network-served agent AGPL is the most consequential copyleft on this shelf.
+
+### 🔴 "MIT" on the badge, LGPL-3.0-or-later in the build graph — OpenMAIC
+
+This KB files **OpenMAIC** at 42.7k★ as MIT and recommends it. Both halves of that are still true, and incomplete. Read at first hand this pass:
+
+| Channel | Reading |
+|---|---|
+| Repository licence | MIT ✅ |
+| `packages/mathml2omml/package.json` → `"license"` | **`"LGPL-3.0-or-later"`** (package `mathml2omml` v0.5.0) |
+| `packages/mathml2omml/LICENSE` | **7,652 B, "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007"** |
+| Root `package.json` | `"mathml2omml": "workspace:*"` — a pnpm **workspace dependency** |
+| Root `package.json` → `build:packages` | builds `packages/mathml2omml` **first**, as step one of the package build chain |
+| `packages/pptxgenjs` | MIT — fine |
+
+This is not a stray vendored folder. It is a declared workspace dependency that the project's own build script compiles as the first step of `build:packages`. **A client deliverable built from OpenMAIC links an LGPL-3.0-or-later component.**
+
+Stated precisely, because the failure mode here is over-reaction in both directions: LGPL-3.0 is *not* the GPL. It does not make a derivative work of the whole application copyleft. It does attach obligations to that component — users must be able to replace it and get its source, §4's conditions apply to a work that incorporates it, and "or-later" means a client cannot freeze the version of the terms. For a bundled and transpiled JavaScript component inside a shipped web application, "replaceable" is a real engineering requirement, not a formality. It is workable. It is not "MIT", and nothing on the repository's licence badge says so.
+
+**Also new and worth recording for provenance:** the README's News section states that **v0.3.0 (2026-06-28) "relicensed to MIT"**, and does not name the prior licence. OpenMAIC has been permissive for about four months, not from the start. A client diligence question about the pre-June history has no answer in the repository.
+
+### 🔵 The OmniEdu authors state this KB's own T10 caveat, in their own README
+
+Quoted verbatim from `README.md`:
+
+> "Benchmark performance does not establish classroom learning gains."
+
+And on the data: *"Please follow the licenses and usage terms of the component datasets and source materials."* And on the grant: *"The code is licensed under Apache-2.0. Model weights and third-party datasets and benchmarks retain their respective licenses."*
+
+Three things follow. First, **T10** (the sector's evidence base is its weak point) now has the strongest possible kind of support — the model builders volunteering the limit rather than a critic asserting it. Second, OmniEdu reports leading open-weight results across curriculum-grounding and pedagogical-tutoring benchmarks (27B: K12-Bench 63.12 EM / 76.69 F1; MathFish 85.89; EDUMATH MaC 86.95; MathTutorBench Scaffold 78.74 win rate, all self-reported against 16 compared models) and *still* says that. Third, the licence sentence is a genuine open question, not a formality: **the Apache-2.0 payload covers the code; the weights' grant is not named anywhere in the repository**, the backbones are Qwen, and `huggingface.co` does not resolve in this session so the model cards could not be read. **Do not stake a deployment on OmniEdu's weights until that card is read.** The code and toolkit are unambiguously Apache-2.0.
+
+### Rules earned this pass
+
+1. **The copyright line inside the grant payload is a fork detector, and it is one `curl` cheaper than the fork notice.** When the copyright holder is not the namespace owner, suspect a fork before publishing anything about adoption.
+2. **The licence unit is the dependency graph, not the repository.** Three of this pass's findings — OpenMAIC's LGPL workspace package, `open-moodle`'s AGPL PyMuPDF dependency, OmniEdu's unlicensed weights under Apache-2.0 code — are all the same defect: a permissive badge on a tree that contains non-permissive obligations. Reading `LICENSE` is necessary and not sufficient. Read the manifests.
+3. **A category can be full of code and still be empty of adoption.** Seven MIT Moodle servers at ≤27★ is not the same finding as "no permissive Moodle agent exists", and it implies a different engagement: adopt-and-harden, not build.
+
+---
+
 ## 🆕 2026-11-04 (p651) — the KB filed a fork and missed its upstream, and the week's biggest novel find is ShareAlike
 
 **Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars and fork counts from the repository page via page fetch. `curl` to `github.com` and `api.github.com` are both **HTTP 403** in this session, and `gh api` is scoped away from these repositories, so neither was used. `blog.google` does not resolve in this session's network policy and one EMEA source could not be read at first hand because of it.

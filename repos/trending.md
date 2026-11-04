@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p652) — three star counts this page left blank for three passes are now measured, one default branch was wrong, and the biggest permissive education asset found is 41.1k★ of curriculum
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and detected licence from the repository page via page fetch. `curl` to `github.com` and the GitHub API are HTTP 403 in this session.
+
+### 🟢 The three-pass-old blank cells are closed — and one carried value was wrong
+
+`repos/foundations.md` has flagged, for three consecutive passes, that the star counts for `richie`, `chamilo-lms` and `sakai` were blank rather than carried, and that it was cheap to fix. Fixed, plus a re-measure of the three that were carried from p650.
+
+| Repo | Stars (measured 2026-11-04) | Forks | Default branch | Licence (page) | Status of the previous cell |
+|---|---|---|---|---|---|
+| [openfun/richie](https://github.com/openfun/richie) | **318** | 94 | **`master`** | MIT | Blank for 3 passes → filled. 🔴 **And the branch was wrong:** this page carried `master` correctly, but an earlier shelf entry listed richie at 311★ — close, and now superseded by a measured 318. |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | **1.0k** | 567 | `master` | GPL-3.0 | Blank for 3 passes → filled |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **1.2k** | ~1.0k | `master` | ECL-2.0 | Blank for 3 passes → filled. README describes `master` as "the most current development release, Sakai 24" |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **8.2k** | 4.4k | `master` | AGPL-3.0 | Carried from p650 → **re-measured, reproduces** |
+| [moodle/moodle](https://github.com/moodle/moodle) | **7.6k** | 7.7k | `main` | GPL-3.0 | Carried from p650 → **re-measured, reproduces** |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | **471** | 231 | `master` | Apache-2.0 | Carried from p650 → **re-measured, reproduces** |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | **1.2k** | 1.0k | **`develop`** | MIT | p651's correction **reproduces on every channel**, including the unusual default branch |
+
+**What that run of reproductions means.** p651 found that this KB's inflated figures came from values *carried forward from an unverified pipeline*, not from bad measurement, and predicted that measured-and-dated figures would hold. Four re-measures, four reproductions, including one unusual default branch. The prediction held. **Measured-and-dated is reliable here; the discipline to keep is re-measuring on a stated date, not avoiding measurement.**
+
+Note that `moodle/moodle` has **more forks (7.7k) than stars (7.6k)** — the only row on this shelf where that is true, and a fair signal of what Moodle actually is: not a project people watch, a codebase institutions take copies of.
+
+### 🟢 New row — the largest permissive education asset this base has found, and it is content
+
+| Repo | Licence (payload) | Stars / forks | Commits | What it is |
+|---|---|---|---|---|
+| [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub) | **MIT (1,066 B, `Copyright (c) 2024 patchy631`)** | **41.1k** / 6.6k | 554 | 93+ runnable projects on LLMs, RAG, agents and MCP, tiered beginner (22) / intermediate (48) / advanced (23), plus an `ai-engineering-roadmap` learning path. In-depth tutorials with working code, not a formal curriculum. |
+
+Filed deliberately, with its nature stated plainly. **This is teaching material under a permissive licence, which is exactly the thing the regulation now being written actually demands.** The AI-literacy mandates this KB tracks — EU AI Act Article 4, Saudi Arabia's undergraduate requirement, Canada's National AI Literacy Initiative (one million post-secondary students, 3,000+ educators), Kenya's strategy commitment, Idaho's AI-literacy standards — all create demand for *curriculum*, and a client cannot buy curriculum from a tutoring agent. At 41.1k★ / 6.6k forks this is the most-adopted thing of its kind, and MIT means a Globant derivative can be commercial and closed.
+
+Contrast with `GarethManning/education-agent-skills`, which p651 recorded at 949★ and declined on **CC BY-SA 4.0** ShareAlike grounds. Same category, same usefulness, opposite licensing answer. The permissive option is 43× more adopted. See `compose/patterns.md` **P10**.
+
+### 🟡 Assessment: the gap is real, and this pass can finally say what *kind* of real
+
+p651 reclassified the assessment hole from a supply gap to a **licence** gap, having found two real education assessment systems with no usable grant. p652 searched the adjacent category — general rubric-scoring libraries — and the result refines it again.
+
+| Repo | Licence | Stars / forks | Commits | Verdict |
+|---|---|---|---|---|
+| [microsoft/LLM-Rubric](https://github.com/microsoft/LLM-Rubric) | **MIT (1,141 B, Microsoft Corporation)** | 45 / 9 | 22 | 🟡 Real, permissive, maintained by a credible org — and **not education**. A hand-written rubric defines dimensions, an LLM answers each question, a small neural network calibrates those outputs against human judges' ratings. Validated on dialogue systems in human-AI information-seeking, with dimensions like naturalness and citation quality. ACL 2024. The *calibration-to-human-raters* idea is the transferable part. |
+| [jacobphillips99/protorubric](https://github.com/jacobphillips99/protorubric) | 🔴 **contradicts itself** | 0 / 0 | 49 | Not filed. YAML/code-defined rubrics, LLM-as-judge, dependent multi-step requirements, multi-provider. Main named integration is HealthBench. **The grant payload is 11,357 B of Apache-2.0; the README's licence section says MIT.** Two different grants in one repository is an unresolved permission, not a permissive project — and at 0★ nobody has asked the author to fix it. |
+
+**The restated finding:** there is no permissively-licensed, education-specific assessment or grading agent at any adoption. What exists is one permissive, general, well-founded rubric-evaluation library (`LLM-Rubric`, MIT, 45★) that would have to be pointed at education, and a field of education-specific graders that are either unlicensed or self-contradictory. **This is now a three-pass-consistent finding across two different search strategies, so it is a property of the field rather than of the searching.** For Globant that reads as a build opportunity with a permissive calibration primitive already available — and it is the one place on this shelf where building beats adopting.
+
+### 🔴 The grant that names a licence without being one — `frappe/education`
+
+Searched for the education module of an ERP stack this base does not yet hold, and found a defect in the same family as p651's `openeducat` `COPYRIGHT` finding.
+
+| Channel | Reading 2026-11-04 |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves; real default branch is **`develop`** — not `main`, not `master` |
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` on `develop` | **404 on all four** |
+| `license.txt` on `develop` | 🔴 **19 bytes**, entire contents: `License: GNU GPL V3` |
+
+**A 19-byte file that names a licence is not a licence.** It states an intention and grants nothing: no permission paragraph, no conditions, no warranty disclaimer, no copyright holder, and no version pinning beyond "V3". GPL-3.0's own terms require the notice and the full text to accompany the work. Frappe's intent is clearly GPL-3.0 and nobody is going to be surprised by it — but a client's legal review asks what the grant *says*, and here the answer is nineteen bytes.
+
+**Not filed as a foundation.** It is recorded here because this is now the third distinct defect class this base has catalogued in how education projects express their grants:
+
+1. **Grant absent entirely** while a README asserts permissiveness (`awesome-ai-llm4education`, `eduadapt-ai` — p651)
+2. **Grant complete but delegating to a missing file** (`openeducat_erp` → `COPYRIGHT` 404 — p651)
+3. **Grant replaced by a pointer to its own name** (`frappe/education` → 19 bytes — p652)
+
+Plus p652's fourth: **grant complete but contradicted by the README** (`protorubric`), and p652's fifth: **grant complete and permissive but not covering the artefact that matters** (`Omni-Edu` — Apache-2.0 code, unnamed weight licence). Five classes. None is detectable without reading bytes, and four of the five would pass a licence-badge check.
+
+### 🟢 The layer below the agents arrives — education-domain open weights
+
+| Repo | Licence | Stars / forks | What |
+|---|---|---|---|
+| [haolpku/Omni-Edu](https://github.com/haolpku/Omni-Edu) | **Apache-2.0 (11,358 B) — code only** | **590** / 93 | OmniEdu 4B / 9B / 27B, BF16 + FP8, on Qwen3.5-4B-Base / Qwen3.5-9B-Base / Qwen3.8-27B. Trained on 69,999 instruction examples (60,951 education-specific + 9,048 general) / 15.96M supervised response tokens from 100+ sources. `omniedu` PyPI toolkit: unified interface, OpenAI-compatible API support, image inputs, JSONL batch inference, and a 12-benchmark evaluation suite. arXiv:2609.23088. PKU + UCAS + Zhongguancun Academy. |
+
+FP8 checkpoints are 37–44% smaller to download than BF16 (27B: 28.30 GiB vs 50.96 GiB; 9B: 11.09 vs 17.53; 4B: 5.14 vs 8.46). **That is the number that makes this a deployment story rather than a research artefact** — a 9B FP8 at ~11 GiB is a single-GPU, data-residency-compliant, offline-capable tutoring base, which is precisely the architecture EMEA public education and Sub-Saharan African deployments both require.
+
+⚠ **Gate before use:** the Apache-2.0 payload covers the code. The repository says *"Model weights and third-party datasets and benchmarks retain their respective licenses"* and names no weight licence. `huggingface.co` does not resolve under this session's network policy, so the model cards could not be read at first hand. The backbones are Qwen. **Read the card before deploying the weights.** This is a stated, located gap — not a reason to skip the row, and not a permission.
+
+---
+
 ## 🆕 2026-11-04 (p651) — a headline claim falls: there **is** a permissive production learning platform. Also: the 404'd ERP was a wrong address, not a dead project, and spaced repetition is permissive and already shipped
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and archive status from the repository page via page fetch. `curl` to `github.com` and the GitHub API are HTTP 403 in this session.

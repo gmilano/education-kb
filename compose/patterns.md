@@ -184,6 +184,87 @@ updated: 2026-11-04
 
 ---
 
+## P8 — Moodle agent pilot, adopt-and-harden (LATAM public sector, EMEA K-12: 5–7 weeks)
+**Best fit:** the ~60% of this KB's addressable market that runs Moodle — LATAM public education, EMEA K-12, Spanish- and Portuguese-speaking institutions.
+**Licence exposure:** none in your code. The agent bridge is MIT and talks to Moodle over REST, so nothing you write becomes a GPL derivative.
+**This is P1's twin for the other LMS, and it costs more. Price it that way.**
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Moodle agent bridge | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (1,064 B), **27★** | 22 tools over Moodle Web Services: courses, assignments (read + submit), forums, files-as-markdown, grades, schedule, messaging, quiz attempts, plus `call_ws_function` as the escape hatch. Rust, `rmcp`. States validation against Moodle 3.7 → 5.x |
+| Permission model to copy | [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) | MIT (1,072 B), 4★ | Do not deploy it — **borrow its defaults**: writes and teacher grading off behind explicit env flags, token from browser SSO stored locally |
+| Tutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 (55k★) | Persistent learner model. Self-host with local models for residency |
+| Mastery + scheduling | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (96★) | BKT + FSRS behind one tool surface — attach **P6** |
+| Local inference | Ollama / vLLM | MIT / Apache-2.0 | Keeps learner data in-jurisdiction |
+
+**Wiring:**
+1. Stand up stock, unmodified Moodle. Enable Web Services and mint a dedicated service account with the **narrowest** capability set that the tool list needs — not an admin token.
+2. Deploy `moodle-mcp` **out-of-tree**, in its own process. Pin the commit, not a branch. ⚠️ **Clone `G36maid/moodle-mcp`, not `thc1006/moodle-mcp`** — the latter ranks higher in search, is a fork, and is 43 commits behind.
+3. **Harden before piloting, and bill for it.** This is the step that distinguishes P8 from P1: at 27★ the bridge has no meaningful external review. Audit token handling and storage; set writes to off-by-default behind explicit flags (`moodler-mcp`'s model); constrain or disable `call_ws_function`, which by design reaches *any* Moodle web service and is the broadest privilege in the stack; run your own integration tests against the client's actual Moodle version rather than trusting the 3.7 → 5.x claim; add rate limiting.
+4. Point DeepTutor at the bridge. Attach `tutor-mcp` for mastery and review scheduling (**P6**).
+5. Contribute the hardening upstream. It is cheap, it removes the single-maintainer risk from the client's position, and it is the honest basis for recommending a 27★ dependency at all.
+6. Wrap in **P5** governance before anything student-facing goes live.
+
+**Honest scoping — say all three of these out loud in the proposal:**
+- **The Moodle agent layer is ~12× less reviewed than the Canvas one** (27★ against `canvas-mcp`'s 317★). That asymmetry is structural, not temporary. **P8 is genuinely more expensive than P1 and the difference is the hardening step**, not margin.
+- **Six of the eight permissive Moodle servers measured have ≤4 stars.** There is no mature alternative to fall back to. If `G36maid/moodle-mcp` proves unsuitable after audit, the next step is a build, so run the audit in week one, not week four.
+- **Do not reach for `csmediapro/moodle-mcp-server`** as the "more commercial-looking" option. It is **AGPL-3.0** with paid Premium Plugins, and an AGPL network-served agent defeats the entire out-of-tree containment that makes this pattern licence-safe.
+
+---
+
+## P9 — Sovereign, curriculum-grounded tutoring on education open weights (8–10 weeks)
+**Best fit:** EMEA public education under data-residency constraints; Sub-Saharan African and other offline-first deployments; **and any Korean or Vietnamese client that needs an agent demonstrably off the system of record** (`intel/trends.md` **T15**).
+**Licence exposure:** 🔴 **one unresolved gate — read it before scoping, not before delivery.**
+
+| Component | Repo / artefact | Licence | Role |
+|---|---|---|---|
+| Curriculum-grounded model | [haolpku/Omni-Edu](https://github.com/haolpku/Omni-Edu) — OmniEdu-9B-FP8 (~11.09 GiB) or 27B-FP8 (~28.30 GiB) | **Apache-2.0 code; weight licence NOT NAMED** ⚠️ | K-12 subject competence, curriculum grounding, diagnostic reasoning, pedagogical scaffolding — in the weights rather than the prompt |
+| Model toolkit + evaluation | `omniedu` (PyPI, same repo) | Apache-2.0 | Unified interface, OpenAI-compatible serving, image inputs, JSONL batch inference, 12-benchmark eval suite |
+| Serving | vLLM / Ollama | Apache-2.0 / MIT | Single-GPU FP8 serving, no egress |
+| Delivery platform | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (1.2k★, branch `develop`) | Offline-first content delivery, learner progress, coach tooling |
+| Review scheduling | [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause** (456★) | On-device scheduling, zero inference cost |
+| Mastery estimation | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT (457★) | Knowledge tracing priors |
+
+**Wiring:**
+1. 🔴 **Gate zero, before any engineering: read the OmniEdu weight licence on its Hugging Face card** (`lhpku20010120/Omni-Edu-9B` / `-27B`, and the `-FP8` variants). The repository's Apache-2.0 grant covers the **code**; the README says only that *"Model weights and third-party datasets and benchmarks retain their respective licenses"*, the backbones are Qwen, and `huggingface.co` did not resolve in the session that verified this pattern. **If the weight terms are not commercially usable, this pattern collapses to P7 with a general model** — so resolve it in the first conversation, not the first sprint.
+2. Serve the FP8 checkpoint on a single GPU via vLLM. FP8 is the whole point: 37–44% smaller than BF16, which is what moves this from a research artefact to a deployable one.
+3. Evaluate on the client's own curriculum with the `omniedu` suite **before** committing to the model. The published results are self-reported (27B: K12-Bench 63.12 EM / 76.69 F1, MathFish 85.89, EDUMATH MaC 86.95, MathTutorBench Scaffold 78.74) and — in the authors' own words — *"Benchmark performance does not establish classroom learning gains."* Take them at that value.
+4. Deliver through Kolibri for offline-first, or through the client's LMS via **P8** / **P1** where there is connectivity.
+5. Add `fsrs-rs` for review scheduling and pyKT for mastery priors — both compute locally, so the offline story stays intact.
+6. **For Korea and Vietnam specifically:** keep the agent off the system of record and document that boundary as a deliverable. Vietnam's high-risk trigger bites only where results are *the official basis* for assessing or ranking learners; Korea names student assessment in its high-impact definition. A formative-only architecture with evidence is a materially smaller compliance programme than conformity work on a graded system.
+
+**Why this pattern exists:** it is the first on this page where the *model* knows the curriculum rather than the prompt carrying it. That matters most exactly where general hosted models are hardest to use — in-jurisdiction, offline, or kept deliberately away from graded decisions. One artefact answers the binding constraint in three regions.
+
+**Honest scoping:** the weight-licence gate is real and unresolved; a K-12 model trained on a Chinese-authored corpus needs curriculum-alignment evaluation per market before anyone claims grounding; and at 590★ / 9 commits this is a young repository with concentrated maintainer risk.
+
+---
+
+## P10 — AI-literacy delivery against a funded mandate (6–8 weeks per cohort)
+**Best fit:** the mandate wave this KB tracks — **Canada's** National AI Literacy Initiative (one million entry-level post-secondary students, 3,000+ educators), **Saudi Arabia's** mandatory undergraduate AI literacy, **EU AI Act Article 4**, **Kenya's** strategy commitment with no framework yet written, **Idaho's** AI-literacy standards, the **UAE's** all-levels programmes.
+**Licence exposure:** none. Every component is MIT.
+**This is the one pattern on this page whose deliverable is curriculum and teacher capacity rather than software** — and it is the pattern that fits the largest publicly-funded commitments in this KB.
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Curriculum base | [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub) | **MIT** (41.1k★, 6.6k forks) | 93+ runnable projects on LLMs, RAG, agents and MCP, tiered beginner (22) / intermediate (48) / advanced (23), plus an `ai-engineering-roadmap`. MIT ⇒ a commercial, closed, client-branded derivative is permitted |
+| Delivery vehicle | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT (42.7k★) ⚠️ see gate | Multi-agent classroom with AI teachers *and* AI peers. **12 locales across 11 languages including Portuguese (Brazil), Spanish (Mexico), Arabic, Vietnamese, French, German** — the broadest localisation on this shelf |
+| Platform | client's Moodle / Canvas / Open edX via **P8** / **P1** / **P3** | — | Enrolment, completion, credentialing |
+| Retention | **P6** (`tutor-mcp`, `fsrs-rs`) | MIT / BSD-3-Clause | Literacy that is assessed once is forgotten; schedule the review |
+| Measurement | **P5** governance + evaluation wrapper | — | The funder will ask what changed |
+
+**Wiring:**
+1. Fork `ai-engineering-hub` and cut the tiers down to the mandate's actual scope. A ministry asking for AI literacy for first-year undergraduates needs the 22 beginner projects, not all 93. Resist shipping the whole hub.
+2. ⚠️ **Licence gate on OpenMAIC before it enters a deliverable.** The repository is MIT, but `packages/mathml2omml` is **LGPL-3.0-or-later** (7,652 B payload; `"license": "LGPL-3.0-or-later"` in its own `package.json`), it is declared `"workspace:*"` in the root manifest, and `build:packages` compiles it as **step one**. A built deliverable links it. Either keep that component dynamically replaceable with its source offered — LGPL permits this and it is an architecture decision, not a blocker — or excise the MathML-to-OOXML path if the client does not need Word/PowerPoint export. Decide at design time; retrofitting replaceability into a bundled JS build is expensive. Note also that OpenMAIC has only been MIT since **v0.3.0 (2026-06-28)** and the prior licence is not named in the repository, so pre-June history has no answer for a diligence question.
+3. Localise with OpenMAIC's existing locales rather than translating a course. pt-BR and es-MX are already there, which covers the LATAM mandates; Arabic covers the Gulf.
+4. Run cohorts through the client's own LMS (**P8** for Moodle, **P1** for Canvas) so completion lands in the system of record and credentialing works.
+5. Attach **P6** so literacy is retained and **P5** so the funder gets outcome evidence rather than attendance.
+
+**Why this is commercially distinct:** the AI-literacy mandates are *funded* and *dated*, and they cannot be satisfied by a tutoring agent — a client cannot buy curriculum from a chatbot. `ai-engineering-hub` at 41.1k★ is the most-adopted permissive asset of its kind, and the licence is the whole reason it is here: the nearest alternative, `GarethManning/education-agent-skills` (949★), is **CC BY-SA 4.0**, whose ShareAlike term forces any derivative skill library to be CC BY-SA and so rules out a closed client deliverable. Same category, opposite answer, and the permissive option is 43× more adopted.
+
+**Honest scoping:** `ai-engineering-hub` is *AI-engineering* material for developers — it is the right base for undergraduate, vocational and educator-upskilling cohorts, and the **wrong** base for K-12 AI literacy, which this KB has no permissive curriculum for and which remains an open gap. Contextualising and pedagogically sequencing the content is the real work; the repository is raw material, not a course.
+
+---
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
@@ -196,6 +277,9 @@ updated: 2026-11-04
 | Pilot must prove an outcome | **P6** | Permissive end to end, retention measurable, no per-review inference cost. Attach it to any other pattern |
 | Connectivity cannot be assumed | **P7** | The only pattern with no copyleft component anywhere, and the only one that works offline |
 | Needs a full education ERP (finance, HR) | **P2 + OpenEduCat** | `openeducat/openeducat_erp` (LGPL-3.0, 905★) on Odoo. ⚠️ default branch is `19.0` and `20.0` exists — resolve it |
+| Already on Moodle and wants a **real agent**, not just REST glue | **P8** | Names the bridge P2 left as a placeholder. `G36maid/moodle-mcp` (MIT, 27★) — adopt and harden; **price the hardening, it is not P1** |
+| Data residency, offline, **or** must stay off the graded system of record (Korea, Vietnam) | **P9** | Curriculum knowledge in the weights, FP8 on one GPU, no egress. 🔴 Resolve the OmniEdu weight licence first |
+| Has a funded AI-literacy mandate (Canada, Saudi, Kenya, EU Art. 4) | **P10** | The deliverable is curriculum and teacher capacity, not software. MIT base at 41.1k★ permits a closed client derivative |
 
 ## 🔴 What these patterns deliberately avoid
 
@@ -205,6 +289,19 @@ updated: 2026-11-04
   - `tutor-mcp` was excluded at **0 stars**. That measured `kvnloo/tutor-mcp`, which is a **fork**; the upstream `ArnaudGuiovanna/tutor-mcp` has **96★ / 13 forks** and is the backbone of **P6**.
 - **Still excluded:** `awesome-ai-llm4education` (**no licence**, 221★) and `eduadapt-ai` (**no licence**, 26★), both previously published here as MIT and neither of which is. Added to the exclusion list at p651: `GarethManning/education-agent-skills` (949★ but **CC BY-SA 4.0** — ShareAlike, so a derivative skill library cannot be proprietary); `virtualryder/edu-ai-agents` (4★ and a **modified MIT payload with the limitation-of-liability paragraph removed**); `mthatipamula/educational-assessment-ai-agent-platform`, `luffycodes/Tutorbot-Spock` and `Micel357/Edu-mentor-AI` (**no licence file**); `CodeBreez/collejo` (MIT but **archived read-only since 2024-05-16**).
 - **No pattern includes proctoring or emotion recognition.** Emotion recognition in schools is banned in the EU; exam monitoring is high-risk there and, since 22 January 2026, student assessment in K-12 is high-impact under South Korea's AI Basic Act with fines expected from around January 2027. No permissively-licensed open source option was found in any case.
+
+## 🔴 Resolve the licence of the *tree*, not the repository — four live cases
+
+Reading `LICENSE` is necessary and not sufficient. Four components these patterns use carry obligations that their repository badge does not mention, and all four were read from bytes or from a manifest field verbatim on 2026-11-04.
+
+| Component | Badge | Actual obligation in the tree | What to do in a pattern |
+|---|---|---|---|
+| **OpenMAIC** (P10, P3) | MIT | `packages/mathml2omml` is **LGPL-3.0-or-later** (7,652 B), `"workspace:*"` in the root manifest, built as step one of `build:packages` | Keep it dynamically replaceable with source offered, or excise the MathML→OOXML export path. Design-time decision |
+| **OmniEdu weights** (P9) | Apache-2.0 *(code)* | **No named grant for the weights.** README: *"Model weights and third-party datasets and benchmarks retain their respective licenses."* Backbones are Qwen | Read the Hugging Face card before scoping. Gate zero of P9 |
+| **open-moodle** (not used) | MIT | Depends on **PyMuPDF (AGPL-3.0)** | Excluded from P8 for this reason. An AGPL dependency in a network-served agent defeats out-of-tree containment |
+| **csmediapro/moodle-mcp-server** (not used) | "free use, no closed-source repackaging" | Plain **AGPL-3.0**, 34,523 B, plus paid Premium Plugins | Excluded from P8. Marketing language is not a licence; read the payload |
+
+**The check to run once per engagement, in week one:** read `LICENSE` from bytes; then read `package.json`, `pyproject.toml` and `Cargo.toml` for every bundled or workspace component; then, for any model, read the weight card separately from the code licence. Four of the five grant-defect classes this KB has catalogued pass a licence-badge check.
 
 ## 🔴 Resolve the branch before you clone — four live cases on this shelf
 
