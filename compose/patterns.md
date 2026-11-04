@@ -343,6 +343,70 @@ ArguLens / wwrwbs/AI_AWE  (Apache-2.0 by reference, arXiv:2608.17356)
 
 ⚠ **Scope it as assistive scoring with human sign-off, never as autonomous grading.** Under EU AI Act Annex III, evaluating learning outcomes is high-risk; Washington DC's 2026 policy bars AI from grading outright. The deliverable that is legal in both places is the one that scores and explains while a human decides.
 
+## P14 — Corporate L&D as a closed, client-branded product (EMEA / North America enterprise: 8–10 weeks) 🟢 new at p655
+
+**Buyer:** a corporate L&D or compliance function, not an academic institution. They expect *their* brand on the product and will not accept a licence conversation.
+
+```
+Selleo/mentingo (MIT, 106★, main)                 ← fork; MIT permits a closed, rebranded derivative
+  ├── already in core, read from the manifest at p655:
+  │     ai 7.0.148 + @ai-sdk/openai 4.0.8 + @ai-sdk/workflow 2.0.80   (Vercel AI SDK)
+  │     langchain 0.3.34 · pgvector retrieval on PostgreSQL 16
+  │     LiveKit  → real-time voice role-play, scored automatically
+  │     Langfuse → per-interaction trace = the compliance audit trail
+  │     multi-tenant + white-label + SCORM export + 6 UI languages
+  ├── swap the model provider for Ollama (MIT) or vLLM (Apache-2.0) when the client requires on-prem
+  └── jupyter/nbgrader (BSD-3-Clause) only if the curriculum is technical — otherwise the
+        in-core scenario assessment engine is sufficient and already scored
+```
+
+**Weeks 1–2** fork, rebrand, stand up Postgres 16 + pgvector / Redis / S3-compatible storage in the client's region; **EU-only residency is a configuration choice here, not a paid tier**. **Weeks 3–5** harden: this is a 1,397-commit, 106★ codebase — budget the security review, the load profile (its own `perf:load`/`perf:stress`/`perf:soak` suites exist and should be run against the client's concurrency target) and multi-tenancy isolation testing explicitly. **Weeks 6–8** author the first compliance track against the scenario assessment engine; wire Langfuse traces into the client's evidence store. **Weeks 9–10** recertification and expiry rules, then pilot cohort.
+
+**Why this is not Pattern F.** F is OpenOlat for institutional higher education — a different buyer, a longer cycle, and one that does not need rebranding. **Say the trade out loud in the proposal:** Moodle (GPL-3.0), Open edX (AGPL-3.0) and Canvas (AGPL-3.0) are mature and copyleft; Mentingo is MIT and young. You are buying licence freedom with hardening effort. Quantify the hardening rather than hiding it.
+
+**Do not** present 106★ as adoption. Present it as what it is: the only MIT platform where multi-tenancy, white-labelling and the agent are all in core.
+
+## P15 — Autograded technical curriculum, permissive end to end (bootcamps, CS faculties, data academies: 6–8 weeks) 🟢 new at p655
+
+**Buyer:** anyone teaching code, data or quantitative methods at cohort scale — and this KB's **largest unserved segment until p655**, because it searched for education tools and this stack files itself as infrastructure.
+
+```
+JupyterHub (BSD-3-Clause, 8,362★, main)           ← one isolated, authenticated, resource-capped env per learner
+  ├── LTI auth → the client's existing Moodle / Canvas / Open edX stays the front door
+  │                (no migration, no copyleft contact: the LMS is a separate process)
+  ├── Kubernetes spawner for cohort scale; Docker spawner for a pilot
+  └── jupyter/nbgrader (BSD-3-Clause, 1,370★, main)
+        release → collect → autograde → manual grade → feedback
+        ├── deterministic per-cell tests score what is checkable      (no LLM, no hallucination surface)
+        ├── microsoft/LLM-Rubric (MIT, 45★) scores what is not: prose, design rationale, code quality,
+        │     calibrated against this client's own human raters       ← the calibration is the deliverable
+        └── formgrader + gradebook → the human decision boundary, which several jurisdictions now require
+              └── Ollama (MIT) or vLLM (Apache-2.0) inside the client network for the rubric model
+```
+
+**Weeks 1–2** JupyterHub on the client's Kubernetes, LTI into their existing LMS, environment images per course. **Weeks 3–4** nbgrader assignment structure; port one real existing assignment and reproduce its historical grades — **that reproduction is the credibility test, run it before anything else is promised.** **Weeks 5–6** LLM-Rubric for the non-deterministic dimensions, calibrated on a sample the client's own graders have already scored; report the agreement statistic honestly, including if it is poor. **Weeks 7–8** cohort pilot, grader training, appeals workflow.
+
+**The licensing story is the simplest on this page: BSD-3-Clause, BSD-3-Clause, MIT, MIT — no copyleft anywhere, no AGPL network trap, closed derivative permitted throughout.** Only Pattern E (Kolibri offline) matches it, and E does not cover assessment.
+
+**State the boundary explicitly and in writing:** this grades submitted work; it does not establish **who** submitted it. **No permissively-licensed proctoring or assessment-integrity tool was found in five passes of searching** (see `repos/foundations.md`). If the client needs identity assurance, that is a commercial tool and a separate line item — do not imply this stack provides it.
+
+## P16 — Retention that writes into a scheduler people already use (4–5 weeks) 🟢 new at p655
+
+A narrower, faster sibling to **P6**, enabled by one row added at p655.
+
+```
+ankimcp/anki-mcp-server (MIT, 544★, main, v0.27.0 "active beta")
+  └── exposes decks, notes, note types, cards, scheduling and review state over MCP
+       ├── ArnaudGuiovanna/tutor-mcp (MIT, 96★) → mastery: BKT + prerequisite graph + frozen rubric
+       ├── CAHLR/pyBKT (MIT, 291★, master)      → interpretable mastery estimates when a board must audit them
+       └── the agent of choice (any MCP client) decides WHAT to schedule; FSRS decides WHEN
+            └── FSRS already ships inside Anki from v23.10 — fsrs4anki (MIT) / fsrs-rs (BSD-3-Clause)
+```
+
+**Why this is worth a separate pattern.** Every other retention design in this KB reimplements scheduling. This one does not: the learner keeps the client they already have, the scheduler is the one with consumer-scale production proof, and the agent's job shrinks to *selection* — which is the part a tutor is actually good at. **4–5 weeks** because there is no platform to stand up: weeks 1–2 wire the two MCP servers behind one agent, week 3 define the card-generation and selection policy against real course material, weeks 4–5 run a cohort and measure retention against the client's existing baseline.
+
+⚠️ `anki-mcp-server` self-describes as **active beta at v0.27.0**. Pin the version, read the changelog before upgrading, and do not put it on a critical path for a graded outcome without a fallback.
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |

@@ -9,7 +9,7 @@ updated: 2026-11-04
 > Real, running systems that a client may already have, or that can be stood up and then extended with an agentic layer.
 > Model: start from something that already works, add agents on top. Verified 2026-11-04 via `git ls-remote --symref` + licence payload read.
 
-## Platforms — 15 verified rows
+## Platforms — 18 verified rows
 
 | Platform | Repo | Licence | Branch | Stack | Use case |
 |---|---|---|---|---|---|
@@ -28,6 +28,9 @@ updated: 2026-11-04
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** (8,241 B) | **`19.0`** | Python / Odoo | **Education ERP** — admissions, academics, finance, HR — on the Odoo stack. **905 ★ / 787 forks.** The "Odoo-for-education" slot, and the easiest copyleft position on this shelf: LGPL permits linking from separately-licensed code provided the LGPL portion stays replaceable. ⚠️ Default branch is a bare version; `20.0` exists. ⚠️ `LICENSE` delegates copyright to a `COPYRIGHT` file that returns 404. |
 | **openSIS** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **GPL-2.0** (at `docs/License.txt`) | `master` | PHP + MySQL | Student Information System, single or multi-institution in one installation. **349 ★ / 289 forks.** ⚠️ **No grant file at any of fifteen root filenames and no licence named on the repository page** — the terms exist only at `docs/License.txt`, reachable via a README link. Every automated root-filename probe calls this repository licence-nil; it is not. |
 | **GegoK12** | [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | **MIT** (1,150 B) | `main` | PHP / Laravel | School-management ERP, API-first, mobile-app ready. **55 ★ / 107 forks** — forks at 2× stars, the signature of software people deploy rather than follow. Low absolute adoption, but it is the **only education-administration row here that permits a closed derivative**. |
+| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (11,357 B) | **`develop`** | Python / Angular / Google App Engine | 🟢 **New at p655, and the highest-adoption permissive platform on this shelf: 6,974 ★.** Structured-lesson delivery built on *explorations* — branching lessons whose feedback responds to the **specific misconception** a learner's answer reveals, rather than marking it wrong. Built for learners with low prior attainment and low bandwidth; deployed via NGO and ministry partnerships in India, Sub-Saharan Africa and Brazil, with an Android client. **Apache-2.0 permits a closed, client-branded derivative.** ⚠️ **Default branch is `develop`.** Where it fits: the pedagogy slot Moodle does not fill — Moodle hosts content, Oppia *is* the instructional design. |
+| **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (1,062 B) | `main` | NestJS 10 / TypeScript / Drizzle / PostgreSQL 16 + pgvector / Redis / BullMQ; Remix + React front end | 🟢 **New at p655, and the only row on this shelf where multi-tenancy, white-labelling *and* the agent are all core rather than plugins.** Corporate L&D, onboarding and compliance training, with a **voice-and-chat AI mentor running scored role-play** instead of slide-watching, plus a scenario-based assessment engine, certificate recertification with expiry, SCORM export and six shipped UI languages. AI layer read from the manifest this pass: Vercel AI SDK (`ai` 7.0.148, `@ai-sdk/openai` 4.0.8, `@ai-sdk/workflow` 2.0.80), `langchain` 0.3.34, pgvector retrieval, LiveKit voice, Langfuse tracing. 1,397 commits / 32 forks. Selleo (Poland) — **EMEA**. **106 ★ is low and this cell says so**; it is here because MIT + multi-tenant + white-label + agent-in-core is the exact shape of a Globant-built client-branded deliverable, and nothing else on this page is that shape. |
+| **JupyterHub** | [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | **BSD-3-Clause** (1,474 B) | `main` | Python; Docker / Kubernetes spawners | 🟢 **New at p655.** Not an LMS and should not be sold as one — it is the **delivery substrate for technical curriculum**: one isolated, authenticated, resource-limited environment per learner, with LTI auth so an existing LMS stays the front door. **8,362 ★**, the highest-adoption permissive platform-class row this programme has filed. Pairs with `jupyter/nbgrader` (BSD-3-Clause, 1,370 ★) for assign → collect → autograde → feedback. For any CS, data-science, analytics or bootcamp engagement this is the base, and the whole chain is BSD-3-Clause. See `compose/patterns.md` **P15**. |
 
 ### Licence payloads read this pass
 
@@ -158,6 +161,27 @@ OpenOlat (Apache-2.0)          ← the platform itself is permissive: closed der
 Verified absent, because in a Java LMS these are the usual killers and their absence is what makes the above true: **no iText** (AGPL-3.0), **no JasperReports** (LGPL). Hibernate is at **7.4.14** and hibernate-validator at **9.1.6** — both Apache-2.0 eras, not the old LGPL-2.1 Hibernate.
 
 ⚠ **Scope it honestly.** Java/Spring/Hibernate is a heavier integration skill-set than PHP-Moodle or Python-Open edX, and the contributor base is concentrated around one vendor. Pattern F buys a licence position, not a cheaper build.
+
+### Pattern G — Corporate L&D, closed and client-branded (best fit: EMEA and North America enterprise) 🟢 new at p655
+```
+Mentingo (MIT) — fork it, brand it, ship it closed
+  ├── AI mentor already in core: Vercel AI SDK + LangChain + pgvector retrieval
+  ├── LiveKit voice → scored role-play (sales, compliance, support scenarios)
+  ├── Langfuse tracing → the audit trail the compliance buyer asks for
+  └── multi-tenant + white-label in core → one deployment, many client brands
+       └── EU-only deployment is a configuration choice: Postgres + S3-compatible store in-region
+```
+**Why this pattern is new and not a variant of F.** Pattern F (OpenOlat) serves *institutional higher education*. This serves **corporate L&D**, which is a different buyer, a different sales cycle and — decisively — a buyer who expects the vendor's own brand on the product. Moodle (GPL-3.0), Open edX (AGPL-3.0) and Canvas (AGPL-3.0) all make a closed, rebranded derivative impossible or awkward; **MIT makes it a non-question**. The trade is adoption: 106 ★ means you are hardening a young codebase, not installing a mature one. Scope the hardening explicitly.
+
+### Pattern H — Technical curriculum, BSD all the way down (best fit: bootcamps, CS faculties, data-science academies) 🟢 new at p655
+```
+JupyterHub (BSD-3-Clause)        ← per-learner isolated environment, LTI into the client's LMS
+  └── nbgrader (BSD-3-Clause)    ← release → collect → autograde → manual grade → feedback
+       ├── deterministic tests score what is checkable
+       └── microsoft/LLM-Rubric (MIT) scores what is not — calibrated against human raters
+            └── Ollama (MIT) or vLLM for the model, in the client's own network
+```
+**No copyleft component anywhere, and every piece has a decade of production use.** This is the second pattern on this page with a fully permissive chain (Pattern E is the other), and the first one that covers *assessment*. State the boundary to the client plainly: nbgrader grades submitted work deterministically; it does not establish **who** submitted it, and no permissive proctoring tool was found in four passes of searching.
 
 ### Pattern D — SIS + LMS split
 Moodle or Open edX handles learning; the administrative system handles enrolment, timetabling, records and fees. Administrative agents (scheduling, at-risk alerting, enrolment triage) belong on the administrative side, where the data actually lives.

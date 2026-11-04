@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p655) — 🔴 **THE PERMISSIVE PLATFORM COUNT WENT FROM 2 TO 5 WITHOUT A SINGLE NEW RELEASE, AND THE FOUR-PASS ASSESSMENT GAP WAS CLOSED BY A PROJECT OLDER THAN THE LLM ERA**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that branch; stars, forks, push dates and descriptions from the GitHub API (`search/repositories`, `repo:` qualifier) cross-checked against the rendered page. ⚠️ Direct `curl` to `github.com` is **403 for every repository** under this session's network policy.
+
+### 🔴 The headline: the claim retracted at p653 was not retracted far enough
+
+| Pass | State of the claim | How it failed |
+|---|---|---|
+| ≤ p650 | "No permissively-licensed production open source LMS exists" | `kolibri` — MIT, 1.2k★ (p651) |
+| p651–p652 | Narrowed to "none of the Moodle / Open edX class" | `OpenOLAT` — Apache-2.0, 449★, 32,210 commits (p653) |
+| p653–p654 | Retracted; **two** permissive platform-class rows on the shelf | 🔴 **p655 found three more in one pass** |
+
+| Repo | Licence (payload) | Stars | Branch | What it is |
+|---|---|---|---|---|
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | **BSD-3-Clause** (1,474 B) | **8,362** | `main` | Per-learner isolated, authenticated, resource-capped environment; pluggable auth (LTI) and spawners (Docker, Kubernetes). The delivery substrate for all technical curriculum. |
+| [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (11,357 B) | **6,974** | ⚠️ **`develop`** | Structured-lesson platform built on *explorations* — branching lessons whose feedback answers the **specific misconception** the learner's answer reveals. Built for low prior attainment and low bandwidth; ministry/NGO deployments incl. Brazil. |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | **BSD-3-Clause** (1,513 B) | **1,370** | `main` | Assign, collect, autograde, manually grade and return notebook assignments. Per-cell points, formgrader UI, gradebook. Pushed 2026-11-03. |
+| [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | **MIT** (1,131 B) | 291 | ⚠️ **`master`** | Bayesian Knowledge Tracing + extensions as a library. Same lab as `OATutor` — this is the mastery estimator under it, available without taking the tutor. Interpretable, small-data, auditable. |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (1,062 B) | 106 | `main` | Multi-tenant, white-label corporate-L&D LMS with a voice/chat AI mentor running scored role-play. AI layer **in core**: Vercel AI SDK (`ai` 7.0.148) + `langchain` 0.3.34 + pgvector + LiveKit + Langfuse. 1,397 commits. Selleo, Poland — **EMEA**. |
+
+**Two of the three new platform-class rows out-adopt every copyleft platform this KB tracks except `edx-platform` itself.** The licence split on `repos/foundations.md` is now **16 permissive against 4 copyleft**.
+
+### 🟢 The four-pass assessment gap closes — and the diagnosis is the reusable part
+
+Passes p650–p654 searched for an **AI** grader and reported the field as unlicensed or research-grade, settling on `microsoft/LLM-Rubric` (45★) as "the nearest permissive primitive". **`jupyter/nbgrader` is BSD-3-Clause, 1,370★, actively maintained, and has been in university production for roughly a decade.**
+
+It was invisible because **it is not an AI tool and does not use education-AI vocabulary** — it files under Jupyter, as infrastructure. The same mechanism hid `OpenOLAT` for seven passes and `jupyterhub` until this one. **The generalisable rule, now stated three times by three different projects: this programme's blind spot is infrastructure that does an education job without education vocabulary.**
+
+The honest architecture that follows is a split rather than a model: **deterministic autograding for what is checkable, calibrated LLM rubrics for what is not, and a human decision boundary on anything consequential** — which is also what the DC OSSE ban on AI in grading/discipline and New York's A 9190 make legally necessary in North American K-12. See `compose/patterns.md` **P15** and `intel/trends.md` **T24**.
+
+### ⚠️ Branch discipline keeps paying — 2 of 5 new rows are not `main`
+
+`oppia` → **`develop`** (the `kolibri` trap again), `pyBKT` → **`master`**. That is 2 of 5 at p655 against 3 of 15 across the whole prior shelf. `git ls-remote --symref` is the cheapest check this base runs. **Resolve, never assume.**
+
+### 🔴 Still not found, after five passes
+
+**No permissively-licensed proctoring or assessment-integrity tool.** nbgrader grades submitted work; it says nothing about **who** submitted it. Given this is the single most-regulated education use case in the EU AI Act's high-risk tier — with emotion recognition in schools prohibited outright since February 2025 — the absence is commercially significant and is recorded here rather than papered over.
+
+---
+
 ## 🆕 2026-11-04 (p653) — 🔴 **THE PLATFORM SHELF WAS RANKED BY THE WRONG INSTRUMENT FOR SEVEN PASSES. THERE IS AN APACHE-2.0 INSTITUTIONAL LMS WITH 32,210 COMMITS, IT HAS `langchain4j` IN-TREE, AND A STAR-ORDERED CHANNEL CANNOT SEE IT.**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref`; **release branches and tags via `git ls-remote --heads` / `--tags`**; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks and commits from the repository page via page fetch; **dependency obligations by reading `pom.xml` verbatim**. `curl` to `github.com` and the GitHub API remain HTTP 403 in this session.

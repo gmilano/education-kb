@@ -219,7 +219,44 @@ p653 catalogued a **sixth** grant-defect class — *grant by reference*: the Apa
 
 **The operational rule this yields:** a short or unusual grant file is a reason to **read** it, not to reject the project; and a perfect grant file is not evidence about the tree. Five of the six defect classes pass a licence-badge check. The sixth fails the badge and passes on substance. Badges measure neither.
 
+## T23 — The permissive-platform claim has collapsed completely, and the blind spot was vocabulary, not availability 🟢 new at p655
+
+This base spent six passes asserting that no permissively-licensed production LMS existed, narrowed it at p651, and retracted it at p653 when `OpenOLAT` (Apache-2.0) was found after seven passes of looking. **p655 shows the retraction was not enough.** Three more permissive platform-class projects were found in a single pass: **`jupyterhub`** (BSD-3-Clause, **8,362★**), **`oppia`** (Apache-2.0, **6,974★**) and **`mentingo`** (MIT, 106★). Two of them out-adopt every copyleft platform this KB tracks except `edx-platform` itself.
+
+**The diagnosis matters more than the rows.** None of the three was hidden; all three were missed because they do an education job without education vocabulary — JupyterHub calls itself infrastructure, Oppia calls itself a learning platform for *explorations*, Mentingo files itself under corporate L&D. **The search instrument was looking for the word "LMS".** Trend-level statement: in 2026 the permissive education stack is substantially larger than keyword search on education terms reveals, and any claim of the form "there is no open source X for education" should be treated as a statement about the searcher.
+
+**Signal:** 5 permissive platform-class rows at p655 against 2 at p653, with no new releases in between — pure measurement, not market change.
+
+## T24 — The assessment gap had a permissive answer the whole time, and it is deterministic rather than AI 🟢 new at p655
+
+Four consecutive passes searched for a permissively-licensed education grader and reported the field as unlicensed or research-grade; the best available row was `microsoft/LLM-Rubric` at 45★. **`jupyter/nbgrader` — BSD-3-Clause, 1,370★, pushed 2026-11-03 — has been autograding university coursework for roughly a decade.**
+
+**The reason it was invisible is the trend.** Every pass searched for an *AI* grader, and nbgrader is not one: it runs tests, allocates points per cell, and separates release → collect → autograde → **manual grade** → feedback. In 2026 the instinct is to look for the LLM-shaped answer to an assessment problem, and for the checkable half of assessment the pre-LLM answer is better — auditable, deterministic, reproducible, and already acceptable to an academic board. **The defensible architecture is a split, not a model:** deterministic autograding for what is checkable, calibrated LLM rubrics for what is not, and a human decision boundary on anything consequential — which is also what the **DC OSSE ban on AI in grading and discipline decisions** and **NY A 9190** make legally necessary in North American K-12.
+
+**Signal:** this KB's own declared assessment gap closed at p655 by a project older than the LLM era.
+
+## T25 — Open edX's official agent bridge arrived, and it is AGPL — the licence boundary inside the stack is now fixed 🟢 new at p655
+
+The Open edX project announced **Open edX MCP** through its own blog in September 2026: a Django app (`blend-ed/openedx-mcp`) plus a Tutor plugin (`blend-ed/tutor-contrib-openedxmcp`) exposing staff and superuser administration operations to MCP clients, targeting the **Ulmo** release. Both grant payloads were read at p655: **34,522 bytes, GNU Affero GPL v3** — matching `edx-platform` itself. `openedx/openedx-ai-extensions`, the official AI-helpers plugin, is the same.
+
+This settles a question this KB has carried open, and settles it negatively: **the official route from an agent into Open edX is network-copyleft, and the permissive route into that stack remains `XBlock` (Apache-2.0) and nothing else.** The practical consequence is a clean architectural line rather than a problem — AGPL components run as separate, unmodified services behind their own network boundary; client IP lives in XBlocks and in out-of-tree agents. ⚠️ Note the correction this forces: earlier notes in this programme described `openedx-ai-extensions` as Apache-2.0. **It is Affero.**
+
+**Signal:** 4 of 4 official-or-announced Open edX AI/agent components read at p655 are AGPL-3.0. Zero permissive.
+
+## T26 — The permissive shelf is tilting from tutors to delivery, and content generation now outnumbers conversation 🟢 new at p655
+
+Of seven agent rows added at p655, **six generate or schedule content rather than converse with a learner**: `Papermorph` (book → animated narrated explainer, 1,211★), `claudemy` (topic → cited audio-lesson course, 611★), `anki-mcp-server` (agent → spaced-repetition scheduler, 544★), `wordlink` (offline fine-tuned 1.5B in-browser vocabulary trainer, 280★), `AILearningGuide` (58 offline labs, 248★) and `lumen` (one-sentence goal → private course + cited RAG tutor, 92★). All MIT, all payloads read at first hand.
+
+**Two structural reads follow.** First, `anki-mcp-server` completes a chain this KB has been assembling for three passes: FSRS (`fsrs4anki` MIT, `fsrs-rs` BSD-3-Clause) is the retention algorithm, `tutor-mcp` (MIT) is the mastery estimator, and this is the tool surface that lets an agent *write into* the scheduler that already ships inside Anki — see **T13** and `compose/patterns.md` **P6**. Second, `wordlink` is the first row on the shelf that **ships its own task-specific fine-tuned weights small enough to run in a browser tab**, which is the EMEA data-residency and low-connectivity argument demonstrated in working MIT code rather than argued. ⚠️ Its code grant is MIT; the weights carry no separately named licence — the same defect this KB flags on `OmniEdu`, and now visibly a pattern rather than an incident.
+
+**Signal:** 6 of 7 new permissive rows at p655 are delivery-shaped; 1 is a tutor.
+
 ## 🔴 What this page does not claim
+
+- 🟢 **Retracted at p655: the assessment gap.** This page carried "no permissive education-specific grader exists" for four passes. `jupyter/nbgrader` (BSD-3-Clause, 1,370★) existed throughout. See **T24**. What survives of the claim is narrower and still true: **no permissive proctoring or assessment-integrity tool was found**, in five passes of searching.
+- 🔴 **No primary regulatory text was read at p655 either**, unchanged for four passes. The EU deadline shift to December 2027 (Regulation (EU) 2026/1744), the Korean AI Basic Act, the Vietnamese AI law and the US state statutes are all carried from secondary commentary — much of it vendor blogs. **Any date that will appear in a contract must be confirmed against the primary instrument.** This is the oldest open item on this page and it is not closing by search alone.
+- 🔴 **`huggingface.co` and `openedx.org` do not resolve under this session's network policy**, so the OmniEdu and `wordlink` model cards and the Open edX MCP announcement were read only at second hand (the MCP packages' *grant payloads* were read directly from `raw.githubusercontent.com` and are first-hand).
+- 🟡 **The four mandated regional legs returned real material at p655, for the first time in three passes** — US state bill counts, the EU deadline split, the Ipsos APAC ban-support range and Korea's teacher-training spend, the LATAM 90%-use/26%-strategy split and the UNESCO Observatory's partner list. **The one leg that returned nothing is LATAM open source code**, and that is now a measured finding rather than a gap: see `intel/market.md`, LATAM.
 
 - ~~**No verified star counts for `richie`, `chamilo-lms` or `sakai`**~~ — 🟢 **closed at p652**: 318, 1.0k and 1.2k respectively, measured from the repository pages on 2026-11-04 after three passes flagged it. `edx-platform` (8.2k), `moodle` (7.6k), `XBlock` (471) and `kolibri` (1.2k) were re-measured in the same batch and **all four reproduce**.
 - **No first-hand reading of any primary regulatory text.** The EU Digital Omnibus, the Korean AI Basic Act and the Vietnamese AI law are all carried from legal-practice and secondary summaries. They agree with one another, which is why confidence is high on the dates — but no Commission, MSIT or Vietnamese National Assembly document was fetched. Verify before quoting a clause to a client.

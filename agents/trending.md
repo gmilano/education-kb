@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 (p655) — seven MIT rows land and six of them are not tutors; the official Open edX agent bridge turns up and it is AGPL; three prior rows were inflated, unlicensed or at a dead address
+
+**Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that resolved branch; stars, forks, commits and descriptions from the GitHub API (`search/repositories` with a `repo:` qualifier) cross-checked against the rendered repository page. ⚠️ **Direct `curl` to `github.com` returns 403 for every repository under this session's network policy** — the API-via-`gh` and page-render channels were used instead, and both are named per row.
+
+**Still unresolved for a fourth consecutive pass:** `huggingface.co` does not resolve, so **OmniEdu's weight licence remains unread** — and p655 adds a second instance of the same defect (`wordlink`, below). It is now a pattern, not an incident.
+
+### 🟢 Filed this pass — seven rows, all MIT, and the shelf changes shape
+
+| Agent | Repo | Licence (payload) | Stars | Region | Signal |
+|---|---|---|---|---|---|
+| **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (1,063 B) | **1,338** | APAC | The largest permissive **non-English** education agent found to date. Plans a route through a subject, teaches it, then has the learner build a project against it. 735 commits / 64 forks, `main`. ⚠️ README: Codex/ChatGPT and Antigravity packages supported only at `v1.0.0`; web runtime moved to a separate branch. |
+| **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | MIT (1,068 B) | **1,211** | Global (unplaced) | Book or long document → animated, narrated, interactive web experience. The explainer-generation slot, previously empty. Pushed **2026-11-04**, the day of this pass. |
+| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT (1,068 B) | 611 | Global (unplaced) | Topic → researched course of ~2-minute audio lessons **with cited sources**. The citation requirement is the transferable part: it is the cheapest existing answer to the provenance question EMEA buyers ask about generated material. |
+| **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (1,073 B) | 544 | Global (unplaced) | 🟢 **The structurally important row.** MCP surface over Anki — decks, notes, note types, cards, scheduling, review state. Lets an agent **write into** the FSRS scheduler this KB already carries (`fsrs4anki`, `fsrs-rs`) instead of reimplementing retention. 258 commits, self-described active beta at v0.27.0. |
+| **wordlink** | [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | MIT (1,092 B, **code only**) | 280 | Global (unplaced) | The first row on the shelf that **ships its own task-specific fine-tuned weights** — a 1.5B SFT+DPO model running **offline in the browser**, no key, no egress, no server. Pushed 2026-11-04. ⚠️ No separately named grant for the weights. |
+| **AILearningGuide** | [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | MIT (1,080 B) | 248 | Global (unplaced) | 58 hands-on labs (ML fundamentals → transformers → RAG → agents → fine-tuning → quantisation) as a **desktop, offline-runnable** application. Curriculum in the form factor a cohort can actually be issued. |
+| **lumen** | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | MIT (1,075 B) | 92 | Global (unplaced) | One-sentence goal → multi-agent course builder → course-scoped RAG tutor teaching with per-lesson citations. 🟢 **Publishes its own evals**, which is why a 92★ row is filed at all. |
+
+**The shape change, stated as a count: six of these seven generate or schedule content; one is a tutor.** Every prior pass of this page filed tutors. The permissive shelf in late 2026 is tilting toward *delivery* — explainers, audio courses, labs, flashcards, schedules — and that is a better match for what clients describe than another conversational tutor. See `intel/trends.md` **T26**.
+
+### 🔴 The official Open edX agent bridge exists now, and it is Affero — a carried question closes negatively
+
+The Open edX project announced **Open edX MCP** through its own blog in September 2026, for the **Ulmo** release: a Django app plus a Tutor plugin exposing staff/superuser administration operations to MCP clients.
+
+| Package | Stars | Grant payload read this pass | Verdict |
+|---|---|---|---|
+| [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) | 3 | **34,522 B — GNU Affero GPL v3** (`master`) | 🔴 Not a base for a closed deliverable |
+| [blend-ed/tutor-contrib-openedxmcp](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 2 | **34,522 B — GNU Affero GPL v3** (`master`) | 🔴 Same |
+| [openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions) | 17 | **34,522 B — GNU Affero GPL v3** (`main`) | 🔴 Same. ⚠️ **Earlier notes in this programme called this Apache-2.0. It is Affero.** |
+
+**This is correct licensing, and it is still a hard boundary.** The packages match `edx-platform`'s own AGPL-3.0, which is the right thing for them to do and the reason they cannot carry client IP. **4 of 4 official-or-announced Open edX AI/agent components read at p655 are AGPL-3.0; zero are permissive.** The permissive route into that stack is `XBlock` (Apache-2.0) and nothing else — see `compose/patterns.md` **P3** and `intel/trends.md` **T25**.
+
+### 🔴 Three carried rows were wrong — one inflated, one unlicensed, one at a dead address
+
+Each of these appeared in upstream notes feeding this programme. All three were measured at first hand at p655.
+
+| Row as carried | Measured at p655 | Nature of the error |
+|---|---|---|
+| `GeminiLight/awesome-ai-llm4education` — "MIT, ~1.5k★" | **221★, and no licence file at all** | Both figures wrong. A paper index to cite, not to vendor. |
+| `mwasifanwar/eduadapt-ai` — "MIT, ~150★" | **26★, no licence file, last push 2025-11-07** | Inflated ~6×, ungranted, and a year stale. |
+| `Vacademy-io/vacademy_platform` — "~500★, AGPL-3.0" | 🔴 **404.** The real repository is [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform) — **23★**, AGPL-3.0 | Wrong address *and* ~22× inflated. AGPL excludes it regardless. |
+
+**The recurring failure mode is now well characterised:** a star count carried between passes without re-measurement drifts upward, and a repository address carried without a probe eventually 404s. Both are one command to check.
+
+### 🔴 Also found, read, and declined — recorded so the next pass does not re-spend the search
+
+| Repo | Stars | Grant | Why declined |
+|---|---|---|---|
+| [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | **1,322** | **AGPL-3.0** | Highest-adoption tutor found this pass after DeepTutor and OpenMAIC. Network copyleft; and last push 2026-01-09, **ten months stale**. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 237 | **AGPL-3.0** | Actively developed (pushed 2026-11-04), genuinely good self-hosted language learning with local LLMs, CEFR plans, voice and spaced repetition. Licence excludes a closed deliverable. |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 590 | `NOASSERTION` | No recognised grant; last push 2026-03-25. Adoption without a licence is not a base. |
+| [alzoubitoqa/multi-assessment-agent](https://github.com/alzoubitoqa/multi-assessment-agent) | **0** | none | Ranks high for "permissive assessment agent". 0★, no grant. |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | **0** | MIT (README) | Re-confirmed from p653: correctly licensed, 0★/0 forks/30 commits, README marks automatic grading **frozen**. Watch; do not build on. |
+
+### 🟢 What this pass settled elsewhere in the base
+
+- **`repos/foundations.md`** gained five rows and closed the four-pass **assessment gap**: `jupyter/nbgrader` (BSD-3-Clause, 1,370★) has been autograding university coursework for a decade. Also `jupyterhub` (BSD-3-Clause, 8,362★), `oppia` (Apache-2.0, 6,974★, branch `develop`), `pyBKT` (MIT, 291★, branch `master`) and `mentingo` (MIT, 106★).
+- **`verticals/solutions.md`** gained `oppia`, `mentingo` and `jupyterhub`, taking the permissive platform-class count from **2 to 5 in a single pass** — with no new releases in between, so this is measurement, not market movement.
+- **`compose/patterns.md`** gained **P14** (corporate L&D, MIT, closed and client-branded), **P15** (autograded technical curriculum, BSD-3-Clause end to end) and **P16** (retention written into a scheduler people already use, 4–5 weeks).
+
+---
+
 ## 🆕 2026-11-04 (p653) — the assessment hole breaks after four passes, a 166★ tutor runs with no API key, and two different projects are called "OpenTutor"
 
 **Verification channels this pass:** existence and real default branch via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com`; stars, forks, commits and fork notices from the repository page via page fetch; **dependency obligations by reading `pom.xml` / manifests verbatim**. `curl` to `github.com` and `api.github.com` remain **HTTP 403** in this session and `gh api` is scoped away from these repositories, so neither was used.
