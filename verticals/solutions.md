@@ -4,6 +4,33 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — `2026-11-04` — a standards-native authoring row, and a branch correction that affects every platform pin
+
+### 🟢 New platform row
+
+| Platform | Repo | Licence — byte-read | ★ | Branch | Standards | What a studio does with it |
+|---|---|---|--:|---|---|---|
+| **CourseCode Desktop** | [`course-code-framework/coursecode-desktop`](https://github.com/course-code-framework/coursecode-desktop) | 🟢 **MIT** — `LICENSE`, `1,069 B`, `645-A` residual `0` | `4` | `main` | 🟢 **SCORM, cmi5, LTI** | 🟢 **The only permissive, standards-native course *authoring* tool this base holds.** Local preview, LMS export and AI-assisted authoring in a desktop app — so a client's existing Moodle/Canvas/Open edX estate ingests the output without an integration project. 🟡 `4★` and young: a component to fork, not a product to recommend. |
+| **QuickFeed** | [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) | 🟢 **MIT** — `LICENSE`, `1,115 B`, residual `0` | `27` | 🔴 `master` | GitHub-native (no LTI) | Self-hosted automated-assessment platform for programming courses. 🔵 **Its lack of LTI is the gap**: it owns the course organisation rather than plugging into an LMS, so pairing it with `ltijs` is the integration (see `compose/patterns.md`). |
+
+### 🔴 Branch correction — platform pins on this shelf that point at a ref that does not exist
+
+🔵 **`645-B` read the default branch of all `203` published addresses rather than assuming `main`.**
+🔴 **For the platform layer specifically, the assumption is wrong more often than it is right:**
+
+| Platform | Pin `main`? | Actual default |
+|---|---|---|
+| Open edX platform | 🔴 **no such ref** | `master` |
+| Tutor (Open edX installer) | 🔴 **no such ref** | `release` |
+| Oppia | 🔴 **no such ref** | `develop` |
+| Kolibri | 🔴 **no such ref** | `develop` |
+| Moodle | 🔴 **no such ref** | `main` is absent on several mirrors; resolve per remote |
+| H5P PHP library | 🔴 **no such ref** | `master` |
+| QuickFeed *(new)* | 🔴 **no such ref** | `master` |
+
+🟢 **Resolve, never guess:** `ingest/p645-existence-oracle.sh` returns the branch for a whole slug
+list in one call (`205` addresses in `11.7 s`) and costs no API quota.
+
 ## 🆕 `p644` — reads `2026-11-04` — **🟢 SIX NEW PLATFORM ROWS, AND THREE OF THEM ARE PLACED BY A UNIVERSITY NAMED IN THEIR OWN METADATA — ETHIOPIA, CHINA AND VIETNAM.**
 
 🔵 **Every licence cell byte-read `2026-11-04`** on `raw.githubusercontent.com`, branch from

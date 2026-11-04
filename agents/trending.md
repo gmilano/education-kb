@@ -4,6 +4,33 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `2026-11-04` — `p645` — the week's new permissive tutor/grader supply, from a channel that is not token-based
+
+🔵 **Appended, not rewritten.** `p645` replaced the token census with `topic:` + `sort=updated`
+(`645-E`) and the live tail it exposes is almost entirely **local-first desktop study apps**, a shape
+that barely appeared in this base before `2026-11`.
+
+| New this week | Licence (byte-read) | ★ | `pushed_at` | Shape |
+|---|---|--:|---|---|
+| [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) | 🟢 MIT `1,115 B` | `27` | `2026-11-02` | Autograder substrate — Docker test runs, repo provisioning, Go/TS |
+| [`ozerozdas/sprigo`](https://github.com/ozerozdas/sprigo) | 🟢 MIT `1,077 B` | `13` | `2026-11-03` | Local-first language learning, desktop |
+| [`bayshores/godspeed`](https://github.com/bayshores/godspeed) | 🔴 AGPL-3.0 `34,523 B` | `10` | `2026-11-04` | **MCP-native tutor** — any MCP app is the teacher |
+| [`abdogad/tallyrun`](https://github.com/abdogad/tallyrun) | 🟢 MIT `1,075 B` | `8` | `2026-09-19` | Deterministic sandbox — grades by CPU instructions, not seconds |
+| [`ArtVsMark/Stepik-Python-Grader`](https://github.com/ArtVsMark/Stepik-Python-Grader) | 🟢 MIT `1,085 B` | `5` | `2026-11-03` | Offline grader against a hosted MOOC's tests |
+| [`ValeraZSD/terramentor`](https://github.com/ValeraZSD/terramentor) | 🔴 AGPL-3.0 `34,523 B` | `5` | `2026-11-04` | Course-writing tutor |
+| [`course-code-framework/coursecode-desktop`](https://github.com/course-code-framework/coursecode-desktop) | 🟢 MIT `1,069 B` | `4` | `2026-10-29` | **SCORM + cmi5 + LTI** authoring with AI assist |
+| [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | 🟢 MIT `1,069 B` | `4` | `2026-11-04` | Local-first study app, own materials |
+| [`theadamdanielsson/grill`](https://github.com/theadamdanielsson/grill) | 🟢 MIT `1,072 B` | `3` | `2026-11-01` | Knowledge-state service other agents read |
+| [`CGSeb/lessonfolk`](https://github.com/CGSeb/lessonfolk) | 🟢 MIT `1,063 B` | `3` | `2026-11-03` | Agent-as-tutor course |
+| [`GuyAzene/folio`](https://github.com/GuyAzene/folio) | 🟢 MIT `1,066 B` | `2` | `2026-11-03` | Moodle-client study workspace |
+| [`bagherig/riiid`](https://github.com/bagherig/riiid) | 🟢 MIT `1,070 B` | `2` | `2026-10-22` | Knowledge-tracing Transformer (model, not app) |
+| [`luumlabs/aula`](https://github.com/luumlabs/aula) | 🔴 AGPL-3.0 `34,524 B` | `1` | `2026-11-04` | Notes/slides/past-exams → course |
+
+🔵 **The week's pattern, stated once:** `10` of `13` are **local-first desktop** rather than hosted,
+and `3` of `13` are `AGPL-3.0` — a copyleft share (`23 %`) well above this base's permissive-heavy
+agent shelf. 🟡 **`0 of 13` is regionally placeable** on `README` evidence; see `645-E` for why that
+is a property of the channel and not an oversight.
+
 ## 2026-11-04 — `p644`: the web legs go nil on addresses for the `17th` pass and pay on facts for the first time in four
 
 🔵 **Appended, not rewritten** — the history below this line is intact.

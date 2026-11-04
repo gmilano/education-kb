@@ -4,6 +4,36 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `2026-11-04` — `p645` — trending, measured on a curated channel instead of a token
+
+🔵 **Appended.** `644-A` established that education's token vocabulary is polluted (`rubric`,
+`curriculum`, `proctoring`, `lms`, `edtech`, `adaptive learning`, plus `643-C`'s `grading`, `exam`,
+`tracing`). 🟢 **`p645` ran `topic:` instead — `8` curated topics, `fork:true`, `sort=updated`,
+`40` each — and the pollution does not occur, because a topic is opted into by the maintainer.**
+
+| Topic | Returned | Novel | Novelty rate |
+|---|--:|--:|--:|
+| `topic:student-information-system` | `40` | `34` | `85.0 %` |
+| `topic:autograder` | `40` | `33` | `82.5 %` |
+| `topic:learning-analytics` | `40` | `32` | `80.0 %` |
+| `topic:knowledge-tracing` | `40` | `32` | `80.0 %` |
+| `topic:ai-tutor` | `40` | `31` | `77.5 %` |
+| `topic:education-ai` | `40` | `26` | `65.0 %` |
+| `topic:lti` | `40` | `23` | `57.5 %` |
+| `topic:intelligent-tutoring-system` | `40` | `15` | `37.5 %` |
+| **Total** | **`320`** | 🟢 **`226`** | 🟢 **`70.6 %`** |
+
+🔵 **Read against the base's own history this is the number that matters:** `643` ended a `15`-pass
+supply nil with `12` addresses; `644` censused `18` facets for `18` education rows out of `258` novel
+(`7.0 %`). 🟢 **The `topic:` channel returns `226` novel addresses of which `87` are permissive and
+`154` were pushed inside `30` days** — and it does so in `8` API calls rather than `18` facets.
+🔴 **The cost is placement: `0 of 10` of the rows taken forward carry any regional evidence
+(`645-E`).**
+
+🟡 **`topic:intelligent-tutoring-system` is the one near-exhausted topic** at `37.5 %` novelty — it is
+the oldest of the eight as a term, so this base has already harvested it. 🔵 Expect the newest topic
+names (`ai-tutor`, `education-ai`) to stay productive and the academic ones to saturate.
+
 ## 2026-11-04 — `p644`: intelligent tutoring systems, graded as a cohort — an academic axis with one live row
 
 🔵 **Appended, not rewritten** — the history below this line is intact.

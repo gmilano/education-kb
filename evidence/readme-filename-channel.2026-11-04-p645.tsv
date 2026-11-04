@@ -1,0 +1,9 @@
+slug	default_branch	README.md	serves_as	bytes	verdict
+openedx/openedx-platform	master	404	README.rst	12381	FILENAME-GUESS-not-absence
+openedx/XBlock	master	404	README.rst	7455	FILENAME-GUESS-not-absence
+oppia/oppia	develop	404	.github/README.md	4042	FILENAME-GUESS-not-absence
+overhangio/tutor	release	404	README.rst	4332	FILENAME-GUESS-not-absence
+h5p/h5p-php-library	master	404	README.txt	796	FILENAME-GUESS-not-absence
+aboutcode-org/scancode-toolkit	develop	404	README.rst	11303	FILENAME-GUESS-not-absence
+py-why/dowhy	main	404	README.rst	16855	FILENAME-GUESS-not-absence
+adlnet/ADL_LRS	master	404	readme.md	1755	FILENAME-GUESS-case-sensitivity

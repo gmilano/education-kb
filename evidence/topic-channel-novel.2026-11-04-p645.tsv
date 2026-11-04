@@ -1,0 +1,226 @@
+topic:student-information-system	2009skvgamerz/School-project-application-	1	none	2026-10-11	main	Native Android School ERP & SIS built with Jetpack Compose (M3), Kotlin Coroutines, and Room SQLite. Features 
+topic:ai-tutor	2092372408-pixel/EduPilot	2	NOASSERTION	2026-11-04	master	EduPilot · 中英文教材 AI 成课、练习与复习。Windows/macOS 原生桌面 App · Local-first AI learning companion.
+topic:autograder	2227057182/moongrade	0	Apache-2.0	2026-10-28	main	MoonGrade: MoonBit assignment grading and actionable learning feedback
+topic:knowledge-tracing	2422725977/exam-diag	0	MIT	2026-10-29	main	Find the root-cause concept behind every wrong answer — a knowledge-tracing diagnostic engine for exam mistake
+topic:autograder	abdogad/tallyrun	8	MIT	2026-09-19	main	Rootless sandbox that judges untrusted code by counting CPU instructions instead of seconds — same verdict on 
+topic:student-information-system	abhinayakuchi-source/student-portal	0	none	2026-09-29	main	Student Registration & Result Portal is a mini project using HTML5 and CSS3. It demonstrates how to build a re
+topic:education-ai	Adityavanjre/Project-K	2	none	2026-06-01	main	K.A.L.I. — Universal Multi-Modal Teacher: Absolute Doubt-Solving, 3D Logic Visualization, and Sovereign AI Lea
+topic:ai-tutor	aitutor5566-maker/STUDYAI	0	MIT	2026-11-03	main	STUDYAI — Complete AI-Powered Educational Learning Ecosystem with Flutter, Three.js 3D WebGL Labs, Socratic AI
+topic:ai-tutor	Alaa-1983/Code-Mentor-AI	0	none	2026-11-04	main	AI Code Mentor 2026: Learn 9+ Languages 🚀 Free Interactive Tutor
+topic:knowledge-tracing	ali-kin4/skillgraph-tutor	0	Apache-2.0	2026-10-08	main	Offline-first tutoring engine and learning-analytics dashboard: concept graphs, mastery tracking, spaced repet
+topic:education-ai	alvarezgzx-lab/protocolo-colectivo	0	NOASSERTION	2026-09-23	master	Skills y flujos de trabajo con IA para la investigación, gestión estratégica del talento, diseño de experienci
+topic:knowledge-tracing	alykapasi/guru-alt	0	AGPL-3.0	2026-10-30	main	AI-first personalized learning platform for durable learning: knowledge graph, continuous IRT/Elo mastery trac
+topic:knowledge-tracing	Amarnath10i/Atom	0	none	2026-10-13	main	AI tutor for JEE/NEET: five agents over a per-student memory graph, with a student model learned from 16M prac
+topic:student-information-system	Amirul78800/openSIS-Classic	0	none	2026-10-28	deployment-v2	Production-ready Dockerized distribution of openSIS Classic (v9.3) with automated database initialization, env
+topic:intelligent-tutoring-system	Amitdutta121/Universal_adaptive_trainer	0	none	2026-11-04	main	Build an adaptive course from your own material: AI drafts the curriculum, tutorials and questions, learns you
+topic:knowledge-tracing	AndersH3/skill-data-atlas	1	AGPL-3.0	2026-10-30	main	Curated human response datasets for skill, knowledge and cognitive assessment, with licences, codebooks, prove
+topic:ai-tutor	andremadstop/learning-nc	4	NOASSERTION	2026-11-04	main	Learning app for Nextcloud: spaced repetition, exam simulator, scenarios from real IT incidents, signed certif
+topic:knowledge-tracing	Aneesh495/metricon	0	MIT	2026-10-02	main	Learning analytics laboratory evaluating student concept mastery and question discriminability through Bayesia
+topic:student-information-system	anurag2417/AcadFlows	0	none	2026-11-03	main	An intelligent, multi-tenant School Operations & Learning Management SaaS platform. Built with React 18, Node.
+topic:lti	apachler/MINTforge	0	none	2026-11-01	main	MINT-Lernplattform für Oberstufe und HTL: Quests mit Lehrplanbezug in der Blockwelt, Reflexion und Bewertung i
+topic:lti	api-evangelist/canvas	1	none	2026-11-02	main	Canvas — independent third-party profile of a public API surface, by API Evangelist. Canvas is Instructure's o
+topic:student-information-system	api-evangelist/chalkable	0	none	2026-10-29	main	Chalkable — independent third-party profile of a public API surface, by API Evangelist. Chalkable was a K-12 e
+topic:lti	api-evangelist/classlink	0	none	2026-10-29	main	ClassLink — independent third-party profile of a public API surface, by API Evangelist. ClassLink is an EdTech
+topic:lti	api-evangelist/gradescope	0	none	2026-10-30	main	Gradescope — independent third-party profile of a public API surface, by API Evangelist. Gradescope, a Turniti
+topic:lti	api-evangelist/honorlock	0	none	2026-10-30	main	Honorlock — independent third-party profile of a public API surface, by API Evangelist. Honorlock is an online
+topic:lti	api-evangelist/instructure	0	none	2026-10-30	main	Instructure — independent third-party profile of a public API surface, by API Evangelist. Instructure is an Ed
+topic:lti	api-evangelist/itslearning	0	none	2026-10-30	main	itslearning — independent third-party profile of a public API surface, by API Evangelist. itslearning is a Nor
+topic:learning-analytics	api-evangelist/knewton	0	none	2026-10-30	main	Knewton — independent third-party profile of a public API surface, by API Evangelist. Knewton is an adaptive l
+topic:lti	api-evangelist/labster	0	none	2026-10-30	main	Labster — independent third-party profile of a public API surface, by API Evangelist. Labster is a virtual lab
+topic:lti	api-evangelist/lingco-language-labs	0	none	2026-10-30	main	Lingco Language Labs — independent third-party profile of a public API surface, by API Evangelist. Lingco Lang
+topic:student-information-system	api-evangelist/myu	0	none	2026-10-30	main	Myu — independent third-party profile of a public API surface, by API Evangelist. Myu (MyU Interactive Learnin
+topic:lti	api-evangelist/newsela	0	none	2026-10-30	main	Newsela — independent third-party profile of a public API surface, by API Evangelist. Newsela is a K-12 conten
+topic:lti	api-evangelist/packback	0	none	2026-10-31	main	Packback — independent third-party profile of a public API surface, by API Evangelist. Packback is an AI-power
+topic:lti	api-evangelist/piazza	0	none	2026-10-31	main	Piazza — independent third-party profile of a public API surface, by API Evangelist. Piazza is an online quest
+topic:student-information-system	api-evangelist/powerschool	1	none	2026-10-31	main	PowerSchool — independent third-party profile of a public API surface, by API Evangelist. PowerSchool is the l
+topic:lti	api-evangelist/proctorio	0	none	2026-10-31	main	Proctorio — independent third-party profile of a public API surface, by API Evangelist. Proctorio is a remote 
+topic:lti	api-evangelist/respondus	0	none	2026-10-31	main	Respondus — independent third-party profile of a public API surface, by API Evangelist. Respondus builds asses
+topic:knowledge-tracing	api-evangelist/riiid	0	none	2026-10-31	main	Riiid — independent third-party profile of a public API surface, by API Evangelist. Riiid (now operating as So
+topic:lti	api-evangelist/turnitin	0	none	2026-11-01	main	Turnitin — independent third-party profile of a public API surface, by API Evangelist. Turnitin is an academic
+topic:student-information-system	api-evangelist/ucsb	0	none	2026-11-01	main	University of California, Santa Barbara — independent third-party profile of a public API surface, by API Evan
+topic:student-information-system	api-evangelist/university-of-warwick	0	none	2026-11-01	main	University of Warwick — independent third-party profile of a public API surface, by API Evangelist. The Univer
+topic:student-information-system	api-evangelist/university-of-wisconsin-madison	0	none	2026-11-01	main	University of Wisconsin-Madison — independent third-party profile of a public API surface, by API Evangelist. 
+topic:autograder	ArtVsMark/Stepik-Python-Grader	5	MIT	2026-11-03	main	Локальный грейдер для курсов «Поколение Python» на Stepik. Скачивает тесты к задаче с сайта и позволяет не тол
+topic:student-information-system	AryanRastogi72/OnTrack	0	none	2026-10-25	main	University academic records system (React, Spring Boot, MongoDB). A 4-person team project I extended solo with
+topic:learning-analytics	ashkan20171/ashkan-lms-winforms	0	none	2026-10-23	main	Bilingual LMS built with C#/.NET Framework and WinForms, featuring RBAC, learning analytics, SQL Server, repor
+topic:autograder	atapia9/proyecto-integrador-java-intermedio	0	none	2026-09-25	main	Plantilla del proyecto integrador del curso Java Intermedio (REDEC-UNAM / FES Cuautitlán): esqueletos por día 
+topic:intelligent-tutoring-system	AyaDeeb/Intelligent-Tutoring-System	0	none	2026-09-14	main	AI-powered Intelligent Tutoring System for personalized learning, adaptive question generation, and student pe
+topic:autograder	Badvoic3/cedt-grader-vscode	0	MIT	2026-11-04	main	An unofficial VS Code extension for cafe-grader-web that submits code directly from the editor, tracks live ve
+topic:knowledge-tracing	bagherig/riiid	2	MIT	2026-10-22	main	Encoder-decoder Transformer (PyTorch, TPU) for student answer-correctness prediction. Top 3% in the Riiid! Kag
+topic:knowledge-tracing	Bandukda/numbersmith	0	none	2026-09-09	main	A K-5 maths game where arithmetic is the physics of the world, not a quiz in front of it. Adaptive mastery tra
+topic:knowledge-tracing	Bangth2026/prereq-graph-untried-exercise	0	NOASSERTION	2026-10-22	main	Benchmark and code: what a prerequisite graph adds to predicting failure on an untried exercise (Junyi Academy
+topic:learning-analytics	Bauka001-R/LMS-student-risk-prediction	0	MIT	2026-11-03	main	ML pipeline that predicts at-risk students from LMS data (LightGBM, FastAPI)
+topic:ai-tutor	bayshores/godspeed	10	AGPL-3.0	2026-11-04	main	Free, open-source AI tutor for your classes. Claude Code, Codex or any MCP app teaches you step by step, track
+topic:intelligent-tutoring-system	benisalla/code-hinter-vs-code-extension	0	none	2026-10-20	main	VS Code extension + Flask backend: an AI tutor that gives hints instead of solutions, adapts to each student's
+topic:autograder	Benjamin-Curlier/piscine-dotnet	1	MIT	2026-09-14	main	Plateforme pédagogique d'apprentissage du C# / .NET 10 pour l'onboarding de nouveaux développeurs : cours, exe
+topic:autograder	BladLust/oop-json-viewer	1	MIT	2026-08-18	main	Local, read-only viewer for structured OOP autograder JSON with source evidence and Markdown export.
+topic:education-ai	boyu0603-cyber/ai-opc-gaokao-assistant	0	none	2026-06-27	main	Portfolio case study for an AI-assisted Chinese Gaokao application planning system, focused on human-in-the-lo
+topic:learning-analytics	canakkus01/learning-analytics-etl-pipeline	0	none	2026-10-23	main	ETL pipeline that cleans messy study, screen-time and notification data and loads it into PostgreSQL for analy
+topic:learning-analytics	CarlosEkRaigoza/privacy-preserving-educational-telemetry	0	MIT	2026-11-04	main	Reference implementation of a modular privacy-preserving telemetry architecture for educational web platforms:
+topic:lti	carsonhung/lti-moodle-integration	1	Apache-2.0	2026-10-31	main	LTI 1.3 tool provider for Express with Vue 3 and React 18 UI - Moodle launch to app session, Deep Linking, and
+topic:autograder	cfcortesmx/autograde-classroom	0	MIT	2026-09-02	main	A self-hosted, lightweight replacement for GitHub Classroom with automated CI/CD grading and interactive dashb
+topic:ai-tutor	CGSeb/lessonfolk	3	MIT	2026-11-03	main	Learn AI from zero to advanced, with an AI agent as your tutor.
+topic:ai-tutor	clouds440/mentra	1	none	2026-11-03	main	Mentra is an AI-powered learning platform that combines conversational tutoring, study materials, assessments,
+topic:knowledge-tracing	codesoldier99/AI_EDU	1	none	2026-10-20	main	院长实验班 AI 教学系统 · 福建理工大学人工智能与交通工程学院。三层架构（知识图谱/学生状态/生成层）+ 拉取式调度：知识由项目需求拉取，不由课程顺序推送。大模型是嘴，不是脑。
+topic:education-ai	codewithhanzlah/GradeIQ-Student-Performance-Predictor	0	none	2026-06-29	main	Gradient Boosting ML model predicting student exam scores with 83.5% accuracy - built with Scikit-learn & Flas
+topic:autograder	consensus-codes/consensus-git-lab-check	0	MIT	2026-10-04	main	Free autograder for Git/GitHub exercises: files, commits, branches, messages, .gitignore. By Consensus (consen
+topic:lti	course-code-framework/coursecode-desktop	4	MIT	2026-10-29	main	Open-source desktop app for building SCORM, cmi5, and LTI courses with local preview, LMS export, AI-assisted 
+topic:lti	csev/wa4e	216	BSD-2-Clause	2026-11-01	master	Course materials for www.wa4e.com
+topic:learning-analytics	cypher125/student-performance-prediction-system	0	none	2026-10-28	main	Early-warning system that predicts ND/HND students' performance class (Distinction, Merit, Pass, Fail) before 
+topic:autograder	Dany-hardi/markbook	0	MIT	2026-10-02	main	Grade Git repositories against a rubric-as-code spec. Sandboxed, reproducible, and built so a human only revie
+topic:ai-tutor	DarianVoester/ai-sandbox-for-daml	0	Apache-2.0	2026-11-03	main	Smart Contract Sandbox & AI Tutor for Daml (Canton)
+topic:knowledge-tracing	devissaputra/knowledge_tracing_benchmark	0	MIT	2026-10-28	main	AI in Education research bundle benchmarking priors, BKT, PFA, and GRU knowledge tracing on learner-disjoint A
+topic:autograder	didactika/moodle-local_autograder	0	GPL-3.0	2026-10-19	main	Moodle local plugin that automatically grades completed activities a teacher hasn't graded after the deadline.
+topic:autograder	didactika/moodle-report_autograder	0	GPL-3.0	2026-10-20	main	Moodle report to review what the Autograder local plugin graded, what is pending and what failed, per activity
+topic:intelligent-tutoring-system	Divyakush2006/OS-Tutor	0	MIT	2026-10-24	main	A fine-tuned, retrieval-grounded and simulator-verified tutor for Operating Systems: the model explains, verif
+topic:ai-tutor	Dog-Headed/skilltree-ai	0	none	2026-11-04	main	面向通用学科的 SkillTree AI：用知识依赖图与多 Agent 实现个性化学习路径、教学、测评、诊断和补弱。当前以 Python 验证学习闭环，逐步扩展到更多学科。
+topic:knowledge-tracing	elim316/eduverse	0	none	2026-10-28	main	2nd Place Overall at NUS LifeHack 2025: AI-powered adaptive learning platform combining deep Knowledge Tracing
+topic:learning-analytics	elimu-ai/ml-event-simulator	0	MIT	2026-11-04	main	🤖 Simulation of learning events and assessment events
+topic:autograder	espinafr/verifica	0	MIT	2026-09-05	master	Uma ferramenta simples para correção de atividades em python via CLI.
+topic:knowledge-tracing	evlo-malik/adaptive-mastery-engine	0	MIT	2026-10-24	main	A framework-independent TypeScript engine for uncertainty-aware mastery estimation and memory decay.
+topic:student-information-system	faisalnjs/PrivateSIS	1	none	2026-10-10	main	Ensure that private and personal information in Ellucian SIS is blurred or disabled. Used during usability tes
+topic:knowledge-tracing	farroshsy/hcie-system	0	MIT	2026-10-15	main	Event-sourced adaptive tutoring system: cold-start personalization without embeddings (AUC 0.6051 vs BKT, 232k
+topic:knowledge-tracing	fereshteh-kam/Knowledge-Tracing-with-RNN-LSTM-ASSISTments-2017-	1	none	2026-09-23	main	Knowledge tracing on ASSISTments 2017 with RNN and LSTM in PyTorch — predicts student correctness on the next 
+topic:education-ai	FlashSpeedie/sourceguard-ai	0	none	2026-06-28	main	SourceGuard AI turns AI answers into claim cards, checks each claim against uploaded evidence, and catches uns
+topic:lti	frabjous/logicpenguin	26	GPL-3.0	2026-11-03	main	🐧 Logic Penguin 🐧 aims to be a flexible, extensible, open source, and self-hostable framework for online exerc
+topic:autograder	Franktorio/bulldog-simple-grader	1	MIT	2026-10-22	main	Small webapp coded in python that runs and grades code for computer science courses. Features student and teac
+topic:education-ai	Gagandeep61/studybuddy-ai	0	none	2026-05-29	main	Upload any PDF → MCQs, flashcards, exam questions in <30s using 4-model LLM fallback chain
+topic:ai-tutor	GenshinKings/voyage	1	MIT	2026-11-03	master	AI 当老师，不是当搜索引擎。它先问、再陪做、会记住你错在哪——从第一个能跑的东西走到你自己的作品。Windows 单二进制（Go），数据全在本地。
+topic:autograder	git-grader/gitgrader	0	Apache-2.0	2026-11-03	main	Git-native grading platform: capture immutable submissions over SSH, run isolated grading containers, and mana
+topic:intelligent-tutoring-system	gokhanmeteerturk/energy-storage-ITS	0	none	2024-12-18	main	An ontology based intelligent tutoring system with reinforcement learning capabilities
+topic:education-ai	Gokul-ram-j/Online-Class-Environment-Monitoring-with-Pose-Estimation-and-Attention-Tracking	2	none	2026-04-30	main	Smart AI classroom system that detects student attention using pose estimation, gaze tracking, and deep learni
+topic:ai-tutor	graffegiraffe/TOEFLY	0	MIT	2026-11-03	develop	TOEFL iBT 2026 preparation with weekly plans and an AI tutor, for web and iOS. Event-driven Spring Boot micros
+topic:knowledge-tracing	Guldek1987/GraphProg	0	none	2026-10-05	main	Graph and sequence models for programming trajectories, first-run success, and censored execution effort.
+topic:ai-tutor	GuyAzene/folio	2	MIT	2026-11-03	main	A local-first desktop study workspace with a course-aware AI tutor.
+topic:knowledge-tracing	hammasbuilds/knowledge-tracing	0	MIT	2026-10-05	main	BKT, PFA, IRT and DKT written from scratch, and how much of deep knowledge tracing's lead on ASSISTments was d
+topic:ai-tutor	harjothkhara/whiteboard-tutor	0	NOASSERTION	2026-11-03	main	Voice-driven AI whiteboard tutor on tldraw: speak a question, hear it answered in a natural OpenAI voice, watc
+topic:knowledge-tracing	harliekatz/jumpstart	0	MIT	2026-09-23	main	Adaptive financial literacy app. Placement test, a lesson path built from knowledge tracing, plus budget and m
+topic:education-ai	harshitap1305/CogniLearn	0	none	2026-05-15	main	CogniLearn is an open-source, local-first AI learning management platform that automates the entire content li
+topic:intelligent-tutoring-system	Hassan-Raza-Shaikh/Preference-Learning-in-Education	0	none	2026-11-04	main	AI tutor that adapts to how each learner learns best, with sympy-verified maths so it never shows a wrong answ
+topic:autograder	himanshuuem/lab-autograder	1	MIT	2026-10-22	main	Auto-grades lab assignments from Google Classroom: extracts code from PDFs, runs it in a Docker sandbox, check
+topic:autograder	HopeBestWorld/AutoGrader	0	none	2026-10-26	main	Streamlit autograder and sandbox execution checker for bulk Canvas submissions. Automatically unzips student w
+topic:student-information-system	HossamAhmedSoft/student-information-system-cli	0	none	2026-10-12	main	High-performance academic registrar CLI in modern C++ with role-based portals, weighted GPA calculators, and f
+topic:autograder	Ilyes631/premoulinette	0	MIT	2026-10-04	main	Local pre-grader for Python assignments: test your TP against its subject before the real submission (Readines
+topic:student-information-system	imranbru99/school-and-college-management-erp-education-saas	0	MIT	2026-10-28	main	Enterprise Multi-Tenant AI Education ERP & SaaS Platform for Schools & Colleges. Built with Laravel 12 & Filam
+topic:student-information-system	ishandutta2007/Awesome-Campus-Management	0	MIT	2026-09-29	main	Top Campus Management (Opensource) 🌟 Star if you like it! 🌟
+topic:autograder	isun3071/lean-4-teaching	0	Apache-2.0	2026-10-30	main	Gradescope Lean autograder for discrete math classes
+topic:learning-analytics	JALILOHUB/OULAD-EdTech-Learning-Analytics	0	MIT	2026-11-02	main	Building an end-to-end EdTech Learning Analytics system on PostgreSQL using 10.6M+ OULAD student interaction r
+topic:ai-tutor	jasonzacmusic/maatu	0	none	2026-11-03	main	Maatu: speak everyday Tamil, Kannada, Hindi and French out loud with a friendly AI teacher. Free, no account. 
+topic:learning-analytics	JaxisReal/Moodle-Reporte-Limpio	0	MIT	2026-11-01	main	Plugin para Moodle orientado a la generación, procesamiento y visualización de reportes de finalización de act
+topic:autograder	Jermayn1/SoopJudge	0	MIT	2026-09-23	main	Auswertungstool für Java-Programmieraufgaben: .java hochladen, kompilieren, gegen Konsolen-Testfälle und JUnit
+topic:knowledge-tracing	Jiaclv/error-driven-question-recommender	0	MIT	2026-09-26	main	Error-driven question recommendation on XES3G5M: ADGKT knowledge tracing (AUC 0.961) + Prediction-Select-Verif
+topic:student-information-system	Jimmyu2foru18/SUNY-University	3	none	2026-10-01	main	Advanced academic management system featuring role-based logic built with PHP and MySQL.
+topic:autograder	JoshMcDonagh/Gradescope-Java-Exam-Autograder	0	BSD-3-Clause	2026-09-16	main	A customisable autograder framework for Java practical programming exams using JUnit 5.
+topic:intelligent-tutoring-system	Kaiozinalves/algebra-tutor-its	0	none	2026-07-01	main	Sistema Tutor Inteligente de álgebra básica com Mastery Learning e chat socrático usando a API do Gemini.
+topic:learning-analytics	khaled-sa-tayeb/student-outcome-prediction	0	none	2026-11-02	main	Early-warning ML system that flags students at risk of failing an online course. Five Gradient Boosting models
+topic:learning-analytics	kli-eng/kedas-core	0	NOASSERTION	2026-11-02	main	Núcleo de código abierto (AGPL v3) de KEDAS, la plataforma de inteligencia escolar de Kairós Learning Intellig
+topic:intelligent-tutoring-system	koljapluemer/know-every-year	0	none	2026-02-03	main	An adaptive app to learn world history events by year using the Major System
+topic:intelligent-tutoring-system	koljapluemer/secret-language-app	0	none	2026-09-29	main	a language learning app that I actually enjoy using. any learning method, any language
+topic:knowledge-tracing	ksiox1337/metaverb-project	0	none	2026-09-21	main	Adaptive vocabulary learning: ML models (knowledge tracing, forgetting) + custom ESP32 device · Bundeswettbewe
+topic:ai-tutor	kurkul608/body-double	0	MIT	2026-11-03	main	A self-hosted AI tutor built for ADHD brains
+topic:learning-analytics	L-aim/huisi-smart-learning	0	MIT	2026-10-22	main	以学生画像为起点、驱动个性化学习路径的智能教学系统（FastAPI + Vue 3 + MCP + 华为云 AgentArts）
+topic:autograder	larz-scripter/larzkata	0	MIT	2026-07-27	main	Coding exercises with instant feedback - an autograder for learning to code, zero dependencies
+topic:autograder	larz-scripter/larzsandbox	0	MIT	2026-07-27	main	Run learner code safely-ish - restricted builtins, no imports, a timeout, zero dependencies
+topic:ai-tutor	lavkushry/CourseForge	0	MIT	2026-11-03	main	Self-hosted AI learning studio — turn your own course videos into searchable notes, quizzes, graded labs & a c
+topic:autograder	LeeXSean/sfslab	6	none	2026-09-23	main	Shark File System lab for self-study.
+topic:education-ai	LeoLiu363/ai-video-understanding	2	none	2026-09-27	master	课程视频 AI 理解：本地转写 + 课件 OCR，带时间戳问答与学习文档
+topic:education-ai	lizhao077-netizen/AI-Physics-Evaluation-Benchmark	0	none	2026-07-02	main	A benchmark of real teacher-AI interactions for evaluating LLM reasoning and teaching quality in high school p
+topic:lti	LongsightGroup/lantern	0	Apache-2.0	2026-11-03	main	-
+topic:intelligent-tutoring-system	LucasEstrela-FullStack/ADIA-Framework-IA	0	none	2026-11-03	main	Core AI engine and functional prototype for the ADIA-Framework. CognitiveLoop algorithm execution, adaptive sc
+topic:ai-tutor	LukassDev/OStudy	1	MIT	2026-11-04	main	An all-in-one educational platform and automated AI study assistant designed to streamline learning, tracking,
+topic:ai-tutor	luumlabs/aula	1	AGPL-3.0	2026-11-04	main	A study app for macOS, Windows and Linux. It turns your notes, slides and past exams, or any topic, into a cou
+topic:knowledge-tracing	mad707/masar	1	MIT	2026-09-30	main	Knowledge tracing on ASSISTments: baselines, IRT, PFA and DKT with leak-free evaluation.
+topic:learning-analytics	malakyazbek-cs/studynexus-ai-study-planner	0	none	2026-10-28	main	AI-powered cross-platform study planner with personalized scheduling, learning analytics, productivity trackin
+topic:learning-analytics	Manik-Maurya/Confusion-Mapper	0	NOASSERTION	2026-10-24	main	AI-assisted distractor classification and Cohen's Kappa reliability analysis tool for cognitive science and ed
+topic:ai-tutor	manishkumarsa567/GyaanDhara	0	none	2026-11-03	main	An AI-Enhanced Adaptive Gamified Learning System for Rural Education - 55 educational games, multilingual AI t
+topic:autograder	marcelogdomingues/avalia-platform	0	MIT	2026-11-02	main	Plataforma open-source de avaliação de trabalhos assistida por IA, com validação humana obrigatória
+topic:education-ai	Maryam-qureshi/Emualim-CRAG	1	none	2026-07-12	main	Two-stage corrective RAG pipeline for hallucination mitigation in AI tutoring — CRAG-style chunk grading + pos
+topic:student-information-system	Md-Emon-Hasan/UCMS-University-Course-Management-System	1	MIT	2026-09-28	main	Platform for running a university's academic and financial operations: course catalogue, class scheduling, enr
+topic:knowledge-tracing	MeerabRana123/your-tutor	0	none	2026-10-14	main	An adaptive AI tutor that transforms learning materials into source-grounded explanations, personalized assess
+topic:education-ai	milkbaqara-code/miracle-school	0	none	2026-09-17	main	Miracle School — Sovereign AI-LMS with MMA AGI Worker Cluster. Automated Bilingual Curriculum, Slide Compilati
+topic:ai-tutor	MkaliezZ/Hyper-Evolution	0	MIT	2026-11-03	main	超维伴学 Hyper Evolution：Enlighter 教师版、Evolver 学生版、Self-Evolver 自学版。本机网页与 MCP，共用审美层、功能层、资产层。
+topic:knowledge-tracing	mkiea/OCTD	0	Apache-2.0	2026-10-18	main	Oracle 标定的三层可预测性上界分解（OCTD）
+topic:learning-analytics	mohamurshid/ElimuAnalytics	0	none	2026-10-29	main	Item Response Theory–based learning gap detection for Kenya's Competency-Based Education. Estimates per-strand
+topic:student-information-system	mohds-rgb/MASAR	0	NOASSERTION	2026-10-06	main	A comprehensive academic portfolio featuring a fully integrated School Management System (SMS). This repositor
+topic:learning-analytics	mrovchinnikov95/oulad-learning-analytics	0	MIT	2026-10-30	main	Student success data marts on open OULAD data: PostgreSQL, SQL checks that stop the build, independent pandas 
+topic:education-ai	MUJINN/ai-question	0	none	2026-04-23	main	Workflow-based intelligent question generation system with validation, scoring, and retry loops.
+topic:education-ai	MUJINN/en-essay-correction	0	none	2026-04-23	main	English essay correction system with OCR, annotation matching, persistence, and API-driven workflow integratio
+topic:education-ai	MUJINN/error-analysis	0	none	2026-04-23	main	Wrong-answer attribution system for educational AI with filtering, analysis, and visualization.
+topic:education-ai	MUJINN/ocr-eng-hand-service	0	none	2026-04-23	main	OCR integration service focused on English handwriting and deployment-friendly simplification.
+topic:education-ai	MUJINN/question-marking	1	none	2026-04-23	main	Batch AI grading engine with concurrency, caching, retries, monitoring, and validation.
+topic:education-ai	MUJINN/score-dimension	1	none	2026-04-23	main	Service for generating structured scoring dimensions from problems, answers, and score metadata.
+topic:learning-analytics	munister-v/canarytrace	0	MIT	2026-11-03	main	Canary-oracle fuzzing and mutation analysis for data-minimising projections and analytics sinks
+topic:intelligent-tutoring-system	munzahmed07/RL-for-Intelligent-Tutoring-Systems	0	none	2026-01-12	main	An Intelligent Tutoring System using Reinforcement Learning (PPO & DQN) to dynamically adapt curriculum diffic
+topic:student-information-system	najdihussein2025/smart-sis	0	none	2026-11-01	main	AI-assisted student information system for Antonine University. ASP.NET Core API, React + TypeScript web app, 
+topic:education-ai	nancyhamdan/trading-sage	0	none	2026-06-13	main	An agentic chatbot for trading and finance education built with LangGraph.
+topic:learning-analytics	NASMAK-Technologies/moodle-block_learnboard	0	GPL-3.0	2026-11-03	main	LearnBoard for Moodle: live LearnBoard analytics charts and dashboards inside Moodle (block_learnboard).
+topic:student-information-system	nastydadde/Student-Management-System	1	MIT	2026-10-14	main	📚 Manage student records, track attendance, and monitor results efficiently with this web-based Student Manage
+topic:lti	NDLANO/ndla	0	GPL-3.0	2026-11-04	main	Monorepo containing code related to ndla.no
+topic:learning-analytics	Nikki-234/class-english-dashboard	0	MIT	2026-11-03	main	高中英语班级学情仪表盘 · 单文件 HTML 可编辑网页 · 教师可直接修改成绩并追踪每个学生的学习进度 · Class English Learning Dashboard
+topic:learning-analytics	Nireus79/Socratic-learning	0	MIT	2026-10-29	main	User learning analytics and skill progression tracking
+topic:lti	NoelisTired/canvas-portflow-cli	0	MIT	2026-10-30	main	Sync a folder of evidence into your Fontys Canvas / Portflow portfolio. Playwright ADFS login + LTI 1.3 launch
+topic:autograder	oldregime/gradewise	0	NOASSERTION	2026-08-12	main	GradeWise — AI-Powered Academic Paper Grading & Psychometric Analytics Platform
+topic:student-information-system	oronex-dev/sbaa-school-management	1	none	2026-10-29	main	Role-based academic management portal built with Vue.js, Node.js, Express, and MySQL for student and faculty w
+topic:learning-analytics	Oscar-man-shrestha/eval-validity-edu	1	none	2026-10-27	main	Research on whether next-item metrics in educational logs measure learning or repetition, with preregistered G
+topic:lti	oxctl/calendar-import	0	MIT	2026-11-03	master	An LTI tool to allow calendar events to be imported into a Canvas calendar from a CSV.
+topic:ai-tutor	ozerozdas/sprigo	13	MIT	2026-11-03	master	A local-first language-learning app for the desktop. Lessons, stories and conversation practice are generated 
+topic:learning-analytics	paola-md/paola-md.github.io	0	none	2026-11-04	main	Personal academic site — machine learning for education. Publications, systems, teaching and supervised studen
+topic:autograder	pisan-labs/assignment-stress-test	1	MIT	2026-11-02	main	Run an assignment through Claude models the way students would (lazy paste, rubric-aware, multi-turn), grade e
+topic:ai-tutor	porridgeowefish/Learn-With-AI	4	MIT	2026-11-04	main	Learn-With-AI — open-source, local-first AI learning app for Windows/macOS/Linux. Study your materials with su
+topic:knowledge-tracing	qamarsobhy7-source/Smart-Knowledge-Gap-System	1	MIT	2026-10-13	master	The learning platform that knows what you don't know.
+topic:autograder	quesal-com/quesal-vscode	1	MIT	2026-08-30	main	Live PrairieLearn question previews in VS Code, refreshed as you edit.
+topic:autograder	quickfeed/quickfeed	27	MIT	2026-11-02	master	QuickFeed server and web frontend for instant feedback on programming assignments
+topic:student-information-system	quietbytehq/madrasa	0	Apache-2.0	2026-11-01	main	A free, open-source school information system: students, attendance, exams, fees, teachers and reports. Offlin
+topic:education-ai	rajantripathi/NeuroLearn	0	MIT	2026-06-30	main	AI study assistant for ADHD-aware learning support and personalized education workflows
+topic:education-ai	rajantripathi/open-course-rag-benchmark	0	NOASSERTION	2026-06-30	main	Open multilingual RAG benchmark for retrieval-grounded educational question answering
+topic:ai-tutor	rever273/adaptive-english-lab	0	NOASSERTION	2026-11-03	main	Open-source English learning app with adaptive grammar exercises, local AI feedback, speech-to-text, and progr
+topic:knowledge-tracing	riadh565/beta-binomial-classifier-api	1	MIT	2026-10-14	main	📊 Build and deploy a beta-binomial classifier API using FastAPI and Docker for scalable machine learning solut
+topic:knowledge-tracing	rickcerry/DyGKT-ContextAware	0	none	2026-10-14	main	A Context-Aware Extension of Dynamic Graph-based Knowledge Tracing
+topic:knowledge-tracing	Rishabh-bgp/vedic-math-hybrid-kt	0	MIT	2026-10-30	main	Hybrid Vedic Math AI: rule-based sutras (Urdhva-Tiryagbhyam, Nikhilam, Yavadunam) plus RF classifier that clea
+topic:learning-analytics	RSD17/project-stepzero	1	none	2026-10-28	main	An experimental STEM learning framework that models curricula as knowledge graphs through algorithms, simulati
+topic:student-information-system	SaadOsama10/student-registration-system	0	none	2026-10-05	main	Desktop student information system (PyQt5 + SQLite): admin, instructor and student roles, course registration 
+topic:learning-analytics	SadrulCrafts/fairpath	0	NOASSERTION	2026-11-01	main	  Fairness-aware early warning for student success: ML pipeline, fairness audit and dashboard
+topic:ai-tutor	sajedulislam5840/AZS-The-Catalyst	0	MIT	2026-11-03	main	An advanced EdTech platform for Physics & Chemistry education featuring student dashboards, batch fee manageme
+topic:learning-analytics	sameredu/webdb-fairness-analytics	0	MIT	2026-10-25	main	Analysis code for the Discover Education article on identifying internet-induced examination inequality from M
+topic:autograder	samlowe106/Pisa	0	AGPL-3.0	2026-11-01	main	Pisa is a Django website for teachers to design and assign programming and proof assignments in Lean4, Microso
+topic:ai-tutor	sanzaya-p/ashuteacher	0	none	2026-11-04	master	AshuTeacher — Interactive AI Voice Blackboard & Step-by-Step Exam Paper Solver in English, Hindi, Odia & 14+ l
+topic:ai-tutor	Seth090502/tutor-public	0	NOASSERTION	2026-11-03	main	Maieus: a desktop AI tutor that teaches from real books and checks itself. Claude tutoring, a sources-first Hi
+topic:learning-analytics	shamel97/outcomelens	0	MIT	2026-10-27	main	Open, offline, auditable learning analytics dashboard: outcome attainment, assessment quality and early warnin
+topic:learning-analytics	sharmauncw/oulad-early-alert	0	MIT	2026-11-02	main	OULAD early-alert analysis — how early can the first 14 days of VLE engagement flag students who will withdraw
+topic:autograder	Shiratsuk1/EquiGrade	0	MIT	2026-10-18	master	衡准 · 高中物理手写作答 AI 自动改卷工作台：视觉教师模型直批、评分标准版本化、智学网网页自动回填流水线（Electron + React + Express，本地单机）
+topic:learning-analytics	shoaib-ali-kori/student-risk-prediction	0	none	2026-10-25	main	Analysis code for predicting student academic risk in a subsequent mathematics course from prerequisite and in
+topic:education-ai	ShubhSarin/youtube-study-helper	2	none	2026-09-14	master	Production RAG platform converting YouTube course playlists into chapter notes, flashcards, and quizzes. Deplo
+topic:ai-tutor	simonhu123/concept-bridge	0	MIT	2026-11-04	main	没有专业基础，也能读懂论文：用生活故事和循序渐进的对话带你学论文的 Claude Skill | A Claude skill that tutors beginners through research papers
+topic:learning-analytics	Snoozemage/student-at-risk-early-warning	0	MIT	2026-10-27	main	OULAD-based learning analytics prototype for course-withdrawal risk, with temporal features, retrospective mod
+topic:student-information-system	sujith0613/sis-system-design	0	none	2026-10-22	main	Scalable Student Information System (UCS3513 System Design Lab) — correctness under concurrent enrollment, eig
+topic:ai-tutor	sutanuchaudhuri/knowledge-bank-ingestion	0	none	2026-11-03	main	Competition-math learning platform with hybrid RAG, Neo4j knowledge graphs, an agentic tutor, adaptive practic
+topic:education-ai	tanghua-git/skill-instructional-design	2	none	2026-09-13	main	中小学各学科教学设计助手技能 v3.0。多智能体协作生成系统化教案（ICAP/布鲁姆/扶放有度），内部专业理论分析、大白话输出，知识库可选增强。
+topic:ai-tutor	tanviruchahs2580/Bangla-GPT-APP	0	MIT	2026-11-03	main	NCTB-grounded Bangla-first AI tutor platform: FastAPI + React, grounded in the national curriculum.
+topic:intelligent-tutoring-system	tharoosha/LAAI	0	none	2024-10-27	main	Leaner Aware AI is an intelligent tutoring agent designed to function as a Socratic tutor, guiding students th
+topic:knowledge-tracing	theadamdanielsson/grill	3	MIT	2026-11-01	main	An agentic learning system. Grill keeps state on what you know, note by note. Chat, tests and your other agent
+topic:knowledge-tracing	threeing3/learn-with-ai-skill	0	MIT	2026-08-30	main	Learn through real project work without outsourcing your understanding to AI
+topic:learning-analytics	tkucukdeniz2/curricumap	0	MIT	2026-10-26	main	Turn registrar transcript exports into auditable student-by-competency-domain matrices (SoftwareX).
+topic:intelligent-tutoring-system	tobydragon/tecmap	0	none	2025-03-07	master	Technology Enhanced Concept Mapping for Curriculum Organization and Support
+topic:student-information-system	Tools4ever-NIM/NIM-System-PowerShell-Anthology-CampusNexus	0	none	2026-09-29	main	Anthology CampusNexus
+topic:student-information-system	Tools4ever-NIM/NIM-System-PowerShell-Skyward-SMS-2.0	0	none	2026-09-29	main	Skyward SMS 2.0
+topic:student-information-system	Tools4ever-NIM/NIM-System-PowerShell-Skyward-SMS-2.0-Queries	0	none	2026-09-29	main	Skyward SMS 2.0 - Direct Queries
+topic:student-information-system	Tools4ever-NIM/NIM-System-REST-Aeries-SIS	2	none	2026-10-22	main	Aeries SIS
+topic:student-information-system	Tools4ever-NIM/NIM-System-REST-Alma	0	none	2026-09-29	main	Alma SIS
+topic:student-information-system	Tools4ever-NIM/NIM-System-REST-PowerSchool	1	none	2026-09-29	main	PowerSchool SIS
+topic:student-information-system	Tools4ever-NIM/NIM-System-REST-Skyward-Qmlativ	0	none	2026-09-29	main	Skyward Qmlativ
+topic:student-information-system	Tools4ever-NIM/NIM-System-REST-Skyward-Qmlativ-Multi-Tenant	0	none	2026-09-29	main	Skyward Qmlativ with Multi Tenant Support
+topic:learning-analytics	utkukose/AI-Literacy-Digital-Twin	0	NOASSERTION	2026-10-28	main	AI literacy platform with personal and campus digital twins: case-based measurement in seven areas, Rasch/Elo 
+topic:autograder	V4HD3T/mihenk	0	none	2026-08-11	main	Self-hosted coding exam platform. Students write and run Python, C++, Java, JavaScript, C and Go in the browse
+topic:ai-tutor	ValeraZSD/terramentor	5	AGPL-3.0	2026-11-04	main	An open-source AI tutor. Learn complex subjects from scratch: the model you connect writes the course, Terrame
+topic:ai-tutor	VictorNain26/catiche-monorepo	1	none	2026-11-03	main	TomIA — Tuteur IA pour les devoirs des collégiens : il aide l'élève à trouver sans faire l'exercice à sa place
+topic:intelligent-tutoring-system	voidCounter/intellics	0	none	2026-07-02	main	An intelligent tutoring system that helps student to learn CS concepts
+topic:knowledge-tracing	wen-xiner/Qin-path	0	none	2026-09-24	main	知途 · 知识追踪与自适应学习路径系统｜BKT / DKT / SAKT 三模型 + 两非学习基线的对比实验（公开数据集 ASSISTments 2009，DKT AUC 0.8092）｜FastAPI + Vue3 可
+topic:student-information-system	workaholicdevelopers/classtrack	0	none	2026-10-17	main	ClassTrack: all-in-one education platform and LMS for Canadian colleges. Engineered by Workaholic Developers.
+topic:education-ai	wuchenghao15/MTSCOS	0	MIT	2026-10-31	main	仙女座十阶段自演化引擎 · 冰山三端闭环架构 · 零 token 本地推理 · AI 员工 10827 人 · 35+ daemon 自举循环 · RAG 768维语义检索 · §14 IRON_RULE 四层强制拦截
+topic:education-ai	wxxxqcy/ai-learning-assistant	1	none	2026-09-11	main	教育智能体端到端评测框架，支持有状态环境、工具调用、策略与安全评测及回归测试。
+topic:knowledge-tracing	wysking/postgrad-study-engine	1	MIT	2026-10-29	main	考研 AI 私教学习引擎：长期学习档案、个人遗忘曲线拟合（半衰期 / 可选 FSRS）、错因诊断与先修探针 | Evidence-based AI study engine for Kaoyan (China's pos
+topic:intelligent-tutoring-system	xkrejc70/python-tutor	0	none	2024-06-23	master	Intelligent Environment for Extending Python Programming Knowledge via Self-learning and Providing Feedback fr
+topic:education-ai	yahiacuda/Lesson-Rag-Agent	1	none	2026-07-15	main	RAG-grounded lesson and quiz generation agent with FastAPI, Streamlit, Qdrant, Ollama, hybrid retrieval, citat
+topic:learning-analytics	yassineaqejjaj/ClassMind	1	none	2026-11-01	main	Teacher-reviewed learning analytics and AI-supported mathematics exercises (French collège MVP, fictitious dat
+topic:student-information-system	YihengLi-1/horizon	1	none	2026-10-31	main	Student information system project with registration, waitlists, role-based access, and automated API tests.
+topic:autograder	zozo123/eass-auto-grader	0	MIT	2026-10-23	main	Course tooling for EASS: grades student FastAPI repos with Gemini or Codex and flags cross-repo code similarit

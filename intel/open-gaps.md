@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — `2026-11-04` — **🟢 THREE REGISTERED ITEMS CLOSE WITH REPLACEMENTS RATHER THAN RESTATEMENTS (`642-C`, `642-B`, `644-A`), ONE IS RECLASSIFIED FROM A RESEARCH GAP TO A NETWORK-POLICY GAP (`637-F`), AND TWO NEW ONES OPEN.**
+
+🔵 **Currency.** This register and `README.md` were current at `p640`; `p644` brought the register to
+`p644` and left `README.md` at `p640`. 🟡 **`p645` brings this register to `p645` and leaves
+`README.md` at `p640`** — unchanged from `p644`'s position, declared, not concealed. It is `639-C`'s
+class and it is not claimed as closed.
+
+### 🟢 `645-A` — CLOSED: `Gap 642-C` (*"retire the `MIT` byte band"*) closes with a REPLACEMENT
+
+🔴 **`642-C` declared the band unfit and left nothing in its place**, which is why `640-A`'s band was
+still being cited at `HEAD`. 🟢 **`p645` replaces it with `bytes = 1027 + |title| + |copyright|`,
+confirmed `18 of 19` at residual `+0`** across every payload this base has cited as in-band or
+out-of-band, *including* `642-C`'s own two falsifiers (`pyBKT` `1,132 B` → exact; `eduNest` `1,100 B`
+→ `+36`, traced to a duplicated clause in the body). 🔵 **The `19`th is not an exception, it is a
+detection** — the predictor doubles as a payload-integrity check. 🟢 **`Gap 642-C` CLOSED.**
+See `agents/top.md` `645-A`, `evidence/mit-byte-predictor.2026-11-04-p645.tsv`.
+
+🟡 **`645-A1` — NEW, SMALL:** the constant `1027` is derived from this cohort, not from the SPDX
+template text. 🔵 It should be re-derived from the canonical `MIT` template so it is a *known* constant
+rather than a fitted one, and the predictor should be committed as an instrument with offline
+controls (it currently exists only as this pass's shell pipeline). **OPEN.**
+
+### 🔴 `645-B` — CLOSED BY MEASUREMENT: `Gap 642-B`'s magnitude is `0 of 203`
+
+🔵 **`642-B` concluded that *"every absence resting on `repo:` alone is an upper bound, not a
+finding"*, and three passes have reasoned from it.** 🟢 **`p645` measured it over the entire published
+population and the two channels agree `205 of 205`; the false-absent rate is `0.0 %`, and
+`642-B`'s own specimen (`Pranjulcr7/OpenTutor`) now returns `1`.** 🔵 **The defect is real but
+transient — `repo:` is an eventually-consistent index — so the correct standing statement is: sound
+for indexed addresses, unsound as a point-in-time absence test for an address created within days.**
+🟢 **`Gap 642-B` CLOSED as a magnitude; the method rule survives and is now cheap to honour**, because
+`ls-remote` is the authoritative channel and costs no quota. 🔵 `p639`'s *"`16 of 16` LIVE"* is
+retrospectively sound.
+
+### 🔴 `645-C` — NEW: the `README` byte-read channel has a FILENAME guess, and it manufactures absences at `8.4 %`
+
+🟢 **`645-B`'s census returned `404` on `README.md` for `17` of `203` live addresses; `8` were tested
+against `7` alternative filenames and `8 of 8` serve** — `README.rst` (`5`, all of them this base's
+Python-stack foundations), `.github/README.md`, `README.txt` and `readme.md` (lowercase — `raw` is
+case-sensitive). 🔴 **So `0` of the `17` is an absence, and the upper bound on this population is
+`8.4 %`.** 🔵 **`ls-remote` removed the *branch* guess; nothing removes the *filename* guess.** The fix
+is a filename ladder with a declared order, committed as an instrument, and it is not built.
+**OPEN.** See `evidence/readme-filename-channel.2026-11-04-p645.tsv`.
+
+### 🟢 `645-D` — ANSWERED: `Gap 644-A`'s token pollution has a channel-level answer, not a token-level one
+
+🔵 **`644-A` listed nine education tokens that must never be run bare and left the discovery problem
+open.** 🟢 **`p645`'s answer is to stop qualifying by token: `topic:` is curated (the maintainer opts
+in) so it cannot be substring-polluted, and with `sort=updated` instead of a star floor it returned
+`226` novel addresses of `320` (`70.6 %`), `87` permissive, `154` pushed inside `30` days, in `8` API
+calls.** 🔵 **The mechanism of the base's `15`-pass supply nil is named: a star floor is a proxy for
+age, so a star-sorted census structurally cannot see this month's publications.** 🟢 **`Gap 644-A`
+ANSWERED at channel level.** 🔴 **The nine polluted tokens remain polluted** — the finding is not
+retracted, it is routed around.
+
+### 🔴 `645-E` — NEW: the yield channel and the placement channel are DISJOINT, and the mandate needs both
+
+🔴 **`0 of 10` of this pass's new rows carry any regional evidence** — no institution, no country, no
+`.edu`/`.ac.xx`, no CJK or Cyrillic script in the `README`. 🟢 **The cause is structural, not
+sloppiness: `topic:`+`sort=updated` surfaces individual-author local-first apps, and individuals do
+not name institutions; the placeable rows this base holds (`classbuild`/Queensland,
+`SmartOpenMAIC`/`.ac.cn`, `OATutor-LLM-Learner`/UC Berkeley) were all star-sorted institutional
+finds.** 🔵 **So the ingest contract's regional mandate and its minimum-row mandate pull on different
+channels, and a pass that runs only one will fail one of them.** 🟡 **Registered as a standing
+instruction rather than a defect: run both channels every pass — star-sorted for placeable
+institutional rows, update-sorted `topic:` for volume.** **OPEN** until a pass runs both and reports
+the split. See `evidence/placement-nil.2026-11-04-p645.tsv`.
+
+### 🟡 `645-F` — RECLASSIFIED: `Gap 637-F` is a NETWORK-POLICY gap, not a research gap
+
+🔵 **`637-F` has carried eight passes: the Digital Omnibus position (Reg (EU) `2026/1744`, Annex III
+education → `2 December 2027`, held at `901` occurrences at `HEAD`) has no primary reading.**
+🔴 **`p645` attempted the primary authority directly: `eur-lex.europa.eu` in three URL forms (OJ `L`,
+ELI, CELEX) returns `000` on `curl` and `ENOTFOUND` on `WebFetch`; `artificialintelligenceact.eu`
+returns `000`.** 🟢 **Both the primary authority and the secondary tracker are outside this session's
+allowed network domains, so no further pass can close this by trying harder.** 🔵 **The action is to
+add `eur-lex.europa.eu` to the environment's network policy.** 🟡 **`Gap 637-F` stays OPEN, now with a
+named blocker and an owner outside this base.**
+
+### 🟡 `645-G` — CARRIED, UNPAID: the star series owed by this pass
+
+🔴 **`p645` spent its online budget on the `205`-address oracle census and the `8`-topic supply
+channel, and did NOT re-measure the held star series.** 🟢 **The `p644` figures are carried on
+`agents/top.md` and labelled *carried*, not restated as fresh measurements** — but
+`vishalsachdev/canvas-mcp`'s `11`th observation is owed and unpaid, and `DeepTutor`'s climb is
+unverified for a second day. **OPEN.**
+
+### 🟡 `645-H` — DECLARED: the region-heading contract conflict, eleventh instance
+
+🔵 **Unchanged from `644-L` and restated only so the count is current.** `p645` complies with the
+contract *within its own section* — one `## Opportunities by region`, four `###` subsections, closed
+vocabulary, no LATAM-only section — and thereby takes `intel/market.md` to **`11`** such blocks
+against a gate asking for `1`. 🔴 **The conflict is structural: either `gate-region-headings` counts
+blocks per section, or the shelf stops being append-only.** Declared, unresolved, not silently
+absorbed. 🔵 `Gap 534-J` (`recount`) and `574-G` (triage the remaining reds in one pass that writes
+nothing else) are both untouched by this pass and both still OPEN.
+
+### 🟢 `645-I` — CAUGHT AND REPAIRED IN-PASS: this pass put `gate-offline` RED and did not ship it
+
+🔴 **`p645`'s first draft of `intel/market.md` turned `gate-offline` red**, on
+`p253-settled-fact-regression`: the phrase *"not closable"* met the `Annex III` subject in one scope
+without citing the authority that settled it. 🔵 **That is `p251`'s exact regression shape — the one
+this gate was built from — reproduced by a pass that had read the gate's `README`.**
+
+🟢 **Measured, not asserted.** `make hooks` was run three times: with this pass's changes (`47/70`
+green, `23` red), then at clean `HEAD` after `git stash push -u` (`48/70`, `22` red), then again
+after the repair (`48/70`, `22` red). 🟢 **The red set after repair is IDENTICAL to clean `HEAD`'s, so
+`p645` introduces no new red and takes credit for none of the `22` it inherited.**
+
+🟢 **The repair was to reaffirm the settled value rather than to delete the sentence**: `645-I` on
+`intel/market.md` now states that Annex III education applies from `2 December 2027` under
+Regulation (EU) `2026/1744`, settled by `p233` and `p241`, and narrows `637-F` to what it is actually
+about — the evidential **tier** of that reading, not its value. 🔵 **Recorded because the near-miss is
+the finding: the hedge vocabulary is easy to write by accident when the thing being hedged is a
+*channel* rather than a *fact*, and the gate cannot tell those apart.** 🟡 A later pass may want the
+gate to distinguish them; `p645` does not change the gate.
+
+🟢 **Nine registered (`645-A`, `645-A1`, `645-B`, `645-C`, `645-D`, `645-E`, `645-F`, `645-G`,
+`645-I`), one declared (`645-H`).**
+
 ## 🆕 `p644` — `2026-11-04` — **🟢 `644-I`: `recount` IS CARRIED RED AND DECLARED. IT WAS RED AT `HEAD` BEFORE THIS PASS TOUCHED ANYTHING, AND THE PROOF IS A STASH-AND-RERUN, NOT AN ASSERTION. 🟢 `p251-prefix-collision` IS REPAIRED FROM `19/20` TO `20/20` AND THE CAUSE WAS A LINE WRAP.**
 
 🔵 **Currency.** This register and `README.md` were current at `p640`. 🟡 **`p644` brings this

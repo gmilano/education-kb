@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — `2026-11-04` — three trends this pass can evidence from its own measurements
+
+🔵 **Each is backed by a count taken this pass, not by a vendor blog.** Where the only source is
+secondary, it says so.
+
+### 🟢 1. The new education supply is **local-first desktop**, and that is a regulatory response
+
+🟢 **Measured:** `10` of the `13` new permissive rows this pass are local-first desktop applications
+(`645-E`, `agents/trending.md`). 🔵 **The mechanism is the North American data rule.** NYC's guidance
+bars using student data to train models (NY Education Law §2-d, FERPA) and California's `AB 1159`
+would generalise it; `134` bills across `31` states cluster on data privacy. 🟢 **A local-first app
+answers that by construction** — the data never leaves the device, so there is no training-use
+question to answer. 🔵 **Reading for a studio: "runs on the learner's machine" has stopped being a
+limitation and become a procurement advantage**, and the open-source supply has already moved there
+ahead of the enterprise vendors.
+
+### 🟢 2. Assessment infrastructure is being rebuilt for **determinism**, underneath the LLM layer
+
+🟢 **Measured:** the two most substantial new permissive rows are not tutors at all —
+`quickfeed/quickfeed` (MIT, `27★`, Dockerised test execution and repo provisioning) and
+`abdogad/tallyrun` (MIT, grading *by retired CPU instruction count* rather than wall-clock seconds).
+🔵 **Both attack the same defect: a grade produced by a timed sandbox is a function of the runner, not
+of the submission.** 🟢 **This is the layer an agentic grader has to sit on if its verdict is going to
+be defensible** — and it is the layer Maryland's proposed **tool-certification** scheme (`SB 720`/
+`HB 1057`) will ask questions about. 🔵 Trend statement: **the interesting 2026 work in assessment is
+below the model, not in it.**
+
+### 🟡 3. Binding education-AI regulation arrived in APAC first, and the EU's delay widened the gap
+
+🟢 **Measured** (`645-H`, `intel/market.md`): Vietnam's high-risk list has been in force since
+`15 August 2026` with an education compliance deadline of ~`1 September 2027`; the EU's stand-alone
+Annex III obligations do not apply until `2 December 2027`. 🔵 **So for the first time the
+education-AI compliance frontier is in Asia, and a Vietnamese institution's deadline lands three
+months before a European one's.** 🟡 Korea's AI Basic Act (in force `22 January 2026`) is earlier
+still but sector-general. 🔴 **Held at a secondary evidential tier only:** the EU dates still have no
+primary reading from this harness because `eur-lex.europa.eu` is unreachable here (`645-I`).
+
+### 🔴 What this pass did NOT establish, so it is not inferred later
+
+🔴 **Market-size figures were returned by the global leg and are NOT recorded as facts.** The sources
+conflict — AI in education at `$11.4bn`, `$12.3bn` and *"past `$12.5bn`"* for the same year `2026`,
+and `$2.64bn` for Europe — and all are vendor or aggregator blogs. 🔵 **A number three sources
+disagree on is not a measurement**; if a market size is needed for a deck it must be sourced to a
+named analyst report with a date, not to this shelf. 🟡 Likewise the widely-repeated
+*"`86 %` of students across `16` countries use AI"* and *"`68` countries regulate AI in education"*
+figures trace to blogs attributing UNESCO without a citation, and are recorded here as **unverified**.
+
 ## 🆕 `p644` — reads `2026-11-04` — **🔴 `644-E`: THERE IS A LIVE, COMMERCIAL, CLOSED-SOURCE MARKET IN AGENTIC ASSESSMENT CIRCUMVENTION AIMED AT A NAMED US K-12 PLATFORM, AND THIS BASE HELD NOTHING ON IT. 🟢 `644-B`: AN `MIT` UPSTREAM WITH AN `AGPL-3.0` REDISTRIBUTION COHORT MAKES CANONICAL-ADDRESS DISCIPLINE A LICENCE CONTROL, NOT HYGIENE.**
 
 ### 🔴 `644-E` — NEW TREND: the anti-education agent, and it is a product

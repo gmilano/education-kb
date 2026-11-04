@@ -4,6 +4,124 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — `2026-11-04` — three recipes, and a correction that affects every existing recipe on this shelf
+
+### 🔴 First, the correction: pins on this shelf that point at a ref that does not exist
+
+🔵 **`645-B` read the default branch of all `203` published addresses instead of assuming `main`, and
+`69` (`34.0 %`) are not on `main`.** 🔴 **Any recipe here that pins `@main` on the following is
+pinning nothing:**
+
+```bash
+# WRONG — these refs do not exist
+openedx/openedx-platform@main     overhangio/tutor@main
+openedx/XBlock@main               oppia/oppia@main
+learningequality/kolibri@main     h5p/h5p-php-library@main
+quickfeed/quickfeed@main          csev/wa4e@main
+
+# RIGHT — resolve, never guess (no API quota, ~57 ms/address)
+git -c credential.helper= ls-remote --symref https://github.com/<slug> HEAD \
+  | sed -n 's|^ref: refs/heads/\([^[:space:]]*\).*|\1|p'
+# or, for a whole list:
+ingest/p645-existence-oracle.sh slugs.txt out.tsv     # 205 addresses in 11.7 s
+```
+
+| Component | Pin this |
+|---|---|
+| `openedx/openedx-platform` | `master` |
+| `openedx/XBlock` | `master` |
+| `overhangio/tutor` | 🔴 `release` |
+| `oppia/oppia` | `develop` |
+| `learningequality/kolibri` | `develop` |
+| `h5p/h5p-php-library` | `master` |
+| `quickfeed/quickfeed` | `master` |
+
+### 🟢 Recipe `R645-1` — a defensible autograder: deterministic verdict + LMS-native delivery
+
+🔵 **The problem it solves:** an LLM grader whose verdict cannot be reproduced is unsellable into
+Maryland's proposed tool-certification scheme (`SB 720`/`HB 1057`) or an EU Annex III assessment
+review, because "evaluates learners" is high-risk and the deployer owes human oversight.
+
+```
+                  ┌─ quickfeed/quickfeed (MIT, master) ── provisions the course repo,
+  student push ──▶ │                                       runs tests in Docker, releases results
+                  └─ abdogad/tallyrun (MIT, main) ─────── judges the submission by RETIRED CPU
+                                                           INSTRUCTIONS, so the verdict is
+                                                           machine-independent
+                           │
+                           ▼
+          Cvmcosta/ltijs (LTI 1.3, Node) ── delivers grade + evidence into Canvas/Moodle
+                           │                 via AGS, so the LMS gradebook stays the system
+                           ▼                 of record
+          1EdTech/openbadges-validator-core ── mints a verifiable credential on mastery
+```
+
+🟢 **Wiring, concretely:** run `quickfeed` as the course surface and replace its wall-clock test
+judgement with a `tallyrun` sandbox invocation per submission — `tallyrun`'s instruction count is the
+pass/fail signal, `quickfeed`'s Docker runner is the execution environment. Expose the result through
+`ltijs` as an **LTI Advantage Assignment and Grade Services** line item rather than writing to
+`quickfeed`'s own UI, because the LMS must remain the gradebook of record for the audit. 🔵 **Why the
+LLM is deliberately *not* in the grading path:** it belongs in the *feedback* path, reading the
+deterministic verdict and explaining it, which keeps the graded decision reproducible and the
+human-oversight obligation satisfiable. 🟡 **Gap to close in delivery:** `quickfeed` has **no LTI
+support** — it owns the course organisation — so the `ltijs` bridge is real integration work, not
+configuration.
+
+### 🟢 Recipe `R645-2` — a no-train-by-default study tutor for a US district or a LATAM campus
+
+🔵 **The problem it solves:** two different constraints with the same answer. NYC/`AB 1159`-style
+rules bar training on student data; LATAM campuses (UNESCO IESALC: `87 %` using AI, `26 %` governed)
+often cannot assume connectivity.
+
+```
+  learningequality/kolibri (MIT, 1,097 B, develop) ── offline-first content + learner records
+                           │
+                           ├── GuyAzene/folio (MIT, 1,066 B, main) ── course-aware study workspace;
+                           │                                          already a Moodle CLIENT, so the
+                           │                                          same client pattern targets Kolibri
+                           ├── theadamdanielsson/grill (MIT, 1,072 B) ── holds the knowledge state
+                           │                                             note-by-note, readable by
+                           │                                             other agents
+                           └── CAHLR/pyBKT (MIT, 1,132 B, master) ── Bayesian Knowledge Tracing:
+                                                                     the mastery estimate a district
+                                                                     can defend in writing
+```
+
+🟢 **Wiring:** `kolibri` is the substrate because it is designed for intermittent connectivity;
+`folio` supplies the learner-facing workspace and is already built as an LMS *client* (`636`'s
+network-boundary class — which is also why its MIT licence composes cleanly with a copyleft core);
+`grill` owns the knowledge state as a separate, agent-readable service rather than burying it in the
+app; `pyBKT` produces the mastery number. 🔵 **The model runs against a local or
+customer-tenant endpoint and no student data goes to a training corpus — state that in the
+deliverable, because it is the procurement advantage** (`intel/trends.md` trend 1).
+🟡 **Alternative mastery model:** `bagherig/riiid` (MIT, `1,070 B`) is a knowledge-tracing
+Transformer, stronger than BKT but far harder to explain to a school board — pick `pyBKT` when the
+requirement is defensibility and `riiid` when it is accuracy.
+
+### 🟢 Recipe `R645-3` — standards-native course production for an existing LMS estate
+
+🔵 **The problem it solves:** a client with Moodle, Canvas or Open edX already deployed does not want
+another platform; they want content their estate ingests.
+
+```
+  course-code-framework/coursecode-desktop (MIT, 1,069 B, main)
+      ├── authors with AI assistance, previews locally
+      └── exports SCORM 1.2/2004, cmi5, LTI
+                │
+                ├──▶ Moodle / Canvas / Open edX (openedx-platform@master, via tutor@release)
+                └──▶ adlnet/ADL_LRS (Apache-2.0, master) ── xAPI/cmi5 statements land in an LRS
+                                                             the client owns
+                     └── Apereo OpenLRW ── learning-analytics layer over the same statements
+```
+
+🟢 **Wiring:** author in `coursecode-desktop`, export **cmi5** rather than SCORM where the client has
+any analytics ambition — cmi5 carries xAPI statements, SCORM does not — and point them at
+`adlnet/ADL_LRS` so the behavioural data stays in the client's own LRS. 🔵 **Deploy Open edX with
+`overhangio/tutor` pinned at `release`**, which is the correction above and the single most common
+pin error this recipe would otherwise inherit. 🟡 **`coursecode-desktop` is `4★` and young**: fork it
+as a component and own the fork, rather than taking a dependency — which is `637-B`'s standing
+reading of this base's permissive back-catalogue, *quote fork-and-own, never fork-and-contribute*.
+
 ## 🆕 `p644` — reads `2026-11-04` — **🟢 THREE RECIPES. `P644-1` GIVES `P643-1` A LANGUAGE CHOICE, `P644-2` IS THE FIRST ASSESSMENT-INTEGRITY BUILD ON THESE SHELVES, AND `P644-3` IS A GOVERNANCE RETROFIT SIZED FROM UNESCO'S OWN DENOMINATOR.**
 
 ### 🟢 `P644-1` — the LTI join, in whichever language the client already runs

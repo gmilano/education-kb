@@ -4,6 +4,164 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — `2026-11-04` — **🔴 `645-G`: THE MANDATED WEB LEGS ARE SATURATED WITH A DENOMINATOR — `21 of 22` FACTS ACROSS ALL FOUR REGIONS WERE ALREADY HELD AT `HEAD`, AND THE ONE UNHELD FACT IS NOT EDUCATION. 🟡 `645-H`: `p640`'s VIETNAM CLAIM HOLDS ON ONE OF TWO ANCHORS, AND THE TWO DIFFER BY `5.5` MONTHS.**
+
+### 🔴 `645-G` — the demand half, measured rather than asserted
+
+🔵 **All four mandated regional legs were run, plus the global trends leg, at extended depth.** Every
+fact returned was then tested for heldness with `git grep` against `HEAD` — not against the working
+tree, per `636-F`.
+
+| Region | Facts returned | Already held at `HEAD` | Unheld |
+|---|--:|--:|--:|
+| North America | `6` | `6` | `0` |
+| EMEA | `5` | `5` | `0` |
+| APAC | `4` | `3` | 🟢 `1` |
+| LATAM | `7` | `7` | `0` |
+| **Total** | **`22`** | 🔴 **`21` (`95.5 %`)** | **`1` (`4.5 %`)** |
+
+🔴 **The single unheld fact is China's administrative penalty ceiling (`50 million Chinese Yuan`),
+which is a general AI-governance figure with no education-specific content.** 🟢 **So the honest
+reading is an effective yield of `0 of 22`, and this is the thirteenth consecutive effective nil on
+the demand half.** 🔵 Occurrence counts at `HEAD` for the held facts run from `1`
+(`Memorandum Order 21`) to `1,202` (`IESALC`) — the leg is not returning thin material, it is
+returning *this base's own shelves*. Evidence: `evidence/websearch-legs.2026-11-04-p645.tsv`.
+
+🟡 **Standing recommendation, stated for the third time and now with a denominator behind it: the
+mandated web legs should be run quarterly, not hourly.** They are a saturated channel and the budget
+they consume is better spent on the supply channel, which paid `226` novel addresses this pass
+(`645-E`).
+
+### 🟡 `645-H` — `p640`'s *"Vietnam … `15` months before the EU's"* is anchor-dependent
+
+🔵 **`p640` published that Vietnam has APAC's first binding education-AI regime and that it is live
+`15` months before the EU's.** 🟢 **The claim survives, and the discriminator `p640` did not state is
+the one that makes it survive.**
+
+| Instrument | Date | Months before the EU's `2 December 2027` |
+|---|---|--:|
+| 🇻🇳 Law on Artificial Intelligence (passed `10 Dec 2025`) — in force | `1 March 2026` | `21.0` |
+| 🇻🇳 Decree `142/2026/ND-CP` — risk classification, labelling, incident reporting, national AI database | `1 May 2026` | `19.0` |
+| 🇻🇳 Decision `33/2026/QD-TTg` — the official high-risk list (`46` systems, of which **`3` are education**), issued `30 June 2026` | `15 August 2026` | 🟢 **`15.5`** |
+| 🇻🇳 Grace window for pre-existing systems in **education, health and finance** — `18` months, vs `12` for all other fields | ~`1 September 2027` | 🟢 **`3.0`** |
+| 🇰🇷 AI Basic Act — in force, fines to KRW `30m`, enforcement grace ≥ `1` year | `22 January 2026` | `22.4` |
+
+🟢 **So `p640`'s `15` months is anchored on the high-risk *list*, not on the law, and on that anchor it
+is right (`15.5`).** 🔴 **On the law itself the figure is `21`.** 🟢 **And Korea's AI Basic Act is
+`5` weeks *earlier* than Vietnam's law, so "first in APAC" survives only on the
+education-specific discriminator: Korea's regime is sector-general, and no education-specific
+obligation under it was found.** 🔵 **The engagement-relevant date is the last row: a Vietnamese
+institution running education AI today must comply by ~`1 September 2027`, three months
+before an EU institution must.**
+
+### 🔴 `645-I` — `637-F` is BLOCKED ON NETWORK POLICY, and the date it concerns stays SETTLED
+
+🔵 **`637-F` has carried for eight passes: the EU AI Act education position — Digital Omnibus
+Regulation (EU) `2026/1744` moving Annex III education to `2 December 2027`, held at `901`
+occurrences at `HEAD` — has no primary reading.** 🔴 **`p645` tried the primary source directly and
+the gap is a **network-policy** gap, not a research gap:**
+
+| Authority | Channel | Result |
+|---|---|---|
+| `eur-lex.europa.eu` — OJ `L` series, ELI and CELEX forms (`3` URLs) | `curl` | 🔴 `000` — no connection |
+| `eur-lex.europa.eu` — CELEX form | `WebFetch` | 🔴 `ENOTFOUND` |
+| `artificialintelligenceact.eu` | `curl` | 🔴 `000` |
+
+🟢 **Both the primary authority and the secondary tracker are outside this session's allowed network
+domains, so `637-F` will not yield to another pass doing the same thing** — it needs
+`eur-lex.europa.eu` added to the environment's network policy, and that is the action.
+
+🟢 **To be unambiguous, because this subject has a regression history on these shelves: the DATE is
+settled and `p645` reaffirms it, not re-opens it.** Annex III education high-risk obligations apply
+from **`2 December 2027`** under Regulation (EU) `2026/1744`, settled by `p233` (OJ dates) and `p241`
+(the superseded-date count). 🔵 **What `637-F` is about is the evidential TIER of that reading — a
+primary text read first-hand versus secondary corroboration — and nothing else.** 🟡 **This pass's
+corroboration, consistent with the settled value and still secondary:** OJ publication `24 July 2026`,
+applicable from `27 July 2026`, stand-alone Annex III `2 December 2027`, AI embedded in regulated
+products `2 August 2028`.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buying trigger is a dated statutory deadline, and it is unusually specific.** North
+Carolina's Session Law `2026-41` requires AI-literacy standards with a **state model policy by
+`31 December 2026`**, local school-unit policies by **`30 June 2027`** and teacher professional
+development by **June 2028**. Maryland's `SB 720`/`HB 1057` would require departmental guidance,
+district AI policies and a **certification scheme for compliant AI tools**. `134` AI-in-education
+bills were introduced across `31` states.
+
+🔵 **What to sell against it:** the gap is governance artefacts, not models — model policies, tool
+certification evidence, and teacher-PD curricula on a deadline. 🟢 **Build-on components:**
+`quickfeed/quickfeed` (MIT) for assessment that produces an audit trail, `CAHLR/pyBKT` and
+`CAHLR/OATutor-LLM-Learner` (both MIT, UC Berkeley provenance) where a district needs a defensible
+mastery model rather than an opaque one. 🔴 **Constraint to design for:** NYC's rules bar using
+student data to train models (NY Education Law §2-d, FERPA) and California's `AB 1159` would
+generalise that — so **local-first or no-train-by-default is a compliance feature here**, which is
+exactly the shape `645-E`'s `10` new desktop rows have.
+
+### EMEA
+
+🟡 **The dominant fact is a delay, and the delay is the opportunity.** Stand-alone Annex III
+high-risk obligations — which cover systems that evaluate learners, assign them to programmes,
+detect prohibited behaviour during assessment or affect access to qualifications — now apply from
+**`2 December 2027`** under Regulation (EU) `2026/1744`, with embedded AI at `2 August 2028`. 🔵 That
+is a `~25`-month implementation runway from today, and institutions that treated August 2026 as the
+deadline have already built the governance.
+
+🟢 **Where the engagements are:** Finland, Estonia and the Netherlands lead K-12 integration; the UK
+runs light-touch principle-based regulation through existing regulators; the Gulf is the outlier in
+being explicit — **Dubai's KHDA has issued direct guidance to private schools**, which makes it the
+one EMEA sub-market where a school can be sold a compliance deliverable today. 🔵 **Commercial
+signal:** Instructure is building an AI study coach into Canvas and Pearson has agreed to acquire
+Workera for AI-skill verification — so the adjacent white space is **credential verification**, not
+tutoring. 🟢 **Build-on:** `Cvmcosta/ltijs` (the LTI 1.3 layer) plus
+`1EdTech/openbadges-validator-core` for verifiable credentials; `ArtVsMark/Stepik-Python-Grader`
+(MIT) is the one new in-region row.
+
+### APAC
+
+🟢 **APAC is the only region with binding, education-specific, already-live obligations, and this is
+where the compliance work is real rather than anticipated** — see `645-H` for the dates. Vietnam's
+Decision `33/2026/QD-TTg` names `3` education systems in its `46`-item high-risk list and
+pre-existing education systems must comply by ~**`1 September 2027`**, three months before the EU.
+Korea's AI Basic Act has been in force since `22 January 2026` (sector-general, fines to KRW `30m`,
+enforcement grace). Australia has no AI statute but **TEQSA has required every higher-education
+provider to file a generative-AI risk action plan** — a filing obligation a studio can execute
+against immediately. The Philippines' CHED Memorandum Order `21` is a national framework for AI in
+teaching, research and operations. China requires registration and content labelling.
+
+🔵 **What to sell:** risk classification and documentation packs mapped to a *named* instrument, not
+a generic framework — Vietnam's Decree `142/2026/ND-CP` prescribes risk classification, labelling,
+incident reporting and registration in a national AI database, which is a concrete deliverable list.
+🟢 **Build-on:** `THU-MAIC/OpenMAIC` and `Tyche-MKR/SmartOpenMAIC` (both MIT, byte-confirmed
+`1,065 B`, Tsinghua lineage) for multi-agent classroom work with Chinese-institution provenance;
+`jtangen/classbuild` (MIT, University of Queensland) for Australian engagements.
+🔴 **Data sovereignty is a hard requirement, not a preference** — Malaysia frames sovereign cloud as
+foundational — so self-hostable components beat hosted APIs on every APAC bid.
+
+### LATAM
+
+🟢 **The region's defining number is a governance gap with a denominator, and it is a services gap by
+construction.** UNESCO IESALC surveyed ~`200` higher-education institutions across `19` countries:
+**`87 %` use AI in at least one area, `26 %` have any formal framework**, and fewer than `10 %` have
+formal guidelines *and* sufficient capacity. School-level figures agree — Uruguay's Ceibal reports
+`75 %` of public-school teachers using the tools; in Brazil `53 %` of school administrators use AI
+while only `22 %` report their school has guidelines.
+
+🔵 **That `87 % → 26 %` spread is the single clearest commercial opening in this entire shelf: the
+adoption has already happened and the governance has not.** 🟢 **Regulatory anchors to write against:**
+Brazil's `PL 2.338/2023` (risk-based, passed the Senate), Colombia's `CONPES 4144` national policy
+running to 2030, and the OECD AI Principles formally adopted by Argentina, Brazil, Chile, Colombia,
+Costa Rica, Mexico and Peru. 🔴 **Fragmentation is the risk to price in:** a Universidad de los Andes
+study counted `716` AI-related instruments, rules and proposals across `23` countries and
+territories. 🔵 **Institutional partners:** UNESCO's regional **Observatory on Artificial Intelligence
+in Education** (launched April 2026, Santiago) and Tecnológico de Monterrey, which signed an
+AI-in-education agreement with UNESCO in March 2026. 🟢 **Build-on:** `learningequality/kolibri`
+(MIT, byte-confirmed `1,097 B`, default branch `develop`) is the right substrate because it is
+offline-first, and `v1tzor/StudyAssistant`'s offline-first property (`644`) matters for the same
+reason — connectivity assumptions a hosted tutor makes do not hold.
+
 ## 🆕 `p644` — reads `2026-11-04` — **🟢 THE REGIONAL LEGS PAID FOR THE FIRST TIME IN FOUR PASSES: `18` UNHELD FACTS OF `33`. THE APAC REGULATORY PICTURE IS NOW CONCRETE, AND LATAM HAS A MEASURED DENOMINATOR THAT DOES NOT COME FROM A BROKEN RULER.**
 
 🔵 **Why this is worth stating as a result.** `643-D` found this base's Spanish- and

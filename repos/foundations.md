@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — `2026-11-04` — the foundations layer, re-graded on a READ branch instead of a guessed one
+
+🔴 **`645-B` changes how every foundation row on this shelf must be verified.** `69` of the `203`
+addresses this base publishes do not default to `main`, and **`6` of this shelf's own
+Python-stack foundations are among them** — which is also why `645-D` found their `README`s
+"missing".
+
+| Foundation | Repo | Default branch (read, not guessed) | `README` actually at | Licence |
+|---|---|---|---|---|
+| **Open edX platform** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `master` | `README.rst` (`12,381 B`) | AGPL-3.0 |
+| **XBlock SDK** | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🔴 `master` | `README.rst` (`7,455 B`) | AGPL-3.0 |
+| **Tutor** (Open edX installer) | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `release` | `README.rst` (`4,332 B`) | AGPL-3.0 |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `develop` | `.github/README.md` (`4,042 B`) | Apache-2.0 |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 `develop` | — | 🟢 MIT (`1,097 B`, `645-A` residual `0`) |
+| **H5P PHP library** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 `master` | `README.txt` (`796 B`) | MIT |
+| **ADL LRS** (xAPI) | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🔴 `master` | `readme.md` (`1,755 B`) | Apache-2.0 |
+| **ScanCode Toolkit** | [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit) | 🔴 `develop` | `README.rst` (`11,303 B`) | Apache-2.0 |
+| **DoWhy** | [`py-why/dowhy`](https://github.com/py-why/dowhy) | `main` | `README.rst` (`16,855 B`) | MIT |
+
+🔵 **Operational consequence for `compose/`:** a recipe that pins `openedx/openedx-platform@main`,
+`overhangio/tutor@main` or `oppia/oppia@main` pins **nothing** — those refs do not exist. Pin
+`master`, `release` and `develop` respectively, or resolve with
+`ingest/p645-existence-oracle.sh` at build time.
+
+### 🟢 Two permissive additions to the grading/interop layer
+
+| Repo | Licence — byte-read, `645-A` predictor | ★ | Branch | Why it is a foundation, not an agent |
+|---|---|--:|---|---|
+| [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) | 🟢 **MIT** — `LICENSE`, `1,115 B`, residual `0` | `27` | 🔴 `master` | Course-repository provisioning + Dockerised test execution + result release, over gRPC/Connect. 🟢 **An LLM grader needs exactly this underneath it** and this base had no permissive component for it. |
+| [`abdogad/tallyrun`](https://github.com/abdogad/tallyrun) | 🟢 **MIT** — `LICENSE`, `1,075 B`, residual `0` | `8` | `main` | Rootless sandbox grading by **retired CPU instruction count**, so the verdict is machine-independent. 🔵 Fixes the reproducibility hole in every wall-clock autograder. |
+
+🟡 **`csev/wa4e`** ([BSD-2-Clause](https://github.com/csev/wa4e), `216★`, `master`) is **NOT** filed as
+a foundation. Its payload is `1,301 B` and **untitled** — the first line is
+`Copyright (c) 2014, Charles Severance` — so `645-A`'s title-line grade abstains and it was graded on
+the **body** (two redistribution conditions, no third clause, no endorsement clause → BSD-2-Clause,
+agreeing with the metadata). 🔵 It is course material, not software, which is `644-A`'s `curriculum`
+class; recorded here so it is not rediscovered.
+
 ## 🆕 `p644` — reads `2026-11-04` — **🟢 `644-C`: THE `LTI` BOUNDARY HAS PERMISSIVE REFERENCE IMPLEMENTATIONS FROM THE STANDARDS BODY *AND* FROM THE LMS VENDOR. `p643` FOUND ONE DOOR; THERE ARE FIVE, AND THE LIVE ONES ARE ALL SUCCESSORS TO ARCHIVED INSTITUTIONAL ORIGINALS.**
 
 🔵 **`p643` filed [`hypothesis/lms`](https://github.com/hypothesis/lms) (`BSD-2-Clause`, `1,320 B`) as

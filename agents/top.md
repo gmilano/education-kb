@@ -4,6 +4,208 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p645` — reads `2026-11-04` — **🟢 `645-A`: THE `MIT` BYTE BAND IS NOT A BAND AND NEVER WAS — IT IS `1027 + |title| + |copyright|`, AN EXACT PREDICTOR, CONFIRMED `18 of 19` AT RESIDUAL `+0` INCLUDING EVERY ONE OF THE THREE FALSIFIERS `p640`/`p641`/`p642` WIDENED IT ON. 🟢 `645-B`: `git ls-remote --symref` IS AN EXISTENCE ORACLE INDEPENDENT OF THE SEARCH INDEX, `38×` FASTER AND NOT RATE-LIMITED, AND IT RETURNS THE DEFAULT BRANCH — WHICH `34.0 %` OF THIS BASE'S PUBLISHED ADDRESSES NEED, BECAUSE THEY ARE NOT ON `main`. 🔴 `645-C`: `642-B`'s FALSE ABSENT WAS **TRANSIENT**. MEASURED OVER THE WHOLE PUBLISHED POPULATION THE RATE IS `0 of 203`.**
+
+🔵 **`p645` is an instrument pass and it ends three standing arguments with measurements rather than
+with another widening.** All three were open at `HEAD`: the `MIT` byte band (`640-A`, widened by
+`641-B`, declared unfit by `642-C` with no replacement), the existence oracle (`642-B`), and the
+`README` channel. Each is closed below with a denominator.
+
+### 🟢 `645-A` — the `MIT` byte band, retired and REPLACED by an exact predictor
+
+🔴 **Three passes treated the byte count of an `MIT` payload as a property of the licence.** `640-A`
+published `1,062`–`1,085 B`; `641-B` widened the ceiling to `1,097` on `kolibri`; `642-C` measured
+`CAHLR/pyBKT` at `1,132 B` and `tubban1/eduNest` at `1,100 B`, concluded *"the band is not an
+instrument for `MIT`"*, and left no replacement. 🟢 **The reason it kept breaking is arithmetic. The
+stock `MIT` template interpolates exactly two variable-length strings — the title line and the
+copyright line — so its size is a function of the length of the holder's name:**
+
+```
+bytes(MIT) = 1027 + |title line| + |copyright line|
+```
+
+🟢 **Measured on `19` byte-read `MIT` payloads, `18` land at residual `+0`** — every address this
+base holds that has ever been cited as in-band or out-of-band, and all ten of this pass's new rows.
+
+| Repo | Bytes | `|title|` | `|copyright|` | Predicted | Residual |
+|---|--:|--:|--:|--:|--:|
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) — 🔵 `642-C`'s *"`+35` over the widened ceiling"* | `1,132` | `11` | `94` | `1,132` | 🟢 **`0`** |
+| [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) — 🔵 the only `"The MIT License (MIT)"` title in the cohort | `1,115` | `21` | `67` | `1,115` | 🟢 **`0`** |
+| [`CAHLR/OATutor-LLM-Learner`](https://github.com/CAHLR/OATutor-LLM-Learner) | `1,105` | `11` | `67` | `1,105` | 🟢 **`0`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — 🔵 `641-B`'s widening | `1,097` | `11` | `59` | `1,097` | 🟢 **`0`** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `1,065` | `11` | `27` | `1,065` | 🟢 **`0`** |
+| [`CGSeb/lessonfolk`](https://github.com/CGSeb/lessonfolk) — 🔵 the cohort floor | `1,063` | `11` | `25` | `1,063` | 🟢 **`0`** |
+| [`tubban1/eduNest`](https://github.com/tubban1/eduNest) — 🔴 `642-C`'s second falsifier | `1,100` | `11` | `26` | `1,064` | 🔴 **`+36`** |
+
+🟢 **The single residual is the strongest result in the table, because it is not a counter-example —
+it is a detection.** `eduNest`'s body is mutated: line `7` reads *"in the Software without
+restriction in the Software without restriction, including"*, a duplicated clause of exactly
+`36` characters. 🔵 **So the predictor is simultaneously a grader and an integrity check: a nonzero
+residual on an `MIT` title line means the body has been altered, which no byte band could ever
+detect** — `642-C` read `1,100 B` as evidence against the band when it was evidence of a tampered
+payload. Full table: `evidence/mit-byte-predictor.2026-11-04-p645.tsv`.
+
+🟢 **And the contrast proves the mechanism rather than asserting it.** `AGPL-3.0` interpolates
+*nothing* in its payload — the copyright notice goes in source headers, not the licence — so it is
+flat across three independent repositories found this pass: `34,523 B`, `34,523 B`, `34,524 B` (the
+`+1` a trailing newline). 🔵 **A band works for `AGPL-3.0` precisely because there is no name in it,
+and cannot work for `MIT` because there is.** Evidence: `evidence/agpl-no-interpolation.2026-11-04-p645.tsv`.
+
+### 🟢 `645-B` — `git ls-remote` is a second existence channel, and the default branch is the prize
+
+🔵 **Channel:** `git -c credential.helper= ls-remote --symref https://github.com/<slug> HEAD`. It is
+the **git protocol**, not the search index, and it is three-valued:
+
+| Return | Verdict | Note |
+|---|---|---|
+| `ref: refs/heads/<name>` + sha | 🟢 **PUBLIC-LIVE** | …and `<name>` is the **default branch** |
+| `could not read Username` | 🟡 **NOT-PUBLIC** | GitHub prompts rather than distinguish *absent* from *private* to an anonymous caller, so this channel **cannot assert absence** — but *not public* is the verdict a build-on decision needs. This is `p293`'s *"a credential prompt is a MEASUREMENT"* |
+| anything else | 🔵 **INCONCLUSIVE** | network; never recorded as an absence |
+
+🟢 **Run over every address this base publishes on a live shelf — `202` of them, plus `3` controls:
+`205` addresses in `11.7` seconds, `12`-wide.** `203` PUBLIC-LIVE, `2` NOT-PUBLIC, and the `2` are
+the two fabricated controls. 🔵 **The comparison that matters is cost:** the same population on
+`search/repositories` takes `205` serialised calls at `30/min` — `451` seconds. **`38×`**, and
+`ls-remote` is not rate-limited at all, so `637-E`'s *"capped at `30/min` = ~`33 min` for `988`
+addresses"* ceases to be a budget line.
+
+🟢 **The finding that changes other passes' work: `69` of `203` published addresses — `34.0 %` — do
+not default to `main`.**
+
+| Default branch | Count | Share |
+|---|--:|--:|
+| `main` | `134` | `66.0 %` |
+| 🔴 `master` | `49` | `24.1 %` |
+| 🔴 `develop` | `9` | `4.4 %` |
+| 🔴 `dev` | `5` | `2.5 %` |
+| 🔴 `release`, `release_11`, `v4.0.x-develop`, `mobile`, `2.12`, `19.0` | `6` | `3.0 %` |
+
+🔵 **`p640` built its licence-bytes script to walk *"`28` branch/filename combinations"*.** 🟢 **That
+walk exists to cover this `34.0 %`, and `ls-remote` replaces it with a read**: one call returns the
+branch, so the branch is no longer guessed and no longer costs a search quota. `learningequality/kolibri`
+in the table above is read on `develop`; `overhangio/tutor` on `release`. Evidence:
+`evidence/lsremote-default-branch-census.2026-11-04-p645.tsv`,
+`evidence/branch-census-summary.2026-11-04-p645.tsv`. Instrument: `ingest/p645-existence-oracle.sh`.
+
+### 🔴 `645-C` — `642-B` is RIGHT IN PRINCIPLE AND ZERO IN MAGNITUDE, and no pass had measured it
+
+🔵 **`642-B` measured `Pranjulcr7/OpenTutor` at `total_count: 0` on `repo:` while `ls-remote` resolved
+it and `raw` served an `MIT` payload, and concluded: *"every absence resting on `repo:` alone is an
+upper bound, not a finding."*** 🟢 **`p645` ran both channels over the whole published population and
+the two agree `205 of 205`.**
+
+| Verdict | Count | Share |
+|---|--:|--:|
+| 🟢 `AGREE-LIVE` (`ls-remote` resolves, `repo:` ≥ `1`) | `203` | `99.0 %` |
+| 🟢 `AGREE-ABSENT` (`NOT-PUBLIC`, `repo:` `422`) | `2` | `1.0 %` — both fabricated controls |
+| 🔴 `FALSE-ABSENT` (`ls-remote` resolves, `repo:` `0`) | **`0`** | **`0.0 %`** |
+
+🔴 **`Pranjulcr7/OpenTutor` itself now returns `1`.** 🟢 **So the defect is real but *transient*: `repo:`
+is an eventually-consistent index, a `0` means "not indexed **yet**", and the condition clears.** The
+correct statement is narrower than `642-B`'s and wider than `p639`/`p640`'s: **`repo:` is sound for
+addresses that have been indexed — which is the whole of this base's published population — and
+unsound as a point-in-time absence test for an address created in the last days.** 🔵 **Three passes
+reasoned about a defect whose measured rate on the shelves is `0 %`;** `p639`'s *"`16 of 16` LIVE"*
+was sound after all. 🟢 **The standing rule is unchanged but now cheap to honour: `ls-remote` is the
+existence channel, `repo:` the metadata channel**, and a disagreement is resolved in favour of the
+git protocol. Evidence: `evidence/existence-oracle-truthtable.2026-11-04-p645.tsv`,
+`evidence/repo-search-channel.2026-11-04-p645.tsv`.
+
+### 🔴 `645-D` — the `README` channel has a SECOND guess in it, and it manufactures absences at `8.4 %`
+
+🟢 **`645-B`'s census probed `README.md` on each address's own default branch. `17` of `203` returned
+`404`.** 🔴 **`8` were tested against `7` alternative filenames and `8 of 8` serve — so `0` of the
+`17` is an absence.**
+
+| Repo | Default branch | `README.md` | Actually serves as | Bytes |
+|---|---|---|---|--:|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` | 🔴 `404` | 🟢 `README.rst` | `12,381` |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `master` | 🔴 `404` | 🟢 `README.rst` | `7,455` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` | 🔴 `404` | 🟢 `README.rst` | `4,332` |
+| [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit) | `develop` | 🔴 `404` | 🟢 `README.rst` | `11,303` |
+| [`py-why/dowhy`](https://github.com/py-why/dowhy) | `main` | 🔴 `404` | 🟢 `README.rst` | `16,855` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` | 🔴 `404` | 🟢 `.github/README.md` | `4,042` |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔴 `404` | 🟢 `README.txt` | `796` |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` | 🔴 `404` | 🟢 `readme.md` | `1,755` |
+
+🔵 **The class is the same as `645-B`'s and the cure is not.** `ls-remote` removes the *branch* guess;
+nothing removes the *filename* guess, and `raw` is case-sensitive, which is why `adlnet/ADL_LRS`
+missed on capitalisation alone. 🔴 **Five of the eight are `.rst`, and all five are the Python-stack
+foundations this base's `compose/` recipes are built on** — Open edX, its `XBlock` SDK and `tutor`
+installer. 🟢 **Recorded as a measured rate, `17 of 203` = `8.4 %` upper bound on this population,
+`0` of the `8` tested being real**, so no later pass reads a `README` `404` as a documentation
+absence. Evidence: `evidence/readme-filename-channel.2026-11-04-p645.tsv`.
+
+### 🟢 The `10` new agent rows — every licence byte-read `2026-11-04` on the `ls-remote` branch
+
+🔵 **Channel:** `ls-remote --symref` for the branch, then `curl -s` GET on `raw.githubusercontent.com`
+walking `7` licence filenames, graded on the **title line** and checked against `645-A`'s predictor.
+`14 of 14` candidates PUBLIC-LIVE, `14 of 14` payloads read, `0` unlicensed.
+
+| Agent | Repo | Licence — file, bytes, predictor | ★ | `pushed_at` | Branch | Region | What it actually does |
+|---|---|---|--:|---|---|---|---|
+| **QuickFeed** | [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) | 🟢 **MIT** — `LICENSE`, `1,115 B`, residual `0` | `27` | `2026-11-02` | 🔴 `master` | 🟡 **UNPLACED** | 🟢 **The strongest new row.** Go/TypeScript autograder that provisions course repositories, runs tests in Docker and releases results, with gRPC/Connect + React. 🔵 Not an LLM product at all — it is the **assignment-execution substrate** an agentic grader needs underneath it, and the only new row with CI badges, a contributing guide and a `2017` copyright. |
+| **tallyrun** | [`abdogad/tallyrun`](https://github.com/abdogad/tallyrun) | 🟢 **MIT** — `LICENSE`, `1,075 B`, residual `0` | `8` | `2026-09-19` | `main` | 🟡 **UNPLACED** | 🟢 **The most interesting idea in the cohort.** A rootless sandbox that judges untrusted code *"by counting CPU instructions instead of seconds — same verdict on every machine"*. 🔵 Determinism is the unsolved half of autograding at scale: wall-clock limits make a grade a function of the runner. |
+| **sprigo** | [`ozerozdas/sprigo`](https://github.com/ozerozdas/sprigo) | 🟢 **MIT** — `LICENSE`, `1,077 B`, residual `0` | `13` | `2026-11-03` | 🔴 `master` | 🟡 **UNPLACED** | Local-first desktop language-learning app; lessons, stories and conversation practice generated on the connected model. |
+| **coursecode-desktop** | [`course-code-framework/coursecode-desktop`](https://github.com/course-code-framework/coursecode-desktop) | 🟢 **MIT** — `LICENSE`, `1,069 B`, residual `0` | `4` | `2026-10-29` | `main` | 🟡 **UNPLACED** | 🟢 **The only new row that speaks the interop standards**: builds **SCORM, cmi5 and LTI** courses with local preview, LMS export and AI-assisted authoring. 🔵 Filed because standards-native authoring is the scarce half of this base's `verticals/` layer. |
+| **grill** | [`theadamdanielsson/grill`](https://github.com/theadamdanielsson/grill) | 🟢 **MIT** — `LICENSE`, `1,072 B`, residual `0` | `3` | `2026-11-01` | `main` | 🟡 **UNPLACED** | Agentic learning system that *"keeps state on what you know, note by note"* — chat, tests, and other agents read the same state. 🔵 The knowledge-state-as-a-service shape, `28,299 B` of `README`: the best-documented new row. |
+| **Learn-With-AI** | [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | 🟢 **MIT** — `LICENSE`, `1,069 B`, residual `0` | `4` | `2026-11-04` | `main` | 🟡 **UNPLACED** | Local-first AI learning app for Windows/macOS/Linux; studies the learner's own materials. |
+| **folio** | [`GuyAzene/folio`](https://github.com/GuyAzene/folio) | 🟢 **MIT** — `LICENSE`, `1,066 B`, residual `0` | `2` | `2026-11-03` | `main` | 🟡 **UNPLACED** | Local-first desktop study workspace with a course-aware tutor. 🔵 `README` says it reads *"the university's Moodle"* — a **Moodle client**, which is `636`'s network-boundary class and why its `MIT` is compatible with a `GPL` core. |
+| **riiid** | [`bagherig/riiid`](https://github.com/bagherig/riiid) | 🟢 **MIT** — `LICENSE`, `1,070 B`, residual `0` | `2` | `2026-10-22` | `main` | 🟡 **UNPLACED** | Encoder–decoder Transformer (PyTorch/TPU) for answer-correctness prediction, top `3 %` in the Riiid Kaggle competition. 🔵 **A knowledge-tracing model, not an app** — the permissively-licensed companion to this base's `pyBKT` row. |
+| **lessonfolk** | [`CGSeb/lessonfolk`](https://github.com/CGSeb/lessonfolk) | 🟢 **MIT** — `LICENSE`, `1,063 B`, residual `0` | `3` | `2026-11-03` | `main` | 🟡 **UNPLACED** | Agent-as-tutor course for learning AI from zero. 🔵 Content-shaped, filed on licence and liveness. |
+| **Stepik-Python-Grader** | [`ArtVsMark/Stepik-Python-Grader`](https://github.com/ArtVsMark/Stepik-Python-Grader) | 🟢 **MIT** — `LICENSE`, `1,085 B`, residual `0` | `5` | `2026-11-03` | `main` | 🟡 **EMEA** *(platform evidence only)* | Local grader for the *«Поколение Python»* courses: pulls a task's tests from the platform and runs them offline. 🔵 **Placed on Stepik's corporate domicile, not on the `README`, which names no institution — a weaker channel than `644`'s, and declared as such.** |
+
+🔴 **Three live, byte-verified AI tutors are NOT filed as agent rows because they are `AGPL-3.0`**, and
+this base files permissive rows for a studio that must be able to build on them:
+[`bayshores/godspeed`](https://github.com/bayshores/godspeed) (`10★`, MCP-native — *"Claude Code,
+Codex or any MCP app teaches you step by step"*), [`ValeraZSD/terramentor`](https://github.com/ValeraZSD/terramentor)
+(`5★`) and [`luumlabs/aula`](https://github.com/luumlabs/aula) (`1★`). 🔵 **They are recorded so a later
+pass does not rediscover them as finds** — and `godspeed` is the one to watch: an agent-harness-native
+tutor is a shape this base has only seen once before, in `644`'s `course-builder`.
+
+### 🔴 `645-E` — the channel that PAYS on supply is the channel that cannot PLACE, and both halves are measured here
+
+🟢 **`644-A` found education's token vocabulary colonised by the AI-engineering idiom of `2026` and
+listed nine tokens that must not be run bare.** 🟢 **`p645`'s answer is to stop using tokens.** `topic:`
+is **curated** — a maintainer opts in — so it cannot be substring-polluted. Run `8` topics × `40`,
+`fork:true`, **`sort=updated` rather than a star floor**:
+
+| Measured `2026-11-04` | Reading |
+|---|---|
+| Candidates returned | `320` (`8` topics × `40`) |
+| Novel — not in `evidence/address-ledger.tsv` (`3,177` addresses) | 🟢 **`226` (`70.6 %`)** |
+| Permissive (`MIT`/`Apache-2.0`/`BSD`) among the novel | 🟢 **`87`** |
+| Pushed within `30` days | 🟢 **`154`** |
+| Novelty per topic | 🟢 `23`–`34` of `40`, on **every one of the `8`** |
+
+🔵 **The mechanism of the `15`-pass supply nil is now named, and it was never the supply.** `644-A`
+ran star floors from `>5` to `>40`; a star floor is a **proxy for age**, so a star-sorted census
+cannot see a repository published this month. 🟢 **`sort=updated` + `topic:` sees exactly that tail** —
+`154` of the novel rows were pushed inside `30` days, and `6` of the `10` rows above inside `4` days.
+
+🔴 **And the trade-off is real, measured, and against this base's regional mandate: `0 of 10` of the
+new rows can be placed.** Every `README` was probed for an institution, a country, a `.edu`/`.ac.xx`
+domain and for CJK or Cyrillic script: `10 of 10` carry none. 🔵 **The reason is structural — the
+update-sorted topic channel surfaces individual-author local-first desktop apps, and individuals do
+not put institutions in `README`s, while institutions do** (`644`'s `classbuild`/Queensland,
+`SmartOpenMAIC`/`.ac.cn`, `OATutor-LLM-Learner`/UC Berkeley were all placed that way, and all were
+star-sorted finds). 🟢 **So the two channels are complements, not rivals, and a pass should run both:
+star-sorted for placeable institutional rows, update-sorted `topic:` for volume.** Evidence:
+`evidence/topic-channel-novel.2026-11-04-p645.tsv`,
+`evidence/topic-channel-candidates.2026-11-04-p645.tsv`, `evidence/placement-nil.2026-11-04-p645.tsv`.
+
+### 🟡 `645-F` — the held star series, re-measured, and one correction to the method
+
+| Repo | Licence | ★ now | Previously held | `pushed_at` | Branch | Reading |
+|---|---|--:|--:|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | `54,833` | `54,833` (`p644`) | `2026-10-31` | `main` | 🟡 **Not re-measured this pass** — carried from `p644` and marked as carried, not restated as new |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT (`1,065 B`, residual `0`) | — | `42,630` (`p644`) | — | `main` | 🟢 **Licence re-read on bytes and it reproduces `p644`'s `1,065 B` exactly**, now with `645-A`'s predictor confirming it rather than a band |
+
+🔵 **Stated so it is not mistaken for a measurement: `p645` spent its online budget on the oracle
+census and the topic channel, and did NOT re-measure the star series.** The `p644` figures are
+carried and labelled carried. 🔴 **`vishalsachdev/canvas-mcp`'s `11`th observation is therefore
+owed and unpaid.**
+
 ## 🆕 `p644` — reads `2026-11-04` — **🔴 `644-A`: `p643`'s REPAIR WAS REAL BUT ITS DIAGNOSIS WAS INCOMPLETE. DROPPING `readme` RAISES NOVELTY, NOT YIELD — `258` NOVEL ADDRESSES, `13` EDUCATION APPLICATIONS (`5 %`). THE BINDING CONSTRAINT IS TOKEN SEMANTICS: EDUCATION'S VOCABULARY HAS BEEN COLONISED BY THE AI-ENGINEERING IDIOM OF `2026`.**
 
 🔵 **`p643` is vindicated on the narrow point and superseded on the wide one.** It ended a `15`-pass
