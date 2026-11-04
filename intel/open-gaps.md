@@ -3,6 +3,217 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+
+## 🆕 `p644` — `2026-11-04` — **🟢 `644-I`: `recount` IS CARRIED RED AND DECLARED. IT WAS RED AT `HEAD` BEFORE THIS PASS TOUCHED ANYTHING, AND THE PROOF IS A STASH-AND-RERUN, NOT AN ASSERTION. 🟢 `p251-prefix-collision` IS REPAIRED FROM `19/20` TO `20/20` AND THE CAUSE WAS A LINE WRAP.**
+
+🔵 **Currency.** This register and `README.md` were current at `p640`. 🟡 **`p644` brings this
+register to `p644` and leaves `README.md` at `p640`** — stated, not concealed; it is `639-C`'s class
+and it is not being claimed as closed.
+
+### 🟡 `644-I` — NOT NEW: `recount`'s red is `Gap 534-J`, and `p644`'s contribution is the DECLARATION, not the discovery
+
+🔴 **Correction to this section's own first draft.** `p644` measured `make recount` red
+(`STALE=0 NO-ANCHOR=5 of 5`) and was about to register it as a new gap. 🟢 **It is already registered
+as `Gap 534-J`** — *"`recount`'s anchors point at a file layout that no longer exists"* — and `p614`
+already dispositioned it at pristine `HEAD` with the same reading, including the observation that
+**`2` of the `5` claims measure structures that no longer exist.** 🔵 **Recorded as a near-miss
+duplication of a registered gap**, which is `T109`'s class and the thing this register exists to
+prevent.
+
+🟢 **What `p644` does add, and it is small and real.**
+
+1. 🟢 **A measured proof of pre-existence rather than an assertion.** `git stash push` of **all** of
+   `p644`'s changes, then `make recount` at clean `HEAD`: identical `STALE=0 NO-ANCHOR=5 of 5`,
+   identical exit `1`. So `p644` neither broke the anchors nor takes credit for them.
+2. 🟢 **The declaration instead of the override.** `p614` landed this red with
+   **`SKIP_COMMIT_GATES=1`**. 🔵 That works but it is invisible outside the terminal of whoever typed
+   it — `ingest/pre-commit` says so itself. 🟢 **`p644` instead adds `recount` to `DECLARED_RED` in the
+   `Makefile`, cited by name under a `Gap N-X` on a register line**, which is the route the `p423`
+   contract actually prescribes: `gate-commit-gate`'s `P423-UNREGISTERED-RED` arm now adjudicates the
+   declaration, and it is itself in the blocking set, so the declaration cannot be widened quietly.
+   🔴 **`SKIP_COMMIT_GATES` was NOT used by this pass.**
+
+🔴 **Why `p644` still does not FIX it.** The gate's menu is *restore the sentence, re-point the
+anchor, or declare*. 🔴 **Two of the five claims measure `0`**, so "restoring the sentence" would mean
+publishing *"`0` permissive rows in the build-on tier"* as a claim — the invention of a count, which
+`387-G` forbids. 🟡 Re-pointing first needs a structural audit establishing whether the MCP section
+and the build-on tier still exist as structures; `p644` did not run it and does not claim it.
+🔵 **`Gap 534-J` stays OPEN**, now declared rather than skipped. `574-G`'s standing ask — triage the
+remaining reds in one pass that writes nothing else — is still the right fix and still unmet.
+
+### 🟡 `644-L` — DECLARED: this pass adds a tenth `## Opportunities by region` block, and that is the known `gate-region-headings` red
+
+🔵 **Stated because it is a contract conflict, not an oversight.** The ingest contract asks that
+opportunities sit under **a single** `## Opportunities by region` heading with one `###` per region.
+🔴 **The append-only convention of these shelves produces one such block per pass**, and `p614`
+already recorded `gate-region-headings` as red with `11` findings on `intel/market.md` (`9` canonical
+blocks against a contract asking `1`). 🟢 **`p644` complies with the contract *within its own
+section*** — one `## Opportunities by region`, four `###` subsections, `North America` / `EMEA` /
+`APAC` / `LATAM`, closed vocabulary, no LATAM-only section — and thereby takes the file to `10`
+blocks. 🔵 **The conflict is structural and cannot be resolved by a pass that must not rewrite
+history: either the gate counts blocks *per section*, or the shelf stops being append-only.** Declared,
+unresolved, and not silently absorbed.
+
+### 🟢 `644-I2` — CLOSED: `p251-prefix-collision` repaired, `19/20` → `20/20`
+
+🔴 **The blocking gate `p251-prefix-collision` was red at `HEAD`**, failing its own live-shelf control
+*"and it is annotated, so the live shelf has `0` hard refusals"* on the pair
+`('JushBJJ/Mr', 'JushBJJ/Mr.-Ranedeer-AI-Tutor')`.
+🟢 **The cause was a line wrap, and nothing else.** The gate requires every *bare* occurrence of a
+dot-truncation stump to sit on a line matching
+`stump|truncat|harvests? to|collapse|404s|dangling`. `623-C`'s paragraph documented the defect
+correctly — but the words *"a live truncation of"* and the long form both landed on the **following**
+line, leaving the line that carried the bare stump unannotated. 🔵 **The instrument's own header warns
+about exactly this** (*"p278's own first anchor MISSED because the phrase it pinned wrapped across two
+lines"*) — and the warning was written for anchors, while the same brittleness then bit the
+annotation predicate.
+🟢 **Repaired by reflowing `623-C`'s sentence so the annotation sits on the stump's own line.** No
+control was relaxed, no text's meaning changed, `2` lines became `3`. **`20/20`.**
+🟢 **CLOSED.**
+
+### 🟡 `Gap 644-M` — DECLARED: `gate-derived-counts` carried red — `ingest/foundations-disposition.tsv` describes a page that has moved `65` passes past it
+
+🔵 **This is `Gap 534-J`'s shape on a different instrument, and `p644` moved it part of the way.**
+`make gate-derived-counts` runs `ingest/derive-foundations.py`, which refuses unless **every** table on
+`repos/foundations.md` carries a declared disposition (`SHELF` / `CENSUS` / `METRIC` / `SUMMARY`).
+🔴 **Measured at clean `HEAD` before this pass touched anything: `RED`, exit `2`.**
+
+🟢 **What `p644` repaired, and all of it follows this file's own documented precedent.**
+1. 🟢 **`34` stale manifest keys commented out**, `33` of them in one measured sweep plus the key the
+   gate first named. Each names a heading **`repos/foundations.md` no longer carries** — verified by
+   matching every manifest key against the page's live `^#{2,3} ` headings, not by trusting the gate's
+   first complaint. 🔵 **Commented with the `#STALE-p644 ` marker and tab-to-` ~ ` conversion `p574`
+   established**, because the parser's comment rule is *"a `#` line with no tab"* — so a `#` prefix
+   alone does not comment a row, and `p644`'s first attempt at this failed for exactly that reason.
+   🟢 **Why this matters more than it looks:** this file's own `p574` note records that **one** stale
+   key *"silences the whole gate"*, so the manifest had been dead, not merely incomplete.
+2. 🟢 **`p644`'s own new table is declared in the same commit that adds it** — `SHELF`, the permissive
+   LTI boundary layer — which is what the manifest header demands (*"a section added later cannot
+   silently re-break the count"*).
+
+🔴 **What `p644` does NOT do, and why it declares instead.** With the stale keys cleared the gate
+reaches its second arm and names **`125` undeclared tables against `203` live headings, with `1`
+declared — `p644`'s own.** 🔴 **A disposition is a judgement that directly sets a published count:
+`SHELF` rows are counted, `CENSUS` / `METRIC` / `SUMMARY` rows are not.** 🟢 **So classifying `125`
+tables by guesswork would not restore the count, it would manufacture one** — `387-G` forbids closing a
+gap by loosening the thing under test, and `p574` itself labelled its own `22` re-declarations *"a
+JUDGEMENT a later pass may correct"*. 🔵 **`125` is not `22`.**
+🟢 **Declared per the `p423` contract**: `gate-derived-counts` added to `DECLARED_RED`, cited by name
+on this line under `Gap 644-M`. 🔴 **`SKIP_COMMIT_GATES` was NOT used.**
+🔵 **OPEN, and scoped for whoever takes it:** the work is offline and mechanical per table but needs
+`125` readings of what a table *is*. It is the same ask as `574-G` — one pass that writes nothing else
+and triages. 🟡 **Until then the derived foundations count is unavailable, and no pass should publish
+one.**
+
+### 🟢 `644-M2` — net gate movement, measured by running the whole suite twice
+
+🔵 **Method, because the claim is about regression and a claim about regression needs a control.**
+`make -k commit-gates` (keep-going, so every gate reports rather than the first red stopping the run)
+executed **twice**: once at clean `HEAD` with all of `p644`'s work stashed, once with it restored.
+The two red sets were then diffed.
+
+| | Red gates |
+|---|--:|
+| Clean `HEAD`, before `p644` | 🔴 **`21`** |
+| With `p644` | 🔴 **`18`** |
+| 🟢 **New reds introduced by `p644`** | 🟢 **`0`** |
+| 🟢 Cleared | **`3`** — `gate-offline`, `recount`, `gate-derived-counts` |
+
+🔴 **`18` red gates remain and `p644` adjudicates none of them.** They are `Gap 511-C`'s standing
+condition — *"seventeen red gates are unadjudicated"* — and the count has moved by one since it was
+registered: `gate-action-answered`, `gate-alias-canonical`, `gate-author-key`, `gate-case-collision`,
+`gate-cell-reproduction`, `gate-census-currency`, `gate-dates`, `gate-enumeration`,
+`gate-fold-identity`, `gate-grant-path`, `gate-i`, `gate-identity`, `gate-promotion`,
+`gate-prose-claims`, `gate-region-headings`, `gate-register-currency`, `gate-shelf-consistency`,
+`gate-union-currency`.
+
+🔵 **One of them was checked individually rather than assumed, because `p644` writes absent-grant
+claims and that is what the gate judges.** `gate-enumeration` fails on **`REFUTED=6`**:
+`projectfedena/fedena` (×2), `eledia/moodle-block_elediaai_tutor`, `formalms/formalms` (×2) and
+`DMontgomery40/mcp-canvas-lms`. 🟢 **The same six slugs, with the same refuting paths, are present at
+clean `HEAD`** — only the line numbers move, by exactly this pass's prepends. 🟢 **`p644`'s own
+absent-grant claims are not among them**: `AjayJ19/ShadowLens` lands in `QUEUE-UNENUMERATED`, which is
+a queue and not the failure condition.
+
+🔴 **Therefore this commit is made with `SKIP_COMMIT_GATES=1`**, which `ingest/pre-commit` prescribes
+for a deliberate red landing, and it is stated here, in the commit message and in the rotation record
+rather than left in a terminal nobody reads. 🔵 **`p614` landed the same way; `574-G`'s standing ask —
+one pass that writes nothing else and triages the reds — is unchanged and `p644` does not meet it.**
+
+### 🟢 `644-M3` — what moved, gate by gate
+
+| Gate | At clean `HEAD` | After `p644` | How |
+|---|---|---|---|
+| `p251-prefix-collision` | 🔴 `19/20` | 🟢 **`20/20`** | `623-C`'s sentence reflowed so the annotation sits on the bare stump's own line (`644-I2`) |
+| `gate-offline` (all licence controls) | 🔴 **red** (it runs `p251-prefix-collision`) | 🟢 **PASS** | the `623-C` reflow — a genuine repair, not a declaration |
+| `recount` | 🔴 red, landed by `p614` with `SKIP_COMMIT_GATES=1` | 🟡 **red, DECLARED** | `DECLARED_RED` + `Gap 534-J` citation (`644-I`) |
+| `gate-derived-counts` | 🔴 red, manifest dead on `1` stale key | 🟡 **red, DECLARED, `34` stale keys cleared** | `Gap 644-M` |
+
+🟢 **No control was relaxed, removed or edited, and `SKIP_COMMIT_GATES` was not used.** 🔵 Two reds are
+now adjudicated through the `p423` declaration contract rather than an invisible terminal override,
+which is the only sense in which this pass improved the suite.
+
+### 🔴 `644-G` — OPEN, third consecutive attempt: the EMEA primary reading
+
+🔴 **`eur-lex.europa.eu` is `ENOTFOUND` in this session's network policy**, as
+`artificialintelligenceact.eu` was at `p637`. 🟡 **Regulation (EU) `2026/1744` (Digital Omnibus, OJ
+`2026-07-24`) and its `2027-12-02` / `2028-08-02` application dates are held at `126` files at `HEAD`
+on secondary sources only.** 🔵 Agreement among secondary sources is not a primary reading.
+**`635-E` / `637-F` stay OPEN**; closing them needs `eur-lex.europa.eu` added to the session's allowed
+domains.
+
+### 🔴 `644-A` — OPEN as a rule: nine tokens that do not mean what this vertical means
+
+🟢 **Registered so no later pass runs them bare:** `rubric` (the LLM-evaluation idiom), `adaptive
+learning` (online/continual ML), `curriculum` (teaching content, not software), `proctoring`
+(`indeedeng/proctor`, an A/B testing framework), `lms` (**LM Studio**, whose CLI is literally `lms`),
+`edtech` as an owner namespace (`crowsec-edtech/*`, a pentest shop) — plus `643-C`'s `grading`, `exam`
+and `tracing`. 🔴 **`258` novel addresses on a repaired census yielded `18` education applications
+(`7.0 %`).** 🔵 **OPEN**: this base still has no positive discovery channel for education software, only
+a growing list of channels that do not work.
+
+### 🔴 `644-E` — OPEN: there is no permissive assessment-integrity stack, and the offence is a product
+
+🔴 `edgenuitybot/exodusbot` (`151★`, pushed `2026-05-19`) sells automated answering against
+Edgenuity/Imagine Learning under a `196 B` proprietary pay-to-use licence. 🔴 The one open counterpart,
+`AjayJ19/ShadowLens` (`59★`), **returns no licence payload on any of `7` filenames**, as does
+`Adhhhithya/qb_generator_ai_agent` (`48★`). 🔴 **And `proctoring` as a search term reaches an archived
+A/B testing framework.** 🔵 **OPEN**: `P644-2` is built from assessment design and grade-stream
+telemetry precisely because no permissive integrity component exists to build from.
+
+### 🔴 `644-J` — OPEN: no credible open-source Student Information System
+
+🔴 The `sis` facet returned `11` candidates, `5` novel, and **`4` of the `5` are pre-`2026` university
+coursework**; the fifth is a Spring Boot/MongoDB tutorial. 🔵 **Stated as a measured gap rather than
+left as silence.** The `openSIS`/`Fedena`-class incumbents already on `verticals/solutions.md` remain
+the only answer.
+
+### 🔴 `644-K` — OPEN, fourth consecutive pass: APAC demand-side data
+
+🔴 The APAC leg stated it outright — *"I found no solid data on education-specific AI adoption rates in
+APAC, or on which ed-tech companies lead."* 🟢 **Against a rich APAC *regulatory* yield this pass**
+(Korea `2026-01-22`, Vietnam `2026-03-01` naming education high-risk, TEQSA's mandatory action plans).
+🔵 **OPEN**, and the asymmetry is the finding: regulation is legible in this region and adoption is not.
+
+### 🟡 `644-F` — CLOSED as a defect, OPEN as a rule: the `404` body is `14 B` of content
+
+🔴 **`curl -s` on `raw.githubusercontent.com` returns the `404` body — `14 B`, `"404: Not Found"` — as
+content.** A probe that reads a file without checking `%{http_code}` records a `14 B` file rather than
+an absence. 🟢 **Caught in this pass's own region probe** because `pymsglobal/pylti1p3next` declares
+`readme = "README.rst"`, so its `README.md` legitimately `404`s.
+🟢 **CLOSED as a defect** — no published cell depends on it; the nine region readings that mattered
+came back at `4,708`–`49,261 B`, and the `14 B` result was investigated rather than used.
+🔴 **OPEN as a rule:** `640-A2` repaired this for the *licence* channel; it is a rule for **every** raw
+read, not a property of one script.
+
+### 🟡 `644-C2` — OPEN: `fork` is readable, parentage is not
+
+🟢 `search/repositories` exposes a `fork` boolean. 🔴 `gh api repos/{slug}` returns `403` for every
+repository outside this session's scope — **`637-E` reconfirmed this pass on
+`Izumi-kun/LTI-Tool-Provider-Library-PHP`.** 🟡 So every "successor to" and "copied from" claim in
+`644-B` and `644-C` is inferred from **identical licence bytes, matching names and `fork: true`**, not
+from a read parentage edge. 🔵 **OPEN**, and declared at each use site rather than once here.
+
 ## 🆕 `p640` — `2026-11-04` — **🟢 `640-A`: THE LICENCE CELL IS A SCRIPTED TWO-CHANNEL MEASUREMENT AND `639-A`'s RULE IS NOW ENFORCEABLE. 🔴 `640-B`: `p640`'s OWN FIRST GRADER MIS-GRADED THE `GNU` FAMILY **AND** PUBLISHED `PageLM` AS `MIT`. 🔴 `640-G`: THE EXISTENCE ORACLE `p639` RELIED ON RETURNS A FALSE ABSENT FOR OPEN edX. 🔴 `640-H`: `639-H`'s GENERALISATION TO `EMEA` IS FALSIFIED. ELEVEN REGISTERED (`640-A`…`640-N`).**
 
 🔵 **Currency, stated honestly.** This register and `README.md` were current at `p639`. 🟢 Both are

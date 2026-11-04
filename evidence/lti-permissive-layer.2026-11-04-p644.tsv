@@ -1,0 +1,6 @@
+slug	branch	licence_file	bytes	grade_titleline	stars	forks	archived	fork	pushed_at	region	region_channel
+1EdTech/LTI-Tool-Provider-Library-PHP	master	LICENSE	11357	Apache-2.0	68	73	true	false	2018-06-29	North America	1EdTech Consortium, already placed by this base (495 files at HEAD)
+Izumi-kun/LTI-Tool-Provider-Library-PHP	master	LICENSE	11357	Apache-2.0	21	5	false	true	2025-03-31	UNPLACED	no stated channel
+pymsglobal/pylti1p3next	main	LICENSE	1070	MIT	12	3	false	true	2026-08-22	EMEA	pyproject.toml maintainer email christian.perfect@ncl.ac.uk (Newcastle University, UK)
+instructure/lti1_tool_provider_example	master	LICENSE	1054	MIT-BODY-NO-TITLE	33	21	false	false	2024-02-29	North America	Instructure Inc., the Canvas vendor
+hypothesis/lms	main	LICENSE	1320	BSD-2-Clause	53	16	false	false	2026-11-03	North America	filed by p643

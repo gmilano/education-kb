@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p644` — reads `2026-11-04` — **🔴 `644-A`: `p643`'s REPAIR WAS REAL BUT ITS DIAGNOSIS WAS INCOMPLETE. DROPPING `readme` RAISES NOVELTY, NOT YIELD — `258` NOVEL ADDRESSES, `13` EDUCATION APPLICATIONS (`5 %`). THE BINDING CONSTRAINT IS TOKEN SEMANTICS: EDUCATION'S VOCABULARY HAS BEEN COLONISED BY THE AI-ENGINEERING IDIOM OF `2026`.**
+
+🔵 **`p643` is vindicated on the narrow point and superseded on the wide one.** It ended a `15`-pass
+supply nil by re-scoping the census from `in:name,description,readme` to `in:name,description` and
+dropping the star floor, and it was right that *the nil was an artefact of the instrument*.
+🔴 **It then generalised the fix.** `p644` ran `18` facets on exactly `p643`'s repaired scope —
+`in:name,description`, `fork:true` (`627-A`/`637-C`), floors from `>5` to `>40` — and the repaired
+instrument produces a *different* failure: **`406` unique candidates, `148` held at `HEAD`, `258`
+novel, and `18` of those `258` are education software — `7.0 %`.**
+
+🟢 **The `18` are real and every one is byte-verified — `8` as agent rows below, `6` as platform rows
+on `verticals/solutions.md`, `4` as the `LTI` layer on `repos/foundations.md`.** 🔴 **The other `240` are not thin or
+low-starred — they are not education.** Six tokens now name something else, and they are named in
+`644-A` so no later pass runs them bare.
+
+| Token | Novel rows | Education rows | Now names | Specimen |
+|---|--:|--:|---|---|
+| `rubric` | `20` | 🔴 **`0`** | the **LLM-evaluation** idiom | `rlresearch/dr-tulu` (`726★`, *"RL with Evolving Rubrics for Deep Research"*), `ChrisChen667788/pixcull` (`129★`, *"photo culling — 6-axis rubric"*) |
+| `adaptive learning` | `26` | `1` | **online / continual ML** | `MLShukai/pamiq-core` (`29★`, *"real-time adaptive learning"* = online ML), `postBG/DTA.pytorch` (`163★`, domain adaptation) |
+| `curriculum` | `18` | 🔴 **`0`** | teaching **content**, not software | `Machine-Learning-Tokyo/AI_Curriculum` (`2,568★`), `ai-infra-curriculum/…` (`259★`) |
+| `proctoring` | `16` | 🔴 **`0`** | an **A/B testing framework** | `indeedeng/proctor` (`464★`, archived, *"Java-based A/B testing framework … used heavily within Indeed"*) |
+| `lms` | `13` | `1` | **LM Studio** — whose CLI is literally `lms` | `lmstudio-ai/lms` (`5,404★`), `lmstudio-ai/lmstudio-js` (`1,806★`) |
+| `edtech` *(owner namespace)* | `12` | 🔴 **`0`** | a **pentest shop** | `crowsec-edtech/larasploit` (`77★`, Laravel vulnerability scanner), `crowsec-edtech/CVE-2022-26134` |
+
+🔵 **These join `643-C`'s `grading`, `exam` and `tracing`.** Nine tokens are now on the list, and the
+list is the pass's main deliverable: **the vertical is not short of software, it is short of
+unambiguous names.** Evidence: `evidence/token-pollution.2026-11-04-p644.tsv`,
+`evidence/census-18facet.2026-11-04-p644.tsv`, `evidence/novel-addresses.2026-11-04-p644.tsv`.
+
+### 🟢 The `8` new agent rows — every licence byte-read `2026-11-04`
+
+🔵 **Channel:** `curl -s -o /dev/null -w '%{http_code} %{size_download}'` GET on
+`raw.githubusercontent.com`, branch from `search/repositories` and never guessed, graded on the
+**title line** (`ingest/p612-grade-title-line.py`) per `640-B`. Negative control
+(`gmilano/fabricated-repo-zz9qq`) returns `422` at the search layer and no payload.
+
+| Agent | Repo | Licence — file, bytes, title-line grade | ★ | Forks | `pushed_at` | Branch | Region | What it actually does |
+|---|---|---|--:|--:|---|---|---|---|
+| **classbuild** | [`jtangen/classbuild`](https://github.com/jtangen/classbuild) | 🟢 **MIT** — `LICENSE`, `1,069 B` | `144` | `31` | `2026-10-26` | `main` | **APAC** | 🟢 **The strongest new row this pass.** AI course generator, TypeScript, *"built on evidence-based learning science"* — and that claim is checkable: the `README` (`9,548 B`) names **the University of Queensland, Australia**, which is how this row is placed. Takes learning objectives and emits sequenced course structure rather than prose. |
+| **mind-mentor** | [`KartikLabhshetwar/mind-mentor`](https://github.com/KartikLabhshetwar/mind-mentor) | 🟢 **Apache-2.0** — `LICENSE`, `11,352 B` | `146` | `27` | `2026-05-18` | `main` | 🟡 **UNPLACED** | AI study assistant, TypeScript. 🟡 Filed on licence, liveness and star band; its `README` (`8,552 B`) states no institution or country, so **no region is asserted** — see `644-F`. |
+| **StudyAssistant** | [`v1tzor/StudyAssistant`](https://github.com/v1tzor/StudyAssistant) | 🟢 **Apache-2.0** — `LICENSE`, `11,357 B` | `47` | `8` | `2026-10-28` | 🔴 `master` | 🟡 **UNPLACED** | 🟢 **Offline-first and multi-organisation** — Kotlin, agent-driven tasks/goals/timer/analytics, and the `README` states *"university in separate organizations"*. The offline-first property is the interesting one: it is the shape that survives the connectivity assumptions a LATAM or African deployment cannot make. |
+| **SmartOpenMAIC** | [`Tyche-MKR/SmartOpenMAIC`](https://github.com/Tyche-MKR/SmartOpenMAIC) | 🟢 **MIT** — `LICENSE`, `1,065 B` | `38` | `18` | `2026-08-31` | `main` | **APAC** | Multi-agent interactive classroom. 🟢 **Its `LICENSE` is byte-identical to `THU-MAIC/OpenMAIC`'s** (`1,065 B`), so it is a clean MIT redistribution of the Tsinghua original — **unlike two other copies, which are `AGPL-3.0`; see `644-B`.** Placed on `.ac.cn`/`.edu.cn` in its `README` (`49,261 B`). |
+| **nano-NotebookLM** | [`ArthurYangX/nano-NotebookLM`](https://github.com/ArthurYangX/nano-NotebookLM) | 🟢 **Apache-2.0** — `LICENSE`, `11,314 B` | `24` | `4` | `2026-10-01` | `main` | 🟡 **UNPLACED** | Course materials → notes, **knowledge graphs and cited answers**, Python. 🟢 The citation requirement is what distinguishes it from the study-assistant crowd: it is the only new row that treats provenance as a feature. |
+| **memora** | [`tejgor/memora`](https://github.com/tejgor/memora) | 🟢 **MIT** — `LICENSE`, `1,068 B` | `46` | `6` | `2026-04-29` | `main` | 🟡 **UNPLACED** | Open-source AI study assistant, Python. 🟡 `README` is `1,060 B` — the thinnest of the `13`; filed for licence and liveness, not for documentation. |
+| **course-builder** | [`klausners/course-builder`](https://github.com/klausners/course-builder) | 🟢 **MIT** — `LICENSE`, `1,071 B` | `18` | `6` | `2026-10-27` | `main` | 🟡 **UNPLACED** | *"Research-driven course generator for Claude Code. Reads real articles. Writes real…"* — Shell. 🔵 Filed because it is the **agent-harness-native** form of `classbuild`'s job: a skill rather than an application. |
+| **OATutor-LLM-Learner** | [`CAHLR/OATutor-LLM-Learner`](https://github.com/CAHLR/OATutor-LLM-Learner) | 🟢 **MIT** — `LICENSE`, `1,105 B` | `7` | `0` | `2025-02-02` | `main` | **North America** | 🟢 **The sibling of a repo this base has held since `v54`.** `CAHLR` is the UC Berkeley lab behind `OATutor`, which this base already files with BKT; this is its LLM-learner variant (ReactJS/Firebase). 🟡 `7★` and last pushed `2025-02-02` — filed for **provenance**, not traction: it is what the OATutor authors did next. |
+
+🔴 **Two live education repos were found and are NOT filed as rows, because they have no licence at
+all.** `AjayJ19/ShadowLens` (`59★`, *"Real-Time AI Privacy Inspector for EdTech Platforms"*, Chrome
+extension) and `Adhhhithya/qb_generator_ai_agent` (`48★`, outcome-aligned question-bank generator)
+both return **no licence payload on any of `7` filenames across their default branch**. 🔵 They are
+recorded here so a later pass does not rediscover them as finds: they are unusable, not unknown.
+
+### 🟢 `644-H` — the held star series, re-measured
+
+| Repo | Licence | ★ now | Previously held | Forks | `pushed_at` | Reading |
+|---|---|--:|--:|--:|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **`54,833`** | `48,268` (late Oct, web leg) | `6,709` | `2026-10-31` | 🟢 Climb continues, ~`+6.5k` in a fortnight |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT (`1,065 B`) | **`42,630`** | `42,496` / `42,491` | `6,553` | `2026-11-04` | 🟢 Climbing; **this pass reproduces the stored `1,065 B` licence exactly** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | **`317`** | `317` (`p636`) | `104` | `2026-11-04` | 🟢 **Flat on the 10th observation** — `p636`'s *"the `272`→`317` climb has stopped"* holds |
+
 ## 🆕 `p643` — reads `2026-11-04` — **🟢 `643-A`: THE `15`-PASS SUPPLY NIL ENDS AT `15`, AND IT WAS AN ARTEFACT OF THE CENSUS FACET SCOPING, NOT OF THE SUPPLY. `12` REAL, BYTE-VERIFIED, PREVIOUSLY UNHELD ADDRESSES — `9` OF THEM PERMISSIVE. 🔴 `643-B`: `in:…,readme` AT A HIGH STAR FLOOR IS NOT A VERTICAL DISCOVERY CHANNEL, IT IS AN AWESOME-LIST DREDGE — MEASURED ON THIS PASS'S OWN FIRST CENSUS. 🔴 `643-C`: `grading` AND `exam` ARE SUBSTRING-POLLUTED TOKENS AND MUST NEVER BE RUN BARE.**
 
 🔵 **This pass contradicts its own fifteen predecessors, and the contradiction is instrumental.**
@@ -2590,8 +2651,9 @@ classify out and a sample cannot.
 
 ### 🔴 `623-C` — `p614`'s truncation defect is **still in the shelf**, and this pass's own extractor invented a second class of it
 
-🔴 `JushBJJ/Mr` is not an extractor artefact. It is **written into `agents/trending.md` as a
-backticked address** — ``JushBJJ/Mr` `` — a live truncation of `JushBJJ/Mr.-Ranedeer-AI-Tutor`, whose
+🔴 `JushBJJ/Mr` is not an extractor artefact — it is a live **truncation**. It is **written into
+`agents/trending.md` as a backticked address** — ``JushBJJ/Mr` `` — a truncation of
+`JushBJJ/Mr.-Ranedeer-AI-Tutor`, whose
 name contains a dot. `p614` measured this class; it has not been repaired.
 
 🔴 **And the inverse bit this pass's own instrument.** The extractor stripped trailing `.,);:` from

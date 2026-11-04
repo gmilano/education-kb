@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 2026-11-04 — `p644`: intelligent tutoring systems, graded as a cohort — an academic axis with one live row
+
+🔵 **Appended, not rewritten** — the history below this line is intact.
+
+🟢 **`p643` graded deep knowledge tracing as a dead axis. `p644` applies the same cohort method to
+`intelligent tutoring`, the term the field itself uses, and the result is different in a way that
+matters: not dead, but *academic*.**
+
+🔴 **`18` novel addresses. `14` are pre-`2024`. `11` carry no licence at all.** The cohort is
+dominated by university coursework and paper artefacts — `4DaaC/Intelligent-Tutoring-System`
+(*"Software Engineering II/III Project"*, `2012`), `fdarmon/ITS` (*"Part of RL course in MVA (ENS
+Cachan)"*, `2018`), `robertoguazon/Thesis-ITS` (`2016`), `jrollinson/edu` (*"Source code for
+intelligent tutoring systems research"*, `2015`), `JanWielemaker/rits` (`2015`),
+`Min-Chen/Intelligent_Tutoring_System_Min_Chen` (`2017`), `wassgha/CalcTutor` (`2016`),
+`tutorgen/hpit_services` (`2022`), `dinggz1982/Intelligent-Tutoring-System` (`2022`),
+`utkarshsrivastava/ParallelSparseMatrixFactorization` (`2016` — 🔴 and not an ITS at all; sparse
+matrix factorisation, matched on description prose).
+
+| Live rows (`pushed_at` ≥ `2026`) | Licence (byte-read) | ★ | `pushed_at` | Reading |
+|---|---|--:|---|---|
+| [`Clean-CaDET/tutor`](https://github.com/Clean-CaDET/tutor) | 🔴 **GPL-3.0** — `LICENSE`, `35,149 B` | `6` | `2026-07-15` | 🟢 **The only `2026`-live, licensed ITS in the cohort.** C#/.NET, computing education, Serbia (EMEA). Filed in `verticals/solutions.md`. |
+| [`Temez1/mathflow`](https://github.com/Temez1/mathflow) | 🔴 `null` | `6` | `2026-09-10` | *"Intelligent tutoring system for math"* — live, unlicensed, so unusable. |
+| [`JasonChen911/WordMaster-V1.0`](https://github.com/JasonChen911/WordMaster-V1.0) | 🔴 `NOASSERTION` | `6` | `2026-10-27` | AI English vocabulary app with `FSRS`. Live; licence not resolvable to an SPDX grant. |
+
+🟢 **The one genuinely useful address in the cohort is the oldest-looking one.**
+[`CAHLR/OATutor-LLM-Learner`](https://github.com/CAHLR/OATutor-LLM-Learner) — 🟢 **MIT**, `LICENSE`,
+`1,105 B`, `7★`, pushed `2025-02-02`. 🔵 **`CAHLR` is the UC Berkeley lab behind `OATutor`, which this
+base has filed since `v54`.** Its value is provenance, not traction: it is what the authors of the
+base's own BKT row built next. Filed in `agents/top.md`.
+
+🔴 **The lesson is the mirror of `643`'s.** `643` found an axis where the *addresses* were old.
+`644` finds an axis where the **vocabulary** is old: `intelligent tutoring` is what the research
+literature calls this, and what `2026` practitioners ship is called a *tutor*, a *study assistant* or
+a *course generator*. **Searching the field's own term reaches the field's archive.**
+
+🟢 **Where the live supply actually is, measured on the same census:** `study assistant` / `study
+buddy` (`20` novel), `course generator` / `course creator` (`11` novel, including `jtangen/classbuild`
+at `144★` MIT), and `quiz generator` / `question bank` (`23` novel, including `jmshea/jupyterquiz` at
+`166★` MIT and `F5Soft/xmu-question-bank` at `52★` MIT).
+
+🔴 **Negative result worth keeping: `essay feedback` / `writing feedback` returns `total_count = 1`
+for the whole of GitHub at `stars:>10` with `in:name,description`.** 🔵 Essay feedback is a flagship
+AI-in-education use case in every vendor deck this pass's trends leg returned, and there is **one**
+addressable open-source repository above `10★` that names it. Stated as a measured absence.
+
+Evidence: `evidence/census-18facet.2026-11-04-p644.tsv`,
+`evidence/novel-addresses.2026-11-04-p644.tsv`.
+
 ## 2026-11-04 — `p643`: deep knowledge tracing is a dead axis, graded as a cohort
 
 🔵 **Appended, not rewritten** — the history below this line is intact.

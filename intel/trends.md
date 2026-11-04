@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p644` — reads `2026-11-04` — **🔴 `644-E`: THERE IS A LIVE, COMMERCIAL, CLOSED-SOURCE MARKET IN AGENTIC ASSESSMENT CIRCUMVENTION AIMED AT A NAMED US K-12 PLATFORM, AND THIS BASE HELD NOTHING ON IT. 🟢 `644-B`: AN `MIT` UPSTREAM WITH AN `AGPL-3.0` REDISTRIBUTION COHORT MAKES CANONICAL-ADDRESS DISCIPLINE A LICENCE CONTROL, NOT HYGIENE.**
+
+### 🔴 `644-E` — NEW TREND: the anti-education agent, and it is a product
+
+🔵 **Every trend this base files describes AI being applied *to* learning. This one is AI applied
+*against* assessment, and it is further along than the defensive side.**
+
+[`edgenuitybot/exodusbot`](https://github.com/edgenuitybot/exodusbot) — `151★`, pushed `2026-05-19`.
+Its description: *"Exodus | The #1 Edgenuity Bot for Quizes, Tests, and Exams. Includes Auto Answers,
+Auto…"*. 🟢 **It targets Edgenuity (Imagine Learning), a major US K-12 courseware platform** — this is
+not a generic cheating script, it is tooling built against one vendor's assessment flow.
+
+🔴 **Its `LICENSE` is `196 B` and is not open source. Read in full, byte-exact:**
+
+> *"License 🔑 — Exodus is a pay-to-use menu. Do not repurpose, resell, crack, or steal assets. Any
+> attempt at pirating this software will result in a blacklist of our services."*
+
+🔵 **Three things follow, and they are why this is a trend and not a curiosity.**
+1. 🔴 **It is commercial.** *"Pay-to-use"* and *"our services"* — there is a vendor, a price and a
+   customer base behind the `151★`.
+2. 🔴 **It is distributed on GitHub under an owner namespace naming its target** (`edgenuitybot`), so
+   it is discoverable by exactly the students it is sold to, and invisible to a licence-filtered
+   census — this base's own instruments would never have surfaced it, because they filter for
+   permissive grants.
+3. 🟡 **It enforces its own IP while selling circumvention of someone else's integrity controls.**
+
+🔴 **The defensive side is weaker and unusable.** The one counterpart this census found,
+[`AjayJ19/ShadowLens`](https://github.com/AjayJ19/ShadowLens) (`59★`, *"Real-Time AI Privacy Inspector
+for EdTech Platforms"*, Chrome extension), **returns no licence payload on any of `7` filenames** — so
+the defence is unlicensed and the offence is a paid product. 🟢 **Placement: North America, stated by
+the target platform, not inferred.** Carried into `intel/market.md` as a North America opportunity.
+
+### 🟢 `644-B` — NEW: canonical-address discipline is a licence control
+
+🔵 **This base holds `THU-MAIC/OpenMAIC` in `487` prose references and records it as `MIT`,
+`1,065 B`.** 🟢 **`p644` reproduces that figure exactly** — same channel, same bytes. 🔴 **It also
+found three further copies, and they do not all carry the same grant.**
+
+| Slug | Role | Licence (byte-read, title-line graded) | Bytes | ★ | `pushed_at` | Held |
+|---|---|---|--:|--:|---|--:|
+| `THU-MAIC/OpenMAIC` | 🟢 canonical upstream (Tsinghua MAIC) | 🟢 **MIT** | `1,065` | `42,630` | `2026-11-04` | `487` files |
+| `Tyche-MKR/SmartOpenMAIC` | 🟢 clean MIT redistribution | 🟢 **MIT** — **byte-identical to upstream** | `1,065` | `38` | `2026-08-31` | `0` |
+| `calesthio/OpenMAIC` | 🔴 relicensed redistribution | 🔴 **AGPL-3.0** | `34,523` | `32` | `2026-03-21` | `0` |
+| `dotdo/OpenMAIC` | 🔴 relicensed redistribution | 🔴 **AGPL-3.0** — **byte-identical to `calesthio`** | `34,523` | `22` | `2026-03-17` | `0` |
+
+🟢 **The direction matters and it is the opposite of this base's usual finding.** `636` recorded
+`lms-matic-extender` declaring `OSLv3` *under* an `MIT` `LICENSE` — a conflict. 🔵 **This is not a
+conflict: MIT permits downstream relicensing under stricter terms, so both `AGPL-3.0` copies are
+lawful.** 🔴 **It is a trap all the same.** A studio that resolves the *name* "OpenMAIC" to a
+non-canonical slug — and `p644` found this base already carrying `wwyw4842-dot/OpenMAIC` (`14` files),
+`planejaia/OpenMAIC` (`6`) and `DeepTutor/OpenMAIC` (`2`) in prose — takes **network copyleft on a
+project whose canonical form is `MIT`**.
+
+🟢 **New rule, registered: an address is the licence.** Two repositories with the same name, the same
+description and the same code can differ by `33 KB` of licence text. Cite the slug, never the project
+name, and byte-read the slug you cited. 🔵 **The two `AGPL` copies are byte-identical and pushed four
+days apart (`2026-03-17`, `2026-03-21`), which suggests one copied the other** — 🟡 stated as a
+suggestion: `search/repositories` exposes a `fork` boolean but not the parent, and
+`gh api repos/{slug}` is `403` outside this session's scope (`637-E`, reconfirmed).
+
+### 🔴 `644-A` — the supply question is settled, and the answer is lexical
+
+🔵 **Three passes have now given three different answers, and they compose rather than contradict.**
+
+| | `p642` | `p643` | `p644` |
+|---|---|---|---|
+| Claim | supply is saturated | the nil was an instrument artefact | 🟢 **the instrument is repaired and the constraint is the vocabulary** |
+| Census scope | `in:name,description,readme` | `in:name,description` | `in:name,description` |
+| Candidates | `20` strong | `327` | `406` |
+| Novel addresses | `5` | `214` (`327` − `113` held) | **`258`** |
+| 🔴 **Published as rows** | `5` | `12` | 🔴 **`18` — `7.0 %` of the novel** |
+
+🔴 **Dropping `readme` and lowering the floor raised the novel pool `1.2×` and the published yield
+from `12` rows to `18` — real, and far short of the `21×` the candidate count suggests.** 🟢 **Nine
+tokens are now known to name something other than education**: `rubric` (the LLM-evaluation idiom),
+`adaptive learning` (online/continual ML), `curriculum` (teaching content, not software),
+`proctoring` (`indeedeng/proctor`, an A/B testing framework), `lms` (**LM Studio**, whose CLI is
+literally `lms`), `edtech` as an owner namespace (`crowsec-edtech/*` — three CVE-exploit repos and a
+Laravel vulnerability scanner), plus `643-C`'s `grading`, `exam` and `tracing`.
+
+🟢 **So the trend, stated plainly: education's open-source supply is adequate and its naming is
+not.** The live software calls itself a *tutor*, a *study assistant* or a *course generator*; the
+field's own research term, `intelligent tutoring`, reaches a `2012`–`2018` archive (graded as a cohort
+in `repos/trending.md`).
+
+### 🟢 Trends carried from the regional legs
+
+- 🟢 **From pilots to infrastructure.** AI embedding across admissions, advising, student services,
+  accessibility and administration rather than standalone pilots.
+- 🟢 **From experimentation to governance** — and the two regions are moving in opposite directions:
+  **North America has policy deadlines arriving ahead of tooling** (four states mandating district
+  policies, NC's model policy due `2026-12-31`), while **LATAM has `87 %` adoption against ~`25 %`
+  formal frameworks**. 🔵 The same product sells as *compliance* in one and *retrofit* in the other.
+- 🟢 **Purpose-built over general-purpose.** The **OECD `2026` Digital Education Outlook** recommends
+  education-specific AI over general-purpose tools — which is the same claim `644-A` makes from the
+  supply side.
+- 🟢 **Education named as a high-risk sector outside the EU for the first time this base has
+  recorded:** Vietnam's framework (effective `2026-03-01`) names education among six high-risk
+  sectors, explicitly covering automated assessment.
+- 🔴 **Assessment is the contested surface.** Explainability duties where AI influences student
+  outcomes, Florida restricting AI on graded work in public colleges, and `644-E`'s paid circumvention
+  product — all three point at the same layer.
+
+### 🔴 `644-F` — an instrument defect found in this pass's own probe
+
+🔴 **`curl -s` on `raw.githubusercontent.com` returns the `404` body as content — `14 B`, `"404: Not
+Found"`.** A region probe that reads `README.md` without checking `%{http_code}` therefore records a
+`14 B` "README" for any repository that does not have one at that path. 🟢 **Caught because
+`pymsglobal/pylti1p3next` declares `readme = "README.rst"` in its `pyproject.toml`**, so its
+`README.md` legitimately `404`s — and the probe reported a `14 B` README rather than an absence.
+🔵 **`640-A2` repaired exactly this defect for the *licence* channel; `644-F` records that the repair
+is a rule for every raw read, not a property of one script.** 🟢 **No published cell in this pass
+depends on the defect**: the nine region readings that mattered came back at `4,708`–`49,261 B`, and
+the one `14 B` result was investigated rather than used.
+
 ## 🆕 `p643` — reads `2026-11-04` — **🔴 `p642`'s HEADLINE TREND — *"THE SUPPLY SIDE IS SATURATED ON A MEASURED DENOMINATOR"* — IS WITHDRAWN. THE DENOMINATOR WAS REAL AND THE INSTRUMENT THAT PRODUCED IT WAS NOT.**
 
 🔵 **Recorded as a trend retraction, at the top, because it is the kind of error this base is most

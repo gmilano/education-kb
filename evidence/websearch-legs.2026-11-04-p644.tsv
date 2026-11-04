@@ -1,0 +1,9 @@
+leg	query	addresses_returned	addresses_unheld	facts_returned	facts_unheld	note
+global-agents	top open source AI agents education 2026 github MIT	0	0	0	0	9 of 9 results were general-purpose agent roundups; engine conceded "didn't turn up anything specific to education"
+global-trending	github trending education AI 2026	5	0	3	0	DeepTutor, OpenMAIC, Claw-ED, thinkrail, LLMs-from-scratch - 5 of 5 held; ai-engineering-hub held (13 files)
+global-verticals	open source platform education ERP CRM MIT Apache	5	0	1	0	OFBiz/AureusERP/Krayin/iDURAR/ERPNext all held; no education-specific MIT or Apache ERP returned
+global-trends	AI education industry trends 2026	0	0	6	1	market figures mutually inconsistent ($11.4B/$12.3B/$12.5B); OECD 2026 Digital Education Outlook purpose-built recommendation
+region-NA	AI education North America 2026 adoption regulation players	0	0	7	5	134 bills/31 states; MD+ID+OK+VA binding; NC model policy due 2026-12-31; Gallup 60% teachers
+region-EMEA	AI education EMEA 2026 adoption regulation players	0	0	8	3	Reg (EU) 2026/1744 dates (held, 126 files); $2.64B Europe market; FI/EE/NL leading K-12
+region-APAC	AI education APAC 2026 adoption regulation players	0	0	9	4	KR AI Basic Act 2026-01-22; VN law 2026-03-01 names education high-risk; AU TEQSA action plans
+region-LATAM	AI education LATAM 2026 adoption regulation players	0	0	9	6	UNESCO IESALC 87%/200 HEIs/19 countries; 716 instruments/23 countries; Observatory launched 2026-04-14 Santiago

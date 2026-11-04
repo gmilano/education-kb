@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p644` — reads `2026-11-04` — **🟢 `644-C`: THE `LTI` BOUNDARY HAS PERMISSIVE REFERENCE IMPLEMENTATIONS FROM THE STANDARDS BODY *AND* FROM THE LMS VENDOR. `p643` FOUND ONE DOOR; THERE ARE FIVE, AND THE LIVE ONES ARE ALL SUCCESSORS TO ARCHIVED INSTITUTIONAL ORIGINALS.**
+
+🔵 **`p643` filed [`hypothesis/lms`](https://github.com/hypothesis/lms) (`BSD-2-Clause`, `1,320 B`) as
+"the `LTI` boundary, sitting at `53★` the whole time", and concluded this base had been quoting an
+unnecessary `6`–`10` week build.** 🟢 **That conclusion strengthens.** `p644`'s `lti` facet returns
+four more permissive implementations, and two of them come from the institutions that define and sell
+the standard.
+
+| Repo | Licence — file, bytes, title-line grade | ★ | Forks | `archived` | `fork` | `pushed_at` | Region (channel) | Why it is a foundation |
+|---|---|--:|--:|---|---|---|---|---|
+| [`1EdTech/LTI-Tool-Provider-Library-PHP`](https://github.com/1EdTech/LTI-Tool-Provider-Library-PHP) | 🟢 **Apache-2.0** — `LICENSE`, `11,357 B` | `68` | `73` | 🔴 **`true`** | `false` | `2018-06-29` | **North America** — 1EdTech Consortium, already placed by this base (`495` files at `HEAD`) | 🟢 **The standards body's own tool-provider library, permissively licensed.** 🔴 **Archived and eight years stale** — but `73` forks against `68★` is the signature `637` identified: institutional output archived with the licence intact. **Fork-and-own, never fork-and-contribute.** |
+| [`Izumi-kun/LTI-Tool-Provider-Library-PHP`](https://github.com/Izumi-kun/LTI-Tool-Provider-Library-PHP) | 🟢 **Apache-2.0** — `LICENSE`, **`11,357 B` — byte-identical to 1EdTech's** | `21` | `5` | `false` | 🟢 **`true`** | `2025-03-31` | 🟡 **UNPLACED** | 🟢 **The maintained successor.** `fork: true` and the same licence payload to the byte, so the Apache grant carries through unmodified. 🔴 **This base holds `Izumi-kun` in `1` file and the upstream slug in `0`** — the whole PHP branch of the `LTI` story was unfiled. |
+| [`pymsglobal/pylti1p3next`](https://github.com/pymsglobal/pylti1p3next) | 🟢 **MIT** — `LICENSE`, `1,070 B` | `12` | `3` | `false` | 🟢 **`true`** | `2026-08-22` | 🟢 **EMEA** — `pyproject.toml` maintainer `christian.perfect@ncl.ac.uk`, **Newcastle University, UK** | 🟢 **The most useful row on this page: a `2026`-live, `MIT`, Python `LTI 1.3 Advantage` tool.** The manifest (`2,523 B`) declares `requires-python >=3.10` and keys `django` and `flask`, so it drops into the stack the rest of these shelves are built in. 🟢 **It is the maintained `next` of `pylti1p3`, which this base already holds in `19` files** — same succession shape as the row above. |
+| [`instructure/lti1_tool_provider_example`](https://github.com/instructure/lti1_tool_provider_example) | 🟡 **MIT by body** — `LICENSE`, `1,054 B`, **no title line** | `33` | `21` | `false` | `false` | `2024-02-29` | **North America** — Instructure Inc., the Canvas vendor | 🟢 **A worked tool provider published by the vendor of the LMS the client is actually running.** Sinatra/Ruby. 🔴 **Graded `MIT-BODY-NO-TITLE` by `ingest/p612-grade-title-line.py`** — the payload opens with MIT's operative words but carries no `MIT License` heading, so by `640-B`'s rule this cell says *body*, not *title*, and the row is `MIT` on that basis and is labelled as such. |
+| [`hypothesis/lms`](https://github.com/hypothesis/lms) | 🟢 `BSD-2-Clause` — `LICENSE`, `1,320 B` | `53` | `16` | `false` | `false` | `2026-11-03` | North America | 🔵 **Filed by `p643`; restated here only so the layer reads as one shelf.** |
+
+🟢 **What this changes for a build.** The `LTI` join no longer has a single permissive answer to be
+discovered — it has a **language choice**: PHP (`Izumi-kun`, Apache-2.0), Python
+(`pymsglobal/pylti1p3next`, MIT), Ruby (`instructure`, MIT-by-body) or Python/Pyramid with
+multi-region deployment docs (`hypothesis/lms`, BSD-2). 🔵 **In all four the copyleft of the host LMS —
+`AGPL-3.0` for Canvas and Open edX, `GPL-3.0` for Moodle — stays on the far side of a network
+boundary**, which is the property that made `p643`'s `P643-1` recipe possible and now makes it
+portable.
+
+🔴 **`644-C`'s caveat, stated rather than buried.** `search/repositories` exposes a `fork` boolean but
+**not the parent**, and `gh api repos/{slug}` returns `403` for every repository outside this
+session's scope (`637-E`, reconfirmed this pass). 🟡 **So "successor to" is inferred from identical
+licence bytes, matching names and `fork: true` — not from a read parentage edge.** Declared as an
+inference.
+
+Evidence: `evidence/lti-permissive-layer.2026-11-04-p644.tsv`.
+
 ## 🆕 `p643` — reads `2026-11-04` — **🟢 THE MISSING FOUNDATION WAS NEVER A MODEL OR A FRAMEWORK. IT WAS THE `LTI` BOUNDARY, AND IT HAS BEEN SITTING AT `53★` UNDER `BSD-2-Clause` THE WHOLE TIME.**
 
 🔵 **Why this is a *foundation* row and not an agent row.** Every recipe this base has published ends

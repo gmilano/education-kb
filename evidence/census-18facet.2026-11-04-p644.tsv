@@ -1,0 +1,410 @@
+facet	slug	stars	licence_api	pushed_at	archived	description
+tutor	JushBJJ/Mr.-Ranedeer-AI-Tutor	29545	null	2025-09-30	False	A GPT-4 AI Tutor Prompt for customizable personalized learning experiences.
+tutor	luban-agi/Awesome-AIGC-Tutorials	4569	MIT	2024-03-31	False	Curated tutorials and resources for Large Language Models, AI Painting, and more. 
+tutor	MorvanZhou/Tensorflow-Tutorial	4334	MIT	2020-10-31	False	Tensorflow tutorial from basic to hard, 莫烦Python 中文AI教学
+tutor	TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials	4022	NOASSERTION	2026-11-02	False	Synapsa Commons: free, hands-on AI courses that run anywhere (Colab, Kaggle, Binder, Codespaces, Jupyter). EU AI Act conformity evidence, model valida
+tutor	cbamls/AI_Tutorial	3707	null	2026-06-09	False	大厂发布的AI落地实践、顶尖实验室的最新论文、工业界的真实踩坑记录
+tutor	MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials	2946	null	2026-10-22	False	Multi-agent systems, memory, planning, reasoning loops
+tutor	Java-Edge/Java-Interview-Tutorial	2865	Apache-2.0	2026-10-28	False	请star，勿fork，因为爱force push！涵盖国际大厂Java/数据库/DDD/设计模式/微服务/中间件/AI大模型应用/区块链开发最佳实践。关注公众号【JavaEdge】，一起交流学习！
+tutor	Exorust/TorchLeet	2618	MIT	2026-10-21	False	LeetCode for PyTorch — 65 ML/AI interview problems from real interviews at Google, Meta, Anthropic. Jupyter notebooks, an auto-grader, and an MCP AI t
+tutor	Nutlope/llamatutor	2053	null	2026-10-23	False	An AI personal tutor built with Llama 3.1
+tutor	ai-vip/stable-diffusion-tutorial	1701	null	2023-05-26	False	全网最全Stable Diffusion全套教程，从入门到进阶，耗时三个月制作 
+tutor	AI-FanGe/Microduck-build-tutorial	1676	MIT	2026-09-11	False	A practical hardware and software setup for a compact RL-powered biped robot.
+tutor	HugeCatLab/ChatTutor	1322	AGPL-3.0	2026-01-09	False	👨‍🏫 ChatTutor: Visual and Interactive AI Tutor
+tutor	towardsai/tutorials	1034	NOASSERTION	2024-05-04	False	AI-related tutorials. Access any of them for free → https://towardsai.net/editorial
+tutor	tuanavu/airflow-tutorial	978	MIT	2022-11-03	False	Apache Airflow tutorial
+tutor	plastic-labs/tutor-gpt	933	GPL-3.0	2026-02-20	False	AI tutor powered by Theory-of-Mind reasoning
+tutor	zts212653/cat-cafe-tutorials	862	null	2026-03-30	False	从零搭建 AI 猫猫协作系统 — 一个真实项目的完整复盘
+tutor	Xilinx/Vitis-AI-Tutorials	521	MIT	2026-01-16	False	
+tutor	aaryansamanta/ai-ethos	496	null	2026-09-20	False	501(c)(3) nonprofit delivering ethical, inclusive, multilingual AI tutoring for underserved learners — low-income, rural, multilingual & neurodiverse 
+tutor	hgrif/airflow-tutorial	395	MIT	2021-09-01	False	Airflow basics tutorial
+tutor	riiid/ednet	386	null	2020-10-21	False	EdNet is the dataset of all student-system interactions collected over 2 years by Santa, a multi-platform AI tutoring service with more than 780K user
+tutor	deepset-ai/haystack-tutorials	378	Apache-2.0	2026-11-03	False	Here you can find all the Tutorials for Haystack 📓
+tutor	NVIDIA-AI-IOT/jetson_dla_tutorial	373	NOASSERTION	2022-05-19	False	A tutorial for getting started with the Deep Learning Accelerator (DLA) on NVIDIA Jetson
+tutor	ZeKaiNie/universal-examprep-skill	366	MIT	2026-10-27	False	Exam Cram Coach · 跨会话记忆与讲义溯源防幻觉的极速备考教练 | AI exam-prep tutor for Claude Code, Cursor, Codex, Antigravity: teaches from slides with page citations, crop
+tutor	Paperspace/DinoRunTutorial	326	MIT	2020-06-15	False	Accompanying code for Paperspace tutorial "Build an AI to play Dino Run"
+tutor	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	319	MIT	2026-09-21	False	Create and edit AI video tutorials with illustrated lessons, expressive presenters, distinct voices, and a native timeline. Windows desktop app with l
+tutor	Lightning-AI/tutorials	318	Apache-2.0	2025-08-04	True	Collection of Pytorch lightning tutorial form as rich scripts automatically transformed to ipython notebooks.
+tutor	Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero	317	MIT	2026-01-21	False	This repository provides a comprehensive step-by-step guide to building AI projects using the Raspberry Pi AI Kit. 
+tutor	Li-Evan/Bloom	300	MIT	2026-10-20	False	Hire a private AI tutor for anything — it reads how you actually learn and teaches the next lesson just for you. Bloom's 2-Sigma research as a Claude 
+tutor	NingNing0111/spring-ai-zh-tutorial	294	null	2025-03-17	False	Spring AI中文教程
+tutor	tunib-ai/large-scale-lm-tutorials	294	Apache-2.0	2021-11-02	False	Large-scale language modeling tutorials with PyTorch
+intelligent-tutor	CAHLR/OATutor	276	MIT	2026-11-03	False	Open Source Intelligent Tutoring System w/ BKT (ReactJS and Firebase)
+intelligent-tutor	GeminiLight/gen-mentor	136	CC0-1.0	2026-10-23	False	[WWW '25 Oral - GenMentor] Official code of our paper "LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System", a
+intelligent-tutor	ArnaudGuiovanna/tutor-mcp	95	MIT	2026-11-03	False	An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed.
+intelligent-tutor	ideas-edu/ideas	28	Apache-2.0	2026-09-05	False	Feedback services for intelligent tutoring systems
+intelligent-tutor	jyi/ITSP	26	MIT	2019-05-21	False	Artifacts of FSE-2017 paper on an Intelligent Tutoring System for Programming
+intelligent-tutor	JanWielemaker/rits	15	null	2015-03-28	False	Rule-based Intelligent Tutoring System
+intelligent-tutor	lisa-1010/smart-tutor	15	MIT	2017-10-21	False	Research project on deep reinforcement learning methods for intelligent tutoring systems
+intelligent-tutor	tutorgen/hpit_services	14	null	2022-07-07	False	Hyper Personalized Intelligent Tutoring - Web Services
+intelligent-tutor	yrahul3910/student-modeling-project	14	MIT	2023-01-07	False	An Intelligent Tutoring System (ITS) using various algorithms from literature.
+intelligent-tutor	wassgha/CalcTutor	13	null	2016-12-18	False	Intelligent Tutor System for Calculus classes (includes Javascript virtual math keyboard and random function/derivative/integral generator)
+intelligent-tutor	koofree/research-aied	12	null	2019-08-08	True	Support for the researches on AI Education (AIED), AI Tutor, Adaptive Learning, Intelligent Tutoring System
+intelligent-tutor	utkarshsrivastava/ParallelSparseMatrixFactorization	12	null	2016-01-25	False	Sparse Matrix Factorization (SMF) is a key component in many machine learning problems  and there exist a verity a applications in real-world problems
+intelligent-tutor	aolney/GuruTutor	10	Apache-2.0	2019-06-27	False	GuruTutor is a conversational intelligent tutoring system
+intelligent-tutor	dinggz1982/Intelligent-Tutoring-System	10	null	2022-06-29	False	基于知识图谱的智能教学系统
+intelligent-tutor	robertoguazon/Thesis-ITS	9	null	2016-12-07	False	Intelligent Tutoring System
+intelligent-tutor	fdarmon/ITS	8	null	2018-03-19	False	Project on Intelligent Tutoring Systems. Part of RL course in MVA (ENS Cachan)
+intelligent-tutor	gautamyadavs/AVLTree	8	null	2020-09-01	False	Intelligent Tutoring System for AVL Tree using CTAT
+intelligent-tutor	Mr-nnng/ICD	8	null	2024-03-04	False	ICD: A New Interpretable Cognitive Diagnosis Model for Intelligent Tutor Systems
+intelligent-tutor	Min-Chen/Intelligent_Tutoring_System_Min_Chen	8	null	2017-05-07	False	A intelligent tutoring system which use multimodal approach - real-time facial expression analysis and text sentiment analysis to predict whether a le
+intelligent-tutor	jrollinson/edu	8	null	2015-05-20	False	Source code for intelligent tutoring systems research.
+intelligent-tutor	dragonpilee/ScholarMate	8	null	2025-06-03	False	ScholarMate is an intelligent tutoring platform that leverages advanced AI technology . Powered by the DeepSeek-R1
+intelligent-tutor	CAHLR/OATutor-LLM-Learner	7	MIT	2025-02-02	False	Open Source Intelligent Tutoring System w/ BKT (ReactJS and Firebase)
+intelligent-tutor	Clean-CaDET/tutor	6	GPL-3.0	2026-07-15	False	An intelligent tutoring system specialized for computing education.
+intelligent-tutor	Temez1/mathflow	6	null	2026-09-10	False	Intelligent tutoring system for math
+intelligent-tutor	4DaaC/Intelligent-Tutoring-System	6	null	2012-05-07	False	Software Engineering II/III Project
+intelligent-tutor	Redomic/intellicode-backend	6	MIT	2026-05-11	False	Backend: Adaptive learning platform that bridges Intelligent Tutoring Systems (ITS) with coordinated Large Language Model (LLM) agents.
+intelligent-tutor	JasonChen911/WordMaster-V1.0	6	NOASSERTION	2026-10-27	False	WordMaster is an AI-powered English vocabulary learning application featuring FSRS spaced repetition, personalized wordbooks, intelligent tutoring, sp
+lesson-plan	SwiftEducation/teaching-app-dev-swift	685	NOASSERTION	2018-07-04	True	DEPRECATED. Instructor lesson plans that accompany Xcode projects, for guiding in-class experiential learning.
+lesson-plan	turingschool/lesson_plans	135	null	2020-08-26	False	Lesson Plans for the Turing School of Software & Design
+lesson-plan	noisebridge/PythonClass	106	null	2025-06-24	True	Lesson Plans for PyClass
+lesson-plan	BYU-CSA/cyber-kickstart	60	null	2026-02-18	False	This holds lesson plans, exercises, tools, scripts, links, etc. used in CTF training meetings
+lesson-plan	flyboat403/k12-skills	41	null	2026-07-29	False	K-12 lesson planning and differentiation skills
+lesson-plan	wptrainingteam/wptrainingteam.github.io	40	GPL-3.0	2020-11-30	False	WordPress.org Training Team Home for Lists of Lesson Plans and Workshop Ideas
+lesson-plan	redowl2265-aklhu/edu-lesson-plan	39	MIT	2026-07-30	False	
+lesson-plan	oaknational/oak-ai-lesson-assistant	35	MIT	2026-11-03	False	Oak's AI Projects including our AI Lesson Planning Assistant (Aila)
+lesson-plan	whosawhatsis/Geometry	35	CC-BY-4.0	2026-07-28	False	This repository contains 3D printable geometry files. They are explained in associated lesson plans and a Teacher’s Guide, linked at https://www.nonsc
+lesson-plan	IsaKiko/D3-visualising-data	33	NOASSERTION	2016-08-26	False	Lesson plans for teaching the basics of HTML, CSS, SVG, JSON, and JS (primarily D3.js), in order to create browser-based data visualisations.
+lesson-plan	raspberrypilearning/getting-started-with-raspberry-pi-lesson	32	NOASSERTION	2017-09-18	False	A lesson plan designed to teach students how to get started with Raspberry Pi at any level
+lesson-plan	Dorani/JS-Lesson	30	null	2019-12-09	False	Basic, intermediate and advanced JS topics - theories and algorithms/applications in the form of multiple lesson plans broken down in 3 parts!
+lesson-plan	robch/python-for-csharp-devs	28	null	2023-08-01	False	Autogenerated Lesson Plan for learning Python (for C# developers)
+lesson-plan	gonzalezf/Data-Analysis-and-Visualization-with-Python	25	null	2020-10-02	False	Data science classes for computer science & and engineering students. Developed a class curriculum, lesson plans, and instructions about how to manage
+lesson-plan	codebear9535-0xd4i/lesson-plan-builder	24	MIT	2026-07-31	False	
+lesson-plan	fastdeer4365-n4fst/lesson-plan-reviewer	23	MIT	2026-08-03	False	
+lesson-plan	Orenda-Project/rumi-platform	22	Apache-2.0	2026-11-02	False	Open-source AI teaching assistant on WhatsApp — classroom coaching, reading assessments, lesson plans, and voice interaction in 9 languages
+lesson-plan	ai4ed/LessonPlan	21	null	2025-09-02	False	
+lesson-plan	saniales/ai-lesson-planner	20	GPL-3.0	2026-02-14	False	Chat-first toolkit for teachers to plan complete courses and lessons with multi-agent workflows, template-based artifacts, and MARP slide generation.
+lesson-plan	tertiarycourses/TGS-2021008700-AI-Vibe-Coding-for-Excel-VBA	20	null	2026-10-17	False	WSQ courseware for AI-assisted Excel VBA: 31 labs, embedded macro-enabled workbooks, slides, Learner Guide and Lesson Plan.
+lesson-plan	ai4ed/CE-LessonPlan	19	MIT	2025-11-10	False	
+lesson-plan	ai4ed/COMA-LessonPlan	19	null	2026-01-21	False	
+lesson-plan	amandabee/scraping-for-journalists	19	NOASSERTION	2017-03-14	False	Tools and lessons plans
+lesson-plan	Ada-Developers-Academy/LessonPlanning	18	null	2013-10-31	False	
+lesson-plan	CathyErer/reading-explorer-lesson-plan-skill	18	MIT	2026-07-25	False	Claude skill: turn any Reading Explorer unit PDF into a 5-file set of bilingual ESL teaching materials | 上传 RE 单元 PDF，一键生成中英双语教案五件套（教案/词汇/复述/答案/句型）
+lesson-plan	wptrainingteam/repo-template	17	GPL-3.0	2020-05-23	False	Template for creating lesson plan repos, including the lesson plan template. Fork this or use it as a template to create new lesson plans.
+lesson-plan	oaknational/oak-ai-autoeval-tools	17	MIT	2026-06-11	False	Oak National Academy's AI Auto Eval tools provide LLM as a judge evaluation on lesson plans and resources
+lesson-plan	droxey/awesome-teachcode	17	MIT	2020-08-13	False	🎓 Awesome resources to use in the classroom, while reviewing code, and when writing tutorials, lesson plans/objectives.
+lesson-plan	kevinclark/Lesson-Plans	16	null	2020-01-10	False	
+curriculum	microsoft/mcp-for-beginners	17596	MIT	2026-11-02	False	This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, Typ
+curriculum	Machine-Learning-Tokyo/AI_Curriculum	2568	null	2021-04-02	False	Open Deep Learning and Reinforcement Learning lectures from top Universities like Stanford, MIT, UC Berkeley.
+curriculum	ai-infra-curriculum/ai-infra-engineer-learning	1839	MIT	2026-11-03	False	AI Infrastructure Engineer Learning Track - Production ML infrastructure curriculum (2-4 years experience)
+curriculum	ai-builders-foundation/ai-builders-curriculum	1425	MIT	2026-08-14	False	Open, vendor-neutral curriculum and hackathon starter kits for learning to build full-stack AI applications end-to-end. MIT-licensed. A project of the
+curriculum	AgenticAiLabs/Ai-Engineering-Roadmap	1244	MIT	2026-08-21	False	Path to becoming a self-taught AI Engineer - a curated, open-source curriculum modeled after OSSU.
+curriculum	GarethManning/education-agent-skills	945	NOASSERTION	2026-11-03	False	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders—pedagogy, learning science, curriculum, assessment and regeneration. 
+curriculum	beihaili/Get-Started-with-Web3	617	MIT	2026-11-02	False	Open-source bilingual AI-native Web3 curriculum: wallets, Bitcoin, Ethereum, DeFi, L2, DAO, smart accounts, llms.txt and MCP
+curriculum	microsoft/mastering-github-copilot-for-dotnet-csharp-developers	396	MIT	2026-08-24	False	Master GitHub Copilot for C#/.NET development via this curriculum! Learn AI-driven paired programming, optimize your workflow, and write cleaner, fast
+curriculum	minicoohei/ai-agent-camp	347	null	2026-10-07	False	AI Agent Camp — non-engineer-friendly AI agent training curriculum. Lessons, skills, commands, and hooks for Claude Code, Cursor, and Codex.
+curriculum	aaryansamanta/advanced-ai-curriculum	330	null	2026-09-20	False	Portfolio of capstone projects from AI & Technology, Data Science, AI Internship, Machine Learning and AI Humanities Honors. CNN pneumonia detection o
+curriculum	ai-builders/curriculum	293	GPL-3.0	2026-06-10	False	8-week curriculum for AI Builders
+curriculum	ai-infra-curriculum/ai-infra-junior-engineer-learning	259	MIT	2026-11-03	False	AI Infrastructure Junior Engineer Learning Track - Comprehensive curriculum for entry-level ML infrastructure engineers (0-2 years experience)
+curriculum	llSourcell/AI_For_Business_Curriculum	189	null	2018-06-07	False	This is the curriculum for the "AI for Business" Course By Siraj Raval on Youtube 
+curriculum	Intro-Course-AI-ML/LessonMaterials	178	null	2021-07-30	False	Open Sourced Curriculum and Lessons for an Introductory AI/ML Course
+curriculum	RiazML/math-for-llms	159	MIT	2026-06-11	False	Complete mathematics curriculum for AI/ML/LLM - from foundations to research frontiers
+curriculum	edgenuitybot/exodusbot	151	NOASSERTION	2026-05-19	False	Exodus | The # 1 Edgenuity Bot for Quizes, Tests, and Exams. Includes Auto Answers, Auto delays, built in AI Answers, Auto Submit, EdgeEX support and 
+curriculum	victor-explore/AI-Assignments-IISC-Banglore	145	null	2025-02-15	False	Assignments of courses taught at IISC as part of MTech AI curriculum
+curriculum	victor-explore/AI-Q-Papers-IISC-Banglore	119	null	2024-12-01	False	Question paper of courses taught at IISC as part of MTech AI curriculum
+curriculum	SagarBiswas-MultiHAT/penetration-testing-roadmap	84	NOASSERTION	2026-10-29	False	🎯 A structured 60-week penetration testing curriculum with 500+ free TryHackMe labs, OWASP Top 10 deep dives, tool mastery guides, and certification r
+curriculum	mshuedu/microsoft-ai-curriculum	83	null	2020-07-06	False	Microsoft AI Curriculum Hungary
+curriculum	ai-infra-curriculum/ai-infra-performance-learning	80	MIT	2026-11-03	False	AI Infrastructure Performance Engineer Learning Track - GPU optimization, inference optimization, and cost reduction
+curriculum	guanyuchery-rgb/AI-Builder-Python100	77	MIT	2026-06-10	False	Open-source 100-day Python curriculum for AI, data, quant, LLM and agent projects
+curriculum	BioMikeUkr/nlp-puzzles	73	Apache-2.0	2026-03-03	False	A hands-on NLP/ML curriculum for trainees and juniors who already know basic Python, ML and want to get production-ready in AI/ML engineering from emb
+curriculum	llSourcell/AI_Humanities	64	null	2019-01-21	False	This is the curriculum for AI Humanities by Siraj Raval on Youtube
+curriculum	SirhanMacx/Claw-ED	63	MIT	2026-09-19	False	Local-first AI teaching assistant for editable lesson drafts, student materials, and slides. Uses your curriculum and chosen model. Teacher-reviewed b
+curriculum	seshakiran/learn-ai-in-12-weeks	60	null	2026-05-10	False	Learn AI in 12 weeks using this curriculum
+curriculum	hanhuark/machine-learning-for-engineers	55	BSD-3-Clause	2026-10-18	False	Open AI/ML and AI-literacy curriculum for engineers: tutorials, assignments, projects, and verified workflows for physical systems.
+curriculum	mirzayasirabdullahbaig07/EduGemma-AI-Tutor	44	null	2026-05-06	False	Your adaptive AI tutor, powered by Gemma 4. Ask me anything — I'll explain it at exactly your level, grounded in curriculum knowledge.
+curriculum	CogitoNTNU/TutorAI	39	MIT	2026-11-02	False	TutorAI is a RAG system capable of assisting with learning academic subjects and using the curriculum and citing it. The project revolves around build
+curriculum	shettyvarshaa/PRINCIPLES-OF-AI	38	null	2024-03-14	False	Principles of AI concepts from the curriculum
+sis	francoisjacquet/rosariosis	650	GPL-2.0	2026-11-03	False	RosarioSIS Student Information System for school management. GitLab mirror: https://gitlab.com/francoisjacquet/rosariosis/
+sis	OS4ED/openSIS-Classic	349	null	2026-10-26	False	openSIS is a commercial grade, secure, scalable & intuitive Student Information System, School Management Software from OS4ED. Has all functionalities
+sis	FenixEdu/fenixedu-academic	175	LGPL-3.0	2023-06-14	False	FenixEdu Academic is open source Student Information System
+sis	zh-h/student-information-system-wechat-applet	47	MIT	2016-10-07	False	教务系统小程序 student-information-system-wechat-applet
+sis	nomadicjosh/eduTrac-SIS	46	GPL-3.0	2018-02-28	True	eduTrac SIS is the most advanced open source student information system for higher education.
+sis	QkeleQ10/Study-Tools	32	MIT	2026-10-19	False	A browser extension that improves various aspects of the Dutch student information system Magister.
+sis	gupta-shantanu/CollegeSystem	21	null	2016-09-08	False	:books: A django based student information system.
+sis	nur-zaman/better-usis	19	null	2025-05-22	True	Modern Interface and functionality for BRAC University's Student Information System.
+sis	edenroseFR/Web-based-SSIS	18	MIT	2024-02-27	False	A web-based student information system made using Flask framework and MySQL.
+sis	ragcrix/StudentInformationSystem	17	null	2026-06-30	False	Building a REST Service with Spring Boot and MongoDB
+sis	Kosudo/nextSIS	17	NOASSERTION	2018-07-16	False	nextSIS is an open-source student information system (SIS) based on PHP and MySQL, built by schools for schools with no hidden commercial agendas.
+lms-ai	lmstudio-ai/lms	5404	MIT	2026-10-14	False	LM Studio CLI
+lms-ai	NeptuneHub/AudioMuse-AI	2899	AGPL-3.0	2026-11-03	False	AudioMuse-AI uses sonic analysis to rediscover forgotten songs, uncover hidden connections in your music library, and generate intelligent playlists f
+lms-ai	lmstudio-ai/lmstudio-js	1806	MIT	2026-10-28	False	LM Studio TypeScript SDK
+lms-ai	lmstudio-ai/lmstudio-python	888	MIT	2025-10-27	False	LM Studio Python SDK
+lms-ai	adrianhajdin/saas-app	444	null	2025-05-23	False	LMS SaaS app featuring user authentication, subscriptions, and payments using Next.js, Supabase, and Stripe — also integrates Vapi AI voice agent for 
+lms-ai	iblai/lms	208	MIT	2026-11-03	False	Skills intelligence platform — discover courses, track competencies, earn credentials, and accelerate workforce development. Built with Next.js 15, Re
+lms-ai	lmstudio-ai/lmstudio-bug-tracker	163	null	2025-01-16	False	Bug tracking for the LM Studio desktop application
+lms-ai	X-isdoingreat/canvas-pilot	125	AGPL-3.0	2026-07-31	False	Local-first Canvas LMS AI agent that learns each course's recurring assignment workflow and reuses it through scan -> approval -> execute with student
+lms-ai	boyuchengz/canvas-mcp	119	MIT	2026-10-27	False	Read-only MCP server that connects Claude, ChatGPT and other AI assistants to Canvas LMS.
+lms-ai	Selleo/mentingo	106	MIT	2026-11-03	False	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX.
+lms-ai	jasp-nerd/canvas-course-downloader	82	MIT	2026-11-03	False	Chrome extension to download, export, and back up everything from Canvas LMS courses, files, assignments, pages, modules, syllabus, grades, and more. 
+lms-ai	bobhaotian/speech-driven-lessons	74	null	2025-07-27	False	This is a comprehensive Learning Management System (LMS) designed to revolutionize online education through AI-powered course creation and delivery. T
+lms-ai	sonnysangha/lms-platform-ai-saas-sanity-clerk-coderabbit-mux-openai-ai-agent-nextjs-16	67	NOASSERTION	2025-12-02	False	
+lms-ai	apimartuaw1sp/lmstudio-alternatives	54	NOASSERTION	2026-10-12	False	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens
+lms-ai	guillermoscript/lms-front	44	MIT	2026-11-02	False	Open-source multi-tenant LMS for creators and schools: sell courses on your own subdomain. Next.js 16 + React 19 + Supabase (RLS) + Stripe Connect, an
+lms-ai	apimartueuuchsi/lmstudio-migration-guide	41	NOASSERTION	2026-10-12	False	AI API gateway / relay: 307 models behind one OpenAI-compatible key. image2.5 $0.0085/image, Seedance 2.0 Mini $0.01056/sec, LLM from $0.0228/M tokens
+lms-ai	stef41/lmscan	37	NOASSERTION	2026-04-11	False	🔍 Detect AI-generated text and fingerprint which LLM wrote it. Open-source GPTZero alternative. Zero dependencies, works offline.
+lms-ai	TiKyisme/bk-lms-downloader	35	MIT	2026-10-13	False	Desktop downloader and sync utility for HCMUT BK-LMS, with local AI Study Pack export.
+lms-ai	zenUnicorn/AI-Powered-Learning-Management-System	27	null	2026-04-15	False	AI-Powered LMS — Ollama + Mistral Demo A fully local AI Learning Management System. No cloud API keys required
+lms-ai	savvides/idstack	27	MIT	2026-11-04	False	Evidence-based instructional design skills for Claude Code. 11 AI skills that check alignment, accessibility, cognitive load, and evidence strength. I
+adaptive-learning	LiyuanLucasLiu/RAdam	2548	Apache-2.0	2021-07-31	False	On the Variance of the Adaptive Learning Rate and Beyond
+adaptive-learning	thiswillbeyourgithub/AnkiAIUtils	892	AGPL-3.0	2026-06-01	False	AI-powered tools to enhance Anki flashcards with explanations, mnemonics, illustrations, and adaptive learning for medical school and beyond
+adaptive-learning	THU-KEG/MOOCCubeX	202	GPL-3.0	2023-12-27	False	A large-scale knowledge repository for adaptive learning, learning analytics, and knowledge discovery in MOOCs, hosted by THU KEG.
+adaptive-learning	zijinz456/OpenTutor	166	MIT	2026-11-03	False	The first block-based adaptive learning workspace that runs locally. Upload any material → get AI-generated notes, quizzes, flashcards, and an adaptiv
+adaptive-learning	postBG/DTA.pytorch	163	null	2023-10-03	False	Official implementation of Drop to Adapt: Learning Discriminative Features for Unsupervised Domain Adaptation presented at ICCV 2019.
+adaptive-learning	zeke-xie/adaptive-inertia-adai	149	MIT	2023-02-17	False	[ICML 2022, Oral] The PyTorch Implementation of Adaptive Inertia Methods. The algorithms are based on our paper:  "Adaptive Inertia: Disentangling the
+adaptive-learning	hu-my/ScalableModularNetwork	133	null	2024-03-06	False	This repository contains the reference source code for the paper ["Scalable Modular Network: A Framework for Adaptive Learning via Agreement Routing"]
+adaptive-learning	lancopku/AdaMod	128	Apache-2.0	2024-09-03	False	Adaptive and Momental Bounds for Adaptive Learning Rate Methods.
+adaptive-learning	SajadAHMAD1/Chaotic-GSA-for-Engineering-Design-Problems	107	null	2019-11-22	False	All nature-inspired algorithms involve two processes namely exploration and exploitation. For getting optimal performance, there should be a proper ba
+adaptive-learning	taki0112/RAdam-Tensorflow	97	MIT	2020-04-01	False	Simple Tensorflow implementation of "On The Variance Of The Adaptive Learning Rate And Beyond"
+adaptive-learning	donaldraph/ares-ai	96	null	2026-06-17	False	Autonomous AI SRE platform with a single decision authority model, adaptive learning, and a tactical operations center dashboard — built for intellige
+adaptive-learning	ShaikGames/mfa-legislator-drill	55	null	2026-11-04	False	Interactive MFA Legislation Quiz Trainer with Adaptive Learning 2026
+adaptive-learning	xiaofengShi/DKT-TensorFlow	50	null	2018-03-04	False	Deep Knowledge Tracing in TensorFlow for adaptive-learning experiments.
+adaptive-learning	andreagrisafi/SALTED	50	GPL-3.0	2026-11-02	False	Symmetry-Adapted Learning of Three-dimensional Electron Densities (and their electrostatic response)
+adaptive-learning	thebearwithabite/ai-file-organizer	50	MIT	2026-10-11	False	Intelligent file organization with computer vision, audio analysis, chunking, proactive AI-powered analysis, interactive classification, and adaptive 
+adaptive-learning	pingcy/ace-langgraph	45	null	2025-11-03	False	ACE LangGraph: ReAct Agent with Adaptive Learning - Integrating ACE framework with LangGraph for self-improving agents
+adaptive-learning	kentlangley/Jane	43	NOASSERTION	2026-11-02	False	Jane: An adaptive learning app for primary school kids based on the Marble Skill Taxonomy.
+adaptive-learning	mr-eggplant/awesome_test_time_intelligence	43	MIT	2026-09-09	False	A Survey on Self-Improving Test-Time Intelligence: Feedback-Driven Adapting, Learning, and Scaling at Inference
+adaptive-learning	Yuhuoo/EasySplat	41	NOASSERTION	2025-05-11	False	[ICME2025] EasySplat: View-Adaptive Learning makes 3D Gaussian Splatting Easy
+adaptive-learning	BrowenChen/EducationAlgorithms	36	null	2022-12-20	False	Adaptive Learning Module, IRT, CAT, SR algorithms + paper summary
+adaptive-learning	LiuShiBen/LANet	35	null	2025-08-15	False	Adaptive Learning Attention Network for Underwater Image Enhancement
+adaptive-learning	DanielLin94144/DUAL-textless-SQA	35	CC-BY-SA-4.0	2023-08-10	False	Textless (ASR-transcript free) Spoken Question Answering. The official release of NMSQA dataset and the implementation of "DUAL: Textless Spoken Quest
+adaptive-learning	albertauyeung/pyconhk2015-adaptive-learning	30	null	2015-11-08	False	Materials for the talk on adaptive learning at PyCon HK 2015
+adaptive-learning	EnnengYang/AdaTask	30	null	2023-09-29	False	AdaTask: A Task-Aware Adaptive Learning Rate Approach to Multi-Task Learning. AAAI, 2023.
+adaptive-learning	MLShukai/pamiq-core	29	MIT	2026-05-12	False	Framework for building AI agents with real-time adaptive learning capabilities.
+adaptive-learning	cliang1453/SAGE	29	MIT	2022-02-09	False	No Parameters Left Behind: Sensitivity Guided Adaptive Learning Rate for Training Large Transformer Models (ICLR 2022)
+adaptive-learning	RodrigueNdzana/AI-Adaptive-Learning-System	27	NOASSERTION	2026-06-07	False	
+adaptive-learning	mwasifanwar/eduadapt-ai	26	null	2025-11-07	False	AI-driven adaptive learning system that personalizes educational content based on student performance, learning style, and engagement metrics. Uses re
+adaptive-learning	writer/Self-Evolving-Learning-GESAL	24	null	2025-03-24	False	Graph-Enhanced Singular Adaptive Learning (GESAL)
+adaptive-learning	carolhsu113/Adaptive_Learning_System_Demo	24	MIT	2026-08-07	False	This is a pre‑generated demo sample of Adaptive Learning System
+course-gen	jtangen/classbuild	144	MIT	2026-10-26	False	AI-powered course generator built on evidence-based learning science
+course-gen	jrlasak/awesome-databricks	59	NOASSERTION	2026-10-22	False	170+ curated resources every Databricks Data Engineer should bookmark - tools, courses, creators, labs, and  communities
+course-gen	bhataasim1/ai-course-generator	52	null	2024-09-18	False	AI Course Generator is a platform that allows users to easily create and generate educational courses using artificial intelligence. By simply enterin
+course-gen	maggike/Full-Stack-AI-Course-Creator-Learning-Journey	39	null	2023-08-28	False	Learning journey - Your ultimate 1-stop learning platform to generate the best learning courses tailored to your needs using Open AI's immensely power
+course-gen	GitHubDaily/AI-Course-Generator	35	MIT	2025-11-01	False	基于讯飞星辰 Agent 开源平台构建的 AI 教育工具，帮助教师快速生成课程大纲和教学内容。
+course-gen	patrovite/Course_Generator	33	GPL-3.0	2023-05-22	False	Open source software to calculate your road running race, trail, ultra trail or trek.
+course-gen	burtenshaw/course_generator	27	Apache-2.0	2025-05-13	False	A repo for generating educational presentation videos.
+course-gen	mmuddinhamza/PalmPoweredCourseGenerator	25	null	2026-03-10	False	Flask application leveraging Palm 2 API to dynamically generate and serve educational content for any given subject or learning topic.
+course-gen	minicoursegenerator/skills-for-course-creators	18	MIT	2026-08-27	False	Curated Agent Skills directory for course creators, educators, instructional designers, and L&D teams, featuring practical skills for course assets, r
+course-gen	klausners/course-builder	18	MIT	2026-10-27	False	Research-driven course generator for Claude Code. Reads real articles. Writes real courses.
+course-gen	SeanChDavis/simple-course-creator	17	GPL-2.0	2026-05-28	False	Simple Course Creator allows you to easily add several blog posts to a “course” and display that course in the content of each blog post.
+course-gen	FenjuFu/Awesome-Astron-Workflow	17	MIT	2026-11-03	False	A curated collection of Astron workflow examples and user cases for AI-powered applications, featuring real-world implementations including AI Resume 
+quiz	smv1999/CompetitiveProgrammingQuestionBank	1280	MIT	2022-10-05	False	This repository contains all the popular Competitive Programming and DSA questions with solutions for your Coding Interview Preparation. 
+quiz	JudgePeach/math-question-bank	370	AGPL-3.0	2026-11-02	False	本地化高中数学题库管理系统，支持 LaTeX 实时渲染、智能大模型 AI 解析与 OCR 公式识别。Localized High School Math Question Bank Management System, supporting real-time LaTeX rendering, sm
+quiz	ECuiDev/obsidian-quiz-generator	175	MIT	2024-11-13	False	Generate interactive flashcards from your notes using models from OpenAI (ChatGPT), Google (Gemini), Ollama (local LLMs), and more. Or manually create
+quiz	Nirant07/VIT-Papers	168	null	2026-10-30	False	Biggest VIT Vellore Previous Year Question Papers Bank | Question Papers | PYQ | CATs | FATs | VIT Chennai | VIT Bhopal | VIT AP | 650+ Papers | 150+ 
+quiz	jmshea/jupyterquiz	166	MIT	2026-03-05	False	An interactive Quiz generator for Jupyter notebooks and Jupyter Book 
+quiz	JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	153	null	2026-10-12	False	Config files for my GitHub profile.基于 Streamlit 和 LaTeX 的自动化高中数学题库管理与智能组卷系统。支持 OCR 识别、TikZ 实时渲染与自动归档。
+quiz	jake1412/comprehensive-VIT	122	CC0-1.0	2022-11-18	True	Compilation of all question banks for Vellore Institute of Technology
+quiz	UrbanInstitute/quick-quiz	115	null	2022-01-10	False	quick quiz generator for bootstrap/jquery
+quiz	Weiyet/MakerCode_RTLChallenge	109	MIT	2026-10-09	False	Public RTL Question Bank of MakerCode https://makercode.jixiao-ai.com/
+quiz	PragatiVerma18/MLH-Quizzet	97	MIT	2026-02-20	False	This is a smart Quiz Generator that generates a dynamic quiz from any uploaded text/PDF document using NLP. This can be used for self-analysis, questi
+quiz	priyankagupta7679/devops-interview-question-bank	95	NOASSERTION	2026-09-25	False	
+quiz	quentin-mckay/AI-Quiz-Generator	95	null	2023-06-14	False	GPT-powered multiple choice quiz generator built with Next.js
+quiz	voxmedia/quiz-generator	90	null	2014-08-27	False	
+quiz	vennamprasad/awesome-mobile-interviews	89	MIT	2026-10-06	False	📱 The curated, production-grade mobile engineering & interview handbook. Android, iOS, Distributed System Design, Security, and 190+ company question 
+quiz	gygy-open/question-bank	88	AGPL-3.0	2026-11-03	False	AI-native question bank & paper composition system: smart import from Word/Markdown/images, LaTeX, review workflow, MCP. Desktop(Windows, Mac) & Docke
+quiz	meagmohit/mlquant-interview-question-bank	81	null	2022-02-24	False	Question bank for ML/Quant Interviews
+quiz	MiladJoodi/Frontend-Interview	78	null	2025-09-10	False	🧩 𝗪𝗶𝗸𝗶𝗙𝗿𝗼𝗻𝘁 is a front-end interview question bank covering topics like React, Next.js, TypeScript, and more.
+quiz	rbackupX/QuestionBank	77	null	2020-04-21	False	A QuestionBank of data science interview Questions
+quiz	lalitmach22/Question-Bank	71	NOASSERTION	2026-03-22	False	This repo contains question banks with most important/frequently asked questions in Data Science/Machine Learning, Programming/App Dev, SQL, DSA and L
+quiz	wukai0909/Generating-WORD-Test-Papers-from-Excel-Question-Bank	63	null	2023-04-18	False	题库（单选+多选+判断）.xlsx  本题库中单选520题，多选256题，判断题363题。  现在需要从题库随机选择20题单选题，10题多选题，10题判断题，生成1份测试考试试卷（本程序实现生成10份试卷和答案卷）。  本程序采用Tkinter做GUI界面，选择对应的题库路径。  采用openpyx
+quiz	sandipanpaul21/Data-Science-Interview-Question-Bank-Day1-Day30-iNeuron	62	null	2020-06-18	False	Data Science interview question by iNeuron
+quiz	WanyueKJ/wanyue_online_education_uniapp	61	null	2022-06-10	False	万岳在线教育系统(Online Education)，满足用户对于公开课(open class)、大班课(large class)、小班课(small class)、职业培训(vocational training)、在线考试(online exam)、答题刷题(answering question
+quiz	KeneanDita/HUHEMS	57	MIT	2026-03-30	False	HUHEMS is a full-stack exam management system for Haramaya University. It supports admin-managed exams and question banks, student exam attempts with 
+quiz	arnebauhaus12-cpu/quiz-bank-runner	56	null	2026-11-04	False	Best Mobile Quiz App for MFA Law Study 2026: Interactive Question Banks
+quiz	karanveerm/quizgen	53	null	2022-05-11	False	Simple Html Quiz Generator
+quiz	F5Soft/xmu-question-bank	52	MIT	2026-03-21	False	Question bank for course.xmu.edu.cn
+quiz	hwttop5/ielts-reading-past-papers	50	GPL-3.0	2026-08-10	False	一个面向雅思阅读备考的 Web 应用，民间题库与 AI 助教助力高效备考。|  A web app for IELTS Reading prep, built around a community question bank and an AI coach. 
+quiz	ggck43/QuestionBank_IUT	48	null	2024-05-15	False	This repository is created for getting idea about the previous year questions so that the students can have better understanding
+quiz	iitmbsc-student-projects/gate-da	48	NOASSERTION	2026-02-05	False	A question bank for GATE-Data Science aspirants.
+quiz	EulerZhao/QuestionBank	46	Apache-2.0	2023-05-31	False	创高体育理论考试题库 -四川大学
+rubric	XBuilderLAB/cheat-on-money	776	null	2026-06-12	False	AI 时代靠谱兼职发现 + 反诈验证 skill：需求信号反推 + 实时时效核查 + 反诈 rubric + 个性化校准环
+rubric	wanshuiyin/HERO-Anti-OverDefense	761	MIT	2026-11-02	False	HERO = Hashing · Edge cases · Rubrics · Overbuild — the four shapes coding agents over-defend in. A paste-in contract that stops them. Works with Clau
+rubric	rlresearch/dr-tulu	726	Apache-2.0	2026-10-09	False	Official repository for DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research
+rubric	anthropics/k12-teacher-skills	613	Apache-2.0	2026-10-14	False	Skills and eval rubrics for K-12 teachers, co-developed with Learning Commons
+rubric	alphadl/AdaRubrics	368	Apache-2.0	2026-08-24	False	AdaRubric: Adaptive Dynamic Rubric Evaluator for Agent Trajectories
+rubric	prometheus-eval/prometheus	327	MIT	2023-11-11	False	[ICLR 2024 & NeurIPS 2023 WS] An Evaluator LM that is open-source, offers reproducible evaluation, and inexpensive to use. Specifically designed for f
+rubric	RUC-NLPIR/Rubrics_Survey	275	null	2026-08-10	False	
+rubric	abusufyanvu/6S191_MIT_DeepLearning	269	null	2022-01-16	False	MIT Introduction to Deep Learning (6.S191) Instructors: Alexander Amini and Ava Soleimany Course Information Summary Prerequisites Schedule Lectures L
+rubric	TauCetiProject/TauCeti	265	Apache-2.0	2026-11-04	False	An AIs-welcome Lean library downstream of Mathlib: AI handle the implementation and review, humans write the roadmaps and review rubrics
+rubric	Rubric4Setwise/Rubric4Setwise	184	null	2026-07-30	False	Rubric-oriented document set evaluation and selection for RAG.
+rubric	RubricLab/create-rubric-app	150	NOASSERTION	2026-01-14	False	CLI tool to get started with a full-stack AI project.
+rubric	ChrisChen667788/pixcull	129	MIT	2026-10-29	False	Local-first AI photo culling for professional photographers — 6-axis rubric, XMP/IPTC export, Lightroom & Capture One ready.
+rubric	FreedomIntelligence/Awesome-Rubrics	128	null	2026-09-12	False	A curated list of resources (surveys, papers, benchmarks, and opensource projects) on Rubrics
+rubric	Sion612/rubrictrail	128	Apache-2.0	2026-10-30	False	A local-first, evidence-linked assignment planner.
+rubric	TerraByte-Dev/hinge-auto	99	MIT	2026-07-24	False	Emulator + ADB + Claude/Ollama vision: experimental Hinge automation that judges profiles and writes personalized openers against a user-defined rubri
+rubric	imlrz/DeepResearch-Bench-II	99	Apache-2.0	2026-10-19	False	DeepResearch Bench II (DRB2) is the follow-up to DeepResearch Bench, with a stronger focus on measuring the gap between deep research systems and huma
+rubric	Calibre-Labs/reforge-ai-evals	94	MIT	2026-11-02	False	Open-source AI evals toolkit: skills that guide AI coding agents to write eval rubrics, eval datasets (User Input Grid), trace codes, code evaluators 
+rubric	erictrainnlpinxihu/Grader-agent	92	MIT	2026-09-28	False	Grader 的 agent 采用五阶段主循环：perceive→plan→act→observe→respond，由 harness 驱动。模型只决定意图与置信度，路由、工具集、风险等级由代码钉死。act 分只读 ReAct、RAG、人工提案、批量初批。四个写动作不在工具表，只能产提案。批改输出结
+rubric	learning-commons-org/evaluators	88	NOASSERTION	2026-11-04	False	Evaluation for AI outputs against trusted educational rubrics. Measure and improve content quality with research-backed rubrics — ensuring rigor, reli
+rubric	paper-instruments/rubric	86	MIT	2026-10-27	False	A Python library for LLM-based evaluation using weighted rubrics.
+rubric	prometheus-eval/prometheus-vision	86	Apache-2.0	2024-09-13	False	[ACL 2024 Findings & ICLR 2024 WS] An Evaluator VLM that is open-source, offers reproducible evaluation, and inexpensive to use. Specifically designed
+rubric	tomnio/rubric	85	MIT	2026-09-28	False	Schema-first structured extraction from LLMs — validated JSON from one call or a 150-page document.
+rubric	NeoSoul-AI/rubric-prediction-skill	85	MIT	2026-09-04	False	
+rubric	THUDM/CaRR	77	MIT	2026-04-08	False	This repository contains the code and data for the paper "Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aw
+rubric	teqkilla/RubricHub	75	null	2026-03-13	False	TBD
+rubric	ZJU-REAL/PaperGym	75	MIT	2026-10-15	False	Rubric-Centered Framework for Research-Plan Generation
+rubric	AI9Stars/LLM-Rubrics-Survey	71	MIT	2026-07-02	False	A survey of rubrics across the evolving LLM landscape.
+rubric	blocher/dailyoffice2019	70	MIT	2026-11-03	False	This project is used to build the website https://www.dailyoffice2019.com. The site invites you to join with Christians around the world in praying wi
+rubric	delip/autorubric	68	NOASSERTION	2026-10-31	False	A Python library encapsulating best practices for rubric-based evaluation of LLM/VLM outputs using AI judges such as LLMs and decision models.
+rubric	cobibean/soul-grader-skill	61	MIT	2026-08-22	False	Hermes Agent skill for grading SOUL.md identity files with a research-backed rubric and public-safe field guide.
+proctoring	vardanagarwal/Proctoring-AI	633	MIT	2024-12-10	False	Creating a software for automatic monitoring in online proctoring
+proctoring	indeedeng/proctor	464	NOASSERTION	2024-07-10	True	Proctor is a Java-based A/B testing framework developed by, and used heavily within, Indeed.
+proctoring	reneverland/CBIT-AiExam-plus	277	null	2025-09-28	False	A general‑purpose AI‑powered examination platform for schools, training providers, enterprises, and online programs. It delivers multi‑disciplinary it
+proctoring	venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment	268	MIT	2023-04-16	False	Java Solution to the TCS Xplore Proctored Assessment 2020
+proctoring	narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	236	null	2026-10-30	False	This is a AI Based Smart Exam Proctoring System using python flask, mysql as database, yolov4
+proctoring	Azure-Samples/openhack-devops-proctor	103	MIT	2022-02-04	True	DevOps OpenHack Proctor environment code and provisioning scripts
+proctoring	aws-samples/amazon-rekognition-virtual-proctor	89	NOASSERTION	2026-08-07	True	A solution to assist with virtual proctoring of exams using Amazon Rekognition
+proctoring	tusharnankani/Aankh	86	GPL-3.0	2024-12-18	False	Aankh - A real time proctoring solution 🦄
+proctoring	lebmatter/exampro	72	MIT	2026-08-19	False	Proctored Exams for Frappe Framework
+proctoring	openedx/edx-proctoring	69	AGPL-3.0	2026-11-03	False	
+proctoring	krishnakumaragrawal/Artificial-Intelligence-based-Online-Exam-Proctoring-System	64	null	2026-05-25	False	AI based Online Exam Proctoring System is an innovative project designed to maintain the integrity and security of online exams using Python and Compu
+proctoring	AarambhDevHub/exam-cheating-detection	48	MIT	2025-05-18	False	AI-powered online exam proctoring system that detects suspicious activities using computer vision. Tracks eye movements, face presence, multiple faces
+proctoring	vincenzo-afk/Proctored-MCQ-Exam-Platform	37	MIT	2026-08-24	False	A browser-based multiple-choice exam platform with camera proctoring, module progression, results, and certificate exports.
+proctoring	indeedeng/proctor-demo	33	Apache-2.0	2023-06-14	True	Reference implementation that demonstrates core Proctor functionality
+proctoring	AparGarg99/Intelligent-Online-Exam-Proctoring-System	31	null	2023-02-03	False	Automatic online exam proctoring system that provides authentication and abnormal behavior monitoring of examinees in the online examination.
+proctoring	eLearning-BS23/moodle-quizaccess_proctoring	30	NOASSERTION	2026-08-03	False	
+proctoring	05saitejaswi/CLF-P01---AWS-Certified-Cloud-Practitioner---Practice-	26	null	2021-05-14	False	The AWS Certified Cloud Practitioner examination is intended for individuals who have the knowledge and skills necessary to effectively demonstrate an
+proctoring	rajrajhans/examsecure	24	null	2021-09-18	False	ExamSecure is a platform for conducting cheating free remote examinations with an automated virtual proctoring system that performs face and object de
+proctoring	N0v0cain3/Kuizu	22	MIT	2021-06-09	False	Online auto proctoring quiz
+proctoring	hemantkarekar/MyProctorAI	22	MIT	2024-05-29	False	This is an Exam Portal with an AI-based Anti-cheating Proctoring and Invigilation System in Flask (Python).
+proctoring	mohdzubairshafi/ProctoAI-MERN	22	null	2023-10-31	False	 ProctoAI-Automated Exam Proctoring System Developed an Automated Exam Proctoring System (AEPS) utilizing AI-based algorithms for online exams. Achiev
+proctoring	Kdmeenaa/CloakBox	21	Apache-2.0	2025-11-29	False	About Make your virtual machine invisible to proctoring software  Topics vm proctoring virtualbox virtual-machine virtualization exam bypassing bypass
+proctoring	sanket2000/proctoring	19	null	2024-12-17	False	AI exam proctoring system using google mediapipe and python
+proctoring	ansh-saini/react-proctoring	18	MIT	2023-02-20	False	Headless proctoring system for react
+proctoring	shreyaspj20/Reliable-proctoring-AI	18	MIT	2022-01-03	False	In this project, we present ways to improve reliability of proctoring by generating plots of each parameter measured during the online evaluation.
+proctoring	rohittuli5/Microsoft-Engage-Project	18	MIT	2021-11-28	False	Procto is an Online Proctoring Tool that ensures Cheating free exams. It has features like Mobile Phone, Book, Laptop Detection, Multiple people detec
+proctoring	RakeshBabuGajula/Exam_Intellect	18	MIT	2026-10-15	False	ExamIntellect is an AI-powered proctoring dashboard for live exam monitoring, student analytics, and automated feedback. Features include real-time al
+proctoring	Hiteshydv001/Guard-AI-Designing-Remote-Proctoring-System	17	null	2026-02-11	False	🌟 Guard-AI Proctor 🌟 🔒 Secure. Reliable. Smart.  Transforming remote proctoring with AI! 🚀  💡 Top Features: 🎥 AI Monitoring: Detects and flags suspici
+proctoring	indeedeng/proctor-webapp	17	Apache-2.0	2019-03-07	True	Proctor-webapp is a web application for managing Proctor A/B test definitions.
+proctoring	shreeram312/AI-Proctored-System	17	null	2025-06-09	False	AI Proctored Exam System: A web-based app leveraging TensorFlow.js for real-time face detection and Web Audio API for microphone checks, ensuring secu
+teaching-assistant	Sfedfcv/redesigned-pancake	278	null	2021-05-16	False	Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects 2 Security Insights Merge branch 'main' into 1862-Add-Travi
+teaching-assistant	TochusC/ai-assistant-teaching-website	98	MIT	2024-11-03	False	[AI-Assistant] “通慧智教”-大模型赋能智能教学网站-通过AI教学助理-小慧，使用语音或文本，以自然语言方式与网站交互。祝贺小慧成功斩获国内多个软件设计赛事的【国家一等奖】、【国家二等奖】及【国家三等奖】。Large Model Empowered Intelligent Teachi
+teaching-assistant	Center-for-AI-Innovation/ai-teaching-assistant-uiuc	76	MIT	2023-04-16	False	The UX & driver code for the multi-model TA_Chatbot
+teaching-assistant	motine/sta	74	null	2020-07-27	False	Sketchbook - Simple Teaching Assistant
+teaching-assistant	SirhanMacx/Claw-ED	63	MIT	2026-09-19	False	Local-first AI teaching assistant for editable lesson drafts, student materials, and slides. Uses your curriculum and chosen model. Teacher-reviewed b
+teaching-assistant	jaluoma/pruju-ai	57	MIT	2025-07-08	True	An AI teaching assistant that allows students to interact with the teacher's course materials
+teaching-assistant	hoiliu-0801/MonoTAKD	43	Apache-2.0	2025-05-05	False	MonoTAKD: Teaching assistant knowledge distillation for monocular 3D object detection.
+teaching-assistant	Angeld55/Mathematics_courses_FMI	43	null	2023-08-22	False	Lectures, seminars, tasks, exams and homework assignments (some with solutions), that I have written as a teaching assistant for math courses @ Facult
+teaching-assistant	ishin-xyz/TAS	41	null	2020-04-11	False	Teaching Assistant System。基于Spring Boot开发的教学辅助系统。
+teaching-assistant	recolic/micro-teaching-assistant-fucker	36	WTFPL	2023-12-01	False	This is a read-only mirror for https://git.recolic.net/root/micro-teaching-assistant-fucker
+teaching-assistant	sean0042/VTA	33	null	2025-05-22	False	[ACL 2025 Industry Track]  A Large-Scale Real-World Evaluation of an LLM-Based Virtual Teaching Assistant
+teaching-assistant	nirzaf/Mastering-Windows-Presentation-Foundation	31	null	2019-10-30	True	Book Description: Key Features Learn how to use the MVVM software architectural pattern and see the benefits of using it with Windows Presentation Fou
+teaching-assistant	IvanFilipov/FMI-DSA	29	MIT	2020-01-24	False	Some examples druing the DSA (data structures and algorithms) courses given by me (Ivan Filipov) as a teaching assistant  @ Faculty of Mathematics and
+teaching-assistant	Center-for-AI-Innovation/ai-ta-backend	28	MIT	2026-09-01	True	API backend for UIUC AI Teaching Assistant.
+teaching-assistant	TF-Liu/NJUSE-COA	24	null	2022-09-22	False	南京大学软件学院 2021年秋季《计算机组织结构》课程项目(By Teaching Assistant)
+teaching-assistant	worldbeater/dta	23	MIT	2026-10-08	False	Digital Teaching Assistant web app.
+teaching-assistant	nature924/No277teaching-assistant-system	23	null	2024-10-31	False	基于Springboot框架实现的教学辅助系统，编程语言:Java ；数据库:MySQL；项目管理工具:Maven 前端技术:VUE、javascript、html、css、jQuery； 后端技术:Spring、SpringMvc、MyBatis，系统包含三种角色：管理员、用户,教师
+teaching-assistant	Orenda-Project/rumi-platform	22	Apache-2.0	2026-11-02	False	Open-source AI teaching assistant on WhatsApp — classroom coaching, reading assessments, lesson plans, and voice interaction in 9 languages
+teaching-assistant	Amirparsa-Sal/TA-BOT	22	null	2023-03-02	False	An open source Telegram bot which can be used as a teaching assistant bot if you are trying to find an easy and secure way to communicate with your st
+teaching-assistant	leminhnguyen/Media-Store-JAVAFX	21	null	2026-05-29	False	🐛 A desktop-based online shopping application developed using the JavaFX framework. Built as part of a Teaching Assistant role for the Object-Oriented
+spaced-repetition	ankitects/anki	32520	NOASSERTION	2026-11-03	False	Anki is a smart spaced repetition flashcard program
+spaced-repetition	open-spaced-repetition/fsrs4anki	4123	MIT	2026-08-14	False	A modern Anki custom scheduling based on Free Spaced Repetition Scheduler algorithm
+spaced-repetition	st3v3nmw/obsidian-spaced-repetition	2609	MIT	2026-11-01	False	Fight the forgetting curve by reviewing flashcards & entire notes on Obsidian
+spaced-repetition	olmps/memo	1870	BSD-3-Clause	2024-07-29	False	Memo is an open-source, programming-oriented spaced repetition software (SRS) written in Flutter.
+spaced-repetition	andymatuschak/orbit	1838	NOASSERTION	2026-10-20	False	Experimental spaced repetition platform for exploring ideas in memory augmentation and programmable attention
+spaced-repetition	eudoxia0/hashcards	1186	Apache-2.0	2026-11-02	False	A plain text-based spaced repetition system.
+spaced-repetition	open-spaced-repetition/ts-fsrs	851	MIT	2026-10-29	False	ts-fsrs is a versatile package written in TypeScript that supports ES modules, CommonJS, and UMD. 
+spaced-repetition	open-spaced-repetition/awesome-fsrs	750	CC0-1.0	2026-11-03	False	A curated list of awesome FSRS implementations, papers and resources
+spaced-repetition	open-spaced-repetition/free-spaced-repetition-scheduler	730	MIT	2026-04-21	False	A spaced repetition algorithm based on DSR model
+spaced-repetition	S-Sigdel/vimhjkl	545	MIT	2026-07-03	False	learn vim from your terminal with spaced repetition
+spaced-repetition	ankimcp/anki-mcp-server	544	MIT	2026-10-22	False	A Model Context Protocol (MCP) server that enables AI assistants to interact with Anki, the spaced repetition flashcard application.
+spaced-repetition	open-spaced-repetition/py-fsrs	522	MIT	2026-08-09	False	Python Package for FSRS Spaced Repetition
+spaced-repetition	alyssaxuu/carden	491	MIT	2022-06-17	False	Flashcards with spaced repetition and gamification 🌱
+spaced-repetition	open-spaced-repetition/fsrs-rs	456	BSD-3-Clause	2026-11-04	False	FSRS for Rust, including Optimizer and Scheduler
+spaced-repetition	subconcept-labs/ulangi	455	GPL-3.0	2023-01-20	True	Ulangi is a language flashcards app with spaced repetition system and more.
+spaced-repetition	shaankhosla/repeater	442	Apache-2.0	2026-09-28	False	Spaced repetition, in your terminal
+spaced-repetition	hluaguo/learn-faster-kit	401	MIT	2026-08-04	False	AI-powered learning coach with spaced repetition with Claude Code - master any knowledge faster with personalized syllabi and progress tracking
+spaced-repetition	friebetill/TubeCards	358	GPL-3.0	2024-03-12	False	TubeCards - Cross-platform Spaced Repetition App written in Flutter
+spaced-repetition	ncase/remember	352	CC0-1.0	2022-08-26	False	An interactive comic on Spaced Repetition
+spaced-repetition	SYuan03/Skill-Anything	344	MIT	2026-09-26	False	Any source (PDF, video, web, audio, text) to interactive learning package with quizzes, flashcards and spaced repetition. One command, 12-section stud
+spaced-repetition	VienDinhCom/supermemo	337	MIT	2025-03-28	False	A JavaScript and TypeScript implementation of SuperMemo 2, a spaced repetition algorithm for flashcards.
+spaced-repetition	open-spaced-repetition/fsrs4anki-helper	327	MIT	2026-09-17	False	An Anki add-on that supports Postpone & Advance & Load Balance & Easy Days & Disperse Siblings & Flatten
+spaced-repetition	l3kn/org-fc	296	GPL-3.0	2026-01-17	False	Spaced Repetition System for Emacs org-mode
+spaced-repetition	open-spaced-repetition/srs-benchmark	283	null	2026-10-24	False	A benchmark for spaced repetition schedulers/algorithms
+spaced-repetition	thyagoluciano/sm2	265	GPL-3.0	2022-01-14	False	SM-2 is a simple spaced repetition algorithm. It calculates the number of days to wait before reviewing a piece of information based on how easily the
+spaced-repetition	zuhairhalawa/studyai	253	MIT	2026-10-24	False	A local-first study platform for university lectures: PowerPoint slides, spaced repetition, exams, and an optional AI tutor on the Gemini free tier.
+spaced-repetition	artcc/freelingo	232	AGPL-3.0	2026-11-02	False	Open-source, self-hosted AI language learning platform with local or cloud LLMs, CEFR study plans, an AI tutor, voice conversations, flashcards, and s
+spaced-repetition	maimemo/SSP-MMC	227	MIT	2025-11-28	False	A Stochastic Shortest Path Algorithm for Optimizing Spaced Repetition Scheduling
+spaced-repetition	open-spaced-repetition/obsidian-spaced-repetition-recall	211	MIT	2026-11-03	False	Fight the forgetting curve by reviewing flashcards & entire notes on Obsidian.md
+spaced-repetition	bjsi/incremental-writing	209	MIT	2022-08-10	False	An incremental writing plugin for Obsidian where you add notes and blocks to prioritized queues and review them incrementally over time, spaced repeti
+edtech	GarethManning/education-agent-skills	945	NOASSERTION	2026-11-03	False	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders—pedagogy, learning science, curriculum, assessment and regeneration. 
+edtech	OttoDIY/OttoNinja	401	MIT	2024-06-01	False	Build your own robot like a Ninja 🐱‍👤  This is the first emotional modular EdTech robot that can walk and roll!
+edtech	hkalant/awesome-edtech-tools	217	null	2025-09-02	False	An ongoing curated list with awesome tools and resources for instructional designers.
+edtech	crowsec-edtech/larasploit	77	null	2021-11-23	False	Laravel Automated Vulnerability Scanner
+edtech	AjayJ19/ShadowLens	59	null	2026-02-04	False	ShadowLens 🔍 – Real-Time AI Privacy Inspector for EdTech Platforms  A Chrome Extension + Flask-powered AI backend that analyzes educational websites i
+edtech	Aniruddha-Gade/Study-Notion-EdTech__MERN-Stack	57	null	2024-06-01	False	StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content. The platform is built using th
+edtech	Chloe-MIAOmiao/Sales-Agent	54	null	2026-08-29	False	An enterprise-grade AI Agent platform designed to streamline sales quality assurance, enforce compliance auditing, and automate high-converting follow
+edtech	OFat34764e/InterviewCopilot-rpocket-team	52	null	2026-10-26	False	EdTech application designed to bridge the gap between learning and landing your dream job
+edtech	hemansnation/Neurons-To-GenerativeAI	49	null	2025-01-02	False	GenerativeAI, LLM, RAG, and LangChain technical Bootcamp including use cases, case studies, and the GenerativeAI app deployment implementation. 5 sect
+edtech	Adhhhithya/qb_generator_ai_agent	48	null	2026-01-26	False	A full-stack EdTech system for generating, auditing, and managing outcome-aligned assessment questions using Bloom’s Taxonomy, featuring a FastAPI bac
+edtech	codepymdev/grad	40	MIT	2023-08-24	False	Welcome to our SAAS edtech software app. 
+edtech	saumyatiwaryy/Study-Notion	38	null	2023-08-04	False	Study Notion is a remarkable EdTech platform, developed with modern technologies. 
+edtech	crowsec-edtech/CVE-2022-22947	37	null	2022-03-04	False	Spring Cloud Gateway < 3.0.7 & < 3.1.1 Code Injection (RCE)
+edtech	harvard-edtech/caccl	35	MIT	2026-10-28	False	The Canvas App Complete Connection Library (CACCL) is an all-in-one library for building Canvas-integrated apps. By handling LTI, authorization, and a
+edtech	ash956901/StudyNotion	34	null	2024-08-08	False	A fully fledged working edtech website using mern stack. 
+edtech	crowsec-edtech/CVE-2022-26134	31	null	2022-06-03	False	CVE-2022-26134 - Confluence Pre-Auth RCE | OGNL injection
+lti	Cvmcosta/ltijs	373	Apache-2.0	2026-11-03	False	Turn your application into a fully integratable LTI 1.3 tool provider.
+lti	instructure/ims-lti	203	MIT	2026-10-02	False	A Ruby library to help implement IMS LTI tool consumers and providers
+lti	dmitry-viskov/pylti1.3	138	MIT	2024-08-18	False	LTI 1.3 Advantage Tool
+lti	1EdTech/lti-1-3-php-library	124	Apache-2.0	2024-08-20	False	
+lti	omsmith/ims-lti	114	NOASSERTION	2023-09-29	False	A node.js library implementing the IMS LTI tool providers' standards
+lti	blackboard/BBDN-LTI-Tool-Provider-Node	77	null	2026-08-06	False	A node.js LTI Tool Provider for testing LTI launches, Caliper, and Outcomes. 
+lti	1EdTech/LTI-Tool-Provider-Library-PHP	68	Apache-2.0	2018-06-29	True	
+lti	1EdTech/lti-1-3-php-example-tool	55	null	2024-07-26	False	
+lti	packbackbooks/lti-1-3-php-library	54	Apache-2.0	2026-11-03	False	A library used for building IMS-certified LTI 1.3 tool providers in PHP.
+lti	oat-sa/lib-lti1p3-core	37	GPL-2.0	2026-10-24	False	PHP library for LTI 1.3 Core implementations as platforms and / or as tools.
+lti	instructure/lti1_tool_provider_example	33	MIT	2024-02-29	False	A simple LTI Tool Provider Sinatra app
+lti	SanDiegoCodeSchool/lti-node-library	30	MIT	2023-07-18	False	Module for building an LTI 1.3 Tool Provider.
+lti	doldsimo/lti-1.3-canvas-lms	29	MIT	2025-06-20	False	lti-1.3-canvas-lms
+lti	Unicon/tool13demo	27	Apache-2.0	2026-11-03	False	LTI 1.3 Java tool with Spring boot
+lti	oxctl/spring-security-lti13	25	Apache-2.0	2026-11-03	False	A LTI 1.3 implementation for Spring Security that builds on the OAuth2 support
+lti	SanDiegoCodeSchool/lti-node-example	24	MIT	2023-09-27	False	Example of an LTI 1.3 Tool Provider
+lti	UOC/java-lti-1.3	21	MIT	2024-10-03	False	
+lti	Izumi-kun/LTI-Tool-Provider-Library-PHP	21	Apache-2.0	2025-03-31	False	LTI Tool Provider library for PHP
+lti	oat-sa/devkit-lti1p3	20	GPL-2.0	2026-10-29	False	LTI 1.3 development kit, acting as platform and / or tool.
+lti	Simon-Initiative/lti_1p3	16	MIT	2026-04-06	False	An Elixir library for LTI 1.3 Platforms and Tools
+lti	Godmartinz/Node-LTI-1.3-library	15	null	2022-12-30	False	
+lti	blackboard/BBDN-LTI-Adv-Node	14	null	2020-08-25	False	A sample LTI 1.3/Advantage tool written in Node.js and React
+lti	celtic-project/Rating-PHP	14	GPL-3.0	2025-08-11	False	Example LTI tool
+lti	openfun/django-lti-toolbox	14	MIT	2024-11-14	False	:closed_lock_with_key:  A Django application to build LTI Tool Providers
+lti	pymsglobal/pylti1p3next	12	MIT	2026-08-22	False	LTI 1.3 Advantage Tool
+lti	whitmer/learn-lti	12	MIT	2017-03-17	False	LTI tool that can be embedded in an LMS for helping people learn LTI
+lti	JakeStoeffler/code_embed_lti	12	Apache-2.0	2022-12-01	False	LTI tool that allows users to embed an HTML/JS-based code editor in their LMS per standard LTI.
+lti	xcesaralejandro/lti1p3	11	MIT	2025-01-03	False	This package allow create a simple laravel integration for lti 1.3 + Deep Linking (Without Lti advantage)
+lti	numbas/numbas-lti-provider	11	NOASSERTION	2026-10-13	False	An LTI tool provider to run Numbas exams
+lti	franzliedke/lti	11	LGPL-3.0	2020-10-12	False	LTI Tool Provider library for PHP
+classroom-agent	THU-MAIC/OpenMAIC	42630	MIT	2026-11-04	False	Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
+classroom-agent	udacity/cd14715-claude-code-classroom	82	NOASSERTION	2026-11-01	False	This repo contains the classroom material for Claude Code (Agent SDK) course.
+classroom-agent	Tyche-MKR/SmartOpenMAIC	38	MIT	2026-08-31	False	Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
+classroom-agent	calesthio/OpenMAIC	32	AGPL-3.0	2026-03-21	False	Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
+classroom-agent	udinparla/aa.py	29	null	2014-03-11	False	#!/usr/bin/env python import re import hashlib import Queue from random import choice import threading import time import urllib2 import sys import so
+classroom-agent	udacity/cd14525-agentic-workflows-classroom	28	NOASSERTION	2026-10-25	False	This repo contains code that will be used in classroom demos, exercises, and project starter code. 
+classroom-agent	dotdo/OpenMAIC	22	AGPL-3.0	2026-03-17	False	Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
+classroom-agent	THU-MAIC/SimClass	18	null	2025-02-05	False	Data and code for the NAACL 2025 paper "Simulating Classroom Education with LLM-Empowered Agents"
+classroom-agent	udacity/cd14764-aws-agentic-c3-classroom	17	NOASSERTION	2026-11-03	False	This repo contains the classroom material for the C3 from AWS Agentic AI Nanodegee.
+study-assistant	samiahraf/study-dost-ai	276	null	2026-05-27	False	🧠 Study Dost AI - Your AI study buddy that explains STEM concepts 3 ways, helps you practice, and rewards your curiosity
+study-assistant	KartikLabhshetwar/mind-mentor	146	Apache-2.0	2026-05-18	False	Mind Mentor is an innovative AI-powered study assistant designed to revolutionize the way students learn and prepare for exams.
+study-assistant	A-R007/Multi-Agent-Study-Assistant	66	null	2025-11-04	False	AI-powered learning platform with 6 specialized agents for personalized education. Features adaptive roadmaps, quizzes, tutoring, RAG document Q&A, an
+study-assistant	aws-samples/sample-kiro-study-buddy	62	MIT	2026-06-15	False	A Kiro power that turns Kiro into a personal study companion for any AWS certification exam
+study-assistant	karthikkasirajan/studybuddy-ai	54	null	2026-03-05	False	AI-powered study assistant that transforms PDF notes into quizzes, flashcards, and summaries — built with Streamlit, Groq, and LLaMA 3.
+study-assistant	Yuvazyli/StudentAI-Assistant	53	null	2026-02-15	False	ML-powered study assistant for college students
+study-assistant	shafisma/StudyWise	52	null	2026-01-11	False	StudyWise your personal AI-powered study assistant. Transform any text, topic, or video into comprehensive study materials instantly.
+study-assistant	v1tzor/StudyAssistant	47	Apache-2.0	2026-10-28	False	Free. Offline-first, AI-agent, Tasks, TODO, Goals, Timer, Statistics, Analytics, Multi-Org
+study-assistant	tejgor/memora	46	MIT	2026-04-29	False	Open Source AI Study Assistant
+study-assistant	pdichone/vincibits-study-buddy-knwoledge-retrieval	44	null	2024-11-09	False	
+study-assistant	mvkro1/AI-Based-Study-Assistant	40	null	2025-02-07	False	An AI-powered study assistant that generates flashcards and quizzes.
+study-assistant	Capstone-Projects-2023-Spring/project-virtual-pet	32	null	2023-05-29	False	With Study Buddy, you adopt a virtual pet study buddy who becomes your study companion and motivator. Set daily or weekly goals and reminders, track p
+study-assistant	2362094903-ops/study-assistant-skills	32	MIT	2026-08-08	False	AI 学习辅导 · Claude Code Skill 套件：根据上传的教材/课件按章节学习，适用于考研、期末、资格考试——思维导图 / 讲义 / 真题风格试卷 / 错题本 / 费曼检验 / 掌握度仪表盘，进度跨会话保存
+study-assistant	hoangsonww/StudySync-Study-Buddy-App	29	MIT	2026-09-27	False	🎓 StudySync is a productivity app with tools like AI-powered study tips, music recommendations, a Pomodoro timer, and more to help enhance your study 
+study-assistant	g-hano/Claude-Powered-Study-Assistant	29	MIT	2024-07-18	False	A study assistant powered by Claude Opus. It provides various tools to assist with different tasks, such as researching,coding,note-taking and more.
+study-assistant	helloroman/hr-study-buddy	26	null	2023-09-24	False	
+study-assistant	qwe5283/FloatStudyAssistant	25	null	2026-05-30	False	探索线上考试过检测搜题（非root方案）
+study-assistant	subhajit-rajak/makaut-study-buddy	25	MIT	2025-11-04	False	Makaut Study Buddy is an app designed to provide students with free access to organizers for all 8 semesters across every branch of  MAKAUT.
+study-assistant	timothywarner-org/az104-cert-buddy	24	MIT	2026-04-04	False	AI-powered AZ-104 certification study buddy built on GitHub Copilot agents. Generates exam-realistic practice questions with interactive evaluation an
+study-assistant	ArthurYangX/nano-NotebookLM	24	Apache-2.0	2026-10-01	False	An open-source AI study assistant that turns course materials into notes, knowledge graphs, cited answers, and exam prep questions.
+study-assistant	EdricChan03/studybuddy-android	23	MIT	2026-11-04	False	A study buddy with features such as tasks, resources and more!
+study-assistant	michael-borck/study-buddy	23	MIT	2026-08-29	False	Provides an offline AI tutoring application built with Electron that runs locally on your computer using Ollama or Llama models, ensuring complete pri
+study-assistant	yuzhenfeng2002/WebApp-StudyHelper-Django	23	MIT	2021-11-14	False	Django-based study assistant with blog & schedule modules (Python).
+study-assistant	abolfazlz15/StudyBuddyDjangoProject	22	GPL-3.0	2025-09-13	False	this is Study Buddy project develop with django  and class base views
+essay-feedback	cyanheads/mentor-mcp-server	32	Apache-2.0	2025-07-22	False	A Model Context Protocol server providing LLM Agents a second opinion via AI-powered Deepseek-Reasoning R1 mentorship capabilities, including code rev

@@ -62,41 +62,49 @@
 #STALE-p574 ### 🟢 `Gap 544-E` / `Gap 534-E` — CLOSED at `p545`, and the carried number was wrong by more than 2× ~ 0 ~ METRIC ~ p545 544-E disposition breakdown; carries no repository rows
 #STALE-p574 ### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice ~ 0 ~ METRIC ~ p545 shelf liveness/alias sweep results; carries no filed rows
 #STALE-p574 ### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice ~ 1 ~ METRIC ~ p545 default-branch distribution; carries no filed rows
-### 🟢 The permissive tier — ten rows a client engagement may actually ship	0	SHELF	p574 accessibility/QTI permissive tier
-### 🔴 The copyleft, noncommercial and manifest-only tier — thirteen rows that are link-only, arm's-length or blocked	0	SHELF	p574 accessibility/QTI copyleft+NC+manifest-only tier
-### 🔵 The licence-band census of the whole layer — a measurement, not supply	0	METRIC	p574 licence bands over 29 addresses; no new supply
+# p644: the key below went stale the same way p574's 33 did -- the heading left
+# repos/foundations.md in a later rewrite (the page now carries the phrase only in prose,
+# at 'The permissive tier exists, it is large,'). derive-foundations.py exited RED on it,
+# which per this file's own p574 note SILENCES every later declaration. Commented out with
+# the p574 precedent rather than deleted, so the history of the key stays readable.
+#STALE-p644 ### 🟢 The permissive tier — ten rows a client engagement may actually ship ~ 0 ~ SHELF ~ p574 accessibility/QTI permissive tier
+#STALE-p644 ### 🔴 The copyleft, noncommercial and manifest-only tier — thirteen rows that are link-only, arm's-length or blocked ~ 0 ~ SHELF ~ p574 accessibility/QTI copyleft+NC+manifest-only tier
+#STALE-p644 ### 🔵 The licence-band census of the whole layer — a measurement, not supply ~ 0 ~ METRIC ~ p574 licence bands over 29 addresses; no new supply
 # p574: the p568 rewrite replaced most of this page and left 33 keys naming absent
 # headings and 22 live tables undeclared, so the gate exited 2 before reading anything.
 # The 22 below are re-declared from each table own header row. Dispositions are a
 # JUDGEMENT a later pass may correct; the alternative was leaving the gate dead.
-### 🟢 Permissive rows the same sweep produced — small, but genuinely usable	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🔴 Two corrections to rows this base already ships — both are missing grants	0	SUMMARY	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data	0	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data	1	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🟢 The permissive integration tier, now placed	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🔴 Two instrument defects in this base's own grant ladder, both proven and both fixed	0	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Ninth pass (`p571`, 2026-10-31) — 🔴 zero new addresses, and the pass's whole value is a shelving defect: a tier this base FOUND at pass 85 never reached this page	0	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🟢 The item-generation tier, now shelved	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🔴 `topic:essay-scoring` is a tag-variant decoy — and that is the one genuinely new finding on this page	0	CENSUS	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Platforms of record	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### Permissive platforms one tier down — new in the fourth pass	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Interoperability and analytics layer	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Content, standards and evaluation layer (new this pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Rubric and evaluation layer (new in the eighth pass — the axis 569 passes never swept)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Content-production layer (new in the fourth pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Document-ingestion layer (new in the fifth pass — the capability sweep)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Narration, speech and retention layer (new in the fifth pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Assessment and item-bank layer (new in the sixth pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Lecture-video layer (new in the sixth pass — the fifth pass's `topic:video` ask)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Deck and document generation — extending the fourth pass's layer	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## The LMIC supply side — `AI-for-Education` (closes a three-pass gap)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-## Adjacent systems of record	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
-### 🔴 The split, stated as the engagement decision it actually is	0	SUMMARY	p574: declared for p573, which added the table and not its declaration
-### 🟢 The R/CRAN psychometric tier, now placed — every grant read from `DESCRIPTION`	0	SHELF	p574: declared for p573, which added the table and not its declaration
-## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🟢 the horizontal accessibility layer that the education axis cannot see, and 🔴 **three of this pass's own seven "ungranted" verdicts were refuted by its own second probe**	0	SHELF	p575: the horizontal accessibility layer (574-C's screen-reader axis); 7 rows, every grant read first-hand
-### 🔴 `575-A` — this pass's own probe produced **three false "ungranted" verdicts out of seven**, and the defect generalises to a published figure	0	SUMMARY	p575: probe-refutation table, not shelf rows -- it reports three false ungranted verdicts (575-A)
-### 🟢 The axis denominators measured this pass	0	CENSUS	p576: axis denominators off GitHub's own result counts; not shelf rows
-### 🟢 The autograding and submission layer — and it licenses the OPPOSITE way to trend 21	0	SHELF	p576: the autograding/submission layer (topic:autograder, 128); 7 rows, every grant read first-hand
-### 🟢 The Portuguese-language layer — and the only jurisdiction-specific evaluation harness on these shelves	0	SHELF	p576: the Portuguese-language layer (topic:educacao, 378); 5 rows, every grant read first-hand
-## p579 — 2026-11-01 — four additions: the student-modelling layer, a North America analytics row, and a permissive accessibility component	4	SHELF	p579: 4 rows (EduStudio, pyedmine, my-learning-analytics, braille-tools); three from the discard since p80, one new to the ledger
-### 🔴 Open edX, stated correctly: the platform is copyleft and the extension seam is not	0	SUMMARY	p579: licence map of one org already shelved (openedx-platform AGPL vs five Apache-2.0 seams); not new shelf rows
+#STALE-p644 ### 🟢 Permissive rows the same sweep produced — small, but genuinely usable ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🔴 Two corrections to rows this base already ships — both are missing grants ~ 0 ~ SUMMARY ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data ~ 0 ~ METRIC ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data ~ 1 ~ METRIC ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🟢 The permissive integration tier, now placed ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🔴 Two instrument defects in this base's own grant ladder, both proven and both fixed ~ 0 ~ METRIC ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Ninth pass (`p571`, 2026-10-31) — 🔴 zero new addresses, and the pass's whole value is a shelving defect: a tier this base FOUND at pass 85 never reached this page ~ 0 ~ METRIC ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🟢 The item-generation tier, now shelved ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🔴 `topic:essay-scoring` is a tag-variant decoy — and that is the one genuinely new finding on this page ~ 0 ~ CENSUS ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Platforms of record ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### Permissive platforms one tier down — new in the fourth pass ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Interoperability and analytics layer ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Content, standards and evaluation layer (new this pass) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Rubric and evaluation layer (new in the eighth pass — the axis 569 passes never swept) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Content-production layer (new in the fourth pass) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Document-ingestion layer (new in the fifth pass — the capability sweep) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Narration, speech and retention layer (new in the fifth pass) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Assessment and item-bank layer (new in the sixth pass) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Lecture-video layer (new in the sixth pass — the fifth pass's `topic:video` ask) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Deck and document generation — extending the fourth pass's layer ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## The LMIC supply side — `AI-for-Education` (closes a three-pass gap) ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ## Adjacent systems of record ~ 0 ~ SHELF ~ p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+#STALE-p644 ### 🔴 The split, stated as the engagement decision it actually is ~ 0 ~ SUMMARY ~ p574: declared for p573, which added the table and not its declaration
+#STALE-p644 ### 🟢 The R/CRAN psychometric tier, now placed — every grant read from `DESCRIPTION` ~ 0 ~ SHELF ~ p574: declared for p573, which added the table and not its declaration
+#STALE-p644 ## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🟢 the horizontal accessibility layer that the education axis cannot see, and 🔴 **three of this pass's own seven "ungranted" verdicts were refuted by its own second probe** ~ 0 ~ SHELF ~ p575: the horizontal accessibility layer (574-C's screen-reader axis); 7 rows, every grant read first-hand
+#STALE-p644 ### 🔴 `575-A` — this pass's own probe produced **three false "ungranted" verdicts out of seven**, and the defect generalises to a published figure ~ 0 ~ SUMMARY ~ p575: probe-refutation table, not shelf rows -- it reports three false ungranted verdicts (575-A)
+#STALE-p644 ### 🟢 The axis denominators measured this pass ~ 0 ~ CENSUS ~ p576: axis denominators off GitHub's own result counts; not shelf rows
+#STALE-p644 ### 🟢 The autograding and submission layer — and it licenses the OPPOSITE way to trend 21 ~ 0 ~ SHELF ~ p576: the autograding/submission layer (topic:autograder, 128); 7 rows, every grant read first-hand
+#STALE-p644 ### 🟢 The Portuguese-language layer — and the only jurisdiction-specific evaluation harness on these shelves ~ 0 ~ SHELF ~ p576: the Portuguese-language layer (topic:educacao, 378); 5 rows, every grant read first-hand
+#STALE-p644 ## p579 — 2026-11-01 — four additions: the student-modelling layer, a North America analytics row, and a permissive accessibility component ~ 4 ~ SHELF ~ p579: 4 rows (EduStudio, pyedmine, my-learning-analytics, braille-tools); three from the discard since p80, one new to the ledger
+#STALE-p644 ### 🔴 Open edX, stated correctly: the platform is copyleft and the extension seam is not ~ 0 ~ SUMMARY ~ p579: licence map of one org already shelved (openedx-platform AGPL vs five Apache-2.0 seams); not new shelf rows
+# p644: this pass's own section, declared in the same commit that adds it -- the manifest
+# header requires it ('a section added later cannot silently re-break the count').
+## 🆕 `p644` — reads `2026-11-04` — **🟢 `644-C`: THE `LTI` BOUNDARY HAS PERMISSIVE REFERENCE IMPLEMENTATIONS FROM THE STANDARDS BODY *AND* FROM THE LMS VENDOR. `p643` FOUND ONE DOOR; THERE ARE FIVE, AND THE LIVE ONES ARE ALL SUCCESSORS TO ARCHIVED INSTITUTIONAL ORIGINALS.**	0	SHELF	p644 the permissive LTI boundary layer (1EdTech/Izumi-kun/pymsglobal/instructure/hypothesis)

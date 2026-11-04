@@ -1,0 +1,5 @@
+slug	role	branch	licence_file	bytes	grade_titleline	stars	forks	pushed_at	held_files_at_HEAD
+THU-MAIC/OpenMAIC	canonical upstream (Tsinghua MAIC)	main	LICENSE	1065	MIT	42630	6553	2026-11-04	487
+Tyche-MKR/SmartOpenMAIC	MIT redistribution, LICENSE byte-identical to upstream	main	LICENSE	1065	MIT	38	18	2026-08-31	0
+calesthio/OpenMAIC	AGPL-3.0 relicensed redistribution	main	LICENSE	34523	AGPL-3.0	32	7	2026-03-21	0
+dotdo/OpenMAIC	AGPL-3.0 relicensed redistribution, byte-identical to calesthio	main	LICENSE	34523	AGPL-3.0	22	5	2026-03-17	0

@@ -4,6 +4,147 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p644` — reads `2026-11-04` — **🟢 THE REGIONAL LEGS PAID FOR THE FIRST TIME IN FOUR PASSES: `18` UNHELD FACTS OF `33`. THE APAC REGULATORY PICTURE IS NOW CONCRETE, AND LATAM HAS A MEASURED DENOMINATOR THAT DOES NOT COME FROM A BROKEN RULER.**
+
+🔵 **Why this is worth stating as a result.** `643-D` found this base's Spanish- and
+Portuguese-language *repository* discovery legs to be measuring a disclaimer idiom rather than LATAM
+supply, and therefore downgraded every LATAM supply nil to an upper bound. 🟢 **That finding is
+untouched — it was about code discovery.** `p644`'s regional legs measure *institutions, adoption and
+regulation*, a different channel, and that channel is working: `18` of `33` facts unheld, against
+`p637`'s `0 of 14`.
+
+### 🔴 Market sizing: the figures do not agree, and this base will not average them
+
+| Source (as returned) | Figure for AI-in-education | Scope |
+|---|---|---|
+| Grand View Research, via Eklavvya | `$11.4 B` | Global, `2026` |
+| HolonIQ, via X-Pilot | `$12.3 B` | Global, `2026` |
+| Emerline | `>$12.5 B` | Global, `2026` |
+| (regional leg) | `$2.64 B` | **Europe, `2026`** |
+
+🔴 **A `~10 %` spread across three secondary sources for the same year and the same scope.** 🟢 **The
+useful number is the European one, because it is the only regional decomposition any leg returned this
+pass** — and this base's prior sizing (`$9.58 B`→`$42.48 B` by `2030`, CAGR `41.5 %`) remains filed
+unchanged, since nothing this pass read is a primary source capable of revising it. 🔵 **Recorded as a
+disagreement, not resolved into a false consensus.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The opportunity is policy-compliance engineering, and it has dated deadlines.**
+- **`134` bills** on AI in education introduced across **`31` states** in `2026` — student data
+  privacy, classroom use limits, curriculum integration.
+- 🟢 **Four states passed `2026` laws requiring *both* state guidance *and* mandatory district-level
+  AI policy adoption: Maryland, Idaho, Oklahoma, Virginia.** That is a procurement trigger: every
+  district in four states must hold a policy artefact.
+- 🟢 **North Carolina's law sets a state model policy deadline of `2026-12-31`**, with further
+  deadlines running to `2028`.
+- New York has a **proposed** restriction limiting classroom AI use to **grade `9` and above**; NYSED
+  has issued no statewide K–12 framework, while **New York City** has released preliminary guidance on
+  a traffic-light framework.
+- Federal activity is thin: the **K-12 AI Literacy and Readiness Act of `2026`** was advanced by a
+  House committee.
+- Adoption: **Gallup — `60 %` of US teachers use AI tools**, while most US public schools still lack
+  formal AI policies for students. **`70 %` of higher-education institutions in Europe and North
+  America have or are developing AI guidance.**
+- 🔴 **The anti-education market is live here and this base had nothing on it — see `644-E` in
+  `intel/trends.md`:** `edgenuitybot/exodusbot` (`151★`) sells automated answering against
+  **Edgenuity/Imagine Learning**, a major US K-12 courseware platform, under a `196 B` proprietary
+  pay-to-use licence. **Assessment integrity is a North America engagement, now, with a named
+  adversary.**
+- 🟡 Vendor moves reported but **not primary-verified**: a Claude variant for teachers (July `2026`)
+  and Gemini added to Google's education products (August `2026`) — both from a Wikipedia page.
+
+### EMEA
+
+🟢 **The opportunity is the `2027`-`2028` high-risk runway, and it is long enough to build properly
+and short enough to sell now.**
+- The **EU AI Act** classifies AI used in **admission decisions, student evaluation and exam
+  scoring** as **high-risk** (Annex III).
+- 🟢 **The Digital Omnibus — Regulation (EU) `2026/1744`, published in the Official Journal
+  `2026-07-24` — moves the application dates to `2027-12-02` for stand-alone Annex III systems and
+  `2028-08-02` for high-risk AI embedded in regulated products.** 🔴 **Still secondary-sourced; see
+  `644-G` below.**
+- The **AI literacy obligation** has applied since **February `2025`** and is not deferred.
+- **Europe AI-in-education market: `$2.64 B` (`2026`)**; **Finland, Estonia and the Netherlands**
+  lead K-12 integration.
+- The **UK** is light-touch and principle-based, with sector guidance and ongoing consultation. The
+  **UAE's KHDA** has issued explicit responsible-AI guidance to private schools.
+- 🔴 **Governance lags badly**: one survey of `450+` institutions reports **only `10 %`** have formal
+  AI-use guidelines.
+- Players: **Instructure** is building an AI study coach into **Canvas**; **Pearson** agreed to
+  acquire **Workera**. UNESCO, the OECD and the European Commission are all active; the **OECD's
+  `2026` Digital Education Outlook recommends purpose-built educational AI over general-purpose
+  tools**.
+- 🟢 **New supply placed in this region this pass:** `pymsglobal/pylti1p3next` (MIT, LTI 1.3
+  Advantage, Newcastle University), `KeneanDita/HUHEMS` (MIT, exam management, Haramaya University,
+  **Ethiopia**), `Clean-CaDET/tutor` (GPL-3.0, computing-education ITS, Serbia).
+
+### APAC
+
+🟢 **The strongest new regulatory intelligence this pass, and one item is directly actionable.**
+- 🟢 **Vietnam: a law effective `2026-03-01` establishes a risk-based framework, and a subsequent
+  decision names *education* among six sectors with high-risk AI systems — explicitly covering
+  automated assessment.** 🔵 That is the clearest education-specific high-risk designation outside the
+  EU, and it lands ~`21` months before the EU's own Annex III date.
+- **South Korea: the AI Basic Act entered into force `2026-01-22`**; enforcement decrees are still
+  being finalised, with a guidance-first grace period through `2026`.
+- **Australia: TEQSA requires *all* higher education providers to submit institutional action plans
+  addressing generative-AI risk.** 🟢 A mandatory, sector-wide, document-shaped obligation — the most
+  directly saleable regulatory item in this region.
+- **China** is the most assertive: consent, data quality, content labelling, user rights, complaint
+  handling. **Japan** is principles-based. **Singapore** runs frameworks and toolkits (**AI Verify**)
+  and is consulting on AI Risk Management Guidelines. **Indonesia** is finalising a Presidential
+  Regulation covering its national AI roadmap.
+- Cross-border: the EU AI Act reaches APAC vendors selling proctoring or admissions tools into EU
+  schools.
+- 🟢 **New supply placed here:** `jtangen/classbuild` (MIT, `144★`, University of Queensland),
+  `Tyche-MKR/SmartOpenMAIC` (MIT), `F5Soft/xmu-question-bank` (MIT, Xiamen University),
+  `TiKyisme/bk-lms-downloader` (MIT, HCMUT Vietnam).
+- 🔴 **Explicit gap, fourth consecutive pass: no APAC education-specific *adoption-rate* data and no
+  ranking of APAC ed-tech players.** The leg stated it outright — *"I found no solid data on
+  education-specific AI adoption rates in APAC, or on which ed-tech companies lead."* 🔵 **Written down
+  rather than left silent: this is a measured nil on demand-side data, against a rich supply of
+  regulatory data.**
+
+### LATAM
+
+🟢 **The region now has a measured adoption/governance gap from an institutional source, which is
+exactly what `643-D` said this base lacked.**
+- 🟢 **UNESCO IESALC, `200` higher-education institutions across `19` countries: `87 %` report using
+  AI in at least one area of activity, and only ~`25 %` have a formal framework.** (Published with
+  UNU-IAS support.)
+- 🟢 **Universidad de los Andes, `2026`: `716` AI-related regulatory instruments, rules and
+  legislative proposals across `23` countries and territories**, most introduced since `2023`.
+- **Uruguay — Ceibal (`2026`): `75 %` of public-school teachers report using AI tools.**
+- **Brazil — Cetic.br (`2026`): `65 %` of internet users aged `9`–`17` use AI tools, and only `22 %`
+  of schools report having AI usage guidelines.**
+- 🟢 **The UNESCO Observatory on Artificial Intelligence in Education for Latin America and the
+  Caribbean launched `2026-04-14` at ECLAC, Santiago**, to guide public policy. UNESCO's observatory
+  notes **fewer than `10 %`** of institutions in the region have formal guidelines *and* sufficient
+  capacity.
+- Players: UNESCO and IESALC; **Ceibal** (Uruguay), **Cetic.br** (Brazil), **CENIA** (Chile),
+  **Tecnológico de Monterrey** (UNESCO AI-in-education agreement).
+- 🔵 **Policy shape:** commentators argue for **regional interoperability** — common definitions and
+  risk categories across countries — rather than a single regional AI law. 🔴 **The legs returned no
+  `2026` *national* AI-in-education statute for any LATAM country**; that half stays thin and is
+  declared.
+- 🔵 **The opportunity follows directly from the two numbers:** `87 %` using, `25 %` governed. The
+  sellable unit is **governance retrofit onto existing adoption**, not greenfield deployment — the
+  inverse of the North America motion, where policy deadlines arrive ahead of tooling.
+
+### 🔴 `644-G` — the EMEA primary reading does not close, third attempt
+
+🔴 **`eur-lex.europa.eu` is `ENOTFOUND` in this session's network policy.** `p637` recorded
+`artificialintelligenceact.eu` the same way. 🟡 **So Regulation (EU) `2026/1744` and its
+`2027-12-02` / `2028-08-02` dates remain held on secondary sources only** — `126` files at `HEAD`
+agree on the numbers, and agreement among secondary sources is not a primary reading. 🔵 **`635-E` /
+`637-F` stay OPEN.** Closing them requires `eur-lex.europa.eu` to be added to the session's allowed
+domains.
+
+Evidence: `evidence/websearch-legs.2026-11-04-p644.tsv`.
+
 ## 🆕 `p643` — reads `2026-11-04` — **🔴 `643-D`: THIS BASE'S SPANISH- AND PORTUGUESE-LANGUAGE DISCOVERY LEGS DO NOT MEASURE LATAM SUPPLY. ONE MEASURES A DISCLAIMER IDIOM, THE OTHER AN ENGLISH HOMOGRAPH — SO EVERY LATAM SUPPLY NIL RESTING ON THEM IS AN UPPER BOUND, NOT A FINDING.**
 
 🔵 **This is the most consequential thing this pass found, and it is about this base's instrument for

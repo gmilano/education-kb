@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 2026-11-04 — `p644`: the web legs go nil on addresses for the `17th` pass and pay on facts for the first time in four
+
+🔵 **Appended, not rewritten** — the history below this line is intact.
+
+🔴 **Addresses: the `17th` consecutive nil, and it is now a stable, characterised property of the
+channel, not a surprise.** All four global legs ran at the mandated wording.
+`top open source AI agents education 2026 github MIT` returned **`9` results, `9` of them
+general-purpose agent roundups** (`agenta.ai`, `dev.to`, `sim.ai`, `openalternative.co`,
+`securityboulevard.com`, `toolradar.com`, `agnt.gg`, plus Wikipedia on `CrewAI` and `OpenClaw`) and
+**`0` naming an education repository**; the engine again conceded it — *"The search didn't turn up any
+education-specific rankings."*
+`github trending education AI 2026` surfaced `HKUDS/DeepTutor`, `OpenMAIC`, `Claw-ED`,
+`JetBrains/thinkrail`, `rasbt/LLMs-from-scratch` and `patchy631/ai-engineering-hub` — 🔴 **`6` of `6`
+already held at `HEAD`** (`651`, `359`, `193`, `12`, `126` and `13` files respectively).
+`open source platform education ERP CRM MIT Apache` returned `OFBiz`, `AureusERP`, `Krayin`, `iDURAR`
+and `ERPNext` — 🔴 **`5` of `5` held, and `0` education-specific**: the engine stated outright that it
+*"didn't turn up an education-specific ERP or CRM platform under MIT or Apache"*, and the only
+education module it found, **Frappe Education, is `GPL`**.
+
+🟢 **Facts: the first productive regional sweep since `p640`.** The four regional legs returned `33`
+facts, of which **`18` were unheld** — against `p636`'s `2 of 15` and `p637`'s `0 of 14`. The yield is
+concentrated in **APAC regulation** and **LATAM measurement**, and both are written up in
+`intel/market.md` under `## Opportunities by region`. 🔵 **The series is therefore not monotonic
+decay**: the address half of these legs is dead and the fact half is intermittent, and `p644` is an
+up-tick, not a reversal.
+
+🟢 **New this week — `8` agent rows, all byte-verified, `6` of `8` pushed in the last `6` weeks.**
+`jtangen/classbuild` (MIT, `144★`, `31` forks, APAC/University of Queensland),
+`KartikLabhshetwar/mind-mentor` (Apache-2.0, `146★`), `v1tzor/StudyAssistant` (Apache-2.0, `47★`,
+offline-first, multi-org), `Tyche-MKR/SmartOpenMAIC` (MIT, `38★`, APAC),
+`ArthurYangX/nano-NotebookLM` (Apache-2.0, `24★`, cited answers + knowledge graphs),
+`tejgor/memora` (MIT, `46★`), `klausners/course-builder` (MIT, `18★`, agent-harness-native),
+`CAHLR/OATutor-LLM-Learner` (MIT, `7★`, UC Berkeley, the OATutor authors' LLM variant).
+
+🔴 **And the finding that matters more than any single row: `644-A`.** `18` facets on `p643`'s
+repaired scope produced `258` novel addresses and **`18` education applications — `7.0 %`.** Six tokens
+now name something else: `rubric` (the LLM-eval idiom), `adaptive learning` (online ML), `curriculum`
+(teaching content), `proctoring` (`indeedeng/proctor`, an A/B testing framework), `lms` (**LM Studio**,
+whose CLI is literally `lms`) and `edtech` as an owner namespace (`crowsec-edtech/*`, a pentest shop).
+🟢 **With `643-C`'s `grading`, `exam` and `tracing` that is nine named tokens** — the discovery
+problem in this vertical is lexical, not a shortage of supply.
+
+🟢 **Star series.** `DeepTutor` **`54,833★`** / `6,709` forks (Apache-2.0, pushed `2026-10-31`), up
+from `48,268` in late October. `THU-MAIC/OpenMAIC` **`42,630★`** / `6,553` forks (MIT, pushed today),
+up from the `42,496`/`42,491` this base held. `vishalsachdev/canvas-mcp` **`317★`** — 🟢 **flat on the
+10th observation**, so `p636`'s *"the climb has stopped"* now has four confirmations.
+
+🔴 **Two live education repos found and deliberately NOT filed as rows: `AjayJ19/ShadowLens`
+(`59★`, real-time AI privacy inspector for EdTech platforms) and `Adhhhithya/qb_generator_ai_agent`
+(`48★`, outcome-aligned question-bank generator) return no licence payload on any of `7` filenames.**
+Recorded so a later pass does not rediscover them as finds.
+
+Evidence: `evidence/websearch-legs.2026-11-04-p644.tsv`,
+`evidence/token-pollution.2026-11-04-p644.tsv`,
+`evidence/novel-addresses.2026-11-04-p644.tsv`.
+
 ## 2026-11-04 — `p643`: the nil streak ends at `15`, and the instrument was the cause
 
 🔵 **Appended, not rewritten** — the history below this line is intact.

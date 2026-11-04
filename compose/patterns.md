@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p644` — reads `2026-11-04` — **🟢 THREE RECIPES. `P644-1` GIVES `P643-1` A LANGUAGE CHOICE, `P644-2` IS THE FIRST ASSESSMENT-INTEGRITY BUILD ON THESE SHELVES, AND `P644-3` IS A GOVERNANCE RETROFIT SIZED FROM UNESCO'S OWN DENOMINATOR.**
+
+### 🟢 `P644-1` — the LTI join, in whichever language the client already runs
+
+🔵 **The problem.** `p643`'s `P643-1` established that an agent can be put inside Canvas, Moodle,
+Blackboard or D2L without writing an LTI tool provider, using
+[`hypothesis/lms`](https://github.com/hypothesis/lms) (BSD-2-Clause, Python/Pyramid). 🔴 **The gap it
+left: that is one stack. A client running PHP or Ruby was being quoted a port.**
+
+🟢 **What to wire — pick the row matching the client's estate, all byte-read `2026-11-04`.**
+
+| # | Component | Licence (byte-read) | Stack | Role |
+|---|---|---|---|---|
+| 1a | [`pymsglobal/pylti1p3next`](https://github.com/pymsglobal/pylti1p3next) | 🟢 **MIT** (`1,070 B`) | Python — `django`, `flask`, `>=3.10` | 🟢 **LTI 1.3 Advantage tool. The default choice: `2026`-live and MIT.** |
+| 1b | [`Izumi-kun/LTI-Tool-Provider-Library-PHP`](https://github.com/Izumi-kun/LTI-Tool-Provider-Library-PHP) | 🟢 Apache-2.0 (`11,357 B`) | PHP | LTI tool provider — maintained fork of 1EdTech's own archived library |
+| 1c | [`instructure/lti1_tool_provider_example`](https://github.com/instructure/lti1_tool_provider_example) | 🟡 MIT by body (`1,054 B`, no title line) | Ruby/Sinatra | Worked provider **from the Canvas vendor** |
+| 1d | [`hypothesis/lms`](https://github.com/hypothesis/lms) | 🟢 BSD-2-Clause (`1,320 B`) | Python/Pyramid | `P643-1`'s row — pick it when **multi-region deployment docs** matter |
+| 2 | [`jtangen/classbuild`](https://github.com/jtangen/classbuild) | 🟢 MIT (`1,069 B`) | TypeScript | 🟢 The agent behind the boundary: course generation on learning-science structure |
+| 3 | [`jmshea/jupyterquiz`](https://github.com/jmshea/jupyterquiz) | 🟢 MIT (`1,074 B`) | Jupyter | Graded interaction where technical courses already live |
+| 4 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | MCP server | Canvas API surface for the agent (`317★`, flat — stable, not dying) |
+
+🟢 **Wiring.** The LTI row terminates the launch, validates the `1.3` JWT and owns the
+grade-passback service; the agent runs behind it as an ordinary web service; `canvas-mcp` gives the
+agent read/write on the Canvas API without the agent ever holding an LTI secret. 🔵 **The copyleft of
+the host LMS — `AGPL-3.0` for Canvas and Open edX, `GPL-3.0` for Moodle — stays on the far side of
+the network boundary in all four variants**, which is the property that makes the whole pattern
+sellable.
+🟢 **Estimate: `3`–`5` weeks**, against the `6`–`10` this base quoted before `p643` and the port it
+would have quoted on top for a non-Python client.
+🔴 **Watch item:** rows `1b` and `1c` were last pushed `2025-03-31` and `2024-02-29`. They are
+fork-and-own components (`637`'s rule), not upstreams to contribute to. Row `1a` is the only one with
+a `2026` push.
+
+### 🟢 `P644-2` — assessment integrity, against a named adversary
+
+🔵 **The problem a client will actually bring, now that `644-E` is on the record.** *"Our courseware
+is being farmed by a paid bot. What do we do?"* 🟢 **This is the first recipe on these shelves with a
+specific, priced, commercially-maintained adversary** — `edgenuitybot/exodusbot`, `151★`, `196 B`
+proprietary pay-to-use licence, targeting Edgenuity/Imagine Learning.
+
+🔴 **What NOT to buy.** The only open counterpart this census found,
+[`AjayJ19/ShadowLens`](https://github.com/AjayJ19/ShadowLens) (`59★`), **has no licence payload** and
+cannot be shipped. 🔴 **And `proctoring` as a search term returns an A/B testing framework
+(`indeedeng/proctor`, archived) — there is no credible permissive proctoring stack in this census.**
+🟢 **So the build is not detection-by-surveillance. It is assessment design plus telemetry.**
+
+| # | Component | Licence (byte-read) | Role |
+|---|---|---|---|
+| 1 | [`jmshea/jupyterquiz`](https://github.com/jmshea/jupyterquiz) | 🟢 MIT (`1,074 B`) | **Item delivery with per-item randomisation** — a bot priced per answer key is defeated by generated items, not by a camera |
+| 2 | [`F5Soft/xmu-question-bank`](https://github.com/F5Soft/xmu-question-bank) | 🟢 MIT (`1,059 B`) | 🟢 **Question-bank scale with the ingest layer written** — the unglamorous half clients underestimate |
+| 3 | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | 🟢 Apache-2.0 (`11,358 B`) | Item corpus as **plain text under version control** — diffable, reviewable, CI-testable |
+| 4 | [`pymsglobal/pylti1p3next`](https://github.com/pymsglobal/pylti1p3next) | 🟢 MIT (`1,070 B`) | LTI launch + **grade passback**, which is also where the integrity telemetry is |
+| 5 | [`hypothesis/lms`](https://github.com/hypothesis/lms) | 🟢 BSD-2-Clause (`1,320 B`) | `lms/services/lti_grading/` as the grading-service interface |
+
+🟢 **Wiring.** Items live as plain text in `git` (3) and are compiled into the bank (2); each sitting
+draws a randomised instance rendered through (1); the launch and the grade return go through (4)/(5),
+and the passback path is instrumented — time-per-item, revision pattern, answer-order entropy. 🔵 **The
+integrity signal is a property of the grade stream, which the LTI boundary already owns.** No new
+surveillance surface, which is what makes it survivable under the EU AI Act's high-risk duties on
+exam scoring and under the explainability expectations `intel/trends.md` records.
+🟢 **Estimate: `6`–`8` weeks.** 🟢 **Sell it in North America first** — that is where the adversary,
+the platform and the four state mandates are.
+
+### 🟢 `P644-3` — governance retrofit, sized from UNESCO's denominator
+
+🔵 **The problem, and it is a measured one, not a hypothesis.** UNESCO IESALC: **`87 %` of `200`
+higher-education institutions across `19` LATAM countries use AI in at least one area; ~`25 %` have a
+formal framework.** 🟢 **The gap is not adoption. The engagement is to govern what is already
+running** — the inverse of the North America motion, where mandates land before tooling.
+
+| # | Component | Licence (byte-read) | Role |
+|---|---|---|---|
+| 1 | [`oaknational/oak-ai-autoeval-tools`](https://github.com/oaknational/oak-ai-autoeval-tools) | 🟢 MIT (`1,077 B`) | 🟢 **LLM-as-judge over lesson plans and resources** — `p643`'s row, and the only education-specific permissive eval harness on these shelves |
+| 2 | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | 🟢 Apache-2.0 (`11,358 B`) | Generated curriculum as **plain text in `git`** — so "what did the AI teach" is a diff, reviewable by a committee |
+| 3 | [`ArthurYangX/nano-NotebookLM`](https://github.com/ArthurYangX/nano-NotebookLM) | 🟢 Apache-2.0 (`11,314 B`) | 🟢 **Cited answers + knowledge graphs** — provenance as a feature, which is what an audit asks for |
+| 4 | [`v1tzor/StudyAssistant`](https://github.com/v1tzor/StudyAssistant) | 🟢 Apache-2.0 (`11,357 B`) | 🟢 **Offline-first, multi-organisation** — survives the connectivity a LATAM or African deployment cannot assume |
+| 5 | [`pymsglobal/pylti1p3next`](https://github.com/pymsglobal/pylti1p3next) | 🟢 MIT (`1,070 B`) | The boundary, so the retrofit does not fork the institution's LMS |
+
+🟢 **Wiring.** Point (1) at the institution's *existing* AI outputs to produce a measured baseline —
+that is the deliverable the `25 %` are missing and it is the first invoice. Commit the corpus through
+(2) so every later change is a reviewable diff. Replace ungoverned general-purpose use with (3), whose
+citations make an audit answerable, and (4) where connectivity is unreliable. Attach through (5)
+rather than modifying Moodle or Canvas, keeping `GPL-3.0`/`AGPL-3.0` on the far side.
+🟢 **Estimate: `4` weeks** for the baseline-and-policy artefact, `8`–`10` for the governed replacement.
+🟢 **Portable, with a different pitch per region:** LATAM retrofit (`87 %`/`25 %`); EMEA runway to
+`2027-12-02` (Annex III) with the AI-literacy duty already live since February `2025`; APAC
+compliance artefact (**TEQSA requires every Australian HE provider to file a generative-AI action
+plan**; Vietnam names education high-risk from `2026-03-01`); North America the four state district
+mandates and NC's `2026-12-31` model policy.
+🔴 **Honest limit:** rows (3) and (4) are 🟡 **UNPLACED** — their READMEs state no institution or
+country (`644-F`), so they are chosen on licence, liveness and declared capability, not provenance.
+
 ## 🆕 `p643` — reads `2026-11-04` — **🟢 TWO RECIPES, AND BOTH EXIST BECAUSE `p643` FOUND THE PLUMBING. THE FIRST REPLACES A BUILD THIS BASE HAS RECOMMENDED FOR DOZENS OF PASSES.**
 
 ### 🟢 `P643-1` — put any shelved agent *inside* Canvas, Moodle, Blackboard or D2L without writing LTI

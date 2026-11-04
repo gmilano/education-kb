@@ -4,6 +4,29 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 `p644` — reads `2026-11-04` — **🟢 SIX NEW PLATFORM ROWS, AND THREE OF THEM ARE PLACED BY A UNIVERSITY NAMED IN THEIR OWN METADATA — ETHIOPIA, CHINA AND VIETNAM.**
+
+🔵 **Every licence cell byte-read `2026-11-04`** on `raw.githubusercontent.com`, branch from
+`search/repositories` (🔴 `3` of these `6` are `master`), graded on the title line.
+
+| Platform | Repo | Licence — file, bytes | ★ | Forks | `pushed_at` | Branch | Region (channel) | What it actually is |
+|---|---|---|--:|--:|---|---|---|---|
+| **jupyterquiz** | [`jmshea/jupyterquiz`](https://github.com/jmshea/jupyterquiz) | 🟢 **MIT** — `LICENSE`, `1,074 B` | **`166`** | `47` | `2026-03-05` | `main` | 🟡 **UNPLACED** | 🟢 **Notebook-native assessment: interactive quizzes inside Jupyter notebooks and Jupyter Book.** The highest-starred new row, and the one with the clearest join — every data-science and engineering course a studio touches already runs on notebooks, and this puts graded interaction *in* them rather than beside them in an LMS. |
+| **HUHEMS** | [`KeneanDita/HUHEMS`](https://github.com/KeneanDita/HUHEMS) | 🟢 **MIT** — `LICENSE`, `1,068 B` | `57` | `0` | `2026-03-30` | `main` | 🟢 **EMEA** — the description names **Haramaya University, Ethiopia** | 🟢 **A full-stack exam management system — admin-managed exams, role separation — permissively licensed, from an African university.** TypeScript. 🔵 **Filed with emphasis: this base's Africa instruments have returned near-nothing for many passes** (`evidence/africa-instruments.2026-10-12-p158.tsv`), and this is a real, licensed, `2026`-pushed address from exactly that gap. 🔴 `0` forks — one author, no community; treat as a reference implementation. |
+| **xmu-question-bank** | [`F5Soft/xmu-question-bank`](https://github.com/F5Soft/xmu-question-bank) | 🟢 **MIT** — `LICENSE`, `1,059 B` | `52` | `18` | `2026-03-21` | 🔴 `master` | 🟢 **APAC** — description names `course.xmu.edu.cn`, **Xiamen University, China** | Question bank for a university course platform, Python. 🟢 **An institution-scale question bank with the scraping/ingest side actually written** — the part clients always underestimate. 🟡 Built against one university's system, so read the ingest layer as a pattern, not a product. |
+| **bk-lms-downloader** | [`TiKyisme/bk-lms-downloader`](https://github.com/TiKyisme/bk-lms-downloader) | 🟢 **MIT** — `LICENSE`, `1,087 B` | `35` | `0` | `2026-10-13` | `main` | 🟢 **APAC** — description names **HCMUT BK-LMS**, Ho Chi Minh City University of Technology, **Vietnam** | Desktop downloader/sync for a university LMS, **with local AI study-pack export**. Python. 🔵 **Filed for the regional signal more than the code:** Vietnam named education a high-risk AI sector effective `2026-03-01` (see `intel/market.md`), and this is student-built tooling against a Vietnamese institutional LMS in the same year. 🔴 `0` forks. |
+| **hashcards** | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | 🟢 **Apache-2.0** — `LICENSE`, `11,358 B` | **`1,186`** | `73` | `2026-11-02` | 🔴 `master` | 🟡 **UNPLACED** | 🟢 **A plain-text spaced-repetition system, Rust, pushed two days ago.** The largest and liveliest new address this pass. 🔵 **Why it is a platform row and not a flashcard app:** the corpus is *plain text under version control*, so curriculum becomes reviewable, diffable and CI-testable — which is the only form in which an institution can actually govern what its AI generates. |
+| **Clean-CaDET tutor** | [`Clean-CaDET/tutor`](https://github.com/Clean-CaDET/tutor) | 🔴 **GPL-3.0** — `LICENSE`, `35,149 B` | `6` | `3` | `2026-07-15` | 🔴 `master` | 🟢 **EMEA** — `README` names **Serbia** | An intelligent tutoring system **specialised for computing education**, C#/.NET. 🔴 **`GPL-3.0` and `6★`** — filed neither as a recommendation nor as traction, but because it is **the only `2026`-live ITS in an `18`-row census of that axis** (see `intel/trends.md`), and because a `.NET` ITS is the right starting point for the one client in ten whose estate is Microsoft. |
+
+🔴 **The `sis` facet — `student information system` — is the thinnest axis measured this pass.** `11`
+total candidates, `5` novel, and **`4` of the `5` are pre-`2026` university coursework**
+(`edenroseFR/Web-based-SSIS` `18★` `2024`, `gupta-shantanu/CollegeSystem` `2016`,
+`zh-h/student-information-system-wechat-applet` `2016`, `nur-zaman/better-usis` `2025`); the fifth,
+`ragcrix/StudentInformationSystem`, is described as *"Building a REST Service with Spring Boot and
+MongoDB"* — a tutorial. 🟢 **Stated as a gap, not left as silence: there is no credible open-source
+SIS in this census, and the `openSIS`/`Fedena`-class incumbents this page already carries remain the
+only answer.**
+
 ## 🆕 `p643` — reads `2026-11-04` — **🟢 EIGHT NEW PLATFORM ROWS, AND THE `585-B`/`585-G` ASSESSMENT GAP FINALLY HAS A PERMISSIVE *DELIVERY* LAYER — `1,691★`, `568` FORKS, `MIT`.**
 
 🔵 **Every cell byte-read `2026-11-04`** via `raw.githubusercontent.com/{slug}/{default_branch}/{file}`,
