@@ -3,6 +3,202 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — `2026-11-04` — **🟢 `640-A`: THE LICENCE CELL IS A SCRIPTED TWO-CHANNEL MEASUREMENT AND `639-A`'s RULE IS NOW ENFORCEABLE. 🔴 `640-B`: `p640`'s OWN FIRST GRADER MIS-GRADED THE `GNU` FAMILY **AND** PUBLISHED `PageLM` AS `MIT`. 🔴 `640-G`: THE EXISTENCE ORACLE `p639` RELIED ON RETURNS A FALSE ABSENT FOR OPEN edX. 🔴 `640-H`: `639-H`'s GENERALISATION TO `EMEA` IS FALSIFIED. ELEVEN REGISTERED (`640-A`…`640-N`).**
+
+🔵 **Currency, stated honestly.** This register and `README.md` were current at `p639`. 🟢 Both are
+brought to `p640` **in this pass**, which is the thing `639-C` recorded `p638` failing to do.
+🔴 `make hooks` was **not** executed for the **fifth** consecutive pass, so currency below is again
+asserted by construction rather than gate-verified, and every measurement in this pass was made with
+instruments the pass wrote itself — and declared.
+
+### 🟢 `640-A` — NEW: `639-A`'s rule is now an instrument, not an intention
+
+`639-A` closed the byte-read channel as a *capability* question and left it 🔴 **OPEN as a rule**: *"a
+licence cell cites its channel and its byte count, or it is not a licence cell."* 🟢 `p640` makes it
+cheap enough to always comply. `curl -s` `GET` on `raw.githubusercontent.com` with `%{http_code}` and
+`%{size_download}`, walking `28` branch/filename combinations and then `10` source-file headers,
+`10`-wide: `37` addresses in one shell call. Committed as `ingest/licence-bytes-p640.sh` and
+`ingest/licence-grade-titleline-p640.sh`.
+🟢 **Four byte counts reproduce this base's stored figures exactly** — `OpenOLAT` `10,982 B`,
+`ltijs` `11,361 B`, `OpenLRW` `9,878 B`, `OpenLRS` `11,087 B` — so it is the same channel, measured
+more cheaply, not a new one.
+🟢 **CLOSED as a rule.** Every licence cell published by `p640` carries its channel and byte count.
+Evidence: `evidence/licence-oracle-calibration.2026-11-04-p640.tsv`.
+
+### 🟢 `640-A2` — NEW: the mandated `curl -sI` verification method is REPAIRED
+
+🔴 `637-E` recorded that `curl -sI` returns `HTTP/1.1 200 Connection Established` — the proxy's
+`CONNECT` reply — for a real **and** a fabricated slug, so a pass trusting it verifies fabrications.
+🟢 **A `GET` does not share the defect**: the fabricated control returns a literal `404` at `14 B`.
+🟢 **CLOSED.** The repair is one flag (`-s -o /dev/null -w '%{http_code} %{size_download}'` instead of
+`-sI`) and it is in the committed instrument. 🔴 `637-E`'s first half no longer stands as a reason to
+skip verification.
+
+### 🔴 `640-B` — NEW, and it is `p640`'s own instrument failing twice
+
+🔴 **(i) The `GNU` family, and both passes got it wrong in opposite directions.** `639-G(i)` recorded
+`p639`'s grader reading an `AGPL` payload as `GPL` (*"does any line **lack** `AFFERO`"*). `p640`'s
+first grader inverted it (*"does any line **have** `AFFERO`"*) and mis-graded `moodle/moodle` and
+`Berserk-hub150/moodle-ai-skill-navigator` as `AGPL-3.0`. 🔵 **The cause defeats every substring
+grader**: the `GPL-3.0` text names `AFFERO` `3` times in section `13`; the `AGPL-3.0` text names
+*"GNU GENERAL PUBLIC LICENSE"* `5` times. 🟢 Regraded on the **title line** (first `~120 B`), all `8`
+`GNU`-family rows come out right, and `p639`'s `Berserk-hub150` row is **vindicated** against
+`p640`'s first reading.
+🔴 **(ii) The dangerous direction.** `p640`'s first grader published
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) as 🟢 `MIT`. The title is
+`# PageLM Community License` and the body opens with `MIT`'s exact words before narrowing them to
+*"personal, educational, or **non-commercial** research purposes"*. 🔴 **This base records that exact
+error as its own** — *"`PageLM` sat on this base's shelves as `MIT` for five passes"* — and `p640`
+re-committed it mechanically, which finally explains it: **the licence is `MIT`-phrased by
+construction**, so any keyword grader calls it `MIT` forever.
+🟢 **CLOSED as a grader defect** (title-line grading + the `MIT` byte band both catch it).
+🔴 **OPEN as a rule:** a grade derived from substring matching over a payload is not a grade. Grade
+the title; use the body only as a fallback, and band-check the result.
+Evidence: `evidence/grader-titleline-vs-payload.2026-11-04-p640.tsv`.
+
+### 🔴 `640-G` — NEW: the existence oracle returns a FALSE ABSENT for Open edX
+
+🔴 `p639`'s method was `search/repositories` + `fork:true` with a fabricated control expected to
+`422`, reported as *"control `422`, CONTROL PASSED"*. 🔴 Measured `2026-11-04`:
+
+| Probe | Result |
+|---|---|
+| `q="repo:openedx/edx-platform fork:true"` | 🔴 `422` — **identical to a fabricated address** |
+| `q="org:openedx edx-platform in:name"` | 🔴 `total_count = 0` |
+| `q="edx-platform in:name fork:true"` | 🟡 returns only the **forks** and the legacy `edx/edx-platform` |
+| `curl GET raw…/openedx/edx-platform/master/LICENSE` | 🟢 `200`, `35,136 B`, `GNU AFFERO GENERAL PUBLIC LICENSE` |
+
+🔴 **The `openedx` organisation is not in this session's search index at all**, while the repository
+is plainly live. 🔴 **A pass that trusted the control would have deleted Open edX — one of the five
+LMS incumbents on this base's own shelves — as non-existent.** Star counts from this channel are
+likewise unreliable for any org the index will not serve (`edx/edx-platform` reads `12★`).
+🟢 **The decision rule, measured over `37` addresses:** byte-channel negative `3 of 37`;
+metadata-channel negative `2 of 37` (one of them false); **both** channels negative `1 of 37` — the
+fabricated control, and the only sound absence in the set. 🟢 **A slug is ABSENT only when BOTH
+channels are negative; one positive on either establishes existence; neither negative is evidence of
+absence on its own.** That operationalises `639-G`'s rule and gives it a counterexample.
+🟢 **CLOSED as a rule.** 🔴 **OPEN as a condition:** this session's search index has unexplained org-level
+blind spots and cannot be used as a sole existence oracle.
+Evidence: `evidence/existence-oracle-false-absent.2026-11-04-p640.tsv`.
+
+### 🟢 `640-D` — NEW: the canonical licence byte count is an instrument
+
+🟢 `GPL-3.0` = **`35,147 B`** (`3` independent reads: `moodle`, `chamilo`, `ILIAS`);
+`AGPL-3.0` = **`34,523 B`** (`3`: `canvas-pilot`, `learnhouse`, `frametell`);
+`Apache-2.0` = **`11,357 B`** (`2`: `lrsql`, `ADL_LRS`); `MIT` = **`1,062`–`1,085 B`** (`19` reads —
+a band, because the copyright-holder line varies).
+🟢 **So a byte count alone separates the two families every substring grader confuses** (`~624 B`
+apart, never overlapping), and a `MIT` grade outside the band is a narrowed derivative — the second
+test that catches `PageLM`.
+🟢 **CLOSED as a taxonomy.** Evidence: `evidence/canonical-licence-bytes.2026-11-04-p640.tsv`.
+
+### 🔵 `640-E` — `639-E` mechanism `1` refined: "appended" does not predict the byte count
+
+🔵 `639-E` characterised `OpenOLAT` as *"`Apache` text **then** an appended project statement"* —
+correct in substance, but it predicts a **larger** file and `OpenOLAT` is `375 B` **smaller** than
+canonical. 🟢 Measured: the `Apache` **`APPENDIX: How to apply the Apache License`** section (`25`
+lines) is **deleted**, and **two** project statements are appended (`olat.org` original, University of
+Zurich; `openolat.org`, `frentix GmbH`, based on `OLAT 7.1`). Net `−375 B`.
+🟢 **The engagement answer is unchanged and now fully explained:** the deleted section is
+non-operative boilerplate carrying no grant term. `OpenOLAT` is `Apache-2.0`.
+🟢 **CLOSED.** The row that caused `p638`'s entire regression is reconciled to the byte.
+
+### 🟢 `640-C` — four `unstated` ledger rows resolved on bytes
+
+🟢 `sitor-ai/frametell` (`p254`) → 🔴 `AGPL-3.0` (`34,523 B`, `467★`);
+`littlecookie0722/AI-Teaching-Agent` (`p3`) → 🟢 `MIT` (`1,069 B`);
+`AnonymousOnyx22/moodle-student-mcp` (`p380`) → 🟢 `MIT` (`1,072 B`);
+`minicoohei/ai-agent-camp` (`p117`) → 🔴 **no grant** (`NO-PAYLOAD` + metadata `NONE`, `347★`).
+🟢 **CLOSED.** 🟡 Note the shape: the two `no-grant`/`AGPL` resolutions carry `347`★ and `467`★, the two
+`MIT` resolutions carry `0`★. Unstated rows skew toward the unusable.
+
+### 🔴 `640-H` — `639-H`'s generalisation to `EMEA` is FALSIFIED
+
+🔴 `639-H` closed the `APAC` nil as a query-shape artifact — correctly — and left an ACTION: *"the
+same defect plausibly suppressed `EMEA` adoption data, which is also unmeasured."*
+🟢 **`p640` ran `EMEA` as prescribed, first, before naming any institution. It paid immediately**: a
+market size (`$2.64B` `2026` → `$8.0B` `2030`, `31.9%` `CAGR`), a three-country K-12 ranking (Finland,
+Estonia, Netherlands), a governance denominator (🔴 `10%` of `450+` institutions have formal
+guidelines), a second `AI Act` date (embedded systems `2028-08-02`), and a Gulf regulator (Dubai
+`KHDA`).
+🔵 **So the mechanism is narrower and more useful than `639-H` stated:** the region token fails when
+**no institution in the region self-describes with it**. The `EU` is a self-describing legal order;
+`APAC` is a sales territory.
+🟢 **CLOSED, with the ACTION rescoped to `APAC` only** — and with the practice of running *both*
+shapes retained, since running both is what distinguishes the two cases.
+
+### 🟢 `640-I` — NEW: APAC's first binding education AI regime, and the base's reading was wrong
+
+🔴 These shelves carried `APAC` as *"guidelines, frameworks, nothing binding."* 🟢 **Vietnam Decision
+`33/2026/QĐ-TTg`** — signed `2026-06-30`, in force **`2026-08-15`**, under the Vietnam AI Law in force
+`2026-03-01` — lists `46` high-risk systems across six sectors, **three of them education**:
+automated self-study content from uncontrolled data sources; 🔴 automated examination, assessment or
+**ranking of learners**; 🔴 **biometric** behaviour monitoring. Legacy systems comply by
+**`2027-09-01`**.
+🟢 **Structurally EU `Annex III`, live `15` months earlier.** 🆕 Australia `TEQSA` has also required
+**all** higher-education providers to file generative-AI risk action plans.
+🟢 **CLOSED for policy** (fifth APAC instrument now dated). 🟡 `P640-2` is built on it.
+
+### 🔴 `640-K` — APAC market size: still nil, gap NARROWED
+
+🟡 `639-H` left this as *"searched this pass, not found."* 🟡 `p640` **identified a source** — a Ken
+Research *Asia-Pacific AI in Education Market … to 2030* report naming `Google`, `Microsoft`, `IBM`,
+`Pearson`, `Byju's` and asserting China/India/Japan dominance — but **no revenue figure is obtainable
+on this session's channels**.
+🔴 **OPEN**, narrowed from *"not found"* to *"source identified, figure paywalled."* Vendor list only.
+
+### 🔴 `640-M2` — NEW DECLARED GAP: Germany has no instrument on these shelves
+
+🔴 The named-institution query that paid for the European Commission, `Ofqual` and the `DfE` returned
+**nothing** on the `Bildungsministerium` or German federal/*Länder* AI-in-education guidance.
+🔴 Germany is the largest `EMEA` education market represented here —
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) is a German university
+reference on the agent shelf — and this base holds **no German instrument at all**.
+🔴 **OPEN. An informed gap, not coverage.** 🟡 **ACTION for the next pass:** name the `KMK`
+(Kultusministerkonferenz) and the *Länder* individually, exactly as `639-H` did for the APAC
+ministries. The `640-H` mechanism predicts this will work, because the `KMK` is self-describing and
+*"Germany"* as a token is competing with `EU`-level content.
+
+### 🔵 `640-N` — `639-F` under-counted: there are THREE permissive platforms, not one
+
+🟢 `639-F` withdrew `p638`'s *"components, not platforms"* rule on the strength of `OpenOLAT` alone.
+🟢 `p640` byte-verifies **two more**, one of them larger than `OpenOLAT`:
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) 🟢 `MIT` (`1,097 B`,
+`1,168★`, offline-first) and [`iblai/lms`](https://github.com/iblai/lms) 🟢 `MIT` (`1,063 B`, `208★`,
+pushed `2026-11-03`, held since `p73` with only `5` mentions).
+🟢 **CLOSED.** The platform decision is now three branches: brownfield → attach at the boundary;
+greenfield standards-heavy → `OpenOLAT`; greenfield low-connectivity/cost-constrained → `kolibri` or
+`iblai/lms`. 🟢 The `5 for 5` copyleft reading of the incumbents is untouched.
+
+### 🔴 `640-F` — NEW: this base's own recipe recommends an unmaintained record store
+
+🔴 `compose/patterns.md` `P639-1` step `4` uses `Apereo OpenLRW` with an *"archival risk (`637-A`)"*
+note. 🔴 Measured: `OpenLRW` `14` months stale (`2025-09-12`); sibling `OpenLRS` 🔴 **archived**, last
+pushed `2019-01-31`. The risk has materialised.
+🟢 **Replacements verified on both channels:** [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)
+🟢 `Apache-2.0` (`11,357 B` canonical, `144★`, pushed `2026-11-03`) globally;
+[`openfun/ralph`](https://github.com/openfun/ralph) 🟢 `MIT` (`1,094 B`, France Université Numérique)
+for `EMEA`; 🆕 [`learninglocker/xapi-service`](https://github.com/learninglocker/xapi-service) 🟢 `MIT`
+(`1,070 B` at lowercase `master/license`) — **new to this base, found only by the lowercase probe**,
+`639-G(iii)`'s repair paying off on first use.
+🟢 **CLOSED. `P640-1` substitutes step `4`.** 🔴 **Standing lesson:** a component's licence was being
+re-verified every pass while its *maintenance* was not. Liveness and grant are separate channels and
+this base was only reading one of them per row.
+
+### Carried gaps — status after `p640`
+
+| Gap | Status |
+|---|---|
+| 🔴 `639-C` — `make hooks` denied; the gate apparatus is dark | 🔴 **OPEN, fifth consecutive pass, unchanged.** Not retried this pass. Every figure above is measured by instruments `p640` wrote and declared (`640-B`). 🟢 No gate was relaxed, removed, edited or added to `DECLARED_RED`. 🟢 `p640` did update this register and `README.md`, which is the `637-D`/`p638` failure mode. |
+| 🔴 `639-D` — primary sources unreachable; all figures secondary | 🔴 **OPEN, unchanged and not closable from inside a pass.** `eur-lex.europa.eu` and `news.gallup.com` remain `ENOTFOUND`. 🟡 `p640` adds a **third** needed host class: the OECD `2026` Digital Education Outlook is cited only secondhand. The hosts are named so the allowlist can be widened. |
+| 🟡 `639-E` — `NOASSERTION` resolves into nine mechanisms | 🟢 **Held, and refined by `640-E`.** The taxonomy stands; mechanism `1`'s byte-count prediction is corrected. 🟡 `OS4ED/openSIS-Classic` remains **unresolved, not absent** — now `NO-PAYLOAD` across `38` combinations (`p639`: `11`), metadata live at `349★`, pushed `2026-10-26`. |
+| 🟡 `639-G` — `p639`'s instruments failed three ways | 🟢 **All three repaired and the repairs are committed.** (i) `AGPL`/`GPL` → title-line grading (`640-B`, which also shows `p640`'s own inverse failure); (ii) `CC0` and non-English → graded (`gen-mentor` `CC0-1.0`, `7,048 B`); (iii) case-sensitivity → lowercase probed, which recovered `frappe/education` (`19 B` at `master/license.txt`) and **discovered** `learninglocker/xapi-service`. 🟢 The *"third channel"* (source-file headers) is now a **code path**, not a note: `onbirdev/moodle-webservice_mcp` resolves automatically at `HEADER:main/version.php`. |
+| 🔴 `637-B` — mandated legs nil on both halves | 🔵 **REINTERPRETED, not closed.** Supply: nil a **14th** time — but `9 of 10` top-starred, recently-pushed education repos are already held, so 🟢 **the nil is SATURATION, not blindness**, and should be reported as coverage. Facts: 🟢 live in all four regions. 🟢 Recommendation: web leg for facts, API leg for grades. |
+| 🟢 `637-A` — `archived` is an ungraded liveness channel | 🟢 **Instrument works and it just earned its keep.** `0 of 16` of the agent cohort archived, but 🔴 `Apereo OpenLRS` **is** archived (`2019-01-31`) and sits inside this base's flagship recipe — see `640-F`. |
+| 🔴 `637-E` — the mandated verification method does not work | 🟢 **HALF CLOSED.** The byte-read half was withdrawn by `639-A`; the `curl -sI` half is **repaired** by `640-A2` — use a `GET`, not `-sI`. 🔴 What remains open is broader than `637-E` thought: `640-G` shows the *existence* oracle also has a false-negative class. |
+| 🟢 `637-C` — a census manufactured a false absence (`fork:true`) | 🟢 **Held.** `fork:true` on every probe. 🔴 **But `640-G` finds a second false-absence mechanism `fork:true` does not cover** — an entire org missing from the search index. |
+| 🟢 `639-B` — `p638`'s `31%`-no-grant statistic | 🟢 **REPRODUCED independently.** `1 of 16` (`6.3%`) on bytes, `luffycodes/Tutorbot-Spock`. Full distribution: `MIT` `8`, `Apache-2.0` `2`, `CC0` `1`, `CC-BY-SA` `1`, `GPL-3.0` `1`, `AGPL-3.0` `1`, `Elastic-2.0` `1`, no grant `1`. |
+
 
 ## 🆕 `p639` — `2026-11-04` — **🔴 `639-A`: `637-E` WITHDREW A WORKING CHANNEL AND `p638` PUBLISHED A LICENCE COLUMN THAT CONTRADICTS `6` BYTE-READS SETTLED IN THIS REPOSITORY. 🔴 `639-B`: `p638`'s `31%`-NO-GRANT STATISTIC IS FALSE; MEASURED `6.3%`. 🔴 `639-C`: `p638` REGISTERED `0` GAPS AND CARRIED `0` PASS IDS ONTO `8` SHELVES. 🟢 `639-H`: THE `APAC` NIL IS A QUERY-SHAPE ARTIFACT AND IS **CLOSED**. EIGHT REGISTERED (`639-A`…`639-H`).**
 

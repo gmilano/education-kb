@@ -1,0 +1,18 @@
+# p640 — WHY BOTH p639'S GRADER AND p640'S FIRST GRADER MIS-GRADED THE GNU FAMILY.
+# The GPL-3.0 text names AFFERO in section 13; the AGPL-3.0 text names "GNU GENERAL PUBLIC
+# LICENSE" throughout. So ANY substring-over-payload test mis-grades one of the two families:
+#   639-G(i)  "does any line LACK affero?" -> every AGPL payload mis-grades as GPL
+#   p640-v1   "does any line HAVE affero?" -> every GPL  payload mis-grades as AGPL
+# Measured below. The only sound discriminator is the title line (first ~120B).
+payload	title_line_says	affero_mentions	gnu_gpl_mentions	p640v1_substring_grade	p640v2_titleline_grade	correct
+moodle/moodle master/COPYING.txt	GNU GENERAL PUBLIC LICENSE v3	3	12	AGPL-3.0 (WRONG)	GPL-3.0	GPL-3.0
+Berserk-hub150/moodle-ai-skill-navigator main/LICENSE	GNU GENERAL PUBLIC LICENSE v3 (UTF-8 BOM)	3	12	AGPL-3.0 (WRONG)	GPL-3.0	GPL-3.0
+instructure/canvas-lms master/LICENSE	GNU AFFERO GENERAL PUBLIC LICENSE v3	15	5	AGPL-3.0	AGPL-3.0	AGPL-3.0
+openedx/edx-platform master/LICENSE	GNU AFFERO GENERAL PUBLIC LICENSE v3	15	5	AGPL-3.0	AGPL-3.0	AGPL-3.0
+# SECOND FAILURE CLASS, and the dangerous direction: a bespoke licence that is MIT-PHRASED.
+CaviraOSS/PageLM main/LICENSE.md	"# PageLM Community License"	-	-	MIT (WRONG - would licence-launder a non-commercial grant)	BESPOKE-NONCOMMERCIAL	bespoke, commercial use BARRED
+# The body opens with MIT's "Permission is hereby granted, free of charge" and then narrows it to
+# "personal, educational, or non-commercial research purposes". This is EXACTLY the error this base
+# records as "PageLM sat on this base's shelves as MIT for five passes" — reproduced mechanically.
+# TWO independent tests catch it: (a) title line is a project name, not a licence name;
+# (b) 8,563B is far outside the measured MIT band of 1,062-1,085B.

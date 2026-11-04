@@ -1,0 +1,46 @@
+# p640 — two-channel licence oracle, 2026-11-04. 37 addresses.
+# CHANNEL 1 (existence+metadata): gh api search/repositories, q="repo:<slug> fork:true".
+# CHANNEL 2 (grant, byte-exact):  curl -s GET raw.githubusercontent.com, %{http_code}+%{size_download}.
+#   NOT curl -sI: the proxy answers CONNECT with "200 Connection Established" for real AND
+#   fabricated slugs (637-E). A GET returns 404/14B for a fabricated slug and discriminates.
+# CHANNEL 3 (fallback): source-file headers (version.php/lib.php/setup.py/package.json), 639-G ACTION MO.
+# Grading is on the TITLE LINE (first 200B), not substring-over-payload — see
+# grader-titleline-vs-payload.2026-11-04-p640.tsv for why.
+slug	meta_spdx	stars	archived	pushed	byte_path	bytes	p640_grade	note
+1edtech/caliper-spec	NOASSERTION	22	false	2025-10-07	master/LICENSE.md	12402	UNGRADED-bespoke-or-consortium	title: IMS GLOBAL LEARNING CONSORTIUM, INC. # SPECIFICATION DOCUMEN
+ai-shifu/ai-shifu	Apache-2.0	330	false	2026-11-04	main/LICENSE.txt	11342	Apache-2.0	
+AnonymousOnyx22/brightspace-d2l-mcp	NOASSERTION	29	false	2026-11-01	main/LICENSE	1200	MIT	
+anthropic/p640-fabricated-control	422-NOT-INDEXED	422-NOT-INDEXED	422-NOT-INDEXED	422-NOT-INDEXED	NO-PAYLOAD	0	NO-PAYLOAD	needs existence channel
+Apereo-Learning-Analytics-Initiative/OpenLRS	NOASSERTION	47	true	2019-01-31	master/LICENSE	11087	ECL-2.0	
+Apereo-Learning-Analytics-Initiative/OpenLRW	NOASSERTION	62	false	2025-09-12	master/LICENSE	9878	ECL-2.0	
+ArnaudGuiovanna/tutor-mcp	MIT	94	false	2026-11-03	main/LICENSE	1073	MIT	
+assafkip/claudemy	MIT	605	false	2026-10-29	main/LICENSE	1069	MIT	
+Berserk-hub150/moodle-ai-skill-navigator	GPL-3.0	259	false	2026-10-25	main/LICENSE	35153	GPL-3.0	
+boyuchengz/canvas-mcp	MIT	119	false	2026-10-27	main/LICENSE	1072	MIT	
+canyongbs/advisingapp	NOASSERTION	340	false	2026-11-03	main/LICENSE	3860	Elastic-2.0	
+CaviraOSS/PageLM	NOASSERTION	2061	false	2026-10-29	main/LICENSE.md	8563	BESPOKE-NONCOMMERCIAL	title is a project name; body bars commercial use
+chamilo/chamilo-lms	GPL-3.0	1020	false	2026-11-03	master/LICENSE	35147	GPL-3.0	
+Cvmcosta/ltijs	Apache-2.0	373	false	2026-11-03	master/LICENSE	11361	Apache-2.0	
+frappe/education	NOASSERTION	693	false	2026-10-30	master/license.txt	19	DECLARATION-ONLY	License: GNU GPL V3
+GarethManning/education-agent-skills	NOASSERTION	944	false	2026-11-03	main/LICENSE	1230	CC-family	
+GeminiLight/gen-mentor	CC0-1.0	136	false	2026-10-23	main/LICENSE	7048	CC-family	
+HKUDS/DeepTutor	Apache-2.0	54742	false	2026-10-31	main/LICENSE	11408	Apache-2.0	
+ILIAS-eLearning/ILIAS	GPL-3.0	507	false	2026-11-03	master/LICENSE	35147	GPL-3.0	
+instructure/canvas-lms	AGPL-3.0	6900	false	2026-04-30	master/LICENSE	34520	AGPL-3.0	
+jasp-nerd/canvas-course-downloader	MIT	82	false	2026-11-03	main/LICENSE	1066	MIT	
+kad-xyz/spbstu-mcp	MIT	24	false	2026-11-02	main/LICENSE	1064	MIT	
+learningequality/kolibri	MIT	1168	false	2026-11-02	master/LICENSE	1097	MIT	
+luffycodes/Tutorbot-Spock	NONE	56	false	2024-11-04	NO-PAYLOAD	0	NO-PAYLOAD	needs existence channel
+moodle/moodle	GPL-3.0	7579	false	2026-10-30	main/COPYING.txt	35147	GPL-3.0	
+onbirdev/moodle-webservice_mcp	NONE	18	false	2026-07-23	HEADER:main/version.php	1200	GPL-3.0	
+openeducat/openeducat_erp	NOASSERTION	905	false	2026-11-02	master/LICENSE	8241	LGPL	
+openedx/edx-platform	422-NOT-INDEXED	422-NOT-INDEXED	422-NOT-INDEXED	422-NOT-INDEXED	master/LICENSE	35136	AGPL-3.0	
+OpenOLAT/OpenOLAT	NOASSERTION	449	false	2026-11-03	master/LICENSE	10982	Apache-2.0	
+OS4ED/openSIS-Classic	NONE	349	false	2026-10-26	NO-PAYLOAD	0	NO-PAYLOAD	needs existence channel
+Selleo/mentingo	MIT	106	false	2026-11-03	main/LICENSE	1062	MIT	
+SirhanMacx/Claw-ED	MIT	63	false	2026-09-19	main/LICENSE	1078	MIT	
+thm-mni-ii/feedbacksystem	NOASSERTION	24	false	2026-11-03	main/LICENSE	10785	Apache-2.0	
+THU-MAIC/OpenMAIC	MIT	42607	false	2026-11-03	main/LICENSE	1065	MIT	
+vishalsachdev/canvas-mcp	MIT	317	false	2026-11-03	main/LICENSE	1071	MIT	
+X-isdoingreat/canvas-pilot	AGPL-3.0	125	false	2026-07-31	main/LICENSE	34523	AGPL-3.0	
+Zenglian990/AI_Tutor_Release	MIT	81	false	2026-11-02	main/LICENSE	1068	MIT	

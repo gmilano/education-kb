@@ -1,0 +1,28 @@
+# p640 — CANONICAL LICENCE BYTE COUNTS, measured on raw.githubusercontent.com 2026-11-04.
+# Purpose: a later pass can classify the GNU family, and detect MODIFICATION, from the byte
+# count alone, before reading any payload. Each canonical figure has >=2 independent reads.
+licence	canonical_bytes	independent_reads	reads
+MIT	1062-1085 (band)	12	Selleo/mentingo 1062, iblai/lms 1063, kad-xyz/spbstu-mcp 1064, G36maid/moodle-mcp 1064, THU-MAIC/OpenMAIC 1065, ZeKaiNie/universal-examprep-skill 1065, jasp-nerd/canvas-course-downloader 1066, Zenglian990/AI_Tutor_Release 1068, assafkip/claudemy 1069, Li-Evan/Bloom 1069, littlecookie0722/AI-Teaching-Agent 1069, cuic19053-hue/awesome-student-ai-skills 1070, learninglocker/xapi-service 1070, vishalsachdev/canvas-mcp 1071, boyuchengz/canvas-mcp 1072, AnonymousOnyx22/moodle-student-mcp 1072, ArnaudGuiovanna/tutor-mcp 1073, SirhanMacx/Claw-ED 1078, longhornteacher/canvasexpert-se 1085
+Apache-2.0	11357	2	yetanalytics/lrsql 11357, adlnet/ADL_LRS 11357
+GPL-3.0	35147	3	moodle/moodle 35147, chamilo/chamilo-lms 35147, ILIAS-eLearning/ILIAS 35147
+AGPL-3.0	34523	3	X-isdoingreat/canvas-pilot 34523, learnhouse/learnhouse 34523, sitor-ai/frametell 34523
+ECL-2.0	9878 / 11087	2	Apereo OpenLRW 9878, Apereo OpenLRS 11087
+#
+# THE BAND IS THE INSTRUMENT. 34.5k = AGPL-3.0, 35.1k = GPL-3.0 — a byte count alone separates
+# the two families that every substring grader confuses. MIT's 23-byte spread is the
+# copyright-holder line, so MIT is a BAND, not a figure; a "MIT" grade outside it is a derivative.
+#
+# DEVIATION FROM CANONICAL = MODIFICATION. Direction and size, measured:
+repo	bytes	delta_vs_canonical	what the deviation IS
+Cvmcosta/ltijs	11361	Apache +4	trailing whitespace only; grant unaltered
+ai-shifu/ai-shifu	11342	Apache -15	whitespace/trim; grant unaltered
+HKUDS/DeepTutor	11408	Apache +51	appended copyright line (639-E mechanism 2)
+thm-mni-ii/feedbacksystem	10785	Apache -572	prepended "Copyright 2021 Technische Hochschule Mittelhessen" + APPENDIX removed; grant unaltered
+OpenOLAT/OpenOLAT	10982	Apache -375	🔵 RESOLVED THIS PASS: Apache APPENDIX ("How to apply the Apache License", 25 lines) DELETED, and TWO project statements APPENDED (olat.org original + openolat.org current). Net -375B. The deleted section is non-operative boilerplate: NO grant term is altered. Still Apache-2.0, still usable.
+openedx/edx-platform	35136	AGPL +613	appended; AGPL-3.0 title confirmed on the title line
+Berserk-hub150/moodle-ai-skill-navigator	35153	GPL +6	UTF-8 BOM + line endings; GPL-3.0 title confirmed
+instructure/canvas-lms	34520	AGPL -3	whitespace; AGPL-3.0 title confirmed
+helixnow/deep-student	34532	AGPL +9	whitespace; AGPL-3.0 title confirmed
+# 🔵 This REFINES 639-E mechanism 1 ("permissive text + appended project statement"). For OpenOLAT
+# the net is NEGATIVE, so "appended" alone does not predict the byte count: text was both added
+# and removed. 639-E's engagement answer (Apache-2.0, usable) is unchanged and now fully explained.

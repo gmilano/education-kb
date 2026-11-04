@@ -1,0 +1,15 @@
+# p640 — 🔴 THE LEARNING-RECORD STORE IN THIS BASE'S OWN COMPOSE RECIPE IS UNMAINTAINED.
+# compose/patterns.md P639-1 step 4 uses Apereo OpenLRW with the note "Fork-and-own: institutional
+# owner, archival risk (637-A)". p640 MEASURED that risk. It has already materialised.
+repo	licence (byte-read)	stars	archived	last_pushed	verdict
+Apereo-Learning-Analytics-Initiative/OpenLRW	ECL-2.0 9878B	62	false	2025-09-12	🔴 14 months stale
+Apereo-Learning-Analytics-Initiative/OpenLRS	ECL-2.0 11087B	47	🔴 TRUE	2019-01-31	🔴 ARCHIVED SINCE 2019 - 637-A's flag, confirmed
+# REPLACEMENTS, both channels verified 2026-11-04:
+yetanalytics/lrsql	🟢 Apache-2.0 11357B (CANONICAL, unmodified)	144	false	2026-11-03	🟢 THE SUBSTITUTE. SQL LRS, maintained yesterday, permissive, no appendix games.
+openfun/ralph	🟢 MIT 1094B	51	false	2026-11-03	🟢 THE EMEA SUBSTITUTE. Built by France Universite Numerique - EU public-sector governance, MIT grant. For an EMEA engagement this is the better answer than a US vendor's repo.
+learninglocker/xapi-service	🟢 MIT 1070B (at master/license, LOWERCASE)	42	false	2026-11-02	🟢 ** NEW TO THIS BASE **. Found ONLY because p640's oracle probes lowercase filenames - 639-G(iii)'s repair paying off on its first use. Lightweight xAPI statement service.
+adlnet/ADL_LRS	Apache-2.0 11357B (canonical)	334	false	2025-11-14	🟡 12 months stale. Reference implementation, not a deployment target.
+LearningLocker/learninglocker	🔴 GPL-3.0 35141B	584	false	2024-05-30	🔴 2.4 years stale AND copyleft. Do not start here.
+# 🟢 ACTIONABLE: P640-1 replaces OpenLRW with yetanalytics/lrsql (global) or openfun/ralph (EMEA).
+# This removes the only 🟡 component from the base's flagship assessment-integrity recipe and
+# changes the licence on that step from ECL-2.0 fork-and-own to Apache-2.0 / MIT maintained.

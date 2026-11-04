@@ -1,0 +1,38 @@
+# p640 — WHY THE SUPPLY LEG HAS GONE NIL FOR 14 PASSES. It is not a channel failure.
+# TEST 1: the mandated WEB supply leg. What star counts does it surface?
+slug	licence (byte-read)	stars	held_by_base	reading
+longhornteacher/canvasexpert-se	MIT 1085B	1	** NEW **	🟡 new, but 1 star
+littlecookie0722/AI-Teaching-Agent	MIT 1069B	0	held p3 as "unstated"	🟢 GRADE RESOLVED this pass
+thc1006/moodle-mcp	MIT 1064B	0	held p426	already held
+zhenghh04/canvas-mcp	MIT 1069B	0	held p64	already held
+AnonymousOnyx22/moodle-student-mcp	MIT 1072B	0	held p380 as "unstated"	🟢 GRADE RESOLVED this pass
+G36maid/moodle-mcp	MIT 1064B	27	held p187	already held
+# 🔵 FINDING: the web supply leg is ADVERSELY SELECTED. "Best MCP servers for education" roundups
+# surface repos with 0-27 stars, while the base's own held rows for the same function carry
+# 317 (vishalsachdev/canvas-mcp) and 42,607 (THU-MAIC/OpenMAIC). SEO rank is not adoption.
+#
+# TEST 2: run the supply leg through the API instead, sorted by stars, with a recency filter.
+# q="<terms> fork:true" sort=stars, pushed:>2026-08-01/09-01. Top-starred education repos returned:
+slug	licence (byte-read)	stars	pushed	held_by_base
+iblai/lms	🟢 MIT 1063B	208	2026-11-03	held p73 (only 5 mentions)
+learnhouse/learnhouse	AGPL-3.0 34523B	2446	2026-11-03	held p11
+brycewang-stanford/Auto-Empirical-Research-Skills	CC-family 620B	4912	2026-11-02	held p117
+Nutlope/llamatutor	NO-PAYLOAD (no grant)	2053	2026-10-23	held p7 as "no-grant" - CONFIRMED
+sitor-ai/frametell	🟢 AGPL-3.0 34523B	467	2026-11-03	held p254 as "unstated" - 🟢 RESOLVED
+ZeKaiNie/universal-examprep-skill	MIT 1065B	366	2026-10-27	held p3
+minicoohei/ai-agent-camp	NO-PAYLOAD + metadata NONE	347	2026-10-07	held p117 as "unstated" - 🟢 RESOLVED as no-grant
+Li-Evan/Bloom	MIT 1069B	300	2026-10-20	held p2
+helixnow/deep-student	AGPL-3.0 34532B	299	2026-11-02	held p76
+cuic19053-hue/awesome-student-ai-skills	MIT 1070B	153	2026-11-03	** NEW **
+#
+# 🟢 RESULT: 9 of 10 top-starred, recently-pushed education repos are ALREADY HELD.
+# 🟢 SO THE 14-PASS NIL IS SATURATION, NOT BLINDNESS. With 3,175 addresses in the ledger, this
+# base has the education supply covered. The nil is evidence of COVERAGE and should be reported
+# as such, not as a standing failure. That is a reinterpretation of 637-B, not a closure.
+# 🔵 BUT THE API CHANNEL EARNS ITS PLACE ANYWAY: it resolved FOUR ledger rows carrying "unstated"
+# into real grades on bytes (frametell AGPL-3.0, AI-Teaching-Agent MIT, moodle-student-mcp MIT,
+# ai-agent-camp no-grant) and confirmed one "no-grant". Its value is GRADE RESOLUTION on rows
+# already held, not discovery. Recommendation: keep the web leg for FACTS, run SUPPLY via the API.
+# 🔴 INSTRUMENT NOTE: q="teacher OR classroom OR grading ai stars:>200" over-matched badly,
+# returning openclaw/openclaw (393,868*) and n8n. GitHub search OR with bare keywords is unusable
+# for a vertical sweep; topic: qualifiers and narrow term pairs are what work.

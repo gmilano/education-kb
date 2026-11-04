@@ -3,6 +3,135 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ THIS PASS AT A QUOTED BYTE COUNT. `P640-1` REPAIRS `P639-1`, WHOSE RECORD STORE TURNS OUT TO HAVE AN **ARCHIVED** SIBLING AND A `14`-MONTH-STALE PRIMARY. `P640-2` IS THE FIRST RECIPE IN THIS BASE AGAINST A **LIVE** REGULATORY OBLIGATION RATHER THAN A FUTURE ONE. `P640-3` OPENS THE K-12 BUYER THAT `Cetic.br` JUST EVIDENCED.**
+
+🔵 Every address below was verified on **both** channels on `2026-11-04` — existence and metadata via
+`search/repositories` + `fork:true`, grant via `curl` `GET` on `raw.githubusercontent.com` with the
+byte count recorded, graded on the **title line** (`640-B`). Byte counts are quoted so a later pass
+can tell a re-read from a restatement. 🟢 `640-L`: because the EU, the UK and Vietnam all regulate
+**automated assessment**, `P640-1` and `P640-2` share one architecture — graded proposal, human
+confirmation, immutable record of who decided.
+
+### 🟢 `P640-1` — Assessment-integrity layer on a copyleft incumbent (brownfield; NA and EMEA)
+
+🔴 **What changed from `P639-1`, and why you must not build the old version.** Step `4` used
+[`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) with an
+*"archival risk"* note. 🔴 Measured this pass: `OpenLRW` is `14` months stale (`2025-09-12`) and its
+sibling `OpenLRS` is 🔴 **`archived`**, last pushed `2019-01-31`. The risk has materialised. 🟢 The
+record store is replaced, and the licence on that step improves from `ECL-2.0` fork-and-own to a
+maintained permissive grant.
+
+**The buyer.** 🟢 **North Carolina Session Law `2026-41`: state model policy due `2026-12-31`, local
+district policies due `2027-06-30`** — `8` weeks and `8` months out. `MD`, `ID`, `OK` and `VA` have
+`2026` laws mandating district-level policy adoption. Nationally, `57%` of students use AI weekly
+while `53%` sit under a discouraging or prohibiting policy: the institution needs the use
+**instrumented, not banned**. 🟢 In EMEA the same build is `Ofqual` compliance **today** —
+*"AI may not be the sole marker of student assessment"* — and `Annex III` preparation for
+`2027-12-02`.
+
+**The wiring — nothing enters the LMS process, so no copyleft is inherited.**
+
+| Step | Component | Grant (bytes) | Role |
+|---|---|---|---|
+| 1 | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` (`11,361 B`) | Register the layer as an **`LTI 1.3` tool** against `Moodle` / `Canvas` / `Open edX` / `Brightspace`. The one integration that works on all four. |
+| 2 | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 `MIT` (`1,072 B`) | Agent-side LMS access, **read-only**. Use this for the first demo — the risk conversation ends before it starts. |
+| 3 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `MIT` (`1,071 B`) | Write path once the pilot is signed off. `317★` — the `Canvas` boundary with real adoption. |
+| 4 | 🆕 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **`Apache-2.0`** (`11,357 B`, **canonical**) | 🆕 **The record store, replacing `OpenLRW`.** `xAPI` statements are the audit trail `Annex III` post-market surveillance and the NC policy both ask for. Pushed `2026-11-03`. |
+| 4-EMEA | 🆕 [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** (`1,094 B`) | 🆕 **Substitute step `4` for EU public-sector buyers.** France Université Numérique — EU governance *and* `MIT`. Survives a data-sovereignty question. |
+| 5 | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` (`10,785 B` = canonical `−572`: prepended `TH Mittelhessen` copyright + `APPENDIX` removed) | Automated personalised feedback, working German-university reference. 🟢 Recovered by `639-A` after `p638` published it red. |
+| 6 | [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | 🟢 `MIT` (`1,200 B`) | The `Brightspace`/`D2L` family, if the client is on it. |
+
+🔴 **The `Ofqual` constraint is a design requirement, not a nice-to-have.** AI must not be the **sole
+marker**. So step `5` emits a **graded proposal**, step `3` writes nothing until a human confirms, and
+step `4` records **who** confirmed and when. 🟢 That same record satisfies NC's local-policy
+evidencing and `Annex III` post-market surveillance. One build, three jurisdictions.
+
+🟡 **Do not use** [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) as the base
+despite the functional fit: 🔴 **Elastic License `2.0`** (`3,860 B`) bars hosted/managed-service
+delivery — the studio's delivery model. 🟡 Do not embed
+[`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator)
+(🔴 `GPL-3.0`, `35,153 B`) in-process; it is a `Moodle` plugin and the copyleft is inherited.
+
+**Effort:** `8`–`10` weeks for the pilot, `+4` for the write path and audit export.
+
+### 🟢 `P640-2` — Decision `33` conformity remediation (Vietnam; a **live** obligation)
+
+🟢 **The first recipe in this base against a regulation already in force.** Vietnam's Decision
+`33/2026/QĐ-TTg` has been in force since **`2026-08-15`**, and systems already deployed before that
+date must comply by **`2027-09-01`**. Three of its `46` high-risk systems are education, and two of
+them are exactly what edtech in-market is already doing: 🔴 **automated examination, assessment of
+learning outcomes or ranking of learners**, and 🔴 **monitoring learner behaviour via biometric or
+other automated means**.
+
+**The buyer.** A Vietnamese university, school group or edtech vendor with an assessment or
+proctoring product **already running**, now inside an enumerated high-risk list with a dated
+remediation deadline and a conformity-assessment route to choose (third-party for designated systems,
+provider self-assessment otherwise).
+
+**The wiring — a conformity wrapper around a system you are not allowed to replace.**
+
+| Step | Component | Grant (bytes) | Role |
+|---|---|---|---|
+| 1 | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` (`11,361 B`) | Intercept at the `LTI 1.3` boundary so the existing system is untouched — essential when the client cannot re-certify a replacement before `2027-09-01`. |
+| 2 | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **`MIT`** (`1,069 B`) | 🆕 **Resolved from `unstated` this pass (`640-C`).** Its **structured `DSL` + mandatory human review + sandboxed evaluation** is precisely the control Decision `33` item `2` requires. 🟡 `0★` — lift the design, do not take it as a dependency. |
+| 3 | 🆕 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 `Apache-2.0` (`11,357 B`) | The conformity evidence log: every automated score, the human who confirmed it, the timestamp. This **is** the self-assessment dossier. |
+| 4 | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **`MIT`** (`1,065 B`) | Where self-study content is needed, this replaces item `1`'s *"uncontrolled data sources"* with a **curated, forkable** corpus under a grant that permits closing the fork. `42,607★`, Tsinghua. |
+| 5 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` (`1,097 B`) | Offline-first delivery for provincial deployments; also removes the uncontrolled-source exposure by shipping a fixed content set. |
+
+🔴 **What this recipe must NOT do.** Decision `33` item `3` names **biometric** behaviour monitoring as
+high-risk. 🟢 So the compliant design **drops biometrics entirely** rather than documenting them —
+there is no conformity paperwork that makes a biometric proctoring feature cheap. Instrument
+submission-level signals through step `3` instead.
+
+🔵 **Why this sells before the EU version.** Identical architecture, obligation live `15` months
+earlier. A studio that builds `P640-2` has `P640-1`'s EMEA variant for `2027-12-02` almost for free.
+
+**Effort:** `6`–`8` weeks for the wrapper and dossier; `+6` if step `4`'s corpus replacement is in
+scope.
+
+### 🟢 `P640-3` — K-12 system governance stack (LATAM, Brazil first)
+
+🟢 **`Cetic.br` just evidenced this buyer and this base could not serve it until now.** `53%` of
+Brazilian school administrators use AI; 🔴 **`22%`** have guidelines. Every prior LATAM recipe here
+targeted higher education, because every prior LATAM datapoint was higher education.
+
+**The buyer.** A state secretariat of education or private school network — not a university.
+Budget-constrained (LATAM public universities: `4%` have dedicated AI funding), often
+connectivity-constrained, and facing **`716`** regulatory instruments across `23` countries with no
+regional law, i.e. a **fragmentation** problem.
+
+**The wiring — permissive end to end, so per-country policy variants stay cheap.**
+
+| Step | Component | Grant (bytes) | Role |
+|---|---|---|---|
+| 1 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** (`1,097 B`) | **Offline-first delivery platform.** `1,168★`, the largest permissive platform in education. `MIT` means the secretariat's fork is theirs. |
+| 2 | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **`MIT`** (`1,063 B`) | 🆕 Where a connected LMS is wanted instead, this is the permissive alternative to `Chamilo` (🔴 `GPL-3.0`), which otherwise dominates LATAM public sector. |
+| 3 | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` (`11,342 B`) | Guided-learning agent layer. `330★`, pushed `2026-11-04`. |
+| 4 | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 `Apache-2.0` (`11,357 B`) | One record store, **many policy configurations** — the fragmentation answer. One deployment, per-country retention and disclosure rules on top. |
+| 5 | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 `CC-BY-SA-4.0` (`1,230 B`) | Teacher-facing playbooks. 🟡 **Commercial use allowed, share-alike** — usable as *content* with attribution; keep it out of code the client wants to close. |
+
+🔴 **The licence trap specific to this region, carried from `639-E` mechanism `10`.** LATAM
+repositories over-collect non-English licence payloads, which metadata graders read as
+`NOASSERTION` and keyword graders read as `UNGRADED`. 🟢 Every component above is **byte-read and
+title-line graded**; do not substitute a component into this stack on a metadata reading.
+
+🟡 **And do not reach for the obvious name.** [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)
+(`2,061★`) is the best-known study-tool repo in this space and is 🔴 **bespoke non-commercial**
+(`8,563 B`, commercial use barred, redistribution barred) — it reads as `MIT` to every keyword grader
+including `p640`'s first one (`640-B`). 🔴 It cannot go in a client deliverable.
+
+**Effort:** `6`–`8` weeks for a single-state pilot; `+2` per additional country policy variant.
+
+🟢 **Carried, unchanged and still buildable:** `P639-1`'s `LTI`-boundary pattern for brownfield
+engagements (with step `4` substituted per `P640-1`), and the four-LMS-family boundary set — `Canvas`
+(×`3`), `Moodle` (×`3`, now including [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp)
+and [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp), both 🟢 `MIT` `1,064 B`),
+`Brightspace/D2L`, and any `LTI 1.3` consumer.
+
+Evidence: `evidence/licence-oracle-calibration.2026-11-04-p640.tsv`,
+`evidence/lrs-substitution.2026-11-04-p640.tsv`,
+`evidence/regional-legs.2026-11-04-p640.tsv`.
+
 
 ## 🆕 `p639` — reads `2026-11-04` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ THIS PASS. ONE OF THEM ONLY BECAME BUILDABLE BECAUSE `639-A` RECOVERED COMPONENTS `p638` HAD PUBLISHED AS RED.**
 

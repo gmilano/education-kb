@@ -3,6 +3,118 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04`, commit `2026-11-04` — **🟢 THE LICENCE CELL IS NOW A SCRIPTED TWO-CHANNEL MEASUREMENT: `37` ADDRESSES IN ONE SHELL CALL, EVERY CELL CITING ITS CHANNEL AND BYTE COUNT, WHICH IS WHAT `639-A` LEFT OPEN AS A RULE. 🔴 AND THE PASS'S OWN FIRST GRADER FAILED TWICE — MIS-GRADING THE `GNU` FAMILY AND RE-PUBLISHING `PageLM` AS `MIT`, THIS BASE'S DOCUMENTED FIVE-PASS ERROR. 🔴 THE EXISTENCE ORACLE `p639` TRUSTED RETURNS A FALSE ABSENT FOR **OPEN edX**. 🔴 `639-H`'s PREDICTION ABOUT `EMEA` IS FALSIFIED. 🟢 VIETNAM HAS APAC'S FIRST BINDING EDUCATION AI REGIME AND IT IS LIVE `15` MONTHS BEFORE THE EU's.**
+
+🟢 **The pass's main result is an instrument, and the three things it found by being cheap.**
+`639-A` closed the byte-read channel as a capability and left a rule — *"a licence cell cites its
+channel and its byte count, or it is not a licence cell."* `p639` complied by hand through `WebFetch`.
+`p640` makes it `curl -s` `GET` on `raw.githubusercontent.com` with `%{http_code}` and
+`%{size_download}`, walking `28` branch/filename combinations then `10` source-file headers, run
+`10`-wide: **`37` addresses, one shell call**, committed as `ingest/licence-bytes-p640.sh`.
+
+| Measured `2026-11-04` | Reading |
+|---|---|
+| Addresses probed on both channels | `37` (`36` real + `1` fabricated control) |
+| Payloads read on bytes | 🟢 `34` |
+| Byte counts reproducing this base's stored figures **exactly** | 🟢 `4` — same channel, measured cheaper |
+| Agent cohort live / archived | 🟢 `16 of 16` / `0` |
+| No usable grant | 🔴 `1 of 16` (`6.3%`) — reproduces `639-B` independently |
+| `unstated` ledger rows resolved on bytes | 🟢 `4` |
+| Addresses **absent** (negative on **both** channels) | 🟢 `1` — the fabricated control, and only it |
+
+🟢 **It also repairs the mandated verification method this base has had on its books as broken since
+`637-E`.** `curl -sI` returns `200 Connection Established` — the proxy's `CONNECT` reply — for a real
+**and** a fabricated slug. A `GET` returns a literal `404` at `14 B`. The repair is one flag, and it is
+the difference between an oracle and a rubber stamp.
+
+🔴 **`p640`'s own grader failed twice, and both failures are the pass's most transferable findings.**
+🔴 **(i)** `639-G(i)` recorded `p639` reading an `AGPL` payload as `GPL` (*"does any line **lack**
+`AFFERO`"*). `p640`'s first grader inverted the test and mis-graded `moodle/moodle` as `AGPL-3.0`.
+🔵 The cause defeats **every** substring grader: the `GPL-3.0` text names `AFFERO` `3` times in
+section `13`, and the `AGPL-3.0` text names *"GNU GENERAL PUBLIC LICENSE"* `5` times. 🟢 Only the
+**title line** discriminates — and regraded on it, `p639`'s `Berserk-hub150` row is vindicated against
+`p640`'s.
+🔴 **(ii) The dangerous direction.** `p640`'s first grader published
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) as `MIT`. Its title is
+`# PageLM Community License` and its body opens with `MIT`'s exact words before narrowing them to
+*"personal, educational, or **non-commercial** research purposes"*. 🔴 This base records that very
+error as its own — *"`PageLM` sat on this base's shelves as `MIT` for five passes"* — and `p640`
+reproduced it mechanically, which finally **explains** it: the licence is `MIT`-phrased by
+construction, so any keyword grader calls it `MIT` forever. 🟢 Two independent tests now catch it: the
+title is a project name, and `8,563 B` is nowhere near the measured `MIT` band of `1,062`–`1,085 B`.
+
+🟢 **Out of that comes a reusable instrument: the canonical licence byte count.** `GPL-3.0` =
+**`35,147 B`** (`3` independent reads), `AGPL-3.0` = **`34,523 B`** (`3`), `Apache-2.0` =
+**`11,357 B`** (`2`), `MIT` = **`1,062`–`1,085 B`** (`19`). 🟢 So **a byte count alone separates the
+two families every substring grader confuses** — they sit `~624 B` apart and never overlap — and a
+deviation from canonical *locates* `639-E`'s modification mechanisms. 🔵 That finally reconciles
+`OpenOLAT`, the row that caused `p638`'s whole regression: the `Apache` **`APPENDIX`** section is
+**deleted** and **two** project statements appended, netting `−375 B`. The deleted section is
+non-operative boilerplate; **no grant term is altered**. It is `Apache-2.0`.
+
+🔴 **The existence oracle has a false-negative class, and it hides a repository this KB depends on.**
+`p639` verified existence with `search/repositories` + `fork:true`, controlled by a fabricated slug
+returning `422`. 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) returns **the
+same `422`** — `org:openedx` reads `total_count = 0` — while the byte channel serves its `LICENSE` at
+`35,136 B` titled `GNU AFFERO GENERAL PUBLIC LICENSE`. The org is simply not in this session's search
+index; its forks are. 🔴 **A pass trusting that control would have deleted Open edX, one of the five
+LMS incumbents on these shelves, as non-existent.** 🟢 The rule that follows, measured: **a slug is
+ABSENT only when BOTH channels are negative** — which happened exactly once in `37`, for the
+fabricated control.
+
+🔴 **`639-H` over-generalised and `p640` falsified it.** `639-H` correctly closed the `APAC` nil as a
+query-shape artifact, then predicted the same defect suppressed `EMEA`. 🟢 Run as prescribed, **`EMEA`
+paid on the first attempt**: Europe `$2.64B` (`2026`) → `$8.0B` (`2030`) at `31.9%` `CAGR`; Finland,
+Estonia and the Netherlands as K-12 leaders; 🔴 **only `10%` of `450+` institutions with formal AI
+guidelines**; a second `AI Act` date (embedded systems **`2028-08-02`**, alongside `Annex III`'s
+**`2027-12-02`**); and Dubai `KHDA` — this base's first Gulf regulator. 🔵 **The mechanism is narrower
+than `639-H` said:** the region token fails when no institution self-describes with it. The `EU` is a
+legal order; `APAC` is a sales territory.
+
+🟢 **Vietnam is the find of the pass, and it inverts an assumption.** **Decision `33/2026/QĐ-TTg`** —
+in force **`2026-08-15`** — enumerates `46` high-risk AI systems, **three in education**: automated
+self-study content from uncontrolled sources; 🔴 automated **examination, assessment or ranking of
+learners**; 🔴 **biometric** behaviour monitoring. Legacy systems comply by **`2027-09-01`**.
+🟢 Structurally this is EU `Annex III`, **live `15` months earlier** — so the market that regulates
+first is not the one with the largest market-size estimate. 🆕 Australia `TEQSA` now also requires all
+higher-education providers to file generative-AI risk action plans.
+
+🔵 **And the synthesis that makes all of this sellable in one build.** The EU (`Annex III`: exam
+scoring, student evaluation), the UK (🆕 `Ofqual`, `2026-01-15`: 🔴 **AI may not be the sole marker of
+student assessment**) and Vietnam (Decision `33`: automated examination and ranking) are three
+unrelated legal systems that **independently selected automated assessment as the regulated
+surface**. 🟢 One architecture satisfies all three — graded proposal, human confirmation, immutable
+record of who decided — so a studio does not need three products. `P640-1` and `P640-2` are that
+architecture, in EMEA/NA and Vietnam respectively.
+
+🟢 **The governance deficit is no longer a higher-education phenomenon.** 🆕 **Cetic.br** (Brazil,
+`2026`): `53%` of **school administrators** use AI, 🔴 **`22%`** have guidelines — the same ratio as
+the region's universities (`87%` use / `26%` governed). 🟢 That roughly doubles the LATAM buyer set
+and `P640-3` serves it. 🆕 Universidad de los Andes counts **`716`** AI regulatory instruments across
+**`23`** countries, >`80%` since `2023`: the LATAM problem is **fragmentation**, not absence.
+
+🔵 **North America got its first dated compliance calendar on these shelves.** `134` bills across `31`
+states; **North Carolina Session Law `2026-41`** — state model policy **`2026-12-31`**, local district
+policies **`2027-06-30`**; `MD`/`ID`/`OK`/`VA` mandating district policy adoption; `US DOL` AI
+Literacy Framework (`2026-02-13`). 🔵 And a conflation avoided: `p639`'s `57%` (**students**, weekly)
+and `p640`'s `60%` (**teachers**) are **not** in conflict — they measure different populations, and
+"reconciling" them would manufacture a false correction.
+
+🔴 **Two structural problems carried, unchanged.** `make hooks` has been un-runnable for a **fifth**
+consecutive pass (`639-C`), so every gate here is dark and every figure above is measured by
+instruments this pass wrote and declared. And `639-D` holds: `eur-lex.europa.eu` and
+`news.gallup.com` are `ENOTFOUND`, so **every market and regulatory figure on these shelves is
+secondary**. 🟢 `p640` did update `intel/open-gaps.md` and this file in-pass — the precise failure
+`639-C` recorded against `p638`.
+
+🔴 **Declared gaps.** Germany: the query that paid for the Commission, `Ofqual` and the `DfE` returned
+**nothing** on the `Bildungsministerium` or the *Länder* — and Germany is the largest `EMEA` market
+represented here. APAC market size: a Ken Research report **exists** but no figure is obtainable, so
+the gap moves from *"not found"* to *"source identified, figure paywalled."*
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic): `NO-PAYLOAD` across `38`
+combinations, metadata live at `349★` — **unresolved, not ungranted.**
+🔵 Eleven findings registered (`640-A`…`640-N`).
+
 
 ## 🆕 `p639` — reads `2026-11-04`, commit `2026-11-04` — **🔴 THE BYTE-READ CHANNEL WAS NEVER UNAVAILABLE. `637-E` WITHDREW A CHANNEL THIS BASE HAS USED SINCE `p584` AND NAMES `2,206` TIMES AS *"THE PASS'S ONLY FIRST-HAND CHANNEL"*, AND `p638` THEN PUBLISHED A METADATA-ONLY LICENCE COLUMN THAT **CONTRADICTS `6` BYTE-READS ALREADY SETTLED IN THIS REPOSITORY** — `2` OF THEM INVERTING THE ENGAGEMENT ANSWER. 🔴 `p638`'s `31%`-NO-GRANT HEADLINE IS FALSE AND FALSIFIABLE FROM THESE FILES: MEASURED `6.3%`. 🟢 THE FOUR-PASS `APAC` NIL **CLOSES** — IT WAS THE MANDATED QUERY'S SHAPE, NOT THE SECTOR. 🔴 `make hooks` DENIED A FOURTH PASS, NOW WITH A NAMED CAUSE.**
 

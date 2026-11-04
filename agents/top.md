@@ -3,6 +3,125 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04`, commit `2026-11-04` — **🟢 `640-A`: THE LICENCE CELL IS NOW A SCRIPTED TWO-CHANNEL MEASUREMENT, NOT A PER-ADDRESS JUDGEMENT — `36 of 36` REAL ADDRESSES VERIFIED, EVERY CELL CITING ITS CHANNEL AND BYTE COUNT, WHICH IS WHAT `639-A` LEFT OPEN AS A RULE. 🔴 `640-B`: BOTH `p639`'s GRADER **AND `p640`'s OWN FIRST GRADER** MIS-GRADED THE `GNU` FAMILY, IN OPPOSITE DIRECTIONS, FOR THE SAME STRUCTURAL REASON — AND `p640`'s FIRST GRADER PUBLISHED `PageLM` AS `MIT`, RE-COMMITTING THIS BASE'S OWN FIVE-PASS ERROR. 🟢 `640-C`: FOUR LEDGER ROWS CARRYING `unstated` RESOLVED ON BYTES.**
+
+🟢 **`639-A` closed a capability question and left a rule: *"a licence cell cites its channel and its
+byte count, or it is not a licence cell."*** `p639` satisfied it by hand, `44` addresses at a time,
+through `WebFetch`. `p640` makes it an instrument: `curl -s` `GET` against
+`raw.githubusercontent.com` with `%{http_code}` and `%{size_download}`, walking `28` branch/filename
+combinations and then `10` source-file headers, run `10`-wide. `37` addresses, one shell call.
+Committed as `ingest/licence-bytes-p640.sh` and `ingest/licence-grade-titleline-p640.sh` so the next
+pass does not rebuild it.
+
+🔴 **And it corrects the mandated verification method, which this base has had on its books as broken
+since `637-E`.** The prescribed check is `curl -sI`. That returns
+`HTTP/1.1 200 Connection Established` — the proxy's `CONNECT` reply — for a **real and a fabricated
+slug alike**, so a pass trusting it marks every fabrication verified. 🟢 **A `GET` does not share the
+defect**: the fabricated control returns a literal `404` at `14 B`. The repair is one flag, and it is
+the difference between an oracle and a rubber stamp.
+
+| Measured `2026-11-04` | Reading |
+|---|---|
+| Addresses probed on both channels | `37` (`36` real + `1` fabricated control) |
+| Payloads read on bytes | 🟢 `34 of 37` |
+| Byte counts reproducing this base's stored figures **exactly** | 🟢 `4` — `OpenOLAT` `10,982 B`, `ltijs` `11,361 B`, `OpenLRW` `9,878 B`, `OpenLRS` `11,087 B` |
+| Agent cohort re-verified live | 🟢 `16 of 16`, `0` archived |
+| 🔴 No usable grant at all | 🔴 `1 of 16` (`6.3%`) — reproduces `639-B`, which withdrew `p638`'s `31%` |
+| Fabricated control | 🟢 negative on **both** channels — the only sound absence in the set |
+
+### 🔴 `640-B` — the grader failure, and it is `p640`'s own
+
+🟡 Declared first, because a pass that reports only its instrument's successes is not measuring.
+
+🔴 **Failure 1 — the `GNU` family, and both passes got it wrong.** `639-G(i)` recorded that `p639`'s
+grader read an `AGPL` payload as `GPL` because it tested *"does any line lack `AFFERO`"*. `p640`'s
+first grader inverted the test — *"does any line **have** `AFFERO`"* — and promptly mis-graded
+`moodle/moodle` and `Berserk-hub150/moodle-ai-skill-navigator` as `AGPL-3.0`. 🔵 **The cause is
+structural and it defeats every substring grader**: the `GPL-3.0` text names `AFFERO` **`3`** times
+in section `13`, and the `AGPL-3.0` text names *"GNU GENERAL PUBLIC LICENSE"* **`5`** times. Measured:
+
+| Payload | Title line | `AFFERO` hits | `GNU GPL` hits | Correct |
+|---|---|---|---|---|
+| `moodle/moodle` `main/COPYING.txt` | `GNU GENERAL PUBLIC LICENSE` v3 | `3` | `12` | 🟢 `GPL-3.0` |
+| `instructure/canvas-lms` `master/LICENSE` | `GNU AFFERO GENERAL PUBLIC LICENSE` v3 | `15` | `5` | 🟢 `AGPL-3.0` |
+
+🟢 **The only sound discriminator is the title line** — the first `~120 B`. Regraded on it, all `8`
+`GNU`-family rows in the cohort come out right, and 🟢 **`p639`'s row for
+`Berserk-hub150/moodle-ai-skill-navigator` (`GPL-3.0`, metadata and payload agreeing) is vindicated
+against `p640`'s first reading.**
+
+🔴 **Failure 2, and it is the dangerous direction.** `p640`'s first grader published
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) as 🟢 `MIT`. It is not. The title is
+`# PageLM Community License`, and the body opens with `MIT`'s exact words — *"Permission is hereby
+granted, free of charge"* — and then narrows them to *"personal, educational, or **non-commercial**
+research purposes"*. 🔴 **This base has that failure on record as its own**: *"`PageLM` sat on this
+base's shelves as `MIT` for five passes."* `p640` reproduced it mechanically, which finally explains
+it: **the licence is `MIT`-phrased by construction, so any keyword grader will call it `MIT` forever.**
+🟢 Two independent tests catch it — the title line is a project name, not a licence name; and
+`8,563 B` is nowhere near the measured `MIT` band of `1,062`–`1,085 B`. Both are now in the grader.
+Evidence: `evidence/grader-titleline-vs-payload.2026-11-04-p640.tsv`.
+
+### 🟢 The agent cohort — `16 of 16` live, every licence cell citing channel and bytes
+
+Metadata via `search/repositories` + `fork:true`; grant via byte-read. Where the two channels differ,
+the resolution is stated.
+
+| Agent | Grant (byte-read, `title-line` graded) | Metadata | ★ | Pushed | Reading |
+|---|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` (`1,065 B`, `main/LICENSE`) | `MIT` | **`42,607`** | `2026-11-03` | 🟢 **The strongest permissive asset in education, and it is not American.** Tsinghua `MAIC` lab; turns a topic or document into a classroom with AI teachers and AI classmates. `MIT` at `42.6k★` means a studio can fork, white-label and ship it. |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` (`11,408 B` = canonical `+51`, appended copyright) | `Apache-2.0` | **`54,742`** | `2026-10-31` | 🟢 The sector's largest. Lifelong-memory tutoring, mastery gates. Permissive. |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 🟢 `MIT` (`1,069 B`) | `MIT` | `605` | `2026-10-29` | 🟢 Usable. |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `Elastic-2.0` (`3,860 B`) | `NOASSERTION` | `340` | `2026-11-03` | 🔴 **Source-available, not open source.** Bars hosted/managed-service delivery — i.e. bars the studio's usual delivery model. Byte count reproduces `p639` exactly. |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` (`11,342 B`) | `Apache-2.0` | `330` | `2026-11-04` | 🟢 Usable. Pushed today. |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 `MIT` (`1,071 B`) | `MIT` | `317` | `2026-11-03` | 🟢 The `Canvas` boundary with real adoption. |
+| [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🔴 `GPL-3.0` (`35,153 B` = canonical `+6`, `UTF-8 BOM`) | `GPL-3.0` | `259` | `2026-10-25` | 🔴 Copyleft. In-process `Moodle` plugin, so the licence is inherited. Attach at the boundary instead. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 `CC-BY-SA-4.0` (`1,230 B`) | `NOASSERTION` | `944` | `2026-11-03` | 🟡 **Commercial use allowed, share-alike.** `p638` published this *"not reusable"*; `639-A` overturned it. Usable as *content*, not as code a client can close. |
+| [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | 🔴 `AGPL-3.0` (`34,523 B`, canonical) | `AGPL-3.0` | `125` | `2026-07-31` | 🔴 Network copyleft. Fatal for a hosted build. |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 `MIT` (`1,072 B`) | `MIT` | `119` | `2026-10-27` | 🟢 **Read-only.** The first-demo choice — the risk conversation ends before it starts. |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` (`1,062 B`) | `MIT` | `106` | `2026-11-03` | 🟢 Usable. |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` (`1,073 B`) | `MIT` | `94` | `2026-11-03` | 🟢 Usable. |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 `MIT` (`1,068 B`) | `MIT` | `81` | `2026-11-02` | 🟢 Usable. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🟢 `CC0-1.0` (`7,048 B`) | `CC0-1.0` | `136` | `2026-10-23` | 🟢 Public-domain dedication. `p639`'s grader returned `UNGRADED` here; `640-A`'s grades it. |
+| [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | 🟢 `MIT` (`1,064 B`) | `MIT` | `24` | `2026-11-02` | 🟢 Usable. |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 **no grant** (`NO-PAYLOAD`, `28` licence paths + `10` header paths) | `NONE` | `56` | `2024-11-04` | 🔴 **The `1 of 16`.** Unmaintained two years. Not usable, and not a candidate. |
+
+🟢 **Grade distribution, measured on bytes:** `MIT` `8`, `Apache-2.0` `2`, `CC0-1.0` `1`,
+`CC-BY-SA-4.0` `1`, `GPL-3.0` `1`, `AGPL-3.0` `1`, `Elastic-2.0` `1`, **no grant `1`**.
+🟢 So `9 of 16` (`56%`) are `MIT`/`Apache`/`CC0` — buildable with no client-side licence conversation
+at all — and `639-B`'s `6.3%` no-grant figure reproduces exactly.
+
+### 🟢 `640-C` — four `unstated` ledger rows resolved on bytes
+
+🔵 The ledger carried these with no grade for between `117` and `637` passes. The byte channel settles
+all four, and one of them changes an answer.
+
+| Address | Ledger held | 🟢 Byte-read `2026-11-04` | ★ |
+|---|---|---|---|
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | `unstated` since `p254` | 🔴 **`AGPL-3.0`** (`34,523 B`, canonical) | `467` |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | `unstated` since `p3` | 🟢 **`MIT`** (`1,069 B`) | `0` |
+| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | `unstated` since `p380` | 🟢 **`MIT`** (`1,072 B`) | `0` |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | `unstated` since `p117` | 🔴 **no grant** (`NO-PAYLOAD` + metadata `NONE`) | `347` |
+
+🔵 `AI-Teaching-Agent` is the one that matters: `MIT`, and it covers lab and exam generation, grading
+workflows, a structured `DSL` with human review, sandboxed evaluation and an `MCP` server. 🟡 At `0★`
+it is a reference to read, not a dependency to adopt — but the **design** is the one `P640-1` needs,
+and the grant permits lifting it.
+
+🟢 **The third channel is now instrumented, not manual.**
+[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) carries no
+licence file at all; `639-G` resolved it by hand to `GPL-3.0-or-later` in `version.php`. `p640`'s
+oracle finds it automatically — `HEADER:main/version.php`, *"GNU General Public License"* — so
+`639-G`'s *"a third channel above both of mine"* is no longer a note, it is a code path.
+
+🔴 **Still unresolved, and still not absent.**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns `NO-PAYLOAD` across `38`
+combinations now (`p639` tried `11`), while metadata reads it **live** at `349★`, pushed `2026-10-26`,
+licence `NONE`. 🟡 Existence is settled; the grant is not in any file either channel can see.
+
+Evidence: `evidence/licence-oracle-calibration.2026-11-04-p640.tsv`,
+`evidence/canonical-licence-bytes.2026-11-04-p640.tsv`,
+`evidence/supply-channel-saturation.2026-11-04-p640.tsv`.
+
 
 ## 🆕 `p639` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `639-A`: THE BYTE-READ CHANNEL WAS NEVER UNAVAILABLE. `637-E` WITHDREW A CHANNEL THIS BASE HAS USED FOR `54` PASSES AND NAMES `2,206` TIMES AS *"THE PASS'S ONLY FIRST-HAND CHANNEL"*, AND `p638` THEN PUBLISHED A METADATA-ONLY LICENCE COLUMN THAT **CONTRADICTS `6` BYTE-READS ALREADY SETTLED IN THIS REPOSITORY**. 🔴 `639-B`: `p638`'s HEADLINE STATISTIC — *"`5 of 16` (`31%`) CARRY NO USABLE GRANT"* — IS **FALSE AND FALSIFIABLE FROM THIS BASE'S OWN FILES**; MEASURED `1 of 16` (`6.3%`). 🔴 `639-C`: `p638` PUBLISHED `8` SHELVES CARRYING **`0` PASS IDS** AND REGISTERED **`0`** GAPS — `637-D` PREDICTED THIS EXACTLY. 🟢 `639-D`: `16 of 16` RE-VERIFIED LIVE, CONTROL `422`, `0` DRIFT. EIGHT REGISTERED (`639-A`…`639-H`).**
 

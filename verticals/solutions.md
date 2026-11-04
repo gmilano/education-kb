@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04` — **🟢 `640-N`: `639-F` FOUND **ONE** PERMISSIVE EDUCATION PLATFORM AND CALLED `p638`'s *"COMPONENTS, NOT PLATFORMS"* RULE FALSE. THERE ARE **THREE**, ALL BYTE-VERIFIED, AND THE LARGEST HAS `1,168★`. 🔴 `640-F`: THE `Apereo` LEARNING-ANALYTICS SHELF — WHICH THIS BASE RECOMMENDS AS A FORK-AND-OWN RECORD STORE — HAS AN **ARCHIVED** SIBLING AND A `14`-MONTH-STALE PRIMARY. REPLACEMENTS ARE ON THE SHELF BELOW.**
+
+🟢 **`639-F` was right and under-counted.** It withdrew `p638`'s generalisation on the strength of one
+counter-example, [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT). 🟢 `p640`'s byte sweep finds
+**two more**, and one of them has more stars than `OpenOLAT`, `ILIAS` and `OpenLRW` combined.
+
+### 🟢 The permissive platform shelf — complete LMS/learning platforms a studio can close
+
+| Platform | Grant (byte-read, title-line graded) | Metadata | ★ | Pushed | Reading |
+|---|---|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** (`1,097 B`) | `MIT` | **`1,168`** | `2026-11-02` | 🟢 **The largest permissive platform in education.** Offline-first by design — the answer when connectivity, not licence, is the constraint. LATAM and Africa deployments; `Learning Equality` is the institutional owner. |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** (`10,982 B`, fully reconciled — `640-E`) | 🟡 `NOASSERTION` | `449` | `2026-11-03` | 🟢 **The greenfield default when the client needs a complete, standards-complete LMS and a permissive licence in one artefact.** `QTI 2.1`, `SCORM 1.2`, `LTI 1.3`. Swiss-governed, `DACH` higher education. Forkable, white-labellable, deliverable as a managed service. |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **`MIT`** (`1,063 B`) | `MIT` | `208` | `2026-11-03` | 🟢 🆕 **A second permissive LMS, and new to this shelf.** Held in the ledger since `p73` with only `5` mentions — under-used given it answers the permissive-platform question directly. Maintained yesterday. |
+
+🔵 **Why `OpenOLAT` keeps getting lost, stated once more because it cost `p638` a whole pass.**
+GitHub's metadata reads it `NOASSERTION` / *"Other"*. `640-E` now explains the payload to the byte:
+the `Apache` **`APPENDIX`** section is deleted and **two** project statements are appended, netting
+`−375 B` against canonical `11,357 B`. 🟢 **The deleted section is boilerplate instructions and
+carries no grant term.** It is `Apache-2.0`. A metadata-only column will mis-grade it **every single
+time**, which is why `639-A`'s rule — cite the channel and the byte count — exists.
+
+### 🔴 The copyleft incumbents — `5 for 5` holds, re-verified on bytes this pass
+
+🟢 `p638`'s reading of the five highest-deployment incumbents survives `640-N` intact. Only the
+*generalisation* was ever withdrawn.
+
+| Platform | Grant (byte-read) | Metadata | ★ | Pushed | Delivery consequence |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` (`35,147 B`, canonical, at `main/COPYING.txt`) | `GPL-3.0` | `7,579` | `2026-10-30` | In-process plugins inherit `GPL`. Attach over `LTI`/web services. |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` (`34,520 B`) | `AGPL-3.0` | `6,900` | 🟡 `2026-04-30` | 🔴 Network copyleft — fatal in-process for a hosted build. 🟡 Mirror `6` months stale; Instructure ships from release branches. |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` (`35,136 B`) | 🔴 **`422` — not indexed**, see `640-G` | — | — | 🔴 Network copyleft. **And the existence oracle denies this repository exists** — see the gap register. |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` (`35,147 B`) | `GPL-3.0` | `1,020` | `2026-11-03` | Strong LATAM/EMEA public-sector footprint. Attach, don't embed. |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` (`35,147 B`) | `GPL-3.0` | `507` | `2026-11-03` | `DACH` higher education and public sector. |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` (`34,523 B`, canonical) | `AGPL-3.0` | `2,446` | `2026-11-03` | 🟡 Modern and well-starred, but `AGPL` — not a base for closed client work. |
+
+🔵 **`GPL-3.0` at `35,147 B` three times and `AGPL-3.0` at `34,523 B` three times** is what makes
+`640-D`'s byte-count instrument trustworthy on this shelf: the two families are `~624 B` apart and
+never overlap, so the copyleft question can be answered before a payload is read.
+
+### 🟡 The ERP / SIS / records shelf
+
+| Platform | Grant (byte-read) | Metadata | ★ | Pushed | Reading |
+|---|---|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL` (`8,241 B`) | 🟡 `NOASSERTION` | `905` | `2026-11-02` | 🟡 **Education ERP on `Odoo`.** `LGPL` is weaker copyleft than `GPL`: linking is permitted, so an AI layer calling it over a module boundary is viable. Admissions, enrolment, fees, hostel, library. |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 **declaration only** — `19 B` at `master/license.txt`, reading exactly `License: GNU GPL V3` | 🟡 `NOASSERTION` | `693` | `2026-10-30` | 🟡 Education module on the `Frappe`/`ERPNext` stack. The licence is **named but not supplied**, so *or-later* is unanswerable from the file. Ask before assuming. |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **unresolved** — `NO-PAYLOAD` across `38` branch/filename/header combinations | `NONE` | `349` | `2026-10-26` | 🔴 **Live and maintained, grant not in any file either channel can read.** 🟡 Unresolved, **not** ungranted. Do not put it in a client proposal until a maintainer states the licence in writing. |
+
+### 🔴 `640-F` — the learning-record store shelf, and the substitution this base needs
+
+🔴 These shelves recommend the `Apereo` estate as the `xAPI`/Caliper record store, with an *"archival
+risk"* note. 🔴 **The risk is no longer prospective.**
+
+| Record store | Grant (byte-read) | ★ | Archived | Last pushed | Verdict |
+|---|---|---|---|---|---|
+| [`Apereo-…/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | `ECL-2.0` (`11,087 B`) | `47` | 🔴 **`true`** | `2019-01-31` | 🔴 **Archived for nearly seven years.** |
+| [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `ECL-2.0` (`9,878 B`) | `62` | `false` | `2025-09-12` | 🔴 `14` months stale. |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **`Apache-2.0`** (`11,357 B`, **canonical, unmodified**) | `144` | `false` | **`2026-11-03`** | 🟢 **The replacement.** `SQL LRS`. Permissive, maintained yesterday, canonical licence text. |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** (`1,094 B`) | `51` | `false` | **`2026-11-03`** | 🟢 **The `EMEA` replacement.** **France Université Numérique** — EU public-sector governance *and* an `MIT` grant. Survives a sovereignty question a US vendor's repo does not. |
+| [`learninglocker/xapi-service`](https://github.com/learninglocker/xapi-service) | 🟢 **`MIT`** (`1,070 B`, at `master/license` — lowercase) | `42` | `false` | `2026-11-02` | 🟢 🆕 **New to this base.** Lightweight statement service. Found only because the oracle probes lowercase paths. |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 `GPL-3.0` (`35,141 B`) | `584` | `false` | `2024-05-30` | 🔴 `2.4` years stale **and** copyleft. The best-known name on this shelf is the worst choice on it. |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `Apache-2.0` (`11,357 B`) | `334` | `false` | `2025-11-14` | 🟡 `12` months stale. Reference implementation. |
+
+🟢 **The standards layer is unchanged and permissive at the boundary**:
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) 🟢 `Apache-2.0` (`11,361 B`, `373★`, pushed
+`2026-11-03`) remains the single `LTI 1.3` integration that reaches `Moodle`, `Canvas`, `Open edX`
+and `Brightspace` alike. 🟡 [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) is a
+**consortium specification licence** (`12,402 B`, titled *`IMS GLOBAL LEARNING CONSORTIUM, INC.
+SPECIFICATION DOCUMENT…`*) — a spec grant, not a software grant, and `639-E` mechanism `4`.
+
+🟢 **The platform decision, now in three branches rather than two.**
+🔵 **Brownfield** → attach at the network boundary; permissive boundaries exist for **four** LMS
+families, so the incumbent's copyleft never enters studio code.
+🟢 **Greenfield, standards-heavy** → `OpenOLAT` (`Apache-2.0`, `QTI`/`SCORM`/`LTI`).
+🟢 🆕 **Greenfield, low-connectivity or cost-constrained** → `kolibri` (`MIT`, offline-first,
+`1,168★`) or `iblai/lms` (`MIT`). The copyleft question never arises in any of the three.
+
+Evidence: `evidence/licence-oracle-calibration.2026-11-04-p640.tsv`,
+`evidence/canonical-licence-bytes.2026-11-04-p640.tsv`,
+`evidence/lrs-substitution.2026-11-04-p640.tsv`.
+
 
 ## 🆕 `p639` — reads `2026-11-04` — **🔴 `639-F`: `p638`'s *"THE INCUMBENTS ARE COPYLEFT, `5 for 5`… EDUCATION'S PERMISSIVE SUPPLY IS IN COMPONENTS, NOT PLATFORMS"* IS TRUE ABOUT THE FIVE AND **FALSE AS A SECTOR RULE** — AND THE COUNTER-EXAMPLE WAS ALREADY ON THIS SHELF, CALLED *"THE DEFAULT WHEN THE CLIENT NEEDS A COMPLETE LMS AND A PERMISSIVE LICENCE IN THE SAME ARTEFACT"*.**
 

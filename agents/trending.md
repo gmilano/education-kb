@@ -3,6 +3,64 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## `2026-11-04` · `p640` — the agent layer did not move; the **licence column** did, and four `unstated` rows closed
+
+🔴 **Fourteenth consecutive nil on the supply half, and `p640` finally explains it rather than
+reporting it.** The mandated web supply legs surfaced `6` slugs. `5 of 6` were already held
+(`littlecookie0722/AI-Teaching-Agent` `p3`, `thc1006/moodle-mcp` `p426`, `zhenghh04/canvas-mcp` `p64`,
+`AnonymousOnyx22/moodle-student-mcp` `p380`, `G36maid/moodle-mcp` `p187`). One is new —
+[`longhornteacher/canvasexpert-se`](https://github.com/longhornteacher/canvasexpert-se), 🟢 `MIT`
+(`1,085 B`), teacher-directed `Canvas` assistant with local `MCP` tools — at **`1★`**.
+
+🔵 **The web supply leg is adversely selected, and that is measurable.** Every repo an SEO roundup
+surfaced this week carries `0`–`27★`:
+
+| Web-surfaced this week | Grant (byte-read) | ★ |
+|---|---|---|
+| `longhornteacher/canvasexpert-se` | 🟢 `MIT` (`1,085 B`) | `1` |
+| `G36maid/moodle-mcp` | 🟢 `MIT` (`1,064 B`) | `27` |
+| `thc1006/moodle-mcp` | 🟢 `MIT` (`1,064 B`) | `0` |
+| `zhenghh04/canvas-mcp` | 🟢 `MIT` (`1,069 B`) | `0` |
+| `AnonymousOnyx22/moodle-student-mcp` | 🟢 `MIT` (`1,072 B`) | `0` |
+| `littlecookie0722/AI-Teaching-Agent` | 🟢 `MIT` (`1,069 B`) | `0` |
+
+🔵 Meanwhile this base's **held** rows for the same functions carry `317★`
+([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)) and `42,607★`
+([`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)). 🟢 **SEO rank is not adoption**, and
+"best MCP servers for education" listicles are not a discovery channel.
+
+🟢 **What moved instead — four `unstated` ledger rows resolved on bytes (`640-C`).**
+
+| Address | Held as | 🟢 Resolved `2026-11-04` | ★ |
+|---|---|---|---|
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | `unstated` since `p254` | 🔴 **`AGPL-3.0`** (`34,523 B`) | `467` |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | `unstated` since `p3` | 🟢 **`MIT`** (`1,069 B`) | `0` |
+| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | `unstated` since `p380` | 🟢 **`MIT`** (`1,072 B`) | `0` |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | `unstated` since `p117` | 🔴 **no grant** (`NO-PAYLOAD` + metadata `NONE`) | `347` |
+
+🔵 `AI-Teaching-Agent` is the one worth reading: `MIT`, and it covers lab/exam generation, grading
+workflows, a structured `DSL` with **mandatory human review**, sandboxed evaluation and an `MCP`
+server. 🟢 That human-review design is exactly what `Ofqual`'s sole-marker ban and Vietnam's Decision
+`33` both require, so `P640-2` lifts the design. 🟡 At `0★`, read it — don't depend on it.
+
+🟢 **Star movement on the two that matter.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+reads **`54,742★`** (`Apache-2.0`, pushed `2026-10-31`) — third-party trend reports had it at
+`45k`–`48k` in late October, so the live figure is ahead of every secondary source.
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) reads **`42,607★`** (`MIT`, pushed
+`2026-11-03`), surfacing in November trend coverage as a "`42K`-star multi-agent classroom".
+🔵 **Both leaders are permissive and neither is American** — Hong Kong and Tsinghua — and together
+they hold `~94%` of the agent cohort's stars.
+
+🔴 **Agent cohort health, re-verified:** `16 of 16` live, `0` archived.
+🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) is still the one row
+with **no grant at all** (`NO-PAYLOAD` across `38` combinations, metadata `NONE`) and has not been
+pushed since `2024-11-04` — two years tomorrow.
+🟡 [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) (🔴 `AGPL-3.0`,
+`34,523 B`) has not been pushed since `2026-07-31` — `3` months, the stalest live row in the cohort.
+
+Evidence: `evidence/supply-channel-saturation.2026-11-04-p640.tsv`,
+`evidence/licence-oracle-calibration.2026-11-04-p640.tsv`.
+
 
 ## `2026-11-04` · `p639` — the agent layer did not move; the *licence reading* of it did
 

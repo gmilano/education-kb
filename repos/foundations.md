@@ -3,6 +3,96 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04` — **🟢 `640-D`: THE CANONICAL LICENCE BYTE COUNT IS AN INSTRUMENT. `35,147 B` IS `GPL-3.0` AND `34,523 B` IS `AGPL-3.0` — A BYTE COUNT ALONE SEPARATES THE TWO FAMILIES EVERY SUBSTRING GRADER CONFUSES, AND A DEVIATION FROM CANONICAL *LOCATES* `639-E`'s MODIFICATION MECHANISMS. 🔵 `640-E`: `OpenOLAT`'s `-375 B` DEVIATION IS FULLY RESOLVED — THE `APACHE` **APPENDIX** WAS DELETED AND **TWO** PROJECT STATEMENTS APPENDED. NO GRANT TERM IS ALTERED.**
+
+🟢 **`639-E` resolved `NOASSERTION` into nine mechanisms by reading payloads. `p640` adds the cheap
+test that tells you *which* mechanism you are looking at before you read anything.** Each canonical
+figure below has at least two independent reads this pass.
+
+| Licence | Canonical bytes | Independent reads | Reads |
+|---|---|---|---|
+| `MIT` | **`1,062`–`1,085`** (a band) | `19` | the `23 B` spread is the copyright-holder line — `MIT` is a band, never a figure |
+| `Apache-2.0` | **`11,357`** | `2` | `yetanalytics/lrsql`, `adlnet/ADL_LRS` |
+| `GPL-3.0` | **`35,147`** | `3` | `moodle/moodle`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS` |
+| `AGPL-3.0` | **`34,523`** | `3` | `X-isdoingreat/canvas-pilot`, `learnhouse/learnhouse`, `sitor-ai/frametell` |
+| `ECL-2.0` | `9,878` / `11,087` | `2` | the `Apereo` estate |
+
+🔵 **Why this is worth having.** `640-B` showed that no substring test can separate `GPL-3.0` from
+`AGPL-3.0`, because each text names the other. 🟢 **The byte count can**: `~34.5k` is `AGPL`, `~35.1k`
+is `GPL`, and the two never overlap. And because `MIT` is a `23 B`-wide band, 🟢 **any payload graded
+`MIT` outside it is a narrowed derivative** — which is exactly how `640-B` caught `PageLM` at
+`8,563 B`.
+
+### 🔵 `640-E` — deviation from canonical, and what each deviation *is*
+
+| Repo | Bytes | Δ canonical | What the deviation is |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `11,361` | `Apache +4` | trailing whitespace. Grant unaltered. 🟢 `Apache-2.0`. |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `11,342` | `Apache −15` | whitespace trim. 🟢 `Apache-2.0`. |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `11,408` | `Apache +51` | appended copyright line — `639-E` mechanism `2`. 🟢 `Apache-2.0`. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `10,785` | `Apache −572` | prepended `Copyright 2021 Technische Hochschule Mittelhessen` **and** `APPENDIX` removed. 🟢 `Apache-2.0`. |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `10,982` | `Apache −375` | 🔵 **see below — fully resolved this pass.** 🟢 `Apache-2.0`. |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `35,136` | `AGPL +613` | appended text; title line confirms `AGPL-3.0`. |
+
+🔵 **`OpenOLAT` is the row that caused `p638`'s entire regression, and it is now explained to the
+byte.** `639-E` characterised it as *"`Apache` text **then** an appended project statement"* — correct
+in substance, but it predicts a file **larger** than canonical, and `OpenOLAT` is `375 B` **smaller**.
+🟢 Measured: the `Apache` **`APPENDIX: How to apply the Apache License`** section (`25` lines) is
+**deleted**, and **two** project statements are appended — one for the original `olat.org` code base
+(University of Zurich / `OLAT` Zentrum) and one for `openolat.org` (`frentix GmbH`, based on the
+`OLAT 7.1` release). Net `−375 B`.
+🟢 **And the engagement answer is unchanged, now for a stated reason:** the deleted section is the
+*boilerplate instructions for applying the licence*. It carries **no grant term**. `OpenOLAT` is
+`Apache-2.0`, and `639-F`'s reading of it as a complete production `LMS` under a permissive grant
+stands on a fully reconciled payload.
+
+### 🟢 `640-F` — the learning-record store in this base's own recipe is unmaintained, and there are three replacements
+
+🔴 `compose/patterns.md` `P639-1` step `4` uses `Apereo OpenLRW` with the note *"Fork-and-own:
+institutional owner, archival risk (`637-A`)"*. 🔴 **`p640` measured the risk and it has already
+materialised.**
+
+| Repo | Grant (byte-read) | ★ | Archived | Last pushed | Verdict |
+|---|---|---|---|---|---|
+| [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `ECL-2.0` (`9,878 B`) | `62` | `false` | `2025-09-12` | 🔴 **`14` months stale.** |
+| [`Apereo-…/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | `ECL-2.0` (`11,087 B`) | `47` | 🔴 **`true`** | `2019-01-31` | 🔴 **Archived since `2019`.** `637-A`'s flag, confirmed on the sibling. |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **`Apache-2.0`** (`11,357 B`, **canonical, unmodified**) | `144` | `false` | **`2026-11-03`** | 🟢 **The substitute.** `SQL LRS`, maintained yesterday, permissive, no appendix games. |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** (`1,094 B`) | `51` | `false` | **`2026-11-03`** | 🟢 **The `EMEA` substitute.** Built by **France Université Numérique** — EU public-sector governance plus an `MIT` grant. For an `EMEA` engagement this beats a US vendor's repo on both axes. |
+| [`learninglocker/xapi-service`](https://github.com/learninglocker/xapi-service) | 🟢 **`MIT`** (`1,070 B`, at `master/license` — **lowercase**) | `42` | `false` | `2026-11-02` | 🟢 **🆕 New to this base.** Found *only* because the oracle probes lowercase filenames — `639-G(iii)`'s repair paying off on its first use. |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `Apache-2.0` (`11,357 B`, canonical) | `334` | `false` | `2025-11-14` | 🟡 `12` months stale. Reference implementation, not a deployment target. |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 `GPL-3.0` (`35,141 B`) | `584` | `false` | `2024-05-30` | 🔴 `2.4` years stale **and** copyleft. Do not start here. |
+
+🟢 **`P640-1` acts on this**: the flagship assessment-integrity recipe loses its only 🟡 component, and
+the licence on that step moves from `ECL-2.0` fork-and-own to a maintained `Apache-2.0` / `MIT`.
+
+### 🟢 The platform foundations, re-verified on both channels
+
+| Repo | Grant (byte-read) | Metadata | ★ | Pushed |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` (`35,147 B`, canonical, `main/COPYING.txt`) | `GPL-3.0` | `7,579` | `2026-10-30` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` (`34,520 B`) | `AGPL-3.0` | `6,900` | 🟡 `2026-04-30` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` (`35,136 B`) | 🔴 `422` — see `640-G` | — | — |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` (`34,523 B`) | `AGPL-3.0` | `2,446` | `2026-11-03` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` (`35,147 B`) | `GPL-3.0` | `1,020` | `2026-11-03` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** (`1,097 B`) | `MIT` | `1,168` | `2026-11-02` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` (`35,147 B`) | `GPL-3.0` | `507` | `2026-11-03` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** (`10,982 B`) | `NOASSERTION` | `449` | `2026-11-03` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL` (`8,241 B`) | `NOASSERTION` | `905` | `2026-11-02` |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **`MIT`** (`1,063 B`) | `MIT` | `208` | `2026-11-03` |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 **declaration only** — `19 B` at `master/license.txt` reading exactly `License: GNU GPL V3` | `NOASSERTION` | `693` | `2026-10-30` |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🟡 consortium — `12,402 B`, titled `IMS GLOBAL LEARNING CONSORTIUM, INC. SPECIFICATION DOCUMENT…` | `NOASSERTION` | `22` | `2025-10-07` |
+
+🔵 **`frappe/education`'s `19` bytes, read in full.** `639-E` catalogued it as *"a `19`-byte
+declaration"*; `p640` read the bytes: `License: GNU GPL V3`, and nothing else. 🟡 For a studio that is
+a **grant** — the licence is named — but there is **no licence text**, so the *or-later* question is
+unanswerable from the file. Treat it as `GPL-3.0` only, and ask the maintainer before assuming
+`-or-later`. 🟢 It also confirms `639-G(iii)`: the path is **lowercase** `license.txt`, which is why
+earlier passes read it as `NO-PAYLOAD`.
+
+Evidence: `evidence/canonical-licence-bytes.2026-11-04-p640.tsv`,
+`evidence/lrs-substitution.2026-11-04-p640.tsv`,
+`evidence/licence-oracle-calibration.2026-11-04-p640.tsv`.
+
 
 ## 🆕 `p639` — reads `2026-11-04` — **🔵 `NOASSERTION` IS NOT "NO LICENCE". IT IS *"GITHUB'S SPDX MATCHER COULD NOT MATCH THE FILE"*, AND `24` CENSUS ROWS READ ON BYTES RESOLVE IT INTO **NINE DISTINCT MECHANISMS** WITH NINE DIFFERENT ENGAGEMENT ANSWERS — FROM `Apache-2.0` TO `CC BY-NC` TO A `19`-BYTE DECLARATION. 🟢 THE `Apereo` LEARNING-ANALYTICS ESTATE IS `ECL-2.0`, WHICH IS OSI-APPROVED AND USABLE. 🔴 `p639`'s OWN GRADER MIS-READ AN `AGPL` PAYLOAD AS `GPL` AND ITS NEGATIVE HAS A MEASURED `20%` FALSE-NEGATIVE RATE.**
 

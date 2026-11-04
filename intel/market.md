@@ -3,6 +3,195 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04` — **🔴 `640-H`: `639-H`'s ACTION PREDICTED THE REGION-TOKEN DEFECT ALSO SUPPRESSED `EMEA`. `p640` RAN `EMEA` **AS PRESCRIBED** AND IT PAID ON THE FIRST ATTEMPT — A MARKET SIZE, A `CAGR`, A THREE-COUNTRY RANKING, A GOVERNANCE DENOMINATOR AND A GULF REGULATOR. **THE PREDICTION IS FALSIFIED AND THE DEFECT IS `APAC`-SPECIFIC.** 🟢 `640-I`: `VIETNAM` HAS APAC'S FIRST BINDING, DATED, ENUMERATED EDUCATION AI REGIME — AND IT IS LIVE `15` MONTHS BEFORE THE EU's. 🔵 `640-J`: THE `57%`/`60%` FIGURES ARE **NOT** IN CONFLICT; THEY MEASURE STUDENTS AND TEACHERS.**
+
+🟢 **`639-H` earned its conclusion and over-generalised it.** It proved the `APAC` nil was a
+query-shape artifact — no education ministry describes itself as an `APAC` body — and then left an
+ACTION: *"retire the region token in the mandated legs and substitute named institutions per region;
+the same defect plausibly suppressed `EMEA` adoption data, which is also unmeasured."*
+
+🔴 **`p640` tested that by running `EMEA` as prescribed, first, before naming anything.** It paid
+immediately. 🔵 **So the mechanism is narrower and more useful than `639-H` stated:** the region token
+fails when **no institution in the region self-describes with it**. `EMEA` survives because the `EU`
+*is* a self-describing legal order that indexes education policy under its own name; `APAC` is a
+vendor's sales territory and nothing else. 🟢 The ACTION is therefore **not** generalised — it stays
+scoped to `APAC`, and running both shapes is what distinguishes the two cases. Evidence:
+`evidence/regional-legs.2026-11-04-p640.tsv`.
+
+**🔵 Market size — the band, and it stays a band**
+
+| Reading | Figure | Source | Status |
+|---|---|---|---|
+| Global AI-in-education, `2026` | `$11.4B`–**`$12.5B`** | three secondary sources | 🟡 Band **widens** from `p639`'s `$11.4B`–`$12.3B`. One path reaches `$57B` by `2033`. Two sources still share the `$11.4B` base and disagree on `CAGR` by `9.1` points. |
+| 🆕 **Europe, `2026` → `2030`** | **`$2.64B` → `$8.0B`**, `CAGR` **`31.9%`** | secondary | 🟢 **First European figure on these shelves.** |
+| North America, `2026` | `$3.68B`, `36%` of global | MarketsandMarkets | 🟡 Carried. Implies a global `~$10.2B`, **below** the band — the sources remain unreconciled and are not reconciled here. |
+| North America, `2030` | `$32B` | MarketsandMarkets | 🟡 Carried, secondary. |
+| **APAC** | 🔴 **no figure** | — | 🔴 See `640-K`. |
+| **LATAM** | 🔴 no figure this pass | — | 🟡 Prior shelves carry `$4.2B`; not re-verified this pass. |
+
+🔴 **`639-D` remains the standing condition and it is not closable from inside a pass.** Every market
+and regulatory figure here is **secondary**. `eur-lex.europa.eu` and `news.gallup.com` are `ENOTFOUND`
+on this session's network, so no primary read was possible. The two hosts are named so the allowlist
+can be widened.
+
+### 🔵 `640-J` — the `57%`/`60%` reconciliation, and the false correction it prevents
+
+🟡 `p639` corrected a secondary *"over `60%` weekly"* figure **down** to `57%`, citing Lumina–Gallup
+(`n = 3,801`, fielded `2025-10`): `57%` of **students** use AI for coursework at least weekly.
+🔵 `p640`'s `NA` leg surfaces a Gallup figure of **`60%`** — of **teachers** using AI tools.
+🟢 **The two are not in conflict. They measure different populations.** `p639`'s correction of the
+student figure stands; the `60%` is not a wrong student number, it is a right teacher number.
+🔴 **A pass that "reconciles" them into one adoption rate manufactures a false correction** — the
+error class `639-A` was built to stop, in its most tempting form.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The leg paid, and it produced the first dated compliance calendar this base has for `NA`.**
+Multistate counts **`134`** AI-in-education bills across **`31`** states in the `2026` session
+(Apr `2026`), with lawmakers choosing guardrails over mandated adoption.
+
+| Instrument | Date that binds | What it requires |
+|---|---|---|
+| **North Carolina Session Law `2026-41`** | state model policy **`2026-12-31`**; local district policies **`2027-06-30`** | 🟢 **The nearest hard deadline in any region.** `8` weeks out. |
+| **MD, ID, OK, VA** — `2026` laws | in force | Both state guidance **and mandatory district-level policy adoption**. |
+| **NY A 9190** (proposed) | — | Would limit classroom AI to **grade `9` and above**, with diagnostic and special-education exceptions. |
+| **CA AB 1159** (proposed) | — | Would **bar training AI models on student data**. |
+| **US DOL AI Literacy Framework** | `2026-02-13` | Workforce and education AI literacy. |
+| **K-12 AI Literacy and Readiness Act of `2026`** | advanced by House Education & Workforce Cttee | Federal literacy mandate in progress. |
+
+🔵 **Adoption, with both populations stated:** `57%` of students weekly (`~1 in 5` daily),
+`60%` of teachers using AI tools; `53%` of students sit under a **discouraging or prohibiting**
+institutional policy. `70%` of institutions across Europe and North America have or are developing AI
+guidance. Students have produced their own national framework — the **STUDENTS FIRST Act of `2026`**,
+drafted across all `50` states (Aug `2026`), proposing boundaries rather than a ban.
+
+🟢 **The opportunity.** `134` bills and four states with *mandatory district policy adoption* means the
+buyer is a **district or system office with a dated statutory obligation and no instrument** — and in
+North Carolina the date is `2026-12-31`. The sale is policy-as-code: instrument the use, produce the
+audit trail, and hand over a defensible local policy. 🟡 `Google` added `Gemini` to its education
+offering (Aug `2026`) and `Anthropic` shipped a teacher-facing `Claude` (Jul `2026`), so the model
+layer is commoditised; the **compliance layer is not**.
+
+### EMEA
+
+🟢 **Paid on both query shapes — and the named-institution shape added the binding constraints the
+regional shape missed.**
+
+| Instrument | Date that binds | What it requires |
+|---|---|---|
+| **EU AI Act, Annex III (education)** — stand-alone high-risk | 🔵 **`2027-12-02`** | Confirmed again. The `Digital Omnibus` deferral holds. |
+| 🆕 **AI embedded in regulated products** | 🆕 **`2028-08-02`** | **A second date, new to these shelves.** |
+| **Article 50 transparency** | live since `2026-08-02` | Already in force. |
+| 🆕 **Ofqual guide for schools and colleges** | published **`2026-01-15`** | 🔴 Schools may **not** use AI to produce material for assessments they sit, and 🔴 **AI may not be the sole marker of student assessment.** Coursework-integrity resources Mar `2026`. |
+| 🆕 **DfE safety standards for AI products in education** | Jan `2026` | Product-level safety standards; Mar `2026` briefing pack. DfE posture favours **teacher-facing** use. |
+| 🆕 **EC Ethical Guidelines on AI and data in teaching**, `2026` update | published | Restructured into three parts, now incorporating the AI Act, generative AI and AI literacy. |
+| 🆕 **EC + OECD AI Literacy Framework** (primary & secondary) | presented **`2026-06-18`** | Competence framework for school systems. |
+| 🆕 **Dubai `KHDA`** guidance to private schools | issued | 🟢 **A Gulf regulator, and the base's first.** |
+
+🔵 **Market and governance:** Europe `$2.64B` (`2026`) → `$8.0B` (`2030`) at `31.9%` `CAGR`;
+**Finland, Estonia and the Netherlands** named as K-12 integration leaders; and the governance
+denominator is stark — 🔴 **only `10%` of `450+` surveyed institutions have formal AI guidelines.**
+The **EU AI Continent Action Plan** names education as a target sector. On the vendor side,
+`Instructure` is building an AI study coach into `Canvas` and `Pearson` is acquiring `Workera` for
+AI-skill verification.
+
+🟢 **The opportunity.** `EMEA` is the only region where the studio can sell **conformance against a
+published, dated standard** — and the `Ofqual` sole-marker rule makes human-in-the-loop assessment a
+*requirement*, not a design preference. With `90%` of institutions lacking any framework and
+`2027-12-02` fixed, the window is an `18`-month conformance build. 🟢 For public-sector buyers,
+`openfun/ralph` (`MIT`, France Université Numérique) is the record store that survives a sovereignty
+question; the Gulf is a separate, faster-moving sub-market with `KHDA` already prescriptive.
+
+🔴 **Declared gap — Germany.** The same query that paid for the Commission, `Ofqual` and the `DfE`
+returned **nothing** on the `Bildungsministerium` or German federal/*Länder* guidance. Germany is the
+largest `EMEA` education market on these shelves — `thm-mni-ii/feedbacksystem` is a German university
+reference — and this base holds **no German instrument**. 🟡 This is an informed gap, not coverage.
+Next pass: name the `KMK` (Kultusministerkonferenz) and the *Länder* individually, exactly as
+`639-H` did for the APAC ministries.
+
+### APAC
+
+🟢 **`640-I` — the reading this base held for `APAC` is now wrong, and the correction is commercial.**
+The shelves have carried `APAC` as *"policy leads practice: guidelines, frameworks, nothing binding."*
+
+🔴 **Vietnam has a binding, dated, enumerated education AI regime, and it is already in force.**
+**Decision `33/2026/QĐ-TTg`**, signed `2026-06-30`, in force **`2026-08-15`**, under the Vietnam AI
+Law in force `2026-03-01`. It lists **`46`** high-risk AI systems across six sectors; **three are
+education**:
+
+1. automated content supporting learners' **self-study from uncontrolled data sources**;
+2. 🔴 automated **examination, assessment of learning outcomes, or ranking of learners**;
+3. 🔴 **monitoring and analysing learner behaviour via biometric** or other automated means.
+
+🟡 Systems already operating before `2026-08-15` must comply by **`2027-09-01`**. Conformity is
+third-party assessment for designated systems and provider self-assessment otherwise.
+🟢 **Structurally this is EU Annex III — and it is live `15` months earlier** (`2026-08-15` vs
+`2027-12-02`). A Vietnam engagement has a **present** obligation; an EU one still has a prospective
+one.
+
+🆕 **Australia `TEQSA`** has required **all** higher-education providers to submit institutional
+action plans on generative-AI risks — a regulator action, where the base previously held only the
+Australian Framework for Generative AI in Schools (Education Ministers, Oct `2023`, reviewed `2024`).
+🟡 Carried from `639-H`: Singapore `MOE` (Primary `4`, teacher-supervised, **Student Learning Space**
+only, *"cognitive offloading"* named as the risk); Korea's **AI Basic Act** in force `2026-01-22`,
+with `2026` described as a pilot year of limited enforcement; Japan's guidelines and pilot schools,
+digital textbooks official as early as the `2030` school year. 🟡 Singapore's `MAS` is consulting on
+AI Risk Management Guidelines — financial, **not** education; recorded so a later pass does not
+mis-file it.
+
+🔴 **`640-K` — APAC market size is still nil, but the gap is narrower.** `639-H` left it as *"searched
+this pass, not found."* `p640` **identified a source** — a Ken Research *Asia-Pacific AI in Education
+Market … to 2030* report, naming `Google`, `Microsoft`, `IBM`, `Pearson` and `Byju's` as key players
+and asserting China, India and Japan dominate — but **no revenue figure is obtainable on this
+session's channels**. 🟡 So the gap moves from *"not found"* to *"source identified, figure
+paywalled."* Still unquantified. Vendor list only.
+
+🟢 **The opportunity.** Vietnam is the one place on earth where an education-AI conformity obligation
+is **live today**, with a dated grace period (`2027-09-01`) that creates a remediation market for
+systems already deployed. Because Decision `33` targets *assessment, ranking and biometric
+monitoring* specifically, the buildable product is the same human-in-the-loop assessment layer the EU
+and `Ofqual` require — sold `15` months sooner. 🟡 The regional picture is otherwise **sectoral
+guardrails bolted onto existing law** (Australia, New Zealand, Malaysia), so there is no single APAC
+compliance product; each market is its own engagement.
+
+### LATAM
+
+🟢 **The leg paid, and it closes the base's biggest structural hole in this region: everything on
+these shelves was higher-education.**
+
+🆕 **The first school-level LATAM instrument** — **Cetic.br** (Brazil, `2026`): **`53%`** of school
+administrators use AI, and 🔴 **only `22%`** report their school has guidelines on its use.
+🔵 **That is the same shape as the university figure** (`87%` use / `26%` governed), which means the
+governance deficit is **not** a higher-education artifact — it is sector-wide, in the region's
+largest market.
+
+🆕 **Regulatory density, measured**: Universidad de los Andes (Bogotá, `2026`) identified **`716`**
+AI-related regulatory instruments, rules and legislative proposals across **`23`** countries and
+territories, 🔴 **more than `80%` initiated since `2023`**. 🟡 Commentators warn the real risk is
+**fragmentation**, not absence.
+
+🟡 Carried and sharpened from `p638`/`p639`: UNESCO IESALC (`200` HEIs / `19` countries) — `87%` use
+AI in at least one area, 🆕 **`74%` specifically in teaching and learning**, `26%` have any formal
+framework, `55%` have no AI budget, and 🔴 🆕 **just `4%` of public universities have dedicated AI
+funding**. Digital Education Council with **Tecnológico de Monterrey**: `92%` of students and `79%` of
+faculty actively engaging with AI (`29` universities). UNESCO's Regional AI in Education Observatory
+for LAC launched Apr `2026`; UNESCO Santiago and **CENIA** (Chile) signed an ethical-AI cooperation
+agreement Feb `2026`.
+
+🟢 **The opportunity.** `716` instruments across `23` countries with no regional law is a
+**fragmentation** problem, and fragmentation is a consulting product: one assessment platform,
+per-country policy configuration. The `4%` public-university funding figure says where the money is
+**not** — so the buyer is the private system, the ministry programme, or the multilateral
+(UNESCO/IESALC, CENIA, Ceibal in Uruguay). 🟢 Cetic.br's `53%`/`22%` opens the **K-12 systems** sale
+in Brazil that the higher-ed-only shelves could not support. 🟡 And because LATAM payloads
+over-collect on non-English licence text (`639-E` mechanism `10`), any component shortlist for this
+region must be byte-read, not metadata-read.
+
+Evidence: `evidence/regional-legs.2026-11-04-p640.tsv`,
+`evidence/licence-oracle-calibration.2026-11-04-p640.tsv`.
+
 
 ## 🆕 `p639` — reads `2026-11-04` — **🟢 `639-H`: THE `APAC` NIL IS A **QUERY-SHAPE ARTIFACT**, NOT A SECTOR ABSENCE. THE MANDATED LEG HAS RETURNED NOTHING FOR `APAC` FOUR CONSECUTIVE PASSES AND WAS RECORDED AS A STANDING GAP; RUN ONCE WITH THE **MINISTRIES NAMED** INSTEAD OF THE REGION TOKEN, IT PAID FOUR NATIONAL POLICIES AND A CROSS-MARKET OPINION SERIES ON THE FIRST ATTEMPT. 🔵 AND THE `NORTH AMERICA` HEADLINE FIGURE IS CORRECTED WITH A DENOMINATOR: `57%`, NOT *"OVER `60%`"*.**
 

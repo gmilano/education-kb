@@ -1,0 +1,19 @@
+# p640 — 🔴 THE EXISTENCE ORACLE p639 RELIED ON RETURNS A FALSE ABSENT FOR OPEN edX.
+# p639's method: search/repositories + fork:true, with a fabricated control expected to 422.
+# Measured 2026-11-04: openedx/edx-platform returns THE SAME 422 as the fabricated control,
+# while the byte channel serves its LICENSE at 35,136B titled GNU AFFERO GENERAL PUBLIC LICENSE.
+# The openedx ORG is not in this session's search index at all; its forks are.
+probe	result	reading
+gh api search/repositories q="repo:openedx/edx-platform fork:true"	422 Validation Failed	🔴 indistinguishable from a fabricated address
+gh api search/repositories q="org:openedx edx-platform in:name"	total_count = 0	🔴 the canonical org is not indexed for this session
+gh api search/repositories q="edx-platform in:name fork:true"	returns edx/edx-platform (12*), Stanford-Online, Edraak, appsembler, raccoongang, nttks	🟡 only the forks and the legacy slug are indexed
+curl GET raw.githubusercontent.com/openedx/edx-platform/master/LICENSE	HTTP 200, 35,136 bytes, "GNU AFFERO GENERAL PUBLIC LICENSE Version 3"	🟢 the repository plainly exists
+curl GET raw.githubusercontent.com/zzz-nonexistent-org-640/zzz-nope/main/LICENSE	HTTP 404, 14 bytes	🟢 the byte channel's negative control DOES discriminate
+#
+# MEASURED FALSE-NEGATIVE RATES over the 37-address cohort (36 real + 1 fabricated control):
+# byte channel negative:            3 of 37  (openSIS-Classic, Tutorbot-Spock, control)
+# metadata channel negative:        2 of 37  (openedx/edx-platform = FALSE, control = true)
+# BOTH channels negative:           1 of 37  (anthropic/p640-fabricated-control) -> 0 false absences
+# DECISION RULE: a slug is ABSENT only when BOTH channels are negative. One positive on either
+# channel establishes existence. Neither channel's negative is evidence of absence on its own.
+# This operationalises 639-G's rule and gives it a measured counterexample.

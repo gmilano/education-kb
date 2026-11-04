@@ -3,6 +3,112 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## 🆕 `p640` — reads `2026-11-04` — **🔵 `640-L`: THREE JURISDICTIONS, THREE UNRELATED LEGAL INSTRUMENTS, **ONE REGULATED SURFACE** — THE EU's `Annex III`, `Ofqual`'s SOLE-MARKER BAN AND VIETNAM'S DECISION `33` ALL LAND ON **AUTOMATED ASSESSMENT**. THAT CONVERGENCE, NOT ANY CAPABILITY, IS THE SECTOR'S `2026` TREND. 🟢 `640-M`: THE GOVERNANCE DEFICIT IS NOW MEASURED IN **FOUR** REGIONS AND IN **K-12 AS WELL AS HIGHER EDUCATION** — IT IS NOT A UNIVERSITY ARTIFACT.**
+
+### 🔵 Trend 1 — assessment is the regulated surface, everywhere, independently
+
+🟢 This is the pass's synthesis and it is actionable in every region at once. Three legal systems that
+borrowed nothing from each other have converged on the **same** function:
+
+| Jurisdiction | Instrument | What it regulates | Binds from |
+|---|---|---|---|
+| **EU** | AI Act `Annex III` (education) | admission decisions, **student evaluation, exam scoring**, programme assignment, detecting prohibited behaviour during assessment | `2027-12-02` (stand-alone); `2028-08-02` (embedded) |
+| **UK** | 🆕 `Ofqual` guide for schools and colleges, `2026-01-15` | 🔴 AI may **not** produce material for assessments students sit; 🔴 AI may **not** be the **sole marker** of student assessment | **live** |
+| **Vietnam** | 🆕 Decision `33/2026/QĐ-TTg` | 🔴 automated **examination, assessment of learning outcomes, ranking of learners**; biometric behaviour monitoring | **`2026-08-15`** (legacy systems: `2027-09-01`) |
+
+🔵 **Why this is a trend and not a coincidence.** Each instrument was drafted for different reasons —
+the EU's as product-safety law, `Ofqual`'s as qualifications regulation, Vietnam's as an enumerated
+high-risk list — and all three independently selected *the act of judging a learner* as the thing
+requiring control. 🟢 **The engineering consequence is identical in all three: a human must remain the
+decision-maker, and the system must be able to prove it.** So one architecture — graded proposal,
+human confirmation, immutable record of who decided — satisfies all three. A studio does not need
+three products.
+
+🟢 **And the dates invert the usual assumption.** Vietnam's obligation is **live now**; the EU's is
+`13` months away. The market that regulates earliest is not the one with the biggest market-size
+estimate.
+
+### 🟢 `640-M` — Trend 2: majority use under minority governance, in four regions and in schools too
+
+🔵 `p639` established this shape for North America, LATAM and (by policy) APAC/EMEA. 🟢 `p640` adds
+the **denominators that were missing** and, critically, the **first school-level reading**.
+
+| Region | Use | Governance | Instrument |
+|---|---|---|---|
+| North America | **`57%`** of students weekly, `~1 in 5` daily; **`60%`** of **teachers** using AI tools | `53%` of students sit under a discouraging or prohibiting policy; `70%` of HEIs have or are developing guidance | Lumina–Gallup (`n = 3,801`, fielded `2025-10`) + Gallup teacher series |
+| EMEA | 🆕 not measured as a rate, but market `$2.64B`→`$8.0B` `2026`–`2030` | 🔴 🆕 **`10%`** of `450+` institutions have formal AI guidelines | secondary; EC/`Ofqual`/`DfE` instruments dated |
+| LATAM — higher ed | **`87%`** of HEIs use AI in ≥1 area; 🆕 **`74%`** in teaching and learning; `92%` of students, `79%` of faculty | **`26%`** have any formal framework; `55%` no AI budget; 🔴 🆕 **`4%`** of **public** universities have dedicated AI funding | UNESCO IESALC (`200` HEIs / `19` countries) + DEC with Tec de Monterrey |
+| 🆕 **LATAM — schools** | 🆕 **`53%`** of school administrators (Brazil) | 🔴 🆕 **`22%`** report school guidelines | **Cetic.br, Brazil, `2026`** |
+| APAC | 🔴 not measured — explicit nil, **sixth** pass | **five** national instruments with dates (VN, KR, SG, JP, AU) | ministry- and regulator-level reading |
+
+🟢 **The school-level row is the finding.** Everything on these shelves was higher education, so the
+deficit could always have been a *university* phenomenon — faculty autonomy, decentralised IT. 🔴 It
+is not. Brazil's schools show `53%` use against `22%` governance: **the same ratio as its
+universities** (`87%`/`26%`). 🟢 So the governance product is sellable to ministries and school
+systems, not only to HEIs — and that roughly doubles the addressable buyer set in the region where
+this base has its deepest evidence.
+
+🔵 **The asymmetry still inverts by region, and it still sorts the sale.** In NA and LATAM practice
+leads policy — people are using it and nobody has written the rules, so the studio **sells the
+rules**. In EMEA and APAC policy leads practice — the dates are fixed and the adoption evidence is
+missing, so the studio **sells conformance**. 🟢 `p640` adds that Vietnam is the first market where
+*conformance* is already overdue rather than upcoming.
+
+### 🔵 Trend 3 — the sector's permissive supply is real, and concentrated in two repositories
+
+🟢 Measured this pass, not asserted. Of the `16`-agent cohort, `9` (`56%`) are
+`MIT`/`Apache-2.0`/`CC0` — buildable with no client-side licence conversation. 🔴 But adoption is
+concentrated to a degree the shelves have not stated plainly:
+
+| Repo | Grant | ★ | Share of cohort stars |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `54,742` | — |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | `42,607` | — |
+| everything else in the cohort | mixed | `~6,200` combined | 🔴 **`~6%`** |
+
+🟢 **Both leaders are permissive and neither is American** — Hong Kong (`HKUDS`) and Tsinghua
+(`THU-MAIC`). 🔵 That is a direct answer to the standing observation that this base surfaces no
+non-US supply: the non-US supply is not merely present, **it is the whole top of the market**, and it
+is licensed on terms a studio can ship. 🟡 The long tail is where the licence risk lives — `Elastic`,
+`AGPL`, bespoke non-commercial and no-grant rows all sit below `2,100★`.
+
+### 🔵 Trend 4 — purpose-built beats general-purpose, now with an institutional source
+
+🆕 The **OECD `2026` Digital Education Outlook** recommends moving **beyond general-purpose AI tools
+toward purpose-built educational AI** designed to produce durable learning gains. 🟢 That matters here
+because it is an *institutional* source for a claim the vendor press has been making unsourced, and
+because it names the failure mode the sector's own regulators are legislating against: a
+general-purpose assistant cannot evidence who decided a grade. 🟡 Secondary read; the primary OECD
+text was not reachable on this session's network (`639-D`).
+
+🔵 Carried and still holding from `p639`: the agent layer is **`MCP`-shaped**, and that is a licensing
+consequence — `Canvas` (×`3`), `Moodle`, `Brightspace/D2L` and any `LTI 1.3` consumer
+([`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), 🟢 `Apache-2.0`, `11,361 B`) all have
+**permissive boundaries**, so the copyleft of the incumbent platform never enters the studio's code.
+🟢 `p640` adds the fourth and fifth `Moodle` boundaries graded on bytes
+([`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) and
+[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp), both 🟢 `MIT` `1,064 B`) and resolves
+[`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) from
+`unstated` to 🟢 `MIT` (`1,072 B`).
+
+### 🔴 Trend 5 — this base's own trend: two consecutive passes caught their own instrument lying
+
+🟡 Recorded because it is the honest reading of the last three passes. `p638` published a
+metadata-only licence column that contradicted settled byte-reads; `p639` caught it, and declared
+three failures of its own grader (`639-G`); `p640` caught a **fourth** — its own first grader
+published `PageLM` as `MIT`, re-committing this base's documented five-pass error — and traced the
+cause to a property that defeats *every* substring grader.
+🟢 **The trend is convergent, not degenerate:** each pass's instrument is now calibrated against a
+control and a reproduction, the licence column cites channel and byte count per cell, and the
+oracle is committed to `ingest/` so the next pass inherits the repairs instead of rediscovering them.
+🔴 **The unresolved part is structural:** `make hooks` has been un-runnable for five passes
+(`639-C`), so every gate in this repository is still dark and every measurement above is made by
+instruments the pass wrote itself and declared.
+
+Evidence: `evidence/regional-legs.2026-11-04-p640.tsv`,
+`evidence/grader-titleline-vs-payload.2026-11-04-p640.tsv`,
+`evidence/licence-oracle-calibration.2026-11-04-p640.tsv`.
+
 
 ## 🆕 `p639` — reads `2026-11-04` — **🔵 THE SECTOR'S `2026` TREND IS NOT A CAPABILITY TREND. IT IS A **GOVERNANCE DEFICIT MEASURED IN THREE REGIONS WITH THREE INDEPENDENT INSTRUMENTS**, ALL SHOWING MAJORITY USE UNDER MINORITY GOVERNANCE. 🔴 AND THIS BASE'S OWN `2026` TREND IS THAT ITS LICENCE COLUMN DEGRADED WHEN A CHANNEL WAS WRONGLY WITHDRAWN.**
 

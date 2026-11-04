@@ -3,6 +3,63 @@ industry: education
 region: Global
 updated: 2026-11-04
 ---
+## `2026-11-04` · `p640` — the supply nil is **saturation**, not blindness, and the API channel proves it
+
+🔵 `p639` changed the discovery operative to the GitHub **topic facet**. 🟢 `p640` changes the
+**channel**: run the supply leg through `search/repositories` sorted by stars with a push-window
+filter, instead of through web search. The question was whether `14` passes of nil mean this base is
+blind or finished.
+
+🟢 **It is finished.** Ten top-starred education repos pushed in the last two months, all byte-read:
+
+| Repo | Grant (byte-read) | ★ | Pushed | Held? |
+|---|---|---|---|---|
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🟡 `CC-family` (`620 B`) | `4,912` | `2026-11-02` | held `p117` |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` (`34,523 B`) | `2,446` | `2026-11-03` | held `p11` |
+| [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | 🔴 **no grant** (`NO-PAYLOAD`) | `2,053` | `2026-10-23` | held `p7` — 🟢 confirmed |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 🔴 `AGPL-3.0` (`34,523 B`) | `467` | `2026-11-03` | held `p254` — 🟢 **grade resolved** |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 `MIT` (`1,065 B`) | `366` | `2026-10-27` | held `p3` |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | 🔴 **no grant** | `347` | `2026-10-07` | held `p117` — 🟢 **resolved** |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` (`1,069 B`) | `300` | `2026-10-20` | held `p2` |
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) | 🔴 `AGPL-3.0` (`34,532 B`) | `299` | `2026-11-02` | held `p76` |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **`MIT`** (`1,063 B`) | `208` | `2026-11-03` | held `p73` — 🟢 **promoted to the platform shelf** |
+| [`cuic19053-hue/awesome-student-ai-skills`](https://github.com/cuic19053-hue/awesome-student-ai-skills) | 🟢 `MIT` (`1,070 B`) | `153` | `2026-11-03` | 🆕 **NEW** |
+
+🟢 **`9 of 10` already held.** With `3,175` addresses in the ledger, the education supply is covered.
+🔵 **So `637-B`'s `14`-pass nil should be reported as coverage, not as a standing failure** — that is a
+reinterpretation, not a closure, and the next pass should stop treating a nil supply leg as a defect
+to be fixed.
+
+🔵 **But the API channel earns its place for a different job: grade resolution.** It settled four
+ledger rows carrying `unstated` and confirmed one `no-grant` — on rows the base already held. 🟢
+**Recommendation: run the web leg for FACTS, the API leg for GRADES.** Discovery is no longer the
+bottleneck; grading is.
+
+🟢 **Two promotions out of this sweep.**
+[`iblai/lms`](https://github.com/iblai/lms) — 🟢 `MIT` (`1,063 B`), `208★`, pushed `2026-11-03` — has
+sat in the ledger since `p73` with only `5` mentions while this base argued about whether permissive
+*platforms* exist (`639-F`). They do, and this is the second one.
+🆕 [`learninglocker/xapi-service`](https://github.com/learninglocker/xapi-service) — 🟢 `MIT`
+(`1,070 B` at `master/license`, **lowercase**), `42★`, pushed `2026-11-02` — is new to this base and
+was found **only** because `p640`'s oracle probes lowercase filenames, which is `639-G(iii)`'s repair
+paying off on its first use.
+
+🔴 **Instrument note, declared.** The query `teacher OR classroom OR grading ai stars:>200` over-matched
+catastrophically, returning `openclaw/openclaw` (`393,868★`), `n8n-io/n8n` and `JavaGuide`. 🔴 GitHub
+search `OR` with bare keywords is unusable for a vertical sweep; `topic:` qualifiers and narrow term
+pairs are what work. Recorded so the next pass does not repeat it.
+
+🔴 **And the sweep surfaced a `422` that is not an absence — see `640-G`.**
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) returns `422` from
+`search/repositories`, the **same signal as a fabricated address**, while the byte channel serves its
+`LICENSE` at `35,136 B` titled `GNU AFFERO GENERAL PUBLIC LICENSE`. The `openedx` org is not in this
+session's search index at all; its forks are. 🔴 **A trending sweep that trusted the existence oracle
+alone would have deleted Open edX from this KB.**
+
+Evidence: `evidence/supply-channel-saturation.2026-11-04-p640.tsv`,
+`evidence/existence-oracle-false-absent.2026-11-04-p640.tsv`,
+`evidence/canonical-licence-bytes.2026-11-04-p640.tsv`.
+
 
 ## `2026-11-04` · `p639` — a new discovery operative, and a facet that must never be used again
 
