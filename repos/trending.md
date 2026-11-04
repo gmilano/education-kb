@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 — the Open edX licence cell was wrong in three files, and one published platform is a 404
+
+**Verification channels:** existence via `git ls-remote --symref`; licence by reading the grant payload from `raw.githubusercontent.com`; stars from the repository page. GitHub API and `curl` to `github.com` are HTTP 403 in this session.
+
+### 🔴 `openedx/edx-platform` is AGPL-3.0, not Apache-2.0
+
+This KB published Apache-2.0 for Open edX in `agents/top.md`, `repos/foundations.md` **and** `verticals/solutions.md`.
+
+| Channel | Reading |
+|---|---|
+| Grant payload (`LICENSE`, branch `master`) | **35,136 B**, `GNU AFFERO GENERAL PUBLIC LICENSE` |
+| Repository sidebar | `AGPL-3.0 license` |
+| README | "The code in this repository is licensed under version 3 of the AGPL unless otherwise noted." |
+
+**Why this is the most consequential correction this KB has carried:** Apache-2.0 permits a closed proprietary derivative. AGPL-3.0 requires offering modified source **to network users** — so operating a modified Open edX as a managed service triggers disclosure. An engagement scoped from the old cell would have mispriced the licensing position of the entire deliverable. The containment pattern is `openedx/XBlock` (genuinely **Apache-2.0**, 471★) plus an external agent backend; `compose/patterns.md` P3 is written around exactly this.
+
+### 🔴 `OpenEduCat-Inc/OpenEduCat` — HTTP 404
+
+Published here as an education-ERP foundation, "LGPL-3.0, 3M+ users / 100+ countries".
+
+| Probe | Result |
+|---|---|
+| `git ls-remote` | fails to resolve |
+| Repository page | **HTTP 404** |
+| `OpenEduCat-Inc/openeducat_erp` | fails to resolve |
+| `openeducat/OpenEduCat` | fails to resolve |
+| `OpenEduCat-Inc/OpenEduCat-Community` | fails to resolve |
+
+Removed from the foundations and verticals shelves. The commercial product may well still exist — the GitHub address this KB served does not. **Consequence:** there is now no verified open source education ERP on this shelf. `frappe/lms` (AGPL-3.0, `license.txt`, 33,893 B, branch `develop`) is the nearest substitute. Recorded as a hole rather than back-filled.
+
+### 🔴 Further licence and star corrections
+
+| Row | Published as | Measured 2026-11-04 |
+|---|---|---|
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | Apache-2.0 | **ECL-2.0** — Educational Community License v2.0 (11,120 B). Apache-derived, permissive in practice, narrower patent grant. Not interchangeable in a contract. |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-2.0 | **GPL-3.0** (35,147 B). Version matters: GPL-2.0-only and GPL-3.0 are mutually incompatible when combining code. |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 1.2k ★ | **457 ★** — inflated 2.6×. MIT confirmed (1,066 B). |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | 468 ★, Apache-2.0 | **471 ★, Apache-2.0** — accurate. Recorded because it is the one cell that held. |
+
+### 🟢 The LMS/platform shelf is a copyleft monoculture — measured, not asserted
+
+Ten platform rows, licence payload read for each:
+
+| Licence | Rows |
+|---|---|
+| GPL-3.0 | `moodle/moodle` (COPYING.txt, 35,147 B) · `chamilo/chamilo-lms` (35,147) · `ILIAS-eLearning/ILIAS` (35,147, branch `release_11`) · `GibbonEdu/core` (35,121, branch `v31.0.00`) |
+| AGPL-3.0 | `openedx/edx-platform` (35,136) · `frappe/lms` (33,893) · `veolms/veolms` (34,523) · `Vacademy-io/vacademy_platform` (34,523) |
+| GPL (v2 family) | `francoisjacquet/rosariosis` (15,214, branch `mobile`) |
+| ECL-2.0 | `sakaiproject/sakai` (11,120) |
+| **MIT** | **`openfun/richie` (1,079) — the only permissive platform-level row** |
+
+**There is no permissively-licensed production-grade open source LMS.** The permissive surface in education is confined to components (`XBlock`, Apache-2.0), libraries (`pyKT`, MIT), front ends (`richie`, MIT) and agents (MIT/Apache). Any engagement that assumed a permissive LMS core was mis-scoped. This is the governing architectural fact for every pattern in `compose/patterns.md`.
+
+### 🔴 A filename-guess defect reproduced again
+
+The licence probe missed four payloads because it guessed filenames. Actual served paths this pass:
+
+| Repo | Grant served at |
+|---|---|
+| `moodle/moodle` | `COPYING.txt` |
+| `frappe/lms` | `license.txt` (lower case) |
+| `openedx/XBlock` | `LICENSE.TXT` (upper case, `.TXT`) |
+| `sakaiproject/sakai` | `LICENSE` |
+
+`openedx/XBlock` returned NO-PAYLOAD across `LICENSE`, `LICENSE.md`, `LICENSE.txt` on both `main` and `master` before the repository page revealed `LICENSE.TXT`. Two of these — a repo serving at `COPYING.txt` and the lower-case `license.txt` — were already recorded as reproductions in earlier passes and remain unfixed. **A NO-PAYLOAD result from a filename probe is not evidence of an absent licence**, and this pass nearly published that error for XBlock.
+
+Also note: `git ls-remote` is a reliable existence oracle (fabricated control `fake-owner-xyz/not-real-repo` fails to resolve), but **four of ten platform rows are not on `main`** — `master`, `develop`, `release_11`, `v31.0.00`, `mobile`. A probe hard-coded to `main` would have manufactured false absences for all of them.
+
+---
+
+
 ## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🟢 **`338` CENSUS ADDRESSES, `51.5 %` NOVEL. 🔴 AND THE LMS TRENDING PICTURE IS A COPYLEFT MONOCULTURE WITH EXACTLY TWO PERMISSIVE EXCEPTIONS.**
 
 ### 🟢 `649-F` — the census, with a denominator

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-04
 ---
 
+## 🆕 2026-11-04 — OpenMAIC ships v1.4.0 today, and two rows this KB called MIT have no licence at all
+
+**Verification channels this pass:** existence via `git ls-remote --symref` (returns the real default branch); licence by reading the grant payload from `raw.githubusercontent.com`; stars from the repository page. `curl` against `github.com` and the GitHub API are both HTTP 403 in this session, so the API was not used.
+
+### 🟢 New this week
+
+| Agent | Repo | Licence | Stars | Signal |
+|---|---|---|---|---|
+| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT (1,065 B) | **42,700** | **v1.4.0 released 2026-11-04 — today.** v1.3.0 landed 2026-10-29 with a persistent knowledge base and Pro workbench; v1.0.0 on 2026-08-27. Two releases in a week. Open Multi-Agent Interactive Classroom from Tsinghua: AI teachers *and* AI classmates that speak, draw on a whiteboard and debate. LangGraph orchestration. |
+| **Bloom** | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT (1,069 B) | 302 | Built on Bloom's 2-sigma result. Generates a course outline then adapts each lesson to learner feedback and annotations. Ships as a Claude Code skill *or* a self-hosted web app — the lowest-effort demo on the shelf. |
+
+**Why OpenMAIC is the week's story:** peer simulation is a capability a one-to-one tutor structurally cannot provide. Two releases in seven days on a 42.7k-star MIT codebase is an unusually fast cadence for an academic project.
+
+### 🔴 Corrections to rows this KB was already serving
+
+Re-measured first-hand this pass. These are errors in published data, not new findings.
+
+| Row | Published as | Measured 2026-11-04 | Consequence |
+|---|---|---|---|
+| [GeminiLight/awesome-ai-llm4education](https://github.com/GeminiLight/awesome-ai-llm4education) | MIT, 1.5k ★ | **No licence file. 221 ★** | A repository with no grant is not MIT. Any reuse assumes a permission that was never given. Stars inflated 6.8×. |
+| [mwasifanwar/eduadapt-ai](https://github.com/mwasifanwar/eduadapt-ai) | MIT, ~150 ★ | **No licence file. 26 ★** | Same defect. 26 stars is not an adopted project. Dropped from `agents/top.md`. |
+| [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | Apache-2.0 | **MIT** (1,067 B, title `MIT License`) | Wrong grant named; both permissive, so low practical risk. |
+| [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | ~800 ★ | **116 ★** | Inflated 6.9×. Licence (BSD-3-Clause, 1,531 B) was correct. |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 22k–24k ★ | **55,000 ★** | Understated by more than half — stale rather than wrong. |
+
+**The pattern worth recording:** of five re-measured rows, **two asserted a permissive licence that does not exist in the repository**, and every star count was wrong — four inflated, one understated. A false MIT claim is the most damaging error class this KB can publish, because it is the one a studio acts on without re-checking.
+
+### 🟡 Real, and deliberately not filed
+
+| Repo | Licence | Stars | Why not |
+|---|---|---|---|
+| [kvnloo/tutor-mcp](https://github.com/kvnloo/tutor-mcp) | MIT (1,073 B) | **0** | Good design — MCP server combining Bayesian Knowledge Tracing, FSRS spaced repetition, prerequisite skill graphs and a frozen rubric. Zero stars, zero forks: no adoption, no external review. Watch; do not stake an engagement on it. |
+
+### 🔴 Declared gaps this pass
+
+- **No permissive Moodle-side agent at `canvas-mcp`-comparable adoption.** Canvas has a 317★ MIT MCP server; Moodle — the dominant LMS in LATAM and much of EMEA — has no permissive equivalent at that standing. A hole in exactly the regions Globant sells into.
+- **No open source assessment-integrity or proctoring agent under a permissive licence.** The most regulated use case in the sector (EU high-risk; emotion recognition banned since Feb 2025) appears to have no permissive open source supply.
+- **Four of seven filed agents are unplaced by region** and are recorded `Global` with that stated. Only HKUDS (Hong Kong → APAC), THU-MAIC (Tsinghua → APAC) and CAHLR (UC Berkeley → North America) had a documentary basis for placement.
+
+---
+
+
 ## 🆕 `p649` — reads `2026-11-04`, commit `2026-11-04` — 🔴 **THE TRENDING CHANNEL REPORTED TWO FLAGSHIPS AND THE SHELF IS AHEAD OF IT ON BOTH, A FOURTH PASS RUNNING. 🟢 WHAT IS GENUINELY NEW THIS WEEK CAME FROM THE CENSUS, AND IT IS A RESEARCH CORPUS, NOT A PRODUCT.**
 
 ### 🔴 What the trending leg reported, and what the shelf already held
