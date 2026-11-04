@@ -1,8 +1,147 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — `2026-11-04` — **🔴 `639-A`: `637-E` WITHDREW A WORKING CHANNEL AND `p638` PUBLISHED A LICENCE COLUMN THAT CONTRADICTS `6` BYTE-READS SETTLED IN THIS REPOSITORY. 🔴 `639-B`: `p638`'s `31%`-NO-GRANT STATISTIC IS FALSE; MEASURED `6.3%`. 🔴 `639-C`: `p638` REGISTERED `0` GAPS AND CARRIED `0` PASS IDS ONTO `8` SHELVES. 🟢 `639-H`: THE `APAC` NIL IS A QUERY-SHAPE ARTIFACT AND IS **CLOSED**. EIGHT REGISTERED (`639-A`…`639-H`).**
+
+🔵 **Currency, stated honestly.** This register and `README.md` sat at `p637` when `p639` opened — **two**
+passes stale, because `p638` wrote neither. Both are brought to `p639` in this pass. `make hooks` could
+not be executed for the **fourth** consecutive pass (`639-C`), so currency below is again asserted by
+construction rather than gate-verified.
+
+### 🔴 `639-A` — NEW, and it is the pass's finding: the byte-read channel was never unavailable
+
+🔵 `637-E` concluded the byte-read channel does not work here, from `gh api repos/{slug}/license` failing.
+The failure is this session's **repository-scope guard** — *"GitHub access to this repository is not
+enabled for this session. Use `add_repo`"* — which this base diagnosed correctly at **`p584`** and records
+in this file in `33` places. It gates **repo-scoped API endpoints only**.
+`raw.githubusercontent.com` is a different host, is not repo-scoped, and is named **`2,206`** times across
+these files as *"🟢 permitted — the pass's only first-hand channel."*
+🟢 `p639` probed **`44`** addresses on it and read **`34`** payloads, two at byte counts identical to
+this base's stored figures
+(`advisingapp` `3,860 B`, `PageLM` `8,563 B`) — same channel, not a new one.
+🔴 Consequence: `6` of `p638`'s `16` licence cells contradict settled byte-reads
+(`OpenOLAT`, `feedbacksystem`, `advisingapp`, `PageLM`, `education-agent-skills`, `ltijs`), and `2`
+**inverted the engagement answer** — a permissive `Apache-2.0` row suppressed by a false red, and a
+`CC-BY-SA-4.0` row with commercial use allowed published as *"not reusable"*.
+🟢 **CLOSED as a capability question.** 🔴 **OPEN as a rule:** a licence cell must cite its channel and
+byte count, or it is not a licence cell. Evidence:
+`evidence/metadata-regression.2026-11-04-p639.tsv`, `evidence/verification-oracle.2026-11-04-p639.tsv`.
+
+### 🔴 `639-B` — NEW: `p638`'s headline statistic is withdrawn
+
+*"`5 of 16` education agents (`31%`) carry no usable grant"* — 🔴 **`4` of those `5` have grants recorded
+in this repository.** Measured on bytes: **`1 of 16` (`6.3%`)** with no grant at all
+(`luffycodes/Tutorbot-Spock`, `NO-PAYLOAD` on both default branches across `5` filenames, metadata
+`NONE`). The remaining four split into `Apache-2.0`, `CC-BY-SA-4.0`, `Elastic 2.0` and bespoke.
+🟢 `p638`'s *conclusion* ("sort by licence, not stars") survives on better evidence.
+🟢 **CLOSED.** Evidence: `evidence/cohort16-metadata-vs-payload.2026-11-04-p639.tsv`.
+
+### 🔴 `639-C` — `make hooks` denied a FOURTH pass, and the reason is finally specific
+
+🔵 `p635` said *"could not be executed (sandbox)"*; `637-G` said *"denied"*; `p638` did not say. The
+refusal this pass names its reason: this runner's auto-mode classifier rejects `make hooks` as
+**`[Code from External]`** — the suite is code from a clone.
+🔴 **So it is not a flake and it will not pass on a retry.** Under this runner the gate apparatus built
+since `p398` is **permanently dark**, `gate-register-currency` included — the check `p634` built to catch
+exactly `637-D`, now un-runnable for four passes while the thing it checks broke twice.
+🟡 `p638` is the second break: `723` lines into `8` shelves, the token `p638` present in `2` files and only
+in the append-only date form, `0` ids on any finding, `0` register entries, `README.md` and this file left
+at `p637`. Its five commit-message findings **cannot be cited, narrowed or closed by anyone.**
+🔴 **OPEN, and escalated:** this is a *runner* constraint, not a repository defect. Either the gate suite
+is invoked by something the classifier permits, or every pass must measure with instruments it writes
+itself and say so. `p639` did the latter, and `639-G` declares what its instruments got wrong.
+🟢 No gate was relaxed, removed, edited, or added to `DECLARED_RED` to accommodate this.
+
+### 🔴 `639-D` — NEW: primary sources are unreachable in this runner, and that is now a standing condition
+
+Both primary attempts this pass failed at the network layer, not at the source:
+`eur-lex.europa.eu` and `news.gallup.com` are both `ENOTFOUND`. 🟡 Therefore **`637-F` does not close** —
+the `AI Act` position (Reg. (EU) `2026/1744`, Annex III education deferred to `2027-12-02`, Article 50
+live since `2026-08-02`) still rests on ten converging secondary sources and has no primary reading.
+🔴 **Stated once, as a condition rather than a per-pass discovery:** every market and regulatory figure on
+these shelves is necessarily **secondary** until the session's network allowlist is widened. The two hosts
+needed are named above so that it can be.
+🔴 **OPEN**, and it is not closable from inside a pass.
+
+### 🔵 `639-E` — NEW: `NOASSERTION` resolves into nine mechanisms, not one
+
+`24` census addresses probed, `14` payloads read. The field means *"the SPDX matcher failed"*, and it fails for reasons whose
+commercial answers run from `Apache-2.0` to `CC BY-NC` to a `19`-byte declaration: permissive-plus-appendix
+(`OpenOLAT`), permissive-plus-prepended-copyright (`feedbacksystem`), `ECL-2.0` (the `Apereo` estate),
+consortium (`1edtech/caliper-spec`), source-available (`Elastic 2.0`), bespoke (`PageLM`, `orbit`,
+`pupilfirst`), `CC` share-alike, `CC` non-commercial, and a one-line declaration (`frappe/education`).
+🟡 A tenth — non-English payloads over-collecting LATAM rows — is **reproduced, not discovered**; `p206`
+and `p630` established it.
+🟢 **CLOSED as a taxonomy.** 🟡 **OPEN:** `OS4ED/openSIS-Classic` has no payload found across `11`
+branch/filename combinations and is recorded **unresolved**, not absent.
+Evidence: `evidence/noassertion-mechanisms.2026-11-04-p639.tsv`.
+
+### 🔴 `639-F` — `p638`'s platform generalisation is narrowed by a row on its own shelf
+
+*"Education's permissive supply is in components, not platforms"* — 🔴 false as a sector rule.
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is a complete production LMS under `Apache-2.0`
+(`10,982 B`, read at `p615`, re-read at `p639`), `449★`, pushed `2026-11-03`, and
+`verticals/solutions.md` already called it *"the default when the client needs a complete LMS and a
+permissive licence in the same artefact."* 🟢 The `5 for 5` copyleft reading of `Moodle`/`Canvas`/`Open
+edX`/`Chamilo`/`ILIAS` **holds**; only the generalisation is withdrawn.
+🟢 **CLOSED**, with the platform decision now stated as two branches (brownfield → attach at the boundary;
+greenfield → `OpenOLAT`).
+
+### 🔴 `639-G` — `p639`'s own instruments failed three ways; the controls caught all three
+
+🟡 Declared, because a pass that reports only its instrument's successes is not measuring.
+(i) The licence grader read `X-isdoingreat/canvas-pilot` as `GPL` where the payload title says
+**`GNU AFFERO`** — the negation tested whether *any line* lacks "AFFERO" rather than the *file*;
+`p630`'s mis-grade class, reproduced by its own repair, and **the metadata channel was right**.
+(ii) `UNGRADED` for `CC0-1.0` and for every non-English payload — `en` keywords only.
+(iii) The `NO-PAYLOAD` negative has a **measured `20%` false-negative rate** (`1 of 5`):
+`frappe/education` resolves at `master/license.txt`, **lowercase**, because
+`raw.githubusercontent.com` is case-sensitive.
+🟢 **The rule that follows:** metadata and bytes are a **two-channel cross-check**, not a ladder with bytes
+on top; and `search/repositories` proves **existence** while `raw` proves the **grant** — neither
+substitutes for the other, and a `NO-PAYLOAD` is never evidence of absence.
+🔵 **This base already has the proof of that last clause and `p639` reproduced the input without the
+answer:** `p639`'s census returned `NO-PAYLOAD` for
+[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp), and `ACTION MO`
+resolved it passes ago — it carries `GPL-3.0-or-later` in `version.php` and `lib.php` and **in no licence
+file at all**. 🟡 So there is a **third** channel above both of mine (source file headers, `p635`'s
+`Moodle` finding), and `NO-PAYLOAD` is a floor of *"not where we looked"* — the base's own phrase.
+🟡 **OPEN:** the grader is not fixed in this pass, only characterised.
+Evidence: `evidence/no-payload-calibration.2026-11-04-p639.tsv`.
+
+### 🟢 `639-H` — the `APAC` nil CLOSES, and it was never a sector absence
+
+🔴 `p638` recorded APAC education adoption as *"an explicit nil for the fourth consecutive pass … now
+recorded as a standing gap rather than a search miss."* 🟢 **It was a search miss.** The mandated shape
+`AI {industry} {region} {year} adoption regulation players` returns enterprise-IT vendor content for
+`APAC`, because **no education ministry describes itself as an `APAC` body** — the region token selects
+vendors by construction. One query naming the ministries returned, on the first attempt: Singapore `MOE`
+(Primary 4, teacher-supervised, **Student Learning Space** only, "cognitive offloading"), Korea
+(AI Basic Act in force `2026-01-22`), Japan (guidelines + pilot schools; digital textbooks official as
+early as the `2030` school year), Australia (Framework for Generative AI in Schools, `Oct 2023`,
+reviewed `2024` — no `2026` successor), plus an Ipsos cross-market series (ban support `~52%` AU vs
+`28`–`31%` SG/JP/KR; SG `37%`→`28%` YoY).
+🟢 **CLOSED for policy.** 🔴 **OPEN, narrowed:** APAC education **market size and vendor share** remain an
+explicit nil — searched this pass, not found. 🟡 **ACTION for the next pass:** retire the region token in
+the mandated legs and substitute named institutions per region; the same defect plausibly suppressed
+`EMEA` adoption data, which is also unmeasured.
+Evidence: `evidence/regional-legs.2026-11-04-p639.tsv`.
+
+### Carried gaps — status after `p639`
+
+| Gap | Status |
+|---|---|
+| 🟢 `637-A` — `archived` is an ungraded liveness channel | 🟢 **Instrument works and is in use.** `p639` read the flag on every address; `0 of 16` of the agent cohort archived; `ketanchoyal/Our-E-School` confirmed `archived` + `MIT`, `504★`. The `637` repairs hold. |
+| 🔴 `637-B` — mandated legs nil on both halves | 🟡 **Split.** Supply: **nil a 13th time** (`6 of 6` web-surfaced slugs already held). Demand/facts: 🟢 **live again** — four regions paid, and `639-H` shows the APAC half was failing on query shape, not supply. |
+| 🟢 `637-C` — a census manufactured a false absence (`fork:true`) | 🟢 **Held.** `fork:true` on every probe this pass; `0` false absences; `2` fabricated controls returned `422`. |
+| 🔴 `637-E` — the mandated verification method does not work | 🔴 **Worse than recorded, and the correction matters.** `curl -sI` does not return `403` here — it returns **`HTTP/1.1 200 Connection Established` for a real slug *and* for a fabricated one** (the proxy's CONNECT reply). A pass that trusted it would mark **every fabricated address as verified**. 🟢 And the second half of `637-E` — that the byte-read channel is unavailable — is **withdrawn** by `639-A`. |
+| 🟡 `637-F` — the `AI Act` claim has no primary reading | 🔴 **Still open**, and `639-D` explains why it cannot be closed from inside a pass. |
+| 🔴 `637-G` — `make hooks` denied | 🔴 **Open, fourth pass**, now with a named cause (`639-C`). |
+| 🟢 `637-H` / `639-D`-cohort — re-measure for drift | 🟢 **`16 of 16` live, `0` licence drift, `0` star drift, `0` archived.** `canvas-mcp` flat at `317★` (10th observation — the `272`→`317` climb has stopped, confirming `p637`). |
+| 🟡 `635-A` — the `LICENSE` file is not the grant (`Moodle` source headers contradict it) | 🟡 **Carried and sharpened.** `639-E` adds the converse: the *metadata* is not the grant either, and the two disagree in nine distinguishable ways. `p635`'s `Moodle` finding stands — a payload can be wrong too; nothing here promotes bytes to an oracle of last resort. |
 
 ## 🆕 `p637` — `2026-11-03` — **🔴 `637-D`: `p636` CLAIMED "EIGHT REGISTERED (`636-A`…`636-H`)" AND WROTE `0` OF THEM INTO THIS REGISTER OR INTO `README.md` — BOTH SAT AT `p635` WHILE ALL EIGHT SHELVES SAT AT `p636`. THE ONE CHECK THAT CATCHES THIS (`gate-register-currency`) HAS BEEN UN-RUNNABLE FOR THREE CONSECUTIVE PASSES. 🟢 BACKFILLED BELOW. 🔴 `637-A`: `archived` IS A LIVENESS CHANNEL THIS BASE DOES NOT READ — `8 of 45`, `4` UNFLAGGED. 🔴 `637-B`: MANDATED LEGS NIL ON BOTH HALVES. EIGHT REGISTERED (`637-A`…`637-H`).**
 

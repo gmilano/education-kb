@@ -1,8 +1,35 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## `2026-11-04` · `p639` — a new discovery operative, and a facet that must never be used again
+
+🔵 The free-text keyword legs have gone nil for twelve passes, so `p639` changed the **operative**: the
+GitHub **topic facet** crossed with a licence facet and a push window, heldness measured by `git grep`
+against `HEAD` rather than the working tree (`636-F`'s self-pollution trap).
+Evidence: `evidence/facet-saturation.2026-11-04-p639.tsv`.
+
+| Facet | `total_count` | Read | Unheld | **On-sector** unheld | Verdict |
+|---|---|---|---|---|---|
+| `topic:edtech` | `78` | `30` | 🟢 **`0`** | `0` | 🟢 **SATURATED.** `30 of 30` already held — the strongest evidence yet that this sector is genuinely enumerated here. |
+| `topic:student-information-system` | `108` | `30` | `17` | 🟢 **`0`** | 🟢 **Saturated at any usable threshold.** All three meaningful rows held (`rosariosis` `GPL-2.0`, `academico` `MIT`, `openSIS` no-grant); the unheld tail is `1`–`7`★ single-author coursework. |
+| `topic:lms` | `23` | `23` | `10` | 🟡 **`3`** | 🟡 **Still pays — but only below `100★`.** And `3 of 23` are the **`LMS` acronym collision** (Lyrion Music Server), reproducing `p636`'s `LTI` class on the topic facet itself. |
+| `topic:education` | `132` | `30` | `11` | 🔴 **`0`** | 🔴 **CONTAMINATED — DO NOT USE.** It indexes *things to learn from*, not *software for education*: a functional-programming jargon glossary, Go examples, an OSINT cheat sheet, a periodic table, an insect-world site, a RISC-V CPU simulator. All `11` unheld rows are **correctly** unheld. |
+
+🔴 **Why that last row matters more than its yield.** `topic:education` returns `132` permissive, live,
+well-starred repositories and **not one of them belongs on an education shelf**. A pass that treated
+unheld-and-permissive as a promotion signal would have added eleven entities to this KB, and a client
+would have been handed a periodic table as an education asset. 🟢 The base's silence on all eleven was a
+**judgment**, not a miss (and `639-G` is why the denominator, not the yield, is the number to read) — and this is the measurement that distinguishes the two.
+
+🟢 **Accepted this week — `3`,** all `MIT`, all verified on bytes, all unheld at `HEAD`:
+[`jasp-nerd/canvas-course-downloader`](https://github.com/jasp-nerd/canvas-course-downloader) (`82★`,
+Canvas course export with **no API keys**), [`EscolaLMS/H5P`](https://github.com/EscolaLMS/H5P) (`29★`,
+headless `H5P` Laravel REST API, EMEA),
+[`joachimdieterich/laravel-curriculum-adminlte3`](https://github.com/joachimdieterich/laravel-curriculum-adminlte3)
+(`21★`, German curriculum tool, EMEA — licence and liveness only, capability not asserted).
 
 ## 2026-11-03 (p638) — repository movement
 

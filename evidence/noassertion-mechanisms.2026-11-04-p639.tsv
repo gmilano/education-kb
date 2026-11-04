@@ -1,0 +1,12 @@
+# p639 — NOASSERTION is not "no licence". It is "GitHub's SPDX matcher could not match the file".
+# 24 census rows byte-read. Six distinct mechanisms produce it, with different engagement answers.
+mechanism	example	payload	engagement_answer
+permissive text WITH an appended project statement	OpenOLAT/OpenOLAT	Apache License + "Additional license statement for the openolat.org code base"	USABLE - Apache-2.0. A complete LMS under a permissive grant.
+permissive text WITH a prepended copyright line	thm-mni-ii/feedbacksystem	"Copyright 2021 Technische Hochschule Mittelhessen" then Apache License	USABLE - Apache-2.0
+consortium licence	1edtech/caliper-spec	"IMS GLOBAL LEARNING CONSORTIUM, INC." 12402 B	NOT OSI - counsel required before redistribution
+Educational Community License 2.0 (Apache-2.0 derivative, OSI-approved)	Apereo-Learning-Analytics-Initiative/OpenLRW, OpenLRS	"Educational Community License, Version 2.0" 9878 B / 11087 B	USABLE - ECL-2.0, modified patent grant vs Apache-2.0
+source-available, NOT open source	canyongbs/advisingapp	Elastic License 2.0 3860 B	FORBIDDEN as a hosted or managed service
+bespoke project licence	CaviraOSS/PageLM, andymatuschak/orbit, pupilfirst/pupilfirst	"# PageLM Community License" 8563 B; bare copyright lines 457 B / 1684 B	COUNSEL REQUIRED - PageLM is non-commercial and bars redistribution
+Creative Commons, non-software	GarethManning/education-agent-skills; xiaoyang111222/cn-math-taxonomy	CC-BY-SA-4.0 1230 B; CC BY-NC 4.0 19347 B	SHARE-ALIKE, commercial allowed / NON-COMMERCIAL, unusable in client work
+one-line declaration instead of a licence text	frappe/education	"License: GNU GPL V3" 19 B	COPYLEFT - and unmatchable by any SPDX matcher by construction
+non-English licence text	portabilis/i-diario	"LICENCA PUBLICA GERAL AFFERO GNU Versao 3" 35326 B	COPYLEFT - already established here at p206/p630; over-collects LATAM rows into NOASSERTION

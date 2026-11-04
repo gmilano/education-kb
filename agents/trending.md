@@ -1,8 +1,36 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## `2026-11-04` · `p639` — the agent layer did not move; the *licence reading* of it did
+
+🔵 **Nothing new entered the education agent layer this week.** `6 of 6` slugs that the mandated web legs
+surfaced (`anandpatikat/guru-latihan-dinamis`, `OPTIMETA/PAIDEIA`, `rohitg00/ai-engineering-from-scratch`,
+`pguso/agents-from-scratch`, `microsoft/ai-agents-for-beginners`, `GarethManning/education-agent-skills`)
+were **already held at `HEAD`** — `7` to `53` files each. That is the **13th consecutive nil** for the
+supply half of the mandated legs (`639-H` splits the leg: supply nil, facts live). Recorded as a nil,
+not omitted.
+
+🔴 **What did change is that three rows on this shelf are now known to be mislabelled** (`639-A`). Re-read on bytes:
+
+| Address | Was published as | 🔵 Is |
+|---|---|---|
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 🟢 **`Apache-2.0`** — fully permissive, EMEA (TH Mittelhessen) |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 "no licence grant, not reusable" | 🟡 **`CC-BY-SA-4.0`** — share-alike, **commercial allowed** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION` | 🔴 **Elastic License `2.0`** — bars hosted/managed-service delivery |
+
+🟢 **Liveness, this week:** `16 of 16` of the curated agent cohort live, `0` archived, `0` licence drift,
+`0` star drift against `2026-11-03`. One push advanced (`ai-shifu/ai-shifu` → `2026-11-04`).
+🟡 `luffycodes/Tutorbot-Spock` remains stale at `2024-11-04` — **exactly two years** this week — and is
+confirmed to have **no licence file at all** on either default branch across five filenames. It is the one
+genuinely ungranted row on the shelf.
+
+🔵 **A fourth LMS boundary is in the base and worth naming here:**
+[`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) (`MIT`,
+`1,200 B` on bytes) joins the three Canvas servers and the Moodle server. **Brightspace/D2L** is the
+incumbent this base had no permissive boundary to until now.
 
 ## 2026-11-03 (p638) — what moved
 

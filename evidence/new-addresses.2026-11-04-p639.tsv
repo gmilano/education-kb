@@ -1,0 +1,12 @@
+# p639 — the 3 addresses accepted this pass. Unheld at HEAD (git grep, 0 files each),
+# existence-verified, and grant read on bytes. Rejections recorded with their reason.
+slug	disposition	meta_spdx	payload_grade	bytes	stars	pushed	region	reason
+jasp-nerd/canvas-course-downloader	ACCEPTED	MIT	MIT	1066	82	2026-11-03	Global	Chrome extension, one-click export of a whole Canvas course (files, assignments, pages, modules, syllabus, grades) with NO API KEYS. The missing front door for RAG ingestion where the studio has no Canvas admin token.
+EscolaLMS/H5P	ACCEPTED	MIT	MIT	1066	29	2026-10-23	EMEA	Headless H5P Laravel REST API. H5P content is already held here; this is the permissive headless boundary to it.
+joachimdieterich/laravel-curriculum-adminlte3	ACCEPTED (thin)	MIT	MIT	1073	21	2026-11-03	EMEA	Laravel curriculum tool, German school sector. Accepted on licence+liveness; description is one word, so capability is NOT asserted.
+abrookins/quest	REJECTED	MIT	-	-	59	2026-09-08	-	OFF-SECTOR - example app for a Django database-performance book. topic:lms tag is noise.
+stiefenm/spoton	REJECTED	MIT	-	-	36	2026-11-03	-	ACRONYM COLLISION - Spotify plugin for Lyrion Music Server. "LMS" is not a learning management system here.
+mtxmiller/LyrPlay	REJECTED	MIT	-	-	45	2026-11-03	-	ACRONYM COLLISION - Lyrion Music Server client.
+hjelev/lyrtui	REJECTED	MIT	-	-	27	2026-10-24	-	ACRONYM COLLISION - Lyrion Music Server TUI.
+AbdullahBakir97/Django--LMS--Learning-Management-System	REJECTED	MIT	-	-	24	2026-10-19	-	ON-SECTOR but single-author demo-grade LMS with no AI layer and no deployment evidence. Fewer real rows beat padding.
+killcod3/license-management-system	REJECTED	MIT	-	-	24	2026-10-30	-	ACRONYM COLLISION - "LMS" = license management system.

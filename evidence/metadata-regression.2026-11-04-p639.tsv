@@ -1,0 +1,11 @@
+# p639 — p638 published metadata-only licence cells. This table sets each against the byte-read
+# ALREADY STORED IN THIS REPOSITORY at an earlier pass, and against p639's own re-read.
+# "regressed" = p638's cell is weaker or contradicts a settled byte-read held here.
+slug	p638_published_cell	base_settled_byteread (pass)	p639_re-read	bytes	regressed
+OpenOLAT/OpenOLAT	RED NOASSERTION "project states Apache-2.0; verify by byte-read"	Apache-2.0 (text) 10982 B (p615)	APACHE-2.0 master/LICENSE	10982	YES
+thm-mni-ii/feedbacksystem	RED NOASSERTION	Apache-2.0 (text) 10784 B branch dev, prepended copyright line	APACHE-2.0 master/LICENSE	10785	YES
+canyongbs/advisingapp	RED NOASSERTION "needs a byte-read before any engagement"	Elastic License 2.0 3860 B (p614) - warning row	ELASTIC-2.0-SOURCE-AVAILABLE	3860	YES
+CaviraOSS/PageLM	RED NOASSERTION	PageLM Community License 8563 B (p594) non-commercial, redistribution prohibited	bespoke "# PageLM Community License"	8563	YES
+GarethManning/education-agent-skills	RED "none declared" / "no licence grant, so not reusable"	CC-BY-SA-4.0 (p615) - share-alike, COMMERCIAL ALLOWED	CC-BY-SA-4.0	1230	YES
+Cvmcosta/ltijs	NOASSERTION (foundations channel)	Apache-2.0, held in compose as Apache-2.0	APACHE-2.0	11361	YES
+luffycodes/Tutorbot-Spock	RED "none declared"	(no byte-read held)	NO-LICENCE-FILE on main+master, 5 filenames	0	NO - p638 CORRECT

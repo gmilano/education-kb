@@ -1,8 +1,77 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04` — **🟢 THREE RECIPES, EVERY COMPONENT BYTE-READ THIS PASS. ONE OF THEM ONLY BECAME BUILDABLE BECAUSE `639-A` RECOVERED COMPONENTS `p638` HAD PUBLISHED AS RED.**
+
+🔵 Every address below was existence-verified (`search/repositories` + `fork:true`, fabricated control
+`422`) **and** grant-verified on bytes (`raw.githubusercontent.com`) on `2026-11-04`. Byte counts are
+quoted so a later pass can tell a re-read from a restatement.
+
+### 🟢 `P639-1` — Assessment-integrity layer on a copyleft incumbent (brownfield, NA and EMEA)
+
+**The buyer.** `53%` of US students sit under a discouraging or prohibiting AI policy while `57%` use AI
+weekly (Lumina–Gallup, `n = 3,801`). The institution needs the *use* instrumented, not banned. In EMEA the
+same build is Annex III preparation for assessment and exam scoring, dated `2027-12-02`.
+
+**The wiring — and nothing enters the LMS process, so no copyleft is inherited.**
+
+| Step | Component | Licence (bytes) | Role |
+|---|---|---|---|
+| 1 | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` (`11,361 B`) | Register the layer as an **`LTI 1.3` tool** against `Moodle`/`Canvas`/`Open edX`/`Brightspace`. The single integration that works on all four. |
+| 2 | [`jasp-nerd/canvas-course-downloader`](https://github.com/jasp-nerd/canvas-course-downloader) | 🟢 `MIT` (`1,066 B`) | 🆕 Pull course material **without an admin API token** for the pilot. The usual blocker on a first engagement is procurement of the token, not the code. |
+| 3 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) or [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 `MIT` (`1,071 B` / `1,072 B`) | Agent-side LMS access. 🟢 Use the **read-only** server (`boyuchengz`) for the first demo — the risk conversation ends before it starts. |
+| 4 | [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 `ECL-2.0` (`9,878 B`) | **Learning-record store.** `xAPI`/Caliper statements are the audit trail Annex III post-market surveillance asks for. 🟡 Fork-and-own: institutional owner, archival risk (`637-A`). |
+| 5 | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **`Apache-2.0`** (`10,785 B`) | Automated personalised feedback. 🔴 **`p638` published this red.** It is permissive, and it is a working German-university reference — recovered by `639-A`. |
+
+🟡 **Do not use** [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) as the base here,
+despite the fit: **Elastic License `2.0`** (`3,860 B`) bars hosted/managed-service delivery, which is the
+delivery shape. **`6`–`8` weeks** to a pilot on one faculty.
+
+### 🟢 `P639-2` — Greenfield permissive LMS, no copyleft question at all (LATAM, and anywhere the client owns the stack)
+
+**The buyer.** `55%` of LATAM HEIs have **no AI budget** and `26%` have any framework (UNESCO IESALC) —
+so licence cost and self-hosting are the deciding constraints, not features.
+
+| Step | Component | Licence (bytes) | Role |
+|---|---|---|---|
+| 1 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** (`10,982 B`) | 🔵 **The platform of record.** A complete production LMS under a permissive grant — `QTI 2.1`, `SCORM 1.2`, `LTI 1.3`. White-label and deliver as a managed service, which `Moodle`/`Canvas`/`Open edX` copyleft makes awkward and Elastic-licensed products forbid. |
+| 2 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` (`1,097 B`) | Offline-first delivery. Connectivity and device access are the named LATAM barriers; this is the component that answers them. |
+| 3 | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` (`1,073 B`) | LMS-independent tutoring layer (~`50` tools) — attaches to `OpenOLAT` over the boundary, so the platform choice stays reversible. |
+| 4 | [`EscolaLMS/H5P`](https://github.com/EscolaLMS/H5P) | 🟢 `MIT` (`1,066 B`) | 🆕 Headless `H5P` REST API for interactive content without an authoring-tool licence. |
+| 5 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` (`1,062 B`) | Reference implementation of an AI-native LMS — read it for the AI-Mentor pattern before building one. |
+
+🔴 **Explicitly excluded, with reasons on bytes:**
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) — `CC BY-NC 4.0`
+(`19,347 B`), **non-commercial**, unusable in client work despite `6,379★`;
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — bespoke `PageLM Community License`
+(`8,563 B`), non-commercial, redistribution barred;
+[`frappe/education`](https://github.com/frappe/education) — `GNU GPL V3` by a `19`-byte declaration.
+**`8`–`10` weeks** to a hosted pilot for a university consortium.
+
+### 🟢 `P639-3` — Teacher-supervised, channel-bound deployment (APAC: Singapore and Korea)
+
+**The buyer, and this is what `639-H` unlocked.** Singapore's `MOE` has *specified the channel*: AI for
+Primary 4 runs **teacher-supervised through the Student Learning Space**, not open platforms, with
+"cognitive offloading" named as the thing to avoid. Korea's AI Basic Act has been in force since
+`2026-01-22`. 🔵 So the requirement is not a capability — it is **a teacher in the loop, an audit trail,
+and no open-platform egress**, and that is an architecture, not a policy document.
+
+| Step | Component | Licence (bytes) | Role |
+|---|---|---|---|
+| 1 | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` (`11,342 B`) | 🔵 **The right primitive.** Teaching driven by **typed scripts rather than free chat** — the interaction is bounded by construction, which is exactly what a supervised channel needs. APAC-origin, live `2026-11-04`. |
+| 2 | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🟢 `CC0-1.0` (`7,048 B`) | Goal-oriented learning paths, peer-reviewed (WWW '25). `CC0` — no attribution obligation at all. |
+| 3 | [`Apereo-…/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🟢 `ECL-2.0` (`11,087 B`) | Learning-record store. The teacher-oversight evidence a ministry will ask for. |
+| 4 | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 `MIT` (`1,068 B`) | National-curriculum-aligned RAG tutor (CN grades 1–9) — the reference for curriculum alignment as a **retrieval** constraint rather than a prompt. |
+| 5 | Self-hosted inference | — | 🔴 Non-negotiable in both markets: no open-platform egress. Deploy behind the institution's boundary. |
+
+🟡 **Australia is the same stack and a different sale.** Ipsos puts support for *banning* AI in schools at
+`~52%` there against `28`–`31%` in Singapore, Japan and Korea, so the engagement leads with integrity and
+parental consent or it fails. 🔴 **And the honest gap:** APAC education **spend** data is an explicit nil
+for the fifth pass, so none of these recipes carries an APAC market-size estimate. **`10`–`12` weeks**
+including a ministry-facing conformance pack.
 
 ## 2026-11-03 — seven composition recipes, named repos and wiring
 

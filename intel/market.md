@@ -1,8 +1,129 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04` — **🟢 `639-H`: THE `APAC` NIL IS A **QUERY-SHAPE ARTIFACT**, NOT A SECTOR ABSENCE. THE MANDATED LEG HAS RETURNED NOTHING FOR `APAC` FOUR CONSECUTIVE PASSES AND WAS RECORDED AS A STANDING GAP; RUN ONCE WITH THE **MINISTRIES NAMED** INSTEAD OF THE REGION TOKEN, IT PAID FOUR NATIONAL POLICIES AND A CROSS-MARKET OPINION SERIES ON THE FIRST ATTEMPT. 🔵 AND THE `NORTH AMERICA` HEADLINE FIGURE IS CORRECTED WITH A DENOMINATOR: `57%`, NOT *"OVER `60%`"*.**
+
+🟢 **`639-H`, and it retires a gap rather than carrying it.** The prescribed leg is
+`AI {industry} {region} {year} adoption regulation players`. For `APAC` that shape returns enterprise-IT
+vendor content — Forrester IT-ops adoption rates, data-centre trend pieces, a life-sciences webinar — and
+`p638` concluded, reasonably, that *"APAC education adoption data is an explicit nil for the fourth
+consecutive pass and is now recorded as a standing gap rather than a search miss."*
+🔴 **It was a search miss.** One query naming Singapore's `MOE`, Korea's and Japan's ministries and the
+Australian education ministers returned dated, attributable policy for all four markets immediately.
+🔵 **The token `APAC` is the defect**: no education ministry describes itself as an `APAC` body, so the
+region token selects *vendor* content by construction. Evidence:
+`evidence/regional-legs.2026-11-04-p639.tsv`.
+
+**🔵 Market size — the band, and why it stays a band.**
+
+| Reading | Figure | Source | Status |
+|---|---|---|---|
+| Global AI-in-education, `2026` | `$11.4B`–`$12.3B` | three secondary sources (`p638`) | 🟡 Carried. Two share the `$11.4B` base and disagree on `CAGR` by `9.1` points (`16.8%` vs `25.9%`) — roughly `2×` terminal market by `2033`. |
+| North America, `2026` | `$3.68B`, **`36%`** of global | MarketsandMarkets | 🟡 Secondary. Implies a global `~$10.2B`, i.e. **below** the band above — the sources are not reconcilable and are not reconciled here. |
+| North America, `2030` | `$32B` | MarketsandMarkets | 🟡 Secondary. |
+
+🔴 **No `CAGR` is quoted in this base without its source, and no figure here is a primary read.** Both
+primary attempts this pass were blocked at the network layer, not by the sources: `news.gallup.com` and
+`eur-lex.europa.eu` are both `ENOTFOUND` in this session. 🟡 That is a **standing condition of this
+runner**, not a research failure, and it means every market figure on this shelf is necessarily secondary
+until the session's network allowlist is widened.
+
+## Opportunities by region
+
+### Global
+
+🔵 **The buy-side fact that organises every engagement:** students are already using AI at scale and
+institutions have not written the rules. That gap — not model capability — is what a studio is paid to
+close, and it is measurable in three independent regional instruments below (`NA` `57%`/`53%`,
+`LATAM` `92%`/`26%`, `APAC` ministry guidance arriving ahead of adoption data).
+🟢 **The deliverable that fits it is governance-shaped, not model-shaped:** an assessment-integrity and
+AI-use policy layer wired into the LMS the client already runs. The permissive components exist for four
+LMS families (see `verticals/solutions.md`), so this is integration work, not research.
+
+### North America
+
+🔵 **Corrected with a denominator.** Lumina Foundation–Gallup *2026 State of Higher Education*
+(`n = 3,801` students, fielded `2025-10-02`…`31`): **`57%`** use AI for coursework **at least weekly**,
+**`~1 in 5` daily**. 🔴 `p638`'s secondary reading of *"over `60%` weekly"* is **withdrawn**; `57%` with a
+sample size and field window replaces it.
+🔵 **And the institutional half, which is the sellable part:** `42%` of students say their institution
+**discourages** AI use, `11%` say it **prohibits** it, `7%` say it encourages free use. 🟡 So **`53%`
+of students sit under a discouraging or prohibiting policy while `57%` use AI weekly** — the policy and
+the practice are both majorities and they point in opposite directions. By discipline, encouragement
+within limits ranges `28%` (humanities) to `44%` (business).
+🟢 **Opportunity:** assessment redesign and AI-use policy instrumentation for `US`/`Canada` higher ed, sold
+on integrity and auditability rather than productivity. Carried from `p638`: four states (`MD`, `ID`, `OK`,
+`VA`) now mandate both state guidance and district AI policy, against `134` bills in `31` states — the
+compliance driver is already in statute.
+
+### EMEA
+
+🔵 **Regulation is the buying trigger and the dates are now specific.** Reg. (EU) `2026/1744`
+(Digital Omnibus on AI), `OJ 2026-07-24`, in force `2026-07-27`, defers stand-alone Annex III high-risk —
+which **includes education**: admissions, assessment, exam scoring — from `2026-08-02` to **`2027-12-02`**;
+Annex I embedded to `2028-08-02`; **Article 50 transparency was *not* deferred and has applied since
+`2026-08-02`**; Member State AI sandboxes by `2027-08-02`. 🟡 Ten secondary sources converge (`p638`);
+🔴 still **not** a primary read — `eur-lex.europa.eu` is `ENOTFOUND` here, so `637-F` stays open with the
+reason named rather than re-searched.
+🔵 **New this pass:** the European University Association's `Jan 2026` report urges European higher ed to
+**prioritise European LLMs** against US-centric bias — a sovereignty requirement that lands in
+procurement, not ethics. `ICS.AI` has launched a **national higher-education AI model** giving UK students
+free access to campus tools. Fosway Group published an EMEA `2026` AI market assessment for digital
+learning (`Apr 2026`).
+🟢 **Opportunity:** Annex III readiness for assessment and admissions systems — post-market surveillance,
+human oversight, documentation — delivered on **European-hosted or European-weight** models. The `18`-month
+Annex III deferral is the window: clients have time to do it properly and a date that forces them to start.
+🟢 Permissive EMEA components verified this pass: `OpenOLAT` (`Apache-2.0`), `EscolaLMS/H5P` (`MIT`),
+`feedbacksystem` (`Apache-2.0`, recovered from a false red), `spbstu-mcp` (`MIT`),
+`laravel-curriculum-adminlte3` (`MIT`).
+
+### APAC
+
+🟢 **No longer a nil.** Four markets, with dates:
+
+| Market | Instrument | Reading |
+|---|---|---|
+| **Singapore** | `MOE` | AI tools for **Primary 4** are **teacher-supervised** and delivered through the **Student Learning Space**, not open platforms. Education Minister Desmond Lee frames the design goal as avoiding **"cognitive offloading."** |
+| **South Korea** | AI Basic Act + Enforcement Decree | 🟢 **In force `2026-01-22`** (corroborates `p638`). An AI Korean-language platform is being widened to immigrant-background students. |
+| **Japan** | `MEXT`-side guidance | Guidelines issued with **selected pilot schools**; deliberately cautious. Digital textbooks to become **official textbooks as early as the `2030` school year**. |
+| **Australia** | Australian Framework for Generative AI in Schools | Education Ministers, `Oct 2023`, reviewed `2024` — still the reference instrument, i.e. **no `2026` successor**. |
+
+🔵 **A cross-market demand signal, which is the thing this leg has never had.** Ipsos: support for
+**banning** AI in schools runs **`~52%` in Australia** against **`28`–`31%` in Singapore, Japan and
+Korea**, and Singapore's fell `37%` → `28%` year-on-year while Japan's and Korea's moved the other way.
+🟢 **Opportunity, and it is two different sales.** In Singapore and Korea the mandate is **channel-bound**:
+the platform is specified (`SLS`) or the statute is live, so the work is building **inside** a sanctioned
+channel — teacher-in-the-loop by design, auditable by default. In Australia the public is **against**, so
+the engagement is integrity-first and consent-first or it does not survive contact with parents.
+🔴 **Still an explicit nil:** APAC education **market-size and vendor-share** data. Policy is now covered;
+spend is not. Searched this pass; not found.
+
+### LATAM
+
+🔵 **A second independent instrument, and the two agree.** Digital Education Council,
+*AI in Higher Education LATAM Survey 2026* (`29` universities, with Tec de Monterrey's Institute for the
+Future of Education): **`92%` of students** and **`79%` of faculty** actively engaging with AI.
+🟡 Alongside `p638`'s UNESCO IESALC reading (`200` HEIs across `19` countries: `87%` using AI, **`26%`
+with any formal framework**, **`55%` with no AI budget**). 🟢 Two instruments, different samples, same
+shape: **near-universal use, almost no governance, and no money allocated.**
+🔵 **Governance capacity is arriving, and it is multilateral rather than statutory:** UNESCO's **Regional
+AI in Education Observatory for Latin America and the Caribbean** launched `Apr 2026`; UNESCO Santiago and
+Chile's **CENIA** signed a cooperation agreement on ethical AI in education in `Feb 2026`.
+🔴 **The binding-law search returned nothing** — no national AI-in-education statute found in the region
+this pass. Recorded as a nil, and it is a *meaningful* nil: it means the `26%`-with-a-framework figure is
+not about slow compliance, it is about there being nothing to comply with.
+🟢 **Opportunity, and it is the cheapest-to-close gap in this base:** `55%` with no AI budget is not a
+licensing market, it is an **institutional-capability** market — framework-and-enablement engagements
+priced for ministries and university consortia, with the Observatory and CENIA as the credibility anchors
+rather than a vendor. 🟢 Deliver on permissive, self-hostable components (`OpenOLAT` `Apache-2.0`,
+`Kolibri` `MIT` for offline/low-connectivity, `Apereo` `ECL-2.0` for learning records) because connectivity
+and device access remain the named barriers. 🟡 LATAM-origin systems verified on bytes this pass:
+[`portabilis/i-diario`](https://github.com/portabilis/i-diario) (`AGPL-3.0`, Brazil),
+[`Desarrollo-CeSPI/kimkelen`](https://github.com/Desarrollo-CeSPI/kimkelen) (`GPL`, Argentina) — both
+copyleft, so attach rather than embed.
 
 ## 2026-11-03 — market readings and regional placement
 

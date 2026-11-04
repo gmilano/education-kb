@@ -1,8 +1,59 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04` — **🔴 `639-F`: `p638`'s *"THE INCUMBENTS ARE COPYLEFT, `5 for 5`… EDUCATION'S PERMISSIVE SUPPLY IS IN COMPONENTS, NOT PLATFORMS"* IS TRUE ABOUT THE FIVE AND **FALSE AS A SECTOR RULE** — AND THE COUNTER-EXAMPLE WAS ALREADY ON THIS SHELF, CALLED *"THE DEFAULT WHEN THE CLIENT NEEDS A COMPLETE LMS AND A PERMISSIVE LICENCE IN THE SAME ARTEFACT"*.**
+
+🔴 **The claim and the counter-example were in the same repository, one file apart.** `p638`'s agent shelf
+published *"the five highest-deployment LMS incumbents are copyleft `5 for 5`"* — which is correct:
+`Moodle` `GPL-3.0`, `Open edX` `AGPL-3.0`, `Canvas` `AGPL-3.0`, `Chamilo` `GPL-3.0`, `ILIAS` `GPL-3.0` —
+and then generalised it to *"education's permissive supply is in components, not platforms: attach over
+`REST`/`LTI`/`xAPI`, never in-process."* 🟢 **This shelf has held the counter-example since `p615`:**
+
+| Platform | Licence | ★ | Pushed | Standards | Reading |
+|---|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** (text, `10,982 B`, `master`) | `449` | `2026-11-03` | `QTI 2.1`, `SCORM 1.2`, `LTI 1.3` | 🟢 **A complete, production LMS under a permissive grant.** Swiss-governed, deployed across `DACH` higher education. Forkable, white-labellable, deliverable as a managed service. |
+
+🔵 **Why `p638` lost it.** GitHub's metadata reads `OpenOLAT` as `NOASSERTION` / *"Other"*, because the
+payload is the `Apache` text **with a project statement appended** — `639-E`'s first mechanism. Having
+withdrawn the byte-read channel, `p638` had only the metadata, so it re-published the row as
+🔴 `NOASSERTION` with the note *"project states Apache-2.0; verify by byte-read"* — **requesting a
+byte-read the base had already performed `23` passes earlier.**
+
+🔴 **The general lesson, and it is the expensive one.** A metadata-only licence column does not merely
+mis-grade unknown rows. It **overwrites settled facts with weaker ones**, and it does so silently,
+because a `NOASSERTION` cell looks like diligence. This base has the failure mode on record in the
+opposite direction too — its own note that `PageLM` *"sat on this base's shelves as MIT for five passes."*
+🟢 The repair is structural: **a licence cell cites its channel and its byte count, or it is not a licence
+cell.**
+
+### 🟢 The corrected platform statement
+
+| Claim | Status after `p639` |
+|---|---|
+| The five highest-deployment incumbents are copyleft | 🟢 **Holds.** `5 for 5`, unchanged. |
+| Attach over `REST`/`LTI`/`xAPI` rather than in-process, when the client is **already on** `Moodle`/`Canvas`/`Open edX` | 🟢 **Holds**, and it is still the right default for a brownfield engagement. |
+| 🔴 *"Education's permissive supply is in components, **not platforms**"* | 🔴 **Narrowed.** It is in components **and in one platform**. `OpenOLAT` is the greenfield answer: `Apache-2.0`, complete, `LTI 1.3`-capable, live this week. |
+
+🔵 **So the platform decision has two branches, not one.** Brownfield on a copyleft incumbent → attach at
+the network boundary, and the permissive boundary components now cover **four** LMS families: `Canvas`
+(three MCP servers), `Moodle` ([`spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) `MIT`),
+`Brightspace/D2L` ([`brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp)
+`MIT`, `1,200 B`) and any `LTI 1.3` consumer via
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (🟢 `Apache-2.0`, `11,361 B` — **not**
+`NOASSERTION` as `p638` recorded it). Greenfield, or where the client will own the stack →
+**`OpenOLAT`**, and the copyleft question never arises.
+
+🟡 **Verticals housekeeping, on bytes:** [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `Apache-2.0`;
+[`oppia/oppia`](https://github.com/oppia/oppia) 🟢 `Apache-2.0` (`11,358 B`) — also previously
+`NOASSERTION`; [`inducer/relate`](https://github.com/inducer/relate) 🟢 `MIT/X Consortium` (`1,145 B`);
+[`Desarrollo-CeSPI/kimkelen`](https://github.com/Desarrollo-CeSPI/kimkelen) `GPL` (`697 B`, Argentine
+school-management, LATAM); [`frappe/education`](https://github.com/frappe/education) 🔴 `GNU GPL V3` by
+`19`-byte declaration; [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) 🔴 **no licence
+payload found** on either default branch across eleven filename/branch combinations — unresolved, and
+recorded as unresolved rather than as absent.
 
 ## 2026-11-03 — platform layer: what you can customise, and what it costs you in licence terms
 

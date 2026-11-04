@@ -1,8 +1,107 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04`, commit `2026-11-04` — **🔴 THE BYTE-READ CHANNEL WAS NEVER UNAVAILABLE. `637-E` WITHDREW A CHANNEL THIS BASE HAS USED SINCE `p584` AND NAMES `2,206` TIMES AS *"THE PASS'S ONLY FIRST-HAND CHANNEL"*, AND `p638` THEN PUBLISHED A METADATA-ONLY LICENCE COLUMN THAT **CONTRADICTS `6` BYTE-READS ALREADY SETTLED IN THIS REPOSITORY** — `2` OF THEM INVERTING THE ENGAGEMENT ANSWER. 🔴 `p638`'s `31%`-NO-GRANT HEADLINE IS FALSE AND FALSIFIABLE FROM THESE FILES: MEASURED `6.3%`. 🟢 THE FOUR-PASS `APAC` NIL **CLOSES** — IT WAS THE MANDATED QUERY'S SHAPE, NOT THE SECTOR. 🔴 `make hooks` DENIED A FOURTH PASS, NOW WITH A NAMED CAUSE.**
+
+🔴 **`639`'s headline is a regression, not a discovery.** Every licence fact `p639` "found" was already in
+this repository. The finding is that `p638` published cells contradicting them, and the cause is one
+sentence in `637-E`: the byte-read channel was declared unusable because
+`gh api repos/{slug}/license` fails. It does fail — with this **session's repository-scope guard**
+(*"GitHub access to this repository is not enabled for this session. Use `add_repo`"*), which gates
+**repo-scoped API endpoints only**, which this base diagnosed correctly at `p584`, and which says nothing
+about `raw.githubusercontent.com`.
+
+| Measured `2026-11-04` | Reading |
+|---|---|
+| Addresses probed on bytes / payloads read | `44` / **`34`** (the `10` misses are characterised in `639-G`, not reported as absences) |
+| Byte counts matching this base's own stored figures exactly | 🟢 `2` (`advisingapp` `3,860 B`, `PageLM` `8,563 B`) — **same channel, not a new one** |
+| 🔴 `p638` licence cells contradicting a settled byte-read | 🔴 **`6 of 16`** |
+| 🔴 Of those, cells that **inverted** the engagement answer | 🔴 **`2`** |
+| `p638`'s published "no usable grant" share | 🔴 `5 of 16` (`31%`) |
+| 🟢 Measured on bytes | 🟢 **`1 of 16` (`6.3%`)** |
+| Cohort re-verified live (`search/repositories` + `fork:true`, control `422`) | 🟢 `16 of 16`, `0` archived, `0` drift |
+
+🔴 **The two inversions are the ones that would have cost a client.**
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) was published 🔴 red and is
+**`Apache-2.0`** — a usable EMEA reference suppressed by a false red.
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills), the
+largest row on the agent shelf at `944★`, was published *"no licence grant, so not reusable"* and is
+**`CC-BY-SA-4.0` with commercial use allowed**. 🟢 `p638`'s *conclusion* — sort by licence, not by stars —
+survives, on a better argument: the top rows are not ungranted, they are **granted on terms a studio
+cannot put in client code**.
+
+🔵 **`NOASSERTION` is a matcher outcome, not a licence outcome**, and that is the transferable result.
+`24` census addresses probed and `14` payloads read resolve it into **nine mechanisms**: permissive-plus-appendix
+([`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)), permissive-plus-prepended-copyright, `ECL-2.0`
+(the `Apereo` estate — OSI-approved, `Apache-2.0` with a narrowed patent grant), consortium
+(`1edtech/caliper-spec`), source-available (`Elastic 2.0`), bespoke (`PageLM`, non-commercial,
+redistribution barred), `CC` share-alike, `CC` **non-commercial** (`cn-math-taxonomy`, `6,379★`,
+unusable in client work), and a **`19`-byte declaration** (`frappe/education`).
+🔴 A pipeline reading that field as "unlicensed" errs in **both** directions at once — suppressing usable
+permissive components and waving through unusable ones.
+
+🔴 **And `p638`'s platform rule is narrowed by a row on its own shelf.** *"Education's permissive supply is
+in components, not platforms"* is false as a sector rule:
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is a complete production LMS under `Apache-2.0`
+(`449★`, pushed `2026-11-03`, `QTI 2.1`/`SCORM 1.2`/`LTI 1.3`), and `verticals/solutions.md` already called
+it *"the default when the client needs a complete LMS and a permissive licence in the same artefact."*
+🟢 The `5 for 5` copyleft reading of the five incumbents holds; the generalisation does not. The platform
+decision is now two branches: brownfield → attach at the network boundary (permissive boundaries exist for
+**four** LMS families); greenfield → `OpenOLAT`, and the copyleft question never arises.
+
+🟢 **The `APAC` nil closes, and it was never a sector absence.** The mandated leg shape
+`AI {industry} {region} {year} adoption regulation players` returns enterprise-IT vendor content for
+`APAC` because **no education ministry describes itself as an `APAC` body**. One query naming the
+ministries paid on the first attempt: Singapore `MOE` (Primary 4, teacher-supervised, **Student Learning
+Space** only, "cognitive offloading" named as the risk), Korea (AI Basic Act in force `2026-01-22`), Japan
+(guidelines + pilot schools; digital textbooks official as early as the `2030` school year), Australia
+(`Oct 2023` Framework, reviewed `2024`, no `2026` successor), plus Ipsos: support for **banning** AI in
+schools `~52%` in Australia against `28`–`31%` in Singapore, Japan and Korea.
+🔴 Still an explicit nil: APAC education **spend**.
+
+🔵 **Regional readings corrected with denominators.** North America: Lumina–Gallup *2026 State of Higher
+Education*, `n = 3,801`, fielded `2025-10` — **`57%`** of students use AI for coursework at least weekly
+(🔴 not *"over `60%`"*), `~1 in 5` daily, while **`53%`** sit under a discouraging (`42%`) or prohibiting
+(`11%`) institutional policy. LATAM: a **second** independent instrument — Digital Education Council
+*AI in Higher Education LATAM Survey 2026*, `29` universities, **`92%`** of students and `79%` of faculty
+engaging — agreeing in shape with `p638`'s UNESCO IESALC reading (`26%` with any framework, `55%` with no
+AI budget).
+
+🔴 **`make hooks` denied a fourth consecutive pass, and the reason is finally specific:** this runner's
+auto-mode classifier refuses it as **`[Code from External]`** — the suite is code from a clone. 🟡 So it is
+not a flake and will not pass on a retry; under this runner the gate apparatus built since `p398` is
+**permanently dark**, `gate-register-currency` included. `p639` therefore measured with instruments it
+wrote itself, and 🔴 **declares three ways they failed** (`639-G`): an `AGPL` payload mis-graded as `GPL`
+by a negation-scope bug with the *metadata* channel correct; `UNGRADED` on `CC0` and on every non-English
+payload; and a `NO-PAYLOAD` negative with a measured **`20%`** false-negative rate, caused by
+`raw.githubusercontent.com` being case-sensitive. 🟢 No gate was relaxed, removed, edited or declared red.
+
+🔵 **Discovery, with a new operative and an honest denominator.** The free-text keyword legs went nil a
+13th time (`6 of 6` web-surfaced slugs already held), so `p639` used the GitHub **topic facet**:
+`topic:edtech` returns 🟢 **`30 of 30` already held**; `topic:student-information-system` is saturated at
+any usable threshold; `topic:lms` still pays but only below `100★`, with `3 of 23` rows being **Lyrion
+Music Server** under the same acronym; and 🔴 `topic:education` is **contaminated and must not be used** —
+`132` permissive, live, well-starred repositories of which **`0`** belong in an education KB.
+🟢 **`3` addresses accepted**, all `MIT`, all byte-read, all unheld at `HEAD`:
+[`jasp-nerd/canvas-course-downloader`](https://github.com/jasp-nerd/canvas-course-downloader) (`82★`,
+Canvas course export with **no API keys**), [`EscolaLMS/H5P`](https://github.com/EscolaLMS/H5P) (`29★`),
+[`joachimdieterich/laravel-curriculum-adminlte3`](https://github.com/joachimdieterich/laravel-curriculum-adminlte3)
+(`21★`, licence and liveness only — capability not asserted). `6` rejections, `4` of them the `LMS`
+acronym collision.
+
+🔴 **Primary sources are unreachable in this runner, and it is now stated as a condition rather than
+rediscovered each pass.** `eur-lex.europa.eu` and `news.gallup.com` are both `ENOTFOUND` here, so
+`637-F` does **not** close and every market and regulatory figure on these shelves is necessarily
+secondary until the session's network allowlist admits those two hosts.
+
+🟡 **Currency.** This file and `intel/open-gaps.md` sat at `p637` when `p639` opened — **two** passes
+stale, because `p638` wrote neither and carried `0` pass ids onto `8` shelves. Both are at `p639` now.
+**Eight registered (`639-A`…`639-H`).** 10 files, 8 evidence TSVs, `754` insertions and `10` deletions —
+🟡 **the `10` deletions are the `10` `updated:` frontmatter dates and nothing else**; no published line was
+removed or rewritten on any file.
 
 ## 🆕 `p637` — reads `2026-11-03`, commit `2026-11-03` — **🔴 THIS BASE GRADES LIVENESS BY PUSH DATE AND PUSH DATE DOES NOT DETECT ARCHIVAL: `8 of 45` STALE ROWS ARE READ-ONLY (`17.8%` vs THE `1.6%` THIS BASE PUBLISHES), AND `4` CARRY NO FLAG — INCLUDING THE `504★` LARGEST ADDRESS IN ITS AXIS AND THE ROW THIS BASE CALLS *"THE ROW A STUDIO WOULD MOST WANT"*. 🔴 `p636` CLAIMED EIGHT REGISTRATIONS AND WROTE `0` INTO THE REGISTER OR THIS FILE — BOTH WERE STALE BY A PASS; BACKFILLED. 🔴 MANDATED LEGS NIL ON **BOTH** HALVES FOR THE FIRST TIME (`0 of 14` ADDRESSES, `0 of 14` FACTS). 🔴 `make hooks` DENIED A SECOND PASS — DECLARED, NOT CONCEALED.**
 

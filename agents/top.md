@@ -1,8 +1,104 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04`, commit `2026-11-04` — **🔴 `639-A`: THE BYTE-READ CHANNEL WAS NEVER UNAVAILABLE. `637-E` WITHDREW A CHANNEL THIS BASE HAS USED FOR `54` PASSES AND NAMES `2,206` TIMES AS *"THE PASS'S ONLY FIRST-HAND CHANNEL"*, AND `p638` THEN PUBLISHED A METADATA-ONLY LICENCE COLUMN THAT **CONTRADICTS `6` BYTE-READS ALREADY SETTLED IN THIS REPOSITORY**. 🔴 `639-B`: `p638`'s HEADLINE STATISTIC — *"`5 of 16` (`31%`) CARRY NO USABLE GRANT"* — IS **FALSE AND FALSIFIABLE FROM THIS BASE'S OWN FILES**; MEASURED `1 of 16` (`6.3%`). 🔴 `639-C`: `p638` PUBLISHED `8` SHELVES CARRYING **`0` PASS IDS** AND REGISTERED **`0`** GAPS — `637-D` PREDICTED THIS EXACTLY. 🟢 `639-D`: `16 of 16` RE-VERIFIED LIVE, CONTROL `422`, `0` DRIFT. EIGHT REGISTERED (`639-A`…`639-H`).**
+
+🔴 **The channel was there the whole time.** `637-E` concluded that the byte-read channel does not work
+in this session, on the evidence that `gh api repos/{slug}/license` fails. It does fail — but the failure
+message is this session's **repository-scope guard**, *"GitHub access to this repository is not enabled
+for this session. Use `add_repo`"*, which this base diagnosed correctly as far back as `p584` and records
+in `intel/open-gaps.md` in `33` places. It applies only to **repo-scoped** API endpoints.
+`raw.githubusercontent.com` is a different host and is **not** repo-scoped. This base already knew that
+too: the string appears **`2,206`** times across these files, including the line
+*"`WebFetch` on `raw.githubusercontent.com` and repository pages — 🟢 permitted — the pass's only
+first-hand channel."*
+
+🟢 **Reproduced, not asserted.** `p639` probed **`44`** addresses on that host and read **`34`**
+licence payloads (the other `10` returned no payload at the paths tried — see `639-G`). Two of them come back
+at byte counts **identical** to the figures this base stored passes ago — `canyongbs/advisingapp` at
+`3,860 B` and `CaviraOSS/PageLM` at `8,563 B` — which proves it is the *same* channel, not a new one.
+
+### 🔴 `639-A` — the regression, row by row
+
+Every cell below is `p638`'s, set against a byte-read **already in this repository** at an earlier pass.
+Evidence: `evidence/metadata-regression.2026-11-04-p639.tsv`.
+
+| Address | `p638` published | Already settled here | `p639` re-read | Regressed |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION`, *"verify by byte-read"* | 🟢 `Apache-2.0` (text), `10,982 B` — `p615` | 🟢 `Apache-2.0`, `10,982 B` | 🔴 **yes** |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 🟢 `Apache-2.0` (text), `10,784 B`, branch `dev` | 🟢 `Apache-2.0`, `10,785 B` | 🔴 **yes** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `NOASSERTION`, *"needs a byte-read"* | 🔴 **Elastic License `2.0`**, `3,860 B` — `p614`, already a warning row | 🔴 Elastic `2.0`, `3,860 B` | 🔴 **yes** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `NOASSERTION` | 🔴 **bespoke `PageLM Community License`**, `8,563 B` — `p594`, non-commercial, redistribution *"strictly prohibited"* | 🔴 bespoke, `8,563 B` | 🔴 **yes** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 *"none declared … no licence grant, so not reusable"* | 🟡 **`CC-BY-SA-4.0`** — `p615`, share-alike, **commercial allowed** | 🟡 `CC-BY-SA-4.0`, `1,230 B` | 🔴 **yes** |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `NOASSERTION` | 🟢 `Apache-2.0` | 🟢 `Apache-2.0`, `11,361 B` | 🔴 **yes** |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 *"none declared"* | — | 🔴 **no licence file**, `main`+`master`, `5` filenames | 🟢 **no — `p638` was right** |
+
+🔴 **Two of those cells inverted the engagement answer, not just the label.**
+`thm-mni-ii/feedbacksystem` was published red and is `Apache-2.0` — a **usable EMEA reference suppressed
+by a false red**. `education-agent-skills`, the largest row on this shelf at `944★`, was published
+*"not reusable"* and is `CC-BY-SA-4.0` with **commercial use allowed** — the share-alike runs on the
+prompt text, which is a real constraint and a completely different conversation from *"no grant."*
+
+### 🔴 `639-B` — the `31%` statistic is withdrawn
+
+`p638` published *"`5 of 16` education agents (`31%`) carry no usable grant, and that set includes the two
+largest by stars (`944★`, `2,061★`)."* 🔴 **`4` of those `5` have grants recorded in this repository.**
+
+| Reading | `p638` | 🟢 `p639`, on bytes |
+|---|---|---|
+| No grant **at all** | `5 of 16` (`31%`) | 🟢 **`1 of 16` (`6.3%`)** — `luffycodes/Tutorbot-Spock` only |
+| Permissive | `9 of 16` | 🟢 **`10 of 16`** (`feedbacksystem` recovered) |
+| Copyleft (software) | `2 of 16` | `2 of 16` |
+| 🔴 Source-available, **not** open source | not distinguished | 🔴 **`1`** — Elastic `2.0` |
+| 🟡 Copyleft **content** licence | not distinguished | 🟡 **`1`** — `CC-BY-SA-4.0` |
+| 🔴 Bespoke, counsel required | not distinguished | 🔴 **`1`** — `PageLM`, non-commercial |
+
+🟢 **`p638`'s *conclusion* survives on better evidence.** *"Sort by licence, not by stars"* is still right,
+but the reason is sharper: the two largest rows are not ungranted, they are **granted on terms a studio
+cannot put into client code**. That is a stronger argument, and it needed the byte-read to make.
+
+### 🟢 `639-D` — `p638`'s cohort re-verified, `0` drift
+
+`16 of 16` resolved **LIVE** via `search/repositories` + `repo:<slug>` + `fork:true`; fabricated control
+`anthropic/p639-fabricated-control` returned HTTP `422` on **exit status** (`p638`'s correction honoured —
+`gh` writes the `422` body to *stdout*, so emptiness tests record error JSON as data). `0 of 16` are
+`archived: true`. Stars, licences and push dates match `p638`'s published figures exactly, with one
+expected advance (`ai-shifu` → `2026-11-04`). 🟢 `p638`'s table was **real**; its licence column was the
+only defective part of it. Evidence: `evidence/cohort16-metadata-vs-payload.2026-11-04-p639.tsv`.
+
+### 🔴 `639-C` — `p638` left nothing a later pass can close
+
+`p638` inserted `723` lines into `8` shelves and the token `p638` appears in **`2`** of the ten files that
+matter — and in both only in the append-only `· p638` date form. `README.md` and `intel/open-gaps.md` sat
+at `p637`. Its commit message lists five findings and two method corrections; **none of them carries an
+id**, so none of them can be cited, narrowed or closed. 🟡 `637-D` named this exact failure one pass
+earlier and `p634` built `gate-register-currency` to stop it. 🔴 The gate has now been un-runnable for
+**four** consecutive passes, and the reason is finally specific rather than *"sandbox"*: this runner's
+auto-mode classifier refuses `make hooks` as **`[Code from External]`** — the suite is code from a clone.
+🟡 That is not a flake and it will not pass on a retry: under this runner the entire gate apparatus built
+since `p398` is **permanently dark**, and a pass can only measure with instruments it writes itself. Every
+figure in `p639` was produced that way, and the instruments' own failures are declared in `639-G`.
+
+### `p639`'s accepted addresses — `3`, and they are small on purpose
+
+Unheld at `HEAD` (`git grep`, `0` files each), existence-verified, grant read on bytes.
+Evidence: `evidence/new-addresses.2026-11-04-p639.tsv`.
+
+| Address | Licence (bytes) | ★ | Pushed | Region | Why it earns a row |
+|---|---|---|---|---|---|
+| [`jasp-nerd/canvas-course-downloader`](https://github.com/jasp-nerd/canvas-course-downloader) | 🟢 `MIT` (`1,066 B`) | `82` | `2026-11-03` | Global | One-click export of an entire Canvas course — files, assignments, pages, modules, syllabus, grades — **with no API keys**. The missing front door for RAG ingestion when the studio has no Canvas admin token, which on a first engagement is the normal case. |
+| [`EscolaLMS/H5P`](https://github.com/EscolaLMS/H5P) | 🟢 `MIT` (`1,066 B`) | `29` | `2026-10-23` | EMEA | Headless `H5P` Laravel REST API. `H5P` content is already held here; this is the permissive **headless boundary** to it. |
+| [`joachimdieterich/laravel-curriculum-adminlte3`](https://github.com/joachimdieterich/laravel-curriculum-adminlte3) | 🟢 `MIT` (`1,073 B`) | `21` | `2026-11-03` | EMEA | Laravel curriculum tool, German school sector. 🟡 Accepted on **licence and liveness only** — its description is one word, so no capability is asserted here. |
+
+🔵 **`6` rejections, and `4` of them are one class.** `stiefenm/spoton`, `mtxmiller/LyrPlay`,
+`hjelev/lyrtui` and `killcod3/license-management-system` all carry `topic:lms` and none is a learning
+management system — three are **Lyrion Music Server** clients and one is licence-key management. That is
+`p636`'s `LTI`-acronym collision reproduced **on the topic facet itself**. `abrookins/quest` is a Django
+book example. `AbdullahBakir97/Django--LMS` is on-sector but a single-author demo with no AI layer —
+rejected because fewer real rows beat padding.
 
 ## 2026-11-03 — education-specific agent layer: 16 verified rows, and it is MCP-shaped
 

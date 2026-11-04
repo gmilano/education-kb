@@ -1,0 +1,13 @@
+# p639 — oracle calibration. Three channels tested, each with a fabricated control.
+# Conclusion: search/repositories is the EXISTENCE oracle; raw.githubusercontent.com is the
+# GRANT oracle; curl -sI is unusable and DANGEROUS in this session (200 for everything).
+channel	probe	result	verdict
+curl -sI	https://github.com/moodle/moodle	HTTP/1.1 200 Connection Established	UNUSABLE - proxy CONNECT reply, not GitHub
+curl -sI	https://github.com/gmilano/zzz-fabricated-p639 (CONTROL)	HTTP/1.1 200 Connection Established	UNUSABLE - FABRICATED SLUG READS 200
+gh api repos/{slug}/license	canyongbs/advisingapp	rc=1 "GitHub access to this repository is not enabled for this session. Use add_repo"	BLOCKED BY SESSION REPO-SCOPE, not by GitHub
+gh api repos/{slug}/license	4 further real slugs	identical session-scope message	BLOCKED - uniform, carries no information
+gh api search/repositories repo:X fork:true	vishalsachdev/canvas-mcp	total_count=1 rc=0	SOUND existence oracle
+gh api search/repositories repo:X fork:true	anthropic/p639-fabricated-control (CONTROL)	HTTP 422 rc=1	SOUND - absence detected on EXIT STATUS
+gh api search/repositories repo:X fork:true	gmilano/zzz-no-such-repo-p639 (CONTROL)	HTTP 422 rc=1	SOUND - second control agrees
+raw.githubusercontent.com/{slug}/{branch}/LICENSE	vishalsachdev/canvas-mcp	HTTP 200 1071 B "MIT License"	SOUND grant oracle
+raw.githubusercontent.com/{slug}/{branch}/LICENSE	gmilano/zzz-fabricated-p639-control (CONTROL)	no 200 on any branch/filename tried	NEGATIVE IS WEAK - see no-payload calibration

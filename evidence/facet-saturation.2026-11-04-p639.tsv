@@ -1,0 +1,9 @@
+# p639 — NEW discovery operative: GitHub TOPIC facet + licence facet + push window, replacing the
+# free-text keyword legs that have gone nil 12 consecutive passes. Heldness measured with
+# git grep against HEAD (not the worktree - 636-F's self-pollution trap).
+# Verdict per facet, and the reason an UNHELD row is correctly unheld.
+facet_query	total_count	returned	unheld	on_sector_unheld	verdict
+topic:education license:mit pushed:>2026-10-01 stars:>40 fork:true	132	30	11	0	FACET CONTAMINATED - indexes learning CONTENT (jargon glossaries, Go examples, OSINT cheat sheets, a periodic table, a CPU simulator), not education SOFTWARE. Do not use as a discovery channel.
+topic:edtech pushed:>2026-06-01 stars:>20 fork:true	78	30	0	0	SATURATED - 30 of 30 already held. Strongest evidence yet that the sector is enumerated here.
+topic:lms license:mit pushed:>2026-06-01 stars:>20 fork:true	23	23	10	3	PAYS, BELOW 100 STARS ONLY. 3 of 23 are the LMS ACRONYM COLLISION (Lyrion Music Server: mtxmiller/LyrPlay, hjelev/lyrtui, stiefenm/spoton) - reproduces p636's LTI-acronym class on the topic facet itself.
+topic:student-information-system pushed:>2025-01-01 fork:true	108	30	17	0	SATURATED AT ANY USABLE THRESHOLD - all three meaningful rows held (rosariosis GPL-2.0, academico MIT, openSIS NONE); the unheld tail is 1-7 star single-author coursework projects.

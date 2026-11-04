@@ -1,8 +1,60 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04` — **🔵 THE SECTOR'S `2026` TREND IS NOT A CAPABILITY TREND. IT IS A **GOVERNANCE DEFICIT MEASURED IN THREE REGIONS WITH THREE INDEPENDENT INSTRUMENTS**, ALL SHOWING MAJORITY USE UNDER MINORITY GOVERNANCE. 🔴 AND THIS BASE'S OWN `2026` TREND IS THAT ITS LICENCE COLUMN DEGRADED WHEN A CHANNEL WAS WRONGLY WITHDRAWN.**
+
+### 🔵 Trend 1 — use is a majority, governance is not, in every region that has data
+
+| Region | Use | Governance | Instrument |
+|---|---|---|---|
+| North America | **`57%`** of students weekly, `~1 in 5` daily | `53%` sit under a **discouraging or prohibiting** policy | Lumina–Gallup, `n = 3,801`, fielded `2025-10` |
+| LATAM | **`92%`** of students, `79%` of faculty | **`26%`** of HEIs have any formal framework; **`55%`** have no AI budget | Digital Education Council (`29` universities) + UNESCO IESALC (`200` HEIs / `19` countries) |
+| APAC | not measured — 🔴 **explicit nil, fifth pass** | **four** national instruments with dates (SG, KR, JP, AU) | ministry-level reading, `639-H` |
+| EMEA | not measured this pass | Annex III education obligations dated **`2027-12-02`**; Article 50 transparency **live since `2026-08-02`** | Reg. (EU) `2026/1744` |
+
+🔵 **The shape is the same everywhere it can be measured and the asymmetry inverts by region.** In NA and
+LATAM, *practice* leads *policy* — people are using it and nobody has written the rules. In APAC and EMEA,
+*policy* leads *practice* — the rules landed first (Korea's statute in force, Singapore's channel
+specified, the EU's dates set) and the adoption evidence is missing. 🟢 Those are two different
+engagements: in the first, the studio sells the rules; in the second, it sells conformance.
+
+### 🔵 Trend 2 — the agent layer is `MCP`-shaped, and that is a licensing consequence
+
+🟢 Carried from `p638` and **strengthened** this pass. Five independent teams shipped MCP servers to reach
+the LMS; `p639` re-reads the **fourth LMS family**, held here since `p386` —
+[`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) (`MIT`,
+byte-read `1,200 B`) — so `Canvas` (×3), `Moodle`, `Brightspace/D2L` and any `LTI 1.3` consumer
+([`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), 🟢 `Apache-2.0`) all have permissive boundaries.
+🔵 **Why it keeps happening:** the incumbent cores are copyleft, so an in-process plugin inherits the
+licence and a network-boundary client does not. The architecture is being chosen **by the licence**, and
+it will keep being chosen that way.
+🔴 **With `p638`'s generalisation corrected** (`639-F`): the permissive supply is in components **and in
+one platform** — `OpenOLAT`, `Apache-2.0`, complete, live `2026-11-03`.
+
+### 🔴 Trend 3 — this base's own metadata trend, and it is the cautionary one
+
+🔴 `p639`'s measurement: of `p638`'s `16`-row licence column, **`6` cells contradicted byte-reads already
+stored in this repository**, because `637-E` withdrew the byte-read channel on a misdiagnosis.
+🔵 The mechanism generalises past this KB. **`NOASSERTION` is a *matcher* outcome, not a *licence*
+outcome**, and `639-E` resolves it into nine mechanisms (from `14` payloads read across `24` probed addresses) whose commercial answers range from `Apache-2.0`
+to `CC BY-NC` to a `19`-byte declaration. A pipeline that treats `NOASSERTION` as "unlicensed" will
+suppress usable permissive components (here: `feedbacksystem`, `ltijs`, `OpenOLAT`, `oppia`, `relate`,
+the `Apereo` `ECL-2.0` estate) **and** wave through unusable ones (`Elastic 2.0`, `CC BY-NC`, bespoke
+non-commercial). 🟢 **Both error directions at once, from one field.** For a studio shipping a licence
+report to a client, this is the single highest-consequence instrument in the stack.
+
+### 🔵 Trend 4 — discovery is enumerated, and the proof is facet-shaped
+
+🟢 `topic:edtech` returns `30 of 30` rows **already held**. 🔴 `topic:education` returns `132` permissive,
+live, well-starred repositories of which **`0`** belong in an education KB — it indexes learning
+*content*, not education *software*. 🟡 `topic:lms` still pays, but only below `100★`, and `3 of 23` of its
+rows are **Lyrion Music Server** under the same acronym.
+🔵 **The trend to record is therefore about method, not supply:** after `638` passes, *unheld* is no longer
+evidence of a gap. Discovery yield must be reported against an **on-sector** denominator or it measures
+the facet rather than the sector.
 
 ## 2026-11-03 — current trends
 

@@ -1,0 +1,9 @@
+# p639 — calibrating the byte-read instrument's NEGATIVE. NO-PAYLOAD means "not found at the
+# branches and filenames tried", NOT "no grant". Measured false-negative rate: 1 of 5 (20%).
+# Cause: raw.githubusercontent.com is CASE-SENSITIVE and the instrument tried only uppercase.
+slug	first_pass_verdict	widened_probe (5 branches x 6 filenames incl. lowercase)	true_grant	false_negative
+frappe/education	NO-PAYLOAD	FOUND master/license.txt AND develop/license.txt, 19 B	GNU GPL V3 (a 19-byte DECLARATION, not a licence text - which is why SPDX reads NOASSERTION)	YES
+OS4ED/openSIS-Classic	NO-PAYLOAD	nothing found	unresolved	no
+adlnet/SCORM-to-xAPI-Wrapper	NO-PAYLOAD	nothing found	unresolved (owner namespace announces archival)	no
+bigdata-ustc/Agent4Edu	NO-PAYLOAD	nothing found	unresolved	no
+eth-lre/mathtutorbench	NO-PAYLOAD	nothing found	unresolved	no

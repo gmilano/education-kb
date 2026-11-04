@@ -1,0 +1,26 @@
+# p639 — p638's 16-agent cohort. Existence+metadata via search/repositories (fork:true),
+# grant via raw.githubusercontent.com byte-read. 16 of 16 LIVE, control 422. 0 archived.
+slug	live	meta_spdx	stars	pushed	payload_grade	payload_bytes	agreement
+vishalsachdev/canvas-mcp	LIVE	MIT	317	2026-11-03	MIT	1071	agree
+ArnaudGuiovanna/tutor-mcp	LIVE	MIT	94	2026-11-03	MIT	1073	agree
+Selleo/mentingo	LIVE	MIT	106	2026-11-03	MIT	1062	agree
+GeminiLight/gen-mentor	LIVE	CC0-1.0	136	2026-10-23	CC0 (grader returned UNGRADED - instrument gap)	7048	agree
+ai-shifu/ai-shifu	LIVE	Apache-2.0	330	2026-11-04	APACHE-2.0	11342	agree
+Zenglian990/AI_Tutor_Release	LIVE	MIT	81	2026-11-02	MIT	1068	agree
+boyuchengz/canvas-mcp	LIVE	MIT	119	2026-10-27	MIT	1072	agree
+X-isdoingreat/canvas-pilot	LIVE	AGPL-3.0	125	2026-07-31	AGPL-3.0 (grader said GPL - negation-scope bug, metadata correct)	34523	agree
+Berserk-hub150/moodle-ai-skill-navigator	LIVE	GPL-3.0	259	2026-10-25	GPL	35153	agree
+kad-xyz/spbstu-mcp	LIVE	MIT	24	2026-11-02	MIT	1064	agree
+GarethManning/education-agent-skills	LIVE	NOASSERTION	944	2026-11-03	CC-BY-SA-4.0	1230	RESOLVED
+canyongbs/advisingapp	LIVE	NOASSERTION	340	2026-11-03	ELASTIC-2.0 (not open source)	3860	RESOLVED
+CaviraOSS/PageLM	LIVE	NOASSERTION	2061	2026-10-29	bespoke PageLM Community License	8563	RESOLVED
+assafkip/claudemy	LIVE	MIT	605	2026-10-29	MIT	1069	agree
+luffycodes/Tutorbot-Spock	LIVE	NONE	56	2024-11-04	NO-LICENCE-FILE	0	agree
+thm-mni-ii/feedbacksystem	LIVE	NOASSERTION	24	2026-11-03	APACHE-2.0	10785	RESOLVED
+anthropic/p639-fabricated-control	ABSENT (rc=1, HTTP 422)	-	-	-	-	-	CONTROL PASSED
+# Addresses cited by p639 that returned NO-PAYLOAD from the grant oracle and were therefore
+# existence-verified separately, so that no cited slug rests on an unverified reading:
+OS4ED/openSIS-Classic	LIVE	NONE	349	2026-10-26	NO-LICENCE-FILE (11 branch/filename combos)	0	unresolved, NOT absent
+onbirdev/moodle-webservice_mcp	LIVE	(see ACTION MO: GPL-3.0-or-later in version.php/lib.php, no licence file)	-	-	NO-LICENCE-FILE	0	third channel required - source file headers
+AnonymousOnyx22/brightspace-d2l-mcp	LIVE	MIT	-	-	MIT	1200	agree - 4th LMS family boundary
+learningequality/kolibri	LIVE	MIT	-	-	MIT	1097	agree

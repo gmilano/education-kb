@@ -1,8 +1,70 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-03
+updated: 2026-11-04
 ---
+
+## 🆕 `p639` — reads `2026-11-04` — **🔵 `NOASSERTION` IS NOT "NO LICENCE". IT IS *"GITHUB'S SPDX MATCHER COULD NOT MATCH THE FILE"*, AND `24` CENSUS ROWS READ ON BYTES RESOLVE IT INTO **NINE DISTINCT MECHANISMS** WITH NINE DIFFERENT ENGAGEMENT ANSWERS — FROM `Apache-2.0` TO `CC BY-NC` TO A `19`-BYTE DECLARATION. 🟢 THE `Apereo` LEARNING-ANALYTICS ESTATE IS `ECL-2.0`, WHICH IS OSI-APPROVED AND USABLE. 🔴 `p639`'s OWN GRADER MIS-READ AN `AGPL` PAYLOAD AS `GPL` AND ITS NEGATIVE HAS A MEASURED `20%` FALSE-NEGATIVE RATE.**
+
+### 🔵 `639-E` — the nine mechanisms behind `NOASSERTION`
+
+A foundation component read as `NOASSERTION` has **not** told you it is unlicensed. It has told you the
+matcher failed, and the matcher fails for reasons that point in opposite commercial directions.
+🔵 `24` census addresses probed, `14` returned a payload; the `10` that did not are **unresolved, not
+ungranted** (`639-G`).
+🟡 **A fourth row reproduced — and the base's own reading of it is better than `p639`'s.**
+[`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) reads
+`NOASSERTION` in metadata and `MIT` on bytes (`1,200 B`); `p639` stopped there. This base went further
+passes ago: the `50` bytes above the stock `MIT` ceiling are an **inline derivation notice** attributing
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) — *"used
+under the MIT License"* — which `p242-grant-delta` graded as **a disclosure, not a narrowing**, overturning
+an earlier *"not usable"*. 🟢 So this is **reproduction, not recovery**, and it is recorded that way.
+🔵 It does sharpen one point: this is the base's only `Brightspace`/`D2L` boundary, so a licence cell
+reading it red suppresses an entire LMS family.
+Evidence: `evidence/noassertion-mechanisms.2026-11-04-p639.tsv`.
+
+| Mechanism | Example | Payload | 🔵 Engagement answer |
+|---|---|---|---|
+| Permissive text **+ appended project statement** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `Apache License` then *"Additional license statement for the openolat.org code base"* | 🟢 **`Apache-2.0`. Usable.** A complete LMS under a permissive grant. |
+| Permissive text **+ prepended copyright line** | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `Copyright 2021 Technische Hochschule Mittelhessen`, then `Apache License` | 🟢 **`Apache-2.0`. Usable.** |
+| **`ECL-2.0`** — an `Apache-2.0` derivative, **OSI-approved** | [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW), [`OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | *"Educational Community License, Version 2.0"*, `9,878 B` / `11,087 B` | 🟢 **Usable.** Differs from `Apache-2.0` only in the patent grant. |
+| Consortium licence | [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | *"IMS GLOBAL LEARNING CONSORTIUM, INC."*, `12,402 B` | 🔴 **Not OSI.** Counsel before redistribution. |
+| **Source-available, not open source** | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `Elastic License 2.0`, `3,860 B` | 🔴 **Forbidden** as a hosted or managed service — which is Globant's usual delivery shape. |
+| Bespoke project licence | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM), [`andymatuschak/orbit`](https://github.com/andymatuschak/orbit), [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `# PageLM Community License` `8,563 B`; bare copyright lines `457 B` / `1,684 B` | 🔴 **Counsel required.** `PageLM` is non-commercial and bars redistribution. |
+| Creative Commons, share-alike | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `CC-BY-SA-4.0`, `1,230 B` | 🟡 **Commercial allowed**, share-alike on the prompt text. |
+| Creative Commons, **non-commercial** | [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `Attribution-NonCommercial 4.0`, `19,347 B`, `6,379★` | 🔴 **Unusable in client work.** The most-starred row in its axis and the most restrictive answer possible. |
+| **One-line declaration** instead of a licence text | [`frappe/education`](https://github.com/frappe/education) | `License: GNU GPL V3` — **`19` bytes** | 🔴 **Copyleft** — and **unmatchable by any SPDX matcher by construction.** |
+
+🔵 A tenth mechanism is already established here and reproduced rather than discovered: a **non-English**
+licence payload ([`portabilis/i-diario`](https://github.com/portabilis/i-diario),
+*"`LICENÇA PÚBLICA GERAL AFFERO GNU Versão 3`"*, `35,326 B`), which `p206`/`p630` showed over-collects
+**LATAM** rows into `NOASSERTION`. 🟡 Recorded here so the taxonomy is complete, with credit to the
+earlier passes.
+
+### 🟢 `Apereo` is the finding a studio can spend
+
+🟢 `ECL-2.0` resolves the clause diff this base has owed since `p624`: it is `Apache-2.0` **with a narrowed
+patent grant**, OSI-approved, and it covers the `Apereo` learning-analytics estate — `OpenLRW`, `OpenLRS`
+and their clients, the `xAPI`/Caliper learning-record plumbing. 🔴 With the caveat `637-A` established:
+`5 of 8` archived rows in this base have institutional or consortium owners, and `ADL`/`NSIP`-class
+estates are archived in one action when a grant ends. 🟢 Quote the `Apereo` catalogue as
+**fork-and-own**, never fork-and-contribute.
+
+### 🔴 `639-G` — `p639`'s own instruments, and how they failed
+
+🟡 Declared because a pass that only reports its instrument's successes is not measuring.
+
+| Instrument | Failure | Caught by |
+|---|---|---|
+| `p639` licence grader | 🔴 Graded [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) as `GPL`; the payload title reads **`GNU AFFERO`**. The `GPL` rule's negation tested whether *any line* lacks "AFFERO", which is always true in a `34 KB` file — not whether the *file* lacks it. `p630`'s mis-grade class, reproduced by its own fix. | 🟢 The metadata channel, which was **right** here. Metadata and bytes are a **two-channel check**, not a ladder with bytes on top. |
+| `p639` licence grader | 🟡 Returned `UNGRADED` for `CC0-1.0` (`gen-mentor`) and for every non-English payload — it knows `en` keywords only. | 🟢 Payload title line, read by eye. |
+| `NO-PAYLOAD` negative | 🔴 **Measured `1 of 5` false negatives (`20%`).** [`frappe/education`](https://github.com/frappe/education) reads `NO-PAYLOAD` on five uppercase filenames and resolves at `master/license.txt` — **lowercase**. `raw.githubusercontent.com` is case-sensitive. | 🟢 A widened probe (`5` branches × `6` filenames) run as a control. Evidence: `evidence/no-payload-calibration.2026-11-04-p639.tsv`. |
+
+🔵 **The rule that follows, and it is the one to carry forward:** the two oracles are **complementary and
+neither substitutes for the other**. `search/repositories` + `fork:true` proves **existence** (`422` on
+exit status = absent, with a fabricated control every sweep). `raw.githubusercontent.com` proves the
+**grant**. A `NO-PAYLOAD` from the grant oracle is **not** evidence of absence or of no-licence — it is
+evidence that the filename guess missed.
 
 ## 2026-11-03 — the permissive foundation layer: 15 verified components
 
