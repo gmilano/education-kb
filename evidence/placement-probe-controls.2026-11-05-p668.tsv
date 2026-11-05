@@ -1,0 +1,13 @@
+endpoint	query	total_count	expected_per_667	agrees
+search/repositories	repo:moodle/moodle	1	1	yes
+search/repositories	repo:moodle/moodle location:Australia	0	0	yes
+search/repositories	repo:moodle/moodle zzqxnonsense:foo	0	0	yes
+search/users	user:telekom location:Germany	1	1	yes
+search/users	user:telekom location:Deutschland	0	0	yes
+search/users	user:portabilis location:Brazil	0	0	yes
+search/users	user:portabilis location:Brasil	1	1	yes
+search/users	user:psiagoleal location:Brazil	1	1	yes
+search/users	user:psiagoleal location:Brasil	0	0	yes
+search/users	user:zzqxnonsenseowner12345	422 Validation Failed "listed users cannot be searched"	422	yes
+search/users	user:moodle (pre-sweep control)	1	1	yes
+search/users	user:moodle (post-sweep control)	1	1	yes

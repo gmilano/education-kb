@@ -710,3 +710,25 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 🟢 **Why three of these rows matter beyond retention.** `yanki-obsidian`, `LearnKit` and `incremental-writing` keep the cards as **plain Markdown in a repository**. That makes generated learning material reviewable in a pull request and version-controlled — which is the provenance and governance answer that **T3** identifies as the buying trigger and that regulated buyers in EMEA, and increasingly North America, ask for by name. The retention layer turns out to be where the auditability argument is cheapest to satisfy.
 
 🔵 **Read the staleness, not just the stars.** Four of the sixteen have not been pushed in over a year and two (`incremental-writing`, `memorize`) are effectively finished work; `microsoftarchive/Learn-LTI` is formally `archived`. Each row on `repos/foundations.md` states its push date and says whether it is a dependency, a codebase to adopt, or a design reference. In this layer specifically, "finished" is often the correct state for an algorithm implementation and a disqualifying one for a client application — and the rows distinguish the two.
+
+## T50 — The student-information layer is where open source education software stops being permissive and stops being adopted at the same time 🟢 new at p668
+
+🔵 **This base has measured the tutor layer, the delivery layer, the retention layer, the assessment layer, the credential layer and the interoperability layer. The *record-keeping* layer — the system of record that actually runs a school — turns out to behave unlike all of them, and p668 has the numbers.**
+
+**The layer is small.** GitHub's own topic counts, read at `2026-11-05`: `lms` → **`2,646`** tagged repositories, `ai-tutor` → **`880`**, `student-information-system` → **`193`**, `intelligent-tutoring-system` → **`45`**. The SIS layer is an order of magnitude thinner than course delivery, and it is thinner than *AI tutoring*, a category that did not exist four years ago.
+
+**Its head is copyleft, with exactly one permissive member.** The three most-adopted members, all already on this base's shelves:
+
+| Repo | Stars | Licence | Note |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `652` | **GPL-2.0** | The topic's `#1`. School management, PHP. Default ref **`mobile`** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | `411` | 🟢 **MIT** | **The only permissive member of the head.** Laravel + Filament |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `349` | **GPL-2.0** | Multi-institution, PHP |
+
+**And its tail is both unadopted and unlicensable.** `11` of the topic's top `20` were addresses this base had never recorded — but **every one sits at `≤20★`**, and the three most plausible, byte-read at their real default refs, are `AGPL-3.0` (`MeetPlan/MeetPlanFrontend`, `34,523 B`), `GPL-3.0` (`ClassyCreations/ScheduleCheck`, `35,069 B`) and **no grant at all** (`LindungiLw/student_information_portal`, `404` on four payload names).
+
+🔴 **Why this is a trend and not a gap.** Every prior "no permissive supply" claim this base tested turned out to be an **adoption** gap — `T40` says so, and it has held six times. The SIS layer is the first one where **both** variables fail together: the permissive supply is a single 411-star repository, and the copyleft supply is where all the adoption is. That is a different market, and it has a different consequence.
+
+🟢 **The consequence for an engagement.** On every other layer this base tracks, the move is to take a permissive component and build on it. Here there is **no permissive system of record to build on at any scale** — so a client who needs AI inside the system of record is choosing between (a) building on `academico` (MIT, real, but 411 stars of external review for software that holds student records), (b) integrating *alongside* a GPL SIS across a process boundary and keeping the derivative question off the table — the `P27`/`P36` licence-provenance work is the gate for this — or (c) treating the SIS as a data source and putting the AI in the layer above it, which is where the permissive supply actually is. 🔵 **Option (c) is the one this base's shelves can staff today, and the reason to say so is that options (a) and (b) both look cheaper on a slide and are not.**
+
+**Caveat, stated:** the `11`-of-`20` novelty figure measures *this base's* coverage of a topic page, not global supply, and the topic-page channel reads only the first 20 of 193. The licence readings are first-hand and the star counts are GitHub's own as displayed on `2026-11-05`.

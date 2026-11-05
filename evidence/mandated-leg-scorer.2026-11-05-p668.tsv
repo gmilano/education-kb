@@ -1,0 +1,32 @@
+fact	helt	best_needle	count
+M1 CMI $11.40B 2026 -> $57.25B 2033 16.8%	HELD	16.8%	6
+M2 134 bills / 31 states	HELD	134 	171
+M3 NY A 9190 ninth grade	HELD	9190	33
+M4 Maryland SB 720 / HB 1057	HELD	SB 720	44
+M5 four states guidance+district (ID,OK,VA,MD)	HELD	Oklahoma	92
+M6 K-12 AI Literacy and Readiness Act 2026	HELD	K-12 AI Literacy	32
+M7 Canada AI for All 4 Jun 2026 + Trusted AI Certification	HELD	AI for All	27
+M8 CA Parents & Kids Safe AI Act ballot	HELD	Parents & Kids Safe	7
+M9 60% US teachers use AI (Gallup)	HELD	Gallup	28
+M10 55% HS principals not blocking	HELD	high-school principals	5
+M11 UNESCO 70% institutions EU+NA guidance	HELD	70%	19
+M12 DC OSSE 2026-27 policy bans AI grading/IEP	HELD	OSSE	157
+M13 Digital Omnibus 2026/1744 high-risk -> 2 Dec 2027	HELD	2026/1744	270
+M14 Article 50 transparency 2 Aug 2026	HELD	2026-08-02	220
+M15 Article 4 AI literacy since 2 Feb 2025	HELD	2025-02-02	52
+M16 EP briefing 784574 Mar 2026 classrooms	NOVEL	784574	0
+M17 South Korea AI Basic Act in force 22 Jan 2026	HELD	Basic Act	176
+M18 Vietnam Law on AI 1 Mar 2026, edu 18-month transition	HELD	Vietnam	566
+M19 India AI labelling from 20 Feb 2026	HELD	labelling	92
+M20 Ipsos Education Monitor 2026 ban support 23-31%	HELD	Ipsos	51
+M21 APAC AI-in-education CAGR 35.3%	HELD	35.3	18
+M22 KHDA Dubai private-school AI guidance	HELD	KHDA	21
+M23 UNESCO IESALC 87% / 26% formal strategy, 19 countries	HELD	IESALC	358
+M24 DEC LATAM 2026 92% students / 79% faculty	HELD	92%	75
+M25 Uniandes 716 instruments / 23 countries	HELD	716	46
+M26 UNESCO Observatory AI in Edu LAC Apr 2026 Santiago	HELD	CENIA	91
+M27 OECD Digital Education Outlook 2026 purpose-built	HELD	OECD	283
+M28 NC $10M Khan Academy earmark	HELD	Khan Academy	18
+CTRL-NEG nonsense needle (must be 0)	NOVEL	zzqxnonsense-flurblewomp	0
+CTRL-POS known-held, variant spelling	HELD	Apache-2.0	4373
+CTRL-POS2 known-held base term	HELD	Moodle	4971

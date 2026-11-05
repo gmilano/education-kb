@@ -365,3 +365,21 @@ The mandated vertical-platform leg returned the current crop of “best open-sou
 🔵 **The distinction is not pedantic, and it cuts in the direction clients care about.** ECL-2.0 is an Apache-2.0 *derivative*: the permissions are substantially Apache's, but the **patent grant is narrowed** — where Apache-2.0 grants patent rights for the work generally, ECL-2.0 scopes the contributor's patent grant to the contributions as used in the licensed work, with the educational-context framing the licence was written for. For a Globant engagement that means: Apache-2.0 and ECL-2.0 are **both** safe for a closed derivative, so the build decision does not change — but **a client's counsel diffing your licence schedule against the project's actual payload will find a discrepancy if you copied `Apache-2.0` out of a guide.** Write `ECL-2.0` and cite the payload.
 
 🔴 **The general rule this instance evidences.** A secondary source's licence claim is worth exactly nothing against a payload read. Of the licence claims this pass's vertical leg served, the one that was checkable against this base's own first-hand reads was **wrong**, and it was wrong in the *permissive* direction — the direction that gets a deliverable shipped before anyone notices. That is the same failure mode as **T38**, arriving through a different channel: not GitHub's classifier this time, but published human guidance.
+
+## 🔴 p668 — the system-of-record layer measured end to end, and it is the one layer where permissive supply and adoption fail *together*
+
+🔵 **This shelf carries `49` platforms and the licensing section above explains why so many are copyleft. `p668` measured the thinnest and least permissive corner of it deliberately, and the numbers are worth holding here rather than only on the trends page.**
+
+**Topic sizes, read from GitHub's own topic pages on `2026-11-05`:** `lms` **`2,646`** tagged repositories · `ai-tutor` **`880`** · `student-information-system` **`193`** · `intelligent-tutoring-system` **`45`**. 🔴 **The system of record — the software that actually runs a school — is an order of magnitude thinner than course delivery, and thinner than AI tutoring.**
+
+**The head of that layer, all three already on this base's shelves:**
+
+| Repo | Stars | Licence | Note |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `652` | **GPL-2.0** | The topic's `#1`. Already on this shelf. 🔴 **Default ref is `mobile`** — neither `main` nor `master`; a reader that assumes either reads nothing from it |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | `411` | 🟢 **MIT** | **The only permissive member of the head** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `349` | **GPL-2.0** | Multi-institution. Already on this shelf |
+
+**And the tail is both unadopted and unlicensable.** `11` of the topic's top `20` were addresses this base had never recorded, but every one sits at **`≤20★`** and the three most plausible, byte-read at their real default refs, are `AGPL-3.0` (`MeetPlan/MeetPlanFrontend`, `34,523 B`, `main`), `GPL-3.0` (`ClassyCreations/ScheduleCheck`, `35,069 B`, `master`) and **no grant at all** (`LindungiLw/student_information_portal`, `404` on four payload names, `master`). 🔵 **Two of the three are off `main`, which is why each reading names its ref.**
+
+🟢 **The consequence for scoping, and it is a departure from every other layer on this shelf.** Elsewhere, `T40` holds: a "no permissive supply" claim has six times turned out to be an *adoption* gap with permissive supply sitting unused. Here both fail at once — the permissive supply is one 411-star repository, and all the adoption is copyleft. **So the move is not "find the permissive SIS"; it is to keep the AI in the layer above the SIS and make the process boundary the licence boundary.** That is `P37`, and `T50` is the full argument. 🔴 **No row added to this shelf at p668 — the shelf stays at `49` — because nothing found was both permissive and adopted.**

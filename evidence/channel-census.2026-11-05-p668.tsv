@@ -1,0 +1,9 @@
+channel	command_or_url	result	quota	verdict
+github-topic-page	WebFetch https://github.com/topics/<topic>	200, returns owner/repo+stars+language+description+topic total	none	USABLE - installed at p668
+github-profile-html	curl -sL https://github.com/<login>	403 at agent proxy, 7/7 controls	n/a	BLOCKED
+core-user-api	gh api users/<login>	"This GitHub API path is not available: sessions are bound to their configured repositories"	core 15000/hr	BLOCKED
+search-users	gh api -X GET search/users -f q='user:X location:Y'	three-valued ONLY if response body is read and calls throttled	search 30/min	USABLE WITH THROTTLE (668-A)
+search-repositories-location	gh api -X GET search/repositories -f q='repo:X location:Y'	0 for every input; nonsense qualifier identical	search 30/min	UNSUPPORTED (667-G, reproduced at p668)
+git-ls-remote	git ls-remote --symref https://github.com/<addr> HEAD	real default ref returned	none	USABLE
+raw-licence-payload	curl https://raw.githubusercontent.com/<addr>/<ref>/LICENSE	grant bytes or 404	none	USABLE
+europarl	WebFetch https://www.europarl.europa.eu/...	getaddrinfo ENOTFOUND - outside session network policy	n/a	BLOCKED (668-F)
