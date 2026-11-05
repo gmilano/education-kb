@@ -1,0 +1,6 @@
+slug	verdict	region	class	shape_test	line
+portabilis/i-educar	PLACED	LATAM	documentary-country	no-enum-shape	_“Lançando o maior software livre educacional do Brasil!”._
+vishalsachdev/canvas-mcp	PLACED	North America	documentary-country	no-enum-shape	> **University of Illinois Urbana-Champaign** works this way for *everyone* — students
+HumphreySun98/Smart-Study-Agent	PLACED	APAC	language-of-body-text	no-enum-shape	和普通 AI 学习工具的区别:决定"下一步学什么"的不是 LLM,而是一个**强化学习策略**(Q-learning / LinUCB 老虎机,附带诚实的基准对比);决定"什么时候复习"的是 **FSRS 记忆模型**(与新版 Anki 同源算法);LLM 只负责出题和讲解。
+RohanMuppa/brightspace-mcp-server	REFUSED-ENUMERATION	-	Netherlands	cli-flag-list	(use --purdue at Purdue, --suny at SUNY, --tudelft at TU Delft, --cuny at CUNY, --leiden at Leiden, --mcgill at McGill, --ngeeann at Ngee Ann Polytechnic, or --javeriana 
+zzqx/this-repo-does-not-exist-p669	GIT-FAIL	-	-	-	LS-REMOTE-FAIL
