@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p664) — 🟢 **THE EU'S OWN PUBLICLY FUNDED MODEL PROGRAMME IS A LIVE, APACHE-2.0, EuroHPC-TARGETED SUBSTRATE AND THIS BASE HAD NEVER ENUMERATED IT. 🔴 THE MANDATED VERTICALS LEG RETURNED EIGHT PLATFORMS AND **ALL EIGHT WERE ALREADY IN THE TREE** — THE ONLY YIELD WAS AN UNFILED **MIT** SIS WITH `411★`. 🔵 LATERAL EXPANSION FROM AN OWNER ACCOUNT IS CONFIRMED AS A SUPPLY LEG; THE TRENDING DIGESTS ARE ON THEIR TWENTIETH CONSECUTIVE NIL.**
+
+**Channels this pass:** `git ls-remote --symref` 🟢 live · `raw.githubusercontent.com` payload byte-read 🟢 live · `gh api search/repositories` 🟢 live, **with the blind spot measured at `agents/trending.md` `664-D`** (a repository that resolves under `ls-remote` can return **HTTP 422** from the search API) · `WebFetch` on repository HTML 🟢 live · `curl` on repository HTML 🔴 `403` · **`make hooks` 🔴 DENIED this session**, so no count on these shelves was machine-checked · `zenodo.org` / `www.cambridge.org` 🔴 unresolvable.
+
+### 🟢 New on `repos/foundations.md` — one row
+
+| Repo | Licence (payload, byte-read) | Stars | Forks | Pushed | Why filed |
+|---|---|---|---|---|---|
+| [`OpenEuroLLM/JudgeArena`](https://github.com/OpenEuroLLM/JudgeArena) | 🟢 **Apache-2.0**, `11,384 B`, `sha256₁₂ 3acd1b91c0f2` | **19** | 7 | **`2026-11-05`** | LLM-as-judge harness with **swappable judge backends — local, remote or OpenRouter** — across multiple benchmarks. A permissive answer to **T10**/**T19** (the sector's measurement problem) that an EMEA public buyer can run **without egress**, and the first such on that page |
+
+### 🔵 The owner-account leg, run against `OpenEuroLLM`
+
+p659 recommended *“lateral expansion from a held repository's own family table”* as a standing leg while the trending digests are saturated. This pass ran the generalisation — **enumerate the owner, not the repository** — against the EU's open-foundation-model programme, and it is the only leg that produced a foundations row.
+
+Fifteen repositories enumerated via `gh api search/repositories -f q='org:OpenEuroLLM'`:
+
+| Repo | `gh api spdx` | Stars | Pushed |
+|---|---|---|---|
+| `OpenEuroLLM/oellm-eval` | 🔴 `null` | 23 | 2026-11-04 |
+| `OpenEuroLLM/JudgeArena` | 🟢 `Apache-2.0` | 19 | **2026-11-05** |
+| `OpenEuroLLM/oellm-autoexp` | 🟢 `Apache-2.0` | 18 | **2026-11-05** |
+| `OpenEuroLLM/training-data-catalogue` | 🔴 `null` | 16 | 2026-10-25 |
+| `OpenEuroLLM/ComplexKDA` | 🟢 `MIT` | 10 | 2026-11-04 |
+| `OpenEuroLLM/post-training` | 🔴 `null` | 9 | **2026-11-05** |
+| `OpenEuroLLM/training-data-collection` | 🔴 `null` | 6 | 2026-11-04 |
+| `OpenEuroLLM/dense_english_scaling_laws` | 🔴 `null` | 4 | 2026-08-28 |
+| `OpenEuroLLM/Taskboard` | 🟢 `Apache-2.0` | 3 | 2026-06-24 |
+| `OpenEuroLLM/oellm-arena` | 🔴 `null` | 2 | 2026-02-23 |
+| `OpenEuroLLM/propella-annotations` | 🔴 `null` | 2 | 2026-01-22 |
+| `OpenEuroLLM/training-data-packer` | 🟢 `Apache-2.0` | 2 | **2026-11-05** |
+| `OpenEuroLLM/notebooks` | 🟢 `Apache-2.0` | 1 | 2026-10-29 |
+| `OpenEuroLLM/Megatron-Bridge-LUMI` | 🟢 `Apache-2.0` | 1 | 2026-04-08 |
+| `OpenEuroLLM/eurohpc-data-transfer` | 🔴 `null` | 1 | 2026-03-06 |
+
+🔵 **Two things worth carrying forward.** First, **the org is not uniformly licensed** — six of fifteen report no licence at all, including `oellm-eval` and `training-data-catalogue`, which are among its most-starred. An owner-level leg finds *addresses*; it does not find *grants*, and the per-repository read is still mandatory (**T16**). Second, **five repositories were pushed within 24 hours of this measurement**: this is an actively developed programme, not an announcement, and for the EMEA sovereignty argument this base has run since **T5** it is a publicly funded Apache-2.0 substrate rather than a vendor's.
+
+⚠️ **Honest scope: none of it is education software.** It is model-training and evaluation infrastructure. `JudgeArena` is filed because education's gap is measurement and this is permissive measurement; nothing in it knows what a rubric or a curriculum is.
+
+### 🔴 The mandated verticals leg returned nothing new — and that is the second finding
+
+`open source platform education LMS SIS MIT Apache self-hosted` returned eight platforms. Every one was already in this tree:
+
+| Returned | Status in this base |
+|---|---|
+| Open edX (`openedx/edx-platform`) | ✅ filed, `verticals/solutions.md`, AGPL-3.0 |
+| Moodle | ✅ filed, GPL-3.0 |
+| Chamilo | ✅ filed, GPL-3.0 |
+| OpenOlat | ✅ filed, Apache-2.0 — and the licence-payload placement channel's best payout (p653) |
+| Frappe LMS | ✅ filed |
+| RosarioSIS | ✅ filed, GPL-2.0 |
+| openSIS | ✅ filed, GPL-2.0 (grant at `docs/License.txt` only) |
+| **Academico** | 🔴 **in the ledger since `p90`, `MIT`, `411★`, `filed_on = -`** |
+
+So the leg's entire yield was a **promotion defect**, not a discovery — adjudicated and filed at `agents/trending.md` **`664-C`**, and now a row on `verticals/solutions.md`. 🔴 **The platform tier of this KB is saturated against English-language search.** Twenty consecutive passes of nil on the trending digests, and now a verticals leg that returns only things already held. **Recommended: retire the generic English verticals leg to a quarterly check and replace the hourly slot with (a) the ledger's `filed_on = -` queue and (b) owner-account enumeration of named institutional publishers.** This pass's two best findings came from exactly those two channels and none came from a digest.
+
+
 ## 🆕 2026-11-05 (p663) — 🟡 **NO FOUNDATIONS ROW ADDED. `repos/foundations.md` STAYS AT `81`. THE FOUR MANDATED ENGLISH-LANGUAGE SUPPLY LEGS RETURNED **ZERO** IN-SCOPE ADDRESSES FOR THE SIXTH CONSECUTIVE PASS, AND PADDING IS FORBIDDEN HERE. 🟡 **`OpenEduCat`'s DANGLING `COPYRIGHT` REFERENCE IS **HELD, NOT NEW** — `verticals/solutions.md` ALREADY CARRIES IT. p663 ADDS ONLY THE NEGATIVE SWEEP THAT RULES OUT A PATH OR CASE VARIANT (`6` NAMES × `2` RELEASE BRANCHES) AND CORRECTS THE STAR FIGURE `905 → 904`.** 🟢 THE REPOSITORY-HTML CHANNEL IS READABLE AGAIN THROUGH `WebFetch`, SO STARS ARE TWO-CHANNEL FOR THE FIRST TIME SINCE p659.**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); grant payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars / `spdx` / push date (🟢 live); repository **HTML via `curl`** (🔴 `403`, unchanged since p659); repository **HTML via `WebFetch`** (🟢 **live — new at p663**, `4/4` agreement with `gh api`, and it carries a **commit count** that `search/repositories` does not return at all; see `agents/trending.md` `663-A`).

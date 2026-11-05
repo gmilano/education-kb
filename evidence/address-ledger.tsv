@@ -68,7 +68,7 @@ aboutcode-org/scancode-toolkit	p530	Apache-2.0|CC-BY	compose/patterns.md	2026-11
 abr-Projects/canvas-mcp	p2	unstated	-	2026-10-11	4	4
 abubokkor-cse/EduMind-AI-Virtual-Teacher	p304	unstated	-	2026-10-19	1	1
 academic-innovation/django-lti	p24	MIT	-	2026-10-22	9	3
-academico-sis/academico	p90	MIT	-	2026-11-05	23	18
+academico-sis/academico	p90	MIT	verticals/solutions.md	2026-11-05	24	19
 AcademicsToday/academicstoday-django	p123	Apache-2.0	-	2026-10-05	1	1
 acanas/swad-core	p187	AGPL-3.0|GPL-3.0	-	2026-10-23	2	2
 AccessLint/skills	p19	unstated	-	2026-10-06	2	1
@@ -779,7 +779,7 @@ digitalcredentials/vc-test-fixtures	p306	MIT	-	2026-10-19	1	1
 digitalcredentials/veri-good	p306	MIT	-	2026-10-19	1	1
 digitalcredentials/verifier-core	p62	unstated	-	2026-10-21	4	3
 digitalcredentials/verifier-plus	p9	MIT	-	2026-10-19	2	2
-digitalinnovationone/dio-agent	p363	unstated	-	2026-11-01	2	1
+digitalinnovationone/dio-agent	p363	no-licence-file	-	2026-11-05	3	2
 digitalinnovationone/potencializando-estudos-carreira-com-ia	p363	unstated	-	2026-10-21	1	1
 DigitalPlatDev/FreeDomain	p155	AGPL-3.0	-	2026-10-17	2	2
 dikshant182004/MathTutor	p36	MIT	-	2026-10-07	2	1
@@ -2806,7 +2806,7 @@ terracotta-education/terracotta	p11	Apache-2.0	-	2026-11-01	15	11
 Tessangelika/ai-literacy-curriculum	p437	no-grant	-	2026-10-25	1	1
 tesseract-ocr/tesseract	p19	Apache-2.0	-	2026-11-01	2	1
 tha-guy-nate/tha-edfi-runner	p134	MIT	-	2026-10-11	1	1
-ThallesYVasconcelos/Agente-Educacional	p469	unstated	-	2026-11-05	7	2
+ThallesYVasconcelos/Agente-Educacional	p469	MIT	agents/top.md	2026-11-05	8	3
 thanh01pmt/curriculum-kit	p392	unstated	-	2026-10-22	1	1
 thanh01pmt/interactive-quiz-kit	p388	unstated	-	2026-10-26	4	3
 thanh01pmt/vietnam-k12-ai-curriculum	p286	unstated	-	2026-10-18	1	1
@@ -3007,7 +3007,7 @@ virtualryder/edu-ai-agents	p121	MIT	agents/top.md	2026-11-05	1	1
 virtUOS/abstimmbar	unpassed	Apache-2.0	-	2026-11-05	2	0
 vishal017/cheatshield	p131	MIT	-	2026-10-11	2	1
 vishalsachdev/canvas-mcp	p2	MIT	agents/top.md,compose/patterns.md	2026-11-05	73	46
-vitorr2101/Projeto-Agente-IA-Educacional	p206	unstated	-	2026-10-14	1	1
+vitorr2101/Projeto-Agente-IA-Educacional	p206	no-licence-file	-	2026-11-05	2	2
 vkumar04/canvas-mcp-lite	p227	unstated	-	2026-10-16	2	2
 vnschneider/suap-mcp	p73	AGPL-3.0	-	2026-10-03	2	1
 Voodoo2man/ioBroker.webuntis2	p243	MIT	-	2026-10-16	2	2
@@ -3226,3 +3226,13 @@ scratchfoundation/Scratch_1.4	p660	licence-split:GPL-2.0+MIT+CC-BY-SA-3.0	intel/
 RaspberryPiFoundation/scratch-curriculum	p660	CC-BY-NC-SA-4.0	intel/trends.md	2026-11-05	1	1
 google/blockly	p660	Apache-2.0	intel/trends.md	2026-11-05	1	1
 Kdmeenaa/CloakBox	p661	Apache-2.0:counter-category-not-supply	agents/top.md	2026-11-05	1	1
+RUC-Digital-Media-Lab/RUCAI	p664	MIT	agents/top.md	2026-11-05	1	1
+Frederikmh90/RUCAI	p664	MIT	-	2026-11-05	1	1
+OpenEuroLLM/JudgeArena	p664	Apache-2.0	repos/foundations.md	2026-11-05	1	1
+rosshd/openlearn	p664	AGPL-3.0	-	2026-11-05	1	1
+azrosolucoestecnologicas/engenharia-ia-aplicada	p664	MIT	-	2026-11-05	1	1
+DanielGodriNeto/aula-agentes-ia	p664	MIT	-	2026-11-05	1	1
+Amankumar286/ai-teaching-assistant-app	p664	MIT	-	2026-11-05	1	1
+usrvinicius/codementor-professor-programacao	p664	no-licence-file	-	2026-11-05	1	1
+Eduind/Agente-de-Estudos	p664	no-licence-file	-	2026-11-05	1	1
+BRENDASUNGONLOP/PROY_ATI	p664	no-licence-file	-	2026-11-05	1	1

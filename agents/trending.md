@@ -4,6 +4,102 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p664) — 🟢 **THE EMEA AGENT ZERO IS CLOSED, AND A GERMAN-LANGUAGE LEG CLOSED IT ON THE FIRST ATTEMPT WHILE THE FOUR MANDATED ENGLISH LEGS RETURNED NOTHING IN SCOPE FOR THE SEVENTH CONSECUTIVE PASS. 🔴 `academico-sis/academico` — **MIT**, **411★**, IN THIS BASE'S OWN LEDGER SINCE `p90`, MEASURED ACROSS **18 DISTINCT PASSES**, `filed_on = -` — WHILE `verticals/solutions.md` CARRIED **THREE COPYLEFT SIS AND NO PERMISSIVE ONE**. 🔴 A LEDGER VERDICT OF `unstated` REFUTED BY READING THE FILE. 🔴 THE HIGHEST-ADOPTION LATAM EDUCATION AGENT THIS BASE HAS EVER MEASURED (`2,988★`) HAS NO LICENCE AT ALL.**
+
+**Verification channels, re-tested before use at p664:** existence and real default ref via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars / `spdx` / push date / forks / size — 🟢 **live, with a newly measured blind spot (`664-D`)**; repository HTML via `WebFetch` — 🟢 **live** (p663's recovered second channel, used again this pass on `ThallesYVasconcelos/Agente-Educacional`); repository HTML via `curl` — 🔴 **`403`**, unchanged since p659; **`make hooks`** — 🔴 **DENIED in this session** (the auto-mode classifier refuses to execute the repo's own Make recipes as external code), so **no offline gate ran this pass and none of the counts below were machine-checked**; `cambridge.org` and `zenodo.org` — 🔴 **unresolvable, outside this session's allowed network domains (`664-H`)**.
+
+| `p664` registered | Verdict |
+|---|---|
+| 🟢 `664-A` — **`RUC-Digital-Media-Lab/RUCAI` — MIT, `1,075 B`, Roskilde University's Digital Media Lab (Denmark). `agents/top.md` had carried EMEA at **zero placed agent rows** across every pass in its history; the p663 bullet called it *“the real zero on this shelf”* and *“the sharper anomaly”*. It was returned by a **German**-language leg, first attempt** | 🟢 **EMEA ZERO CLOSED — FILED, PLACEMENT MARKED PROVISIONAL** |
+| 🔴 `664-B` — **`ThallesYVasconcelos/Agente-Educacional` (“EduRAG”) has sat in `evidence/address-ledger.tsv` since `p469` under `last_verdict = unstated`, with `7` mentions over `2` distinct passes and `filed_on = -`. The payload is `main/LICENSE`, `1,089 B`, stock MIT, `sha256₁₂ 5eaa67118ee6`, © 2026 *Agentes Sociais RAG Contributors*; `gh api spdx = MIT`** | 🔴 **LEDGER VERDICT REFUTED BY FIRST-HAND READ — `unstated` WAS A GAP IN THE READING. PROMOTED LATAM** |
+| 🔴 `664-C` — **`academico-sis/academico` — MIT (`1,094 B`), `411★`, `153` forks, pushed `2026-11-04`. In the ledger since `p90`, `last_verdict = MIT`, `23` mentions across `18` distinct passes, `filed_on = -`. `agents/trending.md` at **p530** registered this exact gap and closed `Gap 529-A` on it. Nobody wrote the row. Meanwhile the SIS tier of `verticals/solutions.md` was RosarioSIS (GPL-2.0), openSIS (GPL-2.0) and Gibbon (GPL-3.0)** | 🔴 **PROMOTION DEFECT, THIRD IN SIX PASSES, AND THE FIRST TO COST A LICENCE TIER — PROMOTED** |
+| 🔴 `664-D` — **`Frederikmh90/RUCAI` resolves under `git ls-remote --symref` and serves its grant payload from `raw.githubusercontent.com`, while `gh api search/repositories -f q='repo:Frederikmh90/RUCAI'` returns **HTTP 422** *“the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission”*** | 🔴 **SEARCH INDEXING IS NOT AN EXISTENCE CHANNEL — `663-E`'s TRAP INVERTED** |
+| 🔴 `664-E` — **`digitalinnovationone/dio-agent` — `2,988★`, `367` forks, pushed `2026-10-29`, built by **DIO**, a Brazilian technology-education platform. No grant file at `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING`; `gh api spdx = null`** | 🔴 **THE HIGHEST-ADOPTION LATAM EDUCATION AGENT MEASURED BY THIS BASE IS UNUSABLE — DECLINED, NO GRANT** |
+| 🔴 `664-F` — **`rosshd/openlearn` is reported `NOASSERTION` by `gh api`. Its payload is `29,618 B` of **AGPL-3.0** (`sha256₁₂ 8799c151530d`), title line *“GNU AFFERO GENERAL PUBLIC LICENSE Version 3”*** | 🔴 **SECOND `NOASSERTION` INSTANCE, AND THIS ONE LANDS ON COPYLEFT — p663's CAVEAT RUNS BOTH WAYS. DECLINED** |
+| 🟡 `664-G` — **`13` addresses tested, `8` already at HEAD, `5` novel. Every novel address came from a **Spanish- or Portuguese-language** leg; the four mandated English legs returned `0` in scope. Of the `5` novel, `2` carry stock MIT but are **courses about building agents**, not education agents** | 🟡 **≈62 % ALREADY HELD; YIELD AGAIN ENTIRELY NON-ANGLOPHONE; 2 NOVEL MIT ADDRESSES OUT OF SCOPE** |
+| 🔴 `664-H` — **RUCAI's README badges `DOI 10.5281/zenodo.20622874` and the work is published in *Computational Humanities Research* (Cambridge). Neither could be read: `zenodo.org` and `www.cambridge.org` both fail `getaddrinfo ENOTFOUND` under this session's network policy** | 🔴 **THE DOI CHANNEL IS UNAVAILABLE HERE — RUCAI'S EMEA PLACEMENT IS PROVISIONAL, CARRIED AS AN ACTION** |
+| 🟡 `664-I` — **the mandated verticals leg returned Open edX, Moodle, Chamilo, OpenOlat, Frappe LMS, RosarioSIS, openSIS and Academico. **All eight were already in the tree**; seven were already filed on `verticals/solutions.md` and the eighth is `664-C`** | 🟡 **VERTICALS LEG SATURATED — THE ONLY YIELD WAS A PROMOTION DEFECT, NOT A DISCOVERY** |
+
+### 🟢 `664-A` — the EMEA zero, and the one-line reason it lasted
+
+Every pass that has counted the `Region` column on `agents/top.md` has recorded EMEA at zero. p663 wrote the sharpest version of it:
+
+> 🔴 **EMEA remains the real zero on this shelf**, and it is the sharper anomaly: EMEA is where the binding statute is, where this base's strongest *platform* rows are built (OpenOlat, ILIAS, Artemis), and it still has no placed **agent** row. The p663 result predicts the fix — run the supply legs in **German, French, Spanish and Portuguese** before concluding anything about EMEA agent supply.
+
+That prediction was correct, and it took one leg to confirm. A single German-language query returned a peer-reviewed, MIT-licensed, Danish university teaching assistant that no English-language leg has surfaced in nineteen passes of trying.
+
+**`RUC-Digital-Media-Lab/RUCAI`** — MIT, `1,075 B`, `sha256₁₂ 2e9f1f76d670`, © 2026 Frederik Henriksen, `0★`, `1.6 MB`, pushed `2026-10-29`. A self-hosted course AI: teacher workspaces, PDF/DOCX ingestion, retrieval-grounded chat with source display, and **password-protected student instances scoped to selected material**. FastAPI + PostgreSQL/pgvector + Ollama (`bge-m3` embeddings, `gemma3:12b` chat, both swappable by env var), MinerU fallback for scanned PDFs, `deploy/` scripts for an Ubuntu VM under systemd.
+
+The commercially load-bearing detail is not the stack, it is the **separation of surfaces**. The teacher instance and the student instance are different artefacts with different credentials and different document scope. That is the distinction an institutional data-protection officer asks for and that a single chat UI cannot make — and it is why a `0★` pilot repository is worth a row while higher-starred tutors are not.
+
+🔴 **What this row does *not* establish.** The README names **no university**. The placement rests on the **organisational owner account** (`RUC-Digital-Media-Lab`) plus the DOI, and `664-H` records that the DOI could not be opened from this session. This base's own rule is that author names are not a placement channel; an organisation *account* is a step above that and a step below `Profe Bit`'s *“Universidad Nacional de Colombia”* in the README text. **Filed EMEA, marked provisional in-cell, with the first-hand DOI read carried as an action.**
+
+### 🔴 `664-C` — eighteen passes, twenty-three measurements, one unwritten row
+
+This is the finding of the pass, and it is not about supply.
+
+`academico-sis/academico` is a Laravel + Filament school-management platform — courses, enrolments, attendance, grades, invoicing — under **stock MIT**, with **411 stars and 153 forks**, pushed **yesterday**. It is the most-adopted permissive SIS this base has ever measured.
+
+It has been in `evidence/address-ledger.tsv` since **`p90`**. Its `last_verdict` has read `MIT` the whole time. It has been measured **23 times across 18 distinct passes**. Its `filed_on` column reads `-`.
+
+And the gap was not merely unnoticed — **it was declared closed, in prose, in this very file, at p530**:
+
+> 🔴 THIS BASE DECLARED "ZERO PERMISSIVE SIS" ONE PASS AGO AND THE COUNTER-EXAMPLE HAS BEEN IN ITS OWN HISTORY SINCE `p108`: `academico-sis/academico`, **MIT**, **409★**, pushed yesterday. 🟢 `Gap 529-A` CLOSES
+
+`Gap 529-A` was closed on the strength of a sentence. The row was never written. For the **134 passes since**, `verticals/solutions.md` has offered a client needing an extensible, re-brandable, closeable student-information system exactly three options — **RosarioSIS (GPL-2.0)**, **openSIS (GPL-2.0)** and **Gibbon (GPL-3.0)** — and nothing permissive.
+
+🔵 **Why this instance is worse than p659's and p663's.** Both of those cost *a row*: `PAIDEIA` and `TutorIA` were absent from a shelf that already had rows of their kind. This one cost **a licence tier**. The difference between a GPL-2.0 SIS and an MIT SIS is the difference between a service engagement and a product, and that is the first question a studio is asked. A gap closed in prose and left unfiled is indistinguishable, from the outside, from a gap that is still open — and for 134 passes it was worse than that, because the prose recorded it as *solved*.
+
+🔴 **Standing consequence.** `make gate-promotion-ledger` is the instrument for exactly this class and it has now been **denied in two consecutive sessions**, so the class is being caught by hand, at roughly one instance per two passes, and only when a pass happens to look. The promotion ledger's `filed_on = -` rows are the queue; **they should be read before the supply legs are run**, not after, because this pass's single most valuable finding came from the ledger and none of its four mandated English legs produced anything at all.
+
+### 🔴 `664-E` — adoption without a grant, at the top of the LATAM field
+
+`digitalinnovationone/dio-agent` is an AI study mentor built by **DIO**, one of Brazil's largest technology-education platforms. **2,988 stars. 367 forks.** Pushed `2026-10-29`. It is, by an order of magnitude, the most-adopted Brazilian education agent this base has measured — the LATAM rows on `agents/top.md` are at `0★`, `0★` and `0★`.
+
+It has **no licence file** at `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING`, and `gh api` reports `spdx = null`.
+
+🔵 **This is the most useful negative result of the pass, and it reframes the LATAM finding from p663.** That pass concluded LATAM's apparent emptiness was a *query-language* gap. True — but incomplete. Correcting the query language reveals a field whose **adoption is concentrated in repositories that cannot be built on**: `2,988★` with no grant, against three permissive rows at `0★` apiece. So LATAM's supply problem is real after all; it is just not the one that was written down. It is not *“no permissive agents exist”* — it is **“the agents people actually use have no licence, and the ones with a licence have no users.”** No amount of searching fixes that. Upstreaming a licence file does, and that is a two-week conversation with DIO, not an engineering project — see `compose/patterns.md` **P29**.
+
+### 🟡 `664-G` — the non-anglophone legs, measured
+
+| Leg | Language | Addresses returned | Novel to tree | In scope + permissive |
+|---|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | EN | 9 named projects | 0 | 0 |
+| `github trending education AI 2026` | EN | 4 named repos | 0 | 0 |
+| `open source platform education LMS SIS MIT Apache self-hosted` | EN | 8 platforms | 0 | 0 (but see `664-C`) |
+| `AI education industry trends 2026` | EN | — (no repos) | — | — |
+| `agente tutor inteligente código abierto GitHub MIT 2026` | **ES** | 4 repos | 1 (`BRENDASUNGONLOP/PROY_ATI`) | 0 — no grant file |
+| `agente IA educação código aberto GitHub 2026 Brasil` | **PT** | 8 repos | 4 | 1 (`Agente-Educacional`, promoted) |
+| `open source KI Lernassistent Hochschule Europa 2026` | **DE** | 5 projects | 1 (`RUCAI`) | **1 — filed, closes EMEA** |
+
+**Declined, with the reason in each case:**
+
+| Address | Measurement | Why not filed |
+|---|---|---|
+| `digitalinnovationone/dio-agent` | `2,988★`, `367` forks, `spdx = null`, no grant at 4 root filenames | 🔴 No grant. See `664-E` |
+| `rosshd/openlearn` | payload `29,618 B` **AGPL-3.0**, `gh api` says `NOASSERTION` | 🔴 Copyleft. See `664-F` |
+| `azrosolucoestecnologicas/engenharia-ia-aplicada` | MIT `1,081 B`, `3★`, pushed `2026-10-20` | 🟡 **Out of scope**: a course *about building agents* (RAG, MCP, LangGraph), not an education agent. Permissive and real; wrong shelf |
+| `DanielGodriNeto/aula-agentes-ia` | MIT `1,074 B`, `1★`, pushed `2026-10-20` | 🟡 **Out of scope**, same class — an open lesson shipping a maestro/gerente/dev agent team |
+| `Amankumar286/ai-teaching-assistant-app` | MIT `1,075 B`, `0★`, default ref **`master`**, pushed `2026-10-14` | 🟡 Mechanism-interesting — local-first RAG, hybrid BM25 + dense retrieval, 6-tool agent, *architecturally enforced grounding*, Ollama — but `0★`, no institution, no named curriculum, so it clears none of the three placement channels and has no adoption. **Measured, not filed**, and recorded here so the next pass does not re-discover it. 🔵 Also a fresh **default-ref trap** (`663-H`'s class): a fetch written against `main` reads nothing |
+| `BRENDASUNGONLOP/PROY_ATI` | `0★`, `9 KB`, `spdx = null`, no grant at 4 root filenames, pushed **`2026-11-05`** | 🔴 No grant. Novel Spanish-language address, pushed the same day it was measured |
+| `usrvinicius/codementor-professor-programacao` | `0★`, `8 KB`, `spdx = null`, no grant | 🔴 No grant |
+| `Eduind/Agente-de-Estudos` | `0★`, `2 KB`, `spdx = null`, no grant | 🔴 No grant; `2 KB` is a stub |
+| `vitorr2101/Projeto-Agente-IA-Educacional` | `spdx = null`, no grant at 4 root filenames | 🔴 No grant. Ledger `unstated` since `p206` — **re-measured and CONFIRMED** this pass, unlike `664-B` |
+
+🔵 **Two ledger `unstated` verdicts were re-tested this pass and they went opposite ways** — `Agente-Educacional` is MIT (`664-B`), `Projeto-Agente-IA-Educacional` really has no grant. `unstated` is therefore not a usable verdict: it conflates *“no grant exists”* with *“nobody looked”*, and only reading the file separates them. **Recommended as a standing action: the ledger's `unstated` population should be swept and re-graded into `no-licence-file` vs a real family, because `664-B` shows the class is hiding filable rows.**
+
+### 🔴 `664-H` — a channel limitation that bounds this pass's strongest claim
+
+`RUCAI` is published software with a DOI and a journal article. Both are the kind of evidence this base prefers over a README. Neither was reachable:
+
+```
+zenodo.org             -> getaddrinfo ENOTFOUND
+www.cambridge.org      -> getaddrinfo ENOTFOUND
+```
+
+Both are outside this session's allowed network domains. The consequence is specific and should not be overstated or understated: **the MIT grant, the code, the architecture and the existence of the DOI badge are all first-hand**; the *institutional affiliation* that places the row in EMEA is **not**, and rests on a search channel's report of the article's author affiliation plus the owning organisation's account name. The row says so in its own cell. 🔵 **Carried action: read `10.5281/zenodo.20622874` first-hand and either confirm the Roskilde affiliation or demote the placement to `Global (unplaced)`.**
+
+
 ## 🆕 2026-11-05 (p663) — 🟢 **THE SECOND STAR CHANNEL IS BACK. `curl` ON REPOSITORY HTML IS STILL `403`, BUT `WebFetch` READS THE SAME PAGES AND REPRODUCES `gh api` ON `4/4` PAIRS — SO STAR FIGURES STOP BEING SINGLE-CHANNEL FOR THE FIRST TIME SINCE p659, AND COMMIT COUNTS BECOME AVAILABLE AT ALL. 🔴 `LabSirius/TutorIA` HAS BEEN CALLED "THE STRONGEST NEW LATAM ROW" IN THESE LOGS WHILE `agents/top.md` SAID LATAM HAD **ZERO** PLACED ROWS — TWO PAGES OF ONE BASE CONTRADICTING EACH OTHER. PROMOTED. 🟢 ONE GENUINELY NOVEL LATAM AGENT, NAMED-INSTITUTION PLACED, `151` COMMITS AND `314` TESTS AT `0★`.**
 
 **Verification channels, re-tested before use at p663:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars / `spdx` / push date — 🟢 **live**; repository **HTML pages via `curl`** — 🔴 **`403`**, unchanged since p659 (`{"message":"GitHub access to this repository is not enabled for this session"}`, 378 B); repository **HTML pages via `WebFetch`** — 🟢 **LIVE, AND THIS IS NEW** (see `663-A`).

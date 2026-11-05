@@ -947,3 +947,73 @@ LATAM's regulatory position is the **least settled** of the four regions this ba
 - **Neither Colombian row is production software.** `0★`, 4 and 151 commits, no external review, and `trabajo2-` in the name of one marks it as coursework. They are **prior art and an integration reference**. A proposal that lists them as dependencies is misreading this page; a proposal that says *"the Open edX integration boundary has a published reference implementation from a peer institution"* is reading it correctly — and that is worth real weeks.
 - **The tutor quality comes from DeepTutor, not from the LATAM rows.** What the LATAM rows contribute is **placement, language and integration shape** — which is precisely what a localisation exercise usually gets wrong and what a client committee will probe hardest.
 - **This is not a Moodle pattern.** Moodle dominates much of LATAM schooling, and its bridge field tops out at **27★** across seven MIT servers (**P8**). This pattern is for the Open edX half of the region, and the two are not interchangeable.
+
+## P29 — Licence remediation first: turn LATAM's most-used education agents into a base you can actually build on (2–3 weeks of relationship work, then 6–8 weeks of product) 🟢 new at p664
+
+🔵 **Why this pattern exists, and why it is unlike every other one in this file.** Every other pattern here starts from a permissively-licensed component and composes. This one starts from the measurement at **T32**: in Brazil, the education agent with **2,988 stars and 367 forks** (`digitalinnovationone/dio-agent`, built by **DIO**, a major Brazilian technology-education platform) has **no licence file at all**, while the three permissive LATAM rows on `agents/top.md` have **zero stars between them**. Adoption and licensability are inversely correlated. So the first move is not engineering — it is **getting a licence file upstreamed** — and it unlocks more value per week than any build on this page.
+
+### The parts
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| **The remediation target** | [`digitalinnovationone/dio-agent`](https://github.com/digitalinnovationone/dio-agent) | 🔴 **NONE** — no file at `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING`; `gh api spdx = null` | **2,988★ / 367 forks**, pushed 2026-10-29. The most-adopted LATAM education agent this base has measured. 🔴 **Unusable as-is by anyone, including its own forkers.** This is the asset the pattern is about |
+| **The fallback base** | [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | 🟢 **MIT** (1,089 B) | 🟢 **The template that already works.** BNCC-keyed lesson plans (`EF01`–`EF04`), page-cited answers over MEC documents, LangGraph supervisor, ChromaDB + `bge-m3`, Ollama-first, FastAPI **MCP server**, Giskard evals. If remediation fails, this is where the build starts instead |
+| School/fee system | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** (1,094 B) | **411★ / 153 forks**, Laravel + Filament. 🟢 **The permissive SIS** — enrolments, attendance, grades, invoicing can be extended and shipped **closed**. The GPL-2.0 alternatives (RosarioSIS, openSIS) cannot |
+| Platform | `moodle/moodle` **or** `openedx/edx-platform` | GPL-3.0 / AGPL-3.0 | Whatever the client already runs. ⚠️ **Host, never derivative** |
+| Model | Ollama + an open-weight model on client hardware | — | EduRAG already defaults this way; `gpt-4o-mini` is its fallback, not its base case |
+| Evaluation | [`OpenEuroLLM/JudgeArena`](https://github.com/OpenEuroLLM/JudgeArena) | Apache-2.0 | Swappable **local** judge, so lesson-plan and answer quality is scored without student work leaving the building |
+| Evidence | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 | **P17**'s spine. The `<1/3-of-PoCs-reach-P&L` problem is a measurement problem |
+
+### How it wires together
+
+1. **Weeks 1–2 — the licence conversation, and run `P27` on everything first.** Grade the grant of every candidate before writing a line (`P27` is the standing gate). Then approach DIO with a *specific, small ask*: add a permissive `LICENSE` file. Bring the argument, not the request — **367 forks are currently in an unlicensed position**, which is a liability for DIO's own community and a trivially fixable one. 🔵 **Budget this as relationship work with a named publisher, not as a legal negotiation.** The deliverable is a file.
+2. **Week 2 — fork the decision, honestly.** If a licence lands, the 2,988-star base becomes composable and the pattern continues on it. **If it does not, drop it and continue on `Agente-Educacional`** — that branch is why this pattern has a fallback column and why it is not a gamble. ⚠️ Never ship a derivative of an unlicensed repository while waiting for an answer.
+3. **Weeks 3–5 — harden the BNCC spine.** Take EduRAG's corpus design — BNCC + PCN + PNLD with **output keyed to official skill codes** — and make it the product's contract. A lesson plan that emits `EF02MA03` is auditable by a Brazilian school inspector in a way that a generated paragraph is not. Replace its Self-RAG check with `JudgeArena` running a local judge, so faithfulness scores become reproducible artefacts.
+4. **Weeks 4–6 — attach the administrative half, closed.** Mount **Academico** for enrolment, attendance and invoicing. 🟢 **This is the licence-tier payoff of `664-C`:** MIT means the fee-and-enrolment surface can be re-branded and shipped as the client's own product. Filament makes the admin surface generated resource work rather than bespoke CRUD.
+5. **Weeks 6–7 — platform bridge.** Expose the assistant to whatever LMS the client runs, via the MCP server EduRAG already ships. Keep the boundary at the process edge so the GPL/AGPL host never contaminates the derivative.
+6. **Weeks 7–8 — the evidence spine and the strategy document.** xAPI statements into `lrsql`, and a formal AI strategy artefact. **UNESCO IESALC measured 87% of LATAM higher-education institutions using AI with only 26% holding a formal strategy** — the document is not overhead, it is the thing 74% of the market is missing and can cite a denominator for.
+
+### 🔵 Why the licence ask is the highest-leverage two weeks in the region
+
+A studio entering LATAM can spend those weeks building a tutor that will be the region's fourth `0★` permissive agent, or it can spend them converting a **2,988-star, 367-fork** community asset into something the whole region can build on — including the studio. The second outcome creates a reusable base, standing with a major Brazilian education publisher, and a public contribution that costs no engineering. It is also reversible at no cost: step 2 is a clean fork point.
+
+### ⚠️ What this pattern does not claim
+
+- **It does not claim DIO will say yes.** The pattern is built so that a no costs two weeks and loses nothing — the fallback base is already verified MIT and already does the job.
+- **It does not claim `dio-agent` is good software.** Nobody on this base has assessed its quality; **it cannot be read as a dependency at all until it has a grant**, which is the point. Stars measure adoption, not fitness.
+- **It does not generalise beyond Brazil on this evidence.** **T32** is measured on Brazilian repositories in one pass. The Spanish-language legs at p663 and p664 surfaced only research-scale addresses, so there was no high-adoption Spanish-speaking case to grade.
+- **`Agente-Educacional` is `0★` prior art, not a product.** 46 commits, 0 forks, no external review, and its README names no institution — only an LLM course. The engagement is to harden it; the BNCC corpus design is what is being reused, not the code quality.
+
+## P30 — The sovereign course AI an EU institution can authorise in one meeting (EMEA public higher education and K-12: 6–8 weeks) 🟢 new at p664
+
+🔵 **Why this pattern exists now.** Until p664, every EMEA data-residency conversation on this base was answered with an *architecture* — "OpenTutor or wordlink can run with no egress" — and not with a **named reference deployment at a European institution**. `RUC-Digital-Media-Lab/RUCAI` (MIT, Roskilde University's Digital Media Lab, Denmark) changes that, and it does so on the one design detail that matters to a data-protection officer: **the teacher surface and the student surface are separate artefacts, with separate credentials and separate document scope.**
+
+### The parts
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| **Reference deployment** | [`RUC-Digital-Media-Lab/RUCAI`](https://github.com/RUC-Digital-Media-Lab/RUCAI) | 🟢 **MIT** (1,075 B) | 🟢 **The pattern's keystone, and the first EMEA agent row on `agents/top.md`.** FastAPI + PostgreSQL/pgvector, Ollama for embeddings *and* chat, async ingestion, source-traced answers, **password-protected student instances scoped to selected material**, `deploy/` scripts for an Ubuntu VM under systemd. ⚠️ `0★` pilot software; placement provisional (`664-H`) |
+| Platform | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (10,982 B) | The permissive institutional LMS, **and EMEA-built** — its grant payload names the OLAT Zentrum at the University of Zurich. ⚠️ Default branch `master` |
+| Administration | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** | Enrolment, attendance, grades, invoicing — shippable closed |
+| Retention | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | MIT | Ships **FSRS 4.5 in-tree** and runs with no API key. Supplies the scheduling primitive `RUCAI` has no opinion about (**T13**, **P6**) |
+| Model | Ollama, on institution hardware — `bge-m3` + `gemma3:12b` are RUCAI's defaults and are env-var swappable | open weights | The whole premise. A procurement officer who has specified *"EU-hosted, open weights, local deployment"* — as TU Eindhoven's published tool guidance does — is describing this row |
+| Evaluation | [`OpenEuroLLM/JudgeArena`](https://github.com/OpenEuroLLM/JudgeArena) | Apache-2.0 | 🟢 **Local judge backend**, from the EU's own publicly funded programme. The Annex III *"show me this is fit for assessment"* evidence, produced without egress |
+| Evidence | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 | **P17**'s spine; the logging and human-oversight record the Act asks for |
+
+### How it wires together
+
+1. **Week 1 — `P27` on every component, then stand RUCAI up as-is.** 🔴 **Resolve the address before cloning:** RUCAI's own README Quick Start points at [`Frederikmh90/RUCAI`](https://github.com/Frederikmh90/RUCAI), the author's personal account, while this pattern cites the **organisation** address. Both resolve to the identical `HEAD ebdaae609e529cbe3c0696d7f74de18d8ebf605a` and the identical payload (`sha256₁₂ 2e9f1f76d670`), so there is no content risk — but `gh api` cannot see the personal one at all (`664-D`), so **automation must be written against the organisation address**. Its `deploy/` scripts give a working Ubuntu VM + pgvector + systemd install; the README is explicit that they are operational helpers, not a production installer.
+2. **Week 2 — the demo that ends the egress argument.** Upload the client's own course readings; show answers with sources; publish a student instance; then **pull the network cable and do it again**. Everything runs against local Ollama. This is a half-day, and it is the meeting the whole engagement turns on.
+3. **Weeks 2–4 — harden the two surfaces.** `RUCAI` is pilot software: the teacher auth is `.env` credentials with an optional users file. Replace it with the institution's SSO, put per-course retention on the uploaded-document store, and make the student-instance password policy institutional. 🔵 **Keep the two-artefact separation intact — it is the reason this row was filed.**
+4. **Weeks 3–5 — attach platform and administration.** Mount it alongside **OpenOlat** (Apache-2.0, so the integration layer can be closed) and **Academico** for the administrative tier. The whole stack below the LMS is now permissive, which means the deliverable can be the client's branded product rather than a published derivative.
+5. **Weeks 4–6 — add retention.** Lift **OpenTutor**'s in-tree FSRS to schedule review over the same ingested material. `RUCAI` answers questions; it does not decide *when* a learner should see something again.
+6. **Weeks 5–7 — the Annex III file.** `JudgeArena` with a local judge scores answer groundedness against the uploaded corpus on a repeatable schedule; `lrsql` holds the statement log; the human-oversight record names who reviewed what. 🔵 **Date it to December 2027, not August 2026** — the Digital Omnibus moved stand-alone Annex III obligations, and most published guidance is stale (**T7**, **T15**, and the EMEA section of `intel/market.md`).
+7. **Weeks 7–8 — dual UK/EU conformity, if the client sells into both.** The UK DfE's **generative AI product safety standards for education (January 2026)** are a product-standards regime, not a risk-classification one. The same evidence base satisfies both; nobody is currently selling that as one artefact.
+
+### ⚠️ What this pattern does not claim
+
+- **`RUCAI` is not production software and the pattern does not pretend otherwise.** `0★`, 0 forks, one author, ~46 commits, explicitly *"research software developed for a pilot teaching context"*. What it contributes is a **validated shape** and an institutional reference — the hardening in steps 3–4 is the actual work.
+- **Its EMEA placement is provisional.** The MIT grant, the code and the architecture are first-hand; the Roskilde affiliation is not — `zenodo.org` and `cambridge.org` are unreachable from the session that filed it (`664-H`). **Read `DOI 10.5281/zenodo.20622874` before putting "Roskilde University" in a client deck.**
+- **It does not make anyone AI-Act compliant.** It produces the artefacts an Annex III assessment needs. Classification, DPIA and conformity are the institution's, with counsel.
+- **`JudgeArena` knows nothing about education.** 19★, general evaluation infrastructure, filed because education's gap is measurement and this is permissive measurement. It will not tell you whether a rubric is pedagogically sound.
+

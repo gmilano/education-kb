@@ -1,0 +1,13 @@
+leg	language	query	returned	novel_to_tree	in_scope_permissive	outcome
+global-agents	en	top open source AI agents education 2026 github MIT	9	0	0	nil - general-purpose agents only, no education ranking exists
+global-trending	en	github trending education AI 2026	4	0	0	nil - DeepTutor/OpenMAIC/ai-engineering-hub/PPT-Master all held
+global-verticals	en	open source platform education LMS SIS MIT Apache self-hosted	8	0	0	nil as discovery; yielded promotion defect 664-C (academico MIT 411 stars unfiled)
+global-trends	en	AI education industry trends 2026	0	0	0	no repos; market+trend data only, folded into intel/market.md and intel/trends.md
+region-na	en	AI education North America 2026 adoption regulation players	0	0	0	no repos; 134 bills/31 states, MD+ID+OK+VA dual mandate, CCSD+DC district rules
+region-emea	en	AI education EMEA 2026 adoption regulation players	0	0	0	no repos; Annex III date conflict Aug-2026 vs 2-Dec-2027 Digital Omnibus
+region-apac	en	AI education APAC 2026 adoption regulation players	0	0	0	no repos; Korea AI Basic Act in force 22-jan-2026, Vietnam law 1-mar-2026 education high-risk; NO adoption figures found (2nd consecutive pass)
+region-latam	en	AI education LATAM 2026 adoption regulation players	0	0	0	no repos; UNESCO IESALC 87pct-use/26pct-strategy, 716 instruments/23 countries
+supply-es	es	agente tutor inteligente codigo abierto GitHub MIT 2026 educacion universidad	4	1	0	BRENDASUNGONLOP/PROY_ATI novel but no grant file
+supply-pt	pt	agente IA educacao codigo aberto GitHub 2026 Brasil universidade MIT	8	4	1	ThallesYVasconcelos/Agente-Educacional PROMOTED MIT LATAM; dio-agent 2988-stars NO GRANT (664-E)
+supply-de	de	open source KI Lernassistent Hochschule Europa 2026 GitHub Apache MIT EU-funded education agent	5	1	1	RUC-Digital-Media-Lab/RUCAI PROMOTED MIT EMEA - closes the EMEA zero (664-A)
+owner-enum	-	gh api search/repositories org:OpenEuroLLM	15	15	6	OpenEuroLLM/JudgeArena filed on repos/foundations.md; 6 of 15 report no licence

@@ -594,3 +594,40 @@ The claim under test was this base's longest-standing structural gap: **`agents/
 ⚠️ **Consequence for every absence claim on this page.** Any *"searched and not found"* on a non-anglophone region that rests only on English-language legs is **provisional**, not settled, and should be re-stated as such rather than cited as a measured gap.
 
 🔧 **Numbering note:** this entry is **T44** because **T43** is the highest unique number on the page — `T39` and `T40` each appear **twice** (p658 and p661 both minted a pair). The duplicates are left in place rather than silently renumbered, since other pages cite them by number; flagged here so the next pass does not mint a third `T39`.
+
+## T31 — A regional "zero" on this base's shelves has twice turned out to be a query-language artefact, and the instrument is the finding 🟢 new at p664
+
+Two regions carried zero placed agent rows on `agents/top.md`. Both closed inside two passes, and neither closed because the sector changed.
+
+| Region | Closed at | Leg that closed it | What the mandated English legs returned |
+|---|---|---|---|
+| **LATAM** | p663 | **Spanish** | nothing in scope |
+| **EMEA** | p664 | **German** — first attempt | nothing in scope, 7th consecutive pass |
+
+The four mandated English-language supply legs have now returned **zero in-scope novel addresses for seven consecutive passes**, and the trending digests have gone **twenty** passes without a yield. In the same window, non-English legs produced `TutorIA`, `Profe Bit`, `EduRAG` and `RUCAI` — every regionally placed row added since p662.
+
+🔵 **The generalisable claim is narrow and worth stating precisely:** English-language search surfaces the *most-starred* education repositories, which are disproportionately American and Chinese, and it does not surface *institutionally-situated* ones, which are where regional placement evidence lives. A base that searches only in English will therefore measure a world in which only APAC and the unplaced global middle build education agents — which is exactly what this base measured for its first ~660 passes.
+
+🔴 **The counter-case that stops this becoming a rule.** **North America now has one placed row against APAC's eight** and its query language is already English. So language is a sufficient explanation for the LATAM and EMEA zeros and **not** a general theory of regional coverage. The North American thinness is unexplained and is registered as an open question in `intel/market.md`, not papered over with this trend.
+
+**Operationally:** run the supply legs in German, French, Spanish and Portuguese as standing practice, and treat a declared regional absence as a statement about the instrument until it has been tested in the region's own language.
+
+## T32 — In LATAM, adoption and licensability are inversely correlated, which makes licence remediation the cheapest intervention available 🔴 new at p664
+
+Measured at p664, the Brazilian education-agent field:
+
+| Address | Stars | Forks | Grant |
+|---|---|---|---|
+| `digitalinnovationone/dio-agent` (DIO) | **2,988** | **367** | 🔴 **none at four root filenames; `spdx = null`** |
+| `LabSirius/TutorIA` | 0 | 0 | 🟢 MIT |
+| `AndresGuido9820/trabajo2-agente-tutor` | 0 | 0 | 🟢 MIT |
+| `ThallesYVasconcelos/Agente-Educacional` | 0 | 0 | 🟢 MIT |
+
+**The one with three orders of magnitude more adoption than the others combined cannot be built on at all**, and neither can the 367 forks already downstream of it.
+
+🔵 This is a different problem from the one **T18** describes. T18 is about where open source *invested* — Canvas-shaped institutions, at the expense of Moodle-shaped ones. T32 is about **licence hygiene tracking adoption in the wrong direction**: the projects that earned users are the ones that never did the paperwork. **T22** established that licence form and licence hygiene are independent variables; T32 is the regional consequence, and it is severe enough to invert the standard advice. Where this base would normally say *adopt-and-harden* (**T18**, **P8**), in LATAM the first move on the most-adopted repositories is **neither adopt nor build: it is ask for a licence file.**
+
+That is weeks of relationship work with a named publisher, it converts a dead 2,988-star base into a reusable one, and it is the highest-leverage, lowest-cost move this base has identified in the region. Scoped as **`compose/patterns.md` P29**.
+
+⚠️ **Scope limit:** measured on Brazilian repositories in one pass. Whether it holds for Spanish-speaking LATAM, or outside LATAM, is **untested** — the Spanish leg's novel addresses at p663 and p664 were all research-scale, so there was no high-adoption case to grade.
+
