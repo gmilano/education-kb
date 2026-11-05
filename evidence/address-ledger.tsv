@@ -47,7 +47,7 @@ address	first_seen_pass	last_verdict	filed_on	last_measured	mentions	distinct_pa
 9mtm/WCAG-Checker	p91	MIT	-	2026-10-10	1	1
 a-ariff/canvas-instant-mcp	p14	unstated	-	2026-10-06	1	1
 a-bobadilla/Asistente-Pedagogico-IA	p32	unstated	-	2026-10-07	1	1
-A-R007/Multi-Agent-Study-Assistant	p3	unstated	-	2026-11-05	11	7
+A-R007/Multi-Agent-Study-Assistant	p3	no-grant	-	2026-11-05	12	7
 a/b	p410	unstated	-	2026-10-29	2	2
 a2br/moodle-mcp	p104	unstated	-	2026-10-10	3	3
 a5anka/ai-lab-2026-africa-agent-manager	p31	no-grant	-	2026-10-07	1	1
@@ -266,7 +266,7 @@ anonymousonyx22/canvas-lms-student-mcp	p357	unstated	-	2026-10-26	3	3
 AnonymousOnyx22/moodle-student-mcp	p380	MIT	agents/top.md	2026-11-05	5	3
 anthropics/claude-cookbooks	p77	MIT	-	2026-10-09	1	1
 anthropics/claude-plugins-official	p258	unstated	-	2026-10-17	1	1
-anthropics/k12-teacher-skills	p17	unstated	-	2026-11-05	27	14
+anthropics/k12-teacher-skills	p17	Apache-2.0	agents/top.md	2026-11-05	28	14
 anthropics/merlin	p428	unstated	-	2026-10-25	1	1
 anthropics/prompt-eng-interactive-tutorial	p194	unstated	-	2026-10-14	2	2
 Antonio-Neves/Gestao-Escolar	p237	MIT	-	2026-10-16	1	1
@@ -277,7 +277,7 @@ aoncevay/mt-peru	p8	unstated	-	2026-10-06	1	1
 aoncevay/quechua-nlp	p8	unstated	-	2026-10-06	1	1
 apache/ofbiz	p389	unstated	-	2026-10-22	3	2
 apache/ofbiz-framework	p2	unstated	-	2026-10-22	15	11
-apache/openmeetings	p492	Apache-2.0	-	2026-11-05	8	5
+apache/openmeetings	p492	Apache-2.0	verticals/solutions.md	2026-11-05	9	5
 Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	p105	ECL-2.0	-	2026-10-15	6	5
 Apereo-Learning-Analytics-Initiative/Larissa	p123	unstated	-	2026-10-21	3	3
 Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	p12	ECL-2.0	-	2026-10-15	5	5
@@ -299,7 +299,7 @@ archboard/tidal-ptc	p244	GPL-3.0	-	2026-10-16	1	1
 ardianryan/dapodik-sdk	p454	MIT	-	2026-10-26	3	1
 arijit8972/agentic-automated-assignment-grading	p288	unstated	-	2026-10-18	3	2
 ark-forge/mcp-eu-ai-act	p238	MIT	-	2026-10-25	2	2
-armandokeller/SAEP2026-Agentes-IA-e-Ferramentas	p13	MIT	-	2026-10-06	2	1
+armandokeller/SAEP2026-Agentes-IA-e-Ferramentas	p13	MIT	-	2026-11-05	3	2
 ArnaudGuiovanna/tutor-mcp	p31	MIT	agents/top.md,compose/patterns.md	2026-11-01	44	30
 arnim279/untis-api-client	p455	GPL-3.0	-	2026-10-26	1	1
 Arnobrizwan/mentormind	p159	MIT	-	2026-10-12	1	1
@@ -320,7 +320,7 @@ asahi417/lm-question-generation	p85	MIT	-	2026-11-01	2	1
 asbplayer/asbplayer	p312	AGPL-3.0	-	2026-10-19	1	1
 ASEpochs/ai-digital-teacher	p53	no-grant	-	2026-10-27	7	4
 asherlc/dofek	p454	unstated	-	2026-10-26	2	1
-ashishpatel26/500-AI-Agents-Projects	p2	unstated	-	2026-10-29	10	9
+ashishpatel26/500-AI-Agents-Projects	p2	MIT	repos/foundations.md	2026-11-05	11	10
 ashleycribb/learnmcp-xapi	p42	unstated	-	2026-10-18	5	4
 ashutoshrana/confidence-escalation	p258	MIT	-	2026-10-17	1	1
 ashutoshrana/haystack-ferpa-filter	p121	unstated	-	2026-10-14	2	2
@@ -989,7 +989,7 @@ examplary/qti	p28	MIT	-	2026-10-20	5	4
 exelearning/exelearning	p417	unstated	-	2026-10-27	4	2
 exelearning/iteexe	p417	GPL-2.0	-	2026-10-24	2	1
 Exhabition/brightspace-mcp-rs	p139	MIT	-	2026-10-14	2	2
-Exorust/TorchLeet	p488	MIT	-	2026-10-28	4	3
+Exorust/TorchLeet	p488	MIT	repos/foundations.md	2026-11-05	5	4
 expertiza/expertiza	p512	MIT	-	2026-10-28	3	1
 explosion/spaCy	p50	MIT	-	2026-10-08	1	1
 explosion/spacy-models	p45	unstated	-	2026-10-08	3	3
@@ -2235,14 +2235,14 @@ opentutor/opentutor-classifier	p257	unstated	-	2026-10-17	1	1
 OpenVidu/openvidu	p124	unstated	-	2026-10-12	2	2
 openwallet-foundation-labs/learner-credential-wallet	p346	unstated	-	2026-10-23	5	4
 Opetushallitus/aoe	p17	unstated	-	2026-10-07	4	2
-Opetushallitus/ataru	p17	unstated	-	2026-10-10	6	5
-Opetushallitus/ehoks	p17	unstated	-	2026-10-10	7	6
-Opetushallitus/eperusteet	p17	unstated	-	2026-10-10	5	4
+Opetushallitus/ataru	p17	EUPL-1.2	verticals/solutions.md	2026-11-05	7	6
+Opetushallitus/ehoks	p17	EUPL-1.1	verticals/solutions.md	2026-11-05	8	7
+Opetushallitus/eperusteet	p17	EUPL-1.1	verticals/solutions.md	2026-11-05	6	5
 opetushallitus/koski	p17	unstated	-	2026-10-11	8	6
-Opetushallitus/oppijanumerorekisteri	p17	unstated	-	2026-10-10	6	5
-Opetushallitus/organisaatio	p17	unstated	-	2026-10-10	6	5
-Opetushallitus/suorituspalvelu	p17	unstated	-	2026-10-10	5	4
-Opetushallitus/valtionavustus	p17	unstated	-	2026-10-10	7	5
+Opetushallitus/oppijanumerorekisteri	p17	EUPL-1.1	-	2026-11-05	7	6
+Opetushallitus/organisaatio	p17	EUPL-1.1	-	2026-11-05	7	6
+Opetushallitus/suorituspalvelu	p17	EUPL-1.2	verticals/solutions.md	2026-11-05	6	5
+Opetushallitus/valtionavustus	p17	EUPL-1.1	-	2026-11-05	8	6
 oppia/oppia	p24	Apache-2.0	repos/foundations.md,verticals/solutions.md	2026-11-05	42	30
 oppia/oppia-android	p266	Apache-2.0	-	2026-10-17	1	1
 OptiKey/OptiKey	p8	GPL-3.0	-	2026-11-01	2	1
@@ -2587,7 +2587,7 @@ selmetwa/parallel-arabic	p459	no-grant	-	2026-10-26	1	1
 SeNgoNhatMinh/Ai_Turtor	p286	unstated	-	2026-10-18	1	1
 senjun-team/senjun-courses	p213	GPL-3.0	-	2026-10-15	1	1
 SenmuuuuW/dsh-diagnostic-tutor	p391	MIT	-	2026-10-22	1	1
-SenmuuuuW/universal-diagnostic-tutor-skill	p3	unstated	-	2026-10-29	23	22
+SenmuuuuW/universal-diagnostic-tutor-skill	p3	MIT	agents/top.md	2026-11-05	24	23
 serlo/serlo.org	p383	Apache-2.0	-	2026-10-22	2	2
 SethClydesdale/genki-study-resources	p175	unstated	-	2026-10-13	1	1
 sevenc-nanashi/google-classroom-mcp-server	p74	MIT	-	2026-10-03	1	1
@@ -2644,7 +2644,7 @@ simpleqt/radai	p470	unstated	-	2026-10-27	1	1
 singhrajvardhan/SecureExam-Platform	p131	MIT	-	2026-10-11	2	1
 sira313/rapkumer	p286	unstated	-	2026-10-18	4	2
 sirdanielm/canvas-mcp	p67	unstated	-	2026-10-03	1	1
-SirhanMacx/Claw-ED	p2	MIT	-	2026-11-05	24	17
+SirhanMacx/Claw-ED	p2	MIT	agents/top.md	2026-11-05	25	17
 siskinskai/spedlex	p187	MIT	-	2026-10-14	1	1
 sitor-ai/frametell	p254	AGPL-3.0	-	2026-11-04	21	14
 SIU-Toba/docker-guarani	p133	unstated	-	2026-10-12	2	2
@@ -2799,7 +2799,7 @@ TecFancy/dsh-deeptutor	p388	MIT|no-grant	-	2026-10-22	1	1
 techpivot25/Educate-AI	p329	no-grant	-	2026-10-20	1	1
 tejpalvirk/student	p5	MIT	-	2026-09-30	1	1
 Telaxus/EPESI	p115	unstated	-	2026-10-11	2	2
-telekom/ki-in-schulen	p237	unstated	-	2026-10-22	2	2
+telekom/ki-in-schulen	p237	MIT	-	2026-11-05	3	3
 temporalio/temporal	p104	unstated	-	2026-10-11	2	2
 tensorflow/privacy	p16	Apache-2.0	-	2026-10-01	1	1
 terracotta-education/terracotta	p11	Apache-2.0	-	2026-11-01	15	11
@@ -3236,3 +3236,7 @@ Amankumar286/ai-teaching-assistant-app	p664	MIT	-	2026-11-05	1	1
 usrvinicius/codementor-professor-programacao	p664	no-licence-file	-	2026-11-05	1	1
 Eduind/Agente-de-Estudos	p664	no-licence-file	-	2026-11-05	1	1
 BRENDASUNGONLOP/PROY_ATI	p664	no-licence-file	-	2026-11-05	1	1
+Menkoban/KI-Unterrichtswerkstatt	p665	MIT	agents/top.md	2026-11-05	1	1
+Jnf290/KI-Assistent_Lehrkraefte	p665	unresolvable	-	2026-11-05	1	1
+matheus3006/kit-agentes-ia	p665	MIT	-	2026-11-05	1	1
+845421145-lang/agents-radar	p665	MIT	-	2026-11-05	1	1

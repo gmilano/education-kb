@@ -1,0 +1,10 @@
+measurement	value	pct_of_denominator	denominator
+ledger_rows	3237	-	-
+filed_on_is_dash	3050	94.2%	ledger_rows
+filed_on_dash_with_MOVED_record	2265	74.3%	filed_on_is_dash
+filed_on_dash_never_dropped	785	25.7%	filed_on_is_dash
+filed_on_dash_never_dropped_and_ge5_distinct_passes	10	0.3%	filed_on_is_dash
+education_shaped_candidates_this_pass_in_filed_on_dash	23	-	-
+of_those_demotions_not_omissions	20	87.0%	education_shaped_candidates_this_pass_in_filed_on_dash
+academico_sis_academico_MOVED_records	10	-	p664 true positive would be MISSED by a never-dropped refinement
+malformed_addresses_inside_the_ten_address_queue	2	-	trending/python ; repos/moodle

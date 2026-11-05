@@ -631,3 +631,35 @@ That is weeks of relationship work with a named publisher, it converts a dead 2,
 
 ⚠️ **Scope limit:** measured on Brazilian repositories in one pass. Whether it holds for Spanish-speaking LATAM, or outside LATAM, is **untested** — the Spanish leg's novel addresses at p663 and p664 were all research-scale, so there was no high-adoption case to grade.
 
+## T45 — A declared filing is not a filed row, and the log is where the claim goes to be believed 🟢 new at p665
+
+**T43** measured an *index* asserting filings its pages no longer carried, and traced the cause to whole-page rewrites. p665 found the sibling one level up, and it is cheaper to cause and harder to see: **the append-only log asserts filings that were never written at all.**
+
+`repos/trending.md` at **`p588`** published a table under the heading *“SIX ROWS FILED”*, with star counts, provenance and a passes-unfiled column — the full apparatus of a completed action. Re-measured at p665 against every sell shelf (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`, `intel/trends.md`, `intel/market.md`):
+
+| `p588` declared filed | ★ | On a shelf at p665 | `MOVED` records |
+|---|--:|---|--:|
+| `microsoft/generative-ai-for-beginners` | 122,693 | 🔴 no — only in `intel/open-gaps.md` | 3 |
+| `rasbt/LLMs-from-scratch` | 107,625 | 🔴 no — only in `intel/open-gaps.md` | 1 |
+| `jingyaogong/minimind` | 64,710 | 🔴 **no — on no page at all** | 2 |
+| `karpathy/nanochat` | 59,252 | 🟢 yes (`agents/top.md`) | 3 |
+| `ashishpatel26/500-AI-Agents-Projects` | 39,200 | 🔴 **no — on no page at all** | 6 |
+| `apache/openmeetings` | 688 | 🔴 no | 🔴 **0** |
+
+**Five of six, four passes later.** And the `MOVED` column separates two different failures that look identical from the index: rows that were written and later dropped by a rewrite (**T43**'s mechanism), and `apache/openmeetings`, which has **zero** drop records — it was *never written*. p588's own prose had already called it the sharpest specimen of this base's bottleneck, having found it in a file named `permissive_unshelved.txt` that nothing had read for 63 passes. **The pass that diagnosed the bottleneck then reproduced it.**
+
+🔵 **The generalisable claim.** In any store where the narrative log is append-only and the curated pages are rewritten, **the log accumulates intentions and the pages hold state** — and because the log is the richer, more recent and more confident document, a later pass reads the intention and stops. The control is not another census: it is that *a filing is a row in a table*, verified by looking at the table in the same pass that claims it. p665 wrote six rows across three shelves and re-derived every count from the columns rather than incrementing them.
+
+🔴 **Corollary, and it retires a signal one pass after it was introduced.** p664 promoted off the signature *“`filed_on = -` plus many distinct passes”*. Over the whole ledger `filed_on = -` covers **3,050 of 3,237 addresses (94.2 %)**, and on the 23 education-shaped candidates this pass served, **20 were demotions** (`MOVED` to the log), not omissions. p664's own true positive, `academico-sis/academico`, carries **10** `MOVED` records, so the obvious refinement — *never dropped* — would have missed it. The signal that survives is the conjunction **never dropped ∧ ≥ 5 distinct passes**, which narrows 3,050 to **10** addresses; everything else needs a *stated re-filing reason*, in-cell, of the kind `universal-diagnostic-tutor-skill` and `TorchLeet` now carry.
+
+## T46 — The reference implementation of statutory personalised learning is a government's production repository, and it is licensed EUPL 🟢 new at p665
+
+Four passes of EMEA legs on this base have returned regulation: the **Annex III** postponement to 2 December 2027, the UK DfE's product-safety standards, KHDA guidance. p665's EMEA fact came from a different channel — the repository channel — and it changes what an EMEA engagement can start from.
+
+**`Opetushallitus`, the Finnish National Agency for Education, runs its learner-facing stack in public**: applications (`ataru`), the statutory **personal competence development plan** every vocational student is entitled to (`ehoks`), the machine-readable **national core curriculum and qualification requirements** (`eperusteet`), attainments (`suorituspalvelu`), learner identity, organisations and state grants. Seven repositories, all pushed `2026-11-05`, all under the **European Union Public Licence** — two at EUPL-1.2-or-later, five at EUPL-1.1-or-later, every payload read at p665.
+
+🟢 **Two of those objects are things this base has watched agents reinvent.** Every curriculum-grounded tutor on `agents/top.md` grounds itself in a *document* — BNCC as PDF, a `Rahmenlehrplan` as PDF. `eperusteet` is that object **as a service, with a data model, maintained by the authority that issues it**. And “personalisation” in a European public tender usually means `ehoks`'s statutory object, not an adaptive-tutoring claim; here it is, implemented.
+
+🔴 **The licence is the constraint, and it is not GPL's.** The EUPL is copyleft whose own definition of *“Distribution or Communication”* reaches making the Work available **online** — so a modified fork stood up as SaaS triggers the obligation, the way AGPL-3.0 does and GPL-3.0 does not. Its appendix brings two compensations a procurement office cares about: a **compatibility list** permitting relicensing onto GPL-2.0, AGPL-3.0, EPL, MPL-2.0, LGPL, OSL, CeCILL or LiLiQ, and **legal validity in 23 EU languages**.
+
+🔵 **So the trend is not “ministries are going open source” — it is that the open artefacts of European public education are arriving under a licence that prices forking and rewards integration.** The commercial shape that follows is arm's-length: an MIT/Apache agent layer in its own process, calling these services over their APIs, inheriting nothing — written up as **P32**. 🔵 **And a measurement lesson worth carrying: `gh api` reports all seven as `NOASSERTION`.** Third instance of that trap in three passes (p663 on MIT, p664 on AGPL-3.0), and the first to hide a whole licence *family* — the classifier does not match a four-line EUPL reference, so a tier was missing from `verticals/solutions.md` for want of reading four lines.

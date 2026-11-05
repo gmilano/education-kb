@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 `p665` — `2026-11-05` — **🟠 A NATIONAL EDUCATION MINISTRY'S PRODUCTION LEARNER STACK IS IN PUBLIC UNDER **EUPL** — SEVEN REPOSITORIES, ALL PUSHED TODAY, A LICENCE FAMILY THIS BASE HAD NEVER CARRIED, AND `gh api` CALLS ALL SEVEN `NOASSERTION`. 🟢 THE LIVE-CLASSROOM TIER ON `verticals/solutions.md` WAS **EMPTY** AND THE APACHE-2.0 ANSWER HAS BEEN IN THIS REPOSITORY SINCE `p525`. 🔴 `p588` SAID *“SIX ROWS FILED”*; FIVE ARE ON NO SHELF.**
+
+**Channels this pass:** `git ls-remote --symref` 🟢 live · `raw.githubusercontent.com` payload byte-read 🟢 live · `gh api search/repositories` 🟢 live, **with two fresh blind-spot instances** (`agents/trending.md` `665-J`) · `pypi.org` JSON 🟢 live · `WebSearch` 🟢 live (4 global + 4 regional + 4 non-English legs) · **`make hooks` 🟢 LIVE AND RUN TWICE** — baseline on clean `HEAD`, then on the working tree — which is the channel p664 recorded 🔴 DENIED · `http://www.osor.eu/eupl/` 🔴 does not resolve.
+
+### 🟠 New on `verticals/solutions.md` — five rows, and one of them is a licence tier
+
+| Repo | Licence (payload, byte-read) | ★ | Branch | Pushed | Why filed |
+|---|---|--:|---|---|---|
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | 🟢 **Apache-2.0**, `50,905 B`, `sha256₁₂ 13000f8f7bd9` (ASF `LICENSE` + in-payload third-party block, Oracle Free Use Terms included) | **688** | `master` | `2026-11-05` | 🔴 **The synchronous-teaching tier had `0` rows.** `grep -ciE 'bigbluebutton\|jitsi\|webrtc\|conferenc\|virtual classroom'` over that page returned **`0`** before this row. Rooms, whiteboard, recording, polls, **LMS plugins**, LDAP/SSO. ASF top-level |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | 🟠 **EUPL-1.2-or-later**, `296 B`, `sha256₁₂ db5b61c3f444` | 11 | `master` | `2026-11-05` | National application / form service — admissions intake. Clojure, 23 MB |
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | 🟠 **EUPL-1.1-or-later**, `632 B`, `sha256₁₂ 7c5df5c3eacb` | 3 | `master` | `2026-11-05` | **The machine-readable national curriculum** — the object every curriculum-grounded agent on `agents/top.md` currently fakes from a PDF. Java, 21 MB |
+| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | 🟠 **EUPL-1.1-or-later**, `632 B`, `sha256₁₂ acd9292aa6f2` | 1 | `master` | `2026-11-05` | The **statutory** personal competence development plan. What “personalisation” means in a European tender. Clojure |
+| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | 🟠 **EUPL-1.2-or-later**, `653 B`, `sha256₁₂ b840668bf304` | 0 | **`main`** | `2026-11-05` | Attainments / completed studies — the record admissions and employers read. **Scala**, and the only family member not on `master` |
+
+Three more in the family were read and deliberately not given rows (registries and funding, not education platforms): [`oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) and [`organisaatio`](https://github.com/Opetushallitus/organisaatio) serve the **identical** `632 B` payload `sha256₁₂ 7c5df5c3eacb` as `eperusteet`; [`valtionavustus`](https://github.com/Opetushallitus/valtionavustus) serves `653 B` / `sha256₁₂ a203b813f563`, **EUPL-1.1**-or-later, © **2026**, TypeScript, 47 MB.
+
+🟠 **Why the licence is the headline and not the stack.** The EUPL is copyleft whose own *“Distribution or Communication”* definition reaches making the Work available **online**, so forking one of these into a hosted product triggers the obligation the way AGPL-3.0 does and GPL-3.0 does not. Its appendix compensates with a **compatibility list** (GPL-2.0, AGPL-3.0, EPL, MPL-2.0, LGPL, OSL, CeCILL, LiLiQ — **not** MIT, **not** Apache-2.0) and legal validity in **23 EU languages**, which is why a European procurement office recognises it on sight. The arm's-length integration shape is **P32**; the sector reading is **T46**.
+
+🔵 **`NOASSERTION`, third instance in three passes and the first to hide a family.** `gh api` reports **all seven** as `NOASSERTION` because the payloads are four-line EUPL *references*, not stock licence bodies. p663 measured the trap landing on MIT, p664 on AGPL-3.0. **A whole licence tier was missing from this base for want of reading `296` bytes.**
+
+### 🟢 New on `repos/foundations.md` — two rows, both already held
+
+| Repo | Licence (payload, byte-read) | ★ | Forks | Ledger before p665 | Why filed |
+|---|---|--:|--:|---|---|
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **MIT**, `1,070 B`, `sha256₁₂ 2108a479cb7f`, © 2025 | 🟡 **39,312** | 7,055 | `first_seen = p2`, `unstated`, `10` mentions / `9` passes, `filed_on = -`, `6` `MOVED` | **The highest-adoption permissive address this base has ever held on no page.** A ~500-entry use-case map with education as a named sector. ⚠️ API `pushed_at` `2026-07-27` — read it as a map of 2026-H1 |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 **MIT** | **2,619** | 327 | `p488`, `MIT`, `4`/`3`, `filed_on = -`, `2` `MOVED` | The curriculum tier's only **graded exercise bank** — 65 PyTorch/ML interview problems in notebooks. Every other curriculum row teaches by reading |
+
+### 🔴 The measurement that justifies spending a whole pass on filing
+
+`p588` published a table headed **“SIX ROWS FILED”**. Re-measured at p665 against all six sell shelves:
+
+| `p588` row | ★ | On a shelf at p665? | `MOVED` records |
+|---|--:|---|--:|
+| `microsoft/generative-ai-for-beginners` | 122,693 | 🔴 no (only `intel/open-gaps.md`) | 3 |
+| `rasbt/LLMs-from-scratch` | 107,625 | 🔴 no (only `intel/open-gaps.md`) | 1 |
+| `jingyaogong/minimind` | 64,710 | 🔴 **no — on no page at all** | 2 |
+| `karpathy/nanochat` | 59,252 | 🟢 yes | 3 |
+| `ashishpatel26/500-AI-Agents-Projects` | 39,200 | 🔴 **no — on no page at all** | 6 |
+| `apache/openmeetings` | 688 | 🔴 no | 🔴 **0** |
+
+**Five of six.** Two of the five are on no page in the repository, and `openmeetings`'s **zero** drop records prove it was never written rather than written and dropped by a rewrite — which separates this from **T43**'s mechanism and is why it is registered as **T45**.
+
+### 🟢 And the repository's own gate settles it
+
+| | clean `HEAD` (p664 as shipped) | working tree (p665) |
+|---|---|---|
+| gates green | `49`/`71` | 🟢 **`50`/`71`** |
+| `FILED` (table rows on curated pages) | `181` | 🟢 **`193`** |
+| `gate-promotion-ratchet` | 🔴 **RED — `181` against its own `183` pin** | 🟢 **GREEN** |
+| newly red gates | — | 🟢 **none** |
+
+🔴 **p664 shipped with the filing ratchet red, `12` rows below the line the base set for itself at p662, and nothing in p664's section records it — because the gate was not run.** 🔵 `gate-promotion-ledger` remains red with `238` findings, of which **`30` are `C3-REGRESSION`: *“recorded `RESTORED-p436` and is on NO live shelf”***. The instrument had the answer; nobody ran the instrument.
+
+### 🔵 Standing recommendations carried forward, with one retired
+
+- 🟢 **Keep** the non-English supply legs (German, French, Spanish, Portuguese) as standing practice: the eighth consecutive English nil, and the only novel in-scope address this pass came from the German leg.
+- 🟢 **Keep** owner-account enumeration (`p664`'s `OpenEuroLLM` leg). It worked again: `Opetushallitus` yielded **seven** addresses from one owner, and `gh api -f q='org:Opetushallitus'`-shaped legs against *ministries and agencies* look like the richest unexploited channel for EMEA.
+- 🔴 **Retire** p664's bare promotion signature (`filed_on = -` ∧ many passes). `20`/`23` false positive here; see `agents/trending.md` `665-D` and `evidence/promotion-signature-census.2026-11-05-p665.tsv`.
+- 🔴 **New standing leg, from `665-A`:** before any pass claims a filing, `grep` the slug against the six sell shelves in the same pass. `make hooks`' `gate-promotion-ledger` does this already and has been red for 229 passes — **run it.**
+
+---
+
 ## 🆕 2026-11-05 (p664) — 🟢 **THE EU'S OWN PUBLICLY FUNDED MODEL PROGRAMME IS A LIVE, APACHE-2.0, EuroHPC-TARGETED SUBSTRATE AND THIS BASE HAD NEVER ENUMERATED IT. 🔴 THE MANDATED VERTICALS LEG RETURNED EIGHT PLATFORMS AND **ALL EIGHT WERE ALREADY IN THE TREE** — THE ONLY YIELD WAS AN UNFILED **MIT** SIS WITH `411★`. 🔵 LATERAL EXPANSION FROM AN OWNER ACCOUNT IS CONFIRMED AS A SUPPLY LEG; THE TRENDING DIGESTS ARE ON THEIR TWENTIETH CONSECUTIVE NIL.**
 
 **Channels this pass:** `git ls-remote --symref` 🟢 live · `raw.githubusercontent.com` payload byte-read 🟢 live · `gh api search/repositories` 🟢 live, **with the blind spot measured at `agents/trending.md` `664-D`** (a repository that resolves under `ls-remote` can return **HTTP 422** from the search API) · `WebFetch` on repository HTML 🟢 live · `curl` on repository HTML 🔴 `403` · **`make hooks` 🔴 DENIED this session**, so no count on these shelves was machine-checked · `zenodo.org` / `www.cambridge.org` 🔴 unresolvable.

@@ -1017,3 +1017,54 @@ A studio entering LATAM can spend those weeks building a tutor that will be the 
 - **It does not make anyone AI-Act compliant.** It produces the artefacts an Annex III assessment needs. Classification, DPIA and conformity are the institution's, with counsel.
 - **`JudgeArena` knows nothing about education.** 19★, general evaluation infrastructure, filed because education's gap is measurement and this is permissive measurement. It will not tell you whether a rubric is pedagogically sound.
 
+## P31 — The teacher-side pilot that passes a data-governance review, and is graded by a rubric the client can read (K-12 and vocational, North America and EMEA: 4–6 weeks) 🟢 new at p665
+
+🔵 **Why this pattern exists now.** Every teaching-assistant pilot this base has scoped has failed one of two reviews: the **data** review (what leaves the building) or the **evidence** review (how anyone knows the output is any good — **T10**, **T19**). Until p665 this base had no permissive component that answered the second one; `anthropics/k12-teacher-skills` ships `evals/` with its rubrics, and that turns a demo into an acceptance test.
+
+### The parts
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| **Teacher application** | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** (`1,078 B`) | 🟢 **The keystone.** Local-first: ingests the teacher's own PDF/DOCX/PPTX corpus, builds a **teaching-style profile**, emits a teacher DOCX + student DOCX + PPTX bundle. `clawed serve` gives a local dashboard and API; the provider is chosen in a wizard, so it can be pointed at Ollama. On PyPI at `9.18.2026.1` |
+| **Pedagogy + the grading instrument** | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** (`11,357 B`) | Four skills — plan creation, **differentiation into below/at/above tiers**, lesson prep, and a formative check whose **distractors come from documented misconceptions** — plus `evals/`, the only eval framework on any shelf here. ⚠️ Its Learning Commons Knowledge Graph is a hosted connector outside the grant: **take the skills and the rubrics, not the graph** |
+| **Diagnosis before instruction** | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** (`1,102 B`) | The student-facing half, and the only row here that establishes the gap before teaching into it. Needs a host runtime |
+| **Delivery into the incumbent LMS** | [`Menkoban/KI-Unterrichtswerkstatt`](https://github.com/Menkoban/KI-Unterrichtswerkstatt)'s Moodle pipeline | 🟢 **MIT** (`1,065 B`) | 🟢 **The reason this pattern clears the data review.** It emits a themed Moodle course as an **`.mbz` course backup** — a file, handed to whoever administers the Moodle. **No API token, no web service enabled, no plugin installed, no egress.** Compare `moodle-mcp` (27 ★), which needs live web-service credentials |
+| **Model** | Ollama on school or district hardware | MIT | Makes “nothing leaves the building” a fact rather than a configuration |
+| **Retention, if the pilot proceeds** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) + [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | FSRS timing and BKT mastery behind MCP surfaces (**P6**, **T13**) |
+
+### Wiring
+
+1. **Week 1 — corpus and profile.** `clawed ingest ./lessons/` over one teacher's real material for one subject and one year group. The teaching-style profile is the deliverable of this week; nothing is generated for students yet.
+2. **Week 2 — load the pedagogy, then write the acceptance test first.** Install `k12-teacher-skills` as a plugin into the same runtime. 🟢 **Lift `evals/` before generating anything** and agree its rubrics with the client's head of department as the pilot's pass/fail criteria. *This step is the pattern.* A pilot with a rubric agreed in week 2 is an evaluation; the same pilot with a rubric written in week 6 is a sales demo.
+3. **Week 3 — generate, differentiate, check.** Produce lesson bundles for one unit; run `k12-lesson-differentiation` to get the three tiers; attach a `k12-check-for-understanding` item to each lesson. Every artefact is reviewed and edited by the teacher in Word and PowerPoint — the hand-edit is the feature, not a gap.
+4. **Week 4 — deliver without touching the LMS's credentials.** Run the `KI-Unterrichtswerkstatt` Moodle pipeline over the unit and hand the administrator an `.mbz`. 🔵 **Record in the pilot report that no LMS web service was enabled** — this is the sentence that gets the second unit approved.
+5. **Weeks 5–6 — score against the week-2 rubric and decide.** Add `universal-diagnostic-tutor-skill` only if the teacher-side scores pass; a diagnostic tutor in front of students is a different review.
+
+⚠️ **Honest limits.** `Claw-ED` is self-labelled **Beta** at 64 ★ and `KI-Unterrichtswerkstatt` is a 1 ★ repository four days old at p665: both are **adopt-and-harden bases, not installs**, and the pilot must be staffed accordingly. The `.mbz` route is one-way — it ships a course in, it does not read grades back out; for that you still need `moodle-mcp` or LTI (**Pattern I** in `verticals/solutions.md`). And `k12-teacher-skills`' maths check-for-understanding is **maths**: for other subjects the rubric transfers, the misconception bank does not.
+
+## P32 — Integrating with a European ministry's open stack without inheriting the EUPL (EMEA public sector: 10–14 weeks) 🟢 new at p665
+
+🔵 **Why this pattern exists now.** p665 filed the first **EUPL** tier on `verticals/solutions.md`: seven `Opetushallitus` repositories in which the Finnish National Agency for Education runs its production learner stack in public. The reflex — fork it, brand it, host it — is the one move the licence punishes, because the EUPL counts making the Work available **online** as distribution. The pattern is the other move.
+
+### The parts
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| **Curriculum authority** | [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | 🟠 **EUPL-1.1+** | The national core curriculum and qualification requirements as a **service with a data model**. Read it; do not vendor it |
+| **Statutory learner plan** | [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | 🟠 **EUPL-1.1+** | The personal competence development plan — what “personalisation” means in a European tender |
+| **Intake / attainments / identity** | [`ataru`](https://github.com/Opetushallitus/ataru) · [`suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) · [`oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | 🟠 **EUPL-1.2+ / 1.1+** | Applications, completed studies, learner identifier |
+| **Your agent layer** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) or [`RUC-Digital-Media-Lab/RUCAI`](https://github.com/RUC-Digital-Media-Lab/RUCAI) | 🟢 MIT | **Separate process, separate repository, separate grant.** Calls the services over HTTP; links no EUPL code |
+| **Synchronous teaching** | [`apache/openmeetings`](https://github.com/apache/openmeetings) | 🟢 **Apache-2.0** | 🆕 Live classroom with whiteboard, recording and LMS plugins — the permissive answer where BigBlueButton is LGPL-3.0 |
+| **Evaluation** | [`OpenEuroLLM/JudgeArena`](https://github.com/OpenEuroLLM/JudgeArena) | Apache-2.0 | Local judge backend from the EU's own programme — the Annex III fitness evidence |
+| **Oversight record** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 | xAPI statements as the human-oversight log (**P17**) |
+
+### Wiring
+
+1. **Draw the boundary before the first commit, and write it down.** The EUPL components run as **their own services**, deployed unmodified, reached only over their HTTP APIs. Your code lives in its own repository under MIT or Apache-2.0 and links **no** EUPL library. Process separation plus network calls is the boundary; a vendored module or a static link is not.
+2. **Pin and document each service's version and payload.** Each repository's grant, bytes and branch go in the project's licence register — `eperusteet`/`oppijanumerorekisteri`/`organisaatio` serve the **identical** `632 B` payload (`sha256₁₂ 7c5df5c3eacb`), `ataru` is EUPL-**1.2**, `suorituspalvelu` is EUPL-1.2 **on `main` while the rest are on `master`**. ⚠️ `gh api` reports every one of the seven as `NOASSERTION`: **read the file, not the sidebar**.
+3. **Model the curriculum from `eperusteet`, do not re-key it.** Ground the agent's retrieval in the authority's own structures (units, competence requirements, assessment criteria) so that “standards-aligned” is a join, not a claim.
+4. **Treat `ehoks` as the personalisation contract.** Your agent proposes; the statutory plan records. Writing a proposal back into the plan is a governance decision, not an integration task — scope it as a separate phase with the ministry's own data controller.
+5. **Fix anything you must fix upstream, in the open.** If a service needs a change, contribute it to the ministry's repository under its EUPL rather than carrying a private fork: the patch stays theirs, your stack stays permissive, and the procurement story improves.
+6. **If a fork becomes unavoidable, re-scope commercially before writing code.** Then the EUPL travels with your hosted service, and the appendix's compatibility list (GPL-2.0, AGPL-3.0, EPL, MPL-2.0, LGPL, OSL, CeCILL, LiLiQ) is the only relicensing room you have. ⚠️ **It does not contain MIT or Apache-2.0.**
+
+⚠️ **Honest limits.** This stack is **Finland's**, in Finnish, built for Finnish statute — the *shape* generalises to other EU member states, the data model does not. Star counts (0–11 ★) are meaningless here and are not an adoption signal either way: this is one deployment with a nation behind it. And none of these seven repositories contains any AI — **this pattern buys an integration surface and a licence posture, not a model.**

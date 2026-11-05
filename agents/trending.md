@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p665) — 🟢 **`make hooks` RAN — THE CHANNEL p664 RECORDED AS DENIED — AND IT SETTLES THE PASS BY MACHINE: `gate-promotion-ratchet` WAS **RED AT HEAD** WITH `181` FILED ROWS AGAINST ITS OWN PIN OF `183`, AND IS **GREEN AT `193`** AFTER THIS PASS WROTE ROWS INSTEAD OF DECLARING THEM. 🔴 `p588` PUBLISHED A TABLE HEADED *“SIX ROWS FILED”*; **FIVE OF THE SIX ARE ON NO SHELF**, AND `apache/openmeetings` HAS **ZERO** DROP RECORDS — IT WAS NEVER WRITTEN. 🔴 p664's PROMOTION SIGNATURE IS `20`/`23` FALSE POSITIVE AND WOULD HAVE MISSED p664's OWN TRUE POSITIVE.**
+
+**Verification channels, re-tested before use at p665:** existence and real default ref via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars / forks / `spdx` / push date — 🟢 **live, with two fresh instances of the `664-D` blind spot (`665-J`)**; `WebSearch`, global + four mandated regional legs + four non-English legs — 🟢 **live**; **`pypi.org/pypi/{pkg}/json`** — 🟢 **live, and used as a second shipping channel on `Claw-ED` (`665-C`)**; **`make hooks` — 🟢 LIVE AND RUN THIS PASS, twice (baseline on `HEAD`, then on the working tree)**, which is the channel p664 recorded as 🔴 DENIED; `http://www.osor.eu/eupl/`, cited inside a live national grant file — 🔴 **does not resolve (`665-I`)**.
+
+| `p665` registered | Verdict |
+|---|---|
+| 🔴 `665-A` — **`p588`'s table headed *“SIX ROWS FILED”* re-measured against all six sell shelves: `jingyaogong/minimind` and `ashishpatel26/500-AI-Agents-Projects` (`39,312★`) are **on no page at all**; `microsoft/generative-ai-for-beginners`, `rasbt/LLMs-from-scratch` and `apache/openmeetings` survive only as entries in `intel/open-gaps.md`; **one** of six (`karpathy/nanochat`) is on a shelf** | 🔴 **A DECLARED FILING IS NOT A FILED ROW — `5`/`6`, FOUR PASSES LATER. FILED FOR REAL THIS PASS → **T45** |
+| 🔴 `665-B` — **`apache/openmeetings` carries **`0`** records in `evidence/archive-drops.tsv`, so it was never written-and-dropped. `p525` wrote its address into `permissive_unshelved.txt`; p588 said in prose that nothing had read that file for `63` passes — and then did not write the row either** | 🔴 **THE PASS THAT DIAGNOSED THE BOTTLENECK REPRODUCED IT. ROW WRITTEN AT p665** |
+| 🔴 `665-C` — **`SirhanMacx/Claw-ED` — MIT (`1,078 B`, `sha256₁₂ 4d5d987f4f89`), `64★`, `24` mentions across `17` distinct passes, `filed_on = -`, and **`0`** `MOVED` records. Second channel: `clawed` is on PyPI at `9.18.2026.1`, the exact release string its README prints** | 🟢 **THE ONE TRUE NEVER-FILED ADDRESS IN THIS PASS'S CENSUS — FILED** |
+| 🔴 `665-D` — **p664's promotion signature (`filed_on = -` ∧ many distinct passes) run over the `23` education-shaped candidates served this pass: **`20`** carry `MOVED` drop records, i.e. they were filed once and demoted. `academico-sis/academico`, p664's own true positive, carries **`10`**** | 🔴 **SIGNATURE RETIRED ONE PASS AFTER INTRODUCTION: `87 %` FALSE POSITIVE HERE, AND THE OBVIOUS REFINEMENT MISSES p664's OWN CASE** |
+| 🟢 `665-E` — **`anthropics/k12-teacher-skills` — **Apache-2.0** (`11,357 B`, `sha256₁₂ 58d1e17ffe51`), **`613★`**, `110` forks. In the ledger since `p17`: `27` mentions / `14` distinct passes, `last_verdict = unstated`, `filed_on = -`. Ships `evals/` — an evaluation framework with rubrics** | 🟢 **`unstated` REFUTED BY FIRST-HAND READ; NORTH AMERICA `1 → 2`; FIRST ROW ANYWHERE HERE THAT SHIPS ITS OWN EVAL HARNESS (**T10**)** |
+| 🟢 `665-F` — **`Menkoban/KI-Unterrichtswerkstatt` — MIT (`1,065 B`, `sha256₁₂ 41dcc2baf0e8`), `1★`, created `2026-10-30`. Three pipelines for vocational teachers, the third emitting a Moodle course as an **`.mbz` backup file** — no API, no token, no plugin, no egress. Returned by a **German** leg; `0` mentions anywhere in this tree before today** | 🟢 **EMEA `1 → 2`, AND THE FIRST CREDENTIAL-FREE MOODLE BRIDGE THIS BASE HAS FOUND — FILED, PLACED ON THE REPOSITORY'S OWN TEXT** |
+| 🟠 `665-G` — **`Opetushallitus/*` — **seven** repositories in which the Finnish National Agency for Education runs its production learner stack in public, all pushed `2026-11-05`, all **EUPL** (two at 1.2-or-later, five at 1.1-or-later), every payload byte-read. Ledger: `4`–`6` distinct passes each, `last_verdict = unstated`, `filed_on = -`** | 🟠 **A LICENCE TIER THIS BASE HAD NEVER CARRIED — FOUR FILED ON `verticals/solutions.md`, SCOPED IN **T46** AND **P32** |
+| 🔵 `665-H` — **`gh api` reports **all seven** `Opetushallitus` repositories as `NOASSERTION`; the payloads are real EUPL references of `296`–`653 B`** | 🔵 **THIRD `NOASSERTION` INSTANCE IN THREE PASSES AND THE FIRST TO HIDE A WHOLE LICENCE *FAMILY* — p663 (MIT), p664 (AGPL-3.0), p665 (EUPL)** |
+| 🔴 `665-I` — **`Opetushallitus/ehoks`' own `LICENSE` instructs the reader to obtain the licence text at `http://www.osor.eu/eupl/`; the host fails `getaddrinfo` (`curl` exit `6`)** | 🔴 **A DEAD CITATION INSIDE A LIVE NATIONAL GRANT FILE — THE TEXT IS AT `joinup.ec.europa.eu`** |
+| 🔴 `665-J` — **two fresh instances of the search-index blind spot: `845421145-lang/agents-radar` resolves under `ls-remote` and serves a `1,062 B` MIT payload while `gh api search/repositories -f q='repo:…'` returns `total_count = 0`; `Jnf290/KI-Assistent_Lehrkraefte` returns **HTTP 422** and does not resolve under `ls-remote` either** | 🔴 **`664-D` CONFIRMED WITH A SECOND FAILURE *MODE*: SILENT `0` AS WELL AS LOUD `422`. NEITHER IS AN EXISTENCE VERDICT** |
+| 🟡 `665-K` — **the four mandated regional legs returned `19` checkable facts and **all `19` were already on `intel/market.md`** (Maryland SB 720 / HB 1057, NY A 9190, the K-12 AI Literacy and Readiness Act, the California ballot initiative, April-2026 ADA, Annex III → 2 Dec 2027, UK DfE Jan-2026 standards, KHDA, Korea's AI Basic Act, Vietnam 134/2025 + 33/2026, TEQSA, the 716-instrument Andes count, the UNESCO LAC Observatory partner set)** | 🟡 **FOUR REGIONAL NILS, EACH RECORDED WITH ITS LIST SO IT IS NOT RE-BOUGHT. THE ONLY NEW REGIONAL FACT CAME FROM THE REPOSITORY CHANNEL (`665-G`)** |
+
+### 🟢 `make hooks` ran, and it is the strongest evidence this pass produced
+
+p664 recorded this channel as **DENIED** and published its counts unchecked. At p665 it ran — twice, so the comparison is a controlled one: once on a clean `HEAD` with `git stash -u`, once on the working tree.
+
+| | `HEAD` (p664 as shipped) | working tree (p665) |
+|---|---|---|
+| gates green | `49` / `71` | 🟢 **`50` / `71`** |
+| `FILED` (table rows on curated pages) | `181` | 🟢 **`193`** |
+| filing rate | `3.4 %` | `3.6 %` |
+| un-landed distinct | `344` | `341` |
+| `gate-promotion-ratchet` | 🔴 **RED — `181` filed against its own pin of `183`** | 🟢 **GREEN — `193 ≥ 183`** |
+| gates that turned red | — | 🟢 **none** |
+
+🔴 **Read the first column again: the base shipped p664 with its filing ratchet red and `12` rows below the line it had set for itself at p662.** Nothing in p664's own section records that, because the gate was not run. 🟢 **The one gate this pass repaired was repaired by writing rows**, which is the whole argument of **T45** — stated by the repository's own instrument rather than by this log.
+
+🔵 **And the gate had already found the defect class, 238 findings deep, with nobody reading it.** `gate-promotion-ledger` fails with `207 C1-UNADJUDICATED`, `125 VERIFIED-ABSENT`, `104 QUEUE-UNENUMERATED`, **`30 C3-REGRESSION`** — and C3's message is literally *“recorded `RESTORED-p436` and is on NO live shelf”*, across `PrahanG/Google-Classroom-MCP`, `Teci-AI/moodle-mcp-connector`, `datakind/student-success-tool`, `amp-up-io/qti3-item-player` and 26 more. **`665-A` is one instance of a class this repository's own gate has been reporting for 229 passes while `make hooks` went unrun.** It stays red after this pass and is registered, not closed.
+
+### 🔴 `665-D` — the promotion signature, measured instead of inherited
+
+p664 promoted `academico-sis/academico` off *“`filed_on = -`, `23` mentions, `18` distinct passes — nobody wrote the row.”* p665 ran that signature over the `23` education-shaped candidates its own legs served, and over the whole ledger.
+
+| Measurement | Value |
+|---|--:|
+| rows in `evidence/address-ledger.tsv` | `3,237` |
+| `filed_on = '-'` | **`3,050` (94.2 %)** |
+| … of those, carrying a `MOVED` record in `evidence/archive-drops.tsv` | **`2,265` (74.3 %)** |
+| … never dropped | `785` (25.7 %) |
+| … never dropped **and** ≥ 5 distinct passes | 🟢 **`10`** |
+| this pass's education-shaped candidates in `filed_on = -` | `23` |
+| … of those, demotions (`MOVED`) rather than omissions | 🔴 **`20`** |
+| `academico-sis/academico`'s own `MOVED` records | 🔴 **`10`** |
+
+**So the signature fails in both directions.** `filed_on = -` means *not on a shelf today* and cannot distinguish *never filed* from *filed and deliberately demoted* — and the refinement that fixes the false positives (*never dropped*) would have thrown away p664's own true positive. The queue that survives is the conjunction, and it is `10` addresses long, published in full at `evidence/promotion-signature-census.2026-11-05-p665.tsv`. **A demoted address is not promoted by its ledger line; it is promoted by a stated reason** — `SenmuuuuW/universal-diagnostic-tutor-skill` (licence `unstated` for 22 passes, refuted MIT this pass, 258★) and `Exorust/TorchLeet` (the exercise-bank slot was empty) each carry theirs in-cell.
+
+The `10`-address queue, for the record: `SirhanMacx/Claw-ED` (filed at p665), `anthropics/k12-teacher-skills` (filed at p665), `A-R007/Multi-Agent-Study-Assistant` (declined below), `Opetushallitus/ehoks`, `ataru`, `oppijanumerorekisteri`, `organisaatio`, `valtionavustus` (four of the family filed at p665), `apache/openmeetings` (filed at p665), plus two malformed ledger addresses — see `665-L`.
+
+### 🔴 `665-L` — two rows of the ledger are not addresses
+
+`trending/python` (`p77`, `11` mentions, `7` distinct passes) and `repos/moodle` (`p78`, `4`/`4`) sit in `evidence/address-ledger.tsv` as if they were repositories. They are a path fragment and a URL fragment that an intake pass captured as slugs, and both scored high enough on the `665-D` conjunction to enter the ten-address queue. **An address register with non-addresses in it inflates every denominator computed from it** — including the `3,050` above. Registered for `make address-shape-census`, not repaired by hand this pass.
+
+### 🟡 Declines, with reasons — the negative half of the pass
+
+| Address | Read | Verdict |
+|---|---|---|
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | resolves (`main`), `66★`, `15` forks, **no grant file** at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` or `LICENCE`; `gh api spdx = null`; last push `2025-11-04` | 🔴 **DECLINED — NO GRANT, AND A YEAR STALE.** Ledger `unstated` is correct here: `665-E` and `665-G` show `unstated` is often a reading gap, but it is not always one |
+| [`Jnf290/KI-Assistent_Lehrkraefte`](https://github.com/Jnf290/KI-Assistent_Lehrkraefte) | returned live by a German leg; `ls-remote` prompts for credentials, search API `422`. Its README (per the leg) states *“Lizenz: Noch nicht festgelegt”* | 🔴 **DECLINED — UNRESOLVABLE FROM HERE AND SELF-DECLARED UNLICENSED** |
+| [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) | **MIT** (`1,228 B`, `sha256₁₂ 6929393c58a1`, © 2021 **Deutsche Telekom AG**), `16★`, default branch **`master`**, last push `2025-06-04`. Ledger `unstated` since `p237` → refuted | 🔵 **LICENCE CORRECTED, SHELF DECLINED** — 17 months stale, and it is K-12 AI-literacy *project material* (Calliope mini), not an agent. A permissive EMEA corporate asset worth knowing exists |
+| [`matheus3006/kit-agentes-ia`](https://github.com/matheus3006/kit-agentes-ia) | **MIT** (`1,073 B`), `1★`, pt-BR, novel address | 🟡 **OUT OF SCOPE** — a method kit for working *with* agents (deterministic context control, validation hooks), not education software |
+| [`armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | **MIT** (`1,071 B`, © 2026 Armando Keller), `0★`, **Unisinos** (Brazil) workshop material on MCP; ledger `MIT` since `p13`, `filed_on = -` | 🟡 **OUT OF SCOPE AS AN AGENT** — LATAM academic curriculum material; the ledger verdict was already right |
+| [`845421145-lang/agents-radar`](https://github.com/845421145-lang/agents-radar) | **MIT** (`1,062 B`, © 2026 Dylan), `master`; search API `total_count = 0` | 🟡 **OUT OF SCOPE** — a trends digest, not education software. Kept for `665-J` |
+| [`Sri-Krishna-V/awesome-adk-agents`](https://github.com/Sri-Krishna-V/awesome-adk-agents) · [`opena2a-org/damn-vulnerable-ai-agent`](https://github.com/opena2a-org/damn-vulnerable-ai-agent) | Apache-2.0, `351★` / `147★`, both never-dropped in the ledger | 🟡 **DEFERRED, NOT DECLINED** — agent infrastructure and security-training targets; in scope for a *technical-academy* reading of this KB, out of scope for K-12/HE. Named here so the next pass does not re-measure them |
+
+### 🟡 Supply, honestly: the eighth consecutive English nil, and where the five new addresses came from
+
+The four mandated global legs (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) returned **`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `generative-ai-for-beginners`, `LLMs-from-scratch`, `500-AI-Agents-Projects`, `awesome-ai-agents-2026`, `CrewAI`, `AutoGen`** — every one already in this tree. 🔴 **Eighth consecutive pass in which the mandated English legs produced no novel in-scope address.** Seven `gh api search/repositories` legs run directly against the index (tutor, education-agent, `topic:ai-tutor`, teacher-lesson, grading-assessment, MIT and Apache arms) returned `43` distinct repositories of which **`2` were novel and both were out of scope** (equity research, quant trading).
+
+Novel addresses this pass: `Menkoban/KI-Unterrichtswerkstatt` (**German** leg), `Jnf290/KI-Assistent_Lehrkraefte` (**German**, unresolvable), `matheus3006/kit-agentes-ia` (**Portuguese**), `845421145-lang/agents-radar` (**German**, incidental). 🔵 **p663's prediction holds for a third pass: the saturation is a property of the query language.** 🔧 **But p665 adds the sharper half of it — three of this pass's four new rows came from *inside* the repository, not from any leg.** The binding constraint on this base is no longer discovery or language. **It is reading what is already held, and writing it down.**
+
+---
+
 ## 🆕 2026-11-05 (p664) — 🟢 **THE EMEA AGENT ZERO IS CLOSED, AND A GERMAN-LANGUAGE LEG CLOSED IT ON THE FIRST ATTEMPT WHILE THE FOUR MANDATED ENGLISH LEGS RETURNED NOTHING IN SCOPE FOR THE SEVENTH CONSECUTIVE PASS. 🔴 `academico-sis/academico` — **MIT**, **411★**, IN THIS BASE'S OWN LEDGER SINCE `p90`, MEASURED ACROSS **18 DISTINCT PASSES**, `filed_on = -` — WHILE `verticals/solutions.md` CARRIED **THREE COPYLEFT SIS AND NO PERMISSIVE ONE**. 🔴 A LEDGER VERDICT OF `unstated` REFUTED BY READING THE FILE. 🔴 THE HIGHEST-ADOPTION LATAM EDUCATION AGENT THIS BASE HAS EVER MEASURED (`2,988★`) HAS NO LICENCE AT ALL.**
 
 **Verification channels, re-tested before use at p664:** existence and real default ref via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars / `spdx` / push date / forks / size — 🟢 **live, with a newly measured blind spot (`664-D`)**; repository HTML via `WebFetch` — 🟢 **live** (p663's recovered second channel, used again this pass on `ThallesYVasconcelos/Agente-Educacional`); repository HTML via `curl` — 🔴 **`403`**, unchanged since p659; **`make hooks`** — 🔴 **DENIED in this session** (the auto-mode classifier refuses to execute the repo's own Make recipes as external code), so **no offline gate ran this pass and none of the counts below were machine-checked**; `cambridge.org` and `zenodo.org` — 🔴 **unresolvable, outside this session's allowed network domains (`664-H`)**.

@@ -1,0 +1,20 @@
+slug	default_branch	grant_file	bytes	sha256_12	family	copyright_line	channel	outcome
+anthropics/k12-teacher-skills	main	LICENSE	11357	58d1e17ffe51	Apache-2.0	(ASF boilerplate)	raw.githubusercontent.com	FILED agents/top.md
+SirhanMacx/Claw-ED	main	LICENSE	1078	4d5d987f4f89	MIT	Copyright (c) 2026 EDUagent Contributors	raw.githubusercontent.com	FILED agents/top.md
+SenmuuuuW/universal-diagnostic-tutor-skill	main	LICENSE	1102	a9ca00bcc7a5	MIT	Copyright (c) 2026 universal-diagnostic-tutor-skill contributors	raw.githubusercontent.com	FILED agents/top.md (re-filing)
+Menkoban/KI-Unterrichtswerkstatt	main	LICENSE	1065	41dcc2baf0e8	MIT	Copyright (c) 2026 Menkoban	raw.githubusercontent.com	FILED agents/top.md (novel address)
+ashishpatel26/500-AI-Agents-Projects	main	LICENSE	1070	2108a479cb7f	MIT	Copyright (c) 2025 ashishpatel26	raw.githubusercontent.com	FILED repos/foundations.md
+apache/openmeetings	master	LICENSE	50905	13000f8f7bd9	Apache-2.0 + third-party block	(ASF boilerplate)	raw.githubusercontent.com	FILED verticals/solutions.md
+Opetushallitus/ataru	master	LICENSE.md	296	db5b61c3f444	EUPL-1.2-or-later	Copyright (c) 2025 Finnish National Agency for Education	raw.githubusercontent.com	FILED verticals/solutions.md
+Opetushallitus/suorituspalvelu	main	LICENSE	653	b840668bf304	EUPL-1.2-or-later	Copyright (c) 2025 The Finnish National Agency for Education - Opetushallitus	raw.githubusercontent.com	FILED verticals/solutions.md
+Opetushallitus/ehoks	master	LICENSE	632	acd9292aa6f2	EUPL-1.1-or-later	Copyright (c) 2018 The Finnish National Board of Education - Opetushallitus	raw.githubusercontent.com	FILED verticals/solutions.md (dead citation osor.eu)
+Opetushallitus/eperusteet	master	LICENSE.txt	632	7c5df5c3eacb	EUPL-1.1-or-later	Copyright (c) 2013 The Finnish National Board of Education - Opetushallitus	raw.githubusercontent.com	FILED verticals/solutions.md
+Opetushallitus/oppijanumerorekisteri	master	LICENSE.txt	632	7c5df5c3eacb	EUPL-1.1-or-later	Copyright (c) 2013 The Finnish National Board of Education - Opetushallitus	raw.githubusercontent.com	MEASURED-NOT-FILED (registry)
+Opetushallitus/organisaatio	master	LICENSE.txt	632	7c5df5c3eacb	EUPL-1.1-or-later	Copyright (c) 2013 The Finnish National Board of Education - Opetushallitus	raw.githubusercontent.com	MEASURED-NOT-FILED (registry)
+Opetushallitus/valtionavustus	master	LICENSE.txt	653	a203b813f563	EUPL-1.1-or-later	Copyright (c) 2026 The Finnish National Board of Education - Opetushallitus	raw.githubusercontent.com	MEASURED-NOT-FILED (grants)
+telekom/ki-in-schulen	master	LICENSE	1228	6929393c58a1	MIT	Copyright 2021 Deutsche Telekom AG	raw.githubusercontent.com	DECLINED (stale 2025-06-04, not an agent) - ledger unstated REFUTED
+matheus3006/kit-agentes-ia	main	LICENSE	1073	7de0425411d7	MIT	Copyright (c) 2026 Matheus de Souza	raw.githubusercontent.com	DECLINED (out of scope)
+armandokeller/SAEP2026-Agentes-IA-e-Ferramentas	main	LICENSE	1071	df2a0a8755e5	MIT	Copyright (c) 2026 Armando Keller	raw.githubusercontent.com	DECLINED (workshop material)
+845421145-lang/agents-radar	master	LICENSE	1062	332a95a412b5	MIT	Copyright (c) 2026 Dylan	raw.githubusercontent.com	DECLINED (trends digest); search API total_count=0 while ls-remote resolves
+A-R007/Multi-Agent-Study-Assistant	main	-	-	-	no-grant	-	raw.githubusercontent.com (5 filenames probed)	DECLINED (no grant, pushed 2025-11-04)
+Jnf290/KI-Assistent_Lehrkraefte	-	-	-	-	unresolvable	-	ls-remote auth prompt; search API HTTP 422	DECLINED (unresolvable; README self-declares no licence)

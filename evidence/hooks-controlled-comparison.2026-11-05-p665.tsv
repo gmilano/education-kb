@@ -1,0 +1,11 @@
+measurement	head_p664_as_shipped	working_tree_p665	note
+gates_green	49/71	50/71	baseline taken with `git stash -u` on clean HEAD, same session, same commands
+gates_red	22	21	no gate turned red; gate-promotion-ratchet turned green
+FILED_table_rows_on_curated_pages	181	193	+12
+PROSE_sentences_only	40	43
+HISTORY_outside_curated_pages	5300	5300
+UNION_distinct	5329	5330
+filing_rate	3.4%	3.6%
+un_landed_distinct	344	341
+gate-promotion-ratchet	RED (181 < pin 183 set at p662)	GREEN (193 >= 183)	p664 shipped with this gate red and did not record it; make hooks was recorded DENIED at p664
+gate-promotion-ledger	RED	RED (238 findings: 207 C1-UNADJUDICATED, 125 VERIFIED-ABSENT, 104 QUEUE-UNENUMERATED, 30 C3-REGRESSION, 1 C2-RATCHET)	C3-REGRESSION message is "recorded RESTORED-p436 and is on NO live shelf" - the machine form of finding 665-A / T45
