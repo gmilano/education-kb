@@ -734,3 +734,46 @@ git ls-remote --symref https://github.com/<owner>/<repo> HEAD   # returns the re
 ```
 
 Then read the README for which branch carries the artefact you actually want — resolving the default is necessary and, as `gen-mentor` shows, not always sufficient.
+
+## P25 — Early-years computational thinking with no device budget and no copyleft (6–8 weeks) 🟢 new at p660
+
+**The engagement this answers.** A ministry, a school network or a foundation wants computational thinking for ages 5–10, at system scale, on hardware that does not exist yet, and wants a derivative it can brand and operate. Every earlier pattern on this page assumed either a device per learner or an AGPL platform. This one assumes neither.
+
+**Why it is new at p660.** Until this pass the base held that the Scratch family's only permissive surfaces were `scratch-blocks` and `forkphorus` — components, not a product. Org enumeration found **ScratchJr under BSD-3-Clause** and a **live, MIT, browser-only micro:bit stack**. Those two facts together make a permissive early-years programme buildable for the first time in this KB.
+
+```
+          ┌─────────────────────── LEARNER SURFACE — pick ONE by age ───────────────────────┐
+  ages 5–7   scratchfoundation/scratchjr        BSD-3-Clause  1,508 B  707★  `develop`
+             └─ 🔴 dormant since 2022-07-22 → FORK AND OWN; budget the maintenance line
+  ages 8–10  microbit-foundation/python-editor-v3   MIT  1,083 B  84★  `main`  (pushed 2026-11-04)
+             └─ microbit-foundation/micropython-microbit-v2-simulator  MIT  1,117 B  21★
+                └─ 🟢 THE BOARD RUNS IN THE BROWSER — zero hardware per learner
+          └────────────────────────────────────────────────────────────────────────────────┘
+                                   │  project files (.sb / .hex / .py)
+                                   ▼
+  ┌──────────────── ASSESSMENT — grades the ARTEFACT, not the prose ────────────────┐
+    scratchfoundation/scratch-analysis   BSD-3-Clause  1,520 B  36★  `develop`
+      structure · composition · complexity  →  your own rubric weights (closed, BSD permits it)
+    microbit-foundation/cctd-ml-machine   MIT  1,126 B  10★   AI-literacy module:
+      learner trains a gesture classifier on sensor data = "what is a model", by building one
+  └─────────────────────────────────────────────────────────────────────────────────┘
+                                   │  scores + evidence
+                                   ▼
+  ┌──────────────── PLUMBING — all permissive, all already on this base ────────────┐
+    ollama/ollama        MIT  1,058 B   local model: feedback in-country, no per-seat API cost
+    pylti1.3             LTI 1.3 launch from the client's existing LMS (Moodle stays stock)
+    yetanalytics/lrsql   xAPI statements → the learning record the ministry reports on
+  └─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Licence boundary — the whole point of the pattern.** Every component above is BSD-3-Clause, MIT or Apache-2.0. There is **no GPL and no AGPL anywhere in the chain**, so the derivative can be closed, branded and sold as a managed service. Contrast the obvious-looking alternative: building on `scratch-gui` (AGPL-3.0) means hosting it as a service triggers network copyleft over your modifications, and building on `Scratch_1.4` drags in GPL-2.0 **plus** a runtime attribution obligation in the `Help > About` dialog (**T42**).
+
+🔴 **Do not put the curriculum in scope on these terms.** `RaspberryPiFoundation/scratch-curriculum` is the natural lesson material and it is **CC BY-NC-SA 4.0** — NonCommercial, so it cannot be shipped in a paid programme at all (**T42**). Either license it separately and directly from the Raspberry Pi Foundation, or author lessons as a billable deliverable. The permissive content exception is `scratchfoundation/scratchjr-website` (BSD-3-Clause, live to 2026-08-20), which is a genuinely reusable starting point for teacher-facing material.
+
+**Sequence.**
+- **Weeks 1–2** — Fork ScratchJr, stand the simulator stack up behind the client's LMS via `pylti1.3`, and get one class of each age band producing project files. Do not build assessment yet; find out what learners actually make first.
+- **Weeks 3–4** — Wire `scratch-analysis` over the collected projects and calibrate rubric weights against teacher judgement on a sample. This is where the value is: the complexity metrics are off-the-shelf, the weighting is the client's pedagogy and is yours to keep.
+- **Weeks 5–6** — Add `cctd-ml-machine` as the AI-literacy unit and emit xAPI to `lrsql`, so the programme reports against the AI-literacy mandates this KB tracks (`intel/market.md`, North America and EMEA legs) rather than against seat counts.
+- **Weeks 7–8 (conditional)** — Local-model feedback via `ollama` only if the client has a data-residency requirement; otherwise skip it and save the inference engineering.
+
+**What to tell the client up front.** The ScratchJr fork is **four years cold**. That is not a defect for a fork-and-own engagement — it means the upstream will not surprise you — but it does mean there is no community fixing iOS/Android build breakage for you, and that maintenance line must be in the price. The micro:bit half is the opposite: pushed yesterday, so it needs tracking rather than owning. Scoping the two halves the same way is the mistake this pattern exists to prevent.

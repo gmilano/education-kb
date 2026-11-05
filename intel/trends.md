@@ -481,3 +481,26 @@ For most of this base's history an education AI tool was *an application* — so
 🟡 **Read the star counts honestly before building a thesis on them.** The four `PAIDEIA` ports carry `26`, `3`, `2` and `1` star against the canonical's `92`. This trend is evidenced by **what builders are choosing to ship**, not by adoption — there is no adoption here to measure. The canonical's `#1` placing on GeekNews and a Product Hunt launch are reach signals for the *project*, not for the ports.
 
 🔵 **The port worth watching is the MCP one**, for the same reason `anki-mcp-server` mattered at p655 and `tutor-mcp` before it: an MCP server is the one shape on this list that is **not** tied to a single vendor's runtime, so it is the only one an institution can point at a local model it controls. If this trend resolves anywhere durable, it resolves there — see **P24**.
+
+## T42 — `NOASSERTION` has a second mechanism, and it is the one with a commercial consequence 🟢 new at p660
+
+p659 named a mechanism for `NOASSERTION`: on a controlled five-repo set, appending text to an otherwise byte-stock MIT grant flips GitHub's classifier off a correct verdict. That mechanism is real, and it is **benign** — the stated licence still governs the whole repository, so reading the payload recovers the right answer and nothing about the engagement changes.
+
+p660 found a **second, distinct mechanism with the opposite consequence.** Both `NOASSERTION` repositories measured this pass carry a payload that is **not a grant at all**. It is a *licence-split manifest*: a short file naming two or three different licences for different directories.
+
+| Repository | Classifier | Payload, byte-read at p660 | What the file actually says |
+|---|---|---|---|
+| [`scratchfoundation/Scratch_1.4`](https://github.com/scratchfoundation/Scratch_1.4) | `NOASSERTION` | `LICENSE`, `1,008 B` | **Three licences in one repo.** Code **GPL-2.0**; `/src/plugins` **MIT**; `/Help`, `/Media`, `/Projects` **CC BY-SA 3.0**. Plus a term rarely seen in this KB: modified versions must be *designated as modified in the `Help > About` dialog at runtime* — an attribution obligation in the **UI**, not just the source. |
+| [`RaspberryPiFoundation/scratch-curriculum`](https://github.com/RaspberryPiFoundation/scratch-curriculum) | `NOASSERTION` | `LICENSE.md`, `551 B` | **CC BY-NC-SA 4.0** — Attribution–**NonCommercial**–ShareAlike, plus Code Club terms and conditions by reference. |
+
+**Why the distinction matters more than it sounds.** Under p659's mechanism, a payload read *resolves* `NOASSERTION` into a usable licence. Under p660's, a payload read resolves it into **a question you still have to answer**: which licence governs the part you intend to ship. A pipeline that files one SPDX value per address — as this base's own ledger schema does — cannot represent either row honestly, and `Scratch_1.4` is filed in `evidence/address-ledger.tsv` as `licence-split:GPL-2.0+MIT+CC-BY-SA-3.0` for exactly that reason.
+
+### 🔴 And the curriculum-licence finding gets worse, not just confirmed
+
+This base has been accumulating a hypothesis: permissively-licensed education **software** is common, permissively-licensed education **content** is not. The evidence was two assets, both ShareAlike — [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (949★, CC BY-SA 4.0, declined at p651) and a French K-12 curriculum pack (CC BY-SA 4.0, declined at p658).
+
+`scratch-curriculum` (212★, **357 forks** — more forks than stars, the signature of material institutions take copies of) is the third, and it is **stricter than both**: CC BY-**NC**-SA 4.0. ShareAlike bars a *closed* derivative. NonCommercial bars **commercial use at all** — a Globant engagement cannot ship it, cannot bundle it, and cannot charge for a service built on it, regardless of whether the derivative is open.
+
+**3 of 3 curriculum assets this base has measured are non-commercialisable, and the newest is the hardest.** The single counter-case remains [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) (MIT, `1,066 B`, re-read at p660), which is precisely why `compose/patterns.md` **P10** is built on that one and not on a school curriculum. **Confidence: high** on the licences (three payloads byte-read); **medium** on the generalisation — three assets is a pattern, not a census, and this base says so rather than rounding it up.
+
+🔵 **The practical rule this yields.** In an education engagement, price the *content* licence separately from the *code* licence and read it first. The code is usually MIT or Apache; the curriculum is usually the thing that cannot be sold, and it is usually the thing the client actually wanted.

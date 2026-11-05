@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p660) — 🟢 **`repos/foundations.md` 78 ← 72, AND ALL SIX NEW ROWS CAME FROM ENUMERATING AN ORG THIS BASE ALREADY HELD, NOT FROM A DIGEST. 🟢 SCRATCHJR IS BSD-3-CLAUSE — A WHOLE PERMISSIVE EARLY-YEARS PRODUCT p658 MISSED. 🔧 AND THE INDEX THAT SAYS WHAT THIS BASE HOLDS WAS MISSING `35` OF ITS `159` SHELF ROWS.**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); licence payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars (🟢 live, non-universal — see `660-P`); repository **HTML pages** (🔴 **`403`**) and `img.shields.io` (🔴 **`403`**), so **every star figure below is single-channel**.
+
+### 🟢 `repos/foundations.md` 72 → 78
+
+| Repo | Licence | Payload | ★ (single-channel) | Last push | Why it is filed |
+|---|---|---|---|---|---|
+| [`scratchfoundation/scratchjr`](https://github.com/scratchfoundation/scratchjr) | 🟢 **BSD-3-Clause** | `LICENSE`, `1,508 B`, stock, `Copyright (c) 2016, Massachusetts Institute of Technology` | `707` | 🔴 `2022-07-22` | A **complete ages-5–7 programming platform** under a permissive grant. Withdraws p658's claim that only `scratch-blocks` and `forkphorus` are permissive routes into the Scratch family |
+| [`scratchfoundation/scratchjr-website`](https://github.com/scratchfoundation/scratchjr-website) | 🟢 **BSD-3-Clause** | `LICENSE`, `1,508 B`, byte-identical to the app | `55` | 🟢 `2026-08-20` | The maintained half of a dormant asset, and the rare education **content** repo that is not ShareAlike |
+| [`scratchfoundation/scratch-analysis`](https://github.com/scratchfoundation/scratch-analysis) | 🟢 **BSD-3-Clause** | `LICENSE`, `1,520 B`, `Copyright (c) 2018, Code-to-Learn Foundation d/b/a Scratch Foundation` | `36` | 🟢 `2026-06-16` | Grades the **artefact** — structure, composition, complexity of a learner's project. Against the standing assessment gap; permissive, so rubric weights stay closed |
+| [`microbit-foundation/python-editor-v3`](https://github.com/microbit-foundation/python-editor-v3) | **MIT** | `LICENSE`, `1,083 B`, stock, `Copyright (c) 2021 - 2022 Micro:bit Educational Foundation` | `84` | 🟢 **`2026-11-04`** | The **live** permissive early-years surface, where ScratchJr is permissive but cold |
+| [`microbit-foundation/micropython-microbit-v2-simulator`](https://github.com/microbit-foundation/micropython-microbit-v2-simulator) | **MIT** | `LICENSE`, `1,117 B`, stock, `Copyright (c) 2022 Damien P. George, Micro:bit Educational Foundation` | `21` | 🟢 **`2026-11-04`** | 🟢 **Removes the hardware line item** — the board runs in the browser. Decisive for LATAM and any budget-constrained system |
+| [`microbit-foundation/cctd-ml-machine`](https://github.com/microbit-foundation/cctd-ml-machine) | **MIT** | `LICENSE`, `1,126 B`, stock, `Copyright (c) 2023 Center for Computational Thinking and Design at Aarhus University` | `10` | 🟢 `2026-09-24` | AI literacy taught by **training a model**, which is what the AI-literacy mandates actually ask for. **EMEA on its own grant payload** |
+
+🔵 **`verticals/solutions.md` 36 → 37** — ScratchJr is also filed as a *platform*, because that is what it is, and the Scratch row's p658 "permissive routes" sentence was corrected in place rather than left to age.
+
+### 🟢 The channel that produced them, and its measured yield
+
+`gh api search/repositories -f q='user:ORG'` over **seven orgs this base already holds**. Against the digests' **nineteenth consecutive nil** this pass, it returned unheld addresses immediately.
+
+| Channel | Enumerated | Unheld | Filed | Yield |
+|---|---|---|---|---|
+| Four mandated global search legs | `14` candidates | `2` | `0` | 🔴 **nil, nineteenth consecutive** |
+| Four mandated regional legs | — | — | `0` | 🔴 **nil (`660-S`)** |
+| Lateral README expansion (p659's channel) | not re-run this pass | — | — | ⚪ untested at p660 |
+| 🟢 **Org enumeration (new at p660)** | `~110` | `~100` | **`8`** | 🟢 **≈`7 %`** |
+
+🔵 **And the yield is reported as it measured, not as it would read best.** Most of the `~110` are infrastructure, not education assets — `cf-workers`, `eslint-config-scratch`, `aws-sts-helper`, `renovate-config`, `.github`, `docker-daplink`, `baidu-netdisk-upload-action`. **Volume is not supply.** `≈7 %` beats a nil and loses badly to p659's lateral-README `100 %`; the channel's value is that it is *cheap and repeatable* (one API call per org), not that it is rich. **`ACTION p660-B`:** enumerate the remaining held orgs — `openedx`, `moodle`, `frappe`, `1EdTech`, `adlnet`, `HKUDS`, `THU-MAIC` — one call each.
+
+### 🔧 `660-B` — the index was missing `22.0 %` of the shelf
+
+| Measurement | Value |
+|---|---|
+| GitHub addresses on the six curated pages | `159` |
+| …with **no line** in `evidence/address-ledger.tsv` | 🔴 **`36`** (`35` table rows + `1` prose) |
+| Share of the curated shelf invisible to the index | 🔴 **`22.0 %`** |
+| Largest single cause | `18` block-coding rows added to `repos/foundations.md` at **p658** |
+| Ledger `first_seen_pass` values after p640 | `p640` (`3`), `p659` (`5`) — **nothing p641–p658** |
+| Re-verified first-hand before filing | `35 / 35`, **`0` NOT-FOUND** |
+| Licence cells reproduced against the shelf | 🟢 **`32 / 32`** |
+| Stated byte counts reproduced exactly | 🟢 **`6 / 6`** |
+| After repair | 🟢 **`36 → 0`** |
+
+**The shelf was right and the index was wrong** — which is the more dangerous way round for this base, because the index is what a pass reads to decide whether a candidate is new. A ledger-only "already held?" test would have reported `scratchfoundation/scratch-gui`, `microsoft/pxt` or `patchy631/ai-engineering-hub` as novel and invited a duplicate row onto a page that already carried them. That is exactly the cost the ledger was built at p529 to remove.
+
+🔴 **This is the tenth pass with `make hooks` denied, and the second measured cost of that denial** (`659-O` was the first: a ragged row that sat on `agents/top.md` for four passes). `ingest/address-ledger.py` — the instrument that compares shelf against index and would have caught this at p658 — was attempted at p660 and denied under the same `[Code from External]` classifier. The repair was therefore done out-of-tree with `grep`/`awk`, and it will drift again at p661 unless the instrument runs.
+
 ## 🆕 2026-11-05 (p659) — 🟢 **`repos/foundations.md` 70 → 72, AND BOTH NEW ROWS WERE ALREADY IN THE LEDGER — ONE SINCE p28, ONE SINCE p104 WITH A WRONG VERDICT. 🔴 THE REPOSITORY-PAGE STAR CHANNEL IS `403`, SO EVERY STAR FIGURE THIS PASS IS SINGLE-CHANNEL.**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); licence payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars (🟢 live); repository **HTML pages** (🔴 **`403`** — the channel this base's method names for stars).
