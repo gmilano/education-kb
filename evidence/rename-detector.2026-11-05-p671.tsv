@@ -1,0 +1,7 @@
+address	git_live	default_ref	index_value	owner_index_value	verdict	new_address	sha_identity	licence_payload	shelf_occurrences_live_pages	already_published
+openedx/edx-platform	yes	master	422	175	RENAMED-AWAY	openedx/openedx-platform	78b892c6a identical at both addresses	AGPL-3.0 35136 B, sha256 e12d7856 identical at both addresses	9	yes - p526 (2026-10-29), unrepaired 145 passes
+NSoiffer/MathCAT	yes	main	422	5	RENAMED-AWAY	daisy/MathCAT	c6bba2f3a identical at both addresses	MIT 1065 B, (c) 2022 NSoiffer unchanged	1	no - novel at p671, 0 tree hits for daisy/MathCAT
+Frederikmh90/RUCAI	yes	main	422	422	OWNER-UNINDEXED	-	-	not re-read this pass	1	n/a
+DaRL-GenAI/instructional_agents	yes	main	0	15	LIVE-UNINDEXED	-	-	MIT (read at p670)	1	yes - p670 (670-R2)
+kvnloo/tutor-mcp	yes	main	0	114	LIVE-UNINDEXED	-	-	not re-read this pass	1	no
+thc1006/moodle-mcp	yes	main	0	151	LIVE-UNINDEXED	-	-	not re-read this pass	1	no

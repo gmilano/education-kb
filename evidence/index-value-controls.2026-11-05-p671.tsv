@@ -1,0 +1,19 @@
+probe	query	index_value	git_ls_remote	live	class	note
+positive	repo:moodle/moodle	1	refs/heads/main	yes	INDEXED	canonical positive control
+positive	repo:HKUDS/DeepTutor	1	refs/heads/main	yes	INDEXED	positive control
+positive	repo:francoisjacquet/rosariosis	1	refs/heads/mobile	yes	INDEXED	default ref is feature-named (668-P class)
+positive	repo:DaRL-GenAI/instructional_agents_studio	1	refs/heads/main	yes	INDEXED	positive control, sibling of a 0-value case
+zero	repo:DaRL-GenAI/instructional_agents	0	refs/heads/main	yes	LIVE-UNINDEXED	owner indexed (user:DaRL-GenAI=15); 670-R2 reproduced, value is 0 not null when .total_count is read
+zero	repo:kvnloo/tutor-mcp	0	refs/heads/main	yes	LIVE-UNINDEXED	owner indexed (user:kvnloo=114)
+zero	repo:thc1006/moodle-mcp	0	refs/heads/main	yes	LIVE-UNINDEXED	owner indexed (user:thc1006=151)
+422-invented	repo:zzqx/this-repo-does-not-exist-p671	422	fatal: auth prompt	no	UNRESOLVABLE	invented slug, genuinely absent
+422-invented	repo:zzqxnonsense671/foo	422	fatal: auth prompt	no	UNRESOLVABLE	invented slug, genuinely absent
+422-invented	repo:moodle/moodle-does-not-exist	422	fatal: auth prompt	no	UNRESOLVABLE	REAL owner + absent repo: isolates repo from owner
+422-live-RENAMED	repo:openedx/edx-platform	422	refs/heads/master	yes	RENAMED-AWAY	owner indexed (user:openedx=175); REFUTES 422=absent; moved to openedx/openedx-platform
+422-live-RENAMED	repo:NSoiffer/MathCAT	422	refs/heads/main	yes	RENAMED-AWAY	owner indexed (user:NSoiffer=5) but repo absent from own owner enumeration; moved to daisy/MathCAT
+422-live-OWNER	repo:Frederikmh90/RUCAI	422	refs/heads/main	yes	OWNER-UNINDEXED	user:Frederikmh90 also 422; owner unknown to index, no rename inferred
+batch-control	repo:moodle/moodle repo:HKUDS/DeepTutor	2	n/a	n/a	BATCH-CLEAN	space-separated repo: qualifiers are implicitly OR-ed
+batch-control	repo:moodle/moodle repo:HKUDS/DeepTutor repo:zzqx/this-repo-does-not-exist-p671	2	n/a	n/a	NO-POISONING	one absent slug does NOT invalidate the batch
+batch-control	repo:moodle/moodle repo:HKUDS/DeepTutor repo:DaRL-GenAI/instructional_agents	2	n/a	n/a	NO-POISONING	one unindexed slug does NOT invalidate the batch
+422-mechanism	repo:openedx/edx-platform repo:moodle/moodle	1	n/a	n/a	MECHANISM	one resolvable qualifier is enough; 422 means NO resolvable qualifier in the query, not absence
+422-mechanism	repo:zzqx/this-repo-does-not-exist-p671 repo:nsoiffer/mathcat	422	n/a	n/a	MECHANISM	two unresolvable qualifiers together still 422

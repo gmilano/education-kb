@@ -2055,7 +2055,7 @@ NousResearch/hermes-agent	p28	MIT	repos/foundations.md	2026-11-05	4	4
 novatrix-2030/SIH-2026	p11	unstated	-	2026-10-01	1	1
 nsip/curriculum-mapper	p91	unstated	-	2026-10-11	2	2
 nso-india/esankhyiki-mcp	unpassed	unstated	-	2026-11-05	1	0
-NSoiffer/MathCAT	p457	MIT	intel/market.md,intel/trends.md,repos/foundations.md	2026-11-05	1	1
+NSoiffer/MathCAT	p457	RENAMED-AWAY|MIT	intel/market.md,intel/trends.md,repos/foundations.md	2026-11-05	2	2
 nubabe/webuntis-org	p243	no-grant	-	2026-10-16	1	1
 nucleuscloud/neosync	p352	MIT	-	2026-10-21	1	1
 numbas/Numbas	p89	Apache-2.0	intel/market.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-11-05	16	14
@@ -2169,7 +2169,7 @@ openedx/credentials	p306	AGPL-3.0	-	2026-10-19	1	1
 openedx/ease	p94	unstated	-	2026-10-15	3	3
 openedx/edx-enterprise	p256	AGPL-3.0|no-grant	-	2026-10-17	1	1
 openedx/edx-ora2	p94	unstated	-	2026-10-26	6	4
-openedx/edx-platform	p17	AGPL-3.0|Apache-2.0	compose/patterns.md,repos/foundations.md,verticals/solutions.md	2026-11-05	38	31
+openedx/edx-platform	p17	RENAMED-AWAY|AGPL-3.0|unfiled-as-row-since-p671	repos/foundations.md,verticals/solutions.md	2026-11-05	39	32
 openedx/edx-proctoring	p25	unstated	-	2026-10-02	5	3
 openedx/event-routing-backends	p12	AGPL-3.0	-	2026-10-06	1	1
 openedx/event-tracking	p256	AGPL-3.0|no-grant	-	2026-10-17	1	1
@@ -2180,7 +2180,7 @@ openedx/openedx-ai-extensions	p188	unstated	agents/top.md	2026-11-05	5	4
 openedx/openedx-core	p140	unstated	-	2026-10-12	1	1
 openedx/openedx-filters	p367	AGPL-3.0	-	2026-10-21	1	1
 openedx/openedx-learning	p390	AGPL-3.0	-	2026-10-22	1	1
-openedx/openedx-platform	p28	AGPL-3.0	-	2026-11-05	23	16
+openedx/openedx-platform	p28	AGPL-3.0	compose/patterns.md,repos/foundations.md,verticals/solutions.md	2026-11-05	24	17
 openedx/paragon	p256	Apache-2.0	-	2026-10-17	1	1
 openedx/platform-plugin-aspects	p22	Apache-2.0	-	2026-10-01	1	1
 openedx/tutor-contrib-aspects	p22	Apache-2.0	-	2026-10-20	4	3
@@ -3272,3 +3272,7 @@ campfirium/foliole	p667	Apache-2.0	repos/foundations.md	2026-11-05	1	1
 microsoftarchive/Learn-LTI	p667	MIT	repos/foundations.md	2026-11-05	1	1
 PythonFreeCourse/lms	p667	BSD-3-Clause	repos/foundations.md	2026-11-05	1	1
 agorafoundation/agora	p667	BSD-3-Clause	repos/foundations.md	2026-11-05	1	1
+daisy/MathCAT	p671	MIT	intel/market.md,intel/trends.md,repos/foundations.md	2026-11-05	1	1
+daisy/MathCATForPython	p671	MIT	repos/foundations.md	2026-11-05	1	1
+Negai-ai/AgentClaw	p671	Apache-2.0|NOT-FILED-off-domain	-	2026-11-05	1	1
+huifer/Claude-Code-KnowCraft	p671	MIT|NOT-FILED-off-domain	-	2026-11-05	1	1

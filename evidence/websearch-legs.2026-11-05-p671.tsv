@@ -1,0 +1,48 @@
+region	fact	needle_variants	shelf_hits	full_corpus_hits	verdict	note
+Global	OECD Digital Education Outlook 2026 purpose-built AI	Digital Education Outlook	23	74	HELD-ON-SHELF	-
+Global	AI education market 11.40B 2026 -> 57.25B 2033 (Coherent)	11.40|57.25	13	34	HELD-ON-SHELF	-
+Global	86% of students across 16 countries use AI	86% of students|86%	16	38	HELD-ON-SHELF	-
+Global	83% of K-12 teachers use genAI	83% of K-12|83%	3	19	HELD-ON-SHELF	-
+Global	THU-MAIC/OpenMAIC multi-agent classroom	OpenMAIC|THU-MAIC	620	1425	HELD-ON-SHELF	-
+Global	HKUDS/DeepTutor	DeepTutor	886	2223	HELD-ON-SHELF	-
+Global	patchy631/ai-engineering-hub	ai-engineering-hub|patchy631	88	135	HELD-ON-SHELF	-
+Global	OpenOLAT is the Apache-2.0 LMS	OpenOLAT|OpenOlat	657	2674	HELD-ON-SHELF	-
+Global	RosarioSIS GPL-2.0 SIS	rosariosis|RosarioSIS	211	828	HELD-ON-SHELF	-
+Global	DSpace is BSD not MIT	DSpace	34	256	HELD-ON-SHELF	-
+Global	Hermes Agent MIT (Nous Research)	Hermes Agent|NousResearch	104	209	HELD-ON-SHELF	-
+North America	134 AI-in-education bills across 31 states 2026	134 bills|31 states	83	318	HELD-ON-SHELF	-
+North America	Maryland SB 720 requires state AI guidance	SB 720|SB720	28	73	HELD-ON-SHELF	-
+North America	New York A 9190 restricts classroom AI to grade 9+	A 9190|A9190	26	42	HELD-ON-SHELF	-
+North America	California AB 1159 bars student data for model training	AB 1159|AB1159	56	135	HELD-ON-SHELF	-
+North America	MD/ID/OK/VA require state guidance AND district policy	Idaho|Oklahoma|Virginia	128	319	HELD-ON-SHELF	-
+North America	Ohio districts July 2026 written-AI-policy deadline	Ohio	33	116	HELD-ON-SHELF	-
+North America	DC bans AI from grading, discipline, IEP, teacher eval	IEP|individualized education	103	309	HELD-ON-SHELF	-
+North America	K-12 AI Literacy and Readiness Act of 2026 advanced	AI Literacy and Readiness Act|K-12 AI Literacy	49	151	HELD-ON-SHELF	-
+North America	60% of US teachers use AI tools (Gallup n>2200)	60% of US teachers|60%	36	106	HELD-ON-SHELF	-
+North America	55% of high-school principals have not blocked AI	55% of high-school principals|high-school principals|55% of high school principals	7	15	HELD-ON-SHELF	-
+North America	NC $10M earmark for Khanmigo	Khanmigo|Khan Academy	23	41	HELD-ON-SHELF	-
+North America	US DoL AI Literacy Framework Feb 2026	AI Literacy Framework|Department of Labor	5	22	HELD-ON-SHELF	-
+EMEA	EU AI Act Annex III high-risk covers education	Annex III|Annex 3	213	642	HELD-ON-SHELF	-
+EMEA	Digital Omnibus moves Annex III to 2 December 2027	2 December 2027|December 2027	110	200	HELD-ON-SHELF	-
+EMEA	UK DfE generative-AI product safety standards	product safety standards|Department for Education	21	65	HELD-ON-SHELF	-
+EMEA	Ofqual AI and coursework integrity March 2026	Ofqual	15	29	HELD-ON-SHELF	-
+EMEA	Europe AI-in-education market $2.64B 2026	2.64 billion|$2.64B|2.64	49	145	HELD-ON-SHELF	-
+EMEA	Finland/Estonia/Netherlands K-12 leaders	Estonia	17	67	HELD-ON-SHELF	-
+EMEA	KHDA Dubai AI guidance to private schools	KHDA	19	44	HELD-ON-SHELF	-
+EMEA	only 10% of 450+ institutions have formal AI guidelines	10% of schools|formal guidelines	11	24	HELD-ON-SHELF	-
+APAC	Vietnam Decision 33/2026/QD-TTg names education high-risk	33/2026/QD-TTg|Decision 33/2026	40	203	HELD-ON-SHELF	-
+APAC	Korea AI Basic Act in force 22 Jan 2026	AI Basic Act|AI Framework Act	116	289	HELD-ON-SHELF	-
+APAC	China penalties up to 50m yuan + content labelling	50 million|CNY 50|¥50	3	6	HELD-ON-SHELF	-
+APAC	Japan light-touch voluntary AI governance	light-touch|voluntary	38	99	HELD-ON-SHELF	-
+APAC	Singapore AI Verify toolkit	AI Verify	31	60	HELD-ON-SHELF	-
+APAC	Australia TEQSA requires genAI action plans	TEQSA	43	66	HELD-ON-SHELF	-
+LATAM	UNESCO IESALC: 87% of ~200 HEIs in 19 countries use AI	IESALC|87%	163	581	HELD-ON-SHELF	-
+LATAM	only 26% have a formal AI strategy	only 26%|26% have a formal	12	44	HELD-ON-SHELF	-
+LATAM	55% of universities have no specific AI budget	55% of universities|no specific AI budget	3	9	HELD-ON-SHELF	-
+LATAM	UNESCO LAC Observatory on AI in Education, Apr 2026	Observatory on Artificial Intelligence in Education|Observatorio	10	24	HELD-ON-SHELF	-
+LATAM	>half of teachers in Chile and Brazil use AI tools	Chile|Brazil	601	1643	HELD-ON-SHELF	-
+LATAM	Tec de Monterrey UNESCO agreement Mar 2026	Monterrey	39	117	HELD-ON-SHELF	-
+LATAM	CENIA partnership / ECLAC hosted launch	CENIA|ECLAC|CEPAL	74	297	HELD-ON-SHELF	-
+CONTROL	nonsense needle MUST score 0 at both scopes	zzqxnonsense671educationfoo	0	0	NOVEL	control
+CONTROL	known-held in variant spelling (Apache-2.0)	Apache-2.0	3113	24888	HELD-ON-SHELF	control
+CONTROL	known-held plain (Moodle)	Moodle	1090	2634	HELD-ON-SHELF	control

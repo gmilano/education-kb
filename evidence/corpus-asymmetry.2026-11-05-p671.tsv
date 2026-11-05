@@ -1,0 +1,4 @@
+scope	bytes	files	share_pct	ratio_to_shelves	note
+sell-shelves	11489966	8	14.6	1.00	the 8 pages a client is shown
+evidence-store-and-code	59075172	6108	75.0	5.14	prior passes' own scorer logs and instruments
+other-non-archive	8149616	91	10.4	0.71	README index, open-gaps, measured-unusable, Makefile

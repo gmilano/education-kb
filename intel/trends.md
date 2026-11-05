@@ -335,7 +335,7 @@ Across p652–p656 this base searched for education *agents* and for *AI* grader
 
 **Commercial consequence:** the credible engagement is **adopt-and-harden** — deploy, integrate over LTI, migrate real exercises, calibrate, train graders — not build. Any proposal to write a grader from scratch for a university client should now have to argue against six working systems. See `compose/patterns.md` **P19** and `verticals/solutions.md` Pattern J.
 
-## T31 — The psychometric measurement layer is permissive, complete, and almost entirely dormant 🟢 new at p657
+## T31 — The psychometric measurement layer is permissive, complete, and almost entirely dormant 🟢 new at p657 🔧 **`p671`: this identifier is used twice on this page.** `p664` reused `T31` for an unrelated trend (the query-language artefact). Both are kept — `82` cross-page references point at the four duplicated numbers and renumbering would break every one — so each collision is named at both ends instead. **This is the `p657` `T31`.**
 
 This base has held knowledge tracing (`pyBKT`, `pykt-toolkit`) for several passes and **T9** correctly called it research-grade. It never held **psychometrics**, which is a different question: knowledge tracing predicts *whether the next answer will be right*; psychometrics estimates *how hard each item is, which skills a learner actually holds, and which item to ask next*. Only the second yields the calibrated item parameters an adaptive test is built on. Sweeping `topic:psychometrics` (517 repos), `topic:item-response-theory` (153) and `topic:computerized-adaptive-testing` (24) returns a full pipeline, all permissive:
 
@@ -353,7 +353,7 @@ This base has held knowledge tracing (`pyBKT`, `pykt-toolkit`) for several passe
 
 **This is a different kind of gap from T28's and should be scoped differently.** T28 found *one live permissive LRS with no fallback* — a single-vendor dependency. Here the **mathematics is published and stable** (IRT is five decades old; these are implementations of textbook estimators, not model wrappers that rot), so dormancy is a far smaller risk than it looks: a 2022 maximum-likelihood 2PL fitter is not stale in the way a 2022 LLM integration is. ⚠️ **But the engagement must own them.** Any proposal built on this layer is taking maintenance responsibility for unmaintained code, and should price that in explicitly rather than describe seven dormant repositories as a stack. See `compose/patterns.md` **P18**.
 
-## T32 — Spoken assessment is a layer this KB had never seen at all, and it has a permissive answer that displaces a paid API 🟢 new at p657
+## T32 — Spoken assessment is a layer this KB had never seen at all, and it has a permissive answer that displaces a paid API 🟢 new at p657 🔧 **`p671`: duplicate identifier — `p664` reused `T32`. This is the `p657` `T32`.**
 
 Before this pass, `grep` for `pronunciation` and `speech assessment` across all eight shelves returned **zero files** — and, unlike the p656 interop finding, **zero files in the 5.8 MB and 4.5 MB append-only logs as well.** Not held-but-unshelved: genuinely never seen. `topic:pronunciation` (331 repositories) returns a working stack:
 
@@ -467,7 +467,7 @@ The pass's other two index disagreements both resolved the *other* way, which is
 
 **Confidence: high** (all three read byte-for-byte on the resolved default branch).
 
-## T39 — The sector's standard licence shape is permissive code wrapped around unlicensed courseware 🟢 new at p658
+## T39 — The sector's standard licence shape is permissive code wrapped around unlicensed courseware 🟢 new at p658 🔧 **`p671`: duplicate identifier — `p661` reused `T39`. This is the `p658` `T39`.**
 
 `code-dot-org/code-dot-org` states it in one payload: Apache-2.0 for "all source codes and assets", **except** Code.org's artwork, graphics, sounds, lectures, videos, logos, characters and fonts, enumerated in a 4,271 B / 77-line `NOTICE`, which "may not be used or distributed or accessed in any manner other than directly via Code.org's own web site, mobile applications, or social media channels … **without modification or embedding in another format**". The Minecraft assets inside it are **Microsoft's**, and any distribution outside Code.org's own site needs a separate agreement with Microsoft.
 
@@ -475,7 +475,7 @@ This is the same shape p657 found at the OER layer and p656 at the platform laye
 
 **Confidence: high** (licence and `NOTICE` both read in full).
 
-## T40 — Scratch is two licences, and which one you touch decides the business model 🟢 new at p658
+## T40 — Scratch is two licences, and which one you touch decides the business model 🟢 new at p658 🔧 **`p671`: duplicate identifier — `p661` reused `T40`. This is the `p658` `T40`.**
 
 Not one project: `scratch-gui` (4,807 ★) and `scratch-vm` (1,306 ★) are **AGPL-3.0**; `scratch-blocks` (2,769 ★, pushed 2026-11-05) is **Apache-2.0**. Hosting a modified Scratch editor as a service triggers network copyleft on the hosted work; building on the blocks library does not.
 
@@ -522,7 +522,7 @@ This base has been accumulating a hypothesis: permissively-licensed education **
 
 🟢 **Extended at p662 with a controlled specimen that isolates the filename axis.** `anchore/syft` serves canonical Apache-2.0 at `LICENSE` (`11,357 B`, `sha256₁₂ c71d239df917`) and classifies **`Apache-2.0`**. `aboutcode-org/scancode-toolkit` serves **the same bytes and the same digest** at `apache-2.0.LICENSE` on `develop`, and classifies **`NOASSERTION`**. Payload held constant, filename varied, verdict flipped — which is the cleanest demonstration this base holds that a `NOASSERTION` carries no information about the grant. 🟢 **And the complementary control:** `CycloneDX/cyclonedx-cli` *filled in* the Apache `APPENDIX` boilerplate (`Copyright OWASP Foundation`, brackets `{}`, `11,341 B`, `sha256₁₂ 6c29f22a4a73`) and still classifies `Apache-2.0`. **Completing the appendix is safe; removing it and appending text — OpenOLAT's shape — is what flips the classifier.** All four readings taken first-hand on `2026-11-05`. Wired as `compose/patterns.md` **P27**.
 
-## T39 — This base's absence claims are checked against its shelves and refuted in its logs, and that is now its dominant defect class 🟢 new at p661
+## T39 — This base's absence claims are checked against its shelves and refuted in its logs, and that is now its dominant defect class 🟢 new at p661 🔧 **`p671`: duplicate identifier — `T39` was already taken by `p658`'s courseware-licence trend. This is the `p661` `T39`.**
 
 Four of the last six passes found the same thing, on four different layers: **the finding was already held and had never reached a shelf.** p656 — the interop, telemetry and accessibility layer, measured in the logs for many passes, never promoted. p659 — `PAIDEIA` measured since p540 and never filed; `ollama/ollama` cited on five shelves while its ledger verdict read `unstated`. p660 — `35` of `159` shelf addresses missing from the base's own index, `22.0%` invisible. p661 — the accessibility layer again, plus a proctoring absence claim its own log had refuted `451` passes earlier.
 
@@ -541,7 +541,7 @@ A claim is flagged only when its content tokens collide with a **shelf row**. Th
 
 🔴 **Why this matters outside this repository.** Every absence claim on these pages is load-bearing for an engagement: *"there is no permissive proctoring software"* becomes a line item to build, and *"accessibility has no permissive answer"* becomes a services-only proposal with no product. Two such claims were wrong this pass, and both would have changed a proposal's shape and price. **An append-only log is an asset only if something reads it back.** Registered as `Gap 661-C`; the fix is to index the logs as a refutation corpus distinct from the shelf corpus, and it was not performed because `make hooks` and `ingest/` have been denied for eleven consecutive passes. **Confidence: high** — the mechanism is read directly off the instrument's own recorded scope, and both p661 cases fit it exactly.
 
-## T40 — Every "no permissive supply" claim this base has tested has turned out to be an adoption gap instead, and that is now five for five 🟢 new at p661
+## T40 — Every "no permissive supply" claim this base has tested has turned out to be an adoption gap instead, and that is now five for five 🟢 new at p661 🔧 **`p671`: duplicate identifier — `T40` was already taken by `p658`'s Scratch trend. This is the `p661` `T40`.**
 
 The pattern is complete enough to state as a rule. Each of these was published as a supply absence and each, when the right query was finally run, turned out to be shallow-but-real supply:
 
@@ -597,7 +597,7 @@ The claim under test was this base's longest-standing structural gap: **`agents/
 
 🔧 **Numbering note:** this entry is **T44** because **T43** is the highest unique number on the page — `T39` and `T40` each appear **twice** (p658 and p661 both minted a pair). The duplicates are left in place rather than silently renumbered, since other pages cite them by number; flagged here so the next pass does not mint a third `T39`.
 
-## T31 — A regional "zero" on this base's shelves has twice turned out to be a query-language artefact, and the instrument is the finding 🟢 new at p664
+## T31 — A regional "zero" on this base's shelves has twice turned out to be a query-language artefact, and the instrument is the finding 🟢 new at p664 🔧 **`p671`: duplicate identifier — `T31` was already taken by `p657`'s psychometric-layer trend. This is the `p664` `T31`.**
 
 Two regions carried zero placed agent rows on `agents/top.md`. Both closed inside two passes, and neither closed because the sector changed.
 
@@ -614,7 +614,7 @@ The four mandated English-language supply legs have now returned **zero in-scope
 
 **Operationally:** run the supply legs in German, French, Spanish and Portuguese as standing practice, and treat a declared regional absence as a statement about the instrument until it has been tested in the region's own language.
 
-## T32 — In LATAM, adoption and licensability are inversely correlated, which makes licence remediation the cheapest intervention available 🔴 new at p664
+## T32 — In LATAM, adoption and licensability are inversely correlated, which makes licence remediation the cheapest intervention available 🔴 new at p664 🔧 **`p671`: duplicate identifier — `T32` was already taken by `p657`'s spoken-assessment trend. This is the `p664` `T32`.**
 
 Measured at p664, the Brazilian education-agent field:
 
@@ -751,3 +751,25 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 **The rule, stated so it is not re-derived.** 🟢 **Read the `NOTICE`, not only the `LICENSE`, and ask what the artefact downloads on first run.** Add it to the triage in `compose/patterns.md` **P36**; the remediation — keep the MIT shell, replace the editor — is **P39**.
 
 **Confidence.** 🟢 **High on the facts** — all four licence readings and the `bin/cli.mjs` reference were taken first-hand this pass. 🟡 **Medium on the generality**: one measured instance of the run-time mechanism, plus one adjacent instance on weights. **It is filed as a trend on the strength of the mechanism being structural, and the next pass should test it by counting how many shelf rows download anything on first run** — a question no pass has yet asked.
+
+## T52 — The addresses rot faster than the software, and every integrity check the industry runs is blind to it 🆕 new at p671
+
+**The claim.** An open-source education dependency can change *stewardship* — move from an individual maintainer to a standards body, or be renamed under its own foundation — while every automated check an engagement runs on it keeps passing at the old address, indefinitely. The URL stays live, the licence payload stays byte-identical, the default branch still resolves. **Nothing in the ordinary toolchain reports that the thing you are depending on is now owned by someone else.**
+
+**The evidence, measured first-hand at `p671` on this base's own `197` shelf addresses.**
+
+| Old address | New address | What proves identity | What still answers at the dead address |
+|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform)** | identical `HEAD` `78b892c6a`; licence payload **`sha256` identical** (`e12d78569742`, `35,136 B`, AGPL-3.0) | `git ls-remote --symref` → `refs/heads/master`; `raw.githubusercontent.com` → `200`; the full AGPL grant |
+| [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | **[`daisy/MathCAT`](https://github.com/daisy/MathCAT)** — the **DAISY Consortium** | identical `HEAD` `c6bba2f3a`; MIT `1,065 B`, *Copyright (c) 2022 NSoiffer* unchanged across the move | `git ls-remote --symref` → `refs/heads/main`; `raw.githubusercontent.com` → `200`; the full MIT grant |
+
+**`2` of `197` addresses — `1.0%` — and both moved in the same direction: toward an institution.** An individual maintainer's accessibility library is now held by the accessibility standards body; a platform is now named after its own foundation. That direction is the substance of the trend, because **stewardship is what licence and governance risk actually track.** A row that reads *"MIT, maintained by an individual"* and a row that reads *"MIT, held by the DAISY Consortium"* carry the same licence and completely different answers to *who will still be maintaining this in three years*, which is the question a client asks.
+
+🔴 **Why the toolchain cannot see it.** GitHub honours a rename redirect **indefinitely**. So the three channels this base — and essentially every SBOM, dependency audit and link checker — uses as proof of life all keep answering at the dead address: existence (`git ls-remote`), payload (`raw.githubusercontent.com`), and licence (the grant bytes, which are *identical*, not merely similar). 🔵 **The only channel that distinguishes them is the search index, and only as an error**: `repo:<old>` returns `422`, and `user:<owner>` returns `≥1`, so the address is unresolvable while its owner is fine. That pair is the detector (`repos/trending.md` `671-J`).
+
+🔴 **And the second specimen shows how long this survives undetected in practice.** `p526` published the Open edX rename on **2026-10-29**. The correct address had been in `evidence/address-ledger.tsv` since **`p28`**, never filed. `p671` — **145 passes later** — still found the dead slug on `9` places across `3` live pages, including a component table that also still called the AGPL platform `Apache-2.0`. **The rename was not missed. It was published and not propagated.**
+
+🔵 **What follows for an engagement, concretely.** An open-source inventory built on URL liveness is not an inventory of *what you depend on*, it is an inventory of *what still answers*. Add the `422`/`user:` pair to the audit (see **P40**), and treat a rename as a governance event rather than a link fix: re-read the grant at the new address, re-check the copyright holder, and ask who the new owner is before assuming the licence means what it meant.
+
+**Confidence.** 🟢 **High on the facts** — both renames proven at `HEAD`-sha and licence-payload level this pass, the detector controlled on `18` probes at both signs. 🟡 **Medium on the rate** — `2` of `197` is this base's shelves at one moment, not a sector-wide measurement, and `p671` makes no claim about the general rename rate in education open source. 🟢 **High on the blindness** — that `git`, `raw` and the licence bytes all pass at a dead address is not an inference, it is what was measured.
+
