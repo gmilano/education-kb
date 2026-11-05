@@ -1,0 +1,34 @@
+# p666: the four mandated regional legs plus four global legs - every checkable fact returned, and whether this base already held it
+region	fact_returned	already_held	where
+North America	134 AI-in-education bills across 31 states 2026	HELD	intel/market.md
+North America	Maryland SB 720 / HB 1057	HELD	intel/market.md
+North America	New York A 9190	HELD	intel/market.md
+North America	K-12 AI Literacy and Readiness Act of 2026	HELD	intel/market.md
+North America	California Parents and Kids Safe AI Act ballot initiative	HELD	intel/market.md
+North America	Idaho / Oklahoma / Virginia mandatory district policies	HELD	intel/market.md + policy-matrix
+North America	UC Berkeley Law generative-AI exam prohibition	HELD	agents/trending.md
+North America	60 percent US teacher adoption	HELD	agents/trending.md
+EMEA	EU Annex III education high-risk deferred to 2 Dec 2027	HELD	intel/market.md
+EMEA	UK DfE Jan-2026 generative-AI product safety standards	HELD	intel/market.md
+EMEA	Ofqual March-2026 AI and coursework integrity resources	HELD	intel/market.md
+EMEA	European AI-in-education market 2.64bn 2026 at 31.9 percent CAGR	HELD	intel/market.md
+EMEA	Finland / Estonia / Netherlands leading K-12 integration	HELD	intel/market.md + policy-matrix
+EMEA	KHDA Dubai private-school AI guidance	HELD	intel/market.md
+EMEA	OECD 2026 Digital Education Outlook purpose-built recommendation	HELD	intel/market.md + intel/trends.md
+EMEA	'68 countries now regulate AI in education (UNESCO 2025)'	REFUSED-AGAIN	intel/open-gaps.md - unattributable, refused since p568
+APAC	Korea AI Basic Act in force 22 Jan 2026 with 2026 grace period	HELD	intel/market.md
+APAC	Vietnam Decision 33/2026 education among high-risk sectors	HELD	intel/market.md
+APAC	China mandatory registration and content labelling	HELD	intel/market.md
+APAC	Japan principles-based non-penalty approach	HELD	intel/market.md
+APAC	Singapore AI Verify toolkit	HELD	intel/market.md + policy-matrix
+APAC	Australia TEQSA institutional action plans on generative AI	HELD	intel/market.md
+LATAM	Digital Education Council LATAM 2026: 92 pct students / 79 pct faculty	HELD	intel/market.md
+LATAM	30,000+ responses across 29 institutions with Tec de Monterrey	HELD	intel/market.md
+LATAM	LATAM faculty 72 pct positive vs 57 pct global	HELD	intel/market.md
+LATAM	Brazil / Chile / Uruguay most advanced readiness tier	HELD	intel/market.md
+LATAM	only Brazil and Colombia explicitly budget for their AI strategy	HELD	intel/market.md
+LATAM	more than half of LATAM countries have AI in school curricula	HELD	intel/market.md
+Global	top open source AI agents education 2026 github MIT	NIL-no-education-specific-permissive-agent-not-already-held	-
+Global	github trending education AI 2026	NIL-OpenMAIC-DeepTutor-ai-engineering-hub-all-held	-
+Global	open source platform education ERP CRM MIT Apache	NIL-OpenEduCat-ERPNext-OFBiz-Krayin-iDURAR-Corteza-all-held	-
+Global	AI education industry trends 2026	NIL-every-trend-and-market-figure-already-held	-

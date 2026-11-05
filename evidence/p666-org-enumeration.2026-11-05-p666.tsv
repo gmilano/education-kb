@@ -1,0 +1,10 @@
+# p666: org enumeration of Opetushallitus, against p665's claim of a seven-repository family
+measurement	value	note
+repositories_in_org	182	gh api search/repositories -f q='user:Opetushallitus'
+p665_claimed_family_size	7	3.8 percent of the org
+pushed_since_2026_09_01	52	live rather than archived
+real_spdx_reported_by_api_in_first_100	1	Opetushallitus/compleap=EUPL-1.2 ; all others NOASSERTION or null
+education_domain_rows_filed_p666	4	koski varda eperusteet-ylops ludos
+highest_starred_education_repo_in_org	Opetushallitus/koski	23 stars 12 forks - NOT surfaced by p665's search leg
+p665_filed_same_domain_sibling	Opetushallitus/suorituspalvelu	0 stars - the newest and least adopted member
+dead_osor_eu_citation_instances	2	ehoks (p665) and eperusteet-ylops (p666) - not a one-off

@@ -95,6 +95,12 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🆕 p666 — the mandated North America leg returned nothing this page did not already hold, and here is the list so it is not re-bought
+
+🟡 **Nil, stated with its contents.** The leg returned `8` checkable facts and **all `8` are already on this page**: the `134`-bill / `31`-state count for the 2026 sessions; **Maryland `SB 720` / `HB 1057`** (state guidance, district policies, AI coordinators, tool evaluation); **New York `A 9190`** (classroom use restricted to grade 9 and above, with diagnostic and special-education exceptions and staff administrative use allowed); the **K-12 AI Literacy and Readiness Act of 2026** advanced by the House Education and Workforce Committee; the **California *Parents & Kids Safe AI Act* ballot initiative**; the four states requiring **both** state guidance and mandatory district policy (Maryland, **Idaho**, **Oklahoma**, Virginia); **UC Berkeley Law's** generative-AI prohibition across graded work; and **`60 %`** US teacher adoption with most districts still lacking a formal student policy.
+
+🔵 **The one framing worth carrying forward, because it is a procurement fact rather than a news item:** the direction of travel in this region is **guardrails, not mandated adoption** — states are legislating transparency, evaluation and certification duties rather than requiring classroom AI. For a Globant engagement that inverts the usual pitch order: **the evaluable, auditable artefact is the deliverable**, and the model is an implementation detail. `P33`'s skill-code-traceable output is written for exactly this buyer.
+
 #### 🆕 p665 — the mandated North America leg returned nothing this page did not already hold, and here is the list
 
 The leg was run (`AI education North America 2026 adoption regulation players`) and every fact it returned was checked against this page before anything was written. **Already held:** the 134-bills-across-31-states count (MultiState / FutureEd), **Maryland SB 720** and **HB 1057**, **New York A 9190**'s grade-9 floor, the four states mandating district-level policy, the federal **K-12 AI Literacy and Readiness Act of 2026**, the **Parents & Kids Safe AI Act** ballot initiative with **Common Sense Media**, the **April 2026 ADA** deadline for large public institutions, and the 60 %-of-teachers adoption reading. **Nothing new: `0` facts added.** 🔵 **An informed nil, recorded so the next pass does not re-buy it** — and the fourth consecutive pass in which this leg has paid for nothing. The North America gap on this base is **not** intelligence about the market; `agents/top.md` carried **one** placed North American agent row until p665, and the row that moved it (`anthropics/k12-teacher-skills`) had been in this repository's own ledger since `p17`. **The binding constraint here is reading what is already held, not searching.**
@@ -202,6 +208,25 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 
 
 ### EMEA
+
+#### 🆕 p666 — the leg nilled, and the new EMEA fact came from the repository channel again
+
+🟡 **The news leg returned `7` facts and all `7` were already held**: Annex III education high-risk deferred to **2 December 2027** (with Article 50 transparency unchanged and Article 4 AI-literacy in force); the **UK DfE January-2026** generative-AI product safety standards; **Ofqual's March-2026** AI and coursework-integrity resources; the European AI-in-education market at **`$2.64B` in 2026, `31.9 %` CAGR to `$8.0B` by 2030**; **Finland, Estonia and the Netherlands** as K-12 integration leaders; **KHDA** Dubai private-school guidance; and the **OECD 2026 Digital Education Outlook**'s recommendation to move from general-purpose to purpose-built educational AI.
+
+🔴 **One recurring claim was again refused rather than ingested.** *"68 countries now regulate AI in education (UNESCO, 2025), up from 14 in 2021"* resurfaced in this leg, and the returning source again gave **no primary citation**. This page has declined it since `p568`; p666 declines it a further time. 🔵 **A figure this base cannot attribute is not written, however often it circulates** — and the fact that it keeps circulating is itself the reason to keep the refusal recorded.
+
+🟢 **The new EMEA fact is a measurement of the channel p665 opened, and it corrects p665.** p665 reported *"seven repositories in which the Finnish National Agency for Education runs its production learner stack in public."* p666 enumerated the organisation: 🔴 **`Opetushallitus` holds `182` repositories, `52` of them pushed on or after `2026-09-01`.**
+
+| What a European public-education buyer's own code base looks like, measured at p666 | Value |
+|---|--:|
+| repositories published by the Finnish National Agency for Education | 🟢 **`182`** |
+| … actively pushed in the last ~10 weeks | 🟢 **`52`** |
+| … p665 described as the entire family | 🔴 **`7`** |
+| highest-starred **education-domain** repository in the org | [`koski`](https://github.com/Opetushallitus/koski) — **`23★`**, 12 forks |
+| licence family, read from payloads, across the `8` now shelved | 🟠 **EUPL-1.1 / 1.2-or-later** |
+| … for which `gh api` reports a real SPDX | 🔴 **`1` in `100`** |
+
+🔵 **Why this is market intelligence and not a repository note.** It establishes the **shape of the EMEA public-education buyer**: a ministry that already runs admissions, curriculum (national *and* local), statutory personal learning plans, attainment records, early-childhood administration and exam content **as public production software under a copyleft licence**. 🔴 **That rules out the usual "we will build you a platform" engagement** and rules in integration, agent layers and operational capacity around an estate the buyer already owns — which is what `P32`, `P33` and `P34` are scoped as. 🔵 **And it generalises as a prospecting method**: the EUPL is the European Commission's own licence, so other member-state agencies are a plausible and almost entirely unexplored supply of the same artefact class. **This base has enumerated exactly one of them.**
 
 #### 🆕 p665 — a procurement signal no news leg returns: a national education ministry's production stack, in public, under EUPL
 
@@ -355,6 +380,12 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🆕 p666 — the mandated APAC leg returned nothing this page did not already hold
+
+🟡 **Nil, with its list.** `6` checkable facts, all held: **Korea's AI Basic Act** in force **22 January 2026** with a guidance-focused grace period through 2026; **Vietnam's** high-risk designation covering education (automated assessment) under the 2026 instruments already recorded here; **China's** mandatory registration and content-labelling obligations, the most comprehensive framework in the region; **Japan's** principles-based, non-penalty approach resting on cooperation and existing law; **Singapore's** `AI Verify` testing toolkit; and **Australia's TEQSA** requirement that all higher-education providers file institutional action plans on generative-AI risk.
+
+🔴 **The leg also returned no APAC education-ministry or adoption figures at all** — it produced regulation and nothing else, for the second pass running. 🔵 **That is a declared gap in this page's APAC coverage, not an absence of activity:** the region's largest open-source education assets on `agents/top.md` (`DeepTutor`, `OpenMAIC`, `Omni-Edu` — all university-origin, all permissive or near it) have **no corresponding ministry-procurement intelligence on this page.** The remedy is a per-ministry leg in the national language, which is the channel that worked at `p664` (German) and `p665` (German, Portuguese) — **cost: one pass, and it should be spent on Japan, Korea and Singapore rather than on another English regional query.**
+
 #### 🆕 p665 — the mandated APAC leg returned nothing this page did not already hold, and here is the list
 
 The leg was run (`AI education APAC 2026 adoption regulation players`). **Already held:** South Korea's **AI Basic Act** in force 22 January 2026 with a guidance-first grace period through 2026; **Vietnam Law 134/2025/QH15** effective 1 March 2026 and **Decision 33/2026/QD-TTg** naming automated assessment in education as high-risk; Australia's **TEQSA** requirement that providers file institutional generative-AI action plans; China's registration and content-labelling regime with penalties up to ¥50M; and the EU-spillover argument for APAC ed-tech selling proctoring or admissions tools into Annex III scope. **Nothing new: `0` facts added.** 🔵 **Recorded as an informed nil.** APAC remains the region where this base is strongest on supply (**8** of the 15 placed agent rows) and where the regulatory picture is a patchwork by design — three postures (comprehensive risk-based, targeted, light-touch) across one commercial region, which is a per-jurisdiction compliance cost, not a regional one.
@@ -471,6 +502,14 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 
 
 ### LATAM
+
+#### 🆕 p666 — the mandated LATAM leg returned nothing this page did not already hold
+
+🟡 **Nil, with its list.** `6` checkable facts, all held: the **Digital Education Council LATAM 2026** survey (**`92 %`** of students and **`79 %`** of faculty engaging with AI, **`30,000+`** responses across **`29`** institutions, run with **Tecnológico de Monterrey**); LATAM faculty **`72 %`** positive on AI against a **`57 %`** global average, with the most conservative use in **assessment** tasks; **Brazil, Chile and Uruguay** in the most advanced regional readiness tier; most countries holding an AI strategy while **only Brazil and Colombia explicitly budget for one**; and **more than half** of regional countries having placed AI in school curricula.
+
+🟢 **The one new LATAM asset this pass produced came from the repository channel, not the news channel** — and it is on `agents/top.md`: [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores), **MIT**, which binds lesson-plan and exam generation to **official BNCC skill codes**. 🔵 **Read it against the survey finding above:** the region's faculty are most conservative precisely where this agent operates — **assessment** — so the adoption obstacle is not capability but **inspectability**. An artefact traceable code-by-code to the national curriculum is the direct answer to that hesitancy, which is why `P33` is scoped around the binding rather than the model.
+
+🟠 **And one LATAM asset declined, with the reason on the record** so a later pass does not re-buy it: [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) — an **offline** teacher assistant for rural schools running a local model, with the pedagogically correct posture (AI drafts, teacher decides) — carries the **full AGPL-3.0** text (`35,148 B`). 🔴 **Network copyleft rules it out of a closed client deliverable**, and `gh api` compounds the trap by reporting it as `GPL-3.0`. 🔵 Usable as prior art and as an internally-hosted tool; **not** a base for client IP.
 
 #### 🆕 p665 — the mandated LATAM leg returned nothing this page did not already hold, and here is the list
 
@@ -628,6 +667,14 @@ client.
 
 
 ### Global
+
+#### 🆕 p666 — the four mandated global legs nilled for the twentieth consecutive window
+
+🟡 **All four returned, and all four returned nothing filable that this base did not already hold.** `top open source AI agents education 2026 github MIT` → general-purpose agent frameworks (CrewAI, OpenHands, Hermes) and course material, no education-specific permissive agent not already shelved. `github trending education AI 2026` → `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub`, `ashishpatel26/500-AI-Agents-Projects` — **every one already held**. `open source platform education ERP CRM MIT Apache` → OpenEduCat (LGPL-3.0), ERPNext/Frappe (GPL-3.0), Apache OFBiz, Krayin, iDURAR, Corteza — **all already held, and the education-specific ones remain the non-permissive ones**. `AI {industry} industry trends 2026` → no trend or market figure not already on this page.
+
+🔵 **The standing conclusion is unchanged and now has a twentieth data point: the generic English discovery channels are behind this base's shelves.** 🟢 **Every new row at `p660`, `p664`, `p665` and `p666` came from one of four other channels** — org enumeration, a held repository's own README, a non-English leg, or this base's own unfiled backlog. 🔴 **The mandated legs are still run, and still reported, because an unrun leg and an empty leg look identical in a log** — but a pass that spends its budget on them is spending it on the channel measured least likely to pay.
+
+🔴 **One market-figure note, unchanged in substance and worth restating because the spread keeps widening.** This pass's trend leg returned AI-in-education market sizes of **`$11.40B` (2026) → `$57.25B` (2033) at `16.8 %`** (Coherent Market Insights), **`$12.3B` by 2026 at `36 %` CAGR since 2022** (HolonIQ, via a vendor report), and **`$136.79B` by 2035** (Azumo) — three definitions, three bases, not reconcilable. 🟢 **The `p664` finding holds: the sources have stopped converging**, and no single headline figure from this class should appear in a client deliverable without its definition attached.
 
 🔧 **This subsection is a p658 repair, not a new block.** `make gate-region-headings` was **RED at clean HEAD** with `P383-MISSING-REGION … Global` at the Opportunities-by-region heading: the closed vocabulary is five values and only four subsections existed, so the gate had been failing since the Global block was lost in p650's rewrite — three passes during which p657 reported its region structure as satisfied. No heading block was added; the missing fifth subsection was restored inside the existing one.
 

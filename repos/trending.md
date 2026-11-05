@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 `p666` — `2026-11-05` — **🔧 THE "SEVEN-REPOSITORY FAMILY" OF `p665` IS `7` OF **`182`**, AND ORG ENUMERATION — NOT A SEARCH LEG — FOUND THE `23★` NATIONAL ATTAINMENTS REGISTER, THE NATIONAL **EARLY-CHILDHOOD** REGISTER AND THE **LOCAL**-CURRICULUM AUTHORING TOOL THAT COMPLETES p665's NATIONAL-CURRICULUM ROW. 🔴 A KEYWORD CLASSIFIER GRADES THE *FULL* EUPL TEXT AS `AGPL-3.0` OFF ITS OWN COMPATIBILITY APPENDIX. 🔴 `make hooks` DENIED — NO GATE FIGURE PUBLISHED.**
+
+| Repo | Licence (payload byte-read) | Signal | Why it matters |
+|---|---|---|---|
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | 🟠 **EUPL-1.1-or-later** (`653 B`, `sha256₁₂ 986fdfc9ba85`) | **`23★`, 12 forks**, pushed `2026-11-05` | 🔧 **The highest-starred education-domain repository in a 182-repo national-agency org, and p665's search leg did not return it.** National attainments and study-rights register — the record admissions, employers and the learner's own portal read. Same domain as the `0★` `suorituspalvelu` that p665 filed as *"the credential-records end"* of the family. **Scope against this one; it has the installed base.** |
+| [`Opetushallitus/varda`](https://github.com/Opetushallitus/varda) | 🟠 **EUPL-1.1-or-later** (`653 B`, `sha256₁₂ 986fdfc9ba85`) | `3★`, pushed `2026-10-27`, `main` | 🟢 **The tier `p660` searched for and did not find.** National **early-childhood-education** register: children, guardians, placements, staff, fee decisions. p660 found early-years *learning* components; this is the **administrative record system** for the same age band — what an ECEC tender is about. |
+| [`Opetushallitus/eperusteet-ylops`](https://github.com/Opetushallitus/eperusteet-ylops) | 🟠 **EUPL-1.1-or-later** (`631 B`, `sha256₁₂ 85088c175fdf`) | `1★`, 1 fork, pushed `2026-11-05` | 🟢 **The missing half of p665's `eperusteet` row.** Where `eperusteet` publishes the *national* core curriculum, this is how a school or municipality derives its **local** curriculum from it. Real deployments ground against the local one. ⚠️ Same dead `osor.eu` licence citation as `ehoks` — **`2 of 7`, not a one-off.** |
+| [`Opetushallitus/ludos`](https://github.com/Opetushallitus/ludos) | 🟠 **EUPL-1.1-or-later** (`653 B`, `sha256₁₂ c3ffbd743b8f`) | `2★`, 1 fork, pushed `2026-11-05`, `main` | 🟢 **Assessment content with an issuing authority behind it.** Assignments, instructions and certificate-exam material for Finnish upper-secondary teaching, maintained alongside the matriculation examination. This base held item *players* and one subject's exercise bank; it did not hold curriculum-aligned content from the body that sets the exam. |
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** (`1,073 B`, `sha256₁₂ d276acc277f6`) | `0★`, pushed `2026-10-21`, `gh api` agrees MIT | 🟢 **The one permissive agent this pass found, and it had `7` prose mentions in this tree and no row.** Lesson plans and exams with answer keys **anchored to official BNCC skill codes** via semantic search, editable before PDF export. Next.js 16 + TypeScript. Filed on the **curriculum binding**, not the star count. |
+
+### 🔴 Declined this pass, with the reason in the register rather than in a footnote
+
+| Address | Live? | Grant payload | `gh api` | Why it is not a row |
+|---|---|---|---|---|
+| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | 🟢 `master` | 🔴 **none at 5 standard paths** | `null` | No grant means all rights reserved. **3 prose mentions in this tree, never filable** |
+| [`vitorr2101/Projeto-Agente-IA-Educacional`](https://github.com/vitorr2101/Projeto-Agente-IA-Educacional) | 🟢 `main` | 🔴 **none** | `null` | Same — **and the ledger has said so since `p206`** (`last_verdict = no-licence-file`). **4 prose mentions** |
+| [`LucasStop/skills-professores`](https://github.com/LucasStop/skills-professores) | 🟢 `master` | 🔴 **none** | `null` | Novel address (`0` mentions anywhere in this tree), Agent-Skills kit for university teachers. Unlicensable |
+| [`AiltonRock22/ia-professores`](https://github.com/AiltonRock22/ia-professores) | 🟢 `main` | 🔴 **none** | `null` | Novel address, `0` mentions. Unlicensable |
+| [`amandasiqueirasouza1-ux/ia-para-professores`](https://github.com/amandasiqueirasouza1-ux/ia-para-professores) | 🟢 `main` | 🔴 **none** | 🔴 **`MIT`** | **The index asserts a grant the tree does not carry** — the inverse of `NOASSERTION`. Its own text: materials CC BY 4.0, code *"will receive MIT when included"*, not yet done |
+| [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🟢 `main` | 🟠 **AGPL-3.0** (`35,148 B`) | 🔴 `GPL-3.0` | Offline rural-school teacher assistant on a local model — **genuinely interesting, and network copyleft.** Second index/payload family mismatch this pass |
+| [`Opetushallitus/compleap`](https://github.com/Opetushallitus/compleap) | 🟢 `master` | 🟠 **EUPL-1.2 full text** (`13,956 B`) | 🟢 `EUPL-1.2` | **Dormant since `2023-01-03`** — a prototype, not a production service. Kept as the fixture for `666-C` |
+| [`matsuolab/lecture-ai-engineering-2026-es`](https://github.com/matsuolab/lecture-ai-engineering-2026-es) | 🟢 `main` | 🔴 **none** | 🔴 **`total_count = 0`** | Unlicensable, **and** a third instance of the `664-D` search-index blind spot |
+
+🔵 **`4` of the `6` addresses this pass's Spanish and Portuguese legs served carry no grant at all.** That is a different failure from `665-A`. p665's class was *declared filed and never written*; this one is **not writeable** — and recording it is what stops a ninth pass from surfacing the same four addresses and wondering why nobody shelved them.
+
+🟢 **`repos/foundations.md` is unchanged at its existing row count. Nothing this pass found is a foundational library, and no row was invented to reach a minimum.**
+
+
 ## 🆕 `p665` — `2026-11-05` — **🟠 A NATIONAL EDUCATION MINISTRY'S PRODUCTION LEARNER STACK IS IN PUBLIC UNDER **EUPL** — SEVEN REPOSITORIES, ALL PUSHED TODAY, A LICENCE FAMILY THIS BASE HAD NEVER CARRIED, AND `gh api` CALLS ALL SEVEN `NOASSERTION`. 🟢 THE LIVE-CLASSROOM TIER ON `verticals/solutions.md` WAS **EMPTY** AND THE APACHE-2.0 ANSWER HAS BEEN IN THIS REPOSITORY SINCE `p525`. 🔴 `p588` SAID *“SIX ROWS FILED”*; FIVE ARE ON NO SHELF.**
 
 **Channels this pass:** `git ls-remote --symref` 🟢 live · `raw.githubusercontent.com` payload byte-read 🟢 live · `gh api search/repositories` 🟢 live, **with two fresh blind-spot instances** (`agents/trending.md` `665-J`) · `pypi.org` JSON 🟢 live · `WebSearch` 🟢 live (4 global + 4 regional + 4 non-English legs) · **`make hooks` 🟢 LIVE AND RUN TWICE** — baseline on clean `HEAD`, then on the working tree — which is the channel p664 recorded 🔴 DENIED · `http://www.osor.eu/eupl/` 🔴 does not resolve.

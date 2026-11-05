@@ -1166,7 +1166,7 @@ GSU-CETLOE/lti1p3Library-php	p358	unstated	-	2026-10-21	2	2
 GuanZhuiGuo/open-character-memory	p237	Apache-2.0	-	2026-10-16	1	1
 guedesindev/ai_tutor_forge	p207	GPL-3.0	-	2026-10-18	5	4
 guicortei/feynman-technique	p464	MIT	-	2026-10-26	1	1
-GuilhermeScarpini/agente-bncc-professores	p377	MIT	-	2026-10-22	4	2
+GuilhermeScarpini/agente-bncc-professores	p377	MIT	agents/top.md	2026-11-05	5	3
 guillaume-behr/open-quiz	p360	MIT	-	2026-10-21	2	1
 GuillaumeDerval/JavaGrading	p86	unstated	-	2026-10-09	1	1
 guillermoscript/lms-front	p242	MIT	-	2026-10-16	2	1
@@ -3007,7 +3007,7 @@ virtualryder/edu-ai-agents	p121	MIT	agents/top.md	2026-11-05	1	1
 virtUOS/abstimmbar	unpassed	Apache-2.0	-	2026-11-05	2	0
 vishal017/cheatshield	p131	MIT	-	2026-10-11	2	1
 vishalsachdev/canvas-mcp	p2	MIT	agents/top.md,compose/patterns.md	2026-11-05	73	46
-vitorr2101/Projeto-Agente-IA-Educacional	p206	no-licence-file	-	2026-11-05	2	2
+vitorr2101/Projeto-Agente-IA-Educacional	p206	no-grant-payload	-	2026-11-05	3	3
 vkumar04/canvas-mcp-lite	p227	unstated	-	2026-10-16	2	2
 vnschneider/suap-mcp	p73	AGPL-3.0	-	2026-10-03	2	1
 Voodoo2man/ioBroker.webuntis2	p243	MIT	-	2026-10-16	2	2
@@ -3240,3 +3240,16 @@ Menkoban/KI-Unterrichtswerkstatt	p665	MIT	agents/top.md	2026-11-05	1	1
 Jnf290/KI-Assistent_Lehrkraefte	p665	unresolvable	-	2026-11-05	1	1
 matheus3006/kit-agentes-ia	p665	MIT	-	2026-11-05	1	1
 845421145-lang/agents-radar	p665	MIT	-	2026-11-05	1	1
+Opetushallitus/koski	p666	EUPL-1.1-or-later	verticals/solutions.md	2026-11-05	1	1
+Opetushallitus/varda	p666	EUPL-1.1-or-later	verticals/solutions.md	2026-11-05	1	1
+Opetushallitus/eperusteet-ylops	p666	EUPL-1.1-or-later	verticals/solutions.md	2026-11-05	1	1
+Opetushallitus/ludos	p666	EUPL-1.1-or-later	verticals/solutions.md	2026-11-05	1	1
+Opetushallitus/kouta-backend	p666	EUPL-1.2-or-later	-	2026-11-05	1	1
+Opetushallitus/oph-design-system	p666	EUPL-1.2-or-later	-	2026-11-05	1	1
+Opetushallitus/compleap	p666	EUPL-1.2-full-text	-	2026-11-05	1	1
+Ignacio-Ghub/asistente-docente-sin-conexion	p666	AGPL-3.0	-	2026-11-05	1	1
+jrsaguas/DocenteAgent	p666	no-grant-payload	-	2026-11-05	1	1
+LucasStop/skills-professores	p666	no-grant-payload	-	2026-11-05	1	1
+AiltonRock22/ia-professores	p666	no-grant-payload	-	2026-11-05	1	1
+amandasiqueirasouza1-ux/ia-para-professores	p666	no-grant-payload-api-asserts-MIT	-	2026-11-05	1	1
+matsuolab/lecture-ai-engineering-2026-es	p666	no-grant-payload	-	2026-11-05	1	1

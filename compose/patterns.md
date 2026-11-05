@@ -1068,3 +1068,54 @@ A studio entering LATAM can spend those weeks building a tutor that will be the 
 6. **If a fork becomes unavoidable, re-scope commercially before writing code.** Then the EUPL travels with your hosted service, and the appendix's compatibility list (GPL-2.0, AGPL-3.0, EPL, MPL-2.0, LGPL, OSL, CeCILL, LiLiQ) is the only relicensing room you have. ⚠️ **It does not contain MIT or Apache-2.0.**
 
 ⚠️ **Honest limits.** This stack is **Finland's**, in Finnish, built for Finnish statute — the *shape* generalises to other EU member states, the data model does not. Star counts (0–11 ★) are meaningless here and are not an adoption signal either way: this is one deployment with a nation behind it. And none of these seven repositories contains any AI — **this pattern buys an integration surface and a licence posture, not a model.**
+
+## P33 — A curriculum-grounded teacher agent that grounds against the *local* curriculum, not a PDF (LATAM or EMEA K-12: 8–10 weeks) 🟢 new at p666
+
+🔵 **Why this pattern exists now.** Every curriculum-grounded agent on `agents/top.md` grounds itself in a *document*. p666 filed the two halves that make grounding an **integration** instead: [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) publishes the **national** core curriculum as a service, and [`Opetushallitus/eperusteet-ylops`](https://github.com/Opetushallitus/eperusteet-ylops) is how a school or municipality derives its **local** curriculum from it. On the LATAM side, [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) is a working **MIT** reference for binding generation to official skill codes.
+
+### The parts
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Curriculum source (EMEA) | [`Opetushallitus/eperusteet-ylops`](https://github.com/Opetushallitus/eperusteet-ylops) + [`eperusteet`](https://github.com/Opetushallitus/eperusteet) | 🟠 **EUPL-1.1-or-later** | The local curriculum *and* the national core it derives from, as data with a model — **read over the API, never forked** (see `P32`) |
+| Curriculum source (LATAM) | BNCC skill codes, bound as in [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** (code) | The reference implementation of code-level binding: semantic search over skills → generation → editable questions → PDF. ⚠️ The BNCC texts carry their own terms, separate from this MIT code |
+| Agent runtime | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | Multi-mode delivery and the persistent learner model (`55,260★` at p666, payload `11,408 B` re-read and reproduced) |
+| Lesson/assessment generation | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 MIT | ADDIE multi-agent materials generation, driven **from the curriculum codes** rather than from a prompt |
+| Assessment content | [`Opetushallitus/ludos`](https://github.com/Opetushallitus/ludos) | 🟠 EUPL-1.1-or-later | Where EMEA scope needs items an authority issued rather than items a model wrote |
+| Local model runtime | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 MIT | Keeps learner data on-premise — the usual condition in a public K-12 tender |
+
+### Wiring
+
+1. **Resolve the curriculum object first, before any model call.** EMEA: pull the municipality's local curriculum from `eperusteet-ylops` and its national parent from `eperusteet`. LATAM: load the BNCC skill set and index it exactly as `agente-bncc-professores` does. 🔴 **The deliverable is a *skill-code → content* mapping, not a chat log** — this is what makes output inspectable by someone who does not trust the model.
+2. **Generate against the code, not the topic.** Drive `instructional_agents` with a skill code as the unit of work, so every generated plan, slide and item carries the code it serves. One code in, one traceable artefact out.
+3. **Serve assessment from the authority where one exists.** In EMEA, prefer a `ludos` item over a generated one and record which you used; in LATAM, generate but keep the answer key editable, as `agente-bncc-professores` already does.
+4. **Deliver through `DeepTutor`**, whose persistent learner model is keyed to the same curriculum codes, so "where is this student" is answerable in the inspector's vocabulary.
+5. **Run the model locally via `ollama`** and keep the curriculum service calls read-only.
+
+🔴 **The two things that make this fail, both stated up front.** (1) **Licence boundary**: the EUPL tier is copyleft whose *"Distribution or Communication"* reaches making the Work available online — so `eperusteet*` and `ludos` are **integrated against over the network and never vendored into your tree** (`P32` is the full shape). (2) **`agente-bncc-professores` is `0★`, `0` forks, one author** — a reference implementation of the binding, **not a maintained dependency**. Read it, reimplement the binding in your stack, credit it.
+
+🟢 **Why the pattern is worth the weeks.** "Curriculum-aligned" is the claim every edtech vendor makes in a K-12 tender and almost none can evidence. This produces an artefact that is aligned **by construction and traceable code by code** — and in Finland's case, traceable to the ministry's own service.
+
+## P34 — Early-childhood education: start from the national register, not from the learning app (EMEA public sector: 6–8 weeks to a scoped pilot) 🟢 new at p666
+
+🔵 **Why this pattern exists now, and what it corrects.** `p660` went looking for permissive **early-years** assets and found *learning* tools — ScratchJr (BSD-3-Clause, dormant since 2022), the micro:bit stack (MIT). Useful, and not what an ECEC engagement is about. p666's org enumeration found [`Opetushallitus/varda`](https://github.com/Opetushallitus/varda) — **the national early-childhood-education register**: children, guardians, placements, staff, fee decisions, under **EUPL-1.1-or-later**, pushed `2026-10-27`.
+
+### The parts
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Record system | [`Opetushallitus/varda`](https://github.com/Opetushallitus/varda) | 🟠 **EUPL-1.1-or-later** | Reference data model for national ECEC administration — placements, staffing ratios, fee decisions. Python/Django on PostgreSQL |
+| Identity / organisation | [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) + [`oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | 🟠 EUPL-1.1-or-later | Provider and learner identifiers — the join keys the register assumes |
+| Agent layer (**your IP**) | [`CrewAI`](https://github.com/crewAIInc/crewAI) or [`LangGraph`](https://github.com/langchain-ai/langgraph) | 🟢 MIT | Placement-matching, staffing-ratio checks, fee-decision drafting, multilingual guardian correspondence |
+| Model runtime | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 MIT | On-premise — this is children's data under GDPR, and no other posture survives procurement |
+| Learning layer, *if* the scope reaches it | [`scratchfoundation/scratchjr`](https://github.com/scratchfoundation/scratchjr) (BSD-3-Clause) / micro:bit MIT stack | 🟢 permissive | Added **after** the record layer, never instead of it. ⚠️ ScratchJr is dormant since `2022-07-22` — fork-and-own with a priced maintenance line (`660-I`) |
+
+### Wiring
+
+1. **Read `varda`'s data model as the specification.** The valuable artefact is not the Django code — it is the set of entities and obligations a national regulator considers complete for ECEC. Clone to read, scope from the model.
+2. **Build the agents outside the EUPL boundary**, speaking to the register over its API. Placement matching and staffing-ratio compliance are the two with an immediate operational payoff.
+3. **Keep every model call local via `ollama`**, and keep guardian-facing output drafted-not-sent: an ECEC fee decision is an administrative act.
+4. **Only then** consider a learning layer, and treat ScratchJr's dormancy as a cost line rather than a footnote.
+
+🔴 **The honest limit.** `varda` is `3★`. That is not adoption evidence and must not be sold as it: 🟢 **it has exactly one deployment and a country behind it.** For a ministry or municipal buyer that is the stronger fact; for a private buyer it is irrelevant, and this pattern is not for them.
+

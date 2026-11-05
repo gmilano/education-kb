@@ -1,0 +1,5 @@
+# p666: a keyword licence classifier mis-grades the FULL EUPL text, because the EUPL's compatibility appendix names other licences
+payload	bytes	sha256_12	first_line_of_payload	naive_keyword_classifier	gh_api_spdx	truth	mechanism
+Opetushallitus/compleap LICENSE.txt	13956	900a5a8a3c56	EUROPEAN UNION PUBLIC LICENCE v. 1.2	AGPL-3.0 (WRONG)	EUPL-1.2 (correct)	EUPL-1.2	grep matched 'Affero General Public License' inside the EUPL compatibility appendix
+Opetushallitus/ataru LICENSE.md	296	db5b61c3f444	Copyright (c) 2025 Finnish National Agency for Education	EUPL (correct)	NOASSERTION	EUPL-1.2-or-later	short reference payload - no appendix - classifier safe
+Opetushallitus/koski LICENSE.txt	653	986fdfc9ba85	Copyright (c) 2015 The Finnish National Board of Education	EUPL (correct)	NOASSERTION	EUPL-1.1-or-later	short reference payload - no appendix - classifier safe
