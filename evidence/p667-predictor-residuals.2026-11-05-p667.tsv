@@ -1,0 +1,6 @@
+address	bytes	predicted	residual	verdict	mechanism
+telekom/ki-in-schulen	1228	1105	+123	BODY-MUTATED (FALSE ALARM)	URL line 58 + blank 1 + SECOND copyright holder 63 + rewrap 1 = 123; grant text verbatim MIT under wrap-normalisation
+microsoftarchive/Learn-LTI	1141	None	None	UNGRADEABLE-no copyright line	payload uniformly indented 4 spaces; detector tests line[:9]==copyright. De-indented it grades -1 = p647-E missing-final-newline. TWO stacked classes
+campfirium/foliole	11358	11357	+1	Apache-2.0 canonical +1	one prepended blank line; diff reports 0a1; p647-F second specimen
+shaankhosla/repeater	11357	11357	0	Apache-2.0 canonical byte-exact	control in same cohort
+ALL_OTHER_MIT_PAYLOADS	-	-	0	EXACT (15 of 17)	predictor holds

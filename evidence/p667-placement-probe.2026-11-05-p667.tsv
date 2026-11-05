@@ -1,0 +1,39 @@
+probe	endpoint	query	result	interpretation
+REFUTED	search/repositories	repo:moodle/moodle	1	baseline: the repo IS indexed
+REFUTED	search/repositories	repo:moodle/moodle location:Australia	0	location: silently unsupported on this endpoint
+REFUTED	search/repositories	repo:moodle/moodle zzqxnonsense:foo	0	DECISIVE CONTROL: a nonsense qualifier behaves identically
+REFUTED	search/repositories	repo:moodle/moodle location:Mars	0	no input returns nonzero
+BUILT	search/users	user:telekom	1	account pinned
+BUILT	search/users	user:telekom location:Germany	1	POSITIVE -> EMEA
+BUILT	search/users	user:telekom location:Brazil	0	discriminates (not a blanket positive)
+BUILT	search/users	user:telekom location:Deutschland	0	free-text: local spelling MISSES here
+BUILT	search/users	user:portabilis location:Brazil	0	English spelling misses
+BUILT	search/users	user:portabilis location:Brasil	1	POSITIVE -> LATAM (local spelling needed)
+BUILT	search/users	user:psiagoleal location:Brazil	1	POSITIVE -> LATAM (English spelling needed)
+BUILT	search/users	user:psiagoleal location:Brasil	0	same country, OPPOSITE spelling to portabilis
+BUILT	search/users	user:moodle zzqxnonsense:foo	0	qualifier-support control on this endpoint
+BUILT	search/users	user:zzqxfake-no-such-account-p667	422	three-valued: 422 = login unsearchable/absent
+BLOCKED	repos/{owner}/{repo}	any	403-class	sessions are bound to configured repositories
+BLOCKED	users/{login}	any	403-class	confirms p647 note; owner location unreadable directly
+RUN	search/users	user:maimemo location:*	0	unplaced-by-this-channel
+RUN	search/users	user:telekom location:*	1 (Germany)	EMEA
+RUN	search/users	user:portabilis location:*	1 (Brasil)	LATAM
+RUN	search/users	user:psiagoleal location:*	1 (Brazil)	LATAM
+RUN	search/users	user:insolitos location:*	0	unplaced-by-this-channel
+RUN	search/users	user:PythonFreeCourse location:*	0	unplaced-by-this-channel
+RUN	search/users	user:agorafoundation location:*	0	unplaced-by-this-channel
+RUN	search/users	user:Human-Centric-Machine-Learning location:*	1 (Germany)	EMEA
+RUN	search/users	user:olmps location:*	0	unplaced-by-this-channel
+RUN	search/users	user:lakesare location:*	0	unplaced-by-this-channel
+RUN	search/users	user:hluaguo location:*	0	unplaced-by-this-channel
+RUN	search/users	user:AGI-is-going-to-arrive location:*	0	unplaced-by-this-channel
+RUN	search/users	user:nastaso location:*	0	unplaced-by-this-channel
+RUN	search/users	user:campfirium location:*	0	unplaced-by-this-channel
+RUN	search/users	user:bjsi location:*	0	unplaced-by-this-channel
+RUN	search/users	user:ctrlaltwill location:*	0	unplaced-by-this-channel
+RUN	search/users	user:kitschpatrol location:*	0	unplaced-by-this-channel
+RUN	search/users	user:repeat-space location:*	0	unplaced-by-this-channel
+RUN	search/users	user:supermemo location:*	0	unplaced-by-this-channel
+RUN	search/users	user:Belles-hub location:*	0	unplaced-by-this-channel
+RUN	search/users	user:Junior162009 location:*	0	unplaced-by-this-channel
+RUN	search/users	user:microsoftarchive location:*	0	unplaced-by-this-channel

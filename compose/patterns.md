@@ -1119,3 +1119,57 @@ A studio entering LATAM can spend those weeks building a tutor that will be the 
 
 🔴 **The honest limit.** `varda` is `3★`. That is not adoption evidence and must not be sold as it: 🟢 **it has exactly one deployment and a country behind it.** For a ministry or municipal buyer that is the stronger fact; for a private buyer it is irrelevant, and this pattern is not for them.
 
+
+## P35 — Make it stick, and prove it: the retention layer as a product, with the objective function as a client decision (any sector delivering training at scale: 6–8 weeks) 🟢 new at p667
+
+🔵 **Why this pattern exists now.** Every engagement that generates learning material eventually meets the same question from the buyer: *does any of this actually stick, and how would we know?* Until p667 this base could only answer "use FSRS" — true, and a dead end, because it offered no trade-off and no citation. `p667` filed sixteen permissive rows that turn retention from a library choice into an **architecture choice** with four explicit decisions (see **T49**). This pattern is how you walk a client through those decisions in one engagement.
+
+### The parts
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Scheduler — option A | [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **MIT** | Optimises **predicted recall**. The incumbent, consumer-scale, already on `repos/foundations.md`. Pick this when the client's goal is retention at a fixed review budget. |
+| Scheduler — option B | [`maimemo/SSP-MMC`](https://github.com/maimemo/SSP-MMC) | 🟢 **MIT** (`1,064 B`, read at p667) | Optimises **total review cost to reach a target recall**. Research code, lift the algorithm. Pick this when the client's goal is *time-to-competence* — certification, onboarding, compliance training. |
+| The citation | [`Human-Centric-Machine-Learning/memorize`](https://github.com/Human-Centric-Machine-Learning/memorize) | 🟢 **MIT** (`190★`, `master`) | Code **and real data** for the **PNAS 2019** spaced-repetition optimisation result. This is what you put in the deck when the client asks who says so. |
+| Item bank — adopt | [`nastaso/cloudcertprep`](https://github.com/nastaso/cloudcertprep) | 🟢 **MIT** (`246★`) | **1,469 real questions** (AWS CLF-C02, AIF-C01). Start here for any cloud/AI certification programme instead of writing items. |
+| Item bank — generate | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) + [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 MIT | Already on `agents/top.md`; both generate **with cited sources**, which is the provenance requirement this pattern depends on. |
+| Card store (**the governance trick**) | [`kitschpatrol/yanki-obsidian`](https://github.com/kitschpatrol/yanki-obsidian) | 🟢 **MIT** (`200★`) | Cards live as **plain Markdown in a git repository** and sync to Anki. Generated items become reviewable in a pull request. |
+| Delivery — hand-off | [`repeat-space/anki-apkg-export`](https://github.com/repeat-space/anki-apkg-export) | 🟢 **MIT** (`182★`) | Writes a `.apkg` **file** with no Anki installed — the artefact you attach to an email or ship in a build. |
+| Delivery — in-product | [`olmps/memo`](https://github.com/olmps/memo) | 🟢 **BSD-3-Clause** (`1,870★`) | Flutter, so one codebase gives iOS + Android + desktop. ⚠ Pushed 2024-07-29 — **adopt the codebase, budget for the fork.** |
+| Agent surface | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) + [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | Already on `agents/top.md`: the agent drives scheduling and mastery through MCP rather than reimplementing either. |
+
+### Wiring
+
+1. **Make the client choose the objective function in week 1, on the record.** Recall-at-budget (FSRS) or cost-to-mastery (SSP-MMC). This is a business decision disguised as a technical one, and it determines everything downstream. Put the PNAS result in front of them so the choice is argued, not asserted.
+2. **Decide adopt-or-generate for the item bank.** If the domain is a certification with a public blueprint, `cloudcertprep` proves the bank is cheap to adopt. If the domain is the client's own material, generate with `claudemy`/`lumen` — **and keep the citations**, because step 3 depends on them.
+3. **Put the cards in git as Markdown via `yanki-obsidian`.** This is the step that makes the whole thing auditable: every generated item arrives as a diff with its source citation, a subject-matter expert approves it in a pull request, and the review history is the evidence artefact. **Do this before building any UI** — it costs a day and it is what survives a governance review.
+4. **Wire the scheduler behind MCP** (`anki-mcp-server` for scheduling state, `tutor-mcp` for the mastery model) so the tutoring agent reads and writes the real schedule instead of carrying its own.
+5. **Pick the delivery form last, from the hand-off requirement.** A `.apkg` file (`anki-apkg-export`) if the learner already uses Anki or the client wants an artefact; a branded app (`olmps/memo`, BSD-3) if it must carry the client's name; the vault-native route (`LearnKit`) if the cohort is technical and local-first matters.
+6. **Instrument from day one and report against the chosen objective.** Whichever function was picked in step 1 is the one the final report must measure, or the engagement has no verdict.
+
+🔴 **The honest limits.** `SSP-MMC` and `memorize` are **research code, not libraries** — you are lifting an algorithm and owning the implementation, which is real effort and should be a line in the estimate. `olmps/memo` has not been pushed since July 2024; adopting it means forking it. And none of this answers whether the *content* is any good — retention scheduling makes correct material stick and makes wrong material stick just as well, so step 2's citation requirement is load-bearing, not decoration.
+
+🟢 **Why this sells.** It is the only pattern in this file where the governance answer and the product are the same artefact: a git repository of cited, expert-approved, version-controlled learning items with a published scheduler behind it. **T3** says governance is the buying trigger; this is the cheapest place in the whole stack to satisfy it.
+
+## P36 — The licence-provenance triage, extended: rank the claim before you ask for the grant (1 day, as the front half of P27) 🟢 new at p667
+
+🔵 **Why this exists.** `P27` established licence provenance as the first two weeks of any education engagement, on the correct principle that a licence **identifier is not a licence** and the payload must be read. `p667` adds the case `P27` does not cover: **what to do when there is no payload at all.** This happens constantly outside English-language open source — `p666` measured 4 of 6 non-English candidates with no grant payload, and `p667` measured 3 of 6 — and the right response is not a uniform "reject", because the three forms it takes are worth very different things.
+
+### The triage
+
+| What you find | Specimen measured at p667 | Verdict | What to do |
+|---|---|---|---|
+| **Complete grant text inlined in the README**, no `LICENSE` file | [`MiradoAndreas/learning-plateform-ai`](https://github.com/MiradoAndreas/learning-plateform-ai) — verbatim canonical MIT in a fenced block, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`, `COPYING` **all 404** | 🟢 **Usable.** The grant exists and is complete; only its location is non-standard. | Normalise the grant text against the canonical template (wrap-insensitive). If it matches, proceed — and open a one-line pull request adding `LICENSE`. This is the cheapest licence remediation there is. |
+| **A prose sentence naming a licence** — and check whether it is a *split* grant | [`JRS1986/KISchule`](https://github.com/JRS1986/KISchule) — *"Texte: CC BY-SA 4.0. Code: MIT."* | 🟠 **More restrictive than it looks.** | Work out which half you actually want. This repository is almost entirely Markdown lesson material, so **the asset is CC BY-SA** — share-alike — and only the build script is MIT. A search leg reported it as "MIT-licensed". |
+| **A shields.io badge** | [`AiltonRock22/ia-professores`](https://github.com/AiltonRock22/ia-professores) — `![Licença](…badge/licença-MIT-blue.svg)` linked to `LICENSE`; `LICENSE`, `LICENSE.md`, `LICENCA`, `LICENCA.md` all **404** | 🔴 **Worthless as a grant.** No licence text exists anywhere in the repository. | Do not use it, and do not record it as MIT. Ask the maintainer to add a payload; until they do there is nothing to rely on. **This is the mechanism behind search engines' false licence reports** — the summariser reads the badge. |
+| **A short bespoke payload** — read it, do not classify it | [`learningfactory-io/ki-werkstatt`](https://github.com/learningfactory-io/ki-werkstatt) — `LICENSE` serves `200` at `413 B` | 🔴 **Proprietary.** *"Alle Rechte vorbehalten… jede kommerzielle Nutzung… nicht gestattet."* | A served `LICENSE` is **not** evidence of a grant — this one is a reservation of rights. Any payload under ~800 B is bespoke by definition and must be read in full by a human. |
+
+### Wiring it into the P27 gate
+
+1. **`git ls-remote --symref` first**, for existence and the **real default branch** — 27% of the addresses p667 verified are not on `main`, and reading a payload at the wrong ref is how a licence gets mis-recorded.
+2. **Try the payload at 8 filenames** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENSE-MIT`, `COPYING`, `LICENSE.rst`, `license`) at that ref. A 404 on all eight means **run this triage**, not "unlicensed".
+3. **If a payload exists, grade it on the title line and record the bytes** — never on body text. `p666` showed a body-text classifier grades the full EUPL as AGPL-3.0 off its compatibility appendix. **Abstention is the correct output** for an unrecognised title.
+4. **Decompose any non-zero residual before calling it a mutation.** `p667` found `telekom/ki-in-schulen` at `+123`, which the predictor flagged `BODY-MUTATED` and which decomposes exactly into a URL line, a blank line, a **second copyright holder** and 1 B of re-wrap — the grant text is verbatim MIT. A positive residual means *look*, not *reject*.
+5. **Strip leading blank lines and uniform indentation before any byte comparison.** `campfirium/foliole` reads canonical Apache-2.0 `+1` on one prepended newline; `microsoftarchive/Learn-LTI` is uniformly indented four spaces, which defeats a copyright-line detector anchored at byte 0.
+
+🟢 **Why a client pays for this.** It is one day, it runs before any architecture work, and it is the difference between a shipped product and a renegotiation. The failure it prevents is specific and common: **a repository that advertises MIT in its README badge, and has no licence at all.**

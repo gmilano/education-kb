@@ -1,0 +1,52 @@
+region	fact	needle	shelf_hits	tree_hits	verdict_as_measured	verdict_corrected	correction_basis
+Global	OECD Digital Education Outlook	Digital Education Outlook	6	66	held-on-shelf	held-on-shelf	-
+Global	purpose-built educational AI	purpose-built	7	58	held-on-shelf	held-on-shelf	-
+Global	1EdTech	1EdTech	11	1907	held-on-shelf	held-on-shelf	-
+Global	CMI 11.40Bn 2026 to 57.25Bn 2033	57.25	4	5	held-on-shelf	held-on-shelf	-
+Global	HolonIQ 12.3B by 2026	12.3B	4	26	held-on-shelf	held-on-shelf	-
+Global	Azumo 136.79bn by 2035	136.79	4	24	held-on-shelf	held-on-shelf	-
+Global	83pct K12 teachers genAI	83%	1	16	held-on-shelf	held-on-shelf	-
+Global	ADA April 2026 deadline public institutions	ADA	92	8370	held-on-shelf	held-on-shelf	-
+Global	OpenMAIC stars	OpenMAIC	29	812	held-on-shelf	held-on-shelf	-
+Global	DeepTutor stars	DeepTutor	34	2065	held-on-shelf	held-on-shelf	-
+Global	ai-engineering-hub	ai-engineering-hub	14	57	held-on-shelf	held-on-shelf	-
+Global	Hermes Agent Nous Research	Hermes	16	410	held-on-shelf	held-on-shelf	-
+Global	OpenEduCat LGPL-3.0	openeducat	19	1596	held-on-shelf	held-on-shelf	-
+Global	Krayin CRM MIT	Krayin	1	264	held-on-shelf	held-on-shelf	-
+Global	iDURAR MIT	iDURAR	1	53	held-on-shelf	held-on-shelf	-
+Global	Apache OFBiz	OFBiz	1	495	held-on-shelf	held-on-shelf	-
+Global	frappe education module	frappe/education	6	644	held-on-shelf	held-on-shelf	-
+NA	134 bills 31 states	134 bills	2	140	held-on-shelf	held-on-shelf	-
+NA	Maryland AI coordinators package	Maryland	13	188	held-on-shelf	held-on-shelf	-
+NA	New York ninth grade floor	ninth grade	2	4	held-on-shelf	held-on-shelf	-
+NA	K-12 AI Literacy and Readiness Act 2026	AI Literacy and Readiness	7	71	held-on-shelf	held-on-shelf	-
+NA	Canada AI for All 4 June 2026	AI for All	0	51	held-in-log-only	held-on-shelf	shelf records it by date: "4 June 2026" national AI strategy, 5 shelf hits
+NA	Parents and Kids Safe AI Act California	Parents & Kids Safe AI	4	7	held-on-shelf	held-on-shelf	-
+NA	Gallup 60pct US teachers	Gallup	8	45	held-on-shelf	held-on-shelf	-
+NA	55pct principals not blocked	55% of high school principals	0	1	held-in-log-only	held-on-shelf	shelf spells it "high-school principals" (hyphen), intel/market.md:117 and :173
+NA	70pct institutions have AI guidance	70% of institutions	5	8	held-on-shelf	held-on-shelf	-
+NA	DC bans AI from grading discipline IEP	IEP	5	632	held-on-shelf	held-on-shelf	-
+NA	Defending Education watchdog	Defending Education	0	0	NOVEL	NOVEL	-
+EMEA	EU AI Act Annex III education high-risk	Annex III	35	582	held-on-shelf	held-on-shelf	-
+EMEA	Digital Omnibus 2 December 2027	Digital Omnibus	8	212	held-on-shelf	held-on-shelf	-
+EMEA	UK DfE genAI product safety standards Jan 2026	product safety standards	6	18	held-on-shelf	held-on-shelf	-
+EMEA	UAE KHDA Dubai guidance	KHDA	6	34	held-on-shelf	held-on-shelf	-
+EMEA	Europe market 2.64 billion 2026	2.64	10	83	held-on-shelf	held-on-shelf	-
+EMEA	Finland Estonia Netherlands leading K-12	Estonia	3	59	held-on-shelf	held-on-shelf	-
+EMEA	10pct of 450+ institutions formal guidelines	450+	2	26	held-on-shelf	held-on-shelf	-
+APAC	Korea AI Basic Act 22 January 2026	AI Basic Act	20	238	held-on-shelf	held-on-shelf	-
+APAC	Vietnam AI law 1 March 2026	Vietnam	34	713	held-on-shelf	held-on-shelf	-
+APAC	China mandatory registration content labelling	content labelling	5	27	held-on-shelf	held-on-shelf	-
+APAC	Singapore AI Verify	AI Verify	3	51	held-on-shelf	held-on-shelf	-
+APAC	Japan light-touch voluntary governance	light-touch	5	22	held-on-shelf	held-on-shelf	-
+APAC	Australia TEQSA action plans	TEQSA	13	49	held-on-shelf	held-on-shelf	-
+LATAM	UNESCO IESALC 200 HEIs 19 countries	IESALC	20	486	held-on-shelf	held-on-shelf	-
+LATAM	26pct formal framework 87pct use AI	87%	15	130	held-on-shelf	held-on-shelf	-
+LATAM	55pct universities no AI budget	no specific AI budget	2	5	held-on-shelf	held-on-shelf	-
+LATAM	UNESCO LAC Observatory ECLAC Santiago 14 Apr 2026	Observatory	10	197	held-on-shelf	held-on-shelf	-
+LATAM	Brazil 53pct admins 22pct guidelines	Cetic	12	60	held-on-shelf	held-on-shelf	-
+LATAM	Ceibal Uruguay	Ceibal	11	110	held-on-shelf	held-on-shelf	-
+LATAM	CENIA Chile	CENIA	6	219	held-on-shelf	held-on-shelf	-
+LATAM	Tec de Monterrey UNESCO agreement Mar 2026	Monterrey	10	108	held-on-shelf	held-on-shelf	-
+CONTROL	NONSENSE CONTROL must be 0	zzqx-nonexistent-token-p667	0	0	NOVEL	NOVEL	-
+CONTROL	NONSENSE CONTROL 2 must be 0	Flibbertigibbet Pedagogy Institute	0	0	NOVEL	NOVEL	-

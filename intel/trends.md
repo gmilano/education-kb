@@ -691,3 +691,22 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 
 🔵 **So the channel rule, stated for the next pass:** when a row's owner is an institution rather than a person — a ministry, an agency, a university, a foundation — **enumerate the owner before writing the row, and write the org's size into the cell.** A family size that is really a page size is a claim this base has now published twice.
 
+
+## T49 — Retention is a layer, not an algorithm: the sector's one "proven" primitive sits on a dense permissive field with a choice of objective function 🟢 new at p667
+
+🔵 **What T13 said, and why it was true and incomplete.** **T13** has recorded for many passes that spaced repetition — specifically FSRS, via `fsrs4anki` and `fsrs-rs` — is *"the one permissive education algorithm that is already in production"*. Every word of that holds. What it also did was end the conversation: a client asking how generated material is made to stick got a single answer and no trade-off, and this base carried retention as **one point** rather than a layer.
+
+🟢 **p667 mapped the field underneath it, and it is dense.** Sixteen rows filed to `repos/foundations.md` in one pass, all permissive, all with the grant payload read at first hand:
+
+- **A published alternative scheduler.** [`maimemo/SSP-MMC`](https://github.com/maimemo/SSP-MMC) (MIT, `227★`) solves for the **stochastic shortest path** to a target recall — it minimises *total review cost to mastery*, trained on MaiMemo's own large-scale learner data. FSRS optimises predicted recall; SSP-MMC optimises cost. **These are different objective functions and both are permissive and published.**
+- **The peer-reviewed optimum the heuristics approximate.** [`Human-Centric-Machine-Learning/memorize`](https://github.com/Human-Centric-Machine-Learning/memorize) (MIT, `190★`) is the code **and the real data** for *Enhancing Human Learning via Spaced Repetition Optimization*, **PNAS 2019**.
+- **Clients in every delivery form.** `olmps/memo` (BSD-3, **`1,870★`**, Flutter → iOS/Android/desktop), `shaankhosla/repeater` (Apache-2.0, terminal), `lakesare/memcode` (MIT, web, ten years of history), and three Obsidian-native systems — `ctrlaltwill/LearnKit`, `kitschpatrol/yanki-obsidian`, `bjsi/incremental-writing`.
+- **The write primitive.** [`repeat-space/anki-apkg-export`](https://github.com/repeat-space/anki-apkg-export) (MIT, `182★`) produces a `.apkg` deck **file** with no Anki installed, completing the pair with `anki-mcp-server`, which drives a *running* instance.
+- **A different primitive entirely.** `bjsi/incremental-writing` and `campfirium/foliole` schedule **engagement with long material** in prioritised queues rather than retrieval of atoms — a job no flashcard scheduler does.
+- **And content.** `nastaso/cloudcertprep` (MIT, `246★`) is a **1,469-question** permissive item bank for AWS CLF-C02 and AIF-C01.
+
+🔴 **The trend is not "there is more of it".** It is that **retention stopped being a library choice and became an architecture choice**, with four decisions a studio now has to make explicitly: the objective function (recall vs cost-to-mastery vs the PNAS optimum), the primitive (atom retrieval vs incremental reading), the delivery form (mobile, web, terminal, vault-native, or a deck file handed over), and whether the item bank is generated or adopted.
+
+🟢 **Why three of these rows matter beyond retention.** `yanki-obsidian`, `LearnKit` and `incremental-writing` keep the cards as **plain Markdown in a repository**. That makes generated learning material reviewable in a pull request and version-controlled — which is the provenance and governance answer that **T3** identifies as the buying trigger and that regulated buyers in EMEA, and increasingly North America, ask for by name. The retention layer turns out to be where the auditability argument is cheapest to satisfy.
+
+🔵 **Read the staleness, not just the stars.** Four of the sixteen have not been pushed in over a year and two (`incremental-writing`, `memorize`) are effectively finished work; `microsoftarchive/Learn-LTI` is formally `archived`. Each row on `repos/foundations.md` states its push date and says whether it is a dependency, a codebase to adopt, or a design reference. In this layer specifically, "finished" is often the correct state for an algorithm implementation and a disqualifying one for a client application — and the rows distinguish the two.

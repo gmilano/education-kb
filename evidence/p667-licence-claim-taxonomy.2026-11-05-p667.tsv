@@ -1,0 +1,5 @@
+form	specimen	payload_filenames_tried	all_404	grant_text_present	grant_complete	verdict	rank
+grant inlined in README	MiradoAndreas/learning-plateform-ai	6	yes	yes (README.md fenced block)	verbatim canonical MIT under wrap-normalisation	usable; location non-standard	1-strongest
+prose sentence, SPLIT grant	JRS1986/KISchule	8	yes	no (names two licences)	no text for either	content is CC BY-SA 4.0, only build script MIT	2
+shields.io badge	AiltonRock22/ia-professores	4	yes	no	no	worthless as a grant; mechanism behind false search reports	3-weakest
+bespoke short payload	learningfactory-io/ki-werkstatt	1 (served 200, 413 B)	no	yes but NOT a grant	n/a	PROPRIETARY - Alle Rechte vorbehalten, commercial use barred	excluded

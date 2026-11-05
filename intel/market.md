@@ -207,6 +207,9 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 ⚠️ **What to verify before any of this is quoted to a client:** every bill number above against the originating legislature, because the trackers disagree among themselves (one lists Maryland's vehicle as HB 1057, another as SB 720).
 
 
+
+🔵 **p667 — the North America leg is nil on discovery for the ninth consecutive pass, and this pass can finally say how much of that nil is real.** All eleven NA facts served this pass were scored against HEAD: `8` held on a sell shelf directly, `2` more held under a different spelling (Canada's *AI for All* strategy is recorded on this page by its **date**, `4 June 2026`, not its name; the principals statistic is spelled `high-school principals` here against the source's `high school principals`), and **`1` genuinely novel** — *Defending Education*, an advocacy group criticising NEA/AFT AI guidance, **measured and not filed** because it is contested commentary on guidance this page already records rather than adoptable intelligence. 🟢 **The supply half is also nil and that is the newer information:** of the `22` addresses verified this pass, **not one placed to North America** on the owner-location channel (`667-G1`), while EMEA took two and LATAM took two. The region with the densest regulatory activity on this page is contributing the least open-source supply, and that asymmetry has now held across several passes.
+
 ### EMEA
 
 #### 🆕 p666 — the leg nilled, and the new EMEA fact came from the repository channel again
@@ -378,6 +381,9 @@ The later date is probably current, and both sources describe it as a **politica
 4. **Local-judge evaluation as the audit evidence.** `JudgeArena` with a local backend produces assessment-quality evidence without sending student work anywhere — the cheapest existing answer to *"show me this model is fit for exam scoring"*.
 
 
+
+🟢 **p667 — EMEA is the strongest supply region of this pass, and both placements rest on a channel this base could not previously run.** Two addresses placed to EMEA on the owner's own location field (`667-G1`, positive on `location:Germany`): **`Human-Centric-Machine-Learning/memorize`** — the code *and dataset* for *Enhancing Human Learning via Spaced Repetition Optimization*, **PNAS 2019** — and **`telekom/ki-in-schulen`**, Deutsche Telekom AG's AI@School classroom material with a Fraunhofer IAIS contribution, the only corporate-backed MIT school curriculum this base holds. A third, **`insolitos/IA_para_aprender`**, is placed to EMEA on the repository's own text: an AI-literacy web application written for **Portuguese school libraries** against the Ensino Básico and Secundário cycles. 🔵 **Why the library channel is commercially interesting here:** the EMEA literacy obligations this section already tracks — the UK DfE product-safety standards and the EU AI Act's literacy duty — are procured by exactly this kind of institution, and a school-library delivery route is one no other asset on these shelves uses. 🔴 **The PNAS row matters for a different reason:** trend **T10** names the missing evidence base as this sector's weak point, and an EMEA engagement arguing for a particular review schedule now has a peer-reviewed result with its data attached rather than a vendor claim.
+
 ### APAC
 
 #### 🆕 p666 — the mandated APAC leg returned nothing this page did not already hold
@@ -500,6 +506,9 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 
 ⚠️ **Declared gap, repeated deliberately: this pass found no adoption statistics for AI in APAC classrooms or universities, and no vendor/institution census.** Two consecutive passes of searching. The regulatory picture is from secondary law-firm and blog sources with internally inconsistent dates. **Do not present an APAC adoption figure from this base; there isn't one.**
 
+
+
+🔵 **p667 — APAC's regulatory facts are saturated (`6` of `6` held at HEAD) and its supply contribution this pass is one row, but a structurally important one.** **`maimemo/SSP-MMC`** (MIT, `227★`) is a stochastic-shortest-path review scheduler that minimises total review cost to reach a target recall, trained on MaiMemo's own large-scale learner data and published as research. 🟢 **It is the first *alternative* to FSRS this base has filed.** Trend **T13** has said for several passes that FSRS is "the one permissive education algorithm proven at consumer scale" — true, and it left clients with a single answer. An APAC engagement can now be shown a **choice of objective function**: FSRS optimises predicted recall, SSP-MMC optimises cost-to-mastery, both permissive, both with published evidence. 🔴 **The declared APAC gap from prior passes stands and is restated rather than quietly dropped:** no APAC-wide figures on AI adoption in schools or universities were found this pass either. The regulatory clock (Korea's AI Basic Act in force `22 January 2026`, Vietnam's law from `1 March 2026` with education named high-risk by decree, Australia's TEQSA action-plan requirement) is well sourced; the adoption denominator is not, and that remains an informed gap, not coverage.
 
 ### LATAM
 
@@ -666,6 +675,11 @@ client.
 5. **Uruguay and Brazil as reference accounts.** Ceibal and Cetic.br publish the instrumentation; an engagement there produces measurable, citable outcomes, which is precisely what the region's `<1/3 of PoCs reach P&L` problem lacks.
 
 
+
+🟢 **p667 — the LATAM supply question that `p647-I` left open is answered, and the answer came from fixing a measurement rather than from finding more repositories.** `p647-I` named four LATAM-plausible addresses and **deliberately promoted none**, correctly, because only a name-or-language signal supported them and `p647-H` had shown that signal mis-places between Portugal and Brazil. 🔴 **The probe `p647` relied on to do better could never have worked:** `location:` is silently unsupported on the `search/repositories` endpoint and returns `0` for every input (`667-G`). 🟢 **A working probe on `search/users` places two LATAM addresses on the owner's own location field** (`667-G1`), and the free-text spelling turns out to decide the answer: `user:portabilis location:Brasil` → `1` while `location:Brazil` → `0`, and `user:psiagoleal location:Brazil` → `1` while `location:Brasil` → `0` — **two accounts in the same country answering to mutually exclusive spellings** (`667-G2`).
+
+🟢 **The commercially significant one is `portabilis/i-educar`, now on `verticals/solutions.md`.** It is the largest free-software school-management system in Brazil — enrolment, records, classes, grades, transfers and the statutory reporting a municipal education secretariat owes — and 🔧 **it is a re-filing rather than a discovery** — in this base's ledger since `p11` with `35` measurements across `24` passes, filed on a shelf once and `MOVED` off it at `p315`, and on no sell shelf since. Its adoption signal is the forks, not the stars: **`724★` against `555` forks, a ratio of `0.766`**, which ranks **third** on this base's own `forks-per-star` census and is its **only LATAM member of the `deploy-per-institution` class** — the signature of a system each municipality forks and runs as its own instance. 🔴 **Scope it as GPL-2.0** (payload read first-hand this pass, `18,092 B`): a configure-and-host engagement with a public body, not a white-label product, which is the same constraint this page records for Moodle in the region. 🔵 **Why this is the right LATAM entry point:** the UNESCO IESALC finding this section already carries — 87% of institutions using AI against 26% with any formal framework, and 55% with no AI budget — describes a governance gap, and the system that governance has to attach to is the one the secretariat already runs.
+
 ### Global
 
 #### 🆕 p666 — the four mandated global legs nilled for the twentieth consecutive window
@@ -684,6 +698,9 @@ Alongside it, two `NOASSERTION` repositories resolved to usable grants on readin
 
 🔵 **The offer:** an open-source licence audit that reads grant payloads on the resolved default branch instead of trusting a metadata field, delivered as an SBOM a client's counsel can rely on. It is cheap to run, it is demonstrably not what tooling does by default, and the four findings above were produced in a single pass against one industry's shelf. Scope it as 1–2 weeks against an existing codebase, and lead with the eleven-family specimen.
 
+
+
+🔵 **p667 — the global reading of this pass is about the *evidence layer*, not the market size.** The size figures on this page are unchanged and still disagree by a factor of five on the same year, which `p664` recorded and this pass reproduces rather than resolves. What changed is what a studio can put behind a retention claim. 🟢 **`repos/foundations.md` gained sixteen rows this pass that are one layer — retention and scheduling — where this base previously held a single point.** The layer now contains a peer-reviewed optimum with its dataset (`memorize`, PNAS 2019), a published alternative scheduler (`SSP-MMC`), the highest-starred permissive client at `1,870★` BSD-3 (`olmps/memo`), terminal, web and three Obsidian-native implementations, the `.apkg` writer that completes `anki-mcp-server`'s pair, two incremental-reading tools, the teacher-facing code-assessment surface the p647 assessment layer lacked, and a 1,469-question permissive item bank. 🔵 **The practical consequence for an engagement:** the conversation about whether generated learning material actually sticks used to end at "use FSRS". It can now start from an objective function, a delivery form and a citation — and three of those rows make the deck **a text file in a repository**, which is the provenance answer regulated buyers in every region on this page keep asking for.
 
 ## Regional comparison
 

@@ -1,0 +1,13 @@
+metric	value	note
+api_rows	1190	12 topics x 2 sort orders x 50 per page, 24 calls
+distinct_addresses	951	
+held_in_ledger	268	
+ledger_novel	683	comm -23 against evidence/address-ledger.tsv
+tree_slug_corpus	37271	distinct slug-shaped tokens, non-archive tree
+ledger_novel_but_present_in_tree	302	FALSE NOVELTY
+false_novelty_rate	44.2%	302/683
+genuinely_unseen	381	
+control_found_1	hkuds/deeptutor	must be found - OK
+control_found_2	moodle/moodle	must be found - OK
+control_absent_1	zzqxfake/doesnotexist-p667	must be absent - OK
+control_absent_2	flibbertigibbet/nowhere	must be absent - OK

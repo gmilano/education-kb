@@ -1,0 +1,14 @@
+canonical	canon_hits	variant	variant_hits	outcome	defect_class
+high-school principals	2	high school principals	0	FALSE-NEGATIVE	hyphen
+4 June 2026	5	AI for All	0	FALSE-NEGATIVE	name-vs-date
+Annex III	35	Annex 3	0	FALSE-NEGATIVE	numeral-form
+AI Basic Act	20	AI Framework Act	0	FALSE-NEGATIVE	alias
+OpenEduCat	19	Open EduCat	1	both-found	spacing
+Open edX	60	OpenedX	20	both-found	spacing
+Tecnológico de Monterrey	9	Tecnologico de Monterrey	0	FALSE-NEGATIVE	diacritic
+IESALC	20	UNESCO IESALC	13	both-found	prefix
+spaced repetition	7	spaced-repetition	13	both-found	hyphen
+2 December 2027	19	Dec 2, 2027	0	FALSE-NEGATIVE	date-format
+Apache-2.0	279	Apache 2.0	0	FALSE-NEGATIVE	punctuation
+BSD-3-Clause	84	BSD 3-Clause	2	both-found	punctuation
+knowledge tracing	18	knowledge-tracing	2	both-found	hyphen
