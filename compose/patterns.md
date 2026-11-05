@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
 
 # 🧩 Composition patterns — Education
@@ -388,6 +388,8 @@ JupyterHub (BSD-3-Clause, 8,362★, main)           ← one isolated, authentica
 
 **The licensing story is the simplest on this page: BSD-3-Clause, BSD-3-Clause, MIT, MIT — no copyleft anywhere, no AGPL network trap, closed derivative permitted throughout.** Only Pattern E (Kolibri offline) matches it, and E does not cover assessment.
 
+🟢 **Amended at p657 — scope this against P19 before proposing it.** This pattern is correct for a *course-level* engagement where the client's LMS stays the front door and Jupyter is the work surface. It is **not** the right answer at faculty or institution scale, because p657 shelved four permissive production autograders this pattern predates: `Artemis` (MIT, 826 ★), `Autolab` (Apache-2.0, 808 ★), `Submitty` (BSD-3-Clause, 805 ★) and `otter-grader` (BSD-3-Clause, 162 ★). **Two concrete substitutions.** First, if the curriculum includes **R** — statistics, econometrics, quantitative methods — use `otter-grader` rather than `nbgrader`: same BSD-3-Clause licence, same assignment source, and it grades R, which `nbgrader` does not. Second, if the client needs submission handling, plagiarism workflow, TA assignment, regrade requests and an appeals trail, those are **built** in `Submitty` and would be months of bespoke work here. Choose P15 for one course or one cohort; choose **P19** for a faculty.
+
 **State the boundary explicitly and in writing:** this grades submitted work; it does not establish **who** submitted it. **No permissively-licensed proctoring or assessment-integrity tool was found in five passes of searching** (see `repos/foundations.md`). If the client needs identity assurance, that is a commercial tool and a separate line item — do not imply this stack provides it.
 
 ## P16 — Retention that writes into a scheduler people already use (4–5 weeks) 🟢 new at p655
@@ -451,6 +453,115 @@ THE CLIENT'S EXISTING LMS  (Moodle GPL-3.0 / Canvas / Brightspace / Open edX AGP
 2. **Four of the ten components are over a year quiet and none is archived**, so GitHub's staleness signal never fires. Read `pushed_at` before `stars` on this layer and pin every version.
 
 **Where this does not apply.** A greenfield build with no incumbent LMS (use P11 or P15 and own the whole stack), and any engagement where the client's measurement requirement is a compliance artefact rather than an analytical one — a regulator wanting a transparency notice under EU AI Act Article 50 is not asking for an LRS.
+
+## P18 — Adaptive assessment, permissive end to end (ministries, national platforms, professional certification: 10–14 weeks) 🟢 new at p657
+
+**Buyer:** anyone who must place a learner on a scale defensibly — a ministry running a national diagnostic, a professional body certifying candidates, a university placing students into streams. **This is the pattern this KB has pointed at since P4 without being able to name the item-selection component.** Now it can.
+
+```
+the client's existing item bank (usually PDF/Word, sometimes QTI)
+  └── bigdata-ustc/EduNLP (Apache-2.0, 64★)        ← parse items: text + formulae + figures → structured objects
+        └── CALIBRATE item parameters (difficulty, discrimination)
+              ├── eribean/girth (MIT, 127★)  or  17zuoye/pyirt (MIT, 111★)   ← 1PL/2PL/3PL + polytomous
+              └── tswsxk/EduData (Apache-2.0, 83★)  ← public response data for COLD START, before the
+                                                        client has any of its own  ⚠️ not the client's learners
+        └── DIAGNOSE which skills are held
+              └── bigdata-ustc/EduCDM (Apache-2.0, 203★)  ← IRT · MIRT · DINA · NeuralCD
+                    └── CAHLR/pyBKT · pykt-team/pykt-toolkit  ← mastery over time (already shelved)
+        └── SELECT the next item   ★ the load-bearing component ★
+              └── douglasrizzo/catsim (BSD-3-Clause, 153★, branch `dev`, v0.9.1)
+                    initialisation · item selection · ability estimation · stopping rule,
+                    each pluggable, plus SIMULATION to test the design before any learner sees it
+                    └── bigdata-ustc/EduCAT (MIT, 77★) only if the client wants the learned-policy comparison
+  └── DELIVER:  ls1intum/Artemis (MIT) quiz exercises  or  numbas/Numbas (Apache-2.0) in-browser
+  └── RECORD:   yetanalytics/lrsql (Apache-2.0) over xAPI  ← the audit trail, non-negotiable
+```
+
+**Weeks 1–3** parse and structure the real item bank; agree the skill model with the client's subject experts — *this is the deliverable that takes longest and it is not a technical task*. **Weeks 4–6** calibrate on whatever historical response data exists; if none, fit on `EduData` and state in writing that the parameters are provisional. **Weeks 7–9** `catsim` simulation: run synthetic cohorts against the calibrated bank and report test length, measurement error and exposure rates **before** anything is promised about shortening the test. **Weeks 10–12** pilot delivery with the full xAPI trail. **Weeks 13–14** recalibrate on the pilot's own responses — which is the point at which the parameters become real.
+
+🟢 **Why this is defensible where an LLM-scored adaptive test is not.** Every step is a **published, inspectable, five-decade-old statistical method**. Under EU AI Act Annex III, Korea's high-impact scope and US state guardrails, "we selected item 14 because the maximum-information criterion at the current ability estimate chose it" is an answer; "the model decided" is not. **Explainability here is a property of the algorithm, not a feature to build.**
+
+⚠️⚠️ **The two risks to price explicitly, because this pattern hides them better than any other on this page.** First, **six of the seven components are dormant** — `EduNLP` (2024-03), `EduData` (2023-05), `EduCDM` (2024-10), `EduCAT` (2024-08), `girth` (2022-09), `pyirt` (2023-08); only `catsim` is live (2026-11-01). The mathematics does not rot, but **the engagement is adopting maintenance responsibility for unmaintained code and must bill for it.** Second, **`catsim`'s default branch is `dev`** — clone `main` and you get nothing. Third, **calibration needs response volume**: below a few hundred responses per item the parameters are noise, and a proposal that promises adaptivity on a cold bank is promising something it cannot deliver in the pilot window.
+
+## P19 — Autograded faculty at institution scale: adopt and harden, do not build (CS / engineering faculties, technical universities: 8–12 weeks) 🟢 new at p657
+
+**Buyer:** a faculty or university that grades code, proofs, diagrams or quantitative work at cohort scale and is currently doing it with teaching assistants, spreadsheets and goodwill. **The premise of this pattern is that Globant writes no grader.**
+
+```
+PICK ONE PLATFORM — they are not interchangeable:
+
+  ls1intum/Artemis (MIT, 826★, `develop`, v10.3.1) — TUM        ← choose when AI is wanted in-tree
+    ├── programming · text · modeling (Apollon, MIT) · quiz · file upload
+    ├── Atlas: competencies, learning paths, analytics
+    ├── Iris (LLM tutor) · Athena (feedback SUGGESTION) · Hyperion (exercise authoring)
+    │     ALL configuration-gated, OFF by default  ← the procurement feature, not a limitation
+    └── ls1intum/Pyris (MIT) → point at the CLIENT's Ollama / vLLM endpoint, never a public API
+
+  Submitty/Submitty (BSD-3-Clause, 805★/1,119 forks, `main`, v26.10.04) — RPI
+    └── choose when the SUBMISSION and HUMAN-GRADING workflow is the hard part:
+        TA assignment, regrade requests, appeals trail, plagiarism workflow — all built
+
+  autolab/Autolab (Apache-2.0, 808★, `master`) — CMU
+    └── choose for containerised programming autograding with a clean separation:
+        autolab/Tango (Apache-2.0) is the sandboxed execution service and runs standalone
+
+  + ucbds-infra/otter-grader (BSD-3-Clause, 162★) for the R half of the curriculum
+  + jupyter/nbgrader (BSD-3-Clause) if the work surface is notebooks → see P15
+```
+
+**Weeks 1–2** deploy on the client's own infrastructure; **LTI into the incumbent LMS so it stays the front door** (Pattern I / P17 — no migration, no copyleft contact). **Weeks 3–5** migrate real existing exercises and **reproduce their historical grades — run this before anything else is promised**, exactly as P15 requires; it is the credibility test and it is cheap. **Weeks 6–8** enable at most one AI subsystem, for one cohort, and **calibrate `Athena`'s suggestions against the client's own graders, reporting the agreement statistic honestly including if it is poor.** **Weeks 9–10** appeals workflow and grader training. **Weeks 11–12** xAPI trail into `lrsql` and the governance pack: which subsystem was enabled, for whom, what it touched, where the human decided.
+
+🟢 **What Globant is actually selling, and it is worth more than a grader.** Deployment, integration, exercise migration, calibration against the client's raters, the appeals and governance workflow, and grader training. ⚠️ **Say out loud in the proposal that the platform is existing open source** — a client who later discovers that a "custom platform" was MIT software from TUM has a legitimate grievance, and the honest version is the stronger pitch anyway: six universities already run this code.
+
+⚠️ **The same hard boundary as P15, restated because it does not move:** this grades submitted work; it does not establish **who** submitted it. **No permissively-licensed proctoring or assessment-integrity tool has been found in any pass** (see **T20**). Identity assurance is a commercial tool and a separate line item.
+
+## P20 — Spoken-language assessment, self-hosted (LATAM and APAC language programmes, corporate English training: 6–8 weeks) 🟢 new at p657
+
+**Buyer:** a language school, a ministry's English programme, or a corporate training function currently paying per utterance to a cloud speech API — or doing nothing because that cost did not scale.
+
+```
+learner records a target sentence (phone or browser, no special hardware)
+  └── Halleck45/OpenPronounce (MIT, 184★) — CPU-only, `pip install openpronounce`
+        returns: score · mispronounced words with sounds ACTUALLY HEARD in IPA ·
+                 per-word confidence · transcription · pitch + energy curves
+        ├── Kyubyong/g2p (Apache-2.0, 936★)          ← English target pronunciation
+        ├── CUNY-CL/wikipron (Apache-2.0, 376★)      ← Spanish · Portuguese · hundreds more
+        └── liguozheng-ac/japanese-speech-xray (MIT, 177★) ← pitch-accent languages (JA, ZH)
+  └── launch inside the client's LMS over LTI 1.3  (Pattern I / P17 — tsugi or pylti1.3)
+  └── record every attempt to yetanalytics/lrsql (Apache-2.0) over xAPI
+        → the cohort-level progress curve, which is what the buyer is actually paying for
+```
+
+**Weeks 1–2** stand up `OpenPronounce` in the client's estate and **score a sample of the client's own recordings against their own teachers' judgements — report the correlation before anything else happens.** **Weeks 3–4** target-language lexicon from `g2p` (English) or `wikipron` (everything else); set the scoring thresholds *with* teachers rather than for them. **Weeks 5–6** LTI launch from the existing LMS; xAPI statements into `lrsql`. **Weeks 7–8** pilot cohort and the progress reporting.
+
+🟢 **The commercial case is a line item the client already pays.** `OpenPronounce` is positioned by its own author as a self-hosted alternative to **Azure Pronunciation Assessment**: a metered per-utterance cloud cost becomes a CPU container. And because **voice is biometric-adjacent personal data**, keeping it on-premise *removes* an EMEA cross-border transfer question rather than answering it — the compliance argument and the cost argument are the same deployment decision.
+
+⚠️ **Three boundaries, all of which belong in the proposal in writing.** (1) **Phoneme accuracy is not fluency and not a CEFR level** — it does not replace a human oral examiner, and a proposal implying otherwise will fail its first expert review. (2) `OpenPronounce` is **184 ★ with a single maintainer**: pilot against real recordings before committing, and budget to carry it. (3) The better-known project in this layer, `Thiagohgl/ai-pronunciation-trainer` (525 ★), is 🔴 **AGPL-3.0** — usable as a deployed service, **never** as the client's product; if a client has already found it, that licence difference is the reason to choose `OpenPronounce` despite lower adoption.
+
+## P21 — Verifiable skills credentials, closed derivative permitted (corporate academies, professional bodies, workforce programmes: 6–8 weeks) 🟢 new at p657
+
+**Buyer:** anyone whose completions currently end in a PDF certificate — a corporate academy, a professional body, a government reskilling programme. **Skills-based credentialing is a named 2026 buying trend (1EdTech, see T34) and the permissive supply for it is one project (T33).**
+
+```
+learner completes assessed work
+  └── the assessment itself: Artemis (MIT, P19) or the adaptive test from P18
+        └── evidence recorded to yetanalytics/lrsql (Apache-2.0) over xAPI
+              ← the credential must POINT AT evidence, or it is a PDF with extra steps
+  └── learningeconomy/LearnCard (MIT, 70★, `main`)   ★ the only permissive issuer ★
+        Issue · Earn · Store · Share · Map
+        standards read from the monorepo's own package list this pass:
+          @learncard/vc-plugin · vc-api-plugin        → W3C Verifiable Credentials, VC-API
+          @learncard/openid4vc-plugin · sd-jwt-vc-plugin → OpenID4VC, SD-JWT-VC
+          @learncard/didkit-plugin · didkey-plugin · did-web-plugin · chapi-plugin → DIDs, CHAPI
+        └── ships its own AGENT SKILL: `npx @learncard/cli skill install`
+              → an agent from agents/top.md can issue and verify directly
+```
+
+**Weeks 1–2** the **competency model** — which skills exist, what evidence counts, who may assert it. This is the deliverable and it is a facilitation task, not an engineering one; `Artemis`'s Atlas competencies or a 1EdTech CASE framework can carry it. **Weeks 3–4** `LearnCard` issuance wired to the assessment's completion events, each credential referencing its xAPI evidence. **Weeks 5–6** holder wallet and verification flow; decide `did:web` (institution-anchored, simplest to explain to a registrar) versus `did:key`. **Weeks 7–8** recognition — the part that determines whether the credential has value: at least one external party that will *accept* it.
+
+🟢 **Licence position is unusually clean: MIT throughout**, so the client's branded wallet and issuer are a closed derivative. **Every alternative in the layer is copyleft** — `tahrir` AGPL-3.0, `certo` AGPL-3.0, `openbadgeslib` LGPL-3.0, `badgr-ui` AGPL-3.0 **and archived** (**T33**). If a client has already piloted a badge platform, the licence is very likely why it cannot become their product.
+
+⚠️ **Two risks, and the second is the one that kills these projects.** (1) **`LearnCard` is 70 ★ with 42 open issues and one sponsoring organisation** — the same single-vendor shape **T28** flags for `lrsql`, and both appear in this stack, so a proposal resting on P21 is resting on two single-vendor dependencies. Name them. (2) **A credential nobody accepts is worth nothing.** Standards conformance (W3C VC, OBv3, OpenID4VC) is necessary and not sufficient; **the engagement must deliver at least one relying party that will honour the credential**, and if the client cannot name one, build the evidence layer (`lrsql`) first and the credential later.
 
 ## Choosing a pattern
 

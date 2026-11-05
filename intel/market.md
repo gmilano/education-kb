@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
 
 # 🗺️ Market map — Education
@@ -40,6 +40,19 @@ updated: 2026-11-04
 | 2026 framed sector-wide as the year the question shifts from *whether* to use AI to *under what conditions* | global | 1EdTech |
 
 🔵 **The OECD recommendation is the single most strategically useful sentence this page has acquired at p652, because it is an OECD-level endorsement of exactly what this KB's shelf is made of.** "Incentivise the development of tools that aim to enhance teaching and learning" is a policy instruction to fund purpose-built education AI over generic chatbots — and the purpose-built, permissively-licensed options are enumerated in `agents/top.md`. Pair it with the Digital Education Council's 15%/29% finding and the gap is explicit: systems are being told to buy purpose-built tools, 85% of students do not yet see AI in most courses, and 71% do not think their instructors could guide them if they did. **Tool supply is not the constraint; integration and teacher capability are.** That is a services market, and it is what Globant sells.
+
+### 🟢 Re-measured at p657 — the spread widened again, and that is the finding
+
+Four more 2026 estimates, none reconcilable with the others or with the figures above:
+
+| Source | 2026 base | Forecast | Implied CAGR |
+|---|---|---|---|
+| Coherent Market Insights | **$11.40B** | $57.25B by **2033** | ~25.9% |
+| Secondary compilation (Azumo) | **$12.3B** | — | — |
+| Third estimate cited by the same compilation | — | **$136.79B by 2035** | — |
+| Europe only (regional estimate) | **$2.64B** | $8.0B by 2030 | **31.9%** |
+
+Set against the figures this page already carries ($9.58B → $42.48B by 2030 at 41.5%), **the 2026 base alone now ranges from $9.58B to $12.3B — a 28% spread — and the 2030-2035 forecasts differ by more than 3×.** 🔵 **The useful conclusion is not a number, it is a rule for proposals: do not quote a single market size for AI in education.** Quote the range, name the source, and anchor the business case on something measured instead — teacher adoption (60% US, Gallup), institutional governance coverage (26% LATAM, ~10% EMEA), or the client's own cohort data. Every one of those is a firmer number than the TAM, and each one points at work that is actually billable.
 
 ## Structural read of the market
 
@@ -123,6 +136,18 @@ Three facts shape every engagement:
 **So the North America accessibility opportunity is: deploy UDOIT inside the client's own estate, bill the remediation and the integration, ship no derivative.** It is a services engagement with a hard regulatory date, not a product line — and UDOIT being Canvas-specific is an advantage here, because Canvas is the dominant LMS in US higher education. Say "services" in the first conversation; a proposal that promises a platform will have to retract it. See `intel/trends.md` **T29**.
 
 🟢 **Separately, the state-level policy wave is a measurement opportunity, and p656 shelved the components for it.** Maryland's SB 720 contemplates **certification of compliant tools**; North Carolina's SL 2026-41 requires local school-unit policies; NYC's guidance forbids student data being used to train models. Each of those is an *evidence* requirement before it is a software requirement — a district has to be able to show what a tool did with which learner's data. An Apache-2.0 Learning Record Store ([`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)) plus LTI launch ([`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi), Apache-2.0) produces exactly that: a per-learner, per-attempt statement log the district owns, in its own database, with no vendor egress. **That is the cheapest credible answer to "certify this tool" that this KB can currently assemble**, and it is permissive end to end. See `compose/patterns.md` **P17**.
+
+#### 🟢 New at p657 — three permissive autograders are American university software, and the grading prohibitions are a fit rather than an obstacle
+
+**Supply.** Three of the six permissive production autograders named in **T30** are built and run by US universities: [`Submitty`](https://github.com/Submitty/Submitty) (BSD-3-Clause, 805 ★ / **1,119 forks**, Rensselaer), [`autolab/Autolab`](https://github.com/autolab/Autolab) (Apache-2.0, 808 ★, Carnegie Mellon) and [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (BSD-3-Clause, 162 ★, UC Berkeley Data Science, **and it grades R**). With `nbgrader` and `okpy/ok`, North America is the **origin region for this entire layer** — which means peer references, familiar names and existing institutional deployments are all available in-region for a US or Canadian proposal.
+
+**Regulation, measured this pass.** Roughly **134 AI-in-education bills across 31 states** in the 2026 session (MultiState), with legislatures favouring research, transparency and guardrails over adoption mandates. **Maryland, Idaho, Oklahoma and Virginia** have 2026 laws requiring *both* state guidance *and* mandatory district-level AI policy. **NY A 9190** would restrict classroom AI to grade 9 and above, excepting diagnostics and special-education interventions. Federally, the House Education and Workforce Committee advanced the **K-12 AI Literacy and Readiness Act of 2026** (⚠️ final status not confirmed in these sources), and the **US Department of Labor published an AI Literacy Framework in February 2026**. In Canada, workplace AI obligations sit under the *Working for Workers Four Act, 2024*, with Ontario AI-hiring-disclosure rules pending.
+
+**Adoption.** **60% of US teachers report using AI tools** (Gallup, n > 2,200). **55% of high-school principals** say their school has not blocked or restricted AI on the school network. Most US public schools still lack a formal student AI policy (Child Trends / Dept. of Education). **70% of institutions across Europe and North America** have or are developing guidance.
+
+🟢 **The opportunity, and it inverts how the prohibitions are usually read.** **DC OSSE's non-mandatory 2026-27 policy bars AI from grading, discipline and IEP decisions**, and **Clark County** bars AI as the sole basis for any high-stakes decision. Those rules do not block this stack — **they describe it.** `Submitty`'s first-class TA/manual-grading workflow and `Artemis`'s `Athena`, which *suggests* feedback rather than issuing it, are architecturally compliant by default. **The sellable artefact is the compliance evidence**: which AI subsystem is enabled for which cohort, what it touched, and where the human decided — produced from configuration and an xAPI statement log (**T28**) rather than from a policy document. ⚠️ A proposal that leads with autonomy rather than with the human boundary is unsellable in these districts; the same stack sold as governed assistance is well-positioned.
+
+🔵 **Named watch items:** OpenAI and Common Sense Media's proposed California **"Parents & Kids Safe AI Act"** ballot initiative would set standards any AI-featured edtech would need to meet; and North Carolina's defence of a **$10M Khan Academy AI earmark** is the clearest signal that US state money is moving to named vendors rather than to capability building — which is an argument for bidding on the integration and evidence work rather than on the tutor.
 
 ### EMEA
 
@@ -217,6 +242,16 @@ small sample driven by a few large deals and should not be quoted as a market sh
 
 ⚠️ **One honest constraint on the authoring half.** European institutions author heavily in **H5P**, and `h5p/h5p-php-library` and `Lumieducation/H5P-Nodejs-library` are both **GPL-3.0** (35,146 B each); `Lumieducation/Lumi`, the desktop editor, ships **no grant file at all** on its default branch. Integrate via their APIs, never fork, and do not build a product on Lumi's unstated grant.
 
+#### 🟢 New at p657 — the most capable permissive education platform in open source is EMEA-built, and it is MIT
+
+**Supply, and this is the headline for the region.** [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — **MIT**, 826 ★ / 395 forks, pushed 2026-11-05, tag `10.3.1` — is built and operated by **TUM (Technical University of Munich)** for its own teaching, with **Iris** (LLM tutor), **Athena** (feedback suggestion) and **Hyperion** (AI exercise authoring) in-tree and configuration-gated. Alongside `OpenOlat` (Apache-2.0, Zurich) from p656 and `Mentingo` (MIT, Selleo, Poland) from p655, **the three most capable permissive platform-class rows in this KB are all EMEA-origin** — and Artemis is the only one of the three with the AI layer already written. 🟢 **For an EU public-sector or university procurement this is close to ideal**: German-built, self-hosted, MIT, every AI subsystem individually switchable and evidenceable. Also EMEA-origin this pass: `OpenPronounce` (MIT, French author) and `INGInious` (🔴 AGPL-3.0, UCLouvain, Belgium).
+
+**Regulation.** Education is **Annex III high-risk** under the EU AI Act — admission decisions, student evaluation, exam scoring — carrying an obligation to support qualified staff who can **monitor, intervene, override and shut down** the system. ⚠️ **Sources still conflict on the deadline and the more recent one governs:** a guide updated **1 September 2026** gives **2 December 2027** for stand-alone Annex III systems and **2 August 2028** for AI embedded in regulated products; older material says August 2026. This KB already carries December 2027 (**T7**, **T15**) and this pass **reproduces it** — treat the August 2026 figure as stale wherever a client's advisers cite it. The **UK Department for Education published generative AI product safety standards for education in January 2026**; **Ofqual** and **Ofsted** are the assessment and inspection authorities. In the Gulf, **Dubai's KHDA** has issued explicit responsible-AI guidance to private schools.
+
+**Market and adoption (⚠️ secondary sources — indicative only).** Europe's AI-in-education market is put at **$2.64B in 2026 growing to $8.0B by 2030 (31.9% CAGR)**, with **Finland, Estonia and the Netherlands** leading K-12 integration. Against that, **only ~10% of 450+ surveyed institutions have established formal AI guidelines** — the same adoption-ahead-of-governance shape UNESCO measured in LATAM, in a region with a binding statute coming. The **UK government invested £4M in AI tools for lesson planning and marking**.
+
+🟢 **The opportunity.** The gap between a high-risk classification with a hard human-oversight duty and 10% of institutions having any written policy is a **governance-and-evidence engagement, and it is the one EMEA buy that is already funded by compliance budgets rather than innovation budgets.** The deliverable is Artemis or OpenOlat deployed on the client's own infrastructure, each AI subsystem individually gated and documented, an Apache-2.0 LRS producing the audit trail, and a conformity file that names which Annex III function is in scope. ⚠️ **Do not sell the December 2027 date as comfort** — the oversight capability has to exist before the system is in production, and procurement cycles in EU public HE run 12–18 months.
+
 ### APAC
 
 **Regulatory posture:** no longer merely fragmented — **APAC now has a binding, horizontal, risk-tiered AI statute that names education explicitly**, and this KB did not hold it until p651.
@@ -270,6 +305,16 @@ The APAC search was run and returned **no reading this base did not already hold
 🟢 **LTI matters more in APAC than elsewhere because the LMS estate is heterogeneous.** The region has no single dominant platform the way LATAM has Moodle or US higher education has Canvas, so a per-platform integration strategy multiplies cost across markets. One LTI 1.3 tool launches inside all of them.
 
 ⚠️ **One demand-side figure added this pass, and it is secondary.** Reporting on the region cites a South Korean government investment of **approximately US$740 million across 2024–2026 to train teachers on AI tools** — a funded AI-literacy mandate of the kind **P10** is built for. 🔴 **This comes from market-research and vendor compilations, not from a Korean government source, and was not reconciled to a primary budget document.** Treat it as an indication that the mandate is funded, not as a number to quote to a client. The named-player hole on the APAC demand side, recorded in this page's declared gaps, is unchanged.
+
+#### 🟢 New at p657 — the measurement layer is almost entirely APAC-built, and Korea's high-impact duties land during a grace period that is now half spent
+
+**Supply, and the regional concentration is striking.** Of the thirteen permissive psychometric-measurement rows added at p657 (**T31**), **seven come from one APAC laboratory** — `EduKTM`, `EduCDM`, `EduCAT`, `EduNLP` (University of Science and Technology of China, with `EduData` from the same group) — plus [`17zuoye/pyirt`](https://github.com/17zuoye/pyirt) (MIT), written by a Chinese K-12 company against production homework data, and [`liguozheng-ac/japanese-speech-xray`](https://github.com/liguozheng-ac/japanese-speech-xray) (MIT, live). **Cognitive diagnosis and adaptive testing are an APAC research strength expressed as Apache-2.0 and MIT code**, and that is a regional asset this KB had not recorded. ⚠️ With the caveat from **T31**: almost all of it is dormant, and `catsim` (BSD-3-Clause, Brazil) is the one live component.
+
+**Regulation.** **South Korea's AI Basic Act entered into force 22 January 2026** — transparency, risk assessment, **human oversight** and documentation duties for high-impact systems, with a **guidance-rather-than-penalties grace period running through 2026**, i.e. roughly two months left at the date of this pass. **Vietnam's risk-based AI law takes effect 1 March 2026** and education appears in its high-risk sector list (⚠️ the sector list sits in a decision document dated July 2026 — the timeline is internally inconsistent across sources and should be checked in primary form before it reaches a proposal). **China**: mandatory registration, strict content labelling, penalties. **Japan**: light-touch, voluntary governance. **Singapore**: frameworks and toolkits (**AI Verify**). **Australia**: no AI-specific statute, but the 2024 mandatory-guardrails proposal named education, and **TEQSA now requires every higher-education provider to submit an institutional action plan addressing generative-AI risk** — a dated, named, compliance-funded deliverable. The **EU AI Act reaches APAC vendors** selling proctoring or admissions tools into European institutions.
+
+🔴 **The informed gap, stated rather than left silent.** Four searches produced **no reliable region-wide figures for AI adoption rates in APAC schools or universities, and no credible ranking of education-sector vendors in the region.** EMEA, North America and LATAM all have survey instruments (Gallup, the European institutional surveys, UNESCO IESALC, the Digital Education Council); APAC has regulatory analysis and almost no comparable adoption measurement in these sources. **This is a measurement gap in the public record, not an absence of activity, and it is the single largest hole in this page.** A regional engagement should expect to commission its own baseline — which is itself billable, and which no competitor can quote from a report either.
+
+🟢 **The opportunity.** Korea's high-impact scope covers **student evaluation**, and the permissive answer is already APAC-built and auditable: `catsim` makes item selection an explainable published algorithm rather than a learned policy, `EduCDM` makes skill diagnosis inspectable, and both can run entirely on-premise. **TEQSA's action-plan requirement is the nearest-dated, best-specified opportunity in the region** — every Australian provider must produce one, the deadline is institutional rather than negotiable, and the deliverable is governance work on top of software the client already runs. ⚠️ Note **T11**: public support for restricting AI in schools is rising in parts of APAC, so consumer-facing autonomous tutoring is the weakest proposition here and institutional assessment infrastructure the strongest.
 
 ### LATAM
 
@@ -351,6 +396,21 @@ client.
 ⚠️ **Scope the dependency honestly, because it is thinner than it looks.** `lrsql` is the **only** live, maintained, permissively-licensed LRS in existence. If a client already runs `LearningLocker/learninglocker` — plausible, at 584 ★ and years of installed base — it is **GPL-3.0 and dormant since 2024-05-30**; the recommendation is migration, not extension, and that is a line item.
 
 🔴 **No new LATAM-specific repository was found this pass.** The two permissive rows shelved at p656 with identifiable provenance are both EMEA (Newcastle University, France Université Numérique). Searched `topic:xapi`, `topic:lti`, `topic:scorm` and `topic:accessibility topic:education`; **no LATAM-origin project surfaced in any of the four.** Recorded as a measured absence rather than left as silence — and consistent with this page's standing finding that the region's AI-education activity is deployment and policy rather than published open source.
+
+#### 🟢 New at p657 — the one live component of the measurement layer is Brazilian, and spoken assessment is the region's best-fitting new opportunity
+
+**Supply.** [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) — **BSD-3-Clause**, 153 ★, pushed **2026-11-01**, tag `0.9.1`, default branch 🔴 **`dev`** — is the **only maintained component in the entire permissive psychometric-measurement layer** (**T31**), and it is Brazilian. This KB has repeatedly recorded LATAM as a consumer of open education software rather than a producer; **the single most load-bearing row in the layer added this pass is LATAM-origin**, and that is worth stating plainly in a regional pitch.
+
+**Adoption, and it is the best-measured region in this KB.** UNESCO IESALC, across **~200 higher-education institutions in 19 countries**: **87% use AI in at least one area, and only 26% have any formal framework.** The Digital Education Council's **LATAM 2026 survey** (with Tecnológico de Monterrey and its Institute for the Future of Education): **92% of students and 79% of faculty actively engage with AI.** In schools: **75% of Uruguayan public-school teachers** report using these tools (Ceibal); in Brazil, **65% of internet users aged 9–17** use AI tools and **53% of school administrators** use AI while **only 22% report that their school has guidelines** (Cetic.br).
+
+**Regulation.** Universidad de los Andes (Bogotá) counted **716 AI-related regulatory instruments, rules and legislative proposals across 23 countries and territories, more than 80% initiated since 2023** — volume without convergence. The regional argument is for **common definitions, risk categories, audit principles and mutual recognition** rather than a single statute. **UNESCO launched its Observatory on Artificial Intelligence in Education for Latin America and the Caribbean on 14 April**, and its recommendations to governments are specific: fold higher education into national AI strategies, fund it, issue national guidance, and **integrate AI literacy and governance into accreditation and quality assurance** — which converts governance work from optional to accreditation-critical. Country bodies to name: **Ceibal** (Uruguay), **Cetic.br** (Brazil), **CENIA** (Chile), plus the **UNESCO–Tec de Monterrey** agreement.
+
+🟢 **The opportunities, in priority order.**
+1. **Spoken-language assessment (new, and the best regional fit of anything found this pass).** English-language training is large, funded and measurable across the region, and `OpenPronounce` (MIT) + `wikipron` (Apache-2.0, which supplies Spanish and Portuguese lexicons) replaces a **metered per-utterance cloud API** with a CPU container — a cost argument that lands harder where budgets are tighter. See `verticals/solutions.md` Pattern K and `compose/patterns.md` **P20**.
+2. **Governance tied to accreditation.** The 87%-use / 26%-framework gap is the largest adoption-governance gap this KB measures anywhere, and UNESCO's accreditation recommendation gives it a deadline-shaped driver. The cheapest credible deliverable remains an Apache-2.0 statement log (**T28**).
+3. **Adaptive assessment on a LATAM-maintained component.** `catsim` plus a calibrated item bank is a defensible, explainable adaptive-testing engagement for a ministry or national platform — and the maintainer is in-region.
+
+⚠️ **The standing caveat has not changed:** this region's constraint is the PoC-to-P&L gap, not enthusiasm. 92% of students using AI is not a budget line; accreditation and procurement are.
 
 ## Regional comparison
 

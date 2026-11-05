@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
 
 # 🏭 Vertical platforms — Education
@@ -9,7 +9,7 @@ updated: 2026-11-04
 > Real, running systems that a client may already have, or that can be stood up and then extended with an agentic layer.
 > Model: start from something that already works, add agents on top. Verified 2026-11-04 via `git ls-remote --symref` + licence payload read.
 
-## Platforms — 26 verified rows
+## Platforms — 31 verified rows
 
 | Platform | Repo | Licence | Branch | Stack | Use case |
 |---|---|---|---|---|---|
@@ -39,6 +39,11 @@ updated: 2026-11-04
 | **TAO** | [oat-sa/tao-core](https://github.com/oat-sa/tao-core) | 🔴 **GPL-2.0** (18,025 B) | **`develop`** | PHP | 🟢 **New at p656.** Standards-based (**QTI**) computer-based assessment and delivery — the platform behind national and international large-scale testing programmes, including PISA-adjacent work. **64 ★**, pushed 2026-11-04. Low stars, heavyweight institutional adoption: the signature of software that is deployed under contract rather than starred. ⚠️ **GPL-2.0-only — do not combine in one work with GPL-3.0 code** (see the licence table below). |
 | **Numbas** | [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** (11,357 B) | `master` | JavaScript | 🟢 **New at p656, and the permissive exception on the assessment half of this shelf.** Browser-based e-assessment with randomised questions, algebraic answer marking and partial credit; packages to SCORM. **216 ★**, 129 forks, pushed 2026-10-28. **Newcastle University runs and maintains it for its own teaching** — production university software. Also on `repos/foundations.md`. **EMEA** provenance. |
 | **Learning Locker** | [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | 🔴 **GPL-3.0** (35,141 B) | `master` | JavaScript / Node | 🟢 **New at p656 — listed as a warning, not a recommendation.** The LRS that defined the category and the one a client is most likely to already be running. **584 ★** and 🔴 **dormant since 2024-05-30, `archived: false`** so GitHub's staleness signal never fires. Copyleft *and* unmaintained. **Migrate to `yetanalytics/lrsql` (Apache-2.0, live) rather than extending this.** |
+| **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** (1,091 B) | 🔴 **`develop`** | Java / Spring + TypeScript | 🟢 **New at p657 — and it is the most capable permissive platform on this shelf, which was not true yesterday.** Institution-scale interactive learning with **individual feedback**: programming, text, modeling, quiz and file-upload exercises; competencies, learning paths and analytics (**Atlas**); institutions self-host. **826 ★ / 395 forks, pushed 2026-11-05, tag `10.3.1`.** Built and operated by **TUM** for its own teaching. 🟢 **AI is in-tree and configuration-gated — `Iris` (LLM tutor), `Athena` (feedback suggestion), `Hyperion` (AI exercise authoring on Spring AI)** — so unlike every other platform row here, the agent layer is not something Globant must add. ⚠️ Default branch `develop`. |
+| **Autolab** | [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** (11,324 B) | `master` | Ruby / Rails | 🟢 **New at p657.** Course management built around **auto-graded programming assignments**, from **Carnegie Mellon**. 808 ★ / 234 forks, pushed 2026-11-03. Pair with `autolab/Tango` (Apache-2.0), the standalone REST service that executes untrusted student code in isolation — usable on its own with any stack. |
+| **Submitty** | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** (1,542 B) | `main` | PHP | 🟢 **New at p657.** Submission, automated grading **and TA/manual grading** from **Rensselaer Polytechnic Institute**. **805 ★ / 1,119 forks** — more forks than stars, the Moodle signature of software institutions copy rather than watch. Pushed 2026-11-05, tag `v26.10.04`. 🔵 **Its first-class manual-grading workflow is the human decision boundary that DC OSSE and NY A 9190 require**, rather than a feature to retrofit. |
+| **INGInious** | [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** (34,764 B) | `main` | Python | 🟢 **New at p657, listed as a boundary.** Secure, automated exercise assessment running the institution's own tests, from UCLouvain; live (pushed 2026-11-04), 243 ★. 🔴 **Network copyleft — deploy unmodified behind its own boundary, never fork into a deliverable.** 🔵 The GitHub API reports it `NOASSERTION`; the payload is unambiguous Affero. |
+| **CourseLit** | [codelitdev/courselit](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** (34,143 B) | `main` | TypeScript / Next.js | 🟢 **New at p657, listed as a warning.** Create and sell courses and digital downloads on a branded site — the highest-adoption platform read this pass at **1,295 ★**, pushed 2026-11-03, and **Affero**, so a white-label client product is exactly what it forbids. If a client names it, the answer is `Mentingo` (MIT) or `Artemis` (MIT). |
 
 ### Licence payloads read this pass
 
@@ -214,6 +219,44 @@ The pattern that makes the other eight safe to sell. Every pattern above eventua
 **Licence position end to end:** steps 1–4 are Apache-2.0 / MIT / BSD-3 and can carry proprietary work. Steps 2 (authoring) and 5 (accessibility) are copyleft and stay stock. **Timeline 4–6 weeks** on top of an existing engagement; it is plumbing, and the components are small.
 
 🔴 **Scope the single point of failure explicitly.** `lrsql` is the only live permissive LRS in existence — `learninglocker` is GPL-3.0 and dormant since 2024-05-30, `adlnet/ADL_LRS` is ~12 months quiet. Name that dependency in the proposal.
+
+### Pattern J — Artemis: the platform where the agents are already in the tree (best fit: CS / engineering faculties, technical academies, greenfield HE) 🟢 new at p657
+
+Every other pattern on this page is *platform + agent layer Globant builds*. This one is not, and that changes the proposal.
+
+```
+ls1intum/Artemis (MIT, 826★, branch `develop`, tag 10.3.1)   ← self-hosted by the institution
+  ├── exercises: programming · text · modeling (Apollon, MIT) · quiz · file upload
+  ├── Atlas: competencies, learning paths, learning analytics
+  ├── Iris      → LLM tutor: hints and leading questions, never answers
+  ├── Athena    → suggests feedback on text / modeling / programming submissions
+  ├── Hyperion  → AI-assisted exercise authoring (Spring AI)
+  └── ls1intum/Pyris (MIT) ← the LLM microservice seam: point it at the CLIENT's
+                              Ollama / vLLM / sovereign endpoint, not a public API
+```
+
+**What Globant sells here is not the AI.** It is: deployment on the client's infrastructure, LTI integration so the incumbent LMS stays the front door, migration of real existing exercises, **calibration of Athena's feedback suggestions against the client's own graders with the agreement statistic reported honestly**, the appeals workflow, and grader training. ⚠️ **All three AI subsystems are configuration-gated and off by default — which is the feature to lead with** in an EU or Korean procurement: the institution can evidence exactly which AI is enabled, for which cohort, with a human in the loop on every consequential decision.
+
+⚠️ **Scope honestly against `Mentingo` and `OpenOlat`.** Artemis is built for *assessed technical coursework at a university*. It is not a corporate L&D product (that is `Mentingo`, MIT) and not a general institutional LMS with curriculum management and portfolios (that is `OpenOlat`, Apache-2.0). Proposing it for a corporate academy would be a mis-scope.
+
+### Pattern K — Spoken-language assessment on a permissive stack (best fit: LATAM and APAC language programmes, corporate English training) 🟢 new at p657
+
+The layer this KB had never touched, and it replaces a metered cloud API with an on-premise component.
+
+```
+learner records a target sentence
+  └── Halleck45/OpenPronounce (MIT, 184★)  ← phoneme-level score, mispronounced words in IPA,
+        │                                     per-word confidence, pitch + energy curves. CPU-only.
+        ├── Kyubyong/g2p (Apache-2.0, 936★)        ← English: what the learner SHOULD produce
+        ├── CUNY-CL/wikipron (Apache-2.0, 376★)    ← the same, for hundreds of other languages
+        └── liguozheng-ac/japanese-speech-xray (MIT, 177★) ← pitch-accent languages need prosody,
+                                                              not just a phone string
+  └── launch over LTI (Pattern I) · record each attempt to yetanalytics/lrsql (Apache-2.0) over xAPI
+```
+
+**The commercial argument is a line item the client already pays.** `OpenPronounce`'s own author positions it as a self-hosted alternative to **Azure Pronunciation Assessment** — so the pitch is a metered per-utterance cloud cost replaced by a CPU container inside the client's estate, which is simultaneously the cost case and the **EMEA data-residency** case (voice is biometric-adjacent personal data; keeping it on-premise removes a transfer question rather than answering it).
+
+⚠️ **Two boundaries to state in writing.** First, `OpenPronounce` is **184 ★ with a single maintainer** — pilot it against the client's own recordings before it is in a proposal, and note that the better-known project in this layer (`ai-pronunciation-trainer`, 525 ★) is **AGPL-3.0** and therefore cannot be the deliverable. Second, **phoneme scoring is not fluency assessment** and is not a CEFR level; do not let a proposal imply it replaces a human oral examiner.
 
 ### Pattern D — SIS + LMS split
 Moodle or Open edX handles learning; the administrative system handles enrolment, timetabling, records and fees. Administrative agents (scheduling, at-risk alerting, enrolment triage) belong on the administrative side, where the data actually lives.

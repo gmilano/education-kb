@@ -1,8 +1,101 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
+
+## 🆕 2026-11-05 (p657) — 🔴 **A SHELVED TREND WAS WRONG, NOT MERELY INCOMPLETE: T20 CALLED AGENTIC ASSESSMENT A RESEARCH ARTEFACT WHILE AN MIT PLATFORM AT 826 ★ WAS SHIPPING THREE AI SUBSYSTEMS**
+
+**Verification channels:** existence and **real default branch** via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that resolved branch; stars, forks, `pushed_at`, `archived`, `open_issues_count` from `gh api search/repositories` with many `repo:` qualifiers in one query; versions via `git ls-remote --tags` **numerically sorted**. 🔴 `curl github.com` 403, `gh api repos/{owner}/{repo}` 403, and 🆕 **`gh api repos/.../releases/latest` 403** — see `agents/trending.md` p657 for the full channel table and the `NOASSERTION` correction.
+
+### 🔴 The defect this pass closes is the worst class yet: a *refined* claim that was never retested
+
+p655 published **T20**: *"Permissive assessment software exists now; the agentic half of it is a research artefact."* p656 **refined** it — correctly noting that `numbas/Numbas` (Apache-2.0, 216 ★) is production university software, not paper code — and in doing so narrowed the heading to *"the **agentic** half"* while leaving the premise untested. The premise was that the whole permissive supply for agentic assessment is two repositories at **2 ★** and **0 ★**.
+
+🔴 **It was not.** One sweep of `topic:autograding` — **94 repositories, never swept in any prior pass** — returns:
+
+| Repo | Branch | Licence (payload, bytes) | ★ / forks | Pushed | Institution |
+|---|---|---|--:|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🔴 **`develop`** | 🟢 **MIT** (1,091) | **826 / 395** | **2026-11-05** | **TUM**, Munich |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | `master` | 🟢 **Apache-2.0** (11,324) | **808 / 234** | 2026-11-03 | **Carnegie Mellon** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | `main` | 🟢 **BSD-3-Clause** (1,542) | **805 / 1,119** | **2026-11-05** | **Rensselaer** |
+| [`okpy/ok`](https://github.com/okpy/ok) | `master` | 🟢 **Apache-2.0** (13,979) | 370 / 88 | ⚠️ 2025-07-02 | **UC Berkeley** |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `main` | 🔴 **AGPL-3.0** (34,764) | 243 / 153 | 2026-11-04 | **UCLouvain** |
+| [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | `main` | 🔴 **GPL-3.0** (35,150) | 231 | 2026-11-01 | **Harvard CS50** |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | `master` | 🟢 **BSD-3-Clause** (1,560) | 162 / 80 | 2026-11-01 | **UC Berkeley DS** |
+| [`autolab/Tango`](https://github.com/autolab/Tango) | `master` | 🟢 **Apache-2.0** (11,324) | 49 / **63** | 2026-10-21 | **Carnegie Mellon** |
+
+🟢 **`Artemis` carries `Iris` (LLM tutor), `Athena` (feedback suggestion for text, modeling and programming) and `Hyperion` (AI exercise authoring on Spring AI) in-tree, configuration-gated, under MIT, in a platform TUM runs for its own teaching, latest tag `10.3.1`.** T20's heading is corrected on `intel/trends.md` this pass and the surviving claim is narrowed to assessment *integrity* and proctoring, which still have no permissive production supply.
+
+🔵 **The method lesson, and it is sharper than p656's.** p656 wrote *"saturation is a property of the query, not of the field"* — true, and this pass adds the harder corollary: **a refinement is not a retest.** p656 touched T20, found a counter-example to one word in it, fixed that word, and never re-ran the search. **When a pass edits a trend, it must re-run the query that produced it, or it is laundering a stale claim through a fresh date.**
+
+🔵 **Why the layer was invisible for seven passes, stated precisely so it is not repeated:** every pass searched education vocabulary (`ai-tutor`, `education-ai`, `adaptive-learning`, `lms`). **Autograders file themselves as developer tooling** — `topic:autograding`, `topic:grading`, `topic:education` only sometimes. The six permissive production systems were one topic head away the whole time. 🔵 **Note also what the star column hides: `Submitty` has 1,119 forks against 805 ★ and `Tango` has 63 against 49.** Infrastructure that institutions *copy and run* under-reads on stars by a factor this KB should stop being surprised by — it is the same signature the Moodle row carries.
+
+### 🟢 Second sweep — the measurement layer, which this KB had never held in any form
+
+`topic:psychometrics` (**517**), `topic:item-response-theory` (**153**), `topic:computerized-adaptive-testing` (**24**) — none swept before. The whole pipeline exists, permissively, and almost none of it is maintained:
+
+| Repo | Branch | Licence (payload) | ★ / forks | Pushed | Stage |
+|---|---|---|--:|---|---|
+| [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | `main` | 🟢 Apache-2.0 (11,367) | 267 / 70 | 🔴 2024-01-02 | Knowledge-tracing model zoo |
+| [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy) | `master` | 🟢 MIT (1,068) | **242** / 75 | 🔴 **2018-11-16** | IRT · MIRT · GRM |
+| [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | `main` | 🟢 Apache-2.0 (11,346) | 203 / 66 | 🔴 2024-10-25 | Cognitive diagnosis (IRT/MIRT/DINA/NeuralCD) |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🔴 **`dev`** | 🟢 BSD-3-Clause (1,514) | 153 / 37 | 🟢 **2026-11-01** | **Adaptive item selection — `0.9.1`** |
+| [`eribean/girth`](https://github.com/eribean/girth) | `master` | 🟢 MIT (1,064) | 127 / 21 | 🔴 2022-09-09 | IRT calibration |
+| [`17zuoye/pyirt`](https://github.com/17zuoye/pyirt) | `master` | 🟢 MIT (1,083) | 111 / 55 | 🔴 2023-08-22 | IRT at scale (production origin) |
+| [`tswsxk/EduData`](https://github.com/tswsxk/EduData) | `master` | 🟢 Apache-2.0 (11,346) | 83 / **103** | 🔴 2023-05-03 | Cold-start response data |
+| [`bigdata-ustc/EduCAT`](https://github.com/bigdata-ustc/EduCAT) | `master` | 🟢 MIT (1,062) | 77 / 32 | 🔴 2024-08-09 | Neural CAT policies |
+| [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | `master` | 🟢 Apache-2.0 (11,346) | 64 / 20 | 🔴 2024-03-20 | Item parsing (text + formulae + figures) |
+| [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) | `main` | 🟡 MPL-2.0 (16,661) | 9 / 2 | 🟢 2026-10-31 | Live CAT alternative — **not shelved, 9 ★** |
+
+🔴 **One of ten is live.** `catsim` — Brazilian, BSD-3-Clause, branch **`dev`** — is the only maintained component, and it is the one that converts a question bank into an adaptive test. 🟢 **Seven of the ten are APAC-built** (five from one USTC laboratory, one from a Chinese K-12 company); the live one is LATAM. **Both facts are new to this KB's regional picture and are recorded on `intel/market.md`.** ⚠️ Dormancy matters less here than it looks — IRT is a five-decade-old published method and a 2022 maximum-likelihood fitter does not rot like a 2022 LLM wrapper — but an engagement built on this layer is adopting maintenance responsibility and must price it. See **T31** and `compose/patterns.md` **P18**.
+
+### 🟢 Third sweep — spoken assessment, a layer with **zero** prior presence in these logs
+
+`topic:pronunciation` (**331 repositories**). Before this pass, `pronunciation` and `speech assessment` returned **0 shelf files and 0 log files** — unlike every p656 finding, this was never held anywhere.
+
+| Repo | Branch | Licence (payload) | ★ | Pushed | What it is |
+|---|---|---|--:|---|---|
+| [`Kyubyong/g2p`](https://github.com/Kyubyong/g2p) | `master` | 🟢 Apache-2.0 (11,357) | **936** | ⚠️ 2023-01-05 | English grapheme→phoneme; the *target* pronunciation |
+| [`Thiagohgl/ai-pronunciation-trainer`](https://github.com/Thiagohgl/ai-pronunciation-trainer) | `main` | 🔴 **AGPL-3.0** (34,523) | **525** | 2025-08-16 | 🔴 **The layer's most-adopted project, and unusable as a deliverable** |
+| [`CUNY-CL/wikipron`](https://github.com/CUNY-CL/wikipron) | `master` | 🟢 Apache-2.0 (10,787) | 376 | 🟢 2026-07-23 | Pronunciation lexicons, **hundreds of languages** |
+| [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | `main` | 🟢 **MIT** (1,113) | 184 | 2026-08-15 | 🟢 **Phoneme-level scoring, CPU-only, `pip install openpronounce`** |
+| [`liguozheng-ac/japanese-speech-xray`](https://github.com/liguozheng-ac/japanese-speech-xray) | `main` | 🟢 MIT (1,070) | 177 | 🟢 2026-10-28 | Pitch-accent and prosody (JA) |
+
+🔵 **The licence advantage runs against adoption here, which is unusual and worth noting as a pattern:** the best-known project is Affero and the shelvable one has a third of its stars. `OpenPronounce` returns a score, the mispronounced words with the sounds **actually heard in IPA**, per-word confidence, the transcription and pitch/energy curves — and its author positions it as a self-hosted alternative to **Azure Pronunciation Assessment**, so it displaces a metered API rather than filling a vacuum. See **T32** and `compose/patterns.md` **P20**.
+
+### 🟢 Fourth sweep — credentialing, where the result is the *licence distribution* rather than any one repo
+
+`topic:open-badges` (**33**), `topic:verifiable-credentials topic:education` (**12**).
+
+| Repo | Licence (payload) | ★ | Verdict |
+|---|---|--:|---|
+| [`learningeconomy/LearnCard`](https://github.com/learningeconomy/LearnCard) | 🟢 **MIT** (1,109) | 70 | 🟢 **Shelved — the only permissive issuer.** W3C VC, VC-API, OpenID4VC, SD-JWT-VC, DIDs, CHAPI (read from its own package list). Pushed **2026-11-05**. Ships an **agent skill**. |
+| [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir) | 🔴 AGPL-3.0 (34,917) | 85 | Open Badges issuer. Branch **`develop`**. API said `NOASSERTION`. |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🔴 AGPL-3.0 (33,820) | 64 | Course/conference certification |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 LGPL-3.0 (7,650) | 2 | OB 3.0 / W3C VC library, live — 2 ★ |
+| [`edubadges/badgr-ui`](https://github.com/edubadges/badgr-ui) | 🔴 AGPL-3.0 | — | 🔴 **Archived** |
+| [`iblai/wallet`](https://github.com/iblai/wallet), [`offset-smoker/edu-standards`](https://github.com/offset-smoker/edu-standards) | 🟢 MIT | 0, 1 | Logged, not shelved. ⚠️ Re-check `edu-standards`: **OB 3.0 + OneRoster + LTI 1.3** in one library is an unusual combination. |
+
+🟢 **This is the first out-of-sample confirmation of p656's T27 incentive argument.** T27 predicted that *specification-adjacent* code is permissive and *product* code is copyleft. Credentialing was not in the data T27 was derived from, and it splits exactly that way: `LearnCard` comes from the Learning Economy Foundation (standards orbit, MIT); every copyleft row is a badge *platform* defending a market. See **T33** and **T34**.
+
+### 🔴 Negative results, recorded because silence looks like coverage
+
+| Topic head | Repos | Result |
+|---|--:|---|
+| `topic:open-educational-resources` | 441 | 🔴 **No new permissive platform rows.** Overwhelmingly *content* repositories (lecture notes, courses) under `NOASSERTION` content licences. The one platform-class row, `codelitdev/courselit`, is **AGPL-3.0 (34,143 B) at 1,295 ★** — the highest-adoption project read this pass and unusable as a closed derivative. |
+| `topic:grading topic:llm` | **34** | 🔴 The *agentic* grading layer remains tiny and research-grade; the largest permissive row is 3 ★. **This half of T20 did not move** — see `agents/trending.md` p657. |
+| `topic:assessment topic:ai` (pushed > 2026-09) | 21 | 🔴 Nothing above 3 ★. |
+| `topic:autograding` → accessibility, proctoring | — | 🔴 Not swept this pass. **T29**'s negative result stands unchanged and unretested. |
+
+### 🟢 Repairs to this repository's own files, made this pass
+
+1. 🔴 **`repos/foundations.md` had a blank line at line 36, inside the main table.** In GitHub-flavoured markdown a blank line **ends** a table — so the **ten rows p656 promoted** (`lrsql`, `xAPI-Spec`, `tsugi`, `scorm-again`, `Numbas`, `ADL_LRS`, `marsha`, `pylti1.3`, `TinCanJS`, `ltiauthenticator`) were rendering as a paragraph of pipe characters, not as table rows, and would not parse as cells for any compiler reading this KB. **Repaired; the table is now 52 contiguous rows.** 🔵 **A pass that promotes rows should render the file afterwards, not only count the rows it added.**
+2. Two rows (`openfun/richie`, `Selleo/mentingo`) were missing their trailing `|`. Repaired.
+3. ✅ **Header-as-data audit: clean.** All eight files were scanned for a header row (`| Name | Repo | Licence |`-shaped) not followed by a `|---|` separator. **53 candidates flagged, all 53 false positives** — they are *transposed* tables whose first cell is a field label (`| Licence | MIT, 1,068 B |`), which is legitimate. 🔵 **Any future automated check for this defect needs a transposed-table exception, or it will report 53 phantom defects every pass.**
+
+---
+
 
 ## 🆕 2026-11-04 (p656) — 🟢 **TEN ROWS PROMOTED FROM LOG TO SHELF, AND THE TOPIC SWEEP THAT FOUND THEM WAS A VOCABULARY SWEEP, NOT A STAR SWEEP**
 

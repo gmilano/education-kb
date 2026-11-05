@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
 
 # 📡 Trends — Education
@@ -188,7 +188,7 @@ The OECD says the same thing from the policy side in the **Digital Education Out
 
 **The convergence is the finding.** Builders, the OECD and students independently describe the same hole: performance has been demonstrated, learning has not, and almost nobody is measuring. Two commercial consequences. First, **measurement is a product** — an evaluation wrapper whose deliverable is the client's own evidence is the one offer that does not require anyone to believe a vendor's efficacy claim, and in a market where 9% of institutions evaluate anything it is close to uncontested. Second, an OECD recommendation to incentivise purpose-built tools over general-purpose chatbots is a policy tailwind under precisely the shelf in `agents/top.md`. **Confidence: high on the quotations and the survey figures; the OECD text is quoted from search excerpts of the PDF because `www.oecd.org` does not resolve in this session.**
 
-## T20 — Permissive assessment software exists now; the *agentic* half of it is a research artefact 🔴 refined at p656
+## T20 — Permissive assessment software exists now; the *agentic* half of it **also does** — the research-artefact claim is withdrawn 🔴 corrected at p657
 
 Four passes of searching produced, in order: nothing; two education-specific graders with **no usable grant**; one permissive general rubric primitive that is **not** education-specific (`microsoft/LLM-Rubric`, MIT, 45★); and at p653, searching the automated-essay-scoring literature rather than the agent ecosystem, **two permissive education-specific systems**.
 
@@ -202,6 +202,14 @@ Four passes of searching produced, in order: nothing; two education-specific gra
 🔴 **The half that has not moved is the regulated half.** Scoring now has permissive research supply; **assessment *integrity* and proctoring have none, in any pass** — and under EU AI Act Annex III that is the high-risk half, with emotion recognition in schools prohibited outright since February 2025. Permissive supply is appearing where the regulatory exposure is lowest.
 
 🔴 **Refined at p656, and the original heading was too strong.** This trend read *"all of it is a research artefact"*. [`numbas/Numbas`](https://github.com/numbas/Numbas) is **Apache-2.0** (11,357 B, byte-exact canonical), **216 ★ / 129 forks**, pushed 2026-10-28, and is the browser e-assessment system **Newcastle University builds and runs for its own teaching** — randomised question generation, algebraic answer marking, partial credit, SCORM packaging. That is production university software, not a paper's companion code, and it was already present in this repository's logs when the claim was published. The defensible core of the trend survives and is now the heading: **agentic** assessment — LLM scoring, generated feedback, agent-run marking — remains research-grade, and the two rows in the table above (2 ★ and 0 ★) are still the whole permissive supply for it. 🔵 The regulated half named below has not moved either: assessment *integrity* and proctoring still have no permissive production supply, with `SafeExamBrowser` (MPL-2.0, 363 ★) the nearest thing and deliberately not shelved pending a pass that can scope proctoring properly. Shelved at p656 on `repos/foundations.md` and `verticals/solutions.md`.
+
+🔴 **Corrected at p657, and this time the heading itself was wrong.** The claim that the agentic half of permissive assessment is a research artefact rested on two repositories at **2 ★** and **0 ★**. [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) is **MIT** (1,091 B payload read on its real default branch, `develop`), **826 ★ / 395 forks**, pushed **2026-11-05**, latest tag **`10.3.1`**, built and operated by **TUM for its own teaching** — and it ships **three AI subsystems in the tree**: **Iris**, an LLM tutor that guides with hints and leading questions; **Athena**, which suggests feedback on text, modeling and programming submissions; and **Hyperion**, AI-assisted exercise authoring on Spring AI. All three are configuration-gated. That is permissively-licensed, production, agentic assessment running against real cohorts, and it was reachable by searching `topic:autograding` — a topic head no prior pass had swept.
+
+🔵 **The same sweep found three more permissive production autograders this KB did not hold**: `autolab/Autolab` (Apache-2.0, 808 ★, CMU), `Submitty/Submitty` (BSD-3-Clause, 805 ★ / **1,119 forks**, RPI) and `ucbds-infra/otter-grader` (BSD-3-Clause, 162 ★, Berkeley, **and it grades R as well as Python**). With `nbgrader` and `Numbas`, that is **six** permissive production assessment systems, not one exception.
+
+🟢 **What survives, and it is the part worth keeping.** The split **T24** argues for — deterministic grading for what is checkable, calibrated LLM rubrics for what is not, a human decision boundary on anything consequential — is not weakened by this correction; `Artemis` and `Submitty` both *implement* it, `Athena` **suggests** feedback rather than issuing it and Submitty's manual-grading workflow is first-class. 🔴 **And the regulated half has still not moved: assessment integrity and proctoring have no permissive production supply in any pass**, with `SafeExamBrowser` (MPL-2.0, 363 ★) the nearest thing. Permissive supply continues to appear where regulatory exposure is lowest.
+
+🔵 **The method lesson, repeated for the third pass running: saturation is a property of the query.** p656 wrote that sentence about `topic:xapi`. This pass proves it again on a claim this KB had already "refined" once — a refinement that corrected the scope of the error without re-testing its premise. **When a trend is refined rather than retested, re-run the search that produced it.**
 
 ## T21 — Local-first by default is becoming a product category, not a deployment option
 
@@ -296,6 +304,91 @@ This base records an **April 2026 ADA deadline for large US public institutions*
 - `screen-reader`, `captioning`, `dyslexia` and `special education` return **zero rows on any shelf** of this KB, before and after this pass.
 
 **Why this is a trend and not merely a gap.** Every other regulatory driver this base tracks — the EU AI Act's Article 50 transparency duty, Korea's high-impact assessment scope, US state model policies — creates demand that *permissive software can serve*. Accessibility is the exception: the mandate is hard, dated and enforceable, and the only real tool forbids a proprietary derivative. 🔵 **The engagement shape is therefore different in kind:** deploy UDOIT inside the client's own estate, bill the remediation work and the integration, and ship no derivative. It is a services engagement, not a product one — and saying that up front is more valuable than discovering it after a proposal has promised a platform. **Confidence: high** on the licence and the supply absence (both measured); **moderate** on the deadline itself, which this KB carries from secondary sources and has not read in primary form.
+
+## T30 — Autograding is not an AI story and not a thin layer: it is university infrastructure, permissively licensed, and six systems deep 🟢 new at p657
+
+Across p652–p656 this base searched for education *agents* and for *AI* graders, found the field thin, and recorded the thinness as a market gap. The thinness was in the query. Sweeping `topic:autograding` — **94 repositories, never swept before** — returns a shelf of production systems each run by the university that wrote it:
+
+| System | Licence | ★ / forks | Institution | Pushed |
+|---|---|--:|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | **826 / 395** | TUM | **2026-11-05** |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** | **808 / 234** | Carnegie Mellon | 2026-11-03 |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** | **805 / 1,119** | Rensselaer | **2026-11-05** |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | 1,370 | Project Jupyter | 2026-11-03 |
+| [`okpy/ok`](https://github.com/okpy/ok) | 🟢 Apache-2.0 | 370 / 88 | UC Berkeley | ⚠️ 2025-07-02 |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3-Clause | 162 / 80 | UC Berkeley DS | 2026-11-01 |
+
+**Three structural reads.** First, **not one of the six is copyleft** — MIT, Apache-2.0 and BSD-3-Clause throughout, which is the opposite of the pattern on the LMS and content shelves and consistent with **T27**: this software was written by universities for peer adoption, not by product communities defending a market. Second, **`Submitty` has 1,119 forks against 805 ★ and `Tango` has 63 against 49** — the adoption signature of infrastructure institutions copy and run, so star counts systematically *understate* this layer. Third, **the sector's grading problem was never a supply problem; it was a discovery problem**, and the thing that hid it was filing autograders as developer tooling rather than as education software.
+
+**Commercial consequence:** the credible engagement is **adopt-and-harden** — deploy, integrate over LTI, migrate real exercises, calibrate, train graders — not build. Any proposal to write a grader from scratch for a university client should now have to argue against six working systems. See `compose/patterns.md` **P19** and `verticals/solutions.md` Pattern J.
+
+## T31 — The psychometric measurement layer is permissive, complete, and almost entirely dormant 🟢 new at p657
+
+This base has held knowledge tracing (`pyBKT`, `pykt-toolkit`) for several passes and **T9** correctly called it research-grade. It never held **psychometrics**, which is a different question: knowledge tracing predicts *whether the next answer will be right*; psychometrics estimates *how hard each item is, which skills a learner actually holds, and which item to ask next*. Only the second yields the calibrated item parameters an adaptive test is built on. Sweeping `topic:psychometrics` (517 repos), `topic:item-response-theory` (153) and `topic:computerized-adaptive-testing` (24) returns a full pipeline, all permissive:
+
+| Stage | Component | Licence | ★ | Live? |
+|---|---|---|--:|---|
+| Parse the client's item bank | [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | Apache-2.0 | 64 | 🔴 2024-03 |
+| Cold-start calibration data | [`tswsxk/EduData`](https://github.com/tswsxk/EduData) | Apache-2.0 | 83 | 🔴 2023-05 |
+| Fit item difficulty / discrimination | [`eribean/girth`](https://github.com/eribean/girth), [`17zuoye/pyirt`](https://github.com/17zuoye/pyirt), [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy) | MIT | 127 / 111 / 242 | 🔴 2022 / 2023 / **2018** |
+| Diagnose which skills are held | [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | Apache-2.0 | 203 | 🔴 2024-10 |
+| Predict the next response | [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | Apache-2.0 | 267 | 🔴 2024-01 |
+| **Choose the next item** | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | BSD-3-Clause | 153 | 🟢 **2026-11-01** |
+| Learned selection policies | [`bigdata-ustc/EduCAT`](https://github.com/bigdata-ustc/EduCAT) | MIT | 77 | 🔴 2024-08 |
+
+🔴 **One of seven stages is maintained.** `catsim` — BSD-3-Clause, tag `0.9.1`, default branch **`dev`** — is the only live component, and it happens to be the one that matters most, because it is the piece that converts a question bank into an adaptive test and the piece `compose/patterns.md` **P4** has assumed for several passes without naming.
+
+**This is a different kind of gap from T28's and should be scoped differently.** T28 found *one live permissive LRS with no fallback* — a single-vendor dependency. Here the **mathematics is published and stable** (IRT is five decades old; these are implementations of textbook estimators, not model wrappers that rot), so dormancy is a far smaller risk than it looks: a 2022 maximum-likelihood 2PL fitter is not stale in the way a 2022 LLM integration is. ⚠️ **But the engagement must own them.** Any proposal built on this layer is taking maintenance responsibility for unmaintained code, and should price that in explicitly rather than describe seven dormant repositories as a stack. See `compose/patterns.md` **P18**.
+
+## T32 — Spoken assessment is a layer this KB had never seen at all, and it has a permissive answer that displaces a paid API 🟢 new at p657
+
+Before this pass, `grep` for `pronunciation` and `speech assessment` across all eight shelves returned **zero files** — and, unlike the p656 interop finding, **zero files in the 5.8 MB and 4.5 MB append-only logs as well.** Not held-but-unshelved: genuinely never seen. `topic:pronunciation` (331 repositories) returns a working stack:
+
+- [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) — **MIT**, 184 ★, pushed 2026-08-15. Phoneme-level assessment: a score, the mispronounced words with the sounds **actually heard in IPA**, a confidence per word, the transcription, and pitch and energy curves. Wav2Vec2 + DTW, **CPU-only**, `pip install openpronounce`.
+- [`Kyubyong/g2p`](https://github.com/Kyubyong/g2p) — **Apache-2.0**, 936 ★. English grapheme-to-phoneme: the reference the learner is scored against.
+- [`CUNY-CL/wikipron`](https://github.com/CUNY-CL/wikipron) — **Apache-2.0**, 376 ★, live. Pronunciation lexicons mined across **hundreds of languages**, which is what makes this multilingual rather than English-only.
+- [`liguozheng-ac/japanese-speech-xray`](https://github.com/liguozheng-ac/japanese-speech-xray) — **MIT**, 177 ★, live. Prosody and pitch-accent, which phoneme scoring alone cannot represent.
+
+**Two things make this commercially unusual for this KB.** First, **it displaces a named line item rather than filling a vacuum**: `OpenPronounce` is positioned by its own author as a self-hosted alternative to **Azure Pronunciation Assessment**, so the proposal is a metered cloud cost replaced by a container in the client's estate — and because voice is biometric-adjacent personal data, that *removes* an EMEA transfer question instead of answering it. Second, the licence advantage runs **against** adoption: the better-known project in the layer, `Thiagohgl/ai-pronunciation-trainer` (525 ★), is 🔴 **AGPL-3.0** and cannot be a client deliverable. ⚠️ **State two boundaries in writing:** a single maintainer at 184 ★, and **phoneme accuracy is not fluency and not a CEFR level** — it does not replace a human oral examiner.
+
+**Regional fit is the strongest of any finding this pass:** English-language training is a large, funded, measurable LATAM and APAC market, and `wikipron` means Spanish and Portuguese learners can be scored on the same stack.
+
+## T33 — The credential-issuing layer is the mirror image of T27: entirely copyleft, with exactly one permissive exception 🟢 new at p657
+
+**T27** established a clean functional break — the *interoperability* layer (LTI, SCORM, xAPI) is permissive because specification bodies write it, while the *content* layer (H5P, Adapt, UDOIT) is copyleft because product communities write it. Credentialing is the second case, and sharply:
+
+| Project | Function | Licence (payload read) | ★ |
+|---|---|---|--:|
+| [`learningeconomy/LearnCard`](https://github.com/learningeconomy/LearnCard) | Issue / earn / store / share / map credentials | 🟢 **MIT** (1,109 B) | **70** |
+| [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir) | Open Badges issuer | 🔴 **AGPL-3.0** (34,917 B) | 85 |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | Course / conference certification | 🔴 **AGPL-3.0** (33,820 B) | 64 |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | Open Badges 3.0 / W3C VC library | 🔴 **LGPL-3.0** (7,650 B) | 2 |
+| [`edubadges/badgr-ui`](https://github.com/edubadges/badgr-ui) | Badgr front end (SURF edubadges) | 🔴 **AGPL-3.0** | — 🔴 **archived** |
+
+🟢 **`LearnCard` is the only permissive route, and it is a real one:** its monorepo package list, read this pass, carries `vc-plugin`, `vc-api-plugin`, `openid4vc-plugin`, `sd-jwt-vc-plugin`, `didkit-plugin`, `did-web-plugin` and `chapi-plugin` — **W3C Verifiable Credentials, VC-API, OpenID4VC, SD-JWT-VC and DIDs**, standards rather than a bespoke badge format — and it ships an **agent skill** (`npx @learncard/cli skill install`), which makes it directly composable with `agents/top.md`. Pushed **2026-11-05**.
+
+⚠️ **And it is 70 ★ with 42 open issues and one sponsoring organisation.** That is the same single-vendor shape **T28** flagged for `lrsql`, and it should be named in any proposal rather than discovered during delivery. 🔵 **Why the break falls where T27 predicts:** `LearnCard` is written by a *standards-adjacent* body (Learning Economy Foundation, in the 1EdTech/W3C orbit) and the copyleft rows are *products* — badge platforms defending a market. T27's incentive argument holds on a layer it was not derived from, which is the first out-of-sample test it has passed.
+
+## T34 — Skills-based credentialing is a named 2026 buying trend, and the permissive supply for it is one project 🟢 new at p657
+
+1EdTech's own 2026 watch-list names **skills-based credentialing** alongside AI governance as the year's structural shifts, driven by employer expectations moving from degrees to demonstrated skills. Campus Technology's 2026 survey of industry leaders describes AI becoming core infrastructure across **admissions, advising, accessibility and administration** rather than standalone pilots — all four of which are credential- and record-shaped workloads.
+
+**So the demand signal and the supply constraint are both unusually crisp**, and they point in opposite directions: a named, dated, employer-driven buying trend met by **one MIT project at 70 ★** (see **T33**). This is the third demand driver in this KB whose supply side is a single point of failure — alongside `lrsql` for measurement (**T28**) and nothing at all for accessibility remediation (**T29**).
+
+🔵 **The pattern across all three is worth stating as a rule, because it keeps recurring:** where education's demand is *regulatory or institutional* (accessibility mandates, evidence duties, credential recognition), permissive supply is one project deep or absent; where demand is *pedagogical* (tutoring, content generation, autograding), permissive supply is abundant. **Globant's differentiated work is therefore concentrated on the institutional side**, because that is where there is nothing to adopt — and it is also where the client cannot buy an alternative. See `compose/patterns.md` **P21**.
+
+## T35 — The 2026 consensus is governed, purpose-built education AI — and three independent bodies now say the same thing 🟢 new at p657
+
+**T3** recorded that usage had outrun governance and that governance had become the buying trigger. The 2026 sources converge further, and the convergence is the trend:
+
+- **OECD**, *Digital Education Outlook 2026*: move beyond general-purpose AI tools toward **purpose-built educational AI** — curriculum-aligned, with safeguards for minors.
+- **1EdTech**, 2026 watch-list: the field is moving **from experimentation to governance**, with explicit policy and oversight as the central concern.
+- **HolonIQ**, 2026 Education Trends Snapshot: buyers now favour approaches that demonstrate **instructional value** over broad personalisation promises.
+- **Campus Technology** (industry-leader survey): AI as **core operational infrastructure** across admissions, advising, accessibility and administration, not pilots.
+
+⚠️ **One adoption statistic qualifies all of this and should travel with it: 85% of educators report feeling unprepared to manage generative AI in the classroom** (Azumo's 2026 compilation of secondary sources — treat the figure as indicative, not measured). Against **60% of US teachers already using AI tools** (Gallup, n > 2,200), the gap between use and readiness *is* the services market.
+
+**Commercial reading, and it is a reversal of the 2024–25 pitch.** "A general assistant for your institution" is now the weaker proposal; the stronger one is narrow, curriculum-aligned, evidenced and governed — which is exactly what the permissive stack on these shelves supports: `Artemis` with AI configuration-gated per cohort, `lrsql` producing an auditable statement log, `catsim` making item selection explainable rather than learned, and a human decision boundary wherever a jurisdiction requires one. 🔵 **The one claim to avoid** is that purpose-built means proprietary: three of the four bodies above are standards or policy organisations, and their recommendation is satisfied better by auditable open components than by a closed product.
 
 ## 🔴 What this page does not claim
 

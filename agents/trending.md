@@ -1,8 +1,89 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
+
+## 🆕 2026-11-05 (p657) — 🟢 **THE SHELF COULD TUTOR AND IT COULD NOT MEASURE, GRADE OR CERTIFY — AND THE REASON WAS THREE TOPIC HEADS NOBODY HAD SWEPT**
+
+**Verification channels this pass, all re-tested before use:** existence and **real default branch** via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` **on that resolved branch**; stars, forks, `pushed_at`, `archived` and `open_issues_count` from `gh api search/repositories` with many `repo:` qualifiers in one query; tags via `git ls-remote --tags`, sorted numerically.
+
+### 🔵 Channel status — one confirmation, one new 403, and one correction that matters more than either
+
+| Call | Result this pass |
+|---|---|
+| `git ls-remote --symref <repo> HEAD` | 🟢 Works for every repository. **The only reliable source of the default branch.** |
+| `gh api search/repositories -f q='repo:a/b repo:c/d …'` | 🟢 Works, many repos per call — stars, forks, `pushed_at`, `archived`, `license.spdx_id` |
+| `raw.githubusercontent.com/<repo>/<branch>/LICENSE` | 🟢 200 — the grant payload |
+| `curl -sI https://github.com/<repo>` | 🔴 **403** — a seventh consecutive pass |
+| `gh api repos/{owner}/{repo}` | 🔴 **403** for every unattached repository (as p656 recorded) |
+| 🆕 `gh api repos/{owner}/{repo}/releases/latest` | 🔴 **403 — same restriction.** Version numbers this pass came from `git ls-remote --tags` with numeric sort. ⚠️ **Do not `tail` the raw tag list**: Artemis's last three refs in ref order are `test3`, `test4`, `action1`; the real latest is **`10.3.1`**, which only a numeric sort reveals. |
+
+### 🔴 The correction that should outlive this pass: `NOASSERTION` is not a licence finding
+
+`gh api search/repositories` returned **`NOASSERTION`** for three repositories this pass. Reading the payloads:
+
+| Repo | API said | Payload says |
+|---|---|---|
+| `AnonymousOnyx22/brightspace-d2l-mcp` | `NOASSERTION` | 🟢 **MIT**, 1,200 B |
+| `INGInious/INGInious` | `NOASSERTION` | 🔴 **AGPL-3.0**, 34,764 B |
+| `fedora-infra/tahrir` | `NOASSERTION` | 🔴 **AGPL-3.0**, 34,917 B |
+
+**`NOASSERTION` means GitHub's classifier did not match the file — nothing more.** One of the three is freely usable, two are network copyleft, and the API's answer was identical for all three. 🔵 **A pass that files `NOASSERTION` rows as "unusable" discards MIT code; a pass that files them as "unknown, probably fine" ships Affero into a client deliverable.** Neither is acceptable and the only remedy is reading the file. The p656 channel table in this log should be read with that caveat attached.
+
+### 🟢 The finding, stated as the gap it closed
+
+p656 closed the interop gap by asking what vocabulary the **shelves** were missing. This pass ran the same method one layer further out and asked what the shelves could not *do*. The answer was unflattering and specific: **this KB could put an agent in front of a learner and could not measure what the learner knew, grade what they submitted, or certify what they had achieved.**
+
+| Vocabulary | Shelves before p657 | Logs before p657 |
+|---|---|---|
+| `psychometric`, `item response theory`, `mirt`, `py-irt` | 🔴 **0 files** | 2 files |
+| `item generation` | 🔴 **0 files** | 2 files |
+| `otter-grader`, `INGInious`, `CodeGrade` | 🔴 **0 files** | 1–2 files |
+| `verifiable credential`, `Badgr`, `Open Badges 3` | 🔴 **0 files** | 2 files |
+| `pronunciation`, `speech assessment` | 🔴 **0 files** | 🔴 **0 files** |
+
+🔵 **Note the last row, because it is a different kind of result from everything p656 found.** p656's rows were all *held but unshelved* — `lrsql` sat in 230 log files and had never reached a shelf. **Spoken assessment was in neither.** It is the first layer in several passes that was genuinely never seen, which means the held-gate — even with the "shelved?" column p656 recommended adding — would not have found it. **What found it was asking what a learner *does* that this KB cannot assess. Speaking was the answer.**
+
+### 🟢 Promoted to `agents/top.md` this pass — 20 rows → 27
+
+Seven rows, all MIT, every payload read at first hand on the resolved default branch:
+
+| Agent | ★ | Branch | Licence (payload) | Why it was filed |
+|---|--:|---|---|---|
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **366** | `main` | MIT, 1,065 B | Exam coach as an **Agent Skill**, not an app. Cross-session memory + handout source-tracing against hallucination. APAC. |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **300** | `main` | MIT, 1,081 B | DSA mentor that interrogates the learner's own attempt rather than printing solutions. |
+| [`nichochar/ari`](https://github.com/nichochar/ari) | **217** | `main` | MIT, 1,073 B | Routes the learner **off** the screen for encoding; the loop that survives a device ban (**T11**). |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **119** | `main` | MIT, 1,072 B | ⚠️ **A different project from the shelved `vishalsachdev/canvas-mcp`, not a rename.** Read-only by design. |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | **62** | `main` | MIT, 1,068 B | 🟢 **The first Brightspace / D2L row this KB has ever held.** |
+| [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | **58** | `main` | MIT, 1,067 B | RL picks the action, **FSRS** picks the timing, the LLM only talks — the T13 / P6 architecture as code. |
+| [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | **29** | `main` | MIT, 1,200 B | Second D2L bridge; the `NOASSERTION` correction above. |
+
+🟢 **The structural read: Brightspace was an unserved client.** This shelf could bridge **Moodle** (seven MIT servers), **Canvas** (two independent MIT servers) and **Open edX** (one official bridge, AGPL) — and had **nothing at all** for **D2L Brightspace**, the third major institutional LMS in North American and EMEA higher education. Two rows now exist. ⚠️ Both are small (62 ★ and 29 ★) and neither is an institutional project; they are the seam, not the solution — but a Brightspace engagement is now scopeable where yesterday it was a blank.
+
+🔵 **And the shelf's tilt has turned again.** p656 measured the shelf moving from tutors to *delivery* (6 of 7 new rows generated content). Of this pass's seven, **three are LMS bridges and one is a scheduler-and-policy agent** — i.e. the movement is now toward **the institution's systems of record**. Tutors are no longer where the new permissive work is happening; the connective tissue is.
+
+### 🔴 Found, read, and deliberately **not** filed as agent rows at p657
+
+| Repo | ★ | Licence (payload read) | Why not |
+|---|--:|---|---|
+| [`glowkeeper/feedbacker`](https://github.com/glowkeeper/feedbacker) | 1 | 🟢 Apache-2.0, 11,358 B | Marking, feedback and moderation for higher education with educators in control — **exactly the right shape**, and 1 ★ with no history. Re-check in a later pass. |
+| [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) | 3 | 🟢 MIT | Rubric generation + plagiarism detection from a ZIP of submissions. 3 ★. |
+| [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | 40 | 🔴 AGPL-3.0 | Dual-agent parallel marking for economics/finance coursework. Network copyleft. |
+| [`liwangcc/mathagent`](https://github.com/liwangcc/mathagent) | 4 | 🔴 AGPL-3.0 | High-school maths marking with local template diffing so only handwriting goes to OCR — **a genuinely good privacy design** behind a licence that forbids a deliverable. |
+| `JackStar6677-1/edudocente-studio`, `theitfoundation/kuizzzz-it`, `CSingh26/quiz-app` | 0–1 | 🟢 MIT | Assessment generators, all ≤ 1 ★. Logged for density, not filed. |
+
+🔵 **The negative result worth recording: the LLM-grading *agent* layer is still research-grade and tiny, and `topic:grading topic:llm` has only 34 repositories in it.** That half of **T20** has not moved. What *did* move is the non-agentic half — see `repos/trending.md` p657 for the six permissive production autograders — and the correction to T20 rests entirely on `Artemis` carrying its AI in-tree, **not** on anything found in the agent topics.
+
+### 🔴 What this shelf still does not give you, restated after this pass
+
+- **No proctoring or assessment-integrity agent, permissive or otherwise, in seven passes.** `SafeExamBrowser` (MPL-2.0, 363 ★) remains the nearest thing and is still not shelved.
+- **No accessibility agent.** `screen-reader`, `captioning`, `dyslexia` and `special education` remain at **zero rows**, as **T29** records, and p657 did not sweep for them.
+- **Region is still mostly unplaced.** Eleven of the 27 rows read `Global (unplaced)`, including six of this pass's seven. A repository's language and author location are evidence, not a region; this KB will not infer one.
+- 🔴 **`huggingface.co` still does not resolve** (`CONNECT tunnel failed, 403`) — a sixth consecutive pass, so OmniEdu's weight licence remains unread.
+
+---
+
 
 ## 🆕 2026-11-04 (p656) — 🔴 **THE DEFECT THIS PASS CLOSES IS A PROMOTION FAILURE, NOT A DISCOVERY FAILURE: THE INTEROP, TELEMETRY AND ACCESSIBILITY LAYER HAS BEEN MEASURED IN THESE LOGS FOR MANY PASSES AND HAS NEVER REACHED A SHELF**
 
