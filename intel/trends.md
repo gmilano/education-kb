@@ -566,3 +566,31 @@ T39 named this base's dominant defect class as *claims checked against shelves a
 🔵 **Why this generalises past this base.** Any curated knowledge store that (a) rewrites whole pages and (b) keeps a separate index of what it holds will drift the same way, and the drift is invisible precisely because the index is what you would check. The control is cheap — re-derive the index from the tree and diff — and it belongs **in front of** a rewrite, not after one. Confidence: 🟢 **high**, measured twice with a re-implemented instrument and `6/6` hand controls; the generalisation beyond this repository is 🟡 **argued, not measured**.
 
 🔴 **One scope question is deliberately left open.** `42` of the `142` are still reachable on `intel/open-gaps.md` or `intel/measured-unusable.md` — reader-facing pages outside the index's `CURATED` list. Either those pages join `CURATED`, or `filed_on` needs a third state for *demoted, still readable*. p662 did not decide it, because deciding it silently is how the column became wrong.
+
+## T44 — The sixth "no permissive supply" claim fell too, but to a different mechanism: the supply was there and the base was searching in the wrong language 🟢 new at p663
+
+**T40** records that every *"no permissive supply"* claim this base has tested turned out to be an **adoption** gap instead — five for five. p663 makes it **six for six and changes the mechanism**, which is why this is a separate entry rather than another tally mark on T40.
+
+The claim under test was this base's longest-standing structural gap: **`agents/top.md` carried *"EMEA and LATAM have zero placed agent rows between them"***, and had carried some version of it for dozens of passes.
+
+🟢 **It is now closed for LATAM, with two rows** — [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, Universidad Tecnológica de Pereira, Open edX XBlock) and [`AndresGuido9820/trabajo2-agente-tutor`](https://github.com/AndresGuido9820/trabajo2-agente-tutor) (MIT, Universidad Nacional de Colombia, 151 commits / 314 tests). Both placed on a **named institution in the repository's own text**; the placement rule was not relaxed to get there.
+
+🔵 **The mechanism is new, and it is the transferable part.** The first five instances were all *adoption* gaps: the software existed, was findable in English, and was simply shallow or unadopted. This one was an **instrument** gap:
+
+| Leg | In-scope addresses returned | Novel |
+|---|---|---|
+| 4 × mandated **English-language** supply legs | 🔴 **0** — sixth consecutive pass | 0 |
+| `…educación IA agente tutor español México Chile Colombia licencia MIT 2026` | 4 | 🟢 1 |
+| `…tutor agent Brazil Mexico Argentina universidad github MIT licença educação` | 7 | 🟢 1 (an AGPL refutation) |
+
+**Both** novel addresses in the pass came from non-English legs, and **both** were LATAM. The English legs have returned nothing in scope since p658.
+
+🔴 **Why this is a trend and not a one-off.** The three forces behind it are structural, not accidental. (1) **Education software is written in the language of its curriculum** — a tutor for Colombian rural higher education is described in Spanish, names a Colombian university, and uses the word *tutor* in a Spanish sentence that an English-keyword query does not match. (2) **This base's own placement rule compounds it**: author names and README language are correctly excluded as placement channels, so a project that *is* placeable only shows up as placed if a query reaches it at all. (3) **Star-ordered discovery buries it further** — both rows are `0★`, and this base has already measured that stars mis-rank education software by up to **1:72** on star:commit (`OpenOlat`).
+
+🟡 **The honest limit, stated with the claim.** Closing the LATAM zero did **not** produce an adoptable production base: both rows are `0★` university coursework. So T40's underlying shape survives intact — supply exists, and it is shallow and fragmented. What changed is that this base can no longer attribute a regional supply gap to the *region* without first running the legs in the region's own languages.
+
+🔴 **EMEA is still zero, and it is now the sharper anomaly** — it is where the binding statute is, and where this base's strongest *platform* rows are built (OpenOlat, ILIAS, Artemis), yet it has no placed **agent** row. T44 predicts the fix and the next pass should test it: **run the supply legs in German, French, Spanish and Portuguese before concluding anything about EMEA agent supply.**
+
+⚠️ **Consequence for every absence claim on this page.** Any *"searched and not found"* on a non-anglophone region that rests only on English-language legs is **provisional**, not settled, and should be re-stated as such rather than cited as a measured gap.
+
+🔧 **Numbering note:** this entry is **T44** because **T43** is the highest unique number on the page — `T39` and `T40` each appear **twice** (p658 and p661 both minted a pair). The duplicates are left in place rather than silently renumbered, since other pages cite them by number; flagged here so the next pass does not mint a third `T39`.

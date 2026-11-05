@@ -912,3 +912,38 @@ Then read the README for which branch carries the artefact you actually want —
 **What to say in the proposal.** *"Your scanner will flag the largest permissive LMS in this stack as unlicensed, and it is wrong. It will also pass a platform that a published comparison table calls MIT and which is actually network-copyleft, and that one would have cost you the source of your product. We will give you the evidence for both, in the format your procurement team already reads, and a diff-based gate that keeps answering the question after we leave."*
 
 **🔴 What this pattern does not claim.** It does **not** constitute legal advice and it does **not** resolve clause-level residuals — a dual-licensed component like `scancode-toolkit` carries an attribution obligation that counsel, not a scanner, has to price. The four specimens are verified first-hand at `2026-11-05`; the *generalisation* that scanners err in both directions at a measurable rate is **not** quantified by this pass on a sampled population, and `572-B` is the only rate figure this base holds for the filename axis.
+
+## P28 — Spanish-language tutoring inside Open edX, for a public university that cannot send student data anywhere (LATAM public higher education, rural and regional campuses: 8–10 weeks) 🟢 new at p663
+
+🔵 **Why this pattern exists now.** Until p663 this base had **no placed LATAM agent row at all**, so every LATAM engagement had to be composed from APAC and North American parts and localised. It now has two Colombian rows, and — more usefully — a **worked reference for the hardest part of the job**, which is not the tutor but the *integration*. Open edX is the platform tier this region actually runs, and `LabSirius/TutorIA` is the only agent on this shelf that lands **inside** it.
+
+### The parts
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| Platform | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | The incumbent across LATAM public higher education. ⚠️ **Copyleft — it is the host, never the derivative.** You deploy it; you do not fork it into a client-branded product. |
+| **Integration reference** | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | **MIT** (1,069 B, © *Grupo Sirius*) | 🟢 **The pattern's keystone.** An **Open edX XBlock/plugin**, so the tutor sits inside the course, enrolment and grading objects instead of talking to them over REST. Built for **rural higher education in Risaralda** at Universidad Tecnológica de Pereira — the same institutional shape as the client. **Read it as an integration reference, do not ship it: `0★`, 4 commits.** |
+| Tutor engine | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | Carries the persistent learner model, which `TutorIA` does not. This is the swap that turns the reference into a product. |
+| Programming track | [`AndresGuido9820/trabajo2-agente-tutor`](https://github.com/AndresGuido9820/trabajo2-agente-tutor) | **MIT** (1,085 B) | 🟢 **Pyodide in the browser** — learner code runs client-side, so there is **no sandbox to operate or secure**, the single largest hidden cost in a CS tutoring build. Spanish-language and Socratic by construction. `0★` but **151 commits / 314 tests**. |
+| Model | Ollama + an open-weight model, on university hardware | — | The binding constraint in this pattern is egress, not capability. |
+| Mastery | [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | MIT | BKT + FSRS behind one MCP tool surface, so mastery estimates are explainable to a faculty committee. |
+| Evidence | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | **P17**'s spine. Non-negotiable here — see *Why the statement log is the deliverable* below. |
+
+### How it wires together
+
+1. **Weeks 1–2 — run P27 first, and run it on the two Colombian rows specifically.** `TutorIA` ships **two addresses for one work**: its own README's clone command points at the predecessor [`Sof1SP/TutorIA`](https://github.com/Sof1SP/TutorIA), whose grant names **a different licensor** (© *Sofia Soto Parra*, 1,073 B) from the one you are adopting (© *Grupo Sirius*, 1,069 B). **Settle in writing which grant the derivative takes before any code is copied.** This is not pedantry — it is the one defect in this pattern that cannot be fixed later.
+2. **Weeks 2–4 — stand up Open edX and lift the XBlock boundary from `TutorIA`.** Take its *shape* — how it registers, where it reads enrolment, how it writes grades, how the teacher statistics panel is mounted — and reimplement against your own MIT code. 🔴 **Keep the AGPL boundary clean:** the XBlock talks to the platform through published extension points, so your plugin stays separately licensed. Nothing you write enters `edx-platform`.
+3. **Weeks 4–6 — swap the engine.** `TutorIA`'s backend is FastAPI calling a hosted model API. Replace it with **DeepTutor against local Ollama**. This is the step that converts a 4-commit artefact into something with a persistent learner model and no egress path.
+4. **Weeks 5–7 — add the programming track.** Mount `Profe Bit`'s **Pyodide execution model** as the CS course type. Its one-SQLite-database-per-course design maps cleanly onto Open edX course keys, and its OpenAI-compatible client already points at Ollama with a base-URL change.
+5. **Weeks 6–8 — wire the evidence spine.** Every tutor turn, mastery update and grade writes an xAPI statement into `lrsql`.
+6. **Weeks 8–10 — faculty acceptance.** Expose mastery estimates through `tutor-mcp` so a committee can see *why* the system judged a learner ready.
+
+### 🔵 Why the statement log is the deliverable, not a nice-to-have
+
+LATAM's regulatory position is the **least settled** of the four regions this base tracks — only Peru has an enacted AI law, Brazil's bill is pending. It is tempting to read that as "fewer obligations, ship faster". **That is the wrong read for a public university**, for two reasons this base has already measured: a public institution procures against *institutional* accountability rules that exist whether or not an AI statute does (Universidad de los Andes counted **716** AI-related instruments and rules in the region), and student data is **minors' and protected data under LGPD and its peers regardless**. The statement log is what lets the university answer "what did the system do to this student" in a region where nobody has yet told it which form that answer must take. 🟢 **Build it first and the eventual statute is a reporting change, not a re-architecture.**
+
+### ⚠️ What this pattern does not claim
+
+- **Neither Colombian row is production software.** `0★`, 4 and 151 commits, no external review, and `trabajo2-` in the name of one marks it as coursework. They are **prior art and an integration reference**. A proposal that lists them as dependencies is misreading this page; a proposal that says *"the Open edX integration boundary has a published reference implementation from a peer institution"* is reading it correctly — and that is worth real weeks.
+- **The tutor quality comes from DeepTutor, not from the LATAM rows.** What the LATAM rows contribute is **placement, language and integration shape** — which is precisely what a localisation exercise usually gets wrong and what a client committee will probe hardest.
+- **This is not a Moodle pattern.** Moodle dominates much of LATAM schooling, and its bridge field tops out at **27★** across seven MIT servers (**P8**). This pattern is for the Open edX half of the region, and the two are not interchangeable.

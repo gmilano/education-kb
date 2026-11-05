@@ -212,6 +212,16 @@ At p659 the payload was read at first hand — `LICENSE`, `1,058 B`, stock MIT �
 
 🔵 **The lesson for this base, not for OpenEduCat:** "three plausible renames also 404" was treated as sufficient to declare a project gone. It is not. A rename probe searches the space a reader *imagines*; it does not search the space that exists. One search against the project's own name returned the live address immediately.
 
+## 🟡 No row added at p663 — the shelf stays at 81, and the nil has a cause this time
+
+The four mandated supply legs returned **zero** in-scope addresses, for the sixth consecutive pass. The only platform the legs named was `OpenEduCat`, which is **held** and **LGPLv3** — outside this page's permissive focus. **Padding is forbidden here, so nothing was added.**
+
+🔵 **What is new is the diagnosis, and it applies to this page as much as to the agent shelf.** Both novel addresses found anywhere in the pass came from **Spanish- and Portuguese-language** queries, and both were LATAM agents (`agents/trending.md` `663-G`, `intel/trends.md` **T44**). The English-language supply legs have been exhausted since p658. **Standing instruction registered for the foundations and platform legs too: run them in German, French, Spanish and Portuguese before recording another nil or declaring a regional supply gap.**
+
+🟢 **One measurement channel improved, which changes what this page can record about a candidate.** Repository HTML is still `403` to `curl`, but it is readable via `WebFetch`, which agreed with `gh api search/repositories` on `4/4` tested pairs and **additionally returns a commit count that `search/repositories` does not provide at all**. That gives this shelf a **depth axis** it has never had: at p663 it is what distinguished a `0★` repository with `151` commits and `314` tests from a `0★` repository with `4`. `intel/open-gaps.md` has an open action asking for exactly such an axis on the promotion queue; the channel for it now exists.
+
+🔴 **One licence note against a held row, no verdict change.** `OpenEduCat`'s `8,241 B` LGPL-3.0 grant opens by deferring attribution to a `COPYRIGHT` file. p663 re-tested that reference and it is **dangling, not mislaid**: `404` on six name variants at the default ref `19.0` **and** `404` at `20.0`, while `LICENSE` is `200` at both. So the grant names **no licensor** on either live release branch (`gh api spdx = NOASSERTION`). Which licence applies is not in doubt; who grants it is. Star figure corrected `905 → 904` on a two-channel reading.
+
 ## Why these repos
 
 ### The LMS bases — and the licence split that matters

@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p663) — 🟡 **NO FOUNDATIONS ROW ADDED. `repos/foundations.md` STAYS AT `81`. THE FOUR MANDATED ENGLISH-LANGUAGE SUPPLY LEGS RETURNED **ZERO** IN-SCOPE ADDRESSES FOR THE SIXTH CONSECUTIVE PASS, AND PADDING IS FORBIDDEN HERE. 🟡 **`OpenEduCat`'s DANGLING `COPYRIGHT` REFERENCE IS **HELD, NOT NEW** — `verticals/solutions.md` ALREADY CARRIES IT. p663 ADDS ONLY THE NEGATIVE SWEEP THAT RULES OUT A PATH OR CASE VARIANT (`6` NAMES × `2` RELEASE BRANCHES) AND CORRECTS THE STAR FIGURE `905 → 904`.** 🟢 THE REPOSITORY-HTML CHANNEL IS READABLE AGAIN THROUGH `WebFetch`, SO STARS ARE TWO-CHANNEL FOR THE FIRST TIME SINCE p659.**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); grant payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars / `spdx` / push date (🟢 live); repository **HTML via `curl`** (🔴 `403`, unchanged since p659); repository **HTML via `WebFetch`** (🟢 **live — new at p663**, `4/4` agreement with `gh api`, and it carries a **commit count** that `search/repositories` does not return at all; see `agents/trending.md` `663-A`).
+
+### 🟡 Why this pass adds no foundations row
+
+| Leg | In-scope addresses | New to the tree |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0** — returned general agent frameworks (`AutoGPT`, `LangChain`, `OpenHands`, `Cua`, Hermes) and beginner tutorial lists | 0 |
+| `github trending education AI 2026` | `OPTIMETA/PAIDEIA`, `microsoft/ai-agents-for-beginners`, `freeCodeCamp/freeCodeCamp`, `rohitg00/ai-engineering-from-scratch` | 0 — held or out of sector |
+| `open source platform education LMS SIS MIT Apache` | `OpenEduCat/openeducat_erp` only | 0 — held, and **LGPLv3**, outside the permissive focus set |
+| `AI education industry trends 2026` | — demand-side only | 0 |
+| 4 × regional legs | institutional intel only, no addresses | 0 |
+
+🔵 **The repeated nil is now diagnosable rather than just recorded.** Both novel addresses this pass came from **Spanish- and Portuguese-language** legs, and both are LATAM agents (`agents/trending.md` `663-C`, `663-G`). The English-language supply legs have been exhausted for six passes; the non-anglophone legs are not decoration, they are where the unheld supply is. **Registered as a standing instruction for the supply side too:** run the platform and foundations legs in German, French, Spanish and Portuguese before declaring a supply gap in EMEA or LATAM.
+
+### 🟡 `OpenEduCat` — the dangling `COPYRIGHT` reference, re-tested rather than rediscovered
+
+The verticals leg returned `OpenEduCat` as the "Odoo-for-education" platform, which this base already shelves at **LGPL-3.0**. The licence verdict is **HELD and unchanged**. What p663 adds is what the grant actually says in its first line, and what is at the other end of that reference.
+
+| Channel | Reading `2026-11-05` |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves — real default branch **`19.0`** (a bare version string, not `main`), `46a5d7d4` |
+| grant payload, byte-read at `19.0` | 🟢 `LICENSE`, **`8,241 B`**, `sha256₁₂ 528f84036800` — body is **GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007**, with the GPL text appended beneath it |
+| grant's **first line** | 🔴 *"For copyright information, please see the COPYRIGHT file."* — the grant delegates attribution rather than stating it |
+| the referenced `COPYRIGHT` file | 🔴 **`404`** — and on `COPYRIGHT.md`, `COPYRIGHT.txt`, `copyright`, `Copyright` and `AUTHORS`; 🔴 **`404` on the `20.0` branch as well**, where `LICENSE` is `200` |
+| `gh api search/repositories` | **`904★`** (shelf says `905★` — drift of `1`, corrected below) · pushed `2026-11-02` · 🔴 `spdx = NOASSERTION` |
+
+🔧 **Claimed as novel in this pass's first draft and corrected before commit: this is HELD.** `verticals/solutions.md` already carries, in-cell, *“⚠️ `LICENSE` delegates copyright to a `COPYRIGHT` file that returns 404.”* The finding is this base's own and p663 does not get to re-announce it. 🟢 **What p663 does add is the negative sweep that a one-shot `404` does not license you to conclude.** A single missing path could be a rename, a case difference or a branch artefact. It is none of those: `COPYRIGHT`, `COPYRIGHT.md`, `COPYRIGHT.txt`, `copyright`, `Copyright` and `AUTHORS` all return `404` at `19.0`, **and `COPYRIGHT` is `404` at `20.0` too** while `LICENSE` is `200` at both. So the reference is dangling across the project's two live release branches, not mislaid in one of them — which is what upgrades the note from *an observation about a file* to *a statement about the grant*. 🔵 **The mechanism, for the record, is distinct from the template class this base tracks.** `lebmatter/exampro` carries `Copyright (c) [year] [fullname]` — an **unfilled slot** that exists. `OpenEduCat` **deferred** the slot to an external file and shipped without the file. Which licence applies is not in doubt — the LGPL-3.0 body is complete, with the GPL appended beneath it. **Who grants it is**, and `spdx = NOASSERTION` shows GitHub's own classifier reaching the same impasse from the other direction. ⚠ **No defect-class number is asserted here**, because this pass did not verify the taxonomy's current count and the delegation was already recorded. 🔵 **Disposition: no shelf change, and the existing `⚠️ LICENSE dele…` note on `verticals/solutions.md` is extended rather than replaced** — it already observed the delegation; what it did not have is that the referenced file is absent. Star figure corrected `905 → 904` on a two-channel reading. **Not a blocker for the LGPL-linking position this base already describes**, but it is the first thing to settle in writing before a client ships a derivative.
+
+### 🔴 `tutors-sdk/tutors` — the default ref is not `main`
+
+These logs read this repository's grant at `main:LICENSE`. The resolved default branch is **`development`**.
+
+| Channel | Reading `2026-11-05` |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves — default branch **`development`**, not `main` |
+| grant at the resolved default ref | 🟢 `LICENSE`, **`1,088 B`**, `sha256₁₂ 4800b7fa4014`, title `MIT License`, © `2022-present Tutors SDK Contributors` |
+| `gh api` / `WebFetch` | `spdx = MIT` · **`125★` / `55` forks / `3,043` commits** (two-channel) · pushed `2026-07-23` |
+
+🟡 **No licence change — both refs carry MIT.** The point is procedural: a fetch written against `main` is not reading the default ref, and this base runs its existence check through `--symref` precisely so that the ref it reads is the ref the project ships. Recorded so the next pass that touches this address does not reintroduce the hardcoded `main`.
+
+🔵 **Placement, stated with its own weakness.** `tutors` names no institution for itself; its *sample courses* reference **SETU / Waterford, Ireland**. That is evidence about **where it is deployed**, not where it originates — the same weak channel as `braiinz94/braiinz-education`'s stated French curriculum, and weaker than the institutional channel used for the two LATAM agent rows this pass. **Left unpromoted**, and left unplaced, on that basis: `125★` and `3,043` commits make it the most substantial unshelved courseware candidate in the tree, and the npm-scope analysis these logs already carry (`@tutors-sdk/*` published, `@tutors/*` `404` on `5/5` probes, `tutors-sdk/tutors-lib` not a public repo) is the open question a promotion would have to settle first.
+
 ## 🆕 2026-11-05 (p662) — 🟡 **NO ROW ADDED, AND NO LICENCE CELL CHANGED. `repos/foundations.md` STAYS AT `81`, `verticals/solutions.md` AT `38`: THE SUPPLY LEGS RETURNED `64/67` ALREADY HELD AND PADDING IS FORBIDDEN HERE. 🟢 `OpenOLAT/OpenOLAT`'s APACHE GRANT RE-READ FROM A SECOND CANONICAL SOURCE — THE SHELF REPRODUCES EXACTLY, AND THE ONLY DELTA IS ONE BYTE IN THE CANONICAL COPY. 🔴 A CURRENT COMPARISON TABLE CALLS `learnhouse` MIT; IT IS `AGPL-3.0`, AS THESE LOGS HAVE SAID SINCE `p11`. 🔧 THE `filed_on` INDEX REPAIR LANDED: `288` ROWS CHANGED AND ONE LICENCE VERDICT CORRECTED.**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); grant payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars/licence (🟢 live this pass); repository **HTML pages** (🔴 `403`) and `img.shields.io` (🔴 `000`), so **every star figure below is single-channel**; `services.google.com` 🔴 `connect_rejected` (Gap `662-I`).

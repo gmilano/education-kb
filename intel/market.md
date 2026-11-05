@@ -348,6 +348,12 @@ Also verified: **`openblockcc/openblock-desktop`** (MIT, 302★), an APAC-origin
 
 🟢 **One thing did change, and it is an absence.** The leg did **not** reproduce the TEQSA institutional-action-plan claim this pass, after three consecutive reproductions (`p652`, `p658`, `p661`). One quiet pass is not a retraction of the `661-F` signature, and the operating rule — the claim is false, refuse it on sight — stands unchanged.
 
+#### 🔴 New at p663 — the APAC regional leg returned nothing education-specific, and that is written down rather than left as silence
+
+The mandated leg `AI education APAC 2026 adoption regulation players` returned **enterprise-wide** AI material and **no education-specific regulation or players** at all: Forrester's `63%` AI adoption in **IT operations**, an Omdia survey of 1,100+ decision-makers across Australia, New Zealand, Singapore, Malaysia and the Philippines that **does not cover schools or universities**, and an OneTrust governance webinar. The one education-sector item was a vendor conference (Acer Edu Summit Asia Pacific 2026).
+
+🔵 **This is an informed gap, not a coverage claim, and the distinction matters because silence here would look exactly like coverage.** It does **not** mean APAC lacks education AI regulation — this page already holds the opposite from earlier passes, in primary detail: **South Korea's AI Basic Act (Law No. 20676, in force 22 January 2026)** names student assessment in its statutory *high-impact* definition, and **Vietnam** has a binding instrument. It means the **generic regional query is exhausted** as an instrument for this region. 🟢 **The leg should be re-scoped to named jurisdictions** — ministry-level AI-in-education policy for Singapore, South Korea, China, Japan, Australia and India — which is how this page's existing Korea and Vietnam findings were obtained in the first place. Registered so the next pass does not re-run the generic query and record another nil.
+
 ### LATAM
 
 **Regulatory posture:** the least settled region. Only **Peru** has an enacted AI law. **Brazil**'s EU-inspired bill is the most developed framework in the region (tiered risk, civil liability) but remains pending; a regulatory sandbox launched in 2025. **Mexico** has no horizontal AI law; a February 2026 bill would create a body to classify AI systems by risk. **Chile**'s comprehensive bill is pending (Boletín 16821-19), with the National AI Policy updated in 2024 carrying explicit funding and sectoral mandates.
@@ -452,6 +458,21 @@ client.
 
 
 🟡 **New at p662 — one named regional integrator, recorded and not ranked.** **Softtek** is named as a LATAM AI-in-education player alongside Microsoft, Google, AWS and IBM. Novel to this base (`0` hits anywhere). It reaches this pass through a market-research vendor page with no methodology attached, so it is recorded as **a name to know in a regional bid**, not as a market position. 🔵 It is nonetheless the only LATAM-headquartered integrator any mandated leg has surfaced in eighteen passes, which is itself the finding: the regional supplier picture this base can evidence remains thin, and that is a gap rather than an absence of suppliers.
+
+#### 🟢 New at p663 — LATAM stops being a region with no permissive agent supply, and the reason it looked that way was the query language
+
+**Supply — the standing “zero placed LATAM agent rows” is closed.** `agents/top.md` now carries **two**, both Colombian, both placed on a **named institution in the repository's own text** rather than on an author name or a README language:
+
+| Row | Address | Licence (byte-read 2026-11-05) | Placement evidence | Depth |
+|---|---|---|---|---|
+| **TutorIA** | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | MIT · 1,069 B · `346d7b5d3913` · © *Grupo Sirius* | **Universidad Tecnológica de Pereira**, rural higher education in **Risaralda, Colombia**; organisational licensor in the grant | `0★` / 4 commits · **Open edX XBlock** |
+| **Profe Bit** | [`AndresGuido9820/trabajo2-agente-tutor`](https://github.com/AndresGuido9820/trabajo2-agente-tutor) | MIT · 1,085 B · `900b1f1215bc` | **Universidad Nacional de Colombia**, named professor and course | `0★` / **151 commits / 314 tests** · local-capable (Ollama + Pyodide) |
+
+🔵 **The diagnostic finding is about this base's instrument, not about LATAM.** The four mandated English-language supply legs returned **zero** in-scope addresses for the sixth consecutive pass. Both rows came from **Spanish- and Portuguese-language** legs. This page has carried “no placed LATAM agent supply” as a *sector* fact; a measurable part of it was a **query-language gap**. Every regional supply conclusion on this page that rests only on English-language legs should be treated as provisional until re-run in the region's own language.
+
+⚠️ **What this does not license anyone to say.** Both rows are `0★` research artefacts from university coursework. LATAM now has **placed, permissive, documented prior art** — it does **not** have an adoptable production base. The engagement shape is unchanged from what this page already describes for the region: *adopt-and-harden on a published decomposition*, not *ship someone's `0★` repository*. **TutorIA is the more strategically placed of the two** because it is an Open edX XBlock, and Open edX is the platform tier this region actually runs; **Profe Bit is the more engineered**, and the only one whose depth this base could even see, because the commit-count channel only became readable at p663 (`agents/trending.md` `663-A`).
+
+🟢 **The denominator that reconciles this page's two LATAM adoption figures — new at p663.** This page holds the Digital Education Council LATAM 2026 figure (`92%` students / `79%` faculty) and **declines to quote it** because it does not reconcile with the UNESCO IESALC institution-level readings (`87%` / `26%` / `55%`). The sample size is the reason, and it was missing: the **DEC LATAM survey covers `29` universities** and additionally reports **`67%` of students using AI at least weekly**, against **IESALC's ~`200` higher-education institutions**. Two different populations and two different sampling frames — a self-selected `29`-university council network versus a regional UN-body census — so the figures are not in conflict and neither corrects the other. 🔵 **Usable consequence:** quote DEC for *intensity among engaged universities* (`67%` weekly is the number that matters in a proposal) and IESALC for *regional coverage*. Do not average them.
 
 ### Global
 

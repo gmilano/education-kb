@@ -4,6 +4,110 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p663) — 🟢 **THE SECOND STAR CHANNEL IS BACK. `curl` ON REPOSITORY HTML IS STILL `403`, BUT `WebFetch` READS THE SAME PAGES AND REPRODUCES `gh api` ON `4/4` PAIRS — SO STAR FIGURES STOP BEING SINGLE-CHANNEL FOR THE FIRST TIME SINCE p659, AND COMMIT COUNTS BECOME AVAILABLE AT ALL. 🔴 `LabSirius/TutorIA` HAS BEEN CALLED "THE STRONGEST NEW LATAM ROW" IN THESE LOGS WHILE `agents/top.md` SAID LATAM HAD **ZERO** PLACED ROWS — TWO PAGES OF ONE BASE CONTRADICTING EACH OTHER. PROMOTED. 🟢 ONE GENUINELY NOVEL LATAM AGENT, NAMED-INSTITUTION PLACED, `151` COMMITS AND `314` TESTS AT `0★`.**
+
+**Verification channels, re-tested before use at p663:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars / `spdx` / push date — 🟢 **live**; repository **HTML pages via `curl`** — 🔴 **`403`**, unchanged since p659 (`{"message":"GitHub access to this repository is not enabled for this session"}`, 378 B); repository **HTML pages via `WebFetch`** — 🟢 **LIVE, AND THIS IS NEW** (see `663-A`).
+
+| `p663` registered | Verdict |
+|---|---|
+| 🟢 `663-A` — **`WebFetch` reads `github.com/<owner>/<repo>` where `curl` returns `403`, and it agrees with `gh api search/repositories` on `4/4` tested pairs.** Nine passes have stamped every star figure "single-channel". It no longer has to be | 🟢 **SECOND CHANNEL RECOVERED — AND IT CARRIES A FIELD `search/repositories` DOES NOT HAVE** |
+| 🔴 `663-B` — **`LabSirius/TutorIA` was measured at p6xx, written up here as *"the strongest new LATAM row, permissive end to end"*, and never put on `agents/top.md`. Meanwhile that page's own gap bullet read *"EMEA and LATAM have **zero** placed agent rows between them"*. Both sentences were in the tree at once** | 🔴 **INTER-PAGE CONTRADICTION — PROMOTED AT p663** |
+| 🟢 `663-C` — **`AndresGuido9820/trabajo2-agente-tutor` ("Profe Bit") — MIT, `0★`, but `151` commits, `314` tests, `ruff`+`mypy`+GitHub Actions, `8.9 MB`, pushed `2026-11-01`.** README names *"Prof. Juan David Ospina Arango, **Universidad Nacional de Colombia**"* and the course. Not in any `.md` in this tree before this pass | 🟢 **NOVEL — PLACED LATAM ON NAMED-INSTITUTION EVIDENCE, PROMOTED** |
+| 🔴 `663-D` — **a current search channel asserts `dlazarus/Universal-Tutor-Project` is an MIT Spanish-language tutor. Its grant is `AGPL-3.0`** — `34,523 B`, `sha256₁₂ 8486a10c4393`, byte-read at the resolved default ref; `gh api` agrees `spdx = AGPL-3.0` | 🔴 **THIRD-PARTY LICENCE CLAIM REFUTED — DECLINED, COPYLEFT** |
+| 🔴 `663-E` — **`Priyamakeshwari/TeachGPT`, returned by search as an MIT education agent, does not exist.** `git ls-remote --symref` → no resolve | 🔴 **ADDRESS DOES NOT RESOLVE — NOT FILED** |
+| 🟢 `663-F` — **the `1,069 B` discrepancy `intel/open-gaps.md` registered against `LabSirius/TutorIA`'s grant is adjudicated in favour of `1,069 B`**, re-read first-hand this pass: `main/LICENSE`, `1,069 B`, `sha256₁₂ 346d7b5d3913`, title `MIT License`, © `2026 Grupo Sirius` | 🟢 **RE-MEASURED — `1,069 B` CONFIRMED** |
+| 🟡 `663-G` — **`9` addresses tested, `7` already at HEAD, `2` novel.** The supply legs reproduce the shape every pass since p658 has measured: the global English-language legs returned nothing in scope at all, and **both** novel addresses came from a **Spanish-language** leg | 🟡 **≈78 % ALREADY HELD — AND THE YIELD IS ENTIRELY NON-ANGLOPHONE** |
+| 🔴 `663-H` — **`tutors-sdk/tutors`' real default branch is `development`, not `main`.** These logs read its grant at `main:LICENSE`. Both refs carry MIT; the point is that a fetch written against `main` is not reading the default ref | 🔴 **DEFAULT-REF TRAP RECORDED — NO LICENCE CHANGE** |
+
+### 🟢 `663-A` — the star channel that came back
+
+Since p659 every pass has written some version of *"repository HTML pages 🔴 403, so every star figure this pass is single-channel"*. That is true of `curl`. It is not true of the page.
+
+```
+curl -sSL https://github.com/LabSirius/TutorIA      → http=403  size=378
+  body: {"message":"GitHub access to this repository is not enabled for this session. ..."}
+WebFetch https://github.com/LabSirius/TutorIA       → 🟢 renders; stars, forks, commits, description, stack
+```
+
+🟢 **Reproduction against the independent channel — `4/4` agree:**
+
+| Address | `WebFetch` | `gh api search/repositories` | Agree? |
+|---|---|---|---|
+| `LabSirius/TutorIA` | `0★` / `0` forks / `4` commits | `0★` / `0` forks | 🟢 |
+| `AndresGuido9820/trabajo2-agente-tutor` | `0★` / `0` forks / `151` commits | `0★` / `0` forks | 🟢 |
+| `Jeanikt/tutor-ai-agent` | `0★` / `0` forks / `3` commits | `0★` / `0` forks | 🟢 |
+| `tutors-sdk/tutors` | `125★` / `55` forks / `3,043` commits | `125★` / `55` forks | 🟢 |
+
+🔵 **Two things follow, and the second is the more useful.** First, star figures can be stamped two-channel again. Second, **`WebFetch` returns a commit count and `search/repositories` does not return one at all** — so the base gains a *liveness and depth* axis it has never had on this channel. That matters immediately: it is the field that separates `663-C`'s `151` commits from `TutorIA`'s `4` at the identical `0★`, and `intel/open-gaps.md` has an open action asking for exactly such an axis on the promotion queue.
+
+⚠️ **Limits, stated so the next pass does not over-trust it.** `WebFetch` answers in prose through a summarising model, not JSON, so it is a **weaker** instrument than a byte-read: it is fit for stars, forks, commits and description, and it must **not** be used to establish a licence — every licence verdict at p663 is a byte-read of the grant payload plus `gh api spdx`. It also declined to give a last-commit date on all four pages.
+
+### 🔴 `663-B` — one base, two contradictory sentences
+
+`agents/trending.md` has carried, since the pass that found it:
+
+> 🟢 `LabSirius/TutorIA` — **MIT**, **0★** … **A stated-origin LATAM university agent**, which is exactly the object `p528` found this base asserting did not exist.
+> … 🟢 **The strongest new LATAM row, permissive end to end.**
+
+`agents/top.md` has simultaneously carried, in **🔴 Open gaps on this page**:
+
+> **Placed (5):** DeepTutor, OpenMAIC, OmniEdu and AI-Shifu → APAC; OATutor → North America. … **every placed row on this shelf is APAC except one, so "unplaced" is not noise distributed evenly — EMEA and LATAM have *zero* placed agent rows between them.**
+
+🔵 **Neither sentence is wrong about its own page, and that is the defect.** The row was measured, written up, praised — and never filed. `grep -c 'LabSirius' agents/top.md` returned **`0`**. This is p662's finding (`662-A`/`662-C`: the base loses track of what it has filed where) reaching the *shelf* rather than the ledger, and it has a sharper consequence: the gap bullet is what a pass reads to decide what to search for next, so an unfiled row makes the base **re-hunt something it already owns**. Promoted this pass; the bullet is rewritten from the table rather than edited in place.
+
+### 🟢 `663-C` — Profe Bit, and why a `0★` row is promoted anyway
+
+p661 set a rule against promoting `0★` filler and it is kept, not waived. The rule exists to stop a one-file demo reaching the shelf. It is not a star threshold, because this base has already measured that stars mis-rank education software — `OpenOlat`'s star:commit ratio is **1:72**.
+
+| Channel | Reading `2026-11-05` |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves — default branch `main` |
+| grant payload, byte-read | 🟢 `LICENSE`, **`1,085 B`**, `sha256₁₂ 900b1f1215bc`, title `MIT License`, © `2026 Andrés Felipe Guido Montoya` |
+| `gh api search/repositories` | 🟢 `spdx = MIT` · `0★` / `0` forks · created `2026-07-20` · pushed **`2026-11-01`** · `8,872 KB` · not archived |
+| `WebFetch` page read | 🟢 **`151` commits**, `314` tests, `ruff`, `mypy`, GitHub Actions CI |
+| Placement evidence | 🟢 README names *"Prof. Juan David Ospina Arango, **Universidad Nacional de Colombia**"* and the course *"Normalización: aplicaciones de LLMs y Agentes para la enseñanza de la programación básica"* |
+
+🟢 **What it is:** a Socratic **programming** tutor. The learner asks for a course conversationally; it generates Socratic classes with code challenges executed **in the browser via Pyodide**, one SQLite database per course, and runs against either the OpenAI API **or** a local OpenAI-compatible server such as Ollama.
+
+🔵 **Three reasons it is a shelf row and not filler.** (1) `151` commits and `314` tests is not a demo, and the base now has a channel that can see that (`663-A`). (2) It is **placed** on a named institution in the repository's own README — the channel this base accepts — and LATAM placement is the single most-wanted attribute on this shelf. (3) It is **local-capable by default**, which puts it in the small set that can be deployed where student data cannot leave the building.
+
+⚠️ **Stated plainly and carried in-cell: `0★`, `0` forks, no external review, and a repository named `trabajo2-` — a university coursework artefact.** It is *prior art and a starting point*, on the same footing this base gives every research-scale row, not a production dependency.
+
+### 🔴 `663-D` / `663-E` — two addresses that search asserted and the channels refused
+
+| Address | Search channel asserted | First-hand reading | Disposition |
+|---|---|---|---|
+| `dlazarus/Universal-Tutor-Project` | an MIT Spanish-language universal tutor | 🔴 **`AGPL-3.0`** — `34,523 B`, `sha256₁₂ 8486a10c4393`; `gh api spdx = AGPL-3.0`; `0★`, created `2026-10-19` | 🔴 **Declined — copyleft.** Not a base for a closed client derivative |
+| `Priyamakeshwari/TeachGPT` | an MIT education agent | 🔴 `git ls-remote --symref` → **no resolve** | 🔴 **Not filed — a 404 is not a finding** |
+
+🔵 **`8486a10c4393` is the verbatim AGPL-3.0 text and these logs already carry that digest** — it is the same payload recorded against `learnhouse/learnhouse` at p662. That is the digest behaving correctly: identical licence text, identical hash, two unrelated repositories. Worth stating because a digest match across owners looks like a duplicate-lineage hit and is not one.
+
+### 🟡 `663-G` — where the yield came from
+
+| Leg | In-scope addresses returned | Novel |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 0 — returned general agent frameworks (`AutoGPT`, `LangChain`, `OpenHands`, `Cua`, Hermes) and tutorial lists | 0 |
+| `github trending education AI 2026` | `OPTIMETA/PAIDEIA`, `microsoft/ai-agents-for-beginners`, `freeCodeCamp` — all held or out of sector | 0 |
+| `open source platform education LMS SIS MIT Apache` | `OpenEduCat` only — held, and **LGPLv3**, outside the permissive set | 0 |
+| `AI education industry trends 2026` | — (demand-side only) | 0 |
+| 4 × regional legs (NA / EMEA / APAC / LATAM) | institutional intel only, no addresses | 0 |
+| 🟢 **`…educación IA agente tutor español México Chile Colombia licencia MIT 2026`** | `LabSirius/TutorIA`, **`AndresGuido9820/trabajo2-agente-tutor`**, `dlazarus/Universal-Tutor-Project`, `tutors-sdk/tutors` | 🟢 **1** |
+| 🟢 **`…tutor agent Brazil Mexico Argentina universidad github MIT licença educação`** | `Jeanikt/tutor-ai-agent`, `THU-MAIC/OpenMAIC`, `braiinz94/braiinz-education`, `Ebimsv/AITutorAgent`, `BlackyDrum/ai-tutor`, `maxew6/ai-tutor-project`, `Priyamakeshwari/TeachGPT` | 🟢 **1** (the AGPL refutation) |
+
+🔵 **The finding is about the instrument, not the sector.** The four mandated English-language supply legs returned **zero** in-scope addresses for the sixth consecutive pass. Both novel addresses this pass came from **Spanish- and Portuguese-language queries**, and both are LATAM. The base's own standing gap is "no placed LATAM rows"; the reason is now partly legible — **it was searching in the wrong language.** Registered as a standing instruction: the non-anglophone legs are not optional colour, they are where the unheld supply is.
+
+### 🔵 Addresses re-confirmed already-held (no shelf change)
+
+| Address | Licence, byte-read `2026-11-05` | Stars (2-channel) | Status |
+|---|---|---|---|
+| `LabSirius/TutorIA` | MIT · `1,069 B` · `346d7b5d3913` · © `2026 Grupo Sirius` | `0★` | 🟢 **promoted to `agents/top.md` this pass** (`663-B`) |
+| `Sof1SP/TutorIA` | MIT · `1,073 B` · `d3b3c890a1a6` · © `2026 Sofia Soto Parra` | `0★` | predecessor repo, created `2026-04-22`, pushed `2026-05-27`; **licensor differs from `LabSirius`' org grant** |
+| `Jeanikt/tutor-ai-agent` | MIT · `1,103 B` · `fb865cf5738d` · © `2026 Jean Oliveira` | `0★`, `3` commits | held; in development, no public deployment |
+| `tutors-sdk/tutors` | MIT · `1,088 B` · `4800b7fa4014` · © `2022-present Tutors SDK Contributors` | `125★` / `55` forks / `3,043` commits | held; default ref **`development`** (`663-H`) |
+| `Ebimsv/AITutorAgent` | MIT · `1,072 B` · `c8050f8df7c1` | `15★` / `5` forks | held; `pushed == created == 2025-06-03` — a **single-day dump**, dormant ~17 months |
+| `BlackyDrum/ai-tutor` | MIT · `1,067 B` · `ecf04c83c044` | `8★` / `5` forks | held; dormant since `2024-10-19` |
+| `maxew6/ai-tutor-project` | MIT · `1,073 B` · `de8107bf9312` · © `2026 krishna16-origin` | `0★` | held; a redeploy whose grant names the **upstream** author, not the deployer |
+
 ## 🆕 2026-11-05 (p662) — 🔴 **THE COLUMN THIS BASE READS TO ANSWER "ALREADY HELD?" IS WRONG IN `230` OF ITS `259` CLAIMS. `142` NAME A PAGE THAT DOES NOT CARRY THE ADDRESS AND `100` OF THOSE ARE REACHABLE NOWHERE IN THE LIVE TREE. 🔧 THE RATCHET'S HEADLINE `filed: 258` WAS RIGHT-ISH ONLY BY CANCELLATION: `259 − 142 + 59 = 176`, THE TRUE COUNT. MEASURED, CAUSED, REPAIRED. 🔴 THE MANDATED LEGS NIL AN EIGHTEENTH TIME ON `64/67`, AND p661's NONSENSE CONTROL IS NOW SELF-POISONED.**
 
 **Verification channels, re-tested before use at p662:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars/licence/push date — 🟢 **live this pass, including on `learnhouse/learnhouse` and `OpenOLAT/OpenOLAT`**; repository **HTML pages** — 🔴 **`403`**, unchanged since p659, so every star figure this pass is **single-channel**; `img.shields.io` — 🔴 **`000`, connection refused**; `gh api repos/{owner}/{repo}` — 🔴 **`403`** for any repository not attached to this session; `services.google.com` — 🔴 **`connect_rejected` by the session's egress proxy, new this pass** (`662-I`).
