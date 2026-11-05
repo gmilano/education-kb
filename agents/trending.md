@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p658) — 🔴 **THE BASE HELD 27 AGENTS AND 52 FOUNDATIONS AND NOT ONE ROW FOR LEARN-TO-CODE — THE BIGGEST INSTALLED BASE IN K-12 WAS INVISIBLE FOR 657 PASSES, AND THREE MECHANISMS EXPLAIN IT**
+
+**Verification channels, all re-tested before use:** existence and **real default branch** via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` **on that resolved branch**; stars, `pushed_at` and `license.spdx_id` from `gh api search/repositories` with many `repo:` qualifiers per call. **21 addresses verified, 21 PUBLIC-LIVE, zero dead.** Controls behaved: `moodle/moodle` live on `main`, a fabricated address returned NOT-PUBLIC.
+
+### 🔴 The absence, measured before it was filled
+
+`makecode`, `pxt` and `micro:bit` appeared **nowhere** in this repository — not on a shelf, not in the append-only logs, not in `archive/`. `blockly` appeared only inside archived prose, describing another project's feature list. That is Scratch, MakeCode, micro:bit and Code.org — **what "computing" means in most school systems on earth** — absent from a KB with 52 foundation rows.
+
+### 🔵 Why it stayed invisible, which is the transferable part
+
+| Mechanism | Evidence this pass |
+|---|---|
+| **A transfer hid the substrate** | Blockly moved Google → Raspberry Pi Foundation on **10 Nov 2025**. `blockly in:name stars:>3000` returns `RaspberryPiFoundation/blockly` at **13,600★** and **not** `google/blockly`. Stars travel with the transfer; the old address is a redirect. A star-ranked census naming the old owner **structurally cannot see it** — p647-C's "the sort key is the filter", via a second mechanism. |
+| **Topic homonymy, at four new heads** | `topic:oer` → ASN.1 **O**ctet **E**ncoding **R**ules (`eerimoq/asn1tools`, 338★) and a RISC-V core; `topic:scratch` → "from scratch" tutorials (`geektutu/7days-golang`, **17,036★**); `topic:captioning` → image-captioning ML; `topic:wcag` → colour libraries and a CAPTCHA widget (`altcha-org/altcha`, 2,877★). **A star-ranked read of these four heads publishes a Go tutorial as education's leading asset.** p646-H, reproduced at four heads at once. |
+| **Vintage** | **15 of 21 addresses (71%) sit off `main`** — `develop`×3, `master`×11, `staging`×1 — against p645-B's **34.0%** population baseline. p646-J said branch name tracks vintage; this is the oldest layer in the KB and it tracks at **double** the base rate. |
+
+### 🟢 The one agentic find — and it is the only one of its kind
+
+**`TutoriaLLM/TutoriaLLM`** (MIT, `1,068 B`, `main`, 303★, pushed 2026-11-03) — a self-hosted K-12 programming-learning platform whose LLM tutor watches the learner's **Blockly workspace and guides them inside it**, rather than chatting beside it. Predictor residual **0**. Placed to **Japan (APAC)** on two *in-tree* channels — a `_jp` brand asset and `readme_ja.md` — **not** on description language, because the owner's location field is unset and under p647-H a zero there carries no information. ⚠️ Its own README badges `github.com/google/blockly`: a live 2026 project still pointing at the redirect, which is direct evidence the transfer has not propagated.
+
+Shelved to `agents/top.md` as row 28. 🔧 **Also repaired there:** the shelf's prose read *"Twenty rows"* while its own heading said 27, left behind when p655 and p657 each added seven.
+
+### 🔴 The index's licence field is unsafe in the PERMISSIVE direction — first specimen
+
+`TurboWarp/extensions` (194★, pushed 2026-11-05) is reported by `gh api search/repositories` as plain **`MIT`**. It has **no root grant file** (seven filenames, all 404). Its `package.json`:
+
+```
+"license": "MIT AND LGPL-3.0-only AND GPL-3.0-only AND CC-BY-SA-4.0 AND CC-BY-4.0
+            AND CC-BY-2.5 AND CC0-1.0 AND Apache-2.0 AND MPL-2.0 AND BSD-3-Clause AND ISC"
+```
+
+Eleven families joined by **AND**, two of them GPL. **Not shelved** — recorded as reference-only. p657 established that `NOASSERTION` is not a licence finding; p658 establishes that **a named permissive family is not one either**, and this is the first case where the index's error runs toward permissive, which is the dangerous direction. The pass's two other index disagreements both erred restrictive and resolved to usable grants: `microsoft/pxt-microbit` (`NOASSERTION` → **MIT**, canonical body behind a two-line bespoke header, so the title sits on line 3) and `code-dot-org/code-dot-org` (`NOASSERTION` → **Apache-2.0 + enumerated carve-out**).
+
+### 🟢 The MIT predictor generalises — the residual is DECOMPOSABLE, not merely non-zero
+
+p646 committed `1027 + |title| + |copyright|` and read a non-zero residual as "a body anomaly". p658 accounts for **three** residuals to the byte: `GeoGuess` **+31** = a second copyright line (`Copyright (c) 2020 BilelJegham`, 30 B + newline); `forkphorus` **+37** = a second copyright line (`Copyright (c) 2019-2024 Thomas Weber`, 36 B + newline); `microsoft/pxt` **+22** = an `All rights reserved.` line plus a blank. Two clean payloads (`TutoriaLLM`, `Alanosy/exam-platform`) sat at residual **0**. **The honest form is `1027 + |title| + Σ|copyright lines| + |extra boilerplate|`**, and the residual's *value* names the added line rather than merely flagging one.
+
+### 🔵 Channel notes
+
+- `git ls-remote --symref` is the **only** reliable source of the default branch: the search index reported `blockly-samples` on `master` while `ls-remote` resolves `main` (both serve the payload; `master` is a stale ref).
+- 🟢 **Identical HEAD SHAs are a transfer oracle.** `google/blockly` = `RaspberryPiFoundation/blockly` = `a4dbe9f`, and the `blockly-samples` pair = `8c1a305`. Two pairs, both identical ⇒ redirects of one repository, **not** forks — settled without reading a single commit, where p404/p405 needed full history for same-name pairs.
+- `gh api repos/{owner}/{repo}` and `users/{login}` remain **403** (session bound to configured repositories); `search/repositories` with `repo:` qualifiers works and is the metadata channel.
+
+### 🔴 Found, real, deliberately NOT filed to this shelf
+
+`scratchfoundation/scratch-gui` (**AGPL-3.0**, 4,807★) and `scratch-vm` (**AGPL-3.0**, 1,306★) — network copyleft, filed to `repos/foundations.md` as flagged reference rows instead. The licence **split** is the planning fact: `scratch-blocks` is Apache-2.0 while the app and runtime are AGPL-3.0 (**T40**).
+
 ## 🆕 2026-11-05 (p657) — 🟢 **THE SHELF COULD TUTOR AND IT COULD NOT MEASURE, GRADE OR CERTIFY — AND THE REASON WAS THREE TOPIC HEADS NOBODY HAD SWEPT**
 
 **Verification channels this pass, all re-tested before use:** existence and **real default branch** via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` **on that resolved branch**; stars, forks, `pushed_at`, `archived` and `open_issues_count` from `gh api search/repositories` with many `repo:` qualifiers in one query; tags via `git ls-remote --tags`, sorted numerically.

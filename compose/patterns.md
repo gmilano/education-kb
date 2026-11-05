@@ -563,6 +563,62 @@ learner completes assessed work
 
 ⚠️ **Two risks, and the second is the one that kills these projects.** (1) **`LearnCard` is 70 ★ with 42 open issues and one sponsoring organisation** — the same single-vendor shape **T28** flags for `lrsql`, and both appear in this stack, so a proposal resting on P21 is resting on two single-vendor dependencies. Name them. (2) **A credential nobody accepts is worth nothing.** Standards conformance (W3C VC, OBv3, OpenID4VC) is necessary and not sufficient; **the engagement must deliver at least one relying party that will honour the credential**, and if the client cannot name one, build the evidence layer (`lrsql`) first and the credential later.
 
+## P22 — A national or district K-12 coding platform, MIT end to end (ministries, state education departments, large districts: 10–14 weeks) 🟢 new at p658
+
+**Buyer:** a ministry, state education department or large district that wants its *own* branded coding environment — its curriculum, its language, its hardware, its data residency — and has been quoted a per-seat SaaS price for Code.org or a commercial equivalent. **The whole stack below is MIT, so the deliverable can be a closed, branded product.**
+
+```
+MakeCode core — microsoft/pxt (MIT, 1,105 B, `master`, 2,314★, pushed 2026-11-05)
+  │   blocks ⇄ JavaScript ⇄ Python on ONE AST; compiles IN-BROWSER; runs offline
+  ├── target: microsoft/pxt-microbit  (MIT, 1,143 B, `master`, 806★)   → micro:bit hardware
+  ├── target: microsoft/pxt-arcade    (MIT, 1,162 B, `master`, 550★)   → game-based CS curriculum
+  └── block layer underneath: RaspberryPiFoundation/blockly (Apache-2.0, `main`, 13,600★)
+        ★ note the OWNER: transferred from Google 10 Nov 2025 (T36). Cite the new address. ★
+  │
+  ├── hardware lab, no egress: openblockcc/openblock-desktop (MIT, `main`, 302★)
+  │     + microbit-foundation/micropython-microbit-v2 (MIT, `master`) for firmware
+  │
+  └── LMS boundary — process boundary = licence boundary (base architecture above)
+        Moodle (GPL-3.0) or Open edX (AGPL-3.0), STOCK, reached over LTI 1.3 via
+        Cvmcosta/ltijs (Apache-2.0, 11,361 B — see p646)
+        └── evidence out: yetanalytics/lrsql (Apache-2.0) over xAPI  → P17 / P21
+```
+
+**Weeks 1–3** stand up `pxt` with one target and reskin it — this is configuration, not a fork, and the demo that wins the engagement is the client's own logo on a block editor compiling their curriculum's first lesson in a browser with the network off. **Weeks 4–7** curriculum encoding: the blocks the client's syllabus actually needs, authored as a MakeCode extension, plus localisation. **Weeks 8–10** hardware path, if any — micro:bit is the cheapest credible option and its firmware is MIT. **Weeks 11–14** LTI integration into the existing LMS and xAPI telemetry, so the ministry can answer "did it work?" (**T19**'s outcome gap).
+
+🟢 **Licence position: MIT throughout the layer you modify**, Apache-2.0 one level down in Blockly. No copyleft anywhere in the build path, so a branded closed derivative is permitted. 🔴 **Do not reach for Code.org for this** even though it looks like the closer fit: its code is Apache-2.0 but its courseware is carved out and may not be embedded in another format, and its Minecraft assets need a separate agreement with Microsoft (**T39**). **Do not fork `scratch-gui`** — AGPL-3.0, and this is a hosted service (**T40**).
+
+⚠️ **Risks.** (1) `pxt` is Microsoft-governed and single-vendor; it is MIT, so a fork is always available, but roadmap influence is nil — name it. (2) **Curriculum content is the real cost**, not the editor; a proposal that prices the platform and not the lessons will be re-scoped in month two. (3) Blockly's stewardship changed hands a year ago and client SBOMs will still say `google/blockly` (**T36**) — budget an afternoon for alias reconciliation rather than discovering it in a security review.
+
+## P23 — The block-to-text bridge with an LLM tutor inside the workspace (secondary schools, coding academies, CS faculties: 6–8 weeks) 🟢 new at p658
+
+**Buyer:** anyone whose learners have outgrown blocks and stall on text. This is the highest-attrition moment in a coding curriculum and almost nothing addresses it — the tooling either keeps learners in blocks forever or drops them into a bare editor.
+
+```
+learner in a Blockly workspace
+  └── TutoriaLLM/TutoriaLLM (MIT, 1,068 B, `main`, 303★, pushed 2026-11-03)  🇯🇵 APAC
+        the ONLY permissive agent this base has found that watches the BLOCK
+        WORKSPACE and guides inside it, rather than chatting beside it
+        └── self-hosted; bring your own model via the LMS-side gateway
+  │
+  ├── progression step 1 — show the text:  leopard-js/leopard (MIT, 1,200 B, `master`, 168★)
+  │     converts an existing Scratch project to READABLE JavaScript
+  │     → the learner sees THEIR OWN project as code: the single best motivator available
+  ├── progression step 2 — write the text: aspizu/goboscript (MIT + BSD-3-Clause subtree, `main`, 577★)
+  │     a text language that COMPILES BACK to .sb3, so the project keeps running
+  │     → and it is now in git: diffable, reviewable, assignable
+  └── progression step 3 — run it fast:   forkphorus/forkphorus (MIT, 1,124 B, `master`, 150★)
+        MIT runtime, replaces AGPL-3.0 scratch-vm (T40)
+
+  evidence out → lrsql (Apache-2.0) over xAPI; grading → P19 (Artemis, MIT)
+```
+
+**Weeks 1–2** deploy `TutoriaLLM` self-hosted against the client's model endpoint and encode two lessons; measure where learners actually stall before changing anything. **Weeks 3–4** wire the `leopard` conversion as a *lesson step* — "here is your project as JavaScript" — not as an export button nobody clicks. **Weeks 5–6** `goboscript` for the first text-authored assignment, committed to git, so the CS faculty can review code rather than screenshots. **Weeks 7–8** optional: `forkphorus` as the runtime and xAPI telemetry on the block→text transition itself, which is the metric the client has never had.
+
+🟢 **Licence position: MIT throughout.** ⚠️ **`goboscript` carries a conjunctive grant** — MIT for the project plus **BSD-3-Clause** scoped to `tools/sb3_definitions.json` and `tools/sb3_schema.json` (p382 subtree class). Both are permissive and the BSD attribution obligation is narrow, but it must appear in the client's notices. ⚠️ **The second copyright line in that payload reads "Massachusetts Institute of Technology" — the institution, not the licence.** Do not let it be transcribed as "MIT" in an SBOM; it is the BSD-3-Clause grant on the Scratch schema files.
+
+⚠️ **Risk.** `TutoriaLLM` is 303 ★ with a small maintainer base and a Japanese-first community; it is MIT and self-hosted, so the downside is maintenance, not lock-in. If the client cannot accept that, the fallback is P4's tutoring stack plus a hand-built `leopard` step — more work, no agent in the workspace.
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
@@ -573,6 +629,8 @@ learner completes assessed work
 | Wants explainable mastery (STEM) | **P4** | BKT + pyKT; budget content authoring |
 | Uses AI already, controls nothing | **P5** | Sell governance first, then P1–P4 |
 | Pilot must prove an outcome | **P6** | Permissive end to end, retention measurable, no per-review inference cost. Attach it to any other pattern |
+| Ministry/district wants its OWN branded coding platform | **P22** | MIT end to end, offline-capable, closed derivative permitted |
+| Learners stall moving from blocks to text | **P23** | The one permissive agent that works inside the block workspace |
 | Connectivity cannot be assumed | **P7** | The only pattern with no copyleft component anywhere, and the only one that works offline |
 | Needs a full education ERP (finance, HR) | **P2 + OpenEduCat** | `openeducat/openeducat_erp` (LGPL-3.0, 905★) on Odoo. ⚠️ default branch is `19.0` and `20.0` exists — resolve it |
 | Already on Moodle and wants a **real agent**, not just REST glue | **P8** | Names the bridge P2 left as a placeholder. `G36maid/moodle-mcp` (MIT, 27★) — adopt and harden; **price the hardening, it is not P1** |

@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p658) — 🟢 **EIGHTEEN FOUNDATION ROWS FOR A LAYER THAT HAD ZERO, AND A NON-CANONICAL APACHE PAYLOAD SHARED BYTE-FOR-BYTE BY TWO INDEPENDENT PROJECTS**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref`; licence payload byte-read from `raw.githubusercontent.com` on the resolved branch; metadata via `gh api search/repositories`. 21 addresses probed, **21 PUBLIC-LIVE**, controls behaved. See `agents/trending.md` p658 for the full channel table, the transfer oracle and the predictor result.
+
+### 🟢 `repos/foundations.md` 52 → 70 rows
+
+| Layer | Rows added |
+|---|---|
+| Block substrate | `RaspberryPiFoundation/blockly` (Apache-2.0, 13,600★), `blockly-samples` (Apache-2.0, 974★), `scratchfoundation/scratch-blocks` (Apache-2.0 variant, 2,769★) |
+| MakeCode (MIT end to end) | `microsoft/pxt` (2,314★), `pxt-microbit` (806★), `pxt-arcade` (550★) |
+| CS-education delivery | `code-dot-org/code-dot-org` (Apache-2.0 + carve-out, 902★) |
+| Hardware / offline | `carlosperate/ardublockly` (489★), `openblockcc/openblock-desktop` (302★), `microbit-foundation/micropython-microbit-v2` (59★) |
+| Block → text migration | `aspizu/goboscript` (577★), `leopard-js/leopard` (168★), `ronilan/BlockLike` (252★), `forkphorus/forkphorus` (150★) |
+| Curriculum / courseware | `mytechnotalent/Python-For-Kids` (Apache-2.0, 801★), `GeoGuess/GeoGuess` (594★) |
+| Copyleft, flagged | `scratchfoundation/scratch-gui` (AGPL-3.0, 4,807★), `scratch-vm` (AGPL-3.0, 1,306★) |
+
+`verticals/solutions.md` 31 → 36 rows (Code.org, MakeCode, Scratch, micro:bit, `Alanosy/exam-platform`). `compose/patterns.md` gains **P22** (a ministry/district branded coding platform, MIT end to end, 10–14 weeks) and **P23** (the block-to-text bridge with an LLM tutor in the workspace, 6–8 weeks). `intel/trends.md` gains **T36–T40**.
+
+### 🔴 The payload finding: a corrupted Apache-2.0 with a bounded copy lineage
+
+`scratchfoundation/scratch-blocks` and `carlosperate/ardublockly` ship **byte-identical** grant payloads — same `md5 f15febb3cae5df43c3fdf761185a95b5`, both **10,174 B** — and the text is **not** canonical Apache-2.0:
+
+1. Line 3 reads **`Version 2.0, January 2011`**. Canonical is **January 2004**.
+2. The entire **APPENDIX** ("How to apply the Apache License to your work", 25 lines) is **truncated**.
+
+Operative `TERMS AND CONDITIONS`, lines 1–177, are **byte-identical to canonical**, so the grant **is** Apache-2.0 and the appendix is instructional rather than operative. But a byte-equality or template-identity test keyed on `11,357 B` scores **both** `UNKNOWN-TEMPLATE` (p312's class). Two independent downstream Blockly derivatives carrying the same corrupted text is a **copy lineage**, and it is **bounded**: `openblockcc/openblock-desktop`, `ailyProject/aily-blockly` and `microsoft/pxt` all differ.
+
+### 🟢 The canonical Apache constant, and the ambiguity in its +1
+
+`blockly-samples` reads **exactly 11,357 B** and `mytechnotalent/Python-For-Kids` likewise — two further independent reproductions of p646's constant. `RaspberryPiFoundation/blockly` reads **11,358 B**, and the diff against `blockly-samples` is **one byte: a trailing newline** (`blockly-samples` ends `\ No newline at end of file`).
+
+🔴 **This makes 11,358 B ambiguous, and the shelf should stop treating it as diagnostic.** p647-F recorded `themakerrobot/edge-lab` at 11,358 with "one *prepended* blank line"; `agents/top.md` carries `haolpku/Omni-Edu` at 11,358 as "stock, unmodified". **Two distinct single-byte deviations — a leading blank line and a trailing newline — land on the same count.** The byte count cannot discriminate them; only the diff can. This is p647-E's final-newline lesson arriving on the Apache family, where p647-E found it on MIT.
+
+### 🔴 Conjunctive and subtree grants, two specimens
+
+- **`code-dot-org/code-dot-org`** (`12,041 B`, `staging`): Apache-2.0 for "all source codes and assets", **except** Code.org's artwork, graphics, sounds, lectures, videos, logos, characters and fonts, enumerated in a **4,271 B / 77-line `NOTICE`**, which may not be used, distributed or accessed outside Code.org's own properties "**without modification or embedding in another format**". The **Minecraft** assets inside it are Microsoft's and need a separate agreement. *The engine is free; the lessons are not* (**T39**).
+- **`aspizu/goboscript`** (`4,233 B`, `main`): MIT for the project **plus BSD-3-Clause scoped to `tools/sb3_definitions.json` and `tools/sb3_schema.json`** — p382's subtree class, visible only by reading to line 31. ⚠️ **That second copyright reads "Massachusetts Institute of Technology" — the institution, not the licence.** An SBOM that transcribes it as "MIT" loses the BSD attribution obligation.
+
+### 🔵 Negative results recorded rather than left silent
+
+- **Caliper is measured, not absent.** `topic:caliper-analytics` — never swept before — returns **exactly two** addresses: `lsloan/Repilac` (1★, pushed **2016-08-12**) and `lsloan/udp-notebooks` (0★, pushed **2020-11-19**), **both grant-nil**, both dormant six to ten years. xAPI has won outright; the gap now has a denominator.
+- **Permissive proctoring supply: p657's narrowed claim HOLDS.** `topic:proctoring` + `topic:online-exam` + `topic:exam-proctoring` (131 repositories) yield one live high-star permissive asset, `Alanosy/exam-platform` (MIT, 887★, pushed 2026-11-04) — and it is exam **delivery**, not integrity. The held `vardanagarwal/Proctoring-AI` (MIT, 633★) has been dormant since **2024-12-10**; every other permissive row is ≤48★ student work. Assessment **integrity** still has no permissive production supply.
+- **No LATAM-origin address** among the 21 — fourth consecutive pass to measure it.
+- **Accessibility remediation: the keyword channel cannot reach the gap.** `topic:wcag` and `topic:captioning` are homonym-polluted (colour libraries, a CAPTCHA widget, image-captioning ML). On-domain permissive results are UI component libraries (`incluud/accessible-astro-*`, `ng-primitives`, `cvs-health/ios-swiftui-accessibility-techniques`) and `alphagov/guide-to-wcag` — none remediates existing course content. `ucfopen/UDOIT` (GPL-3.0) remains the only production tool. **A future pass must query by capability, not by tag.**
+
 ## 🆕 2026-11-05 (p657) — 🔴 **A SHELVED TREND WAS WRONG, NOT MERELY INCOMPLETE: T20 CALLED AGENTIC ASSESSMENT A RESEARCH ARTEFACT WHILE AN MIT PLATFORM AT 826 ★ WAS SHIPPING THREE AI SUBSYSTEMS**
 
 **Verification channels:** existence and **real default branch** via `git ls-remote --symref`; licence by reading the grant payload byte-for-byte from `raw.githubusercontent.com` on that resolved branch; stars, forks, `pushed_at`, `archived`, `open_issues_count` from `gh api search/repositories` with many `repo:` qualifiers in one query; versions via `git ls-remote --tags` **numerically sorted**. 🔴 `curl github.com` 403, `gh api repos/{owner}/{repo}` 403, and 🆕 **`gh api repos/.../releases/latest` 403** — see `agents/trending.md` p657 for the full channel table and the `NOASSERTION` correction.

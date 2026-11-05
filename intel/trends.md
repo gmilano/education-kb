@@ -407,3 +407,65 @@ Before this pass, `grep` for `pronunciation` and `speech assessment` across all 
 - 🔴 **Still no first-hand reading of the three AI-education statutes, unchanged at p653**, and `huggingface.co` still does not resolve, so OmniEdu's weight licence remains unread for a second pass. Both are cheap to lift and neither was lifted.
 - 🟡 **The four mandated regional legs returned almost nothing new at p653, and that is the honest result rather than a gap.** North America, EMEA, APAC and LATAM were each searched; the great majority of what came back — the EU Digital Omnibus deferral to 2 December 2027, Korea's AI Basic Act, Vietnam's education transition date, the UNESCO IESALC 87%/26% denominators, the Universidad de los Andes count of 716 instruments — **this base already held and already sourced.** Four genuinely new readings are recorded in `intel/market.md` under p653. Reproduction is not waste: it is the only evidence that the regional picture is stable rather than stale.
 - 🔴 **Five hosts did not resolve in this session at p652** — `www.oecd.org`, `www.unesco.org`, `www.iesalc.unesco.org`, `www.dlapiper.com`, `huggingface.co` — so the OECD recommendations, the Canadian strategy detail and OmniEdu's weight licence rest on secondary sources or are unresolved. The IESALC LATAM figures were independently re-derived from search and reproduce. This is a network-policy ceiling on verification, not a research gap, and it is cheap to lift.
+
+## T36 — The substrate under every school coding tool changed hands, and almost nobody re-pointed at it 🟢 new at p658
+
+**Blockly — the drag-and-drop block library underneath Scratch Blocks, Microsoft MakeCode, Code.org, ardublockly and openblock — moved from Google to the Raspberry Pi Foundation on 10 November 2025.** Google announced it on its Open Source blog in late October 2025; the Foundation published its own notice on 28 October 2025; the library stays Apache-2.0, and Google funded the handover with a grant.
+
+Verified at first hand rather than taken from the announcement: `git ls-remote` returns **the same HEAD SHA** (`a4dbe9f`) for `google/blockly` and `RaspberryPiFoundation/blockly`, and the same again (`8c1a305`) for the `blockly-samples` pair. Identical SHAs on both pairs means these are **redirects of one repository**, not forks — the canonical address is now `RaspberryPiFoundation/*`.
+
+Three consequences, in descending order of how much they cost:
+
+1. 🔴 **A star-ranked census structurally cannot see Blockly.** `blockly in:name stars:>3000` returns `RaspberryPiFoundation/blockly` at **13,600 ★** and does **not** return `google/blockly` at all, because the stars travelled with the transfer and the old address is only a redirect. This base held **zero** Blockly rows before p658 while running star-floor sweeps for hundreds of passes. That is p647-C's finding — *the sort key is the filter* — arriving through a second mechanism: **a transfer silently removes an address from every ranked query that names the old owner.**
+2. **The governance fact is procurement-grade.** The library under the world's school coding tools is now stewarded by an **education charity in the UK (EMEA)** rather than a US advertising company. For a public-sector or ministry engagement that is an argument, not trivia.
+3. ⚠️ **The ecosystem has not re-pointed.** `TutoriaLLM`, shelved this pass and pushed 2026-11-03, still badges `github.com/google/blockly` in its README. Expect client codebases, docs and SBOMs to name the old owner for years; treat `google/blockly` as an **alias**, not a different project.
+
+**Confidence: high** — transfer verified by SHA identity on two independent repository pairs, date corroborated by Google's and the Foundation's own announcements.
+
+## T37 — The largest blind spot this base has ever had was not a hard layer, it was an unswept one: learn-to-code 🟢 new at p658
+
+Before p658 the shelves held 27 agents and 52 foundations covering tutoring, autograding, psychometrics, spoken assessment, credentialing, LMS and SIS — and **not one row** for block-based programming, physical computing or CS-education delivery. The words `makecode`, `pxt` and `micro:bit` appeared **nowhere** in the repository, not even in `archive/`; `blockly` appeared only inside archived prose describing another project's feature list.
+
+That is the category with the **widest installed base in K-12 worldwide** — Scratch, MakeCode, micro:bit and Code.org are what "computing" means in most school systems. Eighteen foundation rows and five platform rows now cover it.
+
+🔵 **Why it stayed invisible is the transferable lesson, and it is not "nobody looked".** Three mechanisms compounded:
+- **T36's redirect** removed Blockly from every star-ranked query naming Google.
+- **Topic homonymy**, p646-H's finding, at four new heads at once: `topic:oer` is dominated by ASN.1 **O**ctet **E**ncoding **R**ules (`eerimoq/asn1tools`, 338 ★) and a RISC-V core; `topic:scratch` by "from scratch" tutorials (`geektutu/7days-golang`, **17,036 ★**); `topic:captioning` by image-captioning ML; `topic:wcag` by colour-contrast libraries. A star-ranked read of these four heads publishes a Go tutorial, a CAPTCHA widget and a Swift colour library as education's leading assets.
+- **Vintage**: this layer predates the `main` default. **15 of the 21 addresses verified this pass (71%) sit off `main`** — `develop` ×3, `master` ×11, `staging` ×1 — against p645-B's 34.0% population baseline. p646-J said branch name tracks project vintage; here it tracks it at **double** the base rate, because this is the oldest layer in the KB.
+
+**Confidence: high** (the absence was measured by grep over the whole repository including `archive/`; the 21 addresses were verified individually).
+
+## T38 — The index's licence field is unsafe in the permissive direction, and this pass has the worst specimen yet 🟢 new at p658
+
+p657 established that `NOASSERTION` is not a licence finding. p658 establishes the sharper and more dangerous half: **a licence field that names a permissive family can also be wrong.**
+
+🔴 **`TurboWarp/extensions` (194 ★, pushed 2026-11-05) is reported by `gh api search/repositories` as plain `MIT`.** It has **no root grant file at all** — seven filenames probed, all 404. Its `package.json` declares:
+
+```
+"license": "MIT AND LGPL-3.0-only AND GPL-3.0-only AND CC-BY-SA-4.0 AND CC-BY-4.0
+            AND CC-BY-2.5 AND CC0-1.0 AND Apache-2.0 AND MPL-2.0 AND BSD-3-Clause AND ISC"
+```
+
+Eleven families joined by **AND**, two of them GPL. A studio that trusted the index's "MIT" would ship GPL-3.0 code inside a proprietary deliverable. **This is the first address this base has found where the index's error runs toward permissive**; every prior case (`NOASSERTION`, p646's `ltijs`) erred toward restrictive, which is the safe direction to be wrong in.
+
+The pass's other two index disagreements both resolved the *other* way, which is why the asymmetry matters: `microsoft/pxt-microbit` (`NOASSERTION` → **MIT**, canonical body behind a two-line bespoke header) and `code-dot-org/code-dot-org` (`NOASSERTION` → **Apache-2.0 + carve-out**). **Rule: the index's licence field is a hint in both directions and evidence in neither.**
+
+**Confidence: high** (all three read byte-for-byte on the resolved default branch).
+
+## T39 — The sector's standard licence shape is permissive code wrapped around unlicensed courseware 🟢 new at p658
+
+`code-dot-org/code-dot-org` states it in one payload: Apache-2.0 for "all source codes and assets", **except** Code.org's artwork, graphics, sounds, lectures, videos, logos, characters and fonts, enumerated in a 4,271 B / 77-line `NOTICE`, which "may not be used or distributed or accessed in any manner other than directly via Code.org's own web site, mobile applications, or social media channels … **without modification or embedding in another format**". The Minecraft assets inside it are **Microsoft's**, and any distribution outside Code.org's own site needs a separate agreement with Microsoft.
+
+This is the same shape p657 found at the OER layer and p656 at the platform layer, and it is the shape that decides education engagements: **the engine is free, the lesson content is not.** A proposal that says "we will build on Code.org" and means "we will ship their courses" is a licence incident waiting to be discovered by the client's counsel.
+
+**Confidence: high** (licence and `NOTICE` both read in full).
+
+## T40 — Scratch is two licences, and which one you touch decides the business model 🟢 new at p658
+
+Not one project: `scratch-gui` (4,807 ★) and `scratch-vm` (1,306 ★) are **AGPL-3.0**; `scratch-blocks` (2,769 ★, pushed 2026-11-05) is **Apache-2.0**. Hosting a modified Scratch editor as a service triggers network copyleft on the hosted work; building on the blocks library does not.
+
+Two permissive escape routes exist and both were verified this pass: build the editor on **`scratch-blocks`**, and execute projects with **MIT-licensed `forkphorus`** (150 ★) instead of the AGPL `scratch-vm`. `goboscript` (MIT, 577 ★) compiles text to `.sb3`, and `leopard` (MIT, 168 ★) converts Scratch projects to readable JavaScript — the block→text migration path a curriculum needs after year two.
+
+🔴 **A payload finding sits underneath this trend.** `scratch-blocks` and `ardublockly` ship **byte-identical** Apache-2.0 payloads (`md5 f15febb3…`, 10,174 B) that are **not canonical**: the header is misdated **"Version 2.0, January 2011"** (canonical: January 2004) and the entire APPENDIX is truncated. Operative terms, lines 1–177, are byte-identical to canonical, so **the grant is Apache-2.0** — but a byte-equality or template-identity test keyed on 11,357 B scores both `UNKNOWN-TEMPLATE`. Two independent downstream Blockly derivatives carrying the same corrupted text is a **copy lineage**, and it is bounded: `openblock-desktop`, `aily-blockly` and `pxt` all differ.
+
+**Confidence: high** (diffed line by line against a canonical payload read the same hour).
