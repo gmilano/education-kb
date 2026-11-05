@@ -214,6 +214,18 @@ These are not new findings — they are errors in data this knowledge base was a
 
 Recorded so a later pass does not re-spend the search — and so absence is not mistaken for a gap.
 
+🔴 **p662 added no row to this shelf, and the reason is the measurement rather than a judgement.** The four supply-side legs returned **`67` facts, `64` already at HEAD**, and every in-scope repository they named was already filed: `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub`, `learningequality/kolibri`, `sakaiproject/sakai`, `OpenOLAT/OpenOLAT`, Open edX, Moodle, `OpenEduCat`, `GibbonEdu/core`, `RosarioSIS`, FenixEdu. **`29` stands.**
+
+🟡 **Three addresses the legs surfaced are held in the logs and the ledger, are MIT, and are still not filed — because none is education-sector software.** All three were verified first-hand at p662 anyway, so the decision rests on scope and not on doubt:
+
+| Repo | Grant (byte-read `2026-11-05`) | ★ | Default branch | Why not filed |
+|---|---|---|---|---|
+| [`karpathy/nanochat`](https://github.com/karpathy/nanochat) | 🟢 **MIT** — `LICENSE`, `1,072 B`, `sha256₁₂ 42bb09f339a8` | **60,282** | **`master`** | An LLM-training codebase written to be read. Its audience is engineers learning to build models, not an education provider delivering instruction. 🔵 The highest-starred MIT asset any education leg has ever returned, and still out of scope — which is the point of writing it down |
+| [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | 🟢 **MIT** — `LICENSE`, `1,091 B`, `sha256₁₂ 31679eb9ae97` | 5 | `main` | A link list. Useful as a search surface for a later pass, not software a client runs |
+| [`ishandutta2007/Awesome-AI-Education-Training`](https://github.com/ishandutta2007/Awesome-AI-Education-Training) | 🟢 **MIT** — `LICENSE`, `1,068 B`, `sha256₁₂ 68c2844b7dc2` | **0** | `main` | A link list, and `0★`. Fails the scope test and the p661 filler rule both |
+
+🔵 **This is the `p661` filler rule applied to the *scope* axis rather than the star axis.** An MIT grant, a real repository and `60,282★` are together not sufficient: the row has to be software an education client would run. Named here so the next pass neither re-discovers them nor mistakes their absence for a gap.
+
 | Repo | Licence | Stars | Why not filed |
 |---|---|---|---|
 | [wwrwbs/AI_AWE](https://github.com/wwrwbs/AI_AWE) (**ArguLens**) | **Apache-2.0 — notice form, 1,865 B** | **2** | 🟡 **The first permissively-licensed, education-specific essay scorer *and* feedback generator this base has found in four passes of looking — and it is a paper drop, not a project.** arXiv:2608.17356. Decomposes automated essay scoring into three separable parts: a discourse-move classifier, a grade-independent LightGBM scorer over 31 linguistic and discourse features, and a label-aware feedback generator; LoRA adapters Apache-2.0, Qwen2.5-7B-Instruct base obtained separately. **2 commits and 1 fork** — this is the artefact accompanying a publication. Not filed as an agent because there is nothing to adopt yet; recorded because it is the nearest thing to the gap, and because its grant file is instructive in both directions (see the defect note). ⚠ The Persuade 2.0 training corpus is academic-use-only and not redistributed, so a commercial retrain needs its own data. |

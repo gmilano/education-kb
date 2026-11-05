@@ -4,6 +4,130 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p662) — 🔴 **THE COLUMN THIS BASE READS TO ANSWER "ALREADY HELD?" IS WRONG IN `230` OF ITS `259` CLAIMS. `142` NAME A PAGE THAT DOES NOT CARRY THE ADDRESS AND `100` OF THOSE ARE REACHABLE NOWHERE IN THE LIVE TREE. 🔧 THE RATCHET'S HEADLINE `filed: 258` WAS RIGHT-ISH ONLY BY CANCELLATION: `259 − 142 + 59 = 176`, THE TRUE COUNT. MEASURED, CAUSED, REPAIRED. 🔴 THE MANDATED LEGS NIL AN EIGHTEENTH TIME ON `64/67`, AND p661's NONSENSE CONTROL IS NOW SELF-POISONED.**
+
+**Verification channels, re-tested before use at p662:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars/licence/push date — 🟢 **live this pass, including on `learnhouse/learnhouse` and `OpenOLAT/OpenOLAT`**; repository **HTML pages** — 🔴 **`403`**, unchanged since p659, so every star figure this pass is **single-channel**; `img.shields.io` — 🔴 **`000`, connection refused**; `gh api repos/{owner}/{repo}` — 🔴 **`403`** for any repository not attached to this session; `services.google.com` — 🔴 **`connect_rejected` by the session's egress proxy, new this pass** (`662-I`).
+
+| `p662` registered | Verdict |
+|---|---|
+| 🔴 `662-A` — **`evidence/address-ledger.tsv`'s `filed_on` column — the one the "already held?" test reads — made `259` claims. `29` were exactly right. `88` named at least one page that does not carry the address. `142` named no correct page at all, and `100` of those name an address the live tree carries NOWHERE. Separately `59` addresses that ARE on a curated page carried `filed_on = "-"`** | 🔴 **MEASURED — `230/259` INACCURATE** |
+| 🔧 `662-B` — **`ingest/promotion-ratchet.json` reported `filed: 258`. The true count of distinct ledger addresses present in the curated tree is `176`. `258` agreed with reality by CANCELLATION — `259 − 142 + 59 = 176` exactly — so the base's own progress metric could not have detected either error, because the two errors are of opposite sign and nearly equal size** | 🔧 **HEADLINE NUMBER CORRECT FOR THE WRONG REASON — LOWERED TO `176`** |
+| 🔴 `662-C` — **the cause is this base's own rewrites, and it is measurable.** Last-carrier against `archive/`: **`85`** of the `142` were last carried by `archive/2026-10-31-p568-pre-rewrite` and **`52`** by `archive/2026-11-04-p650-pre-rewrite`. A full-page rewrite de-files addresses and **nothing reconciles the ledger afterwards** | 🔴 **CAUSE NAMED — REWRITE-INDUCED DE-FILING** |
+| 🔴 `662-D` — **`7` ledger rows named an APPEND-ONLY LOG in `filed_on`** (`repos/trending.md` ×5, `agents/trending.md` ×2), which by the ledger's own definition — `CURATED` vs `HISTORY` in `ingest/address-ledger.py` — can never constitute filing | 🔴 **CATEGORY ERROR — CLEARED** |
+| 🔧 `662-E` — `filed_on` rewritten from the tree: **`288` rows changed** — `138` cleared, `88` narrowed or re-pointed, `62` set from `-` — plus `1` licence verdict corrected (`CycloneDX/cyclonedx-cli`, `unstated → Apache-2.0`, byte-read this pass). All in `evidence/filed-on-reconciliation.2026-11-05-p662.tsv`. Re-run reports `0` stale, `0` moved, `0` unindexed, `183` claims against `183` tree addresses — `183` and not `176` because p662's own prose filed `7` | 🔧 **REPAIRED AND RE-MEASURED TO ZERO** |
+| 🔴 `662-F` — **p661's nonsense control is self-poisoning and is now permanently burned.** `Zorblaxian Ministry of Pedagogy`, `FSRS-9 quantum scheduler` and `Patagonian AI Education Act 2031` all return **HELD** at p662 — because p661 wrote them into `agents/trending.md` as its own control record. A freshly minted control (`Helvetic Tutor Mandate 2029`) returned **NOVEL** | 🔴 **INSTRUMENT CONTAMINATED BY ITS OWN WRITE-UP** |
+| 🔴 `662-G` — **a live 2026 LMS comparison states `LearnHouse` is MIT. It is `AGPL-3.0`.** 🟡 **The verdict is HELD, not new** — these logs carry it at `2,441★` — so what p662 adds is the public contradiction, a first-hand re-read at the **resolved** default ref (`dev`, not `main`), and the digest | 🔴 **THIRD-PARTY LICENCE CLAIM REFUTED — BASE'S VERDICT HELD** |
+| 🟢 `662-H` — **`OpenOLAT/OpenOLAT`'s grant re-read from a DIFFERENT canonical source, and the shelf reproduces exactly.** 🔧 p662 drafted this as a defect and it is not one: both pages already hold the nine-sections-unmodified analysis, and `659-F`/`660-M` already hold the `NOASSERTION`-on-appended-grants mechanism. The only delta is **one byte** — `−375 B` on the shelf against `−376 B` here — and it is the *canonical copy*, not the repository | 🟢 **SHELF REPRODUCED INDEPENDENTLY — NO DEFECT** |
+| 🔴 `662-I` — `make hooks` and `ingest/address-ledger.py` denied a **twelfth** consecutive pass (`[Code from External]`). Instruments re-implemented and executed out-of-tree. **Two are landed for the next pass that can execute in-tree code:** `ingest/p662-filed-on-recon.py` (the `filed_on` reconciliation) and `ingest/p662-contract-gate.py` (the frontmatter / closed-region-vocabulary / header-shaped-row / shelf-count checks that twelve passes have each been doing by hand with `grep` and `awk`). Both run green at this commit | 🔴 **BLOCKED — TWELFTH PASS, WORKAROUND LANDED** |
+| 🟡 `662-J` — the mandated legs, with a denominator: **`67` facts tested, `64` already held, `3` candidate-novel, `0` adoptable as a quotable figure.** Eighteenth consecutive near-nil | 🟡 **NIL — CONTROL RE-MINTED** |
+
+### 🔴 `662-A` — what the "already held?" test was actually reading
+
+`evidence/address-ledger.tsv` exists (Gap `529-A`) so that a pass stops rediscovering what the base owns. `filed_on` is its load-bearing column: `-` means *owned but unshelved* and a page name means *a reader can reach it there*. p661 interrogated the `-` side and found `whisper` indexed and unshelved for `655` passes. p662 interrogated the other side, using the ledger's **own** definition of filed — a `github.com/owner/repo` address occurring in one of the six `CURATED` files — re-implemented out-of-tree because the in-tree instrument is denied.
+
+```
+ledger_rows                                   3227
+filed_on claims                                259
+  exactly correct                               29
+  over-broad (≥1 named page wrong)              88
+  wholly false (no named page carries it)      142
+     of which reachable on NO curated page     142
+     of which reachable NOWHERE in live tree   100
+addresses on a curated page with filed_on "-"   59
+distinct addresses actually in curated tree    176
+```
+
+🔵 **The arithmetic is the finding.** `259 − 142 + 59 = 176`. The ratchet's `filed: 258` sat one away from the truth while **`230` of its `259` constituent claims were inaccurate**, because the over-count and the under-count are of opposite sign and nearly equal size. A metric that is correct by cancellation cannot be used as a control, and this one has been reported as progress since p538.
+
+🟢 **Instrument validated before use.** `6/6` hand controls reproduced by `grep` — three `STALE` specimens (`1EdTech/openbadges-validator-core`, `UniTime/unitime`, `anthropics/k12-teacher-skills`) return `0` curated hits, three `UNINDEXED` specimens (`autolab/Autolab` `7`, `GibbonEdu/core` `2`, `17zuoye/pyirt` `5`) return hits. The substring test used is **more permissive** than the ledger's own `github.com/owner/repo` regex, so every row called broken is broken under the ledger's stricter definition too.
+
+### 🔴 `662-C` — rewrites de-file, and nothing reconciles
+
+Each of the `142` wholly-false claims was traced to the most recent `archive/` snapshot that still carried it:
+
+| Last snapshot carrying the address | Count |
+|---|---|
+| `archive/2026-10-31-p568-pre-rewrite` | **85** |
+| `archive/2026-11-04-p650-pre-rewrite` | **52** |
+| `archive/2026-10-27-p490-pre-rewrite` | 1 |
+| `archive/2026-11-01-p585-pre-consolidation` | 1 |
+| 🔴 present in **no** snapshot | 3 — `alexfdez1010/exam-generator`, `dbosk/examgen`, `ZelinZhou-THU/lecture-notes-creator` |
+
+🔵 **So this is not drift, it is a missing step in a procedure this base performs deliberately.** p568 and p650 both rewrote all six curated pages and both archived the previous version first — the discipline is there. What neither did, and what no pass has ever done, is reconcile `filed_on` against the page that replaced it. `85` claims have been false for `94` passes.
+
+🟡 **`42` of the `142` are not lost to a reader** — they are reachable on `intel/open-gaps.md` (`40`) or `intel/measured-unusable.md` (`4`), which are reader-facing pages outside the ledger's `CURATED` list. The `filed_on` value is still wrong for them, and the fix is a scope question the next pass should settle: either those two pages join `CURATED`, or `filed_on` gains a third state for *demoted, still readable*. **`100` are reachable nowhere in the live tree at all.**
+
+### 🔴 `662-F` — the control that cannot be reused
+
+p661 validated its leg scoring with three invented facts and reported `3/3 NOVEL`. All three now return **HELD**:
+
+```
+Zorblaxian Ministry of Pedagogy      agents/trending.md:1   HELD
+FSRS-9 quantum scheduler             agents/trending.md:1   HELD
+Patagonian AI Education Act 2031     agents/trending.md:1   HELD
+Helvetic Tutor Mandate 2029          (minted at p662)       NOVEL
+```
+
+🔵 **The mechanism is the append-only rule working exactly as designed.** A pass writes its control into its own log entry; the next pass's HELD test reads the logs; the control is now held. It is harmless this once because the scoring run that used it is already recorded — but a pass that reused p661's set would have measured `3/3 HELD` and concluded its instrument was broken. **Standing rule from p662: controls are minted fresh each pass and the burned set is listed here so no pass reuses it.** Burned: `Zorblaxian Ministry of Pedagogy`, `FSRS-9 quantum scheduler`, `Patagonian AI Education Act 2031`, and now `Helvetic Tutor Mandate 2029`.
+
+### 🔴 `662-G` — the base's `learnhouse` verdict is right, and a current comparison table says the opposite
+
+The global verticals leg returned an open-source-LMS comparison asserting *"MIT/Apache (LearnHouse, OpenOlat) offer maximum flexibility"*.
+
+🟡 **This base already knew.** `learnhouse/learnhouse` is carried in these logs as 🔴 `AGPL-3.0` at `2,441★`, and `evidence/address-ledger.tsv` has held the same verdict since `p11`. **The licence finding is not new and is not claimed as new.** What p662 adds is the public contradiction, and a first-hand re-read:
+
+| Channel | Reading `2026-11-05` |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves; real default branch is **`dev`**, not `main` — the detail a licence check done against `/main/` by habit would miss |
+| grant payload at the **resolved** default ref | 🔴 `LICENSE`, **`34,523 B`**, `sha256₁₂ 8486a10c4393`, first line *"GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007"* |
+| same payload at `main` | identical bytes, identical digest — the claim does not survive on either ref |
+| `gh api search/repositories` | 🔴 `spdx = AGPL-3.0` · **`2,448★`** (`+7` since this base last measured) · pushed **`2026-11-05`** |
+
+🔵 **This is the error direction that costs money.** `AGPL-3.0` on an LMS means the network-use clause reaches a hosted deployment; a studio that read that table and shipped a client-branded fork has a disclosure obligation it did not price. Filed on `intel/measured-unusable.md` with the refutation, **not** promoted to `verticals/solutions.md`.
+
+🔵 **The generalisable shape is new even though the licence is not:** this base's verification discipline is aimed at its own rows, and `662-G` is the first time a leg has returned a **currently published, confidently worded third-party licence table** that contradicts a held verdict. The value of the legs here is adversarial, exactly as `661-F` found for TEQSA — not supply, but a named false claim in circulation that a client or a colleague may arrive carrying.
+
+### 🟢 `662-H` — the OpenOLAT grant, re-read from a different canonical source, reproduces — and p662 nearly shipped it as a defect
+
+`OpenOLAT/OpenOLAT` is on `verticals/solutions.md` and `repos/foundations.md` as **Apache-2.0 (10,982 B)**. p662 diffed that payload against the canonical text served by `apache.org/licenses/LICENSE-2.0.txt`:
+
+- 🟢 **Sections 1–9, normalised, are byte-identical to canonical Apache-2.0.** No divergence before *"…of your accepting any such warranty or additional liability."*
+- 🟢 The `END OF TERMS AND CONDITIONS` line and the **`APPENDIX: How to apply the Apache License to your work`** are absent; two *"Additional license statement"* blocks are appended, naming the OLAT Zentrum at the University of Zurich and frentix GmbH. **Provenance, granting and restricting nothing.**
+- 🟢 `gh api search/repositories` returns `spdx = NOASSERTION`; `git ls-remote --symref` resolves `master`; **`449★`**, pushed **`2026-11-05`**.
+
+🔧 **Every one of those findings is already on the shelf.** `repos/foundations.md:127` and `verticals/solutions.md:63` both state *"nine substantive sections all present and unmodified … the `APPENDIX` … is replaced by two provenance statements"*, and `659-F` and `660-M` already hold the mechanism by which appended text flips `search/repositories` to `NOASSERTION`. **p662 drafted this as `🟡 SHELF FORMALLY INCOMPLETE` and that draft was wrong.** The shelf is complete; it is now also independently reproduced, from a canonical source the original read did not use.
+
+🟡 **The one real delta is a single byte, and it is in the canonical copy rather than in OpenOLAT.** The shelf says `−375 B`; this pass measured `−376 B`.
+
+| Canonical Apache-2.0 source | Bytes | Implied delta against OpenOLAT's `10,982 B` |
+|---|---|---|
+| `raw.githubusercontent.com/apache/.github/main/LICENSE` | **`11,357`** | `−375` — **what the shelf says** |
+| `apache.org/licenses/LICENSE-2.0.txt` | **`11,358`** | `−376` — what p662 measured |
+
+🔵 **Recorded so no future pass "corrects" a correct cell.** Two canonical Apache-2.0 texts circulate, one byte apart on a trailing newline. A byte-count delta quoted against an unnamed canonical is ambiguous by exactly `1 B`, and this base quotes byte counts everywhere. **Standing rule from p662: a stated `−N B` delta names which canonical copy it was taken against.** The shelf cells are annotated rather than changed, because `−375 B` is right for the copy they used.
+
+🔴 **The mechanism that produced the near-miss is `661-C`, reproduced inside p662's own drafting.** Both `662-G` and `662-H` were drafted as defects after checking the **shelves and the ledger** for the address — which found `learnhouse` unshelved and `OpenOLAT` carrying a bare `Apache-2.0` cell in its summary column — and **not** the append-only logs, where the full grant analysis and the `AGPL-3.0` verdict both sit. That is precisely the corpus gap `661-C` registered one pass ago. It was caught here only because `661-C` had named it. 🔵 **The lesson is operational: the logs are not an archive, they are the base's memory, and any claim of novelty has to be scored against them before it is written, not after.**
+
+### 🟡 `662-J` — the mandated legs, eighteenth near-nil
+
+All eight mandated searches were run — four global (`agents`, `trending`, `verticals`, `trends`) and one each for North America, EMEA, APAC and LATAM. **`67` facts tested against HEAD, `64` already held.** Full scoring in `evidence/mandated-legs.2026-11-05-p662.tsv`.
+
+🔴 **Everything regulatory reproduced**, including the set this base has held for many passes: `134` bills across `31` states, Maryland SB 720, New York A 9190, the K-12 AI Literacy and Readiness Act, the Parents & Kids Safe AI Act, Gallup's `60%`, Child Trends, Idaho/Oklahoma/Virginia, the NYC traffic-light guidance, DC OSSE, SREB; Regulation (EU) 2026/1744's `2 December 2027` and `2 August 2028`, the Digital Omnibus, UK DfE January 2026, Ofqual, KHDA, Europe at `$2.64B`, Finland/Estonia/Netherlands; South Korea's AI Basic Act, Vietnam's Law on AI and its `18`-month education transition, APAC at `$2.85B` and `35.3%`, Ipsos, DPDP, Merdeka Belajar, MATATAG; the Universidad de los Andes `716` instruments across `23` countries, the UNESCO LAC Observatory, Ceibal, CENIA, ProFuturo, Tecnológico de Monterrey, Mexico's 2026 reforms, Colombia/Peru/Paraguay.
+
+🟢 **The APAC leg did NOT reproduce the TEQSA institutional-action-plan claim** this pass, after three consecutive reproductions (p652, p658, p661). One absence is not a retraction of the `661-F` signature; the operating rule stands.
+
+The three candidate-novel items, none adopted as a quotable figure:
+
+- 🔴 **A Google *"AI in Education"* report dated **November 2026** at `services.google.com/fh/files/misc/ai_in_education_report_nov26.pdf`.** The single genuinely new **primary** source any leg surfaced this pass, and **it could not be read**: `services.google.com` is refused by this session's egress proxy (`connect_rejected`). A follow-up search found **no indexed source** confirming a Google education report with that title or date; the nearest confirmable items are Google's **2025** *"AI and the Future of Learning"* and the Google/Ipsos *"Our Life with AI"* survey (`21` countries, ~`21,000` respondents). 🔵 **Recorded as an unverified candidate with a named blocked channel, not as a fact** — registered as Gap `662-I` so the next pass tries it first.
+- 🟡 **Docebo acquired `365Talents` in January 2026** for AI skills mapping. Novel to this base (`0` hits anywhere, including both logs). Reaches this pass through an encyclopaedia entry, not a filing or a press release; recorded on `intel/market.md` under **North America** and **EMEA** as a vendor-consolidation indication, not as a transaction this base has verified.
+- 🟡 **`Softtek` named as a regional AI-education player for LATAM.** Novel (`0` hits). Reaches this pass through a market-research vendor page; recorded under **LATAM** as a named regional integrator, not as a ranking.
+
+### 🔴 Gaps re-probed this pass and still open
+
+- 🔴 **No OpenOlat agent bridge, fifth consecutive confirmation.** Not re-probed by `ls-remote` this pass; the `0 of 5` result from p661 stands and `662-H` touches the platform's grant, not its bridge surface. Canvas `317★` → Moodle `27★` → OpenOlat `0` is unchanged.
+- 🔴 **In-place WCAG repair inside an LMS still has no permissive answer.** `ucfopen/UDOIT` (GPL-3.0) remains the only production tool; narrowed at p661 and not re-probed here.
+- 🟡 **The `filed_on` scope question opened by `662-C`** — whether `intel/open-gaps.md` and `intel/measured-unusable.md` are `CURATED` or a third state — is registered and **not** decided by this pass, because deciding it silently is how `filed_on` became wrong in the first place.
+
 ## 🆕 2026-11-05 (p661) — 🔴 **TWO SHELVED ABSENCE CLAIMS ARE FALSE, AND THIS BASE'S OWN LOGS REFUTED ONE OF THEM `451` PASSES AGO. THE MECHANISM IS NAMED: p569's ABSENCE-CLAIM CENSUS COMPARES ABSENCE SENTENCES AGAINST SHELF ROWS ONLY, SO A CLAIM WHOSE REFUTATION LIVES IN AN APPEND-ONLY LOG IS INVISIBLE TO THE ONE INSTRUMENT BUILT TO CATCH IT. 🟢 `whisper` IS MIT AT `111,975★` AND HAS NEVER BEEN SHELVED. 🔴 THE MANDATED LEGS NIL A SEVENTEENTH TIME ON `43/46`.**
 
 **Verification channels, re-tested before use at p661:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars/licence/push date — 🟡 **live but NON-UNIVERSAL, with a named specimen this pass** (`661-E`); repository **HTML pages** — 🔴 **`403`**, unchanged since p659, so every star figure this pass is **single-channel**; `img.shields.io` — 🔴 **`000`, connection refused**; `gh api repos/{owner}/{repo}` — 🔴 **`403`** for any repository not attached to this session, as this base has recorded since p652.

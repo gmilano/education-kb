@@ -1,0 +1,72 @@
+leg	fact	probe	hits	verdict
+global-agents	Microsoft ai-agents-for-beginners MIT course	microsoft/ai-agents-for-beginners	197	HELD
+global-agents	1111philo/learn agentic learning app	1111philo/learn	7	HELD
+global-agents	OpenCode coding agent MIT	opencode	89	HELD
+global-agents	browser-use MIT	browser-use	94	HELD
+global-trending	THU-MAIC/OpenMAIC multi-agent classroom	OpenMAIC	308	HELD
+global-trending	patchy631/ai-engineering-hub	ai-engineering-hub	30	HELD
+global-trending	HKUDS/DeepTutor	DeepTutor	766	HELD
+global-trending	KaynXu/awesome-ai-education	awesome-ai-education	11	HELD
+global-trending	karpathy/nanochat educational LLM stack	nanochat	85	HELD
+global-verticals	Sakai Apache-2.0 Apereo	Sakai	362	HELD
+global-verticals	OpenOlat	OpenOlat	446	HELD
+global-verticals	LearnHouse	LearnHouse	80	HELD
+global-verticals	Kolibri offline-first	Kolibri	351	HELD
+global-verticals	Open edX AGPL Axim Collaborative	Axim	45	HELD
+global-verticals	Moodle GPL	Moodle	2385	HELD
+global-verticals	OpenEduCat LGPLv3 education ERP	OpenEduCat	589	HELD
+global-verticals	FenixEdu Academic SIS LGPL	FenixEdu	10	HELD
+global-verticals	RosarioSIS	RosarioSIS	178	HELD
+global-verticals	Gibbon GPL school management	Gibbon	130	HELD
+global-trends	1EdTech digital credentials core mechanism	1EdTech	381	HELD
+global-trends	OECD chatbot gain vanishes at exam	OECD	183	HELD
+global-trends	AI education market 7.05B 2025 to 136.79B 2035	136.79	4	HELD
+global-trends	HolonIQ 2026 education trends snapshot	HolonIQ	15	HELD
+global-trends	Google AI in Education report Nov 2026	ai_in_education_report_nov26	0	NOVEL
+global-trends	Docebo acquired 365Talents Jan 2026	365Talents	0	NOVEL
+na	134 bills across 31 states	134 bills	64	HELD
+na	Maryland SB 720	SB 720	24	HELD
+na	New York A 9190	A 9190	17	HELD
+na	K-12 AI Literacy and Readiness Act	AI Literacy and Readiness	19	HELD
+na	Gallup 60 percent of US teachers	Gallup	18	HELD
+na	Child Trends most schools lack policy	Child Trends	3	HELD
+na	Parents and Kids Safe AI Act ballot initiative	Parents	19	HELD
+na	Idaho Oklahoma Virginia Maryland mandatory district policy	Idaho	52	HELD
+na	NYC March 2026 traffic-light guidance	traffic-light	10	HELD
+na	Clark County no sole-basis high-stakes	Clark County	1	HELD
+na	DC OSSE 2026-27 no AI grading or discipline	OSSE	95	HELD
+na	SREB AI Commission	SREB	1	HELD
+na	UNESCO 70 percent of EU+NA institutions have guidance	UNESCO	386	HELD
+emea	EU AI Act Annex III education high-risk	Annex III	292	HELD
+emea	Digital Omnibus 2 December 2027	2 December 2027	49	HELD
+emea	2 August 2028 embedded products	2 August 2028	9	HELD
+emea	UK DfE January 2026 generative AI product safety standards	DfE	88	HELD
+emea	Ofqual	Ofqual	10	HELD
+emea	KHDA Dubai guidance	KHDA	11	HELD
+emea	Europe AI education market 2.64B	2.64	62	HELD
+emea	Finland Estonia Netherlands K-12 leaders	Estonia	25	HELD
+emea	UNESCO 68 countries regulate AI in education	68 countries	1	HELD
+emea	OECD Digital Education Outlook 2026	Digital Education Outlook	27	HELD
+apac	South Korea AI Basic Act in force 22 January 2026	AI Basic Act	116	HELD
+apac	Vietnam Law on AI 10 December 2025	Vietnam	332	HELD
+apac	Vietnam 18-month transition for education	18 months	7	HELD
+apac	APAC 2.85B 2026 at 35.3 percent CAGR	35.3	54	HELD
+apac	Ipsos Education Monitor 2026	Ipsos	39	HELD
+apac	45 percent of APAC edtech lack data protection	45%	7	HELD
+apac	India DPDP Act phased through 2026	DPDP	6	HELD
+apac	Indonesia Merdeka Belajar	Merdeka	12	HELD
+apac	Philippines MATATAG	MATATAG	4	HELD
+apac	TEQSA institutional gen-AI action plan mandate	TEQSA	23	HELD
+latam	Universidad de los Andes 716 instruments 23 countries	716	29	HELD
+latam	UNESCO Observatory on AI in Education for LAC	Observatory	80	HELD
+latam	Fundacion Ceibal Uruguay	Ceibal	51	HELD
+latam	CENIA Chile	CENIA	54	HELD
+latam	ProFuturo	ProFuturo	14	HELD
+latam	Tecnologico de Monterrey	Monterrey	46	HELD
+latam	Mexico 2026 AI reforms deepfake criminal reform	deepfake	4	HELD
+latam	Colombia Peru Paraguay proposals	Paraguay	14	HELD
+latam	Softtek regional player	Softtek	0	NOVEL
+control	Zorblaxian Ministry of Pedagogy	Zorblaxian	2	HELD
+control	FSRS-9 quantum scheduler	FSRS-9 quantum	2	HELD
+control	Patagonian AI Education Act 2031	Patagonian AI Education Act	2	HELD
+control	Helvetic Tutor Mandate 2029	Helvetic Tutor Mandate	0	NOVEL

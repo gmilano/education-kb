@@ -124,7 +124,7 @@ Read from `raw.githubusercontent.com` on the default branch resolved by `git ls-
 | open-spaced-repetition/fsrs4anki | `LICENSE` | 1,079 | MIT |
 | open-spaced-repetition/fsrs-rs | `LICENSE` | 1,509 | BSD 3-Clause |
 | learningequality/kolibri | `LICENSE` | 1,097 | MIT |
-| OpenOLAT/OpenOLAT | `LICENSE` | **10,982** | Apache-2.0 — nine substantive sections all present and unmodified. Canonical **−375 B**, fully explained: the `APPENDIX` (boilerplate instructions, not terms) is replaced by two provenance statements naming the University of Zurich OLAT Zentrum and frentix GmbH. |
+| OpenOLAT/OpenOLAT | `LICENSE` | **10,982** | Apache-2.0 — nine substantive sections all present and unmodified. Canonical **−375 B** — measured against the `11,357 B` copy at `apache/.github` (🔧 p662: `apache.org/licenses/LICENSE-2.0.txt` is `11,358 B`, which gives `−376 B`; two canonical texts circulate one trailing byte apart, so a delta names its copy) — fully explained: the `APPENDIX` (boilerplate instructions, not terms) is replaced by two provenance statements naming the University of Zurich OLAT Zentrum and frentix GmbH. 🟢 **Sections 1–9 re-diffed at p662 against the `apache.org` copy: byte-identical.** |
 | langchain4j/langchain4j | `LICENSE` | **11,357** | Apache-2.0 — byte-exact canonical. Read because it is OpenOlat's in-tree LLM layer and therefore part of that row's licence position. |
 | openeducat/openeducat_erp | `LICENSE` | 8,241 | GNU LGPL v3 (LGPLv3 text with the GPL appended beneath it) |
 | yetanalytics/lrsql | `LICENSE` | **11,357** | Apache-2.0 — byte-exact canonical |
@@ -273,6 +273,16 @@ Three rows were added this pass and **none of them is a discovery.** `openai/whi
 🔴 **What is NOT closed.** Accessibility decomposes into four capabilities and only three now have permissive answers. **In-place WCAG defect repair inside an LMS course** has exactly one production tool, [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT), re-verified at p661 as **GPL-3.0** (`35,147 B`, `117★`, pushed `2026-11-04`). For that one capability T29's original advice stands unchanged: deploy inside the client's estate, bill the remediation, ship no derivative.
 
 🟡 **A seventh grant-defect class, catalogued at p202 and never promoted into the list on this page until now: a complete permissive grant that names no licensor.** [`lebmatter/exampro`](https://github.com/lebmatter/exampro) serves stock MIT at `license.txt` (`1,069 B`) whose copyright line reads **`Copyright (c) [year] [fullname]`** — the template placeholder, verbatim, unfilled. It would pass a licence-badge check, an SPDX scan and a casual `LICENSE` read. **It is formally complete and legally unattributable**, which is the worst combination for a client's counsel, and it joins the six classes this page already holds.
+
+## 🟢 Re-verified at p662 — the OpenOLAT grant reproduces, and a byte-count rule
+
+p662 re-read `OpenOLAT/OpenOLAT`'s `LICENSE` and diffed it against `apache.org/licenses/LICENSE-2.0.txt`, a canonical source this page's original read did not use. **Sections 1–9 are byte-identical to canonical Apache-2.0**; the `END OF TERMS AND CONDITIONS` line and the `APPENDIX` are absent; the two appended *"Additional license statement"* blocks grant and restrict nothing. The row reproduces in full.
+
+🟡 **One delta, and it is in the canonical copy rather than in OpenOLAT.** Two canonical Apache-2.0 texts circulate, one trailing byte apart — `11,357 B` at `apache/.github`, `11,358 B` at `apache.org` — so the same payload yields `−375 B` or `−376 B` depending on which you fetch. **Standing rule from p662: a stated `−N B` licence delta names the canonical copy it was taken against.** This page's figure is annotated in place and not altered.
+
+🔵 **Read with `659-F`.** `gh api search/repositories` returns `spdx = NOASSERTION` for this repository. That is the appended-grant classifier behaviour this base measured at `659-F`, not a defect in the grant — but it is what a client's SPDX or SBOM scan will emit for the largest permissive LMS on this page, so the rebuttal above is the one to have ready in a procurement review. Wired as `compose/patterns.md` **P27**.
+
+🔴 **No row was added to this page at p662.** The supply legs returned `64` of `67` facts already held and named no in-scope repository this page does not carry. `81` stands.
 
 ## 🔴 Open gaps on this page
 

@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p662) — 🟡 **NO ROW ADDED, AND NO LICENCE CELL CHANGED. `repos/foundations.md` STAYS AT `81`, `verticals/solutions.md` AT `38`: THE SUPPLY LEGS RETURNED `64/67` ALREADY HELD AND PADDING IS FORBIDDEN HERE. 🟢 `OpenOLAT/OpenOLAT`'s APACHE GRANT RE-READ FROM A SECOND CANONICAL SOURCE — THE SHELF REPRODUCES EXACTLY, AND THE ONLY DELTA IS ONE BYTE IN THE CANONICAL COPY. 🔴 A CURRENT COMPARISON TABLE CALLS `learnhouse` MIT; IT IS `AGPL-3.0`, AS THESE LOGS HAVE SAID SINCE `p11`. 🔧 THE `filed_on` INDEX REPAIR LANDED: `288` ROWS CHANGED AND ONE LICENCE VERDICT CORRECTED.**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); grant payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars/licence (🟢 live this pass); repository **HTML pages** (🔴 `403`) and `img.shields.io` (🔴 `000`), so **every star figure below is single-channel**; `services.google.com` 🔴 `connect_rejected` (Gap `662-I`).
+
+### 🟡 Why this pass adds no row
+
+The four supply-side legs — `top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS SIS MIT Apache 2026`, and the four regional legs — returned **`67` facts, `64` of them already at HEAD**. Every repository they named that is in scope was already shelved: `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub`, `learningequality/kolibri`, `sakaiproject/sakai`, `OpenOLAT/OpenOLAT`, Open edX, Moodle, `OpenEduCat`, `GibbonEdu/core`, `RosarioSIS`, FenixEdu. 🔵 **The honest action is to add nothing and say why**, which this base's own bar requires: *fewer real rows always beat padding*.
+
+🟡 **Three addresses sit in the logs and the ledger and on no shelf, and are deliberately left there**, because none is education-sector software: `karpathy/nanochat` (MIT, an LLM-training teaching codebase for engineers), `KaynXu/awesome-ai-education` and `ishandutta2007/Awesome-AI-Education-Training` (both MIT, both link lists). They are named here so the next pass does not re-discover them and mistake them for a gap; the `p661` rule against promoting `0★` filler applies unchanged.
+
+### 🔴 `learnhouse/learnhouse` — the held verdict, and the table that says otherwise
+
+The verticals leg returned an open-source-LMS comparison asserting *"MIT/Apache (LearnHouse, OpenOlat) offer maximum flexibility"*.
+
+🟡 **The licence finding is HELD and is not claimed as new**: these logs carry `learnhouse/learnhouse` as 🔴 `AGPL-3.0` at `2,441★`, and `evidence/address-ledger.tsv` has held that verdict since `p11`. p662 adds the public contradiction and a first-hand re-read:
+
+| Channel | Reading `2026-11-05` |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves — real default branch **`dev`**, not `main` |
+| grant at the resolved default ref (`dev`) | 🔴 `LICENSE`, **`34,523 B`**, `sha256₁₂ 8486a10c4393`, *GNU AFFERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007* |
+| grant at `main` | identical bytes, identical digest |
+| `gh api search/repositories` | 🔴 `spdx = AGPL-3.0` · **`2,448★`** (`+7`) · pushed **`2026-11-05`** |
+
+🔵 **Disposition: filed on `intel/measured-unusable.md`, not promoted.** It is a live, maintained LMS — it is simply not a base for a closed, client-branded derivative, and the public table that says it is points the wrong way on the only question that decides the engagement model.
+
+### 🟢 `OpenOLAT/OpenOLAT` — the shelf cell reproduces against a second canonical source
+
+Both `repos/foundations.md:127` and `verticals/solutions.md:63` carry **Apache-2.0 (10,982 B)** with the analysis *"nine substantive sections all present and unmodified … the `APPENDIX` … replaced by two provenance statements"*. p662 re-read the payload and diffed it against `apache.org/licenses/LICENSE-2.0.txt` — a canonical source the original read did not use.
+
+| Finding | Reading |
+|---|---|
+| Sections 1–9, normalised | 🟢 **byte-identical to canonical Apache-2.0** — the shelf's claim reproduces |
+| `END OF TERMS AND CONDITIONS` + `APPENDIX` | 🟢 absent, as the shelf states |
+| appended text | 🟢 two *"Additional license statement"* blocks (OLAT Zentrum / University of Zurich; frentix GmbH, OLAT 7.1) — provenance, not terms, as the shelf states |
+| `gh api search/repositories` | 🟢 `spdx = NOASSERTION` · **`449★`** · pushed **`2026-11-05`** — the mechanism already held as `659-F` / `660-M` |
+
+🔧 **p662 drafted this as a shelf defect and the draft was wrong** — see `agents/trending.md` `662-H` for the mechanism, which is `661-C` reproduced inside this pass's own drafting. **Nothing on either page is changed.**
+
+🟡 **One real delta, and it is one byte in the canonical copy, not in OpenOLAT.** The shelf says `−375 B` against `11,357 B` (`apache/.github`); p662 measured `−376 B` against `11,358 B` (`apache.org`). **Standing rule from p662: a stated `−N B` licence delta names which canonical copy it was taken against.** Both pages are annotated with the source of their figure; neither figure is altered.
+
+### 🔧 Index repair landed this pass
+
+`evidence/address-ledger.tsv`'s `filed_on` column was rewritten from the tree. **Measured first, against HEAD:** `259` claims, `29` exactly right, `88` naming at least one page that does not carry the address, `142` naming no correct page at all, and `59` addresses on a curated page carrying `-`; true tree count `176`. **Then repaired:** `288` rows changed — `138` cleared, `88` narrowed or re-pointed, `62` set from `-` — and `1` licence verdict corrected (`CycloneDX/cyclonedx-cli`, `unstated → Apache-2.0`, byte-read this pass: `LICENSE`, `11,341 B`, `sha256₁₂ 6c29f22a4a73`). The two sets differ because p662's own prose filed `7` addresses, taking the curated tree `176 → 183`. Itemised in `evidence/filed-on-reconciliation.2026-11-05-p662.tsv`. `ingest/promotion-ratchet.json` lowered `258 → 183` with the reason in the same commit, as that file requires. Cause and full measurement in `agents/trending.md` (`662-A`, `662-C`). 🔴 **`85` of the `142` false claims were created by the `p568` rewrite and stood for `94` passes**; `52` by `p650`'s.
+
 ## 🆕 2026-11-05 (p661) — 🟢 **`repos/foundations.md` 78 → 81, AND ALL THREE NEW ROWS WERE ALREADY NAMED IN THESE LOGS — ONE OF THEM AT `111,975★`. 🔴 THE SHELF SAID ACCESSIBILITY HAD NO PERMISSIVE ANSWER WHILE `openai/whisper` SAT IN BOTH LOGS AS "THE ASR BASELINE".**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); grant payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars (🟡 live, **non-universal** — `661-E`); repository **HTML pages** (🔴 `403`) and `img.shields.io` (🔴 `000`), so **every star figure below is single-channel**.

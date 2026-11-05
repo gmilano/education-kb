@@ -839,3 +839,76 @@ Then read the README for which branch carries the artefact you actually want —
 **What to say in the proposal.** *"Most of this programme is a product we can build and brand; the last mile inside Canvas is a tool we deploy and operate for you."* That sentence is the whole value of this pattern, and until p661 this base could not say it.
 
 **🔴 What this pattern does not claim.** The **April 2026 deadline itself is carried from secondary sources** and has never been read in primary form by this base — confirm it against the rule text before it anchors a contract date. `MathCAT`'s adoption is **unmeasured**: three independent channels refused the address at p661 (`gh api search/repositories` `422`, `gh api repos/` `403`, HTML `403`), so its licence and existence are first-hand facts and its popularity is not. And `lighthouse` is a **general-purpose** web auditor, not an education tool — it will flag defects in LMS chrome that the institution does not own, so the worklist needs a scoping filter before anyone is handed it.
+
+## P27 — The licence-provenance gate, as the first two weeks of any education engagement (2 weeks, then a standing gate) 🟢 new at p662
+
+**The engagement this answers.** A studio is about to build on an open source education platform. Procurement will run an SBOM and SPDX scan before anything ships, and the scan will return answers that are *wrong in both directions* on the exact repositories this KB recommends. Somebody has to be able to say, in a review, why a `NOASSERTION` is harmless and why a published comparison table is not. That is a two-week deliverable, and it pays for itself the first time it stops a fork.
+
+**Why it is new at p662.** p658 established licence-truth as a billable deliverable on the `TurboWarp/extensions` case. p662 supplies the specimens that make it a *gate* rather than an audit: a controlled set in which the scanner's verdict is wrong in each direction, with the payload held constant across the pair that matters.
+
+```
+  ┌──── 🟢 THE GATE — THREE PERMISSIVE TOOLS, ALL VERIFIED 2026-11-05 ─────────┐
+  │                                                                           │
+  │  anchore/syft                  Apache-2.0  LICENSE  11,357 B              │
+  │    sha256₁₂ c71d239df917   9,832★   `main`   pushed 2026-11-04            │
+  │      └─ SBOM generation from images, dirs and archives → SPDX + CycloneDX  │
+  │                                                                           │
+  │  aboutcode-org/scancode-toolkit  Apache-2.0 + CC-BY-4.0  `develop`        │
+  │    apache-2.0.LICENSE  11,357 B  sha256₁₂ c71d239df917   (the CODE)       │
+  │    cc-by-4.0.LICENSE   18,651 B  sha256₁₂ 2a82ac9bbc3e   (the licence DB) │
+  │    NOTICE 2,333 B      2,662★   pushed 2026-11-02                         │
+  │      └─ reads grants out of a SOURCE TREE, which is the axis `syft` misses │
+  │      └─ 🔴 DUAL-LICENSED: the tool is Apache-2.0, the licence DATA is      │
+  │         CC-BY-4.0. Shipping its output means carrying attribution.        │
+  │                                                                           │
+  │  CycloneDX/cyclonedx-cli       Apache-2.0  LICENSE  11,341 B              │
+  │    sha256₁₂ 6c29f22a4a73   555★   `main`   pushed 2026-10-19              │
+  │      └─ convert / merge / diff SBOMs → the format procurement asks for     │
+  │      └─ 🔧 p662 corrected this base's own ledger verdict (`unstated`)      │
+  └───────────────────────────────────────────────────────────────────────────┘
+                                   │
+                                   ▼
+  ┌──── 🔴 WHAT THE GATE IS FOR: FOUR SPECIMENS, FOUR FAILURE MODES ──────────┐
+  │                                                                           │
+  │  1. SCANNER SAYS NOASSERTION, GRANT IS CLEAN — filename axis              │
+  │     scancode-toolkit    gh api → NOASSERTION                              │
+  │     anchore/syft        gh api → Apache-2.0                               │
+  │       └─ SAME PAYLOAD. Both 11,357 B, both sha256₁₂ c71d239df917.         │
+  │          The only variable is the FILENAME: `apache-2.0.LICENSE`          │
+  │          vs `LICENSE`. Controlled specimen for `558-B` / `572-B`.         │
+  │                                                                           │
+  │  2. SCANNER SAYS NOASSERTION, GRANT IS CLEAN — appended-text axis         │
+  │     OpenOLAT/OpenOLAT   LICENSE 10,982 B  sha256₁₂ 6dbc5b605ed0           │
+  │       └─ sections 1–9 byte-identical to canonical; APPENDIX removed,      │
+  │          two provenance statements appended. Mechanism = `659-F`.         │
+  │       └─ 🟢 CONTRAST: cyclonedx-cli FILLED the appendix in place          │
+  │          (`Copyright OWASP Foundation`, brackets `{}`) and still          │
+  │          classifies Apache-2.0. Completing it is safe; removing it        │
+  │          and appending is not.                                           │
+  │                                                                           │
+  │  3. A PUBLISHED TABLE SAYS MIT, THE REPO SAYS AGPL — the expensive one    │
+  │     learnhouse/learnhouse  LICENSE 34,523 B  sha256₁₂ 8486a10c4393        │
+  │       └─ AGPL-3.0 on `dev` AND on `main`. gh api agrees. 2,448★.          │
+  │       └─ A current LMS comparison puts it under "MIT/Apache …             │
+  │          maximum flexibility". Network-use clause, hosted deployment.    │
+  │                                                                           │
+  │  4. GRANT IS FORMALLY PERFECT AND NAMES NO LICENSOR                       │
+  │     lebmatter/exampro  license.txt 1,069 B  sha256₁₂ 002c2696d92b        │
+  │       └─ stock MIT whose copyright line is literally                      │
+  │          `Copyright (c) [year] [fullname]`. Passes every badge check.    │
+  │          Legally unattributable. Catalogued at `p202`, specimen `661-A`. │
+  └───────────────────────────────────────────────────────────────────────────┘
+```
+
+**Wiring, concretely.**
+
+1. **Resolve the ref before anything else.** `git ls-remote --symref <repo> HEAD`. Four of the repositories named on this page do not default to `main` — `scancode-toolkit` is `develop`, `OpenOLAT` is `master`, `oppia` is `develop`, `learnhouse` is `dev`. A grant read against `/main/` by habit is a grant read of the wrong branch, and specimen **3** — [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) — was nearly missed this way. See *"Resolve the branch before you clone"* above.
+2. **Enumerate the filename space, do not trust one probe.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `COPYING`, `COPYING.txt`, `LICENCE`, `license`, **and `<spdx-id>.LICENSE`** — that last form is what hid `scancode-toolkit`'s clean Apache grant from a five-filename ladder.
+3. **Byte-read and digest every grant.** Record `path`, `bytes`, `sha256₁₂` and the copyright line. A byte count is the cheapest tamper check there is, and it is what distinguishes specimen **2** from a genuine licence change. 🔴 **Name the canonical copy any `−N B` delta is measured against**: `apache/.github` serves Apache-2.0 at `11,357 B` and `apache.org` at `11,358 B`, so an unattributed delta is ambiguous by `1 B` (p662's standing rule).
+4. **Run [`anchore/syft`](https://github.com/anchore/syft) for the dependency tree and [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit) for the source tree.** They answer different questions and the gate needs both: `syft` sees declared package metadata, `scancode` sees grants actually present in files. The licence unit is the dependency graph, not the repository — the section above this one has the five live cases.
+5. **Normalise to CycloneDX and hand procurement the diff, not the scan.** [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) converts and *diffs*, so the standing gate is a diff against last release: new grant, changed grant, or disappeared grant. Three states, each with an owner.
+6. **Ship the rebuttal file with the SBOM.** One row per `NOASSERTION`, each with the mechanism (filename / appended text / no grant at all), the digest, and the sentence that closes it. This is the artefact that turns a two-week audit into a gate somebody can sign.
+
+**What to say in the proposal.** *"Your scanner will flag the largest permissive LMS in this stack as unlicensed, and it is wrong. It will also pass a platform that a published comparison table calls MIT and which is actually network-copyleft, and that one would have cost you the source of your product. We will give you the evidence for both, in the format your procurement team already reads, and a diff-based gate that keeps answering the question after we leave."*
+
+**🔴 What this pattern does not claim.** It does **not** constitute legal advice and it does **not** resolve clause-level residuals — a dual-licensed component like `scancode-toolkit` carries an attribution obligation that counsel, not a scanner, has to price. The four specimens are verified first-hand at `2026-11-05`; the *generalisation* that scanners err in both directions at a measurable rate is **not** quantified by this pass on a sampled population, and `572-B` is the only rate figure this base holds for the filename axis.

@@ -1,8 +1,29 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-04
+updated: 2026-11-05
 ---
+
+## 🆕 `p662` — `2026-11-05` — **🔴 A CURRENTLY PUBLISHED LMS COMPARISON TABLE PUTS `LearnHouse` IN THE "MIT/Apache … maximum flexibility" COLUMN. IT IS `AGPL-3.0`, AND THIS BASE HAS HELD THAT VERDICT SINCE `p11`.**
+
+🔵 **Why this page and not `verticals/solutions.md`.** `learnhouse/learnhouse` is real, live and maintained — `2,448★`, pushed `2026-11-05`. It is unusable *for the model this base recommends*: start from something that works and add a proprietary agent layer on top. `AGPL-3.0`'s network-use clause reaches a hosted deployment, so a client-branded fork carries a source-disclosure obligation. That is a licence fact, not a quality judgement.
+
+### 🔴 `662-G` — the claim, and the four channels it fails on
+
+The claim, from an open-source-LMS comparison returned by the global verticals leg: *"MIT/Apache (LearnHouse, OpenOlat) offer maximum flexibility."*
+
+| Channel | Reading `2026-11-05` |
+| --- | --- |
+| `git ls-remote --symref` | 🟢 resolves — **real default branch is `dev`**, not `main`. A licence check run against `/main/` by habit is checking a branch that is not the project's head |
+| grant payload at the **resolved** default ref (`dev`) | 🔴 `LICENSE` · **`34,523 B`** · `sha256₁₂ 8486a10c4393` · *"GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007"* |
+| grant payload at `main` | 🔴 identical bytes, identical digest — **the claim does not survive on either ref** |
+| `gh api search/repositories` | 🔴 `spdx = AGPL-3.0` · **`2,448★`** · pushed **`2026-11-05`** |
+
+🟡 **The base's own verdict is HELD and is not claimed as new.** `evidence/address-ledger.tsv` has carried `learnhouse/learnhouse → AGPL-3.0` since `p11`, and both append-only logs name it. What is new at `p662` is that a **current, confidently worded, publicly indexed** source contradicts it.
+
+🔵 **The generalisable shape.** This base's verification discipline — resolve the default ref, byte-read the grant, state the digest — is aimed at its own rows. `662-G` is the first instance of a mandated leg returning a published licence table that is wrong in the **commercially dangerous direction**: permissive-when-actually-copyleft. The leg's value here is adversarial, like `661-F`'s TEQSA reproduction: not supply, but a false claim in circulation that a client or a colleague may arrive carrying, already believing it.
+
+🟢 **The same table's `OpenOlat` claim is substantively correct** — sections 1–9 of its grant are byte-identical to canonical Apache-2.0, re-verified at `p662`. One entry being right is what makes the other entry dangerous.
 
 ## 🆕 `p651` — `2026-11-04` — **🔴 A MANDATED WEB LEG PRODUCED ITS FIRST USEFUL NEGATIVE: A DATED REGULATORY CLAIM TESTED, FALSIFIED, AND KEPT OUT OF `intel/market.md`. PLUS `6` LICENCE-NIL SUPPLY ROWS, `1` BESPOKE SPANISH GRANT, `1` SHAREALIKE AT `949★`, AND `1` TRUNCATED `MIT` PAYLOAD WITH ITS LIABILITY CAP DELETED.**
 
