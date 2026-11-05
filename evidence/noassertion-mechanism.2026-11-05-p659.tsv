@@ -1,0 +1,6 @@
+address	payload_bytes	stock_mit_bytes	residual	payload_read_family	api_license_spdx_id	agrees	mechanism
+OPTIMETA/PAIDEIA	1068	1068	0	MIT	MIT	yes	stock payload, classifier matches
+OPTIMETA/PAIDEIA-codex	1068	1068	0	MIT	MIT	yes	stock payload, classifier matches
+OPTIMETA/PAIDEIA-opencode	1068	1068	0	MIT	MIT	yes	stock payload, classifier matches
+OPTIMETA/PAIDEIA-mcp	1068	1068	0	MIT	MIT	yes	stock payload, classifier matches
+OPTIMETA/PAIDEIA-Hermes	1397	1068	329	MIT	NOASSERTION	NO	Attribution section APPENDED after unmodified MIT text; whole-file template match fails

@@ -9,10 +9,12 @@ updated: 2026-11-05
 > The bases to build on. Verified 2026-11-05 (rows added before p657 state their own verification date in-cell): existence via `git ls-remote --symref`, licence by reading the grant payload, stars from the repository page.
 > **Read the licence column before the stars column.** Half the deployable surface in education is copyleft, and in this industry that is the constraint that decides the engagement model.
 
-## Foundations — 70 verified rows
+## Foundations — 72 verified rows
 
 | Repo | Licence | Stars | Default branch | Why it is a foundation |
 |---|---|---|---|---|
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | **MIT** | 🟡 **260,585** | `main` | 🆕 **p659 — the agent runtime an education plugin targets, and the one address this base has held since p28 without ever shelving it.** Grant payload read at p659: `LICENSE`, `1,070 B`, stock MIT, `Copyright (c) 2025 Nous Research`. It is **not** an education tool and is not filed as one — it is on this page because `OPTIMETA/PAIDEIA-Hermes` (see `agents/top.md`) is a port *onto* it, which makes it a substrate this KB now has a dependent for. 🔴 **Read the star figure with its caveat:** `260,585` comes from `gh api search/repositories` and is **unreproduced** — repository HTML pages return `403` under this session’s network policy, so the second channel this base normally uses was unavailable at p659. The order of magnitude is corroborated only weakly, by this pass’s global leg naming Hermes Agent among the leading open-source agents of 2026. **Do not put this number in a deliverable until it is re-measured on a second channel.** |
+| [ollama/ollama](https://github.com/ollama/ollama) | **MIT** | 🟡 **185,942** | `main` | 🔧 **p659 — filed at last, and with a corrected licence verdict.** The local-model runtime every "local-first" and "sovereign" claim on this base rests on: it is named in prose on `agents/top.md`, this page, `verticals/solutions.md`, `compose/patterns.md` **and** `intel/trends.md`, and until p659 it had **no row on any shelf**. 🔴 **Worse, the ledger carried it as `unstated`** — i.e. as a repository with no licence this base had established — from p104 to p659. Grant payload read at first hand at p659: `LICENSE`, `1,058 B`, **stock MIT**. The `unstated` verdict was wrong, and it was wrong about the single most load-bearing dependency in the local-first portfolio. |
 | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | 8,200 | `master` | The LMS behind edX (Harvard + MIT). MOOC-scale, Python/Django. Extend via XBlock rather than forking the platform. **Re-measured p652: 8.2k ★ / 4.4k forks — reproduces.** |
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | 7,600 | `main` | The most deployed LMS on earth. Mature plugin ecosystem and a built-in AI subsystem (4.5+) with pluggable providers including local Ollama. **Re-measured p652: 7.6k ★ / 7.7k forks — reproduces.** 🔵 The only row on this shelf with *more forks than stars*, which is a fair description of what Moodle is: not a project people watch, a codebase institutions take copies of. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | **449** | `master` | 🟢 **The permissive institutional LMS — the row that withdraws this page's longest-standing claim.** Institutional course management (courses, enrolment, assessment, QTI testing, portfolio, curriculum management) under **Apache-2.0**, so a closed derivative is permitted. **167 forks / 32,210 commits**, release branches `OpenOLAT_18.0` → `OpenOLAT_21.1`, latest tag `OpenOLAT_21.1.2`. Java/Spring, Hibernate 7.4.14, descended from the University of Zurich's OLAT 7.1, maintained by frentix GmbH (Zurich) — EMEA on the evidence of its own grant payload. 🟢 **The LLM plumbing is already in `pom.xml`**: `langchain4j` 1.23.0 (Apache-2.0) with `-open-ai`, `-anthropic` and `-embeddings`, alongside Apache Lucene. ⚠ One copyleft item in 270 dependencies — the optional MySQL Connector/J (GPL-2.0 + FOSS Exception); use the in-tree PostgreSQL driver (BSD-2-Clause) for a closed derivative. |
@@ -85,6 +87,17 @@ updated: 2026-11-05
 | [GeoGuess/GeoGuess](https://github.com/GeoGuess/GeoGuess) | **MIT** (`1,099 B`) | 594 | `master` | 🆕 Open-source geography game on Street View — a self-hostable permissive alternative to GeoGuessr for geography teaching. Predictor residual `+31` = a second copyright line, exactly. Verified p658. |
 
 ### Licence payloads read this pass
+
+Read from `raw.githubusercontent.com` on the default branch resolved by `git ls-remote --symref` at p659.
+
+| Repo | Grant file | Bytes | Family |
+|---|---|---|---|
+| NousResearch/hermes-agent | `LICENSE` | 1,070 | MIT — stock. `Copyright (c) 2025 Nous Research` |
+| ollama/ollama | `LICENSE` | 1,058 | MIT — stock. 🔧 **Corrects a standing `unstated` verdict carried since p104** |
+
+🔵 **A channel ceiling measured at p659, and it narrows every star cell on this page.** `git ls-remote` and `raw.githubusercontent.com` both work; `gh api search/repositories` works; **repository HTML pages return `403`** under this session's network policy. This base's stated method reads stars *from the repository page*, so at p659 that channel does not exist and star figures are single-channel. No existing star cell was altered on that basis — the one new cell is flagged in place instead.
+
+### Licence payloads read at p658
 
 | Repo | Grant file | Bytes | Family |
 |---|---|---|---|
@@ -160,6 +173,12 @@ Filed here rather than omitted, because a client may already be running one of t
 | [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 2 | 🔴 **LGPL-3.0**, 7,650 B, `master` | A Python library and CLI for **Open Badges 3.0 / W3C VC** — issue, verify, revoke; live 2026-10-27. LGPL is the mildest copyleft here and dynamic linking is workable, but at 2 ★ it is not a dependency. |
 | [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) | 9 | 🟡 **MPL-2.0**, 16,661 B, `main` | A live Python CAT package (pushed 2026-10-31) and MPL-2.0 is file-level copyleft, so a closed derivative is workable. **Not shelved on adoption grounds alone: 9 ★.** Named because it is the only *live* alternative to `catsim`, and a second live option in that layer would be worth a lot. |
 | [`iblai/wallet`](https://github.com/iblai/wallet), [`offset-smoker/edu-standards`](https://github.com/offset-smoker/edu-standards) | 0, 1 | 🟢 MIT, payloads read | Permissive and on-topic — a credentials wallet and a PHP library for **Open Badges 3.0 + OneRoster + LTI 1.3**. Logged, not shelved: 0 ★ and 1 ★. Re-check `edu-standards` in a later pass; the three-standard combination is unusual. |
+
+## 🔧 Corrected at p659 — a dependency named on five shelves, carried as `unlicensed` for 555 passes
+
+`ollama/ollama` entered `evidence/address-ledger.tsv` at **p104** with `last_verdict = unstated`. `unstated` is this base's verdict for *a repository whose grant this base has not established* — and it sat there while the same address was being cited in prose on **five** shelves as the way to run a model locally. 🔴 **The combination is the defect:** every local-first and sovereignty recommendation in this KB depends on a runtime its own ledger described as having no established licence. A client's legal reviewer reaching that line stops the engagement.
+
+At p659 the payload was read at first hand — `LICENSE`, `1,058 B`, stock MIT — and the verdict is corrected to **MIT**. 🔵 **The lesson generalises past this one row:** a `filed_on = -` ledger line with a non-committal verdict is not a neutral placeholder, it is an *assertion of ignorance* that the shelves then contradict in prose. 🔴 **Recommended as a standing check** (`ACTION p659-A`): no address may be cited in shelf prose while its ledger verdict is `unstated` — either the payload is read or the citation is withdrawn. `make gate-grant-presence` already reads payload presence; the missing half is reconciling *prose citations* against *ledger verdicts*, which no current target does.
 
 ## 🔴 Corrections to rows this KB previously published
 

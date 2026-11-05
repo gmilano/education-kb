@@ -286,3 +286,13 @@ Four verified options, and the licence is what should decide between them:
 **A file that names a licence is not a licence.** There is no permission paragraph, no conditions, no warranty disclaimer, no copyright holder and no version pinning beyond "V3" — and GPL-3.0's own terms require the notice and full text to accompany the work. Frappe's intent is obvious and nobody will be surprised by it. But the question a client's legal review asks is what the grant *says*, and here the answer is nineteen bytes, so this slot stays at four verified options. If an engagement needs the Frappe stack, the fix is one upstream commit and it is worth asking for.
 
 For every copyleft option the out-of-tree rule is unchanged: agents talk to the system over its API, in a separate process.
+
+## 🔴 p659 — the public 2026 LMS guides print the wrong licence for Sakai, and this page is right
+
+The mandated vertical-platform leg returned the current crop of “best open-source LMS 2026” guides. Two of them state that **Sakai is Apache-2.0**, and one presents it as *the* permissively-licensed institutional option on that basis.
+
+🟢 **This page already carries the correct cell, measured at first hand:** `sakaiproject/sakai` is **ECL-2.0** — the Educational Community License v2.0 — read from the payload at `11,120 B`. No cell was changed at p659; the external claim was checked against this base and the base held.
+
+🔵 **The distinction is not pedantic, and it cuts in the direction clients care about.** ECL-2.0 is an Apache-2.0 *derivative*: the permissions are substantially Apache's, but the **patent grant is narrowed** — where Apache-2.0 grants patent rights for the work generally, ECL-2.0 scopes the contributor's patent grant to the contributions as used in the licensed work, with the educational-context framing the licence was written for. For a Globant engagement that means: Apache-2.0 and ECL-2.0 are **both** safe for a closed derivative, so the build decision does not change — but **a client's counsel diffing your licence schedule against the project's actual payload will find a discrepancy if you copied `Apache-2.0` out of a guide.** Write `ECL-2.0` and cite the payload.
+
+🔴 **The general rule this instance evidences.** A secondary source's licence claim is worth exactly nothing against a payload read. Of the licence claims this pass's vertical leg served, the one that was checkable against this base's own first-hand reads was **wrong**, and it was wrong in the *permissive* direction — the direction that gets a deliverable shipped before anyone notices. That is the same failure mode as **T38**, arriving through a different channel: not GitHub's classifier this time, but published human guidance.

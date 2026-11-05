@@ -1,0 +1,11 @@
+channel	status	used_for	detail
+git ls-remote --symref	LIVE	existence + real default branch	7 of 7 addresses resolved
+raw.githubusercontent.com	LIVE	licence payload byte-read	7 of 7 payloads read at first hand
+gh api search/repositories	LIVE	stars, description, license.spdx_id	see noassertion-mechanism p659: NOASSERTION on appended grants
+gh api repos/{owner}/{repo}	BLOCKED	-	consistent with 649-B
+github.com repository HTML page	HTTP_403	stars (this base's named star channel)	star figures at p659 are SINGLE-CHANNEL and unreproduced
+eur-lex.europa.eu	DNS_ENOTFOUND	primary EU AI Act text	network policy block, not a missing document; ACTION p659-B
+WebSearch 4 mandated global legs	LIVE	supply discovery	8 candidates, 7 already held, 1 novel = 18th consecutive nil
+WebSearch 4 regional legs (NA/EMEA/APAC/LATAM)	LIVE	intel	0 findings not already held on intel/market.md
+README of novel candidate (lateral expansion)	LIVE	supply discovery	4 of 4 sibling addresses unheld = 100 pct yield; ACTION p659-C
+make hooks	DENIED	standing structural gate	[Code from External], 9th consecutive pass

@@ -2051,7 +2051,7 @@ NoplagLabs/noplag-engine	p84	Apache-2.0	-	2026-10-19	5	3
 Notcokeaddictedanymore/aiexplorers	p245	MIT	-	2026-10-16	1	1
 nothinx/naskah-id	p487	MIT	-	2026-10-27	1	1
 NouhKhouyi/aula	p470	MIT	-	2026-10-27	2	1
-NousResearch/hermes-agent	p28	MIT	-	2026-10-13	3	3
+NousResearch/hermes-agent	p28	MIT	repos/foundations.md	2026-11-05	4	4
 novatrix-2030/SIH-2026	p11	unstated	-	2026-10-01	1	1
 nsip/curriculum-mapper	p91	unstated	-	2026-10-11	2	2
 nso-india/esankhyiki-mcp	unpassed	unstated	intel/market.md	-	1	0
@@ -2100,7 +2100,7 @@ okpy/ok	p85	Apache-2.0	-	2026-11-01	7	4
 okpy/ok-client	p356	unstated	-	2026-10-23	2	2
 OksigeniaSL/oga-veve	p243	Apache-2.0|CC-BY	-	2026-10-16	1	1
 oliverhruby/edupage-mcp	p70	MIT	-	2026-10-25	5	5
-ollama/ollama	p104	unstated	-	2026-10-11	2	2
+ollama/ollama	p104	MIT	repos/foundations.md	2026-11-05	3	3
 oluiscabral/studorama	p511	MIT	-	2026-10-28	3	1
 OmarAli-prod/zewailcity-moodle-mcp	p427	MIT	-	2026-10-25	1	1
 OmarNiazi/classroom-mcp	p74	MIT	-	2026-10-20	3	3
@@ -2246,6 +2246,11 @@ Opetushallitus/valtionavustus	p17	unstated	-	2026-10-10	7	5
 oppia/oppia	p24	Apache-2.0	intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-11-01	42	30
 oppia/oppia-android	p266	Apache-2.0	-	2026-10-17	1	1
 OptiKey/OptiKey	p8	GPL-3.0	-	2026-11-01	2	1
+OPTIMETA/PAIDEIA	p659	MIT	agents/top.md	2026-11-05	1	1
+OPTIMETA/PAIDEIA-codex	p659	MIT	-	2026-11-05	1	1
+OPTIMETA/PAIDEIA-Hermes	p659	MIT	-	2026-11-05	1	1
+OPTIMETA/PAIDEIA-mcp	p659	MIT	compose/patterns.md	2026-11-05	1	1
+OPTIMETA/PAIDEIA-opencode	p659	MIT	-	2026-11-05	1	1
 OPTIMUM-LINKUP/Latest-Optimum-School-System	unpassed	GPL-3.0	verticals/solutions.md	-	1	0
 OPTML-Group/Unlearn-Saliency	p18	MIT	-	2026-10-01	1	1
 Orenda-Project/rumi-platform	p62	unstated	-	2026-10-28	7	4

@@ -4,6 +4,36 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p659) — 🟢 **`repos/foundations.md` 70 → 72, AND BOTH NEW ROWS WERE ALREADY IN THE LEDGER — ONE SINCE p28, ONE SINCE p104 WITH A WRONG VERDICT. 🔴 THE REPOSITORY-PAGE STAR CHANNEL IS `403`, SO EVERY STAR FIGURE THIS PASS IS SINGLE-CHANNEL.**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); licence payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars (🟢 live); repository **HTML pages** (🔴 **`403`** — the channel this base's method names for stars).
+
+### 🟢 `repos/foundations.md` 70 → 72
+
+| Repo | Licence | Payload | ★ (single-channel) | Why it is filed now |
+|---|---|---|---|---|
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | **MIT** | `LICENSE`, `1,070 B`, stock, `Copyright (c) 2025 Nous Research` | 🟡 `260,585` | Held in the ledger since **p28**, never shelved. Filed now because p659 gave this base its first *dependent* on it: `OPTIMETA/PAIDEIA-Hermes` is a port onto this runtime |
+| [`ollama/ollama`](https://github.com/ollama/ollama) | **MIT** | `LICENSE`, `1,058 B`, stock | 🟡 `185,942` | 🔧 Held since **p104 with verdict `unstated`** while being cited in prose on **five** shelves. The verdict was wrong about the most load-bearing dependency in the local-first portfolio |
+
+🔴 **Neither row is an education repository, and neither is filed as one.** They are substrates: the runtimes an education plugin targets and the way a model is served locally. The reason they belong on a foundations page is that this base's recommendations — every "local-first", every "sovereign", every "no API key" — resolve to them, and until p659 they resolved to prose with no verified row behind it.
+
+### 🔴 The star channel, measured
+
+| Channel | Status at p659 |
+|---|---|
+| `git ls-remote --symref` | 🟢 live — existence + real default branch |
+| `raw.githubusercontent.com` payload read | 🟢 live — the licence channel, unaffected |
+| `gh api search/repositories` | 🟢 live — stars, description, `license.spdx_id` (⚠️ see `659-F`: `NOASSERTION` on appended grants) |
+| `gh api repos/{owner}/{repo}` | 🔴 blocked — consistent with `649-B` |
+| repository **HTML page** | 🔴 **`403`** — this base's named star channel |
+| `eur-lex.europa.eu` | 🔴 does not resolve — network policy |
+
+🔵 **Consequence, stated rather than worked around:** this base's method says stars come from the repository page. At p659 that page is unreachable, so `260,585` and `185,942` rest on **one** channel and are flagged as unreproduced in the cells themselves. 🔴 **`ACTION p659-D`:** re-measure both on a second channel in the next pass that has page access; until then neither figure may appear in a client deliverable. The licence cells are **not** affected — those were byte-read.
+
+### 🟡 Trending digests: eighteenth consecutive nil, with the denominator
+
+`github trending {industry} AI {year}` and the three sibling legs returned `8` distinct candidates, `7` already held. Named so the next pass does not re-walk them: `anandpatikat/guru-latihan-dinamis` (held p495, `no-grant`), `GarethManning/education-agent-skills` (held p2, `CC-BY-SA`), `rohitg00/ai-engineering-from-scratch` (held p2, MIT), `microsoft/ai-agents-for-beginners` (held p2, MIT), `sakaiproject/sakai` (held p11, ECL-2.0), `openeducat/openeducat_erp` (held p2, LGPL-3.0). The `1` novel candidate was `OPTIMETA/PAIDEIA` — and it then yielded `4` more by README expansion, which is the pass's methodological finding (see `agents/trending.md`, `659-C`).
+
 ## 🆕 2026-11-05 (p658) — 🟢 **EIGHTEEN FOUNDATION ROWS FOR A LAYER THAT HAD ZERO, AND A NON-CANONICAL APACHE PAYLOAD SHARED BYTE-FOR-BYTE BY TWO INDEPENDENT PROJECTS**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref`; licence payload byte-read from `raw.githubusercontent.com` on the resolved branch; metadata via `gh api search/repositories`. 21 addresses probed, **21 PUBLIC-LIVE**, controls behaved. See `agents/trending.md` p658 for the full channel table, the transfer oracle and the predictor result.

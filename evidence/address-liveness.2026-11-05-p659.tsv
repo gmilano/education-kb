@@ -1,0 +1,8 @@
+address	default_branch	live	grant_file	payload_bytes	family_read_at_first_hand	api_spdx_id	stars_single_channel	note
+OPTIMETA/PAIDEIA	main	yes	LICENSE	1068	MIT	MIT	92	canonical; Copyright (c) 2026 Taewoo Park; promoted to agents/top.md at p659
+OPTIMETA/PAIDEIA-codex	main	yes	LICENSE	1068	MIT	MIT	26	OpenAI Codex CLI port; Copyright (c) 2026 Taewoo Park
+OPTIMETA/PAIDEIA-opencode	main	yes	LICENSE	1068	MIT	MIT	3	sst/opencode port; Copyright (c) 2026 TaewoooPark (three o, no space)
+OPTIMETA/PAIDEIA-mcp	main	yes	LICENSE	1068	MIT	MIT	2	standalone local MCP server; Copyright (c) 2026 TaewoooPark
+OPTIMETA/PAIDEIA-Hermes	main	yes	LICENSE	1397	MIT	NOASSERTION	1	+329B over stock = appended Attribution block; MIT body unmodified
+NousResearch/hermes-agent	main	yes	LICENSE	1070	MIT	MIT	260585	Copyright (c) 2025 Nous Research; filed repos/foundations.md at p659; stars UNREPRODUCED
+ollama/ollama	main	yes	LICENSE	1058	MIT	MIT	185942	ledger verdict CORRECTED unstated->MIT at p659; stars UNREPRODUCED

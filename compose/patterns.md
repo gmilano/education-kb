@@ -619,6 +619,56 @@ learner in a Blockly workspace
 
 ⚠️ **Risk.** `TutoriaLLM` is 303 ★ with a small maintainer base and a Japanese-first community; it is MIT and self-hosted, so the downside is maintenance, not lock-in. If the client cannot accept that, the fallback is P4's tutoring stack plus a hand-built `leopard` step — more work, no agent in the workspace.
 
+## P24 — The learner-owned study graph, driven by a local model, evidenced to the institution (5–7 weeks) 🟢 new at p659
+
+**Who buys it:** universities and professional-certification bodies that want a study/revision tool for enrolled learners but cannot send course materials or learner performance to a third-party API — the EMEA sovereignty buyer, the LATAM public-sector buyer, and any APAC client inside South Korea's or Vietnam's assessment rules.
+
+**What makes it buildable now:** p659 verified `OPTIMETA/PAIDEIA-mcp` (MIT) — the study engine behind `PAIDEIA` as a **standalone local MCP server**, with no dependency on any vendor's agent runtime. That is the piece that turns a consumer plugin (**T41**) into something an institution can host. It is the same move **P6** made for retention, one layer up.
+
+```
+THE LEARNER'S OWN COURSE MATERIALS  (lecture PDFs, scanned problem sets, past papers)
+  │   ingest, on the institution's hardware — nothing leaves the building
+  ├── Tesseract OCR                       → scanned/handwritten problem sets
+  └── Qwen3-VL via ollama/ollama (MIT, 1,058 B payload read p659)  → figures, diagrams, equations
+       │
+       ▼
+  OPTIMETA/PAIDEIA-mcp  (MIT, 1,068 B payload read p659, local MCP server)
+       │   builds the per-course study graph: error patterns, homework-density weighting,
+       │   strategy grading, cheatsheet — emitted as Markdown/LaTeX FILES, not rows in a vendor DB
+       │
+       ├── scheduling layer — do NOT reimplement it:
+       │     open-spaced-repetition/fsrs-rs (BSD-3-Clause)  → the retention primitive, per T13
+       │
+       ├── model layer, client-controlled:
+       │     ollama/ollama (MIT) serving an open-weight model on the client's own GPU
+       │     ⚠️ no API key anywhere in this diagram — that is the deliverable, not a constraint
+       │
+       ▼
+  THE EVIDENCE SPINE  (P17 — this is what makes it an institutional sale, not a download)
+       ├── in:  dmitry-viskov/pylti1.3 (MIT) → LTI 1.3 launch from Moodle / Canvas / Brightspace /
+       │        Open edX / OpenOlat. An LTI tool is a SEPARATE WORK: GPL-3.0 Moodle and AGPL-3.0
+       │        Open edX impose nothing on your code.
+       └── out: yetanalytics/lrsql (Apache-2.0) → xAPI statements into the institution's OWN LRS
+                (adlnet/ADL_LRS, Apache-2.0, is the alternative)
+       │
+       ▼
+  YOUR LAYER  (proprietary, closed — every dependency above is MIT / Apache-2.0 / BSD-3-Clause)
+       course-pack onboarding, cohort dashboards, faculty review of generated material
+```
+
+**Weeks 1–2.** Stand up `PAIDEIA-mcp` against `ollama` on the client's hardware with one real course's materials. The acceptance test is adversarial and worth writing into the SOW: **pull the network cable and the system still works.** If it does not, something is calling out and the sovereignty claim is void.
+
+**Weeks 3–4.** Wire `fsrs-rs` for scheduling and the LTI 1.3 launch, so the tool opens from inside the LMS the learners already use. No fork of the LMS at any point.
+
+**Weeks 5–7.** The xAPI spine into the client's own LRS, and the faculty review surface — a human signs off generated study material before a cohort sees it.
+
+🔵 **Why the licence stack is the sellable part.** Every component is MIT, Apache-2.0 or BSD-3-Clause, verified by first-hand payload read: `PAIDEIA-mcp` MIT, `ollama` MIT, `fsrs-rs` BSD-3-Clause, `pylti1.3` MIT, `lrsql` Apache-2.0. **Your layer can be closed and client-branded**, and nothing in the graph forces disclosure. Contrast **P2** and **P3**, where the copyleft LMS has to be held at arm's length by construction.
+
+🔴 **Three things this pattern must not be sold as.**
+1. **Not an assessment system.** The moment its output becomes the official basis for a grade or a ranking it is **Annex III high-risk** in the EU (2 December 2027), **high-impact** under South Korea's AI Basic Act, and inside Vietnam's `Decision 33/2026/QD-TTg` list. Keeping it demonstrably *formative* — a study aid the learner drives, never a system of record — is an **architecture deliverable**, and `intel/market.md` APAC says why that scoping line is itself billable.
+2. **Not a proctoring or monitoring tool.** Nothing here watches a learner. Keep it that way: exam monitoring is high-risk and emotion recognition in schools has been prohibited in the EU since February 2025.
+3. **Not evidence of adoption.** `PAIDEIA-mcp` carries `2` stars. It is a 2026 repository with one author and a single push on its creation date (`2026-06-14`). 🔴 **Pin the commit, read the code before it goes near a client, and budget for maintaining it yourself** — this is an adopt-and-harden of a small codebase, which is the honest framing, and the same caution `agents/top.md` attaches to every low-star row.
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
