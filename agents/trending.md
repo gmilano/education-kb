@@ -4,6 +4,109 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p661) — 🔴 **TWO SHELVED ABSENCE CLAIMS ARE FALSE, AND THIS BASE'S OWN LOGS REFUTED ONE OF THEM `451` PASSES AGO. THE MECHANISM IS NAMED: p569's ABSENCE-CLAIM CENSUS COMPARES ABSENCE SENTENCES AGAINST SHELF ROWS ONLY, SO A CLAIM WHOSE REFUTATION LIVES IN AN APPEND-ONLY LOG IS INVISIBLE TO THE ONE INSTRUMENT BUILT TO CATCH IT. 🟢 `whisper` IS MIT AT `111,975★` AND HAS NEVER BEEN SHELVED. 🔴 THE MANDATED LEGS NIL A SEVENTEENTH TIME ON `43/46`.**
+
+**Verification channels, re-tested before use at p661:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars/licence/push date — 🟡 **live but NON-UNIVERSAL, with a named specimen this pass** (`661-E`); repository **HTML pages** — 🔴 **`403`**, unchanged since p659, so every star figure this pass is **single-channel**; `img.shields.io` — 🔴 **`000`, connection refused**; `gh api repos/{owner}/{repo}` — 🔴 **`403`** for any repository not attached to this session, as this base has recorded since p652.
+
+| `p661` registered | Verdict |
+|---|---|
+| 🔴 `661-A` — **`agents/top.md` says *"Proctoring and assessment integrity remain genuinely unsupplied under a permissive licence … Nothing found in any pass, p653 included."* It is false, and `agents/trending.md:28089` has held the refutation since `p202` — `451` passes before the sentence naming p653 was written.** Six permissive integrity addresses are held in these logs and **re-verified first-hand this pass** | 🔴 **FALSE ABSENCE CLAIM — CORRECTED** |
+| 🔴 `661-B` — **`intel/trends.md` **T29** says accessibility is *"the one named demand driver in this KB with no permissive answer"* and that `captioning` returns *"zero rows on any shelf"*. `openai/whisper` is **MIT**, `111,975★`, and is named in BOTH append-only logs as *"the ASR baseline"* — and is on no shelf.** Captioning existing lecture video is the largest single remediation task the April 2026 ADA deadline creates | 🔴 **OVERCLAIMED ABSENCE — WITHDRAWN AND NARROWED** |
+| 🟢 `661-C` — **the mechanism, and it is structural rather than careless.** `evidence/absence-claim-census.2026-10-31-p569.tsv` scored `1,780` absence claims against `shelf_rows_indexed = 10892` — *"lines carrying a github.com address"* on the **11 live pages**. The two append-only logs are `124,015` lines of exactly such addresses, and an absence claim is only flagged when its tokens collide with a **shelf row**. **A claim refuted in a log cannot be flagged by it** | 🟢 **NAMED MECHANISM** |
+| 🔴 `661-H` — **the ledger is WORSE evidence than the logs, not better: `openai/whisper` has been in `evidence/address-ledger.tsv` since `p6` with a CORRECT `MIT` verdict and `filed_on = "-"` — `655` passes indexed, verified and never shelved — while the shelves said accessibility had no permissive answer.** `GoogleChrome/lighthouse` since `p19`, same story. 🔧 **And two ledger verdicts are wrong in the RESTRICTIVE direction:** `lebmatter/exampro` (`p9`) and `vardanagarwal/Proctoring-AI` (`p25`) both carried `unstated` while serving clean MIT payloads | 🔧 **INDEX WAS RIGHT AND UNREAD; 2 VERDICTS REPAIRED** |
+| 🟡 `661-D` — the mandated legs, scored with a denominator: **`46` facts tested, `43` already held, `3` candidate-novel, `0` adoptable without a primary source.** Seventeenth consecutive near-nil. A three-item nonsense control returned `3/3 NOVEL`, so the instrument was not answering HELD indiscriminately | 🟡 **NIL — INSTRUMENT VALIDATED** |
+| 🔴 `661-E` — **the `search/repositories` channel is not universal, with a specimen.** `-f q='repo:NSoiffer/MathCAT'` returns **`422 Validation Failed`** (*"resources do not exist or you do not have permission"*) for a repository that `git ls-remote` resolves and whose MIT payload reads clean at `1,065 B`. `gh api repos/NSoiffer/MathCAT` returns `403`. **Both star channels fail on the same address, so MathCAT is shelved with stars `unmeasured` rather than carried** | 🔴 **CHANNEL CAVEAT — p660's `660-P` REPRODUCES** |
+| 🔴 `661-F` — **the APAC leg reproduced the TEQSA institutional-action-plan claim for a THIRD time** (original rejection p652, repeat p658, repeat p661). The regional legs' value remains adversarial | 🔴 **KNOWN-FALSE CLAIM REFUSED AGAIN** |
+| 🔴 `661-G` — `make hooks` denied an eleventh consecutive pass (`[Code from External]`). Contracts checked out-of-tree with `grep`/`awk` | 🔴 **BLOCKED — ELEVENTH PASS** |
+
+### 🔴 `661-A` — the proctoring absence claim, and the six addresses that refute it
+
+Every address below was re-verified **first-hand at p661**: default branch from `git ls-remote --symref`, grant payload byte-read from `raw.githubusercontent.com`, stars and push date from `gh api search/repositories`.
+
+| Repo | Grant | Payload | ★ (single-channel) | Last push | First logged |
+|---|---|---|---|---|---|
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** | `LICENSE`, `1,071 B`, `sha256₁₂ e4ecd14cc886`, *Copyright (c) 2020 Vardan Agarwal* | **633** | 🔴 `2024-12-10` | `p202` |
+| [`lebmatter/exampro`](https://github.com/lebmatter/exampro) | 🟡 **MIT, no licensor** | `license.txt`, `1,069 B`, `sha256₁₂ 002c2696d92b`, **`Copyright (c) [year] [fullname]` — template placeholder, verbatim** | **72** | 🟢 `2026-08-19` | `p202` |
+| [`AarambhDevHub/exam-cheating-detection`](https://github.com/AarambhDevHub/exam-cheating-detection) | 🟢 **MIT** | `LICENSE`, `1,068 B`, `sha256₁₂ 98b6493d3452`, *Copyright (c) 2025 AarambhTech* | **48** | 🟡 `2025-05-18` | logged |
+| [`vincenzo-afk/Proctored-MCQ-Exam-Platform`](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) | 🟢 **MIT** | `LICENSE`, `1,072 B`, `sha256₁₂ ddf9725976f3`, *Copyright (c) 2026 BHARANI KUMAR S* | **37** | 🟢 `2026-08-24` | logged |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | 🟢 **Apache-2.0** | `LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, canonical | **3** | 🟢 `2026-10-13` | `p406` |
+| [`Kdmeenaa/CloakBox`](https://github.com/Kdmeenaa/CloakBox) | 🟢 **Apache-2.0** | — (counter-category, not filed as supply) | **21** | 🟡 `2025-11-29` | `p480` |
+
+🔵 **What the correct claim is.** Not *"nothing exists"* — that is refuted. Not *"the gap is closed"* either, because the shape is the one this base has now met four times (Moodle bridges, assessment scoring, autograding, and now integrity): **supply exists, and it is shallow and fragmented.** The highest-starred row is `633★` and **dormant for eleven months**. The only live rows are `72★`, `37★`, `48★` and `3★`. **Nothing here is production-grade**, and that matters more here than anywhere else on these shelves, because this is the single most regulated use case in education AI — EU AI Act Annex III high-risk, with emotion recognition in schools prohibited outright since February 2025. 🔴 **So the engagement advice does not reverse, it sharpens:** the old advice (*"no permissive supply, so price a build"*) and the naive new reading (*"supply exists, so adopt"*) are **both wrong**. A `3★` repository must not be carried into an Annex III deployment, and the correct position is that permissive integrity software exists as **prior art to read**, not as a base to ship.
+
+🟡 **`lebmatter/exampro` carries the placeholder defect this base catalogued at `p202` and never promoted into the defect list on `repos/foundations.md`.** A stock MIT payload whose copyright line is `Copyright (c) [year] [fullname]` **names no licensor at all**. It would pass any licence-badge check and any SPDX scan. It is the cleanest specimen this base holds of a grant that is formally complete and legally unattributable, and counsel will find it.
+
+🔵 **`Kdmeenaa/CloakBox` is filed as a counter-category, not as supply** — it is Apache-2.0 software for making a virtual machine invisible to proctoring tools. p648 measured that `2.8%` of what the education trending channel returns is built to *defeat* coursework; this is the integrity-layer instance of that, and a proctoring proposal should expect it to exist on the other side.
+
+### 🔴 `661-B` — the accessibility claim, decomposed into the four capabilities the mandate actually creates
+
+T29's blanket statement is withdrawn. The April 2026 ADA Title II obligation is **not one capability**, and this base had permissive, production-grade answers to three of the four sitting in its logs, unshelved.
+
+| Capability the mandate creates | Permissive answer | Verified at p661 | Verdict |
+|---|---|---|---|
+| **Caption existing lecture video / audio** | [`openai/whisper`](https://github.com/openai/whisper) | 🟢 **MIT**, `LICENSE` `1,063 B`, `sha256₁₂ b5d65a59060e`, *Copyright (c) 2022 OpenAI*, `main`, **`111,975★`**, pushed `2026-08-31` | 🟢 **production-grade, closed derivative permitted** |
+| **Make mathematical content accessible** (speech + braille) | [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | 🟢 **MIT**, `LICENSE` `1,065 B`, `sha256₁₂ f8f65c73234f`, *Copyright (c) 2022 NSoiffer*, `main`, ★ **unmeasured** (`661-E`) | 🟢 **real, DAISY-sourced, closed derivative permitted** |
+| **Audit course pages for WCAG defects** | [`GoogleChrome/lighthouse`](https://github.com/GoogleChrome/lighthouse) | 🟢 **Apache-2.0**, `LICENSE` `11,358 B`, `sha256₁₂ cfc7749b96f6`, `main`, **`31,019★`**, pushed `2026-11-04` | 🟢 **production-grade; audits, does not repair** |
+| **Repair WCAG defects *in place* inside an LMS course** | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🔴 **GPL-3.0**, `LICENSE` `35,147 B`, `sha256₁₂ 8ceb4b9ee5ad`, `main`, **`117★`**, pushed `2026-11-04` | 🔴 **still the only tool, still copyleft** |
+
+🔵 **So T29's engagement conclusion survives for exactly one of four capabilities.** *"Deploy UDOIT in the client's estate, bill the remediation, ship no derivative"* is correct **only** for in-place WCAG repair inside the LMS. Captioning, mathematical accessibility and auditing all permit a closed, client-branded deliverable, and captioning is the largest of the four by volume of work the deadline actually creates. Shipped as `compose/patterns.md` **P26**.
+
+🟡 **Four further MIT assistive addresses were logged at `p457` and are deliberately NOT promoted**, because promoting them would be padding and this base's own quality bar forbids it: [`AVauraTech/assistive-ai-accessibility-suite`](https://github.com/AVauraTech/assistive-ai-accessibility-suite) (MIT, `1,065 B`, **`0★`**, pushed `2026-10-08`), [`Sais-gallego/braillevision-ocr`](https://github.com/Sais-gallego/braillevision-ocr) (MIT, `1,069 B`, **`0★`**, pushed `2026-10-19`), [`open-source-accessibility/monarch-message`](https://github.com/open-source-accessibility/monarch-message) (MIT, `1,082 B`, **`1★`**, pushed `2026-05-15`, 🟢 **North America** — APH Monarch hardware). All three re-verified first-hand this pass; all three are single-author artefacts at `0–1★`. **They are prior art, not supply, and are recorded here so a later pass does not rediscover them and mistake them for a shelf.**
+
+### 🟢 `661-C` — why the only instrument built to catch this could not
+
+`evidence/absence-claim-census.2026-10-31-p569.tsv` is a real instrument and it worked: it found `27` gateable absence claims and closed a 145-pass-old gap. Its scope is the defect:
+
+```
+broad   pages_scanned         11      live pages only, archive excluded
+broad   shelf_rows_indexed    10892   lines carrying a github.com address
+narrow  full_token_collision  27      the gateable set
+```
+
+An absence claim is flagged when its content tokens **collide with a shelf row**. The two append-only logs hold `124,015` lines carrying exactly such addresses — `agents/trending.md` `69,591` and `repos/trending.md` `54,424` — and a collision there is not scored. 🔴 **Both of this pass's false claims were refuted in a log and in no shelf row, so both were structurally invisible to the census.** The fix is one word in the census's scope — index the logs as a *refutation* corpus distinct from the shelf corpus — and it is registered as `Gap 661-C` rather than performed, because `make hooks` and `ingest/` are denied (`661-G`).
+
+### 🔴 `661-H` — the index was not missing these addresses. It held them, correctly, and nothing read it back
+
+p660's finding was that `evidence/address-ledger.tsv` was **missing** `35` of `159` shelf rows. p661's is the opposite and worse. The ledger **had** the accessibility layer all along, with the right licence, and the shelves contradicted it anyway:
+
+| Address | `first_seen_pass` | Ledger verdict before p661 | `filed_on` before p661 | Passes indexed-and-unshelved |
+|---|---|---|---|---|
+| [`openai/whisper`](https://github.com/openai/whisper) | **`p6`** | 🟢 `MIT` — **correct** | 🔴 `-` | **`655`** |
+| [`GoogleChrome/lighthouse`](https://github.com/GoogleChrome/lighthouse) | **`p19`** | 🟢 `Apache-2.0` — **correct** | 🔴 `-` | **`642`** |
+| [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | `p457` | 🟢 `MIT` — **correct** | 🔴 `-` | `204` |
+| [`vincenzo-afk/Proctored-MCQ-Exam-Platform`](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) | `p9` | 🟢 `MIT` — correct | 🔴 `-` | `652` |
+| [`AarambhDevHub/exam-cheating-detection`](https://github.com/AarambhDevHub/exam-cheating-detection) | `p9` | 🟢 `MIT` — correct | 🔴 `-` | `652` |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | `p392` | 🟢 `Apache-2.0` — correct | 🔴 `-` | `269` |
+| [`lebmatter/exampro`](https://github.com/lebmatter/exampro) | `p9` | 🔴 **`unstated` — WRONG** | 🔴 `-` | `652` |
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | `p25` | 🔴 **`unstated` — WRONG** | 🔴 `-` | `636` |
+
+🔴 **So the diagnosis in `661-C` is too kind to this base.** It is not only that the absence-claim census reads shelves and not logs. It is that **a correct, dated, machine-readable index of `3,227` addresses sat beside the pages making the false claims, and no instrument compares the two.** `whisper` — the single highest-starred permissive asset relevant to any education engagement, at `111,975★` — was in that index from `p6`, with the right licence, for `655` passes, while five consecutive passes of `intel/trends.md` **T29** asserted the layer had no permissive answer. 🔵 **`filed_on = "-"` is therefore the most valuable and least used column in this base**: it is a ready-made promotion backlog, and the query that produces it is one `awk` filter.
+
+🔧 **Two verdicts repaired this pass**, both wrong in the *restrictive* direction — the same defect class as p659's `ollama/ollama` (cited on five shelves while its ledger verdict read `unstated`). `lebmatter/exampro` serves stock MIT at `license.txt` (`1,069 B`, `sha256₁₂ 002c2696d92b`) and `vardanagarwal/Proctoring-AI` serves stock MIT at `LICENSE` (`1,071 B`, `sha256₁₂ e4ecd14cc886`). Both were byte-read this pass. 🔵 **A restrictive-direction error is the quieter and more expensive kind:** an over-permissive verdict gets caught by counsel, while an `unstated` verdict on an MIT repository simply removes a usable asset from consideration and nobody ever finds out. p658's **T38** warned that the index's licence field is *"unsafe in the permissive direction"*; p661 adds that it is **also unsafe in the restrictive direction**, and that this base has now measured three specimens of the latter.
+
+🟢 **Nine ledger rows updated at p661**: seven `filed_on` values set from `-` to the page that now carries them, two verdicts corrected, one address appended (`Kdmeenaa/CloakBox`, `p661`, filed as a counter-category rather than as supply).
+
+### 🟡 `661-D` — the mandated legs, with a denominator
+
+All eight mandated searches were run (four global, one per region) and scored against HEAD. **`46` facts tested, `43` already held.** The three candidate-novel items are all demand-side and all secondary, and none is adopted into a shelf as a quotable figure:
+
+- 🟡 **The Education Commission of the States counts `29` states with an AI task force or commission.** Novel to this base; ECS is a credible body but the figure reaches this pass through a vendor blog, not an ECS publication. Recorded as an indication of governance-body density, not as a number.
+- 🟡 **The Southern Regional Education Board has an AI Commission.** Novel; no primary document read. Potentially useful as a named regional convener for a US South engagement.
+- 🟡 **A Digital Education Council LATAM survey puts `92%` of students and `79%` of faculty actively engaging with AI.** This base already holds DEC as a source and already holds the IESALC LATAM figures (`87%` / `26%` / `55%`); the `92/79` pair is new and **disagrees in framing** with IESALC's institution-level numbers. Not reconciled, so not shelved.
+
+🔴 **Everything else reproduced**, including the full regulatory set this base has held for many passes: the `134` bills across `31` states, Maryland SB 720, New York A 9190, Ohio's July 2026 deadline, California AB 1159 and SB 243, the K-12 AI Literacy and Readiness Act, the Parents & Kids Safe AI Act, Gallup's `60%`, Child Trends, the Working for Workers Four Act, Regulation (EU) 2026/1744's `2 December 2027` and `2 August 2028` dates, UK DfE January 2026 standards, Ofqual March 2026, KHDA Dubai, Europe at `$2.64B`, Finland/Estonia/Netherlands, the UK `£4M` marking fund, the Digital Education Action Plan, Korea's AI Basic Act, Vietnam's six-sector decision, Singapore's guidelines, UNESCO IESALC's `200` institutions across `19` countries, Ceibal, Cetic.br's `53%/22%`, Universidad de los Andes' `716` instruments, the UNESCO LAC Observatory and Tecnológico de Monterrey.
+
+🟢 **Control.** `Zorblaxian Ministry of Pedagogy`, `FSRS-9 quantum scheduler` and `Patagonian AI Education Act 2031` were scored in the same run and all three returned **NOVEL**, so the `43/46` HELD rate is a measurement and not the p647-L defect of answering HELD to everything.
+
+### 🔴 `661-F` — TEQSA, a third time
+
+The APAC leg again reproduced, from a law-firm-style summary, the assertion that **TEQSA requires Australian higher education providers to submit institutional gen-AI action plans.** p652 tested this and found no submission mandate — guidance plus Threshold Standard 5.2, not an instrument. p658 saw it return. It has now returned a third time. 🔵 **Three reproductions of one known-false claim from the same leg is a signature, not noise:** it means the claim is well-indexed in the secondary literature this leg reaches, and it will keep coming back. The operating rule stands and is reinforced — **run the regional legs append-and-compare, never overwrite.**
+
+### 🔴 Gaps re-probed this pass and still open
+
+- 🔴 **No OpenOlat agent bridge of any kind, fourth consecutive confirmation.** `openolat-mcp`, `frentix/openolat-mcp`, `OpenOLAT/openolat-mcp`, `frentix/openolat-ai` and `OpenOLAT/openolat-ai` were probed with `git ls-remote` at p661: **`0 of 5` resolve.** The LMS-bridge picture is unchanged — **Canvas `317★` → Moodle `27★` → OpenOlat `0`** — and so is the conclusion that this is the cleanest greenfield position on these shelves (`compose/patterns.md` **P12**).
+- 🔴 **In-place WCAG repair inside an LMS has no permissive answer.** Narrowed from T29's blanket claim, re-verified this pass: `ucfopen/UDOIT` is GPL-3.0 and is still the only production tool.
+
 ## 🆕 2026-11-05 (p660) — 🔧 **THE INDEX THIS BASE CHECKS "ALREADY HELD?" AGAINST WAS MISSING `35` OF ITS OWN `159` SHELF ROWS — `22.0 %` INVISIBLE, `18` OF THEM ONE FAMILY ADDED AT p658. MEASURED, THEN REPAIRED. 🟢 ALL `35` RE-VERIFIED FIRST-HAND: `32/32` LICENCE CELLS AND `6/6` BYTE COUNTS REPRODUCE — THE SHELF WAS RIGHT, THE INDEX WAS NOT. 🟢 A NEW SUPPLY CHANNEL (ORG ENUMERATION) BREAKS THE NINETEENTH DIGEST NIL AND FINDS **SCRATCHJR IS BSD-3-CLAUSE**. 🔴 `make hooks` DENIED A TENTH CONSECUTIVE PASS.**
 
 **Verification channels, re-tested before use at p660:** existence and real default branch via `git ls-remote --symref` — 🟢 **live**; licence by byte-reading the grant payload from `raw.githubusercontent.com` — 🟢 **live**; `gh api search/repositories` for stars/licence/description — 🟢 **live, with two new caveats** (below); repository **HTML pages** — 🔴 **`403`**, unchanged from p659, so every star figure this pass is **single-channel**; `img.shields.io` as a candidate second star channel — 🔴 **`403 CONNECT tunnel failed`**; `eur-lex.europa.eu` — 🔴 **refused by the egress proxy** (`connect_rejected`), *not* a DNS failure as p659 recorded.

@@ -777,3 +777,65 @@ Then read the README for which branch carries the artefact you actually want —
 - **Weeks 7–8 (conditional)** — Local-model feedback via `ollama` only if the client has a data-residency requirement; otherwise skip it and save the inference engineering.
 
 **What to tell the client up front.** The ScratchJr fork is **four years cold**. That is not a defect for a fork-and-own engagement — it means the upstream will not surprise you — but it does mean there is no community fixing iOS/Android build breakage for you, and that maintenance line must be in the price. The micro:bit half is the opposite: pushed yesterday, so it needs tracking rather than owning. Scoping the two halves the same way is the mistake this pattern exists to prevent.
+
+## P26 — Accessibility remediation where three quarters of it can be a closed product (institutions under the April 2026 US ADA deadline: 8–12 weeks) 🟢 new at p661
+
+**The engagement this answers.** A large US public university or community-college system is under the **April 2026 ADA Title II** obligation and has a backlog of inaccessible course content: thousands of hours of uncaptioned lecture video, mathematics rendered as images, and HTML course pages that have never been audited. Until p661 this base answered that engagement with *"there is no permissive supply — sell services, ship no derivative"* (`intel/trends.md` **T29**). **That answer was wrong for three quarters of the work.**
+
+**Why it is new at p661.** T29's blanket claim was withdrawn when the mandate was decomposed into the capabilities it actually creates. Three of four have production-grade permissive answers that this base had measured in its own logs and never shelved — `openai/whisper` is **MIT at `111,975★`** and is named in both append-only logs as *"the ASR baseline"*. Only the fourth is copyleft-locked. **The licence boundary runs between capabilities, not around the engagement**, and that is what makes a product possible here for the first time.
+
+```
+  BACKLOG IN  ─────────────────────────────────────────────────────────────────────
+   lecture video · recorded lectures · podcasts         course HTML · PDFs · math
+         │                                                       │
+         ▼                                                       ▼
+  ┌──── 🟢 PERMISSIVE — CLOSED DERIVATIVE PERMITTED ────────────────────────────┐
+  │                                                                             │
+  │  CAPTIONING  (biggest piece of the work by volume)                          │
+  │    openai/whisper            MIT   1,063 B   111,975★   `main`              │
+  │      └─ self-host: no per-minute vendor fee, no student audio leaving        │
+  │         the estate → the data-residency answer sells this on its own        │
+  │                                                                             │
+  │  MATHEMATICS                                                                │
+  │    NSoiffer/MathCAT          MIT   1,065 B   ★ unmeasured   `main`          │
+  │      └─ MathML → speech (15 languages) + braille (Nemeth, UEB, CMU)         │
+  │         + structural navigation · DAISY-sourced                             │
+  │      └─ 🔴 needs MathML IN, so OCR/authoring is YOUR integration work       │
+  │                                                                             │
+  │  AUDIT / TRIAGE / REPORTING                                                 │
+  │    GoogleChrome/lighthouse   Apache-2.0   11,358 B   31,019★   `main`       │
+  │      └─ runs LOCALLY, nothing leaves the machine → quotable under an        │
+  │         EMEA/LATAM data-residency clause as well as a US one                │
+  │      └─ audits only; produces the WORKLIST, performs no repair              │
+  │                                                                             │
+  │   ⇒ wrap these three behind ONE MCP surface + a queue. This is the          │
+  │     BRANDED, CLOSED DELIVERABLE. MIT and Apache-2.0 both permit it.         │
+  └─────────────────────────────────────────────────────────────────────────────┘
+         │  worklist: defect → file → owner → status
+         ▼
+  ┌──── 🔴 COPYLEFT — DEPLOY, DO NOT DERIVE ───────────────────────────────────┐
+  │  IN-PLACE WCAG REPAIR INSIDE THE LMS COURSE                                │
+  │    ucfopen/UDOIT   GPL-3.0   35,147 B   117★   `main`   (pushed 2026-11-04)│
+  │      └─ scans Canvas content, explains defects, fixes many in place        │
+  │      └─ STILL THE ONLY PRODUCTION TOOL. Run it inside the client's own     │
+  │         estate, unmodified. Bill the remediation and the integration.      │
+  │         Ship NO derivative of this component.                             │
+  └────────────────────────────────────────────────────────────────────────────┘
+         │  evidence of remediation
+         ▼
+  yetanalytics/lrsql   Apache-2.0   144★   ← xAPI statements per remediated asset
+      (the evidence spine from P17 — reuse it, do not build a second one)
+```
+
+**Wiring, concretely.**
+
+1. **Triage first, because it sizes the contract.** Run `lighthouse` headless across the course estate's public HTML and emit one row per defect. This is a worklist, not a fix, and it is the only step that tells the client how big the backlog is. Lighthouse is Apache-2.0, so the triage dashboard is yours.
+2. **Captioning queue.** Self-host `whisper`, feed it the video backlog, emit WebVTT. Two commercial arguments, both stronger than the technical one: there is **no per-minute vendor fee** at estate scale, and **no student audio leaves the institution**, which is the clause that kills most SaaS captioning bids in public-sector procurement. Human review of the output is a billable line, not a defect — budget it explicitly.
+3. **Mathematics path.** Route MathML through `MathCAT` for speech and braille. 🔴 **Scope this honestly:** MathCAT needs MathML as input, so if the client's maths is page images the conversion step is *your* work and is the larger half of the task. Do not price this alongside captioning as if it were the same kind of job.
+4. **One MCP surface over all three.** `caption_asset`, `audit_page`, `render_math_accessible`, each returning a status the queue can track. This wrapper plus the triage dashboard **is the product**, and MIT + Apache-2.0 permit it to be closed and client-branded.
+5. **UDOIT last, and at arm's length.** Deploy it unmodified in the client's estate for in-place Canvas repair. Do not import it, do not link it, do not fork it into the product tree. It is GPL-3.0 and it is the one component that must stay a deployed tool rather than a dependency.
+6. **Evidence out.** Write an xAPI statement per remediated asset into `lrsql` (Apache-2.0), reusing **P17**'s spine rather than building a second one. The institution needs to *show* compliance, not merely achieve it, and a dated statement per asset is the artefact an auditor accepts.
+
+**What to say in the proposal.** *"Most of this programme is a product we can build and brand; the last mile inside Canvas is a tool we deploy and operate for you."* That sentence is the whole value of this pattern, and until p661 this base could not say it.
+
+**🔴 What this pattern does not claim.** The **April 2026 deadline itself is carried from secondary sources** and has never been read in primary form by this base — confirm it against the rule text before it anchors a contract date. `MathCAT`'s adoption is **unmeasured**: three independent channels refused the address at p661 (`gh api search/repositories` `422`, `gh api repos/` `403`, HTML `403`), so its licence and existence are first-hand facts and its popularity is not. And `lighthouse` is a **general-purpose** web auditor, not an education tool — it will flag defects in LMS chrome that the institution does not own, so the worklist needs a scoping filter before anyone is handed it.

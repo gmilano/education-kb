@@ -1,0 +1,37 @@
+tier	metric	value	note
+run	pass	p661	2026-11-05
+run	when	post-write	figures are the FINAL run, after this pass's own sections were written
+channel	ls_remote	live	existence + real default branch
+channel	raw_githubusercontent	live	grant payload byte-read
+channel	gh_search_repositories	live-nonuniversal	422 on NSoiffer/MathCAT; specimen for p660's 660-P
+channel	gh_api_repos	403	not-attached repositories, as held since p652
+channel	repo_html_page	403	unchanged since p659; every star figure single-channel
+channel	img_shields_io	000	connection refused
+legs	facts_tested	46	four global + one per region, scored against HEAD
+legs	already_held	43	93.5 pct
+legs	candidate_novel	3	ECS 29-states, SREB AI Commission, DEC LATAM 92/79
+legs	adoptable_without_primary_source	0	seventeenth consecutive near-nil
+legs	control_items	3	Zorblaxian / FSRS-9 / Patagonian
+legs	control_novel	3	3/3 -> instrument not answering HELD indiscriminately
+legs	known_false_reproduced	1	TEQSA action-plan claim, third reproduction (p652 p658 p661)
+absence	false_claims_found	2	agents/top.md proctoring; intel/trends.md T29 accessibility
+absence	refuted_in_shelf_rows	0	neither refutation lived in a shelf row
+absence	refuted_in_append_only_logs	2	agents/trending.md:28089 (p202) and both logs (whisper)
+absence	refuted_in_address_ledger	2	whisper p6 verdict MIT filed_on=-; exampro p9 verdict unstated
+absence	census_p569_scope_shelf_rows	10892	lines carrying a github.com address, 11 live pages
+absence	log_lines_unscored_by_census	124015	agents/trending.md 69591 + repos/trending.md 54424
+ledger	rows_total	3228	3227 before this pass
+ledger	filed_on_set_from_dash	7	whisper lighthouse MathCAT UDOIT exam-guard Proctored-MCQ exam-cheating-detection
+ledger	verdicts_repaired	2	lebmatter/exampro and vardanagarwal/Proctoring-AI: unstated -> MIT, payloads byte-read
+ledger	verdict_error_direction	restrictive	opposite of T38's permissive-direction warning; third specimen
+ledger	addresses_appended	1	Kdmeenaa/CloakBox, counter-category not supply
+ledger	whisper_passes_indexed_unshelved	655	first_seen p6, correct MIT verdict, filed_on=- until p661
+shelves	repos_foundations	78->81	whisper lighthouse MathCAT, all promotions not discoveries
+shelves	verticals_solutions	37->38	lebmatter/exampro, the one platform-shaped integrity row
+shelves	agents_top_rows	29	unchanged; proctoring gap bullet corrected, no new agent rows
+shelves	measured_not_shelved	6	0-1 star assistive artefacts + copyleft auditors; recorded with numbers, not padded
+trends	corrected	1	T29 headline withdrawn and narrowed to one of four capabilities
+trends	added	2	T39 absence-refutation channel; T40 five-for-five adoption-gap rule
+patterns	added	1	P26 accessibility remediation, permissive product + GPL-contained last mile
+gaps	reprobed_still_open	2	OpenOlat agent bridge 0/5 resolve; in-place WCAG repair GPL-only
+hooks	make_hooks	denied	eleventh consecutive pass; contracts checked out-of-tree with grep/awk

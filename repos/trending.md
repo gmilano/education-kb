@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-05
 ---
 
+## 🆕 2026-11-05 (p661) — 🟢 **`repos/foundations.md` 78 → 81, AND ALL THREE NEW ROWS WERE ALREADY NAMED IN THESE LOGS — ONE OF THEM AT `111,975★`. 🔴 THE SHELF SAID ACCESSIBILITY HAD NO PERMISSIVE ANSWER WHILE `openai/whisper` SAT IN BOTH LOGS AS "THE ASR BASELINE".**
+
+**Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); grant payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars (🟡 live, **non-universal** — `661-E`); repository **HTML pages** (🔴 `403`) and `img.shields.io` (🔴 `000`), so **every star figure below is single-channel**.
+
+### 🟢 `repos/foundations.md` 78 → 81 — the accessibility layer, promoted off the logs
+
+Not a discovery. A **promotion**: all three addresses are named in these append-only logs, two of them for many passes, and none had ever reached a shelf. Each row's grant payload was byte-read at p661 at its resolved default ref.
+
+| Repo | Licence | Payload | ★ (single-channel) | Last push | Why it is filed |
+|---|---|---|---|---|---|
+| [`openai/whisper`](https://github.com/openai/whisper) | 🟢 **MIT** | `LICENSE`, `1,063 B`, `sha256₁₂ b5d65a59060e`, *Copyright (c) 2022 OpenAI* | **`111,975`** | 🟢 `2026-08-31` | **The permissive answer to the largest single task the April 2026 ADA deadline creates: captioning existing lecture video.** Named in both logs as *"the ASR baseline"* and shelved by neither, while `intel/trends.md` **T29** asserted accessibility had no permissive answer. Highest-starred row on this page |
+| [`GoogleChrome/lighthouse`](https://github.com/GoogleChrome/lighthouse) | 🟢 **Apache-2.0** | `LICENSE`, `11,358 B`, `sha256₁₂ cfc7749b96f6`, canonical | **`31,019`** | 🟢 `2026-11-04` | WCAG auditing that **runs locally, with no data leaving the machine** — quotable under a data-residency clause, which is why it matters for EMEA and LATAM public-sector work. 🔴 It audits and does **not** repair; the repair half is still GPL-only |
+| [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | 🟢 **MIT** | `LICENSE`, `1,065 B`, `sha256₁₂ f8f65c73234f`, *Copyright (c) 2022 NSoiffer* | 🔴 **unmeasured** | — | MathML → **speech in 15 languages** + **braille** (Nemeth, UEB Technical, CMU) + structural math navigation; **DAISY-sourced**. The mathematics half of accessibility remediation, which no other address on these shelves touches. Logged at `p457`, unshelved for `204` passes |
+
+🔴 **MathCAT's stars are recorded as `unmeasured`, not estimated.** `gh api search/repositories -f q='repo:NSoiffer/MathCAT'` returns **`422 Validation Failed`** and `gh api repos/NSoiffer/MathCAT` returns **`403`**; the HTML page channel has been `403` since p659. **Three channels, three failures, on an address whose existence and MIT payload both verify.** p660 recorded the `search/repositories` channel as *"live, non-universal"* (`660-P`) without a specimen; this is the specimen. 🔵 The operating rule this base already holds is reinforced: **never conclude from an API refusal that an address is dead** — and never fill the resulting cell with a guess.
+
+### 🔴 Why these three sat in the logs for so long — the mechanism, measured
+
+This is the fourth time in six passes that the defect has been a **promotion failure rather than a discovery failure** (p656 interop/telemetry, p659 PAIDEIA and `ollama`, p660 the `35`-row ledger hole, p661 accessibility). p661 names the reason the self-check misses it:
+
+`evidence/absence-claim-census.2026-10-31-p569.tsv` scores absence claims against `shelf_rows_indexed = 10892` — *"lines carrying a github.com address"* across the **11 live pages** — and flags a claim only on a **shelf-row** token collision. These two logs are `124,015` lines of exactly such addresses (`69,591` + `54,424`). **A claim refuted in a log collides with nothing the census scores.** Registered as `Gap 661-C`; not fixed this pass because `make hooks` and `ingest/` are denied for an eleventh consecutive pass.
+
+### 🟡 Measured first-hand this pass and deliberately NOT shelved
+
+Fewer real rows beat padding, so these are recorded here with their numbers instead:
+
+| Repo | Licence | ★ | Last push | Why not shelved |
+|---|---|---|---|---|
+| [`AVauraTech/assistive-ai-accessibility-suite`](https://github.com/AVauraTech/assistive-ai-accessibility-suite) | MIT, `1,065 B` | **0** | `2026-10-08` | Eight assistive modalities in one PWA, MediaPipe on-device via WASM — genuinely interesting, and a single-author artefact at zero adoption |
+| [`Sais-gallego/braillevision-ocr`](https://github.com/Sais-gallego/braillevision-ocr) | MIT, `1,069 B` | **0** | `2026-10-19` | Braille OCR in reverse (embossed cells → text → speech). Prior art for a capability nothing else here has |
+| [`open-source-accessibility/monarch-message`](https://github.com/open-source-accessibility/monarch-message) | MIT, `1,082 B` | **1** | `2026-05-15` | Braille messenger for APH Monarch hardware. 🟢 **North America** on stated hardware target |
+| [`pa11y/pa11y`](https://github.com/pa11y/pa11y) | 🔴 **LGPL-3.0** | — | — | Copyleft. Re-stated here because it is the obvious first guess for WCAG auditing and it is **not** permissive — `lighthouse` is the row to use |
+| [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) | 🔴 **MPL-2.0** | — | — | Weak copyleft, file-level. Usable, but not a clean permissive base, and this base's own p28 correction table once printed it as `GPL` |
+| [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/ocrmypdf) | 🔴 **MPL-2.0** | — | — | Scanned-PDF remediation; same weak-copyleft caveat |
+
+### 🔴 The proctoring and integrity layer — six permissive addresses, re-verified, and why none is shelved as a foundation
+
+`agents/top.md` carried *"proctoring and assessment integrity remain genuinely unsupplied under a permissive licence"* while `agents/trending.md:28089` held `lebmatter/exampro` (MIT, `72★`, live) since **`p202`**. The claim is corrected on `agents/top.md` and the full verified table is in `agents/trending.md` (`661-A`). Two rows reach `verticals/solutions.md` as *platforms*; the rest stay logged, because the strongest is `633★` and **dormant since `2024-12-10`** and the live ones run `72★ / 48★ / 37★ / 3★`. 🔴 **This is the one layer on these shelves where shallow supply is a safety finding and not merely an adoption note:** EU AI Act Annex III high-risk, emotion recognition in schools prohibited since February 2025. **Prior art to read, not a base to ship.**
+
 ## 🆕 2026-11-05 (p660) — 🟢 **`repos/foundations.md` 78 ← 72, AND ALL SIX NEW ROWS CAME FROM ENUMERATING AN ORG THIS BASE ALREADY HELD, NOT FROM A DIGEST. 🟢 SCRATCHJR IS BSD-3-CLAUSE — A WHOLE PERMISSIVE EARLY-YEARS PRODUCT p658 MISSED. 🔧 AND THE INDEX THAT SAYS WHAT THIS BASE HOLDS WAS MISSING `35` OF ITS `159` SHELF ROWS.**
 
 **Verification channels:** existence and real default branch via `git ls-remote --symref` (🟢 live); licence payload byte-read from `raw.githubusercontent.com` (🟢 live); `gh api search/repositories` for stars (🟢 live, non-universal — see `660-P`); repository **HTML pages** (🔴 **`403`**) and `img.shields.io` (🔴 **`403`**), so **every star figure below is single-channel**.

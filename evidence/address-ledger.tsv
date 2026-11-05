@@ -53,7 +53,7 @@ a2br/moodle-mcp	p104	unstated	-	2026-10-10	3	3
 a5anka/ai-lab-2026-africa-agent-manager	p31	no-grant	-	2026-10-07	1	1
 aadyatalreja/Adaptive-AI-Learning-Assistant	p156	unstated	-	2026-10-12	1	1
 Aaradhya-Dev-Tamrakar/google-classroom-mcp	p74	MIT	-	2026-10-20	2	2
-AarambhDevHub/exam-cheating-detection	p9	MIT	-	2026-10-06	2	1
+AarambhDevHub/exam-cheating-detection	p9	MIT	agents/top.md:p661-correction	2026-11-05	2	1
 AaronGrace978/EduHelp	p288	AGPL-3.0	-	2026-10-18	1	1
 Aaryan-Kapoor/d2l-cli	p387	unstated	-	2026-10-22	2	1
 aaryansamanta/ai-ethos	p117	unstated	-	2026-10-28	8	7
@@ -1141,7 +1141,7 @@ google/codeworld	p245	Apache-2.0	-	2026-10-16	1	1
 google/differential-privacy	p16	Apache-2.0	-	2026-10-01	1	1
 google/licenseclassifier	p333	Apache-2.0	-	2026-10-20	1	1
 google/prog-edu-assistant	p85	unstated	-	2026-10-19	4	4
-GoogleChrome/lighthouse	p19	Apache-2.0	-	2026-10-06	2	1
+GoogleChrome/lighthouse	p19	Apache-2.0	repos/foundations.md	2026-11-05	2	1
 GoogleCloudPlatform/aira	p11	Apache-2.0	-	2026-10-01	1	1
 googleworkspace/oneroster-integration-conformance-tests	p134	Apache-2.0|MIT	-	2026-10-16	3	2
 gotonote/awesome-agent-boom	p463	unstated	-	2026-10-26	1	1
@@ -1665,7 +1665,7 @@ learninglocker/xapi-service	p640	MIT	repos/foundations.md,verticals/solutions.md
 LearningOS/os-lectures	p175	unstated	-	2026-10-13	1	1
 Learnosity/learnosity-qti	p84	GPL-2.0	-	2026-11-01	6	4
 LearnPress/learnpress	p91	unstated	-	2026-10-19	16	11
-lebmatter/exampro	p9	unstated	-	2026-10-21	4	3
+lebmatter/exampro	p9	MIT:no-licensor-[year]-[fullname]-placeholder	verticals/solutions.md	2026-11-05	4	3
 leemonade/leemons	p12	MIT	-	2026-10-17	7	7
 legostin/learn-almost-anything	p156	unstated	-	2026-10-12	1	1
 Lendarixon/awesome-ai-detection	p15	CC0-1.0	-	2026-10-01	2	1
@@ -2055,7 +2055,7 @@ NousResearch/hermes-agent	p28	MIT	repos/foundations.md	2026-11-05	4	4
 novatrix-2030/SIH-2026	p11	unstated	-	2026-10-01	1	1
 nsip/curriculum-mapper	p91	unstated	-	2026-10-11	2	2
 nso-india/esankhyiki-mcp	unpassed	unstated	intel/market.md	-	1	0
-NSoiffer/MathCAT	p457	MIT	-	2026-10-26	1	1
+NSoiffer/MathCAT	p457	MIT	repos/foundations.md	2026-11-05	1	1
 nubabe/webuntis-org	p243	no-grant	-	2026-10-16	1	1
 nucleuscloud/neosync	p352	MIT	-	2026-10-21	1	1
 numbas/Numbas	p89	Apache-2.0	compose/patterns.md,intel/market.md,verticals/solutions.md	-	16	14
@@ -2151,7 +2151,7 @@ Open-TutorAi/open-tutor-ai-CE	p13	BSD-3-Clause	agents/top.md,intel/market.md	202
 open-webui/open-webui	p383	BSD	-	2026-10-25	4	2
 opena2a-org/damn-vulnerable-ai-agent	p416	Apache-2.0	-	2026-10-23	1	1
 openai/grade-school-math	p390	MIT	-	2026-10-22	1	1
-openai/whisper	p6	MIT	-	2026-10-06	2	1
+openai/whisper	p6	MIT	repos/foundations.md	2026-11-05	2	1
 openaziz00-sudo/Arab-Artificial-Intelligence	p401	unstated	-	2026-10-23	2	1
 OpenBoard-org/OpenBoard	p265	GPL-3.0	-	2026-10-18	2	2
 opencast/annotation-tool	p483	ECL-2.0	-	2026-10-27	1	1
@@ -2558,7 +2558,7 @@ saytooyum/AI-Based-Timetable-Generation-System	p132	MIT	-	2026-10-13	3	2
 SayvaBR/assistente-ped	p359	unstated	-	2026-10-21	1	1
 sburton0/encyclopedia-2000	p479	GPL-3.0	-	2026-10-27	1	1
 scaleapi/researchrubrics	p56	MIT|no-grant	-	2026-10-11	3	2
-Scaler-Opensource/exam-guard	p392	Apache-2.0	-	2026-10-22	3	1
+Scaler-Opensource/exam-guard	p392	Apache-2.0	agents/top.md:p661-correction	2026-11-05	3	1
 schemaspy/schemaspy	p333	GPL-3.0	-	2026-10-20	1	1
 schild-report/schild.report	p237	MIT	-	2026-10-16	3	3
 Schlaflied/Plot-Ark	p83	AGPL-3.0	-	2026-10-17	2	2
@@ -2916,7 +2916,7 @@ ucfopen/cookiecutter-python-lti	p11	unstated	-	2026-10-07	3	2
 ucfopen/Materia	p11	AGPL-3.0	-	2026-10-28	2	2
 ucfopen/Obojobo	p11	AGPL-3.0	-	2026-10-06	1	1
 ucfopen/pylti1.3	p23	unstated	-	2026-10-23	9	7
-ucfopen/UDOIT	p12	GPL-3.0	-	2026-11-01	3	3
+ucfopen/UDOIT	p12	GPL-3.0	intel/trends.md:T29	2026-11-05	3	3
 UCL-INGI/INGInious	p123	unstated	-	2026-10-21	6	4
 ucsd-ets/openedx-caliper-tracking	p301	GPL-3.0	-	2026-10-18	1	1
 Udayraj123/OMRChecker	p457	MIT	-	2026-10-26	1	1
@@ -2979,7 +2979,7 @@ Vallaury/vallaury-desktop	p243	AGPL-3.0	-	2026-10-16	1	1
 valorisa/Reverse-Engineer-Anything	p479	MIT	-	2026-10-27	1	1
 vanderbilt-data-science/knowledge-spaces	p83	MIT	-	2026-11-01	6	6
 vanderschaarlab/synthcity	p16	Apache-2.0	-	2026-10-01	1	1
-vardanagarwal/Proctoring-AI	p25	unstated	-	2026-10-19	6	5
+vardanagarwal/Proctoring-AI	p25	MIT	agents/top.md:p661-correction	2026-11-05	6	5
 vasanthsreeram/Alvarmethod	p11	unstated	-	2026-10-02	2	2
 Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning	p87	unstated	-	2026-10-04	1	1
 veraPDF/veraPDF-library	p26	GPL-3.0|MPL-2.0	-	2026-10-13	3	3
@@ -2997,7 +2997,7 @@ vilcaaguilerandrea-oss/carrera-lectora	p14	unstated	-	2026-10-01	1	1
 villadalmine/study-cybercirujas	p488	unstated	-	2026-10-27	1	1
 vincent-laizer/NECTA-API	p286	MIT	-	2026-10-18	2	1
 vincenzo-afk/PenFlow	p464	no-grant	-	2026-10-26	1	1
-vincenzo-afk/Proctored-MCQ-Exam-Platform	p9	MIT	-	2026-10-06	2	1
+vincenzo-afk/Proctored-MCQ-Exam-Platform	p9	MIT	agents/top.md:p661-correction	2026-11-05	2	1
 Vinger-lee/leap-framework	p79	MIT	-	2026-10-09	2	1
 viquta/Agent_Newton	p240	MIT	-	2026-10-16	2	1
 virgiliojr94/book-to-skill	p12	unstated	-	2026-10-29	16	12
@@ -3225,3 +3225,4 @@ microbit-foundation/cctd-ml-machine	p660	MIT	repos/foundations.md	2026-11-05	1	1
 scratchfoundation/Scratch_1.4	p660	licence-split:GPL-2.0+MIT+CC-BY-SA-3.0	intel/trends.md	2026-11-05	1	1
 RaspberryPiFoundation/scratch-curriculum	p660	CC-BY-NC-SA-4.0	intel/trends.md	2026-11-05	1	1
 google/blockly	p660	Apache-2.0	-	2026-11-05	1	1
+Kdmeenaa/CloakBox	p661	Apache-2.0:counter-category-not-supply	agents/trending.md	2026-11-05	1	1

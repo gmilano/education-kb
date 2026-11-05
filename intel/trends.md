@@ -294,7 +294,7 @@ T10 and T19 have recorded across many passes that the evidence base is this sect
 
 **So the gap moves rather than closing.** It was *"no permissive way to measure outcomes."* It is now *"one permissive way to measure outcomes, maintained by one small project, with no permissive fallback."* That is a better problem — it is buildable today — but it is a single-vendor dependency and any proposal selling measurement on a permissive stack should name it. 🔵 **The failure was never discovery: `lrsql` appears in 230 files of this repository's own logs, described there as the permissive production candidate, and had never reached a shelf.** **Confidence: high** on the licences and dates (all measured this pass); **moderate** on `lrsql`'s project health, which rests on commit recency and issue count rather than on any funding or governance signal.
 
-## T29 — The April 2026 US accessibility deadline is the one named demand driver in this KB with no permissive answer 🟢 new at p656
+## T29 — The April 2026 US accessibility deadline decomposes into four capabilities, and three of them had permissive answers in this base's own logs all along 🔴 corrected at p661
 
 This base records an **April 2026 ADA deadline for large US public institutions** as a North America demand driver, alongside the state-level activity in T3 and T12. p656 swept for the supply side and the result is negative:
 
@@ -304,6 +304,19 @@ This base records an **April 2026 ADA deadline for large US public institutions*
 - `screen-reader`, `captioning`, `dyslexia` and `special education` return **zero rows on any shelf** of this KB, before and after this pass.
 
 **Why this is a trend and not merely a gap.** Every other regulatory driver this base tracks — the EU AI Act's Article 50 transparency duty, Korea's high-impact assessment scope, US state model policies — creates demand that *permissive software can serve*. Accessibility is the exception: the mandate is hard, dated and enforceable, and the only real tool forbids a proprietary derivative. 🔵 **The engagement shape is therefore different in kind:** deploy UDOIT inside the client's own estate, bill the remediation work and the integration, and ship no derivative. It is a services engagement, not a product one — and saying that up front is more valuable than discovering it after a proposal has promised a platform. **Confidence: high** on the licence and the supply absence (both measured); **moderate** on the deadline itself, which this KB carries from secondary sources and has not read in primary form.
+
+🔧 **CORRECTED AT p661 — the headline claim above is withdrawn, and the paragraph below replaces it.** What was true: `topic:` and star-ranked queries over `accessibility`, `captioning`, `screen-reader` and `dyslexia` return nothing usable, and no shelf row carried those tags. What was false: the inference drawn from it — *"the one named demand driver in this KB with no permissive answer"*. **The mandate is not one capability, and this base held production-grade permissive answers to three of its four parts without ever shelving them.**
+
+| Capability the April 2026 deadline actually creates | Permissive answer | Verified first-hand at p661 |
+|---|---|---|
+| **Caption existing lecture video and audio** — by volume, the largest task the deadline creates | [`openai/whisper`](https://github.com/openai/whisper) | 🟢 **MIT**, `1,063 B`, `sha256₁₂ b5d65a59060e`, **`111,975★`**, pushed `2026-08-31` |
+| **Make mathematical content accessible** (speech, braille, navigation) | [`NSoiffer/MathCAT`](https://github.com/NSoiffer/MathCAT) | 🟢 **MIT**, `1,065 B`, `sha256₁₂ f8f65c73234f`, DAISY-sourced, ★ unmeasured (three channels refused) |
+| **Audit course pages for WCAG defects** | [`GoogleChrome/lighthouse`](https://github.com/GoogleChrome/lighthouse) | 🟢 **Apache-2.0**, `11,358 B`, **`31,019★`**, pushed `2026-11-04`, **runs locally** |
+| **Repair WCAG defects *in place* inside an LMS course** | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🔴 **GPL-3.0**, `35,147 B`, `117★`, pushed `2026-11-04` — **still the only tool** |
+
+🔵 **So the engagement conclusion narrows from the whole mandate to one quarter of it.** *"Deploy UDOIT in the client's estate, bill the remediation, ship no derivative"* is correct **only** for in-place WCAG repair. Captioning, mathematical accessibility and auditing all permit a closed, client-branded deliverable — and captioning is the biggest piece of the work. The useful sentence for a proposal is therefore the opposite of the one this trend used to carry: **most of an accessibility remediation programme can be built permissively; the last mile inside the LMS cannot.** Shipped as `compose/patterns.md` **P26**.
+
+🔴 **Why the claim survived five passes.** It was checked against the shelves and refuted only in the logs — see **T39**. `whisper` is named in *both* append-only logs as *"the ASR baseline"*. **Confidence: high** on all four licence readings (payloads byte-read this pass); **moderate** on the April 2026 deadline itself, which this base still carries from secondary sources and has never read in primary form — that half of T29 is unchanged and still unverified.
 
 ## T30 — Autograding is not an AI story and not a thin layer: it is university infrastructure, permissively licensed, and six systems deep 🟢 new at p657
 
@@ -504,3 +517,38 @@ This base has been accumulating a hypothesis: permissively-licensed education **
 **3 of 3 curriculum assets this base has measured are non-commercialisable, and the newest is the hardest.** The single counter-case remains [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) (MIT, `1,066 B`, re-read at p660), which is precisely why `compose/patterns.md` **P10** is built on that one and not on a school curriculum. **Confidence: high** on the licences (three payloads byte-read); **medium** on the generalisation — three assets is a pattern, not a census, and this base says so rather than rounding it up.
 
 🔵 **The practical rule this yields.** In an education engagement, price the *content* licence separately from the *code* licence and read it first. The code is usually MIT or Apache; the curriculum is usually the thing that cannot be sold, and it is usually the thing the client actually wanted.
+
+## T39 — This base's absence claims are checked against its shelves and refuted in its logs, and that is now its dominant defect class 🟢 new at p661
+
+Four of the last six passes found the same thing, on four different layers: **the finding was already held and had never reached a shelf.** p656 — the interop, telemetry and accessibility layer, measured in the logs for many passes, never promoted. p659 — `PAIDEIA` measured since p540 and never filed; `ollama/ollama` cited on five shelves while its ledger verdict read `unstated`. p660 — `35` of `159` shelf addresses missing from the base's own index, `22.0%` invisible. p661 — the accessibility layer again, plus a proctoring absence claim its own log had refuted `451` passes earlier.
+
+🔵 **p661 names the mechanism, and it is a scope bug in one instrument rather than carelessness in many passes.** `evidence/absence-claim-census.2026-10-31-p569.tsv` exists precisely to catch an absence claim the base's own holdings contradict, and it works — it flagged `27` gateable claims and closed a 145-pass-old gap. Its scope:
+
+```
+broad   pages_scanned         11      live pages only, archive excluded
+broad   shelf_rows_indexed    10892   lines carrying a github.com address
+narrow  supply_claims         569     absence sentence naming a buildable-on noun
+narrow  full_token_collision  27      the gateable set
+```
+
+A claim is flagged only when its content tokens collide with a **shelf row**. The two append-only logs are a further **`124,015` lines** carrying exactly such addresses (`agents/trending.md` `69,591`, `repos/trending.md` `54,424`) and collisions there are **not scored at all**. So the census can catch *"X does not exist"* when X is on a shelf, and is structurally blind to it when X is in a log — which is where this base puts everything it measures before deciding whether to promote it. **The blind spot is exactly the backlog.**
+
+🔴 **And the ledger makes the diagnosis worse, not better.** `evidence/address-ledger.tsv` is a dated, machine-readable index of `3,228` addresses, and it **held the refuted material with the correct licence the whole time**: [`openai/whisper`](https://github.com/openai/whisper) has been in it since **`p6`** with verdict `MIT` and `filed_on = "-"` — `655` passes indexed, correctly licensed, never shelved — and `GoogleChrome/lighthouse` since **`p19`** with verdict `Apache-2.0`, likewise. So this is not a case of the base not knowing. **It knew, in a machine-readable file, and no instrument compares that file against the sentences the pages assert.** 🔵 **`filed_on = "-"` is a ready-made promotion backlog and the least-used column in this base** — one `awk` filter produces it. 🔧 p661 also repaired two verdicts that were wrong in the **restrictive** direction (`lebmatter/exampro` and `vardanagarwal/Proctoring-AI`, both carried `unstated` while serving clean MIT payloads). **T38** warned that the licence field is unsafe in the permissive direction; the restrictive direction is quieter and costs more, because an `unstated` verdict on an MIT repository silently removes a usable asset and nobody ever finds out.
+
+🔴 **Why this matters outside this repository.** Every absence claim on these pages is load-bearing for an engagement: *"there is no permissive proctoring software"* becomes a line item to build, and *"accessibility has no permissive answer"* becomes a services-only proposal with no product. Two such claims were wrong this pass, and both would have changed a proposal's shape and price. **An append-only log is an asset only if something reads it back.** Registered as `Gap 661-C`; the fix is to index the logs as a refutation corpus distinct from the shelf corpus, and it was not performed because `make hooks` and `ingest/` have been denied for eleven consecutive passes. **Confidence: high** — the mechanism is read directly off the instrument's own recorded scope, and both p661 cases fit it exactly.
+
+## T40 — Every "no permissive supply" claim this base has tested has turned out to be an adoption gap instead, and that is now five for five 🟢 new at p661
+
+The pattern is complete enough to state as a rule. Each of these was published as a supply absence and each, when the right query was finally run, turned out to be shallow-but-real supply:
+
+| Layer | Published as | Turned out to be | Pass |
+|---|---|---|---|
+| Moodle agent bridges | *"no permissive Moodle-side agent"* | **7 MIT servers**, whole field ≤ `27★` | p652 |
+| Permissive institutional LMS | *"no permissive platform of the Moodle class"* | **`OpenOLAT`**, Apache-2.0, `32,210` commits | p653 |
+| Assessment scoring | *"no permissive assessment agent"* | **2 education-specific**, both research artefacts | p653 |
+| Learn-to-code | not even searched for `657` passes | **18 foundation rows**, incl. BSD-3 ScratchJr | p658 / p660 |
+| Proctoring and integrity | *"genuinely unsupplied under a permissive licence"* | **6 permissive addresses**, held since `p202` | p661 |
+
+🔵 **The mechanism is the same every time and it is a vocabulary problem, not a search-effort problem.** Each absence was measured with a `topic:` head or a star-ranked query, and each was broken by a different channel: licence-first for OpenOlat, the academic literature for assessment, org enumeration for ScratchJr, and at p661 **`license:mit` sorted by stars** for proctoring — none of those six proctoring repositories is tagged `proctoring` in a way the topic sweeps reached. p658 wrote the prescription — *"a future pass should query by capability, not by tag"* — and p661 is the pass that applied it to a different gap and was paid out twice.
+
+🔴 **The operating rule for a proposal.** When these pages say a layer has no permissive supply, read it as **"no permissive supply this base has found with the queries it has run"** — and expect the true answer to be *shallow, fragmented, unadopted supply* rather than emptiness. That distinction changes the engagement from *build* to *adopt-and-harden*, which is a different scope, a different price and a different risk profile. 🟢 **The two absences that have survived every re-probe are worth naming for contrast**, because they are the ones that look real: **in-place WCAG repair inside an LMS** (UDOIT, GPL-3.0, re-verified p661) and **any OpenOlat agent bridge at all** (`0 of 5` addresses resolve, re-probed p661, fourth consecutive confirmation). **Confidence: high** on the five cases, each of which is a measured reversal recorded on these pages with first-hand licence reads.
