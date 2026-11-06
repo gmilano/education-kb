@@ -1035,3 +1035,27 @@ A default is better evidence than a declaration for three reasons: it is **load-
 This base has recorded the evidence problem as education AI's central weakness across many passes, and has repeatedly noted that no dominant open-source evaluation exists. `bncc-dev/bncc-benchmark` is the first asset here that closes a usable part of it — and the significant thing is that it does so **for one country's curriculum**, not for education in general. It measures how much models fabricate BNCC codes and texts without access to the structured source, publishes **17,100 raw responses** from 19 models, holds a **private set back against contamination**, and reports a faithful-text spread of **88% down to 3%**.
 
 The design choice that generalises is scoring **"refused a fake code"** separately from **"reproduced a real one"**. Those come apart in the published round — a model can sit mid-table on fidelity while accepting **10%** of fabricated codes — and they fail differently in production: confident confirmation of a curriculum objective that does not exist is a safeguarding problem, where poor recall is merely a quality problem. **The transferable lesson is that education evaluation is curriculum-shaped**, so it will arrive as a family of national benchmarks rather than one global leaderboard, and whoever grounds a tutor in a curriculum should be reporting both columns against the benchmark for *that* curriculum.
+
+## T71 — Forks per star has **two regimes**, not one scale, and the adoption floor hides the second one 🔴 narrows T65, new at p680
+
+`T65` established forks-per-star as this base's instrument for separating a **deployed platform** from an **imported library**, and said the floor matters more than the ranking. p680 keeps the instrument and breaks the single scale it assumes.
+
+`jsboige/CoursIA` measures **`f/★ = 9.563`** — `153` forks against `16` stars. The census maximum this base had recorded was `moodle/moodle` at `1.017` (`p489`), with `openedx/openedx-app-android` at `1.632` (`p678`) as the outlier. `9.563` is not a larger value on the same axis; it is **a different behaviour**:
+
+| Regime | `f/★` | What a fork means | Example |
+|---|--:|---|---|
+| **Deployment** | ~`0.3` – `1.6` | one institution runs its own instance | `moodle/moodle` `1.017`, `portabilis/i-educar` `0.767` |
+| **Classroom** | ~`10` | one *learner* takes a working copy | `jsboige/CoursIA` `9.563` |
+| **Reading** | <`0.3` | consumed in place, rarely copied | `BedirT/ACM-ICPC-Preparation` `0.274`, `hyyhf/agent-book-code` `0.153` |
+
+Two consequences for anyone scoping from these shelves. **First, a single ranking is uninterpretable** — a course repository and a platform appear on the same list with the course repository on top, and the number means something different in each row. **Second, and this is the expensive one: the `stars:>40` floor that every supply census on this base has used excludes `CoursIA` outright.** The adoption filter and the adoption signal point in opposite directions here: `16` stars reads as *nobody uses this*, while `153` forks of a curriculum actively pushed the same day reads as *a class is running on it right now*. A star floor is a proxy for *attention*, and teaching material is used without being starred.
+
+🔵 **The practical rule:** rank by `f/★` within a class, never across classes, and when a candidate fails a star floor, read its fork count before dropping it.
+
+## T72 — A channel is exhausted when its new findings stop being *usable*, not when it stops returning rows 🔴 new at p680
+
+p680 swept nine GitHub topic heads, six of which this base had never queried, and the raw yield looks healthy: `80` candidates at `stars:>40`, `21` of them absent from this repository entirely. On a row count, that is a productive channel. On the only test that matters it is finished: **of the `21` novel addresses, `1` is a permissive, live education asset.** The other `20` fail on licence (GPL-3.0, AGPL-3.0, `NOASSERTION`, no grant), on dormancy (several large curricula last pushed in 2023–2024), or on being the wrong sector entirely (`topic:plagiarism-detection` returns music-tooling and binary-similarity research alongside academic integrity).
+
+This matters because the two readings recommend opposite actions. *"The channel returned 21 new addresses"* argues for sweeping more topics. *"The channel returned one usable address"* argues for spending the next pass somewhere else — and the second reading is the correct one, because `63.8%` of everything the channel returned is already on these shelves.
+
+🔵 **Three topic heads are simply empty**, and that is a vocabulary finding rather than a supply finding: `topic:early-childhood-education` → `0` repositories, `topic:teacher-tools` → `0`, `topic:competency-based-education` → `1` (already held). These are terms **educators** use and **repository owners do not tag with** — the same mismatch `T23` found from the other direction when the permissive-platform claim collapsed on vocabulary rather than availability. A `0` on a topic head is evidence about the tagging, not about the world.

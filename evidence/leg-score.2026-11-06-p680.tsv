@@ -1,0 +1,27 @@
+leg	fact_tested	needle_used	shelf_hits	verdict	note
+global-agents	OpenHands / LangGraph / AutoGPT / microsoft-ai-agents-for-beginners returned as "top open source AI agents education"	multiple	>0 each	HELD	leg returns GENERAL agent frameworks, not education agents; 27th consecutive pass
+global-trending	GarethManning/education-agent-skills	GarethManning	196	HELD	shelved; NOASSERTION grant
+global-trending	OPTIMETA/PAIDEIA	PAIDEIA	>0	HELD	filed since p659
+global-trending	h9-tect/AI-Roadmaps	h9-tect	21	HELD	-
+global-trending	rohitg00/ai-engineering-from-scratch	rohitg00	269	HELD	-
+global-platform	Sakai = Apache-2.0 (vendor page says so)	Sakai	>0	HELD	this base corrected the public guides at p659 (ECL-2.0)
+global-platform	OpenEduCat bundles SIS+LMS, LGPL-3.0	OpenEduCat	309	HELD	-
+global-platform	Moodle GPL, Open edX AGPL-3.0	Moodle	1146	HELD	-
+global-trends	US DoE $169M for responsible AI in higher education (Jan 2026)	$169	15	HELD	-
+global-trends	AI-in-education market $7.52B 2025 -> $10.6B 2026, 40.9% CAGR (TBRC)	7.52 / 40.9	1 / 13	HELD	already in the market.md spread
+north-america	NA share of global market 36-38% (one source 54%)	-	>0	HELD	spread already recorded
+north-america	guidance proliferating, hard regulation limited	-	>0	HELD	T3 already says this
+emea	EU AI Act high-risk duties start August 2026	AI Act	>0	HELD-AND-STALE	🔴 CONFIRMS T7: the leg returned the SUPERSEDED date; this base holds 2 December 2027
+emea	UK AI Adoption Summit, GBP 200m+	AI Adoption Summit	10	HELD	-
+emea	EU/OECD AI literacy plan	AI literacy	44	HELD	-
+emea	European University Association Jan 2026 report	European University Association	2	HELD	-
+apac	ASEAN Foundation readiness-gap study (Feb 2026)	ASEAN Foundation	1	HELD	thin but present
+apac	SEAMEO INNOTECH + APO regional policy framework (Feb 2026)	SEAMEO	2	HELD	-
+apac	APAC market $591.6M (M&M 2024) vs $987M (Ken Research)	591.6 / Ken Research	1 / 1	HELD	-
+latam	UNESCO + CENIA ethical-AI-in-education observatory, Latam-GPT	CENIA / Latam-GPT	152 / 131	HELD	-
+latam	ILIA 2026 (CEPAL/CENIA) covers 20 countries; Colombia 4th	ILIA	21	HELD	-
+latam	Uniandes/Algoritmos database: 716 AI regulatory instruments across 23 LATAM countries and territories	Uniandes	0	CANDIDATE-NOVEL	🔴 NOT ADOPTED - primary host algoritmos.uniandes.edu.co does not resolve under this session's network policy (getaddrinfo ENOTFOUND); secondary only
+latam	no education-specific AI regulation for Brazil / Mexico / Chile	-	>0	HELD	standing declared gap, unchanged this pass
+#CONTROL-held	a fact this base certainly holds	Moodle	1146	HELD	positive control clean
+#CONTROL-nonsense	a string that cannot be held	qvxzzrulpfbn	0	NOVEL	negative control clean
+#SUMMARY	facts tested = 23 (excluding 2 controls); HELD = 22; CANDIDATE-NOVEL = 1; ADOPTABLE = 0	-	-	NIL	27th consecutive nil of the eight mandated legs

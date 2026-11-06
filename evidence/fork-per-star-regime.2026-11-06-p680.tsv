@@ -1,0 +1,9 @@
+repo	class	stars	forks	fork_per_star	region	note
+jsboige/CoursIA	course-repository	16	153	9.563	EMEA	🔴 NINE TIMES the maximum of this base's own census (moodle/moodle 1.017 at p489). Not a deployment signature - a CLASSROOM signature: one fork per student.
+moodle/moodle	platform	7556	7688	1.017	Global	census maximum carried in from p489
+openedx/openedx-app-android	mobile client	38	62	1.632	Global	p678 - above 1.0, highest on the p678 reading
+BedirT/ACM-ICPC-Preparation	course-repository	2546	698	0.274	North America	filed this pass; a curriculum that is READ more than it is forked
+hyyhf/agent-book-code	course-repository	59	9	0.153	APAC	filed this pass; book companion code, read not forked
+portabilis/i-educar	platform	720	552	0.767	LATAM	p489
+#FINDING	-	-	-	-	-	the f/* instrument has TWO REGIMES, not one scale: ~1 = deployed per institution, ~10 = forked per learner. A single ranking conflates them.
+#FINDING	-	-	-	-	-	🔴 a stars:>40 floor - the floor this pass's own channel census used - EXCLUDES CoursIA entirely. The highest-fork-ratio repository on the channel is invisible to a star floor.

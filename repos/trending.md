@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p680) — 🔴 **THE TOPIC CHANNEL IS SATURATED AND NOW HAS A NUMBER: `80` CANDIDATES, `51` ALREADY SHELVED, `21` GENUINELY NEW AND `0` OF THE `21` USABLE. 🟢 SIX TOPICS THIS BASE HAD NEVER QUERIED — THREE OF THEM ARE EMPTY HEADS. 🟢 THREE FOUNDATION ROWS FILED, TWO OF THEM OFF THIS REPOSITORY'S OWN `p154` EVIDENCE. 🔴 A `f/★` OF `9.563` BREAKS THIS BASE'S OWN ADOPTION INSTRUMENT.**
+
+🟢 **Three rows to `repos/foundations.md` (`136` → `139`, re-derived by counting; the heading was wrong by one).**
+
+| Repo | Licence (byte-read) | Stars | Forks | `f/★` | Region | Channel |
+|---|---|--:|--:|--:|---|---|
+| [`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation) | 🟢 MIT, `1,074 B`, `9908478c70da`, © *2016 NAU-ACM* | **2,546** | 698 | `0.274` | **North America** | `topic:curriculum` — **absent from this whole tree**, the only adoptable novel address of `21` |
+| [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code) | 🟢 MIT, `1,080 B`, `35c4b4f6b5b9`, 🔴 © *FunHarness Contributors* | **59** | 9 | `0.153` | **APAC** | backlog — measured `p154`, shelved nowhere for `526` passes |
+| [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) | 🟢 MIT, `1,075 B`, `d5305ab1bbe1` | **16** | **153** | 🔴 **`9.563`** | **EMEA** | backlog (`p154`); **excluded by this pass's own `stars:>40` floor** |
+
+🔴 **The saturation census is the finding, not the three rows.** Nine topics swept at `stars:>40`, six of them never queried by this base before (`language-learning`, `curriculum`, `plagiarism-detection`, `early-childhood-education`, `competency-based-education`, `teacher-tools`):
+
+| Reading | Value |
+|---|--:|
+| Candidate rows returned | `80` |
+| Already on the shelves | **`51` (63.8%)** |
+| In this tree, not shelved | `8` |
+| Absent from the tree entirely | `21` |
+| **Of those `21`, adoptable as a permissive, live education asset** | 🔴 **`1`** |
+| `topic:early-childhood-education` population | 🔴 **`0`** |
+| `topic:teacher-tools` population | 🔴 **`0`** |
+| `topic:competency-based-education` population | `1` — already held |
+
+🔵 **`topic:plagiarism-detection` is the one never-swept topic that returns real engineering, and its licence split is the story.** Live and copyleft: [`jplag/JPlag`](https://github.com/jplag/JPlag) (`1,997★`, GPL-3.0), [`trailofbits/vendetect`](https://github.com/trailofbits/vendetect) (`86★`, AGPL-3.0). Permissive and dormant: `fyrestone/pycode_similar` (`191★`, `2023-06-05`), `automoss/automoss` (`157★`, `2023-06-11`). Live *and* permissive: [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (`357★`, MIT, Ghent University) — **already on this base.** The academic-integrity layer has exactly one permissive live option and this KB already knew about it.
+
+🟡 **Declined on substance:** [`mscbuild/e-learning-free-courses`](https://github.com/mscbuild/e-learning-free-courses) (`43★`, MIT, live) — a promotional link list of third-party certificate courses. Clears licence and liveness, fails usefulness. Recorded so the nil is not read as absence.
+
+Full census: `evidence/topic-saturation.2026-11-06-p680.tsv`. Payload grades: `evidence/mit-body-grade.2026-11-06-p680.tsv`.
+
+---
+
 ## 🆕 2026-11-06 (p679) — 🟢 **ONE FOUNDATION ROW FILED AND IT IS THE *MEASUREMENT INSTRUMENT* THIS BASE HAS SAID FOR PASSES THAT THE SECTOR LACKS — EDUCATION-SPECIFIC, REGIONAL, PERMISSIVE, WITH 17,100 RAW RESPONSES PUBLISHED ONE BY ONE. 🟢 A VERTICAL ROW CARRIED UNPLACED IS NOW PLACED FROM ITS OWN `.env.example`. 🔴 THE ERP/CRM LEG NILS FOR A FIFTH CONSECUTIVE PASS.**
 
 🟢 **`bncc-dev/bncc-benchmark` is filed to `repos/foundations.md`, and it is a different kind of asset from everything around it.** This base holds curriculum *data* (`bncc-dados`, `bncc-pacotes`) and dozens of tutors and graders. What it has repeatedly recorded as missing is a way to **measure** whether any of them are telling the truth. `bncc-benchmark` measures exactly that, for a national curriculum:

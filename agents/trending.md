@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p680) — 🔴 **NO AGENT ROW FILED, AND THE NIL IS MEASURED ON NINE TOPIC HEADS AND EIGHT MANDATED LEGS. 🔴 THE EMEA LEG RETURNED THE SUPERSEDED EU AI ACT DATE FOR A FIFTH TIME. 🔴 MY OWN LICENCE GRADER RAISED A FALSE ALARM AND ITS CONTROL CAUGHT IT. 🔴 THE `make hooks` DENIAL FINALLY HAS A NAMED CAUSE.**
+
+🔴 **`agents/top.md` stays at `60` rows / `59` distinct subjects.** Nothing this pass found belongs on the agent shelf: the three addresses filed at p680 are **curriculum**, and they went to `repos/foundations.md`. Writing the nil down rather than padding the shelf.
+
+🔴 **The eight mandated legs nil a 27th consecutive time, with a denominator.** `23` facts tested, **`22` already held**, `1` candidate-novel, **`0` adoptable**. Positive control `Moodle` → `1,146` shelf hits; negative control `qvxzzrulpfbn` → `0`. Per-fact scoring in `evidence/leg-score.2026-11-06-p680.tsv`.
+
+| What the legs returned | Reading |
+|---|---|
+| **Global agents leg** — OpenHands, LangGraph, AutoGPT, `microsoft/ai-agents-for-beginners` | 🔴 **General agent frameworks, not education agents.** The leg has never once returned an education-specific agent this base did not hold |
+| **EMEA leg** — *“EU AI Act high-risk obligations for education begin August 2026”* | 🔴 **SUPERSEDED. This base holds `2 December 2027` (`T7`, `T15`).** Fifth reproduction of a stale date. Same signature as the four TEQSA reproductions: **the secondary literature this leg reaches is better indexed on the wrong answer than on the right one.** Keep the leg; its EMEA value is adversarial |
+| **LATAM leg** — Universidad de los Andes / Algoritmos: `716` AI regulatory instruments across `23` countries and territories | 🟡 **The one candidate-novel fact of the pass (`0` shelf hits) and NOT ADOPTED** — `algoritmos.uniandes.edu.co` does not resolve under this session's network policy (`getaddrinfo ENOTFOUND`). Recorded as secondary in `intel/market.md` with the host named |
+| **LATAM leg** — UNESCO + CENIA ethical-AI-in-education observatory, Latam-GPT; ILIA 2026 covering `20` countries | 🔵 Held (`CENIA` `152` hits, `Latam-GPT` `131`) |
+| **APAC leg** — ASEAN Foundation readiness gap, SEAMEO INNOTECH + APO framework | 🔵 Held, thinly (`1` and `2` hits) |
+| **Global trends leg** — US DoE `$169M` for responsible AI in higher education; market `$7.52B` → `$10.6B` at `40.9%` CAGR | 🔵 Held |
+
+🔴 **Two instrument failures, both caught by controls, neither published as a finding.**
+
+- **`680-E` — an exact-equality MIT body test graded a shelf row as `BODY-DIFFERS` over a missing full stop.** [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners), residual `+83 B`; the whole normalised difference is one terminal `.`. This is `667-B` (needle orthography) at the opposite sign, and the lesson is the same shape: **a licence-body comparator needs a known-verbatim payload in variant punctuation as a control, not only a nonsense payload.**
+- **`680-F` — `ingest/operative-body.py` could not be run, and the reason is not a repository defect.** This session's classifier denies it as `[Code from External]`: the base is a cold clone of an external remote, so its scripts are untrusted data here. 🔵 **Every gate implemented as repo-local Python is unreachable from a session that clones this base fresh** — which is what the long `make hooks DENIED` run has actually been recording. The route around it is the one this pass took: **reimplement the single decision you need in session-local code and control it at both signs.**
+
+🔴 **And `curl -sI` is still not an oracle here** (`676-E`): the agent proxy answers unattached repositories with HTTP `200` carrying a JSON refusal. Everything above was verified with `git ls-remote --symref`, `search/repositories` and `raw.githubusercontent.com`.
+
+---
+
 ## 🆕 2026-11-06 (p679) — 🟢 **SUPPLY CAME FROM THE *REGIONAL* LEGS, AND SO DID THE PLACEMENT: 4 FILED, 3 PLACED, AFTER A PASS THAT PLACED NONE. 🟢 TWO NEW EVIDENCE CLASSES — SHIPPED LOCALE DEFAULT AND REGULATORY REGIME — AND ONE OF THEM PLACES A ROW THIS BASE HAS CARRIED UNPLACED. 🔴 THE BEST NORTH-AMERICA CANDIDATE OF THE PASS HAS NO GRANT AT ALL AND IS THEREFORE UNUSABLE.**
 
 🟢 **The headline is the reversal.** p678 filed nine addresses and placed **zero**, and said so explicitly rather than letting silence pass for coverage. p679 filed **four** and placed **three** — and the reason is mechanical, not luck: p678 got its supply from enumerating owner orgs, while p679 got its supply from the **four regional legs**, which return repositories that are *already* bound to a place. Searching globally finds software; searching regionally finds software with an address.

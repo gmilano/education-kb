@@ -1,0 +1,11 @@
+owner	spelling_probed	search_users_total	placement	channel	note
+hyyhf	China	1	APAC	owner location field + Chinese-language body text	two independent signals agree
+hyyhf	Chine	0	-	-	667-G2 confirmed again: the field is free text, one spelling answers and the other does not
+jsboige	France	0	-	-	owner location field contributes NOTHING for this owner
+jsboige	Frankreich	0	-	-	both spellings nil
+jsboige	(repository files)	n/a	EMEA	repository's own files - 111,824 B README written entirely in French, course material in French	p669's stronger channel; a conda kernel named `epita_symbolic_ai` corroborates a French engineering-school context but is an ENVIRONMENT NAME, not an attribution, so it is recorded and not relied on
+BedirT	Turkey	0	-	-	-
+BedirT	Türkiye	0	-	-	-
+BedirT	Canada	1	North America	owner location field	grant's copyright line (NAU-ACM, a university ACM chapter) corroborates a university-chapter artefact; the two channels name different COUNTRIES and the same REGION
+#CONTROL-positive	telekom / Germany	1	-	-	probe discriminates
+#CONTROL-negative	telekom / Zorblaxia	0	-	-	probe does not answer positive indiscriminately

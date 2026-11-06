@@ -7,7 +7,9 @@ updated: 2026-11-06
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
-> **The licence rule that governs all `50` patterns below — 🔄 re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
+> 🔄 **Re-counted from the `## P` headings at p680: `55` patterns, `P1`–`P55`, `0` duplicated numbers and `0` gaps.** The heading this replaces said `50`, which was already `4` stale when p680 opened — and the re-count caught a live defect in the process: **p680's own new pattern was first written as `P53`, a number p679 had already used**, because `P54` existed and the highest number is not the last heading in file order. 🔵 **Never number a new pattern from the bottom of the file; number it from `max(## P)`.**
+> 
+> **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
 ## Base architecture
 
@@ -1638,3 +1640,28 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 🔵 **Pair with `P47`**, which this pattern completes rather than replaces: `P47` set the architecture, P52 names the parts and their verified grants.
 
 🔴 **Known gap, stated:** none of these repositories' own files name a jurisdiction, and all eight owner accounts have no `location` set (`678-I`). The regional fit above is argued from **where the deployment constraint binds**, not from provenance — weaker evidence, labelled as such.
+
+## P55 — The technical-academy curriculum spine: three permissive curricula, three regions, three languages, one assessment layer (CS faculties, bootcamps, graduate-conversion programmes; 4–6 weeks to a running cohort) 🆕 new at p680
+
+**What changed at p680.** This base's learn-to-code layer held `21` addresses and had recorded two defects in it: **no member placeable in North America**, and **no non-English member at all**. Both are closed. The three curricula below were filed at p680 with their grants byte-read against canonical MIT (`1,079 B`, `2ec9e6e61ed8`), and **all three operative bodies are verbatim**:
+
+| Role | Repo | Grant (read at p680) | Region | `f/★` | Note |
+|---|---|---|---|--:|---|
+| **Algorithms / CS fundamentals** | [`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation) | 🟢 **MIT** `1,074 B` `9908478c70da` | **North America** | `0.274` | 🔴 default ref is **`master`**; `2,546★`, maintained since 2016 |
+| **AI / ML, French, with a .NET track** | [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) | 🟢 **MIT** `1,075 B` `d5305ab1bbe1` | **EMEA** | 🔴 **`9.563`** | Jupyter; **C#/Python twins** on .NET Interactive, plus Lean 4 |
+| **Agent construction, Chinese** | [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code) | 🟢 **MIT** `1,080 B` `35c4b4f6b5b9` | **APAC** | `0.153` | 🔴 copyright line names a *different* project (`680-G`) |
+| **Integrity / similarity** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT (already on this base) | EMEA (Ghent University) | — | 🔴 **the only live permissive option in its layer** (`680-B`) |
+| **Autograding** | [`anubislms/anubis`](https://github.com/anubislms/anubis) | MIT (foundations shelf, p677) | — | — | distributed LMS for automated CS assignment grading |
+| **Retention** | `fsrs4anki` / `fsrs-rs` (foundations shelf) | MIT / BSD-3-Clause | — | — | scheduling, per `P35` |
+
+**The build.**
+
+1. **Pick the spine by the cohort's language, not by star count.** English/algorithms → `ACM-ICPC-Preparation`. French/AI with enterprise .NET exposure → `CoursIA`. Chinese/agent engineering → `agent-book-code`. All three are MIT, so all three can be forked, rebranded and extended under a client's own terms; none needs a licence conversation.
+2. **Fork at the real default ref.** `ACM-ICPC-Preparation` is on **`master`**. A pipeline that assumes `main` reads `404` and reports *no licence* — the defect class `P52` also carries.
+3. **Run the cohort on an incumbent LMS over LTI, never fork the platform** — `Pattern I` on `verticals/solutions.md`. The curricula above are *content*; they do not want to be a platform.
+4. **Add `anubis` for autograding and `dolos` for similarity before the first assignment is due**, not after. 🔴 **Scope the integrity layer explicitly:** `dolos` is the only live permissive tool in that layer, and if the client rejects it the alternatives are GPL-3.0 (`jplag/JPlag`) or building. Say so in the SOW rather than discovering it in week five.
+5. **Close the loop with retention.** Export the cohort's wrong answers into an FSRS schedule (`P35`) so the curriculum keeps teaching after the module ends.
+
+**How to read adoption on these three, because the usual instrument is wrong here.** `CoursIA` shows `16★` and **`153` forks** — `f/★ = 9.563`, nine times this base's census maximum. That is a **class running on it right now**, one fork per learner, and a `stars:>40` filter drops it outright. 🔵 **Rank curricula by forks, platforms by `f/★` near `1`, and reference material by stars** — see `intel/trends.md` **T71**.
+
+🔴 **Known gap, stated:** no LATAM-origin curriculum is available for this pattern. Nine topic heads were swept at p680, six of them for the first time, and **not one novel LATAM-origin address was placeable** (`680-B`). A LATAM cohort runs this pattern on the EMEA or North America spine, translated — which is a real cost to put in the estimate, not a detail.

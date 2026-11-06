@@ -1,0 +1,8 @@
+slug	ref	payload_bytes	residual_vs_canonical_1079	sha256_12	operative_body_verdict	copyright_line	note
+open-spaced-repetition/fsrs4anki	main	1079	+0	2ec9e6e61ed8	VERBATIM-MIT-BODY	Copyright (c) 2022 open-spaced-repetition	POSITIVE CONTROL - a payload this base has already graded MIT
+BedirT/ACM-ICPC-Preparation	master	1074	-5	9908478c70da	VERBATIM-MIT-BODY	Copyright (c) 2016 NAU-ACM	title line is "The MIT License (MIT)"; copyright names an ACM student chapter, not the owner
+hyyhf/agent-book-code	main	1080	+1	35c4b4f6b5b9	VERBATIM-MIT-BODY	Copyright (c) 2025 FunHarness Contributors	copyright names a DIFFERENT project from the repository - extends 676-C to the authorship axis
+jsboige/CoursIA	main	1075	-4	d5305ab1bbe1	VERBATIM-MIT-BODY	Copyright (c) 2022 Jean-Sylvain Boige	-
+microsoft/Web-Dev-For-Beginners	main	1162	+83	-	VERBATIM-MIT-BODY (after fix)	Copyright (c) Microsoft Corporation.	🔴 NEGATIVE CONTROL THAT CAUGHT MY OWN INSTRUMENT - an exact-equality body test returned BODY-DIFFERS on this payload; the whole difference is a MISSING TERMINAL FULL STOP. Same class as 667-B (needle orthography) at the opposite sign. No claim was published from the broken reading.
+#NOTE	-	-	-	-	-	-	residual carries no information about the operative body (676-A): here -5, +1, -4 and +83 are ALL verbatim bodies
+#NOTE	-	-	-	-	-	-	instrument: own comparator in session scratchpad, NOT ingest/operative-body.py - running repo-local Python from this freshly cloned external repo was DENIED by this session's classifier ([Code from External]), which is the specific cause behind the long "make hooks DENIED" run

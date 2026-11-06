@@ -1,0 +1,83 @@
+topic	slug	stars	forks	licence_spdx	pushed_at	tree_hits	shelf_hits	novelty	adoptable
+topic:education topic:ai-agents	DozenTwelve/Papermorph	1317	175	MIT	2026-11-05	78	63	SHELVED	no
+topic:education topic:ai-agents	miuuyy/Clew	212	19	MIT	2026-10-29	8	4	SHELVED	no
+topic:education topic:ai-agents	artnitolog/awesome-agent-learning	164	39	CC0-1.0	2025-06-15	6	0	IN-TREE-UNSHELVED	no
+topic:education topic:ai-agents	heshengtao/exameow	103	28	Apache-2.0	2026-11-05	36	5	SHELVED	no
+topic:education topic:ai-agents	nuwa-skills/montessori-skill	80	11	MIT	2026-10-18	25	6	SHELVED	no
+topic:education topic:ai-agents	HuckleR2003/PC_Workman_HCK	75	7	MIT	2026-10-09	17	2	SHELVED	no
+topic:education topic:ai-agents	hyyhf/agent-book-code	59	9	MIT	2026-10-03	9	0	IN-TREE-UNSHELVED	YES
+topic:education topic:ai-agents	HumphreySun98/Smart-Study-Agent	58	0	MIT	2026-08-16	99	27	SHELVED	no
+topic:education topic:ai-agents	henryyu333/assignment-check	53	0	MIT	2026-09-22	28	4	SHELVED	no
+topic:education topic:ai-agents	Agentic-System-Lab/agent-loop-visualizer	51	2	Apache-2.0	2026-10-31	3	3	SHELVED	no
+topic:education topic:ai-agents	valorisa/Reverse-Engineer-Anything	43	11	MIT	2026-10-09	8	2	SHELVED	no
+topic:education topic:ai-agents	mscbuild/e-learning-free-courses	43	6	MIT	2026-05-07	6	0	IN-TREE-UNSHELVED	YES
+topic:education topic:ai-agents	scibly-dev/scibly	42	5	NOASSERTION	2026-09-19	40	3	SHELVED	no
+topic:education-ai	JuneYaooo/lineage-skill	469	71	Apache-2.0	2026-07-23	102	50	SHELVED	no
+topic:education-ai	SirhanMacx/Claw-ED	64	15	MIT	2026-09-19	128	77	SHELVED	no
+topic:intelligent-tutoring-system	open-spaced-repetition/fsrs4anki	4127	165	MIT	2026-08-14	182	73	SHELVED	no
+topic:intelligent-tutoring-system	GarethManning/education-agent-skills	955	130	NOASSERTION	2026-11-03	192	193	SHELVED	no
+topic:intelligent-tutoring-system	GeminiLight/gen-mentor	136	23	CC0-1.0	2026-10-23	127	59	SHELVED	no
+topic:intelligent-tutoring-system	ArnaudGuiovanna/tutor-mcp	97	13	MIT	2026-11-05	252	147	SHELVED	no
+topic:intelligent-tutoring-system	luffycodes/Tutorbot-Spock	56	11	NONE	2024-11-04	72	34	SHELVED	no
+topic:language-learning	mengxi-ream/read-frog	10306	787	GPL-3.0	2026-11-06	19	2	SHELVED	no
+topic:language-learning	microsoft/ailab	7845	1384	MIT	2024-06-26	1	0	IN-TREE-UNSHELVED	no
+topic:language-learning	qingjian-team/qingjian	7628	651	GPL-3.0	2026-11-06	17	2	SHELVED	no
+topic:language-learning	cheatsnake/backend-cheats	5265	540	MIT	2025-02-02	0	0	NOVEL	no
+topic:language-learning	echo-loop/Echo-Loop	4663	490	AGPL-3.0	2026-11-05	84	30	SHELVED	no
+topic:language-learning	umlx5h/LLPlayer	4596	291	GPL-3.0	2026-11-05	19	2	SHELVED	no
+topic:language-learning	designfuchen/word-atlas	4309	921	NOASSERTION	2026-10-31	15	9	SHELVED	no
+topic:language-learning	lingdojo/kana-dojo	3812	3834	AGPL-3.0	2026-11-06	17	2	SHELVED	no
+topic:language-learning	5mdld/anki-jlpt-decks	3117	114	NOASSERTION	2026-10-22	15	2	SHELVED	no
+topic:language-learning	wotakumoe/wotaku	3116	153	NOASSERTION	2026-11-06	3	1	SHELVED	no
+topic:language-learning	hahahumble/speechgpt	2745	379	MIT	2026-07-11	19	2	SHELVED	no
+topic:language-learning	kantord/LibreLingo	2630	266	AGPL-3.0	2026-06-19	29	14	SHELVED	no
+topic:language-learning	typedgrammar/typed-japanese	1954	25	MIT	2026-10-22	19	2	SHELVED	no
+topic:language-learning	Chuloo/mural	1761	340	MIT	2026-10-31	18	2	SHELVED	no
+topic:language-learning	mre/the-coding-interview	1746	412	MIT	2023-10-30	0	0	NOVEL	no
+topic:language-learning	LuteOrg/lute-v3	1604	172	MIT	2026-09-05	14	2	SHELVED	no
+topic:language-learning	asbplayer/asbplayer	1504	234	AGPL-3.0	2026-11-06	17	2	SHELVED	no
+topic:language-learning	ripose-jp/Memento	1500	63	GPL-2.0	2026-08-24	13	4	SHELVED	no
+topic:language-learning	simjanos-dev/LinguaCafe	1479	74	GPL-3.0	2026-08-09	13	2	SHELVED	no
+topic:language-learning	chapin666/books	1286	439	NONE	2021-05-22	0	0	NOVEL	no
+topic:curriculum	freeCodeCamp/freeCodeCamp	458649	48131	BSD-3-Clause	2026-11-06	34	26	SHELVED	no
+topic:curriculum	ossu/computer-science	210817	26078	MIT	2026-07-14	36	9	SHELVED	no
+topic:curriculum	microsoft/Web-Dev-For-Beginners	97116	16125	MIT	2026-11-05	22	11	SHELVED	no
+topic:curriculum	FreeCodeCampChina/freecodecamp.cn	37786	1415	NOASSERTION	2023-07-16	2	0	IN-TREE-UNSHELVED	no
+topic:curriculum	TheOdinProject/curriculum	13214	16889	NOASSERTION	2026-11-05	8	0	IN-TREE-UNSHELVED	no
+topic:curriculum	xiaoyang111222/cn-math-taxonomy	6858	1795	NOASSERTION	2026-11-06	88	65	SHELVED	no
+topic:curriculum	mrdbourke/tensorflow-deep-learning	5952	2824	MIT	2024-08-19	0	0	NOVEL	no
+topic:curriculum	TheOdinProject/theodinproject	4680	2140	MIT	2026-11-03	12	2	SHELVED	no
+topic:curriculum	bootdotdev/curriculum	3984	127	NONE	2026-10-18	0	0	NOVEL	no
+topic:curriculum	brootware/awesome-cyber-security-university	3782	372	CC0-1.0	2026-10-04	22	4	SHELVED	no
+topic:curriculum	hackclub/hackclub	2640	730	NOASSERTION	2026-10-30	2	0	IN-TREE-UNSHELVED	no
+topic:curriculum	BedirT/ACM-ICPC-Preparation	2546	698	MIT	2026-09-12	0	0	NOVEL	YES
+topic:curriculum	ai-infra-curriculum/ai-infra-engineer-learning	1843	319	MIT	2026-11-03	42	4	SHELVED	no
+topic:curriculum	opsschool/curriculum	1631	435	NOASSERTION	2026-10-08	1	0	IN-TREE-UNSHELVED	no
+topic:curriculum	elipapa/markdown-cv	1500	3281	MIT	2024-06-27	0	0	NOVEL	no
+topic:curriculum	offchan42/machine-learning-curriculum	1135	253	MIT	2024-03-03	0	0	NOVEL	no
+topic:curriculum	PestoTech/curriculum	914	431	NONE	2024-05-25	0	0	NOVEL	no
+topic:curriculum	fpsvogel/learn-ruby	855	83	NONE	2026-10-05	0	0	NOVEL	no
+topic:curriculum	enkidevs/curriculum	834	1660	NOASSERTION	2026-07-25	31	4	SHELVED	no
+topic:curriculum	DerekBabb/CyberSecurity	818	178	GPL-3.0	2023-12-17	0	0	NOVEL	no
+topic:plagiarism-detection	jplag/JPlag	1997	377	GPL-3.0	2026-11-05	25	15	SHELVED	no
+topic:plagiarism-detection	patois/HexraysToolbox	483	44	CC0-1.0	2023-06-20	0	0	NOVEL	no
+topic:plagiarism-detection	dodona-edu/dolos	357	50	MIT	2026-11-03	143	48	SHELVED	no
+topic:plagiarism-detection	fyrestone/pycode_similar	191	38	MIT	2023-06-05	38	4	SHELVED	no
+topic:plagiarism-detection	cu-sanjay/Free-Turnitin-Plagiarism-Checker	163	79	Apache-2.0	2026-10-16	2	1	SHELVED	no
+topic:plagiarism-detection	automoss/automoss	157	26	MIT	2023-06-11	57	7	SHELVED	no
+topic:plagiarism-detection	JonathanReeve/text-matcher	140	26	GPL-3.0	2024-06-17	0	0	NOVEL	no
+topic:plagiarism-detection	asigalov61/tegridy-tools	118	19	Apache-2.0	2026-10-19	0	0	NOVEL	YES
+topic:plagiarism-detection	dimondevceo/turnitinFree	118	20	NONE	2022-05-24	0	0	NOVEL	no
+topic:plagiarism-detection	Hassaan-Elahi/Writing-Styles-Classification-Using-Stylometric-Analysis	117	33	MIT	2024-08-06	0	0	NOVEL	no
+topic:plagiarism-detection	abhilampard/Simple-Plagiarism-Checker	109	68	NONE	2022-11-07	0	0	NOVEL	no
+topic:plagiarism-detection	NoplagLabs/noplag-engine	88	78	Apache-2.0	2026-07-20	41	13	SHELVED	no
+topic:plagiarism-detection	trailofbits/vendetect	86	6	AGPL-3.0	2026-10-23	0	0	NOVEL	no
+topic:plagiarism-detection	andrewmcloud/consimilo	66	4	Apache-2.0	2019-02-17	0	0	NOVEL	no
+topic:plagiarism-detection	TylerJaacks/ItsJustACoincidenceProfessor	60	11	MIT	2022-05-05	0	0	NOVEL	no
+topic:plagiarism-detection	Wazzabeee/copy-spotter	58	17	MIT	2024-06-17	28	4	SHELVED	no
+topic:plagiarism-detection	ongteckwu/hercules	54	8	NOASSERTION	2023-10-02	0	0	NOVEL	no
+topic:plagiarism-detection	thu-cs-lab/jieplag	54	1	MIT	2026-10-22	42	5	SHELVED	no
+topic:plagiarism-detection	josemmo/plagpatrol	42	7	MIT	2023-03-04	41	6	SHELVED	no
+topic:competency-based-education	GarethManning/education-agent-skills	955	130	NOASSERTION	2026-11-03	193	193	SHELVED	no
+#	CONTROL-held	moodle/moodle	-	-	-	-	439	-	SHELVED	n/a
+#	CONTROL-nonsense	qvxz/nonsense-9f	-	-	-	-	0	-	NOVEL	n/a
