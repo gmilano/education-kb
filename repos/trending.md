@@ -4,6 +4,31 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p679) — 🟢 **ONE FOUNDATION ROW FILED AND IT IS THE *MEASUREMENT INSTRUMENT* THIS BASE HAS SAID FOR PASSES THAT THE SECTOR LACKS — EDUCATION-SPECIFIC, REGIONAL, PERMISSIVE, WITH 17,100 RAW RESPONSES PUBLISHED ONE BY ONE. 🟢 A VERTICAL ROW CARRIED UNPLACED IS NOW PLACED FROM ITS OWN `.env.example`. 🔴 THE ERP/CRM LEG NILS FOR A FIFTH CONSECUTIVE PASS.**
+
+🟢 **`bncc-dev/bncc-benchmark` is filed to `repos/foundations.md`, and it is a different kind of asset from everything around it.** This base holds curriculum *data* (`bncc-dados`, `bncc-pacotes`) and dozens of tutors and graders. What it has repeatedly recorded as missing is a way to **measure** whether any of them are telling the truth. `bncc-benchmark` measures exactly that, for a national curriculum:
+
+| Property | Reading |
+|---|---|
+| Grant | 🟡 **MIT (code) + CC BY 4.0 (items, results, methodology)** — declared split, `911 B`, `d19733bb7540`, payload in **Portuguese** |
+| What it measures | How much LLMs **invent BNCC codes and texts** with no access to the structured source — and how much of that disappears with grounding via `bncc.dev` (MCP + API) |
+| Published round | `oficial-seca-2026-09`: **19 models × 900 responses = 17,100**, raw, committed **one by one** |
+| Contamination control | 🟢 **Private held-out set** |
+| Headline spread | Responses faithful to the official text: **88% → 3%** across models |
+| Scoring | Mean of **five** dimensions: recognise real codes · **refuse fake ones** · text fidelity · reverse lookup · correct citation in open generation |
+| Adoption | `12★ / 1 fork`, `82` commits, `v0.3.0` |
+| Region | **LATAM** — the artefact *is* a national curriculum standard; grant names `Profy Tecnologias Educacionais Ltda` |
+
+🔵 **Why the scoring design matters more than the headline number.** Scoring *"refused a fake code"* separately from *"reproduced a real one"* is the distinction a procurement test actually needs: a model that cheerfully confirms a non-existent BNCC code is dangerous in a way that a model with merely poor recall is not. The published round shows these come apart — a model can sit mid-table on fidelity and still accept **10%** of fabricated codes. Any Globant engagement that grounds a tutor in a curriculum should report **both** columns, and this repository is the only education asset in this base that supplies them.
+
+🟢 **`Gego-K12/gegok12` moves from unplaced to APAC without a new search**, on a channel introduced this pass: its `.env.example` ships `TIMEZONE = 'Asia/Kolkata'` and `config/app.php` resolves the application timezone from that variable, so the locale an operator inherits *without choosing one* is Indian. Re-read at p679 also corrects the star column: **56 ★** (was `55`) against **107 forks** — forks still at ~2× stars, and `123` commits. Theme namespace `Gegosoft\NovaGego`; stack re-read as PHP **8.4** / Laravel / MySQL with optional Redis and Node **24**.
+
+🔴 **The `open source platform education ERP CRM MIT Apache` leg nils for a fifth consecutive pass**, and the shape of the nil is now stable enough to state as a finding rather than a disappointment: the education-specific options are **`OpenEduCat`** (LGPL-3.0 — copyleft) and **`GegoK12`** (MIT, already held); the permissive options are **general** ERP/CRM — `Apache OFBiz` (Apache-2.0, release `24.09.07`, June 2026), `Corteza` (Apache-2.0), `Huly` (Apache-2.0), `Krayin` (MIT) — and would need the education domain built on top. One new address was checked and rejected: [`fulgurcode/school-erp-api`](https://github.com/fulgurcode/school-erp-api) exists (`main` @ `56fcc0f82b48`) but its payload is **GPL-3.0** (`35,149 B`, `3972dc9744f6`), so it is not a permissive alternative to GegoK12. **There is no permissive, education-native, AI-ready ERP.** That is a build opportunity, not a search failure.
+
+🔵 **Curriculum tier re-read, no change filed.** [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) — the largest permissive education asset this base holds — reads **41.2k ★ / 6.6k forks**, `554` commits, MIT (`1,066 B`, `93123909818c`, `Copyright (c) 2024 patchy631`), About *"In-depth tutorials on LLMs, RAGs and real-world AI agent applications"*, **93+** projects across three difficulty tiers. The page's existing figure of `41,100` is consistent with the rounded `41.2k` now shown, so the row is left as it stands rather than churned.
+
+🔴 **`Lamb-Project/lamb` is filed to `verticals/solutions.md`, not here, and with a red licence flag** — GPL-3.0, `35,349 B`, `17fe6d0ffa96`. Note the retrieval trap: the repository page's sidebar licence link **does not name the licence**; only the README's License section and the payload do. `42★ / 24 forks`, `1,317` commits. It is EMEA-placed from inside the grant file (`Marc Alier (UPC)` + `Juanan Pereira (UPV/EUS)`), and it is the reference design for LTI-delivered AI assistants that `compose/patterns.md` P53 reproduces on permissive parts.
+
 ## 🆕 2026-11-06 (p678) — 🟢 **NINE ADDRESSES FILED FROM OWNER-ORG ENUMERATION, EVERY GRANT PAYLOAD BYTE-READ AT THE REAL DEFAULT REF. 🟢 OPEN EDX'S MOBILE CLIENTS ARE APACHE-2.0 WHILE ITS CORE IS AGPL. 🔵 NEW #1 ON THE DEPLOY-PER-INSTITUTION CENSUS. 🔴 ZERO PLACED IN ANY REGION, AND BOTH PLACEMENT CHANNELS WERE MEASURED EMPTY.**
 
 **What this window found.** The four mandated global legs returned **no novel repository for the 28th consecutive pass** — leg-by-leg scoring in [`agents/trending.md`](../agents/trending.md) `678-A`. **Every address gained this pass came from enumerating `10` education owner organisations** and diffing against a tree corpus of `4,666` addresses. 🔵 `repos/foundations.md` `128` → **`135`**; `agents/top.md` `59` → **`60` rows / `59` distinct**; `verticals/solutions.md` `61` → **`62` rows / `59` distinct**. All counts **re-derived by counting the table**, not by incrementing the heading.

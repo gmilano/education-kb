@@ -669,6 +669,34 @@ THE LEARNER'S OWN COURSE MATERIALS  (lecture PDFs, scanned problem sets, past pa
 2. **Not a proctoring or monitoring tool.** Nothing here watches a learner. Keep it that way: exam monitoring is high-risk and emotion recognition in schools has been prohibited in the EU since February 2025.
 3. **Not evidence of adoption.** `PAIDEIA-mcp` carries `2` stars. It is a 2026 repository with one author and a single push on its creation date (`2026-06-14`). 🔴 **Pin the commit, read the code before it goes near a client, and budget for maintaining it yourself** — this is an adopt-and-harden of a small codebase, which is the honest framing, and the same caution `agents/top.md` attaches to every low-star row.
 
+## P53 — The LTI assistant builder, rebuilt permissive (EMEA higher education, before the Dec 2027 Annex III date: 8–10 weeks) 🟢 new at p679
+
+**The case this answers.** A European university wants what `Lamb-Project/lamb` demonstrates — academics building their own course-grounded AI assistants, delivered *inside* Moodle rather than beside it — but Globant must ship a closed derivative, and LAMB is **GPL-3.0**. So LAMB is the **reference design, not the codebase**. Read it to copy the shape; build on permissive parts.
+
+**What to take from the reference, explicitly.** Four design decisions that are the valuable part and are not themselves licensable: (1) the assistant is **course-scoped**, grounded in that course's own materials, not a campus-wide chatbot; (2) delivery is over **IMS LTI 1.3**, so the assistant inherits the LMS's identity, roster and gradebook context and the institution adds no new user directory; (3) assistants are **exportable as JSON**, which is what makes a catalogue portable between departments and institutions; (4) the **teacher authors and tests before publishing** — the approval gate is in the product, not in a policy document.
+
+**Wiring, permissive end to end.**
+1. **LTI launch + identity** — `dmitry-viskov/pylti1.3` (MIT) for the 1.3 handshake, or `jupyterhub/ltiauthenticator` (BSD-3) where the target is a notebook estate. The LMS stays unforked; this is the single most important licence decision in the pattern.
+2. **Assistant definition as data** — a JSON schema per assistant (persona, grounding corpus pointer, retrieval policy, refusal rules, rubric if it assesses). Version these in the client's own repository; they are the deliverable the institution keeps.
+3. **Grounding** — course materials into a vector store; where the client is in a jurisdiction with a published curriculum, ground against the standard rather than only the slides.
+4. **Tutoring behaviour** — adopt `braiinz94/braiinz-education` (Apache-2.0, EMEA-placed, French-curriculum aligned): it already separates a **Socratic tutor** from a **practice coach** from a **diagnostician**, which maps onto three assistant types rather than one prompt.
+5. **Evidence out** — xAPI statements per interaction into an LRS (`yetanalytics/lrsql`), so the conformity file writes itself.
+
+**Why the date matters.** Annex III stand-alone obligations move to **2027-12-02**. An assistant that only *tutors* is not high-risk; the moment it influences admission or assessment it is. Build the tutoring catalogue now, keep the assessment path behind the same LTI surface, and the high-risk conformity work lands as a scoped follow-on rather than a re-architecture. 🔴 **Do not** fork Moodle, and do not vendor any LAMB source into the deliverable.
+
+## P54 — Grounded tutoring with a *published* hallucination number (LATAM ministries, Brazilian networks: 6–8 weeks) 🟢 new at p679
+
+**The case this answers.** UNESCO IESALC measured **87%** of LATAM higher-education institutions using AI with only **26%** holding any formal framework, and Cetic.br measured **53%** of Brazilian school administrators using AI against **22%** with guidelines. The buyer's real question is therefore not "can you build a tutor" but **"can you prove it does not invent the curriculum"**. For Brazil, that question is now answerable with a number instead of an assurance — which no other region in this base can match.
+
+**The stack, all permissive, all one family.**
+1. **Curriculum as data** — `bncc-dev/bncc-dados` (MIT code / CC BY 4.0 data): **1,721** learning objectives (1,580 across the three stages of basic education + **141** from the Computing complement, *Parecer CNE/CEB 2/2022*), each carrying competencies, organisation context and **provenance including a PDF locator** back to the official document. The provenance field is the audit trail; do not strip it.
+2. **Agent access** — `bncc-dev/bncc-pacotes`: `npx -y @bncc/mcp` gives any MCP-speaking agent the curriculum as tools, with `@bncc/dados` (npm) and `bncc` (PyPI) for direct use. A hosted MCP endpoint exists at `mcp.bncc.dev` over streamable HTTP with no API key — **use it for the pilot, self-host it for production**, because a ministry deliverable should not depend on someone else's uptime.
+3. **Grounding discipline** — the tutor resolves every curriculum claim through the MCP tool and **cites the objective code**; ungrounded curriculum assertions are refused rather than paraphrased.
+4. **The proof** — `bncc-dev/bncc-benchmark` (MIT + CC BY 4.0). Run your configuration against it and report **two** numbers, not one: **text fidelity** (the published round spans **88% → 3%** across 19 models) and **fake-code acceptance** (a mid-table model still accepted **10%**). Report the ungrounded baseline beside the grounded result — the delta is the engineering value, and it is the slide that closes the governance conversation.
+5. **Governance wrapper** — because only 22–26% of these institutions have a framework, bundle the policy artefacts (acceptable-use, data boundary, human-review rule, incident path) with the benchmark output as the evidence appendix. **Sell this first**; it is what the buyer lacks.
+
+**Delivery notes.** Pair with `GuilhermeScarpini/agente-bncc-professores` (MIT, LATAM-placed) for the teacher-side generator, and note that `THU-MAIC/OpenMAIC` ships **Portuguese (Brazil)** and **Spanish (Mexico)** locales, so an APAC-built classroom platform is a legitimate delivery vehicle in the region. 🔴 **Compliance:** `bncc-pacotes`' licence carves the **name and visual identity** out of the grant — a Globant derivative must not present itself as `bncc.dev`, and the canonical mark is declared in a repository (`bncc-dev/bncc-site`) that is **not public**, so get the attribution wording agreed in writing rather than inferred. 🔴 **Scope honestly:** this pattern is **Brazil-specific**. No equivalent curriculum-plus-benchmark stack exists for Mexico, Colombia, Chile or Argentina in this base — for those, P26 becomes "build layer 1 first", which is a different and longer engagement.
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
