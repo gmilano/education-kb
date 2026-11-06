@@ -1774,3 +1774,44 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 🔴 **Price these three before quoting, because each is a measured fact and not a risk.** (`1`) **NewSchool runs on Node 12, which is end-of-life** — the migration is week one of the real work, not a stretch goal. (`2`) **MaMpf carries `85` open issues on `43★`**: this is fork-and-own; upstream will not carry a client's roadmap. (`3`) **MaMpf's default ref is `next` and HEI's is `preprod`** — CI, licence scanners and dependency bots that assume `main` will silently read nothing (`683-C`).
 
 🔵 **Why a client buys this over a Moodle plugin.** A Moodle derivative that ships to a ministry as *their* platform triggers GPL source disclosure on the derivative. These do not. That is the entire argument, and it is worth more than any feature on the comparison grid — but it only holds if the fork stays clear of GPL plugins, so the dependency audit is part of week one.
+
+## P60 — Assessment integrity a regulator will accept: three decidable controls instead of an AI detector (EMEA and APAC compliance-driven, LATAM at zero infrastructure cost, North America on Canvas/Gradescope; 4–6 weeks to a graded pilot) 🆕 new at p684
+
+**The demand is statutory on four continents** — Ofqual (UK, March 2026), UK DfE product safety standards (January 2026), EU Annex III assessment obligations binding `2027-12-02`, Vietnam's Decision `33/2026/QD-TTg` naming automated assessment high-risk, TEQSA's mandatory generative-AI risk plans in Australia, and UNESCO IESALC's `87 %`-adoption / `26 %`-strategy split across Latin America.
+
+🔴 **Do not build or resell an AI-text detector.** `T79`: the evasion side is already productised (`Cam3L1/ghost-skill` targets GPTZero, Turnitin, Originality.ai, ZeroGPT and CopyLeaks by name), a classifier is obsolete the week it ships, and — decisively for a regulated buyer — a probability score **cannot be evidenced**. Every control below returns a fact a human can re-check.
+
+### The three controls, and what each one decides
+
+| # | Control | Repo | Licence | Decides | Cannot be gamed by |
+|---|---|---|---|---|---|
+| `1` | **Structural code similarity** | [`OSLL/code-plagiarism`](https://github.com/OSLL/code-plagiarism) `codeplag` v0.6.5 | 🟢 MIT (`1,086 B`) | Whether two submissions share an **AST**, for Python 3 / C / C++ | Renaming, reformatting, reordering, comment rewriting |
+| `2` | **Citation existence** | [`DSL4-Digital/RefExists`](https://github.com/DSL4-Digital/RefExists) | 🟢 MIT (`1,076 B`) | Whether each reference **resolves** on Crossref / arXiv / Semantic Scholar, and whether it is **retracted** | Nothing — a DOI resolves or it does not |
+| `3` | **Authorship by examination** | [`pisan-labs/code-viva`](https://github.com/pisan-labs/code-viva) | 🟢 MIT (`1,067 B`) | Whether the student can answer questions about **their own** functions and names | Any text generator, because the artefact is the student's live answer |
+
+🟢 **Optional fourth, deterministic half only:** [`sunilgentyala/academicguard`](https://github.com/sunilgentyala/academicguard) (MIT, `1,082 B`) for **IEEE / Elsevier / ACM / IET / BCS** style conformance. Ship the style checker, **disable its AI-detection module** — it is the component that reintroduces the problem this pattern exists to avoid, and style conformance sells to a research office as a service rather than as an accusation.
+
+🟢 **Optional fifth, for research-integrity offices and APAC data-sovereignty buyers:** [`WuP1ao0/ManuSift`](https://github.com/WuP1ao0/ManuSift) (MIT, `1,077 B`) — 52 offline detectors over paper PDFs and Source Data tables (image reuse, table-fabrication fingerprints, statistical inconsistency), exposed over **MCP** and requiring **no API key**, so nothing leaves the institution.
+
+### Wiring it to the LMS the client already runs
+
+All three controls consume files, not APIs, which is why this composes without touching the LMS licence boundary (`T27`, `T16`):
+
+- **North America / anywhere on Canvas or Gradescope** — `code-viva` imports a Gradescope export (`submission_metadata.yml`), a Canvas *Download submissions* bundle, or a GitHub Classroom assignment by org and repo directly. For an agentic loop over Canvas, front it with [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) or [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp); for grader-side drafting, [`jlouisbru/Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI).
+- **Anywhere on Moodle** — apply **P57** unchanged: a read-only MCP server for learners, a **draft-only** server for graders, a gated server for registrars. [`fabioov/moodle-mcp`](https://github.com/fabioov/moodle-mcp) and the Moodle MCP family on `agents/top.md` supply the surface. The integrity verdicts land as grader-visible drafts, **never as an automatic penalty**.
+- **Brightspace / D2L institutions** — [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) is the only permissive route this base has verified.
+
+### Sequence (4–6 weeks)
+
+1. **Week 1 — the decidable baseline, no AI at all.** Stand up `codeplag` over last term's archived submissions and run `RefExists` over the reference lists of a completed cohort. 🟢 **This step produces the client's first defensible integrity number and uses no LLM**, which is the right order: it establishes a measured baseline before anything generative is introduced, and it is the artefact a regulator or accreditor actually asks for.
+2. **Week 2 — the viva loop.** Import one real assignment through `code-viva`, generate orals for a sample cohort, and have two human markers rate question quality. Bots including `github-classroom[bot]` are already excluded upstream; confirm that exclusion against the client's own CI identities before trusting a flag.
+3. **Weeks 3–4 — LMS surface and the escalation policy.** Wire whichever MCP route matches the client's LMS, with every verdict written as a **draft for a human marker**. 🔴 **Write the escalation policy before the first production run, not after:** which verdicts auto-close, which open a conversation, which reach a misconduct panel, and who sees a false positive first. In the EU this is an Annex III deployer obligation from `2027-12-02`, not a nice-to-have.
+4. **Weeks 5–6 — residency and evidence.** For EMEA data-residency and APAC sovereignty buyers, swap any hosted inference for the local-first stack (`T21`) and add `ManuSift`'s offline kernel. Ship an evidence bundle per verdict — AST match pairs, unresolved DOIs, viva transcripts — because the deliverable a regulated institution buys is the **audit trail**, not the score.
+
+### Why it is sellable, in the client's own words
+
+🟢 **It inverts the conversation from suspicion to assurance.** A detector tells a student they are probably guilty and cannot show why. These three tell an institution *this reference does not exist*, *these two files are the same program*, *this student explained their own code* — each one re-checkable by a human and survivable in an appeal.
+
+🟢 **Cost floor is near zero where it needs to be.** `RefExists` is fully client-side with nothing to host and `codeplag` is a PyPI install, so controls `1` and `2` are a complete, deployable deliverable for the `55 %` of LATAM universities with no AI budget line. Controls `3`–`5` are what a funded North American, EMEA or APAC institution adds on top.
+
+⚠️ **Say the maturity out loud in the proposal.** These are `16★`, `2★` and `2★` repositories — `T79` measured `0` live permissive assets above `20★` in this entire category. That is the opportunity (there is nothing to out-licence) and it is the risk (Globant is taking on maintenance). Price the fork-and-own, and vendor the dependencies.

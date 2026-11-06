@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p684) — 🟢 **AN ENTIRE CATEGORY THIS BASE HAD NEVER SWEPT: ACADEMIC INTEGRITY. `337` NOVEL SLUGS, AND ITS PERMISSIVE SUPPLY TOPS OUT AT `16★`. 🔴 AND THE MANDATED `curl -sI` URL CHECK HAS ZERO DISCRIMINATING POWER IN THIS ENVIRONMENT — IT RETURNS `403` FOR `torvalds/linux` AND FOR A REPOSITORY THAT DOES NOT EXIST.**
+
+**Two rows filed on [`top.md`](./top.md) (`68` → `70`, derived by counting rows between the header separator and the end of the table, `70` distinct subjects, `0` duplicates). Three rows filed on [`../repos/foundations.md`](../repos/foundations.md), one on [`../verticals/solutions.md`](../verticals/solutions.md). Nothing removed from this file.**
+
+### 🔴 `684-A` — the verification instruction is broken here, and the failure is silent
+
+The standing quality bar says *verify every URL with `curl -sI`; a 404 is not a finding*. Measured at p684, with controls at both signs:
+
+| probe | `curl -sI` status | verdict |
+|---|---|---|
+| `github.com/torvalds/linux` (exists) | `403` | — |
+| `github.com/moodle/moodle` (exists) | `403` | — |
+| `github.com/thisorgdoesnotexist000/nope000` (**does not exist**) | `403` | 🔴 **identical** |
+| `GET` (not `HEAD`) on `torvalds/linux` | `403` | 🔴 identical |
+
+🔴 **The channel never returns `404`, so it cannot fail — and a check that cannot fail is not a check.** Had p684 verified its eight candidates the mandated way, every one would have "passed", and so would eight invented slugs. The `github.com` HTML surface has been `403` channel-wide since p670; what p684 adds is the **negative control**, which is what turns a degraded channel into a *useless* one.
+
+🟢 **What was used instead, both signs controlled:**
+
+| channel | positive control | negative control | discriminates |
+|---|---|---|---|
+| `git ls-remote --symref` | `torvalds/linux` → `refs/heads/master` + `d48723711bae` | nonexistent → `fatal: could not read Username` | 🟢 yes |
+| `raw.githubusercontent.com` | `moodle/moodle` `COPYING.txt` → `200` | absent path → `404` | 🟢 yes |
+| `gh api search/repositories` | serves `stargazers_count`, `license.spdx_id`, `archived`, `pushed_at` | — | 🟢 yes (`repos/` endpoint is session-blocked) |
+
+**`P684-A` adopted: existence is proved by `git ls-remote --symref` plus a licence payload read from `raw.githubusercontent.com`, never by an HTTP status on `github.com`.** Every row filed at p684 carries a real default branch, a head SHA, a payload byte count and a payload `sha256₁₂`.
+
+### 🟢 `684-B` — the unswept category, and why it was invisible
+
+p683 established that novelty must be measured against the **tree** (`T77`). p684's tree inventory: **`5,649` distinct `owner/repo` slugs** across every tracked `*.md` and `*.tsv` outside `archive/`. Against that denominator, the web legs were a total nil — `gegok12`, `patchy631/ai-engineering-hub`, `ofbiz`, `corteza`, `krayin`, `openeducat`, `OpenMAIC`, `frappe`/`erpnext` were **all already in the tree**, which is the expected result and not the finding.
+
+The finding came from asking which *heads* had never been swept, rather than which repositories had never been seen:
+
+| head | tree prose hits before p684 | candidates | verdict |
+|---|--:|--:|---|
+| `topic:academic-integrity` | `37` | `100` | 🟢 **never swept as a head** |
+| `topic:plagiarism-detection` | `60` | `100` | 🟢 **never swept as a head** |
+| `topic:proctoring` | `451` | `100` | 🟢 **never swept as a head** |
+| `topic:special-education` | `75` | `93` | 🟢 **never swept as a head** |
+| `topic:lti` | `2,845` | `39` | 🔵 swept, little novel |
+| `topic:knowledge-tracing` | — | `25` | 🔵 swept, little novel |
+| `topic:open-badges` | `37` | `3` | 🔴 head is nearly empty |
+
+`395` distinct candidates, **`337` absent from the tree entirely — `85.3 %` novel**, against the `47.1 %` p683 measured on its own `22` heads. 🔵 **A high prose-hit count was the thing that disguised it:** `proctoring` appears `451` times in this tree and had never once been used as a *query*. **`P684-B` adopted: prose coverage of a topic is not evidence that the topic was ever searched.**
+
+### 🔴 `684-C` — the category's supply is real, recent, and tiny
+
+Licence split of the `337`: `162` `NONE`, `114` MIT, `27` `NOASSERTION`, `16` Apache-2.0, `8` GPL-3.0, `3` AGPL-3.0, `2` BSD-3-Clause, the rest single. `71` are permissive **and** pushed since `2026-06-01`.
+
+🔴 **The ceiling is the finding. The most-starred *live, permissive* asset in the whole category is `16★`.** Above that line there is exactly one repository — [`cu-sanjay/Free-Turnitin-Plagiarism-Checker`](https://github.com/cu-sanjay/Free-Turnitin-Plagiarism-Checker), Apache-2.0, `163★`, `80` forks — and it is **not usable**, for two independent reasons measured this pass:
+
+- its own description begins **`[Archived]`**, while `gh api search/repositories` reports **`archived=false`**. 🔴 **A maintainer's declared status and GitHub's `archived` flag are different facts, and the flag is the weaker one.** **`P684-C` adopted: read the description string, not only the flag.**
+- its README states the Turnitin endpoints it was built on **no longer work**, so it can now only compare against public web pages. The capability named in the repository title no longer exists.
+
+🟡 **And one candidate was declined on purpose rather than on quality:** [`Cam3L1/ghost-skill`](https://github.com/Cam3L1/ghost-skill) (`6★`, no licence) exists to **defeat** GPTZero, Originality.ai, Turnitin, ZeroGPT and CopyLeaks. It is filed here as a demand signal — the evasion side of this market is already productised — and it is the reason **P60** buys authorship evidence and registry checks rather than classifiers.
+
+### 🟡 `684-D` — a fork-to-star ratio that means the opposite of adoption
+
+[`Ganesh-403/semantic-plagiarism-detector`](https://github.com/Ganesh-403/semantic-plagiarism-detector) — MIT (`1,069 B`, sha256₁₂ `ee11607e79e6`, © *Ganesh Kambli*), paraphrase and **cross-lingual** plagiarism over SentenceTransformers + FAISS, pushed `2026-11-04`. `16★` and **`109` forks**: a ratio of **`6.8` forks per star**.
+
+🔴 **Not shelved, and the ratio is why.** `T65`/`T71` read a high fork count as deployment. This is the third regime neither trend covers: **`109` forks on `16` stars, on a repository created `2026-03-16`, reads as coursework cloning, not deployment** — people taking a copy to submit, not to run. `T71`'s two regimes separate *deployed platforms* from *imported libraries*; this is a **template being harvested**, and the signature is the ratio inverting while the absolute star count stays near zero. **`P684-D` adopted: forks per star is only an adoption signal above a star floor; below it, it is a cloning signal.**
+
+### 🔧 `684-E` — the cell-arity gate itself had an `8.5×` false-positive rate, and `P50` check `3` is where it is specified
+
+`p674` built a cell-arity sweep after losing `1,190` published characters to a stray `|`, and `P50` check `3` makes it a standing gate. Run naively at p684 it reported **`68`** disagreeing rows across the eight files. Run again, splitting on `(?<!\\)\|` so an **escaped** pipe inside a cell is not counted as a cell boundary, it reports **`8`**.
+
+🔴 **`60` of the `68` were the gate's own false positives**, and the single worst offender is `P50` check `3`'s own row, which necessarily contains `\|` because it is *describing* pipe counting. A gate that flags its own specification is a gate nobody will keep running.
+
+| measurement | naive gate | escaped-pipe-aware gate |
+|---|--:|--:|
+| `agents/top.md` | `1` | **`0`** (after the `L204` repair below) |
+| `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `intel/trends.md`, `compose/patterns.md` | `1` | **`0`** |
+| the two append-only history files | `66` | `8` |
+| **total** | **`68`** | **`8`** |
+
+🟢 **The six sell and intel shelves now score `0`**, which is the number `p682` claimed and `p684` is the first pass to reproduce on an instrument that can be trusted. 🔧 **One real defect was found and repaired on the way:** the separator row of the grant-verification table in [`top.md`](./top.md) carried `7` segments under a `6`-cell header.
+
+🟡 **The surviving `8` are all in this file and [`../repos/trending.md`](../repos/trending.md), all of the same class — an unescaped literal `|` inside a cell** (`… | head -3`, `api.github.com/repos|search|orgs`, `grep -c "^|"`, and one nested table quoted inside a cell). They are **not repaired**, deliberately: these files are append-only history, one of the eight is self-labelled `SWALLOWED-PIPE` and uncontracted on purpose, and rewriting past sections to tidy a renderer is exactly what the append-only rule exists to prevent. **`P684-E` adopted: the arity gate runs escaped-pipe-aware, blocks on the sell and intel shelves, and only reports on the history files.**
+
+### 🔵 What the four regional demand legs returned: nil again, and the denominator is written down
+
+Run globally and once per region (`AI education {region} 2026 adoption regulation players`), plus the four mandated English legs.
+
+| leg | facts returned | already held | novel |
+|---|--:|--:|--:|
+| North America | `5` | `5` | `0` |
+| EMEA | `3` | `3` | `0` |
+| APAC | `4` | `4` | `0` |
+| LATAM | `6` | `6` | `0` |
+| **total** | **`18`** | **`16`** | **`2`** |
+
+Held in full: the `134` AI-in-education bills across `31` states; the Maryland / Idaho / Oklahoma / Virginia mandatory-district-policy laws; the North Carolina `$10 M` Khanmigo earmark; the K-12 AI Literacy and Readiness Act; the ECS task-force count; UK DfE generative-AI product safety standards and Ofqual; Finland / Estonia / Netherlands; Regulation **(EU) 2026/1744** and Annex III at **`2027-12-02`**; Korea's AI Basic Act; Vietnam's Decision `33/2026/QD-TTg`; Singapore AI Verify; TEQSA; the UNESCO LAC Observatory; IESALC `87 %` / `26 %`; the `55 %` no-AI-budget figure; Cetic.br `53 %` / `22 %`; Ceibal `75 %`.
+
+🟢 **The two novel facts did not come from a demand leg at all.** **Lei 12.764** and the **LBI / Lei 13.146** were absent from this entire base, and both arrived through a *repository's own README* — the LATAM row filed on `verticals/solutions.md`. **See `T81`: at this base's maturity the supply channel now out-produces the demand channel on demand-side facts, which inverts the direction the mandated legs assume.**
+
+### 🟢 Placements made and refused at p684
+
+| subject | channel | T78 rank | outcome |
+|---|---|--:|---|
+| `DSL4-Digital/RefExists` | 🟢 **legal-entity suffix in the grant payload** (`S.L.U.` → Spanish commercial register) | `1` (new) | **EMEA** |
+| `Fernandosr85/sistema-gestao-pei` | 🟢 named national statutes (`Lei 12.764`, `LBI`, `LDB`, `LGPD`) | `2` | **LATAM** |
+| `WuP1ao0/ManuSift` | 🟡 body-text language, measured (`63.2 %` CJK of prose letters; non-English **primary** README) | `4` | **APAC** |
+| `pisan-labs/code-viva` | 🔴 only LMS integration targets (Gradescope, Canvas, GitHub Classroom) | — | **refused — audience, not location** |
+| `OSLL/code-plagiarism` | 🔴 three individual author names, no institution | `5` | **refused** |
+| `sunilgentyala/academicguard` | 🔴 contributor collective, nothing to read | — | **refused** |
+
+**Three placed, three refused.** The `S.L.U.` channel is the pass's most transferable result and costs nothing to run — see **`T80`**.
+
+---
+
 ## 🆕 2026-11-06 (p683) — 🟢 **THE SUPPLY CHANNEL IS NOT SATURATED, BUT ITS YIELD IS `~1 %`: `558` CANDIDATES OVER `22` SEARCH HEADS → `5` REAL EDUCATION ASSETS. 🔴 AND p683's FIRST NOVELTY MEASUREMENT WAS WRONG BY `3.3×` BECAUSE IT CHECKED THE SHELVES INSTEAD OF THE TREE.**
 
 **One row filed on [`top.md`](./top.md) (`67` → `68`, re-derived by counting rows, not by editing the previous figure). Nothing removed from this file.** The pass's primary product is a measurement of the discovery channel itself, and the most useful half of it is a correction p683 had to make against its own first arm.

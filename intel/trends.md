@@ -1150,3 +1150,35 @@ Across p683's sweep, five distinct placement channels were exercised on the same
 🔵 **The practical rule, and it is cheap**: take the highest-ranked channel that returns a *single* answer, verify that answer is not a placeholder or a list, and write down which channel it came from in the row. p683 placed three repositories on channels `1`, `1` and `4`, and **refused three placements outright** rather than drop to channel `5`.
 
 **What to do with it on an engagement**: a client's data-residency or sovereignty audit faces the identical problem. Residency claimed from a vendor's marketing page is channel `5`; residency read from the TLD and the contracted region of a storage bucket is channel `1`. The EU AI Act and Vietnam's Decision 33 both bind on where a system *operates*, not on where its vendor says it does.
+
+## T79 — Academic integrity is the sector's one *statutorily forced* AI demand with essentially no permissive supply behind it 🟢 new at p684
+
+Every other demand this base tracks has a permissive answer somewhere on its shelves. This one does not, and the asymmetry is measured rather than impressionistic.
+
+**Demand side, all of it already held on this base's own pages:** Ofqual published AI-and-coursework-integrity resources in March 2026; the UK DfE issued generative-AI product safety standards in January 2026; the EU treats assessment as Annex III high-risk from `2027-12-02`; Vietnam's Decision `33/2026/QD-TTg` names **automated assessment** as high-risk; TEQSA requires every Australian higher-education provider to file a generative-AI risk action plan; UNESCO IESALC finds `87 %` of surveyed Latin American institutions using AI with `26 %` holding a strategy. Assessment integrity is the single capability named by regulators on **four** continents.
+
+**Supply side, censused at p684 across four never-swept heads:** `395` candidates, `337` novel, `132` permissive — and **`0` live permissive repositories above `20★`**. The category's most-starred permissive asset (`163★`) is self-declared archived *and* built on an upstream API that no longer exists. The usable shelf is `16★` and below.
+
+🔴 **The gap is not a discovery failure — it is a property of the problem.** AI-text detection is a classifier against an adversary that is already productised (`Cam3L1/ghost-skill` exists to defeat GPTZero, Turnitin and CopyLeaks), so an open detector is obsolete the week it ships and nobody accumulates stars on it.
+
+🟢 **Which is why the three assets worth having are the ones that are not detectors.** `OSLL/code-plagiarism` compares ASTs — structure, not style, and renaming does not defeat it. `DSL4-Digital/RefExists` resolves citations against Crossref, arXiv and Semantic Scholar — a DOI either resolves or it does not. `pisan-labs/code-viva` examines the student about their own code — authorship by examination. **All three are decidable; none of them classifies prose.** The sellable position in this category is deterministic evidence, and it is open for the taking.
+
+## T80 — The licensor's legal-entity suffix is a rank-1 jurisdiction fact, and it is sitting in a file this base already reads for every row 🟢 new at p684
+
+`T78` ranked five placement channels and put registry facts at rank 1. p684 adds a sixth that belongs at rank 1 and costs **nothing**.
+
+**`DSL4-Digital/RefExists`** carries `Copyright (c) 2026 DSL4 Digital, S.L.U.` in its `LICENSE`. `S.L.U.` is *Sociedad Limitada Unipersonal* — a company form that exists only in the **Spanish** commercial register. That is not an inference about where someone lives: it is the jurisdiction of incorporation, stated by the licensor, in the operative grant.
+
+🟢 **The economics are what make it matter.** This base already fetches and hashes the grant payload for **every** row it files — the channel is a `grep` over bytes already in hand, with no extra request. The equivalent class generalises directly: `S.L.`/`S.L.U.`/`S.A.U.` (Spain), `GmbH`/`UG` (Germany), `S.à r.l.` (Luxembourg, France), `B.V.` (Netherlands), `Oy`/`Ab` (Finland, Sweden), `Pty Ltd` (Australia), `Ltda`/`S.A.` (Brazil and Spanish-speaking LATAM), `K.K.`/`G.K.` (Japan), `LLC`/`Inc.` (United States — weakest of the set, since US entity suffixes do not identify a state and barely identify a country).
+
+⚠️ **Two limits, stated so the channel is not over-read.** It gives the jurisdiction of **incorporation**, which for a vendor is usually the right answer and for a holding company may not be. And it only fires when the licensor is a **company** — p684's other five candidates were licensed by individuals or contributor collectives, so the channel placed `1 of 6`. 🔵 Low hit rate, zero cost, rank-1 authority: run it on every row, expect it to be silent most of the time.
+
+## T81 — Past a certain maturity, a curated base learns more demand-side facts from repositories than from demand-side searches 🔴 new at p684
+
+p684 ran the four mandated regional demand legs and the four mandated English legs. `18` facts returned, **`16` already held** — and held in more detail than the sources gave them.
+
+🟢 **The two facts that were genuinely novel arrived through a repository's README.** **Lei 12.764** (Brazil's national autism-rights policy) and the **LBI / Lei 13.146** were absent from this entire knowledge base, and both came out of `Fernandosr85/sistema-gestao-pei` — a `1★` prototype found by a `topic:special-education` sweep, not by any question about Brazilian education policy.
+
+🔴 **This inverts the direction the mandated legs assume.** Demand legs read secondary commentary, which converges on the same canonical set of statutes and surveys; a base that has already absorbed that set will keep scoring near-total nil on them (`T72`). A *working implementation*, by contrast, cites the statutes its author actually has to comply with — including the ones no commentary mentions, because they are too specific to generalise about.
+
+🟢 **The operational consequence is a reordering, not an abandonment.** Keep the demand legs — they are the control that proves nothing was missed, and the nil is only informative because the denominator is written down. But **mine the shelved repositories' own texts as a demand channel in their own right**: statutes, named examinations, accreditation bodies and funding programmes cited in a README are facts a client's legal team will recognise, and `T78` already ranks them above anything a trend article can offer. This also explains why `T78` rank 2 keeps producing: a statute citation is simultaneously the best **placement** evidence and a novel **demand** fact.

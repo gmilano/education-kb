@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p684) — 🟢 **THE ACADEMIC-INTEGRITY SHELF, CENSUSED FOR THE FIRST TIME: `395` CANDIDATES, `337` NOVEL (`85.3 %`), AND A `16★` CEILING ON LIVE PERMISSIVE SUPPLY.**
+
+**Three rows filed on [`foundations.md`](./foundations.md). Nothing removed from this file.** Full method, controls and the refused placements are in [`../agents/trending.md`](../agents/trending.md) at p684.
+
+### The census
+
+`4` heads never previously swept as queries (`academic-integrity`, `plagiarism-detection`, `proctoring`, `special-education`) plus `3` controls (`lti`, `knowledge-tracing`, `open-badges`), differenced against **`5,649`** distinct slugs in this tree.
+
+| metric | value |
+|---|--:|
+| distinct candidates | `395` |
+| absent from the tree | **`337`** (`85.3 %`) |
+| permissive (MIT / Apache-2.0 / BSD) | `132` |
+| permissive **and** pushed since `2026-06-01` | `71` |
+| 🔴 **live permissive repositories above `20★`** | **`0`** |
+
+### The whole live permissive head of the category, read at first hand
+
+| Repo | Licence | Stars | Forks | Pushed | Reading |
+|---|---|--:|--:|---|---|
+| [`cu-sanjay/Free-Turnitin-Plagiarism-Checker`](https://github.com/cu-sanjay/Free-Turnitin-Plagiarism-Checker) | Apache-2.0 (`11,356 B`) | `163` | `80` | `2026-10-16` | 🔴 **Unusable twice over.** Description begins `[Archived]` while the API flag says `archived=false`; README states the Turnitin endpoints are dead and it can now only match public web pages |
+| [`Ganesh-403/semantic-plagiarism-detector`](https://github.com/Ganesh-403/semantic-plagiarism-detector) | 🟢 MIT (`1,069 B`) | `16` | `109` | `2026-11-04` | 🟡 **Not shelved** — `6.8` forks per star on a repo created `2026-03-16` reads as coursework cloning, not deployment (`684-D`) |
+| [`OSLL/code-plagiarism`](https://github.com/OSLL/code-plagiarism) | 🟢 MIT (`1,086 B`) | `16` | `6` | `2026-07-19` | 🟢 **Shelved.** AST-based, `codeplag` v0.6.5, `Intended Audience :: Education` in its manifest, created `2020-11-26` |
+| [`sunilgentyala/academicguard`](https://github.com/sunilgentyala/academicguard) | 🟢 MIT (`1,082 B`) | `9` | `0` | `2026-09-25` | 🟢 **Shelved** for its deterministic IEEE / Elsevier / ACM / IET / BCS style half |
+| [`ttncode/proofly`](https://github.com/ttncode/proofly) | 🔴 **none** | `7` | — | `2026-09-17` | Self-hosted, vector similarity. No grant — unusable regardless of merit |
+| [`Cam3L1/ghost-skill`](https://github.com/Cam3L1/ghost-skill) | 🔴 **none** | `6` | — | `2026-06-15` | 🟡 **Evasion**, not integrity: exists to defeat GPTZero, Turnitin, CopyLeaks. Recorded as a demand signal |
+| [`BojanStipic/resava`](https://github.com/BojanStipic/resava) | GPL-3.0 | `6` | — | `2026-10-01` | Copyleft — source-code plagiarism. Not buildable on commercially |
+| [`devrupt-io/LLaMAudit`](https://github.com/devrupt-io/LLaMAudit) | 🔴 **none** | `5` | — | `2026-02-20` | Self-hosted AI-text detection over local LLMs. No grant |
+| [`irgifebry/plagiarism-checker`](https://github.com/irgifebry/plagiarism-checker) | 🔴 **none** | `5` | — | `2026-07-21` | Offline, no API keys — the right shape, no grant |
+| [`Copyleaks/ng-web-report`](https://github.com/Copyleaks/ng-web-report) | 🔴 `NOASSERTION` | `22` | — | `2026-11-05` | Vendor front-end for a paid API. Per `T73`, `NOASSERTION` must never be filed either way without reading the payload — not read this pass, so **not filed** |
+| [`PlagiarismCheck/moodle-plagiarism_pchkorg`](https://github.com/PlagiarismCheck/moodle-plagiarism_pchkorg) | GPL-3.0 | `14` | — | `2026-10-28` | Moodle plugin fronting a paid service. Copyleft, and the intelligence is off-premises |
+
+🔴 **Read the first and last columns together: the two highest star counts in the category are an archived tool whose upstream API is gone, and a vendor front-end with no readable grant.** The usable permissive supply is everything at `16★` and below.
+
+### The two rows below the fold that are not plagiarism tools at all
+
+| Repo | Licence | Stars | Region | Note |
+|---|---|--:|---|---|
+| [`DSL4-Digital/RefExists`](https://github.com/DSL4-Digital/RefExists) | 🟢 MIT (`1,076 B`) | `2` | **EMEA** | 🟢 **Shelved.** Citation reality-checker against Crossref / arXiv / Semantic Scholar — decidable, unlike detection. Placed on the `S.L.U.` registry channel (`T80`) |
+| [`Fernandosr85/sistema-gestao-pei`](https://github.com/Fernandosr85/sistema-gestao-pei) | 🟢 MIT (`1,085 B`) | `1` | **LATAM** | 🟢 Filed to `../verticals/solutions.md`. Brazilian **PEI** workflow; carried the only two demand-side facts novel to this base all pass |
+
+### 🔵 Heads that returned nothing worth carrying
+
+- `topic:open-badges` — `3` candidates in total. 🔴 **The head is empty, not unexplored**, which also answers the 1EdTech digital-credentials trend from the demand side: the standard has institutional momentum and **no permissive open-source implementation shelf behind it**. Declared gap, not silence.
+- `education verifiable credentials wallet diploma stars:>10` — `0` rows returned.
+- `topic:lti` (`39`) and `topic:knowledge-tracing` (`25`) behaved as controls should: already swept, nothing adoptable, consistent with `T72`.
+- `topic:accessibility education` returned `12`, all of them general-purpose (a p5.js website, a keyboard utility, two teaching programming languages). 🔴 **No accessibility-remediation asset surfaced for the April 2026 US obligation** — `T29` stands unimproved.
+
+---
+
 ## 🆕 2026-11-06 (p683) — 🟢 **TWO GRANTS RECOVERED FROM PATHS A FIXED-CASE PROBE CANNOT SEE — ONE OF THEM `P1057` ALREADY HANDLES AND p683's OWN PROBE HAD REGRESSED PAST. 🟢 `T273`'s `master` ALIAS EXTENDED TO DEFAULTS NAMED NEITHER `main` NOR `master`; THE DANGEROUS READING OF IT TESTED AND REFUTED.**
 
 **One row filed on [`foundations.md`](./foundations.md) (`136` → `137`, re-derived by counting). Four rows filed on [`../verticals/solutions.md`](../verticals/solutions.md) (`60` → `64`). Nothing removed.**
