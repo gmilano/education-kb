@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p682) — 🔧 **`34` REGION CELLS IN THIS FILE CARRIED COUNTRY, FLAG OR “NOT PLACED” TEXT INSIDE THE CLOSED-VOCABULARY FIELD; THE WORST SINGLE BUCKET WAS `EMEA (Finland)` × 8**
+
+**No repository row was removed and none was added to [`repos/foundations.md`](./foundations.md) at p682 (`143` → `143`).** This file's change is confined to the `Region` column, and the reason it needed one is recorded in full at [`agents/trending.md` § `682-A`](../agents/trending.md).
+
+### 🔴 What this file was carrying
+
+Across this file and [`agents/trending.md`](../agents/trending.md), the `Region` field held **`114` distinct strings for `5` legal values — `367` of `795` cells, 46 %, outside the vocabulary.** This file's share included `EMEA (Finland)` ×`8`, `EMEA 🇨🇭` ×`7`, `Not placed` ×`16` spread over four spellings, `APAC 🇨🇳`, `APAC (India · Assam)`, `EMEA (DE A1)`, `🟡 **LATAM** (language)` ×`2`, and `🔴 Global *(no basis in the row)*`.
+
+🔵 **The flag-emoji cells are the clearest case of why this matters.** `APAC 🇨🇳` and `APAC` are the same placement to a reader and two different buckets to a filter, and the flag is doing work the `Region` field cannot do — it names a *country*, which belongs in the prose. Per the base's own rule: **the country goes in the prose, the region goes in the field.**
+
+🟢 **After p682: `5` values, `0` illegal placements in this file.** `34` qualifiers from this file had no prose column to receive them and are preserved verbatim below; the rest were appended to their row's own prose. 🔴 Two cells were **refused** rather than guessed (`:-:` alignment artefacts are separator rows, not data) and the `mixed` aggregate in the measurement table was left standing deliberately — see [`682-B`](../agents/trending.md).
+
+### 📒 `682-F` — region ledger (this file)
+
+Line numbers are **pre-p682**.
+
+| Line (pre-p682) | Region cell as published | Normalised to | Detail preserved here |
+|--:|---|---|---|
+| `248` | `**North America** — *"25,000 argumentative essays produced by 6th-12th grade students in t…` | `North America` | "25,000 argumentative essays produced by 6th-12th grade students in the United States for … |
+| `3042` | `🟡 **LATAM** (language)` | `LATAM` | language |
+| `3044` | `🟡 **LATAM** (language)` | `LATAM` | language |
+| `3674` | `APAC (Taiwan)` | `APAC` | Taiwan |
+| `3675` | `APAC (China)` | `APAC` | China |
+| `3676` | `APAC (China)` | `APAC` | China |
+| `3677` | `APAC (India · Assam)` | `APAC` | India · Assam |
+| `3678` | `EMEA (Italy)` | `EMEA` | Italy |
+| `3679` | `EMEA (France)` | `EMEA` | France |
+| `3680` | `EMEA (DE A1)` | `EMEA` | DE A1 |
+| `3682` | `Global (unplaced)` | `Global` | Global (unplaced) |
+| `3683` | `Global (unplaced)` | `Global` | Global (unplaced) |
+| `7250` | `**UNPLACED**` | `Global` | UNPLACED |
+| `21147` | `APAC 🇨🇳` | `APAC` | 🇨🇳 |
+| `21148` | `EMEA 🇨🇭` | `EMEA` | 🇨🇭 |
+| `21150` | `EMEA 🇨🇭` | `EMEA` | 🇨🇭 |
+| `21204` | `APAC — India` | `APAC` | India |
+| `21205` | `APAC — China` | `APAC` | China |
+| `21206` | `APAC — China` | `APAC` | China |
+| `21207` | `EMEA — Germany` | `EMEA` | Germany |
+| `21716` | `Not placed` | `Global` | Not placed |
+| `21782` | `Not placed` | `Global` | Not placed |
+| `21783` | `Not placed` | `Global` | Not placed |
+| `21786` | `Not placed` | `Global` | Not placed |
+| `40950` | `—` | `Global` | unplaced |
+| `43000` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43001` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43002` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43003` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43004` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43005` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43006` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43007` | `EMEA (Finland)` | `EMEA` | Finland |
+| `43008` | `EMEA (EU)` | `EMEA` | EU |
+
+---
+
 ## 🆕 2026-11-06 (p681) — 🔴 **A `123,056★` MIT REPOSITORY WAS IN THIS BASE'S OWN LEDGER SINCE `p367` CARRYING `licence = unstated`, AND THE PASS THAT DIAGNOSED "A DECLARED FILING IS NOT A FILED ROW" FAILED TO FILE IT. 🟢 THE OER CORPUS IS REACHABLE UNDER MIT EVEN THOUGH ITS PLATFORM IS COPYLEFT. 🔴 `T71`'s CLASSROOM REGIME DOES NOT BELONG TO CURRICULA — 12 POINTS, FIVE REFUTATIONS. 🔴 A NEW GRANT-DEFECT CLASS: TERMS NAMED CORRECTLY, BYTES NOT SHIPPED.**
 
 **Four rows filed on `repos/foundations.md` (`139` → `143`), re-derived by counting the table.**
@@ -53,9 +108,9 @@ Full table in [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evid
 
 | Repo | Licence (byte-read) | Stars | Forks | `f/★` | Region | Channel |
 |---|---|--:|--:|--:|---|---|
-| [`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation) | 🟢 MIT, `1,074 B`, `9908478c70da`, © *2016 NAU-ACM* | **2,546** | 698 | `0.274` | **North America** | `topic:curriculum` — **absent from this whole tree**, the only adoptable novel address of `21` |
-| [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code) | 🟢 MIT, `1,080 B`, `35c4b4f6b5b9`, 🔴 © *FunHarness Contributors* | **59** | 9 | `0.153` | **APAC** | backlog — measured `p154`, shelved nowhere for `526` passes |
-| [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) | 🟢 MIT, `1,075 B`, `d5305ab1bbe1` | **16** | **153** | 🔴 **`9.563`** | **EMEA** | backlog (`p154`); **excluded by this pass's own `stars:>40` floor** |
+| [`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation) | 🟢 MIT, `1,074 B`, `9908478c70da`, © *2016 NAU-ACM* | **2,546** | 698 | `0.274` | North America | `topic:curriculum` — **absent from this whole tree**, the only adoptable novel address of `21` |
+| [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code) | 🟢 MIT, `1,080 B`, `35c4b4f6b5b9`, 🔴 © *FunHarness Contributors* | **59** | 9 | `0.153` | APAC | backlog — measured `p154`, shelved nowhere for `526` passes |
+| [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) | 🟢 MIT, `1,075 B`, `d5305ab1bbe1` | **16** | **153** | 🔴 **`9.563`** | EMEA | backlog (`p154`); **excluded by this pass's own `stars:>40` floor** |
 
 🔴 **The saturation census is the finding, not the three rows.** Nine topics swept at `stars:>40`, six of them never queried by this base before (`language-learning`, `curriculum`, `plagiarism-detection`, `early-childhood-education`, `competency-based-education`, `teacher-tools`):
 
@@ -245,8 +300,8 @@ Every row below was re-verified first-hand on **2026-11-06**: existence and real
 
 | Repository | Stars | Grant, read at the holder's own repo | Region | Why it is filable |
 |---|---|---|---|---|
-| [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) | **69** | 🟢 **CC BY 4.0** — README prose, `2,081 B`, sha256₁₆ `2f984c8712650050`, `main` @ `5bdbad1175d1`. 🔴 **No licence file exists** (six filenames probed, all `404`); GitHub detects no licence | **North America** — *"25,000 argumentative essays produced by 6th-12th grade students in the **United States** for 15 prompts"*, from the repository's own README | 🟢 **The only commercially-usable, education-specific, human-scored writing corpus this base has found.** `Gap 390` / `T21` recorded it as `CC-BY-NC-SA-4.0` *"by its author's own repo (`P1007`)"* — **both** author repositories say **CC BY 4.0** (1.0 at [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus), `6b69a55c9d36`, README `3,486 B`, sha256₁₆ `809c25c2379d639e`). 🔵 1.0 is **not** filed: its README is a `P1009` redirect to this slug |
-| [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) | **26** | 🔴 **CC BY-NC-SA 4.0** — README prose, `1,795 B`, sha256₁₆ `44d9d46bbd540d39`, `main` @ `dbf1cf0df30b`. 🔴 **No licence file exists** (same six probed) | **North America** — CommonLit Ease of Readability; *"~5,000 text excerpts leveled for 3rd-12th grade readers"*, teacher-rated | 🔴 **Filed as a do-not-ship row.** `NC` **and** `SA` at source. 🔵 **This is also the sentence this base attached to the wrong corpus**: same author, same one-sentence form, one token apart. It is the English readability ground truth and it cannot enter a commercial artefact |
+| [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) | **69** | 🟢 **CC BY 4.0** — README prose, `2,081 B`, sha256₁₆ `2f984c8712650050`, `main` @ `5bdbad1175d1`. 🔴 **No licence file exists** (six filenames probed, all `404`); GitHub detects no licence | North America | 🟢 **The only commercially-usable, education-specific, human-scored writing corpus this base has found.** `Gap 390` / `T21` recorded it as `CC-BY-NC-SA-4.0` *"by its author's own repo (`P1007`)"* — **both** author repositories say **CC BY 4.0** (1.0 at [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus), `6b69a55c9d36`, README `3,486 B`, sha256₁₆ `809c25c2379d639e`). 🔵 1.0 is **not** filed: its README is a `P1009` redirect to this slug |
+| [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) | **26** | 🔴 **CC BY-NC-SA 4.0** — README prose, `1,795 B`, sha256₁₆ `44d9d46bbd540d39`, `main` @ `dbf1cf0df30b`. 🔴 **No licence file exists** (same six probed) | North America | 🔴 **Filed as a do-not-ship row.** `NC` **and** `SA` at source. 🔵 **This is also the sentence this base attached to the wrong corpus**: same author, same one-sentence form, one token apart. It is the English readability ground truth and it cannot enter a commercial artefact 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: CommonLit Ease of Readability; *"~5,000 text excerpts leveled for 3rd-12th grade readers"*, teacher-rated)* |
 
 🔵 **Both rows share a shape this shelf has not carried: the grant is in the README and nowhere else, and the data is not in the repository.** PERSUADE 2.0 ships two Google Drive links (test set a password-protected zip, password published in the README); CLEAR's CSV is likewise out-of-tree. 🟢 So a licence-file sweep — the instrument this base trusts most — returns **`NOASSERTION`/none on both** and would have shelved neither. The grant had to be read as prose.
 
@@ -339,15 +394,15 @@ The one genuinely new supply route this pass found is not a search leg at all. [
 
 | Address | Grant (bytes, `sha256₁₂`, residual) | Stars | Forks | Pushed | Region | Layer |
 |---|---|---|---|---|---|---|
-| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 · `11,361 B` · `d5fcb264ff39` · +3 | **373** | 86 | `2026-11-05` 🟢 | **LATAM** | **LTI 1.3 / Advantage tool provider** — how an agent runs *inside* Moodle/Canvas/Blackboard/D2L. Payload-adjacent evidence: *Federal University of Maranhão*, `ufma.br`. Ledger since `p10`, `20` passes. |
-| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT · `1,094 B` · `08ea77291de9` · +67 | **51** | 19 | `2026-11-05` 🟢 | **EMEA** | **xAPI / LRS** store + FastAPI server. `Copyright (c) 2020-present France Université Numérique`. **Ledger since `p6`, `40` mentions, `23` passes — the longest-tracked unfiled address here.** |
-| [`Apereo…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟡 **ECL-2.0** · `9,878 B` · `f339063d2f60` | **62** | 25 | `2025-09-12` ⚠️ | Global (refused) | **Learning record warehouse** (xAPI + Caliper + OneRoster model). `673-B` specimen: `NOASSERTION` → ECL-2.0, permissive. |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 · `11,361 B` · `d5fcb264ff39` · +3 | **373** | 86 | `2026-11-05` 🟢 | LATAM | **LTI 1.3 / Advantage tool provider** — how an agent runs *inside* Moodle/Canvas/Blackboard/D2L. Payload-adjacent evidence: *Federal University of Maranhão*, `ufma.br`. Ledger since `p10`, `20` passes. |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT · `1,094 B` · `08ea77291de9` · +67 | **51** | 19 | `2026-11-05` 🟢 | EMEA | **xAPI / LRS** store + FastAPI server. `Copyright (c) 2020-present France Université Numérique`. **Ledger since `p6`, `40` mentions, `23` passes — the longest-tracked unfiled address here.** |
+| [`Apereo…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟡 **ECL-2.0** · `9,878 B` · `f339063d2f60` | **62** | 25 | `2025-09-12` ⚠️ | Global | **Learning record warehouse** (xAPI + Caliper + OneRoster model). `673-B` specimen: `NOASSERTION` → ECL-2.0, permissive. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (refused))* |
 | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 Apache-2.0 · `13,185 B` · `ba1f153bdba3` · **+1,803 decomposed** | **61** | 31 | `2025-11-04` ⚠️ | North America | **Open Badges validation** — the credential layer the 2026 skills-and-credentials trend keeps returning. Default ref `develop`. |
-| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0 · `11,323 B` · `6dc0e068dcf3` · 0 | **21** | 9 | `2026-11-04` 🟢 | Global (refused) | **Randomised controlled trials inside a live LMS course** over LTI. The measurement instrument `T49` wanted. Default ref `development`. |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0 · `11,323 B` · `6dc0e068dcf3` · 0 | **21** | 9 | `2026-11-04` 🟢 | Global | **Randomised controlled trials inside a live LMS course** over LTI. The measurement instrument `T49` wanted. Default ref `development`. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (refused))* |
 | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 Apache-2.0 · `10,173 B` · `a6cba85bc92e` · −1,092 | **6** | 5 | `2026-11-03` 🟢 | North America | **OneRoster 1.2 API over an Ed-Fi ODS** — the permissive adapter that routes *around* `T50` instead of relicensing the SIS. Floor cleared on function, not adoption. |
 | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 MIT · `1,072 B` · `00ed05b90bf8` · +47 | **6** | 3 | `2026-11-02` 🟢 | North America | **QTI 3 reference implementation**, zero runtime dependencies — portable assessment items. Placed via `673-C` (`Longsight, Inc.`). |
-| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 MIT · `1,066 B` · `1dc50226c38a` · +41 | **6** | 8 | `2023-10-13` 🔴 | Global (refused) | **OneRoster 1.1/1.2 client for .NET**, rostering only, grade book **not** implemented. **Three years stale** — filed as a fork base, with staleness as the headline. |
-| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT · `1,092 B` · `e162f8f4b461` · +67 | **25** | 6 | `2026-10-15` 🟢 | **LATAM** | **Brazil's BNCC national curriculum as verified open data** — `1,721` learning objectives, JSON/SQLite/CSV, per-record provenance to MEC/CNE. Makes `P39`/`P41` auditable against the statutory source. |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 MIT · `1,066 B` · `1dc50226c38a` · +41 | **6** | 8 | `2023-10-13` 🔴 | Global | **OneRoster 1.1/1.2 client for .NET**, rostering only, grade book **not** implemented. **Three years stale** — filed as a fork base, with staleness as the headline. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (refused))* |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 MIT · `1,092 B` · `e162f8f4b461` · +67 | **25** | 6 | `2026-10-15` 🟢 | LATAM | **Brazil's BNCC national curriculum as verified open data** — `1,721` learning objectives, JSON/SQLite/CSV, per-record provenance to MEC/CNE. Makes `P39`/`P41` auditable against the statutory source. |
 
 **The `3` platforms filed** (`verticals/solutions.md` `50` → **`53`**): [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (**981★**, MIT code / CC BY-SA `docs/` — **split grant**, APAC via `673-C`), [`UniTime/unitime`](https://github.com/UniTime/unitime) (**357★**, Apache-2.0, university timetabling, forks-per-star `0.608`, **placement refused — region enumeration**), [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (**582★**, Apache-2.0, Portuguese-first programming education, **dormant since 2024-04-21**, filed explicitly as a fork base whose maintenance cost belongs in the estimate).
 
@@ -3012,37 +3067,37 @@ stated as a gap rather than estimated.
 
 | Repo | Grant | Bytes | ★ | Forks | Pushed | Branch | Region | Tier |
 |---|---|---|---|---|---|---|---|---|
-| [`tonaljs/tonal`](https://github.com/tonaljs/tonal) | 🟢 `MIT` (`docs/LICENSE`) | `1,074` | **`4,268`** | `257` | `2026-10-14` | `main` | 🔵 Global | music primitive |
-| [`CoderLine/alphaTab`](https://github.com/CoderLine/alphaTab) | 🟡 `MPL-2.0` | `16,907` | **`1,899`** | `303` | `2026-11-01` | `develop` | 🔵 Global | notation rendering |
-| [`gregjopa/music.js`](https://github.com/gregjopa/music.js) | 🟢 `MIT` (`LICENSE-MIT`) | `1,066` | `204` | `16` | `2017-07-19` | `master` | 🔵 Global | music primitive |
-| [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) | 🟡 `MIT` in `README` | — | `186` | `35` | `2026-09-24` | `master` | 🔵 Global | ear training |
-| [`sirged/fermata`](https://github.com/sirged/fermata) | 🟢 `MIT` | `1,077` | `38` | `2` | `2026-10-25` | `main` | 🔵 Global | score library/server |
-| [`openzim/phet`](https://github.com/openzim/phet) | 🟢 `Apache-2.0` | `11,356` | `21` | `9` | 🟢 **`2026-11-02`** | `main` | 🔵 Global | offline distribution |
-| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | 🔴 `GPL-3.0` | `35,147` | `22` | `1` | `2026-10-23` | `main` | 🔵 Global | virtual microscope |
-| [`Zachacious/MusicTheoryJS`](https://github.com/Zachacious/MusicTheoryJS) | 🟢 `ISC` | **`746`** | `18` | `1` | `2026-08-01` | `master` | 🔵 Global | music primitive |
-| [`phetsims/chipper`](https://github.com/phetsims/chipper) | 🟢 `MIT` | `1,096` | `17` | **`20`** | `2026-07-07` | `main` | 🟢 **North America** | sim build system |
-| [`phetsims/alpenglow`](https://github.com/phetsims/alpenglow) | 🟢 `MIT` | `1,097` | `15` | `3` | `2026-03-31` | `main` | 🟢 **North America** | rasterisation |
-| [`phetsims/scenery`](https://github.com/phetsims/scenery) | 🟢 `MIT` | `1,097` | — | — | `2026-10-09` | `main` | 🟢 **North America** | scene graph |
-| [`phetsims/joist`](https://github.com/phetsims/joist) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | sim shell |
-| [`phetsims/axon`](https://github.com/phetsims/axon) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | properties/events |
-| [`phetsims/dot`](https://github.com/phetsims/dot) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | math |
-| [`phetsims/kite`](https://github.com/phetsims/kite) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | geometry |
-| [`phetsims/sun`](https://github.com/phetsims/sun) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | UI components |
-| [`phetsims/tandem`](https://github.com/phetsims/tandem) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | 🟢 **North America** | instrumentation (`PhET-iO`) |
-| [`KrisLamote/dyscalc`](https://github.com/KrisLamote/dyscalc) | 🟢 `MIT` | `1,067` | `10` | **`19`** | `2023-01-06` | `master` | 🔵 Global | dyscalculia drill |
-| [`narner/DyscalculiaTester`](https://github.com/narner/DyscalculiaTester) | 🟢 `MIT` | `1,067` | `4` | `0` | `2022-01-01` | `main` | 🔵 Global | screening |
-| [`russmaxdesign/dyscalculia-tool`](https://github.com/russmaxdesign/dyscalculia-tool) | 🟢 `MIT` | `1,069` | `2` | `0` | `2026-09-24` | `main` | 🔵 Global | number presentation |
-| [`hlavacs/PhyLab`](https://github.com/hlavacs/PhyLab) | 🟢 `MIT` | `1,071` | `5` | `0` | `2021-07-30` | `main` | 🔵 Global | VR physics lab |
-| [`Ghost-ops721/alyra-labs`](https://github.com/Ghost-ops721/alyra-labs) | 🟢 `MIT` | `1,068` | `1` | `1` | `2026-08-13` | `main` | 🔵 Global | chemistry lab |
-| [`Eipckz/music-theory-master`](https://github.com/Eipckz/music-theory-master) | 🟢 `MIT` | `1,063` | `1` | `0` | `2026-09-07` | `master` | 🔵 Global | theory/SATB |
-| [`sebastianspicker/resonance-practice`](https://github.com/sebastianspicker/resonance-practice) | 🟢 `MIT` | `1,074` | `0` | `0` | `2026-10-29` | `main` | 🔵 Global | practice evidence |
-| [`IsaacCavallaro/music-pattern-quests`](https://github.com/IsaacCavallaro/music-pattern-quests) | 🟢 `MIT` | `1,072` | `0` | `0` | `2026-09-03` | `main` | 🔵 Global | pattern drills |
-| [`jacksonpryorbennett/music-theory-lab`](https://github.com/jacksonpryorbennett/music-theory-lab) | 🟢 `MIT` | `1,076` | `0` | `0` | `2025-12-05` | `main` | 🔵 Global | theory visualisation |
-| [`DusPro/educacao-especial`](https://github.com/DusPro/educacao-especial) | 🟢 `MIT` | `1,081` | `0` | `0` | `2025-07-08` | `main` | 🟢 **LATAM** | `PEI`/`IEP` generation |
-| [`Gio0938/CocoMath`](https://github.com/Gio0938/CocoMath) | 🟢 `Apache-2.0` | `11,357` | `1` | `0` | `2026-08-29` | `main` | 🟡 **LATAM** (language) | adaptive numeracy |
-| [`lnosiqueira/Totem-IA-Educacional`](https://github.com/lnosiqueira/Totem-IA-Educacional) | 🟢 `MIT` | `1,070` | `2` | `1` | `2025-10-31` | `main` | 🟢 **LATAM** | kiosk delivery |
-| [`Edwin1719/AvatarAcademy`](https://github.com/Edwin1719/AvatarAcademy) | 🟢 `MIT` | `1,078` | `1` | `0` | `2025-12-04` | `main` | 🟡 **LATAM** (language) | avatar tutor |
-| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 `MIT` | 🟡 `1,128` | `2` | `0` | `2026-06-14` | `main` | 🟢 **LATAM** | curriculum corpus |
+| [`tonaljs/tonal`](https://github.com/tonaljs/tonal) | 🟢 `MIT` (`docs/LICENSE`) | `1,074` | **`4,268`** | `257` | `2026-10-14` | `main` | Global | music primitive |
+| [`CoderLine/alphaTab`](https://github.com/CoderLine/alphaTab) | 🟡 `MPL-2.0` | `16,907` | **`1,899`** | `303` | `2026-11-01` | `develop` | Global | notation rendering |
+| [`gregjopa/music.js`](https://github.com/gregjopa/music.js) | 🟢 `MIT` (`LICENSE-MIT`) | `1,066` | `204` | `16` | `2017-07-19` | `master` | Global | music primitive |
+| [`ShacharHarshuv/open-ear`](https://github.com/ShacharHarshuv/open-ear) | 🟡 `MIT` in `README` | — | `186` | `35` | `2026-09-24` | `master` | Global | ear training |
+| [`sirged/fermata`](https://github.com/sirged/fermata) | 🟢 `MIT` | `1,077` | `38` | `2` | `2026-10-25` | `main` | Global | score library/server |
+| [`openzim/phet`](https://github.com/openzim/phet) | 🟢 `Apache-2.0` | `11,356` | `21` | `9` | 🟢 **`2026-11-02`** | `main` | Global | offline distribution |
+| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | 🔴 `GPL-3.0` | `35,147` | `22` | `1` | `2026-10-23` | `main` | Global | virtual microscope |
+| [`Zachacious/MusicTheoryJS`](https://github.com/Zachacious/MusicTheoryJS) | 🟢 `ISC` | **`746`** | `18` | `1` | `2026-08-01` | `master` | Global | music primitive |
+| [`phetsims/chipper`](https://github.com/phetsims/chipper) | 🟢 `MIT` | `1,096` | `17` | **`20`** | `2026-07-07` | `main` | North America | sim build system |
+| [`phetsims/alpenglow`](https://github.com/phetsims/alpenglow) | 🟢 `MIT` | `1,097` | `15` | `3` | `2026-03-31` | `main` | North America | rasterisation |
+| [`phetsims/scenery`](https://github.com/phetsims/scenery) | 🟢 `MIT` | `1,097` | — | — | `2026-10-09` | `main` | North America | scene graph |
+| [`phetsims/joist`](https://github.com/phetsims/joist) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | North America | sim shell |
+| [`phetsims/axon`](https://github.com/phetsims/axon) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | North America | properties/events |
+| [`phetsims/dot`](https://github.com/phetsims/dot) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | North America | math |
+| [`phetsims/kite`](https://github.com/phetsims/kite) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | North America | geometry |
+| [`phetsims/sun`](https://github.com/phetsims/sun) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | North America | UI components |
+| [`phetsims/tandem`](https://github.com/phetsims/tandem) | 🟢 `MIT` | `1,096` | — | — | `2026-10-09` | `main` | North America | instrumentation (`PhET-iO`) |
+| [`KrisLamote/dyscalc`](https://github.com/KrisLamote/dyscalc) | 🟢 `MIT` | `1,067` | `10` | **`19`** | `2023-01-06` | `master` | Global | dyscalculia drill |
+| [`narner/DyscalculiaTester`](https://github.com/narner/DyscalculiaTester) | 🟢 `MIT` | `1,067` | `4` | `0` | `2022-01-01` | `main` | Global | screening |
+| [`russmaxdesign/dyscalculia-tool`](https://github.com/russmaxdesign/dyscalculia-tool) | 🟢 `MIT` | `1,069` | `2` | `0` | `2026-09-24` | `main` | Global | number presentation |
+| [`hlavacs/PhyLab`](https://github.com/hlavacs/PhyLab) | 🟢 `MIT` | `1,071` | `5` | `0` | `2021-07-30` | `main` | Global | VR physics lab |
+| [`Ghost-ops721/alyra-labs`](https://github.com/Ghost-ops721/alyra-labs) | 🟢 `MIT` | `1,068` | `1` | `1` | `2026-08-13` | `main` | Global | chemistry lab |
+| [`Eipckz/music-theory-master`](https://github.com/Eipckz/music-theory-master) | 🟢 `MIT` | `1,063` | `1` | `0` | `2026-09-07` | `master` | Global | theory/SATB |
+| [`sebastianspicker/resonance-practice`](https://github.com/sebastianspicker/resonance-practice) | 🟢 `MIT` | `1,074` | `0` | `0` | `2026-10-29` | `main` | Global | practice evidence |
+| [`IsaacCavallaro/music-pattern-quests`](https://github.com/IsaacCavallaro/music-pattern-quests) | 🟢 `MIT` | `1,072` | `0` | `0` | `2026-09-03` | `main` | Global | pattern drills |
+| [`jacksonpryorbennett/music-theory-lab`](https://github.com/jacksonpryorbennett/music-theory-lab) | 🟢 `MIT` | `1,076` | `0` | `0` | `2025-12-05` | `main` | Global | theory visualisation |
+| [`DusPro/educacao-especial`](https://github.com/DusPro/educacao-especial) | 🟢 `MIT` | `1,081` | `0` | `0` | `2025-07-08` | `main` | LATAM | `PEI`/`IEP` generation |
+| [`Gio0938/CocoMath`](https://github.com/Gio0938/CocoMath) | 🟢 `Apache-2.0` | `11,357` | `1` | `0` | `2026-08-29` | `main` | LATAM | adaptive numeracy |
+| [`lnosiqueira/Totem-IA-Educacional`](https://github.com/lnosiqueira/Totem-IA-Educacional) | 🟢 `MIT` | `1,070` | `2` | `1` | `2025-10-31` | `main` | LATAM | kiosk delivery |
+| [`Edwin1719/AvatarAcademy`](https://github.com/Edwin1719/AvatarAcademy) | 🟢 `MIT` | `1,078` | `1` | `0` | `2025-12-04` | `main` | LATAM | avatar tutor |
+| [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 `MIT` | 🟡 `1,128` | `2` | `0` | `2026-06-14` | `main` | LATAM | curriculum corpus |
 
 ### 🟡 The week's most-forked education repository on this shelf is a build tool at `17★`
 
@@ -3671,16 +3726,16 @@ labelled as such rather than implying the official ranking.
 | Repo | ★ | License (byte-read) | Region | Last updated |
 | --- | --- | --- | --- | --- |
 | 🟢 [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | — | 🟢 **MIT** `15,290 B` ⚠️ Apache appendix | APAC | `v0.9.0` |
-| 🟢 [`LeeLanguageLab/HokkienTranslation`](https://github.com/LeeLanguageLab/HokkienTranslation) | `11` | 🟢 **MIT** `1,074 B` | APAC (Taiwan) | 2026-01-06 |
-| 🟢 [`HaoyanZhang123/sproutask`](https://github.com/HaoyanZhang123/sproutask) | `2` | 🟢 **MIT** `1,093 B` | APAC (China) | 2026-10-30 |
-| 🟢 [`1Zonghao/Si-Yuan-agent`](https://github.com/1Zonghao/Si-Yuan-agent) | `2` | 🟢 **MIT** `1,071 B` | APAC (China) | 2026-03-18 |
-| 🟢 [`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion) | `3` | 🟢 **MIT** `1,068 B` | APAC (India · Assam) | 2026-11-02 |
-| 🟢 [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) | `0` | 🟢 **MIT** `1,071 B` | EMEA (Italy) | 2026-10-30 |
-| 🟢 [`duaabaig/HiSACKT`](https://github.com/duaabaig/HiSACKT) | `0` | 🟢 **MIT** `1,118 B` | EMEA (France) | 2025-10-16 |
-| 🟢 [`yashvikram30/german-course`](https://github.com/yashvikram30/german-course) | `2` | 🟢 **MIT** `1,067 B` | EMEA (DE A1) | 2026-11-02 |
+| 🟢 [`LeeLanguageLab/HokkienTranslation`](https://github.com/LeeLanguageLab/HokkienTranslation) | `11` | 🟢 **MIT** `1,074 B` | APAC | 2026-01-06 |
+| 🟢 [`HaoyanZhang123/sproutask`](https://github.com/HaoyanZhang123/sproutask) | `2` | 🟢 **MIT** `1,093 B` | APAC | 2026-10-30 |
+| 🟢 [`1Zonghao/Si-Yuan-agent`](https://github.com/1Zonghao/Si-Yuan-agent) | `2` | 🟢 **MIT** `1,071 B` | APAC | 2026-03-18 |
+| 🟢 [`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion) | `3` | 🟢 **MIT** `1,068 B` | APAC | 2026-11-02 |
+| 🟢 [`Bradwave/obfusca`](https://github.com/Bradwave/obfusca) | `0` | 🟢 **MIT** `1,071 B` | EMEA | 2026-10-30 |
+| 🟢 [`duaabaig/HiSACKT`](https://github.com/duaabaig/HiSACKT) | `0` | 🟢 **MIT** `1,118 B` | EMEA | 2025-10-16 |
+| 🟢 [`yashvikram30/german-course`](https://github.com/yashvikram30/german-course) | `2` | 🟢 **MIT** `1,067 B` | EMEA | 2026-11-02 |
 | 🟢 [`harjothkhara/whiteboard-tutor`](https://github.com/harjothkhara/whiteboard-tutor) | `0` | 🟢 **MIT** `1,499 B` | Global | 2026-11-02 |
-| 🟢 [`dlealvilla/wildmind-ai-for-education`](https://github.com/dlealvilla/wildmind-ai-for-education) | `0` | 🟢 **MIT** `1,077 B` | Global (unplaced) | 2026-11-02 |
-| 🟢 [`ME-Massine/azure-ai-student-support`](https://github.com/ME-Massine/azure-ai-student-support) | `0` | 🟢 **MIT** `1,065 B` | Global (unplaced) | 2026-01-07 |
+| 🟢 [`dlealvilla/wildmind-ai-for-education`](https://github.com/dlealvilla/wildmind-ai-for-education) | `0` | 🟢 **MIT** `1,077 B` | Global | 2026-11-02 |
+| 🟢 [`ME-Massine/azure-ai-student-support`](https://github.com/ME-Massine/azure-ai-student-support) | `0` | 🟢 **MIT** `1,065 B` | Global | 2026-01-07 |
 
 🔵 **Nine of eleven promotions sit under `5 ★`.** This shelf's yield has moved decisively into the
 low-star, recently-updated band — which is exactly the band a roundup article never covers and a
@@ -4255,9 +4310,9 @@ full-text PDF translation with layout preservation, `240M`-document literature s
 
 | Repo | ★ | Grant | Region | Note |
 | --- | --: | --- | --- | --- |
-| [Delkay-byte/SchemeKnit](https://github.com/Delkay-byte/SchemeKnit) | `1` | 🔴 **grantless** (no file at `main`, control `404`) | **EMEA** | 🟢 **AI lesson planning for *Ghanaian* schools — the first sub-Saharan Africa placement measured on this page.** Recorded for the placement; 🔴 unusable as code until a grant appears |
-| [wdcpclover/ai4paper](https://github.com/wdcpclover/ai4paper) | `4,041` | 🔴 grantless | **APAC** | CN-language academic reading stack |
-| [JackStar6677-1/edudocente-studio](https://github.com/JackStar6677-1/edudocente-studio) | `1` | 🟢 MIT (`1,094 B`) | **LATAM** | The only LATAM-placed address in `864` (`601-E`) |
+| [Delkay-byte/SchemeKnit](https://github.com/Delkay-byte/SchemeKnit) | `1` | 🔴 **grantless** (no file at `main`, control `404`) | EMEA | 🟢 **AI lesson planning for *Ghanaian* schools — the first sub-Saharan Africa placement measured on this page.** Recorded for the placement; 🔴 unusable as code until a grant appears |
+| [wdcpclover/ai4paper](https://github.com/wdcpclover/ai4paper) | `4,041` | 🔴 grantless | APAC | CN-language academic reading stack |
+| [JackStar6677-1/edudocente-studio](https://github.com/JackStar6677-1/edudocente-studio) | `1` | 🟢 MIT (`1,094 B`) | LATAM | The only LATAM-placed address in `864` (`601-E`) |
 | [Amey-Thakur/CLAUDE-CERTIFICATIONS](https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS) | `115` | 🟢 MIT | Global | Certification study guide — the vendor-credential prep axis, which this base has not tracked |
 
 🔵 **EMEA is not one market and this page has been treating it as one.** `601` passes of EMEA findings
@@ -6801,7 +6856,7 @@ accordingly.
 | --- | --: | --- | --- | --- |
 | [safytech/ulearn](https://github.com/safytech/ulearn) | 701 | **MIT**, 1,066 B, "Copyright (c) 2019 ulearnpro" | Global | The **largest MIT-licensed LMS** located. 299 forks. **Stack caveat is decisive:** Laravel **5.8** + React **16.9**, both long past end of life. A fork is a framework-upgrade project before it is a product. |
 | [academico-sis/academico](https://github.com/academico-sis/academico) | 410 | **MIT**, 1,094 B | Global | See above. Laravel + Filament, current stack, pushed yesterday. |
-| [openfun/richie](https://github.com/openfun/richie) | 318 | **MIT**, 1,079 B, **"Copyright (c) 2018-present GIP FUN MOOC"** | **EMEA** | Django CMS for building **education portals**; integrates with Open edX and Moodle. **Region placed from the licence file itself** — GIP FUN MOOC is France Université Numérique, the same publisher as `openfun/ralph` (MIT LRS, already in this KB). |
+| [openfun/richie](https://github.com/openfun/richie) | 318 | **MIT**, 1,079 B, **"Copyright (c) 2018-present GIP FUN MOOC"** | EMEA | Django CMS for building **education portals**; integrates with Open edX and Moodle. **Region placed from the licence file itself** — GIP FUN MOOC is France Université Numérique, the same publisher as `openfun/ralph` (MIT LRS, already in this KB). |
 | [iblai/lms](https://github.com/iblai/lms) | 208 | **MIT**, 1,063 B, "Copyright (c) 2026 ibl.ai" | Global | "Skills intelligence platform — discover courses, track competencies, earn credentials." Next.js 15 / React 19, created 2026-03-04. **The first open-source asset this KB has found for the digital-credentials trend.** |
 | [Azure/Moodle](https://github.com/Azure/Moodle) | 185 | **MIT**, 1,090 B, "Copyright (c) Microsoft Corporation" | Global | Tooling for scalable **Moodle clusters on Azure**. Not a platform: **MIT deployment tooling wrapped around a GPL-3.0 platform** — the attach-don't-fork doctrine as practised by Microsoft. 187 forks on 185★, i.e. used as a template. |
 | [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 54 | **Apache-2.0**, 11,362 B (full licence text) | APAC | Self-hosted **multi-tenant** LMS: course builder, trainer and student portals, progress tracking. Django + React + Flutter, created **2026-10-07**. Explicit "moodle-alternative" and `corporate-training`. Region inferred from the publisher `pacewisdomhq`; **not stated on the repo**, so treat the placement as soft. |
@@ -7241,15 +7296,15 @@ platform-mix question. 🟢 **Answered: four NA institutions, and one of them ho
 
 | Repo | Institution | Region | ★ |
 | --- | --- | :-: | :-: |
-| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **Univ. of Illinois Urbana-Champaign** | **North America** | **310** |
-| [`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) · [`-skills`](https://github.com/awesome-town/canvas-mcp-skills) | 🟢 **Franklin School** — **FERPA-aware**, per-course pseudonym maps | **North America** | 1 · 1 |
-| [`mklemos/canvas-mcp`](https://github.com/mklemos/canvas-mcp) | 🟢 UC Santa Barbara | **North America** | 1 |
-| [`pratham-2097/canvas-mcp`](https://github.com/pratham-2097/canvas-mcp) | 🟢 Univ. of Cincinnati | **North America** | 0 |
-| [`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp) | 🟢 Universidad Siglo 21, Argentina | **LATAM** | 2 |
-| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | 🟢 Oxford (default target) | **EMEA** | 1 |
-| [`brynjar2605/canvas-mcp`](https://github.com/brynjar2605/canvas-mcp) | 🟡 *"RU Canvas"* — unexpanded | **UNPLACED** | 0 |
-| [`brilliant751/tongji-canvas-mcp`](https://github.com/brilliant751/tongji-canvas-mcp) | 🟢 Tongji University, China | **APAC** | 2 |
-| [`shu-silc-osc/canvas-chaoxing-silc-mcp`](https://github.com/shu-silc-osc/canvas-chaoxing-silc-mcp) | 🟢 Shanghai University SILC | **APAC** | 3 |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **Univ. of Illinois Urbana-Champaign** | North America | **310** |
+| [`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) · [`-skills`](https://github.com/awesome-town/canvas-mcp-skills) | 🟢 **Franklin School** — **FERPA-aware**, per-course pseudonym maps | North America | 1 · 1 |
+| [`mklemos/canvas-mcp`](https://github.com/mklemos/canvas-mcp) | 🟢 UC Santa Barbara | North America | 1 |
+| [`pratham-2097/canvas-mcp`](https://github.com/pratham-2097/canvas-mcp) | 🟢 Univ. of Cincinnati | North America | 0 |
+| [`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp) | 🟢 Universidad Siglo 21, Argentina | LATAM | 2 |
+| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | 🟢 Oxford (default target) | EMEA | 1 |
+| [`brynjar2605/canvas-mcp`](https://github.com/brynjar2605/canvas-mcp) | 🟡 *"RU Canvas"* — unexpanded | Global | 0 |
+| [`brilliant751/tongji-canvas-mcp`](https://github.com/brilliant751/tongji-canvas-mcp) | 🟢 Tongji University, China | APAC | 2 |
+| [`shu-silc-osc/canvas-chaoxing-silc-mcp`](https://github.com/shu-silc-osc/canvas-chaoxing-silc-mcp) | 🟢 Shanghai University SILC | APAC | 3 |
 
 🔵 **`Mattlo0546` appears in BOTH censuses** — the same author shipped a `moodle-mcp` and a
 `canvas-mcp`. 🟢 A single builder treating the two platforms as one problem is the clearest
@@ -7307,10 +7362,10 @@ it is the one discovery surface on this base that places *supply* rather than de
 
 | Region | Institutions named across the 140 |
 | :-: | --- |
-| **APAC** | 🟢 Waseda · Nagoya Inst. of Technology · Tokyo Univ. of Technology · NCCU (Taiwan) · UNNC Ningbo ×2 · IIIT Hyderabad · Monash |
-| **EMEA** | 🟢 Univ. of Bath · ASE Bucharest · ONPU Odesa · MIREA · FH JOANNEUM · ETH Zürich · NAK · Zewail City (Egypt) · a Swiss target · one multi-target covering UCL/KCL/LSE/Cambridge/Warwick |
-| **LATAM** | 🟢 UTN (Argentina) · Unisinos (Brazil) · CETEC |
-| **North America** | 🔴 **NONE — zero US or Canadian institutions among 140 rows** |
+| APAC | 🟢 Waseda · Nagoya Inst. of Technology · Tokyo Univ. of Technology · NCCU (Taiwan) · UNNC Ningbo ×2 · IIIT Hyderabad · Monash |
+| EMEA | 🟢 Univ. of Bath · ASE Bucharest · ONPU Odesa · MIREA · FH JOANNEUM · ETH Zürich · NAK · Zewail City (Egypt) · a Swiss target · one multi-target covering UCL/KCL/LSE/Cambridge/Warwick |
+| LATAM | 🟢 UTN (Argentina) · Unisinos (Brazil) · CETEC |
+| North America | 🔴 **NONE — zero US or Canadian institutions among 140 rows** |
 
 🔴 **North America's absence is written down because an unprobed region looks exactly like a
 covered one.** 🟡 Scope: measured on repository **name and description text only**, so a US
@@ -9187,18 +9242,18 @@ inherits it.
 
 | Repo | Grant | Stars · forks | Region | What it is |
 |---|---|---|---|---|
-| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 MIT | **382** · 54 | 🟢 NA (USA) — *"battle tested at **NYU Tandon**"* | Distributed LMS that autogrades by running tests on student pushes **and** serves Theia Cloud IDEs on Kubernetes |
-| [`inducer/relate`](https://github.com/inducer/relate) | 🟡 **MIT by README text only** — no sidebar licence | **437** · 125 | 🟡 unplaced | Django courseware; content as **YAML + Markdown under git**, so a curriculum change is a reviewable diff |
-| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 Apache-2.0 | **28** · **48** | 🟢 NA | The US K-12 records substrate. 🔵 **48 forks against 28 stars — deployed, not admired** |
-| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | 🟢 MIT | **27** · 23 · **19 739 commits** | 🟢 EMEA (England) | England's **Department for Education**; ships `AGENTS.md`/`CLAUDE.md` and *"Guidance for AI coding agents"* |
-| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 MIT | **6 500** · 1 100 | ⚪ Global | Policy gate, zero-trust identity, sandboxing, **audit records**; OWASP Agentic Top 10. 🔴 **Not education; public preview** |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 MIT | **382** · 54 | North America | Distributed LMS that autogrades by running tests on student pushes **and** serves Theia Cloud IDEs on Kubernetes 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: USA) — *"battle tested at NYU Tandon")* |
+| [`inducer/relate`](https://github.com/inducer/relate) | 🟡 **MIT by README text only** — no sidebar licence | **437** · 125 | Global | Django courseware; content as **YAML + Markdown under git**, so a curriculum change is a reviewable diff 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 Apache-2.0 | **28** · **48** | North America | The US K-12 records substrate. 🔵 **48 forks against 28 stars — deployed, not admired** |
+| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | 🟢 MIT | **27** · 23 · **19 739 commits** | EMEA | England's **Department for Education**; ships `AGENTS.md`/`CLAUDE.md` and *"Guidance for AI coding agents"* |
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 MIT | **6 500** · 1 100 | Global | Policy gate, zero-trust identity, sandboxing, **audit records**; OWASP Agentic Top 10. 🔴 **Not education; public preview** |
 
 ### 🟢 Filed to [`solutions.md`](../verticals/solutions.md)
 
 | Platform | Grant | Stars · forks | Region | Note |
 |---|---|---|---|---|
-| [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 MIT | 🔴 **6 400** · 876 | 🟢 **APAC (China)** — Agora/Shengwang | 🟢 **The largest permissive education-specific codebase on this base outside the tutoring shelf**, and it was sitting in this file's own history. Whiteboard, Electron clients, **cloud recording**. 🔴 MIT covers the client; transport is Agora's **commercial SDK** |
-| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 MIT | **12 100** · 611 | ⚪ Global | *"Free and Open Source ERP software"*, Laravel + Filament. 🔴 **No education module** |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 MIT | 🔴 **6 400** · 876 | APAC | 🟢 **The largest permissive education-specific codebase on this base outside the tutoring shelf**, and it was sitting in this file's own history. Whiteboard, Electron clients, **cloud recording**. 🔴 MIT covers the client; transport is Agora's **commercial SDK** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: China) — Agora/Shengwang)* |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 MIT | **12 100** · 611 | Global | *"Free and Open Source ERP software"*, Laravel + Filament. 🔴 **No education module** |
 
 ### 🔴 The verticals leg's answer, stated as a finding instead of a blank
 
@@ -9244,10 +9299,10 @@ re-measured.
 
 | Region | Rows | Addresses |
 |---|---|---|
-| 🟢 **North America** | **3** | [`SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) (PowerSchool SIS client, MIT 6★) · [`state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) · [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) · [`student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) |
-| **APAC** | **3** | [`knowledge-grab`](https://github.com/alterem/knowledge-grab) (MIT **567★** — the highest-starred row this queue has produced) · [`EduShield`](https://github.com/oas114/EduShield) (Taiwan, MIT 11★) · [`SIMG`](https://github.com/guruduan/SIMG) (Indonesia, MIT 1★) |
-| 🟢 **EMEA** | **1** | [`Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (Gulf/Arabic, **258★**, 🟡 CC BY 4.0 badge only) |
-| 🟢 **LATAM** | **1** | [`EDUCA`](https://github.com/shishiv/EDUCA) (Brazil, MIT 1★) |
+| North America | **3** | [`SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) (PowerSchool SIS client, MIT 6★) · [`state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) · [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) · [`student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) |
+| APAC | **3** | [`knowledge-grab`](https://github.com/alterem/knowledge-grab) (MIT **567★** — the highest-starred row this queue has produced) · [`EduShield`](https://github.com/oas114/EduShield) (Taiwan, MIT 11★) · [`SIMG`](https://github.com/guruduan/SIMG) (Indonesia, MIT 1★) |
+| EMEA | **1** | [`Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (Gulf/Arabic, **258★**, 🟡 CC BY 4.0 badge only) |
+| LATAM | **1** | [`EDUCA`](https://github.com/shishiv/EDUCA) (Brazil, MIT 1★) |
 
 🔵 **The generalisable finding, and it is cheaper than another search leg.** This
 base's standing complaint is that its supply is APAC-heavy and its LATAM and
@@ -9436,10 +9491,10 @@ just gives the answer).
 
 | Repo | Grant | Stars | Region | What it is |
 |---|---|---|---|---|
-| [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) | **MIT** — copyright line reads **Ministry of Statistics and Programme Implementation** | **147** · 28 forks | 🟢 APAC (India), *stated* | 🟢 **An official government MCP server.** The first row here where a national statistical office ships the MCP itself rather than a third party scraping it. |
-| [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) | **MIT** | **207** · 45 forks | 🟢 APAC (China) | Downloader for the 国家中小学智慧教育平台 — national K-12 textbooks, courseware, audio, video. 🟡 An access tool, not a content licence: what it fetches carries the platform's terms, unread here. |
-| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **MIT** | **136** · 12 forks | 🟢 LATAM (Chile) | Curated, normalised, validated Chilean public data. Pairs with the Colombian agent `brujula-educativa`. |
-| [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) | **Apache-2.0** | 🔴 0 | 🟢 EMEA (Germany) | The only permissive client for **edu-sharing**, the OER repository layer German states run. Filed on the attachment point, per `Gap 534-C`. |
+| [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) | **MIT** — copyright line reads **Ministry of Statistics and Programme Implementation** | **147** · 28 forks | APAC | 🟢 **An official government MCP server.** The first row here where a national statistical office ships the MCP itself rather than a third party scraping it. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: India), *stated)* |
+| [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) | **MIT** | **207** · 45 forks | APAC | Downloader for the 国家中小学智慧教育平台 — national K-12 textbooks, courseware, audio, video. 🟡 An access tool, not a content licence: what it fetches carries the platform's terms, unread here. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: China)* |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **MIT** | **136** · 12 forks | LATAM | Curated, normalised, validated Chilean public data. Pairs with the Colombian agent `brujula-educativa`. |
+| [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) | **Apache-2.0** | 🔴 0 | EMEA | The only permissive client for **edu-sharing**, the OER repository layer German states run. Filed on the attachment point, per `Gap 534-C`. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Germany)* |
 
 ### Also filed, and why each was invisible
 
@@ -10275,10 +10330,10 @@ on this base: **every pass pays to rediscover what it already owns.**
 
 | Region | Count | Institutions named in the top 26 |
 |---|---|---|
-| 🟢 **LATAM** | **5** | **Univ. de São Paulo** (Brazil) · **FICH–UNL**, **UTN**, **UTN FRLP**, **Univ. de San Andrés** (Argentina) |
-| 🟢 **APAC** | **5** | Vietnamese-German Univ. · SLIIT (Sri Lanka) · Univ. of Nottingham Ningbo (China) · Taylor's Univ. (Malaysia) · UNSW (Australia) |
-| 🟢 **EMEA** | **4** | SPbPU Polytech, RTU MIREA ×2 (Russia) · TU Wien (Austria) |
-| 🔴 **North America** | **0** | — **none in the top 26** |
+| LATAM | **5** | **Univ. de São Paulo** (Brazil) · **FICH–UNL**, **UTN**, **UTN FRLP**, **Univ. de San Andrés** (Argentina) |
+| APAC | **5** | Vietnamese-German Univ. · SLIIT (Sri Lanka) · Univ. of Nottingham Ningbo (China) · Taylor's Univ. (Malaysia) · UNSW (Australia) |
+| EMEA | **4** | SPbPU Polytech, RTU MIREA ×2 (Russia) · TU Wien (Austria) |
+| North America | **0** | — **none in the top 26** |
 
 🔵 **This reframes the engagement, and it is the most commercially useful line in this pass.** `p528` concluded *"consolidate eleven codebases, publish a tool specification."* 🔴 **You cannot consolidate 222 repositories whose entire purpose is to be institution-specific.** A category with 222 instances and no convergence is not a missing product — it is a **missing template**. The asset is a **bridge generator**: one permissive, audited core (tool vocabulary, read-only by default, write-gating, token handling) plus per-tenant configuration, so an institution gets its bridge in a day instead of a semester project. **`P553` rewritten; new recipe `P558` in [`../compose/patterns.md`](../compose/patterns.md).**
 
@@ -14442,7 +14497,7 @@ repositories, and its one non-403 was the proxy's own `Connection Established` l
 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 2026-03-01 | 914 | 129 | 🟡 **CC BY-SA 4.0** — `main/LICENSE`, 1,230 B | EMEA | 165 evidence-grounded teaching skills; UK-origin |
 | [autolab/Autolab](https://github.com/autolab/Autolab) | 2014-10-25 | 808 | 234 | 🟢 **Apache-2.0** — `master/LICENSE`, 11,324 B | North America | Auto-grading, CMU-origin |
 | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 2014-01-25 | 804 | **1,119** | 🟢 **BSD-3-Clause** — `main/LICENSE.md`, 1,542 B | North America | More forks than stars — institutional deployment pattern |
-| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 2023-04-16 | 582 | 35 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,337 B | **LATAM** | 🔴 **ARCHIVED.** The only LATAM-origin education repository on this board, read-only |
+| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 2023-04-16 | 582 | 35 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,337 B | LATAM | 🔴 **ARCHIVED.** The only LATAM-origin education repository on this board, read-only |
 | [aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) | 2025-12-01 | 498 | 0 | 🔴 **UNGRANTED** | North America | Multilingual tutoring nonprofit, 7 languages, **0 forks**; calls itself open source and grants nothing |
 | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **2026-10-14** | 466 | 57 | 🟢 **MIT** — `main/LICENSE`, 1,069 B | Global | Topic → cited audio course |
 | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 2026-06-01 | 463 | 70 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,358 B | APAC | 🟢 Distils source material into **source-backed teacher skills** — the permissive route to a curriculum graph |
@@ -16978,9 +17033,9 @@ language question, not a licence one.
 
 | Repo | Region | Grant (read at HEAD) | Last push | ★ | Why it trends |
 |---|---|---|---|---|---|
-| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | EMEA (UK) | 🟡 **CC BY-SA 4.0** | 2026-10-22 | **907** (128 forks) | The only education address with real momentum this window. 165 teacher/leader skills across pedagogy, learning science, curriculum and assessment. 🔴 ShareAlike: a derived pack ships under CC BY-SA 4.0. |
-| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | APAC (zh) | **MIT** | 2026-10-21 | **1 183** (56 forks) | Highest-starred *new* learner-facing agent found. Plans a route, teaches, builds projects. Chinese-first. |
-| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | APAC (zh) | **MIT** | 2026-10-20 | 292 | Socratic tutor on Bloom's 2-sigma framing. Self-hostable *and* a harness skill — `Trend 18` continuing. |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | EMEA | 🟡 **CC BY-SA 4.0** | 2026-10-22 | **907** (128 forks) | The only education address with real momentum this window. 165 teacher/leader skills across pedagogy, learning science, curriculum and assessment. 🔴 ShareAlike: a derived pack ships under CC BY-SA 4.0. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: UK)* |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | APAC | **MIT** | 2026-10-21 | **1 183** (56 forks) | Highest-starred *new* learner-facing agent found. Plans a route, teaches, builds projects. Chinese-first. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: zh)* |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | APAC | **MIT** | 2026-10-20 | 292 | Socratic tutor on Bloom's 2-sigma framing. Self-hostable *and* a harness skill — `Trend 18` continuing. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: zh)* |
 | [robotros/California-IEP-AI-project-kit](https://github.com/robotros/California-IEP-AI-project-kit) | North America | **MIT** | 2026-10-21 | 1 | Created 2026-10-14. Draft-and-sign IEP drafting as a pinned knowledge pack, sourced from CDE material. **The pass's find.** |
 | [67tallchris/iep-builder](https://github.com/67tallchris/iep-builder) | North America | **MIT** | 2026-10-23 | 0 | Arizona K-8 IEP drafting on Cloudflare Pages + D1, BYOK AI. A no-vendor-key reference deployment. |
 | [dougdevitre/access-to-education](https://github.com/dougdevitre/access-to-education) | North America | **MIT** | 2026-10-24 | 0 | Parent-facing IEP navigation + advocacy, 69 files / ~120 k words. The `Trend 10` parent persona, finally with an MIT address. |
@@ -17699,10 +17754,10 @@ and is how every byte-level grant read below was taken; `github.com` HTML reads 
 
 | Address | Grant, byte-level | Stars | Region |
 |---|---|---|---|
-| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** — `34 523` B / 661 lines / `3 × https://` / `sha256:0d96a4ff68ad` | **150** | 🟢 **EMEA** |
-| [`exelearning/iteexe`](https://github.com/exelearning/iteexe) *(legacy half of the pair)* | 🟡 **GPL-2.0** — `17 992` B / **340** lines / `sha256:32b1062f7da8` / *"Version 2, June 1991"* | — | 🟢 **EMEA** |
-| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE** — 8 probed paths, 8 × `404`; MIT badge over no payload | **2** | 🟢 **LATAM** (Brazil) |
-| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE** — *"academic research purposes"* | **0** | 🔵 unplaced |
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** — `34 523` B / 661 lines / `3 × https://` / `sha256:0d96a4ff68ad` | **150** | EMEA |
+| [`exelearning/iteexe`](https://github.com/exelearning/iteexe) *(legacy half of the pair)* | 🟡 **GPL-2.0** — `17 992` B / **340** lines / `sha256:32b1062f7da8` / *"Version 2, June 1991"* | — | EMEA |
+| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE** — 8 probed paths, 8 × `404`; MIT badge over no payload 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Brazil)* | **2** | LATAM |
+| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE** — *"academic research purposes"* 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* | **0** | Global |
 
 ### 🔴 The GitHub-trending leg returned nothing in-domain, and that is the honest report
 
@@ -20118,7 +20173,7 @@ a first segment). No instrument here holds one. 🟡 `Gap 539`.
 
 | Repo | Licence (payload, first-hand) | Grant path | HEAD | ★ | Region | Signal — and the flag |
 |---|---|---|---|---|---|---|
-| 🆕 [`Seeed-Studio/Seeed_Studio_Courses`](https://github.com/Seeed-Studio/Seeed_Studio_Courses) | 🟢 **MIT** — `1 069 B`, `sha256₁₂ 20d9e7381152`, 🟢 folds to `584db484c03a8904` | `main/LICENSE` | 🔴 `e07138e` · **2025-01-07** | **78** · HTML topic-listing · exact | 🟢 **APAC** — `8/9` commits at `+0800` | 🟢 **Edge-AI course material tied to real Jetson hardware** — the only candidate this pass found that teaches inference on a device rather than against an API, which is the shape of a vocational or TVET engagement. 🔴 **FLAGGED: HEAD is 21.5 months old.** It is on *trending* and not on *foundations* for that single reason, and `p379`'s `telekom/ki-in-schulen` precedent governs: a vendor's teaching material with a stale HEAD is a reference, not a dependency |
+| 🆕 [`Seeed-Studio/Seeed_Studio_Courses`](https://github.com/Seeed-Studio/Seeed_Studio_Courses) | 🟢 **MIT** — `1 069 B`, `sha256₁₂ 20d9e7381152`, 🟢 folds to `584db484c03a8904` | `main/LICENSE` | 🔴 `e07138e` · **2025-01-07** | **78** · HTML topic-listing · exact | APAC | 🟢 **Edge-AI course material tied to real Jetson hardware** — the only candidate this pass found that teaches inference on a device rather than against an API, which is the shape of a vocational or TVET engagement. 🔴 **FLAGGED: HEAD is 21.5 months old.** It is on *trending* and not on *foundations* for that single reason, and `p379`'s `telekom/ki-in-schulen` precedent governs: a vendor's teaching material with a stale HEAD is a reference, not a dependency 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: `8/9` commits at `+0800`)* |
 
 ### 🔴 Three addresses this shelf REFUSED, each for a different reason, all named
 
@@ -20562,7 +20617,7 @@ a claim to probe, because **ten of ten** candidate reference-implementation addr
 
 | Repo | Licence | Grant path | Refs | HEAD | Region |
 |---|---|---|---:|---|---|
-| 🆕 [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** (`Educational Community License, Version 2.0`, read from payload) | `LICENSE` (11 340 B) | **7 870** | `9767932b7902` · **2026-10-19** | **Global** |
+| 🆕 [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** (`Educational Community License, Version 2.0`, read from payload) | `LICENSE` (11 340 B) | **7 870** | `9767932b7902` · **2026-10-19** | Global |
 
 🟢 Lecture capture and video management for education — **the video tier this base's platform
 shelves had no row for**. 🟢 Successor link proven from its own `NOTICES`
@@ -21135,19 +21190,19 @@ answer correctness.
 | [microsoft/StudentSim](https://github.com/microsoft/StudentSim) | MIT (`LICENSE`, 1 074 B) | `main/LICENSE` | **77** | North America | A **student simulator** to iterate a tutor against without a human cohort per experiment. `HEAD=73005fd8c`, pushed 2026-10-21 |
 | [iwangjian/Coding-Tutor](https://github.com/iwangjian/Coding-Tutor) | Apache-2.0 (`LICENSE`, 11 357 B) | `main/LICENSE` | **91** | APAC | A **turn-level verifier** and its evaluation harness — ACL 2025 Findings. `HEAD=d1fa15b50` |
 | [yale-nlp/LLM-Metacognition](https://github.com/yale-nlp/LLM-Metacognition) | MIT (`LICENSE`, 1 065 B) | `main/LICENSE` | **80** | North America | Methods for **calibrated "I don't know"** — the prerequisite for a tutor that diagnoses instead of asserting. `HEAD=74b1fe8ba` |
-| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | 🟡 **CC-BY-SA-4.0, README prose only** | `main/README.md` L96–97 | **95** | EMEA 🇨🇭 | Teacher–student math dialogues with **pedagogical-move annotation**. 🟡 Share-alike on derivatives. `HEAD=b06c020a0` |
-| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | 🟡 **CC-BY-4.0, `rel="license"` only** | `main/README.md` L67 | **25** | EMEA 🇨🇭 | Scaffolding-question generation, EMNLP 2022. `HEAD=5304aa300` |
+| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | 🟡 **CC-BY-SA-4.0, README prose only** | `main/README.md` L96–97 | **95** | EMEA | Teacher–student math dialogues with **pedagogical-move annotation**. 🟡 Share-alike on derivatives. `HEAD=b06c020a0` |
+| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | 🟡 **CC-BY-4.0, `rel="license"` only** | `main/README.md` L67 | **25** | EMEA | Scaffolding-question generation, EMNLP 2022. `HEAD=5304aa300` |
 
 ### 🔴 Six addresses with no grant at 11 probed paths each
 
 | Repo | ★ | Region | Note |
 |---|---:|---|---|
-| [digitalinnovationone/potencializando-estudos-carreira-com-ia](https://github.com/digitalinnovationone/potencializando-estudos-carreira-com-ia) | **5 993** | LATAM 🇧🇷 | DIO's agents course — the highest-starred address `p363` touched. Curriculum intelligence, not a dependency |
-| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM 🇧🇷 | Study-mentor agent, Portuguese, harness-agnostic via `AGENTS.md` |
-| [THU-MAIC/Awesome-AI-Era-Edu](https://github.com/THU-MAIC/Awesome-AI-Era-Edu) | **92** | APAC 🇨🇳 | Tsinghua MAIC education index |
-| [eth-nlped/mathworld](https://github.com/eth-nlped/mathworld) | **9** | EMEA 🇨🇭 | ACL Findings 2023 world-model formalism |
-| [eth-nlped/dialog-tutoring](https://github.com/eth-nlped/dialog-tutoring) | **7** | EMEA 🇨🇭 | EACL 2023; BibTeX `copyright` field is not a grant |
-| [eth-nlped/textbook-enrichment](https://github.com/eth-nlped/textbook-enrichment) | **3** | EMEA 🇨🇭 | Textbook enrichment pipeline |
+| [digitalinnovationone/potencializando-estudos-carreira-com-ia](https://github.com/digitalinnovationone/potencializando-estudos-carreira-com-ia) | **5 993** | LATAM | DIO's agents course — the highest-starred address `p363` touched. Curriculum intelligence, not a dependency |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM | Study-mentor agent, Portuguese, harness-agnostic via `AGENTS.md` |
+| [THU-MAIC/Awesome-AI-Era-Edu](https://github.com/THU-MAIC/Awesome-AI-Era-Edu) | **92** | APAC | Tsinghua MAIC education index |
+| [eth-nlped/mathworld](https://github.com/eth-nlped/mathworld) | **9** | EMEA | ACL Findings 2023 world-model formalism |
+| [eth-nlped/dialog-tutoring](https://github.com/eth-nlped/dialog-tutoring) | **7** | EMEA | EACL 2023; BibTeX `copyright` field is not a grant |
+| [eth-nlped/textbook-enrichment](https://github.com/eth-nlped/textbook-enrichment) | **3** | EMEA | Textbook enrichment pipeline |
 
 🟢 **`eth-nlped` is worth one email, not a rebuild.** Five repositories, four
 peer-reviewed venues, one named institution — and the only source on this base for
@@ -21201,10 +21256,10 @@ shelved it from.** That is the function-leg lesson from `p356` pointed inward:
 
 | Row | Licence | ★ | Commits · authors (`%ae`) | Region |
 |---|---|---:|---|---|
-| 🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) | 🟢 **MIT** (1 071 B) | **32** | 198 · 3 · live 2026-10-18 | APAC — India |
-| 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) | 🟢 **MIT** (1 063 B) | **72** | 8 · 1 · 5 files | APAC — China |
-| 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | **4** | 554 · 7 · 640 files | APAC — China |
-| 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | **4** | 31 · 3 · 🔴 dormant since 2025-11-13 | EMEA — Germany |
+| 🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) | 🟢 **MIT** (1 071 B) | **32** | 198 · 3 · live 2026-10-18 | APAC |
+| 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) | 🟢 **MIT** (1 063 B) | **72** | 8 · 1 · 5 files | APAC |
+| 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | **4** | 554 · 7 · 640 files | APAC |
+| 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | **4** | 31 · 3 · 🔴 dormant since 2025-11-13 | EMEA |
 
 ### 🔴 Corrections to rows this shelf published
 
@@ -21713,7 +21768,7 @@ entire corpus** — `archive/` and `evidence/` included.
 | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🟢 **MIT** | 🔴 `newnew/LICENSE` | **496** | APAC |
 | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | AGPL-3.0 | 🔴 `Version-1/LICENSE` | **395** | EMEA |
 | [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** | `master/LICENSE` | **161** | North America |
-| [webtech-network/autograder](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0** | `main/LICENSE` | **62** | Not placed |
+| [webtech-network/autograder](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0** | `main/LICENSE` | **62** | Global |
 | [okpy/ok-client](https://github.com/okpy/ok-client) | 🟢 **Apache-2.0** | `master/LICENSE` | **57** | North America |
 
 🟢 **The commercially important fact is the licence column, not the star column.**
@@ -21731,7 +21786,7 @@ agent-vocabulary query cannot see it, and this base ran nothing else for twenty 
 
 | Repo | Licence (payload) | Grant read at | ★ | Region | Note |
 |---|---|---|---:|---|---|
-| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **GPL-2.0** | 🔴 `master/docs/License.txt` | **346** | Not placed | **237 corpus files mention it; 0 live shelves carried it.** Six root rungs 404; grant recovered at the README-named path, **BOM-prefixed**, and it is GPL-**2**.0 not 3.0 |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **GPL-2.0** | 🔴 `master/docs/License.txt` | **346** | Global | **237 corpus files mention it; 0 live shelves carried it.** Six root rungs 404; grant recovered at the README-named path, **BOM-prefixed**, and it is GPL-**2**.0 not 3.0 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Not placed)* |
 | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | `master/LICENSE` | **175** | EMEA | The only European **university** SIS on this base. Instituto Superior Técnico, Lisbon |
 
 ### 🔵 The branch finding, as a repository property rather than an anecdote
@@ -21779,15 +21834,15 @@ blog listicles. `p354` broke the streak once by aiming at a **function** and rec
 | Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | 🔴 **`license.txt`** (lower-case) | `develop` | **3 328** | APAC |
 | Moodle App | [moodlehq/moodleapp](https://github.com/moodlehq/moodleapp) | 🟢 **Apache-2.0** | 🔴 **`COPYING.txt`** | `main` | **1 002** | Global |
 | ClassroomIO | [classroomio/classroomio](https://github.com/classroomio/classroomio) | AGPL-3.0 | `LICENSE` | `main` | **1 726** | Global |
-| scorm-again | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | `LICENSE` | `master` | **356** | Not placed |
-| pytogether | [SJRiz/pytogether](https://github.com/SJRiz/pytogether) | **MIT** | `LICENSE` | `main` | **261** | Not placed |
+| scorm-again | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | `LICENSE` | `master` | **356** | Global |
+| pytogether | [SJRiz/pytogether](https://github.com/SJRiz/pytogether) | **MIT** | `LICENSE` | `main` | **261** | Global |
 | ELMSLN | [elmsln/elmsln](https://github.com/elmsln/elmsln) | GPL-3.0 | `LICENSE.md` | `master` | **253** | North America |
 | INGInious | [INGInious/INGInious](https://github.com/INGInious/INGInious) | AGPL-3.0 *"most of the files"* | `LICENSE` | `main` | **243** | EMEA |
-| openunivcourses | [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **MIT** | `LICENSE` | `main` | **253** | Not placed |
+| openunivcourses | [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **MIT** | `LICENSE` | `main` | **253** | Global |
 | Marsha (LTI LCMS) | [openfun/marsha](https://github.com/openfun/marsha) | **MIT** | `LICENSE` | `master` | **150** | EMEA |
 | UDOIT | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | `LICENSE` | `main` | **117** | North America |
 | ltiauthenticator | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause | `LICENSE` | `main` | **73** | North America |
-| bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | **MIT** | `LICENSE` | `main` | **22** | **LATAM** |
+| bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | **MIT** | `LICENSE` | `main` | **22** | LATAM |
 
 Plus the large courseware corpora, newly placed on this shelf:
 [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp)
@@ -28830,9 +28885,9 @@ jakerains/scormplayer                        rc=128  auth     -> UNREACHABLE-AUT
 | [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` + `Apache-2.0` subtree *(`1 371` · `4d6f67f4d88b`)* | **18** | APAC | The week's top new permissive row by stars |
 | [`EnglandTong/educore`](https://github.com/EnglandTong/educore) | `MIT` *(`1 089` · `4c24790a823d`)* | 4 | APAC | Offline-first for weak connectivity; 🟡 its README says "in development", hardware track paused |
 | [`deeding2030-boop/bestteach`](https://github.com/deeding2030-boop/bestteach) | `MIT` *(`1 156` · `7c64039bfa97`)* | 2 | APAC | `5` open 新课标 lesson-planning prompt templates |
-| [`inquiredu/a-mn-hackathon`](https://github.com/inquiredu/a-mn-hackathon) | `MIT` *(`1 268` · `63d28ebec5bc`)* | 0 | **North America** | Minnesota educator hackathon session kit; 🟡 `118` B trademark carve-out on `assets/mngaia-mark.png` |
-| [`Krishita17/record-bridge`](https://github.com/Krishita17/record-bridge) | `MIT` *(`1 079` · `a0d9ec2f46f8`)* | 2 | 🔴 Global *(weak basis, stated)* | Student-records de-duplication on **synthetic data, zero PII** |
-| [`manzanillo/ai-unplugged`](https://github.com/manzanillo/ai-unplugged) | `MIT` *(`1 250` · `4f6c10a78f98`)* | 0 | 🔴 Global *(no basis in the row)* | 🔴 Carried with a stated limit: `215` B README |
+| [`inquiredu/a-mn-hackathon`](https://github.com/inquiredu/a-mn-hackathon) | `MIT` *(`1 268` · `63d28ebec5bc`)* | 0 | North America | Minnesota educator hackathon session kit; 🟡 `118` B trademark carve-out on `assets/mngaia-mark.png` |
+| [`Krishita17/record-bridge`](https://github.com/Krishita17/record-bridge) | `MIT` *(`1 079` · `a0d9ec2f46f8`)* | 2 | Global | Student-records de-duplication on **synthetic data, zero PII** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: weak basis, stated)* |
+| [`manzanillo/ai-unplugged`](https://github.com/manzanillo/ai-unplugged) | `MIT` *(`1 250` · `4f6c10a78f98`)* | 0 | Global | 🔴 Carried with a stated limit: `215` B README 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: no basis in the row)* |
 
 🔴 **`62`★ [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) was the harvest's biggest hit and the carried index refused it.** 🟢 Already on these shelves.
 
@@ -28859,16 +28914,16 @@ Every tierC `FOUND` this pass is a `package.json` with **`"private": true` and n
 
 | Repo | 🟢 Grant *(bytes · pinned)* | ★ | Lang | Region | Why it trends |
 |---|---|---|---|---|---|
-| [`TaiMaBenJi/knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) | 🟢 `MIT` *(`1 067` B · `main` · `ae32bfcf8d6d`)* | **80** | HTML | **APAC** | Created `2026-09-17`, `80`★ and `9` forks in four weeks — **fully offline** exam platform spanning gaokao, civil service, ICPC/Codeforces and WorldSkills `50` trades |
-| [`electronic-pig/gkvr_system_frontend`](https://github.com/electronic-pig/gkvr_system_frontend) | 🟢 `MIT` *(`1 071` B · `main` · `824c389743c2`)* | **98** | Vue | **APAC** | The reference gaokao college-application recommender; `29` forks say integrators, not spectators |
-| [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | Python | **EMEA** | Created `2026-09-30` — Neo4j + GraphRAG tutor for JupyterLab |
-| [`Barbarossa2711/GRAPHIT-Frontend`](https://github.com/Barbarossa2711/GRAPHIT-Frontend) | 🟢 `MIT` *(`1 071` B · `main` · `7dd36f68852c`)* | 0 | TypeScript | **EMEA** | Created `2026-10-01` |
+| [`TaiMaBenJi/knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) | 🟢 `MIT` *(`1 067` B · `main` · `ae32bfcf8d6d`)* | **80** | HTML | APAC | Created `2026-09-17`, `80`★ and `9` forks in four weeks — **fully offline** exam platform spanning gaokao, civil service, ICPC/Codeforces and WorldSkills `50` trades |
+| [`electronic-pig/gkvr_system_frontend`](https://github.com/electronic-pig/gkvr_system_frontend) | 🟢 `MIT` *(`1 071` B · `main` · `824c389743c2`)* | **98** | Vue | APAC | The reference gaokao college-application recommender; `29` forks say integrators, not spectators |
+| [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | Python | EMEA | Created `2026-09-30` — Neo4j + GraphRAG tutor for JupyterLab |
+| [`Barbarossa2711/GRAPHIT-Frontend`](https://github.com/Barbarossa2711/GRAPHIT-Frontend) | 🟢 `MIT` *(`1 071` B · `main` · `7dd36f68852c`)* | 0 | TypeScript | EMEA | Created `2026-10-01` |
 | [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton) | 🟢 `MIT` *(`1 063` B · `main` · `d7eac825fe27`)* | 0 | Python | Global | Simulated-learner harness for architecture comparison |
-| [`alanlivio/autograder-gen`](https://github.com/alanlivio/autograder-gen) | 🟢 `MIT` *(`1 144` B · `main` · `ff531290ec36`)* | 0 | Python | **EMEA** | University of Reading; Gradescope autograder generation |
-| [`swamperu/peru-ugel-geojson`](https://github.com/swamperu/peru-ugel-geojson) | 🟢 `MIT` *(`1 801` B · `main` · `a0460d619ca9`)* | 0 | Python | **LATAM** | Created `2026-09-29`; the `226` UGEL as polygons from INEI + ESCALE |
-| [`franciscoaldun/synco`](https://github.com/franciscoaldun/synco) | 🟢 `MIT` *(`1 086` B · `main` · `97f7fb30ea3a`)* | 0 | Go | **LATAM** | Created `2026-10-14` — **two days old at harvest** |
+| [`alanlivio/autograder-gen`](https://github.com/alanlivio/autograder-gen) | 🟢 `MIT` *(`1 144` B · `main` · `ff531290ec36`)* | 0 | Python | EMEA | University of Reading; Gradescope autograder generation |
+| [`swamperu/peru-ugel-geojson`](https://github.com/swamperu/peru-ugel-geojson) | 🟢 `MIT` *(`1 801` B · `main` · `a0460d619ca9`)* | 0 | Python | LATAM | Created `2026-09-29`; the `226` UGEL as polygons from INEI + ESCALE |
+| [`franciscoaldun/synco`](https://github.com/franciscoaldun/synco) | 🟢 `MIT` *(`1 086` B · `main` · `97f7fb30ea3a`)* | 0 | Go | LATAM | Created `2026-10-14` — **two days old at harvest** |
 | [`fhleonardi/openredlab`](https://github.com/fhleonardi/openredlab) | 🟢 `MIT` *(`1 075` B · `main` · `c507d0b56aac`)* | 9 | JavaScript | Global | Created `2026-09-28`, `9`★ in under three weeks |
-| [`Diego694/LUMMER`](https://github.com/Diego694/LUMMER) | 🟢 `MIT` *(`1 100` B · `main` · `b66b0a77540c`)* | 2 | Kotlin | **LATAM** | Offline attendance for limited connectivity |
+| [`Diego694/LUMMER`](https://github.com/Diego694/LUMMER) | 🟢 `MIT` *(`1 100` B · `main` · `b66b0a77540c`)* | 2 | Kotlin | LATAM | Offline attendance for limited connectivity |
 
 ### 🟡 Two channel facts this pass paid for, recorded so the next pass does not re-pay
 
@@ -40941,13 +40996,13 @@ fetched.**
 
 | Component | Function | Default ref · HEAD | Grant, by layer | Region | Verdict |
 |---|---|---|---|---|---|
-| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **Open Badges 3.0 + ELM** issuing/signing, OID4VCI to wallets, revocation with reason tracking | `main` · **`8bafc99`** | 🔴 file **absent** (8 names, all 404) · 🔴 manifest **silent** (`pyproject.toml` 1 453 B, no `license` key) · 🔴 registry **absent** (pypi 404 ×2 vs its pair) · 🟡 prose **`MIT`**, two words | **EMEA** (NL) | 🟡 **LEAD — not a foundation row** |
-| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | OB 3.0 **issue and verify**, Strapi + Nuxt | `main` · **`6fd0a11`** | 🔴 file **AGPL-3.0**, 33 820 B, *"Version 3, 19 November 2007"* | **EMEA** (IT) | 🔴 **copyleft — self-host only** |
-| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 platform, `did:web` issuer identity | `main` · **`d14619e`** | 🔴 file **AGPL-3.0**, 34 523 B | 🔴 **unplaced** | 🔴 **HELD — canonicality unresolved** |
-| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **OneRoster 1.2** server over Ed-Fi ODS 4.0/5.x | `main` · **`6de5476`** | 🟢 file **Apache-2.0**, 10 173 B | **North America** | 🟢 **reconfirmed at a resolved ref** |
-| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | Education **ERP** substrate (Odoo) | 🔴 **`19.0`** · **`1c95cef`** | 🔴 **LGPL-3.0** from the **body**; its own first line points at `COPYRIGHT`, which **404s** | **Global** | 🔴 **copyleft substrate** |
-| [`frappe/education`](https://github.com/frappe/education) | School-management module on ERPNext/Frappe | 🔴 **`develop`** · **`444cc8e`** | 🔴 `license.txt` **19 B** — `License: GNU GPL V3`, **no body, no "or later", no holder, no year** | **Global** | 🔴 **copyleft substrate, grant under-specified** |
-| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | **Caliper Analytics** Sensor API (JS) | 🔴 **does not resolve** | 🔴 **unreadable** | — | 🔴 **`Gap 284`'s cause, measured** |
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **Open Badges 3.0 + ELM** issuing/signing, OID4VCI to wallets, revocation with reason tracking | `main` · **`8bafc99`** | 🔴 file **absent** (8 names, all 404) · 🔴 manifest **silent** (`pyproject.toml` 1 453 B, no `license` key) · 🔴 registry **absent** (pypi 404 ×2 vs its pair) · 🟡 prose **`MIT`**, two words 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: NL)* | EMEA | 🟡 **LEAD — not a foundation row** |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | OB 3.0 **issue and verify**, Strapi + Nuxt 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: IT)* | `main` · **`6fd0a11`** | 🔴 file **AGPL-3.0**, 33 820 B, *"Version 3, 19 November 2007"* | EMEA | 🔴 **copyleft — self-host only** |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 platform, `did:web` issuer identity 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* | `main` · **`d14619e`** | 🔴 file **AGPL-3.0**, 34 523 B | Global | 🔴 **HELD — canonicality unresolved** |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **OneRoster 1.2** server over Ed-Fi ODS 4.0/5.x | `main` · **`6de5476`** | 🟢 file **Apache-2.0**, 10 173 B | North America | 🟢 **reconfirmed at a resolved ref** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | Education **ERP** substrate (Odoo) | 🔴 **`19.0`** · **`1c95cef`** | 🔴 **LGPL-3.0** from the **body**; its own first line points at `COPYRIGHT`, which **404s** | Global | 🔴 **copyleft substrate** |
+| [`frappe/education`](https://github.com/frappe/education) | School-management module on ERPNext/Frappe | 🔴 **`develop`** · **`444cc8e`** | 🔴 `license.txt` **19 B** — `License: GNU GPL V3`, **no body, no "or later", no holder, no year** | Global | 🔴 **copyleft substrate, grant under-specified** |
+| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | **Caliper Analytics** Sensor API (JS) | 🔴 **does not resolve** | 🔴 **unreadable** | Global | 🔴 **`Gap 284`'s cause, measured** |
 
 🟢 **Seven rows. Every grant read from payload at a ref the oracle resolved.** 🔴 **Zero star counts,
 because `api.github.com` is 403 and `P745` forbids inferring one.** 🔴 **One permissive row with a
@@ -42348,8 +42403,8 @@ over-read.
 
 | Repo | Region | Basis |
 |---|---|---|
-| [`bigdata-ustc/CAT4AI`](https://github.com/bigdata-ustc/CAT4AI) | 🟢 **APAC** | 🟢 **MIT**, `master/LICENSE`, 1,062 B. Placed on the **org's declared institutional domain** (BigData Lab @USTC, `bigdata.ustc.edu.cn`, Hefei) — the `P261` route, not an anthroponym. ⚠️ **Adjacent, not education delivery:** its subject is **psychometrics applied to AI-model evaluation**, so it is shelved as instrument-tier |
-| The other 7 | ⚠️ **Unplaced — and this is structural, not an omission** | 🔴 **`P474` fired on this pass.** `douglasrizzo/catsim`'s author publishes from `douglasrizzo.com.br` and the pass nearly placed it **LATAM** on that basis. **`P474` forbids exactly that**: place from the artifact's domain model, never the maintainer's name or domain |
+| [`bigdata-ustc/CAT4AI`](https://github.com/bigdata-ustc/CAT4AI) | APAC | 🟢 **MIT**, `master/LICENSE`, 1,062 B. Placed on the **org's declared institutional domain** (BigData Lab @USTC, `bigdata.ustc.edu.cn`, Hefei) — the `P261` route, not an anthroponym. ⚠️ **Adjacent, not education delivery:** its subject is **psychometrics applied to AI-model evaluation**, so it is shelved as instrument-tier |
+| The other 7 | Global | 🔴 **`P474` fired on this pass.** `douglasrizzo/catsim`'s author publishes from `douglasrizzo.com.br` and the pass nearly placed it **LATAM** on that basis. **`P474` forbids exactly that**: place from the artifact's domain model, never the maintainer's name or domain 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced and this is structural, not an omission)* |
 
 🟢 **The honest generalisation: an IRT estimator is jurisdiction-neutral by construction.** 🔵 **Which
 means the regional value of this tier is not where it was written but *which regulator makes it
@@ -42997,15 +43052,15 @@ failed.
 
 | Repo | 🟢 family | Region |
 |---|---|---|
-| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | **EUPL-1.1** | EMEA (Finland) |
-| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | **EUPL-1.1** | EMEA (Finland) |
-| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | **EUPL-1.1** | EMEA (Finland) |
-| [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | **EUPL-1.1** | EMEA (Finland) |
-| [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | **EUPL-1.1** | EMEA (Finland) |
-| [`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | **EUPL-1.1** | EMEA (Finland) |
-| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | **EUPL-1.2** | EMEA (Finland) |
-| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | **EUPL-1.2** | EMEA (Finland) |
-| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | **EUPL-1.2** | EMEA (EU) |
+| [`Opetushallitus/ehoks`](https://github.com/Opetushallitus/ehoks) | **EUPL-1.1** | EMEA |
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | **EUPL-1.1** | EMEA |
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | **EUPL-1.1** | EMEA |
+| [`Opetushallitus/oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri) | **EUPL-1.1** | EMEA |
+| [`Opetushallitus/organisaatio`](https://github.com/Opetushallitus/organisaatio) | **EUPL-1.1** | EMEA |
+| [`Opetushallitus/valtionavustus`](https://github.com/Opetushallitus/valtionavustus) | **EUPL-1.1** | EMEA |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | **EUPL-1.2** | EMEA |
+| [`Opetushallitus/suorituspalvelu`](https://github.com/Opetushallitus/suorituspalvelu) | **EUPL-1.2** | EMEA |
+| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | **EUPL-1.2** | EMEA |
 
 ⚠️ **Six of nine are EUPL-1.1, not 1.2**, and the two versions carry **different
 compatibility lists** — so a build mixing this tier with GPL, MPL or EPL components cannot

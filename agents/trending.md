@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p682) — 🔧 **THE `Region` COLUMN HELD `114` DISTINCT STRINGS FOR `5` LEGAL VALUES: `367` OF `795` CELLS (46 %) WERE OUTSIDE THE CLOSED VOCABULARY, AND `p669` HAD ALREADY REPORTED FIXING IT. 🟢 ONE AGENT ROW FILED, ONE FIVE-PASS-OLD DUPLICATE DISCHARGED**
+
+**No row was removed from this file. One row filed on [`agents/top.md`](./top.md) (`67` → `67`, because a duplicate was merged in the same pass), `ACTION p677-A` discharged, and `0` rows removed anywhere.** This pass's primary result is not a find — it is that **the field every regional filter reads was unusable across this entire KB**, and that the previous repair of it was reported as done while being done to one table out of eight.
+
+### 🔴 `682-A` — the defect, measured before and after
+
+A closed vocabulary that admits `5` values was carrying `114` distinct strings. The classes, counted:
+
+| Class | Example as published | Cells |
+|---|---|--:|
+| Correct | `APAC`, `EMEA`, `North America`, `LATAM`, `Global` | `428` |
+| Presentation markup | `**EMEA**`, `🟢 **LATAM**`, `🔵 Global`, `⚪ Global` | ~`190` |
+| Region + country in the field | `EMEA (Finland)`, `APAC — India`, `APAC 🇨🇳`, `**EMEA** (NL · SURF edubadges)` | ~`80` |
+| Unplaced, spelled six ways | `Global (unplaced)`, `Not placed`, `unplaced`, `**UNPLACED**`, `—`, `Global (refused)` | ~`75` |
+| A whole sentence in the field | `**EMEA** — Spain. Twelve teacher skills; **Moodle GIFT** question-bank exchange…` | `7` |
+| Two regions in one cell | `**LATAM / EMEA**` | `1` |
+
+🔵 **Why this is worse than untidiness.** `Global (unplaced)` and `Global` compile to two buckets, so a reader filtering `Global` silently loses `38` rows; `**EMEA**` and `EMEA` make two more; `EMEA (Finland)` makes a bucket of size one. The column was not *sorted into five regions* — it was sorted into `114`, and every one of them looked like coverage.
+
+🔴 **And `p669` reported this fixed.** Its note reads: *“The `Region` column was also normalised at p669 — it held `8` distinct strings for `5` values … a closed-vocabulary column cannot carry presentation; the evidence class now lives in each row's description.”* That was true of `agents/top.md`'s main table and of nothing else. **The lesson is the one `p677` also failed: a repair stated at the top of one file is not a repair of the base.**
+
+### 🟢 `682-B` — what was changed, and the rule that was refused
+
+`355` cells rewritten in pass 1 (parse → bare legal value, qualifier relocated), `8` in pass 2 (presentation strip only, for the region-keyed 2-column summary tables), `1` by hand. **After: `5` values, `792` legal cells, `0` illegal placements.**
+
+🔵 **Nothing was discarded.** `119` country/institution qualifiers were appended to the row's own prose cell; `21` in this file had no prose column to receive them and are preserved verbatim in the ledger below. The normaliser **refused** every cell it could not parse rather than guessing — `3` cells remain non-conforming and all `3` are correctly untouched:
+
+| Cell | Why it was refused | Verdict |
+|---|---|---|
+| `Verdict`, `Adopcion` | row labels in **transposed** key–value tables, where `Region` is itself a row label and not a column header | 🟢 **Correctly left alone** |
+| `mixed` | the English-leg row of a measurement table (`Leg`/`Language`/`Region`/`Probed`/`Live`), a deliberate **cross-region aggregate**, not a placement | 🟢 **Correctly left alone — rewriting it to `Global` would have invented data** |
+
+⚠️ **One ambiguity is now structural and is stated rather than hidden:** `Global` carries two meanings on these shelves — *truly global* and *not placed* — and `240` cells now hold it. The distinction lives in each row's prose. **A sixth value would break the filter again**, so it was not added; a `placed: true|false` field beside the region is the right fix and is not this pass's to make.
+
+### 🔧 `682-C` — `ACTION p677-A` discharged after five passes
+
+`p677` found that `THU-MAIC/OpenMAIC` occupied **two rows** of `agents/top.md`, that the rows **disagreed on a measured value** (`42,743★` vs `42,759★`), named the merge as `ACTION p677-A` — and then kept both rows, so the shelf published `67 rows / 66 distinct subjects` for five passes, a census statable only by excusing its own duplicate. **p682 merges them.** The survivor carries the deleted row's unique material (MIT only since `v0.3.0`, 2026-06-28, prior licence unnamed; the **LGPL-3.0-or-later** `mathml2omml` workspace package the build compiles as step one) **and a fresh measurement that settles the disagreement by re-reading rather than by picking a side: `42.8k★ / 6.6k forks`, `859` commits, latest release `v1.4.1` dated `2026-11-05`** — one release beyond what either row knew. 🔵 **Two rows for one subject do not average, they diverge**, and the divergence is invisible to a reader who sees only one of them. `agents/top.md` now reads `67 / 67`, measured.
+
+### 🟢 `682-D` — the one row filed, and it is the read-only half of a pair
+
+| Repo | Licence (byte-read) | Stars | Region | Why filed |
+|---|---|--:|---|---|
+| [`fabioov/moodle-mcp`](https://github.com/fabioov/moodle-mcp) | 🟢 **MIT** `1,107 B` sha256₁₂ `4649f967df1b` © *2026 Fabio Santos - fabioov and Moodle MCP contributors* | **0** | Global | 🟢 **Every tool read-only by construction.** The three Moodle MCP surfaces this base already holds ([`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) `45★`, [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp), [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp)) all expose **writes** into a live LMS, and `P42` requires a human gate in front of each. This one needs no gate because there is no write tool to gate — the component you hand a student, and the one you can put in front of a model you do not fully trust. ⚠️ `0★ / 0 forks`, `12` commits: **new and unadopted**, filed for the shape of its tool surface, not its traction. |
+
+🔵 **Placement refused on measurement, not defaulted:** `README`, `LICENSE` and manifest at the real default ref (`main` @ `7cf8f4cd28e7`) carry **no institution, no shipped locale default and no non-English body text** — the three channels `p669`/`p679` admit — so `Global` here reads *not placed*. 🔴 `Andreas87808/mcp-canvas-lms`, offered by the same leg as a 54-tool Canvas MCP server, **is not public**: `ls-remote` returns an authentication prompt, which in this session is what a non-existent or private repository returns. **Not filed. A 404 is not a finding.**
+
+### 🔵 `682-E` — channel map, re-measured
+
+`api.github.com` **blocked** for third-party repositories (`403`); `gh api` blocked; `github.com` HTML via `curl` **`403`**; `raw.githubusercontent.com` **works** (grants byte-read); `WebFetch` of the repository page **works** (stars/forks/commits/releases); `git ls-remote --symref` **works** (existence + real default branch). Unchanged from `p679`.
+
+### 📒 `682-F` — region ledger: qualifiers with no prose column to receive them (this file)
+
+Line numbers are **pre-p682** and are recorded so the detail is recoverable even though the cell no longer carries it.
+
+| Line (pre-p682) | Region cell as published | Normalised to | Detail preserved here |
+|--:|---|---|---|
+| `1952` | `Global — unplaced` | `Global` | Global — unplaced |
+| `3535` | `🟢 **EMEA** — Africa, README-evidenced` | `EMEA` | Africa, README-evidenced |
+| `3536` | `🟢 **APAC** — India, README-evidenced` | `APAC` | India, README-evidenced |
+| `3538` | `🔵 Global — recorded as `GPL-3.0`` | `Global` | recorded as `GPL-3.0` |
+| `11387` | `**EMEA** — Spain. Twelve teacher skills; **Moodle GIFT** question-bank exchange; ChatGPT W…` | `EMEA` | Spain. Twelve teacher skills; Moodle GIFT question-bank exchange; ChatGPT Work + Claude Co… |
+| `11388` | `**LATAM** — Brazil, UFPA. **Accessibility-first**: PDFs → narrated audio + optimised text …` | `LATAM` | Brazil, UFPA. Accessibility-first: PDFs → narrated audio + optimised text for visual impai… |
+| `11390` | `**APAC** — India` | `APAC` | India |
+| `12264` | `unplaced` | `Global` | unplaced |
+| `24713` | `APAC — India` | `APAC` | India |
+| `29507` | `Not placed` | `Global` | Not placed |
+| `29508` | `Not placed` | `Global` | Not placed |
+| `29511` | `Not placed` | `Global` | Not placed |
+| `29513` | `Not placed` | `Global` | Not placed |
+| `29516` | `Not placed` | `Global` | Not placed |
+| `29517` | `Not placed` | `Global` | Not placed |
+| `29519` | `Not placed` | `Global` | Not placed |
+| `29520` | `Not placed` | `Global` | Not placed |
+| `29521` | `Not placed` | `Global` | Not placed |
+| `29524` | `Not placed` | `Global` | Not placed |
+| `48765` | `**APAC** (HKU)` | `APAC` | HKU |
+| `49204` | `—` | `Global` | unplaced |
+
+---
+
 ## 🆕 2026-11-06 (p681) — 🟢 **THREE AGENT ROWS FILED, AND ONE OF THEM CLOSES A LICENCE CHAIN FROM INSIDE ITS OWN `LICENSE` FILE — A `316,253★` UPSTREAM, BYTE-READ. 🔴 TWO MANDATED LEGS RETURNED "MIT" ON REPOSITORIES THAT HAVE NO LICENCE FILE. 🔴 `NOASSERTION` NOW HAS A MEASURED DIRECTION: NONE. 🔴 THE WELLBEING HEAD IS THE FIRST GENUINELY EMPTY HEAD THIS BASE HAS SWEPT.**
 
 **Three rows filed on `agents/top.md` (`64` → `67`), four on `repos/foundations.md` (`139` → `143`), none on `verticals/solutions.md`.** `intel/trends.md` gains **`T73`** and **`T74`**; `compose/patterns.md` gains **`P56`**. All eight mandated legs ran — four global, four regional. **`25` candidate repositories were probed on three channels each** (`search/repositories` for metadata, `git ls-remote --symref` for existence and default ref, `raw.githubusercontent.com` for grant bytes at the *resolved* ref): [`evidence/p681-candidate-verification.2026-11-06-p681.tsv`](../evidence/p681-candidate-verification.2026-11-06-p681.tsv).
@@ -65,10 +145,10 @@ Five repositories read `NOASSERTION` from `gh api search/repositories` on the sa
 
 | Repo | Licence (byte-read) | Stars | Region | Channel that placed it |
 |---|---|--:|---|---|
-| [`yasserhegazy/lab-grader-skill`](https://github.com/yasserhegazy/lab-grader-skill) | 🟢 MIT, `1,070 B`, `b0326e954804` | **0** | **EMEA** | 🆕 **Shipped locale default** — feedback in *Palestinian colloquial Arabic* **by default** |
-| [`jlouisbru/Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI) | 🟢 MIT code, `1,071 B`, `72f0ea5266d9` (docs CC BY-SA 4.0) | **0** | **North America** | **Two channels**: Chapman University + matching `chapman.edu` domain, **and** a `FERPA Compliance` section (US federal statute) |
-| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 MIT, `1,068 B`, `695941afdd1f` | **84** | **APAC** | **National curriculum publisher** — 人教版 / PEP knowledge base; hosted in `asia-east1` |
-| [`mattbret1-blip/bp-master-agent`](https://github.com/mattbret1-blip/bp-master-agent) | 🟢 MIT, `1,103 B`, `06777c46f182` | **0** | **Global** | 🔴 **Refused** — Brazilian Portuguese is the *subject taught*, not a deployment geography |
+| [`yasserhegazy/lab-grader-skill`](https://github.com/yasserhegazy/lab-grader-skill) | 🟢 MIT, `1,070 B`, `b0326e954804` | **0** | EMEA | 🆕 **Shipped locale default** — feedback in *Palestinian colloquial Arabic* **by default** |
+| [`jlouisbru/Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI) | 🟢 MIT code, `1,071 B`, `72f0ea5266d9` (docs CC BY-SA 4.0) | **0** | North America | **Two channels**: Chapman University + matching `chapman.edu` domain, **and** a `FERPA Compliance` section (US federal statute) |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 MIT, `1,068 B`, `695941afdd1f` | **84** | APAC | **National curriculum publisher** — 人教版 / PEP knowledge base; hosted in `asia-east1` |
+| [`mattbret1-blip/bp-master-agent`](https://github.com/mattbret1-blip/bp-master-agent) | 🟢 MIT, `1,103 B`, `06777c46f182` | **0** | Global | 🔴 **Refused** — Brazilian Portuguese is the *subject taught*, not a deployment geography |
 
 🟢 **Two evidence classes enter the ledger, both read from the repository's own files at the real default ref.**
 1. **Shipped locale default** — a dialect or timezone a deployer inherits *without choosing it*. `lab-grader-skill` writes Arabic feedback by default. And it retroactively places a row this base has carried unplaced for passes: **`Gego-K12/gegok12`** ships `TIMEZONE = 'Asia/Kolkata'` in `.env.example`, with `config/app.php` resolving the app timezone from it → **APAC**. A default is stronger than an owner profile, because an operator is affected by it.
@@ -592,10 +672,10 @@ The four mandated global legs and the four regional legs were run. **No agent ad
 
 | Address | Grant (bytes, `sha256₁₂`, residual) | Stars | Forks | Pushed | Region | Why filed |
 |---|---|---|---|---|---|---|
-| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 Apache-2.0 · `10,785 B` · `65125d9e480b` · **−524, appendix stripped, body verbatim** | **24** | 10 | `2026-11-05` 🟢 | **EMEA** | AI-driven personalised feedback on student programming work. Payload names the institution: `Copyright 2021 Technische Hochschule Mittelhessen`. **`NOASSERTION` specimen — see `673-B`.** Default ref `dev`. |
-| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT · `1,092 B` · `e3321a1b62cd` · **+67** | **387** | 76 | `2026-05-29` ⚠️ | **APAC** | MCQ / lesson-plan / flashcard generation with structured Pydantic output. **Ledger since `p42`, `13` passes, never filed** — the promotion defect at its most visible. Placed on `educhain.in` **inside the `LICENSE`**, after `673-E` invalidated the first attempt. |
-| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 MIT · `1,064 B` · `845ac6ac9e57` · **+39** | **45** | 14 | `2026-02-22` ⚠️ | Global (refused) | The most-adopted permissive **MCP bridge into Moodle** this base holds — and Moodle has been this KB's dominant LATAM/EMEA platform since `p1` with no agent-reachable permissive route until now. Ledger since `p2`. |
-| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT · `1,070 B` · `c29329c5ef3b` · **+45** | **10** | 4 | `2026-11-03` 🟢 | Global (refused) | The only Canvas MCP row here that **writes** — grades and comments back, not just reads. Clears the floor on **function and freshness, not stars**, and says so. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 Apache-2.0 · `10,785 B` · `65125d9e480b` · **−524, appendix stripped, body verbatim** | **24** | 10 | `2026-11-05` 🟢 | EMEA | AI-driven personalised feedback on student programming work. Payload names the institution: `Copyright 2021 Technische Hochschule Mittelhessen`. **`NOASSERTION` specimen — see `673-B`.** Default ref `dev`. |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT · `1,092 B` · `e3321a1b62cd` · **+67** | **387** | 76 | `2026-05-29` ⚠️ | APAC | MCQ / lesson-plan / flashcard generation with structured Pydantic output. **Ledger since `p42`, `13` passes, never filed** — the promotion defect at its most visible. Placed on `educhain.in` **inside the `LICENSE`**, after `673-E` invalidated the first attempt. |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 MIT · `1,064 B` · `845ac6ac9e57` · **+39** | **45** | 14 | `2026-02-22` ⚠️ | Global | The most-adopted permissive **MCP bridge into Moodle** this base holds — and Moodle has been this KB's dominant LATAM/EMEA platform since `p1` with no agent-reachable permissive route until now. Ledger since `p2`. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (refused))* |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT · `1,070 B` · `c29329c5ef3b` · **+45** | **10** | 4 | `2026-11-03` 🟢 | Global | The only Canvas MCP row here that **writes** — grades and comments back, not just reads. Clears the floor on **function and freshness, not stars**, and says so. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (refused))* |
 
 **Declared gaps, restated rather than left as silence:** 🔴 the **APAC adoption denominator** returned nothing for a **sixth** consecutive window — Korea's AI Basic Act, Vietnam's `134/2025/QH15`, TEQSA's action plans and AI Verify are all held as *regulation*, and there is still **no APAC education adoption rate** on this base. 🔴 **Africa and the Middle East returned nothing** on the EMEA-labelled leg for the **fourth** recorded window. 🔴 No permissive, actively-maintained **OneRoster client for .NET** exists beyond a three-year-stale one (`jdolny/OneRoster.NET`, filed with that as its headline).
 
@@ -1594,12 +1674,12 @@ Of the four permissive xAPI rows, three are dormant: `TinCanJS` (2023-10-17), `x
 | Agent | Repo | Licence (payload) | Stars | Region | Signal |
 |---|---|---|---|---|---|
 | **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (1,063 B) | **1,338** | APAC | The largest permissive **non-English** education agent found to date. Plans a route through a subject, teaches it, then has the learner build a project against it. 735 commits / 64 forks, `main`. ⚠️ README: Codex/ChatGPT and Antigravity packages supported only at `v1.0.0`; web runtime moved to a separate branch. |
-| **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | MIT (1,068 B) | **1,211** | Global (unplaced) | Book or long document → animated, narrated, interactive web experience. The explainer-generation slot, previously empty. Pushed **2026-11-04**, the day of this pass. |
-| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT (1,068 B) | 611 | Global (unplaced) | Topic → researched course of ~2-minute audio lessons **with cited sources**. The citation requirement is the transferable part: it is the cheapest existing answer to the provenance question EMEA buyers ask about generated material. |
-| **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (1,073 B) | 544 | Global (unplaced) | 🟢 **The structurally important row.** MCP surface over Anki — decks, notes, note types, cards, scheduling, review state. Lets an agent **write into** the FSRS scheduler this KB already carries (`fsrs4anki`, `fsrs-rs`) instead of reimplementing retention. 258 commits, self-described active beta at v0.27.0. |
-| **wordlink** | [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | MIT (1,092 B, **code only**) | 280 | Global (unplaced) | The first row on the shelf that **ships its own task-specific fine-tuned weights** — a 1.5B SFT+DPO model running **offline in the browser**, no key, no egress, no server. Pushed 2026-11-04. ⚠️ No separately named grant for the weights. |
-| **AILearningGuide** | [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | MIT (1,080 B) | 248 | Global (unplaced) | 58 hands-on labs (ML fundamentals → transformers → RAG → agents → fine-tuning → quantisation) as a **desktop, offline-runnable** application. Curriculum in the form factor a cohort can actually be issued. |
-| **lumen** | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | MIT (1,075 B) | 92 | Global (unplaced) | One-sentence goal → multi-agent course builder → course-scoped RAG tutor teaching with per-lesson citations. 🟢 **Publishes its own evals**, which is why a 92★ row is filed at all. |
+| **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | MIT (1,068 B) | **1,211** | Global | Book or long document → animated, narrated, interactive web experience. The explainer-generation slot, previously empty. Pushed **2026-11-04**, the day of this pass. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
+| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT (1,068 B) | 611 | Global | Topic → researched course of ~2-minute audio lessons **with cited sources**. The citation requirement is the transferable part: it is the cheapest existing answer to the provenance question EMEA buyers ask about generated material. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
+| **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (1,073 B) | 544 | Global | 🟢 **The structurally important row.** MCP surface over Anki — decks, notes, note types, cards, scheduling, review state. Lets an agent **write into** the FSRS scheduler this KB already carries (`fsrs4anki`, `fsrs-rs`) instead of reimplementing retention. 258 commits, self-described active beta at v0.27.0. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
+| **wordlink** | [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | MIT (1,092 B, **code only**) | 280 | Global | The first row on the shelf that **ships its own task-specific fine-tuned weights** — a 1.5B SFT+DPO model running **offline in the browser**, no key, no egress, no server. Pushed 2026-11-04. ⚠️ No separately named grant for the weights. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
+| **AILearningGuide** | [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | MIT (1,080 B) | 248 | Global | 58 hands-on labs (ML fundamentals → transformers → RAG → agents → fine-tuning → quantisation) as a **desktop, offline-runnable** application. Curriculum in the form factor a cohort can actually be issued. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
+| **lumen** | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | MIT (1,075 B) | 92 | Global | One-sentence goal → multi-agent course builder → course-scoped RAG tutor teaching with per-lesson citations. 🟢 **Publishes its own evals**, which is why a 92★ row is filed at all. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
 
 **The shape change, stated as a count: six of these seven generate or schedule content; one is a tutor.** Every prior pass of this page filed tutors. The permissive shelf in late 2026 is tilting toward *delivery* — explainers, audio courses, labs, flashcards, schedules — and that is a better match for what clients describe than another conversational tutor. See `intel/trends.md` **T26**.
 
@@ -1655,7 +1735,7 @@ Each of these appeared in upstream notes feeding this programme. All three were 
 
 | Agent | Repo | Licence (payload) | Stars / forks / commits | Region | Signal |
 |---|---|---|---|---|---|
-| **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT (1,068 B, `Copyright (c) 2026 Zijin Zhang`) | **166** / 40 / 274 | Global (unplaced) | Block-based adaptive learning workspace. Ingests PDF/DOCX/PPTX **or pulls from Canvas LMS**, then generates structured notes, flashcards, quiz items and an adaptive tutor. **Ollama is the default provider** — README: *"no API keys required, no data leaves your machine"* — with OpenAI, Anthropic, DeepSeek, Gemini, Groq, vLLM, LM Studio, OpenRouter or any OpenAI-compatible endpoint as alternatives. **Ships FSRS 4.5 in-tree**, making it the only agent row carrying this KB's own retention primitive rather than needing it bolted on. Python/FastAPI + Next.js. Knowledge graph marked experimental **by its own README**. |
+| **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT (1,068 B, `Copyright (c) 2026 Zijin Zhang`) | **166** / 40 / 274 | Global | Block-based adaptive learning workspace. Ingests PDF/DOCX/PPTX **or pulls from Canvas LMS**, then generates structured notes, flashcards, quiz items and an adaptive tutor. **Ollama is the default provider** — README: *"no API keys required, no data leaves your machine"* — with OpenAI, Anthropic, DeepSeek, Gemini, Groq, vLLM, LM Studio, OpenRouter or any OpenAI-compatible endpoint as alternatives. **Ships FSRS 4.5 in-tree**, making it the only agent row carrying this KB's own retention primitive rather than needing it bolted on. Python/FastAPI + Next.js. Knowledge graph marked experimental **by its own README**. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
 
 **Why this row matters out of proportion to 166★.** Every other tutor on this shelf assumes a hosted model and treats local inference as a deployment variant. This one inverts the default. The commercial consequence is that *"nothing leaves your hardware"* becomes demonstrable in an afternoon — which is the EMEA public-sector and data-residency conversation, and, per `intel/market.md` p653, the one being had under a 2 December 2027 compliance deadline against a system where only ~30% of teachers have had any AI training.
 
@@ -1719,7 +1799,7 @@ That page carried **three** region-placement bullets simultaneously claiming "si
 | Agent | Repo | Licence (payload) | Stars / forks | Region | Signal |
 |---|---|---|---|---|---|
 | **OmniEdu** | [haolpku/Omni-Edu](https://github.com/haolpku/Omni-Edu) | Apache-2.0 (11,358 B) — **code only** | **590** / 93 | APAC | A **new layer on this shelf**: not an agent but the education-domain *model* an agent runs on. 4B / 9B / 27B, each in BF16 and FP8, trained for subject competence, curriculum grounding, diagnostic reasoning and pedagogical scaffolding. Backbones Qwen3.5-4B-Base, Qwen3.5-9B-Base, Qwen3.8-27B. 69,999 instruction examples / 15.96M supervised response tokens from 100+ sources. Ships the `omniedu` PyPI toolkit with a 12-benchmark evaluation suite. arXiv:2609.23088, 22 Sep 2026. Peking University + University of the Chinese Academy of Sciences + Zhongguancun Academy. |
-| **moodle-mcp** | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (1,064 B) | **27** / 1 | Global (unplaced) | The permissive Moodle-side agent bridge this KB has declared missing in every prior pass. Rust on the official MCP SDK (`rmcp`), 163 commits, 22 tools (identity, courses, assignments, forums, files-as-markdown, grades, schedule, messaging) plus a `call_ws_function` escape hatch to any Moodle web service. States validation live against **Moodle 3.7 → 5.x**. 27★ is *not* adoption — see the honest framing below. |
+| **moodle-mcp** | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (1,064 B) | **27** / 1 | Global | The permissive Moodle-side agent bridge this KB has declared missing in every prior pass. Rust on the official MCP SDK (`rmcp`), 163 commits, 22 tools (identity, courses, assignments, forums, files-as-markdown, grades, schedule, messaging) plus a `call_ws_function` escape hatch to any Moodle web service. States validation live against **Moodle 3.7 → 5.x**. 27★ is *not* adoption — see the honest framing below. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
 
 ### 🔴 The fork trap, caught a second consecutive pass — this time *before* publishing
 
@@ -1809,8 +1889,8 @@ Three things follow. First, **T10** (the sector's evidence base is its weak poin
 | Agent | Repo | Licence (payload) | Stars / forks | Region | Signal |
 |---|---|---|---|---|---|
 | **AI-Shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 (11,342 B) | **331** / 128 | APAC | Course *authoring* plus adaptive delivery, which is a different job from tutoring: an instructor states expertise and teaching intent once, and the system generates per-learner explanations, probing Q&A and an embeddable course for a website or training portal. Hosted at ai-shifu.com, Docker self-hosting. README attributes it to the AI-Shifu Team and the **Research Center of Intelligent Software Engineering at Harbin Institute of Technology** — a documentary basis for APAC, not an inference. |
-| **GenMentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** (7,048 B) | 136 / 23 | Global (unplaced) | Goal-oriented ITS: the learner states a goal, coordinated LLM agents refine it, measure the gap against the learner's background, schedule sessions, draft each session's reading and quiz, and update the learner profile. WWW '25 Industry Track oral. CC0 is a public-domain dedication — the loosest terms on this shelf — but it is not a software licence and carries no patent or trademark grant, so treat it as permissive-with-a-caveat rather than as MIT. |
-| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (1,073 B) | 96 / 13 | Global (unplaced) | MCP server that turns any LLM into an intelligent tutoring system: Bayesian Knowledge Tracing, FSRS spaced repetition, prerequisite skill graphs and a frozen scoring rubric behind one tool surface. **This is the upstream of the row this KB has been publishing** — see the correction below. |
+| **GenMentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** (7,048 B) | 136 / 23 | Global | Goal-oriented ITS: the learner states a goal, coordinated LLM agents refine it, measure the gap against the learner's background, schedule sessions, draft each session's reading and quiz, and update the learner profile. WWW '25 Industry Track oral. CC0 is a public-domain dedication — the loosest terms on this shelf — but it is not a software licence and carries no patent or trademark grant, so treat it as permissive-with-a-caveat rather than as MIT. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (1,073 B) | 96 / 13 | Global | MCP server that turns any LLM into an intelligent tutoring system: Bayesian Knowledge Tracing, FSRS spaced repetition, prerequisite skill graphs and a frozen scoring rubric behind one tool surface. **This is the upstream of the row this KB has been publishing** — see the correction below. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global (unplaced))* |
 
 ### 🔴 Correction — this KB filed the fork and missed the original
 
@@ -1947,11 +2027,11 @@ currently scores.
 
 | Agent | Repo | Licence | ★ | Pushed | Region | One line |
 |---|---|---|---|---|---|---|
-| QuestGen | [`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) | 🟢 `MIT` | `23` | `2026-10-29` | Global — unplaced | Assessment drafting with review-and-approve built in, then export |
-| Memory-Agent | [`007350/memory-agent`](https://github.com/007350/memory-agent) | 🟢 `MIT` | `21` | `2026-10-23` | Global — unplaced | LangGraph + LightRAG + three-layer memory + roadmaps |
-| CodeABC | [`he-yufeng/CodeABC`](https://github.com/he-yufeng/CodeABC) | 🟢 `MIT` | `19` | `2026-10-29` | Global — unplaced | Code comprehension for non-programmers |
-| Tutor | [`demetrius-edelin/tutor`](https://github.com/demetrius-edelin/tutor) | 🟢 `MIT` | `6` | `2026-11-04` | Global — unplaced | Self-hosted BYO-key: books and video into a mapped, tested course |
-| OntoAgents | [`ontoagents/multiagent-lab`](https://github.com/ontoagents/multiagent-lab) | 🟢 `Apache-2.0` | `6` | `2026-11-04` | Global — unplaced | Ontology-grounded learning agents with a build → run → **audit** lifecycle |
+| QuestGen | [`cRED-f/QuestGen-AI-Agent`](https://github.com/cRED-f/QuestGen-AI-Agent) | 🟢 `MIT` | `23` | `2026-10-29` | Global | Assessment drafting with review-and-approve built in, then export 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global — unplaced)* |
+| Memory-Agent | [`007350/memory-agent`](https://github.com/007350/memory-agent) | 🟢 `MIT` | `21` | `2026-10-23` | Global | LangGraph + LightRAG + three-layer memory + roadmaps 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global — unplaced)* |
+| CodeABC | [`he-yufeng/CodeABC`](https://github.com/he-yufeng/CodeABC) | 🟢 `MIT` | `19` | `2026-10-29` | Global | Code comprehension for non-programmers |
+| Tutor | [`demetrius-edelin/tutor`](https://github.com/demetrius-edelin/tutor) | 🟢 `MIT` | `6` | `2026-11-04` | Global | Self-hosted BYO-key: books and video into a mapped, tested course 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global — unplaced)* |
+| OntoAgents | [`ontoagents/multiagent-lab`](https://github.com/ontoagents/multiagent-lab) | 🟢 `Apache-2.0` | `6` | `2026-11-04` | Global | Ontology-grounded learning agents with a build → run → **audit** lifecycle 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Global — unplaced)* |
 
 🔴 **Not filed:** `JIUWANG123/quiet-reader-english-learning` — declares `MIT`, ships **Expo's** licence
 payload (`649-E`). `umass-ml4ed/kcgen-kt` — ACL 2026 Findings, no licence payload at all.
@@ -2113,11 +2193,11 @@ addresses. `7` filed after a byte-read of every licence.
 
 | New this week | Licence (byte-read) | ★ | `pushed_at` | Region | Shape |
 |---|---|--:|---|---|---|
-| [`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) | 🟢 `MIT` `1,070 B` residual `0` | `26` | `2026-11-02` | **APAC** | Adaptive vocabulary for Chinese as a Foreign Language. Flask. |
+| [`kzw-ai/word-learning-system`](https://github.com/kzw-ai/word-learning-system) | 🟢 `MIT` `1,070 B` residual `0` | `26` | `2026-11-02` | APAC | Adaptive vocabulary for Chinese as a Foreign Language. Flask. |
 | [`AlphaaCode/Popbook`](https://github.com/AlphaaCode/Popbook) | 🟢 `MIT` `1,084 B` residual `0` | `13` | `2026-11-04` | Global | Course PDF → interactive 3D pop-up textbook, bring-your-own key. |
-| [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) | 🟢 `MIT` `1,111 B` residual `0` | `11` | `2026-11-04` | **EMEA** | University-operated LLM chat for staff and students, RAG. |
-| [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | 🟢 `MIT` `1,079 B` residual `0` | `8` | `2026-11-04` | **EMEA** | Audience-response: quizzes, polling, question boards. German. |
-| [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | 🟢 `Apache-2.0` `11,357 B` canonical | `6` | `2026-10-27` | **North America** | Student + PEN request administration, BC Government. |
+| [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper) | 🟢 `MIT` `1,111 B` residual `0` | `11` | `2026-11-04` | EMEA | University-operated LLM chat for staff and students, RAG. |
+| [`kqc-real/arsnova.eu`](https://github.com/kqc-real/arsnova.eu) | 🟢 `MIT` `1,079 B` residual `0` | `8` | `2026-11-04` | EMEA | Audience-response: quizzes, polling, question boards. German. |
+| [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | 🟢 `Apache-2.0` `11,357 B` canonical | `6` | `2026-10-27` | North America | Student + PEN request administration, BC Government. |
 | [`astrapi69/adaptive-learner`](https://github.com/astrapi69/adaptive-learner) | 🟢 `MIT` `1,105 B` residual `0` | `5` | `2026-11-03` | Global | Adaptive platform, `6` methods / `7`-step cycle. Branch `develop`. |
 | [`learn-ninja/learn.ninja`](https://github.com/learn-ninja/learn.ninja) | 🟢 `Apache-2.0` `11,358 B` canonical `+1` | `3` | `2026-11-04` | Global | Agent turning an article, doc or code file into a lesson. |
 
@@ -3532,10 +3612,10 @@ working as intended rather than accumulating.
 
 | Repo | Was trending-only since | Promoted to | Region |
 |---|---|---|---|
-| [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | `repos/trending.md` | `agents/top.md` | 🟢 **EMEA** — Africa, README-evidenced |
-| [`AyushBinjola1/Swar-Setu`](https://github.com/AyushBinjola1/Swar-Setu) | `agents/trending.md` | `agents/top.md` | 🟢 **APAC** — India, README-evidenced |
-| [`AMAN6921/SikhshaBox…Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | `repos/trending.md` | `agents/top.md` | 🔵 Global |
-| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | `repos/trending.md` | `verticals/solutions.md` | 🔵 Global — recorded as `GPL-3.0` |
+| [`ghwmelite-dotcom/AfriLab`](https://github.com/ghwmelite-dotcom/AfriLab) | `repos/trending.md` | `agents/top.md` | EMEA |
+| [`AyushBinjola1/Swar-Setu`](https://github.com/AyushBinjola1/Swar-Setu) | `agents/trending.md` | `agents/top.md` | APAC |
+| [`AMAN6921/SikhshaBox…Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | `repos/trending.md` | `agents/top.md` | Global |
+| [`Xooter/Open-Microcosm`](https://github.com/Xooter/Open-Microcosm) | `repos/trending.md` | `verticals/solutions.md` | Global |
 
 🔵 **Both region-placed promotions came off the trending shelf, not out of the search legs.** The
 addresses were already here; what was missing was the byte read and the placement rule.
@@ -9471,10 +9551,10 @@ where it was found.
 
 | 🆕 | Repo | Grant (payload) | Branch | Region | Disposition, decided before it was written (`551-D`) |
 |---|---|---|---|---|---|
-| **Learn-With-AI** | [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | 🟢 **MIT** | `main` | 🟢 APAC | 🟢 **Agent shelf** — a runnable local-first study agent |
-| **学练 agent** | [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 🟢 **MIT** | `main` | 🟢 APAC | 🟢 **Agent shelf** — exam-practice agent, shipping builds this month |
-| **ZengLian AI Tutor** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟡 **MIT** / 🔴 `ISC` in `package.json` | 🔴 `master` | 🟢 APAC | 🟢 **Agent shelf**, with the manifest conflict carried on the row |
-| **Awesome AI for Education** | [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | 🟢 **MIT** | `main` | 🟢 Global — bilingual EN / zh-CN | 🔵 **Filed as a CHANNEL, not padded onto a shelf as rows** — per `551-D`. It is a human-reviewed, evidence-labelled index across teaching, assessment, tutoring, curriculum, school operations and teacher development. Its value is as a next pass's **input**, not as agent rows |
+| **Learn-With-AI** | [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | 🟢 **MIT** | `main` | APAC | 🟢 **Agent shelf** — a runnable local-first study agent |
+| **学练 agent** | [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 🟢 **MIT** | `main` | APAC | 🟢 **Agent shelf** — exam-practice agent, shipping builds this month |
+| **ZengLian AI Tutor** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟡 **MIT** / 🔴 `ISC` in `package.json` | 🔴 `master` | APAC | 🟢 **Agent shelf**, with the manifest conflict carried on the row |
+| **Awesome AI for Education** | [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | 🟢 **MIT** | `main` | Global | 🔵 **Filed as a CHANNEL, not padded onto a shelf as rows** — per `551-D`. It is a human-reviewed, evidence-labelled index across teaching, assessment, tutoring, curriculum, school operations and teacher development. Its value is as a next pass's **input**, not as agent rows 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: bilingual EN / zh-CN)* |
 
 🟢 **Three of three new agents are APAC.** 🔵 That is a placement, not a coincidence worth
 asserting a cause for: the three were found through a general trending query, not a regional
@@ -10464,11 +10544,11 @@ it is arguing for:
 
 | Artefact | Region | The gate, in its own words |
 |---|---|---|
-| [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) | 🟢 APAC (Vietnam) | *"giáo viên duyệt trước khi lên bảng"* — teacher approves **before** it reaches the board; equations solved deterministically with substitution-check, **not** by the LLM |
-| [`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) | 🟢 LATAM (Mexico) | *"el Tool Registry determinista … **nunca pasa por Claude**"* — two tool mechanisms held deliberately apart |
-| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | 🟡 unplaced | *"Acciones externas sensibles requieren autorización humana **inicialmente**"* — 🔴 note `inicialmente`; the gate is stated as provisional, and `biometría después` is on its roadmap |
-| `Ignacio-Ghub/asistente-docente-sin-conexion` (held) | 🟡 LATAM | local model; *"la IA solo propone borradores que el docente revisa y decide"* |
-| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) (held, `p543`) | 🟢 APAC (Vietnam) | 🔴 **ungranted**, on [`../intel/measured-unusable.md`](../intel/measured-unusable.md): chooses *"a **deterministic pipeline over ReAct**"* and **bounds the LLM to the textbook** to suppress invention |
+| [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) | APAC | *"giáo viên duyệt trước khi lên bảng"* — teacher approves **before** it reaches the board; equations solved deterministically with substitution-check, **not** by the LLM 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Vietnam)* |
+| [`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) | LATAM | *"el Tool Registry determinista … **nunca pasa por Claude**"* — two tool mechanisms held deliberately apart 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Mexico)* |
+| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | Global | *"Acciones externas sensibles requieren autorización humana **inicialmente**"* — 🔴 note `inicialmente`; the gate is stated as provisional, and `biometría después` is on its roadmap 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| `Ignacio-Ghub/asistente-docente-sin-conexion` (held) | LATAM | local model; *"la IA solo propone borradores que el docente revisa y decide"* |
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) (held, `p543`) | APAC | 🔴 **ungranted**, on [`../intel/measured-unusable.md`](../intel/measured-unusable.md): chooses *"a **deterministic pipeline over ReAct**"* and **bounds the LLM to the textbook** to suppress invention 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Vietnam)* |
 
 🟢 **This is the first cross-region convergent pattern this base has been able to evidence
 from primary text in five independent artefacts**, and it maps onto the high-risk regimes
@@ -11384,10 +11464,10 @@ HTML answers **403** through this session's proxy and `raw` answers 200.
 
 | Agent | Grant, first-hand | Size | Region |
 |---|---|---|---|
-| [`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente) | 🟢 **MIT** (1,075 B) | 0★ · 0 forks · 16 commits | **EMEA** — Spain. Twelve teacher skills; **Moodle GIFT** question-bank exchange; ChatGPT Work + Claude Cowork packaging |
-| [`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess) | 🟢 **MIT** (1,144 B) | 0★ · 0 forks · 14 commits | **LATAM** — Brazil, UFPA. **Accessibility-first**: PDFs → narrated audio + optimised text for visual impairment, ADHD, autism, dyslexia |
-| [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🔴 **GPL-3.0** (35,149 B) | 0★ · 0 forks | **LATAM / EMEA** — offline, local model, **no data leaves the device**, rural schools. Code declared AI-generated |
-| [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | 🟢 **MIT** (1,057 B, untitled body) | promoted off the residue | **APAC** — India |
+| [`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente) | 🟢 **MIT** (1,075 B) | 0★ · 0 forks · 16 commits | EMEA |
+| [`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess) | 🟢 **MIT** (1,144 B) | 0★ · 0 forks · 14 commits | LATAM |
+| [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🔴 **GPL-3.0** (35,149 B) | 0★ · 0 forks · offline, local model, **no data leaves the device**, rural schools. Code declared AI-generated. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: this row carried **`LATAM / EMEA`** — two values in one cell, which is the one placement no regional filter can answer. The dual claim rested on the Spanish-language repository name and README, and **`p670` already refuted localized-README as a placement channel**, so neither half was ever evidenced. Normalised to `Global`, which on this shelf reads “not placed” rather than “global footprint” — the Spanish-language, rural-school, offline framing stays here in prose where a later pass can place it on a real channel.)* | Global |
+| [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | 🟢 **MIT** (1,057 B, untitled body) | promoted off the residue | APAC |
 
 🔴 **All four carry 0 stars.** They are shelved for **grant and shape**, not
 traction, and no row should be read as adoption evidence. 🟢 Three of the four
@@ -12261,14 +12341,14 @@ read first-hand; see [`top.md`](top.md) for the full rows.
 
 | Agent | Grant | Stars | Region | Why it earns a row |
 |---|---|---|---|---|
-| [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent) | Apache-2.0 | 0 | unplaced | Assessment generation, org-published |
-| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | MIT (`master`) | 0 | unplaced | 🟢 **No external AI APIs** — the only fully-local proctoring candidate this base holds |
-| [`H1bertto/professor-agent`](https://github.com/H1bertto/professor-agent) | MIT | 0 | unplaced | 🔵 The shelf's only **desktop-overlay** form factor (Electron + VRM avatar + voice) |
-| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | MIT **+ a second copyright line, `LiveKit, Inc.`** | 0 | **LATAM (Brazil)** | Voice-first pt-BR math tutor, 1st grade → university |
-| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | MIT | 3 | unplaced | Moodle MCP server shipped as a one-click `.mcpb`; 🔴 reaches Moodle by **scraping**, not web services |
-| [`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops) | MIT | 0 | unplaced | Human-in-the-loop handwritten-answer grading, stated in the project's own one-liner |
-| [`localis-ai/student-discovery-agent`](https://github.com/localis-ai/student-discovery-agent) | MIT | 0 | **APAC (Vietnam)** | 🟢 First Vietnamese-origin education repo here — and Vietnam is the one APAC jurisdiction naming education high-risk by sector |
-| [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | MIT | 4 | unplaced | 🟢 Declares `eval-harness` **and** `prompt-injection` topics — the two things nine trending entries said education agents never ship |
+| [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent) | Apache-2.0 | 0 | Global | Assessment generation, org-published |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | MIT (`master`) | 0 | Global | 🟢 **No external AI APIs** — the only fully-local proctoring candidate this base holds 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| [`H1bertto/professor-agent`](https://github.com/H1bertto/professor-agent) | MIT | 0 | Global | 🔵 The shelf's only **desktop-overlay** form factor (Electron + VRM avatar + voice) 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | MIT **+ a second copyright line, `LiveKit, Inc.`** | 0 | LATAM | Voice-first pt-BR math tutor, 1st grade → university 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Brazil)* |
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | MIT | 3 | Global | Moodle MCP server shipped as a one-click `.mcpb`; 🔴 reaches Moodle by **scraping**, not web services 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| [`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops) | MIT | 0 | Global | Human-in-the-loop handwritten-answer grading, stated in the project's own one-liner 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| [`localis-ai/student-discovery-agent`](https://github.com/localis-ai/student-discovery-agent) | MIT | 0 | APAC | 🟢 First Vietnamese-origin education repo here — and Vietnam is the one APAC jurisdiction naming education high-risk by sector |
+| [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | MIT | 4 | Global | 🟢 Declares `eval-harness` **and** `prompt-injection` topics — the two things nine trending entries said education agents never ship 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
 
 ### 🔴 Two forks were in the queue, and promoting verbatim would have shelved them
 
@@ -12389,13 +12469,13 @@ had filed **three**.
 
 | Agent | Grant | Stars | Region | Instrument that found it |
 |---|---|---|---|---|
-| [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **459** | APAC *(inferred)* | `topic:ai-in-education` — **a capability band this shelf did not have: social-emotional learning** |
+| [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **459** | APAC | `topic:ai-in-education` — **a capability band this shelf did not have: social-emotional learning** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: inferred)* |
 | [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 | 40 | North America | `org:learning-commons-org` — 🔴 **named in no sentence on this base**, so the prose queue could not see it either |
-| [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | MIT | 30 | North America *(stated)* | `topic:learning-analytics` — Knowledge Space Theory, 10 skills; 🟡 8 months stale |
-| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | MIT | 🔴 9 | APAC (India) | prose queue, [`../intel/market.md`](../intel/market.md) |
-| [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | MIT | — | EMEA (Germany) *(stated)* | prose queue — 🔴 **named on [`top.md`](top.md) itself since `p533` and filed in no row** |
-| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | MIT | 🔴 0 | 🟢 LATAM *(stated)* | `topic:intelligent-tutoring-system` — rural higher education |
-| [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) | MIT | 🔴 0 | 🟢 LATAM (Colombia) *(stated)* | prose queue — first agent here whose corpus is a **national open-data portal** |
+| [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | MIT | 30 | North America | `topic:learning-analytics` — Knowledge Space Theory, 10 skills; 🟡 8 months stale 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: stated)* |
+| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | MIT | 🔴 9 | APAC | prose queue, [`../intel/market.md`](../intel/market.md) 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: India)* |
+| [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | MIT | — | EMEA | prose queue — 🔴 **named on [`top.md`](top.md) itself since `p533` and filed in no row** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Germany) *(stated)* |
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | MIT | 🔴 0 | LATAM | `topic:intelligent-tutoring-system` — rural higher education 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: stated)* |
+| [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) | MIT | 🔴 0 | LATAM | prose queue — first agent here whose corpus is a **national open-data portal** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Colombia) *(stated)* |
 
 ### 🔴 The LATAM finding, and it is not about supply
 
@@ -12718,10 +12798,10 @@ worked this pass was org enumeration of addresses this base already cited** —
 
 | Region | Supply (addresses) | Demand / policy | Verdict |
 |---|---|---|---|
-| **North America** | 🟢 **4** — `mitodl/learn-ai`, `mitodl/agent-kit`, `Ed-Fi-Alliance-OSS/Fiona`, `AI-Tools-for-Ed-Fi-SDLC` | 36 % of global market share; **~10 %** of institutions with formal AI guidelines; **71 %** of US teachers without AI training; no sector regulator, state-level patchwork (Colorado, Texas); Canada's **AIDA** not confirmed in law | 🟢 Strongest **supply** leg this pass, and all four finds are institutional rather than commercial |
-| **EMEA** | 🔴 **0 new** | 🔴 **Zero education-specific results, second pass running.** The leg returned enterprise-AI material (EU AI Act, CompTIA skills, data-governance complexity) and nothing on schools, ministries or universities | 🔴 **An informed blank, written down.** EMEA's *supply* leg remains the strongest on this base (`get-it`, `feedbacksystem`, `edutelligence`, OpenOLAT, ILIAS, Dolos, Ralph) while its *demand* leg will not resolve through this query. The query is the suspect → `Gap 534-F` |
-| **APAC** | 🔴 0 new | **TCS × Pearson** multi-year AI learning alliance; LearnUpon Sydney HQ + AI course authoring; **OpenAI appoints an ANZ policy lead** as Canberra tightens AI governance and copyright; Singapore's consultations are financial-sector, not education | 🟡 Commercial and policy motion, **no education-specific regulation found**; supply here is already this base's largest (DeepTutor, OpenMAIC, dsh-openmaic, Study-Mate, ai-shifu, teacher-exam) |
-| **LATAM** | 🔴 0 new | 🟢 **The strongest demand evidence of any region this pass.** UNESCO **IESALC** (with UNU-IAS), 200 institutions across **19 countries**: **87 %** use AI in at least one area, 🔴 **only 26 % have any formal framework**. Digital Education Council with **Tec de Monterrey**: **92 % of students / 79 % of faculty** actively engaging, 🔴 **~30 % of universities with a published policy**. Chile most advanced (national AI policy since 2021 + a bill); Brazil and Colombia have strategies but no education-sector rules; Mexico's SEP/ANUIES recommendations are **non-binding**. IDB's **ILIA** index covers 19 countries | 🟢 **A governance gap with a number on it** — 87 % adoption against 26 % frameworks is the clearest engagement opening on this base. Filed in [`../intel/market.md`](../intel/market.md) |
+| North America | 🟢 **4** — `mitodl/learn-ai`, `mitodl/agent-kit`, `Ed-Fi-Alliance-OSS/Fiona`, `AI-Tools-for-Ed-Fi-SDLC` | 36 % of global market share; **~10 %** of institutions with formal AI guidelines; **71 %** of US teachers without AI training; no sector regulator, state-level patchwork (Colorado, Texas); Canada's **AIDA** not confirmed in law | 🟢 Strongest **supply** leg this pass, and all four finds are institutional rather than commercial |
+| EMEA | 🔴 **0 new** | 🔴 **Zero education-specific results, second pass running.** The leg returned enterprise-AI material (EU AI Act, CompTIA skills, data-governance complexity) and nothing on schools, ministries or universities | 🔴 **An informed blank, written down.** EMEA's *supply* leg remains the strongest on this base (`get-it`, `feedbacksystem`, `edutelligence`, OpenOLAT, ILIAS, Dolos, Ralph) while its *demand* leg will not resolve through this query. The query is the suspect → `Gap 534-F` |
+| APAC | 🔴 0 new | **TCS × Pearson** multi-year AI learning alliance; LearnUpon Sydney HQ + AI course authoring; **OpenAI appoints an ANZ policy lead** as Canberra tightens AI governance and copyright; Singapore's consultations are financial-sector, not education | 🟡 Commercial and policy motion, **no education-specific regulation found**; supply here is already this base's largest (DeepTutor, OpenMAIC, dsh-openmaic, Study-Mate, ai-shifu, teacher-exam) |
+| LATAM | 🔴 0 new | 🟢 **The strongest demand evidence of any region this pass.** UNESCO **IESALC** (with UNU-IAS), 200 institutions across **19 countries**: **87 %** use AI in at least one area, 🔴 **only 26 % have any formal framework**. Digital Education Council with **Tec de Monterrey**: **92 % of students / 79 % of faculty** actively engaging, 🔴 **~30 % of universities with a published policy**. Chile most advanced (national AI policy since 2021 + a bill); Brazil and Colombia have strategies but no education-sector rules; Mexico's SEP/ANUIES recommendations are **non-binding**. IDB's **ILIA** index covers 19 countries | 🟢 **A governance gap with a number on it** — 87 % adoption against 26 % frameworks is the clearest engagement opening on this base. Filed in [`../intel/market.md`](../intel/market.md) |
 
 
 ## 🆕 `p533` — `2026-10-29` — **🔴 THIS BASE FILED A 823★ MIT PLATFORM IN THREE PLACES AND NEVER ITS AI LAYER: `ls1intum/edutelligence` IS **MIT** AND CARRIES **THREE** DEPLOYED EDUCATION AGENTS (IRIS, ATHENA, ATLAS). 🟢 `Gap 532-B` CLOSED — THE QUEUE HAS A MATERIALITY COLUMN AND IT INVERTS THE ORDER: RECALL RANK **1** IS **UNGRANTED**, RECALL RANK **18** IS **BSD-3-CLAUSE, 458,181★**. 🔴 TWO PROBE BUGS THAT MANUFACTURE ABSENCE: RAW IS CASE-SENSITIVE (`README.MD`), AND A `repo:` BATCH DROPPED **3 OF 35** LIVE ADDRESSES SILENTLY. 🟢 FIVE SHELF ROWS, THREE REGIONALLY PLACED. 🔴 GENERIC WEB SEARCH: ZERO NEW SHELF-GRADE FINDINGS, SIXTH CONSECUTIVE PASS, ALL FOUR GLOBAL LEGS AND ALL FOUR REGIONAL LEGS RUN.**
@@ -12903,10 +12983,10 @@ placed one and an unstated blank reads exactly like coverage:
 
 | Region | What the leg returned | Verdict |
 |---|---|---|
-| **North America** | State-level K-12 AI policy (Idaho SB 1227, Maryland SB 720, Oklahoma SB 1734, NY A 9190, California AB 1159), NYC's traffic-light guidance, federal H.R. 8747 | 🔴 **Nothing new.** Already held; trackers disagree on counts (28 vs 34 states) and on enacted-vs-introduced status, so none of it is quotable without a primary source. |
-| **EMEA** | **Regulation (EU) 2026/1744** moving stand-alone high-risk education obligations from 2026-08-02 to **2027-12-02**, Art. 50 transparency still from 2026-08-02, emotion recognition in schools already prohibited | 🔴 **Nothing new** — this base holds `2026/1744` across six files. 🔴 **And the EMEA *demand* leg is a measured blank for the second consecutive pass**, exactly as `p531` recorded. 🟢 Its *supply* leg, by contrast, produced this pass's one stated-region row (`get-it`, Milan). |
-| **APAC** | **Vietnam Decision 33/2026/QD-TTg** naming education among six high-risk sectors; Japan's promotion-not-penalty posture; Ipsos Education Monitor 2026 school-AI-ban support, 23% Indonesia → 31% South Korea | 🔴 **Nothing new** — `33/2026/QD-TTg` and the Ipsos series are both already on this base. |
-| **LATAM** | OECD teacher-use figures (Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% vs OECD 36%), UNESCO's *87% of universities use AI / 26% have a strategy / 9% evaluate it*, Google.org's **$4.6M** across nine countries, Teachy (BR), Ginia (MX) | 🔴 **Nothing new** — all held. 🔴 **And the regulation sub-leg is a genuine blank:** asked directly for Brazilian and Mexican AI-in-education rules, search returned **PL 2338 still pending in the Chamber** (*aguardando parecer do relator*, mid-Oct 2026, no education-specific provision) and **nothing at all for Mexico**. |
+| North America | State-level K-12 AI policy (Idaho SB 1227, Maryland SB 720, Oklahoma SB 1734, NY A 9190, California AB 1159), NYC's traffic-light guidance, federal H.R. 8747 | 🔴 **Nothing new.** Already held; trackers disagree on counts (28 vs 34 states) and on enacted-vs-introduced status, so none of it is quotable without a primary source. |
+| EMEA | **Regulation (EU) 2026/1744** moving stand-alone high-risk education obligations from 2026-08-02 to **2027-12-02**, Art. 50 transparency still from 2026-08-02, emotion recognition in schools already prohibited | 🔴 **Nothing new** — this base holds `2026/1744` across six files. 🔴 **And the EMEA *demand* leg is a measured blank for the second consecutive pass**, exactly as `p531` recorded. 🟢 Its *supply* leg, by contrast, produced this pass's one stated-region row (`get-it`, Milan). |
+| APAC | **Vietnam Decision 33/2026/QD-TTg** naming education among six high-risk sectors; Japan's promotion-not-penalty posture; Ipsos Education Monitor 2026 school-AI-ban support, 23% Indonesia → 31% South Korea | 🔴 **Nothing new** — `33/2026/QD-TTg` and the Ipsos series are both already on this base. |
+| LATAM | OECD teacher-use figures (Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% vs OECD 36%), UNESCO's *87% of universities use AI / 26% have a strategy / 9% evaluate it*, Google.org's **$4.6M** across nine countries, Teachy (BR), Ginia (MX) | 🔴 **Nothing new** — all held. 🔴 **And the regulation sub-leg is a genuine blank:** asked directly for Brazilian and Mexican AI-in-education rules, search returned **PL 2338 still pending in the Chamber** (*aguardando parecer do relator*, mid-Oct 2026, no education-specific provision) and **nothing at all for Mexico**. |
 
 🔴 **`api.github.com` is 403 again, so `p529`'s measurement ceiling is back
 down.** The search API was reachable at `p529` and is not this pass; `github.com`
@@ -13338,8 +13418,8 @@ Every pass from `p3xx` onward recorded some version of *"`github.com` returns HT
 
 | 🆕 Address | Grant | ★ | Region | Why it is a row |
 |---|---|---|---|---|
-| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** — API, and title block `MIT License · Copyright (c) 2026 Arnaud Guiovanna` | **57** · 9 forks | ⚠️ **unplaced** — no country on the profile or in the copyright line | *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* **Go**, created 30 Mar 2026, pushed **28 Oct 2026**, site `tutor-mcp.dev`. Topics name **`bkt`** — Bayesian Knowledge Tracing. 🟢 **This is the row the shelf was missing:** `OATutor` is the only other row with a real mastery estimator and it is a whole ReactJS application; this is the same pedagogy as **one MCP server any assistant can mount**. |
-| 🆕 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 API: `NOASSERTION` → 🟢 **title block: `Apache License, Version 2`** | 24 · 10 forks | 🟢 **EMEA (Germany)** — *stated*: `Copyright 2021 Technische Hochschule Mittelhessen` | "Intelligent, personalized feedback for students using artificial intelligence" — TypeScript, branch `dev`, pushed **28 Oct 2026**, live service at `frits.mni.thm.de`. **244 open issues** against 10 forks reads as a running institutional system, not a demo. 🔴 **The API would have discarded this row.** It is the base's first *stated-origin EMEA institutional* agent under a permissive grant. |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** — API, and title block `MIT License · Copyright (c) 2026 Arnaud Guiovanna` | **57** · 9 forks | Global | *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* **Go**, created 30 Mar 2026, pushed **28 Oct 2026**, site `tutor-mcp.dev`. Topics name **`bkt`** — Bayesian Knowledge Tracing. 🟢 **This is the row the shelf was missing:** `OATutor` is the only other row with a real mastery estimator and it is a whole ReactJS application; this is the same pedagogy as **one MCP server any assistant can mount**. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced no country on the profile or in the copyright line)* |
+| 🆕 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 API: `NOASSERTION` → 🟢 **title block: `Apache License, Version 2`** | 24 · 10 forks | EMEA | "Intelligent, personalized feedback for students using artificial intelligence" — TypeScript, branch `dev`, pushed **28 Oct 2026**, live service at `frits.mni.thm.de`. **244 open issues** against 10 forks reads as a running institutional system, not a demo. 🔴 **The API would have discarded this row.** It is the base's first *stated-origin EMEA institutional* agent under a permissive grant. 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Germany) — *stated*: `Copyright 2021 Technische Hochschule Mittelhessen`)* |
 
 ### 🔴 The instrument rule — the generalisable half, and it cuts both ways
 
@@ -23805,9 +23885,9 @@ and is how every byte-level grant read below was taken; `github.com` HTML reads 
 
 | Address | Grant | Stars | Why it is here | Region |
 |---|---|---|---|---|
-| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** (`34 523` B, `sha256:0d96a4ff68ad`) | **150** | 🟢 **State-backed OER authoring tool** — Spain's MEFPD via Cedec-INTEF. Real-time collaborative editing, Moodle export, Bun/Elysia/Kysely, 1 413 commits | 🟢 **EMEA** |
-| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE** — 8 paths × `404`, MIT **badge** over no payload | **2** | 🔴 Capability sighting only: LangGraph discursive-exam grader with **conditional divergence arbitration** | 🟢 **LATAM** (Brazil) |
-| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE** — *"for academic research purposes"* | **0** | 🔴 Capability sighting only: 7-node LangGraph essay evaluation, AI-vs-human-marks mode | 🔵 unplaced |
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟡 **AGPL-3.0** (`34 523` B, `sha256:0d96a4ff68ad`) | **150** | 🟢 **State-backed OER authoring tool** — Spain's MEFPD via Cedec-INTEF. Real-time collaborative editing, Moodle export, Bun/Elysia/Kysely, 1 413 commits | EMEA |
+| [`savinoo/ai-grading-system`](https://github.com/savinoo/ai-grading-system) | 🔴 **NONE** — 8 paths × `404`, MIT **badge** over no payload | **2** | 🔴 Capability sighting only: LangGraph discursive-exam grader with **conditional divergence arbitration** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Brazil)* | LATAM |
+| [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | 🔴 **NONE** — *"for academic research purposes"* | **0** | 🔴 Capability sighting only: 7-node LangGraph essay evaluation, AI-vs-human-marks mode 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* | Global |
 
 🔴 **Two of the three cannot be built on.** That ratio is the finding, not a disappointment: the
 discursive-grading pattern is being reimplemented independently on LangGraph by at least two
@@ -24710,9 +24790,9 @@ adjudication, provenance and the `403` channel control on
 
 | Agent / address | Repo | Grant *(payload, first-hand)* | HEAD | Region | Why it is here this window |
 |---|---|---|---|---|---|
-| **Anudesh** *(backend)* | [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) | 🟢 **MIT** *(1,067 B · `e2cd4cec54f7`)* | 2026-09-01 | APAC — India | 🔴 Default ref is **`master`** — a `main`-assuming licence read fails silently, the [`learnhouse`](https://github.com/learnhouse/learnhouse) trap again. Multi-annotator `projects → tasks → review` workflow backend; 🔴 **0 tags** |
-| **IndicIFEval** | [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) | 🟡 **MIT code · `CC-BY-4.0` dataset** *(1,074 B · `1bff713bf26a`)* | 2026-09-16 | APAC — India | 🟢 Verifiable rule-based instruction-following across **14 Indic languages**; usable as a deterministic **CI gate** for a tutor. 🔴 **Fourth `T36` instance** — two grants, one repository |
-| **AIE2026 exercises (Hindi)** | [`matsuolab/lecture-ai-engineering-2026-hi`](https://github.com/matsuolab/lecture-ai-engineering-2026-hi) | 🔴 **NO GRANT** *(root tree enumerated; `README.md` present as the branch control)* | 2026-10-19 — 4 d | APAC — JP lab, **localised for India** | 🟢 U Tokyo **Matsuo Lab** course, **Hindi-first**, in which students progressively build a learning agent. MCP in Lecture 05. 🔴 Courseware, ungranted — a reference, not an asset |
+| **Anudesh** *(backend)* | [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) | 🟢 **MIT** *(1,067 B · `e2cd4cec54f7`)* | 2026-09-01 | APAC | 🔴 Default ref is **`master`** — a `main`-assuming licence read fails silently, the [`learnhouse`](https://github.com/learnhouse/learnhouse) trap again. Multi-annotator `projects → tasks → review` workflow backend; 🔴 **0 tags** |
+| **IndicIFEval** | [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) | 🟡 **MIT code · `CC-BY-4.0` dataset** *(1,074 B · `1bff713bf26a`)* | 2026-09-16 | APAC | 🟢 Verifiable rule-based instruction-following across **14 Indic languages**; usable as a deterministic **CI gate** for a tutor. 🔴 **Fourth `T36` instance** — two grants, one repository 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: India)* |
+| **AIE2026 exercises (Hindi)** | [`matsuolab/lecture-ai-engineering-2026-hi`](https://github.com/matsuolab/lecture-ai-engineering-2026-hi) | 🔴 **NO GRANT** *(root tree enumerated; `README.md` present as the branch control)* | 2026-10-19 — 4 d | APAC | 🟢 U Tokyo **Matsuo Lab** course, **Hindi-first**, in which students progressively build a learning agent. MCP in Lecture 05. 🔴 Courseware, ungranted — a reference, not an asset 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: JP lab, localised for India)* |
 
 🔴 **Saturation, stated rather than left silent.** The four prescribed English global legs and the
 vertical-platform leg returned **zero** unshelved granted education-native addresses this window;
@@ -26975,9 +27055,9 @@ measurement says the live axis is **narrowness**, not language and not geography
 
 | This week's new addresses | Licence (payload) | ★ | Region | The property it was shelved for |
 |---|---|---:|---|---|
-| [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** `1 071 B` | **4** | **APAC** (India), 113/135 commits `+05:30` | A **first-class eval harness** on a tutor — the half this base's dozen tutor rows mostly lack |
-| [`Keshav0141/Auto-Assessment-Agent`](https://github.com/Keshav0141/Auto-Assessment-Agent) | 🟢 **MIT** `1 069 B` | **0** | 🟡 **APAC** (India), `n=4` commits, weak | A **0–1 confidence per grading decision**, default threshold **0.85**, below which it demands human review |
-| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 **MIT** `1 072 B` | **0** | 🔴 **NOT PLACED** (`-04:00` is EDT *and* Santiago in October) | **Read-only by construction** — *"It can never submit, edit or delete anything"* |
+| [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** `1 071 B` | **4** | APAC | A **first-class eval harness** on a tutor — the half this base's dozen tutor rows mostly lack 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: India), 113/135 commits `+05:30`)* |
+| [`Keshav0141/Auto-Assessment-Agent`](https://github.com/Keshav0141/Auto-Assessment-Agent) | 🟢 **MIT** `1 069 B` | **0** | APAC | A **0–1 confidence per grading decision**, default threshold **0.85**, below which it demands human review 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: India), `n=4` commits, weak)* |
+| [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | 🟢 **MIT** `1 072 B` | **0** | Global | **Read-only by construction** — *"It can never submit, edit or delete anything"* 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced `-04:00` is EDT *and* Santiago in October)* |
 
 🟢 **Star counts are available again, for the first time since `p370`.** `github.com` HTML
 answers **200** through `WebFetch` while `curl` gets **403** — a channel four consecutive
@@ -28322,10 +28402,10 @@ index at all**, and ran the answer against all 2 550 addresses this base holds.
 | [microsoft/StudentSim](https://github.com/microsoft/StudentSim) | **77** | North America | 🟢 MIT | **Simulated students.** Test a tutoring method against a model learner before recruiting humans. Created 2026-05-28, **pushed the day of this pass** |
 | [iwangjian/Coding-Tutor](https://github.com/iwangjian/Coding-Tutor) | **91** | APAC | 🟢 Apache-2.0 | **ACL 2025 Findings** — turn-by-turn verifiers that score a tutor's *next move*, not the final answer |
 | [yale-nlp/LLM-Metacognition](https://github.com/yale-nlp/LLM-Metacognition) | **80** | North America | 🟢 MIT | Metacognition — a model reporting what it does **not** know, which is what a tutor needs before it can diagnose |
-| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | **95** | EMEA 🇨🇭 | 🟡 CC-BY-SA-4.0, README only | **EMNLP Findings 2023.** Teacher–student math dialogues annotated with **which pedagogical move was made** |
-| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | **25** | EMEA 🇨🇭 | 🟡 CC-BY-4.0, README only | **EMNLP 2022.** Scaffolding-question generation via REINFORCE |
-| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM 🇧🇷 | 🔴 none | Brazil's most-starred education agent — a study mentor that **refuses to hand over the solution**. Unusable in paid work |
-| [brucewlee/lftk](https://github.com/brucewlee/lftk) | **151** | Not placed | 🔴 CC-BY-NC-4.0 | Readability + **essay-scoring** features. GitHub says `NOASSERTION`; the payload says NonCommercial |
+| [eth-nlped/mathdial](https://github.com/eth-nlped/mathdial) | **95** | EMEA | 🟡 CC-BY-SA-4.0, README only | **EMNLP Findings 2023.** Teacher–student math dialogues annotated with **which pedagogical move was made** |
+| [eth-nlped/socratic-generation](https://github.com/eth-nlped/socratic-generation) | **25** | EMEA | 🟡 CC-BY-4.0, README only | **EMNLP 2022.** Scaffolding-question generation via REINFORCE |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | **2 190** | LATAM | 🔴 none | Brazil's most-starred education agent — a study mentor that **refuses to hand over the solution**. Unusable in paid work |
+| [brucewlee/lftk](https://github.com/brucewlee/lftk) | **151** | Global | 🔴 CC-BY-NC-4.0 | Readability + **essay-scoring** features. GitHub says `NOASSERTION`; the payload says NonCommercial 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Not placed)* |
 
 🔵 Five further addresses — `mathworld`, `dialog-tutoring`, `textbook-enrichment`,
 `potencializando-estudos-carreira-com-ia`, `Awesome-AI-Era-Edu` — are in
@@ -28437,10 +28517,10 @@ two addresses, one name. **No conversion exists in either direction.** `ACTION Z
 
 | Row | Licence (payload) | ★ | Region | Bench |
 |---|---|---:|---|---|
-| 🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) | 🟢 **MIT** (1 071 B) | **32** | **APAC** — India | 198 commits · 3 authors (`%ae`) · `+0530` on 198/198 · live 2026-10-18. **Memory built FOR tutor agents** |
-| 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) | 🟢 **MIT** (1 063 B, `master`) | **72** | **APAC** — China | 8 commits · 1 author (`%ae`) · 5 files. 🟢 **First permissive pedagogy skill-pack here** — 🔴 against `education-agent-skills`' 165 `SKILL.md` under `CC-BY-SA-4.0` |
-| 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | **4** | **APAC** — China | 554 commits · 7 authors (`%ae`) · 640 files · `+0800` on 554/554. **The permissive executor Pattern 21 needed** |
-| 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | **4** | **EMEA** — Germany | 31 commits · 3 authors (`%ae`) · `schule-plus.com` ×27 · 🔴 dormant since 2025-11-13. **First EMEA learning-record store here** |
+| 🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) | 🟢 **MIT** (1 071 B) | **32** | APAC | 198 commits · 3 authors (`%ae`) · `+0530` on 198/198 · live 2026-10-18. **Memory built FOR tutor agents** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: India)* |
+| 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) | 🟢 **MIT** (1 063 B, `master`) | **72** | APAC | 8 commits · 1 author (`%ae`) · 5 files. 🟢 **First permissive pedagogy skill-pack here** — 🔴 against `education-agent-skills`' 165 `SKILL.md` under `CC-BY-SA-4.0` 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: China)* |
+| 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | **4** | APAC | 554 commits · 7 authors (`%ae`) · 640 files · `+0800` on 554/554. **The permissive executor Pattern 21 needed** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: China)* |
+| 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | **4** | EMEA | 31 commits · 3 authors (`%ae`) · `schule-plus.com` ×27 · 🔴 dormant since 2025-11-13. **First EMEA learning-record store here** 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Germany)* |
 
 🔵 **Named non-row:** [`constantinmay/learntrace-skill`](https://github.com/constantinmay/learntrace-skill)
 (4 ★, USTC competition entry) — live on `main`, **no grant at eight probed paths, no
@@ -29504,24 +29584,24 @@ name the leg shape that produced it.
 
 | Agent | Repo | Licence (payload) | ★ | Region |
 |---|---|---|---:|---|
-| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | MIT (`LICENSE.md`) | **35 503** | Not placed |
-| PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | MIT (`LICENSE.md`) | **2 035** | Not placed |
+| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | MIT (`LICENSE.md`) | **35 503** | Global |
+| PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | MIT (`LICENSE.md`) | **2 035** | Global |
 | get-it | [beltromatti/get-it](https://github.com/beltromatti/get-it) | Apache-2.0 | **1 124** | EMEA |
 | education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | CC-BY-SA-4.0 | **885** | EMEA |
-| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | AGPL-3.0 | **356** | Not placed |
+| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | AGPL-3.0 | **356** | Global |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | **339** | APAC |
-| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT | **338** | Not placed |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT | **338** | Global |
 | ai-shifu | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 (`LICENSE.txt`) | **327** | APAC |
 | Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | **290** | APAC |
-| deep-student | [helixnow/deep-student](https://github.com/helixnow/deep-student) | AGPL-3.0 | **286** | Not placed |
-| learn-anything-with-AI | [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | MIT | **201** | Not placed |
+| deep-student | [helixnow/deep-student](https://github.com/helixnow/deep-student) | AGPL-3.0 | **286** | Global |
+| learn-anything-with-AI | [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | MIT | **201** | Global |
 | freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 | **192** | EMEA |
-| OpenStudy | [OpenStudy-dev/OpenStudy](https://github.com/OpenStudy-dev/OpenStudy) | MIT | **76** | Not placed |
-| brightspace-mcp-server | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | **59** | Not placed |
-| Smart-Study-Agent | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | MIT | **57** | Not placed |
+| OpenStudy | [OpenStudy-dev/OpenStudy](https://github.com/OpenStudy-dev/OpenStudy) | MIT | **76** | Global |
+| brightspace-mcp-server | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | **59** | Global |
+| Smart-Study-Agent | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | MIT | **57** | Global |
 | schoolinfo-mcp | [chrisryugj/schoolinfo-mcp](https://github.com/chrisryugj/schoolinfo-mcp) | MIT | **48** | APAC |
-| bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | MIT | **22** | **LATAM** |
-| canvas-ed-mcp | [r1ckyIn/canvas-ed-mcp](https://github.com/r1ckyIn/canvas-ed-mcp) | MIT | **18** | Not placed |
+| bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | MIT | **22** | LATAM |
+| canvas-ed-mcp | [r1ckyIn/canvas-ed-mcp](https://github.com/r1ckyIn/canvas-ed-mcp) | MIT | **18** | Global |
 | knowledge-import-pipeline | [clownjee/knowledge-import-pipeline](https://github.com/clownjee/knowledge-import-pipeline) | Apache-2.0 | **18** | APAC |
 | ku-portal-mcp | [SonAIengine/ku-portal-mcp](https://github.com/SonAIengine/ku-portal-mcp) | MIT | **12** | APAC |
 
@@ -29908,10 +29988,10 @@ p347 wrote that the second fetch channel *"fails on the same hosts at the DNS la
 
 | Repo | Grant, read at the pin | ★ (search channel) | Bench | Region | What it is |
 |---|---|---|---|---|---|
-| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | 🟢 **MIT, 1 107 B** | **18** | 🟢 **378 c · 3 a · 2026-08-31 → 2026-10-19** | 🟢 **LATAM — Brazil** (`-0300` on all 378; no DST since 2019) | MCP servers over **Universidade de São Paulo**'s student systems — refectory menus, e-Disciplinas deadlines and materials, JupiterWeb's course catalogue. 🟡 **Self-declared unofficial**, so the MIT grant covers the client and not USP's data |
-| [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | 🟡 **MIT, 1 068 B — with a UTF-8 BOM before the title line** | 0 | 🟡 **116 c · 3 a · 2026-09-14 → 2026-10-16** | 🟢 **APAC — Vietnam** (`+0700` on all 116; no DST) | MCP server over **Đại học Sài Gòn**'s training portal: timetable, grades, tuition, live GPA simulation |
-| [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent) | 🟡 **MIT at `canvas-lms-mcp/LICENSE`** — a package-scoped grant, root still ungranted | n/r | 🟡 **68 c · head 2026-07-10**, re-read this pass | 🟢 **APAC — Japan** — `likr-lab.com` on all 68 commits, `+0900` on all 68; Japan has no DST, so a non-shifting offset is the expected shape | 🔄 **RE-GRADED, not new.** This shelf has carried it as `REFUSED-UNGRANTED` since p335 |
-| [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-20**, re-read this pass | 🟡 **EMEA** — `studiolxd.com` on all 12, `+0200` on all 12, and **every commit falls inside Mar–Nov, so the offset cannot be DST-tested**: the region is the earlier placement, carried with its limit stated | 🔄 **RE-GRADED.** `packages/xapi/package.json` declares MIT and the licence file sits beside it |
+| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | 🟢 **MIT, 1 107 B** | **18** | 🟢 **378 c · 3 a · 2026-08-31 → 2026-10-19** | LATAM | MCP servers over **Universidade de São Paulo**'s student systems — refectory menus, e-Disciplinas deadlines and materials, JupiterWeb's course catalogue. 🟡 **Self-declared unofficial**, so the MIT grant covers the client and not USP's data 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Brazil (`-0300` on all 378; no DST since 2019)* |
+| [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | 🟡 **MIT, 1 068 B — with a UTF-8 BOM before the title line** | 0 | 🟡 **116 c · 3 a · 2026-09-14 → 2026-10-16** | APAC | MCP server over **Đại học Sài Gòn**'s training portal: timetable, grades, tuition, live GPA simulation 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Vietnam (`+0700` on all 116; no DST)* |
+| [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent) | 🟡 **MIT at `canvas-lms-mcp/LICENSE`** — a package-scoped grant, root still ungranted | n/r | 🟡 **68 c · head 2026-07-10**, re-read this pass | APAC | 🔄 **RE-GRADED, not new.** This shelf has carried it as `REFUSED-UNGRANTED` since p335 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Japan — `likr-lab.com` on all 68 commits, `+0900` on all 68; Japan has no DST, so a non-shifting offset is the expected shape)* |
+| [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-20**, re-read this pass | EMEA | 🔄 **RE-GRADED.** `packages/xapi/package.json` declares MIT and the licence file sits beside it 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: `studiolxd.com` on all 12, `+0200` on all 12, and every commit falls inside Mar–Nov, so the offset cannot be DST-tested: the region is the earlier placement, carried with its limit stated)* |
 
 🔵 **The two new rows are the thirteenth and fourteenth university-system MCP servers on these shelves** — after NTU COOL, Korea University KUPID, Santiago de Compostela, Toronto Quercus and the Canvas/Brightspace/Blackboard families. 🟢 **The class is now the most reliably-growing education-agent category this base measures, and it grows in the regions the prescribed legs never reach**, because each server is written in the language of the university it serves: a leg phrased in English finds the roundups, and a probe of the inventory finds Vietnamese and Portuguese.
 
@@ -35858,8 +35938,8 @@ came from a new idea; it came from doing what two prior passes had costed and de
 
 | Agent | Repo | Grant state (first-hand) | ★ / forks / commits | Region |
 |---|---|---|---|---|
-| EduTwin Africa | [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) | 🔴 **PRE-LICENCE** — no payload on 19/19 paths, no `license` in `pyproject.toml`, and the README still carries the placeholder | 0 / 0 / 7 | 🟢 **EMEA** *(South Africa)* |
-| Nigeria Learning Platform | [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) | 🔴 **NO GRANT** — no payload on 19/19 paths, no `license` in `package.json` | 0 / 0 / 6 | 🟢 **EMEA** *(Nigeria)* |
+| EduTwin Africa | [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) | 🔴 **PRE-LICENCE** — no payload on 19/19 paths, no `license` in `pyproject.toml`, and the README still carries the placeholder 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: South Africa)* | 0 / 0 / 7 | EMEA |
+| Nigeria Learning Platform | [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) | 🔴 **NO GRANT** — no payload on 19/19 paths, no `license` in `package.json` 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Nigeria)* | 0 / 0 / 6 | EMEA |
 
 🟢 **Why this is a result and not a shrug.** This base's standing Africa claim was a **search-level**
 absence: *"Africa returned no repository-level asset — only a training provider, not code."* Pass 269
@@ -37031,8 +37111,8 @@ claims: ## ACTION UG — THE GATE: run before publishing any "there is no X"
 
 | Repo | Grant | ★ | Region | Why it is a trend and not just a row |
 |---|---|---|---|---|
-| [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) | 🟢 `MIT` | **0** | **APAC** | 🔵 **Offline-first for a THIRD reason.** `p244` found offline-first arriving in two regions from opposite constraints *(EMEA sovereignty, APAC connectivity)*. This is the third: **WebRTC P2P so pupil data never reaches a server at all** — a teacher's answer to a privacy rule, built by a teacher |
-| [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) | 🟢 `MIT` | **0** | **North America** | 🟢 **The teacher tool the dedicated queries cannot find, again.** `p245` found `QuizWeaver` on a literacy axis; `p246` finds blind grading on a **privacy** axis. 🔴 **Teacher tooling is never on the teaching axis** — three passes of evidence now |
+| [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) | 🟢 `MIT` | **0** | APAC | 🔵 **Offline-first for a THIRD reason.** `p244` found offline-first arriving in two regions from opposite constraints *(EMEA sovereignty, APAC connectivity)*. This is the third: **WebRTC P2P so pupil data never reaches a server at all** — a teacher's answer to a privacy rule, built by a teacher |
+| [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) | 🟢 `MIT` | **0** | North America | 🟢 **The teacher tool the dedicated queries cannot find, again.** `p245` found `QuizWeaver` on a literacy axis; `p246` finds blind grading on a **privacy** axis. 🔴 **Teacher tooling is never on the teaching axis** — three passes of evidence now |
 | [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 🟢 `MIT` | 8 | Global | 🟢 Pre-registers and timestamps the evaluation criteria *(`SHA-256`, `RFC 3161`)* **before** the test runs. 🔵 A permissive foothold in **automated assessment**, which `p245` declared had none |
 
 ### 🔴 What did NOT move, said with the query that failed
@@ -37057,12 +37137,12 @@ claims: ## ACTION UG — THE GATE: run before publishing any "there is no X"
 | Repo | 🟢 Grant | ★ | ref · head | Region |
 |---|---|---|---|---|
 | [`Robyn-Collie/QuizWeaver`](https://github.com/Robyn-Collie/QuizWeaver) | `MIT` *(`1 069` B)* | **8** | `main` · `21bb759b9b37` | Global |
-| [`Notcokeaddictedanymore/aiexplorers`](https://github.com/Notcokeaddictedanymore/aiexplorers) | `MIT` *(`1 078` B)* | **8** | `main` · `1335aa717950` | **APAC** |
-| [`Magnussmari/TamingTechnology`](https://github.com/Magnussmari/TamingTechnology) | `MIT` *(`1 078` B)* | **5** | `main` · `d7b9d79f6b58` | **EMEA** |
+| [`Notcokeaddictedanymore/aiexplorers`](https://github.com/Notcokeaddictedanymore/aiexplorers) | `MIT` *(`1 078` B)* | **8** | `main` · `1335aa717950` | APAC |
+| [`Magnussmari/TamingTechnology`](https://github.com/Magnussmari/TamingTechnology) | `MIT` *(`1 078` B)* | **5** | `main` · `d7b9d79f6b58` | EMEA |
 | [`AidanandMe/ai-literacy-guardian`](https://github.com/AidanandMe/ai-literacy-guardian) | `MIT` *(`1 061` B)* | **4** | `main` · `65c6b115bbb3` | Global |
 | [`jarmolkowicz/knowledge-base-modrn-mind`](https://github.com/jarmolkowicz/knowledge-base-modrn-mind) | `MIT` *(`1 077` B)* | **4** | `main` · `5e2f8f0fa782` | Global |
 | [`Omnikon-Org/UnVibe`](https://github.com/Omnikon-Org/UnVibe) | `MIT` *(`1 093` B)* | **4** | `main` · `d748dfea171a` | Global |
-| [`dreamnight16/see-ai`](https://github.com/dreamnight16/see-ai) | `MIT` *(`1 069` B)* | **3** | `main` · `ac46b5445366` | **APAC** |
+| [`dreamnight16/see-ai`](https://github.com/dreamnight16/see-ai) | `MIT` *(`1 069` B)* | **3** | `main` · `ac46b5445366` | APAC |
 
 🔵 **The shape they share, and it is the week's real signal: six of the seven teach a human to AUDIT a model rather than to learn from one.** `UnVibe` has the model write the hardest solution so the learner must decode and defend it; `ai-literacy-guardian` ships an LLM-as-a-Judge harness *inside* a literacy curriculum; `TamingTechnology` and `knowledge-base-modrn-mind` are explicitly about not outsourcing judgement.
 
@@ -37259,13 +37339,13 @@ See `T242-A` in [`agents/top.md`](top.md). [`AnonymousOnyx22/brightspace-d2l-mcp
 
 | Agent | Repo | 🟢 Grant | ★ | Region | Why it is new |
 |---|---|---|---|---|---|
-| **jules** | [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) | `MIT` *(`1 083` B · `a6fdabe49f58`)* | 0 | **EMEA** *(French)* | 🟢 The first row on these shelves built on the **French** grade ladder *(`3e`, `CP à CE2`, `CM2`, `6e`, `lycée`)*. Guides step by step and **never gives the answer**; Ollama local or Mistral hosted |
-| **Diário de Classe** | [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) | `MIT` *(`1 081` B · `b01dde73df1f`)* | 1 | **LATAM** *(Brazil)* | 🟢 **Offline-first and serverless by construction** — *"os dados ficam somente no IndexedDB do aparelho"*. No student record leaves the teacher's device |
-| **lms-front** | [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | `MIT` *(`1 072` B · `925783e644a6`)* | **40** | **LATAM** *(self-declared)* | 🟢 The pass's highest-star new row. **Ships the revenue split** — Stripe Connect platform fee — not just the courseware |
-| **eduagent** | [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) | `MIT` *(`1 056` B · `a9b32795d951`)* | 1 | **APAC** *(India)* | Built for **AgentathonX 2026**, India's first AI-agent hackathon |
-| **Cloud-Score** | [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) | `MIT` *(`1 070` B · `bab2ffc9ea43`)* | 0 | **APAC** *(China)* | 🟢 Zero-framework, **fully serverless** classroom ledger on Cloudflare Pages + private R2 — nothing to procure |
-| **Last Bell** | [`noestudios/lastbell`](https://github.com/noestudios/lastbell) | `MIT` *(`1 067` B · `544ac5d5f90f`)* | 1 | **North America** | 🔵 **Parent-side, not school-side** — watches ParentVUE *and* Canvas from a computer the family owns |
-| **ATLAS** | [`GHOSTxASR/ATLAS-AI-TUTOR`](https://github.com/GHOSTxASR/ATLAS-AI-TUTOR) | `MIT` *(`1 075` B · `15df43b8e5e5`)* | 1 | **APAC** *(weak basis: JEE/GATE)* | Local-first RAG tutor that builds a **prerequisite roadmap** from your own material |
+| **jules** | [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) | `MIT` *(`1 083` B · `a6fdabe49f58`)* | 0 | EMEA | 🟢 The first row on these shelves built on the **French** grade ladder *(`3e`, `CP à CE2`, `CM2`, `6e`, `lycée`)*. Guides step by step and **never gives the answer**; Ollama local or Mistral hosted |
+| **Diário de Classe** | [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) | `MIT` *(`1 081` B · `b01dde73df1f`)* | 1 | LATAM | 🟢 **Offline-first and serverless by construction** — *"os dados ficam somente no IndexedDB do aparelho"*. No student record leaves the teacher's device 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Brazil)* |
+| **lms-front** | [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | `MIT` *(`1 072` B · `925783e644a6`)* | **40** | LATAM | 🟢 The pass's highest-star new row. **Ships the revenue split** — Stripe Connect platform fee — not just the courseware 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: self-declared)* |
+| **eduagent** | [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) | `MIT` *(`1 056` B · `a9b32795d951`)* | 1 | APAC | Built for **AgentathonX 2026**, India's first AI-agent hackathon |
+| **Cloud-Score** | [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) | `MIT` *(`1 070` B · `bab2ffc9ea43`)* | 0 | APAC | 🟢 Zero-framework, **fully serverless** classroom ledger on Cloudflare Pages + private R2 — nothing to procure 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: China)* |
+| **Last Bell** | [`noestudios/lastbell`](https://github.com/noestudios/lastbell) | `MIT` *(`1 067` B · `544ac5d5f90f`)* | 1 | North America | 🔵 **Parent-side, not school-side** — watches ParentVUE *and* Canvas from a computer the family owns |
+| **ATLAS** | [`GHOSTxASR/ATLAS-AI-TUTOR`](https://github.com/GHOSTxASR/ATLAS-AI-TUTOR) | `MIT` *(`1 075` B · `15df43b8e5e5`)* | 1 | APAC | Local-first RAG tutor that builds a **prerequisite roadmap** from your own material 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: weak basis: JEE/GATE)* |
 | **Cogni** | [`arshawnarbabi/Cogni`](https://github.com/arshawnarbabi/Cogni) | `MIT` *(`1 071` B · `f800ec251529`)* | **6** | Global | **Persistent tutor memory** + per-professor profiling from past exams + a *"what do I need on the final"* calculator |
 
 ### 🔴 The week's withheld agents, named rather than omitted
@@ -37298,9 +37378,9 @@ See `T242-A` in [`agents/top.md`](top.md). [`AnonymousOnyx22/brightspace-d2l-mcp
 
 | Agent | Repo | 🟢 Grant | ★ | Region | Why it is new |
 |---|---|---|---|---|---|
-| **GrizzDog-AI** | [`daTechGuy/GrizzDog-AI`](https://github.com/daTechGuy/GrizzDog-AI) | `MIT` *(`1 075` B · `2f39c4f87cca`)* | 0 | **North America** | 🟢 The first row on these shelves from an **accredited US community-college programme** — Butler CC, Andover Kansas, NSA/DHS **CAE-CD** designated. `27` attack vectors mapped to OWASP LLM01–LLM07 + MITRE ATLAS, exported as **Canvas** reports |
-| **taotao-skills** | [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` + an `Apache-2.0` subtree *(`1 371` B · `4d6f67f4d88b`)* | **18** | **APAC** | 🟡 The pass's only **multi-grant** row: `skills/k12-lesson-planning-zh` derives from Anthropic's `k12-teacher-skills` (`Apache-2.0`) and carries its own `LICENSE` + `NOTICE` in-directory |
-| **ai-teacher-copilot** | [`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) | `MIT` *(`1 076` B · `ead83d2f94ca`)* | 0 | **APAC** *(Vietnamese)* | 🔵 Bloom-taxonomy quiz generation with **citation traceability** — automated assessment, i.e. squarely inside Vietnam's Decision `33/2026/QĐ-TTg` high-risk list |
+| **GrizzDog-AI** | [`daTechGuy/GrizzDog-AI`](https://github.com/daTechGuy/GrizzDog-AI) | `MIT` *(`1 075` B · `2f39c4f87cca`)* | 0 | North America | 🟢 The first row on these shelves from an **accredited US community-college programme** — Butler CC, Andover Kansas, NSA/DHS **CAE-CD** designated. `27` attack vectors mapped to OWASP LLM01–LLM07 + MITRE ATLAS, exported as **Canvas** reports |
+| **taotao-skills** | [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` + an `Apache-2.0` subtree *(`1 371` B · `4d6f67f4d88b`)* | **18** | APAC | 🟡 The pass's only **multi-grant** row: `skills/k12-lesson-planning-zh` derives from Anthropic's `k12-teacher-skills` (`Apache-2.0`) and carries its own `LICENSE` + `NOTICE` in-directory |
+| **ai-teacher-copilot** | [`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) | `MIT` *(`1 076` B · `ead83d2f94ca`)* | 0 | APAC | 🔵 Bloom-taxonomy quiz generation with **citation traceability** — automated assessment, i.e. squarely inside Vietnam's Decision `33/2026/QĐ-TTg` high-risk list 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Vietnamese)* |
 | **regulated-ai-governance** | [`ashutoshrana/regulated-ai-governance`](https://github.com/ashutoshrana/regulated-ai-governance) | `MIT` *(`1 070` B · `664a753aa460`)* | 1 | Global | Policy enforcement as **adapters for CrewAI, AutoGen, LangChain, Semantic Kernel, Haystack** — not another framework |
 | **voice-ai-governance** | [`ashutoshrana/voice-ai-governance`](https://github.com/ashutoshrana/voice-ai-governance) | `MIT` *(`1 070` B · `a24efbc61bb7`)* | 2 | Global | Confidence-gated escalation and PII scrubbing for Pipecat / LiveKit / Twilio voice pipelines |
 
@@ -37331,7 +37411,7 @@ Four global searches and one per region, run as mandated, every finding checked 
 
 | Agent | Repo | 🟢 Grant *(bytes · pinned)* | ★ | Region | Why it is here |
 |---|---|---|---|---|---|
-| **GRAPHIT** | [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | **EMEA** | Multi-agent chat grounded on lecture slides via **GraphRAG**, over a **Neo4j** domain *and* learner model, with time-decaying mastery and spaced repetition. Created `2026-09-30` — genuinely new this week |
+| **GRAPHIT** | [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | EMEA | Multi-agent chat grounded on lecture slides via **GraphRAG**, over a **Neo4j** domain *and* learner model, with time-decaying mastery and spaced repetition. Created `2026-09-30` — genuinely new this week |
 | **Agent_Newton** | [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton) | 🟢 `MIT` *(`1 063` B · `main` · `d7eac825fe27`)* | 0 | Global | 🟡 **The only artefact this pass found that can compare two tutor architectures reproducibly** — a shared learner-state layer plus a *simulated-learner harness* |
 
 ### 🔴 The week's best-measured education agent is withheld
@@ -39238,7 +39318,7 @@ hundreds mean more here than they would for a hosted product.
 | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | **284** | APAC | Socratic, 2-sigma framing; skill **+** self-hostable app |
 | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | MIT | **245** | APAC | Diagnosis-first, no command menu |
 | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | MIT | **175** | APAC | Chinese civil-service exam — a vertical exam as a skill |
-| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 | **172** | EMEA *(Spain)* | CEFR language learning, voice, local LLMs via Ollama |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 | **172** | EMEA | CEFR language learning, voice, local LLMs via Ollama 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Spain)* |
 | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | **141** | APAC | Block-based adaptive workspace, local-first |
 | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT | **112** | APAC | Teaching-skill collection incl. *gaokao* |
 
@@ -48761,9 +48841,9 @@ Query, run verbatim from the brief: `AI education EMEA 2026 adoption regulation 
 
 | Repo | Licence (payload) | Region | Note |
 |---|---|---|---|
-| 🆕 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT**, 1 105 B | **North America** (UC Berkeley CAHLR) | `main` **`939eb0e`**; **BKT in-tree**; **LTI 1.1** with `replaceResult`; 🟡 content under **CC BY 4.0**, a separate grant |
-| 🆕 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, 11 408 B (`P804`: completed appendix) | **APAC** (HKU) | `main` **`6cf793b`** |
-| 🆕 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause**, 1 531 B | **EMEA** (R2D-dev) | `main` **`196c547`**; 🟡 `-CE` open-core signal (`P822`) |
+| 🆕 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT**, 1 105 B | North America | `main` **`939eb0e`**; **BKT in-tree**; **LTI 1.1** with `replaceResult`; 🟡 content under **CC BY 4.0**, a separate grant 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: UC Berkeley CAHLR)* |
+| 🆕 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, 11 408 B (`P804`: completed appendix) | APAC | `main` **`6cf793b`** |
+| 🆕 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause**, 1 531 B | EMEA | `main` **`196c547`**; 🟡 `-CE` open-core signal (`P822`) 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: R2D-dev)* |
 
 🟢 **Three permissive education agents, three regions, one query, zero weeks of waiting.** 🔴 **The twenty-week absence was an artefact of asking for `MIT` by name.**
 
@@ -48972,10 +49052,10 @@ components on later passes; 🔴 **must never be cited as a component's licence.
 
 | Component | Region | Basis |
 |---|---|---|
-| `opensalt/opensalt` | **North America** | README names **Public Consulting Group** (US) and its public-sector clients; licence holder agrees |
-| `1EdTech/OpenCASE` | **North America** | 1EdTech Consortium, US standards body |
-| `infosign/compeito` | 🟡 **unplaced** | 🔴 no country in any payload; *"Infosign, Inc."* is not geolocated |
-| `conform-ed/conform-ed` | 🟡 **unplaced** | 🔴 bare GitHub org, no location in any payload |
+| `opensalt/opensalt` | North America | README names **Public Consulting Group** (US) and its public-sector clients; licence holder agrees |
+| `1EdTech/OpenCASE` | North America | 1EdTech Consortium, US standards body |
+| `infosign/compeito` | Global | 🔴 no country in any payload; *"Infosign, Inc."* is not geolocated 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| `conform-ed/conform-ed` | Global | 🔴 bare GitHub org, no location in any payload 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
 
 🔴 **Two of four unplaced, recorded rather than guessed** (`P722`). 🟢 **`Gap 302` carries them.**
 
@@ -49196,12 +49276,12 @@ re-offered one.**
 
 | Component | Protocol / function | Ref · HEAD | Licence (layer, bytes) | Region | Status |
 |---|---|---|---|---|---|
-| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **Open Badges 3.0 + ELM** issuance, OID4VCI wallet delivery, revocation | `main` · **`8bafc99`** | 🟡 **MIT in README PROSE ONLY** — 🔴 no licence file (8 names, all 404), 🔴 no `license` key in `pyproject.toml`, 🔴 unpublished on pypi (404 against its pair) | **EMEA** (NL · SURF edubadges) | 🟡 **LEAD, not shelved.** The `credential_issuance` function `Gap 289` named |
-| [`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) | Canvas LMS MCP, **47 tools**, 3 safety tiers | `main` · **`0ef723f`** | 🟢 **MIT** (`LICENSE`, **1 069 B**) | **North America** | 🟢 **shelved** — `agents/top.md` |
-| [`songsterq/gradebook-mcp`](https://github.com/songsterq/gradebook-mcp) | ParentVUE gradebook, **read-only by construction** | `main` · **`27bcdaf`** | 🟢 **MIT** (`LICENSE`, **1 066 B**) | **North America** | 🟢 **shelved** — `agents/top.md` |
-| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | Open Badges 3.0 issue **and verify**, Strapi + Nuxt | `main` · **`6fd0a11`** | 🔴 **AGPL-3.0** (`LICENSE`, **33 820 B**, *"Version 3, 19 November 2007"*) | **EMEA** (IT) | 🔴 **flagged** — self-host only, no proprietary linking |
-| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 credentialling platform, `did:web` issuer identity | `main` · **`d14619e`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 523 B**) | 🔴 **not placed** | 🔴 **HELD — canonicality unresolved** |
-| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | Caliper Analytics Sensor API (JS) | 🔴 **does not resolve** | 🔴 **unreadable** | — | 🔴 **`Gap 284`'s cause, measured** |
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **Open Badges 3.0 + ELM** issuance, OID4VCI wallet delivery, revocation | `main` · **`8bafc99`** | 🟡 **MIT in README PROSE ONLY** — 🔴 no licence file (8 names, all 404), 🔴 no `license` key in `pyproject.toml`, 🔴 unpublished on pypi (404 against its pair) | EMEA | 🟡 **LEAD, not shelved.** The `credential_issuance` function `Gap 289` named 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: NL · SURF edubadges)* |
+| [`zhenghh04/canvas-mcp`](https://github.com/zhenghh04/canvas-mcp) | Canvas LMS MCP, **47 tools**, 3 safety tiers | `main` · **`0ef723f`** | 🟢 **MIT** (`LICENSE`, **1 069 B**) | North America | 🟢 **shelved** — `agents/top.md` |
+| [`songsterq/gradebook-mcp`](https://github.com/songsterq/gradebook-mcp) | ParentVUE gradebook, **read-only by construction** | `main` · **`27bcdaf`** | 🟢 **MIT** (`LICENSE`, **1 066 B**) | North America | 🟢 **shelved** — `agents/top.md` |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | Open Badges 3.0 issue **and verify**, Strapi + Nuxt | `main` · **`6fd0a11`** | 🔴 **AGPL-3.0** (`LICENSE`, **33 820 B**, *"Version 3, 19 November 2007"*) | EMEA | 🔴 **flagged** — self-host only, no proprietary linking 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: IT)* |
+| [`19otherrsh-dot/Opencred`](https://github.com/19otherrsh-dot/Opencred) | OB 3.0 credentialling platform, `did:web` issuer identity 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: not placed)* | `main` · **`d14619e`** | 🔴 **AGPL-3.0** (`LICENSE`, **34 523 B**) | Global | 🔴 **HELD — canonicality unresolved** |
+| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | Caliper Analytics Sensor API (JS) | 🔴 **does not resolve** | 🔴 **unreadable** | Global | 🔴 **`Gap 284`'s cause, measured** |
 
 🔴 **`19otherrsh-dot/Opencred` is held and not shelved, and the reason is `P443`/`P436`, not its
 licence.** The owner handle has the shape of a throwaway account, the project name duplicates an
@@ -49850,11 +49930,11 @@ the only LGPL platform on this KB's verticals shelf — whose `LICENSE` names *"
 
 | Region | New to this KB | Already held |
 |---|---|---|
-| **North America** | 🔴 **none** | 134 bills/31 states, OH policy mandate (2026-07-01), CA A.B. 1159, ID SB 1227, OK + MD oversight bans, H.R. 8747, NYC K-8 pause |
-| **EMEA** | 🔴 **none** | AI-omnibus deferral (**2027-12-02** stand-alone / **2028-08-02** Annex I), Art. 50 live **2026-08-02**, UK AI Opportunities Action Plan, 10 %-of-450 guidelines figure |
-| **APAC** | 🔴 **none** | KR Framework Act **2026-01-22** + decree **2026-07-21** + fines deferred ~**2027-07-21**; VN law **2026-03-01**, education **2027-09-01**; TW Act **2025-12**; JP framework law |
-| **LATAM** | 🟡 **Brazil `ConectAI`** — Microsoft-funded skilling programme, 26 partners, target **5 M** learners by end **2027** | UNESCO IESALC 87 %/~25 %, TALIS country figures, Latam-GPT, CONPES 4144, PL 2.338/2023, Chile bill, Observatory (Apr 2026) |
-| **APAC (gov't body)** | 🟡 **Australian AI Safety Institute** — announced **2025-11**, alongside the National AI Plan (**2025-12**) | — |
+| North America | 🔴 **none** | 134 bills/31 states, OH policy mandate (2026-07-01), CA A.B. 1159, ID SB 1227, OK + MD oversight bans, H.R. 8747, NYC K-8 pause |
+| EMEA | 🔴 **none** | AI-omnibus deferral (**2027-12-02** stand-alone / **2028-08-02** Annex I), Art. 50 live **2026-08-02**, UK AI Opportunities Action Plan, 10 %-of-450 guidelines figure |
+| APAC | 🔴 **none** | KR Framework Act **2026-01-22** + decree **2026-07-21** + fines deferred ~**2027-07-21**; VN law **2026-03-01**, education **2027-09-01**; TW Act **2025-12**; JP framework law |
+| LATAM | 🟡 **Brazil `ConectAI`** — Microsoft-funded skilling programme, 26 partners, target **5 M** learners by end **2027** | UNESCO IESALC 87 %/~25 %, TALIS country figures, Latam-GPT, CONPES 4144, PL 2.338/2023, Chile bill, Observatory (Apr 2026) |
+| APAC | 🟡 **Australian AI Safety Institute** — announced **2025-11**, alongside the National AI Plan (**2025-12**) 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: gov't body)* | — |
 
 🔴 **Both new names are bodies/programmes, not repositories, and neither could be verified
 first-hand** (`000` to every non-GitHub host). 🟢 **Recorded as second-hand, with the channel's
@@ -50095,10 +50175,10 @@ region.
 
 | Region | Result | What came back instead |
 |---|---|---|
-| **North America** | 🔴 no new agent | 134 AI-in-education bills across 31 states; H.R. 8747 in committee |
-| **EMEA** | 🔴 no new agent | AI Act high-risk conformance guides; OECD *Digital Education Outlook 2026* |
-| **APAC** | 🔴 no new agent | KR AI Basic Act (in force 2026-01-22), VN AI Law (2026-03-01), TW AI Basic Act |
-| **LATAM** | 🔴 no new agent | UNESCO LAC Observatory (2026-04-14), IESALC/UNU-IAS study, IADB programmes |
+| North America | 🔴 no new agent | 134 AI-in-education bills across 31 states; H.R. 8747 in committee |
+| EMEA | 🔴 no new agent | AI Act high-risk conformance guides; OECD *Digital Education Outlook 2026* |
+| APAC | 🔴 no new agent | KR AI Basic Act (in force 2026-01-22), VN AI Law (2026-03-01), TW AI Basic Act |
+| LATAM | 🔴 no new agent | UNESCO LAC Observatory (2026-04-14), IESALC/UNU-IAS study, IADB programmes |
 
 🔴 **Every regional datum above was already in this KB, to the figure.** Pass 48 measured 23 of 24
 already held; 🔴 **pass 49 measures 100% held — the regional channel's new-information yield this
@@ -50127,10 +50207,10 @@ names and this KB held all four.** 🔵 **That is a measured zero, not an unexam
 
 | Region | New education agent found | Note |
 |---|---|---|
-| **North America** | 🔴 none | Channel returned **policy**, not software — state trackers, district guidance, federal rulemaking |
-| **EMEA** | 🔴 none | Returned EU AI Act conformance material and one vendor LMS page; no permissive agent |
-| **APAC** | 🔴 none | Returned **regulation** (Vietnam, Korea, Taiwan, Australia) and one vendor market report naming only proprietary players (Google, Microsoft, IBM, Pearson, Byju's) |
-| **LATAM** | 🔴 none | Returned **UNESCO/IESALC governance research**, the richest regional material in the channel and entirely non-software |
+| North America | 🔴 none | Channel returned **policy**, not software — state trackers, district guidance, federal rulemaking |
+| EMEA | 🔴 none | Returned EU AI Act conformance material and one vendor LMS page; no permissive agent |
+| APAC | 🔴 none | Returned **regulation** (Vietnam, Korea, Taiwan, Australia) and one vendor market report naming only proprietary players (Google, Microsoft, IBM, Pearson, Byju's) |
+| LATAM | 🔴 none | Returned **UNESCO/IESALC governance research**, the richest regional material in the channel and entirely non-software |
 
 🔴 **A clear regional finding, stated rather than left implicit: in all four regions the
 education-AI channel now returns governance and regulation, not repositories.** 🟢 **That is
@@ -50576,10 +50656,10 @@ at all*, which is a channel finding rather than a regional one — see `P513` in
 
 | Region | What the mandated `AI education {region} 2026 adoption regulation players` sweep returned | New? |
 |---|---|---|
-| **North America** | NA = **36%** of the global market; **$951 M (2024) → $2,303.2 M (2029) at 15.9%** (🔴 **a third NA series, inconsistent with the held one — `P515`**); **86%** of students across **16** countries using AI in study; named players **IBM, Microsoft, Google**; **$169 M** government commitment to responsible AI in higher education in **Q1 2026**; **OpenAI** country-level education programme with **eight national partners**, Q1 2026; *"no FDA equivalent for educational technology"*, **Colorado** and **Texas** named as piecemeal state requirements | ⚠️ **2 new items** ($169 M; OpenAI 8-partner programme), **1 reproduced defect** (`P514`), **1 new inconsistency** (`P515`) |
-| **EMEA** | 🔴 **Zero education-specific content.** The sweep returned enterprise AI adoption: **94%** of organisations likely to invest in AI training in 2026; **60%** of EMEA finance teams between piloting and maturity; *"compliance complexity, data governance"*. 🔵 **One education item only as a bare event listing** (Council of Europe, 2nd working conference on the regulatory dimensions of AI in education, October) | 🔴 **0 — and see `P513`** |
-| **APAC** | 🔴 **Zero education-specific content.** Returned enterprise/governance material: **48%** of APAC governance leaders prioritising AI adoption for 2026; **57%** of Asian organisations with AI in at least one area; Singapore's financial-sector consultations; *"sovereign-by-design"* for ~half of APAC firms. 🟢 **The source summary itself stated the gap**: *"the search results focus primarily on enterprise AI adoption rather than education-specific information"* | 🔴 **0 — and see `P513`** |
-| **LATAM** | **200 higher-education institutions across 19 countries** surveyed Aug–Oct 2025 (UNU working paper) — 🆕 **a different instrument from the held DEC survey**; **99%** of LATAM startups using some AI, **85%** integrating it natively, **edtech named among the most disruptive sectors**; regulatory fragmentation across countries with different or absent frameworks | 🟢 **1 new instrument** (UNU, 200 HEIs / 19 countries), 🔴 **1 reproduced defect** (`P514`) |
+| North America | NA = **36%** of the global market; **$951 M (2024) → $2,303.2 M (2029) at 15.9%** (🔴 **a third NA series, inconsistent with the held one — `P515`**); **86%** of students across **16** countries using AI in study; named players **IBM, Microsoft, Google**; **$169 M** government commitment to responsible AI in higher education in **Q1 2026**; **OpenAI** country-level education programme with **eight national partners**, Q1 2026; *"no FDA equivalent for educational technology"*, **Colorado** and **Texas** named as piecemeal state requirements | ⚠️ **2 new items** ($169 M; OpenAI 8-partner programme), **1 reproduced defect** (`P514`), **1 new inconsistency** (`P515`) |
+| EMEA | 🔴 **Zero education-specific content.** The sweep returned enterprise AI adoption: **94%** of organisations likely to invest in AI training in 2026; **60%** of EMEA finance teams between piloting and maturity; *"compliance complexity, data governance"*. 🔵 **One education item only as a bare event listing** (Council of Europe, 2nd working conference on the regulatory dimensions of AI in education, October) | 🔴 **0 — and see `P513`** |
+| APAC | 🔴 **Zero education-specific content.** Returned enterprise/governance material: **48%** of APAC governance leaders prioritising AI adoption for 2026; **57%** of Asian organisations with AI in at least one area; Singapore's financial-sector consultations; *"sovereign-by-design"* for ~half of APAC firms. 🟢 **The source summary itself stated the gap**: *"the search results focus primarily on enterprise AI adoption rather than education-specific information"* | 🔴 **0 — and see `P513`** |
+| LATAM | **200 higher-education institutions across 19 countries** surveyed Aug–Oct 2025 (UNU working paper) — 🆕 **a different instrument from the held DEC survey**; **99%** of LATAM startups using some AI, **85%** integrating it natively, **edtech named among the most disruptive sectors**; regulatory fragmentation across countries with different or absent frameworks | 🟢 **1 new instrument** (UNU, 200 HEIs / 19 countries), 🔴 **1 reproduced defect** (`P514`) |
 
 🟢 **No region returned nothing, and the two that returned nothing *about education* are recorded as
 exactly that.** 🔵 **The follow-up that fixed it is in `intel/market.md` (`P513`): naming **countries**
@@ -50630,10 +50710,10 @@ because an unrecorded region is indistinguishable from an uncovered one.**
 
 | Region | What the channel returned this pass | New? |
 |---|---|---|
-| **North America** | **134 bills across 31 states** in the 2026 session; **CA AB 1159** (no training on student data); **ID SB 1227** (AI-tool privacy protections); **Oklahoma** and **Maryland** requiring human oversight and barring AI from high-stakes decisions about students; the **K-12 AI Literacy and Readiness Act of 2026** (would amend ESEA to let schools spend federal funds on AI literacy); NA = **36%** of the global market, **$3.68 B (2026) → $32 B (2030)**; **60%** of US K-12 teachers used AI tools in 2024-25, **32%** at least weekly; a student-authored national framework from all 50 states (America's Youth AI Festival, July 2026) | 🔴 **0 new** — all held since pass 33; the **$32 B** figure remains the one `P489` adjudicated **against** |
-| **EMEA** | 🔴 **A superseded date, for the second time** — see `P505`. The sweep returned *"From 2 August 2026, the AI Office and national authorities started to enforce the AI Act"* with education access/assessment as high-risk. 🟢 **Independently corroborated this pass that this is wrong**: the **Digital Omnibus** moved Annex III stand-alone high-risk to **2027-12-02**. Also returned: EU market **$2.64 B (2026) → $8.0 B (2030) at 31.9%**; **Finland, Estonia, Netherlands** leading K-12 integration; UK **£4 M** for lesson-planning/marking tools; **OECD 2026 Digital Education Outlook**; only **10%** of 450+ institutions have formal AI guidelines while **93%** of educators say regulation is needed | ⚠️ **0 new findings, 1 reproduced defect** |
-| **APAC** | **Three comprehensive AI statutes in force**: **Vietnam's Law on AI** (**2026-03-01**) naming education among six high-risk sectors — *automated assessment and behavioural monitoring* — with National AI Database pre-registration, conformity assessment, human oversight and **72-hour** incident reporting; **South Korea's AI Basic Act** (**2026-01-22**); **Taiwan's AI Basic Act** (**2025-12**). Named players: Google, Microsoft, IBM, Pearson, Byju's. APAC fastest-growing by GenAI revenue, **~65% YoY** | 🔴 **0 new** — held since pass 33. 🟢 **But see `P505`: this is the regulatory context that makes the EMEA staleness consequential** |
-| **LATAM** | **Digital Education Council LATAM survey 2026**: **92%** of students and **79%** of faculty actively engaging with AI, **30,000+** responses across **29** institutions; **88%** of faculty report only *minimal to moderate* engagement. Fragmenting regulatory map: **Brazil's** AI bill, **Chile's** framework, **Colombia's CONPES**, **Mexico's** sectoral rules, all at different speeds. **Chile, Costa Rica, Peru, Uruguay, Panama, Dominican Republic** standing out in GenAI adoption. **ILIA 2025** (third edition, published 2026-03) | 🔴 **0 new** — held since pass 33. ⚠️ **The survey's faculty denominator differs between this pass's summary (`79%` of faculty, 30,000+ total responses) and the pass-33 record (`7,319` faculty) — the two are compatible (total vs faculty subset) and are *not* reconciled first-hand, because the DEC page was not fetched** |
+| North America | **134 bills across 31 states** in the 2026 session; **CA AB 1159** (no training on student data); **ID SB 1227** (AI-tool privacy protections); **Oklahoma** and **Maryland** requiring human oversight and barring AI from high-stakes decisions about students; the **K-12 AI Literacy and Readiness Act of 2026** (would amend ESEA to let schools spend federal funds on AI literacy); NA = **36%** of the global market, **$3.68 B (2026) → $32 B (2030)**; **60%** of US K-12 teachers used AI tools in 2024-25, **32%** at least weekly; a student-authored national framework from all 50 states (America's Youth AI Festival, July 2026) | 🔴 **0 new** — all held since pass 33; the **$32 B** figure remains the one `P489` adjudicated **against** |
+| EMEA | 🔴 **A superseded date, for the second time** — see `P505`. The sweep returned *"From 2 August 2026, the AI Office and national authorities started to enforce the AI Act"* with education access/assessment as high-risk. 🟢 **Independently corroborated this pass that this is wrong**: the **Digital Omnibus** moved Annex III stand-alone high-risk to **2027-12-02**. Also returned: EU market **$2.64 B (2026) → $8.0 B (2030) at 31.9%**; **Finland, Estonia, Netherlands** leading K-12 integration; UK **£4 M** for lesson-planning/marking tools; **OECD 2026 Digital Education Outlook**; only **10%** of 450+ institutions have formal AI guidelines while **93%** of educators say regulation is needed | ⚠️ **0 new findings, 1 reproduced defect** |
+| APAC | **Three comprehensive AI statutes in force**: **Vietnam's Law on AI** (**2026-03-01**) naming education among six high-risk sectors — *automated assessment and behavioural monitoring* — with National AI Database pre-registration, conformity assessment, human oversight and **72-hour** incident reporting; **South Korea's AI Basic Act** (**2026-01-22**); **Taiwan's AI Basic Act** (**2025-12**). Named players: Google, Microsoft, IBM, Pearson, Byju's. APAC fastest-growing by GenAI revenue, **~65% YoY** | 🔴 **0 new** — held since pass 33. 🟢 **But see `P505`: this is the regulatory context that makes the EMEA staleness consequential** |
+| LATAM | **Digital Education Council LATAM survey 2026**: **92%** of students and **79%** of faculty actively engaging with AI, **30,000+** responses across **29** institutions; **88%** of faculty report only *minimal to moderate* engagement. Fragmenting regulatory map: **Brazil's** AI bill, **Chile's** framework, **Colombia's CONPES**, **Mexico's** sectoral rules, all at different speeds. **Chile, Costa Rica, Peru, Uruguay, Panama, Dominican Republic** standing out in GenAI adoption. **ILIA 2025** (third edition, published 2026-03) | 🔴 **0 new** — held since pass 33. ⚠️ **The survey's faculty denominator differs between this pass's summary (`79%` of faculty, 30,000+ total responses) and the pass-33 record (`7,319` faculty) — the two are compatible (total vs faculty subset) and are *not* reconciled first-hand, because the DEC page was not fetched** |
 
 🟢 **No region returned nothing.** 🔴 **No region returned anything new either, which is the honest
 summary of a regional channel on its eighth consecutive pass over the same four queries.**
@@ -50869,10 +50949,10 @@ family where the tripwire lives.
 
 | Region | Placed this pass | |
 |---|---|---|
-| **APAC** | 🟢 **`THU-MAIC/OpenMAIC`** (Tsinghua MAIC, Beijing) | the only regional placement earned |
-| **LATAM** | 🔴 **None.** Searched explicitly. The one candidate — a Brazilian-Portuguese Socratic-tutor SLM benchmark (8 open models ≤3.8B, offline) — **appears only in secondary prose with no recoverable owner slug**, so it is an unverified lead | 🔵 **An informed gap. Pass 36 placed LATAM via `eduagarcia/lm-evaluation-harness-pt`; this pass adds nothing to it** |
-| **EMEA** | 🔴 **None new.** `openolat/OpenOLAT` (Apache-2.0, Zurich) **re-confirmed** from payload this pass, but it is pass 35's find, not this one | |
-| **North America** | 🔴 **None new.** `rubelw/OSSS` re-confirmed Apache-2.0; pass 36's find | |
+| APAC | 🟢 **`THU-MAIC/OpenMAIC`** (Tsinghua MAIC, Beijing) | the only regional placement earned |
+| LATAM | 🔴 **None.** Searched explicitly. The one candidate — a Brazilian-Portuguese Socratic-tutor SLM benchmark (8 open models ≤3.8B, offline) — **appears only in secondary prose with no recoverable owner slug**, so it is an unverified lead | 🔵 **An informed gap. Pass 36 placed LATAM via `eduagarcia/lm-evaluation-harness-pt`; this pass adds nothing to it** |
+| EMEA | 🔴 **None new.** `openolat/OpenOLAT` (Apache-2.0, Zurich) **re-confirmed** from payload this pass, but it is pass 35's find, not this one | |
+| North America | 🔴 **None new.** `rubelw/OSSS` re-confirmed Apache-2.0; pass 36's find | |
 
 🔴 **Three of five regions produced no new placed agent this pass, and that is written here rather than
 left to look like coverage.**
@@ -50928,11 +51008,11 @@ ordinary size, invisible to a filename-based probe.
 
 | Repo | Licence | Region | One line |
 |---|---|---|---|
-| [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** (11,363 B; **3 channels** incl. PyPI `open-schools` OSI classifier) | 🟢 **North America** | K-12 **SIS with Ollama + MetaGPT + A2A in-tree**; districts, governance, accounting, transportation. ⚠️ self-declared active development |
-| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT** (1,071 B) | 🟢 **APAC** | **Singapore PSLE /40 and A-Level GP /50 marked against each paper's own band rubric**, local-first via Ollama, handwriting OCR, EN + Hindi. ⚠️ bands explicitly unofficial |
-| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT** (1,068 B) | 🟢 **APAC** | **India JEE maths tutor: 14-node LangGraph, critic agent that verifies its own answers, episodic/semantic/procedural memory in Redis, BM25 + dense + RRF retrieval** |
-| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** (1,065 B) | 🟢 **EMEA** | **Sierra Leone MBSSE national lesson plans → structured JSON**, all grades Primary/JSS/SSS; ships the parsed corpus, rule-based parse + LLM cleaning only |
-| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** (1,067 B) | 🟢 **LATAM** | **Portuguese LLM evaluation suite** behind the Open Portuguese LLM Leaderboard, **CEIA / Federal University of Goiás (UFG), Brazil**; vLLM + LiteLLM backends |
+| [`rubelw/OSSS`](https://github.com/rubelw/OSSS) | 🟢 **Apache-2.0** (11,363 B; **3 channels** incl. PyPI `open-schools` OSI classifier) | North America | K-12 **SIS with Ollama + MetaGPT + A2A in-tree**; districts, governance, accounting, transportation. ⚠️ self-declared active development |
+| [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) | 🟢 **MIT** (1,071 B) | APAC | **Singapore PSLE /40 and A-Level GP /50 marked against each paper's own band rubric**, local-first via Ollama, handwriting OCR, EN + Hindi. ⚠️ bands explicitly unofficial |
+| [`dikshant182004/MathTutor`](https://github.com/dikshant182004/MathTutor) | 🟢 **MIT** (1,068 B) | APAC | **India JEE maths tutor: 14-node LangGraph, critic agent that verifies its own answers, episodic/semantic/procedural memory in Redis, BM25 + dense + RRF retrieval** |
+| [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 🟢 **MIT** (1,065 B) | EMEA | **Sierra Leone MBSSE national lesson plans → structured JSON**, all grades Primary/JSS/SSS; ships the parsed corpus, rule-based parse + LLM cleaning only |
+| [`eduagarcia/lm-evaluation-harness-pt`](https://github.com/eduagarcia/lm-evaluation-harness-pt) | 🟢 **MIT** (1,067 B) | LATAM | **Portuguese LLM evaluation suite** behind the Open Portuguese LLM Leaderboard, **CEIA / Federal University of Goiás (UFG), Brazil**; vLLM + LiteLLM backends |
 
 🔵 **The trend worth recording across three of these five: the tutor is becoming jurisdiction-shaped.**
 `bandup` marks *named Singapore papers* against *their own* band descriptors; `MathTutor` targets *JEE*;
@@ -51110,7 +51190,7 @@ GitLab path → **302 to sign-in**; `packagist.org/packages/chamilo/chamilo-lms.
 | Agent | Repo | Licence (payload) | Region | Note |
 |---|---|---|---|---|
 | Adaptive AI Tutor | [`soumics/adaptive-ai-tutor`](https://github.com/soumics/adaptive-ai-tutor) | 🟢 **MIT** (`main/LICENSE`, 1,070 B) | Global | Curriculum-grounded: the uploaded material's own structure becomes the topic graph; cited explanations, Socratic mode, rubric-graded practice, **SM-2 spaced repetition**, fully local on **Ollama**. Author states it is a prototype with no measured learning outcomes. 🔴 **`P466` — not installable here: its MIT RAG core is pinned as a GitHub archive zip, 403.** |
-| genai-open-assessment | [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) | 🟡 **GPL-3.0** (`main/LICENSE`, 35,149 B) | **EMEA** | Rubric-driven grading of **open-ended** higher-ed questions as a *constrained* assessor; every prompt, criterion, input and output stored for review. Apache/PHP/SQLite, Docker one-liner. **Netherlands-origin.** First EMEA-origin higher-ed assessment framework on any shelf here — **copyleft, so it does not fill the permissive EMEA gap.** |
+| genai-open-assessment | [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment) | 🟡 **GPL-3.0** (`main/LICENSE`, 35,149 B) | EMEA | Rubric-driven grading of **open-ended** higher-ed questions as a *constrained* assessor; every prompt, criterion, input and output stored for review. Apache/PHP/SQLite, Docker one-liner. **Netherlands-origin.** First EMEA-origin higher-ed assessment framework on any shelf here — **copyleft, so it does not fill the permissive EMEA gap.** |
 | Promptster AI-fluency rubric | [`promptster-ai/rubric`](https://github.com/promptster-ai/rubric) | 🟢 **MIT**; npm `@promptster/rubric` 0.7.0 MIT | Global | A **data asset, not an agent.** Five dimensions, behavioural anchors, research citations, as `src/rubric.json`. 🔴 **Open rubric, closed calibration** — scoring weights deliberately withheld. Taxonomy for a client enablement scorecard; not a scoring engine. |
 
 ### 🔴 Probed and rejected — stated in full, because silence looks like coverage
@@ -51229,10 +51309,10 @@ instrument tested against a case whose right answer was known.
 
 | Region | What the channel returned |
 |---|---|
-| **North America** | 🟢 **Dense.** As of September 2026, **40 states plus Puerto Rico** have official AI guidance or policy frameworks for education; the PIE Network tracked **~100 state bills** touching student AI use in K-12. Enacted: **Idaho** and **Utah** this session, **New York** (RAISE Act) in late 2025; **4 more states** now require districts to adopt AI policies. Idaho's law mandates local district policies and AI-literacy standards and provides that **no AI may replace or eliminate a human teacher**. Live bills: **CA A.B. 1159** (no training on student data unless the school benefits), **VT HB 650** (annual edtech provider registration and privacy certification), **OR S.B. 1546** (minor-protective design, reducing compulsive use), **VA S.B. 394** (teacher-training guidance) |
-| **EMEA** | 🟢 **A corroboration, not news — and it corrects a regression inside this KB.** Independent secondary sources confirm the **Digital Omnibus** deferral: the Council gave final approval **2026-06-29**, moving **Annex III stand-alone high-risk — education named explicitly — from 2026-08-02 to 2027-12-02**, with Annex I embedded moving 2027-08-02 → **2028-08-02**. **Article 50 transparency did not move.** 🔴 **This KB's own pass-32 sections had reverted to *"full enforcement from August 2026"*** in `compose/patterns.md` P38, `intel/trends.md` and `intel/market.md` — corrected this pass. ⚠️ **Primary text still unverifiable:** `eur-lex.europa.eu` → **000** |
-| **APAC** | 🟢 **Three comprehensive AI statutes now in force.** **Vietnam's Law on AI** effective **2026-03-01**; **South Korea's AI Basic Act** in force **2026-01-22**, scoping *"high-impact AI"* in healthcare, **education**, finance, employment and essential services; **Taiwan's AI Basic Act** passed **2025-12**. Adoption **65–75% (2025) → 80–90% (2026 projected)**. Named players: Google, Microsoft, IBM, Pearson, Byju's |
-| **LATAM** | 🟢 **The richest regional return of this pass, and it is a governance story.** Digital Education Council survey of **7,319 faculty across 29 institutions**: **72%** hold positive views of AI in education vs **57%** globally, and **79%** use AI in teaching — but **88%** report only *minimal to moderate* engagement. **87%** of institutions use AI in at least one area while **only 26% have a formal AI strategy**. **Uruguay** became the first LATAM country to sign the Council of Europe's **Framework Convention on AI**. **UNESCO launched its Observatory on AI in Education for Latin America and the Caribbean on 2026-04-14**. **Latam-GPT** (CENIA Chile, 60+ institutions across 15 countries, ~**$550k**, funded largely by **CAF**) — tooling MIT, weights non-OSI; see `P463` |
+| North America | 🟢 **Dense.** As of September 2026, **40 states plus Puerto Rico** have official AI guidance or policy frameworks for education; the PIE Network tracked **~100 state bills** touching student AI use in K-12. Enacted: **Idaho** and **Utah** this session, **New York** (RAISE Act) in late 2025; **4 more states** now require districts to adopt AI policies. Idaho's law mandates local district policies and AI-literacy standards and provides that **no AI may replace or eliminate a human teacher**. Live bills: **CA A.B. 1159** (no training on student data unless the school benefits), **VT HB 650** (annual edtech provider registration and privacy certification), **OR S.B. 1546** (minor-protective design, reducing compulsive use), **VA S.B. 394** (teacher-training guidance) |
+| EMEA | 🟢 **A corroboration, not news — and it corrects a regression inside this KB.** Independent secondary sources confirm the **Digital Omnibus** deferral: the Council gave final approval **2026-06-29**, moving **Annex III stand-alone high-risk — education named explicitly — from 2026-08-02 to 2027-12-02**, with Annex I embedded moving 2027-08-02 → **2028-08-02**. **Article 50 transparency did not move.** 🔴 **This KB's own pass-32 sections had reverted to *"full enforcement from August 2026"*** in `compose/patterns.md` P38, `intel/trends.md` and `intel/market.md` — corrected this pass. ⚠️ **Primary text still unverifiable:** `eur-lex.europa.eu` → **000** |
+| APAC | 🟢 **Three comprehensive AI statutes now in force.** **Vietnam's Law on AI** effective **2026-03-01**; **South Korea's AI Basic Act** in force **2026-01-22**, scoping *"high-impact AI"* in healthcare, **education**, finance, employment and essential services; **Taiwan's AI Basic Act** passed **2025-12**. Adoption **65–75% (2025) → 80–90% (2026 projected)**. Named players: Google, Microsoft, IBM, Pearson, Byju's |
+| LATAM | 🟢 **The richest regional return of this pass, and it is a governance story.** Digital Education Council survey of **7,319 faculty across 29 institutions**: **72%** hold positive views of AI in education vs **57%** globally, and **79%** use AI in teaching — but **88%** report only *minimal to moderate* engagement. **87%** of institutions use AI in at least one area while **only 26% have a formal AI strategy**. **Uruguay** became the first LATAM country to sign the Council of Europe's **Framework Convention on AI**. **UNESCO launched its Observatory on AI in Education for Latin America and the Caribbean on 2026-04-14**. **Latam-GPT** (CENIA Chile, 60+ institutions across 15 countries, ~**$550k**, funded largely by **CAF**) — tooling MIT, weights non-OSI; see `P463` |
 
 🔵 **No region returned nothing this pass.** The weakest return was EMEA, and only because the
 regional channel reproduced a date this KB had already corrected — which is how the pass-32
@@ -51835,11 +51915,11 @@ organisational identity. **5 of 11 place; 6 do not.**
 
 | Repo | Region | Evidence |
 |---|---|---|
-| `facebookresearch/seamless_communication` | **North America** | Meta's research organisation |
-| `openstax/osbooks-biology-bundle` | **North America** | 🟢 README names **Rice University** — confirms pass 27's guess |
-| `Khan/tutoring-accuracy-dataset` | **North America** | the `Khan` organisation; ⚠️ its README is **0 bytes**, so org identity alone |
-| `Jona-Zwetsloot/Somtoday-Mod` | **EMEA** | 🟢 README built around **Somtoday**, the Dutch SIS |
-| `digillab-lmu/smart-rag` | **EMEA** | 🟢 README names **LMU München**, in German |
+| `facebookresearch/seamless_communication` | North America | Meta's research organisation |
+| `openstax/osbooks-biology-bundle` | North America | 🟢 README names **Rice University** — confirms pass 27's guess |
+| `Khan/tutoring-accuracy-dataset` | North America | the `Khan` organisation; ⚠️ its README is **0 bytes**, so org identity alone |
+| `Jona-Zwetsloot/Somtoday-Mod` | EMEA | 🟢 README built around **Somtoday**, the Dutch SIS |
+| `digillab-lmu/smart-rag` | EMEA | 🟢 README names **LMU München**, in German |
 
 ⚠️ **`sign/translate` does not place.** Its README, read this pass, names **no country at
 all** — so pass 27's guess is neither confirmed nor refuted. A plausible region that survives
@@ -54128,12 +54208,12 @@ exist.
 
 | Region | Market / instrument | The headline date this KB carried | What the transition article actually says | The date that governs an existing system |
 |---|---|---|---|---|
-| **EMEA** | EU AI Act, **Art. 111** | Annex III high-risk applies **2027-12-02** | A high-risk system lawfully placed on the market before the high-risk rules apply may continue **without retrofit or additional certification, provided its design remains unchanged**. Providers and deployers of high-risk AI **intended to be used by public authorities** must comply **by 2 August 2030**. AI inside Annex X large-scale IT systems placed before **2027-08-02** → comply by **2030-12-31** | 🟢 **2030-08-02** for a public-authority deployment — which in education means most ministries and state universities |
-| **APAC** | Vietnam, law **134/2025/QH15** | *"in force 2026-03-01"* | Existing systems must be brought into compliance by **2027-03-01**; **health, education and finance get until 2027-09-01** | 🟢 **2027-09-01** for education — **18 months later than the date in this KB's summary tables** |
-| **APAC** | Vietnam, Decree **142/2026/ND-CP** (the procedural limb) | *(not previously recorded)* | Effective **2026-05-01**: within **60 days**, i.e. **before 2026-06-30**, a transitioning organisation must file a **notice plus a transition plan** on the one-stop portal | 🔴 **2026-06-30 — already passed** |
-| **APAC** | South Korea, **Framework Act** | In force **2026-01-22** | Enforcement decree and amendment effective **2026-07-21**, when high-impact duties became real duties; **fact-finding investigations and administrative fines deferred at least one year** (→ ~**2027-07-21**); 🔴 **the generated-content labelling duty has no grace period at all** | ⚠️ **Split**: labelling now, everything else ~2027-07-21 |
-| **LATAM** | Peru, law **31814** + *reglamento* **DS 115-2025-PCM** | Reglamento in force **2026-01-22** | Sector obligations for **health, EDUCATION, justice, security, economy and finance activated 2026-09-10**; staged compliance **one to four years from September 2025**, by sector and organisation size | 🔴 **2026-09-10 — already passed**, a month before this pass ran |
-| **North America** | DOJ **ADA Title II** interim final rule | **2027-04-26 / 2028-04-26** | ⚠️ **Informed gap: there is no transition article to read, because there is no binding federal high-risk AI statute.** State duties (California **AB 1159**, Idaho **SB 1227**, Oklahoma, Maryland) attach at enactment, without a transition regime. The DOJ extension already recorded in the nineteenth pass **is** North America's transition analogue | **2027-04-26** for entities serving ≥50,000 |
+| EMEA | EU AI Act, **Art. 111** | Annex III high-risk applies **2027-12-02** | A high-risk system lawfully placed on the market before the high-risk rules apply may continue **without retrofit or additional certification, provided its design remains unchanged**. Providers and deployers of high-risk AI **intended to be used by public authorities** must comply **by 2 August 2030**. AI inside Annex X large-scale IT systems placed before **2027-08-02** → comply by **2030-12-31** | 🟢 **2030-08-02** for a public-authority deployment — which in education means most ministries and state universities |
+| APAC | Vietnam, law **134/2025/QH15** | *"in force 2026-03-01"* | Existing systems must be brought into compliance by **2027-03-01**; **health, education and finance get until 2027-09-01** | 🟢 **2027-09-01** for education — **18 months later than the date in this KB's summary tables** |
+| APAC | Vietnam, Decree **142/2026/ND-CP** (the procedural limb) | *(not previously recorded)* | Effective **2026-05-01**: within **60 days**, i.e. **before 2026-06-30**, a transitioning organisation must file a **notice plus a transition plan** on the one-stop portal | 🔴 **2026-06-30 — already passed** |
+| APAC | South Korea, **Framework Act** | In force **2026-01-22** | Enforcement decree and amendment effective **2026-07-21**, when high-impact duties became real duties; **fact-finding investigations and administrative fines deferred at least one year** (→ ~**2027-07-21**); 🔴 **the generated-content labelling duty has no grace period at all** | ⚠️ **Split**: labelling now, everything else ~2027-07-21 |
+| LATAM | Peru, law **31814** + *reglamento* **DS 115-2025-PCM** | Reglamento in force **2026-01-22** | Sector obligations for **health, EDUCATION, justice, security, economy and finance activated 2026-09-10**; staged compliance **one to four years from September 2025**, by sector and organisation size | 🔴 **2026-09-10 — already passed**, a month before this pass ran |
+| North America | DOJ **ADA Title II** interim final rule | **2027-04-26 / 2028-04-26** | ⚠️ **Informed gap: there is no transition article to read, because there is no binding federal high-risk AI statute.** State duties (California **AB 1159**, Idaho **SB 1227**, Oklahoma, Maryland) attach at enactment, without a transition regime. The DOJ extension already recorded in the nineteenth pass **is** North America's transition analogue | **2027-04-26** for entities serving ≥50,000 |
 
 ### 🔴 Finding 3 — the commercially important half: an AI modernisation project is the event that destroys the extension
 
@@ -54448,11 +54528,11 @@ This is the pass's thesis, and it reframes the compliance offer.
 
 | Region | The 2026 instrument | What happened in 2026 | The technical standard |
 |---|---|---|---|
-| **North America** | DOJ rule under **ADA Title II** (published 2024-04-24) | 🔴 **Interim Final Rule, 2026-04-20**: deadlines extended **one year** — **2027-04-26** for public entities serving ≥50,000, **2028-04-26** for <50,000 and special districts. DOJ's own commentary: it had *"overestimated the capabilities (whether staffing or technology) of covered entities to comply… in the time frames provided"* | **WCAG 2.1 Level AA — unchanged** |
-| **EMEA** | **EU AI Act** Annex III §3 | 🔴 Deferred **2026-08-02 → 2027-12-02** (Reg. (EU) 2026/1744) | Conformity duties unchanged |
-| **EMEA** | **European Accessibility Act** (Dir. (EU) 2019/882), in force since **2025-06-28** | ⚠️ **No deadline moved — but as of 2026-07-20 no version of EN 301 549 had been cited in the Official Journal under the EAA at all.** The draft that would do it, **v4.1.0 (November 2025)**, was still in combined Public Enquiry and Vote, running to **August 2026** | **EN 301 549** ≈ WCAG 2.1 AA for web content |
-| **APAC** | No cliff — standing mandates | 🟢 **Nothing moved, because nothing was pending.** India: **RPwD Act 2016** + **GIGW 3.0**, WCAG 2.1 AA, government portals including education. Japan: **JIS X 8341-3:2016** ≈ WCAG 2.0 AA, **mandatory** for government, encouraged for private. Australia: **AHRC guidance (April 2025)** affirming **WCAG 2.2 AA** as the minimum under the 1992 Disability Discrimination Act, plus the DTA **Digital Experience Policy** for new government services | WCAG 2.0 AA → 2.2 AA depending on country |
-| **LATAM** | 🔴 **No accessibility deadline found in any market** | The driver is a **programme**, not a rule: UNICEF's **Accessible Digital Textbooks** initiative | Universal Design for Learning, not a conformance standard |
+| North America | DOJ rule under **ADA Title II** (published 2024-04-24) | 🔴 **Interim Final Rule, 2026-04-20**: deadlines extended **one year** — **2027-04-26** for public entities serving ≥50,000, **2028-04-26** for <50,000 and special districts. DOJ's own commentary: it had *"overestimated the capabilities (whether staffing or technology) of covered entities to comply… in the time frames provided"* | **WCAG 2.1 Level AA — unchanged** |
+| EMEA | **EU AI Act** Annex III §3 | 🔴 Deferred **2026-08-02 → 2027-12-02** (Reg. (EU) 2026/1744) | Conformity duties unchanged |
+| EMEA | **European Accessibility Act** (Dir. (EU) 2019/882), in force since **2025-06-28** | ⚠️ **No deadline moved — but as of 2026-07-20 no version of EN 301 549 had been cited in the Official Journal under the EAA at all.** The draft that would do it, **v4.1.0 (November 2025)**, was still in combined Public Enquiry and Vote, running to **August 2026** | **EN 301 549** ≈ WCAG 2.1 AA for web content |
+| APAC | No cliff — standing mandates | 🟢 **Nothing moved, because nothing was pending.** India: **RPwD Act 2016** + **GIGW 3.0**, WCAG 2.1 AA, government portals including education. Japan: **JIS X 8341-3:2016** ≈ WCAG 2.0 AA, **mandatory** for government, encouraged for private. Australia: **AHRC guidance (April 2025)** affirming **WCAG 2.2 AA** as the minimum under the 1992 Disability Discrimination Act, plus the DTA **Digital Experience Policy** for new government services | WCAG 2.0 AA → 2.2 AA depending on country |
+| LATAM | 🔴 **No accessibility deadline found in any market** | The driver is a **programme**, not a rule: UNICEF's **Accessible Digital Textbooks** initiative | Universal Design for Learning, not a conformance standard |
 
 🔵 **What this does to the offer.** A compliance sprint sells against a date. **Three of these dates
 moved in 2026 and the obligations behind them did not**, so the sprint pitch is now the weakest
@@ -55564,9 +55644,9 @@ an untried door onto Japanese education software; it is the same door.**
 
 | Repo | Licence (payload) | ★ | Region | Note |
 |---|---|---|---|---|
-| [`armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | **MIT** (`LICENSE`) | 0 | **LATAM** | 8-step agent curriculum, **local-only** (Qwen 3.5-4B via LM Studio), MCP + human-in-the-loop. Unisinos, Brazil. Shelved in `agents/top.md`. |
-| [`bonafe/inteligencia-aberta`](https://github.com/bonafe/inteligencia-aberta) | **MIT** (`LICENSE`) | 2 | **LATAM** | Python/FastAPI + **LangGraph** + **Qdrant** + PostgreSQL civic-analysis agent platform, multi-tenant, federating across machines. Brazil (Bonafé · Américo). **Not education** — recorded in `repos/foundations.md` as a reference architecture, not on the education shelf. |
-| [`HKUDS/ClawTeam`](https://github.com/HKUDS/ClawTeam) | **MIT** (`LICENSE`) | 5.5k | **APAC** | Agent-swarm orchestration. **Not education.** Recorded with its exclusion reason in `agents/top.md` — it is what an *organisation sweep* of the DeepTutor org wrongly returns. |
+| [`armandokeller/SAEP2026-Agentes-IA-e-Ferramentas`](https://github.com/armandokeller/SAEP2026-Agentes-IA-e-Ferramentas) | **MIT** (`LICENSE`) | 0 | LATAM | 8-step agent curriculum, **local-only** (Qwen 3.5-4B via LM Studio), MCP + human-in-the-loop. Unisinos, Brazil. Shelved in `agents/top.md`. |
+| [`bonafe/inteligencia-aberta`](https://github.com/bonafe/inteligencia-aberta) | **MIT** (`LICENSE`) | 2 | LATAM | Python/FastAPI + **LangGraph** + **Qdrant** + PostgreSQL civic-analysis agent platform, multi-tenant, federating across machines. Brazil (Bonafé · Américo). **Not education** — recorded in `repos/foundations.md` as a reference architecture, not on the education shelf. |
+| [`HKUDS/ClawTeam`](https://github.com/HKUDS/ClawTeam) | **MIT** (`LICENSE`) | 5.5k | APAC | Agent-swarm orchestration. **Not education.** Recorded with its exclusion reason in `agents/top.md` — it is what an *organisation sweep* of the DeepTutor org wrongly returns. |
 
 ⚠️ **Two of the three licensed finds are not education software, and the one that is has
 zero stars.** That is the honest read of the channel: **the language was the wrong

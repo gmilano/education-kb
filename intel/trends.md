@@ -603,8 +603,8 @@ Two regions carried zero placed agent rows on `agents/top.md`. Both closed insid
 
 | Region | Closed at | Leg that closed it | What the mandated English legs returned |
 |---|---|---|---|
-| **LATAM** | p663 | **Spanish** | nothing in scope |
-| **EMEA** | p664 | **German** — first attempt | nothing in scope, 7th consecutive pass |
+| LATAM | p663 | **Spanish** | nothing in scope |
+| EMEA | p664 | **German** — first attempt | nothing in scope, 7th consecutive pass |
 
 The four mandated English-language supply legs have now returned **zero in-scope novel addresses for seven consecutive passes**, and the trending digests have gone **twenty** passes without a yield. In the same window, non-English legs produced `TutorIA`, `Profe Bit`, `EduRAG` and `RUCAI` — every regionally placed row added since p662.
 
@@ -1095,3 +1095,28 @@ This base's standing objection to the education platform layer is licence-shaped
 
 🔴 **The limit, stated so the trend is not over-applied.** This buys access, not control: you cannot change platform behaviour from outside it, and anything you need *inside* the platform is still copyleft. It also assumes the API is public and adequate — and `pressbooks-cli`'s README is a catalogue of how inadequate a real one can be (no directory endpoint, a `search` parameter accepted and discarded, `per_page` hard-capped at `10`, `403` to an unrecognised `User-Agent`). **The licence problem moves to an engineering problem, which is the trade worth making, not a free lunch.**
 
+
+## T75 — The next binding education-AI deadline in North America is a **funding** rule, and it buys outcome plumbing rather than AI 🟢 new at p682
+
+Every deadline this file has tracked in North America has been a *restriction*: state bills, exam bans, district policy mandates. **Workforce Pell is the first one that is a cheque.** The US Department of Education's final rule extends Pell eligibility to **short-term programmes** — roughly **`150`–`599` clock hours**, about **8–15 weeks** — **generally effective `2026-07-20`, with optional early implementation from `2026-07-01`**, offered only by accredited institutions, with **governors and state workforce boards** designating high-demand industries and approving programmes.
+
+🟢 **The trend is in the eligibility condition, not in the money.** A programme keeps Workforce Pell only by passing **completion, outcome and earnings tests, per programme, over time** — and a programme with zero or negative value-added earnings **loses eligibility**. That converts a funding opportunity into a **longitudinal, auditable, per-programme reporting obligation**, landing on community and technical colleges and continuing-education arms: precisely the institutions whose student-records estate is thinnest and whose BI layer is a spreadsheet.
+
+| What the rule demands | What answers it on these shelves | Licence |
+|---|---|---|
+| per-learner activity and completion evidence | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (`144★`) over [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (`955★`) | 🟢 Apache-2.0 / permissive |
+| roster and programme identity across systems | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster), [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 permissive |
+| at-risk detection before the completion test fails | [`Saidkhusayn/student-dropout-early-warning`](https://github.com/Saidkhusayn/student-dropout-early-warning) | 🟢 **MIT** (+ `CC BY 4.0` data carve-out) |
+| credential evidence | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 permissive |
+
+🔵 **Why this generalises past one US rule.** The pattern — *a regulator funds a programme and makes the money conditional on measured outcomes* — is the strongest buying trigger this file has found in any region, because it is **dated, statutory, and unambiguous about what must be produced**. `T3` recorded that governance became the buying trigger when usage outran policy; `T75` is the sharper form: **the buying trigger is an audit you cannot pass with a spreadsheet.** 🔴 **The limit, stated so the trend is not over-sold: none of this is AI.** The compliance work is data plumbing, and an engagement that leads with an AI tutor will lose to one that leads with an earnings-linkage report. The AI is what you sell *second*.
+
+## T76 — A closed vocabulary decays silently, and the report that it was fixed is the most dangerous artefact it produces 🔴 new at p682
+
+This KB's `Region` field is a closed vocabulary of five values. At p682 it held **`114` distinct strings**, with **`367` of `795` cells (46 %) outside the vocabulary**: `**EMEA**` beside `EMEA`, `🟢 **LATAM**` beside `LATAM`, `EMEA (Finland)`, `APAC 🇨🇳`, `Global (unplaced)`, `Not placed`, `—`, and in seven rows an entire sentence of prose sitting in the field a filter reads.
+
+🔴 **The failure mode is not untidiness — it is partial answers that look complete.** A reader filtering `Global` lost the `38` rows spelled `Global (unplaced)`. A reader filtering `EMEA` lost the `32` spelled `**EMEA**` and the `8` spelled `EMEA (Finland)`. **Nothing in the output was marked wrong**, because a bucket of size zero and a bucket that was never queried are indistinguishable downstream. This is the same shape as `T73` (a licence field with no direction) and `682-C` (two rows for one subject): **in each case the defect is invisible to the consumer of the data and visible only to a census.**
+
+🔵 **The decay mechanism, which is the transferable part.** Each individual deviation was *locally reasonable*: bolding a region to match the row's typography, appending `(Finland)` because the country is the useful fact, writing `Not placed` because it is more honest than `Global`. **A closed vocabulary cannot absorb local reasonableness** — every well-meant annotation is a new bucket. The field must carry the value and **nothing else**, with the country, the evidence class and the confidence living in prose or in their own fields.
+
+🔴 **And the most dangerous artefact was the fix report.** `p669` recorded this column *normalised* — truthfully, for one table out of eight — and that note then stood for thirteen passes as evidence the problem was handled, which is why it was never re-measured. **A repair stated at the top of one file is not a repair of the base.** The rule p682 adopts: **a normalisation claim must publish the census it is derived from, before and after, over every file it claims to cover** — `114` → `8` distinct, `367` → `3` non-conforming, and all three survivors shown to be non-placements (`Verdict`, `Adopcion`, `mixed`). ⚠️ **The residue is honest and unresolved:** `Global` now means both *truly global* and *not placed*, `240` cells hold it, and a sixth value would re-break the filter. The right fix is a `placed: true|false` field beside the region.

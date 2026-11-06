@@ -1647,12 +1647,12 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 
 | Role | Repo | Grant (read at p680) | Region | `f/★` | Note |
 |---|---|---|---|--:|---|
-| **Algorithms / CS fundamentals** | [`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation) | 🟢 **MIT** `1,074 B` `9908478c70da` | **North America** | `0.274` | 🔴 default ref is **`master`**; `2,546★`, maintained since 2016 |
-| **AI / ML, French, with a .NET track** | [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) | 🟢 **MIT** `1,075 B` `d5305ab1bbe1` | **EMEA** | 🔴 **`9.563`** | Jupyter; **C#/Python twins** on .NET Interactive, plus Lean 4 |
-| **Agent construction, Chinese** | [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code) | 🟢 **MIT** `1,080 B` `35c4b4f6b5b9` | **APAC** | `0.153` | 🔴 copyright line names a *different* project (`680-G`) |
-| **Integrity / similarity** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT (already on this base) | EMEA (Ghent University) | — | 🔴 **the only live permissive option in its layer** (`680-B`) |
-| **Autograding** | [`anubislms/anubis`](https://github.com/anubislms/anubis) | MIT (foundations shelf, p677) | — | — | distributed LMS for automated CS assignment grading |
-| **Retention** | `fsrs4anki` / `fsrs-rs` (foundations shelf) | MIT / BSD-3-Clause | — | — | scheduling, per `P35` |
+| **Algorithms / CS fundamentals** | [`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation) | 🟢 **MIT** `1,074 B` `9908478c70da` | North America | `0.274` | 🔴 default ref is **`master`**; `2,546★`, maintained since 2016 |
+| **AI / ML, French, with a .NET track** | [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) | 🟢 **MIT** `1,075 B` `d5305ab1bbe1` | EMEA | 🔴 **`9.563`** | Jupyter; **C#/Python twins** on .NET Interactive, plus Lean 4 |
+| **Agent construction, Chinese** | [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code) | 🟢 **MIT** `1,080 B` `35c4b4f6b5b9` | APAC | `0.153` | 🔴 copyright line names a *different* project (`680-G`) |
+| **Integrity / similarity** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT (already on this base) | EMEA | — | 🔴 **the only live permissive option in its layer** (`680-B`) 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: Ghent University)* |
+| **Autograding** | [`anubislms/anubis`](https://github.com/anubislms/anubis) | MIT (foundations shelf, p677) | Global | — | distributed LMS for automated CS assignment grading 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* |
+| **Retention** | `fsrs4anki` / `fsrs-rs` (foundations shelf) 🔵 *(region detail, moved out of the closed-vocabulary `Region` column at p682: unplaced)* | MIT / BSD-3-Clause | Global | — | scheduling, per `P35` |
 
 **The build.**
 
@@ -1704,3 +1704,33 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 
 🔴 **Known gap, stated:** the corpus is overwhelmingly English. `pressbooks-cli`'s bundled networks are North American and European, and no Spanish- or Portuguese-language OER network was located this pass. **For a LATAM engagement, step 1 is a network-discovery exercise, not a search** — and the bundled-list mechanism is the right place to put the answer.
 
+
+## P57 — The Moodle agent with the write surface split by audience: one read-only server for learners, one draft-only server for graders, one gated server for registrars (any region running Moodle; 3–4 weeks to a pilot cohort) 🆕 new at p682
+
+**What changed at p682.** This base held three agent-reachable surfaces into Moodle and **all three could write**, which meant `P42`'s human gate had to sit in front of every one of them — including the learner-facing question-answering use case, where a gate makes no sense and a write tool is pure liability. [`fabioov/moodle-mcp`](https://github.com/fabioov/moodle-mcp) (**MIT**, filed at p682) closes that hole: **every tool is read-only by construction**, so there is nothing to gate. The pattern is the resulting split — *the audience determines which server is mounted, and the server's tool surface enforces it, not a prompt.*
+
+### The parts — all on these shelves, all byte-read
+
+| Role | Repo | Grant | Write surface | Region |
+|---|---|---|---|---|
+| **Learner-facing Q&A** | [`fabioov/moodle-mcp`](https://github.com/fabioov/moodle-mcp) | 🟢 **MIT** `1,107 B` sha256₁₂ `4649f967df1b` | 🟢 **none — read-only by construction** (`get_site_info`, `list_courses`, `get_course_contents`, assignments, deadlines, grades, forums, notifications) | Global |
+| **Grader-facing** | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **MIT** | 🟡 **drafts only** — fetches submissions, writes **unreleased** grade drafts (`7` tools, stdio); a human releases | Global |
+| **Registrar / admin** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (`45★`) | 🟢 **MIT** | 🔴 **full write** — courses, students, assignments, quizzes. **`P42` gate mandatory** | Global |
+| **Grading judgement + calibration** | [`yasserhegazy/lab-grader-skill`](https://github.com/yasserhegazy/lab-grader-skill) | 🟢 **MIT** | builds the rubric from the assignment and **waits for approval before grading anyone**; 5-student pilot to calibrate; emits `grades.csv` + a **Moodle import CSV** | EMEA |
+| **Grounding on Moodle's own docs** | [`moodlehq/wiki-rag`](https://github.com/moodlehq/wiki-rag) (`53★`) | 🟢 **BSD-3-Clause** | read-only; MediaWiki → Milvus, exposed as **MCP + OpenAI-compatible endpoints**. **Owned by Moodle HQ** | Global |
+| **The platform** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | — | Global |
+
+### How it wires together
+
+1. **Mount by audience, and let the tool surface be the permission model.** Students get `fabioov/moodle-mcp` and nothing else — no write tool exists in the process, so no prompt, system message or jailbreak can cause a grade to move. Graders get `toshieji/moodle-grading-mcp`, whose worst case is an **unreleased draft**. Registrars get `peancor/moodle-mcp-server` behind the `P42` gate. 🔵 **This is the whole point: three trust levels implemented as three binaries, not as three instructions.** A single full-write server with "please only read" in the prompt is the same system with the safety property deleted.
+2. **Keep the model off the rubric.** `lab-grader-skill` derives the rubric from the assignment file and **blocks until a human approves it**, then grades a **5-student pilot** so the grader can calibrate before anything runs at scale. Grade the cohort only after the pilot is signed off.
+3. **Escalate on confidence, not uniformly.** Grade in parallel with cheap models; route only flagged, low-confidence and calibration-spot-check cases to a stronger model. This is what makes a 300-student cohort affordable.
+4. **Write back through the CSV, not through the API, for the first term.** `lab-grader-skill` emits a **Moodle import CSV**; importing it is a human action with a diff the registrar can read. Promote to `toshieji`'s draft-write path once the institution trusts the numbers, and to `peancor`'s full-write path only if it ever genuinely needs to.
+5. **Ground answers in Moodle's own documentation with `wiki-rag`** — and note *who owns it*: Moodle HQ. For "how does this institution's Moodle behave" questions, that beats a general model guess, and it is **BSD-3-Clause**, so it composes freely.
+6. **Stay outside the GPL boundary.** Every component above is a **separate process talking to Moodle over its web-services API** — the `T74` shape. None of it links Moodle's code, so none of it inherits **GPL-3.0**. 🔴 **The boundary breaks the moment you fork Moodle or write a plugin that runs in-process**: a plugin is a derivative work, and the MIT client you built becomes a GPL obligation. If the pilot's conclusion is "we need a Moodle plugin", that is a licensing decision for the client's counsel, not a sprint item.
+
+### 🔴 What this pattern does not claim
+
+- **Adoption.** `fabioov/moodle-mcp` is at **`0★ / 0 forks`, `12` commits**. It is filed for the *shape* of its tool surface, not for traction, and a client should read it end to end before mounting it — which is cheap precisely because it is small and read-only. `peancor/moodle-mcp-server` was last pushed **`2026-02-22`** and is **~8 months stale**; verify it against the institution's Moodle version before quoting it.
+- **That read-only means safe.** It means **no writes**. A read-only server still exposes grades, submissions and forum content to whatever model is behind it — so the data-protection question (where the tokens live, which model sees student records, what the EU AI Act Article 50 transparency duty requires from **`2026-08-02`**) is unchanged and must be answered separately.
+- **That the grading is accurate.** `lab-grader-skill`'s AI-authorship and copying detectors emit **evidence and a question to ask the student**, not verdicts. Under the EU AI Act, assessment of learning outcomes is **Annex III high-risk** (obligations now **`2027-12-02`**), and anything that looks like automated academic-integrity judgement needs a human decision-maker on the record.
