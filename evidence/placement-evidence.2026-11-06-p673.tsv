@@ -1,0 +1,17 @@
+address	region	channel	evidence_string	source_file	strength
+openfun/ralph	EMEA	named institution in the GRANT PAYLOAD	Copyright (c) 2020-present France Universite Numerique	LICENSE.md@main	STRONGEST
+thm-mni-ii/feedbacksystem	EMEA	named institution in the GRANT PAYLOAD	Copyright 2021 Technische Hochschule Mittelhessen	LICENSE@dev	STRONGEST
+Cvmcosta/ltijs	LATAM	named institution + ccTLD in repository files	Federal University of Maranhao and UNA-SUS/UFMA; portais.ufma.br	README.md@master	STRONGEST
+bncc-dev/bncc-dados	LATAM	national curriculum authority + corporate form in payload	BNCC/MEC/CNE; Copyright (c) 2026 Profy Tecnologias Educacionais Ltda	README.md+LICENSE@main	STRONG
+cortega26/chile-hub	LATAM	country named in repository files (Spanish)	Datos publicos de Chile; 8 in-body Chile references	README.md@main	STRONG
+menthorlabs/menthor	LATAM	body-text language (Portuguese), p669 class	projeto/programacao/ensino/comunidade	README.md@main	MODERATE
+satvik314/educhain	APAC	ccTLD in the GRANT PAYLOAD	Copyright (c) 2024-2025 Educhain (https://educhain.in)	LICENSE@main	STRONG
+pupilfirst/pupilfirst	APAC	corporate form in the GRANT PAYLOAD (673-C)	Copyright (c) 2013-present Pupilfirst Pvt. Ltd.	LICENSE@master	MODERATE-region-only
+1EdTech/openbadges-validator-core	North America	standards body named in repository files	IMS Global Learning Consortium	README.md@develop	MODERATE
+LongsightGroup/qti3	North America	corporate form in the GRANT PAYLOAD (673-C)	Copyright (c) 2026 Longsight, Inc.	LICENSE.md@main	MODERATE-region-only
+Ed-Fi-Alliance-OSS/edfi-oneroster	North America	governing body of the data standard	Ed-Fi Data Standard / Ed-Fi ODS (Ed-Fi Alliance)	README.md@main	WEAK-declared
+UniTime/unitime	REFUSED	region ENUMERATION, not a placement	universities in North America and Europe	README.md@master	REFUSED-p669-discipline
+terracotta-education/terracotta	REFUSED	no country evidence in repository files	none found	README.md@development	REFUSED
+jdolny/OneRoster.NET	REFUSED	copyright holder names no region	Copyright (c) 2020 theopenem	LICENSE@master	REFUSED
+peancor/moodle-mcp-server	REFUSED	no region evidence in repository files	none found	README.md@main	REFUSED
+bruchris/canvas-lms-mcp	REFUSED	no region evidence in repository files	none found	README.md@main	REFUSED

@@ -1,0 +1,4 @@
+address	api_spdx_id	byte_read_family	mechanism	permissive
+pupilfirst/pupilfirst	NOASSERTION	MIT (code) + CC BY-SA 4.0 (docs/)	SPLIT GRANT: a scope preamble precedes the verbatim MIT text	YES-for-code
+Apereo-Learning-Analytics-Initiative/OpenLRW	NOASSERTION	ECL-2.0	LICENCE THE CLASSIFIER DOES NOT KNOW (OSI-approved, Apache-derived)	YES
+thm-mni-ii/feedbacksystem	NOASSERTION	Apache-2.0	APPENDIX STRIPPED (-524 normalised) defeats a full-file classifier	YES

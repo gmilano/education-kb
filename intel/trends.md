@@ -790,3 +790,37 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 🔵 **For an engagement.** The inventory question a client asks is *"what are we allowed to do with this?"* and the artefact most tools hand back answers *"what family is this in?"*. Those come apart precisely on the licences that restrict commercial use — which is to say, precisely where the answer matters. **A licence column in an SBOM is a triage field, not a finding**, and the deliverable that is worth money is the short list of payloads actually read.
 
 **Confidence.** 🟢 **High on the mechanism** — three readers, one payload, three answers, all four reproduced first-hand at p672 with the byte read as ground truth (`20,849 B`, `sha256₁₂ 1349a4b61484`), and the reference-text defect reproduced at both signs on five further payloads. 🟡 **Medium on the breadth claim** — the three failure modes are each evidenced here on one or two specimens, not surveyed across a corpus; the *family-collapse* mode in particular is demonstrated on Creative Commons and is predicted, not shown, for dual and split grants.
+
+## T54 — The interoperability layer is where open source education software is still permissive, and it is specification-complete 🆕 new at p673
+
+**`T50` established the floor:** the **student-information layer** — the system of record — is where open source education software stops being permissive (GPL-2.0 `i-educar`, LGPL-3.0 `fenixedu-academic`, AGPL-3.0 Open edX) *and* stops being adopted at scale. That trend has held for `25` passes and is not revised here.
+
+**`T54` is its corollary, and it is the more useful half:** the layer **immediately above** the SIS is almost entirely **MIT / Apache-2.0 / ECL-2.0**, and every standard in it has a working permissive implementation this base has now read byte-for-byte:
+
+| Standard | What it carries | Permissive implementation | Licence (byte-read) |
+|---|---|---|---|
+| **LTI 1.3 / Advantage** | launch, identity, roles, course context, grade return | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 (`11,361 B`) |
+| **xAPI** | learning-activity records | [`openfun/ralph`](https://github.com/openfun/ralph) | MIT (`1,094 B`) |
+| **xAPI + Caliper (warehouse)** | institution-scale analytics store | [`Apereo…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **ECL-2.0** (`9,878 B`) |
+| **OneRoster 1.2** | rosters, enrolments, classes | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) · [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | Apache-2.0 · MIT |
+| **QTI 3** | portable assessment items | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | MIT (`1,072 B`) |
+| **Open Badges** | verifiable credentials | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | Apache-2.0 (`13,185 B`) |
+| **(evaluation)** | randomised trials in a live course | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | Apache-2.0 (`11,323 B`) |
+
+🟢 **Why this changes the engagement shape.** The integration surface has historically been the expensive, bespoke, re-written-every-time part of an education project, and the copyleft SIS underneath it has been treated as the blocker. `T54` says the blocker is routable: **nobody has to relicense or replace the system of record** — the work is to put a permissive, standards-conformant **adapter** in front of it. `edfi-oneroster` is the specimen: a OneRoster 1.2 API served from an Ed-Fi ODS, Apache-2.0, `6★`. Adoption is negligible and that is the point — this layer is **specification-driven, not popularity-driven**, so a six-star repository implementing a certified standard is a safer dependency than a six-thousand-star one implementing nobody's.
+
+🔴 **The cost this trend carries.** These components are **maintained thinly**: `OpenLRW` ~14 months stale, `openbadges-validator-core` ~12, `OneRoster.NET` **three years**. Permissive and specification-complete does **not** mean actively maintained, and every one of those rows is filed with its staleness as a headline rather than a footnote. The correct reading is *fork base*, not *dependency* — and that maintenance cost belongs in the estimate.
+
+🟡 **Standing prediction, falsifiable:** if `T54` is right, the next genuinely novel education supply this base finds will be **adapters and evaluators**, not tutors. `p673` found `9` of the former and `0` of the latter from the same eight legs that have returned tutors for `25` passes.
+
+## T55 — The licence label from an index is now wrong in both directions on this base, and only the byte read is load-bearing 🆕 new at p673
+
+**`T47` recorded three mechanisms by which an index and a payload disagree. `T53` sharpened it: every instrument agrees on the *family* and disagrees on the *terms that decide usability*. `T55` closes the loop by establishing the two signs, measured one pass apart:**
+
+- 🔴 **Fails UNSAFE — understates restrictions.** `672-D`: `July-Tea/EssayMate` is **CC BY-NC-SA 4.0** (NonCommercial — it bars the commercial derivative this KB exists to scope). `gh api` said `NOASSERTION`; this repository's own `ingest/probe-grant.sh` said **`CC-BY-4.0`**, collapsing the family and dropping both the `NC` and `SA` terms. A pipeline trusting either label ships a grant it must not.
+- 🔴 **Fails by HIDING SUPPLY — overstates restrictions.** `673-B`: three `NOASSERTION` labels in one pass, decomposing into **three unrelated mechanisms, all permissive** — a **split grant** whose scope preamble precedes verbatim MIT (`pupilfirst`), an **OSI-approved licence the classifier does not know** (`OpenLRW` → ECL-2.0), and a **verbatim Apache-2.0 body with the `APPENDIX` stripped** (`feedbacksystem`, `−524` normalised). A pipeline filtering on `spdx_id` discards all three.
+
+🟢 **The operational rule, and it is cheap:** **never filter candidates on `license.spdx_id`.** Treat `NOASSERTION` as an instruction to **byte-read**, not as a verdict. Read the payload from `raw.githubusercontent.com` at the **real default ref** — which `p673` found to be `master`, `development`, `develop` and `dev` for four of its `18` candidates, so reading at `main` would have returned `404` and been recorded as *no licence*.
+
+🔴 **And grade by normalised diff, not by length or hash.** `673-A`: `UniTime/unitime`'s payload is **`11,357 B`, the canonical Apache length exactly**, and hashes differently — a blank line added at byte `0` and the trailing newline dropped, `+1` and `−1` cancelling in length but not in hash. `671-R` said *hash, do not count*; `673-A` adds that **hash alone condemns an honest grant**. Length-equality is not identity; hash-inequality is not mutation. Both are descriptors; the normalised diff is the verdict.
+

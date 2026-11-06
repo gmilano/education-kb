@@ -1309,3 +1309,56 @@ A studio entering LATAM can spend those weeks building a tutor that will be the 
 🟢 **The regional fit, and it is the clearest demand-to-supply match `intel/market.md` records.** UNESCO's severe regional teacher shortage in LATAM makes **teacher time** the binding constraint, and marking written work is its largest single consumer — while the region's governance posture (`87%` of HEIs using AI, `26%` with a formal strategy, `55%` with no AI budget) means the *governance wrapper is the product* as much as the scorer is. In EMEA the same build is sold against **Annex III explainability and post-market surveillance** instead of against teacher hours.
 
 🔴 **The hard constraint, stated so nobody mis-sells this.** `23★`, `0` forks, `0` open issues, pushed `2026-01-10`, single author — and `agents/top.md`'s integrity-layer finding applies with full force: **a research-scale repository must not be carried into a high-stakes deployment.** This pattern is for **formative** assessment — practice, feedback, drafting — where a wrong score costs a student an afternoon, not a qualification. Summative use is a different engagement with a different liability profile, and the honest answer there is still that **the production artefact does not exist yet** and would be built, not adopted. 🔴 **And do not reach for `July-Tea/EssayMate` (`39★`) to fill the gap**: its grant is **CC BY-NC-SA 4.0** — NonCommercial — which bars the derivative entirely, a fact two separate classifiers got wrong (`672-D`, `T53`).
+
+## P43 — The interop spine: put an agent inside the LMS and the SIS without touching either (any region; North America and EMEA public sector first; 6–8 weeks) 🆕 new at p673
+
+**The problem this solves.** Every engagement on this base has the same hidden cost: the agent is the easy part, and **getting it legitimately inside the institution's systems is the expensive part**. `T50` says the system of record is copyleft and barely adopted; the instinct is to replace it, which no client will fund. `T54` says you do not have to — the layer above it is permissive and specification-complete. This pattern is that layer, wired.
+
+**Components — all byte-read permissive, all on this base's shelves:**
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| LMS launch + identity + grade return | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | Certified LTI 1.3 / Advantage. Moodle, Canvas, Blackboard, D2L, Open edX all launch it with roles and course context already negotiated. `373★`, pushed `2026-11-05`. |
+| Rosters + enrolments | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) (Apache-2.0) or [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) (MIT, ⚠️ 3 yrs stale) | Apache-2.0 / MIT | OneRoster 1.2 **in front of** the SIS. The SIS keeps its licence and its vendor; you consume a standard. |
+| Learning records | [`openfun/ralph`](https://github.com/openfun/ralph) (MIT) or [`Apereo…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) (ECL-2.0) | MIT / ECL-2.0 | xAPI statements out of the agent into a real LRS. `ralph` for a light deployment, `OpenLRW` for a warehouse. |
+| Assessment items | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | MIT | Agent emits **portable** QTI 3 items, not a vendor's JSON. Zero runtime dependencies. |
+| Credentials out | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | Apache-2.0 | Issue and verify Open Badges against the spec. |
+| The agent itself | any row on `agents/top.md` — e.g. [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0) for tutoring, [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) (Apache-2.0) for code feedback | Apache-2.0 | Swappable. **That is the point of the spine.** |
+
+**Wiring, in order.**
+
+1. **Stand up `ltijs` as the tool provider.** It owns the LTI handshake and the platform registration. Do this first: it is what makes everything downstream *attributable to a real student in a real course* rather than to an API key.
+2. **Point `ltijs`'s grade-return service at the agent's output**, not the reverse. The LMS gradebook stays the system of record for grades — you never write grades through a side channel.
+3. **Put `edfi-oneroster` (or `OneRoster.NET`) beside the SIS, read-only.** Roster in, nothing out. This is the step that avoids the `T50` relicensing trap and the step a client's security review will actually read.
+4. **Emit every agent decision as an xAPI statement into `ralph`.** Not logs — statements, with actor, verb, object and the LTI context from step 1. This is what makes step 5 and `P44` possible at all.
+5. **Gate every write-back behind a human**, per `P42`. `bruchris/canvas-lms-mcp` is the one row on this base that can write grades and comments from an MCP client; that capability is exactly why it needs the gate.
+6. **Emit credentials through `openbadges-validator-core`** only where the programme actually awards something.
+
+**What to tell the client, and what not to promise.** 🟢 The integration surface is free to build on and **standards-certified**, so it survives an LMS or SIS migration — which is the real sales argument, because every institution has lived through one. 🔴 These components are **thinly maintained** (`OneRoster.NET` three years stale, `OpenLRW` ~14 months, `openbadges-validator-core` ~12): fork them, pin them, and **put their maintenance in the estimate**. 🔴 Byte-read every grant yourself at the real default ref before shipping — `T55`, and note four of this layer's repositories default to `master`/`develop`/`development`/`dev`, so a tool reading `main` reports *no licence*.
+
+**Regional fit.** **North America** first: the NC/Maryland procurement calendar on `intel/market.md` names the **data**, and this pattern is a data-interface deliverable with a statutory driver. **EMEA** second: the same spine is the Annex III evidence trail (see `P44`). **LATAM**: `ltijs` is itself Brazilian-built (UFMA/UNA-SUS) — the reference is local. **APAC**: fits TEQSA's per-provider action plans.
+
+## P44 — Prove the intervention worked, or stop claiming it did (any region; EMEA first as AI Act evidence; 4–6 weeks on top of P43) 🆕 new at p673
+
+**The problem this solves.** Every AI-in-education claim this base has read for `25` passes is **someone's self-report**. `T49` wanted a real measurement layer; `p673` found it. This pattern turns "the tutor improved outcomes" from a marketing sentence into a defensible number — and in EMEA it does double duty as the artefact an Annex III high-risk deployment is **required** to produce.
+
+**Components:**
+
+| Role | Component | Licence |
+|---|---|---|
+| Randomised assignment + outcome collection **inside a live course** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | Apache-2.0 (`11,323 B`, residual `0`) |
+| LTI launch context (which student, which course, which condition) | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 |
+| Statement store the outcomes are read from | [`openfun/ralph`](https://github.com/openfun/ralph) | MIT |
+| Curriculum ground truth the outcome is measured *against* | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (Brazil) — or the local equivalent | MIT |
+| Judge, where the outcome is open-ended | [`OpenEuroLLM/JudgeArena`](https://github.com/OpenEuroLLM/JudgeArena) | Apache-2.0 |
+
+**Wiring.**
+
+1. **Install `terracotta` into the LMS over LTI** and define the experiment **before** the agent ships: two conditions, the outcome measure, the consent text. An experiment designed after the result is not an experiment.
+2. **Let `terracotta` assign the condition; let the agent read it from the LTI launch** via `ltijs`. The agent must not choose its own condition — that is the whole discipline.
+3. **Collect outcomes into `ralph`** as xAPI, keyed to the `terracotta` condition and the LTI context.
+4. **Score against a published rubric**, per `P42` — and where the rubric is a national curriculum, score against `bncc-dados`'s `1,721` provenance-tracked objectives rather than a model's recollection of them. Where the outcome is open-ended, swap judges with `JudgeArena` and report **judge disagreement**, not a single score.
+5. **Report the counterfactual, including when it is null.** A pattern that cannot return "no effect" is not a measurement pattern.
+
+**Why this sells.** 🟢 **EMEA:** the Omnibus moved stand-alone Annex III duties to **`2027-12-02`** — a fixed window, not relief. Logging, human oversight and data governance must be *evidenced*, and this is that evidence, assembled from permissive European public-sector components (`ralph` is France Université Numérique's). 🟢 **LATAM:** UNESCO IESALC measured `87%` adoption against `26%` with any framework, `55%` with no budget, public universities at **`4%`** — the binding constraint is governance capacity at near-zero spend, and every component here is licence-free to build on. 🟢 **North America:** an RCT result is what survives a school-board meeting. 🔴 **The honest caveat:** `terracotta`'s placement was **refused** by this base — it is widely associated with a US university, but its own files name no country, and an association this base cannot read first-hand is not a placement. Its *function* is verified by byte read and its licence is Apache-2.0 at residual `0`; its *provenance claim* is not this KB's to make.
+

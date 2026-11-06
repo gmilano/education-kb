@@ -1,0 +1,21 @@
+address	default_ref	grant_file	bytes	sha256_12	family	norm_residual	verdict
+openfun/ralph	main	LICENSE.md	1094	08ea77291de9	MIT	+67	VERBATIM-MIT
+Cvmcosta/ltijs	master	LICENSE	11361	d5fcb264ff39	Apache-2.0	+3	VERBATIM-Apache-2.0
+UniTime/unitime	master	LICENSE	11357	58d1e17ffe51	Apache-2.0	0	VERBATIM-Apache-2.0-canonical-length-different-hash
+terracotta-education/terracotta	development	LICENSE	11323	6dc0e068dcf3	Apache-2.0	0	VERBATIM-Apache-2.0
+1EdTech/openbadges-validator-core	develop	LICENSE	13185	ba1f153bdba3	Apache-2.0	+1803	VERBATIM-Apache-2.0-plus-subcomponent-notices
+Apereo-Learning-Analytics-Initiative/OpenLRW	master	LICENSE	9878	f339063d2f60	ECL-2.0	n/a	VERBATIM-ECL-2.0
+thm-mni-ii/feedbacksystem	dev	LICENSE	10785	65125d9e480b	Apache-2.0	-524	VERBATIM-Apache-2.0-body-appendix-stripped
+pupilfirst/pupilfirst	master	LICENSE	1684	bda0aa6d49f2	MIT-split	+648	MIT-code-CC-BY-SA-4.0-docs-SPLIT-GRANT
+LongsightGroup/qti3	main	LICENSE.md	1072	00ed05b90bf8	MIT	+47	VERBATIM-MIT
+jdolny/OneRoster.NET	master	LICENSE	1066	1dc50226c38a	MIT	+41	VERBATIM-MIT
+Ed-Fi-Alliance-OSS/edfi-oneroster	main	LICENSE	10173	a6cba85bc92e	Apache-2.0	-1092	VERBATIM-Apache-2.0-body-appendix-stripped
+bncc-dev/bncc-dados	main	LICENSE	1092	e162f8f4b461	MIT	+67	VERBATIM-MIT
+cortega26/chile-hub	main	LICENSE	1070	277707dcaa3b	MIT	+45	VERBATIM-MIT
+menthorlabs/menthor	main	LICENSE	11337	36d6788503b8	Apache-2.0	-20	VERBATIM-Apache-2.0-appendix-placeholder-filled
+peancor/moodle-mcp-server	main	LICENSE	1064	845ac6ac9e57	MIT	+39	VERBATIM-MIT
+bruchris/canvas-lms-mcp	main	LICENSE	1070	c29329c5ef3b	MIT	+45	VERBATIM-MIT
+satvik314/educhain	main	LICENSE	1092	e3321a1b62cd	MIT	+67	VERBATIM-MIT
+foradian/fedena	master	NONE-FOUND	-	-	NO-PAYLOAD	n/a	REFUSED-ledger-claims-Apache-2.0-no-payload-at-default-ref
+CONTROL-POS rizukirr/no-vibe	main	LICENSE	1065	-	MIT	+40	VERBATIM-MIT-control-passes
+CONTROL-NEG July-Tea/EssayMate	main	LICENSE	20849	-	CC-BY-NC-SA-4.0	n/a	CORRECTLY-REFUSED-as-MIT

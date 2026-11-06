@@ -23,7 +23,7 @@ address	first_seen_pass	last_verdict	filed_on	last_measured	mentions	distinct_pa
 1EdTech/lti-1-3-php-library	p9	unstated	-	2026-10-22	12	8
 1EdTech/ltibootcamp	p27	unstated	-	2026-10-01	1	1
 1EdTech/openbadges-specification	p9	unstated	-	2026-10-27	6	6
-1EdTech/openbadges-validator-core	p64	Apache-2.0	-	2026-11-05	14	10
+1EdTech/openbadges-validator-core	p64	Apache-2.0	repos/foundations.md	2026-11-06	15	11
 1EdTech/OpenCASE	p14	Apache-2.0	-	2026-10-18	7	5
 2022764025/Lecture-Hunter	p174	MIT	-	2026-10-13	1	1
 232252/education-advisor	p470	MIT	-	2026-10-27	1	1
@@ -284,7 +284,7 @@ Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	p12	ECL-2.0	-	20
 Apereo-Learning-Analytics-Initiative/OpenDashboard-api	p12	ECL-2.0	-	2026-10-15	4	4
 Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	p104	ECL-2.0	-	2026-10-15	6	5
 Apereo-Learning-Analytics-Initiative/OpenLRS	p12	ECL-2.0	-	2026-10-15	4	4
-Apereo-Learning-Analytics-Initiative/OpenLRW	p11	Apache-2.0|ECL-2.0	-	2026-11-05	14	10
+Apereo-Learning-Analytics-Initiative/OpenLRW	p11	ECL-2.0	repos/foundations.md	2026-11-06	15	11
 apereo-learning-analytics-initiative/sakaixapi-provider	p370	ECL-2.0	-	2026-10-21	1	1
 apereo/heosat	p483	unstated	-	2026-10-27	1	1
 apereo/opencast	p230	unstated	-	2026-10-15	1	1
@@ -424,7 +424,7 @@ blockchain-certificates/cert-issuer	p306	unstated	-	2026-10-21	2	2
 BLPS/oneroster-php-api	p232	GPL-3.0	-	2026-10-16	2	1
 bmosoluciones/now-lms	p393	Apache-2.0	-	2026-10-22	1	1
 bncc-dev/bncc-benchmark	p93	CC-BY|MIT	-	2026-11-01	10	7
-bncc-dev/bncc-dados	p14	MIT	-	2026-11-05	19	13
+bncc-dev/bncc-dados	p14	MIT	repos/foundations.md	2026-11-06	20	14
 bncc-dev/bncc-pacotes	p93	CC-BY|MIT	-	2026-10-29	16	12
 bnsoftware/lti-1p3-tool	p232	LGPL|Apache-2.0	-	2026-10-16	2	1
 bobuel/bloom-taxonomy-quiz-builder-skill	p379	unstated	-	2026-11-05	5	3
@@ -449,7 +449,7 @@ brootware/awesome-cyber-security-university	p198	CC0-1.0	-	2026-10-14	1	1
 brownplt/LTLTutor	p79	GPL-3.0	-	2026-10-19	9	7
 browser-use/browser-use	p111	unstated	-	2026-10-05	1	1
 brucewlee/lftk	p363	CC-BY	-	2026-10-21	1	1
-bruchris/canvas-lms-mcp	p32	MIT	-	2026-11-05	29	20
+bruchris/canvas-lms-mcp	p32	MIT	agents/top.md	2026-11-06	30	21
 brunnojob/devstart-lab	p479	MIT	-	2026-10-27	1	1
 brycewang-stanford/Auto-Empirical-Research-Skills	p117	CC-BY-SA|CC-BY	-	2026-11-01	11	6
 btgaskin/studykit	p60	unstated	-	2026-10-08	1	1
@@ -649,7 +649,7 @@ CSR2017/edfi-oneroster	p104	Apache-2.0	-	2026-10-13	3	3
 CTFd/CTFd	p196	Apache-2.0	-	2026-10-14	3	2
 cuic19053-hue/awesome-student-ai-skills	p640	MIT	-	2026-11-05	1	1
 cursor/plugins	p258	unstated	-	2026-10-17	1	1
-Cvmcosta/ltijs	p10	Apache-2.0	-	2026-11-05	32	20
+Cvmcosta/ltijs	p10	Apache-2.0	repos/foundations.md	2026-11-06	33	21
 Cvmcosta/ltijs-sequelize	p134	Apache-2.0	-	2026-10-11	1	1
 CyanDR21/Cyanskill	p156	unstated	-	2026-10-12	1	1
 CyanXLab/Phonos	p81	unstated	-	2026-10-17	4	3
@@ -871,7 +871,7 @@ Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker	p62	Apache-2.0	-	2026-10-08	1	1
 Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation	p62	unstated	-	2026-10-26	3	3
 Ed-Fi-Alliance-OSS/Ed-Fi-Standard	p68	Apache-2.0	-	2026-10-03	1	1
 Ed-Fi-Alliance-OSS/Ed-Fi-Technology-Roadmap	p239	Apache-2.0|no-grant	-	2026-10-16	1	1
-Ed-Fi-Alliance-OSS/edfi-oneroster	p12	Apache-2.0	-	2026-10-21	9	8
+Ed-Fi-Alliance-OSS/edfi-oneroster	p12	Apache-2.0	repos/foundations.md	2026-11-06	10	9
 Ed-Fi-Alliance-OSS/Fiona	p239	Apache-2.0	-	2026-10-16	1	1
 Ed-Fi-Alliance-OSS/MetaEd-js	p239	Apache-2.0	-	2026-10-16	1	1
 Ed-Fi-Alliance-OSS/ODS-Admin-API	p232	Apache-2.0	-	2026-10-16	1	1
@@ -1045,7 +1045,7 @@ foerbsnavi/Notenberechner	unpassed	unstated	-	2026-11-05	1	0
 folio-org/mod-inventory	p26	Apache-2.0	-	2026-10-01	1	1
 folio-org/platform-complete	p26	Apache-2.0	-	2026-10-01	1	1
 food-x-technologies/escolar	p453	MIT	-	2026-10-29	1	1
-foradian/fedena	p7	Apache-2.0	-	2026-10-28	17	12
+foradian/fedena	p7	NO-PAYLOAD-at-default-ref-p673	-	2026-11-06	17	12
 Fordham-EDM-Lab/Grading-Analysis-Tool	p84	GPL-3.0	-	2026-10-09	1	1
 formalms/formalms	p32	unstated	-	2026-10-28	14	11
 foundation50/classroom50	p85	GPL-3.0	repos/foundations.md	2026-11-05	6	5
@@ -1417,7 +1417,7 @@ jayendrasai/mcp_for_university	p142	no-grant	-	2026-10-12	1	1
 JazminVidal/gop-pykaldi	p97	unstated	-	2026-10-10	2	1
 Jazy1/rumi-pinokio	p62	Apache-2.0	-	2026-10-03	1	1
 jcputney/scorm-again	p61	MIT	repos/foundations.md	2026-11-05	27	22
-jdolny/OneRoster.NET	p10	MIT	-	2026-11-05	14	9
+jdolny/OneRoster.NET	p10	MIT	repos/foundations.md	2026-11-06	15	10
 jdxyw/deepKT	p60	MIT	-	2026-10-08	1	1
 JeabtiE/iep-gen-assistant	p427	no-grant	-	2026-10-25	1	1
 JeabtiE/jump-hackathon-demo	p359	no-grant	-	2026-10-21	1	1
@@ -1728,7 +1728,7 @@ logisim-evolution/logisim-evolution	p198	GPL-3.0	-	2026-10-14	2	2
 longhornteacher/canvasexpert-se	p640	MIT	-	2026-11-05	1	1
 longnhgsvn/Learn-with-AI-tieng-viet	p286	AGPL-3.0	-	2026-10-18	2	1
 longsightgroup/oneroster	p31	MIT	-	2026-10-08	2	2
-LongsightGroup/qti3	p18	MIT	-	2026-11-05	14	9
+LongsightGroup/qti3	p18	MIT	repos/foundations.md	2026-11-06	15	10
 LongsightGroup/qti3-core	p24	unstated	-	2026-10-01	2	2
 lopentu/inside-the-scorer-paclic2026	p240	unstated	-	2026-10-16	1	1
 loqganesh-hue/aulalibre	p2	MIT	-	2026-09-30	2	1
@@ -1855,7 +1855,7 @@ Meleksebri/school-management-system	p236	unstated	-	2026-10-16	1	1
 memphis-iis/MoFaCTS	p214	AGPL-3.0|GPL-3.0	-	2026-10-15	1	1
 mendezjerick/ReaDirect-V2	p10	unstated	-	2026-10-06	3	2
 mengxi-ream/read-frog	p312	GPL-3.0	-	2026-10-19	1	1
-menthorlabs/menthor	p123	Apache-2.0	-	2026-11-05	16	11
+menthorlabs/menthor	p123	Apache-2.0	verticals/solutions.md	2026-11-06	17	12
 merely-useful/py-rse	p203	CC-BY	-	2026-10-14	1	1
 meta-pytorch/opacus	p378	unstated	-	2026-10-22	1	1
 metyatech/markdown-to-qti	p84	MIT	-	2026-10-18	4	3
@@ -2194,7 +2194,7 @@ openfun/arnold	unpassed	MIT	-	2026-11-05	1	0
 openfun/django-lti-toolbox	p330	MIT	-	2026-10-22	4	3
 openfun/joanie	p127	MIT	-	2026-10-11	1	1
 openfun/marsha	p188	MIT	intel/market.md,repos/foundations.md	2026-11-05	4	4
-openfun/ralph	p6	MIT	-	2026-11-05	40	23
+openfun/ralph	p6	MIT	repos/foundations.md	2026-11-06	41	24
 openfun/richie	p11	MIT	compose/patterns.md,repos/foundations.md,verticals/solutions.md	2026-11-05	14	12
 openfun/warren	p134	MIT	-	2026-11-01	6	3
 openfun/xblock-proctor-exam	p104	unstated	-	2026-10-11	2	2
@@ -2295,7 +2295,7 @@ pawtograder/platform	p31	GPL-3.0	-	2026-10-14	5	4
 pdfmathtranslate/pdfmathtranslate	p333	AGPL-3.0	-	2026-10-20	1	1
 pdg6/bc-curriculum-mcp-server	p388	MIT	-	2026-10-25	5	3
 Peaky8linders/eu-ai-act-scanner	p238	Apache-2.0	-	2026-10-16	1	1
-peancor/moodle-mcp-server	p2	MIT	-	2026-11-05	21	15
+peancor/moodle-mcp-server	p2	MIT	agents/top.md	2026-11-06	22	16
 Pearson-Advance/openedx-lti-tool-plugin	p11	Apache-2.0	-	2026-10-06	2	1
 pedal-edu/pedal	p309	unstated	-	2026-10-23	3	3
 pedroestevaodev/plataforma-estudo-personalizado	p171	unstated	-	2026-10-19	2	2
@@ -2389,7 +2389,7 @@ public-apis/public-apis	p246	unstated	-	2026-10-16	2	1
 public-ui/kolibri	p39	unstated	-	2026-10-02	2	1
 PucaVaz/sigaa-tools	p443	MIT	-	2026-10-25	1	1
 pulkitpareek18/LearnFlow-AI	p156	unstated	-	2026-10-15	2	2
-pupilfirst/pupilfirst	p12	MIT	-	2026-11-05	11	10
+pupilfirst/pupilfirst	p12	MIT-split-CC-BY-SA-docs	verticals/solutions.md	2026-11-06	12	11
 purysho/EduBoard	p242	AGPL-3.0	-	2026-10-16	1	1
 py-why/dowhy	p535	MIT (title block)	-	2026-11-05	1	1
 py-why/EconML	p535	MIT (title block; page labels none)	-	2026-11-05	1	1
@@ -2549,7 +2549,7 @@ SapuSeven/BetterUntis	p15	Apache-2.0	-	2026-10-07	2	2
 sardorml/captureflow	p357	AGPL-3.0|MIT	-	2026-10-21	1	1
 Sarthak-Neupane/CanvasMCPServer	p227	MIT	-	2026-10-15	1	1
 sas-fossdev/saspes	p239	AGPL-3.0|no-grant	-	2026-10-16	1	1
-satvik314/educhain	p42	MIT	-	2026-11-05	21	13
+satvik314/educhain	p42	MIT	agents/top.md	2026-11-06	22	14
 savinoo/ai-grading-system	p417	MIT	-	2026-10-24	4	2
 savvides/idstack	p89	MIT	-	2026-10-14	3	2
 sayeeg-11/SahiiiDSA	p470	unstated	-	2026-10-27	1	1
@@ -2802,7 +2802,7 @@ Telaxus/EPESI	p115	unstated	-	2026-10-11	2	2
 telekom/ki-in-schulen	p237	MIT	repos/foundations.md	2026-11-05	4	4
 temporalio/temporal	p104	unstated	-	2026-10-11	2	2
 tensorflow/privacy	p16	Apache-2.0	-	2026-10-01	1	1
-terracotta-education/terracotta	p11	Apache-2.0	-	2026-11-01	15	11
+terracotta-education/terracotta	p11	Apache-2.0	repos/foundations.md	2026-11-06	16	12
 Tessangelika/ai-literacy-curriculum	p437	no-grant	-	2026-10-25	1	1
 tesseract-ocr/tesseract	p19	Apache-2.0	-	2026-11-01	2	1
 tha-guy-nate/tha-edfi-runner	p134	MIT	-	2026-10-11	1	1
@@ -2830,7 +2830,7 @@ this-org-does-not-exist-zzz9/nope	p37	unstated	-	2026-10-02	2	1
 thisisandreeeee/llms-in-10-words	p171	unstated	-	2026-10-13	1	1
 thiswillbeyourgithub/AnkiAIUtils	p213	AGPL-3.0	-	2026-10-15	1	1
 thlorenz/parse-link-header	p75	MIT	-	2026-10-09	1	1
-thm-mni-ii/feedbacksystem	p79	Apache-2.0	-	2026-11-05	21	11
+thm-mni-ii/feedbacksystem	p79	Apache-2.0	agents/top.md	2026-11-06	22	12
 threos/mcp4lms	p529	AGPL-3.0	-	2026-10-29	1	1
 THU-BPM/MarkLLM	p15	Apache-2.0	-	2026-10-09	5	2
 thu-cs-lab/jieplag	p84	Apache-2.0|MIT	-	2026-10-09	2	1
@@ -2933,7 +2933,7 @@ unb-mds/2025-2-InfoSchool	p16	MIT	-	2026-10-06	1	1
 undertheseanlp/underthesea	p7	Apache-2.0	-	2026-10-06	2	1
 unicon/tool13demo	p10	unstated	-	2026-10-07	3	2
 UniTime/this-repo-does-not-exist-xyz123	p41	unstated	-	2026-10-02	3	2
-UniTime/unitime	p25	Apache-2.0	-	2026-11-05	17	11
+UniTime/unitime	p25	Apache-2.0	verticals/solutions.md	2026-11-06	18	12
 UniversalDependencies/UD_Portuguese-Bosque	p45	CC-BY-SA|CC-BY	-	2026-10-08	2	2
 UniversalDependencies/UD_Portuguese-CINTIL	p45	CC-BY	-	2026-10-07	1	1
 UniversalDependencies/UD_Portuguese-GSD	p45	CC-BY-SA|CC-BY	-	2026-10-07	1	1

@@ -1,0 +1,14 @@
+leg	scope	facts_returned	already_held	unheld	note
+top open source AI agents education 2026 github MIT	global	9	9	0	DeepTutor/OpenMAIC/hermes-agent/OpenHands/CrewAI/MetaGPT all held; no education-specific list surfaced
+github trending education AI 2026	global	8	8	0	DeepTutor, OpenMAIC, ai-engineering-hub, agents-radar, education-ai topic all held
+open source platform education ERP CRM MIT Apache	global	11	11	0	GegoK12 held (verticals), OFBiz/Krayin/iDURAR/Huly/ERPNext/OpenEduCat all held
+AI education industry trends 2026	global	6	6	0	governance-over-experimentation, purpose-built tools, OECD outlook all held
+AI education North America 2026 adoption regulation players	North America	10	10	0	NC Session Law 2026-41, 134 bills/31 states, MD SB720/HB1057, Gallup 60pct, 55pct principals all held
+AI education EMEA 2026 adoption regulation players	EMEA	15	15	0	Omnibus 2027-12-02, Ofqual, KHDA, 2.64B/31.9pct, FI-EE-NL all held; 10pct-of-450 held AND ALREADY REFUTED at p282
+AI education APAC 2026 adoption regulation players	APAC	9	9	0	Korea AI Basic Act, Vietnam 134/2025/QH15, TEQSA, AI Verify all held; NO adoption denominator for a SIXTH window
+AI education LATAM 2026 adoption regulation players	LATAM	23	23	0	UNESCO IESALC 200 HEIs/19 countries/87pct/26pct, Ceibal 75pct, Cetic.br, Observatory 2026-04-14 all held
+CONTROL-NEG qvxzbluntwidget7731	control	1	0	1	scores 0 as it must
+CONTROL-NEG flibberjocket-9920	control	1	0	1	scores 0 as it must
+CONTROL-POS Apache-2.0 / Apache 2.0	control	2	2	0	158 and 20 files - variant spelling both positive
+CONTROL-POS Annex III / Annex 3	control	2	2	0	21 and 2 files - variant spelling both positive
+CONTROL-POS high school / high-school principals	control	2	2	0	3 and 4 files - hyphen variant both positive

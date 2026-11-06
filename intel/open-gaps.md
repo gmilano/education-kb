@@ -1,8 +1,21 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-05
+updated: 2026-11-06
 ---
+
+## 🆕 `p673` — `2026-11-06` — **🔴 TWO STANDING GAPS RESTATED FOR A SIXTH AND FOURTH WINDOW; 🟢 ONE LONG-STANDING GAP CLOSED (THE MEASUREMENT LAYER); 🔴 FOUR NEW GAPS, THREE OF THEM MAINTENANCE RATHER THAN SUPPLY**
+
+| Gap | Declared | Declaring pass · file · finding | Remedy **and** its cost |
+|---|---|---|---|
+| 🔴 **No APAC education adoption denominator** — the region is the richest of the four on regulation (Korea's AI Basic Act in force `2026-01-22`, Vietnam's `134/2025/QH15` effective `2026-03-01` naming education and automated assessment high-risk, TEQSA action plans, AI Verify) and has **no uptake rate at all**. Every APAC engagement sized off this base is sized off **statute, not adoption**. | **SIXTH** consecutive window | `p663`, `p664`, `p665`, `p666`, `p672`, now `p673` · `intel/market.md` · `673-F` | A named-source leg (`Digital Education Council`, `UNESCO Bangkok`, `TEQSA` published plans) rather than the generic regional query, which has now failed six times. ~1 leg; the generic query should be **retired** for APAC. |
+| 🔴 **Africa and the Middle East return nothing on the EMEA-labelled leg** — the query is Europe-weighted and the region's supply is invisible to it. | **FOURTH** recorded window | `p486`, `p664`, `p666`, now `p673` · `intel/market.md` · `673-F` | A dedicated Africa/MENA leg; `p158`/`p486` are the only passes that ever yielded there. ~1–2 legs, and the result may legitimately be a measured absence. |
+| 🟢 **CLOSED: no permissive instrument for proving an intervention worked.** Declared at `T49` as the measurement gap — every effect claim on this base was a self-report. | declared `p667`, **closed `p673`** | `T49` → `T54` · `repos/foundations.md` · `673-G` | Closed by [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) (Apache-2.0, residual `0`), wired as `P44`. ⚠️ Closure is on **availability**, not on adoption: `21★`, and this base has not run it. |
+| 🔴 **NEW — the interop layer is permissive but thinly maintained, and that is a different risk from licence risk.** `jdolny/OneRoster.NET` **three years stale**, `Apereo…/OpenLRW` ~14 months, `1EdTech/openbadges-validator-core` ~12, `menthorlabs/menthor` ~2.5 years. | new at `p673` | `p673` · `repos/foundations.md`, `verticals/solutions.md` · `T54` | None available — the remedy is **commercial, not technical**: fork, pin, and price maintenance into the engagement. Every affected row carries its staleness as a headline rather than a footnote. |
+| 🔴 **NEW — no actively-maintained permissive OneRoster client for .NET.** The only one on this base was last pushed `2023-10-13`, implements rostering only, and its README states grade-book calls are absent and that OneRoster 1.2 was not final when written. | new at `p673` | `p673` · `repos/foundations.md` · `T54` | A fork with grade-book support is a **tractable, sellable contribution** — small surface, certified standard, and North American K-12 district software is heavily .NET. Est. 2–4 weeks. |
+| 🔴 **NEW — `terracotta`'s provenance is unreadable from its own files**, so the measurement layer's one component is filed **unplaced**. It is widely associated with a US university; the repository names no country. | new at `p673` | `p673` · `evidence/placement-evidence.2026-11-06-p673.tsv` · `673-C` | A citation or institutional `NOTICE` would place it. Until then the row claims function (byte-verified) and not provenance. ~1 probe. |
+| 🔴 **NEW — this base cannot read `gh api repos/{owner}/{repo}` at all**, for any address, this session: `403`, session scope. Stars, forks, freshness and the API licence label all had to come from `search/repositories`. | new at `p673` | `p673` · `673-J` | Already mitigated by `671-G`'s OR-batching (`17` addresses in **one** call), but the **`30/min` search ceiling is now the only metadata channel**, and an unindexed address returns nothing at all — which is how `673-H` was caught, so the mitigation has a useful side effect. |
+
 
 ## 🆕 `p665` — `2026-11-05` — **🟢 `make hooks` RAN (p664 RECORDED IT DENIED) AND IT CLOSED THE FILING RATCHET AT `193` FROM A RED `181`; 🔴 FOUR NEW GAPS, THREE OF THEM ABOUT THIS BASE'S OWN INSTRUMENTS AND ONE A SELF-FLAGGED SECONDARY CLAIM.**
 
