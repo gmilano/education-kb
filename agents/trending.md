@@ -4,6 +4,101 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p674) — 🔴 **THE BYTE COUNTS ON THIS BASE'S SELL SHELVES WERE AUDITED AGAINST THE PAYLOADS THEY CLAIM TO MEASURE. `62` OF `69` REPRODUCE; `5` ARE SHORT BY EXACTLY THEIR PAYLOAD'S TRAILING-NEWLINE RUN; AND `1` OF THOSE `5` IS PROVEN RATHER THAN INFERRED, BECAUSE ITS PUBLISHED *DIGEST* IS THE DIGEST OF THE STRIPPED BYTES. 🟢 ALSO: A ROW THIS SHELF CALLED "NOT RE-READABLE" IS SEARCH-INDEX-ABSENT AND ANSWERABLE FROM PyPI, AND A STRAY `|` HAD BEEN EATING `1 190` CHARACTERS OF PUBLISHED EVIDENCE.**
+
+**Verification channels, re-tested before use at p674.** `git ls-remote --symref` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live** (`HTTP/2 200`); `gh api search/repositories` 🟢 **live**; 🔴 `gh api repos/{owner}/{repo}` **403 — session-scoped**, and 🔴 the repository **HTML page is 403 channel-wide** (`curl` → `378 B` error body), so stars come from `search/repositories` exactly as `670-H` established. 🔴 **`eur-lex.europa.eu` does not resolve in this environment** (outside the session's network policy), so the Omnibus dates this base holds could **not** be re-grounded on the primary text this pass — recorded as a channel limit, not as a doubt about the finding.
+
+🔴 **A note on the instrument, because it matters for reproducibility.** This base's own `compose/code/lib/probe_payload.sh` **could not be sourced**: the environment's auto-mode classifier denies it as `[Code from External]`. That is the *same* denial `lib/payload_measure.sh` documents in its own header for pass 74 — the library predicted this failure and the prediction held. The sweep below was therefore run from a **freshly written instrument** that deliberately re-implements the library's documented traps (`P834` sizing from a file, never from a capture; `P171` GNU-family resolution from the **title window** only; the `p337` case-varied ladder; `ls-remote` for the real default branch). 🟢 **It was calibrated against cells this base already published before it was trusted:** `DeepTutor` `11 408 B` Apache-2.0, `OpenMAIC` `1 065 B` MIT, `open-tutor-ai-CE` `1 531 B` BSD-3-Clause, `gen-mentor` `7 048 B` CC0-1.0, `OATutor` `1 105 B` MIT, and `instructional_agents` `1 067 B` / `4e085d826a64` — **all reproduced exactly**. The `P171` control is clean **at both signs**: `blend-ed/openedx-mcp` → `AGPL-3.0`, `moodle/moodle` → `GPL-3.0` (*not* AGPL, and *not* NonCommercial despite GPL-3.0 §6 carrying the word `noncommercially`).
+
+### `674-A` — the byte-cell audit: `69` cells, `59` repositories, three shelves
+
+Scope: every cell on `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` that pairs a GitHub address with a payload size **over `7 000 B`** — i.e. the GNU/Apache/EUPL-family payloads, where a trailing-newline run longer than one is plausible and where the canonical byte counts collide.
+
+| Verdict | Cells | What it means |
+|---|---|---|
+| 🟢 **CLEAN** | **62** | Published count equals the true byte count. |
+| 🔴 **SHORT BY THE TRAILING-NEWLINE RUN** | **5** | Published count equals the payload with trailing newlines stripped — the `P834` signature. |
+| 🔧 **RETRACTED BY p674 ITSELF** | **3** | Flagged by the first arm, then **withdrawn**: the `11 357` in these lines is a *canonical reference*, not a claim about the repository. |
+
+🔴 **The five, and the one that is proven rather than inferred:**
+
+| Repo | Published | True | Trailing run | Status |
+|---|---|---|---|---|
+| [`Opetushallitus/compleap`](https://github.com/Opetushallitus/compleap) | `13 956 B`, `sha256₁₂ 900a5a8a3c56` | **`13 957 B`**, `922e7e3be8ed` | `1` | 🔴 **PROVEN CAPTURE-MEASURED.** The published **digest** `900a5a8a3c56` is the digest of the **stripped** payload. Both halves of the cell — size *and* hash — were taken from a capture, which is exactly the signature `p442` was built to type. |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | `34 522 B` | **`34 524 B`**, `8d56b405468a` | **`2`** | 🔴 Short by `2`. |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | `34 522 B` | **`34 524 B`**, `8d56b405468a` | **`2`** | 🔴 Short by `2`. |
+| [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) | `34 522 B` | **`34 523 B`**, `8486a10c4393` | `1` | 🔴 Short by `1`. |
+| [`oppia/oppia`](https://github.com/oppia/oppia) (×2 shelves) | `11 357 B` | **`11 358 B`**, `cfc7749b96f6` | `1` | 🔴 Short by `1`, **and the cell also named the wrong canonical** — see `674-C`. |
+
+🔴 **`674-B` — the three AGPL cells carried a FALSE EQUALITY, and the equality was the artefact.** This page published *"`34,522 B` each"* across all three AGPL rows. Measured: the two `blend-ed` repositories really are equal — **`34 524 B`, same digest `8d56b405468a`** — but `openedx/openedx-ai-extensions` is **`34 523 B`**, a *different* payload. 🔵 The three only became equal **after stripping**, because all three reduce to the same `34 522 B` AGPL-3.0 text (`sha256₁₂ 20b067f86de3`). So the published figure did not merely understate three sizes; it manufactured a three-way identity that does not exist in the trees. 🟢 **A stripped digest is now a recognised hazard class for this base:** it makes genuinely different payloads look identical.
+
+🟢 **`674-C` — the two Apache-2.0 canonicals are now PINNED BY DIGEST, which is what makes `11 357` safe to read again.** The ambiguity this pass had to resolve: `11 357` is **simultaneously** the `apache/.github` canonical size *and* the stripped size of the `apache.org` canonical, so a cell reading `11 357 B` **cannot be typed from its number alone**.
+
+| Canonical | Bytes | `sha256₁₂` | Seen on |
+|---|---|---|---|
+| `apache/.github` copy | `11 357` | `58d1e17ffe51` | `anthropics/k12-teacher-skills`, `Negai-ai/AgentClaw`, `numbas/Numbas` — all 🟢 **CLEAN at p674** |
+| `apache.org` copy | `11 358` | `cfc7749b96f6` | `oppia/oppia`, `campfirium/foliole` |
+| AGPL-3.0, stripped | `34 522` | `20b067f86de3` | the artefact in `674-B`, **not a real tree payload** |
+
+🔵 `p662` had already measured the `11 357` / `11 358` split on the `OpenOLAT` row and written it down in prose. p674 attaches **digests** to both, which converts a remark into a discriminator: `numbas/Numbas` at `11 357 B` is now demonstrably *correct* rather than merely *unflagged*, and `oppia` at `11 357 B` is demonstrably *wrong*.
+
+🔧 **`674-D` — three of this pass's own flags were WITHDRAWN, and the retraction is the useful part.** The first arm flagged `OpenOLAT/OpenOLAT`, `campfirium/foliole` and `towardsai/ai-tutor-app`. Reading the actual lines refuted all three: each publishes the **correct** figure (`10 982`, `11 358`, `11 386`) and *also quotes `11 357` as the canonical it was measured against*. 🔴 **A regex that pairs any address with any byte figure on the same line cannot tell a claim from a reference** — the same defect class as `P831`'s substring grep. Stated here so the next pass does not re-buy the false positives: **scope a byte-cell audit to the cell, never to the line.**
+
+### `674-E` — 🟢 "not re-readable" was the wrong verdict: the row is SEARCH-INDEX-ABSENT, and PyPI answers it
+
+`p657` read `DaRL-GenAI/instructional_agents` at **`490 ★`**; `p670` could not re-read it and published **⚠️ *"not re-readable"***. p674 typed the condition instead of restating it:
+
+| Probe | Result |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves → `main` — **the repository is alive** |
+| `LICENSE` payload | 🟢 **`1 067 B`**, `sha256₁₂ 4e085d826a64`, © *2025 DaRL-GenAI* — **byte-exact and hash-exact** against this base's canonical |
+| `gh api search/repositories q=repo:DaRL-GenAI/instructional_agents` | 🔴 **`total_count 0`** |
+| `q=org:DaRL-GenAI` | 🟢 **`15` repositories**, including `instructional_agents_studio`, `instructional_agents-skills`, `instructional_agents_homepage` |
+| `q=instructional_agents in:name` | 🟢 `5` hits — **three of them siblings of this repo; this repo is not among them** |
+
+🔵 **So the exclusion is of the repository individually, not of the owner** — its same-stem siblings index fine. The star figure stays at `490 (p657)` because **no channel in this environment returns it**, and that is now a stated property rather than a shrug.
+
+🟢 **And the remedy is a channel this base had never used on an agent row: the package index.** `instructional-agents` on PyPI — **v1.1.1**, `license: MIT`, classifier `License :: OSI Approved :: MIT License`, **3** releases, `Repository` → the GitHub address. A package index supplies an **independent grant agreement** *and* a **liveness signal** for precisely the row whose GitHub metadata is unreachable. `p393` established a PyPI channel for registry work; p674 is the first time it has rescued a **shelf row**.
+
+### `674-F` — the one new row, and why `1 ★` was filed
+
+🟢 [`DaRL-GenAI/instructional_agents-skills`](https://github.com/DaRL-GenAI/instructional_agents-skills) → **shelved on [`agents/top.md`](top.md)**. MIT, **`1 067 B`**, `sha256₁₂ bba4a724cb8e`, © *2026 DaRL-GenAI*; `1 ★ / 1 fork`; `fork: false`; created and pushed `2026-04-15`.
+
+🟢 **Its advertised surface was verified to SHIP, not merely to be listed** — the `p144` not-shipped property applied before filing. The default-ref tree carries **all four** skills the README tabulates, each as `SKILL.md` **plus** an executable `scripts/*.py`: `course-generate`, `latex-compile`, `latex-to-pptx`, `slide-evaluate` — alongside `.claude-plugin/plugin.json` and `CITATION.cff`.
+
+🔵 **The licence lineage, decomposed rather than asserted.** `1 067 B` is **the same length as the canonical row's payload** with **a different hash** (`bba4a724cb8e` vs `4e085d826a64`). That is the shape `p673` flagged as dangerous — equal length, unequal hash — and here it is **benign and fully accounted for**: the sole edit is the holder year, `© 2025 DaRL-GenAI` → `© 2026 DaRL-GenAI`, which is length-preserving. 🟢 `p673`'s hazard class therefore has its first *explained* instance, which is how a hazard class earns a tolerance band.
+
+🟡 **Placement is on the weaker channel and is labelled as such.** The repository's own files name **no institution** (`0` hits over `README.md` for university / institute / college / `.edu`). Placed **North America** on the channel `p670` used for its canonical sibling — same owner account, `instructional_agents_studio`'s grant naming **Arizona State University** — corroborated by the shipped citation (arXiv `2508.19611`; Yao, Xu, Turnau, Kellam, Wei). **Not placed on repository text, which carries none.**
+
+### `674-G` — 🔴 the shelf was publishing evidence no renderer could show
+
+`agents/top.md` `L55` was a **7-cell row in a 6-column table**: a stray `|` split the `Instructional Agents` description in two, so every Markdown renderer discards the trailing cell — **`1 190` characters** containing the *entire* `p670` sibling-grant placement rationale. 🔵 Published-but-invisible is worse than absent: the evidence had been paid for and a later pass re-deriving the placement would find no trace of it in any rendered view. Repaired at p674. 🟢 A cell-count sweep of every table against **its own header** across all six shelf files now scores **`0`** disagreeing rows; it scored **`1`**, and this was it.
+
+### `674-H` — star currency: the shelf is in good condition
+
+All **`55`** addresses on `agents/top.md` re-read via `search/repositories`. 🟢 **No material move:** `DeepTutor` `55 000 → 55 474` (**`+474` in a single day**, the strongest absolute velocity on the shelf), `OpenMAIC` `42 700 → 42 743`, `Omni-Edu` `590 → 635` (**`+7.6%`**, the largest *relative* move), `Papermorph` `1 211 → 1 245`, `Study-Mate` `1 338 → 1 359`, `wordlink` `286 → 288`, `claudemy` `613 → 614`, `universal-examprep-skill` `366 → 367`, `learn-faster-kit` `402 → 403`. **Forty-four rows unchanged.**
+
+🟢 **The `p670` anomaly has resolved in the benign direction.** `AnonymousOnyx22/brightspace-d2l-mcp` — `29 ★` at `p657`, `12 ★` at `p670` (`−59%`, which `670-H` correctly refused to explain away) — reads **`13 ★`** at p674. A single-step recovery, so the fall was a **one-off correction**, not a decline. The row stays filed.
+
+🔵 **Five rows failed to return on the first sweep and all five returned on a second attempt** (`G36maid/moodle-mcp` `27`, `PAIDEIA-codex` `26`, `PAIDEIA-opencode` `3`, `PAIDEIA-mcp` `2`, `PAIDEIA-Hermes` `1`). **A single non-return from `search/repositories` is not evidence of absence** — only `instructional_agents` reproduced `total_count 0` under four differently-shaped queries. `PAIDEIA-Hermes` re-confirms `NOASSERTION`, matching this base's record of its appended `Attribution` section.
+
+### `674-I` — 🔴 the research legs nil for the 26th consecutive pass, measured and not assumed
+
+The four mandated global legs and the four regional legs were run. **No agent address returned that this base did not already hold** — consistent with `673-F`'s 25th nil, now the **26th**.
+
+| Leg | Candidates | Novel after diffing `5 002` held addresses | Filable |
+|---|---|---|---|
+| Global (4 legs, English) | `52` | `13` | **`0`** — all ≤ `37 ★`; the largest, `zhuangzhaoyeye/llm_course` (`37 ★`, MIT), is **course *content***, not an agent |
+| Regional (4 legs, ES / PT / DE / FR / ZH / JA / KO) | `50` | `47` | **`0`** — every licensed one is a `0`–`8 ★` teaching exercise, not an industry agent |
+
+🔵 **Named so the next pass does not re-spend the queries:** `wogho/OpenMento` (MIT, `0 ★`, Korean, multi-agent AI-education operations platform — **stale, pushed `2026-04-13`**); `JuanFZ/ada-ucv` (**no grant**, `0 ★`, *Asistente Docente Automatizado*, created `2026-11-04`, LATAM-shaped); `IAJBS/ia.educativajbs.steam` (**no grant**, `0 ★`); `AlijonovMukhammaddiyor/hermes-university` (MIT, `3 ★`, `hermes-agent`-based learning system). 🔴 **`DaRL-GenAI/MASkills`** (MIT, `6 ★`, EMNLP'26 Findings) was measured — **`1 077 B`, `408d972708fe`** — and **refused on topic relevance**: continual skills optimisation for multi-agent LLM systems is agent infrastructure, not education. 🔴 `Darshan2024/instructional-agents` — **no payload on the full ladder**; adoption `0`.
+
+🔵 **Market legs were also nil against the base's own cells.** Mordor's agentic-AI-in-education series (`$2.37 B` 2026 → `$11.83 B` 2031, `37.92%`), the Ipsos APAC school-ban spread, CENIA's `13 of 19`, and the OEI/UNESCO teacher-adoption figures are **all already held**. One figure was not: **Grand View's AI-tutors series, `$2.7 B` (2026) → `$17.7 B` (2033), `30.5%` CAGR** — added to [`intel/market.md`](../intel/market.md).
+
+---
+
+
+
 ## 🆕 2026-11-06 (p673) — 🔴 **A PAYLOAD THAT MATCHES THE CANONICAL LENGTH *EXACTLY* AND HASHES DIFFERENTLY — TWO WHITESPACE EDITS THAT CANCEL IN LENGTH AND NOT IN HASH. 🔴 `NOASSERTION` IS AT LEAST THREE DIFFERENT CONDITIONS AND ALL THREE ARE PERMISSIVE. 🟢 `16` ADDRESSES FILED, ALL `16` ALREADY IN THIS REPOSITORY. 🔴 THE EIGHT LEGS NIL A `25`TH TIME — `91/91` HELD.**
 
 **Verification channels, re-tested before use at p673:** `git ls-remote --symref` 🟢 **live** (negative control `gmilano/qvxz-not-a-real-repo-7731` → DEAD, positive control `moodle/moodle` → `refs/heads/main`); `raw.githubusercontent.com` byte reads 🟢 **live** (`18/18` candidates probed, `17` payloads retrieved); `gh api repos/{owner}/{repo}` 🔴 **BLOCKED this session** (`403`, session scope) — but `gh api search/repositories` with **space-separated `repo:` qualifiers 🟢 live**, so all `18` addresses were measured in **one call**, reconfirming `671-G`'s OR-batching at a new scale; grant grader 🟢 **controlled at both signs** per `672-B1` (positive: `rizukirr/no-vibe` → verbatim MIT; negative: `July-Tea/EssayMate` → correctly refuses to grade as MIT).

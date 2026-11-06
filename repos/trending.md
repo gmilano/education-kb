@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p674) — 🔴 **THE DISCOVERY LEGS ARE SATURATED AND THIS PASS MEASURED THE SATURATION INSTEAD OF PADDING AROUND IT: `102` CANDIDATES, `60` NOVEL ADDRESSES, **`0`** FILABLE. 🟢 THE SUPPLY CAME FROM A PACKAGE INDEX AND FROM THIS BASE'S OWN PUBLISHED CELLS.**
+
+**What this window actually found.** The four mandated global legs plus four regional legs returned **no repository address this base did not already hold** — the **26th consecutive nil**, consistent with `673-F`. 🔵 That is now a stable property of this corpus rather than a run of bad luck: `5 002` distinct GitHub addresses are referenced across this repository's Markdown, and a search leg has to clear all of them to pay out.
+
+### `674-R1` — the census, with the negative result written down
+
+| Leg family | Queries | Candidates | Novel after diff | Carried a grant | **Filable** |
+|---|---|---|---|---|---|
+| English / global (agents, trending, verticals, MCP+LMS, grading, curriculum, knowledge-tracing) | `10` | `52` | `13` | `9` | **`0`** |
+| Regional (ES, PT, DE, FR, ZH, JA, KO) | `10` | `50` | `47` | `9` | **`0`** |
+
+🔴 **Why `0`, stated specifically rather than as a shrug.** The novel English addresses top out at **`37 ★`** and the largest is not software of the right kind: `zhuangzhaoyeye/llm_course` (MIT, `37 ★`, pushed `2026-11-05`) is a **34-lesson course text** for algorithm engineers — education *content*, which this base files under its content-licence layer, not an education *agent* or a foundation repo. The novel regional addresses are `0`–`8 ★` teaching exercises ("*ejemplo educativo*", "*proyecto educativo*") whose subject happens to be AI; the education-industry relevance gate rejects them.
+
+🔵 **Named, with their measurements, so the next pass does not re-buy these queries:**
+
+| Address | Grant | ★ | Why not filed |
+|---|---|---|---|
+| [`wogho/OpenMento`](https://github.com/wogho/OpenMento) | MIT | `0` | Korean multi-agent AI-education operations platform — the best-*shaped* regional find of the pass. 🔴 **Pushed `2026-04-13`: seven months stale**, and `0 ★ / 0` forks. APAC-shaped on body language. Re-check, do not start on it. |
+| [`DaRL-GenAI/MASkills`](https://github.com/DaRL-GenAI/MASkills) | **MIT**, `1 077 B`, `408d972708fe` | `6` | 🔴 **Refused on topic relevance, not on licence or quality.** EMNLP'26 Findings; continual skills optimisation for multi-agent LLM systems — agent infrastructure, not education. Correctly licensed and permissively usable; it simply is not this shelf. |
+| [`AlijonovMukhammaddiyor/hermes-university`](https://github.com/AlijonovMukhammaddiyor/hermes-university) | MIT | `3` | A `hermes-agent`-based personalised learning system. Interesting only because `NousResearch/hermes-agent` is already a foundation row; `3 ★`, last pushed `2026-09-13`. |
+| [`JuanFZ/ada-ucv`](https://github.com/JuanFZ/ada-ucv) | 🔴 **no grant** | `0` | *ADA — Asistente Docente Automatizado*, a Spanish-language technopedagogical agent **created `2026-11-04`** (two days before this pass). LATAM-shaped and genuinely novel, but **a repository with no licence file is not a base.** The newest in-scope LATAM address this base has seen; worth one re-probe next pass for a grant. |
+| [`IAJBS/ia.educativajbs.steam`](https://github.com/IAJBS/ia.educativajbs.steam) | 🔴 **no grant** | `0` | School-level AI education platform, Spanish. No grant. |
+| [`Darshan2024/instructional-agents`](https://github.com/Darshan2024/instructional-agents) | 🔴 **no payload on the full case-varied ladder** | `0` | Name-adjacent to a filed row. `fork: false`, `0 ★`, no grant. Named so the address resolves for a reader who meets it in a search. |
+
+### `674-R2` — 🟢 the channel that *did* pay: a package index
+
+The one genuinely new supply route this pass found is not a search leg at all. [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) — a filed agent row — is **absent from GitHub's search index** (`repo:` → `total_count 0`, while `org:` returns its own same-stem siblings). Its grant and liveness are nonetheless answerable: **PyPI `instructional-agents` v1.1.1**, `license: MIT`, classifier `License :: OSI Approved :: MIT License`, `3` releases, `Repository` → the GitHub address.
+
+🔵 **The transferable rule:** when GitHub metadata for a repository is unreachable, *the package it publishes* is a second channel for both the **grant** and the **liveness** question — and in this environment, where `api.github.com` and the repository HTML page are both `403`, it may be the only one left. `p393` opened a PyPI channel for registry work; this is its first use to rescue a **shelf row**.
+
+### `674-R3` — 🔴 channel conditions, re-tested and recorded
+
+| Channel | State at p674 |
+|---|---|
+| `git ls-remote --symref` | 🟢 live |
+| `raw.githubusercontent.com` | 🟢 live (`HTTP/2 200`) |
+| `gh api search/repositories` | 🟢 live — **but a single non-return is not absence**: `5` shelf rows failed one sweep and all `5` returned on retry |
+| `gh api repos/{owner}/{repo}` | 🔴 **403**, session-scoped |
+| repository **HTML page** | 🔴 **403 channel-wide** (`378 B` error body) |
+| `pypi.org/pypi/{name}/json` | 🟢 **live — newly exercised at p674** |
+| `eur-lex.europa.eu` | 🔴 **does not resolve** — outside this session's network policy, so the Omnibus `2026/1744` dates this base holds could not be re-grounded on the primary text this pass |
+| this repository's own `compose/code/lib/*.sh` | 🔴 **cannot be sourced** — auto-mode classifier denies it as `[Code from External]`, exactly as `lib/payload_measure.sh` documents for pass 74 |
+
+---
+
+
 ## 🆕 2026-11-06 (p673) — 🟢 **THE INTEROPERABILITY LAYER IS WHERE OPEN SOURCE EDUCATION SOFTWARE IS *STILL PERMISSIVE*, AND THIS BASE HAD NONE OF IT FILED. 🟢 `9` FOUNDATION ROWS AND `3` PLATFORMS ADDED — LTI, xAPI/LRS, OneRoster, QTI 3, OPEN BADGES AND RANDOMISED TRIALS, ALL MIT / APACHE / ECL. 🔴 ALL `12` WERE ALREADY IN THE LEDGER, UNFILED, FOR UP TO `23` PASSES.**
 
 **What this window actually found.** The eight mandated search legs returned `91` facts and **`0`** this base did not hold (`673-F`, a `25`th consecutive nil). The supply came from **inside the repository**: the ledger carries `1,424` permissive addresses with `filed_on = -`, and `238` addresses on the three sell surfaces. Intersecting those sets and sorting by `distinct_passes` surfaced a **coherent layer this KB had never filed** — the standards plumbing between an AI agent and an institution's systems of record.
