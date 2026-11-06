@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p683) — 🟢 **THE SUPPLY CHANNEL IS NOT SATURATED, BUT ITS YIELD IS `~1 %`: `558` CANDIDATES OVER `22` SEARCH HEADS → `5` REAL EDUCATION ASSETS. 🔴 AND p683's FIRST NOVELTY MEASUREMENT WAS WRONG BY `3.3×` BECAUSE IT CHECKED THE SHELVES INSTEAD OF THE TREE.**
+
+**One row filed on [`top.md`](./top.md) (`67` → `68`, re-derived by counting rows, not by editing the previous figure). Nothing removed from this file.** The pass's primary product is a measurement of the discovery channel itself, and the most useful half of it is a correction p683 had to make against its own first arm.
+
+### 🔴 `683-A` — the novelty measurement, wrong and then right
+
+p683 swept `22` search heads through `gh api search/repositories` (topic heads: `education-ai`, `ai-tutor`, `ai-in-education`, `intelligent-tutoring-system`, `learning-analytics`, `educational-technology`, `edtech`, `lms`, `student-management`, `grading`, `spaced-repetition`, `school-management`, `education`, `moodle`, `open-edx`, `autograding`, `curriculum`, `assessment`, `teacher`, plus three free-text legs in Spanish and Portuguese), yielding **`558` distinct repositories**.
+
+**First measurement — and it is the wrong one.** Candidates were differenced against the slugs on the three *sell shelves* (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`): `344` slugs, giving **`71.1 %` novel**. On that number the channel looks like a goldmine.
+
+**Second measurement, against the whole tree** — every `github.com/owner/repo` in every tracked `*.md` outside `archive/` and `scratchpad/`, **`5,053` distinct slugs**:
+
+| class | count | share |
+|---|--:|--:|
+| 🟢 already on a sell shelf | `90` | `16.1 %` |
+| 🟡 **in this tree, assessed, never shelved** | **`205`** | **`36.7 %`** |
+| 🔴 absent entirely | `263` | `47.1 %` |
+
+🔴 **The first number overstated novelty by `3.3×`** (`71.1 %` → `47.1 %`), because **`205` repositories had already been seen and consciously not sold.** p680 reported this three-way split correctly; p683 reproduced the *shape* of p680's method and then measured against the wrong denominator anyway. 🟢 **`P683-A` adopted: novelty is measured against the TREE, never against the shelves.** A shelf records what was *bought*; only the tree records what was *looked at*. Of p683's own `21` hand-picked candidates, **`17` were already in the tree** and only `4` were absent — so the error was not academic, it was about to put seventeen re-finds on a shelf as discoveries.
+
+### 🟢 The yield, which is the honest half
+
+Of the `263` absent: **`88` carry a permissive grant**, **`36`** of those were pushed since `2026-06-01` with `≥20★`, and on reading all `36`, **`5`** are education *assets* rather than CS course material, résumé builders, cloud-audit tools or algorithm-example dumps.
+
+🟢 **Yield `≈ 1 %` of candidates swept, and that is the number to plan the next pass with.** The channel still produces — p680's *"the topic channel is finished"* was measured on the topic **HTML pages**, and the REST endpoint with Spanish and Portuguese free-text legs is a different instrument — but at `1 %`, a pass that budgets a whole run to this channel should expect one row, not a shelf.
+
+### 🟢 `683-D` — the row filed, and the near-miss recorded beside it
+
+[`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) — **Apache-2.0**, `11,358 B`, sha256₁₂ `cfc7749b96f6` (**byte-identical to the `apache.org` canonical payload this base already holds**), `469★`, `main` @ `a01e31a92942`, pushed today. Distils a named teacher's own corpus into a Skill that teaches from it and refuses to answer past it.
+
+🔵 **Placed APAC on body-text language — `2,294 / 4,115` README characters = `55.7 %` CJK** — p669's channel, measured.
+🔴 **The near-miss:** a `china` substring scan hit this README once, inside the org name [`datawhalechina`](https://github.com/datawhalechina) in an acknowledgements link. **A jurisdiction token inside an owner slug is not a jurisdiction.** Had p683 stopped at the stronger-looking channel it would have published a placement resting on a false positive. `P683-B` adopted: **a jurisdiction substring must be checked against the token it sits inside before it counts as evidence.**
+
+### 🔵 What the four regional demand legs returned: NIL IN ALL FOUR, denominators written down
+
+Run globally and once per region (`AI education {region} 2026 adoption regulation players`). Every fact returned was **already held, and held in more detail than the source gave it**:
+
+| leg | returned | disposition |
+|---|---|---|
+| North America | `134` AI-in-education bills / `31` states; MD·ID·OK·VA mandatory district policy; Ohio July 2026 deadline; California **AB 1159**; NC **SB 1006** $10M Khanmigo; **K-12 AI Literacy and Readiness Act**; April 2026 ADA deadline | 🔴 **all held** |
+| EMEA | Digital Omnibus **Regulation (EU) 2026/1744**, OJ `2026-07-24`, Annex III stand-alone `2027-12-02`; European AI-in-education **`$2.64bn` (2026)**; Dubai **KHDA** guidance | 🔴 **all held** |
+| APAC | Vietnam **Law 134/2025/QH15** in force `2026-03-01` + **Decision 33/2026/QD-TTg** naming education high-risk; Korea **AI Basic Act**; Australia **TEQSA** action plans; Singapore AI Verify | 🔴 **all held** — the base holds the *sharper* form (the high-risk trigger bites only where results are the official basis for assessing outcomes) |
+| LATAM | **Digital Education Council** LATAM 2026: `92 %` students / `79 %` faculty, `30,000+` responses, `29` institutions; **UNESCO IESALC** `87 %` of institutions, adoption faculty-driven; `85 %` of countries with an AI strategy, only Brazil and Colombia budgeting | 🔴 **all held** |
+
+🟢 **The intel legs are exhausted at the secondary-source level, and that is now a three-pass result (p680, p682, p683).** The next pass that wants a new regional fact should read a **primary instrument** — the Vietnamese decision text, the OJ, a ministry circular — because the aggregator layer has nothing left to give.
+
 ## 🆕 2026-11-06 (p682) — 🔧 **THE `Region` COLUMN HELD `114` DISTINCT STRINGS FOR `5` LEGAL VALUES: `367` OF `795` CELLS (46 %) WERE OUTSIDE THE CLOSED VOCABULARY, AND `p669` HAD ALREADY REPORTED FIXING IT. 🟢 ONE AGENT ROW FILED, ONE FIVE-PASS-OLD DUPLICATE DISCHARGED**
 
 **No row was removed from this file. One row filed on [`agents/top.md`](./top.md) (`67` → `67`, because a duplicate was merged in the same pass), `ACTION p677-A` discharged, and `0` rows removed anywhere.** This pass's primary result is not a find — it is that **the field every regional filter reads was unusable across this entire KB**, and that the previous repair of it was reported as done while being done to one table out of eight.

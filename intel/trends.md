@@ -1120,3 +1120,33 @@ This KB's `Region` field is a closed vocabulary of five values. At p682 it held 
 🔵 **The decay mechanism, which is the transferable part.** Each individual deviation was *locally reasonable*: bolding a region to match the row's typography, appending `(Finland)` because the country is the useful fact, writing `Not placed` because it is more honest than `Global`. **A closed vocabulary cannot absorb local reasonableness** — every well-meant annotation is a new bucket. The field must carry the value and **nothing else**, with the country, the evidence class and the confidence living in prose or in their own fields.
 
 🔴 **And the most dangerous artefact was the fix report.** `p669` recorded this column *normalised* — truthfully, for one table out of eight — and that note then stood for thirteen passes as evidence the problem was handled, which is why it was never re-measured. **A repair stated at the top of one file is not a repair of the base.** The rule p682 adopts: **a normalisation claim must publish the census it is derived from, before and after, over every file it claims to cover** — `114` → `8` distinct, `367` → `3` non-conforming, and all three survivors shown to be non-placements (`Verdict`, `Adopcion`, `mixed`). ⚠️ **The residue is honest and unresolved:** `Global` now means both *truly global* and *not placed*, `240` cells hold it, and a sixth value would re-break the filter. The right fix is a `placed: true|false` field beside the region.
+
+## T77 — A knowledge base's own novelty measurement is a channel, and it decays toward optimism 🔴 new at p683
+
+p683 swept `558` education repositories over `22` search heads and measured novelty **twice**. Against the three sell shelves (`344` slugs): **`71.1 %` novel**. Against the whole tree (`5,053` slugs): **`47.1 %` novel** — `90` already shelved, **`205` already in the tree but never shelved**, `263` absent.
+
+🔴 **The shelves and the tree answer different questions, and only one of them is the question.** A shelf records what was *bought*. The tree records what was *looked at and rejected*. Measure against the shelf and every rejected candidate reads as a discovery — so the error has a **direction**: it always overstates novelty, never understates it. On p683's own hand-picked set the overstatement was `17` of `21` candidates.
+
+🔵 **Why this is a trend and not a one-off.** The bias grows monotonically: every pass that assesses a candidate and declines it adds another row to the tree and nothing to the shelves, so the gap between the two denominators widens with every pass forever. A base at pass `683` has `5,053` slugs in the tree and `344` on the shelves — a factor of `14.7`. At pass `100` that factor was small enough that the wrong denominator gave nearly the right answer, which is exactly why the habit survived.
+
+**Signal**: p680 measured the split correctly (`51` shelved / `8` in-tree unshelved / `21` absent). p683 reproduced the *method* and still used the wrong denominator. A measurement discipline that is written down but not instrumented regresses to the convenient default.
+
+**What to do with it on an engagement**: the same asymmetry governs a client's own build-vs-buy inventory. An architecture review that lists what the client *runs* and not what they *evaluated and rejected* will re-propose rejected tools as new options, and will do it confidently.
+
+## T78 — Jurisdiction evidence has a strength ordering, and the strongest channel available is a registry fact 🟢 new at p683
+
+Across p683's sweep, five distinct placement channels were exercised on the same candidate set, and they do not have equal authority:
+
+| rank | channel | authority | why |
+|---|---|---|---|
+| `1` | 🟢 **committed ccTLD / restricted TLD host** | registry fact | `.br` is registry-restricted to Brazil; `.edu` to US institutions. Not an inference |
+| `2` | 🟢 **named national examination** | statutory fact | 公务员笔试, 高考, ENEM — an examination is a jurisdiction |
+| `3` | 🟡 **named institution, singular** | strong | `uni-heidelberg.de`, `hax.psu.edu`. Fails the moment it becomes a *list* |
+| `4` | 🟡 **body-text language, measured** | weak but defensible | `55.7 %` CJK is a number; "it looks Chinese" is not |
+| `5` | 🔴 **owner `location` field** | empty in practice | three consecutive passes have produced nothing from it |
+
+🔴 **Each channel has its own characteristic false positive, and they are not interchangeable.** The TLD channel's is the **documentation placeholder** (`acme.edu` matched on this very sweep). The named-institution channel's is the **enumeration** (`vkaravir/JSAV`'s grant names Aalto *and* Virginia Tech — two regions, so no placement). The language channel's is the **substring inside an identifier** (`china` inside the org name `datawhalechina`).
+
+🔵 **The practical rule, and it is cheap**: take the highest-ranked channel that returns a *single* answer, verify that answer is not a placeholder or a list, and write down which channel it came from in the row. p683 placed three repositories on channels `1`, `1` and `4`, and **refused three placements outright** rather than drop to channel `5`.
+
+**What to do with it on an engagement**: a client's data-residency or sovereignty audit faces the identical problem. Residency claimed from a vendor's marketing page is channel `5`; residency read from the TLD and the contracted region of a storage bucket is channel `1`. The EU AI Act and Vietnam's Decision 33 both bind on where a system *operates*, not on where its vendor says it does.

@@ -1734,3 +1734,43 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 - **Adoption.** `fabioov/moodle-mcp` is at **`0★ / 0 forks`, `12` commits**. It is filed for the *shape* of its tool surface, not for traction, and a client should read it end to end before mounting it — which is cheap precisely because it is small and read-only. `peancor/moodle-mcp-server` was last pushed **`2026-02-22`** and is **~8 months stale**; verify it against the institution's Moodle version before quoting it.
 - **That read-only means safe.** It means **no writes**. A read-only server still exposes grades, submissions and forum content to whatever model is behind it — so the data-protection question (where the tokens live, which model sees student records, what the EU AI Act Article 50 transparency duty requires from **`2026-08-02`**) is unchanged and must be answered separately.
 - **That the grading is accurate.** `lab-grader-skill`'s AI-authorship and copying detectors emit **evidence and a question to ask the student**, not verdicts. Under the EU AI Act, assessment of learning outcomes is **Annex III high-risk** (obligations now **`2027-12-02`**), and anything that looks like automated academic-integrity judgement needs a human decision-maker on the record.
+
+## P58 — The narrated algorithm: a permissive visualisation engine under a tutoring agent, with the animation as the assessed artefact (CS faculties and bootcamps, all four regions; 3–4 weeks to a graded module) 🆕 new at p683
+
+**The gap this closes.** This base's tutoring tier *explains* algorithms in prose. Nothing on the shelves *draws* one step-by-step under a permissive grant, so every CS-faculty engagement has so far either shipped text or pulled in a proprietary visualiser.
+
+**The parts, all byte-verified at p683:**
+
+| role | repo | grant | why this one |
+|---|---|---|---|
+| visualisation + stepping engine | [`vkaravir/JSAV`](https://github.com/vkaravir/JSAV) | 🟢 MIT (`MIT-license.txt`, `1,095 B`, `05e0a5ea02c8`) | array / tree / graph / list primitives, forward **and backward** stepping, and a **grading hook** on interactive exercises. Live since `2011` |
+| tutor that narrates and questions | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | already the shelf's tutoring default; supplies the persistent learner model |
+| teacher-corpus constraint | [`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) | 🟢 Apache-2.0 (`11,358 B`, `cfc7749b96f6`) | binds the narration to the faculty's **own** lecture notes, so the explanation matches the course, not the model's prior |
+| retention scheduling | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 MIT (`1,079 B`, `021bff58ad26`) | schedules the re-visit of a *step* the learner got wrong, not of a flashcard |
+| code-level feedback | [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 🟢 MIT (`1,103 B`, `ffaa010382b0`) | analyses the student's Python submission, so the trace and the code are graded together |
+
+**How they wire together — the one non-obvious join.** JSAV's exercise grader emits a **step sequence** (the learner's model of the algorithm), not a score. Feed that sequence, not a grade, to DeepTutor as the learner-model update; feed the *first divergent step* to `py-fsrs` as the item to reschedule; and feed `pedal`'s analysis of the submitted code to the same tutor turn so the agent can say *"your trace is right and your loop bound is off by one"* — which is two different failures that a single score collapses into one.
+
+**Build order (3–4 weeks).** Week 1: JSAV exercise + grading hook over one algorithm, no agent — confirm the step sequence is capturable. Week 2: `teacher-to-skills` over the faculty's lecture notes; DeepTutor narrating from that corpus only. Week 3: `py-fsrs` on divergent steps + `pedal` on submissions. Week 4: a graded module with the animation as the artefact of record.
+
+🔴 **Two cautions that are licence and provenance facts, not opinions.** (`1`) JSAV's grant is at `MIT-license.txt` — a path a fixed-case probe reports as *no grant* (`683-B`); a client's own OSS review will hit this, so hand them the path and the digest. (`2`) JSAV carries **`35` open issues on `116★`** and its grant names two holders in two institutions — fine for MIT, but there is no single counterparty for a warranty.
+
+🔵 **Region fit.** All four. The content is mathematics, so no localisation of the *algorithm* is needed — only of the narration, which is where `teacher-to-skills` (measured APAC, `55.7 %` CJK) already does the work.
+
+## P59 — The permissive institutional platform play: replace a GPL university LMS derivative with a fork-and-own permissive one (EMEA universities, LATAM ministries; 6–8 weeks to a branded pilot) 🆕 new at p683
+
+**The gap this closes, and it is a licence gap rather than a feature gap.** Until p683 this base's institutional platform tier was **copyleft in every region that matters for a branded derivative**: Moodle (GPL-3.0), Chamilo (GPL-2.0), ILIAS (GPL-3.0), Open edX (AGPL-3.0), RosarioSIS (GPL-2.0). A client who wants a *branded, closed* derivative of the platform itself — not a plugin beside it — had no permissive starting point on this page. Two rows filed at p683 change that.
+
+| region | platform | grant | the state it is in |
+|---|---|---|---|
+| **EMEA** | [`MaMpf-HD/mampf`](https://github.com/MaMpf-HD/mampf) | 🟢 **MIT** (`1,088 B`, `c88be2cc0844`) | running at Universität Heidelberg (`mampf.mathi.uni-heidelberg.de`); Rails + PostgreSQL; media graph, quizzes, submissions, tutorial groups |
+| **LATAM** | [`NewSchoolApp/newschool-backend`](https://github.com/NewSchoolApp/newschool-backend) | 🟢 **Apache-2.0** (`11,357 B`, `c71d239df917`) | NestJS + MySQL behind an OpenAPI/Swagger contract; course delivery, gamification, certificates |
+| **either, as the integration seam** | [`hei-school/hei-admin-api`](https://github.com/hei-school/hei-admin-api) | 🟢 **MIT** (`1,098 B`, `dfe4c34bee60`) | OpenAPI-first school administration — students, fees, attendance, results |
+
+**The agentic layer goes on top unchanged**, because all three expose a contract rather than a UI: the shelf's Moodle/Canvas MCP pattern (`P57`) transfers directly — one read-only surface for learners, one draft-only surface for graders, one gated surface for registrars.
+
+**Build order (6–8 weeks).** Weeks 1–2: stand the platform up and **re-derive its data model from the running instance**, not from the README. Weeks 3–4: the runtime migration — this is the real cost and it is known in advance, see the cautions. Weeks 5–6: MCP surfaces + the agent layer. Weeks 7–8: branding, the client's SSO, and an accessibility pass.
+
+🔴 **Price these three before quoting, because each is a measured fact and not a risk.** (`1`) **NewSchool runs on Node 12, which is end-of-life** — the migration is week one of the real work, not a stretch goal. (`2`) **MaMpf carries `85` open issues on `43★`**: this is fork-and-own; upstream will not carry a client's roadmap. (`3`) **MaMpf's default ref is `next` and HEI's is `preprod`** — CI, licence scanners and dependency bots that assume `main` will silently read nothing (`683-C`).
+
+🔵 **Why a client buys this over a Moodle plugin.** A Moodle derivative that ships to a ministry as *their* platform triggers GPL source disclosure on the derivative. These do not. That is the entire argument, and it is worth more than any feature on the comparison grid — but it only holds if the fork stays clear of GPL plugins, so the dependency audit is part of week one.

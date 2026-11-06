@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p683) — 🟢 **TWO GRANTS RECOVERED FROM PATHS A FIXED-CASE PROBE CANNOT SEE — ONE OF THEM `P1057` ALREADY HANDLES AND p683's OWN PROBE HAD REGRESSED PAST. 🟢 `T273`'s `master` ALIAS EXTENDED TO DEFAULTS NAMED NEITHER `main` NOR `master`; THE DANGEROUS READING OF IT TESTED AND REFUTED.**
+
+**One row filed on [`foundations.md`](./foundations.md) (`136` → `137`, re-derived by counting). Four rows filed on [`../verticals/solutions.md`](../verticals/solutions.md) (`60` → `64`). Nothing removed.**
+
+### 🔴 `683-B` — the grant is there; the probe spelled the filename wrong
+
+p683's first arm probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license`. Two of `21` candidates (`9.5 %`) returned `404` on every one of those **and carry a real, verbatim MIT grant**:
+
+| repo | real path | bytes | sha256₁₂ | uppercase probe | actual-case probe |
+|---|---|--:|---|---|---|
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **`License`** | `1,079` | `021bff58ad26` | `LICENSE` → 🔴 `404` | 🟢 `200` |
+| [`vkaravir/JSAV`](https://github.com/vkaravir/JSAV) | **`MIT-license.txt`** | `1,095` | `05e0a5ea02c8` | `MIT-LICENSE.txt` → 🔴 `404` | 🟢 `200` |
+
+Both found by **blobless clone** (`--filter=blob:none --no-checkout`), then byte-read from `raw` at the real default ref. Controls run at both signs.
+
+🔴 **And the first half of this is not a finding — it is a regression p683 committed against this base's own instrument.** [`P1057`](../compose/code/p1057-licence-path-case/) built a case-variant generator at pass 189 (`STEMS = license, licence, copying, notice` × `UPPER | Capitalize | lower` × `7` extensions) precisely because `raw.githubusercontent.com` is case-sensitive. **`License` is `"license".capitalize()` — squarely inside `P1057`'s generator.** p683 hand-rolled a fixed-case probe, missed it, and had to find it the expensive way. 🟢 **`P683-C` adopted: no pass writes a fresh licence probe. `P1057`'s generator is the probe.** This is the second consecutive pass (after p675's near-miss on `T273`) in which a new arm nearly re-published something the base had already instrumented.
+
+🟢 **The second half IS new, and it is narrow.** `MIT-license.txt` is **outside** `P1057`'s reach: its generator varies the **case** of a fixed stem set, and `MIT-license` is a **prefixed stem** — no casing of `license` yields it. 🔵 **The fix respects `P1057`'s own negative test rather than contradicting it.** `P1057` tests `"license": "MIT"` in a manifest as a *negative* — a licence **string** is not a licence **path** — and that is right. But JSAV's `package.json` declares `"license": "MIT"` and its grant file is named `MIT-license.txt`: the string does not *name* the path, it supplies **the stem's missing prefix**. 🆕 **`ACTION p683-B`: extend `P1057` with one tier — when a manifest declares an SPDX id and no `license-files`, try `{SPDX}-{stem}` across the existing casings.** Cost is `3` extra probes per candidate; yield measured on this pass is `1` grant in `21` candidates. Not yet implemented — declared, with the shape and the cost, so a successor can accept or reject it on the numbers.
+
+### 🟢 `683-C` — `T273`'s alias, extended, and the alarming reading of it killed
+
+This pass filed three platforms whose default ref is **neither `main` nor `master`** — `tutors-sdk/tutors` → `development`, `MaMpf-HD/mampf` → `next`, `hei-school/hei-admin-api` → `preprod` — a shape `T273`'s corpus (defaults of `main` or `master`) could not cover.
+
+🟢 **Measured on `4` repositories, `ls-remote --heads` in full: on none of them does a `master` head exist, and on all four `raw…/master/README.md` returns `200`.** So **`T273` holds regardless of what the default ref is called**, `development` and `next` included. The alias is to *the default*, not to a branch.
+
+🔴 **p683 then formed the dangerous hypothesis and it is REFUTED, which is the part worth reading.** On `tutors` and `mampf` a **real `main` branch exists at a different commit** from the default (`271384d0dd1f` vs `3f578d9362e6`; `690b847da795` vs `8c2d1c988ce9`), yet `raw…/main/README.md` returned **byte-identical content to the default ref**. That looks exactly like raw silently serving the default under a name that resolves elsewhere — which would mean every *"read at `main`"* verdict in this base might have been read at some other ref.
+
+🟢 **Tested directly, and it is a coincidence, not a fallback.** Fetching both branches and resolving the blob by object id: `origin/development:README.md` and `origin/main:README.md` are **the same blob** (`b7e70e830ec7…`), as are `origin/next:README.md` and `origin/main:README.md` (`cd69fac7423b…`). The branches differ in other files; the README happens not to have changed. **`raw` served the branch it was asked for.** 🔵 Recorded because a pass that had stopped at the byte comparison would have published a false alarm against `~800` existing verdicts — and because **identical bytes across refs is a sufficient explanation that must be eliminated before an alias is claimed.**
+
+### 🔵 Channel state measured at p683, so a successor does not misread a `403`
+
+| channel | reading `2026-11-06` |
+|---|---|
+| `git ls-remote --symref` | 🟢 **works** — the authoritative existence + default-ref check. `15 / 15` repo URLs written this pass resolve, and every default ref matches the `Branch` cell filed against it |
+| `raw.githubusercontent.com` | 🟢 **works** — every grant payload on this page was byte-read here |
+| `gh api search/repositories` | 🟢 **works**, and it is the discovery channel `683-A` measured |
+| `gh api repos/{owner}/{repo}/...` | 🔴 **`403`** for any repository not attached to the session — so a repo's own `license`, `contents` and tree endpoints are unavailable; file trees were enumerated by **blobless clone** (`--filter=blob:none --no-checkout`) instead |
+| `curl` → `github.com` **HTML** | 🔴 **uniform `403` from the proxy** |
+
+🔴 **That last row is a trap worth naming.** `curl -sI https://github.com/<slug>` returns `403` for **every** slug here, including repositories this base has carried for hundreds of passes (`HKUDS/DeepTutor` among them). 🟢 **A `403` on that channel is a statement about the proxy, not about the repository** — existence must be checked with `ls-remote`, never with an HTTP status against the HTML page. A pass that used `curl -sI` as its liveness gate would mark the entire shelf dead.
+
+### 🟡 Digest cross-checks that came free
+
+| payload | bytes | sha256₁₂ | agrees with |
+|---|--:|---|---|
+| `JuneYaooo/teacher-to-skills` Apache-2.0 | `11,358` | `cfc7749b96f6` | 🟢 the `apache.org` canonical, **as served**, already on [`foundations.md`](./foundations.md) |
+| `NewSchoolApp/newschool-backend` Apache-2.0 | `11,357` | `c71d239df917` | 🟢 the `apache/.github` canonical — same payload as `webtech-network/autograder` |
+| `open-spaced-repetition/py-fsrs` / `fsrs4anki-helper` MIT | `1,079` | `021bff58ad26` | 🟢 **byte-identical to each other** — same org, same holder (`Copyright (c) 2022 Open Spaced Repetition`) |
+| `haxtheweb/haxcms-php` Apache-2.0 | `11,362` | `b662f44e55e8` | 🟡 `11,362 B` like `pacewisdomhq/TutorLoom` (`a89039268428`) but a **different digest at the same byte count** — same length, different trailing bytes |
+
+### 🔴 The placeholder that nearly became a placement
+
+p683 introduced a placement channel — **a ccTLD or `.edu` host committed in the repository's own files** — and it placed `NewSchoolApp/newschool-backend` **LATAM** on `newschoolapp.com.br` (`.br` is registry-restricted to Brazil) and would have supported `pedal-edu/pedal` → North America on `acbart@udel.edu` in its `setup.py`.
+
+🔴 **On the same sweep, `pacewisdomhq/TutorLoom` matched `acme.edu` — a documentation placeholder.** 🟢 **`P683-D` adopted: the TLD channel requires a placeholder guard** (`acme.*`, `example.*`, `foo.*`, `localhost`, `your-school.*`) **before a host counts as a jurisdiction.** The channel is strong — a ccTLD is a registry fact, not a language guess — and it is exactly as strong as its guard list.
+
 ## 🆕 2026-11-06 (p682) — 🔧 **`34` REGION CELLS IN THIS FILE CARRIED COUNTRY, FLAG OR “NOT PLACED” TEXT INSIDE THE CLOSED-VOCABULARY FIELD; THE WORST SINGLE BUCKET WAS `EMEA (Finland)` × 8**
 
 **No repository row was removed and none was added to [`repos/foundations.md`](./foundations.md) at p682 (`143` → `143`).** This file's change is confined to the `Region` column, and the reason it needed one is recorded in full at [`agents/trending.md` § `682-A`](../agents/trending.md).
