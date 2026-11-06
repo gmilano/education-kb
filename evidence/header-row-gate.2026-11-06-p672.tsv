@@ -1,0 +1,12 @@
+page	naive_gate_hits	naive_all_false_positives	working_gate_real_defects	note
+agents/top.md	0	-	0	clean on both gates
+agents/trending.md	39	YES	0	all 39 are transposed key-value rows (field name in col 1, value in col 2)
+repos/foundations.md	0	-	0	clean on both gates
+repos/trending.md	36	YES	0	includes `| tokenaii/Horus-Taleeq-0.2B-Base | MIT | MIT | AGREE |` -- a row comparing two licence readings (672-E2)
+verticals/solutions.md	0	-	0	clean on both gates
+intel/market.md	0	-	0	clean on both gates
+intel/trends.md	0	-	0	clean on both gates
+compose/patterns.md	5	YES	0	transposed component tables
+TOTAL	80	80/80 FALSE	0	672-E: the naive gate has a 100% false-positive rate; working gate committed as ingest/p672-header-row-gate.py
+CONTROL-POSITIVE	-	-	FIRES	synthetic `| Nombre | Repo | Licencia |` orphan header is detected
+CONTROL-NEGATIVE	-	-	SILENT	transposed key-value table plus a real data row is not flagged

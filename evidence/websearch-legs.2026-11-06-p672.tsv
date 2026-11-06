@@ -1,0 +1,53 @@
+region	fact	needle_variants	shelf_hits	full_corpus_hits	verdict	note
+Global	TBRC AI-in-education 7.52B 2025 -> 10.6B 2026 at 40.9% CAGR	40.9%|7.52|10.6B|$10.6	53	689	HELD-ON-SHELF	-
+Global	Persistence Market Research AI in Education 2026-2033 forecast	Persistence Market Research	0	16	HELD-ON-SHELF	-
+Global	US federal $169M investment in responsible AI in higher education (Jan 2026)	$169M|169 million|$169	21	150	HELD-ON-SHELF	-
+Global	Deloitte 2026 higher-education trends: AI in strategic planning and operations	Deloitte	1	4	HELD-ON-SHELF	-
+Global	microsoft/ai-agents-for-beginners MIT 12 lessons	ai-agents-for-beginners	247	889	HELD-ON-SHELF	-
+Global	trycua/cua MIT agents that operate computers ~17k stars	trycua|/cua	0	0	NOVEL	-
+Global	EdSurge K-12 trend: early intervention + teacher admin load	EdSurge	0	3	HELD-ON-SHELF	-
+Global	Technavio AI market in education sector analysis	Technavio	6	77	HELD-ON-SHELF	-
+Global	BCC Research AI in Higher Education global market	BCC Research	4	5	HELD-ON-SHELF	-
+Global	anandpatikat/guru-latihan-dinamis AI teacher exam-prep tool	guru-latihan-dinamis|anandpatikat	73	189	HELD-ON-SHELF	-
+Global	OPTIMETA/PAIDEIA Claude Code plugin exam readiness	PAIDEIA|OPTIMETA	202	422	HELD-ON-SHELF	-
+Global	GarethManning/education-agent-skills TypeScript	education-agent-skills|GarethManning	437	1904	HELD-ON-SHELF	-
+Global	rohitg00/ai-engineering-from-scratch	ai-engineering-from-scratch|rohitg00	620	1767	HELD-ON-SHELF	-
+Global	TapXWorld/ChinaTextbook free Chinese textbooks	ChinaTextbook|TapXWorld	10	29	HELD-ON-SHELF	-
+Global	CK-ERP open source Edu/ERP/CRM/MRP	CK-ERP	33	102	HELD-ON-SHELF	-
+Global	Open for Business Project MIT e-business suite	Open for Business|OFBiz	103	847	HELD-ON-SHELF	-
+North America	North America 36% of global AI-education market, $3.68B 2026 -> $32B 2030	3.68|36% of|$32 billion|32B	34	661	HELD-ON-SHELF	-
+North America	North America holds 38% market share 2025	38% of|38% market	0	13	HELD-ON-SHELF	-
+North America	86% of educational organizations in NA adopted generative AI (uncorroborated)	86% of educational	0	0	NOVEL	-
+North America	~70% of institutions in Europe and North America have or are developing AI guidance	70% of institutions|70% of	10	42	HELD-ON-SHELF	-
+North America	COPPA constrains AI-for-kids data use in the US	COPPA	35	374	HELD-ON-SHELF	-
+North America	Embodied and Miko as AI-for-kids robot makers	Embodied|Miko	5	126	HELD-ON-SHELF	-
+North America	Knowledge Sourcing United States AI in edtech market	Knowledge Sourcing|knowledge-sourcing	0	6	HELD-ON-SHELF	-
+EMEA	EU AI Act post-market surveillance obligations for high-risk educational AI	post-market surveillance|post market surveillance	0	8	HELD-ON-SHELF	-
+EMEA	Claim: EU AI Act enforceable from February 2026 (conflicts with held Digital Omnibus 2 Dec 2027)	February 2026 enforce|enforceable from February	0	1	HELD-ON-SHELF	-
+EMEA	Workday: 56% of EMEA CEOs say organisation prepared for AI adoption	56% of EMEA|56% of	0	6	HELD-ON-SHELF	-
+EMEA	Fosway Group 2026 AI Market Assessment paper for digital learning (April 2026)	Fosway	3	37	HELD-ON-SHELF	-
+EMEA	LEGO Education K-8 computer science and AI classroom platform ships April 2026	LEGO Education|LEGO	20	286	HELD-ON-SHELF	-
+EMEA	Microsoft Elevate for Educators expands AI tools across K-12 and higher ed	Elevate for Educators|Microsoft Elevate	1	13	HELD-ON-SHELF	-
+EMEA	European University Association January 2026 report	European University Association	1	16	HELD-ON-SHELF	-
+EMEA	ICS.AI national higher education AI model, free campus tools for UK students	ICS.AI	3	15	HELD-ON-SHELF	-
+EMEA	CompTIA five tech trends shaping EMEA IT strategy 2026	CompTIA	17	135	HELD-ON-SHELF	-
+APAC	Acer Edu Summit Asia Pacific 2026	Acer Edu Summit|Acer	55	481	HELD-ON-SHELF	-
+APAC	Forrester: APAC CEOs leading global AI adoption	Forrester	5	105	HELD-ON-SHELF	-
+APAC	AI sovereignty sets the pace for Asia Pacific in 2026	AI sovereignty|sovereignty	51	447	HELD-ON-SHELF	-
+APAC	Boomi APAC tech priorities AI 2026 report	Boomi	6	28	HELD-ON-SHELF	-
+APAC	OneTrust AI governance gap: global trends vs APAC regional realities	OneTrust	3	32	HELD-ON-SHELF	-
+LATAM	AI in Higher Education LATAM Survey 2026 (Tec de Monterrey / TecScience)	LATAM Survey|TecScience|Higher Education LATAM	25	322	HELD-ON-SHELF	-
+LATAM	Mobility Foresights Latin America AI Tutors Market	Mobility Foresights	0	0	NOVEL	-
+LATAM	Google.org committed $4.6M to AI education across Latin America (2026)	Google.org|$4.6 million|4.6M	20	186	HELD-ON-SHELF	-
+LATAM	Raspberry Pi Foundation secured $4.6M to scale AI education in LATAM	Raspberry Pi Foundation|Raspberry Pi	26	119	HELD-ON-SHELF	-
+LATAM	Microsoft AI for Good research hub in Uruguay	AI for Good|Uruguay	52	612	HELD-ON-SHELF	-
+LATAM	UNESCO warns of severe teacher shortage in the region	teacher shortage	0	22	HELD-ON-SHELF	-
+LATAM	Baker McKenzie: fragmented LATAM AI regulatory picture	Baker McKenzie	0	34	HELD-ON-SHELF	-
+LATAM	UNU working paper: AI implementation in higher education in LAC	unu.edu|United Nations University|UNU 	33	240	HELD-ON-SHELF	-
+LATAM	ILIA Indice Latinoamericano de IA chapter	ILIA|indicelatam	579	5724	HELD-ON-SHELF	-
+LATAM	ITU FNS-AI report: AI Trends in LAC	FNS-AI|ITU 	0	7	HELD-ON-SHELF	-
+CONTROL	nonsense needle MUST score 0 at both scopes	zzqxnonsense672educationfoo	0	0	NOVEL	control
+CONTROL	known-held in variant spelling (Apache-2.0 hyphenated)	Apache-2.0	3167	35304	HELD-ON-SHELF	control
+CONTROL	known-held in variant spelling (Apache 2.0 spaced)	Apache 2.0	49	355	HELD-ON-SHELF	control
+CONTROL	known-held plain (Moodle)	Moodle	3396	33637	HELD-ON-SHELF	control
+CONTROL	known-held acronym variant (IESALC)	IESALC	158	1651	HELD-ON-SHELF	control

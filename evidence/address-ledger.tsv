@@ -1020,7 +1020,7 @@ federicazoe/gradetools	p206	GPL-3.0	-	2026-10-14	1	1
 fedora-infra/tahrir	p88	unstated	intel/trends.md,repos/foundations.md	2026-11-05	2	2
 felipedias-ie/blackboard-mcp	p71	unstated	-	2026-10-26	11	8
 fenago/LearnGraph	p303	unstated	-	2026-10-18	2	1
-FenixEdu/fenixedu-academic	p69	LGPL	-	2026-10-21	3	2
+FenixEdu/fenixedu-academic	p69	LGPL-3.0	verticals/solutions.md	2026-11-06	4	3
 fentas/lani	p242	AGPL-3.0	-	2026-10-16	1	1
 fernandobrito/cursos_ufpb	p445	GPL-3.0	-	2026-10-25	2	1
 fernandobrito/ufpb_sigaa_api_old	p445	GPL-3.0	-	2026-10-25	2	1
@@ -1389,7 +1389,7 @@ itmir913/score-reporter	p242	unstated	-	2026-10-16	1	1
 ivan-my-wong/flowclass	p410	AGPL-3.0|MIT	-	2026-10-23	4	1
 iVishalr/BigHOST	p86	MIT	-	2026-10-09	2	1
 ivmelo/suap-api-php	p444	MIT	-	2026-10-25	1	1
-iwangjian/Coding-Tutor	p363	Apache-2.0	-	2026-11-01	2	1
+iwangjian/Coding-Tutor	p363	Apache-2.0	agents/top.md	2026-11-06	3	2
 iwuzhu/kiro-ai-grading-system	p528	MIT	-	2026-10-29	2	1
 iyiook333/mcp-github-learning-assistant	p516	MIT	-	2026-10-29	2	1
 Jabir-Srj/moodle-connector	p529	MIT	-	2026-10-29	1	1
@@ -1736,7 +1736,7 @@ louislegrain/api-ecoledirecte	p453	unstated	-	2026-10-26	1	1
 LovableWind/Text-Tutor	p479	MIT	-	2026-10-27	1	1
 lovejzzz/CourseMapper	p91	MIT	-	2026-10-11	2	2
 loventures/loplatform	p84	AGPL-3.0	-	2026-10-09	1	1
-lowwwbank/anything-to-course	p3	MIT	-	2026-10-26	2	2
+lowwwbank/anything-to-course	p3	MIT	agents/top.md	2026-11-06	3	3
 loyaniu/moodle-mcp	p2	no-grant	-	2026-11-05	11	7
 lplnufpi/essay-br	p42	MIT	-	2026-10-16	3	3
 lrnfast/lrnr-lti	p232	Apache-2.0	-	2026-10-16	2	1
@@ -2870,7 +2870,7 @@ TouchRefletz/maia.edu	p250	AGPL-3.0	-	2026-10-16	1	1
 touretzkyds/ai4k12	p92	unstated	-	2026-10-18	6	4
 TovTechOrg/Tov-learn	p156	MIT	-	2026-10-25	9	8
 towardsai/agent-course-notebooks	p251	unstated	-	2026-10-16	1	1
-towardsai/ai-tutor-app	p3	Apache-2.0|MIT	-	2026-11-05	15	10
+towardsai/ai-tutor-app	p3	Apache-2.0	agents/top.md	2026-11-06	16	11
 towardsai/ai-tutor-rag-system	p251	no-grant	-	2026-10-27	2	2
 tpt-solutions/tpt-school	p243	unstated	-	2026-10-16	2	2
 trane-project/trane	p213	AGPL-3.0	-	2026-10-15	2	1
@@ -3276,3 +3276,8 @@ daisy/MathCAT	p671	MIT	intel/market.md,intel/trends.md,repos/foundations.md	2026
 daisy/MathCATForPython	p671	MIT	repos/foundations.md	2026-11-05	1	1
 Negai-ai/AgentClaw	p671	Apache-2.0|NOT-FILED-off-domain	-	2026-11-05	1	1
 huifer/Claude-Code-KnowCraft	p671	MIT|NOT-FILED-off-domain	-	2026-11-05	1	1
+rizukirr/no-vibe	p672	MIT	agents/top.md	2026-11-06	1	1
+maruf009sultan/AIELTS-WRITING	p672	MIT	agents/top.md	2026-11-06	1	1
+trycua/cua	p672	MIT	repos/foundations.md	2026-11-06	1	1
+July-Tea/EssayMate	p672	CC-BY-NC-SA-4.0	-	2026-11-06	1	1
+karthikkasirajan/studybuddy-ai	p672	no-grant-payload	-	2026-11-06	1	1

@@ -1,0 +1,217 @@
+leg	slug	stars	spdx	pushed_at	novelty	description
+en-tutor	ripienaar/free-for-dev	141986	none	2026-11-04T14:41:32Z	HELD-FULL-SLUG	A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and inf
+en-tutor	sdmg15/Best-websites-a-programmer-should-visit	76172	MIT	2025-09-16T18:34:24Z	HELD-FULL-SLUG	:link: Some useful websites for programmers.
+en-tutor	HKUDS/DeepTutor	55434	Apache-2.0	2026-11-05T19:03:44Z	HELD-FULL-SLUG	DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.
+en-tutor	poteto/hiring-without-whiteboards	53124	MIT	2026-09-24T04:48:39Z	HELD-FULL-SLUG	⭐️  Companies that don't have a broken hiring process
+en-tutor	charlax/professional-programming	51668	MIT	2026-10-27T08:52:04Z	HELD-FULL-SLUG	A collection of learning resources for curious software engineers
+en-tutor	ashishpatel26/500-AI-Agents-Projects	39322	MIT	2026-11-05T20:22:26Z	HELD-FULL-SLUG	The 500 AI Agents Projects is a curated collection of AI agent use cases across various in
+en-tutor	luong-komorebi/Awesome-Linux-Software	25647	none	2026-05-03T08:15:18Z	NOVEL	🐧 A list of awesome Linux softwares 
+en-tutor	dipakkr/awesome-ai-engineering	22533	MIT	2026-10-21T16:19:25Z	HELD-FULL-SLUG	🚀 A curated collection of AI engineering resources, roadmaps, tools, and projects covering
+en-tutor	mahmoud/awesome-python-applications	18141	none	2026-10-18T07:15:39Z	HELD-FULL-SLUG	💿 Free software that works great, and also happens to be open-source Python. 
+en-tutor	ai-collection/ai-collection	9273	MIT	2026-11-04T08:56:45Z	HELD-FULL-SLUG	The Generative AI Landscape - A Collection of Awesome Generative AI Applications
+en-tutor	anbeime/skill	9204	none	2026-11-05T09:05:04Z	NAME-SEEN	收录最全、更新最快的技能Skills商店：精选原创技能包（涵盖文档处理、内容创作、编程开发、机器学习、自动化工作流），全部打包好可直接安装使用！同时自动抓取GitHub上万个Ski
+en-tutor	ai-boost/awesome-prompts	9179	GPL-3.0	2026-11-05T08:33:51Z	NOVEL	Curated prompts, frameworks and papers for LLMs and agents, with an engineering bias. Prom
+en-tutor	dair-ai/ML-Papers-Explained	8920	none	2025-06-30T03:35:10Z	NOVEL	Explanation to key concepts in ML
+en-tutor	WooooDyy/LLM-Agent-Paper-List	8263	none	2025-09-12T03:08:58Z	NOVEL	The paper list of the 86-page SCIS cover paper "The Rise and Potential of Large Language M
+en-tutor	openedx/openedx-platform	8217	AGPL-3.0	2026-11-05T20:31:23Z	HELD-FULL-SLUG	The Open edX LMS & Studio, powering education sites around the world!
+en-tutor	fr0gger/Awesome-GPT-Agents	6610	Apache-2.0	2024-07-21T17:56:50Z	NOVEL	A curated list of GPT agents for cybersecurity
+en-tutor	langgptai/wonderful-prompts	6390	MIT	2026-08-25T13:49:20Z	NOVEL	🔥中文 prompt 精选🔥，ChatGPT 使用指南，提升 ChatGPT 可玩性和可用性！🚀
+en-tutor	heilcheng/awesome-agent-skills	6348	MIT	2026-11-02T04:02:45Z	NAME-SEEN	Tutorials, Guides and Agent Skills Directories
+en-tutor	langgptai/awesome-claude-prompts	5566	none	2026-10-15T23:15:53Z	NOVEL	This repo includes Claude prompt curation to use Claude better.
+en-tutor	wesbos/awesome-uses	5310	none	2026-11-04T22:08:32Z	NOVEL	A list of /uses pages detailing developer setups, gear, software and configs.
+en-tutor	alvinreal/awesome-opensource-ai	4990	CC0-1.0	2026-11-05T08:37:06Z	NOVEL	Curated list of the best truly open-source AI projects, models, tools, and infrastructure.
+en-tutor	hemanth/awesome-pwa	4943	none	2026-08-10T05:18:51Z	NOVEL	A curated list of Progressive Web Apps, resources, tools and articles
+en-tutor	knowledgefxg/learning-english	4918	none	2026-10-27T13:36:06Z	NOVEL	精选优质英语学习资源合集，专注于听说读写等核心技能的提升。包含语法、词汇和媒体资源，助您更好地学习英语。
+en-tutor	Astrosp/Awesome-OSINT-List	4636	GPL-3.0	2026-11-03T09:59:23Z	NOVEL	📡 Comprehensive collection of OSINT tools for cybersecurity professionals, researchers, an
+en-tutor	judge0/judge0	4504	GPL-3.0	2026-10-26T10:14:34Z	HELD-FULL-SLUG	Robust, fast, scalable, and sandboxed open-source online code execution system for humans 
+en-topic	ls1intum/Artemis	827	MIT	2026-11-05T23:43:14Z	HELD-FULL-SLUG	Artemis - Interactive Learning with Automated Feedback
+en-topic	RoseCityRobotics/ai-developer-resources	769	none	2024-11-21T20:39:56Z	HELD-FULL-SLUG	I am Duncan, a cofounder at Rose City Robotics. This public repository is used as an easy 
+en-topic	mehmetkahya0/AI-Catalog	502	GPL-3.0	2026-11-01T15:56:15Z	HELD-FULL-SLUG	Huge AI models catalog. A curated list of AI tools, platforms, and resources across variou
+en-topic	kuzand/Computer-Vision-Video-Lectures	445	CC0-1.0	2021-05-15T10:49:30Z	HELD-FULL-SLUG	A curated list of free, high-quality, university-level courses with video lectures related
+en-topic	ystemsrx/mini-nanoGPT	386	MIT	2026-10-12T09:28:31Z	HELD-FULL-SLUG	One-click training of your own GPT. Training a GPT has never been easier for beginners. / 
+en-topic	marimo-team/learn	362	MIT	2026-04-30T18:47:34Z	HELD-FULL-SLUG	📚 A curated collection of marimo notebooks for education.
+en-topic	ml-from-scratch-book/code	322	MIT	2026-07-19T15:49:47Z	HELD-FULL-SLUG	Companion code for Machine Learning From Scratch — 10 core ML algorithms built from scratc
+en-topic	GeminiLight/awesome-ai-llm4education	221	none	2026-10-23T11:31:32Z	HELD-FULL-SLUG	Awesome artificial intelligence (AI) and large language model (LLM) for education papers.
+en-topic	NiluK/worldmodels101	204	CC-BY-SA-4.0	2026-08-24T02:33:40Z	HELD-FULL-SLUG	Free interactive course on world models in AI. Nine visual chapters on prediction, latent 
+en-topic	Psyyke/A.C.A.S	184	GPL-3.0	2026-11-02T02:52:30Z	NOVEL	Advanced Chess Assistance System for Chess.com, Lichess.org, Pychess.org and more. Hassle-
+en-topic	philippwulff/TUM_RCI	146	Apache-2.0	2023-09-25T19:07:16Z	NOVEL	Lecture Notes for Robotics, Cognition, Intelligence @ TUM
+en-topic	oluiscabral/studorama	111	MIT	2026-09-03T17:31:16Z	HELD-FULL-SLUG	AI-powered study sessions to enhance your learning
+en-topic	OlimpiadaAI/II-OlimpiadaAI	61	none	2026-02-18T01:39:45Z	NOVEL	Oficjalne repozytorium drugiej edycji ogólnopolskiej Olimpiady Sztucznej Inteligencji
+en-agentlms	vishalsachdev/canvas-mcp	317	MIT	2026-11-05T15:42:34Z	HELD-FULL-SLUG	Canvas LMS MCP server — up to 102 tools and 8 agent skills for students & educators. Works
+de-ki	Chrism1412/yippee-kids-chores-card	19	MIT	2026-11-05T10:09:00Z	NOVEL	Kinder-Aufgaben mit Sternen und Belohnungen für Home Assistant
+de-ki	telekom/ki-in-schulen	16	MIT	2025-06-04T15:52:42Z	HELD-FULL-SLUG	AI@School - Wissen zu künstlicher Intelligenz spielerisch in die Schulen bringen 
+de-ki	AndreasFischer1985/KIPerWeb	8	none	2026-10-30T09:58:53Z	NOVEL	KIPerWeb - bringt KI und Weiterbildung zusammen!
+de-ki	lehrer-tools/lehrer-agent	5	none	2026-04-06T07:52:25Z	HELD-FULL-SLUG	Lehrer Agent zur Unterrichtsvorbereitung, Testerstellung und Vorschriftenfragen. Kompatibe
+de-ki	wi-wissen/informatikschulbuch	2	none	2023-01-17T09:08:31Z	NOVEL	german book for students to learn computer schience at school
+de-ki	GlasiDe/osi-agenten	2	NOASSERTION	2026-10-14T06:34:24Z	NOVEL	OSI-Agenten · Operation Lohnzettel – Agenten-Krimi als Lernspiel zum OSI-Modell (HTML, off
+de-ki	udondan/lanis	2	MIT	2026-11-05T22:36:31Z	HELD-FULL-SLUG	SDK, CLI, and MCP server for Schulportal Hessen (Lanis)
+de-ki	vitals5/ha-school-grades	2	NOASSERTION	2026-10-30T12:57:18Z	NOVEL	Einfache Verwaltung von Schulnoten in Home Assistant 
+de-ki	Menkoban/KI-Unterrichtswerkstatt	1	MIT	2026-10-31T04:17:34Z	HELD-FULL-SLUG	-
+de-ki	SloppifAI/Laravel_Plattform	1	none	2026-10-25T09:54:05Z	NOVEL	-
+de-ki	Praeto89/Praeto89	1	none	2026-11-05T13:32:30Z	NOVEL	-
+de-ki	JRS1986/KISchule	1	none	2026-10-26T19:05:59Z	HELD-FULL-SLUG	KI-Lernpfade für Lehrkräfte, Schülerinnen und Schüler und Eltern an Gymnasien in Baden-Wür
+de-ki	kaizerius0/HTML-Website-ueber-KI-Schulprojekt	1	none	2026-05-21T21:03:18Z	NOVEL	-
+de-ki	teacherette-susa/ki-skills	1	none	2026-04-21T12:19:42Z	NAME-SEEN	Skills-Bibliothek für die Schule
+de-ki	BeataCegledi/Hogwarts	1	none	2026-06-19T15:32:41Z	NAME-SEEN	Interactive Hogwarts-themed web project combining HTML5 & CSS3
+de-ki	matthiasgruenwald/moo-gpt	1	AGPL-3.0	2026-10-05T16:43:46Z	NOVEL	Self-hosted AI chat widget for Moodle. Embed an AI assistant directly into tasks and quizz
+de-ki	salomegolden/fact_bait_fake	1	none	2026-07-24T11:33:23Z	NOVEL	Online Lehrerkommentar und Unterrichtsmaterial, Webseite zum Thema, PDFs zum Download und 
+de-ki	SabrinaAlexM/jeopardy-vibecoding	1	none	2026-10-05T16:05:32Z	NOVEL	Interaktives Jeopardy-Quiz zu KI in Schule und Unterricht – als Beispiel für eine mit Vibe
+de-ki	grhoost/Partybunker-Website	1	none	2026-09-16T21:47:38Z	NOVEL	Unsere Website für Partyräume
+de-ki	chrisoel/python-grundlagenkurs	1	NOASSERTION	2026-08-19T16:28:26Z	NOVEL	Vollständiger deutschsprachiger Python-Grundlagenkurs für Einsteiger - 119 Lektionen in 12
+de-ki	digitallabor-ms/EscapeAndMake	1	none	2026-07-30T10:10:43Z	NOVEL	Escape Room
+de-ki	xDJMLx/studienfuchs	1	NOASSERTION	2026-10-11T16:23:46Z	NOVEL	-
+de-ki	arfhh/moodle-erweiterungen	1	NOASSERTION	2026-11-05T17:56:14Z	NOVEL	Fünf Chrome-Erweiterungen für Moodle: Bewerten, Nachbewerten, Fragensammlung pflegen, Note
+de-ki	SabrinaAlexM/darkpatterns-durchschaut	1	NOASSERTION	2026-10-18T08:49:42Z	NOVEL	-
+de-ki	WiteWxlf/sortimate-lite	1	NOASSERTION	2026-07-27T18:41:47Z	NOVEL	KI-gestützte Mülltrennung über deine Webcam / AI-driven trash sorting through your webcam 
+de-lern	georgernstgraf/GRG-WMC	14	none	2026-11-01T01:50:57Z	NOVEL	-
+de-lern	cyberlytics/awesome-basics	14	CC-BY-4.0	2026-10-19T13:26:08Z	NOVEL	Digitaler Ressourcen-Pool für Informatik/KI
+de-lern	smashburger-dev/argmin	7	MIT	2026-10-31T07:47:46Z	HELD-FULL-SLUG	Verstehen wie KI funktioniert. Schritt für Schritt. Kostenlos, auf Deutsch und direkt in d
+de-lern	maikksmt/mentoro-ai	6	GPL-3.0	2026-10-15T18:14:14Z	NOVEL	A platform for learning, understanding, and applying AI without the overwhelm.
+de-lern	bh2005/Learning	4	MIT	2026-09-21T12:11:34Z	NAME-SEEN	Anleitungen und Übungen zu verschiedenen Themenbereichen der IT-Infrastruktur, Softwareent
+de-lern	timohilsdorf/module-content	3	CC-BY-SA-4.0	2026-11-05T18:02:15Z	NOVEL	EveryCate-Lernmodule – dateibasiert, Schema-validiert, per Pull Request erweiterbar
+de-lern	kiVerstehen/kiVerstehen	3	CC-BY-SA-4.0	2026-01-13T12:48:09Z	NOVEL	-
+de-lern	drjhellenbrand/sid	3	NOASSERTION	2026-09-21T13:10:55Z	NAME-SEEN	Sid ist ein KI‑Lernbegleiter für selbstreguliertes Lernen (SRL) auf der KI-Plattform AIS.c
+de-lern	talent-factory/pyt-ai-intro	3	none	2025-12-19T09:53:16Z	NOVEL	Python Einführung & KI-gestütztes Programmieren
+de-lern	Majort0m0/TippTrainer	3	none	2026-10-17T14:52:55Z	NOVEL	Lern-App zum Schreiben und Tippen für Grund- und Förderschule – eine HTML-Datei, läuft im 
+de-lern	constantinktz/constantinktz	2	none	2026-11-05T12:24:48Z	NOVEL	Mein GitHub-Profil
+de-lern	DomenicMoran/DomenicMoran	2	none	2026-09-06T16:06:21Z	NOVEL	Profil-README: wer ich bin, was in Produktion läuft und wo der Code liegt.
+de-lern	Lupus7477/Lernplattform-LinusCreations	1	none	2026-02-09T13:54:07Z	NOVEL	-
+de-lern	dias-digitial-assistant/dias	1	none	2025-12-23T14:21:27Z	NAME-SEEN	-
+de-lern	mark-baumann/bachelorarbeit	1	none	2026-08-03T16:24:36Z	NAME-SEEN	🎓 Bachelorarbeit: Architektur und Evaluation autonomer KI-Agenten
+de-lern	bendes-ai/lernhelden_4	1	none	2026-10-19T21:34:09Z	NOVEL	-
+de-lern	DenisMGit/learnout-showcase	1	none	2026-09-11T14:17:00Z	NOVEL	KI-gestützte Lernplattform für IT-Zertifizierungen
+de-lern	AliAshooriyoon/deutsch_komplex	1	NOASSERTION	2026-05-13T16:55:43Z	NOVEL	Big plattform to learn german
+de-lern	nadine-koch/QuBit	1	none	2025-12-15T15:30:21Z	NOVEL	-
+de-lern	SlimyZockt/htw-proto	1	MIT	2025-07-22T11:21:16Z	NOVEL	Demo for KI-Powered Lernplattform
+de-lern	wannas234/Portfolio-NeueKonzepte1	1	none	2026-10-04T17:50:03Z	NOVEL	-
+de-lern	eigenwilLich/eigenwilLich	1	none	2025-07-21T09:15:47Z	NOVEL	Config files for my GitHub profile.
+de-lern	STAINCABLER/DHBW_TIF23A_CampusCode	1	NOASSERTION	2025-10-27T04:45:42Z	NOVEL	AI Programmier-Tutor, umgesetzt mit Node.js
+fr-ia	websealevel/awesome-fr	57	none	2026-10-25T10:46:20Z	NAME-SEEN	Une liste organisée de ressources gratuites pour la programmation, le web et le design. Ré
+fr-ia	ArielShadrac/Tigmi	27	MIT	2026-06-15T13:34:34Z	NOVEL	Awesome Burkina Faso Open Source Projects
+fr-ia	ScanderiaFR/lmstudio-plugins	20	NOASSERTION	2026-05-19T13:11:36Z	NOVEL	quelques plugins pour LMStudio
+fr-ia	gmolveau/starred	18	none	2026-10-31T04:32:24Z	NAME-SEEN	my list of starred github repos
+fr-ia	lascientotheque/ressources-ia	8	none	2022-05-18T14:48:32Z	NOVEL	Carnet de ressources pédagogiques sur l'intelligence artificielle pour les jeunes publics
+fr-ia	mohamedhousniphd/feedny	4	none	2026-11-01T06:23:42Z	NOVEL	Feddaback analysis
+fr-ia	gridboy/MOOC-Numerique-Responsable	4	CC0-1.0	2026-08-02T09:01:44Z	NOVEL	Référencement des MOOCs et supports de cours pour un numérique responsable
+fr-ia	Humanix-Cybersecurity/Humanix-Academie	4	AGPL-3.0	2026-11-05T12:58:38Z	NOVEL	🦊 Plateforme française open source de cybersensibilisation pour PME. AGPLv3 · souverain FR
+fr-ia	Zoran-IA-Mimetique/Zoran-IA2IA-Hub	4	MIT	2025-09-28T13:52:41Z	NOVEL	Hub IA↔IA de Zoran : Zoran Norme souveraine vivante de classe ONU dépôt injecteur Hyperglo
+fr-ia	Singosirutonamikaze/site_epl_web	3	GPL-3.0	2025-10-29T11:12:17Z	NOVEL	-
+fr-ia	aatndongodavid/Tatiana_IA	3	MIT	2026-08-06T18:05:57Z	NOVEL	Assistant chimique intelligent avec IA légère et interface graphique moderne
+fr-ia	wawawaformation/tuteur-ingenierie-pedagogique	3	NOASSERTION	2026-09-05T12:41:22Z	NOVEL	Skill pour agents IA dédié à la conception pédagogique et au suivi de la progression des a
+fr-ia	maj-it/ai-network-observer	3	NOASSERTION	2026-04-30T14:06:03Z	NOVEL	AI-Powered Network Security Monitoring - Real-time threat detection with LLM analysis
+fr-ia	Rwanbt/Programming-sheet-for-Obsidian	3	none	2026-06-14T22:55:59Z	NOVEL	82 cours de programmation complets pour Obsidian (C, Python, JS, Rust, SQL, DevOps, Cloud.
+fr-ia	laurentvoanhofficiel-jpg/Ai-Movie-maker-tools	3	none	2026-10-14T15:17:34Z	NOVEL	On utilise Agnes ai pour générer les premières images clé des vidéos qu'on utilise dans Go
+fr-ia	Th3rdMan/Annuaire-OSint	3	none	2026-06-12T12:05:34Z	NOVEL	Liens, outils et ressources OSINT/CTF sélectionnés
+fr-ia	jourde/prototypes	2	MIT	2026-06-07T17:42:50Z	NAME-SEEN	Prototypes d'applications monopages.
+fr-ia	Supoz9/edge-ai-education	2	MIT	2026-07-13T08:55:40Z	NOVEL	Infrastucture d'IA souveraine, frugale et maïeutique distribuée par discipline au lycée
+fr-ia	IUTInfoAix/IntroPython	2	NOASSERTION	2026-10-16T07:31:54Z	NOVEL	Séance pratique d'introduction à Python pour les étudiants en BUT Informatique
+fr-ia	Mahdi88BH/Generative-AI-Project	2	MIT	2026-05-08T13:05:45Z	NOVEL	-
+fr-ia	MaximeKELI/SIG	2	MIT	2026-08-11T23:41:10Z	NAME-SEEN	-
+fr-ia	flowersteam/clia	2	none	2024-07-25T20:58:05Z	NAME-SEEN	Site web du livre "C'est (pas) moi, c'est l'IA!" (Nathan)
+fr-ia	KingDown-Assoc/axiome	2	MIT	2026-06-16T00:55:03Z	NOVEL	Atelier interactif pour apprendre et comprendre les mathématiques
+fr-ia	Institut-du-Numerique-Responsable/eval_impact_ia	2	CC0-1.0	2026-11-04T07:27:11Z	NOVEL	Calculateur d'impact environnemental de l'IA générative : carbone (gCO₂e), énergie (kWh), 
+fr-ia	Lucas-lux/Assistant_Epargne_Intelligent	2	none	2025-06-25T19:02:02Z	NOVEL	-
+es-ia	miquelnebotaragon/mis_primeros_pasos_en_python	5	NOASSERTION	2024-09-14T21:35:10Z	NOVEL	-
+es-ia	ujjwalgoyal19/Awesome-GPTs	4	none	2023-12-03T17:14:11Z	NOVEL	Curated GPTs for everyone, unlocking magic across the globe 🦄
+es-ia	Jeider-Gomez/Stire-Soft	3	none	2026-11-03T19:40:43Z	NOVEL	-
+es-ia	SkillSwapINC/TutorMatch-Report	3	none	2024-11-18T23:32:40Z	NOVEL	-
+es-ia	upc-pre-202510-1asi0729-4328-Lively/OpenSource-4328	2	none	2025-07-11T10:35:46Z	NOVEL	-
+es-ia	calderonf/IA_GENERATIVA_EN_LA_EDUCACION	1	CC0-1.0	2026-09-13T01:06:48Z	NOVEL	Ia generativa en la Educación, Una guía para Estudiantes y Docentes por Francisco Carlos C
+es-ia	vladimiracunadev-create/education-pedagogy-learning-sciences-program	1	NOASSERTION	2026-10-13T21:55:41Z	NOVEL	🎓 Pedagogía, Docencia y Ciencias del Aprendizaje v2.0.0 · 300 clases en 25 partes · El pro
+es-ia	paolasanchezdev/MathBot_IA	1	NOASSERTION	2025-12-16T00:22:40Z	NOVEL	-
+es-ia	guille463/AulaNet	1	none	2026-09-23T10:08:04Z	NOVEL	Sistema de gestión escolar para primaria: alumnos, profesores, aulas, asignaturas y matríc
+es-ia	th3sp33d/challenge-tutor-ia	1	none	2026-07-24T05:38:53Z	NOVEL	Tutor de IA con n8n y RAG para la nivelación de estudios en Chile, 
+es-ia	teamspada/yachai	1	Apache-2.0	2026-08-09T21:25:06Z	NOVEL	Tutor de comprensión lectora con IA 100% local (Gemma) para primaria, sin depender de inte
+es-ia	kikesainz/TFM-UNED	1	none	2026-07-02T10:58:49Z	NOVEL	Prototipo en Python para generar bancos de preguntas Moodle GIFT desde apuntes en Markdown
+es-ia	luismiglezmohino/HablaIA	1	NOASSERTION	2026-02-25T22:47:09Z	NOVEL	Comunicador Aumentativo y Alternativo (SAAC) con Inteligencia Artificial Humanizante
+es-ia	PROVIWEB-App/PROVIWEB-Public	1	none	2026-10-08T21:29:23Z	NOVEL	PROVIWEB es un ecosistema digital para músicos, artistas, educadores, profesionales y mece
+es-ia	communityrbh-hub/rebuild-choco	1	none	2026-08-28T18:54:14Z	NOVEL	Tutor de resiliencia offline con IA local para ninos de 5 a 10 anos en zonas afectadas por
+es-ia	upc-pre-202601-si657-7940-thropic/talki-project-report	1	none	2026-09-10T03:44:27Z	NOVEL	Informe de Trabajo Final - Fundamentos de Arquitectura de Software SI657
+es-ia	stivenson/cvlac-mcp	1	ISC	2026-10-03T05:05:06Z	NOVEL	MCP server that syncs a MinCiencias CvLAC profile with a personal portfolio, via Playwrigh
+es-ia	gmilano/education-kb	1	none	2026-11-05T22:05:01Z	HELD-FULL-SLUG	-
+es-ia	nesorct/Ia-en-la-educacion	0	NOASSERTION	2026-04-12T19:21:44Z	NAME-SEEN	-
+es-ia	ciberjhonny/ciberjhonny	0	none	2026-03-24T15:23:43Z	NOVEL	-
+es-ia	Diegon97/AranduIA	0	MIT	2026-10-01T20:43:43Z	NOVEL	Ecosistema Abierto, Soberano y Offline-First de IA Educativa para Paraguay 🇵🇾🧠
+es-ia	EstebanGonzabay/EstebanGonzabay	0	none	2026-11-05T12:51:38Z	NOVEL	-
+es-ia	puntoindigo/shippear-smartclass	0	none	2026-08-01T18:21:33Z	NOVEL	Proyecto generado para el evento Shippear 2026-08-01
+es-ia	Jorge-Luis22/yachat	0	none	2026-10-17T20:06:04Z	NOVEL	-
+es-ia	Jose27luis/SocratIA	0	none	2026-06-15T14:34:24Z	NOVEL	Desarrollar un sistema de tutoría inteligente adaptativa, integrado a Canvas LMS, que pers
+pt-ia	Universidade-Livre/ciencia-da-computacao	21010	MIT	2026-05-20T23:56:38Z	HELD-FULL-SLUG	🎓 Um caminho para a educação autodidata em Ciência da Computação!
+pt-ia	arthurspk/guiadecybersecurity	2483	MIT	2026-09-02T14:41:30Z	HELD-FULL-SLUG	Guia de Cyber Security: trilhas, cursos, livros, canais, ferramentas e comunidades para vo
+pt-ia	sandeco/PROMPT-CHATGPT	381	none	2023-12-23T17:14:21Z	NOVEL	-
+pt-ia	ufabc-students-bcc/awesome-disciplinas	78	Unlicense	2024-05-03T19:42:13Z	NOVEL	:pencil2: material de estudo pra te salvar das provas satânicas - ou não.
+pt-ia	ErickWendel/timeline	68	none	2026-10-22T05:04:05Z	NAME-SEEN	🇧🇷🤘🏻Activities of my life
+pt-ia	h4ckthreat/Cybersecurity-Handbook	34	MIT	2026-10-15T02:33:02Z	NOVEL	Este handbook abrange de maneira detalhada todas as informações essenciais para quem desej
+pt-ia	joaopauloaramuni/trabalho-de-conclusao-de-curso-ii	22	MIT	2026-09-01T17:57:52Z	NOVEL	Repo Trabalho de Conclusão de Curso II
+pt-ia	joaopauloaramuni/joaopauloaramuni-portfolio	21	MIT	2026-11-05T18:41:43Z	NOVEL	Repo Portfólio
+pt-ia	guedesindev/ai_tutor_forge	18	GPL-3.0	2026-02-05T02:14:32Z	HELD-FULL-SLUG	Este é um agente de IA que transforma qualquer tópico de estudo em um professor IA Sênior 
+pt-ia	marlonmotta/PROMETHEUS-BRIDGE-LEARN	18	MIT	2026-05-26T14:46:41Z	NOVEL	🔥 PROMETHEUS·BRIDGE·LEARN — AI-powered education system that rewrites how humans teach and
+pt-ia	joaopauloaramuni/trabalho-interdisciplinar-aplicacoes-para-cenarios-reais	17	MIT	2026-11-02T22:16:00Z	NOVEL	Repo Trabalho Interdisciplinar: Aplicações para Cenários Reais
+pt-ia	MARISTELAOLIVEIRA/MARISTELAOLIVEIRA	13	none	2026-11-05T04:34:22Z	NOVEL	Config files for my GitHub profile.
+pt-ia	rainepera/sabIA-ImersaoIA-2025	9	MIT	2025-05-17T21:24:38Z	NOVEL	🧠 sabIA: App educacional com Google Gemini para simplificar textos complexos, gerar exercí
+pt-ia	nlagent/fw	9	MIT	2026-02-18T23:44:51Z	NAME-SEEN	O NL-Agent Framework é um ecossistema de código aberto voltado para a interoperabilidade s
+pt-ia	IgorOGuimaraes/project	7	none	2019-05-25T15:45:58Z	NAME-SEEN	-
+pt-ia	namerico/antigravity-education-kit	6	none	2026-03-26T14:41:46Z	NOVEL	🚀 Framework modular de agentes de IA especializados em educação: tutores, criadores de con
+pt-ia	Eduardo1985S/Eduardo1985S	6	none	2026-09-10T17:48:47Z	NOVEL	-
+pt-ia	thalleskayke6/skill-professor-concurso-publico	5	NOASSERTION	2026-09-05T16:31:39Z	NOVEL	Skill Professor de Concurso Publico para Claude Code, Chat GPT e etc: estudo por questoes 
+pt-ia	oc-garcia/fiap-postech-tcc	4	none	2025-03-13T21:06:00Z	NOVEL	-
+pt-ia	ItamarIliuk/ia-para-todos	4	NOASSERTION	2026-05-26T01:52:34Z	NAME-SEEN	Repositório com as aulas e atividades do Projeto IA para Todos do LABRIOT em parceria com 
+pt-ia	danielvictorb/Sabiar	4	none	2025-11-09T17:06:09Z	NOVEL	Hackathon Project
+pt-ia	sammyfreitas/sammyfreitas	4	none	2026-11-05T23:27:00Z	NOVEL	Config files for my GitHub profile.
+pt-ia	joaopauloaramuni/trabalho-interdisciplinar-aplicacoes-distribuidas	4	MIT	2026-11-02T22:14:10Z	NOVEL	Repo Trabalho Interdisciplinar: Aplicações Distribuídas
+pt-ia	edsonjt81/Guia-de-Cyber-Security	4	MIT	2022-12-27T14:36:02Z	NOVEL	-
+pt-ia	MarcosGitCode/Poliedraw	3	none	2026-10-26T21:51:19Z	NOVEL	Criação de imagem com inteligência artificial para a escola Poliedro
+zh-edu	fighting41love/funNLP	84411	none	2024-05-10T07:38:24Z	NOVEL	中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表
+zh-edu	PlexPt/awesome-chatgpt-prompts-zh	64427	MIT	2026-04-28T10:52:14Z	HELD-FULL-SLUG	ChatGPT 中文调教指南。各种场景使用指南。学习怎么让它听你的话。
+zh-edu	1c7/chinese-independent-developer	62007	none	2026-11-05T14:39:06Z	NOVEL	👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
+zh-edu	scutan90/DeepLearning-500-questions	57712	GPL-3.0	2024-06-26T12:10:14Z	NOVEL	深度学习500问，以问答形式对常用的概率知识、线性代数、机器学习、深度学习、计算机视觉等热点问题进行阐述，以帮助自己及有需要的读者。 全书分为18个章节，50余万字。由于水平有限，
+zh-edu	GitHubDaily/GitHubDaily	48380	none	2025-12-31T18:59:20Z	NAME-SEEN	坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.
+zh-edu	Dujltqzv/Some-Many-Books	25712	none	2026-06-18T05:36:05Z	NOVEL	个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+zh-edu	jbiaojerry/ebook-treasure-chest	23789	none	2026-01-13T00:59:23Z	NOVEL	欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆
+zh-edu	bleedline/aimoneyhunter	18353	none	2025-10-20T00:24:54Z	NOVEL	ai副业赚钱大集合，教你如何利用ai做一些副业项目，赚取更多额外收益。The Ultimate Guide to Making Money with AI Side Hustles
+zh-edu	Anionex/banana-slides	15957	AGPL-3.0	2026-11-04T17:55:04Z	NOVEL	一站式原生AI PPT生成应用，几分钟内生成一套幻灯片; 支持上传任意模板图片，上传任意素材&智能解析，一句话/大纲/页面描述自动生成PPT，口头修改指定区域、一键导出可编辑ppt
+zh-edu	digoal/blog	8603	GPL-2.0	2026-11-04T09:35:17Z	NAME-SEEN	AI,Opensource,Database,Business,Finance,Minds. git clone --depth 1 https://github.com/digo
+zh-edu	yzfly/Awesome-MCP-ZH	7816	MIT	2026-11-01T02:54:38Z	HELD-FULL-SLUG	MCP 资源精选， MCP指南，Claude MCP，MCP Servers, MCP Clients
+zh-edu	kska32/ebooks	7548	none	2023-09-28T05:13:51Z	NAME-SEEN	收藏的一些经典的历史、政治、心理、哲学、数学、计算机方面电子书(约10万本）
+zh-edu	lintsinghua/DeepAudit	7277	AGPL-3.0	2026-11-01T10:22:41Z	NOVEL	DeepAudit：人人拥有的 AI 黑客战队，让漏洞挖掘触手可及。小白一键部署运行，自主协作审计 + 自动化沙箱 PoC 验证。支持 Ollama 私有部署 ，一键生成报告。支持
+zh-edu	wgwang/awesome-LLMs-In-China	6489	Apache-2.0	2024-11-30T12:21:02Z	NOVEL	中国大模型
+zh-edu	itgoyo/TelegramGroup	6449	none	2026-10-27T03:22:53Z	NOVEL	2026最新悄咪咪收集的10000+个Telegram群和频道合集，附全网最有趣好用的机器人BOT🤖，聚合电报导航、电报推荐各种高质量站点。
+zh-edu	0voice/cpp_new_features	6445	none	2025-06-18T13:24:03Z	NOVEL	2021年最新整理， C++ 学习资料，含C++ 11 / 14 / 17 / 20 / 23 新特性、入门教程、推荐书籍、优质文章、学习笔记、教学视频等
+zh-edu	Ceelog/DictionaryByGPT4	6408	CC-BY-SA-4.0	2026-02-27T04:06:27Z	NOVEL	一本 GPT4 生成的单词书📚，超过 8000 个单词分析，涵盖了词义、例句、词根词缀、变形、文化背景、记忆技巧和小故事
+zh-edu	WeThinkIn/AIGC-Interview-Book	5175	GPL-3.0	2026-11-05T15:48:52Z	NOVEL	【三年面试五年模拟】AIGC/LLM/AI Agent算法工程师面试资源平台。涵盖AIGC、LLM大模型、AI Agent、具身智能、传统深度学习、计算机视觉、自然语言处理、自动驾
+zh-edu	INTERMT/Awesome-PyTorch-Chinese	4792	MIT	2019-08-14T03:04:28Z	NOVEL	【干货】史上最全的PyTorch学习资源汇总
+zh-edu	xixu-me/awesome-persona-distill-skills	4735	CC0-1.0	2026-10-18T19:09:21Z	NOVEL	Curated list of Agent Skills centered on people, relationships, commemorative scenes, and 
+zh-edu	tmstack/awesome-persona-skills	4564	none	2026-09-30T13:18:05Z	NOVEL	同事.skill、老板.skill、前任.skill、自己.skill、永生.skill、女娲.skill……  
+zh-edu	CLUEbenchmark/CLUEDatasetSearch	4459	none	2022-11-21T08:04:52Z	NOVEL	搜索所有中文NLP数据集，附常用英文NLP数据集
+zh-edu	datawhalechina/every-embodied	4384	NOASSERTION	2026-11-05T10:16:53Z	HELD-FULL-SLUG	仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
+en-grading2	jaikydota/BullFlow	336	MIT	2026-10-14T10:36:41Z	NOVEL	推量牛 BullFlow — 开源企业级 RAG 解决方案：从企业知识库、营销内容自动化生产到全域内容分发 | Open-source enterprise RAG solutio
+en-grading2	Qeagle/reporter-engine	103	MIT	2025-08-22T08:45:55Z	NOVEL	Modern, real-time test reporting and analytics platform for automated testing workflows. F
+en-grading2	EM-GeekLab/LLMOne	90	MulanPSL-2.0	2026-09-21T13:44:27Z	NOVEL	Enterprise-grade LLM automated deployment tool that makes AI servers truly "plug-and-play"
+en-grading2	Chloe-MIAOmiao/Sales-Agent	55	none	2026-08-29T03:13:50Z	HELD-FULL-SLUG	An enterprise-grade AI Agent platform designed to streamline sales quality assurance, enfo
+en-grading2	future-agi/futureagi-sdk	52	Apache-2.0	2026-11-05T03:49:50Z	NOVEL	Production-grade AI evaluation, prompt management & observability SDK. Automated evaluatio
+en-essay	July-Tea/EssayMate	39	NOASSERTION	2025-06-19T02:31:46Z	HELD-FULL-SLUG	EssayMate 是一个基于 AI 的雅思/托福/GRE作文批改助手，支持自动评分、详细反馈和智能建议。 / EssayMate is an AI-powered IELTS /
+en-essay	maruf009sultan/AIELTS-WRITING	23	MIT	2026-01-10T07:02:46Z	HELD-FULL-SLUG	AI-powered writing grader for IELTS and general English writing tasks. Instantly analyze y
+en-studyag2	karthikkasirajan/studybuddy-ai	54	none	2026-03-05T06:22:03Z	HELD-FULL-SLUG	AI-powered study assistant that transforms PDF notes into quizzes, flashcards, and summari
+en-tutoragent	GeminiLight/gen-mentor	136	CC0-1.0	2026-10-23T12:21:40Z	HELD-FULL-SLUG	[WWW '25 Oral - GenMentor] Official code of our paper "LLM-powered Multi-agent Framework f
+en-tutoragent	iwangjian/Coding-Tutor	92	Apache-2.0	2025-06-02T19:14:02Z	HELD-FULL-SLUG	[ACL 2025 Findings] Training Turn-by-Turn Verifiers for Dialogue Tutoring Agents: The Curi
+en-tutoragent	ahmedEid1/lumen	92	MIT	2026-10-30T10:06:21Z	HELD-FULL-SLUG	Learning platform where a multi-agent builder turns a one-sentence goal into a private cou
+en-tutoragent	rizukirr/no-vibe	46	MIT	2026-11-03T15:39:02Z	HELD-FULL-SLUG	Turn your AI coding agent into a tutor. It learns your level and adapts to you
+en-tutoragent	towardsai/ai-tutor-app	34	Apache-2.0	2026-10-22T21:02:27Z	HELD-FULL-SLUG	Agentic RAG tutor for applied AI, LLMs, RAG, and Python: a LangGraph agent (FastAPI + Next
+en-tutoragent	lowwwbank/anything-to-course	33	MIT	2026-07-07T17:23:14Z	HELD-FULL-SLUG	Universal AI agent skill that turns any material into learning-science-based self-study co
+en-sis	francoisjacquet/rosariosis	652	GPL-2.0	2026-11-05T17:58:52Z	HELD-FULL-SLUG	RosarioSIS Student Information System for school management. GitLab mirror: https://gitlab
+en-sis	OS4ED/openSIS-Classic	349	none	2026-10-26T13:03:50Z	HELD-FULL-SLUG	openSIS is a commercial grade, secure, scalable & intuitive Student Information System, Sc
+en-sis	huihut/stuManager	347	GPL-3.0	2019-07-04T00:41:21Z	HELD-FULL-SLUG	🎓 Student Information Management System (学生信息管理系统)
+en-sis	Sfedfcv/redesigned-pancake	277	none	2021-05-16T05:22:26Z	HELD-FULL-SLUG	Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects
+en-sis	abusufyanvu/6S191_MIT_DeepLearning	271	none	2022-01-16T11:22:48Z	HELD-FULL-SLUG	MIT Introduction to Deep Learning (6.S191) Instructors: Alexander Amini and Ava Soleimany 
+en-sis	ManojKumarPatnaik/Major-project-list	261	MIT	2025-07-29T10:22:11Z	HELD-FULL-SLUG	A list of practical projects that anyone can solve in any programming language (See soluti
+en-sis	danderfer/Comp_Sci_Sem_2	221	none	2023-04-03T17:47:53Z	HELD-FULL-SLUG	According to all known laws of aviation, there is no way that a bee should be able to fly.
+en-sis	zhujainxipan/information-management-system-of-students	220	none	2015-05-18T01:14:03Z	HELD-FULL-SLUG	选用c#实现。学生信息管理系统，本系统包括两类用户：学生、管理员。管理员可以通过系统来添加管理员信息、修改管理员信息、添加学生信息、修改学生信息；开设课程、查询课程、录入成绩、统计
+en-sis	FenixEdu/fenixedu-academic	175	LGPL-3.0	2023-06-14T22:21:48Z	HELD-FULL-SLUG	FenixEdu Academic is open source Student Information System
+en-sis	jettbrains/-L-	169	GPL-3.0	2021-08-18T13:41:54Z	HELD-FULL-SLUG	W3C Strategic Highlights  September 2019  This report was prepared for the September 2019 
+en-sis	AaravRajSIngh/Chatbot	154	none	2024-04-19T09:24:04Z	HELD-FULL-SLUG	Cloud based Student Information Chatbot system.:     Functionality which the chatbot shoul
+en-sis	chaserw/Student-Information-Management-System	147	EPL-2.0	2018-04-04T06:03:59Z	HELD-FULL-SLUG	学生信息管理系统  JAVA  Mysql  数据库课程设计  简单界面
+en-sis	KuroChan1998/Student-Information-Administration-System	123	none	2023-04-17T19:08:19Z	HELD-FULL-SLUG	大学生信息管理系统——初学路上自己摸索实践的项目。科v学p上n网，优惠链接→注册通道1：https://panel3.touhou.tel/#/register?code=qW83
+en-sis	bookworm52/EthicalHackingFromScratch	120	none	2020-12-26T22:35:47Z	HELD-FULL-SLUG	Welcome to my comprehensive course on python programming and ethical hacking. The course a
+en-sis	projectworldsofficial/online-examination-systen-in-php	117	MIT	2024-05-24T11:36:44Z	HELD-FULL-SLUG	Online Examination System Today Online Examination System has become a fast growing examin
+en-sis	xrandx/Student-Information-Management-System	107	AGPL-3.0	2021-06-15T09:37:21Z	HELD-FULL-SLUG	Student-information-management-system school project   学生信息管理系统（课程设计）
+en-sis	OPTIMUM-LINKUP/Latest-Optimum-School-System	84	GPL-3.0	2017-08-04T20:35:58Z	HELD-FULL-SLUG	This is the latest school management system. Available for all type of schools. will work 

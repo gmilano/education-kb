@@ -1,0 +1,3 @@
+corpus chars=94331914
+control OK: nonsense slug absent
+control OK: moodle/moodle present

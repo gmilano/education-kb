@@ -1,0 +1,14 @@
+owner	base_searchable	spelling_probed	total_count	interpretation	placement_filed
+FenixEdu	1	Portugal	1	PLACED	EMEA (owner-account location field -- p668 weakest channel; README names no institution)
+FenixEdu	1	Lisbon	1	PLACED-CONFIRMED-2ND-SPELLING	EMEA (667-G2: free-text field, both spellings positive)
+towardsai	1	United States	0	EXISTS-NO-LOCATION	unplaced
+towardsai	1	USA	0	EXISTS-NO-LOCATION	unplaced
+trycua	1	United States	0	EXISTS-NO-LOCATION	unplaced
+trycua	1	USA	0	EXISTS-NO-LOCATION	unplaced
+iwangjian	1	China	0	EXISTS-NO-LOCATION	unplaced (BibTeX authors only; p669 refuted author names as a channel)
+iwangjian	1	Beijing	0	EXISTS-NO-LOCATION	unplaced
+maruf009sultan	1	Bangladesh	0	EXISTS-NO-LOCATION	unplaced
+lowwwbank	1	all 9 spellings	0	EXISTS-NO-LOCATION	unplaced
+rizukirr	1	all 9 spellings	0	EXISTS-NO-LOCATION	unplaced
+CONTROL	-	grant-payload organisational licensor	2 of 5	NOT-A-PLACEMENT	"Towards AI, Inc." and "Cua AI, Inc." are corporate forms, not locations
+CONTROL	-	named institution in repository own text	0 of 5	NIL	672-C: a \bMIT\b probe scored 10 hits on trycua/cua README and every one was the LICENCE name

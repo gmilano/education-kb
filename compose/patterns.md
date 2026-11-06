@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-05
+updated: 2026-11-06
 ---
 
 # 🧩 Composition patterns — Education
@@ -1277,3 +1277,35 @@ A studio entering LATAM can spend those weeks building a tutor that will be the 
 
 🔵 **Why this is worth a week.** It is five API-call shapes and a table. The thing it buys is that the inventory stops answering a question nobody asked — *"is the link alive?"* — and starts answering the one procurement actually asks: *"is this still the same project, owned by the same people, under the same terms?"*
 
+
+## P41 — The course factory that ends in a review schedule, not a document (any region; 4–6 weeks) 🆕 new at p672
+
+🔵 **The seam this closes.** This KB has carried the *authoring* half and the *retention* half of self-study on separate shelves for dozens of passes: `T49` established retention as a layer with a choice of objective function, and `p667` filed the scheduling and `.apkg`-writing pieces. What was missing was the join — something that turns raw material into a course **whose output is already shaped like a review schedule**. `p672` filed it.
+
+**The wiring, concretely:**
+
+| Role | Component | Licence | What it does here |
+|---|---|---|---|
+| Course compiler | [`lowwwbank/anything-to-course`](https://github.com/lowwwbank/anything-to-course) | **MIT** (`1,066 B`, `sha256₁₂ d41346e796d6`, residual 0) | Material (docs, slides, transcripts, a codebase, or a bare topic) → observable capabilities → lessons → practice → checkpoints → **a spaced review plan**. Portable `SKILL.md`; runs on Claude Code, Claude.ai, Codex, Gemini CLI, Cursor |
+| Scheduler | FSRS (see `repos/foundations.md`, `T49`) | **BSD-3-Clause** / MIT per implementation | Takes the review plan's items and schedules them. `T49`'s point applies: **the objective function is a client decision** — retention target vs total study time — not a default to inherit |
+| Delivery surface | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) + the `.apkg` writer (`p667`, `repos/foundations.md`) | **MIT** | Puts the scheduled deck behind an MCP tool an agent can drive, against the one spaced-repetition client with consumer-scale adoption |
+| Tutor loop | [`rizukirr/no-vibe`](https://github.com/rizukirr/no-vibe) | **MIT** (`1,065 B`, `sha256₁₂ 0eddd198e9a1`, residual 0) | Optional second mode: where `anything-to-course` *builds* the course, this one **withholds the artefact** and makes the learner produce it — diagnostic placement, approved roadmap, transfer-task checks |
+
+🔵 **Why the order matters, and it is the whole pattern.** The naïve build is *generate content → bolt on reminders*, and it fails because a review schedule over material that was never decomposed into **observable capabilities** has nothing to schedule except pages. Running the compiler first means the scheduling unit is a capability with a check attached, which is what FSRS can actually act on. **Everything upstream of scheduling and everything downstream of authoring already existed here as permissive parts; the sequence is the contribution.**
+
+⚠️ **Scope honestly.** Every component is MIT and verbatim, and every component is a **single-digit-to-double-digit-star project** (`33★` and `46★` for the two new ones). This is a 4–6 week integration on top of other people's weekend code: budget hardening, not just wiring, and read `agents/top.md`'s standing note that documented permissive prior art is not an adoptable production base. The deliverable a client should pay for is the **capability decomposition and the objective-function choice** — those are durable; the glue is not.
+
+## P42 — Rubric-first assessment: score against a published rubric, gate on a human, and let the model do neither (any region; LATAM and EMEA first; 5–7 weeks) 🆕 new at p672
+
+🔵 **Why this pattern exists now and could not be written before p672.** `agents/top.md` has tracked an *assessment gap* across many passes, and its honest statement has been: permissive, education-specific assessment software exists **only as research artefacts** — the incumbents it names run at `2★`/2 commits and `0★` with the author's grading track frozen. `p672` filed [`maruf009sultan/AIELTS-WRITING`](https://github.com/maruf009sultan/AIELTS-WRITING) (**MIT**, `1,071 B`, `sha256₁₂ dc421f44c477`, residual 0, `23★`, live demo), which is not a better model — it is a better **frame**: it scores against the **four published IELTS criteria** (Task Achievement, Coherence & Cohesion, Lexical Resource, Grammatical Range & Accuracy) rather than a rubric the repository invented.
+
+**The pattern, in order:**
+
+1. **Start from a rubric you did not write.** An externally-published, institution-owned rubric (IELTS bands, a national curriculum's achievement standards, a faculty's own marking scheme). 🔵 **This is the step that makes the system auditable**, because a disagreement becomes *"the score does not match criterion 3"* rather than *"the AI was wrong"* — and under **EU AI Act Annex III** an education scorer must be explainable against something. A model-invented rubric cannot be appealed.
+2. **Make the scorer emit per-criterion evidence, not a number.** Band *plus* the span of text that drove it. Reference implementation: the `AIELTS-WRITING` decomposition above; the peer-reviewed alternative for the dialogue case is [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor)'s **turn-level verifier** (Apache-2.0, canonical payload, ACL 2025 Findings).
+3. **Gate on a human, in the state machine, not in the policy document.** `p653` recorded `littlecookie0722/AI-Teaching-Agent`'s explicit `WAITING_REVIEW` state as the one design worth copying from that layer. **A review step that exists only in a policy PDF is not a control.**
+4. **Log the statement, not the session.** Reuse the LATAM statement-log component (`p656`, `intel/market.md`): what was claimed, against which criterion, on which evidence, reviewed by whom.
+
+🟢 **The regional fit, and it is the clearest demand-to-supply match `intel/market.md` records.** UNESCO's severe regional teacher shortage in LATAM makes **teacher time** the binding constraint, and marking written work is its largest single consumer — while the region's governance posture (`87%` of HEIs using AI, `26%` with a formal strategy, `55%` with no AI budget) means the *governance wrapper is the product* as much as the scorer is. In EMEA the same build is sold against **Annex III explainability and post-market surveillance** instead of against teacher hours.
+
+🔴 **The hard constraint, stated so nobody mis-sells this.** `23★`, `0` forks, `0` open issues, pushed `2026-01-10`, single author — and `agents/top.md`'s integrity-layer finding applies with full force: **a research-scale repository must not be carried into a high-stakes deployment.** This pattern is for **formative** assessment — practice, feedback, drafting — where a wrong score costs a student an afternoon, not a qualification. Summative use is a different engagement with a different liability profile, and the honest answer there is still that **the production artefact does not exist yet** and would be built, not adopted. 🔴 **And do not reach for `July-Tea/EssayMate` (`39★`) to fill the gap**: its grant is **CC BY-NC-SA 4.0** — NonCommercial — which bars the derivative entirely, a fact two separate classifiers got wrong (`672-D`, `T53`).

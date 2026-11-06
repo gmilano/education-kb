@@ -1,0 +1,13 @@
+slug	grant_file	bytes	sha256_12	declared_by_gh_api	declared_by_base_probe	byte_read_verdict	residual	grade	note
+towardsai/ai-tutor-app	LICENSE	11386	7dc0f2a45a9e	Apache-2.0	Apache-2.0	Apache-2.0	+29	VERBATIM-COMPLETED	residual decomposes exactly: copyright line +28, added blank line +1
+iwangjian/Coding-Tutor	LICENSE	11357	c71d239df917	Apache-2.0	Apache-2.0	Apache-2.0	0	CANONICAL	reproduces base canonical Apache hash c71d239df917 from a second owner (671-R)
+rizukirr/no-vibe	LICENSE	1065	0eddd198e9a1	MIT	MIT	MIT	0	VERBATIM	c 2025 rizukirr
+lowwwbank/anything-to-course	LICENSE	1066	d41346e796d6	MIT	MIT	MIT	0	VERBATIM	c 2026 lowwwbank
+maruf009sultan/AIELTS-WRITING	LICENSE	1071	dc421f44c477	MIT	MIT	MIT	0	VERBATIM	c 2025 maruf009sultan
+trycua/cua	LICENSE.md	1069	c0779290c1d4	MIT	MIT	MIT	0	VERBATIM	c 2025 Cua AI, Inc.
+FenixEdu/fenixedu-academic	LICENSE	7652	97628afebc60	LGPL-3.0	LGPL	LGPL-3.0	n/a	VERBATIM-TITLE-BLOCK	GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+July-Tea/EssayMate	LICENSE	20849	1349a4b61484	NOASSERTION	CC-BY-4.0	CC-BY-NC-SA-4.0	n/a	REFUSED-NONCOMMERCIAL	672-D: three instruments, three answers; base probe collapsed the family and dropped NC and SA
+karthikkasirajan/studybuddy-ai	-	-	-	none	UNRESOLVED-on-180-names	NO-GRANT-PAYLOAD	n/a	NOT-FILED	667-K worst rank: licence claim with no payload
+CONTROL-POSITIVE	known-good MIT payload regraded after reference repair	-	-	-	-	4/4 VERBATIM	0	PASS	672-B1: a grader needs a positive control, not only a negative one
+CONTROL-NEGATIVE	July-Tea/EssayMate CC payload graded against MIT reference	-	-	-	-	REFUSED	n/a	PASS	CC payload correctly does not grade as MIT
+CONTROL-DEFECT-REPRODUCED	all four MIT payloads vs UNREPAIRED reference	-	-	-	-	4/4 FALSE MUTATED	n/a	FAIL-AS-EXPECTED	672-B: reference text omitted "THE USE OR"; identical disagreement across independent payloads indicts the reference

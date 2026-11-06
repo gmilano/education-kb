@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-05
+updated: 2026-11-06
 ---
 
 # 📡 Trends — Education
@@ -773,3 +773,20 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 
 **Confidence.** 🟢 **High on the facts** — both renames proven at `HEAD`-sha and licence-payload level this pass, the detector controlled on `18` probes at both signs. 🟡 **Medium on the rate** — `2` of `197` is this base's shelves at one moment, not a sector-wide measurement, and `p671` makes no claim about the general rename rate in education open source. 🟢 **High on the blindness** — that `git`, `raw` and the licence bytes all pass at a dead address is not an inference, it is what was measured.
 
+
+## T53 — Every instrument that reads a licence agrees on the family and disagrees on the terms that decide usability 🆕 new at p672
+
+🔴 **The finding.** Run three independent licence readers over one repository and they return three answers that are all "about" the same licence and are not interchangeable. On `July-Tea/EssayMate` at p672: `gh api` said **`NOASSERTION`**; this repository's own `ingest/probe-grant.sh` said **`CC-BY-4.0`**; the byte read said **`Attribution-NonCommercial-ShareAlike 4.0 International`**. Only the third is correct, and the difference between the second and third is the entire commercial question — `NC` forbids the derivative, `SA` forces reciprocity, and a label of `CC-BY-4.0` implies neither.
+
+🔵 **Why this is a trend and not a bug report.** The three readers fail in three different, structural ways, and all three are in production across the industry:
+- **A classifier that does not match emits a null** (`NOASSERTION`). `p658` established this means *"the classifier did not match"*, never *"no licence"* — but it is routinely rendered as "unlicensed" in dependency dashboards, which is a **false negative** that blocks usable software.
+- **A classifier that normalises to a family drops the modifiers.** This is the dangerous direction: `CC-BY-NC-SA` → `CC-BY` turns a non-commercial grant into a permissive-looking one. **A false positive on usability.**
+- **A grader with an unvalidated reference text condemns correct payloads.** `672-B`: a canonical MIT reference missing the words `THE USE OR` reported `4` of `4` verbatim payloads as mutated.
+
+🔵 **The structural reason it keeps happening: a licence is not a label, it is a *conjunction of terms*, and every layer between the file and the dashboard is lossy by design.** SPDX identifiers compress well for permissive licences, where family and terms coincide, and badly for everything with modifiers — Creative Commons variants, dual grants, split grants by material type (`542-A`), run-time grant boundaries (`T51`). The compression is invisible because the output still looks like a licence.
+
+🟡 **What is genuinely hard here.** You cannot byte-read every grant in a real dependency tree; classifiers exist because the volume demands them. So the usable rule is not "never use a classifier" but **"a classifier may triage and may never decide"**: let it rank, and byte-read the payload of anything you intend to *ship on*, anything it labels with a family that has modifiers, and anything it labels null. That is tens of reads, not thousands.
+
+🔵 **For an engagement.** The inventory question a client asks is *"what are we allowed to do with this?"* and the artefact most tools hand back answers *"what family is this in?"*. Those come apart precisely on the licences that restrict commercial use — which is to say, precisely where the answer matters. **A licence column in an SBOM is a triage field, not a finding**, and the deliverable that is worth money is the short list of payloads actually read.
+
+**Confidence.** 🟢 **High on the mechanism** — three readers, one payload, three answers, all four reproduced first-hand at p672 with the byte read as ground truth (`20,849 B`, `sha256₁₂ 1349a4b61484`), and the reference-text defect reproduced at both signs on five further payloads. 🟡 **Medium on the breadth claim** — the three failure modes are each evidenced here on one or two specimens, not surveyed across a corpus; the *family-collapse* mode in particular is demonstrated on Creative Commons and is predicted, not shown, for dual and split grants.

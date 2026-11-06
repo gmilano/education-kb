@@ -1,0 +1,11 @@
+corpus chars=94403812
+control OK: nonsense slug absent
+control OK: moodle/moodle present
+Traceback (most recent call last):
+  File "/tmp/education-kb/scratchpad/p672/novelty.py", line 35, in <module>
+    rows=list(csv.DictReader(open(sys.argv[1]), delimiter="\t"))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/csv.py", line 111, in __next__
+    row = next(self.reader)
+          ^^^^^^^^^^^^^^^^^
+_csv.Error: field larger than field limit (131072)

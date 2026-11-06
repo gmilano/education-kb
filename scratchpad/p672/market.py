@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+import re
+P="intel/market.md"; s=open(P,encoding="utf-8").read()
+
+SECTIONS = {
+"### North America": """
+#### 🆕 p672 — the regional leg nilled, the one novel claim is unverified **by its own source**, and no address was placed here this pass
+
+🔴 **Supply: `0` addresses placed in North America at p672, and that is stated rather than left as silence.** Five agent rows were filed this pass and **all five are unplaced** — every owner is searchable on `search/users` yet returns `0` on `United States` and `USA` alike (`667-G1`'s three-valued probe; `667-G2`'s both-spellings rule). Two of the five name an **organisational licensor** in the grant payload (`Towards AI, Inc.`; and `Cua AI, Inc.` on the foundations row) and **neither is a placement — `Inc.` is a corporate form, not a location.** North America stays at `6` agent rows.
+
+🔴 **The one fact this leg served that this page does not already hold is one it should not buy: *"86% of educational organizations in the region have adopted generative AI"* — described as unverified by the very result that carried it**, with no institution, sample or instrument named. Scored `0` on the shelf and `0` across the full tree, so it is genuinely novel, and it is **filed nowhere**. 🔵 **Worth naming the asymmetry: an unsourced adoption percentage is the single most quotable artefact in this market and the least verifiable.** This page already carries properly-attributed adoption figures (Gallup `n>2,200` at `60%` of US teachers; `55%` of high-school principals) and they are *lower*. A client deck that cites `86%` beside them is not more optimistic, it is wrong.
+
+🟢 **Everything else re-served was already held, and two independent vendor readings quietly corroborate each other — which is rare on this page.** North America at **`36%` of the global AI-education market, `$3.68B` in 2026 → `$32B` by 2030**; a second source putting the region at `38%` for 2025; **`~70%` of institutions across Europe and North America having or developing AI guidance**; **COPPA** as the binding constraint on AI-for-kids data; `Embodied` and `Miko` as named consumer-robot players; the **`$169M` federal commitment to responsible AI in higher education**. 🔵 **The corroboration: `$3.68B` at `36%` implies a global 2026 market of `~$10.2B`, and the Global leg's independent TBRC reading is `$10.6B` — a `4%` gap between two unrelated vendors.** Against the factor-of-five spread this page has tracked since `p664`, **two sources agreeing to 4% is the signal, not the noise**, and it makes `$10–11B` the most defensible 2026 global figure this page can quote.
+""",
+
+"### EMEA": """
+#### 🆕 p672 — EMEA is the only region that gained an address this pass, and the leg returned a date claim that **contradicts** what this page holds
+
+🟢 **Supply: `FenixEdu/fenixedu-academic` is the first EMEA-origin *system of record* on `verticals/solutions.md`** (LGPL-3.0, `7,652 B`, `sha256₁₂ 97628afebc60`, branch `master`). **`111` forks against `175` stars — forks-per-star `0.634`**, which puts it in `p540`'s *deployed-per-institution* class beside `i-educar` (`0.766`): for an academic system of record a fork is an installation, so a ratio this high on a modest star count is evidence of **real institutions running modified copies**. That is exactly the evidence `p668`'s system-of-record census found missing across most of this layer. ⚠️ **It is also dormant — pushed `2023-06-14`, ~3.4 years cold, `75` open issues** — so the engagement is *read the domain model, assess the maintenance*, not *ship it*. 🟡 Placed on this base's **weakest** channel (owner-account `location`, positive on **both** `Portugal` and `Lisbon`); the README names no institution and none is claimed.
+
+🔴 **A date conflict, recorded because this page is right and the leg is wrong.** One aggregator in this pass's EMEA leg states the EU AI Act is *"enforceable from February 2026"*. This page holds, better sourced, that the **Digital Omnibus moves the Annex III high-risk obligations to 2 December 2027**, and that the February 2025 date belongs to the *prohibitions* (including emotion recognition in schools) — not to the high-risk regime that covers education. 🔵 **The claim scored `1` hit in the full tree and `0` on the sell shelves, so it is near-novel; it is filed as a refutation, not as a fact.** This is the third pass to find published guidance carrying a superseded Annex III date, and it is the single most consequential error in circulation for an education engagement: **it makes the compliance deadline look 22 months closer than it is**, which mis-prices the work in both directions.
+
+🟢 **Held and re-served:** EU AI Act **post-market surveillance** duties on high-risk educational AI; the **Fosway Group** April 2026 AI market assessment for EMEA digital learning; **LEGO Education's** K-8 computer-science and AI classroom platform shipping April 2026; **Microsoft Elevate for Educators**; the **European University Association's** January 2026 report; **ICS.AI's** UK national higher-education model; `~10%` of 450+ institutions having formal AI guidelines. 🟡 **Workday's `56%` of EMEA CEOs reporting AI readiness is held but is enterprise-wide, not education** — it is not an education adoption figure and should not be quoted as one.
+""",
+
+"### APAC": """
+#### 🆕 p672 — the APAC leg returned **no education-specific regulation and no adoption denominator for a fifth consecutive pass**, and that gap is restated rather than left as silence
+
+🔴 **The gap, stated precisely because its shape has not changed in five passes: APAC has the binding statutes and this page still cannot size the market they apply to.** The regional leg returned enterprise-wide material — **Forrester** on APAC CEOs leading global AI investment, **AI sovereignty** as the 2026 pacing theme, **Boomi's** APAC tech-priorities report, **OneTrust** on the APAC AI-governance gap — plus one education-specific item that is a *trade event* rather than a measurement (**Acer Edu Summit Asia Pacific 2026**). The only regulatory specific it surfaced was **Singapore's consultation on AI in financial institutions**, which is the wrong sector. 🔵 **So the asymmetry this page has recorded since `p663` holds for a fifth window: the regulation is the most concrete in the world and the adoption data is the thinnest.** Already held here: **Korea's AI Basic Act in force 22 January 2026**, **Vietnam's Decision 33/2026/QD-TTg naming education high-risk**, China's labelling regime with penalties to `50m` yuan, Japan's light-touch voluntary posture, **Singapore's AI Verify**, **Australia's TEQSA** genAI action-plan requirement.
+
+🔴 **What that means for an engagement, unchanged and worth repeating because it is actionable:** in APAC the *compliance* scope can be written from primary statute today, and the *business case* cannot be sized from any source this base has found in five passes of looking. **Price the compliance work from the statute; treat any APAC market-size figure as unsourced until a named instrument appears.**
+
+🔴 **Supply: `0` addresses placed in APAC at p672.** APAC remains this shelf's largest placed region at `13` agent rows, gaining none this pass. `iwangjian/Coding-Tutor` (ACL 2025 Findings) would be the natural candidate — but its only affiliation evidence is its **BibTeX author list**, and `p669` refuted author names as a placement channel. It is filed **unplaced**, deliberately, rather than placed on a signal this base has already discarded.
+""",
+
+"### LATAM": """
+#### 🆕 p672 — the LATAM leg is the richest of the four on *funding* and returned nothing this page lacks; the one novel item is paywalled
+
+🟢 **Held and re-served, and the funding picture is the part worth carrying into a conversation:** **Google.org's `$4.6M`** for AI education across Latin America and the **Raspberry Pi Foundation's `$4.6M`** to scale AI education in the region; **Microsoft's AI for Good research hub in Uruguay**; the **UNESCO Observatory on AI in Education for LAC** (launched April 2026); the **AI in Higher Education LATAM Survey 2026** via Tec de Monterrey; **UNESCO's** warning of a severe regional teacher shortage; **Baker McKenzie** on the fragmented national regulatory picture; the **UNU** working paper on AI implementation in LAC higher education; the **ITU/FNS-AI** AI-Trends-in-LAC report; and this page's governance spine — `87%` of ~200 HEIs across 19 countries using AI, `26%` with a formal strategy, `55%` with no AI budget.
+
+🔴 **The one novel item is not buyable: Mobility Foresights' *Latin America AI Tutors Market* report.** It scored `0` on the shelf and `0` across the full tree, so it is genuinely new to this base — and it is a **paywalled vendor landing page with no figure retrievable**. What *is* readable from it is qualitative and already held here: that infrastructure, device access and digital literacy gate AI-tutor adoption in much of the region. **Filed nowhere.** 🔵 **Recorded so the next pass does not re-buy it — a vendor report title is not a market figure**, and this page's market-size spread is already wide enough without adding an unread point to it.
+
+🔴 **Supply: `0` addresses placed in LATAM at p672**; the region holds at `5` agent rows. 🔵 **The teacher-shortage finding and this pass's `AIELTS-WRITING` row are the same engagement seen from two ends**, and the fit is worth stating: the region's binding constraint is *teacher time*, and the one thing this pass added to the long-tracked assessment gap is a **rubric-aligned writing scorer under a verbatim MIT grant**. Marking written work is the largest single consumer of the scarce resource. **That is the clearest demand-to-supply match this page has recorded for LATAM** — and it is gated, as ever, on the `26%`-with-a-strategy governance figure above, which is why `compose/patterns.md` **P38** puts the rubric and the human-review gate before the model.
+""",
+
+"### Global": """
+#### 🆕 p672 — the four global legs nilled for the **twenty-fourth** consecutive window, and the market-size spread gained a point that **narrows** it for once
+
+🔴 **`48` facts scored across eight legs, `45` already held on the sell surface, controls clean at both signs** (nonsense needle `0/0`; `Apache-2.0`, `Apache 2.0`, `Moodle` and `IESALC` all positive — two of them variant spellings, per `667-B`). Of the `3` unheld, **none was filed**: one is self-described as unverified (North America, above), one is a paywalled vendor page (LATAM, above), and one is `trycua/cua`, real but infrastructure rather than education supply — filed to `repos/foundations.md` instead. 🔵 **This nil is measured with a repaired instrument, which matters: the first run of this pass's scorer reported three of those facts as *already held*, because the corpus walk was reading the pass's own needle list** (`672-A`, `agents/trending.md`). The nonsense control caught it. **A nil from an uncontrolled scorer is not a nil.**
+
+🟢 **The market-size spread, re-measured — and for the first time since `p657` a new point makes it *narrower* rather than wider.** The global legs served **The Business Research Company via GII: `$7.52B` (2025) → `$10.6B` (2026), a `40.9%` CAGR**, alongside **Persistence Market Research**, **Technavio** and **BCC Research** as additional houses now covering the sector. 🔵 **Why this one is useful:** the North America leg independently gives the region `36%` of the global market at **`$3.68B` for 2026**, which implies a global **`~$10.2B`** — within **`4%`** of TBRC's `$10.6B`, from an unrelated vendor. Against the **factor-of-five** spread on a single year that `p664` recorded and `p668` re-confirmed, **two independent houses landing inside 4% is the strongest convergence this page has ever measured**, and it makes **`$10–11B` the most defensible 2026 global figure available**. ⚠️ **The spread itself is not closed** — Coherent's `$11.40B (2026) → $57.25B (2033)` and the `40.9%`-CAGR path diverge sharply by 2030, so **the 2026 figure is now reasonably firm and every out-year remains a vendor's assumption, not a reading.** Quote the near year; cite the method for the far one.
+""",
+}
+
+for anchor, body in SECTIONS.items():
+    assert anchor+"\n" in s, "anchor missing: "+anchor
+    idx = s.index(anchor+"\n") + len(anchor) + 1
+    s = s[:idx] + body + s[idx:]
+
+s = re.sub(r"^updated: 2026-11-05$", "updated: 2026-11-06", s, count=1, flags=re.M)
+open(P,"w",encoding="utf-8").write(s)
+print("intel/market.md: five regional subsections added under the single heading")
