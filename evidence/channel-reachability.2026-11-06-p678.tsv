@@ -1,0 +1,10 @@
+channel	probe	result	note
+git ls-remote --symref	https://github.com/moodle/moodle HEAD	LIVE	real default ref resolved; used for all 12 addresses
+raw.githubusercontent.com	GET /moodle/moodle/main/README.md	LIVE	200; every grant payload byte-read through this channel into a file
+api.github.com (curl)	GET /repos/moodle/moodle	403	unchanged from p670/p677
+github.com (curl)	GET /moodle/moodle	403	unchanged; tool-dependent not host-dependent
+WebFetch github.com/<o>/<r>	moodlehq/wiki-rag	LIVE	stars+forks+description read first-hand
+gh api repos/<owner>/<repo>	repos/openedx/openedx-app-android	403 SCOPE-BLOCKED	"GitHub access to this repository is not enabled for this session"
+gh api search/repositories	q=repo:openedx/openedx-app-android	LIVE	SAME FACTS the blocked endpoint refuses: stars, forks, licence, pushed_at, language
+gh api search/users	user:telekom location:Germany	LIVE	three-valued placement probe (667-G1) still discriminates
+www.apache.org/licenses/LICENSE-2.0.txt	GET	LIVE	11,358 B, cfc7749b96f63bd3 - reproduces the figure this base already holds

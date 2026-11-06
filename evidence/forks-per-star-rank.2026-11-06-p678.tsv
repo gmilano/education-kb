@@ -1,0 +1,27 @@
+rank	address	stars	forks	forks_per_star	grant	class	n_adequate	first_measured
+1	oppia/oppia-ml	3	9	3.000	Apache-2.0	deploy-per-institution	NO - n too small to carry weight	p678
+2	learningequality/kolibri-app	11	19	1.727	MIT	deploy-per-institution	NO - n too small to carry weight	p678
+3	openedx/openedx-app-android	38	62	1.632	Apache-2.0	deploy-per-institution	yes	p678
+4	dspace/dspace	1100	1500	1.364	BSD-3-Clause	deploy-per-institution	yes	p540
+5	openedx/openedx-app-ios	31	34	1.097	Apache-2.0	deploy-per-institution	yes	p678
+6	1EdTech/LTI-Tool-Provider-Library-PHP	68	73	1.074	Apache-2.0	deploy-per-institution	yes	p678
+7	moodlehq/moodle-mlbackend-python	19	20	1.053	GPL-3.0	deploy-per-institution	NO - n too small to carry weight	p678
+8	Apereo-Learning-Analytics-Initiative/OpenLRS	47	38	0.809	ECL-2.0 (DEPRECATED)	deploy-per-institution	yes	p540
+9	learningequality/kolibri-installer-android	31	25	0.806	MIT	deploy-per-institution	yes	p678
+10	1EdTech/basiclti-util-java	60	48	0.800	Apache-2.0 + NOTICE	deploy-per-institution	yes	p678
+11	PrairieLearn/PrairieLearn	527	410	0.778	AGPL-3.0 + MIT + proprietary-EE	deploy-per-institution	yes	p540
+12	biprodas/school-erp	51	37	0.725	MIT	deploy-per-institution	yes	p678
+13	dmitry-viskov/pylti1.3	138	84	0.609	MIT	deploy-per-institution	yes	p540
+14	1EdTech/qti-examples	35	20	0.571	none	deploy-per-institution	yes	p678
+15	yetanalytics/xapipe	17	9	0.529	Apache-2.0	deploy-per-institution	NO - n too small to carry weight	p540
+16	opetushallitus/koski	23	12	0.522	EUPL-1.1-or-later	deploy-per-institution	yes	p540
+17	ucfopen/pylti1.3	3	1	0.333	MIT	import-as-dependency	NO - n too small to carry weight	p540
+18	ucfopen/canvasapi	681	192	0.282	MIT	import-as-dependency	yes	p540
+19	jupyterhub/jupyterhub	8400	2100	0.250	BSD-3-Clause	import-as-dependency	yes	p540
+20	THU-MAIC/MAIC-UI	184	39	0.212	none	import-as-dependency	yes	p678
+21	moodlehq/wiki-rag	53	10	0.189	BSD-3-Clause	import-as-dependency	yes	p678
+22	Teachable-AI-Lab/tutor_gym	11	2	0.182	MIT	import-as-dependency	NO - n too small to carry weight	p540
+23	GarethManning/education-agent-skills	928	130	0.140	CC-BY-SA-4.0	import-as-dependency	yes	p540
+24	EducationalTestingService/skll	561	69	0.123	BSD-3-Clause	import-as-dependency	yes	p540
+25	huggingface/smolagents	30100	3200	0.106	Apache-2.0	import-as-dependency	yes	p540
+26	OPTIMETA/PAIDEIA	91	4	0.044	MIT	import-as-dependency	yes	p540

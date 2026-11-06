@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p678) — 🟢 **THE SUPPLY CAME FROM ENUMERATING OWNER ORGS, NOT FROM THE MANDATED LEGS: 12 ADDRESSES VERIFIED, 9 FILED, EVERY GRANT BYTE-READ. 🔴 PLACEMENT IS NIL FOR ALL 9 AND IT WAS *MEASURED ON BOTH CHANNELS*, NOT ASSUMED. 🔴 A CHANNEL THIS BASE CALLS DEAD IS ALIVE UNDER A DIFFERENT ENDPOINT. 🔵 THE DEPLOY-PER-INSTITUTION CENSUS HAS A NEW #1.**
+
+**Verification channels, re-tested before use at p678.** `git ls-remote --symref` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live** (every payload read **into a file**, never a shell `$(...)` capture — `677-C`); `WebFetch` on `github.com/<owner>/<repo>` 🟢 **live**; `curl` on `github.com` 🔴 `403`; `api.github.com` via `curl` 🔴 `403`; `www.apache.org` 🟢 **live**. Full table: [`evidence/channel-reachability.2026-11-06-p678.tsv`](../evidence/channel-reachability.2026-11-06-p678.tsv).
+
+### `678-A` — the four mandated legs nilled a 28th time, and the supply came from somewhere else
+
+All four global legs and all four regional legs ran. Scored against the live tree with variant spellings: **`26/26` facts already held**, controls clean at **both** signs — the nonsense needle `zzqxnonsense-needle-p678` scored `0`, and the known-held control scored `>0` on **4 of 4** spellings including the hyphen variant that defeated the p667 scorer. Per-fact table: [`evidence/mandated-leg-score.2026-11-06-p678.tsv`](../evidence/mandated-leg-score.2026-11-06-p678.tsv).
+
+🔵 **The legs returned headline agents and every one was already shelved** — `THU-MAIC/OpenMAIC` (ledger since `p2`, `61` mentions across `36` passes), `HKUDS/DeepTutor` (`126` mentions), `patchy631/ai-engineering-hub`, `microsoft/AI-For-Beginners`. **21 of 21** candidates from the global legs tested in-tree. So did **10 of 11** from a Moodle/Canvas MCP sweep.
+
+🟢 **What did work: enumerating owner organisations** — the channel `p677` used for its one novel address. Ten education orgs enumerated (`moodlehq`, `openedx`, `1EdTech`, `learningequality`, `oppia`, `sunbird-ed`, `THU-MAIC`, `Open-TutorAi`, `HKUDS`, `ictinnovations`), diffed against a **tree corpus of `4,666` addresses** — not against the ledger, because `667-H` proved the ledger over-reports novelty by `44.2%`.
+
+⚠️ **The honest caveat: novel and shelf-worthy came apart again, hard.** The enumeration returned well over `150` addresses absent from the tree, and **the large majority are satellite infrastructure** — installers, docs sites, CI runners, style guides, locale bundles. `12` were worth verifying; `9` were worth filing. **Enumeration is a high-yield, low-precision channel, and that is the finding about the channel.**
+
+### `678-B` — 🟢 the licence split inside Open edX: AGPL core, **Apache-2.0 mobile apps**
+
+Full rows: [`repos/foundations.md`](../repos/foundations.md). Open edX core is `AGPL-3.0`, which this base has recorded as the standing copyleft objection for the platform. **Its official mobile clients are not.**
+
+| Address | Grant (payload read this pass) | ★ | Forks | `f/★` | Real ref |
+|---|---|--:|--:|--:|---|
+| [`openedx/openedx-app-android`](https://github.com/openedx/openedx-app-android) | 🟢 **Apache-2.0** `11,356 B` `43070e2d4e532684` | **38** | `62` | **`1.632`** | `main` |
+| [`openedx/openedx-app-ios`](https://github.com/openedx/openedx-app-ios) | 🟢 **Apache-2.0** `11,356 B` `43070e2d4e532684` | **31** | `34` | `1.097` | `main` |
+| [`1EdTech/LTI-Tool-Provider-Library-PHP`](https://github.com/1EdTech/LTI-Tool-Provider-Library-PHP) | 🟢 **Apache-2.0** `11,357 B` `b40930bbcf80744c` | **68** | `73` | `1.074` | 🔴 `master` |
+| [`1EdTech/basiclti-util-java`](https://github.com/1EdTech/basiclti-util-java) | 🟡 **Apache-2.0 + NOTICE** `13,185 B` `ba1f153bdba34cc8` | **60** | `48` | `0.800` | 🔴 `master` |
+
+🔵 **The consequence for a studio is concrete:** a branded commercial mobile client can be shipped against an institution's existing Open edX **without the app binary inheriting AGPL** — the obligation stays with the server the institution already operates. The two apps share a **byte-identical** grant payload (same digest, same absent trailing newline), so this is one decision by one owner across both platforms, not a coincidence.
+
+### `678-C` — 🟡 a NOTICE is not a licence problem, and a digest test is right to flag it and wrong to reject it
+
+`1EdTech/basiclti-util-java` reads `13,185 B` against the `11,357 B` canonical. **The residual decomposes exactly:** `11,357` ASF body + `1` leading newline + `2` blank lines + **`1,825 B` of subcomponent notices** (OAuth: © AOL LLC, © Google, © Netflix — **all Apache-2.0, therefore compatible**). The obligation the extra bytes add is **attribution, not copyleft**.
+
+🔵 **This is the `licence unit is the dependency graph` heading on this base's sibling shelf, with a worked specimen attached.** A length- or digest-based gate marks this payload non-canonical; that verdict is *correct as a flag and wrong as a rejection*, and the difference is `1,825` bytes any reviewer can read in a minute.
+
+### `678-D` — 🔵 the deploy-per-institution census, re-ranked with `12` new points — and the adequacy floor does the real work
+
+Merged ranking (p540's `14` points + p678's `12`): [`evidence/forks-per-star-rank.2026-11-06-p678.tsv`](../evidence/forks-per-star-rank.2026-11-06-p678.tsv).
+
+🟢 **New `#1` at adequate `n`: `openedx/openedx-app-android` at `f/★ = 1.632`**, displacing `dspace/dspace` (`1.364`), which had held the top since `p540`. Forks exceed stars by `63%` — the signature of per-institution rebranding.
+
+🔴 **But three of the top seven raw ratios are inadmissible by this base's own `n >= 20` rule, and saying so is the point:** `oppia/oppia-ml` (`3.000`, `n=3`), `learningequality/kolibri-app` (`1.727`, `n=11`), `moodlehq/moodle-mlbackend-python` (`1.053`, `n=19`). **A ratio over a handful of stars is noise.** Both are filed with the caveat in the cell rather than ranked.
+
+🟢 **The class boundary held on a 12-point out-of-sample test.** The institutional infrastructure (LMS mobile clients, LTI libraries, school ERP, Kolibri installers) all landed `>= 0.5`; the two **agent-shaped** repos landed below it — `THU-MAIC/MAIC-UI` `0.212` and `moodlehq/wiki-rag` `0.189`. **Agent code is imported; platform code is forked and deployed.**
+
+### `678-E` — 🔴 a channel this base records as dead is alive under a different endpoint
+
+`api.github.com` via `curl` is `403`, which `p670` and `p677` recorded as channel-wide. **It is not.**
+
+- `gh api repos/openedx/openedx-app-android` → 🔴 `403`, *"GitHub access to this repository is not enabled for this session"* — a **session scope** restriction, not a network block.
+- `gh api -X GET search/repositories -f q='repo:openedx/openedx-app-android'` → 🟢 **`200`, and it returns the same facts the blocked endpoint refuses**: `stargazers_count`, `forks_count`, `license.spdx_id`, `pushed_at`, `language`.
+
+🔵 **Every star and fork count published this pass came through that endpoint.** 🔧 **`ACTION p678-E`:** the reachability table must name the **endpoint**, not the host — `api.github.com` has at least one reachable path and at least one blocked one, and a one-line-per-host table cannot express that. This is why `677`'s *"`api.github.com` 🔴 403"* understated what was available.
+
+### `678-F` — 🔴 two well-adopted repositories with **no grant payload at all**
+
+| Address | ★ | Forks | Licence paths probed | Verdict |
+|---|--:|--:|---|---|
+| [`THU-MAIC/MAIC-UI`](https://github.com/THU-MAIC/MAIC-UI) | **184** | `39` | `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `license` — **all `404`** | 🔴 **unusable** |
+| [`1EdTech/qti-examples`](https://github.com/1EdTech/qti-examples) | **35** | `20` | same `6`, **all `404`** | 🔴 **unusable** |
+
+🔴 **`MAIC-UI` is the front end of `OpenMAIC`** — the ~42k-star multi-agent classroom that is a headline row on this base's agent shelf. **The classroom is permissively granted; its UI is not granted at all.** A studio that scoped "adopt OpenMAIC's interface" off the parent repo's licence would be wrong.
+
+🔴 **`qti-examples` is published by the standards body itself.** QTI is the assessment interchange standard this base tracks against its assessment gap, and the reference examples carry no grant. Neither is filed.
+
+### `678-G` — 🔴 a new false-placement specimen, and it would have placed two repositories on two continents wrongly
+
+With the owner channel empty (below), placement fell to the repositories' own files. A region-name scan over `7` READMEs returned exactly two "hits", **both false**:
+
+- **`uk/strings`** in `openedx/openedx-app-android` — **`uk` is the ISO code for Ukrainian**; it is a locale directory, not the United Kingdom.
+- **`usa`** inside the word **`usage`** in `moodlehq/wiki-rag`.
+
+🔵 Second specimen of the locale-path class this base already registered (`ACTION ZZ-bt`, `en/get-started`), now with a **two-letter-code** variant and a **word-boundary** variant in one pass. **Both refused.** 🔧 A region matcher needs word boundaries *and* a locale-path exclusion; this base's own note — *"resolve licence family by hash, never by substring"* — applies to regions too.
+
+### `678-H` — 🔴 the pass's most useful nil: I tested my own headline finding and it was already held
+
+Mid-pass this run believed it had found a mechanism: that **two verbatim Apache-2.0 payloads can share a byte count and hash differently**, because the appendix placeholder style differs (`{yyyy}` → `b40930bbcf80744c`, `[yyyy]` → `c71d239df91726fc`, both at `11,357 B`), and that the authoritative `apache.org` text is `11,358 B`.
+
+**All of it was already in the tree**, and the scorer said so before a word was published:
+
+| Claim tested | Where it already lives | Verdict |
+|---|---|---|
+| `apache.org` canonical is `11,358 B`, `cfc7749b96f63bd3` | `22` files, and the row *"`apache.org` canonical, **as served**"* | 🔴 **held** |
+| same length, different digests | registered as **`T101` — *a length is not an identity*** | 🔴 **held** |
+| both digests themselves | `b40930bbcf80744c` in `4` files, `c71d239df91726fc` in `18` | 🔴 **held** |
+| canonical Apache spans `11,356–11,358 B` | stated verbatim on the foundations shelf | 🔴 **held** |
+
+🔵 **This is `677-A`'s diagnosis at the opposite sign.** p677 found the base *measures well and publishes unreliably*; here the base **measured well, already published, and the next pass nearly republished it as discovery.** The only thing that stopped it was running the novelty test before writing rather than after. 🔧 **`ACTION p678-H`:** a pass's own headline claim gets scored against the tree **before** it is drafted, with the same variant-spelling discipline applied to findings that is already applied to search legs.
+
+### `678-J` — 🟢 `ACTION p677-B` is discharged: the filing gate exists, runs, and found a real defect
+
+Implemented as a pure-Python suite at [`compose/code/p678-filing-gate/`](../compose/code/p678-filing-gate/) — no network, no model, reachable even while `make hooks` is denied (`667-J`). It reads the ledger and asserts every `filed_on` cell against the file that cell names.
+
+| Scope | Claims | True | False |
+|---|--:|--:|--:|
+| p678's own filings | `9` | **`9`** | `0` |
+| whole ledger, first run | `403` | `396` | `7` |
+| whole ledger, after a parser fix | `403` | `402` | `1` |
+| whole ledger, after correcting that cell | `402` | **`402`** | **`0`** |
+
+🔴 **Five of the first seven "failures" were the gate's own defect.** A `filed_on` cell may read `agents/top.md:p661-correction` — path *plus anchor note* — and the first version opened the whole cell as a path. **A gate that cries wolf gets ignored**, which is `667-B`'s lesson applied to publication rather than search; the anchor is now stripped before the path is opened.
+
+🟢 **The one surviving failure was real, and it is `677-A`'s rarest class.** `learningequality/kolibri-design-system` claimed `compose/patterns.md,repos/foundations.md`; the second is true, the first is false. **A multi-shelf claim is several claims and they fail independently** — so the false half was dropped, not the whole cell repointed. Corrected this pass.
+
+🔵 **Both controls run on every invocation** (a known-filed address must be found, a nonsense address must not), because a gate reading an empty string would otherwise report `0 FALSE` and look like success.
+
+---
+
+### `678-K` — 🔴 a read-and-write round-trip silently rewrote `3,283` ledger lines, and the diff is the only place it showed
+
+The p678 ledger edit is **`13` new rows plus `1` corrected cell**. The first attempt committed as **`+3,296 / -3,283`** — a whole-file rewrite.
+
+🔵 **The cause is mundane and reproducible:** `evidence/address-ledger.tsv` is stored with **CRLF** line endings, and a Python `open().read()` → `split('\n')` → `'\n'.join()` → `write()` round-trip **strips every `\r`**. Nothing errored, every value was correct, the filing gate passed, and `wc -l` was unchanged — **the only symptom was the diff.**
+
+🔴 **Why it mattered enough to redo:** a `3,283`-line reformat with a `14`-line change buried inside it is unreviewable, and it would have made this pass's one real correction (`678-J`) invisible to anyone reading the history. Restored from `HEAD` and redone in **binary mode** preserving CRLF; the diff is now **`+14 / -1`**.
+
+🔵 **The convention question, answered rather than assumed:** of `1,933` evidence TSVs, **`1,915` are LF and `18` are CRLF** — the ledger is one of the outliers. So LF *is* this base's convention and the ledger disagrees with it, but **normalising it is a deliberate decision for a pass that announces it, not a side effect of an unrelated content edit.** Left as CRLF, stated here.
+
+🔧 **`ACTION p678-K`:** any pass that edits a file in place checks `git diff --numstat` against the number of lines it meant to change, **before** committing. The check is one command and it catches every silent-reformat class — line endings, trailing newline, BOM, indentation.
+
+---
+
+### `678-I` — 🔴 placement is nil for all `9` filed addresses, measured on both channels
+
+**Owner channel — empty, and probed rather than assumed.** All `8` distinct owners exist (`search/users` returns `1`), and **every one has no `location` set**: `9` spellings each, all `0`. The probe is working — the `telekom`/`Germany` positive control returns `1` and a nonsense qualifier returns `0`. Table: [`evidence/placement-probe.2026-11-06-p678.tsv`](../evidence/placement-probe.2026-11-06-p678.tsv).
+
+**Repository-file channel — also empty.** `7` READMEs plus every grant payload read; **no jurisdiction named**, two false hits rejected (`678-G`). `moodlehq/wiki-rag`'s grant says `Moodle HQ - Research.` — **a company is not a jurisdiction**, and this base does not place on one. Table: [`evidence/repo-file-placement.2026-11-06-p678.tsv`](../evidence/repo-file-placement.2026-11-06-p678.tsv).
+
+🔵 **So all `9` are filed `Global (unplaced)`, and the gap is written down rather than left as silence:** **p678 placed no address in any of the five regions.** An unplaced row is still usable supply — it is the *regional* brief it cannot serve.
+
+---
+
 ## 🆕 2026-11-06 (p677) — 🔴 **THIS BASE'S OWN PROMOTION LEDGER IS WRONG ABOUT `6 OF 11` FILINGS, AND ONE ADDRESS HAS BEEN CLAIMED-AS-FILED BY TWO PASSES `25` DAYS APART WHILE BEING ABSENT THE WHOLE TIME. 🔴 FOUR DUPLICATE ROWS ACROSS TWO SHELVES, ALL CREATED LAST PASS — THE COUNTS ARE NO LONGER STALE, THEY ARE INFLATED. 🔴 p674'S DIGEST PIN IS THE DEFECT `T56` NAMES. 🟢 ONE NOVEL ADDRESS, AND IT CAME FROM ENUMERATING AN OWNER ORG.**
 
 **Verification channels, re-tested before use at p677.** `git ls-remote --symref` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live**; **`WebFetch` on `github.com/<owner>/<repo>` 🟢 LIVE — star and fork counts were read first-hand this pass**, which `p670` recorded as `403` channel-wide; `curl` on `github.com` 🔴 **`403`** (so the channel is tool-dependent, not host-dependent); `api.github.com` 🔴 **`403`**; 🔴 **`arxiv.org` DOES NOT RESOLVE — new to the unreachable-host class this pass, see `677-H`.**

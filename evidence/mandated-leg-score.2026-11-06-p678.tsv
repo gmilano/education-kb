@@ -1,0 +1,29 @@
+region	fact	verdict	variants_probed	best_variant_hits	zero_scoring_variants
+CONTROL-NONSENSE	nonsense needle must score 0	NOVEL	1	0	zzqxnonsense-needle-p678
+CONTROL-HELD	known-held fact, variant spellings	HELD	4	10	-
+NA	134 AI-in-education bills / 31 states	HELD	4	90	134 AI in education bills
+NA	North Carolina Session Law 2026-41	HELD	3	20	-
+NA	Maryland AI coordinators / certification	HELD	2	65	-
+NA	NYC traffic-light guidance Mar 2026	HELD	3	13	-
+NA	Gallup 60% of US teachers use AI	HELD	4	25	60% of U.S. teachers
+NA	70% HiEd Europe+NA have/developing guidance	HELD	2	22	-
+EMEA	UK DfE gen-AI product safety standards Jan 2026	HELD	3	19	-
+EMEA	Ofqual AI + coursework integrity Mar 2026	HELD	1	15	-
+EMEA	UAE KHDA responsible-AI guidance Dubai	HELD	2	24	-
+EMEA	European AI-in-education market $2.64B 2026	HELD	3	42	-
+EMEA	UK GBP 4m AI lesson planning/marking	HELD	3	22	-
+EMEA	Finland/Estonia/Netherlands lead K-12	HELD	2	37	-
+APAC	South Korea AI Basic Act in force 22 Jan 2026	HELD	3	92	-
+APAC	Vietnam 134/2025/QH15 eff. 1 Mar 2026	HELD	3	171	-
+APAC	Vietnam Decision 33/2026/QD-TTg educ high-risk	HELD	2	35	-
+APAC	Australia TEQSA institutional action plans	HELD	1	24	-
+APAC	Singapore AI Risk Management Guidelines consult	HELD	2	135	-
+APAC	Japan AI Act light-touch / no penalties	HELD	1	183	-
+LATAM	UNESCO IESALC 87% of ~200 HEIs, 19 countries	HELD	3	153	-
+LATAM	74% use in teaching and learning	HELD	1	26	-
+LATAM	26% have a formal framework	HELD	2	63	-
+LATAM	UNESCO LAC AI-in-Education Observatory 14 Apr 2026	HELD	2	86	-
+LATAM	Ceibal 75% Uruguay public-school teachers	HELD	2	50	-
+LATAM	Cetic.br Brazil 53% admins / 22% guidelines	HELD	3	33	-
+LATAM	Tec de Monterrey UNESCO agreement Mar 2026	HELD	2	51	-
+LATAM	CENIA Chile UNESCO AI-ethics partnership	HELD	1	98	-

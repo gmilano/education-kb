@@ -1568,3 +1568,45 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 - **It is the cheapest credibility artefact in a knowledge-engineering engagement.** A shelf whose every provenance claim is machine-verified against its own target is a different product from one that merely cites sources well.
 - 🔵 **It generalises to any RAG or knowledge pipeline that writes both an index and a corpus** — the index is an assertion about the corpus, and almost nobody asserts it. The failure mode is identical: retrieval cites a document the corpus does not contain.
 - ⚠️ **It does not improve research quality and must not be sold as if it did.** It closes the gap between what was found and what was published — which, on the evidence of p677, is where this class of system actually loses its accuracy.
+
+## P51 — Ship a branded mobile learning app over the institution's existing LMS, without inheriting its copyleft (North America and EMEA higher education; 6–8 weeks) 🆕 new at p678
+
+**The client situation.** A university or consortium already runs **Open edX** and will not replace it. They want a branded mobile app with an AI study assistant. Legal has previously blocked mobile work on the grounds that Open edX is `AGPL-3.0` and a distributed app would have to carry the same obligation.
+
+**Why the objection does not apply to the app.** p678 byte-read both official clients' grants at their real default refs: **[`openedx/openedx-app-android`](https://github.com/openedx/openedx-app-android) and [`openedx/openedx-app-ios`](https://github.com/openedx/openedx-app-ios) are `Apache-2.0`** — `11,356 B`, digest `43070e2d4e532684`, **byte-identical to each other**, so this is one deliberate decision by the owner across both platforms. The AGPL obligation stays with the **server the institution already operates and does not distribute**.
+
+**The build.**
+
+1. **Fork the clients, not the platform.** `openedx-app-android` (Kotlin) and `openedx-app-ios` (Swift). You are rebranding an app that `62` and `34` other forks have already rebranded — `f/★ = 1.632` and `1.097`, ranks `#3` and `#5` on this base's deploy-per-institution census. **Read those forks before starting; the customisation seams are already worn.**
+2. **Leave the LMS alone.** The apps speak the existing Open edX APIs. No server patch, so no AGPL-triggering distribution and no upgrade debt.
+3. **Add the assistant behind MCP, not in the app.** Stand up the study assistant as an MCP server beside the LMS and have the app call it. For the Moodle-flavoured equivalent of this seam this base holds [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (MIT, `193★`) and [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (MIT); for a vendor-authored RAG+MCP reference to adapt, [`moodlehq/wiki-rag`](https://github.com/moodlehq/wiki-rag) (**BSD-3-Clause**, Moodle HQ's own) — ⚠️ **it ingests MediaWiki, not courses**, so take its MCP/RAG structure, not its ingest path.
+4. **If the tool must launch from inside the LMS too, go through LTI.** `1EdTech/LTI-Tool-Provider-Library-PHP` or `basiclti-util-java` (both `Apache-2.0`, from the body that owns the spec) as the **reference to port** — ⚠️ last pushed `2018` and `2022`. For live LTI 1.3 use [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT, `f/★ 0.609`).
+
+**Licence posture to hand legal, in one line.** App binary: `Apache-2.0` fork, commercially licensable. Server: untouched `AGPL-3.0`, operated not distributed. Assistant: your code behind an MCP boundary. **Three grants, three deliverables, no commingling.**
+
+🔴 **Do not skip:** byte-read the grant of **every** repository you ship code from, at its real default ref. `678-F` is the counter-example in the same family — `THU-MAIC/MAIC-UI` (`184★`) is the UI of a permissively granted classroom and has **no grant payload at all**.
+
+## P52 — The offline-first classroom appliance, now buildable end to end from permissive parts (LATAM public sector, APAC rural, Sub-Saharan Africa; 5–7 weeks to a deployable image) 🆕 new at p678
+
+**What changed at p678.** This base has recommended Kolibri as the offline LMS since `p1`, but held **none of its delivery surface** — so `P47` described an appliance without naming how it reaches a device. Both halves are now shelved under MIT, grants byte-read:
+
+| Layer | Repo | Grant (read at p678) | Note |
+|---|---|---|---|
+| Server / content | Kolibri core (on the verticals shelf) | MIT | the existing recommendation |
+| **Tablet** | [`learningequality/kolibri-installer-android`](https://github.com/learningequality/kolibri-installer-android) | 🟢 **MIT** `1,097 B` `d30e5e1d1a79f13d` | 🔴 **real default ref is `develop`** — a pipeline guessing `main` reads `404` and reports *no licence* |
+| **Desktop** | [`learningequality/kolibri-app`](https://github.com/learningequality/kolibri-app) | 🟢 **MIT** `1,074 B` `f56c8015fee190ce` | Windows / macOS / Linux |
+| School admin | [`biprodas/school-erp`](https://github.com/biprodas/school-erp) | 🟢 **MIT** `1,069 B` `d9beb4f20b37203f` | Next.js + NestJS + Postgres 17 + Redis, `51★ / 37` forks |
+| Local inference | `ollama` (on the foundations shelf) | MIT | keeps the appliance offline |
+
+**The build.**
+
+1. **Start from the installer, not the platform.** Fork `kolibri-installer-android` at **`develop`** and `kolibri-app`. These are the artefacts that produce an APK and a desktop bundle; everything else is content and configuration.
+2. **Put the model on the box.** `ollama` with a small instruct model, bound to localhost. **No uplink in the data path** — which is simultaneously the connectivity answer and the strongest EMEA/LATAM data-residency answer: the data never leaves the building.
+3. **Wire the administration layer only if the client asks for it.** `biprodas/school-erp` covers admissions, academics, people, finance and reporting on a TypeScript stack most studio teams already staff. ⚠️ Single maintainer — **scope a fork, not a vendor relationship.**
+4. **Ship a signed image plus a sync window.** The appliance runs standalone; content and gradebook deltas reconcile when a connection appears.
+
+**Why this sells where it sells.** LATAM's measured position is **`87%` of institutions using AI against `26%` with any formal framework** (UNESCO IESALC / UNU-IAS, ~`200` institutions in `19` countries) — demand without a control layer. An appliance whose data path is local is the shortest route to a governable deployment, and in EMEA the Annex III high-risk deadline for stand-alone education systems now sits at **`2027-12-02`**, which is schedule, not blocker.
+
+🔵 **Pair with `P47`**, which this pattern completes rather than replaces: `P47` set the architecture, P52 names the parts and their verified grants.
+
+🔴 **Known gap, stated:** none of these repositories' own files name a jurisdiction, and all eight owner accounts have no `location` set (`678-I`). The regional fit above is argued from **where the deployment constraint binds**, not from provenance — weaker evidence, labelled as such.

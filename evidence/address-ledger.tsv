@@ -1654,7 +1654,7 @@ learning-commons-org/agent-skills	p12	unstated	-	2026-10-28	11	7
 learning-commons-org/evaluators	p91	MIT|CC-BY-4.0|CC-BY-NC-SA-4.0-split	agents/top.md	2026-11-06	13	10
 learning-commons-org/knowledge-graph	p91	CC-BY|MIT	-	2026-11-01	8	7
 learningequality/kolibri	p24	MIT	compose/patterns.md,repos/foundations.md,verticals/solutions.md	2026-11-05	44	35
-learningequality/kolibri-design-system	p10	MIT-package.json-no-grant-file	compose/patterns.md,repos/foundations.md	2026-11-06	7	6
+learningequality/kolibri-design-system	p10	MIT-package.json-no-grant-file	repos/foundations.md	2026-11-06	7	6
 learningequality/kolibri-server	p10	GPL-2.0	-	2026-10-17	4	3
 learningequality/le-utils	p10	MIT	-	2026-10-20	3	2
 learningequality/morango	p10	MIT	-	2026-10-20	3	2
@@ -3281,3 +3281,16 @@ maruf009sultan/AIELTS-WRITING	p672	MIT	agents/top.md	2026-11-06	1	1
 trycua/cua	p672	MIT	repos/foundations.md	2026-11-06	1	1
 July-Tea/EssayMate	p672	CC-BY-NC-SA-4.0	-	2026-11-06	1	1
 karthikkasirajan/studybuddy-ai	p672	no-grant-payload	-	2026-11-06	1	1
+moodlehq/wiki-rag	p678	BSD-3-Clause	agents/top.md	2026-11-06	1	1
+openedx/openedx-app-android	p678	Apache-2.0	repos/foundations.md	2026-11-06	1	1
+openedx/openedx-app-ios	p678	Apache-2.0	repos/foundations.md	2026-11-06	1	1
+1EdTech/LTI-Tool-Provider-Library-PHP	p678	Apache-2.0	repos/foundations.md	2026-11-06	1	1
+1EdTech/basiclti-util-java	p678	Apache-2.0+NOTICE	repos/foundations.md	2026-11-06	1	1
+learningequality/kolibri-installer-android	p678	MIT	repos/foundations.md	2026-11-06	1	1
+learningequality/kolibri-app	p678	MIT	repos/foundations.md	2026-11-06	1	1
+oppia/oppia-ml	p678	Apache-2.0	repos/foundations.md	2026-11-06	1	1
+biprodas/school-erp	p678	MIT	verticals/solutions.md	2026-11-06	1	1
+THU-MAIC/MAIC-UI	p678	no-grant-payload	-	2026-11-06	1	1
+1EdTech/qti-examples	p678	no-grant-payload	-	2026-11-06	1	1
+moodlehq/moodle-mlbackend-python	p678	GPL-3.0	-	2026-11-06	1	1
+inuyasha2012/tirt	p678	MIT	-	2026-11-06	1	1

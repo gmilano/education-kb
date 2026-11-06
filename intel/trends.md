@@ -971,3 +971,49 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 🔵 **The operational cause is mundane and reproducible: a shell `$(...)` capture strips trailing newlines**, so any payload measured through command substitution is silently one byte short and hashes to a value that exists nowhere on the internet. **Write the payload to a file; hash the file.** p677 re-measured all four that way, and re-confirmed `c71d239df917` independently from a new address — [`THU-MAIC/MAIC-Core`](https://github.com/THU-MAIC/MAIC-Core)'s `LICENSE` is byte-identical to `apache/.github` (`diff` exit `0`).
 
 🔵 **The general claim, which is the point of this trend:** a remediation pass must verify on a **different channel** from the one that produced the error, because the cause is still live in the original channel. `T63` is the fourth member of a family this base has measured end to end — `671-R` (byte equality is not identity), `673-A` (hash inequality is not mutation), `676-A` (a `+2` residual concealing an edit to the operative terms), and now **the fix for a measurement defect, measured with the defect.** 🟢 **Each was caught by adding a channel, never by trusting one harder.**
+
+## T64 — The licence boundary inside a platform runs through its components, and it runs in both directions 🆕 new at p678
+
+A platform's licence is routinely used as a proxy for its parts. **p678 found that proxy failing in both directions, in the same pass, on two of this industry's most prominent assets.**
+
+- **Permissive parts inside a copyleft platform.** Open edX core is `AGPL-3.0` — the standing copyleft objection this base has recorded against it. Its two **official mobile clients are `Apache-2.0`**: [`openedx/openedx-app-android`](https://github.com/openedx/openedx-app-android) and [`openedx/openedx-app-ios`](https://github.com/openedx/openedx-app-ios), carrying a **byte-identical** grant payload (`11,356 B`, `43070e2d4e532684`). A branded commercial mobile client ships without the binary inheriting AGPL.
+- **An ungranted part inside a permissive project.** `THU-MAIC/OpenMAIC`, the ~42k-star multi-agent classroom, is permissively granted. Its front end [`THU-MAIC/MAIC-UI`](https://github.com/THU-MAIC/MAIC-UI) — `184★`, `39` forks — has **no grant payload at all**: six licence paths probed at the real default ref, all `404`.
+
+🔵 **Both errors are invisible to a repository-level licence badge, and both change a scope.** The first *expands* what a studio may sell; the second *removes* a component someone would reasonably assume was adoptable. **The unit of licence diligence is the component you will actually ship**, which is this base's standing *"the licence unit is the dependency graph"* clause pushed down one level — from dependencies to **sibling repositories under one owner**.
+
+🔧 **The practical test is cheap:** for every platform in a proposal, byte-read the grant of **each repository you will ship code from**, at its real default ref. p678 did this for `12` addresses in one pass.
+
+## T65 — Forks per star separates deployed platforms from imported libraries, and the floor matters more than the ranking 🆕 new at p678
+
+This base hypothesised at `p540` that **forks beat stars for institutional software** and ranked `14` points by forks-per-star, finding a boundary near `0.5` between a *deploy-per-institution* class and an *import-as-dependency* class. p678 is the **out-of-sample test**: `12` new points, measured independently, merged into [`evidence/forks-per-star-rank.2026-11-06-p678.tsv`](../evidence/forks-per-star-rank.2026-11-06-p678.tsv).
+
+🟢 **The boundary held.** Institutional infrastructure landed above `0.5` without exception — LMS mobile clients (`1.632`, `1.097`), LTI libraries (`1.074`, `0.800`), a school ERP (`0.725`), Kolibri installers (`0.806`). The two **agent-shaped** repositories landed below it: `MAIC-UI` `0.212`, `moodlehq/wiki-rag` `0.189`. **Platform code is forked and deployed; agent code is imported.**
+
+🟢 **New `#1` at adequate `n`:** `openedx/openedx-app-android` at `1.632`, displacing `dspace/dspace` (`1.364`), which had led since `p540`.
+
+🔴 **But the adequacy floor, not the ranking, is where this metric earns trust.** Three of the top seven *raw* ratios are inadmissible at `n >= 20` stars: `oppia/oppia-ml` (`3.000`, `n=3`), `learningequality/kolibri-app` (`1.727`, `n=11`), `moodlehq/moodle-mlbackend-python` (`1.053`, `n=19`). **An unfloored ratio ranks a three-star repository first.** Published with the caveat in the cell rather than ranked — and the `n=3` verdict reproduces the one this base already recorded for `ucfopen/pylti1.3`.
+
+🔧 **For a platform shortlist: rank by forks per star, apply an `n >= 20` floor, and read the stale date before the ratio** — `1EdTech/LTI-Tool-Provider-Library-PHP` ranks `#6` and was last pushed in `2018`.
+
+## T66 — A curated base's standing failure mode is republishing its own holdings as discovery 🆕 new at p678
+
+`p677` diagnosed this base as one that **measures well and publishes unreliably**: six addresses claimed-as-filed were absent from every shelf. **p678 found the same defect at the opposite sign** — a pass about to publish, as a new mechanism, something the tree already held.
+
+The intended headline was that two verbatim `Apache-2.0` payloads can share a byte count and hash differently because the appendix placeholder style differs (`{yyyy}` vs `[yyyy]`), and that the authoritative `apache.org` text is `11,358 B`. **Scored against the tree before drafting: all of it held** — the ASF digest `cfc7749b96f63bd3` in `22` files, both variant digests already recorded, the `11,356–11,358 B` span stated verbatim on the foundations shelf, and the general rule already registered as **`T101` — *a length is not an identity***.
+
+🔵 **The two failures are one rule at opposite signs**, which is the same shape as `667-C`: *a knowledge base must test its own claims against itself, in both directions.* `p677` tested whether a published claim was **on the shelf**; p678 tested whether a **new claim was already** on the shelf. **Neither test is expensive and neither was standing practice.**
+
+🔧 **`ACTION p678-H`, now registered:** a pass's headline claim is scored against the tree **before** it is drafted, with the same variant-spelling discipline already applied to search legs — because `667-B` proved a fixed-string needle misses a held fact `53.8%` of the time on orthography alone.
+
+## T67 — A reachability verdict belongs to an endpoint, not a host 🆕 new at p678
+
+This base has recorded `api.github.com` as `403` **channel-wide** since `p670`, repeated at `p677`. **p678 refutes the scope of that claim with a control pair:**
+
+| Call | Result |
+|---|---|
+| `gh api repos/openedx/openedx-app-android` | 🔴 `403` — *"GitHub access to this repository is not enabled for this session"* |
+| `gh api -X GET search/repositories -f q='repo:openedx/openedx-app-android'` | 🟢 `200`, **returning the same fields**: stars, forks, `license.spdx_id`, `pushed_at`, `language` |
+
+**Same host, same tool, same credential — opposite verdicts.** The block is a **session repository-scope** restriction on the per-repository path, not a network block on the host. Every star and fork count published at p678 came through the search path.
+
+🔵 **The general claim:** a one-line-per-host reachability table **cannot express this**, and in recording the host as dead it discarded a live channel for an unknown number of passes. 🔧 Reachability tables name the **endpoint**, and a dead verdict on one path requires a second path tested before the host is written off.

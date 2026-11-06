@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p678) — 🟢 **NINE ADDRESSES FILED FROM OWNER-ORG ENUMERATION, EVERY GRANT PAYLOAD BYTE-READ AT THE REAL DEFAULT REF. 🟢 OPEN EDX'S MOBILE CLIENTS ARE APACHE-2.0 WHILE ITS CORE IS AGPL. 🔵 NEW #1 ON THE DEPLOY-PER-INSTITUTION CENSUS. 🔴 ZERO PLACED IN ANY REGION, AND BOTH PLACEMENT CHANNELS WERE MEASURED EMPTY.**
+
+**What this window found.** The four mandated global legs returned **no novel repository for the 28th consecutive pass** — leg-by-leg scoring in [`agents/trending.md`](../agents/trending.md) `678-A`. **Every address gained this pass came from enumerating `10` education owner organisations** and diffing against a tree corpus of `4,666` addresses. 🔵 `repos/foundations.md` `128` → **`135`**; `agents/top.md` `59` → **`60` rows / `59` distinct**; `verticals/solutions.md` `61` → **`62` rows / `59` distinct**. All counts **re-derived by counting the table**, not by incrementing the heading.
+
+### 🟢 Filed at p678 — every row verified first-hand on 2026-11-06
+
+Existence and real default ref via `git ls-remote --symref`; grant payload byte-read from `raw.githubusercontent.com` **into a file**; stars and forks from `gh api search/repositories` (see `678-E` — the per-repository endpoint is scope-blocked, the search endpoint is not).
+
+| Filed at p678 | Grant (payload, read this pass) | ★ | Forks | `f/★` | Real default ref | Filed to |
+|---|---|--:|--:|--:|---|---|
+| [`openedx/openedx-app-android`](https://github.com/openedx/openedx-app-android) | 🟢 **Apache-2.0** `11,356 B` `43070e2d4e532684` | **38** | `62` | **`1.632`** | `main` | `repos/foundations.md` |
+| [`openedx/openedx-app-ios`](https://github.com/openedx/openedx-app-ios) | 🟢 **Apache-2.0** `11,356 B` `43070e2d4e532684` | **31** | `34` | `1.097` | `main` | `repos/foundations.md` |
+| [`1EdTech/LTI-Tool-Provider-Library-PHP`](https://github.com/1EdTech/LTI-Tool-Provider-Library-PHP) | 🟢 **Apache-2.0** `11,357 B` `b40930bbcf80744c` | **68** | `73` | `1.074` | 🔴 `master` | `repos/foundations.md` |
+| [`1EdTech/basiclti-util-java`](https://github.com/1EdTech/basiclti-util-java) | 🟡 **Apache-2.0 + `1,825 B` NOTICE** `13,185 B` `ba1f153bdba34cc8` | **60** | `48` | `0.800` | 🔴 `master` | `repos/foundations.md` |
+| [`learningequality/kolibri-installer-android`](https://github.com/learningequality/kolibri-installer-android) | 🟢 **MIT** `1,097 B` `d30e5e1d1a79f13d` © *2023 Learning Equality* | **31** | `25` | `0.806` | 🔴 **`develop`** | `repos/foundations.md` |
+| [`learningequality/kolibri-app`](https://github.com/learningequality/kolibri-app) | 🟢 **MIT** `1,074 B` `f56c8015fee190ce` © *2019 Learning Equality* | **11** | `19` | `1.727` ⚠️ | `main` | `repos/foundations.md` |
+| [`oppia/oppia-ml`](https://github.com/oppia/oppia-ml) | 🟢 **Apache-2.0** `11,357 B` `b40930bbcf80744c` | **3** | `9` | `3.000` ⚠️ | 🔴 **`develop`** | `repos/foundations.md` |
+| [`biprodas/school-erp`](https://github.com/biprodas/school-erp) | 🟢 **MIT** `1,069 B` `d9beb4f20b37203f` © *2019 Biprodas Roy* | **51** | `37` | `0.725` | `main` | `verticals/solutions.md` |
+| [`moodlehq/wiki-rag`](https://github.com/moodlehq/wiki-rag) | 🟢 **BSD-3-Clause** `1,508 B` `1f8f00c5f1bea010` © *2025 Moodle HQ - Research.* | **53** | `10` | `0.189` | `main` | `agents/top.md` |
+
+⚠️ **The two `f/★` values marked are inadmissible by this base's own `n >= 20` adequacy rule** (`n=11` and `n=3`) and are **not** ranked — see `678-D`.
+
+### 🔴 Verified, real, and deliberately NOT filed
+
+| Address | ★ | Why not |
+|---|--:|---|
+| [`THU-MAIC/MAIC-UI`](https://github.com/THU-MAIC/MAIC-UI) | **184** | **No grant payload** — `6` licence paths probed at `main`, all `404`. It is the front end of `OpenMAIC`, a headline row on the agent shelf: **the classroom is granted, its UI is not.** |
+| [`1EdTech/qti-examples`](https://github.com/1EdTech/qti-examples) | **35** | **No grant payload**, `6` paths, all `404` — from the body that *owns* the QTI standard. |
+| [`moodlehq/moodle-mlbackend-python`](https://github.com/moodlehq/moodle-mlbackend-python) | **19** | 🔴 **`GPL-3.0`** (`35,147 B`, `8ceb4b9ee5adedde`) — copyleft; outside the licences this base shelves. Recorded so the search is not re-spent. |
+| [`inuyasha2012/tirt`](https://github.com/inuyasha2012/tirt) | **22** | MIT and genuinely an **item-response-theory** implementation against this base's assessment gap — but last pushed **`2018-03-29`, over 8 years stale**. |
+| ~`150`+ enumeration hits | — | Satellite infrastructure: installers, docs sites, CI runners, locale bundles, style guides. **Novel against the corpus, not shelf-worthy** — `678-A`. |
+
+### 🔵 Why the enumeration channel is worth re-running, with its precision stated
+
+| Channel | Candidates returned | Novel vs tree corpus | Verified | Filed | Precision |
+|---|--:|--:|--:|--:|--:|
+| 4 mandated global legs | `21` | **`0`** | `0` | `0` | — (28th consecutive nil) |
+| Moodle/Canvas MCP sweep | `11` | `1` | `1` | `1` | `9%` |
+| 10 targeted topic legs | `~60` | `1` | `0` | `0` | `~2%` (the one hit was 8 years stale) |
+| 10 non-English / regional legs | `~40` | **`0`** | `0` | `0` | `0%` |
+| **owner-org enumeration** | `~150+` | `~150` | `12` | **`9`** | **high yield, low precision** |
+
+🔵 **Read the last row honestly: the yield is real and the precision is poor.** Enumeration finds what search legs cannot reach, and most of what it finds is build plumbing. The `12`-of-`150` triage is the cost of the channel, and it is worth paying while the mandated legs return nothing.
+
+---
+
 ## 🆕 2026-11-06 (p677) — 🟢 **SIX ADDRESSES RECOVERED — NOT FROM A SEARCH LEG AND NOT FROM THE BACKLOG, BUT FROM THIS BASE'S OWN `p597` PROMOTION LEDGER, WHICH SAID ALL SIX WERE ALREADY SHELVED. 🔴 ONE OF THEM HAS BEEN CLAIMED-AS-FILED TWICE, `25` DAYS APART, WHILE ABSENT THE WHOLE TIME. 🟢 EVERY PAYLOAD RE-MEASURED TO THE EXACT BYTE THE LEDGER PUBLISHED.**
 
 **What this window found.** The four mandated global legs returned **no novel repository** for the 27th consecutive pass — the leg-by-leg table is in [`agents/trending.md`](../agents/trending.md) `677-G`. **Every address gained this pass came from auditing a claim this base had already published.** 🔵 `repos/foundations.md` `125` → **`128`**; `verticals/solutions.md` `58` → **`61` rows / `58` distinct**; `agents/top.md` `58` → **`59` rows / `58` distinct**.

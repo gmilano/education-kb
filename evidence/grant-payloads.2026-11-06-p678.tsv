@@ -1,0 +1,13 @@
+address	default_ref	licence_path	spdx	bytes	sha256_16	sha256_12	copyright_holder	stars	forks	forks_per_star	pushed	read_how
+moodlehq/wiki-rag	main	LICENSE	BSD-3-Clause	1508	1f8f00c5f1bea010	1f8f00c5f1be	Copyright (c) 2025, Moodle HQ - Research.	53	10	0.189	2026-06-15	raw.githubusercontent into file
+openedx/openedx-app-android	main	LICENSE	Apache-2.0	11356	43070e2d4e532684	43070e2d4e53	ASF template unfilled ([yyyy] variant)	38	62	1.632	2026-11-03	raw.githubusercontent into file
+openedx/openedx-app-ios	main	LICENSE	Apache-2.0	11356	43070e2d4e532684	43070e2d4e53	ASF template unfilled ([yyyy] variant)	31	34	1.097	2026-10-30	raw.githubusercontent into file
+1EdTech/LTI-Tool-Provider-Library-PHP	master	LICENSE	Apache-2.0	11357	b40930bbcf80744c	b40930bbcf80	ASF template unfilled ({yyyy} variant)	68	73	1.074	2018-06-29	raw.githubusercontent into file
+1EdTech/basiclti-util-java	master	LICENSE	Apache-2.0 + bundled NOTICE	13185	ba1f153bdba34cc8	ba1f153bdba3	ASF template + OAuth subcomponents (AOL/Google/Netflix)	60	48	0.800	2022-11-16	raw.githubusercontent into file
+learningequality/kolibri-installer-android	develop	LICENSE	MIT	1097	d30e5e1d1a79f13d	d30e5e1d1a79	Copyright (c) 2023 Learning Equality and other contributors	31	25	0.806	2026-07-15	raw.githubusercontent into file
+learningequality/kolibri-app	main	LICENSE	MIT	1074	f56c8015fee190ce	f56c8015fee1	Copyright (c) 2019 Learning Equality	11	19	1.727	2026-07-18	raw.githubusercontent into file
+oppia/oppia-ml	develop	LICENSE	Apache-2.0	11357	b40930bbcf80744c	b40930bbcf80	ASF template unfilled ({yyyy} variant)	3	9	3.000	2024-12-02	raw.githubusercontent into file
+biprodas/school-erp	main	LICENSE	MIT	1069	d9beb4f20b37203f	d9beb4f20b37	Copyright (c) 2019 Biprodas Roy	51	37	0.725	2026-10-29	raw.githubusercontent into file
+THU-MAIC/MAIC-UI	main	NO-GRANT-PAYLOAD	none	-	-	-	-	184	39	0.212	2026-05-06	6 licence paths probed, all 404
+1EdTech/qti-examples	master	NO-GRANT-PAYLOAD	none	-	-	-	-	35	20	0.571	2026-08-18	6 licence paths probed, all 404
+moodlehq/moodle-mlbackend-python	master	LICENSE	GPL-3.0	35147	8ceb4b9ee5adedde	8ceb4b9ee5ad	Copyright (C) 2007 Free Software Foundation, Inc.	19	20	1.053	2022-05-27	raw.githubusercontent into file

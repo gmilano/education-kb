@@ -1,0 +1,11 @@
+owner	account_exists	locations_probed	positive_hits	verdict
+moodlehq	1	Australia; Perth; United States; USA; India; China; UK; United Kingdom; Bangladesh	0	UNPLACEABLE on owner channel - no location set
+openedx	1	same 9	0	UNPLACEABLE on owner channel - no location set
+1EdTech	1	same 9	0	UNPLACEABLE on owner channel - no location set
+learningequality	1	same 9	0	UNPLACEABLE on owner channel - no location set
+oppia	1	same 9	0	UNPLACEABLE on owner channel - no location set
+biprodas	1	same 9	0	UNPLACEABLE on owner channel - no location set
+THU-MAIC	1	same 9	0	UNPLACEABLE on owner channel - no location set
+Faixiang	1	same 9	0	UNPLACEABLE on owner channel - no location set
+CONTROL-POSITIVE telekom	1	Germany	1	probe discriminates (667-G1 reproduced)
+CONTROL-NONSENSE moodlehq	1	zzqxnonsense:foo	0	nonsense qualifier scores 0 as required

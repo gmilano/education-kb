@@ -1,0 +1,9 @@
+address	own_files_read	jurisdiction_found	false_positive_rejected	verdict
+openedx/openedx-app-android	README.md 5,784 B	none	"uk/strings" = UKRAINIAN LOCALE PATH, not United Kingdom	REFUSED - no placement
+openedx/openedx-app-ios	README.md	none	-	REFUSED - no placement
+1EdTech/LTI-Tool-Provider-Library-PHP	README.md 2,027 B	none	-	REFUSED - no placement
+1EdTech/basiclti-util-java	README.md 2,932 B	none	-	REFUSED - no placement
+learningequality/kolibri-installer-android	README.md 8,960 B	none	-	REFUSED - no placement
+biprodas/school-erp	README.md 2,631 B	none	-	REFUSED - no placement
+moodlehq/wiki-rag	README.md 13,947 B + LICENSE	none ("Moodle HQ - Research." names a company, not a jurisdiction)	"usa" matched inside "usage"	REFUSED - no placement
+oppia/oppia-ml	README.md 3,048 B	none	-	REFUSED - no placement

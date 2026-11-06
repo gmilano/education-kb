@@ -106,6 +106,20 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🆕 p678 — the leg held a 29th time; the opportunity is a **licence boundary**, not a new statute
+
+🟡 **Nothing new on policy, and the scorer says so with controls.** Re-served and already held at full strength: `134` AI-in-education bills across `31` states; North Carolina **Session Law 2026-41** (state model policy by `2026-12-31`, local policies by `2027-06-30`, teacher training by `2028-06-30`); Maryland's AI-coordinator and tool-certification bills; New York City's March 2026 traffic-light guidance; Gallup's `60%` of US teachers; `70%` of institutions in Europe and North America with guidance in place or in development. See [`evidence/mandated-leg-score.2026-11-06-p678.tsv`](../evidence/mandated-leg-score.2026-11-06-p678.tsv).
+
+🟢 **The engagement-shaped gain is on the shelf, not in the statute book.** North America's higher-education estate runs heavily on **Open edX** and on **LTI**-launched tooling, and p678 establishes that both have a permissive surface:
+
+- **Open edX core is `AGPL-3.0`; its official mobile clients are `Apache-2.0`** (`openedx-app-android`, `openedx-app-ios` — byte-identical grants, `43070e2d4e532684`). A branded commercial mobile client is therefore shippable against an institution's existing deployment **without the app inheriting AGPL**.
+- **LTI integration code from the standards body is `Apache-2.0`** (`1EdTech/LTI-Tool-Provider-Library-PHP`, `basiclti-util-java`), which removes the provenance question from the interop layer — though both are stale (`2018`, `2022`) and are references to port, not dependencies to pin.
+
+🔵 **Why this reads as a North America opportunity specifically:** `openedx-app-android` carries **`62` forks against `38` stars** — the highest ratio at adequate `n` on this base's deploy-per-institution census. Forks exceeding stars is per-institution rebranding, and the Open edX institutional base is concentrated here.
+
+🔴 **Stated as a gap, not left as silence: p678 placed no address in this region.** The nine addresses filed are all `Global (unplaced)` — the owner `location` field is empty for all eight owners and no repository's own files name a jurisdiction (`678-I`). The opportunity above rests on **where the platform is deployed**, which is weaker evidence than a grant naming an institution, and it is labelled as such.
+
+
 #### 🆕 p677 — the leg held; the shelf-side gain is the opportunity
 
 🟡 **Nothing new on policy.** Re-served and already held: **`134`** AI-in-education bills across **`31`** states in 2026 (of **>1,500** AI bills nationally, ~**100** touching K-12 student AI use); **North Carolina Session Law 2026-41** (state model policy by `2026-12-31`, local school-unit policies by `2027-06-30`, teacher training by `2028-06`); Maryland's district AI-coordinator mandate; Virginia's 2026 school-board duty; **NYC's Traffic Light Framework**; **`60%`** of US teachers using AI while most public schools still lack a formal student AI policy; **~`70%`** of institutions in Europe and North America having or developing guidance.
@@ -306,6 +320,17 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🆕 **p671 — the sellable instrument this pass produced, and North America is where it is worth most.** `671-K`/`T52` measured `2` of `197` open-source addresses on this base's own shelves pointing at repositories that had **changed owner**, while `git ls-remote`, `raw.githubusercontent.com` and a `sha256` of the licence payload all kept passing at the dead address. 🔵 **Why this region first:** the regulatory load here is *procedural* — Maryland's `SB 720` and the `MD`/`ID`/`OK`/`VA` group require **state guidance *and* district-level AI policy**, Ohio districts faced a **July 2026** deadline for written policy, and `AB 1159` bars student data from model training in California. Those are all obligations that get discharged by producing an auditable inventory. **An inventory that cannot tell you a dependency changed stewardship is not auditable**, and `P40` is a one-week build that fixes it.
 - 🔴 **Supply nil a third consecutive pass, and p671 now has a measured cause rather than an impression.** `671-E` ran `10` domain legs on `search/repositories` at a `stars:>=50` floor: `52` distinct addresses, `0` filable, and **no North American open-source education supply placed by any channel.** `671-F` names the mechanism that was inflating earlier shortlists — *term-of-art decomposition*, where the `knowledge tracing` leg returns a repository whose README contains **zero** education terms because its feature list happens to say *"knowledge bases, tracing"*. **The shortlists were never as full as they looked.**
 ### EMEA
+
+#### 🆕 p678 — the leg nilled a 29th time, including the deadline this base already corrected
+
+🟡 **Every EMEA fact the legs returned was already held**, and two of them matter enough to restate: the **Digital Omnibus deferral of stand-alone Annex III education systems to `2027-12-02`** (embedded systems `2028-08`), under **Regulation (EU) 2026/1744** — held in `7`–`13` files depending on spelling — plus the UK DfE generative-AI product safety standards (Jan 2026), Ofqual's coursework-integrity resources (Mar 2026), the UAE KHDA responsible-AI guidance for Dubai private schools, the ~`$2.64 B` European market figure, the UK's £4 M lesson-planning investment, and Finland/Estonia/Netherlands as K-12 leaders.
+
+⚠️ **The sources served the *superseded* August 2026 date again this pass.** This base corrected that at `T7`; the search channel has not caught up. **Any EMEA engagement brief built from a general web search this month will carry the wrong high-risk deadline** — that discrepancy is itself a reason a client pays for a curated base.
+
+🟢 **New, permissive, and relevant to EMEA data residency:** the **Kolibri delivery surface** is now shelved under MIT — `kolibri-installer-android` (`1,097 B`, read at the real default ref **`develop`**) and `kolibri-app` (`1,074 B`). Kolibri runs **fully offline**, which is the strongest possible answer to a data-residency objection: the data does not leave the building. Combined with the deferred Annex III date, an EMEA institution has until `2027-12-02` to stand up assessment-adjacent AI, and an on-premises appliance is the lowest-friction route.
+
+🔴 **No address placed in EMEA this pass.** The one candidate that looked placeable was refused on evidence: `openedx/openedx-app-android` matched `uk/strings`, which is a **Ukrainian locale path**, not the United Kingdom (`678-G`).
+
 
 #### 🆕 p677 — Europe held, and **Africa gained four named programmes**
 
@@ -571,6 +596,17 @@ The later date is probably current, and both sources describe it as a **politica
 - 🔴 **Demand-side gap unchanged and restated:** no EMEA-wide adoption rate for AI in schools or universities was found this pass either; the European Parliament briefing `784574` remains **unverifiable from this session** (`www.europarl.europa.eu` does not resolve under this network policy), so it is still not filed.
 ### APAC
 
+#### 🆕 p678 — the leg nilled a 29th time, and the region's movement is a **licence absence** on its most-adopted asset
+
+🟡 **Held, at strength:** South Korea's **AI Basic Act** in force `2026-01-22` with a guidance-first grace period through 2026; Vietnam's **134/2025/QH15** effective `2026-03-01` and **Decision 33/2026/QD-TTg** naming education (automated assessment, behavioural AI) high-risk; Australia's **TEQSA** institutional action-plan requirement; Singapore's AI Risk Management Guidelines consultation; Japan's cooperation-based, penalty-free approach.
+
+🔴 **The finding this pass is a negative one, and it is material for anyone scoping on China's flagship education agent.** `THU-MAIC/OpenMAIC` — the Tsinghua multi-agent classroom at ~42k stars, a headline row on this base's agent shelf — has a front end, [`THU-MAIC/MAIC-UI`](https://github.com/THU-MAIC/MAIC-UI), with **`184` stars, `39` forks and no grant payload whatsoever** (`6` licence paths probed at `main`, all `404`). **A studio that read the parent repository's licence and planned to adopt "OpenMAIC's interface" would be wrong.** The classroom is permissively granted; the interface is not granted at all.
+
+🔵 **The practical read:** OpenMAIC remains usable as an *engine* under its own grant; the UI must be rebuilt, not adopted. That is a scoping line worth drawing before an estimate, not after — and it is exactly the kind of error a repository-level licence badge invites.
+
+🔴 **No address placed in APAC this pass**, and the owner channel was measured rather than assumed: `THU-MAIC` exists as an account and has **no `location` set** (`9` spellings probed, all `0`, positive control clean).
+
+
 #### 🆕 p677 — the region's regulation held, and APAC gained the largest-deployment permissive platform in this base
 
 🟡 **Regulation: no new instrument.** Held — **Vietnam's Decision No. 33/2026/QD-TTg**, which names **education (automated assessment, behavioural analysis)** among six high-risk sectors and remains **the most education-specific binding AI instrument found anywhere in APAC**; **Korea's AI Basic Act** in force `2026-01-22`, with enforcement decrees still being finalised and 2026 treated as a guidance-first grace period; **Australia** with no AI-specific statute but education named high-risk in its 2024 guardrails proposal and **TEQSA** requiring provider action plans on generative-AI risk; **Japan** principles-based and light-touch; **Singapore** on toolkits (**AI Verify**); **Indonesia, Malaysia, Hong Kong** finalising roadmaps, cloud/data-sovereignty policy and an AI R&D institute respectively. 🔵 **The EU AI Act reaches APAC vendors** whose proctoring, admissions or assessment output lands on EU learners — extraterritoriality is the compliance driver here, not domestic law.
@@ -770,6 +806,19 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🔴 **The regulatory fact that most changes an APAC education deal is already on this page and p671 re-confirms it held:** Vietnam's **Decision `33/2026/QD-TTg`** names **education** among its six high-risk sectors, and Korea's **AI Basic Act** has been in force since **22 January 2026**. Add Australia's **TEQSA** requiring providers to file generative-AI action plans. 🔵 **All three are *document-producing* obligations**, which is the same shape as the North American procedural load — and the same reason `P40` sells: an action plan that lists dependencies by URL is a plan built on the one check that passes at a dead address.
 - 🔴 **The adoption-denominator gap is declared for a sixth consecutive pass.** No APAC-wide figure for AI adoption in schools or universities was found. It is searched every pass and written down every pass, because a silent absence here reads exactly like coverage.
 ### LATAM
+
+#### 🆕 p678 — the leg nilled a 29th time, and the opportunity is the **offline appliance**, now fully shelved
+
+🟡 **Held, and this region's evidence base remains the best-sourced of the five:** the UNESCO IESALC / UNU-IAS study of ~`200` institutions across `19` countries — **`87%`** using AI in at least one area, **`74%`** in teaching and learning, only **`26%`** with any formal framework; the UNESCO **Observatory on AI in Education for Latin America and the Caribbean** launched `2026-04-14`; Ceibal's `75%` of Uruguayan public-school teachers; Cetic.br's Brazilian figures (`53%` of school administrators using AI, `22%` with school guidelines); the Tecnológico de Monterrey–UNESCO agreement (Mar 2026); CENIA Chile's UNESCO AI-ethics partnership.
+
+🔵 **The `87%` adoption against `26%` governance gap is still the sharpest services brief in this file** — demand already exists, the control layer does not, and the institutions saying so are the ones that would buy.
+
+🟢 **p678 completes the offline-first delivery set, which is this region's binding constraint.** Kolibri has been on the verticals shelf as the offline LMS since `p1`, but its **delivery surface** was missing. Both halves are now shelved under MIT: `kolibri-installer-android` (tablet APK) and `kolibri-app` (Windows/macOS/Linux desktop). With Kolibri core, that is **server + tablet + desktop, all permissive**, which is what `P47` needs to become an actual appliance rather than an architecture diagram.
+
+🟢 **Also newly relevant here:** `biprodas/school-erp` (MIT, `51★ / 37` forks) gives the school-administration band a **TypeScript-end-to-end** option beside this shelf's PHP incumbents — including `portabilis/i-educar`, Brazil's largest free-software school-management system (GPL-2.0), which remains the region's only member of the deploy-per-institution census.
+
+🔴 **No address placed in LATAM this pass, and this is said plainly because a LATAM-only gain would be the easy thing to claim here.** Neither the grants nor the READMEs of the nine filed addresses name any jurisdiction (`678-I`).
+
 
 #### 🆕 p677 — the leg held in full, and the honest reading is that LATAM's constraint has not moved
 
@@ -1018,6 +1067,19 @@ client.
 - 🔵 **It also attaches to the regional stack this base already recorded.** `p667` filed **[`portabilis/i-educar`](https://github.com/portabilis/i-educar)** — Brazil's largest free-software school-management system, **GPL-2.0** — as this page's only LATAM member on the deploy-per-institution census. **A GPL-2.0 system of record is exactly the case where knowing the steward matters**, because the licence question and the who-can-relicense question are the same question, and `P40` answers the second one.
 - 🔴 **Supply nil again, and the Portuguese and Spanish legs are not quietly dropped:** `671-E`'s census placed no new LATAM address, and no LATAM-specific permissive education repository cleared the floor. Written down rather than left as silence, per this page's standing rule.
 ### Global
+
+#### 🆕 p678 — what a studio can take from this pass regardless of region
+
+🔵 **All nine addresses filed this pass are `Global (unplaced)`**, and that is a measured verdict rather than a default: `8` of `8` owner accounts have no `location` set, and `7` READMEs plus every grant payload named no jurisdiction (`678-I`, with both evidence tables linked there). **Unplaced supply is still usable supply** — what it cannot serve is a brief that asks "what is happening in my region".
+
+🟢 **Three findings that travel:**
+
+1. **A platform's licence is not its components' licence.** Open edX is `AGPL-3.0` and its two official mobile clients are `Apache-2.0`; OpenMAIC is permissive and its UI has no grant at all. **Both directions of that error appeared in one pass**, and both are invisible to a repository-level licence badge.
+2. **A NOTICE is not a copyleft problem.** `basiclti-util-java` reads `13,185 B` against an `11,357 B` canonical, and the residual decomposes exactly into `1,825 B` of Apache-2.0 subcomponent attributions. A digest gate is **right to flag it and wrong to reject it** (`678-C`).
+3. **Forks beat stars for institutional software.** On a 12-point out-of-sample test the `f/★ >= 0.5` boundary held: platform code (LMS clients, LTI libraries, school ERP, Kolibri installers) sat above it, agent code (`MAIC-UI` `0.212`, `wiki-rag` `0.189`) below (`678-D`). **For a platform shortlist, rank by forks per star and apply an `n >= 20` floor.**
+
+🔴 **And one about this base itself:** p678's own intended headline — a mechanism for why two equal-length Apache-2.0 payloads hash differently — **was already held in the tree** and was caught by scoring the claim before drafting it (`678-H`). The base measures well; the standing risk is republishing its own holdings as discovery.
+
 
 #### 🆕 p677 — the market series did not move, and the methodological note is the finding
 
