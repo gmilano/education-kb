@@ -1,0 +1,4 @@
+probe	slug	expected	curl_sI_status	location	verdict
+negative control	gmilano/zzqx-nonexistent-676	404	200	-	CONTROL FAILED - proxy answers 200 with a JSON refusal body
+positive control (known rename 671-K)	openedx/edx-platform	301	200	-	CONTROL FAILED - no redirect surfaced
+live control	moodle/moodle	200	200	-	indistinguishable from the two failures above

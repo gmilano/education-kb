@@ -1,0 +1,24 @@
+leg	fact	files_matching_live_tree	verdict
+global-agents	US: 134 AI-in-education bills across 31 states (2026 session)	7	HELD
+global-agents	Maryland SB 720 - state AI guidance + local policies	6	HELD
+global-trending	New York A 9190 - classroom AI restricted to grade 9+	7	HELD
+global-trending	California AB 1159 - bars student data for model training	10	HELD
+global-platforms	North Carolina SB 1006 - USD 10M earmark for Khanmigo	4	HELD
+global-platforms	K-12 AI Literacy and Readiness Act of 2026 advanced in committee	9	HELD
+global-trends	EU AI Act Annex III high-risk education duties deferred to 2027-12-02	10	HELD
+EMEA	European AI-in-education market USD 2.64bn (2026)	12	HELD
+EMEA	European CAGR 31.9% to USD 8.0bn by 2030	9	HELD
+EMEA	UK generative-AI product safety standards for education (Jan 2026)	3	HELD
+APAC	South Korea AI Basic Act in force 2026-01-22	14	HELD
+APAC	South Korea ~USD 740M teacher AI training (2024-2026)	1	HELD
+APAC	APAC AI-in-education CAGR 35.3%, USD 2.85bn (2026)	11	HELD
+APAC	Ipsos: support for banning AI in education rose JP 21-29, AU 47-52, KR 27-31	7	HELD
+APAC	Vietnam AI law in force 2026-03-01	6	HELD
+LATAM	UNESCO IESALC: 200 HEIs / 19 countries, 87% use AI, 26% have a framework	20	HELD
+LATAM	Cetic.br: 53% of Brazilian school administrators use AI, 22% have guidelines	5	HELD
+LATAM	Ceibal: 75% of Uruguayan public-school teachers use these tools	8	HELD
+LATAM	UNESCO Observatory on AI in Education for LAC launched Santiago, Apr 2026	3	HELD
+North America	60% of US teachers use AI tools; most schools lack formal policy	7	HELD
+North America	Ohio districts must adopt written AI policies by July 2026	9	HELD
+CONTROL-negative	qzzxnonsense7741	0	CLEAN
+CONTROL-negative	zubrowkaplatypus	0	CLEAN

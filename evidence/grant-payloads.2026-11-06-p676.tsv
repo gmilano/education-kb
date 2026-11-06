@@ -1,0 +1,29 @@
+slug	live	default_ref	grant_path	http	bytes	sha256_12	title_line
+opencast/opencast	LIVE	develop	LICENSE	200	11340	76a975068930	Educational Community License, Version 2.0 (ECL-2.0)
+learningequality/studio	LIVE	unstable	LICENSE	200	1115	5715e50830cd	The MIT License (MIT)
+learningequality/kolibri-design-system	LIVE	develop	-	NO_GRANT	-	-	-
+packbackbooks/lti-1-3-php-library	LIVE	master	LICENSE.md	200	11343	78b49eeaddbf	                                 Apache License
+adlnet/SCORM-to-xAPI-Wrapper	LIVE	master	-	NO_GRANT	-	-	-
+tl-its-umich-edu/my-learning-analytics	LIVE	master	LICENSE	200	11379	b89b380a589b	                                 Apache License
+Ed-Fi-Alliance-OSS/Data-Management-Service	LIVE	main	LICENSE	200	11357	c71d239df917	                                 Apache License
+AI-for-Education/pedagogy-benchmark	LIVE	main	LICENSE	200	1064	4cdfd8894a13	MIT License
+microsoft/Shiksha-Copilot	LIVE	main	LICENSE	200	1141	c2cfccb812fe	    MIT License
+webtech-network/autograder	LIVE	main	LICENSE	200	11357	c71d239df917	                                 Apache License
+leemonade/leemons	LIVE	main	LICENSE.md	200	10830	13220df1b64b	# License
+opensalt/opensalt	LIVE	develop	LICENSE	200	1080	38e322d5ab06	MIT License
+theopenem/OneRoster.NET	LIVE	master	LICENSE	200	1066	1dc50226c38a	MIT License
+beltromatti/get-it	LIVE	main	LICENSE	200	11359	d0622ead9e49	                                 Apache License
+THU-MAIC/OpenMAIC	LIVE	main	LICENSE	200	1065	ba2525637432	MIT License
+OpenOLAT/OpenOLAT	LIVE	master	LICENSE	200	10982	6dbc5b605ed0	                               Apache License
+francoisjacquet/rosariosis	LIVE	mobile	LICENSE	200	15214	d954e14e5c75	                    GNU GENERAL PUBLIC LICENSE
+academico-sis/academico	LIVE	main	LICENSE	200	1094	6051a15f4d44	MIT License
+frappe/lms	LIVE	develop	-	NO_GRANT	-	-	-
+Crosstalk-Solutions/Project-NOMAD	LIVE	main	LICENSE	200	10779	e4f125622d3c	                                 Apache License
+vanderbilt-data-science/knowledge-spaces	LIVE	main	LICENSE	200	1090	ed2ed868dffc	MIT License
+freeCodeCamp/freeCodeCamp	LIVE	main	LICENSE.md	200	1513	e2a20708d0fd	BSD 3-Clause License
+microsoft/ai-agents-for-beginners	LIVE	main	LICENSE	200	1141	c2cfccb812fe	    MIT License
+bncc-dev/bncc-pacotes	LIVE	main	LICENSE	200	1299	86bf5f5e6306	# Licenças
+learning-commons-org/evaluators	LIVE	main	LICENSE.md	200	1615	86c7be78af8b	The Evaluator code is licensed under [MIT](https://opensource.org/lice
+DMontgomery40/mcp-canvas-lms	LIVE	main	-	NO_GRANT	-	-	-
+MarcosNahuel/moodle-mcp	LIVE	main	LICENSE	200	1065	f27341a8425b	MIT License
+Ebimsv/AITutorAgent	LIVE	main	LICENSE	200	1072	c8050f8df7c1	MIT License

@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p676) — 🟢 **TWELVE ADDRESSES GAINED, AND NOT ONE CAME FROM A SEARCH LEG — THE LARGEST SINGLE-PASS FOUNDATIONS GAIN THIS SHELF HAS HAD, ENTIRELY OUT OF THIS BASE'S OWN UNFILED BACKLOG. 🔴 ONE OF THEM IS THE MAINTAINED IMPLEMENTATION OF LTI 1.3 AND THE SEARCH INDEX CANNOT SEE IT.**
+
+**What this window found.** The four mandated global legs returned **no novel repository** (`21/21` facts held; the carried list is in [`agents/trending.md`](../agents/trending.md) `676-F`). Every one of the `12` addresses filed to `repos/foundations.md` this pass came from `evidence/address-ledger.tsv` with `filed_on = -`, re-read at the real default ref. 🔵 **`repos/foundations.md` `113` → `125`.**
+
+| Filed at p676 | Licence (payload, read this pass) | Stars | Real default ref | Tracked unfiled since |
+|---|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | 🟢 **BSD-3-Clause** `1,513 B` `e2a20708d0fd` | **458,619** | `main` | `p155` |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** `1,141 B` `c2cfccb812fe` | **79,016** | `main` | `p2` (**23 passes**) |
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 **Apache-2.0** `10,779 B` `e4f125622d3c` (COSMETIC) | **42,342** | `main` | `p2` |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **Apache-2.0** `11,343 B` `78b49eeaddbf` (COSMETIC) | **124** | `master` | novel this pass |
+| 🔴 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 **Apache-2.0** `11,343 B` `78b49eeaddbf` (COSMETIC) | 🔴 **unmeasurable — absent from the index** | `master` | `p23` (`20` mentions) |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **MIT** `1,115 B` `5715e50830cd` | **211** | 🔴 **`unstable`** | `p10` |
+| [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) | 🟡 **MIT — `package.json` only, NO licence file** | **52** | `develop` | `p10` |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** `1,080 B` `38e322d5ab06` 🔧 *ledger said `GPL-3.0｜Apache-2.0`* | **47** | `develop` | `p14` |
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** `11,379 B` `b89b380a589b` (COSMETIC) | **37** | `master` | `p80` |
+| [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | 🟢 **Apache-2.0** `11,357 B` `c71d239df917` — **canonical to the byte** | **12** | `main` | `p67` |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0** `11,357 B` `c71d239df917` — **canonical to the byte** | **65** | `main` | `p67` |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **MIT (code) + CC BY 4.0 (data)** — declared split, `1,299 B` `86bf5f5e6306` | **10** | `main` | `p93` |
+
+🔴 **The one that should change how this shelf is read.** `packbackbooks/lti-1-3-php-library` is the **maintained** PHP implementation for IMS-certified LTI 1.3 tool providers — `81` refs, tags through **`v6.4.4`**, composer `packbackbooks/lti-1p3-tool`. **`search/repositories` does not index it.** It indexes the standards body's copy instead (`1EdTech/lti-1-3-php-library`, `11` refs, composer `imsglobal/lti-1p3-tool`, last pushed **2024-08-20**, `124★`), and the two have **different `HEAD`s, different package names and different authors** — so this is not one address and its redirect, it is two live projects of which the index can see only the quieter one. 🔵 **Consequence for this shelf's whole method:** a supply census of the interoperability layer run on index counts — the way this base runs them and the way most published open-source market maps are built — **reports the dormant artefact as the live one.** Both rows are filed, side by side, because filing either alone misleads. See `agents/trending.md` `676-B`.
+
+🟢 **Two canonical-to-the-byte Apache payloads landed this pass** (`Ed-Fi-Alliance-OSS/Data-Management-Service` and `webtech-network/autograder`, both `11,357 B` / `c71d239df917`). They are the positive control that makes `beltromatti/get-it`'s **`+2`** legible as the defect it is rather than as rounding — `676-A`.
+
+🔴 **Eight of the 29 addresses probed this pass do not use `main` or have no licence file at `main`.** Real default refs met: `develop` (×4), `master` (×5), **`unstable`** (`learningequality/studio`), **`mobile`** (`francoisjacquet/rosariosis`). 🔵 A trending census that reads `main` would have reported *no licence* for eight repositories, and `unstable` and `mobile` are both new spellings for this base — bringing the observed set to `main`, `master`, `develop`, `dev`, `unstable`, `mobile`.
+
+🔴 **Read and NOT filed to this shelf, with the reason, so they are not re-bought:** `adlnet/SCORM-to-xAPI-Wrapper` (`99★`, Apache-2.0 in README prose only, **dormant since 2017-10-02** — nine years), `DMontgomery40/mcp-canvas-lms` (`104★`, MIT in `package.json`, dormant since 2026-05-31), `AI-for-Education/pedagogy-benchmark` (`13★`, MIT verbatim, real — but places no region and the shelf has adequate benchmark coverage), `bncc-dev/bncc-benchmark` (`12★`, sibling of a filed row), `frappe/lms` (🔴 **AGPL-3.0**, `676-D`), `francoisjacquet/rosariosis` (🔴 `GPL-2.0`, `652★` — filed to `verticals/solutions.md` as evidence for **T60**, not here as a foundation).
+
+
 ## 🆕 2026-11-06 (p675) — 🟢 **TWO ADDRESSES GAINED, AND BOTH ARE CORPORA RATHER THAN CODE — THE FIRST TIME THIS SHELF HAS FILED A DATASET AT ITS SOURCE**
 
 **What this window found.** The four mandated global legs and the two topic shelves returned **no novel code repository** (the full carried list is in [`agents/trending.md`](../agents/trending.md) `675-D`, written out so the next pass does not re-buy it). 🟢 **The two novel addresses came from walking a grant chain backwards instead of searching forwards** — from `learning-commons-org/evaluators`'s `LICENSE.md` to the corpora it annotates, read at the repositories of the author who holds the copyright. 🔴 **Three author repositories were read, and they do not say what this base recorded:** PERSUADE 1.0 and 2.0 both grant `CC BY 4.0`; CLEAR, by the same author in the same one-sentence form, grants `CC BY-NC-SA 4.0`.

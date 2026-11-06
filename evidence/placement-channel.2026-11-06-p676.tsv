@@ -1,0 +1,16 @@
+address	region_filed	channel	evidence_quoted_from	placed
+THU-MAIC/OpenMAIC	APAC	grant copyright line names the institution	LICENSE: "Copyright (c) 2026 THU-MAIC" (Tsinghua University Multi-Agent Interactive Classroom)	YES
+microsoft/Shiksha-Copilot	APAC	README names the originating lab and the field partner	README: "Microsoft Research India"; "Sikshana Foundation"	YES
+OpenOLAT/OpenOLAT	EMEA	grant payload names a public institution AND a corporate form (673-C)	LICENSE: "Zentrum at the University of Zurich"; "frentix GmbH"	YES
+vanderbilt-data-science/knowledge-spaces	North America	grant copyright line names the institution	LICENSE: "Copyright (c) 2025 Vanderbilt Data Science Institute"	YES
+learningequality/studio	North America	grant copyright line names the organisation	LICENSE: "Copyright (c) 2021 Foundation for Learning Equality"	YES
+opensalt/opensalt	North America	grant copyright line names the firm	LICENSE: "Copyright (c) 2016 Public Consulting Group"	YES
+tl-its-umich-edu/my-learning-analytics	North America	owner account is the institution's own unit; README names MyLA	owner tl-its-umich-edu = Teaching and Learning, ITS, University of Michigan	YES
+Ed-Fi-Alliance-OSS/Data-Management-Service	North America	owner is the US K-12 data-standard alliance	owner Ed-Fi-Alliance-OSS; Ed-Fi API Platform	YES
+bncc-dev/bncc-pacotes	LATAM	grant payload is written in Portuguese and governs the Brazilian national curriculum dataset	LICENSE: "# Licencas ... Este repositorio usa duas licencas"; dataset = BNCC	YES
+webtech-network/autograder	LATAM	README states the submission language of the graded work	README: "Brazilian Portuguese"	YES - weak class, stated in-cell
+AI-for-Education/pedagogy-benchmark	Global (unplaced)	REFUSED: owner-level deployment is not repository evidence	grant says only "Copyright (c) 2025 Fab Inc"; repo files name no country	NO
+opencast/opencast	Global (unplaced)	REFUSED: ECL-2.0 payload names no institution	LICENSE carries the Educational Community License text only	NO
+academico-sis/academico	Global (unplaced)	REFUSED: grant names an individual, not a place	LICENSE: "Copyright (c) 2020 Thomas Debay and project contributors"	NO
+learning-commons-org/evaluators	Global (unplaced)	REFUSED: the US corpora it evaluates are an audience, not a location (p670)	LICENSE.md names MIT + CC licences, no holder address	NO
+Crosstalk-Solutions/project-nomad	Global (unplaced)	REFUSED: Apache appendix left as placeholder; offline-first is a deployment profile	LICENSE: "Copyright [yyyy] [name of copyright owner]" filled with no holder	NO

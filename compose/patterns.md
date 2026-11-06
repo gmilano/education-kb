@@ -7,7 +7,7 @@ updated: 2026-11-06
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
-> **The licence rule that governs all `46` patterns below — 🔄 re-counted from the `## P` headings at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
+> **The licence rule that governs all `48` patterns below — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
 ## Base architecture
 
@@ -1428,4 +1428,89 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 - 🔴 **PERSUADE 2.0 is English, US, grades 6–12.** 🔵 It is **not** a Spanish or Portuguese writing corpus, and the construct does not transfer. A LATAM engagement starts from the client's own marked scripts aligned to `bncc-dev/bncc-dados` (MIT) — longer, and the more defensible deal.
 
 ⚠ **Scope it as assistive feedback to a teacher, never as a score of record.** EU AI Act Annex III makes evaluating learning outcomes high-risk; Vietnam's `Decision 33/2026/QD-TTg` triggers on results serving as *"the official basis"* for assessment; several US state policies bar AI from grading outright. 🟢 **Feedback-to-a-teacher sits outside all three triggers and is where the budget is anyway.**
+
+## P47 — The offline-first classroom stack: AI that works where the connection does not (LATAM public sector, APAC rural, Sub-Saharan Africa; 6–8 weeks to a deployable appliance) 🆕 new at p676
+
+**Why this pattern exists now and could not have been written at p675.** For six consecutive passes the APAC and LATAM legs of `intel/market.md` have reported the same thing: the binding constraint on classroom AI in those regions is **infrastructure and connectivity**, not model quality. This base had no answer — every pattern on this page assumed an API call leaves the building. `p676` filed the substrate: **`Crosstalk-Solutions/project-nomad`** (Apache-2.0, `42,342★`), an offline-first knowledge and education *server*, plus **`learningequality/studio`** (MIT), the authoring half of the Kolibri stack whose player this base has carried since `p10`.
+
+```
+   ┌──────────────── ONE APPLIANCE, NO UPLINK REQUIRED ────────────────┐
+   │                                                                   │
+   │  Crosstalk-Solutions/project-nomad   🟢 Apache-2.0  42,342★       │
+   │  offline Wikipedia · offline maps (ProtoMaps) · knowledge library │
+   │                              │                                    │
+   │         ┌────────────────────┼────────────────────┐               │
+   │         ▼                    ▼                    ▼               │
+   │  ollama (MIT)         learningequality/     academico-sis/        │
+   │  Qwen3-8B or          kolibri + studio      academico             │
+   │  Llama-3.1-8B         🟢 MIT  (`unstable`)  🟢 MIT  411★          │
+   │  on-device            curriculum channels   enrolment · grades    │
+   │  inference            aligned to the        attendance · billing  │
+   │         │             LOCAL curriculum      (multi-tenant SIS)    │
+   │         └────────────────────┬────────────────────┘               │
+   │                              ▼                                    │
+   │              kolibri-design-system  🟡 MIT (package.json)         │
+   │              low-bandwidth accessible UI, $50-tablet-grade        │
+   └───────────────────────────────────────────────────────────────────┘
+                                  │
+                   syncs opportunistically, when a link exists
+                                  ▼
+                   ralph (MIT, xAPI LRS) ──► openSTEF-style reporting
+                   the ministry's dashboard, fed in batches not streams
+```
+
+**Wiring, concretely.**
+1. **`project-nomad` is the host, not a component.** Install it on the appliance (a mini-PC or a Pi-class box with an SSD). It already ships the offline corpora, the web server and the service management; do not rebuild that layer.
+2. **`ollama` alongside it, same box**, serving one 7–8B instruct model. This is the only decision with a hardware consequence: budget 8–12 GB RAM for the model and keep the context short. The tutor is *not* going to be as good as a frontier model and the pattern does not need it to be — its job is explanation and question generation against material that is already on disk.
+3. **`learningequality/studio` off-box, during the build phase.** Curriculum alignment is editorial work done once, by the client's own teachers, against the local curriculum — Brazil's BNCC (`bncc-dev/bncc-pacotes`, MIT + CC BY 4.0, filed `p676`), a provincial standard, a ministry framework. The output is a published Kolibri channel, which is a file. 🔴 **Studio's default branch is `unstable`** — pin a commit, do not track the branch.
+4. **`academico-sis/academico` as the system of record on the same appliance.** This is what `T60` buys you: the SIS is **MIT**, so enrolment, attendance and grades live *inside* the tenant model, and the AI layer reads them directly instead of through an adapter in front of a GPL core. At ministry scale you would instead use `P43`'s interop spine in front of the incumbent SIS — that is the `T54` answer and it is the right one *there*.
+5. **`ralph` for the sync boundary.** Record xAPI statements locally; ship them when a link appears. The LRS is the only component that must tolerate hours of disconnection and then a burst, which is what it was built for.
+
+**What to tell the client, and what not to promise.** 🟢 This deploys and it keeps working through an outage, which is the thing every cloud pilot in these regions fails at. 🔴 **Do not promise frontier-model tutoring quality** — an 8B model on-device is good at explaining material in front of it and bad at open-ended reasoning, and a pilot sold on the former succeeds while one sold on the latter does not. 🔵 **The licence story is clean end to end**: Apache-2.0 host, MIT model runner, MIT SIS, MIT curriculum packages — **no copyleft anywhere in the stack**, which is unusual enough on this page to be worth putting in the proposal.
+
+**Estimate.** 6–8 weeks to a deployable, reproducible appliance image: 1–2 weeks appliance + model sizing and burn-in, 2–3 weeks curriculum channel authoring with the client's teachers (the long pole, and it is *their* time more than yours), 1–2 weeks SIS tenancy and data migration, 1 week sync and reporting. Then per-site imaging is hours, not weeks.
+
+
+## P48 — Turn the lecture archive you already have into the thing people asked for: searchable, cited, answerable video (EMEA and North America higher education; 5–7 weeks) 🆕 new at p676
+
+**Why this pattern exists now.** Universities recorded everything from 2020 onward and can find none of it. `p676` filed **`opencast/opencast`** (ECL-2.0, `509★`) — the open platform that already owns lecture capture, encoding, publishing and distribution at institutional scale, with Moodle, Open edX, Canvas and Brightspace integrations in place. The AI work is not building a video platform; it is attaching to the one the client is already running.
+
+```
+  Opencast (🟢 ECL-2.0, branch `develop`)
+  capture ──► encode ──► publish ──► distribute
+     │            │           │
+     │            │           └──► existing LMS integration, UNCHANGED
+     │            │
+     │            └──► media + the schedule/series METADATA
+     │                 (course, term, lecturer, date — already correct,
+     │                  because Opencast scheduled the recording)
+     ▼
+  whisper.cpp or faster-whisper  🟢 MIT / Apache-2.0
+  transcript + word-level timestamps
+     │
+     ▼
+  segment on the transcript, not on fixed windows
+  (topic shift ≈ slide change; keep the timestamp range)
+     │
+     ▼
+  qdrant  🟢 Apache-2.0        ◄── embed segment + its Opencast metadata
+     │
+     ▼
+  answer layer: retrieve segments ──► cite "Lecture 7, 24:13"
+     │                                 and DEEP-LINK into Opencast's player
+     ▼
+  ralph  🟢 MIT (xAPI LRS) ──► which questions, which lectures, which gaps
+                               ──► back to the lecturer as a weekly report
+```
+
+**Wiring, concretely.**
+1. **Read Opencast's metadata, do not re-derive it.** The series and episode records already carry course, term, lecturer and date, because Opencast scheduled the capture. Every "AI video search" project that starts from a folder of `.mp4` files spends its first three weeks reconstructing metadata that exists. 🔴 **Checkout `develop`** — Opencast's default branch is not `main`, and a build script that assumes otherwise fails silently.
+2. **Transcribe with word-level timestamps.** The timestamp is the whole product: an answer that cannot deep-link back into the player is a worse version of the LMS search the client already dislikes.
+3. **Segment on topic shift, not on a fixed window.** A 50-minute lecture is 6–12 topics; fixed 30-second chunks split definitions in half and retrieve badly.
+4. **Cite, always, with a deep link.** This is the single feature that decides whether lecturers endorse or resist the tool: a cited answer is reviewable, so a wrong one is a bug report rather than an argument about AI.
+5. **Close the loop with xAPI.** Questions asked against Lecture 7 are the most direct signal a lecturer has ever had about which fifteen minutes of their teaching did not land. Deliver it as a weekly report to the lecturer and **not** to their head of department — `intel/market.md`'s EMEA leg has flagged for several passes that evaluation-adjacent framing is what stalls these deployments, and under the EU AI Act anything touching **student evaluation** is Annex III high-risk (duties from **2027-12-02**). 🟢 **A tool that reports to the lecturer about their own lecture is not evaluating a student**, and keeping it that way is a design constraint, not a disclaimer.
+
+**Licence note.** 🟢 **ECL-2.0 is Apache-2.0 with the patent grant narrowed to the contributor's own contributions** — permissive, OSI-approved, and the licence the education sector wrote for itself. Globant may build and ship a commercial derivative. The rest of the stack is MIT/Apache-2.0. **No copyleft in this pattern either**, which is why Opencast rather than a Moodle plugin is the attachment point.
+
+**Estimate.** 5–7 weeks: 1 week Opencast integration and metadata extraction, 1–2 weeks transcription at archive scale (GPU-bound; this is the cost line — price it against the hours of video, not the number of courses), 1–2 weeks segmentation and retrieval tuning, 1 week the answer-and-citation UI, 1 week the lecturer report. 🔵 **Pilot on one department's single term first** — archive-wide transcription before anyone has validated the retrieval quality is the most common way this pattern burns its budget.
 

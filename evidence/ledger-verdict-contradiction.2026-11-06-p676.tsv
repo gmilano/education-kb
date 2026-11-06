@@ -1,0 +1,6 @@
+address	ledger_verdict	ledger_first_seen	ledger_passes	payload_bytes	payload_sha256_12	operative_body_verdict	truth	direction_of_error
+leemonade/leemons	MIT	p12	7	10830	13220df1b64b	SUBSTANTIVE	Fair Code License (built on the Sustainable Use License); Leemons Edtech Solutions SL, Madrid	UNSAFE - restrictive recorded as permissive
+beltromatti/get-it	Apache-2.0	p123	9	11359	d0622ead9e49	SUBSTANTIVE	modified Apache-2.0: s.6 trademark clause edited, appendix filled	UNSAFE - modified grant recorded as the stock licence
+opensalt/opensalt	GPL-3.0|Apache-2.0	p14	6	1080	38e322d5ab06	COSMETIC(MIT)	MIT verbatim, (c) 2016 Public Consulting Group	SAFE - permissive supply hidden behind a copyleft label
+academico-sis/academico	MIT	p90	19	1094	6051a15f4d44	COSMETIC(MIT)	MIT verbatim, (c) 2020 Thomas Debay	CORRECT
+francoisjacquet/rosariosis	GPL-2.0	p2	27	15214	d954e14e5c75	SUBSTANTIVE	GNU GPL (1991 FSF text, not verbatim against canon)	CORRECT in family, not verbatim

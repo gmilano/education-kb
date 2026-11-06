@@ -883,3 +883,46 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 
 🟢 **That is the useful outcome and it closes an exposure rather than opening one:** the alias is live on the channel this base reads payloads with, it had an ungraded arm, and that arm is clean. 🔵 **`P675-B`: a ref is established by `ls-remote`, never by a `raw` `200` — which is `ACTION p419-B`'s instruction, now also applied to the `Ref` column and not only to published paths.**
 
+## T59 — The ledger addresses a payload; it does not grade one — and this base's own backlog column is wrong in the unsafe direction 🆕 new at p676
+
+**What was measured.** `p665` established, and `p673` confirmed across `16` of `16` filed addresses, that this base's yielding supply channel is its **own backlog**: `evidence/address-ledger.tsv` carries **`3,032`** addresses with `filed_on = -`, of which **`1,497`** have a recorded verdict in the permissive family. The ledger also carries a `last_verdict` column. Promoting from the backlog *on that column* is the obvious economy — the licence is already measured, and working a backlog off its own index is what a backlog is for.
+
+🔴 **`p676` re-read the grant payload for the `5` best-tracked backlog candidates against their ledger verdict. Two contradicted it. Both contradictions point the wrong way.**
+
+| Address | Ledger verdict | Payload, re-read at the real default ref | `p555` grader | Direction |
+|---|---|---|---|---|
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | **`MIT`** since `p12`, `7` passes | **Fair Code License** on the **Sustainable Use License** — not OSI; Leemons Edtech Solutions SL, Madrid | **SUBSTANTIVE** | 🔴 **UNSAFE** |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | **`Apache-2.0`** since `p123`, `9` passes | **modified Apache-2.0** — §6 trademark clause rewritten | **SUBSTANTIVE** | 🔴 **UNSAFE** |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `GPL-3.0｜Apache-2.0` since `p14` | **MIT**, verbatim, © *2016 Public Consulting Group* | **COSMETIC** | 🟢 safe — hid supply `6` passes |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | `MIT` since `p90`, `19` passes | **MIT**, verbatim | **COSMETIC** | 🟢 correct |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `GPL-2.0` since `p2`, `27` passes | GNU GPL, `15,214 B`, not verbatim against canon | **SUBSTANTIVE** | 🟢 correct in family |
+
+**Why this is a trend and not a bookkeeping note.** `T55` established at `p673` that *the licence label from an index is wrong in both directions*. `T59` is the same defect **one level in** — the index that is wrong is now **this base's own**, and it is the index the base had just finished identifying as its most productive channel. `p673-B` found `NOASSERTION` concealing permissive supply (failing **safe**, costing opportunity). `T59` finds the ledger concealing **restricted** supply (failing **unsafe**, costing a client). The two are not symmetric: one loses a row, the other ships an AGPL-or-worse dependency into a commercial derivative.
+
+🔧 **The operative rule, and it is cheap:** *re-read the grant payload at the real default ref, every time, for every promotion.* It cost `29` `git ls-remote` calls and `29` `raw.githubusercontent.com` reads for this pass's whole candidate set — roughly one minute of wall-clock — and it is the only step that caught either error.
+
+🔵 **What a reader should take from this about the KB itself.** Every licence cell on the four curated shelves now carries a byte count and a `sha256₁₂`. Those are not decoration and they are not provenance theatre: they are the record that *someone opened the file*. A row without them is a row that inherited its verdict, and after `T59` an inherited verdict is a claim, not a measurement.
+
+
+## T60 — `T50` survives as a *scale* statement and dies as a *tier* statement: the permissive student-information layer exists, at the size where most private education actually operates 🆕 new at p676
+
+**`T50`, held for 28 passes, in its published form:** *the student-information layer is where open source education software stops being permissive and stops being adopted at the same time.* The evidence was consistent and it is still true at the top of the market.
+
+🟢 **`p676` re-measured the tier rather than re-asserting it, and found the exception:**
+
+| System of record | Licence | Stars | Scale it is built for |
+|---|---|---|---|
+| Open edX (`openedx/openedx-platform`) | 🔴 `AGPL-3.0` | — | national platforms, large universities |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `GPL-2.0` (`15,214 B`, re-read at `p676`; default branch 🔴 **`mobile`**) | **652** | districts, public K-12 |
+| `i-educar` | 🔴 `GPL-2.0` | — | Brazilian municipal networks |
+| `FenixEdu/fenixedu-academic` | 🟠 `LGPL-3.0` | — | universities |
+| `AlekSIS` | 🔴 `AGPL-3.0` | — | German public schools |
+| `foradian/fedena` | 🟡 refused at `p673` — three independent liveness signals failed | — | — |
+| 🟢 [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **`MIT`** (`1,094 B`, `6051a15f4d44`, verbatim) | **411** | 🟢 **small and medium institutions, multi-tenant** |
+
+**The narrowed claim, which is the useful one.** The copyleft wall in the system-of-record tier is real **where the buyer is a ministry, a district or a university** — institutions whose procurement produced those licences on purpose. It is **not** present at the tier below, where the buyer is a private school, a language school, a training centre or a franchise network, and where Academico is MIT, maintained and multi-tenant by design (`storage/tenants/<id>`).
+
+🔵 **Why that distinction is commercially load-bearing for a studio.** `p673` established the `T54` pattern — *nobody has to relicense the system of record; the work is a permissive adapter in front of it* — which is the right answer for a ministry engagement and an expensive one for a 40-school private network. For the latter, `T60` says the system of record **itself** can be permissive, so the AI layer is built *inside* the tenant model rather than bolted onto an API in front of a GPL core. That is a materially shorter engagement and it is the segment with the shortest procurement cycle.
+
+⚠️ **Bounded, and the bound is stated.** `411★` is one address. `T60` claims the tier is *not uniformly copyleft*; it does not claim a permissive SIS exists at every scale, and this base has found exactly one. The next pass should test the tier at the **training-centre / corporate-academy** scale, which neither `T50` nor `T60` has measured.
+

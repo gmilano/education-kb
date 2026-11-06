@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p676) — 🔴 **A `+2` BYTE RESIDUAL AND A GREEN `spdx_id` BOTH PASSED A GRANT WHOSE OPERATIVE BODY IS NOT THE LICENCE IT CLAIMS — AND THE INSTRUMENT THAT CATCHES IT HAS BEEN IN THIS REPOSITORY SINCE `p555` AND WAS NEVER RUN ON THE ADDRESS. 🔴 THIS BASE'S OWN LEDGER IS WRONG ABOUT TWO LICENCES, BOTH IN THE UNSAFE DIRECTION. 🟢 `42,759★` OF PERMISSIVE EDUCATION AGENT WAS SITTING IN THE BACKLOG. 🔴 THE EIGHT LEGS NIL A 26TH TIME — `21/21` HELD.**
+
+**Verification channels, re-tested before use at p676.** `git ls-remote --symref` 🟢 **live** (and the only working existence oracle this session has); `raw.githubusercontent.com` 🟢 **live**; `gh api search/repositories` 🟢 **live**, OR-batched per `671-G`; `gh api repos/{owner}/{repo}` 🔴 **403** channel-wide, as at `p673`; **`curl -sI https://github.com/...` 🔴 REFUTED AS AN ORACLE — see `676-E`.**
+
+### `676-A` — 🔴 the sharpest finding: a `+2` residual concealed an edit to the **operative terms** of the licence
+
+🔵 **The family so far.** `671-R`: byte-count *equality* is not identity (two edits cancelling in length, caught by hash). `673-A`: hash *inequality* is not mutation (two compensating whitespace edits, honest grant condemned by hash alone). Both were about **formatting**.
+
+🔴 **`676-A` is the first case where the diff found a change to the TERMS.** [`beltromatti/get-it`](https://github.com/beltromatti/get-it) (`1,152★`, built at **GDG AI Hack Milan 2026**) ships `LICENSE` at `11,359 B` — a **`+2` residual** against canonical Apache-2.0's `11,357 B`. A `+2` reads as rounding. Normalised against the canonical text from `apache.org`, the diff is:
+
+| Line | Canonical Apache-2.0 §6 | `get-it` |
+|---|---|---|
+| 141–142 | *“except as required for **reasonable and customary use in** describing the origin of the Work and reproducing the content of the NOTICE file.”* | *“except as required for describing the origin of the Work and reproducing the content of the NOTICE file.”* |
+| 190 | `Copyright [yyyy] [name of copyright owner]` | `Copyright 2026 Mattia Beltrami, Matteo Impieri, Filippo Difronzo, Luca Feggi` |
+
+The appendix being filled in **adds** bytes; the trademark-clause edit **removes** them. They nearly cancel. 🔴 **`gh api` reports `license.spdx_id = "Apache-2.0"`.** Three signals — the platform field, the byte residual, and the title line — all pass a grant whose §6 has been rewritten.
+
+🔧 **And the base already owned the answer.** `ingest/operative-body.py` (`p555`) asks exactly one question: *does this payload contain a known licence's operative body, verbatim?* Its selftest is **GREEN, 9/9, controlled at both signs** (5 canonical families → `COSMETIC`; empty, family-named-not-carried, 19-byte stub, BUSL-preamble-only → `SUBSTANTIVE`). Run on this pass's candidates:
+
+| Address | Residual | `p555` verdict | Reading |
+|---|---|---|---|
+| `beltromatti/get-it` | **+2** | 🔴 **SUBSTANTIVE** | 🔴 **not Apache-2.0** |
+| `webtech-network/autograder` | 0 | 🟢 COSMETIC | canonical |
+| `Ed-Fi-Alliance-OSS/Data-Management-Service` | 0 | 🟢 COSMETIC | canonical |
+| `1EdTech/lti-1-3-php-library` | −14 | 🟢 COSMETIC | appendix filled |
+| `tl-its-umich-edu/my-learning-analytics` | +22 | 🟢 COSMETIC | verbatim body |
+| `OpenOLAT/OpenOLAT` | **−375** | 🟢 COSMETIC | verbatim body + provenance statements |
+| `Crosstalk-Solutions/project-nomad` | −578 | 🟢 COSMETIC | appendix replaced |
+
+🔵 **The residual carries no information about the operative body in either direction.** `−578` and `−375` are clean; `+2` is not. 🔵 **The transferable rule: an instrument that exists and is not run is indistinguishable from an instrument that was never built.** `p555` built this `121` passes ago and the shelves kept publishing byte counts.
+
+### `676-B` — 🔴 `671-J`'s rename rule has a third cause, and acting on the rule would have rewritten a correct address
+
+🔵 **`671-J` published:** *owner `422` → owner unknown; owner `≥1` while the repo is absent → **RENAMED OR MOVED AWAY**.* 🔴 **`packbackbooks/lti-1-3-php-library` has exactly that signature and was neither.** `search/repositories` indexes `10` repositories under `packbackbooks` and not this one; `git ls-remote` answers; the grant reads cleanly.
+
+**The discriminator that settles it is HEAD equality, not the index**, and it says *two projects*:
+
+| | `packbackbooks/lti-1-3-php-library` | `1EdTech/lti-1-3-php-library` |
+|---|---|---|
+| `HEAD` | `5d729519752ec0f306c9d4fdf77316cc40b55ee9` | `3a192de99f3783d76caea462b0d04db28569c123` |
+| refs | **81** | 11 |
+| latest tag | **`v6.4.4`** | — |
+| composer `name` | `packbackbooks/lti-1p3-tool` | `imsglobal/lti-1p3-tool` |
+| author | Davo Hynds | Martin Lenord |
+| last push | live | **2024-08-20** |
+| indexed | 🔴 **NO** | 🟢 124★ |
+
+🔴 **So the third cause is: live, maintained, at its own address, and simply ABSENT FROM THE INDEX.** `671-K` and `671-L` were real renames found by *identical* `HEAD`; the rule generalised from two true positives and had no case of this shape to learn from — `668-A`'s failure mode, one level up. 🔵 **Corrected rule: owner-indexed + repo-absent is a signal to go looking, and only `HEAD` equality against a named candidate establishes a rename.**
+
+🟢 **A clean firing of the corrected rule, same pass.** `theopenem/OneRoster.NET` (ledger since `p10`) and `jdolny/OneRoster.NET` (`p673`'s filed row) share `HEAD 4f96365d3108364aea5407eedd274d5f213faf3f` — one repository. Direction is fixed by the payload: the grant at the **live** address reads *“Copyright (c) 2020 **theopenem**”*. The old owner survives in the copyright line of the new address. `theopenem` is a dead alias; `p673` filed the right one.
+
+### `676-C` — 🔴 hash *equality* does not identify a project either
+
+[`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) and [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) ship **byte-identical** grants: `1,141 B`, `sha256₁₂ c2cfccb812fe`, `cmp` clean. Two unrelated projects — a government-classroom teacher copilot and an 18-lesson agent course. 🔴 **A dedup or provenance instrument keyed on grant `sha256` collapses them into one address.** With `671-R` and `673-A` this closes the family at three signs: **length equality, hash inequality and hash equality are each independently uninformative about project identity.** Only the normalised diff of the operative body grades a grant, and nothing about the grant identifies the project.
+
+🔧 **A grader defect found in passing.** `ingest/p649-payload-grader.py` detects the copyright line with `l[:9].lower()=="copyright"`. Microsoft's template indents it by four spaces, so both payloads grade **`MIT-NO-CPR`** — which reads as *MIT with no copyright holder*, a licence defect — when the truth is *MIT, correctly attributed, indented*. A false alarm about a licence, caused by whitespace: `673-A`'s class, relocated from the hash to the grader.
+
+### `676-D` — 🔴 a repository with no licence file is not an unlicensed repository, and the four causes are not equally safe
+
+`4` candidates returned `NO_GRANT` at the real default ref. All four declare a grant somewhere:
+
+| Address | Where the grant actually is | Verdict |
+|---|---|---|
+| `learningequality/kolibri-design-system` | `package.json` → `"license": "MIT"` | 🟢 permissive, filed 🟡 |
+| `DMontgomery40/mcp-canvas-lms` | `package.json` → `"license": "MIT"` | 🟢 permissive |
+| `adlnet/SCORM-to-xAPI-Wrapper` | `README.md` prose → Apache-2.0 | 🟡 prose only; **dormant since 2017-10-02** |
+| 🔴 **`frappe/lms`** | `package.json` → **`"license": "AGPL-3.0-or-later"`** | 🔴 **copyleft — and a 2026 comparison on this pass's own platform leg calls it “the clearest MIT option”** |
+
+🔴 **The fourth is the expensive one.** `3,382★`, no licence file to read, and the secondary literature says MIT. 🔵 **Rule: where there is no licence file, the manifest is the grant, and it outranks every secondary source.**
+
+### `676-E` — 🔴 I built a rename oracle on the HTTP channel, controlled it, and it failed its own negative control
+
+`curl -sI https://github.com/<slug>` would detect a rename as `301` + `Location`. 🔴 **It returns `200` for an invented slug** (`gmilano/zzqx-nonexistent-676`) and `200` for `p671`'s known rename, indistinguishably from `moodle/moodle`. **Cause:** this session's agent proxy answers any unattached repository with **HTTP 200 carrying a JSON refusal body** (*“GitHub access to this repository is not enabled for this session”*). 🟢 **The control caught it and the instrument was not published as a reading** (`ingest/p676-rename-oracle.sh` is kept with its refutation recorded, per `672-A`/`673-D`: mint every control fresh and run it at both signs). 🔵 **This also contradicts a standing instruction in the ingest prompt** — *“verify every URL before writing it (`curl -sI`)”*. In this environment `curl -sI` cannot verify a URL at all. `git ls-remote` and `search/repositories` are the only existence oracles that work here, and both were controlled this pass.
+
+### `676-F` — 🔴 the eight mandated legs nil a 26th consecutive time
+
+`21` facts scored against the live tree across the four global and four regional legs, **`21` held, `0` novel**; two freshly-minted nonsense controls score `0`. Full table: `evidence/eight-leg-scoring.2026-11-06-p676.tsv`. 🔵 **This is now a measured property of the domain rather than a per-pass result:** external search is not a supply channel for education open source, and has not been for `26` passes.
+
+### What was filed at p676 — and what was refused
+
+**`21` rows across four shelves, every one promoted from this base's own backlog.** `agents/top.md` `54` → **`58`**; `repos/foundations.md` `113` → **`125`**; `verticals/solutions.md` `53` → **`58`**; `compose/patterns.md` `46` → **`48`** (**P47** offline-first classroom stack, **P48** lecture-archive retrieval); `intel/trends.md` gains **T59** and **T60**. Every figure re-derived **by counting**, and `ingest/derive-counts.py` independently confirms `P-1..P-48`.
+
+🟢 **The headline row:** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC), MIT, **`42,759★`**, Tsinghua's Open Multi-Agent Interactive Classroom — **54× the stars of the largest permissive education agent this shelf previously carried**, pushed today, and in the backlog unfiled. 🟢 **The row that changes the licence arithmetic:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), **Apache-2.0**, `449★` — a full institutional LMS that is *not* copyleft, after 28 passes of this base telling readers the LMS tier forces that choice. 🟢 **The row that narrows a standing trend:** [`academico-sis/academico`](https://github.com/academico-sis/academico), MIT, `411★` — the first permissive system of record this base has found (**T60**).
+
+🔴 **Refused, with evidence, so the next pass does not re-buy them:** `beltromatti/get-it` (`676-A`), `leemonade/leemons` (Sustainable Use License, **not OSI**, ledger said MIT), `frappe/lms` (AGPL-3.0, `676-D`), `Ebimsv/AITutorAgent` (dormant 17 months), `MarcosNahuel/moodle-mcp` (`1★`, fourth Moodle MCP in the ledger). 🔴 **Four placements refused**: `AI-for-Education/pedagogy-benchmark`, `opencast/opencast`, `academico-sis/academico`, `learning-commons-org/evaluators` and `Crosstalk-Solutions/project-nomad` — owner-level deployment, community reputation and an individual's name are not repository evidence.
+
+🔴 **Declared gaps, written down because silence looks exactly like coverage.** No **APAC adoption denominator** — **seventh** consecutive declaration. No **primary Middle East** source — **fifth**. **Africa** returned a named channel on the EMEA leg for the first time in four passes (Fab Inc / Sierra Leone / EdTech Hub) and **still places no address**. No **Canadian** figure of any kind — second pass. **16 of the 19** countries in the UNESCO IESALC study have no separate figure on this base. And this base still has **no instrument that checks a published correction against the other seven pages** (`671-M`, undischarged for `5` passes; `p676` did not build one either).
+
+🔴 **Integrity.** `29` candidate addresses probed on the git channel with `--symref` for the **real** default ref — which was `develop`, `master`, `unstable` or `mobile` for `8` of them, so a tool reading `main` would have reported *no licence* for eight repositories. `27` payloads byte-read and retained under `evidence/p676-payloads/`. Grant grader controlled at both signs; `p555` operative-body selftest **GREEN 9/9**; `ingest/p672-header-row-gate.py` run over all eight curated pages with **controls clean at both signs and `0` real defects** — no header or example row left as data. `6` evidence TSVs. Trending shelves strictly **append-only**. Six findings registered (`676-A` … `676-F`).
+
+
 ## 🆕 2026-11-06 (p675) — 🔴 **`P1007` NAMED THE RIGHT CHANNEL AND RECORDED THE OPPOSITE OF WHAT THAT CHANNEL SAYS. BOTH PERSUADE REPOSITORIES GRANT `CC BY 4.0`; THE `NC-SA` TEXT BELONGS TO THE AUTHOR'S *OTHER* CORPUS. THE SECTOR'S ONE SHIPPABLE WRITING CORPUS HAS BEEN SITTING BEHIND A CLAUSE THAT WAS NEVER THERE.**
 
 **Verification channels, re-tested before use at p675.** `git ls-remote --symref` / `--heads` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live**; `github.com` rendered pages 🟢 **live**; `api.github.com` 🔴 **blocked by session repository scope** (`"GitHub access to this repository is not enabled for this session"` on all four probes); `curl` direct to `github.com` 🔴 **`403` at the agent proxy** — rendered reads must go through the fetch tool, not `curl`; `zenodo.org` and `www.commonlit.org` 🔴 **DNS `ENOTFOUND`** — outside this session's network policy, so the two corpus *publisher* pages could not be read and the grant chain below is grounded on the **authors' own repositories** instead.
