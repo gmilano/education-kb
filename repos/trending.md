@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p681) — 🔴 **A `123,056★` MIT REPOSITORY WAS IN THIS BASE'S OWN LEDGER SINCE `p367` CARRYING `licence = unstated`, AND THE PASS THAT DIAGNOSED "A DECLARED FILING IS NOT A FILED ROW" FAILED TO FILE IT. 🟢 THE OER CORPUS IS REACHABLE UNDER MIT EVEN THOUGH ITS PLATFORM IS COPYLEFT. 🔴 `T71`'s CLASSROOM REGIME DOES NOT BELONG TO CURRICULA — 12 POINTS, FIVE REFUTATIONS. 🔴 A NEW GRANT-DEFECT CLASS: TERMS NAMED CORRECTLY, BYTES NOT SHIPPED.**
+
+**Four rows filed on `repos/foundations.md` (`139` → `143`), re-derived by counting the table.**
+
+| repo | licence, byte-read at the resolved default ref | stars | forks | why it is here |
+|---|---|--:|--:|---|
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | 🟢 **MIT** `1,141 B` sha256₁₂ `c2cfccb812fe` `residual 0` | **123,056** | **66,003** | 🔴 **the filing failure, documented in this base's own words — `681-F`** |
+| [`johnnyrobot/pressbooks-cli`](https://github.com/johnnyrobot/pressbooks-cli) | 🟢 **MIT** `1,073 B` sha256₁₂ `48c3921fa1fc` `residual 0` | 0 | 0 | 🟢 **MIT client over a GPL-3.0 platform's public API — 28 networks, `9,601` books, no API key** |
+| [`8enSmith/mcp-open-library`](https://github.com/8enSmith/mcp-open-library) | 🟢 **MIT** `LICENSE.md` `1,065 B` sha256₁₂ `44e077ec4d7e` `residual 0` | 100 | 26 | 🟡 **book catalogue, not OER — filed as the reference implementation against a measured nil** |
+| [`tabiya-tech/tabiya-esco-datasets-and-tools`](https://github.com/tabiya-tech/tabiya-esco-datasets-and-tools) | 🟢 **MIT** for code `1,101 B` sha256₁₂ `7b090f3447a7` — 🔴 **ESCO data stays under European Commission terms** | 8 | 3 | 🟢 **the EMEA skills taxonomy a career-pathway agent has to speak** — 🔴 dormant since `2024-08-29` |
+
+### 🔴 `681-F` — the defect, stated once more because it is about this repository rather than about the world
+
+`microsoft/generative-ai-for-beginners`: **MIT, `123,056★`, `66,003` forks, pushed `2026-11-05`**, grant readable in one `curl` at a stable URL. 🔴 [`evidence/address-ledger.tsv`](../evidence/address-ledger.tsv) has carried it since **`p367`** with `licence = unstated`, and `665-A` — an entry headed **"A DECLARED FILING IS NOT A FILED ROW"** — named it among five addresses it was repairing and declared **"FILED FOR REAL THIS PASS"**. Grepped at p681 it appears on **no shelf**: its single occurrence in `repos/foundations.md` was inside the prose of the `TorchLeet` row, which names it as a peer. 🔵 **Two lessons, and the second is the transferable one.** (1) A pass can diagnose a defect and commit it in the same cell, because recording is one act and filing is another against a different file. (2) **`unstated` in that ledger means *not read*, not *not stated*** — and for `314` passes nobody tested which. A ledger field that cannot distinguish "the project declares nothing" from "we never looked" will accumulate the second kind silently.
+
+### 🟢 `681-G2` — the OER finding, which is a licence *shape* rather than a repository
+
+| layer | project | licence | consequence |
+|---|---|---|---|
+| publishing platform | [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔴 **GPL-3.0** (default ref `dev`; `main` and `master` both `404`) | a client-branded fork carries source disclosure |
+| authoring/publishing toolchain | [`PreTeXtBook/pretext`](https://github.com/PreTeXtBook/pretext) | 🔴 **GPL-2-or-3**, `NOASSERTION`, and **the GPL text is absent from the repository** | derivative is copyleft; running it as a tool is not |
+| **corpus access** | [`johnnyrobot/pressbooks-cli`](https://github.com/johnnyrobot/pressbooks-cli) | 🟢 **MIT** | 🟢 **a client, not a derivative — holds no platform code, speaks only the public REST API** |
+| corpus itself | 28 Pressbooks networks, `9,601` books | openly licensed per book | reachable with no account, key or token |
+
+🔵 **The generalisable shape: when a copyleft platform fronts a public API over an open corpus, the permissive opportunity is the client.** You do not need relief from the platform's licence if you never link against the platform. **That is the move, and it is reusable past OER** — the same argument applies to every GPL/AGPL education platform on `verticals/solutions.md` that exposes a REST API.
+
+### 🔴 `681-H2` — the nil beside it, so the shortlist is not re-bought
+
+**No MCP server or agent bridge exists for LibreTexts, OpenStax, the Open Textbook Library, or OER Commons.** All four probed; all four nil. `pressbooks-cli` is the only permissive access layer over any major OER corpus, and it is a CLI with agent-shaped JSON output rather than an MCP server. 🔵 **A gap with a permissive floor already poured** — the hard part (the undocumented, rate-capped, `User-Agent`-filtering shape of a real Pressbooks network) is solved under MIT and documented in that project's README. See `compose/patterns.md` **P56**.
+
+### 🔴 `681-G` — `T71` re-tested on 12 points: the platform/library boundary holds, the *Classroom* regime does not
+
+Full table in [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv) and in `repos/foundations.md` `681-G`. In one line: **five permissive curricula span `f/★` `0.104`–`0.536` and not one approaches `T71`'s `~10`**, with the largest of them (`generative-ai-for-beginners`, `0.536`) landing in the *Deployment* band beside `moodle/moodle` (`1.015`) and `openedx/openedx-platform` (`0.533`). 🟢 `T65`'s `0.5` platform/library boundary held without exception. 🔵 **What `jsboige/CoursIA`'s `9.563` marks is a curriculum with no hosted reading surface** — notebooks must be copied to be used, websites do not. **The regime is a property of the delivery format, not the pedagogy**, which narrows where `T71`'s "read the fork count before dropping it" rule should fire: notebook and template repositories, not curricula generally.
+
+### 🆕 `681-I` — an eighth grant-defect class: the terms are named correctly and the bytes are not shipped
+
+[`PreTeXtBook/pretext`](https://github.com/PreTeXtBook/pretext), `466★`, pushed `2026-11-06`, default ref **`master`**: `COPYING` is **`662 B`**, sha256₁₂ `47d23be4796f`, and it is a **notice** — *"PreTeXt is free software … under the terms of the GNU General Public License … either version 2 or version 3 of the License (at your option)"*, closing with *"You should have received a copy of the GNU General Public License along with PreTeXt. If not, see <http://www.gnu.org/licenses/>."* 🔴 **You did not. `LICENSE`, `LICENSE.md`, `COPYING.md`, `COPYING.txt` and `LICENCE` all return `404` at `master`.** GPL-2 §1 and GPL-3 §4 both condition redistribution on handing recipients a copy of the licence, so a downstream redistributor cannot satisfy the condition from this tree — and must also pick which of the two versions to ship. 🔵 **Distinct from the seven classes already recorded**, which are all defects in what the grant *says*; this is a defect in what it *ships*, by a licensor whose intent is perfectly clear. It is also why the repository reads `NOASSERTION`: there is no licence body for a detector to match.
+
+### 🔴 `681-J2` — and a ninth, on the highest-starred result of the skills head: the grant governs a different program
+
+[`workforce-data-initiative/skills-api`](https://github.com/workforce-data-initiative/skills-api), `214★`, dormant since `2018-07-24`. `LICENSE.txt` is `1,975 B`, sha256₁₂ `b2d1db626769`, University of Chicago, and its **first line** is *"BY DOWNLOADING **aequitas** PROGRAM YOU AGREE TO THE FOLLOWING TERMS OF USE"* — `aequitas` being a different University of Chicago project. The terms are also **non-commercial**, excluding *"any service or part of selling a service that uses the Program"*. 🔴 **Either defect disqualifies it; together they mean there is no permission for this code at all.** Full entry in `intel/measured-unusable.md` `681-J`.
+
+
 ## 🆕 2026-11-06 (p680) — 🔴 **THE TOPIC CHANNEL IS SATURATED AND NOW HAS A NUMBER: `80` CANDIDATES, `51` ALREADY SHELVED, `21` GENUINELY NEW AND `0` OF THE `21` USABLE. 🟢 SIX TOPICS THIS BASE HAD NEVER QUERIED — THREE OF THEM ARE EMPTY HEADS. 🟢 THREE FOUNDATION ROWS FILED, TWO OF THEM OFF THIS REPOSITORY'S OWN `p154` EVIDENCE. 🔴 A `f/★` OF `9.563` BREAKS THIS BASE'S OWN ADOPTION INSTRUMENT.**
 
 🟢 **Three rows to `repos/foundations.md` (`136` → `139`, re-derived by counting; the heading was wrong by one).**

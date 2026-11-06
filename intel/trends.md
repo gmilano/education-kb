@@ -1059,3 +1059,39 @@ p680 swept nine GitHub topic heads, six of which this base had never queried, an
 This matters because the two readings recommend opposite actions. *"The channel returned 21 new addresses"* argues for sweeping more topics. *"The channel returned one usable address"* argues for spending the next pass somewhere else — and the second reading is the correct one, because `63.8%` of everything the channel returned is already on these shelves.
 
 🔵 **Three topic heads are simply empty**, and that is a vocabulary finding rather than a supply finding: `topic:early-childhood-education` → `0` repositories, `topic:teacher-tools` → `0`, `topic:competency-based-education` → `1` (already held). These are terms **educators** use and **repository owners do not tag with** — the same mismatch `T23` found from the other direction when the permissive-platform claim collapsed on vocabulary rather than availability. A `0` on a topic head is evidence about the tagging, not about the world.
+
+## T73 — GitHub's licence field has no direction, and the licensor it punishes is the careful one 🔴 new at p681
+
+Every supply census on these shelves works from the mandate *"focus on MIT / Apache-2.0 / BSD"*, and the cheapest way to honour it is GitHub's own licence facet — the `spdx_id` that `search/repositories` returns. p681 read the **grant bytes** of five repositories that all report **`NOASSERTION`**, on the same day, at their resolved default refs:
+
+| repo | `spdx` | grant payload, byte-read | what a facet filter does |
+|---|---|---|---|
+| `Saidkhusayn/student-dropout-early-warning` | `NOASSERTION` | 🟢 **verbatim MIT** + an explicit `CC BY 4.0` data carve-out | 🔴 **drops a permissive row** |
+| `ChrisWhiteSr/teach-skill` | `NOASSERTION` | 🟢 **MIT** + a portions notice naming an upstream that verifies | 🔴 **drops a permissive row** |
+| `GarethManning/education-agent-skills` | `NOASSERTION` | 🔴 **CC BY-SA 4.0** | 🟢 right, by accident |
+| `PreTeXtBook/pretext` | `NOASSERTION` | 🔴 **GPL-2-or-3**, text absent from the repo | 🟢 right, by accident |
+| `workforce-data-initiative/skills-api` | `NOASSERTION` | 🔴 **non-commercial**, and names a different program | 🟢 right, by accident |
+
+🔴 **Two of five sit on verbatim MIT and three on grants that forbid a commercial derivative.** The field is not a weak signal that needs a wider threshold; it is a signal with **no direction** — the three it classified usefully it classified for reasons unrelated to the two it got wrong.
+
+🔵 **The mechanism, which makes the behaviour predictable rather than random.** GitHub's detector matches licence **bodies**. Anything appended to, prepended to, or substituted for a canonical body defeats it. So the repositories it fails on are precisely the ones whose authors did something *more* careful than pasting a template: `Saidkhusayn` separated code from data in the grant file, `ChrisWhiteSr` attributed an upstream inside the grant, and `PreTeXtBook` wrote a correct licence *notice* and shipped no body for the detector to find. **The detector rewards the template and punishes the drafting.**
+
+🟡 **Scope, so this is not overread.** This says nothing about SPDX as a standard, nor about repositories that do report `MIT` — in **`9` of `9`** cases this pass where the facet read `MIT`, the bytes agreed (counted from [`evidence/p681-candidate-verification.2026-11-06-p681.tsv`](../evidence/p681-candidate-verification.2026-11-06-p681.tsv), not estimated). **A positive `MIT` reading was reliable every time it appeared; it is the absence of a reading that carries no information.** The claim is narrower and operational: **`NOASSERTION` is not evidence of anything, in either direction, and a census that treats it as "no permissive grant" will systematically lose the most carefully licensed projects in the field.** The only reading is the bytes at the resolved default ref.
+
+## T74 — Where a copyleft education platform fronts a public API, the permissive opportunity is the client 🟢 new at p681
+
+This base's standing objection to the education platform layer is licence-shaped: the systems institutions actually run are copyleft. Moodle is GPL-3.0, Chamilo GPL-3.0, Open edX AGPL-3.0, Pressbooks GPL-3.0, and `PreTeXtBook/pretext` is GPL-2-or-3 — so a client-branded fork carries source disclosure, and `T6` treats the arrival of an Apache-2.0 LMS as news precisely because the alternative is so constrained. **p681 found that the objection is avoidable without an Apache-2.0 platform, by moving one layer out.**
+
+| layer | project | licence | reaches your code? |
+|---|---|---|---|
+| platform | `pressbooks/pressbooks` | 🔴 GPL-3.0 | yes, if you fork it |
+| authoring toolchain | `PreTeXtBook/pretext` | 🔴 GPL-2-or-3 | yes, if you derive from it — **no**, if you run it as a program |
+| **corpus access client** | `johnnyrobot/pressbooks-cli` | 🟢 **MIT** | 🟢 **no — it holds no platform code** |
+| corpus | 28 networks, **`9,601`** open textbooks | openly licensed per book | reachable with **no account, key or token** |
+
+🟢 **The mechanism is ordinary copyright law rather than a licence loophole, which is why it is safe to build on.** Copyleft attaches to derivative works. A client that speaks a platform's public REST API links against nothing the platform licenses, so it inherits nothing — and running a GPL program over a client's content (PreTeXt converting XML to PDF) imposes obligations on neither the content nor the code beside it. **The obligation follows the code, not the data and not the pipeline.**
+
+🔵 **Generalised, and this is the reusable part: for any copyleft platform on `verticals/solutions.md` that exposes an API, ask what the permissive client tier would be before asking whether the platform can be relicensed.** Moodle, Open edX, Chamilo, Sakai and ILIAS all expose web services. The permissive asset is the agent, the exporter, the analytics client or the corpus reader that talks to them — and `P51`'s "ship over the LMS via LTI, never fork it" is the same argument arriving from the integration side rather than the licence side.
+
+🔴 **The limit, stated so the trend is not over-applied.** This buys access, not control: you cannot change platform behaviour from outside it, and anything you need *inside* the platform is still copyleft. It also assumes the API is public and adequate — and `pressbooks-cli`'s README is a catalogue of how inadequate a real one can be (no directory endpoint, a `search` parameter accepted and discarded, `per_page` hard-capped at `10`, `403` to an unrecognised `User-Agent`). **The licence problem moves to an engineering problem, which is the trade worth making, not a free lunch.**
+

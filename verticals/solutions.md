@@ -14,6 +14,28 @@ updated: 2026-11-06
 
 🔄 **Re-derived at p680 by counting the table rows between the header separator and the end of the table, and taking the first repository link in each row as the subject.** The heading this replaces said `62` / `59`. 🔴 **A counting defect of my own, registered rather than hidden:** the first counter p680 ran keyed on rows beginning `| [`, which is the row shape on `repos/foundations.md` and **not** the shape on this shelf (`| **Name** | [repo]…`). It returned `0`, and `0` was briefly written into this heading. 🔵 **A count is only re-derived if the counter was controlled against a known value on the same file** — the same rule `680-E` produced for licence bodies, at a different place.
 
+## 🟡 No platform row added at p681 — and the one platform-shaped candidate is copyleft with its own grant text missing
+
+The verticals leg ran globally (`open source platform education ERP CRM MIT Apache student information system`) and per region. 🔴 **Every platform it named is already on this shelf**: `openeducat/openeducat_erp` (LGPL-3.0), `frappe/education`, `Gego-K12/gegok12`, `OS4ED/openSIS-Classic`, `francoisjacquet/rosariosis`, `GibbonEdu/core`, `moodle/moodle`, `chamilo/chamilo-lms`. **Nil, and that is the 30th consecutive pass on which this leg has returned no new platform.** The leg is not broken; this shelf is simply ahead of it.
+
+### 🔴 `681-I` — one genuinely new platform-shaped candidate, refused, and the defect is a class this base has not recorded before
+
+[`PreTeXtBook/pretext`](https://github.com/PreTeXtBook/pretext) — an authoring and publishing system for scholarly documents, aimed at STEM textbooks. **`466★`, `251` forks, pushed `2026-11-06`** — live, and the production toolchain behind a large slice of the open-textbook corpus that `pressbooks-cli` and the OER leg were looking for.
+
+| channel | reading `2026-11-06` |
+|---|---|
+| `git ls-remote --symref` | 🟡 resolves — default ref is **`master`**, not `main`. A licence probe run against `/main/` by habit returns `404` and reads as *no grant* |
+| `gh api search/repositories` | 🔴 `spdx = NOASSERTION`, `466★ / 251f` |
+| grant payload at `master` | 🔴 `COPYING` · **`662 B`** · sha256₁₂ `47d23be4796f` · `Copyright (C) 2013-2026 Robert A. Beezer` |
+| what those `662 B` say | 🔴 *"PreTeXt is free software: you can redistribute it and/or modify it under the terms of the **GNU General Public License** … either **version 2 or version 3** of the License (at your option)"* |
+| `LICENSE`, `LICENSE.md`, `COPYING.md`, `COPYING.txt`, `LICENCE` at `master` | 🔴 **all `404`** |
+
+🔴 **Disposition: refused, on the licence and not on the quality.** GPL-2-or-3 reaches a derivative work, so a client-branded authoring platform built on this tree carries a source-disclosure obligation. That is the same verdict this shelf gives Moodle and Chamilo, and it is a licence fact rather than a judgement about the software, which is excellent.
+
+🆕 **The new defect class — `grant by reference, with the referenced text absent.`** `COPYING` is a **notice**, not a licence: it states which licence governs and then says *"You should have received a copy of the GNU General Public License along with PreTeXt. If not, see <http://www.gnu.org/licenses/>."* 🔴 **You did not receive one. The repository contains no copy of the GPL at any of the five probed filenames.** GPL-2 §1 and GPL-3 §4 both condition redistribution on giving recipients a copy of the licence, so a downstream redistributor of this tree cannot satisfy the condition from the tree alone — they have to go and fetch the text themselves and guess which of the two versions to ship. 🔵 **Why this is distinct from the seven defect classes already on these shelves.** Those are defects in *what the grant says* — absent, self-contradictory, an unfilled template, truncated, a different project's terms. This one is a defect in *what the grant ships*: the terms are named unambiguously and correctly, by a licensor who clearly knows what he is doing, and the bytes that constitute them are not there. 🟡 **It also explains the `NOASSERTION`**: GitHub's detector matches licence *bodies*, and there is no body to match — so a repository whose licensing intent is perfectly clear in prose reads as unlicensed to every automated consumer.
+
+🔵 **What to do with it on an engagement anyway, since the software is good and live.** Treat PreTeXt as a **tool you run**, not a tree you fork: it converts single-source XML into HTML, PDF and EPUB, and running a GPL program over a client's content imposes nothing on the content or on anything you build beside it. The copyleft only bites if you ship a derivative of PreTeXt itself. **Author with it, wrap it over a process boundary, and keep your own code on the other side** — the same posture `P51` takes toward copyleft LMS platforms.
+
 ## 🟡 No platform row added at p680 — and the nil was measured on nine topic heads, six never swept before
 
 🔴 **The ERP/CRM/platform leg nils for a sixth consecutive pass**, and p680 widens the measurement rather than repeating it. The mandated platform leg returned only facts this base already holds and has in places already **corrected**: Sakai (this base holds `ECL-2.0`, not the `Apache-2.0` the public 2026 LMS guides print — see the `p659` section below), Moodle `GPL`, Open edX `AGPL-3.0`, OpenEduCat `LGPL-3.0`. 🔵 **The one thing worth carrying from the leg is a confirmation, not a find:** the public comparison literature still presents the permissive-platform question as settled against open source, and this base's own shelf — with `OpenOlat` (Apache-2.0), `Kolibri` (MIT) and the Open edX mobile clients (Apache-2.0) on it — is the counter-evidence.

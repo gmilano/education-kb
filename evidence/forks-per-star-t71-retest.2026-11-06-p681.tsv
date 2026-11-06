@@ -1,0 +1,13 @@
+repo	class	stars	forks	f_per_star	t71_regime_predicted	t71_regime_observed	verdict
+moodle/moodle	platform	7588	7703	1.015	Deployment	Deployment	HOLDS
+openedx/openedx-platform	platform	8217	4385	0.533	Deployment	Deployment	HOLDS
+microsoft/generative-ai-for-beginners	curriculum	123056	66003	0.536	Classroom (~10)	Deployment	REFUTES - curriculum in the Deployment band
+microsoft/ai-agents-for-beginners	curriculum	79040	25874	0.327	Classroom (~10)	Reading/Deployment edge	REFUTES
+microsoft/Web-Dev-For-Beginners	curriculum	97116	16125	0.166	Classroom (~10)	Reading	REFUTES
+patchy631/ai-engineering-hub	curriculum	41215	6578	0.159	Classroom (~10)	Reading	REFUTES
+freeCodeCamp/freeCodeCamp	curriculum	458651	48128	0.104	Classroom (~10)	Reading	REFUTES
+mattpocock/skills	skill-library	316253	26454	0.084	Reading	Reading	HOLDS
+HKUDS/DeepTutor	agent	55798	6834	0.122	Reading (imported)	Reading	HOLDS
+THU-MAIC/OpenMAIC	agent	42795	6582	0.153	Reading (imported)	Reading	HOLDS
+pykt-team/pykt-toolkit	library	458	141	0.307	Reading (<0.3)	Reading edge	HOLDS-marginal
+CAHLR/pyBKT	library	292	91	0.311	Reading (<0.3)	Reading edge	HOLDS-marginal

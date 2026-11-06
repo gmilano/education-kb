@@ -1,0 +1,26 @@
+repo	disposition	spdx_api	grant_file	grant_bytes	sha256_12	licensor	mit_residual	stars	forks	f_per_star	default_ref	head_12	pushed	searchable	note
+microsoft/generative-ai-for-beginners	FILED-foundations	MIT	LICENSE	1141	c2cfccb812fe	Microsoft Corporation (no year)	0	123056	66003	0.536	main	79a4334e1581	2026-11-05	yes	ledger-only since p367 as licence=unstated; p665 declared it filed; on no shelf
+johnnyrobot/pressbooks-cli	FILED-foundations	MIT	LICENSE	1073	48c3921fa1fc	2026 johnnylibretexts	0	0	0	n/a	main	9f7d388a877a	2026-10-18	yes	canonical by go.mod module path; 28 Pressbooks networks / 9601 books; no API key
+johnnylibretexts-ai/pressbooks-cli	MIRROR-same-commit	422	LICENSE	1073	48c3921fa1fc	2026 johnnylibretexts	0	-	-	n/a	main	9f7d388a877a	-	NO-422	identical HEAD and grant bytes to johnnyrobot; search/repositories 422 while ls-remote and raw both serve it
+8enSmith/mcp-open-library	FILED-foundations	MIT	LICENSE.md	1065	44e077ec4d7e	2025 Ben Smith	0	100	26	0.260	main	d89ba76b3692	2026-10-22	yes	Open Library MCP; book catalogue not OER; only >=100 star permissive catalogue MCP found
+ChrisWhiteSr/teach-skill	FILED-agents	NOASSERTION	LICENSE	1234	2c14f42cf1a6	2026 Chris White + portions 2026 Matt Pocock	806	0	0	n/a	main	bfb25568816f	2026-10-21	yes	MIT + in-grant portions notice; upstream chain verified
+mattpocock/skills	UPSTREAM-verified	MIT	LICENSE	1068	0e7ac423bf2c	2026 Matt Pocock	-	316253	26454	0.084	main	-	2026-11-05	yes	upstream of teach-skill; dependency-graph licence unit closes clean
+dh2211/edu-agents	FILED-agents	MIT	LICENSE	1082	7eb4eb733011	2026 EduAgentsKit contributors	0	0	0	n/a	main	6277f437a402	2026-10-23	yes	licensor names EduAgentsKit, repo is edu-agents; created and pushed same day
+Saidkhusayn/student-dropout-early-warning	FILED-agents	NOASSERTION	LICENSE	1222	99c9fe203063	2026 Saidkhusaynbek Bobojonov	0	0	0	n/a	main	-	2026-10-30	yes	verbatim MIT + explicit CC-BY-4.0 data carve-out; University of Minnesota named -> North America
+aryonmt/student-dropout-prediction	RECORDED-thin	MIT	LICENSE	1061	13c410e87110	2026 aryo	0	0	0	n/a	main	-	2026-10-10	yes	verbatim MIT; too thin for a shelf row
+tabiya-tech/tabiya-esco-datasets-and-tools	FILED-foundations	MIT	LICENSE	1101	7b090f3447a7	2023 Tabiya Youth Employment Technology Incubator	-	8	3	0.375	main	1a8a32efb786	2024-08-29	yes	code MIT / ESCO data under European Commission terms, disclosed in README; dormant 2y
+nestauk/skills-taxonomy-v2	RECORDED-dormant	MIT	LICENSE	1096	2a9487954c37	2021 nasra	-	43	14	0.325	dev	9e30d89157f7	2022-10-12	yes	default ref is dev not main; built on proprietary TextKernel data; dormant 4y
+PreTeXtBook/pretext	REFUSED-copyleft	NOASSERTION	COPYING	662	47d23be4796f	2013-2026 Robert A. Beezer	-	466	251	0.538	master	-	2026-11-06	yes	GPL-2-or-3-at-your-option NOTICE with the referenced GPL text absent from the repo
+yaniv-golan/pretext-skill	REFUSED-name-collision	MIT	LICENSE	1068	cd34da18ee9a	2026 Yaniv Golan	-	15	0	0.000	main	-	2026-11-06	yes	skill for @chenglou/pretext (TS line-break library), NOT PreTeXt the textbook system
+workforce-data-initiative/skills-api	REFUSED-noncommercial	NOASSERTION	LICENSE.txt	1975	b2d1db626769	2018 The University of Chicago	-	214	31	0.145	master	937215fd5016	2018-07-24	yes	grant opens "BY DOWNLOADING aequitas PROGRAM" - names a different program; non-commercial
+openbook-education/openbook	REFUSED-AGPL	AGPL-3.0	LICENSE	34521	432d251a78db	2007 Free Software Foundation	-	0	2	n/a	main	-	2026-11-02	yes	same shape as LearnHouse at p662
+annagraceinfiniti/education-agent-skills	MIRROR-same-commit	422	LICENSE	1230	f952182df4eb	2026 Gareth Manning	-	-	-	n/a	main	135d6275e7db	-	NO-422	identical HEAD and grant bytes to GarethManning/education-agent-skills; CC BY-SA 4.0 travels with the copy
+GarethManning/education-agent-skills	HELD-remeasured	NOASSERTION	LICENSE	1230	f952182df4eb	2026 Gareth Manning	-	955	130	0.136	main	135d6275e7db	2026-11-03	yes	KB licence verdict CC BY-SA 4.0 CONFIRMED; stars 949 -> 955
+michaelseth/claude-education-skills	REFUSED-no-grant	null	-	-	-	-	-	9	1	0.111	main	b2bd17670ea2	2026-03-05	yes	no grant at 6 probed names; pushed_at precedes created_at (2026-03-19) by 14 days
+tabiya-tech/tabiya-open-dataset	REFUSED-no-grant	null	-	-	-	-	-	7	0	0.000	main	815c85d4be9b	2024-03-06	yes	no grant at 6 probed names; dormant
+Amanatar/student-mental-health-companion	REFUSED-no-grant	null	-	-	-	-	-	0	0	n/a	main	-	2026-10-31	yes	leg claimed "the only result I can confirm is MIT-licensed" - FALSE, no grant at 5 probed names
+miansaimnadeem/Student-dropout-prediction	REFUSED-no-grant	null	-	-	-	-	-	0	0	n/a	main	-	2026-09-21	yes	leg claimed "licensed under the MIT License" - FALSE, no grant at 5 probed names
+Ashish-Beniwal004/student-risk-ai-models	REFUSED-no-grant	null	-	-	-	-	-	1	2	2.000	main	-	2026-09-06	yes	hackathon prototype; no grant
+0M3REXE/CampusCare	REFUSED-no-grant	null	-	-	-	-	-	4	0	0.000	main	-	2025-09-29	yes	no grant; dormant 13 months
+mrbansal0001/Early_dropout_risk_prediction	REFUSED-no-grant	null	-	-	-	-	-	0	0	n/a	main	-	2026-10-07	yes	no grant
+Ra-d586/MindGuard-Project	UNRESOLVABLE	422	-	-	-	-	-	-	-	n/a	UNRESOLVED	-	-	NO-422	search 422 AND ls-remote demands credentials - two channels agree: absent or private

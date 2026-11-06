@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p681) — 🟢 **THREE AGENT ROWS FILED, AND ONE OF THEM CLOSES A LICENCE CHAIN FROM INSIDE ITS OWN `LICENSE` FILE — A `316,253★` UPSTREAM, BYTE-READ. 🔴 TWO MANDATED LEGS RETURNED "MIT" ON REPOSITORIES THAT HAVE NO LICENCE FILE. 🔴 `NOASSERTION` NOW HAS A MEASURED DIRECTION: NONE. 🔴 THE WELLBEING HEAD IS THE FIRST GENUINELY EMPTY HEAD THIS BASE HAS SWEPT.**
+
+**Three rows filed on `agents/top.md` (`64` → `67`), four on `repos/foundations.md` (`139` → `143`), none on `verticals/solutions.md`.** `intel/trends.md` gains **`T73`** and **`T74`**; `compose/patterns.md` gains **`P56`**. All eight mandated legs ran — four global, four regional. **`25` candidate repositories were probed on three channels each** (`search/repositories` for metadata, `git ls-remote --symref` for existence and default ref, `raw.githubusercontent.com` for grant bytes at the *resolved* ref): [`evidence/p681-candidate-verification.2026-11-06-p681.tsv`](../evidence/p681-candidate-verification.2026-11-06-p681.tsv).
+
+| `p681` registered | Verdict |
+|---|---|
+| `ChrisWhiteSr/teach-skill` — MIT with a **portions notice naming its upstream inside the grant file**; upstream `mattpocock/skills` byte-read at `1,068 B`, sha256₁₂ `0e7ac423bf2c`, MIT, `316,253★` | 🟢 **FILED — the first row whose `T16` dependency-graph obligation was dischargeable from the `LICENSE` alone** |
+| `dh2211/edu-agents` — MIT verbatim (`residual 0`), K-12 teacher skills, **validator fails any skill missing its `Guardrails` section** | 🟢 **FILED — a mechanical safety floor, not a README promise** |
+| `Saidkhusayn/student-dropout-early-warning` — MIT verbatim **plus a `CC BY 4.0` data carve-out written into the grant**; University of Minnesota named in its own text | 🟢 **FILED — opens an *early warning* tier, placed North America on the strongest channel** |
+| `Amanatar/student-mental-health-companion`, claimed by the leg as *"the only result I can confirm is MIT-licensed"* | 🔴 **FALSE — no grant at 5 probed names, `spdx = null`** |
+| `miansaimnadeem/Student-dropout-prediction`, claimed by the leg as *"licensed under the MIT License"* | 🔴 **FALSE — no grant at 5 probed names, `spdx = null`** |
+| `yaniv-golan/pretext-skill`, offered by the OER leg as a PreTeXt open-textbook skill | 🔴 **REFUSED — it is a skill for `@chenglou/pretext`, a TypeScript line-break library. Exact name collision, unrelated sectors** |
+| `annagraceinfiniti/education-agent-skills`, offered as a distinct 165-skill library | 🔴 **MIRROR — identical HEAD `135d6275e7db` and identical grant bytes to `GarethManning/education-agent-skills`; the CC BY-SA obligation travels with the copy** |
+| The student-wellbeing head, never swept before (`mental health` = `0` occurrences across every shelf) | 🔴 **ZERO permissive grants on 5 candidates — and the emptiness is partly appropriate, see `681-K`** |
+
+### 🔴 `681-B` restated for the log — the licence facet is a signal with no direction
+
+Five repositories read `NOASSERTION` from `gh api search/repositories` on the same day. **Two sit on verbatim MIT** (`Saidkhusayn`, `ChrisWhiteSr/teach-skill`) and **three sit on grants that forbid what this base needs** (`GarethManning/education-agent-skills` → CC BY-SA 4.0; `PreTeXtBook/pretext` → GPL-2-or-3; `workforce-data-initiative/skills-api` → non-commercial). A pass that filters on the facet to honour the mandate's *"focus on MIT / Apache-2.0 / BSD"* **drops two permissive rows and keeps nothing it would not have caught anyway.** 🔵 **And the mechanism is now named: GitHub's detector matches licence bodies, so anything appended to, prepended to, or substituted for a canonical body defeats it.** `Saidkhusayn` is punished for separating code from data correctly; `teach-skill` is punished for attributing its upstream in the grant; `pretext` is unreadable because its grant is a notice with no body at all.
+
+### 🔵 `681-N` — this session's measurement stack, recorded because it is narrower than previous passes assumed
+
+| channel | status at `p681` | what it is good for |
+|---|---|---|
+| `gh api search/repositories` | 🟡 **three-valued**: `≥1` item, `0` items, or **`422 Validation Failed`** | stars, forks, `spdx`, `pushed_at`, `created_at`, `fork` |
+| `gh api repos/{owner}/{repo}` | 🔴 **`403` — unavailable.** *"GitHub access to this repository is not enabled for this session"* | nothing; do not reach for it |
+| `git ls-remote --symref` | 🟢 works anonymously | **existence**, the real default ref, HEAD commit |
+| `raw.githubusercontent.com` | 🟢 works anonymously | grant bytes at the resolved ref |
+
+🔴 **`422` does not mean the repository is absent, and p681 proved it on two live repositories.** `johnnylibretexts-ai/pressbooks-cli` and `annagraceinfiniti/education-agent-skills` both return `422` from `search/repositories` while `ls-remote` resolves their HEAD and `raw` serves their `LICENSE`. The base established this three-valued behaviour for `search/users` at `667-G1`; **it holds for `search/repositories` too.** 🔵 **Consequence for the mirror problem: `git ls-remote HEAD` is the cheapest and only reliable discriminator** — the `fork` flag reads `false` on both mirrors found this pass, and the unsearchable one has no metadata to compare at all.
+
+
 ## 🆕 2026-11-06 (p680) — 🔴 **NO AGENT ROW FILED, AND THE NIL IS MEASURED ON NINE TOPIC HEADS AND EIGHT MANDATED LEGS. 🔴 THE EMEA LEG RETURNED THE SUPERSEDED EU AI ACT DATE FOR A FIFTH TIME. 🔴 MY OWN LICENCE GRADER RAISED A FALSE ALARM AND ITS CONTROL CAUGHT IT. 🔴 THE `make hooks` DENIAL FINALLY HAS A NAMED CAUSE.**
 
 🔴 **`agents/top.md` stays at `60` rows / `59` distinct subjects.** Nothing this pass found belongs on the agent shelf: the three addresses filed at p680 are **curriculum**, and they went to `repos/foundations.md`. Writing the nil down rather than padding the shelf.

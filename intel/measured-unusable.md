@@ -1,8 +1,51 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-05
+updated: 2026-11-06
 ---
+
+## 🆕 `p681` — `2026-11-06` — **🔴 A `214★` REPOSITORY PRESENTED AS AN OPEN API IS NON-COMMERCIAL *AND* ITS LICENCE NAMES A DIFFERENT PROGRAM. 🔴 THE STUDENT-WELLBEING HEAD RETURNS FIVE CANDIDATES AND ZERO GRANTS. 🔴 TWO LEGS CLAIMED MIT ON REPOSITORIES WITH NO LICENCE FILE AT ALL.**
+
+### 🔴 `681-J` — `workforce-data-initiative/skills-api`: two independent defects in one grant, and either one alone would be disqualifying
+
+**`214★`, `31` forks, Python, default ref `master`, HEAD `937215fd5016`, pushed `2018-07-24`.** Returned by the vocational/skills leg as *"an open API and schemas for managing skills data and connecting it to real-world labor market analytics"*. It is the highest-starred result on that head.
+
+| channel | reading `2026-11-06` |
+|---|---|
+| `gh api search/repositories` | 🔴 `spdx = NOASSERTION` |
+| grant payload at `master` | 🔴 `LICENSE.txt` · **`1,975 B`** · sha256₁₂ `b2d1db626769` |
+| **defect 1 — the grant names a different program** | 🔴 the file's **first line** reads *"BY DOWNLOADING **aequitas** PROGRAM YOU AGREE TO THE FOLLOWING TERMS OF USE"*. `aequitas` is a separate University of Chicago project (a bias-audit toolkit). The terms are defined throughout against *"the Program"*, and the only thing the document ever identifies as the Program is `aequitas` |
+| **defect 2 — the terms are non-commercial** | 🔴 *"Permission to use, copy, modify, and distribute this software … for **educational and not-for-profit research purposes** … For the avoidance of doubt, educational and not-for-profit research purposes **excludes any service or part of selling a service that uses the Program**"*; commercial licences via the Polsky Center |
+| licensor | `Copyright ©2018. The University of Chicago ("Chicago"). All Rights Reserved.` — Data Science and Public Policy |
+
+🔴 **Disposition: unusable for Globant, on the second defect alone.** A consultancy engagement *is* "selling a service that uses the Program", and the carve-out names that case explicitly rather than leaving it to interpretation. 🔵 **But defect 1 is the one worth carrying, because it is a new class.** This base's defect taxonomy covers grants that are absent, self-contradictory, unfilled templates, truncated, copyleft-while-claimed-permissive, and (new at `681-I`) named-but-not-shipped. **"The grant governs a different, named product" is new** — and it is the worst of them to reason about, because the document is internally coherent, professionally drafted and legally operative; it is simply *about something else*. There is no permission for this repository's code in it at all, which means `skills-api` is **effectively unlicensed** and the non-commercial clause is the second reason to decline rather than the first. 🟡 **And `NOASSERTION` tells you none of that** — see `agents/top.md` `681-B`. 🔴 **Dormant since `2018-07-24`**, which is eight years; the defect will not be fixed.
+
+### 🔴 `681-K` — the student-wellbeing head: a first sweep, five candidates, **zero** permissive grants
+
+This head had never been queried on this base — `mental health` returned **`0`** occurrences across every shelf before this pass, and `wellbeing` returned `1`. It is now swept, and the result is a clean nil rather than a thin yield.
+
+| repo | stars | pushed | grant at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` |
+|---|--:|---|---|
+| [`Amanatar/student-mental-health-companion`](https://github.com/Amanatar/student-mental-health-companion) | 0 | `2026-10-31` | 🔴 **none**, `spdx = null` — **and the leg claimed this one was MIT** |
+| [`Ashish-Beniwal004/student-risk-ai-models`](https://github.com/Ashish-Beniwal004/student-risk-ai-models) | 1 | `2026-09-06` | 🔴 **none** — hackathon prototype (SIH 2026) |
+| [`0M3REXE/CampusCare`](https://github.com/0M3REXE/CampusCare) | 4 | `2025-09-29` | 🔴 **none**, dormant 13 months |
+| `Ra-d586/MindGuard-Project` | — | — | 🔴 **unresolvable** — `search/repositories` `422` **and** `ls-remote` demands credentials. Two channels agree: deleted, renamed or private |
+| [`mrbansal0001/Early_dropout_risk_prediction`](https://github.com/mrbansal0001/Early_dropout_risk_prediction) | 0 | `2026-10-07` | 🔴 **none** — SHAP-explained risk flags, adjacent rather than wellbeing |
+
+🔵 **The honest reading, and it is not "do not build here".** Five candidates, all `≤4★`, none with a grant, one already gone. **There is no permissive supply on this head at all** — not shallow supply, as with the Moodle bridges and the assessment layer, but none. 🔴 **And unlike every other empty head this base has found, emptiness here is partly *appropriate*.** Student mental health is the most consequential use case in the sector: under the EU AI Act emotion recognition in education has been **prohibited** since February 2025, and a wellbeing triage system sits adjacent to that prohibition rather than safely away from it. A `0★` repository with no licence and no clinical review is not a starting point for it, and the absence of a hobbyist ecosystem is not the gap it would be elsewhere. **Recommendation: do not scope a wellbeing agent off open-source supply. If a client asks, the engagement is a safeguarding and governance design, with clinical sign-off, and the software question comes last.**
+
+### 🔴 `681-L` — dormant permissive supply on the skills/vocational head, recorded so the shortlist is not re-bought
+
+| repo | licence, byte-read | stars | last pushed | why not filed |
+|---|---|--:|---|---|
+| [`nestauk/skills-taxonomy-v2`](https://github.com/nestauk/skills-taxonomy-v2) | 🟢 **MIT** (`1,096 B`, sha256₁₂ `2a9487954c37`, `© 2021, nasra`) | 43 | `2022-10-12` | **dormant 4 years**; default ref is **`dev`**; built on **TextKernel** job-advert data, which is proprietary — so the MIT code cannot be re-run without a commercial data licence. Nesta, UK → EMEA-origin |
+| [`tabiya-tech/tabiya-open-dataset`](https://github.com/tabiya-tech/tabiya-open-dataset) | 🔴 **no grant** at 6 probed names, `spdx = null` | 7 | `2024-03-06` | sibling of the MIT-granted `tabiya-esco-datasets-and-tools` (filed on `repos/foundations.md`) and **carries no grant of its own** — the ESCO dataset in tabiya format, with no permission attached |
+| [`michaelseth/claude-education-skills`](https://github.com/michaelseth/claude-education-skills) | 🔴 **no grant** at 6 probed names, `spdx = null` | 9 | `2026-03-05` | self-described *"open-source library of evidence-based Claude skills"* — **and there is no licence file**. 🟡 Also a metadata anomaly: **`pushed_at` (`2026-03-05`) precedes `created_at` (`2026-03-19`) by 14 days**, so any freshness sort on `pushed_at` mis-ranks it against repositories whose dates are ordered normally |
+
+### 🔴 `681-M` — `openbook-education/openbook`: the `662-G` shape again, and this time the project says it itself
+
+[`openbook-education/openbook`](https://github.com/openbook-education/openbook) — *"Interactive Online Textbooks and AI Learning Assistant"*, `0★`, `2` forks, Python, pushed `2026-11-02` — **`AGPL-3.0`**, payload `34,521 B`, sha256₁₂ `432d251a78db`. 🔵 **No contradiction to report: the project states AGPL honestly and GitHub agrees.** It is recorded here for the same reason `learnhouse/learnhouse` is — the network-use clause reaches a hosted deployment, so a client-branded fork carries a source-disclosure obligation, which rules out the model this base recommends. 🟡 **Worth noting against `662-G`:** its payload is `34,521 B` where LearnHouse's is `34,523 B` — a two-byte difference in the same licence, which is a reminder that **a grant is identified by its digest and its text, never by its size.**
+
 
 ## 🆕 `p662` — `2026-11-05` — **🔴 A CURRENTLY PUBLISHED LMS COMPARISON TABLE PUTS `LearnHouse` IN THE "MIT/Apache … maximum flexibility" COLUMN. IT IS `AGPL-3.0`, AND THIS BASE HAS HELD THAT VERDICT SINCE `p11`.**
 
