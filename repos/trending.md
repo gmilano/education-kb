@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p677) — 🟢 **SIX ADDRESSES RECOVERED — NOT FROM A SEARCH LEG AND NOT FROM THE BACKLOG, BUT FROM THIS BASE'S OWN `p597` PROMOTION LEDGER, WHICH SAID ALL SIX WERE ALREADY SHELVED. 🔴 ONE OF THEM HAS BEEN CLAIMED-AS-FILED TWICE, `25` DAYS APART, WHILE ABSENT THE WHOLE TIME. 🟢 EVERY PAYLOAD RE-MEASURED TO THE EXACT BYTE THE LEDGER PUBLISHED.**
+
+**What this window found.** The four mandated global legs returned **no novel repository** for the 27th consecutive pass — the leg-by-leg table is in [`agents/trending.md`](../agents/trending.md) `677-G`. **Every address gained this pass came from auditing a claim this base had already published.** 🔵 `repos/foundations.md` `125` → **`128`**; `verticals/solutions.md` `58` → **`61` rows / `58` distinct**; `agents/top.md` `58` → **`59` rows / `58` distinct**.
+
+### 🟢 Recovered and filed at p677 — the `p597` ledger said each of these was already on a shelf
+
+Every row below was re-verified first-hand on **2026-11-06**: existence and real default ref via `git ls-remote --symref`, grant payload byte-read from `raw.githubusercontent.com` **into a file** (never a shell `$(...)` capture — see `677-C`), stars and forks from the rendered repository page via `WebFetch`.
+
+| Filed at p677 | Licence (payload, read this pass) | ★ | Forks | Real default ref | Filed to | Ledger byte-count reproduced? |
+|---|---|--:|--:|---|---|---|
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** `1,077 B` `c6dca3b0db5b` © *2010-2025 Webkul Software* | **12.2k** | `619` | 🔴 `master` | `verticals/solutions.md` | 🟢 exact |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 **MIT** `1,062 B` `8fa1566550df` © *2021 Agora* | **6.4k** | `879` | `main` | `verticals/solutions.md` | 🟢 exact |
+| [`anubislms/anubis`](https://github.com/anubislms/anubis) | 🟢 **MIT** `1,083 B` `e36740a2a510` © *2021 John McCann Cunniff Junior* | **382** | `54` | `main` | `repos/foundations.md` | 🟢 exact |
+| [`sunbird-ed/sunbirded-portal`](https://github.com/sunbird-ed/sunbirded-portal) | 🟢 **MIT** `1,072 B` `7dde06716f25` © *2018 Project Sunbird* | **41** | 🔴 **`318`** | 🔴 `master` | `verticals/solutions.md` | 🟢 exact |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — 🔴 file spelled **`LICENCE`** — `1,086 B` `02c5a8e84229` © *2024-present Oak National Academy* | **8** | `5` | `main` | `repos/foundations.md` | 🟢 exact |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** `11,351 B` `3f17cff4210f` | **2** | `15` | `main` | `repos/foundations.md` | 🟢 exact |
+
+🟢 **Six payloads, six exact reproductions of a figure published five days earlier. The ledger's measurements were never the problem.** 🔴 **Its `promoted to` column was.** Audit, remedy and the `ACTION` that closes it: [`repos/foundations.md`](foundations.md) **`677-A`**.
+
+### 🔵 What the three most interesting of the six actually are
+
+🟢 **[`sunbird-ed/sunbirded-portal`](https://github.com/sunbird-ed/sunbirded-portal) — read the fork column, not the star column.** `41★` against **`318` forks** is a ratio of **`7.8:1`**, the most extreme on any shelf here. **Nobody forks a web portal `318` times to read it.** This is India's national public digital-infrastructure stack for education — the platform family behind DIKSHA — under **MIT**, which makes it the most permissively licensed platform of its deployment size anywhere in this base. 🔵 **Same mechanism `p596` recorded for FOLIO at `134★` and `p676` for Ed-Fi at `12★`: a screen ranked by stars sees none of them.** For an APAC public-sector engagement this is the incumbent, and the question becomes what to extend rather than what to build. ⚠️ The portal is one repository of a multi-repository platform; last measured push `2026-02-21`, so the motion is in the siblings.
+
+🟢 **[`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) — the rarest shape in the base: a state-backed curriculum that ships its own MCP server, MIT.** Oak National Academy is the English government-funded curriculum body, and this is *“API, SDK and MCP app”* over its curriculum data. **Every curriculum-grounding pattern this base publishes has to answer “where does the authoritative curriculum come from, and may we ship it?”** — for England, that is now one address. 🔵 **The pattern across the base is that curriculum authority is national and the permissive supply is one repository per country:** England here, Brazil at `bncc-dev/bncc-pacotes` (MIT code + CC BY 4.0 data), Germany at `telekom/ki-in-schulen`. **There is no supranational option, and that is a structural fact about the sector, not a gap in this base.** 🔴 **And the spelling is the operational lesson: a probe that tries only `LICENSE` grades this repository `unlicensed`.**
+
+🟢 **[`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) — the first permissive answer here to classroom multimodal analytics without egress.** Intel's Open Edge Platform suite: **Smart Classroom** (multi-camera pose detection, student re-identification, speaker diarization, ASR, summarisation, mind maps, session reports) and **Teaching Assistant** (voice-first), on **OpenVINO** across CPU / integrated GPU / NPU, with multimodal RAG (CLIP, mE5) and Whisper / Paraformer / Qwen. 🔵 **The part with no permissive equivalent anywhere in this base is the benchmarking harness** — it answers *“which hardware do we quote?”*, the question that prices an on-premise deployment, and no other row here answers it. ⚠️ **Its README says reference and demonstration, explicitly not production**; `2★`, no release, no tag. **Adopt-and-harden, and the hardening is the engagement.** 🔴 The leg that surfaced it returned a `0★` personal fork instead of the org — `677-F`.
+
+### 🟡 The vertical ERP/CRM leg, re-run and re-verified — fourth consecutive pass, same answer
+
+| Address | Grant, read at p677 | Real default ref | Verdict |
+|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** `1,150 B` `b8694396d7dc` (payload carries an inline `SPDX-License-Identifier: MIT`) | `main` | 🟢 **still the one MIT education ERP.** `56★`, 🔴 **`107` forks** — forks outnumber stars `1.9:1`, confirming **`T60`**: the permissive student-information layer exists at the scale most private education actually runs at |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | 🔴 **`trunk`** | 🟢 Apache ERP + CRM. **Not `main`, not `master` — `trunk`.** A clone script that assumes either gets nothing. Not education software: it is the money-and-people half of a `Pattern D` split |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** — `license.txt` reads `License: GNU GPL V3` | 🔴 `develop` | 🔴 **BLOCK as a base.** Routinely listed in 2026 round-ups without a licence; it is copyleft |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** (GNU Affero GPL v3) | 🔴 `develop` | 🔴 **BLOCK.** Confirms the p676 flag; the whole Frappe education family is copyleft |
+| `openeducat/openeducat_erp` | 🔴 **LGPL-3.0** | — | 🔴 **not MIT and not Apache**, contrary to the vendor pages — **fourth consecutive pass restating this** |
+
+🔵 **Three of the five rows above have a non-`main` default ref, and two of those are `develop`.** On this shelf that is no longer an anecdote: **resolve the branch before you clone** is a rate, not a story.
+
+### 🔴 Blocked / not promoted at p677, with the reason recorded
+
+| Address | Measured | Disposition |
+|---|---|---|
+| [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) | 🔴 `LICENSE` is a bespoke **“PySilicon Research License”** © 2026 Sundeep Rangan | **BLOCK — not OSI.** A named research licence is narrower than MIT/Apache/BSD and research-only terms cannot be scoped out of a commercial deliverable |
+| [`emorynlp/LLM-Grading`](https://github.com/emorynlp/LLM-Grading) | 🔴 **no licence payload** under `6` filenames on `master` or `main`; `0★`; no description. Paper claims an *“open-source grading toolkit”* | **BLOCK pending a grant.** Remedy is a two-line email to the authors, not a refusal |
+| [`ashwinvijayakumar/education-ai-suite`](https://github.com/ashwinvijayakumar/education-ai-suite) | Apache-2.0, `0★`, `500` commits — **personal fork** | **DE-DUPLICATED** to `open-edge-platform/education-ai-suite`. See `677-F` |
+| [`DHRUVvkdv/teaching-assistant`](https://github.com/DHRUVvkdv/teaching-assistant) | live on `main`, LangGraph multi-agent TA — 🔴 **no licence payload** | **BLOCK** |
+| [`caramaschiHG/awesome-ai-agents-2026`](https://github.com/caramaschiHG/awesome-ai-agents-2026) | **CC0-1.0** — a list, no education scope | **NOT FILED** — not software, not education |
+| [`kouweizhu/agents-radar`](https://github.com/kouweizhu/agents-radar) | **MIT**, `master` — general AI-trend radar, no education scope | **NOT FILED** — pipeline tooling, not an education repo |
+
+### 🔵 Declared gaps at p677 — searched and not found
+
+- 🔴 **No novel education repository from any of the four global legs.** 27th consecutive nil. The prescribed search legs have stopped being a discovery channel for this industry; say so rather than letting silence read as coverage.
+- 🔴 **No permissive LLM-autograding repository found at all.** The permissive autograding layer this base documents (`T30`) is **deterministic university infrastructure** — `autolab/Autolab`, `Submitty`, `anubislms/anubis`, `webtech-network/autograder`. The two **LLM** graders found this pass are a research licence and no licence. **The LLM half of the grading layer has no permissive supply here.**
+- 🔴 **No public permissive repository for any of the six named African education-AI programmes** (`677-I`). `T14` holds on six programmes now instead of two.
+- 🔴 **`arxiv.org` does not resolve from this session** — seventh host in the unreachable class, and the one this base cites most. `ACTION p677-D`.
+- 🟡 **`prometheus-eval` and `rubric`** were claimed-as-filed by the 32nd pass alongside `education-ai-suite` and are in **none** of the eight shelf files. p677 did not resolve their addresses — the names alone are ambiguous (`rubric` matches at least `11` distinct repositories in this base's own logs). 🔧 **`ACTION p677-E`:** resolve both to an owner/name and either file or block them. **Named rather than silently dropped, because that is exactly how the six above went missing.**
+
+---
+
 ## 🆕 2026-11-06 (p676) — 🟢 **TWELVE ADDRESSES GAINED, AND NOT ONE CAME FROM A SEARCH LEG — THE LARGEST SINGLE-PASS FOUNDATIONS GAIN THIS SHELF HAS HAD, ENTIRELY OUT OF THIS BASE'S OWN UNFILED BACKLOG. 🔴 ONE OF THEM IS THE MAINTAINED IMPLEMENTATION OF LTI 1.3 AND THE SEARCH INDEX CANNOT SEE IT.**
 
 **What this window found.** The four mandated global legs returned **no novel repository** (`21/21` facts held; the carried list is in [`agents/trending.md`](../agents/trending.md) `676-F`). Every one of the `12` addresses filed to `repos/foundations.md` this pass came from `evidence/address-ledger.tsv` with `filed_on = -`, re-read at the real default ref. 🔵 **`repos/foundations.md` `113` → `125`.**

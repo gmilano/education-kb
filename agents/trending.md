@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p677) — 🔴 **THIS BASE'S OWN PROMOTION LEDGER IS WRONG ABOUT `6 OF 11` FILINGS, AND ONE ADDRESS HAS BEEN CLAIMED-AS-FILED BY TWO PASSES `25` DAYS APART WHILE BEING ABSENT THE WHOLE TIME. 🔴 FOUR DUPLICATE ROWS ACROSS TWO SHELVES, ALL CREATED LAST PASS — THE COUNTS ARE NO LONGER STALE, THEY ARE INFLATED. 🔴 p674'S DIGEST PIN IS THE DEFECT `T56` NAMES. 🟢 ONE NOVEL ADDRESS, AND IT CAME FROM ENUMERATING AN OWNER ORG.**
+
+**Verification channels, re-tested before use at p677.** `git ls-remote --symref` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live**; **`WebFetch` on `github.com/<owner>/<repo>` 🟢 LIVE — star and fork counts were read first-hand this pass**, which `p670` recorded as `403` channel-wide; `curl` on `github.com` 🔴 **`403`** (so the channel is tool-dependent, not host-dependent); `api.github.com` 🔴 **`403`**; 🔴 **`arxiv.org` DOES NOT RESOLVE — new to the unreachable-host class this pass, see `677-H`.**
+
+### `677-A` — 🔴 the finding of the pass: the ledger says the row is on the shelf, and the shelf does not have it
+
+Full audit table and remedy: [`repos/foundations.md`](../repos/foundations.md) **`677-A`**. In summary — `p597`'s *“promoted to”* column names a shelf file for `11` addresses. Checked by address against the file each cell names: **`4` correct, `1` on a different shelf than claimed, `6` absent from all three shelves.**
+
+🔴 **[`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) is the specimen.** The 32nd pass (`2026-10-07`) wrote in prose that it was *“added to `repos/foundations.md` this pass”*, together with `prometheus-eval` and `rubric`. `p597` (`2026-11-01`) claimed the same filing again. **None of the three was ever on that page**; `prometheus-eval` and `rubric` are in none of the eight shelf files at all. **Two passes, `25` days, the same false claim, and nothing in the pipeline ever looked at the destination file.**
+
+🟢 **The measurements were right; only the publication failed.** All six absent payloads re-measured at p677 to *exactly* the byte counts `p597` published. 🔵 **That is the diagnosis worth carrying forward: this base measures well and publishes unreliably** — and for a knowledge base a studio opens before an engagement, an unpublished row and a wrong row cost the same.
+
+🟢 **Discharged, not just reported.** All six re-verified first-hand on 2026-11-06 and filed: three to `repos/foundations.md`, three to `verticals/solutions.md`. 🔧 **`ACTION p677-B`:** assert every *“filed to”* cell with one `grep -iF` against the path the cell itself names. No network, no model, `0` cost — and it would have caught all seven defects.
+
+### `677-B` — 🔴 four duplicate rows, and the count repair that cannot see them
+
+Full detail: [`verticals/solutions.md`](../verticals/solutions.md) **`677-B`**.
+
+| Shelf | Rows | Distinct subjects |
+|---|--:|--:|
+| `agents/top.md` | `59` | `58` |
+| `repos/foundations.md` | `128` | 🟢 `128` |
+| `verticals/solutions.md` | `61` | `58` |
+
+All four second rows were added **at p676**, each labelled *“New at p676”*, each on a repository its shelf already held. 🔵 **Four earlier passes repaired a *stale* count on these pages and the adopted remedy was “re-derive by counting the table.” That remedy is blind to duplication** — it faithfully counts a table that lists `OpenOlat` twice. **A row count is not an inventory count.** 🔴 The sharpest harm: the two `frappe/lms` rows give **opposite advice** (one recommends it, the p676 one flags it as AGPL-3.0 and not-a-build-on-option); the two `OpenMAIC` rows publish **two different star figures** (`42,743` / `42,759`). Nothing deleted — annotated, cross-linked, counts corrected both ways, merge named as `ACTION p677-A`.
+
+### `677-C` — 🔴 p674 fixed a measurement hazard and then measured the fix with the hazard
+
+`repos/foundations.md` published the two Apache-2.0 canonicals *“pinned by digest”* so the `11,357`/`11,358` byte ambiguity could not confuse them. One of the two pins is a **capture artefact**:
+
+| Payload | Bytes | sha256₁₂ |
+|---|--:|---|
+| `apache.org` canonical, as served | `11,358` | `cfc7749b96f6` |
+| `apache/.github` canonical, as served | `11,357` | **`c71d239df917`** |
+| `apache.org` canonical, newline stripped | `11,357` | **`58d1e17ffe51`** ← published as `apache/.github` |
+| `apache/.github` canonical, newline stripped | `11,356` | `43070e2d4e53` |
+
+**Four values; the page published two of them as the two canonicals, and both describe the same document.** The distinguisher names one canonical twice and therefore distinguishes nothing. 🔵 **The generalisable rule: never measure a correction on the channel that produced the defect.** A shell `$(...)` capture strips the trailing newline — write the payload to a file and hash the file. Corrected in place; `c71d239df917` independently re-confirmed from a new address (`THU-MAIC/MAIC-Core`, `diff` exit `0` against `apache/.github`).
+
+### `677-D` — 🟢 the one novel address, and the channel that produced it
+
+[`THU-MAIC/MAIC-Core`](https://github.com/THU-MAIC/MAIC-Core) — **Apache-2.0**, `42★`, `16` forks, `main`, `11,357 B` / `c71d239df917`. Filed to `agents/top.md`. **The Apache-2.0 algorithm core beneath the `42,7xx★` MIT classroom this base filed one pass ago** — same Tsinghua lab, two layers, **two different permissive grants**, so the patent-grant and NOTICE obligations differ *inside one lab's stack*. ⚠️ `10` commits, no release, empty Languages panel: a reference deposit, not a dependency.
+
+🔵 **It was not found by a search leg. It was found by enumerating the owner organisation of a row this base already had** — the third consecutive pass whose entire gain came from inside an address already held (p675 the `Ref` column, p676 the unfiled backlog, p677 the owner org). **Generalise it: when a shelf row is a research lab's product, enumerate the lab.**
+
+### `677-E` — 🔴 two autograders presented as open source; neither grant supports it
+
+Detail in [`agents/top.md`](top.md) `677-E`. [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) ships a bespoke **“PySilicon Research License”** — not OSI, research-shaped, **BLOCK**. [`emorynlp/LLM-Grading`](https://github.com/emorynlp/LLM-Grading) is the release behind a paper that states it *“publicly release[s] … an open-source grading toolkit”*; the repository is live on `master` with a README and **no licence payload** under `6` probed filenames, `0★`, no description — **“open-source” in an abstract is not a grant.** 🔵 Both are good software; the sector's grading layer is simply where research code and product code overlap most, and research code is where the grant is least likely to exist. Build on the permissive autograders already shelved (`autolab/Autolab`, `anubislms/anubis`, `webtech-network/autograder`) and write the LLM grader yourself.
+
+### `677-F` — 🟡 canonical-versus-fork, third instance
+
+The vertical leg returned `ashwinvijayakumar/education-ai-suite` (`0★`, personal fork) rather than the Intel org canonical. **The cheap tell: a fork of an organisation's repository usually still names the organisation in its own README body**, and a text-ranked search leg will put the fork first. Complements `P457` (de-duplicate on the `LICENSE` copyright holder).
+
+### `677-G` — the eight mandated legs: what they returned, and the 27th consecutive nil
+
+All four global legs and all four regional legs were run, with the year computed as **2026**, never hardcoded.
+
+| Leg | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **nil for education** — returned general-purpose agents only (OpenClaw, Hermes, OpenHands, CrewAI, LangGraph, SWE-agent, AG2). Every name already in this tree |
+| `github trending education AI 2026` | 🔴 **nil, and the leg is behind this base's own measurements** — served `DeepTutor ≈45k★` and `OpenMAIC ≈42k★`; the shelves carry `55.5k★` and `42.7k★` read first-hand. **Discovery channel, never a measurement channel** |
+| `open source platform education ERP CRM MIT Apache` | 🟡 **one usable name, already held** — `Gego-K12/gegok12` (MIT, re-verified at p677: `1,150 B` / `b8694396d7dc`, `56★`, 🔴 **`107` forks**). Also re-verified: `apache/ofbiz-framework` **Apache-2.0 on real default ref `trunk`**; `frappe/education` **GPL-3.0** on `develop`; `frappe/lms` **AGPL-3.0** on `develop`. **`openeducat_erp` is LGPL-3.0, not MIT or Apache** — the vendor pages still blur this, fourth consecutive pass |
+| `AI education industry trends 2026` | 🟡 **no new fact** — governed/purpose-built consensus (OECD *Digital Education Outlook 2026*; 1EdTech on governance, interoperability and digital credentials) already carried as **T35**. Market spread re-served and already held |
+| North America | 🟡 held — `134` bills / `31` states, NC **Session Law 2026-41**, Maryland, Virginia, NYC **Traffic Light Framework**, `60%` teacher use |
+| EMEA | 🟡 **held on Europe, 🟢 gained on Africa** — Reg. **(EU) 2026/1744**, Annex III → **2 Dec 2027**, UK DfE Jan-2026 standards, Ofqual, KHDA all held. **Four African programme names new to this base — see `677-I`** |
+| APAC | 🟡 held — **Vietnam Decision No. 33/2026/QD-TTg** (education named as high-risk, automated assessment), Korea **AI Basic Act** in force `2026-01-22`, Australia **TEQSA** action plans, Japan light-touch, Singapore AI Verify |
+| LATAM | 🟡 held — UNESCO **IESALC** (`200` HEIs / `19` countries, `87%` using AI, `26%` with a strategy), the **UNESCO LAC Observatory** (Santiago, `2026-04-14`), DEC × Tec de Monterrey (`92%` / `79%`), U. de los Andes `716` instruments |
+
+🔴 **No agent address this base did not already hold — the 27th consecutive nil on the supply-side legs.** Stated plainly so the absence is not mistaken for coverage: **the prescribed search legs have stopped being a discovery channel for this industry.** Every gain in the last three passes came from auditing what this base already published. 🔵 **That is a finding about the method, not a complaint about the queries** — and `677-A` and `677-B` are what the budget bought instead.
+
+### `677-H` — 🔴 `arxiv.org` joins the unreachable-host class, and it is the costliest member yet
+
+`https://arxiv.org/abs/2601.06093` returned **`getaddrinfo ENOTFOUND`** under `WebFetch`. That makes **seven** hosts in the class this base established at p669–p670 (`europarl.europa.eu`, `eur-lex.europa.eu`, `zenodo.org`, `www.commonlit.org`, and now `arxiv.org`): **a session network-policy boundary, not a retry target.** 🔴 **Why this one costs more than the others: this base cites arXiv on many rows** — `agents/trending.md` alone carries a dozen paper-backed entries — and **p677 could not re-read a single one.** Every arXiv-sourced claim in this base is therefore held at the **secondary** class and has not been re-grounded on its primary text. 🔧 **`ACTION p677-D`:** `arxiv.org` must be added to the session's allowed network domains; no URL variation, mirror or search can close it. Until then, do not quote an arXiv row to a client as a primary read.
+
+### `677-I` — 🟢 four African programme names this base did not hold, and `T14` now stands on six
+
+**`T14`** says African education AI is real, offline-first, and **built on open weights rather than released as open source**. p677 adds four names and the trend survives all four:
+
+| Programme | Country | Shape | Public permissive repo? |
+|---|---|---|---|
+| **Efiwe** | Nigeria | Coding tutor, fully offline after one setup, executes code locally; piloted in **Lagos** and **Ogun State** | 🔴 none found |
+| **Juza AI** | Kenya | *“AI in a box”* — curriculum-aligned tutor on a low-power classroom appliance; **Samburu, Isiolo, Garissa** | 🔴 none found |
+| **GlobeDock Academy** | Ethiopia | Offline-first platform syncing by **SD card** and local caching | 🔴 none found |
+| **Google Skilling Africa hub** | Pan-African | Download-over-Wi-Fi, learn-offline skilling hub, launched **2026-11-02** | 🔴 **proprietary** |
+
+Already held: **Mdali** (South Africa, CAPS Grades 10–12, adapts open-source models, Gauteng pilot) and **M-Shule** (Kenya, feature phones). **Rori** (Ghana, WhatsApp, RCT gain ≈ one extra year of schooling, `40k+` learners) is commercial.
+
+🔵 **Six named programmes, zero permissive repositories. That is now a strong enough base to state the consequence rather than the observation:** in Sub-Saharan Africa the open-source contribution is **the weights and the runtime, not the application** — so an engagement here composes `Kolibri` (MIT) or the newly-filed `education-ai-suite` (Apache-2.0) with local curriculum, and **budgets for building the application layer rather than adopting it.** See `compose/patterns.md` **P47** and the new **P49**. 🟢 **Policy context new this pass:** Ghana's **National AI Strategy 2025–2035** (launched April 2026) mandates primary-level data science and teacher training; South Africa's **draft National AI Policy** was gazetted April 2026 (⚠️ one source reports it abrogated `2026-04-27` — status unresolved here); the **AU Continental AI Strategy** and the **Africa Declaration** target of **15% AI literacy by 2026** — for which p677 found **no evidence of achievement**, and says so rather than repeating the target as a result.
+
+---
+
 ## 🆕 2026-11-06 (p676) — 🔴 **A `+2` BYTE RESIDUAL AND A GREEN `spdx_id` BOTH PASSED A GRANT WHOSE OPERATIVE BODY IS NOT THE LICENCE IT CLAIMS — AND THE INSTRUMENT THAT CATCHES IT HAS BEEN IN THIS REPOSITORY SINCE `p555` AND WAS NEVER RUN ON THE ADDRESS. 🔴 THIS BASE'S OWN LEDGER IS WRONG ABOUT TWO LICENCES, BOTH IN THE UNSAFE DIRECTION. 🟢 `42,759★` OF PERMISSIVE EDUCATION AGENT WAS SITTING IN THE BACKLOG. 🔴 THE EIGHT LEGS NIL A 26TH TIME — `21/21` HELD.**
 
 **Verification channels, re-tested before use at p676.** `git ls-remote --symref` 🟢 **live** (and the only working existence oracle this session has); `raw.githubusercontent.com` 🟢 **live**; `gh api search/repositories` 🟢 **live**, OR-batched per `671-G`; `gh api repos/{owner}/{repo}` 🔴 **403** channel-wide, as at `p673`; **`curl -sI https://github.com/...` 🔴 REFUTED AS AN ORACLE — see `676-E`.**

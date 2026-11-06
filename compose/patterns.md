@@ -7,7 +7,7 @@ updated: 2026-11-06
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
-> **The licence rule that governs all `48` patterns below — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
+> **The licence rule that governs all `50` patterns below — 🔄 re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
 ## Base architecture
 
@@ -1514,3 +1514,57 @@ marked scripts ──► feature + rubric layer ──► calibration ──► 
 
 **Estimate.** 5–7 weeks: 1 week Opencast integration and metadata extraction, 1–2 weeks transcription at archive scale (GPU-bound; this is the cost line — price it against the hours of video, not the number of courses), 1–2 weeks segmentation and retrieval tuning, 1 week the answer-and-citation UI, 1 week the lecturer report. 🔵 **Pilot on one department's single term first** — archive-wide transcription before anyone has validated the retrieval quality is the most common way this pattern burns its budget.
 
+
+## P49 — The classroom that watches itself, on hardware the institution owns (EMEA data-residency, APAC rural, Sub-Saharan Africa; 7–9 weeks to a deployable appliance) 🆕 new at p677
+
+**The gap it fills.** Every classroom-analytics pitch in this sector — attendance, participation, engagement, session summaries, lecture capture — has had to send audio and video to a hosted API. In an EMEA public-sector tender, a Gulf private-school group under KHDA guidance, or any Annex III assessment scoping, **that single architectural fact loses the deal before the pedagogy is discussed**, and the offline-first programmes this base tracks across Sub-Saharan Africa (`agents/trending.md` `677-I`) cannot use it at all. `P47` built an offline *delivery* appliance; **P49 is the offline *observation* appliance**, and until p677 this base had no permissive component for it.
+
+### The parts — all verified, all on the shelves
+
+| Role | Component | Licence | Where filed |
+|---|---|---|---|
+| Multimodal classroom pipeline + **hardware benchmarking** | [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **Apache-2.0** (`11,351 B`, `3f17cff4210f`) | `repos/foundations.md` 🆕 p677 |
+| Local inference runtime | `ollama/ollama` (or OpenVINO directly, bundled above) | **MIT** | `repos/foundations.md` |
+| Offline content + learner shell | `learningequality/kolibri` | **MIT** | `repos/foundations.md` |
+| Synchronous classroom client (when the room is also remote) | [`netless-io/flat`](https://github.com/netless-io/flat) | **MIT** (`1,062 B`, `8fa1566550df`) | `verticals/solutions.md` 🆕 p677 |
+| Launch from the incumbent LMS / record the evidence | `Cvmcosta/ltijs` (LTI 1.3) + `yetanalytics/lrsql` (xAPI) | **Apache-2.0** / **Apache-2.0** | `repos/foundations.md` |
+| Curriculum grounding (England) | [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | **MIT** (file spelled `LICENCE`) | `repos/foundations.md` 🆕 p677 |
+
+### How it wires together
+
+1. **Weeks 1–2 — benchmark before you quote.** Run the suite's **own benchmarking tools** on two or three candidate boxes (CPU-only, integrated GPU, NPU) against the client's real room audio. 🔵 **This is the step no other pattern in this base can perform, and it is the one that decides the margin:** the deliverable of week 2 is a hardware bill of materials with measured throughput, not an estimate.
+2. **Weeks 3–5 — stand up Smart Classroom on-premise.** ASR plus speaker diarization for the session transcript; multi-camera pose detection and student re-identification only if the client's DPIA permits it — **default them off.** Summarisation, mind-map and session-report generation run locally through OpenVINO. Nothing leaves the building.
+3. **Weeks 5–7 — the evidence spine, reused from `P17`/`P43`.** Launch the teacher-facing report from the incumbent LMS over **LTI 1.3**; write every observation as **xAPI** statements into `lrsql`. 🔵 **The statement log is the deliverable the buyer's counsel reads**, and it is what turns "AI watched the class" into an auditable record with a retention policy.
+4. **Weeks 7–9 — harden.** The suite's README says **reference and demonstration, explicitly not production**: this is where the engagement's real work sits — auth, multi-tenancy, upgrade path, model pinning, failure modes when a camera drops. **Quote it as hardening, not as integration.**
+
+### 🔴 What this pattern does not claim
+
+- ⚠️ **`2★`, no release, no tag.** `education-ai-suite` is adopt-and-harden, and a client must be told that the upstream is a vendor reference project, not a maintained product. Pin a commit.
+- 🔴 **Pose detection and re-identification of students are the highest-risk features in this entire base.** Under the EU AI Act, **emotion recognition in educational settings has been prohibited since February 2025**, and behavioural inference sits adjacent to it; Vietnam's **Decision No. 33/2026/QD-TTg** names behavioural analysis in education as high-risk. **Ship the audio pipeline by default and treat video as a separately scoped, separately consented module** — or do not ship it.
+- ⚠️ **`netless-io/flat` is MIT but builds against Agora's commercial RTC SDK.** The client is free; the transport is metered. Price the minutes or plan a WebRTC substitution.
+- 🔵 **Curriculum grounding is national.** The Oak row serves England. For Brazil use `bncc-dev/bncc-pacotes` (MIT code + CC BY 4.0 data), for Germany `telekom/ki-in-schulen`. **There is no supranational curriculum source and this pattern does not pretend otherwise.**
+
+## P50 — Publish a shelf a client's engineer can trust: the filing gate (any region; 1 week, then a standing gate) 🆕 new at p677
+
+**Why this is a pattern and not an internal chore.** Globant hands clients curated technology shelves — *these are the permissive bases, these are the licences, build here*. p677 measured what happens without a filing gate: on this base's own shelves, **`6` of `11` rows a provenance ledger recorded as published were absent**, one address was claimed-as-filed by **two passes `25` days apart**, and **`4` duplicate rows** inflated two headline counts, one pair carrying **opposite recommendations for the same repository**. 🔵 **Every one of those defects would have reached a client as either a missing option or contradictory advice, and none is a research failure.** The research was right. See `T61`, `T62`.
+
+### The gate — four checks, no network, seconds to run
+
+| # | Check | Implementation | What it catches |
+|---|---|---|---|
+| 1 | **Filing assertion** | For every *“filed to” / “promoted to”* cell, `grep -iF <address> <path the cell names>` | A row the ledger says is shelved and is not. Caught all `7` p677 defects |
+| 2 | **Distinct-subject count** | Extract the address from the **subject column only**; compare row count to distinct count | Duplicate rows, which a row-count re-derivation cannot see |
+| 3 | **Cell arity** | Every row's `\|`-count against its own table header | A stray `\|` that silently eats a cell — `p674` lost `1,190` characters of published rationale this way |
+| 4 | **Contradiction scan** | For any duplicated subject, diff the recommendation cells | Two rows, one repository, opposite advice — the `frappe/lms` case |
+
+### How to wire it
+
+1. **Day 1–2** — implement as a pre-commit hook over the shelf files. Checks 1–3 are pure text; check 4 flags for human review rather than deciding. 🔵 **Case-insensitive address matching is not optional**: a naive check reports `autolab/autolab` missing when the shelf says `autolab/Autolab`, and a gate with false positives gets switched off.
+2. **Day 3–4** — run it over the existing corpus and **triage, do not auto-fix.** A missing row may be an unfiled finding worth filing (as at p677, where all six were legitimate and were filed) or a row deliberately refused. **The gate reports; a human dispositions.**
+3. **Day 5, then standing** — fail the build on checks 1 and 3, warn on 2 and 4.
+
+### 🔵 Why a client buys this
+
+- **It is the cheapest credibility artefact in a knowledge-engineering engagement.** A shelf whose every provenance claim is machine-verified against its own target is a different product from one that merely cites sources well.
+- 🔵 **It generalises to any RAG or knowledge pipeline that writes both an index and a corpus** — the index is an assertion about the corpus, and almost nobody asserts it. The failure mode is identical: retrieval cites a document the corpus does not contain.
+- ⚠️ **It does not improve research quality and must not be sold as if it did.** It closes the gap between what was found and what was published — which, on the evidence of p677, is where this class of system actually loses its accuracy.

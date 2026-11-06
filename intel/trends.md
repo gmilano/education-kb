@@ -926,3 +926,48 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 
 ⚠️ **Bounded, and the bound is stated.** `411★` is one address. `T60` claims the tier is *not uniformly copyleft*; it does not claim a permissive SIS exists at every scale, and this base has found exactly one. The next pass should test the tier at the **training-centre / corporate-academy** scale, which neither `T50` nor `T60` has measured.
 
+
+## T61 — A knowledge base fails at publication before it fails at research, and nothing in the pipeline reads the destination file 🆕 new at p677
+
+**Confidence: high — measured, not inferred.** p677 audited `p597`'s promotion ledger — `11` addresses, each with a *“promoted to”* cell naming a shelf file — against the files those cells name. **`4` correct, `1` on a different shelf than claimed, `6` absent from every shelf.** And [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) was claimed-as-filed by **two passes `25` days apart** while absent throughout; `prometheus-eval` and `rubric`, claimed in the same breath, are in **none** of the eight shelf files.
+
+🟢 **The measurements were sound.** All six absent payloads re-measured at p677 to **exactly** the byte counts the ledger published. **So the failure is not epistemic — it is clerical, and it is invisible precisely because the research half worked.**
+
+🔵 **Why this is a trend and not an incident.** This base verifies licences byte-for-byte against the internet, re-reads payloads across passes, grades operative bodies and pins digests — an unusually rigorous apparatus, pointed entirely **outward**. It has **no check pointed at itself**: no pass has ever asked *“is the row I said I filed actually in that file?”* That asymmetry is structural in automated knowledge bases, because the external claim is the one that feels falsifiable. 🔴 **The cost is total for the affected rows:** an unpublished row and a wrong row are indistinguishable to the studio engineer who opens the shelf before an engagement.
+
+🔧 **The remedy is `6` lines and no network:** for every *“filed to”* / *“promoted to”* cell, `grep -iF` the address against the path the cell itself names. Run today it finds all seven defects. **`ACTION p677-B`.**
+
+🔵 **Generalises past this KB.** Any pipeline that writes a provenance ledger and a content shelf in the same run should treat the ledger as an **assertion about the shelf** — and assert it. A ledger never checked against its own target is documentation, not provenance.
+
+## T62 — Re-deriving a count from the table fixes staleness and creates blindness to duplication 🆕 new at p677
+
+**Confidence: high — measured.** Four separate passes repaired a *stale* row count on these shelves (`p658`, `p663`, `p668`, `p676`), and the remedy each time was **“re-derive by counting the table rather than incrementing.”** p677 measured a different way — extracting the address from the **subject column only** and looking for repeats:
+
+| Shelf | Rows | Distinct subjects |
+|---|--:|--:|
+| `agents/top.md` | `59` | `58` |
+| `repos/foundations.md` | `128` | 🟢 `128` |
+| `verticals/solutions.md` | `61` | `58` |
+
+**All four duplicate rows were created at p676**, each labelled *“New at p676”*, each on a repository its own shelf already carried (`OpenMAIC`; `OpenOlat` since p653; `Academico` since p664; `frappe/lms` earlier). **The counts are no longer behind the table; they are ahead of the inventory.**
+
+🔵 **The mechanism is general: a remedy inherits the blind spot of the thing it measures.** Counting rows is a faithful measure of rows and is silent about subjects, so the fix for staleness cannot see double-counting — and the pass that re-derived the number correctly still published a wrong one. **A row count is not an inventory count.** 🔴 **The harm is not cosmetic.** The two `frappe/lms` rows give **opposite advice** — one recommends it, the p676 one flags it as AGPL-3.0 and not a build-on option — and a reader gets whichever row they reach first. The two `OpenMAIC` rows publish two different star figures for one repository in one table.
+
+🔵 **Same family as `T56`, one level up.** `T56`: a published byte count can be an artefact of **how** it was read. `T62`: a published count can be an artefact of **what unit** was counted. In both the number is honest and the *question* was wrong. 🔧 **`ACTION p677-C`:** add the distinct-subject check to `ingest/derive-counts.py`. 🔧 **`ACTION p677-A`:** merge the four pairs, preserving both cells' facts.
+
+## T63 — A correction verified on the channel that caused the defect is not a correction 🆕 new at p677
+
+**Confidence: high — four payloads measured four ways.** `p674` correctly diagnosed that `11,357` is *also* the newline-stripped size of the `11,358`-byte Apache-2.0 payload, so the byte count alone cannot separate the two canonicals, and it added digests to pin them. **One of the two digests it published is itself a stripped-capture artefact:**
+
+| Payload | Bytes | sha256₁₂ |
+|---|--:|---|
+| `apache.org` canonical, as served | `11,358` | `cfc7749b96f6` |
+| `apache/.github` canonical, as served | `11,357` | **`c71d239df917`** |
+| `apache.org` canonical, newline stripped | `11,357` | **`58d1e17ffe51`** ← published as the `apache/.github` canonical |
+| `apache/.github` canonical, newline stripped | `11,356` | `43070e2d4e53` |
+
+**Four distinct values; the page published two of them as the two canonicals, and both describe the same document.** The distinguisher names one canonical twice, so it distinguishes nothing.
+
+🔵 **The operational cause is mundane and reproducible: a shell `$(...)` capture strips trailing newlines**, so any payload measured through command substitution is silently one byte short and hashes to a value that exists nowhere on the internet. **Write the payload to a file; hash the file.** p677 re-measured all four that way, and re-confirmed `c71d239df917` independently from a new address — [`THU-MAIC/MAIC-Core`](https://github.com/THU-MAIC/MAIC-Core)'s `LICENSE` is byte-identical to `apache/.github` (`diff` exit `0`).
+
+🔵 **The general claim, which is the point of this trend:** a remediation pass must verify on a **different channel** from the one that produced the error, because the cause is still live in the original channel. `T63` is the fourth member of a family this base has measured end to end — `671-R` (byte equality is not identity), `673-A` (hash inequality is not mutation), `676-A` (a `+2` residual concealing an edit to the operative terms), and now **the fix for a measurement defect, measured with the defect.** 🟢 **Each was caught by adding a channel, never by trusting one harder.**
