@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p675) — 🔴 **`P1007` NAMED THE RIGHT CHANNEL AND RECORDED THE OPPOSITE OF WHAT THAT CHANNEL SAYS. BOTH PERSUADE REPOSITORIES GRANT `CC BY 4.0`; THE `NC-SA` TEXT BELONGS TO THE AUTHOR'S *OTHER* CORPUS. THE SECTOR'S ONE SHIPPABLE WRITING CORPUS HAS BEEN SITTING BEHIND A CLAUSE THAT WAS NEVER THERE.**
+
+**Verification channels, re-tested before use at p675.** `git ls-remote --symref` / `--heads` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live**; `github.com` rendered pages 🟢 **live**; `api.github.com` 🔴 **blocked by session repository scope** (`"GitHub access to this repository is not enabled for this session"` on all four probes); `curl` direct to `github.com` 🔴 **`403` at the agent proxy** — rendered reads must go through the fetch tool, not `curl`; `zenodo.org` and `www.commonlit.org` 🔴 **DNS `ENOTFOUND`** — outside this session's network policy, so the two corpus *publisher* pages could not be read and the grant chain below is grounded on the **authors' own repositories** instead.
+
+### `675-A` — 🔴 the corpus grant chain, read at every author repository instead of at one
+
+🔵 **`P1007` is this base's own rule and it is correct:** *"a corpus's licence is stated by its AUTHOR's repository, never by its funder's or distributor's page."* 🔴 **The verdict recorded beside it is the opposite of what that repository says.** `Gap 390` / `T21` has carried *"PERSUADE 2.0 is `CC-BY-NC-SA-4.0` by its author's own repo (`P1007`)"* since p57. Both of the author's repositories were read at p675:
+
+| Corpus | Author's own repository | Grant **in that repository**, verbatim | Licence file? |
+|---|---|---|---|
+| **PERSUADE 1.0** | [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus) — `main` @ `6b69a55c9d36`, README `3,486 B`, sha256₁₆ `809c25c2379d639e` | 🟢 *"The data is provided under a Creative Commons Attribution 4.0 International License (**CC BY 4.0**)."* ⚠️ The sentence ends in a truncated link fragment `d.en)` — the tail of a `deed.en)` URL — so the grant is the **last line of a damaged README** | 🔴 **None** |
+| **PERSUADE 2.0** | [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) — **69★**, 5 forks, 16 commits, `main` @ `5bdbad1175d1`, README `2,081 B`, sha256₁₆ `2f984c8712650050` | 🟢 *"The data is provided under Creative Commons Attribution 4.0 International License (**CC BY 4.0**)."* | 🔴 **None** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license.txt` all `404`; GitHub detects no licence |
+| **CLEAR** *(same author, different corpus)* | [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) — **26★**, 7 forks, 4 commits, `main` @ `dbf1cf0df30b`, README `1,795 B`, sha256₁₆ `44d9d46bbd540d39` | 🔴 *"The data is provided under a **CC BY-NC-SA 4.0** DEED Attribution-NonCommercial-ShareAlike 4.0 International license"* | 🔴 **None** — same six filenames, all `404` |
+
+🔴 **So `NC-SA` is a real sentence by this author — about CLEAR, not about PERSUADE.** The two READMEs are the same single-sentence construction, by the same author, differing in one token. 🔵 **And the redistributor made the same substitution:** `learning-commons-org/evaluators`' `LICENSE.md` (`1,615 B`, sha256₁₆ `86c7be78af8b`) states *"The original dataset from PERSUADE 2.0 Corpus can be found [here] licensed under CC BY-NC-SA 4.0"* — a claim **about upstream** that upstream contradicts, pointing at the very repository that contradicts it.
+
+🔴 **Why the p57 reasoning did not catch it, which is the part worth keeping.** `P1007` rejected a `CC BY 4.0` claim because it sat on the **funder's** page and described *"14 000 essays where the author's repositories describe over 25 000"* — a different, smaller release. 🟢 **That argument was sound and it does not reach this case:** the author's own repositories, describing **25,000+** essays and **280,000+** discourse annotations, say `CC BY 4.0` too. 🔵 **The permissive claim was never only the funder's.**
+
+🟢 **The commercial consequence, which is the reason this matters at all.** Of the two corpora that made the sector's evaluation layer unshippable, **one was never non-commercial.** A Globant automated-writing-evaluation engagement may:
+
+- 🟢 **train on PERSUADE (1.0 or 2.0) under `CC BY 4.0`** — 25,000+ argumentative essays, US grades 6–12, 15 prompts, holistic scores, per-element proficiency scores, 280,000+ double-blind adjudicated discourse annotations, per-writer demographics. **Attribution only. No NonCommercial. No ShareAlike.** This is the only commercially-usable, education-specific, human-scored writing corpus this base has found in 675 passes;
+- 🔴 **not use CLEAR in a commercial artefact** — `NC` **and** `SA` at source, confirmed at the author. `SA` reaches a fine-tune;
+- 🔴 **not use Learning Commons' *annotated* editions of either** — that annotation layer is `CC BY-NC-SA 4.0` in its own right, whatever upstream granted.
+
+🔵 **The mechanism, stated as a rule rather than as an incident.** The error ran in the **safe** direction — more restrictive than the truth — and an over-restrictive licence error produces no ticket, no breach and no complaint, only work that was never proposed. 🔴 **It is the one class of licence error that is invisible by construction**, which is how a correct principle (`P1007`) and an incorrect verdict sat on the same line for 618 passes. 🟢 **`P675-A` adopted: a grant verdict must quote the payload it came from. `P1007` named the channel but recorded no quotation, and a channel without a quotation cannot be audited by the next pass.**
+
+⚠️ **Three limits, declared.** (1) Neither PERSUADE repository nor CLEAR contains the data — PERSUADE 2.0 ships two Google Drive links (test set a password-protected zip, password published in the README), CLEAR's CSV is likewise out-of-tree; **the grant is attached to a README, not to the bytes it governs.** (2) `zenodo.org`, `www.commonlit.org` and `sciencedirect.com` were **unreachable on this session's network policy**, so the publisher-side and journal-side terms were not read and cannot corroborate the author-side READMEs. (3) PERSUADE 1.0's grant sentence sits in a **damaged line** (`…d.en)`), so a future pass should re-read it before relying on 1.0 specifically; **2.0's sentence is clean**, and 2.0 is the release to use anyway under `P1009`.
+
+🔵 **`Gap 500-E`** (*"has anyone asked whether a commercial licence for the corpora exists"*) is **partly answered**: for PERSUADE no commercial licence is needed. For CLEAR the question stands and now has a named counterparty.
+
+### `675-B` — 🔄 the channel alias is `T273`, NOT a new finding — and the arm that had never been graded is this base's own `Ref` column
+
+🔵 **p675 measured this independently and was about to publish it as novel. It is not.** The mechanism is `T273` (p273), re-stated as `T429` and `Gap 419-B`, with a standing instrument since p428: 🟢 **`make gate-branch-alias` was run at p675 and PASSES (36 assertions over 26 controls).** 🔴 **The near-miss is recorded because it is the base's own recurring defect class** — a correct measurement nearly re-sold as a discovery because the prior record sits under a different name. 🟢 What follows is therefore *corroboration plus one ungraded arm*, not a claim.
+
+🔴 **`raw.githubusercontent.com` serves `/master/` on repositories that have no `master` ref.** Four fresh positives, all with `main` as the only or default head:
+
+| Repository | `ls-remote --heads` | `raw…/master/README.md` | `raw…/nonexistent-branch-xyz123/…` |
+|---|---|---|---|
+| `scrosseye/CLEAR-Corpus` | `main` **only** (single ref in the whole repo) | 🔴 **`200`**, 1,795 B — byte-identical to `main` | 🟢 `404` |
+| `scrosseye/persuade_corpus_2.0` | `main` **only** | 🔴 **`200`**, 2,081 B | 🟢 `404` |
+| `HKUDS/DeepTutor` | 11 heads, **no `master`** | 🔴 **`200`**, 89,069 B | 🟢 `404` |
+| `learning-commons-org/evaluators` | 44 heads, **no `master`** | 🔴 **`200`**, 15,440 B | 🟢 `404` |
+
+🟢 **And the asymmetry `T273` left as *"mechanism NOT established"* is now run on both signs.** On four **`master`-only** repositories — `CAHLR/pyBKT`, `adlnet/xAPI-Spec`, `chamilo/chamilo-lms`, `numbas/Numbas` — `raw…/master/README.md` is a genuine `200` and 🔴 **`raw…/main/README.md` is `404`**. 🟢 **So `master` is aliased and `main` is not, measured at both signs over 8 repositories**, and an arbitrary name `404`s on all of them: a special-case alias for the historic default name, not a general fallback.
+
+🔴 **Why it bears on this base's shelves specifically.** `Gap 428-D` declared, on the pass that built the gate, that `branch-alias-census` *"grades PATHS and cannot see the PROSE that qualifies them"* — it inspects published `raw`/`blob` URLs. 🔴 **The `Ref` column is prose, so nothing has ever graded it**, and a `Ref` of `master` taken from a successful `raw` read is not evidence that `master` exists. 🔵 `T36` has been catching only the opposite error.
+
+🟢 **So it was swept rather than worried about.** Every row on the three shelves whose `Ref` cell reads `master` — **70 cells over 61 distinct repositories**, across `verticals/solutions.md` (25), `repos/foundations.md` (44) and `agents/top.md` (1) — was re-resolved with `ls-remote --heads` plus `--symref HEAD`:
+
+> **`61 / 61` MASTER-EXISTS, and in all 61 `master` is also the *default* branch. `0` corrupted cells. `0` unreachable.**
+
+🟢 **That is the useful outcome, and it closes an exposure rather than opening one.** The alias is live on the channel this base reads payloads with, it had an ungraded arm, and that arm is clean. 🔵 **`P675-B`: apply `ACTION p419-B` (*a ref is established by `ls-remote`, never by a `raw` `200`*) to the `Ref` **column** and not only to published paths — and look up `T273` before measuring this again.**
+
+### `675-C` — 🟢 the `flysheep-ai` placement action, discharged — and the owner channel is empty
+
+`ACTION` carried since p154: *"`flysheep-ai` unplaced; its APAC label is a description-language guess. Its owner profile was never fetched — one rendered call."*
+
+🟢 **The call was made.** [`github.com/flysheep-ai`](https://github.com/flysheep-ai) is a **user** account with **no `location`, no company and no website** — bio only (*"My keyboard is for prompting, not coding."*). 🔴 **The owner channel yields nothing**, which confirms p668's ranking of that channel as the weakest rather than rescuing it.
+
+🟢 **The placement stands, re-grounded on the repository's own body text** — this base's stronger channel. [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) (**MIT**, `1,068 B`, sha256₁₆ `23b91d7c0aef`, `Copyright (c) 2026 flysheep-ai`) is a collection of Claude Code skills whose `README.md` names a **national examination system** and its cohort outright: 高考 (*gaokao*, the PRC national college entrance examination) across 理科 and 文科 tracks, with **适用人群: 中国高三理科学生** — *"intended audience: Chinese grade-12 science students."* 🔵 **A named national examination is a jurisdiction, not a language guess** → **APAC**, on `675-C`.
+
+### `675-D` — the supply legs, nilled, with the list written down so it is not re-bought
+
+Four global legs (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS ERP SIS MIT Apache 2026`, `AI education industry trends 2026`) plus the `ai-in-education` and `ai-tutor` topic shelves (40 rows read).
+
+🔴 **No filable novel address.** Every in-scope repository returned was already in this base: `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `satvik314/educhain`, `CAHLR/OATutor`, `Miaotofu01/Study-Mate`, `24kchengYe/human-skill-tree`, `ankimcp/anki-mcp-server`, `ZeKaiNie/universal-examprep-skill`, `Li-Evan/Bloom`, `karanb192/algo-sensei`, `SenmuuuuW/universal-diagnostic-tutor-skill`, `artcc/freelingo`, `KeWang0622/kaogong-skill`, `nichochar/ari`, `zijinz456/OpenTutor`, `tutornew/OpenTutor`, `flysheep-ai/education-skills`, `PrepLabsAI/InterviewMentor`, `SimonsTang/feifei-companion`, `Selleo/mentingo`, `ArnaudGuiovanna/tutor-mcp`, `ahmedEid1/lumen`, `Zenglian990/AI_Tutor_Release`, `GeminiLight/SocialCoach`, `learning-commons-org/knowledge-graph`, `learning-commons-org/evaluators`, `Jellypod-Inc/school-skills`, `patchy631/ai-engineering-hub`, `learningequality/kolibri`, `moodle/moodle`, `openedx/openedx-platform`, `overhangio/tutor`, `sakaiproject/sakai`, `instructure/canvas-lms`, `bigbluebutton/bigbluebutton`, `h5p/h5p-php-library`, `frappe/lms`, `openeducat/openeducat_erp`, `jupyterhub/jupyterhub`, `CAHLR/pyBKT`, `open-spaced-repetition/fsrs-rs`.
+
+🔵 **One row is new to the trending record but refused for `agents/top.md`:** [`Jellypod-Inc/school-skills`](https://github.com/Jellypod-Inc/school-skills) — **MIT** (`1,065 B`, sha256₁₆ `d9290be59ddc`, `Copyright (c) 2026 Jellypod`), **11★**, self-described *"Alpha preview. Seven skills ship today."* 🔴 **Unplaced, and said so:** its README names no jurisdiction, standards body or institution, and the owner channel is a company name alone. 🔵 At 11★ and alpha it adds a category instance this base already holds four of (`anthropics/k12-teacher-skills`, `GarethManning/education-agent-skills`, `flysheep-ai/education-skills`, `virtualryder/edu-ai-agents`), so it is **recorded, not shelved**.
+
+🟢 **`Gap 500-F` re-run and unchanged:** no AI tutor agent *first released* in October or November 2026 surfaced on any axis. `artcc/freelingo`, `nichochar/ari` and `Zenglian990/AI_Tutor_Release` all pushed within 5 days, but none is new; `DeepTutor` (July 2026) remains the newest significant entrant.
+
+### `675-E` — headline rows re-read, and `OpenMAIC` moved
+
+| Row | Held at p674 | Read at p675 | Verdict |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | **55,474** ★, Apache-2.0 | **55.5k** ★ rendered; release **`v1.7.1`, 2026.11.1** — *"v1.7.1 is live"* | 🟢 agrees; 🆕 **v1.7.1 is newer than the `v1.4.0` ladder this base last recorded for the shelf's other headline** |
+| `THU-MAIC/OpenMAIC` | **42,743** ★, MIT | **42.7k** ★ rendered | 🟢 agrees |
+| `patchy631/ai-engineering-hub` | — | **41.2k** ★, MIT | 🟢 holds |
+| `satvik314/educhain` | **387** ★ | **387** ★, MIT, `v0.3.13` is still the README's *"Current Version"* (Oct 2024) | 🟢 agrees; ⚠️ **the version ladder is 2 years stale even though the repo pushed in May 2026** |
+| `CAHLR/OATutor` | — | **276** ★, MIT | 🟢 holds |
+
+
 ## 🆕 2026-11-06 (p674) — 🔴 **THE BYTE COUNTS ON THIS BASE'S SELL SHELVES WERE AUDITED AGAINST THE PAYLOADS THEY CLAIM TO MEASURE. `62` OF `69` REPRODUCE; `5` ARE SHORT BY EXACTLY THEIR PAYLOAD'S TRAILING-NEWLINE RUN; AND `1` OF THOSE `5` IS PROVEN RATHER THAN INFERRED, BECAUSE ITS PUBLISHED *DIGEST* IS THE DIGEST OF THE STRIPPED BYTES. 🟢 ALSO: A ROW THIS SHELF CALLED "NOT RE-READABLE" IS SEARCH-INDEX-ABSENT AND ANSWERABLE FROM PyPI, AND A STRAY `|` HAD BEEN EATING `1 190` CHARACTERS OF PUBLISHED EVIDENCE.**
 
 **Verification channels, re-tested before use at p674.** `git ls-remote --symref` 🟢 **live**; `raw.githubusercontent.com` 🟢 **live** (`HTTP/2 200`); `gh api search/repositories` 🟢 **live**; 🔴 `gh api repos/{owner}/{repo}` **403 — session-scoped**, and 🔴 the repository **HTML page is 403 channel-wide** (`curl` → `378 B` error body), so stars come from `search/repositories` exactly as `670-H` established. 🔴 **`eur-lex.europa.eu` does not resolve in this environment** (outside the session's network policy), so the Omnibus dates this base holds could **not** be re-grounded on the primary text this pass — recorded as a channel limit, not as a doubt about the finding.

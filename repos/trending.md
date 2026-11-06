@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-06
 ---
 
+## 🆕 2026-11-06 (p675) — 🟢 **TWO ADDRESSES GAINED, AND BOTH ARE CORPORA RATHER THAN CODE — THE FIRST TIME THIS SHELF HAS FILED A DATASET AT ITS SOURCE**
+
+**What this window found.** The four mandated global legs and the two topic shelves returned **no novel code repository** (the full carried list is in [`agents/trending.md`](../agents/trending.md) `675-D`, written out so the next pass does not re-buy it). 🟢 **The two novel addresses came from walking a grant chain backwards instead of searching forwards** — from `learning-commons-org/evaluators`'s `LICENSE.md` to the corpora it annotates, read at the repositories of the author who holds the copyright. 🔴 **Three author repositories were read, and they do not say what this base recorded:** PERSUADE 1.0 and 2.0 both grant `CC BY 4.0`; CLEAR, by the same author in the same one-sentence form, grants `CC BY-NC-SA 4.0`.
+
+### `675-R1` — the two new foundations rows, and why the direction of the error matters
+
+| Repository | Stars | Grant, read at the holder's own repo | Region | Why it is filable |
+|---|---|---|---|---|
+| [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) | **69** | 🟢 **CC BY 4.0** — README prose, `2,081 B`, sha256₁₆ `2f984c8712650050`, `main` @ `5bdbad1175d1`. 🔴 **No licence file exists** (six filenames probed, all `404`); GitHub detects no licence | **North America** — *"25,000 argumentative essays produced by 6th-12th grade students in the **United States** for 15 prompts"*, from the repository's own README | 🟢 **The only commercially-usable, education-specific, human-scored writing corpus this base has found.** `Gap 390` / `T21` recorded it as `CC-BY-NC-SA-4.0` *"by its author's own repo (`P1007`)"* — **both** author repositories say **CC BY 4.0** (1.0 at [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus), `6b69a55c9d36`, README `3,486 B`, sha256₁₆ `809c25c2379d639e`). 🔵 1.0 is **not** filed: its README is a `P1009` redirect to this slug |
+| [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) | **26** | 🔴 **CC BY-NC-SA 4.0** — README prose, `1,795 B`, sha256₁₆ `44d9d46bbd540d39`, `main` @ `dbf1cf0df30b`. 🔴 **No licence file exists** (same six probed) | **North America** — CommonLit Ease of Readability; *"~5,000 text excerpts leveled for 3rd-12th grade readers"*, teacher-rated | 🔴 **Filed as a do-not-ship row.** `NC` **and** `SA` at source. 🔵 **This is also the sentence this base attached to the wrong corpus**: same author, same one-sentence form, one token apart. It is the English readability ground truth and it cannot enter a commercial artefact |
+
+🔵 **Both rows share a shape this shelf has not carried: the grant is in the README and nowhere else, and the data is not in the repository.** PERSUADE 2.0 ships two Google Drive links (test set a password-protected zip, password published in the README); CLEAR's CSV is likewise out-of-tree. 🟢 So a licence-file sweep — the instrument this base trusts most — returns **`NOASSERTION`/none on both** and would have shelved neither. The grant had to be read as prose.
+
+### `675-R2` — 🔄 the `master` alias on the `raw` channel is `T273`, re-confirmed — and the `Ref` **column** graded for the first time
+
+🔵 **Not a new finding, and p675 nearly filed it as one.** The mechanism is `T273` / `T429` / `Gap 419-B`, with a standing gate since p428 — 🟢 `make gate-branch-alias` **run at p675, PASSES**. Full measurement and both-sign controls in [`../agents/trending.md`](../agents/trending.md) `675-B` and [`../intel/trends.md`](../intel/trends.md) `T58`.
+
+🟢 **Corroboration:** `raw…/master/…` returns **`200`** on four repositories with no `master` head (`scrosseye/CLEAR-Corpus`, `scrosseye/persuade_corpus_2.0`, `HKUDS/DeepTutor`, `learning-commons-org/evaluators`), while on four **`master`-only** repositories (`CAHLR/pyBKT`, `adlnet/xAPI-Spec`, `chamilo/chamilo-lms`, `numbas/Numbas`) `raw…/main/…` is **`404`** — `T273`'s asymmetry, now measured at both signs. Arbitrary refs `404` throughout.
+
+🟢 **The new arm.** `Gap 428-D` says `branch-alias-census` grades published **paths** and cannot see qualifying prose. 🔴 **The `Ref` column is prose and had never been graded.** Swept at p675: **`70` `master` cells over `61` distinct repositories** across the three sell shelves → **`61 / 61` confirmed by `ls-remote --heads`, `master` the default in every case, `0` corrupted cells.**
+
+### `675-R3` — platform rows re-read on the rendered channel
+
+| Repository | Stars | Licence as the repository serves it | Note |
+|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **9.3k** | 🔴 **LGPL-3.0** (`7,652 B`, sha256₁₆ `e3a994d82e64`, `develop`) | 🟢 agrees with the `verticals` shelf; ⚠️ default ref is **`develop`**, another `T36` instance |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **6.9k** | 🔴 **AGPL-3.0** (`34,520 B`, sha256₁₆ `57c8ff33c9c0`, `master`) | 🟢 agrees; the `34,520 B` band this base already holds |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **1.1k** | 🔴 **AGPL-3.0** (`34,523 B`, sha256₁₆ `0d96a4ff68ad`, `release`) | 🟢 reproduces `561-F` **to the byte**; 🔴 licence lives at **`LICENSE.txt`**, not `LICENSE`, and the default ref is **`release`** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7.6k** | 🔴 **GPL-3.0** | 🟢 holds |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **1.2k** | 🟡 **ECL-2.0** | 🟢 holds — and worth restating, because two secondary sources read this pass call Sakai *"Apache-2.0"*. It is not |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **8.2k** | 🔴 **AGPL-3.0** | 🟢 holds. 🔵 `github.com/openedx/edx-platform` **redirects** to this slug — the old name still circulates in 2026 write-ups |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **1.2k** | 🟢 **MIT** | 🟢 holds |
+| [`frappe/lms`](https://github.com/frappe/lms) | **3.4k** | 🔴 **AGPL-3.0** | 🟢 holds |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **905** | 🟡 **LGPL-3.0** | 🟢 holds |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | **8.4k** | 🟢 **BSD-3-Clause** | 🟢 holds |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **108** | 🟢 **MIT** | 🟢 holds |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | **154** | 🔴 **GPL-3.0** | 🟢 holds |
+
+
 ## 🆕 2026-11-06 (p674) — 🔴 **THE DISCOVERY LEGS ARE SATURATED AND THIS PASS MEASURED THE SATURATION INSTEAD OF PADDING AROUND IT: `102` CANDIDATES, `60` NOVEL ADDRESSES, **`0`** FILABLE. 🟢 THE SUPPLY CAME FROM A PACKAGE INDEX AND FROM THIS BASE'S OWN PUBLISHED CELLS.**
 
 **What this window actually found.** The four mandated global legs plus four regional legs returned **no repository address this base did not already hold** — the **26th consecutive nil**, consistent with `673-F`. 🔵 That is now a stable property of this corpus rather than a run of bad luck: `5 002` distinct GitHub addresses are referenced across this repository's Markdown, and a search leg has to clear all of them to pay out.

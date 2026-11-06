@@ -837,3 +837,49 @@ Four passes of EMEA legs on this base have returned regulation: the **Annex III*
 🔵 **Why this is a sector trend and not merely housekeeping.** This base sells *licence certainty*: the byte count and digest exist so a client can confirm that the grant in a deliverable's dependency is the grant that was audited. An artefact in that figure attacks the one claim the artefact was introduced to support. 🔴 **And the defect was in the published cells, not in the library** — this repository's own `lib/payload_measure.sh` carries the correct primitive *and* predicted, in its own header, the environment denial that stopped p674 from sourcing it. **A control that exists but is not the only path to the number is not yet a control.**
 
 ⚠️ **Scope, stated plainly: a trailing-newline error changes the SIZE and the DIGEST, never the FAMILY.** Every licence *family* verdict this base has published stands. Only byte counts and hashes moved, and only in the five cells named.
+
+## T57 — A grant verdict without a quotation cannot be audited, and the sector's corpora are where that costs money 🆕 new at p675
+
+**Confidence: high — read at every author repository in the chain, both corpora, both releases.**
+
+🔵 **`T21` and `P957` got the direction right:** as AI work moves from code to code-plus-evaluation-data, licence risk migrates to the corpus. 🔵 **And `P1007` got the channel right:** *"a corpus's licence is stated by its AUTHOR's repository, never by its funder's or distributor's page."* 🔴 **What p675 found is that the verdict recorded beside `P1007` is the opposite of what that channel says.**
+
+| Corpus | Author's own repository | Grant, verbatim | Licence file |
+|---|---|---|---|
+| **PERSUADE 1.0** | [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus) `main` @ `6b69a55c9d36` | 🟢 **CC BY 4.0** (README `3,486 B`, sha256₁₆ `809c25c2379d639e`; ⚠️ grant sentence ends in a truncated `…d.en)` link fragment) | 🔴 none |
+| **PERSUADE 2.0** | [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) `main` @ `5bdbad1175d1` | 🟢 **CC BY 4.0** (README `2,081 B`, sha256₁₆ `2f984c8712650050`) | 🔴 none |
+| **CLEAR** *(same author)* | [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) `main` @ `dbf1cf0df30b` | 🔴 **CC BY-NC-SA 4.0** (README `1,795 B`, sha256₁₆ `44d9d46bbd540d39`) | 🔴 none |
+
+🔴 **`Gap 390` / `T21` has carried *"PERSUADE 2.0 is `CC-BY-NC-SA-4.0` by its author's own repo"* since p57. Two author repositories say `CC BY 4.0`. The `NC-SA` sentence is real and belongs to the author's *other* corpus** — same single-sentence construction, same author, one token apart. 🔵 The redistributor (`learning-commons-org/evaluators`, `LICENSE.md` `1,615 B`) makes the same substitution in a claim *about* upstream, linking to the repository that contradicts it.
+
+🟢 **The trend, which is the mechanism and not the two data points.**
+
+1. **A verdict without a quotation is unauditable.** `P1007` named the right channel and recorded no quoted payload, so for 618 passes there was nothing for a successor to check the verdict *against* — only a citation to re-trust. 🟢 **Every grant cell on these shelves now carries bytes and a digest; grant *prose* must carry the sentence.**
+2. **The error ran in the safe direction, which is why nothing surfaced it.** Over-restrictive licence errors produce no ticket, no breach and no complaint — only work that was never proposed. 🔴 **It is the one class of licence error that is invisible by construction**, and this sector's corpora are where it bites, because the corpus is the valuable half.
+3. **Corpora have no licence file.** All three repositories here grant in README prose; six licence filenames `404` on each; GitHub detects no licence on any. 🔵 **SPDX classifiers, `licensee`, SBOM tooling and GitHub's own label all return nothing**, so the only working reader is a person reading a sentence — and `P965`'s inverse shape (a grant with no file) is now three instances strong.
+4. **The grant is detached from the bytes it governs.** The data is on Google Drive, not in the repositories. A README can be edited and a link replaced. 🔴 **A corpus grant can only be pinned by pinning the commit of the sentence that makes it** — which is what `P45`'s evidence pack must now do for data rows, and `P46` does.
+5. **Sibling artefacts by one author are a contamination channel.** Two corpora, one author, near-identical grant sentences, different terms. 🔵 **Read the grant on the row you are filing, never on its neighbour.**
+
+🟢 **Commercial consequence, stated once.** An automated writing evaluation product **can** be trained on PERSUADE under attribution alone — `P46` wires it. CLEAR **cannot** be shipped, and `SA` reaches derivatives including fine-tunes. 🔵 **`P675-A`: a grant verdict must quote the payload it came from.**
+
+## T58 — 🔄 `T273`'s channel alias reproduces a third time, and the arm that had never been graded is this base's own `Ref` **column** 🔄 re-measured at p675
+
+**Confidence: high — four fresh positives, the asymmetry control re-run, and a 61-repository sweep of an arm the existing census cannot see.**
+
+🔵 **This is not a new finding and p675 nearly filed it as one.** The mechanism is already this base's `T273` (p273), re-stated as `T429` and `Gap 419-B`, and it already has a standing instrument — `make gate-branch-alias` (p428, **36 assertions over 26 controls**), which 🟢 **was run at p675 and PASSES**. 🔴 **Recording the near-miss, because it is the same defect class the base keeps finding in itself:** a measurement was made, it was correct, and it was about to be published as novel because the prior pass's record lived under a different name.
+
+🟢 **What p675 adds is evidence, not a claim.** Four fresh positives for the alias, and the asymmetry `T273` left as *"mechanism NOT established"* re-run on both signs:
+
+| Probe | Repositories | `raw…/master/…` | `raw…/main/…` | arbitrary ref |
+|---|---|---|---|---|
+| **`main`-only** (no `master` head) | `scrosseye/CLEAR-Corpus` (single ref), `scrosseye/persuade_corpus_2.0` (single ref), `HKUDS/DeepTutor` (11 heads), `learning-commons-org/evaluators` (44 heads) | 🔴 **`200`**, default-branch bytes | — | 🟢 `404` |
+| **`master`-only** (no `main` head) | `CAHLR/pyBKT`, `adlnet/xAPI-Spec`, `chamilo/chamilo-lms`, `numbas/Numbas` | 🟢 `200` (genuine) | 🔴 **`404`** | 🟢 `404` |
+
+🟢 **The asymmetry is confirmed on 8 repositories at both signs: `master` is aliased to the default branch, `main` is not.** 🔵 So it behaves exactly like GitHub's legacy redirect for repositories renamed away from `master`, and not like a general fallback — arbitrary names `404`.
+
+🟢 **And the genuinely new arm.** `Gap 428-D` declared, on the pass that built the gate, that `branch-alias-census` *"grades PATHS and cannot see the PROSE that qualifies them"* — it inspects published `raw`/`blob` URLs. 🔴 **The `Ref` column of the three sell shelves is prose, so it has never been graded by anything.** p675 graded it: **`70` `master` cells over `61` distinct repositories** across `agents/top.md` (1), `repos/foundations.md` (44) and `verticals/solutions.md` (25), each re-resolved with `ls-remote --heads` plus `--symref HEAD`.
+
+> 🟢 **`61 / 61` MASTER-EXISTS, `master` the default in every case, `0` corrupted cells, `0` unreachable.**
+
+🟢 **That is the useful outcome and it closes an exposure rather than opening one:** the alias is live on the channel this base reads payloads with, it had an ungraded arm, and that arm is clean. 🔵 **`P675-B`: a ref is established by `ls-remote`, never by a `raw` `200` — which is `ACTION p419-B`'s instruction, now also applied to the `Ref` column and not only to published paths.**
+

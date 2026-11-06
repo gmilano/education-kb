@@ -7,7 +7,7 @@ updated: 2026-11-06
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
-> **The licence rule that governs all `40` patterns below — 🔄 re-derived by counting the `## P` headings at p671 (`39` at p670, plus **P40**), after the header had read *“all five patterns”* since the file held five:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
+> **The licence rule that governs all `46` patterns below — 🔄 re-counted from the `## P` headings at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
 ## Base architecture
 
@@ -337,7 +337,7 @@ ArguLens / wwrwbs/AI_AWE  (Apache-2.0 by reference, arXiv:2608.17356)
 **Why these three and not one.** ArguLens supplies the education-specific decomposition and, unusually, *grade-independent* features — which is what makes it portable to a curriculum it was not trained on. `LLM-Rubric` supplies the mechanism ArguLens lacks and that every institution demands: calibrating machine scores against the client's own markers, so the output is defensible in an appeals process. `AI-Teaching-Agent` supplies the review-state machine, and its shape — explicit approve/reject, sandboxed execution, **no automatic publishing** — is the shape an Annex III high-risk deployment needs anyway.
 
 🔴 **Three constraints to put in the proposal, not discover in week 9.**
-- **The training corpus does not come with it.** Persuade 2.0 is academic-use-only and is deliberately not redistributed. A commercial retrain needs the client's own marked scripts — which is a data-collection workstream, and often the longest one.
+- 🔧 **The training corpus does not come *in the repository* — but it is not academic-use-only, and p675 corrects that.** This bullet read *"Persuade 2.0 is academic-use-only"* for 618 passes. 🟢 **The copyright holder's own repository grants it `CC BY 4.0`**: [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0), README `2,081 B`, sha256₁₆ `2f984c8712650050`, `main` @ `5bdbad1175d1` — *"The data is provided under Creative Commons Attribution 4.0 International License (CC BY 4.0)."* Attribution only; no NonCommercial, no ShareAlike. 🔵 **And the `CC BY-NC-SA 4.0` reading is the same author's *other* corpus:** `scrosseye/CLEAR-Corpus` grants `NC-SA` in the same one-sentence form, one token apart. PERSUADE 1.0 ([`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus), README `3,486 B`, sha256₁₆ `809c25c2379d639e`) grants `CC BY 4.0` too. The `academic-use-only` reading came from `ArguLens`'s own notice; **both readings are third parties to the grant.** 🔴 **What stays true:** the data is **not in the repo** (two Google Drive links, the test set a password-protected zip), so a retrain is still a *fetch-and-attribute* step rather than a dependency — and the client's own marked scripts remain the better corpus for any non-US, non-English construct. See [`../agents/trending.md`](../agents/trending.md) `675-A`.
 - **Bias is documented by the authors, not discovered by you.** ArguLens's own licence file carries the notice: AES systems inherit bias from training data (Persuade 2.0 is US middle-school argumentative essays), and it is *"intended for research and assistive use, not for high-stakes automated decisions without human oversight."* Quote that in the proposal. It is the authors' own framing and it is the correct one.
 - **Adoption is zero.** 2★ / 2 commits and 0★ / 30 commits. These are artefacts, not projects: budget for reading papers and writing tests, and do not price it as integration.
 
@@ -1392,3 +1392,40 @@ A studio entering LATAM can spend those weeks building a tutor that will be the 
 **Why this sells.** 🟢 **EMEA:** Article 50 transparency duties have applied since `2026-08-02` and stand-alone Annex III education duties land `2027-12-02`; both need provenance a deployer can evidence, and a re-derivable pack is that evidence. 🟢 **North America:** procurement in state and district education increasingly asks for software provenance, and an SPDX label is not provenance. 🟡 **APAC:** the specific trap this pack catches is live here — `haolpku/Omni-Edu`'s Apache-2.0 grant **covers code only** and explicitly does not grant the model weights, which a repository-level licence report will miss entirely. 🔵 **LATAM:** `87%` of regional universities use AI and only `26%` have a formal strategy; a pack that answers the licence question in writing removes the cheapest reason for a procurement to stall.
 
 ⚠️ **What this pattern does NOT do, stated because the house style requires it.** A payload answers the **copyright** question only. Whether a system may be *called* — a third party's Terms of Use, an API's acceptable-use policy, the access-rights gate — is invisible to every probe here. This base has measured an MIT component that is unshippable for exactly that reason.
+
+## P46 — Automated writing evaluation you may actually sell: train on the one corpus whose holder granted commercial use (North America first; 7–9 weeks) 🆕 new at p675
+
+**Why this pattern exists now and could not have been written at p674.** This base held every education writing corpus as non-commercial. 🟢 **PERSUADE is not, at either release, read at the author's own repositories** — and that correction is what makes this sellable rather than merely demonstrable.
+
+```
+marked scripts ──► feature + rubric layer ──► calibration ──► human gate ──► feedback to teacher
+                            │
+                   ┌────────┴─────────┐
+                   │                  │
+   scrosseye/persuade_corpus_2.0   microsoft/LLM-Rubric (MIT, 45★)
+   🟢 CC BY 4.0 — 25k+ US grade     calibrate rubric outputs against
+   6–12 argumentative essays,       THIS client's human raters
+   human-scored, per-element
+   proficiency + demographics
+                   │
+   wwrwbs/AI_AWE (ArguLens, Apache-2.0) — education-specific, grade-INDEPENDENT decomposition
+                   │
+   learning-commons-org/evaluators (🟢 MIT code ONLY) — feedback-quality + text-complexity evaluators
+                   │
+   littlecookie0722/AI-Teaching-Agent (MIT) — WAITING_REVIEW gate, no auto-publish
+```
+
+**Wiring it, in the order that keeps the licence clean.**
+1. **Fetch PERSUADE 2.0 from the holder's links and record the attribution line in the repo that will ship.** CC BY 4.0 obliges attribution, a licence link and an indication of changes — three lines in a `DATA_NOTICE.md`, and the obligation is discharged. Cite Crossley, Baffour, Tian, Franklin, Benner & Boser (2024), *Assessing Writing* 61.
+2. **Take `ArguLens` for the decomposition, not for the weights.** Its grade-independent features are the portable part; its own notice documents the bias inherited from a US middle-school corpus, so that notice travels into your model card verbatim rather than being rediscovered in UAT.
+3. **Use `learning-commons-org/evaluators`' MIT *code* and nothing else from it.** 🔴 Its prompts are `CC BY 4.0` (usable, attribute) but its **annotated** CLEAR and PERSUADE editions are `CC BY-NC-SA 4.0` — and `SA` reaches a fine-tune. Ship the evaluator harness; leave the annotated corpora on their site.
+4. **Calibrate on the client's raters with `LLM-Rubric` before any accuracy claim.** The number that sells is agreement with *this* client's markers, not a benchmark score.
+5. **Gate every output on a human with `AI-Teaching-Agent`'s `WAITING_REVIEW` state.** No auto-publish, ever.
+
+🔴 **The three hard lines, and they are licence lines rather than engineering ones.**
+- 🔴 **`scrosseye/CLEAR-Corpus` must not enter the training set, the eval set that ships, or any fine-tune.** `CC BY-NC-SA 4.0` at source — confirmed at the holder, not inferred. Use it only as a held-out yardstick inside the client's own estate, and say so in writing.
+- 🔴 **Neither corpus has a licence file.** The grant is a sentence in a README. 🟢 So the evidence pack from **P45** is not optional here: pin the README commit (`5bdbad1175d1` / `dbf1cf0df30b`), the byte count and the digest, because a README can be edited and a `404` on `LICENSE` gives counsel nothing to re-derive.
+- 🔴 **PERSUADE 2.0 is English, US, grades 6–12.** 🔵 It is **not** a Spanish or Portuguese writing corpus, and the construct does not transfer. A LATAM engagement starts from the client's own marked scripts aligned to `bncc-dev/bncc-dados` (MIT) — longer, and the more defensible deal.
+
+⚠ **Scope it as assistive feedback to a teacher, never as a score of record.** EU AI Act Annex III makes evaluating learning outcomes high-risk; Vietnam's `Decision 33/2026/QD-TTg` triggers on results serving as *"the official basis"* for assessment; several US state policies bar AI from grading outright. 🟢 **Feedback-to-a-teacher sits outside all three triggers and is where the budget is anyway.**
+
