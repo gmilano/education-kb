@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p686) — 🔴 **`NOASSERTION` SPANS PUBLIC DOMAIN TO ALL-RIGHTS-RESERVED: `31` REPOSITORIES RESOLVED BY PAYLOAD, `12` ADOPTABLE, `1` PROPRIETARY, `5` LICENSED UNDER CREATIVE COMMONS. 🟢 ONE AGENT ROW ADDED (GoAgent, MIT, APAC). 🔵 28TH CONSECUTIVE SEARCH-LEG NIL.**
+
+### 🔴 686-A — The field this base filters on carries no information, and the week's biggest new education repository is the proof
+
+**`chadyi/StudyOnTV` is not open source, and its own GitHub description says it is.** `733★`, created `2026-11-01`, last push **`2026-11-07` (today)** — by star-velocity the most conspicuous new education repository of this week. The API reports its licence as `NOASSERTION`. Its `LICENSE` file, read at the real default ref (`main` @ `a291d4c40b27`, `1,043 B`, `sha256₁₂ 67ae8445017e`), opens:
+
+> *"Copyright (c) 2024 chadyi. All rights reserved. Source Available License — Personal Use"*
+
+while the repository's own one-line description on the same page reads *"**open-source** Android TV app where kids unlock screen time by answering questions"*. **The repository contradicts itself in two fields a scraper reads, and the permissive-sounding one is the wrong one.** It is a genuinely interesting product — screen time as the reward contingency for answered questions, Android TV as the delivery surface, and `76.3 %` CJK README prose placing it APAC — and it is **not adoptable**: no fork, no derivative, no client deliverable. Filed here as a refutation so no later pass re-discovers it as a find.
+
+### 🔴 686-B — The census: every `NOASSERTION` in this pass's candidate pool, resolved by reading the grant
+
+`310` candidates swept across `22` GitHub topic heads; `31` reported `NOASSERTION`; **all `31` resolved by reading the payload at the real default ref.** What the field actually concealed:
+
+| Resolved grant | n | Adoptable? | Examples (verified this pass) |
+|---|---|---|---|
+| **Apache-2.0** | 3 | 🟢 yes | `OpenOLAT/OpenOLAT` (`10,982 B`, `6dbc5b605ed0`) · `webworn/openfoam-mcp-server` (`10,708 B`, `e0ae7f268ba5`) · `thm-mni-ii/feedbacksystem` (`10,785 B`) |
+| **MIT / MIT-X** | 8 | 🟢 yes | `inducer/relate` (MIT/X, `1,145 B`) · `designfuchen/word-atlas` (`1,299 B`, `4,333★`) · `CaviraOSS/PageLM` · `canyongbs/advisingapp` · `learning-commons-org/knowledge-graph` · `leemonade/leemons` · `aaryansamanta/nextgen-ai` |
+| **Unlicense / public domain** | 1 | 🟢 yes (most permissive) | `anki-geo/ultimate-geography` (`2,513 B`) |
+| **ECL-2.0** (Educational Community Licence) | 1 | 🟢 yes — OSI-approved, Apache-derived | `Apereo-Learning-Analytics-Initiative/OpenLRW` (`9,878 B`) |
+| **AGPL-3.0 / GPL** | 4 | 🔴 no closed derivative | `claroline/Claroline` (`34,616 B`) · `24kchengYe/human-skill-tree` · `FooSoft/yomichan` |
+| **Creative Commons** | 5 | 🔴 **cannot license software** | `xiaoyang111222/cn-math-taxonomy` (`6,928★`) · `5mdld/anki-jlpt-decks` · `GarethManning/education-agent-skills` (CC-BY-SA) · `pupilfirst/pupilfirst` · `IllumiChat/illumidesk` |
+| **Split / multi-grant** | 2 | ⚠️ depends which directory | `andymatuschak/orbit` · `mnemosyne-proj/mnemosyne` |
+| **No licence file at all** | 2 | 🔴 no — default is all-rights-reserved | `gazpachu/hypatia` (`650★`) · `pythonarcade/arcade` (`2,100★`) |
+| **🔴 Proprietary** | 1 | 🔴 no | `chadyi/StudyOnTV` — see `686-A` |
+
+**Both ways of acting on `NOASSERTION` are wrong.** Treat it as *unknown → skip* and you discard `12` adoptable repositories including **the only institutional LMS in this industry under a permissive grant**. Treat it as *probably fine* and you adopt a proprietary one. The only correct handling is to read the payload, which is why every row this base publishes carries byte count and `sha256₁₂` rather than a label.
+
+🔵 **Two sub-findings worth carrying forward.** **(1) Creative Commons is the trap specific to this industry**: `5` of `31` — and `2` of the pool's `3` largest repositories by stars — carry a CC grant, because education repositories are often *content* wearing a software repository's clothes. `cn-math-taxonomy` at `6,928★` is a taxonomy, not a library, and CC-BY-SA cannot be used to license code regardless of what a dependency manifest says. **(2) A split grant defeats a single licence cell.** `andymatuschak/orbit` is Apache-2.0 for most of the tree **but `packages/app` and `packages/backend` are AGPL-3.0-or-later *or* BUSL-1.1** — i.e. the deployable halves are exactly the non-permissive ones. A row reading "Apache-2.0" would have been true of the repository and false of anything you could ship.
+
+### 🔴 686-C — The mandated `curl -sI` check is inoperative in this environment, with controls at both signs
+
+Re-confirmed independently of `p684`. Through the agent proxy, `curl -sI` returns `HTTP/1.1 200 Connection Established` for all of:
+
+| Target | `curl -sI` | `git ls-remote --symref` | `raw.githubusercontent.com` |
+|---|---|---|---|
+| `torvalds/linux` (exists) | `200` | 🟢 `master` @ `d48723711bae` | 🟢 payload |
+| `moodle/moodle` (exists) | `200` | 🟢 `main` @ `058099166981` | 🟢 `COPYING.txt` `35,147 B` |
+| `gmilano/this-repo-does-not-exist-99887766` (**does not exist**) | 🔴 **`200`** | 🟢 auth failure | 🟢 **`404`** |
+
+**A check that cannot return `404` cannot fail.** All `310` of this pass's candidates would have "passed" it, and so would `310` invented slugs. The `ls-remote` + `raw` pair discriminates correctly at both signs and is what every p686 row is verified with.
+
+### 🟢 686-D — One agent row added: GoAgent (MIT, APAC)
+
+[`wimi321/GoAgent`](https://github.com/wimi321/GoAgent) — MIT (`1,061 B`, `6c9fc83bf6f2`, © *2026 haoc*), `58★`, `main` @ `edc6efa15a9a`. **KataGo supplies the ground truth; the LLM only explains it.** First row on the agent shelf where the examiner is a domain solver rather than the model — see `agents/top.md` and pattern **P62**. Placed APAC on `57.2 %` CJK README prose (`2,800` letters). Small and single-domain; filed for the architecture.
+
+### 🔵 686-E — The search legs nil for the 28th consecutive pass, and the nil is measured
+
+All four mandated global legs and all four regional legs ran. **No agent address returned that this base did not already hold.** Scale of the saturation, measured: this KB cites **`4,118` distinct GitHub repositories** across its eight shelves; of `310` swept candidates, `248` were already held and `62` were absent, of which **`3` were adoptable and education-relevant** (`GoAgent`, filed here; `word-atlas` and `openfoam-mcp-server`, filed to `repos/foundations.md` because they are assets and servers, not agents). The remaining `59` were student-CRUD coursework, Anki decks, dead trees (`2019`–`2024` final pushes) or copyleft. **Padding the agent shelf with them would have raised the row count and left the coverage where it was.**
+
+---
+
+
 ## 🆕 2026-11-07 (p685) — 🔴 **A BARE REPOSITORY NAME DOES NOT IDENTIFY A GRANT, AND THIS BASE'S #1 AND #2 ROWS PROVE IT: `63/104` AGENT-SHELF SUBJECTS SHARE THEIR NAME WITH ANOTHER REPOSITORY, `43` PAIR A PERMISSIVE CANONICAL WITH A COPYLEFT-OR-UNGRANTED NAMESAKE, AND `THU-MAIC/OpenMAIC` (MIT) HAS TWO AGPL-3.0 TWINS WITH A BYTE-IDENTICAL PAYLOAD. 🔴 AND A SECOND VERIFICATION CHANNEL JOINS `curl -sI` IN HAVING ZERO DISCRIMINATING POWER — `gh api repos/<slug>` RETURNS `403` FOR A REAL REPOSITORY AND FOR ONE THAT DOES NOT EXIST.**
 
 **No row added to [`top.md`](./top.md) — the eight mandated legs nilled a 28th consecutive time. Two rows on `top.md` and one on [`../repos/foundations.md`](../repos/foundations.md) were re-read first-hand and corrected. One pattern filed ([`../compose/patterns.md`](../compose/patterns.md) **P61**), two trends ([`../intel/trends.md`](../intel/trends.md) **T82**, **T83**), five regional nils recorded with denominators ([`../intel/market.md`](../intel/market.md)). Nothing removed from this file.**

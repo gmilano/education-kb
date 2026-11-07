@@ -1232,3 +1232,45 @@ Measured at p685 across all `104` distinct bare repository names on `agents/top.
 🔵 **The transferable rule is about instruments, not about GitHub.** A channel that returns the same answer for a true and a false input has zero information content, and it fails *silently* — every candidate "passes", including invented ones. **Any channel used to certify a row must be run against a negative control in the same pass that relies on it**, because scope rules, proxies and rate limits change underneath a base that is re-run hourly: `gh api repos/<slug>` presumably worked when something started depending on it. 🔴 **And a standing instruction can itself be the defect** — the mandated `curl -sI` check is now in its second pass of being demonstrably inert, and no number of passes "complying" with it would have revealed that.
 
 **Confidence: high.** Every row above was measured at p685 with explicit positive and negative controls, on two tools.
+
+
+---
+
+## T88 — `NOASSERTION` is not a licence state, it is the absence of a classification — and in education what it hides is a Creative Commons plurality 🔴 new at p686
+
+**This extends T82/T83 and P61 rather than discovering something new in kind.** p685 already recorded that `license.spdx_id` is a classifier's opinion and wrong in both directions. What p686 adds is the **magnitude and the composition**, which change what you do about it.
+
+Of `31` repositories in this pass's candidate pool reported `NOASSERTION`, resolved by reading each grant payload at the real default ref: **`12` permissive and adoptable** (Apache-2.0, MIT, MIT/X, Unlicense), `1` **ECL-2.0** (OSI-approved, Apache-derived), `4` copyleft, **`5` Creative Commons**, `2` split-grant, `2` with **no licence file at all**, and **`1` outright proprietary**.
+
+🔴 **The distribution has no mode you can bet on.** It spans public domain to all-rights-reserved, so **both** default policies are wrong: *unknown → skip* discards `12` adoptable repositories including the only institutional LMS in this industry under a permissive grant (OpenOlat, Apache-2.0) and an eleven-year-old autograding platform (RELATE, MIT/X) this base had never shelved in `686` passes; *unknown → probably fine* adopts a repository whose `LICENSE` reads *"All rights reserved — Source Available — Personal Use"* **while its own GitHub description calls itself open-source**.
+
+🟢 **The education-specific finding is Creative Commons.** `5` of `31`, and `2` of the pool's `3` largest subjects by stars, carry a CC grant — because education repositories are frequently **content wearing a code repository's clothes**. `xiaoyang111222/cn-math-taxonomy` at `6,928★` is a taxonomy; `5mdld/anki-jlpt-decks` at `3,117★` is a deck. **CC cannot license software**, and no amount of package manifest makes it do so. This failure mode is far more common in education than in the other industries this KB covers, and a general-purpose ingest filter will not be looking for it.
+
+🟡 **A single licence cell is also insufficient where the grant is split.** `andymatuschak/orbit` is Apache-2.0 across most of the tree **but `packages/app` and `packages/backend` are AGPL-3.0-or-later or BUSL-1.1** — the deployable halves are precisely the non-permissive ones. A cell reading "Apache-2.0" would be true of the repository and false of anything shippable.
+
+**Confidence: high.** All `31` resolved first-hand at p686 by payload read, with byte counts and digests, and negative controls clean.
+
+---
+
+## T89 — A search index's `422` is not evidence of absence, and it under-reports exactly the largest subjects 🔴 new at p686
+
+`gh api search/repositories` answers `repo:openedx/edx-platform` with **`422 Validation Failed`** — *"the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them"*. The repository is fully alive on the other channel: `ls-remote --symref` resolves **`master`**, and `LICENSE` reads `35,136 B`, `sha256₁₂ e12d78569742`, AGPL-3.0. Three further `422`s at p686 (`patchy631596/awesome-ai-agents`, `open-learning-exchange/treehouses`, `open-resources/open-education`) were re-probed and **none was absent**.
+
+🔴 **The error has a direction, and that is what makes it dangerous.** It does not add noise symmetrically; it **removes** subjects, and it removed the largest open platform in this industry. This is the `p674` search-index-absence condition recurring on a different org, so it is a property of the channel rather than an incident. **A census built on `search/repositories` alone silently under-counts, and its own `total_count 0` looks exactly like a clean negative result.** Every `422` must be re-probed on `ls-remote` before it is recorded as an absence — the rule T83 states in general, applied to the specific instrument this base relies on for stars and grants.
+
+**Confidence: high.** Four instances at p686, each contradicted on an independent channel.
+
+---
+
+## T90 — The strongest new education agents demote the LLM to narrator and take ground truth from a domain solver 🟢 new at p686
+
+Two independent instances arrived in a single pass, in unrelated domains, both permissively licensed:
+
+- [`wimi321/GoAgent`](https://github.com/wimi321/GoAgent) (MIT) wires **KataGo** — a superhuman Go engine — to a multimodal LLM. The engine scores the move; the model explains *why* the score is what it is.
+- [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) (Apache-2.0) puts **OpenFOAM** behind an MCP surface for CFD teaching with Socratic questioning. The solver computes the field; the model surfaces the gap between it and the student's prediction.
+
+🟢 **Why this matters more than either repository does.** Every tutor on this base's agent shelf asks one model to be **both examiner and explainer**, which is why hallucinated correctness is the sector's standing risk and why academic-integrity demand (**T79**) has no permissive supply behind it. This architecture removes the conflict structurally rather than by prompting: correctness is **decidable** because a solver decides it, and the model is confined to the one task it is reliably good at — narrating a result it did not author. It also degrades honestly: when the solver has no answer, the system can say so, which a single-model tutor cannot.
+
+🟡 **The limit is scope, and it is severe.** It only works where a *checkable oracle exists* — board games, physics, mathematics, code, symbolic algebra. It does not transfer to essay feedback, language production or history, which is most of the curriculum. ⚠️ Both instances are also small and partly dormant (`58★`; `127★`, last push `2026-01-18`), so this is a **pattern worth building**, not a dependency worth adopting — see **P62**.
+
+**Confidence: medium.** The architecture is clearly evidenced and verified first-hand in two instances; its durability is not, and `n = 2`.

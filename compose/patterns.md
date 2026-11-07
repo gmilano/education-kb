@@ -1855,3 +1855,38 @@ patchy631/ai-engineering-hub main LICENSE                         1066    931239
 `gh api search/repositories` reports `license.spdx_id`, and it is a *classifier's opinion* of the payload. This base has found it wrong in both directions — `NOASSERTION` on a clean Apache-2.0 payload (`thm-mni-ii/feedbacksystem`), and an `11,357`/`11,358 B` pair of Apache-2.0 canonicals that no SPDX string can distinguish. **The digest is the fact; the SPDX string is a label on it.** Pin the fact.
 
 🔴 **One honest limit.** The `raw.githubusercontent.com` oracle returns `404` both for a repository that does not exist and for a file that is simply absent from a live repository — p685 ran that control at both signs. So step 1 is not optional: existence must come from `ls-remote`, and only then does a `404` from step 2 mean *"this repository ships no grant at that path"* rather than *"this repository is not there"*.
+
+
+---
+
+## P62 — The solver-grounded tutor: let a domain solver be the examiner and the LLM only the narrator (STEM faculties and engineering upskilling, all four regions; 4–6 weeks to a graded module) 🆕 new at p686
+
+**The problem.** Every tutor on this base's agent shelf asks a single model to decide whether the learner is right *and* to explain why. That conflation is the source of the sector's standing objection — a confidently wrong tutor is worse than no tutor — and it is why the one statutorily forced demand in this industry (academic integrity, **T79**) has almost no permissive supply behind it. **Prompting does not fix it**; the examiner and the explainer have to be different components. p686 found two independent permissively-licensed instances of the fix (**T90**), in Go and in CFD, and neither is big enough to adopt as a dependency — so the pattern is the deliverable.
+
+### The wiring
+
+1. **Oracle (decides correctness).** A deterministic domain solver, run first and treated as ground truth. Verified permissive options this base holds: **OpenFOAM** behind [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) (Apache-2.0, `10,708 B`, `e0ae7f268ba5`) for fluids/thermal; **KataGo** behind [`wimi321/GoAgent`](https://github.com/wimi321/GoAgent) (MIT, `1,061 B`, `6c9fc83bf6f2`) for sequential decision-making; **SymPy** or a CAS for symbolic algebra; and the autograders in [`inducer/relate`](https://github.com/inducer/relate) (**MIT/X**, `1,145 B`, `66ff89ebf05f`) for numeric and symbolic coursework.
+2. **Narrator (never adjudicates).** The LLM receives *the learner's answer, the solver's answer, and the delta* — never the question alone — and is constrained to explaining the delta. **If the solver returns no verdict, the narrator must say so rather than supply one.** This is the whole control, and it is enforced in the prompt contract plus a hard gate that drops any narration emitted without a solver verdict attached.
+3. **Delivery surface.** [`inducer/relate`](https://github.com/inducer/relate) (MIT/X) for a university course with versioned content, timed exams and a grade book — **the only permissively-licensed platform on this base's vertical shelf that natively autogrades mathematical work**; or **OpenOlat** (Apache-2.0, `10,982 B`, `6dbc5b605ed0`) where an institutional LMS is required and a closed layer must remain lawful.
+4. **Retention (schedules the re-ask).** Every solver verdict is a graded event, so it drives scheduling directly. **Cold start → [`fasiha/ebisu`](https://github.com/fasiha/ebisu)** (Unlicense/public domain, `1,211 B`, `7e12e5df4bae`): Beta posterior over recall, closed-form update, calibrated uncertainty, **no training corpus** — correct for a new course with no review history. **Once logs exist → FSRS** (already held by this base). **TypeScript-only delivery → [`VienDinhCom/supermemo`](https://github.com/VienDinhCom/supermemo)** (MIT, `1,065 B`, `08acbb3df12d`), which is also the honest baseline when the client asks what the AI scheduler is beating.
+5. **Evidence (makes it procurable).** Persist `(learner answer, solver verdict, narration, timestamp, model+solver versions)`. That record is what a regulator or accreditor actually asks for, and it is produced as a by-product rather than retrofitted — it satisfies the Maryland-class district-coordinator evidence obligation (North America), a **TEQSA** institutional action plan (APAC), and the accreditation-linked governance UNESCO recommends for LATAM.
+
+### Components — all verified first-hand at p686
+
+| Role | Component | Grant, pinned by digest | Ref |
+|---|---|---|---|
+| Oracle (CFD) | [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | Apache-2.0 · `10,708 B` · `e0ae7f268ba5` | `main` @ `8d14e2031146` |
+| Oracle (sequential play) | [`wimi321/GoAgent`](https://github.com/wimi321/GoAgent) | MIT · `1,061 B` · `6c9fc83bf6f2` | `main` @ `edc6efa15a9a` |
+| Oracle + delivery (maths coursework) | [`inducer/relate`](https://github.com/inducer/relate) | MIT/X · `1,145 B` · `66ff89ebf05f` | `main` @ `e201e11b860c` |
+| Delivery (institutional LMS) | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 · `10,982 B` · `6dbc5b605ed0` | `master` @ `47e5d30a8323` |
+| Retention (cold start) | [`fasiha/ebisu`](https://github.com/fasiha/ebisu) | Unlicense/PD · `1,211 B` · `7e12e5df4bae` | ⚠️ **`gh-pages`** @ `497f87bc59c1` |
+| Retention (TS baseline) | [`VienDinhCom/supermemo`](https://github.com/VienDinhCom/supermemo) | MIT · `1,065 B` · `08acbb3df12d` | `master` @ `8093cde2b80d` |
+
+**Every grant above is MIT, MIT/X, Apache-2.0 or public domain — the pattern carries no copyleft and no CC component, so a closed derivative is lawful end to end.** Pin each by payload digest per **P61**, and scan vendored subtrees before shipping.
+
+### 🔴 Honest limits — state these before the pattern is sold
+
+- **It needs a checkable oracle, and most of the curriculum does not have one.** Fluids, mechanics, mathematics, code, symbolic algebra, board games: yes. Essay feedback, language production, history, design: **no**, and no amount of wiring changes that. Scope the engagement to the decidable part of the syllabus and say which part that is.
+- **Both reference implementations are small and partly dormant** — GoAgent `58★`, `openfoam-mcp-server` `127★` with last push `2026-01-18` (`10` months, and OpenFOAM's own releases have moved past it). Treat both as **reference implementations of the architecture, not maintained dependencies**; budget for re-implementation against the current solver release.
+- **The solver becomes the correctness ceiling.** A mis-specified CFD case produces a confident wrong verdict that the narrator will faithfully explain — the failure mode moves from the model to the case setup, which is *better* because it is inspectable and versionable, but it does not disappear. Review cases as assessment artefacts.
+- **`ebisu`'s default ref is `gh-pages`, not `main`.** Any ingest or vendoring step that assumes `main`/`master` reads nothing and fails silently.

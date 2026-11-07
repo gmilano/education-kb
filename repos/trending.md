@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p686) — 🟢 **FOUR FOUNDATIONS ROWS AND TWO PLATFORM ROWS, EVERY ONE OF THEM RECOVERED FROM A FIELD THE API MISREPORTS. 🔴 `openedx` IS SEARCH-INDEX-ABSENT WHILE FULLY ALIVE — A `422` IS NOT EVIDENCE OF ABSENCE.**
+
+### 🟢 686-F — Four foundations rows, and two of the four were invisible to a licence filter
+
+Filed to [`repos/foundations.md`](./foundations.md), each verified by `ls-remote --symref` **and** a grant payload read at the real default ref:
+
+| Repo | Grant (payload-verified) | Stars | Ref | Why it is new to this base |
+|---|---|---|---|---|
+| [`designfuchen/word-atlas`](https://github.com/designfuchen/word-atlas) | 🟢 **MIT** `1,299 B` `83d3aff30ac8` — API said `NOASSERTION` | **4,333** | `main` @ `19a9bd889d2f` | **~4.3k stars in under two weeks** (created `2026-10-25`). `7,298` illustrated IELTS words, UK/US audio, **FSRS-scheduled** — the first *populated course asset* in this KB rather than another scheduler. APAC (`70.4 %` CJK prose). |
+| [`fasiha/ebisu`](https://github.com/fasiha/ebisu) | 🟢 **Unlicense / public domain** `1,211 B` `7e12e5df4bae` | 338 | ⚠️ **`gh-pages`** @ `497f87bc59c1` | The **second model of forgetting** this base has ever carried. Beta posterior over recall, closed-form update, **calibrated uncertainty, no training corpus** — deployable at cold start, where FSRS is not. |
+| [`VienDinhCom/supermemo`](https://github.com/VienDinhCom/supermemo) | 🟢 **MIT** `1,065 B` `08acbb3df12d` | 337 | `master` @ `8093cde2b80d` | SM-2 in TypeScript: the **baseline every FSRS and Ebisu benchmark is quoted against**, and the only one of the three that runs in a TS delivery surface. |
+| [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | 🟢 **Apache-2.0** `10,708 B` `e0ae7f268ba5` — API said `NOASSERTION` | 127 | `main` @ `8d14e2031146` | **A physics solver behind an MCP surface for teaching.** OpenFOAM + Socratic questioning; engineering-education twin of the GoAgent pattern. ⚠️ `10` months stale. |
+
+🔵 **The staleness is published rather than hidden:** `ebisu` last pushed `2024-10-02`, `supermemo` `2025-03-28`, `openfoam-mcp-server` `2026-01-18`. Two of those are frozen *mathematics* and dormancy is the expected end state; the third is a reference implementation whose upstream has moved. Only `word-atlas` is actively developed. **A foundations shelf that only admits actively-pushed repositories would hold no scheduling primitives at all.**
+
+### 🟢 686-G — Two platform rows, including an eleven-year-old platform this base had never shelved
+
+Filed to [`verticals/solutions.md`](../verticals/solutions.md): **RELATE** ([`inducer/relate`](https://github.com/inducer/relate), **MIT/X** `1,145 B` `66ff89ebf05f`, `437★`, pushed `2026-11-06`) — in continuous use since `2014`, and **the only permissively-licensed platform on that shelf that natively autogrades mathematical work**, which is exactly the gap Moodle (GPL-3.0) and Open edX (AGPL-3.0) leave for a closed derivative. It never reached the shelf because the API reports it `NOASSERTION`. And **CohortHarbor** ([`lantingzhang1119/cohort-harbor`](https://github.com/lantingzhang1119/cohort-harbor), MIT `1,082 B` `23fcb1f8d023`, `194★`) — corporate onboarding, policy attestation and scored assessment: **compliance discharge rather than instruction**, which is the shape of most education work that reaches an enterprise client, and a blind side on a shelf of `149` rows that all teach students.
+
+🔵 **One region placement refused, and the refusal is published with its number.** CohortHarbor's README is **`49.0 %` CJK across `2,274` prose letters** — bilingual, not localized. The `p684` channel places a row on a *primary* non-English README (`ManuSift`: `63.2 %`); `49 %` is a document written in two languages at once, which declares an **audience**, not a location (`p670`). Stays `Global`. RELATE likewise stays `Global`: `100 %` English, no institution named **in its own files**, and the author's affiliation is off-repository — the owner-attribute channel `p670` refuted, not reinstated for a convenient answer.
+
+### 🔴 686-H — `openedx` is absent from the search index and fully alive to `ls-remote`
+
+`gh api search/repositories` with `repo:openedx/edx-platform` returns **`422 Validation Failed`** — *"the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them"*. The same repository resolves cleanly on the other channel: `ls-remote --symref` → **`master`**, and `LICENSE` reads **`35,136 B`, `sha256₁₂ e12d78569742`, GNU AFFERO GENERAL PUBLIC LICENSE**. Three other probes returned the same `422` while being alive (`patchy631596/awesome-ai-agents`, `open-learning-exchange/treehouses`, `open-resources/open-education`).
+
+**This is the `p674` condition recurring, and it has a direction: the search index under-reports.** A census built on `search/repositories` alone will record the largest open platform in this industry as non-existent. Every `422` at `p686` was re-probed on `ls-remote` before being recorded, and **none of them was actually absent**.
+
+### 🔵 686-I — Platform leg nils again; the licence wall is unchanged and now re-measured from payloads
+
+The mandated `open source platform education ERP CRM MIT Apache` leg returned only facts this base already holds. Re-verified from their own grants this pass: Moodle **GPL-3.0** (`35,147 B`, `8ceb4b9ee5ad`, `7,589★`), Canvas **AGPL-3.0** (`6,904★`, pushed `2026-04-30` — **six months, the slowest of the four**), Open edX **AGPL-3.0** (`35,136 B`), Oppia **Apache-2.0** (`11,358 B`, `cfc7749b96f6`, `6,978★`), OpenOlat **Apache-2.0** (`10,982 B`, `6dbc5b605ed0`, `449★`) — **byte-exact and hash-exact against the cells this shelf already published**, re-derived without consulting them first. 🔵 **The standing structural finding survives a 33rd pass: there is still no single product combining SIS + CRM + ERP under MIT or Apache-2.0.**
+
+---
+
+
 ## 🆕 2026-11-07 (p685) — 🔴 **THE NAMESAKE CENSUS: `104` SHELF NAMES, `1,422` FOREIGN REPOSITORIES WEARING THEM, AND `936` OF THOSE CARRY NO GRANT AT ALL. 🔧 ONE FOUNDATIONS ROW RE-READ AND CORRECTED.**
 
 **One row on [`foundations.md`](./foundations.md) corrected, none added — the `open source platform education ERP CRM MIT Apache` leg returned `10` platforms and all `10` are already in this tree (see [`../verticals/solutions.md`](../verticals/solutions.md)). Full method, controls and the refused inferences are in [`../agents/trending.md`](../agents/trending.md) at p685. Nothing removed from this file.**
