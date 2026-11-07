@@ -1,0 +1,5 @@
+region	slugs_on_region_lines_in_trending	not_on_any_sell_shelf	shelf_rows_bearing_region	note
+LATAM	163	140	20	UPPER BOUND: co-occurrence on a line is not a placement; 2 of the 163 are not addresses at all (Gap 248 class, unrepaired)
+North America	195	149	23	same construction, same upper-bound caveat
+EMEA	312	257	32	same construction, same upper-bound caveat
+APAC	327	279	37	same construction, same upper-bound caveat

@@ -106,6 +106,15 @@ Three facts shape every engagement:
 
 ### North America
 
+### 🔴 p693 — North America: the leg nils a 34th time, and the region's standing defect is now measured rather than asserted
+
+🔴 **`6` facts returned, `6` already held, `0` candidate-novel.** The regional market share (`36–38%`), the CAGR spread (`15.9%` to `31.1%`), `COPPA` as the binding constraint on child-facing products, the OECD **Digital Education Outlook 2026**, and the observation that *guidance proliferates while hard regulation remains limited* — all held, several at high hit counts. **34th consecutive nil on this leg.**
+
+🔴 **p691's standing gap — that "North America" is in practice `US`-shaped — is joined at p693 by a measured one.** Of `195` slugs on North-America-bearing lines across the two trending files, **`149` are on no sell shelf**, against `23` North America rows actually shelved. 🔵 **Canada-specific education policy nils a NINTH time**, so the region's label continues to overstate its coverage in two directions at once: the policy read is US-only, and the supply read is mostly unpromoted.
+
+🟢 **One structural gain for this region at p693, and it comes from outside it.** `692-M` placed [`pisan-labs/dossier-comment-reflector`](https://github.com/pisan-labs/dossier-comment-reflector) **North America** on a *structural* inference — *"years in rank"* tenure language plus four named North American course-evaluation vendors — and explicitly invited a counter-example to retire it. p693 supplies **not a counter-example but a complement**: [`ajacs10/AvaliaDocente`](https://github.com/ajacs10/AvaliaDocente) holds the same teaching-evaluation function in Iberia with a **different structure** — student-facing and anonymous, rather than faculty-facing and dossier-shaped. 🔵 **So `692-M`'s inference survives:** the dossier/tenure *form* really does look North American, because the non-North-American instance of the same function took a different form. **The pair is now sellable as one quality-assurance loop**: collection at the student end, narrative at the faculty end.
+
+
 ### 🔴 p692 — North America: the supply leg nilled a 33rd time, and the pass's North-America product is a *faculty-side* asset, not a learner-side one
 
 **The leg, with its denominator.** `6` checkable facts returned; **`6` already held** (the `134` AI-in-education bills across `31` states; the four states — Idaho, Maryland, Oklahoma, Virginia — with `2026` laws requiring both state guidance and mandatory district policy; California **AB 1159**'s bar on training models on student data; **NY A 9190**; the **K-12 AI Literacy and Readiness Act of 2026**; North Carolina **SB 1006**'s `$10M` Khanmigo earmark). **`0` candidate-novel, `0` adoptable.** Canada returned nothing education-specific for the eighth consecutive pass — the standing gap that *“North America” is in practice `US`-shaped* is unchanged and is restated here rather than left as silence.
@@ -434,6 +443,26 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+### 🟢 p693 — EMEA: the Africa/MENA leg produces for the first time in five windows, and two Iberian rows arrive by CORRECTING a LATAM misplacement
+
+🟢 **The Africa/MENA gap — declared nil at p486, p664, p666, p673 and carried as a fourth and then fifth window — returned `5` candidate-novel facts at p693**, all **secondary** and marked so:
+- **South Africa's AI framework is non-binding, and the operative instrument behind it is `POPIA`** (the Protection of Personal Information Act) — i.e. an education-AI conversation in South Africa is a **data-protection** conversation, not an AI-statute conversation. `POPIA` had **`0` hits on this base** before this pass.
+- **Rwanda's `MINICT`** as the ministry driving a national AI policy spanning health, education and public sector (`0` prior hits), plus a **2026 Rwanda–Anthropic three-year MoU** covering education.
+- **Morocco's `UM6P`** (`0` prior hits) and Egypt's AUC as the named university actors; **Alef Education** (UAE) and **MBZUAI with AWS** as the commercial ones.
+- The African Union's **`CESA 16-25`** as the continental direction-setter (`1` prior hit — effectively unheld).
+- **Masakhane's local-language models** as the open-source substrate for African-language delivery (`11` hits — held, and now connected to an education opportunity rather than standing alone).
+- 🔴 **The Gulf fact that changes sizing:** AI is reported as a **mandatory school subject** in the UAE from the `2025–26` academic year, with Saudi AI literacy as a mandatory undergraduate component. *"Mandatory subject"* had **`0` hits** on this base. **A mandated subject is a curriculum-and-teacher-training procurement, which is a different engagement shape from the governance-and-conformity work this page sells into Europe.**
+
+🔴 **The European arm nils again and reproduced the superseded Annex III date a SEVENTH time**, against this base's `2 December 2027`. **Keep the leg: its value here is adversarial** — a standing test that this base's own dates survive contact with the secondary literature.
+
+🟢 **Two Iberian platform rows, and both arrive as corrections rather than discoveries.** p693's LATAM-intended Spanish/Portuguese sweep surfaced **European** Portuguese projects, and one was already published on this base as LATAM:
+- 🔧 [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) (MIT, `50★`) — carried in `repos/trending.md` as **LATAM** because it is *"Portuguese-language"*. Its README is **pt-PT** (*"sectores Académico"*, *"base de dados"*, tu-imperative) and its grant holder is *"**António**"*. **Withdrawn and re-placed EMEA (Portugal) 🟡**, with its one Brazilian counter-signal (*"arquivo"* ×2) stated in-cell.
+- [`ajacs10/AvaliaDocente`](https://github.com/ajacs10/AvaliaDocente) (MIT, `6★`) — anonymous student evaluation of teaching, pt-PT orthography (*"anónima"*, *"académico"*, *"recolha"*), never placed before.
+- 🔴 **And a third sign in the same sweep:** [`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente) integrates **Italy's** *Carta del Docente* teacher spending entitlement (🟢 MIT at **`LICENSE.md`** on `main`, `1,099 B`, sha256₁₂ `e340e4990cdb`) — surfaced by a probe for the Spanish/Portuguese word `docente`, which is also Italian. **`693-E`: a Romance-language token selects a language family spanning three continents. It can narrow a search; it can never place a row.**
+
+🔵 **Opportunity:** the teaching-evaluation function is now held at **both** ends — faculty-facing in North America (`dossier-comment-reflector`) and student-facing in Iberia (`AvaliaDocente`) — which makes the pair sellable as a single quality-assurance loop into an EU institution that must evidence teaching quality for accreditation.
+
 
 ### 🔴 p692 — EMEA: the leg reproduced the superseded Annex III date a SIXTH time, and the pass's EMEA product is a conformity artefact rather than a market number
 
@@ -866,6 +895,26 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+### 🟢 p693 — APAC: the adoption denominator this page has declared missing for SIX windows is partly answered, and the figure is the inverse of the one being looked for
+
+🟢 **`Gap 673-F` asked for an APAC *uptake* rate after six failed windows, and p693 returned one — measuring resistance rather than use.** Ipsos's **Education Monitor 2026** reports support for **banning** AI in schools:
+
+| country | support for banning AI in schools |
+|---|--:|
+| Indonesia | `23%` |
+| South Korea | `31%` |
+| New Zealand | `47%` |
+| 🔴 **Australia** | 🔴 **`52%`** |
+
+🔵 **Why this is the more useful instrument for this region, not a consolation prize.** APAC's problem on this base was never a shortage of statute — Korea's AI Basic Act in force `2026-01-22`, Vietnam's `134/2025/QH15` effective `2026-03-01` naming education and automated assessment high-risk, AI Verify, TEQSA's action plans. It was that **every APAC engagement was sized off statute with no read on whether anyone wants the thing.** A **majority-ban sentiment in Australia** and a `23%` floor in Indonesia is exactly that read, and it **inverts the regional default**: the same product is a tailwind sale in Jakarta and a headwind sale in Melbourne. **Size the change-management line by country, not by region.**
+
+🟢 **Two further instruments, both novel to this base:** UNESCO Bangkok's round-table **Outcome Statement with `14` strategic actions** for governments and institutions (`0` prior hits), and a joint statement adopted by **`25+` education ministers** at UNESCO's Digital Learning Week in Paris, **`8 September 2026`** (`0` prior hits), whose own framing is that **classroom AI use has outpaced formal school policy** — the same adoption-ahead-of-governance shape this page already records for LATAM, now stated ministerially and globally.
+
+🔴 **All of it is secondary, and the primary channel is shut.** `unesco.org`, `ipsos.com` and `teqsa.gov.au` were all tested at p693 and **none resolves** under this session's network policy (`693-K`). p683's standing instruction to *"read a PRIMARY instrument"* is therefore **unexecutable in this environment rather than merely unexecuted**, and should stop being re-bought as a research action: it is a session-configuration request.
+
+🔵 **Opportunity:** the `14`-action Outcome Statement and the ministers' statement are both **institutional checklists published without tooling**. The conformity-artefact play this page already sells into the EU (`P72`, `coursewright`'s refusal log) ports to APAC against these two documents — and `insightflo/edu-deck-skills` (Korean-primary, Apache-2.0, `692-P`) is the delivery surface that does not need translating first.
+
+
 ### 🟢 p692 — APAC: the leg nilled, and the supply channel did not — five of this pass's fourteen filings are APAC-origin
 
 **The leg, with its denominator.** `3` checkable facts; **`3` already held** (South Korea's **AI Basic Act**, in force `22 Jan 2026`; **Vietnam's AI law**, in force `1 Mar 2026`, with a `12`-month general transition and **`18` months for education**, health care and finance; the Ipsos Education Monitor `2026` shift in support for banning AI in schools — Japan `21%`→`29%`, Australia `47%`→`52%`, South Korea `27%`→`31%`). **`0` candidate-novel.**
@@ -1221,6 +1270,19 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+### 🟢 p693 — LATAM: the supply "nil" was a PROMOTION failure, not a discovery failure — 140 LATAM addresses were already found and never shelved, and the channel two passes called empty produced 9 more
+
+🔴 **The demand leg nils a SEVENTH consecutive time, scored.** `9` facts returned, **`9` already held** — UNESCO IESALC across ~`200` institutions in `19` countries (`87%` using AI, `26%` with a formal strategy, `74%` in teaching and learning, `55%` with no AI budget, `9%` evaluating what it delivers), Ceibal's `75%` of Uruguayan public-school teachers, Cetic.br's `53%` of school administrators against `22%` with guidelines, the **Observatory on AI in Education for Latin America and the Caribbean** (`14 April 2026`, Santiago), the UNESCO–Tecnológico de Monterrey agreement, CENIA, UNU-IAS. `0` candidate-novel, `0` adoptable. **p690's conclusion stands and is now seven windows old: UNESCO is the only body systematically measuring this region and it publishes annually, so an hourly leg cannot produce.**
+
+🔴 **But the supply conclusion this page has carried for six passes is wrong, and the correction is arithmetic.** p692 wrote *"`0` novel LATAM-origin addresses across nine channels … the longest-running declared gap on this base"* and prescribed more discovery. **p693 counted the base instead:** slugs on LATAM-bearing lines in the two trending files, **`163`**; LATAM rows on the three sell shelves, **`20`**. **`140` LATAM addresses have been discovered, licence-read, written up — and never promoted to a shelf anyone selling an engagement reads.** ⚠️ Upper bound by construction (line co-occurrence is not placement), and `2` of the `163` are not addresses at all (`Gap 248`). 🔴 **And it is not regional:** North America `149/195` unshelved, EMEA `257/312`, APAC `279/327` — **`825` region-labelled trending slugs absent from every sell shelf.** This base discovers four to five times faster than it shelves.
+
+🟢 **Nine further novel addresses, from the channel p691 measured as empty and p692 prescribed again.** p691 probed with seven **single subject nouns** → `90` repositories, `0` adoptable. p693 ran that arm again (`402` distinct repositories — coursework, LaTeX dissertation templates, bootcamp exercises, a **profile README**) and then ran a **product-noun** arm: `gestão escolar`, `plataforma educativa`, `diário de classe`, `boletim escolar`, `avaliação docente`, `secretaria escolar` → **`473` distinct repositories, `13` real education systems, `9` novel to the entire base.** `T107`.
+
+🟢 **The commercial read, and it is the sharpest change to this region's brief in many passes.** The LATAM permissive layer **exists and is administrative**: attendance, incident records, guardian messaging, gradebooks, teaching evaluation, school transport, census. **It is not an agent layer** — not one of the `13` is an agent, which confirms p691's verdict by a different instrument. 🟢 **So p691's *"nothing to fork, assemble instead"* is now only half right.** A LATAM engagement **can procure its administrative spine**: [`eemtijca/buscapp`](https://github.com/eemtijca/buscapp) (MIT, a Ceará **state school** is the grant holder, with a risk-prioritisation dashboard and an LGPD anonymisation ADR already written), [`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app) (Apache-2.0, Colombia, DOI-cited, ADDIE-structured), [`ValentinTorassa/Open-Security-Labs`](https://github.com/ValentinTorassa/Open-Security-Labs) (Apache-2.0, Argentina, executable labs), [`h3ct0r/ufmg_notas_excel_sheet_webapp`](https://github.com/h3ct0r/ufmg_notas_excel_sheet_webapp) (MIT, UFMG, the Moodle-export↔roster↔Sheets seam). **It still builds the tutoring and assessment surface**, and that translation line item remains real (`P71`, `P73`).
+
+🔵 **Qualification advice unchanged and now better supported:** `87%` adoption against `26%` strategy, `55%` with no budget and **`9%` measuring outcomes** means the demand is real and the purchase order is not. **Qualify on budget, lead with the one-week governance check (`P5`, `P40`), and note that the `9%` figure is the demand-side evidence for the measurement layer `Gap 673` closed on availability (`terracotta`) and nobody has yet run.**
+
 
 ### 🔴 p692 — LATAM: the demand side is the best-measured in the world and the supply side nilled a SIXTH consecutive pass — both facts stated, neither padded
 
@@ -1627,6 +1689,15 @@ client.
 - 🟢 **The commercial read for the region is the budget line, not the technology.** `55 %` of LATAM universities have no AI budget and public universities have the lowest rate of dedicated funding, which rules out anything that needs hosting. `DSL4-Digital/RefExists` runs **entirely in the browser with nothing to host**, and `OSLL/code-plagiarism` is a PyPI install on a laptop — so the integrity control that EMEA will buy as compliance is the one LATAM can deploy at zero infrastructure cost. **P60** is specified so that the client-side-only subset is a complete deliverable on its own.
 
 ### Global
+
+### 🔴 p693 — Global: the four mandated global legs nil a 32nd time, and the licence-truth deliverable gains a fourth specimen class
+
+🔴 **`22` checkable facts across the four global legs, `22` already held, `0` candidate-novel.** The agent leg returns general-purpose frameworks (AutoGPT, LangChain, OpenHands, OpenClaw) and **no education ranking exists on it at all**; the trending leg returns aggregator blogs rather than GitHub's own view; the ERP/CRM leg returns OpenEduCat-on-Odoo, ERPNext (GPL-3.0) and two permissive CRMs that are **not education** (Krayin MIT, Huly Apache-2.0) — reproducing this base's standing finding that **the permissive education-ERP slot is occupied only via Odoo's licence, not independently of it.**
+
+🟢 **A fourth specimen class for the licence-truth pitch, and this one is about *identity* rather than about a false claim.** `693-G` graded four fresh Apache-2.0 payloads whose byte residuals against canonical are **`−593`, `+13`, `0`, `0`** — and **all four normalise to `8,967` characters against `apache.org`'s own text, verbatim §1–§9.** 🔴 **One of them, [`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app), is `11,358 B` — identical in length to canonical — with a *different* sha256.** **Same length, different hash, identical operative terms.** 🔵 **The sales line:** every automated licence check a client already runs compares a hash or a size. Both answer this pair wrongly and in opposite directions. **Only the normalised operative body answers it**, and that is a ten-line instrument this base runs with controls at both signs — reproducing `692-G2` independently, one pass later, on four new payloads.
+
+🔴 **The ceiling on every regulatory claim on this page is environmental and should be read as a line item, not a caveat.** Six primary domains were tested at p693 and **all six fail to resolve**: `unesco.org`, `iesalc.unesco.org`, `ipsos.com`, `teqsa.gov.au`, `eur-lex.europa.eu`, `joinup.ec.europa.eu` — joining `zenodo.org`, `commonlit.org`, `sciencedirect.com` and `cambridge.org` from p665/p675. **This base can read GitHub and web-search summaries; it cannot read the primary text of European law, UN agencies, national regulators or academic publishing.** Allowing those hosts would convert a long list of this page's load-bearing secondary citations into primary ones, and it is the single cheapest improvement available to this KB.
+
 
 ### 🔴 p692 — Global: the market figures did not move, and the pass's global finding is that the fastest-growing education repository of the window is not open source
 

@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p693) — 🟢 **EIGHT PLATFORM AND FOUNDATION ROWS FROM A CHANNEL TWO PASSES DECLARED EMPTY — AND THE REASON IT LOOKED EMPTY IS THAT THE PROBE ASKED FOR A SUBJECT INSTEAD OF A PRODUCT. 🔴 THE BASE HAS FOUND 163 LATAM ADDRESSES AND SHELVED 20.**
+
+`2` rows filed on [`repos/foundations.md`](foundations.md) (`160` → `162`), **`6` on [`verticals/solutions.md`](../verticals/solutions.md)** (`73` → `79`), `1` on [`../agents/top.md`](../agents/top.md) (`94` → `95`), and **`1` published LATAM placement withdrawn** on orthographic evidence. Full registration of the pass, including the promotion-gap measurement and the `6/7` false-positive rate on jurisdiction greps, is at [`../agents/trending.md`](../agents/trending.md) `p693`.
+
+### 🔴 `693-A` — the measurement that reframes this base's longest-running gap
+
+| region | slugs on region-bearing lines in the two trending files | **absent from every sell shelf** | rows on the three sell shelves |
+|---|--:|--:|--:|
+| LATAM | `163` | 🔴 **`140`** | `20` |
+| North America | `195` | 🔴 `149` | `23` |
+| EMEA | `312` | 🔴 `257` | `32` |
+| APAC | `327` | 🔴 `279` | `37` |
+| **total** | **`997`** | 🔴 **`825`** | **`112`** of `440` rows |
+
+**p692 declared LATAM supply nil for a sixth consecutive pass and prescribed more discovery. The base's bottleneck is not discovery — it is promotion, in every region, by a factor of four to five.** ⚠️ Upper bound by construction: a slug sharing a line with a region name is not placed there, so `huggingface/transformers` and `carpentries/instructor-training` are inside the `163`. 🔴 Two entries are not addresses at all — `topics/ai-tutor`, `topics/education-ai` — which is **`Gap 248` unrepaired in these very files**.
+
+### 🟢 `693-B` — the two arms, run against each other
+
+| arm | probe shape | distinct repositories | real education **systems** |
+|---|---|--:|--:|
+| p691 (prior) | single **subject** noun ×7 | `90` | 🔴 **`0`** |
+| p693 Arm A | single **subject** noun ×9, `stars:>5` — replication | `402` | 🔴 **`0`** |
+| p693 Arm B | multi-word **product** noun ×16 | `473` | 🟢 **`13`** (`9` novel to the whole base) |
+
+Arm A returns what p691 said it returns: university coursework, LaTeX dissertation templates (`uecetex2`, `TFG-TFM_EPS`), six bootcamp exercise repositories from a single owner, and one **GitHub profile README**. Arm B asks for `gestão escolar`, `plataforma educativa`, `diário de classe`, `boletim escolar`, `avaliação docente`, `secretaria escolar` — nouns that can only describe a thing that *is* the product. `T107`.
+
+### The rows filed at p693
+
+| Repo | Licence (read at the real default ref) | ★ | Region | Why it is a row |
+|---|---|--:|---|---|
+| [`eemtijca/buscapp`](https://github.com/eemtijca/buscapp) | 🟢 MIT `1,088 B` `7a3744cad4f5` | `3` | 🟢 **LATAM** (Brazil) | 🟢 **The strongest placement channel this base has: the grant's own copyright holder is a named public school** — *"EEMTI José Cláudio de Araújo"*, a Ceará state full-time secondary school. School-management PWA: attendance, incident records, absence justifications, guardian↔teacher↔management messaging, per-profile data isolation, realtime updates, **a risk-prioritisation ranking dashboard**, and an **LGPD** export/anonymisation ADR. CI runs quality, test and **CodeQL** workflows. `692-L`'s channel, second instance |
+| [`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app) | 🟢 Apache-2.0 `11,358 B` `93f0abad8891` — **verbatim §1–§9**, and byte-identical in *length* to canonical with a **different sha** (`693-G`) | `39` | 🟢 **LATAM** (Colombia) | Practice-centre management built on the **ADDIE** instructional-design model, Laravel 10. 🟢 **Carries a DOI — `10.5281/zenodo.18841367`** — which is the citation `Gap 673-C` asked for as a placement channel; ⚠️ `zenodo.org` is unreachable this session (`693-K`) so the DOI is recorded unverified. Placed on *Universidad Católica* + `edu.co`. 🔵 **Named drift, stated:** the project now calls itself *Mesa de Servicio* (service desk) while its description remains educational — worth re-reading before it is sold as an education platform |
+| [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | 🟢 MIT `1,072 B` `49fe7bbe74ba` | `46` | Global 🟡 | The highest-starred permissive LMS front end this base has found in the Spanish-language layer; `33` forks against `46★` — an unusually high fork ratio for this shelf. Region refused: no jurisdiction token in the README |
+| [`Debaq/LabSim`](https://github.com/Debaq/LabSim) | 🟢 MIT `1,079 B` `990209c765ba` | `2` | Global 🟡 | 🟢 **A function no row on these shelves has held: it replaces clinical hardware.** Audiology and otoneurology laboratory simulator — audiometer (tonal thresholds, logoaudiometry, Fowler, Stenger, SISI, tonal decay), **ABR** evoked potentials, impedance, simulated patient case files. **Stimuli are synthesised, not static audio files**, and it drives a **dedicated physical keyboard with its own firmware** so students use the controls of a real instrument. Health-professions education at `2★` |
+| [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) | 🟢 MIT `1,078 B` `1f1ae32183c9` | `50` | 🔧 **EMEA** (Portugal) 🟡 — **corrected from LATAM** | Django + PostgreSQL school management across academic, pedagogical and financial scopes. 🔧 **The LATAM label on this row was placed on the Portuguese language alone and is withdrawn:** *"sectores Académico"*, *"base de dados"*, holder *"António"* are European Portuguese; counter-signal *"arquivo"* ×2 is Brazilian, and is stated rather than suppressed. ⚠️ Author's own words: *"em desenvolvimento"* — under development |
+| [`ajacs10/AvaliaDocente`](https://github.com/ajacs10/AvaliaDocente) | 🟢 MIT `1,093 B` `dd945341baf6` | `6` | **EMEA** (Portugal) 🟡 | **Anonymous student evaluation of teaching staff and methodologies** — the function `692-M` filed for North America (`dossier-comment-reflector`), now held at a second point with a different structure: student-facing and anonymous rather than faculty-facing and dossier-shaped. Placed EMEA on pt-PT orthography (*"anónima"*, *"académico"*, *"recolha"*) at MEDIUM confidence |
+| [`ValentinTorassa/Open-Security-Labs`](https://github.com/ValentinTorassa/Open-Security-Labs) | 🟢 Apache-2.0 `11,371 B` `d0b38e10547e` — **verbatim §1–§9** (residual `+13 B`) | `44` | 🟢 **LATAM** (Argentina) | Spanish-language open courseware whose labs are **executable** rather than described — Linux, networking, backend, cloud, security. Placed on a country token plus a committed `.com.ar` host, not on the language |
+| [`h3ct0r/ufmg_notas_excel_sheet_webapp`](https://github.com/h3ct0r/ufmg_notas_excel_sheet_webapp) | 🟢 MIT `1,073 B` `63d843ef7c0e` | `1` | 🟢 **LATAM** (Brazil) | 🟢 **An integration primitive, which is rarer on this shelf than a platform.** Merges **UFMG class-diary CSVs** with **Moodle export CSVs** into one roster and emits a formatted Google Sheet via service account or user OAuth, streaming progress over a WebSocket. FastAPI + Pandas + React. Placed on **UFMG** named in the README — a named institution, `T78`'s top channel |
+
+### 🔴 Read and deliberately not filed — the copyleft and stale half of the same layer
+
+| Repo | ★ | Reading |
+|---|--:|---|
+| [`mumuki/mumuki-laboratory`](https://github.com/mumuki/mumuki-laboratory) | `201` | **AGPL-3.0**, pushed `2023-07-18`. The highest-starred LATAM education platform in the sweep; `P32`'s boundary terms make it unusable as a base |
+| [`LibreClass/libreclass`](https://github.com/LibreClass/libreclass) | `32` | **GPL-3.0** and `4.8` years stale |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | `20` | **GPL-2.0**, pushed `2026-11-07` — live Brazilian school-census software. Context for a Brazilian engagement, not a permissive row |
+| [`marcosroriz/sete`](https://github.com/marcosroriz/sete) | `22` | 🟢 MIT `1,069 B` `0bbd32e7e09a`, placed LATAM — **but `3.6` years stale.** `Gap 673`: permissive and thinly maintained is a commercial risk, not a licence risk |
+| [`titooDiaz/SKOLAGH`](https://github.com/titooDiaz/SKOLAGH) | `6` | 🟢 MIT `1,067 B` `0fd0e1bff786` — `9` months stale and the README describes installation, not behaviour |
+
+---
 ## 🆕 2026-11-07 (p692) — 🔴 **FOUR FOUNDATION ROWS ADDED AND ELEVEN LIVENESS CLAIMS WITHDRAWN: THE SCRATCH AND KOLIBRI COMPONENT REPOSITORIES HAVE BEEN ARCHIVED INTO MONOREPOS, THE ARCHIVED ADDRESSES KEPT THE STARS, AND THIS BASE WAS STILL TELLING STUDIOS TO FORK THEM**
 
 `repos/foundations.md` **`156` → `160`** (re-derived by counting, `0` duplicates, arity `160/160`). `verticals/solutions.md` re-derived at **`73` rows / `73` distinct — the heading had read `71` since p688, wrong by two** — with **one subject address corrected and no row added**. 🔴 **`11` archived subjects found across three shelves; `8` of them said nothing about it.**

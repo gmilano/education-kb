@@ -21,6 +21,59 @@ updated: 2026-11-07
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T107 — A discovery probe must name a PRODUCT, not a SUBJECT, or it returns everything that is merely *about* the field 🟢 new at p693
+
+**Evidence.** Three arms over the same language layer, same index, same licence filter:
+
+| arm | probe shape | distinct repositories | real education **systems** |
+|---|---|--:|--:|
+| p691 | single **subject** noun ×7 (`educacion`, `aprendizaje`, `escolar`, `docente`, …) | `90` | 🔴 **`0`** |
+| p693 Arm A | single **subject** noun ×9, `stars:>5` (replication) | `402` | 🔴 **`0`** |
+| p693 Arm B | multi-word **product** noun ×16 (`gestão escolar`, `diário de classe`, `boletim escolar`, `avaliação docente`, `secretaria escolar`, `plataforma educativa`) | `473` | 🟢 **`13`**, `9` novel to the whole base |
+
+**Mechanism, which is why this generalises past Spanish and Portuguese.** GitHub free-text search matches **name, description and topics**. A **subject** noun (`educación`, `education`, `aprendizaje`) appears in the description of *anything about the field* — coursework, reading lists, LaTeX dissertation templates, bootcamp exercises, conference talks, and personal **profile READMEs**. A multi-word **product** noun (`gestão escolar` = *school management*, `diário de classe` = *class register*) can only describe a thing that **is** that product. **The subject noun maximises collision; the product-noun phrase minimises it.**
+
+🔴 **The residual, and it never goes to zero:** the collision survives wherever the product noun is **polysemous**. `sistema de notas` returned Markdown note-taking applications, because `notas` in Portuguese is both *grades* and *notes* — the same defect as `currículo` meaning *résumé* (`T105`). **Budget one refusal per polysemous term rather than expecting a clean channel.**
+
+🔵 **Consequence for this base:** two passes concluded the Spanish/Portuguese layer was empty of supply (`p691` measured it, `p692` prescribed re-running the same instrument). **It was not empty; the question was wrong.** And the thing it actually contains is an **administrative** layer, not an agent layer — which is a separate finding that survived the channel correction (`P73`).
+
+**Confidence: high** — three arms, two of them replications, with the collision class named and one instance refused on the record.
+
+## T108 — A Romance-language token selects a language family spanning three continents, so it can narrow a search and can never place a row 🟢 new at p693
+
+**Evidence, at two opposite signs inside one pass.**
+
+🔴 **Sign one — the token points *out* of the region it was used to find.** A probe for `docente`, run to surface LATAM supply, returned [`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente): a PHP integration for **Italy's** *Carta del Docente*, a teacher spending entitlement (🟢 MIT at **`LICENSE.md`** on `main`, `1,099 B`, sha256₁₂ `e340e4990cdb`; README Italian throughout — *"Il pacchetto non ufficiale per integrare facilmente la Carta del Docente in un progetto PHP"*). `docente` is Italian as well as Spanish and Portuguese. **A LATAM-intended probe surfaced an EMEA government integration.**
+
+🔴 **Sign two — the token was already used to place a row, wrongly.** [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) was published on this base as **LATAM**, described as *"the most active permissive Portuguese-language school system"*. Its README is **European** Portuguese — *"sectores Académico"* (pt-BR: *setores Acadêmico*), *"base de dados"* (pt-BR: *banco de dados*), the tu-imperative *"considera apoiar"* — and the grant holder is *"**António**"*, the pt-PT spelling. **Withdrawn and re-placed EMEA (Portugal).** A second pt-PT instance ([`ajacs10/AvaliaDocente`](https://github.com/ajacs10/AvaliaDocente): *"anónima"*, *"académico"*, *"recolha"*) was placed EMEA at first filing rather than defaulted to LATAM.
+
+🟢 **The usable discriminator is orthography, not vocabulary.** pt-PT vs pt-BR separate on `sectores`/`setores`, `Académico`/`Acadêmico`, `base de dados`/`banco de dados`, `ficheiro`/`arquivo`, and on `António`/`Antônio` in the grant's own copyright line. ⚠️ **It is an inference, not a registry fact:** `Gestao-Escolar` carries one Brazilian counter-signal (*"arquivo"* ×2), so both rows are placed at **MEDIUM** confidence with the counter-signal stated in-cell, overturnable by one registry fact.
+
+🔵 **Extends `683-B`** (a jurisdiction substring must be checked against the token it sits inside) **from substrings to whole languages**, and it bites hardest exactly where this base's coverage is thinnest.
+
+**Confidence: high** for the rule; **medium** for the two specific placements, and they say so in the cell.
+
+## T109 — This base discovers four to five times faster than it shelves, in every region 🔴 new at p693
+
+**Evidence.** Slugs appearing on a region-bearing line in the two trending files, against rows actually carried on the three sell shelves:
+
+| region | found (trending) | **on no sell shelf** | shelved |
+|---|--:|--:|--:|
+| LATAM | `163` | 🔴 **`140`** | `20` |
+| North America | `195` | 🔴 `149` | `23` |
+| EMEA | `312` | 🔴 `257` | `32` |
+| APAC | `327` | 🔴 `279` | `37` |
+| **total** | `997` | 🔴 **`825`** | `112` of `440` rows |
+
+🔴 **Why it matters more than any single discovery.** A trending file is a **log**; a sell shelf is what a studio reads when an engagement starts. **825 region-labelled addresses have been found, licence-read, written up and left where nobody selling an engagement will see them.** For six consecutive passes this base declared LATAM supply *nil* and prescribed more discovery, while holding `163` LATAM addresses in its own logs. **The bottleneck was never discovery.**
+
+⚠️ **Upper bound by construction, and the error direction is known.** Co-occurrence on a line is not a placement, so slugs sharing a line with a region name are counted (`huggingface/transformers` and `carpentries/instructor-training` sit inside the `163`). **The measurement can only overstate the backlog — but not the ratio's direction**, which is consistent across all four regions and robust to the noise. 🔴 **`2` of the `163` are not addresses at all** (`topics/ai-tutor`, `topics/education-ai`), which is **`Gap 248` still live in these files, `28` passes after declaration**.
+
+🔵 **This is `Gap 247`'s `QUEUE-UNENUMERATED` (recorded at `104`) measured at its true scale, and the remedy is already written:** before any pass writes the word *"filed"*, `grep` the slug against the sell shelves — and **spend part of every pass promoting the backlog rather than extending it.** p693 promoted `9`.
+
+**Confidence: high** on the ratio and its direction; the absolute backlog is an explicit upper bound.
+
+
 ## T102 — A zero from a search index has two causes, and only one of them is a finding
 
 🔴 **Discovery nils are the most-published result on these shelves, which makes a false nil the most expensive defect available.** `p690` (`690-C`) found zeros that were **transport** failures: six of ten queries returned `total_count: 0` and the run read as a clean nil across six categories until it was re-probed. `p691` found the complementary class on the same channel — zeros that were **query-construction** failures. Five Spanish/Portuguese probes (`educacion ia tutor`, `educación inteligencia artificial`, `educacao ia professor`, `tutor inteligente educacion`, `plataforma educativa ia`) each returned `total_count: 0`. Nothing was wrong with the channel: free-text `machine learning` returned `1,320,779` and `education` returned `284,220` in the same session. **The queries were `3`-way conjunctions**, and GitHub ANDs free-text terms, so each was asking for three strings in one repository's indexed fields. Decomposed to single terms the same channel answered at once: `educacion` `8`, `aprendizaje` `37`, `educacao` `15`.

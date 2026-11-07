@@ -1,0 +1,8 @@
+url-verification	all 12 published addresses: LICENSE/LICENSE.md 200 at the REAL default ref; github.com HTML 403 for ALL 12 (692-O confirmed, 12/12)
+gh api repos/{owner}/{repo}	403 session scope
+gh api search/repositories	LIVE - but repo: OR-batching now 422 (671-G mitigation dead)
+raw.githubusercontent.com	LIVE
+github.com HTML	403 via proxy, 12/12 tested
+git ls-remote --symref	LIVE (resolved carta-del-docente default ref = main)
+unesco.org / iesalc.unesco.org / ipsos.com / teqsa.gov.au / eur-lex.europa.eu / joinup.ec.europa.eu	ALL UNRESOLVABLE - outside session allowed domains
+make hooks	DENIED by session auto-mode classifier (executes code from cloned repo)

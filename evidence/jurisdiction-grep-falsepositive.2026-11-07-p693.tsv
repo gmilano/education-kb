@@ -1,0 +1,8 @@
+repo	naive_substring_hit	verdict_in_context	real_signal
+DanielDev87/virtual-center-app	sus	FALSE POSITIVE - matched inside Portuguese/Spanish "usam"/"usa"	institution=Universidad Catolica + cctld=edu.co
+villadalmine/study-cybercirujas	sus	FALSE POSITIVE - same	none; voseo "Usalo" is language not jurisdiction
+titooDiaz/SKOLAGH	peru	FALSE POSITIVE - no occurrence in prose	none
+h3ct0r/ufmg_notas_excel_sheet_webapp	sence	FALSE POSITIVE - no occurrence in prose	institution=UFMG (real, word-boundary)
+ValentinTorassa/Open-Security-Labs	Argentin	hit dropped by context-window grep, real on word boundary	country=Argentina + cctld=com.ar
+eemtijca/buscapp	lgpd	TRUE POSITIVE - but inside a LINKED FILENAME (docs/adr/014-lgpd-...md), not prose	statute=LGPD + institution=EEMTI + cctld=escola.edu.br
+summary	7 naive hits	6 FALSE / 1 TRUE	naive substring grep ran 6/7 false positive

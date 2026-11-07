@@ -1,0 +1,4 @@
+arm	probe_shape	terms	repositories	novel_permissive	education_SYSTEMS_among_them	verdict
+p691 (prior)	single SUBJECT noun	educacion educativa educacao aprendizaje escolar docente profesor	90	19	0	channel declared empty of agents
+p693 arm A	single SUBJECT noun (replication, stars>5)	educación aprendizaje docente escola ensino educação profesor estudiantes escuela	402 distinct	n/a	0	REPRODUCES p691: coursework, LaTeX thesis templates, bootcamp exercises, one profile README
+p693 arm B	multi-word PRODUCT noun	gestion escolar / gestao escolar / plataforma educativa / plataforma educacional / diario de classe / boletim escolar / avaliacao docente / sistema de notas / secretaria escolar / tutor inteligente	473 distinct	22	13	PRODUCES: real education systems, 9 novel to the whole base

@@ -1,0 +1,15 @@
+slug	ref	path	bytes	sha256_12	family	operative_body	residual_vs_canonical
+villadalmine/study-cybercirujas	main	LICENSE	10765	aa2da1f507e6	Apache-2.0	VERBATIM §1-§9 (8967 chars)	-593
+ValentinTorassa/Open-Security-Labs	main	LICENSE	11371	d0b38e10547e	Apache-2.0	VERBATIM §1-§9 (8967 chars)	+13
+DanielDev87/virtual-center-app	main	LICENSE	11358	93f0abad8891	Apache-2.0	VERBATIM §1-§9 (8967 chars)	0 (DIFFERENT sha at IDENTICAL byte count - 692-G reproduced)
+arvoreeducacao/seedling	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	byte-identical to canonical	0
+eemtijca/buscapp	main	LICENSE	1088	7a3744cad4f5	MIT	4/4 clauses	n/a
+ajacs10/AvaliaDocente	main	LICENSE	1093	dd945341baf6	MIT	4/4 clauses	n/a
+Debaq/LabSim	main	LICENSE	1079	990209c765ba	MIT	4/4 clauses	n/a
+Antonio-Neves/Gestao-Escolar	master	LICENSE	1078	1f1ae32183c9	MIT	4/4 clauses	n/a
+guillermoscript/lms-front	master	LICENSE	1072	49fe7bbe74ba	MIT	4/4 clauses	n/a
+h3ct0r/ufmg_notas_excel_sheet_webapp	main	LICENSE	1073	63d843ef7c0e	MIT	4/4 clauses	n/a
+mauriciospark/registros	main	LICENSE	1071	e957b565296a	MIT	4/4 clauses	n/a
+titooDiaz/SKOLAGH	main	LICENSE	1067	0fd0e1bff786	MIT	4/4 clauses	n/a
+marcosroriz/sete	master	LICENSE	1069	0bbd32e7e09a	MIT	4/4 clauses	n/a
+datomatic/carta-del-docente	main	LICENSE.md	1099	e340e4990cdb	MIT	4/4 clauses; holder datomatic <info@albertoperipolli.com>; ITALIAN - surfaced by a LATAM-intended probe	n/a
