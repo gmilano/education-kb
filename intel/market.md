@@ -106,6 +106,27 @@ Three facts shape every engagement:
 
 ### North America
 
+### 🔵 p689 — North America: the leg nilled on facts as well as repositories, and the denominator is the deliverable
+
+The mandated North America leg was run. **Every fact it produced was already on this page**, and in several cases this page holds the figure at higher granularity than the leg returned it. Scored by token-and-value probe across all eight shelf pages:
+
+| fact the leg offered | held? | where |
+|---|---|---|
+| Maryland **SB 720** — state AI guidance, aligned local policy, designated AI coordinator | 🔵 held | `41` hits across `6` files |
+| California **AB 1159** — prohibits using student data to train AI models | 🔵 held | `80` hits across `9` files |
+| North Carolina **SB 1006** — `$10M` earmark funding Khanmigo for participating districts | 🔵 held | `8` hits; `Khanmigo` `19` hits |
+| **134 bills / 31 states** on AI in education, 2026 session | 🔵 held | `67` hits across `6` files |
+| New York proposal restricting classroom AI to **grade 9+** (diagnostics / special-ed excepted) | 🔵 held | held with the exception clause |
+| **Berkeley Law** bans AI for all exams and credited coursework from Summer 2026 | 🔵 held | `9` hits |
+| Executive Order **14409** (Promoting Advanced AI Innovation and Security, 2026) | 🔵 held | `10` hits |
+| **60 %** of US teachers use AI (Gallup, 2,200+ educators) vs **83 %** of K-12 teachers (second compilation) | 🔵 held | held **with the conflict stated** |
+| Most US public schools still have no formal student AI policy (Child Trends / US Dept of Education) | 🔵 held | `6` hits |
+| North America ≈ **36 %** regional share, ≈ **$3.68B** in 2026 → `$32B` by 2030 at `31.1 %` CAGR | 🔵 held | held, and already flagged against a competing `38 %`-for-2025 compilation |
+
+🔴 **`10/10` candidate facts already held, `0` adoptable, `0` repository addresses named.** This is the thirtieth consecutive pass in which the mandated legs added nothing to the supply side, and the fourth in which they added nothing to the demand side either. 🔵 **Keep running them — the cost is four queries and they have twice stopped a wrong claim from entering this base (`p651` North Carolina dates, `p652` TEQSA) — but stop treating a leg as a research channel.** The channel that produced every row filed this pass is `search/repositories` plus an audit of this base's own backlog; see `../repos/trending.md` `689-J`.
+
+🟢 **One genuine North America addition this pass, and it came from the GitHub index:** [`vishalsachdev/learning-design-pillars`](https://github.com/vishalsachdev/learning-design-pillars) (MIT, `10★`), placed on the `p670` sibling-grant channel against `vishalsachdev/canvas-mcp`. It is *pedagogy as a loadable artefact* rather than a runtime — the layer a studio sells to a faculty-development office, which is a different buyer from the student-facing tutor that dominates this shelf. Relevant precisely because North America's constraint is governance, not capability: a documented, inspectable design framework is easier to put through an institutional review than a model prompt.
+
 ### 🔵 p688 — North America: the leg returned nothing novel, and the denominator is worth keeping
 
 All facts the North America leg produced were already held: the **US Department of Education's $169M for responsible AI in higher education (January 2026)**, the proliferation of state-level guidance against limited hard regulation, **COPPA** and **FERPA** as the operative constraints on child- and student-facing products, and Deloitte's 2026 higher-education framing (student experience, administrative load, the degree-to-skills gap). 🔵 **One supply-side reading is new and it is a nil:** of the addresses verified this pass, exactly **one placed to North America** — [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor), on the named-institution channel (MIT Open Learning). The densest regulatory market on this page continues to contribute almost no permissive supply, which is the same asymmetry recorded at p667 and is now five passes stable.
@@ -387,6 +408,27 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+### 🔵 p689 — EMEA: the leg nilled, including the one item that looked novel, and the supply side moved instead
+
+The mandated EMEA leg was run. **`6/6` candidate facts already held**, including the one this pass expected to be new:
+
+| fact the leg offered | held? |
+|---|---|
+| **Digital Omnibus** softens the AI-literacy duty from 27 July 2026 — *measures that support* AI literacy rather than a guaranteed level per person | 🔵 held, `143` hits across `18` files |
+| AI Act enforcement by the AI Office and national authorities from **2 August 2026** | 🔵 held |
+| Education as **Annex III high-risk** — admissions, assessment, proctoring, personalised learning; schools liable as **deployers** | 🔵 held |
+| Emotion-recognition ban in education and the AI-literacy duty applying since **2 February 2025** | 🔵 held, `28` hits |
+| **Article 50** chatbot transparency duties from 2 August 2026 | 🔵 held, `104` hits across `20` files |
+| The date conflict: *August 2026* against **Regulation (EU) 2026/1744**'s *2 December 2027* for high-risk education | 🔵 held — and this page already records it as **unverifiable from this session**, because `eur-lex.europa.eu` and `europarl.europa.eu` do not resolve under this network policy (`p668`–`p670`) |
+
+⚠️ **The Commission's `Apply AI Alliance` is the one item with thin coverage** (`2` hits, and not on an intel page). It is a stakeholder forum — AI providers, industry, public sector, academia, social partners — not an instrument, so it changes no obligation. Recorded here for completeness rather than promoted.
+
+🟢 **Two EMEA additions this pass, both from the GitHub index, and the first is the more important thing this base has filed for EMEA in several passes.** [`ideas-edu/ideas`](https://github.com/ideas-edu/ideas) — Apache-2.0, `28★`, a joint project of the **Open University of the Netherlands and Utrecht University**, pushed `2026-09-05` after eleven years — builds **domain reasoners**: components that *compute* the next correct step in mathematics, linear algebra, logic or Haskell, and the feedback for a wrong one, rather than generating it.
+
+🔵 **Why that is an EMEA-shaped asset specifically.** Annex III makes a school the *deployer* of a high-risk system when AI touches assessment or personalised learning, and a deployer has to be able to explain an output. **A generated hint cannot be explained; a computed one can be traced to the rule that produced it.** A reasoner also narrows what the LLM is trusted with — language and dialogue, not correctness — which is the cheapest available route to an auditable tutoring product in this jurisdiction. Paired with [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT) writing every interaction to an xAPI store, a studio can show *what was said, why it was said, and that the record exists*. See `../compose/patterns.md` `P67`.
+
+Second addition: [`smlfg/ilias-mcp`](https://github.com/smlfg/ilias-mcp) (MIT, `1★`, new to this entire base) — the first **ILIAS** address anywhere in this KB, naming Hochschule Heilbronn, Universität Mannheim and HS Mannheim. ILIAS is a major German-speaking university LMS and this base had no agent surface for it at all. ⚠️ `1★`, three weeks old, assignments and uploads unimplemented: a starting point, not a dependency.
 
 ### 🆕 p688 — Germany is running a 16-state school AI platform in the open, and this base held neither of its names
 
@@ -766,6 +808,24 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+### 🔵 p689 — APAC: the leg nilled against a page that is already more granular than the leg, and APAC is now the largest non-Global bloc on the agents shelf
+
+The mandated APAC leg was run. **`5/5` candidate facts already held, and on the headline series this page is *finer-grained than the source that returned it*:**
+
+| fact the leg offered | held? |
+|---|---|
+| Ipsos **Education Monitor 2026** support for banning AI in schools — India `26 %`, Japan `29 %` (up from `21 %`), Indonesia `23 %`, South Korea `31 %` | 🔵 held, **at higher resolution**: this page already carries Indonesia `23 %`, Thailand `25 %`, India `26 %`, Singapore `28 %`, Japan and Malaysia `29 %`, South Korea `31 %` |
+| South Korea's **AI Basic Act** in force 22 January 2026 — the region's first comprehensive mandatory AI law | 🔵 held, with the MSIT grace period |
+| India's amended **IT Rules** on synthetic-content labelling effective **20 February 2026** | 🔵 held, verbatim |
+| Japan's **AI Promotion Act** deliberately non-binding | 🔵 held, with the July 2026 Cabinet AI Basic Plan |
+| UNESCO: China and Singapore have AI-in-Education policies; China, Japan, Korea and Singapore integrate AI curricula | 🔵 held, as the readiness split |
+
+🟢 **The supply side is where APAC moved.** Two rows added to `../agents/top.md`, both placed on the `p684` primary-README-language channel with the measurement on the row: [`liuliu667/cram-engine`](https://github.com/liuliu667/cram-engine) (MIT, `178★`, **`86.3 %` CJK** — the highest share on that shelf) and [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) (MIT, `128★`, `61.7 %` CJK).
+
+🔵 **Measured consequence worth recording: APAC is now `25` of the `84` rows on the agents shelf — `30 %`, and the largest bloc after `Global` (`35`).** North America is `12`, EMEA `7`, LATAM `5`. That asymmetry is not a sampling artefact of this pass; it is what the primary-README-language channel can *see*. CJK is decidable by codepoint, so APAC placements are cheap and reliable, while every other region needs an institution name, a statute, a TLD or the function-word channel built this pass. 🔴 **Read the bloc sizes as a property of the instrument, not of the world** — the honest statement is that this base can place an APAC repository more easily than any other kind.
+
+🔵 **`cram-engine` carries the transferable idea of the pass on the APAC side: it models the exam date.** Every other tutoring address on this shelf optimises mastery without a horizon. Four of the five APAC education policies above are curriculum-and-examination policies, and a certification or gaokao-adjacent engagement is bought on a deadline, not on a learning curve. 🔴 **Licence warning for anyone working the China curriculum angle:** [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) — `30` citations in this base's logs, the obvious curriculum-taxonomy candidate — serves **CC BY-NC 4.0**, `19,345 B`, `sha256₁₂ db2e35513dba`. **NonCommercial is disqualifying for a client engagement.** Now written down.
+
 ### 🆕 p688 — China and India both now mandate AI *curriculum*, which is not the same thing as regulating AI
 
 🟢 **China — the `AI + Education` Action Plan.** The **Ministry of Education with four other central departments** launched an **`AI + Education` action plan in mid-April 2026**, targeting **full curriculum integration by 2030**. It sits on top of May 2025 guidelines that put AI lessons from **age six**, and secondary reporting adds that the ministry **bars primary-school pupils from using generative AI independently** — a restriction read only in secondary sources and not reconciled to the ministry's own text, so quote it as reported rather than as rule.
@@ -1062,6 +1122,35 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+### 🔵 p689 — LATAM: the leg nils a FOURTH time, and the channel that actually answers LATAM is this base's own backlog
+
+The mandated LATAM leg was run and nilled again on both arms. **`5/5` candidate facts already held:**
+
+| fact the leg offered | held? |
+|---|---|
+| Brazil **PL 2338** — December 2025 vote postponed, the date now circulating is December 2026 | 🔵 held, `30` hits across `5` files |
+| Brazil's **ANPD regulatory sandbox**, the region's first | 🔵 held — and this page already records the sharper fact that **none of its ≤3 participants under Notice 2/2025 is an education project** |
+| Mexico's 2026 reforms as the first binding AI obligations; a February 2026 Senate bill for a risk-classifying regulator; six initiatives 2022–2025, none approved | 🔵 held |
+| Brazil / Mexico / Chile at advanced legislative stages; Argentina and Colombia relying on data-protection law | 🔵 held |
+| UNESCO's AI-in-education observatory for Latin America and the Caribbean; Mexico's computational-thinking push | 🔵 held, `121` / `24` hits |
+
+🔧 **A correction to how the LATAM record should be read, because this pass nearly got it wrong.** `p680`, `p685` and `p688` report a LATAM supply-side nil. **That claim is scoped to the mandated legs** — p688's own words are *"neither the mandated LATAM leg nor an unmandated Spanish-language leg produced a LATAM-origin permissive repository."* It is **not** a statement that this base holds no LATAM supply, and publishing it as one would be false: the agents shelf alone carries **`5` LATAM rows of `84`**, placed by channels that are not legs — a **`.br` TLD committed in `.env.example`** (`p683`, `NewSchoolApp/newschool-backend`) and a **statute citation in the README** (`p684`, `Fernandosr85/sistema-gestao-pei`, citing Lei 12.764, Lei 13.146, the LDB and the LGPD).
+
+🟢 **p689's LATAM result came from auditing this base's own append-only logs, and it is the largest-reach Brazilian address this KB has filed.** [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — 🟢 **MIT**, `1,071 B`, `sha256₁₂ faa268455c36`, **`1,857★`**, `287` forks, `main` @ `2efb258370b1` — carries **`21` education tools in four features**:
+
+| Feature | Source | Tools | Shape |
+|---|---|--:|---|
+| `inep` | INEP — índices educacionais (IDEB, indicadores) e pesquisas | 4 | live API |
+| `fnde` | FNDE — repasses, merenda escolar, PNATE, transporte | 4 | live API |
+| `inep_censo_escolar` | INEP — Censo Escolar da Educação Básica, **~180k schools**, infrastructure, enrolments, 2023 | 7 | local **DuckDB**, opt-in |
+| `inep_enem` | INEP — **ENEM microdata, ~3.9M registrants**, scores, socioeconomic profile, 2023 | 6 | local **DuckDB**, opt-in |
+
+🔴 **It was cited `14` times in this base's own trending logs and filed `0` times, across the same three passes that each published a LATAM nil.** The reason is the vocabulary: the legs search *edtech*, and this repository is described, tagged and indexed as **Brazilian public-sector open data** (`533` tools, `70` features, `15` areas). 🔵 **And that is the right shape for the opportunity, not a near-miss.** A LATAM public-education engagement does not open with a tutor. It opens with *how many schools, how many enrolled, what the IDEB says, what FNDE transferred, how this cohort scored on the ENEM* — and those are questions about **federal statistics**, answerable on day one, under MIT, with the heavy datasets cached locally in embedded DuckDB so the analysis is SQL rather than API quota.
+
+Also filed: [`portabilis/i-diario`](https://github.com/portabilis/i-diario) — the *diário de classe* companion to [`portabilis/i-educar`](https://github.com/portabilis/i-educar), which this base has carried since `p667` as the largest free-software school-management system in Brazil. 🔴 **AGPL-3.0**, so configure-and-host rather than white-label, and its default ref is the bare version number **`1.6`**. 🔧 **Its grant payload is a Portuguese translation of the AGPL, and that broke two detectors: GitHub's own licence field reads `NOASSERTION`, and this base's grader read `OTHER:`.** A licence grader keyed on English title lines systematically under-reports exactly the regions this page keeps recording as thin — which is a second, mechanical reason the LATAM nil was never only about the world.
+
+**Standing recommendation, now on its fourth consecutive nil: run the mandated LATAM leg for the record and plan nothing around it. Budget the pass's LATAM effort on the backlog audit and on the non-leg placement channels (`.br` TLD, statute citation, Portuguese function-word density) instead.**
 
 ### 🔴 p688 — LATAM: the supply side is nil for a third consecutive pass, measured on two legs including a Spanish-language one
 
@@ -1393,6 +1482,21 @@ client.
 
 ### Global
 
+#### 🔵 p689 — the four global legs nilled for the thirtieth consecutive pass, and this time the *repository* yield was scored too
+
+All four mandated global legs ran (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS SIS MIT Apache`, `AI education industry trends 2026`).
+
+| | legs | repository addresses named | **not already in this base** |
+|---|--:|--:|--:|
+| global | 4 | `9` | 🔴 **`0`** |
+| regional | 4 | `0` | `0` |
+
+Every address the global legs named — `HKUDS/DeepTutor`, `pykt-team/pykt-toolkit`, `CAHLR/OATutor`, `learningequality/kolibri`, `ashishpatel26/500-AI-Agents-Projects`, `flysheep-ai/education-skills` and three more — **is already shelved.** The four regional legs named **no repository at all**, which after thirty passes is a measured property of the instrument: *a web-search leg is not a supply-side channel for this industry.*
+
+🟢 **What did work, scored the same way.** `16` `search/repositories` legs plus a backlog audit produced `42` licence-verified permissive candidates, of which `13` were filed this pass (`5` agents, `6` foundations, `2` platforms) and `2` were new to the entire base. 🔵 **The ratio is the planning fact: the GitHub index and this base's own logs are the channels; the mandated web legs are a control that occasionally stops a wrong claim** (`p651`, `p652`) and otherwise costs four queries.
+
+⚠️ **Market-size figures from this pass's legs are secondary and are NOT added to the series above**, because they would only widen a spread this page has already recorded as diverging: `~$236B` total edtech in 2026 at `18.3 %` CAGR (Research and Markets via an aggregator) against `~$213B` (Eklavvya) against `$404B` for 2025 (HolonIQ via Tutorbase); and for AI-in-education specifically `~$11.4B` (2026) against `>$12.5B` against Grand View's `$5.88B` (2024) → `$32.27B` (2030). 🔴 **Five sources, three incompatible definitions of the same market, zero primary reports read.** One demand-side figure is worth keeping as an *indication* rather than a number: venture funding into edtech fell to roughly **`$1B` in H1 2026, down ~26 % year on year** — the direction is consistent across this page's other readings even though the absolute figure is vendor-compiled.
+
 #### 🆕 p685 — the four global legs nilled, and the supply side nilled with them
 
 🔴 **All four mandated global legs ran and returned no repository address this base did not already hold.** `top open source AI agents education 2026 github MIT` returned only general-purpose agent round-ups (OpenClaw, Hermes, OpenHands, SWE-agent, CrewAI, LangGraph, Pydantic AI, opencode, browser-use) and **stated its own education gap outright** — *"I found no education-specific tutoring or classroom agent with a verified MIT license"*. `github trending education AI 2026` returned `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC` and `patchy631/ai-engineering-hub` — this base's **#1, #2 and largest-curriculum rows**. `open source platform education ERP CRM MIT Apache` returned Frappe Education / ERPNext (copyleft, held and flagged), Apache OFBiz, Corteza, Huly, Krayin, iDURAR, Dolibarr, openSIS, Gibbon, OpenEduCat — **all held**. `AI education industry trends 2026` returned HolonIQ, 1EdTech, OECD and four conflicting market sizings — **all held**.
@@ -1530,6 +1634,20 @@ Alongside it, two `NOASSERTION` repositories resolved to usable grants on readin
 Three consequences, and they are not cosmetic. **(1)** A client selling education AI into all three markets needs one conformity programme with three jurisdictional profiles, sequenced to the Korean date — not an EU programme with APAC bolted on. **(2)** Any proposal that frames December 2027 as "the deadline" is eleven months late for a client with Korean exposure. **(3)** The EU deferral bought European clients runway and bought APAC clients nothing, so the regions that looked least regulated on this page a year ago are now the ones with the nearest dates. **The habit of treating EMEA as the compliance region and APAC as the supply region is now wrong in both directions** — APAC supplies the open source *and* has the earliest deadlines.
 
 ## 🔴 Declared gaps — searched and not found
+
+🆕 **Added at p689 — five gaps, each measured, and two of them are retractions of how an earlier gap was WORDED rather than new absences.**
+
+🔧 **(1) The LATAM nil must be stated as a LEG result, not a base result.** `p680`/`p685`/`p688` recorded a LATAM supply-side nil; read without its scope, that reads as *this base holds no LATAM supply*, and that is false — the agents shelf carries `5` LATAM rows of `84`, placed by a `.br`-TLD channel (`p683`) and a statute-citation channel (`p684`). **The accurate gap: the mandated LATAM leg has produced no repository address for four consecutive passes, and the Spanish-language variant nils with it.** p689's LATAM rows came from auditing this base's own backlog. The distinction matters because the first wording invites padding and the second names a channel to stop using.
+
+🔴 **(2) Pedagogical evaluation of LLM tutors has peer-reviewed benchmarks and NO LICENSED one — which is sharper than the absence this base carried.** Both named candidates were pulled and probed this pass: [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (`46★`, **EMNLP 2025 Oral**, ETH Zürich LRE) and [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) (`3★`). **Both ship no grant file on any of `12` probed root paths, and GitHub's own licence field is `null` for both.** Two for two. A studio cannot put an unlicensed benchmark in a client deliverable, and a benchmark is exactly the artefact a client asks to see. 🟢 **Unlike most entries here this one has a remedy: both are small academic trees whose authors can be asked for a grant.**
+
+🔴 **(3) `32 %` of this base's most-cited backlog is unusable as it stands, and p689's first attempt to measure it was refused by this repository's own gate.** `50` of the most-mentioned unshelved slugs were graded: `27` permissive, `7` copyleft, `6` restricted, **`5` verified grant-absent, `5` unresolved**. 🔧 **Method correction, recorded because it changes a number this page would otherwise have published: the draft graded absence from a ladder of candidate root filenames, which `ACTION p275` has rejected since `p275` (a negative grant verdict requires an ENUMERATED tree) and `p276` extended with the manifest as a mandatory second channel. Re-run compliantly, the ladder over-reported absence by exactly 2× — `10` claimed, `5` survive.** The `5` reclaimed sit in four conditions a root ladder cannot see: a grant one directory down (`formalms/formalms` → `html/license.txt`), a grant declared in a manifest with no file in the tree (`dmontgomery40/mcp-canvas-lms` → `package.json` `"license": "MIT"`, while its `files` array names a `LICENSE` that does not exist), two manifests asserting incompatible grants (`learnpress/learnpress` → `ISC` vs `GPL-3.0-or-later`), and a root `NOTICE` with no licence beside it (`projectfedena/fedena`, `foradian/fedena`). 🔴 **What survives is sharper:** [`jushbjj/mr.-ranedeer-ai-tutor`](https://github.com/jushbjj/mr.-ranedeer-ai-tutor) — **`29,540★`**, `19` citations in these logs — has `12` files in its tree and **not one is a grant**; [`adlnet/scorm-to-xapi-wrapper`](https://github.com/adlnet/scorm-to-xapi-wrapper) (`5` files) the same, and **ADL authored SCORM and xAPI**. Not open despite appearances: `caviraoss/pagelm` (`34` citations — the most-cited backlog slug of all) serves a bespoke *"PageLM Community License"*; `canyongbs/advisingapp` serves **Elastic License 2.0**; `xiaoyang111222/cn-math-taxonomy` serves **CC BY-NC 4.0**. **Ledger: [`evidence/p689-backlog-licence-ledger.tsv`](../evidence/p689-backlog-licence-ledger.tsv) — the point of filing it is that the next pass stops re-paying these checks.**
+
+🔧 **(4) This base's own licence grader cannot read a non-English grant, and the defect hides supply in the regions this page calls thin.** [`portabilis/i-diario`](https://github.com/portabilis/i-diario) serves a **Portuguese translation of the AGPL** (`LICENÇA PÚBLICA GERAL AFFERO GNU`, `35,325 B`, `sha256₁₂ 837b5cf19787`). **GitHub's licence field reads `NOASSERTION`; this base's grader read `OTHER:`.** Both key on English title lines. The fix is one title line per language; the gap is that it took `689` passes for anyone to read a licence file in a language other than English.
+
+🔵 **(5) The mandated legs nilled on FACTS as well as repositories, scored at `21/21` already held.** Ten North America candidate facts, six EMEA, five APAC and five LATAM were probed against all eight shelf pages: **every one already held**, several at higher granularity than the leg returned them (this page carries the Ipsos Education Monitor 2026 ban-support series for seven countries where the leg offered four). `0` repository addresses were named by any regional leg. 🔵 **The recommendation is unchanged and now has thirty passes behind it: run them, because twice they stopped a wrong claim entering this base (`p651`, `p652`), and plan nothing around them.**
+
+⚠️ **Market-size figures offered by this pass's legs were deliberately NOT added** — five sources with three incompatible definitions of the same market and no primary report read. See the `p689` note under `### Global` above.
 
 🆕 **Added at p688 — five gaps, each measured.** 🔴 **(1) No Africa-origin open-source education *codebase* exists at any address two dedicated legs could reach** — one policy leg (Nigeria/Kenya/South Africa/Egypt), one supply leg. The one openly-licensed artefact found is a **CC0 catalogue of products**, now filed, which sharpens `T14` rather than closing it. 🔴 **(2) No LATAM-origin permissive education repository, third consecutive pass, and the Spanish-language leg nils too** — the territory returns training programmes and conferences, not code. 🔴 **(3) `blog.google` does not resolve under this session's network policy** (`getaddrinfo ENOTFOUND`), so the Google/Fab AI open-release commitments for Kenya, Ghana and South Africa remain secondary-sourced — the seventh host on this page's unreachable list, a network boundary rather than a retry target. 🔴 **(4) `gh api search/repositories` returns `total_count: 0` for forks unless `fork:true` is passed**, and this base has been relying on that channel as its substitute for the `403`-blocked `repos/` endpoint; a well-formed confident zero for a repository pushed hours earlier. Two-arm probes (`ls-remote` **and** search) from here on. 🔴 **(5) Singapore's national AI curriculum cannot be confirmed** — sources conflict between a formal subject and supplementary programmes; not asserted either way until an MOE source is read.
 

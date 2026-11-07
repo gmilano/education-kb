@@ -1,0 +1,18 @@
+# pass 689 — 2026-11-07 — TREE ENUMERATION for the 10 backlog slugs p689's first draft
+# graded "no grant" from a PATH LADDER.  `gate-enumeration` (ACTION p275) refused that
+# commit, correctly: a negative grant verdict is only a finding if the tree was ENUMERATED.
+# Method: treeless partial clone (`git clone --filter=blob:none --no-checkout --depth 1`),
+# then `git ls-tree -r --name-only HEAD` — the full path list, no blob download.
+# Enumerator: ingest/p689-enumerate.sh   Manifest channel (p276): manifest-channel.2026-11-07-p689.tsv
+# RESULT: the ladder over-reported absence by exactly 2× — 10 claimed, 5 survive.
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree
+jushbjj/mr.-ranedeer-ai-tutor	OK	ea29bcf196d2	12	NONE_IN_TREE
+adlnet/scorm-to-xapi-wrapper	OK	3e532b852385	5	NONE_IN_TREE
+projectfedena/fedena	OK	68a84ac445bf	4608	NOTICE,public/javascripts/fckeditor/license.txt,public/javascripts/tiny_mce/license.txt,vendor/plugins/fckeditor/public/javascripts/fckeditor/license.txt,vendor/plugins/paperclip/LICENSE,vendor/plugins/rspec-rails/License.txt,vendor/plugins/searchlogic/LICENSE,vendor/plugins/will_paginate/LICENSE
+foradian/fedena	OK	333477b06f1d	4568	NOTICE,public/javascripts/fckeditor/license.txt,public/javascripts/tiny_mce/license.txt,vendor/plugins/fckeditor/public/javascripts/fckeditor/license.txt,vendor/plugins/paperclip/LICENSE,vendor/plugins/rspec-rails/License.txt,vendor/plugins/searchlogic/LICENSE,vendor/plugins/will_paginate/LICENSE
+dmontgomery40/mcp-canvas-lms	OK	c0646ba10ac2	36	NONE_IN_TREE
+learnpress/learnpress	OK	ae50d1b3af53	1984	inc/libraries/wp-background-process/license.txt
+loyaniu/moodle-mcp	OK	1b5c3b21becc	21	NONE_IN_TREE
+formalms/formalms	OK	446a77a9b9cb	5321	html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt,html/appCore/addons/swfheader/LICENSE.txt,html/license.txt,html/templates/standard/images/social/license.txt,vendor/composer/LICENSE,vendor/symfony/polyfill-ctype/LICENSE,vendor/symfony/polyfill-mbstring/LICENSE,vendor/symfony/polyfill-php72/LICENSE,vendor/twig/extensions/LICENSE,vendor/twig/twig/LICENSE
+eth-lre/mathtutorbench	OK	6faed173ec2b	40	NONE_IN_TREE
+kaushal0494/AITutor-EvalKit	OK	a71078456a90	125	NONE_IN_TREE

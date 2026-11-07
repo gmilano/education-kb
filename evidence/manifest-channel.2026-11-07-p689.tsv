@@ -1,0 +1,19 @@
+# pass 689 — 2026-11-07 — MANIFEST CHANNEL (ACTION p276) for the same 10 slugs.
+# p276's rule: the tree is only ONE channel; a grant can live in a manifest.  Both must be
+# empty before an absence is a finding.  Manifests were read FROM the enumerated tree
+# (`git show HEAD:<path>`), not fetched by guessing a raw URL.
+# Two refutations of p689's own draft came from this channel:
+#   DMontgomery40/mcp-canvas-lms  "license": "MIT" declared, and NO licence file in the tree
+#   learnpress/learnpress         "ISC" in package.json vs "GPL-3.0-or-later" in composer.json
+slug	manifest	http	bytes	license_key	verdict
+jushbjj/mr.-ranedeer-ai-tutor	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at ea29bcf196d2
+adlnet/scorm-to-xapi-wrapper	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at 3e532b852385
+projectfedena/fedena	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at 68a84ac445bf
+foradian/fedena	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at 333477b06f1d
+dmontgomery40/mcp-canvas-lms	package.json	200	3460	66:  "license": "MIT",;	p689 manifest channel read from the enumerated tree at c0646ba10ac2
+learnpress/learnpress	package.json	200	2893	23: "license": "ISC",;	p689 manifest channel read from the enumerated tree at ae50d1b3af53
+learnpress/learnpress	composer.json	200	1979	5: "license": "GPL-3.0-or-later",;	p689 manifest channel read from the enumerated tree at ae50d1b3af53
+loyaniu/moodle-mcp	pyproject.toml	200	540	<no license key in pyproject.toml>	p689 manifest channel read from the enumerated tree at 1b5c3b21becc
+formalms/formalms	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at 446a77a9b9cb
+eth-lre/mathtutorbench	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at 6faed173ec2b
+kaushal0494/AITutor-EvalKit	-	-	-	<no license key in any manifest>	p689: no manifest in the enumerated tree at a71078456a90

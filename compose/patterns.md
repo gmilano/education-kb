@@ -38,6 +38,125 @@ updated: 2026-11-07
 
 ---
 
+## P66 — The Brazilian public-education intelligence desk (state or municipal secretariat: 5–7 weeks) 🟢 new at p689
+
+**Buyer:** a Brazilian **secretaria de educação** — state or municipal — or a consultancy bidding one. **The premise is that this engagement does not open with a tutor.** It opens with *how many schools do we have, in what condition, how many enrolled, what does the IDEB say, what did FNDE transfer, how did this cohort score on the ENEM* — and every one of those is a question about federal statistics that is answerable in week one under MIT.
+
+```
+Mcp-Brasil/mcp-brasil  (MIT, 1,071 B · faa268455c36, 1,857★, 287 forks, main @ 2efb258370b1)
+  ├── LIVE APIs — no dataset load, answers on day one
+  │     ├── inep   → índices educacionais: IDEB, indicadores, pesquisas        (4 tools)
+  │     └── fnde   → repasses, merenda escolar, PNATE, transporte escolar      (4 tools)
+  └── LOCAL DuckDB datasets — opt in via  MCP_BRASIL_DATASETS=inep_censo_escolar,inep_enem
+        ├── inep_censo_escolar → ~180k schools: infrastructure, enrolments, 2023   (7 tools)
+        └── inep_enem          → ~3.9M registrants: scores + socioeconomic profile (6 tools)
+                                 first load = minutes (download + ingest); then milliseconds
+  │
+  └── ANALYSE  ZhijieXiong/pyedmine (MIT, 1,084 B · 05d651fe74ff, 84★)
+        cognitive diagnosis + learning-path recommendation over the ENEM response data
+        ⚠️ ENEM microdata is a POPULATION sample, not this client's learners — use it
+           for cold start and for benchmarking the client's cohort against the state
+  │
+  └── SYSTEM OF RECORD (only if the client runs, or will run, the i-educar family)
+        portabilis/i-educar  (GPL-2.0, default ref 2.12)   ← student records, already on the verticals shelf
+        portabilis/i-diario  (AGPL-3.0, default ref 1.6)   ← diário de classe: attendance, lessons, grades
+        🔴 copyleft: configure-and-host, never white-label.  Resolve BOTH bare-version default refs
+           with  git ls-remote --symref  before cloning — a hardcoded `main` fails silently.
+  │
+  └── DELIVER  a read-only MCP surface + three briefings the secretariat cannot currently produce:
+        school-infrastructure gap map · enrolment-vs-transfer reconciliation · ENEM cohort benchmark
+```
+
+**Weeks 1–2** stand up `mcp-brasil` with `inep` and `fnde` live only; produce the first briefing from live APIs alone — **this is the credibility milestone and it needs no data engineering**. **Weeks 3–4** enable the two DuckDB datasets, reconcile school counts against the client's own rolls (expect them to disagree; the disagreement is usually the most valuable finding of the engagement). **Weeks 5–6** cognitive diagnosis over ENEM with `pyedmine`, benchmarked against the client's cohort. **Week 7** if and only if the client runs i-educar: scope the `i-diario` integration as a separate statement of work.
+
+🟢 **Why this is the strongest LATAM pattern on this page.** Every component is real, verified at p689, and `mcp-brasil` is MIT at `1,857★` with `287` forks — this is not a research prototype. The data layer is *public*, so there is no procurement gate on the inputs and no student-privacy exposure in the first four weeks: ENEM and Censo Escolar microdata are published aggregates and the client's own LGPD-governed records are not touched until the i-educar step, which is optional.
+
+🔴 **Three risks to price explicitly.** (1) **The datasets are 2023** — current enough for structural analysis, wrong for anything presented as this year's position; say so in the deck. (2) **First DuckDB load is minutes and the download is large** (the repository's dataset tier spans ~100 MB–1.6 GB across all features) — run it before the demo, not during. (3) **`i-diario` and `i-educar` are copyleft with bare-version default refs**; the clone trap is documented at `p646-J` and this pattern repeats it because it keeps happening.
+
+## P67 — Auditable agent tutoring for an EU Annex III deployer (university, exam board, EMEA K-12 authority: 8–10 weeks) 🟢 new at p689
+
+**Buyer:** an institution inside the EU that wants agent tutoring touching assessment or personalised learning, and therefore becomes a **deployer of a high-risk system** under AI Act Annex III. **The premise: the hard requirement is not quality, it is explainability plus a record — and an LLM alone can supply neither.**
+
+```
+CORRECTNESS LAYER  ★ the load-bearing component, and the reason this pattern exists ★
+  ideas-edu/ideas  (Apache-2.0, LICENSE.txt 11,558 B · 49bbe9114e49, 28★, master @ de4d9742c350)
+    domain reasoners that COMPUTE the next correct step and the feedback for a wrong one
+    shipped domains: mathematics · linear algebra · logic · Haskell (Ask-Elle) · communication skills
+    → the LLM is demoted to language and dialogue.  It never certifies a step.
+        │
+DIALOGUE LAYER
+  any shelved tutor runtime (HKUDS/DeepTutor, CAHLR/OATutor for BKT-structured STEM)
+    constrained to phrase what the reasoner computed — not to derive it
+        │
+EVIDENCE LAYER   ← non-negotiable, and the piece almost every pilot omits
+  DavidLMS/learnmcp-xapi (MIT, 1,068 B · 7795c106bbd2, 16★)   ← agent writes/reads xAPI statements
+    └── yetanalytics/lrsql (Apache-2.0)                       ← the Learning Record Store itself
+        🔵 p656 recorded lrsql as the ONLY permissive LRS; learnmcp-xapi is its agent-side counterpart
+        🔴 learnmcp-xapi last pushed 2025-08-29 — fork and own it, do not depend on it
+        │
+WRITE BOUNDARY  ← borrow the p688 shape rather than inventing one
+  kaushikgunasekaren/canvas-grader-mcp (MIT)  demonstrates the contract: 12 read-only tools,
+    4 local-only, exactly 3 that write, EACH requiring confirm=true, grades staged on disk until then
+  → specify every agent write to the LMS/SIS the same way: staged, explicit, second human act
+        │
+LMS SURFACE  — pick by what the institution actually runs
+  smlfg/ilias-mcp (MIT, 1,078 B · 83d1c38c2069)  ILIAS + Moodle  ← the only ILIAS address in this KB
+  peancor/moodle-mcp-server (MIT) · vishalsachdev/canvas-mcp (MIT)   ← both already shelved
+        │
+DESIGN REVIEW ARTEFACT
+  vishalsachdev/learning-design-pillars (MIT, 1,070 B · 57c0458f2b22)
+    the Four Pillars framework as loadable skills — an inspectable design rationale to put in front
+    of an ethics or academic-standards committee, which a model prompt is not
+```
+
+**Weeks 1–2** scope to the domains `ideas` actually covers and *refuse the rest* — this is the decision the pattern lives or dies on. **Weeks 3–5** reasoner behind an MCP surface; LLM wired to phrase, never to derive; every turn emitting an xAPI statement from the first commit. **Weeks 6–7** write boundary with `confirm=true` on every mutating tool, staged locally, plus the deployer documentation pack. **Weeks 8–10** pilot on one cohort with the LRS as the single source of truth for what happened.
+
+🟢 **What the client can state afterwards, which is the actual deliverable:** *what was said, why it was said (traceable to a computed rule, not a sampled token), and that a record exists in a store we own.* 🔵 The AI-literacy duty has applied since 2 February 2025 and the Digital Omnibus softened it from 27 July 2026 to *measures that support* literacy — so documentation and training are compliance artefacts here, not overhead, and `learning-design-pillars` is billable as one.
+
+🔴 **Four risks.** (1) **`ideas` coverage is per-domain** — outside the shipped reasoners this is new work, and it is research-grade work. (2) **`28★`, Haskell**: budget a Haskell-capable engineer or an FFI boundary. (3) **`learnmcp-xapi` is fourteen months dormant** — fork at the pinned SHA. (4) 🔴 **The high-risk commencement date for education is genuinely unsettled** — *August 2026* against Regulation (EU) 2026/1744's *2 December 2027* — and this base **cannot verify it from this session** because `eur-lex.europa.eu` and `europarl.europa.eu` do not resolve under this network policy. **Make the client's counsel own that date. Do not put it in a slide as settled.**
+
+## P68 — Competency and credential spine with rostering that actually works (corporate academy, professional body, multi-campus HE: 6–8 weeks) 🟢 new at p689
+
+**Buyer:** an organisation that must answer *which people hold which verified competencies* across more than one delivery system — a corporate academy, a professional certifying body, a multi-campus university. **The premise: this base's interop coverage was xAPI (activity), LTI (launch) and SCORM (packaging), and none of those answers *who is in this class* or *what competency does this credential assert*.** Both gaps closed at p689.
+
+```
+ROSTERING  ← the layer that was missing
+  theopenem/oneroster.net (MIT, 1,065 B · 5e308a037c69, master @ 4f96365d3108)
+    OneRoster / 1EdTech: orgs · courses · classes · enrolments · users
+    the format a US district or a multi-campus registry actually hands a vendor
+    🔴 index-unaddressable: `repo:` returns HTTP 422, so verify with git ls-remote --symref
+       (dots in the name are NOT the cause — control `repo:socketio/socket.io` returns 1)
+        │
+COMPETENCY + CREDENTIAL
+  iblai/lms (MIT, 1,062 B · d9d62c94b512, 112★, pushed 2026-11-06)
+    course discovery · competency tracking · digital credentials · workforce development
+    TypeScript/Next.js — the clearest permissive competency model on these shelves
+        │
+DELIVERY  — pick ONE, they are not interchangeable
+  pacewisdomhq/TutorLoom (Apache-2.0, 11,361 B · a7f87303f2e9, 89★)
+    ★ MULTI-TENANT FROM THE FIRST COMMIT — tenant isolation is the expensive thing to
+      retrofit into Moodle or Open edX, and this is the only shelved LMS that ships it
+    Python 3.13 / Django 6 / DRF 3.16 / PostgreSQL 15+ / React 19 / Flutter mobile
+    🔴 born 2026-10-07 — one month old.  89★ / 18 forks is real traction and real immaturity.
+       Fork at a pinned SHA; do not track its main.
+  — or Moodle / Open edX if the client already runs one (both copyleft; see P2 / P3)
+        │
+EVIDENCE   yetanalytics/lrsql (Apache-2.0) over xAPI   ← already shelved, still non-negotiable
+        │
+PRACTICE SURFACE (technical curricula only)
+  SJRiz/pytogether (MIT, 1,072 B · c8df073d1320, 262★)
+    browser-based collaborative IDE: multi-cursor editing, shared drawing canvas, voice
+    🔵 it makes the KEYSTROKES observable — the input a knowledge-tracing model wants
+       and almost never gets, because graders only ever see the finished submission
+        │
+MODELLING   ZhijieXiong/pyedmine (MIT) + pykt-team/pykt-toolkit (MIT, already shelved)
+    pyedmine adds cognitive diagnosis and path recommendation on top of pure knowledge tracing
+```
+
+**Weeks 1–2** model the competency framework with the client's subject-matter owners — *slowest step, not a technical one*. **Weeks 3–4** `oneroster.net` against the client's registry or HRIS; reconcile rosters before any content work. **Weeks 5–6** `iblai/lms` for competency and credential issuance, xAPI out to `lrsql`. **Weeks 7–8** delivery surface, and `pytogether` + `pyedmine` only if the curriculum is technical.
+
+🟢 **Why it is sellable:** permissive end to end, so the deliverable can be closed and client-branded — no copyleft in the chain unless the client's own LMS brings it. 🔴 **Two honest warnings.** `TutorLoom` is one month old: the forking rate says the shape is right, the age says pin the SHA and own the fork. And `oneroster.net` has **no readable star count or push date** — GitHub's search index cannot name the slug (HTTP 422), so its existence, default ref and MIT grant were verified by `ls-remote` and payload read only. **Treat it as a correct-shaped reference implementation to read and adopt, not as a maintained dependency**, until someone can see its activity.
+
 ## P63 — Randomised, auto-graded assessment at university scale, with the AI layer built rather than licensed
 *Added p687. Every component verified first-hand on 2026-11-07 (real default ref via `git ls-remote --symref`, grant payload read at that ref) and filed on this base's shelves the same pass.*
 

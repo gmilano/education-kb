@@ -4,6 +4,150 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p689) — 🟢 **THE LATAM *LEG* NIL IS REAL AND NOW FOUR PASSES DEEP — AND A `1,857★` MIT BRAZILIAN ADDRESS WITH `21` EDUCATION TOOLS WAS SITTING IN THIS BASE'S OWN LOGS, CITED `14` TIMES, FILED `0` TIMES. 🔴 `32 %` OF THE MOST-MENTIONED BACKLOG CANNOT BE USED AT ALL — INCLUDING A `29,540★` AI TUTOR THAT SHIPS NO LICENCE. 🔵 A NEW LATIN-SCRIPT PLACEMENT CHANNEL WAS BUILT, CONTROLLED AT BOTH SIGNS, AND RETURNED NIL**
+
+### 🟢 689-A — Five rows filed to [`top.md`](./top.md)
+
+`79` rows carried in, `5` added → **`84` rows / `84` distinct slugs / `0` duplicates**, counted mechanically (first repository link in each row is the subject) with the p686 cell-arity gate run against the `6`-column header before publication.
+
+| Row | Grant (payload-verified) | Stars | Ref @ HEAD | Last push | Region | Placement channel |
+|---|---|--:|---|---|---|---|
+| [`liuliu667/cram-engine`](https://github.com/liuliu667/cram-engine) | 🟢 **MIT** · `LICENSE` · `1,063 B` · `573bf932bab3` | 178 | `main` @ `982cd31cc68e` | `2026-10-22` | 🟢 **APAC** | primary-README language, `86.3 %` CJK |
+| [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | 🟢 **MIT** · `LICENSE` · `1,066 B` · `d69b0f7c3228` | 128 | `main` @ `7115c484c77e` | `2026-10-15` | 🟢 **APAC** | primary-README language, `61.7 %` CJK |
+| [`smlfg/ilias-mcp`](https://github.com/smlfg/ilias-mcp) | 🟢 **MIT** · `LICENSE` · `1,078 B` · `83d1c38c2069` | 1 | `main` @ `fcd41d267142` | `2026-10-15` | 🟢 **EMEA** | three named institutions, **one country** |
+| [`vishalsachdev/learning-design-pillars`](https://github.com/vishalsachdev/learning-design-pillars) | 🟢 **MIT** · `LICENSE` · `1,070 B` · `57c0458f2b22` | 10 | `main` @ `7e8cf27e95ee` | `2026-10-19` | 🟢 **North America** | sibling-grant (p670 channel) |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** · `LICENSE` · `1,068 B` · `7795c106bbd2` | 16 | `main` @ `fbf609142c3c` | 🔴 `2025-08-29` | 🔵 refused | every channel nil |
+
+**`learnmcp-xapi` is the structurally interesting one, and it closes a hole this base named itself.** `p656` recorded that the learning-record layer has exactly one permissive implementation — [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql), Apache-2.0 — and that the gap had moved from *supply* to *outcome measurement*. `learnmcp-xapi` is the **agent-side counterpart of that one implementation**: an MCP server whose tools let an agent **write** an xAPI statement and **read** a learner's history back. Every other tutoring address on this shelf generates a turn and forgets it. This one leaves a record in a store the institution already owns, which is what an Annex III deployer has to be able to produce on demand. 🔴 **Flagged on the row rather than hidden: last push `2025-08-29`, `16★`, `4` forks.** Fourteen months dormant is a fork-and-own candidate, not a dependency.
+
+**`ilias-mcp` and `learning-design-pillars` are the first two addresses in `17` passes that were new to the WHOLE base** — absent from every shelf *and* from `3,730` backlog slugs in the append-only logs. Both came from the GitHub index, not from a mandated web leg.
+
+### 🟢 689-B — The LATAM leg nils a fourth time, and the channel that actually answers LATAM is this base's own backlog
+
+🔧 **First, a correction to how this pass nearly read the record.** `p680`, `p685` and `p688` report a LATAM supply-side nil, and that claim is **scoped to the mandated legs** — p688's own words are *"neither the mandated LATAM leg nor an unmandated Spanish-language leg produced a LATAM-origin permissive repository."* It is **not** a claim that this base holds none, and it would be wrong to publish it as one: the shelves already carry LATAM-placed permissive rows found by other channels, including [`Fernandosr85/sistema-gestao-pei`](https://github.com/Fernandosr85/sistema-gestao-pei) (MIT, placed at `p684` on a **statute-citation** channel) and [`NewSchoolApp/newschool-backend`](https://github.com/NewSchoolApp/newschool-backend) (Apache-2.0, placed at `p683` on a **`.br` TLD committed in `.env.example`**). 🔵 **p689's LATAM leg nilled too — fourth consecutive pass — so the leg finding is confirmed, not refuted.** What p689 adds is the reason it keeps nilling and what to run instead.
+
+| | address | grant | stars | forks | ref @ HEAD | origin evidence | mentions here / filings |
+|---|---|---|--:|--:|---|---|---|
+| 🟢 | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟢 **MIT** · `LICENSE` · `1,071 B` · `faa268455c36` | **1,857** | 287 | `main` @ `2efb258370b1` | topic `brazil`; README `PT 17.4 %` / `EN 1.3 %`; subject is Brazilian federal data | 🔴 `14` / **`0`** |
+| 🔴 | [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0**, payload **in Portuguese** · `LICENSE` · `35,325 B` · `837b5cf19787` | 117 | 62 | `1.6` @ `ef909f23755a` | topics `brasil`, `educacao`, `i-educar`; README `PT 30.5 %` | `12` / **`0`** |
+
+**`mcp-brasil` carries a dedicated `### Educação` section plus two education datasets — `21` tools in four features, by the README's own counts:**
+
+| Feature | Source | Tools | Shape |
+|---|---|--:|---|
+| `inep` | INEP — índices educacionais (IDEB, indicadores) e pesquisas | 4 | live API |
+| `fnde` | FNDE — repasses, merenda escolar, PNATE, transporte | 4 | live API |
+| `inep_censo_escolar` | INEP — Censo Escolar da Educação Básica (~180k schools, infrastructure, enrolments), 2023 | 7 | local **DuckDB**, opt-in via `MCP_BRASIL_DATASETS` |
+| `inep_enem` | INEP — ENEM microdata (~3.9M registrants, scores, socioeconomic profile), 2023 | 6 | local **DuckDB**, opt-in |
+
+🔵 **Why the legs cannot see it, which is the transferable part.** The legs search for *edtech*. This repository is described, tagged and indexed as **Brazilian public-sector open data** — `533` tools over `70` features in `15` areas, of which education is one. A LATAM public-education engagement does not open with a tutor; it opens with *whose schools, how many enrolled, what the IDEB says, what FNDE transferred*. **That layer was in this base's own trending log the whole time — `14` citations, `0` filings.** 🔵 Measured this pass: the `Region` column of this shelf is `34` Global / `23` APAC / `11` North America / `6` EMEA / **`5` LATAM** across `79` rows, all five values legal — so LATAM placements exist, and the documented channels that produced the two most recent ones are a **`.br` TLD committed in `.env.example`** (`p683`) and a **statute citation in the README** (`p684`). Neither is a leg. **After four nils, run the mandated LATAM leg for the record and plan nothing around it.**
+
+🔴 **`i-diario` is AGPL-3.0 and is not presented as a permissive find.** It is a system a client self-hosts, not a tree a studio derives from. 🟢 **It earns its row on complementarity instead: it is the `diário de classe` companion to [`portabilis/i-educar`](https://github.com/portabilis/i-educar)**, which this base has carried on the verticals shelf since `p667` as *"the largest free-software school-management system in Brazil"* — same vendor, same `i-educar` topic, and the attendance-and-grades surface that i-educar's records layer feeds. Filing one half of a two-part municipal stack and not the other was a real hole.
+
+🔧 **And it produced an instrument defect worth more than the row.** GitHub's own licence field reads **`NOASSERTION`**, because the payload is a **Portuguese translation of the AGPL** (`LICENÇA PÚBLICA GERAL AFFERO GNU`). The detector is keyed on English title lines — and **this base's own grader has the same bug**: it graded the payload `OTHER:` until p689 read the first five lines by hand. 🔵 **A licence grader that only recognises English grants systematically under-reports exactly the regions this base keeps recording as thin.** Fix is one line per language; the finding is that nobody checked.
+
+### 🔴 689-C — The backlog is `3,730` slugs deep, and a third of its top is unusable — but p689's FIRST attempt to say so was wrong, and the gate caught it
+
+| measure | value |
+|---|--:|
+| distinct repository slugs cited in the two append-only logs | `4,078` |
+| distinct slugs on any shelf page | `398` |
+| **in the logs, on no shelf** | 🔴 **`3,730`** |
+| …of those, mentioned `≥5` times | `270` |
+| …mentioned `≥10` times | `54` |
+
+**`50` of the most-mentioned were pulled and licence-graded this pass.** Ledger: [`evidence/p689-backlog-licence-ledger.tsv`](../evidence/p689-backlog-licence-ledger.tsv).
+
+🔧 **Read the method before the numbers, because p689 got the method wrong first and `gate-enumeration` refused the commit.** The draft graded "no licence" by probing a **ladder of candidate filenames** (`LICENSE`, `.md`, `.txt`, `COPYING`, `LICENCE`, nine more) and recording a miss as an absence. **`ACTION p275` has rejected exactly that since `p275`: a negative grant verdict is only a finding if the TREE was enumerated, and `p276` adds that the MANIFEST is a second channel — both must be empty.** A path ladder cannot see a grant one directory down, and it cannot see one declared in `package.json`.
+
+Re-run compliantly — tree enumerated by treeless partial clone (`--filter=blob:none --no-checkout`, full path list, no blob download) plus a manifest read ([`ingest/p689-enumerate.sh`](../ingest/p689-enumerate.sh)) — **the path ladder over-reported absence by exactly 2×: `10` claimed, `5` survive.**
+
+| verdict | n | share | basis |
+|---|--:|--:|---|
+| 🟢 PERMISSIVE (MIT / Apache-2.0 / BSD) | 27 | `54.0 %` | root payload read, bytes + `sha256₁₂` |
+| 🟡 COPYLEFT (AGPL / GPL / LGPL) | 7 | `14.0 %` | root payload read |
+| 🔴 RESTRICTED — reads open, is not | 6 | `12.0 %` | root payload read |
+| 🔴 **VERIFIED-ABSENT** — no grant anywhere | 5 | `10.0 %` | **tree enumerated + manifest read, both empty** |
+| 🟠 **UNRESOLVED** — a grant exists but not as a root payload | 5 | `10.0 %` | enumeration found something the ladder missed |
+
+🔴 **`32 %` of the most-cited backlog is unusable as it stands** (`RESTRICTED` + `VERIFIED-ABSENT` + `UNRESOLVED`) — the headline survives the correction; its composition does not.
+
+**The `5` that survive enumeration, and the first is the finding of the pass on this axis:**
+
+| address | stars | files in tree | tree | manifest |
+|---|--:|--:|---|---|
+| [`jushbjj/mr.-ranedeer-ai-tutor`](https://github.com/jushbjj/mr.-ranedeer-ai-tutor) | 🔴 **29,540** | 12 | 🔴 empty | 🔴 none |
+| [`adlnet/scorm-to-xapi-wrapper`](https://github.com/adlnet/scorm-to-xapi-wrapper) | 99 | 5 | 🔴 empty | 🔴 none |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 46 | 40 | 🔴 empty | 🔴 none |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 3 | 125 | 🔴 empty | 🔴 none |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | 56 | 21 | 🔴 empty | 🔴 none |
+
+**The most-starred AI tutor in open source — `29,540★`, `19` citations in these logs — has `12` files and not one of them is a grant.** And `adlnet/scorm-to-xapi-wrapper` is worse as a signal than as a repository: **ADL authored SCORM and xAPI, and did not licence their own wrapper.**
+
+**The `5` the enumeration reclaimed, in four distinct conditions a path ladder is blind to:**
+
+| address | what enumeration found | why it is still not a dependency |
+|---|---|---|
+| [`dmontgomery40/mcp-canvas-lms`](https://github.com/dmontgomery40/mcp-canvas-lms) (`104★`, `31` citations — the most-cited unshelved MCP address) | 🟠 `package.json` L66 `"license": "MIT"`, **and L100's `files` array names a `LICENSE` that is not in the tree** | **declared, not delivered.** The project intends MIT and ships no grant; a packaging manifest is not a copyright licence |
+| [`learnpress/learnpress`](https://github.com/learnpress/learnpress) (`275★`) | 🔴 `package.json` says `"license": "ISC"`, `composer.json` says `"GPL-3.0-or-later"` | **two manifests, two incompatible grants** — the `jacobphillips99/protorubric` condition this base already records: two grants in one tree is an unresolved permission |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`547★`) and [`foradian/fedena`](https://github.com/foradian/fedena) | 🟠 root `NOTICE` present, plus `7` vendored grants (fckeditor, tiny_mce, paperclip, rspec-rails, searchlogic, will_paginate) | a `NOTICE` is an attribution file, not a grant — but it is **not nothing**, so "unlicensed" was the wrong word |
+| [`formalms/formalms`](https://github.com/formalms/formalms) (`37★`) | 🟠 `html/license.txt` in tree, plus `9` vendored (symfony polyfills, twig, composer) | a grant exists **one directory down**, which is precisely what a root path ladder cannot see |
+
+🔵 **The transferable rule, and p689 is its own counterexample: `grep`-ing for a filename is not enumeration.** Of the five reclassified, **three carry a grant the ladder could never have reached** (one directory down, or in a manifest) and **two carry a conflict the ladder would have reported as a clean MIT** had the root file happened to exist. 🟢 **This explains the backlog rather than merely measuring it:** the top of the mention ranking is substantially a queue of things earlier passes *correctly* declined to file, by checking a licence and never writing the verdict down — so each pass re-paid the check. **The ledger is the deliverable: a ranked, enumerated top-`50` the next pass files from without re-verifying, naming the `16` it must not file and the `5` whose status needs a lawyer rather than a probe.**
+
+### 🔵 689-D — A new placement channel, built, controlled at both signs, and nil on this batch
+
+`p684` established primary-README language as a placement channel and `p670` showed a *translation* is not one. Both rest on CJK, which is decidable by codepoint. **Latin-script languages are not**, so LATAM and Iberian EMEA have had no equivalent. p689 built one: **closed-class function-word density**, which cannot be imported by a loanword and does not vary with subject matter. [`ingest/p689-latin-lang.py`](../ingest/p689-latin-lang.py)
+
+| specimen | role | EN | ES | PT | verdict |
+|---|---|--:|--:|--:|---|
+| `Mcp-Brasil/mcp-brasil` | positive control | `1.3 %` | `6.8 %` | 🟢 `17.4 %` | **PT** ✅ |
+| `portabilis/i-diario` | positive control | `3.2 %` | `15.9 %` | 🟢 `30.5 %` | **PT** ✅ |
+| `moodle/moodle` | negative control | 🟢 `27.0 %` | `0.0 %` | `3.1 %` | **EN** ✅ |
+| `pacewisdomhq/TutorLoom` | negative control | 🟢 `15.3 %` | `0.3 %` | `1.7 %` | **EN** ✅ |
+
+Clean separation, no overlap: the two Portuguese specimens put `EN` at `1.3 %`/`3.2 %` while every English specimen lands `15–31 %`. **Then it was run on nine subjects and placed none of them** — all nine are English-primary (`EN 17.6–31.0 %`, `PT ≤ 7.6 %`, `ES ≤ 1.7 %`). The channel is now available and has a measured nil on its first batch, which is a result, not a failure.
+
+⚠️ **One false-positive class, found in-pass and worth carrying:** [`langx/langx`](https://github.com/langx/langx) scored the highest non-Portuguese `PT` figure on the board (`7.6 %`) — because it is a *language-learning* application and its README enumerates language names and sample words. **A language-detection channel has language-learning repositories as its natural adversary.** Below the `15 %` floor, so it did not place, but the margin is the smallest on the board.
+
+### 🔧 689-E — `repo:` has a THIRD failure mode, and the obvious explanation for it is wrong
+
+`p688` made the existence rule two-armed: `ls-remote` answers existence, `search/repositories` answers what the index holds, and a well-formed `total_count: 0` means *indexed and absent* (its case: forks are excluded unless `fork:true`). p689 found a third signal.
+
+| query | response | reading |
+|---|---|---|
+| `repo:theopenem/oneroster.net fork:true` | 🔴 **HTTP 422** `Validation Failed` — *"the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them"* | the index **cannot address it** |
+| `git ls-remote --symref` on the same slug | 🟢 resolves: `master` @ `4f96365d3108`, MIT payload `1,065 B` `5e308a037c69` reads at that ref | **alive, and buildable** |
+
+🔴 **The dot hypothesis was formed and refuted in the same pass.** `oneroster.net` has a dot in the repository name, and the natural guess is that the qualifier parser breaks on it. Control: **`repo:socketio/socket.io` returns `total_count: 1`** — and so does it with `fork:true`. Dots are fine. This is the `p674` *index-absent-individually* condition (`DaRL-GenAI/instructional_agents`) presenting as a `422` rather than a `0`.
+
+🔵 **Rule, now three-armed, and the distinction is operational:** a well-formed **`0`** means the index looked and holds nothing — ask it again with `fork:true`. A **`422`** means the index cannot name the address at all — stop asking it and go to `ls-remote`. A **`403` from `repos/`** means nothing whatsoever about the address. Only `ls-remote` answers existence.
+
+### 🔴 689-F — The mandated legs nil for the THIRTIETH consecutive pass, with a denominator
+
+All eight mandated legs were run: four global (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS SIS MIT Apache`, `AI education industry trends 2026`) and one per region.
+
+| leg | repository addresses named | not already in this base |
+|---|--:|--:|
+| 4 × global | 9 | 🔴 `0` |
+| North America | 0 | `0` |
+| EMEA | 0 | `0` |
+| APAC | 0 | `0` |
+| LATAM | 0 | `0` |
+
+Every address the global legs named — `HKUDS/DeepTutor`, `pykt-team/pykt-toolkit`, `CAHLR/OATutor`, `learningequality/kolibri`, `ashishpatel26/500-AI-Agents-Projects`, `flysheep-ai/education-skills` and three more — **is already shelved**. The four regional legs returned policy and market prose and **named no repository at all**: not one of the four has ever been a supply-side channel, and after thirty passes that is a measured property of the instrument rather than a run of bad luck. 🟢 **All `5` rows and both LATAM addresses filed this pass came from the GitHub index (16 `search/repositories` legs) and from auditing this base's own backlog.**
+
+### 🔴 689-G — The tutor-evaluation gap is sharper than "nothing exists": the artefacts exist and are unlicensed
+
+This base has carried a gap for "no dominant OSS tutor evaluation". Both named candidates were pulled this pass:
+
+| address | stars | provenance | grant at default ref | index licence field | alt paths probed |
+|---|--:|---|---|---|--:|
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 46 | **EMNLP 2025 Oral**, ETH Zürich LRE | 🔴 **none** | 🔴 `null` | `12` → all 404 |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 3 | math-domain tutor evaluation | 🔴 **none** | 🔴 `null` | `12` → all 404 |
+
+**Two for two.** The gap is therefore restated: *pedagogical evaluation of LLM tutors has peer-reviewed benchmarks and no licensed one.* A studio cannot put either in a client deliverable, and a benchmark is exactly the artefact a client asks to see. 🔵 This is a better finding than the absence it replaces, because it has a remedy a studio can act on: both are small academic trees whose authors can be asked for a grant.
+
 ## 🆕 2026-11-07 (p688) — 🟢 **THREE AGENT ROWS, ONE OF THEM A PROMOTION THIS BASE HAD MENTIONED `24` TIMES AND SHELVED `0` TIMES. 🔴 THE `search/repositories` CHANNEL RETURNS `total_count: 0` FOR A REPOSITORY PUSHED HOURS EARLIER. 🟢 THE AFRICA LEG FINALLY RETURNS AN OPENLY-LICENSED ARTEFACT — AND IT IS A CATALOGUE, NOT CODE**
 
 ### 🟢 688-A — Three rows filed to [`top.md`](./top.md)

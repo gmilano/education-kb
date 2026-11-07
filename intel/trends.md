@@ -21,6 +21,42 @@ updated: 2026-11-07
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T96 — The most-cited open-source education artefacts are disproportionately ungranted, and star count is anti-correlated with legal usability
+
+**Evidence:** `50` of the most-mentioned repository slugs in this base's own append-only logs were graded at p689 — permissive and copyleft verdicts by reading the root grant payload at the real default ref, absence verdicts by **enumerating the tree** (treeless partial clone) **and reading the manifests**, per `ACTION p275`/`p276`. Ledger: [`evidence/p689-backlog-licence-ledger.tsv`](../evidence/p689-backlog-licence-ledger.tsv); enumerator: [`ingest/p689-enumerate.sh`](../ingest/p689-enumerate.sh).
+
+| verdict | n | share |
+|---|--:|--:|
+| 🟢 permissive (MIT / Apache-2.0 / BSD) | 27 | `54.0 %` |
+| 🟡 copyleft (AGPL / GPL / LGPL) | 7 | `14.0 %` |
+| 🔴 restricted — reads open, is not | 6 | `12.0 %` |
+| 🔴 **verified grant-absent** (tree + manifest both empty) | 5 | `10.0 %` |
+| 🟠 **unresolved** (a grant exists, but not as a root payload) | 5 | `10.0 %` |
+
+🔴 **The single most-starred AI tutor in open source has no grant anywhere.** [`jushbjj/mr.-ranedeer-ai-tutor`](https://github.com/jushbjj/mr.-ranedeer-ai-tutor) — **`29,540★`** — has `12` files in its enumerated tree, none a licence, and no manifest. [`adlnet/scorm-to-xapi-wrapper`](https://github.com/adlnet/scorm-to-xapi-wrapper) is the same shape and worse as a signal: **ADL authored SCORM and xAPI and did not licence their own wrapper.** And the *most-cited* slug in these logs, [`caviraoss/pagelm`](https://github.com/caviraoss/pagelm) at `34` citations, serves a bespoke **"PageLM Community License"**.
+
+**Confidence: high** on the five enumerated absences and on all `40` payload-read verdicts. 🔧 **Medium, and explicitly downgraded, on the prevalence figure — because p689's own first measurement of it was wrong by 2×.** The draft graded absence from a ladder of candidate root filenames; `gate-enumeration` refused the commit, and a compliant re-run turned `10` claimed absences into `5`. **A prevalence measured on `50` slugs by one method, once, is an indication.**
+
+🔵 **Why it is a trend and not a list.** Prompt-shaped and skill-shaped artefacts — the fastest-growing class in this sector — are published as *content* by authors who never expected a licence question, while the infrastructure layer (LMS, LRS, interop, modelling libraries) is published as *software* by people who did. So the sector's most visible artefacts are among its least usable, and **the more an artefact is shared, the less likely it is to carry a grant you can read.**
+
+🟢 **Three operational rules for a studio, each one earned by a specimen above.** (1) **Screen on the grant before the star count.** (2) **Read the file, don't trust the field** — GitHub's licence field is `null` on all five enumerated absences, and on [`portabilis/i-diario`](https://github.com/portabilis/i-diario) it reads `NOASSERTION` for a perfectly valid AGPL that happens to be in Portuguese (T97). (3) 🔴 **Enumerate the tree and read the manifest before you call anything unlicensed** — `dmontgomery40/mcp-canvas-lms` declares `"license": "MIT"` in `package.json` while shipping no licence file, and `learnpress/learnpress` declares `ISC` in one manifest and `GPL-3.0-or-later` in another. **"Declared but not delivered" and "two incompatible grants" are both common, and neither is visible to a filename probe.**
+
+## T97 — Licence detectors are monolingual, and the blind spot lands on the regions this sector keeps calling underserved
+
+**Evidence:** [`portabilis/i-diario`](https://github.com/portabilis/i-diario) serves a complete, valid AGPL-3.0 as **`LICENÇA PÚBLICA GERAL AFFERO GNU`** — `35,325 B`, `sha256₁₂ 837b5cf19787`, at default ref `1.6`. **GitHub's licence field reads `NOASSERTION`. This base's own grader read `OTHER:`.** Both key on English title lines. p689 read the first five lines by hand and graded it correctly.
+
+**Confidence: high** for the specimen and the mechanism; **medium** for the prevalence, which p689 did not sweep.
+
+🔵 **Why it matters beyond one row.** Every automated supply-side census in this sector — including this base's, for `688` passes — filters on a licence field or an English-keyed grader. A Brazilian, Mexican, Indonesian or Vietnamese project that translates its grant therefore reads as *unlicensed* to the instrument and drops out of the census. 🔴 **An absence measured with a monolingual detector is partly a measurement of the detector**, and this base has published LATAM thinness repeatedly while carrying this bug. The fix is one title line per language. The finding is that `689` passes went by before anyone opened a licence file in another language.
+
+## T98 — The structural weakness of LLM tutoring has an eleven-year-old answer, and it is Apache-2.0
+
+**Evidence:** [`ideas-edu/ideas`](https://github.com/ideas-edu/ideas) — Apache-2.0 (`LICENSE.txt`, `11,558 B`, `sha256₁₂ 49bbe9114e49`), `28★`, `14` forks, born `2015-10-08`, **still pushed `2026-09-05`** — a joint project of the Open University of the Netherlands and Utrecht University. It builds **domain reasoners**: components that *compute* the next correct step and the feedback for a wrong one, for mathematics, linear algebra, logic, Haskell (the *Ask-Elle* tutor) and communication skills.
+
+**Confidence: high** on the artefact; **medium** on the adoption thesis, which is p689's reading rather than a measured market move.
+
+🔵 **The weakness it addresses is the one every row on `../agents/top.md` shares: an LLM tutor cannot be sure its hint is correct.** This base's shelves hold `84` agent addresses and not one of them can certify a step. A domain reasoner can, for the domains it covers — and it narrows what the model is trusted with to language and dialogue, which is what models are actually good at. 🟢 **Under EU AI Act Annex III a deployer must be able to explain an output: a generated hint cannot be explained, a computed one traces to the rule that produced it.** 🔴 **The honest caveat: `28★` and Haskell.** This is a correctness asset for a client with a correctness bar, not a mass-market component — and the coverage is per-domain, so anything outside the shipped reasoners is new work. Composition recipe: `../compose/patterns.md` `P67`.
+
 ## T94 — The state-operated school AI platform has arrived, it is open source, and it is AGPL
 
 Every school-facing AI platform this base has tracked until now was either a vendor product or a project. **Germany is running one as public infrastructure, in the open:** [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) — `AIS.chat`, formerly `telli` — a **DigitalPakt Schule** sub-project of **AIS** (*Adaptives Intelligentes System*), developed openly since **November 2024**, coordinated by the **FWU** on behalf of **all 16 Bundesländer**, with **12 states live as of 09/2026** on secondary reporting.

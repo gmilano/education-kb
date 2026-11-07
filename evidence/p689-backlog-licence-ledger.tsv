@@ -1,0 +1,51 @@
+slug	state	default_ref	head_sha12	root_grant	bytes	sha256_12	verdict	basis	enum_channel	tree_candidates	manifest_licence
+bigbluebutton/bigbluebutton	ALIVE	v4.0.x-develop	a292490e1915	LGPL@LICENSE	7651B	a5681bf9b05d	COPYLEFT	root payload read	not-enumerated	-	-
+brownplt/ltltutor	ALIVE	main	5f90a688507d	GPL@LICENSE.txt	35148B	8b1ba204bb69	COPYLEFT	root payload read	not-enumerated	-	-
+echo-loop/echo-loop	ALIVE	main	0a95b211a1be	AGPL-3.0@LICENSE	34522B	4df3c306ddda	COPYLEFT	root payload read	not-enumerated	-	-
+instructure/canvas-lms	ALIVE	master	1c9f0bb8013e	AGPL-3.0@LICENSE	34519B	91b65277959e	COPYLEFT	root payload read	not-enumerated	-	-
+overhangio/tutor	ALIVE	release	bca91d56136f	AGPL-3.0@LICENSE.txt	34522B	4df3c306ddda	COPYLEFT	root payload read	not-enumerated	-	-
+plastic-labs/tutor-gpt	ALIVE	main	5c2f92416c04	GPL@LICENSE	35148B	8b1ba204bb69	COPYLEFT	root payload read	not-enumerated	-	-
+sitor-ai/frametell	ALIVE	main	6145f7e34826	AGPL-3.0@LICENSE	34522B	4df3c306ddda	COPYLEFT	root payload read	not-enumerated	-	-
+codexsidd/studivexa	ALIVE	main	6ac279946ca9	MIT@LICENSE	1067B	d4ce9ec13cd2	PERMISSIVE	root payload read	not-enumerated	-	-
+davidlms/learnmcp-xapi	ALIVE	main	fbf609142c3c	MIT@LICENSE	1068B	7795c106bbd2	PERMISSIVE	root payload read	not-enumerated	-	-
+dymayo/moodler-mcp	ALIVE	main	df8bde64658a	MIT@LICENSE	1071B	bbc113182b31	PERMISSIVE	root payload read	not-enumerated	-	-
+felipedias-ie/blackboard-mcp	ALIVE	main	fb057928ae20	MIT@LICENSE	1083B	fa4e32e5e622	PERMISSIVE	root payload read	not-enumerated	-	-
+iblai/lms	ALIVE	main	e4127e51a61b	MIT@LICENSE	1062B	d9d62c94b512	PERMISSIVE	root payload read	not-enumerated	-	-
+ideas-edu/ideas	ALIVE	master	de4d9742c350	Apache-2.0@LICENSE.txt	11558B	49bbe9114e49	PERMISSIVE	root payload read	not-enumerated	-	-
+juneyaooo/lineage-skill	ALIVE	main	0ca966c83044	Apache-2.0@LICENSE	11357B	58d1e17ffe51	PERMISSIVE	root payload read	not-enumerated	-	-
+jungang/alumnet	ALIVE	master	8ebad07f268d	MIT@LICENSE	1055B	3bed3331b704	PERMISSIVE	root payload read	not-enumerated	-	-
+kabartay/openunivcourses	ALIVE	main	7068cd58def9	MIT@LICENSE	1075B	ea7c9f28c567	PERMISSIVE	root payload read	not-enumerated	-	-
+kirill-markin/flashcards-open-source-app	ALIVE	main	d4af3ffb8f8f	MIT@LICENSE	1069B	eeb012b6793c	PERMISSIVE	root payload read	not-enumerated	-	-
+langx/langx	ALIVE	main	ce8ae6bf6292	BSD@LICENSE	1519B	f90e8a082588	PERMISSIVE	root payload read	not-enumerated	-	-
+liuliu667/cram-engine	ALIVE	main	982cd31cc68e	MIT@LICENSE	1063B	573bf932bab3	PERMISSIVE	root payload read	not-enumerated	-	-
+Mcp-Brasil/mcp-brasil	ALIVE	main	2efb258370b1	MIT@LICENSE	1071B	faa268455c36	PERMISSIVE	root payload read	not-enumerated	-	-
+nitsuah/bb-mcp	ALIVE	main	63ac050783a8	MIT@LICENSE	1063B	e024d09e682a	PERMISSIVE	root payload read	not-enumerated	-	-
+onemnemo/mnemo	ALIVE	main	6dce04a20fbc	Apache-2.0@LICENSE	11325B	9e43fad60ad0	PERMISSIVE	root payload read	not-enumerated	-	-
+pacewisdomhq/TutorLoom	ALIVE	main	ef4bca4c9b34	Apache-2.0@LICENSE	11361B	a7f87303f2e9	PERMISSIVE	root payload read	not-enumerated	-	-
+pguso/agents-from-scratch	ALIVE	main	da3f9df28a9c	MIT@LICENSE	1091B	f78cc6bf1d57	PERMISSIVE	root payload read	not-enumerated	-	-
+rohitg00/ai-engineering-from-scratch	ALIVE	main	d7b5633f9159	MIT@LICENSE	1069B	4624e0f09040	PERMISSIVE	root payload read	not-enumerated	-	-
+shigella520/MindTrain	ALIVE	main	7115c484c77e	MIT@LICENSE	1066B	d69b0f7c3228	PERMISSIVE	root payload read	not-enumerated	-	-
+simonstang/feifei-companion	ALIVE	main	c9c6295d220c	Apache-2.0@LICENSE	10226B	40be2052a21d	PERMISSIVE	root payload read	not-enumerated	-	-
+SJRiz/pytogether	ALIVE	main	52021a40fdff	MIT@LICENSE	1072B	c8df073d1320	PERMISSIVE	root payload read	not-enumerated	-	-
+smlfg/ilias-mcp	ALIVE	main	fcd41d267142	MIT@LICENSE	1078B	83d1c38c2069	PERMISSIVE	root payload read	not-enumerated	-	-
+theopenem/oneroster.net	ALIVE	master	4f96365d3108	MIT@LICENSE	1065B	5e308a037c69	PERMISSIVE	root payload read	not-enumerated	-	-
+vishalsachdev/learning-design-pillars	ALIVE	main	7e8cf27e95ee	MIT@LICENSE	1070B	57c0458f2b22	PERMISSIVE	root payload read	not-enumerated	-	-
+wenflow-org/wenflow	ALIVE	main	d48d9474fa44	MIT@LICENSE	1067B	b6fac57d4710	PERMISSIVE	root payload read	not-enumerated	-	-
+zhangl1001/civil-ai	ALIVE	main	77e8e253ef7c	MIT@LICENSE	1066B	bb8885eccff8	PERMISSIVE	root payload read	not-enumerated	-	-
+ZhijieXiong/pyedmine	ALIVE	main	31e434ae5b2d	MIT@LICENSE	1084B	05d651fe74ff	PERMISSIVE	root payload read	not-enumerated	-	-
+brycewang-stanford/auto-empirical-research-skills	ALIVE	main	bfa0a6e5a843	OTHER:Creative Commons Attribution-ShareAlike @LICENSE	619B	10b7bd3c6eea	RESTRICTED	root payload read	not-enumerated	-	-
+canyongbs/advisingapp	ALIVE	main	f4f19ceda3d5	OTHER:Elastic License 2.0  URL: https://www.el@LICENSE	3859B	64fc1547bdc1	RESTRICTED	root payload read	not-enumerated	-	-
+caviraoss/pagelm	ALIVE	main	e1de68833d1c	OTHER:# PageLM Community License  **Copyright @LICENSE.md	8562B	20a39a9c5993	RESTRICTED	root payload read	not-enumerated	-	-
+portabilis/i-diario	ALIVE	1.6	ef909f23755a	OTHER:LICENÇA PÚBLICA GERAL AFFERO GNU  Vers@LICENSE	35325B	837b5cf19787	RESTRICTED	root payload read	not-enumerated	-	-
+withmarbleapp/os-taxonomy	ALIVE	main	04962c78ccb8	OTHER:## Open Data Commons Open Database Licen@LICENSE	25288B	cb48d0cd4117	RESTRICTED	root payload read	not-enumerated	-	-
+xiaoyang111222/cn-math-taxonomy	ALIVE	main	bf44fd9d53ce	OTHER:Attribution-NonCommercial 4.0 Internatio@LICENSE	19345B	db2e35513dba	RESTRICTED	root payload read	not-enumerated	-	-
+dmontgomery40/mcp-canvas-lms	ALIVE	main	c0646ba10ac2	none	-B	-	UNRESOLVED	manifest declares a grant; NO grant file in tree	MANIFEST-DECLARES	tree:-	manifest:[package.json] 66:  "license": "MIT",;100:    "LICENSE",;
+foradian/fedena	ALIVE	master	333477b06f1d	none	-B	-	UNRESOLVED	grant candidate in tree, not a root payload	TREE-HAS-CANDIDATE	tree:NOTICE,public/javascripts/fckeditor/license.txt,public/javascripts/tiny_mce/license.txt,vendor/plugins/fckeditor/public/javascripts/fckeditor/license.txt,vendor/plugins/paperclip/LICENSE,vendor/p	manifest:-
+formalms/formalms	ALIVE	master	446a77a9b9cb	none	-B	-	UNRESOLVED	grant candidate in tree, not a root payload	TREE-HAS-CANDIDATE	tree:html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt,html/appCore/addons/swfheader/LICENSE.txt,html/license.txt,html/templates/standard/images/social/license.txt,vendor/composer/LICENSE,	manifest:-
+learnpress/learnpress	ALIVE	develop	ae50d1b3af53	none	-B	-	UNRESOLVED	grant candidate in tree, not a root payload	TREE-HAS-CANDIDATE	tree:inc/libraries/wp-background-process/license.txt	manifest:[package.json] 23:
+projectfedena/fedena	ALIVE	master	68a84ac445bf	none	-B	-	UNRESOLVED	grant candidate in tree, not a root payload	TREE-HAS-CANDIDATE	tree:NOTICE,public/javascripts/fckeditor/license.txt,public/javascripts/tiny_mce/license.txt,vendor/plugins/fckeditor/public/javascripts/fckeditor/license.txt,vendor/plugins/paperclip/LICENSE,vendor/p	manifest:-
+adlnet/scorm-to-xapi-wrapper	ALIVE	master	3e532b852385	none	-B	-	VERIFIED-ABSENT	tree enumerated + manifest read; both empty	VERIFIED-ABSENT-BOTH-CHANNELS	tree:-	manifest:-
+eth-lre/mathtutorbench	ALIVE	main	6faed173ec2b	none	-B	-	VERIFIED-ABSENT	tree enumerated + manifest read; both empty	VERIFIED-ABSENT-BOTH-CHANNELS	tree:-	manifest:-
+jushbjj/mr.-ranedeer-ai-tutor	ALIVE	main	ea29bcf196d2	none	-B	-	VERIFIED-ABSENT	tree enumerated + manifest read; both empty	VERIFIED-ABSENT-BOTH-CHANNELS	tree:-	manifest:-
+kaushal0494/AITutor-EvalKit	ALIVE	main	a71078456a90	none	-B	-	VERIFIED-ABSENT	tree enumerated + manifest read; both empty	VERIFIED-ABSENT-BOTH-CHANNELS	tree:-	manifest:-
+loyaniu/moodle-mcp	ALIVE	main	1b5c3b21becc	none	-B	-	VERIFIED-ABSENT	tree enumerated + manifest read; both empty	VERIFIED-ABSENT-BOTH-CHANNELS	tree:-	manifest:-
