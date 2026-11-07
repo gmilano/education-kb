@@ -38,6 +38,52 @@ updated: 2026-11-07
 
 ---
 
+## P69 — Licence attestation over an education software estate (EMEA public sector, university consortia, edtech due diligence: 3–4 weeks) 🟢 new at p690
+
+🔵 **Sell this when the client's own tooling has already failed.** `p690` measured the failure mode precisely: of `339` education repositories, **`44` return `NOASSERTION` or `NONE` from GitHub's own licence detector while carrying a real, readable grant** ([`T99`](../intel/trends.md)). A client's SCA gate reports those as **`unknown licence`**, and `unknown` cannot be risk-assessed — so the procurement review stops, and nobody can say whether the blocker is real. **This pattern converts `unknown` into a named family with payload evidence.** It is `3–4` weeks, needs no agent, and is the cheapest credible first engagement in the regions this base keeps calling underserved.
+
+**Who buys it.** A European ministry, agency or university consortium standing up a platform on public-sector code; an acquirer doing diligence on an edtech target; any institution whose dependency tree reaches `Opetushallitus`, `OpenOLAT`, `INGInious`, `PrairieLearn`, `code-dot-org` or the `scrosseye` corpora.
+
+**The stack — all of it already in this base, none of it bought.**
+
+| Step | Tool | What it produces |
+|---|---|---|
+| 1. Enumerate the estate | `git ls-remote --symref <url> HEAD` per dependency | The **real default ref** — not `main` by assumption. `feedbacksystem` is `dev`, `code-dot-org` is `staging`, `kolibri-design-system` is `develop`, `ILIAS` is `release_11`. 🔴 **Resolve the branch before you clone** |
+| 2. Ask the index first | `gh api search/repositories -f q='repo:o/n repo:o/n …'` (`15` per call) | `license.spdx_id`, `stargazers_count`, `pushed_at`, `archived`, `fork`. Cheap triage: everything that comes back with a real SPDX id needs no further work |
+| 3. Read the payload for every divergence | `curl -sSL --fail` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, **and `docs/`** at the ref from step 1 | Byte count + `sha256` + the first lines. 🔴 **`--fail` is not optional** — without it a `404` becomes a short document and the report becomes fiction (`T92`, `T100`) |
+| 4. Classify against the five modes | [`T99`](../intel/trends.md) | EUPL-blind · MIT+provenance · Apache-appendix-filled · split grant · off-root/manifest-only |
+| 5. Resolve the *tree*, not the repository | `package.json` / `composer.json` / `pom.xml` licence fields, vendored directories | `OpenMAIC` is MIT with an **LGPL-3.0-or-later** `packages/mathml2omml` inside it. 🔴 **The licence unit is the dependency graph** (`T16`) |
+| 6. Attest | One row per dependency: family, version, grant path, bytes, `sha256`, evidence class, and the obligation in one sentence | The deliverable |
+
+**The four findings to price into the statement of work, because they recur.**
+
+1. 🔴 **EUPL is invisible and version-split.** `11` `Opetushallitus` repositories read as unlicensed; [`koski`](https://github.com/Opetushallitus/koski) is `LICENSE.txt` `653 B` **EUPL-1.1**-or-later and [`ataru`](https://github.com/Opetushallitus/ataru) is `LICENSE.md` `296 B` **EUPL-1.2**-or-later. **They are different instruments.** The EUPL's *Distribution or Communication* definition reaches making the Work available over a network, so **the boundary is not GPL's** — a hosted deployment can trigger reciprocity where a GPL analysis would say it does not.
+2. 🔴 **Non-commercial limbs hide inside permissive repositories.** [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) is MIT **code** with `CC BY 4.0` prompts and **`CC BY-NC-SA 4.0` on both annotated corpora**; the upstream [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) and [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) both return `NONE`. **An `NC` corpus cannot ship in a commercial deliverable** — and it is reached through a repository whose headline licence is MIT.
+3. 🔴 **Assets are carved out separately from code.** [`code-dot-org`](https://github.com/code-dot-org/code-dot-org) is Apache-2.0 *for source and assets* with artwork, graphics, sounds, lectures, videos, logos, characters and fonts **enumerated as proprietary** in a `4,271 B` `NOTICE`. A K-12 derivative that reuses the look is a different conversation from one that reuses the engine.
+4. 🟡 **A manifest field is a declaration, not a grant.** [`kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) declares `"license": "MIT"` in `package.json` with **no licence file on any branch**. Depend on it if the client accepts the risk — but write down that the warranty is thin.
+
+🔴 **Two guards that make the report trustworthy, both of them lessons this pass learned the hard way.** (i) **Never grep a README for a licence family.** `p690`'s own probe read *"Apache 2"* out of [`openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)'s README and nearly contradicted a correct `GPL-2.0` finding — the string was `Apache 2.4 or above`, the **web-server requirement**. (ii) **Never retire a dependency on a search miss.** `5` live repositories are absent from GitHub's search index (`T100`); liveness is `git ls-remote`'s answer, not the index's silence.
+
+**Deliverable.** A signed attestation table over the estate, a one-page obligation summary per licence family, and a red list of the limbs that cannot enter a commercial derivative. 🟢 **Follow-on is natural:** the client now knows which parts of their stack they may close, which is the question `P11`, `P14` and `P21` all begin with.
+
+## P70 — The Vietnam Article 34 deadline: the same auditable-tutoring deliverable, three months earlier than Europe's (APAC education operations: 8–10 weeks) 🟢 new at p690
+
+🟢 **Why this pattern exists as its own entry.** This base has been selling the EU's **2 December 2027** Annex III date as the forcing function for auditable AI in education. `p690` confirmed a harder, earlier date in APAC: **Vietnam's Law on Artificial Intelligence No. 134/2025/QH15** (passed `2025-12-10`, `429`–`5`; in force **`2026-03-01`**; `8` chapters, `35` articles, three-tier risk regime) gives systems already running at commencement **18 months** where the sector is **education** (with healthcare and finance) under **Article 34** — 🔴 **a compliance date of `1 September 2027`.** The statute's education limb is explicit: AI must suit learners' age and development, **prevent risks in the assessment and classification of learners**, and protect data and privacy.
+
+🔴 **What is confirmed and what is not, because the pitch must not outrun the evidence.** 🟢 Confirmed on two further independent channels this pass: the law's identity, its passage date, its commencement, and the `18`-month education transition. 🟢 The earlier channel conflict is resolved by **separation** — the *Digital Technology Industry Law* is a different instrument. 🔴 **Still not primary-verified:** the high-risk list itself, **Decision 33/2026/QD-TTg** (reported `46` systems across `6` sectors, with **contradictory effective dates** of `15 August 2026` and `1 January 2026`), and implementing **Decree 142/2026/ND-CP** (reported effective `1 May 2026`). 🔵 **Quote the statute and the Article 34 date. Do not quote the Decision's list or dates to a client without reading the Gazette text first** — and price that reading as the first task of the engagement.
+
+**The build is `P67`'s, with the date and the evidence schema changed.** Reuse it rather than re-scoping:
+
+| Layer | Component | Why |
+|---|---|---|
+| Tutoring surface | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, `42,883★`) or [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | APAC-origin, permissive, and `OpenMAIC` is the largest multi-agent classroom in open source. 🔴 **Resolve its tree:** `packages/mathml2omml` is **LGPL-3.0-or-later** |
+| The prohibition, in the tool surface | `P64`'s pattern — the agent **cannot** post a grade or a classification on its own | Article 34's education limb is about *assessment and classification of learners*. 🟢 **`T95`: human-in-the-loop is becoming a property of the tool surface, not a sentence in the policy** — and a statute that names classification is why |
+| Evidence spine | `LTI` in, `xAPI` out — [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator), [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | `P17`'s spine unchanged. Every inference, its inputs, the human decision that followed, timestamped and queryable |
+| Rubric scoring | [`microsoft/LLM-Rubric`](https://github.com/microsoft/LLM-Rubric), [`jacobphillips99/protorubric`](https://github.com/jacobphillips99/protorubric) | 🔴 **Not [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) for a commercial deliverable** — its two annotated corpora are `CC BY-NC-SA 4.0` (`P69`, finding 2) |
+| Sovereignty | Self-hosted weights per `P9` | Vietnam's regime is extraterritorial in the same direction as Korea's; keep inference inside the client's jurisdiction and the data-protection limb answers itself |
+
+🔵 **The commercial line.** A multinational with APAC education operations hits **Vietnam before Europe** — `1 September 2027` against `2 December 2027` — and `P67`'s deliverable satisfies both, because an auditable decision trail and a tool surface that cannot act alone are what *both* statutes require. 🟢 **Sell one build against two deadlines, and lead with the earlier one.** Alongside it, **Australia's TEQSA** requirement that every higher-education provider file an institutional action plan on generative-AI risk remains the only education-*specific* regulator obligation this base has found in any region — a smaller, faster engagement with the same evidence spine underneath.
+
 ## P66 — The Brazilian public-education intelligence desk (state or municipal secretariat: 5–7 weeks) 🟢 new at p689
 
 **Buyer:** a Brazilian **secretaria de educação** — state or municipal — or a consultancy bidding one. **The premise is that this engagement does not open with a tutor.** It opens with *how many schools do we have, in what condition, how many enrolled, what does the IDEB say, what did FNDE transfer, how did this cohort score on the ENEM* — and every one of those is a question about federal statistics that is answerable in week one under MIT.

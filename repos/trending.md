@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p690) — 🟢 **`255` FOUNDATION AND VERTICAL SUBJECTS AUDITED AGAINST GITHUB'S `spdx_id`: `39` DIVERGENCES, `0` ERRORS, AND THE DIVERGENCES SORT CLEANLY INTO **FIVE NAMED FAILURE MODES**. 🔴 THE LARGEST SINGLE MODE IS A DETECTOR THAT CANNOT READ **EUPL** — WHICH IS THE LICENCE OF ELEVEN EUROPEAN NATIONAL-AGENCY REPOSITORIES ON THIS SHELF**
+
+### 🟢 690-R1 — The two shelves, measured
+
+| Shelf | Subjects | Resolved | Divergent | Star rows | Exact | Refreshed |
+|---|--:|--:|--:|--:|--:|--:|
+| [`repos/foundations.md`](./foundations.md) | `175` | `173` | `12` | `163` | `109` | **`44`** |
+| [`verticals/solutions.md`](../verticals/solutions.md) | `80` | `79` | `27` | — | — | — |
+
+🟢 **No licence claim on either shelf was overturned.** Every divergence is GitHub returning `NOASSERTION` or `NONE`, i.e. **declining to classify a grant that exists**. The one case that looked like a contradiction was a false positive **in this pass's own probe**, and it is worth recording because the base was right and the probe was wrong:
+
+🔴 **[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)** (`349★`) returns `NONE`, and a README grep for a licence family returned *"Apache 2"* — which would have contradicted the shelf's `GPL-2.0`. **The README string was `Apache 2.4 or above`, the web-server requirement under `## Installation`.** The real grant is where [`verticals/solutions.md`](../verticals/solutions.md) already says it is — `docs/License.txt`, **`17,286 B`**, opening `GNU GENERAL PUBLIC LICENSE Version 2, June 1991`, with **no root grant file**, which is exactly why the index returns `NONE`. 🔵 **A licence-family grep over a README is not a licence channel.** This base's existing rule — read the grant payload at the real default ref — caught what the shortcut would have broken.
+
+### 🔴 690-R2 — The five failure modes behind `NOASSERTION`, each with payload evidence
+
+**Mode 1 — The detector cannot read EUPL.** `11` [`Opetushallitus`](https://github.com/Opetushallitus) repositories (the Finnish National Agency for Education) carry real, short, reference-style EUPL grants and **every one of them reads as unlicensed to automated tooling**:
+
+| Repo | Grant file | Bytes | Text |
+|---|---|--:|---|
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `LICENSE.txt` | `653` | *Licensed under the EUPL, **Version 1.1** or ...*, © 2015 The Finnish National Board of Education |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `LICENSE.md` | `296` | *Licensed under the EUPL, **Version 1.2** or ...*, © 2025 Finnish National Agency for Education |
+
+🔵 **Why this is a procurement fact and not a trivium.** The EUPL is the licence European public bodies actually publish under, and it is the one licence family on this shelf that **no automated scanner will attribute**. Any SCA or licence-compliance gate a client runs over an EMEA public-sector dependency will report these as *unknown licence* — the worst possible output, because *unknown* blocks a review that *copyleft* would merely price. 🟢 **Sell the attestation, not the surprise:** this is `690-P` below.
+
+**Mode 2 — MIT plus an appended provenance clause.** The grant is MIT verbatim with an extra attribution paragraph for derived portions, which defeats a whole-file hash match: [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) `1,200 B`, second © line *2026 Rohan Muppa*; [`ChrisWhiteSr/teach-skill`](https://github.com/ChrisWhiteSr/teach-skill) `1,234 B`, *Portions copyright (c) 2026 Matt Pocock*.
+
+**Mode 3 — Apache-2.0 with the appendix filled or a prefix added.** [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) `10,785 B` on branch **`dev`**, boilerplate replaced by *Copyright 2021 Technische Hochschule Mittelhessen*; [`apache/openmeetings`](https://github.com/apache/openmeetings) **`50,907 B`**, prefixed `Apache OpenMeetings License:` with bundled third-party grants appended; [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) (**`107,959★`**) `LICENSE.txt` `11,505 B`. 🔵 **An ASF project's own repository reads as unlicensed to GitHub** — which is the clearest available proof that `NOASSERTION` is a statement about the detector.
+
+**Mode 4 — A genuinely split grant, where `NOASSERTION` is the honest answer.** [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) `LICENSE.md` `1,615 B`: MIT code **+** `CC BY 4.0` prompts/settings **+ `CC BY-NC-SA 4.0` on both the Annotated CLEAR Corpus and Annotated PERSUADE 2.0 Corpus**. 🔴 **The `NC` limb is the commercially load-bearing one** and it is already named in that row's cell. Related: [`scrosseye/CLEAR-Corpus`](https://github.com/scrosseye/CLEAR-Corpus) (`26★`) and [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) (`69★`) both return `NONE` on this shelf, which is consistent — **a dataset repository is where a licence file is least likely to exist and the restriction most likely to bite.**
+
+**Mode 5 — The grant is not at the root, or exists only as a manifest field.** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) → `docs/License.txt` (above). [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) (`52★`) → **MIT in `package.json` only**; re-probed this pass across `main`, `master` **and** `develop` (its real default), with `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` all `404` on all three, and `"license": "MIT"` present in the manifest on all three. 🟢 **Exactly what the `p676` cell already says.** 🔴 **A manifest field is a declaration by the publisher, not a grant of rights in a document** — fine to depend on, thin to warrant.
+
+### 🟢 690-R3 — Star refresh, and five held values that were *rounded* rather than wrong
+
+`109 / 163` foundation rows matched to the unit. `44` refreshed. 🔵 **Five of the drifts were round numbers**, i.e. the shelf had carried a rounded figure that the index can now make exact:
+
+| Repo | Held | API |
+|---|--:|--:|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `7,600` | **`7,590`** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1,200` | **`1,240`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,200` | **`1,170`** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `1,000` | **`1,021`** |
+| [`RaspberryPiFoundation/blockly`](https://github.com/RaspberryPiFoundation/blockly) | `13,600` | **`13,601`** |
+
+🔴 **Three of those five moved *down*** (`moodle`, `kolibri`, and on the agent shelf `Li-Evan/Bloom` `303 → 302`). A rounded figure hides direction as well as magnitude; the institutional LMS rows are precisely the ones a client will check.
+
+Largest genuine movements: [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) `184 → 197` (**+7.1 %**), [`designfuchen/word-atlas`](https://github.com/designfuchen/word-atlas) `4,333 → 4,373`, [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) `42,342 → 42,464`, [`trycua/cua`](https://github.com/trycua/cua) `31,818 → 31,929`, [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) `79,016 → 79,094`, [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) `458,619 → 458,697`.
+
+### 🔴 690-R4 — The verticals leg nilled again, and the gap it keeps hitting is now four passes old
+
+The mandated `open source platform education ERP CRM MIT Apache` leg returned: **Apache OFBiz** (Apache-2.0, `24.09.07`, June 2026), **Corteza** (Apache-2.0), **Krayin CRM** (MIT), **iDURAR ERP/CRM** (MIT), **ERPNext / Frappe Education** (GPL-3.0), **Dolibarr** (GPL-3.0), **iDempiere**, **Compiere**.
+
+🔴 **Every permissive name it returned is a general-purpose ERP or CRM with no education module; every education-specific name it returned is GPL.** Net `0` added, `0` removed. 🟢 **The standing finding holds for a fourth consecutive pass: there is no education-specific ERP or SIS under MIT or Apache-2.0 in open source.** The closest permissive things on this shelf remain [`academico-sis/academico`](https://github.com/academico-sis/academico) (MIT, `1,094 B`, residual `0`) and [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp); the education-shaped systems — `openeducat_erp` (LGPL-3.0), `frappe/education` (GPL-3.0), `openSIS` (GPL-2.0), `rosariosis` (GPL-2.0), `Gibbon` (GPL-3.0) — are all copyleft. 🔵 **This is a build-vs-adopt boundary, and it is stable enough to quote to a client.**
+
+---
 ## 🆕 2026-11-07 (p689) — 🟢 **SIX FOUNDATION ROWS, AND ONE OF THEM IS THE EXPERT-KNOWLEDGE MODULE EVERY LLM TUTOR ON THESE SHELVES IS MISSING. 🔴 THE `repo:` CHANNEL HAS A THIRD FAILURE MODE AND THE OBVIOUS EXPLANATION IS WRONG. 🔵 THE `3,730`-SLUG BACKLOG IS NOW RANKED AND LICENCE-GRADED, AND `32 %` OF ITS TOP IS LEGALLY UNUSABLE**
 
 ### 🟢 689-H — Six rows filed to [`foundations.md`](./foundations.md)

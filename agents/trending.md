@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p690) — 🟢 **THE WHOLE INVENTORY WAS CROSS-CHECKED AGAINST GITHUB'S OWN `spdx_id` FOR THE FIRST TIME — `339` SUBJECTS, `334` RESOLVED, `44` DIVERGENT, AND **`0` SUBSTANTIVE ERRORS**. 🔵 EVERY ONE OF THE `44` WAS ALREADY ANNOTATED IN-CELL. 🔴 BUT THE CHANNEL THAT PROVED IT CANNOT BE USED AS AN EXISTENCE TEST: `5` SHELVED REPOS ARE ALIVE AND ABSENT FROM THE INDEX, AND IT RETURNS A SILENT `total_count: 0` FOR QUERIES THAT HAVE HUNDREDS OF HITS**
+
+### 🟢 690-A — The audit: `0` rows added, `66` star cells corrected, `0` licence claims overturned
+
+This pass filed **no new agent**. It did something this base had never done mechanically: it took **every repository on all three shelves** and asked GitHub itself what the licence and the star count are, rather than re-reading payloads row by row.
+
+**Method.** `gh api search/repositories` accepts `repo:owner/name` qualifiers and **ORs them**, so `15` subjects resolve per call, each returning `stargazers_count`, `license.spdx_id`, `pushed_at`, `default_branch`, `archived` and `fork`. `3` retries per batch; `git ls-remote --symref` as the independent liveness control. 🔴 **`gh api repos/{owner}/{repo}` is NOT available in this session** — it answers `403 GitHub access to this repository is not enabled for this session` for any repo outside the session's grant, while `search/*` is open. That asymmetry is what made the audit possible at all.
+
+| Shelf | Subjects | Resolved | `spdx_id` divergent | Star-bearing rows | Exact | Drifted |
+|---|--:|--:|--:|--:|--:|--:|
+| [`agents/top.md`](./top.md) | `84` | `82` | `5` | `83` | `59` | **`22`** |
+| [`repos/foundations.md`](../repos/foundations.md) | `175` | `173` | `12` | `163` | `109` | **`44`** |
+| [`verticals/solutions.md`](../verticals/solutions.md) | `80` | `79` | `27` | — | — | — |
+| **Total** | **`339`** | **`334`** | **`44`** | **`247`** | **`168`** | **`66`** |
+
+🟢 **The licence column survived intact.** All `44` divergences are `NOASSERTION` (`39`) or `NONE` (`5`) — GitHub declining to classify, never GitHub contradicting this base. **Five** were re-read from the payload this pass as a spot control, and all five came back exactly as the cell already said, down to the byte count: `brightspace-d2l-mcp` `1,200 B`, `teach-skill` `1,234 B`, `student-dropout-early-warning` `1,222 B` (MIT + the `CC BY 4.0` `data/raw/` carve-out the cell already names), `evaluators` `1,615 B` (the three-way split the cell already names), `feedbacksystem` `10,785 B` on branch `dev`. 🔵 **The cell that says `gh api` calls this repository `NOASSERTION` was written at `p673`; this pass confirms it at scale.**
+
+🟢 **The star column was accurate and is now exact.** `168 / 247` matched to the unit. All `66` drifts were re-written to the API value; `60` were upward growth, `6` downward. Largest: [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) `1,245 → 1,376` (**+10.5 %**), [`orionsheep/wordlink`](https://github.com/orionsheep/wordlink) `288 → 313`, [`haolpku/Omni-Edu`](https://github.com/haolpku/Omni-Edu) `635 → 687`. The two largest rows moved <`0.3 %`: `DeepTutor` `56,080 → 56,226`, `OpenMAIC` `42,855 → 42,883`. 🔵 **No inflation of the kind recorded in the sibling technology base was found here.**
+
+### 🔴 690-B — `search/repositories` is not an existence test: `5` shelved repos are alive and not in the index
+
+| Repo | Shelf | `search` | `git ls-remote --symref` |
+|---|---|--:|---|
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | agents | `total_count: 0` | 🟢 **ALIVE** |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | agents | `total_count: 0` | 🟢 **ALIVE** |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | foundations | `total_count: 0` | 🟢 **ALIVE** |
+| [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | foundations | `total_count: 0` | 🟢 **ALIVE** |
+| [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) | verticals | `total_count: 0` | 🟢 **ALIVE** |
+
+🔴 **This is reproducible, not transient** — re-probed individually, one `repo:` qualifier each, and still `0`. 🔵 **Consequence for this base's method:** `search/repositories` is authoritative *when it answers*, and says nothing when it does not. **Liveness must keep coming from `git ls-remote`, and a row must never be retired on a search miss.** Note that [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) was promoted onto the shelf only at `p688` — had this pass trusted the index, it would have deleted a row it had just filed.
+
+### 🔴 690-C — The silent `total_count: 0`: a probe whose failure is shaped exactly like a finding
+
+The first harvest of this pass ran `10` queries; queries `5`–`10` all returned `0` results and the run looked like a clean nil across six categories. 🔴 **It was not.** Re-probed:
+
+| Query | First answer | On re-probe |
+|---|--:|--:|
+| `AI grading assessment stars:>60 pushed:>2026-08-15` | `0` | — |
+| `AI grading assessment` (control, no qualifiers) | — | **`650`** |
+| `autograder AI stars:>60` | `0` | — |
+| `autograder stars:>60` | — | **`6`** |
+| `autograder` (control) | — | **`2,437`** |
+| `lesson plan generator stars:>40` | `0` | `0` after `3` retries — **still UNCONFIRMED** |
+
+🔵 **This is a new instance of the `T92` class** — the trend that named `curl -sSL` without `--fail` turning a `404` into a `14`-byte document. Same shape: **the probe's failure mode is indistinguishable from the data it is probing for.** 🟢 **Mitigation adopted and used for every leg of this pass:** `3` retries, a bare-term control query, and a `0` written to the log as **`UNCONFIRMED`** rather than as a nil. `lesson plan generator stars:>40` is logged that way above and is **not** claimed as an absence.
+
+### 🔴 690-D — Supply saturation, with the denominator: `131` repos harvested, `27` novel, **`0` filable**
+
+`22` queries across the agent and tutoring space (star floors `40`–`200`, push floors `2026-08-01`–`2026-09-01`, plus `topic:ai-in-education`, `topic:ai-tutor`, and a CJK leg). `131` unique repositories, diffed against **every** slug this base holds anywhere — `5,434` distinct `owner/name` pairs across all files including `evidence/` and `archive/`.
+
+🔴 **`27` were novel. `0` are filable.** The tail is `0`–`3 ★` coursework and research artefacts (`nizamkadirteach/aied2026-es-llms` `2★`, `mpoiaganova/stage-aware-AI-tutor` `2★`, `hiopoip7/Academic-Instability-Early-Warning-System` `2★`, `devissaputra/learner_agency_simulator` `0★`). The two largest permissive novelties are **not education agents** and were refused: [`flashcards/flashcards.github.io`](https://github.com/flashcards/flashcards.github.io) (MIT, `185★`, a developer flashcard library) and [`dcavar/python-tutorial-notebooks`](https://github.com/dcavar/python-tutorial-notebooks) (Apache-2.0, `166★`, NLP/ML teaching notebooks).
+
+🔴 **The CJK leg is contaminated, and the contamination is worth naming.** `教育 AI agent stars:>100` returns, ranked above every education repository: [`cirosantilli/china-dictatorship`](https://github.com/cirosantilli/china-dictatorship) (`3,323★`, CC-BY-SA-4.0) and **three** near-duplicate mirrors of it (`385★`, `215★`, `132★`), all political-speech archives that rank for Chinese-language queries because of their README mass. 🔵 **A CJK education query against this index is not a CJK education channel** — `p669`'s CJK-share placement rule reads the *repository's own files* for exactly this reason, and the lesson now extends to discovery as well as placement.
+
+🟢 **What the saturation result actually means for the shelf:** at `84` rows and a `≥40★` floor, this base has absorbed the discoverable permissive education-agent supply. **The next real row will come from owner enumeration or from a named institution, not from a star-ranked keyword query** — which is how `p670` found `DaRL-GenAI` and `p676` found the three American university systems.
+
+---
 ## 🆕 2026-11-07 (p689) — 🟢 **THE LATAM *LEG* NIL IS REAL AND NOW FOUR PASSES DEEP — AND A `1,857★` MIT BRAZILIAN ADDRESS WITH `21` EDUCATION TOOLS WAS SITTING IN THIS BASE'S OWN LOGS, CITED `14` TIMES, FILED `0` TIMES. 🔴 `32 %` OF THE MOST-MENTIONED BACKLOG CANNOT BE USED AT ALL — INCLUDING A `29,540★` AI TUTOR THAT SHIPS NO LICENCE. 🔵 A NEW LATIN-SCRIPT PLACEMENT CHANNEL WAS BUILT, CONTROLLED AT BOTH SIGNS, AND RETURNED NIL**
 
 ### 🟢 689-A — Five rows filed to [`top.md`](./top.md)
