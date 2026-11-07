@@ -1,0 +1,15 @@
+slug	default_ref	grant_file	bytes	sha256_12	copyright_line	spdx_api	operative_body_verdict	filed
+insightflo/edu-deck-skills	main	LICENSE	11358	cfc7749b96f6	(canonical Apache-2.0 text, no filled appendix)	Apache-2.0	VERBATIM (9130/9130 normalised chars vs apache.org)	agents/top.md
+groundworklms/coursewright	main	LICENSE	11358	cfc7749b96f6	(canonical Apache-2.0 text)	Apache-2.0	VERBATIM	agents/top.md
+rdennler/yat	main	LICENSE	11358	cfc7749b96f6	(canonical Apache-2.0 text)	Apache-2.0	VERBATIM	agents/top.md
+rdennler/thinkpad	main	LICENSE	11358	cfc7749b96f6	(canonical Apache-2.0 text)	Apache-2.0	VERBATIM	REFUSED - archived:true
+exorticlabs/guidey	main	LICENSE	1069	fce015795258	Copyright (c) 2026 Exortic Labs	MIT	n/a (MIT)	agents/top.md
+pisan-labs/dossier-comment-reflector	main	LICENSE	1068	d6dc3e9441c3	Copyright (c) 2026 Yusuf Pisan	MIT	n/a (MIT)	agents/top.md
+RayonLee/textbook-chapter-writing	main	LICENSE	1109	01428dbb3caa	Copyright (c) 2026 Ruiyang Li (PhD Student, Renmin University of China)	MIT	n/a (MIT)	agents/top.md
+SiriusFzh/NovaForge	main	LICENSE	1066	2f50a18b8856	Copyright (c) 2026 NovaForge	MIT	n/a (MIT)	repos/foundations.md
+scratchfoundation/scratch-editor	develop	LICENSE	34523	8486a10c4393	Copyright (C) 2007 Free Software Foundation, Inc.	AGPL-3.0	n/a (AGPL)	repos/foundations.md
+learningequality/kolibri	develop	LICENSE	1097	3c056b34a476	Copyright (c) 2021 Learning Equality and other contributors	MIT	n/a (MIT)	already shelved - correction
+scratchfoundation/scratch-blocks	develop	LICENSE	10174	259faa4a7f78	(title block misdated "January 2011"; APPENDIX absent)	Apache-2.0	VERBATIM sections 1-9 (9129 vs 9130 chars) - REPRODUCES p658	already shelved - confirmed
+chadyi/StudyOnTV	main	LICENSE	1043	67ae8445017e	Copyright (c) 2024 chadyi. All rights reserved.	NOASSERTION	NOT OSI - "Source Available License - Personal Use Only"	REFUSED
+jorgepb96/nodus	main	LICENSE	34523	0d96a4ff68ad	Copyright (C) 2007 Free Software Foundation, Inc.	AGPL-3.0	cosmetic (6 bytes: appendix line-wrap)	REFUSED - copyleft; used as byte-collision control
+LINJIANG12/video2book-courses	main	(none)	-	-	-	none	NO GRANT at any of 8 filenames	REFUSED

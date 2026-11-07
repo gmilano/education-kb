@@ -1,0 +1,2 @@
+payload_a	payload_b	bytes_a	bytes_b	sha256_12_a	sha256_12_b	differing_bytes	difference	verdict
+scratchfoundation/scratch-editor@develop:LICENSE	jorgepb96/nodus@main:LICENSE	34523	34523	8486a10c4393	0d96a4ff68ad	6	appendix suggested-notice line wrap ("published\nby the" vs "published by\nthe")	EQUAL BYTE COUNT, DIFFERENT SHA, COSMETIC DIFFERENCE - byte count is not a licence identity AND sha divergence is not evidence of a substantive difference

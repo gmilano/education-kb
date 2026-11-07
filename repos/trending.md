@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p692) — 🔴 **FOUR FOUNDATION ROWS ADDED AND ELEVEN LIVENESS CLAIMS WITHDRAWN: THE SCRATCH AND KOLIBRI COMPONENT REPOSITORIES HAVE BEEN ARCHIVED INTO MONOREPOS, THE ARCHIVED ADDRESSES KEPT THE STARS, AND THIS BASE WAS STILL TELLING STUDIOS TO FORK THEM**
+
+`repos/foundations.md` **`156` → `160`** (re-derived by counting, `0` duplicates, arity `160/160`). `verticals/solutions.md` re-derived at **`73` rows / `73` distinct — the heading had read `71` since p688, wrong by two** — with **one subject address corrected and no row added**. 🔴 **`11` archived subjects found across three shelves; `8` of them said nothing about it.**
+
+### 🔴 692-Q — The monorepo consolidation, which is the pass's structural finding
+
+Two unrelated, healthy education projects moved their component and per-platform repositories into single trees, and in both cases **the archived address is the one every star-ordered channel returns**:
+
+| Project | Archived (star-ranked) | ★ | Live successor | ★ | Ratio |
+|---|---|--:|---|--:|--:|
+| Scratch Foundation | [`scratch-gui`](https://github.com/scratchfoundation/scratch-gui) | **4,807** | [`scratch-editor`](https://github.com/scratchfoundation/scratch-editor) (monorepo, `develop`) | **310** | **15.5×** |
+| Scratch Foundation | [`scratch-vm`](https://github.com/scratchfoundation/scratch-vm) | 1,306 | same monorepo, `packages/` | 310 | 4.2× |
+| Scratch Foundation | `scratch-render` / `scratch-paint` | 270 / 185 | same monorepo | 310 | — |
+| Learning Equality | [`kolibri-installer-android`](https://github.com/learningequality/kolibri-installer-android) | 31 | [`kolibri`](https://github.com/learningequality/kolibri) `@develop:platforms/android` | **1,170** | inverted |
+| Learning Equality | [`kolibri-app`](https://github.com/learningequality/kolibri-app) | 11 | `kolibri@develop:platforms/desktop-app` | 1,170 | inverted |
+
+Learning Equality also archived `kolibri-installer-windows` (`6★`), `kolibri-installer-debian` (`4★`), `kolibri-installer-gnome` (`3★`) and `kolibri-android-wrapper` (`0★`) — **the whole per-platform installer tier, `55★` in total, into one `1,170★` MIT tree.** Still live at Scratch: `scratch-blocks` (`2,770★`, Apache-2.0), `scratch-www` (`1,691★`), `scratch-desktop` (`430★`), `scratch-editor` (`310★`).
+
+🟢 **Two independent channels agree and name one mechanism.** The flag comes from `search/repositories`; the second channel is the archived repositories' **own READMEs**, agreeing on `4/4` tested — *“**will be archived**. Any new issues or pull requests should be opened in the mono-repo”* (Scratch) and *“This repository has been archived! The … app has been **moved to the Kolibri monorepo**”* (Kolibri). Both replacement paths were probed and return `200`. `github.com` HTML was **not** available as a third channel — it returns `403` through this session's proxy for every repository including `moodle/moodle`.
+
+🔴 **The instrument consequence.** An archived repository keeps its refs and its last commit date, so **`git ls-remote --symref` and `pushed_at` both report a consolidated-away repository as alive** — which is precisely how this base's published liveness control missed all eleven. `T104`.
+
+### 🔴 692-Q2 — and this base was telling studios to fork two of them
+
+[`compose/patterns.md`](../compose/patterns.md)'s offline-first pattern, verbatim: *“**Start from the installer, not the platform.** Fork `kolibri-installer-android` at `develop` and `kolibri-app`.”* **Both archived.** Carried for `14` passes. Corrected in four places (summary row, two layer rows, build step 1) to the monorepo paths. 🟢 **The licence conclusion survives intact** — the monorepo root is MIT (`1,097 B`, sha256₁₂ `3c056b34a476`, © *2021 Learning Equality and other contributors*, real default ref `develop`) — so **only the address changed, not the commercial answer.** 🔵 Estimate impact stated in the pattern rather than hidden: a monorepo fork pulls the whole platform tree and the build runs from a subdirectory, so the first APK is integration work, not a clone.
+
+### `692-R` — the four foundation rows
+
+| Row | Licence (payload read at the real default ref) | ★ | Why a foundation |
+|---|---|--:|---|
+| [`scratchfoundation/scratch-editor`](https://github.com/scratchfoundation/scratch-editor) | 🔴 **AGPL-3.0** `34,523 B` sha256₁₂ `8486a10c4393`, ref **`develop`** | 310 | The live Scratch tree. README title: *“The Scratch Editor Monorepo”*. Licence unchanged from `scratch-gui`, so the network-copyleft planning fact holds — **what changed is which address you fork** |
+| [`SiriusFzh/NovaForge`](https://github.com/SiriusFzh/NovaForge) | 🟢 **MIT** `1,066 B` sha256₁₂ `2f50a18b8856` | 723 | The **only** real education asset in `172` repositories under `topic:study-notes`. LaTeX + Typst + Markdown note-system templates for 考研 / 考公 — the document substrate an authoring agent writes into. APAC on **named examination systems of one jurisdiction**, not on language |
+| [`kael-odin/awesome-academic-research-skills`](https://github.com/kael-odin/awesome-academic-research-skills) | 🟢 **MIT** `1,066 B` sha256₁₂ `a5ba667c70f8` | 198 | Filed as a **channel**, not just a repository: an auto-updated **daily ranking** of research agent-skill repos. `692` passes of this base discovered skills by sweeping topic heads and watching them saturate (`T72`); this is a third party running that sweep continuously — **a channel to read rather than a shelf to rebuild** |
+| [`ShaishavMaisuria/research-paper-lifecycle-skills`](https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills) | 🟢 **Apache-2.0** `10,278 B` sha256₁₂ `b86e218eca4d`, body **verbatim** | 60 | `42` skills across the research lifecycle. **And the cleanest demonstration of `676-A`'s rule this base has:** residual **−`1,080 B`** against canonical, normalised operative body **`9,130` vs `9,130`, §1–§9 all present** |
+
+### 🔴 692-S — the byte-count collision, and both instruments failing on one pair
+
+`scratchfoundation/scratch-editor` and `jorgepb96/nodus` both ship AGPL-3.0 at **exactly `34,523 B`** with **different** hashes (`8486a10c4393` / `0d96a4ff68ad`) and **`6` differing bytes** — the entire difference a line-wrap position in the appendix's suggested notice. **The byte count says “same document” and is wrong; the hash says “different terms” and is also wrong.** `scratchfoundation/scratch-blocks` then supplied the third sign: `10,174 B`, title block misdated *“January 2011”*, appendix absent — and operative §1–§9 **verbatim**, **independently reproducing `p658`'s finding on the same repository by a different instrument `34` passes later.** Only the normalised operative-body comparison decides any of them. [`evidence/bytecount-collision.2026-11-07-p692.tsv`](../evidence/bytecount-collision.2026-11-07-p692.tsv)
+
+### 🔴 692-T — Vertical and foundation legs: nil again, and four topic heads retired as collided
+
+The mandated vertical leg (`open source platform education LMS SIS MIT Apache 2026`) returned `7` platforms and **every one is already carried** — **OpenOlat** (the Apache-2.0 LMS), **Sakai** (ECL-2.0), **Open edX** (AGPL-3.0), **Moodle** and **Canvas** (copyleft), **OpenEduCat** and **RosarioSIS**. **`0` novel.** 🟡 Note the leg's own licence claims were wrong again in the usual direction: it presented Open edX as possibly MIT-licensed because MIT and Harvard founded it. **An institution's name in a project's history is not its grant** — `681-C`.
+
+🔴 **Four topic heads retired as *collided*, which is a worse failure than empty** (`T105`): `topic:curriculum-development` (`43` repos — Spanish/Portuguese personal CVs, `currículo` = *résumé*), `topic:exam-preparation` (`35` — CKAD/AWS certification cram), `topic:study-notes` (`172` — same population, `1` real education asset), `topic:quiz` (`109` — quiz games and `quizizz-cheat`). **An empty head self-announces; a colliding head returns real stars, real licences and real activity, and a pipeline scoring on licence and liveness will promote a stranger's résumé into an education KB.**
+
+### 🔴 692-U — LATAM: the institutional channel tested for the first time, and it nils with a mechanism
+
+`p691` had already spent the Spanish/Portuguese description channel (`90` repositories, `0` adoptable). p692 tested the **institutional** one: `org:ceibal`, `org:ceibal-uy`, `org:fundacionceibal`, `org:plan-ceibal`, `org:cenia` — **all `422`, no such organisation** (controls green: `org:learningequality` → `203`, `org:moodle` → `12`). And `ceibal in:name,description,readme` returns **`526` results that are entirely device-fingerprinting libraries**, because Ceibal is Uruguay's national one-laptop-per-child programme and **its tablets are rows in device-identification databases.** 🔴 **The most-cited LATAM education institution in this base's market intel is indexed on GitHub as hardware.** ⚠️ Five handles tested, not every possible one. **Three channels, three nils — LATAM is a build-and-translate region, and the estimates now say so.**
+
+### 🟡 692-V — Declined, named so the collision is not re-bought
+
+[`LINJIANG12/video2book-courses`](https://github.com/LINJIANG12/video2book-courses) (`337★`, pushed today) — **no grant at any of `8` filenames** on the real default ref · [`chadyi/StudyOnTV`](https://github.com/chadyi/StudyOnTV) (`833★`, `199` forks in six days, the window's steepest education trajectory) — **“Source Available License — Personal Use Only”, `1,043 B`, sha256₁₂ `67ae8445017e`, while its own GitHub `description` says “open-source”** · `jorgepb96/nodus` (`301★`) and `heyform/heyform` (`9,066★`) — AGPL-3.0 · `Ebazhanov/linkedin-skill-assessments-quizzes` (`28,875★`) — AGPL-3.0 certification answer keys · `ropensci/software-review` (`346★`) and `pyOpenSci/software-submission` (`129★`) — no grant · `mofan6/Timoa` — Apache-2.0 but a Windows countdown timer, not an education asset · `tdurieux/anonymous_github` (`2,298★`) — GPL-3.0; **noted anyway because it is the double-blind-review anonymiser, and a university research-integrity engagement will ask for it by function.**
+
+### 🔵 692-W — What this pass deliberately did not do
+
+**No archived row was deleted.** Each keeps its place with its archival stated, because an archived tree under a permissive grant is still a legitimate **fork-and-own** base — which is how this page already treats `scratchjr`. The correction is to the **liveness claim**, not to the **usability claim**, and collapsing those two would be its own defect.
+
+---
+
+
 ## 🆕 2026-11-07 (p691) — 🔴 **THE VERTICAL AND FOUNDATION LEGS NILLED, AND THE SPANISH/PORTUGUESE SUPPLY WAS MEASURED DIRECTLY FOR THE FIRST TIME: `90` REPOSITORIES, `0` EDUCATION AGENTS**
 
 ### 🔴 691-E — Vertical-platform leg: every platform returned is already shelved

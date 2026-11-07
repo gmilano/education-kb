@@ -1437,3 +1437,85 @@ Two independent instances arrived in a single pass, in unrelated domains, both p
 🟡 **The limit is scope, and it is severe.** It only works where a *checkable oracle exists* — board games, physics, mathematics, code, symbolic algebra. It does not transfer to essay feedback, language production or history, which is most of the curriculum. ⚠️ Both instances are also small and partly dormant (`58★`; `127★`, last push `2026-01-18`), so this is a **pattern worth building**, not a dependency worth adopting — see **P62**.
 
 **Confidence: medium.** The architecture is clearly evidenced and verified first-hand in two instances; its durability is not, and `n = 2`.
+
+## T104 — Education OSS is consolidating into monorepos, and the archived component repositories keep the stars 🔴 new at p692
+
+**The measurement.** Two unrelated, healthy education projects moved their per-component and per-platform repositories into a single tree in the same window, and in both cases the **archived** address outranks the live one on every star-ordered channel:
+
+| Project | Archived (and star-ranked) | ★ | Live successor | ★ | Ratio |
+|---|---|--:|---|--:|--:|
+| Scratch Foundation | `scratch-gui` | **4,807** | `scratch-editor` (monorepo) | **310** | **15.5×** |
+| Scratch Foundation | `scratch-vm` | 1,306 | same monorepo, `packages/` | 310 | 4.2× |
+| Learning Equality | `kolibri-installer-android` | 31 | `kolibri@develop:platforms/android` | 1,170 | — (inverted) |
+| Learning Equality | `kolibri-app` | 11 | `kolibri@develop:platforms/desktop-app` | 1,170 | — (inverted) |
+
+Learning Equality also archived `kolibri-installer-windows` (`6★`), `kolibri-installer-debian` (`4★`), `kolibri-installer-gnome` (`3★`) and `kolibri-android-wrapper` (`0★`): **the entire per-platform installer tier, `55★` in total, collapsed into one `1,170★` MIT tree under `platforms/`.**
+
+**Why it is a trend and not two coincidences.** Both projects state the same reason in the same place — the first line of the archived repository's README (*“will be archived… opened in the mono-repo”*, *“moved to the Kolibri monorepo”*). Neither is decay. Both are consolidation by maintainers who are still shipping: `scratch-editor` was pushed the day this was written, `kolibri` the same day.
+
+**The consequence that costs money.** Where a project consolidates, **the unit of delivery stops being a repository and becomes a path inside one.** That breaks three things a studio relies on:
+
+1. **Star-ranked discovery points at the corpse.** A sweep ordered by stars — including every sweep this base has ever run — returns `scratch-gui` at `4,807★` and never sees `scratch-editor` at `310★`.
+2. **`git ls-remote` and `pushed_at` both say “alive”.** An archived repository keeps its refs and its last commit date. `rdennler/thinkpad` reads `archived=true` with `pushed_at` three days old. **The only field that answers the question is `archived`, and it exists only on the API, not on the git channel.**
+3. **A fork instruction written against the old address silently freezes.** This base published exactly that instruction for Kolibri and carried it for `14` passes.
+
+**What to do instead.** Pin the **path**, not the repository: `learningequality/kolibri@develop:platforms/android`. Record the monorepo's grant, because it governs the path — Kolibri's root `LICENSE` is MIT (`1,097 B`, sha256₁₂ `3c056b34a476`), so the installers' MIT conclusion survives the move intact. And read `archived` on every address **already on a shelf**, not only on candidates: see `T105`.
+
+## T105 — A `topic:` head in English education vocabulary can return a different *industry*, and three of them do 🔴 new at p692
+
+`T23` established that educators use terms repository owners do not tag with, and `p680` found three topic heads that are simply empty. p692 found the third failure mode, which is worse than both because **it returns a full page of plausible results**:
+
+| Topic head | Repositories | What it actually returns | Education yield |
+|---|--:|---|--:|
+| `topic:curriculum-development` | `43` | **Personal CVs and résumé sites.** `currículo`/`currículum` is Spanish and Portuguese for *résumé*; the head's population is `my-curriculum`, `curriculum-laravel`, `cv-virtual`, `Gabriel-Leon-CV`, `portafolio` | **`0`** |
+| `topic:exam-preparation` | `35` | **IT certification cram material** — CKAD, AWS Solutions Architect, AI-900, CNCF, `Free-Exam-Dumps` | **`0`** |
+| `topic:study-notes` | `172` | **The same certification/CS-course population** — `Game-Programmer-Study-Notes` (`10,079★`), `aws-csa-2017`, `Learn-Web-Hacking` | **`1`** of `172` |
+| `topic:quiz` | `109` | **Quiz *games* and classroom-cheating tools** — `quizizz-cheat`, `piano-trainer`, `whisperify` | **`0`** |
+
+**Why this is the dangerous shape.** An empty head is self-announcing — `0` results and you move on. A **colliding** head returns `43` repositories with real stars, real licences and real activity, and a pipeline that scores on licence and liveness will happily promote a stranger's résumé into an education knowledge base. This is the mechanism behind the *“nombre”* class of defect: **the row passes every mechanical gate and is about something else entirely.**
+
+**The rule.** A topic head is a claim about *tagging*, never about *meaning*. Before a head is used as a channel, read the top five results and name the population; if the population is not the industry, **record the collision and retire the head** rather than filtering it row by row every pass. And treat a head whose English term is a false friend in Spanish or Portuguese as collided until proven otherwise — `curriculum` is the first one found, and it will not be the last.
+
+
+### 🔴 The third collision, and it is the most expensive one: the LATAM institutions this base's market intel rests on are not on GitHub — and the one whose name *is* indexed is indexed as hardware
+
+[`intel/market.md`](./market.md) rests its entire LATAM demand case on four named institutions — **Ceibal** (Uruguay), **Cetic.br** (Brazil), **CENIA** (Chile) and **Tecnológico de Monterrey** (Mexico). p692 queried them as GitHub organisations, a channel neither `p691`'s language probes nor any earlier topic sweep had touched:
+
+| Probe | Result |
+|---|---|
+| `org:ceibal`, `org:ceibal-uy`, `org:fundacionceibal`, `org:plan-ceibal` | 🔴 **`422` — no such organisation**, all four handles |
+| `org:cenia` | 🔴 **`422` — no such organisation** |
+| `org:learningequality` *(control)* | 🟢 `203` repositories |
+| `org:moodle` *(control)* | 🟢 `12` repositories |
+| `ceibal in:name,description,readme` | 🔴 **`526` results, and the entire head is device-fingerprinting libraries** — `matomo-org/device-detector` (`3,552★`), `podigee/device_detector`, `DeviceDetector.NET`, `certified-android-devices` |
+| `tecnologico-de-monterrey OR tecdemonterrey in:name,description` | 🟡 `441` results; head is student coursework at `3`–`15★`, nothing institutional |
+
+**Why `ceibal` resolves to device detectors is the whole point.** Ceibal is Uruguay's national one-laptop-per-child programme, so **its tablets are entries in device-identification databases** — and the single most-cited LATAM education institution in this base's market intel is therefore indexed on GitHub as *hardware* rather than as *software*. That is this trend's mechanism a third time, at the worst possible place: **the collision sits exactly on the name a studio would search first.**
+
+⚠️ **Stated with its limit:** five plausible handles were tested for Ceibal and CENIA, not every possible handle; the controls were green. **Absence of these handles is not proof the institution has no GitHub presence under another name** — it is evidence that the obvious ones do not resolve, which is what a studio actually hits.
+
+**The regional conclusion.** LATAM's education-AI *demand* is the best-measured in the world. Its open-source *supply* is now nil on three independent channels — English topic heads (collided), Spanish and Portuguese description terms (`p691`, `0` adoptable of `90`), and institutional organisation accounts (`p692`, no resolving handles). **A LATAM engagement is a build-and-translate engagement, not a procurement one.**
+
+## T106 — `T79` holds for student integrity and fails one level up: research integrity is permissively supplied and almost entirely 2026-vintage 🟢 new at p692
+
+`T79` states that academic integrity is the sector's one statutorily forced AI demand with essentially no permissive supply behind it. **That claim survives, narrowed:** it is true of **student-facing** plagiarism detection, where [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (`357★`, MIT, Ghent University) remains the only live permissive option this base holds — `p680-B2` measured that layer across `19` repositories and found exactly one.
+
+One level up, at **research** integrity, the picture inverts. `topic:peer-review` — a head no pass of this base had swept in `692` passes — holds `526` repositories, `40` above `20★`, and the permissive supply is dense:
+
+| Asset | ★ | Licence | What it is |
+|---|--:|---|---|
+| [`ecnu-sea/SEA`](https://github.com/ecnu-sea/SEA) | 91 | Apache-2.0 | Automated paper review, **EMNLP 2024 Findings**, East China Normal University |
+| [`Michael-Jiahao-Zhang/game-the-llm-reviewer`](https://github.com/Michael-Jiahao-Zhang/game-the-llm-reviewer) | 219 | MIT | Meaning-preserving rewrites that move an LLM reviewer's verdict |
+| [`kael-odin/awesome-academic-research-skills`](https://github.com/kael-odin/awesome-academic-research-skills) | 198 | MIT | Auto-updated daily ranking of research agent-skill repositories |
+| [`THUROI0787/absent-author`](https://github.com/THUROI0787/absent-author) | 147 | MIT | Detecting AI-produced papers no human author stands behind |
+| [`ShaishavMaisuria/research-paper-lifecycle-skills`](https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills) | 60 | Apache-2.0 | `42` skills: review → writing → citation verification → rebuttal |
+| [`amirkiarafiei/open-scholar-peer`](https://github.com/amirkiarafiei/open-scholar-peer) | 51 | MIT | Open implementation of DeepMind's **ScholarPeer Protocol** |
+| [`FanBroWell/AI-paper-reviewer`](https://github.com/FanBroWell/AI-paper-reviewer) | 50 | MIT | LLM-based academic paper review |
+
+**`26` of the `40` were novel to this entire base** — absent from every shelf, both trending files and all `3,321` ledger lines. Of those with a classifiable grant, the permissive share is the **majority**, and nearly every one was created in `2026`.
+
+**Two consequences, pulling in opposite directions.**
+
+- 🟢 **For a higher-education engagement, the supply problem `T79` describes is solved at the research tier.** A university asking for AI governance over its research output can be served from permissive components today; one asking for student-submission integrity still cannot.
+- 🔴 **The best-starred asset in the layer is the attack, not the defence.** `game-the-llm-reviewer` at `219★` outranks every defensive tool listed above. **Any criterion-referenced LLM assessor a studio ships — rubric grader, Annex III learner assessment, automated reviewer — now has a public, MIT-licensed, `219★` adversarial corpus aimed at it.** Treat it as a mandatory red-team input: if a grading pipeline's scores move under meaning-preserving rewrites, the pipeline is not defensible, and that is cheaper to learn before a conformity assessment than during one.
+

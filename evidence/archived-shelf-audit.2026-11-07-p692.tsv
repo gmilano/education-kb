@@ -1,0 +1,12 @@
+slug	archived	stars	spdx	pushed	shelf_row_flags_archival	successor
+1EdTech/LTI-Tool-Provider-Library-PHP	true	68	Apache-2.0	2018-06-29	0	-
+Opetushallitus/compleap	true	1	EUPL-1.2	2023-01-03	0	-
+ably-labs/realtime-quiz-framework	true	77	Apache-2.0	2026-03-06	0	-
+learningequality/kolibri-installer-android	true	31	MIT	2026-07-15	0	learningequality/kolibri@develop:platforms/android
+learningequality/kolibri-app	true	11	MIT	2026-07-18	0	learningequality/kolibri@develop:platforms/desktop-app
+menthorlabs/menthor	true	582	Apache-2.0	2024-04-21	0	-
+microsoftarchive/Learn-LTI	true	132	MIT	2023-05-03	1	-
+oppia/oppia-ml	true	3	Apache-2.0	2024-12-02	0	-
+scratchfoundation/scratch-gui	true	4807	AGPL-3.0	2026-05-29	0	scratchfoundation/scratch-editor
+scratchfoundation/scratch-vm	true	1306	AGPL-3.0	2026-05-10	0	scratchfoundation/scratch-editor
+scratchfoundation/scratchjr	true	707	BSD-3-Clause	2022-07-22	0	-

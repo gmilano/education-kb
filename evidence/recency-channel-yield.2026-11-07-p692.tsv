@@ -1,0 +1,12 @@
+query	total_count	novel_to_base_in_page	max_stars_among_novel	adoptable_filed	note
+topic:education created:>2026-10-25	2046	21/21 shown	833	0 (the 833-star head is source-available)	the only non-saturated channel; entire novel tail is <=42 stars apart from one non-OSI head
+topic:ai-tutor created:>2026-10-20	110	24/24 shown	2	3	every novel row <=2 stars; substance, not stars, is the only filter that works here
+topic:edtech created:>2026-10-20	422	17/17 shown	833	0	same head repeats; rest <=21 stars
+topic:quiz stars:>40	109	21/21 shown	28875	0	vocabulary miss: returns quiz GAMES and cheat tools, not education software
+topic:curriculum-development	43	22/22 shown	393	0	VOCABULARY COLLISION: "curriculum" = CV/resume in es/pt; head is personal-CV repos
+topic:exam-preparation stars:>10	35	24/24 shown	216	0	returns IT-certification cram material (CKAD, AWS, AI-900), not education software
+topic:study-notes stars:>10	172	24/24 shown	10079	1 (SiriusFzh/NovaForge)	same certification-cram population; one real education asset at 723 stars
+topic:course-generation	8	6/6 shown	0	1 (groundworklms/coursewright)	smallest head swept; every repo 0 stars; 1 of 6 is a real grounded course generator
+topic:peer-review stars:>20	40	26/26 shown	2298	6 (SEA, absent-author, open-scholar-peer, game-the-llm-reviewer, research-paper-lifecycle-skills, awesome-academic-research-skills)	THE PASS'S MOST PRODUCTIVE CHANNEL - never swept in 692 passes; a whole permissive research-integrity layer, nearly all created 2026
+topic:homeschool stars:>5	5 (94 unfiltered)	3/3 shown	26	0	small but NOT empty; all 3 novel, none adoptable (1 NOASSERTION, 2 no grant)
+NOTE	-	-	-	-	CORRECTION IN-PASS: the two rows above were first recorded as '0 results / DEAD HEAD'. That was FALSE - the first sweep's output was piped through 'head -70' and the two queries were truncated away, not empty. Re-queried alone before publication: 94 and 526 total_count respectively. A truncated pipe and a dead channel are byte-identical in a transcript; a 0 is only evidence when the query was run alone and its total_count read directly.
