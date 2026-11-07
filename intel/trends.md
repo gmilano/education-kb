@@ -21,6 +21,68 @@ updated: 2026-11-07
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T113 — Command substitution strips trailing newlines, so a byte count and a digest published through `$(curl …)` are both wrong — and this base has already "corrected" one row to the true value without naming the cause 🔴 new at p695
+
+**This is a defect in this base's own primary verification instrument, not in the sector.** Every grant cell on these shelves publishes `bytes` + `sha256₁₂` as the identity of a licence payload. Where that pair was produced by `out=$(curl -sSL …)` and then measured with `printf '%s' "$out" | wc -c`, **both numbers are wrong**: command substitution discards *all* trailing newlines before the bytes are ever counted.
+
+**Controlled at both signs, on three payloads, same fetch and same second:**
+
+| Payload | `curl -o file` (true) | `$(curl …)` (substitution) | Δ |
+|---|---|---|--:|
+| [`edificeio/infra-front`](https://github.com/edificeio/infra-front) `LICENSE` | **34,520 B** · `76a97c878c9c` | 34,519 B · `d8de517917a5` | **−1 B** |
+| [`edificeio/springboard`](https://github.com/edificeio/springboard) `LICENSE` | **34,521 B** · `432d251a78db` | 34,519 B · `91b65277959e` | **−2 B** |
+| [`apache/.github`](https://github.com/apache/.github) `LICENSE` | **11,357 B** · `c71d239df917` | 11,356 B · `43070e2d4e53` | **−1 B** |
+
+🔴 **The consequence is a manufactured collision, and it is the dangerous half.** `infra-front` and `springboard` are genuinely different files — `34,520` against `34,521` true bytes, different digests — and they differ in one line of the AGPL appendix's word-wrap plus a trailing blank line. **Under the faulty instrument they both report `34,519 B`.** A pass comparing byte counts concludes "same payload"; a pass comparing digests does not. **So the digest survives the defect and the byte count does not**, which inverts how this base presents the pair: the byte count is printed first and read as the identity.
+
+🟢 **And the base has already paid for this once, on a row it repaired without diagnosing.** `p674` re-measured [`oppia/oppia`](https://github.com/oppia/oppia) and corrected its Apache-2.0 payload from `11,357 B` to **`11,358 B`** (`cfc7749b96f6`). Re-measured at p695 with both instruments: the true file is **`11,358 B` / `cfc7749b96f6`** and the substitution reading is **`11,357 B` / `58d1e17ffe51`**. 🔵 **`p674`'s "correction" was the exact difference between the two instruments.** It fixed one cell and left the instrument in place, so the same `−1 B` sits in every cell measured the same way and nothing on the page distinguishes them.
+
+🔴 **A second, independent reason byte count cannot be an identity: Apache-2.0 in the wild is a *family* of payloads, and p695 measured four of them in one sitting.**
+
+| Apache-2.0 payload | True bytes | sha256₁₂ | Shape |
+|---|--:|---|---|
+| [`edificeio/web-utils`](https://github.com/edificeio/web-utils) · `cas-server-async` · `mod-postgresql` | **10,174** | `0d542e0c8804` | appendix **stripped** (three repos, byte-identical) |
+| [`apache/.github`](https://github.com/apache/.github) · [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) · [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | **11,357** | `c71d239df917` | with appendix (three repos, byte-identical) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **11,358** | `cfc7749b96f6` | with appendix |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **11,408** | `cd2f54e1e506` | with appendix |
+
+**Four byte counts, four digests, one licence — and `11,357` against `11,358` is a one-byte difference between two genuine, widely-deployed copies.** This base uses `11,358 B` as *the* canonical reference figure; **it is one member of a family, not a test.** 🟢 **The constructive half: byte-identity across repositories is strong evidence and is cheap to check** — the two triples above each collapse to a single digest, which is how a pass should say "same payload".
+
+**Remedy, and it is mechanical:** fetch to a file (`curl -sSL --fail -o f`), then `wc -c < f` and `sha256sum f`. Never measure a payload through a shell variable. Where a published cell cannot be re-derived, **the digest is load-bearing and the byte count is advisory**.
+
+**Confidence: high** — three payloads, both instruments, deltas of `−1`, `−1` and `−2` B reproduced, plus one historical row on this base whose published correction equals the instrument delta exactly.
+
+## T114 — A licence probe keyed on the American spelling `LICENSE` returns a false negative on French-authored repositories, and the detector this base distrusts gets them right 🔴 new at p695
+
+**This is distinct from `T97`.** `T97` says licence *detectors* are monolingual and miss non-English copyright lines. `T114` is the inverse and it lands on this base rather than on GitHub: **the grant's filename is localised, GitHub's detector handles it, and the hand-rolled `raw.githubusercontent.com/<repo>/<branch>/LICENSE` probe — this base's own method — does not.**
+
+**Measured on `30` repositories across the two organisations of the French national ENT, by listing root trees (`git clone --depth 1 --filter=blob:none --no-checkout` + `ls-tree`), not by guessing filenames:**
+
+| Grant filename at root | count | share |
+|---|--:|--:|
+| `LICENSE` | 24 | 80% |
+| 🔴 **`LICENCE`** | **5** | **17%** |
+| none | 1 | 3% |
+
+The five: [`edificeio/edifice-mobile-framework`](https://github.com/edificeio/edifice-mobile-framework), [`OPEN-ENT-NG/exercizer`](https://github.com/OPEN-ENT-NG/exercizer), [`OPEN-ENT-NG/presences`](https://github.com/OPEN-ENT-NG/presences), [`OPEN-ENT-NG/competences`](https://github.com/OPEN-ENT-NG/competences), [`OPEN-ENT-NG/magneto`](https://github.com/OPEN-ENT-NG/magneto). **`licence` is the correct spelling in French and in British English; `license` is American.** The sector this base covers is disproportionately public-sector and non-American, which is exactly where the blind spot concentrates — the same regions `T97` already names.
+
+🔴 **The failure is silent and shaped like a finding.** A `404` from the probe is indistinguishable from *no grant file*, and this base's vocabulary for "no grant file" is `unlicensed` — a verdict that **reverses** the commercial answer. Every one of the five is **AGPL-3.0**.
+
+🔴 **It compounds with a second axis, because the default branch is not `main` either.** Across the same `30` root trees, the default ref resolved by `git ls-remote --symref`: `master` **16**, `dev` **7**, `develop` **5**, `main` **2**. **A probe defaulting to `main` reaches `2 / 30` — `6.7%`.** Three of the four branch names in use are ones a habitual probe does not try.
+
+**The worked specimen carries both defects at once** — [`edificeio/edifice-mobile-framework`](https://github.com/edificeio/edifice-mobile-framework), default branch `main`, grant file `LICENCE`:
+
+| probe | result |
+|---|---|
+| `main/LICENSE` — the habitual shape | 🔴 **`404`** |
+| `main/LICENCE` — correct | 🟢 `200` · **2,203 B** · sha256₁₂ `862c9d4f2e98` · bespoke **AGPL-3.0** statement |
+
+🟢 **GitHub's `spdx_id` got all five right.** It reports `NOASSERTION` for this one — which is `T99`'s mechanism (a bespoke grant statement, not canonical text), **not a filename failure**. So on this axis the index this base has learned to distrust outperforms the base's own probe.
+
+**Remedy:** resolve the default branch with `git ls-remote --symref` (never assume `main`), enumerate the root tree rather than guessing filenames, and match `LICEN[CS]E` case-insensitively alongside `COPYING`. **A probe that returns `404` must report "not found by this probe", never `unlicensed`.**
+
+**Confidence: high** — `30` root trees enumerated rather than probed, the false negative reproduced on a named specimen, and the control (GitHub's own field) correct on all five.
+
 ## T110 — A `LICENSE` file is not a grant: for an entire language ecosystem it holds only a year and a holder 🔴 new at p694
 
 **The claim.** This base's primary licence instrument is *read the `LICENSE` payload at the real default ref*. **For R packages that returns a file with no licence text in it**, because CRAN's convention is that `DESCRIPTION`'s `License:` field **is** the grant and `LICENSE` carries only the `YEAR` and `COPYRIGHT HOLDER` that the named template interpolates.

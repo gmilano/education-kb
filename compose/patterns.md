@@ -38,6 +38,46 @@ updated: 2026-11-07
 
 ---
 
+## P75 — The francophone ENT engagement: integrate the state platform, never fork it (French *académie* / région, francophone Africa ministry: 8–10 weeks) 🟢 new at p695
+
+**Who buys it and why now.** Any buyer whose school estate already runs the French **ENT** (*Espace Numérique de Travail*) — a French *académie* or région, a DANE, a private network inside the French curriculum, or a francophone African ministry adopting the same stack. The ENT is **procured, already deployed and already paid for**, which makes "replace it" unsellable and "add intelligence to it" the only live scope.
+
+**Why it is a pattern rather than a shopping list, and the whole pattern is one licence fact.** `p695` enumerated both organisations behind the platform (`695-D`/`695-E` on [`../repos/trending.md`](../repos/trending.md)) and the split is **architectural, not incidental**:
+
+- 🔴 **Every education application is AGPL-3.0** — `presences` (attendance), `competences`, `edt` (timetable), `exercizer` (exercises and assessment), `wiki`, `collaborative-wall`, `rbs` (room booking), `blog`, `pages`.
+- 🔴 **The kernel is AGPL-3.0 too, behind a `NOASSERTION`** — [`edificeio/entcore`](https://github.com/edificeio/entcore), payload `8,537 B` sha256₁₂ `86b7a74b9496`, a bespoke grant statement. **It is the piece every application links against**, so there is no "touch only the edges" fork.
+- 🟢 **The permissive seam is real but one layer down and infrastructure-only** — `17 / 74` canonical repositories are Apache-2.0 and all of them are Vert.x plumbing.
+
+🔵 **So the deliverable is a client and an integration, never a derivative.** That is `T74` applied to a platform where the usual escape hatch — fork the app, keep the core — is closed in both directions.
+
+### The stack — every component verified at p695 on the controlled channels (`git ls-remote --symref` + payload read to file)
+
+| Stage | Component | Grant | What it contributes |
+|---|---|---|---|
+| **0. The platform you do not touch** | [`edificeio/entcore`](https://github.com/edificeio/entcore) + [`edificeio/springboard`](https://github.com/edificeio/springboard) | 🔴 **AGPL-3.0** (`8,537 B` `86b7a74b9496`; `34,521 B` `432d251a78db`) | The deployed system of record. **Read from it, write to it, ship nothing linked against it.** |
+| **1. Identity, and it is permissive** | [`edificeio/cas-server-async`](https://github.com/edificeio/cas-server-async) | 🟢 **Apache-2.0** (`10,174 B` `0d542e0c8804`) | Async **CAS** server — the SSO the ENT already speaks. Permissive, so your service can embed it. 🆕 filed to [`../repos/foundations.md`](../repos/foundations.md) at p695 |
+| **2. Launch out of the ENT without forking it** | [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** `1,098 B` `c24a6b35e390` | LTI 1.3 launch. The ENT becomes the *host*; your agent is a tool it launches, in its own process and its own licence. |
+| **3. Record outside the AGPL boundary** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 **Apache-2.0** — both `11,357 B` sha256₁₂ `c71d239df917`, byte-identical to each other and to [`apache/.github`](https://github.com/apache/.github)'s own copy | xAPI statements land in **your** LRS, not in the platform's database. This is what keeps the evidence asset yours after the engagement. |
+| **4. The agent layer** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) or [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **Apache-2.0** `11,408 B` `cd2f54e1e506` · 🟢 **MIT** `1,092 B` `e3321a1b62cd` | Tutoring, or generation of the exercise content `exercizer` will serve. Runs out-of-tree, reached over LTI + xAPI. |
+| **5. Oversight surface** | [`openfun/warren`](https://github.com/openfun/warren) | 🟢 **MIT** `1,094 B` `0cc59ddb463e` — note the file is **`LICENSE.md`**, not `LICENSE` (`T114`'s axis, second spelling) | xAPI-native dashboards — **and it is French-authored (`openfun`, France Université Numérique), so it is the one component in this stack the buyer may already recognise.** |
+
+### Wiring it
+
+1. **Resolve the platform's actual refs before writing a single integration test.** The ENT's repositories use `master`, `dev`, `develop` and `main`, and **`17%` of them spell the grant file `LICENCE`** (`T114`). Pin by `git ls-remote --symref`, never by assuming `main`.
+2. **Take identity from CAS, not from a new user store.** The ENT issues CAS tickets; `cas-server-async` is Apache-2.0 so your service can speak that protocol natively. **Do not build a second account system** — in a state deployment it will not pass review.
+3. **Enter over LTI 1.3, stay out of process.** `django-lti` sits at the boundary and owns the launch. The AGPL boundary is a **process** boundary: nothing you ship imports `entcore`, and no `entcore` build includes your code.
+4. **Write evidence to your own LRS.** `xapipe` fans statements to `lrsql` (yours) and, where the client insists, onward to a platform table. Keep the LRS append-only — it is the artefact that survives the engagement.
+5. **Put the agent behind the LTI tool, with content flowing *into* `exercizer` rather than around it.** Generate exercises with `educhain`, publish them through the platform's own exercise app. **The buyer keeps using the UI their teachers already know**, which is the difference between a pilot and a deployment.
+6. **Ship the licence attestation as a deliverable, not a footnote.** Run `P69`'s attestation over the delivered estate and hand over the boundary map. In a French public-sector procurement, *showing* that no AGPL component entered your deliverable is part of the sale.
+
+### Shape and honest limits
+
+- **8–10 weeks** for stages 1–5 against a running ENT; add 3–4 if the client's ENT is a customised regional build (the `springboard` pattern means most are).
+- 🔴 **You cannot sell a closed derivative of any ENT education application. There is no reading of AGPL-3.0 that permits it**, and the kernel's bespoke grant statement says the same thing in plainer language than the canonical text does.
+- 🔴 **`entcore` reports `NOASSERTION` on GitHub's API.** Expect a client or a procurement tool to read that as "no licence" and be ready with the payload: `8,537 B`, sha256₁₂ `86b7a74b9496`, AGPL-3.0 in its first sentence. **This base has met the same mechanism twice in this one organisation** (`695-F`).
+- 🟡 **Untested here:** whether francophone African ministries deploying ENT-derived stacks run the same component set. The `p695` EMEA leg **returned no African education-AI fact at all**, so that half of the buyer description is an inference from the platform's licence and language, not a measured market — treat it as a hypothesis to qualify on the first call.
+- 🟢 **What is measured:** the organisation census, the licence split, every payload above, and the finding that the French-language repository layer contains **no permissive education software above `2★`** (`695-G`) — which is precisely why this pattern integrates a state platform instead of assembling local open source.
+
 ## P74 — The auditable learning-analytics spine: evidence a regulator will accept, with **no copyleft in the delivery path** (university, ministry, national operator or edtech vendor: 6–8 weeks) 🆕 new at p694
 
 **Who buys it and why now.** Any education provider that will owe Annex III duties for admission or assessment from **`2 December 2027`** (`Reg. (EU) 2026/1744`), already owes **Article 50** transparency from **`2 August 2026`**, or must satisfy a district/state written-policy mandate (Ohio's `July 2026` deadline, Maryland **SB 720**'s AI coordinators). **The obligation is not "use good AI" — it is *produce records*: what the system did, on whose data, under whose oversight.** Every tutor and advisor row on these shelves assumes those records land somewhere; **this pattern is the somewhere**, and p694 is the first pass at which the whole path is permissive.

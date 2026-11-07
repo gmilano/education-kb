@@ -54,6 +54,24 @@ Four more 2026 estimates, none reconcilable with the others or with the figures 
 
 Set against the figures this page already carries ($9.58B → $42.48B by 2030 at 41.5%), **the 2026 base alone now ranges from $9.58B to $12.3B — a 28% spread — and the 2030-2035 forecasts differ by more than 3×.** 🔵 **The useful conclusion is not a number, it is a rule for proposals: do not quote a single market size for AI in education.** Quote the range, name the source, and anchor the business case on something measured instead — teacher adoption (60% US, Gallup), institutional governance coverage (26% LATAM, ~10% EMEA), or the client's own cohort data. Every one of those is a firmer number than the TAM, and each one points at work that is actually billable.
 
+### 🔧 CORRECTED at p695 — `p664`'s "three sources, three CAGRs" is ONE source counted twice, and one of its two CAGRs is arithmetically impossible
+
+🔴 **Read this before using the p664 table below.** It presents three rows as three sources and concludes that "the spread is now a factor of five on the same year, and the sources have stopped converging." **Two of its three rows are the same series, and the CAGR it attributes to that series cannot be the CAGR of the endpoints it prints in the same row.**
+
+**The arithmetic, reproducible from the figures already on this page.** The series is Coherent Market Insights, **$11.40B (2026) → $57.25B (2033)** — seven years:
+
+| Claim as published | Check | Verdict |
+|---|---|---|
+| `p657` row: **~25.9%** | `(57.25 / 11.40) ^ (1/7) − 1 = ` **`25.93%`**; compounding back gives `11.40 × 1.2593⁷ = ` **`$57.25B`** | 🟢 **correct — it is the implied CAGR of the stated endpoints** |
+| `p664` row: **16.8%** on the same `$11.40B → $57.25B` | `11.40 × 1.168⁷ = ` **`$33.81B`** — **`40.9%` below** the terminal printed in its own row. `16.8%` needs until **2036** to reach `$57.25B`, or a 2026 base of **`$19.31B`** | 🔴 **impossible as published** |
+| `p664` row: *"A second aggregator, same segment — 25.9%"* | `25.9%` is `p657`'s own implied-CAGR arithmetic on the **identical** Coherent series | 🔴 **not a second source — it is this page's own calculation re-labelled** |
+
+🔵 **What follows, and it cuts the other way from how p664 reads it.** Strip the duplicate and the impossible rate, and the p664 table holds **two** real series, not three: Coherent at **25.9%** and the Europe-only estimate at **31.9%**. **The independent spread is narrower than this page has been publishing, not a "factor of five."** The `2026` base spread (`$9.58B`–`$12.3B`, a `28%` range) and the `3×` disagreement in the terminal years are both real and are unaffected by this correction — they rest on genuinely different publishers.
+
+🔴 **Channel limitation, stated rather than hidden.** `coherentmarketinsights.com` is outside this session's allowed network domains, so the vendor's own published CAGR could **not** be read this pass and it is unknown which of `16.8%` or `25.9%` it prints. **The defect does not depend on that:** a row cannot carry endpoints and a growth rate that contradict each other, whoever published them. Where the vendor itself prints `16.8%` alongside `$11.40B → $57.25B`, the vendor's table is the thing that is internally inconsistent and the correct action is to quote the endpoints and mark the rate as unreconciled.
+
+🟢 **Standing guidance is reinforced, not weakened.** `p664`'s conclusion — *do not put a market level in a client deliverable from this file, quote the structure instead* — survives intact. **It was simply argued from a number that was partly this page's own echo.** `T77` predicted this: a knowledge base's own novelty measurement is a channel, and it decays toward optimism; here a self-citation was re-read as independent corroboration one pass later.
+
 ### 🔴 Re-measured at p664 — the spread is now a factor of five on the same year, and the sources have stopped converging
 
 | Source class | 2026 level | Terminal | CAGR |
@@ -105,6 +123,12 @@ Three facts shape every engagement:
 ## Opportunities by region
 
 ### North America
+
+### 🔴 p695 — North America: the leg nils a 36th time, and every fact it returned was already on this page
+
+🔴 **`0` novel facts and `0` shelf rows from the North America leg.** Each item returned was checked by name against this tree before being called new, and each was already held: **134** AI-in-education bills across **31** states in the 2026 session; **Maryland SB 720** and the four-state group compelling both state guidance and district policy (with Idaho, Oklahoma, Virginia); **New York A 9190** restricting classroom AI below ninth grade; **California AB 1159** barring student data from model training; the California **"Parents & Kids Safe AI Act"** ballot measure; **Ohio's July 2026** district-policy deadline; North Carolina's **$10M Khanmigo** earmark in SB 1006; the **Gallup 60%** teacher-use figure against most districts having no student AI policy; the **April 2026** ADA web-accessibility deadline; the **K-12 AI Literacy and Readiness Act of 2026** in committee.
+
+🔵 **The denominator is the deliverable, so it is written down:** `11` named North America facts returned, `11` already held, `0` novel — the **36th** consecutive nil on this leg. 🔴 **The standing defect is unchanged and is not a search problem: this region remains `US`-shaped in practice.** The leg returned **no** Canadian education-AI fact for the ninth consecutive pass, and `0` Mexican ones (Mexico is carried under LATAM on this page, which is a vocabulary choice this base should state rather than assume).
 
 ### 🟢 p694 — North America: the leg nils a 35th time, but the region gains **two shelf rows and a named buying trigger** — by promotion, not discovery
 
@@ -462,6 +486,24 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+### 🟢 p695 — EMEA: the region's biggest open-source education asset is French, state-scale, and this base held fragments of it without the picture
+
+🟢 **The one productive leg of nine this pass, and it was a *supply* leg reached through an institutional channel rather than a demand-side search.** `T101` prescribed owner enumeration over keywords; `T107` prescribed multi-word **product** nouns over subject nouns. Applying both to the **French** layer — a language family this base had never swept — produced the organisation behind the French national *Espace Numérique de Travail*.
+
+| Fact | Value | Channel |
+|---|---|---|
+| Canonical organisation | [`edificeio`](https://github.com/edificeio) — **74** repositories | `gh api search/repositories -f q='user:edificeio'` |
+| Official mirror | [`OPEN-ENT-NG`](https://github.com/OPEN-ENT-NG) — **108** repositories, **every one `0★`** | same, plus the French-language README disclosure |
+| Novel to this base | **72** of `74` canonical · **103** of `108` mirror | diff against all `5,507` slugs this base holds |
+| Actively maintained | **69** of `108` mirror repositories pushed within 60 days | API `pushed_at` |
+| Licence split (canonical) | **28** AGPL-3.0 · **17** Apache-2.0 · 17 `NONE` · 11 `NOASSERTION` · 1 GPL-3.0 | API `spdx_id`, then payload reads |
+
+🔴 **The commercial fact is the shape of the split, not the count.** All `17` Apache-2.0 repositories are **Vert.x infrastructure** (`web-utils`, `cas-server-async`, `http-proxy`, `xss-utils`, `mod-postgresql`, `mod-zip`, `mod-webdav`, …); **every education application is AGPL-3.0** (attendance, competences, timetable, exercises, wiki, collaborative walls, room booking). The kernel everything links against, [`edificeio/entcore`](https://github.com/edificeio/entcore), is AGPL-3.0 behind a `NOASSERTION` — resolved this pass by reading the payload (`8,537 B`, sha256₁₂ `86b7a74b9496`, a bespoke grant statement).
+
+🟢 **So France joins Germany as a second national, open-source, AGPL school platform** — `T94` was built on one instance (`FWU-DE/ais-chat`, `p688`) and now has two in two different member states, procured by two different mechanisms. 🔵 **For an EMEA public-sector engagement this is the strongest placement evidence available (`T69`): it is what a French *académie* already runs, not what a vendor proposes.** The sellable surface is integration, clients and the permissive SSO layer — **never a closed derivative** (`T74`).
+
+🔴 **The demand side of this leg nilled.** The EMEA facts returned by search — EU AI Act high-risk dates moved to **December 2027** (stand-alone) and **August 2028** (embedded) by the Digital Omnibus, the **€2.64B** 2026 European AI-in-education estimate, UAE **KHDA** guidance to private schools, the UK's principle-based approach, UNESCO's `70%` figure for European and North American institutions with AI guidance — **are all already held on this page**, checked by name against the tree. One source still prints the superseded **August 2026** date, a **seventh** reproduction of the defect `p692` named. 🔴 **Africa nilled again and the gap is restated rather than glossed:** no African education-AI adoption or regulation fact was returned by the EMEA leg this pass.
 
 ### 🟢 p694 — EMEA: the **only** productive leg of nine, and both facts are instruments rather than market numbers — plus the region's first analytics row
 
@@ -930,6 +972,14 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+### 🔴 p695 — APAC: the leg nils a 9th time, and the one clause-level fact it returned is held at clause level already
+
+🔴 **`0` novel facts.** Returned and already held: South Korea's **AI Basic Act** in force **22 January 2026**; **Vietnam's Law on Artificial Intelligence** effective **1 March 2026** with the **18-month** transition for systems already operating in **education** — which this page holds at *Article 34* level since `p690`, a stronger reading than the leg produced; China's targeted instruments (recommendation algorithms, deep synthesis, generative AI services, AI-content labelling) rather than an omnibus act; Japan's and Singapore's voluntary frameworks; Australia's reliance on existing law; the **Ipsos Education Monitor 2026** ban-support spread (Indonesia `23%` → South Korea `31%`); Indonesia's two pending AI Presidential Regulations.
+
+🔵 **Denominator:** `8` facts returned, `8` already held, `0` novel. 🔴 **One source returned a "South Korea AI Data Protection Act" that does not reconcile with the AI Basic Act described everywhere else. It is recorded here as a channel artefact so the next pass does not buy it as a second statute.**
+
+🟢 **The supply side did not nil, but it produced for EMEA rather than APAC** — see the `p695` EMEA section. APAC remains this base's largest agent-shelf region at `28 / 96` rows, and nothing this pass changed that.
+
 ### 🔴 p694 — APAC: the leg nils `8/8`, and the region's exposure is a **licence** problem rather than a policy or supply problem
 
 🔴 **`8` facts returned, `8` already held, `0` novel.** Korea's **AI Basic Act** in force since **`22 January 2026`**; Vietnam's **Law on Artificial Intelligence** effective **`1 March 2026`** with an **18-month** transition for systems already operating in education; China's targeted instruments (recommendation algorithms, deep synthesis, generative-AI labelling) rather than an omnibus act; Japan, Singapore and Australia on guidance and existing law; the Ipsos **Education Monitor 2026** spread on support for *banning* AI in schools (**Indonesia `23 %` → Korea `31 %`, Japan `21 % → 29 %`, Australia `47 % → 52 %`**). **All held. `694`'s APAC leg adds nothing, and that is the eighth time this channel has been measured as spent for this region.**
@@ -1318,6 +1368,14 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+### 🔴 p695 — LATAM: the leg nils a 9th consecutive time, and the region's demand side remains the best-measured in the world
+
+🔴 **`0` novel facts, `0` shelf rows.** Returned and already held: the **UNESCO Observatory on Artificial Intelligence in Education for Latin America and the Caribbean**, launched **14 April 2026** with CAF, **CENIA** (Chile), Cetic.br, ECLAC, **Fundación Ceibal**, Fundación Santillana, **Tecnológico de Monterrey** and **ProFuturo**; the UNESCO **IESALC** higher-education study — **87%** of surveyed institutions using AI against only **26%** with a formal AI strategy; the **45%** of LAC institutions with AI guidance against **70%** in Europe and North America; the **Universidad de los Andes** count of **716** AI-related regulatory instruments and proposals across **23** countries and territories; the Digital Education Council LATAM survey at **92%** of students and **79%** of faculty.
+
+🔵 **Denominator:** `5` named facts returned, `5` already held, `0` novel. 🟢 **The structural reading this page has carried since `p664` is unchanged and is still the thing to quote in a proposal — `87%` use against `26%` strategy is a counted population, not a forecast.**
+
+🔴 **The supply side nilled too, and this pass can say *why* with a measurement rather than a diagnosis.** `T107`'s product-noun instrument was built on Spanish and Portuguese and is now replicated on a **third** Romance language — **French** — with the same result in a different region: **`458`** distinct repositories harvested from `12` product-noun probes, **`453` (98.9%) novel** to this base, and **`0` filable as agents**. Only `31 / 458` (`6.8%`) mention AI, LLM or an agent at all, and the two that are both AI-mentioning and permissive sit at **`2★`** and **`1★`**. 🔴 **At a `≥20★` adoption floor the French layer contains `5` repositories and `0` of them are permissive** — three generations of `PapillonApp` (GPL-3.0, `350★` / `342★` / `118★`), one `NOASSERTION`, one `CC-BY-4.0`. **That is `T32`'s inverse correlation between adoption and licensability in its most absolute form yet measured: not weak permissive supply, none at all above `2★`.**
 
 ### 🔴 p694 — LATAM: the leg nils an 8th consecutive time, and p693's diagnosis is confirmed at `4.7×` the scale it was measured at
 

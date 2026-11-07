@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p695) — 🟢 **THE FRENCH NATIONAL SCHOOL PLATFORM, MEASURED AT ORGANISATION SCALE: 182 REPOSITORIES ACROSS TWO ORGS, 175 OF THEM NOVEL, AND THE PERMISSIVE SEAM IS INFRASTRUCTURE**
+
+**`1` row filed on [`foundations.md`](foundations.md)** (`172` → `173`), **`1` on [`../verticals/solutions.md`](../verticals/solutions.md)** (`80` → `81`). Both are **promotions from this base's own backlog**, not discoveries: [`edificeio/entcore`](https://github.com/edificeio/entcore) has been cited on **this page** since `p406`, already graded **canonical** against its mirrors, and had never reached a shelf table in `289` passes.
+
+🔧 **Two stale shelf headings repaired first, because the denominators this base publishes were wrong.** [`foundations.md`](foundations.md) read `162 rows` against a **measured `172`** — `p694` filed ten promotions beneath a figure nobody re-derived, so the count was wrong by `6.2%` for a full pass. [`../verticals/solutions.md`](../verticals/solutions.md) read `79` against **`80`**. **`T62` predicted it, and the remedy is not another re-count: a promotion and the heading it invalidates must be written in the same edit.**
+
+### 🟢 `695-D` — two organisations, one platform, and the mirror is both larger and starless
+
+| Organisation | Repos | Novel to this base | Role | Discriminator |
+|---|--:|--:|---|---|
+| [`edificeio`](https://github.com/edificeio) | **74** | **72** | 🟢 **canonical** | `entcore` **`24★`**, `web-utils` **`19★`** |
+| [`OPEN-ENT-NG`](https://github.com/OPEN-ENT-NG) | **108** | **103** | 🟡 official mirror | **every repository `0★`**; README states it in French: *“Ce dépôt est un miroir officiel du dépôt Edifice”* |
+
+Novelty measured by diffing both enumerations against **all `5,507`** `github.com/owner/repo` slugs this base holds in any tracked `*.md` or `*.tsv` outside `archive/`. **`175` of `182` addresses were novel**; the `7` held are `edificeio/entcore`, `edificeio/blog`, and five `OPEN-ENT-NG` mirrors — every one of them on **this page**, none on a shelf.
+
+🔵 **The usable discriminator is the star column, not the README.** `108` repositories at `0★` against `74` carrying all the adoption. 🔴 **And the mirror is the *larger* organisation, which is the trap** — anything ranking an owner by repository count picks the wrong one. Fifth canonical-versus-mirror instance on this base (`677-F`, `681-D`, `688-C`, `692`, `695-D`); unlike `688-C`, here the canonical side is the correct one.
+
+### 🟢 `695-E` — the licence census, and the boundary follows the architecture
+
+| Grant (`spdx_id`) | `edificeio` (74) | `OPEN-ENT-NG` (108) |
+|---|--:|--:|
+| **AGPL-3.0** | 28 | 73 |
+| 🟢 **Apache-2.0** | **17** | **11** |
+| `NONE` | 17 | 13 |
+| `NOASSERTION` | 11 | 8 |
+| GPL-3.0 | 1 | 3 |
+
+🔴 **All `17` Apache-2.0 repositories on the canonical side are Vert.x infrastructure. Not one is an education feature:** `web-utils`, `cas-server-async`, `http-proxy`, `xss-utils`, `mongodb-helper`, `vertx-cron-timer`, `vertx-swift-client`, `mod-postgresql`, `mod-zip`, `mod-webdav`, `mod-sftp`, `mod-sms-sender`, `mod-image-resizer`, `mod-json-schema-validator`, `mod-gridfs-persistor`, `eventbus-wrapper`, `e-sidoc-widget`, `bibliocollege-widget`.
+
+🟢 **Every education application is AGPL-3.0** — `presences` (attendance), `competences`, `edt` (timetable), `exercizer` (exercises and assessment), `wiki`, `collaborative-wall`, `rbs` (room booking), `blog`, `pages`. **A sharper form of `T64`: the licence boundary inside this platform runs along its *layer* split, so it is predictable from the layer rather than from the repository.**
+
+### 🟢 `695-F` — grant payloads read byte-for-byte, with the corrected instrument
+
+🔴 **Read `T113` before comparing these to older cells on this page: every figure below was measured `curl -sSL --fail -o file` then `wc -c < file`, not through a shell variable.**
+
+| Repo | Ref | File | Bytes (true) | sha256₁₂ | API | Payload verdict |
+|---|---|---|--:|---|---|---|
+| [`edificeio/entcore`](https://github.com/edificeio/entcore) | `master` | `LICENSE` | **8,537** | `86b7a74b9496` | `NOASSERTION` | 🔴 **AGPL-3.0** — bespoke statement, not canonical text |
+| [`edificeio/edifice-mobile-framework`](https://github.com/edificeio/edifice-mobile-framework) | `main` | **`LICENCE`** | **2,203** | `862c9d4f2e98` | `NOASSERTION` | 🔴 **AGPL-3.0** — bespoke statement |
+| [`edificeio/infra-front`](https://github.com/edificeio/infra-front) | `dev` | `LICENSE` | **34,520** | `76a97c878c9c` | AGPL-3.0 | 🔴 canonical AGPL-3.0 + appendix |
+| [`edificeio/springboard`](https://github.com/edificeio/springboard) | `master` | `LICENSE` | **34,521** | `432d251a78db` | AGPL-3.0 | 🔴 canonical AGPL-3.0, appendix wrapped differently |
+| [`edificeio/web-utils`](https://github.com/edificeio/web-utils) | `master` | `LICENSE` | **10,174** | `0d542e0c8804` | Apache-2.0 | 🟢 **Apache-2.0**, appendix stripped |
+| [`edificeio/cas-server-async`](https://github.com/edificeio/cas-server-async) | `master` | `LICENSE` | **10,174** | `0d542e0c8804` | Apache-2.0 | 🟢 **Apache-2.0** — byte-identical to `web-utils` |
+| [`edificeio/mod-postgresql`](https://github.com/edificeio/mod-postgresql) | `master` | `LICENSE` | **10,174** | `0d542e0c8804` | Apache-2.0 | 🟢 **Apache-2.0** — byte-identical |
+| [`apache/.github`](https://github.com/apache/.github) *(reference control)* | `main` | `LICENSE` | **11,357** | `c71d239df917` | Apache-2.0 | 🔵 canonical Apache-2.0 **with** appendix |
+| [`oppia/oppia`](https://github.com/oppia/oppia) *(historical check)* | `develop` | `LICENSE` | **11,358** | `cfc7749b96f6` | Apache-2.0 | 🔵 matches `p674`'s corrected cell exactly |
+
+🔴 **`infra-front` and `springboard` are the specimen for `T113`.** They differ by one byte of true size and in one line of the AGPL appendix's word-wrap plus a trailing blank line — **and under `$(curl …) \| wc -c` they both report `34,519 B`.** The digests differ under both instruments. **So the digest is load-bearing and the byte count is advisory.**
+
+🔵 **"Canonical Apache-2.0" is itself a 1-byte family:** `oppia` `11,358 B` / `cfc7749b96f6` against `apache/.github` `11,357 B` / `c71d239df917`. This base uses `11,358 B` as *the* canonical reference figure — **it is one member of a family, not a test.**
+
+### 🔴 `695-D2` — the `16` Apache-2.0 addresses refused, and the reason
+
+**One** of the `17` was promoted — [`edificeio/cas-server-async`](https://github.com/edificeio/cas-server-async) — because **CAS is the dominant single-sign-on protocol in higher education worldwide** and an Apache-2.0 async CAS server stands alone. **The other `16` were refused:** `0–2★` Vert.x modules with no utility outside `entcore`'s runtime. Permissive and real, but **a foundation has to be usable without the platform it was cut from.**
+
+**The whole `OPEN-ENT-NG` mirror was refused as shelf rows** despite `103` novel addresses. Filing `0★` mirrors of canonical repositories manufactures entries a reader cannot act on, and `T66` already names republishing the base's own holdings as discovery as this base's standing failure mode.
+
+### 🔴 `695-G` — the French keyword layer: `458` repositories, `98.9%` novel, `0` filable
+
+`12` multi-word **product**-noun probes in French (`T107`'s shape), `gh api search/repositories`, `per_page=50`, sorted by stars:
+
+| measure | value |
+|---|--:|
+| distinct repositories harvested | **458** |
+| novel against all `5,507` held slugs | **453** (`98.9%`) |
+| novel **and** permissive | **40** |
+| mentioning AI / LLM / agent at all | **31** (`6.8%`) |
+| AI-mentioning **and** permissive | **2** — at `2★` and `1★` |
+| at a `≥20★` adoption floor | **5** |
+| …of which permissive | 🔴 **0** |
+
+The adopted layer, all non-permissive: [`PapillonApp/papillon-v7`](https://github.com/PapillonApp/papillon-v7) `350★` GPL-3.0, [`PapillonApp/Papillon`](https://github.com/PapillonApp/Papillon) `342★` GPL-3.0 (`LICENSE` at `dev`, `35,149 B`, sha256₁₂ `3972dc9744f6`), `papillon-v6` `118★` GPL-3.0, [`EduWireApps/ynotes`](https://github.com/EduWireApps/ynotes) `66★` `NOASSERTION` (unmaintained), `stephrobert/linux-dsoxlab-training` `46★` CC-BY-4.0.
+
+🔴 **`T32`'s inverse correlation between adoption and licensability, in its most absolute form this base has measured: not weak permissive supply in the French layer, none at all above `2★`.** 🔵 **And a sourcing rule falls out of it — the agent supply in this sector is English-language; the local-language supply is administrative.** `T107` now holds on Spanish, Portuguese and French: the product-noun shape returns a near-totally novel corpus every time, and every time the novel tail is administrative rather than agentic.
+
+### 🔴 `695-K` — the mandate's `curl -sI` verification step does not work here, controlled at both signs
+
+| probe | `torvalds/linux` | `edificeio/entcore` | `this-org-does-not-exist-xyz99/nope-nope-nope` | discriminates? |
+|---|---|---|---|---|
+| `curl -sI https://github.com/…` | `403` | `403` | `403` | 🔴 **no — zero information** |
+| `git ls-remote --symref … HEAD` | `refs/heads/master` | `refs/heads/master` | **fails** | 🟢 **yes** |
+| `raw.githubusercontent.com` GET | — | `200` live / `404` absent | — | 🟢 **yes** |
+
+🔴 **A pass following the mandate literally would have recorded `24` verified-live repositories as failures, or — worse — read `403` as "not a 404, therefore fine".** All addresses filed at p695 were verified on the two controlled channels. **`T67`/`T83` class: a verification channel certifies nothing until it has been controlled at both signs.**
+
 ## 🆕 2026-11-07 (p694) — 🟢 **ELEVEN FOUNDATION AND PLATFORM ROWS, NONE FROM A SEARCH LEG: ALL ELEVEN WERE ALREADY IN THIS BASE'S OWN TRENDING FILES, CITED AND NEVER SHELVED. 🔴 THE PROMOTION BACKLOG IS 3,844 ADDRESSES — A 9.4 : 1 RATIO AGAINST THE SHELVES. 🔴 AND FOR R PACKAGES THE `LICENSE` FILE CONTAINS NO LICENCE, WHICH COST THIS BASE TWO PERMISSIVE ROWS UNTIL THIS PASS.**
 
 **`10` rows filed on [`foundations.md`](foundations.md)** (`162` → `172`), `1` on [`../verticals/solutions.md`](../verticals/solutions.md) (`79` → `80`), `1` on [`../agents/top.md`](../agents/top.md) (`95` → `96`), against **`26` documented refusals**. Full registration in [`../agents/trending.md`](../agents/trending.md) `694-A` … `694-L`; this file records the repo-side result.

@@ -29,6 +29,27 @@ updated: 2026-11-07
 
 🔄 **Re-derived at p680 by counting the table rows between the header separator and the end of the table**, with the subject taken as the first repository link in each row. The heading this replaces said `60` / `59`. 🔵 Note the two ways to count the subject column disagree on this shelf: extracting *every* GitHub link in the table gives `66` distinct slugs, because some descriptions cite a second repository. **The subject is the first link in the row; a link in prose is a citation, not a row.**
 
+## 🟡 No agent row added at p695 — the nil is measured on a channel never swept before, and what the pass found went to two other shelves
+
+**The shelf stays at `96`.** `p695` swept the **French**-language layer, which this base had never touched, using `T107`'s product-noun shape (`12` multi-word probes, `gh api search/repositories`):
+
+| measure | value |
+|---|--:|
+| distinct repositories harvested | **458** |
+| novel against all `5,507` slugs this base holds | **453** (`98.9%`) |
+| novel **and** permissive | **40** |
+| mentioning AI / LLM / agent **at all** | **31** (`6.8%`) |
+| AI-mentioning **and** permissive | **2** — at `2★` and `1★` |
+| at a `≥20★` adoption floor | **5**, of which permissive 🔴 **0** |
+
+🔴 **Nothing was filable, and the reason is not that the channel failed — it returned a near-totally novel corpus and the corpus has no agents in it.** The `40` novel permissive repositories are `1–17★` coursework, personal timetable apps and single-institution management projects; the two largest are [`johan-perso/agendapp`](https://github.com/johan-perso/agendapp) (MIT, `17★`, a student agenda helper) and [`z4ppy/playlab42`](https://github.com/z4ppy/playlab42) (Apache-2.0, `2★`, AI-assisted-development course material). **Neither is an education agent.**
+
+🔴 **The adopted French layer is entirely non-permissive:** [`PapillonApp/papillon-v7`](https://github.com/PapillonApp/papillon-v7) `350★` GPL-3.0, [`PapillonApp/Papillon`](https://github.com/PapillonApp/Papillon) `342★` GPL-3.0, `papillon-v6` `118★` GPL-3.0, [`EduWireApps/ynotes`](https://github.com/EduWireApps/ynotes) `66★` `NOASSERTION` and unmaintained, `stephrobert/linux-dsoxlab-training` `46★` CC-BY-4.0. **`T32`'s inverse correlation in its most absolute form this base has measured — not weak permissive supply above the adoption floor, none at all.**
+
+🟢 **Where the pass's findings went instead.** `1` row to [`../repos/foundations.md`](../repos/foundations.md) ([`edificeio/cas-server-async`](https://github.com/edificeio/cas-server-async), Apache-2.0) and `1` to [`../verticals/solutions.md`](../verticals/solutions.md) ([`edificeio/entcore`](https://github.com/edificeio/entcore), the AGPL kernel of the French national ENT) — **both promotions from this base's own backlog, not discoveries.** Plus two new trends, `T113` and `T114`, both of which are defects in **this base's own verification instrument** rather than facts about the sector: see [`trending.md`](trending.md) `695-A` and `695-C`.
+
+🔵 **The transferable result, and it is a sourcing rule a studio can act on.** `T107` now holds on Spanish, Portuguese **and** French: the product-noun shape returns a `~99%`-novel corpus in every language family tested, and in every one the novel tail is **administrative rather than agentic**. **The agent supply in this sector is English-language; the local-language supply is school administration.** Stop searching for local-language agents and start searching for local-language systems of record.
+
 ## 🟡 No agent row added at p691 — the nil is measured on two channels, and the shelf was re-verified structurally instead
 
 🔴 **`32 / 32` candidates already shelved.** The four mandated keyword legs produced `10` checkable repositories, **all `10` already carried** (`hugohe3/ppt-master`, `Gego-K12/gegok12`, `idurar/idurar-erp-crm`, `krayin/laravel-crm`, `hcengineering/platform`, `openeducat/openeducat_erp`, `patchy631/ai-engineering-hub`, `845421145-lang/agents-radar`, `apache/ofbiz`). Five structured `search/repositories` topic legs produced `22` distinct permissive candidates — **all `22` already carried**, among them `122-syf-wcy/PhysicsOS`, `karanb192/algo-sensei`, `nichochar/ari`, `Selleo/mentingo`, `GarethManning/education-agent-skills` and `open-spaced-repetition/fsrs4anki`. **`0` adoptable.** 🟡 **No streak figure is asserted:** `p680` published a *"27th consecutive nil"* and `p687`/`p688` then filed four rows between them, so that counter was already refuted when it was quoted.
