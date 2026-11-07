@@ -38,6 +38,68 @@ updated: 2026-11-07
 
 ---
 
+## P79 — Train the teaching skill instead of rewriting it, and keep the learner's thinking as a measured output (edtech vendor, university, corporate academy: 6–8 weeks) 🟢 new at p697
+
+**The problem this closes.** This base shelves **over a hundred** agent-skill bundles for education — deck authors, textbook writers, tutor harnesses, `165`-skill teacher packs — and until p697 held **no mechanism to improve one against evidence**. The skills are hand-written, revised by taste, and shipped without a gate. Meanwhile every demand-side leg in all four regions returns the same constraint: adoption is near-universal, **trust** is what is missing, and *cognitive offloading* is the named mechanism.
+
+### The stack — every component verified at p697 on the controlled channels (`git ls-remote --symref` + payload read at the real default ref)
+
+| Role | Component | Grant |
+|---|---|---|
+| The artefact being trained | [`insightflo/edu-deck-skills`](https://github.com/insightflo/edu-deck-skills) (teaching-material author) or [`cabbage2000-lab/textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) | 🟢 Apache-2.0 / MIT |
+| The optimizer | [`microsoft/SkillOpt`](https://github.com/microsoft/SkillOpt) — epochs, mini-batches, held-out validation gate; `skillopt-sleep` for the nightly offline pass | 🟢 MIT |
+| The reward | [`microsoft/LLM-Rubric`](https://github.com/microsoft/LLM-Rubric) — rubric dimensions answered by an LLM, then **calibrated to human raters** by a small network | 🟢 MIT |
+| The learner-side guard | [`TetiAI/lucid`](https://github.com/TetiAI/lucid) — 6 cognitive dimensions, drift over weeks, adaptive guidelines injected into the system prompt | 🟢 BSD-3-Clause |
+| The delivery surface | whatever the engagement already has — `P1` (Canvas), `P8` (Moodle), `P80` (DACH portal) |
+
+### Wiring it
+
+1. **Freeze the agent, version the skill.** The skill file is the only trainable state; the model is a constant. This is what makes the result portable across the client's model choice and auditable after the fact.
+2. **Build the graded set before the optimizer.** `30`–`100` real teaching tasks from the client's own material with human ratings on `3`–`5` rubric dimensions. This is the gating cost of the whole pattern and it is the client's domain expertise, not yours.
+3. **Calibrate `LLM-Rubric` against those ratings**, then use the calibrated judge as `SkillOpt`'s scorer. An uncalibrated LLM judge trains the skill toward the judge's taste.
+4. **Train with the held-out gate on**, and keep the gate's set out of the loop. Report the gate score per epoch — this curve is the deliverable a procurement reviewer understands.
+5. **Deploy `lucid` alongside, not inside, the tutor.** It reads the exchange and shapes the system prompt; the tutor keeps its own logic. Its drift series over weeks is the **over-reliance evidence** an EU Annex III reviewer or a US district policy asks for and nobody currently produces.
+6. **Re-run `skillopt-sleep` nightly** on the live sessions, consolidating only what clears the gate.
+
+### Shape and honest limits
+
+- 🔴 **`SkillOpt` is not education-specific** and ships no education benchmark: step 2 is unavoidable, and a client who cannot supply graded work cannot run this pattern. Say so in week one.
+- 🔴 **`LLM-Rubric` needs human ratings to calibrate**; without them it is just another judge, and `T111` applies — interest is not usability.
+- 🟡 **`lucid` is `34★`** and its cognitive dimensions are research-backed but not clinically validated. Sell it as an instrument that produces a measurable series, never as a diagnosis of a student.
+- 🟢 **No copyleft anywhere in the delivery path** — MIT, Apache-2.0, BSD-3-Clause throughout, which is the condition for a closed derivative and the reason these four were chosen over higher-starred AGPL alternatives.
+
+---
+
+## P80 — The DACH school-administration engagement: adopt the authority's own MIT modules, add the agent at the portal's front door (Swiss canton, German *Land*, Austrian *Bundesland*, DACH school group: 6–8 weeks) 🟢 new at p697
+
+**Why this pattern exists now.** This base has had a francophone shape (`P75`: integrate the state ENT, never fork it) and an Iberoamerican one (`P73`), and **nothing for DACH** — because every prior sweep of the German layer used the token `KI` and returned package managers (`T120`). Re-probed with product nouns, the layer has exactly the asset the pattern needs: the **Canton of Bern's education directorate publishes its school-administration front end under MIT, with the authority named in the grant payload**.
+
+### The stack — verified at p697
+
+| Role | Component | Grant |
+|---|---|---|
+| Portal shell, role-based navigation, **OAuth token provision** | [`bkd-mba-fbi/evento-portal`](https://github.com/bkd-mba-fbi/evento-portal) | 🟢 MIT (`1,156 B`, `9821e5de7bbf`) |
+| Administration module (attendance, grades, courses, classes) | [`bkd-mba-fbi/webapp-schulverwaltung`](https://github.com/bkd-mba-fbi/webapp-schulverwaltung) | 🟢 MIT (`1,163 B`, `c4d7906a8751`) |
+| Course announcement | [`bkd-mba-fbi/kursausschreibung`](https://github.com/bkd-mba-fbi/kursausschreibung) | 🟢 MIT |
+| System of record | `SLH.Evento` REST API | 🔴 **Proprietary** |
+| Agent layer | `P79`'s trained skills, or the tutoring surface the client already runs |
+| Licence evidence for procurement | `P69`'s attestation pass over the estate |
+
+### Wiring it
+
+1. **Add the agent as an embedded app in `evento-portal`, not beside it.** The portal already issues the OAuth tokens and owns the role model (`doc/app-integration.md`, `doc/sad.md`), so an app registered there inherits authentication and authorisation instead of reimplementing them — the single largest saving in the engagement.
+2. **Read, never write, through `SLH.Evento` in phase one.** The backend is purchased software; agent writes against a system of record you do not control is where this kind of project fails an audit.
+3. **Contribute the module changes back upstream.** These are a public authority's repositories with CI, tests and an **SBOM workflow** already running — the contribution bar is met by the client's own pipeline, and an accepted upstream patch is a procurement reference.
+4. **Carry the licence attestation (`P69`) from day one.** A canton or *Land* will ask, and the honest answer has two halves: MIT on every module in the delivery path, proprietary at the backend.
+
+### Shape and honest limits
+
+- 🔴 **`9★` / `7★` / `4★`.** This is a *production system of a public authority*, and it is also a small codebase with a small maintainer team. It is an integration target and a reference, not a community you can lean on.
+- 🔴 **The permissive boundary is architectural, not total** — identical to `695-A`'s French finding. Anyone promising a fork-and-own platform here has not read the backend's licence.
+- 🔴 **Bern is not Bavaria.** `MaximilianHausen/better-mebis` shows the German layer's other shape: a `2★` MIT patch against `lernplattform.mebis.bayern.de`, a **state platform that is not open source at all**. Qualify the jurisdiction before quoting this pattern — the Swiss cantonal model is the exception that makes it possible.
+- 🟢 **German-language assets with a named public licensor are placeable and procurement-ready**, which is why `T107`'s "the local-language layer is administration" reads as an opportunity here rather than as a nil.
+
+---
 ## P76 — The North America district stack, **entirely MIT, no copyleft in the delivery path** (US district, charter network, Canadian provincial board: 6–8 weeks) 🟢 new at p696
 
 🔵 **Why this pattern exists now and could not be written before p696:** this base nilled its North America demand leg `37` consecutive times and published that as a regional supply gap. It was a filing gap — the components below were all already written down here, unshelved. **All four are MIT, all four run against the institution's own tenant, and none has a model-training step** — which is what makes the stack compatible with California `AB 1159`'s prohibition on training on student data.

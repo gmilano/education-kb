@@ -21,6 +21,47 @@ updated: 2026-11-07
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T118 — A star floor stops filtering noise once the noise is star-farmed, and it fails first in the KEYWORD channel 🔴 new at p697
+
+**Claim.** `stars:>N` is a proxy for adoption only while noise is unstarred. A description-identical cluster of **`1,524`** repositories, spread over ~`93` owner accounts and carrying `40`–`90` stars each, now occupies **`30 / 36` rows (`83.3 %`)** of this base's mandated `tutor LLM created:>2026-06-01 stars:>25` leg — `1,656` stars between them, `35` of them farming `tutor` / `tutorial` in the repository **name**, and not one of them an education repository, an agent or a tutorial.
+
+**Evidence.** Measured at p697 (`agents/trending.md` `697-A`): `gh api search/repositories` on the leg as mandated, then the cluster bounded by its byte-identical description string. `topic:` and `org:` legs run in the same pass were unaffected.
+
+**Why it fails in the keyword channel specifically.** A keyword leg selects on **name** and **description** — the two fields a farm fully controls — and then ranks by stars, which a farm can manufacture. A `topic:` facet requires the owner to classify themselves into a taxonomy the farm has no reason to join, and an `org:` enumeration takes the owner as given.
+
+**Consequence.** Prefer a structured facet you do not control over a text match the subject controls. When a keyword leg must be run, measure the share of its rows that share a description before concluding anything about supply — **a nil and a flood look identical in a row count**. Four consecutive passes of this base read this flood as saturation.
+
+**Confidence.** High for the measurement; the cluster is directly countable. The `93`-owner figure is a first-page sample and is a floor, not a total.
+
+## T119 — Institution *adjacency* cannot distinguish an affiliation from a citation, so a placement guard must type the CONTEXT 🔴 new at p697
+
+**Claim.** `p672` established that an institution detector must drop a bare `MIT` unless it is adjacent to `University`, `Institute`, `CSAIL` or `Media Lab` — otherwise it places repositories in Massachusetts off their own licence name. **Adjacency is necessary and not sufficient.** [`TetiAI/lucid`](https://github.com/TetiAI/lucid) passes p672's guard (`MIT` beside `Media Lab`) and must still not be placed, because the token appears in *"[MIT Media Lab, 2025](docs/RESEARCH.md)"* — **the study that motivates the product**, cited in a literature link.
+
+**Repair.** Admit an institution token only from an **authorship context**: a copyright line, a `by <org>` attribution, an author or maintainer list, or a funding statement. Refuse it from a references block, a citation, a documentation link or a "related work" section. This is a *type* judgement about the surrounding text, not another dictionary entry — and `p669` already showed that a dictionary cannot police itself.
+
+**Evidence.** All three placements filed at p697 stand on a copyright line in the grant payload (two naming the Canton of Bern, one refused for naming only a corporate form). `lucid` stands on a citation and is filed `Global`.
+
+**Confidence.** High. One clean counterexample is enough to bound a guard, and the replacement rule is testable on every row this base has placed.
+
+## T120 — A two-letter native-language AI token is unsearchable, so the product-noun shape is not an improvement but the only access to that layer 🟢 new at p697
+
+**Claim.** `KI` — German for AI, and the token any German-language AI probe reaches for first — cannot be used on GitHub's index. `Lernen OR Unterricht OR Schule KI` returns **`15,042`** results whose top thirty are `the-book-of-secret-knowledge`, `spec-kit`, `awesome-rust`, `kitty`, `kibana`, `kivy`, `SnapKit` and `dnd-kit`: the index matches `KI` inside `kit`, `kind`, `kivy`, `kibana`. **`0` relevant.**
+
+**Consequence, and it is the useful half.** `T107` prescribed product nouns over subject nouns because a subject noun returns everything *about* a field. For a language whose AI token is two letters, the ranking is stronger: the subject-noun channel does not merely under-perform, it **does not exist**. Re-run on product nouns (`Schulverwaltung`, `Lernplattform`, `Unterrichtsplanung`), the same layer yielded **three shelf rows** including a cantonal authority's MIT front end.
+
+**Generalisation to check before trusting it elsewhere.** The same hazard applies to any short native AI token — `IA` (Spanish, French, Portuguese, Italian), `IE` (Irish), `KI`. `T108` already found that a Romance-language token selects a family spanning three continents; this is the complementary defect, where the token is too **short** rather than too **wide**. Probe with a multi-word product noun in both cases.
+
+**Confidence.** High for German, measured in-pass. Medium as a general rule for `IA`: this base's Spanish and Portuguese legs used product nouns already and never isolated the token.
+
+## T121 — `NOASSERTION` is not licence-neutral: it can conceal a **NonCommercial** grant, and it conceals it behind the highest star count on the page 🔴 new at p697
+
+**Claim.** `T99` established that `NOASSERTION` is a fact about GitHub's detector rather than about the grant, and that in education it lands hardest on public-sector Europe — where the concealed grants are real, short EUPL texts. **T121 is the sharper and more dangerous case: the detector's silence does not correlate with the grant being usable.** [`HytidelLegend/ai-aug-edu`](https://github.com/HytidelLegend/ai-aug-edu) — `492★`, created `2026-09-23`, the largest novel education repository p697 found by an order of magnitude — reports `NOASSERTION`, and its payload (`750 B`, sha256₁₂ `687d735a7fa1`) is **`Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)`**.
+
+**Why the star count matters to the claim.** A ranked discovery channel surfaces the highest-starred novel repository first, so this is the **first** row a studio evaluates and the **last** one it can build a commercial derivative on. A licence gate that files `NOASSERTION` as *unknown, review later* carries it into a proposal unexamined.
+
+**Operational rule.** `NOASSERTION` is never a reason to skip the payload read, and it is never a reason to assume the payload is benign. Read it, measure it, and classify the **family** — permissive, weak copyleft, network copyleft, **non-commercial**, or none — before the repository is cited anywhere.
+
+**Confidence.** High; single payload read, reproducible, with the API's own disagreement recorded alongside it.
 ## T115 — A README's declared tool count is not a capability measure: it is wrong in `4 / 4` repositories measured, and it errs in BOTH directions 🔴 new at p696
 
 **Measured at p696, on every MCP server it filed, by counting distinct registered tool names at the real default ref:**

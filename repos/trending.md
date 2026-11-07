@@ -4,6 +4,21 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p697) — 🟢 **THREE FOUNDATIONS, AND TWO OF THEM ARE A SWISS CANTON'S OWN SCHOOL-ADMINISTRATION FRONT END UNDER MIT WITH THE AUTHORITY NAMED IN THE PAYLOAD. 🔴 THE GERMAN LMS ABOVE `0★` HAS NO LICENCE FILE AT ALL — ITS GRANT EXISTS ONLY AS PROSE**
+
+**`3` rows on [`foundations.md`](foundations.md)** (`178` → `181`) and **`1` organisation measured in its own `p697` section on [`../verticals/solutions.md`](../verticals/solutions.md)**; `2` on [`../agents/top.md`](../agents/top.md) (`104` → `106`). Full pass register in [`../agents/trending.md`](../agents/trending.md). Verification on every row below, performed **2026-11-07**: existence and real default ref via `git ls-remote --symref` (branch **and** head SHA), the grant read as a `GET` on `raw.githubusercontent.com` **at that ref** and measured to a byte count plus `sha256₁₂`, stars and `spdx_id` from `gh api search/repositories`. The mandated `curl -sI` check was **not** used as evidence — `p684` showed it cannot return `404` in this environment, and `697-B` records the replacement with controls at both signs.
+
+| `p697` repository finding | Verdict |
+|---|---|
+| [`microsoft/SkillOpt`](https://github.com/microsoft/SkillOpt) — MIT (`1,077 B`, `4d7e9b632911`), **`18,937★`**, NeurIPS 2026 Spotlight, arXiv:2605.23904, PyPI `skillopt` v0.2.0 | 🟢 **Filed.** Trains the **skill document** as the frozen agent's parameters, behind a held-out validation gate. The missing piece under this base's hundred-plus hand-written skill bundles — `P79`. ⚠️ Not education-specific; unplaced (Microsoft Research is multi-site). |
+| [`bkd-mba-fbi/webapp-schulverwaltung`](https://github.com/bkd-mba-fbi/webapp-schulverwaltung) — MIT (`1,163 B`, `c4d7906a8751`), `9★`, © *Erziehungsdirektion des Kantons Bern* | 🟢 **Filed, EMEA.** Production administrative front end of a cantonal education directorate; Angular + `io-ts`, SBOM in CI, public demo. |
+| [`bkd-mba-fbi/evento-portal`](https://github.com/bkd-mba-fbi/evento-portal) — MIT (`1,156 B`, `9821e5de7bbf`), `7★`, © *Bildungs- und Kulturdirektion* | 🟢 **Filed, EMEA.** The portal shell: role-based navigation plus OAuth token provision to the embedded apps — the seam an agent surface attaches to. |
+| The `bkd-mba-fbi` organisation as a whole | 🟢 **`6` repositories, `6` novel against all `5,507` slugs this base cites, `4 / 6` MIT.** An entire European public authority's education codebase that `696` passes of this base had never touched. |
+| `SLH.Evento`, the backend both modules call | 🔴 **Proprietary.** The permissive boundary runs along the **architecture**, exactly as `695-A` found in France: the front end is open, the system of record is purchased. |
+| [`hacktick/DiLer`](https://github.com/hacktick/DiLer) — `2★`, the only German LMS above `0★` in `404` results | 🔴 **A grant with no file.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `license.txt` → **`404` at the real default ref `main`**; README declares **AGPLv3** in prose and says the repository is not the vendor's — it discharges the vendor's §13 source-offer. **The inverse of `T110`**, and copyleft regardless. ⚠️ Its default ref is `main`; probing `master` would have produced the same `404`s **for the wrong reason** — `T117`. |
+| `KI` as a search token | 🔴 **Unusable.** `15,042` results, top thirty are `kit` / `kind` / `kivy` / `kibana` packages, `0` relevant. `T120`. |
+
+---
 
 ## 🆕 2026-11-07 (p696) — 🟢 **FIVE FOUNDATIONS AND FIVE PLATFORMS, ALL TEN FROM THIS BASE'S OWN BACKLOG. 🔴 FOUR OF THE FIVE PLATFORMS HAVE A DEFAULT BRANCH THAT IS NOT `main`, AND A SECONDARY SOURCE'S LICENCE CLAIM ON APACHE OFBIZ IS REFUTED BY THE PAYLOAD**
 

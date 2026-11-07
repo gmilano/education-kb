@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p697) — 🔴 **A STAR FLOOR NO LONGER FILTERS NOISE: ONE 1,524-REPOSITORY SPAM CLUSTER OWNS 83 % OF THE `tutor` LEG. 🟢 THE PASS WENT BACK TO DISCOVERY AND IT WORKED — 6 ROWS, THE FIRST DACH SYSTEM-OF-RECORD ASSETS, AND THE TRAINER FOR THIS BASE'S HUNDRED HAND-WRITTEN SKILL BUNDLES. 🔴 THE LARGEST NOVEL EDUCATION REPO FOUND IS `NOASSERTION` ON THE API AND **NON-COMMERCIAL** IN ITS PAYLOAD**
+
+**`6` rows filed** — **`2` on [`top.md`](top.md)** (`104` → `106`), **`3` on [`../repos/foundations.md`](../repos/foundations.md)** (`178` → `181`), **`1` organisation filed on [`../verticals/solutions.md`](../verticals/solutions.md)** as its own `p697` section — `6` repositories measured, `2` of them promoted to [`../repos/foundations.md`](../repos/foundations.md). 🔧 **A first arm of this pass appended that organisation as a row to the French-ENT table under `695-A` and it was withdrawn before publication: that table's subject is *one platform's two organisations*, so a Swiss cantonal authority in it would have been a true fact filed under a false heading**. **`4` new trends** (`T118`–`T121`) and **`2` new patterns** (`P79`, `P80`). 🔵 **p696 filed `18` rows and `0` came from a search; p697 inverted that — all `6` came from searches, against `6` documented refusals.** Both results stand: promotion is the cheaper channel, and discovery still reaches layers the backlog does not contain.
+
+| `p697` registered | Verdict |
+|---|---|
+| The `tutor` keyword leg | 🔴 **`30 / 36` rows are one spam cluster.** `T118`, `697-A`. |
+| The four mandated keyword legs, education layer | 🔴 **Saturated.** Every checkable education hit (`OpenMAIC`, `ai-engineering-hub`, `GegoK12`, `openeducat`, `idurar-erp-crm`, `krayin`, `ofbiz`, `hcengineering/platform`) **already shelved** — reproducing `p691`'s result exactly. |
+| `topic:intelligent-tutoring-system`, swept whole | 🔴 **`46` repositories, `24 / 30` top rows HELD**; the `6` novel ones are `0★` student projects. The canonical ITS topic head is **exhausted**. |
+| The German-language layer | 🟢 **Paid out `3` shelf rows** after the obvious query failed for an instrument reason. `T120`, `697-F`. |
+| [`HytidelLegend/ai-aug-edu`](https://github.com/HytidelLegend/ai-aug-edu) `492★` | 🔴 **REFUSED — CC BY-NC-4.0.** `T121`, `697-C`. |
+| [`TetiAI/lucid`](https://github.com/TetiAI/lucid) placement | 🔴 **Refused**, and the refusal refines p672's guard. `T119`, `697-D`. |
+| The four mandated **regional** legs | 🟡 **Split result, 4/4 both ways:** `0` novel repository addresses in any region, and **new demand-side facts in all four** — see [`../intel/market.md`](../intel/market.md) `p697`. |
+| `make hooks` | 🔴 **Not run** — denied by this session's auto-mode classifier, `Gap 247` unmet for a fifth pass. Every count here was re-derived by session-local code in the same edit that changed the tables. |
+
+### `697-A` — The adoption floor stopped working, and it is measured rather than suspected
+
+`p691`, `p694`, `p695` and `p696` each recorded the mandated keyword legs returning nothing filable, and each attributed it to **saturation**. p697 measured *what the legs return instead*, and saturation is only half the story:
+
+| `tutor LLM created:>2026-06-01 stars:>25` | value |
+|---|--:|
+| rows returned | **36** |
+| rows from owner accounts named `apimart*` | **30** |
+| rows whose description is **byte-identical** (`"AI API gateway / relay: 307 models behind one OpenAI-compatible key…"`) | **30** (`83.3 %`) |
+| stars held by those 30 | **1,656** |
+| repositories in the whole cluster (same description, `in:description`) | 🔴 **1,524** |
+| of those, carrying `tutor` / `tutorial` in the **name** | **35** |
+| distinct owner accounts in the first page sampled | **93** |
+
+**Not one of the 30 is an education repository, or an agent, or a tutorial.** They are a single API-reseller listing, replicated across ~93 accounts, each copy carrying `40`–`90` stars and a product noun in its name — and `tutorial` is one of the nouns farmed. 🔵 **The transferable rule is about instruments, not about spam:** this base has used `stars:>25` since its earliest passes as the cheap proxy for adoption, on the assumption that noise is unstarred. **A star-farmed cluster inverts that assumption**, and it does so *inside the keyword channel specifically*, because that channel selects on name and description — the two fields a farm controls. `topic:` and `org:` legs were unaffected this pass. **Prefer a structured facet you do not control over a text match you do.** `T118`.
+
+### `697-B` — Published, measured, and cheap: the one URL check that discriminates in this environment
+
+`p684` established that the mandated `curl -sI` check has **zero** discriminating power here (`403` for `torvalds/linux`, `403` for a repository that does not exist). p697 adds the positive half, because a refutation without a replacement gets the refutation ignored: a **`GET` on `raw.githubusercontent.com` at the real default ref** does discriminate, with controls run at both signs in-pass — `hacktick/DiLer`'s `README.md` returned content at `main` (positive control) while **five** licence filenames returned `404` at the same ref (negative control). Every grant on this page is read that way, to a byte count **and** a `sha256₁₂`.
+
+### `697-C` — `NOASSERTION` concealed a **NonCommercial** grant, and that is a different claim from `T99`
+
+[`HytidelLegend/ai-aug-edu`](https://github.com/HytidelLegend/ai-aug-edu) (`492★`, created `2026-09-23`) was the **largest novel education repository this pass found** — by stars, an order of magnitude above every row filed. `gh api` reports `license.spdx_id: NOASSERTION`. The payload (`LICENSE`, `750 B`, sha256₁₂ `687d735a7fa1`) reads:
+
+> *Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)*
+
+🔴 **`T99` says `NOASSERTION` is a fact about the detector, not the grant, and it is usually benign** — eleven of this base's EUPL rows and several clean MIT payloads sit behind it. **`T121` is the sharper claim: the detector's silence is not licence-neutral.** It can conceal the one grant class a studio cannot build a commercial derivative on, and it conceals it **behind the highest star count on the page**, which is exactly where a ranked discovery channel points first. A licence gate that treats `NOASSERTION` as *unknown, review later* will let this into a proposal.
+
+### `697-D` — Institution **adjacency** cannot tell an affiliation from a citation
+
+`p672` found that an institution detector must drop a bare `MIT` unless it sits beside `University`, `Institute`, `CSAIL` or `Media Lab`, or it places repositories in Massachusetts off their own licence name. [`TetiAI/lucid`](https://github.com/TetiAI/lucid) satisfies that guard and still must not be placed: its README cites *"[MIT Media Lab, 2025](docs/RESEARCH.md)"* as **the study motivating the product**. The token is adjacent to `Media Lab`; the relationship is a **reference**. 🔵 **The repair is to type the context, not to extend the dictionary:** admit an institution token only from an **authorship context** — a copyright line, a `by <org>` attribution, an author list, a funding statement — and never from a references block or a documentation link. The three placements filed this pass all stand on a copyright line; `lucid` stands on nothing and is `Global`. `T119`.
+
+### `697-E` — Verified this pass, deliberately **not** shelved, with the reason attached
+
+The quality bar on this base is that fewer real rows beat padding. These were verified to the same standard as the filings (`git ls-remote --symref` + payload read) and left off the shelves:
+
+| Repository | Grant, read | Stars | Why not filed |
+|---|---|--:|---|
+| [`lii-lii321/Math_Tutor_RAG`](https://github.com/lii-lii321/Math_Tutor_RAG) | 🟢 MIT (`1,066 B`, `956616f0dde1`) | 11 | Real and on-topic — vision-LLM wrong-answer notebook, RAG retrieval of similar problems, **SM-2** review scheduling. Below any adoption floor; a **promotion candidate** for a later pass, not filler for this one. |
+| [`E-Conners-Lab/PyStarter`](https://github.com/E-Conners-Lab/PyStarter) | 🟢 MIT (`1,069 B`, `7acee97effe8`) | 12 | Self-hosted Python course: `14` modules, `56` lessons, `66` graded exercises. **Courseware, not an agent** — and graded exercises make it a `P63` input rather than a shelf row. |
+| [`petrbui/skills`](https://github.com/petrbui/skills) | 🟢 MIT (`1,064 B`, `07029855612b`) | 11 | Gap-hunting teacher skill for dev/PM/QA roles. Duplicates a category this base already carries at higher adoption. |
+| [`microsoft/agent-academy`](https://github.com/microsoft/agent-academy) | 🟢 MIT | 3,680 | Credible and MIT, but it is **Copilot Studio** lessons: vendor-specific curriculum, not an education agent. Recorded so a later pass does not re-discover it as one. |
+| [`Akas333/TYSA`](https://github.com/Akas333/TYSA) | 🔴 AGPL-3.0 (`34,522 B`, `4df3c306ddda`) | 21 | Learning harness that finds where understanding ends. **Network copyleft** — prior art to read, not a delivery-path component. |
+| [`aaif-goose/goose`](https://github.com/aaif-goose/goose) | 🟢 Apache-2.0 | 56,336 | Generic agent runtime, not education. 🔵 **Recorded for one measured reason:** *neither* `aaif-goose/goose` *nor* `block/goose` appears among the `5,507` slugs this base cites, so a `56k★` permissive runtime that **changed owner account** is absent from a base that holds `5,507` addresses. Owner-account migration is a blind spot worth a later sweep. |
+
+### `697-F` — The German layer: the obvious query failed on the **instrument**, and the product-noun shape then paid out three shelf rows
+
+The first German leg used the native AI token: `Lernen OR Unterricht OR Schule KI`. It returned **`15,042`** results whose top thirty are `the-book-of-secret-knowledge`, `spec-kit`, `awesome-rust`, `kitty`, `kibana`, `kivy`, `SnapKit`, `dnd-kit` — **`0` relevant**. `KI` is two letters, and GitHub's index matches it inside `kit`, `kind`, `kivy` and `kibana`. 🔵 **So `T107` is not merely *better* for German — the native token is unusable, and the product-noun shape is the only access to the layer.** Re-run that way:
+
+| Product-noun probe | Results | Top permissive result |
+|---|--:|---|
+| `Schulverwaltung` | 65 | 🟢 **`bkd-mba-fbi/webapp-schulverwaltung`, MIT, `9★`** — filed, and its sibling `evento-portal` with it |
+| `Lernplattform` | 404 | 🔴 `hacktick/DiLer` `2★`, **no grant file at the real default ref** (`697`'s `solutions.md` section) |
+| `Unterrichtsplanung` | 21 | 🔴 `3★` AGPL Stud.IP plugin |
+| `Lernbegleiter KI` | 2 | 🔴 `3★` `NOASSERTION` |
+| `Nachhilfe KI` | 8 | 🔴 `0★` |
+
+🟢 **And the fourth language family breaks `T107`'s pattern in the useful direction.** Spanish, Portuguese and French each returned a ~`99 %`-novel corpus that was **administrative rather than agentic**, and p695 concluded from the third that the local-language layer is school administration. German reproduces that conclusion **and** shows why it is not a dead end: the administration it returns can be *a public authority's own production code under MIT, with the authority named in the payload*. **The local-language layer is not where you find agents. It is where you find the system of record you have to integrate with — and in Europe it is frequently permissively licensed and placeable.** `P80`.
+
+---
 
 ## 🆕 2026-11-07 (p696) — 🟢 **THE SHELVES GAINED 18 ROWS AND NOT ONE CAME FROM A SEARCH. THE BASE'S OWN BACKLOG IS 4,691 ADDRESSES DEEP, ITS MOST-CITED HEAD IS 48 % PERMISSIVE, AND IT PLACES BY REGION — INCLUDING THE FIRST NORTH AMERICA AGENT ROWS WHILE THAT REGION'S DEMAND LEG NILLED A 37th TIME. 🔴 A README'S TOOL COUNT IS WRONG IN 4/4 CASES MEASURED, IN BOTH DIRECTIONS**
 
