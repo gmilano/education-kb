@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p687) — 🔴 **THIS BASE'S OWN `trending.md` IS ITS BEST UNWORKED SOURCE: `3,472` VERIFIED SLUGS MENTIONED AND NEVER SHELVED, THE LARGEST A `37,173★` MIT REPOSITORY. 🟢 FIVE FOUNDATIONS ROWS AND THREE PLATFORM ROWS, TWO OF THEM REPAIRS. 🔵 29TH CONSECUTIVE SEARCH-LEG NIL.**
+
+### 🔴 687-A — The promotion leak, measured: `3,472` slugs in trending, absent from every shelf page
+
+For 28 passes this base has recorded that the mandated search legs return nothing new, and has gone looking *inside* its own published cells for gains. p687 points the same instrument one level further out — at the **gap between what trending verifies and what the shelves carry** — and the gap is the largest unworked source this base has.
+
+Measured by extracting every `github.com/<owner>/<repo>` slug from both trending files and differencing against all seven shelf pages (`ingest`-style sweep, script retained under `compose/code/p687-promotion-leak/`):
+
+| quantity | value |
+|---|--:|
+| distinct slugs mentioned in `agents/trending.md` + `repos/trending.md` | **`4,162`** |
+| distinct slugs present on any shelf page | **`782`** |
+| **mentioned in trending, absent from EVERY shelf page** | 🔴 **`3,472`** |
+
+Most of those `3,472` are legitimate: named in passing, rejected on licence, or out of scope. The finding is not the total — it is what sits at the **top** of it, ranked by how many times this base has written the slug down:
+
+| mentions | slug | first-hand at p687 | shelf status before p687 |
+|--:|---|---|---|
+| **26** | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT**, **`37,173★`**, ref `master` | 🔴 **absent** |
+| **28** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 AGPL-3.0, `1,736★` | 🔴 **absent** |
+| 15 | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 split grant, `529★` | 🔴 **absent** |
+| 4 | [`judge0/judge0`](https://github.com/judge0/judge0) | 🔴 GPL-3.0, `4,506★` | 🔴 **absent — and declared filed at p354** |
+
+🔴 **`judge0` is the one that indicts the process rather than the coverage.** p354 (2026-10-21) found it, verified it, and published the sentence *"`judge0` joins them as a thirteenth `master` row"*. It was never written to `repos/foundations.md`. `grep -c judge0 repos/foundations.md` → **`0`**, every pass for seventeen passes. **A declaration of filing is not a filing**, and nothing in this base's gates was checking the difference.
+
+🟢 **`book-to-skill` is the one that indicts the ranking.** `37,173★`, MIT, created 2026-05-01, pushed 2026-11-03 — larger than every row on `agents/top.md` except `OpenMAIC`, written down 26 times, and never ranked. ⚠️ **Its real default ref is `master`**: `LICENSE`, `LICENSE.txt`, `LICENCE`, `COPYING` and `LICENSE-MIT` all `404` at `master`, and *every* name `404`s at `main`. The payload is `master/LICENSE.md`, **`1,068 B`, sha256₁₂ `be9b04bccfb4`**, © *2025 virgiliojr94*.
+
+🟢 **And it discharges an open flag.** A prior pass raised an unresolved "author-key" anomaly on `dmoshehun-prog/learn-from-materials`: MIT payload naming `virgiliojr94` with a **2025** date, on a repository created **2026-09-08** by a different owner. p687 resolves it by arithmetic rather than by inference — `learn-from-materials`'s payload is `book-to-skill`'s payload **plus one line**: `1,068 B` → `1,122 B`, `+54 B`, same `LICENSE.md` basename, the second © line appended beneath the first. Upstream created 2026-05-01, downstream 2026-09-08. **The grant is MIT either way; what the bytes settle is provenance.**
+
+🔵 **The generalisable move: a base that has run 28 nil search passes should stop asking the search channel and start auditing its own exhaust.** Every gain at p675–p686 came from inside a published cell. p687's came from inside a published *sentence* that was never turned into a row.
+
+### 🟢 687-F — Five foundations rows
+
+Filed to [`repos/foundations.md`](./foundations.md), each verified by `git ls-remote --symref` (real default ref) **and** a grant payload read from `raw.githubusercontent.com` at that ref:
+
+| Repo | Grant (payload-verified) | Stars | Ref | Why it is new to this base |
+|---|---|--:|---|---|
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🟢 **Apache-2.0** · `LICENSE.txt` · **`11,505 B`** · `4b6615cdb446` | **107,940** | `main` | 🔴 **API reports `NOASSERTION`.** Highest-starred repository on the shelf; the appendix is filled in, so the SPDX matcher misses a verbatim Apache-2.0 grant |
+| [`judge0/judge0`](https://github.com/judge0/judge0) | 🔴 **GPL-3.0** · `LICENSE` · `34,526 B` · `e55f461dc7f4` | 4,506 | `master` | **Repair** — declared filed at p354, never filed. Sandboxed code execution for autograders |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** · `LICENSE.txt` · **`10,172 B`** · `59899c6091b5` | 28 | `main` | Owner-account enumeration: the datastore under two Ed-Fi rows this shelf already carried |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0** · `LICENSE` · **`10,173 B`** · `c4a2cd14eb3a` | 42 | `main` | Org-published learning skills — rare in a sector of individual authors |
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 🟢 **Apache-2.0** · `LICENSE` · **`11,357 B`** · `c71d239df917` | 77 | `main` | 🟢 **This pass's positive control** — byte- AND hash-identical to the canonical this shelf pins. Synchronous-classroom primitive |
+
+### 🟢 687-G — Three platform rows, and the AI agent is the closed directory
+
+Filed to [`verticals/solutions.md`](../verticals/solutions.md):
+
+🔴 **[`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn)** — `529★`, pushed **today**, ref `master`, API `NOASSERTION`. The payload (`LICENSE`, **`37,237 B`**, `548cbfae567a`) is **four licences in one file**: Community Edition → **AGPL-3.0**; University of Illinois and outside-contributor portions → **MIT**; all client-side JavaScript → **AGPL-3.0**; and two directories carved out as proprietary Enterprise Edition. **One of the two is named `apps/course-agent/`.** Both `apps/course-agent/LICENSE` and `apps/prairielearn/src/ee/LICENSE` return `200` and are **byte-identical to each other — `2,538 B`, sha256₁₂ `cfd0235081fa`** — gating production use on *"a contract, subscription, or other"* agreement with PrairieLearn, Inc.
+
+> **The platform is open and the agent is not.** This is the first row on any shelf of this base where the agentic layer is the specific thing withheld, and it is the layer a studio would be hired to build. Scope the engagement around question-as-code and the CE APIs, build the agent yourself, and never read `apps/course-agent/` as an available starting point.
+
+🟢 **Placed North America on the grant payload's own text** — *"Portions copyright (c) 2013-2021 University of Illinois Board of Trustees"* — the strongest channel this base has, stronger than the owner-`location` class p668 flagged and the README class p669 used.
+
+🔴 **[`classroomio/classroomio`](https://github.com/classroomio/classroomio)** — AGPL-3.0 (`34,523 B`, `8486a10c4393`), `1,736★`. **Repair:** verified twice, 28 mentions, zero rows. Its `@classroomio/mcp` npm package is **MIT** — that is the surface an agent can drive without the copyleft core entering a deliverable.
+
+🟡 **[`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server)** — **MPL-2.0** (`16,725 B`, `1f256ecad192`), `97★`, ref `master`. Exam-integrity orchestration; file-level weak copyleft, the most engagement-friendly copyleft on that shelf.
+
+### 🔴 687-H — `NOASSERTION` gains a fourth family, and it calls itself open source
+
+p686 resolved `31` `NOASSERTION` repositories by payload and found the field spans public domain to all-rights-reserved. p687 adds a family that ledger did not hold:
+
+| Repo | Self-description | API | Payload |
+|---|---|---|---|
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | *"Open-source platform for education and research"* | `NOASSERTION` | 🔴 **Business Source License 1.1** · `LICENSE` · **`4,539 B`** · `7fc19489d6b2` |
+
+**BUSL-1.1 is a time-delayed proprietary licence, not an open-source one** — production use is restricted until a change date. `125★`, pushed 2026-10-29. 🟢 **Placed APAC** on a named institution in the repository's own README (`fudan`), with `9,089` CJK characters in a `14,206 B` document. **Not shelved**, recorded here: a repository whose own GitHub description contradicts its own payload is an unresolved permission, not a permissive project.
+
+### 🔵 687-I — The mandated legs: nil for the 29th consecutive pass, and the nil is now measurable on the channel itself
+
+All eight mandated legs ran — four global (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) and four regional (North America, EMEA, APAC, LATAM).
+
+**Supply legs:** every in-scope repository named was already held — `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub`, `microsoft/generative-ai-for-beginners`, `GeminiLight/awesome-ai-llm4education`, `OpenEduCat`. The agent leg stated its own gap verbatim: *"None of the results focus on education."* The vertical-platform leg returned one education system (`OpenEduCat`, LGPL-3.0, already shelved) and otherwise returned licence explainers and a 2010 conference paper.
+
+**Demand legs:** `0` new facts across all four regions. Every figure returned is already in [`intel/market.md`](../intel/market.md) — Digital Omnibus `(EU) 2026/1744`, the `2027-12-02` high-risk date, UNESCO IESALC's `87%`/`26%`, the `716` instruments across 23 countries, Korea's AI Basic Act, Vietnam `134/2025/QH15`, TEQSA's action plans, the `134` bills across `31` states, `AB 1159`, `SB 720`, Khanmigo, and the LAC Observatory.
+
+🔴 **But the legs did return one thing this base can use: a measurement of their own error.** The trending leg surfaced a roundup dating `HKUDS/DeepTutor` at **`45,224★`**. First-hand the same week: **`56,080★`**. The leg understates by **`19.4%`**. `OpenMAIC` came back as *"about 42K"* against a first-hand `42,851`.
+
+> **The star figures these legs carry are citations, not measurements, and they are biased low because a blog's number is frozen at its publication date while the repository is not.** This is the quantitative reason the nil streak is not evidence of a stalled sector — it is evidence of a channel that reports the sector late. See [`intel/trends.md`](../intel/trends.md) **T93**.
+
 ## 🆕 2026-11-07 (p686) — 🟢 **FOUR FOUNDATIONS ROWS AND TWO PLATFORM ROWS, EVERY ONE OF THEM RECOVERED FROM A FIELD THE API MISREPORTS. 🔴 `openedx` IS SEARCH-INDEX-ABSENT WHILE FULLY ALIVE — A `422` IS NOT EVIDENCE OF ABSENCE.**
 
 ### 🟢 686-F — Four foundations rows, and two of the four were invisible to a licence filter

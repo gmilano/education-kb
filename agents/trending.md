@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p687) — 🟢 **FIVE AGENT ROWS, NONE FROM A SEARCH LEG, THE LARGEST A `37,173★` MIT REPOSITORY THIS BASE HAD WRITTEN DOWN `26` TIMES AND SHELVED `0` TIMES. 🔧 ONE OPEN FLAG DISCHARGED BY BYTE ARITHMETIC. 🔵 29TH CONSECUTIVE SEARCH-LEG NIL.**
+
+### 🟢 687-B — Five rows, and the channel that produced all five is this base's own exhaust
+
+`71` rows carried in, `5` added, **`76` rows / `76` distinct subjects / `0` duplicates / `0` cell-count disagreements** against the `6`-column header. Filed to [`agents/top.md`](./top.md):
+
+| Row | Grant (payload-verified) | Stars | Ref | Region |
+|---|---|--:|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** · `LICENSE.md` · `1,068 B` · `be9b04bccfb4` | **37,173** | ⚠️ `master` | 🔵 refused (`508` CJK / `15,379 B` ≈ `9.9%`) |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT** · `LICENSE.md` · `1,122 B` · `15ce43afa44a` | 1,331 | `main` | 🔵 refused (`137` CJK / `27,150 B` ≈ `1.5%`) |
+| [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | 🟢 **MIT** · `LICENSE` · `1,084 B` · `41bad3fca692` | 345 | `main` | 🔵 refused (`1,268` CJK / `42,542 B` ≈ `8.9%`) |
+| [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | 🟢 **Apache-2.0** · `LICENSE` · **`11,356 B`** · `f1a2e5fccede` | 263 | `main` | 🟢 **APAC** (`9,389` CJK / `15,695 B`) |
+| [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) | 🟢 **MIT** · `LICENSE` · `1,065 B` · `f551749a612d` | 203 | `main` | 🟢 **APAC** (`5,910` CJK / `10,870 B`) |
+
+🔴 **`book-to-skill` is the largest permissive education agent this base has ever filed except `OpenMAIC`, and it was sitting in this base's own `trending.md` — 26 mentions, 0 rows.** Turns a technical book PDF into an installable agent skill. Created 2026-05-01, pushed 2026-11-03, `fork: false`. ⚠️ **Real default ref is `master`:** `LICENSE`, `LICENSE.txt`, `LICENCE`, `licence`, `LICENSE-MIT` and `COPYING` all return `404` at `master`, and *every* name returns `404` at `main`. A habitual `/main/LICENSE` probe reads this `37,173★` MIT repository as **ungranted**. The `ls-remote --symref` step is not ceremony. See [`repos/trending.md`](../repos/trending.md) **687-A** for the leak measurement.
+
+### 🔧 687-K — p687 broke the `Region` closed vocabulary in its own first draft, and caught it with its own gate
+
+The five rows filed this pass include three whose region this pass **refused** to place. The first draft wrote that refusal *into the `Region` column itself*, as `Global (unplaced)` — a sixth value in a column whose vocabulary is exactly `North America` / `EMEA` / `APAC` / `LATAM` / `Global`.
+
+🔴 **This is the precise defect `p669` normalised this column to remove**, and it reappeared within one pass of being fixed. p669's finding was that the column held `8` distinct strings for `5` values; p687's first draft would have made it `6` for `5`, and each variant becomes its own bucket in the compiler, so a `region=Global` filter silently stops matching three rows that are Global.
+
+🟢 **Caught before commit** by deriving the column's distinct values and asserting them against the permitted set — `{'Global': 32, 'APAC': 23, 'North America': 10, 'EMEA': 6, 'LATAM': 5}`, `0` outside the vocabulary. The three cells were normalised to `Global` and **the refusal, with its CJK measurement, moved into each row's description**, which is where p669 ruled that evidence class belongs.
+
+🔵 **The transferable part is not the fix, it is why the pull exists.** *"Unplaced"* feels like a region because it answers the same question, and every pass that wants to be honest about a refusal will feel that pull. A closed-vocabulary column cannot carry honesty; it can only carry a value. **Honesty goes in the prose; the column gets one of five strings.** Assert it on every insert, because good intentions are exactly how this column drifted the first time.
+
+### 🔧 687-C — An open flag discharged by arithmetic, not by inference
+
+A prior pass raised and could not resolve an **author-key anomaly** on `learn-from-materials`: its MIT payload names `Copyright (c) 2025 virgiliojr94` while the owner is `dmoshehun-prog`, the HEAD commit is authored by `dmoshehun-prog`, the repository was created **2026-09-08**, and GitHub reports `fork: false`. The pass recorded it rather than smoothing it over, and left it open.
+
+p687 closes it in one measurement:
+
+| | `virgiliojr94/book-to-skill` | `dmoshehun-prog/learn-from-materials` |
+|---|---|---|
+| grant file | `LICENSE.md` | `LICENSE.md` |
+| bytes | `1,068` | **`1,122`** (`+54`) |
+| sha256₁₂ | `be9b04bccfb4` | `15ce43afa44a` |
+| © lines | `2025 virgiliojr94` | `2025 virgiliojr94` **and** `2026 learn-from-materials contributors` |
+| created | **2026-05-01** | 2026-09-08 |
+| stars | **37,173** | 1,331 |
+
+**The downstream payload is the upstream payload plus one line.** `fork: false` is a GitHub bookkeeping fact, not a provenance fact — a repository copied by hand carries no fork edge. 🔵 **The transferable rule: when a grant payload names a copyright holder who is not the owner, the holder is an address. Probe it.** The flag was one query from a `37,173★` row for however many passes it stood open.
+
+### 🔧 687-D — `PhysicsOS`'s payload is one byte short of canonical, and the byte is informative
+
+`11,356 B` against the `11,357 B` Apache-2.0 canonical. `cmp` puts the first difference at **char `10773`, line `189`**, and `diff` gives exactly one changed line:
+
+```
+- │    Copyright [yyyy] [name of copyright owner]
++ │    Copyright (c) 2026 PhysicsOS contributors
+```
+
+A filled appendix placeholder, one character shorter than the template. 🔴 **And `11,356` is also what the `11,357 B` canonical measures as when its trailing newline is stripped by a shell capture** — verified this pass: `printf '%s' "$(cat canonical)" | wc -c` → `11356`. So a published cell reading `11,356 B` is ambiguous between a genuine filled appendix and the exact capture-measurement defect this base diagnosed at p674. **Only the digest separates them:** `f1a2e5fccede` (real) against `43070e2d4e53` (stripped canonical). See [`intel/trends.md`](../intel/trends.md) **T91**.
+
+### 🟢 687-E — A lead this base wrote off as unresolvable was resolvable
+
+A prior pass logged: *"Named-but-unresolvable: `ai-learning-coach`, `Skill-Anything` — no owner/repo given by any result, so neither could be probed; recorded as unresolved leads, not as findings."*
+
+The slug is **`SYuan03/Skill-Anything`** — MIT, `345★`, `1,084 B` / `41bad3fca692` — and it was recovered by giving the bare name to `gh api search/repositories`, which resolves names to owner-qualified slugs. 🔵 **An unresolvable lead is a statement about the channel that was asked, not about the repository.** The web-search leg returns prose and cannot be re-queried; the search API can. `ai-learning-coach` remains unresolved: 🔵 **recorded as still-open, with the channel now named** — the API returns no education repository under that name at any adoption level.
+
+### 🔵 687-J — The legs, and a measurement of their error
+
+All eight mandated legs ran (four global, four regional). **`0` new agent addresses — the 29th consecutive nil.** The agent leg stated its own gap verbatim: *"None of the results focus on education. They are general lists of open-source agents."*
+
+🔄 **Headline rows re-read first-hand the same day:** `HKUDS/DeepTutor` **`56,080★`** (p685 cell: `55,981`); `THU-MAIC/OpenMAIC` **`42,851★`** (p685 cell: `42,833`), payload `1,065 B` / `ba2525637432` reproducing byte- AND hash-exact for a third consecutive pass.
+
+🔴 **The trending leg reported `DeepTutor` at `45,224★` in the same window — understating the first-hand figure by `19.4%`.** `OpenMAIC` came back as *"about 42K"* against `42,851`. The legs' star figures are **citations frozen at a blog's publication date**, which is why they are biased low and why a nil streak on this channel is not evidence about the sector. See **T93**.
+
 ## 🆕 2026-11-07 (p686) — 🔴 **`NOASSERTION` SPANS PUBLIC DOMAIN TO ALL-RIGHTS-RESERVED: `31` REPOSITORIES RESOLVED BY PAYLOAD, `12` ADOPTABLE, `1` PROPRIETARY, `5` LICENSED UNDER CREATIVE COMMONS. 🟢 ONE AGENT ROW ADDED (GoAgent, MIT, APAC). 🔵 28TH CONSECUTIVE SEARCH-LEG NIL.**
 
 ### 🔴 686-A — The field this base filters on carries no information, and the week's biggest new education repository is the proof

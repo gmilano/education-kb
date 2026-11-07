@@ -8,7 +8,7 @@ updated: 2026-11-07
 
 > What is actually changing in AI + education as of November 2026. Each trend names its evidence and its confidence.
 
-🔴 **Read this before citing any `T` number: four identifiers on this page resolve to two different trends each, and `156` references across the shelves point at them.** Re-measured at p685 by counting headings rather than trusting the last figure: **`87` `## T` headings, `83` distinct numbers, `0` gaps** — so the heading count is *not* the trend count (the `distinct` vs `total` distinction this page records as **T62**). The collisions are **`T31`, `T32`, `T39` and `T40`**, each used once by `p657`/`p658` and again by `p661`/`p664`:
+🔴 **Read this before citing any `T` number: four identifiers on this page resolve to two different trends each, and `156` references across the shelves point at them.** Re-measured at p685 by counting headings rather than trusting the last figure: **`87` `## T` headings, `83` distinct numbers, `0` gaps** — 🔄 **re-derived at p687: `93` headings, `89` distinct numbers, `max = T93`, and now `4` gaps at `T84`–`T87`.** 🟢 **Those four gaps are the reservation this banner's own repair plan created, not a defect — do NOT close them.** p685 set aside `T84`–`T87` to receive the renumbered second occurrences of `T31`/`T32`/`T39`/`T40`; p686 then filed `T88`–`T90` and p687 `T91`–`T93`, both correctly numbering from `max(## T)` and stepping over the reserved block. 🔴 **A future pass that re-derives this census will see `4` gaps and may read them as a numbering error. Reusing `T84`–`T87` for new trends would consume the only free identifiers the collision repair can land in, and the repair would then have nowhere to go.** The reserved block is load-bearing; the next `T` number is `T94` — so the heading count is *not* the trend count (the `distinct` vs `total` distinction this page records as **T62**). The collisions are **`T31`, `T32`, `T39` and `T40`**, each used once by `p657`/`p658` and again by `p661`/`p664`:
 
 | id | first use | second use | shelf references |
 |---|---|---|--:|
@@ -20,6 +20,51 @@ updated: 2026-11-07
 🔧 **`p671` annotated the four *headings* and stopped there, which fixed the symptom a reader sees on this page and left the one they cannot see.** A reader arriving from `**T39**` on `repos/foundations.md` still has no way to know which of two unrelated trends was meant.
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
+
+## T91 — An Apache-2.0 payload's byte count is not its identity, and this pass measured five of them
+*Added p687. Confidence: **high** — five payloads read first-hand the same day, every size and digest reproduced.*
+
+This base already records (**T56**) that `11,357` and `11,358` are two different Apache-2.0 canonicals and that size alone cannot tell them apart. p687 shows the ambiguity is not a pair — it is a **sliding window**, and the window now has five measured positions:
+
+| bytes | sha256₁₂ | what it is | API `license` field |
+|--:|---|---|---|
+| `10,172` | `59899c6091b5` | canonical, clause 4(a) wrapped one way — `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | 🟢 `Apache-2.0` |
+| `10,173` | `c4a2cd14eb3a` | **same licence text**, clause 4(a) wrapped the other way — `learning-commons-org/agent-skills` | 🟢 `Apache-2.0` |
+| `11,356` | `f1a2e5fccede` | canonical with the appendix placeholder **filled on one line** — `122-syf-wcy/PhysicsOS` | 🟢 `Apache-2.0` |
+| `11,356` | `43070e2d4e53` | 🔴 **the `11,357` canonical with its trailing newline stripped by a shell capture** — a measurement error, not a payload | — |
+| `11,357` | `c71d239df917` | the `apache/.github` canonical — `ably-labs/realtime-quiz-framework`, `THU-MAIC/MAIC-Core` | 🟢 `Apache-2.0` |
+| `11,505` | `4b6615cdb446` | canonical with the appendix **block replaced** by a completed notice — `rasbt/LLMs-from-scratch` | 🔴 **`NOASSERTION`** |
+
+Three results follow, and the third is the expensive one.
+
+**(1) The `10,172`/`10,173` byte is a line re-wrap, not a licence difference.** `diff` gives one changed pair inside clause 4(a): `"…of the Work or / Derivative Works…"` against `"…of the Work or Derivative / Works…"`. Two legitimate upstream reflows of identical terms.
+
+**(2) `11,356` is occupied twice, by a real payload and by an error.** `122-syf-wcy/PhysicsOS` genuinely measures `11,356 B` because filling `Copyright [yyyy] [name of copyright owner]` → `Copyright (c) 2026 PhysicsOS contributors` is one character shorter. And `printf '%s' "$(cat canonical)" | wc -c` → `11356` for the `11,357` canonical, because a shell capture strips the trailing newline — the defect p674 proved on `Opetushallitus/compleap`. **A cell reading `11,356 B` without a digest cannot say which of the two it saw.** Write the payload to a file and hash the file; never measure through `$(...)`.
+
+**(3) 🔴 Filling the appendix can cost you the licence field, and the threshold is how much canonical text survives.** `PhysicsOS` filled **one line** and still matches `Apache-2.0`. `rasbt/LLMs-from-scratch` replaced **the whole appendix block** with a real notice (`Copyright 2023-2026 Sebastian Raschka` plus the completed *"Licensed under the Apache License…"* paragraph), `+148 B`, and the SPDX matcher stops recognising it — so **`gh api` reports `NOASSERTION` on a verbatim Apache-2.0 grant held by a `107,940★` repository.** A licence filter over the API field drops the highest-starred repository on this base's foundations shelf. **The remedy is not a better filter; it is reading the payload.** Consistent with p686's finding that `NOASSERTION` carries no information, now with the *mechanism* named rather than just the spread.
+
+## T92 — `curl -sSL` without `--fail` makes a 404 into a 14-byte document, and this pass measured its own probe doing it
+*Added p687. Confidence: **high** — caught in p687's own instrument, with the artefact reproduced.*
+
+p687 measured README language shares to place regions. For `SafeExamBrowser/seb-server` the probe reported **"README `14 B`, CJK `0`"**. There is no `README.md` in that repository — the document is `README.rst`. `curl -sSL` returned GitHub's `404` body, the literal bytes `404: Not Found`, **with exit status `0`**, and the measurement was computed over that string.
+
+🔴 **A 14-byte README is not a terse README; it is the absence of one, wearing the shape of data.** Every pipeline in this base that reads a URL into a buffer and then measures the buffer is exposed: CJK share, title-line grading, byte counts, digests. A digest of `404: Not Found` is a perfectly stable, perfectly reproducible, perfectly wrong digest — and it is the *same* digest (`d5558cd419c8`) on every repository that lacks the file, so it will even cross-validate against itself.
+
+**Rule:** `curl --fail --silent --show-error --location`, check the HTTP status explicitly, and treat any payload under ~`64 B` as a probe failure to be investigated rather than a value to be recorded. 🔵 This is the same class as **T56** and **T91(2)**: in all three, the instrument produced a number that was internally consistent and described bytes the repository does not serve.
+
+## T93 — The mandated search legs report this sector late, and the lag is now quantified at `-19.4%`
+*Added p687. Confidence: **medium-high** — two first-hand comparisons, one of them large; the direction is structural, the magnitude is a sample of two.*
+
+This base has recorded `29` consecutive passes in which the eight mandated legs produced no new address. The standing interpretation has been that the legs are saturated. p687 adds a second, sharper reading: **the legs are not just saturated, they are stale, and the staleness is measurable.**
+
+| subject | figure the leg returned | first-hand, same week | error |
+|---|--:|--:|--:|
+| `HKUDS/DeepTutor` | `45,224★` (October roundup) | **`56,080★`** | 🔴 **−19.4%** |
+| `THU-MAIC/OpenMAIC` | *"about 42K★"* | **`42,851★`** | ≈ −2% |
+
+The mechanism is not error, it is **latency**: a roundup's number is frozen at publication while the repository keeps moving, and the search channel surfaces roundups in preference to repositories. The bias is therefore **one-directional** — always low, never high — which is exactly what a filter tuned on adoption thresholds will mis-rank.
+
+🔵 **Two consequences for how this base should be read.** First, a nil streak on these legs is evidence about the *channel*, not about the sector: `DeepTutor` added `~10,800★` in the window the legs described as quiet. Second, any star figure this base publishes must name whether it is first-hand or cited, because the two are not the same kind of number — which is why every star cell added at p687 states the ref and date it was read at.
 
 ## T1 — The agentic classroom arrives, and it simulates peers
 

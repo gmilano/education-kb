@@ -106,6 +106,14 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🔵 p687 — The demand leg returned `0` new facts, and the one gain is an *address* rather than a figure
+
+The North America leg (`AI education North America 2026 adoption regulation players`) ran and returned the regulatory surface this section already holds in full: `134` bills across `31` states, Maryland `SB 720`, the Idaho/Oklahoma/Virginia district-policy mandates, New York's ninth-grade floor, California `AB 1159`, Ohio's July 2026 written-policy deadline, North Carolina's `$10M` Khanmigo earmark, and the `K-12 AI Literacy and Readiness Act of 2026`. **Nil, and recorded as nil.**
+
+🟢 **What the pass did add for this region is a buildable asset, not a statistic.** [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) is filed to [`../verticals/solutions.md`](../verticals/solutions.md) and placed **North America on its own grant payload** — *"Portions copyright (c) 2013-2021 University of Illinois Board of Trustees"*. It matters commercially for one reason: 🔴 **the platform is AGPL-3.0 and `apps/course-agent/` is proprietary Enterprise Edition.** The AI layer on the leading US open assessment platform is commercially gated, which makes "build the agent layer on top of an open engine" a defined, non-speculative engagement in this region. `compose/patterns.md` **P63** is that engagement, costed.
+
+🟢 Also placed here: [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) (Apache-2.0), the datastore under the US state-level K-12 data standard — `28★` and an installed base in district data warehouses, which is the adoption signal that matters where stargazers are not one.
+
 #### 🆕 p686 — The regulatory surface is now 134 bills across 31 states, and that fragmentation IS the engagement
 
 🔴 **Measured this pass:** `134` AI-in-education bills introduced across **`31` states** in the 2026 session, clustered on student-data privacy, classroom-use restriction and curriculum integration. The binding law is at **state** level while federal action remains executive: a **K-12 AI Literacy and Readiness Act** advanced out of the House Education and Workforce Committee but **has not become law**, and should not be sold as though it had.
@@ -374,6 +382,14 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🔵 p687 — Nil, and the EMEA-specific gap this base keeps hitting is named again
+
+The EMEA leg (`AI education EMEA 2026 adoption regulation players`) returned `0` facts this section does not hold: Digital Omnibus `(EU) 2026/1744` (OJ 2026-07-24, applying 2026-07-27), the stand-alone Annex III high-risk date of **`2027-12-02`** and the embedded-product date of `2028-08-02`, the European AI-in-education figure of `$2.64B` (2026) → `$8.0B` (2030) at `31.9%` CAGR, the Finland/Estonia/Netherlands K-12 leadership, UNESCO's `68`-country count, the UK's light-touch posture, and Dubai KHDA's private-school guidance. **Nil, and recorded as nil.**
+
+🔴 **The structural gap is unchanged and worth restating as a gap rather than leaving as silence: the leg returns EU *regulation* and almost no EMEA *adoption* data, and essentially nothing for Africa or the Middle East beyond the Gulf.** Three consecutive passes have asked and three have received the same shape of answer. This is a property of the channel — English-language policy trackers are well indexed, national ministry reporting in the region is not — so the remedy is a different channel (ministry publications, UNESCO country files), not a differently worded query.
+
+🟡 **One row placed into this region's reality rather than its geography:** [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) (MPL-2.0) is filed to `../verticals/solutions.md` with its **region refused** — the repository serves no `README.md` at all and this pass's probe measured the `404` body as if it were a document (`../intel/trends.md` **T92**). Exam-integrity tooling is where EU high-risk assessment obligations will bite first, and the file-level MPL-2.0 boundary is the one copyleft shape that survives a public-sector procurement review intact.
 
 #### 🆕 p686 — The AI Act high-risk deadline MOVED, and selling urgency off the old date is now selling a date that does not exist
 
@@ -711,6 +727,22 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟢 p687 — The demand leg nils, but APAC is where every *supply*-side gain of this pass landed
+
+The APAC leg returned `0` new facts: Korea's AI Basic Act in force 2026-01-22, Vietnam's `134/2025/QH15` effective 2026-03-01 with education among its six high-risk sectors, China's synthetic-content identification rules, Singapore's AI Verify, Australia's TEQSA institutional action-plan requirement, and Indonesia's forthcoming Presidential Regulation. **Nil, and recorded as nil.**
+
+🟢 **The asymmetry is the finding, and it is now three passes deep: this region produces the repositories while North America and EMEA produce the regulation.** Both regional placements p687 made are APAC, both on the repository's own body-text language rather than an owner `location` field:
+
+| Row | Grant | Stars | Placement evidence |
+|---|---|--:|---|
+| [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | 🟢 Apache-2.0 | 263 | `9,389` CJK characters in a `15,695 B` primary README |
+| [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) | 🟢 MIT | 203 | `5,910` CJK characters in a `10,870 B` primary README |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 **BUSL-1.1** — *not* open source | 125 | Fudan University named in the README. **Not shelved** |
+
+🔴 **And a procurement warning specific to this region's output.** `Wisepen` describes itself on GitHub as an *"Open-source platform for education and research"* and its payload is **Business Source License 1.1** — time-delayed proprietary. Combined with p685's finding that two `OpenMAIC` namesakes carry **AGPL-3.0** payloads byte-identical to each other, the pattern for APAC-origin education repositories is clear: **high output, high permissive share, and a licence field that cannot be trusted without reading the payload.** Clone by full slug, resolve the grant by payload, never by the API field (`../intel/trends.md` **T91**).
+
+🔵 **Australia is the nearest-term engagement in the region** — TEQSA requires every higher-education provider to file a genAI action plan, and the mastery-and-provenance trail in `compose/patterns.md` **P63** is directly usable as that plan's evidence base.
+
 #### 🆕 p686 — Three statutes in force or imminent, and the only education-SPECIFIC regulator obligation found anywhere this pass
 
 🟢 **Australia is where the named, education-specific obligation is.** **TEQSA**, the higher-education regulator, has required **all** higher education providers to submit **institutional action plans** addressing generative-AI risk. That is a mandated per-institution deliverable at national scale — the most directly procurable regulatory artefact surfaced by any of this pass's four regional legs. Australia still has **no** AI-specific statute; its 2024 proposal named mandatory guardrails for high-risk AI including **education**, so the TEQSA plan is currently the whole instrument.
@@ -973,6 +1005,14 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🔵 p687 — Nil, and the governance gap is the engagement (restated, not re-found)
+
+The LATAM leg returned `0` facts this section does not hold: UNESCO IESALC's `87%` of higher-education institutions using AI in at least one area against `26%` holding a formal AI strategy; `74%` using it in teaching and learning; `45%` of LAC institutions with AI guidance in place or in development against roughly `70%` in Europe and North America; the `716` AI regulatory instruments across `23` countries and territories (Universidad de los Andes, 2026); the regional market at `$0.67B` (2026) → `$2.1B` (2030) at `33.5%` CAGR; and the UNESCO Observatory on AI in Education for Latin America and the Caribbean with CAF, CENIA, Cetic.br/NIC.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del Desarrollo and IRCAI. **Nil, and recorded as nil.** ⚠️ The Observatory's launch date is still reported as both April and September 2026 across sources; this base continues to carry the disagreement rather than pick one.
+
+🟢 **No LATAM-specific repository was added this pass, and that is stated rather than padded.** Every supply-side gain at p687 placed APAC or North America, or refused placement. **`0` of the `13` repositories verified this pass carried any LATAM evidence** — no Spanish- or Portuguese-primary README, no named Latin American institution in any grant payload, no regional org in any owner account. That is a measured absence over a known population, not a silence.
+
+🔵 **The standing read holds and the gap is still the opportunity:** the region's deficit is governance and strategy, not adoption — `87%` using, `26%` with a plan. The copyleft-heavy platform shelf is therefore well matched to the delivery model here (operate the AGPL-3.0/GPL-3.0 platform as a service, keep the permissive agent layer as the client's asset), and `compose/patterns.md` **P63** is costed to that boundary.
 
 #### 🆕 p686 — The strongest evidence in this KB for a governance engagement, and it is a 61-point gap measured by UNESCO
 
