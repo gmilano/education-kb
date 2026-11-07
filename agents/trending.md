@@ -1,8 +1,134 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-06
+updated: 2026-11-07
 ---
+
+## 🆕 2026-11-07 (p685) — 🔴 **A BARE REPOSITORY NAME DOES NOT IDENTIFY A GRANT, AND THIS BASE'S #1 AND #2 ROWS PROVE IT: `63/104` AGENT-SHELF SUBJECTS SHARE THEIR NAME WITH ANOTHER REPOSITORY, `43` PAIR A PERMISSIVE CANONICAL WITH A COPYLEFT-OR-UNGRANTED NAMESAKE, AND `THU-MAIC/OpenMAIC` (MIT) HAS TWO AGPL-3.0 TWINS WITH A BYTE-IDENTICAL PAYLOAD. 🔴 AND A SECOND VERIFICATION CHANNEL JOINS `curl -sI` IN HAVING ZERO DISCRIMINATING POWER — `gh api repos/<slug>` RETURNS `403` FOR A REAL REPOSITORY AND FOR ONE THAT DOES NOT EXIST.**
+
+**No row added to [`top.md`](./top.md) — the eight mandated legs nilled a 28th consecutive time. Two rows on `top.md` and one on [`../repos/foundations.md`](../repos/foundations.md) were re-read first-hand and corrected. One pattern filed ([`../compose/patterns.md`](../compose/patterns.md) **P61**), two trends ([`../intel/trends.md`](../intel/trends.md) **T82**, **T83**), five regional nils recorded with denominators ([`../intel/market.md`](../intel/market.md)). Nothing removed from this file.**
+
+### 🔴 `685-A` — the namesake census: a name is not a licence
+
+The sector's two largest permissive education repositories were re-read this pass, and the re-read turned up something the shelf had never checked: **what else is called that.** Every distinct bare repository name on `top.md` (`104` of them, taken as the text after the last `/` in each row's first repository link) was queried with `gh api search/repositories`, and the results filtered to **exact** bare-name equality — not substring.
+
+| metric | value |
+|---|--:|
+| distinct names queried | `104` |
+| canonical **absent from its own exact-name query** | `3` |
+| subjects with ≥1 foreign same-name repository | **`63`** (`60.6 %`) |
+| …of those, with a **divergent** grant | `23` |
+| …**permissive canonical + copyleft-or-ungranted namesake** | **`43`** |
+| foreign same-name repositories, total | **`1,422`** |
+| …of those, **no grant at all** | **`936`** (`65.8 %`) |
+| …of those, copyleft | `82` |
+
+🔴 **The headline instance is this base's #2 row.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT** (`1,065 B`, sha256₁₂ `ba2525637432`, re-read byte- and hash-exact at p685). It has **`76`** foreign exact-name repositories, and two of them are **AGPL-3.0**:
+
+| repository | stars | grant | payload | sha256₁₂ |
+|---|--:|---|--:|---|
+| `THU-MAIC/OpenMAIC` ✅ **canonical** | `42,833` | 🟢 **MIT** | `1,065 B` | `ba2525637432` |
+| `kolbyzhu5/OpenMAIC` | `17` | 🔴 **AGPL-3.0** | `34,523 B` | `0d96a4ff68ad` |
+| `ChengZhuo2025/OpenMAIC` | `3` | 🔴 **AGPL-3.0** | `34,523 B` | `0d96a4ff68ad` |
+
+🔴 **And the largest sub-class is not copyleft — it is `936` repositories with no grant at all (`65.8 %` of the `1,422`).** That is the *more* restrictive outcome, not the lenient one: absent a licence, no rights are granted, so a name-resolved clone that lands on one of these is in a worse position than if it had landed on GPL. **A reader who checks only for the word "GPL" will not catch two thirds of this class.**
+
+**The two AGPL payloads are byte-identical *and* hash-identical to each other** — the same file, independently placed under the same name as an MIT project. 🔵 And `HKUDS/DeepTutor` (**Apache-2.0**) has `54` foreign exact-name repositories, including `rddy/deeptutor` at **MIT** — a *different* permissive grant, which is the quieter half of the same defect: a name-resolved clone can silently change which permissive licence a deliverable is complying with.
+
+### 🟡 `685-B` — the honest shape of `685-A`, because the headline figure overstates the risk
+
+🔴 **`60.6 %` is not a defect rate and must not be quoted as one.** A collision is trivial when the name is a dictionary word: `ahmedEid1/lumen` (MIT) collides with `laravel/lumen` (`7,556★`) and fourteen others, and nobody resolving "lumen" by name is looking for this base's row. **The hazard scales with the canonical's own adoption**, because that is what makes name-resolution plausible in the first place:
+
+| canonical adoption | subjects in the dangerous class |
+|---|--:|
+| ≥ `10,000★` | **`3`** |
+| ≥ `1,000★` | `6` |
+| ≥ `100★` | `18` |
+| any | `43` |
+
+🔴 **All three of the `≥10,000★` cases are rows this base sells from:** `karpathy/nanochat` (`60,340★`, MIT — `46` copyleft-or-ungranted namesakes), `HKUDS/DeepTutor` (`55,984★`, Apache-2.0 — `23`), `THU-MAIC/OpenMAIC` (`42,834★`, MIT — `56`). 🔵 **That is the finding worth keeping:** the collision class is concentrated exactly where a developer is most likely to type a name instead of a slug, because high adoption is what puts the name in a blog post, a README instruction or an agent's tool call in the first place.
+
+### 🟢 `685-C` — the root `LICENSE` is not the whole grant, and this base already proved it on the same repository
+
+`OpenMAIC`'s MIT root sits above a vendored `packages/mathml2omml/LICENSE` at **LGPL-3.0-or-later** (`7,652 B`) — found by this base at an earlier pass and still on `top.md` at `L286`. **A root-only grant check passes that repository and still ships copyleft.** Combined with `685-A`, the two defects compose into one rule, filed as **P61**: pin by *owner-qualified slug* **and** *payload digest*, and enumerate vendored subtrees rather than the root alone.
+
+### 🔴 `685-D` — a second verification channel with zero discriminating power, measured with controls at both signs
+
+`p684` established that the standing quality bar's `curl -sI` check cannot fail here. p685 **reproduced that** and found the same defect in a channel this base had been treating as authoritative:
+
+| channel | real repo | real repo, absent file | non-existent repo | discriminates? |
+|---|---|---|---|---|
+| `curl -sI github.com/<slug>` | `403` | — | `403` | 🔴 **no** |
+| `gh api repos/<slug>` | `403` | — | `403` | 🔴 **no** |
+| `git ls-remote --symref` | `ref: refs/heads/main` | — | `fatal` | 🟢 **yes** |
+| `raw.githubusercontent.com/<slug>/<ref>/LICENSE` | `200` + bytes | `404` | `404` | 🟡 **partly** |
+| `gh api search/repositories` | row + stars + SPDX | — | `total_count 0` | 🟢 **yes** |
+
+🔴 **`gh api repos/<slug>` fails for a session-scope reason, and the error text is indistinguishable from the error for a repository that is not there** — both return `403` with *"GitHub access to this repository is not enabled for this session."* A pass that read liveness off this channel would have certified nothing while believing it had certified everything.
+
+🟡 **And `raw.githubusercontent.com` is only *partly* discriminating, which changes the protocol rather than just annotating it:** it returns `404` both for a live repository with no file at that path **and** for a repository that does not exist. So existence must be established by `ls-remote` **first**; only then does a `404` from `raw` mean *"ships no grant at that path"*. Controls were run at all three signs this pass.
+
+### 🔵 `685-E` — the index-absence class reproduces, including the exact repository that defined it
+
+`3` of `104` canonicals were **not returned by their own exact-name query**: `wwrwbs/AI_AWE`, `LabSirius/TutorIA`, and **`DaRL-GenAI/instructional_agents`** — which is the very repository `p674` used to type this condition (search-index-absent, not dead). It remains alive on `ls-remote`. 🔵 **A `null` from the search index is still not evidence of absence**, and the fact that the defining example reproduces unchanged eleven passes later means this is a stable property of the index, not a transient.
+
+### 🔴 `685-F` — the eight legs nilled a 28th time, with denominators
+
+All four global and all four regional legs ran. **Supply:** `7/7` distinct owner-qualified candidate slugs already held (`patchy631/ai-engineering-hub`, `cortezaproject/corteza-server`, `krayin`, `idurar`, `NousResearch/hermes-agent`, `OpenEduCat`, `apache/ofbiz`); the agent leg **stated its own education gap** — *"I found no education-specific tutoring or classroom agent with a verified MIT license."* **Demand:** North America `13/13` held, EMEA `7/7`, APAC `7/7`, LATAM all held. Full per-region records, including the dates each leg served, are in [`../intel/market.md`](../intel/market.md) under the single `## Opportunities by region` heading.
+
+🔴 **One cross-leg contamination is worth naming here as well as there:** the **LATAM** leg served the superseded `2026-08-02` EU AI Act date that `p681` corrected. Every prior observation of that stale date arrived on the **EMEA** leg. **A correction has to be held against the claim, not against the leg that first carried it.**
+
+### 🔴 `685-G` — four trend identifiers resolve to two trends each, and `156` shelf references point at them
+
+🔧 **Re-derived at p685 by counting headings, not by trusting a figure: `intel/trends.md` carries `87` `## T` headings over `83` distinct numbers with `0` gaps.** The four collisions are `T31`, `T32`, `T39` and `T40`, each filed once by `p657`/`p658` and again by `p661`/`p664` on an unrelated subject. `p671` annotated the four **headings** and stopped; the **references** were never touched, and there are `43` + `36` + `47` + `30` = **`156`** of them across these shelves.
+
+🔴 **p685 did not repair it, deliberately.** Renumbering the second heading of each pair is trivial; **recovering which trend each of the `156` citations meant is not** — that intent is not in the token `T39`, and a bulk reassignment would point documented claims at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is registered on `../intel/trends.md` as a banner at the top of the file, with the ordering it requires: renumber the four second occurrences to `T84`–`T87`, disambiguate references **by reading each site**, and retire `T31`/`T32`/`T39`/`T40` rather than reuse them.
+
+🔵 **p685's own two trends were numbered from `max(## T)` and are unique** — the discipline `p680` arrived at after numbering a pattern from the bottom of a file and colliding with a live identifier.
+
+### 🔧 `685-H` — three stale denominators, found by counting rather than by reading, on three different files
+
+🔴 **Every count heading on the sell shelves was re-derived at p685, and three of four were wrong — all in the same direction.**
+
+| file | heading read | measured at p685 | stale by |
+|---|---|---|--:|
+| `../verticals/solutions.md` | `60` rows / `60` distinct | **`65` / `65`** (`0` dup, `0` rows without a repo link, arity uniform at `6` columns) | `5` |
+| `../repos/foundations.md` | `136` rows / `136` distinct | **`140` / `140`** (`0` dup) | `4` |
+| `../compose/patterns.md` | `56` patterns, `P1`–`P56` | **`61`**, `P1`–`P61` (`0` dup, `0` gaps) | `5` |
+| `./top.md` | `70` rows / `70` distinct | **`70` / `70`** 🟢 | `0` |
+
+🔵 **The mechanism is the same every time and it is worth stating plainly, because this base has now repaired it at `p671`, `p674`, `p680`, `p682`, `p683` and again here: each individual pass was accurate, and the denominator still drifted.** A pass files a row, states truthfully that it filed a row, and does not re-count the heading above it. Four such passes later the heading is wrong by four — and nothing in any one pass's write-up is false. **The only defence is to re-derive the count from the artefact in the pass that changes it**, which is why all four figures above were taken by counting rows between each table's header separator and the end of the table, not by incrementing the figure the heading carried.
+
+🟢 **`repos/foundations.md` also demonstrates the drift happening in two places at once:** its `README` carried `139` at `p680` while the page heading carried `136`, and the table held `140`. **Three numbers, three locations, one subject** — and the `README` figure is the one a reader meets first.
+
+### 🟡 `685-I` — the commit gate is red, it was red before this pass, and the commit says so
+
+🔴 **`make commit-gates` exits `2` at p685 because `gate-enumeration` reports `REFUTED=4`.** p685 measured whether it caused that, by stashing its own changes and re-running the gate against `HEAD`:
+
+| run | `REFUTED` | `VERIFIED-ABSENT` | `QUEUE-UNENUMERATED` | exit |
+|---|--:|--:|--:|--:|
+| `HEAD` (p684), p685's changes stashed | `4` | `128` | `124` | `2` |
+| working tree with p685's changes | `4` | `128` | `124` | `2` |
+
+**Identical, and the four refuted subjects are the same four:** `projectfedena/fedena` (twice, on `agents/trending.md`), `os4ed/openSIS-Classic` (`repos/foundations.md:542`, where enumeration finds `docs/License.txt` plus 20 vendored grants) and `DMontgomery40/mcp-canvas-lms` (a manifest declaring `"license": "MIT"` while naming a `LICENSE` that is not in the tree). **None is p685's, and p685 moved none of them.**
+
+🟡 **The commit was therefore made with `SKIP_COMMIT_GATES=1`, which this write-up states because the hook's own text requires it to be stated** — *"a skip should be visible in the terminal of whoever typed it."* 🔵 Note also `Gap 423-B`: `git clone` does not copy `.git/hooks`, so in a fresh working copy the hook would not have run at all. **An override that is announced is better than a gate that silently never executed**, and the distinction matters here because this base is re-cloned every pass.
+
+🔵 **The four are a real backlog item and belong to whoever can adjudicate them, not to a pass that merely noticed them:** each is a shelf asserting *no grant* where enumeration finds a candidate, and three of the four hinge on the same question — whether a vendored or `docs/`-path licence counts as the subject's own grant. That is the question `P61` answers for *consumers* (enumerate subtrees, pin each one) and it is the same question the gate is asking about *publishers*.
+
+### 🔧 Corrections filed this pass
+
+| subject | field | was | now (first-hand at p685) |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | stars | `55,474` | **`55,981`** → `55,986` within the pass (live) |
+| `HKUDS/DeepTutor` | grant payload | `Apache-2.0` (no digest) | **`11,408 B` · `cd2f54e1e506`** |
+| `THU-MAIC/OpenMAIC` | stars | `42.8k` | **`42,833`** (exact; reproduces) |
+| `patchy631/ai-engineering-hub` | stars | `41,100` | **`41,309`** |
+| `patchy631/ai-engineering-hub` | grant payload | `1,066 B` (no digest) | **`1,066 B` · `93123909818c`** |
+
+🔵 **The DeepTutor star figure moved three times during one pass** (`55,981` → `55,984` → `55,986`, ~20 minutes). It is pinned in-cell with its read time rather than presented as stable.
+
+
 
 ## 🆕 2026-11-06 (p684) — 🟢 **AN ENTIRE CATEGORY THIS BASE HAD NEVER SWEPT: ACADEMIC INTEGRITY. `337` NOVEL SLUGS, AND ITS PERMISSIVE SUPPLY TOPS OUT AT `16★`. 🔴 AND THE MANDATED `curl -sI` URL CHECK HAS ZERO DISCRIMINATING POWER IN THIS ENVIRONMENT — IT RETURNS `403` FOR `torvalds/linux` AND FOR A REPOSITORY THAT DOES NOT EXIST.**
 

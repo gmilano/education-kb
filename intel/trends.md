@@ -1,12 +1,25 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # 📡 Trends — Education
 
 > What is actually changing in AI + education as of November 2026. Each trend names its evidence and its confidence.
+
+🔴 **Read this before citing any `T` number: four identifiers on this page resolve to two different trends each, and `156` references across the shelves point at them.** Re-measured at p685 by counting headings rather than trusting the last figure: **`87` `## T` headings, `83` distinct numbers, `0` gaps** — so the heading count is *not* the trend count (the `distinct` vs `total` distinction this page records as **T62**). The collisions are **`T31`, `T32`, `T39` and `T40`**, each used once by `p657`/`p658` and again by `p661`/`p664`:
+
+| id | first use | second use | shelf references |
+|---|---|---|--:|
+| `T31` | psychometric measurement layer (`p657`) | regional "zero" as a query artefact (`p664`) | `43` |
+| `T32` | spoken assessment (`p657`) | LATAM adoption vs licensability (`p664`) | `36` |
+| `T39` | permissive code around unlicensed courseware (`p658`) | absence claims refuted in logs (`p661`) | `47` |
+| `T40` | Scratch's two licences (`p658`) | "no permissive supply" claims as adoption gaps (`p661`) | `30` |
+
+🔧 **`p671` annotated the four *headings* and stopped there, which fixed the symptom a reader sees on this page and left the one they cannot see.** A reader arriving from `**T39**` on `repos/foundations.md` still has no way to know which of two unrelated trends was meant.
+
+🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
 ## T1 — The agentic classroom arrives, and it simulates peers
 
@@ -1182,3 +1195,40 @@ p684 ran the four mandated regional demand legs and the four mandated English le
 🔴 **This inverts the direction the mandated legs assume.** Demand legs read secondary commentary, which converges on the same canonical set of statutes and surveys; a base that has already absorbed that set will keep scoring near-total nil on them (`T72`). A *working implementation*, by contrast, cites the statutes its author actually has to comply with — including the ones no commentary mentions, because they are too specific to generalise about.
 
 🟢 **The operational consequence is a reordering, not an abandonment.** Keep the demand legs — they are the control that proves nothing was missed, and the nil is only informative because the denominator is written down. But **mine the shelved repositories' own texts as a demand channel in their own right**: statutes, named examinations, accreditation bodies and funding programmes cited in a README are facts a client's legal team will recognise, and `T78` already ranks them above anything a trend article can offer. This also explains why `T78` rank 2 keeps producing: a statute citation is simultaneously the best **placement** evidence and a novel **demand** fact.
+
+## T82 — A repository name is not a licence, and the collision risk is concentrated exactly where adoption is highest 🟢 new at p685
+
+Measured at p685 across all `104` distinct bare repository names on `agents/top.md`, filtered to exact name equality: **`63` (`60.6 %`) share their name with at least one other repository**, `23` have a namesake whose grant *differs* from the canonical's, and **`43` pair a permissive canonical with a namesake that is copyleft or carries no grant at all.** In total `1,422` foreign repositories wear this shelf's names, of which **`936` (`65.8 %`) have no licence file at all** and `82` are copyleft.
+
+🔴 **The `60.6 %` is not a defect rate**, and quoting it as one would repeat the `p455` error this base already retracted once. A collision is trivial when the name is a dictionary word, and nobody searching for `lumen` is looking for a shelf row. **The risk is a function of the canonical's own adoption**, because adoption is what puts a bare name into a blog post, a README instruction or an agent's tool call:
+
+| canonical adoption | dangerous-class subjects |
+|---|--:|
+| ≥ `10,000★` | **`3`** |
+| ≥ `1,000★` | `6` |
+| ≥ `100★` | `18` |
+| any | `43` |
+
+**All three `≥10,000★` cases are rows this base sells from**, and the sharpest is its #2: `THU-MAIC/OpenMAIC` is **MIT** (`1,065 B`, `ba2525637432`), while `kolbyzhu5/OpenMAIC` and `ChengZhuo2025/OpenMAIC` are both **AGPL-3.0** with a payload that is byte- *and* hash-identical between them (`34,523 B`, `0d96a4ff68ad`). `HKUDS/DeepTutor` is Apache-2.0 while `rddy/deeptutor` is MIT — the quieter half of the defect, where the grant changes permissive-to-permissive and nothing looks wrong.
+
+🔵 **Two consequences, both actionable.** (1) **Resolve by owner-qualified slug, never by bare name** — and treat a bare name in a dependency manifest, a vendoring script or an agent tool definition as a lint error. (2) **Checking for the word "GPL" catches less than a fifth of the class**; the dominant failure is the *ungranted* repository, which conveys no rights at all and is therefore worse than copyleft, not better. The buildable rule is **P61** in `compose/patterns.md`: pin slug **and** payload digest, and enumerate vendored subtrees — because `OpenMAIC`'s own MIT root sits above an LGPL-3.0-or-later vendored subpackage, so a root-only check passes it and still ships copyleft.
+
+**Confidence: high** for the measurements (one instrument, `gh api search/repositories`, exact-name filtered, controls at both signs). **Confidence: moderate** for the risk ordering, which rests on the claim that high adoption drives name-resolution — plausible and consistent with how the legs themselves returned these repositories (the `github trending education AI 2026` leg named `DeepTutor`, `OpenMAIC` and `ai-engineering-hub` **without owners**), but not directly measured.
+
+## T83 — A verification channel certifies nothing until it has been controlled at both signs 🔴 new at p685
+
+`p684` found that the standing quality bar's `curl -sI` URL check returns `403` in this environment for a real repository **and** for one that does not exist, so it can never fail. p685 reproduced that and then found the **same defect in a channel this base had been treating as authoritative**: `gh api repos/<slug>` returns `403` for every repository here, real or imaginary, because repository access is session-scoped — and the error text is identical in both cases (*"GitHub access to this repository is not enabled for this session"*).
+
+| channel | real repo | real repo, absent file | non-existent repo | discriminates? |
+|---|---|---|---|---|
+| `curl -sI github.com/<slug>` | `403` | — | `403` | 🔴 **no** |
+| `gh api repos/<slug>` | `403` | — | `403` | 🔴 **no** |
+| `git ls-remote --symref` | `ref: refs/heads/main` | — | `fatal` | 🟢 **yes** |
+| `raw.githubusercontent.com/.../LICENSE` | `200` + bytes | `404` | `404` | 🟡 **partly** |
+| `gh api search/repositories` | row + stars + SPDX | — | `total_count 0` | 🟢 **yes** |
+
+🟡 **The `raw` row is the one that changes a protocol rather than just annotating it.** It cannot separate *"live repository, no file at that path"* from *"no such repository"* — both are `404`. So the two-channel procedure this base already follows is not stylistic: **existence must come from `ls-remote` first**, and only then does a `404` from `raw` carry the meaning *"ships no grant at that path."* Reversed, or used alone, `raw` would report a nonexistent repository as one with a missing licence.
+
+🔵 **The transferable rule is about instruments, not about GitHub.** A channel that returns the same answer for a true and a false input has zero information content, and it fails *silently* — every candidate "passes", including invented ones. **Any channel used to certify a row must be run against a negative control in the same pass that relies on it**, because scope rules, proxies and rate limits change underneath a base that is re-run hourly: `gh api repos/<slug>` presumably worked when something started depending on it. 🔴 **And a standing instruction can itself be the defect** — the mandated `curl -sI` check is now in its second pass of being demonstrably inert, and no number of passes "complying" with it would have revealed that.
+
+**Confidence: high.** Every row above was measured at p685 with explicit positive and negative controls, on two tools.

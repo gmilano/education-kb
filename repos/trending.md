@@ -1,8 +1,47 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-06
+updated: 2026-11-07
 ---
+
+## 🆕 2026-11-07 (p685) — 🔴 **THE NAMESAKE CENSUS: `104` SHELF NAMES, `1,422` FOREIGN REPOSITORIES WEARING THEM, AND `936` OF THOSE CARRY NO GRANT AT ALL. 🔧 ONE FOUNDATIONS ROW RE-READ AND CORRECTED.**
+
+**One row on [`foundations.md`](./foundations.md) corrected, none added — the `open source platform education ERP CRM MIT Apache` leg returned `10` platforms and all `10` are already in this tree (see [`../verticals/solutions.md`](../verticals/solutions.md)). Full method, controls and the refused inferences are in [`../agents/trending.md`](../agents/trending.md) at p685. Nothing removed from this file.**
+
+### The census
+
+Every distinct bare repository name on `../agents/top.md` (`104`, taken as the text after the last `/` in each row's first repository link), queried with `gh api search/repositories` and filtered to **exact** bare-name equality.
+
+| metric | value |
+|---|--:|
+| distinct names queried | `104` |
+| canonical absent from its own exact-name query | `3` |
+| subjects with ≥1 foreign same-name repository | **`63`** (`60.6 %`) |
+| subjects with a **divergent** grant among namesakes | `23` |
+| subjects: permissive canonical + copyleft-or-ungranted namesake | **`43`** |
+| foreign same-name repositories, total | **`1,422`** |
+| …**no grant at all** | **`936`** (`65.8 %`) |
+| …copyleft | `82` |
+| …permissive | `370` |
+| …other (CC, WTFPL, etc.) | `34` |
+
+🔴 **Concentration, which is the part that matters:** restricted to canonicals at `≥10,000★` — the adoption level at which a name actually gets typed instead of a slug — the dangerous class is `3`, and **all three are rows this base sells from**: `karpathy/nanochat` (`60,340★`, MIT, `46` such namesakes), `HKUDS/DeepTutor` (`55,984★`, Apache-2.0, `23`), `THU-MAIC/OpenMAIC` (`42,834★`, MIT, `56` — two of them **AGPL-3.0** with a byte-identical payload).
+
+### 🔧 The foundations row corrected
+
+| row | field | was | now (first-hand at p685) |
+|---|---|---|---|
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | stars | `41,100` | **`41,309`** |
+| | grant payload | `1,066 B`, no digest | **`1,066 B` · sha256₁₂ `93123909818c`** · `MIT License` title line |
+| | liveness | carried | `ls-remote` → `main`, pushed `2026-11-01` |
+
+🔴 **Its namesake set is the ungranted class in miniature:** five further repositories carry the exact name — `psssnikhil` (`19★`, MIT), `dcoderlab` (`10★`, MIT), `saeedkolivand` (`9★`, MIT) and **`SlickbitTechnologies` (`7★`, no grant at all)**. For a row whose entire value is that it is *permissive curriculum a client may redistribute*, resolving it by name instead of slug can produce a copy with no redistribution right.
+
+### 🔵 Method note, carried forward
+
+The census cost `104` search-API calls at the `30/min` limit and took roughly seven minutes throttled at `2.1 s`. 🔴 **It cannot be run on the `core` API instead:** `gh api repos/<slug>` returns `403` in this session for **every** repository, real or imaginary, because repository access is session-scoped — see `685-D` in [`../agents/trending.md`](../agents/trending.md) for the controlled channel table. The search index is the only metadata channel available here, and `p674`'s index-absence caveat still applies to it: `3` of the `104` canonicals do not appear in their own exact-name query, among them the repository that first defined that condition.
+
+
 
 ## 🆕 2026-11-06 (p684) — 🟢 **THE ACADEMIC-INTEGRITY SHELF, CENSUSED FOR THE FIRST TIME: `395` CANDIDATES, `337` NOVEL (`85.3 %`), AND A `16★` CEILING ON LIVE PERMISSIVE SUPPLY.**
 

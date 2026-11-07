@@ -1,13 +1,13 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
-> 🔄 **Re-counted from the `## P` headings at p681: `56` patterns, `P1`–`P56`, `0` duplicated numbers and `0` gaps.** The heading this replaces said `50`, which was already `4` stale when p680 opened — and the re-count caught a live defect in the process: **p680's own new pattern was first written as `P53`, a number p679 had already used**, because `P54` existed and the highest number is not the last heading in file order. 🔵 **Never number a new pattern from the bottom of the file; number it from `max(## P)`.**
+> 🔄 **Re-counted from the `## P` headings at p685: `61` patterns, `P1`–`P61`, `0` duplicated numbers and `0` gaps — measured, and the previous figure was stale by five.** It read `56` (`p681`'s correct count); `P57`–`P60` were filed beneath it without it being re-counted, and `p685` adds **P61**. 🔵 **Unlike the row counts on the three shelf files, this one is derived from headings, which are unique — so it is a stale *figure*, not an ambiguous *identifier*.** Contrast `intel/trends.md`, where four `T` numbers each denote two different trends and `156` references point at them (see the banner at the top of that file). The heading this replaces said `50`, which was already `4` stale when p680 opened — and the re-count caught a live defect in the process: **p680's own new pattern was first written as `P53`, a number p679 had already used**, because `P54` existed and the highest number is not the last heading in file order. 🔵 **Never number a new pattern from the bottom of the file; number it from `max(## P)`.**
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
@@ -1815,3 +1815,43 @@ All three controls consume files, not APIs, which is why this composes without t
 🟢 **Cost floor is near zero where it needs to be.** `RefExists` is fully client-side with nothing to host and `codeplag` is a PyPI install, so controls `1` and `2` are a complete, deployable deliverable for the `55 %` of LATAM universities with no AI budget line. Controls `3`–`5` are what a funded North American, EMEA or APAC institution adds on top.
 
 ⚠️ **Say the maturity out loud in the proposal.** These are `16★`, `2★` and `2★` repositories — `T79` measured `0` live permissive assets above `20★` in this entire category. That is the opportunity (there is nothing to out-licence) and it is the risk (Globant is taking on maintenance). Price the fork-and-own, and vendor the dependencies.
+
+## P61 — The grant-boundary lockfile: pin dependencies by slug **and** payload digest, and scan vendored subtrees 🟢 new at p685
+
+**The problem this solves is not hypothetical, and p685 measured it on this base's own two largest rows.** A bare repository name does not identify a grant. `THU-MAIC/OpenMAIC` is **MIT**; `kolbyzhu5/OpenMAIC` and `ChengZhuo2025/OpenMAIC` are both **AGPL-3.0** with a byte- and hash-identical payload (`34,523 B`, sha256₁₂ `0d96a4ff68ad`). `HKUDS/DeepTutor` is **Apache-2.0**; `rddy/deeptutor` is **MIT**. `patchy631/ai-engineering-hub` is **MIT**; a same-name repository under `SlickbitTechnologies` carries **no grant at all**. A build that resolves a dependency by name — a README instruction saying *"clone OpenMAIC"*, a vendoring script, a model-context tool that searches by name — can put copyleft, or no licence, under a closed deliverable without a single error being raised.
+
+**And the root `LICENSE` is not sufficient on its own.** This base already found that `THU-MAIC/OpenMAIC` vendors `packages/mathml2omml/LICENSE` under **LGPL-3.0-or-later** (`7,652 B`) beneath an MIT root. A root-only check passes that repository and still ships copyleft.
+
+### Components — all verified first-hand at p685
+
+| Role | Component | Grant, pinned by digest |
+|---|---|---|
+| Classroom agent | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT · `1,065 B` · `ba2525637432` |
+| 1:1 tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · `11,408 B` · `cd2f54e1e506` |
+| Curriculum | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | MIT · `1,066 B` · `93123909818c` |
+| Existence oracle | `git ls-remote --symref <url> HEAD` | — |
+| Payload oracle | `raw.githubusercontent.com/<slug>/<ref>/LICENSE` | — |
+
+### Wiring
+
+```
+grants.lock   (committed, reviewed like any lockfile)
+──────────────────────────────────────────────────────
+slug                      ref    path                            bytes   sha256_12  spdx
+THU-MAIC/OpenMAIC         main   LICENSE                          1065    ba2525637432  MIT
+THU-MAIC/OpenMAIC         main   packages/mathml2omml/LICENSE     7652    <pinned>      LGPL-3.0-or-later
+HKUDS/DeepTutor           main   LICENSE                         11408    cd2f54e1e506  Apache-2.0
+patchy631/ai-engineering-hub main LICENSE                         1066    93123909818c  MIT
+```
+
+1. **Resolve existence by slug, never by name.** `git ls-remote --symref https://github.com/<slug> HEAD` returns the real default ref for a live repository and fails loudly for one that does not exist. Every dependency entry is an owner-qualified slug; a bare name is a lint error.
+2. **Fetch each pinned path and hash the file, not a shell capture.** Write the payload to a file and hash the file — `sha256sum <file>`, never `$(curl ...)`, which strips the trailing newline and silently produces a different digest (this base burned several passes on exactly that, see `intel/trends.md` **T56**).
+3. **Enumerate vendored subtrees, not just the root.** Walk the dependency for every `LICENSE*`, `COPYING*` and `*/LICENSE*` and require each one to be in `grants.lock`. An unpinned grant file appearing in a subtree fails the build — that is the `mathml2omml` case.
+4. **Fail on drift in either direction.** A changed digest means the upstream grant was edited; a new path means a subtree arrived. Both are licence events and both require a human.
+5. **Gate the deliverable boundary, not the repository.** Copyleft entries in `grants.lock` are allowed to exist — they are allowed only on the far side of a process boundary, per this file's base architecture. The lockfile is what makes that rule checkable instead of aspirational.
+
+### Why a digest and not an SPDX string
+
+`gh api search/repositories` reports `license.spdx_id`, and it is a *classifier's opinion* of the payload. This base has found it wrong in both directions — `NOASSERTION` on a clean Apache-2.0 payload (`thm-mni-ii/feedbacksystem`), and an `11,357`/`11,358 B` pair of Apache-2.0 canonicals that no SPDX string can distinguish. **The digest is the fact; the SPDX string is a label on it.** Pin the fact.
+
+🔴 **One honest limit.** The `raw.githubusercontent.com` oracle returns `404` both for a repository that does not exist and for a file that is simply absent from a live repository — p685 ran that control at both signs. So step 1 is not optional: existence must come from `ls-remote`, and only then does a `404` from step 2 mean *"this repository ships no grant at that path"* rather than *"this repository is not there"*.
