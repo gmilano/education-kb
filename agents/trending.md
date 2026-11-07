@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p688) — 🟢 **THREE AGENT ROWS, ONE OF THEM A PROMOTION THIS BASE HAD MENTIONED `24` TIMES AND SHELVED `0` TIMES. 🔴 THE `search/repositories` CHANNEL RETURNS `total_count: 0` FOR A REPOSITORY PUSHED HOURS EARLIER. 🟢 THE AFRICA LEG FINALLY RETURNS AN OPENLY-LICENSED ARTEFACT — AND IT IS A CATALOGUE, NOT CODE**
+
+### 🟢 688-A — Three rows filed to [`top.md`](./top.md)
+
+`76` rows carried in, `3` added → **`79` rows / `79` distinct slugs / `0` duplicates**. 🔧 The shelf heading read `71 rows` on the way in while the table carried `76`; repaired mechanically this pass rather than carried forward again.
+
+| Row | Grant (payload-verified) | Stars | Ref | Last push | Region |
+|---|---|--:|---|---|---|
+| [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** · `LICENSE` · `1,076 B` · `2bcdae923d26` | 1 | `main` | `2026-10-21` | 🔵 refused |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | 🟢 **MIT** · `LICENSE` · `1,072 B` · `ed912ca72d9e` | 0 | `main` | `2026-11-01` | 🔵 refused |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** · `LICENSE` · `1,069 B` · `77a612c534cf` | 1 | `main` | 🟢 `2026-11-07` | 🟢 **North America** |
+
+**`canvas-grader-mcp` is the structurally interesting one.** It is the first shelf row where the human-in-the-loop is a property of the *tool surface*: `12` read-only tools, `4` local-only, and exactly `3` that write to Canvas — `post_staged_grades`, `post_comment`, `add_gradebook_note` — **each requiring `confirm=true`**, with grades staged on the grader's own disk until then. Anonymous and moderated assignments are read-only by construction. Against an Annex III assessment conversation, "cannot post without a second human act" is a specification, not a reassurance, and this base now has an address that implements it.
+
+### 🔴 688-B — The channel finding: `search/repositories` hides forks, and this base relies on that channel
+
+This base's own standing advice is *"never conclude from a `repos/` 403 that an address is dead — use `search/repositories` with a `repo:` qualifier"*. Measured this pass:
+
+| query | `total_count` | verdict |
+|---|--:|---|
+| `repo:mitodl/open-learning-ai-tutor` | 🔴 `0` | would read as "dead or non-existent" |
+| `repo:mitodl/open-learning-ai-tutor fork:true` | 🟢 `1` | `1★`, MIT, `main`, pushed **`2026-11-07T06:47:41Z`** |
+| `git ls-remote --symref` (control) | 🟢 resolves, `main` | correct on the first attempt |
+
+**GitHub's search index excludes forks unless asked.** The repository was pushed *hours before this pass ran*. 🔵 **Rule, now two-armed: `ls-remote` answers existence, `search/repositories` answers what the index holds, and only both together answer "is it dead".** This is the same error shape as the `repos/` `403` this base corrected earlier, in the same channel family, and it is more dangerous because it returns a well-formed, confident zero.
+
+### 🔧 688-C — Canonical-versus-fork, fourth instance, first time the fork is the right answer
+
+| address | shape | commits | stars | last push |
+|---|---|--:|--:|---|
+| `MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor` | org-owned, *looks* canonical | `24` | `0` | 🔴 `2025-02-26` |
+| `mitodl/open-learning-ai-tutor` | **fork** | 🟢 `159` | `1` | 🟢 `2026-11-07` |
+
+`677-F` and `681-D` both caught legs filing a fork where the canonical tree was wanted; p688 inverts it. **The discriminator is activity, not topology.** Both are MIT, so nothing turns on the licence here — but "use the canonical repo" would have pointed a studio at a tree dormant for twenty months. Upstream named on the row so the chain is readable.
+
+### 🔴 688-D — Refused: `tutornew/OpenTutor`, no grant, and the third distinct project of that name
+
+`8★`, `5` commits, last pushed `2026-02-27`. `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` **all `404` on `main`**; `gh api` reports `license: null`. Refused. 🔴 **Three unrelated projects now answer to "OpenTutor"** — `zijinz456/OpenTutor` (MIT, `167★`), `Open-TutorAi/open-tutor-ai-CE` (BSD-3-Clause, `116★`) and this grant-nil one. **Use slugs in client documents, never names.**
+
+### 🟢 688-G — The Africa leg returns something for the first time, and what it returns is a catalogue
+
+Two legs were run — one on policy (`Nigeria Kenya South Africa Egypt`), one on supply (`open source AI education github Africa`). The supply leg produced **[`aicollectiveng/Nigeria-AI-Repository`](https://github.com/aicollectiveng/Nigeria-AI-Repository) — 🟢 CC0-1.0 (`7,048 B`, `a2010f343487`), `26★`, pushed `2026-10-30`**, filed to [`../repos/foundations.md`](../repos/foundations.md). It catalogues Nigerian AI activity and contains two education-relevant entries: **Wazobia** (open chatbot/translator for Hausa, Igbo and Yoruba) and **GMind AI** (teacher platform running with the **Teacher Registration Council of Nigeria**). It also records **Deep Learning Indaba 2026, Lagos, August**.
+
+🔴 **This does not overturn `T14`; it sharpens it.** A CC0 catalogue of products is not a stack to build on. The African education-AI **code** gap stands, and stands after a dedicated leg. What closed is a different gap: this base now holds structured, openly-licensed intelligence about *who builds there*, which is what a co-development motion actually needs.
+
+### 🔵 688-H — Measured and not filed
+
+| Address / claim | Reading | Why not filed |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🔄 **`42,855★`** (`+4` since p687), payload `1,065 B` / `ba2525637432` byte- and hash-exact for the **fourth** consecutive pass, **release `v1.4.1` dated `2026-11-05`**, pushed `2026-11-06T15:39:11Z` | already a row — cell refreshed in place; the `v1.4.1` tag is one minor ahead of the `v1.4.0` this tree cites elsewhere |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🔄 **`41,342★`** MIT, pushed `2026-11-01`; README now claims `93+` projects (`22` beginner / `48` intermediate / `23` advanced) | already a foundations row |
+| [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | 🔄 `5★`, MIT, pushed `2026-08-31` — **two months stale**; `9` curated sections incl. a `Watchlist` | already held; staleness recorded rather than the row re-sold |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** re-confirmed (`34,523 B` / `0d96a4ff68ad`), `2★`, pushed `2026-11-07` | already recorded as copyleft-refused; note it is the most actively pushed Moodle MCP server and still unusable for a closed derivative |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 MIT (`1,072 B`, `c8050f8df7c1`), LangGraph-based tutoring | no adoption signal and no capability this shelf lacks; measured, left unfiled, written down here so the next pass does not re-buy it |
+| `Orkas-AI/Orkas` | 🟢 MIT (`1,075 B`, `52a9cb277496`), the `7k★` "local-first AI team" from the November trending roundups | **out of scope** — general-purpose agent team, not education. Named because trending roundups file it beside `OpenMAIC` and it will keep returning |
+| `rohitg00/ai-engineering-from-scratch`, `ashishpatel26/500-AI-Agents-Projects` | 🟢 MIT both (`d116e214adbc`, `2108a479cb7f`) | curriculum/catalogue material already represented; neither is an agent |
+
+### 🔵 688-I — Leg scorecard
+
+All mandated legs were run: four global (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS/SIS MIT Apache`, `AI education industry trends 2026`) and one per region, plus four unmandated extras — a German-language EMEA leg, a Spanish-language LATAM leg, and the two Africa legs above.
+
+| | count |
+|---|--:|
+| facts tested against HEAD | `58` |
+| 🔵 already held | `49` |
+| 🟢 candidate-novel and adopted | `6` |
+| 🔴 candidate-novel, refused on evidence | `3` (`tutornew/OpenTutor` grant-nil; a directory's MIT claim for `RosarioSIS`; `Orkas` out of scope) |
+
+🟢 **This ends a run of 29 consecutive nil passes on the mandated legs** — and the thing that broke it was not a better query but two **non-English** legs. The German leg produced `AIS.chat`/`KIMADU`/`KoDaS`; the Spanish leg produced nothing, for the third consecutive pass, which is itself now a stable measurement rather than an accident. See [`../intel/market.md`](../intel/market.md) for both.
+
+
 ## 🆕 2026-11-07 (p687) — 🟢 **FIVE AGENT ROWS, NONE FROM A SEARCH LEG, THE LARGEST A `37,173★` MIT REPOSITORY THIS BASE HAD WRITTEN DOWN `26` TIMES AND SHELVED `0` TIMES. 🔧 ONE OPEN FLAG DISCHARGED BY BYTE ARITHMETIC. 🔵 29TH CONSECUTIVE SEARCH-LEG NIL.**
 
 ### 🟢 687-B — Five rows, and the channel that produced all five is this base's own exhaust

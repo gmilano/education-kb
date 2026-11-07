@@ -21,6 +21,32 @@ updated: 2026-11-07
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T94 — The state-operated school AI platform has arrived, it is open source, and it is AGPL
+
+Every school-facing AI platform this base has tracked until now was either a vendor product or a project. **Germany is running one as public infrastructure, in the open:** [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) — `AIS.chat`, formerly `telli` — a **DigitalPakt Schule** sub-project of **AIS** (*Adaptives Intelligentes System*), developed openly since **November 2024**, coordinated by the **FWU** on behalf of **all 16 Bundesländer**, with **12 states live as of 09/2026** on secondary reporting.
+
+**Three consequences, in order of commercial weight:**
+
+1. 🔴 **The grant is AGPL-3.0** (`34,523 B`, sha256₁₂ `8486a10c4393`, byte-read). Network use is distribution: a hosted, state-branded fork owes modified source to teachers and pupils. **This is the first time this base has had to say that about a platform a client would *operate* rather than install.** It redirects the motion from forking to integration across a licence boundary.
+2. 🔵 **Adoption is not measurable in stars.** `27★` on a platform serving twelve federal states. Any shelf or scoring model that ranks education software by stars will rank public infrastructure near zero — and this base's own `agents/top.md` star column is exactly such a model. Read the star column as *developer* adoption, never as deployment.
+3. 🔴 **It was renamed mid-life, and the rename defeated retrieval.** `telli` → `AIS.chat`, **May 2026, trademark reasons**. This base held neither string. The literature indexes the old name; the repository carries the new one. **A product rename is a retrieval failure mode with no current guard**, and the fix is cheap: when a leg returns a renamed artefact, record *both* strings in the cell.
+
+**Confidence: high on the repository and its grant** (read first-hand, `gh api` agrees). **Medium on reach** — the 12-of-16 count and the per-state list are from German education-press and state-portal sources, not from a federal register.
+
+## T95 — Human-in-the-loop is becoming a property of the tool surface, not a sentence in the policy
+
+The sector's governance documents all promise human oversight of AI assessment. [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) (**MIT**) is the first address this base has found where the promise is **structural**:
+
+- the tool list is partitioned — `12` read-only, `4` local-only, **`3` that write to Canvas**;
+- the three writers (`post_staged_grades`, `post_comment`, `add_gradebook_note`) **each require `confirm=true`**;
+- proposed grades are **staged on the grader's own disk** until that second act;
+- **anonymous and moderated assignments are read-only by construction.**
+
+🔵 **Why this is a trend and not a feature.** The EU AI Act's Annex III names *evaluation of learning outcomes* as high risk, and its deployer duties — like the US state guidance this base tracks — are discharged by evidence that a human decided. **A tool that cannot post without a second human act produces that evidence as a by-product of working.** Compare the alternative already on this shelf: [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (MIT) grades directly. Same licence, same LMS, opposite conformity posture.
+
+🔴 **The counter-reading, stated because it will come up in a client room:** the same README is explicit that student work still reaches the model behind the client, and names FERPA. **Confirmation gating is an *authority* control, not a *data* control** — it decides who decides, not where the data goes. A conformity story needs both, and the second half is a hosting decision, not a tool choice. See [`../compose/patterns.md`](../compose/patterns.md) **P64**.
+
+
 ## T91 — An Apache-2.0 payload's byte count is not its identity, and this pass measured five of them
 *Added p687. Confidence: **high** — five payloads read first-hand the same day, every size and digest reproduced.*
 
@@ -185,6 +211,9 @@ Previous passes recorded "no Africa-specific data" as a gap. The gap was in the 
 **The commercial reading, which is different from every other region:** elsewhere the motion is "adopt the regional open source stack and extend it". For Africa there is no stack to adopt, so the motion is **co-development with existing product teams**, and the differentiating capability is offline-first architecture rather than model work. The one thing that would change this is the stated Google/Fab AI programme with innovators in Kenya, Ghana and South Africa, under which **datasets, evaluation suites and open-source models are to be published**. Worth watching specifically.
 
 **Confidence: medium.** Every item rests on secondary reporting; `blog.google` does not resolve under this session's network policy, so Google's own announcements could not be read first-hand. The *absence* of African open-source supply is the better-evidenced half, since it survived a dedicated search.
+
+
+🔧 **Sharpened at p688, not overturned.** Two further dedicated legs were run — one on policy (Nigeria, Kenya, South Africa, Egypt), one on supply. **The supply leg produced the first openly-licensed Africa-origin artefact this base has been able to file: [`aicollectiveng/Nigeria-AI-Repository`](https://github.com/aicollectiveng/Nigeria-AI-Repository) (CC0-1.0, `7,048 B` / `a2010f343487`, `26★`)** — and it is a **catalogue of products**, carrying **Wazobia** (open chatbot/translator for Hausa, Igbo, Yoruba) and **GMind AI** (teacher platform with the **Teacher Registration Council of Nigeria**), plus **Deep Learning Indaba 2026, Lagos, August**. 🔴 **A catalogue of products is not a stack to build on, so the headline above stands: the code gap is real and survives a third dedicated search.** What *did* close is a different gap — this base now holds openly-licensed, structured intelligence about **who builds there**, which is precisely the input a co-development motion needs. 🟢 **New policy datapoint:** **Egypt's National Generative AI Guidelines (2026)** are indexed under education and skills — the first Egyptian education-facing instrument located here, school-specific content unread. **The OECD's `Strengthening AI governance in Africa` (April 2026) is named as the primary source a future pass should read.** 🔴 `blog.google` still does not resolve, so the Fab AI open-release commitment remains a watch item on secondary sourcing for a second pass.
 
 ## T15 — The EU is now the *last* of three binding education-AI deadlines, not the forcing function
 

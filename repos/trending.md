@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p688) — 🟢 **ONE FOUNDATIONS ROW AND ONE PLATFORM ROW, BOTH FROM NON-ENGLISH OR AFRICA-SPECIFIC LEGS. 🔴 A PUBLIC DIRECTORY CALLS A GPL-2.0 SIS "MIT" — SECOND SPECIMEN OF THE LICENCE-TRUTH DELIVERABLE. 🟢 THE TRENDING ROUNDUPS' OWN NUMBERS, RE-MEASURED AGAINST THE API**
+
+### 🟢 688-J — Two rows, and neither came from an English-language global leg
+
+| Shelf | Row | Grant (payload-verified) | Stars | Last push | Region |
+|---|---|---|--:|---|---|
+| [`foundations.md`](./foundations.md) | [`aicollectiveng/Nigeria-AI-Repository`](https://github.com/aicollectiveng/Nigeria-AI-Repository) | 🟢 **CC0-1.0** · `LICENSE` · `7,048 B` · `a2010f343487` | **26** | `2026-10-30` | 🟢 **EMEA** (Nigeria, owner is AI Collective Nigeria) |
+| [`../verticals/solutions.md`](../verticals/solutions.md) | [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🔴 **AGPL-3.0** · `LICENSE` · **`34,523 B`** · `8486a10c4393` | **27** | `2026-11-06` | 🟢 **EMEA** (Germany, FWU acting for all 16 Bundesländer) |
+
+**`AIS.chat` is the find of the pass.** It is the AI chatbot for German schools: an **AIS** (*Adaptives Intelligentes System*) sub-project under **DigitalPakt Schule**, developed in the open since **November 2024**, coordinated by the **FWU** — the media institute of all **16 Bundesländer** — with secondary reporting putting **12 of 16 states live as of 09/2026**. 🔴 **It was renamed from `telli` to `AIS.chat` in May 2026 for trademark reasons, and this base held neither name**: a grep of the whole tree for `AIS.chat` returned `0`, and every apparent hit for `telli` was a substring of *intelligent*/*intelligence*. **A rename is a retrieval failure mode this base has no guard against** — the old name is in the literature, the new name is on the repository, and a leg that searches either one alone finds half the story.
+
+### 🔴 688-F — Second specimen: a current directory lists `RosarioSIS` as MIT; the payload is GPL-2.0
+
+The mandated platform leg (`open source platform education LMS/SIS MIT Apache`) returned an `awesome-selfhosted`-derived listing placing **RosarioSIS in its MIT column**. Read first-hand:
+
+| channel | reading `2026-11-07` |
+|---|---|
+| `git ls-remote --symref` | 🟡 resolves — real default branch is **`mobile`**, not `main`/`master`. A probe against `/main/LICENSE` 404s and would read as "no grant" |
+| `LICENSE` at `mobile` | 🔴 **`15,214 B`**, sha256₁₂ `d954e14e5c75` |
+| the payload's own header | 🔴 `GNU GENERAL PUBLIC LICENSE` / `Version 2, June 1991` |
+| the directory's claim | 🔴 **MIT** |
+
+🔵 **This is the second independent directory this base has caught mis-stating copyleft as permissive**, after the `LearnHouse` case, and **both errors run in the expensive direction**: a studio that trusts the table ships a hosted fork and acquires a disclosure obligation it never priced. Two specimens, two different directories, two different grant families (GPL-2.0 and AGPL-3.0) — the licence-truth deliverable is now evidenced rather than argued.
+
+### 🟢 688-K — The November trending roundups, re-measured against the API
+
+The `github trending education AI 2026` leg resolves almost entirely to third-party roundup blogs. Every repository-level number they gave was re-measured first-hand:
+
+| Roundup claim | Measured `2026-11-07` | Verdict |
+|---|---|---|
+| `THU-MAIC/OpenMAIC` "≈42,318★, 6,522 forks" | 🟢 **`42,855★`**, MIT, pushed `2026-11-06`, release **`v1.4.1` (`2026-11-05`)** | low but directionally right; already a shelf row |
+| `HKUDS/DeepTutor` "≈45K★" | 🔴 this base's own cell reads **`56,080★`** (p687, first-hand) | the roundup is `~11k` stale — **a trending blog is a lagging indicator** |
+| `patchy631/ai-engineering-hub` "≈40K★" | 🟢 **`41,342★`**, MIT, pushed `2026-11-01` | accurate; already a foundations row |
+| `Orkas-AI/Orkas` "7,016★, 1,044 on day one" | 🟢 MIT (`1,075 B`, `52a9cb277496`) | 🔵 **out of scope** — general-purpose agent team, not education |
+| `rohitg00/ai-engineering-from-scratch` | 🟢 MIT (`1,070 B`, `d116e214adbc`) | curriculum, not a repo to build on |
+| `KaynXu/awesome-ai-education` | 🟢 MIT, **`5★`**, pushed `2026-08-31` | 🔴 the roundups present it as current; it is **two months stale** |
+
+🔵 **Standing reading, re-confirmed:** this sector's trending coverage runs behind the API by weeks and rounds stars to the nearest `5k`. Use the roundups to *find* slugs; never to quote numbers.
+
+### 🔵 688-L — Platform leg: what it returned and what was already held
+
+`10` platforms returned (RosarioSIS, OpenOLAT, Chamilo, ILIAS, Moodle, Open edX, OpenEduCat, Sakai, dotLRN, Edly's hosted Open edX). **`9` of `10` are already rows on [`../verticals/solutions.md`](../verticals/solutions.md).** The tenth, **dotLRN**, was sourced from a 2016 academic paper and is not a live tree — recorded here so it is not re-bought. 🟢 **`OpenOLAT/OpenOLAT` re-measured first-hand: `449★`, `master`, pushed `2026-11-06`, `LICENSE` `10,982 B` / `6dbc5b605ed0` = Apache-2.0**, while `gh api` still reports `spdx = NOASSERTION` — the discrepancy this base already documents, re-confirmed for another pass.
+
+
 ## 🆕 2026-11-07 (p687) — 🔴 **THIS BASE'S OWN `trending.md` IS ITS BEST UNWORKED SOURCE: `3,472` VERIFIED SLUGS MENTIONED AND NEVER SHELVED, THE LARGEST A `37,173★` MIT REPOSITORY. 🟢 FIVE FOUNDATIONS ROWS AND THREE PLATFORM ROWS, TWO OF THEM REPAIRS. 🔵 29TH CONSECUTIVE SEARCH-LEG NIL.**
 
 ### 🔴 687-A — The promotion leak, measured: `3,472` slugs in trending, absent from every shelf page

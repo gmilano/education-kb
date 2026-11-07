@@ -725,6 +725,45 @@ THE LEARNER'S OWN COURSE MATERIALS  (lecture PDFs, scanned problem sets, past pa
 
 **Delivery notes.** Pair with `GuilhermeScarpini/agente-bncc-professores` (MIT, LATAM-placed) for the teacher-side generator, and note that `THU-MAIC/OpenMAIC` ships **Portuguese (Brazil)** and **Spanish (Mexico)** locales, so an APAC-built classroom platform is a legitimate delivery vehicle in the region. 🔴 **Compliance:** `bncc-pacotes`' licence carves the **name and visual identity** out of the grant — a Globant derivative must not present itself as `bncc.dev`, and the canonical mark is declared in a repository (`bncc-dev/bncc-site`) that is **not public**, so get the attribution wording agreed in writing rather than inferred. 🔴 **Scope honestly:** this pattern is **Brazil-specific**. No equivalent curriculum-plus-benchmark stack exists for Mexico, Colombia, Chile or Argentina in this base — for those, P26 becomes "build layer 1 first", which is a different and longer engagement.
 
+## P64 — Grading assistance that *cannot* post a grade on its own (EMEA higher education before the Dec 2027 Annex III date; North America districts under FERPA: 5–7 weeks) 🟢 new at p688
+
+**The problem this solves.** Annex III of the EU AI Act names *evaluation of learning outcomes* as high risk, and both it and US state guidance discharge on evidence that a human decided. Most AI-grading pilots produce a grade and a promise. This one produces a grade, a staged artefact, and an audit trail — by construction.
+
+**The stack, every component permissive:**
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| Grading surface | [`kaushikgunasekaren/canvas-grader-mcp`](https://github.com/kaushikgunasekaren/canvas-grader-mcp) | 🟢 **MIT** (`1,076 B`, `2bcdae923d26`) | `12` read-only / `4` local-only / **`3` Canvas writers, each requiring `confirm=true`**; grades staged on the grader's disk; anonymous and moderated assignments read-only by construction |
+| Course surface (breadth) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | ~102–128 tools plus agent skills; use it for everything *except* the grade write |
+| Learner-side mirror | [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | 🟢 **MIT** (`1,072 B`, `ed912ca72d9e`) | `21` tools, `20` read-only; the exception writes an `.ics` on the learner's own machine. Gives the pilot a learner view with **zero** write surface into the institution |
+| Evidence spine | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | xAPI Learning Record Store; one statement per `stage_grade` → `post_staged_grades` transition **is** the human-decision record |
+| Mastery layer (optional) | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** | Bayesian Knowledge Tracing and a frozen rubric behind one tool surface, if the client wants per-skill rather than per-assignment judgement |
+
+**Wiring.** One MCP client (Claude Code / Cursor / Codex) mounts `canvas-grader-mcp` **and** `canvas-mcp`; the grader server holds the only Canvas write path. A thin adapter subscribes to the grader's staging directory and emits two xAPI statements to `lrsql` — `proposed` when a grade is staged, `confirmed` with the actor identity when `post_staged_grades` runs with `confirm=true`. Per-course grading guidelines live in `set_grading_guidelines`, on the grader's machine, never in the model's context by default.
+
+**Weeks.** `1` Canvas token scoping + read-only verification against a sandbox course · `2` grader mount, rubric ingest, staging review with two real graders · `3` `lrsql` + adapter, statement schema agreed with the institution's data office · `4` pilot on one course, every posted grade traced end to end · `5` exception handling (anonymous/moderated assignments, late policy, regrades) · `6–7` second faculty, documentation pack.
+
+🔴 **Say this out loud in the room, because the README does:** confirmation gating is an **authority** control, not a **data** control. Student work still reaches the model behind the client. The data half is a hosting decision — self-hosted weights, or a contracted provider with the institution's DPA — and it is **not** solved by this pattern. A conformity story needs both halves; selling one as both is how a pilot fails its first audit.
+
+🟢 **Licence position:** MIT + MIT + MIT + Apache-2.0. **A closed, client-branded derivative is permitted end to end**, which is what makes this resellable rather than a one-off.
+
+## P65 — Integrating with a state-operated platform across an AGPL boundary (German Länder, EMEA public sector: 8–10 weeks) 🟢 new at p688
+
+**The problem this solves.** A German state already runs [`AIS.chat`](https://github.com/FWU-DE/ais-chat) (formerly `telli`) — FWU, DigitalPakt Schule, 16 Bundesländer, 12 live as of 09/2026. The instinct is to fork it. **The grant forbids that commercially:** AGPL-3.0 (`34,523 B`, `8486a10c4393`), and network use is distribution, so a hosted state-branded fork owes modified source to teachers and pupils.
+
+**The motion is therefore beside it, not inside it:**
+
+1. **Leave `ais-chat` unforked.** It is the chat surface the Land already procured and operates. Integrate; do not vendor it into your tree.
+2. **Build the layers it does not have, as separate services with documented interfaces** — curriculum alignment, assessment, analytics, LMS bridging. Keep every line of this out of the AGPL source tree so the obligation does not reach it.
+3. **Bridge to the school-side systems with permissive components already on this shelf:** [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (MIT, Rust, 22 tools, assignments read *and* submit) for Moodle states; [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (🟢 Apache-2.0, `449★`) where a permissive institutional LMS is in play — and note `gh api` still reports its SPDX as `NOASSERTION` while the payload is byte-exact Apache-2.0, so read the payload in the client's due-diligence pack.
+4. **Use the state's own vocabulary.** NRW's **KIMADU** programme (University of Siegen) splits didactic agents into **`Lehrpartner`** (teacher-side planning) and **`Lernpartner`** (pupil-side), with a **`KRAFT+` meta-agent** for teachers. That taxonomy maps one-to-one onto the shelf: `canvas-grader-mcp`/`moodle-mcp` are `Lehrpartner`, `canvas-lms-student-mcp`/`moodle-student-mcp` are `Lernpartner`. **Proposing in the client's own terms is free and it lands.**
+5. **Price the procurement correctly.** Six Länder signed a framework worth **up to €67.5M** for the open-source **KoDaS** platform. This is not a pilot-sized buyer, and the comparable is an infrastructure programme, not a tool licence.
+
+**Weeks.** `1–2` read the AGPL boundary with counsel; write down exactly which repositories are touched and which are not · `3–4` interface contract with the Land's operator (auth, logging, data residency; `F13`-style BITBW-operated hosting is the regional precedent) · `5–7` build the adjacent service · `8` licence-hygiene review: dependency graph, not just the top-level repo — `T16`'s rule applies, and `OpenMAIC`'s LGPL-3.0 `mathml2omml` workspace package is the standing example of how a permissive headline hides a copyleft leaf · `9–10` conformity documentation and handover.
+
+🔵 **Why this pattern generalises beyond Germany.** Finland's `Opetushallitus` family is **EUPL-1.1/1.2**, Germany's is **AGPL-3.0**: European public education infrastructure is converging on reciprocal licences, not permissive ones. **"Integrate across a licence boundary" is becoming the default EMEA public-sector shape**, and the studios that can state the boundary precisely will win work from the ones that fork first and read the grant later.
+
+
 ## Choosing a pattern
 
 | Client situation | Pattern | Why |
