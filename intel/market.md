@@ -106,6 +106,13 @@ Three facts shape every engagement:
 
 ### North America
 
+### 🔵 p691 — North America: the leg nilled a 32nd time, and the standing gap is that this region is in practice `US`-shaped
+
+🔴 **Leg run** (`AI education North America 2026 adoption regulation players`). **`6` instruments returned, `6` already held, `0` novel.** Held: **`134`** AI-in-education bills across **`31`** states (Multistate tracker, favouring research, transparency and guardrails over adoption mandates); **North Carolina Session Law 2026-41** and its three dated milestones — state model policy by **`2026-12-31`**, local school-unit policies by **`2027-06-30`**, teacher professional development by **`2028-06-30`**; the federal Department of Education's **AI grant-priority rule finalised `2026-04-13`**; **New York City's** traffic-light guidance (March 2026, with no statewide K-12 framework); **Maryland SB 720**; and the student-authored *STUDENTS FIRST Act of 2026* this page already carries above.
+
+🔴 **The gap the leg produced again, and it is a scoping defect in the mandated leg rather than a thin result: `North America` returns the United States and nothing else.** Across the nine sources this leg served, **Canada and Mexico drew no substantive coverage at all** — no federal or provincial instrument, no adoption figure, no named player. For a Canadian or Mexican engagement this section is a US brief wearing a continental label. 🔵 **Consequence, stated as an instruction to the next pass:** the term `North America` is not a search key for this region's other two jurisdictions; they need their own legs (`Canada`/`provincial`/`Ontario`, `Mexico`/`SEP`) before the `12` North America rows on [`../agents/top.md`](../agents/top.md) can be read as continental coverage.
+
+
 ### 🔵 p690 — North America: the leg nilled a 31st time, and the denominator is the deliverable
 
 🔴 **`11 / 11` facts the leg returned were already held.** Written out so the next pass does not re-buy them: `134` AI-in-education bills across `31` states in 2026; Maryland **SB 720** (AI-Ready Schools Act); New York **A 9190** (classroom AI limited to grade 9 and above, with diagnostic and special-education exceptions); California **AB 1159** (bars student data from training AI models) and **SB 243** (chatbot safety and disclosure); Ohio's **July 2026** district written-policy deadline; the House Education and Workforce Committee's **K-12 AI Literacy and Readiness Act of 2026**; the DC education office's non-mandatory policy **barring AI from grading, discipline and IEP decisions**; North Carolina's **$10 M** Khanmigo earmark; **Gallup** at `60 %` of US teachers using AI tools (>`2,200` educators); most US public schools still without formal student AI policy (Child Trends / ED); and UNESCO's `70 %` of institutions in Europe and North America with AI guidance in place or in development. 🟢 **Maryland, Idaho, Oklahoma and Virginia requiring both state guidance *and* mandatory district policy** is held. **No new address and no new figure.**
@@ -416,6 +423,21 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+### 🔵 p691 — EMEA: the content nilled, the Omnibus took a **fourth** independent confirmation, and the CHANNEL verdict is the finding — `ACTION LI` limb `2` should now close NEGATIVE
+
+🔴 **Leg run** (`AI education EMEA 2026 adoption regulation players`). Content: **`0` novel.** Re-served and held — **Regulation (EU) 2026/1744** (Digital Omnibus on AI; Parliament `2026-06-16`, Council `2026-06-29`, in force **`2026-07-27`**) moving stand-alone **Annex III** high-risk obligations, the category that contains education assessment and admissions, from `2026-08-02` to **`2027-12-02`**, and Annex I embedded systems to **`2028-08-02`**; Article `50` transparency and the **`2026-12-02`** marking deadline unmoved; the UAE's **KHDA** guidance to Dubai private schools.
+
+🟢 **One citation finer than this base held.** The provision effecting the deferral is given as **Article `113`, third paragraph, point (c)(i)**. This tree held `Article 113` but not the sub-point (`113(3)` returned no hit before this pass). 🟡 **Tier is unchanged — `search-summary`, single source for the sub-point** — so it is recorded as a lead for `gap 110` (Article `113` verbatim), not as a primary reading.
+
+🟢 **The standards-decoupling now has a fourth independent channel.** `ACTION LI` limb `1` — that the *"conditional on harmonised standards"* trigger was **dropped for fixed calendar dates** — was agreed across three channels; this leg makes four, with the recitals still citing late `JTC 21` standards as a *reason* while the dates no longer depend on them. **For an EMEA engagement the practical reading is unchanged and worth restating: `2027-12-02` is a fixed close, not a condition that can slip with the standards.**
+
+🔴 **Limb `2` is the finding, and three more hosts failed this pass.** `ACTION LI` limb `2` asks for the Omnibus on **any channel that is not a vendor blog**. Attempted and failed at the DNS layer (`ENOTFOUND`, outside this session's network policy): **`artificialintelligenceact.eu`**, **`eur-lex.europa.eu`**, **`fpf.org`** — the last a think-tank, i.e. exactly the non-vendor channel the action pre-registered. 🔵 **And the failure MODE changed, which is worth recording rather than smoothing over:** `p171` logged `eur-lex.europa.eu` as **`403` at the CONNECT layer** (an egress-policy denial); this pass gets **DNS `ENOTFOUND`** for the same host. Neither is retryable and neither is transport-fixable, but they are different refusals, so *"403 at CONNECT"* should not be restated as a permanent property of the host.
+
+🔵 **Recommendation, stated so a later pass can act on it rather than re-buy it: close `ACTION LI` limb `2` on its SECOND branch** — declare EU legal text **permanently secondary in this environment** and stop pre-registering primary reads. Seven distinct attempts across four passes have now failed on three different hosts and two different mechanisms. The date itself is not in doubt; what is unobtainable here is the Official Journal wording, and `gap 110` should be re-labelled *blocked-by-environment* rather than *open*.
+
+🔴 **An internal inconsistency this pass found and is deliberately NOT rewriting.** [`open-gaps.md`](./open-gaps.md) at `L23515` still states that Annex III *"is a BACKSTOP conditioned on harmonised standards being available"* — the framing that this base's own `ACTION LI` limb `1` has since refuted on four channels. 🔵 **It is left in place because it is a dated `p171` record of what that pass believed, and rewriting a historical finding destroys the audit trail;** it is flagged here instead. A reader hitting that line should take **this** section as the current reading. **Anyone compiling a conditional-date assumption out of `L23515` would plan an EMEA Annex III deployment against a date that can move, and it cannot.**
+
 
 ### 🔵 p690 — EMEA: the leg nilled, and this pass's finding is that **Europe's public-sector education software reads as unlicensed to every scanner**
 
@@ -824,6 +846,15 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+### 🔵 p691 — APAC: the leg nilled, and Vietnam's education clauses now have a third independent reading at clause level
+
+🔴 **Leg run** (`AI education APAC 2026 adoption regulation players`). **`7` instruments returned, `7` already held, `0` novel.** Held: **South Korea's AI Basic Act in force `2026-01-22`**, enforcement decrees still being finalised with a guidance-first grace period through 2026; **China** as the region's most comprehensive regime (mandatory registration, content-labelling duties); **Japan's** light-touch voluntary governance; **Australia's TEQSA** requiring *all* higher-education providers to file institutional action plans on generative-AI risk; **Singapore's MAS** consultation on AI Risk Management Guidelines plus `AI Verify`; and Malaysia/Australia/New Zealand embedding *"mandatory guardrails"* sectorally rather than by standalone statute.
+
+🟢 **Vietnam re-read at clause level, and the commercially decisive detail is the qualifier rather than the listing.** The statute is **Law `134/2025/QH15`** (in force **`2026-03-01`**) and the list is **Decision `33/2026/QD-TTg`** — `46` high-risk systems across `6` sectors. Education's three entries: **(1)** systems generating **self-learning content from uncontrolled data sources**; **(2)** **automated examination, assessment of learning outcomes, or ranking of learners**; **(3)** **biometric learner monitoring**, facial recognition and eye tracking named. 🔵 **Entry (2) is conditional, and the condition is the whole engagement question:** it bites only where the system's output is *"used as the official basis for assessing learning outcomes, evaluating competencies, or ranking learners"* **and** the use sits **inside the national education system**. A formative tutor that never issues the record of attainment is outside it; the same model wired to the gradebook of record is inside it. **Transition:** existing systems in **education, healthcare and finance** have until **`2027-09-01`**; all other existing high-risk systems until **`2027-03-01`**.
+
+🟡 **Source disagreement recorded rather than resolved.** One outlet calls the instrument *"Decree 33"* and dates it `30 June`; the Vietnamese-law text calls it a **Prime Minister Decision**, and the majority of sources date its effect **`2026-08-15`**. The instrument number and the education clauses agree across all of them; only the form and the effective date diverge. **`0` novel facts** — the only string in this leg absent from the tree was the phrase *"biometric learner"*, which is wording, not a fact.
+
+
 ### 🟢 p690 — APAC: **`Gap 304` is resolved** — Vietnam's statute confirmed on a second independent channel, with a new education compliance date
 
 🟢 **This is the only region that gained a fact this pass, and it closes a named gap rather than opening an address.** `Gap 304` recorded Vietnam's AI statute as carried from a *secondary* channel with a live source conflict: one channel called the instrument a *Digital Technology Industry Law* effective 2026, and the statute text was unreachable. 🟢 **Both halves are now settled, and the base's reading was the correct one:**
@@ -1153,6 +1184,28 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+### 🔵 p691 — LATAM: the demand leg nilled, and the SUPPLY side was measured directly for the first time. The region's thin shelf is a **supply** gap, not a search failure
+
+🔴 **Demand leg** (`AI education LATAM 2026 adoption regulation players`). **`7` facts returned, `7` already held, `0` novel.** Held: the Digital Education Council survey at **`92%` of students and `79%` of faculty** actively engaging with AI; UNESCO's finding that **`87%`** of surveyed institutions use AI in some capacity while only **`26%`** have a formal AI strategy, with adoption driven by individual academics rather than institutional strategy; **`~45%`** of LatAm/Caribbean institutions having or developing AI guidance against **`~70%`** in Europe and North America; **`716`** AI-related regulatory instruments and proposals across **`23`** countries and territories; the **UNESCO Observatory on AI in Education for Latin America and the Caribbean** (launched April 2026; partners **CAF**, **CENIA**, **ECLAC**, **Fundación Ceibal**, **Fundación Santillana**, **Tecnológico de Monterrey**, **ProFuturo**); and the regional market at **`$0.67bn` (2026) → `$2.1bn` (2030)` @ `33.5%` CAGR**.
+
+🟢 **New at this pass, and it is a measurement rather than a find: the Spanish/Portuguese permissive supply was probed directly, and it is close to empty of agents.** Seven single-term probes against `search/repositories` (`stars:>20`, `docente` at `stars:>10`):
+
+| Probe | `total_count` | Novel + permissive | Education **AI agents** among them |
+|---|--:|--:|--:|
+| `educacion` | `8` | `3` | **`0`** |
+| `educativa` | `7` | `1` | **`0`** |
+| `educacao` | `15` | `3` | **`0`** |
+| `aprendizaje` | `37` | `11` | **`0`** |
+| `escolar` | `8` | `1` | **`0`** |
+| `docente` | `12` | `0` | **`0`** |
+| `profesor` | `3` | `0` | **`0`** |
+| **Total** | **`90`** | **`19`** | **🔴 `0`** |
+
+🔴 **Not one of the `19` is an education AI agent.** They are course material (`joanby/cursos-unity-5`, `mizaelsouto/CursoTecnico`, `DiploDatos/IntroduccionAprendizajeAutomatico`, `paulovillarroel/aprendiendo_python`), learning roadmaps (`mouredev/Android-Developer-Roadmap`, `DataScienceResearchPeru/OpenSource-RoadMap-DataScience`, `LeonardoRH/Universidade-Livre-ciencia-da-computacao`), or tools with no education function that matched only on a Spanish-language description (`pepeangell5/RF-KILL`, `devsebastian44/IP-Tracker`, `hectorpadin1/Network-Intrusion-Detection-System`). **Named here so the next pass does not re-buy this leg.**
+
+🔵 **Why this channel systematically under-reads the region, and it is a property of the index rather than of LATAM.** GitHub free-text search matches **name, description and topics — not README**. A Chilean or Brazilian project whose README is Spanish or Portuguese but whose `description` is written in English is **invisible** to every probe above; what the probe *does* surface is the opposite error, an unrelated tool with a Spanish description. **So the `5` LATAM rows on [`../agents/top.md`](../agents/top.md) are a measured floor on this channel, not an estimate of the region's true supply**, and the honest statement for a LATAM engagement brief is that the regional open-source agent layer is **unmeasured**, not that it is absent. 🔵 The build consequence is drawn out as a recipe at [`../compose/patterns.md`](../compose/patterns.md) **`P71`**: for Spanish/Portuguese delivery there is nothing to fork, so the surface gets **assembled** from permissive parts this base already holds.
+
 
 ### 🔴 p690 — LATAM: the leg nilled a **fifth** consecutive time, and the denominator is written down
 
@@ -1522,6 +1575,13 @@ client.
 - 🟢 **The commercial read for the region is the budget line, not the technology.** `55 %` of LATAM universities have no AI budget and public universities have the lowest rate of dedicated funding, which rules out anything that needs hosting. `DSL4-Digital/RefExists` runs **entirely in the browser with nothing to host**, and `OSLL/code-plagiarism` is a PyPI install on a laptop — so the integrity control that EMEA will buy as compliance is the one LATAM can deploy at zero infrastructure cost. **P60** is specified so that the client-side-only subset is a complete deliverable on its own.
 
 ### Global
+
+### 🔵 p691 — Global: discovery nilled on two independent channels, `32 / 32` candidates already shelved
+
+🔴 **Both mandated discovery legs returned only subjects this base already carries.** The four keyword legs (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) yielded `10` checkable repositories — **`10/10` already shelved**, including `hugohe3/ppt-master`, `Gego-K12/gegok12`, `idurar/idurar-erp-crm`, `krayin/laravel-crm`, `hcengineering/platform`, `openeducat/openeducat_erp`, `patchy631/ai-engineering-hub`, `845421145-lang/agents-radar` and `apache/ofbiz`. Five structured `search/repositories` topic legs (`topic:education`+`topic:ai-agent`, `topic:education-ai`, `topic:ai-tutor`, `topic:intelligent-tutoring-system`, `topic:lms`+`topic:ai`) yielded `22` distinct permissive candidates — **`22/22` already shelved**. **Combined `32/32`.**
+
+🟡 **The streak count is deliberately NOT asserted.** `p680` published a *"27th consecutive nil"* and `p687` then filed three rows and `p688` one, so the counter that page incremented had already been broken when it was quoted. This pass records **a nil** and leaves the running total alone; a streak figure that survives its own refutation is worse than no figure.
+
 
 #### 🔵 p689 — the four global legs nilled for the thirtieth consecutive pass, and this time the *repository* yield was scored too
 

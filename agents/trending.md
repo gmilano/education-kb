@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p691) — 🔴 **DISCOVERY NILLED ON TWO CHANNELS (`32/32` ALREADY SHELVED), AND THE PASS'S PRODUCT IS A PROBE-FAILURE CLASS: A `total_count: 0` THAT WAS NOT A FINDING**
+
+### 🔴 691-A — The nil, measured on two independent channels
+
+`0` rows added. The four mandated keyword legs returned `10` checkable repositories and **`10/10` were already on a shelf** (`hugohe3/ppt-master`, `Gego-K12/gegok12`, `idurar/idurar-erp-crm`, `krayin/laravel-crm`, `hcengineering/platform`, `openeducat/openeducat_erp`, `patchy631/ai-engineering-hub`, `845421145-lang/agents-radar`, `apache/ofbiz`). Five structured `search/repositories` topic legs returned `22` distinct permissive candidates and **`22/22` were already shelved**. **Combined: `32/32` known, `0` adoptable.**
+
+🟡 **The streak count is deliberately not asserted.** `p680` published a *"27th consecutive nil"*; `p687` then filed three rows and `p688` one. The counter was already refuted when it was quoted, so this pass records *a* nil and leaves the total alone.
+
+### 🔴 691-B — A `total_count: 0` has two causes and only one of them is a finding
+
+🔴 **Five probes returned `total_count: 0` and the run looked like a clean regional nil. It was not.** The queries were `educacion ia tutor`, `educación inteligencia artificial`, `educacao ia professor`, `tutor inteligente educacion`, `plataforma educativa ia`, each with `stars:>5`. `690-C` had already warned that a zero can be a probe failure shaped exactly like a result, so the zero was tested instead of published.
+
+**Control, run on the same channel in the same session:**
+
+| Probe | `total_count` | Reads as |
+|---|--:|---|
+| `topic:ai-tutor stars:>50` (qualifier) | `26` | 🟢 channel open |
+| free-text `machine learning` | `1,320,779` | 🟢 free-text open |
+| free-text `education` | `284,220` | 🟢 free-text open |
+| free-text `moodle` | `36,294` | 🟢 free-text open |
+| free-text `tutor` | `901,198` | 🟢 free-text open |
+
+🟢 **Diagnosis: the channel was never blocked. The queries were over-constrained.** Free-text terms are **ANDed**, so `educacion ia tutor stars:>5` demanded all three strings in one repository's indexed fields. Decomposed to single terms the same channel answers immediately: `educacion` `8`, `educativa` `7`, `educacao` `15`, `aprendizaje` `37`, `escolar` `8`, `docente` `12`, `profesor` `3`.
+
+🔵 **New shelf rule, stated as a procedure.** A `total_count: 0` is **not publishable as a nil** until it has been (1) re-run against a known-positive control on the same channel in the same session, and (2) **decomposed** — every multi-term conjunction split into single terms. A zero from a 3-way AND is a statement about the conjunction, not about the supply. This is the complement of `690-C`: that pass found zeros that were transport failures; this pass found zeros that were **query-construction** failures, and the two are indistinguishable at the call site.
+
+🔵 **And a property of the index that bears on every non-English leg this base will ever run:** GitHub free-text matches **name, description and topics — not README**. A project whose README is Spanish or Portuguese but whose `description` is English is invisible to this channel; the probe's actual yield was the opposite error — unrelated tools matched on a Spanish description (`pepeangell5/RF-KILL`, `devsebastian44/IP-Tracker`). The `19` novel permissive repositories these probes surfaced contained **`0`** education AI agents; the full table is at [`../intel/market.md`](../intel/market.md) under `LATAM`.
+
+### 🟢 691-C — `agents/top.md` re-verified structurally on an independent script, and the audit's own bug is recorded
+
+| Check | Result |
+|---|---|
+| Data rows between separator and table end | **`84`** |
+| Distinct subjects (first GitHub link per row) | **`84`** — `0` duplicates, `0` rows without a link |
+| Rows whose cell count ≠ `6` | **`0`** (histogram: `{6: 84}`) |
+| `Region` cells outside the closed vocabulary | **`0`** |
+
+Distribution: `Global 35` · `APAC 25` · `North America 12` · `EMEA 7` · `LATAM 5`. This reproduces `p690`'s figures on an independently written script.
+
+🔴 **The audit's first run was wrong, and the bug is published because it is a trap for the next pass.** The initial vocabulary check stripped whitespace before comparing, turning `North America` into `NorthAmerica`, which is **not** in the closed vocabulary — so it reported `12` out-of-vocabulary region cells that do not exist. 🔵 **`North America` is the only one of the five legal values containing a space, so a normaliser that strips whitespace will always and only mis-flag the region this base is already thinnest on.** Strip the decoration (`**`, backticks, status emoji) and trim the ends; never strip interior whitespace.
+
+### 🟢 691-D — The mandated header-as-data sweep: `71` candidates, `0` defects, and the format that generates the false positive
+
+The brief requires that no header or example row is ever left as data. All eight shelves were swept for rows whose first cell is a header or placeholder token (`name`, `nombre`, `repo`, `licence`, `licencia`, `region`, `stars`, `description`, `example`, `tbd`, `—`, …). After discarding every row immediately followed by a `|---|` separator — i.e. every genuine table header — **`71`** rows remained across `agents/trending.md` (`37`), `repos/trending.md` (`33`) and `intel/market.md` (`1`).
+
+🟢 **Every one of them was read, and all `71` are legitimate.** They are deliberate **two-column fact sheets**, where column 1 is the field name and column 2 the value — `| Region | **LATAM** — the artefact *is* a national curriculum standard … |`, `| Licence | 🔴 **AGPL-3.0** (`34,523 B`, sha256₁₂ `8486a10c4393`…) |`, `| Stars | 🔴 **UNMEASURABLE** (`mcp-unindexed`, `curl-403`) — not `0` … |`. **`0` genuine defects. These must not be "fixed".**
+
+🟡 **But the compiler risk the brief describes is real here, reached by a different route, and it is flagged rather than patched.** If the compiler takes **column 1 of a two-column table as an entity name**, these rows compile to entities named `region`, `licence` and `stars` — precisely the *"entity literally named nombre"* failure, produced not by a leaked header but by a correct and intentional format. 🔵 **The fix belongs in the compiler (require a `|---|` separator before treating a table as record-oriented, or skip two-column tables entirely), not in `71` well-formed rows across two append-only files.** Recorded so a future pass does not mistake a format for a defect and rewrite history to "repair" it.
+
+
+
 ## 🆕 2026-11-07 (p690) — 🟢 **THE WHOLE INVENTORY WAS CROSS-CHECKED AGAINST GITHUB'S OWN `spdx_id` FOR THE FIRST TIME — `339` SUBJECTS, `334` RESOLVED, `44` DIVERGENT, AND **`0` SUBSTANTIVE ERRORS**. 🔵 EVERY ONE OF THE `44` WAS ALREADY ANNOTATED IN-CELL. 🔴 BUT THE CHANNEL THAT PROVED IT CANNOT BE USED AS AN EXISTENCE TEST: `5` SHELVED REPOS ARE ALIVE AND ABSENT FROM THE INDEX, AND IT RETURNS A SILENT `total_count: 0` FOR QUERIES THAT HAVE HUNDREDS OF HITS**
 
 ### 🟢 690-A — The audit: `0` rows added, `66` star cells corrected, `0` licence claims overturned

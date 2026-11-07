@@ -38,6 +38,32 @@ updated: 2026-11-07
 
 ---
 
+## P71 — The Spanish/Portuguese tutoring surface, **assembled rather than forked** (LATAM ministry, state secretariat, university or edtech: 6–8 weeks) 🆕 new at p691
+
+🔴 **The premise is a measured absence, not a market guess.** `p691` probed the Spanish/Portuguese permissive supply directly — seven single-term legs against `search/repositories`, `90` repositories, `19` novel and permissive, and **`0` education AI agents** (table at [`../intel/market.md`](../intel/market.md) under `LATAM`). There is no `es`/`pt` education agent to fork. 🔵 **And the shelf's `5` LATAM rows are a floor on that channel rather than the region's true supply, because GitHub free-text matches name, description and topics — not README.** So the deliverable is **assembly**, and every part below is already licence-verified on these shelves.
+
+**The wiring, part by part — each one permissive, each one already on a shelf:**
+
+| Layer | Part | Licence | Why this one |
+|---|---|---|---|
+| Delivery, offline-first | **Kolibri** + `kolibri-installer-android` | MIT (payload read at ref `develop`, `1,097 B`) | The binding constraint in LATAM public education is **connectivity, not model quality**. Kolibri runs the whole learning surface with no egress and syncs opportunistically — and the MIT installer means the Android delivery path is commercially redistributable. |
+| Mastery engine | **OATutor** ([`CAHLR/OATutor`](https://github.com/CAHLR/OATutor)) | MIT | Bayesian Knowledge Tracing with a **frozen scoring rubric** and LTI into the institutional LMS. Peer-reviewed, UC Berkeley. This is the part that must not be an LLM: mastery estimates have to be reproducible to survive an audit. |
+| Agent-facing contract | **tutor-mcp** ([`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)) | MIT | Exposes BKT + FSRS + prerequisite skill graphs behind **one MCP tool** with a frozen rubric. The agent *calls* pedagogy rather than improvising it — which is what makes the tutoring layer swappable and the grading layer defensible. |
+| Retention scheduling | **fsrs4anki** / `open-spaced-repetition` | MIT | A scheduler with published parameters, so the spacing decisions are explainable to a ministry rather than emergent from a prompt. |
+| Institutional surface | **moodle-mcp** ([`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp)) **or** **canvas-mcp** ([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)) | MIT / MIT | Moodle dominates LATAM public higher education; Canvas dominates the private and corporate estate. Both bridges are MIT, so the LMS choice does not change the licence position. |
+
+**Build sequence.**
+
+1. **Weeks 1–2 — stand up the spine, not the model.** Kolibri as the delivery shell; OATutor's BKT behind `tutor-mcp` so the mastery contract exists before any agent touches it. Freeze the rubric and check it into the repo: it is the artefact an auditor will ask for.
+2. **Weeks 2–4 — localisation is the work, and it is content work.** The agents on these shelves are not language-limited; the **curriculum alignment** is. Map to the actual standard in play (Brazil's BNCC, Mexico's *Aprendizajes Clave*, Chile's *Bases Curriculares*) and carry the standard's own codes as first-class identifiers. 🔵 **This base already holds the cautionary case**: a Brazilian curriculum-code artefact whose benchmark scored *"refused a fake code"* separately from *"reproduced a real one"* and found faithfulness collapsing **`88% → 3%`** across models. **Validate against a private held-out set of real and fabricated codes; a model that invents a plausible BNCC code is worse than one that declines.**
+3. **Weeks 4–6 — wire the LMS and keep the gradebook out of reach.** Connect `moodle-mcp` or `canvas-mcp` read-mostly. The agent proposes; a human posts. Keep the write scope off the record of attainment.
+4. **Weeks 6–8 — evidence pack.** Mastery estimates reproducible from logs, rubric version pinned per decision, human-approval trail on anything that reached a learner's record.
+
+🟢 **The regulatory read, and it is the reason step 3 is drawn that way.** LATAM has **no Annex III analogue** — `p691`'s demand leg re-confirmed `716` regulatory instruments across `23` countries with **`~45%`** of institutions holding or developing AI guidance against **`~70%`** in Europe and North America. **So the EU conformity pack is not required, and selling it as mandatory is misrepresentation.** 🔵 **But build to the line anyway, because the line is already drawn elsewhere and it is cheap to stay under it.** Vietnam's Decision `33/2026/QD-TTg` makes automated assessment high-risk **only** where the output is *"used as the official basis for assessing learning outcomes, evaluating competencies, or ranking learners"*. That qualifier is the most portable design rule in this document: **a formative tutor that never issues the record of attainment stays outside the high-risk category in every regime this base tracks** — EU Annex III, Vietnam, and whatever LATAM adopts next. Step 3 keeps the deployment on the safe side of it by construction, not by policy.
+
+🟡 **What this pattern does not claim.** It is assembled from parts with no integration history together; the `6–8` weeks is build time for the spine, and the curriculum-code validation in step 2 is the step most likely to overrun, because it is the only one whose acceptance criterion depends on content this base has measured a model failing.
+
+
 ## P69 — Licence attestation over an education software estate (EMEA public sector, university consortia, edtech due diligence: 3–4 weeks) 🟢 new at p690
 
 🔵 **Sell this when the client's own tooling has already failed.** `p690` measured the failure mode precisely: of `339` education repositories, **`44` return `NOASSERTION` or `NONE` from GitHub's own licence detector while carrying a real, readable grant** ([`T99`](../intel/trends.md)). A client's SCA gate reports those as **`unknown licence`**, and `unknown` cannot be risk-assessed — so the procurement review stops, and nobody can say whether the blocker is real. **This pattern converts `unknown` into a named family with payload evidence.** It is `3–4` weeks, needs no agent, and is the cheapest credible first engagement in the regions this base keeps calling underserved.

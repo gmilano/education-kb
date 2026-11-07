@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p691) — 🔴 **THE VERTICAL AND FOUNDATION LEGS NILLED, AND THE SPANISH/PORTUGUESE SUPPLY WAS MEASURED DIRECTLY FOR THE FIRST TIME: `90` REPOSITORIES, `0` EDUCATION AGENTS**
+
+### 🔴 691-E — Vertical-platform leg: every platform returned is already shelved
+
+The mandated leg (`open source platform education ERP CRM MIT Apache`) returned `9` platforms and **every one is already carried**: **GegoK12** (the one MIT education ERP on this shelf), **OpenEduCat** (`LGPL-3.0`, correctly refused as copyleft), **Apache OFBiz** (`Apache-2.0`, not education-specific), **Huly Platform** (`Apache-2.0`), **Krayin CRM** (MIT, a CRM rather than an ERP), **iDURAR** (MIT), **Odoo** and **ERPNext** (both `GPL-3.0`), and **Frappe**'s education positioning. **`0` novel.**
+
+🟢 **The GegoK12 name collision re-tested and re-confirmed, because this base carries both strings.** `git ls-remote --symref`: **`Gego-K12/gegok12` is 🟢 ALIVE** (`refs/heads/main`, `99da145f…`), and **`gegok12/gegok12` fails exactly as a nonexistent repository** — which is what `repos/trending.md` `L27400` and `agents/trending.md` `L36075` already record. `search/repositories` with both as `repo:` qualifiers returns **`total_count: 1`**, resolving only `Gego-K12/gegok12` (`56★`, `spdx = NOASSERTION`, pushed `2026-09-23`). 🔵 **The `NOASSERTION` is the detector declining, not a contradiction** — this shelf read the `LICENSE` payload at `1,150 B` directly, consistent with the `44`-divergence finding at `690-A`. 🟡 **Star drift: this shelf's cell reads `54★`, the API now returns `56★`** — `+2` since `p690`'s sweep, recorded but below any threshold that changes a decision.
+
+### 🔴 691-F — Foundation leg: `0` rows added, and the LATAM supply probe explains why a whole region stays thin
+
+Seven single-term Spanish/Portuguese probes against `search/repositories` (`stars:>20`; `docente` at `stars:>10`) returned **`90` repositories**, of which `19` were novel and permissive (MIT / Apache-2.0 / BSD) and **`0` were education AI agents or education foundations**:
+
+| Probe | `total_count` | Novel + permissive | Adoptable |
+|---|--:|--:|--:|
+| `educacion` | `8` | `3` | **`0`** |
+| `educativa` | `7` | `1` | **`0`** |
+| `educacao` | `15` | `3` | **`0`** |
+| `aprendizaje` | `37` | `11` | **`0`** |
+| `escolar` | `8` | `1` | **`0`** |
+| `docente` | `12` | `0` | **`0`** |
+| `profesor` | `3` | `0` | **`0`** |
+| **Total** | **`90`** | **`19`** | **🔴 `0`** |
+
+The `19` are course material (`joanby/cursos-unity-5`, `mizaelsouto/CursoTecnico`, `DiploDatos/IntroduccionAprendizajeAutomatico`, `paulovillarroel/aprendiendo_python`, `APMonitor/ciencia_de_datos`), learning roadmaps (`mouredev/Android-Developer-Roadmap`, `DataScienceResearchPeru/OpenSource-RoadMap-DataScience`, `LeonardoRH/Universidade-Livre-ciencia-da-computacao`, `opensource-university/opensource-articles`), or tools with no education function matched purely on a Spanish-language description (`pepeangell5/RF-KILL`, `devsebastian44/IP-Tracker`, `hectorpadin1/Network-Intrusion-Detection-System`, `Luispitik/sinapsis`). 🔵 **Listed by name so this leg is not re-bought.**
+
+🔵 **The structural reason, and it is a property of the index rather than of the region.** GitHub free-text matches **name, description and topics — not README**. A LATAM project with a Spanish README and an English `description` cannot be reached by any of these probes. **The honest statement for a LATAM engagement is therefore that the regional permissive supply is `unmeasured` on this channel, not that it is empty** — and the build answer, since there is nothing to fork, is assembly from parts already shelved: [`../compose/patterns.md`](../compose/patterns.md) **`P71`**.
+
+
+
 ## 🆕 2026-11-07 (p690) — 🟢 **`255` FOUNDATION AND VERTICAL SUBJECTS AUDITED AGAINST GITHUB'S `spdx_id`: `39` DIVERGENCES, `0` ERRORS, AND THE DIVERGENCES SORT CLEANLY INTO **FIVE NAMED FAILURE MODES**. 🔴 THE LARGEST SINGLE MODE IS A DETECTOR THAT CANNOT READ **EUPL** — WHICH IS THE LICENCE OF ELEVEN EUROPEAN NATIONAL-AGENCY REPOSITORIES ON THIS SHELF**
 
 ### 🟢 690-R1 — The two shelves, measured
