@@ -124,6 +124,16 @@ Three facts shape every engagement:
 
 ### North America
 
+### 🟢 p696 — North America: the demand leg nils a **37th** time, and the region simultaneously gains **four shelf rows** — so the nil never meant what this page has been implying
+
+🔴 **The leg, measured:** `11` checkable facts returned (134 bills / 31 states; Maryland `SB 720` with Idaho, Oklahoma, Virginia; New York `A 9190` grade-9 floor; California `AB 1159` + `SB 243`; the committee-stage *K-12 AI Literacy and Readiness Act of 2026*; Gallup `60 %` teacher use; UNESCO `70 %` guidance in Europe + North America). **`11 / 11` already on these pages.** Nil, `37` consecutive windows.
+
+🟢 **And in the same pass the region gained `4` verified rows — `2` of them the first North America AGENT rows this base has ever carried.** [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) (MIT, `5★`, Infinite Campus / US K-12 SIS, CUPS SSO, `21` tools measured), [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) (MIT, `0★`, **British Columbia Ministry of Education** K–12 curriculum incl. First Peoples Principles of Learning), [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) (MIT, John Jay College **`+32 %` senior graduation in two years**, Google.org-funded) and [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (MIT, NAACL 2024).
+
+🔵 **The correction this page owes its own reader.** Thirty-seven nilled legs have been published here as a supply finding about North America. **They were a filing finding about this base.** All four rows above were already written down in these files and had never been shelved — so the region's supply existed throughout, in this repository, unfiled. **North America's opportunity is not blocked on discovery; it is blocked on nothing at all.**
+
+🔵 **What a studio does with it:** the US K-12 and Canadian provincial layers are reachable **today** through permissive MIT connectors — SIS (Infinite Campus), curriculum (BC Ministry), advising-risk (DataKind, with a published institutional outcome), and transcript analytics (Edu-ConvoKit, peer-reviewed). That is a complete district-scale stack under MIT, and the `AB 1159` prohibition on training models on student data is satisfiable by it because **every one of these four runs against the institution's own tenant with no model training step**.
+
 ### 🔴 p695 — North America: the leg nils a 36th time, and every fact it returned was already on this page
 
 🔴 **`0` novel facts and `0` shelf rows from the North America leg.** Each item returned was checked by name against this tree before being called new, and each was already held: **134** AI-in-education bills across **31** states in the 2026 session; **Maryland SB 720** and the four-state group compelling both state guidance and district policy (with Idaho, Oklahoma, Virginia); **New York A 9190** restricting classroom AI below ninth grade; **California AB 1159** barring student data from model training; the California **"Parents & Kids Safe AI Act"** ballot measure; **Ohio's July 2026** district-policy deadline; North Carolina's **$10M Khanmigo** earmark in SB 1006; the **Gallup 60%** teacher-use figure against most districts having no student AI policy; the **April 2026** ADA web-accessibility deadline; the **K-12 AI Literacy and Readiness Act of 2026** in committee.
@@ -486,6 +496,16 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+### 🟢 p696 — EMEA: the demand leg nils, and the region gains the two assets that make an Annex III conversation defensible — one of them a national AI institute's, the other a ministry's own production service
+
+🔴 **The leg, measured:** `5` checkable facts (EU AI Act Annex III high-risk for education; the **Digital Omnibus** moving stand-alone Annex III to **2 Dec 2027** and embedded to **2 Aug 2028**; European AI-in-education market **`$2.64 B`** 2026; UK light-touch + **`£4 M`** for lesson-planning and marking tools; Dubai **KHDA** guidance to private schools; OECD **2026 Digital Education Outlook** favouring purpose-built educational AI). **`5 / 5` already held.** Nil.
+
+🟢 **Three rows gained, and the first two change what a studio can promise a European client.** [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) — **MIT**, **`3,201★`**, the **UK AI Security Institute's** evaluation framework with `200+` pre-built evals and **model-graded scoring**; [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) — **MIT**, the **UK Department for Education's** live schools financial benchmarking service (FBIT); [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) — **MIT**, an agent surface over **Librus Synergia**, Poland's dominant school gradebook, `39` tools at `v2.5.3`.
+
+🔵 **Why `inspect_ai` is a commercial unlock rather than a tool.** Education grading and admissions are **Annex III high-risk**. Until now this page could name the obligation and not the instrument. A **government AI institute's own MIT-licensed, model-graded evaluation harness** is the artefact a European procurement will accept as evidence of systematic accuracy testing — and the delayed `2027`/`2028` dates mean a studio building now has a genuine window to make conformity a differentiator instead of a scramble.
+
+🔵 **And `FBIT` answers the thinner question of who pays.** This base's EMEA holdings are heavy on pedagogy and thin on the administrative spine where budgets clear. A ministry-operated, MIT-licensed benchmarking service is a credible, citable starting point for the multi-academy-trust and school-group analytics work a studio is more often bought for than tutoring. **Poland via `librus-mcp` is the region's reminder that the national gradebook — not the LMS — is where European school data actually lives.**
 
 ### 🟢 p695 — EMEA: the region's biggest open-source education asset is French, state-scale, and this base held fragments of it without the picture
 
@@ -972,6 +992,18 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+### 🟢 p696 — APAC: the demand leg nils a 10th time, and the region supplies the pass's regulator-citable evaluation harness plus its most capable agent surface
+
+🔴 **The leg, measured:** `8` checkable facts (South Korea's **AI Basic Act** in force `22 Jan 2026` with a guidance-first grace period through 2026; **Vietnam Decree `33/2026/QD-TTg`** naming education — automated assessment and behavioural monitoring — among six high-risk sectors; Australia's **TEQSA** requiring institutional genAI action plans from all higher-education providers; Japan light-touch/voluntary; Australia, NZ, Malaysia sectoral; the EU AI Act's spillover onto APAC vendors selling into EU schools). **`8 / 8` already held**, several at clause level. Nil.
+
+🟢 **Rows gained:** [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) (**Apache-2.0**, `361★`, Singapore AI Verify Foundation — benchmarking **and** red-teaming, **implementing IMDA's Starter Kit**), [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) (**MIT**, NTU COOL, National Taiwan University), [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) (**MIT**, `24,122★`, Webkul / India) and [`frappe/frappe`](https://github.com/frappe/frappe) (**MIT**, `11,065★`, India).
+
+🔵 **`moonshot` is the regionally correct answer to the same problem `inspect_ai` solves in EMEA, and the difference matters commercially.** Both are permissive, state-backed evaluation harnesses. **`moonshot` implements a named APAC regulator's own starter kit (IMDA's)**, so in Singapore — and by reference across ASEAN procurement — it is the instrument the regulator already recognises. A studio serving both regions should carry **both** and choose by jurisdiction, not by preference.
+
+🔵 **`che-ntucool-mcp` is the region's methodological contribution, and it outruns the regulation.** Its write path — grades and announcements — sits behind a human confirmation the server asks for **itself**, with the published reasoning that *“students are notified, and a notification cannot be un-sent”*, so there is no batch size below which the gate is skipped. That is **Annex III-grade human oversight, implemented by a one-star Taiwanese project**, and it is a better pattern than most funded products ship. 🔵 **India is this region's permissive platform engine:** both MIT platform rows gained this pass are Indian-authored, which is where a cost-sensitive APAC education build should start.
+
+🔵 **The region's exposure remains a licence problem, and `frappe/frappe` sharpens it:** the framework and `frappe/education` are **MIT**, but **ERPNext is GPL-3.0** — the single easiest way for an APAC education build to acquire copyleft by accident.
+
 ### 🔴 p695 — APAC: the leg nils a 9th time, and the one clause-level fact it returned is held at clause level already
 
 🔴 **`0` novel facts.** Returned and already held: South Korea's **AI Basic Act** in force **22 January 2026**; **Vietnam's Law on Artificial Intelligence** effective **1 March 2026** with the **18-month** transition for systems already operating in **education** — which this page holds at *Article 34* level since `p690`, a stronger reading than the leg produced; China's targeted instruments (recommendation algorithms, deep synthesis, generative AI services, AI-content labelling) rather than an omnibus act; Japan's and Singapore's voluntary frameworks; Australia's reliance on existing law; the **Ipsos Education Monitor 2026** ban-support spread (Indonesia `23%` → South Korea `31%`); Indonesia's two pending AI Presidential Regulations.
@@ -1368,6 +1400,16 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+### 🔴 p696 — LATAM: the demand leg nils a 10th consecutive time, the region's demand side remains the best-measured in the world, and **p696 filed no LATAM row — stated plainly so it is not read as coverage**
+
+🔴 **The leg, measured:** `5` checkable facts (UNESCO IESALC over `200` institutions in `19` countries — **`87 %`** using AI in at least one area, **`74 %`** in teaching and learning, **`26 %`** with any formal framework, **`55 %`** with no AI budget; `>50 %` of teachers in **Chile** and **Brazil** using the tools against `<10 %` of institutions holding guidelines; the UNESCO regional **Observatory** launched April 2026; the **Tecnológico de Monterrey**–UNESCO agreement of March 2026; CENIA (Chile), Ceibal (Uruguay), Cetic.br (Brazil)). **`5 / 5` already held.** Nil.
+
+🔴 **And the supply side produced nothing filable either: `0` of p696's `18` rows are LATAM.** This is an informed gap, not an absence of looking. The backlog probe ranked the `90` most-cited never-shelved addresses and **not one of the `39` permissive results was LATAM-origin**; the leg's own named players (CENIA, Ceibal, Cetic.br, Monterrey) are **institutions and observatories, not permissively-licensed repositories**. 🔵 **The region's `5★` shelf holdings stand unchanged at `5` rows while the shelf as a whole moved `96 → 104`, so LATAM's share FELL this pass — from `5.2 %` to `4.8 %`.** Recorded because a silent denominator shift reads exactly like coverage.
+
+🔵 **What that means, said precisely, because this page has twice mis-diagnosed it.** `p693` reclassified "LATAM supply nil" as a **promotion** failure on the strength of `140` unshelved LATAM-bearing addresses. p696's probe does not contradict that — it **bounds** it: those `140` are real, but they do not reach the *most-cited* head of the backlog, which is where this pass drew from. **So LATAM's unshelved supply exists in the backlog's TAIL, and only a LATAM-filtered probe will reach it. A citation-ranked probe structurally cannot.**
+
+🔵 **The concrete next action, costed.** Re-run p696's backlog instrument with the ranking replaced by a **region filter** — take `p693`'s `163` LATAM-bearing slugs, probe them `15` at a time through `gh api search/repositories`, and file the permissive survivors. On p696's measured hit rate (`47.6 %` permissive at the head) even a materially worse tail rate would yield **double-digit LATAM rows in one pass**. 🔴 **Until that runs, every LATAM figure on this page is demand-side only: the region is the best-measured consumer of education AI on this base and the worst-served supplier of it, and the gap is this base's own filing, not the region's output.**
 
 ### 🔴 p695 — LATAM: the leg nils a 9th consecutive time, and the region's demand side remains the best-measured in the world
 

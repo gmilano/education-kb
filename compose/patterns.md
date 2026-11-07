@@ -38,6 +38,52 @@ updated: 2026-11-07
 
 ---
 
+## P76 — The North America district stack, **entirely MIT, no copyleft in the delivery path** (US district, charter network, Canadian provincial board: 6–8 weeks) 🟢 new at p696
+
+🔵 **Why this pattern exists now and could not be written before p696:** this base nilled its North America demand leg `37` consecutive times and published that as a regional supply gap. It was a filing gap — the components below were all already written down here, unshelved. **All four are MIT, all four run against the institution's own tenant, and none has a model-training step** — which is what makes the stack compatible with California `AB 1159`'s prohibition on training on student data.
+
+**Wiring, concretely:**
+
+1. **Records layer — [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp)** (MIT, `21` tools measured). Single-account config; linked districts auto-discovered via **CUPS SSO**. Gives the agent schedule, assignments, grades, attendance (incl. per-event codes and comments), behaviour and messaging. 🔴 **Budget for `20` reads and exactly `1` write (`ic_send_message`)** — treat that write as the only outbound surface and gate it.
+2. **Standards layer — [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server)** (MIT) for a **Canadian** board: the BC Ministry K–12 curriculum with Big Ideas / Competencies / Content, Core Competencies and **First Peoples Principles of Learning**. For a **US** district substitute [`ed-fi-alliance-oss/ed-fi-data-standard`](https://github.com/ed-fi-alliance-oss/ed-fi-data-standard) (Apache-2.0, default ref **`v6.2.0`**) as the data-standard spine. 🔴 **Scope `8` tools here, not the README's `12`** (`T115`).
+3. **Risk layer — [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool)** (MIT, default branch **`develop`**). Non-graduation risk ranking so finite advisor time reaches those most in need. Carry its own published outcome into the business case: **John Jay College, `+32 %` senior graduation in two years**. Adopt its three principles verbatim as the governance frame — transparent, bias-reducing, **humans-in-the-loop by design**.
+4. **Evidence layer — [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit)** (MIT, NAACL 2024) for de-identification and annotation of any tutoring or classroom transcript **before** a model sees it. This is the step that makes the pipeline defensible rather than merely functional. 🟡 Pin the version; last pushed `2025-04-19`.
+5. **Gate — [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)** (MIT, `3,201★`) scoring the advising and messaging outputs with **model-graded** evals in CI. Provenance is a government AI institute, which is what makes the accuracy claim citable rather than asserted.
+
+🔵 **Deliverable:** a district-scale advising and family-communication agent whose entire delivery path is MIT, whose only write is one gated message tool, and whose accuracy claim has a named harness behind it. 🔴 **The honest risk:** `infinitecampus-mcp` is `5★` and `bc-curriculum-mcp-server` is `0★` — these are small projects. Fork and vendor them at a pinned commit; do not take a live dependency on either.
+
+---
+
+## P77 — Jurisdiction-correct assessment: the **same** grading agent, certified by the harness the local regulator already recognises (EMEA + APAC education deployer: 8–10 weeks) 🟢 new at p696
+
+🔵 **The insight p696 produced, and it is a sales insight as much as a technical one.** Two state-backed, permissively licensed evaluation harnesses landed on this base in the same pass, from two regions. They are substitutable technically and **not** substitutable in a procurement. Education grading is **EU AI Act Annex III high-risk**; the obligation is systematic accuracy and bias testing; **the harness is the conformity artefact.** So build the grader once and swap the gate by jurisdiction.
+
+**Wiring:**
+
+1. **The graded surface** — [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) (MIT, **`269` tools measured**) for Moodle estates, or [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) (MIT) for Canvas. Use `moodle-mcp`'s four native governance properties as the data-protection story: **browser SSO, never a password or web-service token**; **students pseudonymised to the model** (`A-7KQ2XM`, de-anonymisable only locally); **one-way capability narrowing**; in-app confirmation for irreversible actions.
+2. **The human-oversight gate** — implement [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp)'s rule, which is the cleanest statement of it on this base: an irreversible operation **always** takes the confirm branch, because *“students are notified, and a notification cannot be un-sent”*. **No batch-size threshold below which the gate is skipped** — that threshold is the single most common way a deployer loses the Annex III oversight argument.
+3. **The gate, by jurisdiction** — **EMEA:** [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) (MIT, `200+` pre-built evals, model-graded), provenance **UK AI Security Institute**. **APAC:** [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) (Apache-2.0), which **implements IMDA's Starter Kit** and adds red-teaming — so in Singapore and across ASEAN procurement it is the instrument the regulator already names. Run both in CI; cite the local one.
+4. **The evidence trail** — [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) (MIT) for annotation, and this base's own `xAPI` holdings for the activity record.
+
+🔵 **Timing is the commercial argument.** The **Digital Omnibus** moves stand-alone Annex III obligations to **2 Dec 2027** (embedded products **2 Aug 2028**). A deployer building the harness now ships conformity as a differentiator instead of a scramble — and **Vietnam's Decree `33/2026/QD-TTg` already names automated assessment as high-risk today**, so the APAC arm of this pattern has no runway at all. 🔴 **Do not promise one certification covers both regions:** the deliverable is one grader and **two** evidence packs.
+
+---
+
+## P78 — The campus agent delivered **through the SSO front door**, with the library as its retrieval substrate (university, HE consortium: 7–9 weeks) 🟢 new at p696
+
+🔵 **The gap this closes.** Every connector this base shelves answers *“how does the agent reach the system.”* None answered *“where does the user meet the agent,”* and a pilot that lives in a separate chat window is the one that does not get renewed. p696 filed the two missing pieces, and both are permissive enough to ship derivatives of.
+
+**Wiring:**
+
+1. **Surface — [`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal)** (Apache-2.0, default branch **`master`**). The Apereo campus portal, already inside the institutional **SAML/CAS** perimeter: deliver the agent as a portlet and **it inherits identity instead of re-asking for it**. This is the difference between a pilot and a service.
+2. **Retrieval — [`DSpace/DSpace`](https://github.com/DSpace/DSpace)** (**BSD-3-Clause**, `1,108★`). The university's own institutional repository is its best RAG corpus: rights-cleared, metadata-rich, already curated by librarians. 🔵 **BSD-3 is the reason this is the retrieval layer and not Moodle content** — a studio can index, embed and ship derivatives with no copyleft conversation, which an AGPL platform forecloses.
+3. **Teaching systems — [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp)** (MIT, courses, **grading**, pages, rubrics) or `moodle-mcp`; for Blackboard estates choose **deliberately** between [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) (official REST API — **needs the institution's OAuth application**, and is therefore the one a university can own and operate) and [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) (authenticates **as the user**, read-only, for when admin approval is unobtainable — its README names that barrier exactly).
+4. **Student record** — a national or tenant gradebook where one exists: [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) (Poland, `39` tools), [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) (NTU, Taiwan). 🔵 **In Europe, school data lives in the national gradebook, not the LMS** — build to that, not to the LMS, or the agent will be able to teach and unable to answer *“how is my child doing.”*
+5. **Admissions arm — [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm)** (MIT, `24,122★`, default branch **`2.2`**) for enquiry triage and applicant follow-up, and **[`frappe/frappe`](https://github.com/frappe/frappe)** (MIT, default branch **`develop`**) to model the applicant / programme / intake / cohort entities the CRM lacks — `frappe/education` is the proof that works. 🔴 **Keep ERPNext (GPL-3.0) out of the delivery path.**
+6. **Gate** — `inspect_ai` or `moonshot` per `P77`.
+
+🔵 **Deliverable:** one portal-resident agent that answers from the library, acts in the LMS, reads the gradebook and feeds admissions — with **four of its six components on a non-`main` default branch** (`master`, `2.2`, `develop`, `trunk` if OFBiz is used for finance), so pin every one explicitly in the build (`T117`).
+
 ## P75 — The francophone ENT engagement: integrate the state platform, never fork it (French *académie* / région, francophone Africa ministry: 8–10 weeks) 🟢 new at p695
 
 **Who buys it and why now.** Any buyer whose school estate already runs the French **ENT** (*Espace Numérique de Travail*) — a French *académie* or région, a DANE, a private network inside the French curriculum, or a francophone African ministry adopting the same stack. The ENT is **procured, already deployed and already paid for**, which makes "replace it" unsellable and "add intelligence to it" the only live scope.

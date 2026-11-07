@@ -21,6 +21,41 @@ updated: 2026-11-07
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T115 — A README's declared tool count is not a capability measure: it is wrong in `4 / 4` repositories measured, and it errs in BOTH directions 🔴 new at p696
+
+**Measured at p696, on every MCP server it filed, by counting distinct registered tool names at the real default ref:**
+
+| Repository | README declares | Shipped (measured) | Error |
+|---|--:|--:|---|
+| [`pdg6/bc-curriculum-mcp-server`](https://github.com/pdg6/bc-curriculum-mcp-server) | `12` | **`8`** | 🔴 **`−33 %`** |
+| [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | `20` | **`21`** | `+5 %` |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | *“about 230”* | **`269`** | `+17 %` |
+| [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | — (**this base** published `35`) | **`39`** | this base's own pin stale |
+
+🔵 **Why this is a trend and not four anecdotes.** The error is **not conservative** — it runs both ways, so a README cannot even be used as a lower bound. And the direction that matters commercially is the overstating one: a studio scoping *“12 curriculum tools”* and receiving `8` has lost a third of an integration surface it already quoted. 🔵 **The understating direction costs differently and is worth hunting:** `moodle-mcp` ships `269` tools and advertises `230`, so **capability discovery by README systematically under-ranks the most capable projects** — which at `2★` is exactly how this base nearly missed the strongest agent surface on its shelf.
+
+🔵 **The method, stated so it is cheap to repeat.** Resolve the real default branch (`git ls-remote --symref`), then count **distinct registered tool NAMES** — not README prose, and not raw call sites, which double-count re-registrations and conditional branches (`273` sites against `269` names here). 🔴 **Corollary for this base's own shelves:** a published tool figure is a *measurement with a date*, not a property. `librus-mcp`'s `35` was correct when taken and wrong when re-read two minor versions later.
+
+## T116 — A curation base's binding constraint flips from DISCOVERY to FILING, and the flip is measurable before it is felt 🔴 new at p696
+
+**p696's measurement on this base, from three independent instruments:** the promotion backlog — addresses written on these pages, absent from all three sell shelves — is **`4,691`**. Its most-cited `90` resolve to `82` live repositories of which **`39` (`47.6 %`) are permissive**. This base's own gate, independently, reports a **filing rate of `8.1 %`** (`447` filed against a union of `5,497`).
+
+🔵 **The diagnostic, and it is the transferable part.** Compare **rows filed per pass** across the two channels on the same base: the four mandated discovery legs have returned `0`–`2` filable rows per pass for nine months and nilled `37` consecutive times in North America alone; **one backlog probe returned `18` in a single pass.** That is roughly an order of magnitude, measured on the same shelves in the same hour by the same instruments.
+
+🔴 **The failure mode this trend names is that a saturated discovery channel LOOKS like a saturated market.** Every nil is honest and every nil is locally correct — *“the leg returned nothing novel”* was true `37` times. The inference *“the region has no permissive supply”* was false the whole time, and p696 refuted it by filing four North America rows in the same pass the North America leg nilled again. **A nil measures the channel, never the field.**
+
+🔵 **The operational rule.** Once filing rate falls below `~10 %`, a pass spent probing the base's own backlog dominates a pass spent searching, and it dominates it on *verified* output rather than candidate volume. 🔵 **The ranking function is the one real choice**: p696 ranked by citation frequency, which reaches the head and **structurally cannot reach a region in the tail** — which is precisely why it filed `0` LATAM rows while `p693` had already counted `163` unshelved LATAM-bearing addresses. **Rank by the axis you owe a row to.**
+
+## T117 — `main` is an assumption, not a fact: one permissive education repository in five defaults elsewhere, and the probe fails toward *absent* 🔴 new at p696
+
+**Measured at p696 over the `39` permissive repositories its backlog probe resolved: `8` (`20.5 %`) have a default branch that is not `main`** — `trunk` ([`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework)), `develop` ([`frappe/frappe`](https://github.com/frappe/frappe), [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi), [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool)), `master` ([`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal), [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)), `2.2` ([`krayin/laravel-crm`](https://github.com/krayin/laravel-crm)) and a **tag-shaped** `v6.2.0` ([`ed-fi-alliance-oss/ed-fi-data-standard`](https://github.com/ed-fi-alliance-oss/ed-fi-data-standard)).
+
+🔴 **The direction of failure is what makes this dangerous rather than merely untidy.** A licence probe that fetches `…/main/LICENSE` gets a `404` and records **no grant** — which reads as *unlicensed*, the verdict that reverses the commercial answer and does so while looking like diligence. Same shape as `695-C` (the `LICENCE`-spelling false negative) and `694-C` (the R-package `LICENSE`-as-metadata case: **three distinct causes, one failure direction**).
+
+🔵 **The skew is not random, and knowing that is worth more than the percentage.** The non-`main` set is concentrated in **old, institutional, standards-adjacent projects** — an ASF project on `trunk`, Apereo on `master`, a data standard pinned to a release tag — i.e. exactly the mature infrastructure an education engagement most wants to build on, and exactly what a `main`-assuming sweep silently deletes from its own candidate pool. **The newest `1★` repositories are the ones reliably on `main`.**
+
+🔵 **Fix, one line, used on all `18` of p696's filings:** `git ls-remote --symref <url> HEAD` returns the real default ref without cloning. 🔴 **Never infer the ref from the host's web UI either** — see `696-J`: in this environment `curl -sI` answers with the agent proxy's `HTTP/1.1 200 Connection Established` for every URL, live or dead.
+
 ## T113 — Command substitution strips trailing newlines, so a byte count and a digest published through `$(curl …)` are both wrong — and this base has already "corrected" one row to the true value without naming the cause 🔴 new at p695
 
 **This is a defect in this base's own primary verification instrument, not in the sector.** Every grant cell on these shelves publishes `bytes` + `sha256₁₂` as the identity of a licence payload. Where that pair was produced by `out=$(curl -sSL …)` and then measured with `printf '%s' "$out" | wc -c`, **both numbers are wrong**: command substitution discards *all* trailing newlines before the bytes are ever counted.
