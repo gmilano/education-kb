@@ -4,6 +4,108 @@ region: Global
 updated: 2026-11-07
 ---
 
+## 🆕 2026-11-07 (p694) — 🟢 **ELEVEN FOUNDATION AND PLATFORM ROWS, NONE FROM A SEARCH LEG: ALL ELEVEN WERE ALREADY IN THIS BASE'S OWN TRENDING FILES, CITED AND NEVER SHELVED. 🔴 THE PROMOTION BACKLOG IS 3,844 ADDRESSES — A 9.4 : 1 RATIO AGAINST THE SHELVES. 🔴 AND FOR R PACKAGES THE `LICENSE` FILE CONTAINS NO LICENCE, WHICH COST THIS BASE TWO PERMISSIVE ROWS UNTIL THIS PASS.**
+
+**`10` rows filed on [`foundations.md`](foundations.md)** (`162` → `172`), `1` on [`../verticals/solutions.md`](../verticals/solutions.md) (`79` → `80`), `1` on [`../agents/top.md`](../agents/top.md) (`95` → `96`), against **`26` documented refusals**. Full registration in [`../agents/trending.md`](../agents/trending.md) `694-A` … `694-L`; this file records the repo-side result.
+
+### 🟢 `694-B` — promotion measured against discovery, with both denominators
+
+`693-A` counted `825` region-labelled trending slugs absent from every sell shelf and prescribed promotion. **p694 executed it and re-measured the gap without the region filter.**
+
+| Quantity | Value |
+|---|--:|
+| Distinct addresses in the two trending files | **`4,208`** |
+| Distinct addresses on the three sell shelves | **`407`** |
+| **Unshelved backlog** | **`3,844`** |
+| Ratio, discovered : shelved | **`9.4 : 1`** |
+| Unshelved cited `≥5` times by this base | **`307`** |
+| Unshelved cited `≥10` times | **`63`** |
+| Verified repo-by-repo at p694 | **`39`** |
+| **Promoted** | **`12`** |
+| **Yield, promotion channel** | **`31 %`** |
+| Yield, search channel (measured at `683`) | **`~1 %`** |
+
+🔵 **The instruction this makes arithmetic: promotion is roughly thirty times more productive than discovery on this base.** `~268` addresses cited `≥5` times remain unexamined.
+
+### 🔴 `694-C` — the `LICENSE` file that contains no licence, and it fails toward "no grant"
+
+This base's standing method — read the payload at the real default ref — **returns a file with no licence in it for R packages**, because CRAN's convention puts the grant in `DESCRIPTION` and leaves `LICENSE` holding only the year and holder that the named template interpolates.
+
+| Repo | GitHub API | `LICENSE` payload | `DESCRIPTION` | True grant |
+|---|---|---|---|---|
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | `NOASSERTION` | `108 B` — `YEAR: 2020-2022` / `COPYRIGHT HOLDER: UC Berkeley Data Science Education Program` | `License: BSD_3_clause + file LICENSE` | 🟢 **BSD-3-Clause** |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | `NOASSERTION` | `46 B` — `YEAR: 2025-2026` / `COPYRIGHT HOLDER: tna authors` | `License: MIT + file LICENSE` | 🟢 **MIT** |
+
+🔴 **Both of this base's instruments are wrong in the same direction across an entire language ecosystem — and R is the language of statistics, biostatistics and social-science teaching.** Both repositories were recovered and filed this pass. `T110`.
+
+### 🟢 `694-M` — the repo-side result: an all-permissive learning-analytics chain, closed for the first time
+
+This shelf has carried analytics components for hundreds of passes and never a complete path without copyleft in it. **p694 closes one, in three MIT/Apache links:**
+
+| Stage | Repo | Grant |
+|---|---|---|
+| **Route** learning records, governed by xAPI Profiles | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 **Apache-2.0** — operative body `7,717` chars, sha256₁₂ `c3716932c584`, **identical to `apache.org`'s own text**, `9/9` sections, residual `−1 B` (trailing newline) |
+| **Visualise** them, xAPI-native | [`openfun/warren`](https://github.com/openfun/warren) | 🟢 **MIT** `1,094 B` `0cc59ddb463e` |
+| **Model the transitions** between them | [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟢 **MIT**, recovered from `DESCRIPTION` (`694-C`) |
+
+🔵 **Why this matters more than any one row: the previous route through this function went through Anki (AGPL-3.0), `learnhouse` (AGPL-3.0) or `oat-sa` (GPL-2.0).** A client deliverable can now carry the whole chain. 🟢 **And the retention half is now permissive too:** [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) (**MIT**, `524★`) reaches the same scheduling algorithm Anki uses **without Anki's copyleft** — knowledge tracing estimates what a learner knows, FSRS decides when to ask again, and this shelf had the estimator and never the scheduler.
+
+### 🟢 `694-N` — the credential loop, both ends MIT
+
+| End | Repo | Grant |
+|---|---|---|
+| **Issue** — LMS with HLS video, quizzes, reviewed assignments, **verifiable certificates** | [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) `12★` | 🟢 **MIT** `1,132 B` `80b497f17f95` |
+| **Hold** — W3C verifiable-credential wallet, **Digital Credentials Consortium at MIT** | [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** `1,092 B` `1032f65dd2f6` |
+
+🔴 **The wallet's star cell is blank rather than guessed:** `search/repositories` returns `422 Validation Failed` for it while `raw.githubusercontent.com` serves its `LICENSE` and `README` at `main` with `200` — **alive, MIT, and invisible to the only channel that reports stars** (`694-G`, fourth instance of `688-B`'s class).
+
+### 🔴 `694-E` — education-AI evaluation: `4` of `5` ship no licence
+
+| Repo | Stars | Grant |
+|---|--:|---|
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) — EMNLP 2025 **Oral** | `46` | 🔴 **none** |
+| [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) — AAAI 2025 **Oral** | `101` | 🔴 **none** |
+| `kaushal0494/UnifyingAITutorEvaluation` | `34` | 🔴 **none** |
+| `kaushal0494/AITutor-EvalKit` | `3` | 🔴 **none** |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | `13` | 🟢 **MIT** `1,064 B` `4cdfd8894a13` |
+
+🔵 **Mechanism: education-AI evaluation is published as papers, and papers ship code as an artefact of peer review rather than as a product.** 🟢 **So the only permissive instrument on these shelves for *"is this tutor pedagogically good?"* has `13` stars — which is the honest state of the field, not a gap in this base's searching.**
+
+### 🔴 `694-A` — the three most-cited unshelved addresses, and three different reasons they are unusable
+
+| Address | Citations | Stars | Reported | Resolved from payload |
+|---|--:|--:|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `41` | `6,905` | `AGPL-3.0` | **AGPL-3.0** — visible on the API |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `38` | `2,062` | **`NOASSERTION`** | **"PageLM Community License"** `8,563 B` — *"personal, educational, or non-commercial research"* only, redistribution ***"strictly prohibited"***, **revenue-sharing agreement required** before any commercial deployment |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `37` | **`7,016`** | **`NOASSERTION`** | **CC BY-NC 4.0** `19,347 B` — *NonCommercial*. A `1,644`-node Chinese K-12 knowledge graph pushed `2026-11-07`, and **the clause forbids exactly the use this base exists to serve** |
+
+🔵 **`NOASSERTION` spanned "non-commercial bespoke" to "non-commercial Creative Commons" in a single pass, extending `686`'s finding: the label is a fact about the detector, never about the grant.** 🔴 **And the transferable rule is about ranking: citation frequency inside this base measures how interesting an address is, not whether it can be used.** `T111`.
+
+### 🔴 `694-D` — `Gap 248`, measured: `51` non-addresses, `186` citations
+
+p693 recorded two. **Across the whole live base there are `51` distinct path fragments and placeholders being cited as repository addresses, `186` times in total** — `search/repositories` (`27`), `topics/ai-tutor` (`23`), **`owner/repo` (`12`)**, `trending/python` (`11`), `repos/HKUDS` (`8`), plus bare `repos/` and `topics/`. 🔴 **`owner/repo` is the *"nombre"* class exactly, surviving in the trending files where this base's own ranking reads it as an address.** 🟡 **These files are append-only, so this is history and the fix is a compile-time exclusion of the `topics/`, `trending/`, `search/`, `repos/`, `users/`, `orgs/` prefixes and the literal `owner/repo`** — not an edit. [`../evidence/gap248-census.2026-11-07-p694.tsv`](../evidence/gap248-census.2026-11-07-p694.tsv)
+
+### Rows filed at p694
+
+| Repo | Shelf | Grant | Region |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) **`77,389★`** | foundations | 🟢 MIT `1,070 B` `d116e214adbc` | Global |
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) `6,535★` | foundations | 🟢 MIT `1,074 B` `7df20dcdf919` | Global |
+| [`iblai/os`](https://github.com/iblai/os) `654★` | agents | 🟢 MIT `1,070 B` `13029f084e13` | Global 🟡 |
+| [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) `524★` | foundations | 🟢 MIT `1,079 B` `021bff58ad26` | Global |
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) `26★` | foundations | 🟢 MIT `1,098 B` `c24a6b35e390` | **North America** (U. Michigan) |
+| [`openfun/warren`](https://github.com/openfun/warren) `18★` | foundations | 🟢 MIT `1,094 B` `0cc59ddb463e` | **EMEA** (France Université Numérique) |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) `17★` | foundations | 🟢 Apache-2.0, graded verbatim | Global |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) `13★` | foundations | 🟡 MIT via `DESCRIPTION` | Global |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) `13★` | foundations | 🟢 MIT `1,064 B` `4cdfd8894a13` | Global 🟡 |
+| [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) `12★` | verticals | 🟢 MIT `1,132 B` `80b497f17f95` | Global 🟡 |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) `3★` | foundations | 🟡 BSD-3-Clause via `DESCRIPTION` | **North America** (UC Berkeley) |
+| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) ★ n/a | foundations | 🟢 MIT `1,092 B` `1032f65dd2f6` | **North America** (DCC at MIT) |
+
+🔴 **No gate ran at p694** — `make hooks` remains denied by this session's auto-mode classifier (`694-J`). Row counts, cell arity and the closed-vocabulary `Region` check were re-derived by session-local code: **`96`/`172`/`80` rows, `0` ragged, `0` duplicate subjects, every row carrying a real `github.com/owner/repo` link.**
+
+---
+
 ## 🆕 2026-11-07 (p693) — 🟢 **EIGHT PLATFORM AND FOUNDATION ROWS FROM A CHANNEL TWO PASSES DECLARED EMPTY — AND THE REASON IT LOOKED EMPTY IS THAT THE PROBE ASKED FOR A SUBJECT INSTEAD OF A PRODUCT. 🔴 THE BASE HAS FOUND 163 LATAM ADDRESSES AND SHELVED 20.**
 
 `2` rows filed on [`repos/foundations.md`](foundations.md) (`160` → `162`), **`6` on [`verticals/solutions.md`](../verticals/solutions.md)** (`73` → `79`), `1` on [`../agents/top.md`](../agents/top.md) (`94` → `95`), and **`1` published LATAM placement withdrawn** on orthographic evidence. Full registration of the pass, including the promotion-gap measurement and the `6/7` false-positive rate on jurisdiction greps, is at [`../agents/trending.md`](../agents/trending.md) `p693`.

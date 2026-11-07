@@ -1,0 +1,28 @@
+slug	citations	stars	spdx_api	resolved_grant	ground_for_refusal
+instructure/canvas-lms	41	6905	AGPL-3.0	AGPL-3.0	copyleft, network clause
+CaviraOSS/PageLM	38	2062	NOASSERTION	PageLM Community License (8563 B)	non-commercial only; redistribution PROHIBITED; revenue-share agreement required for any commercial use
+xiaoyang111222/cn-math-taxonomy	37	7016	NOASSERTION	CC BY-NC 4.0 (19347 B)	NonCommercial clause forbids exactly Globant's use; also a dataset, not software
+DMontgomery40/mcp-canvas-lms	32	104	NONE	no grant	ships no licence
+pguso/agents-from-scratch	32	1071	MIT	MIT	permissive but not an education asset: an AI-engineering code tutorial
+learnhouse/learnhouse	31	2456	AGPL-3.0	AGPL-3.0	copyleft, network clause
+withmarbleapp/os-taxonomy	26	7633	ODbL-1.0	ODbL-1.0	database licence with share-alike; not software
+sitor-ai/frametell	26	482	AGPL-3.0	AGPL-3.0	copyleft, network clause
+canyongbs/advisingapp	26	340	NOASSERTION	Elastic License 2.0 (3860 B)	not OSI-approved; hosting/service restriction
+plastic-labs/tutor-gpt	23	933	GPL-3.0	GPL-3.0	copyleft
+bigbluebutton/bigbluebutton	23	9271	LGPL-3.0	LGPL-3.0	copyleft
+overhangio/tutor	22	1131	AGPL-3.0	AGPL-3.0	copyleft; the canonical Open edX Docker distribution is AGPL
+eth-lre/mathtutorbench	22	46	NONE	no grant	ships no licence (EMNLP 2025 Oral)
+foradian/fedena	21	UNRESOLVED	UNRESOLVED	n/a	address does not resolve on any channel
+JushBJJ/Mr.-Ranedeer-AI-Tutor	20	29539	NONE	no grant	no licence AND pushed 2025-09-30 (13 months stale); already recorded p689
+LearnPress/learnpress	16	275	NONE	no grant	no licence payload
+kaushal0494/AITutor-EvalKit	15	3	NONE	no grant	no licence; pushed 2025-12-05
+brownplt/LTLTutor	12	12	GPL-3.0	GPL-3.0	copyleft
+theopenem/OneRoster.NET	12	INDEX_MISSING	INDEX_MISSING	no grant	ALIVE at master (README 200) but absent from search index and ships no licence
+1EdTech/caliper-js	11	INDEX_MISSING	INDEX_MISSING	n/a	404 at main and master; address is dead
+helixnow/deep-student	10	305	AGPL-3.0	AGPL-3.0	copyleft, network clause
+oat-sa/lib-lti1p3-core	10	37	GPL-2.0	GPL-2.0	copyleft
+learning-commons-org/knowledge-graph	9	168	NOASSERTION	NO SINGLE GRANT (5789 B framework page)	LICENSE.md is a per-dataset licensing policy page; "Open + Gated" and "Gated" content covered by NO open licence
+sdv-dev/SDV	9	3601	NOASSERTION	Business Source License 1.1 (4818 B)	BSL is not open source
+bigdata-ustc/Agent4Edu	9	101	NONE	no grant	ships no licence (AAAI 2025 Oral)
+kaushal0494/UnifyingAITutorEvaluation	8	34	NONE	no grant	ships no licence
+hcengineering/platform	8	28069	EPL-2.0	EPL-2.0	weak copyleft, and not an education asset
