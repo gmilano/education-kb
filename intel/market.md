@@ -124,6 +124,25 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🟢 p700 — North America: the demand leg nils a **40th** time, and the region's product this pass is three *grounding* assets found by querying owners this base had already filed
+
+🔴 **The mandated leg returned nothing novel, again, and now with a denominator.** `AI education North America 2026 adoption regulation players` produced market-research teasers and content blogs. Every checkable fact it carried is already on this page: the **Gallup April 2026** reading (>`60%` of college students using AI weekly against roughly half of institutions discouraging it), the **$169M** federal commitment to responsible AI in higher education (January 2026), the `36–38%` regional market-share range, and the Technavio `86%` vendor figure. **`6/6` held, `0` candidate-novel, `0` adoptable.** The leg named **no vendor, no district and no regulator** — its fourth consecutive pass doing so.
+
+🟢 **The region's real gain came from `T134`'s owner-expansion channel, and all three rows answer the same buyer question.** North America is where "can you prove the model did not make that up?" is asked by counsel rather than by a regulator, and p700 filed three permissive answers:
+
+| Asset | Grant | What it gives a North American engagement |
+|---|---|---|
+| [`groundworklms/SchoolCircleLMS`](https://github.com/groundworklms/SchoolCircleLMS) | 🟢 Apache-2.0 | **Anchor** — an offline grounding engine that answers only from cited sources **or refuses**; AI drafts, a human ratifies |
+| [`pisan-labs/where-does-it-say`](https://github.com/pisan-labs/where-does-it-say) | 🟢 MIT | Course Q&A in **verbatim quoted sentences only**, word-for-word verified; *"Not stated in the course documents"* otherwise, with the unanswered log as a gap report |
+| [`groundworklms/sextant`](https://github.com/groundworklms/sextant) | 🟢 Apache-2.0 | **Learning gain** per learner and per class — the number that survives a procurement review, unlike engagement |
+
+🟢 **Plus the interop piece that removes the usual North American blocker.** [`groundworklms/cartridge`](https://github.com/groundworklms/cartridge) (Apache-2.0) turns a JSON course into a **SCORM 1.2/2004** package that the district's existing Canvas or Moodle plays and grades. US districts do not replace their LMS; this lets an engagement ship capability into the one they have.
+
+🔵 **The standing regional gap is unchanged and worth restating:** this region remains `US`-shaped on these pages. Canada appears only through `680-H`'s `ACM-ICPC-Preparation` row and Mexico is filed under LATAM. **No Canadian provincial or federal education AI instrument has ever been read here**, and p700 did not change that.
+
+**Where the money is, this pass:** sell the **grounding guarantee**, not the tutor. `P84` is the pattern; the deliverable a North American buyer signs is the refusal behaviour plus `sextant`'s gain figure, and `cartridge` is what makes it installable without a migration.
+
+
 #### 🔵 p699 — North America: the supply leg was **not swept** this pass, and saying so is the point; the demand reading is one dated federal number and a legislative trend
 
 🔴 **Supply: no claim, because no measurement.** p699's authority-enumeration channel was pointed at **APAC and LATAM** — the two regions thinnest on these shelves — and **no North America authority login was probed at all.** This is a scope decision, not a nil: `p698`, `p696`, `p695` and `p694` each recorded a *measured* North America supply nil, and **p699 adds no evidence either way.** The distinction matters because this page's North America section has accumulated a long run of "the leg nils again", and an unswept pass must not be read as the next entry in that run. 🔵 **Standing candidates for the next pass to probe on the `org:` channel (`T129`), named here so the work is not re-derived:** `18f`, `GSA`, `usedgov`, `cdssnc`, `canada-ca`, `DigitalService`, and the state-level education agencies — none has been enumerated on this base.
@@ -545,6 +564,19 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🔴 p700 — EMEA: the leg reproduced the superseded Annex III date a **SEVENTH** time, and the region's one new row is a university lecture course
+
+🔴 **Same signature, seventh reproduction.** `AI education EMEA 2026 adoption regulation players` again asserted that the EU AI Act's high-risk education obligations bite in **2026** — one source wording it *"enforceable from February 2026"*, another *"key provisions begin taking effect in 2026"*. **This base holds `2 December 2027`** (`T7`, `T15`), and the superseded date has now been returned by this leg at `p680`, `p684`, `p690`, `p692`, `p697`, `p698` and `p700`. 🔵 **Keep the leg precisely because it fails this way:** it is a standing adversarial test that this page's dates survive contact with the secondary literature, and the literature is consistently wrong in the same direction — **earlier than the truth**, which is the direction that makes a client panic-buy.
+
+🔵 **Everything else it carried is already here:** the **European University Association**'s January 2026 report urging European LLMs, the **OECD Digital Education Outlook 2026**, **Fosway Group**'s April 2026 AI market assessment for digital learning, **ICS.AI**'s UK national higher-education model, and the `~70%` of institutions in Europe and North America with AI guidance in place. **`5/5` held, `0` candidate-novel.**
+
+🟢 **One EMEA row filed, placed on a named institution.** [`yegor256/ssd16`](https://github.com/yegor256/ssd16) — 🟢 MIT, `67★`, default ref **`master`** — the full **Software Systems Design** lecture course taught at **Innopolis University**, sixteen lectures as buildable LaTeX sources, maintained since 2021 and pushed this week. A graduate CS spine for `P55` with real institutional provenance. 🔵 Placed EMEA on the institution in the repository's own description — weaker than an owner organisation, and **named as such so a later pass can overturn it** (`692-M`'s discipline).
+
+🔴 **And a methodological warning that lands hardest in this region.** `T131`: a licence probe that is not exhaustive in **case** fails toward refusal. EMEA's public-sector estates are exactly where this base reads the most grant payloads (`T122`'s `515/828` against `1/182` bimodality; `T126`'s procurement-doctrine finding), so a sweep that misses `License` will under-report permissive density **in the region whose permissive density this page has spent the most passes measuring**.
+
+**Where the money is, this pass:** unchanged and now seven-times-confirmed — **sell the 2027 calendar, not a 2026 panic**. The buying trigger is conformity preparation with `P84`'s grounding guarantee and `sextant`'s auditable gain measure; the thing to refuse is an engagement priced on an August-2026 deadline that does not exist.
+
 
 #### 🔵 p699 — EMEA: no new supply this pass by design — `p698` took the UK estate — and the region's p699 product is the **correction of a causal claim this page was already reasoning from**
 
@@ -1088,6 +1120,19 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟢 p700 — APAC: the leg was the thinnest of the four, and the region still gained the pass's best-provenanced agent row and a `1,230★` course corpus
+
+🔴 **The leg nilled on education specifically.** `AI education APAC 2026 adoption regulation players` returned enterprise-AI material — Boomi, Forrester, Omdia, TechRepublic — with the only education items being a promotional **Acer Edu Summit Asia Pacific 2026** listing and, mis-regioned, a UK higher-education story. It named **no education ministry, no national AI-in-schools policy and no regional vendor share**. `0` candidate-novel facts. 🔵 **Written down rather than left as silence:** APAC was the weakest of the four regional legs this pass, and the gap is specifically *national policy instruments* — the thing this region's buyers actually act on.
+
+🟢 **The supply side more than compensated, and one row is placed on the strongest channel this base ranks.** [`alibaba-damo-academy/ScholarSeed`](https://github.com/alibaba-damo-academy/ScholarSeed) — 🟢 Apache-2.0 (payload **byte-identical** to `apache.org`'s canonical text, body graded verbatim), `38★`, pushed `2026-11-07` — an AI-native research workbench published by **Alibaba DAMO Academy**, a named corporate research institute confirmed `type=Organization`. 🟢 **Its transferable feature is `damoatrace`, a first-class evidence-recording layer**: contracts, recording, storage, query and CLI, so every research step an agent takes is auditable afterwards. That is the one capability an Annex III-shaped audit asks for and almost nothing on these shelves ships natively — and it arrives here from APAC rather than EMEA.
+
+🟢 **And a corpus this base nearly refused on a filename.** [`nwuzmedoutlook/university`](https://github.com/nwuzmedoutlook/university) — 🟢 Apache-2.0, **`1,230★`** — hand-curated course resources from **120+ Chinese universities**: notes, past papers, assignments, exam material. It is the permissive retrieval corpus an APAC higher-education engagement has otherwise had no source for. 🔴 **Its grant is at `License`, and both `LICENSE` and `license` return `404`** — see `T131`; a five-name uppercase sweep would have marked a `1,230★` Apache-2.0 corpus unlicensed.
+
+🔵 **Standing regional note.** APAC remains this base's largest region by shelf rows (`32` of `119` on `agents/top.md`) and its thinnest by *policy* evidence. The imbalance is now consistent across many passes and is a demand-side measurement problem, not a supply one.
+
+**Where the money is, this pass:** the **auditable-trace** play. Pair `ScholarSeed`'s evidence layer with `P84`'s grounding guarantee for multi-jurisdiction APAC clients who must satisfy several regulators at once, and use `nwuzmedoutlook/university` as the retrieval substrate for higher-education deployments.
+
+
 #### 🟢 p699 — APAC: the region supplies the pass's entire deliverable, and the engagement shape here is **a state board operating national DPI**, not an institution
 
 🟢 **Supply — the largest and most permissive public-sector education estate this base has measured.** India's **Sunbird**, enumerated this pass across six GitHub organisations: **`212` repositories, `196` permissive (`185` MIT + `11` Apache-2.0) = `92.5%`**. Six building blocks filed to [`../repos/foundations.md`](../repos/foundations.md) (content/taxonomy, identity/tenancy, devops, assessment authoring, assessment delivery, plus Singapore's accessibility scanner). Full org-by-org table in [`../verticals/solutions.md`](../verticals/solutions.md) `p699`; the licence-density comparison against Europe is `T126`.
@@ -1545,6 +1590,36 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🟢 p700 — LATAM: **the standing "supply nil" conclusion is overturned, and the cause was this base's own star floor.** `108` novel permissive repositories, `14` filed, including a complete MIT national curriculum
+
+🔴 **This page has been publishing a measurement artefact as regional intelligence.** For six consecutive passes LATAM's open-source education supply was declared *nil on three independent channels*, and the conclusion drawn in every estimate was that **LATAM is build-and-translate, not procurement**. p700 swept a channel those passes did not — the Spanish and Portuguese **`topic:` heads**, distinct from the *description* terms `p691` spent — and read `total_count` for each query run alone:
+
+| Channel | `total_count` |
+|---|--:|
+| `topic:educacion` | **`427`** |
+| `topic:educacao` | **`405`** |
+| `topic:enem` | **`145`** |
+| `topic:aprendizaje` | **`107`** |
+| `topic:ensino` | **`75`** |
+| `topic:vestibular` | **`36`** |
+
+**Deduplicated against all `5,565` slugs this base holds, filtered to permissive, unarchived and pushed since 2026-06: `108` novel repositories. The highest is `5★`; the median is `1★`.** Every prior LATAM census used a `≥20★` or `≥40★` floor, so **the entire layer sat underneath the instrument** — `T130`. Six censuses returned a true zero for the query they ran and a false zero for the question they were asking.
+
+🟢 **What that layer actually contains, all grant-verified at p700:**
+
+| Asset | Grant | Why it changes the regional conclusion |
+|---|---|---|
+| [`chilean-school-learning-path`](https://github.com/vladimiracunadev-create/chilean-school-learning-path) | 🟢 MIT | **The complete Chilean national curriculum**, OA by OA: twelve levels `1° básico`–`4° medio`, `149` subject guides, ~9,000 classes, **plus `13` assessment-instrument files including PAES and SIMCE with rubrics**, gap reports and live CI. **This is a procurement-grade spine, not a translation target.** |
+| [`matheussilvano/mooose`](https://github.com/matheussilvano/mooose) | 🟢 Apache-2.0 | Calibrated **ENEM essay grader**: five competency graders in parallel under LangGraph, second-opinion reviewer, deterministic snapping to `0/40/80/120/160/200`, the real zeroing rules, **its own evals harness against human-marked essays**, BYOK incl. local Ollama + on-device PaddleOCR |
+| [`akagabi/enembert`](https://github.com/akagabi/enembert) | 🟢 MIT | pt-BR BERTimbau model labelling the five Competency-5 intervention elements **and refusing to produce a score** — a decidable, auditable verdict |
+| [`org:eemtijca`](https://github.com/eemtijca) | 🟢 MIT ×6 + Apache-2.0 | A **Ceará state high school** running a seven-repository estate: school management with dropout-risk ranking, attendance **with its own MLOps engine**, teacher lesson-note authoring, and `20` BNCC games built on **UDL** for Brazil's AEE programme, zero backend |
+| [`enem-api`](https://github.com/lyodekkendev/enem-api) · [`mcp-enem`](https://github.com/EduardoMilani8/mcp-enem) | 🟢 MIT | Item bank plus MCP agent surface — grounding a tutor on **published past papers** instead of model recall |
+
+🔴 **The institutional channel is a *grant* nil, not an existence nil, and that correction matters commercially.** `692-I` probed five guessed LATAM org handles, got `422` on all five, and declared the channel dead. **`org:fundacion-sadosky` resolves to `21` repositories** (Argentina's public-private ICT foundation, tied to its science ministry; controls green). But its 2026 education output is [`microbitML`](https://github.com/fundacion-sadosky/microbitML) (**GPL-3.0**) and `GURO` (**no grant at any of seven name-and-case variants**). **LATAM institutions publish, and they publish copyleft or ungranted** — `T132`. That is a licensing conversation with a ministry, not an absence.
+
+**Where the money is, this pass — and it is a different pitch than this page has carried all year.** Stop quoting translation as a line item for Brazil and Chile. `P83` is an ENEM engagement built **entirely from Portuguese-native permissive parts**; `P84`'s offline grounded classroom runs on the Chilean curriculum spine with `ludus`'s zero-backend, zero-pupil-data posture as the LGPD position. 🟡 **The honest limit:** adoption across this layer is `0–5★`, so these are bases to **fork, harden and support** — which is a services engagement, and is exactly what Globant sells.
+
 
 #### 🔴 p699 — LATAM: the supply nil is now measured on the AUTHORITY channel — `23` logins, `15` of them nonexistent, **`0` permissive education software** — while the region's demand reading is the highest in the world
 
@@ -2057,6 +2132,25 @@ client.
 - 🟢 **The commercial read for the region is the budget line, not the technology.** `55 %` of LATAM universities have no AI budget and public universities have the lowest rate of dedicated funding, which rules out anything that needs hosting. `DSL4-Digital/RefExists` runs **entirely in the browser with nothing to host**, and `OSLL/code-plagiarism` is a PyPI install on a laptop — so the integrity control that EMEA will buy as compliance is the one LATAM can deploy at zero infrastructure cost. **P60** is specified so that the client-side-only subset is a complete deliverable on its own.
 
 ### Global
+
+#### 🟢 p700 — Global: the eight mandated legs nil a **32nd** consecutive time with a denominator of `20`, and the pass's transferable product is a **channel**, not a repository
+
+🔴 **The legs, scored.** All eight mandated searches ran (four global, four regional). **`20` checkable facts: `20` already held, `0` candidate-novel, `0` adoptable.** Seven addresses surfaced and **all seven were already shelved** — `GarethManning/education-agent-skills`, `OPTIMETA/PAIDEIA`, `microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `TapXWorld/ChinaTextbook`, `speedyapply/2026-AI-College-Jobs`, `openeducat/openeducat_erp`. The global legs returned aggregator and SEO content almost exclusively; the ERP leg could not establish OpenEduCat's licence, which this base has held for many passes.
+
+🟢 **The pass's product is `T134`: every row this base files carries an owner it has never queried.** Found by a gate, not by reasoning — a duplicate-slug check rejected `eemtijca/buscapp` as already filed at `p693`, which exposed that the *school* was known while the *organisation* had never been asked what else it publishes. Across eleven already-filed owners: **`356` siblings → `337` novel → `159` permissive, live, pushed in 2026 → `20` education-shaped → `6` filed.** A `30%` filing rate on the education-shaped subset, against a topic channel `680-B` measured at `1/21` adoptable and declared finished.
+
+🟢 **Why the owner channel is structurally sounder than the topic channel.** A topic head is a stranger's tagging decision — which is why `692-H` retired four heads as *collided* and `T105` had to be written. An owner is a fact this base has **already verified**: it filed a row from it, read its grant, confirmed liveness. Expansion inherits that provenance. **Standing instruction: when a row is filed, query its owner in the same pass.**
+
+🔵 **Two collided heads confirmed in the `692-H` sense, so a later pass does not re-mine them.** `topic:exam` (`1,752`) is overwhelmingly **IT-certification cram** — DCA, OSCP, CKA, CKAD, ExamTopics scrapers. `topic:academic` (`3,056`) is **researcher personal tooling** — Zotero bridges, LaTeX templates, academic CV themes, paper readers. Both return real stars, real permissive licences and real 2026 activity, which is exactly what makes them dangerous: a licence-and-liveness pipeline will promote a stranger's Hugo CV theme into an education KB.
+
+🟢 **A permissive research-integrity layer confirmed on a second, independent channel.** `692-C` found it via `topic:peer-review`; p700 reached the same layer through `topic:literature-review` and `topic:academic` and filed its two strongest instruments: [`Altman-conquer/bibtex-verifier`](https://github.com/Altman-conquer/bibtex-verifier) (MIT, `142★`) — which checks citations against **OpenAlex and CrossRef** and is therefore **decidable rather than probabilistic**, the thing `T79` said the sector lacked — and [`openjournals/joss`](https://github.com/openjournals/joss) (MIT, `1,934★`), the running machinery of a real GitHub-native peer-reviewed journal.
+
+🔴 **Three defects in p700's own instruments, all caught by controls before publication, all published as findings.** (1) The `ls-remote --symref` parser **truncated a slash-containing default branch** (`chore/bump-1.1.6` → `chore`), and the failure arrives disguised as a licence finding because the truncated ref then `404`s — `T131`'s sibling, registered as `700-A`. (2) The grant probe was not **case**-exhaustive and would have refused a `1,230★` Apache-2.0 corpus — `T131`. (3) A sibling was nearly double-filed; the duplicate-slug gate caught it and the catch became `T134`.
+
+🔵 **Channel map, re-measured.** `search/repositories` and `raw.githubusercontent.com` live. `gh api repos/{owner}/{repo}` and **`users/{owner}` both `403`** under this session's repository scope, and `search/users` **does not expose `location`** — so **owner-location placement is unavailable on the API channel this pass** (`700-G`). Region placement therefore came only from grant payloads, repository descriptions and READMEs, and two rows were deliberately left `Global` rather than guessed.
+
+**Where the money is, globally, this pass:** the sellable artefact is a **grounding-and-refusal guarantee with a gain measure attached** — `P84` — because it satisfies a regulated buyer and an offline buyer with the same parts. The sellable *method*, for this base itself, is `T134`.
+
 
 #### 🔵 p699 — Global: the four mandated global legs are **saturated past the point of usefulness**, and the pass's global finding is an instrument correction
 

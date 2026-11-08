@@ -21,6 +21,97 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T130 — LATAM's open-source education supply was never nil: it was **below the star floor**, and the floor was this base's own instrument 🔴 new at p700
+
+**The standing claim this overturns.** This page has said for six passes that LATAM's open-source education supply is *nil on three independent channels* — collided English topic heads, Spanish and Portuguese **description** terms (`0/90` at `p691`), and institutional organisations (`422` on all five probed at `692-I`) — and concluded that **LATAM is build-and-translate, not procurement**.
+
+🔴 **The conclusion was an artefact of the adoption floor.** p700 swept the Spanish and Portuguese **`topic:` heads** — a channel distinct from the description terms `p691` spent — and read `total_count` directly for each: `topic:educacion` → **`427`**, `topic:educacao` → **`405`**, `topic:enem` → **`145`**, `topic:aprendizaje` → **`107`**, `topic:ensino` → **`75`**, `topic:vestibular` → **`36`**. Deduplicated against all `5,565` slugs this base holds and filtered to **permissive, unarchived, pushed since 2026-06**: **`108` novel repositories.**
+
+🔴 **And here is the mechanism, which is the part that transfers.** Every supply census this base has run used a `stars:>20` or `stars:>40` floor. Of those `108` LATAM rows, the **highest is `5★`** and the median is `1★`. The entire layer sits *underneath* every floor this base has ever used, so six consecutive censuses returned a true `0` for the query they actually ran and a false `0` for the question they were asking.
+
+| What was measured | Reading |
+|---|--:|
+| Novel permissive live LATAM-vocabulary repositories, p700 | **`108`** |
+| Highest star count among them | **`5★`** |
+| Star floor used by every prior LATAM census | `≥20★` / `≥40★` |
+| Prior passes concluding "LATAM supply nil" | `6` |
+
+🟢 **What is actually down there is not hobby code.** A complete **MIT Chilean national curriculum** — twelve levels, `149` subject guides, PAES and SIMCE instruments with rubrics ([`chilean-school-learning-path`](https://github.com/vladimiracunadev-create/chilean-school-learning-path)). A **calibrated Apache-2.0 ENEM essay grader with its own evals harness** ([`mooose`](https://github.com/matheussilvano/mooose)). A **pt-BR model that labels the five intervention elements and refuses to score** ([`enembert`](https://github.com/akagabi/enembert)). An ENEM item API, an MCP server over it, and a Brazilian state high school running a seven-repository MIT estate.
+
+🔵 **This is `680-D` and `692-J` arriving at a region.** Both findings said the star floor hides substance; neither applied the observation to a *regional* conclusion, and so a measurement artefact was published as regional intelligence six times. **The transferable rule: a regional supply claim may never be made from a star-floored query.** If the floor cannot be dropped, the claim must be stated as *"no adopted supply"*, which is a different and much weaker sentence than *"no supply"*.
+
+---
+
+## T131 — A licence probe must be exhaustive in **case**, not only in name — and the one that is not fails toward *refusal* 🔴 new at p700
+
+**`T123` (p698) is correct and incomplete.** It added non-canonical licence *names* (`MIT-LICENSE`) to the sweep and retired the British `LICENCE` spelling as a non-finding. It did not touch **case**.
+
+🔴 [`nwuzmedoutlook/university`](https://github.com/nwuzmedoutlook/university) — **`1,230★`**, Apache-2.0, a 120-university course corpus — carries its grant at **`License`**. At the real default ref, `LICENSE` returns `404` and `license` returns `404`.
+
+🔵 **Controlled at both signs in the same pass.** `License` → `200` on `nwuzmedoutlook/university` and `404` on `google/comprehensive-rust`; `LICENSE` → exactly the reverse. **`raw.githubusercontent.com` is strictly case-sensitive on the path; GitHub's own licence detector is case-insensitive** and resolved `spdx=Apache-2.0` correctly.
+
+🔴 **So the usual direction of distrust inverts.** This base routinely treats `license.spdx_id` as the weaker channel (`T121`, and `p686`'s measurement of it). Here **the index was right and the payload probe was wrong**, and a five-name uppercase sweep would have recorded *no grant* on a clean Apache-2.0 repository and refused it. 🟢 **The fix: iterate case variants (`LICENSE`, `License`, `license`) across every name, and treat a full-sweep miss as a statement about filenames — never about rights.** `T123`'s own closing sentence, now with one more axis.
+
+---
+
+## T132 — LATAM's institutional channel is a **grant** nil, not an existence nil, and that is a different problem with a different fix 🔴 new at p700
+
+🔴 **`692-I`'s conclusion rested on a bad owner list.** It probed `org:ceibal`, `org:ceibal-uy`, `org:fundacionceibal`, `org:plan-ceibal` and `org:cenia`, got `422` on all five, and concluded the LATAM institutional channel was dead. p700 probed a different list and **`org:fundacion-sadosky` resolves to `21` repositories** — Argentina's public-private ICT foundation, tied to its Ministry of Science, Technology and Innovation. Controls green (`org:learningequality` → `203`, `org:moodle` → `12`).
+
+🔵 **A `422` is a statement about the owner *string*, not about the region.** `T129` made `org:` an existence oracle **for an owner**; it is not an existence oracle for an institution, because the institution's GitHub handle is a fact you must look up rather than guess. Five guessed handles produced a regional conclusion.
+
+🔴 **But the honest finding is the licence, and it is worse for an engagement than absence.** Across that estate the 2026 education-relevant output is [`microbitML`](https://github.com/fundacion-sadosky/microbitML) (**GPL-3.0**) and `GURO`, a robotics-kit updater carrying **no grant at any of seven name-and-case variants**. The remainder is security and CTF material at `NONE` or `NOASSERTION`.
+
+🟢 **So the regional statement that survives is sharper than either prior version:** LATAM institutions *do* publish education software, and they publish it **copyleft or ungranted**. The gap is not discovery and not supply — it is **permissive licensing**, which is a conversation an engagement can actually have with a ministry, unlike an absence.
+
+---
+
+## T133 — Brazil's national examination is a permissively-supplied **assessment stack**, and it is the only national exam on these shelves that is 🟢 new at p700
+
+🟢 **Five permissive, live, independently-owned components now cover ENEM end to end**, every one filed at p700 and every grant payload byte-read at its real default ref:
+
+| Layer | Component | Grant |
+|---|---|---|
+| Item bank | [`lyodekkendev/enem-api`](https://github.com/lyodekkendev/enem-api) | 🟢 MIT |
+| Agent surface | [`EduardoMilani8/mcp-enem`](https://github.com/EduardoMilani8/mcp-enem) | 🟢 MIT |
+| Essay marking (production-shaped) | [`matheussilvano/mooose`](https://github.com/matheussilvano/mooose) | 🟢 Apache-2.0 |
+| Essay marking (research scorer) | [`hito-boo/enem-essay-scoring`](https://github.com/hito-boo/enem-essay-scoring) | 🟢 MIT |
+| Decidable span labelling | [`akagabi/enembert`](https://github.com/akagabi/enembert) | 🟢 MIT |
+
+🟢 **The stack's design is better than its star counts suggest, and in one specific way it is ahead of the English-language rows on these shelves.** `mooose` constrains output to the only legal ENEM score set (`0/40/80/120/160/200`), encodes the zeroing rules, scores Competency 5 from an explicit checklist, ships an **evals harness against human-marked essays**, and labels its own output an unofficial estimate. `enembert` goes further and **removes the score**, returning only which of the five intervention elements are present — a verdict a teacher can check and a regulator can audit.
+
+🔵 **`T90` said the strongest agents demote the LLM to narrator and take ground truth from a domain solver.** This stack is the first place where the *ground truth is a published national marking guide* and the artefact is a span label rather than a number. 🟡 **The limit, stated:** adoption is near zero (`0–5★`), so these are bases to fork and harden, not services to depend on.
+
+🟢 **And one institutional row underneath it all:** [`org:eemtijca`](https://github.com/eemtijca) — a **Ceará state high school** — publishes a seven-repository MIT estate covering school management, attendance with its own MLOps engine, teacher lesson-note authoring, and twenty BNCC-aligned games built on **UDL** principles for Brazil's specialised-support programme. `p693` filed one of those repositories. The other six were one query away for seven passes. See `T134`.
+
+---
+
+## T134 — Every filed row carries an **unqueried owner**, and that channel is cheaper and richer than any topic head left 🟢 new at p700
+
+🔴 **The defect, found by a gate rather than by reasoning.** p700 attempted to file [`eemtijca/buscapp`](https://github.com/eemtijca/buscapp) as novel; the duplicate-slug gate rejected it, because `p693` had already shelved it. **The school was known. The school's *organisation* had never been queried** — and it holds six more repositories, five of them novel and permissive.
+
+🔴 **Generalised across eleven owners this base has already filed from, the gap is systematic and large:**
+
+| Owner already on these shelves | Repositories it publishes | Rows this base held |
+|---|--:|--:|
+| `endlessm` | `233` | `1` |
+| `alibaba-damo-academy` | `92` | `1` |
+| `pisan-labs` | `60` | `2` |
+| `openjournals` | `40` | `1` |
+| `dodona-edu` | `36` | `2` |
+| `insightflo` | `24` | `1` |
+| `groundworklms` | `14` | `1` |
+| `eemtijca` | `7` | `1` |
+
+**Measured yield across those owners: `356` siblings pulled → `337` novel to this base → `159` permissive, unarchived and pushed in 2026 → `20` education-shaped → `6` filed at p700.** That is a `1.7%` filing rate on raw siblings and a `30%` filing rate on the education-shaped subset — **against a topic channel that `680-B` measured as `1/21` adoptable and declared finished.**
+
+🟢 **What it actually produced this pass, to make the yield concrete.** `dodona-edu` — held since `p680` as *"the one live permissive option"* in academic integrity — also publishes **TESTed**, a peer-reviewed language-agnostic autograder (`doi:10.1016/j.softx.2023.101404`), plus **four per-language judges**. `groundworklms` — one row filed at `0★` on substance at `692-J` — is a **five-service Apache-2.0 LMS platoon** including an offline grounding engine that refuses uncited answers and a **JSON→SCORM cartridge builder** that drops generated courseware into Moodle or Canvas and reports to the gradebook. `pisan-labs` publishes a course Q&A box that answers **only** in verbatim quoted sentences and says *"Not stated in the course documents"* otherwise.
+
+🔵 **Why this channel is structurally better than the one it replaces.** A topic head is a **stranger's** tagging decision, which is why `692-H` found four heads returning a different industry and `T105` had to be written. An owner is a **fact this base has already verified** — it filed a row from it, read its grant, confirmed its liveness. Expanding a known-good owner inherits that provenance; querying a new topic head inherits nothing. 🟢 **The standing instruction: when a row is filed, query its owner in the same pass.** `680-J` found the ledger under-records addresses the tree already held; this is the same shape one level up — **the base under-queries the owners it has already trusted.**
+
+---
+
+
 ## T126 — Permissive density in public-sector education software tracks the **procurement doctrine**, not the jurisdiction: a declared digital public good runs `92%` permissive where one national ministry runs `62%` and another runs `0.5%` 🟢 new at p699
 
 **Measured at p699 over six organisations, `212` repositories, licence read from GitHub's `license.spdx_id` and the grant payload read at first hand for the six filed rows:** India's **Sunbird** estate is **`196 / 212` = `92.5%`** permissive (`185` MIT + `11` Apache-2.0). Set against `p698`'s European readings on the identical instrument — **UK DfE `515 / 828` = `62.2%`, France (`openfun`) `52 / 100`, Finland (`Opetushallitus`) `1 / 182` = `0.5%`, GÉANT `0 / 54`** — the spread is a factor of **`185`** between the top and bottom estates, and **it does not line up with the continent.**

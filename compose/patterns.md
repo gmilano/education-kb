@@ -38,6 +38,95 @@ updated: 2026-11-08
 
 ---
 
+## P83 — The ENEM engagement, built entirely from Brazil's own permissive parts (Brazilian private tutoring groups, state secretariats, *cursinhos*, LATAM edtech; 6–8 weeks to a graded cohort) 🟢 new at p700
+
+**Who buys this.** Any operation that prepares students for **ENEM** — a *cursinho* chain, a state education secretariat, a private school group, or an edtech selling exam prep. Brazil runs the largest university-entrance examination in the Americas, and until p700 this base had no permissive stack to answer it with.
+
+**Why it is new.** `T130` found the layer; `T133` lists it. Every component below is MIT or Apache-2.0, live, and was grant-verified at its real default ref at p700. **Nothing in this pattern needs translating** — it is Portuguese-native, which is the opposite of the *build-and-translate* prescription this base carried for six passes.
+
+```
+[Item bank — lyodekkendev/enem-api (MIT): past papers + questions, forked and pinned ]
+        │
+        ▼
+[Agent surface — EduardoMilani8/mcp-enem (MIT): MCP server over the item bank         ]
+        │                                   so the tutor is GROUNDED on real items
+        ▼
+[Tutoring + study shell — gentilpedro/rumo (MIT) ·or· Melura over Frappe LMS (MIT)    ]
+        │
+        ├──▶ [Essay marking — matheussilvano/mooose (Apache-2.0): 5 competency graders  ]
+        │         in parallel under LangGraph + 2nd-opinion reviewer + DETERMINISTIC
+        │         calibration onto 0/40/80/120/160/200 + its own evals harness
+        │
+        ├──▶ [Competency-5 check — akagabi/enembert (MIT): labels agente/ação/meio/     ]
+        │         efeito/detalhamento in the student's own text, and RETURNS NO SCORE
+        │
+        └──▶ [Integrity — Altman-conquer/bibtex-verifier (MIT) for any cited work +     ]
+                  692-C2's game-the-llm-reviewer run AS AN ATTACK before go-live (P72)
+```
+
+**The wiring that matters.**
+1. **Fork and pin the item bank.** `enem-api` is `0★` and one day old between creation and last push — depend on your fork, not the hosted instance. Items are published past papers, so the data is stable even if the project is not.
+2. **Let `mcp-enem` be the only route to items.** A tutoring agent that recalls ENEM questions from training data will invent plausible ones; an agent that must call the MCP server can be *checked* against the paper. This is `P60`'s decidability applied to retrieval.
+3. **Use both markers, for different jobs.** `mooose` produces the number a student expects, calibrated and bounded. `enembert` produces the **auditable** artefact — five labelled spans, present or absent. Show the student the spans and the number; show an examination board the spans.
+4. **Run `mooose`'s evals harness before anything reaches a learner.** It measures against human-marked essays, so the grader's agreement is a figure in the delivery report rather than a hope. This is the single most reusable thing in the stack.
+5. **Attack the grader before the cohort does.** `692-C2`'s MIT red-team corpus moves an LLM assessor's verdict through meaning-preserving rewrites. Run it; publish the result; `P72`.
+
+**What stays the client's.** The item fork, the calibration thresholds, the cohort data and the eval set. Apache-2.0 on `mooose` and MIT everywhere else means a branded commercial derivative is clean — 🔴 **with one check**: `melura-lms` sits on **Frappe LMS**, so confirm Frappe's own grant against the client's licence gate before choosing it over `rumo`.
+
+**Estimate.** `6–8` weeks to a graded cohort: `1` week forking and pinning the item bank and standing up MCP; `2` weeks wiring the study shell; `2` weeks calibrating `mooose` against the client's own marked essays; `1` week on `enembert` and the span viewer; `1–2` weeks on the attack run, the eval report and teacher training. 🟡 **Add `1` week if the client wants handwriting intake** — `mooose` ships local **PaddleOCR**, but handwriting accuracy on real scripts has to be measured, not assumed.
+
+---
+
+## P84 — The grounded offline classroom: every answer cites a source or the system refuses, and none of it needs connectivity (LATAM public sector, APAC rural, Sub-Saharan Africa, any Annex III buyer; 5–7 weeks to a deployable image) 🟢 new at p700
+
+**Who buys this.** A ministry or school group with intermittent connectivity, *and* any regulated buyer who has to show that an AI system cannot assert something a human has not ratified. p700 is the first pass where those two requirements are satisfied by the **same** parts.
+
+**Why it supersedes the offline half of `P52`.** `P52` assembled an offline appliance from permissive parts but had no grounding guarantee; the AI layer could still fabricate. **`groundworklms/SchoolCircleLMS` (Apache-2.0) makes the guarantee architectural**: every claim routes through **Anchor**, an offline grounding engine that answers only from cited source material **or refuses**, AI drafts and a human ratifies, and nothing unreviewed reaches a student.
+
+```
+[Content spine — the client's own doctrine/curriculum, plus:                          ]
+   · vladimiracunadev-create/chilean-school-learning-path (MIT) for a Chilean ministry
+   · eemtijca/caderno-aberto (MIT) for teacher-authored notes a school already approved
+   · google/comprehensive-rust (Apache-2.0) for a technical-academy spine
+        │
+        ▼
+[Grounding + LMS — groundworklms/SchoolCircleLMS (Apache-2.0): Anchor answers ONLY    ]
+        │   from cited sources or refuses; AI drafts → human ratifies → student sees
+        │
+        ├──▶ [Course Q&A — pisan-labs/where-does-it-say (MIT): verbatim quoted         ]
+        │        sentences, word-for-word verified, "Not stated in the course
+        │        documents" otherwise — and the unanswered log becomes a GAP REPORT
+        │
+        ├──▶ [Autograding — dodona-edu/universal-judge (MIT, peer-reviewed): ONE       ]
+        │        language-agnostic suite per exercise + judge-java/prolog/haskell/r
+        │
+        ├──▶ [Measurement — groundworklms/sextant (Apache-2.0): learning GAIN,         ]
+        │        class gaps, competency coverage — not time-on-task
+        │
+        ├──▶ [Classroom tools, all offline — eemtijca/ludus (MIT, zero backend, UDL/   ]
+        │        AEE) · HeraldoAntunes/giz-livre (MIT, tablet blackboard) ·
+        │        inspmarcos25/pyestudo (MIT, CPython 3.12 on-device)
+        │
+        └──▶ [Interop — groundworklms/cartridge (Apache-2.0): JSON course → SCORM      ]
+                 1.2/2004 .zip that drops into the client's EXISTING Moodle/Canvas
+                 and reports completion + score to the gradebook
+```
+
+**The four decisions this pattern exists to make for you.**
+1. **Grounding is a component, not a prompt.** Anchor refusing an uncited answer is enforceable and demonstrable; a system prompt asking a model to cite is neither. This is what an Annex III conformity conversation needs, and it is why `SchoolCircleLMS` anchors the pattern rather than a general LLM gateway.
+2. **Refusal is productive.** `where-does-it-say` logs what it could not answer and turns it into a weekly gap report. The refusals become the curriculum improvement backlog — the strongest argument against treating a refusal rate as a failure metric.
+3. **Measure gain, not engagement.** `sextant` gives a pre/post delta per learner and per class. Procurement reviews survive a gain number; they do not survive a usage dashboard.
+4. **Never replace the LMS.** `cartridge` emits SCORM that the institution's existing Moodle or Canvas plays and grades, so the engagement adds capability without migrating a system of record. `P59`'s hazard, avoided structurally.
+
+🟢 **Zero-data as a compliance strategy, not a mitigation.** `ludus` has no accounts, no database and no server — all state in the device browser. For a pilot that is the strongest possible position on LGPD, GDPR and every pupil-data regime at once: there is **no** personal data to protect. Start a ministry pilot there and add identity only when a feature genuinely requires it.
+
+**Estimate.** `5–7` weeks to a deployable image: `1` week ingesting the client's content spine into Anchor's cited-source format (**this is the real work, and it is content work, not engineering**); `1` week standing up SchoolCircle and the review queue; `1` week `where-does-it-say` over the course documents; `1` week the judge fleet for whichever languages the cohort uses; `1` week `sextant` plus the SCORM cartridge path into the incumbent LMS; `1–2` weeks offline imaging, teacher training and the gap-report loop.
+
+🟡 **Stated honestly.** `SchoolCircleLMS`, `sextant` and `cartridge` are all at `0★`, pushed between September and October 2026, from a single owner. That is concentration risk: **fork all three, vendor them, and apply `P61`'s grant-boundary lockfile** so a client's delivery path does not depend on one upstream's continued existence. 🔵 The licences — Apache-2.0 with the appendix filled, MIT verbatim — are clean, which is what makes forking a real option rather than a fallback.
+
+---
+
+
 ## P82 — The national-curriculum assessment engagement on **India's own MIT stack**: extend the state platform, never fork it (state board, national platform operator, APAC edtech, LATAM ministry by transfer: 8–10 weeks) 🟢 new at p699
 
 **Why this pattern exists and `P81` does not cover it.** `P81` adopts a national authority's MIT *services* and puts the agent at the service front door — but England's estate is a set of administrative systems, and the agent sits on records. India inverts the centre of gravity: **the national platform is itself MIT and its assessment layer is the live building site.** From the **`2026–27`** academic session India requires AI and computational thinking **from Class 3 in every school**, the delivery platform (**DIKSHA**, all `36` states and UTs, `30+` languages) is MIT-licensed **Sunbird**, and Sunbird's assessment blocks were being pushed **days** before this pass. The engagement is therefore *curriculum delivery at national scale on code you are allowed to extend*, which no other pattern on this base describes.

@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p700) — 🟢 **ELEVEN FOUNDATIONS, AND THE TWO THAT MATTER MOST WERE SITTING NEXT TO ROWS THIS BASE ALREADY HELD: A PEER-REVIEWED UNIVERSITY AUTOGRADER AND A JSON→SCORM BRIDGE. 🔴 ONE OF THE ELEVEN WOULD HAVE BEEN REFUSED OVER THE CASE OF A FILENAME.**
+
+**`11` rows on [`foundations.md`](foundations.md)** — `199` → **`210`**, re-derived by counting with the counter validated against `p699`'s own published `199` before the heading was touched. Arity gate `210/210` at `5` columns, `0` duplicated slugs, `0` header-or-example rows as data.
+
+| Filed at `p700` | Grant, byte-read at the real default ref | Why it is a foundation |
+|---|---|---|
+| [`google/comprehensive-rust`](https://github.com/google/comprehensive-rust) — **`33,500★`** | 🟢 Apache-2.0, `11,358 B`, `cfc7749b96f6`, **byte-identical to `apache.org`**, body verbatim | **The highest-adopted permissive curriculum this base has ever shelved, by an order of magnitude.** The Rust course the Android team actually teaches: multi-day, exercise-driven, speaker notes, many translations. The repository *is* the curriculum — exactly `P55`'s fork-and-own shape |
+| [`vladimiracunadev-create/chilean-school-learning-path`](https://github.com/vladimiracunadev-create/chilean-school-learning-path) — `1★` | 🟢 MIT, `1,072 B`, `bf05942b75e0`, body verbatim | **A complete national curriculum, objective by objective:** `1° básico`–`4° medio`, `149` subject guides, ~9,000 classes, **`13` assessment-instrument files including PAES and SIMCE with rubrics**, gap reports, live CI. 🔴 **The row that overturns six passes of "LATAM is build-and-translate"** — `T130` |
+| [`nwuzmedoutlook/university`](https://github.com/nwuzmedoutlook/university) — **`1,230★`** | 🟢 Apache-2.0 at **`License`**, `11,357 B`, `c71d239df917`; 🔴 `LICENSE` and `license` both `404` | Course resources from **120+ Chinese universities** — the permissive APAC retrieval corpus this base had no source for. 🔴 **A five-name uppercase sweep calls this unlicensed** — `T131`. 🔵 `1 B` from canonical is a missing leading blank line; body `0`-byte verbatim |
+| [`dodona-edu/universal-judge`](https://github.com/dodona-edu/universal-judge) — `9★`, ref **`master`** | 🟢 MIT, `1,068 B`, `07d68984571a`, © *Team Dodona*, body verbatim | **TESTed** — **one language-agnostic test suite per exercise**, evaluating submissions across many languages. Ghent University, **peer-reviewed** (`doi:10.1016/j.softx.2023.101404`), devcontainer-reproducible. The decidable-assessment backbone `P60`/`T79` asked for — nothing for `692-C2`'s red-team corpus to attack. 🔵 Found by querying an owner held since `p680`; **four per-language judges** sit beside it |
+| [`groundworklms/cartridge`](https://github.com/groundworklms/cartridge) — `0★` | 🟢 Apache-2.0, `11,358 B`, `cfc7749b96f6`, body verbatim | **JSON course → SCORM 1.2/2004 `.zip` that drops into Moodle/Canvas and reports completion and score to the gradebook.** One function in, one zip out, no runtime server. **The smallest high-leverage row in the pass:** it removes the integration argument that kills pilots, without touching the LMS |
+| [`openjournals/joss`](https://github.com/openjournals/joss) — **`1,934★`** | 🟢 MIT, `1,078 B`, `b8fbe1383d31`, body verbatim | The **running machinery** of a GitHub-native peer-reviewed journal — review workflow, editorial bot, paper build. The reference implementation of an auditable review process, with twelve years of production history. 🔵 Placed North America on the **NumFOCUS** badge in its own README |
+| [`yegor256/ssd16`](https://github.com/yegor256/ssd16) — `67★`, ref **`master`** | 🟢 MIT, `1,078 B`, `5c8864e628fe`; 🔵 body **substantively** verbatim, single-quoted | Sixteen **Software Systems Design** lectures taught at **Innopolis University**, LaTeX sources, maintained since 2021. 🔴 The grant that produced `700-K`: equal-length body, failed equality test, quote style only |
+| [`lyodekkendev/enem-api`](https://github.com/lyodekkendev/enem-api) — `0★` | 🟢 MIT, `1,085 B`, `84d2cb67396a`, body verbatim | The **item bank** under this pass's whole Brazilian assessment stack: a public catalogue of ENEM papers and questions. A foundation because it is **decidable** — a past paper is a published fact, so an agent on it can be checked. 🟡 Fork and pin it; `0★`, one day old at filing |
+| [`raimbekovm/cs231n-2025-notes`](https://github.com/raimbekovm/cs231n-2025-notes) — `42★` | 🟢 MIT, `1,087 B`, `406faf0c028d`, body verbatim | Permissive worked notes for **Stanford CS231n** — useful precisely because the upstream course materials are not permissive, so this is the part an engagement can legally fork and brand |
+| [`endlessm/moddable-platformer`](https://github.com/endlessm/moddable-platformer) — `80★` | 🟢 MIT, `1,074 B`, `1d3eba481b84`, © *2024–2025 **Endless Access*** | A deliberately small **moddable** platformer built to flatten the **Godot** learning curve: the modification *is* the exercise. 🔵 Placed North America on the licensor's legal entity read out of the grant — `T80`'s rank-1 channel |
+| [`fundacion-sadosky/microbitML`](https://github.com/fundacion-sadosky/microbitML) — `2★` | 🔴 **GPL-3.0**, `35,151 B` — **copyleft, shelved as regional evidence, not as a base to fork** | A **micro:bit** ML framework for guided classroom activities from **Argentina's public-private ICT foundation**. 🟢 Its existence refutes `692-I`'s dead-channel claim (`org:fundacion-sadosky` → `21` repos). 🔴 But the estate's 2026 education output is this (GPL-3.0) or ungranted — **LATAM's institutional gap is a *grant* gap** — `T132` |
+
+🔵 **Channel readings this pass, each query run alone and its `total_count` read directly** (`692-D`'s rule, after that pass published two false dead channels from a truncated pipe):
+
+| channel | reading `2026-11-08` |
+|---|--:|
+| `topic:educacion` / `topic:educacao` | `427` / `405` |
+| `topic:enem` / `topic:vestibular` | `145` / `36` |
+| `topic:academic` / `topic:exam` | `3,056` / `1,752` — **both collided**, `700-H` |
+| `topic:literature-review` / `topic:research-assistant` | `1,512` / `633` |
+| `org:fundacion-sadosky` | `21` — **`692-I`'s nil refuted** |
+| `users/{owner}` (owner location) | **`403`**, session scope — `700-G` |
+| `search/users` → `location` field | **absent from the response** — `700-G` |
+
+
+---
+
 ## 🆕 2026-11-08 (p699) — 🟢 **SIX FOUNDATIONS, FIVE OF THEM FROM INDIA'S NATIONAL EDUCATION DPI AT 196/212 PERMISSIVE — AND BEFORE ANY OF THEM COULD BE FILED, THE SHELF TURNED OUT TO BE SPLIT IN TWO BY A BLANK LINE, HIDING 7 ROWS FROM EVERY COUNT IT PUBLISHED**
 
 **`6` rows on [`foundations.md`](foundations.md)** — but the honest arithmetic is **`186` published → `193` actual → `199` filed**, because the shelf was carrying `7` rows no renderer displayed. **`1` row on [`../agents/top.md`](../agents/top.md)** (`106` → `107`), **`0` platform rows** on [`../verticals/solutions.md`](../verticals/solutions.md) (an estate section instead). Full pass register in [`../agents/trending.md`](../agents/trending.md) `p699`.
