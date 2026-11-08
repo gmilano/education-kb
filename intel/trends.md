@@ -21,6 +21,58 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T168–T169 — added at p708 (2026-11-08)
+
+🔴 **Numbering hazard hit and recorded, because p708 nearly committed the defect this page's own banner warns about.** Deriving the next free identifier from `max(## T ...)` returns **`155`** — and `T154`/`T155` **already exist**, filed at `p704`. 🟢 **The reason is a heading-STYLE change, not a counting error:** from `p704` onward trends are filed as `## 🆕 T{a}–T{b} — added at pNNN` with each trend at `### `T{n}``, so a scan for `^## T` sees nothing after `T155` and misses `T156`–`T167` entirely. 🔵 **The correct instrument is `max` over EVERY `T{n}` appearing in ANY heading of level 2–4, which returns `167`** — excluding `T273`, which is a cross-reference into the pre-reset base's namespace and not a trend on this page. 🟢 **Re-derived at p708 that way: `167` carried in, `T168`–`T169` filed, max `169`.** 🔴 **The `T84`–`T87` gap block remains RESERVED — do not close it** — and `T125` is skipped deliberately (recorded further down this page). The `T31`/`T32`/`T39`/`T40` collisions are unrepaired by design.
+
+### `T168` — The institutional agent is a class, it has crossed four countries independently, and it is the only education-AI subject that places itself in a region without inference
+
+**Signal.** p708 verified and filed **seven** subjects that share a shape no earlier trend on this page names: an **unofficial MCP server over one named university's own running systems**, published by a student or a lecturer at that university, authenticating as the user with the user's own credentials.
+
+| subject | institution | country | reach beyond the LMS | grant, read from the bytes `2026-11-08` |
+|---|---|---|---|---|
+| [`jamestesting0/tum-mcp`](https://github.com/jamestesting0/tum-mcp) | Technische Universität München | 🇩🇪 Germany | **Artemis** (autograder), Zulip, **TUMonline** (campus management) | 🟢 MIT, `1,092 B`, `ce90dfa77bef` |
+| [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | Peter the Great St. Petersburg Polytechnic | 🇷🇺 Russia | mailbox, timetable, the **national** `openedu.ru` | 🟢 MIT, `1,064 B`, `0dc1ec808f28` |
+| [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) | **SRCE** — national academic computing centre | 🇭🇷 Croatia | a **national Moodle tenancy** for Croatian universities | 🟢 MIT, `1,070 B`, `c458af6b099b` |
+| [`changazo/udesa-mcp`](https://github.com/changazo/udesa-mcp) | Universidad de San Andrés | 🇦🇷 Argentina | role-aware write policy, private OAuth deployment | 🟢 **Apache-2.0**, `10,173 B`, `a6cba85bc92e` |
+| [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) | Universidad Tecnológica Nacional | 🇦🇷 Argentina | forum posting and assignment submission on confirmation | 🔵 **ISC**, `748 B`, `2ad14eb14513` |
+| [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) | Argentine universities, multi-tenant | 🇦🇷 Argentina | **SIU Guaraní** — a student-records system, not an LMS | 🟡 **MIT + ISC conjunctive**, `1,980 B`, `727b864af003` |
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | any Moodle, **in-tree** | — | separate READ/WRITE registries, preview-and-approve | 🔴 **GPL-3.0**, `35,149 B`, `3972dc9744f6` |
+
+🟢 **They were written independently — different authors, different languages, different stacks — and they converge on the same four controls:** server-side role-aware scope; a compulsory preview-and-approve step before any write; student **pseudonymisation** before anything reaches a model; and provenance, coverage and warnings on every result, with an error never returned as an empty result. 🟢 **Credentials never leave the user in any of them** — OS secure store, the institution's own session, or private single-account OAuth.
+
+🔵 **Why it is a trend rather than a cohort.** This base has `192` agent rows and has struggled for eleven passes to place them: `Global` is the largest column at `83` precisely because a generic tutor repo names no country. 🟢 **An institutional agent is named after a university, so the region is a fact in the subject, not an inference from a README.** Filing these seven moved `EMEA 15 → 18` and `LATAM 16 → 19` — the two thinnest columns — in one pass, with **zero** region guesses. 🟡 `falkenslab/miyagi` is the control that proves the rule: Spanish-language Moodle tooling that names **no** institution and **no** country, so it is filed `Global` and stays there.
+
+**Confidence.** 🟢 **High on the class and its properties** — all seven payloads were read first-hand from `raw.githubusercontent.com` at the live default ref, all seven proved alive by `git ls-remote --symref`, all seven have a commit inside the last `13` days. 🟡 **Low on the class's size**: seven is what one Spanish-language leg plus one upstream thread produced, not a census.
+
+**Action.** 🔴 **The next sweep of this class should be run per country in the authors' own language, naming the institution** (`708-C`) — never as `AI education {region} 2026`, which returns UNESCO and ministries and has never once returned a repository. 🔴 **The APAC form has not been run at all**, so APAC's `0` institutional agents is an unswept channel, not an empty one. 🟢 **For an engagement: the authority layer above is the reusable asset, and three of its four controls are already MIT or Apache-2.0.** The fourth — write authority — has its best reference under GPL-3.0 **by construction** (it lives in Moodle's tree), so it must be re-implemented out-of-tree, not copied.
+
+---
+
+### `T169` — Licence-NAME gating fails on this class three distinct ways, and p708 hit all three in a single pass
+
+**Signal.** Globant's own filter is *“MIT / Apache 2.0 / BSD”*. 🔴 **Applied as a string match — which is how a client's compliance gate is actually built — it produced a wrong answer on three of the nine subjects p708 read, in three different directions.**
+
+| failure mode | subject | what a name-matcher answers | what the bytes say |
+|---|---|---|---|
+| **1. Permissive but not on the list** | [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) | 🔴 **refuse** — `ISC` matches neither `MIT`, `Apache-2.0` nor `BSD` | 🟢 **ISC is OSI-approved, BSD-family and permissive.** `748 B` — the smallest grant on this base. A correct gate accepts it |
+| **2. On the list, but it is only HALF the grant** | [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) | 🔴 **accept as MIT and stop** — the file is titled `MIT License` | 🟡 **Two live grants in one file.** Below a separator sits a standalone **ISC** grant © *Joaquín Peñalva* for the portions derived from `utn-mcp`. A deployment takes **both**. `1,980 B`, `sha256₁₂ 727b864af003` — byte-identical to the record this base holds for it at `T427` in [`open-gaps.md`](open-gaps.md), so this is confirmed, not inferred |
+| **3. On the list, and there is NO grant at all** | [`MoralesPascualJosue/Plataforma-educativa-MC-`](https://github.com/MoralesPascualJosue/Plataforma-educativa-MC-) | 🔴 **accept as MIT** — `composer.json` says `"license": "MIT"` | ⛔ **All rights reserved.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `license` each `404` at `master`. The manifest is the **unedited Laravel skeleton**: `name` = **`laravel/laravel`**, `description` = **`"The Laravel Framework."`**, `require.laravel/framework` = `^6.2`. The MIT is **Laravel's, declared by Laravel, about Laravel** |
+
+🔵 **Mode 3 has a precedent on this base and this instance is strictly worse.** The `Gego-K12/gegok12` finding named the unedited-scaffold manifest — but that repository *also* had a real root `LICENSE`, so the scaffold field was redundant and harmless. 🔴 **Here the scaffold field stands alone: it is the only licence signal in the repository, and it is false.** Call it the **scaffold field standing alone**.
+
+🟢 **A fourth direction was measured too, and it is the one that moves fastest:** `p707` found [`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro) had gone **MIT → AGPL-3.0** seven days after being filed. 🟢 **p708 bounded it** — the youngest `81` rows on this base re-read from the bytes, **`81 / 81` alive and `81 / 81` byte-identical**, so the measured reversal rate is **`1 / 81`** across six passes and `klyro` is a singleton, not a wave.
+
+**Confidence.** 🟢 **High.** Every claim here is a payload read from `raw.githubusercontent.com` at a named default ref on `2026-11-08`, with the byte size and `sha256₁₂` published beside it; the three refusals name the probe that produced them.
+
+**Action.** Three discriminators, each one line, in the order they must run:
+1. 🔴 **Read `name` before `license` in any manifest.** If `name` is the framework's own (`laravel/laravel`, and the equivalent for `package.json`), the `license` field is scaffold and carries **zero** weight.
+2. 🔴 **Gate on the SPDX family's permissive property, not on a three-string whitelist.** `ISC`, `0BSD`, `Zlib` and `BSD-2-Clause` are all permissive and all absent from the mandate's wording.
+3. 🔴 **Read the whole payload, not the title line.** A grant file may carry two families **conjunctively**; the title names only the first.
+🔵 And the instrument note that makes all three runnable here: on this network `gh api` and `curl -sI https://github.com/...` both return **`403`** for live repositories, so existence is `git ls-remote --symref` and the grant is `raw.githubusercontent.com`.
+
+---
+
 ## 🆕 T167 — added at p707 (2026-11-08)
 
 ### `T167` — A payload-read licence is a **dated** fact, not a standing one — and the dangerous direction of drift is the one no changelog announces

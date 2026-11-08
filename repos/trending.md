@@ -3,6 +3,53 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p708) — 🟢 **ONE ROW FILED, AND IT IS THE SEVENTH MEMBER OF A PROMOTION BATCH THIS BASE DECLARED ON `2026-10-25` AND NEVER WROTE. 🔴 `0 / 7` OF THAT BATCH EXISTED ON ANY SHELF `281` PASSES LATER. 🟢 THE YOUNGEST `81` ROWS ON THIS BASE WERE RE-VERIFIED AND CAME BACK `81 / 81` INTACT, SO `p707`'s LICENCE REVERSAL IS A SINGLETON.**
+
+[`foundations.md`](foundations.md) **`266` → `267`** rows (arity `267/267` at `5` columns, `0` ragged; `267` distinct subjects, `0` duplicated). The agent-side members of the same batch — six of them — are filed at [`../agents/top.md`](../agents/top.md) in this pass; the full measurement is `708-A` in [`../agents/trending.md`](../agents/trending.md). 🔵 Append-only: this section is added at the top and every section below it is retained verbatim.
+
+🔴 **The mandated `github trending {industry} AI {year}` leg returned its 36th consecutive nil.** It surfaced `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub` and `microsoft/generative-ai-for-beginners` — **all four already shelved**, each checked by slug, not by recollection.
+
+---
+
+### 🟢 `708-R1` — filed: [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp), and it is this base's first deliberate GPL-3.0 foundation in eleven passes
+
+| | |
+|---|---|
+| Liveness | 🟢 `git ls-remote --symref` → `refs/heads/master`, HEAD `f7f6ab157510` |
+| Grant, read from the bytes at `master` today | 🔴 **GPL-3.0** — `LICENSE`, **`35,149 B`**, `sha256₁₂ 3972dc9744f6`, opening *“GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007”* |
+| Last commit | `2026-11-08` — the same day as this pass |
+| Tracked paths | `413`; `README.md` is `51,613 B`, plus a documentation site |
+| Stars | 🔴 **not obtainable** — see `708-D` in [`../agents/trending.md`](../agents/trending.md) |
+| `p427`'s reading, for comparison | 🔴 `GPL-3.0`, `2` refs, `2026-10-29`, *“in-tree Moodle plugin — copyleft by construction”* — **agreeing with p708's first-hand read** |
+
+🟢 **Why it earns a row despite the licence.** Every other MCP subject this base holds sits *outside* the LMS and re-authenticates as the user. This one is the **in-tree** variant: a Moodle `local` plugin (`local_mcp`) that exposes courses, users, activities, grades and enrolments over MCP with **separate READ and WRITE tool registries**, Moodle's own permission model enforced per call, and a compulsory **preview-and-approve** step before any write. It bypasses Moodle's traditional external-service layer. 🔵 **It is therefore the reference answer to “what can an agent see when the institution itself installs it?”** — a question no permissive row on this base can answer.
+
+🔴 **The copyleft is architectural, not elective.** A Moodle plugin links against Moodle, and Moodle is GPL-3.0-or-later; a derivative plugin inherits that. There is no permissive variant of this design to go looking for, and a future pass should not spend a leg trying to find one. 🟡 **The studio reading, stated in the row itself: treat it as a SPECIFICATION, not a starting point.** Shipping a modified `local_mcp` to a client means shipping GPL-3.0 source. The permissive path is an **out-of-tree** server against Moodle's web services — and p708 filed exactly that on the agent shelf: [`changazo/udesa-mcp`](https://github.com/changazo/udesa-mcp), **Apache-2.0**, `10,173 B`, `sha256₁₂ a6cba85bc92e`, which additionally carries the express patent grant MIT and ISC do not.
+
+### 🟢 `708-R2` — the re-verification sweep: the youngest `81` rows on this base, `81 / 81` intact
+
+🔴 `p707`'s product was a licence reversal — [`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro), **MIT → AGPL-3.0**, caught seven days after filing. 🔵 **The question it left open is whether the recent cohort is generally unsafe.** p708 measured it rather than worrying about it.
+
+**Method.** Every row filed at `p701`/`p703`/`p704`/`p705`/`p706` across [`foundations.md`](foundations.md), [`../agents/top.md`](../agents/top.md) and [`../verticals/solutions.md`](../verticals/solutions.md), taken by exact slug together with its published licence family, payload byte-size and `sha256₁₂`; `git ls-remote --symref` for liveness and default ref; `raw.githubusercontent.com` for the payload at that ref; `sha256` of the bytes against the cell; and a title/body grep to classify the family independently of what the cell claims.
+
+| cohort | subjects | ALIVE | payload byte-identical | licence-family divergences |
+|---|--:|--:|--:|--:|
+| `p706` | `23` | **23** | **23** | `0` |
+| `p705` | `5` | **5** | **5** | `0` |
+| `p704` | `3` | **3** | **3** | `0` |
+| `p703` | `14` | **14** | **14** | `0` |
+| `p701` | `35` | **35** | **35** | `0` |
+| `klyro` (p707's correction) | `1` | **1** | **1** | `0` |
+| **total** | **`81`** | **`81`** | **`81`** | **`0`** |
+
+🟢 **Zero dead addresses. Zero licence drift. Zero byte drift. And `p707`'s correction still holds** — `klyro` serves `33,725 B` `sha256₁₂ 70adc423756c` at `main` HEAD `3c278236a24e` today, byte-for-byte what `p707` republished. 🔵 **Measured base rate of post-filing licence reversal: `1 / 81` across the six most recent passes.** 🟡 **The actionable conclusion is negative and therefore cheap to act on: do NOT spend the next pass re-sweeping this shelf.** `p707` and `p708` have now between them verified the entire recent intake; the marginal row of assurance is near zero, while `708-A` shows the marginal row of *bookkeeping* assurance was worth seven subjects and two region columns.
+
+### 🔵 `708-R3` — instrument note that changes how this page must be read
+
+🔴 **`curl -sI https://github.com/{owner}/{repo}` returns `403` under this session's network policy — for repositories that `git ls-remote --symref` proves ALIVE.** `gh api repos/{owner}/{repo}` likewise returns `403` (*“GitHub access to this repository is not enabled for this session”*), and `img.shields.io/github/stars/...` is unreachable (`http_code 000`, `0` bytes). 🟢 **What does work: `git ls-remote --symref` (existence, default ref, HEAD sha), `raw.githubusercontent.com` (grant payload bytes), and `git clone --depth 1 --bare` (commit date, tracked-path count).** 🔴 **A pass that applied the mandate's literal gate — *“Verify every URL before writing it (`curl -sI`). A 404 is not a finding.”* — would have refused every live subject p708 filed, and if applied to the existing shelves would have retired `192` good agent rows and `267` good foundations.** 🟡 **Rule: on this network, a `403` from `github.com` is evidence about the PROXY, not about the repository. Existence is `git ls-remote`; the grant is `raw.githubusercontent.com`.**
+
+---
+
 ## 🆕 2026-11-08 (p707) — 🔴 **ONE SHELF ROW WAS PUBLISHING A 🟢 PERMISSIVE GRANT FOR A REPOSITORY THAT WENT NETWORK-COPYLEFT SEVEN DAYS AFTER IT WAS FILED — AND IT WAS CAUGHT BY A DIFF, NOT BY A LEG. 🟢 THE REST OF THE SHELF IS MEASURED CLEAN. 🔴 THE MANDATED GITHUB-TRENDING LEG RETURNED ITS 35th CONSECUTIVE NIL.**
 
 [`foundations.md`](foundations.md) stays at **`266`** rows (arity `266/266` at `5` columns, `0` ragged). **`0` rows filed, `1` row CORRECTED** — p707 added no supply and says so; its product is a defect in what this base already published.

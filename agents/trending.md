@@ -3,6 +3,131 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p708) — 🔴 **THIS BASE DECLARED SEVEN PROMOTIONS ON `2026-10-25` AND WROTE NONE OF THEM. `0 / 7` WERE ON ANY SHELF `281` PASSES LATER. 🟢 p708 MEASURED IT ADDRESS BY ADDRESS, VERIFIED ALL SEVEN FIRST-HAND, AND FILED THEM — WHICH MOVED THE TWO THINNEST REGION COLUMNS ON THE AGENT SHELF IN ONE PASS.**
+
+**`8` subjects filed** (`7` agents, `1` foundation). [`top.md`](top.md) **`185` → `192`** (arity `192/192` at `6` columns, `0` ragged; `192` distinct subjects, `0` duplicated; region vocabulary `192/192` legal). [`../repos/foundations.md`](../repos/foundations.md) **`266` → `267`** (arity `267/267` at `5` columns, `0` ragged). [`../verticals/solutions.md`](../verticals/solutions.md) stays at **`111`**. **`2` trends, `1` pattern.** 🔵 Append-only: this section is added at the top and every section below it is retained verbatim.
+
+🔵 **Why the headline is a bookkeeping defect rather than a find:** the eight mandated legs returned their **36th consecutive nil** (`708-B`, measured against `18` named markers rather than asserted). `p704` named the *promotion leak* as this shelf's binding constraint and `p707` spent its pass asking *“is what we already published still true?”*. p708 asked the next question — **“is what we already PROMISED actually there?”** — and the answer was no, seven times, with a date.
+
+---
+
+### 🔴 `708-A` — the promotion leak, finally measured as a batch instead of a tendency
+
+[`top.md`](top.md) has carried this, in the `p427` section, since **2026-10-25**:
+
+> 🔵 Promoted to [`agents/top.md`](top.md) this pass: `falkenslab/miyagi`, `nialvape/utn-mcp`, `HyNuwa/UniMCP`, `jamestesting0/tum-mcp`, `kad-xyz/spbstu-mcp`, `simonseifert/merlin-mcp`.
+> 🔵 Promoted to [`repos/foundations.md`](../repos/foundations.md): `EduardoKrausME/moodle-local_mcp`.
+
+| declared promotion | destination | in `agents/top.md` | in `repos/foundations.md` | in `verticals/solutions.md` |
+|---|---|--:|--:|--:|
+| `falkenslab/miyagi` | agents | **0** | 0 | 0 |
+| `nialvape/utn-mcp` | agents | **0** | 0 | 0 |
+| `HyNuwa/UniMCP` | agents | **0** | 0 | 0 |
+| `jamestesting0/tum-mcp` | agents | **0** | 0 | 0 |
+| `kad-xyz/spbstu-mcp` | agents | **0** | 0 | 0 |
+| `simonseifert/merlin-mcp` | agents | **0** | 0 | 0 |
+| `EduardoKrausME/moodle-local_mcp` | foundations | 0 | **0** | 0 |
+
+🔴 **`0 / 7`.** 🟢 **And the instrument matters: the OWNER-level check passes and the SLUG-level check fails.** `grep falkenslab agents/top.md` returns `2` hits — they belong to [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp), a *different repository by the same owner*, long shelved. A pass auditing its own promotions by owner would have scored this batch `1 / 7` and moved on. 🔵 **Rule, for any future pass: audit a promotion by its exact `owner/repo` slug, never by owner and never by project name.**
+
+🟡 **What this says about the three prior diagnoses, which were all correct and all incomplete:** `p704` found `7` of `8` of its own filings already sitting unfiled in this file and called it a promotion leak; `p700` found `2` of `11` by querying the *owner* of a row already held; `p427` itself wrote *“the prescribed leg set is saturated, and the legs that produced the find are NOT in it.”* 🟢 **p708 adds the missing quantity: the leak is not a slow drip, it is at least one batch of seven, and the batch had already been fully verified when it was dropped.** `p427` read every one of those sixteen grants first-hand at a SHA. The work was done. Only the write was missing.
+
+### 🟢 `708-A2` — all seven re-verified at p708 before filing; nothing was carried over from `p427`
+
+| subject | liveness | grant read from the bytes TODAY | payload | last commit | tracked paths |
+|---|---|---|---|--:|--:|
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | 🟢 `main` `a3be901da5ae` | 🟢 **MIT** © *Francisco Vargas Ruiz* | `1,078 B` `d0a329112827` | `2026-11-07` | `618` |
+| [`changazo/udesa-mcp`](https://github.com/changazo/udesa-mcp) | 🟢 `main` `5d5e84d31e246` | 🟢 **Apache-2.0** | `10,173 B` `a6cba85bc92e` | `2026-11-05` | `350` |
+| [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) | 🟢 `main` `bbf5ad6deb87` | 🔵 **ISC** © *Joaquín Peñalva* | `748 B` `2ad14eb14513` | `2026-11-07` | `87` |
+| [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) | 🟢 `master` `d4b7f71e5db3` | 🟡 **MIT + ISC, conjunctive** | `1,980 B` `727b864af003` | `2026-11-08` | `162` |
+| [`jamestesting0/tum-mcp`](https://github.com/jamestesting0/tum-mcp) | 🟢 `main` `d4b5e3bbc3b3` | 🟢 **MIT** | `1,092 B` `ce90dfa77bef` | `2026-11-07` | `779` |
+| [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | 🟢 `main` `0474b985d3e0` | 🟢 **MIT** | `1,064 B` `0dc1ec808f28` | `2026-10-27` | `83` |
+| [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) | 🟢 `main` `9c5968d39513` | 🟢 **MIT** | `1,070 B` `c458af6b099b` | `2026-10-26` | `43` |
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🟢 `master` `f7f6ab157510` | 🔴 **GPL-3.0** | `35,149 B` `3972dc9744f6` | `2026-11-08` | `413` |
+
+🟢 **`8 / 8` alive, `8 / 8` grants read from the payload at today's default ref, `8 / 8` actively maintained — every one has a commit inside the last `13` days and four inside the last `48` hours.** 🔵 `HyNuwa/UniMCP`'s `1,980 B` payload came back **byte-identical to the record this base holds for it at `T427` in [`../intel/open-gaps.md`](../intel/open-gaps.md)** (`sha256₁₂ 727b864af003`), so the conjunctive MIT+ISC reading is confirmed, not assumed.
+
+🟢 **Region movement, and it is the point:** `EMEA 15 → 18`, `LATAM 16 → 19`, `Global 82 → 83`. **An institutional agent is named after a university, so it places itself** — no inference, no country guessed from a README. The class spans four countries not previously placed on this shelf by an agent row (Germany, Russia, Croatia, Argentina ×3 institutions) and reaches beyond "another Moodle wrapper": `tum-mcp` → Moodle + **Artemis** (autograder) + Zulip + TUMonline; `spbstu-mcp` → institutional Moodle + the **national** `openedu.ru`; `UniMCP` → Moodle + **SIU Guaraní** (an SIS); `merlin-mcp` → **SRCE's national Moodle tenancy** for Croatian universities.
+
+---
+
+### 🔴 `708-B` — the eight mandated legs, measured against `18` named markers: the 36th consecutive nil, and it is COMPLETE
+
+🔵 Year computed, not hardcoded: **`2026`** (run date `2026-11-08`). All eight legs run as prescribed, global first and then once per region.
+
+| leg | query as prescribed | returned | fileable |
+|---|---|---|--:|
+| 1 | `top open source AI agents education 2026 github MIT` | general-purpose frameworks (OpenHands, CrewAI, OpenAI Agents SDK, browser-use) + MS/HF teaching *courses*. **No education-vertical agent at all** | **0** |
+| 2 | `github trending education AI 2026` | `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub`, `microsoft/generative-ai-for-beginners` | **0** — all four already shelved |
+| 3 | `open source platform education ERP CRM MIT Apache` | ERPNext/Frappe Education (GPL-3.0), OFBiz, Dolibarr, Krayin, iDURAR. The search's own summary: *no education-specific ERP/CRM under MIT or Apache* | **0** |
+| 4 | `AI education industry trends 2026` | HolonIQ, 1EdTech, OECD *Digital Education Outlook*, Coherent `$11.40B`→`$57.25B by 2033`, the April-2026 ADA deadline | **0** |
+| 5 | `AI education North America 2026 adoption regulation players` | `134` bills / `31` states, Maryland `SB 720`, NY `A 9190`, CA `AB 1159`, Ohio July-2026, NC `$10M` Khanmigo, `K-12 AI Literacy and Readiness Act of 2026`, Gallup `60%` | **0** |
+| 6 | `AI education EMEA 2026 adoption regulation players` | EU AI Act + **Digital Omnibus** (`2 Dec 2027` / `2 Aug 2028`), UK light-touch + `£4M`, Dubai **KHDA**, Europe `$2.64B`, UNESCO `68` countries | **0** |
+| 7 | `AI education APAC 2026 adoption regulation players` | Korea **AI Basic Act** in force `22 Jan 2026`, Vietnam **Decision 33/2026/QD-TTg** (education named high-risk), China registration + labelling, Australia/NZ/Malaysia sectoral, **TEQSA** action plans, Singapore toolkits | **0** |
+| 8 | `AI education LATAM 2026 adoption regulation players` | UNESCO **IESALC** (`200` HEIs / `19` countries, `87%` using AI, `74%` teaching, `26%` any framework), the **Observatory** (April 2026), **Ceibal** Uruguay `75%`, **Cetic.br** Brazil `53%`/`22%`, CENIA, Tec de Monterrey | **0** |
+
+🟢 **The nil was measured, not asserted.** `18` distinct markers drawn from the eight legs' returns were each grepped against the nine live shelves (`agents/*`, `repos/*`, `verticals/*`, `intel/*`, `compose/patterns.md`, `README.md`): `33/2026`, `AI Basic Act`, `TEQSA`, `IESALC`, `Observatory on`, `Ceibal`, `Cetic`, `SB 720`, `A 9190`, `AB 1159`, `AI Literacy and Readiness`, `57.25`, `2.64`, `Digital Education Outlook`, `ADA`, `Khanmigo`, `134`, `KHDA`. 🔴 **`18 / 18` were already present.** The `$11.40B → $57.25B` CAGR was additionally recomputed — `(57.25/11.40)^(1/7) − 1 = 25.93%` — and [`../intel/market.md`](../intel/market.md) already publishes both the figure and that arithmetic check.
+
+🔵 **This is what a saturated leg set looks like when it is measured properly: not "we found nothing", but "we found exactly what we already hold, and here are the eighteen strings that prove it."**
+
+### 🟢 `708-C` — the leg that DID produce supply is not in the mandate, and its shape is one word different from leg 8
+
+🔴 Leg 8 — `AI education LATAM 2026 adoption regulation players` — returns **policy and UNESCO**, never a repository. 🟢 **The same region, asked in Spanish and with countries named instead of the region, returns addresses:**
+
+> `github MCP server plataforma educativa Argentina Brasil Chile Colombia 2026 open source agente IA educación`
+
+| returned | already shelved? | verdict |
+|---|---|---|
+| [`changazo/udesa-mcp`](https://github.com/changazo/udesa-mcp) | 🟢 **no** | **FILED** — `agents/top.md`, `LATAM`, Apache-2.0 |
+| [`EmilioGiordano/unsada-mcp`](https://github.com/EmilioGiordano/unsada-mcp) | 🟢 **no** | 🔴 **refused on licence** — see `708-E` |
+| [`MoralesPascualJosue/Plataforma-educativa-MC-`](https://github.com/MoralesPascualJosue/Plataforma-educativa-MC-) | 🟢 **no** | ⛔ **refused — no grant** — see `708-F` |
+| `zavora-ai/mcp-education`, `EduBase/MCP`, `Mcp-Brasil`, CSOAI | already named in this base | — |
+
+🟢 **Three unshelved in-domain addresses from one leg, against zero from the eight prescribed ones.** 🔵 **The discriminator agrees with `p427`'s own `Gap 426-C` and sharpens it:** `p427` found that the productive queries **AND fewer terms**; p708 finds a second axis — **the productive query names the COUNTRY and is written in the language the authors write in.** The prescribed LATAM leg contains the token `LATAM`, which is a term used by analysts and almost never by the people publishing the code. 🟡 **Transferable: a region leg should be run once per country in that country's language, not once per region in English.** And `udesa-mcp`'s discovery had a second-order payoff — its README names `utn-mcp` as its upstream, which is the thread that exposed `708-A`.
+
+### 🟢 `708-G` — the youngest `81` rows re-verified: `81 / 81` intact, so `p707`'s licence reversal is a SINGLETON, not a class
+
+🔴 `p707` found [`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro) had gone **MIT → AGPL-3.0** seven days after being filed. 🔵 **That raises an obvious question p707 could not answer: is the recently-filed cohort generally rotten?** p708 measured it.
+
+**Method.** Every row filed at `p701`, `p703`, `p704`, `p705` and `p706` across the three shelves, taken by exact slug with its published licence family, payload byte-size and `sha256₁₂` — `80` subjects — plus `klyro` itself. For each: `git ls-remote --symref` for liveness and default ref, then `raw.githubusercontent.com` for the licence payload at that ref, then `sha256` of the bytes compared against the cell.
+
+| cohort | subjects | ALIVE | payload byte-identical to the published `sha256₁₂` | divergences |
+|---|--:|--:|--:|--:|
+| `p706` | `23` | **23** | **23** | `0` |
+| `p705` | `5` | **5** | **5** | `0` |
+| `p704` | `3` | **3** | **3** | `0` |
+| `p703` | `14` | **14** | **14** | `0` |
+| `p701` | `35` | **35** | **35** | `0` |
+| `p707`'s correction (`klyro`) | `1` | **1** | **1** (AGPL-3.0, `33,725 B`, `70adc423756c`) | `0` |
+| **total** | **`81`** | **`81`** | **`81`** | **`0`** |
+
+🟢 **`81 / 81`. Zero dead addresses, zero licence drift, zero byte drift.** 🟢 **`p707`'s correction also still holds today** — `klyro` serves `33,725 B` `sha256₁₂ 70adc423756c` opening *“GNU AFFERO GENERAL PUBLIC LICENSE / Version 3”*, exactly as `p707` republished it. 🔵 **So the measured base rate of post-filing licence reversal on this base is `1 / 81` across the six most recent passes, and `klyro` is a singleton rather than the first of a wave.** 🟡 **That is a result worth having precisely because it is negative:** it says a full re-sweep of the shelf is *not* the best use of the next pass, and it says so with a number instead of a hunch.
+
+### 🔴 `708-E` — refused on licence, and named so the collision is not re-bought: `EmilioGiordano/unsada-mcp` is **AGPL-3.0**
+
+[`EmilioGiordano/unsada-mcp`](https://github.com/EmilioGiordano/unsada-mcp) — unofficial MCP for the **UNSAdA** *aula virtual* (`moodle.unsada.edu.ar`, Argentina), reading courses, notes, forums, assignments, grades and calendar for Claude/Codex/OpenCode/Cursor. 🟢 ALIVE at `main` HEAD `c5b77dfc77d84`, last commit `2026-10-19`, `106` tracked paths. 🔴 **`LICENSE` is `34,523 B`, `sha256₁₂ 0d96a4ff68ad`, opening *“GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007”*.** 🔴 **AGPL-3.0 is network copyleft: hosting a derivative as a service triggers the source obligation, which is the single worst licence shape for a studio engagement** — worse than plain GPL, because the trigger is *deployment*, not distribution. Not filed. 🔵 **Recorded here with its grant read, because the subject is otherwise exactly what the thin `LATAM` column wants, and a future pass that re-finds it should not have to buy the licence read again.** 🟢 **Its README is also the document that names `nialvape/utn-mcp` as its inspiration — so a refused subject still paid for itself** by being the second independent pointer to the address that unlocked `708-A`.
+
+### ⛔ `708-F` — refused with no grant at all, and the mechanism is an UNEDITED FRAMEWORK SCAFFOLD standing alone
+
+[`MoralesPascualJosue/Plataforma-educativa-MC-`](https://github.com/MoralesPascualJosue/Plataforma-educativa-MC-) — a Laravel + Vue.js distance-and-blended-learning platform (courses, content management, enrolment tracking, shared workspaces). 🟢 ALIVE at `master` HEAD `8c735c75652f`.
+
+🔴 **No licence file exists.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `license` were each probed at `master`: **`404` on every one.** 🔴 **But `composer.json` returns `200` and contains `"license": "MIT"`** — and a scanner that reads manifests would publish this repository as MIT.
+
+🔴 **It is not MIT. It is not licensed at all.** The manifest is the **unedited Laravel skeleton**, read field by field:
+
+| field | value |
+|---|---|
+| `name` | **`laravel/laravel`** |
+| `description` | **`"The Laravel Framework."`** |
+| `type` | `project` |
+| `require.php` | `^7.2` |
+| `require.laravel/framework` | `^6.2` |
+| `license` | `MIT` |
+
+🟢 **So the `MIT` belongs to Laravel, declared by Laravel, about Laravel.** 🔵 **This base already named the class at the `Gego-K12/gegok12` finding — but that instance had a real root `LICENSE` as well, so the scaffold field was redundant and harmless.** 🔴 **This is the strictly worse variant and it deserves its own name: the SCAFFOLD FIELD STANDING ALONE.** With no root grant, the inherited field is not corroboration — it is the *only* licence signal in the repository, and it is false. 🟡 **The discriminator is one line and costs nothing: if `composer.json`'s `name` is `laravel/laravel` (or `package.json`'s is the framework's own), the `license` field is scaffold and carries no weight. Read `name` before you read `license`.**
+
+---
+
 ## 🆕 2026-11-08 (p707) — 🔴 **p707 FILED NOTHING AND THAT IS THE HONEST RESULT: ALL EIGHT MANDATED LEGS NILLED A 35th TIME, MEASURED AGAINST 26 NAMED MARKERS RATHER THAN ASSERTED. 🟢 ITS PRODUCT IS A LIVE DEFECT IN THIS BASE'S OWN PUBLISHED LICENCE DATA, FOUND BY A DIFF THE MANDATE DOES NOT CONTAIN.**
 
 **`0` subjects filed. `1` row corrected. `1` trend, `1` pattern.** [`top.md`](top.md) stays at **`185`** rows (arity `185/185` at `6` columns, `0` ragged; region vocabulary `185/185` legal). [`../repos/foundations.md`](../repos/foundations.md) stays at **`266`** (one row **corrected**, not added — [`trending.md`](../repos/trending.md) `707-R1`). [`../verticals/solutions.md`](../verticals/solutions.md) stays at **`111`**.
