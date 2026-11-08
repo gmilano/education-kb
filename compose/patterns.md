@@ -11,6 +11,102 @@ updated: 2026-11-08
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## 🆕 P108–P111 — added at p711 (2026-11-08)
+
+Every component named below was verified at p711 on two channels: existence and default branch via `git ls-remote --symref`, grant by reading the payload bytes from `raw.githubusercontent.com` (byte count and `sha256₁₂` recorded in [`../agents/top.md`](../agents/top.md) and [`../repos/foundations.md`](../repos/foundations.md)). Stars and `pushed_at` from `gh api -X GET search/repositories`. 🔴 `curl -sI https://github.com/{slug}` returns `403` for every repository in this session and was **not** used.
+
+---
+
+## P108 — The token-policy-first LMS agent: ask ONE procurement question, then pick the architecture it leaves standing (university or college IT, LMS-centred engagement: 3–5 weeks to a pilot) 🟢 new at p711
+
+🔴 **Start here, before any technical selection.** [`CorCvusRamboChen/canvas-session-mcp`](https://github.com/CorCvusRamboChen/canvas-session-mcp) (MIT, `1,073 B`) exists because **“many universities no longer let students create personal access tokens.”** This base holds a large Canvas-agent cohort and **most of it authenticates with exactly that token**. So the first deliverable is not code:
+
+**Step 0 — the question (week 1, half a day):** *does this institution permit students to create Canvas personal access tokens, and does it issue service credentials to third-party integrations?* The four answers select four different builds, and **asking it last means building twice** (`T179`).
+
+| answer | the architecture it leaves standing | component to start from |
+|---|---|---|
+| student tokens **allowed** | ordinary token-based MCP server | [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) (MIT, ~`125` lines) as the readable baseline |
+| student tokens **disabled** | **browser-session auth** — SSO/MFA in a real Chrome/Edge window | [`CorCvusRamboChen/canvas-session-mcp`](https://github.com/CorCvusRamboChen/canvas-session-mcp) |
+| institution issues a **service credential** | admin-side integration, server-held secret, per-course scoping | [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) — `16` curated tools **plus** a full-endpoint gateway |
+| the real surface is **not the LMS** | university **portal** integration | [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) (KUPID, PyPI-published) or [`kc0506/ntucool`](https://github.com/kc0506/ntucool) (NTU COOL, **Rust**, CLI + MCP over one core) |
+
+**Wiring (weeks 2–4).**
+1. **Hand security review the 125-line server first.** [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) is small enough to audit in one sitting — it exists in this recipe as a *review artefact*, not as the production target. Approving a trust surface someone has actually read is faster than approving a framework.
+2. **Pick read-only for the pilot.** Keep writes behind an explicit flag, the posture this base files Canvas read-only servers for.
+3. **Add the discussion surface, because that is where the questions are.** [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) (MIT, `18★`) reaches **Canvas *and* Ed Discussion**: coursework lives in the LMS, the actual student confusion lives in the discussion tool, and an agent holding only the LMS half answers from the less informative store.
+4. **If the portal answer came back, build the portal integration and the LMS integration over one core**, which is what `ntucool` demonstrates with a Rust core exposing both a human CLI and an agent MCP endpoint — the shape to copy when a support desk and an agent must share one integration.
+
+🟢 **Why this is a pattern and not a shopping list:** `710-G` measured this cohort **saturated on function** — the functional differences between these servers barely matter. **The selection is decided by an institutional policy and a security review, and both are answerable in week 1.**
+
+---
+
+## P109 — The verification-first assessment desk: the model proposes, the CODE checks, a named human decides (university faculty, awarding body, any jurisdiction with a certification gate: 5–8 weeks) 🟢 new at p711
+
+🟢 **Reference implementation, permissive and education-native:** [`fborrasumh/planificaia-docente`](https://github.com/fborrasumh/planificaia-docente) (MIT, `1,141 B`, Universidad Miguel Hernández de Elche, **Zenodo DOI `10.5281/zenodo.23091372`**). Read its mechanism and keep it; it is the whole pattern in one single-file app:
+
+```
+rubric document (Word)  ──► model structures it into criteria + levels
+                                      │
+                              DETERMINISTIC VALIDATORS  ◄── this is the pattern
+                              ├─ weights must sum to 100
+                              ├─ every descriptor must appear LITERALLY in the source doc
+                              ├─ SHA-256 fingerprint per submitted file
+                              ├─ group submissions by e-mail, flag duplicates
+                              └─ verify milestone chaining between hitos
+                                      │
+                              model proposes a LEVEL + citation
+                                      │
+                              ► NAMED HUMAN awards the mark
+```
+
+**Wiring.**
+1. **Weeks 1–2 — port the validators, not the prompts.** The validators are the defensible part and they are deterministic, cheap and explainable to a student contesting a grade. A prompt is not.
+2. **Weeks 3–4 — calibrate.** [`microsoft/LLM-Rubric`](https://github.com/microsoft/LLM-Rubric) (MIT, `45★`) is **not education**, but its transferable mechanism is exactly what is needed here: rubric dimensions answered by a model, then **calibrated to human raters' judgements by a small network**. Use it to calibrate, not to grade.
+3. **Week 5 — make the human explicit in the data model.** Record *who* awarded each mark. This is the difference between an assessment system and an automation incident.
+4. **Weeks 6–8 — produce the conformity pack**, because this is what makes the pattern sellable: validator specifications, calibration evidence, the human-decision audit trail, and the Article 50 disclosure text.
+
+🟢 **Two buyers, both dated.** **EMEA:** education AI touching assessment is **Annex III high-risk**, now due **`2027-12-02`** under the Digital Omnibus, while Article 50 transparency has bound since **`2026-08-02`** — so the conformity pack has a deadline and the disclosure has already passed (`T178`). **North America:** Maryland's 2026 bills contemplate **university-supported certification of compliant AI tools**, which is a procurement gate that this pack is the evidence for.
+
+🔴 **State the limit to the client up front:** the reference implementation is a **single-file app for one university subject**. **A verification-first rubric engine at institutional scale does not exist permissively** (`T180`) — the scale-out is the build, and it should be priced as one.
+
+---
+
+## P110 — Governance-and-enablement where the AI is already in the building: LATAM's `87%`-use / `26%`-strategy gap (ministry, university system, private network: 6–10 weeks) 🟢 new at p711
+
+🟢 **The opening is measured, not assumed.** UNESCO IESALC, across ~`200` institutions in `19` countries: **`87%`** use AI in at least one area, **`74%`** in teaching and learning, and **only `26%` have a formal AI strategy**; **`45%`** of LAC institutions have or are developing guidance against **~`70%`** in Europe and North America. The Digital Education Council's LATAM survey adds **`92%`** of students and **`79%`** of faculty actively engaging. 🟢 **Nothing in this engagement requires selling AI adoption — it has already happened, ungoverned.**
+
+**Components, all MIT, all verified at p711.**
+
+| step | component | what it does here |
+|---|---|---|
+| 1. governance scaffold | [`porroto/Agentic-Education`](https://github.com/porroto/Agentic-Education) (`1,064 B`) | *“AI assists. Humans govern. Evidence speaks. Communities validate.”* Ships a **synthetic-data-only** policy and **CI that lints the governance documents themselves** — adopt the document set and the lint, and the institution's policy becomes a reviewable artefact instead of a PDF. Self-described research prototype: **argue from it, do not deploy it.** |
+| 2. competency frame | [`marcelo-ar-ar/mentoria-pedagogica-ia`](https://github.com/marcelo-ar-ar/mentoria-pedagogica-ia) (`1,064 B`) | Turns the **UNESCO AI Competency Framework for Teachers** into a working flow, indexed to higher-order thinking, student agency and human responsibility. **UNESCO competencies are what regional ministries write policy against** — the interoperability layer that makes the output procurable. |
+| 3. staff AI literacy | [`ffbris/briseno-ayudame-a-iniciar`](https://github.com/ffbris/briseno-ayudame-a-iniciar) (`1,071 B`) | Zero-prerequisite Spanish-language guide whose checklist is reusable verbatim: separate **data from assumptions from interpretations**, keep context and compute deliberate, leave consequential decisions with people. |
+| 4. make supervision an assessed skill | [`IngSoft-FIS-Ejercicios/is-ia`](https://github.com/IngSoft-FIS-Ejercicios/is-ia) (`1,079 B`, Universidad ORT Uruguay) | Graded practicals where **the assessed competency is validating agent output**. Adopt the practical structure for staff training — human-in-the-loop as a measured skill, not a disclaimer. |
+| 5. a deployable first system | [`selajp-jps/TUTOR_CURSO_INTRO_IA_2026`](https://github.com/selajp-jps/TUTOR_CURSO_INTRO_IA_2026) (`1,073 B`, UNLu Argentina) | A tutor **for in-service teachers**, answers fenced to the course corpus. The lowest-risk first deployment is the one whose users are the staff. |
+
+🟢 **Counterparties are named and already convened:** UNESCO's **Observatory on AI in Education for LAC** (launched `2026-04-14`, Santiago) runs with **CAF, CENIA, Cetic.br/NIC.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del Desarrollo and IRCAI**. 🔴 **Plan for regulatory fragmentation, not a regional policy:** Universidad de los Andes counted **`716`** AI regulatory instruments across **`23`** countries and territories. 🔴 **And scope the engagement to higher education unless the client supplies K-12 evidence** — the LATAM K-12 policy record is essentially empty in this base's sweeps, which is a gap, not coverage.
+
+---
+
+## P111 — The metacognition-preserving tutor: answer the "it will think for them" objection with a MECHANISM (K-12 or undergraduate, any subject: 3–4 weeks) 🟢 new at p711
+
+🟢 **The objection every education buyer raises is pedagogical, and three cheap mechanisms answer it — all three found in granted repositories at p711.**
+
+**1. Order the interactions so self-assessment comes first.** [`EstebanBond/artematico`](https://github.com/EstebanBond/artematico) (MIT, `1,070 B`) **disables the “Evaluar” button until the learner records their own grade**. One disabled attribute, and it is the difference between building metacognition and outsourcing it. 🔴 **No other row among this shelf's `236` agents does this** (`T181`). Copy the ordering first — it is the cheapest thing in this document.
+
+**2. Bound the feedback.** The same app returns **exactly three** items: one success, one correction, one micro-exercise, against a rubric **calibrated per technique and per course week**. Bounded feedback is actionable; exhaustive feedback is ignored.
+
+**3. Fence the corpus, and say so.** [`selajp-jps/TUTOR_CURSO_INTRO_IA_2026`](https://github.com/selajp-jps/TUTOR_CURSO_INTRO_IA_2026) (MIT) answers **exclusively** from the loaded course material; [`iesjoaco7-cyber/Agente-de-IA-Claude---Analisis-Matematico`](https://github.com/iesjoaco7-cyber/Agente-de-IA-Claude---Analisis-Matematico) (MIT, `1,062 B`) grounds a whole single-subject tutor in **two named PDFs** — one theory source, one exercise bank — and is the honest cost floor: no retrieval infrastructure, no fine-tuning.
+
+**Two wiring choices that decide whether this survives the engagement.**
+- 🟢 **Make the privacy decision a flag, not a rewrite.** [`ANGELBERRIOS23/apuntes-clase`](https://github.com/ANGELBERRIOS23/apuntes-clase) (MIT, `1,071 B`) offers transcription as a documented choice between **cloud (Gemini) and local offline Whisper**. A school that cannot send audio off-site changes a setting.
+- 🟢 **Target `AGENTS.md`, not a vendor.** The same repository runs under **any agent runtime that reads `AGENTS.md`** — its README names Claude Code, Codex, opencode, Cursor, Windsurf, Gemini CLI and Aider. **`AGENTS.md` as the vendor-neutral integration contract is how an education deliverable survives the client changing agent vendors mid-engagement.**
+
+🟢 **Accessibility is in scope and permissively available:** [`TechnoDark-ti/alfalibras`](https://github.com/TechnoDark-ti/alfalibras) (MIT, `1,069 B`, branch **`master`**) does real-time **Libras** recognition with OpenCV/MediaPipe/PyTorch and lets the *teacher* record a new sign and retrain from the GUI — continuous learning with no ML pipeline in the loop. 🟢 **And when the deliverable is a classroom artefact rather than a conversation**, [`theteacherbot/Mi-Nodrizapps1`](https://github.com/theteacherbot/Mi-Nodrizapps1) (MIT, `1,067 B`) generates infographics, mind maps, flashcards, posters and comics — a classroom consumes printable assets, and this shelf's tutoring rows produce text.
+
+---
+
 ## P106 — Prerequisite-first remediation: diagnose the missing building block, teach it in five days with no second device (ministry, state or district FLN programme, rural school network, NGO: 6–8 weeks to a screened cohort) 🟢 new at p710
 
 **The problem this answers.** A screening test says a child scored 35% on two-digit addition. Nobody can act on that. The teacher needs to know *which* prerequisite is missing — and in a multi-level classroom of 30+ with intermittent connectivity, they need the remedy to be doable tomorrow with what is in the room.

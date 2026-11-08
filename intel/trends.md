@@ -21,6 +21,46 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T177–T181 — added at p711 (2026-11-08)
+
+### 🔧 T177 — `T173` is CORRECTED: a thin region measures **the query**, not the grants. Put `license:` IN the search and the same sweep returns `8 / 8` granted 🔧 corrects `T173` at p711
+
+`T173` (p710) read: *“A thin region measures GRANTS, not supply: `10 / 11` long-tail education repositories outside the US/EU are alive and UNGRANTED.”* **The `10 / 11` measurement stands. The inference drawn from it does not.**
+
+p710 swept Spanish and Portuguese, then fetched `LICENSE` on the hits — which samples the population as it is, overwhelmingly ungranted. p711 ran the **same language sweep with `license:mit` as a search qualifier**, so GitHub's index filtered on the grant *before returning results*, and got **`8 / 8` alive and MIT, every payload read from the bytes.**
+
+🟢 **The corrected trend: in any region whose long tail is individual developers, the grant must be a QUERY TERM, not a post-filter.** The unqualified sweep tells you the shape of the field; the qualified sweep tells you what you may legally build on. **Run both.** ⚠ Bounded honestly: the granted subset is **small and term-sensitive** — `2`, `12`, `1`, `4` hits on four productive legs and `total_count: 0` on five others. It is findable, not abundant. 🔴 **Carry the correction to every other industry base**, because the inference *“thin region ⇒ ungranted supply”* has been propagating for roughly thirty passes and part of it was a method artefact.
+
+### 🟢 T178 — Education AI's compliance clock has SPLIT: the high-risk deadline moved to **2027-12-02**, but the transparency duty landed **2026-08-02**. The gap is the engagement window 🟢 new at p711
+
+The EU's **Digital Omnibus on AI** moved the AI Act deadline for stand-alone **Annex III high-risk** systems — which is where education sits when AI touches **admissions, assessment or proctoring** — from `2026-08-02` to **`2027-12-02`**. AI embedded in regulated products moves to `2028-08-02`.
+
+🔴 **Two duties did NOT move, and they are the ones that bind today:** the **Article 50 transparency** obligations (chatbot disclosure, synthetic-content labelling) apply from **`2026-08-02`**, and the **Article 4 AI-literacy** duty has applied since **`2025-02-02`** to *every* organisation that uses AI — therefore to every school.
+
+🟢 **What this means commercially, and it is the opposite of a pause:** a client has **~13 months** in which a high-risk education deployment is buildable without the full Annex III conformity burden, **while disclosure, labelling and staff AI literacy are already enforceable**. The deployer carries the duty even when the tool is third-party. 🟢 **Therefore: ship transparency and literacy now, and architect for Annex III conformity in the same engagement rather than as a later project** — the deadline moved, it did not disappear, and a system designed without it will be rebuilt. ⚠ Dates are from secondary legal commentary and conflict with pre-Omnibus sources; verify against the Official Journal before putting them in a client deliverable.
+
+### 🔴 T179 — Institutions are switching OFF student personal access tokens, and that quietly invalidates most LMS agent integrations 🔴 new at p711
+
+[`CorCvusRamboChen/canvas-session-mcp`](https://github.com/CorCvusRamboChen/canvas-session-mcp) (MIT) authenticates through the student's **ordinary browser login** — real Chrome/Edge window, SSO and MFA as usual — and states the reason plainly: **“many universities no longer let students do that”**, referring to creating a Canvas personal access token.
+
+🔴 **This is a trend about procurement, not code.** This base holds a large Canvas-agent cohort and **the majority of it authenticates with a personal access token.** At an institution that has disabled student token creation, **every one of those integrations is dead on arrival**, and no amount of engineering changes it — it is an IT policy decision.
+
+🟢 **Operationally: establish the client's token policy BEFORE selecting an LMS integration.** It eliminates most of the field in one question. The surviving architectures are browser-session auth (student-side) and an institutionally-issued service credential (admin-side), and those two paths have **different data-protection reviews**, so the choice is made early or made twice.
+
+### 🟢 T180 — Rubric assessment is going VERIFICATION-FIRST: the model proposes, the code checks. It is displacing LLM-as-judge where a grade has consequences 🟢 new at p711
+
+[`fborrasumh/planificaia-docente`](https://github.com/fborrasumh/planificaia-docente) (MIT, Universidad Miguel Hernández, Zenodo DOI `10.5281/zenodo.23091372`) marks student work against a rubric the model structures and **the code then validates deterministically**: rubric weights must sum to `100`, **every descriptor must appear literally in the source document**, submissions are grouped by e-mail, duplicate-flagged, **SHA-256 fingerprinted per file**, and checked for milestone chaining.
+
+🟢 **The inversion is the trend.** LLM-as-judge asks the model to be trustworthy. This asks the model to be *checkable*, and spends the engineering on the checks — and the checks are cheap, deterministic and explainable to a student contesting a grade. 🟢 **Where a mark carries consequences — credit, progression, certification — the defensible architecture is a model proposal plus a deterministic validator plus a named human decision-maker**, and this base can now point at a permissive education-native implementation rather than at [`microsoft/LLM-Rubric`](https://github.com/microsoft/LLM-Rubric), which is permissive but **not education**. 🔴 **Remaining gap: this is a single-file app for one university subject. A verification-first rubric engine at INSTITUTIONAL scale does not exist permissively.**
+
+### 🟢 T181 — The cheapest pedagogical safeguard found this year is an INTERACTION ORDERING, not a model capability 🟢 new at p711
+
+[`EstebanBond/artematico`](https://github.com/EstebanBond/artematico) (MIT) is a children's illustration course where an AI vision mentor marks drawings against a rubric calibrated per technique and per course week. **Its safeguard is a disabled button: “Evaluar” does not enable until the child has recorded their own self-assessment first.** Feedback is then bounded to exactly three items — one success, one correction, one micro-exercise.
+
+🟢 **No model, prompt or guardrail is doing the pedagogical work; the ordering of two UI events is.** Self-assessment before feedback is what separates a tool that builds metacognition from one that outsources it, and it costs one disabled attribute to implement. 🟢 **It also answers the objection this base hears most from educators** — *“the AI will do the thinking for them”* — with a mechanism rather than a policy, which is what makes it usable in a procurement conversation. 🔴 **No other row across `236` agents on this shelf does it**, which is the finding: the field is optimising model quality and leaving the cheapest intervention on the floor.
+
+---
+
 ## 🆕 T173–T176 — added at p710 (2026-11-08)
 
 ### T173 — A thin region measures GRANTS, not supply: `10 / 11` long-tail education repositories outside the US/EU are alive and UNGRANTED 🔴 new at p710

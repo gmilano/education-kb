@@ -3,6 +3,32 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p711) — 🟢 **THREE FOUNDATIONS, ALL SPANISH-LANGUAGE CURRICULUM UNDER MIT, AND ONE OF THEM IS THE NAMED-LATAM-UNIVERSITY ASSET `710-E` CONCLUDED DID NOT EXIST**
+
+[`foundations.md`](foundations.md) **`277` → `280`** rows (arity `280/280` at `5` columns, `0` ragged; `280` distinct subjects, `0` duplicated). [`../agents/top.md`](../agents/top.md) **`221` → `236`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `115`**.
+
+**Why only three.** The method that produced this pass's supply — a `license:` qualifier inside the Spanish/Portuguese sweep (`711-A` in [`../agents/trending.md`](../agents/trending.md)) — returns a **narrow** granted subset: `2`, `12`, `1` and `4` hits on its productive legs and `total_count: 0` on five others. **Three rows survived verification. Nothing was padded to reach five**, and `711-E` records the one subject that was granted, alive and **refused for being contentless**.
+
+### The three rows
+
+| subject | placement | grant | bytes | sha256₁₂ | why a foundation |
+|---|---|---|--:|---|---|
+| [`IngSoft-FIS-Ejercicios/is-ia`](https://github.com/IngSoft-FIS-Ejercicios/is-ia) | **LATAM (Uruguay)** | 🟢 MIT | `1,079` | `1cc9f1d1b5ea` | Universidad ORT Uruguay, *Fundamentos de Ingeniería de Software*. **The assessed skill is supervising and validating agent output** — human-in-the-loop as a graded competency, not a disclaimer. |
+| [`ffbris/briseno-ayudame-a-iniciar`](https://github.com/ffbris/briseno-ayudame-a-iniciar) | Global | 🟢 MIT | `1,071` | `f76a9fccec44` | No-prerequisite guide to conducting an AI project. Its checklist — **separate data from assumptions from interpretations**, keep context and compute deliberate, leave consequential decisions with people — is reusable verbatim in client onboarding. |
+| [`corjuancho-commits/DCV_IA_Enfermeria_Rural`](https://github.com/corjuancho-commits/DCV_IA_Enfermeria_Rural) | Global (rural, country not named) | 🟢 MIT | `1,075` | `48767d79c954` | AI pedagogy for **rural nursing-auxiliary vocational training**. A vertical-specific AI-literacy corpus — this shelf's curriculum rows are otherwise general or CS-facing. |
+
+🟢 **The direction that paid at `p710` paid again, with the aim moved.** `p710` filed six curriculum rows and `p709` concluded the **platform** layer is saturated. p711 confirms both and adds the refinement: **curriculum is where the regional long tail is actually granted.** Software in the regional tail is largely ungranted (`710-E`'s `10 / 11`); teaching material in the same tail carries MIT far more often, because it is written to be copied.
+
+🔴 **A verification trap this pass hit, worth more than any single row.** [`TechnoDark-ti/alfalibras`](https://github.com/TechnoDark-ti/alfalibras) (filed to [`../agents/top.md`](../agents/top.md)) has default branch **`master`**, not `main`. **A grant check hard-coded to `/main/LICENSE` reports it `404` — i.e. reports a granted repository as ungranted.** This base reads `710-E`'s `5 / 5` ungranted finding on exactly that kind of channel. `verify` must take the default branch from `git ls-remote --symref` and use it; p711 did, which is why this row exists.
+
+### Star-column audit — `25` inherited rows re-read against the index
+
+`710-D` left new star cells empty because all three doors were shut. **The `search/repositories` door is open this pass**, and the inherited column **audits clean**: `25 / 25` resolved, `21` exact, `4` drifted `+2…+6` upward, **`0` wrong**. Full table in [`../agents/trending.md`](../agents/trending.md) `711-D`. 🟢 **No bulk star refresh is needed on this shelf** — that is the expensive work this audit makes unnecessary.
+
+🔴 **Secondary sources are NOT a star channel.** The `github trending education AI 2026` leg quoted [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) at *“about 42K”* and [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at *“45K”*. The index says **`43,015`** and **`56,881`**. **The DeepTutor figure is understated by ~`12,000` stars** — a blog roundup is months stale by construction. **File stars from the index or leave the cell empty.**
+
+---
+
 ## 🆕 2026-11-08 (p710) — 🟢 **EIGHT FOUNDATIONS, AND THE SHELF ACTED ON `p709`'S OWN CONCLUSION: PLATFORMS ARE SATURATED, SO SIX OF THE EIGHT ROWS ARE GRANTED CURRICULUM RATHER THAN SOFTWARE**
 
 [`foundations.md`](foundations.md) **`269` → `277`** rows (arity `277/277` at `5` columns, `0` ragged; `277` distinct subjects, `0` duplicated). [`../verticals/solutions.md`](../verticals/solutions.md) **`113` → `115`**. [`../agents/top.md`](../agents/top.md) **`206` → `221`**.

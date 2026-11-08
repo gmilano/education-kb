@@ -12,6 +12,36 @@ updated: 2026-11-08
 > 🔧 **p674 re-measured every payload cell over `7 000 B` on this shelf and corrected two.** [`oppia/oppia`](https://github.com/oppia/oppia): `11 357 B` → **`11 358 B`** (`cfc7749b96f6`, the `apache.org` canonical). 🔴 [`Opetushallitus/compleap`](https://github.com/Opetushallitus/compleap): `13 956 B` → **`13 957 B`** (`922e7e3be8ed`) — and this one is **proven capture-measured**, because the digest this shelf published (`900a5a8a3c56`) is the digest of the payload with its trailing newline **stripped**. Size and hash agreed with each other and both described bytes the repository does not serve. 🟢 **`OpenOlat` re-measured byte-exact at `10 982 B`**, so the `p653` headline withdrawal still stands on a verified payload; `numbas/Numbas`, `UniTime/unitime` and the rest of the shelf reproduced exactly. See [`intel/trends.md`](../intel/trends.md) **T56**.
 > 🆕 **p707 diffed every row on this shelf carrying a repository link against GitHub's `spdx_id`: `143` rows, `140` resolved, `17` flags raised and `17` of `17` were FALSE — `0` real licence defects here.** 🔴 **The flags were the instrument, not the shelf.** A licence regex run over a whole row cannot work on this file, because these cells carry licence *discussion* beside the licence *claim*: [`scratchfoundation/scratchjr`](https://github.com/scratchfoundation/scratchjr) tripped `MIT` because its correct `BSD-3-Clause` cell names ***MIT* Media Lab**; [`hcengineering/platform`](https://github.com/hcengineering/platform) tripped `Apache-2.0` because its cell exists to **refute** an Apache claim; [`AliAsgharPZ/school-management-system`](https://github.com/AliAsgharPZ/school-management-system) tripped `AGPL-3.0` because it is filed as *“the MIT point of comparison to this shelf's **AGPL** incumbents”*. 🟢 This shelf has **no stable licence column** to scope to, so verify it by **reading payload bytes**, never by matching text — `707-R3`, and the method in **`T167`** / **`P102`**.
 
+## 🟡 No platform added at p711 — the nil is measured, and what the pass found is a **CONSTRAINT ON THIS SHELF'S LARGEST COHORT** rather than a row for it
+
+**`115` rows in, `115` rows out.** The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) returned **five platforms and every one is already here** — OpenEduCat, Frappe/ERPNext, openSIS, RosarioSIS, Gibbon. That is the **third consecutive pass** in which the platform leg returns a set this shelf already holds, confirming `p709`'s conclusion that the platform layer is saturated.
+
+🔴 **One new slug surfaced and it is DEAD.** A vendor page presents **GegoK12** as an MIT-licensed PHP/Laravel K-12 management system covering classroom, student and parent records, attendance, homework and examinations. [`gegok12/gegok12`](https://github.com/gegok12/gegok12) **fails `git ls-remote` entirely** — the repository the vendor's licence claim implies does not exist at that slug. **A vendor's licence claim is not a repository** (the class `681-C` named). Recorded so the next pass does not re-buy it.
+
+⚠ **Licence caution carried from the same leg, for rows already on this shelf:** secondary comparison articles in this field are frequently **written by a vendor in the comparison** (the OpenEduCat round-up that surfaced this pass is authored by OpenEduCat's founder and ranks OpenEduCat first), and their licence tables are garbled — one presents an Apache-2.0 claim that cannot be tied to a named product. **This shelf's own payload-read cells stand; do not reconcile them against a vendor round-up.**
+
+---
+
+### 🔴 `711-F` — the CONSTRAINT: institutions are disabling student personal access tokens, and that invalidates most of the Canvas cohort regardless of how good the code is
+
+This belongs on the platform shelf because it is a **property of the deployed platform at the client**, not of any repository.
+
+[`CorCvusRamboChen/canvas-session-mcp`](https://github.com/CorCvusRamboChen/canvas-session-mcp) (MIT, `1,073 B`, filed to [`../agents/top.md`](../agents/top.md) this pass) authenticates through **the student's ordinary browser login** — real Chrome/Edge window, SSO and MFA as normal — and states its reason: **“many universities no longer let students do that”**, meaning create a Canvas personal access token.
+
+🔴 **The consequence for this base is large and was previously unstated.** The Canvas-facing cohort is the biggest single family across [`../agents/top.md`](../agents/top.md), and **the majority of it authenticates with a student-created personal access token.** At an institution that has disabled student token creation, **every one of those integrations is dead on arrival** — and no engineering changes that, because it is an IT policy decision.
+
+| Canvas instance policy | which integrations remain viable |
+|---|---|
+| student personal access tokens **permitted** | the whole cohort, including the `~125`-line [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) |
+| student tokens **disabled** (and increasingly common) | 🟢 **browser-session auth only** — [`CorCvusRamboChen/canvas-session-mcp`](https://github.com/CorCvusRamboChen/canvas-session-mcp) |
+| institution issues a **service credential** | admin-side integrations with a server-held secret and per-course scoping, e.g. [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) |
+
+🟢 **The operational rule: establish the client's token policy BEFORE selecting an LMS integration** — it eliminates most of the field in one question, and the two surviving paths (student-side browser session vs institution-issued service credential) carry **different data-protection reviews**, so the decision is made early or made twice. Wired as a recipe in [`../compose/patterns.md`](../compose/patterns.md) **`P108`**.
+
+🟢 **Also recorded: the student-facing surface at a university is often NOT the LMS.** [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) reaches **Korea University's KUPID portal** *and* its Canvas instance, and [`kc0506/ntucool`](https://github.com/kc0506/ntucool) targets **NTU COOL**. Notices, schedules and library services live in the institution's own portal, which this shelf's platform rows do not represent — **a standing hole on this page, named here rather than left silent: this shelf holds LMSs and ERPs, and holds almost no university PORTALS.**
+
+---
+
 ## 🟡 No platform added at p708 — the nil is measured, and what the pass found draws a line THROUGH this shelf rather than adding to it
 
 🔵 **`0` rows filed here. This shelf stays at `111`.** The mandated vertical leg — `open source platform education ERP CRM MIT Apache` — returned `ERPNext`/**Frappe Education** (GPL-3.0), `Apache OFBiz`, `Dolibarr` (GPL-3.0-or-later), `Krayin` (MIT), `iDURAR` (MIT), `Odoo` Community and `Tryton`. 🔴 **Every one is already on this shelf or already refused by name, and the search's own summary states the finding: there is no education-specific ERP or CRM under MIT or Apache.** The two MIT hits, `Krayin` and `iDURAR`, are general CRMs with no education module — the same verdict this shelf has recorded for them before.

@@ -3,6 +3,155 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p711) — 🟢 **`710-E` IS REFUTED: THE LATAM SUPPLY IS NOT UNGRANTED, IT IS REACHED BY PUTTING THE GRANT IN THE QUERY. `8 / 8` ALIVE AND MIT, AGAINST p710'S `5 / 5` UNGRANTED, IN THE SAME LANGUAGE SWEEP**
+
+**`18` subjects filed** (`15` agents, `3` foundations). [`top.md`](top.md) **`221` → `236`** (arity `236/236` at `6` columns, `0` ragged; `236` distinct subjects, `0` duplicated; region vocabulary `236/236` legal). [`../repos/foundations.md`](../repos/foundations.md) **`277` → `280`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `115`** — no platform row, one **constraint** note instead (`711-F`).
+
+**Region movement: `LATAM 19 → 21`, `APAC 60 → 62`, `Global 96 → 107`. `EMEA 24` and `North America 22` did not move.** `16` rows were filed and `15` published: the 16th was already shelved and became an upgrade instead (`711-B`).
+
+---
+
+### 🟢 `711-A` — THE REFUTATION: p710 swept, THEN checked grants. The grant belongs IN THE QUERY, because GitHub's index already knows it
+
+`710-E` closed with a strong, explicit claim: *“`LATAM 19` is not a discovery failure and **no further Spanish/Portuguese sweep will fix it**. The blocker is a missing `LICENSE` file.”* It was built on a clean measurement — `5 / 5` LATAM subjects alive and serving `404` for every grant filename.
+
+**The measurement was right and the conclusion was wrong, and the reason is a one-line difference in method.**
+
+| | p710 | p711 |
+|---|---|---|
+| method | sweep Spanish/Portuguese → fetch `LICENSE` on the hits | sweep Spanish/Portuguese **with `license:mit` as a search qualifier** |
+| what it samples | the **ungranted tail**, which is most of the tail | the **granted subset**, directly |
+| result | `5 / 5` ungranted | **`8 / 8` alive and MIT, payload-verified** |
+
+🟢 **A `license:` qualifier is a filter on GitHub's own index, applied before the results are returned.** Sweeping first and checking grants afterwards samples the population *as it is* — overwhelmingly ungranted, so overwhelmingly `404`. Putting the grant in the query asks a different and more useful question: *of the repositories that ARE granted, which are education?* Both measurements are true. **Only the second one can fill a shelf.**
+
+The eight, every grant read from the bytes (`raw.githubusercontent.com`), every liveness from `git ls-remote --symref`:
+
+| subject | what it is | grant | bytes | sha256₁₂ |
+|---|---|---|--:|---|
+| [`selajp-jps/TUTOR_CURSO_INTRO_IA_2026`](https://github.com/selajp-jps/TUTOR_CURSO_INTRO_IA_2026) | Universidad Nacional de Luján **(Argentina)** — onboarding tutor for a postgraduate course for in-service teachers | 🟢 MIT | `1,073` | `6f1e2c6d98b7` |
+| [`IngSoft-FIS-Ejercicios/is-ia`](https://github.com/IngSoft-FIS-Ejercicios/is-ia) | Universidad ORT **Uruguay** — graded practicals on supervising coding agents | 🟢 MIT | `1,079` | `1cc9f1d1b5ea` |
+| [`TechnoDark-ti/alfalibras`](https://github.com/TechnoDark-ti/alfalibras) | **Brazil** — real-time Libras sign-language literacy aid for teachers | 🟢 MIT | `1,069` | `c0cb5a73a353` |
+| [`marcelo-ar-ar/mentoria-pedagogica-ia`](https://github.com/marcelo-ar-ar/mentoria-pedagogica-ia) | UNESCO AI Competency Framework for Teachers as a workflow | 🟢 MIT | `1,064` | `f180709de821` |
+| [`joss-salinas/EduAssistAI`](https://github.com/joss-salinas/EduAssistAI) | Rasa institutional assistant, Docker one-command | 🟢 MIT | `1,068` | `5d22899d9727` |
+| [`theteacherbot/Mi-Nodrizapps1`](https://github.com/theteacherbot/Mi-Nodrizapps1) | generator of printable visual teaching assets | 🟢 MIT | `1,067` | `95927f6f69fa` |
+| [`ffbris/briseno-ayudame-a-iniciar`](https://github.com/ffbris/briseno-ayudame-a-iniciar) | no-prerequisite guide to running AI projects | 🟢 MIT | `1,071` | `f76a9fccec44` |
+| [`corjuancho-commits/DCV_IA_Enfermeria_Rural`](https://github.com/corjuancho-commits/DCV_IA_Enfermeria_Rural) | AI pedagogy for **rural nursing-auxiliary** vocational training | 🟢 MIT | `1,075` | `48767d79c954` |
+
+🟢 **What to carry to the other industry bases:** `710-E`'s advice — *“do not fork, the cheapest intervention is asking”* — remains correct **for the subjects it measured**, and should no longer be generalised to a region. The operational rule is: **run the regional sweep twice, once with `license:` and once without. The unqualified sweep tells you the shape of the field; the qualified sweep tells you what you may actually build on.** This base spent roughly thirty passes reading a thin `LATAM` column as a supply problem, and for at least part of that time it was a query problem.
+
+⚠ **An honest bound on the claim:** the granted LATAM subset is **narrow and term-sensitive**. `tutor educacion IA license:mit` returned `total_count: 2`; `docente inteligencia artificial license:mit` returned `12`; and **four further qualified legs returned `total_count: 0`** (`agente tutor escuela`, `planificacion clases IA docentes`, `aluno professor agente IA`, `tutoria universitaria IA`, `aprendizaje adaptativo estudiante`). The granted supply exists, it is findable, and it is **small and clustered on particular noun pairs** — not a field that a single query enumerates.
+
+---
+
+### 🟢 `711-B` — the duplicate-detection counter earned its keep: `16` filed, `15` published, and the 16th became an UPGRADE
+
+[`fborrasumh/planificaia-docente`](https://github.com/fborrasumh/planificaia-docente) was found independently this pass, fully verified, and written up as *“the single most valuable row of the pass”* — **and it was already on the shelf, filed at `p709`, with the identical grant payload (`1,141 B`, sha256₁₂ `e38991bccd7b`).** It was caught by this page's own distinct-subject count, which went to `236 / 237` before publication.
+
+🔴 **The process defect is named so it is not repeated: this pass deduplicated its FIRST and SECOND candidate batches against the shelf and did not deduplicate its THIRD.** `planificaia-docente` arrived on a later leg (`rubrica evaluacion IA license:mit`). **Dedup belongs immediately after verification, per subject, not per batch.**
+
+🟢 **The remedy was worth more than the row would have been.** The duplicate was deleted and the research folded into the surviving `p709` row, which did not have: the **Zenodo DOI** (`10.5281/zenodo.23091372`), and the *mechanism* — **the AI proposes and the CODE verifies.** The rubric is model-structured and then validated deterministically: weights must sum to `100`, **every descriptor must appear literally in the source document**, submissions are grouped by e-mail, duplicate-flagged, **SHA-256 fingerprinted per file**, and checked for milestone chaining.
+
+🟢 **That closes a gap this shelf has carried open for dozens of passes.** [`top.md`](top.md) holds [`microsoft/LLM-Rubric`](https://github.com/microsoft/LLM-Rubric) annotated as *“the nearest permissive primitive to this base's assessment gap”* and simultaneously marked **not education**. `planificaia-docente` is education, permissive, rubric-native **and** verification-first. **The assessment gap should now be re-stated, not re-declared: the remaining gap is a rubric engine at SCALE, because this one is a single-file app for one university subject.**
+
+---
+
+### 🔴 `711-C` — `North America 22` and `Global 107`: the region vocabulary cannot express "Spanish-language, country unknown", and that is why the LATAM column understates Hispanophone supply
+
+`11` of this pass's `15` published rows went to `Global`. **None of them is global.** Every one is a Spanish- or Portuguese-language artefact whose repository names no country.
+
+The closed five-value vocabulary (`North America`, `EMEA`, `APAC`, `LATAM`, `Global`) is correct as a *filter* and lossy as a *description*. It offers no way to say **"Hispanophone, country not evidenced"**, so this base's own placement rule — *country in the prose, region in the field, and an author handle is not evidence* — routes that supply to `Global`.
+
+🔴 **The consequence is structural, not clerical: `LATAM` counts only the subjects that happen to NAME a country, and Spanish-language supply that names none inflates `Global` instead.** Two rows this pass show the failure mode precisely:
+- [`marcelo-ar-ar/mentoria-pedagogica-ia`](https://github.com/marcelo-ar-ar/mentoria-pedagogica-ia) — handle suggests Argentina, repository says nothing. Placed `Global`.
+- [`iesjoaco7-cyber/Agente-de-IA-Claude---Analisis-Matematico`](https://github.com/iesjoaco7-cyber/Agente-de-IA-Claude---Analisis-Matematico) — the handle reads as a Spanish `IES` secondary school, the materials cite a `UPC` that is ambiguous between **Catalonia and Peru**. **Two conflicting country signals resolve to no country claim.** Placed `Global`.
+
+🟢 **The recommendation is NOT to add a sixth region** — that breaks every downstream filter, which is the whole point of a closed set. It is to **read `Global` as two populations** and say so wherever the counts are published: genuinely jurisdiction-neutral projects, plus a language-placed tail that is mostly Hispanophone. **A studio sizing a LATAM engagement off `LATAM 21` is reading a floor, not a total.**
+
+---
+
+### 🟢 `711-D` — the star channel is OPEN, `710-D`'s "all three doors shut" has lifted, and the shelf's star column audits CLEAN
+
+`710-D` recorded all three star channels shut and left its new rows' star cells **empty rather than wrong** — the right call. **This pass the middle door is open:**
+
+```
+gh api -X GET search/repositories -f q='repo:owner/name' \
+  --jq '.items[0] | "\(.license.spdx_id)|\(.stargazers_count)|\(.pushed_at)"'
+```
+
+It returns `spdx_id`, `stargazers_count` **and `pushed_at`** (staleness, which this base reads nowhere else), and it **batches** — up to `10` `repo:` qualifiers in one call.
+
+**A `25`-subject audit, sampled every 9th row across the inherited shelf:**
+
+| result | count |
+|---|--:|
+| resolved by the index | **`25 / 25`** |
+| cell **exact** against live | **`21`** |
+| cell drifted, all **upward**, `+2 … +6` | `4` |
+| cell **wrong** (overstated, or wrong subject) | **`0`** |
+
+Drifted: [`assafkip/claudemy`](https://github.com/assafkip/claudemy) `626 → 631`, [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) `615 → 619`, [`blueshadow62/fairhand`](https://github.com/blueshadow62/fairhand) `0 → 6`, [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) `62 → 64`. Also re-read: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `56,640 → 56,881` and [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) `42,969 → 43,015`.
+
+🟢 **Two results worth more than the refreshed numbers:**
+1. **The shelf's star column is accurate.** `0 / 25` wrong, and every drift is one pass of ordinary growth. The cells were **not** stale despite three passes of door trouble, so **the cells do not need a bulk refresh** — which is the expensive thing this finding makes unnecessary.
+2. 🟢 **`25 / 25` resolved CLEARS the false-negative condition** that `688-B` and `704-C` recorded, in which `gh api search/repositories` returned `total_count: 0` for live repositories. **It was a transient index condition, not a property of the channel.** `680-F`'s rule still stands and should still stand: **a search miss is not grounds to retire a row.**
+
+🔴 **Still shut:** `curl -sI https://github.com/{slug}` → `403` for every repository, live or dead (`710-B`, re-confirmed), and `gh api repos/{owner}/{repo}` → `403`, scoped to repositories attached to the session. **`git ls-remote --symref` remains the existence arbiter and the licence payload remains the grant arbiter.**
+
+---
+
+### 🔴 `711-E` — a NEW defect sub-class: GRANTED BUT CONTENTLESS. A `LICENSE` is a permission, not a project
+
+`711-A`'s qualified sweep has a failure mode that the unqualified sweep does not: **`license:mit` selects for the presence of a file, and a one-paragraph repository can carry one.**
+
+[`dudihahaha/IA-na-pedagogia`](https://github.com/dudihahaha/IA-na-pedagogia) is alive, MIT (`1,067 B`, sha256₁₂ `bbd844a3ffc0`), pushed `2026-06-26`, Portuguese — **and its entire content is a single README paragraph about AI personalising instruction.** It is granted. It is not a foundation, an agent or a platform. **It was measured and REFUSED, not filed**, and it is recorded here so the next pass does not re-buy the search.
+
+🟢 **The rule this adds to `711-A`:** a `license:` qualifier raises the *permission* floor and says nothing about the *substance* floor. **Grant from the payload, substance from the tree.** Also refused this pass:
+
+| subject | grant | why refused |
+|---|---|---|
+| [`sacm01/taller-agente-ia`](https://github.com/sacm01/taller-agente-ia) | 🟢 MIT (`1,073 B`) | Generic agent-building workshop. **No learner noun survives into the substance** — refused under `710-F`'s discriminator, which this pass applied as a gate rather than as a note. |
+| [`Clarasilva123/biblioteca_escolar`](https://github.com/Clarasilva123/biblioteca_escolar) | 🟢 MIT (`1,068 B`) | School-library web system, a front-end TCC. Real and granted, but **school administration software with no AI and no instruction**. Measured so the field is not re-swept. |
+| [`gegok12/gegok12`](https://github.com/gegok12/gegok12) | — | 🔴 **`git ls-remote` DEAD.** A vendor page presents GegoK12 as an MIT-licensed K-12 management system; **the repository it implies does not exist at that slug.** A vendor's licence claim is not a repository — the same class as `681-C`. |
+| [`theteacherbot/Portada_de_revistas`](https://github.com/theteacherbot/Portada_de_revistas) | 🟢 MIT | Same generator as `Mi-Nodrizapps1` narrowed to magazine covers. **One row, not two** (`658`'s family rule). |
+
+---
+
+### 🟡 `711-F` — the Canvas cohort is now BRACKETED on architecture, and one of its rows reports a DEPLOYMENT CONSTRAINT that invalidates most of the others
+
+`710-G` measured the Canvas cohort **saturated on function, open on architecture**. p711 took that literally and filed only rows that define an *end* of an axis — five, out of a `48`-result field:
+
+| row | the end it defines |
+|---|---|
+| [`CorCvusRamboChen/canvas-session-mcp`](https://github.com/CorCvusRamboChen/canvas-session-mcp) | **auth**: the student's ordinary browser login (SSO + MFA), **no access token** |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | **surface**: `16` curated tools **plus** a full-endpoint gateway — the hybrid |
+| [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | **size**: ~`125` lines of Python, auditable in one sitting |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | **scope**: crosses into **Ed Discussion** — two systems, not one |
+| [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) · [`kc0506/ntucool`](https://github.com/kc0506/ntucool) | **target**: the **university portal** (KUPID) and a Rust CLI+MCP pair over NTU COOL — not an LMS integration at all |
+
+🔴 **The constraint, and it is the pass's most actionable single sentence for an engagement:** `canvas-session-mcp` exists because **“many universities no longer let students create personal access tokens.”** Every token-based Canvas agent on this shelf — **the majority of the cohort** — is **unusable at such an institution**, and that is an institutional policy decision a studio cannot engineer around. 🟢 **Therefore: establish the client's token policy BEFORE selecting a Canvas integration, because it eliminates most of the field.** Recorded as a constraint in [`../verticals/solutions.md`](../verticals/solutions.md) rather than as a platform row.
+
+---
+
+### `711-G` — the mandated legs, measured address by address: the 33rd consecutive nil on supply
+
+Year computed as `2026` from the run date, not hardcoded. Four global legs plus four regional legs, exactly as specified.
+
+| leg | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **nil on supply.** Returned general-purpose agent lists (OpenHands, CrewAI, browser-use, OpenClaw). Education hits were `AI Agents for Beginners`, the Hugging Face Agents Course and Langflow — **all three already shelved**. |
+| `github trending education AI 2026` | 🟡 `3` education subjects, **all already shelved**: [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC), [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub). Secondary blogs quoted OpenMAIC at *“~42K”* and DeepTutor at *“45K”*; the index says `43,015` and `56,881`. **Blog star counts are months stale — do not file from them.** |
+| `open source platform education ERP CRM MIT Apache` | 🟡 `5` platforms, **all already shelved** (OpenEduCat, Frappe/ERPNext, openSIS, RosarioSIS, Gibbon). One new slug surfaced, [`gegok12/gegok12`](https://github.com/gegok12/gegok12), and it is **dead** (`711-E`). |
+| `AI education industry trends 2026` | 🟢 **Productive — but for [`../intel/trends.md`](../intel/trends.md), not for this shelf.** No repositories. Market figures and the governance shift are filed there. |
+| `AI education North America 2026 adoption regulation players` | 🔴 **`0` repositories.** `134` AI-in-education bills across `31` states; North Carolina Session Law `2026-41`. Filed to [`../intel/market.md`](../intel/market.md). **`North America 22` unmoved for a fifth pass.** |
+| `AI education EMEA 2026 adoption regulation players` | 🔴 **`0` repositories.** The EU **Digital Omnibus on AI** moving the Annex III education deadline to **2027-12-02** is the single most consequential item of the pass, and it is policy. Filed to `intel/`. |
+| `AI education APAC 2026 adoption regulation players` | 🔴 **`0` repositories.** Korea's AI Basic Act in force `2026-01-22`; Vietnam's AI law `2026-03-01`. Filed to `intel/`. The two APAC rows this pass came from the **qualified repository index**, not from this leg. |
+| `AI education LATAM 2026 adoption regulation players` | 🔴 **`0` repositories**, and a sharp result anyway: **UNESCO IESALC — `87%` of ~`200` institutions across `19` countries use AI, `26%` have a formal AI strategy.** Filed to `intel/`. |
+
+🔴 **`0 / 8` mandated legs returned a filable repository — the 33rd consecutive pass.** 🟢 **All `18` subjects filed this pass came from `gh api -X GET search/repositories` with a `license:` qualifier.** **The mandated legs are a news channel, not a supply channel, and this base should keep running them for `intel/` and stop expecting rows from them.**
+
+---
+
 ## 🆕 2026-11-08 (p710) — 🟢 **FIFTEEN AGENT ROWS, `North America 20 → 22` ON A CLASS RATHER THAN A SLUG, AND THE LATAM NIL FINALLY EXPLAINED WITH BYTES: THE SUPPLY EXISTS AND IS UNGRANTED**
 
 **`25` subjects filed** (`15` agents, `8` foundations, `2` platforms). [`top.md`](top.md) **`206` → `221`** (arity `221/221` at `6` columns, `0` ragged; `221` distinct subjects, `0` duplicated; region vocabulary `221/221` legal). [`../repos/foundations.md`](../repos/foundations.md) **`269` → `277`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`113` → `115`**.
