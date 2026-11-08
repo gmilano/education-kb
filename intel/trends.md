@@ -21,6 +21,40 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T173–T176 — added at p710 (2026-11-08)
+
+### T173 — A thin region measures GRANTS, not supply: `10 / 11` long-tail education repositories outside the US/EU are alive and UNGRANTED 🔴 new at p710
+
+For dozens of passes this base read a thin region column as a discovery failure and answered it with more sweeps. p710 asked a different question — *not “do repositories exist?” but “do the repositories that exist carry a grant?”* — and probed five licence filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`) against every regional candidate found.
+
+**Result: `10 / 11` are alive (`git ls-remote`) and serve `404` for all five.** Five LATAM teacher-formation and tutoring projects (Mexico's Nueva Escuela Mexicana, Brazil's EPT, Brazilian educational games, a mobile virtual tutor), one South African CAPS-aligned study platform, and four Indian JEE/NEET tutors — including one with a student model trained on **16M practice attempts**, benchmarked LightGBM against BKT, DKT and SAKT. **The global tail, by contrast, is overwhelmingly MIT.**
+
+**Signal**: the inference *“thin column ⇒ thin supply”* is false wherever a region's tail is individual developers rather than institutions. The blocker is a missing file, and a licence is one commit — so the cheapest intervention is **asking the author**, not sweeping again or forking. Proof that the class *can* be granted: a Spanish primary-teacher-formation unit found in the same pass carries MIT. **Transferable to every Globant industry base with a thin non-US region.**
+
+### T174 — Statutory instruments are the most reliable region key there is, and they are how North America finally placed 🟢 new at p710
+
+A repository places to a region when the thing it names exists in exactly one jurisdiction (`709-C`). p710's finding is that **education STATUTES are the densest source of such names, and they had never been used as a key on these shelves.** IDEA produces the IEP and the due-process complaint; Section 504 produces the 504 plan; FERPA produces the directory-information notice; Perkins V produces the CTE plan. Each exists nowhere else on earth.
+
+This broke a two-pass North American supply nil with three rows in one sweep, and it works symmetrically abroad: Israel's *inclusion committee*, Spain's `DAM` FP qualification, Madrid's ESO/Bachillerato stages, Pakistan's MDCAT, India's JEE/NEET.
+
+**Signal**: sweep for the *artefact a statute names*, not for the country. **And the corollary matters more than the key: the same client need decomposes into DIFFERENT software per legal system** — under IDEA the work is adversarial prose assembly with traced assertions and exposed arithmetic; under Israel's committee process it is structured extraction with PII redaction. A studio that scopes "AI for special education" from the US shape will mis-scope the EMEA engagement.
+
+### T175 — Prerequisite auditing arrived twice in one week from unrelated authors — the long-missing CONSUMER for knowledge tracing 🟢 new at p710
+
+Two projects with no connection to each other — a rural-Gujarat FLN system for Standards 1–8 and an advanced-STEM multi-agent tutor — independently implemented **prerequisite auditing**: traverse a curriculum prerequisite graph and refuse to teach a topic until its prerequisites clear, instead of reporting a mark.
+
+This base has held knowledge tracing for hundreds of passes (`pyKT`, `pyBKT`, `EduKTM`, `EduCAT`): all of it **estimates** mastery and none of it **acts** on the estimate. Two independent implementations in one week is the point at which that stops being a research idea.
+
+**Signal**: the diagnostic claim is also the commercial one — *“a child failing two-digit addition has usually not mastered place-value bundling”* is a root cause a parent, teacher and ministry all understand, where a score of 35% is not. Pair it with the FLN system's three deployment constraints, which are what decide whether a rural rollout survives: **physical manipulatives** so no second device is needed, **offline resilience as a premise**, and **no public ranking**. See `P106` in [`../compose/patterns.md`](../compose/patterns.md).
+
+### T176 — "Adaptive learning" names two different fields, and the education sense is the MINORITY of search results 🔴 new at p710
+
+In machine learning, *adaptive learning* means a model adapting during training. In education it means instruction adapting to a learner. Both senses are MIT-licensed, recent and well-starred, and p710's `adaptive learning` leg returned the ML sense at the top: a NeurIPS 2026 optimiser for LLM agents, and a multi-agent RL ecosystem testbed for the Baldwin effect.
+
+**Signal**: the fix is not a better keyword but a **required co-occurrence** — a learner noun (`student`, `pupil`, `learner`, `docente`, `aluno`) or a named curriculum stage must appear, or the hit is presumed ML-sense and refused. This base has already filed two subjects it had to annotate as *not education*; the discriminator is cheap and should run before filing, not after. **Applies to every industry base whose vocabulary collides with a machine-learning term** — "agent", "reward", "policy" and "curriculum learning" all have this problem.
+
+---
+
 ## 🆕 T170–T172 — added at p709 (2026-11-08)
 
 ### `T170` — Regional placement is decided by whether a region's institutions **operate** or **buy** their systems, and the single-jurisdiction test makes that measurable

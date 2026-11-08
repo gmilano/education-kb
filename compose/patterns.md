@@ -11,6 +11,55 @@ updated: 2026-11-08
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## P106 — Prerequisite-first remediation: diagnose the missing building block, teach it in five days with no second device (ministry, state or district FLN programme, rural school network, NGO: 6–8 weeks to a screened cohort) 🟢 new at p710
+
+**The problem this answers.** A screening test says a child scored 35% on two-digit addition. Nobody can act on that. The teacher needs to know *which* prerequisite is missing — and in a multi-level classroom of 30+ with intermittent connectivity, they need the remedy to be doable tomorrow with what is in the room.
+
+**The parts, all verified at p710 and all permissive:**
+
+| role | repo | licence | why this one |
+|---|---|---|---|
+| Prerequisite-graph diagnosis + five-day pathways | [`shreyanshio/saksham-fln`](https://github.com/shreyanshio/saksham-fln) | 🟢 MIT | traverses a curriculum prerequisite skill graph to isolate the missing concept; generates 10–15 min/day activities on **physical manipulatives**; offline-resilient; no public ranking; renders Gujarati/Hindi matras and conjuncts correctly |
+| Prerequisite audit for upper bands | [`XenogenesisXtreme/Master-Pedagogy-Skill`](https://github.com/XenogenesisXtreme/Master-Pedagogy-Skill) | 🟢 MIT | automated prerequisite audits before a topic is taught — the same mechanism for advanced STEM, so one engagement covers primary through secondary |
+| Mastery estimation under the hood | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) · [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | supplies the per-skill mastery probability the graph traversal thresholds on; BKT is the version a ministry statistician will accept |
+| Item selection | [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) · [`flatironinstitute/psyphy`](https://github.com/flatironinstitute/psyphy) | 🟢 MIT | keeps the screening short — pick the item that maximises information about the latent skill. `psyphy` is the independent, perception-side reference for the same core |
+| Local model, no connectivity assumption | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 MIT | activity text generated on-device; nothing about a named child leaves the school |
+
+**How it wires together.** Screening responses → `pyKT`/`pyBKT` produce per-skill mastery → the prerequisite graph is traversed **downward** from the failed skill until a node falls below threshold → that node, not the test score, is the diagnosis → the five-day pathway is generated for that node against a manipulatives catalogue → `adaptivetesting` keeps the re-screen to a handful of items → `ollama` renders the teacher's worksheet locally in the classroom language.
+
+**Sequence (6–8 weeks).** Weeks 1–2: encode the client's own curriculum as the prerequisite graph — *this is the whole engagement and the only part that cannot be copied*, because the graph is jurisdiction-specific. Weeks 3–4: calibrate BKT thresholds against the client's historical screening data. Weeks 5–6: manipulatives catalogue and worksheet rendering in the local script. Weeks 7–8: one cohort screened and remediated, measured on prerequisite closure rather than on score movement.
+
+🔴 **The two failure modes, both stated by the source project.** Public ranking destroys adoption with young learners, so no league tables. And **Indic, Arabic and Khmer scripts clip matras, conjuncts and diacritics in most English-centric rendering paths** — budget for script QA as a work item, not as a bug.
+
+🟡 **Scope honestly:** `saksham-fln` is a hackathon-origin reference design with a *proposed* district stakeholder, not a deployed system. Read it as the best-argued construction available under MIT, and expect to build production hardening.
+
+---
+
+## P107 — The jurisdiction-correct statutory drafting desk: one engine, a different instrument per legal system (US district counsel or special-education co-op, EMEA ministry or municipality, any regulated-education compliance buyer: 5–7 weeks) 🟢 new at p710
+
+**The problem this answers.** Education's highest-stakes paperwork is statutory: it must cite the record, survive an adversarial reading, and be defensible line by line. Clients ask for "AI to help with IEPs" and mean something materially different in each jurisdiction — and p710 measured that difference rather than assuming it.
+
+**The parts, all verified at p710:**
+
+| role | repo | licence | jurisdiction |
+|---|---|---|---|
+| Family-side adversarial drafting | [`b33kman/special-education-due-process-complaint`](https://github.com/b33kman/special-education-due-process-complaint) | 🟢 MIT | **US / IDEA** — all 50 states + DC |
+| District-side instrument drafting | [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent) | 🟢 MIT | **US / IDEA** |
+| Structured extraction + PII redaction | [`gil612/special-ed-doc-intelligence`](https://github.com/gil612/special-ed-doc-intelligence) | 🟢 MIT | **Israel** — inclusion-committee decisions |
+| Citable jurisdiction curriculum text | [`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid) | 🟢 MIT | **Spain / Madrid** — literal bulletin text, per-element provenance, stable codes, a `comprobar` verifier |
+| Rubric scoring calibrated to human raters | [`microsoft/LLM-Rubric`](https://github.com/microsoft/LLM-Rubric) | 🟢 MIT | jurisdiction-neutral |
+| Audited write path | [`thedavidweng/canvas-cli`](https://github.com/thedavidweng/canvas-cli) | 🟢 Apache-2.0 | mutation gates + audit log, where the output lands in an LMS |
+
+**The construction to copy, which is the actual deliverable.** From the IDEA complaint writer, four properties that a district counsel or compliance officer will accept and that no amount of model quality substitutes for: **(1)** every assertion traced to a source page in the client's own record; **(2)** the arithmetic shown, not asserted; **(3)** anything unverifiable **flagged** rather than smoothed over; **(4)** the counterparty's prior documents taken as a *required input*, so the draft answers the reasons already given in writing. Add `normativa-madrid`'s discipline where curriculum law is cited: **per-element provenance and a verifier that answers whether a cited code exists.**
+
+**Sequence (5–7 weeks).** Week 1: name the statute and enumerate its artefacts — this fixes the shape of everything downstream, and it is where a US-shaped assumption breaks an EMEA engagement. Weeks 2–3: ingest the client record with PII redaction *in the pipeline*; build the provenance index. Weeks 4–5: drafting with traced assertions, exposed arithmetic and an explicit unverifiable-claims report. Week 6: rubric scoring of drafts calibrated against the client's own reviewers. Week 7: delivery into the system of record over an audited write path.
+
+🔴 **Non-negotiables.** Ship it as assistance with a named human signatory — the source project states plainly that it is not legal advice, and so must any derivative. Redaction belongs in the pipeline, not in a review step. **And the legal-system question is asked first, never last:** under IDEA the work is prose assembly; under a committee process it is structured extraction. Same need, different software.
+
+🔵 **Why this sells where policy is absent rather than where it is strict.** North America has near-universal AI adoption in education and very little hard regulation (`710-C`, and the NA reading in [`../intel/market.md`](../intel/market.md)). **The buyer needs the audit trail precisely because there is no policy to point at** — the provenance is the product.
+
+---
+
 ## 🆕 P104–P105 — added at p709 (2026-11-08)
 
 ### `P104` — The curriculum-grounded planning loop: generate a lesson or an assessment that **cites the statute it came from** (5–7 weeks, EMEA/Spain first)

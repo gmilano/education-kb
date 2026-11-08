@@ -133,6 +133,25 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🟢 p710 — North America: **THE SUPPLY NIL IS BROKEN after two passes, and it broke on a STATUTE** — `NA 20 → 22`
+
+🟢 **p709 and p708 both recorded zero North American members in their supply cohorts. p710 filed two, and the channel that produced them is nameable and repeatable: US education STATUTE as the placement key.** Both rows sit on the **Individuals with Disabilities Education Act (IDEA)** — [`b33kman/special-education-due-process-complaint`](https://github.com/b33kman/special-education-due-process-complaint) (MIT) writes the family's due-process complaint when an IEP has failed, and [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent) (MIT) drafts the district's IEP sections. A third row, [`UCSF-DSOS/UCSF-DSOS-Python-SQL-Workshops`](https://github.com/UCSF-DSOS/UCSF-DSOS-Python-SQL-Workshops) (MIT), places on a named university library, and [`flatironinstitute/psyphy`](https://github.com/flatironinstitute/psyphy) (MIT) on a named institute. Full measurement in [`../agents/trending.md`](../agents/trending.md) `710-C`.
+
+🟢 **The generalisable channel: a federal education statute is a single jurisdiction, so any repository naming its instrument places in North America without a guess.** IDEA, Section 504, FERPA, Title I, Perkins V and the Clery Act each name artefacts (IEP, 504 plan, directory-information notice, CTE plan) that exist nowhere else. **This is the first NA placement key on this page that does not depend on a repository volunteering a city.**
+
+**Demand-side readings this pass** (the mandated `AI education North America 2026 adoption regulation players` leg — which returned **zero repositories** for the **49th** consecutive time, and market intelligence instead):
+
+| reading | figure | source class | confidence |
+|---|---|---|---|
+| Regional share of global AI-in-education market | `~36%` / `~38%` / `41.7%` growth over forecast period | three market-research firms | 🟡 **estimates disagree; treat as "largest region", not as a number** |
+| Educational organisations using generative AI (admin + instructional) | `86%` | single market-research report | 🔴 **one source, unreplicated** |
+| Institutions with AI guidance in place or in development (Europe + NA) | `~70%` | aggregated survey reporting | 🟡 directional |
+| US Department of Education funding for responsible AI in higher education | **`$169M`**, announced **January 2026** | public announcement | 🟢 **the only hard public number on this leg** |
+
+🟢 **The structural reading has not changed and p710 sharpens it: in North America the binding constraint is GUIDANCE, not capability.** Adoption is near-universal and policy is near-absent — *“many schools still lack a clear policy”* is named by the sources as the central tension. **Hard regulation remains thin; what exists is COPPA on child-directed products and the state-bill layer this page dated at `p705`.** Budget limits are repeatedly named as the brake in public districts.
+
+🔵 **Opportunity for Globant, and p710 changes its shape from the one `p704` recorded.** `p704` read NA as a **licence-gate service** rather than a build. p710 adds a build that is defensible: **statutory-drafting assistance with provenance** — every assertion traced to a source page, arithmetic exposed, unverifiable claims flagged, the counterparty's own prior documents taken as required input. That construction (from `710-C`) is what a district counsel or a compliance officer will accept, and it generalises off special education onto any IDEA/504/Perkins deliverable. **Sell it where the policy vacuum is: the buyer needs the audit trail precisely because there is no policy to point at.**
+
 #### 🔴 p709 — North America: the demand leg nils a **48th** time, and p709's `18`-row supply cohort again has **ZERO** North American members — second pass running
 
 🔵 **Demand leg, as prescribed:** `AI education North America 2026 adoption regulation players`. 🔴 **Nil on novelty, and measured rather than asserted this time.** Every marker the leg returned was grepped against this base's own `intel/` before being written: `North Carolina Session Law 2026-41` (**`24`** existing occurrences), `134 bills / 31 states` (**`30`**), `Maryland`'s AI-coordinator package (**`59`**), `MultiState`'s tracker (**`32`**), the `60%`-of-teachers Gallup reading, the `55%` of principals not restricting access, and the `70%` of European and North American institutions with AI guidance. **`0` facts this base did not already hold.**
@@ -708,6 +727,26 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🟢 p710 — EMEA: `EMEA 22 → 24`, a named-institution university course under MIT, and the region's first SOUTH AFRICAN candidate — which is ungranted
+
+🟢 **Supply moved again** — [`gil612/special-ed-doc-intelligence`](https://github.com/gil612/special-ed-doc-intelligence) (MIT, Israeli **inclusion-committee** decisions, PII redaction in-pipeline) and [`escueladeciencia/upsteam-html-formacion-scratch`](https://github.com/escueladeciencia/upsteam-html-formacion-scratch) (MIT, Spanish teacher formation for 5.º/6.º de primaria, themed on Valencia's **mascletà**) — plus, on the foundations shelf, [`gabors-data-analysis/da-w-ai`](https://github.com/gabors-data-analysis/da-w-ai) (MIT): a **complete university course** by Gábor Békés of **Central European University (Austria, EU)**, with syllabus, weekly assignments and three case studies.
+
+🟢 **`da-w-ai` is the most commercially useful EMEA asset filed in several passes, for one reason: its stated learning outcomes include where AI assistance is NOT to be trusted** — distinguishing use cases that are *“greatly useful”*, *“helpful”* and *“currently problematic”*, and which outputs need strong human supervision. **That is the module EMEA corporate L&D buyers ask for under the AI Act's literacy obligations, and open curricula almost never contain it.**
+
+🔴 **The region's first South African candidate was found and cannot be used:** [`7irelo/aptiverse`](https://github.com/7irelo/aptiverse) — **CAPS-aligned** practice tests, auditable marking and a curriculum-grounded tutor — is alive at `main` @ `4200bf84e73e` and serves `404` for all five licence filenames. **An ungranted asset is not an absent one** (`710-E`): the design is public and the author is reachable.
+
+**Demand-side readings this pass** (the `AI education EMEA 2026 adoption regulation players` leg — **zero repositories**, 49th consecutive nil on supply):
+
+| reading | detail | confidence |
+|---|---|---|
+| **EU AI Act** | key provisions reported as taking effect **during 2026** for higher education, with **post-market surveillance** obligations on high-risk educational systems; schools described as responsible for auditing fair and transparent use | 🟡 **direction solid, dates NOT verified** — one aggregator claims enforceability from **February 2026** and no second source confirms it. **Check the official text before quoting a date to a client.** |
+| AI readiness, EMEA vs other regions | `56%` of EMEA CEOs say their organisation is prepared, vs `48%` Americas and `45%` APJ; `60%` of EMEA finance teams between pilot and maturity | 🟡 vendor research (Workday) |
+| **European University Association** | January 2026 report reportedly urges mindful adoption and **prioritising European LLMs to counter US-centric bias** | 🟡 single secondary source |
+| Market instrumentation | **Fosway Group** published a 2026 AI Market Assessment for digital learning aimed at EMEA learning leaders (London, April 2026) | 🟢 dated publication |
+| Vendor movement | Microsoft **Elevate for Educators**; **LEGO Education** K–8 computer-science and AI classroom platform, shipping April 2026; Instructure running EMEA AI-Act webinars for institutions | 🟡 vendor announcements |
+
+🔵 **Opportunity for Globant.** The AI Act keeps producing the same sellable deliverable this page has recorded since `p689` — **auditable tutoring and assessment for an Annex III deployer** — and p710 adds two refinements. **First, the sovereignty argument is now institutional, not just political:** when the EUA itself recommends European models, this base's local-first and sovereign-deployment rows stop being a cost argument and become a compliance-and-provenance argument. **Second, AI literacy is a procurement line, not a nice-to-have**, and `da-w-ai` is a permissively granted starting point for the "when not to trust it" module that the obligation actually requires. 🟡 **Price the regulatory work on a verified calendar, not on a blog's date** — the one date the leg produced could not be confirmed.
 
 #### 🟢 p709 — EMEA: the demand leg nils a **48th** time, but EMEA was again the strongest SUPPLY region — `EMEA 18 → 22` on the agent shelf, and it is **no longer the thinnest column**
 
@@ -1406,6 +1445,26 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟢 p710 — APAC: `APAC 56 → 60`, the first INCUMBENT-VENDOR evidence on this page, and South Asia measured as TWO markets rather than one
+
+🟢 **Four APAC rows filed**, and one of them changes the character of this page's APAC intelligence. [`iflytek/astron-harness-tutorial`](https://github.com/iflytek/astron-harness-tutorial) (Apache-2.0, `360★`) is published by **iFlytek (科大讯飞)**, one of the largest education-AI vendors in China, and documents how it expects agents to be wired into its own AStudio / Loomy / AstronClaw stack. 🔵 **Until now this page's APAC picture was assembled almost entirely from academic papers and `0★`–`6★` individual-developer repositories. This is the first first-hand artefact from an incumbent at provincial scale** — a market signal and a reference architecture, though not a runnable engine, and the products it documents are not themselves open source.
+
+🟢 **The second finding is a market-structure correction.** [`aayanahmed200/arthic`](https://github.com/aayanahmed200/arthic) (MIT) is the first **Pakistan**-placed row on these shelves, covering **MDCAT, ECAT, NUST NET, FAST, CSS, PMS and LUMS LNAT**. This base already holds India's **JEE/NEET** cohort. **The two share no content, no language and no awarding body — a "South Asia" engagement scoped as one market is mis-scoped.** Also filed: [`shreyanshio/saksham-fln`](https://github.com/shreyanshio/saksham-fln) (MIT, Foundational Literacy and Numeracy for Standards 1–8, Devbhumi Dwarka, Gujarat — prerequisite-graph diagnosis, five-day micro-pathways on physical manipulatives, offline-resilient, no public ranking, correct Gujarati/Hindi matras and conjuncts) and [`mxggle/kanji-kaisen`](https://github.com/mxggle/kanji-kaisen) (MIT, spaced repetition plus **stroke-recognition** grading of Japanese glyph production). On the foundations shelf, [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) (MIT, `41★`) carries a Chinese civil-service-examination adapter over a region-neutral foundation.
+
+🔴 **India's long tail is alive and ungranted, same as LATAM's:** [`Amarnath10i/Atom`](https://github.com/Amarnath10i/Atom) — a JEE/NEET tutor with a student model trained on **16M practice attempts** (LightGBM benchmarked against BKT, DKT and SAKT, with exact training-serving parity) — plus three further India tutors, **`4 / 5` with no licence file at all** (`710-E`). **The most technically interesting APAC artefact found this pass is the one a studio may not touch.**
+
+**Demand-side readings this pass** (the `AI education APAC 2026 adoption regulation players` leg — **zero repositories**, 49th consecutive nil):
+
+| reading | detail | confidence |
+|---|---|---|
+| 🔴 **Education-specific AI regulation** | **NOTHING FOUND. Declared as a gap, not as coverage.** The leg surfaced Singapore consultations on AI in **financial institutions** — a different sector — and general data-protection and cross-border-transfer tightening. **No APAC education-sector AI framework was returned.** | 🔴 **informed nil; the next pass should query national education ministries directly (China MoE, Singapore MoE, Australia AITSL/ACARA, India MoE/NCERT) rather than the region** |
+| Regional posture | **AI sovereignty** named as the pacing factor for Asia-Pacific in 2026 | 🟡 trade press |
+| Convergence | APAC principles expected to harmonise on safety, transparency and accountability, applied differently per market | 🟡 forecast |
+| Infrastructure brake | `49%` of APAC businesses cite insufficient infrastructure for real-time data processing as a barrier; Omdia survey of `1,100+` decision-makers across AU, NZ, SG, MY and PH | 🟡 vendor-sponsored survey |
+| Convening | Acer Edu Summit Asia Pacific 2026 positioned around AI-driven learning, policy support and infrastructure; sources describe a **crowded** vendor field | 🟡 vendor event |
+
+🔵 **Opportunity for Globant.** Two reads, both supported by this pass's own evidence. **(1) Sovereignty is the wedge, and the infrastructure number explains why:** when half the region reports inadequate real-time data infrastructure and sovereignty sets the agenda, the local-first and offline-resilient column of these shelves (`saksham-fln`, `civil-ai`, `learnnote-assistant`, `studyhub-local`, the Ollama/vLLM layer) is the delivery story, not a fallback. **(2) Sell per jurisdiction, never per region** — the Pakistan/India split and the absence of any regional education framework mean the compliance and content work is national each time. 🟡 **And do not quote an APAC education regulation to a client on the strength of this leg: there isn't one in evidence.**
+
 #### 🟢 p709 — APAC: the demand leg nils a **48th** time, but the institutional channel produced `4` APAC rows — `APAC 52 → 56`
 
 🔵 **Demand leg, as prescribed:** `AI education APAC 2026 adoption regulation players`. 🔴 **Nil on novelty, measured:** Korea's `AI Basic Act` in force January 2026 (**`87`** existing occurrences), Vietnam's July 2026 high-risk designation covering education (**`206`** occurrences of `Vietnam`), China's generative-AI measures and the `CNY 50M` penalty ceiling, Japan's cooperation-based AI Act, Singapore's `AI Verify` (**`27`**), Australia's `TEQSA` institutional action plans (**`52`**). **`0` new facts.**
@@ -2013,6 +2072,34 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🔴 p710 — LATAM: `LATAM 19` did not move — and p710 is the FIRST PASS THAT CAN SAY WHY FROM GRANT PAYLOADS. The supply exists. It is UNGRANTED.
+
+🔴 **This page has recorded LATAM supply nils for dozens of passes, and `p709` measured `total_count: 0` on eight LATAM-institution legs — zero repositories, not zero novel ones.** p710 changed the question from *“do repositories exist?”* to *“do the repositories that exist carry a grant?”*, swept in Spanish and Portuguese, and found **five live LATAM education repositories with no licence file at all**:
+
+| subject | what it is | liveness | grant |
+|---|---|---|---|
+| [`ivanozono/ia-docentes-notebooklm`](https://github.com/ivanozono/ia-docentes-notebooklm) | NotebookLM and AI-integration workshop for Mexican secondary teachers, framed on the **Nueva Escuela Mexicana** | `main` @ `0adae0d59670` | 🔴 **NONE** |
+| [`ShayeneFigueredo/IAProfEPT`](https://github.com/ShayeneFigueredo/IAProfEPT) | continuing formation for maths teachers in Brazil's **Educação Profissional e Tecnológica** | `main` @ `77f8fcce3fdf` | 🔴 **NONE** |
+| [`ShayeneFigueredo/IAProfEPT-plataforma`](https://github.com/ShayeneFigueredo/IAProfEPT-plataforma) | the platform half of the same project | `main` @ `387f6d36cdb7` | 🔴 **NONE** |
+| [`nelsondiasif/jogos-educativos-ia`](https://github.com/nelsondiasif/jogos-educativos-ia) | generative-AI educational games for science teaching, early years and initial teacher formation | `main` @ `acf544f01f02` | 🔴 **NONE** |
+| [`kcire42/SaphiraEducationAgent`](https://github.com/kcire42/SaphiraEducationAgent) | mobile-first EdTech platform with a virtual tutor | `main` @ `33dfa5df70b8` | 🔴 **NONE** |
+
+**`5 / 5` ungranted, each probed on five filenames** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`). Across the whole regional long tail — LATAM plus South Africa plus India — **`10 / 11` are alive and ungranted**, against a global tail that is overwhelmingly MIT. Full measurement in [`../agents/trending.md`](../agents/trending.md) `710-E`.
+
+🟢 **This retires an inference this base has been making for dozens of passes.** *“Thin LATAM column ⇒ thin LATAM supply”* **is false. No further Spanish or Portuguese sweep will move `LATAM 19`, because the blocker is a missing file, not a missing project.** 🔵 **And the fix is proven to be possible in the same pass:** [`escueladeciencia/upsteam-html-formacion-scratch`](https://github.com/escueladeciencia/upsteam-html-formacion-scratch) is the same class — Spanish-language primary teacher formation — **under MIT**. Teacher-formation content is being written across the Hispanophone world; **whether a studio may touch it is decided per repository, not per region.**
+
+**Demand-side readings this pass** (the `AI education LATAM 2026 adoption regulation players` leg — **zero repositories**, but the richest regional intelligence of the four legs):
+
+| reading | detail | confidence |
+|---|---|---|
+| **Higher-education adoption** | **`92%` of students and `79%` of faculty actively engaging with AI**, across `29` Latin American universities — Digital Education Council LATAM survey 2026, run with **Tec de Monterrey's Institute for the Future of Education** | 🟢 **named survey, named partner, stated sample — the strongest regional adoption figure on this page** |
+| Governance | **UNESCO Santiago + CENIA** (Chile's national AI centre) cooperation agreement on ethical AI in education, signed **end of February 2026** | 🟢 dated |
+| Institution-building | **Regional AI in Education Observatory for Latin America and the Caribbean**, UNESCO-led public–private initiative | 🟡 **launch date disputed between sources** — one says launched April 2026, another describes it as planned. **Do not cite a date.** |
+| Mapping | UNU-IAS / UNESCO IESALC working paper maps university AI use across five dimensions: teaching and learning, research, community engagement, administration, governance | 🟢 published |
+| Market | governments implementing national digital-education policies with allocated funds; **many areas lack the digital infrastructure to support AI tutor platforms** | 🟡 market report |
+
+🟢 **Opportunity for Globant — and p710 gives the region a NEW and cheaper play than anything on this page.** Adoption is the highest measured of the four regions (`92%` / `79%`) while infrastructure and governance lag; the governance wrapper (`P5`) and the grounded offline classroom (`P84`) still fit. **What is new is a grant-brokerage play:** the LATAM assets a client wants already exist, built by identifiable single authors who pushed last month, and **a licence is one commit**. Three steps, in order: **ask the author for a grant** before anything else; **rebuild from the public design** where asking fails; and **contribute the grant upstream** so the next engagement inherits it. 🔵 **Carry this to Globant's other industry bases:** wherever a region's long tail is individual developers rather than institutions, a thin column measures grants, not supply.
 
 #### 🔴 p709 — LATAM: the demand leg nils a **48th** time, and the supply side returned **ZERO REPOSITORIES** — not zero novel ones. `LATAM 19` stands still and is now the thinnest column
 

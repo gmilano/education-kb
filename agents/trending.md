@@ -3,6 +3,137 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p710) — 🟢 **FIFTEEN AGENT ROWS, `North America 20 → 22` ON A CLASS RATHER THAN A SLUG, AND THE LATAM NIL FINALLY EXPLAINED WITH BYTES: THE SUPPLY EXISTS AND IS UNGRANTED**
+
+**`25` subjects filed** (`15` agents, `8` foundations, `2` platforms). [`top.md`](top.md) **`206` → `221`** (arity `221/221` at `6` columns, `0` ragged; `221` distinct subjects, `0` duplicated; region vocabulary `221/221` legal). [`../repos/foundations.md`](../repos/foundations.md) **`269` → `277`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`113` → `115`**.
+
+**Region movement: `North America 20 → 22`, `EMEA 22 → 24`, `APAC 56 → 60`, `Global 89 → 96`. `LATAM 19` did not move — and `710-E` is the first pass that can say why from grant payloads rather than from a search nil.**
+
+🔴 **The mandated legs returned their 38th consecutive nil on novelty** — but not a total one: one leg produced a `1,071★` subject this base did not hold (`710-A`).
+
+🔴 **The mandate's own verification instruction is inoperable in this session.** `curl -sI https://github.com/{slug}` returns `403` for every repository, live or dead (`710-B`).
+
+---
+
+### 🔴 `710-A` — the mandated legs, 38th consecutive nil, and the one address that was NOT already held
+
+Run at p710 for the **computed** current year (`2026`, read from the clock with `date -u +%Y`, never hardcoded). Four global legs and four regional legs:
+
+| address | leg | held already? |
+|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `top open source AI agents education 2026 github MIT` | 🔴 yes |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | `top open source AI agents education 2026 github MIT` | 🟢 **NO — filed to [`../repos/foundations.md`](../repos/foundations.md)** |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | `github trending education AI 2026` | 🔴 yes |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `github trending education AI 2026` | 🔴 yes |
+| [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | `github trending education AI 2026` | 🔴 yes |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `github trending education AI 2026` | 🔴 yes |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `open source platform education ERP CRM MIT Apache` | 🔴 yes |
+
+**`6 / 7` held; `1` novel.** The four **regional** legs (`AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`) returned **`0` repository addresses between them** — they are market-intelligence legs in practice, and their yield went to [`../intel/market.md`](../intel/market.md) and [`../intel/trends.md`](../intel/trends.md), not here.
+
+🟢 **The transferable correction to this shelf's own habit: `p704`–`p709` recorded the agent legs as worthless, and that is one notch too strong.** The `top open source AI agents …` leg surfaced a `1,071★` MIT project — framework-free agent construction on a local LLM — that `24`+ API sweeps across six passes never returned, **because the sweeps are filtered by education vocabulary and this subject never uses it.** The legs are not a novelty channel, but they are the only channel that reaches *adjacent-vocabulary* subjects. Keep running them; stop expecting tutors from them.
+
+🟡 **The ERP/CRM leg failed in exactly the way `709-A` predicted** (it returns ERPs and CRMs, not education), which is now a two-pass reproduction of that failure mode rather than an observation.
+
+---
+
+### 🔴 `710-B` — THE MANDATED URL CHECK IS DEAD HERE, AND A PASS THAT TRUSTS IT WILL EITHER PUBLISH NOTHING OR PUBLISH ANYTHING
+
+The standing instruction is to verify every URL with `curl -sI` and to treat a `404` as not-a-finding. Measured at p710 across all `38` subjects probed:
+
+| channel | result at p710 | verdict |
+|---|---|---|
+| `curl -sI https://github.com/{slug}` | 🔴 **`403` for `38 / 38`** — including every repository independently proven alive | **useless as a liveness test: it cannot separate a real row from a `404`** |
+| `git ls-remote --symref https://github.com/{slug} HEAD` | 🟢 works for `38 / 38` | **the arbiter** — returns the real default branch *and* the head SHA |
+| `raw.githubusercontent.com/{slug}/{branch}/LICENSE` | 🟢 works | the only first-hand **grant** channel; `404` here is meaningful |
+| `gh api -X GET search/repositories` | 🟢 works (`repo:` qualifiers batchable, `30/min`) | stars, `spdx_id`, `pushed_at` |
+| `gh api repos/{owner}/{repo}` | 🔴 `403` | session-scoped; will never open for a third-party repository |
+
+🟢 **Why this is worth a section and not a footnote:** a `403` is indistinguishable from a block, so a pass that reads the mandate literally sees `403` everywhere and concludes *either* that nothing verifies (and files nothing) *or* that the check is noise (and files unverified rows). **Both failures are avoidable: liveness is `ls-remote`, grants are `raw.githubusercontent.com`, and neither has failed in this session.** Every one of p710's `25` filed rows carries a `branch@SHA` from `ls-remote` and a byte count plus `sha256₁₂` from the grant payload.
+
+---
+
+### 🟢 `710-C` — THE PASS'S HEADLINE: `North America` moved on a CLASS, and the class is one client problem under three legal systems
+
+`North America` had been frozen at `20` since `p706`. p710 moved it to `22`, and the three rows that did it are better read as one finding:
+
+| row | instrument | legal system | region |
+|---|---|---|---|
+| [`b33kman/special-education-due-process-complaint`](https://github.com/b33kman/special-education-due-process-complaint) | the **family's** filing when the IEP has failed — a due-process complaint | **IDEA**, US federal, 50 states + DC | North America |
+| [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent) | the **district's** instrument that produces the IEP | **IDEA**, US federal | North America |
+| [`gil612/special-ed-doc-intelligence`](https://github.com/gil612/special-ed-doc-intelligence) | structured extraction from **inclusion-committee decisions** | **Israeli** education law | EMEA |
+
+🟢 **The transferable result: the same client need decomposes into DIFFERENT software shapes per jurisdiction.** Under IDEA — an adversarial, document-driven statute — the work is **prose assembly with every assertion traced to a source page, arithmetic shown, and unverifiable claims flagged**. Under the Israeli committee process the work is **structured extraction with PII redaction in the pipeline**. **A studio that scopes "AI for special education" from the US shape will mis-scope an EMEA engagement, and vice versa.**
+
+🔵 **And one reusable construction regardless of jurisdiction:** the complaint writer answers the reasons the school gave **in the school's own documents**, which is the only design on this shelf that treats the counterparty's prior text as a required input. That is the generalisable pattern for any regulated-drafting engagement.
+
+🟡 **Both US rows are `1★` and `0★`.** They are filed on class and construction, not on adoption — stated plainly so a later pass does not read the star counts as a popularity claim.
+
+---
+
+### 🟢 `710-D` — two unrelated projects implemented PREREQUISITE AUDITING in the same week, which is a pattern signal rather than a coincidence
+
+| row | learner band | region | mechanism |
+|---|---|---|---|
+| [`shreyanshio/saksham-fln`](https://github.com/shreyanshio/saksham-fln) | Standards 1–8, rural Gujarat | APAC | traverses a **curriculum prerequisite skill graph** to find the missing building block instead of reporting a mark |
+| [`XenogenesisXtreme/Master-Pedagogy-Skill`](https://github.com/XenogenesisXtreme/Master-Pedagogy-Skill) | advanced STEM, early science learners | Global | **automated prerequisite audits** before a topic is taught |
+
+Different authors, different regions, different age bands, both pushed inside p710's window, neither citing the other. 🟢 **Why it matters to this base specifically: prerequisite auditing is the CONSUMER this base's knowledge-tracing shelf has always lacked.** `pyKT`, `pyBKT`, `EduKTM` and `EduCAT` estimate mastery; nothing on these shelves previously *acted* on an estimate by refusing to teach a topic until its prerequisites cleared. **Two independent implementations in one week is the point at which this stops being a research idea and becomes a composable component** — see the new pattern in [`../compose/patterns.md`](../compose/patterns.md).
+
+🔵 **The `saksham-fln` design carries three further constraints worth copying wholesale**, because they are the ones that decide whether a rural deployment survives contact: **physical manipulatives** (straws, pebble grids, number cards) so the intervention needs no second device; **offline resilience** as a design premise rather than a feature; and **no public ranking**, explicitly to avoid stigmatising young learners. Plus correct rendering of **Gujarati/Hindi matras and conjuncts**, which the repository names as a failure of English-centric tooling.
+
+---
+
+### 🔴 `710-E` — THE LATAM NIL, EXPLAINED: the supply is not missing, it is UNGRANTED — `5 / 5` serve `404` for every licence filename
+
+`p709` recorded `LATAM` as a measured nil on `12` legs, several returning `total_count: 0`. p710 changed the question from *“are there repositories?”* to *“do the repositories that exist carry a grant?”* and swept in Spanish and Portuguese. Every subject below is **alive** (`ls-remote`) and **ungranted** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` all `404`):
+
+| subject | what it is | placement | liveness | grant |
+|---|---|---|---|---|
+| [`ivanozono/ia-docentes-notebooklm`](https://github.com/ivanozono/ia-docentes-notebooklm) | NotebookLM workshop for Mexican secondary teachers, **Nueva Escuela Mexicana** | LATAM (Mexico) | `main` @ `0adae0d59670` | 🔴 **NONE** |
+| [`ShayeneFigueredo/IAProfEPT`](https://github.com/ShayeneFigueredo/IAProfEPT) | continuing formation for maths teachers in Brazil's **Educação Profissional e Tecnológica** | LATAM (Brazil) | `main` @ `77f8fcce3fdf` | 🔴 **NONE** |
+| [`ShayeneFigueredo/IAProfEPT-plataforma`](https://github.com/ShayeneFigueredo/IAProfEPT-plataforma) | the platform half of the same project | LATAM (Brazil) | `main` @ `387f6d36cdb7` | 🔴 **NONE** |
+| [`nelsondiasif/jogos-educativos-ia`](https://github.com/nelsondiasif/jogos-educativos-ia) | generative-AI educational games for science teaching and initial teacher formation | LATAM (Brazil) | `main` @ `acf544f01f02` | 🔴 **NONE** |
+| [`kcire42/SaphiraEducationAgent`](https://github.com/kcire42/SaphiraEducationAgent) | mobile-first EdTech platform, virtual tutor | LATAM | `main` @ `33dfa5df70b8` | 🔴 **NONE** |
+
+**`5 / 5` ungranted.** The pattern is not confined to LATAM — it is a property of the **regional long tail** generally:
+
+| also probed | placement | grant |
+|---|---|---|
+| [`7irelo/aptiverse`](https://github.com/7irelo/aptiverse) — **CAPS-aligned** study platform for South African students, auditable marking, curriculum-grounded tutor | EMEA (South Africa) | 🔴 **NONE** |
+| [`Amarnath10i/Atom`](https://github.com/Amarnath10i/Atom) — JEE/NEET tutor, five agents, student model trained on **16M practice attempts** (LightGBM vs BKT/DKT/SAKT, training-serving parity) | APAC (India) | 🔴 **NONE** |
+| [`Prakhar0136/JEE_NEET_Tutor`](https://github.com/Prakhar0136/JEE_NEET_Tutor) · [`raghunandana1/socratic-ai`](https://github.com/raghunandana1/socratic-ai) · [`Yash-Choubey09/kramik`](https://github.com/Yash-Choubey09/kramik) | APAC (India) | 🔴 **NONE** ×3 |
+| [`rishib0007-ui/rishi-achievers-ai`](https://github.com/rishib0007-ui/rishi-achievers-ai) | APAC (India) | 🟢 MIT (`1,069 B`, sha256₁₂ `d251db6daac0`) — the one exception, and it is `0★` and thin |
+
+🟢 **`10 / 11` of the regional-tail subjects probed at p710 are alive and ungranted, against a global tail that is overwhelmingly MIT.** This inverts how this base has been reading its own thin columns for dozens of passes. **`LATAM 19` is not a discovery failure and no further Spanish/Portuguese sweep will fix it.** The blocker is a missing `LICENSE` file.
+
+🟢 **What that changes for a studio engagement, concretely:**
+1. **Do not fork, and do not read these as unavailable either.** No grant means no permission, so the code is untouchable — but the **design** is public and the **author is reachable**.
+2. **The cheapest intervention is asking.** These are single-author, recently pushed projects; a grant is one commit. An engagement that wants `aptiverse`'s CAPS alignment or `Atom`'s 16M-attempt student model should open the conversation, not the fork.
+3. **Rebuild from the pattern where asking fails** — and p710 shows this is viable, because [`escueladeciencia/upsteam-html-formacion-scratch`](https://github.com/escueladeciencia/upsteam-html-formacion-scratch) is the *same class* (Spanish-language teacher formation, primary) **under MIT**. **Teacher-formation content is being written across the Hispanophone world; whether a studio may touch it is decided per repository, not per region.**
+4. **Carry this to the other industry bases.** The inference *“thin region ⇒ thin supply”* is wrong wherever the long tail is individual developers rather than institutions.
+
+---
+
+### 🔴 `710-F` — a vocabulary collision that will keep poisoning this base's sweeps: "adaptive learning" is TWO different fields
+
+The `adaptive learning` leg returned, in its top results, [`zmli6/DIAL`](https://github.com/zmli6/DIAL) (MIT, `18★`, *“NeurIPS 2026 DIAL: **D**irection-**I**nformed **A**daptive **L**earning for LLM Agents”*) and [`doesburg11/PredPreyGrass`](https://github.com/doesburg11/PredPreyGrass) (MIT, `29★`, Darwinian evolution plus multi-agent deep RL, the Baldwin effect).
+
+🔴 **Neither is education.** In machine learning, *adaptive learning* means a model adapting during training; in education it means instruction adapting to a learner. **Both senses are MIT, recent, and well-starred, and the education sense is the minority of the results.** 🟢 **The usable discriminator is not a better keyword but a required co-occurrence**: a learner noun (`student`, `pupil`, `docente`, `aluno`, `learner`) or a named curriculum stage must appear in the description, or the hit is presumed ML-sense. p710 applied this and refused both subjects. **Recorded so the next pass does not file a NeurIPS optimiser as a tutor** — this base has already filed `microsoft/qlib` and `microsoft/LLM-Rubric` and had to annotate both as *not education*.
+
+---
+
+### 🟡 `710-G` — the Canvas-agent cohort is measured as SATURATED on function and still open on ARCHITECTURE
+
+Eleven Canvas-facing subjects were found unheld this pass. **Nine were refused as functional duplicates** of rows this shelf already holds ([`hhe48203-ctrl/canvas-cli`](https://github.com/hhe48203-ctrl/canvas-cli), [`Jacob-Met/canvaspilot`](https://github.com/Jacob-Met/canvaspilot), [`HenryVantieghem/academics-agents`](https://github.com/HenryVantieghem/academics-agents), [`iamnotfemale/canvas-lms-for-agents`](https://github.com/iamnotfemale/canvas-lms-for-agents), [`kasparnorge/canvas-lms-skills`](https://github.com/kasparnorge/canvas-lms-skills) — the last **CC-BY-SA-4.0**, a content licence on code, refused on that ground alone). **Two were filed, and only because they define the two ENDS of one decision:**
+
+- [`liltaket/folava-mcp`](https://github.com/liltaket/folava-mcp) (Apache-2.0) — **read-only by construction**: reviewed GET routes, safe read-state settings, bounded pagination, protected attachment downloads, a replayable change feed, and the explicit property that *the agent cannot submit work*.
+- [`thedavidweng/canvas-cli`](https://github.com/thedavidweng/canvas-cli) (Apache-2.0) — **write with gates**: mutation safety gates plus audit logging, stable JSON, automatic pagination.
+
+🟢 **The finding is that the cohort's remaining variance is architectural, not functional.** Every member reads courses and assignments; they differ only in whether the agent may write and whether the write is logged. **`folava-mcp` is the first row on this shelf that makes "the agent cannot submit on your behalf" an enforceable property rather than a promise — which is the first objection an academic-integrity committee raises.** 🔵 **Also: three different projects on this base now share the slug `canvas-cli` under three owners. The slug is not the identity; owner plus grant payload is.**
+
+---
+
 ## 🆕 2026-11-08 (p709) — 🟢 **FOURTEEN ROWS, `EMEA 18 → 22`, AND A ONE-LINE TEST THAT RECONCILES THIS SHELF'S TWO CONTRADICTORY PLACEMENT RULES**
 
 **`18` subjects filed** (`14` agents, `2` foundations, `2` platforms). [`top.md`](top.md) **`192` → `206`** (arity `206/206` at `6` columns, `0` ragged; `206` distinct subjects, `0` duplicated; region vocabulary `206/206` legal). [`../repos/foundations.md`](../repos/foundations.md) **`267` → `269`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`111` → `113`**.

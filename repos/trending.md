@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p710) — 🟢 **EIGHT FOUNDATIONS, AND THE SHELF ACTED ON `p709`'S OWN CONCLUSION: PLATFORMS ARE SATURATED, SO SIX OF THE EIGHT ROWS ARE GRANTED CURRICULUM RATHER THAN SOFTWARE**
+
+[`foundations.md`](foundations.md) **`269` → `277`** rows (arity `277/277` at `5` columns, `0` ragged; `277` distinct subjects, `0` duplicated). [`../verticals/solutions.md`](../verticals/solutions.md) **`113` → `115`**. [`../agents/top.md`](../agents/top.md) **`206` → `221`**.
+
+🔴 **The mandated `github trending {industry} AI {year}` leg returned its 38th consecutive nil** — `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `anandpatikat/guru-latihan-dinamis`, `rohitg00/ai-engineering-from-scratch`, **`4 / 4` already held.** 🟢 **But the `top open source AI agents …` leg did NOT nil: it produced [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) at `1,071★`, unheld.** Full leg-by-leg table in [`../agents/trending.md`](../agents/trending.md) `710-A`.
+
+---
+
+### 🟢 `710-R0` — the direction, inherited from `p709` and now tested
+
+`p709` measured the platform layer saturated (`18 / 19` canonical substrates held) and concluded: *“models and LLMs are abundant and permissive; CITABLE, JURISDICTION-ACCURATE CURRICULUM TEXT IS NOT.”* p710 took that literally and swept for **granted teaching material** instead of software. **Six of eight rows filed here are curriculum:**
+
+| row | class | grant | region |
+|---|---|---|---|
+| [`gabors-data-analysis/da-w-ai`](https://github.com/gabors-data-analysis/da-w-ai) | a **named-institution university course**, complete with syllabus, weekly assignments, 3 case studies | 🟢 MIT (`1,076 B`) | **EMEA** — Central European University (Austria, EU), named in the README's second line |
+| [`UCSF-DSOS/UCSF-DSOS-Python-SQL-Workshops`](https://github.com/UCSF-DSOS/UCSF-DSOS-Python-SQL-Workshops) | an **academic-library workshop series** | 🟢 MIT (`1,064 B`) | **North America** — UCSF Library |
+| [`ai-infra-curriculum/ai-infra-junior-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning) | a **role-laddered curriculum organisation** (junior `261★`, performance `80★`, ML-platform `16★`, architect `15★`, MLOps `15★`, senior `10★`, plus separate *solutions* repos) | 🟢 MIT (`1,084 B`) | Global |
+| [`kitsumiko/papers`](https://github.com/kitsumiko/papers) | an **ordered** 200+-paper research roadmap with prerequisites — a sequence, not an index | 🟢 Apache-2.0 (`11,356 B`) | Global |
+| [`jwalsh/aif-c01`](https://github.com/jwalsh/aif-c01) | **vendor-certification** corpus (AWS AIF-C01) | 🟢 MIT (`1,067 B`) | Global |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **framework-free** agent construction on a local LLM | 🟢 MIT (`1,091 B`) | Global |
+
+🟢 **The transferable conclusion, stated as a rule for the next pass: the granted-curriculum channel is PRODUCTIVE and the platform channel is not.** Software substrates for education are held to saturation; teaching material under a permissive grant is abundant, unindexed by the mandated legs, and reachable only by sweeping for *course*, *curriculum*, *workshop*, *track* and *roadmap* rather than for *platform* or *agent*.
+
+🔵 **Why each class earns a foundations row rather than a note:**
+- a **university course** is the one asset that arrives pre-validated by an institution's own teaching committee;
+- a **library workshop series** is recurring, funded and staff-taught, which makes it the most reusable material a university produces;
+- a **role ladder** is what a corporate academy or a workforce-reskilling programme actually procures — the unit of sale is the progression, not the lesson;
+- **certification prep** is the only education product with a machine-checkable objective, because the vendor publishes the blueprint — which is the corpus this base's knowledge-tracing rows have never had.
+
+---
+
+### 🟢 `710-R1` — filed: [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai), and it is the only row on this shelf that PROVES curricula-are-data instead of claiming it
+
+| | |
+|---|---|
+| Grant | 🟢 **MIT** — `LICENSE`, `1,066 B`, sha256₁₂ `bb8885eccff8`, read from the bytes at `main` |
+| Liveness | `ls-remote --symref` → `main` @ `77e8e253ef7c`; pushed `2026-11-01` |
+| Stars | `41` (read from `gh api search/repositories`) |
+| Region | Foundation layer region-neutral; **the reference adapter is APAC** (China's civil-service examination, 公考) |
+
+It declares itself a **local-first adaptive education agent foundation** for iOS and Web and separates the reusable layer — provider-neutral agent execution, learner evidence, mastery projection, planning, structured content, persistence, safety boundaries — from domain curricula and teaching policies. Its README states the separation in its own words: the civil-service application is *“the current end-to-end reference adapter … not the scope of the foundation.”*
+
+🟢 **The claim this base cares about is portability, and the project discharges it with a test rather than with prose: a SECOND examination package is installed headlessly and driven end to end**, which is how it evidences that *“curricula, subjects, grading, routing and prompts are data rather than code.”* **Every multi-market education engagement needs exactly that property and almost no permissive repository demonstrates it.**
+
+🔵 **Its engineering gates are unusual enough at `41★` to be the second reason for the row:** `40` repository checks → `vue-tsc` → production bundle, any failure blocking; checks exercising real modules through Vite's SSR loader with isolated storage and controlled provider responses; **`44` numbered, checksummed migrations re-verified against applied history on startup**; `any`, `@ts-ignore` and `@ts-nocheck` rejected outright; a per-file line budget (600 default, `16` recorded legacy allowances) so an oversized file must be decomposed rather than annotated.
+
+🔴 **Filed with a content caveat the repository itself publishes:** it bundles **no** third-party question banks, is not affiliated with any examination authority, and routes corpus import through `LEGAL_AND_CONTENT_POLICY.md`. **Read that file before importing a client's question bank — the grant covers the engine, never the questions.**
+
+---
+
+### 🔴 `710-R2` — a SEVENTH licence-detection defect class, and this one is a single character
+
+[`flatironinstitute/psyphy`](https://github.com/flatironinstitute/psyphy) carries its grant in **`LICENSE.md`**, not `LICENSE`. Measured:
+
+| probe | result |
+|---|---|
+| `raw.githubusercontent.com/flatironinstitute/psyphy/main/LICENSE` | 🔴 `404` |
+| `raw.githubusercontent.com/flatironinstitute/psyphy/main/LICENSE.md` | 🟢 `1,070 B`, sha256₁₂ `e1816452880d`, MIT |
+
+🟢 **A verifier that probes only the bare filename publishes this repository as ungranted.** p710's probe walks `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` in that order and reports which filename answered — and the filename is now recorded in the row itself, not just the byte count. 🔵 **This matters more than it looks on the LATAM measurement in [`../agents/trending.md`](../agents/trending.md) `710-E`: that finding says `10 / 11` regional-tail subjects are ungranted, and the claim is only as good as the probe.** All five filenames were tried on all eleven. **An ungranted verdict from a one-filename probe is not evidence; from a five-filename probe it is.**
+
+🟡 **Why a psychophysics library is on an education shelf at all:** adaptive testing and psychophysics solve the same problem — select the next item that maximises information about a latent ability. This base's adaptive-testing rows (`condecon/adaptivetesting`, `douglasrizzo/catsim`, `bigdata-ustc/EduCAT`) all implement it under IRT assumptions inherited from education. **A permissive active-learning implementation from the perception side is an independent reference for the item-selection core, which is the component a client most often gets wrong.**
+
+---
+
 ## 🆕 2026-11-08 (p709) — 🟢 **TWO FOUNDATIONS, AND THE SHELF IS NOW MEASURED AS SATURATED ON PLATFORMS — SO THE PRODUCTIVE DIRECTION IS DATA, NOT SOFTWARE**
 
 [`foundations.md`](foundations.md) **`267` → `269`** rows (arity `269/269` at `5` columns, `0` ragged; `269` distinct subjects, `0` duplicated). [`../verticals/solutions.md`](../verticals/solutions.md) **`111` → `113`**. [`../agents/top.md`](../agents/top.md) **`192` → `206`**.
