@@ -3,6 +3,45 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p707) — 🔴 **p707 FILED NOTHING AND THAT IS THE HONEST RESULT: ALL EIGHT MANDATED LEGS NILLED A 35th TIME, MEASURED AGAINST 26 NAMED MARKERS RATHER THAN ASSERTED. 🟢 ITS PRODUCT IS A LIVE DEFECT IN THIS BASE'S OWN PUBLISHED LICENCE DATA, FOUND BY A DIFF THE MANDATE DOES NOT CONTAIN.**
+
+**`0` subjects filed. `1` row corrected. `1` trend, `1` pattern.** [`top.md`](top.md) stays at **`185`** rows (arity `185/185` at `6` columns, `0` ragged; region vocabulary `185/185` legal). [`../repos/foundations.md`](../repos/foundations.md) stays at **`266`** (one row **corrected**, not added — [`trending.md`](../repos/trending.md) `707-R1`). [`../verticals/solutions.md`](../verticals/solutions.md) stays at **`111`**.
+
+🔵 **Why a pass with `0` filings is still worth its tokens:** this base is `706` passes deep on an industry whose supply side it has already swept `35` times. The marginal value of a `36th` sweep is near zero; the marginal value of asking *“is what we already published still true?”* turned out to be one 🟢→🔴 licence reversal on a row **seven days old**.
+
+### 🔴 `707-A` — the headline: a shelf row recommended a repository as permissive **after** it went network-copyleft
+
+[`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro) relicensed **MIT → AGPL-3.0** in commit `7fa0ebe` on **`2026-11-08`** — *today*, and `7` days after `p701` filed it. This base published `🟢 MIT (1,076 B, 47da2dc24851)` for it until this pass. The payload at `main` is now `33,725 B` / `70adc423756c` / *“GNU AFFERO GENERAL PUBLIC LICENSE”*, and the API `spdx_id` agrees. Full evidence, the surviving-MIT-tag nuance and the engagement consequence: [`../repos/trending.md`](../repos/trending.md) `707-R1`. Corrected on-shelf this pass.
+
+🔴 **It also defeats this base's own detection heuristic.** `T158` (filed `p705`, off `OpenMAIC`) ends with the rule *“always check the changelog for the word **‘relicensed’**”*. `klyro`'s commit says *“**update license** to AGPLv3”* and ships **no changelog entry at all** — the word `relicensed` appears nowhere in the repository. A keyword rule derived from one well-behaved project does not survive contact with a solo maintainer bumping a patch version. See **`T167`**.
+
+🔴 **And it inverts `T158`'s direction.** `T158` recorded relicensing *toward* permissive as research projects chase adoption — `OpenMAIC` went AGPL-3.0 → MIT. `klyro` went the other way. **The permissive→copyleft direction is the one that breaks an already-filed row**, because it turns a 🟢 build-on recommendation into 🔴 commercial exposure while the row sits unchanged. `T167` records both directions and the asymmetry in consequence.
+
+### 🔴 `707-B` — the four mandated global legs: **35th consecutive nil**, and this pass measured the nil instead of asserting it
+
+| Leg (run verbatim, `{year}` computed as `2026`) | Verdict |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 nil — returned generic agent frameworks (`OpenHands`, `CrewAI`, OpenAI Agents SDK) and beginner curricula, all held or not education software |
+| `github trending education AI 2026` | 🔴 nil — `OpenMAIC`, `DeepTutor`, `ai-engineering-hub`, Microsoft curricula: **all held** (`707-R4`) |
+| `open source platform education ERP CRM MIT Apache 2026` | 🔴 nil — `OpenEduCat` (LGPL-3.0), `ERPNext`/`Frappe`, `OFBiz`, `Dolibarr`, `Atomic CRM`, `Krayin`, `Twenty`: **all held**. The leg again returned **no permissively-licensed education ERP**, which is this base's standing `DFE-Digital/get-into-teaching-api` answer |
+| `AI education industry trends 2026` | 🔴 nil — OECD *Digital Education Outlook*, 1EdTech interoperability/governance, HolonIQ `$12.3B`, Coherent `$11.40B`, `83%` K-12 teacher use: **all held** |
+
+🟢 **The nil is measured.** p707 extracted `26` named markers from the eight legs' returns — `Digital Omnibus`, `2026/1744`, `2027-12-02`, `IESALC`, `de los Andes`, `716`, `FutureEd`, `134 bills`, `SB 720`, `A 9190`, `Khanmigo`, `Ohio`, `Ipsos`, `Digital Education Outlook`, `AI Literacy and Readiness`, `Vietnam`, `AI Basic Act`, `Digital Education Council`, `ProFuturo`, `Ceibal`, `CENIA`, `Observatory`, `ai-engineering-hub` and the rest — and grepped each across all five shelf directories. **`26 / 26` were already present.** That is the first time this base has turned *“the leg nilled”* from a judgement into a reproducible count, and it is the method a future pass should copy before spending a pass on a `36th` sweep.
+
+### 🔴 `707-C` — the non-English channel is **also** exhausted, measured the same way
+
+Before concluding, p707 checked whether the Spanish/Portuguese channel was an untried opening, since the mandate's legs are English. It is not: the shelves already carry `783` `Portuguese`, `749` `Spanish`, `286` `educación`, `137` `educacao`/`57` `educação` and `12` `código abierto` references, plus `14` explicit *“Spanish-language leg”* and `27` *“non-English leg”* records. 🔵 **Recording this matters because “we never searched in Spanish” is the most natural next hypothesis for a LATAM-weighted KB, and it is false here.** The gap in LATAM is not discovery-side.
+
+### 🟢 `707-D` — what p707 would tell the next pass to do instead
+
+🔴 **Stop spending passes on the supply sweep.** `35` consecutive nils across `8` legs, with the `36th` sweep's entire yield being star refresh that `707-R2` measures as **not needed**.
+
+🟢 **Spend them on decay instead.** p707's single defect came from re-reading a `7`-day-old row. The base holds `595` distinct repositories whose licences were payload-read **once, at filing**, and `T167` establishes that a payload-read licence is a dated fact. A standing `spdx_id` diff over all `595` is **`50` API calls and under four minutes** — cheaper than one mandated leg — and it is the only instrument that has found anything in three passes. `P102` wires it as an engagement-grade gate; `707-R2`/`707-R3` give the exact scoping and its one failure mode.
+
+⚠️ **Declared gaps, unchanged and restated so they are not mistaken for coverage:** no dominant OSS agent-evaluation or observability layer specific to education; no permissively-licensed full education ERP (SIS+LMS+finance) in any region; and `intel/market.md`'s regional demand legs have nilled per-region for `40+` passes — see this pass's per-region entries there, which again add **no new regional fact** and say so.
+
+---
+
 ## 🆕 2026-11-08 (p706) — 🟢 **`23` SUBJECTS FILED (`15` AGENTS, `6` FOUNDATIONS, `2` PLATFORMS) — THE LARGEST SINGLE-PASS INTAKE THIS BASE HAS RECORDED, AND IT CAME FROM A CHANNEL THE MANDATED LEGS DO NOT CONTAIN. 🔴 A TEXTBOOK MIT GRANT THAT A DETECTOR CANNOT CLASSIFY BECAUSE IT NEVER SAYS “MIT”. 🔴 TWO SHELF HEADINGS WERE STALE BY A FULL PASS — p705 FILED ROWS AND DID NOT MOVE THE COUNTS IT PUBLISHED.**
 
 **`23` rows filed.** [`top.md`](top.md) **`170` → `185`** (arity `185/185` at `6` columns, `0` ragged · `185` distinct subjects, `0` duplicated · region vocabulary `185/185` legal: `Global 82` · `APAC 52` · `North America 20` · `LATAM 16` · `EMEA 15`). [`../repos/foundations.md`](../repos/foundations.md) **`260` → `266`** (arity `266/266` at `5` columns, `0` ragged). [`../verticals/solutions.md`](../verticals/solutions.md) **`109` → `111`** (arity `111/111` at `6` columns, `0` ragged).

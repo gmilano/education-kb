@@ -11,6 +11,30 @@ updated: 2026-11-08
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## 🆕 P102 — added at p707 (2026-11-08)
+
+### `P102` — **Licence-drift gate**: catch a dependency going copyleft in CI, in the week it happens
+
+🔵 **Why this is a pattern and not hygiene.** Every other pattern on this page names repositories to compose. This one protects all `101` of them. `T167` is the evidence: a shelf row recommended 🟢 MIT for a repository that had gone 🔴 AGPL-3.0 **seven days earlier**, with no changelog and no announcement — caught only by diffing a stored licence against the live one. Any engagement that vendored it in that window embedded network-copyleft code in a managed service and had no signal.
+
+**What it is.** A pinned licence manifest plus a scheduled diff, run in the client's own CI, over every open-source component the engagement depends on.
+
+**Components — all named, all already on this base's shelves or in the standard toolchain.**
+
+| Step | Concretely |
+|---|---|
+| 1. Pin | Generate `licences.lock`: one line per dependency — `owner/repo`, grant **file path**, **byte length**, **sha256₁₂**, SPDX id, **ref read at**, **date read**. Byte length + digest are what make a silent edit detectable; `T167` needed both. |
+| 2. Tripwire (cheap, daily) | `gh api -X GET search/repositories -f q='repo:a/b repo:c/d ...'` — batch `12` qualifiers per call, read `license.spdx_id` + `pushed_at`. `595` repositories ≈ `50` calls ≈ under four minutes. ⚠️ `api.github.com` direct returns `403` through a proxied environment; the **search endpoint** is the route that works. |
+| 3. Adjudicate (only on disagreement) | Re-read the grant **bytes** from `raw.githubusercontent.com/{repo}/{real-default-ref}/{file}`, resolving the real default ref with `git ls-remote --symref` — **never assume `main`** (`T117`). Compare byte length and digest against `licences.lock`. The API is the tripwire; the payload is the adjudicator (`T167` claim 3). |
+| 4. Classify | Fail the build on any move **into** `AGPL-*`, `SSPL`, `BUSL`, `CPAL`, `OSL` or `NOASSERTION`-from-permissive. Warn-only on moves **toward** permissive — `T167` claim 1: the directions are not equally costly, and gating both just trains people to ignore the gate. |
+| 5. Scope the comparison | Compare the **licence field only**, never a whole record. `707-R3` measured a row-wide regex at `0/17` precision against `1/3` column-scoped — contamination from licence *discussion* is the dominant failure mode. |
+
+**Wiring.** A nightly scheduled job; `licences.lock` committed and code-reviewed, so a licence change arrives as a **reviewable diff with a named approver** rather than as a surprise during diligence. Where the client already runs an SBOM/licence scanner, this does **not** replace it — scanners report the licence a detector *infers today* and are precisely what `T162`/`T166`/`690-R2` show failing on education's bespoke and non-English grants. This gate answers a different question: **“has it changed since we agreed to it?”**
+
+**Where it earns its keep in this industry specifically.** 🔴 Roughly half of education's deployable surface is already copyleft (`repos/foundations.md` header), so engagements here sit unusually close to the line and the permissive components are the ones carrying the commercial model. 🟢 It is also the cheapest credible answer to the 🔴 **licence-gate** demand that `intel/market.md` records as North America's live opportunity, and to an EMEA public-sector buyer whose procurement must evidence provenance — the `Opetushallitus` EUPL block (`verticals/solutions.md`) is the standing example of grants **no scanner will attribute**.
+
+⚠️ **Governing rule, unchanged:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks; never fork a GPL/AGPL platform for a managed service. `P102` is the control that tells you when a component **moved across that line underneath you**.
+
 ## 🆕 P99–P101 — added at p706 (2026-11-08)
 
 > Every component named below was probed at p706 on the controlled channels: existence and default ref via `git ls-remote --symref`, licence by reading the grant payload from `raw.githubusercontent.com` at that ref (bytes + sha256₁₂ recorded on the shelf row), stars from `gh api search/repositories`. `api.github.com/repos/…` is `403` in this environment and was not used.

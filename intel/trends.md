@@ -21,6 +21,26 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T167 — added at p707 (2026-11-08)
+
+### `T167` — A payload-read licence is a **dated** fact, not a standing one — and the dangerous direction of drift is the one no changelog announces
+
+🟢 **Confidence: HIGH.** Direct, dated, in-pass, with the superseded blob still retrievable for comparison.
+
+**Evidence (direct, this pass).** [`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro) was filed at `p701` with its grant read from the bytes: 🟢 **MIT**, `LICENSE`, `1,076 B`, sha256₁₂ `47da2dc24851`. Seven days later, commit `7fa0ebe` (`2026-11-08`) replaced it with 🔴 **AGPL-3.0** (`33,725 B`, `70adc423756c`). Both blobs are still in history, so the `p701` reading can be confirmed byte-exact rather than assumed: **the reading was right and went stale.**
+
+**Why it is a trend and not an anecdote — three structural claims, each falsifiable.**
+
+🔴 **(1) The consequential direction is permissive → copyleft, and it is the under-watched one.** `T158` recorded drift *toward* permissive (`OpenMAIC`: AGPL-3.0 → MIT, `v0.3.0`) and read it as research projects chasing adoption. That direction is **benign to a stale row**: a row saying 🔴 AGPL about an MIT repository under-sells a usable asset. The reverse is **not symmetric** — a row saying 🟢 MIT about an AGPL-3.0 repository tells an engagement it may embed network-copyleft code in a managed service. **The cost of the two errors differs by about the price of the engagement**, so they do not deserve equal monitoring.
+
+🔴 **(2) The announcement channel fails exactly where the risk is highest.** `T158`'s operational rule was *“check the changelog for the word **relicensed**”*. `klyro` has **no changelog**, and its commit says *“update license to AGPLv3”* — the string `relicensed` appears nowhere in the repository. The asymmetry is sociological: a project relicensing *toward* permissive is **courting adopters and therefore announces it**; a solo maintainer going copyleft is **closing a door and buries it in a patch bump** (`v0.2.1`, alongside an unrelated OAuth fix). 🔵 **So the keyword heuristic is systematically blind to the direction that costs money.**
+
+🟢 **(3) There is a cheap channel that does not depend on the maintainer's prose: the API `spdx_id`.** On `klyro` the detector agreed with the payload and disagreed with this base — the inverse of this page's usual finding (`T162`, `T166`, and the `NOASSERTION` families at `690-R2`/`690-S`), where the detector under-reads a grant the payload states plainly. 🔵 **Both facts are true at once and they are not in tension:** `spdx_id` is a **poor adjudicator** of what a grant says and a **good tripwire** for the fact that it *changed*. Use it for the second job only, then read the bytes.
+
+**Measured scope of the exposure.** This base holds **`595` distinct repositories** across three shelves, the overwhelming majority payload-read **once, at filing**, some more than `100` passes ago. `p707` diffed all `595` and found `1` reversal — but `klyro` was the **youngest row on the shelf**, which says nothing reassuring about rows filed at `p550`. 🔴 **The base has no re-read cadence, and `T167` is the argument that it needs one more than it needs a `36th` supply sweep.**
+
+**Operational consequence.** 🟢 Carry a **date** with every licence cell and treat an undated one as unverified. 🟢 Run the `spdx_id` diff over the whole shelf as a standing pass step — `50` calls, under four minutes, cheaper than one mandated leg (`707-R2`). 🟢 Confirm every disagreement by reading the payload bytes **before** touching a row, and scope the comparison to the **licence column** (`707-R3`: a row-wide regex scored `0/17`). ⚠️ And when a relicence is found, do **not** quietly reroute reuse to the last permissive tag: that snapshot's grant is not retroactively withdrawn, but choosing to rely on it is a decision for counsel, not for a KB row. Wired as **`P102`**.
+
 ## 🆕 T162–T166 — added at p706 (2026-11-08)
 
 ### `T162` — A licence is identified by its **operative text**, not its title — and the instrument can now under-read a grant that is entirely in order

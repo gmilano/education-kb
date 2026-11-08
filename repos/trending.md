@@ -3,6 +3,61 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p707) — 🔴 **ONE SHELF ROW WAS PUBLISHING A 🟢 PERMISSIVE GRANT FOR A REPOSITORY THAT WENT NETWORK-COPYLEFT SEVEN DAYS AFTER IT WAS FILED — AND IT WAS CAUGHT BY A DIFF, NOT BY A LEG. 🟢 THE REST OF THE SHELF IS MEASURED CLEAN. 🔴 THE MANDATED GITHUB-TRENDING LEG RETURNED ITS 35th CONSECUTIVE NIL.**
+
+[`foundations.md`](foundations.md) stays at **`266`** rows (arity `266/266` at `5` columns, `0` ragged). **`0` rows filed, `1` row CORRECTED** — p707 added no supply and says so; its product is a defect in what this base already published.
+
+### 🔴 `707-R1` — [`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro) relicensed **MIT → AGPL-3.0** on `2026-11-08`, and this base published `🟢 MIT` for it until this pass
+
+| | |
+|---|---|
+| Published by `p701` | 🟢 **MIT**, `LICENSE`, `1,076 B`, sha256₁₂ `47da2dc24851`, © *2026 Mangnale Prathamesh*, body verbatim |
+| Serving at `main` today | 🔴 **AGPL-3.0**, `LICENSE`, **`33,725 B`**, sha256₁₂ `70adc423756c`, *“GNU AFFERO GENERAL PUBLIC LICENSE, Version 3”* |
+| API `spdx_id` | `AGPL-3.0` — **agreeing with the payload**, which is why a cheap API diff found it |
+| The commit | `7fa0ebe`, `2026-11-08`: *“fix(auth): bypass verify card for github oauth, **update license to AGPLv3**, and bump version to v0.2.1”* |
+| The MIT blob | Still in history at the initial commit `c3f8023` (`2026-10-28`) — **`1,076 B`, byte-exact against what `p701` recorded** |
+
+🟢 **`p701` was not sloppy — it was right, and then the world moved.** This matters for how this base reasons about its own reliability: the failure was not in the reading, it was in the *absence of a re-reading*. A payload-read licence is a **dated** fact, and this base has been treating it as a **standing** one.
+
+⚠️ **Engagement consequence, stated plainly.** Tags `v0.0.1`–`v0.2.0` were published under MIT and that grant is not retroactively withdrawn for those snapshots — but `main` is AGPL-3.0, whose §13 reaches users **over a network**, which is precisely the deployment shape a managed education service takes. `klyro` is no longer a build-on candidate; it is a self-host-and-contribute or run-alongside asset. **Do not treat the old tag as a clean path without legal review** — forking a snapshot to dodge a current licence is a decision for counsel, not for a KB row.
+
+### 🟢 `707-R2` — the other `590` rows are **measured** clean, and the measurement is the reusable part
+
+p707 diffed **every shelf row carrying a repository link** against GitHub's own `stargazers_count` and `license.spdx_id` (`gh api search/repositories`, `repo:` qualifiers batched `12` per call, `3` retries, `2.2 s` pacing — `api.github.com` direct is still `403` channel-wide, so the search endpoint remains the only API route).
+
+| Measurement | Result |
+|---|--:|
+| Distinct repositories extracted from the three shelves | `595` |
+| Resolved by the search API | `587` |
+| Column-scoped licence+star diff (`agents/top.md` `185` + `foundations.md` `266`) | `451` rows |
+| Licence flags raised | `3` |
+| → **real defects** | **`1`** (`707-R1`) |
+| → instrument contamination | `2` |
+| **Star divergences** `>10%` **and** `>50★` across `451` rows | **`0`** |
+| API-`archived` repositories anywhere on the shelves | `11` — **`11/11` already flagged archived/read-only on-shelf, `0` misses** |
+| Search-index-absent | `5`, all of the already-typed class (`690-B`, `674`) |
+
+🟢 **The `0` star divergences is a real result, not a formality.** `p690` had to refresh `22/83` agent cells and `44/163` foundation cells against the API; `p706` filed `23` rows. Two passes later the whole `451`-row star column reproduces inside tolerance, so the star-refresh discipline introduced at `p690` is **holding** and does not need re-running every pass.
+
+### 🔴 `707-R3` — the diff instrument has a failure mode, and publishing it is what stops the next pass re-finding `17` phantom defects
+
+A licence regex scanned over a **whole table row** is **not a valid instrument on this base**, because these cells carry licence *discussion* as well as a licence *claim*. Measured this pass:
+
+| Shelf | Scope | Flags | Real | Contamination |
+|---|---|--:|--:|--:|
+| `agents/top.md` + `repos/foundations.md` | **column-scoped** | `3` | `1` | `2` |
+| `verticals/solutions.md` | **row-scoped** (no stable licence column) | `17` | **`0`** | **`17`** |
+
+Every one of the `17` was the regex reading prose: [`scratchfoundation/scratchjr`](https://github.com/scratchfoundation/scratchjr) flagged `MIT` because its correct `BSD-3-Clause` cell names ***MIT* Media Lab**; [`hcengineering/platform`](https://github.com/hcengineering/platform) flagged `Apache-2.0` because its cell exists to **refute** an Apache claim; [`AliAsgharPZ/school-management-system`](https://github.com/AliAsgharPZ/school-management-system) flagged `AGPL-3.0` because it is filed as *“the MIT point of comparison to this shelf's **AGPL** incumbents”*. 🔵 **The two contaminated flags on the column-scoped side are worth naming too, so they are never re-filed as defects:** [`CogEvol/CogEvol-4B`](https://github.com/CogEvol/CogEvol-4B) (cell correctly reads **MIT** for the code; the `Apache-2.0` string is the **separate weights grant**, exactly as the cell states) and [`opensalt/opensalt`](https://github.com/opensalt/opensalt) (cell correctly reads **MIT** and the `GPL-3.0｜Apache-2.0` string is the cell **flagging this base's own superseded ledger**).
+
+🟢 **Operational rule:** diff the **licence column against the API**, then confirm any disagreement **by reading the payload bytes** before touching a row. Never flag from a row-wide match. One of `18` total flags this pass was real; the instrument's precision without column scoping was `0`.
+
+### 🔴 `707-R4` — the mandated `github trending {industry} AI {year}` leg nils a **35th** consecutive time
+
+Run as `github trending education AI 2026`. Every education-relevant repository it surfaced is already on a shelf: [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (`42,982★`, MIT — held, relicence dated at `p705`/`T158`), [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (`56,726★`, Apache-2.0 — held), `patchy631/ai-engineering-hub` and Microsoft's `generative-ai-for-beginners` / `ai-agents-for-beginners` (held; curriculum repositories, not deployable education software). 🔵 The leg's remaining yield is **star refresh on rows already held**, which `707-R2` shows is not currently needed.
+
+---
+
 ## 🆕 2026-11-08 (p706) — 🟢 **`6` FOUNDATIONS FILED, AND THEY ARE ONE LAYER RATHER THAN SIX FINDS: SERVER-SIDE AUTOGRADING. 🟢 ONE OF THEM IS NOW THIS BASE'S CANONICAL APACHE-2.0 CONTROL TEXT. 🔴 THE MANDATED GITHUB-TRENDING LEG RETURNED ITS 34th CONSECUTIVE NIL.**
 
 [`foundations.md`](foundations.md) **`260` → `266`** (arity `266/266` at `5` columns, `0` ragged · `266` distinct subjects, `0` duplicated · `266/266` rows carry a real repository link). Full pass narrative, defect classes and region method: [`../agents/trending.md`](../agents/trending.md) `p706`.
