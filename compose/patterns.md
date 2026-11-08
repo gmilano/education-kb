@@ -38,6 +38,65 @@ updated: 2026-11-08
 
 ---
 
+## P82 — The national-curriculum assessment engagement on **India's own MIT stack**: extend the state platform, never fork it (state board, national platform operator, APAC edtech, LATAM ministry by transfer: 8–10 weeks) 🟢 new at p699
+
+**Why this pattern exists and `P81` does not cover it.** `P81` adopts a national authority's MIT *services* and puts the agent at the service front door — but England's estate is a set of administrative systems, and the agent sits on records. India inverts the centre of gravity: **the national platform is itself MIT and its assessment layer is the live building site.** From the **`2026–27`** academic session India requires AI and computational thinking **from Class 3 in every school**, the delivery platform (**DIKSHA**, all `36` states and UTs, `30+` languages) is MIT-licensed **Sunbird**, and Sunbird's assessment blocks were being pushed **days** before this pass. The engagement is therefore *curriculum delivery at national scale on code you are allowed to extend*, which no other pattern on this base describes.
+
+**Components — every one verified `2026-11-08` at p699 (`git ls-remote --symref` + grant payload read from `raw.githubusercontent.com`), permissive throughout, no copyleft anywhere in the delivery path:**
+
+| Layer | Component | Grant |
+|---|---|---|
+| Deployment of the whole estate | [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | MIT (`1,072 B`, `7dde06716f25`, © *2018 Project Sunbird*) |
+| Content, taxonomy, DIAL codes | [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) | MIT (`1,072 B`, `fd3adcd57676`, © *2019*) |
+| Identity, tenancy, enrolment | [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | MIT (`1,072 B`, `7dde06716f25`, © *2018*) |
+| Assessment **authoring** (React, QuML) | [`Sunbird-inQuiry/editor-v2`](https://github.com/Sunbird-inQuiry/editor-v2) | Apache-2.0 (`11,357 B`, `c71d239df917`) |
+| Assessment **delivery** (React, QuML) | [`Sunbird-inQuiry/player-v2`](https://github.com/Sunbird-inQuiry/player-v2) | Apache-2.0 (`11,357 B`, `c71d239df917`) |
+| Telemetry → analytics | [`Sunbird-Obsrv/sunbird-analytics-core`](https://github.com/Sunbird-Obsrv/sunbird-analytics-core) | MIT (`1,072 B`, `47022c44beee`, © *2020*) |
+| Learner surface (stock) | [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) · [`SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | MIT (`7dde06716f25` / `bea3458f45df`) |
+| Textbook-grounded item generation | [`yifanchen12/scholar-workbench`](https://github.com/yifanchen12/scholar-workbench) — pattern and page-citation shape | MIT (`1,087 B`, `81ca7a5a667b`) |
+| **Accessibility procurement gate** | [`GovTechSG/oobee`](https://github.com/GovTechSG/oobee) | MIT (`1,101 B`, `2e7f2e9d2ae8`, © *2024 GovTech*) |
+| Agent layer | the studio's own, MIT/Apache — **never inside the blocks above** | — |
+
+**Wiring.**
+
+```
+[NCERT/board textbook PDFs]
+        │  local extraction, physical-page citation retained  (scholar-workbench shape)
+        ▼
+[Item-generation agent] ──emits QuML items + page citation──► [editor-v2 authoring API]
+                                                                      │  human reviewer
+                                                                      │  APPROVES each item
+                                                                      ▼
+[knowledge-platform: content object + taxonomy/framework + DIAL code] ──► printed textbook QR
+        │
+        ▼
+[player-v2 renders the question set]  ◄── [userorg-service: which board, which learner, which role]
+        │  response telemetry on the stock contract
+        ▼
+[sunbird-analytics-core]  →  board-level mastery reporting
+        │
+        └──► [oobee in CI against player-v2's rendered output]  →  WCAG report per release
+```
+
+1. **Stand the estate up unmodified with `sunbird-devops`, and treat "extend, never fork" as the commercial term it is.** The blocks talk over documented APIs; the process boundary is the licence boundary, which is what keeps the studio's agent proprietary while the platform stays the board's. **`62★` on the devops repo against `17★` on the content store it deploys is the tell that this software is bought by an operator** — write the proposal for an operator.
+2. **Scope the agent to item *generation*, and put the approval gate in front of the authoring API.** The agent emits QuML items with the physical-page citation carried through from the source textbook; a subject expert approves each item in `editor-v2` before it becomes a content object. **Page-level provenance is the whole point** — it is what makes a generated item defensible to a board, and `T79` records that academic-integrity demand as the sector's one statutorily forced need with almost no permissive supply behind it.
+3. **Never let the agent write to `knowledge-platform` directly.** Content objects carry taxonomy, framework alignment and DIAL codes that a printed textbook's QR code resolves against. A wrong write is a wrong QR code on a million printed pages. Authoring API only, human-approved.
+4. **Use `userorg-service`'s *channel* isolation as the multi-tenancy story, because it already exists.** One deployment serves many state boards without them seeing each other's learners. **Do not build tenancy; configure it** — this is the single largest piece of work the pattern gets for free.
+5. **Instrument through `sunbird-analytics-core`, not beside it.** Agent-generated items and human-authored items emit on the same telemetry contract, so "did the generated items perform?" is a query against board-level mastery data rather than a bespoke evaluation harness.
+6. **Put `oobee` in CI against `player-v2`'s rendered output from week one.** Accessibility conformance is an auditable procurement condition on public-sector learner surfaces, and a generated question set is exactly the artefact nobody accessibility-tests. This is the cheapest credibility in the whole engagement: a per-release WCAG report on the thing the agent produced.
+
+🔴 **Four facts to put in the SoW before anyone asks.**
+- **The assessment pair is `0★` and brand new.** `editor-v2` was pushed `2026-11-03` and `player-v2` `2026-10-06`; the v1 `editor`/`player` are **Angular** and MIT. Read the commit log before committing a date, and price a fallback to v1 explicitly. **This is an early bet and should be sold as one.**
+- **There is a licence seam inside a uniform estate.** The inQuiry v2 pair is **Apache-2.0** where the rest of the estate is **MIT** — both permissive, but Apache-2.0 carries a patent grant and a notice obligation the MIT blocks do not. 🔴 **And its `sha256` tells you nothing about who granted it** (`T127`): the payload is byte-identical to an unrelated single-author project. **For the Apache blocks, read the `NOTICE`, not the digest.**
+- **Clearance is cheap here, so quote it as cheap.** `T128`: sixteen MIT payloads across six Sunbird orgs reduce to **five** digests differing only in the copyright line (© *2015 EkStep* → *Project Sunbird* 2018/2019/2020 → *2021 Sunbird for Education*). **Five reads clear the estate.** A due-diligence line priced per repository is mispriced by an order of magnitude — and the oldest payload naming **EkStep** is the only first-hand record of the handover, which is worth knowing before a client's counsel finds it.
+- **`scholar-workbench` is a pattern here, not a dependency.** It is `6★`, its generation path needs *your own* API account, and its interface and curriculum are Chinese. **Take its shape — local extraction, page-cited generation, no cloud in the serving path — and implement it against the client's gateway.** Do not ship it as a component.
+
+**Regional read.**
+- 🟢 **APAC — this pattern's home market, and the only region where it runs exactly as written.** India: the Class-3 mandate from AY `2026–27` on MIT DIKSHA, bought by a state board. 🔴 **Quote the rollout gap alongside the mandate**: 2026 Indian sector analysis calls the policy *"premature at scale"* with foundational layers missing across **`1.471` million** schools. That gap is the scope of work; a proposal that omits it reads as homework not done. 🟢 **Singapore is the governance template to borrow in the same region** — MOE's SLS Learning Assistants ship with **teacher activation** and a **teacher-set interaction cap**, and the Teacher AI Literacy Roadmap (Aug 2026) makes one AI module compulsory by end-2026. **Copy those two guardrails into step 2's approval gate verbatim**; they are a regulator's own answer to "how do you stop the agent teaching unsupervised".
+- 🟢 **LATAM — the strongest transfer target on this base, and p699 is the reason.** `p699` measured `23` LATAM authority logins: `15` do not exist, `8` are live, **`0` publish permissive education software** — Uruguay's Plan Ceibal publishes `3` unlicensed repositories. **There is nothing local to fork, so there is nothing to wait for.** Sunbird is a far closer architectural fit than this base's UK or French estates: built explicitly for third-party national adoption, already `30+` languages, designed for high-volume low-connectivity school systems. Spanish/Portuguese content and local taxonomy frameworks are the studio's contribution. Demand is the highest measured anywhere — **`92%` of students and `79%` of faculty** across `29` universities (Digital Education Council LATAM, Feb 2026, with Tec de Monterrey). Deliver through `P71`'s assembly shape with this block list.
+- 🔵 **EMEA — the blocks transfer, the governance does not.** Education is **EU AI Act Annex III high-risk** with obligations phasing through 2026 and **post-market surveillance** duties, so step 2's approval gate must become a logged, auditable conformity artefact rather than a workflow courtesy — that is `P67`'s deliverable, and it should be composed with this block list rather than replacing it. 🔴 **Quote AI Act dates only from the Commission's consolidated text** (`p692` reproduced a superseded Annex III date six times from secondary sources).
+- 🔵 **North America — the shape transfers, the platform does not.** No US or Canadian authority publishes an equivalent estate, and **p699 did not sweep the region** (scope decision, not a nil — see [`../intel/market.md`](../intel/market.md) North America). Run the shape over whatever SIS/LMS the district operates, and lead with the governance artefact: regional adoption is high while hard regulation and school-level policy are thin, which is the standing North America sales argument. `P76`'s all-MIT district stack is the vehicle.
+
 ## P81 — The England schools engagement: adopt the **Department for Education's own MIT services**, put the agent at the service front door (English academy trust, MAT, local authority, DfE supplier: 6–8 weeks) 🟢 new at p698
 
 **Why this pattern exists and `P80` does not cover it.** `P80` (the DACH pattern) adopts a *canton's* front-end modules over a proprietary backend — the open surface is the UI and the system of record is closed. England inverts that: **the systems of record are themselves MIT**, so the permissive boundary runs much deeper and the agent can sit on real data rather than on a portal shell.

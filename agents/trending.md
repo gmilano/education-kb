@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p699) — 🟢 **`make hooks` RAN FOR THE FIRST TIME IN SIX PASSES AND IMMEDIATELY FOUND TWO DEFECTS IN WHAT THESE PAGES PUBLISH: A SHELF TABLE SPLIT IN TWO BY A BLANK LINE, AND 46 OUT-OF-VOCABULARY REGION HEADINGS. 🟢 INDIA'S SUNBIRD IS 196/212 PERMISSIVE AND REFUTES THE CAUSAL CLAIM p698 DREW FROM EUROPE**
+
+**`1` row filed on [`top.md`](top.md)** (`106` → **`107`**), **`6` rows on [`../repos/foundations.md`](../repos/foundations.md)** (`193` → **`199`**, after reattaching `7` orphaned rows the renderer was dropping), **`0` platform rows** on [`../verticals/solutions.md`](../verticals/solutions.md) (`86`, unchanged, plus a `p699` estate section), **`4` trends** (`T126`–`T129`), **`1` pattern** (`P82`), and **`5` regional subsections** in [`../intel/market.md`](../intel/market.md) — one per region of the closed vocabulary, including the two that nilled.
+
+| `p699` registered | Verdict |
+|---|---|
+| `make hooks` | 🟢 **RAN. `Gap 247`'s standing remedy is MET after six unmet passes.** `71` gates, **`47` green on entry → `49` green on exit**, verified by a full re-run after every edit. **p699 closed two reds by repairing the pages, not the gates.** `699-E`. |
+| [`repos/foundations.md`](../repos/foundations.md) structure | 🔴 **`gate-tables`: `BLANK-SPLITS-TABLE` at `:246`. A stray blank line had orphaned `7` real shelf rows** — a blank terminates a Markdown table, so they rendered as pipe-text and were invisible to every count the page published. Blank removed; **gate now GREEN**. `699-E`. |
+| [`intel/market.md`](../intel/market.md) region headings | 🔴 **`gate-region-headings`: `46` × `P383-OUT-OF-VOCAB`.** Every dated pass subsection since ≈`p688` was written at `###` depth inside `## Opportunities by region`, where the contract admits only the five region names — **the exact "each variant becomes its own bucket" failure the operating instructions warn about.** `46` demoted to `####` (and `82` descendants to `#####`); **gate now GREEN**. `699-F`. |
+| The row-count headings on three shelves | 🔧 **`10` stale `##` row-count headings were live at once** — `3` on `top.md`, `4` on `foundations.md`, `3` on `solutions.md` — publishing conflicting totals for one table each. All demoted to prose, history kept in full. **`foundations.md` was the worst: its own heading said `181`, `p698`'s register said `186`, and the table held `193`.** `699-G`. |
+| [`Sunbird`](https://github.com/project-sunbird) — India's national education DPI | 🟢 **`212` repos across `6` orgs, `196` permissive = `92.5%`. This base held `1`.** `6` blocks filed. `699-A`, `699-B`, `T126`. |
+| `p698`'s *"permissive supply is bimodal by **jurisdiction**"* | 🔴 **Refuted as a cause, kept as data.** A non-European estate reads `92.5%`. The variable is the **procurement doctrine** — built-to-be-adopted or not. `T126`. |
+| The `sha256₁₂` this base publishes in nearly every row | 🔴 **A provenance signal for MIT, a NON-signal for Apache-2.0 — controlled at both signs.** `c71d239df917` is byte-identical across two Sunbird repos **and an unrelated single-author project**. `T127`. |
+| The same digest on MIT | 🟢 **`16` payloads → `5` digests differing only in the © line, reconstructing a handover no README documents** (EkStep 2015 → Project Sunbird 2018/19/20 → Sunbird for Education 2021). **Five reads clear sixteen repositories.** `T128`. |
+| `8` keyword legs for agents | 🔴 **Saturated, and pathological in a specific way: they return *tutorials about AI*, not *AI for education*.** Top novel permissive hits were a 30-day AI challenge, a DeepSeek agent tutorial, a RAG platform and an eval SDK. `699-C`. |
+| [`lungstrahv/T2AG`](https://github.com/lungstrahv/T2AG) | 🔴 **REFUSED — and it is the most interesting refusal of the pass.** Apache-2.0, education-shaped, genuinely novel design; **self-declares a clean-room rebuild in progress, `0.3.0` unreleased, shipping "empty skeletons".** `699-D`. |
+| `23` LATAM authority logins | 🔴 **`15` do not exist, `8` live, `0` permissive education software.** Uruguay's **Plan Ceibal** publishes `3` **unlicensed** repositories. `699-H`, [`../intel/market.md`](../intel/market.md) LATAM. |
+| The mandated `curl -sI` URL check | 🔴 **Inert, re-controlled at FOUR signs** (`403` for `torvalds/linux`, `moodle/moodle`, a live education repo, **and one that does not exist**). 🟢 **Replacement published rather than only complained about:** `T129`. |
+| North America | 🔵 **NOT SWEPT, and said so.** The authority channel was pointed at APAC and LATAM. **An unswept pass is not the next entry in that region's nil run** — candidates named for the next pass. |
+
+### `699-A` — The deliverable is a promotion pass, and the backlog it drew from was this base's own prose
+
+🟢 **`p694` measured that this base discovers four to five times more addresses than it shelves, and prescribed promotion over discovery. p699 executed that against a specific backlog: addresses this base has *cited in its own trending prose* and never filed.** Three of the six foundation rows came from there:
+
+- [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) — **this base used it as its worked example of an owner-and-name rename** (`project-sunbird/sunbird-lms-service` → here). The address was good enough to teach a method with and was never filed.
+- [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) — cited **three** times.
+- [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) — cited once.
+
+🔵 **The lesson is sharper than "promote the backlog": a citation is a verification that was already paid for and then thrown away.** `T116`'s filing constraint is not caused by discovery being hard; it is caused by the filing step being optional at the moment of discovery.
+
+### `699-B` — The channel: enumerate the authority, on a continent `p698` did not reach
+
+🟢 **`698-B`'s instrument, re-used and re-confirmed: `orgs/{org}/repos` is blocked by this session's repository binding, but `search/repositories` with an `org:` qualifier answers the same question** and returns the repository count plus the full `spdx_id` census in one call. **`44` distinct owner logins probed this pass: `20` counted, `24` × HTTP `422`.** `T129` records that this makes it an existence oracle — the thing `curl -sI` is not.
+
+**The Sunbird estate, org by org:** `project-sunbird` `76/77` MIT · `Sunbird-Ed` `54/58` · `Sunbird-Knowlg` `23/25` · `Sunbird-Lern` `21/22` · `Sunbird-Obsrv` `12/20` · `Sunbird-inQuiry` `10/10` → **`196 / 212`**. Table and commercial read in [`../verticals/solutions.md`](../verticals/solutions.md) `p699`.
+
+🔴 **One APAC authority was enumerated and refused:** [`Samagra-Development`](https://github.com/Samagra-Development) — `92` repos, `44` MIT, real Indian education gov-tech, and **exactly one** permissive repository pushed in 2026: the org's own website, `0★`. **A large MIT count on a stale estate is not supply.** 🔵 Also live but off-domain: `GovTechSG` (`85`, `50` MIT — Singapore whole-of-government, one row taken), `AusDTO` (`73`, `28` MIT — horizontal), `digitalnz` (`11/17` **GPL-3.0**), `ekstep` (`9`, `5` MIT — the Sunbird upstream, nothing filable).
+
+### `699-C` — The agent shelf gains one row from eight legs, and the legs' failure mode is now named
+
+Eight legs with star floors and push-recency filters (`education AI agent`, `AI tutor agent`, `topic:ai-education`, `lesson plan generator AI`, `automated grading AI`, plus the four mandated global ones). **The novel permissive results were, in rank order: an *AI 30-day learning challenge* (`57★`), a *DeepSeek agent tutorial* (`89★`), a *bilingual Claude-Code/Codex tutorial series* (`80★`), a Cloudflare agent tutorial (`65★`), an enterprise RAG platform (`385★`) and an AI evaluation SDK (`52★`).**
+
+🔴 **Not one of them is education software.** **The English tokens `tutor`, `learning` and `education` are read by GitHub's index as "material that teaches AI", not "software that teaches people".** This is the `T105`/`T124` homograph class landing on the *agent* vocabulary specifically, and it is now measured rather than suspected. The `lesson plan generator AI` leg returned **zero** novel permissive results at all.
+
+🟢 **One row survived**, and it survived on fit rather than traction: [`yifanchen12/scholar-workbench`](https://github.com/yifanchen12/scholar-workbench) (MIT, `6★`, pushed `2026-10-21`, **APAC** on a Chinese interface and curriculum). Local-first PDF-textbook extraction generating outlines, concepts, quizzes and charts **each carrying a physical-page citation back into the source**, over a Node.js standard-library loopback server. 🔴 **Its own README states the three boundaries this base files it with:** generation needs *your own* API account (so *local-first* covers extraction and serving, not inference), scans need external OCR, and the project claims **no university endorsement**. **It is the only permissive thing this base holds that does textbook-grounded generation with page-level provenance** — the evidential shape `T79`'s forced integrity demand needs.
+
+### 🔴 `699-D` — Refused: the most interesting repository of the pass is an empty skeleton, and it says so itself
+
+[`lungstrahv/T2AG`](https://github.com/lungstrahv/T2AG) — Apache-2.0 (`11,357 B`, `c71d239df917`), `4★`, `main`, pushed `2026-10-01`. **An AI learning harness that *tests you instead of answering for you*:** exams blind-extracted from the learner's own materials, scored under a countersign protocol, replayable, with every mistake and verdict stored in **plain-text files the learner owns and any agent can read** — explicitly portable between Claude Code, Codex and others. **Conceptually this is the best answer to `T79` this base has seen**, and it inverts the usual tutor design: the judge in the loop is the human, not the model.
+
+🔴 **Refused anyway, on the project's own words.** The README's first line declares a **clean-room rebuild in progress for `0.3.0`**, *"currently in architecture and state-model design"*; `0.3.0` **is not released** (the released version is `0.2.4`); and **"this release contains empty skeletons, not student data."** **A repository that declares itself pre-architecture is not a starting point for a client engagement, and `106` rows with no `107th` beats `107` with a skeleton in it.** 🟢 **Filed as a design signal instead of a row** — the agent-portable plain-text verdict store is a pattern worth stealing even if this implementation never ships. Re-probe when `0.3.0` lands.
+
+### 🟢 `699-E` — The gate verdict, which is the pass's most valuable single artefact
+
+🔴 **`p693` through `p698` each recorded `make hooks` as *denied by this session's auto-mode classifier*, and `Gap 247` went unmet for six consecutive passes. At p699 it ran.** The first attempt was killed by a `120 s` timeout — **which is worth recording, because a timeout and a denial look identical in a log and six passes may have mis-attributed one as the other.** Re-run without the short timeout: **`71` gates, `47` green, `24` red.**
+
+**RED on entry:** `recount`, `gate-derived-counts`, `gate-enumeration`, `gate-tables`, `gate-dates`, `gate-evidence-store`, `gate-shelf-consistency`, `gate-region-headings`, `gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`, `gate-alias-canonical`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-case-collision`, `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+
+🟢 **Two were closed by repairing the pages** (`gate-tables`, `gate-region-headings`). **Confirmed by a full re-run after every p699 edit had landed: `49 / 71` green, and both names are gone from the red list.** The runner's filed-row ratchet moved `472` → **`483`** in the same run. 🔵 **The other `22` are pre-existing and were confirmed as pre-existing before any edit landed**, so none is attributable to p699; they are now *visible*, which they were not for six passes. 🔵 **The gate runner's own design is worth crediting: `p300`'s no-masking runner ran every gate rather than stopping at the first red**, which is the only reason a single run produced a complete red list. **The standing instruction for p700: the red list above is the backlog, and it is now the highest-value work on this base** — it is defects in what these pages *publish*, found by instruments this base already built and could not read.
+
+🔵 **One measurement from the runner worth keeping:** `FILED 472` table rows against a `UNION` of `5,533` distinct addresses — a **`8.5%` filing rate**, with a **`57`-address promotion queue** of prose-cited-but-unfiled addresses. `699-A` drew three rows from exactly that queue. **`T116` is not a hypothesis; the gate measures it every run.**
+
+### 🔧 `699-F` — `46` region headings were out of vocabulary, and this is the failure the operating instructions predict by name
+
+The operating mandate says `region` is a **closed vocabulary** of five values because *"each variant becomes its own bucket and the filter stops working"*. 🔴 **[`../intel/market.md`](../intel/market.md) had `46` `###` children under `## Opportunities by region` that were not region names** — they were dated pass subsections (`### 🟢 p696 — APAC: the demand leg nils…`). Every pass since ≈`p688` wrote one, each in good faith, and **each one was a new bucket.**
+
+🟢 **Repaired structurally rather than cosmetically:** the `46` dated subsections are demoted to `####` and their `82` `####` descendants to `#####`, so relative hierarchy is preserved exactly and the five `###` region headings are once again the only children of the canonical block. `gate-region-headings` returns **`total 0`**. **p699's own five regional subsections are written at `####` from the start.** 🔵 **The rule for every later pass: a dated note goes *under* a region heading, never *beside* one.**
+
+### 🔧 `699-G` — Ten stale row-count headings, and the defect propagated by imitation
+
+🔴 **`top.md` carried `3` live `## The agents — N rows` headings (`106`/`104`/`96`), `foundations.md` carried `4` (`181`/`178`/`173`/`162`), `solutions.md` carried `3` (`86`/`81`/`79`).** `p687` and `p686` wrote their re-derivations as **prose**; `p694` promoted its own to a `##` heading, and every pass after copied that. **The defect was introduced once and compounded once per pass, by imitation.**
+
+🔴 **On `foundations.md` it had become materially wrong in three different ways simultaneously:** the page's top heading published `181`, `p698`'s register published `186`, and the table actually held `193` — because `7` rows were orphaned below a stray blank line and counted by nobody. 🟢 All ten stale headings are demoted to prose; each shelf now carries **one** `##` row-count heading, re-derived by session-local code **in the same edit that changed the rows**. 🔵 **`T62` predicted the staleness. It did not predict that the table underneath the count would itself be broken — "re-derive the count by reading the table" silently assumes the table is still one table.** p699 checked that assumption on all three shelves; it was false on one.
+
+### 🔴 `699-H` — LATAM, measured on the authority channel for the first time
+
+`p698` nilled LATAM on `9` Spanish/Portuguese **keyword** legs. p699 tested the **authority** channel that paid out in EMEA and APAC: **`23` candidate logins → `15` nonexistent (`422`), `8` live, `0` publishing permissive education software.** Live estates are open-data (`datosgobar`, `102` repos / `27` MIT), federal web and design (`govbr`), federal IT corporations (`serpro`, `dataprev`) or unlicensed (`educacionmx`, `gobiernodigital`, `brasil-gov`).
+
+🔴 **The nil that matters: [`CeibalUY`](https://github.com/CeibalUY) — Uruguay's Plan Ceibal, the most-cited education technology programme in the region — publishes `3` repositories and `0` of them are licensed.** 🔵 **The finding is not "LATAM has no supply"; it is that LATAM's education authorities are not software publishers at all.** That is more useful: there is nothing to fork, so **there is nothing to wait for**, and the region should be served by assembling permissive components from elsewhere. 🟢 **p699 supplies a better source for that than Europe:** Sunbird is MIT, built for third-party national adoption, already `30+` languages, designed for high-volume low-connectivity systems. `P82`'s regional read; `T126` explains the asymmetry.
+
+
 ## 🆕 2026-11-08 (p698) — 🟢 **A NATIONAL EDUCATION MINISTRY'S 828-REPOSITORY ESTATE, 515 OF IT MIT — AND IT REFUTES THE CONCLUSION THIS BASE DREW FROM FINLAND. 🔴 THE AGENT SHELF ITSELF GAINS NOTHING, AND THAT IS REPORTED RATHER THAN PADDED**
 
 **`0` rows filed on [`top.md`](top.md)** — the shelf stays at **`106`**. **`5` rows on [`../repos/foundations.md`](../repos/foundations.md)** (`181` → `186`), **`1` organisation plus `7` production services on [`../verticals/solutions.md`](../verticals/solutions.md)**, **`3` trends** (`T122`–`T124`), **`1` pattern** (`P81`), **`4` regional sections** on [`../intel/market.md`](../intel/market.md).

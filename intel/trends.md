@@ -21,6 +21,56 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## T126 — Permissive density in public-sector education software tracks the **procurement doctrine**, not the jurisdiction: a declared digital public good runs `92%` permissive where one national ministry runs `62%` and another runs `0.5%` 🟢 new at p699
+
+**Measured at p699 over six organisations, `212` repositories, licence read from GitHub's `license.spdx_id` and the grant payload read at first hand for the six filed rows:** India's **Sunbird** estate is **`196 / 212` = `92.5%`** permissive (`185` MIT + `11` Apache-2.0). Set against `p698`'s European readings on the identical instrument — **UK DfE `515 / 828` = `62.2%`, France (`openfun`) `52 / 100`, Finland (`Opetushallitus`) `1 / 182` = `0.5%`, GÉANT `0 / 54`** — the spread is a factor of **`185`** between the top and bottom estates, and **it does not line up with the continent.**
+
+🔴 **This supersedes the causal claim in `T122`, and the correction matters because `T122` was already being used to reason about regions.** `T122` read the UK-versus-Finland split as *"bimodal by jurisdiction"*. Jurisdiction is a **proxy**. The operative variable is whether the estate was **built to be adopted by someone else**: Sunbird is a **Digital Public Goods Alliance**-registered DPG whose entire purpose is third-party adoption, and it is MIT by construction across six orgs and eleven years of copyright lines. Finland's ministry publishes source code without granting rights to it — publication as transparency, not as supply. **The UK's `62%` sits between the two because the DfE estate is genuinely mixed: shared libraries are MIT, individual services often are not.**
+
+🔵 **The operational consequence for a studio: ask what the estate was FOR before pricing the licence risk.** An estate built as a public good can be cleared cheaply and in bulk (`T128`); an estate published for transparency must be cleared repository by repository and will mostly come back unusable. `T122`'s observation stands as data and is retired as an explanation.
+
+## T127 — The grant-payload `sha256` is a provenance discriminator for **MIT** and a **non**-discriminator for **Apache-2.0**, because MIT carries the holder inside the payload and Apache-2.0 does not 🔴 new at p699
+
+**This base publishes `sha256₁₂` in nearly every shelf row as an identity signal. For an Apache-2.0 row that signal certifies the stock text and nothing whatsoever about who granted it.**
+
+🟢 **Control run at both signs at p699.** The payload `c71d239df917` / **`11,357 B`** is **byte-identical** across [`Sunbird-inQuiry/editor-v2`](https://github.com/Sunbird-inQuiry/editor-v2), [`Sunbird-inQuiry/player-v2`](https://github.com/Sunbird-inQuiry/player-v2) **and** [`lungstrahv/T2AG`](https://github.com/lungstrahv/T2AG) — a single-author project in a different jurisdiction with no relation to Sunbird whatever. Two of those three addresses are the same estate and one is a stranger, and **the digest cannot tell them apart**, because the stock Apache-2.0 text keeps the holder in the file headers and the `NOTICE`, not in `LICENSE`.
+
+🟢 **The same instrument on MIT does the opposite, and does it well** — see `T128`: sixteen MIT payloads in one estate partition into **five** digests that differ *only* in the copyright line, and the partition reconstructs the estate's own history.
+
+🔴 **Two readings this base has made, and should stop making, on Apache rows:** that a matching digest across two rows evidences common provenance (it evidences a shared boilerplate), and that a digest is a sufficient per-row licence fingerprint (for Apache-2.0 the discriminating bytes are the **appendix fill state** and the `NOTICE` file, neither of which `LICENSE`'s digest reaches). **For an Apache-2.0 row, read the `NOTICE` or read nothing about the holder.**
+
+## T128 — A licence-uniform estate can be cleared with **one** grant read, and the `sha256` partition recovers a holder history the project never documented 🟢 new at p699
+
+**Measured at p699: `18` Sunbird repositories sampled across all six organisations, `LICENSE` read at the real default ref for each. `16` MIT payloads → `5` distinct digests, every difference confined to the copyright line:**
+
+| `sha256₁₂` | Bytes | Copyright line | Repos seen |
+|---|--:|---|--:|
+| `fbafd6479167` | `1,074` | © *2015* **EkStep** | `1` |
+| `7dde06716f25` | `1,072` | © *2018* Project Sunbird | `5` |
+| `fd3adcd57676` | `1,072` | © *2019* Project Sunbird | `3` |
+| `47022c44beee` | `1,072` | © *2020* Project Sunbird | `3` |
+| `bea3458f45df` | `1,078` | © *2021* **Sunbird for Education** | `1` |
+
+🟢 **Two results, and the second is the one worth keeping.** (1) **Clearance is cheap on an estate like this**: five payload reads clear sixteen repositories, and the marginal read is near-free, so a due-diligence quote priced per repository is mispriced for a DPG estate by an order of magnitude. (2) **The digest partition is a provenance instrument.** The oldest payload names **EkStep** — the foundation that built the platform *before* the Sunbird brand existed — and the newest names *Sunbird for Education*. **Three holder identities and four year-cohorts, in strict chronological order, none of it stated in any README this pass read.** The grant files are the only first-hand record of the handover.
+
+🔵 **Why this is an instrument and not a curiosity:** a client licence gate asks *who granted this*. On an MIT estate the answer is already in the bytes this base publishes, and a change of digest between two sibling repositories is a signal to go and ask why. `T127` is the boundary — this works for MIT precisely because it fails for Apache-2.0.
+
+## T129 — `search/repositories` with an `org:` qualifier is an **existence oracle for an owner**, where the mandated `curl -sI` is an oracle for nothing 🟢 new at p699
+
+🟢 **Measured at p699 over `44` distinct owner logins probed on the authority channel: `20` returned a counted payload, `24` returned HTTP `422`** (*"the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them"*). The two answers are cleanly separated, so **the `org:` qualifier decides owner existence in one call** — and it returns the repository count and the full licence census in the same call, which is why `698-B`'s channel keeps paying.
+
+🔴 **The `curl -sI` check the operating instructions mandate was re-controlled at p699 at four signs and is still inert:** `403` for `torvalds/linux`, `403` for `moodle/moodle`, `403` for [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) and `403` for a repository that **does not exist**. `p684` and `p698` recorded this; p699 confirms it a third time and adds the positive replacement rather than only the complaint:
+
+| Question | Instrument that answers it | Instrument that does not |
+|---|---|---|
+| Does this **owner** exist? | `gh api search/repositories -f q='org:X'` — count vs `422` | `curl -sI https://github.com/X` → `403` either way |
+| Does this **repository** exist, and what is its real default branch? | `git ls-remote --symref <url> HEAD` | `curl -sI` → `403` either way |
+| Does this **grant file** exist, and what does it say? | `curl` on `raw.githubusercontent.com` — `200`/`404`, and the payload | `curl -sI` on the repository page |
+
+🔵 **The general rule: `403` is the agent proxy answering, not GitHub.** Any check whose negative and positive signs are both `403` is measuring the proxy. `raw.githubusercontent.com` is reachable and discriminating, which is why every licence claim on this base is read there.
+
+🔵 **A note on numbering, so the next pass does not re-derive it:** p699's trends start at **`T126`**. `T125` is skipped deliberately — archived `trending.md` prose from the pre-reset `p425` era already cites a *different* `T125` (the Frappe-LMS claim), and reusing the label would silently merge two unrelated trends. This file's `## T…` headings are the authoritative registry; it already contains gaps at `T84`–`T87`, so a documented skip is consistent with its own precedent.
+
 ## T122 — Permissive supply in European public-sector education is **bimodal by jurisdiction**, not scarce: `515 / 828` MIT in one national authority against `1 / 182` in another 🟢 new at p698
 
 **Measured, both sides, same instrument** (`gh api search/repositories`, `org:` qualifier, `license:` facet), `2026-11-08`:
