@@ -124,6 +124,33 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🟢 p702 — North America: the demand leg nils a **42nd** time, and the region **breaks its supply nil with two rows, one of them a school district's own production platform**
+
+🔴 **The mandated leg (`AI education North America 2026 adoption regulation players`) again returned no address this page did not hold** — market-research teasers, vendor blogs and auto-generated summaries of other summaries. It also returned **no primary policy document**: by its own admission, *"I found no authoritative 2026 policy sources such as federal or state rules, and no OECD or UNESCO primary documents."* That absence is recorded as a property of the channel (`T141`, `T144`), not of the region.
+
+🟢 **The supply nil is broken, and on the strongest evidence class this base has — a named institution in the repository's own files:**
+
+| Row filed at p702 | Placement evidence | Why it matters to a North American engagement |
+|---|---|---|
+| [`psd401/aistudio`](https://github.com/psd401/aistudio) — MIT, `1,082 B` · `59aa4a374522`, `12★`, ref **`dev`** | README states *"AI Studio was developed by **Peninsula School District (PSD401)**"* — Gig Harbor, Washington | **The only asset this base holds that names COPPA, FERPA and CIPA together**, and it is a district's working software rather than a vendor demo: multi-model switching (GPT-5 / Claude Opus / Google), a no-code **Assistant Architect**, Cognito + Google SSO, **Bedrock Guardrails on inputs *and* responses**, MCP server with `5` tools, claimed **90% lower cost** than per-seat licences. Wired up as `P88` |
+| [`SciWhite/university-ai-policy-tracker`](https://github.com/SciWhite/university-ai-policy-tracker) — Apache-2.0, `11,357 B` · `c71d239df917`, `124★` | Repository self-declares *a Canadian public-interest EdTech initiative operated by an independent Canadian company*, founded May 2026 | **`828` university records, `5,476` claims, `3,195` official-source attributions** at its `2026-08-01` snapshot — the primary-source instrument for the exact question the demand leg cannot answer. Wired up as `P90` |
+
+🟢 **Demand facts the leg did return, dated, because deadlines are what an engagement plans against:**
+
+| Fact | Date | Source class |
+|---|---|---|
+| US Department of Education commits **$169M** to responsible AI in higher education | January 2026 | reported via secondary summary — **verify against the Department's own release before quoting to a client** |
+| MultiState projects *"a significant increase in state-level legislation addressing AI in education"* | across 2026 | policy-tracking vendor, cited second-hand |
+| ~**70%** of institutions in Europe and North America have, or are developing, AI guidance | 2026 reading | secondary; the interesting half is the implied **30%** with none |
+| **COPPA** named as the binding constraint on child-directed AI products | standing | consistent with `P88`'s compliance triad |
+
+🔴 **Two numbers on this page's own subject are irreconcilable and both are published by vendors.** North America is put at **36–38%** of the global AI-in-education market, but the regional base is given as **$951M for 2024** (growing `15.9%` CAGR to 2029) by one vendor and **$3.68B for 2026** by another — a factor of roughly four across adjacent years, which no CAGR in between reconciles. A third (Technavio) claims **86% of educational organizations in the region have adopted generative AI**, which the leg itself flagged as an outlier. **Quote none of these as a market size;** the `p695` correction on this page established that this category's vendor figures double-count, and this is the same failure.
+
+🔵 **Named players the leg surfaced, for completeness rather than as a market map:** Embodied and Miko in the child-robot segment; Google positioned as integrating generative AI into its cloud education suite. Neither source gives a full competitive set.
+
+**Opportunity for Globant, in priority order.** (1) **`P88` — the compliant district platform**: fork AI Studio into the institution's own cloud account, inherit the compliance homework, and sell the layer it lacks (rostering against the SIS, the assistant library, and the pedagogy guard that stops assistants answering homework). The procurement conversation is already won on paper by COPPA/FERPA/CIPA being named in the design. (2) **`P90` — policy diligence** at engagement start, from the tracker rather than from search. (3) `T138`'s K-12 SIS extension gap remains **open and unclaimed** — this pass's SIS row ([`nomadicjosh/etsis`](https://github.com/nomadicjosh/etsis), MIT) is higher-ed and does not close it.
+
+
 #### 🟢 p701 — North America: the demand leg nils a **41st** time, and the region's finding is a *structural* gap in its K-12 data layer
 
 🔴 **The mandated leg (`AI education North America 2026 adoption regulation players`) again returned nothing this page did not hold** — market-research teasers, advocacy trackers and content blogs. 🟡 **It also returned essentially no Canada or Mexico**, which is worth recording: "North America" in these sources means the United States, so the region's non-US two-thirds is an **informed gap**, not covered ground.
@@ -587,6 +614,25 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🟢 p702 — EMEA: **the region gains a row on a named university**, and the regulatory clock is the only hard date any leg produced this pass
+
+🟢 **EMEA was this base's thinnest placed region (`8` of `144` agent rows) and it gains supply this pass**, on the top evidence class: [`tscheipel/HaDes-V`](https://github.com/tscheipel/HaDes-V) (MIT, `1,105 B` · `3025e7280227`, `197★`) is authored by the **Embedded Architectures & Systems Group at Graz University of Technology**, named in the repository's own README, with the instructor guide deposited in TU Graz's OER repository, the course listed in TUGRAZonline (`LV 525082`), and a poster at **RISC-V Europe Summit 2025**. It is filed on [`../repos/foundations.md`](../repos/foundations.md) rather than the agent shelf because it is a **teaching asset whose permissive grant covers the teaching material itself** — the category `p701` named and this base has few of. ⚠️ Last push `2026-02-02`: a settled course asset, not a live project.
+
+🟢 **The regulatory clock — the one thing in this pass's research with a real deadline attached:**
+
+| Instrument | What it obliges | Timing as read at p702 |
+|---|---|---|
+| **EU AI Act** | **Post-market surveillance** — ongoing auditing to prevent discriminatory outcomes, with schools and institutions named as the responsible auditing party in education deployments | key provisions taking effect **across 2026** |
+| European Commission **DG EAC** Digital Education programme | grant programmes plus frameworks, pushing adoption while safeguarding student data and equity | ongoing |
+| **European University Association** position | urges mindful adoption and **prioritising European LLMs to counter US-centric bias** | January 2026 |
+
+🔵 **Adoption readings, with their source class attached, because the strongest-looking number here is the weakest-sourced.** Workday puts **56% of EMEA CEOs** as prepared for AI adoption against `48%` in the Americas and `45%` in APJ — the only figure in this pass that ranks EMEA *ahead* — while the same study reports EMEA HR teams as **the slowest** adopters, so "readiness" and "adoption" are measuring different things and should not be quoted interchangeably. CompTIA reports **94% of organizations at least somewhat likely to invest in AI-specific training in 2026**. 🔴 **The one AI-in-education-specific adoption figure the leg found came from a sponsored article**, and the regulatory detail above rests on secondary commentary rather than the Act's text — **read the primary instrument before putting a date in a client deliverable.**
+
+🔵 **Supply-side and vendor movement:** LEGO Education's K-8 computer-science and AI classroom platform ships from **April 2026**; Microsoft **Elevate for Educators** is expanding across K-12 and higher education; **Fosway Group** published its 2026 AI Market Assessment for digital learning (London, April 2026) aimed at EMEA learning leaders; **ICS.AI** announced a national higher-education AI model giving UK students free access to campus tools. Instructure is running EMEA webinars that frame compliance and responsible use as separate concerns — a framing worth borrowing in a pitch, since procurement treats them separately too.
+
+**Opportunity for Globant.** The EU AI Act's post-market surveillance duty is a **recurring engagement**, not a one-off build: an institution that deploys an education AI system owes continuous auditing for discriminatory outcomes, and almost none has the instrumentation. `P90`'s policy corpus plus this base's assessment-integrity material (`p684`'s EMEA sell, still current) are the two doors in. The EUA's **European-LLM** preference is a concrete technical constraint to design for rather than argue with — it favours the self-hosted, model-swappable architecture `P88` already assumes.
+
 
 #### 🟡 p701 — EMEA: the high-risk deadline that guidance is still being published against **may have moved by 16 months**, and that discrepancy is the region's most actionable fact
 
@@ -1154,6 +1200,24 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🔵 p702 — APAC: **the region leads this base's SUPPLY and trails its DEMAND intelligence**, and the asymmetry is this pass's regional finding
+
+🔴 **The mandated leg (`AI education APAC 2026 adoption regulation players`) returned almost nothing education-specific, and this is written down rather than left silent.** What came back was enterprise AI: an APAC tech-priorities survey of `1,100+` decision-makers across Australia, New Zealand, Singapore, Malaysia and the Philippines (**enterprises, not schools**), Singapore's consultations on AI in **financial institutions**, and general data-protection and cross-border-transfer refinement. Explicitly absent, in the leg's own words: **no named education ministries, no national AI-in-schools policies, and no major APAC edtech players.** The only education-specific item was the **Acer Edu Summit Asia Pacific 2026**, a vendor-convened event. An informed gap: the demand picture for APAC education here is thin, and a country-level sweep (China, India, South Korea, Japan, Australia) is the unspent query.
+
+🟢 **Supply is the opposite story. APAC is now this base's largest *placed* region on the agent shelf — `36` of `144` rows — and gained two more this pass, both on measured evidence rather than inference:**
+
+| Row filed at p702 | Placement evidence, measured | What it contributes |
+|---|---|---|
+| [`XiucuiGuan/shumo-expert`](https://github.com/XiucuiGuan/shumo-expert) — MIT, `1,079 B` · `9069b2242529`, `26★` | primary README **`76.3%` CJK share of prose letters** (`p684` class) | **The only specified-refusal taxonomy on this shelf**: Bloom L1–L8 laddering, a four-stage P-M-A-D modelling walk, a 10-class probing-script library, and **`6` documented fallback classes for when the learner resists being guided** — the moment every tutor pilot actually dies. Composed into `P89` |
+| [`ook370641-arch/study-parlor`](https://github.com/ook370641-arch/study-parlor) — MIT, `1,082 B` · `34af2afc64c8`, `6★` | primary README **`48.7%` CJK share** with a secondary English section | Local-first study environment that is explicitly *not a chatbot*: Socratic probing plus **automatic Markdown archiving**, so sessions accumulate into a searchable vault. `252` commits in six weeks |
+
+🔵 **The asymmetry, stated so it is actionable.** For APAC this base holds **strong, verifiable supply and weak, second-hand demand** — the inverse of LATAM, where the institutional demand signal is well sourced and the supply shelf is thin. The cause is channel, not reality: `topic:` facets and prose-share measurement reach published APAC code directly, while the prose demand leg reaches APAC education policy only through English-language enterprise trade press. **An APAC engagement should therefore lead with assets and ask the client for the policy context**, which is the reverse of the LATAM approach below.
+
+🔵 **Cross-sector regulatory direction, since it is the best available proxy.** Commentators expect APAC to **converge on common principles — safety, transparency, accountability — executed differently per market**, with **AI sovereignty** named as the pacing factor for 2026 and Forrester describing a shift from headline pilots to *sovereign-by-design* execution. For education that implies the same architecture `P88` assumes for compliance reasons: in-country or in-tenant hosting, swappable models, auditable prompts.
+
+**Opportunity for Globant.** Sovereignty-first deployment is the regional wedge: a self-hosted, model-swappable education platform satisfies both the sovereignty expectation and the absent-policy problem, because it keeps the institution's options open while the rules settle. `P89` is the ready-made product for the region's strongest supply, and the `shumo-expert` taxonomies **transfer but need translating** — their structure is domain-independent, their trigger words and worked examples are not.
+
+
 #### 🟢 p701 — APAC: three statutes now name education as high-risk, and the region supplied the **majority** of this pass's verified rows
 
 🟢 **Regulation, read this pass — APAC is no longer the "voluntary" region:**
@@ -1644,6 +1708,32 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🟢 p702 — LATAM: **the best-sourced demand signal of any region this pass**, no supply gained, and one funding figure this page refuses to repeat twice
+
+🟢 **The LATAM leg was the only one of four to return primary and quasi-primary institutional sources**, and that makes this region's demand picture the strongest in the pass — the reverse of APAC above:
+
+| Signal | Date | Source class |
+|---|---|---|
+| **UNESCO Observatory on AI in Education for Latin America and the Caribbean** — public–private, convening governments, academia and industry | launched **April 2026** (one source says planned for 2026) | 🟢 institutional, named |
+| **UNU working paper** mapping AI use across LAC universities — teaching, research, community engagement, administration, governance (author: Arianna Valentini) | **September 2026** | 🟢 academic, named |
+| **Google.org** commits **$4.6M** to an AI-education rollout across Latin America | **April 2026** | 🔵 reported |
+| **Raspberry Pi Foundation** secures **$4.6M** to scale AI education in the region | **March 2026** | 🔴 **see the caution below** |
+| **Microsoft** AI for Good research hub in **Uruguay** | ongoing | 🔵 reported |
+| **Teachy** (AI for teachers) Series A | 2024 | 🔵 reported |
+| Ibero-American comparative study on regulating AI in higher education | 2025 | 🟢 academic |
+| Baker McKenzie: AI regulatory frameworks **at different stages** country by country | 2026 reading | 🔵 law-firm commentary |
+
+🔴 **One figure is reported twice and this page will carry it once.** **$4.6M** appears as both a Google.org commitment (April 2026) and a Raspberry Pi Foundation raise (March 2026). Two different organisations announcing the identical amount one month apart in the same region is more likely one story recounted twice — plausibly Google.org **funding** the Raspberry Pi Foundation — than two independent commitments. **Do not sum them, and verify each against its own announcement before either appears in a deliverable.** This is `p695`'s correction discipline applied to funding rather than to market size: one source counted twice is the commonest defect in this category.
+
+🔴 **A second figure is truncated at source and must not be quoted.** The leg reports LATAM as more positive about AI in higher education than any other region at *"92% of respondents"* — and states the excerpt was **cut off**. A percentage without its question is not a finding.
+
+🔵 **Barriers, which are the actual sales obstacle and are consistently reported:** weak connectivity, limited devices and low digital literacy, against a UNESCO warning of a **severe teacher shortage** threatening the 2030 education goals. This base's standing LATAM reading — that **`55%` of universities have no AI budget** — is the commercial frame, and nothing this pass found contradicts it.
+
+🔴 **No LATAM supply was gained this pass, and the shelf stands at `14` of `144` agent rows.** The `topic:educacion` / `topic:educacao` / `topic:universidad` / `topic:profesores` facets were swept at p702 and returned **no novel permissive education agent** — `p700` had already harvested `9` rows from that channel, so the Spanish/Portuguese topic heads are now **spent at this star floor**, which is a measured condition rather than a regional absence. The unspent variant is a `created:` window over the same heads, which is what `T141` showed works.
+
+**Opportunity for Globant.** The teacher-shortage and no-budget pair points at the **teacher-productivity** build rather than the student-tutor build: the UNESCO observatory gives institutional cover, and the barrier list argues for the offline-tolerant, low-device-footprint deployment this base's LATAM patterns already favour. `P90`'s policy corpus is **higher-education and not LAC-specific**, so pair it with the UNU paper for this region rather than relying on it alone.
+
 
 #### 🟢 p701 — LATAM: adoption is near-universal, governance is not, and `T130`'s channel is confirmed a **second** time — the supply is real and lives under `5★`
 
