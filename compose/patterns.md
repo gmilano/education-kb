@@ -11,6 +11,60 @@ updated: 2026-11-08
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## 🆕 P114–P116 — added at p713 (2026-11-08)
+
+### `P114` — The EU AI Act high-risk dossier, built on the regulator's own harness instead of bought as a product (EMEA-first, APAC-portable, 8–12 weeks)
+
+**Who it is for:** a university, awarding body or edtech vendor whose system evaluates learners or affects access to qualifications — **Annex III high-risk**. **Why now:** `T186` — the stand-alone high-risk date moved to **`2027-12-02`**, which is build time, while the **Article 4 literacy duty is already in force** and the **NCII/CSAM prohibition lands `2026-12-02`**.
+
+**The stack — every component permissive, nothing bought:**
+
+| leg | repo | licence | job |
+|---|---|---|---|
+| test harness | [`aiverify-foundation/aiverify`](https://github.com/aiverify-foundation/aiverify) | Apache-2.0 | the conformance tests themselves, **authored as plugins** (`T188`) |
+| continuous evidence | [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | Apache-2.0 | re-runs the harness **on every change**, so the dossier is generated rather than written |
+| provenance | [`aboutcode-org/scancode.io`](https://github.com/aboutcode-org/scancode.io) | Apache-2.0 | what is in the system and under what licence — **sponsored by the European Commission and NLnet NGI0**, which is itself a procurement argument |
+| execution isolation | [`openedx/codejail`](https://github.com/openedx/codejail) | Apache-2.0 | the technical claim behind "untrusted code cannot escape" (`713-H`) |
+| grounding corpus | [`DSpace/dspace-angular`](https://github.com/DSpace/dspace-angular) + [`HKUDS/LightRAG`](https://github.com/HKUDS/LightRAG) | BSD-3-Clause / MIT | retrieval over **the institution's own rights-cleared scholarship**, which removes the copyright objection that stops most content pilots |
+
+**Wiring.** `scancode.io` runs over the deployment tree and emits an SBOM with licence provenance → `aiverify` plugins encode the Annex III obligations the system must satisfy, one plugin per obligation → `moonshot-cicd` runs those plugins in the pipeline on every merge, writing dated results to an evidence store → `codejail` wraps any learner- or model-submitted code execution and its configuration is cited as the isolation control → `LightRAG` indexes the DSpace corpus so retrieval provenance is a repository handle rather than a URL.
+
+🟢 **The deliverable is a pipeline that PRODUCES the dossier, not a dossier.** A regulator asking *"how was this tested"* gets dated, reproducible runs; an institution changing its model next quarter re-runs rather than re-commissions. 🔴 **Scope limits, stated: `aiverify` 2.0 is announced and may move the plugin API; the `2027-12-02` date is well-sourced but not primary-verified (`ACTION TN`); and the DSpace row covers the Angular UI only — the Java backend's grant was not read at p713 (`ACTION TM`), so no backend deployment claim is supported.**
+
+### `P115` — The accessibility-deadline remediation desk: fix the authoring surface, not the backlog (North America, 6–10 weeks to first measurable drop)
+
+**Who it is for:** a large US public institution already past the **April 2026 ADA deadline** (`T189`) with a course-content estate nobody can hand-audit. **The insight:** remediating the backlog is unbounded; instrumenting the **authoring surface** bounds the problem, because defects stop being created.
+
+| leg | repo | licence | job |
+|---|---|---|---|
+| in-editor check | [`instructure/tinymce-a11y-checker`](https://github.com/instructure/tinymce-a11y-checker) | MIT | flags the defect **as the author types**, in the editor Canvas and much of the sector embeds |
+| editor integration | [`instructure/canvas-rce-api`](https://github.com/instructure/canvas-rce-api) | MIT | the service seam where the check and any AI suggestion appear inside the real editor |
+| existing-estate audit | [`instructure/common-cartridge-viewer`](https://github.com/instructure/common-cartridge-viewer) | MIT | reads what the department already exported, **in the browser — no server, no data egress** |
+| assessment estate | [`instructure/qti`](https://github.com/instructure/qti) | MIT | parses the question banks the course audit otherwise skips |
+| institutional entry | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | MIT | LTI launch, so the tool needs **no student personal access token** — the standards answer to `711-F` |
+
+**Wiring.** Export the estate as Common Cartridge → `common-cartridge-viewer` plus `qti` produce a defect census per course, client-side → rank courses by enrolment × defect density, which is the remediation queue → `tinymce-a11y-checker` goes into the live editor via `canvas-rce-api` so the inflow stops → the whole tool mounts into the LMS over LTI via `ims-lti`, carrying institutional authorisation.
+
+🟢 **Two measurable outcomes, both reportable to counsel:** a dated defect census over the existing estate, and a **defect-creation rate** that drops once the editor check is live. 🔴 **The honest risk: `tinymce-a11y-checker` was last pushed `2024-06-26`.** Verified alive, but **budget the fork into the engagement** — do not plan around upstream releases. 🔵 The AI leg is deliberately small here: generated alt-text and summaries are *suggestions inside the editor*, with the human author deciding, because the obligation is legal and the accountable party must be a person.
+
+### `P116` — The zero-budget tutor for a system with no AI line item (LATAM-first, EMEA data-residency portable, 6–8 weeks)
+
+**Who it is for:** the **`55%`** of LATAM universities UNESCO IESALC measured with **no specific AI budget** (`T190`, `../intel/market.md` LATAM), and any EMEA institution that cannot egress student data. **Constraint that drives every choice: no recurring per-token bill, and nothing leaves owned hardware.**
+
+| leg | repo | licence | job |
+|---|---|---|---|
+| retrieval | [`HKUDS/MiniRAG`](https://github.com/HKUDS/MiniRAG) | MIT | RAG that works with **small, open-sourced models** on owned hardware |
+| multimodal ingest | [`HKUDS/RAG-Anything`](https://github.com/HKUDS/RAG-Anything) | MIT | because the course corpus is scans, decks and photographed whiteboards, not text |
+| reasoning economy | [`HKUDS/LightReasoner`](https://github.com/HKUDS/LightReasoner) | MIT | small model generates the teaching signal — the expensive model is needed for **less** of the loop |
+| authoring | [`ai-shifu/markdown-flow-agent-py`](https://github.com/ai-shifu/markdown-flow-agent-py) + [`markdown-flow-ui`](https://github.com/ai-shifu/markdown-flow-ui) | MIT | teacher authors the sequence with branch points; **the model personalises INSIDE it** rather than replacing it |
+| delivery | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | Apache-2.0 | the phone the student already carries — and **permissive where `moodle/moodle` is GPL-3.0** (`708-V1`) |
+| telemetry | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) + [`xapi-validation`](https://github.com/LearningLocker/xapi-validation) | MIT | emit → **validate** → persist, on a published standard, so the records outlive the pilot |
+| 🔴 sandbox — **mandatory** | [`openedx/codejail`](https://github.com/openedx/codejail) | Apache-2.0 | **any** learner- or model-submitted code executes here. `713-H`: a pattern that omits this is an unsafe instruction, not an incomplete one |
+
+**Wiring.** `RAG-Anything` ingests the existing course corpus once, on-premises → `MiniRAG` serves retrieval from a small local model → the teacher authors lesson flows as MarkdownFlow documents and `markdown-flow-agent-py` fills the branch points per learner, rendered by `markdown-flow-ui` → delivery through the Moodle app against the institution's existing Moodle → every interaction emits an xAPI statement, **validated at the point of emission** before it reaches the store → `LightReasoner` is applied offline, between terms, to improve the small model from accumulated interactions rather than paying for a larger one → any coding exercise runs in `codejail`.
+
+🟢 **Why it closes rather than impresses: the pitch is a per-institution capital cost and no recurring inference bill, on a stack that is `100%` MIT/Apache/BSD and self-hosted** — which simultaneously answers the LATAM budget constraint, the EMEA residency constraint and the APAC data-exposure concern one market report flagged. 🔴 **The caveats are real and belong in the proposal: `MiniRAG` was last pushed `2025-10-16` and its grant names an individual rather than the lab; `LightReasoner` is research code; `markdown-flow-agent-py` is at `6★`.** This pattern is a credible 6–8 week pilot and **not** a production commitment — the fork-and-maintain cost is the honest line item.
+
 ## 🆕 P112–P113 — added at p712 (2026-11-08)
 
 ### `P112` — The Brightspace/D2L engagement, scoped by the one credential question that decides the whole architecture (3–5 weeks to a working pilot)

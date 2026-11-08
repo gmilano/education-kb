@@ -21,6 +21,48 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T186–T190 — added at p713 (2026-11-08)
+
+### 🔴 T186 — The EU's high-risk deadline for education moved by ~16 months, and a deferred deadline defers the WRONG obligations 🟢 new
+
+Education AI is high-risk under **Annex III** of the EU AI Act. The date those obligations bite moved from **`2026-08-02`** to **`2027-12-02`** for stand-alone Annex III systems, and to **`2028-08-02`** for AI embedded in regulated products, via the **Digital Omnibus** amendment against a May 2026 political agreement.
+
+🔴 **The trend is not the postponement — it is what the postponement does to attention.** Two obligations did **not** move: the **Article 4 AI-literacy duty for staff has been in force since February 2025**, and the **NCII/CSAM prohibition lands `2026-12-02`**. An institution that deferred its whole AI programme to the old August 2026 date has deferred a duty that was already live and one arriving within the year.
+
+🔵 **Signal to act on:** the near-term EMEA conversation is literacy and content-safety, not high-risk conformity — and the extra 16 months is **build time** for a dossier produced by a pipeline (`P114`) rather than written once. 🔴 **Provenance: two independent sources in this pass carry the new dates and one still publishes `August 2026`. Not primary-verified — `ACTION TN` registers checking the Official Journal before this date enters a client-facing document.**
+
+### 🟢 T187 — Governance capacity is the binding constraint, not model capability, and LATAM is where it is actually MEASURED 🟢 new
+
+UNESCO IESALC, `200` HEIs across `19` countries: **`87%` use AI in at least one area; `26%` have any formal framework; `55%` have no specific AI budget; under `10%` have both guidelines and the capacity to apply them.** Brazil reproduces the shape independently at school level (Cetic.br 2026: `53%` of administrators use AI, `22%` of schools have guidelines).
+
+🟢 **A 61-point gap between use and governance means adoption ALREADY HAPPENED, ungoverned.** The sellable work is therefore policy, documentation and operating capacity — a services engagement — rather than a tool.
+
+🔵 **And the trend generalises beyond LATAM:** `T186`'s EMEA deadlines, North America's `134` bills across `31` states, and Korea's and Vietnam's 2026 frameworks all describe the same movement — **from experimentation to governed use** — which the global leg found stated independently. LATAM is simply the only region where somebody instrumented it. 🔴 **EMEA's leg, by contrast, returned no hard adoption rate for European schools at all** — an informed gap, recorded as one.
+
+### 🟢 T188 — A regulator's own test harness is open source and permissive, so conformance becomes a BUILD rather than a purchase 🟢 new
+
+Singapore's **AI Verify**, stewarded by the AI Verify Foundation under IMDA, is **Apache-2.0** on GitHub ([`aiverify-foundation/aiverify`](https://github.com/aiverify-foundation/aiverify), `106★`), with a CI harness ([`moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd), Apache-2.0).
+
+🟢 **The trend: compliance tooling is arriving from the regulator side under permissive licences, and its architecture is plug-in shaped.** *"Show the ministry how this tutor was evaluated"* becomes a plugin-authoring job on an Apache-2.0 base, not a bespoke build and not a consultancy report. 🔵 **Read with `T186`: an EMEA institution with 16 more months can build a dossier on the APAC regulator's harness** — the instruments are not jurisdiction-locked even though the obligations are. 🔴 **AI Verify 2.0 is announced as upcoming**, so both architecture and plugin API may move; re-read next pass.
+
+🟢 **This trend is also how it was FOUND, which is `713-G`:** a mandated regional leg named the instrument in prose with no URL, and eleven passes of scoring those legs `0 / N repository addresses` had been measuring the wrong unit.
+
+### 🔴 T189 — Accessibility is a DATED legal deadline rather than a quality goal, and the remedy is MIT-licensed and sits in the authoring flow 🟢 new
+
+North America's **April 2026 ADA deadline for large public institutions** is in force. The obligation is content-shaped — every course page, document and video — which makes it unlike the policy obligations in `T186` and `T187`: there is no framework to write, only artefacts to fix, and there are a great many of them.
+
+🟢 **The leverage point is the authoring surface, not the remediation backlog.** [`instructure/tinymce-a11y-checker`](https://github.com/instructure/tinymce-a11y-checker) (MIT) checks accessibility **inside TinyMCE**, the editor Canvas and much of the sector embed — catching a defect before the content exists in ten thousand copies rather than after. `P115` is the engagement shape.
+
+🔴 **Filed with its defect: the checker was last pushed `2024-06-26`** and is the stalest artefact this base filed at p713. Verified ALIVE at `master` on `2026-11-08`. **A fork is likely, and that is the engagement rather than an obstacle to it** — but a pattern that silently assumes an actively maintained upstream here would be wrong.
+
+### 🟢 T190 — The small-model tier is a COST architecture, and it is what makes more than half of LATAM's universities addressable at all 🟢 new
+
+UNESCO IESALC measured **`55%` of LATAM universities with no specific AI budget**. Any engagement priced against per-token cloud inference is unsellable to more than half the region.
+
+🟢 **Three artefacts filed at p713 are the answer to that constraint rather than capability rows:** [`HKUDS/MiniRAG`](https://github.com/HKUDS/MiniRAG) (MIT, ACL 2026 — RAG built for small and open-sourced models), [`HKUDS/LightReasoner`](https://github.com/HKUDS/LightReasoner) (MIT, ACL 2026 Oral — a small model generates the teaching signal that improves a larger one), and [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) (Apache-2.0) for delivery on phones the students already carry. **The expensive model is needed for less of the loop, or for none of it.**
+
+🔵 **The generalisation: "small model" on these shelves should be read as a PROCUREMENT property, not a performance compromise.** It is what decides whether an institution with no AI line item can run the thing at all — and it is the same property that answers EMEA data-residency and APAC data-exposure concerns, because a model that runs on owned hardware does not egress. 🔴 **`MiniRAG` was last pushed `2025-10-16` and its grant names an individual rather than the lab; `LightReasoner` is research code with `10` open issues.** Both are filed for the architecture, with the staleness stated.
+
 ## 🆕 T182–T185 — added at p712 (2026-11-08)
 
 ### 🔧 T182 — A repository declares its own region in MACHINE-READABLE form, and `T170`'s "operate vs buy" key is the second-best channel, not the first 🟢 new

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p713) — 🟢 **A MANDATED REGIONAL LEG PRODUCED SUPPLY FOR THE FIRST TIME IN 33 PASSES, AND THE NIL WAS IN THE EXTRACTION RATHER THAN IN THE LEG**
+
+**`25` subjects filed** (`7` agents, `18` foundations, `2` platforms) — **the largest single-pass harvest this base has recorded.** [`top.md`](top.md) **`252` → `259`** (arity `259/259` at `6` columns, `0` ragged; `259` distinct subjects, `0` duplicated; region vocabulary `259/259` legal). [`../repos/foundations.md`](../repos/foundations.md) **`285` → `303`** — that shelf's largest single-pass gain. [`../verticals/solutions.md`](../verticals/solutions.md) **`118` → `120`**.
+
+**Region movement: `APAC 63 → 68`, `North America 29 → 30`, `Global 111 → 112`; `EMEA 27` and `LATAM 22` unmoved.** 🔴 **The APAC gain is two owners, not a region opening up** — `HKUDS` (`4` agents) and `aiverify-foundation` (`1`). Stated so it is not read as breadth.
+
+### 🟢 `713-G` — the headline: the regional legs return PRODUCT NAMES, and this base was reading them for ADDRESSES
+
+`703-A` scored the mandated legs at a 31st consecutive nil and `704-A` at a 32nd; both concluded the four regional legs are a **market** instrument with no supply value. **p713 makes it 33 consecutive nils on addresses and refutes the conclusion.** The APAC leg returned, in prose: *"Singapore is betting on frameworks and toolkits, like **AI Verify**, that companies can use to test and show accountability."* No URL. No slug. One `user:aiverify-foundation` query later:
+
+| subject | grant read from the bytes | ★ | shelf |
+|---|---|--:|---|
+| [`aiverify-foundation/aiverify`](https://github.com/aiverify-foundation/aiverify) | 🟢 Apache-2.0 · `LICENSE` · `11,350 B` · sha256₁₂ `63a6b58f3c9a` · *"Copyright 2023 AI Verify Foundation"* | `106` | `verticals/solutions.md` |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 Apache-2.0 · `LICENSE` · `11,357 B` · sha256₁₂ `c71d239df917` | `15` | `agents/top.md` |
+
+🟢 **Procedure change, effective now: every regional leg's output is mined for NAMED INSTRUMENTS — a regulator's toolkit, a national platform, a ministry programme — and each name is resolved against the search index BEFORE the leg is scored nil.** The eleven passes that scored those legs `0 / N addresses` were measuring the wrong unit.
+
+🔴 **The four GLOBAL supply legs nil'd again and the extraction excuse does NOT apply to them** — they returned addresses, and `15 / 15` were already held:
+
+| global leg | addresses | already held |
+|---|--:|--:|
+| `top open source AI agents education 2026 github MIT` | `5` | `5 / 5` |
+| `github trending education AI 2026` | `4` (OpenMAIC, DeepTutor, ai-engineering-hub, developer-roadmap) | `4 / 4` |
+| `open source platform education ERP CRM MIT Apache student information system` | `6` | `6 / 6` — **the identical set `681-H` recorded** |
+| `AI education industry trends 2026` | `0` | — |
+
+### 🟢 The seven agent rows
+
+| Agent | Licence (read from the bytes) | ★ | Region | What it adds |
+|---|---|--:|---|---|
+| [`HKUDS/AgentPilot`](https://github.com/HKUDS/AgentPilot) | 🟢 MIT · `1,062 B` · `aa2aab5033a6` | `7,961` | APAC | Orchestration for a FLEET of small education agents — the integration cost, not any member's quality, is what sinks pilots |
+| [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) | 🟢 MIT · `1,062 B` · `804ee173a7f6` | `3,854` | APAC | Document → deck. The slide half of the teacher-side preparation workload |
+| [`HKUDS/VideoAgent`](https://github.com/HKUDS/VideoAgent) | 🟢 MIT · `1,088 B` · `68c9fc511bb1` | `2,021` | APAC | EMNLP 2026. **First row here that treats lecture VIDEO as a first-class asset** — the largest un-indexed corpus any institution owns |
+| [`HKUDS/LightReasoner`](https://github.com/HKUDS/LightReasoner) | 🟢 MIT · `1,088 B` · `68c9fc511bb1` | `615` | APAC | ACL 2026 Oral. Small model generates the teaching signal for a larger one — read as the **cost** architecture (`T190`) |
+| [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | `15` | APAC | LLM-application evaluation **inside CI** — the eval half of `P114` |
+| [`EduNLP/nemo-multistage-classroom-diarization`](https://github.com/EduNLP/nemo-multistage-classroom-diarization) | 🟢 MIT · `1,076 B` · `dc4730362e4b` · *"Stanford EduNLP Lab"* | `9` | North America | Who spoke, when, in a room with thirty children. **The measurement instrument behind every talk-time or air-time-equity claim** |
+| [`ai-shifu/markdown-flow-agent-py`](https://github.com/ai-shifu/markdown-flow-agent-py) | 🟢 MIT · `1,069 B` · `ab3dc1ce27a3` | `6` | **Global — an explicit placement nil** | Authored lesson text with branch points the model fills per learner: teacher keeps the sequence, model personalises inside it |
+
+### 🔴 `713-B` — the grant probe's filename list is case-sensitive and omits `COPYING`, and it returned three false *no-grant* verdicts
+
+| subject | probe said | the grant actually is | ★ |
+|---|---|---|--:|
+| [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | 🔴 no grant | 🟢 **Apache-2.0** in `COPYING.txt` | `1,005` |
+| [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🔴 no grant | 🟢 **MIT** in lowercase `license` | `42` |
+| [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🔴 no grant | 🟢 **MIT** in lowercase `license` | `12` |
+
+🔴 **The dangerous property: it does not error, it returns a CLEAN NEGATIVE** — indistinguishable from a genuinely unlicensed repository, which is grounds for refusal under this base's own gate. A `1,005★` official mobile client of the sector's largest platform was one filename away from being refused. 🟢 **`681-I` was the wrong BRANCH; `713-B` is the wrong FILENAME; both say the same thing — a negative result from an address built by CONVENTION is evidence about the convention, not the repository.** `8 / 28` subjects this pass would have been mis-read by a `main` + `LICENSE` probe.
+
+### 🔴 `713-D` — three of four API doors are shut, and the open one is the whole supply programme
+
+`orgs/{owner}/repos`, `users/{owner}/repos` and `repos/{owner}/{repo}` all refuse (*"sessions are bound to their configured repositories"*). `curl -sI https://github.com/{slug}` returns `403` for live **and** nonexistent slugs, unchanged from `710-B`. 🟢 **`gh api -X GET search/repositories -f q='user:{owner}'` works, paginates, and carries `spdx_id` + `stargazers_count` + `pushed_at` + `archived` + `fork`.** `git ls-remote --symref` stays the liveness arbiter; `raw.githubusercontent.com` the grant arbiter.
+
+**Yield, exactly: `52` owners asked · `45` returned ≥1 permissive repository · `836` distinct permissive non-archived non-fork repositories enumerated · `763` not already held · `25` filed — `3.3%` of unheld supply.** `HKUDS` (`50` enumerated, `7` filed) and `instructure` (`71` enumerated, `5` filed) had each been represented here by **one** row and neither had ever been enumerated. 🔴 **`763` unheld repositories remain from this pass alone: the channel is nowhere near exhausted, and the constraint is relevance screening, not discovery.**
+
+### 🔵 Read and deliberately NOT filed
+
+[`HKUDS/nanobot`](https://github.com/HKUDS/nanobot) (MIT, `49,935★`) and [`HKUDS/AgentSpace`](https://github.com/HKUDS/AgentSpace) (Apache-2.0, `1,027★`) — both permissive, both live, both **general-purpose** with no education claim. `681-H` holds: **adoption is not relevance.**
+
+---
+
 ## 🆕 2026-11-08 (p712) — 🟢 **`711-C` IS REFUTED: A REPOSITORY DECLARES ITS OWN REGION IN MACHINE-READABLE FORM, AND READING IT BROKE THE FIVE-PASS `North America` FREEZE — `22 → 29`**
 
 **`24` subjects filed** (`16` agents, `5` foundations, `3` platforms). [`top.md`](top.md) **`236` → `252`** (arity `252/252` at `6` columns, `0` ragged; `252` distinct subjects, `0` duplicated; region vocabulary `252/252` legal). [`../repos/foundations.md`](../repos/foundations.md) **`280` → `285`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `118`** — and this is the first pass since `p707` to file on **all three** shelves.

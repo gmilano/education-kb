@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p713) — 🟢 **EIGHTEEN FOUNDATIONS, THIS SHELF'S LARGEST GAIN, AND THE PASS CLOSED A RISK RATHER THAN ADDING A CAPABILITY**
+
+[`foundations.md`](foundations.md) **`285` → `303`** rows (arity `303/303` at `5` columns, `0` ragged; `303` distinct subjects, `0` duplicated). [`../agents/top.md`](../agents/top.md) **`252` → `259`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`118` → `120`**. All `18` from owner expansion via `gh api -X GET search/repositories -f q='user:{owner}'` (`713-D`).
+
+### 🔴 `713-H` — the risk: every code-execution pattern this base ever published assumed somebody else solved sandboxing
+
+[`openedx/codejail`](https://github.com/openedx/codejail) — Apache-2.0 (`LICENSE.txt`, `10,174 B`, sha256₁₂ `0d542e0c8804`, read at **`master`**), `477★`, pushed `2026-11-03`. *"Manages execution of untrusted code in secure sandboxes"*, and it is what Open edX runs in production.
+
+🔴 **This base had shelved `edulinq/autograder-server`, filed `autograder-py` and `code-dot-org/javabuilder` this pass, and published patterns in which an agent writes code that then RUNS — all of them arbitrary-code-execution surfaces pointed at a machine inside a school network, and not one named the component that contains it.** A pattern that omits the sandbox is not incomplete; it is an unsafe instruction. 🟢 **Now a filing requirement: any pattern executing model-generated or learner-submitted code must name its sandbox.** `P116` is written that way; retrofitting the older patterns is `ACTION TJ`.
+
+### 🟢 `713-I` — three LAYERS that existed as scattered points are now whole, and the joins are worth more than the count
+
+| layer | held before p713 | added at p713 | the stack now |
+|---|---|---|---|
+| **LMS interoperability** | nothing standards-shaped; every tutor row hand-rolls launch and grade-return | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) (MIT, `203★`) · [`instructure/qti`](https://github.com/instructure/qti) (MIT, `8★`) · [`instructure/common-cartridge-viewer`](https://github.com/instructure/common-cartridge-viewer) (MIT, `95★`) | 🟢 launch + identity + roles + grade-return, assessment interchange, course-content import. **An agent can enter an LMS as a TOOL rather than as a plugin — and an LTI launch carries institutional authorisation, so it needs no student token at all, which is the standards-conformant answer to `711-F`** |
+| **learning-record data** | the knowledge-tracing cohort, which presupposes an event stream and never names one | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) (MIT, `42★`) · [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) (MIT, `12★`) | 🟢 **emit → validate → persist on a published standard.** Tutor telemetry becomes portable between a Moodle, a Canvas and a bespoke app. Holder *Learning Pool* (UK/Ireland) — the EMEA anchor for this layer |
+| **assessment delivery** | item generation terminating in a JSON blob | [`edulinq/quiz-composer`](https://github.com/edulinq/quiz-composer) (MIT, `21★`) · [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) (MIT, `16★`) · [`edulinq/lms-toolkit`](https://github.com/edulinq/lms-toolkit) (MIT, `15★`) | 🟢 **single source → PDF / HTML / Canvas / Gradescope**, plus the client to the autograder server already shelved |
+
+🔵 **`713-I`'s transferable point: this base's binding constraint has MOVED.** `704-B` named the promotion leak — finds that never reach a shelf. The next one is **layer incompleteness**: a half-filed layer is unusable though every row in it is real, and it is **invisible to every count this base publishes**, because the counts measure rows and the defect is in the joins. `ACTION TK` registers a layer census.
+
+### 🟢 `713-J` — `67,100★` of permissive retrieval infrastructure, one `user:` query from a row held since `DeepTutor`
+
+| Repo | Licence (from the bytes) | ★ | tier |
+|---|---|--:|---|
+| [`HKUDS/LightRAG`](https://github.com/HKUDS/LightRAG) | 🟢 MIT · `1,070 B` · `0c1692456405` · *"LightRAG Team"* | **`40,609`** | graph retrieval — **a curriculum IS a graph** (prerequisite → topic → objective → item), and *"what must the learner know first"* is a graph query a chunk retriever cannot answer |
+| [`HKUDS/RAG-Anything`](https://github.com/HKUDS/RAG-Anything) | 🟢 MIT · `1,088 B` · `68c9fc511bb1` | `24,463` | multimodal — because course material is a scanned worksheet, a deck and a photographed whiteboard, not text |
+| [`HKUDS/MiniRAG`](https://github.com/HKUDS/MiniRAG) | 🟢 MIT · `1,067 B` · `e76d815cd0c0` · 🔴 **individual holder** *"Gustavo Ye"* | `2,028` | small-model tier — the only shape that fits the `55%` of LATAM universities UNESCO measured with **no AI budget** |
+
+🔴 **Caveats filed WITH them: `MiniRAG` was last pushed `2025-10-16` — over a year stale** (verified ALIVE at `main` on `2026-11-08`), and its grant names an individual where its four siblings name the lab. `LightRAG`'s `446` open issues are a hot project's maintenance load, not a defect — pin a commit.
+
+### 🔴 `713-K` — this base is the obvious customer for the compliance instrument it just shelved
+
+[`aboutcode-org/scancode.io`](https://github.com/aboutcode-org/scancode.io) — Apache-2.0, `226★`, pipelined software composition analysis. 🔴 **The honest reading: `713-B` is a licence-detection failure in this base's OWN instrument, at `1,005★`, in this same pass.** These shelves exist because licence posture decides what Globant may ship, and the hand-rolled probe would have mis-addressed `8 / 28` subjects. 🟢 It is also the provenance artefact for an EU AI Act dossier (`P114`) — sponsored by the European Commission and NLnet NGI0. `ACTION TL`: evaluate it as the backing instrument for `make hooks`' licence gate.
+
+### 🔵 `713-E` — five byte-identical grant groups, and each one buys something
+
+| sha256₁₂ | bytes | subjects | what it settles |
+|---|--:|---|---|
+| `7eb48830c022` | `1,071` | `edulinq/autograder-py`, `quiz-composer`, `lms-toolkit` — **and the EXISTING `edulinq/autograder-server` row** | 🟢 uniform org grant, and the earlier row's reading is **independently corroborated a pass later** |
+| `68c9fc511bb1` | `1,088` | `HKUDS/RAG-Anything`, `VideoAgent`, `LightReasoner` | 🟢 one lab, one grant, three artefacts |
+| `cfc7749b96f6` | `11,358` | `moodlehq/moodleapp` (`COPYING.txt`), `aboutcode-org/scancode.io` (`LICENSE`) | 🟢 the same stock Apache bytes under **two different filenames** — `713-B` and `713-E` meeting |
+| `c71d239df917` | `11,357` | `aiverify-foundation/moonshot-cicd`, `code-dot-org/javabuilder` | 🟢 stock Apache-2.0, **no copyright line in the payload** |
+| `99a909b026f0` | `1,070` | both `LearningLocker` rows | 🟢 uniform org grant, in a lowercase `license` |
+
+🟢 **`30 / 30` SPDX values agree with the payloads; `0` divergences, `0` `NOASSERTION`. `12 / 28` fell into a known group, which is where the verification budget went instead.**
+
+---
+
 ## 🆕 2026-11-08 (p712) — 🟢 **FIVE FOUNDATIONS, ALL KNOWLEDGE TRACING, AND ONE CARRIES AN MIT GRANT WITH NO IDENTIFIABLE LICENSOR**
 
 [`foundations.md`](foundations.md) **`280` → `285`** rows (arity `285/285` at `5` columns, `0` ragged; `285` distinct subjects, `0` duplicated). [`../agents/top.md`](../agents/top.md) **`236` → `252`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `118`**.
