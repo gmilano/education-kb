@@ -124,6 +124,29 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🟢 p701 — North America: the demand leg nils a **41st** time, and the region's finding is a *structural* gap in its K-12 data layer
+
+🔴 **The mandated leg (`AI education North America 2026 adoption regulation players`) again returned nothing this page did not hold** — market-research teasers, advocacy trackers and content blogs. 🟡 **It also returned essentially no Canada or Mexico**, which is worth recording: "North America" in these sources means the United States, so the region's non-US two-thirds is an **informed gap**, not covered ground.
+
+🟢 **Policy, read this pass and dated, because deadlines are what an engagement plans against:**
+
+| Instrument | What it does | Date that matters |
+|---|---|---|
+| State legislative volume (MultiState tracker) | **`134` AI-in-education bills across `31` states**, concentrated on data privacy, classroom restrictions and curriculum | 2026 session |
+| **North Carolina Session Law 2026-41** | Staged mandate: **state model policy by `2026-12-31`**, local district policies by `2027-06-30`, teacher training by `2028-06-30` | three hard dates |
+| **California AB 1159** | Bars the use of student data to **train** AI models | enacted |
+| **Idaho SB 1227** | Privacy protections for school AI tools; **bars AI as the primary basis for grading or discipline**; parental opt-out from student-facing tools | enacted |
+| **New York A 9190** | Would limit classroom AI use to **grade 9 and above**, excepting diagnostics and special education | pending |
+| District of Columbia policy | Non-binding, but **bans AI from grading and discipline decisions** | in force |
+| Maryland, Idaho, Oklahoma, Virginia | 2026 laws requiring **both** state guidance **and** district-level policies | 2026 |
+| **K-12 AI Literacy and Readiness Act of 2026** | Advanced by the House Education and Workforce Committee | federal, in progress |
+
+🔵 **The common denominator across almost every instrument above is a prohibition on autonomous grading and discipline, plus a provenance duty on student data.** That is a product constraint, not a compliance footnote: a North American deliverable must keep a human decision-maker in the loop on any consequential judgement and must be able to show what the model saw. The grounding assets filed at p700 are the right starting point.
+
+🟢 **New at p701 — the measured structural finding, and it is about supply, not policy (`T138`).** The `topic:powerschool` leg returned exactly **one** permissive artefact: [`sriehl/PowerSchool-Student-Map`](https://github.com/sriehl/PowerSchool-Student-Map), MIT, `8★`, © **2019**, **last push `2024-03-27`**. PowerSchool holds most American K-12 student records and has, in effect, **no maintained open-source extension layer**. 🔵 **Canvas is the opposite** — `topic:canvas-lms` returned a live, maintained, almost entirely MIT client layer, of which [`jjuanrivvera/canvas-cli`](https://github.com/jjuanrivvera/canvas-cli) (`20★`, Go) and [`leejamesss/cmu-cli`](https://github.com/leejamesss/cmu-cli) (`6★`, Carnegie Mellon, spanning **Canvas + Piazza + Gradescope + Ed Discussion**) were filed this pass.
+
+🟢 **Opportunity, stated as a bid difference.** For **higher education**, start from the maintained Canvas client layer and price the integration as configuration. For **K-12**, price PowerSchool integration as **bespoke build against a district-mediated vendor API** — and note that `cmu-cli`'s four-system shape is the real American campus topology, so "integrate with the LMS" is always an integration with four or five products.
+
 #### 🟢 p700 — North America: the demand leg nils a **40th** time, and the region's product this pass is three *grounding* assets found by querying owners this base had already filed
 
 🔴 **The mandated leg returned nothing novel, again, and now with a denominator.** `AI education North America 2026 adoption regulation players` produced market-research teasers and content blogs. Every checkable fact it carried is already on this page: the **Gallup April 2026** reading (>`60%` of college students using AI weekly against roughly half of institutions discouraging it), the **$169M** federal commitment to responsible AI in higher education (January 2026), the `36–38%` regional market-share range, and the Technavio `86%` vendor figure. **`6/6` held, `0` candidate-novel, `0` adoptable.** The leg named **no vendor, no district and no regulator** — its fourth consecutive pass doing so.
@@ -564,6 +587,17 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🟡 p701 — EMEA: the high-risk deadline that guidance is still being published against **may have moved by 16 months**, and that discrepancy is the region's most actionable fact
+
+🔴 **Two incompatible dates for the same obligation were in circulation when this pass read them, and both are being published as current.** Education AI is an **Annex III high-risk** category under the EU AI Act. One body of guidance states the high-risk duties — conformity assessment, human oversight, EU database registration — apply from **August 2026**. A later reading reports the **Digital Omnibus** moved stand-alone Annex III systems to **2 December 2027** and AI embedded in regulated products to **2 August 2028**, with formal adoption still being completed at the time of reading.
+🟢 **Do not resolve this from secondary sources, and do not let a client resolve it from a vendor blog.** 🔵 **The planning consequence is asymmetric and that is what makes it decidable**: if you build to the earlier date and it moved, you carry cost early; if you build to the later date and it did not move, you are non-compliant in a sector where the customer is often a public body. **Build to the earlier date; verify against the Official Journal before contracting.**
+
+🟢 **Other EMEA readings this pass (secondary, flagged as such):** the European AI-in-education market at ≈ **$2.64B (2026)**; **Finland, Estonia and the Netherlands** named as K-12 integration leaders; a UK commitment of **£4M** for AI lesson-planning and marking tools, under a light-touch principles-based approach via existing regulators rather than a dedicated statute; and Dubai's **KHDA** having issued explicit responsible-AI guidance to private schools — the Gulf's most concrete education-specific instrument. 🔴 **One statistic is worth the engagement's attention precisely because it is a gap: only ~`10%` of institutions are reported to have formal AI-use guidelines.** Adoption is ahead of governance here as it is in LATAM.
+🟡 **Africa and most of Eastern Europe returned nothing education-specific on the mandated leg.** Recorded as an **informed gap**: EMEA coverage on this page is EU + UK + Gulf, and should not be read as the region.
+
+🟢 **New at p701 — two placed supply findings, both on named-institution or named-national-content evidence.** [`xieyanran/chalmers-calendar-sync`](https://github.com/xieyanran/chalmers-calendar-sync) (MIT, **`53★`**, the highest-starred novel repository filed this pass) reads **TimeEdit** as well as Canvas — TimeEdit being the timetabling system across much of Nordic and UK higher education and **the only European scheduling read path on these shelves**. [`yusuferdemyamali/engelsiz`](https://github.com/yusuferdemyamali/engelsiz) (MIT, `5★`) ships **Turkish Wikipedia, maps of Türkiye** and a **fully local AI assistant** for offline use — effectively a Kolibri for Türkiye, with the on-device model Kolibri lacks.
+🔵 **Opportunity:** EMEA's distinguishing requirement is **documentary** (conformity assessment, oversight records, registration) and increasingly **sovereign** (local model, local data). `engelsiz` is the shape that satisfies both at once, and `chalmers-calendar-sync` is the hook into scheduling data that EU student-facing products need and American-built tools do not have.
 
 #### 🔴 p700 — EMEA: the leg reproduced the superseded Annex III date a **SEVENTH** time, and the region's one new row is a university lecture course
 
@@ -1120,6 +1154,26 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟢 p701 — APAC: three statutes now name education as high-risk, and the region supplied the **majority** of this pass's verified rows
+
+🟢 **Regulation, read this pass — APAC is no longer the "voluntary" region:**
+
+| Jurisdiction | Instrument | Status / date |
+|---|---|---|
+| **South Korea** | **AI Basic Act** | **In force `2026-01-22`**; enforcement decrees still being finalised, with a guidance-first grace period through 2026 |
+| **Vietnam** | **Law 134/2025/QH15** (risk-based AI framework) | **Effective `2026-03-01`** |
+| **Vietnam** | **Decision 33/2026/QD-TTg** | Names high-risk AI in six sectors **including education** (automated assessment, behavioural systems) |
+| **Australia** | **TEQSA** | Requires **all** higher-education providers to file institutional action plans addressing generative-AI risk |
+| **Singapore** | MAS AI Risk Management Guidelines | In consultation; covers third-party AI providers |
+| **Indonesia** | Presidential Regulation on the national AI roadmap | Being finalised |
+| **China** | Most comprehensive regional framework | In force |
+| **Japan** | Light-touch voluntary governance | Unchanged |
+
+🔴 **Vietnam is the one to brief a delivery lead on.** It is the clearest case in the region of a statute **naming education explicitly as high-risk**, with automated assessment called out, and its effective date (`2026-03-01`) has **already passed**. 🔵 **EU spillover compounds this:** an APAC ed-tech vendor selling proctoring or admissions tooling into EU schools is caught by Annex III regardless of local law — so the binding constraint for an APAC product with export ambition is **whichever of the two regimes is stricter**, and that is currently the EU's.
+
+🟢 **Supply: APAC dominated this pass, and every placement came from content or grant payload — never an account field.** [`woolimi/robotics-roadmap`](https://github.com/woolimi/robotics-roadmap) (`95★`, Korean robotics self-study curriculum — 🔴 **but see `T135`: MIT shell, CC BY-NC-SA 4.0 lessons**); [`TTNAN/yinshi`](https://github.com/TTNAN/yinshi) (`72★`, classical-poetry reader with pinyin **corrected to China's 统编 unified textbook readings**); [`zhuangzhaoyeye/llm_course`](https://github.com/zhuangzhaoyeye/llm_course) (`41★`, MIT first-principles LLM curriculum); [`cyberdaddyleo/workstation-subject-teacher`](https://github.com/cyberdaddyleo/workstation-subject-teacher) (`33★`, 🔴 **custom non-commercial — do not ship**); [`Famalhaut04/canvas-weekly-hub`](https://github.com/Famalhaut04/canvas-weekly-hub) (`18★`, CityU Hong Kong); [`JERRIYHAN/tongji-online`](https://github.com/JERRIYHAN/tongji-online) (`12★`, Tongji); [`Mikecode985/code-tutor-desktop`](https://github.com/Mikecode985/code-tutor-desktop) (MIT, targets **计算机二级**, China's National Computer Rank Examination Level 2); [`euron-sde-team/euron-open-lms-mobile-application`](https://github.com/euron-sde-team/euron-open-lms-mobile-application) (MIT, **placed APAC on the grant payload** — the copyright holder is constituted as a *Private Limited* — offline-video native classroom).
+🔵 **Opportunity, and it is a licence-diligence opportunity as much as a build one.** APAC has the deepest permissive supply on these shelves **and** the two worst licence traps found this pass (`T135`, `T139`), both of which read as *"unknown licence"* to an automated gate and both of which are written in a language an English-language review may not resolve. A studio that does payload-level, translated licence diligence can use material competitors will either misuse or wrongly discard. 🟢 **Curriculum alignment is the product moat**: `yinshi` and `code-tutor-desktop` are valuable because they target a *named national instrument*, which is the hardest thing for a generic tool to retrofit.
+
 #### 🟢 p700 — APAC: the leg was the thinnest of the four, and the region still gained the pass's best-provenanced agent row and a `1,230★` course corpus
 
 🔴 **The leg nilled on education specifically.** `AI education APAC 2026 adoption regulation players` returned enterprise-AI material — Boomi, Forrester, Omdia, TechRepublic — with the only education items being a promotional **Acer Edu Summit Asia Pacific 2026** listing and, mis-regioned, a UK higher-education story. It named **no education ministry, no national AI-in-schools policy and no regional vendor share**. `0` candidate-novel facts. 🔵 **Written down rather than left as silence:** APAC was the weakest of the four regional legs this pass, and the gap is specifically *national policy instruments* — the thing this region's buyers actually act on.
@@ -1590,6 +1644,25 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🟢 p701 — LATAM: adoption is near-universal, governance is not, and `T130`'s channel is confirmed a **second** time — the supply is real and lives under `5★`
+
+🟢 **Adoption, from the strongest sources this page has for the region:**
+
+| Reading | Figure | Source |
+|---|---|---|
+| Higher-ed students actively using AI | **`92%`** | Digital Education Council LATAM survey 2026 (**>`30,000` responses, `29` institutions**) |
+| Higher-ed faculty actively using AI | **`79%`** | same |
+| Institutions using AI in ≥1 area of activity | **`87%`** | UNESCO **IESALC**, launched at Digital Learning Week 2026 |
+| Regional economies with an AI strategy in place or in development | **`85%`** of `20` | regional index |
+| …of which **explicitly allocate budget** in the national instrument | 🔴 **`2` — Brazil and Colombia only** | same |
+
+🔴 **The gap is the whole opportunity, and both independent sources name it the same way.** IESALC's headline is that **governance lags adoption**, and that adoption is driven by faculty, researchers and students rather than by institutional policy. DEC's is that `79%` faculty use is **not translating into pedagogical integration**, and that students are asking for clearer guidance. 🟢 **So the LATAM buyer is not buying capability — they already have it, informally and ungoverned. They are buying governance, measurement and integration**: an AI-use policy that survives a ministry audit, a way to show what students are actually doing, and curriculum integration that outlives the enthusiast who started it. 🔵 **`85%` strategies against `2` funded instruments** is the same pattern at national scale: strategy is abundant, budget is scarce, so a proposal priced against a national AI budget line will usually find none.
+🟡 **Regulation: the mandated leg returned no LATAM-specific AI-in-education instrument.** Recorded as an **informed gap** rather than as an absence — the one regulatory item the leg surfaced was South Africa's draft national AI policy, which is outside the region and was abrogated in April 2026.
+
+🟢 **`T130` confirmed independently at p701, and this matters because this base declared LATAM's supply nil six times before p700 found the cause.** The Spanish/Portuguese `topic:` heads, windowed by `created:`, returned **`255` distinct repositories, `224` novel against the `5,553` slugs held, `65` novel *and* permissive** — and **every one of the `65` sits at or below `4★`.** The star floor, not the region, was the nil.
+🟢 **Six LATAM rows filed this pass, placed on named national instruments, not on owner accounts:** [`ygorsmc/enem-por-foto`](https://github.com/ygorsmc/enem-por-foto) (MIT, `2★` — marks an **ENEM** essay from a **photograph of the handwritten manuscript**, over **WhatsApp and Telegram**); [`LucasSpinola/enem-llm-benchmark`](https://github.com/LucasSpinola/enem-llm-benchmark) (MIT — free-model accuracy on ENEM **by subject area**); [`matheusmontelro/plataforma-agentes-ia`](https://github.com/matheusmontelro/plataforma-agentes-ia) (MIT — educational agent platform built *para instalação própria*); [`JimmyAlter/estudia`](https://github.com/JimmyAlter/estudia) (MIT — practice against your own campus's classes at **UTN/UBA**, Argentina); [`dduenhas/globo-interativo`](https://github.com/dduenhas/globo-interativo) (MIT, **BNCC**-aligned 3D globe); [`victinjr199xs-cyber/MisterALG`](https://github.com/victinjr199xs-cyber/MisterALG) (MIT — **Portugol**/VisuAlg to production languages); plus [`chiarorosa/projeto-horizonte`](https://github.com/chiarorosa/projeto-horizonte) (Apache-2.0, corporate L&D with RAG and agents) and [`vaniago/kit_leitura_academica`](https://github.com/vaniago/kit_leitura_academica) (MIT, *fichamento* reading skills).
+🔵 **`enem-por-foto` is the row to show a client.** Handwritten input over WhatsApp is not a degraded version of a web essay grader — **it is the only honest reading of the actual constraint**, because ENEM's essay is handwritten and WhatsApp is the channel candidates already have. A `2★` repository that gets the channel right is worth more to a LATAM bid than a `40,000★` one that assumes a browser and a keyboard. 🟢 **And `enem-llm-benchmark` is the measurement a LATAM proposal needs**: per-area accuracy of free models on the national examination, which is the first question a Brazilian institution asks.
 
 #### 🟢 p700 — LATAM: **the standing "supply nil" conclusion is overturned, and the cause was this base's own star floor.** `108` novel permissive repositories, `14` filed, including a complete MIT national curriculum
 
