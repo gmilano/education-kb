@@ -133,6 +133,17 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🔴 p709 — North America: the demand leg nils a **48th** time, and p709's `18`-row supply cohort again has **ZERO** North American members — second pass running
+
+🔵 **Demand leg, as prescribed:** `AI education North America 2026 adoption regulation players`. 🔴 **Nil on novelty, and measured rather than asserted this time.** Every marker the leg returned was grepped against this base's own `intel/` before being written: `North Carolina Session Law 2026-41` (**`24`** existing occurrences), `134 bills / 31 states` (**`30`**), `Maryland`'s AI-coordinator package (**`59`**), `MultiState`'s tracker (**`32`**), the `60%`-of-teachers Gallup reading, the `55%` of principals not restricting access, and the `70%` of European and North American institutions with AI guidance. **`0` facts this base did not already hold.**
+
+🔴 **The supply nil is the finding, and it now has a shape AND a repeat.** p709's productive channel was again the **institution-bound server** — a repository named after one university's own portal or catalogue (`709-C`). It produced `4` EMEA rows and `4` APAC rows. **It produced `0` North American rows, exactly as at p708.** Two consecutive passes, same channel, same nil.
+
+🟡 **Why, stated as a market property rather than a sweep failure — and p709 can now name the mechanism precisely.** The institution-bound servers filed this pass wrap **`u:find`** (Vienna's own catalogue), **`LearnUs`** (Yonsei's own portal) and **Shinshu's own syllabus system** — all *institution-operated* systems. North American higher education overwhelmingly runs **vendor-operated** systems instead: Canvas, Banner, Workday, PeopleSoft. **A vendor system has no per-institution surface to name a repository after**, which is why `canvas-mcp` exists on this shelf as a *product* integration while `ufind-mcp` exists as an *institution* integration — and it is also why `709-C` refuses to place product integrations by region at all.
+
+🟢 **Opportunity, as a consequence of that asymmetry:** in North America the reusable asset is **not** a campus server, because there is no self-operated campus surface to wrap. It is the **tenant-configurable product integration** — one Canvas or Banner adapter plus per-institution configuration — and the regulatory driver is now concrete enough to scope against: **`134` bills across `31` states**, with **North Carolina's `Session Law 2026-41` setting hard dates** (state model policy by `2026-12-31`, local policies by `2027-06-30`, teacher development by `2028-06`). 🟡 **The honest caveat this base keeps repeating because it keeps being true: Canada and Mexico returned nothing in this leg, again.**
+
+
 #### 🔴 p708 — North America: the demand leg nils a **47th** time, and p708's supply cohort has **ZERO** North American members. The gap is now specific enough to act on
 
 🔵 **Demand leg, as prescribed:** `AI education North America 2026 adoption regulation players`. 🔴 **Nil on novelty, and measured rather than asserted.** Every marker it returned was already published on this page or on [`../intel/trends.md`](trends.md), each checked by string: `134` bills across `31` states · Maryland **`SB 720`** (state guidance *and* mandatory district policy, one of four such states with Idaho, Oklahoma and Virginia) · New York **`A 9190`** (classroom AI restricted to grade 9+, with diagnostic and special-education carve-outs) · California **`AB 1159`** (student data barred from model training) · Ohio's July-2026 written-policy deadline · North Carolina's **`$10M`** **Khanmigo** earmark · the **`K-12 AI Literacy and Readiness Act of 2026`** · Gallup's **`60%`** of US teachers using AI tools · the **April 2026 ADA** web-accessibility deadline for large public institutions · UNESCO's **`70%`** of institutions in Europe and North America with guidance in place or in development. **`10 / 10` already held.**
@@ -697,6 +708,24 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🟢 p709 — EMEA: the demand leg nils a **48th** time, but EMEA was again the strongest SUPPLY region — `EMEA 18 → 22` on the agent shelf, and it is **no longer the thinnest column**
+
+🔵 **Demand leg, as prescribed:** `AI education EMEA 2026 adoption regulation players`. 🔴 **Nil on novelty, measured:** `Digital Omnibus` / `Regulation (EU) 2026/1744` (**`65`** and **`119`** existing occurrences in this base's `intel/`), the `2026-12-02` stand-alone Annex III and `2028-08-02` embedded-product dates, the `$2.64B` 2026 European market reading, Finland/Estonia/Netherlands as K-12 leaders, the `10%`-of-institutions-with-formal-guidelines figure, UNESCO's `68` countries, the OECD `2026` Digital Education Outlook, Dubai's KHDA guidance. **`0` new facts.**
+
+🟢 **The supply side is where EMEA moved, and it moved most.** `4` of p709's `14` agent rows are EMEA, taking the column **`18` → `22`** and **off the bottom of this shelf for the first time** (`LATAM 19` is now last). All four place on **single-jurisdiction** evidence, which is the test `709-C` introduced:
+
+| row | placement evidence | class |
+|---|---|---|
+| [`ParadoxTR/ufind-mcp`](https://github.com/ParadoxTR/ufind-mcp) | **`u:find`**, the University of Vienna's own course catalogue | institution-operated system — Austria |
+| [`fborrasumh/planificaia-docente`](https://github.com/fborrasumh/planificaia-docente) | the **grant payload's own copyright line** names *Universidad Miguel Hernández* | strongest channel on this shelf — Spain |
+| [`balejosg/tiza`](https://github.com/balejosg/tiza) | **Comunidad de Madrid** curriculum stages, via a named sibling corpus | curriculum authority — Spain |
+| [`balejosg/mcp-file-management-ra1`](https://github.com/balejosg/mcp-file-management-ra1) | **`DAM` / `RA1`**, a Spanish `FP` vocational qualification | national qualification framework — Spain |
+
+🟢 **And EMEA produced the pass's two most *structurally* interesting assets, both on other shelves.** [`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid) (MIT) is **curriculum law as queryable data with per-element provenance** — literal bulletin text, printed-page citations, stable codes, and a `comprobar` command that checks whether a document's codes exist. And [`balejosg/OpenPath`](https://github.com/balejosg/OpenPath) (AGPL-3.0, `9★`) / [`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) (source-available, **not** open source) are **one open-core split captured on both sides** — see [`../verticals/solutions.md`](../verticals/solutions.md).
+
+🟢 **Opportunity:** the EU AI Act makes admissions, assessment and exam scoring **high-risk**, which means an EMEA engagement's binding deliverable is **evidence**, not features — and `normativa-madrid` is the first asset this base holds that produces evidence *natively*: a lesson plan or assessment generated against it can cite the norm, the location and the printed bulletin page it came from. 🟡 **Paired with `planificaia-docente`'s teacher-decides loop, that is a documentable human-oversight story for one Spanish region — and the reusable part is the pattern, since the corpus itself is Madrid-only.**
+
 
 #### 🟢 p708 — EMEA: the demand leg nils a **47th** time, but the SUPPLY side moved more here than anywhere else — `EMEA 15 → 18` on the agent shelf, and all three subjects are NATIONAL or flagship-institution systems
 
@@ -1377,6 +1406,24 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟢 p709 — APAC: the demand leg nils a **48th** time, but the institutional channel produced `4` APAC rows — `APAC 52 → 56`
+
+🔵 **Demand leg, as prescribed:** `AI education APAC 2026 adoption regulation players`. 🔴 **Nil on novelty, measured:** Korea's `AI Basic Act` in force January 2026 (**`87`** existing occurrences), Vietnam's July 2026 high-risk designation covering education (**`206`** occurrences of `Vietnam`), China's generative-AI measures and the `CNY 50M` penalty ceiling, Japan's cooperation-based AI Act, Singapore's `AI Verify` (**`27`**), Australia's `TEQSA` institutional action plans (**`52`**). **`0` new facts.**
+
+🟢 **Supply moved `4` rows, all on single-jurisdiction evidence (`709-C`):**
+
+| row | placement evidence |
+|---|---|
+| [`YOONPYOGitHub/yonsei-portal-MCP`](https://github.com/YOONPYOGitHub/yonsei-portal-MCP) | **Yonsei University**'s own portal — `LearnUs` LMS **and** library: courses, deadlines, notices, attendance (`3★`, `34,895 B` README — the most reproducible of the cohort) |
+| [`nesspencilrocket/shinshu-syllabus-mcp`](https://github.com/nesspencilrocket/shinshu-syllabus-mcp) | **Shinshu University** syllabus search |
+| [`mohanreddythippireddy14-cell/CogAIt`](https://github.com/mohanreddythippireddy14-cell/CogAIt) | **`JEE` / `NEET`** — India's national entrance examinations, Socratic-questioning tutor across `8` roles |
+| [`iqueipopg/QUILL`](https://github.com/iqueipopg/QUILL) | a **`Sogang · Spring 2026`** course badge — 🟡 placed with published counter-evidence (the owner's portfolio is Madrid-based), so a later pass can overturn it from the cell itself |
+
+🟢 **The structural reading: APAC is the region where the institution-bound channel works best, and p709 can say why.** Japanese and Korean universities **operate their own** syllabus and portal systems (`LearnUs`, Shinshu's syllabus service), so each institution is a nameable surface — the inverse of North America's vendor-operated estate. **`56` of `206` rows on this shelf are APAC, more than double any other placed region, and it is this property rather than sweep effort that produces that.**
+
+🟢 **Opportunity:** a Korean or Japanese engagement can start from a **real working precedent** of the exact artefact being asked for — an authenticated institutional portal exposed to an LLM client — and the compliance frame is specific: Korea's `AI Basic Act` obliges transparency, risk assessment, human oversight and documentation for high-impact systems, with the grace period running through 2026. 🟡 **`CogAIt` additionally marks the high-stakes-exam segment (`JEE`/`NEET`) where a Socratic refusal to give answers is a *product* decision, not a safety afterthought.**
+
+
 #### 🔴 p708 — APAC: the demand leg nils a **47th** time, and p708 adds **NO** APAC supply row. The nil is stated because APAC's `52` rows make silence here look like coverage
 
 🔵 **Demand leg, as prescribed:** `AI education APAC 2026 adoption regulation players`. 🔴 **Nil on novelty, measured by string:** South Korea's **AI Basic Act** in force **`22 January 2026`** with a guidance-first grace period through `2026` · Vietnam's **`Decision 33/2026/QD-TTg`**, whose high-risk list names **education** among six sectors with automated assessment as a worked example · China's mandatory registration and content-labelling regime · Australia, New Zealand and Malaysia embedding *mandatory guardrails* into existing law rather than drafting standalone AI statutes, with Australia's proposal naming education high-risk · **TEQSA** requiring every Australian higher-education provider to file an institutional action plan on generative-AI risk · Singapore's toolkit-and-assurance route · Japan's light-touch, voluntary posture · and the EU AI Act's **extraterritorial spillover** onto APAC ed-tech vendors selling into Europe. **`9 / 9` already held.**
@@ -1966,6 +2013,23 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🔴 p709 — LATAM: the demand leg nils a **48th** time, and the supply side returned **ZERO REPOSITORIES** — not zero novel ones. `LATAM 19` stands still and is now the thinnest column
+
+🔵 **Demand leg, as prescribed:** `AI education LATAM 2026 adoption regulation players`. 🔴 **Nil on novelty, measured:** the Digital Education Council LATAM survey at `92%` of students / `79%` of faculty (**`41`** existing occurrences of `Digital Education Council`), UNESCO `IESALC`'s `87%` of institutions using AI in at least one area (**`147`** occurrences), the `85%`-with-an-AI-strategy / **only Brazil and Colombia budget it** reading, Brazil's National AI Strategy, Mexico's National Digital Strategy, Tecnológico de Monterrey as the survey's academic partner. **`0` new facts.**
+
+🔴 **The supply finding is the one worth recording, and it is stronger than a nil — it is an EMPTY CHANNEL.** Eight institution-shaped LATAM legs were run:
+
+`mcp server universidad siu guarani` · `sigaa mcp server` · `moodle api agente alumnos python` · `unam universidad agente IA` · `usp universidade agente IA alunos` · `tec monterrey IA agente educacion` · `enem vestibular IA agente` · `mcp server escola brasil educacao`
+
+→ **`total_count: 0` in aggregate: `0` distinct subjects. Nothing was filtered out, because nothing came back.** The channel was confirmed live in the same minute (`search` quota `30` remaining; neighbouring legs returned hits), so this is **an absence of supply, not an absence of search.**
+
+🟡 **Four broader Spanish/Portuguese legs did return `28` subjects, `3` novel and permissive, and all three failed placement on their own evidence** — the fullest of them being [`jessic-amendes/acelera-ai-educacao`](https://github.com/jessic-amendes/acelera-ai-educacao) (MIT, alive), which scores **`0`** Brazil-only institution tokens (`INEP`, `IDEB`, `Censo Escolar`, `ENEM`, `SAEB`, `BNCC`) and whose README documents a `comparar_paises()` function grouping countries by World Bank `Income Group`. **It is multi-country by construction, so filing it as LATAM would have been wrong by its own documentation.** Full table in [`../agents/trending.md`](../agents/trending.md) `709-E`.
+
+🔴 **And a near-miss worth more than the nil: [`Marcoh05P/EdOU`](https://github.com/Marcoh05P/EdOU) was one unread regex away from being filed here.** A token scan matched `br` **`9` times**; **all `9` are the HTML tag `<br/>`** in its architecture diagrams. **The pressure to fill this exact column is precisely what makes a convenient false positive easy to accept** — see `709-D`.
+
+🟢 **Opportunity, re-stated as a consequence of the asymmetry rather than as a wish.** The LATAM reading on this shelf is now consistent across many passes: **demand is the highest measured anywhere** (`92%` of students, `79%` of faculty, `87%` of institutions) while **institution-bound open-source supply is the lowest** — and the regional AI index's own finding that only Brazil and Colombia fund their strategies explains the mechanism. 🟢 **For Globant, whose LATAM delivery presence is strongest, that gap is the opportunity rather than the obstacle: the region's assets have to be BUILT, not adopted — and the pattern to port is the EMEA one filed this pass, since a Brazilian or Mexican equivalent of [`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid) (BNCC text with per-element provenance and stable codes) does not exist in open source and would be a first.**
+
 
 #### 🟢 p708 — LATAM: the demand leg nils a **47th** time, but a Spanish-language leg the mandate does not contain returned **THREE** unshelved addresses, and `LATAM 16 → 19` on the agent shelf
 
@@ -2654,6 +2718,17 @@ client.
 - 🟢 **The commercial read for the region is the budget line, not the technology.** `55 %` of LATAM universities have no AI budget and public universities have the lowest rate of dedicated funding, which rules out anything that needs hosting. `DSL4-Digital/RefExists` runs **entirely in the browser with nothing to host**, and `OSLL/code-plagiarism` is a PyPI install on a laptop — so the integrity control that EMEA will buy as compliance is the one LATAM can deploy at zero infrastructure cost. **P60** is specified so that the client-side-only subset is a complete deliverable on its own.
 
 ### Global
+
+#### 🟢 p709 — Global: what the `18`-row cohort says about every region, plus two instrument warnings that belong on THIS page
+
+🟢 **(1) The regional census moved, and the direction is the readable part.** `EMEA 18 → 22`, `APAC 52 → 56`, `Global 83 → 89`, **`North America 20` and `LATAM 19` unchanged.** The whole of the placed movement came from **institution-bound** repositories — servers named after one university's own portal, catalogue or syllabus system — which means **this base's ability to place a row by region is now largely a function of whether a region's institutions OPERATE their own systems or BUY them.** Japan and Korea operate; North America buys; EMEA is mixed; LATAM's institution-bound open-source layer is empty (`709-E`).
+
+🔴 **(2) The demand legs nil for the 48th consecutive pass, and p709 measured the nil instead of asserting it.** Each marker the four regional legs returned was grepped against this base's own `intel/` before anything was written: `14` markers checked, **`13` already held with `24`–`206` occurrences each, `1` absent** — and the absent one (`Income Group`) is a World Bank data-grouping field from a repository README, **not a regional fact at all.** 🟡 **The useful conclusion is about the instrument, not the market: these four legs have reached saturation against this base, and a pass that reports them as “researched” without measuring overlap is reporting effort, not information.**
+
+🔴 **(3) Instrument warning that belongs on an intel page: `NOASSERTION` is not “unknown, probably permissive”.** [`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) reports `spdx_id` `NOASSERTION`; its `4,137 B` payload is a bespoke **“Source-Available License 1.0”** that forbids all `Production Use`, **explicitly including “pilots” and “internal institutional rollouts”**. A market map keyed on `spdx_id` would carry that as missing metadata rather than as a prohibition. **Any opportunity on this page that names a platform must be read against the platform's payload, not its badge.**
+
+🔴 **(4) Instrument warning, second: a README's licence claim about a sibling is a claim, not a grant.** [`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid) credits an MIT ancestor that **serves `404` for all five grant filenames** while being alive (`709-G`). **The opportunity in `normativa-madrid` is real; one code path in it is not yet redistributable.**
+
 
 #### 🟢 p708 — Global: what the institutional-agent cohort says about EVERY region, and the one honest instrument warning that belongs on this page
 

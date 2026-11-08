@@ -3,6 +3,72 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p709) — 🟢 **TWO FOUNDATIONS, AND THE SHELF IS NOW MEASURED AS SATURATED ON PLATFORMS — SO THE PRODUCTIVE DIRECTION IS DATA, NOT SOFTWARE**
+
+[`foundations.md`](foundations.md) **`267` → `269`** rows (arity `269/269` at `5` columns, `0` ragged; `269` distinct subjects, `0` duplicated). [`../verticals/solutions.md`](../verticals/solutions.md) **`111` → `113`**. [`../agents/top.md`](../agents/top.md) **`192` → `206`**.
+
+🔴 **The mandated `github trending {industry} AI {year}` leg returned its 37th consecutive nil.** It surfaced `anandpatikat/guru-latihan-dinamis`, `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `rohitg00/ai-engineering-from-scratch` and `TapXWorld/ChinaTextbook` — **`5 / 5` already held.** Full leg-by-leg table in [`../agents/trending.md`](../agents/trending.md) `709-A`.
+
+---
+
+### 🔴 `709-R0` — the saturation measurement, which is the reason only `2` rows were filed and not `20`
+
+`24` canonical open-source education substrates were checked **by slug** against this base before any sweep result was filed:
+
+| checked | result |
+|---|---|
+| `moodle/moodle` · `openedx/edx-platform` · `instructure/canvas-lms` · `sakaiproject/sakai` · `chamilo/chamilo-lms` · `oppia/oppia` · `learningequality/kolibri` · `bigbluebutton/bigbluebutton` · `opencast/opencast` · `apereo/opencast` · `jupyterhub/jupyterhub` · `jupyter/nbgrader` · `ankitects/anki` · `ankidroid/anki-android` · `frappe/lms` · `openeducat/openeducat_erp` · `h5p/h5p-php-library` · `openedx/openedx-app-ios` | 🔴 **all already held** |
+| `h5p/h5p-moodle-plugin` | 🟢 **real hole — filed below** |
+| `kolibri-learn/kolibri` · `apereo/sakai` · `canvaslms/canvas-lms` · `oerpub/oer` · `openboard/openboard` · `concord-consortium/lara` | — not real slugs (the first three are wrong spellings of repositories held under their correct slugs); **`ls-remote` was the arbiter, not the absence of a search hit** |
+
+🟢 **So the platform layer of this shelf is saturated: `18 / 19` canonical substrates held, `1` hole, now closed.** 🟢 **The transferable conclusion is about where to look next, not about what was found: models and LMSs are abundant and permissive; CITABLE, JURISDICTION-ACCURATE CURRICULUM TEXT IS NOT.** Both of p709's rows are read against that — one closes the last platform hole, the other opens the data class.
+
+---
+
+### 🟢 `709-R1` — filed: [`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid), curriculum law as queryable data
+
+| | |
+|---|---|
+| Grant | 🟢 **MIT** — `LICENSE`, `1,065 B`, sha256₁₂ `e5d43db441b9`, read from the bytes at `main` |
+| Liveness | `ls-remote --symref` → `main` @ `59e7c7cb77a3`; pushed `2026-11-04` |
+| Stars | `0` (read from `gh api search/repositories`) |
+| Region | **EMEA** — Comunidad de Madrid, Spain |
+
+What it actually ships: **literal bulletin text** (whitespace normalised, checked against the page it cites), **per-element provenance** (norm, location, printed page; `null` when the text comes from the BOE consolidated XML), **stable codes** (`MAD.EP.MAT.C2.CR.1.1`), and a `comprobar` command that answers whether the codes in a document exist. Coverage for **academic year 2026-27**: Primaria complete (Decreto 61/2022, `25` `MAD.EP.*` sheets), ESO Computer Science / Technology-and-Digitalisation, Bachillerato Computer Science I–II, and the `DAM` FP qualification with its modules.
+
+🟢 **It also publishes its own non-guarantees** — validity after the `revisada` date, a live legal challenge to Decreto 61/2022, coverage limited to what `catalogo` lists. **A corpus that states what it does not cover is worth more than one that implies it covers everything.**
+
+🔴 **Filed WITH a provenance flag** (full measurement in [`../agents/trending.md`](../agents/trending.md) `709-G`): its README cites *“Mint Docente (MIT, mismo autor)”* as the source of the Primaria extractor, but [`balejosg/mint-docente`](https://github.com/balejosg/mint-docente) — **alive** at `main` @ `409eaa23f931` — serves `404` for all five grant filenames and reports `spdx_id` `NONE`. **Madrid corpus usable; the Primaria extractor path needs a grant on the producer before redistribution.**
+
+---
+
+### 🔴 `709-R2` — filed: [`h5p/h5p-moodle-plugin`](https://github.com/h5p/h5p-moodle-plugin), closing a hole between two rows this shelf already held
+
+| | |
+|---|---|
+| Grant | 🔴 **GPL-3.0 — copyleft** — `LICENSE`, **`35,149 B`**, sha256₁₂ `3972dc9744f6`, read from the bytes at `stable` |
+| Liveness | `ls-remote --symref` → **`stable`** @ `a21ab39d4357` |
+| Stars | `—` — **search-index-absent**, see below |
+
+🟢 **Why it matters:** [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) and [`moodle/moodle`](https://github.com/moodle/moodle) have both been held here for many passes — **but the plugin that joins them was missing**, so this base described an H5P-in-Moodle capability without holding the code for it. H5P is the format [`balejosg/tiza`](https://github.com/balejosg/tiza) publishes into (new on [`../agents/top.md`](../agents/top.md) at p709), which makes this plugin the server-side half of that pattern.
+
+🟢 **A cross-check that validated against this base's own published bytes:** the `35,149 B` / sha256₁₂ `3972dc9744f6` payload is **byte-identical to the GPL grant already recorded on [`../verticals/solutions.md`](../verticals/solutions.md) for [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp)** — and `2 B` larger than the `35,147 B` GPL text served for `moodle/moodle`. **This is Moodle's grant forcing GPL on plugins by construction, now observed three times with the same hash.**
+
+🟡 **Two measurement notes worth carrying forward.** **(1)** Its default branch is **`stable`** — not `main`, not `master`. A row verified by guessing the ref would have been recorded dead. **(2)** It is **SEARCH-INDEX-ABSENT**: a `repo:` qualifier returns `total_count 0` while `ls-remote` resolves `stable` and `raw` serves the grant — the `p674` condition exactly. **Its `Stars` cell is `—` because the figure was unreadable, not carried stale or guessed; and a search miss is still not grounds to refuse or retire a row.**
+
+---
+
+### 🔴 `709-R3` — refused here, and why each refusal is cheaper than the row
+
+| subject | licence | why not filed |
+|---|---|---|
+| [`bakrianoo/mini-rag`](https://github.com/bakrianoo/mini-rag) | Apache-2.0, `754★` | 🔴 **The highest-starred novel permissive hit of the pass, and it is a TUTORIAL ABOUT AI, not AI for education** — *“an educational project (step by step) to teach how to build a production-ready RAG application”*. This is the exact failure mode `p699` named; the star count is what makes it tempting. |
+| [`EvolvingAgentsLabs/evolving-agents`](https://github.com/EvolvingAgentsLabs/evolving-agents) | Apache-2.0, `457★` | 🔴 A coding-agent director that walks `CLAUDE.md` — **agent infrastructure, no education bearing.** |
+| [`lbdudc/dsl-xpert`](https://github.com/lbdudc/dsl-xpert) | MIT, `19★` | 🟡 LLM-assisted DSL definition from the same lab as [`lbdudc/ai-tutor-gis`](https://github.com/lbdudc/ai-tutor-gis); **a modelling tool, not an education foundation.** |
+| `Grvrajput/llm-eval-rubric-kit` · `vantionlabs/eval-harness` · `yt2102/skill-grader` · `viceatlas/self-grading-demo` | MIT, `0★` each | 🔴 **Generic LLM-eval kits.** This shelf already holds `microsoft/LLM-Rubric` and the autograder family; four `0★` generic harnesses would be padding, and **`269` rows with no `273rd` beats `273` with four eval demos in it** (`698-A`'s rule). |
+
+---
+
 ## 🆕 2026-11-08 (p708) — 🟢 **ONE ROW FILED, AND IT IS THE SEVENTH MEMBER OF A PROMOTION BATCH THIS BASE DECLARED ON `2026-10-25` AND NEVER WROTE. 🔴 `0 / 7` OF THAT BATCH EXISTED ON ANY SHELF `281` PASSES LATER. 🟢 THE YOUNGEST `81` ROWS ON THIS BASE WERE RE-VERIFIED AND CAME BACK `81 / 81` INTACT, SO `p707`'s LICENCE REVERSAL IS A SINGLETON.**
 
 [`foundations.md`](foundations.md) **`266` → `267`** rows (arity `267/267` at `5` columns, `0` ragged; `267` distinct subjects, `0` duplicated). The agent-side members of the same batch — six of them — are filed at [`../agents/top.md`](../agents/top.md) in this pass; the full measurement is `708-A` in [`../agents/trending.md`](../agents/trending.md). 🔵 Append-only: this section is added at the top and every section below it is retained verbatim.

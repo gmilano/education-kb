@@ -3,6 +3,148 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p709) — 🟢 **FOURTEEN ROWS, `EMEA 18 → 22`, AND A ONE-LINE TEST THAT RECONCILES THIS SHELF'S TWO CONTRADICTORY PLACEMENT RULES**
+
+**`18` subjects filed** (`14` agents, `2` foundations, `2` platforms). [`top.md`](top.md) **`192` → `206`** (arity `206/206` at `6` columns, `0` ragged; `206` distinct subjects, `0` duplicated; region vocabulary `206/206` legal). [`../repos/foundations.md`](../repos/foundations.md) **`267` → `269`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`111` → `113`**.
+
+**Region movement: `EMEA 18 → 22`, `APAC 52 → 56`, `Global 83 → 89`. `North America 20` and `LATAM 19` did not move** — measured, see `709-E`.
+
+🔴 **The mandated legs returned their 37th consecutive nil** — `10` education-bearing addresses, `10 / 10` already held (`709-A`).
+
+---
+
+### 🔴 `709-A` — the mandated legs, 37th consecutive nil, and this time it is total
+
+Run at p709 for the **computed** current year (`2026`, taken from the clock rather than hardcoded). The four global legs and the four regional legs together returned `10` addresses with any education bearing:
+
+| address | leg | held already? |
+|---|---|---|
+| [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | `github trending education AI 2026` | 🔴 yes |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | `github trending education AI 2026` | 🔴 yes |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `github trending education AI 2026` | 🔴 yes |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `github trending education AI 2026` | 🔴 yes |
+| [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) | `github trending education AI 2026` | 🔴 yes |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `top open source AI agents education 2026 github MIT` | 🔴 yes |
+| [`NousResearch/Hermes-Agent`](https://github.com/NousResearch/Hermes-Agent) | `top open source AI agents education 2026 github MIT` | 🔴 yes |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `open source platform education ERP CRM MIT Apache` | 🔴 yes |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `open source platform education ERP CRM MIT Apache` | 🔴 yes |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | `open source platform education ERP CRM MIT Apache` | 🔴 yes |
+
+**`10 / 10` held. `0` of p709's `18` rows came from a mandated leg.** All `18` came from two channels the legs cannot reach: a `gh api search/repositories` sweep under this base's star floor (`24` legs across three sweeps) and **owner expansion** (`5` owners, `96` sibling repositories; one owner — `balejosg` — produced `5` of the `18` rows across three shelves).
+
+🟡 **A note on the ERP/CRM leg specifically, because its failure mode is different and repeatable:** it does not fail by returning held rows, it fails by **returning the wrong industry**. `hcengineering/platform` (Huly, Apache-2.0) and `krayin/laravel-crm` (MIT) are a project tracker and a CRM; neither is education. The one education-shaped hit, `openeducat/openeducat_erp`, has been held for many passes. **The leg's wording asks for ERP and CRM and that is exactly what it returns.**
+
+---
+
+### 🟢 `709-B` — the star channel `p708` declared shut is OPEN, and the useful part is WHICH part of it
+
+`p708` recorded all three star channels closed (`gh api` → `403`, `github.com` HTML → `403`, `img.shields.io` unreachable) and left `7` rows carrying `—`. Measured at p709, at both signs:
+
+| channel | p708 | p709 | note |
+|---|---|---|---|
+| `gh api -X GET search/repositories` | 🔴 `403` | 🟢 **works** | serves `total_count`, `stargazers_count`, `license.spdx_id`, `pushed_at`, `default_branch`; `repo:` qualifiers batchable; `search` quota `30/min` |
+| `gh api repos/{owner}/{repo}` | 🔴 `403` | 🔴 **`403`** | *“GitHub access to this repository is not enabled for this session”* — **session-scoped, and it will never open for a third-party repo** |
+| `raw.githubusercontent.com/…/LICENSE` | 🟢 works | 🟢 **works** | the only first-hand *grant* channel |
+| `git ls-remote --symref` | 🟢 works | 🟢 **works** | real default branch **and** head SHA |
+
+🟢 **The transferable part: the per-repository endpoint and the search endpoint have DIFFERENT authorisation, so a pass that probes only `repos/{owner}/{repo}` will wrongly conclude the whole API is shut and will publish `—` where a number was available.** Every star figure on p709's rows comes from the search endpoint. **`p708`'s seven `—` cells are recoverable by the next pass that reads them this way.**
+
+---
+
+### 🟢 `709-C` — THE TEST: `p669` and `p684` are both right, and one countable question separates them
+
+This shelf has carried two rules that look contradictory:
+
+- **`p669`/`p674`:** a **named institution** in the repository's own files **places** the row.
+- **`p684`:** an **LMS integration target** (Gradescope, Canvas, GitHub Classroom) is an **audience, not a location**, and does **not** place it.
+
+**The separating question is: does the named target exist in exactly one jurisdiction?**
+
+| target named in the repo | jurisdictions | places? | row at p709 |
+|---|--:|---|---|
+| `u:find` (University of Vienna catalogue) | **1** | 🟢 yes | [`ParadoxTR/ufind-mcp`](https://github.com/ParadoxTR/ufind-mcp) → **EMEA** |
+| `LearnUs` (Yonsei University portal) | **1** | 🟢 yes | [`YOONPYOGitHub/yonsei-portal-MCP`](https://github.com/YOONPYOGitHub/yonsei-portal-MCP) → **APAC** |
+| Shinshu University syllabi | **1** | 🟢 yes | [`nesspencilrocket/shinshu-syllabus-mcp`](https://github.com/nesspencilrocket/shinshu-syllabus-mcp) → **APAC** |
+| `JEE` / `NEET` (India's entrance exams) | **1** | 🟢 yes | [`mohanreddythippireddy14-cell/CogAIt`](https://github.com/mohanreddythippireddy14-cell/CogAIt) → **APAC** |
+| `DAM` / `RA1` (Spanish FP qualification) | **1** | 🟢 yes | [`balejosg/mcp-file-management-ra1`](https://github.com/balejosg/mcp-file-management-ra1) → **EMEA** |
+| Comunidad de Madrid curriculum (`ESO`, `Bachillerato`, `FP`) | **1** | 🟢 yes | [`balejosg/tiza`](https://github.com/balejosg/tiza) → **EMEA** |
+| **ILIAS** (LMS, deployed across and beyond DACH) | **many** | 🔴 **no** | [`DenizAltunkapan/ilias-mcp`](https://github.com/DenizAltunkapan/ilias-mcp) → **Global** at `13★` |
+| **Urdu** (official in Pakistan *and* India) | **2** | 🔴 **no** | [`omerfarooq223/UrduPlanner-Agent`](https://github.com/omerfarooq223/UrduPlanner-Agent) → **Global** |
+| Canvas / Gradescope / Brightspace | **many** | 🔴 **no** | `p684`'s refusal, unchanged |
+
+🟢 **The test subsumes `p670`'s results rather than competing with them:** a translated README declares an audience (many jurisdictions), and a *person* has no jurisdiction at all — which is why `p670`'s author with two e-mail domains was not placeable either. 🟡 **`ilias-mcp` is the row that proves the rule costs something:** it is German-authored, named after a German-origin LMS, and the most adopted asset of the pass — and it is still filed `Global`, because ILIAS runs in many countries.
+
+---
+
+### 🔴 `709-D` — two placements were about to be filed off REGEX FALSE POSITIVES, both caught by reading the matched text
+
+The task instruction warns that *“inferences become wrong data”*. Here it is, caught in the act, twice in one pass, with the same instrument (`grep -oiE`) this shelf uses everywhere.
+
+| subject | token | hits | real | false | the false hits were | outcome |
+|---|---|--:|--:|--:|---|---|
+| [`Marcoh05P/EdOU`](https://github.com/Marcoh05P/EdOU) | `br` | **9** | **0** | **9** | the HTML tag `<br/>` in architecture diagrams (plus `browser`×4, `bridge`×1 adjacent) | 🔴 LATAM **refused** → `Global` |
+| [`balejosg/tiza`](https://github.com/balejosg/tiza) | `ESO\b` | **4** | **2** | **2** | the tails of *proceso* and *peso* | 🟡 EMEA **kept**, re-grounded on `2` standalone hits **+** a named sibling corpus |
+
+🔴 **Had the `EdOU` count been trusted, this base would have published a Vietnamese-authored .NET/Angular platform as a LATAM row** — and `LATAM` is one of the two columns this shelf is trying hardest to fill, which is exactly the condition under which a convenient false positive gets accepted.
+
+🟢 **Rule: a locational token is evidence only after its matched text has been read. A match count is not a finding.** `br` is a country code *and* an HTML tag. `ESO` is a Spanish curriculum stage *and* the last three letters of two everyday Spanish words. **Neither collision is exotic; both are in the top of their own candidate's README.**
+
+---
+
+### 🔴 `709-E` — LATAM returned zero REPOSITORIES, not zero novel ones, and the difference is the finding
+
+Written down because **silence looks exactly like coverage.** Eight institution-shaped LATAM legs:
+
+`mcp server universidad siu guarani` · `sigaa mcp server` · `moodle api agente alumnos python` · `unam universidad agente IA` · `usp universidade agente IA alunos` · `tec monterrey IA agente educacion` · `enem vestibular IA agente` · `mcp server escola brasil educacao`
+
+→ **`total_count: 0` in aggregate. `0` distinct subjects — nothing was filtered out, because nothing came back.** (The channel was verified working in the same minute: `search` quota showed `30` remaining and neighbouring legs returned hits.)
+
+Four broader Spanish/Portuguese legs did return `28` distinct subjects, `3` novel and permissive, and **all three failed placement on their own published evidence**:
+
+| subject | licence | why it did not become a LATAM row |
+|---|---|---|
+| [`jessic-amendes/acelera-ai-educacao`](https://github.com/jessic-amendes/acelera-ai-educacao) | 🟢 MIT (`1,071 B`, sha256₁₂ `ec44c1ffbad3`), alive `main` @ `e92cdd6ebaa1` | 🔴 **`0`** hits for Brazil-only institutions (`INEP`, `IDEB`, `Censo Escolar`, `ENEM`, `SAEB`, `BNCC`), and its own README documents a `comparar_paises()` function grouping by World Bank `Income Group` — **multi-country by construction.** Portuguese prose is a language, not a location (`p670`). |
+| `patyfreitasbr/agente-educacional-ia` | MIT | 🔴 last pushed **`2025-05-10`** — `18` months stale |
+| [`balejosg/tiza`](https://github.com/balejosg/tiza) | 🟢 MIT | 🟡 Spanish, but the curriculum it cites is **Comunidad de Madrid** → **EMEA**, not LATAM |
+
+🟢 **Conclusion, stated so the next pass does not redo it: the LATAM gap on this shelf is a SUPPLY gap in institution-bound Spanish/Portuguese education tooling on GitHub, not a search gap.** `LATAM 19` standing still at `206` rows is the honest number. 🟡 **North America `20` also did not move** — its legs returned held rows only, and no North-American institution-bound server surfaced under the star floor this pass.
+
+---
+
+### 🔴 `709-F` — the mandated `curl -sI` check re-tested at both signs: still worthless here, exactly as `p684` found
+
+```
+curl -sI https://github.com/gmilano/negative-control-does-not-exist-p709
+→ HTTP/1.1 200 Connection Established
+```
+
+That is the **proxy's `CONNECT` line, not the origin's status**, so **a repository that does not exist passes the mandated check.** A check that cannot return `404` cannot fail.
+
+🟢 **The instrument actually used, run against the same negative control:** `git ls-remote --symref` → **no ref, no SHA** → `DEAD_OR_UNREADABLE`, while all `14` real candidates returned a real default branch and head SHA, and `14 / 14` returned a `200` grant payload whose bytes were counted and hashed. **The instrument discriminates at both signs; the mandated one discriminates at neither.**
+
+---
+
+### 🟢 `709-G` — a provenance defect found inside a row p709 was filing, not in a row it rejected
+
+[`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid) (MIT, filed to [`../repos/foundations.md`](../repos/foundations.md)) states in its own README that its Primaria extractor comes from *“Mint Docente (MIT, mismo autor), commit `bd89f26`”*. Measured:
+
+| claim | measurement at p709 | verdict |
+|---|---|---|
+| `tiza` ancestor is MIT | `LICENSE` → `200`, `1,065 B`, sha256₁₂ `e5d43db441b9` | 🟢 **true** |
+| `mint-docente` ancestor is MIT | **`404` for `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `license`**; `spdx_id` `NONE`; repo **alive** at `main` @ `409eaa23f931` | 🔴 **FALSE — no grant exists** |
+
+Control on the same channel in the same run: `tiza/LICENSE` → `200`. 🔴 **So a component of an MIT repository is declared MIT by the consumer and granted nothing by the producer.** The row was filed **with the flag in its `Licence` cell**, not as clean MIT: the Madrid corpus is usable, the Primaria extractor path needs a grant on `mint-docente` before redistribution. 🟢 **Transferable: a README's licence claim about a sibling is a claim, not a grant — and the sibling is one `curl` away.**
+
+---
+
+### 🟡 `709-H` — `NOASSERTION` is not “unknown, probably fine”
+
+[`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) reports `spdx_id` **`NOASSERTION`**. Reading the `4,137 B` payload: **“ClassroomPath Source-Available License 1.0”**, whose own second sentence is *“This license is source-available, not open source”*, granting read / audit / private modification / **non-production** test use only, with `Production Use` defined to include *“pilots, school deployments, hosted instances, managed services, and internal institutional rollouts”*.
+
+🔴 **A pipeline keying on `spdx_id` would carry that as missing metadata rather than as a prohibition** — which is how a source-available product reaches a client proposal. Filed to [`../verticals/solutions.md`](../verticals/solutions.md) beside its AGPL-3.0 sibling [`balejosg/OpenPath`](https://github.com/balejosg/OpenPath) (`9★`), **the two halves of one open-core split, both pushed `2026-11-05`.** On this shelf, **`NOASSERTION` now means unread, never unrestricted.**
+
+---
+
 ## 🆕 2026-11-08 (p708) — 🔴 **THIS BASE DECLARED SEVEN PROMOTIONS ON `2026-10-25` AND WROTE NONE OF THEM. `0 / 7` WERE ON ANY SHELF `281` PASSES LATER. 🟢 p708 MEASURED IT ADDRESS BY ADDRESS, VERIFIED ALL SEVEN FIRST-HAND, AND FILED THEM — WHICH MOVED THE TWO THINNEST REGION COLUMNS ON THE AGENT SHELF IN ONE PASS.**
 
 **`8` subjects filed** (`7` agents, `1` foundation). [`top.md`](top.md) **`185` → `192`** (arity `192/192` at `6` columns, `0` ragged; `192` distinct subjects, `0` duplicated; region vocabulary `192/192` legal). [`../repos/foundations.md`](../repos/foundations.md) **`266` → `267`** (arity `267/267` at `5` columns, `0` ragged). [`../verticals/solutions.md`](../verticals/solutions.md) stays at **`111`**. **`2` trends, `1` pattern.** 🔵 Append-only: this section is added at the top and every section below it is retained verbatim.

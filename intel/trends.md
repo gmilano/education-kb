@@ -21,6 +21,44 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T170–T172 — added at p709 (2026-11-08)
+
+### `T170` — Regional placement is decided by whether a region's institutions **operate** or **buy** their systems, and the single-jurisdiction test makes that measurable
+
+**Evidence (p709, `14` agent rows):** the placed rows all wrap a system that exists in **exactly one jurisdiction** — `u:find` (University of Vienna's own catalogue), `LearnUs` (Yonsei's own portal), Shinshu's own syllabus service, `JEE`/`NEET` (India's national exams), `DAM`/`RA1` (a Spanish FP qualification), the Comunidad de Madrid curriculum. The rows that could **not** be placed wrap a system sold into many jurisdictions: **ILIAS** (`13★`, the pass's most-adopted asset, filed `Global` anyway), Canvas, Gradescope, Brightspace.
+
+🟢 **The trend this reveals is a property of the market, not of the sweep:** Japanese and Korean universities **operate** their own portals and syllabus systems, so every institution is a nameable surface and APAC accumulates placed rows (`56` of `206`). North American higher education **buys** — Canvas, Banner, Workday — so there is no per-institution surface to name a repository after, and **North America has now taken `0` rows from this channel in two consecutive passes** despite `134` AI-in-education bills across `31` states driving demand. EMEA is mixed and moved `4`. LATAM's institution-bound layer returned **`total_count: 0`**.
+
+🔵 **Confidence: high on the mechanism, medium on the magnitude.** The mechanism is directly observed in what each repository wraps; the magnitude is confounded by the fact that this base's sweeps run in English, Spanish and Portuguese but not Japanese or Korean, which should bias *against* the APAC count rather than inflate it.
+
+🟡 **Consequence for a plan:** *“build a campus agent”* is a different engagement in each region. In APAC it starts from a working precedent; in North America the unit is a **tenant-configurable product integration**, not a campus server; in LATAM it has to be built first.
+
+---
+
+### `T171` — The scarce asset in education AI is no longer the model or the platform — it is **citable, jurisdiction-accurate curriculum text**
+
+**Evidence (p709):** `24` canonical open-source education substrates were checked by slug against this base — Moodle, Open edX, Canvas, Sakai, Chamilo, Oppia, Kolibri, BigBlueButton, Opencast, JupyterHub, `nbgrader`, Anki, Frappe LMS, OpenEduCat, `h5p-php-library` and more — and **`18 / 19` real slugs were already held, with exactly one hole** (the H5P–Moodle plugin, now filed). **The platform layer is saturated.** Meanwhile the one asset of its kind this base has ever held appeared this pass: [`balejosg/normativa-madrid`](https://github.com/balejosg/normativa-madrid) (MIT) — the Comunidad de Madrid's educational `normativa` as **literal bulletin text with per-element provenance** (norm, location, printed page), **stable codes** (`MAD.EP.MAT.C2.CR.1.1`), and a `comprobar` command that verifies a document's codes exist.
+
+🟢 **Why this is a trend and not a single find:** the EU AI Act makes assessment and admissions **high-risk**, Korea's `AI Basic Act` obliges documentation for high-impact systems, and `134` US state bills centre on oversight and consent. **Every one of those regimes is satisfied with evidence, and evidence requires a citable source of truth — which is content, not compute.** `T164`'s decided-vs-estimated split is the same force seen from the grading side.
+
+🔵 **Confidence: high on the saturation measurement** (it is a slug-by-slug check with `ls-remote` as arbiter, not an impression), **medium on the generalisation** — one corpus, one region, `0★`.
+
+🔴 **And the trend carries its own hazard, observed in the same artefact:** `normativa-madrid` credits an MIT ancestor that **has no grant at all** (`404` for all five licence filenames while alive). **Curriculum corpora are assembled from scrapers and extractors, and that supply chain is where the licence defects will live.**
+
+---
+
+### `T172` — Licence **metadata absence** is becoming a commercial signal, not a gap — vendors are choosing bespoke source-available grants
+
+**Evidence (p709):** [`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) reports `spdx_id` **`NOASSERTION`**. Its `4,137 B` payload is a **“ClassroomPath Source-Available License 1.0”** whose second sentence is *“This license is source-available, not open source”*, granting read / audit / private modification / **non-production** test use only, with `Production Use` defined to include *“pilots, school deployments, hosted instances, managed services, and internal institutional rollouts”* and `Reproduction` requiring written permission. The **same owner** publishes [`balejosg/OpenPath`](https://github.com/balejosg/OpenPath) under **AGPL-3.0** (`9★`) over the same problem, and the proprietary grant even defines *“OpenPath Components”* as files that stay under their own notices. **Both pushed `2026-11-05`.**
+
+🟢 **The trend: the open-core boundary is being drawn in the licence text at the moment of publication**, with the copyleft half carrying the adoption (`9★` vs `0★`) and the proprietary half carrying the service. This extends `T169` (licence-*name* gating fails) one step further: **here there is no name to gate on at all.**
+
+🔴 **The operational consequence, which is where this bites:** a pipeline keying on `spdx_id` records `NOASSERTION` as *missing metadata* and a human reads that as *probably fine*. It is the opposite — **it is the signal that a bespoke grant exists and has not been read.** On these shelves `NOASSERTION` now means **unread, never unrestricted**, and `4,137 B` had to be read to establish that a pilot is forbidden.
+
+🔵 **Confidence: high on the instance** (payload read, both halves, both signs), **medium on the prevalence** — one owner, one pass; the thing to watch is whether `NOASSERTION` counts rise on this shelf over the next passes.
+
+---
+
 ## 🆕 T168–T169 — added at p708 (2026-11-08)
 
 🔴 **Numbering hazard hit and recorded, because p708 nearly committed the defect this page's own banner warns about.** Deriving the next free identifier from `max(## T ...)` returns **`155`** — and `T154`/`T155` **already exist**, filed at `p704`. 🟢 **The reason is a heading-STYLE change, not a counting error:** from `p704` onward trends are filed as `## 🆕 T{a}–T{b} — added at pNNN` with each trend at `### `T{n}``, so a scan for `^## T` sees nothing after `T155` and misses `T156`–`T167` entirely. 🔵 **The correct instrument is `max` over EVERY `T{n}` appearing in ANY heading of level 2–4, which returns `167`** — excluding `T273`, which is a cross-reference into the pre-reset base's namespace and not a trend on this page. 🟢 **Re-derived at p708 that way: `167` carried in, `T168`–`T169` filed, max `169`.** 🔴 **The `T84`–`T87` gap block remains RESERVED — do not close it** — and `T125` is skipped deliberately (recorded further down this page). The `T31`/`T32`/`T39`/`T40` collisions are unrepaired by design.
