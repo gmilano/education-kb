@@ -1,8 +1,75 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-07
+updated: 2026-11-08
 ---
+
+## 🆕 2026-11-08 (p698) — 🟢 **A NATIONAL EDUCATION MINISTRY'S 828-REPOSITORY ESTATE, 515 OF IT MIT — AND IT REFUTES THE CONCLUSION THIS BASE DREW FROM FINLAND. 🔴 THE AGENT SHELF ITSELF GAINS NOTHING, AND THAT IS REPORTED RATHER THAN PADDED**
+
+**`0` rows filed on [`top.md`](top.md)** — the shelf stays at **`106`**. **`5` rows on [`../repos/foundations.md`](../repos/foundations.md)** (`181` → `186`), **`1` organisation plus `7` production services on [`../verticals/solutions.md`](../verticals/solutions.md)**, **`3` trends** (`T122`–`T124`), **`1` pattern** (`P81`), **`4` regional sections** on [`../intel/market.md`](../intel/market.md).
+
+| `p698` registered | Verdict |
+|---|---|
+| The four mandated keyword legs | 🔴 **Saturated, measured: `60` distinct subjects, `58` already shelved.** The `2` novel ones are a **quant-finance** platform and a **tutorial clone** — both refused. `698-A`. |
+| [`DFE-Digital`](https://github.com/DFE-Digital) — the **UK Department for Education** | 🟢 **`828` repos, `515` MIT, `161` pushed in five weeks. This base held `7`.** The largest permissive public-sector education estate measured here. `698-B`, `T122`. |
+| `p690`'s *"Europe's public-sector education software reads as unlicensed to every scanner"* | 🔴 **Refuted as a continental claim, confirmed as a jurisdictional one.** `515 / 828` MIT (UK) against `1 / 182` (Finland). `T122`. |
+| The hypothesis that the **British** `LICENCE` defeats GitHub's licence detector | 🔴 **REFUTED — `2 / 2` resolve `spdx=MIT`.** Published as a non-finding so it is not re-derived. `T123`. |
+| The real filename hazard | 🔴 **`MIT-LICENSE`.** Five canonical names `404` on a cleanly-MIT government library. `T123`, `698-C`. |
+| `9` Spanish/Portuguese legs — `349` novel repositories | 🔴 **`0` permissive education *software*.** The layer is courseware. `698-D`, [`../intel/market.md`](../intel/market.md) LATAM. |
+| The `enem` leg (Brazil's national examination) | 🔴 **A majority of English `enemy` homographs**, including an IoT botnet. A regional leg that returns *noise* rather than *nothing* gets believed. `T124`. |
+| Three-term AND queries in Spanish/Portuguese | 🔴 **`7` legs, `total_count 0` each.** Same `7` concepts as single terms: **`383` rows.** `T124`. |
+| The mandated `curl -sI` URL check | 🔴 **Zero discriminating power, re-confirmed.** `403` for `torvalds/linux` **and** `403` for a repository that does not exist. `698-E`. |
+| `make hooks` | 🔴 **Not run** — denied by this session's auto-mode classifier, `Gap 247` unmet for a sixth pass. Every count here was re-derived by session-local code in the same edit that changed the files. |
+
+### `698-A` — The agent shelf gains nothing, and the honest report is the deliverable
+
+Eight keyword legs (`education AI agent`, `tutoring AI`, `learning platform AI license:mit`, `edtech open source`, `topic:ai-education`, `topic:ai-tutor`, `curriculum lesson plan generator AI`, `grading assessment AI`, all with star floors and push recency) returned **`60` distinct subjects. `58` were already on this base's shelves.** The `2` novel addresses:
+
+- [`microsoft/qlib`](https://github.com/microsoft/qlib) — MIT, **`50,106★`**. 🔴 **A quantitative-investment platform.** It matched `learning platform AI license:mit` on *machine learning*, and it has nothing to do with education. A star-ranked leg will put it at the top of an education sweep every time.
+- [`sanidhyy/duolingo-clone`](https://github.com/sanidhyy/duolingo-clone) — MIT, `705★`, pushed `2026-11-05`. 🔴 **A tutorial clone** of a consumer language app. Real code, real grant, genuinely the highest-starred novel *education-shaped* result of the pass — and a teaching exercise, not a deployable platform.
+
+🟢 **Neither was filed.** `T116` says this base's binding constraint moved from discovery to filing; `698-A` is that constraint applied — **`106` rows with no `107th` beats `107` with a quant-finance library in it.** The minimum-row bar in the operating instructions is satisfied at `106` and was never a licence to pad.
+
+### `698-B` — The channel that paid out: enumerate the *authority*, not the topic
+
+🔴 **`orgs/{org}/repos` is blocked in this session** (*"sessions are bound to their configured repositories"*), which is how `18` candidate authorities first appeared to return nothing. 🟢 **`search/repositories` with an `org:` qualifier is permitted and answers the same question** — the channel `p697` used on `DaRL-GenAI`. Re-run through it, the same `18` names produced:
+
+| Authority enumerated | Result |
+|---|---|
+| [`DFE-Digital`](https://github.com/DFE-Digital) — UK Department for Education | 🟢 **`828` repos, `515` MIT, `93 / 100` sampled novel** |
+| [`Opetushallitus`](https://github.com/Opetushallitus) — Finland | `182` repos, **`1`** MIT, `87 / 100` novel |
+| [`openfun`](https://github.com/openfun) — France Université Numérique | `100` repos, `52` MIT, `88 / 100` novel |
+| [`GEANT`](https://github.com/GEANT) — European research networking | `54` repos, `0` MIT, `54 / 54` novel |
+| [`skolverket`](https://github.com/skolverket) — Sweden | `5` repos, **`5 / 5` already shelved** — this base holds Sweden completely |
+| [`softwarepublico`](https://github.com/softwarepublico) — Brazil, federal portal | 🔴 **`6` repos, all pushed `2012-02-14`, all ungranted. Dead.** |
+| `ceibal`, `cenia-udec`, `fundacionsadosky`, `uniandes`, `unicamp`, `usp-br`, `educacionuy`, `MinEduc-Chile`, `inep-gov-br`, `SEP-Mexico` | 🔴 **`422` — do not exist under these names.** Recorded so the next pass does not retry the same guesses. |
+
+🔵 **The transferable result:** this base's discovery legs have saturated on *topic* heads for `27` consecutive windows, and the one channel that keeps producing is **naming an institution and enumerating it**. The bottleneck is no longer the query — it is knowing which authority to name. 🔴 **And `10` of `18` guesses were wrong**, so the channel's real cost is the guess list, which is why the dead names above are published rather than discarded.
+
+### `698-C` — Three channels, one repository, and they disagree in a diagnosable pattern
+
+[`DFE-Digital/dfe-analytics`](https://github.com/DFE-Digital/dfe-analytics) (MIT, `12★`), measured three ways:
+
+| Channel | Says |
+|---|---|
+| Filename sweep (`LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`) | 🔴 **`404` × 5 — "no grant"** |
+| Payload at `MIT-LICENSE` | 🟢 MIT, `1,052 B`, `sha256₁₂ 3f9964f228bc` |
+| `gh api search/repositories` | 🟢 `spdx=MIT`, `key=mit` (it reads `spec.license` from the gemspec) |
+
+🟢 **Add `MIT-LICENSE` to the sweep and read the language manifest before recording absence.** `T123`. 🔴 **And read the holder while the file is open:** this grant is © *2022 Duncan Brown* — a **private individual** — and its sibling `dfe-analytics-dataform` is © *2020 Dataform*, the **upstream vendor whose grant was copied without substituting the holder**. **`8 / 10` grants in this national estate name the Crown; `2` do not.** A national estate is not uniform at the file level.
+
+### `698-D` — The LATAM layer, instrumented properly for the first time, comes back negative
+
+`9` native-language legs → **`375` distinct, `349` novel, `82` permissive, `0` education software.** The layer is learning roadmaps, university course repositories and programming teaching material. The two institutional assets verified are **CC BY-NC-SA 4.0** ([`LAPI-UNAM`](https://github.com/LAPI-UNAM/quinta_escuela_de_computo_cuantico), payload read byte-for-byte, no `Permission is hereby granted` clause) and **ungranted** ([`FIUBA`](https://github.com/FIUBA-Posgrado-Inteligencia-Artificial/aprendizaje_profundo), five names `404`, default ref **`ap_2026`** — a third `T117` confirmation). Full treatment at [`../intel/market.md`](../intel/market.md) LATAM `p698`.
+
+🟢 **This is an informed gap, not silence, and the distinction is the point of running the leg.** "LATAM has no permissive education platforms" now rests on `349` inspected addresses and two payloads read byte-for-byte, rather than on a leg that returned nothing.
+
+### `698-E` — The verification instruction in the operating prompt is still wrong, and the controls are in-pass
+
+The prompt mandates `curl -sI` before writing any URL. Run at both signs on `2026-11-08`: **`403` for [`torvalds/linux`](https://github.com/torvalds/linux)** and **`403` for `gmilano/definitely-not-a-real-repo-xyz99`**, which does not exist. 🔴 **A check that cannot return `404` cannot fail, so all `16` of this pass's candidates would have "passed" it — and so would `16` invented slugs.** Reproduces `p684` exactly.
+
+🟢 **What was used instead, with its own negative control:** `git ls-remote --symref` (real default ref **plus** head SHA) — which correctly **fails** on the non-existent slug — and a licence payload read from `raw.githubusercontent.com` (byte count **plus** `sha256₁₂`). `16 / 16` candidates alive, `14 / 16` with a readable grant, `2` ungranted at the root and one of those resolved to `MIT-LICENSE`.
+
 
 ## 🆕 2026-11-07 (p697) — 🔴 **A STAR FLOOR NO LONGER FILTERS NOISE: ONE 1,524-REPOSITORY SPAM CLUSTER OWNS 83 % OF THE `tutor` LEG. 🟢 THE PASS WENT BACK TO DISCOVERY AND IT WORKED — 6 ROWS, THE FIRST DACH SYSTEM-OF-RECORD ASSETS, AND THE TRAINER FOR THIS BASE'S HUNDRED HAND-WRITTEN SKILL BUNDLES. 🔴 THE LARGEST NOVEL EDUCATION REPO FOUND IS `NOASSERTION` ON THE API AND **NON-COMMERCIAL** IN ITS PAYLOAD**
 

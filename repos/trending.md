@@ -1,8 +1,28 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-07
+updated: 2026-11-08
 ---
+
+## 🆕 2026-11-08 (p698) — 🟢 **FIVE FOUNDATIONS, ALL EMEA, ALL MIT, AND THEY COME FROM TWO STATE EDUCATION BODIES — A GOVERNMENT ANALYTICS SPINE AND A FRENCH PUBLIC CONSORTIUM'S FORM AND VIDEO LAYER**
+
+**`5` rows on [`foundations.md`](foundations.md)** (`181` → `186`), **`1` organisation plus `7` production services measured on [`../verticals/solutions.md`](../verticals/solutions.md)**; `0` on [`../agents/top.md`](../agents/top.md), reported rather than padded (`698-A`).
+
+| `p698` repository finding | Verdict |
+|---|---|
+| [`DFE-Digital/dfe-analytics`](https://github.com/DFE-Digital/dfe-analytics) — MIT (`MIT-LICENSE`, `1,052 B`, `3f9964f228bc`), `12★`, `main` | 🟢 **Filed, EMEA.** The UK DfE's shared Rails→BigQuery event spine. 🔴 Grant at a **non-canonical filename**; five-name sweep returns `404`. 🔴 © a **private individual**. `T123`. |
+| [`DFE-Digital/dfe-analytics-dataform`](https://github.com/DFE-Digital/dfe-analytics-dataform) — MIT (`LICENSE`, `1,065 B`, `f0dbb713e07b`), `7★`, **`master`** | 🟢 **Filed, EMEA.** The SQL half — sessionisation and entity-version views over the above. 🔴 © **Dataform**: the upstream vendor's grant copied without substituting the holder. ⚠️ `T117`. |
+| [`DFE-Digital/terraform-azurerm-container-apps-hosting`](https://github.com/DFE-Digital/terraform-azurerm-container-apps-hosting) — MIT (`1,068 B`, `437f547f50a4`), **`19★`**, © *2024 DFE-Digital* | 🟢 **Filed, EMEA.** The hosting pattern under the whole estate: Container Apps, Front Door + WAF, Postgres Flexible, Redis, Key Vault. The highest-starred MIT asset DfE publishes. ⚠️ Azure-shaped, not portable. |
+| [`openfun/verna`](https://github.com/openfun/verna) — MIT (`1,079 B`, `e4b2a3148135`), `11★`, © *GIP FUN MOOC* | 🟢 **Filed, EMEA on a named public institution.** React-JSON-Schema form builder, pushed **`2026-11-07`**. Fills a gap every pattern on this base has worked around: a permissive, institutionally-maintained form layer. |
+| [`openfun/django-peertube-runner-connector`](https://github.com/openfun/django-peertube-runner-connector) — MIT (`1,086 B`, `e45c9400c572`), `6★`, © *France Université Numérique* | 🟢 **Filed, EMEA.** Drives PeerTube transcoding runners from Django: **the data-residency answer on the video path**, which the sovereign-stack patterns had left as a vendor dependency. |
+| [`GEANT/CAT`](https://github.com/GEANT/CAT) — **`123★`**, `master`, the **eduroam** Configuration Assistant Tool | 🔴 **REFUSED.** `spdx=NOASSERTION`, `key=other`; payload (`1,096 B`, `6307cdca4c09`) is a bespoke **EU Framework Programme 7 / Horizon 2020** grant reserving GÉANT members' rights. Education infrastructure by any reading, **not adoptable without legal review**. `T121`'s class from the opposite direction. |
+| [`microsoft/qlib`](https://github.com/microsoft/qlib) — MIT, **`50,106★`** | 🔴 **REFUSED — quantitative finance.** Matched an education leg on *machine learning*. The single loudest false positive a star-ranked education sweep can produce. |
+| [`sanidhyy/duolingo-clone`](https://github.com/sanidhyy/duolingo-clone) — MIT, `705★` | 🔴 **REFUSED — tutorial clone, not a platform.** The highest-starred novel education-shaped result of the pass, and still not a row. |
+| [`softwarepublico`](https://github.com/softwarepublico) — Brazil's federal public-software portal | 🔴 **DEAD, and recorded once so it is not re-checked hopefully.** `6` repositories, **all pushed `2012-02-14`**, **all ungranted**. |
+| [`skolverket`](https://github.com/skolverket) — Sweden's National Agency for Education | 🔵 **`5 / 5` already shelved.** Sweden is held completely; nothing to gain here. |
+
+🔵 **Licence census across the four live authorities** — the number this pass exists to publish: **UK `515 / 828` MIT · France `52 / 100` · Finland `1 / 182` · GÉANT `0 / 54`.** `T122`.
+
 
 ## 🆕 2026-11-07 (p697) — 🟢 **THREE FOUNDATIONS, AND TWO OF THEM ARE A SWISS CANTON'S OWN SCHOOL-ADMINISTRATION FRONT END UNDER MIT WITH THE AUTHORITY NAMED IN THE PAYLOAD. 🔴 THE GERMAN LMS ABOVE `0★` HAS NO LICENCE FILE AT ALL — ITS GRANT EXISTS ONLY AS PROSE**
 

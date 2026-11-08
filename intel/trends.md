@@ -1,14 +1,14 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # 📡 Trends — Education
 
 > What is actually changing in AI + education as of November 2026. Each trend names its evidence and its confidence.
 
-🔴 **Read this before citing any `T` number: four identifiers on this page resolve to two different trends each, and `156` references across the shelves point at them.** Re-measured at p685 by counting headings rather than trusting the last figure: **`87` `## T` headings, `83` distinct numbers, `0` gaps** — 🔄 **re-derived at p687: `93` headings, `89` distinct numbers, `max = T93`, and now `4` gaps at `T84`–`T87`.** 🟢 **Those four gaps are the reservation this banner's own repair plan created, not a defect — do NOT close them.** p685 set aside `T84`–`T87` to receive the renumbered second occurrences of `T31`/`T32`/`T39`/`T40`; p686 then filed `T88`–`T90` and p687 `T91`–`T93`, both correctly numbering from `max(## T)` and stepping over the reserved block. 🔴 **A future pass that re-derives this census will see `4` gaps and may read them as a numbering error. Reusing `T84`–`T87` for new trends would consume the only free identifiers the collision repair can land in, and the repair would then have nowhere to go.** The reserved block is load-bearing; the next `T` number is `T94` — so the heading count is *not* the trend count (the `distinct` vs `total` distinction this page records as **T62**). The collisions are **`T31`, `T32`, `T39` and `T40`**, each used once by `p657`/`p658` and again by `p661`/`p664`:
+🔴 **Read this before citing any `T` number: four identifiers on this page resolve to two different trends each, and `156` references across the shelves point at them.** Re-measured at p685 by counting headings rather than trusting the last figure: **`87` `## T` headings, `83` distinct numbers, `0` gaps** — 🔄 **re-derived at p687: `93` headings, `89` distinct numbers, `max = T93`, and now `4` gaps at `T84`–`T87`.** 🟢 **Those four gaps are the reservation this banner's own repair plan created, not a defect — do NOT close them.** p685 set aside `T84`–`T87` to receive the renumbered second occurrences of `T31`/`T32`/`T39`/`T40`; p686 then filed `T88`–`T90` and p687 `T91`–`T93`, both correctly numbering from `max(## T)` and stepping over the reserved block. 🔴 **A future pass that re-derives this census will see `4` gaps and may read them as a numbering error. Reusing `T84`–`T87` for new trends would consume the only free identifiers the collision repair can land in, and the repair would then have nowhere to go.** The reserved block is load-bearing; the next `T` number is `T125` — so the heading count is *not* the trend count (the `distinct` vs `total` distinction this page records as **T62**). The collisions are **`T31`, `T32`, `T39` and `T40`**, each used once by `p657`/`p658` and again by `p661`/`p664`:
 
 | id | first use | second use | shelf references |
 |---|---|---|--:|
@@ -20,6 +20,41 @@ updated: 2026-11-07
 🔧 **`p671` annotated the four *headings* and stopped there, which fixed the symptom a reader sees on this page and left the one they cannot see.** A reader arriving from `**T39**` on `repos/foundations.md` still has no way to know which of two unrelated trends was meant.
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
+
+## T122 — Permissive supply in European public-sector education is **bimodal by jurisdiction**, not scarce: `515 / 828` MIT in one national authority against `1 / 182` in another 🟢 new at p698
+
+**Measured, both sides, same instrument** (`gh api search/repositories`, `org:` qualifier, `license:` facet), `2026-11-08`:
+
+| National education authority | Repos | MIT | Share |
+|---|--:|--:|--:|
+| [`DFE-Digital`](https://github.com/DFE-Digital) — UK Department for Education | **828** | **515** | **`62.2 %`** |
+| [`Opetushallitus`](https://github.com/Opetushallitus) — Finnish National Agency for Education | `182` | **`1`** | **`0.5 %`** |
+| [`openfun`](https://github.com/openfun) — France Université Numérique | `100` | `52` | `52.0 %` |
+| [`GEANT`](https://github.com/GEANT) — European research networking | `54` | `0` (`5` Apache-2.0) | `0 %` |
+
+🔴 **`p690` concluded, from the Finnish EUPL block, that *"Europe's public-sector education software reads as unlicensed to every scanner."* That generalisation is now refuted at the continental level and confirmed at the jurisdictional one.** The UK estate is not merely permissive, it is permissive *at scale and under active development* — `161` of its `828` repositories were pushed in the five weeks before this pass.
+
+🔵 **Why the spread is a licence-policy artefact rather than a culture artefact.** The EUPL is the European Commission's own instrument and is what a continental-European public body reaches for by default; it is copyleft, and it is the licence `p690` showed no automated scanner attributes. The UK, outside that instrument's gravity, defaults to MIT. **So the variable that predicts whether a European education authority's code is adoptable is which licence its government's own guidance names** — not its size, its activity or its maturity.
+
+🟢 **Operationally, for an EMEA engagement:** there is no European answer to *"is there permissive public-sector education code to build on?"* — there is a per-country answer, and the countries differ by two orders of magnitude. Ask the question per jurisdiction, and read the payload (`T110`, `T123`), because the Finnish `1 / 182` is **not** a measure of how much Finnish code exists, only of how much of it a licence gate will pass.
+
+## T123 — A five-name licence sweep reports *no grant* on an MIT repository, and the British spelling is **not** the cause 🔴 new at p698
+
+**The hypothesis this pass set out to confirm, and refuted.** `2` of the `10` UK DfE repositories verified ship their grant as the British [`LICENCE`](https://github.com/DFE-Digital/buy-for-your-school) rather than `LICENSE`, and the obvious guess is that GitHub's detector misses it. **It does not:** `gh api` resolves `spdx=MIT`, `key=mit` for both. 🔵 **The British spelling is a non-finding, and it is worth publishing as one**, because it is the kind of plausible mechanism a later pass would otherwise re-derive and act on.
+
+🔴 **The real hazard found in the same probe is a *non-canonical* filename.** [`DFE-Digital/dfe-analytics`](https://github.com/DFE-Digital/dfe-analytics) returns `404` at the real default ref for **all five** names this base sweeps — `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` — while the grant sits at **`MIT-LICENSE`** (`1,052 B`, `sha256₁₂ 3f9964f228bc`), the Rails-engine convention, and `dfe-analytics.gemspec` declares `spec.license = 'MIT'`.
+
+**So the three channels disagree in a specific pattern:** `gh api` says MIT (it reads the manifest), the payload says MIT (once found), and **the filename sweep says nothing at all.** A sweep that treats `404`-on-five-names as *unlicensed* will mark a cleanly-MIT government library as unusable.
+
+🟢 **The fix is one name and one fallback:** add `MIT-LICENSE` (and `APACHE-LICENSE`) to the sweep, and when all names miss, **read the language manifest** — `gemspec`, `package.json`, `pyproject.toml`, `*.csproj` — before recording absence. 🔵 **This is the exact inverse of the `hacktick/DiLer` case at `p697`** (a declared grant with no file, where prose asserted AGPLv3 and no file existed): there, absence of a file meant the grant had to be read from prose; here, absence of the *expected* file means the grant has to be read from a *manifest*. **Both say the same thing — `404` is a statement about filenames, never about rights.**
+
+## T124 — A regional query token that is a prefix of a common English word returns a majority of homograph noise, and the regional "zero" that follows is an artefact 🔴 new at p698
+
+**`enem`** is Brazil's national secondary-education examination (*Exame Nacional do Ensino Médio*) and the highest-value Portuguese-language education token there is. `enem stars:>10` returns `51` repositories, and the top of the ranking is **English-language `enemy`**: `NatsunXD/EnemySpawnMultiplier` (a Helldivers 2 mod), `freakanonymous/enemy` (an **IoT botnet**), `CiaNCI-Studio/3D-Enemy-Toolkit`, `jhlothamer/behavior_tree_enemy_ai_demo`, `bypell/horror-game-enemy-demo`, `Hamunii/LC-ExampleEnemy`, `EnemyV/EnemyNationsRevival`, `LOVEIII486/EliteEnemies`. **Substring matching makes a national examination indistinguishable from game-mod enemy AI.**
+
+🔵 **This is `T31`'s class — a regional "zero" as a query artefact — reached through a new mechanism, and it is the mechanism that matters.** `T120` recorded that a *two-letter* native-language token is unsearchable because it is too short. `T124` records that a *four-letter* one can be worse than unsearchable: it returns a full page of confident, irrelevant, well-starred results, so the leg looks **productive** while carrying no regional signal at all. A leg that returns nothing invites a second attempt; a leg that returns noise gets believed.
+
+🔴 **Also measured this pass, and the cause is the opposite problem:** three-term AND queries in Spanish and Portuguese (`educacion inteligencia artificial`, `educacao inteligencia artificial professor`) return **`total_count 0`** — not because the layer is empty but because GitHub `AND`s the terms across name/description/topics, and no description carries all three. **`7` legs built that way returned `0` rows; the same `7` concepts as single terms returned `383`.** 🟢 **The rule for every regional leg from here: one native-language product noun per query, and check the token against its English homographs before believing any count it produces.**
 
 ## T118 — A star floor stops filtering noise once the noise is star-farmed, and it fails first in the KEYWORD channel 🔴 new at p697
 

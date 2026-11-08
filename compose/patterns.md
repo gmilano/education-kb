@@ -1,13 +1,13 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
-> 🔄 **Re-counted from the `## P` headings at p685: `61` patterns, `P1`–`P61`, `0` duplicated numbers and `0` gaps — measured, and the previous figure was stale by five.** 🔄 **Re-derived at p687: `63` patterns, `P1`–`P63`, `0` duplicated numbers and `0` gaps.** `62` carried in (p686 filed `P62`), `P63` added this pass. 🔵 Numbered from `max(## P)`, not from the last heading in file order — the rule this header exists to enforce. It read `56` (`p681`'s correct count); `P57`–`P60` were filed beneath it without it being re-counted, and `p685` adds **P61**. 🔵 **Unlike the row counts on the three shelf files, this one is derived from headings, which are unique — so it is a stale *figure*, not an ambiguous *identifier*.** Contrast `intel/trends.md`, where four `T` numbers each denote two different trends and `156` references point at them (see the banner at the top of that file). The heading this replaces said `50`, which was already `4` stale when p680 opened — and the re-count caught a live defect in the process: **p680's own new pattern was first written as `P53`, a number p679 had already used**, because `P54` existed and the highest number is not the last heading in file order. 🔵 **Never number a new pattern from the bottom of the file; number it from `max(## P)`.**
+> 🔄 **Re-counted from the `## P` headings at p685: `61` patterns, `P1`–`P61`, `0` duplicated numbers and `0` gaps — measured, and the previous figure was stale by five.** 🔄 **Re-derived at p698 from `max(## P)`: `81` patterns, `P1`–`P81`, `0` duplicated numbers; `P81` added this pass.** 🔄 **Re-derived at p687: `63` patterns, `P1`–`P63`, `0` duplicated numbers and `0` gaps.** `62` carried in (p686 filed `P62`), `P63` added this pass. 🔵 Numbered from `max(## P)`, not from the last heading in file order — the rule this header exists to enforce. It read `56` (`p681`'s correct count); `P57`–`P60` were filed beneath it without it being re-counted, and `p685` adds **P61**. 🔵 **Unlike the row counts on the three shelf files, this one is derived from headings, which are unique — so it is a stale *figure*, not an ambiguous *identifier*.** Contrast `intel/trends.md`, where four `T` numbers each denote two different trends and `156` references point at them (see the banner at the top of that file). The heading this replaces said `50`, which was already `4` stale when p680 opened — and the re-count caught a live defect in the process: **p680's own new pattern was first written as `P53`, a number p679 had already used**, because `P54` existed and the highest number is not the last heading in file order. 🔵 **Never number a new pattern from the bottom of the file; number it from `max(## P)`.**
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
@@ -37,6 +37,53 @@ updated: 2026-11-07
 ```
 
 ---
+
+## P81 — The England schools engagement: adopt the **Department for Education's own MIT services**, put the agent at the service front door (English academy trust, MAT, local authority, DfE supplier: 6–8 weeks) 🟢 new at p698
+
+**Why this pattern exists and `P80` does not cover it.** `P80` (the DACH pattern) adopts a *canton's* front-end modules over a proprietary backend — the open surface is the UI and the system of record is closed. England inverts that: **the systems of record are themselves MIT**, so the permissive boundary runs much deeper and the agent can sit on real data rather than on a portal shell.
+
+**Components — every one verified `2026-11-08` (`ls-remote` + payload read), all MIT, no copyleft anywhere in the delivery path:**
+
+| Layer | Component | Grant |
+|---|---|---|
+| Hosting substrate | [`DFE-Digital/terraform-azurerm-container-apps-hosting`](https://github.com/DFE-Digital/terraform-azurerm-container-apps-hosting) | MIT (`1,068 B`, `437f547f50a4`) |
+| Event spine → BigQuery | [`DFE-Digital/dfe-analytics`](https://github.com/DFE-Digital/dfe-analytics) + [`dfe-analytics-dataform`](https://github.com/DFE-Digital/dfe-analytics-dataform) | MIT (`3f9964f228bc` / `f0dbb713e07b`) |
+| Credential system of record | [`DFE-Digital/teaching-record-system`](https://github.com/DFE-Digital/teaching-record-system) | MIT (`d2fd3c4e1918`) |
+| Eligibility assessment workflow | [`DFE-Digital/apply-for-qualified-teacher-status`](https://github.com/DFE-Digital/apply-for-qualified-teacher-status) | MIT (`494f4e762401`) |
+| CRM integration tier | [`DFE-Digital/get-into-teaching-api`](https://github.com/DFE-Digital/get-into-teaching-api) | MIT (`1b54bf150a86`) |
+| Entry surface / roadmap | [`DFE-Digital/sts-plan-technology-for-your-school`](https://github.com/DFE-Digital/sts-plan-technology-for-your-school) | MIT (`853df5ad0389`) |
+| Forms | [`openfun/verna`](https://github.com/openfun/verna) | MIT (`e4b2a3148135`) |
+| Agent layer | the studio's own, MIT/Apache — **never inside the services above** | — |
+
+**Wiring.**
+
+```
+[DfE services, stock: teaching-record-system | apply-for-QTS | get-into-teaching-api]
+        │  their own REST APIs  (process boundary = licence boundary)
+        ▼
+[MCP server layer — MIT, one tool per service endpoint, read-only by default]
+        │
+        ▼
+[Agent: eligibility triage · evidence summarisation · roadmap drafting]
+        │  emits via dfe-analytics event contract
+        ▼
+[BigQuery ← dfe-analytics-dataform views]  →  human assessor decides, always
+```
+
+1. **Stand the estate up unmodified** on the Terraform module. Do not fork the services; run them and talk to their APIs. The licence boundary and the process boundary are the same line, which is what keeps the studio's work proprietary.
+2. **Wrap each service endpoint as one MCP tool.** `teaching-record-system` for *who holds what qualification*, `get-into-teaching-api` for *candidate and event state*, `apply-for-qualified-teacher-status` for *the evidence bundle under assessment*.
+3. **Put the agent on the assessment, not on the decision.** QTS recognition of a foreign qualification is document-heavy comparison work with a statutory decision at the end: the agent summarises and cites, the human assessor decides and is recorded as deciding. This is the only shape that survives a schools-sector governance review.
+4. **Instrument through `dfe-analytics` rather than beside it.** Every agent action emits on the same event contract as the services, so agent behaviour lands in the same BigQuery tables as human behaviour and the before/after comparison is a query, not a bespoke evaluation.
+5. **Gate on the identifier.** Cross-service reasoning needs a learner/teacher identity that holds across services; [`DFE-Digital/single-unique-identifier`](https://github.com/DFE-Digital/single-unique-identifier) (MIT, © *2025 Crown Copyright*) is the programme doing this. **Until it lands, scope the agent to one service at a time** and say so in the proposal.
+
+🔴 **Two licence facts to put in the SoW before anyone asks.** `dfe-analytics` is MIT but © a **private individual**, and `dfe-analytics-dataform` is MIT but © **Dataform** (the upstream vendor, holder not substituted). Both grants are valid and permissive; both name a holder that is not the Crown. Raise them first — a procurement review that finds them unflagged will treat the whole estate as unvetted.
+
+⚠️ **Azure-shaped.** The hosting module is Azure Container Apps and the analytics path terminates in BigQuery, so the reference stack is deliberately two-cloud. Re-platforming either end is in scope only if the client asks; quote it separately.
+
+**Regional read.**
+- 🟢 **EMEA** — this pattern's home market, and the only one where it runs as written: these are England's own services under England's own grant.
+- 🔵 **North America** — the *architecture* transfers and the components do not: no US or Canadian authority publishes an equivalent estate (`p698`'s NA supply leg nilled again, as it has in every window this base has recorded). Reuse the shape — stock system of record, MCP tier, agent on assessment not decision — over whatever SIS the district runs.
+- 🔵 **APAC / LATAM** — same: the pattern is the transferable asset. 🔴 **For LATAM specifically, do not plan on local permissive substrate** — `p698` measured `0` permissive education *software* assets across `9` Spanish- and Portuguese-language legs (`383` rows, `349` novel); what the region publishes openly is courseware, and the two institutional assets verified this pass are **CC BY-NC-SA 4.0** and **ungranted**. See [`../intel/market.md`](../intel/market.md) LATAM, `p698`.
 
 ## P79 — Train the teaching skill instead of rewriting it, and keep the learner's thinking as a measured output (edtech vendor, university, corporate academy: 6–8 weeks) 🟢 new at p697
 
