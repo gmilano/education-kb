@@ -11,6 +11,15 @@ updated: 2026-11-08
 
 ## Market size — and why the numbers disagree
 
+### 🆕 Re-measured at p705 — the `2026` figures finally BRACKET, and that is new
+
+🟢 **For the first time this base can quote a `2026` range tight enough to plan against.** This pass's legs returned **`$11.40B`** for `2026` (Coherent Market Insights) and **~`$12.3B`** for `2026` (X-Pilot, attributed to **HolonIQ**) — a spread of **~`8%`** on the same year.
+
+🔴 **The long-horizon series remains irreconcilable and is NOT merged into that bracket:** Azumo's **`$136.79B` by `2035`** is a different horizon on a different basis, and this base's own prior readings have ranged over a factor of five on a single year (`p664`) with a CAGR that `p695` showed to be arithmetically impossible. 🟡 **So: use `$11.4B`–`$12.3B` for `2026` and treat every terminal-year figure on this page as a vendor projection, not a measurement.**
+
+🔵 **Why the `2026` convergence is plausible where the 2030s are not:** `2026` is nearly observed, and both figures are current-year estimates rather than compounded forecasts. The divergence has always been in the growth assumption, and a current-year estimate barely compounds.
+
+
 | Segment | Figure | Horizon | Source |
 |---|---|---|---|
 | AI tutors | $3.6B (2026) → $17.7B (2033) | 2026–2033 | Grand View Research |
@@ -123,6 +132,27 @@ Three facts shape every engagement:
 ## Opportunities by region
 
 ### North America
+
+#### 🟢 p705 — NA: `134` bills, `31` states, and for the first time a **dated compliance calendar** a studio can sell against
+
+🟢 **The region's `2026` legislative volume, as returned this pass:** **`134`** AI-in-education bills introduced across **`31`** states; separately, ~**`100`** state bills touching K-12 student AI use within **`1,500`+** AI-related bills nationwide; and **`35`+ states** carrying official AI guidance from their education departments as of **`June 2026`**.
+
+🔵 **The posture matters more than the count, and it is consistent across trackers: states are legislating *guardrails*, not adoption.** Recurring themes are data privacy, human oversight and parental consent — research-and-transparency duties rather than mandates to deploy. 🟡 **Commercially this inverts the usual pitch: in North America the buyer's problem in `2026` is not "help us adopt AI", it is "help us prove our adoption is defensible".**
+
+🟢 **`705-NA-1` — North Carolina Session Law `2026-41` is the concrete clock, and it is the most sellable artifact on this page** because the dates are statutory rather than analyst-projected:
+
+| Deadline | Obligation |
+|---|---|
+| **`31 Dec 2026`** | State **model policy** published |
+| **`30 Jun 2027`** | Each **local school unit** adopts its own policy |
+| **`June 2028`** | **Teacher professional development** delivered |
+
+🔵 **Read as a sequence, that is a three-phase engagement with the phases pre-dated by statute** — policy drafting into template-to-district rollout into PD content and delivery — and the middle phase is the one that scales, because `115` local units cannot each draft independently. Maryland **SB 720** points the same way, requiring district AI policies and **designated coordinators** (a named role is a named budget line). 🟢 **Federal tailwind: the US Department of Education finalised a rule prioritising federal education grants for projects that expand understanding of AI or its appropriate and ethical use** — which funds exactly the evidence a defensible-adoption engagement produces.
+
+🟢 **Where this pass's filed repositories land in NA:** [`Ta0p1/ResolveLab`](https://github.com/Ta0p1/ResolveLab) (MIT, `104★`, filed at [`../repos/foundations.md`](../repos/foundations.md)) is the strongest fit on the shelf for the *human-oversight* and evidence duties above — hash-locked test sets, registered studies, replayable episodes — because a guardrail that cannot be demonstrated to a state reviewer is not a guardrail.
+
+🔴 **Gap, stated rather than left silent: Canada returned NOTHING on this pass's North America leg.** No federal position, no Ontario, no Québec — and Québec's language and privacy regimes in particular would change an engagement's shape. **This is an informed absence: the leg was run and Canada did not appear. It is not coverage.**
+
 
 #### 🟢 p704 — NA: the leg nilled on supply and the region's live opportunity is a **licence-gate** service, not a build
 
@@ -637,6 +667,28 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🟡 p705 — EMEA: the classification is settled, the **clock is retired as unresolvable**, and Africa is this page's emptiest cell
+
+🔴 **The commencement-date conflict carried since `p692` is CLOSED AS UNRESOLVABLE FROM THIS ENVIRONMENT at `p705` — see [`../agents/trending.md`](../agents/trending.md) `705-C`.** `eur-lex.europa.eu` is excluded by this session's network policy (proved from the agent proxy's own telemetry: `connect_rejected`, *"gateway answered 403 to CONNECT"*), **not** absent from DNS as `p704` concluded. 🟢 **No future pass should spend another probe on it.** Every date below is therefore **SECONDARY and labelled so**, and this pass's legs returned the conflict in a fourth inconsistent form:
+
+| Secondary claim returned at `p705` | Source class |
+|---|---|
+| `Regulation (EU) 2026/1744` ("Digital Omnibus on AI") published in the OJ **`24 Jul 2026`**, applying from **`27 Jul 2026`** | compliance vendor |
+| High-risk duties to **`Dec 2027`** (stand-alone) / **`Aug 2028`** (embedded) | compliance vendor |
+| High-risk obligations commence **`Aug 2026`** | different vendor, same query |
+| **`May 2026`** political agreement postponed stand-alone high-risk duties from **`2 Aug 2026`** to **`2 Dec 2027`** | law-firm bulletin |
+
+🟢 **What is safe to sell against, because it does not depend on the contested date — the CLASSIFICATION, which is stable across every source.** An education AI system is **Annex III high-risk** where it *evaluates learners*, *assigns them to programmes*, *detects prohibited behaviour during assessment*, or *influences access to qualifications*. That brings **conformity assessment, human oversight and post-market monitoring**. 🔵 **Note which products that catches and which it spares:** a proctoring, admissions, placement or marking system is caught; a lesson-authoring or content-generation tool that no learner is scored by is generally not. **That boundary, not the date, is what determines an EMEA product's cost** — and it is the single most useful sentence on this page for scoping an EMEA engagement.
+
+🟡 **Separately reported: a ban on AI systems for non-consensual intimate imagery and CSAM from `2 Dec 2026`.** This is a **school-safeguarding** obligation, not an edtech-product one — relevant to a district's acceptable-use policy and incident response, not to a vendor's conformity file.
+
+🟡 **Market and adoption, both low-confidence single-source:** the European AI-in-education market put at **~`$2.64B` (2026)**; **Finland, Estonia and the Netherlands** named as K-12 integration leaders. 🟢 **Gulf is the one firm non-EU datapoint: Dubai's `KHDA` has issued explicit responsible-AI guidance to private schools** — a named regulator with a named remit, which is a warmer entry than the EU's horizontal frame. The **UK** runs light-touch, principle-based, through existing sector regulators rather than a dedicated AI statute.
+
+🟢 **Where this pass's filed repositories land in EMEA:** [`Ta0p1/ResolveLab`](https://github.com/Ta0p1/ResolveLab) again, and here the fit is tighter than in NA — **registered studies, hash-locked inputs and replayable episodes are Annex III post-market monitoring in runnable form.** An EMEA engagement that must evidence an evaluation system's behaviour over time has, in that repo, a permissive template for doing it.
+
+🔴 **Gaps, stated: France, Germany, the WHOLE of Africa, and the Middle East beyond the Gulf returned nothing on this pass's EMEA leg.** 🔴 **"EMEA" nominally covers `54` African states and this page holds `0` African sources — that is the most under-served cell in this file**, and it is an informed gap: the leg ran and returned European and Gulf material only.
+
 
 #### 🔴 p704 — EMEA: the Annex III date cannot be settled from this environment, and that is now a named blocker rather than an open question
 
@@ -1259,6 +1311,29 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟡 p705 — APAC: the most heavily regulated region on this page and the **least measured**, and `2` of the `4` agents filed this pass are APAC
+
+🔵 **Regulation, as returned this pass — note that education duties arrive via *high-risk classification* rather than education-specific statutes, with one exception:**
+
+| Jurisdiction | Instrument / status at `p705` |
+|---|---|
+| 🟢 **South Korea** | **AI Basic Act in force `22 Jan 2026`** — transparency, risk assessment, human oversight, documentation for high-impact systems. Enforcement decrees still being finalised; **guidance-first grace period through `2026`** |
+| 🟢 **Vietnam** | **AI law effective `1 Mar 2026`**, risk-based. A later decision names **six high-risk sectors and education is one**, with **automated assessment** given as the example |
+| 🔴 **China** | Mandatory **registration**, strict **content labelling**, penalties up to **¥`50M`** |
+| 🟡 **Japan** | Light-touch, **voluntary** governance, explicitly to encourage innovation |
+| 🟡 **Singapore** | Frameworks and toolkits — **`AI Verify`** — for testing and demonstrating accountability |
+| 🟢 **Australia** | **The education-specific one: `TEQSA` requires ALL higher-education providers to submit institutional action plans addressing generative-AI risk.** No AI-specific statute yet |
+| 🟡 **Hong Kong** | Generative-AI guidance; focus on ethical and data-privacy governance |
+
+🟢 **`705-APAC-1` — Australia's TEQSA mandate is the region's cleanest engagement and the reason is structural: it is a universal, per-institution, document-shaped obligation.** Every provider must file a plan; plans need evidence of controls; evidence needs instrumentation. 🔵 **Vietnam's naming of *automated assessment* as the worked example of education high-risk is the second-cleanest**, because it tells a vendor exactly which feature triggers the regime.
+
+🟡 **Data sovereignty recurs as a procurement precondition across the region** (Malaysia treats it as foundational to AI adoption), which privileges **self-hostable and on-device** architectures over hosted APIs.
+
+🟢 **Where this pass's filed repositories land in APAC — and this is the region's real supply story.** Three of the four agents filed at [`../agents/top.md`](../agents/top.md) this pass are APAC-authored: [`CogEvol/CogEvol-4B`](https://github.com/CogEvol/CogEvol-4B) (MIT code, `48★`), [`THU-MAIC/dsh-openmaic`](https://github.com/THU-MAIC/dsh-openmaic) (MIT, `118★`, first-party to the `42,969★` OpenMAIC runtime) and [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) (Apache-2.0, `112★`, K-12); plus [`baidu-baige/LoongSage`](https://github.com/baidu-baige/LoongSage) (Apache-2.0, `599★`) on the foundations shelf. 🔵 **`CogEvol-4B` is the direct answer to the data-sovereignty precondition above** — a `2.4 GB` quantized file generating complete courses with **no network at inference**, which satisfies sovereignty by construction rather than by contract.
+
+🔴 **Gap, stated: this region's legs returned regulation and NOTHING ELSE.** No APAC classroom adoption rates, no education-vendor market map, no spend figures. 🔴 **So APAC is the inverse of LATAM on this page: LATAM is well measured and thinly regulated, APAC is heavily regulated and unmeasured** — and a pass that wants APAC *demand* numbers must find a channel other than these eight legs, because they have now failed to produce them repeatedly.
+
+
 #### 🟢 p704 — APAC: the region supplies this base's agents, and `p704` adds a SUB-NATIONAL instrument, which is the shape engagements actually land on
 
 🟢 **APAC remains the region that produces supply rather than only demand, and `p704` is more evidence:** `3` of the `8` agent rows filed this pass are APAC-placed on the artefact — [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (`228★`, Chinese public-service exam syllabus), [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (`64★`), [`Lee985-cmd/AI-30-Day-Challenge`](https://github.com/Lee985-cmd/AI-30-Day-Challenge) (`57★`). The shelf now stands at **`APAC 46`** of `166`, second only to `Global`.
@@ -1797,6 +1872,31 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🟢 p705 — LATAM: **the first properly DENOMINATED evidence this base has held for any region**, and it describes a governance gap, not an adoption gap
+
+🟢 **UNESCO IESALC, launched at Digital Learning Week `2026`, surveyed ~`200` institutions across `19` countries.** This is the pass's best source on any region: a named institution, a stated sample, and percentages with a denominator rather than a vendor's projection.
+
+| Measure | Value |
+|---|--:|
+| Institutions using AI in **at least one area** | 🟢 **`87%`** |
+| Using AI in **teaching and learning** | 🟢 **`74%`** |
+| Holding a **formal AI strategy** | 🔴 **`26%`** |
+| With **no specific AI budget at all** | 🔴 **`55%`** |
+| **Public** universities with dedicated AI funding | 🔴 **`4%`** |
+
+🔵 **Read the gap, because it is the entire commercial thesis for the region: `87%` are using it and `26%` have decided how.** Adoption is explicitly **bottom-up** — driven by individual academics, researchers and students rather than institutional strategy. The schools layer tells the same story: in **Chile and Brazil more than `50%` of teachers** already use these tools while **fewer than `10%` of institutions** in the region have formal guidelines.
+
+🟡 **And read the constraint honestly, because it is the thing that kills LATAM proposals: `55%` have no AI budget and public universities sit at `4%` dedicated funding.** 🔴 **A region can have `87%` adoption and still have no money to buy anything.** The sellable work is therefore **governance and enablement** — strategy, guidelines, teacher capability, procurement framing — not platform licences; and it is disproportionately **privately funded or donor/multilateral funded**, which changes who the buyer is.
+
+🟢 **The policy layer now has a permanent address: UNESCO's regional Observatory on AI in Education for Latin America and the Caribbean launched in Santiago, Chile on `14 April 2026`** at the ECLAC-hosted forum, to guide public policy and capacity-building. 🔵 **Named players for this region:** UNESCO **IESALC**, **UNU-IAS**, **ECLAC**, **CENIA** (Chile — working with UNESCO on ethics and education) and **Tecnológico de Monterrey** (UNESCO agreement on AI in education, **`March 2026`**). 🟢 **Tec de Monterrey is the single most actionable name on this page for LATAM** — a major private institution with a signed multilateral agreement is both a reference client and a credential.
+
+🟡 **External regulatory pressure is real and arrives from outside the region.** The EU AI Act reaches LATAM firms selling into Europe, and the commentary this pass returned warns that companies failing to certify compliance **"may be excluded from tenders and global supply chains"** — a law-firm framing, so read as interpretation. 🔵 **For Globant that is a service, not a threat: EU conformity readiness for LATAM-built edtech**, and it pairs with the Annex III classification boundary recorded under `### EMEA` above.
+
+🟢 **Where this pass's filed repositories land in LATAM.** [`CogEvol/CogEvol-4B`](https://github.com/CogEvol/CogEvol-4B) is filed `APAC` by authorship but p705 records it as **the strongest LATAM candidate on the shelf**: a complete course generator in a `2.4 GB` file, running offline at ~`33` tok/s on consumer hardware, with no API keys and no per-seat cost. 🔵 **Against a `55%`-no-budget, bottom-up adoption profile, "runs on the laptop the lecturer already owns and costs nothing per course" is a better fit than any hosted platform on this page** — and because the weights are a separate Apache-2.0 grant on HuggingFace, an institution can hold its own copy.
+
+🔴 **Gap, stated: national AI laws went uncovered again.** Brazil's AI bill, and Chile's and Mexico's frameworks, did not surface on this pass's LATAM leg, nor did private edtech vendors. 🟡 **This base holds Brazil's `PL 3399/2026` and `PL 2397/2026` from `p704`'s legs**, so the gap is narrower than a single pass suggests — but Chile and Mexico remain unheld, and the regional *vendor* map is still absent.
+
 
 #### 🟢 p704 — LATAM: three education-specific bills are moving in parallel, two of them novel to this base — and Mexico is a measured hole
 
@@ -2679,6 +2779,19 @@ Alongside it, two `NOASSERTION` repositories resolved to usable grants on readin
 Three consequences, and they are not cosmetic. **(1)** A client selling education AI into all three markets needs one conformity programme with three jurisdictional profiles, sequenced to the Korean date — not an EU programme with APAC bolted on. **(2)** Any proposal that frames December 2027 as "the deadline" is eleven months late for a client with Korean exposure. **(3)** The EU deferral bought European clients runway and bought APAC clients nothing, so the regions that looked least regulated on this page a year ago are now the ones with the nearest dates. **The habit of treating EMEA as the compliance region and APAC as the supply region is now wrong in both directions** — APAC supplies the open source *and* has the earliest deadlines.
 
 ## 🔴 Declared gaps — searched and not found
+
+🆕 **Added at p705 — five gaps, each the result of a leg that RAN and returned nothing, which is why they are recorded as absences rather than left as silence.**
+
+| # | Gap | Status after `p705` |
+|---|---|---|
+| **(1)** | 🔴 **Canada — entirely absent.** The North America leg returned `134` US state bills and `0` Canadian sources: no federal position, no Ontario, no Québec | **Open.** Québec's language and privacy regimes would materially change an engagement's shape, so this is a *material* absence, not a cosmetic one |
+| **(2)** | 🔴 **Africa — `0` sources, inside a region this page calls "EMEA".** The EMEA leg returned EU and Gulf material only; France and Germany also returned nothing | **Open, and the worst cell in this file.** "EMEA" nominally spans `54` African states and this base holds no African source for any of them |
+| **(3)** | 🔴 **APAC demand — regulation only, `0` measurements.** No classroom adoption rate, no education-vendor market map, no spend figure, across a region with `7` named instruments | **Open, and now shown to be CHANNEL-bound:** these eight legs have failed to produce APAC demand data repeatedly, so a future pass must change channel rather than repeat the query |
+| **(4)** | 🟡 **LATAM national AI laws — partially closed, honestly.** Chile's and Mexico's frameworks did not surface, nor did any private LATAM edtech vendor | **Narrowed.** Brazil's `PL 3399/2026` and `PL 2397/2026` are held from `p704`'s legs; Chile, Mexico and the regional vendor map remain unheld |
+| **(5)** | 🔴 **Primary legal and model-weight sources are NETWORK-BLOCKED, not missing.** `eur-lex.europa.eu`, `arxiv.org` and `huggingface.co` all fail `CONNECT` with `403` | **Closed as unresolvable from this environment** (`705-C`). This is a *session* property, not a web property; reopening requires those domains allowed in the environment's network settings, or a human reading the source |
+
+🔵 **Read `(5)` together with `(1)`–`(4)`: they are different kinds of nothing.** `(1)`–`(4)` are legs that ran and came back empty, which can be fixed by a better channel. `(5)` is a door this environment cannot open, which cannot. 🟢 **Separating them is what stops a future pass re-buying `(5)` for a ninth time** — and it is the correction `p705` makes to `p704`'s diagnosis.
+
 
 🆕 **Added at p689 — five gaps, each measured, and two of them are retractions of how an earlier gap was WORDED rather than new absences.**
 

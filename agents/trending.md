@@ -4,6 +4,144 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p705) — 🟢 **`6` SUBJECTS FILED (`4` AGENTS, `2` FOUNDATIONS). 🔴 THE 8-PASS EU AI ACT CONFLICT IS NOW CLOSED AS UNRESOLVABLE — AND p704'S DIAGNOSIS OF *WHY* WAS WRONG. 🔴 A `48★` NEW ROW TELLS ITS READERS ITS `42,969★` UPSTREAM IS AGPL-3.0; IT HAS BEEN MIT SINCE `2026-06-28`.**
+
+**`6` rows filed.** [`top.md`](top.md) **`166` → `170`** (arity `170/170` at `6` columns, `0` ragged · `170` distinct subjects, `0` duplicated · region vocabulary `170/170` legal: `Global 75` · `APAC 49` · `North America 19` · `LATAM 15` · `EMEA 12`). [`../repos/foundations.md`](../repos/foundations.md) **`258` → `260`** (arity `260/260` at `5` columns, `0` ragged · `260` distinct subjects, `0` duplicated).
+
+**`7` subjects probed at the grant payload, `7` alive, `6` filed, `0` grant claims taken from a detector and `0` taken from a README** — which is the rule that produced this pass's headline defect, below.
+
+| `p705` registered | Verdict |
+|---|---|
+| Mandated legs (`4` global + `4` regional), supply side | 🔴 **33rd consecutive nil.** Every repository address the four global legs returned — `OpenMAIC`, `DeepTutor`, `ai-engineering-hub`, `generative-ai-for-beginners`, `developer-roadmap` — **was already held**, `4` of the `5` on a LIVE shelf (`705-B`) |
+| Mandated legs, demand side | 🟢 **Productive, and the strongest regional yield in several passes** — `4` new binding instruments and the first hard LATAM *denominators* this base has had (`705-E`) |
+| **`topic:` harvest, not the mandated legs** | 🟢 **The pass's real supply channel again: `6` filed subjects, `4` of them in NO file at all** (`705-B`) |
+| Licence-provenance class, NEW | 🔴 **A dependent's README misstating its dependency's grant** — and in the direction that *costs* a client freedom (`705-A`) |
+| EU AI Act Annex III date, open since `p692` | 🔴 **CLOSED AS UNRESOLVABLE — and p704's stated cause was wrong.** Not `ENOTFOUND`, not "does not exist": a **proxy policy denial**, confirmed from the proxy's own telemetry (`705-C`) |
+| Star channel, re-measured | 🔴 `api.github.com/repos/…` **`403`**; `repos/…/releases` **`403` by SESSION TYPE**; `repos/…/security-advisories` **`403`**. `search/repositories` + `raw.githubusercontent.com` remain the only two channels (`705-C`) |
+| 🔴 **Network policy is WIDER than one domain** | 🔴 **`eur-lex.europa.eu`, `arxiv.org` AND `huggingface.co` all fail `CONNECT` with `403`.** So this pass could not verify an arXiv id or a weights licence either, and **labels both as README claims instead of asserting them** (`705-C`) |
+| `search/repositories` false negative, 4th instance | 🔴 **`571` subjects submitted, `563` resolved, `8` missing — and `8 / 8` ALIVE under `ls-remote`.** A measured **`1.4%`** index-miss floor (`705-F`) |
+
+### 🔴 `705-A` — the defect class this pass contributes: **a dependent's README is not evidence about its dependency's licence**
+
+p686 established that `license.spdx_id` from the API is not a licence. p704 established that a README claiming MIT while every `LICENSE` path `404`s is a *dangling grant reference*. **p705 adds the inverse and more dangerous case: a README that confidently states a licence for code it does not own.**
+
+[`CogEvol/CogEvol-4B`](https://github.com/CogEvol/CogEvol-4B) (`48★`, filed this pass) ships an integration patch for [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (`42,969★`) and tells its readers, in §12 of its README:
+
+> *"**The OpenMAIC patch** modifies AGPL-3.0 code; combined works inherit AGPL-3.0."*
+
+🟢 **Read first-hand at `main` this pass, from the owner's own bytes:** OpenMAIC's `LICENSE` is `1,065 B`, sha256₁₂ `ba2525637432`, **MIT**, © *2026 THU-MAIC*; `package.json` declares `"license": "MIT"` at `"version": "1.4.1"`; the README's §License says MIT in both badge and body and adds that commercial use is permitted free of charge.
+
+🔵 **And the changelog dates the change, which is what makes the error explicable rather than merely wrong** — `v0.3.0`, **`2026-06-28`**: *"PBL v2, 'Edit with AI' editor agent, `@openmaic/*` SDKs on npm, **relicensed to MIT**."* The AGPL-3.0 claim was **true before that date and has been false for over four months**, against an upstream now `11` releases further on.
+
+🔴 **Why this direction is the expensive one.** The usual licence defect this base guards against is a project claiming *more* freedom than it grants — permissive-washing — and the harm is legal exposure. This is the mirror image: a project claiming **less** freedom than its upstream grants. The harm is **a Globant engagement declining a viable MIT substrate, or accepting copyleft obligations it does not owe**, on the strength of a sentence in a `48★` dependent. Nobody gets sued; the client just pays for the wrong architecture.
+
+🟢 **The rule, stated so it is reusable:** *licence facts travel only from the owner's grant payload at the real default ref.* A dependent's prose about its dependency is a **lead**, exactly like a search result — and this pass is the second time (after `704-D`'s canonical-versus-fork) that the grant payload alone settled a question that no amount of reading prose could have settled. **This base's standing method caught a `42,969★` fact being misreported by a `48★` repository, and it cost one `curl`.**
+
+🟡 **Two carve-outs survive and are recorded on the verticals shelf, because they bind a redistributor even though the root is MIT:** `packages/mathml2omml` is **LGPL-3.0-or-later** and `packages/pptxgenjs` is third-party **MIT**. **MIT root ≠ MIT tarball.** See [`../verticals/solutions.md`](../verticals/solutions.md) `p705`, which also records the **security** reason to pin `≥ v1.1.3`.
+
+### 🔴 `705-C` — the EU AI Act date: eight passes of cost, closed — and closed by correcting p704's own diagnosis
+
+p692 opened this conflict (*a superseded Annex III commencement date reproduced from secondary sources*). p704 tried the Official Journal directly and reported:
+
+> `getaddrinfo ENOTFOUND eur-lex.europa.eu`
+
+and concluded the host *"does not resolve; it is outside the session's network policy."* **The conclusion was right and the evidence for it was wrong, and the difference is not pedantic** — `ENOTFOUND` is a DNS verdict, and a DNS verdict is indistinguishable from *the domain does not exist*.
+
+🔵 **p705 re-probed on both channels and got a different, sharper failure.** Over `curl` to the ELI and `legal-content` URLs **and** to the bare root:
+
+> `curl: (56) CONNECT tunnel failed, response 403`
+
+🟢 **And then confirmed the cause from the agent proxy's own telemetry** (`$HTTPS_PROXY/__agentproxy/status`), which logs each attempt by host:
+
+> `{"kind": "connect_rejected", "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)", "host": "eur-lex.europa.eu:443"}`
+
+🔴 **So the finding is: `eur-lex.europa.eu` is EXCLUDED BY THIS ENVIRONMENT'S NETWORK POLICY. The domain is fine.** The `WebFetch` channel independently returns `ENOTFOUND` with its own explanation — *"a host fails to resolve like this when it is outside the session's allowed network domains"* — so **both channels agree on the conclusion while disagreeing on the error code**, and a reader of p704 alone would have drawn the wrong inference about why.
+
+🔴 **And the block is not specific to EUR-Lex, which is the generalisation p704 could not make from a DNS error.** p705 probed two further external authorities while verifying this pass's own new rows and got the identical `CONNECT → 403`:
+
+| Host | Result at `p705` | What it cost this pass |
+|---|---|---|
+| `eur-lex.europa.eu` | 🔴 `CONNECT` → `403` | The Annex III commencement date, unresolvable |
+| `arxiv.org` | 🔴 `CONNECT` → `403` | `CogEvol-4B`'s technical report (`arXiv:2608.30968`) could not be read — recorded as the README's claim |
+| `huggingface.co` | 🔴 `CONNECT` → `403` | `CogEvol-4B`'s **weights licence** could not be read — the Apache-2.0 claim is the author's, not this base's |
+
+🟡 **The honest consequence, applied this pass rather than noted for later: a row whose grant lives off-GitHub cannot be fully verified from here**, so [`top.md`](top.md)'s `CogEvol-4B` row and [`../compose/patterns.md`](../compose/patterns.md)'s `P97` both now carry the weights grant as an **explicit unverified claim with a named acceptance criterion**, not as a licence cell. 🟢 **That is the difference between a gap this base declares and a gap it hides.**
+
+🟢 **ACTION `705-C`: this conflict is now CLOSED AS UNRESOLVABLE FROM THIS ENVIRONMENT, and no further pass should spend a probe on it.** It is not an unread source, it is a **blocked** one, and the block is a property of the session rather than of the web. Reopening it requires exactly one of: `eur-lex.europa.eu` added to the environment's allowed network domains, or a human reading the OJ. 🔴 **Until then every date this base holds for Annex III is SECONDARY and must be labelled so** — and p705's own searches returned the conflict *again*, in a fourth mutually inconsistent form, which is precisely why it is being retired rather than re-bought:
+
+| Secondary claim returned at p705 | Source class |
+|---|---|
+| `Regulation (EU) 2026/1744` ("Digital Omnibus on AI") published in the OJ **`24 July 2026`**, applying from **`27 July 2026`** | compliance vendor |
+| High-risk duties run to **`December 2027`** (stand-alone) and **`August 2028`** (embedded) | compliance vendor |
+| High-risk obligations commence **`August 2026`** | a *different* vendor page, same query |
+| A **`May 2026` political agreement** postponed stand-alone high-risk duties from **`2 Aug 2026`** to **`2 Dec 2027`** | law-firm bulletin |
+
+🔵 **What IS safe to carry forward, because it does not depend on the contested date:** education AI that *evaluates learners, assigns them to programmes, detects prohibited behaviour during assessment, or influences access to qualifications* is **Annex III high-risk**, which brings conformity assessment, human oversight and post-market monitoring; and a separate ban on AI systems for non-consensual intimate imagery and CSAM is reported for **`2 December 2026`**, which is a school-safeguarding matter rather than an edtech-product one. 🟡 **The classification is stable across every source; only the clock is contested.**
+
+### 🟢 `705-B` — the mandated supply legs are now `33` passes nil, and p705 can finally say what they ARE good for
+
+The four global legs returned five repository addresses between them: `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `patchy631/ai-engineering-hub`, `microsoft/generative-ai-for-beginners`, `kamranahmedse/developer-roadmap`. **`5 / 5` already held by this base; `4 / 5` already on a LIVE shelf.** The vertical leg (`open source platform education ERP CRM MIT Apache`) returned `OpenEduCat`, `ERPNext`, `Apache OFBiz`, `Odoo`, `CK-ERP` — all held for many passes, and the leg's own result text conceded it *"didn't find a result that combines education ERP, CRM, and an MIT or Apache license in a single product."*
+
+🔴 **Filed as a standing measurement, not a complaint: the mandated supply legs have returned `0` novel permissive education repositories for `33` consecutive passes.** They surface what is *already popular*, and this base passed the point where popular and unheld overlap several hundred rows ago.
+
+🟢 **All `6` subjects filed this pass came from `topic:` and date-bounded `search/repositories` harvests** (`topic:ai-tutor`, `topic:edtech`, `topic:intelligent-tutoring-system`, plus `created:>2026-08-01` windows) — `4` of them in **no file at all** before today. 🔵 **The division of labour to carry forward: the mandated legs are a DEMAND instrument (regulation, adoption rates, market sizing, named institutional players) and the `topic:` harvest is the SUPPLY instrument.** Judged as demand, the legs were the most productive they have been in passes — see `705-E`. Judged as supply, they are spent.
+
+### 🟡 `705-D` — the distribution shift: the teaching artifact is shipping as a *skill inside someone else's host*, and `3` of this pass's `4` agents are that shape
+
+`dsh-openmaic` and `dsh-answer-reviewer` are **host plugins** (DeepSeek Harness); `feifei-companion` is an **OpenClaw skill** on ClawHub. None is an application, none has a server to stand up, and none is discoverable as a "platform".
+
+🔵 **This explains a measured anomaly rather than just describing a trend.** `feifei-companion` had been written into this base **`26` times across prior passes and shelved `0` times** — the same backlog pathology p704 found at scale (`12` of its `13` subjects already written, none shelved). 🟢 **The cause is now legible: a skill has no deployable surface, so passes that triage by "can this be stood up?" systematically drop them**, which is exactly the filter that let a `112★` K-12 companion sit unshelved for `26` sightings.
+
+🟢 **The consequence for Globant is favourable and concrete:** a skill carries the host's auth, UI and session management for free, so the engagement cost is the *rubric and the content*, not the platform. 🟡 **The cost is lock-in to one host's plugin API** — and `dsh-answer-reviewer` is the clean case for porting, because its gate (extract final text → score `1`–`100` → re-steer under threshold `80` → cap at `5`) is host-agnostic logic wearing a host-specific adapter.
+
+### 🔵 `705-F` — the `1.4%` search-index miss floor, measured at `571` subjects
+
+p690 found two live rows absent from `search/repositories` and set the rule *a search miss is not grounds to retire a row*. p704 hit a third instance (`7` qualifiers, `total_count: 6`). **p705 put a number on it.** All `571` distinct first-link subjects across the three live shelves were submitted in `39` batches of `15` `repo:` qualifiers:
+
+| measure | value |
+|---|--:|
+| distinct subjects submitted | **`571`** |
+| resolved by `search/repositories` | **`563`** |
+| **missing from the index** | **`8`** |
+| of those `8`, **ALIVE** under `git ls-remote --symref` | 🔴 **`8 / 8`** |
+| measured index-miss rate | **`1.4%`** |
+
+The `8`: [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents), [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet), [`Harikeshav-R/canvas-mcp`](https://github.com/Harikeshav-R/canvas-mcp), [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp), [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor), [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library), [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp), [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net).
+
+🔴 **Two of the `8` are the SAME rows p690 named**, so the misses are **persistent, not transient** — re-probing does not clear them, and a pass that retired on a single miss would have deleted eight live repositories, two of them vendor-owned infrastructure (`mitodl`, `digitalcredentials`). 🟢 **`ls-remote` remains the liveness control and `search/repositories` remains strictly a convenience channel for `stars` + `spdx_id`.**
+
+### 🟢 `705-G` — the licence shape of the whole base, measured in one pass
+
+Same `563` resolutions, now read as a census rather than a refresh:
+
+| Grant (API `spdx_id`) | Count | Share |
+|---|--:|--:|
+| **MIT** | `335` | `59.5%` |
+| **Apache-2.0** | `102` | `18.1%` |
+| **BSD-3-Clause** | `19` | `3.4%` |
+| 🟢 **Permissive subtotal** | **`456`** | **`81.0%`** |
+| `NOASSERTION` (detector declined) | `49` | `8.7%` |
+| `NULL` (no grant detected) | `13` | `2.3%` |
+| AGPL-3.0 | `18` | `3.2%` |
+| GPL-3.0 / GPL-2.0 | `13` / `3` | `2.8%` |
+| MPL-2.0 / LGPL-3.0 / ECL-2.0 / CC0-1.0 | `2` each | `1.4%` |
+| Unlicense / EUPL-1.2 | `1` each | `0.4%` |
+
+🟢 **`81.0%` of everything this base references is build-on permissive**, which is the mandate's own stated target. 🟡 **`62` subjects (`11.0%`) carry no usable detector verdict** (`NOASSERTION` + `NULL`) — and per `705-A` and p686 that is not a licence finding either way, only an instruction to read the payload. 🔵 `11` archived repositories sit on live shelves and **all `11` were already flagged** (spot-checked `menthorlabs/menthor`, `scratchfoundation/scratch-gui`, `microsoftarchive/Learn-LTI`, `ably-labs/realtime-quiz-framework`) — the shelves' archival discipline holds.
+
+### 🟢 `705-E` — the regional demand legs, and the first real LATAM denominators
+
+Full placement, numbers and named players are in [`../intel/market.md`](../intel/market.md) under `## Opportunities by region`. The headline per region, with the gaps stated:
+
+- 🟢 **LATAM — the pass's best evidence, and for once it is DENOMINATED.** UNESCO IESALC, launched at Digital Learning Week `2026`, surveyed **~`200` institutions across `19` countries**: **`87%`** use AI in at least one area and **`74%`** in teaching and learning, but only **`26%`** have a formal AI strategy, **`55%`** have **no AI budget at all**, and dedicated funding at public universities runs at **`4%`**. UNESCO's regional **Observatory on AI in Education for LAC** launched in Santiago on **`14 April 2026`** at the ECLAC-hosted forum. In Chile and Brazil **>`50%` of teachers** already use these tools while **<`10%` of institutions** have formal guidelines. Named players: UNESCO IESALC, UNU-IAS, ECLAC, **CENIA** (Chile), **Tecnológico de Monterrey** (UNESCO agreement, `March 2026`).
+- 🟢 **North America — volume, and dated deadlines.** **`134`** AI-in-education bills across **`31`** states in `2026`; ~`100` state bills touching K-12 student AI use within `1,500`+ AI bills overall; **`35`+ states** with official departmental guidance as of `June 2026`. **North Carolina Session Law `2026-41`** is the concrete clock: state model policy by **`31 Dec 2026`**, local school-unit policies by **`30 Jun 2027`**, teacher professional development by **`June 2028`**. Maryland **SB 720** would require district policies and designated coordinators. The **US Department of Education finalised a rule** prioritising federal education grants for projects advancing understanding or ethical use of AI. 🔴 **Gap, stated: Canada returned nothing** — no federal, Ontario or Québec position surfaced on these legs.
+- 🟡 **APAC — regulated hard, measured not at all.** South Korea's **AI Basic Act in force `22 Jan 2026`** (transparency, risk assessment, human oversight, documentation for high-impact systems; enforcement decrees pending, guidance-first grace period through `2026`). **Vietnam's AI law effective `1 Mar 2026`**, with **education named among six high-risk sectors** and *automated assessment* given as the example. China: mandatory registration plus content-labelling, penalties to **¥`50M`**. Japan: light-touch and voluntary. Singapore: **AI Verify** toolkits. 🟢 **Australia is the education-specific one — TEQSA requires ALL higher-education providers to file institutional action plans on generative-AI risk.** Hong Kong has issued generative-AI guidance. 🔴 **Gap, stated: no APAC classroom adoption statistics and no education-vendor market map were returned** — the region's legs yield regulation only.
+- 🟡 **EMEA — the EU frame is clear, the clock is not (see `705-C`), and the geography is thin.** Annex III classification of learner-evaluating systems is stable across sources; the commencement date is contested four ways and now **retired as unresolvable**. European AI-in-education market put at **~`$2.64B` (2026)** — single secondary source, low confidence. **Finland, Estonia and the Netherlands** named as K-12 integration leaders; **Dubai's KHDA** has issued explicit responsible-AI guidance to private schools; the UK runs light-touch through existing sector regulators. 🔴 **Gap, stated: France, Germany, Africa in its entirety, and the Middle East beyond the Gulf returned nothing on these legs** — and "EMEA" covering Africa with zero African sources is the most under-served cell in this table.
+
+🔴 **Market sizing remains irreconcilable and is recorded as a spread, not a number:** `$11.40B` for `2026` (Coherent Market Insights) vs **~`$12.3B`** for `2026` (X-Pilot, attributed to HolonIQ) vs `$136.79B` by `2035` (Azumo, different horizon). 🟢 **The `2026` figures bracket to `$11.4B`–`$12.3B`, an `~8%` spread, which is tight enough to plan against and is the first time this base can say that.**
+
+---
+
 ## 🆕 2026-11-08 (p704) — 🔴 **THE SUPPLY WAS NEVER MISSING: `12` OF THIS PASS'S `13` VERIFIED SUBJECTS WERE ALREADY WRITTEN IN THIS FILE AND IN NO LIVE SHELF. 🟢 `12` FILED (`8` AGENTS, `4` FOUNDATIONS). 🔴 A `340★` HIGHER-ED ADVISING PLATFORM IS **ELASTIC 2.0** AND ITS LIMITATION FORBIDS MANAGED HOSTING; A `104★` CANVAS SERVER ADVERTISES MIT AND SHIPS NO LICENCE FILE AT ALL.**
 
 **`12` rows filed.** [`top.md`](top.md) **`158` → `166`** (arity `166/166` at `6` columns, `0` ragged · `166` distinct subjects, `0` duplicated · region vocabulary `166/166` legal: `Global 74` · `APAC 46` · `North America 19` · `LATAM 15` · `EMEA 12`). [`../repos/foundations.md`](../repos/foundations.md) **`254` → `258`** — 🟢 **and its inherited count AGREED with its published count for the first time in three passes** (`254` = `254`), which is `p703`'s re-derivation holding. [`../verticals/solutions.md`](../verticals/solutions.md) **`109` → `109`, deliberately `0` filed.** [`../intel/trends.md`](../intel/trends.md) gains **`T154`–`T157`**; [`../compose/patterns.md`](../compose/patterns.md) gains **`P94`–`P96`**; opportunities published under the single existing `## Opportunities by region` heading for **all five** values.

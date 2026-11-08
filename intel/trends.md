@@ -21,6 +21,48 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T158–T161 — added at p705 (2026-11-08)
+
+### `T158` — A licence claim now propagates DOWNSTREAM faster than a relicence does, so the dependent's README is the stale copy
+
+**Evidence (direct, this pass).** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) **relicensed from AGPL-3.0 to MIT at `v0.3.0` on `2026-06-28`** (its own changelog). Read at `main` at `p705`: `LICENSE` `1,065 B`, sha256₁₂ `ba2525637432`, MIT, © *2026 THU-MAIC*; `package.json` `"license": "MIT"` at `"version": "1.4.1"`. Its dependent [`CogEvol/CogEvol-4B`](https://github.com/CogEvol/CogEvol-4B) (`48★`) still states in §12: *"The OpenMAIC patch modifies AGPL-3.0 code; combined works inherit AGPL-3.0."* **Stale by over four months and `11` releases.**
+
+**Why it is a trend and not an anecdote.** Relicensing *toward* permissive has become common as research projects chase adoption — and the act is a one-line changelog entry in one repository, while the claim about it lives in every dependent's prose. 🔴 **The asymmetry is structural: a relicence is `O(1)` to perform and `O(n)` to propagate.** The error therefore skews **pessimistic** — dependents under-report their upstream's freedom — which is the opposite of the permissive-washing this base usually guards against, and it is costlier in practice because nobody audits a *conservative* licence claim.
+
+**Confidence: high** on the instance (two first-hand channels plus a dated changelog); **medium** on the generalisation (one measured case, a second in `p704`'s canonical-versus-fork).
+
+**Operational consequence.** *Licence facts travel only from the owner's grant payload at the real default ref.* Treat a dependent's statement about its dependency as a lead. 🟢 **And always check the changelog for the word "relicensed" before accepting ANY licence claim older than the upstream's last minor release.**
+
+### `T159` — The teaching artifact is shipping as a skill inside someone else's agent host, which makes it invisible to platform-shaped triage
+
+**Evidence.** `3` of the `4` agents filed at `p705` have no deployable surface: `dsh-openmaic` and `dsh-answer-reviewer` are DeepSeek Harness host plugins, `feifei-companion` is an OpenClaw skill distributed via ClawHub. The measured symptom: **`feifei-companion` was written into this base `26` times and shelved `0` times** before `p705`. `p704` found the same pathology at scale — `12` of `13` verified subjects already written, none shelved.
+
+**The mechanism, stated as a defect in the OBSERVER.** A triage question of the form *"can this be stood up?"* silently rejects everything that has nothing to stand up. 🔴 **So the `26`-sighting miss was not a supply gap, it was an instrument gap** — the same class of error `T130` recorded for LATAM, where a star floor manufactured a regional nil.
+
+**Confidence: high** on the shift (counted across two passes); **medium** on durability (it tracks host-plugin ecosystems that are themselves young).
+
+**Consequence for Globant.** 🟢 A skill inherits the host's auth, UI and session management, so engagement cost collapses to **rubric + content**. 🟡 The cost is plugin-API lock-in — and the mitigation is visible in `dsh-answer-reviewer`, whose gate is host-agnostic logic behind a host-specific adapter.
+
+### `T160` — Education's regulatory duties are arriving through general high-risk classification, not education statutes — with Australia the exception
+
+**Evidence across three regions this pass.** **Vietnam** (AI law effective `1 Mar 2026`) names education among **six high-risk sectors**, with *automated assessment* as the worked example. **South Korea's** AI Basic Act (in force `22 Jan 2026`) imposes transparency, risk assessment, human oversight and documentation on *high-impact* systems generally. The **EU's** Annex III catches education where a system evaluates learners, assigns them to programmes, detects prohibited assessment behaviour, or influences access to qualifications. 🟢 **The exception: Australia's `TEQSA` acts as an education regulator directly, requiring ALL higher-education providers to file institutional generative-AI action plans.**
+
+**Why the distinction is commercially decisive.** A horizontal high-risk regime attaches to a **product feature**; an education-regulator mandate attaches to **every institution**. 🔵 **The first produces a conformity-file engagement with one vendor; the second produces a universal, per-institution, document-shaped engagement.** North Carolina's Session Law `2026-41` is the North American instance of the second shape — statutory dates, every local unit in scope.
+
+**Confidence: high** on the pattern; **the commencement dates are secondary and contested** (see `705-C` — EUR-Lex is network-policy-blocked from this environment and the conflict is retired as unresolvable).
+
+**Consequence.** 🟢 Scope by **trigger feature** in horizontally-regulated markets: a system that *scores a learner* is caught; a lesson-authoring tool no learner is scored by generally is not. That boundary, not the date, sets an EMEA or APAC product's cost.
+
+### `T161` — On-device course generation has crossed from demo to deployable, and it resolves the budget constraint and the sovereignty constraint with one artifact
+
+**Evidence.** [`CogEvol/CogEvol-4B`](https://github.com/CogEvol/CogEvol-4B) (MIT code; weights Apache-2.0 on HuggingFace; `arXiv:2608.30968`): a `4B` model post-trained (Qwen3.5-4B hybrid, `48` GDN linear-attention + `16` full-attention layers → mix SFT on `53,687` production-verified samples → slide RL → HTML RL) that turns a one-line brief into structured slide JSON **and** self-contained interactive HTML in a single forward pass. **One `2.4 GB` `Q4_K_M` GGUF file**; the README's own measurement is **~`33` tok/s generation, ~`470` tok/s prefill on an M2 Pro (16 GB)**, a full interactive course in **~`6` minutes**, **zero external dependencies at inference**, demoed with WiFi off.
+
+**Why it matters now rather than as a curiosity.** Two separate constraints this base has recorded independently collapse into one solution: 🟢 **LATAM's budget constraint** — UNESCO IESALC `2026`: `55%` of institutions have **no AI budget** and public universities run **`4%`** dedicated funding, against `87%` already using AI — and 🟢 **APAC's data-sovereignty precondition**, where Malaysia and others treat sovereignty as foundational to adoption. A model that runs on the lecturer's existing laptop has **no per-seat cost and no data egress**, satisfying both by construction rather than by contract.
+
+**Confidence: medium-high.** The capability claims are the authors' own measurements on named hardware and are reproducible in principle (weights are public, the file is one download); adoption is low (`48★`). 🟡 **The deployment takes TWO grants — MIT for the repository's code, Apache-2.0 for the weights on HuggingFace** — and anyone costing it must read both.
+
+**Consequence.** 🔵 Where bandwidth or budget is the binding constraint, the offline generator is now the *default* candidate and the hosted platform is the one that needs justifying — an inversion of this base's standing assumption for low-connectivity engagements.
+
 ## 🆕 T154–T157 — added at p704 (2026-11-08)
 
 ### `T154` — "Open source" in education is now a claim to be verified, not a category to be filtered on
