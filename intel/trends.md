@@ -2017,3 +2017,84 @@ One level up, at **research** integrity, the picture inverts. `topic:peer-review
 **Action.** (1) Extend the arity gate to the trending files, **read-only** — they are append-only by rule, so the `7` over-wide rows are reported and left, not rewritten; rewriting history to fix a renderer is the trade `p699` already refused. (2) New sections appended to those files must pass the gate before they are written, which p702's own appended sections do (`0` ragged). (3) Any sweep this base publishes a `0` from must state **which files it covered** — `p684`'s did, which is why its claim survived scrutiny and p702's `223` did not.
 🔵 **p702 then reproduced the defect itself, by imitation, and caught it before publication.** Its first draft of the `p702` section on [`../agents/trending.md`](../agents/trending.md) copied the house style of the surrounding history — a `| … registered | Verdict |` header over rows that merge the verdict into the finding text — and so shipped **`7` single-cell rows under a two-column header**, which is precisely what this finding is about. That is the same mechanism `p699` identified for the triple row-count heading: **the defect propagates because each pass imitates the last.** Repaired in-pass by giving every row a real `Verdict` cell; both p702 sections now score `0` ragged, so the claim in this entry's **Action (2)** is true as published rather than aspirational.
 **Confidence: high.** Both figures measured on the same tree minutes apart; the `| | |` false positive is reproducible and the regex fix is one character class; p702's own section was measured before and after repair (`7` → `0`).
+
+## T149 — Three teams in three languages independently built the SAME grading architecture this pass: the model transcribes, a deterministic program judges
+
+**Signal.** p703 filed three grading artefacts found on three separate channels, written in Chinese, Korean and French by authors with no apparent connection, and all three refuse to let the model assign the mark.
+
+- [`lihaiyang616/chemeq-grader`](https://github.com/lihaiyang616/chemeq-grader) (MIT, APAC) states the division explicitly: the VLM **only transcribes** — instructed to copy a wrong equation wrongly and not correct it — and a deterministic parser checks balancing, charge, conditions, ↑↓, state symbols and ΔH. The author's stated reason: *balancing, charge, conditions and arrows are deterministic rules, and asking a model to do them in its head produces answers that look right and are wrong.*
+- [`blueshadow62/fairhand`](https://github.com/blueshadow62/fairhand) (Apache-2.0, APAC) transcribes handwritten Korean scripts and then **compares against an answer key**; the AI's output is text, never a score.
+- [`eulogep/Corrector-ai`](https://github.com/eulogep/Corrector-ai) (MIT, EMEA) names the whole product *correction **supervisée*** — OCR plus AI-assisted barèmes with the teacher in the loop by construction.
+
+🔵 **Why this is a trend and not a coincidence: the three teams converged on the same boundary because the boundary is where the economics are.** Transcription is a perception task with a measurable error rate a teacher can check in seconds. Scoring is a judgement task whose errors are invisible, uncorrelated between runs, and expensive to audit. Splitting them means the expensive-to-verify half is replaced by code that is right by construction.
+
+🟢 **And it yields a property none of the all-LLM graders on these shelves has: `chemeq-grader` re-grades locally with NO further API call when the teacher fixes a mis-transcription.** Review is free, so the marginal cost of a careful teacher is zero — the opposite of an all-LLM pipeline, where every correction is another billed inference.
+
+**Action.** Make the transcribe/judge split the default architecture in any assessment proposal where the rubric contains *any* mechanically checkable component, and quantify the split in the pitch: what fraction of the rubric is deterministic (and therefore free and certain) versus what fraction needs judgement. [`decentralizeallengineering/officecheck`](https://github.com/decentralizeallengineering/officecheck) (Apache-2.0) is the ready-made deterministic half for `.docx`/`.xlsx`/`.pptx`/`.pdf` coursework.
+
+**Confidence: high** for the convergence (three independent artefacts, grants and mechanisms read from bytes this pass). **Medium** for the generality — all three are small projects with ≤1★, and none publishes an agreement-with-human-markers figure.
+
+## T150 — A held row is an unexplored owner, and this base has 5,257 of them
+
+**Signal.** p703 ran owner expansion on six owners and got back **530 sibling repositories**. Two of those owners were already represented on these shelves by exactly one row each — [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) and [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — and **neither owner had ever been queried.**
+
+| Owner | Repositories | Held before p703 | Filed at p703 | What was sitting there |
+|---|--:|--:|--:|---|
+| `michael-borck` | **243** | `1` (`study-buddy`) | `4` | A Curtin University teaching estate: grading over LiteLLM, curriculum generation with an offline mode, speech-practice desktop app, an assessment *bench* that measures LLM marking consistency against human marks |
+| `malkreide` | **75** | `1` (`global-education-mcp`) | `5` | A uniformly-MIT Swiss estate: cantonal education statistics, ETH Library, a Luanti learning-world framework tagged against **Lehrplan 21**, and a Socratic-method skill at **`55★`** — the most-adopted artefact p703 found anywhere |
+| `cyanheads` | **181** | `0` | `4` | OECD (1,500+ datasets), OpenAlex (270M+ publications), Project Gutenberg (78,000+ full texts), and the TypeScript MCP framework all of them are built on (`153★`) |
+| `onderwijsin` | **18** | `0` | `3` | A named Dutch education nonprofit: the teacher-pipeline MCP, an agent-skill marketplace, and the HOVI/KiesMBO national registry adapter |
+| `quietbytehq` | **10** | `0` | `2` | A pre-alpha school information system with ministry-scale tenancy in its data model, and an offline timetable solver |
+| `VIABLE-Learning-Lab` | **3** | `0` | `1` | A teaching harness whose unit of configuration is the teacher's help limit |
+
+🔴 **The defect is in the ledger, not the supply.** This base holds **`5,257`** distinct repository slugs. Every one names an owner, and the owner is one API call away. `9` of p703's `44` rows came from the two owners already represented here — found not by searching for education AI, but by asking *who else does this person publish as.*
+
+🔵 **Why owner expansion outperforms every keyword leg: an owner is a curated set with a known licence posture and a known domain.** `malkreide`'s `75` repositories are uniformly MIT, so a sibling's grant is predictable before it is read. `michael-borck`'s estate is one university lecturer's teaching output, so every repository is education by construction — no keyword can match that precisely, and `T130`'s star floor and `p702`'s common-noun recall problem both vanish, because nothing is being matched on a word.
+
+**Action.** Promote owner expansion from an opportunistic channel to a standing sweep: for every owner appearing on these shelves, query `user:<owner>` once and record the result, so the sweep is never re-bought. Order by estate size — `cyanheads` (181), `michael-borck` (243) and `malkreide` (75) are done; `5,257` slugs remain, and their distinct-owner count is the real size of the backlog.
+
+**Confidence: high.** Counts are from `gh api search/repositories` with `user:` qualifiers, read this pass; the two already-held slugs were confirmed against this base's own extracted slug set before the claim was written.
+
+## T151 — The licence-payload hash this base prints in every cell identifies the OWNER, not the repository
+
+**Signal.** Reading p703's own verification output rather than its conclusions: four `malkreide` repositories filed this pass all carry `sha256₁₂ ac1fc40e61a6` at `1,069 B`, and `michael-borck`'s `talk-buddy`, `netsim` and `assessment-bench` all carry `b4fdbc9f39ce` at `1,070 B`.
+
+🔵 **The cause is structural, not accidental.** An MIT payload is a fixed template whose only variable content is the copyright line, which is constant across one owner's portfolio. So an identical hash across two repositories is evidence of **common ownership** — the expected, correct result — and not of a copied or forked grant.
+
+🔴 **The harm, if the hash were trusted as an identity: a dedupe, provenance or "is this the same grant" scheme keyed on grant-payload hash would collapse an owner's entire estate into one subject.** For `malkreide` that is `75` repositories reduced to `1`. These shelves print `sha256₁₂` in every licence cell and had never stated what the value does and does not identify.
+
+🟢 **What it remains good for, unchanged:** an integrity check on **re-reads of the same repository** — the use these shelves actually make of it, confirming a grant has not been edited since it was last read. That is worth keeping.
+
+**Action.** State the scope in the licence-verification convention: the payload hash is an integrity check across time for one repository, never an identity across repositories. Keep printing it.
+
+**Confidence: high.** Seven payloads read from bytes this pass at the real default ref; the two hash collisions are reproducible and the mechanism (constant copyright line) is inspectable in the payloads themselves.
+
+## T152 — The three regions need three different engagement shapes, because their open-source supply is constrained in three different ways
+
+**Signal.** p703 placed rows on all five region values, and the obstacle between a studio and usable open source was different in each.
+
+| Region | What constrains the supply | What p703 measured | The engagement shape it implies |
+|---|---|---|---|
+| **EMEA** | Nothing hides the data — **the adapter is missing** | `7` filed rows are public-sector data layers; Zurich BISTA, four French national datasets (Annuaire de l'éducation, UAI, IPS, Parcoursup), ETH Library and the Dutch HOVI/KiesMBO registries are all **published by the authority and reachable with no API key** | Build the MCP adapter — `~1,000` lines of TypeScript over data that is already open. The scarce artefact is the connector, not the data |
+| **APAC** | **Language**, not availability | `7` of `14` new agent rows are APAC; the strongest (`chemeq-grader`, `fairhand`, `Glass-grading`, `格致`) are Chinese- and Korean-first, and `p702` measured that English keyword legs match them on the common noun only | Read the primary language. The artefacts are mature and the mechanisms are the best on these shelves; they are simply not written in English |
+| **LATAM** | **This base's own star floor** (`T130`) | `3` filed platforms are LATAM, with the licensor naming a public institution in-repo — a Pará state programme run by PRODEPA, IFPA, SIMBIC/UFPA and the state government | Partner with the public programme that already exists. The supply is institutional and sits at `0–1★`, so any star-filtered search declares the region empty |
+| **North America** | Not supply — **demand articulation** | The demand leg has nilled `43` times; supply arrives via named institutions (a school district's own platform at `p702`) | Sell against a named peer institution's published build, not against a market-size figure |
+| **Global** | Model-layer and framework supply is abundant and already held | `3` of `14` new agent rows; the novel ones are mechanisms (a teacher's help limit, a refusal boundary, a learner model) rather than platforms | Compose, don't build. The gap is pedagogy encoded as configuration |
+
+🔵 **The transferable point: "is there open source for this in region X" is the wrong question, because in all five regions the answer is yes.** The right question is what stands between the studio and it — a missing connector, a language, a search filter, or a buyer who cannot name the need — and the answer differs by region, so one sourcing method cannot serve all five.
+
+**Action.** Record the constraint per region alongside the opportunity in [`market.md`](market.md), so a sourcing sweep for an EMEA engagement looks for authority data portals, an APAC sweep reads `topic:` heads in the primary language, and a LATAM sweep drops the star floor to zero.
+
+**Confidence: high** for EMEA, APAC and LATAM (each rests on rows filed and verified this pass). **Medium** for North America and Global, which rest on the accumulated nil record rather than on a p703 measurement.
+
+## T153 — A rule enforced on the page where the defect was last seen is not enforced
+
+**Signal.** `p699` found a stale row-count heading on [`../repos/foundations.md`](../repos/foundations.md), fixed it, and published the singleton-heading rule: *a row-count heading is a singleton, and a promotion and the heading it invalidates must land in the same edit.* `p702` found the identical defect on [`../agents/top.md`](../agents/top.md), fixed it, and restated the rule.
+
+🔴 **p703 arrived to find both sibling shelves broken the same way, including the very page where the rule was first written.** `repos/foundations.md` published **`199` over a table of `233`** — understating its own shelf by `34` rows, for two full passes. `verticals/solutions.md` published **`94` over a table of `100`**.
+
+🔵 **The rule was never wrong; its scope was.** Each pass fixed the page in front of it and left the rule attached to that page. A convention that lives in the narrative of one shelf is a note, not a gate — it binds whoever reads that shelf next, which on a three-shelf base is a one-in-three chance.
+
+**Action.** Two parts, and the second is the one that generalises. (1) p703 counts and re-publishes **all three** headings in one edit — done, and verified by counting after the insert: `158`, `254`, `109`. (2) **A convention that applies to every shelf belongs in a gate or in the pass procedure, not in the prose of the shelf where it was discovered** — the same reasoning `T148` applied to the arity sweep that never covered the two files holding most of this base's tables.
+
+**Confidence: high.** Both stale figures were read off the published files before the edit and both deltas were re-derived by counting rows between the header separator and the terminating blank line.

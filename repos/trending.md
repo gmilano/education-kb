@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p703) — 🟢 **`21` FOUNDATIONS AND `9` PLATFORMS FILED, `7` OF THEM EMEA PUBLIC-SECTOR DATA LAYERS — AND THE REGION'S CONSTRAINT TURNS OUT TO BE THE MISSING CONNECTOR, NOT MISSING DATA. 🔴 THIS SHELF'S OWN HEADING WAS PUBLISHING `199` OVER A TABLE OF `233` FOR TWO FULL PASSES.**
+
+**[`foundations.md`](foundations.md) `233` → `254`** — re-derived by counting between the header separator and the terminating blank line after the insert, with the counter validated against the **inherited table** rather than the published figure, because the two disagreed by `34`. Arity `254/254` at `5` columns, `0` ragged · `254` distinct subjects taken as the first `github.com/owner/repo` link, `0` duplicated · `254/254` carry a real repository link. **[`../verticals/solutions.md`](../verticals/solutions.md) `100` → `109`** (arity `109/109` at `6` columns, `109` distinct, `0` duplicated; its heading was publishing `94`).
+
+| Filed at `p703` | Grant, byte-read at the real default ref | Why it is a foundation |
+|---|---|---|
+| [`cyanheads/mcp-ts-core`](https://github.com/cyanheads/mcp-ts-core) (`153★`) | Apache-2.0, `LICENSE`, `11,317 B`, sha256₁₂ `7915fc5b0477` | The TypeScript framework the `~180` servers in its own estate are built on — the build-time dependency inherited by forking any of them |
+| [`cyanheads/oecd-mcp-server`](https://github.com/cyanheads/oecd-mcp-server) (`4★`) | Apache-2.0, `11,317 B`, `7915fc5b0477` | `1,500+` OECD datasets incl. education — the comparative layer every ministry conversation opens with |
+| [`cyanheads/openalex-mcp-server`](https://github.com/cyanheads/openalex-mcp-server) (`17★`) | Apache-2.0, `10,772 B`, `a0d03b5044e2` | `270M+` publications; the open successor to the bibliometric databases a faculty would otherwise license |
+| [`cyanheads/gutenberg-mcp-server`](https://github.com/cyanheads/gutenberg-mcp-server) (`6★`) | Apache-2.0, `11,317 B`, `7915fc5b0477` | `78,000+` public-domain full texts with chunking — **the cheapest legal corpus on these shelves** |
+| [`malkreide/zh-education-mcp`](https://github.com/malkreide/zh-education-mcp) | MIT, `1,069 B`, `ac1fc40e61a6` | Canton of Zurich **BISTA** official statistics, no API key — the template for any canton, Land, state or province |
+| [`malkreide/eth-library-mcp`](https://github.com/malkreide/eth-library-mcp) | MIT, `1,069 B`, `ac1fc40e61a6` | ETH Library Zurich, `30M+` resources — institution scale, where a library engagement actually lands |
+| [`malkreide/luanti-lernwelt-template`](https://github.com/malkreide/luanti-lernwelt-template) | MIT, `1,069 B`, `ac1fc40e61a6` | **`Lehrplan-21` tagging as a first-class field** — curriculum-as-metadata-in-the-artefact, which is what makes a learning world auditable by a school |
+| [`malkreide/critical-pedagogy-skill`](https://github.com/malkreide/critical-pedagogy-skill) | MIT, `1,069 B`, `ac1fc40e61a6` | The only **critique** primitive here — everything else generates material or marks it; nothing examined the material's assumptions |
+| [`Hug0x0/mcp-french-school-map`](https://github.com/Hug0x0/mcp-french-school-map) | MIT, `1,063 B`, `59557cd648d7` | Four named French national datasets (Annuaire de l'éducation, UAI, IPS, Parcoursup) — **and a safety note worth copying verbatim** |
+| [`onderwijsin/onderwijsloket-assistent`](https://github.com/onderwijsin/onderwijsloket-assistent) | MIT, `1,079 B`, `47a008fd583e` | **The only teacher-pipeline artefact on any of these shelves**, from a named Dutch nonprofit — and teacher supply is the EMEA sector's binding constraint |
+| [`onderwijsin/agents`](https://github.com/onderwijsin/agents) | MIT, `1,079 B`, `47a008fd583e` | How a sector body distributes AI capability to its members: versioned plugins and skills, not a product |
+| [`onderwijsin/navigator-data-generator`](https://github.com/onderwijsin/navigator-data-generator) | MIT, `1,077 B`, `3f569a3ba266` | Dutch **HOVI** + **KiesMBO** national registries. 🔴 Last push `2025-04-16`, filed with that stated |
+| [`gjlmotea/blockhand-mcp`](https://github.com/gjlmotea/blockhand-mcp) | MIT, `1,065 B`, `5f4050e121aa` | `44` tools into Minecraft Education through the game's **own** `/connect` WebSocket — no add-on, no mod, nothing injected, no screen reading |
+| [`itmir913/ml-playgrounds`](https://github.com/itmir913/ml-playgrounds) (`2★`) | MIT, `1,067 B`, `ef18d0ed095e` | Browser-only ML for CS classes on low-spec school PCs and phones; work saved in the student's own browser, so no student data reaches a server |
+| [`HAHA1122344/kg-slidegen`](https://github.com/HAHA1122344/kg-slidegen) | MIT, `1,067 B`, `0cffde198b6a` | Courseware where **the constraint is data**: topological teaching order, and `Misconception` as a first-class node the generator must correct |
+| [`RAFPAPER2026/RAF`](https://github.com/RAFPAPER2026/RAF) | Apache-2.0, `11,358 B`, `cfc7749b96f6`, canonical | AND–OR rubric trees with a measured human-alignment loop. 🔴 Owner is a paper-anonymisation account; domain is personal-assistant work, not education |
+| [`michael-borck/assessment-bench`](https://github.com/michael-borck/assessment-bench) | MIT, `1,070 B`, `b4fdbc9f39ce` | *"The bench measures; it never marks."* Repeated-run consistency and Pearson/Spearman agreement against human marks, per arm |
+| [`devissaputra/causal_learning_analytics`](https://github.com/devissaputra/causal_learning_analytics) | MIT, `1,076 B`, `c10726bddc58` | An OULAD day-30 landmark design that **publishes its own extreme weights and residual imbalance** — the template for every "AI improved retention" claim |
+| [`entangelk/assessment_poc`](https://github.com/entangelk/assessment_poc) | Apache-2.0, `11,339 B`, `0a989e7b8096` | Validates the **spec ↔ rubric ↔ evidence** contract — the upstream half of the grading-trust gap |
+| [`decentralizeallengineering/officecheck`](https://github.com/decentralizeallengineering/officecheck) | Apache-2.0, `11,358 B`, `cfc7749b96f6`, canonical | Deterministic pass/fail over `.docx`/`.xlsx`/`.pptx`/`.pdf` — the format most vocational coursework is actually submitted in |
+| [`chenzhuohou1-byte/bench-floor-audit`](https://github.com/chenzhuohou1-byte/bench-floor-audit) | MIT, `1,074 B`, `099395803a96` | **The score floor** — marks a grader awards regardless of correctness. The number that makes any reported accuracy interpretable |
+
+### 🟢 `703-H` — EMEA's constraint is the connector, and that reframes the engagement
+
+`7` of the `21` foundations above are EMEA public-sector data layers, and reading them together produced the pass's clearest regional finding: **in EMEA the education data is already published by the authority, usually with no API key at all.** BISTA serves cantonal statistics from `bista.zh.ch/basicapi/ogd/`; France publishes the Annuaire de l'éducation, UAI profiles, the IPS index and Parcoursup through `data.education.gouv.fr`; the Netherlands publishes HOVI and KiesMBO.
+
+🔵 **So the scarce artefact is not the data and not the model — it is `~1,000` lines of TypeScript.** `P93` makes this a recipe: clone the nearest-shaped server as a template, build on [`mcp-ts-core`](https://github.com/cyanheads/mcp-ts-core), and compose the local figure with OECD/UNESCO so every number lands against a peer-country benchmark in the same conversation. **Every canton, Land, region and province is an unbuilt instance of a pattern that is already solved.** Contrast LATAM, where `T130` found the supply hidden beneath this base's own star floor, and APAC, where it sits behind a language barrier — `T152` tabulates all five.
+
+🔴 **And carry `mcp-french-school-map`'s safety note into any deliverable verbatim, because a client's counsel will ask for it**: the server helps agents discover and summarise public sources, it is *not an official authority*, and decisions must be verified against the competent public service or the original data producer.
+
+### 🟢 `703-I` — the grading-trust gap, closed with six rows instead of one
+
+This base has named the same gap repeatedly — nothing here measured whether a grader could be trusted. p703 files it as a set rather than a tool, and the set spans the whole chain:
+
+| Question | Row | Returns |
+|---|---|---|
+| Was the assessment coherently specified? | `entangelk/assessment_poc` | Whether the spec ↔ rubric ↔ evidence contract holds, before anything is marked |
+| Is the rubric any good? | `RAFPAPER2026/RAF` | AND–OR rubric trees, generated and refined against measured human alignment |
+| Does the grader beat guessing? | `chenzhuohou1-byte/bench-floor-audit` | The benchmark's score floor |
+| Is it stable? | `michael-borck/assessment-bench` | Consistency over repeated runs; agreement with human marks |
+| Would a bad run be visible? | [`yama-learns/Glass-grading`](https://github.com/yama-learns/Glass-grading) (on [`../agents/top.md`](../agents/top.md)) | A disclosure report — its author measured `3` failures in `10` trials and caught all `3` |
+| Can the mechanical half be marked for free? | `decentralizeallengineering/officecheck` | Deterministic pass/fail per check |
+
+🔵 **Wired together in [`../compose/patterns.md`](../compose/patterns.md) `P91`, whose single most important instruction is a refusal: do NOT add a pass threshold to the audit.** `Glass-grading`'s author gives the reason — once a threshold exists, the cheapest way for a model to clear it is to revise the scores rather than re-grade, which hides the failure instead of fixing it.
+
+### 🟢 `703-J` — the nine platforms, and why two of them are filed as warnings
+
+**[`../verticals/solutions.md`](../verticals/solutions.md) `100` → `109`.** The strongest row is [`quietbytehq/timewizer`](https://github.com/quietbytehq/timewizer) (Apache-2.0): offline school timetabling positioned by its author against **aSc Timetables**, a named proprietary incumbent — rare on these shelves, which mostly hold alternatives to nothing in particular. 🔵 **Timetabling is constraint satisfaction, not language, so it is the thing an agent should *call* rather than attempt**; `P92` wires the composition (agent elicits the constraints in prose and explains the conflicts; the solver decides) and generalises it to exam scheduling, invigilator rostering and parents'-evening slots.
+
+`3` are LATAM with a public institution as licensor — a Pará state AI-literacy programme (**PRODEPA**, Instituto iSACI, **IFPA**, **SIMBIC/UFPA**, Government of the State of Pará) whose deployment detail is four **printable A4 study guides** so a learner with a phone and no data allowance can study on paper; an **ENEM** essay portal; and a webcam finger-counting numeracy game whose client-side vision transmits no image of a child.
+
+🔴 **Two are filed as warnings and say so in their own cells.** [`quietbytehq/madrasa`](https://github.com/quietbytehq/madrasa) is self-declared **pre-alpha**, its author stating plainly that nothing in it is ready for a real school — filed for the one decision that is correct at pre-alpha and separates a school tool from a ministry-scale platform (UUID v7 keys, `school_id` on every school-owned row, sync-ready columns, edition feature flags, so Standard and Nexus editions plug in without a rewrite). And [`imranbru99/school-and-college-management-erp-education-saas`](https://github.com/imranbru99/school-and-college-management-erp-education-saas) carries `0★` with a thin AI layer — filed because **Laravel + Filament has the deepest contractor supply in South Asia, Africa and LATAM**, and maintainability after handover is what a client's constraint usually is, not engineering elegance.
+
+### 🔴 `703-K` — this shelf's own heading was wrong by `34` rows, and the rule that should have prevented it was written on this page
+
+`p699` counted this shelf to `199`, published the singleton-heading rule, and stated that a promotion and the heading it invalidates must land in the same edit. `p701` then filed `21` rows and `p702` filed `2` more, **and neither touched this heading** — so for two full passes the page understated its own shelf by `34` rows, and a compiler trusting the heading would have missed every row added since `p699`. Verticals was understating by `6`.
+
+🔵 **The rule was never wrong; its scope was — it was enforced only on the page where the defect had last been seen.** All three shelves are counted and re-published in this one edit. Generalised as [`../intel/trends.md`](../intel/trends.md) `T153`, with the same reasoning `T148` applied to the arity sweep that never covered the two files holding most of this base's tables: **a convention that applies to every shelf belongs in a gate or in the pass procedure, not in the prose of the shelf where it was discovered.**
+
+
 ## 🆕 2026-11-08 (p702) — 🔴 **THE MANDATED VERTICAL-PLATFORM LEG MADE THREE LICENCE CLAIMS, GOT ONE RIGHT, AND THIS BASE'S OWN SHELVES ALREADY HELD BOTH FIGURES IT GOT WRONG**
 
 **`2` rows on [`foundations.md`](foundations.md)** — `231` → **`233`**, re-derived by counting between the header separator and the terminating blank line after the insert, arity `233/233` at `5` columns, `233` distinct subjects, `0` duplicated. **`2` rows on [`../verticals/solutions.md`](../verticals/solutions.md)** — `98` → **`100`**, arity `100/100` at `6` columns, `100` distinct subjects. The supply-side headline is an **EMEA** gain onto this base's thinnest region; the method headline is that a curated shelf beat a live search leg on the only question that decides whether Globant can build on a platform.

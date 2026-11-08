@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p703) — 🔴 **THE SINGLETON-HEADING RULE WAS WRITTEN TWICE AND BOTH SIBLING SHELVES WERE BROKEN BY IT ANYWAY: FOUNDATIONS PUBLISHED `199` OVER A TABLE OF `233`. 🟢 `44` ROWS FILED AND THE EIGHT MANDATED LEGS CONTRIBUTED ZERO — `13 / 13` ADDRESSES THEY RETURNED WERE ALREADY HELD. 🔴 AND TWO OWNERS THIS BASE ALREADY HELD A ROW FROM HAD NEVER BEEN QUERIED: `318` REPOSITORIES ONE API CALL AWAY.**
+
+**`44` rows filed.** [`top.md`](top.md) **`144` → `158`** (arity `158/158` at `6` columns, `0` ragged · `158` distinct subjects, `0` duplicated · region vocabulary `158/158` legal: `Global 70` · `APAC 43` · `North America 19` · `LATAM 15` · `EMEA 11`). [`../repos/foundations.md`](../repos/foundations.md) **`233` → `254`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`100` → `109`**. [`../intel/trends.md`](../intel/trends.md) gains **`T149`–`T153`**; [`../compose/patterns.md`](../compose/patterns.md) gains **`P91`–`P93`**; opportunities published under the single existing `## Opportunities by region` heading for **all five** values. **`45` subjects probed, `45` alive, `45` permissive, `0` dead, `0` grant claims taken from a detector** — every grant read from bytes at the real default ref.
+
+| `p703` registered | Verdict |
+|---|---|
+| Mandated legs (`4` global + `4` regional) | 🔴 **31st consecutive nil on supply.** `13` repository addresses returned in total, **`13 / 13` already held** (`703-A`) |
+| Mandated legs, demand side | 🟢 **Productive** — LATAM's `92% / 79%` survey, the EU AI Act's education timetable, the US `$169M`, APAC's sovereignty theme. The legs are a *demand* instrument, not a supply one |
+| `topic:`/keyword sweep under this base's own star floor | 🟢 `20` heads, `431` rows, `419` distinct, **`308` novel** — `35` of `44` filed rows |
+| Owner expansion | 🟢 `6` owners, **`530` siblings**, `9` filed rows — including the pass's most-adopted artefact at `55★` (`703-B`) |
+| `curl -sI` URL check, as mandated | 🔴 **Still useless here, unchanged from `p686`.** Not re-bought; `git ls-remote --symref` used instead and it discriminates (live → ref, absent → auth failure) |
+| `gh api repos/<owner>/<repo>` | 🔴 **403 in this session** — GitHub access is scoped to the orchestrating repository only. `gh api search/repositories` **works** and was the pass's instrument |
+| Three row-count headings | 🔴 **Two were stale**, by `34` and `6` rows. All three counted and re-published in one edit (`703-C`) |
+| Grant-payload `sha256₁₂`, as this base prints it | 🔴 **Identifies the OWNER, not the repository** (`703-D`) |
+
+### 🔴 `703-A` — the mandated legs' nil, measured address by address rather than asserted
+
+The eight legs were run as specified, with the year **computed** (`2026`), not hardcoded. Between them they named `13` repository addresses. **Every one was already held:**
+
+`anandpatikat/guru-latihan-dinamis` · `OPTIMETA/PAIDEIA` · `TapXWorld/ChinaTextbook` · `openeducat/openeducat_erp` · `krayin/laravel-crm` · `rohitg00/ai-engineering-from-scratch` · `microsoft/ai-agents-for-beginners` · `learnhouse/learnhouse` · `penecho/penecho` · `echo-loop/Echo-Loop` · `JushBJJ/Mr.-Ranedeer-AI-Tutor` · `PetoiCamp/OpenCat-Quadruped-Robot` · `hcengineering/platform`
+
+🔵 **`13 / 13` held is a cleaner nil than any previous pass recorded, and it localises the failure precisely.** The legs are not returning *nothing* — they are returning this base's own shelf back to it, because the secondary blogs they surface are themselves ranking by star count, and anything a star-ranked list names was filed here long ago. 🔴 **The first global leg said so explicitly**: *"I found no ranking of open-source agents built specifically for education, and most of the sources are secondary blogs with inconsistent star counts."* A leg that reports its own uselessness is more informative than one that returns filler, and it is recorded here so the `32nd` pass does not re-buy it.
+
+🟡 **The regional legs behaved differently from the global ones and the distinction should change how they are used.** They returned **no addresses at all** but substantial *demand* intelligence — the Digital Education Council / Tec de Monterrey LATAM survey (`92%` of students, `79%` of faculty, `29` universities), the EU AI Act's education obligations, the UNESCO–CENIA agreement of February 2026, the UNESCO Regional Observatory for Latin America and the Caribbean, the reported US Department of Education `$169M`, Forrester's APAC enterprise figures. **Keep the four regional legs and stop expecting repositories from them; they are a market instrument.** All of it is filed in [`../intel/market.md`](../intel/market.md) under the five region subsections, with the auto-generated-blog provenance stated.
+
+### 🔴 `703-B` — a held row is an unexplored owner, and two of them were hiding `318` repositories
+
+The sharpest result of this pass is an omission in **this base's own ledger**, not a gap in the supply.
+
+| Owner | Repos | Held before p703 | Filed | What was one API call away |
+|---|--:|--:|--:|---|
+| [`michael-borck`](https://github.com/michael-borck) | **243** | `1` — [`study-buddy`](https://github.com/michael-borck/study-buddy) (`23★`) | `4` | A **Curtin University** teaching estate: [`mark-mate`](https://github.com/michael-borck/mark-mate) (grading over LiteLLM with GitHub/WordPress ingestion), [`curriculum-curator`](https://github.com/michael-borck/curriculum-curator) (multi-provider with an **offline** mode), [`talk-buddy`](https://github.com/michael-borck/talk-buddy) (`7★`), [`assessment-bench`](https://github.com/michael-borck/assessment-bench) — *"the bench measures; it never marks"* |
+| [`malkreide`](https://github.com/malkreide) | **75** | `1` — [`global-education-mcp`](https://github.com/malkreide/global-education-mcp) | `5` | A uniformly-MIT Swiss estate: [`socratic-method-skill`](https://github.com/malkreide/socratic-method-skill) (**`55★`**), [`zh-education-mcp`](https://github.com/malkreide/zh-education-mcp) (cantonal BISTA statistics), [`eth-library-mcp`](https://github.com/malkreide/eth-library-mcp), [`luanti-lernwelt-template`](https://github.com/malkreide/luanti-lernwelt-template) (**Lehrplan 21** tagging in code), [`critical-pedagogy-skill`](https://github.com/malkreide/critical-pedagogy-skill) |
+| [`cyanheads`](https://github.com/cyanheads) | **181** | `0` | `4` | OECD (1,500+ datasets), OpenAlex (270M+ publications), Project Gutenberg (78,000+ full texts), and [`mcp-ts-core`](https://github.com/cyanheads/mcp-ts-core) (`153★`) — the framework all `~180` are built on |
+| [`onderwijsin`](https://github.com/onderwijsin) | **18** | `0` | `3` | A named Dutch nonprofit: the **teacher-pipeline** MCP, an agent-skill marketplace, the HOVI/KiesMBO registry adapter |
+| [`quietbytehq`](https://github.com/quietbytehq) | **10** | `0` | `2` | A pre-alpha SIS with ministry-scale tenancy in its data model; an offline timetable solver positioned against **aSc Timetables** |
+| [`VIABLE-Learning-Lab`](https://github.com/VIABLE-Learning-Lab) | **3** | `0` | `1` | A teaching harness configured by the **teacher's help limit** |
+
+🔵 **Why owner expansion beats every keyword leg, stated as a mechanism rather than a result: an owner is a curated set with a known licence posture and a known domain.** `malkreide`'s `75` repositories are uniformly MIT, so a sibling's grant is predictable before it is read. `michael-borck`'s estate is one lecturer's teaching output, so every repository is education by construction. **Neither `T130`'s star floor nor `p702`'s common-noun recall problem applies, because nothing is being matched on a word.**
+
+🔴 **The number that matters: this base holds `5,257` distinct repository slugs, every one naming an owner, and the distinct-owner count is the real size of the unexplored backlog.** `T150` promotes this to a standing sweep and records the three owners now done so the sweep is not re-bought.
+
+### 🔴 `703-C` — the singleton-heading rule held where it was written and failed on both shelves beside it
+
+`p699` found a stale row-count heading on foundations, fixed it, and published the rule: *a row-count heading is a singleton; a promotion and the heading it invalidates must land in the same edit.* `p702` found the same defect on [`top.md`](top.md), fixed it, and restated the rule.
+
+🔴 **p703 arrived to find both sibling shelves broken the same way — including the page where the rule was first written.** Foundations published **`199` over a table of `233`**: understated by `34` rows, for two full passes, so any reader or compiler trusting the heading would have missed every row added since `p699`. Verticals published **`94` over a table of `100`**.
+
+🔵 **The rule was never wrong; its scope was.** Each pass fixed the page in front of it and left the rule attached to that page — a convention living in the narrative of one shelf is a note, not a gate. It binds whoever reads that shelf next, which on a three-shelf base is a one-in-three chance. **p703 counts and re-publishes all three in one edit** (`158`, `254`, `109`, each re-derived by counting rows between the header separator and the terminating blank line *after* the insert, with each counter validated against the table inherited rather than the figure published). Generalised as `T153`.
+
+### 🔴 `703-D` — the licence hash this base prints in every cell is an owner fingerprint
+
+Found by reading p703's own verification output rather than its conclusions. Four `malkreide` repositories filed this pass all carry `sha256₁₂ ac1fc40e61a6` at `1,069 B`; `michael-borck`'s `talk-buddy`, `netsim` and `assessment-bench` all carry `b4fdbc9f39ce` at `1,070 B`.
+
+**Cause, structural:** an MIT payload is a fixed template whose only variable content is the copyright line, constant across one owner's portfolio. So an identical hash across repositories is evidence of **common ownership** — correct and expected — not of a copied grant. 🔴 **Harm, if trusted as an identity: a dedupe or provenance scheme keyed on grant-payload hash collapses an owner's whole estate into one subject — `75` repositories reduced to `1` for `malkreide`.** 🟢 **What it remains good for, unchanged: an integrity check on re-reads of the same repository.** These shelves print the value in every licence cell and had never said which of the two it supports. Generalised as `T151`.
+
+### 🟢 `703-E` — three teams, three languages, one grading architecture
+
+p703's most transferable *content* finding, as opposed to its instrument findings. Three grading artefacts, found on three separate channels, written in Chinese, Korean and French by unconnected authors, and **all three refuse to let the model assign the mark**: [`chemeq-grader`](https://github.com/lihaiyang616/chemeq-grader) (VLM transcribes only — instructed to copy a wrong equation wrongly — a deterministic parser judges), [`fairhand`](https://github.com/blueshadow62/fairhand) (transcribe, then compare against an answer key), [`Corrector-ai`](https://github.com/eulogep/Corrector-ai) (*correction **supervisée***).
+
+🔵 **The convergence has an economic cause: transcription is a perception task with an error rate a teacher can check in seconds, while scoring is a judgement task whose errors are invisible, uncorrelated between runs and expensive to audit.** And the split buys a property no all-LLM grader on these shelves has — `chemeq-grader` **re-grades locally with no further API call** when a mis-transcription is fixed, so human review is free. Filed as `T149` and wired as `P91`.
+
+### 🔴 `703-F` — refused at p703, and named so the collisions are not re-bought
+
+- **`RAFPAPER2026/RAF`** — **filed, but to [`../repos/foundations.md`](../repos/foundations.md) and not to this shelf, with two caveats in-cell.** The owner name is a paper-anonymisation account with no identity or history behind it, and the task domain is personal-assistant work, not education. The AND–OR rubric tree and the human-alignment loop transfer; the `121`-task benchmark does not. **An anonymised owner is not a reason to refuse a read grant — it is a reason to state what cannot be verified.**
+- **`jacobphillips99/protorubric`** — refused, already recorded on [`top.md`](top.md): `11,357 B` of Apache-2.0 in the payload against an MIT claim in the README. Re-encountered this pass through the rubric sweep and **not** re-bought.
+- **Region placement by author geography** — refused in four separate candidates. Every region cell filed this pass rests on a named institution (Curtin University; PRODEPA/IFPA/SIMBIC-UFPA/Government of Pará; Stichting Onderwijs in), a named national curriculum or exam (NERDC/WAEC, Lehrplan 21, ENEM, Parcoursup/UAI/IPS), a named authority dataset (BISTA), or the project's primary working language and citation standard (APA 7 in Spanish). **Author geography remains inadmissible.**
+- **`Xusanbek0039/learning-managment-sistem-django`** (MIT, `7★`, Uzbek-language LMS for a named district filial) — **found, verified permissive, and deliberately not filed**, because the region is genuinely ambiguous under this base's five-value closed vocabulary: Central Asia is placed in EMEA by some regional schemes and APAC by others, and a wrong bucket is worse than an unfiled row (`p700`'s vocabulary rule). Recorded here so the candidate is not re-discovered and so the vocabulary gap is on the record.
+
+### 🟡 `703-G` — stated nils and limits of this pass
+
+- **North America: `0` rows filed, and the cause is channel coverage, not absence.** US authors do not tag by country and do not write in a non-English primary language, so neither of this pass's two productive discriminators applies. The region's supply route is a sweep of district and university GitHub organisations — the `p702` route — **and p703 did not run it.** Next pass's first action.
+- **No EMEA education *adoption figure* survived.** The leg returned enterprise-readiness data (a vendor study's `56%` of EMEA CEOs against `48%` in the Americas), which is not education and is not used.
+- **No APAC education-specific 2026 regulation and no named APAC education-sector market players.** National ministries (Singapore MOE, Korea, Japan MEXT, Australia's Department of Education) are the next step and were not queried.
+- **No binding country-level LATAM AI-in-education regulation for 2026.** A 2025 Ibero-American comparative study exists; only its bibliographic record was returned.
+- **Market-size estimates disagree and p703 does not pick one** — `~$7.52B (2025) → $10.6B (2026)` at a claimed `40.9%` CAGR from one publisher, `$32B` from another, both secondary and neither methodology seen.
+- **`6` of the `44` filed rows were last pushed more than six months ago** ([`socratic-method-skill`](https://github.com/malkreide/socratic-method-skill) `2026-02-18`, [`mark-mate`](https://github.com/michael-borck/mark-mate) `2026-03-01`, [`navigator-data-generator`](https://github.com/onderwijsin/navigator-data-generator) `2025-04-16` and three others). **Each one states its own last-push date in its own cell** rather than being quietly presented as current.
+
+
 ## 🆕 2026-11-08 (p702) — 🔴 **p701 FILED 16 ROWS AND TOLD ONLY THE COMMIT MESSAGE: THE PAGE PUBLISHED `119` OVER A TABLE OF `135` FOR A FULL PASS — AND THE GRANT INSTRUMENT THAT FOUND IT WAS ITSELF WRONG ON `14` OF `15` PAYLOADS**
 
 **Nine rows were filed on [`top.md`](top.md)** (`135` → **`144`**, arity `144/144` at `6` columns, `0` ragged, `144` distinct subjects, `0` duplicated, region vocabulary `144/144` legal: `Global 67` · `APAC 36` · `North America 19` · `LATAM 14` · `EMEA 8`), **two on [`../repos/foundations.md`](../repos/foundations.md)** (`231` → `233`) and **two on [`../verticals/solutions.md`](../verticals/solutions.md)** (`98` → `100`). Counts re-derived by counting the tables after the writes, with the counter **validated first against `p700`'s own published `119` on `p700`'s own file** (`680-F2`). Seven findings, and the three that transfer are all about instruments rather than about education.
