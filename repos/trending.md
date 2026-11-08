@@ -3,6 +3,50 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p706) — 🟢 **`6` FOUNDATIONS FILED, AND THEY ARE ONE LAYER RATHER THAN SIX FINDS: SERVER-SIDE AUTOGRADING. 🟢 ONE OF THEM IS NOW THIS BASE'S CANONICAL APACHE-2.0 CONTROL TEXT. 🔴 THE MANDATED GITHUB-TRENDING LEG RETURNED ITS 34th CONSECUTIVE NIL.**
+
+[`foundations.md`](foundations.md) **`260` → `266`** (arity `266/266` at `5` columns, `0` ragged · `266` distinct subjects, `0` duplicated · `266/266` rows carry a real repository link). Full pass narrative, defect classes and region method: [`../agents/trending.md`](../agents/trending.md) `p706`.
+
+### 🟢 `706-R1` — the filings are a **layer**: autograding as a service, probed five ways
+
+This base held grading as scattered points. p706 files it as a layer, and each member answers a different deployment question:
+
+| Repo | Licence (payload-read) | ★ | What it answers |
+|---|---|---|---|
+| [`edulinq/autograder-server`](https://github.com/edulinq/autograder-server) | 🟢 **MIT** `1,071 B` sha256₁₂ `7eb48830c022` @ `main` | **21** | The reference **service**: submissions in, grades out, over an API an agent can call. `22` forks, **`58` open issues** — for a foundation that reads as *in use* |
+| [`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server) | 🟢 **Apache-2.0** `11,357 B` sha256₁₂ `c71d239df917` @ `master` | **24** | An **independent second implementation** — two permissive servers is an option, one is a dependency |
+| [`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main) | 🟢 **Apache-2.0** `11,357 B` sha256₁₂ `b40930bbcf80` @ `master` | **14** | Grades a **proof**: correctness is *decided*, no rubric drift, **no LLM judge in the loop** |
+| [`uhafner/autograding-model`](https://github.com/uhafner/autograding-model) | 🟢 **MIT** `1,080 B` sha256₁₂ `b8f78942bf60` @ `main` | **5** | The **mature** member — alive since `2020-05-12`, metric-configurable (tests, coverage, static analysis) |
+| [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) (→ agents shelf) | 🟢 **MIT** `1,072 B` sha256₁₂ `5065bc33aae5` @ `main` | **8** | **Assumes no network at all** — zero-trust grading in closed university labs |
+
+🔵 **The layer's own lesson, which is sharper than any single row:** `lean4-autograder-main` is the only grading mode on this base where the ground truth is a decision procedure rather than an estimate. **It therefore bounds how far the LLM-judge grading patterns elsewhere on this base should be trusted** — where a grade must be defensible, point at the proof checker, not at the rubric prompt.
+
+🔵 **And `uhafner/autograding-model` is a standing warning about reading stars as maturity.** `5★`, six years old, pushed the day of this pass, consumed as a **Maven artifact** (`edu.hm.hafner:autograding-model`) rather than browsed as a repository. **Star count measures attention, not readiness**, and for build-tool plumbing the two are unrelated.
+
+### 🟢 `706-R2` — a by-product worth keeping: this base now has a **canonical Apache-2.0 control text**
+
+[`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server)'s `LICENSE` is **byte-exact canonical Apache-2.0 at `11,357 B`** (sha256₁₂ `c71d239df917`). p706 used it as the diff reference for every other Apache payload it probed, and the method **paid for itself in one pass**: `4` payloads diverged on byte size, `3` cleared as canonical-bar-the-copyright-line ([`framerslab/agentos`](https://github.com/framerslab/agentos) `10,319 B` — de-indentation only; [`kalebhenrique/sarue-unb`](https://github.com/kalebhenrique/sarue-unb) `11,362 B`; [`Vladyslav-Soldatenko/ProcrastiLearn`](https://github.com/Vladyslav-Soldatenko/ProcrastiLearn) `11,351 B`), and **`1` was flagged non-verbatim** ([`tryskilly/skilly`](https://github.com/tryskilly/skilly) `10,785 B`, three semantically-inert edits inside the licence body — `../agents/trending.md` `706-B`).
+
+🔵 **Reusable rule: a byte-size divergence from `11,357 B` is a cheap, reliable trigger for a word-level body diff — and the diff, not the badge, is the verdict.**
+
+### 🟢 `706-R3` — `framerslab/agentos`: the largest subject in the intake, and why it was scrutinised rather than refused
+
+`685★`, `103` forks, Apache-2.0 (`10,319 B`, sha256₁₂ `5aeaeb52ab3c` @ `master`). Its README makes claims this base normally treats as disqualifying — *“emergent behaviors”*, *“self-building designs”*, **“`8` neuroscience-backed mechanisms”**, optional HEXACO personality.
+
+🟢 **It survived because its central claims are falsifiable and published, which is a different object from an adjective:** `85.6%` on **LongMemEval-S** and `70.2%` on **LongMemEval-M**, with a **separate public benchmark repository**, a stated per-correct cost (`$0.0090`), the reader models named, CI and codecov wired, and npm releases shipping.
+
+🔵 **Its education relevance is specific, not generic, and that is the only reason it is on an education shelf:** its persistent memory decays on an **Ebbinghaus** curve — **the same forgetting curve the FSRS/Anki retention layer already on this shelf applies to *learners*.** This framework applies it to the **agent's** memory, so a long-running tutor can forget and reconsolidate on the same principle its scheduler uses on the student. 🔴 **Filed as substrate only: it is not an education project, and the row says so.**
+
+### 🔴 `706-R4` — the mandated `github trending {industry} AI {year}` leg: 34th consecutive nil, and the failure is structural
+
+Run with the year **computed, not hardcoded** (`2026`). 🔴 **It returned no live GitHub Trending page at all** — only third-party trackers and blog farms (`trendshift.io`, `gittrend.io`, `oosmetrics`, `scriptxeno`, auto-generated `labmemo`/`is4.ai` posts) dated anywhere from March to October `2026`, **whose star counts and licences disagree with each other and with the API**. Every education address they named — `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `microsoft/ai-agents-for-beginners` — **is already held.**
+
+🟢 **What worked instead, and it is a channel rather than a lucky query:** `gh api search/repositories` with **`topic:`, national-exam and non-English institutional qualifiers** plus `pushed:>` recency bounds. **`385` distinct candidates, `254` novel (`66%`) against a measured `4,922`-slug denominator, `26` payload-probed, `23` filed.** 🔵 **A `66%` novelty rate against a five-thousand-slug base is not saturation — it is proof the mandated leg is pointed at the wrong surface.**
+
+🟢 **Channel state re-measured this pass (unchanged from p705, re-confirmed rather than assumed):** `gh api search/repositories` ✓ · `raw.githubusercontent.com` ✓ · `git ls-remote --symref` ✓ · `api.github.com/repos/…` 🔴 **`403`**. Index misses this pass: **`0` of `14`** in one batched `repo:`-qualified call.
+
+---
+
 
 ## 🆕 2026-11-08 (p705) — 🟢 **`2` FOUNDATIONS FILED, AND BOTH ARE FILED WITH THEIR LIMIT IN THE FIRST CLAUSE: NEITHER IS AN EDUCATION PROJECT. 🔵 THEY ARE THE POST-TRAINING AND THE ASSESSMENT SUBSTRATE THIS SHELF HAS BEEN DESCRIBING IN PROSE AND NEVER ADDRESSED.**
 

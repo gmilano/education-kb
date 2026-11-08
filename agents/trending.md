@@ -3,6 +3,151 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+## 🆕 2026-11-08 (p706) — 🟢 **`23` SUBJECTS FILED (`15` AGENTS, `6` FOUNDATIONS, `2` PLATFORMS) — THE LARGEST SINGLE-PASS INTAKE THIS BASE HAS RECORDED, AND IT CAME FROM A CHANNEL THE MANDATED LEGS DO NOT CONTAIN. 🔴 A TEXTBOOK MIT GRANT THAT A DETECTOR CANNOT CLASSIFY BECAUSE IT NEVER SAYS “MIT”. 🔴 TWO SHELF HEADINGS WERE STALE BY A FULL PASS — p705 FILED ROWS AND DID NOT MOVE THE COUNTS IT PUBLISHED.**
+
+**`23` rows filed.** [`top.md`](top.md) **`170` → `185`** (arity `185/185` at `6` columns, `0` ragged · `185` distinct subjects, `0` duplicated · region vocabulary `185/185` legal: `Global 82` · `APAC 52` · `North America 20` · `LATAM 16` · `EMEA 15`). [`../repos/foundations.md`](../repos/foundations.md) **`260` → `266`** (arity `266/266` at `5` columns, `0` ragged). [`../verticals/solutions.md`](../verticals/solutions.md) **`109` → `111`** (arity `111/111` at `6` columns, `0` ragged).
+
+**`26` subjects probed at the grant payload, `26` alive, `23` filed, `0` grant claims taken from a detector, `0` taken from a README, `0` taken from `license.spdx_id`.**
+
+| `p706` registered | Verdict |
+|---|---|
+| Mandated legs (`4` global), supply side | 🔴 **34th consecutive nil.** Every address the four global legs named was already held or not an education subject (`706-D`) |
+| Mandated legs (`4` regional), demand side | 🟢 **Productive again** — `4` regions, `4` new binding instruments, and the first hard **North America** funding figure in several passes (`706-F`) |
+| **National-platform harvest, NOT the mandated legs** | 🟢 **The pass's real supply channel, and a reusable METHOD: `23` filings, and it moved the two thinnest region columns** (`706-E`) |
+| Licence-classification class, NEW | 🔴 **A valid MIT grant that never names itself — the inverse of permissive-washing, and it defeats title matching** (`706-A`) |
+| Licence-FORM class, NEW | 🟡 **A non-verbatim Apache-2.0 payload: `3` word-level edits inside the licence body, all semantically inert** (`706-B`) |
+| Shelf-heading integrity | 🔴 **`2` of `3` headings stale by a full pass. p705 moved `166`→`170` and `258`→`260` and left both headings at p704's figures** (`706-G`) |
+| EU AI Act Annex III date, `p692`–`p705` | 🔴 **Still unverifiable, and the block is WIDER than p705 measured: the whole `europa.eu` family AND the secondary tracker `artificialintelligenceact.eu`** (`706-C`) |
+| 🔴 **`unesco.org` is blocked too** | 🔴 **So this pass's single most important LATAM instrument — the UNESCO Observatory on AI in Education for LAC — is recorded as a SECONDARY claim, not asserted** (`706-C`) |
+| `search/repositories` index misses | 🟢 **`0` this pass:** `14/14` subjects resolved in one batched `repo:`-qualified call |
+
+### 🔴 `706-A` — the defect class this pass contributes: **a valid MIT grant that never names itself “MIT”**
+
+p686 established that `license.spdx_id` is not a licence. p704 established the dangling grant reference. p705 established that a dependent's README is not evidence about its dependency. **p706 adds a failure of the reading instrument itself.**
+
+[`particify/arsnova-webclient`](https://github.com/particify/arsnova-webclient) (`10★`, filed to [`../verticals/solutions.md`](../verticals/solutions.md) this pass) ships `LICENSE.md`, `1,073 B`, sha256₁₂ `a6cf43f6043d`, read from the bytes at `master`. **It is a textbook MIT grant.** It opens:
+
+> *Copyright (c) 2018 ARSnova Team and Contributors*
+>
+> *Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction…*
+
+…and closes on the standard all-caps warranty disclaimer. **The three letters `MIT` do not occur anywhere in the payload.**
+
+🔴 **So this base's own family detector — which matches on the title string `MIT License` — returned `UNKNOWN` for a grant it should have classified instantly.** The subject was *one grep away from being refused a shelf row on the grounds that its licence could not be read*.
+
+🟢 **What settled it, and the order matters:** the **payload body** was read in full first — the operative permission grant, the attribution condition and the disclaimer are all present and unmodified — and `package.json` at the same ref independently declares `"license": "MIT"`. GitHub's `search/repositories` also reports `MIT`. **Three channels agree; only the title-matcher dissented.**
+
+🔵 **The rule, stated so it is reusable:** *a licence is identified by its operative text, not by its title.* A title-matching detector is a **fast path**, and a fast path that returns `UNKNOWN` is an instruction to read the body — **never a verdict**. This base has spent many passes guarding against payloads that claim more than they grant (`686`, `704`, `705-A`); **this is the first recorded case of the instrument under-reading a grant that is entirely in order, and the cost of that direction is a viable MIT substrate silently dropped from a client's option set.**
+
+🟡 **Standing remedy:** treat `UNKNOWN` from the title-matcher as a *queue*, not a class. Every `UNKNOWN` in this pass was body-read; `1 / 1` resolved to a clean permissive grant.
+
+### 🟡 `706-B` — the second class: **Apache-2.0 in substance, not in form**
+
+[`tryskilly/skilly`](https://github.com/tryskilly/skilly) (`34★`, filed to [`top.md`](top.md)) carries `LICENSE` at `10,785 B` — against the canonical Apache-2.0 text's **`11,357 B`**.
+
+🟢 **This pass used a CONTROL rather than an eyeball.** [`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server)'s payload is byte-exact canonical Apache-2.0 at `11,357 B` (sha256₁₂ `c71d239df917`), so it served as the diff reference for all four other Apache payloads probed this pass. Whitespace-normalised word-level diff results:
+
+| Subject | Payload | Opcodes vs canonical | Verdict |
+|---|---|---|---|
+| [`framerslab/agentos`](https://github.com/framerslab/agentos) | `10,319 B` | **`1`** — the filled copyright line | 🟢 **Canonical; `1,038 B` short purely through de-indentation** |
+| [`kalebhenrique/sarue-unb`](https://github.com/kalebhenrique/sarue-unb) | `11,362 B` | **`1`** — the filled copyright line | 🟢 **Canonical** |
+| [`Vladyslav-Soldatenko/ProcrastiLearn`](https://github.com/Vladyslav-Soldatenko/ProcrastiLearn) | `11,351 B` | **`1`** — the filled copyright line | 🟢 **Canonical** |
+| [`tryskilly/skilly`](https://github.com/tryskilly/skilly) | `10,785 B` | **`5`** | 🟡 **Non-verbatim — see below** |
+
+🟡 **`skilly`'s five opcodes, each read in context before judging:** the `APPENDIX: How to apply…` boilerplate is dropped; the copyright line is filled (`2026 Mohamed Saleh Zaied (moelabs.dev)`); and **three edits sit inside the licence body** — `submitted to Licensor` → `submitted to the Licensor` (§1), `received by Licensor` → `received by the Licensor` (§1), and `excluding those notices that do not pertain…` → `excluding any notices that do not pertain…` (§4(d) attribution).
+
+🟢 **All three are semantically inert.** Two are definite-article insertions. The third sits in a restrictive relative clause — *“excluding [those/any] notices that do not pertain to any part of the Derivative Works”* — where the clause, not the determiner, carries the restriction. **The grant is Apache-2.0 and the row is filed as usable.**
+
+🔵 **Why it is flagged anyway, precisely and without inflation:** Apache-2.0 §4(a) obliges a redistributor to give recipients **a copy of this License**. A paraphrase is strong evidence the text was retyped or model-generated rather than copied, and **the next paraphrase may not be inert.** The finding is therefore: *byte-size divergence from `11,357 B` is a cheap, reliable trigger for a body diff* — `4` of `4` divergent payloads this pass were explained by that one check, `3` cleared and `1` flagged. **Do not read “Apache-2.0” off a badge; diff the bytes against a control.**
+
+### 🔴 `706-C` — the network policy is wider than p705 measured, and it now costs this base a LATAM primary source
+
+p705 recorded `eur-lex.europa.eu`, `arxiv.org` and `huggingface.co` failing `CONNECT` with `403`, correcting p704's `ENOTFOUND` diagnosis. **p706 widened the probe and the result changes the scope of the gap.**
+
+Probed this pass, all over `curl` with the proxy's own telemetry read back from `$HTTPS_PROXY/__agentproxy/status`:
+
+| Host | Result |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 `connect_rejected` — `403` to `CONNECT` |
+| `ec.europa.eu` | 🔴 `connect_rejected` — `403` |
+| `commission.europa.eu` | 🔴 `connect_rejected` — `403` |
+| `digital-strategy.ec.europa.eu` | 🔴 `connect_rejected` — `403` |
+| `artificialintelligenceact.eu` | 🔴 **`403` — and this one is NOT an EU domain** |
+| `unesco.org` | 🔴 `connect_rejected` — `403`, telemetry timestamp `2026-11-08T13:44:11.864Z` |
+
+🔴 **Two consequences, stated rather than glossed.**
+
+**First, the EU AI Act Annex III commencement date stays unresolvable, and p705's hope of routing around EUR-Lex is now closed too** — `artificialintelligenceact.eu`, the obvious secondary tracker, is blocked on the same rule, so **the block is not a domain rule but a policy class.** This pass's EMEA leg returned *both* candidate dates again from secondary sources (one aggregator asserting enforceability from **February 2026**, education-sector commentary pointing at **August 2026** for high-risk obligations, plus discussion of delay). **p706 asserts neither.** `intel/market.md` records both claims, attributed, with the verification channel named as unavailable — which is the ninth consecutive pass this conflict has cost and the reason it is now a **session-configuration request, not a research task**.
+
+**Second, and new: the same rule reaches this pass's most important LATAM instrument.** The LATAM leg's strongest find is the **UNESCO Observatory on Artificial Intelligence in Education for Latin America and the Caribbean**. `unesco.org` is blocked, so the Observatory's own scope, membership and launch date **could not be read at first hand**. It is recorded in `intel/market.md` as a secondary, attributed claim. 🔵 **This is exactly the asymmetry the brief warns about: an unverified LATAM instrument and an absent LATAM section look identical downstream unless the gap is written down. It is written down.**
+
+### 🔴 `706-D` — the mandated supply legs: 34th consecutive nil, measured against a `4,922`-slug denominator
+
+The four mandated global legs were run with the year **computed, not hardcoded** (`2026`). Addresses they named: `microsoft/ai-agents-for-beginners`, `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `rohitg00/ai-engineering-from-scratch`, `openeducat/openeducat_erp`, `krayin`, `huly`, `AutoGPT`, `LangChain`, `OpenClaw`, `Cua`, `ERPNext`, `Odoo`.
+
+🔴 **Yield: nil, for the 34th consecutive pass.** The education-relevant ones are **already held**; the remainder are general-purpose agent frameworks or non-education ERP/CRM already recorded on this base. 🔵 **The legs' failure mode is unchanged and worth restating because it is structural, not incidental:** all four return SEO aggregator pages (`dev.to` listicles, `oosmetrics`, `agentindex`, auto-generated blog farms) whose star counts and licences **disagree with each other and with the API**, and whose education content is a learning-resource repo rather than a deployable agent.
+
+🟢 **Novelty was measured, not assumed.** Denominator: **`4,922` distinct `github.com/owner/repo` slugs** across all **`3,087`** tracked `*.md` and `*.tsv` outside `archive/`. Against it: **`385` distinct candidates** harvested this pass, **`254` novel (`66%`)**, `26` probed at the payload, `23` filed. 🔵 **The `66%` novelty rate is the finding: it is not that this base is near saturation, it is that the mandated legs look at the wrong surface.**
+
+### 🟢 `706-E` — the method that produced this pass: **a national platform names its own region**
+
+This base's region columns have been structurally lopsided for many passes — on arrival: `Global 75`, `APAC 49`, `North America 19`, `LATAM 15`, **`EMEA 12`**. p706 attacked that directly, and the method generalises.
+
+🔵 **The insight: region is cheapest to establish when the subject is bound to a country's own institution**, because such a project names that institution in its own README out of necessity — no inference, no guessing from an owner's name, no language-ratio judgement call. The qualifiers that worked were **national-platform and national-exam names and non-English institutional vocabulary**, not “`{industry}` `{region}`”:
+
+| Subject | Region | Evidence IN THE REPOSITORY'S OWN BYTES |
+|---|---|---|
+| [`aikarjal/wilmai`](https://github.com/aikarjal/wilmai) `82★` | **EMEA** | `Wilma` ×`112`, `Finnish` ×`6`, `Finland` ×`3`, `Visma` ×`1` — Finland's school information system |
+| [`Casperjuel/aula-mcp`](https://github.com/Casperjuel/aula-mcp) `65★` | **EMEA** | `Aula` ×`159`, **`MitID` ×`29`** (Danish national eID), `ugeplan*` ×`8`, `UniLogin` ×`1` |
+| [`uhafner/autograding-model`](https://github.com/uhafner/autograding-model) `5★` | **EMEA** | **`pom.xml`**: `<organization>Munich University of Applied Sciences</organization>`, `edu.hm.hafner`, `@hm.edu` |
+| [`kalebhenrique/sarue-unb`](https://github.com/kalebhenrique/sarue-unb) `12★` | **LATAM** | `UnB` ×`7`, `Universidade de Brasília` ×`1` |
+| [`dulithdivisekara/sliit-courseweb-cleaner`](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) `7★` | **APAC** | `SLIIT` ×`45` — Sri Lanka Institute of Information Technology |
+| [`Samya-S/jeechallenger-app`](https://github.com/Samya-S/jeechallenger-app) `12★` | **APAC** | `JEE` ×`15` — India's national engineering entrance exam |
+| [`SohamXYZDev/openboard`](https://github.com/SohamXYZDev/openboard) `6★` | **North America** | `College Board` ×`7`, `Digital SAT` ×`6` |
+| [`AAATenderGuy/…Personal-Coach`](https://github.com/AAATenderGuy/Lightweight-AI-Tutoring-Personal-Coach) `7★` | **APAC** | `2,972` CJK chars ≈ `16.6%` of README bytes — Chinese-primary (p670's rule) |
+
+**Result: `EMEA 12 → 15`, `LATAM 15 → 16`, `APAC 49 → 52`, `North America 19 → 20`.**
+
+🟢 **And the refusals are the other half of the method, which is why it is trustworthy.** `8` subjects were filed `Global` **because the evidence was absent, not because the search failed**: `skilly`, `ProcrastiLearn`, `OpenPrep-AI`, `ielts-prep`, `IndiGrader`, `litcode`, `moodle-codex`, and both platform rows. Three refusals were deliberate against a tempting guess — **`ChatBarAI/ai_lms`'s holder line reads `PTE LTD` (a Singapore corporate suffix) and the row is still `Global`, because a holder's incorporation is evidence about the company, not about the artefact's audience**; `ielts-prep` names `IELTS` `22` times, which places a *test taken worldwide*, not a market; and `ProcrastiLearn`'s owner has a Ukrainian name, which is not repository evidence at all.
+
+🔵 **The reusable rule: place a subject on an institution, a national platform or a national exam it names itself; refuse on an owner's name, a corporate suffix, a project's etymology, or a globally-sat test.**
+
+### 🟢 `706-F` — demand side: what the four regional legs returned
+
+Recorded in full, by region, in [`../intel/market.md`](../intel/market.md). Headlines:
+
+- **North America** — largest regional market, and the vendor estimates **disagree**: `36%` share at **`$3.68B`** for `2026` against another report's `38%` share for `2025`. Public money is the harder number: the **US Department of Education committed `$169M` to responsible AI in higher education, dated 2026-01-05**. Regulation remains **guidance, not binding rules**, with `COPPA` the operative constraint on under-13 products.
+- **EMEA** — the **EU AI Act** is the whole story and its education commencement date **remains unverifiable here** (`706-C`). Workday's survey: **`56%` of EMEA CEOs report AI-readiness vs `48%` Americas and `45%` APJ**. The **European University Association** (January 2026) urges prioritising **European LLMs** to counter US-centric bias — a sovereignty requirement with direct architectural consequences for an engagement.
+- **APAC** — thinnest education-specific demand evidence of the four, **and that is reported as a gap rather than padded**. The genuine signal is **AI sovereignty** as the organising theme, and Forrester's *“adoption paradox”*: widespread employee use alongside enterprise **pilot purgatory**. Omdia's denominator: **`1,100+` decision-makers across Australia, New Zealand, Singapore, Malaysia and the Philippines** — enterprise, not schools.
+- **LATAM** — strongest *institutional* movement: the **UNESCO Observatory on AI in Education for LAC** (unverifiable at first hand, `706-C`), **`$4.6M` from Google.org** for an AI-education rollout and **`$4.6m` to the Raspberry Pi Foundation** to scale AI education in the region, and a **UNU working paper** mapping university AI adoption across LAC. The binding constraint is physical: **connectivity and device limits in rural and underserved public schools** — which is why [`Luxshan2000/ielts-prep`](https://github.com/Luxshan2000/ielts-prep)'s offline-first design and [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader)'s closed-network grading were filed this pass as architecture, not novelty.
+
+### 🔴 `706-G` — process defect: **two shelf headings were stale by a full pass, and the rule they broke was already written down**
+
+p699 established that a row-count heading is a **singleton**, and that the pass writing a new one **demotes the old one in the same edit**. p704 observed it. **p705 did not.**
+
+| Page | `##` heading on arrival | What p705's own entry says it published | Gap |
+|---|---|---|---|
+| [`top.md`](top.md) | `166 rows` (p704's figure) | `166` → **`170`** | 🔴 **stale by `4` rows, one full pass** |
+| [`../repos/foundations.md`](../repos/foundations.md) | `258 rows` (p704's figure) | `258` → **`260`** | 🔴 **stale by `2` rows, one full pass** |
+| [`../verticals/solutions.md`](../verticals/solutions.md) | `109 rows` | p705 filed nothing here | 🟢 **correct on arrival** |
+
+🔵 **Why this is a finding and not bookkeeping: the heading is the published interface.** A reader scanning `##` nodes, or a compiler walking them, saw `166` over a `170`-row table. p705 did the expensive work — probing payloads, filing rows — and then under-reported it in the one place a consumer looks first.
+
+🟢 **This is also the vindication of `680-F2`'s rule, which p706 followed:** the inherited count was re-derived **from the table**, never from the heading. Had p706 incremented the heading's `166`, it would have published `181` for a `185`-row table and propagated p705's error into a third pass. **All three headings are now re-derived, correct, and the stale text is demoted to prose rather than deleted — no word of the history is dropped.**
+
+🔵 **The rule, restated once more because it has now failed once after being established: a pass that changes a row count updates that page's singleton heading in the SAME edit, and derives the new count by counting the table it inherited.**
+
+### 🟢 `706-H` — what the `23` filings actually add, as layers rather than as a list
+
+1. **National-platform agent layers — a category this base did not have.** [`wilmai`](https://github.com/aikarjal/wilmai) (Finland's Wilma) and [`aula-mcp`](https://github.com/Casperjuel/aula-mcp) (Denmark's Aula, with first-party **MitID** auth) are agents over a *state* system of record. **The hard part of an education agent is the system of record, not the model** — and these two are the first worked examples on this base.
+2. **A coherent server-side autograding layer** — `edulinq` (reference service), `howardlau1999` (independent second implementation, and this pass's canonical-Apache control), [`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main) (**grades a proof**, so correctness is *decided* and no LLM judge is in the loop), `uhafner` (most mature, EMEA on `pom.xml` coordinates), and [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) (**assumes no network at all**).
+3. **Three distinct Moodle seam strategies, found independently in one pass** — userscript ([`better-moodle`](https://github.com/jxn-30/better-moodle), EMEA), browser extension ([`sliit-courseweb-cleaner`](https://github.com/dulithdivisekara/sliit-courseweb-cleaner), APAC), and **read-only bounded plugin** ([`moodle-codex`](https://github.com/EdmundD28/moodle-codex)). 🔵 **That two unrelated institutions on two continents independently built a client-side layer over an institutional Moodle they are not allowed to fork is a design signal for an engagement, not a coincidence.**
+4. **Deployability under constraint** — offline-first ([`ielts-prep`](https://github.com/Luxshan2000/ielts-prep), local *or* cloud model), closed-network ([`IndiGrader`](https://github.com/skt09/IndiGrader)), local-first BYOK ([`litcode`](https://github.com/its-ahoh/litcode), which moves model cost and data custody to the learner — the cheapest answer to the student-data objection both the EMEA and LATAM legs record as the live brake).
+5. **The initiation problem** — [`ProcrastiLearn`](https://github.com/Vladyslav-Soldatenko/ProcrastiLearn) gates a chosen app behind a spaced-repetition card. This base holds a deep retention layer (FSRS, Anki) and a deep tutoring layer and **had nothing addressing whether the learner shows up at all**.
+6. **A composition observed in the wild** — [`AAATenderGuy/…Personal-Coach`](https://github.com/AAATenderGuy/Lightweight-AI-Tutoring-Personal-Coach) wires **HKU's `DeepTutor`** and **Tsinghua's `OpenMAIC`** together: two of this base's own largest subjects, observed integrated by a third party. Written up in [`../compose/patterns.md`](../compose/patterns.md) `p706`.
+
+---
+
 
 ## 🆕 2026-11-08 (p705) — 🟢 **`6` SUBJECTS FILED (`4` AGENTS, `2` FOUNDATIONS). 🔴 THE 8-PASS EU AI ACT CONFLICT IS NOW CLOSED AS UNRESOLVABLE — AND p704'S DIAGNOSIS OF *WHY* WAS WRONG. 🔴 A `48★` NEW ROW TELLS ITS READERS ITS `42,969★` UPSTREAM IS AGPL-3.0; IT HAS BEEN MIT SINCE `2026-06-28`.**
 

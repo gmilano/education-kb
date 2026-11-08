@@ -11,6 +11,79 @@ updated: 2026-11-08
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## 🆕 P99–P101 — added at p706 (2026-11-08)
+
+> Every component named below was probed at p706 on the controlled channels: existence and default ref via `git ls-remote --symref`, licence by reading the grant payload from `raw.githubusercontent.com` at that ref (bytes + sha256₁₂ recorded on the shelf row), stars from `gh api search/repositories`. `api.github.com/repos/…` is `403` in this environment and was not used.
+
+### `P99` — The national school-platform copilot (EMEA: Finland or Denmark, 5–7 weeks)
+
+**The engagement.** A ministry, municipality or school group wants an assistant for students, parents and teachers over the school system they already run — not a new portal.
+
+**Why this pattern exists:** p706's `T163` finding is that the scarce asset is **authenticated access to the system of record**, not the model. Two permissive connectors now exist for two national platforms, so the integration that normally dominates the budget is already written.
+
+**The stack — pick the country's connector, the rest is identical:**
+
+| Role | Component | Licence (payload-read at p706) |
+|---|---|---|
+| Connector, Finland | [`aikarjal/wilmai`](https://github.com/aikarjal/wilmai) `82★` — MCP server + CLI + agent skills over **Wilma** | 🟢 MIT, `1,064 B`, sha256₁₂ `f45398e64e2f` @ `main` |
+| Connector, Denmark | [`Casperjuel/aula-mcp`](https://github.com/Casperjuel/aula-mcp) `65★` — **Aula**, first-party **MitID** auth, no headless browser | 🟢 MIT, `1,068 B`, sha256₁₂ `237a15ef109c` @ `main` |
+| Agent runtime + memory | [`framerslab/agentos`](https://github.com/framerslab/agentos) `685★` — provider-swappable across `13` LLM providers | 🟢 Apache-2.0, `10,319 B`, sha256₁₂ `5aeaeb52ab3c` @ `master` |
+| Retention layer | this base's existing **FSRS** shelf (see [`../repos/foundations.md`](../repos/foundations.md)) | 🟢 permissive |
+| Data-custody option | **BYOK** pattern as implemented by [`its-ahoh/litcode`](https://github.com/its-ahoh/litcode) `9★` | 🟢 MIT, `1,062 B`, sha256₁₂ `c46e1da9a76e` @ `main` |
+
+**Wiring, concretely.**
+1. Stand up the connector as an **MCP server**; it already exposes the platform's own objects (Wilma: grades, messages, schedules; Aula: profiles, calendar, messages, *ugeplaner*).
+2. Point `agentos` at that MCP server as a tool source. **Use its provider abstraction deliberately, not incidentally** — EMEA procurement now asks which model and where it runs (EUA, January 2026: *prioritise European LLMs*), so configure a European endpoint and keep the swap one config change.
+3. Scope the agent **read-only first.** Follow [`EdmundD28/moodle-codex`](https://github.com/EdmundD28/moodle-codex)'s discipline — read-only, **bounded** parsing — because an agent with write access to a national SIS is a different risk conversation and will stall the engagement.
+4. Where the client cannot accept central inference at all, fall back to the **BYOK** arrangement: the key, the cost and the custody sit with the family.
+
+🔴 **Do this before writing code:** read the connector's auth surface. **MitID is a state identity scheme** — `aula-mcp` carries `32` forks and `22` open issues, so treat its auth path as the review target, not as a settled dependency. 🔵 **Deliverable that outlives the project:** the connector hardening is reusable across every school in that country, because the platform is national.
+
+### `P100` — The defensible-grade assessment pipeline (6–8 weeks, and it is sold on contestability)
+
+**The engagement.** Grading at a scale that needs automation, in a context where a grade can be **challenged** — admissions, certification, professional licensing, academic-integrity proceedings.
+
+**Why this pattern exists:** p706's `T164` finding. Five permissive autograders probed in one pass split into *decided* and *estimated* modes, and the pitch is to **put the LLM where it cannot decide the grade.**
+
+**The stack — three tiers, LLM confined to the third:**
+
+| Tier | Component | Licence (payload-read at p706) | What it decides |
+|---|---|---|---|
+| 1. **Decided** | [`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main) `14★` | 🟢 Apache-2.0, `11,357 B` (byte-exact canonical), sha256₁₂ `b40930bbcf80` @ `master` | Formal correctness — the **Lean 4** checker is ground truth |
+| 2. **Deterministic proxies** | [`uhafner/autograding-model`](https://github.com/uhafner/autograding-model) `5★` (Maven: `edu.hm.hafner:autograding-model`) | 🟢 MIT, `1,080 B`, sha256₁₂ `b8f78942bf60` @ `main` | Tests, coverage, static analysis, mutation — reproducible, no model |
+| 3. **Estimated, advisory only** | an LLM judge from this base's existing rubric patterns | — | **Feedback prose. Never the mark.** |
+| Service spine | [`edulinq/autograder-server`](https://github.com/edulinq/autograder-server) `21★` | 🟢 MIT, `1,071 B`, sha256₁₂ `7eb48830c022` @ `main` | Submissions in, grades out, over an API |
+| Second implementation | [`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server) `24★` | 🟢 Apache-2.0, `11,357 B`, sha256₁₂ `c71d239df917` @ `master` | Avoids single-project dependency |
+| Air-gapped variant | [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) `8★` | 🟢 MIT, `1,072 B`, sha256₁₂ `5065bc33aae5` @ `main` | Zero-trust, closed-network labs — **exam halls** |
+
+**Wiring, concretely.**
+1. Run `edulinq/autograder-server` as the submission spine and the grade of record.
+2. Route each assessment item to the **highest tier that can decide it.** Formalisable mathematics and logic → tier 1. Code → tier 2 (`autograding-model` as a Maven dependency, metric weights in config and under version control, so a rubric change is a reviewable commit).
+3. **Tier 3 writes feedback and flags items for human review. It never writes a mark.** That single constraint is what makes the pipeline defensible, and it is the sentence to put in the proposal.
+4. For invigilated settings, deploy the `IndiGrader` arrangement — **grading with no egress** — rather than tunnelling out of the exam network.
+
+🔵 **Why the client buys it:** every tier-1 and tier-2 grade can be **re-derived from the artefact** by a third party, months later, without the model that produced it. 🔴 **Honest limit, state it in the pitch:** tier 1 applies only to formalisable work, which in most curricula is a minority of items. **The pattern's value is the boundary, not universal coverage.**
+
+### `P101` — The observed `DeepTutor` + `OpenMAIC` composition (2–3 weeks to a working pilot)
+
+**Why this pattern is different from every other on this page: it is not a design this base proposed. It is an integration a third party built and published, which p706 then verified.**
+
+[`AAATenderGuy/Lightweight-AI-Tutoring-Personal-Coach`](https://github.com/AAATenderGuy/Lightweight-AI-Tutoring-Personal-Coach) (🟢 MIT, `1,073 B`, sha256₁₂ `dcf03b0053ef` @ `master`, `7★`, created `2026-10-26`) wires together **two of this base's largest education subjects**:
+
+| Component | Role in the composition |
+|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | The tutoring engine — agent-native, lifelong memory |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) `42,969★` | The course/classroom platform — **MIT since `v0.3.0`, `2026-06-28`** |
+
+🔴 **Read `705-A` before you start, because it is exactly this pair that produced this base's worst licence-provenance defect.** A `48★` dependent told its readers OpenMAIC was AGPL-3.0 and that combined works inherit AGPL-3.0. **OpenMAIC has been MIT since 2026-06-28** — read first-hand from its own `LICENSE` (`1,065 B`, sha256₁₂ `ba2525637432`) and corroborated by `package.json` and its changelog. 🟢 **The MIT reading is what makes this pattern commercially viable at all; a reader of that dependent's README would have declined the substrate.**
+
+**How to use it.**
+1. **Read the integration, do not depend on it.** At `7★` and a few weeks old, this repository's value is as a **worked reference for how the two systems actually fit together** — the seams, the assumptions, the glue — not as a dependency to pin.
+2. Take `OpenMAIC` as the platform and `DeepTutor` as the tutor, wire them per the reference, then replace the glue with your own.
+3. 🟡 **Two carve-outs survive from `p705` and bind a redistributor even though OpenMAIC's root is MIT:** `packages/mathml2omml` is **LGPL-3.0-or-later** and `packages/pptxgenjs` is third-party **MIT**. **MIT root ≠ MIT tarball.** Pin `≥ v1.1.3` for the security reason recorded on [`../verticals/solutions.md`](../verticals/solutions.md).
+4. Region note: the reference integration's README is **Chinese-primary** (`2,972` CJK chars, ≈`16.6%` of bytes), which is why the row is placed **APAC** — budget for reading it, or for a translation pass, as part of the two weeks.
+
+
 ## 🆕 P97–P98 — added at p705 (2026-11-08)
 
 ### `P97` — The zero-connectivity, zero-per-seat course factory (LATAM public universities, APAC rural, Sub-Saharan Africa; 4–6 weeks to a deployable image)

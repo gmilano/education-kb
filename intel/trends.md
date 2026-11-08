@@ -21,6 +21,57 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T162–T166 — added at p706 (2026-11-08)
+
+### `T162` — A licence is identified by its **operative text**, not its title — and the instrument can now under-read a grant that is entirely in order
+
+This base has spent many passes on payloads that claim **more** freedom than they grant (`686` on `spdx_id`, `704` on dangling grant references, `705-A` on a dependent misreporting its dependency). **p706 recorded the opposite failure for the first time: a textbook MIT grant that a title-matching detector cannot classify, because the three letters `MIT` do not occur in the payload at all.**
+
+[`particify/arsnova-webclient`](https://github.com/particify/arsnova-webclient)'s `LICENSE.md` (`1,073 B`) opens on its copyright line and goes straight into *“Permission is hereby granted, free of charge…”*. Every operative clause is present and unmodified. It was **one grep away from being refused a shelf row for an unreadable licence.**
+
+🔵 **Why this direction is the expensive one, and it is the mirror of `705-A`:** permissive-washing creates legal exposure, which is loud. **Under-reading a clean grant is silent — a viable MIT substrate simply never reaches the client's option set, and nobody ever learns it was dropped.** 🟢 **The trend to watch: licence *detection* is becoming a distinct source of error from licence *claims*.** Treat an `UNKNOWN` from any fast-path classifier as a **queue for a body read**, never as a verdict.
+
+### `T163` — The unit of education-AI work is becoming the **agent layer over a national system of record**
+
+p706 filed the first two worked examples this base has seen: [`aikarjal/wilmai`](https://github.com/aikarjal/wilmai) (`82★`) over **Wilma**, Finland's school information system, and [`Casperjuel/aula-mcp`](https://github.com/Casperjuel/aula-mcp) (`65★`) over **Aula**, Denmark's national school platform — the latter with **first-party MitID (national eID) authentication and explicitly no headless browser.**
+
+🟢 **These are not tutors. They are connectors with agent skills attached**, and they are the two highest-starred EMEA education subjects this base holds. 🔵 **The trend reading: the scarce asset has moved.** Models are abundant and interchangeable; **authenticated, sanctioned access to the system where grades, messages and schedules actually live is not.** A national eID integration is a compliance artefact that takes months and cannot be prompted into existence.
+
+🔵 **Corollary for a studio: the reusable asset across engagements in one country is the connector, and it is reusable precisely because the platform is national.** Finland has one Wilma; Denmark has one Aula.
+
+### `T164` — Grading is bifurcating into **decided** and **estimated**, and defensibility is becoming the selection criterion
+
+p706 probed five permissive autograders in one pass and they split cleanly on a question nobody was asking two years ago: **is the grade a decision or an estimate?**
+
+- **Decided** — [`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main): the **Lean 4** proof checker is the ground truth. No rubric drift, no judge prompt, no temperature.
+- **Estimated** — the LLM-judge and rubric patterns across this base, plus [`uhafner/autograding-model`](https://github.com/uhafner/autograding-model)'s metric configuration as the deterministic middle (tests, coverage, static analysis: decided, but of *proxies*).
+
+🔵 **The trend is not that proof-checking will spread — most subjects cannot be formalised.** It is that **the existence of a decided mode establishes the standard against which estimated grading is now judged**, and “the model scored it” is becoming an insufficient answer wherever a grade is contestable — admissions, certification, academic-integrity proceedings. 🟢 **Expect “how is this grade defensible?” to arrive as a procurement question.**
+
+### `T165` — The **deployment constraint** has become a design axis, and it is the same axis in all four regions
+
+p706's four regional legs produced four different reasons for one architectural requirement:
+
+| Region | Stated constraint |
+|---|---|
+| North America | **COPPA** — under-13 data |
+| EMEA | AI Act post-market surveillance; **“prioritise European LLMs”** (EUA, Jan 2026) |
+| APAC | **AI sovereignty** as the region's organising theme for `2026` |
+| LATAM | **Connectivity and device limits** in rural/underserved public schools |
+
+🟢 **Four rationales, one requirement: the tutor must not assume a cloud round-trip to a single foreign provider.** p706 filed three distinct answers already shipping — **offline-first with a local *or* cloud model** ([`Luxshan2000/ielts-prep`](https://github.com/Luxshan2000/ielts-prep)), **closed-network / zero-egress** ([`skt09/IndiGrader`](https://github.com/skt09/IndiGrader)), and **BYOK**, which moves model cost *and* data custody to the learner ([`its-ahoh/litcode`](https://github.com/its-ahoh/litcode)).
+
+🔵 **The trend reading: provider-swappability and graceful degradation are moving from engineering preference to contract term.** A cloud-only, single-provider tutor is becoming unsellable in three of four regions for three different reasons.
+
+### `T166` — Licence payloads are starting to be **retyped or model-generated** rather than copied
+
+[`tryskilly/skilly`](https://github.com/tryskilly/skilly) ships an Apache-2.0 payload at `10,785 B` against canonical `11,357 B` whose body contains **three word-level edits** (`to Licensor` → `to the Licensor` twice; `excluding those notices` → `excluding any notices` in §4(d)). **All three are semantically inert — verified by reading each in context — so the grant is Apache-2.0.**
+
+🔵 **The finding is the mechanism, not this instance.** A verbatim legal text does not acquire definite articles by accident: **this payload was regenerated rather than copied.** Apache-2.0 §4(a) obliges a redistributor to supply *a copy of this License*, and a paraphrase is not that copy.
+
+🟢 **Why it is a trend and not a curiosity: the generation step is cheap and now routine, and the next paraphrase may not be inert.** A single altered word in §2 (grant scope) or §3 (patent grant) would be substantive and would read exactly as innocuous as these three do. 🟢 **Standing, cheap defence, which paid for itself in one pass:** keep a byte-exact canonical control (this base now uses [`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server), `11,357 B`, sha256₁₂ `c71d239df917`) and **diff any payload whose size diverges** — `4 / 4` divergent payloads explained, `3` cleared, `1` flagged.
+
+
 ## 🆕 T158–T161 — added at p705 (2026-11-08)
 
 ### `T158` — A licence claim now propagates DOWNSTREAM faster than a relicence does, so the dependent's README is the stale copy
