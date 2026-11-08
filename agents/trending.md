@@ -3,6 +3,109 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+
+## 🆕 2026-11-08 (p712) — 🟢 **`711-C` IS REFUTED: A REPOSITORY DECLARES ITS OWN REGION IN MACHINE-READABLE FORM, AND READING IT BROKE THE FIVE-PASS `North America` FREEZE — `22 → 29`**
+
+**`24` subjects filed** (`16` agents, `5` foundations, `3` platforms). [`top.md`](top.md) **`236` → `252`** (arity `252/252` at `6` columns, `0` ragged; `252` distinct subjects, `0` duplicated; region vocabulary `252/252` legal). [`../repos/foundations.md`](../repos/foundations.md) **`280` → `285`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `118`** — and this is the first pass since `p707` to file on **all three** shelves.
+
+**Region movement: `North America 22 → 29`, `EMEA 24 → 27`, `LATAM 21 → 22`, `APAC 62 → 63`, `Global 107 → 111`.** `North America` had not moved for five consecutive passes and took `+7` here — `+6` filed and `+1` existing row upgraded. It is the largest single-pass gain that column has recorded.
+
+---
+
+### 🟢 `712-A` — the pass's product: four region-placement channels, ranked, and the one this base had been using is the weakest of the four
+
+`711-C` concluded that the five-value region vocabulary "CANNOT EXPRESS *Spanish-language, country unknown*" and recorded `North America 22` frozen as the consequence. **Both halves are wrong.** `es-419` is the UN M.49 code for Latin America — it *is* the expression of "Spanish-language, country unknown" — and [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) ships it as `src/shared-kernel/output/i18n/catalogs/es-419.json`, a committed translation catalogue rather than a claim in a README. It maps onto the closed vocabulary with no inference: **`es-419` → LATAM**.
+
+| # | Channel | How it is read | Placed this pass | Failure mode |
+|--:|---|---|--:|---|
+| 1 | **Shipped locale catalogue / IANA timezone** | `gh api -X GET search/code -f q='es-419 repo:…'`, confirmed against the returned file list | 2 | Exists only in internationalised projects; confuses shipped catalogues with schema *options* unless guarded |
+| 2 | **Grant holder line** | `curl raw.githubusercontent.com/…/LICENSE` → `grep -i copyright` | 1 | Places a row only when the holder is an institution |
+| 3 | **Named deployment or preset inside the artifact** | README read from bytes | 6 | Names the *served* institution, which need not be the owner's country |
+| 4 | **Owner's declared profile location** | `gh api -X GET search/users -f q='user:A user:B … location:"X"'` | 7 of 27 probed | `search/users` returns **no `location` field**, so it is a yes/no probe against a place name you must supply |
+
+🔧 **Channel 1's trap is also its discriminator.** `JhostinAleck/brightspace-mcp` matches `pt-BR` (`14` files) and `fr-CA` (`13`) as well as `es-419` (`23`) — but those two appear only in the config schema's list of permitted values, while catalogue *files* exist for `en-US` and `es-419` only. **Place on the catalogues a project ships, never on the locales it permits**, or every internationalised project lands in five regions at once.
+
+🔧 **Channel 4 — the obvious one — is refused, limited and then mostly empty.** `gh api users/{login}` returns `403` outright in this session (*"sessions are bound to their configured repositories"*). `search/users` works but serves `20` fields per item with `location` **not among them**, so the only route is the `location:` qualifier. 🟢 **It batches, which is the salvageable part:** multiple `user:` qualifiers **OR** together, so `27` logins resolved against `45` place names in `~45` calls rather than `~1,200`. 🔴 **And it answered for `7 / 27` owners.** `20 / 27` declare nothing a probe can match. **That ratio is the mechanical root of what `711-C` misdiagnosed as a vocabulary problem.**
+
+🔵 **Two independent channels agreed on every row where both fired** — `wongcyrus/Google-AI-Classroom` (profile `Hong Kong` + `Asia/Hong_Kong` in `37` files), `tuftsceeo/wildcat-code` (profile `Boston` + holder line *"Tufts Center for Engineering Education and Outreach"*) — **and disagreed once, on the country but not the region**: `jakobvongehlen/uu-brightspace-cli` serves Utrecht University (Netherlands) while its owner declares `Germany`. Both are EMEA. **The coarse five-value vocabulary absorbed the one disagreement it was handed, which is an argument for it rather than against it.**
+
+### 🟢 `712-A3` — one row was UPGRADED, not added, from evidence inside a DIFFERENT repository
+
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) has carried `Region = Global` since `p657` (and an explicit *"Global (unplaced)"* note since `p682`) because nothing in that repository names a country. The library filed beside it this pass — [`RohanMuppa/Brightspace-API`](https://github.com/RohanMuppa/Brightspace-API), same owner, **shared configuration and shared sign-in session** — opens *"By Rohan Muppa, ECE @ Purdue"*. 🟢 **One owner's two repositories are one placement.** The row is corrected to `North America` in the same pass that files its sibling, and its stars refreshed `62 → 64`.
+
+🔵 **Generalisation: when a row cannot be placed, the evidence may be in a SIBLING repository rather than in a better query.** Owner expansion was already this base's best *supply* channel (`703`, `709`); it is a *placement* channel too.
+
+### 🟢 `712-E` — the Brightspace/D2L field, mapped once so the search is never re-spent
+
+This base carried **two** Brightspace rows against `14` Canvas-family rows. One query with the grant in it — `brightspace d2l license:mit pushed:>2026-06-01` — returned `total_count: 51`, of which `12` are substantive and `8` are filed.
+
+| Subject | ★ | Shape | Auth | Writes |
+|---|--:|---|---|---|
+| [`DavidChen-006/Brightspace-Bar`](https://github.com/DavidChen-006/Brightspace-Bar) | **37** | macOS menu bar, per-course workload heatmap | Playwright | adds assignments |
+| [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) | 15 | MCP, `26` read + `3` write tools, TUI | 4 strategies | **two** opt-ins |
+| [`Aaryan-Kapoor/d2l-cli`](https://github.com/Aaryan-Kapoor/d2l-cli) | 10 | CLI for any agent | Playwright | none |
+| [`mattdig/brightspace-scheduler`](https://github.com/mattdig/brightspace-scheduler) | 5 | **tenant extension, no AI** | n/a (in-tenant) | writes groups/calendar |
+| [`cyanprot/brightspace-mcp`](https://github.com/cyanprot/brightspace-mcp) | 3 | MCP + material-sync skill | persistent Chromium O365 SSO | none |
+| [`Dryd33n/d2l-scraper`](https://github.com/Dryd33n/d2l-scraper) | 3 | offline export + NotebookLM packs | scrape | none |
+| [`RohanMuppa/Brightspace-API`](https://github.com/RohanMuppa/Brightspace-API) | 2 | **library**, importable | shared with the MCP server | none |
+| [`jakobvongehlen/uu-brightspace-cli`](https://github.com/jakobvongehlen/uu-brightspace-cli) | 2 | CLI across 3 university platforms | Solis-id, Playwright | none |
+| [`micho911/brightspace-mcp`](https://github.com/micho911/brightspace-mcp) | 1 | **Go**, one static binary | OS keychain | deferred |
+
+🔵 **The field has one shape and one cause.** Every client borrows the user's own browser session — Playwright profile, pasted cookie, Valence token or OS keychain — because **D2L issues no student API keys**. Consequence for a studio: a Brightspace integration needs **no tenant admin and no procurement**, which is the opposite of the Canvas-instance-policy constraint this base recorded at `p711`, and it is why this field is `51` repositories deep while nobody has shipped a product.
+
+🔴 **Declared gap, stated so the absence is not read as coverage: not one Brightspace row is instructor-side.** Grading, gradebook and roster writes exist on the Blackboard and Canvas families only. A D2L teacher-facing engagement starts from student clients plus a read-only library — **there is no open-source D2L grader at all.**
+
+### 🔴 `712-B` — a university ACRONYM in a repository name is a continent-level trap
+
+[`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) reads as UC Santa Cruz to any English-language pipeline and would have been filed `North America`. It is **Università Cattolica del Sacro Cuore**, Italy. The repository name never says Italy and **the README never says Italy either** — the country comes from the institution's own domain: `Cattolica` ×3, `unicatt.it` ×3, plus `Verbalizzazione`, `Inoltro alla firma` and an Italian `SVE` exam-registration template, in a `20,932 B` payload read from `raw.githubusercontent.com`. 🔵 **Rule for every shelf in this base: resolve an acronym from an email or web domain in the payload before it reaches the `Region` cell.**
+
+### 🔴 `712-C` — the GitHub search indexes disagree WITH EACH OTHER, which is sharper than `688-B`
+
+`688-B` and `704-C` recorded `search/repositories` returning `total_count: 0` for live repositories. p712 found the layer below: the **repository** index, the **code** index and the **user** index disagree about the same subjects.
+
+| Subject | `search/repositories` | `search/code` | `search/users` (owner) | `git ls-remote` | payload read from bytes |
+|---|---|---|---|---|---|
+| `NiccoloSalvini/mcp-blackboard-ucsc` | 🟢 `MIT`, `0★` | 🔴 **`0` for `Cattolica`, `Verbalizzazione`, `unicatt.it`, `unicatt`** | 🟢 resolves | 🟢 `main` | 🟢 `20,932 B`, every term present |
+| `praisethefacts/google-classroom-mcp` | 🟢 `MIT`, `0★` | — | 🔴 **absent from a 27-login OR query that returned the other 26** | 🟢 `main` | 🟢 `5,581 B` |
+| `cyanprot/brightspace-mcp` | 🟢 `MIT`, `3★` | 🔴 absent from a 4-repo OR query that returned the other 3 | 🟢 resolves, `Vancouver` | 🟢 `main` | 🟢 `11,005 B` |
+
+🔵 **Operational rule, stronger than "retry the query": a nil from any GitHub index is evidence about that index.** Only `git ls-remote --symref` and a byte read are evidence about the repository. **Had a code-search or user-search nil been read as absence this pass, one row would have been placed on the wrong continent and two would have been dropped.**
+
+### 🔴 `712-D` — an MIT grant whose copyright holder is *"Anonymous Authors"* has no identifiable licensor
+
+[`Veteran-Zero/MERIT`](https://github.com/Veteran-Zero/MERIT) (filed to [`../repos/foundations.md`](../repos/foundations.md)) carries a clean `1,074 B` MIT payload whose holder line reads **`Copyright (c) 2026 Anonymous Authors`** — double-blind review anonymity leaking into the grant. **MIT grants permission *by* the copyright holder, so a holder that is not a legal person is a permission no acquirer can trace.** GitHub reports `MIT`; no licence detector can see this. 🟢 **New check for the loop, and it is free:** `grep -i copyright` on the payload this base already downloads for every row. A holder line naming no person and no institution is a flag. *(Pseudonyms that still identify a party — `PTFacts`, `Wildfell Hall`, `UniKT Team`, all read this pass — are ordinary; the test is identifiability, not formality.)*
+
+### 🔧 `712-F` — three existing rows re-measured while the channel was open, and a `NOASSERTION` settled from the bytes
+
+| Row | As published | Re-read at p712 | Verdict |
+|---|---|---|---|
+| `RohanMuppa/brightspace-mcp-server` | `MIT` · `62★` · `Global` | `MIT` · **`64★`** · **`North America`** | 🟢 `+2` stars; region corrected (`712-A3`) |
+| `AnonymousOnyx22/brightspace-d2l-mcp` | `MIT` · `13★` (p674) | payload `1,200 B`, sha256₁₂ `c7f8d1452807`, *"MIT License"*, holder *"Copyright (c) 2026 AnonymousOnyx22"* · **`10★`** | 🟢 **MIT HOLDS** · 🔴 **API now reports `NOASSERTION`** · 🔴 stars **fell** `13 → 10` (`−23%`), so p674's reversal did not hold |
+| `felipedias-ie/blackboard-mcp` | `MIT` · `5★` | `MIT` · `5★` · pushed `2026-10-14` | 🟢 exact |
+
+🔵 **The `NOASSERTION` instance matters beyond one cell: a pipeline that refreshed the `Licence` column from `license.spdx_id` would have DOWNGRADED a correct `MIT` row to "unknown" this pass.** The API field is a hint; the payload is the grant (`681-B`).
+
+### 🔵 `712-G` — the eight mandated legs, measured address by address: the 39th consecutive nil on supply
+
+Year computed as `2026` from `date +%Y`, never hardcoded.
+
+| Leg | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **nil on supply.** Returned general agent frameworks (CrewAI, OpenHands, OpenAI Agents SDK, Browser Use) and two Microsoft/Hugging Face courses. The search's own summary conceded it "didn't turn up a ranking of education-focused open-source agents" |
+| `github trending education AI 2026` | 🔴 **nil on novelty.** `THU-MAIC/OpenMAIC` (~42k★), `HKUDS/DeepTutor` (~45k★ claimed by one roundup, `56,900` by API), `patchy631/ai-engineering-hub`, `microsoft/generative-ai-for-beginners`, `rasbt/LLMs-from-scratch`, `microsoft/ai-agents-for-beginners` — **all six already on this base's shelves** |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **nil, 4th consecutive.** OFBiz, Corteza, Krayin, iDURAR — general ERP/CRM, already adjudicated; its one education answer, Frappe Education, is `GPL-3.0` |
+| `AI education industry trends 2026` | 🟡 **no repository, usable intel** → [`../intel/trends.md`](../intel/trends.md), [`../intel/market.md`](../intel/market.md) |
+| `AI education North America 2026 adoption regulation players` | 🟡 **no repository.** Region share `36–41.7%`; `$169M` US Dept. of Education commitment to responsible AI in higher education, Jan 2026; "most schools do not have a clear policy"; COPPA shapes child-facing products |
+| `AI education EMEA 2026 adoption regulation players` | 🟡 **no repository.** EU AI Act is the driver, **and the sources disagree on the date** — one says enforceable Feb 2026, another Aug 2026 for high-risk duties, which is the obligation class that covers most education uses; `56%` of EMEA CEOs claim AI readiness vs `48%` Americas and `45%` APJ; EUA (Jan 2026) urges prioritising European LLMs |
+| `AI education APAC 2026 adoption regulation players` | 🔴 **nil, and the thinnest leg of the eight.** Returned general enterprise-AI material; **no APAC education regulator, no national AI-in-schools policy and no regional edtech player was named.** One result was about the UK. Recorded as a gap, not as coverage |
+| `AI education LATAM 2026 adoption regulation players` | 🟡 **no repository, strongest regional intel of the four.** Digital Education Council + Tec de Monterrey 2026 survey across `29` universities: **`92%` of students and `79%` of faculty actively using AI**; UNESCO regional AI-in-Education Observatory for LAC launched Apr 2026; UNESCO Santiago–CENIA (Chile) agreement Feb 2026 |
+
+🔵 **The legs have now produced zero supply for `39` consecutive passes while the `license:`-qualified `gh api` sweep produced `24` subjects in this one.** The legs' remaining value is regional intel, which is where p712 routed all eight.
+
+🔴 **Declared regional gaps for this pass, stated explicitly so silence is not mistaken for coverage:** **APAC** returned no education-specific regulation or players from its mandated leg (the supply row it produced, `wongcyrus/Google-AI-Classroom`, came from the agent sweep); **North America** returned no primary policy text, only secondary summaries of the `$169M` commitment; **EMEA**'s central regulatory date is contradicted by its own sources; **LATAM** produced adoption figures and institutional activity but **no current binding national AI-in-education law anywhere in the region**.
+
+---
+
 ## 🆕 2026-11-08 (p711) — 🟢 **`710-E` IS REFUTED: THE LATAM SUPPLY IS NOT UNGRANTED, IT IS REACHED BY PUTTING THE GRANT IN THE QUERY. `8 / 8` ALIVE AND MIT, AGAINST p710'S `5 / 5` UNGRANTED, IN THE SAME LANGUAGE SWEEP**
 
 **`18` subjects filed** (`15` agents, `3` foundations). [`top.md`](top.md) **`221` → `236`** (arity `236/236` at `6` columns, `0` ragged; `236` distinct subjects, `0` duplicated; region vocabulary `236/236` legal). [`../repos/foundations.md`](../repos/foundations.md) **`277` → `280`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `115`** — no platform row, one **constraint** note instead (`711-F`).

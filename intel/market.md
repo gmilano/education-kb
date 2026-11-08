@@ -133,6 +133,26 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🟢 p712 — North America: **the five-pass supply freeze IS BROKEN, `NA 22 → 29`, and it broke on a READING CHANGE rather than on new supply**
+
+**`7` North America rows this pass — `6` filed and `1` existing row upgraded — the largest single-pass gain this region has recorded.** `p711` recorded `NA 22` unmoved for a fifth consecutive pass and attributed it to the region vocabulary. That was the wrong diagnosis: **the repositories were there all along and this base was reading the wrong field.** Placing a row from the owner's GitHub profile fails for `20 / 27` owners; placing it from the artifact succeeded `9` times (`712-A` in [`../agents/trending.md`](../agents/trending.md)).
+
+| Row | ★ | Placed by | The evidence, verbatim |
+|---|--:|---|---|
+| [`Aaryan-Kapoor/d2l-cli`](https://github.com/Aaryan-Kapoor/d2l-cli) | 10 | preset list in the artifact | *"Kennesaw State and Georgia State are one-word presets"* — both Georgia, US |
+| [`RohanMuppa/Brightspace-API`](https://github.com/RohanMuppa/Brightspace-API) | 2 | author line | *"By Rohan Muppa, ECE @ Purdue"* |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | **64** | **sibling repository** | the row above, same owner, shared config and session — **upgraded from `Global`, held since `p657`** |
+| [`Dryd33n/d2l-scraper`](https://github.com/Dryd33n/d2l-scraper) | 3 | deployment note | *"It's been used in full at UVic"* — University of Victoria, Canada |
+| [`cyanprot/brightspace-mcp`](https://github.com/cyanprot/brightspace-mcp) | 3 | owner profile | declared location `Vancouver` |
+| [`tuftsceeo/wildcat-code`](https://github.com/tuftsceeo/wildcat-code) | 2 | **grant holder line + profile, agreeing** | *"Copyright (c) 2024 Tufts Center for Engineering Education and Outreach"*; profile `Boston` |
+| [`YouLearn-AI/mcp`](https://github.com/YouLearn-AI/mcp) | 0 | owner profile | declared location `United States`; 🟡 stale, last push `2026-05-21` |
+
+**Demand side — the leg returned `0` repositories again and only secondary material** (the last pass to carry the explicit counter put it at the `48th` instance, `p709`). Region share of the AI-in-education market is given as `36%–41.7%` depending on the vendor, one report putting `38%` for 2025. The one public, checkable number is a **`$169M` US Department of Education commitment to responsible AI in higher education, January 2026**, and this base saw it only in secondary summaries — 🔴 **no primary policy text was reachable this pass, and that is recorded as a gap, not as confirmation.** COPPA continues to shape anything child-facing.
+
+🟢 **The sellable opportunity this pass is new and it is not a tutor.** [`tuftsceeo/wildcat-code`](https://github.com/tuftsceeo/wildcat-code) is the first artifact on these shelves whose organising principle is **accessibility**: five reading levels from icon-only to complex text, text-to-speech, high-contrast and dyslexia-friendly fonts, built to UDL for an IEP project, from a US university's own engineering-education centre. **US K-12 districts buy against IDEA/IEP obligations with budget that is legally protected**, and this base's `252`-row agent shelf had nothing addressing it until now. 🔴 **The gap that remains: it drives LEGO SPIKE Prime robots, so it is a hardware-bound exemplar of a UDL interaction pattern, not a reusable UDL layer.** The pattern is the asset; the code is a reference implementation.
+
+🔴 **And the region's standing structural gap is unchanged: there is no open-source instructor-side D2L tooling at all** — `51` Brightspace repositories, `9` substantive, `0` that can write a grade (`712-E`). North American higher education runs Brightspace at scale, so a teacher-facing D2L engagement is a build, not an integration.
+
 #### 🔴 p711 — North America: **`NA 22` UNMOVED for a fifth pass, `0` repositories from the leg — and the region's 2026 signal is REGULATORY VOLUME, not product**
 
 🔴 **The mandated North America leg returned `0` repositories.** `p710` broke a two-pass supply nil on **statute** (`T174`), and p711 could not repeat it: the statutory channel produced policy, not code. **`North America 22` is the longest-static column on this page.**
@@ -748,6 +768,22 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🟢 p712 — EMEA: **`EMEA 24 → 27`, and all three rows placed themselves from an INSTITUTIONAL DOMAIN inside the payload**
+
+**`3` rows, and the placement channel is the same one `p708`/`p709` identified — institution-bound servers name their own institution — sharpened by `712-B`: the discriminator is the institution's DOMAIN, not its acronym.**
+
+| Row | ★ | Institution named in the artifact | Why it matters |
+|---|--:|---|---|
+| [`Mattlo0546/blackboard-mcp`](https://github.com/Mattlo0546/blackboard-mcp) | 1 | *"Imperial College London, Edinburgh, Bristol, Leeds and Southampton"* | **Five named UK tenants in one artifact** — the broadest single-row deployment list on these shelves |
+| [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | 0 | Università Cattolica del Sacro Cuore (`unicatt.it`) | The only **instructor-side** Blackboard row: gradebook, grading, Italian `SVE` exam registration |
+| [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 0 | Universitat Politècnica de València (`groq.cc.upv.es`, model `poligpt-code`) | Grades back into **Open edX *and* Moodle** from one LTI tool |
+
+🔴 **`712-B` is an EMEA-specific trap and it nearly cost this region a row.** `mcp-blackboard-ucsc` reads as UC Santa Cruz and would have been filed `North America`; it is Italian, and **neither the repository name nor the README says Italy** — the country comes from `unicatt.it` in the configuration, plus `Verbalizzazione`, *"Inoltro alla firma"* and an Italian exam-registration template. **Any EMEA pipeline that keys on acronyms will systematically export European rows to North America.**
+
+🟢 **The region's distinctive demand signal this pass is linguistic granularity.** `moocupv/lti-ai-grader` runs its interface in English, Spanish **and Valencian** — a co-official language of one Spanish autonomous community. **A co-official regional language is a much sharper locator than a national one**, and it is also a procurement fact: Spanish regional administrations buy in the co-official language, which is a requirement no global product satisfies by default.
+
+**Demand side — the EU AI Act remains the driver, and 🔴 this pass's sources CONTRADICT EACH OTHER on the date.** One education-sector source states the Act is enforceable from **February 2026**; another places the high-risk obligations — the class covering most education uses — at **August 2026**, and notes they may be delayed. 🔵 This base already holds a more precise reading at `T178` (`p711`): the compliance clock has **split**, with the high-risk deadline moved to `2027-12-02` and the transparency duties running earlier. **Where a secondary source and this base's own dated reading disagree, the dated reading stands and the secondary source is recorded as the disagreement it is.** Readiness: `56%` of EMEA CEOs claim their organisation is prepared for AI adoption, against `48%` in the Americas and `45%` in APJ (Workday). The European University Association's January 2026 report urges prioritising **European LLMs** to counter US-centric bias — a sovereignty requirement, and a procurement constraint a studio must design around rather than argue with.
 
 #### 🟢 p711 — EMEA: **the compliance clock SPLIT — high-risk education slipped to `2027-12-02` while transparency bound on `2026-08-02`. That gap is a ~13-month build window**
 
@@ -1486,6 +1522,16 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟡 p712 — APAC: **`APAC 62 → 63`, and the region's honest result is that its MANDATED LEG WAS THE THINNEST OF ALL FOUR — no regulator, no policy, no player named**
+
+🔴 **Declared gap, stated plainly so silence is not read as coverage.** The mandated leg `AI education APAC 2026 adoption regulation players` returned **general enterprise-AI material and nothing education-specific**: no APAC education regulator, no national AI-in-schools policy, and no regional edtech player. One of its results was about the **United Kingdom**. What it did return is context — Forrester reporting APAC organisations investing in generative AI more aggressively than other regions, Singapore's financial-sector AI consultations as the template for how regulators there move, and a forecast that APAC converges on safety/transparency/accountability principles while implementing them per market — **none of which is about education.** This base holds far better APAC education detail from earlier passes; p712 adds no regulatory reading because the leg produced none.
+
+🟢 **The one supply row came from the agent sweep, not the leg, and it is the largest system filed this pass.** [`wongcyrus/Google-AI-Classroom`](https://github.com/wongcyrus/Google-AI-Classroom) (MIT, `1,062 B` read from bytes, Hong Kong) is a full exam and lab platform: browser-native edge invigilation with MediaPipe face/iris mesh, LiteRT Whisper and LiteRT Gemma 4 E2B in isolated Web Workers at `15–30 FPS`, hot-swapping from cloud fallback to **100% on-device inference with zero egress**; WebAuthn passkey attendance from rotating HMAC-SHA256 QR codes on the projector; anti-proxy one-student-one-phone hardware locks with an exemption toggle for handsets without Google services.
+
+🔵 **Three transferable things, and the privacy architecture is the commercial one.** (1) **Zero-egress proctoring**: the student's face and voice never leave the browser, which converts the hardest objection to AI invigilation — and the hardest data-protection filing — into an architecture choice. APAC data-protection and cross-border-transfer rules are tightening, so a design in which nothing crosses a border is a procurement advantage, not a feature. (2) **The stance**: explicitly *"not a punitive monitoring tool"* but a Proactive Proctor, Technical Support Assistant and Wellness Coach. (3) **Shared-PC reality**: pre-warming models in a readiness wizard on DeepFreeze lab machines, and an exemption path for non-GMS handsets — **the hardware assumptions of an institution that actually runs shared labs**, which no Western-authored row on these shelves makes.
+
+🟢 **Placement, on two channels that agree:** the owner declares `Hong Kong`, and the artifact carries `Asia/Hong_Kong` in `37` files (`712-A`). 🔵 And one row on the sibling foundations shelf shows the region's research output continuing: [`Yumo216/MCKT`](https://github.com/Yumo216/MCKT) (owner declares `Japan`; grant holder's name written in Chinese characters) is the first Mamba-architecture knowledge tracer on these shelves.
+
 #### 🟢 p711 — APAC: **`APAC 60 → 62`, and the two rows came from the QUALIFIED INDEX while the mandated leg returned `0` — the region's statutes now name education high-risk in two jurisdictions**
 
 🟢 **Two rows filed**, and neither came from the mandated leg: [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) (MIT, `13★`, **Korea University's KUPID portal** plus Canvas, published to PyPI) and [`kc0506/ntucool`](https://github.com/kc0506/ntucool) (MIT, `11★`, **NTU COOL**, National Taiwan University, **Rust** CLI + MCP). 🟢 **Both target a UNIVERSITY PORTAL rather than an LMS** — the first rows on this page to do so, and a reminder that in APAC the student-facing surface a studio must integrate is frequently the institution's own portal, not the imported LMS.
@@ -2133,6 +2179,20 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🟢 p712 — LATAM: **`LATAM 21 → 22`, and the row matters less than HOW it was placed: `es-419` refutes `711-C`**
+
+🟢 **The region's product this pass is a method, and it is the pass's headline.** `711-C` concluded that the five-value region vocabulary *"CANNOT EXPRESS Spanish-language, country unknown"* — the shape of most LATAM supply. **It can, and the expression is a standard code the repositories already ship.** [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) (MIT, `1,070 B`, `15★`) commits `src/shared-kernel/output/i18n/catalogs/es-419.json`. **`es-419` is the UN M.49 code for Latin America** — "Spanish, Latin America, no country" is precisely what it means — and `America/Bogota` is the sample timezone in `17` of the repository's files. **`es-419` → LATAM, with no inference, no name-guessing and no prose.**
+
+🔧 **The guard that makes it reliable: place on the catalogues a project SHIPS, never on the locales it PERMITS.** This repository's config schema also lists `pt-BR` and `fr-CA`, and matching on those would have filed one artifact in three regions at once. It ships catalogue files for `en-US` and `es-419` only.
+
+🔵 **Why this is worth more to this base than the row is.** LATAM supply is overwhelmingly Spanish-language work by individual authors who declare no location — the condition `20 / 27` of this pass's probed owners were in. **Every internationalised project in that population carries its own region key in its i18n directory.** The channel is cheap (`gh api -X GET search/code -f q='es-419 repo:…'`), server-side, and immune to the name-inference error this base has repeatedly warned against.
+
+**Demand side — the strongest regional intel of the four legs, and it is adoption rather than regulation.** The Digital Education Council's 2026 LATAM survey, run with Tecnológico de Monterrey across **`29` universities**, reports **`92%` of students and `79%` of faculty actively engaging with AI** — faculty rising but still behind students. Institutional machinery is being built: **UNESCO launched a regional AI-in-Education Observatory for Latin America and the Caribbean (April 2026)** to help education ministries guide adoption, and **UNESCO Santiago signed a cooperation agreement with Chile's CENIA (February 2026)** on AI literacy and ethical standards.
+
+🔴 **And the gap is stated rather than glossed: no current binding national AI-in-education law was found anywhere in the region this pass.** A UNESCO IESALC/UNU-IAS working paper maps university practice including governance, and a comparative Ibero-American study of higher-education AI rules exists but was reachable only as a bibliographic record. Infrastructure remains the hard constraint — connectivity and digital literacy, not model access.
+
+🔵 **The engagement shape that follows from `92% / 79%` with no statute: governance and enablement, not a build.** The AI is already in the institution; what no university in the survey has is a defensible position on how it is used. That is consistent with this base's standing LATAM reading (`P110`), and `712`'s contribution is that **the region's own supply can now be found and placed**, so a LATAM engagement can start from LATAM-authored components.
 
 #### 🟢 p711 — LATAM: **`LATAM 19 → 21`, and `p710`'s "the supply is UNGRANTED" is REFUTED — the grant belongs in the QUERY. Demand is now the best-measured in any region on this page; governance is the gap**
 
@@ -2893,6 +2953,14 @@ client.
 - 🟢 **The commercial read for the region is the budget line, not the technology.** `55 %` of LATAM universities have no AI budget and public universities have the lowest rate of dedicated funding, which rules out anything that needs hosting. `DSL4-Digital/RefExists` runs **entirely in the browser with nothing to host**, and `OSLL/code-plagiarism` is a PyPI install on a laptop — so the integrity control that EMEA will buy as compliance is the one LATAM can deploy at zero infrastructure cost. **P60** is specified so that the client-side-only subset is a complete deliverable on its own.
 
 ### Global
+
+#### 🔵 p712 — Global: **`Global 107 → 111`, and for the first time the `Global` bucket is a MEASUREMENT rather than a residue**
+
+`Global` remains the largest region on the agent shelf at `111 / 252`, and `p712` can finally say what it means. Four placement channels were run over `27` owners and `24` artifacts (`712-A`): a shipped locale catalogue or IANA timezone, the grant's copyright holder line, a named deployment or preset inside the artifact, and the owner's declared profile location. **`5` of this pass's `16` rows survived all four with nothing to place them on** — no i18n directory, no institutional holder, no named tenant, no declared profile location. For those rows `Global` is what the evidence supports.
+
+🔵 **The practical reading for a studio: a `Global` row is not a worldwide product, it is an UNLOCATED one.** Most are single-author tools whose author chose not to say where they are. They are no less usable — `micho911/brightspace-mcp` (Go, one binary) and `Mattlo0546/classroom-mcp` (one dependency-free Python file) are among the cleanest artifacts filed this pass — but **a `Global` cell carries no evidence about the market that produced them**, and should never be read as evidence of reach.
+
+🔵 **Cross-region structural finding, and it is a procurement fact rather than a technical one.** The whole `51`-repository Brightspace/D2L field authenticates by borrowing the user's own browser session, because **D2L issues no student API keys** (`712-E`). A Brightspace integration therefore needs **no tenant admin and no procurement** — the exact opposite of the Canvas constraint this base recorded at `p711`, where institutions switching off personal access tokens invalidates most integrations (`T179`). 🔴 **The same fact explains why the field is deep and commercially empty: `51` repositories, `9` substantive, `0` instructor-side, and nothing that can write a grade.** Anything that needs institutional authority cannot be built this way at all.
 
 #### 🟡 p711 — Global: **the `2026` market series still does NOT bracket, adoption is near-saturation on the teacher side, and `Global 107` now holds a language-placed tail that is not global**
 

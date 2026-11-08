@@ -21,6 +21,36 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T182–T185 — added at p712 (2026-11-08)
+
+### 🔧 T182 — A repository declares its own region in MACHINE-READABLE form, and `T170`'s "operate vs buy" key is the second-best channel, not the first 🟢 new
+
+`T170` (p709) keyed regional placement on whether a region's institutions **operate** or **buy** their systems. That holds as an explanation of *why* supply clusters, but p712 found a channel that is strictly cheaper and strictly more reliable for the act of placing a row: **the artifact ships its own region key.**
+
+- **`es-419`** — the UN M.49 code for Latin America — committed as an i18n catalogue file is an unambiguous `LATAM` declaration. [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) ships `src/shared-kernel/output/i18n/catalogs/es-419.json`.
+- **An IANA timezone** in config, docs and tests places an artifact the same way: `Asia/Hong_Kong` in `37` files of [`wongcyrus/Google-AI-Classroom`](https://github.com/wongcyrus/Google-AI-Classroom).
+- **The grant's copyright holder line** places a row whenever the holder is an institution: *"Copyright (c) 2024 Tufts Center for Engineering Education and Outreach"*.
+
+🔧 **The guard: place on the catalogues a project ships, never on the locales its schema permits.** The same repository lists `pt-BR` and `fr-CA` as permitted values and ships no catalogue for either; matching on the option list files one artifact in three regions.
+
+🔴 **And the channel the obvious approach reaches for is the worst of the four.** The owner's declared GitHub profile location answered for `7 / 27` owners; `20 / 27` declare nothing a probe can match. `gh api users/{login}` is refused outright in a repo-scoped session, and `search/users` does not return a `location` field at all — only a `location:` qualifier you must supply a guess for. **This is why `711-C` mistook a reading failure for a vocabulary failure.**
+
+### 🔴 T183 — A university ACRONYM in a repository name is a continent-level trap, and resolving it needs a DOMAIN 🟢 new
+
+`mcp-blackboard-ucsc` is **Università Cattolica del Sacro Cuore** in Italy, not UC Santa Cruz. Neither the repository name nor the README states the country; the only locator is the institution's own domain (`unicatt.it`) in the configuration, corroborated by Italian workflow terms and an Italian exam-registration template. 🔵 **The trend, not the instance: as institution-bound agents proliferate (`T168`), acronym collisions become systematic, and every collision a naive pipeline resolves to the English-speaking reading exports a European or Asian row to North America.** The rule is mechanical — resolve an acronym from an email or web domain in the payload, never from the acronym.
+
+### 🔴 T184 — An MIT grant can have NO IDENTIFIABLE LICENSOR, and no licence detector can see it 🟢 new
+
+Research repositories published under double-blind review are leaking review anonymity into their `LICENSE` files. [`Veteran-Zero/MERIT`](https://github.com/Veteran-Zero/MERIT) carries the canonical MIT text with the holder line **`Copyright (c) 2026 Anonymous Authors`**. MIT grants permission *by* the copyright holder, so **there is no traceable party granting anything** — and GitHub reports a clean `MIT`, because the payload *is* MIT. 🔵 **This is a new defect class for the licence-reading discipline this base has built** (`T167` payload-reads are dated facts; `T172` metadata absence is a signal): **the payload can be perfect and the GRANT still void of a licensor.** The check costs one `grep -i copyright` on a file this base already downloads. 🔵 Second-order trend in the same row: **a permissive licence on an orchestration pinned to closed models** (Gemini-2.5-Flash, Gemini-2.5-Pro, Qwen3-Embedding-8B) grants the wiring and none of the intelligence — which is becoming the normal shape of "open source" agentic research code.
+
+### 🟢 T185 — Where an LMS issues no student API keys, a deep and permanently un-commercial integration field forms 🟢 new
+
+`T179` (p711) recorded institutions switching **off** Canvas personal access tokens, invalidating most LMS agent integrations. Brightspace/D2L shows the complementary case and it is instructive: **D2L issues no student API keys at all**, so every one of the `51` MIT-licensed D2L repositories found this pass authenticates by borrowing the user's own browser session — Playwright profile, pasted cookie, Valence token or OS keychain.
+
+**The consequences are symmetric and both are commercially decisive.** 🟢 A student-side D2L integration needs **no tenant admin, no procurement and no institutional decision**, which is why the field is `51` repositories deep with no vendor in it. 🔴 **And nothing requiring institutional authority can be built this way at all**: of `9` substantive artifacts, `0` are instructor-side and **none can write a grade.** Grading, gradebook and roster writes exist only on the Blackboard and Canvas families, where an administrator can issue credentials.
+
+🔵 **The generalisable rule for scoping any LMS engagement: ask what credential the platform issues to a student before designing anything.** No student credential means a thriving free field and a hard ceiling at the point where authority is required — and the ceiling, not the field, determines what can be sold.
+
 ## 🆕 T177–T181 — added at p711 (2026-11-08)
 
 ### 🔧 T177 — `T173` is CORRECTED: a thin region measures **the query**, not the grants. Put `license:` IN the search and the same sweep returns `8 / 8` granted 🔧 corrects `T173` at p711

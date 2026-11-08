@@ -3,6 +3,41 @@ industry: education
 region: Global
 updated: 2026-11-08
 ---
+
+## 🆕 2026-11-08 (p712) — 🟢 **FIVE FOUNDATIONS, ALL KNOWLEDGE TRACING, AND ONE CARRIES AN MIT GRANT WITH NO IDENTIFIABLE LICENSOR**
+
+[`foundations.md`](foundations.md) **`280` → `285`** rows (arity `285/285` at `5` columns, `0` ragged; `285` distinct subjects, `0` duplicated). [`../agents/top.md`](../agents/top.md) **`236` → `252`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `118`**.
+
+**The five:**
+
+| Repo | Licence (read from bytes) | ★ | What it adds |
+|---|---|--:|---|
+| [`Yumo216/MCKT`](https://github.com/Yumo216/MCKT) | MIT, `1,066 B`, `c0e197228f88` | 7 | First **Mamba**-architecture knowledge tracer here: a pre-trained LM reads the exercise *text*, two parallel Mamba encoders model response and perceived-difficulty sequences, adaptive module for sparse learners. Six benchmarks |
+| [`PennyYu123/STEM_RAG`](https://github.com/PennyYu123/STEM_RAG) | MIT, `1,062 B`, `bf9505dc45c4` | 6 | Schema-guided multi-hop KG retrieval with a Triple-Dependent GNN guidance graph. ⚠ **not education** — the nearest permissive primitive for evidence-path tutoring |
+| [`szhhwh/UniKT`](https://github.com/szhhwh/UniKT) | MIT, `1,072 B`, `915cc1c7b93f` | 4 | Reproducible KT: data prep → training → HP search → evaluation → efficiency benchmarking in one workflow, with Pixi envs and a committed lockfile. **Promoted out of this base's own trending log** |
+| [`Veteran-Zero/MERIT`](https://github.com/Veteran-Zero/MERIT) | MIT, `1,074 B`, `1d0dde41ece0` — 🔴 holder *"Anonymous Authors"* | 2 | Training-free interpretable KT via a structured memory bank instead of fine-tuning |
+| [`wildfellhall/KnowledgeTracing-Affect-Comparisons`](https://github.com/wildfellhall/KnowledgeTracing-Affect-Comparisons) | MIT, `1,070 B`, `10219e00c201` | 2 | First row here that models learner **affect** rather than learner knowledge. A comparison harness, not a model |
+
+### 🔴 `712-D` — the pass's sharpest result: a clean MIT payload with no identifiable licensor
+
+`Veteran-Zero/MERIT`'s grant reads **`Copyright (c) 2026 Anonymous Authors`**. MIT grants permission *by* the copyright holder, so there is no traceable party granting anything — double-blind review anonymity leaking into the `LICENSE` file. GitHub's detector reports a clean `MIT` and **no licence detector can see this defect**, because the payload *is* the MIT text. 🟢 **The check is free and belongs in the loop permanently: `grep -i copyright` on the payload this shelf already downloads for every row.** Pseudonyms that still identify a party (`Peter`, `Wildfell Hall`, `UniKT Team`, all read this pass) are ordinary; the test is identifiability.
+
+🔴 **A second defect in the same row, and it is the one that decides buildability:** MERIT's pipeline is pinned to closed models — Gemini-2.5-Flash for inference, Gemini-2.5-Pro for annotation, Qwen3-Embedding-8B for vectors. **The MIT grant covers the orchestration and none of the intelligence**, so this is not a self-hostable primitive whatever its licence says.
+
+### 🟢 `712-H` — why all five are knowledge tracing, and what that says about this shelf
+
+The query `knowledge tracing license:mit pushed:>2026-06-01` returned `total_count: 99`. Of the substantive education results, **`pykt-team/pykt-toolkit` (`458★`), `CAHLR/pyBKT` (`292★`) and `ZhijieXiong/pyedmine` (`84★`) were already shelved** — this shelf's KT coverage at the top is sound. **The additions are all at the research frontier, and they split cleanly into three kinds:** a new architecture (`MCKT`, Mamba), a new method class (`MERIT`, training-free), and infrastructure (`UniKT`, reproducibility; `KnowledgeTracing-Affect-Comparisons`, affect).
+
+🔵 **The one that will matter most to a studio is the least impressive-looking.** `UniKT` is `4★` and contains no model, but a client asking "why this knowledge tracer?" needs a defensible comparison, and a lockfile plus archived run configurations is what makes an answer defensible. Models are cheap on this shelf now; reproducible comparisons were absent.
+
+### 🔴 `712-H2` — declared gap, restated from a new direction
+
+Every KT row here predicts **the next correct answer**. `wildfellhall/KnowledgeTracing-Affect-Comparisons` is the first to touch **affect**, which is the half of the literature that predicts **dropout** — and it ships no pretrained artifact. 🔵 **So the gap moves from *absent* to *unproductised*, not to closed:** a retention engagement still has no permissive, pretrained, affect-aware model to start from, only a harness to train one with.
+
+🔵 **Mandated-leg accounting for this shelf:** the platform leg (`open source platform education ERP CRM MIT Apache`) returned its **fourth consecutive** nil — OFBiz, Corteza, Krayin, iDURAR, all general-purpose and already adjudicated; its only education answer, Frappe Education, is `GPL-3.0`. The `github trending` leg returned six repositories and **all six were already shelved**. Full address-by-address accounting in [`../agents/trending.md`](../agents/trending.md) `712-G`.
+
+---
+
 ## 🆕 2026-11-08 (p711) — 🟢 **THREE FOUNDATIONS, ALL SPANISH-LANGUAGE CURRICULUM UNDER MIT, AND ONE OF THEM IS THE NAMED-LATAM-UNIVERSITY ASSET `710-E` CONCLUDED DID NOT EXIST**
 
 [`foundations.md`](foundations.md) **`277` → `280`** rows (arity `280/280` at `5` columns, `0` ragged; `280` distinct subjects, `0` duplicated). [`../agents/top.md`](../agents/top.md) **`221` → `236`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`115` → `115`**.
