@@ -11,6 +11,58 @@ updated: 2026-11-08
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## 🆕 P94–P96 — added at p704 (2026-11-08)
+
+Every repository named below was probed at its grant payload on **2026-11-08** at its real default ref, `raw.githubusercontent.com` for the bytes and `git ls-remote --symref` for the ref. **Licences are stated from those bytes, not from a detector or a README.**
+
+### `P94` — Campus-SSO LMS copilot (4–6 weeks)
+
+**The problem it solves:** every LMS-agent pilot on these shelves stalls at the same place — asking each student and instructor to mint and paste a Canvas API token. Privacy offices refuse it and rollout dies at the pilot cohort.
+
+| Layer | Component | Grant, read from bytes |
+|---|---|---|
+| Auth + LMS access | [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | **MIT**, `LICENSE`, `1,067 B`, `13c8ad755224` |
+| Tool breadth (fallback) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) `318★` | **MIT**, `LICENSE`, `1,071 B`, `5385a26e2fac` |
+| Moodle estates | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (Rust, validated Moodle 3.7→5.x) | **MIT** — already on this base's shelves |
+| Publishing target | [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | **Apache-2.0**, `LICENSE.md`, `11,362 B`, `b662f44e55e8` |
+
+**Wiring.** Take `Mattlo0546/canvas-mcp` for the **SSO session path** — that is the only reason it is first choice at `2★` — and graft `vishalsachdev/canvas-mcp`'s far larger tool surface onto it; both are MIT, so the merge is a licence non-event. Expose the merged server to the agent runtime over MCP. Write anything the agent *authors* (revision notes, a summary page) to `haxcms-php` as flat files under git, so every generated artefact is diffable and reviewable before publication. 🔴 **Do not use [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) despite its `104★` and its `54`-tool surface: it has no licence file at any of `10` probed paths** (`704-G`).
+
+**Guardrail, non-negotiable.** The agent reads Canvas and writes only to the publishing layer. **It does not post grades.** `P64`'s shape — grading assistance that *cannot* post a grade — applies unchanged, and it is also what keeps the deliverable outside the Annex III classification argument entirely.
+
+### `P95` — Faculty course-lifecycle studio: explain → author → retain (6–8 weeks)
+
+**The problem it solves:** faculty AI pilots produce one-off artefacts. Nothing sequences a course, and nothing carries a learner from explanation to retention.
+
+| Slot | Component | Grant, read from bytes |
+|---|---|---|
+| Sequence the course | [`YujxZJCN/teaching-skills`](https://github.com/YujxZJCN/teaching-skills) | **MIT**, `1,067 B`, `91398dfa27a5` |
+| Author the artefact | [`insightflo/edu-deck-skills`](https://github.com/insightflo/edu-deck-skills) (already shelved) | **Apache-2.0**, `11,358 B`, `cfc7749b96f6` |
+| Publish it | [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | **Apache-2.0**, `11,362 B`, `b662f44e55e8` |
+| Retain it | [`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app) | **MIT**, `1,070 B`, `0e319ca9aaa9` |
+| Load signal (optional) | [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | **MIT**, `1,067 B`, `b6fac57d4710` |
+
+**Wiring.** `teaching-skills` owns the lifecycle (syllabus → delivery → assessment) and calls `edu-deck-skills` per unit, which emits a **self-contained HTML deck with `0` runtime dependencies** — that property is what lets the output be committed straight into `haxcms-php` as a flat file and served without a build step. Generate the flashcard set from the same unit outline so the retention layer is derived from the authored material rather than maintained separately. Where the client will fund it, add `wenflow`'s load metrics (`LSS`/`KTL`/`LF`/`LSB`) as the signal that re-sequences the next unit — this is the only loop on these shelves driven by load rather than completion (`T156`).
+
+🔵 **Content layer swaps per market, runtime does not.** For an APAC engagement substitute the jurisdiction-bound content asset — [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (**MIT**, `1,083 B`, `a6943096ffde`) encodes a Chinese national examination syllabus and is deliberately not portable. The four runtime components above are unchanged.
+
+### `P96` — Licence-gate preflight for education platform selection (2–3 weeks, and it precedes every build)
+
+**The problem it solves, stated as the client's own words:** *“we found an open-source student-success platform, build us a managed deployment.”* `p704` establishes that this sentence is frequently false in a way the client cannot detect, and that the falsity lands precisely on the delivery model.
+
+**The instrument — four checks, in this order, against each candidate:**
+
+1. **Resolve the ref, don't guess it.** `git ls-remote --symref <url> HEAD` → the real default branch. `curl -sI` does **not** discriminate here (`p686`, re-confirmed `p703`) and is not worth running.
+2. **Read the grant from bytes at that ref.** `raw.githubusercontent.com/<owner>/<repo>/<ref>/LICENSE`, then `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`. Record **bytes + `sha256₁₂`**. 🔴 **Never accept the README's claim**: `DMontgomery40/mcp-canvas-lms` advertises MIT at `104★` and has no grant file at `10` probed paths.
+3. **Cross-check the detector, and trust neither direction.** `gh api -X GET search/repositories -f q='repo:a/b repo:c/d …'` returns `license.spdx_id` and `stargazers_count`, batched. `NOASSERTION` is uninformative **both** ways — it hid a permissive grant at `p658` and hid **Elastic 2.0** at `704-E`. The payload decides.
+4. **Name the prohibited act, not the licence family.** The deliverable sentence is *“this licence forbids X, and X is what we were going to do,”* e.g. Elastic 2.0's *“hosted or managed service”*, or AGPL-3.0's network clause reaching the portal's end users.
+
+**The three failure shapes to test every candidate against** (each a real `p704` instance): source-available presented as open source (`advisingapp`, `340★`, Elastic 2.0) · a false permissive claim from a reputable-looking source (`idurar-erp-crm`, `8,944★`, AGPL-3.0 called MIT) · a dangling grant reference (`mcp-canvas-lms`, `104★`).
+
+**Output.** A one-page verdict per candidate — ref, grant file, bytes, `sha256₁₂`, family, prohibited acts, and a permissive substitute drawn from [`../agents/top.md`](../agents/top.md) (`166` rows) or [`../repos/foundations.md`](../repos/foundations.md) (`258` rows) where the candidate fails.
+
+🟢 **Why it sells, by region.** **North America:** the buyer most likely to have already budgeted a managed deployment of `advisingapp` (`704-E`). **EMEA:** lead with **Article 50** transparency, reported in force since `2026-08-02`, rather than Annex III — whose education date secondary sources put at `2027-12-02` and which **this base cannot verify from this environment at all**, because `eur-lex.europa.eu` does not resolve here (`704-H`). Selling 2026 "Annex III readiness" may be selling against a date that does not exist. **LATAM:** pair it with `P95`, since Brazil's pipeline (`PL 3399/2026`, `PL 2397/2026`) legislates **AI literacy and school ethics standards** — curriculum obligations, not system classification. **APAC:** run it per market, and expect the content asset to be jurisdiction-bound by construction.
+
 ## Base architecture
 
 ```

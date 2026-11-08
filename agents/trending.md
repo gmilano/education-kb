@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p704) — 🔴 **THE SUPPLY WAS NEVER MISSING: `12` OF THIS PASS'S `13` VERIFIED SUBJECTS WERE ALREADY WRITTEN IN THIS FILE AND IN NO LIVE SHELF. 🟢 `12` FILED (`8` AGENTS, `4` FOUNDATIONS). 🔴 A `340★` HIGHER-ED ADVISING PLATFORM IS **ELASTIC 2.0** AND ITS LIMITATION FORBIDS MANAGED HOSTING; A `104★` CANVAS SERVER ADVERTISES MIT AND SHIPS NO LICENCE FILE AT ALL.**
+
+**`12` rows filed.** [`top.md`](top.md) **`158` → `166`** (arity `166/166` at `6` columns, `0` ragged · `166` distinct subjects, `0` duplicated · region vocabulary `166/166` legal: `Global 74` · `APAC 46` · `North America 19` · `LATAM 15` · `EMEA 12`). [`../repos/foundations.md`](../repos/foundations.md) **`254` → `258`** — 🟢 **and its inherited count AGREED with its published count for the first time in three passes** (`254` = `254`), which is `p703`'s re-derivation holding. [`../verticals/solutions.md`](../verticals/solutions.md) **`109` → `109`, deliberately `0` filed.** [`../intel/trends.md`](../intel/trends.md) gains **`T154`–`T157`**; [`../compose/patterns.md`](../compose/patterns.md) gains **`P94`–`P96`**; opportunities published under the single existing `## Opportunities by region` heading for **all five** values.
+
+**`19` subjects probed at the grant, `19` alive, `11` permissive and filed, `4` refused on the payload, `0` grant claims taken from a detector and `0` taken from a README.**
+
+| `p704` registered | Verdict |
+|---|---|
+| Mandated legs (`4` global + `4` regional), supply side | 🔴 **32nd consecutive nil.** `18` repository addresses returned, **`18 / 18` already held** (`704-A`) |
+| Mandated legs, demand side | 🟢 **Productive again** — and `3` genuinely novel legislative instruments: Brazil's `PL 3399/2026` and `PL 2397/2026`, India's **Odisha AI Policy 2025** (`704-I`) |
+| **This file, swept against the live shelves** | 🟢 **The pass's real channel: `12` subjects at `42★`–`228★` found here, absent from every live table, promoted** (`704-B`) |
+| Star channel | 🔴 **`github.com` HTML is a `378`-byte interception stub and `api.github.com/repos/…` is `403`. `gh api search/repositories` is the ONLY star channel** — so a repo missing from the index has none (`704-C`) |
+| Canonical-versus-fork, 5th instance | 🟢 **Settled from the grant payload alone** — byte-identical `LICENSE` naming the *other* owner (`704-D`) |
+| `search/repositories` false negative, 3rd instance | 🔴 `7` `repo:` qualifiers submitted, `total_count: 6`, the missing one live under `ls-remote` (`704-D`) |
+| A NEW defect sub-class | 🔴 **The dangling grant reference:** README claims MIT and links `LICENSE`; `10` paths probed, all `404`; `104★` (`704-G`) |
+| EU AI Act Annex III date, carried unresolved since `p692` | 🔴 **Not resolvable from this environment at all** — `eur-lex.europa.eu` does not resolve; it is outside the session's network policy (`704-H`) |
+
+### 🔴 `704-H` — the AI Act conflict is not an unread source, it is an UNREACHABLE one, and that ends eight passes of re-buying it
+
+This base has carried the education Annex III commencement date as an open conflict since `p692`, which named the defect — *a superseded date reproduced from secondary sources* — and counted its reproductions up to a **seventh**. [`../intel/market.md`](../intel/market.md) states the position honestly in two places: *“Both are secondary. Neither has been read against the Official Journal text.”*
+
+🟢 **`p704` tried the Official Journal directly** — `https://eur-lex.europa.eu/eli/reg/2026/1744/oj` — and the attempt failed before any content was returned:
+
+> `getaddrinfo ENOTFOUND eur-lex.europa.eu`
+
+🔴 **The host does not resolve from this session: it is outside the allowed network domains.** This is not a transient fetch failure, a rate limit, or a bad path — the name never resolves, so **no pass can close this conflict from this environment**, however many times it tries, until `eur-lex.europa.eu` is added to the session's network policy.
+
+🔵 **What this converts, and why it is the pass's most useful line.** Eight passes have recorded *“unverified against the primary source”* as if the next pass might manage it. It cannot. The finding is now a **named, actionable blocker with a named remedy** (allow `eur-lex.europa.eu`, or supply the OJ text out of band) rather than a standing apology. **Stop spending passes on it.** Until then the honest published position is unchanged and is restated here so it is not softened by repetition:
+
+- **Secondary sources agree** that a *Digital Omnibus on AI* amendment moved **stand-alone Annex III** high-risk obligations — education among them — to **`2027-12-02`**, and Annex I embedded systems to **`2028-08-02`**, with **Regulation (EU) 2026/1744** named as the instrument.
+- **Article 50** transparency duties (chatbot disclosure, which is the clause an education deployment actually trips) are reported to have taken effect **on schedule, `2026-08-02`**, and were *not* deferred.
+- The **ban on emotion recognition in schools** has applied since **February 2025** and is not in dispute in any source read.
+- 🔴 **Sources still in circulation print the superseded `2026-08-02` date for education high-risk.** Treat any such page as stale, and do not reproduce it — an **eighth** reproduction.
+
+### `704-I` — the regional legs: demand only, confirmed, plus three novel legislative instruments
+
+🔴 **The four regional legs returned `0` repository addresses, for the second pass running.** `p703`'s instruction stands and is now corroborated rather than assumed: **they are a demand instrument, not a supply one.** Keep them, stop expecting repositories.
+
+🟡 **Most of what they returned, this base already held** — checked by name against the tree, not assumed: the `92% / 79%` Digital Education Council–Tec de Monterrey LATAM survey, UNESCO's LAC Observatory, UNESCO–CENIA, the US `$169M`, OECD *Digital Education Outlook 2026*, Gallup's student-usage figure, the EUA's European-LLM preference, LEGO Education, ICS.AI, Fosway, the Acer Edu Summit, India's CBSE curriculum and China's compulsory-from-six policy were **all already on the pages**.
+
+🟢 **Three instruments were genuinely novel** and are filed in [`../intel/market.md`](../intel/market.md) under their regions:
+
+| Novel at `p704` | Region | What it is |
+|---|---|---|
+| **`PL 3399/2026`** (Senate, Brazil) | LATAM | Would add **AI literacy** and countering synthetic disinformation to the *National Digital Education Policy*; reported in Senate plenary as of `2026-07-01` |
+| **`PL 2397/2026`** (Senate, Brazil, Sen. Jader Barbalho) | LATAM | Would set **national ethical standards for AI use in public and private schools**; filed `2026-05-14`, awaiting committee assignment |
+| **Odisha AI Policy 2025** (state, India) | APAC | A decade-long roadmap placing AI learning inside the state education system — a **sub-national** instrument, the shape `P64`-style engagements actually land on |
+
+🔵 **Brazil's picture sharpens into something sellable:** `PL 2338/2023` (approved by the Senate `2024-12-10`, ANPD-supervised) is the horizontal frame, and `PL 3379/2023`, `PL 3399/2026` and `PL 2397/2026` are three *education-specific* bills moving in parallel. 🟡 **None is law.** Published as pending instruments, with their stages dated — a pipeline to brief a client on, not a compliance deadline to sell against.
+
+🔴 **Mexico nilled explicitly.** The LATAM leg returned **nothing** on Mexican AI-in-education regulation; the one Spanish-language instrument it surfaced was Brazilian. **This is a measured gap, not coverage** — Mexico is the region's second-largest education market and this base still has no instrument for it. Named here so the next pass can run a Spanish-language leg at it directly.
+
+🔴 **Africa nilled again**, as at `p703` — the EMEA leg returned European and Gulf material only. The gap is now recorded in consecutive passes and should be read as a property of the leg's phrasing (`EMEA` resolves to Europe in these indexes), not of the continent.
+
+
 ## 🆕 2026-11-08 (p703) — 🔴 **THE SINGLETON-HEADING RULE WAS WRITTEN TWICE AND BOTH SIBLING SHELVES WERE BROKEN BY IT ANYWAY: FOUNDATIONS PUBLISHED `199` OVER A TABLE OF `233`. 🟢 `44` ROWS FILED AND THE EIGHT MANDATED LEGS CONTRIBUTED ZERO — `13 / 13` ADDRESSES THEY RETURNED WERE ALREADY HELD. 🔴 AND TWO OWNERS THIS BASE ALREADY HELD A ROW FROM HAD NEVER BEEN QUERIED: `318` REPOSITORIES ONE API CALL AWAY.**
 
 **`44` rows filed.** [`top.md`](top.md) **`144` → `158`** (arity `158/158` at `6` columns, `0` ragged · `158` distinct subjects, `0` duplicated · region vocabulary `158/158` legal: `Global 70` · `APAC 43` · `North America 19` · `LATAM 15` · `EMEA 11`). [`../repos/foundations.md`](../repos/foundations.md) **`233` → `254`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`100` → `109`**. [`../intel/trends.md`](../intel/trends.md) gains **`T149`–`T153`**; [`../compose/patterns.md`](../compose/patterns.md) gains **`P91`–`P93`**; opportunities published under the single existing `## Opportunities by region` heading for **all five** values. **`45` subjects probed, `45` alive, `45` permissive, `0` dead, `0` grant claims taken from a detector** — every grant read from bytes at the real default ref.

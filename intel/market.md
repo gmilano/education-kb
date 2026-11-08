@@ -124,6 +124,17 @@ Three facts shape every engagement:
 
 ### North America
 
+#### 🟢 p704 — NA: the leg nilled on supply and the region's live opportunity is a **licence-gate** service, not a build
+
+🔴 **The North America demand leg returned nothing this base did not already hold** — the `$169M` US Department of Education commitment (Jan 2026), Gallup's *>60% of students use AI weekly while roughly half of institutions discourage or prohibit it*, OECD's *Digital Education Outlook 2026*, Microsoft's *Elevate for Educators*, LEGO Education's K–8 platform, ISTELive were **all already on this page**, checked by name against the tree. **Nil, measured.**
+
+🟢 **What `p704` adds instead is a North American opportunity found at the grant file, not in the market copy.** The region's most on-target open-source vertical asset — [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (`340★`), *Advising App® by Canyon GBS®*, an AI student-success and advising platform built for US higher education — is **Elastic License 2.0**, and its limitation forbids providing the software *“as a hosted or managed service”* (`704-E` in [`../verticals/solutions.md`](../verticals/solutions.md)).
+
+🔵 **That is a sales motion, not a dead end, and it is specific to this region.** The US higher-ed buyer is the one most likely to have already found `advisingapp`, read "open source" in a roundup, and budgeted a managed deployment that its licence does not permit. **The deliverable is a licence-gate assessment before platform selection** — read the grant, name the prohibited act, and present either an institution-self-hosted configuration or a permissive substitute assembled from this base's shelves. `P96` is that engagement, costed. It bills in weeks, it precedes every build, and the Gallup gap (students ahead of institutional policy) is why a procurement office will take the meeting.
+
+🟡 **Still open for NA, and unchanged from `p703`:** this page has institutional *guidance* in abundance and almost no US **instrument** with a commencement date. The federal posture is funding and guidance, not regulation; the state-level picture is reported as rising volume with no citable statute read first-hand. **Named as a gap rather than filled with a blog's characterisation.**
+
+
 #### 🟢 p703 — North America: the demand leg nils a **43rd** time, and p703 states plainly that it added NO North America supply row
 
 🔴 **The mandated leg (`AI education North America 2026 adoption regulation players`) returned market-research teasers, vendor blogs and auto-generated statistics pages, and not one repository address this base did not already hold.** Nothing in it is a finding; the nil is the finding, and it is now `43` passes long.
@@ -626,6 +637,23 @@ The leg was run (`AI education North America 2026 adoption regulation players`) 
 - 🔴 **And one North American gap is now measured rather than assumed.** `topic:accessibility education` returned `12` candidates, **none** of them an accessibility-remediation asset — a p5.js website, a keyboard utility and two teaching programming languages. The April 2026 ADA Title II obligation (`T29`) still has no permissive remediation shelf behind it, and p684 is the pass that searched for one directly and found nothing.
 
 ### EMEA
+
+#### 🔴 p704 — EMEA: the Annex III date cannot be settled from this environment, and that is now a named blocker rather than an open question
+
+🔴 **This is the eighth consecutive pass in which this page has carried the EU AI Act education commencement date as an unresolved conflict, and `p704` establishes WHY it will not close.** The primary source was attempted directly — `https://eur-lex.europa.eu/eli/reg/2026/1744/oj` — and returned `getaddrinfo ENOTFOUND eur-lex.europa.eu`. **`eur-lex.europa.eu` is outside this session's allowed network domains; the hostname never resolves.** No pass can read the Official Journal from here. **The remedy is a network-policy change (allow `eur-lex.europa.eu`) or the OJ text supplied out of band — not another attempt.**
+
+🟡 **The published position, restated and NOT softened by its eighth repetition** (all of it secondary, every claim attributed):
+- Secondary sources agree a **Digital Omnibus on AI** amendment moved **stand-alone Annex III** high-risk obligations, education among them, to **`2027-12-02`**, and Annex I embedded systems to **`2028-08-02`**, naming **Regulation (EU) 2026/1744**.
+- **Article 50** transparency duties — chatbot disclosure, the clause an education deployment actually trips — are reported to have commenced **on schedule on `2026-08-02`** and were **not** deferred.
+- The **ban on emotion recognition in schools** has applied since **February 2025**; undisputed across sources.
+- 🔴 Pages still printing **`2026-08-02`** for education high-risk are stale. `p704` read one. **Eighth reproduction; do not propagate it.**
+
+🟢 **The commercial consequence is the opposite of what a deferral usually implies, and it is worth stating plainly to an EMEA buyer.** If Annex III for education really has moved to **December 2027**, the binding duty in 2026 is **Article 50 transparency**, which is cheap, immediate, and already in force — disclosure that the learner is talking to an AI, and marking of synthetic output. **An engagement that sells "Annex III readiness" for 2026 is selling against a date that may not exist, while the obligation that does exist is unglamorous and unbuilt.** `P96` leads with Article 50 for that reason.
+
+🟡 **Held, not new:** the EUA's January 2026 preference for European LLMs, the European Commission Digital Education unit's programmes, Fosway's 2026 AI market assessment, ICS.AI's UK national higher-education model, UAE **KHDA** guidance — all already on this page.
+
+🔴 **Africa nilled for the second consecutive pass.** The `EMEA` leg returns European and Gulf results only; in these indexes the token resolves to Europe. **This is a property of the leg, not of the continent** — a future pass must name countries directly (Nigeria, Kenya, South Africa, Egypt) or the gap will keep reproducing as silence.
+
 
 #### 🟢 p703 — EMEA: **the thinnest region on these shelves gained `7` public-sector data layers and `3` agent rows, and the constraint turns out to be the CONNECTOR, not the data**
 
@@ -1231,6 +1259,17 @@ The later date is probably current, and both sources describe it as a **politica
 
 ### APAC
 
+#### 🟢 p704 — APAC: the region supplies this base's agents, and `p704` adds a SUB-NATIONAL instrument, which is the shape engagements actually land on
+
+🟢 **APAC remains the region that produces supply rather than only demand, and `p704` is more evidence:** `3` of the `8` agent rows filed this pass are APAC-placed on the artefact — [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (`228★`, Chinese public-service exam syllabus), [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (`64★`), [`Lee985-cmd/AI-30-Day-Challenge`](https://github.com/Lee985-cmd/AI-30-Day-Challenge) (`57★`). The shelf now stands at **`APAC 46`** of `166`, second only to `Global`.
+
+🟢 **Novel at `p704`: the Odisha AI Policy 2025 (India, state-level)** — a decade-long roadmap placing AI learning inside a state education system. 🔵 **Why a sub-national instrument matters more than the national one here:** India's national layer (CBSE's AI curriculum from April 2026, AI and computational thinking from **Grade 3** in the 2026–27 academic year under NEP 2020) sets direction, but **procurement and rollout sit with states**. Punjab is reported as the first state to deploy an AI curriculum in government schools; Odisha has published a ten-year roadmap. **A state is a buyer with a budget; a national framework is not.** This page has carried the national layer for several passes and had **no** sub-national instrument until now.
+
+🟡 **Held, not new:** China's Ministry of Education guidelines for primary and secondary AI education (including the instruction not to paste AI output into homework, and generative use confined to creative tasks under teacher guidance), AI compulsory from age six, Singapore's teacher-training and tiered curriculum-certification approach, Forrester's APAC enterprise-investment lead, the Acer Edu Summit Asia Pacific 2026, and the region's **AI-sovereignty** theme — all already on this page.
+
+🔵 **The sovereignty theme and the supply pattern reinforce each other, which is the regional argument.** APAC buyers are reported to be converging on shared principles (safety, transparency, accountability) implemented **per market**, and simultaneously this is the region whose open-source education artefacts are **jurisdiction-bound by construction** — `kaogong-skill` encodes a Chinese national examination standard; it is not portable and is not meant to be. **A per-market build on a permissive local artefact is the native shape here**, and it is why `P94`/`P95` are specified to swap their content layer rather than their runtime.
+
+
 #### 🟢 p703 — APAC: **`7` of `14` new agent rows, and the best grading mechanisms on these shelves are here — behind a language barrier, not a capability gap**
 
 🟢 **APAC went `36 / 144` → `43 / 158` on [`../agents/top.md`](../agents/top.md), the largest regional gain of the pass**, and the rows are not volume: they are the three sharpest assessment mechanisms this base has filed.
@@ -1758,6 +1797,26 @@ The mandated leg `AI education APAC 2026 adoption regulation players` returned *
 - 🟢 **Two APAC regulators have now named assessment specifically** — Vietnam by statute, TEQSA by mandatory institutional plan — which makes this the second region after EMEA where `T79`'s supply gap is a direct commercial opening. `ManuSift`'s offline kernel matters disproportionately here: it satisfies the data-sovereignty priority this page records across Malaysia, China and India without sending a student's work off-premises.
 
 ### LATAM
+
+#### 🟢 p704 — LATAM: three education-specific bills are moving in parallel, two of them novel to this base — and Mexico is a measured hole
+
+🟢 **Novel at `p704`: Brazil now has a legislative *pipeline* for AI in education, not a single bill**, and this page can brief it with stages and dates:
+
+| Instrument | Stage read at `p704` | What it would do |
+|---|---|---|
+| **`PL 2338/2023`** (horizontal AI frame) | Approved by the Senate **`2024-12-10`**; national AI governance system supervised by the **ANPD**; its principles include AI education and public awareness | The frame everything else sits inside |
+| **`PL 3399/2026`** (Senate) 🆕 | Reported in **Senate plenary as of `2026-07-01`**, still processing | Adds **AI literacy** and countering synthetic disinformation to the *National Digital Education Policy* |
+| **`PL 2397/2026`** (Senate, Sen. Jader Barbalho) 🆕 | **Filed `2026-05-14`**, awaiting committee assignment | **National ethical standards for AI use in public and private schools** |
+| **`PL 3379/2023`** (Chamber of Deputies) | `PL 1837/2026` attached to it **`2026-06-09`** | Adds AI teaching to secondary education under the national education guidelines law |
+
+🟡 **None of the four is law, and the two novel ones are at the earliest stages.** Published as a **pipeline to brief**, not a deadline to sell against — a client told "Brazil requires this" would be misled.
+
+🔵 **The commercial read, and it is different from EMEA's.** Brazil is legislating **AI literacy and school-level ethics standards** — curriculum and governance obligations — while the EU legislates **system risk classification**. 🟢 **That means the LATAM deliverable is a teaching-and-governance artefact, not a conformity file**: AI-literacy curriculum, disclosure practice, an ethics policy a school can adopt, and teacher capability. `P95` is closer to the LATAM ask than `P96` is, which inverts the usual assumption that compliance work leads.
+
+🟡 **Held, not new:** the Digital Education Council–Tec de Monterrey survey (**`92%` of students, `79%` of faculty** across `29` universities), UNESCO's **Regional Observatory on AI in Education for Latin America and the Caribbean** (launched April 2026), the **UNESCO–CENIA** agreement (Chile, February 2026), UNESCO IESALC/UNU-IAS five-dimension university mapping, and the infrastructure constraint that bounds all of it.
+
+🔴 **Mexico: nilled explicitly, and this is the region's most consequential gap.** The LATAM leg returned **no** Mexican instrument — the only Spanish-language legislative material it surfaced was Brazilian. Mexico is the region's second-largest education market and this page still holds **zero** Mexican AI-in-education instruments. 🔵 **Named so it is not mistaken for coverage**, and with the fix specified: run a Spanish-language leg at Mexico directly (`SEP`, `Cámara de Diputados`), because an English-token `LATAM` query demonstrably resolves to Brazil.
+
 
 #### 🟢 p703 — LATAM: **`3` platforms filed with a public institution as licensor, and the region's adoption figure is now the highest this base holds for anywhere**
 
@@ -2361,6 +2420,24 @@ client.
 - 🟢 **The commercial read for the region is the budget line, not the technology.** `55 %` of LATAM universities have no AI budget and public universities have the lowest rate of dedicated funding, which rules out anything that needs hosting. `DSL4-Digital/RefExists` runs **entirely in the browser with nothing to host**, and `OSLL/code-plagiarism` is a PyPI install on a laptop — so the integrity control that EMEA will buy as compliance is the one LATAM can deploy at zero infrastructure cost. **P60** is specified so that the client-side-only subset is a complete deliverable on its own.
 
 ### Global
+
+#### 🟢 p704 — Global: the asset shortage in education AI is not models or repos, it is **readable licences**
+
+🔵 **`p704`'s cross-regional finding came from reading grant files rather than market copy, and it reframes what a studio sells first.** Nineteen subjects were probed at the payload this pass. **Four failed, and each failed differently:**
+
+| Failure shape | Instance | Why it bites a client |
+|---|---|---|
+| **Source-available masquerading as open source** | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp), `340★`, **Elastic 2.0** | The licence's named prohibition — *“hosted or managed service”* — **is** the studio delivery model |
+| **A permissive claim that is simply false** | [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm), `8,944★`, **AGPL-3.0** (a mandated leg called it MIT) | AGPL's network clause reaches the portal's end users |
+| **A grant reference that dangles** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms), `104★`, README says MIT, **`10` paths all `404`** | A README grep returns "MIT"; there is no grant at all |
+| **A notice with no holder** | [`langx/langx`](https://github.com/langx/langx), `109★`, **BSD-3-Clause**, *“Copyright (c) 2024”* and no name | Symmetric: binds no one, and leaves no one to ask |
+
+🟢 **All four were found with `curl` against `raw.githubusercontent.com` and one batched `gh api search/repositories` call.** Two of the four are **top-decile adopted** in their niches. 🔵 **The generalisation:** in education specifically, "open source" is being asserted by README, by blog roundup and by star count far more often than it is established by a grant file — and the education buyer (a university procurement office, a ministry) is the buyer least equipped to tell the difference and **most** exposed when it is wrong. **A licence-gate pass is therefore the cheapest, earliest, most defensible thing a studio can sell into an education engagement**, and it is specified as `P96`.
+
+🟢 **The second global finding is internal and it changes how this base should be worked.** `12` of `p704`'s `13` verified subjects were already written in [`../agents/trending.md`](../agents/trending.md) and present in **no** live shelf (`704-B`). The mandated legs produced `18` addresses and **`18 / 18` were already held**. **This base's constraint is promotion, not discovery** — a `grep -rlF` against its own backlog outperformed eight web legs by `12` rows to `0`.
+
+🔴 **And one global limit is now named rather than rediscovered:** stars for any repository not attached to the session are available **only** through `gh api search/repositories`; `github.com` HTML returns a `378`-byte interception stub and `api.github.com/repos/…` returns `403` (`704-C`). A repository the search index omits therefore has **no star channel at all** — `704-D` is that case. **Not a transient failure; retrying will not fix it.**
+
 
 #### 🟢 p703 — Global: **`3` new agent rows, and all three are MECHANISMS rather than platforms — which is where the global gap actually is**
 

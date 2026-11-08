@@ -21,6 +21,30 @@ updated: 2026-11-08
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T154–T157 — added at p704 (2026-11-08)
+
+### `T154` — "Open source" in education is now a claim to be verified, not a category to be filtered on
+
+🟢 **Evidence, all read at the grant payload this pass, not inferred:** of `19` subjects probed, `4` failed the permissive test and **each failed in a different way** — Elastic 2.0 presented as open source at `340★` ([`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp)); AGPL-3.0 asserted as MIT by a search leg at `8,944★` ([`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm)); a README advertising MIT with **no licence file at any of `10` paths** at `104★` ([`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)); and a BSD-3 notice naming **no holder** ([`langx/langx`](https://github.com/langx/langx)).
+
+🔵 **Why education amplifies this more than other verticals:** the buyer is a procurement office or a ministry, the artefacts spread through blog roundups and star rankings rather than vendor diligence, and the deployment is usually **hosted on the institution's behalf** — which is exactly the act source-available licences single out. **The trend is not "more restrictive licences"; it is a widening gap between the licence a project is believed to have and the one in its repository.** `P96` monetises closing that gap.
+
+### `T155` — LMS agents are moving from per-user API tokens to institutional SSO, and that is what unblocks pilots
+
+🟢 [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) (MIT, filed at `p704`) authenticates to Canvas by **university single sign-on instead of an API token**, with a UK institution hard-coded as its default host. Every other Canvas and Moodle MCP server on these shelves — and this base carries **`14`** of them — requires a per-user token.
+
+🔵 **The token step is where campus pilots die**, and it is an administrative failure rather than a technical one: it requires each student or instructor to generate and paste a credential, which no institution will instruct at scale and no privacy office will wave through. **Riding the institutional login the user already has converts a per-seat onboarding task into a one-time integration.** 🟡 At `2★` this is an early signal, not an established pattern — filed for the mechanism. **Watch for the same move in Moodle servers**; whichever one makes it first becomes the default recommendation on this shelf.
+
+### `T156` — Cognitive load is appearing as a first-class, instrumented signal rather than a pedagogical aspiration
+
+🟢 [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (MIT, `64★`) tracks named load metrics — `LSS`, `KTL`, `LF`, `LSB` — alongside forgetting-curve review, and clarifies the learner's goal **in dialogue before** generating a path. 🔵 **The contrast with the rest of this shelf is the finding:** essentially every other tutor row instruments **completion** (lessons finished, items correct). Completion is a proxy that rises when material is too easy, which is the failure mode adaptive learning exists to prevent. **An explicit load signal is the first thing on these shelves that could close that loop**, and it is the natural input to the retention layer `T157` describes. 🟡 One instance; the metric definitions are the project's own and this base has not validated them.
+
+### `T157` — The tutor/retention split is hardening into two separately adoptable layers
+
+🟢 `p704` filed a dedicated **retention** artefact — [`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app) (MIT, `108★`, iOS/macOS/Android/web from one codebase) — alongside tutor-shaped and **assessment-rehearsal**-shaped rows ([`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor), MIT, `116★`).
+
+🔵 **Three distinct slots are now visible and separately populated on this shelf: explain (tutor), rehearse (assessment), retain (spaced repetition).** They are being built by different authors with no shared interface, which is both the opportunity and the cost — composition means writing the glue, and the glue is where an engagement's margin is. `P95` wires explain→author→retain explicitly for that reason.
+
 ## T130 — LATAM's open-source education supply was never nil: it was **below the star floor**, and the floor was this base's own instrument 🔴 new at p700
 
 **The standing claim this overturns.** This page has said for six passes that LATAM's open-source education supply is *nil on three independent channels* — collided English topic heads, Spanish and Portuguese **description** terms (`0/90` at `p691`), and institutional organisations (`422` on all five probed at `692-I`) — and concluded that **LATAM is build-and-translate, not procurement**.

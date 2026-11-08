@@ -4,6 +4,32 @@ region: Global
 updated: 2026-11-08
 ---
 
+## 🆕 2026-11-08 (p704) — 🟢 **`4` FOUNDATIONS FILED AND ALL FOUR CAME OUT OF THIS BASE'S OWN BACKLOG, NOT OFF THE WIRE. 🔴 THE `8,944★` ERP A MANDATED LEG CALLED "MIT" IS **AGPL-3.0**, AND A BSD-3 ROW THIS PASS FILED HAS A COPYRIGHT NOTICE WITH NO HOLDER IN IT.**
+
+**[`foundations.md`](foundations.md) `233` → … → `254` → `258`** — re-derived by counting between the header separator and the terminating blank line. 🟢 **The inherited count AGREED with the published count this pass (`254` = `254`)** — first agreement in three passes, and it is `p703`'s re-derivation holding rather than luck. Arity `258/258` at `5` columns, `0` ragged · `258` distinct subjects taken as the first `github.com/owner/repo` link, `0` duplicated · `258/258` carry a real repository link. **[`../verticals/solutions.md`](../verticals/solutions.md) `109` → `109`** — arity `109/109` at `6` columns; **`0` filed on purpose** (`704-E`, `704-F`).
+
+| Filed at `p704` | Grant, byte-read at the real default ref | Why it is a foundation |
+|---|---|---|
+| [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) (`130★`) | Apache-2.0, `LICENSE.md`, `11,362 B`, sha256₁₂ `b662f44e55e8`, at `master` | The **publishing substrate** under course sites and OER: database-free PHP 8.3+/Apache, authored pages written to the file system as flat files under git, JWT-authenticated v1 REST API. An authoring agent needs somewhere a campus will host, and git-backed flat files make its output reviewable and diffable |
+| [`onemnemo/mnemo`](https://github.com/onemnemo/mnemo) (`125★`) | Apache-2.0, `LICENSE`, `11,326 B`, sha256₁₂ `62e02db7f9a1`, at `main` | A study client on Photino X and **.NET 10** — the scarce stack on these shelves, which are otherwise Python and TypeScript, and the one a large class of public-sector university IT estates can adopt without an exception |
+| [`langx/langx`](https://github.com/langx/langx) (`109★`) | BSD-3-Clause, `LICENSE`, `1,520 B`, sha256₁₂ `19ec8f98fa19`, at `main` | Language-exchange platform for live cross-border practice; this shelf's **only BSD-3-Clause** row in the language slot. 🟡 Its notice reads *“Copyright (c) 2024”* and **names no holder** — see below |
+| [`wixette/leibniz-stepped-reckoner`](https://github.com/wixette/leibniz-stepped-reckoner) (`42★`) | Apache-2.0, `LICENSE`, `10,280 B`, sha256₁₂ `074e6e32c86a`, at `main` | An interactive **3D simulator** of the first four-operation mechanical calculator — the **manipulable-mechanism** pattern these shelves lack. Everything else here delivers text or assessment; this delivers a thing the learner drives, where the simulation *is* the explanation |
+
+### 🟡 `704-J` — a BSD-3-Clause notice with no holder, and why it is filed anyway rather than refused
+
+[`langx/langx`](https://github.com/langx/langx)'s grant is canonical BSD-3-Clause text, `1,520 B`, read from bytes — except its copyright line, which reads in full:
+
+> `Copyright (c) 2024`
+
+**No holder.** BSD-3-Clause's first condition requires that redistributions *“retain the above copyright notice”*, and the notice it points at identifies nobody.
+
+🟢 **Filed, not refused, and the reasoning is the transferable part.** The defect is **symmetric**: a notice naming no holder imposes nothing enforceable on a redistributor, *and* leaves no one to request permission or a relicence from. That is the opposite of the `704-E`/`704-G` hazards, where the risk runs **against** the user. Here the substance of the grant — permissive, irrevocable, canonical text — is intact, and the malformation costs a redistributor nothing. 🔵 **The practical instruction for an engagement:** retain the line exactly as written, including its emptiness, and do not "helpfully" complete it with the org name — inventing a holder in a notice is a worse defect than inheriting a blank one.
+
+### 🔴 `704-F` (recorded here too, because it is a *platform selection* failure) — `8,944★` and AGPL-3.0, not MIT
+
+The mandated vertical leg stated that [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) is *“fully open-source under the MIT license.”* **Read from bytes at `master`: `LICENSE`, `34,230 B`, sha256₁₂ `7800536d5087`, `GNU AFFERO GENERAL PUBLIC LICENSE`.** `gh api search/repositories` agrees: `AGPL-3.0`. Third instance of the `681-C` class. Full treatment, including what AGPL's network clause means for a client-facing education portal, in [`../verticals/solutions.md`](../verticals/solutions.md).
+
+
 ## 🆕 2026-11-08 (p703) — 🟢 **`21` FOUNDATIONS AND `9` PLATFORMS FILED, `7` OF THEM EMEA PUBLIC-SECTOR DATA LAYERS — AND THE REGION'S CONSTRAINT TURNS OUT TO BE THE MISSING CONNECTOR, NOT MISSING DATA. 🔴 THIS SHELF'S OWN HEADING WAS PUBLISHING `199` OVER A TABLE OF `233` FOR TWO FULL PASSES.**
 
 **[`foundations.md`](foundations.md) `233` → `254`** — re-derived by counting between the header separator and the terminating blank line after the insert, with the counter validated against the **inherited table** rather than the published figure, because the two disagreed by `34`. Arity `254/254` at `5` columns, `0` ragged · `254` distinct subjects taken as the first `github.com/owner/repo` link, `0` duplicated · `254/254` carry a real repository link. **[`../verticals/solutions.md`](../verticals/solutions.md) `100` → `109`** (arity `109/109` at `6` columns, `109` distinct, `0` duplicated; its heading was publishing `94`).

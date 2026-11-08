@@ -148,7 +148,38 @@ Both orgs enumerated through `gh api search/repositories -f q='user:…'`, licen
 
 🔴 **Zero platforms added, three rows deleted (all duplicate halves — see the heading below), net `63` → `60` with `0` subjects lost.** The mandated `open source platform education ERP CRM MIT Apache` leg returned: `Apache OFBiz` (Apache-2.0, a general business framework, **not education-specific**), `ERPNext` / `frappe/education` (**copyleft**, already held and already flagged), `Dolibarr`, `openSIS`, `Gibbon`, `OpenEduCat` (**LGPL-3.0** community edition) and `Odoo` — **every one already on this shelf.** Two names were new to it, `OSUMS` and `OpenEMIS Core`, both tagged MIT by a **curated third-party list whose own table formatting is garbled**; neither licence was read first-hand this pass, so **neither was filed**. 🔵 **The leg also re-confirmed this shelf's standing structural finding rather than overturning it: there is still no single product combining SIS + CRM + ERP under MIT or Apache-2.0.** The permissive answer remains composition — `academico-sis/academico` (**MIT**) for the SIS band and `OpenOLAT/OpenOLAT` (**Apache-2.0**) for the LMS band, both of which this pass consolidated into single rows.
 
-## Platforms — 109 rows / 109 distinct platforms 🔄 **Re-derived at p703 by counting, with the counter validated against the table this page INHERITED rather than the figure it published** — the two disagreed by `6`. **`100` carried in (counted), `9` filed, `109` published · arity `109/109` at the header's `6` columns, `0` ragged · `109` distinct subjects, `0` duplicated · `0` header-or-example rows as data.**
+## 🔴 p704 — the two best-adopted vertical candidates both failed at the grant, and the clauses are named
+
+`p704` filed **no** platform row. Both refusals are published because each one is a clause a client engagement would hit, not a formality.
+
+### 🔴 `704-E` — `canyongbs/advisingapp` (`340★`) is **Elastic License 2.0**, and the limitation forbids the delivery model
+
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — *Advising App® by Canyon GBS®*, an AI conversational assistant and student-success platform for higher education — is the single most on-target vertical candidate this base has surfaced in several passes. `gh api search/repositories` reports `license.spdx_id: NOASSERTION`. **Read from bytes at `main`: `LICENSE`, `3,860 B`, sha256₁₂ `48255018b41f`.** The first line is:
+
+> `Elastic License 2.0`
+
+The operative limitation, quoted from the payload:
+
+> *“You may not provide the software to third parties as a **hosted or managed service**, where the service provides users with access to any substantial set of the features or functionality of the software.”*
+
+It also forbids moving, changing, disabling or circumventing the licence-key functionality.
+
+🔴 **Refused, and the reason is specific rather than ideological.** Elastic 2.0 is source-available, not open source — but what disqualifies it here is narrower and sharper: **the prohibited act is precisely the thing a studio engagement sells.** Standing up a managed, hosted student-success assistant for a university is the named limitation, almost verbatim. Self-hosting *by the institution itself*, with Globant engaged to build and configure, is not obviously barred — but that is a legal reading, not an engineering one, and it must be answered by counsel before any proposal names this repository.
+
+🔵 **And it corrects the direction of a standing caveat.** `681-B` warns that `NOASSERTION` is uninformative in **both** directions — usually it is the detector declining to classify a grant that *is* permissive. **Here `NOASSERTION` meant the opposite: a real, named, non-OSI licence the detector will not label.** So `NOASSERTION` does not lean either way, and the only resolution is the payload. `p704` read it.
+
+### 🔴 `704-F` — `idurar/idurar-erp-crm` (`8,944★`) is **AGPL-3.0**, and a mandated leg called it MIT
+
+The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) returned, in its own words: *“iDURAR ERP/CRM is **fully open-source under the MIT license**.”*
+
+**That is false.** Read from bytes at the real default ref (`master`): `LICENSE`, `34,230 B`, sha256₁₂ `7800536d5087`, opening `GNU AFFERO GENERAL PUBLIC LICENSE`. `gh api search/repositories` agrees independently: `AGPL-3.0`.
+
+🔴 **Third instance of the `681-C` class** — a mandated leg asserting a permissive licence that does not survive one read. 🔵 **AGPL-3.0 is not unusable, it is differently usable**, and the distinction belongs in a proposal: the network-copyleft clause reaches users served over a network, so an AGPL ERP core behind a client-facing education portal obliges source provision to those users. That is a decision for the client, made in advance — not a surprise found at delivery.
+
+🟡 **The same leg's one defensible claim held up:** `gego-k12/gegok12` (MIT, school ERP) is real and is **already on this shelf**, as is `openeducat/openeducat_erp` — correctly carried here as **LGPL-3.0**, not the MIT the leg's framing implied.
+
+
+## Platforms — 109 rows / 109 distinct platforms 🔄 **Re-counted at p704 and UNCHANGED: `109` in, `0` filed, `109` published.** arity `109/109` at the header's `6` columns, `0` ragged · `109` distinct subjects, `0` duplicated · `0` header-or-example rows as data. 🟢 **p704 filed no platform row on purpose.** The pass's two best-adopted vertical candidates — a `340★` higher-education AI advising platform and an `8,944★` ERP/CRM — were both read at the grant and **both failed the permissive test** (`704-E`, `704-F`). Fewer real rows beats padding: the refusals are published below with the clause that caused them, which is worth more to an engagement than two rows that would have to be withdrawn.
 >
 > 🔴 **This heading was publishing `94` over a table of `100`** — `p701` filed four platform rows and `p702` filed more without updating it, the same singleton-heading failure recorded this pass on [`../repos/foundations.md`](../repos/foundations.md) (which was understating by `34`) and fixed one pass earlier on [`../agents/top.md`](../agents/top.md). Counted and re-published here in the same edit as the promotion.
 > 🟢 **p703 filed `9` platforms, and `3` are LATAM with the licensor naming a public institution in the repository's own files** — a Pará state AI-literacy programme run by PRODEPA, Instituto iSACI, IFPA, SIMBIC/UFPA and the Government of the State of Pará; an ENEM essay portal; and a webcam-based early-numeracy game whose client-side vision is the only posture that survives a children's-privacy review. 🔵 **The most useful single row, though, is `timewizer`: offline school timetabling positioned against a NAMED commercial incumbent (aSc Timetables).** Timetabling is constraint satisfaction, not language — so it is the thing an agent should *call*, not attempt, and `P92` on [`../compose/patterns.md`](../compose/patterns.md) wires that composition explicitly.
