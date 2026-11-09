@@ -21,6 +21,66 @@ updated: 2026-11-09
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T200–T204 — added at p716 (2026-11-09)
+
+### T200 — 🔵 **When the tooling floor drops, institutional demand fragments from PLATFORMS into disposable per-classroom tools — and the supply side now shows it at n=1 school** 🟢 new
+
+Owner expansion on a single account ([`cagoooo`](https://github.com/cagoooo), 石門國小 / Shimen Elementary, Taoyuan 🇹🇼) returns **more than forty MIT-licensed repositories**, nearly all `0★`, built by one teacher: real-time polling and word clouds, a canteen ordering system, automatic timetabling, a repair-request system, portrait-release consent forms, zhuyin and English typing games, a lantern-riddle game (`716-I`).
+
+🟢 **This is not a curation finding, it is a demand-shape finding.** The output of an AI-enabled teacher is not one platform; it is **forty small, locally-owned, disposable tools**, each solving one school's one problem — and almost none of them would ever be bought, because each has a single-classroom addressable market.
+
+🔵 **What follows for a public-sector K-12 engagement is a change of deliverable.** The thing to sell is **not** a product and **not** forty products. It is a **generator plus a governance wrapper**: a sanctioned way for staff to produce these tools, with the review, accessibility, data-protection and retirement policy already attached. 🔴 **And the risk is the mirror image:** forty unreviewed staff-built tools handling children's data is the shadow-IT problem of the next few years, which is precisely the capacity gap `T187` and the p716 LATAM/EMEA legs both measure. **The governance wrapper is the billable part**, and it is mandated reading against the EMEA teacher-training and AI-Act obligations rather than discretionary.
+
+### T201 — 🔴 **The business generative AI has actually destroyed is ANSWER DELIVERY, and it is now a documented casualty rather than a prediction** 🟢 new
+
+**Chegg cut `45 %` of its staff — `388` roles — and recalled its former CEO**, after generative AI and Google AI Overviews gutted homework-help traffic (North America leg, p716). Set that beside the global market discipline measured in the same pass: **rising revenue, falling investment, and a market that now rewards products which can prove results.**
+
+🔵 **The strategic consequence is a positioning test that can be applied to any education product in one question: does it deliver the answer, or does it deliver the learner's capability to produce the answer?** The first is the business that just shed `45 %` of its staff. The second is what every Socratic / hint-only / refuses-to-do-the-work row on this base's agents shelf is built to do — a cohort that has grown steadily and now includes rows whose README explicitly states the refusal (`dylanj7/scholara`, `ThinkStepOfficial/thinkstep-tutor`, `relleturner/agora`, `baney75/myelinate`).
+
+**What changes for an engagement:** the refusal to answer stops being a pedagogical preference to defend and becomes **the commercially defensible architecture**, with a named casualty as the evidence. 🔴 **And the corollary is a disqualifier:** any client proposal whose core value is faster answer retrieval is being proposed into the one segment with a proven collapse.
+
+### T202 — 🟢 **“Verify the human after the agent” has become its own product category, and p716 is the first pass to see independent implementations converge** 🟢 new
+
+Two unrelated projects, filed in the same pass, implement the same previously-unnamed thing: **after the coding agent writes the code, quiz the human on it before the work is allowed to proceed.**
+
+| subject | licence | mechanism |
+|---|---|---|
+| [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya) | MIT, `29★` | local knowledge graph + spaced repetition + **an optional commit gate** |
+| [`SunflowersLwtech/covate`](https://github.com/SunflowersLwtech/covate) | MIT, `8★` | MCP server + a hosted **learning ledger** |
+
+Related and already shelved: `mcp-tool-shop-org`-style skill packs, `baney75/myelinate`, `Noam-Marom/academic-students`.
+
+🟢 **Why this is a trend and not two repositories.** `T192` established that education agent supply had shifted from applications to **skills/specifications**. T202 is the next step: the *subject* of the specification has moved from the learner to **the developer who just used an agent**, and the enforcement point has moved into the **engineering workflow** — a commit gate, not a lesson. That is a corporate-learning product with a technical enforcement surface, which is a materially different sale from an LMS course.
+
+🔵 **Why Globant should care specifically:** this is the one education pattern whose buyer is an **engineering organisation** rather than an education institution — the same buyer the studio already sells delivery work to. The commit gate is the smallest credible pilot in this whole base: one repository, one plugin, measurable in a sprint.
+
+### T203 — 🔴 **The standards layer, not the model, is the chokepoint between a demo and a delivery — and this base had declared the gap before it found the fix** 🟢 new
+
+This base's foundations shelf carried a declared gap reading *“LMS interoperability — nothing standards-shaped — every tutor row hand-rolls launch and grade-return”* and *“assessment delivery — item generation that terminates in a JSON blob.”* With `302` agent rows on the shelf, a large share of them content generators, **the generation problem is solved and the delivery problem is not.**
+
+p716 closed part of it with [`jcputney/elearning-module-parser`](https://github.com/jcputney/elearning-module-parser) (Apache-2.0) — **SCORM 1.2, SCORM 2004, AICC, xAPI, cmi5**.
+
+🟢 **The trend claim is about where value is moving, not about one library.** When adoption is near-universal (`86 %`, `T198`) and investors demand proof (`T201`), the scarce capability stops being *can you generate a lesson* and becomes **can you get it into the gradebook the institution already runs, in a format its auditors accept**. That is standards work: unglamorous, permissively licensed, and now the actual differentiator.
+
+🔵 **Corroborating vendor signal:** **Instructure launched `Canvas Career`**, a skills-first AI LMS for workforce learning — the incumbent moving to skills-first delivery, which only works if skills attainment is **recorded in a portable format**. Micro-credentials appear on every momentum list in the p716 global leg; **blockchain credentialing appears on every fading list.** The durable layer is the boring standard (`cmi5`, `xAPI`), not the novel ledger.
+
+### T204 — 🟢 **Offline-first and a stated RAM floor are becoming procurement REQUIREMENTS in APAC and LATAM, not accessibility extras** 🟢 new
+
+The p716 APAC leg produced one hard adoption figure — **virtual-tutor adoption at `30 %`** — against uptake described as **patchy, with limited connectivity named as the probable barrier.** The region is simultaneously described as the fastest-growing. **Appetite is not the constraint; bandwidth is.**
+
+Supply has started answering in the specific terms a procurement officer can test:
+
+| subject | stated constraint |
+|---|---|
+| [`danilo-labs/Sagavar`](https://github.com/danilo-labs/Sagavar) | runs in **`4 GB` RAM, zero internet** (Ollama / KoboldCpp) |
+| [`georgekimaninjoroge/Meridian`](https://github.com/georgekimaninjoroge/Meridian) | **offline-first** LMS as an architectural default |
+| `Kolibri` *(already shelved)* | offline-first distribution |
+| `abdalluh17777/personal-local-ai-tutor` *(logged)* | `100 %` local on one consumer GPU |
+
+🟢 **The trend is that the claim has become QUANTIFIED.** *“Works offline”* is a marketing phrase; **“`4 GB` of RAM and no internet” is a specification a buyer can verify on the hardware they already own** — and once one vendor states a number, the others must. Combined with `T195` (sovereignty converging from two directions, making self-hosted inference the education default), the result is that **a cloud-only architecture is becoming disqualifying in two of four regions**, not merely disfavoured.
+
+🔵 **Design rule for an engagement:** state the RAM floor and the offline behaviour in the proposal, as numbers, before being asked. In LATAM it also sidesteps the `62`-point governance gap (`p716` LATAM leg), because data that never leaves the building is a much shorter policy conversation at institutions where **only ≈`30 %` have a published AI policy at all.**
+
 ## 🆕 T196–T199 — added at p715 (2026-11-09)
 
 ### T196 — 🔴 "Open source" in a licence's NAME is now a thing to verify, because a major public funder has taken the phrase

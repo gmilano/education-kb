@@ -11,6 +11,70 @@ updated: 2026-11-09
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
 
+## 🆕 P121–P123 — added at p716 (2026-11-09)
+
+### `P121` — The demo-to-delivery chain: make a generated course something a gradebook will actually accept (any region, 4–6 weeks, closes this base's own declared gap)
+
+**The problem, stated as this base measured it.** The agents shelf holds `302` rows and a large share generate learning content. The foundations shelf declared the matching gap in its own words: *“assessment delivery — item generation that terminates in a JSON blob”* and *“LMS interoperability — nothing standards-shaped.”* Every pilot therefore demos beautifully and cannot be handed to a registrar. `T203` is the trend; this is the wiring.
+
+**The chain — four permissive components, no copyleft anywhere in it:**
+
+| step | component | licence | what it does here |
+|---|---|---|---|
+| 1. generate | any generator already shelved — [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) or [`Man0dya/Tutor-AI`](https://github.com/Man0dya/Tutor-AI) | Apache-2.0 | produces items, explanations, question sets |
+| 2. author into a real format | [`redmodd/tessera`](https://github.com/redmodd/tessera) | MIT | JS course framework **built for AI-assisted authoring** — the artefact the generator writes INTO instead of emitting loose JSON (`716-L`) |
+| 3. package + validate | [`jcputney/elearning-module-parser`](https://github.com/jcputney/elearning-module-parser) | Apache-2.0 | parse/validate **SCORM 1.2, SCORM 2004, AICC, xAPI, cmi5** — run it as the **CI gate**, not as a final export step |
+| 4. launch + return grades | [`tl-its-umich-edu/canvas-lti-redirect-tool`](https://github.com/tl-its-umich-edu/canvas-lti-redirect-tool) | Apache-2.0 | production LTI redirect plumbing from a large research university |
+
+**Wiring that matters.** Put step 3 **in CI**: the parser runs against every generated package on every build and **fails the build** on a manifest the target LMS would reject. That single inversion — validate continuously rather than at handover — is what converts a generator into a delivery pipeline, and it is cheap because the parser is a library rather than a service.
+
+**Deploy the LMS underneath with the operations tier filed in the same pass:** [`krestomatio/lms-moodle-operator`](https://github.com/krestomatio/lms-moodle-operator) (Apache-2.0, Kubernetes custom resources) for an estate, or [`shellharbor/mooship`](https://github.com/shellharbor/mooship) (MIT — Docker Compose, Nginx, PostgreSQL, Redis, Let's Encrypt, backups, health checks) for a single VM.
+
+🔴 **Two constraints to state up front.** (1) **Keep the write path separate and explicit.** Grade return is a write; every LMS-read integration this base recommends is deliberately read-only. [`mrothlis/adsum`](https://github.com/mrothlis/adsum) is the only shelved row demonstrating the gradebook write, and it is three days old — **read it as a reference, do not vendor it** (`716-K`). (2) **Moodle itself is `GPL-3.0`** — the four components above are permissive and can be shipped commercially; a *Moodle plugin* cannot. Keep the deliverable on the LTI/standards side of that line.
+
+**Proof of delivery:** a generated module that round-trips — authored in `tessera`, validated as `cmi5` in CI, launched over LTI, with the grade landing in the institution's own gradebook.
+
+### `P122` — The commit gate: sell education to an ENGINEERING buyer, in one sprint (any region, 1–2 weeks to a measurable pilot)
+
+**Why this pattern exists.** Of everything on this base, this is the only pattern whose buyer is an engineering organisation rather than an education institution — i.e. the buyer Globant already has a relationship with. `T202` names the category; `T201` explains why it sells now (the collapsed business was *answer delivery*, and this is its inverse: the agent did the work, so prove the human still has the capability).
+
+**The recipe, two interchangeable implementations found independently in one pass:**
+
+- [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya) — MIT, `29★`. Claude Code plugin: local knowledge graph, spaced repetition, **optional commit gate**.
+- [`SunflowersLwtech/covate`](https://github.com/SunflowersLwtech/covate) — MIT, `8★`. MCP server that quizzes on the code the agent just wrote, with a learning ledger.
+
+**Wire it:**
+1. Install one of the two against a **single real repository** — not a training sandbox. The code under question must be code the developer actually shipped.
+2. Turn the gate **on in warn-only mode** for two weeks. Collect which concepts fail, not who fails them.
+3. Add retention: [`arshawnarbabi/Cogni`](https://github.com/arshawnarbabi/Cogni) (MIT) or [`nesso-how/nesso`](https://github.com/nesso-how/nesso) (MIT, personal knowledge graph) for FSRS scheduling across sessions, so a failed concept returns rather than being logged once.
+4. Only then discuss enforcement, and enforce **at review** rather than at commit.
+
+🟢 **Why it is a one-sprint pilot:** one repository, one plugin, and the metric already exists — the per-concept failure list from step 2 **is** the training needs analysis the client's L&D function usually buys as a consulting engagement.
+
+🔴 **The governance line to hold:** this instrument measures individuals. Agree in writing, before step 1, that step 2's output is **aggregate and concept-level**, never per-developer performance data. Get that wrong once and the pilot is finished — and in the EU it is also a works-council and GDPR matter, not merely an etiquette one.
+
+### `P123` — The LATAM institutional-system engagement: find it, place it, and build on it without touching a copyleft or a revocable grant (LATAM-first, 5–8 weeks)
+
+**The three findings this pattern is built from, all measured at p716.** (1) The Spanish/Portuguese keyword channel is **exhausted** (`0` and `1`-stale results, `716-D`). (2) LATAM nonetheless has the strongest adoption this base holds — **`92 %` of students, `79 %` of faculty** — against **only ≈`30 %` of universities having a published AI policy**: a `62`-point governance gap. (3) The region's largest public-sector publisher, the **IDB** (`EL-BID`, `79` repositories), grants **`0`** permissively (`715-A`).
+
+**Step 1 — discovery, by system name rather than by language.** Search the institution's own system proper nouns, because each exists in exactly one country's estate and is therefore both the discovery key *and* the placement evidence:
+
+| system | institution | worked example found this way |
+|---|---|---|
+| `e-Disciplinas`, `JupiterWeb` | USP 🇧🇷 | [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) (MIT) |
+| `e-FICH` | UNL 🇦🇷 | [`Equisdo/fich-mcp`](https://github.com/Equisdo/fich-mcp) (MIT) |
+| `SUAP`, `AVA` | IFRN 🇧🇷 | [`suap-ava-suite/djangoapp-painel_ava`](https://github.com/suap-ava-suite/djangoapp-painel_ava) (MIT) |
+
+**Step 2 — the licence clearance gate, before a single fork.** Run `P119`'s four probes. 🔴 **For any multilateral or development-bank repository, expect to REFUSE:** the IDB grant is revocable at the bank's sole discretion, viral, requires destroy-or-return on termination and indemnification of the licensor (`715-A`). A grant whose name contains *“Open-Source”* is not an open-source grant (`T196`).
+
+**Step 3 — the platform layer, and the one Apache-2.0 escape from the LMS licence wall.** The incumbents are copyleft (Moodle `GPL-3.0`, Canvas and Open edX `AGPL-3.0`). [`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) is **Apache-2.0**, five years old, on PyPI with Quay images, Nicaraguan, and has **certificate issuance in scope** — which is what the micro-credential demand in `T203` actually requires. Fork and ship it commercially; no copyleft conversation.
+
+**Step 4 — build read-only first, and make that the selling point.** Each worked example in step 1 is a **read-only** MCP server over student credentials. Keep it that way: deadlines, materials, catalogue and announcements deliver most of the value, and read-only is the shortest possible security review at an institution that has **no published AI policy** to review it against.
+
+**Step 5 — bill the governance gap, because it is the larger deliverable.** `30 %` policy coverage against `92 %` student use means the institution's binding constraint is **capacity, not capability** (`T187`, `716` LATAM leg). Deliver the AI-use policy, the staff development and the assurance process **alongside** the integration. 🟢 **Anchor it on regional instruments rather than on a vendor framework** — **UNESCO IESALC**'s governance research, **CENIA**'s UNESCO agreement and **Latam-GPT**, and the **Ceibal**/EdTech Hub partnership — all of which a regional institution recognises and none of which is a procurement dependency.
+
+🟢 **Keep inference local** where the policy vacuum makes data residency the shortest path: pair with `T204`'s stated-floor rows ([`danilo-labs/Sagavar`](https://github.com/danilo-labs/Sagavar), `4 GB` RAM and no internet) so that *“the data never leaves the building”* is a verifiable claim rather than an assurance.
+
 ## 🆕 P119–P120 — added at p715 (2026-11-09)
 
 ## P119 — The licence-clearance gate for public-sector education code: four probes, in order, before a single line is forked (any ministry/multilateral-funded engagement, EMEA and LATAM especially: 2–3 days, run once per candidate estate) 🟢 new at p715

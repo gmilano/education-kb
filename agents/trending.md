@@ -4,6 +4,133 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p716) — 🔴 **THE NOVELTY FILTER ITSELF PRODUCED A FALSE NOVELTY, AND THE CAUSE IS `comm` ON TWO DIFFERENTLY-COLLATED SORTS. CAUGHT BY AN ARITY/DUPLICATE PASS BEFORE PUBLICATION, NOT BY THE FILTER.**
+
+**`39` subjects filed** (`27` agents, `8` foundations, `4` platforms) out of `40` verified and `68` screened. [`top.md`](top.md) **`275` → `302`** (🔴 **not** `274 → 301`: see `716-A`). [`../repos/foundations.md`](../repos/foundations.md) **`307` → `315`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`120` → `124`**.
+
+**Region movement: `LATAM 23 → 25`, `EMEA 30 → 34`, `APAC 70 → 76`, `Global 122 → 137`; `North America 30` unmoved and the freeze is stated as a freeze.** `15` of the `40` verified subjects were placed on repository-file evidence and **`25` were REFUSED to `Global`** — the refusals are itemised in `716-E`, because an unplaced row that says *why* it is unplaced is worth more than one that is silently `Global`.
+
+### 🔴 `716-A` — the stale counter, third recurrence, and this time the cause is visible: the count and the log live in DIFFERENT FILES and only one of them got written
+
+[`top.md`](top.md) published **`274` rows** while its table held **`275`**. Counted, not inferred.
+
+The diagnosis matters more than the fix. p715's entry on **this** file recorded the move as **`274` → `275`** — **correctly**. So p715 measured right, logged right, and never wrote the figure back to the shelf heading. This is not a measurement defect; it is a **write that terminated at the log**.
+
+| pass | shelf heading said | table actually held | log said | class |
+|---|--:|--:|---|---|
+| `p700`→`p701` | `119` | `135` | correct in commit message only | heading never written |
+| `p712`→`p713` | `115` | `118` | correct | heading never written |
+| `p715`→**`p716`** | **`274`** | **`275`** | **correct (`274 → 275`)** | **heading never written** |
+
+🔵 **The transferable rule, strengthened:** `680-F2` says *count the table you inherited, never the figure it published*. p716 adds the reason it keeps paying off — **the published figure and the published log are written by different edits, and the log is the one that gets written.** Validate against the table; treat the heading as a claim and the log as a separate claim, and reconcile both.
+
+### 🔴 `716-B` — the pass's own instrument defect: `comm` silently desynchronises on differently-collated inputs, and reported a HELD subject as novel
+
+p716 screened `68` candidates against the `811` subjects it had extracted from the three shelves, using `comm -23` over two files that had each been `sort`ed — but **sorted under different pipelines** (one plain `sort -u`, one `tr 'A-Z' 'a-z' | sort -u`). `comm` requires both inputs in the **same** collation and does not verify it; given mismatched collation it does not error, it **silently misreports membership**.
+
+**Measured cost:** [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — **held on this shelf since `p653`** — came back `novel`, was verified, and was written into the table. It was caught only by the post-insert duplicate/arity pass, which found `303` rows against `302` distinct subjects. Had that pass not run, this shelf would have published the same subject twice.
+
+A second symptom confirms the same cause: the union of the three shelves measured **`811`** subjects through the `comm` pipeline and **`813`** through an exact set difference. The filter was under-counting what the base holds, which is the direction that creates duplicates.
+
+🔵 **Rule:** membership against a held-subject index is a **set** operation and must be done with a set. `comm` is a sorted-stream *merge* and is only valid when both streams are provably co-collated. Use a hash set, or run both sides through the identical normalisation **and** `LC_ALL=C sort`.
+
+🟢 **And the near-miss paid a dividend:** the held row's star cell was stale at **`168`**, re-read at **`169`** (`gh api search/repositories`, `2026-11-09`), and has been refreshed in place.
+
+### 🔵 `716-C` — the mandated legs nilled again, and p716 can now separate them into two kinds with different verdicts
+
+All eight mandated legs ran. The result splits cleanly, and the split is the finding:
+
+| leg set | repository addresses returned | novel | usable |
+|---|--:|--:|---|
+| 4 global legs (`agents`, `trending`, `platform ERP/CRM`, `industry trends`) | `~12` | `3` | 🔴 **`0`** |
+| 4 regional legs (NA / EMEA / APAC / LATAM) | 🔴 **`0`** | `0` | — (but see below) |
+
+The `3` novel global addresses were [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) and [`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning) — surfaced only as rows on a third-party star-tracker, with no licence or substance visible from the leg — and `microsoft/ai-agents-for-beginners`, which is the **`p699` class** exactly: *a tutorial about AI, not AI for education*.
+
+🔵 **The sharper result: the four REGIONAL legs are not a repository channel at all, and should stop being judged as one.** They returned zero repository addresses for the Nth consecutive pass. What they *did* return is dense, dated, primary-source-citable **market and regulatory intelligence** — the EU Digital Omnibus date, the LATAM governance-coverage figure, the APAC convening calendar, the US state-bill count. All of it is filed to [`../intel/market.md`](../intel/market.md) and [`../intel/trends.md`](../intel/trends.md) this pass. **They are an intel channel that this base kept scoring as a failed repo channel.** Judged correctly, they are the most productive legs in the mandate.
+
+🟢 **The repository supply came, as it has for many passes, from `gh api search/repositories`** — `13` queries over domain keywords, `topic:` facets and licence filters with a `pushed:` floor, no star floor. `68` screened → `40` verified → `39` filed.
+
+### 🔴 `716-D` — the Spanish/Portuguese keyword channel that `p700` opened has EXHAUSTED, and LATAM supply has moved to a different, repeatable shape
+
+`p700` filed `9` rows off a Spanish/Portuguese `topic:`/keyword sweep and recorded that this base's star floor had been hiding them. p716 re-ran that channel:
+
+| leg | results | usable |
+|---|--:|---|
+| `tutor inteligencia artificial educacion license:mit` | 🔴 **`0`** | — |
+| `educacao inteligencia artificial aluno license:mit` | `1` | 🔴 **`0`** — last pushed `2025-05-17`, stale by `18` months |
+
+**Recorded as an exhausted channel, not as an absence of LATAM supply** — because the same pass placed `4` LATAM subjects. They arrived on a different and sharply repeatable shape: **the university-system MCP server.**
+
+| subject | institution named in the repository's own files | system wrapped |
+|---|---|---|
+| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | Universidade de São Paulo 🇧🇷 | `e-Disciplinas`, `JupiterWeb` |
+| [`Equisdo/fich-mcp`](https://github.com/Equisdo/fich-mcp) | Universidad Nacional del Litoral 🇦🇷 | `e-FICH` (Moodle) |
+| [`suap-ava-suite/djangoapp-painel_ava`](https://github.com/suap-ava-suite/djangoapp-painel_ava) | **IFRN – Campus EaD** 🇧🇷, *named in the `LICENSE` bytes* | `SUAP` / multi-Moodle `AVA` |
+| [`bmosoluciones/now-lms`](https://github.com/bmosoluciones/now-lms) | Nicaragua 🇳🇮, named in README | — (platform) |
+
+🔵 **The reusable search shape:** do not search the language, **search the institution's system name**. `e-Disciplinas`, `JupiterWeb`, `SUAP`, `AVA`, `e-FICH` are proper nouns that exist nowhere outside one country's education estate, so they are simultaneously a discovery key **and** their own placement evidence. This is strictly stronger than a Spanish-keyword leg, which matches on the common noun and returns Spanish-language repositories about anything.
+
+### 🟢 `716-E` — `15` placements on repository-file evidence, `25` refusals, each refusal named
+
+**Placed (`15`)** — strongest channel first:
+
+| channel | subjects |
+|---|---|
+| **institution named in the `LICENSE` payload** | `suap-ava-suite/djangoapp-painel_ava` (*“IFRN - Campus EaD”*) · `cagoooo/taic-edu` (CJK holder *阿凱老師*) |
+| **the artefact IS a national curriculum** | `CHNragdoll/anki-pipeline` (China 考研) · `GAUSS-TPAC/…Terminale-scientifique` (Cameroon **MINESEC**) |
+| **named institution / system in repo files** | `CaioCastro1/usp-mcp` · `Equisdo/fich-mcp` · `hs-shell/dotbugi` (Hansung Univ.) · `MarkChu-git/Always-Ontrack` (Monash OnTrack) · `Cyprien-png/HEIG-Kit` (HEIG-VD, HES) · `tl-its-umich-edu/canvas-lti-redirect-tool` (U-Michigan, in the account name) · `cagoooo/taic-edu` (石門國小) |
+| **legal basis cited in repo files** | `X4nd109/Tasks` — **Austrian Federal Ministry** + **Austrian Copyright Act** |
+| **country named in README** | `bmosoluciones/now-lms` (Nicaragua) |
+| **project's own ccTLD / file layout** | `ANFAIA/SkillNet` (`skillnet.es`) · `GuanZhuiGuo/open-character-memory` (CJK `README.md`, English demoted to `README.en.md`) · `EricWang1358/dsh-web-studyhub` (first-class `README.zh-CN.md` + PRC host runtime) |
+
+🔴 **Refused (`25`), and three refusals are worth naming because a weaker pass would have placed them:**
+
+- [`jvsena42/loopky`](https://github.com/jvsena42/loopky) — holder *“João Victor Sena”*, a Portuguese personal name. **Refused.** `p669` ruled owner-name/owner-location this base's weakest channel; no institution, country or system appears in the repository's files. A Brazilian-sounding name is not a Brazilian deployment.
+- [`georgekimaninjoroge/Meridian`](https://github.com/georgekimaninjoroge/Meridian) — East African owner name, and the **only** country its README names is **India**. **Refused.** Two weak signals pointing different directions is not placement.
+- [`igweze/fobrain`](https://github.com/igweze/fobrain) — West African owner name; README claims *“institutions around the globe”* and names no country. **Refused.**
+
+🔵 **`Global` is now `137 / 302` on this shelf — the largest bucket, and it is growing.** That is a real weakness and p716 declines to hide it by guessing. The route out is `716-D`'s shape: search institutional system names, which return placement evidence as a side effect.
+
+### 🟢 `716-F` — two foundations close gaps THIS BASE DECLARED, which is the first time the declared-gaps table has been paid off by a search rather than restated
+
+[`../repos/foundations.md`](../repos/foundations.md) carries a standing gaps table recording, among others:
+
+> **LMS interoperability** — *“nothing standards-shaped — every tutor row hand-rolls launch and grade-return”*
+> **assessment delivery** — *“item generation that terminates in a JSON blob”*
+
+- 🟢 [`jcputney/elearning-module-parser`](https://github.com/jcputney/elearning-module-parser) (**Apache-2.0**, `5★`, Java, created `2024-11-20`, pushed `2026-11-06`, `17` open issues) parses **SCORM 1.2, SCORM 2004, AICC, xAPI and cmi5** manifests and packages. That is precisely the layer the gaps entry says every tutor row hand-rolls or skips.
+- 🟢 [`krestomatio/lms-moodle-operator`](https://github.com/krestomatio/lms-moodle-operator) (**Apache-2.0**, `5★`, Go, created `2021-07-18`, pushed `2026-10-28`) runs the whole Moodle stack as Kubernetes custom resources — the missing **operations** tier under every Moodle-extension row this base holds. With [`shellharbor/mooship`](https://github.com/shellharbor/mooship) (MIT, single-VM) filed alongside it, both ends of how education clients actually run Moodle are now covered.
+
+🔵 **Both are `5★`, and both have multi-year continuous maintenance.** `lms-moodle-operator` has been pushed for five years. **A `5★` repository with five years of maintenance is a stronger dependency than a `5,000★` repository last pushed in 2024** — and a star floor would have excluded both. This base's no-star-floor rule earns itself again.
+
+### 🟢 `716-G` — byte-count convention, stated once, with a positive control that landed on this base's OWN recorded canonical hash
+
+p716 measured every grant payload twice and the two disagreed by exactly one byte on every file. Cause: capturing `curl` output in a shell command substitution **strips trailing newlines**. First measurement read `11,356 B` / `43070e2d4e53` for Apache-2.0; re-measured to a file, `11,357 B` / `c71d239df917`.
+
+🟢 **`c71d239df917` at `11,357 B` is the value [`../repos/foundations.md`](../repos/foundations.md) already records as *“`apache/.github` canonical, as served”*, and `43070e2d4e53` at `11,356 B` is the value it already records as the newline-stripped variant.** Two independently fetched repositories this pass ([`igweze/fobrain`](https://github.com/igweze/fobrain), [`tl-its-umich-edu/canvas-lti-redirect-tool`](https://github.com/tl-its-umich-edu/canvas-lti-redirect-tool)) landed byte-exact on the as-served value. **That is a positive control on the instrument**, and it confirms `715-C`'s rule: key propagation on `sha256` only, never on byte count.
+
+**All cells published this pass are as-served (newline intact), matching the convention of the `275` rows already on this shelf.**
+
+### 🟢 `716-H` — `40 / 40` licence agreement between the API and the bytes: zero divergences on a fresh cohort of this size
+
+Every one of the `40` verified subjects was checked **twice** — `license.spdx_id` from `gh api search/repositories`, and the grant read from the payload at the real default ref — and they agreed **`40 / 40`**. `0` `NOASSERTION`, `0` nulls, `0` overturned claims, `0` repositories with no discoverable grant.
+
+That is a materially cleaner census than the `NOASSERTION` estates of `p714`/`p715`, and the reason is selection, not luck: this cohort came from `license:`-filtered API queries, so the detector had already classified every subject before p716 read a byte. 🔵 **The transferable point: a `license:`-filtered query returns a population on which the detector is correct by construction. It is therefore the WRONG instrument for finding the estates where the detector is blind** — the EUPL and IDB-licence estates of `714-A`/`715-A` are unreachable this way, by definition. The two channels are complements, and a pass that runs only one will believe the licence landscape is clean.
+
+🔴 **Liveness, separately:** `40 / 40` resolved on `git ls-remote --symref`, `39` on `main` and **`1` on `master`** ([`MarkChu-git/Always-Ontrack`](https://github.com/MarkChu-git/Always-Ontrack)). The branch is read, never assumed.
+
+🔴 **And the mandated `curl -sI` check was re-controlled at p716 and is STILL useless** — `HTTP/1.1 200 Connection Established` for `torvalds/linux`, for `moodle/moodle`, for a live filed row, **and for `gmilano/this-repo-does-not-exist-91823`**. It reports this environment's proxy `CONNECT`, never GitHub. Fourth consecutive pass confirming zero discriminating power; `ls-remote` + a payload read are used instead, and both discriminate (the negative control fails to authenticate rather than returning a ref).
+
+### 🔵 `716-I` — an owner cohort logged rather than shelved: `40+` MIT classroom micro-tools from ONE Taiwanese primary school
+
+Owner expansion on [`cagoooo`](https://github.com/cagoooo) returns **more than forty MIT-licensed repositories**, nearly all `0★`, all built at 石門國小 (Shimen Elementary, Taoyuan 🇹🇼) by one teacher: real-time polling, word clouds, a canteen ordering system, automatic timetabling, a repair-request system, portrait-release consent forms, zhuyin and English typing games, a lantern-riddle game.
+
+**One row filed** ([`cagoooo/taic-edu`](https://github.com/cagoooo/taic-edu), the Taiwan sovereign-AI-corpus explorer) and the cohort logged here instead of shelved, deliberately — forty single-classroom micro-tools would be forty rows of noise on a shelf whose value is that every row is a defensible starting point.
+
+🟢 **But the cohort is itself the finding, and it is a reusable one.** It is a worked instance of what an AI-enabled teacher produces when the tooling floor drops: not one platform, but **forty small, disposable, locally-owned tools**, each solving one school's one problem. For a public-sector K-12 engagement that is the demand shape to design for — a *generator and a governance wrapper*, not a product. Recorded as the supply-side evidence under `T201`.
+
+
 ## 🆕 2026-11-09 (p715) — 🔴 **`NOASSERTION` HAS AT LEAST FOUR DISTINCT CAUSES, AND p714's OPTIMISM MUST BE SPLIT IN TWO: RECOVERING A GRANT IS NOT RECOVERING A *USABLE* GRANT. MEASURED ON LATAM's LARGEST PUBLISHER, THE RECOVERED GRANT IS A REFUSAL — THE "IDB OPEN-SOURCE SOFTWARE LICENSE" IS TERMINABLE AT THE BANK'S SOLE DISCRETION.**
 
 **`1` subject filed** (`1` agent, `0` foundations, `0` platforms). [`top.md`](top.md) **`274` → `275`**. [`../repos/foundations.md`](../repos/foundations.md) **`307` → `307`**, and the nil is reported rather than padded. [`../verticals/solutions.md`](../verticals/solutions.md) **`120` → `120`**, with one existing row's grant corrected (`715-G`).

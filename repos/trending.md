@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p716) — 🟢 **`8` FOUNDATION ROWS, AND `2` OF THEM CLOSE GAPS THIS SHELF DECLARED ITSELF: THE STANDARDS LAYER AND THE OPERATIONS LAYER BOTH ARRIVED IN ONE PASS, BOTH APACHE-2.0, BOTH AT `5★`**
+
+**[`foundations.md`](foundations.md) `307` → `315`.** `307` carried in (counted between the header separator and the terminating blank line; matches `p714`'s published `307`, with `p715` correctly recording nil), `8` filed, `315` published · arity `315/315` at `5` columns, `0` ragged · `315` distinct subjects, `0` duplicated.
+
+**Regions on the `8`: `Global 6` · `North America 1` · `LATAM 1`.** Placement evidence for each is in [`../agents/trending.md`](../agents/trending.md) `716-E`; the two refusals among this set are recorded there too rather than left silent.
+
+### 🟢 `716-F` (primary) — the declared-gaps table got PAID OFF by a search instead of restated
+
+This shelf has carried a gaps table for several passes. Two of its entries read:
+
+| gap this shelf declared | what it said was missing | closed at p716 by |
+|---|---|---|
+| **LMS interoperability** | *“nothing standards-shaped — every tutor row hand-rolls launch and grade-return”* | 🟢 [`jcputney/elearning-module-parser`](https://github.com/jcputney/elearning-module-parser) |
+| **assessment delivery** | *“item generation that terminates in a JSON blob”* | 🟢 same subject — it parses the delivery format the JSON must become |
+| **operations under Moodle** | *(implicit — never declared, and that is its own finding)* | 🟢 [`krestomatio/lms-moodle-operator`](https://github.com/krestomatio/lms-moodle-operator) + [`shellharbor/mooship`](https://github.com/shellharbor/mooship) |
+
+**[`jcputney/elearning-module-parser`](https://github.com/jcputney/elearning-module-parser)** — Apache-2.0 (`LICENSE`, `11,314 B`, sha256₁₂ `2fdfdc4128c4`, read from the bytes at `main`), `5★`, Java, created `2024-11-20`, pushed `2026-11-06`, `17` open issues. Parses **SCORM 1.2, SCORM 2004, AICC, xAPI and cmi5** manifests and packages.
+
+🔵 **Why this is a foundation and not a tool.** The agents shelf now holds `302` rows, a large share of which generate learning content. Almost all of them terminate in their own JSON. **The parser is the other half of that pipe** — it defines the formats an LMS will actually ingest and a gradebook will actually accept. Without it, every content-generation row is a demo; with it, the same row is a delivery.
+
+**[`krestomatio/lms-moodle-operator`](https://github.com/krestomatio/lms-moodle-operator)** — Apache-2.0 (`10,239 B`, `d2e1f48db0a6`, `main`), `5★`, Go, created `2021-07-18`, pushed `2026-10-28`. A **Kubernetes meta-operator** managing the whole Moodle stack as custom resources. **[`shellharbor/mooship`](https://github.com/shellharbor/mooship)** — MIT (`1,069 B`, `caffa3f4a888`, `main`), `14★`, Python — is the single-VM counterpart: Docker Compose, PHP-FPM, Nginx, PostgreSQL/MySQL, Redis sessions, Let's Encrypt, plus backup/restore, scheduled backups, health checks and CI security testing.
+
+🔵 **Between them both ends of how education clients actually run Moodle are now covered** — the k8s estate and the single VM. This shelf held neither, and had not declared the gap, which is why `716-F` is filed as two findings: the gaps table paid off, **and** the gaps table was incomplete.
+
+### 🟢 `716-J` — the star floor would have cost this pass its two best rows, and the maintenance signal that replaces it
+
+Both headline foundations are **`5★`**. Both have **multi-year continuous maintenance** — `lms-moodle-operator` for over five years, `elearning-module-parser` for two with `17` live issues.
+
+| subject | stars | created | last push | maintained for |
+|---|--:|---|---|--:|
+| `krestomatio/lms-moodle-operator` | `5` | `2021-07-18` | `2026-10-28` | **`5y 3m`** |
+| `jcputney/elearning-module-parser` | `5` | `2024-11-20` | `2026-11-06` | `2y 0m` |
+| `tl-its-umich-edu/canvas-lti-redirect-tool` | `3` | `2024-06-11` | `2026-11-06` | `2y 5m` |
+| `suap-ava-suite/djangoapp-painel_ava` | `3` | `2024-01-24` | `2026-11-05` | `2y 9m` |
+
+🔵 **Rule, stated as a replacement rather than a complaint:** for an infrastructure row, `created → last push` **duration** is a better dependency signal than star count, because stars measure discovery and duration measures the thing a client is actually buying — that someone will still be there. **A `5★` repository pushed continuously for five years is a safer dependency than a `5,000★` repository last pushed in 2024.** Four of this pass's eight foundations would have been excluded by any star floor at or above `10`.
+
+### 🔵 `716-K` — one row filed explicitly as a SHAPE and not as a dependency, and the distinction is written into the cell
+
+[`mrothlis/adsum`](https://github.com/mrothlis/adsum) (MIT, `1,078 B`, `6ba4c329f06b`, `main`, `0★`) is **QR-code classroom attendance that writes straight to the LMS gradebook**. It was created `2026-11-06` — three days before this pass.
+
+It is filed, and the cell says why it must not be treated as production: **attendance is the one common workflow that touches the gradebook WRITE path.** Every LMS-integration row this base holds — `canvas-mcp`, `Neuro-CanvasLMS`, `moodle-mcp`, `fich-mcp`, `brightspace-mcp-server` — is deliberately **read-only**, because a student-credential integration that can write is a different risk conversation. `adsum` is the only row showing that path. **Reference the pattern; do not vendor a three-day-old repository.**
+
+🔵 **Stating the intended use INSIDE the cell is the practice this entry proposes.** A shelf whose rows all read as recommendations cannot express *“this is a worked example of the risky path”* — and that is information a delivery team needs more than another safe row.
+
+### 🔵 `716-L` — the authoring target, which is the output format the content-generation cohort has been missing
+
+[`redmodd/tessera`](https://github.com/redmodd/tessera) (MIT, `1,078 B`, `a7b3b71f0efd`, `main`, `4★`) is a JavaScript framework for interactive eLearning courses **explicitly designed for AI-assisted authoring**.
+
+Filed as a foundation for that design intent alone: it is the artefact an agent writes **into**. Paired with `716-F`'s `elearning-module-parser`, a complete chain now exists on permissive licences end to end — **generate → author into `tessera` → package/validate as SCORM or cmi5 via the parser → deliver into the incumbent LMS**. That chain is wired concretely as `P121` on [`../compose/patterns.md`](../compose/patterns.md).
+
+### 🔵 Verification, all `8` rows
+
+`8 / 8` resolved on `git ls-remote --symref` (`8 / 8` on `main`). `8 / 8` grants read from the payload at the real default ref and cross-checked against `license.spdx_id` — **`8 / 8` agreement, `0` divergences, `0` `NOASSERTION`**. One grant was at **`LICENSE.md`** rather than `LICENSE` (`suap-ava-suite/djangoapp-painel_ava`), so `715-B`'s expanded probe filename list earned its keep again. Byte counts are **as-served** per `716-G`; the mandated `curl -sI` check was re-controlled and is still non-discriminating (`200` for a repository that does not exist).
+
+
 ## 🆕 2026-11-09 (p715) — 🔴 **`0` FOUNDATION ROWS ADDED, AND THE REASON IS A LICENCE FINDING RATHER THAN A SEARCH NIL: LATAM's LARGEST PUBLISHER GRANTS `79` REPOSITORIES UNDER A LICENCE THAT IS REVOCABLE AT ITS SOLE DISCRETION.**
 
 **[`foundations.md`](foundations.md) `307` → `307`.** 🔴 **Stated as a nil, with the cause.** p715's supply channel this pass was an **owner probe** over three LATAM institutions (full method and verdicts in [`../agents/trending.md`](../agents/trending.md) `715-D`), and the single largest candidate estate it opened — [`EL-BID`](https://github.com/EL-BID), the **Inter-American Development Bank** — is **`0 / 79` permissive**:
