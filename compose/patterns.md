@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 P124–P126 — added at p717 (2026-11-09)
+
+## P124 — The textbook-to-tutor pipeline: get a client's PDF estate into a tutor without touching a copyleft or an "additional terms" grant (any institution with a document corpus and a strict licence gate: 4–6 weeks to a working pilot) 🟢 new at p717
+
+**The problem this exists for.** Every tutoring agent on [`../agents/top.md`](../agents/top.md) assumes a corpus. The client has PDFs — textbooks, past papers, syllabi, scans — and until p717 this KB named no ingestion layer at all (see [`../repos/foundations.md`](../repos/foundations.md) p717). The naive answer is `MinerU`, and it fails a strict licence gate.
+
+**Wiring, in order:**
+1. **Extract** — [`docling-project/docling`](https://github.com/docling-project/docling) (**MIT**, `1,071 B` payload, `70,311★`). PDF → structured Markdown/JSON with tables, formulas and reading order preserved. 🟢 **MIT is the whole point of choosing it:** it is the only ingestion option on the shelf that clears a gate refusing both copyleft and modified-Apache grants. 🔴 **Do not substitute [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) by default** — its `LICENSE.md` is Apache-2.0 **plus additional terms** (`717-L1`); keep it as a *flagged escalation* for pages Docling mangles, with legal sign-off attached.
+2. **Normalise mixed formats** — [`Unstructured-IO/unstructured`](https://github.com/Unstructured-IO/unstructured) (**Apache-2.0**, `11,359 B`) for the DOCX/PPTX/HTML tail that a university archive always has. Docling first, this for the remainder.
+3. **Chunk + retrieve** — [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) (**Apache-2.0**, `93,798★`) if you want deep layout-aware chunking out of the box, **or** [`run-llama/llama_index`](https://github.com/run-llama/llama_index) (**MIT**) if you need to own the indexing policy.
+4. **Store with filters** — [`qdrant/qdrant`](https://github.com/qdrant/qdrant) (**Apache-2.0**, `master`). 🟢 **Use payload filters, not raw similarity:** education retrieval is always scoped to *this* grade, *this* syllabus version, *this* language, and an unfiltered top-k will happily return next year's curriculum.
+5. **Tutor** — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (**Apache-2.0**, **`57,146★`**) pointed at the index.
+6. **Memory** — [`mem0ai/mem0`](https://github.com/mem0ai/mem0) (**Apache-2.0**). Without this there is no mastery tracking across sessions, only a chat that forgets.
+7. **Serve** — [`vllm-project/vllm`](https://github.com/vllm-project/vllm) (**Apache-2.0**) when the deployment is self-hosted. 🟢 **Size it for an exam window, not an average:** cohort traffic is synchronous — thirty submissions in one minute — and that burst, not daily volume, is what breaks a naive server.
+
+**Licence posture of the whole chain: MIT + Apache-2.0 end to end, zero copyleft, zero modified grants.** That is the sentence a client's legal gate needs, and it is why step 1 is Docling.
+
+## P125 — The Article 50 disclosure engagement: the one EU AI Act deliverable that is still due in 2026 (EMEA institutions and edtech vendors: 2–3 weeks per system) 🟢 new at p717
+
+**Why now and not 2027.** High-risk education obligations moved to **`2027-12-02`** (`T205`), but **Article 50 transparency duties did not move — they remain on `2026-08-02`** and the **emotion-recognition prohibition has applied since `2025-02-02`**. So there is exactly one near-dated, scopeable deliverable, and most of the market is mispricing it against a lapsed deadline.
+
+**Run it in this order:**
+1. **Inventory** every AI touchpoint in the estate, separating **provider** from **deployer** duties — an institution that merely *buys* an Annex III system acquires its own obligations, so the same inventory sells to both sides.
+2. **Triage for the prohibition first**, because it is already in force: any proctoring, engagement-scoring or wellbeing feature that infers affect. This is a stop-shipping finding, not a roadmap item.
+3. **Article 50 disclosure**: chatbots, pedagogical content generators and anything producing synthetic material need machine-readable and human-visible disclosure. Deliverable is UI copy, metadata and a logging path.
+4. **Classify the rest against Annex III** — admission, evaluation, exam scoring, proctoring — and scope conformity assessment, technical documentation, logging and human-oversight design as a programme landing before `2027-12-02`.
+5. 🔴 **Do not build the artefact around one statute citation.** US-side, a 2026 White House framework recommends **federal preemption of state AI laws**; the EU date has already moved once. Build the **inventory and policy scaffold** — the durable asset — and attach the citation as a thin layer.
+
+**Deliverables:** AI system register, provider/deployer split, prohibition exceptions log, disclosure implementation, Annex III classification memo, 2027 remediation plan.
+
+## P126 — The LATAM remediation play: sell governance to institutions that have ALREADY deployed (Brazil, Chile, Colombia, Costa Rica, Mexico: 6–8 weeks per institution) 🟢 new at p717
+
+**The premise inverts the usual pitch.** Teacher AI use in the region already exceeds the OECD average — **Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%` vs OECD `36%`** (TALIS 2024) — so "start using AI" is the wrong opening. The gap is governance, and it is measured twice: **Brazil, `53%` of administrators using AI against `22%` with any guidelines**; regional higher education, **`87%` of universities using AI, `26%` with a formal strategy, `9%` evaluating implementation** (UNESCO IESALC).
+
+**The engagement, and why the stack choice follows from the money:**
+1. **Shadow-AI inventory** — what is actually in use, by whom, against which student data. The `87%`/`26%` cascade says this will not be empty.
+2. **Guidelines + evaluation capability** — the `9%` figure is the sellable one: almost nobody can tell whether what they deployed works. Build the evaluation loop, not another pilot.
+3. 🟢 **Build on the permissive, self-hostable stack, because the licence budget is not there.** Regional AI-in-education spend was **`USD 105.6M` (2024)** against a global 2026 base of **`~USD 9.6B`–`11.4B`** — about one percent of global spend with world-leading usage. Use `P124` as the technical spine and **take the MIT branch at every fork** (`docling` over `MinerU`, `llama_index` over a paid index).
+4. **Offline-first where connectivity is the constraint** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**, `1,173★`) is already on [`../verticals/solutions.md`](../verticals/solutions.md) and is the right delivery shell.
+5. 🔴 **Make no compliance claim.** **Brazil's PL 2338/2023 is not law** (Senate-approved `2024-12-10`, in the Chamber, a May 2026 plenary vote did not happen, and it must return to the Senate), whether education counts as high-risk under it is **unestablished**, and this pass found **nothing at all** on Mexico. The operative regime in Brazil today is **LGPD/ANPD**. Scope to data protection, and run a legislative search before signing anything that says "AI Act".
+
+**Where the counterparties are:** HolonIQ's 2026 LATAM EdTech 100 (Brazil ~half the cohort; **Teachy**, **Ginia**), **Google.org's `$4.6M`** nine-country programme (partners **Sincroniza Educação**, **Educación para Compartir**), the **UNESCO/CONALEP/DGETI** pilot in Mexico (Aug 2026), UNESCO's regional **Observatory on AI in Education for LAC**, and the **IDB**'s catalogue of **193** regional solutions.
+
 # 🧩 Composition patterns — Education
 
 > Concrete recipes. Every component named below was verified on 2026-11-04, and the nine components cited by 🆕 **P38** were re-verified on 2026-11-05 at p669 (`git ls-remote --symref`, real default ref on all nine) (existence + licence payload + stars where shown) and appears in `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.

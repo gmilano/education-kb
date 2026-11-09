@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🔴 No new agent rows at p717 — and FOUR LICENCE TRAPS on the layer this shelf composes against
+
+🔄 **`302` → `302`.** This pass filed **zero** rows here, and that is a finding rather than a nil return: the education-agent search legs (global + four regions) resolved `10` of `12` candidate subjects against `gh api search/repositories`, and **every resolved subject was already on this shelf** — `DeepTutor` (`Apache-2.0`, **`57,146★`**), `AgentPilot` (`MIT`, `7,970★`), `Paper2Slides` (`MIT`, `3,856★`), `VideoAgent` (`MIT`, `2,030★`), `OATutor` (`MIT`, `278★`), `gen-mentor` (`CC0-1.0`, `136★`), `open-tutor-ai-CE` (`BSD-3-Clause`, `116★`), `LightReasoner` (`MIT`, `615★`), `awesome-ai-education` (`MIT`, `5★`), `awesome-ai-llm4education` (**`NONE`** — no grant at all, `221★`). Padding the shelf to look productive would have cost it its only real property, which is that every row is a subject someone verified.
+
+🟢 **`717-A` — the two index-miss rows from `p690` were re-probed and BOTH ARE STILL ALIVE, so the standing rule holds.** [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) and [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) are again **absent from `search/repositories`** while `git ls-remote --symref` resolves both to `refs/heads/main`, and a direct payload read returns **`MIT`** for each (`instructional_agents`: *"MIT License / Copyright (c) 2025 DaRL-GenAI"*; `open-learning-ai-tutor`: *"MIT License / Copyright (c) 2024 Romain Puech"*). **A search miss is still not grounds to retire a row** — third consecutive confirmation.
+
+### 🔴 `717-L1` — `MinerU` is NOT plain Apache-2.0, and it is the one every education engagement will reach for first
+
+[`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) (`83,333★`) is the strongest open PDF-and-textbook extractor there is, and `search/repositories` reports its `spdx_id` as **`NOASSERTION`**. The payload says why. `LICENSE.md` at `master` is **`3,300 B`** (sha256₁₂ `9aee4a79d9af`) — far too short to be the Apache text — and it opens: *"MinerU is licensed under Apache License 2.0 **and is subject to the additional terms below**. Except to the extent expressly modified or supplemented by these additional terms, your other rights and obligations are governed by Apache License 2.0."* **That is an Apache-2.0-plus-additional-terms grant, not Apache-2.0**, and it will not clear a strict client licence gate without legal review. 🟢 **The substitution is on the shelf as of this pass:** [`docling-project/docling`](https://github.com/docling-project/docling) is **MIT** on a `1,071 B` payload and does the same job — file it as the default and keep `MinerU` as the escalation.
+
+### 🔴 `717-L2` — three more grants that are not what a roundup will tell you they are
+
+| Repo | What a list calls it | What the payload says | Verdict |
+|---|---|---|---|
+| [`FlowiseAI/Flowise`](https://github.com/FlowiseAI/Flowise) | "open-source low-code agent builder", `55,568★` | `LICENSE.md` `10,540 B` sha256₁₂ `90b8683c99d6` — an **Apache** payload, but `spdx_id` is **`NOASSERTION`** | 🔴 **DO NOT START HERE: `archived: true`**, last push `2026-08-13`. Read-only. The star count is a tombstone, not traction. |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | "MIT multi-agent framework", `61,752★` | `LICENSE` `18,649 B` sha256₁₂ `95df2e956486`, opening **"Attribution 4.0 International"** → `spdx_id` **`CC-BY-4.0`** | 🔴 A **content** licence on a code repo. Whatever the code grant is, it is **not** stated by the root `LICENSE`, and "MIT" is an assumption no payload supports. |
+| [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | "MIT LLM proxy", `62,934★` | `LICENSE` **`1,418 B`** sha256₁₂ `4700ccb12a3c` — a **split grant**: named directories are carved out, and only *"content outside of the above mentioned directories or restrictions above is available under the MIT license"* | 🔴 **Not plain MIT.** Which files you vendor decides which licence you are under. |
+
+🟢 **The transferable method, and it is the same one `p707` landed:** `spdx_id == NOASSERTION` is not noise and not a scanner failure — in all four cases above it was the detector **correctly refusing** to classify a grant that had been modified, split or replaced. **Treat `NOASSERTION` as a payload-read instruction, never as "unknown, assume permissive".** A cheap tell that costs one `wc -c`: an Apache-2.0 claim on a payload that is not ~`11,350 B` is a modified Apache grant.
+
 # 🎯 AI agents — Education
 
 > Open source AI agents for the education industry. Focus: MIT / Apache-2.0 / BSD — the licences Globant can build commercial derivatives on.

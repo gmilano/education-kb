@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p717) — 🔴 **ZERO NEW AGENT ROWS, TEN NEW FOUNDATION ROWS, AND THE REASON IS A GAP THIS KB HAD NEVER DECLARED: IT CURATES TUTORS AND HAS NEVER NAMED AN INGESTION LAYER**
+
+**`11` subjects filed** (`0` agents, `10` foundations, `1` platform) out of `41` verified and `~60` screened across `12` search legs (`4` global + `4` regional + `4` gap-closing follow-ups). [`top.md`](top.md) **`302` → `302`** (nil, and stated as nil). [`../repos/foundations.md`](../repos/foundations.md) **`315` → `325`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`124` → `125`**.
+
+**Region movement: `North America 30 → 34`, `EMEA 34 → 35`, `APAC 76 → 77`, `Global 137 → 142`; `LATAM 25` UNMOVED and the freeze is stated as a freeze** — no LATAM-origin repository cleared verification this pass, and the regional leg's yield was market intelligence rather than code (filed to [`../intel/market.md`](../intel/market.md) `### LATAM`). **`6` of the `11` filed rows were PLACED on repository-file evidence and `5` were REFUSED to `Global`**, itemised in `717-E` below.
+
+### 🔴 `717-A` — the agent shelf returned nil, and nil is the correct answer
+All `10` of the `12` education-agent candidates that resolved against `gh api search/repositories` were **already filed**: `DeepTutor` `Apache-2.0` **`57,146★`**, `AgentPilot` `MIT` `7,970★`, `Paper2Slides` `MIT` `3,856★`, `VideoAgent` `MIT` `2,030★`, `LightReasoner` `MIT` `615★`, `pykt-toolkit` `MIT` `458★`, `OATutor` `MIT` `278★`, `awesome-ai-llm4education` **`NONE`** `221★`, `gen-mentor` `CC0-1.0` `136★`, `open-tutor-ai-CE` `BSD-3-Clause` `116★`. 🟢 **Star-column movement worth recording: `DeepTutor` is at `57,146★`** — the secondary coverage this KB was offered in the pass quoted *"passed 20,000 stars"*, and an older local copy of this shelf carried `22k+`. **Blog star counts on this subject lag reality by a factor of ~2.8; the API value is the only usable one.**
+
+### 🟢 `717-B` — the two index-miss rows re-probed ALIVE for the third consecutive pass
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) and [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor): both **absent from `search/repositories`**, both resolve via `git ls-remote --symref` to `refs/heads/main`, both **`MIT`** on a first-hand payload read (`"Copyright (c) 2025 DaRL-GenAI"` / `"Copyright (c) 2024 Romain Puech"`). **A search miss is not grounds to retire a row.** 🔴 Note the API constraint behind this: `gh api repos/{owner}/{repo}` is **refused for every repository outside this session's scope** (HTTP `403`, *"GitHub access to this repository is not enabled for this session"*), so `search/repositories` + `ls-remote` + `raw.githubusercontent.com` are the only three channels available, and a subject missing from the search index can **only** be verified on the other two.
+
+### 🔴 `717-C` — FOUR licence traps on the composition layer, all four reported `NOASSERTION`, all four real
+Full table and payload evidence in [`top.md`](top.md) `717-L1`/`717-L2`. Summary: **[`opendatalab/MinerU`](https://github.com/opendatalab/MinerU)** `83,333★` is **Apache-2.0 + additional terms** (`LICENSE.md` `3,300 B`, sha256₁₂ `9aee4a79d9af`) — the best education PDF extractor there is, and **not cleanly permissive**; **[`BerriAI/litellm`](https://github.com/BerriAI/litellm)** `62,934★` is a **split grant** (`1,418 B`, directories carved out of MIT); **[`microsoft/autogen`](https://github.com/microsoft/autogen)** `61,752★` ships **`CC-BY-4.0`** as its root `LICENSE` (`18,649 B`); **[`FlowiseAI/Flowise`](https://github.com/FlowiseAI/Flowise)** `55,568★` is **`archived: true`** since `2026-08-13`. 🟢 **`NOASSERTION` was the detector refusing to classify a modified grant — treat it as a payload-read instruction, never as "assume permissive".** Canonical-Apache cross-check: `ragflow` and `smolagents` independently read `11,356 B` / sha256₁₂ `43070e2d4e53`.
+
+### 🔴 `717-D` — a subject that was NOT filed because the address would have been fabricated
+`AlekSIS` (German school information system: timetables, digital class records, person/group management) surfaced as a plausible platform row. `git ls-remote --symref https://github.com/AlekSIS/AlekSIS-Core` returned **`fatal: could not read Username for 'https://github.com'`** — GitHub's credential prompt for a path that does not exist to this session, **not** a network failure, and every other subject in the pass resolved on the same probe. **The project is real and self-hosted on the Teckids `edugit.org` GitLab; it has no GitHub address.** Recorded as a named gap on [`../verticals/solutions.md`](../verticals/solutions.md) and generalised to **`T207`**: GitHub-only discovery systematically under-reports EMEA, so **every `EMEA` count in this KB is a floor set by the instrument.**
+
+### `717-E` — placement evidence and refusals, itemised
+| Subject | Region | Evidence, or why REFUSED |
+|---|---|---|
+| [`docling-project/docling`](https://github.com/docling-project/docling) | **EMEA** | `main` README names **IBM Research Zurich** |
+| [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | **North America** | `main` README names **UC Berkeley** / **Sky Computing Lab** |
+| [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | **North America** | `main` README names **San Francisco**, **Y Combinator** |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **North America** | `main` README names **LangChain Inc** |
+| [`stanfordnlp/dspy`](https://github.com/stanfordnlp/dspy) | **North America** ⚠️ | owner account `stanfordnlp` only — **weaker than the rows above, and marked as such** |
+| [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) | **APAC** | repo serves `README_zh.md` at `main` (HTTP `200`); owner `InfiniFlow` |
+| [`qdrant/qdrant`](https://github.com/qdrant/qdrant) | `Global` | 🔴 **REFUSED** — no seat string in `master` README. Berlin seat is reported off-repo and was deliberately **not** used |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `Global` | 🔴 **REFUSED** — README names Hugging Face; the lowercase `paris` occurrence is inside a URL, not a seat statement |
+| [`run-llama/llama_index`](https://github.com/run-llama/llama_index) | `Global` | 🔴 **REFUSED** — no geographic or corporate string in `main` README |
+| [`Unstructured-IO/unstructured`](https://github.com/Unstructured-IO/unstructured) | `Global` | 🔴 **REFUSED** — no seat string in `main` README |
+| [`papermerge/papermerge-core`](https://github.com/papermerge/papermerge-core) | `Global` | 🔴 **REFUSED** — `master` README is `3,124 B` and carries no seat string |
+
+🟢 **`opendatalab/MinerU` was placed APAC** (serves `README_zh-CN.md`, HTTP `200`; owner `OpenDataLab`) but is **recorded as a flag, not a row**, so it does not move the count.
+
+### 🔴 `717-F` — the regional legs that ran and returned nothing, stated rather than left silent
+| Leg | Returned | Gap recorded |
+|---|---|---|
+| EMEA player ranking | capital, not share — `Multiverse` `$70M`, `Ed.ai` `€5M`, `Medly` `$8M`, `Lucida` `$5.4M`, `Elephant Co.` `>€5M` | **no reliable 2026 ranking of European edtech by country**; the UK/FR/DE comparison is **not** covered |
+| Nordics | one investor name (Seedcamp) | **nothing region-specific at all** |
+| Mexico AI regulation | nothing | **no AI-regulation status found for Mexico** |
+| Brazil education high-risk status | PL 2338/2023 status only (still not law) | **whether education is high-risk under PL 2338 is unestablished** |
+| India / Japan education directives | secondary coverage only | **no 2026 ministry directive text** for either |
+
+🟢 **An unplaced row that says why it is unplaced is worth more than one that is silently `Global`** — and a leg that returned nothing is worth recording, because silence looks exactly like coverage.
+
+
 ## 🆕 2026-11-09 (p716) — 🔴 **THE NOVELTY FILTER ITSELF PRODUCED A FALSE NOVELTY, AND THE CAUSE IS `comm` ON TWO DIFFERENTLY-COLLATED SORTS. CAUGHT BY AN ARITY/DUPLICATE PASS BEFORE PUBLICATION, NOT BY THE FILTER.**
 
 **`39` subjects filed** (`27` agents, `8` foundations, `4` platforms) out of `40` verified and `68` screened. [`top.md`](top.md) **`275` → `302`** (🔴 **not** `274 → 301`: see `716-A`). [`../repos/foundations.md`](../repos/foundations.md) **`307` → `315`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`120` → `124`**.
@@ -40467,7 +40514,7 @@ p236 called `45`% *"this KB's steady-state rediscovery rate at its current reach
 | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 *(`35 121` B)* | PHP school management. 🔴 **Default branch is the RELEASE branch `v31.0.00`** — not `main`, not `master` |
 | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0 by a `19`-byte CLAIM**, `develop` @ `73ce33ef2719` | Education management on ERPNext. 🔴 Its `license.txt` is the single line `"License: GNU GPL V3"` — p217's distinction: a claim, not a grant body |
 
-🔴 **Refused this week: [`AlekSIS/AlekSIS-Core`](https://github.com/AlekSIS/AlekSIS-Core)** — `git ls-remote` DEAD on github.com; the project lives on its own GitLab *(`edugit.org`)*, unprobed. 🟡 **Recorded as a CHANNEL gap, not an absence. `ACTION UD`.**
+🔴 **Refused this week: `AlekSIS/AlekSIS-Core` (no GitHub address — deliberately NOT linked)** — `git ls-remote` DEAD on github.com; the project lives on its own GitLab *(`edugit.org`)*, unprobed. 🟡 **Recorded as a CHANNEL gap, not an absence. `ACTION UD`.**
 
 ### 🔴 `A234-3` — what this week says about placement, against what last week said
 

@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p717) — 🟢 **TEN FOUNDATION ROWS, AND THEY CLOSE THE LARGEST UNDECLARED GAP THIS KB HAS HAD: THERE WAS NO COMPOSITION LAYER AND NO INGESTION LAYER AT ALL**
+
+**[`foundations.md`](foundations.md) `315` → `325`.** `315` carried in (matches `p716`'s published `315`), `10` filed, `325` published · arity `325/325` at `5` columns, `0` ragged · `10` distinct new subjects, `0` duplicated against the existing shelf.
+
+**Regions on the `10`: `North America 4` · `EMEA 1` · `APAC 1` · `Global 4`.** All `4` `Global` rows are **explicit refusals with the reason in-cell**, not silent defaults; per-row evidence in [`../agents/trending.md`](../agents/trending.md) `717-E`.
+
+### 🔴 `717-G` (primary) — the gap was found by a presence check, not a search, and it had been invisible for 700+ passes
+A presence check of the standard agent/RAG composition layer across all three shelves (`agents/top.md`, `foundations.md`, `verticals/solutions.md`) returned **`ollama` and nothing else**. Absent: `LangGraph`, `llama_index`, `DSPy`, `smolagents`, `mem0`, `Qdrant`, `vLLM`, `RAGFlow`, and — the serious one — **every document-ingestion tool**: no `Docling`, no `Unstructured`, no `MinerU`.
+
+🟢 **Why that is a defect and not a scope choice.** This KB is genuinely deep on education-*specific* software: `325` foundation rows, `302` agent rows, tutors, knowledge tracing, LMS/MCP connectors for Canvas, Moodle, Brightspace and ILIAS. But **ingestion is not a generic concern in this industry — in education the corpus *is* PDFs**: textbooks, past exam papers, syllabi, accreditation dossiers, scans. The KB could name the best open tutor in the world (`DeepTutor`, `57,146★`) and still not tell a studio how to get a client's textbook estate into it. **Every curation pass had been adding tutors to a shelf with no way to feed them.**
+
+### 🟢 `717-H` — the ten rows, as a layer rather than a list
+| Layer | Subject | Grant (payload-read) | ★ |
+|---|---|---|--:|
+| Extract (default) | [`docling-project/docling`](https://github.com/docling-project/docling) | **MIT** `1,071 B` `b6f0ee352735` | `70,311` |
+| Extract (mixed estate) | [`Unstructured-IO/unstructured`](https://github.com/Unstructured-IO/unstructured) | **Apache-2.0** `11,359 B` `678453f73e21` | `15,700` |
+| Retrieve (batteries-included) | [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) | **Apache-2.0** `11,356 B` `43070e2d4e53` | `93,798` |
+| Index (own the policy) | [`run-llama/llama_index`](https://github.com/run-llama/llama_index) | **MIT** `1,064 B` `66f2c8e2a3e2` | `52,851` |
+| Vector store | [`qdrant/qdrant`](https://github.com/qdrant/qdrant) | **Apache-2.0** `11,350 B` `f693e4b9c621` | `35,479` |
+| Memory | [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | **Apache-2.0** `11,348 B` `b17d5640872d` | `68,660` |
+| Orchestration (durable) | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **MIT** `1,071 B` `cdb6bdb41698` | `44,670` |
+| Orchestration (minimal) | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** `11,356 B` `43070e2d4e53` | `30,268` |
+| Prompt optimisation | [`stanfordnlp/dspy`](https://github.com/stanfordnlp/dspy) | **MIT** `1,084 B` `05d651fe74ff` | `38,974` |
+| Serving | [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | **Apache-2.0** `11,356 B` `43070e2d4e53` | `96,573` |
+
+🟢 **`10/10` permissive: `4` MIT, `6` Apache-2.0, `0` copyleft, `0` modified grants.** That is deliberate — the four modified/dead grants screened out in the same pass (`MinerU`, `litellm`, `autogen`, `Flowise`) are filed as flags on [`../agents/top.md`](../agents/top.md) `717-L1`/`717-L2`, **not** as rows here. 🟢 **All `10` rows are payload-grade — every licence cell was read from the bytes.** `vllm` was the last outstanding one and was byte-read before publication: `LICENSE` at `main`, `11,356 B`, sha256₁₂ `43070e2d4e53` — **the same canonical Apache-2.0 payload as `ragflow` and `smolagents`**, which makes it a three-way cross-check rather than a third assertion.
+
+### 🟢 `717-I` — the education-specific argument for each fork, because a generic stack list is not intelligence
+- **`docling` over `MinerU` is a licence decision, not a quality one.** `MinerU` is the stronger extractor and is **Apache-2.0 + additional terms** on a `3,300 B` payload. Docling is **MIT** and does the same job well enough. In LATAM and public-sector EMEA, where the licence gate is strict and the budget is thin (`T205`, `### LATAM`), the MIT branch is the only one that ships.
+- **`qdrant` payload filters, not raw similarity.** Education retrieval is always scoped — *this* grade, *this* syllabus version, *this* language. Unfiltered top-k returns next year's curriculum.
+- **`mem0` is what makes mastery tracking possible.** Every tutor on the agent shelf advertising persistence has built this itself.
+- **`langgraph` checkpointing fits the actual unit of work.** A multi-week learning path is a long-running, resumable, human-interruptible graph — not a chain.
+- **`vllm` must be sized for an exam window.** Cohort load is synchronous: thirty submissions in one minute. The burst, not the daily average, is what breaks a naive server.
+
+**Composed end to end as `P124` in [`../compose/patterns.md`](../compose/patterns.md)** — the textbook-to-tutor pipeline, MIT + Apache-2.0 throughout, zero copyleft.
+
+
 ## 🆕 2026-11-09 (p716) — 🟢 **`8` FOUNDATION ROWS, AND `2` OF THEM CLOSE GAPS THIS SHELF DECLARED ITSELF: THE STANDARDS LAYER AND THE OPERATIONS LAYER BOTH ARRIVED IN ONE PASS, BOTH APACHE-2.0, BOTH AT `5★`**
 
 **[`foundations.md`](foundations.md) `307` → `315`.** `307` carried in (counted between the header separator and the terminating blank line; matches `p714`'s published `307`, with `p715` correctly recording nil), `8` filed, `315` published · arity `315/315` at `5` columns, `0` ragged · `315` distinct subjects, `0` duplicated.
