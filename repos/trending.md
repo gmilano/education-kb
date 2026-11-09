@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p720) — 🔴 **FIVE FOUNDATION ROWS, AND THE FINDING IS A MEASUREMENT OF DEATH: THE PERMISSIVE SCHOOL-ADMINISTRATION FIELD HAS EXACTLY ONE LIVE MEMBER ABOVE `48★`, AND NONE OF THE NINE DEAD ONES IS FLAGGED `archived`**
+
+**[`foundations.md`](foundations.md) `359` → `364`.** 🟢 **`359` carried in COUNTED and it MATCHED the published figure — a SECOND consecutive clean arrival, this shelf's longest run.** **Regions on the `5`: `APAC 2` · `Global 2` · `EMEA 1`.** Both `Global` rows are **explicit in-cell refusals with the reason stated**.
+
+### 🔴 `720-D` — the graveyard, measured on a field this shelf has re-searched eight times
+
+| Subject | ★ | Grant | Last pushed | Verdict |
+|---|--:|---|---|---|
+| [`sumitkumar1503/schoolmanagement`](https://github.com/sumitkumar1503/schoolmanagement) | `493` | MIT | `2024-03-29` | 🔴 dormant `2.6 y` |
+| [`Akshat4112/school-erp`](https://github.com/Akshat4112/school-erp) | `318` | MIT | `2021-09-30` | 🔴 dormant `5.1 y` |
+| [`sajib1066/school_management_system`](https://github.com/sajib1066/school_management_system) | `259` | MIT | `2023-10-19` | 🔴 dormant `3.1 y` |
+| [`kumarpandule/Online-Library-Management-System-PHP`](https://github.com/kumarpandule/Online-Library-Management-System-PHP) | `102` | Apache-2.0 | `2023-11-20` | 🔴 dormant `3.0 y` |
+| [`AminAliH47/PicoSchool`](https://github.com/AminAliH47/PicoSchool) | `95` | Apache-2.0 | `2024-04-05` | 🔴 dormant `2.6 y` |
+| [`Safnaj/School-Management-System`](https://github.com/Safnaj/School-Management-System) | `81` | Apache-2.0 | `2020-01-25` | 🔴 dormant `6.8 y` |
+| [`aisuresh/School-Management-System`](https://github.com/aisuresh/School-Management-System) | `80` | Apache-2.0 | `2021-05-29` | 🔴 dormant `5.5 y` |
+| [`TechNodes2-0/ElectiveHub`](https://github.com/TechNodes2-0/ElectiveHub) | `69` | MIT | `2024-08-07` | 🔴 dormant `2.3 y` |
+| [`rickxy/Student-Attendance-Management-System`](https://github.com/rickxy/Student-Attendance-Management-System) | `48` | MIT | `2023-01-30` | 🔴 dormant `3.8 y` |
+| **[`tough-dev-school/education-backend`](https://github.com/tough-dev-school/education-backend)** | **`489`** | **MIT** | **`2026-10-31`** | 🟢 **ALIVE — filed** |
+
+🔴 **Not one of the nine is `archived`.** A dormant repository carries no flag, so `archived: false` on a repository last pushed in January 2020 looks live to any check that reads the flag and not the date. 🟢 **A star-ranked roundup would recommend the `493★` repository over the `489★` one; the first has been untouched for two and a half years and the second shipped nine days ago.** 🔵 **Engagement consequence: for school administration there is no permissive starting point to adopt — it is copyleft incumbents or a build.**
+
+### 🟢 `720-F` — what `720-M` changes for this shelf
+
+Nine of the ten verdicts above rest on `pushed_at` and `archived`, **two fields unreadable here since `p708`.** `p692` needed a dedicated archived-shelf audit to find `11` dead published subjects, `8` of them silent. 🟢 **Liveness is now a discovery-time screen rather than a periodic audit of damage already done.**
+
+### 🔵 `720-W` — a licence file is an affiliation record
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)'s region was not resolvable from its README; its Apache `APPENDIX` reads *"Copyright 2025 Data Intelligence Lab, The University of Hong Kong"* → `APAC`, settled from the bytes. 🟢 **Where the canonical `[yyyy] [name of copyright owner]` placeholder has been REPLACED, the grant names a licensor — often the most reliable provenance statement in the repository.** 🔴 **And all three non-canonical Apache byte counts measured this pass (`11,408`, `11,343`, `10,252`) were filled appendices and indentation, NOT truncation — all three retained `APPENDIX`, `Disclaimer of Warranty` and `Limitation of Liability`. A byte count off canonical is a reason to READ the payload, not a verdict on it.**
+
+### 🔴 `720-D3` — a NEW trap class: licence laundering by fork, and it is the inverse of `719-P`
+
+The mandated vertical leg recommended **iDURAR** as *"fully open-source under the MIT license"* at owner `idurarapp`. Checked: 🔴 **the owner `idurarapp` does not exist** (`422`), the project is [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) and its grant is 🔴 **AGPL-3.0** (`34,230 B`, sha256₁₂ `7800536d5087`), and its README has **`0`** matches for `school|student|education|course`.
+
+🔴 **The decoy: [`u4078974/idurar-erp-crm`](https://github.com/u4078974/idurar-erp-crm) (`3★`, branch `demo`) carries MIT — `1,063 B`, sha256₁₂ `105269960eb9` — and the MIT text still names the upstream author (*"Copyright (c) 2019 Lalami"*).** A `1,063`-byte MIT grant has replaced a `34,230`-byte AGPL-3.0 one in a third-party fork, which a fork has no authority to do. **Every automated licence scanner reports `MIT` and passes.**
+
+🟢 **`719-P` was a permissive grant over a proprietary runtime — the licence real, the dependency not free. `720-D3` is a permissive grant that is not the project's grant at all.** 🔵 **Screen added to `P135`: when a low-star repository carries a MORE permissive grant than a high-star repository of the same name, the permissive one is invalid until proven otherwise.**
+
+### 🟢 `720-C` — this shelf's canonical Apache figures are confirmed, settling `719-I`
+
+[`Mereithhh/guandan-lab`](https://github.com/Mereithhh/guandan-lab) reproduces `11,358` / `cfc7749b96f6` (*as served*) and [`seanmcww/uk-english-lesson-planning`](https://github.com/seanmcww/uk-english-lesson-planning) reproduces `11,357` / `58d1e17ffe51` (*trailing newline stripped*), both exactly, from unrelated owners. 🟢 **Both recorded figures were correct — they are two states of one document differing by the final `LF`.** 🔵 **Convention published: bytes AS SERVED, trailing newline included.** A grant read through `$(...)` in a shell loses that byte, which is how a one-byte discrepancy enters a KB.
+
+-----
+
 ## 🆕 2026-11-09 (p719) — 🔴 **TWELVE FOUNDATION ROWS, AND THE FINDING IS A TRAP CLASS THIS SHELF HAD NEVER RECORDED: A PERMISSIVE GRANT OVER A PROPRIETARY RUNTIME**
 
 **[`foundations.md`](foundations.md) `347` → `359`.** 🟢 **`347` carried in COUNTED and it MATCHED the published figure** — the first clean arrival on this shelf since `p716`, and `p718`'s instrument repair (locating each shelf by its column-header signature rather than by the prose heading above it) is why. **Regions on the `12`: `Global 8` · `APAC 3` · `EMEA 1`.** All `8` `Global` rows are **explicit in-cell refusals with the reason stated**, never silent defaults.

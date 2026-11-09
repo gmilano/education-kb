@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 P134–P137 — added at p720 (2026-11-09)
+
+## P134 — The verified-solver tutor: the model narrates, a deterministic engine computes, and code checks the reply before the learner sees it (every region; mandatory for any procedural subject)
+
+**The problem it solves, named precisely:** a general model states a procedural rule correctly and then executes it wrongly. Measured on [`Divyakush2006/OS-Tutor`](https://github.com/Divyakush2006/OS-Tutor)'s suite, **`7 / 7`** of the fine-tuned model's scheduling failures were *correct arithmetic on a wrong schedule* — the error class a learner is least able to catch.
+
+**Wire it exactly like this:**
+
+1. **Router (code, deterministic)** — classify the turn into *worked problem*, *concept question*, or *student shows an attempt*. Not a model call.
+2. **Worked problem → parameter extraction to typed JSON → grounding check (every number must appear in the question) → verified simulator.** `OS-Tutor` ships seven: CPU scheduling (7 algorithms), page replacement, disk scheduling, Banker's safety and request, free-space allocation, address translation — each unit-tested against canonical textbook answers.
+3. **Concept question → hybrid retrieval** (BM25 + MiniLM, reciprocal-rank fusion, **abstain gate**) → model answer **with citations** → fact-checker over a misconception rule table.
+4. **Student shows an attempt → Socratic prompt → tutor check against a PRIVATE simulator run**, so the tutor can confirm or redirect without revealing the answer.
+5. **Compose on:** [`Divyakush2006/OS-Tutor`](https://github.com/Divyakush2006/OS-Tutor) (MIT) as the reference implementation; [`kunbo928/k-teach`](https://github.com/kunbo928/k-teach) (MIT) for the platform-neutral `SKILL.md` teaching-loop contract and its deterministic CLI; [`turtlelnc/MES-Homework`](https://github.com/turtlelnc/MES-Homework) (MIT) for the marking-side equivalent, where every published figure is computed from teacher-reviewed data and the model only writes it up.
+
+🟢 **The two numbers to quote in a proposal:** answer-withholding went from `15/30` to **`30/30`** once the tutor path was checked against the private simulator, and the solver is worth **`+23`** problems (`p < 10⁻⁶`) where the fine-tune alone is worth a statistically insignificant `+4` (`p = 0.557`). 🔵 **Budget the solver, not the training run.** Runs on a single 8 GB laptop GPU at `42.9 tok/s` with `9.2–21.2 ms` p95 retrieval, so the whole pattern is deployable on-premise — which is what makes it viable under Korea's oversight duties, Vietnam's high-risk education designation and EU Annex III.
+
+## P135 — The liveness-and-estate screen: three API calls that must run BEFORE a repository is proposed to a client (every region; mandatory)
+
+🔴 **p720 nearly filed a `46★` LATAM repository that is archived, and refused nine permissive school systems that look alive and are not.** This is the screen, and it is cheap.
+
+```bash
+# 1. Metadata WITHOUT the direct repo endpoint (403 in a scoped session).
+#    search/repositories returns stars, spdx_id, default_branch, archived, pushed_at.
+gh api -X GET search/repositories -f q="<repo-name> in:name" -f per_page=100 \
+  --jq '.items[] | select(.full_name=="<owner>/<repo>")
+        | "\(.full_name) ★\(.stargazers_count) \(.license.spdx_id) \(.default_branch) arch=\(.archived) push=\(.pushed_at[0:10])"'
+
+# 2. Grant payload bytes (raw.githubusercontent is open where the API is not).
+curl -sS "https://raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE" -o L \
+  && wc -c < L && sha256sum L | cut -c1-12 \
+  && grep -c 'APPENDIX\|Limitation of Liability' L   # structure present => not truncated
+
+# 3. Estate size BEFORE expanding an owner or a naming convention.
+gh api -X GET search/repositories -f q="<convention> in:name" -f per_page=1 --jq '.total_count'
+```
+
+**Reject on any of:** `archived: true`; `pushed_at` older than ~18 months with no release; a grant whose structure is missing (`APPENDIX`, `Disclaimer of Warranty`, `Limitation of Liability`); an estate above ~`50` near-identical members; or a README that names a required vendor platform (`719-P`).
+
+🔴 **Fourth check, added at p720 and not optional — compare against the fork network's UPSTREAM.** Search the repository name and sort the results: **if a low-star repository carries a MORE permissive grant than a high-star repository of the same name, treat the permissive one as invalid until proven otherwise.** Measured instance: upstream [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) is **AGPL-3.0** (`34,230 B`, `7800536d5087`) while a `3★` fork carries **MIT** (`1,063 B`, `105269960eb9`) and still names the upstream author. A fork cannot relicense AGPL code as MIT, and every automated scanner reports `MIT` and passes.
+
+```bash
+# Upstream check: same name, ranked by adoption. Disagreeing licences => read both payloads.
+gh api -X GET search/repositories -f q="<repo-name> in:name" -f sort=stars -f order=desc -f per_page=10 \
+  --jq '.items[] | "\(.full_name) ★\(.stargazers_count) \(.license.spdx_id // "NOLIC")"'
+```
+
+🔵 **One query per term — never `OR`.** See `P137`.
+
+## P136 — The curriculum-to-market audit: a billable deliverable assembled from two permissive repositories (strongest fit North America and EMEA higher ed; applies everywhere)
+
+A gap analysis an institution will pay for, and neither half needs building:
+
+1. **Measure the gap** — [`RiceSouffle/Curriculum-Gap-Analyser`](https://github.com/RiceSouffle/Curriculum-Gap-Analyser) (MIT) compares a syllabus against **live job postings** and reports the in-demand skills the curriculum omits.
+2. **Fill it** — [`Enterprise-DNA-OS/ai-learning-path-generator`](https://github.com/Enterprise-DNA-OS/ai-learning-path-generator) (MIT) turns each gap into a sequenced, project-based pathway.
+3. **Source the content** — [`karthikreddy-7/ai-engineering-playbook`](https://github.com/karthikreddy-7/ai-engineering-playbook) (MIT, MDX) is permissive curriculum material for the AI-engineering gaps the audit will most often surface.
+4. **Deliver into the record system** — [`robles311/planificacion-profesores`](https://github.com/robles311/planificacion-profesores) (MIT) demonstrates the last mile that matters: output as Word `.docx`, the format institutions file and inspectors read.
+5. **Govern it** — [`Altinn/kihub`](https://github.com/Altinn/kihub) (MIT, Norway's Digdir) is a state-owned reference for publishing tools, learning paths and agent governance as one surface.
+
+🟢 **Why this is the strongest commercial recipe on this shelf: it maps onto `T221`'s accreditation channel.** A curriculum-to-market gap, evidenced and remediated with a sequenced pathway, is exactly what quality-assurance review asks for. 🟡 **Both halves are low-adoption (`5★`, `3★`) — read them as designs and expect to harden them; the value is the deliverable shape, not the code maturity.**
+
+## P137 — The discovery leg that actually executes: one term per query, because `OR` is silently dropped (every region; corrects P132)
+
+🔴 **`P132` (p719) specified a multi-term non-anglophone discovery leg. Measured at p720, that form does not run.** Three queries returned `total_count: 16128` identically — including one containing none of the eight disjoined terms. **The `OR` list is discarded and only the common terms execute.** Every multi-term leg this base has run reported coverage it never had.
+
+**The corrected leg — loop, one term per call:**
+
+```bash
+HELD=held_all.txt   # every address already on the shelves, lowercased
+for t in docente educativo aprendizaje escolar profesor \
+         ensino aluno educacional professora alfabetizacao; do
+  gh api -X GET search/repositories \
+    -f q="$t in:name,description license:mit license:apache-2.0 pushed:>2026-01-01" \
+    -f sort=stars -f order=desc -f per_page=60 \
+    --jq '.items[] | [.full_name,.stargazers_count,(.license.spdx_id//"NOLIC"),
+                      .pushed_at[0:10],((.description//"-")|.[0:110])] | @tsv' \
+  | grep -vFf "$HELD"      # drop what is already held; what remains is the real yield
+done
+```
+
+🟢 **Result when run: `5` filable LATAM rows (`LATAM 27 → 32`), where the `OR` form had produced none of them.** 🔵 **And the general rule, which is worth more than the LATAM rows: a nil from a multi-term query is not evidence of absence — it is evidence the query did not run.** Add `topic:` qualifiers (`topic:education topic:ai-agent`, `topic:intelligent-tutoring-system`) for precision; they do execute, and they outperform prose keywords by a wide margin.
+
 ## 🆕 P131–P133 — added at p719 (2026-11-09)
 
 ## P131 — The deterministic content gate: generated learner material that cannot ship unreadable (every region; mandatory wherever generated content reaches a child or an assessment)

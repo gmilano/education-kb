@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 T220–T225 — added at p720 (2026-11-09)
+
+## T220 — The verified-solver tutor is now a convergent pattern, and one repository has MEASURED why it works
+
+Three repositories found on three different legs, in three countries, independently forbid the model from computing the graded quantity: [`Divyakush2006/OS-Tutor`](https://github.com/Divyakush2006/OS-Tutor) (India), [`turtlelnc/MES-Homework`](https://github.com/turtlelnc/MES-Homework) (China), [`kunbo928/k-teach`](https://github.com/kunbo928/k-teach). `p719` saw the first instance of this shape in a `28★` phonics app and recorded it as `T219`, a deterministic **gate**. 🟢 **T220 upgrades it from a gate to an ARCHITECTURE, because `OS-Tutor` supplies the ablation: the solver adds `+23 / 57` problems with `0` lost (`p < 10⁻⁶`), while the fine-tune alone moves `30 → 34` and is NOT significant (`p = 0.557`).**
+
+🔵 **The failure mode it names is the one that matters pedagogically: the model "states the rule correctly and then executes it wrongly" — `7 / 7` of its scheduling errors were correct arithmetic on a wrong schedule.** A learner cannot detect that error, which is precisely why a confident wrong trace is worse in education than in most domains. **Trend: through 2026 the credible education builds stop trying to make the model compute and start making it narrate.**
+
+## T221 — Governance is now the stated constraint on five independent sources, and accreditation is emerging as the enforcement channel
+
+`T217` recorded governance overtaking capability at `p719`. p720 adds the enforcement mechanism. UNESCO IESALC's asks for LATAM name **accreditation and quality assurance** as where AI literacy and governance should be embedded; Australia's higher-education regulator already **requires providers to submit plans** addressing generative-AI risks; Korea's AI Basic Act imposes human-oversight duties with a 2026 grace period.
+
+🟢 **The trend is that AI governance in education is migrating from advisory guidance into the accreditation and licensing apparatus — the one layer an institution cannot decline.** 🔵 **Commercially this converts governance work from discretionary to mandatory spend, and it is the single most reliable education budget line visible in 2026.**
+
+## T222 — Adoption has decoupled from governance almost everywhere, and the size of the gap is now measurable in four regions
+
+| Region | Adoption | Governance |
+|---|--:|--:|
+| LATAM higher ed (UNESCO IESALC, `200` institutions / `19` countries) | **`87%`** use AI somewhere | 🔴 **`26%`** have any formal framework |
+| Brazil schools (Cetic.br) | **`53%`** of administrators | 🔴 **`22%`** have guidelines |
+| Europe (azumo aggregation) | — | 🔴 **~`10%`** have formal AI-use guidelines |
+| US K-12 (relayed) | ~**`60%`** of teachers | 🔴 most districts have **no** student AI policy |
+
+🔴 **Four regions, four different data sources, the same shape: deployment is two to four times ahead of policy.** 🟡 **The US and Europe figures are secondhand in the sources read this pass and need primary re-sourcing before client use.** 🟢 **The trend to record is that this gap stopped being a LATAM story in 2026 and became a global one — `p719`'s shelves treated the governance lag as a regional characteristic, and the numbers no longer support that reading.**
+
+## T223 — Education-labelled permissive supply is being mass-produced, and discovery has stopped being the bottleneck
+
+Measured this pass: **`1,917`** repositories match `agentic-star in:name` — MIT-licensed single-purpose agent templates over one proprietary vendor runtime. A second owner, `jinlize-tech`, holds **`102`** repositories against a declared *"planned 100-repository education-sector Skill and Agent ecosystem"*. A third pattern: one owner publishing **seven** near-identical `Sistema*Escolar` repositories, all `6★`, all MIT, within eleven days.
+
+🔴 **A shelf that counts rows cannot tell `1,917` templates from `1,917` projects.** 🟢 **The trend: through 2026 the scarce input in open-source education intelligence is no longer finding permissively licensed artefacts — it is distinguishing an artefact from a generated catalogue entry.** 🔵 **The screen that works is not the licence and not the star count; it is whether the repository RUNS WITHOUT A NAMED VENDOR PLATFORM, which is `719-P`'s question asked at scale.**
+
+## T224 — The permissive school-administration layer was built once and abandoned, and nothing has replaced it
+
+Of ten permissive school-management, SIS, attendance and library systems at or above `48★`, **nine were last pushed between January 2020 and August 2024** and exactly one is live. 🔴 **None of the nine is `archived`, so none of them carries a warning flag.**
+
+🟢 **The trend, stated against the grain of the market forecasts: while AI-in-education spend grows at a reported `34%` CAGR, the permissive open-source ADMINISTRATIVE substrate underneath it has been static-to-dead for two to six years.** The live options are copyleft incumbents (Moodle, OpenEduCat, Frappe Education, openSIS) or a build. 🔵 **The consequence for 2026–27 engagements: the AI layer has abundant permissive starting points and the record layer has effectively none, so "adopt open source" is a viable strategy for the tutor and a false economy for the SIS.**
+
+## T225 — Licence laundering by fork: a permissive grant that is not the project's grant, and every scanner passes it
+
+Measured this pass on a subject the mandated vertical leg recommended as MIT. Upstream [`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) (`8,943★`) is **AGPL-3.0** — `34,230 B`, sha256₁₂ `7800536d5087`. A `3★` third-party fork, [`u4078974/idurar-erp-crm`](https://github.com/u4078974/idurar-erp-crm) on a `demo` branch, carries **MIT** — `1,063 B`, sha256₁₂ `105269960eb9` — **and the MIT text still names the upstream author.**
+
+🔴 **A downstream fork cannot relicense AGPL-3.0 code as MIT.** The grant file is genuine MIT text; the SPDX detector is right about what the file says; the file has no authority over the code beneath it. **An automated licence scan reports `MIT` and passes.**
+
+🟢 **The trend: as permissive-looking education supply is mass-produced (`T223`), the reliability of the licence FIELD falls while the reliability of the licence FILE stays flat.** This KB has now recorded three distinct ways a green licence cell can be wrong — `NOASSERTION` over a real grant, a permissive grant over a proprietary runtime (`719-P`), and a permissive grant with no authority over the code (`720-D3`). 🔵 **The screen that survives all three: read the payload, read the README's requirements, and compare against the fork network's upstream. Whenever a low-star repository carries a MORE permissive grant than a high-star repository of the same name, that is the signal.**
+
 ## 🆕 T215–T219 — added at p719 (2026-11-09)
 
 ## T215 — The search language, not the supply, was the regional ceiling

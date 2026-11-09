@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p720) — 🟢 **THE STAR AND METADATA CHANNEL WAS NEVER SHUT: `repos/{owner}/{repo}` IS `403`, BUT `search/repositories` RETURNS THE SAME FIELDS AND IS OPEN — AND IT IMMEDIATELY CAUGHT A `46★` ARCHIVED REPOSITORY THIS PASS WAS ABOUT TO FILE**
+
+**`22` subjects filed** (`17` agents, `5` foundations, `0` platforms) out of `25` verified payload-by-payload and `~250` screened across `15` legs (`4` global + `4` regional + a **standing ten-term single-word Spanish/Portuguese leg** + `6` topic- and phrase-qualified capability legs). [`top.md`](top.md) **`325` → `342`** · [`../repos/foundations.md`](../repos/foundations.md) **`359` → `364`** · [`../verticals/solutions.md`](../verticals/solutions.md) **`128` → `128`** (measured nil, with a cause).
+
+**Region movement:** `LATAM 27 → 32` · `APAC 85 → 88` · `EMEA 36 → 38` · **`North America 30 → 31` (the `p719` freeze is broken)** · `Global 147 → 153`.
+
+### 🟢 `720-M` — the primary result: twelve passes of "the star doors are shut" were measuring the wrong door
+
+| Channel | Status | Returns |
+|---|---|---|
+| `gh api repos/{owner}/{repo}` | 🔴 `403` | nothing |
+| `curl https://api.github.com/repos/...` | 🔴 `403` | nothing |
+| **`gh api -X GET search/repositories`** | 🟢 `200` | `stargazers_count`, `license.spdx_id`, `default_branch`, **`archived`**, **`pushed_at`**, `language` |
+| **`curl https://raw.githubusercontent.com/...`** | 🟢 `200` | grant payload bytes |
+
+All `22` rows filed this pass carry a star count, an `spdx_id`, a default branch and an `archived` flag read from the API this pass. **Probe preserved as `P135` in [`../compose/patterns.md`](../compose/patterns.md).** 🔴 **It also corrected a figure this KB was carrying from prose: `HKUDS/DeepTutor` is `57,248★`, not the *"about 45K"* a November-2026 roundup reports — a `27%` error.** 🔵 **And a precision note, since this channel is now load-bearing: star counts are LIVE and drift within a pass. `DeepTutor` read `57,248` early in p720 and `57,259` at the verification sweep (`+11` in roughly an hour); `munitkala/selfsemester` read `22` then `23`. Figures on these shelves are a reading at a time, not a constant, and the published value is the one taken when the row was filed.**
+
+### 🔴 `720-O` — `OR` IS SILENTLY DISCARDED by the search API, and it has been manufacturing false coverage
+
+Three queries, identical `total_count: 16128` — including one containing **none** of the eight disjoined terms. The `OR` list is dropped; only the common terms execute. 🔴 **Every multi-term leg this base has ever run reported coverage over terms it never searched, and recorded the resulting nils as evidence of absence.** 🟢 **Re-run one term per query, the Spanish/Portuguese leg yielded `5` filable LATAM rows where the `OR` form yielded none. `P132` is superseded by `P137`.**
+
+### 🔴 `720-E` — `p719`'s two catalogue leads are mass-produced estates: `1,917` and `102` repositories, and both are REFUSED
+
+`agentic-star in:name` → **`1,917`** MIT templates over SoftBank's proprietary runtime (`719-P`'s trap, multiplied). `user:jinlize-tech` → **`102`** against a declared *"planned 100-repository"* ecosystem. A third instance found independently: one owner, **seven** near-identical `Sistema*Escolar` repositories, all `6★`, all MIT, inside eleven days. 🟢 **The measurement is filed and the rows are not. The binding constraint on this shelf is FILTERING, not discovery** — and an owner or convention expansion must now report its SIZE before filing anything.
+
+### 🔴 `720-R` — region inference has an example-row defect, and it nearly cost two placements
+
+`Joe20252030/University_Academic_Course_Review_Agent` was nearly placed `North America` on three occurrences of *"University of Toronto"* — **all three are example values in a parameter table and CLI samples, in a field the table marks `Required: No`.** Separately, four repositories were nearly placed `North America` because case-insensitive `usa` matches **`usage`**. 🟢 **Rule: a region signal must be an assertion about the project, matched on word boundaries, read in context.**
+
+### 🟢 `720-V` — the pattern worth selling, and the one repository that measured it
+
+[`Divyakush2006/OS-Tutor`](https://github.com/Divyakush2006/OS-Tutor) (`0★`, MIT, Vellore Institute of Technology) is the best artefact p720 found anywhere: McNemar-tested, `355` automated checks, `57/57` vs `30/57` base, `0` invented citations, answer withheld `30/30` after a private simulator check. 🔵 **Its ablation is the asset: the solver is worth `+23` problems (`p < 10⁻⁶`); the fine-tune alone is worth an insignificant `+4` (`p = 0.557`).** Convergent, independently, with `turtlelnc/MES-Homework` (China) and `kunbo928/k-teach`. Recorded as `P134` and `T220`.
+
+### 🔴 `720-T` — refused, named so the search is not re-bought
+
+- [`Luispitik/sinapsis`](https://github.com/Luispitik/sinapsis) — MIT, **`46★`**, 🔴 **`archived: true`**. Would have been the pass's highest-starred LATAM row. **Caught only because `720-M` restored the flag.**
+- [`microsoft/Build26-DEM351-ai-skills-navigator-…`](https://github.com/microsoft/Build26-DEM351-ai-skills-navigator-accelerate-tech-skills-with-personalized-learning) — MIT, `5★`, 🔴 **`archived: true`**, a Build 2026 demo. A credible owner does not make a dead repository a foundation.
+
+### 🔴 `720-G` — declared gaps
+
+- **The `4` mandated global legs produced `1` filable row: `9` of the `10` addresses they returned were ALREADY HELD. 36th consecutive pass without supply from them.**
+- **The `4` mandated regional legs returned ZERO repository addresses** — policy literature only, filed to [`../intel/market.md`](../intel/market.md).
+- **`North America` moved by `1`, and that row is a 2024 hackathon project.** This base has no repeatable North American channel; the one row came from a badge.
+- 🟡 **`scibly-dev/skills` and `ahmed3bead/teach-me` could not be resolved through the `search/repositories` door** — names too generic for the `per_page=100` window. A stated limit of `720-M`'s probe, not a claim of absence.
+
+-----
+
 ## 🆕 2026-11-09 (p719) — 🟢 **THE LATAM FREEZE BROKE, AND WHAT BROKE IT WAS ASKING IN PORTUGUESE — THE CEILING WAS THE SEARCH LANGUAGE, NOT THE SUPPLY**
 
 **`28` subjects filed** (`16` agents, `12` foundations, `0` platforms) out of `31` verified payload-by-payload and `~180` screened across `16` legs (`4` global + `4` regional + a dedicated **six-query Spanish/Portuguese leg** + `10` function-targeted capability legs, overlapping). [`top.md`](top.md) **`309` → `325`** · [`../repos/foundations.md`](../repos/foundations.md) **`347` → `359`** · [`../verticals/solutions.md`](../verticals/solutions.md) **`128` → `128`** (measured nil, with a negative control).
