@@ -4,6 +4,23 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p715) — 🔴 **`0` FOUNDATION ROWS ADDED, AND THE REASON IS A LICENCE FINDING RATHER THAN A SEARCH NIL: LATAM's LARGEST PUBLISHER GRANTS `79` REPOSITORIES UNDER A LICENCE THAT IS REVOCABLE AT ITS SOLE DISCRETION.**
+
+**[`foundations.md`](foundations.md) `307` → `307`.** 🔴 **Stated as a nil, with the cause.** p715's supply channel this pass was an **owner probe** over three LATAM institutions (full method and verdicts in [`../agents/trending.md`](../agents/trending.md) `715-D`), and the single largest candidate estate it opened — [`EL-BID`](https://github.com/EL-BID), the **Inter-American Development Bank** — is **`0 / 79` permissive**:
+
+| `license.spdx_id` over `user:EL-BID` | count |
+|---|--:|
+| `NOASSERTION` | **`68`** |
+| no `license` object at all (`null`) | `8` |
+| `GPL-3.0` | `3` |
+| 🟢 `MIT` / `Apache-2.0` / `BSD` / `ISC` | 🔴 **`0`** |
+
+The `NOASSERTION` mass resolves to the **"IDB Open-Source Software License" (effective December 2025)**, shipped by the bank as its own repository [`EL-BID/IDB-License`](https://github.com/EL-BID/IDB-License) in three languages (`LICENSE-ENG.md` `15,309 B` / sha256₁₂ `609996ed1045`; `LICENSE-ESP.md` `16,243 B` / `72daaa7afee1`; `LICENSE-POR.md` `15,814 B` / `546c3bc577dd`). 🔴 **Despite the name it is not an open-source licence** — §11 lets the IDB terminate *"in its sole discretion"*, §12 then requires the code destroyed or returned and makes continued use of derivatives conditional on written authorisation, §4 is viral, and §10 has the user indemnify the bank for exercising the granted rights. **No foundation row can rest on it**, so `0` were filed from an estate that would otherwise have offered several (`IDBx-Data-Engine`, `SmartReader`, `escola-no-lugar-certo`, `matricula-digital`).
+
+🔵 **Two instrument results worth carrying to the other bases.** (1) The grant-probe filename list goes **`25` → `28`**: the `LICENSE-<ISO-639-2>.md` convention (`-ENG`/`-ESP`/`-POR`) defeated even p714's rebuilt probe, and `-ESP`/`-POR` will recur across LATAM. (2) `714-D`'s sha-propagation rule must be keyed on the **hash only** — four IDB subjects serve `LICENSE.md` at **exactly `15,308 B` with three different hashes**, because a `[year]` placeholder is replaced by a four-digit year without changing the length. A size-keyed cache of classified payloads silently collides.
+
+🟢 **The mandated `open source platform education ERP CRM MIT Apache student information system` leg returned `7` addresses and `0` novel ones for a fifth consecutive pass** — OFBiz, OpenEduCat, ERPNext, `frappe/education`, GegoK12, openSIS, RosarioSIS, all already held. It did yield one correction: [`frappe/education`](https://github.com/frappe/education) (`703★`) reads `NOASSERTION` because its `license.txt` at `develop` is **`19` bytes** (sha256₁₂ `1fcecf395312`) reading only `License: GNU GPL V3` — an assertion, not a grant. Practical reading **`GPL-3.0`**; see [`../verticals/solutions.md`](../verticals/solutions.md).
+
 ## 🆕 2026-11-08 (p714) — 🟢 **FOUR FOUNDATIONS FROM ONE OWNER, REACHED BY MINING A MANDATED LEG FOR A NAMED INSTRUMENT INSTEAD OF AN ADDRESS — AND THE LEG THAT NAMED IT WAS THE LATAM ONE, WHILE THE OWNER IS A UK CHARITY**
 
 > 🔵 **Timing note:** p714's research legs and every byte read in this entry were run on **`2026-11-08`**; the pass was written and committed on **`2026-11-09`**, so the frontmatter `updated:` reads `2026-11-09` while this section is dated by the day its measurements were taken. Stated so the one-day gap is not read as a stale entry.

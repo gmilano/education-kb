@@ -4,6 +4,171 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p715) — 🔴 **`NOASSERTION` HAS AT LEAST FOUR DISTINCT CAUSES, AND p714's OPTIMISM MUST BE SPLIT IN TWO: RECOVERING A GRANT IS NOT RECOVERING A *USABLE* GRANT. MEASURED ON LATAM's LARGEST PUBLISHER, THE RECOVERED GRANT IS A REFUSAL — THE "IDB OPEN-SOURCE SOFTWARE LICENSE" IS TERMINABLE AT THE BANK'S SOLE DISCRETION.**
+
+**`1` subject filed** (`1` agent, `0` foundations, `0` platforms). [`top.md`](top.md) **`274` → `275`**. [`../repos/foundations.md`](../repos/foundations.md) **`307` → `307`**, and the nil is reported rather than padded. [`../verticals/solutions.md`](../verticals/solutions.md) **`120` → `120`**, with one existing row's grant corrected (`715-G`).
+
+**Region movement: `LATAM 22 → 23`; `North America 30`, `EMEA 30`, `APAC 70` and `Global 122` unmoved.** 🔴 **Four freezes, all stated as freezes.** The single addition is LATAM's first in three passes and it is **one row, from one owner** — not a region opening up.
+
+### 🔴 `715-A` — the headline: p714 said *read the bytes and you may recover a grant*. p715 read the bytes on `79` repositories and recovered a grant that must be REFUSED.
+
+`714-A` established that GitHub's `license.spdx_id` is near-blind to the EUPL (`99 / 100` on one national agency) and concluded that a `NOASSERTION` tally **"is unsafe to read as *no grant*."** That is correct and p715 confirms it again. But the conclusion was filed in an **optimistic** direction — the recovered grant at p714 was the **EUPL**, which is OSI-approved and buildable-with-care, and nothing in the entry warned that the next recovery might go the other way.
+
+**It does.** p715 turned the same instrument on [`EL-BID`](https://github.com/EL-BID) — the GitHub organisation of the **Inter-American Development Bank**, the single largest publisher of public-sector development software in Latin America:
+
+| measure | value |
+|---|--:|
+| repositories enumerated (`gh api search/repositories -f q='user:EL-BID'`) | **`79`** |
+| `license.spdx_id` = `GPL-3.0` | `3` |
+| no `license` object at all (`null`) | `8` |
+| `license.spdx_id` = **`NOASSERTION`** | **`68`** |
+| permissive (`MIT`/`Apache-2.0`/`BSD`) | 🔴 **`0`** |
+
+**`0 / 79` permissive.** And the `NOASSERTION` mass is not ungranted — it has a name, and the organisation ships it as **its own repository**: [`EL-BID/IDB-License`](https://github.com/EL-BID/IDB-License), alive at `main` HEAD `bf080660c427`.
+
+**What is in it:**
+
+| payload | bytes | sha256₁₂ |
+|---|--:|---|
+| `LICENSE-ENG.md` | `15,309` | `609996ed1045` |
+| `LICENSE-ESP.md` | `16,243` | `72daaa7afee1` |
+| `LICENSE-POR.md` | `15,814` | `546c3bc577dd` |
+| `disclaimers_AI_BID.md` | `3,393` | `17e78a1ec3eb` |
+
+It is the **"IDB Open-Source Software License", effective December 2025**. 🔴 **It is not an open-source licence, and the name is the most dangerous thing about it.** Read from the bytes:
+
+| clause | what it says | consequence for a Globant build |
+|---|---|---|
+| **§11 Termination** | the IDB *"may immediately terminate this License"* where it determines **"in its sole discretion"** that use is inconsistent with the terms | 🔴 **the grant is revocable at will.** Fails OSD #7; no permissive or copyleft OSI licence contains this |
+| **§12 Return** | on termination the User must **cease use and destroy and/or return** programs, code, files; continuing to use **Derivative Software** requires the IDB's **written authorisation** | 🔴 a client deliverable can be ordered destroyed |
+| **§4** | Derivative Software **and any future releases** stay subject to the same terms | 🔴 **viral**, and viral *into* a revocable licence |
+| **§10 Indemnification** | the User indemnifies the IDB against claims arising from **"the exercise of the rights granted"** | 🔴 you indemnify the licensor for using the licence |
+| **§3.1 / §3.2** | IDB **reserves all IP rights** and may sub-license to third parties without notice | — |
+| **§15** | mandatory **AAA arbitration**, seat Washington DC, single arbitrator, costs split | 🔴 dispute cost floor is not small |
+| **§13 / §14** | District of Columbia law; **privileges and immunities** of a public international organisation expressly preserved | 🔴 the counterparty is largely unsuable |
+| **§7** | no use of the IDB name or logo without per-instance consent | — |
+
+🟢 **The grant is real, the attribution is workable, and the licence is still a NO-BUILD for commercial client work.** The operative defect is **§11 + §12 together**: a studio cannot put a client's production system on a dependency whose licensor can revoke unilaterally and then require the code destroyed.
+
+**And it is the licence the education repositories actually carry** — verified by reading each payload at its real default ref, not inferred from the org:
+
+| subject | ref | payload | bytes | sha256₁₂ |
+|---|---|---|--:|---|
+| [`EL-BID/IADB-education-1`](https://github.com/EL-BID/IADB-education-1) | `master` | `LICENSE.md` | `15,308` | `bd034c3f9167` |
+| [`EL-BID/edu-brazil-poc`](https://github.com/EL-BID/edu-brazil-poc) | `main` | `LICENSE.md` | `15,308` | **`bd034c3f9167`** |
+| [`EL-BID/IDBx-Data-Engine`](https://github.com/EL-BID/IDBx-Data-Engine) | `master` | `LICENSE.md` | `15,308` | `314420f67709` |
+| [`EL-BID/SmartReader`](https://github.com/EL-BID/SmartReader) | `master` | `LICENSE.md` | `15,308` | `5c1a1ff2e70f` |
+| [`EL-BID/escola-no-lugar-certo`](https://github.com/EL-BID/escola-no-lugar-certo) | `chore/remove-idb-branding` | `LICENSE.md` | `16,242` | `fe41bcc765f8` |
+
+🔵 **Two incidental results in that table.** (1) `escola-no-lugar-certo` is a **Brazilian** school-siting project and it ships the **Spanish** licence (`16,242 B`, one byte off `LICENSE-ESP.md`), not the Portuguese one. (2) Its **default branch is `chore/remove-idb-branding`** — a housekeeping branch serving as `HEAD`, which is also why a naive `main`/`master` fetch returns `404` on this subject.
+
+🟢 **What to carry to the other industry bases:** `714-A`'s rule stands but needs a second half. **Read the bytes — then read the clauses.** A recovered grant is an input to a licence decision, not the decision. Specifically: **a licence whose name contains "Open-Source" is not evidence that it is one**, and the tell to grep for is a **termination-at-discretion clause**, which no OSI licence has.
+
+### 🔴 `715-B` — p714's own expanded probe would still have missed this, and the filename list must grow again
+
+`713-B` found this base's grant probe blind because its filename list was case-sensitive and omitted the `COPYING` family. `714-A` rebuilt it over **`25` filenames**. 🔴 **That rebuilt probe still returns a false *no-grant* on the entire IDB estate**, because the canonical payloads are named `LICENSE-ENG.md`, `LICENSE-ESP.md` and `LICENSE-POR.md` — a **language-suffixed** convention that was not in the list.
+
+**Probe list `25` → `28`:** add `LICENSE-ENG.md`, `LICENSE-ESP.md`, `LICENSE-POR.md`. 🔵 **The generalisable shape is `LICENSE-<ISO-639-2>.md`**, so a multilingual publisher in any region is a candidate for the same miss — the `-ESP`/`-POR` pair in particular will recur across LATAM.
+
+🟢 **A cheap, reliable 404 detector, recorded because it removes a whole class of parsing error.** Through this environment's proxy, `raw.githubusercontent.com` serves a missing path as a **`14`-byte** body `404: Not Found` whose sha256₁₂ is **`d5558cd419c8`**, stably. Hashing the body and comparing to that constant is exact, where prefix-matching the string is off-by-one-prone — p715 made exactly that error mid-pass and caught it on the hash. 🔵 **This also supersedes the mandate's `curl -sI` instruction, which `p686` already measured as useless here** (the proxy answers `HTTP/1.1 200 Connection established` for every URL, live or dead). Liveness in this base is `git ls-remote --symref`; existence of a payload is the body hash.
+
+### 🔴 `715-C` — `714-D` refined: equal byte counts are NOT an identity test. Only the hash is.
+
+`714-D` recorded one Apache-2.0 payload appearing *"under two byte counts and two hashes."* p715 found the complementary failure and it is the more dangerous one:
+
+**`IADB-education-1`, `edu-brazil-poc`, `IDBx-Data-Engine` and `SmartReader` all serve `LICENSE.md` at exactly `15,308 B`. Three distinct hashes.** `bd034c3f9167` (×2), `314420f67709`, `5c1a1ff2e70f`. The IDB text carries a `"Copyright © [year]"` placeholder that deployments fill in; a four-digit year replacing a four-character token **preserves the byte count and changes the file**.
+
+🔴 **Operational consequence:** a size-keyed cache of classified payloads will silently collide. `714-D`'s propagation rule is sound **only when keyed on sha256**, and any byte-count shortcut must be removed from it.
+
+🟢 **The rule working as intended, same pass:** the grant on the one subject filed below was classified at **zero cost** — [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) serves `LICENSE` at `11,357 B` / sha256₁₂ **`c71d239df917`**, which is **byte-identical** to the payload this shelf already read on [`aiverify-foundation/moonshot-cicd`](https://github.com/aiverify-foundation/moonshot-cicd). Canonical Apache-2.0, no re-read, no judgement call.
+
+### 🔴 `715-D` — three LATAM institutional owners probed; two are measured nils, and the reasons are different
+
+`714-I` measured the LATAM nil over keyword legs. p715 instead applied `714-A`'s **owner probe** — the method that actually produced EMEA supply — to the three LATAM institutions this base's own intel has been naming for four passes. **Written down because silence looks exactly like coverage.**
+
+| owner | institution | repos | permissive | verdict |
+|---|---|--:|--:|---|
+| [`tecnologico-de-monterrey-oficial`](https://github.com/tecnologico-de-monterrey-oficial) | Tec de Monterrey (Mexico) | `40` | `21` MIT | 🔴 **REFUSED — see below** |
+| [`ceibal-tatu`](https://github.com/ceibal-tatu) | Plan Ceibal (Uruguay) | `35` | `1` MIT | 🔴 **dead since 2015, copyleft** |
+| `Ceibal` | Plan Ceibal (Uruguay) | — | — | 🔴 **`422` — resolves as a user, unsearchable as a repo owner** |
+| [`CENIA-DEV`](https://github.com/CENIA-DEV) + [`OpenCENIA`](https://github.com/OpenCENIA) | CENIA (Chile) | `8` + `5` | `4` + `3` | 🟢 **one row filed** (`715-E`) |
+
+🔴 **The Tec de Monterrey refusal is the important one, because it is `21` MIT-licensed repositories that a thin column would have swallowed.** `p711` and `p712` both named Tec de Monterrey as LATAM's flagship institution — it co-ran the Digital Education Council survey (`92%` of students, `79%` of faculty). Its "oficial" org holds `40` repositories — `22` MIT, `1` GPL-3.0, `17` ungranted — and publishes, in substance, **student coursework**: `C.MTY.TC1031.607.2613.A01385053`, `C.MTY.TC1031.607.2613.A01724691`, `…A00846007` and `18` more on the same template — **`22` repositories on the slug `C.MTY.TC1031.607.2613.A<enrolment-number>`, `21` of them MIT** — one per enrolled student for course `TC1033`, `0★`, pushed within the last month. **Real, live, permissively licensed, and worth nothing as substrate.**
+
+🟢 **This is precisely the condition `709`'s warning named** — *"`LATAM` is one of the two columns this shelf is trying hardest to fill, which is exactly the condition under which a convenient false positive gets accepted."* Twenty-one rows were available and all twenty-one are refused. **The transferable rule: an institution's prestige does not transfer to its GitHub organisation, and a per-student repository template is the signature to refuse on** — a stable slug prefix plus an enrolment-number suffix plus `0★` plus org-default licence.
+
+🔴 **The Ceibal result is a different kind of nil and worth more than it looks.** Plan Ceibal is the most-cited education-technology agency in Latin America — national one-laptop-per-child deployment, ~`700k` students, two decades of operation. Its only searchable GitHub presence, `ceibal-tatu`, is **`35` repositories last pushed between 2014 and 2015**, entirely Sugar/OLPC-era desktop packaging (`tuxpaint`, `sugar-toolkit`, `ceibal-pam-auth`, `tatu-repo`), and licensed `GPL-3.0`×`15`, `LGPL-2.1`×`5`, `GPL-2.0`×`2`, `NOASSERTION`×`4`, ungranted×`8` — **`1` MIT row in `35`**, and the newest push across the entire organisation is **`2015-12-03`**. The bare `Ceibal` org resolves in `search/users` but returns `422` in `search/repositories`, i.e. **no public repositories to search**. 🔵 **So the LATAM column is not thin because this base failed to look at Ceibal. It is thin partly because LATAM's flagship agency stopped publishing code eleven years ago.** That is a fact about the supply, and it belongs in the record rather than in a silence.
+
+### 🟢 `715-E` — the one row filed
+
+[`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) — 🟢 **Apache-2.0**, `11,357 B`, sha256₁₂ `c71d239df917`, alive at `main` HEAD `2405fac50625`, pushed **2026-11-04**. Spanish ↔ **Rapa Nui** translation, serving the fine-tuned [`CenIA/nllb-200-3.3B-spa-rap`](https://huggingface.co/CenIA/nllb-200-3.3B-spa-rap) checkpoint behind a **PyTriton** server with dynamic batching and response caching. Full row and the reasoning for calling it an education subject are on [`top.md`](top.md).
+
+🔵 **Why CENIA and not the other two Chilean orgs' repositories.** `CENIA-DEV` holds `4` permissive repositories and **three were refused as out-of-domain**: `MVP-AIEP` (MIT) is an **entrepreneurship-assessment** form-and-PDF app — the `AIEP` in the name is a Chilean technical-professional institute, which makes it *look* like an education row and it is not one; `mvps-cenia` (Apache-2.0, `11,361 B` / `567e786a7f32` — note **`4` bytes and a different hash** from the canonical payload) contains CORFO document processing and *Red Almacenes* invoice management; `cauce-app` is municipal procurement. 🔴 **One owner, four permissive grants, one education subject.** Filing all four would have moved `LATAM 22 → 26` and three of those rows would have been false.
+
+### 🔴 `715-F` / `715-G` — two more `NOASSERTION` causes, bringing the catalogue to four
+
+🔴 **`715-F` — a *content* licence where a software licence was expected.** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (`965★`, pushed 2026-11-03, `165` evidence-grounded skills for teachers and school leaders) reads `NOASSERTION`. Its `LICENSE` is `1,229 B`, sha256₁₂ `40db9b472090`, and it is **Creative Commons Attribution-ShareAlike 4.0 International**, © 2026 Gareth Manning, scoped in its own words to *"the educational skills, documentation, examples, and curriculum materials."* 🔴 **Flagged, not shelved as permissive:** CC BY-SA is **ShareAlike**, i.e. copyleft on derivative *materials*, and CC licences are not software licences — using these skill files to seed a client's prompt library propagates SA to the derived curriculum. `965★` of genuinely useful pedagogical content on terms this base's permissive shelf cannot admit.
+
+🔴 **`715-G` — an *assertion* where a licence text was expected, and it corrects a row already on the verticals shelf.** [`frappe/education`](https://github.com/frappe/education) (`703★`, the ERPNext-based school-management module, already held on [`../verticals/solutions.md`](../verticals/solutions.md)) reads `NOASSERTION`. Its payload is `license.txt` at the `develop` ref — **`19` bytes**, sha256₁₂ `1fcecf395312`, containing exactly:
+
+```
+License: GNU GPL V3
+```
+
+🔴 **That is a one-line declaration, not a grant.** It names GPL-3.0 without reproducing or incorporating its terms, which is why no detector will classify it — and it is why the GitHub field disagrees with every secondary source that lists this platform's licence confidently. 🟢 **For the verticals shelf the practical reading is `GPL-3.0`, strong copyleft, same posture as `openeducat` (LGPL-3.0) and `openSIS` (GPL-2.0): customise and self-host for a client, do not link it into proprietary deliverables.** Row corrected this pass.
+
+**The catalogue of `NOASSERTION` causes, now four, all measured on this base's own subjects:**
+
+| # | cause | exemplar | recovered grant | usable? |
+|--:|---|---|---|---|
+| `1` | licence **family** the detector cannot name | `Opetushallitus/*` (p714) | EUPL 1.1 / 1.2 | 🟡 OSI, copyleft |
+| `2` | **bespoke** licence under a language-suffixed filename | `EL-BID/*` (p715) | IDB Open-Source Software License | 🔴 **no — revocable** |
+| `3` | a **content** licence, not a software one | `education-agent-skills` (p715) | CC BY-SA 4.0 | 🟡 materials only, SA |
+| `4` | a **19-byte assertion** instead of a licence text | `frappe/education` (p715) | GPL-3.0 | 🟡 copyleft |
+
+🟢 **`4 / 4` recovered. `0 / 4` permissive.** That is the pass's second transferable result: across four independent causes, **the grant hiding behind `NOASSERTION` has never once turned out to be MIT or Apache-2.0.** `NOASSERTION` is not noise around a permissive signal — on this base's evidence it is a **weak negative predictor** of a permissive grant, and the correct default when it appears is *assume not buildable until the clauses are read*.
+
+### 🔵 The mandated legs, scored honestly
+
+`8` legs run (`4` global, `4` regional). 🔴 **`0 / 8` returned an agent address this base did not already hold — a twenty-fifth consecutive pass.** The one row filed this pass came from the **owner probe** (`715-D`), which is not in the mandate.
+
+| leg | repository addresses | novel | note |
+|---|--:|--:|---|
+| `top open source AI agents education 2026 github MIT` | `6` | `0` | all `6` already shelved — `OpenMAIC`, `DeepTutor`, `ai-engineering-hub`, `tutor-mcp`, `education-agent-skills`, `awesome-ai-education`. Yielded `715-F` |
+| `github trending education AI 2026` | `3` | `0` | same three headline subjects; yielded `715-H` |
+| `open source platform education ERP CRM MIT Apache student information system` | `7` | `0` | 🔴 **a fifth consecutive pass returning exactly this shelf's own contents** — OFBiz, OpenEduCat, ERPNext, `frappe/education`, GegoK12, openSIS, RosarioSIS. Yielded `715-G` |
+| `AI education industry trends 2026` | `0` | `0` | intel only → [`../intel/trends.md`](../intel/trends.md) |
+| `AI education North America 2026 …` | `0` | `0` | 🟢 strongest policy leg of the four; filed to [`../intel/market.md`](../intel/market.md) |
+| `AI education EMEA 2026 …` | `0` | `0` | 🟡 sources **contradict each other** on the Annex III date; recorded as a contradiction |
+| `AI education APAC 2026 …` | `0` | `0` | 🟢 Vietnam names education in a high-risk list — first binding instrument to do so in APAC |
+| `AI education LATAM 2026 …` | `0` | `0` | 🔴 **a thirty-fifth consecutive nil on addresses**; re-confirmed the DEC/UNESCO figures this base already holds |
+
+🟢 **`713-G`'s procedure — mine the legs for *named instruments*, not addresses — paid off twice.** The LATAM leg named **CENIA** (via the UNESCO–Santiago agreement already on file) and **Tec de Monterrey**; both went into `715-D`'s owner probe, which produced the pass's only row and its most useful refusal.
+
+### 🔴 Declared regional gaps, stated so silence is not mistaken for coverage
+
+- **LATAM** — `0` repository addresses from the mandated leg for the **35th** consecutive pass. Supply this pass came from owner probes, and `2 / 3` institutional owners were nils with distinct causes (`715-D`). **No new binding national AI-in-education law anywhere in the region**, re-confirmed; `ILIA 2025` has `85%` of countries with a strategy in place or in development but **only Brazil and Colombia allocating budget**.
+- **EMEA** — 🔴 **unresolved contradiction, carried forward from p712 and still unresolved.** Sources place the AI Act's Annex III high-risk obligations for education at **2 December 2027** (post-Digital-Omnibus) *and* at **August 2026**; the latter appears stale but this base has **not** read the Official Journal text and will not assert a date it has not read. The `2 December 2026` date for the NCII/CSAM prohibition is separately attested. **No EMEA adoption-rate or vendor-landscape data returned.**
+- **North America** — strongest leg: `134` bills across `31` states; North Carolina **Session Law 2026-41** carries hard deadlines (state model policy `2026-12-31`, local policies `2027-06-30`, teacher PD `2028-06-30`); NYC's March-2026 traffic-light guidance. 🔴 Still **no primary federal statute** — action remains executive (EO 14277).
+- **APAC** — 🟢 **Vietnam's high-risk AI list explicitly covers education** (automated assessment, behavioural uses), with extra requirements for systems operating before `2026-08-15`; Korea's AI Basic Act in force `2026-01-22` on a guidance-first grace period through 2026; Australia's **TEQSA requires every higher-education provider to file a generative-AI action plan**. 🔴 **No APAC-specific adoption percentages returned**, and the named "key players" came from a vendor market report, so they are not filed as fact.
+
+### 🟢 `715-H` — third-party star counts are unreliable in BOTH directions, and the shelf was the closer of the two
+
+`p714`'s correction recorded this base's own star cells as having once been pipeline-inflated. p715 measured the inverse. Blog aggregators this pass reported [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at **`45,224★`** and [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) at **"about `42K`"**. The API says **`57,037`** and **`43,046`**. 🔴 **The DeepTutor figure is understated by `11,813` — a `26%` error** — and it is quoted to five significant figures, which is what makes it look authoritative. 🟢 **This shelf held `56,640`, `397` off the live value and `11,416` closer than the blog.** DeepTutor's star cells refreshed `56,640 → 57,037` this pass; `OpenMAIC` already correct. 🔵 **Rule: `stargazers_count` from the API or the repository page, never a secondary list — and a precise-looking number in a blog post is not more trustworthy than a round one.**
+
+### 🔴 Refused this pass, with the reason — `27` subjects
+
+| subject(s) | reason |
+|---|---|
+| `tecnologico-de-monterrey-oficial/C.MTY.TC1031.*` ×`22` (`21` MIT) | per-student coursework repositories; MIT by org default, `0★`, no reusable substrate (`715-D`) |
+| `CENIA-DEV/MVP-AIEP` | MIT and live, but **entrepreneurship assessment**, not education (`715-E`) |
+| `CENIA-DEV/mvps-cenia` | Apache-2.0 and live, but document processing + invoice management |
+| `CENIA-DEV/cauce-app` | municipal procurement; also ungranted |
+| `EL-BID/*` education subjects ×`5` | grant recovered and **refused on clauses** — revocable at IDB's sole discretion (`715-A`) |
+| `GarethManning/education-agent-skills` | CC BY-SA 4.0 — content licence, ShareAlike; flagged on the trend record, not shelved (`715-F`) |
+
+🔵 **Read and deliberately NOT filed:** `patchy631/ai-engineering-hub` (MIT, `41,510★`) and `KaynXu/awesome-ai-education` (MIT, `5★`) are both already held; `arXiv 2607.13370` (**LEA**, agentic tutoring with a cross-course classroom evaluation) and `arXiv 2604.06385` (pedagogical knowledge optimisation of open LLMs via RL+SFT) were read and **name no repository**, so they are intel rather than supply.
+
 ## 🆕 2026-11-08 (p714) — 🔴 **GITHUB'S LICENCE FIELD IS NEAR-BLIND TO THE EUPL — `99 / 100` ON ONE NATIONAL AGENCY — AND THE TIDY STORY THAT EXPLAINS ("EMEA IS A COPYLEFT REGIME") IS REFUTED BY MEASUREMENT IN THE SAME PASS. 🔴 ONE APACHE-2.0 PAYLOAD SITS ON THIS SHELF UNDER TWO BYTE COUNTS AND TWO HASHES, AND IT IS THE SAME FILE.**
 
 > 🔵 **Timing note:** p714's research legs and every byte read in this entry were run on **`2026-11-08`**; the pass was written and committed on **`2026-11-09`**, so the frontmatter `updated:` reads `2026-11-09` while this section is dated by the day its measurements were taken. Stated so the one-day gap is not read as a stale entry.

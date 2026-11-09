@@ -386,6 +386,37 @@ updated: 2026-11-09
 | [`Mangaba-ai/mangaba_ai`](https://github.com/Mangaba-ai/mangaba_ai) | 🟢 **MIT** (`LICENSE`, `1,066 B`, sha256₁₂ `83c8db8d8274`, **raw file bytes** read at `master`; holder *“Copyright (c) 2024 Mangaba AI”*) | **208** | `master` | 🆕 **New at p714, and it is the highest-starred LATAM-placed substrate on either shelf.** A professional multi-agent orchestration framework in Python, documented in Portuguese. 🟢 **Region `LATAM` on a measured margin, not a guess:** the `37,611 B` README returns `104` Portuguese function-word hits against `39` Spanish, and *mangaba* is a Brazilian fruit. 🔵 **It is filed to FOUNDATIONS rather than to the agent shelf because it is domain-neutral** — it orchestrates agents, it does not teach — and that is precisely its value for a Brazilian engagement: the orchestration layer is already Portuguese-documented, so only the education layer above it needs building. 🔴 **Default branch is `master`, not `main`.** |
 
 
+## 🟡 No foundation row added at p715 — and for once the nil is NOT a search failure: the pass opened a `79`-repository estate and had to refuse ALL of it
+
+🔴 **`307` → `307`.** Stated as a nil, with the cause, because an unexplained freeze on this shelf is indistinguishable from a pass that did not look.
+
+🟢 **p715 did not lack candidates — it lacked grants.** Following `P119`/`715-D`, the pass ran an **owner probe** rather than keyword legs, and the largest estate it opened was [`EL-BID`](https://github.com/EL-BID), the GitHub organisation of the **Inter-American Development Bank** — the largest publisher of public-sector development software in Latin America. Measured with `gh api -X GET search/repositories -f q='user:EL-BID' -f per_page=100`:
+
+| `license.spdx_id` | count |
+|---|--:|
+| `NOASSERTION` | **`68`** |
+| no `license` object at all (`null`) | `8` |
+| `GPL-3.0` | `3` |
+| 🟢 `MIT` / `Apache-2.0` / `BSD` / `ISC` | 🔴 **`0`** |
+| **total** | **`79`** |
+
+🔴 **`0 / 79` permissive, and the `NOASSERTION` mass is not ungranted.** It resolves to the **"IDB Open-Source Software License" (effective December 2025)**, which the bank publishes as its own repository, [`EL-BID/IDB-License`](https://github.com/EL-BID/IDB-License), in three languages: `LICENSE-ENG.md` (`15,309 B`, sha256₁₂ `609996ed1045`), `LICENSE-ESP.md` (`16,243 B`, `72daaa7afee1`), `LICENSE-POR.md` (`15,814 B`, `546c3bc577dd`). 🔴 **Despite its name it is not an open-source licence** — §11 termination *"in its sole discretion"*, §12 destroy-or-return with written authorisation required to keep using derivatives, §4 viral, §10 indemnify-the-licensor, §15 AAA arbitration seated in Washington DC. **Full clause table at [`../agents/trending.md`](../agents/trending.md) `715-A`.**
+
+**Four education-grade substrates were read, confirmed to carry it, and refused** — each at its real default ref:
+
+| candidate | ref | payload | bytes | sha256₁₂ | would have been |
+|---|---|---|--:|---|---|
+| [`EL-BID/IDBx-Data-Engine`](https://github.com/EL-BID/IDBx-Data-Engine) | `master` | `LICENSE.md` | `15,308` | `314420f67709` | course/MOOC data extraction + consolidation |
+| [`EL-BID/SmartReader`](https://github.com/EL-BID/SmartReader) | `master` | `LICENSE.md` | `15,308` | `5c1a1ff2e70f` | AI mass document analysis |
+| [`EL-BID/IADB-education-1`](https://github.com/EL-BID/IADB-education-1) | `master` | `LICENSE.md` | `15,308` | `bd034c3f9167` | education-sector tooling |
+| [`EL-BID/edu-brazil-poc`](https://github.com/EL-BID/edu-brazil-poc) | `main` | `LICENSE.md` | `15,308` | **`bd034c3f9167`** | Brazil education PoC |
+
+🔴 **Note the arithmetic in that table, because it breaks an instrument this shelf relies on.** All four payloads are **exactly `15,308 B`** and there are **three distinct hashes** — the IDB text carries a `"Copyright © [year]"` placeholder that deployments fill with a four-digit year, preserving the length while changing the file. 🔴 **`714-D`'s propagation rule must therefore be keyed on sha256 alone; a size-keyed cache of classified payloads silently collides.** 🟢 The rule working correctly, same pass: the one agent row filed to [`../agents/top.md`](../agents/top.md) was classified at zero cost because its `LICENSE` is byte-identical (`11,357 B` / `c71d239df917`) to one this base had already read.
+
+🔵 **Instrument change carried from `715-B`: the grant-probe filename list goes `25` → `28`,** adding `LICENSE-ENG.md`, `LICENSE-ESP.md`, `LICENSE-POR.md`. p714's rebuilt `25`-filename probe would have returned a false *no-grant* on this entire estate. The generalisable form is **`LICENSE-<ISO-639-2>.md`**, and the `-ESP`/`-POR` pair will recur across LATAM publishers.
+
+🟢 **What replaces the rows, and it is worth more than four refused dependencies.** Each refused repository is a **problem a LATAM ministry has already funded and scoped** — school siting, digital enrolment (`matricula-digital`, Tacna, Peru), mass document analysis, MOOC data consolidation. **Read the IDB estate as a requirements corpus and build clean** (`P119`). That is defensible in a client's legal review in a way a fork of a revocable licence is not.
+
 ## 🟢 Eighteen foundations added at p713 — this shelf's largest single-pass gain, and the sharpest result is that it closed a RISK rather than adding a capability
 
 **`285` → `303`.** All `18` came from owner expansion over owners this base already held a row from (`713-D` on [`../agents/top.md`](../agents/top.md) records the channel and the four API doors that are shut).

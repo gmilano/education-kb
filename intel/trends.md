@@ -21,6 +21,37 @@ updated: 2026-11-09
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
 
+## 🆕 T196–T199 — added at p715 (2026-11-09)
+
+### T196 — 🔴 "Open source" in a licence's NAME is now a thing to verify, because a major public funder has taken the phrase
+
+The **"IDB Open-Source Software License" (effective December 2025)** is published by the Inter-American Development Bank, is called open source, and is not: §11 permits termination *"in its sole discretion"*, §12 then obliges the user to destroy or return the code, §4 binds derivatives and their future releases to the same terms, §10 has the user indemnify the bank for exercising the rights granted, and §15 forces AAA arbitration seated in Washington DC. It governs **`79` repositories**, `0` of them permissively licensed.
+
+🔵 **The trend this instances, and it is the one to watch:** large public and multilateral funders are publishing **bespoke, named, source-available licences** rather than adopting OSI ones — close enough to open source to be catalogued as such by downstream tooling, and revocable in ways no OSI licence is. 🔴 **For a studio the practical consequence is that "it's on GitHub under an open-source licence" has stopped being a usable clearance statement.** The clause to grep for is termination-at-discretion.
+
+### T197 — 🔴 `NOASSERTION` is a weak NEGATIVE predictor of a buildable grant, measured across four independent causes
+
+This base has now recovered the real grant behind a `NOASSERTION` licence field on four structurally different causes: a family the detector cannot name (**EUPL**, `99/100` on one Finnish national agency), a **bespoke licence under a language-suffixed filename** (`LICENSE-ENG.md`, IDB), a **content licence rather than a software one** (**CC BY-SA 4.0**, `education-agent-skills`, `965★`), and a **`19`-byte assertion in place of a licence text** (`frappe/education`: `License: GNU GPL V3`, `703★`).
+
+🟢 **`4 / 4` recovered. `0 / 4` permissive.** 🔴 So the correct prior when the field reads `NOASSERTION` is **not** *"probably fine, the detector is just blind"* — it is *"probably not buildable, read the clauses."* The blindness is real and the recovered grants are real; **none of them has yet been MIT or Apache-2.0.**
+
+### T198 — 🟢 Adoption is near-universal and governance is the lagging variable in all four regions — but the REGULATORY gradient is now steep, and it runs opposite to the adoption one
+
+The four mandated regional legs agree on shape: adoption ahead of policy everywhere, roughly two-thirds of higher-education institutions still without a formal AI policy. 🔵 **What is new at p715 is how far apart the binding instruments have moved.**
+
+| region | binding instruments naming education | measured adoption |
+|---|---|---|
+| **EMEA** | 🔴 strongest — EU AI Act **Annex III high-risk** (date contradictory: `2027-12-02` vs stale August 2026); UK DfE product safety standards (Jan 2026); Ofqual coursework-integrity resources (Mar 2026) | 🔴 **no regional figure returned** |
+| **APAC** | 🟢 **Vietnam** names education in a binding high-risk list (extra duties for systems live before `2026-08-15`); **Australia TEQSA** mandates a generative-AI action plan from every provider; **Korea** AI Basic Act in force `2026-01-22`, penalties deferred | 🔴 none returned |
+| **North America** | 🟡 no federal statute — executive only (EO 14277); `134` bills in `31` states; **NC SL 2026-41** dates: `2026-12-31` / `2027-06-30` / `2028-06-30` | `60%` of teachers; `55%` of principals have not restricted access |
+| **LATAM** | 🔴 **none — no current binding national AI-in-education law anywhere in the region**; `85%` of countries have a strategy, **only Brazil and Colombia fund one** | 🟢 **highest measured: `92%` students / `79%` faculty (DEC/Tec de Monterrey); `87%` of institutions (UNESCO IESALC)** |
+
+🔴 **The inversion is the finding: the region with the highest measured adoption has the least binding regulation, and the region with the strictest regime returned no adoption data at all.** A studio should price LATAM engagements as **adoption-led, governance-greenfield** and EMEA engagements as **compliance-led**, and they are not the same deliverable.
+
+### T199 — 🟢 Endangered- and indigenous-language education is a real, funded, almost-unsupplied niche
+
+Chile's national AI centre publishes a **Spanish ↔ Rapa Nui** translation stack under **Apache-2.0**, with a fine-tuned NLLB-200-3.3B checkpoint and a self-hostable PyTriton server ([`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app)). 🔵 **Chile, Peru, Bolivia, Paraguay and Mexico all operate intercultural bilingual education mandates**, which makes this a *procurement* category rather than a research interest — and this is the only permissively licensed substrate addressing one that this base has found in `715` passes. 🔴 **Bound on the claim:** one repository, `1★`, an applied MVP from a research centre, not a maintained product. The niche is evidenced; the supply is one row deep.
+
 ## 🆕 T191–T195 — added at p714 (2026-11-08)
 
 ### 🔴 T191 — A licence census over European public-sector education code is wrong by default, because the detector cannot name the EUPL 🟢 new
