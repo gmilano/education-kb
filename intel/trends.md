@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-08
+updated: 2026-11-09
 ---
 
 # 📡 Trends — Education
@@ -20,6 +20,49 @@ updated: 2026-11-08
 🔧 **`p671` annotated the four *headings* and stopped there, which fixed the symptom a reader sees on this page and left the one they cannot see.** A reader arriving from `**T39**` on `repos/foundations.md` still has no way to know which of two unrelated trends was meant.
 
 🔴 **p685 deliberately did not repair it, and the reason is a data-integrity one rather than a scheduling one.** Renumbering the second of each pair to free identifiers (`T84`–`T87`) is mechanical, but **rewriting the `156` citations is not**: each site meant one specific trend, that intent is not recoverable from the token `T39`, and a bulk reassignment would silently point a documented claim at the wrong evidence. **A wrong citation is worse than an ambiguous one, because it reads as resolved.** The repair is therefore: renumber the four second-occurrence headings, then disambiguate references **one at a time, by reading each site**, and leave `T31`/`T32`/`T39`/`T40` permanently retired rather than reused. 🔵 **Until that is done, every `T31`/`T32`/`T39`/`T40` citation on these shelves should be read as naming a *pair*, not a trend.** New trends are numbered from `max(## T)`, never from the last heading in file order — `p685` filed **T82** and **T83** that way and both are unique.
+
+## 🆕 T191–T195 — added at p714 (2026-11-08)
+
+### 🔴 T191 — A licence census over European public-sector education code is wrong by default, because the detector cannot name the EUPL 🟢 new
+
+GitHub's `license.spdx_id` returns **`NOASSERTION` for `99` of the first `100`** repositories published by **Finland's national education agency**, [`Opetushallitus`](https://github.com/Opetushallitus) (`182` repositories in total). The payloads were read directly on `9` of them: **`9 / 9` are EUPL-1.1 or EUPL-1.2**, and four of the nine are byte-identical (`631 B`, sha256₁₂ `85088c175fdf`) to a payload this base had already classified on its own shelves.
+
+🔴 **The trend is a measurement hazard with a direction: it under-reports European public-sector supply specifically.** The EUPL is the European Commission's own licence and the default for a large volume of ministry-funded education software — and it is precisely the family the detector declines to classify. **Any “share of permissive repositories by region” figure computed from the API is therefore biased against EMEA by construction.**
+
+🔵 **Signal to act on:** when a European public body's estate is assessed, read the grant payload, and classify by **sha256 identity** against payloads already read — it is one `curl` per repository and it needs no prose parsing. 🔴 **And state the read convention**: see `T193`'s sibling finding `714-D`, where one byte of trailing newline produced two hashes for one file.
+
+### 🟢 T192 — Education agent supply has shifted from APPLICATIONS to SKILLS, and the unit of reuse is now a specification 🟢 new
+
+Of the `15` education agents filed at p714, **`9` are a `SKILL.md` plus a teaching protocol** — not a deployable service: [`hwl668/Scientific-learning-skills-`](https://github.com/hwl668/Scientific-learning-skills-), [`wildcat430524/Steps2Great-skill`](https://github.com/wildcat430524/Steps2Great-skill), [`rage/course-material-agent-skills`](https://github.com/rage/course-material-agent-skills), [`YJLi-new/undergraduate-coding-tutor`](https://github.com/YJLi-new/undergraduate-coding-tutor), [`klausners/course-builder`](https://github.com/klausners/course-builder), [`baney75/myelinate`](https://github.com/baney75/myelinate) and others. One states it outright: *“它不是软件、不是课程、不是网站”* — **it is not software, not a course, not a website.**
+
+🟢 **Why this is a trend and not a fashion: a protocol is portable across model vendors and a deployable is not.** Several of these declare `Claude Code | Codex | OpenClaw | GPTs | Generic` compatibility in the README, which is a deliberate bet that the harness will change and the pedagogy will not.
+
+🔵 **Signal to act on:** the studio's reusable asset in education is shifting from a codebase to a **specified teaching method** — cheaper to author, cheaper to localise, and far cheaper to keep current. 🔴 **The cost is that quality becomes unverifiable by inspection**: a `SKILL.md` has no test suite, so the diligence question moves from *“does it build?”* to *“is the pedagogy sound and who says so?”*
+
+### 🔴 T193 — When the product is a document, the document's licence is the product's licence — and the two are increasingly different files 🟢 new
+
+[`wildcat430524/Steps2Great-skill`](https://github.com/wildcat430524/Steps2Great-skill) ships `LICENSE` (**MIT**, code) and **`LICENSE-DOCS`** (**CC BY 4.0** — *“protocol, subject packs, templates, tutorials, examples, README”*). Its own README says the artefact is not software. **So MIT governs the part that barely exists and CC BY 4.0 governs the substance.**
+
+🔴 **This is the direct consequence of `T192`.** As supply becomes skill-shaped, the grant that matters stops being the code grant — and every licence probe in common use, including this base's own until p714, reads `LICENSE` and stops. Swept across p714's filings: **`1 / 15`**, which is early rather than negligible.
+
+🔵 **Signal to act on:** for any skill-shaped dependency, enumerate **every** `LICENSE*` file, not the first one. 🟢 **CC BY 4.0 is commercially usable — attribution only, not NonCommercial** — but attribution on *content* is a different obligation from an MIT code dependency and has to reach the rendered output, not just a `NOTICE` file. 🔴 **Contrast [`byoungd/English-level-up-tips`](https://github.com/byoungd/English-level-up-tips), refused at p714 as CC BY-**NC**-4.0**: the same licence family, one clause apart, and the other side of that clause is unusable.
+
+### 🔴 T194 — In North America student adoption has outrun institutional permission, and that inversion is the sellable problem 🟢 new
+
+A Gallup study reports **over `60%` of US college students use AI weekly for coursework**, while **roughly half of their institutions officially discourage or prohibit it**. 🔴 **This is the exact inverse of `T187`'s LATAM shape.** LATAM has `87%` use against `26%` with any formal framework — adoption outrunning *capacity*. North America has adoption outrunning *permission*: the policy exists and it says no, and usage proceeds regardless.
+
+🔵 **The two call for opposite engagements.** LATAM needs framework and capacity built where none exists (`P110`). **North America needs existing prohibitions converted into workable, auditable permission** — acceptable-use boundaries, disclosure norms, assessment redesign that assumes AI availability — because a ban that `60%` of students ignore weekly is not a control, it is an unmanaged risk with an audit trail nobody is keeping.
+
+🔵 **Signal to act on:** in North America, lead with assessment redesign and disclosure instrumentation rather than with a tutor. 🔴 **And note the regulatory direction of travel is unhelpful here**: UNC's 2026 analysis argues US AI regulation is **slowing**, naming *“the growing chasm between the U.S. and its allies”* — so institutional policy, not statute, will remain the binding instrument in this region for the near term.
+
+### 🟢 T195 — Sovereignty is converging from two directions, which makes self-hosted inference the DEFAULT for education rather than a concession 🟢 new
+
+**EMEA:** the European University Association's January 2026 report urges mindful adoption and **explicitly prioritising European LLMs**. **APAC:** `itnews.asia` frames *“AI sovereignty will set the pace for Asia Pacific in 2026”*, and Forrester describes APAC enterprises moving from pilots toward **sovereign, governed deployment**, with the region converging on shared principles implemented **per market**.
+
+🟢 **Two regions, different motivations — regulatory in EMEA, strategic and data-residency in APAC — arriving at the same architectural requirement.** Together they cover `100` of this base's `274` agent rows by region placement.
+
+🔵 **Signal to act on:** specify education products for **local or self-hosted inference first**, with a hosted frontier model as the optional accelerator. That inverts the usual default and it is why [`ollama/ollama`](https://github.com/ollama/ollama) and the local-first [`munimtechnologies/feedback-commons`](https://github.com/munimtechnologies/feedback-commons) filed at p714 carry more weight here than their star counts imply. 🔴 **The constraint compounds with LATAM's**: offline-first for connectivity (`kolibri`) and self-hosted for sovereignty are **the same engineering**, which means one architecture serves three regions and only North America tolerates the cloud-only default.
+
 
 ## 🆕 T186–T190 — added at p713 (2026-11-08)
 

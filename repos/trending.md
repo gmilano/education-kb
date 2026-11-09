@@ -1,8 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-08
+updated: 2026-11-09
 ---
+
+## 🆕 2026-11-08 (p714) — 🟢 **FOUR FOUNDATIONS FROM ONE OWNER, REACHED BY MINING A MANDATED LEG FOR A NAMED INSTRUMENT INSTEAD OF AN ADDRESS — AND THE LEG THAT NAMED IT WAS THE LATAM ONE, WHILE THE OWNER IS A UK CHARITY**
+
+> 🔵 **Timing note:** p714's research legs and every byte read in this entry were run on **`2026-11-08`**; the pass was written and committed on **`2026-11-09`**, so the frontmatter `updated:` reads `2026-11-09` while this section is dated by the day its measurements were taken. Stated so the one-day gap is not read as a stale entry.
+
+
+**`4` foundations filed.** [`foundations.md`](foundations.md) **`303` → `307`** (arity `307/307` at `5` columns, `0` ragged; `307` distinct subjects, `0` duplicated). Full pass record, including this pass's five grant-instrument findings, in [`../agents/trending.md`](../agents/trending.md) `714-A` … `714-I`.
+
+### 🟢 `714-J` — `713-G`'s procedure generalises: the regional legs are a NAME channel, and the name need not belong to the region
+
+`713-G` changed the procedure: mine every regional leg's prose for **named instruments** — a regulator's toolkit, a national platform, a ministry programme — and resolve each name against the search index **before** scoring the leg nil. p713 proved it on APAC (Singapore's AI Verify). p714 ran it on all four and the **LATAM** leg produced the supply, naming the **Raspberry Pi Foundation** as newly funded to scale AI education across Latin America and the Caribbean. `0` addresses; `1` name. One `user:RaspberryPiFoundation` query returned **`51` repositories**, of which `4` are permissive, education-grade and were not held:
+
+| subject | grant read from the bytes (raw) | ★ | branch |
+|---|---|--:|---|
+| [`RaspberryPiFoundation/picozero`](https://github.com/RaspberryPiFoundation/picozero) | 🟢 **MIT** · `LICENSE.md` · `1,063 B` · sha256₁₂ `97e3b0050f9a` · © *2025 Raspberry Pi Foundation* | `142` | `main` |
+| [`RaspberryPiFoundation/python-build-hat`](https://github.com/RaspberryPiFoundation/python-build-hat) | 🟢 **MIT** · `LICENSE` · `1,169 B` · sha256₁₂ `521f26e8fdc4` · © *2020-2025 - Raspberry Pi Foundation* | `69` | `main` |
+| [`RaspberryPiFoundation/blockly-keyboard-experimentation`](https://github.com/RaspberryPiFoundation/blockly-keyboard-experimentation) | 🟢 **Apache-2.0** · `LICENSE` · `11,358 B` · sha256₁₂ `cfc7749b96f6` | `16` | `main` |
+| [`Mangaba-ai/mangaba_ai`](https://github.com/Mangaba-ai/mangaba_ai) | 🟢 **MIT** · `LICENSE` · `1,066 B` · sha256₁₂ `83c8db8d8274` · © *2024 Mangaba AI* | `208` | **`master`** |
+
+🔴 **The irony is the finding, and it is recorded rather than smoothed: a LATAM leg produced EMEA supply.** The Raspberry Pi Foundation is a UK-registered charity, so `editor-ui` — filed to [`../agents/top.md`](../agents/top.md) in the same pass — places to `EMEA` on its `©` line, and **the `LATAM` column did not move at all.** The channel finds repositories; it does not find them *where the leg was pointed*.
+
+### 🔴 `714-K` — `p706`'s "textbook MIT grant that never says MIT" reproduced, and the two instruments disagree for a legible reason
+
+[`RaspberryPiFoundation/picozero`](https://github.com/RaspberryPiFoundation/picozero)'s `LICENSE.md` opens *“Copyright 2025 Raspberry Pi Foundation”* and then runs *“Permission is hereby granted, free of charge, to any person obtaining a copy…”* — **the complete MIT text with the title line absent.** A detector keyed on the string `MIT License` returns `UNCLASSIFIED`; GitHub's API, keyed on the body, returns `MIT`. 🔵 **They disagree because they read different things, and the bytes settle it** — which is the same lesson as `714-A` from the opposite direction: there the API was blind and the bytes had the grant; here the probe was blind and the API had it right. **Neither instrument is authoritative; the payload is.** p714's probe now also classifies on the body (`"Permission is hereby granted, free of charge"`), not only on the title.
+
+### 🟢 `714-L` — the accessibility gap on this shelf, and the dependency that closes it
+
+[`RaspberryPiFoundation/blockly-keyboard-experimentation`](https://github.com/RaspberryPiFoundation/blockly-keyboard-experimentation) is the first **accessibility** substrate this shelf holds. It adds keyboard-only navigation to Blockly — already here as [`RaspberryPiFoundation/blockly`](https://github.com/RaspberryPiFoundation/blockly) (`13,604★`, Apache-2.0). 🔵 **Why it is a foundation and not a curiosity: block-based programming is drag-and-drop by construction, and therefore inaccessible to keyboard and screen-reader users by construction.** Every public-sector education engagement carries an accessibility obligation — the EU Web Accessibility Directive in EMEA, Section 508 and the DOJ Title II rule in North America, whose compliance dates this base tracks at `T186` — and a Blockly-based product either takes this dependency or retrofits the same work later at its own cost. 🟢 **It pairs directly with [`GovTechSG/oobee`](https://github.com/GovTechSG/oobee)**, the Singapore government accessibility scanner already on this shelf: one makes the editor navigable, the other proves it.
+
+### 🟢 `714-M` — the highest-starred LATAM-placed substrate on either shelf, placed on a margin rather than a guess
+
+[`Mangaba-ai/mangaba_ai`](https://github.com/Mangaba-ai/mangaba_ai) (`208★`, MIT) is a professional multi-agent orchestration framework in Python, documented in Portuguese. **Region `LATAM` on a measured margin:** its `37,611 B` README returns `104` Portuguese function-word hits against `39` Spanish, and *mangaba* is a Brazilian fruit. 🔵 **It is filed to FOUNDATIONS and not to the agent shelf deliberately, because it is domain-neutral — it orchestrates agents, it does not teach** — and that is exactly its value for a Brazilian engagement: the orchestration layer arrives already Portuguese-documented, so only the education layer above it has to be built and only that layer needs translating. 🔴 **Default branch `master`, not `main`** — a submodule or CI checkout pinned to `main` gets nothing.
+
+### 🔵 What this shelf did NOT file, and why
+
+🔴 **The mandated foundation legs returned no novel permissive addresses.** `github trending education AI 2026` produced two novel names and **both are ungranted** — [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) at `84,270★` and [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) at `115★`, pushed today — with no licence file across `25` probed filenames. 🔴 **`Opetushallitus`'s `182`-repository estate is refused as a shelf candidate and recorded as a flag:** it is EUPL-1.1/1.2 throughout, read from the bytes on `9` repositories, and reciprocal rather than permissive. 🔵 **It is nonetheless the most valuable EMEA public-sector reference this base has catalogued** — a national education agency running its whole student-records, curriculum and qualifications estate in the open — and `714-A` explains why no automated licence tally could see it.
+
 
 ## 🆕 2026-11-08 (p713) — 🟢 **EIGHTEEN FOUNDATIONS, THIS SHELF'S LARGEST GAIN, AND THE PASS CLOSED A RISK RATHER THAN ADDING A CAPABILITY**
 

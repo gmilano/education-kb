@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-08
+updated: 2026-11-09
 ---
 
 # 🧩 Composition patterns — Education
@@ -10,6 +10,51 @@ updated: 2026-11-08
 > 🔄 **Re-counted from the `## P` headings at p685: `61` patterns, `P1`–`P61`, `0` duplicated numbers and `0` gaps — measured, and the previous figure was stale by five.** 🔄 **Re-derived at p698 from `max(## P)`: `81` patterns, `P1`–`P81`, `0` duplicated numbers; `P81` added this pass.** 🔄 **Re-derived at p687: `63` patterns, `P1`–`P63`, `0` duplicated numbers and `0` gaps.** `62` carried in (p686 filed `P62`), `P63` added this pass. 🔵 Numbered from `max(## P)`, not from the last heading in file order — the rule this header exists to enforce. It read `56` (`p681`'s correct count); `P57`–`P60` were filed beneath it without it being re-counted, and `p685` adds **P61**. 🔵 **Unlike the row counts on the three shelf files, this one is derived from headings, which are unique — so it is a stale *figure*, not an ambiguous *identifier*.** Contrast `intel/trends.md`, where four `T` numbers each denote two different trends and `156` references point at them (see the banner at the top of that file). The heading this replaces said `50`, which was already `4` stale when p680 opened — and the re-count caught a live defect in the process: **p680's own new pattern was first written as `P53`, a number p679 had already used**, because `P54` existed and the highest number is not the last heading in file order. 🔵 **Never number a new pattern from the bottom of the file; number it from `max(## P)`.**
 > 
 > **The licence rule that governs all `55` patterns below — 🔄 previously re-counted from the `## P` headings at p677 (`48` at p676, plus **P49** and **P50**); 🔧 **p677 also publishes a second number these pages had never separated — `distinct` versus `total`.** The shelf files carry `59`/`58`, `128`/`128` and `61`/`58` rows-to-distinct-subjects respectively, so a count re-derived from rows is not an inventory count; see [`intel/trends.md`](../intel/trends.md) **T62**. The pattern count below is derived from headings, which are unique, so it is unaffected — 🔄 re-counted from the `## P` headings at p676 (`46` at p675, plus **P47** and **P48**; `ingest/derive-counts.py` independently derives `P-1..P-48`) — 🔄 re-counted at p675 (`40` at p671, `45` at p674, plus **P46**); the header had drifted to `40` while five patterns were added beneath it, which is the same stale-denominator defect p671 fixed:** keep proprietary work in the agent layer (MIT/Apache) and in Apache-2.0 XBlocks. Never fork a GPL/AGPL platform for a managed service.
+
+## 🆕 P117–P118 — added at p714 (2026-11-08)
+
+### `P117` — The accessible block-programming curriculum: close an accessibility obligation at the LIBRARY level, then prove it (ministry, school network or edtech vendor with a statutory accessibility duty; EMEA/North America; 6–9 weeks)
+
+**Who it is for:** anyone shipping block-based programming to schools — the dominant way computing is taught to under-14s — who carries an accessibility obligation: the **EU Web Accessibility Directive** in EMEA, **Section 508** and the DOJ Title II rule in North America (`T186`'s sibling deadlines).
+
+**Why now:** block-based programming is drag-and-drop **by construction**, and therefore inaccessible to keyboard and screen-reader users by construction. p714 filed the dependency that fixes it at the library level rather than per-product.
+
+**The stack — every component permissive:**
+
+| leg | repo | licence | job |
+|---|---|---|---|
+| editor | [`RaspberryPiFoundation/blockly`](https://github.com/RaspberryPiFoundation/blockly) | Apache-2.0 | the block editor itself (`13,604★`) |
+| accessibility | [`RaspberryPiFoundation/blockly-keyboard-experimentation`](https://github.com/RaspberryPiFoundation/blockly-keyboard-experimentation) | Apache-2.0 | keyboard-only navigation — 🆕 p714 |
+| physical computing | [`RaspberryPiFoundation/picozero`](https://github.com/RaspberryPiFoundation/picozero) · [`RaspberryPiFoundation/python-build-hat`](https://github.com/RaspberryPiFoundation/python-build-hat) | MIT · MIT | the hardware layer the curriculum actually runs on — 🆕 p714 |
+| audit | [`GovTechSG/oobee`](https://github.com/GovTechSG/oobee) | — | automated accessibility scan, run in CI as the evidence |
+| delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | MIT | offline-first packaging where bandwidth is a constraint |
+
+**Wiring:** take `blockly` as the editor, apply `blockly-keyboard-experimentation` as the navigation layer, target `picozero`/`python-build-hat` for the physical-computing exercises, and run `oobee` **in CI on every build** so the accessibility claim is a reproducible artefact rather than an assertion in a tender response. Package through `kolibri` for offline delivery.
+
+🟢 **Why it wins:** the obligation is discharged **once, in a dependency**, instead of retrofitted per product — and the CI scan output is exactly the evidence a procurement review asks for. 🔴 **Honest caveat:** `blockly-keyboard-experimentation` is named *experimentation* and sits at `16★`; it is upstream work in progress, so budget for contributing fixes rather than for consuming a finished library. **That contribution is itself the defensible position** — the alternative is carrying a private fork of an accessibility layer forever.
+
+### `P118` — The national-agency integration read: treat a European ministry's open estate as a REFERENCE and an INTEGRATION TARGET, never as a fork (ministry, national agency or supplier bidding into one; EMEA; 4–6 weeks to a decision)
+
+**Who it is for:** a studio bidding into a European national education system, or an institution deciding whether to build on a ministry's published code.
+
+**Why now:** `714-A`/`T191`. Finland's [`Opetushallitus`](https://github.com/Opetushallitus) runs its **entire** student-records, curriculum and qualifications estate in the open — `182` repositories, actively pushed — and **GitHub's API reports `99/100` of them as having no licence**, so every automated assessment of this estate is wrong in the same direction.
+
+**The procedure, and it is a reading exercise before it is a build:**
+
+| step | instrument | what it settles |
+|---|---|---|
+| 1. enumerate | `gh api -X GET search/repositories -f q='user:{agency}'` | the estate's real size — owner-listing endpoints are dead in this session (`713-D`), this one is not |
+| 2. liveness | `git ls-remote --symref` | real default branch and head SHA; **`curl -sI` is worthless behind a proxy** (`714`, third confirmation) |
+| 3. grant | read every `LICENSE*` from `raw.githubusercontent.com` | the actual licence — **not** `spdx_id` (`T191`) and **not** the first file only (`T193`) |
+| 4. classify | sha256 against payloads already read | EUPL-1.1 vs 1.2 vs permissive, at one `curl` each |
+| 5. decide | the grant family | **see below — this is the whole point** |
+
+**The decision rule:** a **reciprocal** grant (EUPL, AGPL) on a national agency's estate means *integrate and contribute*, not *fork into a product*. Build the agentic layer as a **separate, permissively licensed service** that talks to the agency's system over its published interfaces — [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) for records, [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) for curriculum — so the reciprocal obligation stays on the agency's side of the boundary and the studio's work stays its own.
+
+**The agent layer to put on top**, all permissive and all already shelved: [`rage/course-material-agent-skills`](https://github.com/rage/course-material-agent-skills) (Apache-2.0, and already built against a Finnish university's course estate — the closest existing precedent), [`munimtechnologies/feedback-commons`](https://github.com/munimtechnologies/feedback-commons) (Apache-2.0, local-first, satisfies `T195` sovereignty without a DPA), [`ollama/ollama`](https://github.com/ollama/ollama) for self-hosted inference.
+
+🟢 **Why it wins:** it converts the licence finding into a **boundary decision**, which is the one architectural choice that is expensive to reverse later. 🔴 **Honest caveat:** EUPL-1.1 and EUPL-1.2 are not identical and this estate mixes both — `1.2` has the clearer compatibility list. **Confirm the version per repository from the bytes** (`step 4`), because "the agency uses EUPL" is not specific enough to build a boundary on.
+
 
 ## 🆕 P114–P116 — added at p713 (2026-11-08)
 

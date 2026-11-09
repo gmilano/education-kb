@@ -1,8 +1,142 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-08
+updated: 2026-11-09
 ---
+
+## 🆕 2026-11-08 (p714) — 🔴 **GITHUB'S LICENCE FIELD IS NEAR-BLIND TO THE EUPL — `99 / 100` ON ONE NATIONAL AGENCY — AND THE TIDY STORY THAT EXPLAINS ("EMEA IS A COPYLEFT REGIME") IS REFUTED BY MEASUREMENT IN THE SAME PASS. 🔴 ONE APACHE-2.0 PAYLOAD SITS ON THIS SHELF UNDER TWO BYTE COUNTS AND TWO HASHES, AND IT IS THE SAME FILE.**
+
+> 🔵 **Timing note:** p714's research legs and every byte read in this entry were run on **`2026-11-08`**; the pass was written and committed on **`2026-11-09`**, so the frontmatter `updated:` reads `2026-11-09` while this section is dated by the day its measurements were taken. Stated so the one-day gap is not read as a stale entry.
+
+
+**`19` subjects filed** (`15` agents, `4` foundations, `0` platforms). [`top.md`](top.md) **`259` → `274`** (arity `274/274` at `6` columns, `0` ragged; `274` distinct subjects, `0` duplicated; region vocabulary `274/274` legal). [`../repos/foundations.md`](../repos/foundations.md) **`303` → `307`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`120` → `120`**, and the nil there is reported rather than padded.
+
+**Region movement: `EMEA 27 → 30`, `APAC 68 → 70`, `Global 112 → 122`; `North America 30` and `LATAM 22` unmoved.** 🔴 **Both freezes are stated as freezes.** The LATAM nil is measured, not assumed — see `714-I`.
+
+### 🔴 `714-A` — the headline: a `NOASSERTION` count is not a count of ungranted repositories, and the error rate is now measured
+
+`713-B` found this base's grant probe blind along one axis: its filename list was case-sensitive and missing the `COPYING` family. p714 rebuilt the probe over `25` filenames (case variants, `COPYING`, `LICENCE`, `LICENSE-MIT`/`-APACHE`, `NOTICE`) and immediately recovered a grant the API denies:
+
+| subject | GitHub `license.spdx_id` | what the bytes say |
+|---|---|---|
+| [`RaspberryPiFoundation/editor-ui`](https://github.com/RaspberryPiFoundation/editor-ui) | **`NOASSERTION`** | 🟢 **Apache-2.0**, `LICENSE.txt`, `11,463 B`, sha256₁₂ `e3a5c7a7e0c3`, © *2021-2026 Raspberry Pi Foundation* |
+
+**Then the same instrument was turned on a whole owner, and the result is a measured detector failure rate.** Finland's national education agency, [`Opetushallitus`](https://github.com/Opetushallitus), publishes **`182` repositories**. `gh api search/repositories -f q='user:Opetushallitus'` returns, over the first `100`: **`1` EUPL, `0` permissive, `99` `NOASSERTION`/none.** The payloads were then read directly:
+
+| subject | payload | bytes | sha256₁₂ | grant in the bytes |
+|---|---|--:|---|---|
+| `Opetushallitus/scala-schema` | `LICENSE.txt` | `653` | `986fdfc9ba85` | **EUPL, Version 1.1** |
+| `Opetushallitus/valtionavustus` | `LICENSE.txt` | `652` | `9d41538b30a4` | **EUPL, Version 1.1** |
+| `Opetushallitus/organisaatio` | `LICENSE.txt` | `631` | `85088c175fdf` | **EUPL, Version 1.1** |
+| `Opetushallitus/yki` | `LICENSE` | `656` | `0be01b00d468` | **EUPL, Version 1.2** |
+| `Opetushallitus/hakurekisteri` | `LICENSE.md` | `295` | `a61475979b96` | **EUPL, Version 1.2** |
+| `Opetushallitus/eperusteet-amosaa` | `LICENSE.txt` | `631` | `85088c175fdf` | **EUPL, Version 1.1** |
+| `Opetushallitus/oppijanumerorekisteri` | `LICENSE.txt` | `631` | `85088c175fdf` | **EUPL, Version 1.1** |
+| `Opetushallitus/lokalisointi` | `LICENSE.txt` | `631` | `85088c175fdf` | **EUPL, Version 1.1** |
+| `Opetushallitus/kayttooikeus` | `LICENSE.txt` | `631` | `85088c175fdf` | **EUPL, Version 1.1** |
+
+🟢 **`9 / 9` EUPL, against an API that called `99 / 100` of them ungranted.** And the identification is cheaper than reading prose: `986fdfc9ba85` is **byte-identical** to the payload this base had already classified on its own [`../repos/foundations.md`](../repos/foundations.md) rows for `Opetushallitus/koski` and `Opetushallitus/varda`, and `85088c175fdf` to the one on `Opetushallitus/eperusteet-ylops`. 🔵 **The transferable method: classification propagates by sha256. A grant payload byte-identical to one this base has already read needs no re-reading — only a note of which convention measured it (`714-D`).**
+
+🔵 **Why it matters beyond Finland:** every `NOASSERTION` tally this base has published for a European public-sector owner is unsafe to read as *“no grant”*. The EUPL is the European Commission's own licence and is the default for a great deal of ministry-funded education software, and it is precisely the family the detector cannot name.
+
+### 🔴 `714-B` — the tidy explanation for the EMEA freeze is REFUTED, and the shelf cannot be used to test it
+
+`714-A` suggests an attractive story: **the EMEA column is frozen because European public-sector education software is published under a licence the permissive filter excludes.** p714 tried to confirm it and the measurement refuses.
+
+**First, the shelf cannot answer the question at all.** Tallying licences by region over this table returns `permissive` at `112/112` Global, `67/68` APAC, `30/30` North America, `27/27` EMEA, `22/22` LATAM. **That is not a finding, it is the admission rule reflected back** — this shelf admits permissive grants, so reading a region's licence mix off it is **selection on the dependent variable**. The regime has to be measured at the SOURCE.
+
+**Measured at source, over `18` owners:**
+
+| region | owner | repos sampled | permissive | EUPL | GPL family | `NOASSERTION`/none |
+|---|---|--:|--:|--:|--:|--:|
+| EMEA | `Opetushallitus` | `100` | `0` | `1`† | `0` | `99` |
+| EMEA | `DFE-Digital` | `100` | **`79`** | `0` | `0` | `21` |
+| EMEA | `edificeio` | `74` | `17` | `0` | `29` | `28` |
+| EMEA | `openfun` | `100` | `52` | `0` | `13` | `28` |
+| EMEA | `onderwijsin` | `18` | `13` | `0` | `0` | `5` |
+| EMEA | `ILIAS-eLearning` | `16` | **`0`** | `0` | `7` | `9` |
+| EMEA | `OpenOLAT` | `7` | `4` | `0` | `0` | `3` |
+| EMEA | `bkd-mba-fbi` | `6` | `4` | `0` | `0` | `2` |
+| APAC | `Sunbird-Knowlg` | `25` | `23` | `0` | `0` | `2` |
+| APAC | `GovTechSG` | `85` | `55` | `0` | `0` | `30` |
+| APAC | `aiverify-foundation` | `11` | `10` | `0` | `0` | `1` |
+| APAC | `HKUDS` | `93` | `50` | `0` | `1` | `42` |
+| North America | `instructure` | `100` | `59` | `0` | `8` | `33` |
+| North America | `openedx` | `100` | `27` | `0` | **`66`** | `6` |
+| North America | `mitodl` | `100` | `61` | `0` | `12` | `27` |
+| North America | `adlnet` | `92` | `67` | `0` | `1` | `24` |
+| LATAM | `bncc-dev` | `4` | `1` | `0` | `0` | `3` |
+| LATAM | `fundacion-sadosky` | `21` | `1` | `0` | `2` | `18` |
+
+† the `99` `NOASSERTION` rows on this owner are EUPL in the bytes — that is `714-A`, and it is why this one row must not be read at face value.
+
+🔴 **EMEA is not a regime, it is a spread:** `DFE-Digital` at `79%` permissive against `ILIAS-eLearning` at `0%`, with France split between `openfun` (`52%`) and `edificeio` (`23%`). 🔴 **And the most copyleft owner in the entire sample is `openedx` at `66%` GPL — North America, not Europe.** **So "Europe is where the copyleft is" is false, and the EMEA freeze needs a different explanation than licence regime.** Recorded as refuted rather than quietly dropped.
+
+### 🔴 `714-D` — one Apache-2.0 payload, two byte counts, two hashes, same file
+
+While reconciling a drafted row against an existing one, p714 found this shelf carrying the **same** Apache-2.0 grant under two identities: **`11,357 B` / `c71d239df917` on `3` rows and `11,356 B` / `43070e2d4e53` on `3` more.** They are not two payloads. The difference is one byte — the trailing newline — and the cause is the reading instrument:
+
+| how the payload is read | bytes | sha256₁₂ |
+|---|--:|---|
+| from the file (`curl -o`, `wc -c`, `sha256sum`) | `11,357` | `c71d239df917` |
+| through a shell `$( )` command substitution | `11,356` | `43070e2d4e53` |
+
+**Command substitution strips trailing newlines, silently.** The same artefact appeared on [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) (`1,078` raw vs `1,077` stripped) and on [`RaspberryPiFoundation/editor-ui`](https://github.com/RaspberryPiFoundation/editor-ui) (`11,463` vs `11,462`). 🔵 **Consequences, both ways round: a hash MISMATCH between two rows is not evidence of a different grant, and a hash MATCH is only meaningful between cells read the same way.** p714's own first draft carried stripped values; every cell it published states **`raw file bytes`**, and `714-A`'s sha256-identity method is only sound under a declared convention. 🔵 **This base's [`../repos/foundations.md`](../repos/foundations.md) payload table already recorded `43070e2d4e53` as *“canonical, trailing newline stripped”* — it knew. The artefact had simply leaked out of the reference table and into `3` live rows.**
+
+### 🔴 `714-C` — a split grant in a repository whose product IS the documentation
+
+[`wildcat430524/Steps2Great-skill`](https://github.com/wildcat430524/Steps2Great-skill) ships **two** grants: `LICENSE` (MIT, `1,082 B`, sha256₁₂ `ea24c55dc504`) and **`LICENSE-DOCS`** (`1,406 B`, sha256₁₂ `66d256f0d904`), the latter placing *“the documentation part (protocol, subject packs, templates, tutorials, examples, README)”* under **CC BY 4.0**. The repository's own README states it **is not software**: *“它不是软件、不是课程、不是网站”* — just a `SKILL.md`. **So the MIT grant covers the part that barely exists, and the artefact's substance is CC BY 4.0.** Reading `LICENSE` alone — which is what `25` of `25` probe filenames do — publishes a green MIT cell for content that is governed by a different instrument. 🟢 **CC BY 4.0 is still commercially usable; the obligation is attribution on the CONTENT**, which is a different integration task from an MIT code dependency, and that distinction is the row's value. Swept across this pass's `14` other probed filings: **`1 / 15`** carries a split grant.
+
+### 🟢 `714-E` / `714-G` / `714-F` — three smaller results, two of them about this base's own process
+
+🟢 **`714-E` — a vendor-sourced licence claim flagged `23` passes ago is CLOSED from the bytes.** `p691` recorded **Huly** as `Apache-2.0` and warned in the same breath that *“the leg's licence attributions for Krayin, iDURAR, Corteza and Huly all came from vendor pages”*. It was never resolved. **It is wrong:** [`hcengineering/platform`](https://github.com/hcengineering/platform) (`28,074★`) is **`EPL-2.0`** — `LICENSE`, `14,197 B`, sha256₁₂ `8c349f80764d`, opening *“Eclipse Public License - v 2.0”*, with GitHub's API agreeing. **A flagged attribution is not a resolved one.**
+
+🟢 **`714-G` — the distinct-subject counter stopped a duplicate for the second time in four passes.** [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) was verified, drafted as a new platform row, and caught: it has been on [`../verticals/solutions.md`](../verticals/solutions.md) since **`p691`**, which ran the identical mandated leg. `711-B`'s rule earns its keep again — and the research was redirected into the byte-reconciliation that became `714-D`.
+
+🔴 **`714-F` — p714 reproduced `p704`'s exact defect in its own first draft.** All `15` agent rows were written with the repository as a bare `owner/repo` slug instead of a link, so the subject-counter read **the first link in the description instead** — which silently attributed two rows to [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) and [`omerfarooq223/UrduPlanner-Agent`](https://github.com/omerfarooq223/UrduPlanner-Agent), and left `12` rows with no detectable subject at all. **It was caught by this base's own gate before publication, not after.** `p704` wrote this defect down `10` passes ago; writing a defect down does not stop a later pass from committing it, and only the gate does.
+
+🟢 **`714-H` — `690-B` re-confirmed: a search-index miss is not grounds to reject or retire.** Two candidates were **absent** from `search/repositories` and **both were ALIVE** under `git ls-remote --symref`: [`byoungd/English-level-up-tips`](https://github.com/byoungd/English-level-up-tips) (`main@ddc96d37a7bd`) and [`speedyapply/2026-AI-College-Jobs`](https://github.com/speedyapply/2026-AI-College-Jobs) (`main@5e6a0019d2f8`). `2 / 2`.
+
+🔴 **The mandated `curl -sI` verification was re-tested a third time and is still worthless in this environment.** `curl -sI https://github.com/gmilano/negative-control-p714-does-not-exist` returns **`HTTP/1.1 200 Connection Established`** — the proxy's `CONNECT` line — followed by `403`. A repository that cannot exist "passes". `git ls-remote --symref` correctly returns dead for the same control and resolves a real default branch and head SHA for live ones; it remains the arbiter for every row filed here.
+
+### 🔵 The mandated legs, scored honestly
+
+| leg | addresses returned | novel | outcome |
+|---|--:|--:|---|
+| `top open source AI agents education 2026 github MIT` | `5` | `0` | `5 / 5` already held; the leg surfaced no education-specific roundup at all |
+| `github trending education AI 2026` | `4` | `2` | `GarethManning/education-agent-skills` held; **`TapXWorld/ChinaTextbook` and `anandpatikat/guru-latihan-dinamis` novel and BOTH ungranted** |
+| `open source platform education ERP CRM MIT Apache` | `6` | `0` | the identical saturated set `681-H`, `685`, `691` and `713` each recorded |
+| `AI education industry trends 2026` | `0` | `0` | market prose only — no addresses, as for `35` passes |
+| `AI education {North America, EMEA, APAC, LATAM} 2026 adoption regulation players` | `0` | `0` | **`0 / 4` returned a repository address — a 34th consecutive nil** |
+
+🟢 **But `713-G`'s procedure change paid off again, and on a region it was not designed for.** The mandated legs are mined for **named instruments** before being scored. The **LATAM** leg named, in prose, the *Raspberry Pi Foundation* — reported as newly funded to scale AI education across Latin America. One `user:RaspberryPiFoundation` query returned `51` repositories and **`4` permissive, education-grade substrates**, all filed. 🔴 **And the irony is recorded rather than smoothed: the instrument a LATAM leg named is a UK charity, so it places to `EMEA`, and the LATAM column still did not move.**
+
+### 🔴 `714-I` — the LATAM nil, measured rather than assumed
+
+Four Spanish/Portuguese sweeps with the grant in the query (`711-A`'s channel, the one that broke this freeze before):
+
+| sweep | education-relevant novel repositories |
+|---|--:|
+| `tutor educativo IA license:mit pushed:>2026-09-01` | `1` — [`bgamonal19/one-kids`](https://github.com/bgamonal19/one-kids), `0★` |
+| `professor aluno IA educacao license:mit pushed:>2026-09-01` | **`0`** |
+| `docente evaluacion estudiantes agente license:mit pushed:>2026-08-01` | **`0`** |
+| `ENEM OR ENADE OR SIMCE OR SABER agente license:mit pushed:>2026-08-01` | **`0`** — the qualifier matched Spanish-language *general* agent tooling, not education |
+
+🔴 **And the one find could not be PLACED in LATAM even so.** `bgamonal19/one-kids` is unambiguously Spanish (`27` Spanish function-word hits in `1,790 B`) and names **no country**, so it is `Global` — `711-C`'s recorded gap, that the five-value vocabulary cannot express *“Spanish-language, country unknown”*, is now costing this base real rows rather than hypothetical ones. 🔴 **A second defect on the same row:** its `LICENSE` holder is *“Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)”* — `create-expo-app`'s template file, never replaced. **The MIT permission is effective but the named holder is the tooling vendor, so nothing in the repository grants the author's own work.**
+
+### 🔴 Refused this pass, with the reason — `6` subjects
+
+| subject | ★ | state | why refused |
+|---|--:|---|---|
+| [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) | **`84,270`** | 🟢 ALIVE `master@e2b3f62213c7` | **No grant file across all `25` probed filenames.** The largest ungranted asset this base has measured — every Chinese primary, secondary and university textbook as PDF, and unusable |
+| [`byoungd/English-level-up-tips`](https://github.com/byoungd/English-level-up-tips) | — | 🟢 ALIVE `main@ddc96d37a7bd` | **CC BY-NC 4.0** (`LICENSE.md`, `1,806 B`, sha256₁₂ `a2cf1267760c`) — **NonCommercial forbids the commercial derivatives this base exists to find** |
+| [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | `115` | 🟢 ALIVE `main@02ce281609a4` | No grant file. Pushed **today**, Indonesian exam prep — the only novel APAC name the trending leg produced, and ungranted |
+| [`speedyapply/2026-AI-College-Jobs`](https://github.com/speedyapply/2026-AI-College-Jobs) | — | 🟢 ALIVE `main@5e6a0019d2f8` | No grant file; also absent from the search index (`714-H`) |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | `28,074` | 🟢 ALIVE | **EPL-2.0**, not the permissive set — see `714-E` |
+| `Opetushallitus` estate (`182` repos) | — | 🟢 ALIVE | **EUPL-1.1/1.2** — reciprocal; flagged, not shelved as buildable. See `714-A` |
+
+🔵 **The two ungranted finds are the pass's commercial lesson, and it is not a small one: the single largest education asset the legs surfaced this pass (`84,270★`) and the freshest (`115★`, pushed today) are both unusable for the same reason — no licence file at all.** Scale and recency are not grants.
+
 
 ## 🆕 2026-11-08 (p713) — 🟢 **A MANDATED REGIONAL LEG PRODUCED SUPPLY FOR THE FIRST TIME IN 33 PASSES, AND THE NIL WAS IN THE EXTRACTION RATHER THAN IN THE LEG**
 
