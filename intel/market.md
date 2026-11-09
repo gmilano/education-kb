@@ -103,6 +103,27 @@ augmented — which is where displacement work comes from.
 
 ### North America
 
+> 🔴 **`p729` regional leg — run, and this pass's one actionable North America finding did not come
+> from it.** The leg returned the figures this page already holds (`134` bills across `31` states;
+> `~100` ExcelinEd; Maryland, Idaho, Oklahoma and Virginia requiring both state guidance and district
+> policy; NY `A 9190`; DC's `2026-27` guidance barring AI from grading, discipline, IEP decisions and
+> teacher evaluation; the `K-12 AI Literacy and Readiness Act of 2026` advanced in House committee;
+> North Carolina's `$10M` Khanmigo earmark; the April 2026 ADA accessibility deadline). **`0` new
+> figures.** 🟢 **The finding came from the supply side instead, and it is a correction to this
+> base:** `703-G` registered North America's nil as a measurement problem and named the remedy — sweep
+> **district and university** GitHub organisations. `p729` ran it and found that this base's own
+> stock-`MIT` **byte band was rejecting exactly that publisher class**, because a district or a
+> university system writes a long institutional copyright line and the band measures nothing else
+> (`T259`). Two of the three recorded overshoots are North American: `ilios/frontend` (© *The Regents
+> of the University of California*, `1,105 B`) and `SirhanMacx/gnps-civic-readiness` (© *Great Neck
+> Public Schools — Social Studies Department*, `1,112 B`). **Both are plain stock `MIT`.** 🔵 **What
+> this changes for a North America engagement:** the region's open-source supply is **institutional,
+> not individual** — it sits in district, university-system and consortium accounts, is published
+> without topics or country tags, carries low star counts because its users are institutions rather
+> than developers, and is therefore invisible to every keyword and popularity instrument. `ilios`
+> (curriculum mapping for health-professions programmes, in development since 2014, pushed today) is
+> a system medical schools run; it has `32★`. **Search the owners, not the words.**
+
 > 🟢 **`p728` regional leg — run; adds three figures and one structural reading, none of which this page held.**
 > **Volume of state activity, second independent tracker:** one count puts **~100 state bills in 2026
 > that could affect K-12 student AI use** (ExcelinEd), against `p727`'s tracker figure of **134 bills
@@ -237,6 +258,25 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+> 🟡 **`p729` regional leg — run; `0` new figures, `1` structural note.** Everything the leg returned
+> is already on this page: education as an EU AI Act high-risk use (admissions, evaluation, exam
+> scoring); the **Digital Omnibus**, Regulation (EU) `2026/1744`, published in the OJ `24 July 2026`,
+> deferring stand-alone Annex III high-risk obligations from `2 August 2026` to **`2 December 2027`**;
+> the UK DfE's **January 2026** generative-AI product safety standards for education and **Ofqual's
+> March 2026** coursework-integrity resources; Dubai **KHDA** guidance to private schools; the
+> `10 %`-of-`450+`-institutions formal-guidelines figure; and Europe at **`$2.64B` (2026) → `$8.0B`
+> (2030), `31.9 %` CAGR** — a vendor-grade series this page already flags as such. 🟢 **The one item
+> not previously held on this page: Pearson's agreement to acquire Workera** (AI-skills verification),
+> which this base held only in `agents/trending.md`. It belongs here because it is the credentialing
+> end of `T233`/`1EdTech`'s skills-first shift arriving by acquisition rather than by product.
+> 🔵 **Supply note:** EMEA gained **two** platform rows this pass, both institutional —
+> `numbas/editor` (Newcastle University; **the only permissively-licensed examination platform on
+> these shelves**, and a *computational* marker rather than an answer-key matcher) and the
+> `ArnaudGuiovanna/lore` headless-LMS row filed `Global` because this base refuses author-geography
+> placement (`703-F`). 🟡 **That refusal is applied inconsistently and `p729` flags it rather than
+> copying it:** the same owner's `tutor-mcp` is filed **EMEA** on the author's name. One of the two
+> cells is unevidenced.
 
 > 🟢 **`p728` regional leg — run; the adoption numbers firm up and the regulatory date does not.**
 > **Adoption, two independent 2026 instruments:** Futuresource reports **67 % of teachers now using
@@ -422,6 +462,28 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+> 🟡 **`p729` regional leg — run; `0` new figures.** Already held: Korea's **AI Basic Act in force
+> `22 January 2026`** with a guidance-first grace period through 2026; **Vietnam's July 2026 decision
+> naming education among six high-risk sectors**, explicitly including automated assessment and
+> behavioural systems; China's registration and content-labelling regime; Japan's light-touch,
+> existing-law approach; **TEQSA** requiring Australian higher-education providers to file
+> generative-AI risk action plans; the Philippines' **CHED Memorandum Order 21**; and the EU AI Act's
+> extraterritorial reach over APAC vendors selling proctoring or admissions tools into the EU.
+> 🟢 **The pass's supply result is APAC's: `6` of the `19` rows filed carry an APAC placement — more
+> than any other region — and APAC now holds `27` of the `48` rows on the agents shelf.** (Filed by
+> region, derived after the inserts: APAC `6`, Global `5`, LATAM `2`, North America `2`, EMEA `1`, and
+> `3` foundations rows left unplaced because no evidence this base accepts was present.) The headline is
+> [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) — **`10,732★`,
+> `2,687` forks, MIT** — an **admissions-advisory** framework (Gaokao application strategy,
+> postgraduate entrance, career planning). 🔵 **It opens a category this base had no row for in `728`
+> passes: the decision made *before* any learning happens.** Every tutoring row here presupposes the
+> learner knows what they are studying for; this is the choice itself, and in China it is a large,
+> already-monetised advisory market. Filed with the ministry's own corpus beside it
+> (`lifefloating/gaokao-vault`, Apache-2.0, harvesting **阳光高考**) and wired as `P165`. ⚠️ **The
+> fork-to-star ratio of `0.25` is the signal to read** — far above anything else on these shelves.
+> This is being *forked and adapted*, not starred and forgotten, which is what a template looks like
+> and what a product does not.
+
 > 🟢 **`p728` regional leg — run; adds a programme, a date and a measured divergence on restriction.**
 > **Policy divergence, and it is the finding:** the **Ipsos Education Monitor 2026** records
 > *lower* support for banning AI in schools across the Asian markets surveyed, even while support for
@@ -577,6 +639,29 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+> 🟡 **`p729` regional leg — run; `0` new figures, and the saturation is now measured** (`T261`).
+> Already held: UNESCO **IESALC** across ~`200` institutions in `19` countries — **`87 %` using AI in
+> at least one area against `26 %` with a formal framework and `55 %` with no AI budget at all**; the
+> **Digital Education Council / Tec de Monterrey** survey at **`92 %` of students and `79 %` of
+> faculty**; Uruguay at **`75 %`** of public-school teachers; Brazil at **`53 %`** of administrators
+> against **`22 %`** whose school has guidelines; the Universidad de los Andes count of **`716`**
+> AI-related regulatory instruments across `23` countries; and UNESCO's **Observatory on AI in
+> Education for Latin America and the Caribbean**, launched `14 April 2026` at ECLAC in Santiago.
+> 🟢 **New supply, and it opens a second Brazilian examination market.** `T133` recorded ENEM as the
+> one national examination on these shelves with an end-to-end permissive stack.
+> [`gilsonnogueira/notebooklm-para-concursos`](https://github.com/gilsonnogueira/notebooklm-para-concursos)
+> (`63★`, MIT) is the first row this base holds for **`concursos públicos`** — Brazil's public-service
+> examinations, a **larger candidate-spend market than ENEM** — and it already implements the
+> statistical half: a *raio-X* of the **CEBRASPE, FGV and FCC** examining boards' question patterns,
+> `19` calibrated prompts, source-grounded retrieval wired to Anki. Plus
+> [`mizaelsouto/CursoTecnico`](https://github.com/mizaelsouto/CursoTecnico) (`34★`, MIT), graded
+> practical labs for Brazil's `ensino técnico` system — the local-language corpus the `T256` vocational
+> tier is always missing. ⚠️ **Both carry the limit plainly:** `notebooklm-para-concursos` is a method
+> over **hosted** NotebookLM and Gemini, so `MIT` covers the methodology and not the capability
+> (`P156`). 🔵 **The region is still at `1` row on the `48`-row agents shelf** — `T130`'s finding
+> (this base's own star floor suppressed LATAM) and `T259`'s (its byte band suppressed institutions)
+> are the two known instrument causes, and neither has been fully re-run.
 
 > 🔴 **`p728` regional leg — run, and this is the pass where the LATAM *supply* gap is measured rather than
 > asserted. The announcement layer is far ahead of the code layer.**
@@ -747,6 +832,23 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+> 🟢 **`p729` — one cross-region reading, and it is about buying rather than building.** `T260`
+> measured that a repository can be **substantively** correctly licensed and **textually**
+> non-canonical at the same time: `HKUDS/DeepTutor` (`57,571★`, the largest education-native project
+> on these shelves) ships an `Apache-2.0` payload whose APPENDIX has been rewritten — *"Apache"*
+> replaced by *"Alarm"* — plus wording changes in §1 and §4(d). **The operative sections are intact,
+> so the licence holds and the row stays.** 🔵 **The procurement consequence is the part that
+> generalises:** GitHub's `spdx_id` reports a clean `Apache-2.0` and a client's dependency scanner is
+> almost certainly in the same tolerant class, so **"the scanner says Apache-2.0" does not establish
+> that the licence text was not altered.** For anything that must survive a legal review, the
+> evidence is a diff against the upstream text with each delta classified as operative or
+> non-operative — `P164`'s rule — not a badge. 🔴 **And a second, sharper one:** `spdx_id` is now known
+> to come from three places, only one of which is a grant (`T261`). `kitschpatrol/yanki-connect`
+> (`59★`) reports `MIT` with **no grant document at any of seven root paths** — the field is read from
+> `package.json`. A manifest field is a declaration by the author, not a conveyance of rights. **A
+> scanner walking a dependency tree will report a licence for every package in it, and some fraction
+> of those packages have no grant at all.** That fraction is unmeasured here and is filed as a gap.
 
 > 🟢 **`p727` cross-region leg — the structural reading is unchanged and now has a second year of
 > support.** Market-size sources still disagree by more than 2× on the same year (**~$10.6B for

@@ -21,6 +21,161 @@ prior engagement may cite.)
 
 ---
 
+## P164 — The licence gate, published with its procedure: one normalisation, one constant per tier, and a diff when they disagree (tooling, not a client pattern; half a day, then a standing gate) 🟢 new at p729
+
+**Replaces `P163`, which is not executable.** `P163` mandated a standing gate keyed on a normalised
+stock-`MIT` body of `1,020 B` / sha256₁₂ `fe2a9817987f` **without recording the normalisation that
+produces it**, and `729-A` could not reproduce that value under any of seven procedures. A constant
+and its procedure are one unit (`T258`). Here is the pair.
+
+### The procedure, stated so it can be re-run
+
+1. **Fetch the payload at the real default ref** over the case-ordered path ladder, taking the first
+   `200`: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `License`, `LICENCE`, **`UNLICENSE`**,
+   `COPYING`. The ladder must stay ordered and case-exhaustive (`700-B`); `UNLICENSE` was added at
+   `729-C` after `fasiha/ebisu.js` was missed by the shorter ladder.
+2. **Drop the title line**: any line whose stripped form matches `^(the\s+)?mit\s+license.*$`,
+   case-insensitive. (This is what makes `The MIT License (MIT)` and `MIT License` normalise alike —
+   `ilios/frontend` uses the first form.)
+3. **Drop every line containing `copyright`**, case-insensitive. This is the only variable content in
+   a stock grant, and it is what `T259` shows a raw byte tolerance is actually measuring.
+4. **Collapse all whitespace**: join the surviving lines with a single space, replace every run of
+   whitespace with one space, trim the ends.
+5. **Measure UTF-8 byte length and `sha256`, first 12 hex.** Record **both**. Length alone cannot
+   detect that a different procedure is running (`T258`: two stable procedures, both `870 B`,
+   different hashes).
+
+### The constants
+
+| Tier | Canonical body | sha256₁₂ | Publishers | Raw spread |
+|---|--:|---|--:|--:|
+| `MIT` | **`870 B`** | **`3d87852cf34a`** | `n=17`, spread `0 B` | `1,056`–`1,112 B` (`56 B`) |
+| `Apache-2.0` | **`9,478 B`** | **`399d47608b81`** | `n=8`, spread `0 B` | `11,324`–`11,358 B` (`34 B`) |
+| `BSD-3-Clause` | `1,091 B` | `90bd78b45663` | **`n=1`** — *not yet a constant* | — |
+| `Unlicense` | `1,042 B` | `fe0829b13da5` | **`n=1`** — *not yet a constant* | — |
+
+The two `n=1` rows are recorded as single observations and must not be used as gates until a later
+pass confirms them on an independent publisher.
+
+### Negative controls — run them before trusting the gate
+
+| Control | Expected | Result |
+|---|---|---|
+| `Apache-2.0` payload measured against the `MIT` constant | reject | `9,478` vs `870` ✅ |
+| `AGPL-3.0` payload (`sitor-ai/frametell`) | reject | `32,371 B` ✅ |
+| `Unlicense` payload (`ebisu.js`) | reject as `MIT` | `1,042 B` ✅ |
+| Stock `MIT` with a long **institutional** holder (`1,112 B` raw) | **accept** | `870 B` ✅ (`T259`) |
+| Stock `MIT` with a **non-ASCII** holder (`© 2026 正贤`) | **accept** | `870 B` ✅ |
+
+The last two are the controls that matter, because they are the cases the retired band got wrong.
+
+### The rule that keeps it from refusing good rows
+
+🔴 **A payload that differs from the constant is a flag to diff, never a verdict.** Verify by
+**section**, not by whole-payload equality. When the body differs:
+
+1. Diff against the upstream text (`apache.org/licenses/LICENSE-2.0.txt`, `opensource.org` for `MIT`).
+2. Classify each delta as **operative** (grant, patent grant, redistribution conditions, warranty and
+   liability disclaimers) or **non-operative** (title block, APPENDIX application instructions,
+   wording that changes no right).
+3. Only operative deltas change the verdict.
+
+`T260` is the live case: `HKUDS/DeepTutor` (`57,571★`) is `+16 B` off the constant because its
+APPENDIX was rewritten with *"Alarm"* substituted for *"Apache"*, plus an article in §1 and a synonym
+in §4(d). **All non-operative — the row is `Apache-2.0` and stays.** An exact-equality gate would
+have refused the base's largest row; `spdx_id` would never have flagged the edit at all.
+
+### And the provenance check, which is separate
+
+🔴 **Before accepting `spdx_id` for anything, establish where it came from** (`T261`). If every path
+on the ladder `404`s and the field is still populated, it is coming from a **package manifest**
+(`package.json`, `pyproject.toml`, `Cargo.toml`) — a declaration by the author, not a grant.
+`kitschpatrol/yanki-connect` (`59★`) is the worked example and was **refused** on this basis at
+`729-E`. Record the refusal; do not silently drop the row.
+
+---
+
+## P165 — Grounded admissions and pathway advice: the decision made before any learning happens (APAC first on supply, the shape is global; 5–7 weeks to a pilot) 🟢 new at p729
+
+**The gap this fills.** Every tutoring row on these shelves assumes the learner already knows what
+they are studying for. **Nothing on them addresses the choice itself** — which programme, which
+institution, which credential, which career — and that choice is made under time pressure, with
+life-sized consequences, by families who currently buy it from human advisers at high cost and
+uneven quality. `p729` found the supply for it in one place and it is the largest new row of the pass.
+
+### The stack, and why each piece is there
+
+| Layer | Repo | Licence | Job |
+|---|---|---|---|
+| Decision framework | [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) (`10,732★`) | MIT | The advisory *reasoning* — how to trade off score, region, programme strength and career outcome. `2,687` forks: it is already used as a template. |
+| Authority corpus | [`lifefloating/gaokao-vault`](https://github.com/lifefloating/gaokao-vault) (`38★`) | Apache-2.0 | The **ministry's own** 阳光高考 data — institutions, programmes, admissions. The framework has no data under it; this is the data. |
+| Curriculum/credential anchor | [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) (`13★`) | MIT | The EMEA analogue: query a **national** curriculum and school register as tools. Proves the shape is not China-specific. |
+| Grounded answering | [`groundworklms`](https://github.com/groundworklms) **Anchor** | Apache-2.0 | Answers **only** from cited sources or refuses. The non-negotiable layer — see below. |
+| Workforce end | [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) (`116★`) | MIT | Closes the loop: the programme choice is justified by the job it leads to. |
+| Retention of what was advised | [`fasiha/ebisu.js`](https://github.com/fasiha/ebisu.js) (`48★`) | Unlicense | Only if the engagement extends into preparation; estimates recall probability rather than scheduling blindly. |
+
+### Wiring
+
+```
+family's constraints (score, budget, region, interests)
+        │
+        ▼
+zhangxuefeng-skill ─── framework: what trade-offs matter, in what order
+        │
+        ▼
+Anchor (groundworklms) ── every factual claim resolved against ↓ or REFUSED
+        │                        │
+        │                        ├── gaokao-vault      (APAC: 阳光高考, official)
+        │                        ├── Skolverket-MCP    (EMEA: Läroplan + school register)
+        │                        └── {client's own authority feed}   ← the per-region build
+        ▼
+ranked shortlist, each line carrying the source it came from
+        │
+        ▼
+InterviewMentor ── "here is the role this leads to; here is you in it"
+```
+
+### The one hard constraint
+
+🔴 **The advisory framework must never be allowed to state a fact.** It ranks and explains; it does
+not know cut-off scores, fees, programme capacity or admission rules. Those come from the authority
+corpus through Anchor, which **refuses rather than guesses** — `P84`'s property, and the reason Anchor
+is in this stack rather than a general RAG layer. A wrong cut-off score in a recommendation is not a
+hallucination a user shrugs at; it is a year of someone's life. **If the corpus has no answer, the
+product says so.**
+
+🔴 **Second constraint: the corpus is a scraper, so it ages silently.** `gaokao-vault`'s last push is
+`2026-05-13`. Re-harvest and diff before any cycle, and surface the harvest date in the UI next to
+every figure. An authority corpus with no visible as-of date is worse than no corpus, because it
+looks authoritative.
+
+### Regional fit
+
+- **APAC — build now.** Both the framework and the authority corpus exist, in-language, and the
+  Gaokao advisory market is enormous and already monetised.
+- **LATAM — the same shape, one layer missing.** `gilsonnogueira/notebooklm-para-concursos` (`p729`)
+  shows the Brazilian `concursos` market already does the *statistical* half (a *raio-X* of CEBRASPE,
+  FGV and FCC question patterns). What has no permissive row yet is the institution/programme corpus.
+  **Build the harvester; the framework transfers.**
+- **EMEA — the anchor exists and the framework does not.** `Skolverket-MCP` gives a national
+  curriculum and register as tools; no advisory-reasoning row has been found for any European system.
+- **North America — supply thin by measurement, not by absence** (`T259`): the district/university
+  publisher tier was being rejected by this base's own licence band. `gnps-civic-readiness` is the
+  first row from that tier and is a *credential* portal, which is the adjacent shape.
+
+### Timeline
+
+| Weeks | Deliverable |
+|---|---|
+| 1 | Harvest and diff the authority corpus; publish its as-of date. Fork `gaokao-vault` or write the regional equivalent. |
+| 2–3 | Anchor over the corpus. **Gate: measure the refusal rate on questions the corpus cannot answer — it must be ~`100 %`, and that is the acceptance test, not a defect.** |
+| 4–5 | Framework layer on top, every factual claim routed through Anchor. Shortlist output with per-line provenance. |
+| 6–7 | `InterviewMentor` on the outcome end; pilot with one cohort and one counsellor reviewing every recommendation. |
+
+⚠️ **Licence posture:** `MIT` + `Apache-2.0` + `Unlicense` throughout — no copyleft anywhere, so a
+closed derivative is available. But `zhangxuefeng-skill` is **a framework, not a service**: no model,
+no retrieval, no evaluation. What you are taking is the reasoning, and you supply everything else.
+
 ## P162 — Certification-backed vocational training on a simulated rig, with the AI marking intent rather than output (industrial/workforce buyer; 6–9 weeks to a pilot cohort) 🟢 new at p728
 
 **Use when** the buyer is an employer, a technical institute or a workforce programme rather than

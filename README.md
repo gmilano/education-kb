@@ -1,8 +1,51 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-08
+updated: 2026-11-09
 ---
+
+## 🆕 `p729` — reads `2026-11-09`, commit `2026-11-09` — **🔴 THE LICENCE GATE `p728` PUBLISHED AS STANDING AND MANDATORY CANNOT BE RUN: IT RECORDED A CONSTANT AND NOT THE NORMALISATION, AND SEVEN PROCEDURES REPRODUCE NONE OF IT. 🔴 THE BAND IT REPLACED WAS REJECTING SCHOOL DISTRICTS AND UNIVERSITY SYSTEMS — THE EXACT PUBLISHER TIER THIS BASE DECLARED NORTH AMERICA EMPTY OF. 🟢 `19` ROWS FILED, `0` FROM THE MANDATE, AND THE LARGEST OPENS A CATEGORY `728` PASSES MISSED.**
+
+**Nineteen rows were filed at p729 and the mandated legs contributed none of them.** `agents/top.md`
+shelf **`39` → `48`**. `verticals/solutions.md` **+`5`** across one existing section and one new one.
+`repos/foundations.md` **+`5`**. `intel/trends.md` gains **`T258`**–**`T261`**; `compose/patterns.md`
+gains **`P164`** and **`P165`**; opportunities published under the single existing
+`## Opportunities by region` heading for **all five** values, North America's being an explicit
+correction to this base rather than a demand reading.
+
+| `p729` registered | Verdict |
+|---|---|
+| 🔴 `729-A` → `T258` — **a constant published without its normalisation is not a measurement.** `p728` reduced the stock-`MIT` test to **`1,020 B` / sha256₁₂ `fe2a9817987f`** and mandated `P163` as a standing gate — **without recording how to normalise.** Seven procedures run against publishers `p728` itself names as stock `MIT` **all land `870`–`874 B`; none reaches `1,020 B`.** 🔴 **And two of the seven are each perfectly stable across publishers while disagreeing with each other: `870 B` / `3d87852cf34a` and `870 B` / `a7a3589acf19` — same byte count, different hash.** A gate storing only the length cannot detect it is running the wrong procedure. 🟢 Re-derived at **`n=17`, spread `0 B`**; `P164` replaces `P163` and publishes procedure, constants and negative controls as one unit | 🔴 **GATE NON-EXECUTABLE; REPLACED** |
+| 🔴 `729-B` → `T259` — **the retired byte band was biased against institutions, and the bias produced a published regional nil.** All three recorded overshoots of the `1,056`–`1,097 B` band **name an institution in the copyright line** — `gnps-civic-readiness` `1,112 B` (© *Great Neck Public Schools — Social Studies Department*), `ilios/frontend` `1,105 B` (© *The Regents of the University of California*), `opencast/studio` `1,164 B` (`p726`) — and **`0` individual-author payloads have ever overshot.** All three normalise to `870 B`: stock `MIT`, and the band was wrong about all three. 🔴 **`703-G` named North America's nil a measurement artefact and prescribed sweeping district and university organisations — the exact class the band rejected.** The instrument was suppressing the region it described | 🔴 **BAND RETIRED — IT SELECTED AGAINST THE MISSING REGION** |
+| 🟢 `729-C` → `T258` — **the gate generalises past `MIT`, which `p728` asserted and never measured.** `Apache-2.0`: **`9,478 B` / `399d47608b81`, `n=8` publishers, spread `0 B`**, against a raw spread of `34 B`. `BSD-3-Clause` (`1,091 B` / `90bd78b45663`) and `Unlicense` (`1,042 B` / `fe0829b13da5`) opened at **`n=1` each and explicitly not yet constants.** The path ladder also gained `UNLICENSE` — without it `ebisu.js`, the pass's best foundations find, reads as ungranted | 🟢 **`n=8` CONSTANT, TWO TIERS OPENED HONESTLY** |
+| 🔴 `729-D` → `T260` — **the one outlier is the largest row on the shelf, and it stays.** `HKUDS/DeepTutor` (**`57,571★`**) is `+16 B` off the `Apache-2.0` constant. Diffed against `apache.org/licenses/LICENSE-2.0.txt`: **the APPENDIX instructions are rewritten with *"Apache"* replaced by *"Alarm"***, plus *"received by **the** Licensor"* (§1) and *"excluding **any** notices"* (§4(d)). 🟢 **Grant, patent and warranty sections byte-intact; the APPENDIX is not licence terms; the two §-edits are an article and a synonym — it is `Apache-2.0`.** 🔴 **Both instruments fail in opposite directions: exact-payload equality refuses a correctly-licensed `57,571★` row, and `spdx_id` reports clean `Apache-2.0` and never flags the edit.** Hence `P164`: **verify by section, diff on mismatch, never refuse on inequality** | 🟡 **ROW KEPT; BOTH GATES WRONG ON IT** |
+| 🔴 `729-E` → `T261` — **`spdx_id` has three provenances and only one is a grant.** `kitschpatrol/yanki-connect` (`59★`) is reported `MIT` with **`7` root grant paths probed and all `7` returning `404`**; the field comes from `package.json`. **A manifest field is a declaration; a grant is a document.** Found, alive, useful, **deliberately not filed** — refusal recorded. 🔵 A dependency scanner reports a licence for every package in a tree and some fraction carry no grant at all; unmeasured, filed as a gap | 🔴 **REFUSED, REASON RECORDED** |
+| 🟢 `729-J` — **the largest find opens a category this base missed for `728` passes.** `alchaincyf/zhangxuefeng-skill` — **`10,732★`, `2,687` forks, MIT, APAC** — is an **admissions-advisory** framework (Gaokao application strategy, postgraduate entrance, career planning). 🔵 **Every tutoring row here assumes the learner already knows what they are studying for; this is the decision made before any learning happens**, and families buy it today from human advisers at high cost and uneven quality. Filed with the ministry's own corpus (`gaokao-vault`, Apache-2.0, harvesting **阳光高考**) and wired as `P165`, whose hard constraint is that **the framework must never state a fact** — figures come from the authority corpus through a layer that refuses rather than guesses. ⚠️ Fork-to-star ratio **`0.25`**: forked and adapted, which is a template, not a product | 🟢 **NEW CATEGORY, WITH ITS CORPUS** |
+| 🔴 `729-F` → `T261` — **the regional legs have saturated as a market instrument, which was the last job they still did.** `703-H` re-scoped them from supply to market because they returned demand data and no addresses. This pass: ~`35` distinct figures, **exactly `1` not already held in `intel/market.md`** (Pearson/Workera). IESALC's `87 %`/`26 %`/`55 %`, DEC's `92 %`/`79 %`, Uruguay `75 %`, Brazil `53 %`/`22 %`, Europe `$2.64B`→`$8.0B` at `31.9 %`, the `450+`-institution `10 %`, the `716` LATAM instruments, Korea's AI Basic Act, Vietnam's six high-risk sectors, the Digital Omnibus deferral to `2 Dec 2027` — **all already on the page.** 🔵 **Saturation, not failure: keep them as cheap confirmation, stop costing them as discovery** | 🔴 **SATURATED — RE-SCOPE AGAIN, DO NOT RETIRE** |
+| 🔴 `729-H` + `729-I` — **two counts in this base were wrong, one of them in this pass's own draft.** `agents/top.md`'s roster prose read **"29"** against a `39`-row shelf — stale by exactly `p728`'s ten additions, **one pass after `727-C` fixed that same sentence**; fourth count-vs-table divergence recorded here and the first to recur immediately. 🟡 **`729-I`: this pass first wrote its region tally from estimate and every cell was wrong** (`Global 24 · APAC 18 · EMEA 3 · NA 2 · LATAM 1`); derived by counter it is **`APAC 27` · `Global 15` · `EMEA 4` · `North America 1` · `LATAM 1`**. Both published derived, with the errors left on the record | 🔴 **FIXED BY COUNTING, NOT BY INSTRUCTION** |
+| 🟡 `729-K` — **two rows were mis-filed into an existing section and moved before publication, and that is recorded rather than quietly fixed.** A curriculum mapper, a courseware engine, a headless LMS and a district credential portal first landed in `p728`'s **Assessment and examination platforms** table, which would have made that heading false. They are now under a new **`## Curriculum, courseware and district platforms`** section. 🔵 Likewise `ebisu.js` and `anki_fsrs_visualizer` first landed under *Content and offline delivery* and belong under **Learner modelling** | 🟡 **CORRECTED IN-PASS, RECORDED** |
+
+**Filed:** `19` rows — `9` agents, `5` platforms, `5` foundations (`9+5+5 = 19`, counted after the
+inserts). **`20` subjects probed, `20` alive, `19` filed, `1` refused.** Every grant payload read from
+**bytes** at the real default ref over the case-ordered ladder and normalised by `P164`; `0` licence
+claims from `spdx_id` alone, `0` from a secondary source. Stars, `spdx_id`, `pushed_at` and `archived`
+cross-read from `gh api search/repositories`. `curl -sI https://github.com/…` **not re-bought** — it
+returns `200 Connection Established` for every address through this proxy, live or invented
+(unchanged since `p686`).
+
+**Gates, all re-derived by counting after the inserts:** agents shelf **`48/48`** at `7` columns;
+rosters **`345/345`**, **`365/365`**, **`128/128`** — `0` ragged, `0` header/placeholder/example rows
+surviving as data, `0` duplicated slugs. Region vocabulary **`48/48` legal, `0` illegal**. Counters
+validated against the **inherited** tables first — all three roster headings matched on arrival —
+before being trusted on the new ones (`680-F2`).
+
+**Declared gaps this pass:** (1) **what fraction of a dependency tree's `spdx_id` values rest on a
+manifest field with no grant document** — `729-E` found the mode, not its prevalence; (2) **no
+permissive institution/programme corpus for any LATAM country**, which is the one missing layer in
+`P165` outside APAC (the Brazilian `concursos` market already has the statistical half); (3) **no
+advisory-reasoning row for any European education system**, though `Skolverket-MCP` supplies the
+curriculum anchor; (4) `BSD-3-Clause` and `Unlicense` constants stand at **`n=1`** and must not be
+used as gates until confirmed on an independent publisher.
 
 ## 🆕 `p703` — reads `2026-11-08`, commit `2026-11-08` — **🔴 THE SINGLETON-HEADING RULE WAS WRITTEN AT `p699` AND RESTATED AT `p702`, AND BOTH SIBLING SHELVES WERE BROKEN BY IT ANYWAY: `foundations.md` PUBLISHED `199` OVER A TABLE OF `233` FOR TWO FULL PASSES. 🟢 `44` ROWS FILED AND THE EIGHT MANDATED LEGS CONTRIBUTED ZERO — `13 / 13` ADDRESSES THEY RETURNED WERE ALREADY HELD, THE CLEANEST NIL YET RECORDED. 🔴 AND TWO OWNERS THIS BASE ALREADY HELD A ROW FROM HAD NEVER BEEN QUERIED: `318` REPOSITORIES ONE API CALL AWAY, INCLUDING THE PASS'S MOST-ADOPTED ARTEFACT AT `55★`.**
 

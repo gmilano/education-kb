@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p729) — 🟢 **TEN COMPONENT AND PLATFORM ROWS, AND THE BEST OF THEM IS A `0★` RUST TOOL AND A PUBLIC-DOMAIN LIBRARY FROM 2017**
+
+**`5` foundations rows · `5` platform rows · `1` row refused on licence provenance · `1` published
+foundations cell corrected · `2` rows re-filed into the correct section after landing in the wrong
+one · `0` rows from any mandated leg (a `36`th consecutive nil) · the `Apache-2.0` constant
+established at `n=8` · `BSD-3-Clause` and `Unlicense` opened at `n=1` each.**
+
+### Filed to `repos/foundations.md`
+
+| Repo | Stars | Licence | Why it was taken |
+|---|--:|---|---|
+| [fasiha/ebisu.js](https://github.com/fasiha/ebisu.js) | 48 | **Unlicense** | 🟢 **The best find of the pass on the foundations side, and it is eight years old.** Every retention component these shelves hold — FSRS, SM-2, Anki, `leetsolv`, `Hoshibiroi` — *schedules*: it answers "when do I show this again". **Ebisu *estimates*: it carries a posterior over each item's memory half-life and answers "what is the probability of recall right now" as a number.** That is the quantity a tutor needs to choose what to teach next, and the quantity any mastery claim to a buyer has to rest on. With `OATutor`'s BKT this base now holds two independent, auditable mastery models. 🟢 **`Unlicense` — public domain, no attribution obligation, the most permissive tier on any shelf here.** ⚠️ Grant lives at `UNLICENSE`, **a ladder path this base's probe did not hold until `p729`** — without the fix this row reads as ungranted (`729-C`). |
+| [mizorewww/slide-detect](https://github.com/mizorewww/slide-detect) | 0 | MIT | 🟢 **A `0★` row filed on mechanism, and the section it completes was built around its absence.** `p724` filed `mizorewww/course2md` (`508★`); this is the **same author extracting that project's hardest step** — finding slide boundaries in a lecture video with `ffmpeg` + **SSIM**, full-resolution frame per change. 🔵 **Boundary detection decides whether lecture capture works at all**: right boundaries and the transcript segments cleanly against its slide, wrong ones and every downstream note is misattributed. Doing it on frame similarity is **deterministic and entirely local** — no model, no API, no recording leaving the building, which is `P159`'s constraint. ⚠️ Filed as a mechanism to copy, not a dependency to pin. |
+| [open-spaced-repetition/anki_fsrs_visualizer](https://github.com/open-spaced-repetition/anki_fsrs_visualizer) | 32 | MIT | Plots what an **FSRS** parameter set actually does — forgetting curves, interval growth, stability — against the learner's own history. 🔵 **Filed as an *explainability* component, not a scheduler.** FSRS has `17`+ fitted parameters, and *"trust us, the algorithm picked this interval"* is not a sentence that survives a procurement review or a parent meeting. From the FSRS reference organisation itself. |
+| [lifefloating/gaokao-vault](https://github.com/lifefloating/gaokao-vault) | 38 | Apache-2.0 | Harvests **阳光高考** — China's *official* Ministry of Education Gaokao portal — into a structured local corpus. 🟢 **Filed because it is the corpus this pass's largest agent row has none of**: `alchaincyf/zhangxuefeng-skill` (`10,732★`) is admissions-advisory *reasoning* with no data under it, and this is the authority's own data. Together they are `P165`, and they place in the same region. ⚠️ **A scraper, so two standing risks — the source's terms, and silent breakage when the portal's markup moves.** Six months quiet; re-run before trusting a field. |
+| [mizaelsouto/CursoTecnico](https://github.com/mizaelsouto/CursoTecnico) | 34 | MIT | Practical lessons, labs and exercises for Brazil's **`ensino técnico`** system. 🔵 **Foundational rather than merely content:** `T256` named vocational/TVET a separate permissive supply tier, and what that tier always lacks is **graded practical work in the local curriculum's own language.** This is that corpus for Brazil. **LATAM.** ⚠️ Course-material repository — no API, no tests. |
+
+### Filed to `verticals/solutions.md` — a new section, because none of the four fitted the old ones
+
+🟡 **Two of these first landed in the `p728` *Assessment and examination platforms* table and were
+moved out before publication.** A curriculum mapper, a courseware engine, a headless LMS and a
+district credential portal are not examination platforms, and filing them there would have made the
+section's own heading false. They are now under **`## Curriculum, courseware and district
+platforms`**. Recorded because quietly correcting a mis-file teaches the next pass nothing.
+
+| Platform | Repo | Stars | Licence | Why it was taken |
+|---|---|--:|---|---|
+| **Numbas** | [numbas/editor](https://github.com/numbas/editor) | 60 | Apache-2.0 | 🟢 **The only permissively-licensed examination platform on these shelves** (`TCExam` is `AGPL-3.0` *plus* a trademark restriction). Built at **Newcastle University**, in continuous development since **2012**. 🔵 **`TCExam` delivers a paper; Numbas *computes* one** — questions are parameterised, every attempt is a different instance, and marking evaluates the candidate's **algebraic expression** against the question's own mathematics rather than matching an answer key. **That is the one marking problem an LLM must not be trusted with and a deterministic engine simply solves** (`P161`'s objective oracle, off the shelf). Exports SCORM and QTI. **EMEA.** |
+| **Ilios** | [ilios/frontend](https://github.com/ilios/frontend) | 32 | MIT | **Curriculum management and mapping for health-professions education** — answers *"where in these four years is this competency taught and assessed?"*, which no LMS on this shelf models at all. Since **2014**; pushed today. 🔴 **Also `729-B`'s second exhibit: `LICENSE` is `1,105 B`, above the retired stock band, normalising to `870 B` — stock `MIT`, rejected by the band because the holder is © *The Regents of the University of California*.** **North America**, placed on that holder, read from the payload. ⚠️ `32★` is a governance signal, not adoption: medical schools run it; developers do not star it. |
+| **freeCodeCamp OS** | [freeCodeCamp/freeCodeCampOS](https://github.com/freeCodeCamp/freeCodeCampOS) | 78 | **BSD-3-Clause** | The courseware engine behind freeCodeCamp's external courses: author a course as files, get a learner workspace with **test-driven lesson validation**. Rust. 🔵 **Progression is objective and needs no marker** — the learner's code is run against the author's tests — the same deterministic-oracle property `P161` otherwise assembles by hand. 🟢 **New licence tier on these shelves** (`1,091 B` / `90bd78b45663`, `n=1`, **not yet a constant**). ⚠️ Region **unplaced → Global**: a well-known US foundation, but `README.md` names no country and this base does not place on reputation (`703-F`). |
+| **Lore** | [ArnaudGuiovanna/lore](https://github.com/ArnaudGuiovanna/lore) | 1 | Apache-2.0 | An **agentic headless LMS** — enrolment, delivery and progress as an API with no bundled front end, meant to be driven by an agent rather than clicked by a learner. 🟢 **Filed for architecture at `1★`, stated plainly.** Every other platform here is a monolith with an AI sidecar bolted on (`P138`); this inverts it, and `P165` uses it as the control case for whether headless-first justifies the rebuild. ⚠️ **`1★`, one author, five months quiet. Read it; do not depend on it.** 🟡 **Region unplaced → Global, with an inconsistency recorded:** this base files the same owner's `tutor-mcp` as **EMEA** on the author's name, which `703-F` forbids — one of the two cells is unevidenced. |
+| **GNPS Civic Readiness** | [SirhanMacx/gnps-civic-readiness](https://github.com/SirhanMacx/gnps-civic-readiness) | 0 | MIT | A working portal for the **New York State Seal of Civic Readiness**, built for **Great Neck Public Schools** and written to be *forkable by any New York district*. 🟢 **The most consequential `0★` row this base has filed.** `703-G` registered North America's nil as a measurement artefact and named the remedy — sweep **district and university** organisations. This is that sweep's first result. 🔴 **And `729-B`'s first exhibit: `LICENSE` is `1,112 B`, the largest overshoot on record, normalising to `870 B`** — the excess is © *Great Neck Public Schools — Social Studies Department* with a `3`-byte em-dash. **The band was rejecting the region's publishers by construction.** **North America** (named state credential, named district). ⚠️ `0★`, one author, one district: a template and an existence proof. |
+
+### Refused, with the reason on the record
+
+🔴 [`kitschpatrol/yanki-connect`](https://github.com/kitschpatrol/yanki-connect) (`59★`, MIT per
+`gh api search/repositories`) — a fully-typed **AnkiConnect** client, exactly the interoperability
+component the `p726` client tier wants. **`7` root grant paths probed, all `7` → `404`**
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `license.md`, `LICENSE-MIT`, `licenses/LICENSE`).
+The `spdx_id` is read from `package.json`'s `"license": "MIT"`. **A manifest field is a declaration
+by the author; a grant is a document conveying rights.** Not filed (`729-E` → `T261`).
+
+### One published cell corrected
+
+🔴 `repos/foundations.md`'s `BennettSchwartz/membrane` row cited **`1,020 B` / `fe2a9817987f`** as its
+licence evidence — `p728`'s constant, which `729-A` shows no normalisation reproduces. Re-measured:
+**`870 B` / `3d87852cf34a`.** The row's verdict was correct and its evidence was not re-derivable,
+which is the entire reason this base prints the numbers.
+
+### Channel accounting
+
+**`62` queries** — `38` owner-expansion legs (`user:{owner}` for every owner on the curated agents
+shelf) plus `24` topic and date-bounded legs — **`2,335` raw hits**, deduplicated against **`5,600`
+held slugs**, filtered to permissive + unarchived + pushed since `2026-05-01` + education-shaped:
+**`301` novel candidates, `20` probed, `19` filed.** 🔴 **The `4` mandated supply legs produced `2`
+addresses and both were already held** (`geekjourneyx/interactive-learning`,
+`TapXWorld/ChinaTextbook`) — a `36`th consecutive nil. **Owner expansion remains the only channel
+here that pays**, for the reason `T150` gave: an owner is a curated set with a known licence posture
+and a known domain, so nothing is matched on a word.
+
+---
+
 ## 🆕 2026-11-09 (p728) — 🟢 **TEN ROWS FROM TWO CHANNELS, AND THE PASS'S MAIN RESULT IS AN INSTRUMENT, NOT A REPOSITORY**
 
 **`10` rows filed · `14 / 14` licence payloads read first-hand · `0` rows from any mandated leg (a `35`th consecutive nil) · `2` pollution modes measured in the channel that produced the volume · the stock-`MIT` test reduced to one constant.**

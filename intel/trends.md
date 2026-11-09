@@ -20,6 +20,183 @@ registry **T1–T225** from prior passes is preserved in full below.
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
 
+## 🆕 T258–T261 — added at p729 (2026-11-09)
+
+## T258 — A published constant without its normalisation procedure is not a measurement, and two correct procedures can agree on the byte count while disagreeing on the hash
+
+`p728` replaced a byte *band* for stock-`MIT` licence payloads with an exact *constant* — the right
+move, and this base's instrument history is better for it. It published **`1,020 B` / sha256₁₂
+`fe2a9817987f`** and mandated a standing gate (`P163`) to run it. **It did not publish the
+normalisation.**
+
+`p729` tried seven normalisations against publishers `p728` itself names as stock `MIT`
+(`zzllrr/mather`, `132465798a/zx-study`, `parz0val0/scan-to-practice`,
+`CommitHu502Craft/professor-skill`): keep newlines with blank lines, drop blank lines, rstrip each
+line, add a trailing newline, strip the ends, add a trailing newline to that, and collapse all
+whitespace. **Every one lands between `870` and `874 B`. None reaches `1,020 B`.**
+
+The finding is not that `p728` was `150` bytes out. It is this:
+
+| Normalisation | Bytes | sha256₁₂ | Stable across publishers? |
+|---|--:|---|---|
+| Strip title + copyright lines, **collapse all whitespace** | **870** | **`3d87852cf34a`** | ✅ `n=17`, spread `0` |
+| Strip title + copyright lines, **join with `\n`, drop blanks** | **870** | `a7a3589acf19` | ✅ `n=4`, spread `0` |
+| Strip title + copyright lines, keep blank lines | 874 | `37744877e46c` | ✅ |
+| `p728` as published | `1,020` | `fe2a9817987f` | ❓ **not reproduced by any of the seven** |
+
+**Two of them are each perfectly stable and they disagree.** Same byte count, different hash. So a
+gate that records only the length *cannot detect that it is running a different procedure from the
+one that calibrated it* — it will pass, silently, on the wrong normalisation. The pair
+(`procedure`, `constant`) is the unit; neither half travels alone.
+
+**The generalisation, which is what makes this a trend and not a bug report.** This base's standing
+practice is to publish a measured number so a later pass can re-derive it. A number is re-derivable
+only if the *operation* that produced it is recorded at the same time. `729-A` is the third defect of
+this exact shape in this base's own instruments — `700-B` (a probe not exhaustive in *case*), `703-D`
+(a hash that identified the owner rather than the repository), and now a constant without its
+procedure — and in all three the number looked fine and the method was unstated.
+
+🟢 **Measured consequence, not hypothetical:** one *published* cell on
+[`../repos/foundations.md`](../repos/foundations.md) (`BennettSchwartz/membrane`) cited
+`1,020 B` / `fe2a9817987f` as its verification evidence. Re-measured at `p729`: `870 B` /
+`3d87852cf34a`. The row's verdict was right and its evidence was not re-derivable. Corrected in place.
+
+🔵 **The gate also generalises past `MIT`, which `p728` asserted without measuring.** Under the
+canonical procedure, `Apache-2.0` is **`9,478 B` / `399d47608b81`** across **`8` independent
+publishers, spread `0 B`**, against a raw spread of `34 B`. First data points recorded for
+`BSD-3-Clause` (`1,091 B` / `90bd78b45663`) and `Unlicense` (`1,042 B` / `fe0829b13da5`) at `n=1`
+each — **recorded as single observations, explicitly not yet constants.**
+
+→ Operationalised as `P164` in [`../compose/patterns.md`](../compose/patterns.md), which publishes the
+procedure, the constants, and the negative controls together.
+
+## T259 — A byte-length tolerance on a licence payload selects against institutional publishers, and in this base it suppressed the region it then declared empty
+
+The retired band for stock `MIT` was **`1,056`–`1,097 B`**. Three payloads have now overshot it, and
+**every one of the three names an institution in the copyright line**:
+
+| Repository | Raw | Copyright holder | Canonical body |
+|---|--:|---|--:|
+| `SirhanMacx/gnps-civic-readiness` | **`1,112 B`** | *Great Neck Public Schools — Social Studies Department* | `870 B` ✅ |
+| `ilios/frontend` | **`1,105 B`** | *The Regents of the University of California* | `870 B` ✅ |
+| `opencast/studio` (`p726`) | **`1,164 B`** | *Opencast Studio Developers* + a second holder | `870 B` ✅ |
+
+**Zero individual-author payloads have overshot in any pass.** All three are plain stock `MIT`; the
+band was wrong about all three.
+
+The mechanism is mundane and that is the point. A band on raw bytes measures the *copyright line*,
+because that is the only variable content in a stock grant. An individual writes `© 2026 Jane Smith`.
+A school district writes `© 2026 Great Neck Public Schools — Social Studies Department`, and the
+em-dash costs three bytes rather than one. A university system writes `© The Regents of the
+University of California`. A consortium writes two holder lines. **The longer the institution's
+name, the further outside the tolerance its licence falls** — and `p728` had already identified the
+non-ASCII half of this effect as a bias against non-Latin-script publishers without noticing that the
+same arithmetic penalises *institutions in any script*.
+
+🔴 **Why this is a market finding and not only an instrument one.** `703-G` registered that North
+America's repeated nil on these shelves had a known cause — US authors tag no country and write in
+English, so neither of this base's working region discriminators reaches them — and named the
+remedy: **sweep district and university GitHub organisations.** That is precisely the publisher class
+the byte band was rejecting. The first row produced by that sweep
+(`gnps-civic-readiness`, a working **New York State Seal of Civic Readiness** portal, forkable by any
+district in the state) is also the **largest overshoot on record**. The instrument was selecting
+against the supply tier whose absence the base was reporting as a fact about the region.
+
+🔵 **The derived region tally on the agents shelf after this pass: `APAC 27` · `Global 15` · `EMEA 4`
+· `North America 1` · `LATAM 1`.** North America is at one row out of forty-eight, and part of the
+cause is now known to have been ours.
+
+## T260 — A permissive licence can be substantively valid and textually non-canonical at the same time, and the two gates that could catch it fail in opposite directions
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is the largest education-native repository on
+these shelves at **`57,571★`**. Its `Apache-2.0` payload is the **single outlier** against `T258`'s
+`n=8` constant: **`9,494 B` / `fe1d4bc9501f`**, `+16 B`.
+
+Diffed line-for-line against `apache.org/licenses/LICENSE-2.0.txt`, fetched this pass:
+
+1. **The APPENDIX instructions are rewritten, with *"Apache"* replaced by *"Alarm"***. Canonical:
+   *"We also recommend that a file or class name and description of purpose be included on the same
+   'printed page' as the copyright notice for easier identification within third-party archives."*
+   DeepTutor: *"Please also get an \"Alarm or alarm\" copyright header and make that the reference to
+   the Apache License and the Disclaimer of Warranty (Alarm is the umbrella trademark for a
+   collection of Open Source projects)."*
+2. **§1, `Contribution` definition:** *"received by **the** Licensor"* (canonical: *"received by
+   Licensor"*).
+3. **§4(d), NOTICE handling:** *"excluding **any** notices"* (canonical: *"excluding **those**
+   notices"*).
+
+🟢 **The verdict is to keep the row.** The grant (§2), patent grant (§3), redistribution conditions
+(§4 beyond the wording change) and warranty disclaimer (§7–§8) are byte-intact. The APPENDIX is
+instructions for *applying* the licence, not licence terms. The two §-level edits are an article and
+a synonym with no operative effect. **It is Apache-2.0 and it stays on the shelf.**
+
+🔴 **What fails is both available instruments, in opposite directions.**
+
+- **An exact-payload gate rejects it.** Had `P163` been executable as published and keyed on whole-
+  payload equality, it would have refused a correctly-licensed `57,571★` repository — the base's own
+  headline row.
+- **`spdx_id` never notices.** GitHub reports a clean `Apache-2.0`; its classifier is tolerant of
+  paraphrase, so the field cannot tell an intact grant from an edited one.
+
+→ Hence `P164`'s rule: **verify by section, not by whole-payload equality.** A payload that differs
+from the constant is a flag to *diff*, never a verdict. The practical shape: compare the canonical
+body; if it differs, diff against the upstream text and classify the deltas as operative or
+non-operative before deciding. 🔵 **And a procurement note that follows directly:** a client's own
+dependency scanner is almost certainly in the tolerant class, so "the scanner says Apache-2.0" does
+not establish that the text was not altered. For anything that must survive legal review, the diff
+is the evidence, not the badge.
+
+## T261 — `spdx_id` has three provenances and only one is a grant; and the regional search legs have now saturated as a market instrument, which was the last job they still did
+
+**Two saturation readings, filed together because both are about an instrument reaching the end of
+what it can tell this base.**
+
+**1. The licence field's third provenance.**
+[`kitschpatrol/yanki-connect`](https://github.com/kitschpatrol/yanki-connect) (`59★`, a fully-typed
+AnkiConnect client — a genuinely useful interoperability component this base would otherwise want) is
+reported `MIT` by `gh api search/repositories`. **Seven root grant paths were probed and all seven
+return `404`**: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `license.md`, `LICENSE-MIT`,
+`licenses/LICENSE`. The field's actual source, read this pass, is `package.json`'s
+`"license": "MIT"`.
+
+So `spdx_id` is now known to arise three ways:
+
+| Provenance | Example | Admissible here? |
+|---|---|---|
+| A grant document in the repository | the other `19` rows filed this pass | ✅ yes |
+| A **package-manifest field** | `yanki-connect` (`package.json`) | ❌ no — a declaration, not a grant |
+| Absent, or defeated by a prepended notice | `tcexam` → `NOASSERTION` (`p728`) | ❌ no |
+
+**A manifest field is the author stating an intention; a grant is a document conveying rights.** The
+row was found, verified alive, verified useful — and **deliberately not filed**, with the reason
+recorded rather than the row quietly dropped. 🔵 This matters beyond one row: a dependency scanner
+reading manifests will report a licence for every package in a tree, and some fraction of those
+packages carry **no grant at all**. The number is unknown here and is a declared gap.
+
+**2. The regional legs have saturated.**
+`703-H` re-scoped the four mandated regional legs from a *supply* instrument (which had nilled 31
+consecutive times) to a *market* instrument, on the evidence that they returned no repository
+addresses but substantial demand intelligence. **That second job has now also run out.** This pass
+the four legs returned roughly `35` distinct figures, and **exactly one was not already held in
+[`market.md`](market.md)** — the Pearson/Workera acquisition, which this base held only in
+`agents/trending.md`.
+
+Everything else they produced was already on the page: UNESCO IESALC's `87 %` adoption / `26 %`
+formal framework / `55 %` no AI budget, the Digital Education Council's `92 %` students / `79 %`
+faculty, Uruguay's `75 %` of public-school teachers, Brazil's `53 %` of administrators against `22 %`
+with guidelines, Europe at `$2.64B` → `$8.0B` (`31.9 %` CAGR), the `10 %` of `450+` institutions with
+formal guidelines, the `716` LATAM regulatory instruments across `23` countries, Korea's AI Basic Act
+in force `22 Jan 2026`, Vietnam's July 2026 listing of education among six high-risk sectors, and the
+Digital Omnibus deferral of stand-alone Annex III obligations to `2 Dec 2027`.
+
+🔵 **This is a saturation reading, not a failure, and the response is a budget change rather than a
+retirement.** The legs are still returning correct intelligence; they are no longer returning *new*
+intelligence, because this base has been running them for dozens of passes against a market whose
+headline numbers are published annually. **Run them as confirmation — cheap, and they would catch a
+reversal — and stop costing them as discovery.** The regional *supply* question has a better
+instrument already measured and in use: owner expansion (`T134`, `T150`), which produced all `19`
+rows filed this pass and `0` came from the mandate.
+
 ## 🆕 T255–T257 — added at p728 (2026-11-09)
 
 ## T255 — A licence payload is verified by an exact constant, not by a byte-length tolerance; the tolerance form has a built-in bias against non-Latin-script publishers
