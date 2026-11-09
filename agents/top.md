@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI Agents — Curated Top Set
 
-**Pass p727 · verified 2026-11-09.** Every row below was read this pass from
+**Pass p728 · verified 2026-11-09.** Every row below was read this pass from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
 (falling back to lowercase `readme.md`, then `README.rst`, then `LICENSE` — the case-ordered
@@ -22,20 +22,20 @@ can tell a stale cell from a fresh one.
 
 | Agent | Repo | Stars | Licence | Last push | Region | What it does |
 |---|---|--:|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,554 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,146 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,571 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,147 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,402 | MIT | 2025-10-26 | APAC | Agentic-AI curriculum used at national scale by Panaversity/GIAIC. ⚠️ **Stale: no push in >12 months** — treat as courseware, not live code. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | 387 | MIT | 2026-05-29 | APAC | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. ⚠️ See correction below — this is **387★, not ~12k**. |
 | moodle-ai-skill-navigator | [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 279 | GPL-3.0 | 2026-11-07 | Global | Moodle plugin: tutoring, quiz generation, mind maps and RAG over course materials. The clearest AI-on-top-of-incumbent-LMS bridge found. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 279 | MIT | 2026-11-08 | North America | Intelligent tutoring system with Bayesian Knowledge Tracing (ReactJS + Firebase). UC Berkeley CAHLR lab; peer-reviewed mastery model. |
-| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 171 | MIT | 2026-11-08 | APAC | Spaced-repetition + knowledge-graph tutor. ⚠️ Previously filed here at "~900★"; real figure is 171★. |
+| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 172 | MIT | 2026-11-08 | APAC | Spaced-repetition + knowledge-graph tutor. ⚠️ Previously filed here at "~900★"; real figure is 171★. |
 | gen-mentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | APAC | LLM multi-agent framework for goal-oriented learning-path generation. WWW '25 oral paper, reference implementation. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 99 | MIT | 2026-11-09 | EMEA | MCP server that turns any LLM into an ITS, encoding 50 years of tutoring research. Smallest but most composable item here. |
 | Skolverket-MCP | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 13 | MIT | 2026-04-22 ⚠️ | EMEA | MCP server over **all three of the Swedish National Agency for Education's open APIs** — Läroplan (curriculum), Skolenhetsregistret (school-unit register) and Planned Educations — so an agent can query, compare and align to a *national* curriculum instead of a scraped PDF. Published in the MCP registry; Swedish-language README (places **Sweden**). 🟢 **Promoted at p725** — the smallest row on this shelf by stars and the only one that speaks a ministry's own data. ⚠️ `13★`, single author: pin a commit and expect to maintain it. |
-| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,405 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,407 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
 | anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 551 | MIT | 2026-11-07 | Global | MCP server exposing Anki to any LLM — spaced repetition as a tool call. The most composable retention primitive on this shelf. 🟢 **Promoted at p723** (roster at p655 at 546★ → +5). |
 | SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 474 | Apache-2.0 | 2026-11-09 | APAC | Social-skills and conflict-handling coach built on realistic role-play. Same lab as `gen-mentor` below. The only social-emotional-learning agent verified on this shelf. 🟢 **Promoted at p723**; pushed today. |
-| teacher-to-skills | [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) | 472 | Apache-2.0 | 2026-11-07 | APAC | Distils a human teacher into a source-backed skill that teaches until the learner can work unaided. 🟢 **Promoted at p723.** |
+| teacher-to-skills | [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) | 473 | Apache-2.0 | 2026-11-07 | APAC | Distils a human teacher into a source-backed skill that teaches until the learner can work unaided. 🟢 **Promoted at p723.** |
 | universal-examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 372 | MIT | 2026-10-27 | APAC | Exam-prep coach with cross-session memory and handout-traceable citation (its stated design goal is hallucination suppression). 🟢 **Promoted at p723.** |
 | Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 302 | MIT | 2026-10-20 | Global | Private tutor that infers how the learner actually learns and teaches the next lesson accordingly; named for Bloom's 2-sigma result. 🟢 **Promoted at p723.** |
 | ari | [nichochar/ari](https://github.com/nichochar/ari) | 217 | MIT | 2026-11-09 | Global | "Learn stuff with pen + paper + AI." Created **2026-10-18** and pushed today — the newest project on the shelf. 🟢 **Promoted at p723.** |
@@ -51,6 +51,146 @@ can tell a stale cell from a fresh one.
 | nietzschian-debugger | [DilawarShafiq/nietzschian-debugger](https://github.com/DilawarShafiq/nietzschian-debugger) | 555 | MIT | 2026-10-27 | Global | *"It won't fix your bug. It'll fix you."* A debugger that **refuses to return the answer**: it challenges the stated assumption and hands the question back. Python/PyPI, `main`, 21 forks, created 2026-02-24. 🟢 **New at p727.** The first agent on this shelf whose design goal is **withheld** output — productive struggle as a hard constraint rather than a prompt style, which is why it needs an objective oracle beside it (`P161`). Licence payload read this pass: `LICENSE`, `1,071 B`, sha256₁₂ `a7055a6d5672`, © *2026 Dilawar Gopang*. ⚠️ **Region unplaced and filed `Global` for honesty, not because it is a global project**: `0` Han characters, no country word, no localised README, and `gh api users/{owner}` is `403` here (control re-run this pass) — per the standing rule above, do not count it as supply in any region. |
 | frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 490 | 🔴 **AGPL-3.0** | 2026-11-09 | APAC | 帧言 (*zhēn yán*) — turns source material into explainer videos under an **AI director agent**; local-first, any model, macOS desktop build. `main`, **96 forks**, created 2026-10-10 (one month old). 🟢 **New at p727.** The explainer-video half of the lecture-capture category `p726` completed in the other direction. 🔴 **`AGPL-3.0`** (`LICENSE`, `34,523 B`, sha256₁₂ `0d96a4ff68ad`) — **a closed derivative is not available**; see `T254`. Region from a maintained `README.zh-CN.md` (**1,164 Han characters**) plus the Chinese product name; English-primary, so this is weaker evidence than `Study-Mate`'s Chinese-primary README and is graded as such. |
 | deep-student | [helixnow/deep-student](https://github.com/helixnow/deep-student) | 309 | 🔴 **AGPL-3.0** | 2026-11-02 | APAC | DeepStudent — a **local-first AI learning workbench** whose study agent acts across every app on a "Study Desktop" rather than inside one tab. `main`, **60 forks**, created 2025-03-10. 🟢 **New at p727.** The desktop-scope counterpart to the browser-scope tutors on this shelf. 🔴 **`AGPL-3.0`** (`LICENSE`, `34,532 B`, sha256₁₂ `894342980454`) — closed derivative unavailable; `T254`. Region from a maintained `README_CN.md` (**1,790 Han characters**), English-primary — same evidence grade as `frametell`. |
+| Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 65 | MIT | 2026-09-19 | ⚠️ unplaced → Global | Local-first teaching assistant that produces **editable** lesson drafts, student materials and slides from the teacher's own curriculum and chosen model; teacher-reviewed beta. Payload read this pass: `LICENSE`, `1,078 B`, © *2026 EDUagent Contributors* — the holder name is not the owner login, so the project has been renamed at least once. 🟢 **New at p728** — the only teacher-facing *authoring* agent on this shelf whose output is editable rather than final, which is the difference between a draft a teacher owns and a generation they must accept. ⚠️ A blog source placed it **#1 on Trendshift for a day in Oct 2026**; at `65★` that ranking is not supportable and was not used for anything (`728-E`). |
+| scan-to-practice | [parz0val0/scan-to-practice](https://github.com/parz0val0/scan-to-practice) | 110 | MIT | 2026-08-12 | APAC | Turns **scanned** learning material into structured practice products — a field-tested skill plus method rather than an application. `LICENSE`, `1,081 B`, © *2026 My-practice contributors*. Region from `README.md` (**929 Han characters**). 🟢 **New at p728.** The paper-to-practice direction matters wherever the source of truth is a photocopy, which is most of the world's classrooms. Skill tier, and `MIT` — `T254` holds a third pass. |
+| professor-skill | [CommitHu502Craft/professor-skill](https://github.com/CommitHu502Craft/professor-skill) | 64 | MIT | 2026-04-11 | APAC | Distils course material into professor-style exam review: what to emphasise, the question patterns, and the grading hints. `LICENSE`, `1,056 B`. Region from `README.md` (**1,914 Han characters**). 🟢 **New at p728** — it models the *examiner*, not the tutor, which is the half of exam preparation that open repositories almost never implement. |
+| english-exam-studio | [hututu-ai/english-exam-studio](https://github.com/hututu-ai/english-exam-studio) | 46 | MIT | 2026-09-25 | APAC | 英语实战讲评 — paper + answers + listening audio in, a complete **teacher HTML review courseware** out: per-question analysis, audio segmentation, passage location, read-write transfer and classroom annotation. `LICENSE`, `1,066 B`, © *2026 hututu-ai*. Region from `README.md` (**2,468 Han characters**). 🟢 **New at p728** — the only row that emits a whole lesson artefact instead of a conversation, which is what a teacher can actually carry into a room. |
+| TATAbox | [astrnox/TATAbox](https://github.com/astrnox/TATAbox) | 85 | 🟡 **MPL-2.0** | 2026-11-08 | APAC | Biology study platform spanning **Gaokao to competition level**. 🟡 **`MPL-2.0`** (`LICENSE`, `16,752 B`) — *file-level* copyleft: modified MPL files must stay MPL, but the work combines with proprietary code, so it sits between the `MIT` and `AGPL` tiers rather than at either end. Region from `README.md` (**2,954 Han characters** and `高考`). 🟢 **New at p728** — the first `MPL` row on this shelf and its only subject specialist. |
+| zx-study | [132465798a/zx-study](https://github.com/132465798a/zx-study) | 41 | MIT | 2026-10-23 | APAC | 正贤学习平台 — **offline** primary school (grades 1–6) Chinese/maths/English: offline practice, mock exams, an error notebook, stroke order, listening, learning statistics, and **offline paper assembly with PDF printing**. Electron + Vue 3 + SQLite. `LICENSE`, `1,063 B`, © *2026 正贤* (a multi-byte holder name — `726-A`'s second false-positive mode, benign, and `728-A` now removes it as a defect). 🟢 **New at p728** — the second offline-by-design row after `mather`, and the only one that **prints to paper**, which is what a low-connectivity classroom actually runs on. |
+| lector | [heuwels/lector](https://github.com/heuwels/lector) | 48 | 🔴 **AGPL-3.0** | 2026-11-02 | ⚠️ unplaced → Global | Language-learning reader over **EPUB and YouTube**: click-to-translate, **cloze spaced repetition**, Anki sync; free to self-host with a paid cloud option. 🔴 **`AGPL-3.0`** — `LICENSE`, `34,523 B`, sha256₁₂ `0d96a4ff68ad`, **byte- and hash-identical to `p727`'s `frametell`**, so a closed derivative is unavailable (`T254`). 🟢 **New at p728** — a third consecutive pass in which the local-first learner *application* arrives copyleft **with a hosted tier to protect**, which is the mechanism `T254` names, visible here in the project's own README. |
+| orpheus | [fa25genai/orpheus](https://github.com/fa25genai/orpheus) | 21 | MIT | 2026-05-26 | EMEA | Static slides → **interactive lecture video with a lifelike professor avatar** and expressive narration. `LICENSE`, `1,066 B`, © *2025 fa25genai*. Region from `TUM` (Technical University of Munich) in the README; the owner reads as a Fall-2025 GenAI course cohort. 🟢 **New at p728** — EMEA-authored, and the *generation* counterpart to the permissive capture chain in `P159`. ⚠️ **`21★` and a course-cohort owner**: a reference implementation, not a dependency — pin a commit and expect no maintainer. |
+| factoryforge | [malgaroshy-maker/factoryforge](https://github.com/malgaroshy-maker/factoryforge) | 41 | MIT | 2026-09-29 | ⚠️ unplaced → Global | Free 3D **factory simulator for learning PLC programming**: write ladder logic or SCL in TIA Portal, OpenPLC, Node-RED or Ignition and watch it drive a Godot 4.7 physics factory. `LICENSE`, `1,074 B`, © *2026 Mahamed Algaroshy*. 🟢 **New at p728** — the first **vocational / TVET** row this shelf has held. Industrial-skills training is a different buyer from the academic one, with its own budget and no LMS to sit beside. |
+| ecu-lab | [DNiev/ecu-lab](https://github.com/DNiev/ecu-lab) | 67 | MIT | 2026-11-09 | ⚠️ unplaced → Global | Engine-management and tuning simulator: design an engine, **edit the calibration tables a real tuner edits**, run a dyno pull and read the result. `LICENSE`, `1,086 B`, © *2026 Caribou Tuning and Turtle.GTI*; pushed today. 🟢 **New at p728** — the second vocational row, and with `factoryforge` it names the shape: **a high-fidelity simulator of a rig too expensive to put in front of a learner.** |
+
+## 🆕 `p728` — the stock-`MIT` byte band becomes an exact constant, and the shelf is 39 rows
+
+**`10` new rows · `29 / 29` shelf rows re-measured (a FULL re-read, denominator stated per `T223`) · `5` star cells corrected in the row · `3` new trends (`T255`–`T257`) · `2` new patterns (`P162`, `P163`) · `1` instrument upgraded from a tolerance band to an exact constant with `4` negative controls · the mandated legs nil a `35`th time · `2` channel-pollution modes measured and named.**
+
+### 🟢 `728-A` — `726-A`'s proposed remedy is correct, and it resolves to a single constant: `1,020 B`
+
+`726-A` found that this base's stock-`MIT` **raw** byte band (`1,056`–`1,097 B`, `41 B` spread) has two
+benign false-positive modes — a decorative underline plus a second copyright line
+(`opencast/studio`, `1,164 B`), and **multi-byte UTF-8 in the copyright holder's own name**
+(`zzllrr/mather`, `1,098 B`), the second of which penalises every non-ASCII publisher by
+construction. It *proposed* a remedy — apply the band to the grant body with the title block
+and every `Copyright` line stripped — but did not measure one.
+
+**Measured this pass on `12` independent publishers, with whitespace normalised** (which also
+removes the hard-wrap-versus-reflow variable that raw byte counts cannot see):
+
+| | Raw payload | Normalised grant body |
+|---|---|---|
+| Band across `12` publishers | `1,063`–`1,164 B` | **`1,020`–`1,020 B`** |
+| Spread | `101 B` | **`0 B`** |
+| sha256₁₂ | `12` distinct values | **`fe2a9817987f`, identical for all `12`** |
+
+The `12` include **both** of `726-A`'s documented false positives (`opencast/studio` and
+`b310-digital/teammapper`, each carrying **two** copyright lines) and **two** non-ASCII
+holders (`zzllrr/mather`; `132465798a/zx-study`, © *2026 正贤*). **Every one normalises to
+`1,020 B` exactly.** Both false-positive modes disappear, and the non-ASCII penalty disappears
+with them.
+
+🔵 **Negative controls, because a test that accepts everything is not a test:**
+
+| Control | Normalised body | Verdict |
+|---|--:|---|
+| `Apache-2.0` payload (`opencast/editor`) | `10,056 B` | 🟢 rejected |
+| `AGPL-3.0` payload (`heuwels/lector`) | `33,449 B` | 🟢 rejected |
+| `MIT` **+ an added non-commercial clause** (synthetic) | `1,098 B` (`+78`) | 🟢 **caught** |
+| `MIT` **with the warranty disclaimer deleted** (synthetic) | `559 B` (`−461`) | 🟢 **caught** |
+
+🟢 **The instrument is now an equality test against one constant, not a tolerance band:**
+a payload is stock `MIT` iff its normalised grant body is `1,020 B` with sha256₁₂
+`fe2a9817987f`. 🔴 **And note what the old band could not do:** `mather`'s benign raw `1,098 B`
+and the tampered payload's malignant normalised `1,098 B` are the *same number*. The raw band
+cannot separate them; the constant separates them cleanly. Filed as `T255`, wired into `P163`.
+
+### 🟢 `728-B` — the ten rows, and the two categories the shelf did not have
+
+Seven of the ten are education-native tutors, authoring tools or study platforms. The two that
+matter most for an engagement are the ones that are **neither**: [`malgaroshy-maker/factoryforge`](https://github.com/malgaroshy-maker/factoryforge)
+(`41★`, MIT — PLC programming taught against a Godot physics factory) and
+[`DNiev/ecu-lab`](https://github.com/DNiev/ecu-lab) (`67★`, MIT — engine calibration taught
+against a simulated dyno). 🔵 **Both are vocational / TVET, which this shelf had `0` rows of in
+`727` passes**, and both implement the same shape: *a high-fidelity simulator of a rig too
+expensive to put in front of a learner.* That is a different buyer (industrial training budget),
+a different success measure (certification pass rate) and no LMS to sit beside. Filed as `T256`
+and `P162`.
+
+### 🔴 `728-C` — two pollution modes in the channel that produced this pass's volume, both measured
+
+The `topic:education`-plus-stars-floor channel returned `185` distinct repositories, `58` novel
+(`31.4 %`). Filtered for fitness, the novel set contains two large clusters that are **not
+education supply at all**, and both would survive a stars-and-licence filter:
+
+- 🔴 **School-filter-evasion proxies rank under education topics.** [`UseInterstellar/Interstellar`](https://github.com/UseInterstellar/Interstellar)
+  (`2,200★`, AGPL-3.0) — *"a web proxy service offering blazing-fast speeds, a wide variety of
+  games"* — plus `55gms/55GMS` (`164★`), `nautilus-os/GUST` (`140★`) and
+  `PeteZah-Games/PeteZahGames` (`118★`). **By stars, `Interstellar` would be the fourth-largest
+  row on this shelf.** It is the `T251` integrity-defeat layer arriving through the *discovery*
+  instrument rather than through assessment design, and a studio that ranks by stars inside this
+  topic will surface it first.
+- 🔴 **An SEO/astroturf cluster: `~15` repositories, licence `NONE`, all pushed `2026-11-09`, all
+  keyword-stuffed titles** of the form *"Best Open-Source X for 2026"* / *"X 2026: Interactive Y"*,
+  all clustered at `50`–`70★` — `Stop85/Basis-Level-Explorer`, `arnebauhaus12-cpu/quiz-bank-runner`,
+  `Burj-Brand/et-3400-lab`, `hzthebest320i/cosse-portfolio-v2`, `sujal-official/neuro-sprint-typer`
+  and others. 🔵 **The tell is the conjunction, not any one signal:** an identical push date, a
+  star count in a narrow band, no licence, and a title written for a search engine. **A `0`-licence
+  repository cannot be built on regardless**, so the cost here is reviewer time, not legal risk —
+  but the cluster is large enough to crowd a ranked result page. Filed as `T257`.
+
+### 🔴 `728-D` — the mandated legs nil a `35`th time, and the four regional legs returned demand only
+
+**Supply:** the four global legs returned `12` addresses — `0` novel education rows. Already held:
+`microsoft/ai-agents-for-beginners`, `huggingface/smolagents`, `HKUDS/DeepTutor`,
+`satvik314/educhain`, `OpenEduCat`. Out of scope (general-purpose agents, held in the
+*technology* base): `OpenHands`, `MetaGPT`, `browser-use`, `Hermes`, `Langflow`, `Dify`.
+**Two exclusions recorded rather than left invisible** (`728-F`). **Demand:** the four regional
+legs returned `0` repositories and a usable quantity of policy and adoption evidence, which is
+now on `intel/market.md` under `## Opportunities by region`. 🟢 Measured nil with its
+denominator, per `T223`.
+
+### 🟡 `728-F` — two large repositories deliberately not filed, and why
+
+[`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) — **`84,290★`**, every
+Chinese primary, secondary and university PDF textbook. **By stars it would be the largest row in
+this entire knowledge base**, ahead of `DeepTutor`'s `57,571`. 🔴 **Licence `NONE`, confirmed on
+the index this pass** — all-rights-reserved by default, so it **cannot be redistributed, bundled,
+fine-tuned on, or shipped inside a client deliverable**, and it is a corpus rather than software
+in any case. Recorded because an `84,290★` omission reads as an oversight to anyone auditing the
+shelf. [`ranxi2001/zero2Agent`](https://github.com/ranxi2001/zero2Agent) (`1,055★`, MIT, pushed
+today — an agent-engineering interview-prep course) and
+[`marimo-team/modernaicourse`](https://github.com/marimo-team/modernaicourse) (`117★`,
+Apache-2.0) are excluded on the standing **teaches-AI-rather-than-teaching-with-it** rule, the
+same ground as `huggingface/agents-course` at `727-C`. ⚠️ **`727-C`'s unresolved tension stands
+and is deliberately not resolved here:** `learn-agentic-ai` and `AILearningGuide` are
+*teaches-AI* courseware and still sit on this shelf. A later pass should either reconcile that or
+declare it an exception; this pass restates it rather than silently resolving it in either
+direction.
+
+### 🟢 `728-G` — the full re-read: `29 / 29` alive, `0` archived, no licence changed
+
+`DeepTutor` **57,554 → 57,571** (`+17`), `Study-Mate` **1,405 → 1,407**, `OpenMAIC`
+**43,146 → 43,147**, `OpenTutor` **171 → 172**, `teacher-to-skills` **472 → 473**; the other
+`24` rows unchanged to the star. Every delta is single- or double-digit — `725-B`'s magnitude
+test passing, i.e. drift rather than the `722-C` inflation failure that was wrong by factors.
+🟢 **Written into the data rows, not only into this paragraph** — the `725-A`/`724-T` defect
+that cost two consecutive passes. 🟢 **And this is a full re-read, not `p727`'s `14 / 29`
+partial.** ⚠️ Two currency flags persist and are unchanged: `learn-agentic-ai` (no push since
+`2025-10-26`) and `Skolverket-MCP` (`2026-04-22`, `13★`, single author).
+
+**Verification instruments, re-controlled this pass.** 🔴 The procedure's mandated
+`curl -sI https://github.com/{owner}/{repo}` returned **`403` for `HKUDS/DeepTutor` (alive) and
+`403` for a deliberately invented address** — identical verdicts for a real and an absent
+repository, a **`9`th consecutive pass at zero discriminating power.** It was used for no verdict.
+🟢 `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md` returned **`200`** for the same live
+repository and **`404`** for the invented one — discriminates, and supplied every existence call.
+🟢 **Licence payloads were read first-hand for all `10` new rows and for `4` verticals/foundations
+candidates**; `14 / 14` agreed with the payload, and **`1`** disagreed with the *index* field
+(`tecnickcom/tcexam`, index `NOASSERTION`, payload `AGPL-3.0` — see `verticals/solutions.md`),
+the expected pattern. 🔴 `gh api users/{owner}` remains **`403`** *"sessions are bound to their
+configured repositories"*; regions were placed from payload evidence (Han-character counts,
+institutional names in READMEs) and **four rows were left unplaced rather than guessed.**
 
 ## 🆕 `p727` — the conjunctive `topic:` leg pays where eighteen single heads nilled, and the shelf is 29 rows
 

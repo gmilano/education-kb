@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p728) — 🟢 **TEN ROWS FROM TWO CHANNELS, AND THE PASS'S MAIN RESULT IS AN INSTRUMENT, NOT A REPOSITORY**
+
+**`10` rows filed · `14 / 14` licence payloads read first-hand · `0` rows from any mandated leg (a `35`th consecutive nil) · `2` pollution modes measured in the channel that produced the volume · the stock-`MIT` test reduced to one constant.**
+
+### The channel comparison, continued from `p726`/`p727`
+
+| Channel | Run | Returned | Novel | Filed | Verdict |
+|---|---|--:|--:|--:|---|
+| Mandated legs (4 global + 4 regional) | as prescribed | `12` addresses | `0` | **0** | 🔴 `35`th consecutive nil; `5` held, `6` out of scope, `2` excluded |
+| `topic:` domain **AND** technique head (`p727`'s winner) | `18` legs | `73` (`58` distinct) | `7` | **2** | 🟡 **saturating — `12.1 %` novelty**, down from the channel's first run |
+| `topic:education` + stars floor + recency | `8` legs | `206` (`185` distinct) | `58` (`31.4 %`) | **8** | 🟢 **paid, and carries two measured pollution modes** (`728-C`) |
+| Spanish/Portuguese single terms (`T249`/`T252`) | `9` legs | `106` | `97` (`91.5 %`) | **1** | 🔴 **`91.5 %` novel and almost all coursework**; `aprendizaje` returns ML (`728-J`) |
+| Estate enumeration (`CENIA-DEV`, Latam-GPT) | `4` legs | `19` | `11` | **0** | 🔴 **a measured regional gap, filed as one** (`728-K`) |
+
+🔵 **The finding is that novelty rate and fitness rate are close to inversely related.** The
+`91.5 %`-novel language channel filed `1` row; the `31.4 %`-novel topic channel filed `8`. A
+high novelty rate measures how little of a channel this base has swept, **not** how much supply
+is there — which is `726-F` and `667` arriving a third time, now with four channels on one table.
+
+### 🟢 The ten rows
+
+| Repo | Stars | Licence | Payload read `2026-11-09` | Region | Shelf |
+|---|--:|---|---|---|---|
+| [`parz0val0/scan-to-practice`](https://github.com/parz0val0/scan-to-practice) | 110 | 🟢 **MIT** | `LICENSE`, `1,081 B` | APAC (han 929) | `agents/top.md` |
+| [`astrnox/TATAbox`](https://github.com/astrnox/TATAbox) | 85 | 🟡 **MPL-2.0** | `LICENSE`, `16,752 B` | APAC (han 2,954 + `高考`) | `agents/top.md` |
+| [`DNiev/ecu-lab`](https://github.com/DNiev/ecu-lab) | 67 | 🟢 **MIT** | `LICENSE`, `1,086 B`, © *Caribou Tuning and Turtle.GTI* | ⚠️ unplaced → `Global` | `agents/top.md` |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 65 | 🟢 **MIT** | `LICENSE`, `1,078 B`, © *2026 EDUagent Contributors* | ⚠️ unplaced → `Global` | `agents/top.md` |
+| [`CommitHu502Craft/professor-skill`](https://github.com/CommitHu502Craft/professor-skill) | 64 | 🟢 **MIT** | `LICENSE`, `1,056 B` | APAC (han 1,914) | `agents/top.md` |
+| [`heuwels/lector`](https://github.com/heuwels/lector) | 48 | 🔴 **AGPL-3.0** | `LICENSE`, `34,523 B`, sha256₁₂ `0d96a4ff68ad` | ⚠️ unplaced → `Global` | `agents/top.md` |
+| [`hututu-ai/english-exam-studio`](https://github.com/hututu-ai/english-exam-studio) | 46 | 🟢 **MIT** | `LICENSE`, `1,066 B` | APAC (han 2,468) | `agents/top.md` |
+| [`malgaroshy-maker/factoryforge`](https://github.com/malgaroshy-maker/factoryforge) | 41 | 🟢 **MIT** | `LICENSE`, `1,074 B` | ⚠️ unplaced → `Global` | `agents/top.md` |
+| [`132465798a/zx-study`](https://github.com/132465798a/zx-study) | 41 | 🟢 **MIT** | `LICENSE`, `1,063 B`, © *2026 正贤* | APAC (han 1,772) | `agents/top.md` |
+| [`fa25genai/orpheus`](https://github.com/fa25genai/orpheus) | 21 | 🟢 **MIT** | `LICENSE`, `1,066 B` | EMEA (`TUM`) | `agents/top.md` |
+
+Plus two rows to other shelves, both read first-hand:
+[`BennettSchwartz/membrane`](https://github.com/BennettSchwartz/membrane) (`96★`, **MIT**,
+`1,073 B`) → `repos/foundations.md`, and [`b310-digital/teammapper`](https://github.com/b310-digital/teammapper)
+(`517★`, **MIT**, `1,116 B`, two copyright lines) → `repos/foundations.md`; and to
+`verticals/solutions.md`: [`tecnickcom/tcexam`](https://github.com/tecnickcom/tcexam) (`629★`,
+**AGPL-3.0 by payload against an index that says `NOASSERTION`**) and
+[`SharezoneApp/sharezone-app`](https://github.com/SharezoneApp/sharezone-app) (`311★`,
+**EUPL-1.2** — the first European Union Public Licence row in this base).
+
+### 🔴 Not filed, and why (recorded so the omissions are not read as oversights)
+
+| Repo | Stars | Licence | Why not |
+|---|--:|---|---|
+| [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) | **84,290** | 🔴 **NONE** | Would be the **largest row in this base**. All-rights-reserved by default — cannot be redistributed, bundled or trained on; and it is a corpus, not software. |
+| [`UseInterstellar/Interstellar`](https://github.com/UseInterstellar/Interstellar) | 2,200 | AGPL-3.0 | A **school-filter-evasion web proxy** that ranks under education topics. The `T251` integrity-defeat layer, reached through the discovery instrument (`728-C`). |
+| [`ranxi2001/zero2Agent`](https://github.com/ranxi2001/zero2Agent) | 1,055 | MIT | Teaches **AI**, not **with** AI — the standing `727-C` rule. |
+| [`TIGER-AI-Lab/verl-tool`](https://github.com/TIGER-AI-Lab/verl-tool) | 1,055 | MIT | RL tool-use infrastructure; `topic:education` is mis-tagged on it. |
+| [`marimo-team/modernaicourse`](https://github.com/marimo-team/modernaicourse) | 117 | Apache-2.0 | Teaches AI (`727-C` rule). |
+| `~15`-repo SEO cluster | `50`–`70` ea. | 🔴 **NONE** | Identical push date, narrow star band, no licence, search-engine titles (`728-C`). |
+
+
 ## 🆕 2026-11-09 (p727) — 🟢 **THREE ROWS, ALL FROM ONE OPERATOR THE PREVIOUS PASS HAD NOT TRIED — AND TWO OF THEM ARE `AGPL`**
 
 **`3` rows filed · `7 / 7` licence payloads read first-hand · `0` rows from any mandated leg or phrase query · the channel `p726` measured at `0 / 600` paid `3` when run conjunctively.**

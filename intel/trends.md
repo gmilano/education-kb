@@ -6,18 +6,132 @@ updated: 2026-11-09
 
 # Education AI — Current Trends
 
-**Pass p727 · researched 2026-11-09.** Two new trends — **T253, T254** — added above p726's
+**Pass p728 · researched 2026-11-09.** Three new trends — **T255, T256, T257** — added above p727's
+**T253–T254**, p726's
 **T250–T252**, p725's
 **T247–T249**, p724's **T245–T246** and p723's **T234–T244**, each with the evidence
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
 
 > **Two separate `T` numbering spaces exist in this KB and they are not the same series.**
-> This file's `T` numbers are *industry trends* (now T1–T252, extended at p726 — this line still read
+> This file's `T` numbers are *industry trends* (now T1–T257, extended at p728 — this line still read
 > "T1–T233" after p723 and p724 had both added trends above it). The `T` numbers in
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T255–T257 — added at p728 (2026-11-09)
+
+## T255 — A licence payload is verified by an exact constant, not by a byte-length tolerance; the tolerance form has a built-in bias against non-Latin-script publishers
+
+**Status: measured this pass on 12 publishers with 4 negative controls. This supersedes the raw-byte band for stock MIT.**
+
+This base has verified licences by payload rather than by GitHub's index field for many passes,
+and the practice has repeatedly paid — `727-D` found the blog channel wrong on three licences the
+payload method had right, and `728-G` adds `tcexam` (index `NOASSERTION`, payload `AGPL-3.0`).
+But the *test applied to the payload* was a **raw byte-length band**, `1,056`–`1,097 B` for stock
+`MIT`, measured at `p616`. That band had two documented false-positive modes (`726-A`):
+
+1. a second copyright line, or a decorative underline under the title — the normal shape of a
+   long-lived or forked project;
+2. **multi-byte UTF-8 in the copyright holder's own name**, which means *any publisher whose name
+   is not ASCII pays bytes for it.* That mode is **systematically biased against exactly the
+   Chinese, Japanese, Korean, Arabic and Cyrillic publishers** that supply most of this industry's
+   new permissive code.
+
+**Measured this pass.** Strip the title block and every `Copyright` line, normalise whitespace
+(which removes the hard-wrap-versus-reflow variable a raw count cannot see), and the stock `MIT`
+grant body is **`1,020 B`, with spread `0 B` and one identical sha256₁₂ `fe2a9817987f`, across
+`12` independent publishers** whose raw payloads span `1,063`–`1,164 B`. The twelve include both
+of mode 1's false positives (two copyright lines each) and two non-ASCII holders. **Both modes
+disappear.** Negative controls: `Apache-2.0` → `10,056 B`; `AGPL-3.0` → `33,449 B`; `MIT` with a
+non-commercial clause **added** → `1,098 B`; `MIT` with the warranty disclaimer **deleted** →
+`559 B`. All four rejected, both tamper directions caught.
+
+🔵 **Why it matters beyond this base's bookkeeping, and it is a client-facing fact.** The question
+*"is this really the MIT licence, or MIT with something added?"* is the one that decides whether a
+repository can ship inside a deliverable, and it is asked about hundreds of dependencies per
+engagement. **A tolerance band answers it with a maybe and mis-flags foreign-language publishers;
+an equality test against one constant answers it yes or no and is trivially automatable** — one
+normalisation and one hash comparison, no legal review for the ones that match. The residual cost
+is bounded and known: only payloads that *fail* the hash need reading, and a failure is
+informative rather than suspicious (a second copyright line is not a defect).
+
+⚠️ **Limits, stated so this is not over-read.** The constant is established for `MIT` only; the
+equivalent constants for `Apache-2.0` and the GNU family are not measured here, and Apache
+additionally resists byte tests for a reason `726-G` already named (its `APPENDIX` is optional and
+its wrapping is not normative, so section-counting is the right test there, not length). Twelve
+publishers is enough to establish a constant and not enough to bound the rate of benign variants
+this base has never seen.
+
+## T256 — Vocational and technical training is a separate, permissively-licensed supply tier, and its product shape is a simulator of a rig too expensive to put in front of a learner
+
+**Status: new category, 2 repositories this pass, 0 in the preceding 727 passes.**
+
+Every curated row this base held before this pass served academic education — K-12 or higher
+education, a tutor or a study tool attached to a curriculum. This pass filed two repositories that
+serve neither: [`malgaroshy-maker/factoryforge`](https://github.com/malgaroshy-maker/factoryforge)
+(`41★`, MIT) teaches **PLC programming** by having the learner write ladder logic or SCL in the
+real industrial toolchains — TIA Portal, OpenPLC, Node-RED, Ignition — and drive a Godot 4.7
+physics factory with it; [`DNiev/ecu-lab`](https://github.com/DNiev/ecu-lab) (`67★`, MIT) teaches
+**engine calibration** by having them edit the same tables a working tuner edits and read a
+simulated dyno pull.
+
+🔵 **Both implement one shape, and naming it is the useful part: a high-fidelity simulator of
+equipment too expensive, too dangerous or too scarce to give a learner.** The pedagogy is not
+explanation and not conversation — it is *consequence*. The learner acts on a realistic control
+surface and the simulated system responds as the real one would. Note what is absent from both:
+no LLM is required for the core loop, and neither project has one. **The AI opportunity is the
+layer above** — diagnosing *why* a calibration failed, or marking a ladder-logic solution against
+intent rather than output.
+
+🔵 **Why this is a distinct market and not a sub-segment of the academic one.** It is a different
+buyer (an industrial training or workforce budget, often an employer rather than an institution),
+a different success measure (**certification pass rate**, which is auditable and which the buyer
+already reports), a different procurement cycle, and **no LMS to sit beside** — which removes the
+integration constraint that shapes most of this base's academic patterns (`P138`). It also
+connects directly to the demand-side reading this base already holds: `T233`'s finding that new
+budget is at the workforce and credentialing end, and the `2026` microcredential and
+skills-first-LMS movement recorded on `intel/market.md`.
+
+⚠️ **Thin evidence, stated plainly: two repositories, `41★` and `67★`, both single-maintainer, one
+of them unplaced by region.** This is a category observation, not a measured market. The claim
+being made is that the *shape* is coherent and recurs — not that there is mature open-source
+supply here. There is not; the gap is recorded on `repos/foundations.md` as such.
+
+## T257 — Open-source discovery in this sector is now polluted by two adversarial signal classes, and both survive a stars-and-licence filter
+
+**Status: measured this pass — 185 distinct repositories across 8 legs.**
+
+`726-F` and `728-J` established that discovery in this industry fails mostly through *homonymy*:
+`topic:adaptive-learning` returns concept-drift ML, `topic:xapi` returns Cisco Webex code,
+`aprendizaje` returns reinforcement learning. Those are accidents of vocabulary. **This pass
+measured two classes that are not accidents.**
+
+**1. Integrity-defeat software ranks inside education topics, at the top.**
+[`UseInterstellar/Interstellar`](https://github.com/UseInterstellar/Interstellar) — **`2,200★`,
+AGPL-3.0, actively maintained** — is a school-network-filter-evasion web proxy bundled with games,
+and it ranks under education topics alongside `55gms/55GMS` (`164★`), `nautilus-os/GUST` (`140★`)
+and `PeteZah-Games/PeteZahGames` (`118★`). **By stars, `Interstellar` would be the fourth-largest
+row on this base's agent shelf.** This is `T251`'s integrity-defeat layer arriving through the
+*discovery instrument* rather than through assessment design — and it ranks highly precisely
+because its users are students, who are numerous and who star things.
+
+**2. An SEO/astroturf cluster.** Roughly `15` repositories in the novel set share four properties:
+licence **`NONE`**, **every one pushed on the same day**, titles written for a search engine
+(*"Best Open-Source X for 2026"*, *"X 2026: Interactive Y"*), and star counts in a **narrow
+`50`–`70` band**. Individually each property is innocuous; **the conjunction is the signal**, and a
+narrow star band across unrelated projects pushed on one day is not organic.
+
+🔵 **Why this is a trend rather than a nuisance.** The default method for assessing an open-source
+option — rank by stars, check the licence is permissive, check it is recently pushed — **passes
+both classes.** Class 1 passes it comfortably and is actively maintained. Class 2 fails only on the
+licence check, and that check is the one most often deferred. 🟢 **The usable consequence is that
+fitness has to be assessed on the artefact and never on its metrics**, which is what this base's
+payload-first practice already does for licences and now has to do for *purpose*: read what the
+repository is for. For a studio the stake is concrete — proposing class 1 to an education client
+is not a weak recommendation but an actively damaging one, since the client's own integrity policy
+is what that software exists to defeat.
 
 ## 🆕 T253–T254 — added at p727 (2026-11-09)
 

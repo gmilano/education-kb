@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Composition Patterns — Education
 
-**Pass p727 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p728 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -20,6 +20,109 @@ different, real recipes. Recorded because reusing a live ID silently rewrites a 
 prior engagement may cite.)
 
 ---
+
+## P162 — Certification-backed vocational training on a simulated rig, with the AI marking intent rather than output (industrial/workforce buyer; 6–9 weeks to a pilot cohort) 🟢 new at p728
+
+**Use when** the buyer is an employer, a technical institute or a workforce programme rather than
+a school — and the skill being taught needs equipment that is expensive, dangerous or scarce. This
+is the `T256` shape. It is the only pattern on this page with **no LMS in it**, which is why it is
+fast.
+
+**Components, all verified at p728:**
+
+| Role | Repo | Licence | Note |
+|---|---|---|---|
+| Simulated rig — industrial controls | [`malgaroshy-maker/factoryforge`](https://github.com/malgaroshy-maker/factoryforge) | 🟢 MIT (`1,074 B`) | Learner writes ladder logic / SCL in **TIA Portal, OpenPLC, Node-RED or Ignition**; it drives a Godot 4.7 physics factory. The real toolchain, not a toy editor. |
+| Simulated rig — calibration | [`DNiev/ecu-lab`](https://github.com/DNiev/ecu-lab) | 🟢 MIT (`1,086 B`) | Learner edits the calibration tables a working tuner edits, runs a dyno pull, reads the result. |
+| Mastery state (defensible) | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | BKT — the peer-reviewed mastery model. **Required** here, because a certification claim must be defensible. |
+| Mastery state (operational) | [`BennettSchwartz/membrane`](https://github.com/BennettSchwartz/membrane) | 🟢 MIT (`1,073 B`) | Typed, decayable, revisable per-skill state with a competence estimate — the *store*, carrying skill decay between sessions. |
+| Withheld-answer coaching | [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | 🟢 MIT | Challenges the stated assumption instead of returning the fix — productive struggle, which is the whole point on a rig where the consequence is the lesson. |
+
+**Wiring.** The simulator is the source of truth and the LLM never touches the control loop:
+the learner acts on the rig → the simulator produces an **objective trace** (did the line jam, did
+the engine detonate) → that trace, not the model's opinion, sets correctness → `OATutor`'s BKT
+updates mastery for the specific skill → `membrane` persists it with decay so a learner returning
+after three weeks is re-assessed rather than assumed competent → the LLM is invoked **only** to
+explain *why* the trace came out that way and to mark the learner's *intent* where the output was
+accidentally right.
+
+🔵 **The key design decision, and it is what makes this pattern worth a page:** on a simulated rig
+the right answer is observable, so **the model must never be the grader.** Its job is diagnosis
+and intent-marking — the two things the trace cannot provide and the two things a human instructor
+is normally needed for. A correct output reached by a wrong method is the failure mode vocational
+training exists to catch, and it is the one an output-comparison grader cannot see.
+
+**Deliverable and why the buyer pays:** certification pass rate, per skill, with a decay-aware
+mastery record per learner — a number this buyer **already reports** to a regulator or a client.
+🟢 **Licence posture: every component is MIT.** No copyleft anywhere, so the deliverable can be
+closed, rebranded and resold, which matters more here than in academic engagements because the
+buyer is often a commercial training provider.
+
+⚠️ **Constraints, stated honestly.** Both simulators are **single-maintainer, `41★` and `67★`**, and
+one is region-unplaced — **fork and pin a commit; do not take a dependency.** Neither has an
+instructor dashboard, a cohort model or any authentication: that is the build, and it is most of
+the nine weeks. And the fidelity claim is the client's risk to accept, not the repository's to
+make — validate the simulator against their own equipment before any certification claim is
+attached to it.
+
+## P163 — The stock-licence gate: one normalisation and one hash, run before a repository reaches a proposal (tooling, not a client pattern; half a day, then a standing gate) 🟢 new at p728
+
+**Use always.** This replaces the raw byte-length band this base used from `p616` to `p727`. It
+answers the only licence question that matters operationally — *is this the stock licence, or the
+stock licence with something added?* — with a yes or no instead of a maybe. `T255`.
+
+**The gate.**
+
+1. **Existence** — `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, falling back through
+   `readme.md` → `README.rst` → `README` → `LICENSE`. **`200` = alive, `404` = absent.** 🔴 Do
+   **not** use `curl -sI https://github.com/{owner}/{repo}`: measured again at `p728`, it returns
+   **`403` for a live repository and `403` for an invented one** — a `9`th consecutive pass at zero
+   discriminating power.
+2. **Fetch the payload** — try `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, **`LICENCE`**.
+   🔵 Keep the British spelling in the chain: `SharezoneApp/sharezone-app` was found at `LICENCE`
+   and a `LICENSE`-only probe scores it as unlicensed.
+3. **Normalise** — drop the title line, drop **every** line beginning `Copyright`, drop decorative
+   rules, collapse all whitespace runs to one space, trim.
+4. **Compare** — stock `MIT` ⟺ **`1,020 B`** and sha256₁₂ **`fe2a9817987f`**. Match ⇒ stock MIT,
+   no reading required. No match ⇒ read it, and expect a benign explanation first.
+
+```bash
+norm() { grep -viE '^\s*(the )?mit license( \(mit\))?\s*$|^\s*copyright|^\s*-+\s*$' "$1" \
+         | tr -s '[:space:]' ' ' | sed 's/^ //; s/ $//' | tr -d '\n'; }
+norm LICENSE | wc -c          # 1020  => stock MIT
+norm LICENSE | sha256sum      # fe2a9817987f...
+```
+
+**Why each step is there, measured rather than assumed:**
+
+- **Stripping `Copyright` lines** removes the two false-positive modes `726-A` found — a second
+  copyright line (`teammapper`, `opencast/studio`, both **stock**) and **non-ASCII characters in
+  the holder's name** (`mather`; `zx-study`, © *2026 正贤*). 🔴 The second mode made the old band
+  **systematically biased against non-Latin-script publishers**, who supply most of this
+  industry's new permissive code.
+- **Normalising whitespace** removes hard-wrap-versus-reflow, which a raw byte count cannot see and
+  which is why `726-G` had to rule a `2,247 B`-short Apache payload complete by hand.
+- **It still catches tampering, in both directions:** MIT **plus** a non-commercial clause →
+  `1,098 B`; MIT **minus** the warranty disclaimer → `559 B`. 🔵 And the decisive case: `mather`'s
+  *benign* raw payload is `1,098 B` and the *tampered* normalised body is `1,098 B` — **the same
+  number.** The old band could not separate them. This does.
+
+**For the licences the constant is not established for:**
+
+- **`Apache-2.0`** — do **not** use length. Count the numbered sections and require
+  `END OF TERMS AND CONDITIONS`; the `APPENDIX` is optional, so a payload `2,247 B` short can be
+  complete (`726-G`).
+- **`AGPL-3.0`** — the stock payload is `34,523 B` / sha256₁₂ `0d96a4ff68ad`, now confirmed on
+  **two** independent publishers (`sitor-ai/frametell` at `p727`, `heuwels/lector` at `p728`).
+- **Always prefer the payload to the index field.** `tecnickcom/tcexam` indexes `NOASSERTION` and
+  is `AGPL-3.0` by payload — **because it prepends a trademark notice**, which both defeats the
+  classifier *and* is itself a constraint the engagement must honour. The index would have hidden
+  both facts.
+
+⚠️ **What this gate does not do:** it does not tell you the repository is *fit*, only that its
+licence is unmodified. `T257` is the companion failure — `UseInterstellar/Interstellar` is
+`2,200★`, actively maintained and cleanly licensed, and is a school-filter-evasion proxy. **Run
+this gate on the licence and read the README for the purpose; neither substitutes for the other.**
 
 ## P161 — Socratic debugging with an objective oracle: teaching programming by withholding the answer, graded without a rubric (4–6 weeks to a pilot cohort) 🟢 new at p727
 
