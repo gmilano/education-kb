@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Vertical Platforms — Education
 
-**Pass p722 · verified 2026-11-09.** Deployable systems a client may already run, or could
+**Pass p723 · verified 2026-11-09.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -24,6 +24,7 @@ before proposing a fork.
 | **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 1,021 | GPL-3.0 | 2026-11-09 | Strong Spanish- and French-speaking footprint, actively pushed. Materially relevant to LATAM engagements and consistently under-considered next to Moodle. |
 | **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 1,240 | **ECL-2.0** | 2026-11-07 | Apereo Foundation, from a US university consortium. ⚠️ Licence correction: the Educational Community License 2.0 — an Apache-2.0 derivative with a patent-grant variation — **not** Apache-2.0 as previously published here and as several vendor blogs state. Still permissive and the most build-on-able LMS of this set. |
 | **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 2,459 | AGPL-3.0 | 2026-11-09 | Modern, actively developed next-gen LMS — the credible "new stack" option versus the 20-year incumbents. AGPL-3.0. |
+| **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 109 | 🟢 **MIT** | 2026-11-09 | 🟢 **Promoted to this shelf at p723** (filed in the 128-row roster at p655, never surfaced here). AI-native LMS — AI mentor and role-play built in, rather than bolted on — positioned by its authors as a self-hosted alternative to Moodle and Docebo. **MIT, confirmed from the payload** (`LICENSE` reads *MIT License / Copyright (c) 2024 Selleo*, read this pass). Authored by **Selleo, Bielsko-Biała, Poland** — the first EMEA-authored platform on this shelf. ⚠️ Vendor-steered: Selleo also sells Mentingo as SaaS and as custom build, so treat it as **open core with a permissive grant on what is published**, and pin a commit. |
 
 ### Why Open edX's absent star count is recorded as absent
 
@@ -41,7 +42,7 @@ LMS in the industry. The cell is left marked rather than guessed.
 |---|---|--:|---|---|---|
 | **BigBlueButton** | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 9,271 | LGPL-3.0 | 2026-11-09 | Purpose-built virtual classroom (not generic conferencing): breakout rooms, polls, shared whiteboard, LMS integration. LGPL-3.0 is friendlier than AGPL for layering services on. |
 | **H5P** | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 154 | GPL-3.0 | 2026-11-04 (branch `master`; **no README/LICENSE file at HEAD** — see P142) | Interactive content types embedded inside Moodle, Canvas and Drupal. The natural insertion point for AI-generated interactive exercises, because the host LMS already renders it. |
-| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,173 | MIT | 2026-11-08 | Offline-first delivery for low-connectivity settings. **MIT** — the only unambiguously permissive platform on this page. |
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,173 | MIT | 2026-11-08 | Offline-first delivery for low-connectivity settings. **MIT** — and until p723 the only unambiguously permissive platform on this page; `Mentingo` is now the second. |
 
 ## Education ERP / SIS
 
@@ -61,13 +62,41 @@ Both appear in open-source listings and both fail on reading the licence file. C
 
 ## Composition posture, by licence
 
-- **Permissive, customise freely:** Kolibri (MIT), Sakai (ECL-2.0), Submitty (BSD-3).
+- **Permissive, customise freely:** Kolibri (MIT), **Mentingo (MIT)**, Sakai (ECL-2.0), Submitty (BSD-3).
 - **GPL, safe to host:** Moodle, Chamilo, H5P. Distributing a modified build to the client
   requires source; running it for them does not.
 - **AGPL, structure around it:** Open edX, Canvas, LearnHouse. Build AI as **separate
   services talking over APIs/LTI**, not as core patches — this keeps the client's obligations
   unchanged and is also the cleaner upgrade path.
 - **LGPL, middle ground:** BigBlueButton, OpenEduCat. Link against, don't fork.
+
+### 🟢 `723-M` — the permissive-LMS gap this shelf declared is now half-closed, and the repository was EMEA-authored
+
+Every prior pass recorded the same structural problem: **every deployable LMS in education is
+copyleft** (Moodle/Chamilo GPL-3.0; Open edX/Canvas/LearnHouse AGPL-3.0), leaving Kolibri — a
+low-connectivity *content delivery* tool, not a full LMS — as the only permissive option, and
+`Sakai` (ECL-2.0) as the only permissive LMS proper. `Selleo/mentingo` is an **MIT-licensed,
+AI-native LMS, pushed today**, and it changes the default answer to *"can we fork the LMS?"*
+from "not without a copyleft conversation" to "yes, on this one."
+
+🔵 Two cautions, both load-bearing:
+
+1. **It is small.** 109★ against Moodle's install base of ~200k sites. This is a
+   *greenfield* option — a client with no LMS, or one building a workforce-learning product
+   — **not** a migration target for an institution already running Moodle or Canvas.
+2. **It is vendor-steered.** Selleo sells the same product as SaaS and as a custom build. The
+   MIT grant on the published repository was read from the payload this pass and is real, but
+   open-core projects re-licence; pin a commit and re-read `LICENSE` before each engagement
+   (`P135`).
+
+🔴 It also contradicts something this base has asserted for five consecutive passes —
+that **"EMEA contributes almost nothing to open-source education supply"**. Selleo is a Polish
+software house and Mentingo is platform-scale. 🔵 **And the sharpest part: this base filed
+Mentingo at `p655`**, in the 128-row roster at the bottom of this same file, with its stack
+read from the manifest. The EMEA supply nil was then re-asserted at p719, p720, p721 and p722
+— four times — **with the counter-example sitting unread in the same file.** The nil was never
+a fact about EMEA; it was a fact about which part of this file each pass looked at.
+See [`../intel/trends.md`](../intel/trends.md) `T234`.
 
 ---
 

@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI — Current Trends
 
-**Pass p722 · researched 2026-11-09.** Eight trends — **T226–T233** — each with the evidence
+**Pass p723 · researched 2026-11-09.** Four new trends — **T234, T235, T239, T244** — added above p722's **T226–T233** — each with the evidence
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
 
@@ -15,6 +15,91 @@ registry **T1–T225** from prior passes is preserved in full below.
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T234–T244 — added at p723 (2026-11-09)
+
+## T234 — A knowledge base's declared regional nil is more often a fact about the base than about the region
+
+**Evidence.** This base asserted *"EMEA contributes almost nothing to open-source education
+supply"* at p719, p720, p721 and p722 — four independent passes, each recording it as a
+*measured* nil and each citing the same dead instrument (the national-exam vocabulary leg:
+`Abitur`, `baccalauréat`, `Lernplattform`, topping out at a 34★ static revision site).
+p723 finds **`Selleo/mentingo`** — 109★, **MIT**, an AI-native LMS from a Polish software
+house, pushed the same day — **and this base had already filed it, at p655, in the 128-row
+roster on its own `verticals/solutions.md`.** The counter-example sat in the same file as the
+nil for four passes.
+
+**What complicates it.** The narrow version of the claim survives: EMEA still supplies no
+foundational *building block*, and the exam-vocabulary leg really is dead. The nil was not
+fabricated — it was **over-generalised from one instrument to a whole region**.
+
+🔵 **The trend, stated usefully:** in a KB that accumulates rosters faster than it
+re-reads them, a "measured nil" decays into an *unsearched* nil without changing its wording.
+`722-N` found this for North America (country-shaped legs cannot reach US authors) and p723
+finds it for EMEA by a different mechanism (the counter-example was already filed). Two
+regions, two mechanisms, same failure. **A nil older than two passes must be re-derived from
+the base's own rosters before it is restated** — `P149`.
+
+## T235 — Secondary-source policy claims fail at roughly the rate the repository claims do, and nobody checks them
+
+**Evidence.** p722 established that four of this base's published star counts were overstated
+by 3.6× to 31× because nobody had re-read the index. p723 applies the same scepticism to
+*policy* claims from industry roundups, and **two of the four checked do not survive**:
+
+| Claim, as published by a secondary source | Verdict at p723 |
+|---|---|
+| "Illinois **Act 964** requires AI literacy for grades 6–12, effective 2026-08-01" | 🔴 **No such enacted Act found.** The real instruments are **PA 104-0399** (ISBE *guidance* mandate, effective 2026-01-01, guidance published 2026-07-09) and **PA 104-0565/SB 2909** (bans AI-assigned scores in **teacher evaluation**). A proposed AI-literacy bill, **HB4625**, was introduced only. |
+| Philippines CHED "**Memorandum Order 21**, a national framework for AI in teaching, research and operations" | 🔴 **No such issuance found.** CHED is *"eyeing"* a national AI policy (Mar 2026); RAISE 2026 produced a *commitment* to a proposed framework (Feb 2026). The real 2026 CMOs: **18** = student affairs, **05** = health. |
+| Estonia **AI Leap** national programme | 🟢 **Verified and far richer than the roundup stated** — 154 schools, ~20,000 students, ~4,900 teachers, €3.2M→€6M, Sept 2026 expansion to 38,000 students, graduating cohort spring 2027. |
+| Ireland **HEA** *National Policy Framework on Generative AI in Teaching and Learning* | 🟢 **Verified**, published 2025-12-22. |
+
+**What complicates it.** The two failures are not random: both are **over-specific**
+— a named instrument with a number and a date, which is exactly the shape that reads as
+authoritative and gets copied without checking. The two that verified were *under*-reported
+by their sources.
+
+🔵 **Implication for this base:** policy facts need the same two-channel discipline as
+repository facts (`722-F`). An instrument number is a claim, not a citation. **A named statute
+that cannot be located in the legislature's own record is filed as unverified, not as
+pending** — the KB's convention of recording delisted repositories now extends to delisted
+policy claims.
+
+## T239 — Institutional AI *policy* is abandoning detection while institutional *purchasing* accelerates into it
+
+**Evidence.** `T209` (p717) records detection being abandoned as a control, with spend moving
+to assessment redesign — well-sourced, policy-side. p723 finds the purchasing-side counter:
+**AI-detection tool use in higher education rose 38% → 68% in one year.** Alongside it, the
+adoption–governance gap holds everywhere it is measured (~two-thirds of institutions without a
+formal AI policy; LATAM at 87% using / 26% with a strategy).
+
+**What complicates it.** The 68% figure is from a vendor-adjacent roundup citing an
+unidentified primary survey; it is a direction, not a rate. The two readings are also not
+strictly contradictory — policy leadership and procurement are different functions on
+different clocks.
+
+🔵 **Why it is a trend rather than a discrepancy:** it predicts the *shape of the room* in
+an integrity engagement. The pedagogy lead has written detection off; the administrator has
+just bought it. An assessment-redesign proposal is therefore a **replacement for a live
+purchase**, not a greenfield improvement, and must be positioned against sunk cost. Pitching
+it as new capability is how these engagements stall.
+
+## T244 — Where a national programme includes its own research arm, the evidence buyers demand becomes a procurable deliverable
+
+**Evidence.** `T226` establishes that evidence is now the buying criterion and that ~55% of
+tools lack efficacy studies. Estonia's **AI Leap** is built in three parts, and the third is
+**a research study measuring effectiveness** — a government-funded comparative evidence base
+covering 154 schools, ~20,000 students and a cohort graduating spring 2027. Ireland's HEA
+framework and North Carolina's **Session Law 2026-41** (staged deadlines through 2028) are the
+same instinct expressed as policy rather than measurement.
+
+**What complicates it.** It is one country, and a small one; the vendor relationships
+(OpenAI, Anthropic) are reported as unsettled, so the programme's instrumentation may not be
+independent of its suppliers.
+
+🔵 **Implication:** Estonia is the most *instrumented* education system in this file, which
+makes it the natural reference site — for comparative measurement work, and as the citation an
+EMEA or North American proposal uses when the client asks "where has this been shown to
+work?" **The scarce asset in this industry is not a tutor, it is a control group.**
 
 ## T226 — Evidence has become the buying criterion
 

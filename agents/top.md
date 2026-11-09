@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI Agents — Curated Top Set
 
-**Pass p722 · verified 2026-11-09.** Every row below was read this pass from
+**Pass p723 · verified 2026-11-09.** Every row below was read this pass from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
 (falling back to `README.rst`). Rows carry the date they were read so a later pass
@@ -21,8 +21,8 @@ can tell a stale cell from a fresh one.
 
 | Agent | Repo | Stars | Licence | Last push | Region | What it does |
 |---|---|--:|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,348 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,112 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,462 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,124 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,402 | MIT | 2025-10-26 | APAC | Agentic-AI curriculum used at national scale by Panaversity/GIAIC. ⚠️ **Stale: no push in >12 months** — treat as courseware, not live code. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | 387 | MIT | 2026-05-29 | APAC | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. ⚠️ See correction below — this is **387★, not ~12k**. |
 | moodle-ai-skill-navigator | [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 279 | GPL-3.0 | 2026-11-07 | Global | Moodle plugin: tutoring, quiz generation, mind maps and RAG over course materials. The clearest AI-on-top-of-incumbent-LMS bridge found. |
@@ -31,8 +31,53 @@ can tell a stale cell from a fresh one.
 | gen-mentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | APAC | LLM multi-agent framework for goal-oriented learning-path generation. WWW '25 oral paper, reference implementation. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 99 | MIT | 2026-11-09 | EMEA | MCP server that turns any LLM into an ITS, encoding 50 years of tutoring research. Smallest but most composable item here. |
 
-**Nine education-native agents, all verified today.** That is the real count — no header
-rows, no example rows and no padding to reach an arbitrary minimum.
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,402 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 551 | MIT | 2026-11-07 | Global | MCP server exposing Anki to any LLM — spaced repetition as a tool call. The most composable retention primitive on this shelf. 🟢 **Promoted at p723** (roster at p655 at 546★ → +5). |
+| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 473 | Apache-2.0 | 2026-11-09 | APAC | Social-skills and conflict-handling coach built on realistic role-play. Same lab as `gen-mentor` below. The only social-emotional-learning agent verified on this shelf. 🟢 **Promoted at p723**; pushed today. |
+| teacher-to-skills | [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) | 472 | Apache-2.0 | 2026-11-07 | APAC | Distils a human teacher into a source-backed skill that teaches until the learner can work unaided. 🟢 **Promoted at p723.** |
+| universal-examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 372 | MIT | 2026-10-27 | APAC | Exam-prep coach with cross-session memory and handout-traceable citation (its stated design goal is hallucination suppression). 🟢 **Promoted at p723.** |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 302 | MIT | 2026-10-20 | Global | Private tutor that infers how the learner actually learns and teaches the next lesson accordingly; named for Bloom's 2-sigma result. 🟢 **Promoted at p723.** |
+| ari | [nichochar/ari](https://github.com/nichochar/ari) | 217 | MIT | 2026-11-09 | Global | "Learn stuff with pen + paper + AI." Created **2026-10-18** and pushed today — the newest project on the shelf. 🟢 **Promoted at p723.** |
+| InterviewMentor | [PrepLabsAI/InterviewMentor](https://github.com/PrepLabsAI/InterviewMentor) | 116 | MIT | 2026-10-19 | Global | AI mock interviews for technical hiring — the workforce/credentialing end of the shelf, which is where `T233` says new budget is. 🟢 **Promoted at p723.** |
+| Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 109 | MIT | 2026-11-09 | EMEA | AI-native LMS with an AI mentor and role-play; self-hosted alternative to Moodle/Docebo. Authored by **Selleo, Bielsko-Biała, Poland**. Pushed today. 🟢 **Promoted at p723 — the first EMEA-authored platform-scale repository to reach a curated shelf here, though this base filed it in the verticals roster at p655.** Also on [`../verticals/solutions.md`](../verticals/solutions.md). |
+| adhd-study-coach | [itsAalaa7/adhd-study-coach](https://github.com/itsAalaa7/adhd-study-coach) | 94 | MIT | 2026-09-27 | Global | ADHD-friendly study companion: spaced repetition, small-chunk teaching, focus support. The only accessibility-shaped agent found in any pass. 🟢 **New to this base at p723.** |
+
+**Nineteen education-native agents, every one verified today.** That is the real count — no
+header rows, no example rows and no padding to reach an arbitrary minimum.
+
+### 🔴 `723-U` — p722's shelf was accurate and unrepresentative at the same time
+
+p722 published nine rows and wrote *"that is the real count."* The nine were correct. **The
+sentence was not**, and the evidence was already inside this file: the 345-row roster below
+held permissive, actively-maintained, education-native repositories that were **larger than
+seven of the nine shelf rows** and had simply never been re-measured — `Study-Mate` (1,402★),
+`anki-mcp-server` (551★), `SocialCoach` (473★), `teacher-to-skills` (472★),
+`universal-examprep-skill` (372★), `Bloom` (302★), `ari` (217★), `InterviewMentor` (116★),
+`Mentingo` (109★). All nine were re-verified today and promoted; one further repository
+(`adhd-study-coach`, 94★) is new to this base.
+
+🔵 **The failure mode is specific and worth naming: a "verified-this-pass" shelf silently
+becomes a shelf of *whatever the pass happened to look at*.** p722 measured the rows it
+inherited, found four of them overstated, and never asked whether the roster held better
+rows. A curated shelf must be re-selected from the whole roster each pass, not re-measured
+in place — filed as `P149` in [`../compose/patterns.md`](../compose/patterns.md).
+
+### Region attribution is evidence-based, and five rows could not be placed
+
+`gh api users/{owner}` — the obvious way to place a repository by its author — returns
+**`403` in this scoped session** (*"sessions are bound to their configured repositories"*),
+for every one of eleven owners queried. It joins `curl -sI github.com/...` on the list of
+instruments that do not work here. Regions above were therefore read from **payload
+evidence**: README script and country words, verified this pass — `Study-Mate` (2,384 Han
+characters), `SocialCoach` (2,671 Han + "China"), `teacher-to-skills` (2,406 Han + "China"),
+`Mentingo` (Selleo's registered address, Bielsko-Biała, Poland, per CB Insights and
+Startup-House directory entries).
+
+🟡 `anki-mcp-server`, `Bloom`, `ari`, `InterviewMentor` and `adhd-study-coach` carry **no
+regional signal in their payloads at all** and the owner endpoint is closed. They are filed
+**`Global`** because that is the honest value, **not because they are global projects**. A
+later pass with a working owner endpoint should re-place them; until then, do not count them
+as evidence of supply in any region.
 
 ## General agent frameworks used as education substrate
 
@@ -65,8 +110,8 @@ four were re-read this pass through the same channel on the same day:
 | `GeminiLight/awesome-ai-llm4education` | ~800★ | **221★** | ~3.6× overstated |
 | `CAHLR/OATutor` | ~1,300★ then ~1,500★ | **278★** | ~5× overstated |
 
-DeepTutor moved the other way and legitimately: ~22k (cycle 2) → ~24k (cycle 3) → **57,348★**
-today, consistent with sustained trending. The four overstatements are not growth
+DeepTutor moved the other way and legitimately: ~22k (cycle 2) → ~24k (cycle 3) → **57,462★**
+today (p722 read 57,348★ earlier the same day; +114 within the day), consistent with sustained trending. The four overstatements are not growth
 corrections; they are values that were never true.
 
 ### Two previously published rows could not be verified at all

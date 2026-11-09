@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Composition Patterns — Education
 
-**Pass p722 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p723 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -20,6 +20,101 @@ different, real recipes. Recorded because reusing a live ID silently rewrites a 
 prior engagement may cite.)
 
 ---
+
+## P154 — The all-MIT greenfield learning platform: an LMS, a tutor and retention, with no copyleft anywhere in the chain (any region; 6–8 weeks to pilot) 🟢 new at p723
+
+**The problem it solves.** Until p723 the honest answer to *"can we fork the LMS and ship it
+as the client's own product?"* was no: every deployable LMS in education is GPL or AGPL
+(Moodle, Chamilo, Open edX, Canvas, LearnHouse), and the only permissive options were Kolibri
+(content delivery, not an LMS) and Sakai (ECL-2.0, a 20-year Java estate). An AGPL LMS inside
+a product the client sells as SaaS triggers source disclosure to its users.
+
+**The chain, every component verified 2026-11-09 and every grant read from the payload:**
+
+| Rung | Component | Licence | Role |
+|---|---|---|---|
+| Platform | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) (109★) | **MIT** | LMS of record: multi-tenancy, white-labelling, SCORM export, certificate recertification, six UI languages. AI mentor and scored role-play are core, not plugins. |
+| Tutoring | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (99★) | **MIT** | ITS behaviour as an MCP server — encodes tutoring research as tool calls, so the pedagogy is swappable without touching the LMS. |
+| Retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (551★) | **MIT** | Spaced repetition as a tool call. Closes the loop the LMS cannot: a course completion is not retention. |
+| Mastery gate | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (278★) | **MIT** | Bayesian Knowledge Tracing — the auditable mastery model, used as the gate that decides progression rather than the model's own confidence. |
+| Correctness gate | `P134`'s verified-solver rung | — | For any procedural subject: the model narrates, a deterministic engine computes, code checks the reply before the learner sees it. |
+
+**Wiring.** Mentingo owns identity, enrolment, content and the gradebook. `tutor-mcp` and
+`anki-mcp-server` are attached as **MCP servers behind one agent runtime** (`smolagents`,
+Apache-2.0, or AutoGen on its `LICENSE-CODE` MIT grant per `722-L`) — not as LMS plugins, so
+the LMS stays upgradeable. OATutor's BKT runs as a **service** scored off interaction events
+Mentingo already emits; its mastery verdict, not the model's, writes progression back through
+Mentingo's API. Anki cards are generated on mastery events and reviewed outside the course.
+
+**Why the rungs are in that order.** Each gate is upstream of the thing it governs: the
+solver checks the reply before display, BKT decides progression before the gradebook is
+written, spaced repetition fires only after mastery. Reordering any pair turns a gate into a
+report.
+
+⚠️ **Constraints that decide fit.**
+1. **Greenfield only.** Mentingo is 109★ against Moodle's ~200k sites. For a client already
+   running Moodle or Canvas, `P138` (AI sidecar over LTI) remains the right pattern — this
+   one is for a client with **no LMS**, or one building a workforce-learning *product*.
+2. **Open core, so pin and re-read.** Selleo sells Mentingo as SaaS and as custom build. The
+   MIT grant was read from `LICENSE` this pass; run `P135` and pin a commit before each
+   engagement.
+3. **Corporate-L&D shaped.** Its native fit is onboarding, compliance and recertification —
+   strongest against `T233` (workforce and skills-first credentialing), weakest for K–12.
+
+**Deliverable, 6–8 weeks:** pinned fork, two MCP servers wired, BKT scoring live on one
+subject, one deterministic correctness gate, and a licence dossier showing an unbroken
+permissive chain — which is itself the sales artefact for any client whose legal team has
+previously killed an AGPL proposal.
+
+## P149 — Re-select the curated shelf from the roster every pass; never re-measure it in place (KB maintenance; mandatory, half a day) 🟢 new at p723
+
+**The defect it fixes.** p722 built a nine-row "verified-this-pass" shelf, measured those nine
+honestly, corrected four overstated star counts, and wrote *"that is the real count."* The
+nine rows were accurate. **The shelf was not representative**, because the 345-row roster in
+the same file held permissive, actively-maintained, education-native repositories larger than
+seven of the nine — `Study-Mate` (1,402★), `anki-mcp-server` (551★), `SocialCoach` (473★),
+`teacher-to-skills` (472★), `universal-examprep-skill` (372★), `Bloom` (302★), `ari` (217★),
+`InterviewMentor` (116★), `Mentingo` (109★). The same defect produced four consecutive
+false EMEA supply nils (`T234`).
+
+🔵 **The mechanism, stated once:** *"verify what is on the shelf"* and *"decide what belongs
+on the shelf"* are different operations, and a pass that does only the first inherits the
+previous pass's selection permanently. Verification makes the shelf **accurate**; re-selection
+makes it **true**. Accuracy without re-selection converges on a well-measured, steadily more
+misleading shelf — and it fails silently, because every row checks out.
+
+**The procedure, per shelf, per pass:**
+
+```sh
+# 1. Candidates come from the ROSTER, not from this pass's searches.
+#    Parse every github.com address already filed in the file.
+grep -oE 'github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+' agents/top.md | sort -u > /tmp/roster.txt
+
+# 2. Re-measure the whole roster through the open channel (P135 rung 1).
+while read -r url; do slug=${url#github.com/}
+  gh api -X GET search/repositories -f q="repo:$slug" \
+    --jq '.items[] | [.full_name,.stargazers_count,.license.spdx_id,.pushed_at[0:10],.archived] | @tsv'
+done < /tmp/roster.txt > /tmp/measured.tsv
+
+# 3. Rank and cut. Shelf = top N by stars among rows that pass ALL of:
+#    permissive (MIT/Apache-2.0/BSD/ECL) AND pushed within 12 months
+#    AND archived=false AND education-native (not a general agent framework).
+# 4. Read the LICENSE payload for every row that newly enters the shelf (P135 rung 2),
+#    and LICENSE-CODE first for any Microsoft repository (722-L).
+# 5. Record each promotion with the pass that first filed it, so provenance survives.
+```
+
+**Rules this makes explicit.**
+- A row **enters** the shelf on measurement, never on a roundup's claim.
+- A row **leaves** the shelf when it goes stale (>12 months), archived, or is outranked —
+  and leaving is recorded, not silent (`722-D`).
+- **A declared nil older than two passes is re-derived from the roster before it is
+  restated.** This is the half of the procedure that would have caught the EMEA error, since
+  the counter-example was never in a search result — it was in the file.
+- Regions come from **payload evidence** (README script, country words, registered address),
+  not from the owner endpoint, which returns **403** in a scoped session (p723). A row with no
+  regional signal is filed `Global` **as an admission, not a placement**, and excluded from
+  any regional supply count.
 
 ## P138 — AI sidecar on an incumbent LMS (the default engagement shape)
 

@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Foundational Repositories — Education
 
-**Pass p722 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+**Pass p723 · verified 2026-11-09.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -40,6 +40,29 @@ real, dated corpora.
 | [yunger7/enem-api](https://github.com/yunger7/enem-api) | 366 | GPL-2.0 | 2025-12-14 | Public open-source API over Brazil's ENEM exams and questions. The single best structured entry point to LATAM assessment content. **LATAM.** |
 | [piresramon/gpt-4-enem](https://github.com/piresramon/gpt-4-enem) | 54 | MIT | 2024-12-06 | Code and data for evaluating LLMs on ENEM. Small and dormant, but MIT and the only published LATAM LLM-vs-national-exam harness found. **LATAM.** |
 
+| [devissaputra/knowledge_tracing_benchmark](https://github.com/devissaputra/knowledge_tracing_benchmark) | **0** | MIT | 2026-11-08 | 🟢 **New at p723.** Benchmarks priors, **BKT, PFA and GRU** knowledge tracing on learner interaction data, in one MIT repository. ⚠️ **Zero stars — stated, not hidden.** It is filed because of what it *is*, not what it has: this base has carried `OATutor` as its only auditable BKT implementation, and comparing BKT against PFA and a neural baseline is precisely the evidence a procurement conversation now asks for (`T226`). Treat as a reference to read, not a dependency to adopt. |
+
+## 🔴 The AI-output evaluation layer: the repository that fits the gap cannot be staged
+
+This base has carried a declared gap for several passes — **no open-source evaluator for AI
+output quality in an education context.** A repository that fits it exactly was found and
+verified this pass, and it still cannot be staged:
+
+| Repo | Stars | Index licence | Payload | Verdict |
+|---|--:|---|---|---|
+| [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | 88 | `NOASSERTION` | **`LICENSE` → `404`; `LICENSE.md` → `404`** | 🔴 **Do not stage.** Evaluates AI output against *trusted educational rubrics* — functionally the missing piece, actively pushed (2026-11-07). But there is **no licence file at HEAD on either path**, so there is no grant to rely on. Usable as a design reference and as evidence the category is forming; not forkable, not client-deliverable. |
+
+🔵 Per `722-F` the doc-path `404` does **not** mean the repository is absent — the index
+confirms it alive at 88★. A missing `LICENSE` is the opposite problem from a missing README:
+an undocumented library is still usable, whereas **an unlicensed one is not**, however
+permissive its listing looks. `NOASSERTION` plus a `404` on every licence path is the
+strongest available signal of *no grant at all*, and it is the one case where the correct
+engineering answer is to reimplement the idea rather than adopt the code.
+
+The gap therefore **stays open**, but it is now a *licensing* gap rather than a *supply* gap,
+which is a different and more tractable problem: the rubric-evaluation pattern is public and
+reimplementable under whatever licence Globant needs.
+
 ## Content and offline delivery
 
 | Repo | Stars | Licence | Last push | Why it is foundational |
@@ -64,11 +87,16 @@ Recorded explicitly so a later pass does not read silence as coverage:
 - **No permissively licensed open-source Student Information System.** Searched; every
   serious SIS is either proprietary or GPL/AGPL. For a client needing SIS customisation the
   honest answer is Odoo/OpenEduCat (LGPL) or build, not adopt.
-- **No EMEA-authored foundational repository.** The national-exam leg
-  (`Abitur`, `baccalauréat`, `Lernplattform`) returns nothing above 34★. EMEA supply in this
-  industry is effectively absent from GitHub; its contribution is regulatory and
-  institutional. This is a fourth consecutive pass measuring the same nil, which makes it a
-  property of the supply rather than a bad run.
+- **No EMEA-authored foundational *building block*.** The national-exam leg
+  (`Abitur`, `baccalauréat`, `Lernplattform`) again returns nothing above 34★, so the gap as
+  narrowly stated holds. 🔴 **But the wider claim this bullet used to make — "EMEA supply in
+  this industry is effectively absent from GitHub" — is withdrawn at p723 as false.**
+  `Selleo/mentingo` (109★, **MIT**, pushed 2026-11-09) is a platform-scale, AI-native LMS from
+  a Polish software house, and this base filed it at **p655** in the roster on
+  [`../verticals/solutions.md`](../verticals/solutions.md) before re-asserting the nil four
+  more times. EMEA supply is **thin and not of the building-block shape this page collects**
+  — which is a real and useful finding — but it is not absent, and the five-pass nil was an
+  artefact of the search vocabulary and of not re-reading this base's own rosters.
 - **No open-source automated essay scoring that is both modern and maintained.** The
   category exists but is archaeological: the top results (`nusnlp/nea` 207★ GPL-3.0,
   `siyuanzhao/automated-essay-grading` 121★ MIT) were last pushed in **2018 and 2019**.

@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI — Market Intelligence
 
-**Pass p722 · researched 2026-11-09.** Figures below name their source and, where sources
+**Pass p723 · researched 2026-11-09.** Figures below name their source and, where sources
 disagree, the disagreement is shown rather than averaged away. Market-sizing in this
 industry is dominated by vendor-commissioned research with incompatible methodologies; a
 single confident number here would be a fabrication.
@@ -73,6 +73,33 @@ divergent rule sets is an integration problem, which is Globant's shape of work.
 it is found by institution (UC Berkeley's OATutor, Rensselaer's Submitty). Both filed this
 pass, breaking four passes of recorded NA zeroes.
 
+**🔴 Added at p723 — a widely-repeated Illinois claim does not survive checking, and the
+real statutes say something different.** A secondary roundup states that *"Illinois' Act 964
+requires AI literacy instruction for grades 6–12, effective August 1, 2026."* Searched this
+pass against the Illinois General Assembly and practitioner summaries: **no such enacted Act
+and no such requirement was found.** What exists instead:
+
+| Instrument | What it actually does | Date |
+|---|---|---|
+| **Public Act 104-0399** [105 ILCS 5/2-3.118a] | Requires **ISBE to issue statewide guidelines** on AI use in K–12 — a guidance mandate on the *agency*, not a curriculum mandate on *districts*. ISBE published the guidance **2026-07-09**. | effective 2026-01-01 |
+| **Public Act 104-0565 (SB 2909)** | **Prohibits administrators from using AI to assign numerical scores or qualitative ratings in teacher evaluation.** | sources disagree: 2027-01-01 (amendment to §24A-5) vs 2027-07-01 |
+| **HB4625** (103rd GA) | *Would* have added AI literacy to the School Code's digital-literacy section. **Introduced only; not law.** | proposed 2024-07-01 |
+
+🔵 The error matters in both directions. A deck citing "Act 964" would be citing nothing,
+and an engagement scoped to K–12 *AI-literacy curriculum delivery* in Illinois would be
+scoped to a mandate that does not exist. **The real Illinois opportunity is the opposite
+shape:** PA 104-0565 bans AI-assigned scores in **teacher evaluation**, which makes
+*human-decision provenance in evaluation workflows* a compliance requirement — and
+PA 104-0399's guidance route means districts need help interpreting ISBE guidance rather than
+implementing a statute. The bill-count figures remain genuinely contested and are reported as
+such: **~134 bills across 31 states** (one tracker) versus **~71 across 27 states** (FutureEd).
+
+🟢 Verified NA items that do hold: **North Carolina Session Law 2026-41** (AI-literacy
+standards; state model policy due 2026-12-31, local policies 2027-06-30, teacher training
+2028-06-30), **Maryland SB 720** (district AI policies + named AI coordinators),
+**California DoE model AI policy** (June 2026) and **Idaho's** statewide generative-AI
+framework (August 2026).
+
 ### EMEA
 
 **Demand drivers.** Teacher-led adoption running ahead of institutional readiness. Across
@@ -94,11 +121,52 @@ deadline-driven ahead of Dec 2027. (2) **Teacher training and enablement**, whic
 the market is actually asking for, mapped to the UNESCO teacher AI competency framework.
 (3) Compliance-by-construction reference architectures for EdTech vendors selling into the EU.
 
-**Supply gap — measured, not assumed.** EMEA contributes almost nothing to open-source
-education supply: the national-exam vocabulary leg returns nothing above 34★, a fourth
-consecutive pass with the same result. One EMEA agent is on the shelf (`tutor-mcp`, 99★,
-MIT). **EMEA is a regulatory and services market here, not a code-supply one** — and that is
-the correct way to staff an EMEA engagement.
+**Supply gap — narrowed at p723, and the old wording was wrong.** The national-exam
+vocabulary leg again returns nothing above 34★, so *that* leg is genuinely dead. But the
+claim this section carried — *"EMEA contributes almost nothing to open-source education
+supply"* — **is withdrawn.** Two EMEA-authored repositories are now on curated shelves:
+`tutor-mcp` (99★, MIT) and **`Selleo/mentingo` (109★, MIT, pushed 2026-11-09)** — a
+platform-scale AI-native LMS from a Polish software house, which this base had filed in a
+roster at p655 and then overlooked for four passes. **EMEA remains a regulation-and-services
+market first**, and that is still how to staff an EMEA engagement — but "no code here" is no
+longer an accurate thing to tell a client.
+
+**🟢 Added at p723 — Estonia's AI Leap is the one national programme in this industry
+generating comparative evidence, and the dates are now specific.** It closes part of this
+section's own declared gap (*"no national ministry rollout beyond the UK and UAE"*):
+
+- **Three components by design:** a custom learning application for students, a **teacher
+  training programme**, and a **research study measuring effectiveness**. The third component
+  is the unusual one — it makes Estonia the readiest source of the efficacy evidence that
+  `T226` says buyers now demand.
+- **Teachers were onboarded before students.** Premium ChatGPT/Gemini account activation
+  among participating teachers rose **59% (Dec 2025) → 71% (Mar 2026)**. Student access to
+  the app opened **late January 2026**, after a **December 2025 legislative amendment**.
+- **Phase 1 scale:** all **154** Estonian upper-secondary schools, **~20,000** students in
+  grades 10–11, **~4,900** teachers (the ministry's own 2025/26 brief gives a 4,700 target —
+  the discrepancy is reported, not averaged).
+- **Phase 2, September 2026:** extends to **vocational schools** and new grade-10 cohorts —
+  **38,000** students and **2,000–3,000** teachers (sources disagree on the teacher figure).
+  Projected cumulative reach by **spring 2027**, when the first AI Leap cohort graduates:
+  **~60,000 students and >5,000 teachers**.
+- **Budget:** **€3.2M** initial, reported rising to **€6M in 2026**.
+- **Delivery model:** public–private partnership; early announcements named OpenAI and
+  Anthropic, later reporting described negotiations as ongoing. ⚠️ Treat the vendor
+  relationship as unsettled.
+
+**🟢 Also added at p723 — Ireland has a national framework specifically for generative AI
+in teaching and learning.** The **Higher Education Authority (HEA)** published a *National
+Policy Framework on Generative AI in Teaching and Learning* on **2025-12-22**. This is
+distinct from the Irish **AI Office** stood up under the AI Regulation Act 2026 already
+recorded in this file: one is sectoral pedagogy policy, the other is horizontal AI
+supervision. For an EMEA higher-ed engagement, the HEA framework is the document the client
+will be measured against; the AI Act is the one their vendors will be.
+
+**🔵 Opportunity shape these two add:** Estonia is a **reference-architecture and
+evaluation** engagement (a government with an explicit research arm needs instrumentation and
+comparative measurement); Ireland and the Gulf (**KHDA Dubai** guidance to private schools)
+are **policy-to-implementation** engagements — translating an existing national framework
+into institutional controls, which is `P143`'s shape applied outside LATAM.
 
 ### APAC
 
@@ -123,6 +191,38 @@ commercial wrapper; hardening them for enterprise is the single highest-leverage
 this KB. (2) **National-exam-aligned tutoring**, where the corpora are already open
 (GAOKAO-Bench, gaokaomath 1952–2026). (3) **Offline-first delivery** via Kolibri (MIT) for
 low-connectivity systems. (4) Gulf-state compliance packaging against the UAE rule set.
+
+##### 🔴 New at p723 — a cited Philippine "national AI framework" does not exist, and the APAC adoption denominator is missing for a seventh pass
+
+- 🔴 **The claim:** a quarterly industry note states that the Philippines' Commission on
+  Higher Education issued **"Memorandum Order 21, a national framework for AI in teaching,
+  research and operations."** Searched this pass: **no such issuance was found.** What the
+  record shows instead is a policy *in formation* — CHED **"eyeing a comprehensive national
+  AI policy"** (March 2026); a **CHED RAISE 2026** summit (February 2026) at which
+  institutions, student representatives and industry partners signed a digital commitment to
+  a *proposed* framework; an August 2026 CHED push for **ASEAN regional cooperation** on AI
+  under its ACHIEVE agenda; and new CHED technical panels planned for AI and data analytics.
+  The 2026 CMOs that do exist cover other subjects entirely — **CMO 18 s.2026** is student
+  affairs and services, **CMO 05 s.2026** is health and well-being.
+- 🔵 **Why this is worth filing rather than dropping.** The Philippines is at the stage
+  where the framework is being *written*, which is a materially different and better
+  commercial position than a jurisdiction that already has one: **contributing to the
+  reference implementation is available here and is not available in Korea, Vietnam or
+  Australia.** A pass that had accepted "MO 21" as issued would have scoped a compliance
+  engagement against a non-existent instrument and missed the actual window.
+- 🟢 **Supply:** [`Samson-Ho/GSAT-Tutor`](https://github.com/Samson-Ho/GSAT-Tutor) (7★,
+  **GPL-3.0**, pushed 2026-10-14) — an agent skill tutoring Taiwan's 學測 (GSAT), anchored to
+  大考中心 exam specifications and 111–115 past papers. Tiny, and copyleft, so it is a
+  *reference* not a base — but it places **Taiwan**, a country this base's exam-vocabulary leg
+  had not previously reached, and it confirms again that the national-exam leg is the one that
+  pays in APAC. Four promoted APAC agents also sit on the shelf at p723 (`Study-Mate` 1,402★,
+  `SocialCoach` 473★, `teacher-to-skills` 472★, `universal-examprep-skill` 372★).
+- ⚠️ **Declared gap, seventh consecutive pass:** the APAC regional leg returned **no
+  institution-count denominator** for AI adoption in APAC schools or universities. The leg
+  ran and returned regulation (Korea, Japan, China, Vietnam, Singapore, Australia) and
+  nothing on adoption rates. **This is now better treated as a property of the available
+  sources than as a gap a further pass will close** — the regulatory literature for APAC is
+  published in English by law firms, and the adoption literature is not published at all.
 
 ### LATAM
 
@@ -153,6 +253,35 @@ GPL — so customisation is legally straightforward, unlike the AGPL North Ameri
 clones); searching the national exam is productive. Recorded so the next pass does not
 repeat the mistake.
 
+##### 🟡 New at p723 — the LATAM leg RAN and returned nothing this base does not already hold
+
+Searched `AI education LATAM Latin America 2026 adoption regulation players`. **Every
+substantive result was already on this page**, which is itself the finding: this is the first
+region to reach saturation on the demand side.
+
+Returned and already held: the **UNESCO IESALC** study (200 institutions, 19 countries; 87%
+using AI in at least one area, 26% with a formal AI strategy) · the **Digital Education
+Council** LATAM survey (92% of students, 79% of faculty) · **Cetic.br** on Brazil (53% of
+school administrators using AI, 22% with guidelines) · the **UNESCO Observatory on AI in
+Education for LAC** (launched 2026-04-14, Santiago; partners CAF, CENIA, Cetic.br, ECLAC,
+Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del
+Desarrollo) · **ILIA 2026** (ECLAC/CENIA) · **Universidad de los Andes**' count of 716
+AI-related regulatory instruments across 23 countries and territories · Colombia's **CONPES
+4144** · Uruguay as first LAC signatory of the Council of Europe AI convention · Brazil's
+federal AI bill still in Congress.
+
+🔵 **What saturation means for staffing.** It does **not** mean LATAM is understood — it
+means the *published* picture is understood, and the remaining uncertainty is
+institution-specific rather than regional. The adoption–governance gap (87% using / 26% with
+strategy) is the most precisely quantified of any region in this file, and it is a
+*remediation* market: the engagement is governance for institutions that have **already
+deployed**, which is exactly `P143`/`P126`. Nothing found this pass changes that scoping; it
+is confirmed at a fifth reading rather than extended.
+
+⚠️ **Supply nil, consistent with p722:** no new LATAM-authored repository was found. The
+Spanish-language leg stays condemned (`722-R`); the exam leg (`enem-api`, `assistente-enem`,
+`gpt-4-enem`) returned the same three addresses already filed.
+
 ### Global / cross-region
 
 Standards and framework bodies to align deliverables to: **OECD** (*Digital Education
@@ -162,6 +291,36 @@ Europe** (AI and Education Compass), **ESSA evidence tiers** (US procurement gat
 
 Building to EU AI Act high-risk standards produces a product sellable in all five regions.
 Building to the loosest regional standard produces one sellable in one.
+
+**🔴 Added at p723 — one global number contradicts this base's own `T209`, and the
+contradiction is the useful part.** `T209` records that *detection is being abandoned as a
+control* and that spend is moving to assessment redesign. A 2026 statistics roundup reports
+the opposite motion on the ground: **AI-detection tool use in higher education rose from 38%
+to 68% in a single year.**
+
+🔵 Both can be true, and reading them together is what makes them actionable:
+**institutional *policy* is moving away from detection while institutional *purchasing* is
+still moving toward it.** Detection is the control a worried administrator can buy this
+quarter; assessment redesign is the control that works and takes two years. For an engagement
+this means the buyer may well be mid-detection-rollout while the pedagogy leadership has
+already written detection off — so an assessment-redesign proposal lands as a *replacement
+for a tool they have just paid for*, and has to be positioned as such rather than as a
+greenfield improvement.
+
+⚠️ Sourcing caveat, consistent with how this page treats figures: the 38% → 68% pair comes
+from a vendor-adjacent statistics roundup citing a primary survey it does not fully identify.
+It is filed as a **signal of direction, not a measured rate**, and the `T209` policy-side
+evidence is better sourced than this purchasing-side figure.
+
+## 🟢 p723 correction to this section's own regional summary
+
+The summary below has said, in four consecutive passes, that **EMEA has no code supply**. That
+is withdrawn: `Selleo/mentingo` (109★, MIT, platform-scale, Poland) and `tutor-mcp` (99★,
+MIT) are both EMEA-authored and both now sit on curated shelves. The accurate statement is
+**"EMEA's supply is thin and platform-shaped rather than building-block-shaped, and it is
+found by neither country nor language legs"** — which is a usable instruction, where "EMEA has
+no code" was a false one that stopped the search. Read the summary below with that correction
+applied.
 
 ## Regional asymmetry — the one-line summary
 
