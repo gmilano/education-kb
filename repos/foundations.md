@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Foundational Repositories — Education
 
-**Pass p725 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+**Pass p726 · verified 2026-11-09.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -21,6 +21,8 @@ repository that demonstrably exists, that is stated in the row rather than treat
 | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 806 | BSD-3-Clause | 2026-11-09 | Homework submission + automated grading + TA grading workflow, production-deployed at Rensselaer and other US universities. BSD-3 makes it the most permissively licensed serious autograder available. **North America.** |
 | [GatorEducator/gatorgrader](https://github.com/GatorEducator/gatorgrader) | 85 | GPL-3.0 | 2026-10-06 | Checks student writing and code against assignment specifications; the practical reference for rubric-as-code. |
 | [JingHao-Leon/study-flashcards](https://github.com/JingHao-Leon/study-flashcards) | 80 | MIT | 2026-09-15 | 速记卡 — question-bank practice with a wrong-answer book and **real auto-grading for SQL and C++**, not just multiple choice, plus per-option explanations. Plain HTML/CSS/JS front end on a **Python-stdlib back end with zero third-party dependencies** — which makes it the cheapest honest grading harness on this shelf to audit, air-gap or embed. 🟢 **New at p724.** |
+| [glowxq/glowxq-oj](https://github.com/glowxq/glowxq-oj) | 331 | Apache-2.0 | 2026-02-25 | Online judge — automated program grading against test cases, with modes for **ACM/ICPC contest, informatics-olympiad training and coursework**. Spring Boot 3 + Java 21 + Vue 3. Licence **payload byte-read this pass** (`LICENSE`, `11,244 B`, Apache-2.0). 🟢 **New at p726.** The judge is the one assessment component that is *objective by construction*, which is why it is the cheapest place to start an automated-grading engagement and the hardest for a client to dispute. **APAC.** |
+| [Submitty/pdf-annotate.js](https://github.com/Submitty/pdf-annotate.js) | 296 | MIT | 2026-02-28 | The annotation layer over `pdf.js` that **Submitty's TA grading workflow is built on** — maintained by the Submitty project, originally by Matt Zabriskie (`LICENSE.md`, `1,123 B`, read this pass). 🟢 **New at p726.** Filed separately from Submitty itself because *marking up a submitted PDF* is the reusable half: it drops into a grading product that is not Submitty, under MIT rather than Submitty's BSD-3. **North America.** |
 
 ## Learner modelling
 
@@ -76,6 +78,34 @@ platform — they are **vocabulary and access**.
 | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 13 | MIT | 2026-04-22 | MCP server over **all three Skolverket (Swedish National Agency for Education) open APIs**: Läroplan (curriculum), Skolenhetsregistret (school-unit register) and Planned Educations. 🔵 The only artefact in this base that reaches a **ministry's own curriculum data** as tool calls rather than as a scraped PDF — which is what turns "aligned to the national curriculum" from a claim into a query. TypeScript, stdio transport, published in the MCP registry. **Sweden — EMEA.** Also on [`../agents/top.md`](../agents/top.md). ⚠️ `13★`, single author, last push `2026-04-22`: pin a commit. |
 | [YannHY/scenarisation](https://github.com/YannHY/scenarisation) | 7 | **CC-BY-SA-4.0** | 2026-11-01 | Learning-design application (after the UCL Learning Designer) that encodes the **pedagogical vocabulary** as data: eight competency frameworks — Socle commun, **DigComp 3.0**, **GreenComp**, CRCN, Pix, **Pix IA**, PER romand, Florimont — Bloom's taxonomy, 28 generic scenario templates in eight families, and **the AIAS AI Assessment Scale as a first-class field on every activity**. School-system referentials for France, Switzerland, the United States, the three Belgian communities, England, Wales, Scotland, Northern Ireland, the European Schools, the IB and **ISCED 2011**. PHP. **France/Switzerland — EMEA.** ⚠️ **CC-BY-SA-4.0 is a content licence, not a software grant**: take the framework and AIAS vocabularies as *data* (attribution + share-alike on derivatives of that data) and do not vendor the PHP into a client codebase on the assumption it behaves like MIT. |
 
+## Interoperability clients — xAPI 🆕 new section at p726
+
+`p613` filed the `Apache-2.0` xAPI / cmi5 **conformance** tier (US DoD / ADL). What it did not file
+is the **client** tier: the libraries an application actually sends statements with. Both rows below
+are published by **Rustici Software**, the vendor that authored SCORM and co-authored xAPI, so the
+licence posture on the reference implementations is a planning fact rather than a preference.
+⚠️ **Both are stale and both are fine for it** — a conformance client tracks a frozen specification,
+so "no push in two years" means the spec did not move, not that the code rotted. Check the spec
+version before the commit date.
+
+| Repo | Stars | Licence | Last push | Why it is foundational |
+|---|--:|---|---|---|
+| [RusticiSoftware/TinCanJava](https://github.com/RusticiSoftware/TinCanJava) | 47 | Apache-2.0 | 2021-10-21 ⚠️ | xAPI (Tin Can) client for the JVM, from the vendor that wrote the specification. Payload read this pass (`LICENSE`, `11,358 B`). The JVM is where LMS integration work lands in public-sector EMEA and APAC estates. **North America (publisher).** |
+| [RusticiSoftware/TinCan.NET](https://github.com/RusticiSoftware/TinCan.NET) | 49 | Apache-2.0 | 2023-08-30 ⚠️ | The same client for C#/.NET (`LICENSE`, `11,323 B`, read this pass). Filed because **.NET is the stack this base had no learning-record client for at all**, and a ministry or exam board running .NET cannot adopt the Java one. **North America (publisher).** |
+
+## Lecture capture components 🆕 new section at p726
+
+`p724` opened **lecture-capture-to-notes** as a category and filled only its *notes* end
+(`drpwchen/lecture-to-notes`, `mizorewww/course2md`). These are its **capture** end, and they come
+from the same estate as the incumbent capture platform — see `726-C` in
+[`../agents/trending.md`](../agents/trending.md) for why their licences are not the platform's.
+
+| Repo | Stars | Licence | Last push | Why it is foundational |
+|---|--:|---|---|---|
+| [opencast/studio](https://github.com/opencast/studio) | 56 | **MIT** | 2026-11-01 | Browser-based recording studio (screen + camera + audio) for Opencast — **no install on the lecturer's machine**. 🟢 **New at p726.** `LICENSE` read this pass: stock MIT grant at `1,164 B`, **above this base's published `1,056`–`1,097 B` stock band** — see `726-A`, the excess is two copyright lines and a decorative underline, not a composition defect. **EMEA (Opencast is a European-led HE consortium).** |
+| [opencast/editor](https://github.com/opencast/editor) | 68 | Apache-2.0 | 2026-11-03 | Browser video editor for trimming and cutting captured lectures before publication (`LICENSE`, `11,357 B` — byte-exact stock Apache, the `648-G` value). 🟢 **New at p726.** Trimming is the step that decides whether a transcript is usable, so it belongs upstream of any notes agent. **EMEA.** |
+| [eGovFramework/egovframe-common-components](https://github.com/eGovFramework/egovframe-common-components) | 77 | Apache-2.0 | 2026-11-06 | `253` reusable service functions (authentication, boards, surveys, notifications, file handling) from **Korea's national eGovFrame** — the component library the government's own online-education reference service is assembled from. 🟢 **New at p726.** Payload read this pass (`LICENSE`, `11,324 B`). It is the rare case of government-grade building blocks under `Apache-2.0`. **APAC.** |
+
 ## Content and offline delivery
 
 | Repo | Stars | Licence | Last push | Why it is foundational |
@@ -92,10 +122,13 @@ platform — they are **vocabulary and access**.
 |---|--:|---|---|---|
 | [GeminiLight/awesome-ai-llm4education](https://github.com/GeminiLight/awesome-ai-llm4education) | 221 | **no licence file** | 2026-10-23 | Curated AI/LLM-for-education paper list — the best single literature map for this industry. ⚠️ No `LICENSE` file at HEAD (checked this pass): default copyright applies, so cite it, do not vendor it. Previously published here as "~800★, MIT"; both figures were wrong. |
 
-**Fifteen foundational repositories, all verified today**, spanning assessment (3),
+**Twenty-two foundational repositories, all verified today**, spanning assessment (5),
 learner modelling (3), benchmarks and corpora (6), **curriculum and pedagogy standards (2)**,
+**interoperability clients (2, new at p726)**, **lecture capture (3, new at p726)**,
 delivery (4) and reference (1) — the section tallies overlap because three repositories are
-filed under two headings. Regional coverage is now named for **North America, EMEA, APAC and
+filed under two headings. 🟢 `p726` adds `glowxq-oj`, `pdf-annotate.js`, `TinCanJava`,
+`TinCan.NET`, `opencast/studio`, `opencast/editor` and `egovframe-common-components`:
+**`7` rows, all seven from publisher-estate enumeration and none from any mandated leg.** Regional coverage is now named for **North America, EMEA, APAC and
 LATAM**; p724's page could name only three. 🟢 `p725` adds `Skolverket-MCP`, `scenarisation`
 and `h16nning/skola`.
 

@@ -6,17 +6,91 @@ updated: 2026-11-09
 
 # Education AI — Current Trends
 
-**Pass p725 · researched 2026-11-09.** Three new trends — **T247, T248, T249** — added above p724's
-**T245–T246** and p723's **T234–T244**, each with the evidence
+**Pass p726 · researched 2026-11-09.** Three new trends — **T250, T251, T252** — added above p725's
+**T247–T249**, p724's **T245–T246** and p723's **T234–T244**, each with the evidence
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
 
 > **Two separate `T` numbering spaces exist in this KB and they are not the same series.**
-> This file's `T` numbers are *industry trends* (now T1–T249, corrected at p725 — this line still read
+> This file's `T` numbers are *industry trends* (now T1–T252, extended at p726 — this line still read
 > "T1–T233" after p723 and p724 had both added trends above it). The `T` numbers in
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T250–T252 — added at p726 (2026-11-09)
+
+## T250 — The permissive learner platform is arriving from public-sector reference stacks, not from the LMS market
+
+For twenty-eight passes this base recorded the platform tier as structurally copyleft: Moodle `GPL-3.0`,
+Open edX and Canvas and LearnHouse `AGPL-3.0`, Sakai `ECL-2.0`, Chamilo `GPL-3.0`. `p723` half-closed that
+with `Selleo/mentingo` (`MIT`) and called it *vendor-steered*, correctly. **`p726` closes the other half, and
+the publisher is a government.**
+
+- [`eGovFramework/egovframe-msa-edu`](https://github.com/eGovFramework/egovframe-msa-edu) — `166★`,
+  **Apache-2.0** (payload `11,357 B`, byte-exact stock), pushed `2026-11-08`. A **cloud-native microservice
+  reference implementation of an online-education service**, published by Korea's Ministry of the Interior
+  and Safety as part of the eGovFrame standard framework that Korean public institutions are required to
+  build on.
+- It does not arrive alone. [`egovframe-common-components`](https://github.com/eGovFramework/egovframe-common-components)
+  (`77★`, Apache-2.0) supplies `253` reusable service functions, and
+  [`egovframe-runtime`](https://github.com/eGovFramework/egovframe-runtime) (`49★`, Apache-2.0) the runtime.
+
+🔵 **Why this is a trend and not a repository.** A government that mandates a framework has to license it
+permissively, because its suppliers are commercial. The LMS market has the opposite incentive: an open-core
+vendor selling hosting chooses `AGPL` precisely to tax the hosting competitor. **So the licence follows the
+business model of the publisher, not the maturity of the software** — and that predicts where to look next.
+⚠️ The limit, stated because it decides staffing: a reference implementation is built to be *forked and
+certified*, not deployed, and eGovFrame's documentation is Korean-first. Budget translation and
+architecture review, not installation.
+
+🔴 **And the counter-measurement, so this is not read as a rule.** Nine other national public-sector
+estates were enumerated this pass — `project-sunbird` (India/DIKSHA), `DFE-Digital` (UK),
+`GovTechSG` (Singapore), `ctt-gob-es` (Spain), `govbr` (Brazil), `Samagra-Development`, `kemdikbud`
+(Indonesia), `MinEduc`, `educacionchile`. **Eight were already swept by earlier passes, and the novel
+rows in them are digital signatures, accessibility crawlers and open-data catalogues — not education.**
+Korea is `1 of 10`. The channel is real and it is thin; see `726-L`.
+
+## T251 — The integrity-defeat layer is large, permissively licensed and actively maintained, and no assessment design can ignore it
+
+This base has filed the detection and governance side of academic integrity for many passes. It has never
+filed the other side, which turns out to be bigger than most of the shelf:
+
+- [`ocsjs/ocsjs`](https://github.com/ocsjs/ocsjs) — **`4,246★`, MIT**, pushed `2026-11-08`. An
+  "online-course assistant" that automates completion of courses on **超星学习通 (Chaoxing)** and
+  **知道智慧树 (Zhihuishu)** — the two platforms most Chinese universities run their mandatory online
+  coursework on. It is larger than every curated education row on this base's shelves except `DeepTutor`,
+  `OpenMAIC` and the general frameworks.
+
+🔵 **The point is not that cheating exists. It is that the defeat tooling is `MIT`, maintained, and
+platform-specific** — which means it is cheaper to deploy than the assessment it defeats, and that any
+engagement selling "AI-assisted online coursework" into APAC is selling into a market where completion
+telemetry is already adversarial. 🟢 **Design consequence, concrete:** completion and time-on-task are
+not assessment evidence in this market. Use artefacts that are expensive to automate — an online judge's
+test-case results ([`glowxq/glowxq-oj`](https://github.com/glowxq/glowxq-oj), new at `p726`), oral or
+viva components, or a proctored exam harness (`SafeExamBrowser/seb-server`, already on the roster).
+⚠️ **Filed as intelligence, never as a component.** It is on no shelf and must not reach a client repository.
+
+## T252 — The binding constraint on measuring this sector's open-source supply is now instrument homonymy, not language
+
+`T234`, `T215`, `T249` and `725-D` traced a five-pass sequence in which this base's regional supply nils
+turned out to be query artefacts: first the language, then the term count. **`p726` measures the next layer,
+and it is the one that produces false *positives* rather than false nils.**
+
+| Channel | Measured this pass | The collision |
+|---|---|---|
+| Language, single-term (`T249`'s own remedy) | `30` legs run at `stars:>=15` | `maestro` → mobile E2E test runners and workflow orchestrators; `guru` → iOS device libraries; `aula` → a database course's notes. **Zero education rows between them.** |
+| `topic:` heads | `18` heads, `1,013` distinct repositories, **`600` novel (`59.2 %`)** | `topic:adaptive-learning` returns ML concept-drift and adaptive-sampling work; **`topic:xapi` returns Cisco Webex device-API code, not the Experience API** — a collision on this base's own standards vocabulary. |
+
+🔵 **Both failure modes are the same defect: novelty is measured on the address and fitness is measured on
+nothing.** A `59.2 %` novelty rate reads as abundant supply and resolves, on inspection, to student
+coursework and homonyms — which is `p667`'s *"the novelty filter over-reports by `44.2 %`"* with a second
+and larger cause. 🟢 **Operative rules for later passes, both cheap:** (1) a single-term leg must use a
+**domain-bearing** term (`skola`, `escola`, `sekolah`, `教学` qualify; `maestro`, `guru`, `aula` do not);
+(2) a `topic:` head that names a method rather than a sector must be read as unranked.
+🟢 **And the positive finding that follows from it:** everything of platform scale filed this pass — all
+`10` rows across three shelves — came from **enumerating an education-native publisher's estate**, a channel
+with no homonymy at all because the owner *is* the discriminator. See `726-B`, `726-C`, `726-L`.
 
 ## 🆕 T247–T249 — added at p725 (2026-11-09)
 

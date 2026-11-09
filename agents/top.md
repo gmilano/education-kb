@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI Agents — Curated Top Set
 
-**Pass p725 · verified 2026-11-09.** Every row below was read this pass from
+**Pass p726 · verified 2026-11-09.** Every row below was read this pass from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
 (falling back to lowercase `readme.md`, then `README.rst`, then `LICENSE` — the case-ordered
@@ -22,8 +22,8 @@ can tell a stale cell from a fresh one.
 
 | Agent | Repo | Stars | Licence | Last push | Region | What it does |
 |---|---|--:|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,511 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,133 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,526 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,138 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,402 | MIT | 2025-10-26 | APAC | Agentic-AI curriculum used at national scale by Panaversity/GIAIC. ⚠️ **Stale: no push in >12 months** — treat as courseware, not live code. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | 387 | MIT | 2026-05-29 | APAC | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. ⚠️ See correction below — this is **387★, not ~12k**. |
 | moodle-ai-skill-navigator | [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 279 | GPL-3.0 | 2026-11-07 | Global | Moodle plugin: tutoring, quiz generation, mind maps and RAG over course materials. The clearest AI-on-top-of-incumbent-LMS bridge found. |
@@ -31,8 +31,8 @@ can tell a stale cell from a fresh one.
 | OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 171 | MIT | 2026-11-08 | APAC | Spaced-repetition + knowledge-graph tutor. ⚠️ Previously filed here at "~900★"; real figure is 171★. |
 | gen-mentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | APAC | LLM multi-agent framework for goal-oriented learning-path generation. WWW '25 oral paper, reference implementation. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 99 | MIT | 2026-11-09 | EMEA | MCP server that turns any LLM into an ITS, encoding 50 years of tutoring research. Smallest but most composable item here. |
-| Skolverket-MCP | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 13 | MIT | 2026-04-22 | EMEA | MCP server over **all three of the Swedish National Agency for Education's open APIs** — Läroplan (curriculum), Skolenhetsregistret (school-unit register) and Planned Educations — so an agent can query, compare and align to a *national* curriculum instead of a scraped PDF. Published in the MCP registry; Swedish-language README (places **Sweden**). 🟢 **Promoted at p725** — the smallest row on this shelf by stars and the only one that speaks a ministry's own data. ⚠️ `13★`, single author: pin a commit and expect to maintain it. |
-| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,404 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
+| Skolverket-MCP | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 13 | MIT | 2026-04-22 ⚠️ | EMEA | MCP server over **all three of the Swedish National Agency for Education's open APIs** — Läroplan (curriculum), Skolenhetsregistret (school-unit register) and Planned Educations — so an agent can query, compare and align to a *national* curriculum instead of a scraped PDF. Published in the MCP registry; Swedish-language README (places **Sweden**). 🟢 **Promoted at p725** — the smallest row on this shelf by stars and the only one that speaks a ministry's own data. ⚠️ `13★`, single author: pin a commit and expect to maintain it. |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,405 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
 | anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 551 | MIT | 2026-11-07 | Global | MCP server exposing Anki to any LLM — spaced repetition as a tool call. The most composable retention primitive on this shelf. 🟢 **Promoted at p723** (roster at p655 at 546★ → +5). |
 | SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 474 | Apache-2.0 | 2026-11-09 | APAC | Social-skills and conflict-handling coach built on realistic role-play. Same lab as `gen-mentor` below. The only social-emotional-learning agent verified on this shelf. 🟢 **Promoted at p723**; pushed today. |
 | teacher-to-skills | [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) | 472 | Apache-2.0 | 2026-11-07 | APAC | Distils a human teacher into a source-backed skill that teaches until the learner can work unaided. 🟢 **Promoted at p723.** |
@@ -46,6 +46,89 @@ can tell a stale cell from a fresh one.
 | lecture-to-notes | [drpwchen/lecture-to-notes](https://github.com/drpwchen/lecture-to-notes) | 117 | MIT | 2026-11-03 | APAC | Video/audio/slides/photos → grounded notes plus a synced HTML viewer (video highlights the live note; clicking a note seeks the video). Whisper ASR, frame extraction, OCR and slide-semantics vision model **all run locally**; the LLM writes prose only at the end, from evidence already assembled. 🟢 **New at p724** — the only shelf row that is deployable where recordings cannot leave the premises. |
 | ClassCue | [lu0973-cb02d/ClassCue](https://github.com/lu0973-cb02d/ClassCue) | 102 | MIT | 2026-10-18 | APAC | 课醒 — local-first Android class assistant: timetable, **offline** recording and transcription, roll-call/question alerts, post-class replay search, optional AI reference answers. Android 13–16, Kotlin/Compose. 🟢 **New at p724** — the first mobile-native, offline-capable row on this shelf. |
 | live-classroom | [internetphysics/live-classroom](https://github.com/internetphysics/live-classroom) | 102 | MIT | 2026-09-02 | Global | Type a topic; an LLM plans a one-minute lesson as twelve five-second beats, each rendered as a 1970s-style educational cartoon just before it airs. 🟢 **New at p724.** ⚠️ **MIT covers the wrapper, not the capability** — generation runs on hosted MiniMax H3 Max Turbo via fal. Take the beat-planning structure, not the stack. |
+| mather | [zzllrr/mather](https://github.com/zzllrr/mather) | 396 | MIT | 2026-02-25 | APAC | 小乐数学 — offline-capable mathematics learning, teaching and research assistant: problem generation, step solving and exploration, usable with no network at all. 🟢 **New at p726.** The only shelf row whose stated design constraint is *offline*, which is the constraint that decides a low-connectivity deployment. |
+| C2C-coding-coach | [Charlies2001/C2C-coding-coach](https://github.com/Charlies2001/C2C-coding-coach) | 379 | MIT | 2026-05-19 | APAC | 代码题刷题 + AI 教育平台 — a practice-problem platform with an AI coaching layer over it, rather than a chat bot beside it. 🟢 **New at p726.** The practice-and-feedback loop is the part of a tutoring product that is normally rebuilt from scratch per engagement. |
+
+## 🆕 `p726` — the shelf is 26 rows, and the discovery instruments were measured rather than obeyed
+
+**`26` education-native agents, every one verified `2026-11-09`.** `24` rows were inherited,
+**`26 / 26` were found in the index, `0` archived, and no licence changed.** `2` rows are new.
+The count is derived by counting data rows between this section's table header separator and
+the blank line that terminates the table, *after* the insert — not carried from the previous
+pass's sentence, which is how `p703` published `199` over a table of `233`.
+
+### 🟢 `726-J` — the re-read, and five star cells that were stale on arrival
+
+`26 / 26` rows resolved in `search/repositories`; `0` archived; **no SPDX value changed on any row.**
+Five published cells disagreed with the reading and are corrected **in the cell, not in this paragraph**
+(the `725-A` defect, which was itself the second of its family in two passes):
+
+| Row | Published | Read `2026-11-09` | Δ |
+|---|--:|--:|--:|
+| `DeepTutor` | 57,511 | **57,526** | +15 |
+| `OpenMAIC` | 43,133 | **43,138** | +5 |
+| `AutoGen` | 61,757 | **61,761** | +4 |
+| `smolagents` | 30,273 | **30,280** | +7 |
+| `Study-Mate` | 1,404 | **1,405** | +1 |
+
+Twenty-one rows were unchanged to the star. Every delta is in single or double digits, which is the
+`725-B` magnitude test passing: drift, not the `722-C` inflation failure, which was wrong by factors.
+
+### 🟡 `726-K` — a row filed one pass ago has not been pushed in six and a half months
+
+[`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) was filed at `p725` as the
+find that closed the EMEA foundational gap. Its `pushed_at` is **`2026-04-22`** — `201` days before the pass
+that filed it, and the cell was published without a currency marker while this shelf flags
+`learn-agentic-ai` for the same condition. 🔵 **The defect is not the row, it is that enthusiasm and
+currency were assessed by different instruments in the same pass**: the licence and the capability were
+read first-hand, and the date was copied without being compared to anything. ⚠️ Marked `⚠️` in the cell.
+It remains the only open Skolverket-API client found and is still the right starting point — but it is a
+**single-author artefact at `13★` that has not moved in two quarters**, and that belongs in the cell a
+studio reads, not in a paragraph it may not.
+
+### 🔴 `726-D` — `T249`'s single-term remedy trades a false nil for a homonymy false-positive rate, and this pass measured it
+
+`725-D` established that multi-word non-English legs return categorical zeros because
+`search/repositories` ANDs every term against name, description and topics only. The remedy filed as
+`T249` was **single terms plus a `stars:` floor.** Run across **`30` single-term legs** at `stars:>=15`
+this pass, the remedy works — and it imports a failure the phrase legs could not have:
+
+| Leg | Top novel permissive rows it returned | Education? |
+|---|---|---|
+| `maestro` | `mobile-dev-inc/Maestro` (16,364★ mobile E2E test runner), `Netflix/maestro` (3,852★ workflow orchestrator), `roboflow/maestro` (2,695★ VLM fine-tuning) | 🔴 **None** |
+| `guru` | `redis-developer/ArXivChatGuru`, `InderKumarRathore/DeviceGuru` (iOS device detection), `iansinnott/alfred-maestro` | 🔴 **None** |
+| `aula` | `brunocampos01/banco-de-dados` (425★ — a Brazilian database **course's own notes**) | 🟡 Coursework |
+
+🔵 **The mechanism is that a single term maximises recall by discarding the only disambiguation the
+channel had.** `maestro` is a conductor *and* an orchestrator; `guru` is a teacher *and* a brand suffix.
+This is the `p646` homonymy finding — *"the week's top novel address is a brightness daemon"* —
+reproduced on the **language** channel rather than the `topic:` channel, which makes it a property of
+the instrument and not of either vocabulary. 🟢 **Rule, filed as `T252`: a single-term leg needs a
+domain term, not a common noun.** `skola`, `escola`, `sekolah`, `教学` are domain-bearing; `maestro`,
+`guru`, `aula` are not, and a leg built on one should be read as unranked rather than as supply.
+
+### 🔴 `726-E` — and the deeper result: the language channel's modal object is coursework, not courseware
+
+Across the sixteen education-bearing language legs, the novel rows are overwhelmingly **students' own
+repositories**: exam archives (`ExamenesViejos-FAMAF-Computacion`, `111milprogramadores/examenes`),
+42-school project dumps (`ALL_SCHOOL_42`, `COMPLETED_PISCINE_C`, `Projets_42_SP`), course companions
+(six separate `Escola Talking About Testing` Cypress-course repos), and lecture notes
+(`nad-garraz/algebraUno`, a LaTeX algebra text by students at UBA Exactas). **Of roughly forty-five
+education-native novel rows, two are deployable education systems** —
+[`resultsystems/school`](https://github.com/resultsystems/school) (195★, MIT, **Brazil**, unpushed since
+`2021-12-28`) and [`ikhsan3adi/sistem-perpustakaan-qr-code`](https://github.com/ikhsan3adi/sistem-perpustakaan-qr-code)
+(92★, GPL-3.0, Indonesia). 🔵 **This is why the language channel felt rich and filed thin for eight
+passes**: the noun that names a school in any language is used mostly by people *attending* one. 🟢
+**Consequence for later passes: the language channel is a good instrument for placing a region and a
+bad one for finding a platform.** The platform channel, measured below, is the publisher estate.
+
+### 🟢 `726-B` and `726-C` — what actually paid: two estates, one of them a national government
+
+Both new rows on this shelf, and all eight filed on the sibling shelves, came from **owner
+enumeration of education-native publishers** — not from any phrase, language or topic leg. The two
+new agent rows came from the language sweep's domain-bearing legs (`教育`, `教学`); everything of
+platform scale came from estates. See `repos/foundations.md` and `verticals/solutions.md` for
+`eGovFramework` (Korea) and `opencast`, and `agents/trending.md` for the measured yields.
 
 ## 🆕 `p725` — the shelf is 24 rows, and four of p724's own cells were stale
 
@@ -213,8 +296,8 @@ most often composed with. Included because an engagement needs the substrate nam
 
 | Framework | Repo | Stars | Licence | Last push | Note for education use |
 |---|---|--:|---|---|---|
-| AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) | 61,757 | **MIT (code)** | 2026-10-28 | Multi-agent conversation; the usual choice for teacher/student/grader role simulation. ⚠️ Licence nuance below. |
-| smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | 30,273 | Apache-2.0 | 2026-11-03 | Code-writing agents in a few hundred lines; the lightest base for a tutoring loop you must audit. |
+| AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) | 61,761 | **MIT (code)** | 2026-10-28 | Multi-agent conversation; the usual choice for teacher/student/grader role simulation. ⚠️ Licence nuance below. |
+| smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | 30,280 | Apache-2.0 | 2026-11-03 | Code-writing agents in a few hundred lines; the lightest base for a tutoring loop you must audit. |
 
 ### Licence nuance — AutoGen is dual-licensed and the index reports the wrong one
 

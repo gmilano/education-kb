@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI — Market Intelligence
 
-**Pass p725 · researched 2026-11-09.** Figures below name their source and, where sources
+**Pass p726 · researched 2026-11-09.** Figures below name their source and, where sources
 disagree, the disagreement is shown rather than averaged away.
 
 > 🔴 **`725-F` — read every figure on this page as secondary-source-only, and that is now measured
@@ -83,6 +83,26 @@ augmented — which is where displacement work comes from.
 
 
 ### North America
+
+> 🟢 **Added at p726 — two supply rows and one diligence item, no new demand facts.**
+> **Supply.** Two North-America-published permissive components were filed this pass, both into
+> `repos/foundations.md`: [`Submitty/pdf-annotate.js`](https://github.com/Submitty/pdf-annotate.js)
+> (`296★`, **MIT**) — the PDF annotation layer Submitty's TA grading workflow runs on, reusable
+> independently of Submitty and under a more permissive licence than Submitty's own BSD-3 — and
+> **Rustici Software's xAPI clients** ([`TinCanJava`](https://github.com/RusticiSoftware/TinCanJava)
+> `47★`, [`TinCan.NET`](https://github.com/RusticiSoftware/TinCan.NET) `49★`, both Apache-2.0), from the
+> vendor that authored SCORM. **`.NET` was a stack this base had no learning-record client for at all.**
+> 🔴 **Diligence item for every Canvas engagement (`726-H`).** Canvas dominates North American higher
+> education, and while [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) is
+> `AGPL-3.0`, **its mobile clients carry no grant payload**:
+> [`canvas-ios`](https://github.com/instructure/canvas-ios) (`925★`) and
+> [`canvas-android`](https://github.com/instructure/canvas-android) (`155★`) return `404` on `LICENSE`,
+> `LICENSE.md`, `LICENSE.txt`, `COPYING` **and** `LICENSE-MIT` at `HEAD`, read first-hand this pass.
+> **Scope mobile work only after the client has confirmed terms with Instructure directly.**
+> 🔴 **Demand: explicit nil.** The mandated North America leg returned nothing this base does not hold —
+> the Stanford AI Index 2026 attribution, the Department of Education AI priority, the ~100 tracked state
+> bills and the Illinois `2026-07-01` guidance deadline are all already on this page. Recorded as a
+> measured nil, not as silence.
 
 > 🟢 **p725 reading (secondary sources only — see `725-F`).** The legislative count still does not
 > converge: one tracker reports **134 AI-in-education bills across 31 states** in the 2026 session,
@@ -163,6 +183,29 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+> 🟢 **Added at p726 — the capture tier is European, permissive, and AI-Act-tractable.**
+> **Supply.** The **Opencast** estate — a European-led higher-education consortium — publishes its two
+> most build-on-able components under permissive terms even though its core is `ECL-2.0`:
+> [`opencast/studio`](https://github.com/opencast/studio) (`56★`, **MIT**) and
+> [`opencast/editor`](https://github.com/opencast/editor) (`68★`, Apache-2.0), both pushed this month and
+> both filed to `repos/foundations.md` this pass. 🔵 **This inverts `p634`'s estate rule** (*an estate
+> built on a copyleft core publishes permissive presentation and copyleft function*): here the core is
+> permissive-ish and the components are more permissive still.
+> 🟢 **Why it is the right EMEA opening specifically.** Lecture capture → notes (`P159`) **does not make
+> an assessment or admission decision**, so it sits outside Annex III's high-risk list entirely. It is
+> therefore the one substantial AI deliverable in this sector that can ship into the EU *now* without
+> waiting on the conformity question this page refuses to date. Sell it as the first phase ahead of the
+> high-risk work, not instead of it.
+> 🔴 **Supply nil, measured rather than assumed (`726-D`).** Run as **single terms** at `stars:>=15` — the
+> `T249` remedy — `Unterricht`, `szkoła`, `uczeń`, `undervisning`, `oppiminen` and `onderwijs` all returned
+> **categorical zero**. `T249` fixed the phrase-leg artefact; it does not conjure supply where there is
+> none. **German-, Polish-, Dutch- and Finnish-language education software above `15★` does not exist in
+> the index**, and the EMEA supply that does exist is Swedish, French and Polish and is tiny (`13★`, `7★`,
+> `109★`). The standing read — *EMEA is a regulation-and-services market first* — is unchanged.
+> 🔴 **Demand: explicit nil.** The Commission's Article 6 consultation to `2026-06-23`, the
+> `2027-12-02` Omnibus date and its unresolved dispute, Futuresource's `67 %`, and the Council's
+> `2026-05-11` conclusions on teachers are all already held.
 
 > 🟢 **p725 reading (secondary sources only — see `725-F`).** The **Digital Omnibus** citation holds
 > across sources at **Regulation (EU) 2026/1744**, OJ **`2026-07-24`**, with Annex III education
@@ -279,6 +322,31 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+> 🟢 **Added at p726 — the pass's headline, and it is a government's own learner stack.**
+> **Supply.** [`eGovFramework/egovframe-msa-edu`](https://github.com/eGovFramework/egovframe-msa-edu)
+> (`166★`, **Apache-2.0**, pushed `2026-11-08`) is a **cloud-native microservice reference implementation
+> of an online-education service, published by Korea's Ministry of the Interior and Safety** as part of
+> the eGovFrame standard framework that Korean public institutions are required to build on. It ships with
+> [`egovframe-common-components`](https://github.com/eGovFramework/egovframe-common-components) (`253`
+> reusable functions, Apache-2.0) and [`egovframe-runtime`](https://github.com/eGovFramework/egovframe-runtime).
+> **This base had never queried the owner** — `0` prior mentions across every file. Four more APAC rows
+> filed this pass: [`glowxq/glowxq-oj`](https://github.com/glowxq/glowxq-oj) (`331★`, Apache-2.0, online
+> judge), [`finch04/online-mooc`](https://github.com/finch04/online-mooc) (`346★`, Apache-2.0),
+> [`zzllrr/mather`](https://github.com/zzllrr/mather) (`396★`, MIT, offline-capable) and
+> [`Charlies2001/C2C-coding-coach`](https://github.com/Charlies2001/C2C-coding-coach) (`379★`, MIT).
+> 🟢 **Opportunity, and it is a procurement lever rather than a technology one.** Where a ministry mandates
+> a national framework, every `GPL`/`AGPL` platform on this page is disqualified from the supplier chain
+> and **an Apache-2.0 government reference stack is the only compliant starting point.** Recipe: `P160`.
+> ⚠️ Korean-first documentation; the deliverable is a *certified fork*, not a deployment.
+> 🔴 **Risk that changes assessment design (`T251`).**
+> [`ocsjs/ocsjs`](https://github.com/ocsjs/ocsjs) — `4,246★`, **MIT**, pushed `2026-11-08` — automates
+> course completion on **Chaoxing (超星学习通)** and **Zhihuishu (知道智慧树)**, the platforms most Chinese
+> universities run mandatory online coursework on. **Completion and time-on-task are not assessment
+> evidence in this market.** Price objective assessment (`glowxq-oj`, `Submitty`) or proctoring into any
+> APAC online-learning proposal.
+> 🔴 **Demand: explicit nil.** The UAE's `25` generative-AI prohibitions (Feb 2026), Vietnam's binding
+> regime, the World Bank's Seoul policy academy and the Ipsos Education Monitor are all already held.
+
 > 🟢 **p725 reading (secondary sources only — see `725-F`).** Binding statute, re-confirmed:
 > **South Korea's AI Basic Act in force `2026-01-22`** (the region's first comprehensive AI law) and
 > **Vietnam's Law on Artificial Intelligence in force `2026-03-01`**, with **education among the
@@ -369,6 +437,30 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+> 🟢 **Added at p726 — the first LATAM-authored permissive school-management system reaches a curated
+> shelf, and it is five years dead.**
+> **Supply.** [`resultsystems/school`](https://github.com/resultsystems/school) — `195★`, **MIT**
+> (payload read this pass, `1,081 B`), **Brazil**, Laravel + Vue school management covering enrolment,
+> classes, staff and records. 🔴 **Unpushed since `2021-12-28`.** It is filed to
+> `verticals/solutions.md` anyway, with the staleness in the cell, because `724-C`'s re-measured
+> permissive-ERP gap says this is exactly the tier where the install base is and the licence is not —
+> and **a dead MIT domain model is still a usable domain model.** Posture: take the schema and the module
+> boundaries, rewrite the Laravel-5-era runtime. Do not quote it as a deployable product.
+> 🔴 **And the honest supply nil underneath it (`726-E`).** The Spanish and Portuguese single-term legs
+> (`aula`, `alumnos`, `maestro`, `examen`, `profesor`, `escola`, `aluno`) returned plenty — and **almost
+> all of it is coursework, not courseware**: old-exam archives (`ExamenesViejos-FAMAF-Computacion`, FAMAF
+> Córdoba), 42-school project dumps (`Projets_42_SP`, São Paulo), student lecture notes
+> (`nad-garraz/algebraUno`, UBA Exactas), and six separate repositories belonging to one Brazilian
+> Cypress course. One live LATAM university platform surfaced —
+> [`org-nexus-projects/ufabc-next`](https://github.com/org-nexus-projects/ufabc-next) (`73★`, UFABC,
+> pushed `2026-11-09`) — and it carries **no licence file**, so it is intelligence and not a component.
+> 🔵 **The read this supports:** LATAM's constraint is not that the region writes no education software.
+> It is that what it writes publicly is written by **students about their courses**, not by institutions
+> about their operations — which is why demand here is the highest measured anywhere and supply stays thin.
+> 🔴 **Demand: explicit nil.** The DEC/Tec de Monterrey LATAM survey (`92 %` students, `79 %` faculty,
+> `30,000+` responses, `29` institutions), the EdTech Hub–Fundación Ceibal governance partnership, the IDB
+> work and Estado de México's Article 61 amendment are all already on this page.
 
 > 🟢 **p725 reading (secondary sources only — see `725-F`).** The adoption/governance gap is
 > re-confirmed from the strongest source available this pass: a **UNESCO IESALC** study of roughly
@@ -461,6 +553,26 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+> 🟢 **Added at p726 — where supply discovery actually works now, stated so later passes stop paying for
+> the channels that do not.**
+> **All `10` rows filed across three shelves this pass came from enumerating an education-native
+> publisher's estate.** None came from any of the eight mandated legs, from any `topic:` head, or from any
+> phrase query. The measurement behind that (`T252`, `726-D`, `726-F`): the `topic:` channel returned
+> `1,013` distinct repositories of which `600` (`59.2 %`) were novel to this base, **and nearly none were
+> usable** — `topic:adaptive-learning` is dominated by machine-learning concept-drift work and
+> `topic:xapi` by Cisco Webex device code, a homonym collision on this industry's own standards
+> vocabulary. 🔵 **Novelty is measured on the address; fitness is measured on nothing** — which is
+> `p667`'s *"the novelty filter over-reports by `44.2 %`"* with a second and larger cause.
+> 🟢 **Operative guidance for a studio reading this page:** the question *"what open source exists for
+> this?"* is answered fastest by naming the **publishers** who would have written it — a ministry, a
+> standards body, a university consortium, an exam board — and enumerating their estates. The owner is
+> the discriminator, and it is the one discriminator with no homonymy.
+> 🔴 **Mandated legs: `33`rd consecutive nil.** `9 / 9` addresses returned by the four global legs were
+> already held (`SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`, `TapXWorld/ChinaTextbook`,
+> `microsoft/ai-agents-for-beginners`, `openeducat/openeducat_erp`, `portabilis/i-educar`,
+> `krayin/laravel-crm`, `hcengineering/platform`, `byoungd/English-level-up-tips`), and every demand fact
+> from the four regional legs was already on this page.
 
 > 🟢 **p725 reading.** The structural claim this page has carried for several passes — build to EU AI
 > Act high-risk standards and the product sells in all five regions — is unchanged, and p725 adds the

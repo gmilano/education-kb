@@ -6,18 +6,92 @@ updated: 2026-11-09
 
 # Composition Patterns — Education
 
-**Pass p725 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p726 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
 Licences are the real design input here. Every pattern states its resulting obligation.
 
-**Numbering.** This pass (`p725`) adds **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
+**Numbering.** This pass (`p726`) adds **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
 passes is preserved in full below the new entries — it is a registry with stable IDs, so new
 patterns continue the sequence rather than reusing it. (This pass initially drafted its six
 recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
 different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
 prior engagement may cite.)
+
+---
+
+## P159 — Lecture capture to curriculum-aligned, reviewable notes, with no proprietary link in the chain (5–7 weeks to a pilot cohort) 🟢 new at p726
+
+**Use when:** the buyer's problem is that recorded teaching exists and is unusable — hours of video
+nobody revisits — and the deliverable has to be *reviewable by the teacher* rather than an opaque
+summary. `p724` opened **lecture-capture-to-notes** as a category and this base held only the notes
+end of it; `p726` filed the capture end, so the chain is now complete and permissive throughout.
+
+**The chain, every link verified `2026-11-09`:**
+
+| Step | Component | Licence | Why this one |
+|---|---|---|---|
+| 1. Capture | [`opencast/studio`](https://github.com/opencast/studio) `56★` | **MIT** (`1,164 B`, read this pass) | Browser-based: screen + camera + audio with **nothing installed on the lecturer's machine**, which is the step that normally kills adoption. Standalone — it does not require an Opencast server. |
+| 2. Trim | [`opencast/editor`](https://github.com/opencast/editor) `68★` | Apache-2.0 (`11,357 B`) | Cutting the dead air and the pre-roll before transcription. Skipping this step is why transcripts come back with ten minutes of room noise at the front. |
+| 3. Notes | [`drpwchen/lecture-to-notes`](https://github.com/drpwchen/lecture-to-notes) `117★` | MIT | Recording → grounded notes with synced headings; already on `repos/foundations.md`. |
+| 4. Align | [`YannHY/scenarisation`](https://github.com/YannHY/scenarisation) `7★` | ⚠️ **CC-BY-SA-4.0** | Supplies the competency vocabulary and the **AIAS permitted-AI level** as a field, so each note set carries *which framework it serves* (`P157`). |
+| 5. Publish | [`eGovFramework/egovframe-common-components`](https://github.com/eGovFramework/egovframe-common-components) `77★` | Apache-2.0 | Only where the client is a public institution: boards, notifications and file handling already written to government standards. Otherwise skip. |
+
+**Resulting obligation.** Steps 1–3 and 5 are MIT/Apache-2.0: **no disclosure obligation, attribution
+only.** 🔴 **Step 4 is the one that constrains the deliverable** — `CC-BY-SA-4.0` is a *content*
+share-alike licence, so a derivative of `scenarisation`'s vocabulary files must ship under the same
+terms. Keep the vocabulary as **data loaded at runtime from its own directory**, not merged into the
+client's source tree, and the obligation stays inside that directory. If the client refuses any
+share-alike at all, drop step 4 and lose the alignment field — do not relicense it.
+
+**What decides whether it fits.** Opencast Studio uploads to an Opencast server by default; pointing it
+at the client's own storage is a configuration change, not a fork, and that is the integration to scope
+first. ⚠️ **Nothing in this chain is a transcription engine** — step 3 needs an ASR model behind it, and
+in EMEA that choice is itself an AI Act question (`intel/market.md → EMEA`), so settle it before
+promising a date.
+
+---
+
+## P160 — Stand up a public-sector online-learning platform on the government's own reference stack (8–12 weeks to a certified pilot; APAC first, the shape generalises) 🟢 new at p726
+
+**Use when:** the client is a ministry, a state university system or a supplier to one, and the
+procurement constraint is **"must be built on the national standard framework"** — a constraint that
+normally rules out every open LMS on this base's shelf, because `GPL`/`AGPL` platforms cannot be
+certified into a supplier chain that expects permissive redistribution.
+
+**The stack, all Apache-2.0, all payload-verified `2026-11-09`:**
+
+| Layer | Component | Stars | Read this pass |
+|---|---|--:|---|
+| Learner service reference | [`eGovFramework/egovframe-msa-edu`](https://github.com/eGovFramework/egovframe-msa-edu) | 166 | `LICENSE` `11,357 B`, pushed `2026-11-08` |
+| Service components (`253` functions) | [`eGovFramework/egovframe-common-components`](https://github.com/eGovFramework/egovframe-common-components) | 77 | `LICENSE` `11,324 B`, pushed `2026-11-06` |
+| Runtime | [`eGovFramework/egovframe-runtime`](https://github.com/eGovFramework/egovframe-runtime) | 49 | Apache-2.0, pushed `2026-11-05` |
+| Objective assessment | [`glowxq/glowxq-oj`](https://github.com/glowxq/glowxq-oj) | 331 | Apache-2.0, `LICENSE` `11,244 B` |
+| Mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 279 | MIT — the auditable Bayesian Knowledge Tracing implementation |
+| Learning records | [`RusticiSoftware/TinCanJava`](https://github.com/RusticiSoftware/TinCanJava) | 47 | Apache-2.0 — xAPI statements from the JVM services, ⚠️ unpushed since `2021` (a frozen spec, see `repos/foundations.md`) |
+
+**How it wires.** `egovframe-msa-edu` supplies the service decomposition and the government's own
+authentication and board/notification patterns; `glowxq-oj` runs behind the assessment service as the
+objective grader (`T251` — do not accept completion telemetry as evidence); `OATutor`'s BKT consumes the
+judge's per-attempt outcomes to produce a mastery estimate per competency; `TinCanJava` emits xAPI
+statements so the records survive a later platform change. **The AI layer attaches at the assessment
+and mastery boundary, not at the platform** — which is also what keeps it inside scope when the
+platform is certified and frozen.
+
+**Resulting obligation.** Apache-2.0 and MIT throughout: **attribution and patent-grant notice, no
+source disclosure, hosting unaffected.** This is the only platform recipe on this page with that
+property.
+
+**What decides whether it fits.** 🔴 **Three things, all of them discovered rather than assumed.**
+(1) eGovFrame's documentation is **Korean-first** — budget translation and an architecture review, and
+do not promise a timeline before one engineer has read the service decomposition. (2) It is a
+**reference implementation**: the deliverable is a certified fork, so agree the certification target with
+the client's procurement function in week one, not week ten. (3) `glowxq-oj` is Chinese-first and
+single-publisher; it is the right grader for programming and the **wrong** one for anything else, so a
+non-CS curriculum needs `Submitty/Submitty` (BSD-3) in its place and the estimate changes.
+⚠️ Outside Korea the *components* still apply but the procurement argument does not — in EMEA the
+equivalent lever is AI Act conformity (`P157`), not a national framework mandate.
 
 ---
 

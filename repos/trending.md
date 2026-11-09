@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p726) — 🟢 **EIGHT REPOSITORIES, AND EVERY ONE CAME FROM AN OWNER RATHER THAN A QUERY — INCLUDING A GOVERNMENT'S OWN APACHE-2.0 ONLINE-EDUCATION STACK**
+
+**`8` foundation and platform rows filed · `11 / 11` licence payloads read first-hand and agreeing with the index · `0` rows from any mandated leg, `topic:` head or phrase query · `1,013` topic-channel repositories measured, `59.2 %` novel and near-unusable.**
+
+The trending read this pass was a **channel comparison**, because the shelf had reached the point where the usual legs returned only addresses it already owned. Three channels were run against each other on the same afternoon. Two produced volume and no fitness; one produced everything that got filed.
+
+### The channel comparison, with denominators
+
+| Channel | Run | Distinct repos | Novel | Filed | Verdict |
+|---|---|--:|--:|--:|---|
+| Mandated legs (4 global + 4 regional) | as prescribed | 9 addresses | **0** | 0 | 🔴 `33`rd consecutive nil; every demand fact also already held |
+| Language, single-term + `stars:>=15` (`T249`) | `30` legs | ~400 | many | **2** | 🟡 Works, but homonymy-polluted and its modal object is **coursework** (`726-D`, `726-E`) |
+| `topic:` heads | `18` heads | **1,013** | **600 (`59.2 %`)** | 0 | 🔴 Two homonym collisions, one on this industry's own standards vocabulary (`726-F`) |
+| **Publisher-estate enumeration** | `24` owners | ~1,000 | — | **8** | 🟢 **The only channel that paid at platform scale. The owner is the discriminator and it has no homonymy.** |
+
+### 🟢 The eight rows
+
+**A national government's online-education stack — `eGovFramework` (Korea, Ministry of the Interior and Safety), `0` prior mentions in this repository:**
+
+| Repo | Stars | Licence | Payload read `2026-11-09` | Shelf |
+|---|--:|---|---|---|
+| [`eGovFramework/egovframe-msa-edu`](https://github.com/eGovFramework/egovframe-msa-edu) | 166 | **Apache-2.0** | `LICENSE`, **`11,357 B`** — byte-exact stock (`648-G`) | `verticals/solutions.md` |
+| [`eGovFramework/egovframe-common-components`](https://github.com/eGovFramework/egovframe-common-components) | 77 | Apache-2.0 | `LICENSE`, `11,324 B` | `repos/foundations.md` |
+
+`egovframe-msa-edu` is a **cloud-native microservice reference implementation of an online-education service**, pushed `2026-11-08`, inside the standard framework Korean public institutions are mandated to build on. `egovframe-common-components` is the government's own library of **`253` reusable service functions**. 🔵 **The first permissive, government-authored learner platform this base has held**, and it breaks a twenty-eight-pass reading that the platform tier is structurally copyleft. Trend `T250`; recipe `P160`.
+
+**Lecture capture — `opencast`, and the licences are not the core's:**
+
+| Repo | Stars | Licence | Payload read `2026-11-09` | Shelf |
+|---|--:|---|---|---|
+| [`opencast/studio`](https://github.com/opencast/studio) | 56 | **MIT** | `LICENSE`, `1,164 B` — stock grant, **above this base's published band**, see `726-A` | `repos/foundations.md` |
+| [`opencast/editor`](https://github.com/opencast/editor) | 68 | Apache-2.0 | `LICENSE`, `11,357 B` | `repos/foundations.md` |
+
+The core [`opencast/opencast`](https://github.com/opencast/opencast) was read too and is **`ECL-2.0`** (`11,340 B`) — the Sakai family. 🔵 **So the estate inverts `p634`'s rule:** copyleft-ish core, *more* permissive components. 🟢 **And these are the capture end of `p724`'s `lecture-capture-to-notes` category, which this base opened with only the notes half filled.** Chain now permissive end to end: `studio` → `editor` → [`drpwchen/lecture-to-notes`](https://github.com/drpwchen/lecture-to-notes) → [`YannHY/scenarisation`](https://github.com/YannHY/scenarisation). Recipe `P159`.
+
+**Assessment, learning records, and one LATAM platform:**
+
+| Repo | Stars | Licence | Payload read `2026-11-09` | Shelf |
+|---|--:|---|---|---|
+| [`glowxq/glowxq-oj`](https://github.com/glowxq/glowxq-oj) | 331 | Apache-2.0 | `LICENSE`, `11,244 B` | `repos/foundations.md` — assessment |
+| [`Submitty/pdf-annotate.js`](https://github.com/Submitty/pdf-annotate.js) | 296 | **MIT** | `LICENSE.md`, `1,123 B` | `repos/foundations.md` — assessment |
+| [`RusticiSoftware/TinCanJava`](https://github.com/RusticiSoftware/TinCanJava) | 47 | Apache-2.0 | `LICENSE`, `11,358 B` | `repos/foundations.md` — xAPI clients ⚠️ |
+| [`RusticiSoftware/TinCan.NET`](https://github.com/RusticiSoftware/TinCan.NET) | 49 | Apache-2.0 | `LICENSE`, `11,323 B` | `repos/foundations.md` — xAPI clients ⚠️ |
+
+`glowxq-oj` is an **online judge** — objective program grading against test cases, with ACM/ICPC, olympiad-training and coursework modes — which matters more than usual this pass because of `T251`. `pdf-annotate.js` is the annotation layer **Submitty's own TA grading workflow runs on**, maintained by the Submitty project and licensed **MIT, more permissively than Submitty's BSD-3**, so it drops into a grading product that is not Submitty. The two **Rustici** clients come from the vendor that authored SCORM and co-authored xAPI: ⚠️ both are stale (`2021-10-21`, `2023-08-30`) **and that is acceptable for a conformance client tracking a frozen specification** — check the spec version, not the commit date. **`.NET` was a stack this base held no learning-record client for at all.**
+
+Two further rows went to the platform and agent shelves from the language channel's *domain-bearing* legs: [`finch04/online-mooc`](https://github.com/finch04/online-mooc) (`346★`, Apache-2.0, ⚠️ payload `9,110 B` and **complete** — see `726-G`), [`resultsystems/school`](https://github.com/resultsystems/school) (`195★`, MIT, **Brazil**, 🔴 unpushed since `2021-12-28`), plus [`zzllrr/mather`](https://github.com/zzllrr/mather) and [`Charlies2001/C2C-coding-coach`](https://github.com/Charlies2001/C2C-coding-coach) on `agents/top.md`.
+
+### 🔴 What the trending read found that is not a repository
+
+[`ocsjs/ocsjs`](https://github.com/ocsjs/ocsjs) — **`4,246★`, MIT, pushed `2026-11-08`** — automates course completion on **Chaoxing (超星学习通)** and **Zhihuishu (知道智慧树)**, the two platforms most Chinese universities run mandatory online coursework on. It is larger than every curated education row on these shelves except `DeepTutor`, `OpenMAIC` and the general frameworks. 🔵 **The finding is not that cheating exists; it is that the defeat tooling is `MIT`, maintained, and platform-specific**, so it is cheaper to deploy than the assessment it defeats. 🟢 **Completion and time-on-task are therefore not assessment evidence in this market** — price an objective grader or proctoring into any APAC online-learning proposal. Filed as `T251`. ⚠️ **It is on no shelf and must not reach a client repository.**
+
+### 🔴 Declared gaps, measured this pass rather than assumed
+
+- **German-, Polish-, Dutch- and Finnish-language education software above `15★` does not exist in the search index.** `Unterricht`, `szkoła`, `uczeń`, `undervisning`, `oppiminen`, `onderwijs` → **categorical zero as single terms** (`726-D`). This is a real nil, now distinguishable from `725-D`'s syntax artefact.
+- **The public-sector estate channel is `1 of 10`** (`726-L`). Nine other national estates were enumerated — India/DIKSHA, UK, Singapore, Spain, Brazil, Indonesia, Chile — and eight were already swept, their novel content being digital signatures, accessibility crawlers and open-data catalogues rather than education. **Worth one leg per pass; not a rule.**
+- **No permissive, live, LATAM-authored education *platform* above `15★` was found.** The one filed is five years dead; the one live LATAM university platform surfaced ([`org-nexus-projects/ufabc-next`](https://github.com/org-nexus-projects/ufabc-next), `73★`, UFABC, pushed `2026-11-09`) **carries no licence file**, so it is intelligence and not a component.
+- **`make hooks` and every repo-local instrument were denied again** (`[Code from External]`). This diff is **not gate-verified**; row counts and the region-heading contract were re-derived inline and the figures published are the counted ones.
+
 ## 🆕 2026-11-09 (p725) — 🟢 **FIVE REPOSITORIES, AND NOT ONE OF THEM WAS REACHABLE BY A MULTI-WORD QUERY: THE NON-ENGLISH LEGS WERE MEASURING SYNTAX**
 
 **`5` repositories newly filed · `0` delisted · `1` promoted to the curated shelf · `2` instrument failures reproduced with controls · `1` declared gap closed.**
