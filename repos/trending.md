@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p719) — 🔴 **TWELVE FOUNDATION ROWS, AND THE FINDING IS A TRAP CLASS THIS SHELF HAD NEVER RECORDED: A PERMISSIVE GRANT OVER A PROPRIETARY RUNTIME**
+
+**[`foundations.md`](foundations.md) `347` → `359`.** 🟢 **`347` carried in COUNTED and it MATCHED the published figure** — the first clean arrival on this shelf since `p716`, and `p718`'s instrument repair (locating each shelf by its column-header signature rather than by the prose heading above it) is why. **Regions on the `12`: `Global 8` · `APAC 3` · `EMEA 1`.** All `8` `Global` rows are **explicit in-cell refusals with the reason stated**, never silent defaults.
+
+### 🔴 `719-P` (primary) — MIT on the template, SoftBank on the runtime
+
+[`tvcuong1802/agentic-star-learning-resource-accessibility-gap-brief-agent`](https://github.com/tvcuong1802/agentic-star-learning-resource-accessibility-gap-brief-agent) (`LICENSE`, `1,068 B`, `be1056662503`) and [`haidang024/agentic-star-education-learning-resource-accessibility-review-agent`](https://github.com/haidang024/agentic-star-education-learning-resource-accessibility-review-agent) (`LICENSE`, `1,067 B`, `b22b7ca45c04`) both carry clean, byte-verified canonical **MIT**. **Both READMEs state, in those words, that the template "does not run standalone."** Each requires SoftBank's proprietary **AGENTIC STAR** platform (`developers.fd.agenticstar.tm.softbank.jp`) plus the `agenticstar-agentcore` framework, and **start-up fails immediately without the platform.**
+
+🔴 **This shelf has recorded licence traps in the GRANT for many passes — AGPL where Apache was assumed, `NOASSERTION`, truncated clauses, split grants, corrupted disclaimers. `719-P` is the first trap recorded in the RUNTIME.** Every instrument this base has built — SPDX reading, byte counts, `sha256₁₂` fingerprints, clause-presence diffs — returns **green** on these two, **correctly**, and says nothing about the dependency.
+
+🟢 **So the screening question changes shape: "is the grant permissive?" is now necessary and insufficient, and "what must exist for this to start?" has to be asked beside it.** Only the README answers the second, and no licence tooling reads it.
+
+🟢 **Both are filed rather than refused because the METHOD transfers even though the harness does not.** Each performs a record-level, **closed-vocabulary** accessibility conformance check against the school's own profile of required descriptors, marking each present / missing / inconsistent / not evaluated — and the README is explicit that **"the checking is done by fixed rules against the school's profile — nothing is retrieved or inferred."** 🟢 **That is the correct instrument for an accessibility audit, where a hallucinated descriptor is worse than a missing one.** Take the rule table and the descriptor state machine; leave the platform.
+
+🔵 **A named supply lead, left deliberately unspent.** Two unrelated owners publishing templates for one vendor platform under a shared `agentic-star-*` naming convention **and a shared `EDU-C2-0xx` identifier scheme** implies a catalogue, not a coincidence. Owner- and convention-expansion on that pattern is the cheapest lead p719 hands forward, and it is handed forward rather than spent here.
+
+### 🟢 `719-E` — this shelf can now evaluate an education agent on items that CANNOT have been trained on
+
+[`JacobFV/formal-language-cirriculum`](https://github.com/JacobFV/formal-language-cirriculum) (**MIT**, `1,069 B`, `7ea5cac8cd6a`, `master`) makes **every lesson a generator rather than a dataset**: an episode is a pure function of a seed, the vocabulary is invented per episode, the grammar or ontology or proof calculus is sampled fresh, and the answer is **computed from the construction rather than annotated by anyone.** 🟢 **The consequence is the row: an evaluation set drawn from it did not exist until it was asked for, so it cannot be in any training corpus.** Capability profile runs from reference, equivalence and discrimination through recursion, parsing, variable binding and quantification to proof, argument and value inference.
+
+🟢 **Paired with [`Grvrajput/llm-eval-rubric-kit`](https://github.com/Grvrajput/llm-eval-rubric-kit) (**MIT**, `1,069 B`, `313f8cce1ca8`) the shelf now holds BOTH HALVES OF AN ASSESSMENT RIG** — unbiasable items, and **judge-agnostic deterministic** scoring where the caller picks the judge (human, heuristic, or LLM) and the library does only the weighting, rating and rationale math reproducibly. 🔵 **`T218` is why this matters commercially: `86%` student AI use, `~15%` utilisation of a provisioned tool, two-thirds of institutions with no policy, and UNESCO IESALC's ten-to-one using-versus-measuring ratio all say provisioning is solved and value evidence is not.**
+
+🔵 **Recorded against the subject itself:** its `master` README headlines `180 lessons`, says `179` once in the same file, and its repository description says `170`. **Three figures, one subject** — the row cites the generator design and explicitly instructs callers not to quote a lesson count from this shelf.
+
+### 🟢 `719-R` — a reliability engine reachable only in Turkish
+
+[`Asperant/ExamEcho`](https://github.com/Asperant/ExamEcho) (**MIT**, `1,078 B`, `1b2308dec8b4`, `main`) describes itself as `tam ürün değil` — not a complete product but a backend engine core — and its stated differentiator is **not generating questions but managing the reliability of generation**: loose LLM output reduced to strict domain rules, fallback-plus-retry keeping the flow alive on malformed output, and **quality exposed as SSE metadata** so the pipeline is observable rather than opaque.
+
+🟢 **Placed `EMEA` on repo-file evidence — a Turkish-primary README (`260` Turkish diacritics and `50` Turkish function and domain tokens across `6,666 B`).** This is the pass's second demonstration of `719-N` in [`../agents/trending.md`](../agents/trending.md): **the subject was not reachable from an English-language leg at all.** Turkey now appears on this shelf as a reliability-engineering artefact rather than as a market statistic.
+
+### 🔵 `719-T` — the region threshold cost this shelf a placement, which is the proof it is a rule
+
+[`jianghaoyu123/TeachingAI`](https://github.com/jianghaoyu123/TeachingAI) was **REFUSED** a region: `1.3%` CJK (`174` Han characters of `13,950 B`) is interface-string residue, not a Chinese-primary document, while four subjects placed `APAC` by p719 cleared `18.2%`–`31.1%`. 🟢 **An owner-name heuristic would have placed it and the byte-ratio instrument declined to.** `p718`'s `718-I2` argued the refusal rate is high because the instrument is strict; **this is the first worked example where the instrument cost a placement it could have claimed**, which is the only evidence that distinguishes a rule from a rationalisation.
+
+🔵 **Held anyway, and for an inverting reason:** every other row on these shelves helps a learner learn or a teacher produce; **this one tests a lesson plan before a child sees it.** It is the missing rehearsal stage and the natural consumer of `master-teacher`'s and `GyanKosh`'s output — see `P133` step 7.
+
+### 🔵 `719-I` — instrument note: two canonical Apache fingerprints now live on this shelf
+
+This shelf records canonical Apache-2.0 **as served** at `11,358 B` / `cfc7749b96f6` (from `oppia/oppia@develop`). Two subjects filed this pass — [`Adithyan435/ExamNoteLLM`](https://github.com/Adithyan435/ExamNoteLLM) and [`vgauraha62/Self_Improving_Lesson_Generator`](https://github.com/vgauraha62/Self_Improving_Lesson_Generator) — agree with **each other** at `11,357 B` / `c71d239df917`, and together they are what made the `StudyForge` truncation (`719-L`) measurable at all. 🔵 **A one-byte delta at identical clause counts is a trailing newline, not a different licence — but a pass diffing against only one fingerprint will mis-flag the other.** Both recorded canonical-equivalent. 🔵 A third, [`FunctionSid/smart-tutor`](https://github.com/FunctionSid/smart-tutor) at `11,408 B` / `cd2f54e1e506`, is Apache-2.0 **with the appendix filled in**; the `51`-byte delta is the copyright line, not a modified clause.
+
+### 🟢 `719-C` — what the function-targeted legs bought, and why they should replace the platform leg's budget
+
+🟢 **The `12` rows here came almost entirely from legs aimed at CAPABILITY rather than at industry** — `grading agent rubric LLM`, `curriculum generator agent`, `adaptive learning engine`, `exam question generation LLM`, `spaced repetition AI agent`, `accessibility education AI agent`, `lesson plan agent teacher`, `student information system AI`. 🔴 **Against that, the mandated platform leg returned `14` subjects of which `14/14` were already held** (verified with a negative control that correctly returned `ABSENT`) — a **seventh** consecutive saturation.
+
+🟢 **Stated as a reallocation rather than a complaint: the open-source education PLATFORM layer is a closed, mature, fully enumerated set and this base has enumerated it. That leg has stopped being a discovery channel and become a regression check — it should run every fourth pass, and the freed budget belongs to the capability legs, the Spanish/Portuguese pair (`719-N`) and the owner-expansion lead (`719-P`).**
+
+🔴 **Declared gap specific to this shelf:** `Fedena` and `Forma LMS` surfaced in third-party listicles only and **neither resolved to a verifiable canonical repository with a readable grant** inside this pass's budget. Named so the next pass resolves them deliberately.
+
 ## 🆕 2026-11-09 (p718) — 🟢 **TWENTY-TWO FOUNDATION ROWS: THE OUTPUT HALF OF THE PIPELINE, WHICH WAS AS COMPLETELY ABSENT AS THE INGESTION HALF p717 FOUND**
 
 **[`foundations.md`](foundations.md) `325` → `347`.** 🔴 **`325` carried in COUNTED — NOT the `315` this page's own heading published**, which was stale by exactly `p717`'s ten filed rows; full measurement and the instrument repair in [`../agents/trending.md`](../agents/trending.md) `718-F`. `22` filed, `347` published · arity `347/347` at `5` columns, `0` ragged · `347` distinct subjects, `0` duplicated against the existing shelf.

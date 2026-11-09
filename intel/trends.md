@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 T215–T219 — added at p719 (2026-11-09)
+
+## T215 — The search language, not the supply, was the regional ceiling
+
+🟢 **The strongest trend p719 can evidence is methodological, and it is worth more than any market figure in this file.** Three consecutive passes recorded `LATAM` frozen at `25` rows and honestly stated the freeze. p719 ran the mandated English-language LATAM leg and got **policy literature and zero repositories**; it then ran six queries in **Spanish and Portuguese** and got **`25` repositories**, `5` with resolvable grants, `2` filable and new. The freeze broke to `27`.
+
+🔴 **And the diagnostic detail that matters: the two BEST Spanish/Portuguese subjects were already held** ([`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA), Colombia; [`tcheld0n/CorrijAI`](https://github.com/tcheld0n/CorrijAI), ENEM). So the ceiling was never "LATAM builds nothing" and never "this base has missed LATAM's good work" — **it was that an English-language query cannot reach a non-English long tail, and the head had already been absorbed.** The same leg, run in Turkish-adjacent terms, surfaced [`Asperant/ExamEcho`](https://github.com/Asperant/ExamEcho) for `EMEA`.
+
+🟢 **Implication for anyone reading this base as market intelligence: regional "AI maturity" rankings built from English-language sources systematically understate non-anglophone markets, and the error is in the instrument, not the market.** Treat every such ranking — including the ones quoted in [`market.md`](market.md) — as a measurement of English-language visibility until proven otherwise.
+
+## T216 — The licence trap moved from the grant into the runtime
+
+🔴 **New trap class, first recorded this pass as `719-P`.** Two education agent templates filed to [`../repos/foundations.md`](../repos/foundations.md) carry byte-verified canonical **MIT** grants and **both state that they "do not run standalone"** — each requires SoftBank's proprietary **AGENTIC STAR** platform plus the `agenticstar-agentcore` framework, and start-up fails immediately without it.
+
+🔴 **Every licence instrument this base has built — SPDX reading, byte counts, `sha256₁₂` fingerprints, clause-presence diffs — returns GREEN on these two, correctly, and tells you nothing about the dependency.** The grant is genuinely permissive; the runtime is genuinely closed.
+
+🟢 **The trend to expect, and to screen for: as vendor platforms court agent developers, "MIT template, proprietary host" becomes the default distribution shape, because it gives the vendor an open-source adoption story at zero licensing cost.** The screening question `is the grant permissive?` is now necessary and insufficient; **`what must exist for this to start?`** has to be asked beside it, and only the README answers it.
+
+## T217 — Governance overtook capability as the stated 2026 constraint, and five independent sources now say it the same way
+
+🟢 **This converged in this pass in a way it had not before.** 1EdTech frames AI in education as moving **from experimentation to governance**, with policies, data boundaries and oversight as the gating items. HolonIQ expects 2026 emphasis on ethics, transparency, agentic use cases and **proven instructional benefit**. Campus Technology's panel expects AI to become **embedded infrastructure** across admissions, advising and administration rather than a standalone product. TutorFlow calls **disciplined, bounded, measured** adoption the only credible trend. The **OECD 2026 Digital Education Outlook** and one trade source independently name the move **from general-purpose tools to purpose-built educational platforms** as the defining shift.
+
+🔵 **That last one is the reading that most directly justifies an inventory like this base:** when a general-purpose assistant stops being the default answer, a curated per-industry map of open-source starting points becomes the scarce asset rather than a convenience.
+
+## T218 — Provisioning is solved; value evidence is not — and four independent numbers say so from four directions
+
+🔴 **The four readings, from unrelated sources, all pointing at the same hole:**
+- **`86%`** of students across 16 countries already use AI in their studies.
+- 🔴 **`~15%`** of students *with Khanmigo access* actually use it — the availability-versus-engagement gap in one figure.
+- **~two-thirds** of higher-education institutions still have no formal AI policy.
+- 🔴 **UNESCO IESALC: ten times more universities USING AI than MEASURING what it delivers** (`87%` adoption against `26%` with any formal framework, and `55%` with no AI budget at all, across `200` institutions in `19` countries).
+
+🟢 **So the durable 2026 engagement is the measurement layer, and this base acquired both of its halves this pass** (`719-E`): [`JacobFV/formal-language-cirriculum`](https://github.com/JacobFV/formal-language-cirriculum) for evaluation items drawn from a **procedural generator**, which therefore **cannot have been trained on**, and [`Grvrajput/llm-eval-rubric-kit`](https://github.com/Grvrajput/llm-eval-rubric-kit) for **judge-agnostic, deterministic** weighting and rating with mandatory rationales. Unbiasable items plus auditable scoring is the whole rig.
+
+## T219 — The reliable pattern for generated learning content is a DETERMINISTIC GATE, and the clearest example of it is a 28★ phonics app
+
+🟢 **Found at [`finereli/yarareads`](https://github.com/finereli/yarareads) and generalised as `P-719-A`.** `npm run check` compares every word of every story against the sounds the individual learner has been marked as knowing — **by pronunciation, not spelling**, so "cake" fails if the split `a` has not been taught — and **fails the build**. An MCP-connected agent writes new stories; **the checker, not the model, decides whether they ship.**
+
+🟢 **Three independent subjects filed this pass converge on the same arrangement, which is what makes it a trend rather than one repo's good idea:** `yarareads` gates on decodability; [`aloktripathi1/GyanKosh`](https://github.com/aloktripathi1/GyanKosh) traces every claim to an **exact quote and character offset** and **re-validates that independently on every run, not only at generation time**; [`Asperant/ExamEcho`](https://github.com/Asperant/ExamEcho) reduces loose model output to **strict domain rules** with fallback-and-retry and exposes quality as SSE metadata.
+
+🟢 **The shared shape: leave the generator unconstrained, make the constraint deterministic, put it in CI, and give the gate the authority.** 🔴 **The inverse — a well-prompted generator with human spot-checking — is what every stalled education pilot in this file has in common.**
+
 ## 🆕 T210–T214 — added at p718 (2026-11-09)
 
 ### 🔴 T210 — The open TTS layer has NO maintained permissive engine, and the roundups all still say "Piper, MIT"
