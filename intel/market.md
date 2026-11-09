@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI — Market Intelligence
 
-**Pass p723 · researched 2026-11-09.** Figures below name their source and, where sources
+**Pass p724 · researched 2026-11-09.** Figures below name their source and, where sources
 disagree, the disagreement is shown rather than averaged away. Market-sizing in this
 industry is dominated by vendor-commissioned research with incompatible methodologies; a
 single confident number here would be a fabrication.
@@ -49,6 +49,28 @@ homework-help traffic. The incumbent homework-help business model is being destr
 augmented — which is where displacement work comes from.
 
 ## Opportunities by region
+
+> **🟢 `724-R` — two structural corrections to this section, recorded so they are not re-derived.**
+>
+> 1. **Closed-vocabulary fix.** The fifth subsection here read `### Global / cross-region`. `region` is a
+>    closed vocabulary of exactly **`North America` · `EMEA` · `APAC` · `LATAM` · `Global`**, and a variant
+>    heading becomes its own bucket, at which point the region filter silently stops matching. Renamed to
+>    **`### Global`**. The frontmatter `region:` field was audited across all eight compiled files this pass
+>    and is correct (`Global`) in **`8 / 8`**.
+> 2. 🟢 **The duplicate container is closed.** A second literal `## Opportunities by region` existed further
+>    down this file — a preserved p721-era block with its own five region subsections — so a compiler that
+>    bucketises on heading rather than document order would read **two** region blocks from one file and could
+>    merge or double-count them. **Retitled to `## Preserved p721 regional reading (historical — superseded by
+>    the live section above)`, with every row, figure and subsection untouched**: only the container's title
+>    changed, so the live block is unambiguously this one. The live section is always the **first**.
+>
+> **Both fixes are confirmed by this base's own gate, not by assertion.** `make gate-region-headings`
+> (`P383`, 11 controls) scored **`3` findings at `HEAD`** — `P383-OUT-OF-VOCAB: Global / cross-region`,
+> `P383-MISSING-REGION: Global`, and `P383-MULTIPLE-BLOCKS: bloques=2` — and scores **`0` after this pass**.
+> 🔵 `make gate-tables` (`P277`) was **also red at `HEAD`** and is green after p724; see `724-T` in
+> [`../agents/trending.md`](../agents/trending.md). Neither gate was red because of this pass, and both were
+> red before it.
+
 
 ### North America
 
@@ -100,6 +122,20 @@ standards; state model policy due 2026-12-31, local policies 2027-06-30, teacher
 **California DoE model AI policy** (June 2026) and **Idaho's** statewide generative-AI
 framework (August 2026).
 
+
+**🟡 `p724` — the North America leg ran and returned nothing new, measured by string.** The prescribed
+leg (`AI education North America 2026 adoption regulation players`) came back entirely already-filed:
+Maryland **`SB 720`** (`68` existing occurrences in this base) · North Carolina **Session Law `2026-41`**
+(`46`) · the student-authored **`STUDENTS FIRST Act of 2026`** from all 50 states (`21`) · **`Khanmigo`**
+usage (`40`) · EO **14277**. Two figures are restated because they are the ones that sell work, not because
+they are new: **Gallup: 60% of US teachers use AI tools**, against **most US public schools having no formal
+student AI policy** (Child Trends / US Dept of Education) — and **`134` AI-in-education bills across `31`
+states in the 2026 session** (Multistate), overwhelmingly privacy, classroom-use limits and curriculum.
+🔵 **The opportunity shape is therefore unchanged and the demand research is saturated:** the buyer is a
+district or system with a *legislative deadline* and no policy, and the deliverable is the policy-plus-controls
+package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes should not spend a leg here** —
+this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
+`p724`'s `9` new repositories are North American.**
 ### EMEA
 
 **Demand drivers.** Teacher-led adoption running ahead of institutional readiness. Across
@@ -168,6 +204,34 @@ comparative measurement); Ireland and the Gulf (**KHDA Dubai** guidance to priva
 are **policy-to-implementation** engagements — translating an existing national framework
 into institutional controls, which is `P143`'s shape applied outside LATAM.
 
+
+**🟢 `p724` — the two genuinely new facts in the whole regional sweep are both EMEA, and both are
+programme-shaped rather than regulation-shaped.** Measured at **`0`** prior occurrences each:
+• **`AI-ENTR4YOUTH`** — coordinated by **JA Europe** with **Intel** and the European Commission; students
+build applied AI projects in **10 countries**, piloted in **Italy, Portugal and Spain** and since extended to
+**Albania, Bulgaria, Czech Republic, France, Greece, Romania and Ukraine**.
+• **`#CompDigEdu`** (Spain) — alongside **Portugal's Digital Transition Plan** and **Italy's National Digital
+School Strategy**: national digital-education frameworks that AI guidance is being attached to rather than
+replacing. The Commission's **Apply AI Alliance** is the coordinating forum.
+🔵 **This qualifies `722-E`.** That finding — *"EMEA's contribution to this industry is regulatory, not
+code"* — holds on supply, but EMEA also contributes **delivery programmes with named cohorts and named
+funders**, and those are procurable in a way a regulation is not. The sellable unit is *teacher enablement
+inside an existing national framework*, which every source this pass named as the binding constraint:
+**teacher training is the bottleneck for scale**, not tooling.
+
+**🟢 `p724` — the Digital Omnibus gap narrows to one lookup, and the remaining blocker is environmental.**
+This section has stood on *"this base has not read the Official Journal text and therefore asserts no date."*
+Converging secondary sources this pass give: **OJ publication `2026-07-24`**, **entry into force `2026-07-27`**,
+Annex III education obligations at **`2027-12-02`** via **amended Article 113(c)** and **recital 40**, Annex I at
+**`2028-08-02`**, and two new **Article 5** prohibitions (NCII/CSAM) from **`2026-12-02`**. ⚠️ Article 50
+transparency from `2026-08-02` remains **contested** between sources. 🔴 **The primary text is still unread,
+and the cause is now measured rather than assumed:** `eur-lex.europa.eu`, `ec.europa.eu`,
+`digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu` **all fail DNS resolution in this
+environment — `4` of `4`**, being outside the session's allowed network domains. 🟢 **So this base still
+asserts no date of its own — but it now records the article-level citation a reader with EUR-Lex access can
+settle in a single lookup, and later passes in this environment should stop spending a leg on it.** Filed as
+`T246`. The commercial point is unchanged: **guides still selling an August 2026 education deadline are
+selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
 **Demand drivers.** The fastest-emerging region and, uniquely, the **largest open-source
@@ -224,6 +288,26 @@ low-connectivity systems. (4) Gulf-state compliance packaging against the UAE ru
   sources than as a gap a further pass will close** — the regulatory literature for APAC is
   published in English by law firms, and the adoption literature is not published at all.
 
+
+**🟢 `p724` — APAC is where the supply actually is, and this pass can now put a number on it.**
+**`7` of `p724`'s `9` new repositories are APAC-authored** (`course2md`, `lecture-to-notes`, `ClassCue`,
+`GongkaoNaoku`, `study-flashcards`, `kanji-koohii`, `MyClass`), against `2` Global and **`0` each for North
+America, EMEA and LATAM**. That is consistent with every prior pass's regional count and it is the single
+most actionable asymmetry in this file: **the open-source components this industry is built from are
+disproportionately written in APAC, while the governance demand is loudest in EMEA and LATAM.**
+🔵 **`MyClass` (`t1112000/tutor-management-app`, `110★`, MIT) places Vietnam, which no prior pass had
+placed**, and it does so at the *sub-institutional* buyer — private tutors and small tuition centres, which
+is where most APAC private-education spend sits and which no other row on the verticals shelf addresses.
+**Demand-side, the leg returned already-filed facts:** Korea's **AI Basic Act** (`208` existing occurrences,
+effective `2026-01-22`) · **Vietnam's Law on AI** (effective `2026-03-01`, with an **18-month transition for
+education**, health care and finance — the one education-specific transition date in the region) · Australia's
+**National AI Plan** (Dec 2025, existing law rather than a standalone act) · Japan's voluntary-guideline bet ·
+India's synthetic-content labelling from `2026-02-20` · Indonesia's **Merdeka Belajar** and the Philippines'
+**MATATAG**. ⚠️ **One restated figure set, because it is counter-intuitive and keeps being misread:** Ipsos
+Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia · `25%` Thailand · `26%` India ·
+`28%` Singapore · `29%` Japan and Malaysia · `31%` South Korea** — i.e. **opposition to AI in schools is a
+minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
+capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
 
 **Demand drivers.** The sharpest adoption/governance gap in the world, which is itself the
@@ -282,7 +366,23 @@ is confirmed at a fifth reading rather than extended.
 Spanish-language leg stays condemned (`722-R`); the exam leg (`enem-api`, `assistente-enem`,
 `gpt-4-enem`) returned the same three addresses already filed.
 
-### Global / cross-region
+
+**🟡 `p724` — LATAM demand is saturated for a second consecutive pass, and the supply nil is now the
+more important half.** The prescribed leg returned only already-filed facts, counted by string: UNESCO
+IESALC's **~200 institutions / 19 countries, 87% using AI in at least one area against 26% with any formal
+framework** · the Digital Education Council / Tec de Monterrey survey at **92% of students and 79% of
+faculty** · **Uruguay's 75% of public-school teachers** (Ceibal) · **<10% of institutions with formal
+guidelines *and* sufficient capacity** · Universidad de los Andes' **`716` regulatory instruments across 23
+countries and territories** (`193` occurrences) · Brazil's **PL 2.338/2023** · Colombia's **CONPES 4144**
+(`34`) · the **UNESCO LAC Observatory** (launched April 2026) · OECD AI Principles adopted by Argentina,
+Brazil, Chile, Colombia, Costa Rica, Mexico and Peru.
+🔴 **The new fact is a nil, and it is worth writing down: `0` of `p724`'s `9` new repositories are
+LATAM-authored.** Across this pass and the last, LATAM is the region with **the best-documented demand and
+the thinnest open-source supply** — which is exactly the configuration that makes `P143` (governance-first,
+no code dependency) the right opening move here and makes a code-first pitch the wrong one. 🔵 It also means
+**LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
+first step rather than a formality.
+### Global
 
 Standards and framework bodies to align deliverables to: **OECD** (*Digital Education
 Outlook 2026*), **UNESCO** (teacher AI competency framework; IESALC for LATAM), **Council of
@@ -312,6 +412,25 @@ from a vendor-adjacent statistics roundup citing a primary survey it does not fu
 It is filed as a **signal of direction, not a measured rate**, and the `T209` policy-side
 evidence is better sourced than this purchasing-side figure.
 
+
+**🟢 `p724` — a new product category that is region-neutral: lecture-capture-to-notes.** Two independent
+permissive implementations appeared within three weeks of each other, in different languages
+(`mizorewww/course2md`, **`508★` MIT**, Rust; `drpwchen/lecture-to-notes`, **`117★` MIT**, Python), against
+the same problem: **the lecture recording is the artefact every institution already has and none of them can
+search.** 🔵 **Why this is a market fact and not a tooling note:** the input requires no curriculum, no
+integration and no data migration — the recordings already exist — so it is the shortest path from a signed
+engagement to something a faculty member can see working, in any region. And because `lecture-to-notes` runs
+ASR, OCR and slide-semantics **locally** and calls an LLM only at the final prose step, it is deployable
+under the data-boundary constraints (`T229`) that disqualify most hosted tutoring products in EMEA higher
+education. **Two implementations, two cost profiles, one pitch.**
+
+**🟡 `p724` — market sizing: no movement, and the disagreement is the finding.** Re-read this pass:
+**~`$10.6B` for 2026 growing to `$42.48B` by 2030** (Research and Markets, via aggregator) against
+**`$12.3B` for 2026** (HolonIQ) — both already filed (`42.48`: `25` occurrences; `12.3`: `38`). 🔴 **Still no
+primary report read, still vendor-commissioned methodology, still not averaged here.** The demand-side
+reality check also re-verified and is the number worth quoting to a client: **only ~15% of students with
+Khanmigo access actually use it**, and **roughly two-thirds of higher-education institutions still have no
+formal AI policy** — i.e. **the constraint on this market is adoption and governance, not model capability.**
 ## 🟢 p723 correction to this section's own regional summary
 
 The summary below has said, in four consecutive passes, that **EMEA has no code supply**. That
@@ -482,7 +601,13 @@ Three facts shape every engagement:
 | **AI-Shifu (Harbin Institute of Technology)** | Open source, Apache-2.0 | 331 ★; course authoring from a subject expert's intent, embeddable in the client's portal | Small relative to DeepTutor/OpenMAIC; research-led | The authoring end of the pipeline, where the client has subject experts but no instructional designers |
 | **Squirrel AI** | Commercial (APAC) | Adaptive learning at scale in China | Closed, regionally bound | Competitive reference for APAC adaptive engagements |
 
-## Opportunities by region
+## Preserved p721 regional reading (historical — superseded by the live section above)
+
+> ⚠️ **Retitled at p724, content untouched.** This block was a second literal
+> `## Opportunities by region` container, which this base's own `gate-region-headings`
+> (`P383-MULTIPLE-BLOCKS`) scores red: the brief asks for **one**. Every row, figure and
+> subsection below is preserved exactly as p721 published it — only the container's title
+> changed, so the **live** region block is unambiguously the one at the top of this file.
 
 ### North America
 

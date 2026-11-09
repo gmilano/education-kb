@@ -6,10 +6,11 @@ updated: 2026-11-09
 
 # Education AI Agents — Curated Top Set
 
-**Pass p723 · verified 2026-11-09.** Every row below was read this pass from
+**Pass p724 · verified 2026-11-09.** Every row below was read this pass from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
-(falling back to `README.rst`). Rows carry the date they were read so a later pass
+(falling back to lowercase `readme.md`, then `README.rst`, then `LICENSE` — the case-ordered
+chain corrected at `724-I`; the probe is case-sensitive and the fallback must stay ordered). Rows carry the date they were read so a later pass
 can tell a stale cell from a fresh one.
 
 > **Instrument note.** The procedure's mandated check, `curl -sI https://github.com/{owner}/{repo}`,
@@ -30,7 +31,6 @@ can tell a stale cell from a fresh one.
 | OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 171 | MIT | 2026-11-08 | APAC | Spaced-repetition + knowledge-graph tutor. ⚠️ Previously filed here at "~900★"; real figure is 171★. |
 | gen-mentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | APAC | LLM multi-agent framework for goal-oriented learning-path generation. WWW '25 oral paper, reference implementation. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 99 | MIT | 2026-11-09 | EMEA | MCP server that turns any LLM into an ITS, encoding 50 years of tutoring research. Smallest but most composable item here. |
-
 | Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,402 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
 | anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 551 | MIT | 2026-11-07 | Global | MCP server exposing Anki to any LLM — spaced repetition as a tool call. The most composable retention primitive on this shelf. 🟢 **Promoted at p723** (roster at p655 at 546★ → +5). |
 | SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 473 | Apache-2.0 | 2026-11-09 | APAC | Social-skills and conflict-handling coach built on realistic role-play. Same lab as `gen-mentor` below. The only social-emotional-learning agent verified on this shelf. 🟢 **Promoted at p723**; pushed today. |
@@ -41,9 +41,55 @@ can tell a stale cell from a fresh one.
 | InterviewMentor | [PrepLabsAI/InterviewMentor](https://github.com/PrepLabsAI/InterviewMentor) | 116 | MIT | 2026-10-19 | Global | AI mock interviews for technical hiring — the workforce/credentialing end of the shelf, which is where `T233` says new budget is. 🟢 **Promoted at p723.** |
 | Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 109 | MIT | 2026-11-09 | EMEA | AI-native LMS with an AI mentor and role-play; self-hosted alternative to Moodle/Docebo. Authored by **Selleo, Bielsko-Biała, Poland**. Pushed today. 🟢 **Promoted at p723 — the first EMEA-authored platform-scale repository to reach a curated shelf here, though this base filed it in the verticals roster at p655.** Also on [`../verticals/solutions.md`](../verticals/solutions.md). |
 | adhd-study-coach | [itsAalaa7/adhd-study-coach](https://github.com/itsAalaa7/adhd-study-coach) | 94 | MIT | 2026-09-27 | Global | ADHD-friendly study companion: spaced repetition, small-chunk teaching, focus support. The only accessibility-shaped agent found in any pass. 🟢 **New to this base at p723.** |
+| course2md | [mizorewww/course2md](https://github.com/mizorewww/course2md) | 508 | MIT | 2026-11-09 | APAC | Lecture video → illustrated, searchable notes: screenshots on every slide change, transcribes beneath it, keeps a local library. Bilibili/YouTube/local file; macOS/Windows/Linux desktop; Rust. 🟢 **New at p724** — the largest permissive education-native find since the two headline projects. ⚠️ README is lowercase `readme.md` (`724-I`). |
+| lecture-to-notes | [drpwchen/lecture-to-notes](https://github.com/drpwchen/lecture-to-notes) | 117 | MIT | 2026-11-03 | APAC | Video/audio/slides/photos → grounded notes plus a synced HTML viewer (video highlights the live note; clicking a note seeks the video). Whisper ASR, frame extraction, OCR and slide-semantics vision model **all run locally**; the LLM writes prose only at the end, from evidence already assembled. 🟢 **New at p724** — the only shelf row that is deployable where recordings cannot leave the premises. |
+| ClassCue | [lu0973-cb02d/ClassCue](https://github.com/lu0973-cb02d/ClassCue) | 102 | MIT | 2026-10-18 | APAC | 课醒 — local-first Android class assistant: timetable, **offline** recording and transcription, roll-call/question alerts, post-class replay search, optional AI reference answers. Android 13–16, Kotlin/Compose. 🟢 **New at p724** — the first mobile-native, offline-capable row on this shelf. |
+| live-classroom | [internetphysics/live-classroom](https://github.com/internetphysics/live-classroom) | 102 | MIT | 2026-09-02 | Global | Type a topic; an LLM plans a one-minute lesson as twelve five-second beats, each rendered as a 1970s-style educational cartoon just before it airs. 🟢 **New at p724.** ⚠️ **MIT covers the wrapper, not the capability** — generation runs on hosted MiniMax H3 Max Turbo via fal. Take the beat-planning structure, not the stack. |
 
-**Nineteen education-native agents, every one verified today.** That is the real count — no
+## 🆕 `p724` — four rows added, and the shelf re-measured clean
+
+**`23` education-native agents, every one verified `2026-11-09`.** That is the real count — no
 header rows, no example rows and no padding to reach an arbitrary minimum.
+
+**The re-read came back clean.** All `21` rows published at p723 were found in the index, **`0`
+archived**, and the largest star delta across the whole shelf was `+31`
+(`DeepTutor` **57,462 → 57,493**; `OpenMAIC` **43,124 → 43,131**; `Study-Mate` **1,402 → 1,404**;
+`moodle-ai-skill-navigator` **279 → 278**, a real decrease; fourteen rows unchanged to the star).
+The `722-C` inflation failure has not recurred.
+
+### 🟢 `724-K` — the new rows are a category, not four unrelated finds
+
+Three of the four read a *recording* and return something a learner can study from, and two of
+them — `course2md` (`508★`, Rust) and `lecture-to-notes` (`117★`, Python) — were built
+independently, three weeks apart, in different languages, against the identical problem: **the
+lecture recording is the artefact every institution already has and none of them can search.**
+`course2md` optimises for reach; `lecture-to-notes` optimises for data boundary, and its
+ordering is the one that matters for `T229` engagements — retrieval, OCR and ASR local,
+generation last and constrained to assembled evidence. Where recordings cannot leave the
+premises, it is the only one of the two that is deployable at all, and it is MIT.
+
+### 🔴 `724-I` — this file's own stated probe has a second false-negative mode
+
+The note at the head of this file describes existence-checking against
+`raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, *"falling back to `README.rst`"*.
+**`course2md` returns `404` on both** — its file is lowercase `readme.md`. Full `P142` rung 1
+reaches `LICENSE` third and gets `200`, so the **existence verdict is still correct**; the loss
+is the **payload**, which `723-R` made the replacement instrument for region attribution after
+`gh api users/{owner}` went `403`. A pass following the procedure literally places `course2md`
+in **no region at all**. The chain is corrected in `compose/patterns.md` (`P142`): lowercase
+`readme.md` goes between `README.md` and `README.rst`, **ordered, never either/or** — controls
+re-run this pass show `DeepTutor` and `OpenMAIC` at `README.md` `200` / `readme.md` `404`.
+
+### 🟡 `724-L` — a licence split that is not a wrong index field
+
+[`jangviktor-web/GongkaoNaoku`](https://github.com/jangviktor-web/GongkaoNaoku) (`100★`) is filed
+on `repos/foundations.md` rather than here, and with a split verdict: its `LICENSE` payload was
+read and **is genuine Apache-2.0 text — the index is correct** — while its README badge reads
+`许可-仅供个人学习` over **27,506 real 行测 civil-service exam questions**. Every prior licence
+finding in this base corrected a *field*. This one separates **code from content inside a
+repository whose field is accurate**: the spaced-repetition engine is reusable, the corpus is
+not. Stage the engine, never the bank.
+
 
 ### 🔴 `723-U` — p722's shelf was accurate and unrepresentative at the same time
 

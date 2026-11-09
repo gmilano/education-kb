@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI — Current Trends
 
-**Pass p723 · researched 2026-11-09.** Four new trends — **T234, T235, T239, T244** — added above p722's **T226–T233** — each with the evidence
+**Pass p724 · researched 2026-11-09.** Four new trends — **T234, T235, T239, T244** — added above p722's **T226–T233** — each with the evidence
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
 
@@ -15,6 +15,72 @@ registry **T1–T225** from prior passes is preserved in full below.
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T245–T246 — added at p724 (2026-11-09)
+
+## T245 — The institutional recording archive, not the curriculum, is where AI entry costs are lowest
+
+Two permissive implementations of **lecture-capture-to-notes** appeared independently within three weeks of
+each other, in different languages, with no shared lineage: [`mizorewww/course2md`](https://github.com/mizorewww/course2md)
+(**`508★`**, MIT, Rust, created `2026-08-31`, pushed `2026-11-09`) and
+[`drpwchen/lecture-to-notes`](https://github.com/drpwchen/lecture-to-notes) (**`117★`**, MIT, Python, created
+`2026-08-02`, pushed `2026-11-03`). Convergent independent implementation is the strongest available signal
+that a category is real rather than a single author's preoccupation.
+
+**Why this is a trend and not a tool.** Every other entry point into an institution has a prerequisite:
+a tutoring agent needs curriculum alignment, an LMS sidecar needs LTI credentials and an administrator's
+consent, an assessment tool needs a rubric and a policy decision about integrity. **The recording archive has
+no prerequisite** — it already exists, it is already owned by the institution, it is already unsearchable, and
+nobody has to agree on pedagogy before it can be indexed. It is the shortest path from a signed engagement to
+something a faculty member can see working.
+
+**The evidence that complicates it.** Neither project is an institutional product. `course2md` is a
+single-user desktop binary with no multi-tenancy, no SSO and no retention policy; `lecture-to-notes` is a
+pipeline, not a service. **Both are components, and the gap between a working component and an institutional
+deployment is exactly the gap a studio bills for** — but that gap should be quoted, not assumed away. And the
+category inherits the one unresolved question of the whole field: a recording of a lecture is also a recording
+of the students in it, which makes retention and consent a design input rather than a compliance afterthought.
+
+🔵 **The sub-signal worth more than the category.** `lecture-to-notes` inverts the usual ordering: Whisper
+ASR, frame extraction, OCR and slide-semantics vision **all run locally**, and the LLM is used **only at the
+end, to write prose from evidence the pipeline already assembled**. That is `T228` (pedagogy-in-control)
+arriving as an *architecture* rather than a stated intention — and it is what makes the pattern deployable at
+all under the data-boundary constraints of `T229`.
+
+---
+
+## T246 — A knowledge base's remaining gaps are increasingly environmental rather than epistemic, and the two require opposite responses
+
+This base has carried *"the Digital Omnibus education deadline cannot be asserted because the Official Journal
+text has not been read"* for several passes, phrased as a diligence gap — the kind a later pass closes by
+trying harder. **p724 establishes that no pass in this environment can close it.** `eur-lex.europa.eu`,
+`ec.europa.eu`, `digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu` **all fail DNS resolution
+— `4` of `4`** — being outside the session's allowed network domains. The gap is a property of the
+instrument, not of the effort.
+
+**Why the distinction changes behaviour.** An *epistemic* gap is an instruction to a later pass: search again,
+search differently, read the primary source. An *environmental* gap is an instruction to **stop searching and
+record the blocker**, because every later pass will spend a leg reproducing the same failure. The two look
+identical when written down as *"not verified"*, which is why they must not be written down the same way.
+
+**The generalisation, which this base can now evidence against its own instrument history.** The same pattern
+has already consumed legs here repeatedly: `curl -sI github.com/...` returning `403` for live and invented
+addresses alike (five consecutive passes), `gh api repos/{owner}/{repo}` returning `403` under repository
+scoping, `gh api users/{owner}` returning `403` and costing the base its region-attribution instrument
+(`723-R`), and `search/repositories` having **no index entry at all** for `openedx/edx-platform` — the
+second-most-deployed LMS in the industry. **In each case the environment, not the world, produced the absence.**
+🔴 **The operational rule this yields:** before recording a nil, establish whether the instrument could have
+returned a non-nil, and write *which* it was. A nil with a named cause is reusable; a bare nil is
+indistinguishable from coverage, and this base has mistaken one for the other at least four times
+(`722-E` EMEA supply, `722-N` North America, and the two withdrawn at `723-E`/`723-M2`).
+
+🟢 **What this pass did with the rule.** The Omnibus finding is recorded with its **article-level citations**
+(amended Article 113(c), recital 40, OJ publication `2026-07-24`, entry into force `2026-07-27`, Annex III
+`2027-12-02`, Annex I `2028-08-02`, Article 5 NCII/CSAM `2026-12-02`) **and** with the explicit note that this
+base still asserts no date of its own — so a reader who *does* have EUR-Lex access settles it in one lookup
+instead of repeating the research.
+
+---
 
 ## 🆕 T234–T244 — added at p723 (2026-11-09)
 

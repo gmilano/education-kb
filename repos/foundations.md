@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Foundational Repositories — Education
 
-**Pass p723 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+**Pass p724 · verified 2026-11-09.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -20,6 +20,7 @@ repository that demonstrably exists, that is stated in the row rather than treat
 |---|--:|---|---|---|
 | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 806 | BSD-3-Clause | 2026-11-09 | Homework submission + automated grading + TA grading workflow, production-deployed at Rensselaer and other US universities. BSD-3 makes it the most permissively licensed serious autograder available. **North America.** |
 | [GatorEducator/gatorgrader](https://github.com/GatorEducator/gatorgrader) | 85 | GPL-3.0 | 2026-10-06 | Checks student writing and code against assignment specifications; the practical reference for rubric-as-code. |
+| [JingHao-Leon/study-flashcards](https://github.com/JingHao-Leon/study-flashcards) | 80 | MIT | 2026-09-15 | 速记卡 — question-bank practice with a wrong-answer book and **real auto-grading for SQL and C++**, not just multiple choice, plus per-option explanations. Plain HTML/CSS/JS front end on a **Python-stdlib back end with zero third-party dependencies** — which makes it the cheapest honest grading harness on this shelf to audit, air-gap or embed. 🟢 **New at p724.** |
 
 ## Learner modelling
 
@@ -27,6 +28,7 @@ repository that demonstrably exists, that is stated in the row rather than treat
 |---|--:|---|---|---|
 | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 278 | MIT | 2026-11-08 | The open Bayesian Knowledge Tracing implementation. BKT is the mastery model most ITS work still benchmarks against; this is the auditable version of it. **North America.** |
 | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | Skill-gap → learning-path generation as a multi-agent pipeline (WWW '25). CC0 means no attribution obligation at all. |
+| [klieret/AnkiPandas](https://github.com/klieret/AnkiPandas) | 156 | MIT | 2026-11-03 | Reads and manipulates an Anki collection as **pandas DataFrames** — review logs, intervals, ease factors, lapses. 🔵 This base already held `ankimcp/anki-mcp-server` (`551★`, MIT), which *writes* cards; this is the half that **measures whether they worked**, which is the evidence layer `T226` says is now the buying criterion. Documented, long-maintained (since 2019). 🟢 **New at p724.** |
 
 ## Evaluation benchmarks and exam corpora
 
@@ -39,7 +41,7 @@ real, dated corpora.
 | [deekur/gaokaomath](https://github.com/deekur/gaokaomath) | 1,946 | CC-BY-4.0 | 2026-11-08 | Gaokao mathematics papers, 1952–2026. A 74-year longitudinal corpus; actively maintained. CC-BY-4.0 — attribution required, commercial use permitted. **APAC.** |
 | [yunger7/enem-api](https://github.com/yunger7/enem-api) | 366 | GPL-2.0 | 2025-12-14 | Public open-source API over Brazil's ENEM exams and questions. The single best structured entry point to LATAM assessment content. **LATAM.** |
 | [piresramon/gpt-4-enem](https://github.com/piresramon/gpt-4-enem) | 54 | MIT | 2024-12-06 | Code and data for evaluating LLMs on ENEM. Small and dormant, but MIT and the only published LATAM LLM-vs-national-exam harness found. **LATAM.** |
-
+| [jangviktor-web/GongkaoNaoku](https://github.com/jangviktor-web/GongkaoNaoku) | 100 | **Apache-2.0 code / corpus NOT licensed** | 2026-10-25 | 考公脑库 — a spaced-repetition engine over **27,506 Chinese civil-service 行测 questions**. Zero third-party dependencies, single-file SQLite, native-JS SPA. 🔴 **Split verdict (`724-L`): the `LICENSE` payload was read and is genuine Apache-2.0 — the index is correct — but the README badge reads `许可-仅供个人学习` over the question bank.** Stage the engine; never the corpus. 🟢 **New at p724.** |
 | [devissaputra/knowledge_tracing_benchmark](https://github.com/devissaputra/knowledge_tracing_benchmark) | **0** | MIT | 2026-11-08 | 🟢 **New at p723.** Benchmarks priors, **BKT, PFA and GRU** knowledge tracing on learner interaction data, in one MIT repository. ⚠️ **Zero stars — stated, not hidden.** It is filed because of what it *is*, not what it has: this base has carried `OATutor` as its only auditable BKT implementation, and comparing BKT against PFA and a neural baseline is precisely the evidence a procurement conversation now asks for (`T226`). Treat as a reference to read, not a dependency to adopt. |
 
 ## 🔴 The AI-output evaluation layer: the repository that fits the gap cannot be staged
@@ -69,6 +71,8 @@ reimplementable under whatever licence Globant needs.
 |---|--:|---|---|---|
 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,173 | MIT | 2026-11-08 | Offline-first learning platform for low-connectivity deployments. MIT, actively maintained, and the reference answer whenever an engagement has intermittent bandwidth — which includes much of LATAM and APAC public education. |
 | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 154 | GPL-3.0 | 2026-11-04 (branch `master`; **no README/LICENSE file at HEAD** — see P142) | The interactive-content type system embedded in Moodle, Canvas and Drupal. Small star count badly understates its install base; it is a dependency, not a product. |
+| [drpwchen/lecture-to-notes](https://github.com/drpwchen/lecture-to-notes) | 117 | MIT | 2026-11-03 | Lecture recording → grounded notes + synced HTML viewer. **Whisper ASR, frame extraction, OCR and a slide-semantics vision model all run locally**; the LLM writes prose only at the last step, from evidence the pipeline already assembled. 🔵 Foundational because that ordering is the one deployable where recordings cannot leave the premises (`T229`), and because each stage is separable — the ASR and OCR stages are reusable on their own. 🟢 **New at p724.** |
+| [fabd/kanji-koohii](https://github.com/fabd/kanji-koohii) | 257 | **AGPL-3.0** | 2026-10-31 | Production kanji SRS (kanji.koohii.com) with shared mnemonics, maintained since 2017 — one of the longest-running retention systems with public source. 🔴 **AGPL-3.0 and operated as a hosted service**, which is precisely the fact pattern the network clause addresses: a **reference for retention and mnemonic-sharing design, never a base**. 🟢 **New at p724.** |
 
 ## Reference and survey
 

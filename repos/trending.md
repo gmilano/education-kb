@@ -3,6 +3,42 @@ industry: education
 region: Global
 updated: 2026-11-09
 ---
+
+## 🆕 2026-11-09 (p724) — 🟢 **LECTURE-CAPTURE-TO-NOTES IS A REAL CATEGORY WITH TWO INDEPENDENT PERMISSIVE IMPLEMENTATIONS, AND THE LOCAL-FIRST ONE INVERTS THE USUAL LLM ORDERING**
+
+**`9` repositories newly filed · `0` delisted · `1` probe defect localised · `1` keyword leg abandoned as poisoned.**
+
+All nine were checked against the **`4,643`** distinct `github.com` addresses already filed across this base before being written; none was present. Stars, SPDX, `created_at`, `pushed_at` and `archived` read this pass through `search/repositories`; existence confirmed on the raw channel with the case-ordered chain from `P142`.
+
+### 🟢 The nine, read today
+
+| Repo | Stars | Licence | Lang | Created | Pushed | Region | What it is |
+|---|--:|---|---|---|---|---|---|
+| [`mizorewww/course2md`](https://github.com/mizorewww/course2md) | 508 | MIT | Rust | 2026-08-31 | 2026-11-09 | APAC | YouTube/Bilibili or local video → illustrated, searchable notes. Screenshots on slide change, transcribes beneath it, keeps a local library. Desktop: macOS/Windows/Linux. ⚠️ README is lowercase `readme.md` — see `724-I`. |
+| [`fabd/kanji-koohii`](https://github.com/fabd/kanji-koohii) | 257 | **AGPL-3.0** | PHP | 2017-01-14 | 2026-10-31 | APAC | Long-running production kanji SRS (kanji.koohii.com) with mnemonic sharing. 🔴 **AGPL — hosted delivery triggers the network clause.** Reference for retention design, not a base. |
+| [`klieret/AnkiPandas`](https://github.com/klieret/AnkiPandas) | 156 | MIT | Python | 2019-04-17 | 2026-11-03 | Global | Read and manipulate an Anki collection as pandas DataFrames. 🔵 The missing *analytics* half of this base's retention layer — `anki-mcp-server` writes cards, this one measures them. |
+| [`drpwchen/lecture-to-notes`](https://github.com/drpwchen/lecture-to-notes) | 117 | MIT | Python | 2026-08-02 | 2026-11-03 | APAC | Video/audio/slides/photos → grounded notes + synced HTML viewer (video highlights the live note; note timestamps seek the video). Whisper ASR, frame extraction, OCR and a vision model **all local**; LLM only at the last step. Bilingual EN/繁體中文. |
+| [`t1112000/tutor-management-app`](https://github.com/t1112000/tutor-management-app) | 110 | MIT | TypeScript | 2026-06-18 | 2026-11-03 | APAC | Self-hosted admin for a *private tutor*: students, weekly schedules, session billing, PWA push reminders. `Asia/Ho_Chi_Minh` and VND formatting built in — **Vietnam**, a country no prior pass had placed. |
+| [`lu0973-cb02d/ClassCue`](https://github.com/lu0973-cb02d/ClassCue) | 102 | MIT | Kotlin | 2026-08-24 | 2026-10-18 | APAC | 课醒 — local-first Android class assistant: timetable, **offline** recording + transcription, roll-call/question alerts, post-class replay search, optional AI reference answers. Android 13–16, Jetpack Compose. |
+| [`internetphysics/live-classroom`](https://github.com/internetphysics/live-classroom) | 102 | MIT | TypeScript | 2026-09-02 | 2026-09-02 | Global | Type a topic; an LLM plans a 1-minute lesson as twelve 5-second beats, each rendered as a 1970s-style educational cartoon just before it airs, played on a CRT in a 3D classroom. ⚠️ **Depends on hosted MiniMax + fal** — the MIT grant does not cover the generation path. Novelty, but the beat-planning structure is reusable. |
+| [`jangviktor-web/GongkaoNaoku`](https://github.com/jangviktor-web/GongkaoNaoku) | 100 | **Apache-2.0 code / restricted corpus** | Python | 2026-10-02 | 2026-10-25 | APAC | 考公脑库 — spaced-repetition engine over 27,506 Chinese civil-service 行测 questions. Zero third-party deps, single-file SQLite, native-JS SPA. 🔴 See `724-L`: **engine reusable, question bank not.** |
+| [`JingHao-Leon/study-flashcards`](https://github.com/JingHao-Leon/study-flashcards) | 80 | MIT | JavaScript | 2026-05-01 | 2026-09-15 | APAC | 速记卡 — question-bank practice with a wrong-answer book, **SQL and C++ auto-grading**, per-option explanations. Plain HTML/CSS/JS front end, Python-stdlib back end, **zero third-party dependencies**. |
+
+### 🔵 `724-K` — why two implementations of one idea is the signal
+
+`course2md` and `lecture-to-notes` were built independently, in different languages, three weeks apart, and solve the identical problem: **the lecture recording is the artefact every institution already has and none of them can search.** `course2md` optimises for reach (any Bilibili/YouTube URL, packaged desktop binaries); `lecture-to-notes` optimises for data boundary (**nothing leaves the machine until the final prose step**). For a client whose recordings cannot leave premises — which is most of the EMEA higher-education pipeline under `T229` — the second is the only one of the two that is deployable at all, and it is MIT.
+
+### 🔴 `724-S` — the keyword leg this base should stop running
+
+`tutor`-stemmed queries match **`tutorial`**, and the `tutorial` namespace is partly a farm: four distinct `apimart*` orgs (`apimartat5`, `apimartmk8`, `apimartc30lq1`, `apimartgz0l`), **all created `2026-10-02`, all `NOASSERTION`**, plus four `*-harness-tutorial` repositories and `dankefox/swap-tutorial`. 🟢 The `topic:` legs — `topic:ai-education`, `topic:intelligent-tutoring-system`, `topic:adaptive-learning`, `topic:spaced-repetition` — returned **no farm rows at all**. Prefer them.
+
+### 🟡 Licence flags raised this pass
+
+- `fabd/kanji-koohii` — **AGPL-3.0**, and it is *operated as a public web service*, which is the exact fact pattern the network clause addresses.
+- `jangviktor-web/GongkaoNaoku` — Apache-2.0 **code**, README asserting `仅供个人学习` over a 27,506-question corpus. Split the two.
+- `internetphysics/live-classroom` — MIT code, **proprietary hosted generation path** (MiniMax H3 Max Turbo via fal). The licence describes the wrapper, not the capability.
+- Re-measured, unchanged: `frappe/lms` **AGPL-3.0** (`3,393★`) · `frappe/education` **`NOASSERTION`** (`703★`) · `openeducat/openeducat_erp` **`NOASSERTION`** (`908★`). The permissive education-ERP gap is still open.
+
 ## 🆕 2026-11-09 (p723) — 🟢 **AN MIT-LICENSED, AI-NATIVE LMS CLOSES HALF THE PERMISSIVE-PLATFORM GAP — AND THIS BASE HAD ALREADY FILED IT, FOUR PASSES BEFORE DECLARING THE GAP**
 
 **`2` repos newly filed · `1` promoted to the curated platform shelf · `1` declared gap reclassified · `1` five-pass regional nil withdrawn.**

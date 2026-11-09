@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Vertical Platforms — Education
 
-**Pass p723 · verified 2026-11-09.** Deployable systems a client may already run, or could
+**Pass p724 · verified 2026-11-09.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -50,6 +50,7 @@ LMS in the industry. The cell is left marked rather than guessed.
 |---|---|--:|---|---|---|
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 908 | LGPL-3.0 | 2026-11-02 | Education ERP built on the Odoo framework: admissions, students, faculty, courses, exams, library, fees. The closest thing in education to "Odoo for ERP" — and in fact *is* Odoo underneath, so Odoo's module ecosystem and AI connectors apply directly. |
 | **Submitty** | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 806 | BSD-3-Clause | 2026-11-09 | Assessment-side system of record: submission, autograding, TA grading, plagiarism workflow. BSD-3-Clause. |
+| **MyClass** | [t1112000/tutor-management-app](https://github.com/t1112000/tutor-management-app) | 110 | **MIT** | 2026-11-03 | Self-hosted administration for a *private tutor or small tuition centre* — students, weekly schedules, session billing, calendar views, PWA push reminders. TypeScript; ships with `Asia/Ho_Chi_Minh` and VND formatting. 🟢 **New at p724.** 🔵 The only **MIT** row on this ERP/SIS shelf, and the only one aimed at the *sub-institutional* buyer — the tutoring businesses that make up most of the APAC private-education market. ⚠️ Single-tutor by design (one account owns the tenancy); multi-tenant use is a fork, not a setting. Places **Vietnam**, which no prior pass had placed. |
 
 ## Not open source — do not stage these as starting points
 
@@ -62,13 +63,29 @@ Both appear in open-source listings and both fail on reading the licence file. C
 
 ## Composition posture, by licence
 
-- **Permissive, customise freely:** Kolibri (MIT), **Mentingo (MIT)**, Sakai (ECL-2.0), Submitty (BSD-3).
+- **Permissive, customise freely:** Kolibri (MIT), **Mentingo (MIT)**, **MyClass (MIT, new at p724)**, Sakai (ECL-2.0), Submitty (BSD-3).
 - **GPL, safe to host:** Moodle, Chamilo, H5P. Distributing a modified build to the client
   requires source; running it for them does not.
 - **AGPL, structure around it:** Open edX, Canvas, LearnHouse. Build AI as **separate
   services talking over APIs/LTI**, not as core patches — this keeps the client's obligations
   unchanged and is also the cleaner upgrade path.
 - **LGPL, middle ground:** BigBlueButton, OpenEduCat. Link against, don't fork.
+
+### 🟡 `724-C` — the permissive education-ERP gap is re-measured and still open
+
+The three stacks a client is most likely to already run were re-read today and **none of them moved**:
+`frappe/lms` **`3,393★`, AGPL-3.0** (pushed `2026-11-09`) · `frappe/education` **`703★`, `NOASSERTION`**
+(pushed `2026-10-30`) · `openeducat/openeducat_erp` **`908★`, LGPL-3.0** (pushed `2026-11-02`).
+So the ERP/SIS half of this shelf is still **copyleft or licence-unclear at every scale that has an
+install base**, and `p724`'s one MIT addition (`MyClass`, `110★`) sits two orders of magnitude below
+them. 🔵 **The practical consequence is unchanged and worth restating:** for an institutional ERP/SIS
+engagement the pattern is **AI as a separate service over APIs** (`P138`), not a fork — the permissive
+greenfield option genuinely does not exist at institutional scale, and `P154` is only honest for
+greenfield.
+
+⚠️ **One candidate was probed and does not exist:** `openeducat/openeducat` returns a **`422`** from the
+index (*"the listed users and repositories cannot be searched"*). The real address is
+`openeducat/openeducat_erp`, already on this shelf. Recorded so a later pass does not re-derive it.
 
 ### 🟢 `723-M` — the permissive-LMS gap this shelf declared is now half-closed, and the repository was EMEA-authored
 

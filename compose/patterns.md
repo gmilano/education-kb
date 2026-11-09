@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Composition Patterns — Education
 
-**Pass p723 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p724 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -18,6 +18,77 @@ patterns continue the sequence rather than reusing it. (This pass initially draf
 recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
 different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
 prior engagement may cite.)
+
+---
+
+## P155 — Make the lecture archive searchable: the lowest-prerequisite entry into an institution (any region; 3–5 weeks to pilot) 🟢 new at p724
+
+**Use when:** an institution wants a visible AI result but has no curriculum alignment, no AI policy and no
+appetite for an LMS migration — i.e. most first engagements. It is also the only pattern here that works when
+**recordings may not leave the premises**, which is the binding constraint across EMEA higher education (`T229`).
+
+**Components** (all verified `2026-11-09`)
+- Pipeline: [`drpwchen/lecture-to-notes`](https://github.com/drpwchen/lecture-to-notes) — **`117★`, MIT** — Whisper ASR + frame extraction + OCR + slide-semantics vision model, **all local**; LLM only at the final prose step; emits a synced HTML viewer.
+- Reach alternative: [`mizorewww/course2md`](https://github.com/mizorewww/course2md) — **`508★`, MIT** — packaged desktop app (macOS/Windows/Linux), ingests Bilibili/YouTube URLs directly.
+- Retrieval over the output: [`HKUDS/RAG-Anything`](https://github.com/HKUDS/RAG-Anything) or [`HKUDS/MiniRAG`](https://github.com/HKUDS/MiniRAG) — already on `repos/foundations.md`.
+- Retention layer: [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) — **`551★`, MIT** — to turn notes into scheduled recall.
+- Measurement: [`klieret/AnkiPandas`](https://github.com/klieret/AnkiPandas) — **`156★`, MIT** — reads the review log back as DataFrames.
+
+**Wiring.** Point `lecture-to-notes` at the existing recording archive; it produces per-lecture notes with
+frame citations and timestamps. Index those notes (not the raw transcript) with `RAG-Anything`, so every
+answer cites a slide and a timestamp that the viewer can seek to — **the citation is the product**, because it
+is what makes a faculty member trust it. Feed the note headings into `anki-mcp-server` as a deck per course,
+then read the review log back with `AnkiPandas` to produce the retention evidence `T226` says is now the
+buying criterion. Choose `course2md` over `lecture-to-notes` only when the client wants self-service desktop
+ingestion and the data boundary permits hosted video URLs.
+
+**Why this shape.** No prerequisite. The recordings exist, the institution owns them, nobody has to agree on
+pedagogy first, and the local-only stages mean the data-protection conversation is short. It also seeds the
+follow-on: once lectures are indexed and cited, tutoring (`P154`) and assessment have a grounded corpus to
+work from instead of a general model.
+
+⚠️ **Two constraints to quote, not assume away.** (1) **Both components are single-user tools, not services** —
+multi-tenancy, SSO, retention policy and admin UI are the build, and that is the billable gap; do not demo a
+desktop binary and imply a platform. (2) **A recording of a lecture is a recording of the students in it** —
+consent and retention are design inputs here, and under the EU AI Act this stays outside Annex III only while
+it informs rather than assesses. The moment output feeds grading, it is high-risk (see `P139`).
+
+**Obligation:** none beyond MIT attribution — every component above is MIT. 🔵 Verify the **model** licences
+separately: Whisper weights and any local vision model carry their own terms, which the pipeline's MIT grant
+does not cover.
+
+---
+
+## P156 — Separate the engine from the corpus before staging any exam-prep repository (licence triage; half a day) 🟢 new at p724
+
+**Use when:** staging any exam-prep, question-bank or past-paper repository — a category this base has filed
+repeatedly (`GongkaoNaoku`, `universal-examprep-skill`, `mcp-enem`, `GSAT-Tutor`, the national-exam leg
+generally). It is the licence check that this base's existing rungs **do not** catch.
+
+**The failure mode, found at `724-L`.** [`jangviktor-web/GongkaoNaoku`](https://github.com/jangviktor-web/GongkaoNaoku)
+(**`100★`**, Python, pushed `2026-10-25`) reports `Apache-2.0`, and **the index is right** — the `LICENSE`
+payload was read and is genuine Apache-2.0 text. `P142` rung 3 therefore **passes it clean**. But the README
+badge reads **`许可-仅供个人学习`** ("personal study only") and the asset is **27,506 real 行测
+civil-service exam questions**. Every prior licence finding in this base corrected a **field**; this one is a
+repository whose field is **accurate** and whose **contents are not covered by it**.
+
+**Procedure**
+1. Read the `LICENSE` payload (`P142` rung 3) — establishes the grant over the **code**.
+2. **Then ask what the repository's value actually is.** If it is the engine, the grant covers it. If it is the
+   corpus — questions, past papers, rubrics, answer keys, student work — **the code licence says nothing about it.**
+3. Check the README and any `data/` directory for a **second, narrower** claim (`仅供个人学习`, "non-commercial",
+   "for research use", an exam board's name, a ministry's name). A badge is a claim even when no file backs it.
+4. Record the verdict as **two licences, not one**, and stage only the half that is granted.
+
+**Why this matters more here than in most industries.** Exam corpora are the most reusable-looking and least
+reusable asset in education: they are compiled by national testing authorities, they are frequently
+**sovereign copyright**, and a repository can be sincerely Apache-2.0 about its own code while having no right
+to sublicense the questions at all. 🔴 **Default verdict for an engagement: stage the engine, re-source the
+corpus** — from the client's own item bank or a licensed provider. The engine is the part that took
+engineering; the corpus is the part that carries the liability.
+
+**Obligation:** Apache-2.0 over the code where the payload confirms it; **unresolved over the corpus**, which
+means treat it as all-rights-reserved until a separate grant is produced.
 
 ---
 
@@ -232,7 +303,9 @@ discriminating power.** A pass obeying the procedure literally would discard eve
 
 **Working procedure.** Three channels, in order:
 
-1. **Existence** — `curl -s -o /dev/null -w '%{http_code}' https://raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, falling back to `README.rst` then `LICENSE` / `LICENSE.md`. A `404` on `README.md` alone does not mean absent (Open edX uses `.rst`).
+1. **Existence** — `curl -s -o /dev/null -w '%{http_code}' https://raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, falling back **in this order** to lowercase **`readme.md`**, then `README.rst`, then `LICENSE` / `LICENSE.md`. A `404` on `README.md` alone does not mean absent (Open edX uses `.rst`).
+   🟢 **Lowercase `readme.md` added at p724, and the reason is not existence — it is region attribution.** `mizorewww/course2md` (**`508★`, MIT**, pushed `2026-11-09`) returns **`404` on `README.md` *and* `404` on `README.rst`**; its file is `readme.md` (`200`). The chain as previously written still reached `LICENSE` and got `200`, so the **existence verdict was always correct** — but the **payload was never read**, and `723-R` made README payload the replacement instrument for region attribution after `gh api users/{owner}` went `403`. A pass following the old chain literally places `course2md` in **no region at all**: a false regional nil, not a false absence.
+   ⚠️ **The fallback must stay ORDERED, never either/or.** Controls re-run at p724: `HKUDS/DeepTutor` and `THU-MAIC/OpenMAIC` are **`README.md` `200` / `readme.md` `404`** — probing lowercase first would break the two largest projects in the industry. `raw.githubusercontent.com` is case-sensitive; GitHub's own detector is not.
    ⚠️ **This probe has a false-negative mode, found this pass.** `h5p/h5p-php-library` returns `404` on *every* one of those four paths — it has no README and no LICENSE file at all — yet it is alive: `154★`, `GPL-3.0`, default branch `master`, pushed `2026-11-04`, and `master/h5p.classes.php` answers `200`. It is also a dependency inside Moodle, Canvas and Drupal. **A library repository need not carry a README.** So a `404` sweep across doc paths is grounds to escalate to step 2, never grounds to record absence: confirm against the index, and if the index has the repository with a real `pushed_at`, it exists. Absence requires *both* channels silent.
 2. **Metadata** — `gh api -X GET search/repositories -f q='{name} in:name' --jq '.items[]|select(.full_name=="{owner}/{repo}")'` yields real `stargazers_count`, `license.spdx_id`, `pushed_at`, `archived`. The direct `repos/{owner}/{repo}` endpoint is `403` in this session; this one is not.
 3. **Licence truth** — read `LICENSE` / `LICENSE.md` / `LICENSE-CODE` on the raw channel whenever the index says `NOASSERTION`, **and for Microsoft repositories regardless**. This pass that check caught three real errors: AutoGen is MIT at `LICENSE-CODE` (index says `CC-BY-4.0`), while PageLM and TeachAny carry bespoke non-OSI licences that read as open source in listings.
@@ -277,6 +350,9 @@ largest, most clearly articulated need.
 | Wants a differentiated product, not an integration | **P140** |
 | Low or intermittent connectivity | **P141** |
 | LATAM institution with no AI policy | **P143** |
+| Client wants a visible result fast, with no policy or LMS prerequisite | **P155** |
+| Recordings cannot leave the premises | **P155** (local-only stages) |
+| Staging any exam-prep / question-bank / past-paper repository | **P156** |
 | Any pass verifying a repository | **P142** |
 
 ---
