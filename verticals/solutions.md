@@ -3,6 +3,23 @@ industry: education
 region: Global
 updated: 2026-11-09
 ---
+## 🟡 Zero platform rows added at p721 — `128` carried in (COUNTED), `0` filed, `128` published, and the nil has ONE cause this pass
+
+**The nil is a measurement.** `6` candidate platforms were verified metadata-and-payload this pass and **every one was already on this shelf**: `moodle/moodle` (`7,593★`, GPL-3.0), `instructure/canvas-lms` (`6,905★`, AGPL-3.0, **last push `2026-04-30` — now six months stale**), `chamilo/chamilo-lms` (`1,021★`, GPL-3.0, pushed **today**), `sakaiproject/sakai` (`1,240★`, ECL-2.0), `oppia/oppia` (`6,981★`, 🟢 **Apache-2.0**), `portabilis/i-educar` (`724★`, GPL-2.0, Brazil). **No new platform was found, and the search is recorded so it is not re-spent.**
+
+🔴 **The one new platform-shelf finding is a NEGATIVE one, and it is important: `openedx/edx-platform` cannot be re-verified through this base's star channel.** `search/repositories` `422`s on the canonical address and returns only forks — two archived since 2015 and 2020. The project is alive (`README.rst` → `200`) but **this shelf can no longer print a star count for it from the API**, and the Open edX row should be read as *licence- and liveness-verified, star count unavailable* rather than silently carrying a stale figure. Recorded as `T174`.
+
+🟢 **And the `721-X` nil was RESOLVED the same pass rather than left as a gap.** The hardened `P124` harness separates *index nil* from *absence*, and run against Open edX it recovers everything the star channel could not:
+
+```
+openedx/edx-platform|alive=yes|NOT-IN-SEARCH-INDEX|grant=LICENSE|35135B|106a1b4b8b71
+```
+
+🟢 **Read from bytes at the default ref this pass: `35,135 B`, sha256₁₂ `106a1b4b8b71`, first line *"GNU AFFERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007"* — so the Open edX row's `AGPL-3.0` is now payload-verified rather than detector-reported**, which is a stronger claim than this shelf held for it before. 🔴 **The star count remains unavailable from the API and the row should say so** rather than carry a figure no channel in this session can reproduce.
+
+🟢 **The licence wall on this shelf is unchanged and worth restating, because it is the single fact that most shapes an education engagement:** of the `6` platforms re-read this pass, **`1` is permissive** (`oppia/oppia`, Apache-2.0) and `5` are copyleft (`GPL-3.0` ×2, `AGPL-3.0`, `ECL-2.0`, `GPL-2.0`). 🔵 **The studio's leverage in this industry is therefore the AGENT LAYER BESIDE THE PLATFORM, not a fork of the platform** — which is what every pattern on [`../compose/patterns.md`](../compose/patterns.md) is built to respect.
+
+
 
 ## 🟡 No platform added at p720 — the leg saturated for an EIGHTH consecutive pass, and this time the saturation is explained by a MEASUREMENT OF DEATH rather than by overlap
 

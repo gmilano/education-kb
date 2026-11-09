@@ -461,6 +461,35 @@ In machine learning, *adaptive learning* means a model adapting during training.
 
 ---
 
+### `T175` — The APAC education agent is consolidating as a *skill on a host harness*, not an application — and that is what makes it exportable
+
+**Evidence (p721):** all three agents filed this pass are APAC, MIT, and none of them is an app. [`yoli-mi/good-learning`](https://github.com/yoli-mi/good-learning) (`299★`) is *"an agent skill"* for study plans, daily lessons and a mistake book; [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (`372★`, held) names its hosts explicitly — *"Claude Code, Cursor, Codex, Antigravity"*; [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (`302★`, held) ships *"Bloom's 2-Sigma research as a Claude Code skill + self-hostable web app"*. [`THU-MAIC/dsh-openmaic`](https://github.com/THU-MAIC/dsh-openmaic) (`119★`) is the same move at the platform scale — OpenMAIC packaged for a specific harness.
+
+🟢 **The trend: the unit of distribution in education AI has become the skill, and the harness is treated as substitutable infrastructure.** A skill carries the pedagogy — the rubric, the lesson sequence, the mistake-book schema, the output templates — and inherits the model, the tool loop and the UI from whatever host the institution already runs.
+
+🔵 **Why this is the most commercially useful trend on this page right now:** it inverts the build-vs-buy question. **The studio does not need to build a tutor; it needs to localise one and attach it to the harness the client already has.** The pedagogy is the asset and it is already MIT-licensed.
+
+🔴 **The gate is language and curriculum, not licence.** `good-learning`'s prompts, acceptance criteria and LaTeX templates are Chinese-primary and keyed to PRC exam structure (`考纲`, `真题`, `错题本`); `Bloom` and the exam-prep skill are the same. **Localisation is a translation-and-pedagogy project of real size — and it is precisely the billable part.** `T152`'s per-region blocker table listed *"a language"* for APAC; `T175` restates it as the region's **export** cost rather than its import problem.
+
+### `T174` — Absence from a search index is not absence from the world, and in this industry the subject it hides is the second-biggest LMS
+
+**Evidence (p721):** `gh api search/repositories` — this base's star and licence channel since `p720` — returns a `422` validation error for `repo:openedx/edx-platform`, and `edx-platform in:name` returns **only forks**: `Edraak` (`13★`, archived 2020), `microsoftarchive` (`5★`, archived 2015), `Yarila682` (`0★`). `raw.githubusercontent.com/openedx/edx-platform/HEAD/README.rst` returns **`200`**.
+
+🔴 **The failure is well-shaped, which is why it would be believed:** the forks are real addresses with real `AGPL-3.0` grants and real star counts. A pass that read the nil as absence would delist Open edX and promote a 2015 Microsoft archive in its place.
+
+🟢 **The rule, now in force on three shelves:** a nil from `search/repositories` is a nil **from the index**, and must be confirmed against the raw channel before it is recorded as absence. 🔵 **The general form, and the reason this is a trend rather than an incident: every channel this base depends on is a VIEW, and a view's gaps are invisible from inside it.** `T173` is the same lesson on the verification instrument; `T174` is it on the discovery instrument.
+
+### `T173` — A verification instrument can invert its failure mode between passes, and a broken check is indistinguishable from a clean run
+
+**Evidence (p721):** the pass procedure mandates `curl -sI` to verify every URL. `p686` measured it returning **`200 Connection Established` for a repository that does not exist** — useless in the direction of false positives. p721 measured the **opposite polarity on the same instrument**: it now returns **`403` for all five** control addresses, including `HKUDS/DeepTutor` (`57,283★`), `THU-MAIC/OpenMAIC` (`43,102★`), a live `openedx/edx-platform`, and an address invented to be absent.
+
+🔴 **The same byte for a 57k-star project and for nothing at all.** Obeyed literally — *"a 404 is not a finding"* — the mandated step would have rejected **all four** of this pass's filings.
+
+🟢 **The trend, and it generalises past this one tool: an instrument's failure mode is not stable across time, because the thing being measured is a PROXY, a CDN or an API whose behaviour changes without notice.** `p686`'s finding was not superseded by a fix; it was superseded by a *different* breakage.
+
+🔵 **The operational rule, which is the transferable part:** every pass must re-run its verification instrument against a **known-absent control** alongside the known-present ones. A check that has silently stopped discriminating returns clean results on everything, **so the only way to see it is to ask it a question whose answer must be negative.** p721's control is `gmilano/this-does-not-exist-xyz`; the replacement channel (`raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, falling back to `README.rst`) scored `4 / 4` present and `1 / 1` absent and is wired as `P124`.
+
+
 ### `T172` — Licence **metadata absence** is becoming a commercial signal, not a gap — vendors are choosing bespoke source-available grants
 
 **Evidence (p709):** [`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) reports `spdx_id` **`NOASSERTION`**. Its `4,137 B` payload is a **“ClassroomPath Source-Available License 1.0”** whose second sentence is *“This license is source-available, not open source”*, granting read / audit / private modification / **non-production** test use only, with `Production Use` defined to include *“pilots, school deployments, hosted instances, managed services, and internal institutional rollouts”* and `Reproduction` requiring written permission. The **same owner** publishes [`balejosg/OpenPath`](https://github.com/balejosg/OpenPath) under **AGPL-3.0** (`9★`) over the same problem, and the proprietary grant even defines *“OpenPath Components”* as files that stay under their own notices. **Both pushed `2026-11-05`.**

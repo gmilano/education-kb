@@ -287,6 +287,58 @@ done
 
 🔴 **The governance line to hold:** this instrument measures individuals. Agree in writing, before step 1, that step 2's output is **aggregate and concept-level**, never per-developer performance data. Get that wrong once and the pilot is finished — and in the EU it is also a works-council and GDPR matter, not merely an etiquette one.
 
+### `P124` — The supply-verification harness: prove a repository is alive, permissive and current before it reaches a client slide (any region, half a day, and it precedes every other pattern)
+
+**Why this exists:** `p721` measured the mandated `curl -sI` check returning **`403` for every address, alive or absent** (`T173`), and `search/repositories` returning **nothing for a live `openedx/edx-platform`** (`T174`). Two of this base's three instruments were wrong in the same pass, in opposite directions. **Every pattern below depends on the component list being real, so this one runs first.**
+
+**Wire it from three channels, because no single channel is sufficient:**
+
+| Question | Channel | Why not the obvious one |
+|---|---|---|
+| Does it exist? | `curl -s -o /dev/null -w "%{http_code}" https://raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, then `README.rst` | 🔴 `curl -sI https://github.com/...` is `403` for everything here; 🔴 a `search/repositories` nil is an *index* nil (`openedx/edx-platform`) |
+| Stars, `spdx_id`, `archived`, `pushed_at`, `default_branch` | `gh api -X GET search/repositories -f q='repo:{owner}/{repo}'` | 🔴 `gh api repos/{owner}/{repo}` is `403` — GitHub access is scoped to the orchestrating repository |
+| What does the grant actually say? | `curl -s https://raw.githubusercontent.com/{owner}/{repo}/HEAD/LICENSE` → byte count + `sha256sum` | 🔴 `spdx_id` is a **detector's guess**: `NOASSERTION` on `rasbt/LLMs-from-scratch` (`108,058★`) and `CC-BY-4.0` on `microsoft/autogen` both need the payload read |
+
+**The runnable core (used for all four p721 filings):**
+
+```bash
+verify() {  # usage: verify owner/repo
+  r="$1"
+  for p in README.md README.rst; do
+    c=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/$r/HEAD/$p")
+    [ "$c" = "200" ] && { alive=yes; break; }
+  done
+  # 2>/dev/null is NOT enough: a 422 body arrives on STDOUT, so filter to the jq line
+  meta=$(gh api -X GET search/repositories -f q="repo:$r" \
+    --jq '.items[]|"\(.stargazers_count)|\(.license.spdx_id)|\(.archived)|\(.pushed_at)|\(.default_branch)"' \
+    2>/dev/null | grep -v '^{' )
+  [ -z "$meta" ] && meta="NOT-IN-SEARCH-INDEX"   # 🔴 an index nil, NOT absence — see T174
+  for p in LICENSE LICENSE.md LICENSE.txt; do
+    body=$(curl -s "https://raw.githubusercontent.com/$r/HEAD/$p")
+    c=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/$r/HEAD/$p")
+    [ "$c" = "200" ] && { echo "$r|alive=${alive:-no}|$meta|grant=$p|$(printf '%s' "$body" | wc -c)B|$(printf '%s' "$body" | sha256sum | cut -c1-12)"; return; }
+  done
+  echo "$r|alive=${alive:-no}|$meta|grant=ABSENT"   # 🔴 a refusal, not a row
+}
+```
+
+🔴 **The single most important instruction in this pattern is the control.** Always include **one address invented to be absent** in the batch:
+
+```bash
+verify gmilano/this-does-not-exist-xyz   # MUST report alive=no
+```
+
+**If the control reports `alive=yes`, the whole batch is void** — the channel has stopped discriminating and every other result in the run is meaningless. This is the check that `p686` and `p721` would both have caught immediately and that the mandated procedure never had.
+
+**Four gates, applied in order, each one a refusal rather than a caveat:**
+1. 🔴 `alive=no` → **not a finding.** Do not write the row.
+2. 🔴 `archived=true` → **a tombstone, not traction.** `p720` caught `Luispitik/sinapsis` at `46★` this way; `p719` caught `FlowiseAI/Flowise` at `55,568★`.
+3. 🔴 `grant=ABSENT` or `spdx_id` ∈ {`null`, `NOASSERTION`} → **refuse with cause, whatever the star count.** p721 refused `185★`, `20★` and `108,058★` subjects under this gate.
+4. 🟡 `pushed_at` older than six months → **file it, and state the date in the cell.** `instructure/canvas-lms` (`2026-04-30`) and `yunger7/enem-api` (`2025-12-14`) are both filed with their staleness visible.
+
+🟢 **Deliverable for a client:** a one-page component register where every row carries stars, grant payload bytes, `sha256₁₂`, default branch and last-push date, **plus the dated control line proving the instruments were working when the register was built.** That last line is what makes the register auditable six months later, and no roundup or vendor deck has it.
+
+
 ### `P123` — The LATAM institutional-system engagement: find it, place it, and build on it without touching a copyleft or a revocable grant (LATAM-first, 5–8 weeks)
 
 **The three findings this pattern is built from, all measured at p716.** (1) The Spanish/Portuguese keyword channel is **exhausted** (`0` and `1`-stale results, `716-D`). (2) LATAM nonetheless has the strongest adoption this base holds — **`92 %` of students, `79 %` of faculty** — against **only ≈`30 %` of universities having a published AI policy**: a `62`-point governance gap. (3) The region's largest public-sector publisher, the **IDB** (`EL-BID`, `79` repositories), grants **`0`** permissively (`715-A`).

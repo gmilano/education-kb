@@ -3,6 +3,26 @@ industry: education
 region: Global
 updated: 2026-11-09
 ---
+## 🆕 2026-11-09 (p721) — the trending read, and the correction that the most-starred education repository in the industry is NOT permissively licensed
+
+**Measured this pass from `gh api search/repositories`, not from a roundup.** The star figures in the November-2026 trending blogs are wrong by wide margins in both directions, and the gap is now large enough to be a standing caution rather than a note.
+
+| Repository | Trending-post claim | 🟢 Read at p721 | Licence (`spdx_id`) | Delta |
+|---|---|--:|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | *"roughly 45K"* (Oct-2026 roundup) | **`57,283`** | 🟢 `Apache-2.0` | 🔴 **understated `~27%`** |
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | *"42K-star multi-agent classroom"* | **`43,102`** | 🟢 `MIT` | 🟢 close — pushed **today**, `2026-11-09T08:19Z` |
+| [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub) | *"around 40K … +1,191 stars in a single day"* | **`41,532`** | 🟢 `MIT` | 🟢 consistent |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | *"108,049 stars, +519 since 2026-10-30"* | **`108,058`** | 🔴 **`NOASSERTION`** | 🔴 **the star count is right and the LICENCE CLAIM IS THE PROBLEM** |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | *"Microsoft's 12-lesson course"* | **`79,236`** | 🟢 `MIT` | 🟡 **it is `18` lessons now, not `12`** — the description says so |
+| [huggingface/agents-course](https://github.com/huggingface/agents-course) | *"open-source course"* | **`34,624`** | 🟢 `Apache-2.0` | 🟢 confirmed |
+
+🔴 **The headline correction: `rasbt/LLMs-from-scratch` is the most-starred education repository in this industry at `108,058★`, and its `spdx_id` is `NOASSERTION`** — GitHub's own detector cannot classify its grant. Every roundup this base sampled calls it open source without qualification. **A star count is not a permission.** It is refused on [`../agents/top.md`](../agents/top.md) with cause rather than filed.
+
+🟢 **Owner expansion, run this pass, and it is where the trending signal actually lives:** `org:HKUDS` returns a portfolio whose education row is only its second-largest — `CLI-Anything` (`58,484★`, Apache-2.0), `DeepTutor` (`57,283★`), `nanobot` (`49,954★`, MIT), `LightRAG` (`40,618★`, MIT, held), `RAG-Anything` (`24,470★`, MIT, held). `org:THU-MAIC` returns `8` repositories behind the one trending headline, **two of which carry no licence at all** (`MAIC-UI` `185★`, `SimClass` `20★`). 🔵 **A trending post names the one repository; the owner query names the eight behind it, with their grants — and in this case two of the eight are unusable.**
+
+🟡 **Measured caution on `THU-MAIC/dsh-openmaic` (`119★`, MIT, already held):** OpenMAIC packaged for the DeepSeek Harness, last push `2026-08-13`. It is the harness-specific port, not the project — **start from `OpenMAIC` itself unless the engagement is already committed to that harness.**
+
+
 
 ## 🆕 2026-11-09 (p720) — 🔴 **FIVE FOUNDATION ROWS, AND THE FINDING IS A MEASUREMENT OF DEATH: THE PERMISSIVE SCHOOL-ADMINISTRATION FIELD HAS EXACTLY ONE LIVE MEMBER ABOVE `48★`, AND NONE OF THE NINE DEAD ONES IS FLAGGED `archived`**
 
