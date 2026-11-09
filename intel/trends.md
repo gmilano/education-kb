@@ -4,6 +4,132 @@ region: Global
 updated: 2026-11-09
 ---
 
+# Education AI — Current Trends
+
+**Pass p722 · researched 2026-11-09.** Eight trends — **T226–T233** — each with the evidence
+that supports it and, where it exists, the evidence that complicates it. The accumulated
+registry **T1–T225** from prior passes is preserved in full below.
+
+> **Two separate `T` numbering spaces exist in this KB and they are not the same series.**
+> This file's `T` numbers are *industry trends* (now T1–T233). The `T` numbers in
+> [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
+> pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
+> been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## T226 — Evidence has become the buying criterion
+
+Adoption is near-saturated (86% of education organisations use generative AI per Microsoft,
+2025) but **only 45% of the most-used tools have published research meeting an ESSA evidence
+tier**. The market now rewards products that solve a specific problem *and can prove it*.
+
+*Implication:* efficacy study design is no longer academic overhead — it is part of the
+product, and in US public procurement it is the gate.
+
+## T227 — Agent-native tutoring has displaced chatbot tutoring
+
+The chatbot-as-tutor pitch is explicitly named as **fading** in 2026 analyses. What replaced
+it is architecturally different: persistent learner memory, multi-agent role separation and
+explicit mastery models. The two largest projects in the industry demonstrate it — DeepTutor
+(57,348★, Apache-2.0) is built on *lifelong* personalised tutoring with memory across
+sessions, and OpenMAIC (43,112★, MIT) assigns separate agents to teacher, peer and assistant
+roles rather than running one model in a loop.
+
+*Implication:* a single-prompt tutor is now a 2023-shaped product. The defensible unit is the
+learner model, not the conversation.
+
+## T228 — Pedagogy-in-control is becoming the stated design constraint
+
+The OECD's *Digital Education Outlook 2026* (January 2026) holds that AI helps learning
+**only when pedagogy stays in control**. This is converging with the EU AI Act's human
+oversight requirements for high-risk systems, and with the reappearance of Bayesian
+Knowledge Tracing (OATutor, MIT) as the auditable mastery model of choice.
+
+*Implication:* interpretable learner models are gaining ground over end-to-end LLM judgement
+— partly for pedagogy, partly because high-risk classification demands explainability.
+
+## T229 — Regulatory divergence is now the dominant integration cost
+
+Four regimes, four shapes, same year:
+
+- **EU** — education is high-risk under the AI Act; emotion recognition banned in schools
+  since Feb 2025; high-risk obligations reported delayed to **2 Dec 2027**.
+- **US** — a federal framework and K–12 task force, plus **~100 state bills** tracked this
+  year and **15+ states** legislating. Guidance outpaces binding rules.
+- **UAE** — **25 specific generative-AI prohibitions** for schools (Feb 2026).
+- **LATAM** — **no binding national law found in force**; governance arriving via UNESCO,
+  CENIA, IADB and ECLAC instead.
+
+*Implication:* multi-region EdTech products need compliance as an architectural axis.
+Building to EU high-risk standards yields a product sellable everywhere; the reverse does not hold.
+
+## T230 — The adoption–governance gap is widest where adoption is highest
+
+LATAM is the clearest case: **92% of students and 79% of faculty** actively using AI against
+**only 30% of universities having published an AI policy**. UNESCO IESALC found the same
+asymmetry across 200 institutions in 19 countries. EMEA shows a milder version — teachers in
+six countries adopted AI *autonomously, without a regulatory framework*, with >90% usage in Spain.
+
+*Implication:* the near-term buyer in both regions is an institution needing governance,
+not a classroom needing another tool. Faster to deliver and reaches a defined decision-maker.
+
+## T231 — Teacher enablement is the explicitly requested product
+
+Across EMEA studies the educators' own stated priority is **structured training**. Surveys
+also find teachers worried AI is entering classrooms faster than schools can manage. UNESCO
+maintains a teacher AI competency framework; the European Commission updated AI ethics
+guidance for teachers through the Digital Education Hub.
+
+*Implication:* the demand signal points at enablement programmes, and the market is
+oversupplied with tools relative to training.
+
+## T232 — AI on top of incumbent LMSs beats LMS replacement
+
+Moodle (~200k active sites, GPL-3.0), Canvas (AGPL-3.0) and Open edX (AGPL-3.0) are not
+being displaced; they are being extended. The evidence is in the repositories: the most
+relevant new education project this pass is a **Moodle plugin**
+(`moodle-ai-skill-navigator`, 279★, GPL-3.0 — tutoring, quiz generation, mind maps, RAG over
+course materials), and H5P remains the rendering surface inside all three.
+
+*Implication:* propose LTI/plugin sidecars. It avoids AGPL entanglement, inherits the
+install base, and survives the client's next LMS upgrade.
+
+## T233 — Workforce and skills-first credentialing is where new budget is
+
+Governments and employers are expanding early-career pathways, industry-aligned
+microcredentials and in-flow-of-work learning. Instructure launched **Canvas Career**, a
+skills-first AI LMS aimed at workforce learning. Skill-gap-to-learning-path generation is
+the matching research direction (`gen-mentor`, CC0-1.0, WWW '25 oral).
+
+Meanwhile the old consumer model is contracting: **Chegg cut 45% of staff (388 roles)** as AI
+eroded homework-help traffic.
+
+*Implication:* budget is rotating from consumer study aids to employer- and government-funded
+skills infrastructure. Different buyer, larger contract, longer cycle.
+
+## Counter-signals worth holding
+
+Honest caveats on the above, so this file is not read as uniformly bullish:
+
+- **Market sizing is unreliable.** Estimates for 2026–2027 span **$10–23B** — a >2× spread
+  within a single year. Most sources are vendor-commissioned. Treat all CAGR figures as
+  directional only.
+- **Adoption figures measure usage, not value.** "86% use generative AI" and "95% of UK
+  undergraduates" count touches, not learning outcomes. Trend 1 exists precisely because
+  outcome evidence is scarce.
+- **APAC adoption is patchier than its supply suggests.** The region produces the best
+  open-source agents *and* reported only 30% virtual-tutor adoption with connectivity as a
+  barrier. Supply leadership is not demand leadership.
+- **EU timelines have already slipped once.** High-risk education obligations moved to
+  Dec 2027; a compliance practice built on an assumed date should assume it can move again.
+
+---
+
+# Accumulated registry — T1–T225 (preserved from p721)
+
+Carried forward verbatim from prior passes. Figures inside were read at the pass that filed
+each trend, **not today**.
+
+
 ## 🆕 T220–T225 — added at p720 (2026-11-09)
 
 ## T220 — The verified-solver tutor is now a convergent pattern, and one repository has MEASURED why it works

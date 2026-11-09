@@ -4,6 +4,195 @@ region: Global
 updated: 2026-11-09
 ---
 
+# Composition Patterns — Education
+
+**Pass p722 · verified 2026-11-09.** Concrete recipes using only components verified this
+pass. Each pattern names the specific repos, their licences, how they wire together, and the
+constraint that decides whether it fits a given engagement.
+
+Licences are the real design input here. Every pattern states its resulting obligation.
+
+**Numbering.** This pass adds **P138–P143**. The accumulated registry **P1–P137** from prior
+passes is preserved in full below the new entries — it is a registry with stable IDs, so new
+patterns continue the sequence rather than reusing it. (This pass initially drafted its six
+recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
+different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
+prior engagement may cite.)
+
+---
+
+## P138 — AI sidecar on an incumbent LMS (the default engagement shape)
+
+**Use when:** the client already runs Moodle, Canvas or Open edX — which covers most
+institutional engagements.
+
+**Components**
+- Incumbent LMS: [moodle/moodle](https://github.com/moodle/moodle) (GPL-3.0) · [instructure/canvas-lms](https://github.com/instructure/canvas-lms) (AGPL-3.0) · [openedx/edx-platform](https://github.com/openedx/edx-platform) (AGPL-3.0)
+- Reference bridge: [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) (279★, GPL-3.0) — read it before writing your own
+- Rendering surface: [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) (GPL-3.0), already installed in all three
+- Agent runtime: [huggingface/smolagents](https://github.com/huggingface/smolagents) (Apache-2.0)
+
+**Wiring.** Stand the agent up as a **separate service** behind LTI 1.3 / the LMS web
+services API. It reads roster and gradebook over the API, generates exercises as **H5P
+content types** so the LMS renders them natively, and writes scores back through the
+gradebook API. No patches to LMS core.
+
+**Why this shape.** It is the AGPL answer. A separate service communicating over a network
+API is not a derivative work of the LMS, so the client's disclosure obligations are
+unchanged — and the integration survives their next LMS upgrade, which a core fork does not.
+
+**Obligation:** your service stays under whatever licence you choose. Modifications to the
+`moodle-ai-skill-navigator` reference bridge are GPL-3.0.
+
+---
+
+## P139 — Auditable mastery tutor (regulated / high-risk deployments)
+
+**Use when:** the deployment is EU high-risk, or the buyer requires explainable progression
+— increasingly North American public procurement too.
+
+**Components**
+- Learner model: [CAHLR/OATutor](https://github.com/CAHLR/OATutor) (278★, MIT) — Bayesian Knowledge Tracing
+- Tutoring policy: [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) (99★, MIT) — MCP server encoding tutoring research
+- Path planning: [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) (136★, CC0-1.0)
+- Runtime: [huggingface/smolagents](https://github.com/huggingface/smolagents) (Apache-2.0)
+
+**Wiring.** BKT from OATutor owns mastery state — **not** the LLM. The LLM is confined to
+explanation and dialogue; `tutor-mcp` exposes tutoring moves as MCP tools so the model
+selects a pedagogical action rather than improvising one. `gen-mentor` sequences objectives.
+Every progression decision is traceable to a BKT posterior you can show a regulator.
+
+**Why this shape.** It satisfies the OECD's "pedagogy stays in control" constraint and the
+AI Act's human-oversight and explainability requirements, because the decisions that matter
+are made by an interpretable model with the LLM as a presentation layer.
+
+**Obligation:** fully permissive (MIT + CC0 + Apache-2.0). No copyleft anywhere. The most
+commercially flexible pattern in this file.
+
+---
+
+## P140 — Productising APAC academic research (highest leverage available)
+
+**Use when:** the client wants a differentiated tutoring product rather than an integration.
+
+**Components**
+- [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (57,348★, **Apache-2.0**) — lifelong tutoring with persistent learner memory
+- [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) (43,112★, **MIT**) — multi-agent classroom, teacher/peer/assistant roles
+- Benchmarks: [OpenLMLab/GAOKAO-Bench](https://github.com/OpenLMLab/GAOKAO-Bench) (806★, Apache-2.0) · [deekur/gaokaomath](https://github.com/deekur/gaokaomath) (1,946★, CC-BY-4.0)
+
+**Wiring.** Use DeepTutor's memory layer as the learner-state store and OpenMAIC's role
+separation as the interaction model. Harden what research code always lacks: auth, tenancy,
+rate limiting, PII handling, observability, cost controls. Measure against GAOKAO-Bench so
+improvement claims are defensible, and swap in the client's own curriculum corpus.
+
+**Why this shape.** Two projects at 57k and 43k stars, both permissively licensed, both
+research artefacts with **no commercial wrapper**. The gap between their capability and
+enterprise-readiness is exactly engineering work — which is the business Globant is in.
+
+**Obligation:** Apache-2.0 + MIT: commercial use fine, attribution and Apache patent terms
+apply. CC-BY-4.0 on the corpus requires attribution if redistributed — cite, don't silently vendor.
+
+---
+
+## P141 — Offline-first tutoring for low-connectivity systems
+
+**Use when:** LATAM or APAC public education, rural deployments, anywhere bandwidth is
+intermittent. APAC's reported 30% virtual-tutor adoption is partly a connectivity problem.
+
+**Components**
+- Delivery: [learningequality/kolibri](https://github.com/learningequality/kolibri) (1,173★, **MIT**)
+- Content: [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) (GPL-3.0)
+- Local model: a small quantised model on-device; **no** cloud LLM dependency in the learning path
+- Regional corpus: [yunger7/enem-api](https://github.com/yunger7/enem-api) (366★, GPL-2.0) for Brazil
+
+**Wiring.** Kolibri's sync model is the architecture: content and learner records
+reconcile when connectivity appears, and the tutoring loop runs locally. Pre-generate
+exercise banks and explanations **server-side in batch**, ship them as H5P packages, and
+keep inference on-device minimal. Degrade to pre-generated content, never to a blank screen.
+
+**Why this shape.** It inverts the usual assumption. Most tutoring agents are unusable at
+200ms-plus intermittent latency; batch-generate-then-sync is what actually ships in these
+markets.
+
+**Obligation:** Kolibri MIT; H5P content GPL-3.0; ENEM API GPL-2.0 — keep it as an external
+data source rather than linking it into your product.
+
+---
+
+## P142 — Repository verification probe (tooling, not a client pattern)
+
+**Use when:** any pass of this KB verifies a repository. Recorded here so it is not re-derived.
+
+**The mandated instrument does not work in this environment.** Control run, this pass:
+
+| Address | `curl -sI github.com/...` | `raw.../HEAD/README.md` | Truth |
+|---|--:|--:|---|
+| `HKUDS/DeepTutor` | `403` | `200` | alive, 57,348★ |
+| `THU-MAIC/OpenMAIC` | `403` | `200` | alive, 43,112★ |
+| `openedx/edx-platform` | `403` | `404` (`.md`) → `200` (`.rst`, `LICENSE`) | alive, AGPL-3.0 |
+| `gmilano/this-does-not-exist-xyz` | `403` | `404` | **absent** |
+
+`curl -sI` returns the identical byte for a 57k-star project and an invented address: **zero
+discriminating power.** A pass obeying the procedure literally would discard every real finding.
+
+**Working procedure.** Three channels, in order:
+
+1. **Existence** — `curl -s -o /dev/null -w '%{http_code}' https://raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, falling back to `README.rst` then `LICENSE` / `LICENSE.md`. A `404` on `README.md` alone does not mean absent (Open edX uses `.rst`).
+   ⚠️ **This probe has a false-negative mode, found this pass.** `h5p/h5p-php-library` returns `404` on *every* one of those four paths — it has no README and no LICENSE file at all — yet it is alive: `154★`, `GPL-3.0`, default branch `master`, pushed `2026-11-04`, and `master/h5p.classes.php` answers `200`. It is also a dependency inside Moodle, Canvas and Drupal. **A library repository need not carry a README.** So a `404` sweep across doc paths is grounds to escalate to step 2, never grounds to record absence: confirm against the index, and if the index has the repository with a real `pushed_at`, it exists. Absence requires *both* channels silent.
+2. **Metadata** — `gh api -X GET search/repositories -f q='{name} in:name' --jq '.items[]|select(.full_name=="{owner}/{repo}")'` yields real `stargazers_count`, `license.spdx_id`, `pushed_at`, `archived`. The direct `repos/{owner}/{repo}` endpoint is `403` in this session; this one is not.
+3. **Licence truth** — read `LICENSE` / `LICENSE.md` / `LICENSE-CODE` on the raw channel whenever the index says `NOASSERTION`, **and for Microsoft repositories regardless**. This pass that check caught three real errors: AutoGen is MIT at `LICENSE-CODE` (index says `CC-BY-4.0`), while PageLM and TeachAny carry bespoke non-OSI licences that read as open source in listings.
+
+**Two standing cautions.**
+- *Index absence is not absence.* `search/repositories` has no entry for `openedx/edx-platform`; it is alive and is the second-most-deployed LMS in the industry. Confirm a nil on the raw channel before writing it down.
+- *Quote your phrases.* Unquoted `grading in:description` matches **"production-grade"** and returns a full page of general agent frameworks that looks like a healthy result set. `"intelligent tutoring" in:description` returns real ITS projects. The same trap hit `"course generation"` this pass — it returned OpenClaw, n8n and AutoGPT. A ruined leg looks exactly like a successful one, which is why the phrase quoting is a rule and not a preference.
+
+---
+
+## P143 — Institutional AI governance package (LATAM, fastest to deliver)
+
+**Use when:** a LATAM university or ministry — 70% of them have no published AI policy
+against 92% student usage.
+
+**Components**
+- Framework base: UNESCO IESALC guidance · UNESCO teacher AI competency framework · Council of Europe AI and Education Compass
+- Design target: **EU AI Act** high-risk requirements (strictest available; yields a product valid in all five regions)
+- Sovereignty option: **Latam-GPT** (open LLM for Latin America and the Caribbean, via UNESCO + Chile's CENIA)
+- Evidence layer: ESSA evidence tiers as the efficacy-measurement vocabulary
+
+**Wiring.** Not a software pattern — an assessment-then-architecture engagement. Audit
+current AI usage, classify systems by AI Act risk tier, write the institutional policy,
+then implement the technical controls the policy requires (audit logging, human override,
+PII boundaries, model-provenance disclosure). Latam-GPT gives a data-residency answer no
+North American competitor can offer.
+
+**Why this shape.** It reaches a defined buyer with a defined gap and short delivery cycles,
+and it seeds the follow-on implementation work. The governance gap is the region's
+largest, most clearly articulated need.
+
+**Obligation:** none from these components — frameworks and guidance, not licensed code.
+
+---
+
+## Pattern selection
+
+| Engagement signal | Pattern |
+|---|---|
+| Client already runs an LMS | **P138** |
+| EU deployment / high-risk / explainability required | **P139** |
+| Wants a differentiated product, not an integration | **P140** |
+| Low or intermittent connectivity | **P141** |
+| LATAM institution with no AI policy | **P143** |
+| Any pass verifying a repository | **P142** |
+
+---
+
+# Accumulated registry — P1–P137 (preserved from p721)
+
+Everything below is carried forward verbatim from prior passes. Component star counts and
+licences inside these patterns were read at the pass that filed each one, **not today** —
+re-verify against `P142` before staking an engagement on a specific row.
+
+
 ## 🆕 P134–P137 — added at p720 (2026-11-09)
 
 ## P134 — The verified-solver tutor: the model narrates, a deterministic engine computes, and code checks the reply before the learner sees it (every region; mandatory for any procedural subject)

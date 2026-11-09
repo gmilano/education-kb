@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-11-09
 ---
+## 🆕 2026-11-09 (p722) — the trending read, and the finding that this industry's open-source supply is REGIONALLY LOPSIDED in a way the star rankings hide
+
+**Measured this pass from `gh api -X GET search/repositories`, not from a roundup.** Every figure below was read on 2026-11-09.
+
+### 🟢 The top of the industry, re-read today
+
+| Repository | Stars (p721) | 🟢 Read at p722 | Licence (verified) | Last push |
+|---|--:|--:|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `57,283` | **`57,348`** | 🟢 `Apache-2.0` | 2026-11-07 |
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | `43,102` | **`43,112`** | 🟢 `MIT` | **2026-11-09 (today)** |
+| [microsoft/autogen](https://github.com/microsoft/autogen) | refused (`CC-BY-4.0`) | **`61,757`** | 🟢 **`MIT` at `LICENSE-CODE`** — refusal closed, see `722-L` | 2026-10-28 |
+| [huggingface/smolagents](https://github.com/huggingface/smolagents) | — | **`30,273`** | 🟢 `Apache-2.0` | 2026-11-03 |
+
+**`+65` for DeepTutor and `+10` for OpenMAIC over roughly 24 hours.** Both are still climbing; neither has a commercial wrapper. That combination — 57k and 43k stars, `Apache-2.0` and `MIT`, no product around either — is the single largest opportunity recorded in this KB, written up as `P140` on [`../compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 `722-T` — the trending view of this industry is dominated by repos that are not education technology
+
+Three of this pass's global legs returned general agent frameworks at the top of an *education* query, at star counts that drown out every real education project:
+
+| Returned by an education query | Stars | What it actually is |
+|---|--:|---|
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | `394,229` | General agent runtime |
+| [n8n-io/n8n](https://github.com/n8n-io/n8n) | `209,895` | Workflow automation (`NOASSERTION` — fair-code, **not OSI**) |
+| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | `199,947` | Web scraping for agents (`AGPL-3.0`) |
+| [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | `187,961` | General agent (`NOASSERTION`) |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | `39,457` | Curated list (`MIT`) |
+
+🔴 **The largest education-native project in the world sits at 57k stars — roughly one seventh of a single general-purpose agent runtime.** Any ranking that sorts "AI + education" by stars returns infrastructure, not education. 🟢 **Consequence for this file: trending in this industry must be read within education-native queries, never by star rank across an "AI" query.**
+
+### 🟢 Education-native movers, read today
+
+| Repository | Stars | Licence | Last push | Note |
+|---|--:|---|---|---|
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | `2,459` | `AGPL-3.0` | **2026-11-09** | Next-gen open LMS; the credible new-stack alternative to the 20-year incumbents |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | `2,065` | 🔴 **bespoke "PageLM Community License"** | 2026-11-04 | Community NotebookLM for education. **Not OSI** — see `722-P` |
+| [deekur/gaokaomath](https://github.com/deekur/gaokaomath) | `1,946` | `CC-BY-4.0` | 2026-11-08 | Gaokao maths papers **1952–2026**; a 74-year corpus, actively maintained. **APAC** |
+| [ai-infra-curriculum/ai-infra-engineer-learning](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | `1,857` | `MIT` | 2026-11-03 | Production ML-infrastructure curriculum |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | `1,173` | `MIT` | 2026-11-08 | Offline-first delivery; the answer for low-connectivity systems |
+| [ziqihe10-droid/xuefeng-agent](https://github.com/ziqihe10-droid/xuefeng-agent) | `909` | 🔴 `NOASSERTION` | 2026-06-27 | AI exam-choice advisor. **APAC** |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | `908` | `LGPL-3.0` | 2026-11-02 | Education ERP on Odoo — the "Odoo for ERP" of this industry |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | `806` | 🟢 **`BSD-3-Clause`** | **2026-11-09** | Autograding + TA grading, production-deployed. **North America** — see `722-N` |
+| [OpenLMLab/GAOKAO-Bench](https://github.com/OpenLMLab/GAOKAO-Bench) | `806` | `Apache-2.0` | 2025-01-07 | The APAC academic LLM benchmark. Stable corpus, not active development |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | `591` | 🔴 `NOASSERTION` | 2026-03-25 | Skill tree from K-12 to career |
+| [yunger7/enem-api](https://github.com/yunger7/enem-api) | `366` | `GPL-2.0` | 2025-12-14 | Brazil's ENEM exams as an open API. **LATAM** |
+| [weponusa/teachany](https://github.com/weponusa/teachany) | `296` | 🔴 **bespoke dual licence** | 2026-10-18 | Instructional-design OS for K-12. **Not OSI** — see `722-P` |
+| [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | `279` | `GPL-3.0` | 2026-11-07 | Moodle plugin: tutoring, quizzes, mind maps, RAG over course materials — the clearest AI-on-incumbent-LMS bridge found |
+
+### 🔵 `722-W` — the regional shape of supply, which the star rankings conceal
+
+Counted across every leg run this pass:
+
+| Region | Education-native repos found | Largest | Character of supply |
+|---|--:|---|---|
+| **APAC** | most of the shelf | `57,348★` | Academic (HKU, Tsinghua) + national-exam tooling. **The industry's open-source engine room** |
+| **Global** | substantial | `61,757★` | General agent frameworks used as substrate |
+| **North America** | `2` real, both academic | `806★` | Institutional (UC Berkeley, Rensselaer). Reachable only by institution-shaped queries — `722-N` |
+| **LATAM** | `3`, all exam-shaped | `366★` | National-exam tooling (ENEM). Language-shaped queries are a dead leg — `722-R` |
+| **EMEA** | `1` | `99★` | 🔴 **Effectively absent.** Fifth consecutive measured nil — `722-E` |
+
+🔵 **This table is the most useful thing on this page for staffing.** An APAC engagement starts from existing code; an EMEA engagement starts from regulation; a LATAM engagement starts from governance and an exam corpus; a North American engagement starts from an institution's repository and an evidence requirement. **The star rankings suggest all four are the same problem. They are not.**
+
+### 🔴 Licence flags raised this pass
+
+`NOASSERTION` appears on four of the movers above and **means "read the file", not "probably permissive"**. Read this pass: `PageLM` → bespoke community licence; `teachany` → bespoke dual licence; `n8n` → fair-code, not OSI; `awesome-ai-llm4education` (`221★`) → **no `LICENSE` file at HEAD at all**, so default copyright applies — cite it, do not vendor it.
+
 ## 🆕 2026-11-09 (p721) — the trending read, and the correction that the most-starred education repository in the industry is NOT permissively licensed
 
 **Measured this pass from `gh api search/repositories`, not from a roundup.** The star figures in the November-2026 trending blogs are wrong by wide margins in both directions, and the gap is now large enough to be a standing caution rather than a note.

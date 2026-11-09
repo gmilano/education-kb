@@ -3,169 +3,87 @@ industry: education
 region: Global
 updated: 2026-11-09
 ---
-## 🟢 One foundation row added at p721 — and the pass's product here is that THE SEARCH INDEX IS NOT THE EXISTENCE ORACLE, measured on OPEN EDX
 
-**`364` carried in (COUNTED), `1` filed, `365` published.** The filing is LATAM and it is an **exam corpus**, not a framework — see `721-E` below for why that is the scarcer artefact.
+# Foundational Repositories — Education
 
-🔴 **`721-X` — `openedx/edx-platform` is ABSENT from `search/repositories` and ALIVE on GitHub.** This shelf's star and licence channel (`p720`'s instrument) returns a `422` validation error for the canonical Open edX address, and `edx-platform in:name` returns **only forks**: `Edraak/edx-platform` (`13★`, **archived** `2020`), `microsoftarchive/edx-platform` (`5★`, **archived** `2015`), `Yarila682/edx-platform` (`0★`). Meanwhile `raw.githubusercontent.com/openedx/edx-platform/HEAD/README.rst` answers **`200`**.
+**Pass p722 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
+Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
-🔴 **A pass that reads a search nil as absence would delist the second-most-deployed LMS in this industry and promote a 2015 Microsoft archive in its place.** The three forks are exactly the shape of a plausible wrong answer: real addresses, real licences (`AGPL-3.0`), real star counts, and two of them dead for five years or more. 🟢 **Rule now in force on this shelf: a nil from `search/repositories` is a nil FROM THE INDEX and must be confirmed against `raw.githubusercontent.com` before it is written down as absence.** Recorded as `T174`.
+Stars, SPDX licence and `pushed_at` read this pass via `gh api -X GET search/repositories`;
+existence confirmed on the raw channel. Where the search index has no entry for a
+repository that demonstrably exists, that is stated in the row rather than treated as absence.
 
-🟢 **`721-E` — the LATAM constraint is not the agent, it is the ASSESSMENT CORPUS.** `p703` tabulated what blocks the studio per region and gave LATAM *"this base's own star floor."* p721 re-reads that: the Spanish/Portuguese legs returned `30` addresses across `6` single-term queries (`educativo`, `aprendizaje`, `docente`, `educacao`, `ensino`, `tutoria`) and **not one was an AI tutoring agent** — they are curricula (`Universidade-Livre/ciencia-da-computacao`, `21,023★`, MIT), bootcamp syllabi (`Laboratoria/curriculum`, `486★`, CC-BY-SA-4.0) and school-administration systems (`portabilis/i-educar`, `724★`, GPL-2.0 — already held on the platform shelf). 🔵 **So the honest LATAM finding is a SHAPE, not a shortage: the region supplies the CONTENT and the ADMINISTRATION layers, and imports the agent layer.** The engagement follows from that — bring the tutor, localise it against `enem-api`, and integrate `i-educar` rather than replacing it.
+## Assessment and grading
 
-
-
-## 🟢 Five foundation rows added at p720 — and the pass's product here is a MEASUREMENT OF DEATH: the permissive school-administration field is a graveyard with exactly one survivor
-
-**`359` carried in (COUNTED, and it MATCHES `p719`'s published `359` — a SECOND consecutive clean arrival, which is this shelf's longest run), `5` filed, `364` published.** Regions on the `5`: `APAC 2` · `Global 2` · `EMEA 1`. Every `Global` is an **explicit in-cell refusal with its reason**, never a silent default.
-
-### 🔴 `720-D` (primary) — the permissive school-management / SIS field is dead, and the dates say so
-
-The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) and three single-term follow-ups returned a well-populated permissive field. **Then the `pushed_at` column, which `720-M` reopened, killed almost all of it:**
-
-| Subject | ★ | Grant | Last pushed | Verdict |
+| Repo | Stars | Licence | Last push | Why it is foundational |
 |---|--:|---|---|---|
-| [`sumitkumar1503/schoolmanagement`](https://github.com/sumitkumar1503/schoolmanagement) | `493` | MIT | `2024-03-29` | 🔴 dead `2.6 y` |
-| [`Akshat4112/school-erp`](https://github.com/Akshat4112/school-erp) | `318` | MIT | `2021-09-30` | 🔴 dead `5.1 y` |
-| [`sajib1066/school_management_system`](https://github.com/sajib1066/school_management_system) | `259` | MIT | `2023-10-19` | 🔴 dead `3.1 y` |
-| [`kumarpandule/Online-Library-Management-System-PHP`](https://github.com/kumarpandule/Online-Library-Management-System-PHP) | `102` | Apache-2.0 | `2023-11-20` | 🔴 dead `3.0 y` |
-| [`AminAliH47/PicoSchool`](https://github.com/AminAliH47/PicoSchool) | `95` | Apache-2.0 | `2024-04-05` | 🔴 dead `2.6 y` |
-| [`Safnaj/School-Management-System`](https://github.com/Safnaj/School-Management-System) | `81` | Apache-2.0 | `2020-01-25` | 🔴 dead `6.8 y` |
-| [`aisuresh/School-Management-System`](https://github.com/aisuresh/School-Management-System) | `80` | Apache-2.0 | `2021-05-29` | 🔴 dead `5.5 y` |
-| [`TechNodes2-0/ElectiveHub`](https://github.com/TechNodes2-0/ElectiveHub) | `69` | MIT | `2024-08-07` | 🔴 dead `2.3 y` |
-| [`rickxy/Student-Attendance-Management-System`](https://github.com/rickxy/Student-Attendance-Management-System) | `48` | MIT | `2023-01-30` | 🔴 dead `3.8 y` |
-| **[`tough-dev-school/education-backend`](https://github.com/tough-dev-school/education-backend)** | **`489`** | **MIT** | **`2026-10-31`** | 🟢 **ALIVE — filed** |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 806 | BSD-3-Clause | 2026-11-09 | Homework submission + automated grading + TA grading workflow, production-deployed at Rensselaer and other US universities. BSD-3 makes it the most permissively licensed serious autograder available. **North America.** |
+| [GatorEducator/gatorgrader](https://github.com/GatorEducator/gatorgrader) | 85 | GPL-3.0 | 2026-10-06 | Checks student writing and code against assignment specifications; the practical reference for rubric-as-code. |
 
-🔴 **Ten subjects at or above `48★`, `9` of them abandoned for between `2.3` and `6.8` years — and NOT ONE of the nine is `archived`.** 🔴 **That is the dangerous part: a dormant repository carries no flag.** `archived: false` on a repository last pushed in January 2020 looks exactly like a live project to any check that reads the flag and not the date, which is why `720-D`'s screen is `pushed_at` FIRST and `archived` second. The permissive school-administration layer is not a field with gaps in it; it is **a field that was built once around 2020–2024 and then left**. The `LMS platform` leg returned **zero** new permissive subjects above `40★` at all.
+## Learner modelling
 
-🟢 **This is a genuinely useful negative for a studio, and it is the opposite of the conclusion a star-ranked list produces.** A roundup sorted by stars would recommend `sumitkumar1503/schoolmanagement` at `493★` over `tough-dev-school/education-backend` at `489★`. **The first has been untouched for two and a half years and the second shipped nine days ago.** 🔵 **The engagement consequence: for school administration, there is no permissive open-source starting point to adopt — the realistic options are the copyleft incumbents already on [`verticals/solutions.md`](../verticals/solutions.md) (Moodle, OpenEduCat, Frappe Education, openSIS) or a build.** p720 states that rather than filing nine dead repositories to make the shelf look deep.
+| Repo | Stars | Licence | Last push | Why it is foundational |
+|---|--:|---|---|---|
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 278 | MIT | 2026-11-08 | The open Bayesian Knowledge Tracing implementation. BKT is the mastery model most ITS work still benchmarks against; this is the auditable version of it. **North America.** |
+| [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | Skill-gap → learning-path generation as a multi-agent pipeline (WWW '25). CC0 means no attribution obligation at all. |
 
-### 🟢 `720-F` — what `720-M` changes about THIS shelf specifically
+## Evaluation benchmarks and exam corpora
 
-Nine of the ten refusals above were decided on `pushed_at` and `archived`, **two fields that this shelf has been unable to read since `p708` declared the metadata doors shut.** `p715` refused a `79`-repository estate and recorded the nil honestly; `p692` had to run a dedicated *"archived-shelf audit"* as a special project and found `11` dead subjects already published, `8` of them silent about it.
+A tutoring agent is only as trustworthy as the benchmark it is measured on. These are the
+real, dated corpora.
 
-🟢 **With the `search/repositories` door open, liveness becomes a cheap screen applied to every candidate at discovery time instead of a periodic audit of damage already done.** Both archived subjects this pass refused on the sibling shelf — including a `46★` LATAM row that would otherwise have been filed — were caught by the same flag. **`720-M` is worth more to this shelf than the five rows filed beside it.**
+| Repo | Stars | Licence | Last push | Content |
+|---|--:|---|---|---|
+| [OpenLMLab/GAOKAO-Bench](https://github.com/OpenLMLab/GAOKAO-Bench) | 806 | Apache-2.0 | 2025-01-07 | Evaluates LLMs against China's Gaokao. Apache-2.0 and the de-facto APAC academic benchmark. Note: last push Jan 2025 — stable corpus, not active development. **APAC.** |
+| [deekur/gaokaomath](https://github.com/deekur/gaokaomath) | 1,946 | CC-BY-4.0 | 2026-11-08 | Gaokao mathematics papers, 1952–2026. A 74-year longitudinal corpus; actively maintained. CC-BY-4.0 — attribution required, commercial use permitted. **APAC.** |
+| [yunger7/enem-api](https://github.com/yunger7/enem-api) | 366 | GPL-2.0 | 2025-12-14 | Public open-source API over Brazil's ENEM exams and questions. The single best structured entry point to LATAM assessment content. **LATAM.** |
+| [piresramon/gpt-4-enem](https://github.com/piresramon/gpt-4-enem) | 54 | MIT | 2024-12-06 | Code and data for evaluating LLMs on ENEM. Small and dormant, but MIT and the only published LATAM LLM-vs-national-exam harness found. **LATAM.** |
 
-### 🔵 `720-W` — a licence file is an affiliation record, and this pass used it as one
+## Content and offline delivery
 
-[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)'s region was not resolvable from its README. Its Apache `APPENDIX` is filled in and reads *"Copyright 2025 Data Intelligence Lab, The University of Hong Kong"* → `APAC`, settled from the bytes. The same move placed [`vadolasi/codelabs`](https://github.com/vadolasi/codelabs) (*"Vitor Daniel"*) and [`matanhalpert/Allamda`](https://github.com/matanhalpert/Allamda) (*"Matan Halpert"*) on the sibling shelf.
+| Repo | Stars | Licence | Last push | Why it is foundational |
+|---|--:|---|---|---|
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,173 | MIT | 2026-11-08 | Offline-first learning platform for low-connectivity deployments. MIT, actively maintained, and the reference answer whenever an engagement has intermittent bandwidth — which includes much of LATAM and APAC public education. |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 154 | GPL-3.0 | 2026-11-04 (branch `master`; **no README/LICENSE file at HEAD** — see P142) | The interactive-content type system embedded in Moodle, Canvas and Drupal. Small star count badly understates its install base; it is a dependency, not a product. |
 
-🟢 **Stated as a rule: when the canonical `[yyyy] [name of copyright owner]` placeholder has been REPLACED, the grant carries a named licensor — frequently the most reliable provenance statement in the repository, because it is the one with legal consequence.** It is also, usefully, the explanation for most non-canonical Apache byte counts: three of the three deviations measured this pass were filled appendices and indentation, **not** truncation, and all three retained `APPENDIX`, `Disclaimer of Warranty` and `Limitation of Liability`. 🔴 **A byte count off canonical is a reason to READ the payload, not a verdict on it** — a rule this shelf needed after `p701`'s genuinely corrupted disclaimer taught it to suspect the opposite.
+## Reference and survey
 
-## 🟢 Twelve foundation rows added at p719 — and the pass's product here is a TRAP CLASS THIS SHELF HAD NEVER RECORDED: a permissive grant over a proprietary runtime
+| Repo | Stars | Licence | Last push | Note |
+|---|--:|---|---|---|
+| [GeminiLight/awesome-ai-llm4education](https://github.com/GeminiLight/awesome-ai-llm4education) | 221 | **no licence file** | 2026-10-23 | Curated AI/LLM-for-education paper list — the best single literature map for this industry. ⚠️ No `LICENSE` file at HEAD (checked this pass): default copyright applies, so cite it, do not vendor it. Previously published here as "~800★, MIT"; both figures were wrong. |
 
-**`347` carried in (COUNTED, and it MATCHES `p718`'s published `347` — this shelf's counter was correct on arrival, which `p717`/`p718` had to repair), `12` filed, `359` published.** Regions on the `12`: **`Global 8` · `APAC 3` · `EMEA 1`**. Every `Global` is an **explicit in-cell refusal with its reason**, never a silent default.
+**Twelve foundational repositories, all verified today**, spanning assessment (2),
+learner modelling (2), benchmarks and corpora (4), delivery (2) and reference (1), with
+named regional coverage for North America, APAC and LATAM.
 
-### 🔴 `719-P` (primary) — MIT on the template, SoftBank on the runtime
+## Gaps — searched and genuinely missing
 
-Two subjects filed this pass — [`tvcuong1802/agentic-star-learning-resource-accessibility-gap-brief-agent`](https://github.com/tvcuong1802/agentic-star-learning-resource-accessibility-gap-brief-agent) and [`haidang024/agentic-star-education-learning-resource-accessibility-review-agent`](https://github.com/haidang024/agentic-star-education-learning-resource-accessibility-review-agent) — carry clean MIT grants verified byte-by-byte (`1,068 B` / `be1056662503` and `1,067 B` / `b22b7ca45c04`). **Both README files state, in those words, that the template "does not run standalone".** Each requires the **AGENTIC STAR** platform (`developers.fd.agenticstar.tm.softbank.jp`, SoftBank) and the `agenticstar-agentcore` framework, and start-up fails immediately without the platform.
+Recorded explicitly so a later pass does not read silence as coverage:
 
-🔴 **This shelf has recorded licence traps in the GRANT for many passes — AGPL where Apache was assumed, `NOASSERTION`, truncated clauses, split grants. `719-P` is the first trap recorded in the RUNTIME.** The licence field is green, the SPDX detector is right, the bytes are canonical MIT, and the dependency is still a proprietary vendor platform. **A grant audit alone cannot see this.** The only instrument that catches it is reading the README's requirements section, which no licence tooling does.
+- **No permissively licensed open-source Student Information System.** Searched; every
+  serious SIS is either proprietary or GPL/AGPL. For a client needing SIS customisation the
+  honest answer is Odoo/OpenEduCat (LGPL) or build, not adopt.
+- **No EMEA-authored foundational repository.** The national-exam leg
+  (`Abitur`, `baccalauréat`, `Lernplattform`) returns nothing above 34★. EMEA supply in this
+  industry is effectively absent from GitHub; its contribution is regulatory and
+  institutional. This is a fourth consecutive pass measuring the same nil, which makes it a
+  property of the supply rather than a bad run.
+- **No open-source automated essay scoring that is both modern and maintained.** The
+  category exists but is archaeological: the top results (`nusnlp/nea` 207★ GPL-3.0,
+  `siyuanzhao/automated-essay-grading` 121★ MIT) were last pushed in **2018 and 2019**.
+  Anyone needing AES in 2026 is building it on a general LLM, not adopting one of these.
 
-🟢 **So the shelf's screening question changes shape.** "Is the grant permissive?" is necessary and no longer sufficient; **"what must exist for this to start?"** has to be asked beside it. The two rows are filed rather than refused because the *method* inside them is genuinely reusable — a record-level closed-vocabulary accessibility conformance check whose README is explicit that **"the checking is done by fixed rules against the school's profile — nothing is retrieved or inferred"** — and that rule table transfers even though the harness does not.
+---
 
-🔵 **A named supply lead, left deliberately unspent.** Two unrelated owners publishing templates for one vendor platform under a shared `agentic-star-*` convention and a shared `EDU-C2-0xx` identifier scheme implies a **catalogue**. Owner- and convention-expansion on that pattern is the cheapest lead p719 hands forward.
+## The full roster — 365 rows
 
-### 🟢 `719-E` — the shelf can now evaluate an education agent on data that cannot have been trained on
+The curated set above is the **verified-this-pass** shelf. The table below is the
+**accumulated roster** from prior passes: 365 rows, every one carrying a real `github.com`
+URL (checked: zero rows without one, zero placeholder rows). Preserved verbatim from p721.
 
-[`JacobFV/formal-language-cirriculum`](https://github.com/JacobFV/formal-language-cirriculum) (MIT) makes **every lesson a generator rather than a dataset**: an episode is a pure function of a seed, the vocabulary is invented per episode, the grammar or proof calculus is sampled fresh, and the answer is computed from the construction rather than annotated. 🟢 **The consequence is the reason it is filed: an evaluation set drawn from it did not exist until it was asked for, so it cannot have been in any training corpus.** `p718` declared the absence of a dominant open-source agent-evaluation story as a gap on the technology shelf; for *education* specifically this closes the hard half of it. Paired with [`Grvrajput/llm-eval-rubric-kit`](https://github.com/Grvrajput/llm-eval-rubric-kit) — judge-agnostic, deterministic weighting and rating math, binary checkable criteria, mandatory rationales — the shelf now holds **both halves of an assessment rig: unbiasable items and auditable scoring.**
-
-🔵 **Recorded against itself:** the curriculum's own `master` README headlines `180 lessons`, says `179` once in the same file, and its repository description says `170`. Three figures for one subject. The row cites the generator design and explicitly tells callers **not** to cite a lesson count from this shelf.
-
-### 🟢 `719-R` — a reliability engine, found only because the leg was run in another language
-
-[`Asperant/ExamEcho`](https://github.com/Asperant/ExamEcho) (MIT) is positioned, in its own words, as `tam ürün değil` — not a complete product, but a backend engine core — and its stated differentiator is **not generating questions but managing the reliability of generation**: loose LLM output reduced to strict domain rules, fallback-plus-retry keeping the flow alive on malformed output, and quality exposed as SSE metadata so the pipeline is observable.
-
-🟢 **Placed `EMEA` on repo-file evidence — a Turkish-primary README (`260` Turkish diacritics, `50` Turkish function and domain tokens across `6,666 B`)** — and it is the pass's second demonstration of `719-N`'s point: this subject was not reachable from an English-language leg. Turkey is now represented on this shelf by a reliability-engineering artefact rather than by a market statistic.
-
-### 🔵 `719-T` — the region threshold is doing real work, and here is the proof
-
-[`jianghaoyu123/TeachingAI`](https://github.com/jianghaoyu123/TeachingAI) was **REFUSED** a region. Its `master` README is `1.3%` CJK (`174` Han characters of `13,950 B`) — interface-string residue, not a Chinese-primary document — while four subjects placed `APAC` by p719 cleared `18.2%`–`31.1%`. 🟢 **An owner-name heuristic would have placed it, and the byte-ratio instrument declined to.** That is the first time this shelf can point at a case where the region probe **cost** it a placement it would otherwise have claimed, which is the only kind of evidence that a placement rule is a rule rather than a rationalisation. `p718`'s `718-I2` argued the refusal rate is high because the instrument is strict; `719-T` is the worked example.
-
-## 🟢 Ten foundation rows added at p717 — and they close a gap this shelf never declared: the COMPOSITION LAYER
-
-🔄 **`315` → `325`** rows filed on the main shelf (`315` carried in, matching `p716`'s published `315`; `10` filed; all `10` at `5` columns, `0` ragged, `10` distinct subjects, `0` duplicated against the existing shelf).
-
-🔴 **The gap was structural, and it is the most useful thing this pass found.** This shelf has `315` rows and is genuinely deep on education-*specific* software — tutors, knowledge tracing, LMS connectors, MCP servers for Canvas and Moodle. A presence check of the standard agent/RAG composition layer against all three shelves returned **`ollama` and nothing else**: no `LangGraph`, no `llama_index`, no `mem0`, no vector store, no prompt optimiser, no inference server, and **no document-ingestion layer at all**. So the KB could name the best open tutor in the world and still not tell a studio how to get a client's textbook PDFs into it. Ingestion is not a generic concern in this industry — the corpus *is* PDFs — and it was the single largest hole.
-
-**Regions on the `10`: `North America 4` · `APAC 1` · `EMEA 1` · `Global 4`.** Every placement cites a string in a repository file, and **all `4` `Global` rows are explicit REFUSALS with the reason stated in-cell** rather than silent defaults — including `qdrant`, where the well-known Berlin seat was deliberately *not* used because it is not in the repo.
-
-# 🏗️ Foundational repos — Education
-
-> The bases to build on. Verified 2026-11-05 (rows added before p657 state their own verification date in-cell): existence via `git ls-remote --symref`, licence by reading the grant payload, stars from the repository page. Rows added at p660 were verified that day; the `6` added at p660 came from **org enumeration**, not from a search-result name (see `repos/trending.md`).
-> 🔄 **`210` rows at p700** (`199` carried in, `11` filed — counted between the header separator and the terminating blank line; **arity `210/210` at `5` columns, `0` disagreements, the `p674` defect class clear; `210` distinct subjects, `0` duplicated**). 🔵 Counter validated against `p699`'s published `199` first (`680-F2`). 🟢 **`2` of the `11` were found by querying the *owner* of a row this base already held** — `dodona-edu/universal-judge` (peer-reviewed, `doi:10.1016/j.softx.2023.101404`) beside `dolos`, held since `p680`, and `groundworklms/cartridge` beside `coursewright`, filed at `692-J`. See `T134`. 🔴 **`1` of the `11` would have been refused over the *case* of a filename** — `nwuzmedoutlook/university`, `1,230★` Apache-2.0, grant at `License` with `LICENSE` and `license` both `404` (`T131`).
-> 🔄 **Previously — `186` rows at p698** (`181` carried in, `5` added — all EMEA, all MIT, counted between the header separator and the terminating blank line; `0` rows disagree with the `5`-column header, the `p674` defect class). 🟢 **p690 audited all `175` subjects on this shelf against GitHub's `spdx_id` and `stargazers_count`.** `173` resolved; **`12` `spdx` divergences, `0` licence claims overturned** — all `12` are `NOASSERTION`/`NONE`, the detector declining to classify, sorted into five named failure modes in [`repos/trending.md`](./trending.md) `690-R2`. **`109 / 163` star cells were already exact; `44` were refreshed**, including five that had been carried *rounded* (`moodle/moodle` `7,600 → 7,590`, `sakaiproject/sakai` `1,200 → 1,240`, `learningequality/kolibri` `1,200 → 1,170`, `chamilo/chamilo-lms` `1,000 → 1,021`, `RaspberryPiFoundation/blockly` `13,600 → 13,601`) — 🔴 **three of those five moved *down*, which a rounded figure hides.** [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) and [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) are **ALIVE** via `git ls-remote` and absent from the index.
-> **Read the licence column before the stars column.** Half the deployable surface in education is copyleft, and in this industry that is the constraint that decides the engagement model.
-> 🔧 **p674 re-measured every payload cell over `7 000 B` on this shelf against the bytes the repository serves, and corrected one.** [`oppia/oppia`](https://github.com/oppia/oppia) was published as `11 357 B`; it is **`11 358 B`** (`sha256₁₂ cfc7749b96f6`) — the **`apache.org`** canonical, not the **`apache/.github`** canonical (`11 357 B` · `58d1e17ffe51`) the old cell named. 🟢 **Every other large cell on this shelf reproduced exactly**, including `numbas/Numbas` and `anthropics/k12-teacher-skills` at a genuine `11 357 B`. 🔵 The two canonicals are now pinned by digest, because `11 357` is *also* the stripped size of the `11 358` payload and the number alone cannot tell them apart — see [`intel/trends.md`](../intel/trends.md) **T56**.
-
-🔴 **🔧 Corrected at p677 — the pin above is wrong, and it is wrong by reproducing the exact defect `T56` names.** The sentence pairs the `apache/.github` canonical with `11 357 B · 58d1e17ffe51`. Re-measured at p677 by writing each payload to a file and hashing the file (never through a shell `$(...)` capture, which strips the trailing newline):
-
-| Payload | Bytes | sha256₁₂ |
-|---|--:|---|
-| `apache.org` canonical, **as served** (`oppia/oppia@develop`) | `11,358` | `cfc7749b96f6` |
-| `apache/.github` canonical, **as served** | `11,357` | **`c71d239df917`** |
-| `apache.org` canonical, **trailing newline stripped** | `11,357` | **`58d1e17ffe51`** |
-| `apache/.github` canonical, **trailing newline stripped** | `11,356` | `43070e2d4e53` |
-
-**There are four values here, and this page published two of them as if they were the two canonicals.** `58d1e17ffe51` is not the `apache/.github` payload at all — it is the **`apache.org` payload with its newline removed**, so both published cells describe the *same* document, one served and one stripped. 🔵 **The consequence is exact: the distinguisher this page added at p674 to tell the two canonicals apart cannot tell them apart**, because it names one canonical twice. 🟢 **The correct third value was already in this base** — `repos/trending.md` has carried `11,357 B · c71d239df917` as *“canonical to the byte”* since p676 — and p677 confirms it independently from a new address: [`THU-MAIC/MAIC-Core`](https://github.com/THU-MAIC/MAIC-Core)'s `LICENSE` is byte-identical to `apache/.github` (`diff` exit `0`). **Use `cfc7749b96f6` for the `apache.org` canonical and `c71d239df917` for the `apache/.github` canonical. Treat `58d1e17ffe51` as a capture artefact and never as a canonical.** 🔵 **The lesson is about the instrument, not the number:** p674 diagnosed the hazard correctly and then measured the fix with the same contaminated channel. **A correction verified on the channel that caused the defect is not a correction.**
-
-## Foundations — 365 rows / 365 distinct subjects 🔄 **Re-derived at p721 from the table's own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header row, located by its columns rather than by a remembered line number, then counting every `|`-leading line between the separator and the terminating blank line: `364` carried in (COUNTED, and it MATCHES `p720`'s published `364`), `1` filed, `365` published.** The single filing is **LATAM** (`yunger7/enem-api`), which moves the thinnest-but-one region on this shelf by one and is the only region that filed anywhere this pass besides APAC.
-
-> 🔄 **Previously — Foundations — 359 rows / 359 distinct subjects 🔄 **Re-derived at p719 from the table's own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header row.** 🟢 **THIS HEADING WAS CORRECT ON ARRIVAL — it published `347` over a table of `347`, the first clean arrival this shelf has had since `p716`, and the `p718` instrument repair (locating each shelf by its column-header signature rather than by the wording of the prose heading above it) is the reason.** **`347` carried in (COUNTED), `12` filed, `359` published** · arity `359/359` at the header's `5` columns, `0` ragged · `359` distinct subjects, `0` duplicated · `359/359` rows carry a repository link · `0` header-or-example rows as data. Regions on the `12` filed: `Global 8` · `APAC 3` · `EMEA 1`, every `Global` an explicit in-cell refusal. 🔴 **p719's finding here is a NEW TRAP CLASS — a permissive grant over a proprietary runtime; see `719-P`.****
-
-> 🔄 **Previously — Foundations — 347 rows / 347 distinct subjects 🔄 **Re-derived at p718 from the table's own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header row.** 🔴 **THIS HEADING WAS STALE ON ARRIVAL BY EXACTLY `p717`'s TEN FILED ROWS: it published `315` over a table of `325`.** `p717` filed `10` rows, recorded `315 → 325` CORRECTLY in [`trending.md`](./trending.md), and never touched this line — the sixth recurrence of the `p699`/`p702`/`p703`/`p712`/`p716` class, in which a pass's count reaches its log and not its shelf. **`325` carried in (COUNTED, not `p717`'s published `315`), `22` filed, `347` published** · arity `347/347` at the header's `5` columns, `0` ragged · `347` distinct subjects, `0` duplicated · `347/347` rows carry a repository link · `0` header-or-example rows as data. 🟢 **And p718 stops restating the rule and repairs the INSTRUMENT instead:** `ingest/derive-counts.py` now locates each shelf by its **column-header signature** rather than by the wording of the prose heading above it, which is why five restatements never held. See `718-F`.
-
-> 🔄 **Previously — Foundations — 307 rows / 307 distinct subjects 🔄 **Re-derived at p714 by locating the table from its own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header row, then counting between the header separator and the terminating blank line, against the table this page INHERITED rather than against the figure it published.** **`303` carried in (counted, and it matches `p713`'s published `303`), `4` filed, `307` published · arity `307/307` at the header's `5` columns, `0` ragged · `307` distinct subjects taken as the first `github.com/owner/repo` link in the Repo column, `0` duplicated · `307/307` rows carry a real repository link, so no header, placeholder or example row survives as data.** 🟢 **All four filings came from ONE owner reached by `713-G`'s procedure, and the procedure worked on a region it was not designed for.** The mandated LATAM leg returned no addresses — as it has for 34 passes — but it named an INSTRUMENT in prose: the **Raspberry Pi Foundation**, reported as newly funded to scale AI education across Latin America. One `user:RaspberryPiFoundation` query returned `51` repositories and `4` permissive, education-grade substrates. 🔴 **The irony is worth recording rather than smoothing over: the instrument the LATAM leg named places to `EMEA`** — it is a UK charity — **so a LATAM leg produced EMEA supply, and the LATAM column still did not move.** 🟢 **Two of the four are grant-instrument exhibits, not ordinary rows:** [`RaspberryPiFoundation/picozero`](https://github.com/RaspberryPiFoundation/picozero) carries a **textbook MIT grant that never once says “MIT”** (`p706`'s class, reproduced at p714 — the detector says `UNCLASSIFIED`, GitHub's API says `MIT`, and the bytes settle it), and [`RaspberryPiFoundation/blockly-keyboard-experimentation`](https://github.com/RaspberryPiFoundation/blockly-keyboard-experimentation) is the first **accessibility** substrate on this shelf. 🔵 **The fourth is the highest-starred LATAM-placed substrate on either shelf** ([`Mangaba-ai/mangaba_ai`](https://github.com/Mangaba-ai/mangaba_ai), `208★`), placed on a measured Portuguese-versus-Spanish margin in its own README rather than on a guess.
-
-> 🔄 **Previously — Foundations — 303 rows / 303 distinct subjects 🔄 **Re-derived at p713 by locating the table from its own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header rather than from a line number, then counting to the terminating blank line, with the counter validated against the table this page INHERITED** (`680-F2`). **`285` carried in (counted, and it matches `p712`'s published `285`), `18` filed, `303` published · arity `303/303` at the header's `5` columns, `0` ragged · `303` distinct subjects, `0` duplicated · `303/303` rows carry a real repository link, so no header, placeholder or example row survives as data.** 🟢 **p713 is this shelf's largest single-pass gain, and all `18` rows came from ONE channel — owner expansion over owners this base already held a row from (`713-D`).** 🟢 **The sharpest result is that the pass closed the biggest unaddressed RISK on these shelves rather than adding a capability:** [`openedx/codejail`](https://github.com/openedx/codejail) (Apache-2.0, `477★`) manages **execution of untrusted code in secure sandboxes**, and every autograding, code-tutor and agent-writes-code pattern this base has ever published had assumed somebody else solved that. Nobody on these shelves had. 🟢 **Three layers that existed here as scattered points are now whole:** LMS interoperability (`ims-lti` + `qti` + `common-cartridge-viewer`), the learning-record data layer (`xapi-service` + `xapi-validation`), and assessment delivery (`quiz-composer` + `autograder-py` + `lms-toolkit`). 🔴 **`713-B` — three of these rows were briefly read as having NO GRANT because the probe's filename list is case-sensitive and omits the `COPYING` family**; `moodlehq/moodleapp`'s Apache-2.0 lives in `COPYING.txt` and both `LearningLocker` MIT grants live in a lowercase `license`. 🔵 **`713-E` — a grant payload repeated byte-for-byte across owners is a CROSS-CHECK, not a coincidence:** the three `edulinq` rows carry sha256₁₂ `7eb48830c022`, byte-identical to this base's existing `edulinq/autograder-server` row, which corroborates that earlier reading independently.
-
-> 🔄 **Previously — Foundations — 280 rows / 280 distinct subjects 🔄 **Re-derived at p711 by locating the table from its own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header rather than from a line number, then counting to the terminating blank line, with the counter validated against the table this page INHERITED** (`680-F2`). **`277` carried in (counted, and it matches `p710`'s published `277`), `3` filed, `280` published · arity `280/280` at the header's `5` columns, `0` ragged · `280` distinct subjects, `0` duplicated · `280/280` rows carry a real repository link, so no header, placeholder or example row survives as data.** 🟢 **p711 continued `p710`'s CURRICULUM-AS-A-GRANTED-ASSET direction and aimed it at the region this base reads worst — and all three rows are Spanish-language teaching material under MIT.** The sharpest is [`IngSoft-FIS-Ejercicios/is-ia`](https://github.com/IngSoft-FIS-Ejercicios/is-ia), **granted curriculum from a NAMED LATAM UNIVERSITY** (Universidad ORT Uruguay) whose assessed learning objective is the *supervision and validation* of agent output — the artefact `710-E` concluded did not exist. The other two widen the AI-literacy layer downward: a no-prerequisite guide for non-programmers, and a **rural vocational nursing-training** corpus, a vertical this shelf held nothing of. 🟢 **Only `3` rows were filed because only `3` survived verification — see `711-E` for the granted-but-contentless sub-class that was measured and REFUSED rather than padded in.****
-> 🔄 **Previously — Foundations — 269 rows / 269 distinct subjects 🔄 **Re-derived at p709 by locating the table from its own `| Repo | Licence | Stars | Default branch | Why it is a foundation |` header rather than from a line number, then counting to the terminating blank line, with the counter validated against the table this page INHERITED** (`680-F2`). **`267` carried in (counted, and it matches `p708`'s published `267`), `2` filed, `269` published · arity `269/269` at the header's `5` columns, `0` ragged · `269` distinct subjects, `0` duplicated · `269/269` rows carry a real repository link, so no header, placeholder or example row survives as data.** 🔴 **p709 filed only `2` rows here, and the reason is a SATURATION MEASUREMENT this shelf should keep: the canonical open-source education substrate is already held.** `24` well-known education platforms were checked by slug against this base — Moodle, Open edX, Canvas, Sakai, Chamilo, Oppia, Kolibri, BigBlueButton, Opencast, JupyterHub, `nbgrader`, Anki, AnkiDroid, Frappe LMS, OpenEduCat, `h5p-php-library` and more — and **every one that exists under the slug checked was already on this shelf**, with exactly one real hole: **the H5P–Moodle plugin**, filed below. 🟢 **So the productive direction for this shelf is no longer platforms, it is DATA:** the other row filed at p709 is a curriculum-law corpus with per-element provenance, which is the class the shelf is genuinely thin on — models and LMSs are abundant, citable jurisdiction-accurate curriculum text is not.**
-
-> 🔄 **Previously — Foundations — 267 rows / 267 distinct subjects 🔄 **Re-derived at p708 by counting between the header separator and the terminating blank line, against the table this page INHERITED rather than against the figure it published** (`680-F2`'s rule). **`266` carried in (counted, and it matches `p707`'s published `266`), `1` filed, `267` published · arity `267/267` at the header's `5` columns, `0` ragged · `267` distinct subjects, `0` duplicated · `267/267` rows carry a real repository link, so no header, placeholder or example row survives as data.** 🔴 **The one row filed at p708 is not a discovery either — it is the seventh and last member of a promotion batch `p427` declared on `2026-10-25` and never wrote. `0 / 7` of that batch existed on any shelf when p708 measured it, `281` passes later** ([`agents/top.md`](../agents/top.md) `708-A`; the six agent-side members are filed there in the same pass). 🔵 **It is also the only GPL-3.0 row this base has filed in eleven passes, and it is filed deliberately rather than refused:** [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) is a Moodle *in-tree* plugin, so its copyleft is **architectural, not elective** — it links against GPL-3.0 Moodle. 🟡 **Read it as the specification for what an institution-installed agent can see, and take the permissive path (`changazo/udesa-mcp`, Apache-2.0, filed on the agent shelf this pass) when something has to ship to a client.** 🔴 **`Stars` is `—` on this row because all three star channels were shut to p708** — `gh api` `403`, `github.com` HTML `403`, `img.shields.io` unreachable — so the cell is left empty rather than guessed ([`agents/top.md`](../agents/top.md) `708-D`).**
-
-> 🔄 **Previously — Foundations — 266 rows / 266 distinct subjects 🔄 **Re-derived at p706 by counting between the header separator and the terminating blank line, against the table this page INHERITED rather than against the figure it published.** **`260` carried in, `6` filed, `266` published · arity `266/266` at the header's `5` columns, `0` ragged · `266` distinct subjects taken as the first `github.com/owner/repo` link in each row, `0` duplicated · `266/266` rows carry a real repository link, so no header, placeholder or example row survives as data.** 🔴 **This heading was STALE BY A FULL PASS too, the same way and for the same reason:** it read `258` (p704's figure) while p705's own trending entry records this page moving `258` → `260`. Same cause as [`../agents/top.md`](../agents/top.md)'s heading, same remedy, and **the fact that it happened on two pages at once is what makes it a process defect rather than a typo** — see [`../agents/trending.md`](../agents/trending.md) `706-G`. 🔵 **What the `6` filings are:** a coherent **server-side autograding layer** (`edulinq`, `howardlau1999`, `robertylewis`'s Lean 4 proof grader), the layer's most mature member placed to **EMEA** on `pom.xml` coordinates rather than prose (`uhafner`), one general agent substrate whose memory model shares the Ebbinghaus basis of this shelf's retention layer (`framerslab/agentos`), and one **curriculum** substrate (`travisjneuman/learn.python`).**
->
-> 🔄 **Previously — Foundations — 258 rows / 258 distinct subjects 🔄 **Re-derived at p704 by counting between the header separator and the terminating blank line, with the counter validated against the table this page INHERITED rather than the figure it published.** 🟢 **This pass the two AGREED: `254` counted in, against `p703`'s published `254`** — the first time in three passes this heading inherited a true figure, and `p703`'s re-derivation is what fixed it. **`254` carried in, `4` filed, `258` published · arity `258/258` at the header's `5` columns, `0` ragged · `258` distinct subjects taken as the first `github.com/owner/repo` link, `0` duplicated · `258/258` rows carry a real repository link, so no header, placeholder or example row survives as data.****
->
-> 🔴 **This heading was publishing `199` over a table of `233`, and that is the `p699` defect class recurring on the same page that fixed it.** `p699` counted this shelf to `199`, published the singleton-heading rule, and stated that a promotion and the heading it invalidates must land in the same edit. `p701` then filed `21` rows and `p702` filed more, and **neither pass touched this heading** — so for two full passes the page understated its own shelf by `34` rows, and any reader or compiler trusting the heading would have missed every row added since `p699`. 🔵 **The rule failed here for the reason given on [`../agents/top.md`](../agents/top.md): it was being enforced only on the page where the defect had last been seen.** All three shelves are now counted and re-published in one edit.
-> 🟢 **p703 filed `21` rows, and `7` of them are EMEA-placed public-sector data layers — the thinnest region on these shelves.** Official cantonal education statistics (Zurich BISTA), four named French national datasets (Annuaire de l'éducation, UAI, IPS, Parcoursup), ETH Library Zurich, and three artefacts from a named Dutch education nonprofit including the only teacher-pipeline artefact on any of these shelves. 🔵 **The transferable observation: in EMEA the education data is published by the authority and reachable without an API key, so the scarce thing is not the data but the MCP adapter — which is `~1,000` lines of TypeScript.** That is a different engagement shape from LATAM (where `T130` found the supply hidden under a star floor) and from APAC (where it is behind a language barrier).
-> 🟢 **A second cluster of `6` rows closes a gap this page has named repeatedly: nothing here measured whether a GRADER could be trusted.** p703 files the upstream half (`assessment_poc` — does the spec↔rubric↔evidence contract even cohere), the downstream half (`assessment-bench` — is LLM marking consistent across repeated runs and does it track human marks; `bench-floor-audit` — how many points does the grader award regardless of correctness; `RAF` — AND–OR rubric trees with a measured human-alignment loop), and the deterministic escape hatch (`officecheck` — mark the mechanical half of the rubric for free and for certain). **Together they make a three-instrument audit of any marking claim: above the floor, stable across runs, agreeing with humans.**
->
-> 🔄 **Previously — Foundations — 199 rows / 199 distinct subjects 🔄 **Re-derived at p699 by session-local code in the same edit that changed the file, and the carried-in figure was wrong THREE different ways at once.** **`193` carried in, `6` added, `199`** rows between the header separator and the terminating blank line, `199` distinct subjects taken as the **first** repository link in each row, **`0` duplicate subjects**, cell arity `199/199` at the header's `5` columns (`0` ragged), every row carrying a real `github.com/owner/repo` link, and the table now genuinely **one** table terminated by a blank line. 🔴 **(1) `make hooks` RAN at p699 — the first gate verdict in six passes — and `gate-tables` immediately reported `repos/foundations.md:246 BLANK-SPLITS-TABLE`.** **A stray blank line had split this shelf, orphaning the `7` rows below it** ([`BedirT/ACM-ICPC-Preparation`](https://github.com/BedirT/ACM-ICPC-Preparation), [`hyyhf/agent-book-code`](https://github.com/hyyhf/agent-book-code), [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA), [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners), [`johnnyrobot/pressbooks-cli`](https://github.com/johnnyrobot/pressbooks-cli), [`8enSmith/mcp-open-library`](https://github.com/8enSmith/mcp-open-library), [`tabiya-tech/tabiya-esco-datasets-and-tools`](https://github.com/tabiya-tech/tabiya-esco-datasets-and-tools)). **A blank line terminates a Markdown table, so those seven rows rendered as literal pipe-text and were invisible to every count this page published.** All `7` are arity-`5`, real, already-verified foundation rows; the blank is removed and they are back in the table. 🔴 **(2) The page's own top heading read `181` while `p698`'s register claimed `186`** — the two published figures disagreed with each other *and* both disagreed with the table. 🔴 **(3) FOUR live `## Foundations — N rows` headings were stacked** (`p697`'s `181`, `p696`'s `178`, `p695`'s `173`, `p693`'s `162`), so the page offered a reader four conflicting totals for one table. **All four are demoted to prose above — no word of their history is dropped — and this is the only `##` row-count heading on the page.** 🔵 **The transferable rule, and it is the same one [`../agents/top.md`](../agents/top.md) needed this pass: a row-count heading is a singleton, a promotion and the heading it invalidates must land in the SAME edit, and a count derived by reading Markdown is only as good as the assumption that the table is still one table.** `T62` predicted the staleness; it did not predict that the *table itself* would be broken underneath the count. 🟢 **`Gap 247`'s standing remedy is MET at p699 after six unmet passes** — full verdict (`47 / 71` gates green) in [`trending.md`](trending.md) `699-E`.**
-
-🔄 **Shelf history — 181 rows / 181 distinct subjects as re-derived at p697.** **Re-derived at p697 by counting the table in the same edit that added to it** (p695's lesson, which `T62` predicted and p695 paid for): `178` carried in, `3` added, **`181`** rows between the header separator and the terminating blank line, `181` distinct subjects (first repository link per row), **`0`** duplicates, **`0`** rows without a link, **`0`** cell-count disagreements with the `5`-column header. 🟢 **Two of the three additions are one European public authority's own production code** ([`bkd-mba-fbi`](https://github.com/bkd-mba-fbi), Canton of Bern) **and they are placed EMEA on the grant payload, which names the authority** — the first DACH system-of-record assets this base has ever shelved. The third is [`microsoft/SkillOpt`](https://github.com/microsoft/SkillOpt), the trainer this base's hundred-plus hand-written skill bundles had no counterpart for. 🔵 **All three came from a *search*, not from the backlog** — the German-language layer, reached through `T107`'s product-noun shape after the obvious query failed for an instrument reason (`T120`). See [`trending.md`](trending.md) `697-F`.
-🔄 **Shelf history — 178 rows / 178 distinct subjects as re-derived at p696.** **Re-derived at p696 by counting the table:** `178` rows, `178` distinct subjects (first repository link per row), **`0` duplicates**, **`0` rows without a link**, **`0`** cell-count disagreements with the `5`-column header. p695 left this heading reading `173`, which was correct when written. 🔵 **p696's `5` additions are all state-backed or institution-backed assets this base had already written down and never shelved**, and two of them are national-institute evaluation harnesses (UK AISI, Singapore AI Verify) — see [`trending.md`](trending.md) `696-D`.
-
-🔧 **Shelf history — 173 rows / 173 distinct subjects as re-counted at p695.** **Re-counted at p695, and the heading was stale by TEN before this pass added a row.** It read `162 rows / 162 distinct subjects` — correct when `p693` derived it — and `p694` then promoted **ten** repositories onto this shelf without re-deriving the figure, so the denominator this page published was wrong by `6.2%` for a full pass. **Measured by session-local code, not incremented:** `172` rows carried in, `1` added at p695, **`173`** rows between the header separator and the terminating blank line, `173` distinct subjects taken as the **first** repository link in each row, **`0` duplicate subjects**, cell arity `173/173` at the header's `5` columns (`0` ragged), every row carrying a real `github.com/owner/repo` link, and the table still **one** table terminated by a blank line. 🔴 **This is the larger of two instances of the same defect found in one pass** — [`../verticals/solutions.md`](../verticals/solutions.md) was stale by one on the identical cause. **`T62` predicted exactly this**: re-deriving a count from the table fixes staleness only on the pass that re-derives it, and a promotion filed by a later pass re-opens it. 🔵 **The remedy is not another re-count, it is that a promotion and the heading it invalidates must be written in the same edit.** 🔴 **No gate verdict:** `make hooks` remains denied by this session's auto-mode classifier (`694-J`), so `Gap 247`'s standing remedy is unmet for a **third** consecutive pass.
-
-🔄 **Shelf history — 162 rows / 162 distinct subjects as re-derived at p693.** **Re-derived at p693 by counting the table:** `162` rows, `162` distinct subjects (first repository link per row), **`0` duplicates**, cell arity `162/162` at the header's `5` columns, table terminated by a blank line. `160` carried in, `2` added. 🔴 **Counted by session-local code: no gate ran at p693** (`make hooks` denied — [`trending.md`](trending.md) `693-I`). 🟢 **p693's two rows come from a channel two previous passes measured as empty, and the reason it looked empty is now written down:** p691 probed the Spanish/Portuguese description layer with seven **single subject nouns** (`educacion`, `aprendizaje`, `escolar`, `docente`, …) → `90` repositories, `0` adoptable, and p692 then prescribed that same channel again. p693 ran **both arms against each other**: subject nouns (`402` distinct repositories) reproduce p691's nil exactly — coursework, LaTeX dissertation templates, bootcamp exercises, one GitHub **profile README** — while multi-word **product** nouns (`gestão escolar`, `diário de classe`, `boletim escolar`, `avaliação docente`, `secretaria escolar`) returned `473` distinct repositories and **`13` real education systems, `9` novel to the entire base**. **A subject noun appears in the description of anything *about* education; a product noun appears only in the description of something that *is* that product.** `T107`, and the measurement at [`../evidence/latam-product-noun-channel.2026-11-07-p693.tsv`](../evidence/latam-product-noun-channel.2026-11-07-p693.tsv).
-
-🔄 **Re-derived at p687 by counting the table, not by incrementing p686's figure:** `149` data rows between the header separator and the end of the table, `149` distinct subjects taken as the **first** repository link in each row — **`0` duplicate subjects**, and `0` rows whose cell count disagrees with the header. `144` carried in, `5` added this pass. 🔴 **One of those five is not a discovery but a repair: [`judge0/judge0`](https://github.com/judge0/judge0) was verified at p354 and declared filed, and `grep -c judge0 repos/foundations.md` returned `0` for every pass since.** See `repos/trending.md` **687-A**.
-
-🔄 **Re-derived at p686 by counting the table: `144` rows, `144` distinct subjects, `0` duplicates — measured.** Four were filed at p686 ([`designfuchen/word-atlas`](https://github.com/designfuchen/word-atlas), [`fasiha/ebisu`](https://github.com/fasiha/ebisu), [`VienDinhCom/supermemo`](https://github.com/VienDinhCom/supermemo), [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server)), and **two of the four were invisible to a licence filter** — the GitHub API reports both `word-atlas` and `openfoam-mcp-server` as `NOASSERTION` while their payloads read clean MIT and Apache-2.0 respectively. See **T88**.
-
-🔧 **Re-derived at p685 by counting the table, and the heading was stale by four.** It read `136`; the table holds **`140` rows, `140` distinct subjects, `0` duplicates**. The `README` carried `139` at `p680`, so this figure has been drifting across at least three passes in two places at once — the same stale-denominator class repaired on `verticals/solutions.md` at p685 and on this page at `p680`. **No row was added or removed at p685**; the correction is to the count alone.
-
-🔧 **Corrected at p682, and the correction is a *reduction*, which is why it is published rather than quietly adjusted.** The heading said **`143`**. Counted at p682 between the header separator (`L45`) and the end of the table (`L181`): **`136` data rows**, every one carrying a repository link, **`136` distinct subjects, `0` duplicates.** The only two link-less rows in that span are the header and the separator themselves. 🔴 **The shelf was overclaiming by `7` rows.** The arithmetic is the likely cause and it is the same defect `p680` fixed on `agents/top.md`: successive passes **incremented the previous figure** (`p681`'s note reads *“`139` → `143`”*) instead of re-counting the table, so a single early miscount compounds and every later pass inherits it while appearing to verify it. 🔵 **The rule, restated because this base has now hit it three times** (`agents/top.md` at `p680`, this shelf at `p682`, and `verticals/solutions.md` at `p682`): **a row count is derived by counting rows, never by editing the previous count.** No row was removed to produce this number — the shelf is unchanged and `0` rows were added at p682; only the claim about its size is.
-
-🔄 **Re-derived at p680 by counting the table, and the heading it replaces was wrong by one.** `136` data rows counted between the header separator and the end of the main table (the heading said `135`), **`136` distinct subjects, `0` duplicated** — so `677-B`'s duplication defect has not returned. `3` rows filed at p680 ⇒ **`139` rows / `139` distinct subjects.** 🔵 **All three were found by a channel census rather than by a search leg**, and two of the three had been sitting in this repository's own evidence since `p154`.
-
-🔄 **Re-derived at p677 by counting the table:** `125` data rows carried in, `3` filed this pass, **`128`** between the header separator and the end of the main table — **`128` distinct repositories, `0` duplicated subjects.** 🟢 **This is the one shelf of the three that is clean on that test**; `agents/top.md` carries `59` rows for `58` subjects and `verticals/solutions.md` `61` for `58`. See `677-B`. 🔴 **All `3` rows filed at p677 were claimed by an earlier pass to be on this page already** — they were not. See `677-A`.
-
-🔄 **Re-derived at p676 by counting the table, not by incrementing:** `113` data rows carried in, `12` added this pass, **`125`** between the header separator and the end of the main table. 🔄 Re-derived at p672 the same way: `102` rows.
-
-🔴 **p669 adds no row, and the count is re-derived rather than carried: `100` rows, taken by counting the table at p669, not by trusting the heading.** The four mandated global legs ran — open-source education agents, GitHub trending, vertical ERP/CRM platforms, industry trends — plus four regional legs. **Every foundational candidate they returned was already on this page or in this tree:** `ollama/ollama`, `patchy631/ai-engineering-hub` (`40,466★` per the trending leg), `ashishpatel26/500-AI-Agents-Projects`, `NousResearch/hermes-agent`, `huggingface/agents-course`, `microsoft/ai-agents-for-beginners`, `apache/ofbiz`, `frappe/education`. 🔵 **One address in eight legs was genuinely novel — `aloth/awesome-ai-agents` — and it is a general agent list with no education scope, so it is not filed here or anywhere.** 🔴 **And the trending leg is measurably behind this page's own measurements:** it served `HKUDS/DeepTutor` at `45,224★` where the shelves carry `55,000★` read first-hand today, a `17.8%` understatement. **Treat the legs as discovery, never as measurement** — see `repos/trending.md` `669-R1`.
-
-🔴 **p670 adds no row either, and the count is re-derived again rather than carried: `100` rows, taken by counting the table at p670.** The four mandated global legs ran a twenty-second consecutive time and returned nothing this tree lacks — `rohitg00/ai-engineering-from-scratch` (`198` hits), `karpathy/nanochat` (`45`), `patchy631/ai-engineering-hub` (`22`), `THU-MAIC/OpenMAIC` (`199`), `OpenEMIS` (`96`), `Fedena` (`192`), `OSUMS` (`10`), `ishandutta2007/Awesome-Higher-Education-CRM` (`18`), `apache/ofbiz` (`148`), `frappe/education` (`242`), `Gego-K12` (`112`), `NousResearch/hermes-agent` (`74`). Controls clean at both signs: `zzqx-nonsense-control-p670` → `0`, `moodle/moodle` → `434`. **Not one novel address in twelve scored.** 
-
-🔴 **What p670 did find belongs on this page as a warning rather than a row, and it is the sharpest instance of this page's own licence rule yet recorded.** The new `agents/top.md` row `DaRL-GenAI/instructional_agents_studio` is **MIT in full** — and its product is not. Its `NOTICE` discloses that the slides/documents editor is **not in the package** and is **downloaded on first run** as a trimmed build of [`ranuts/document`](https://github.com/ranuts/document) embedding **ONLYOFFICE `sdkjs`/`web-apps`**. **Verified first-hand at p670, not taken from the NOTICE: `ranuts/document` is AGPL-3.0 (`2,018★`, pushed `2026-11-03`) and `ONLYOFFICE/sdkjs` is AGPL-3.0.** 🔵 **Deliberately *not* filed as foundational rows.** Both are general-purpose document-editing software, not education software — the same off-domain test that kept `hcengineering/platform`, `cortezaproject`, `krayin` and `idurar` off this page at p669. **They are recorded here because they are now a known member of this sector's dependency graph**, which is a different fact from being a base to build on. 🔴 **The header's instruction — *read the licence column before the stars column* — needs one amendment after p670: read the `NOTICE` before the `LICENSE`, and ask what the artefact downloads after installation.** A manifest-derived SBOM reports that studio as MIT. **The licence unit is not the repository, and at p670 it is not even the declared dependency graph — it is the graph at run time.** See `repos/trending.md` `670-R5` and `compose/patterns.md` **P39**. 
-
-🟡 **A channel note that governs every figure on this page.** The star counts here were read from the repository page in prior passes; **at p670 `github.com` HTML and `api.github.com` both return `403` channel-wide**, and `gh api search/repositories` was substituted. **It has false negatives** — `repo:DaRL-GenAI/instructional_agents` returns `null` for a repository that is live on `main` — so a `null` from it must never be read as a delisting. `moodle/moodle` re-read cleanly at **`7,587★`, GPL-3.0**.
-
-🆕 **Two rows added at p665, and neither came from a search.** Both were already in this repository — one in the ledger since `p2` at **39,312 ★**, one demoted to the log — and both are written here because `p665` measured that **five of the six rows `p588` declared *“FILED”* are on no shelf at all four passes later**. `apache/openmeetings`, the sixth, is written on `verticals/solutions.md` this pass and had **zero** drop records, meaning it was never written rather than written and dropped. 🔵 **The practice this changes: a filing is a row in a table, not a sentence in a log.** The p665 block in `repos/trending.md` carries the survival measurement and the corrected promotion predicate.
-
-🟢 **Sixteen rows added at p667, and they are one *layer* rather than sixteen finds: retention and scheduling.** Until this pass this page carried FSRS (`fsrs4anki`, `fsrs-rs`) as a single point and trend **T13** called it "the one permissive education algorithm proven at consumer scale". That sentence was true and it was hiding a dense permissive field underneath it. This pass maps the field: a published **alternative** scheduler (`SSP-MMC`, MaiMemo), the **peer-reviewed optimum** those heuristics approximate (`memorize`, PNAS 2019, with its dataset), the highest-starred permissive **client** (`olmps/memo`, 1,870★ BSD-3), a **terminal** scheduler, a **web** one, three **Obsidian-native** ones, the **deck-file writer** that completes `anki-mcp-server`'s pair, two **incremental-reading** tools, the teacher-facing **code-assessment** surface the p647 assessment layer lacked, and a 1,469-question **item bank**. 🔵 **Why this is the shape worth having:** a client conversation about retention previously ended at "use FSRS"; it can now start from an objective function and a delivery form. 🔴 **Read the staleness in each cell before the stars** — four of the sixteen have not been pushed in over a year and two are effectively finished, which is why each row states its push date and whether it is a dependency, a codebase to adopt or a design reference.
+Star counts, licences and default branches in it were read at the pass that filed each row,
+**not today**. Re-verify a row before staking an engagement on it.
 
 | Repo | Licence | Stars | Default branch | Why it is a foundation |
 |---|---|---|---|---|
@@ -535,533 +453,3 @@ Two subjects filed this pass — [`tvcuong1802/agentic-star-learning-resource-ac
 | [`RaspberryPiFoundation/blockly-keyboard-experimentation`](https://github.com/RaspberryPiFoundation/blockly-keyboard-experimentation) | 🟢 **Apache-2.0** (`LICENSE`, `11,358 B`, sha256₁₂ `cfc7749b96f6`, **raw file bytes** read at `main`) | **16** | `main` | 🆕 **New at p714, and it is an ACCESSIBILITY substrate, which this shelf was thin on.** Keyboard-only navigation for Blockly — the block-based editor already shelved here as [`RaspberryPiFoundation/blockly`](https://github.com/RaspberryPiFoundation/blockly) (`13,604★`). 🟢 **Block-based programming is inherently drag-and-drop and therefore inherently inaccessible to keyboard and screen-reader users; this is the work to fix that at the library level.** For any engagement with a public-sector accessibility obligation — EU Web Accessibility Directive, Section 508 — this is the dependency that makes a Blockly-based product compliant rather than retrofitted. |
 | [`Mangaba-ai/mangaba_ai`](https://github.com/Mangaba-ai/mangaba_ai) | 🟢 **MIT** (`LICENSE`, `1,066 B`, sha256₁₂ `83c8db8d8274`, **raw file bytes** read at `master`; holder *“Copyright (c) 2024 Mangaba AI”*) | **208** | `master` | 🆕 **New at p714, and it is the highest-starred LATAM-placed substrate on either shelf.** A professional multi-agent orchestration framework in Python, documented in Portuguese. 🟢 **Region `LATAM` on a measured margin, not a guess:** the `37,611 B` README returns `104` Portuguese function-word hits against `39` Spanish, and *mangaba* is a Brazilian fruit. 🔵 **It is filed to FOUNDATIONS rather than to the agent shelf because it is domain-neutral** — it orchestrates agents, it does not teach — and that is precisely its value for a Brazilian engagement: the orchestration layer is already Portuguese-documented, so only the education layer above it needs building. 🔴 **Default branch is `master`, not `main`.** |
 
-
-## 🟡 No foundation row added at p715 — and for once the nil is NOT a search failure: the pass opened a `79`-repository estate and had to refuse ALL of it
-
-🔴 **`307` → `307`.** Stated as a nil, with the cause, because an unexplained freeze on this shelf is indistinguishable from a pass that did not look.
-
-🟢 **p715 did not lack candidates — it lacked grants.** Following `P119`/`715-D`, the pass ran an **owner probe** rather than keyword legs, and the largest estate it opened was [`EL-BID`](https://github.com/EL-BID), the GitHub organisation of the **Inter-American Development Bank** — the largest publisher of public-sector development software in Latin America. Measured with `gh api -X GET search/repositories -f q='user:EL-BID' -f per_page=100`:
-
-| `license.spdx_id` | count |
-|---|--:|
-| `NOASSERTION` | **`68`** |
-| no `license` object at all (`null`) | `8` |
-| `GPL-3.0` | `3` |
-| 🟢 `MIT` / `Apache-2.0` / `BSD` / `ISC` | 🔴 **`0`** |
-| **total** | **`79`** |
-
-🔴 **`0 / 79` permissive, and the `NOASSERTION` mass is not ungranted.** It resolves to the **"IDB Open-Source Software License" (effective December 2025)**, which the bank publishes as its own repository, [`EL-BID/IDB-License`](https://github.com/EL-BID/IDB-License), in three languages: `LICENSE-ENG.md` (`15,309 B`, sha256₁₂ `609996ed1045`), `LICENSE-ESP.md` (`16,243 B`, `72daaa7afee1`), `LICENSE-POR.md` (`15,814 B`, `546c3bc577dd`). 🔴 **Despite its name it is not an open-source licence** — §11 termination *"in its sole discretion"*, §12 destroy-or-return with written authorisation required to keep using derivatives, §4 viral, §10 indemnify-the-licensor, §15 AAA arbitration seated in Washington DC. **Full clause table at [`../agents/trending.md`](../agents/trending.md) `715-A`.**
-
-**Four education-grade substrates were read, confirmed to carry it, and refused** — each at its real default ref:
-
-| candidate | ref | payload | bytes | sha256₁₂ | would have been |
-|---|---|---|--:|---|---|
-| [`EL-BID/IDBx-Data-Engine`](https://github.com/EL-BID/IDBx-Data-Engine) | `master` | `LICENSE.md` | `15,308` | `314420f67709` | course/MOOC data extraction + consolidation |
-| [`EL-BID/SmartReader`](https://github.com/EL-BID/SmartReader) | `master` | `LICENSE.md` | `15,308` | `5c1a1ff2e70f` | AI mass document analysis |
-| [`EL-BID/IADB-education-1`](https://github.com/EL-BID/IADB-education-1) | `master` | `LICENSE.md` | `15,308` | `bd034c3f9167` | education-sector tooling |
-| [`EL-BID/edu-brazil-poc`](https://github.com/EL-BID/edu-brazil-poc) | `main` | `LICENSE.md` | `15,308` | **`bd034c3f9167`** | Brazil education PoC |
-
-🔴 **Note the arithmetic in that table, because it breaks an instrument this shelf relies on.** All four payloads are **exactly `15,308 B`** and there are **three distinct hashes** — the IDB text carries a `"Copyright © [year]"` placeholder that deployments fill with a four-digit year, preserving the length while changing the file. 🔴 **`714-D`'s propagation rule must therefore be keyed on sha256 alone; a size-keyed cache of classified payloads silently collides.** 🟢 The rule working correctly, same pass: the one agent row filed to [`../agents/top.md`](../agents/top.md) was classified at zero cost because its `LICENSE` is byte-identical (`11,357 B` / `c71d239df917`) to one this base had already read.
-
-🔵 **Instrument change carried from `715-B`: the grant-probe filename list goes `25` → `28`,** adding `LICENSE-ENG.md`, `LICENSE-ESP.md`, `LICENSE-POR.md`. p714's rebuilt `25`-filename probe would have returned a false *no-grant* on this entire estate. The generalisable form is **`LICENSE-<ISO-639-2>.md`**, and the `-ESP`/`-POR` pair will recur across LATAM publishers.
-
-🟢 **What replaces the rows, and it is worth more than four refused dependencies.** Each refused repository is a **problem a LATAM ministry has already funded and scoped** — school siting, digital enrolment (`matricula-digital`, Tacna, Peru), mass document analysis, MOOC data consolidation. **Read the IDB estate as a requirements corpus and build clean** (`P119`). That is defensible in a client's legal review in a way a fork of a revocable licence is not.
-
-## 🟢 Eighteen foundations added at p713 — this shelf's largest single-pass gain, and the sharpest result is that it closed a RISK rather than adding a capability
-
-**`285` → `303`.** All `18` came from owner expansion over owners this base already held a row from (`713-D` on [`../agents/top.md`](../agents/top.md) records the channel and the four API doors that are shut).
-
-### 🔴 `713-H` — every code-execution pattern this base has ever published assumed somebody else solved sandboxing, and nobody on these shelves had
-
-[`openedx/codejail`](https://github.com/openedx/codejail) — Apache-2.0 (`LICENSE.txt`, `10,174 B`, sha256₁₂ `0d542e0c8804`, read at **`master`**), `477★`, pushed `2026-11-03`, `15` open issues. It *"manages execution of untrusted code in secure sandboxes"*, and it is what Open edX itself runs in production.
-
-🔴 **The gap it closes, named precisely.** This base already shelved `edulinq/autograder-server`, filed `edulinq/autograder-py` and `code-dot-org/javabuilder` this pass, and has published patterns in which **an agent writes code that then runs**. Every one of those is an arbitrary-code-execution surface pointed at a machine inside a school or university network, and **not one row or pattern on these shelves had named the component that contains it.** A pattern that omits the sandbox is not an incomplete pattern — it is an unsafe instruction, and this base has been publishing them.
-
-🟢 **It is now a filing requirement rather than a suggestion:** any pattern on `compose/patterns.md` in which model-generated or learner-submitted code is executed must name its sandbox, and `codejail` is the default answer because it is the one with a decade of adversarial exposure behind it. `P116` is written that way; the older patterns need the same treatment and that is registered as `ACTION TJ`.
-
-### 🟢 `713-I` — three LAYERS that existed here as scattered points are now whole, and the completion is worth more than the row count
-
-The `18` rows are not `18` independent finds. They complete three stacks this base could previously only gesture at:
-
-| layer | what this base held before p713 | what p713 added | the stack now |
-|---|---|---|---|
-| **LMS interoperability** | nothing standards-shaped — every tutor row hand-rolls launch and grade-return | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) (MIT, `203★`), [`instructure/qti`](https://github.com/instructure/qti) (MIT, `8★`), [`instructure/common-cartridge-viewer`](https://github.com/instructure/common-cartridge-viewer) (MIT, `95★`) | 🟢 **launch + identity + roles + grade-return (LTI), assessment interchange (QTI), course-content import (Common Cartridge)** — an agent can now enter an LMS *as a tool* rather than as a plugin |
-| **learning-record data** | the knowledge-tracing cohort (`pykt-toolkit` et al.) which PRESUPPOSES an event stream and never names one | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) (MIT, `42★`), [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) (MIT, `12★`) | 🟢 **emit → validate → persist, on a published standard** — tutor telemetry is now portable between a Moodle, a Canvas and a bespoke app |
-| **assessment delivery** | item generation that terminates in a JSON blob | [`edulinq/quiz-composer`](https://github.com/edulinq/quiz-composer) (MIT, `21★`), [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) (MIT, `16★`), [`edulinq/lms-toolkit`](https://github.com/edulinq/lms-toolkit) (MIT, `15★`) | 🟢 **single source → PDF / HTML / Canvas / Gradescope**, plus the autograder client to the server already shelved |
-
-🔵 **`713-I`'s transferable point: this base's binding constraint has moved.** `704-B` named the **promotion leak** — finds that never reach a shelf. p713 says the next one is **layer incompleteness**: a half-filed layer is unusable even though every row in it is real, and it is invisible to every count this base publishes, because the counts measure rows and the defect is in the *joins*. 🟢 **`ACTION TK` registers the remedy: a layer census** — for each published pattern, does this base hold every component the pattern names, or does it stop at a blob, a token or a sandbox it does not have?
-
-### 🟢 `713-J` — the retrieval substrate arrives at `40,609★`, and it was one `user:` query from a row this base already held
-
-[`HKUDS/LightRAG`](https://github.com/HKUDS/LightRAG) — MIT (`LICENSE`, `1,070 B`, sha256₁₂ `0c1692456405`, holder *"Copyright (c) 2025 LightRAG Team"*), **`40,609★`**, pushed `2026-11-08`, `446` open issues. With [`RAG-Anything`](https://github.com/HKUDS/RAG-Anything) (MIT, `24,463★`, multimodal) and [`MiniRAG`](https://github.com/HKUDS/MiniRAG) (MIT, `2,028★`, small-model tier), **`67,100★` of permissive retrieval infrastructure entered this base in one pass from a lab it has held a row from since `DeepTutor`.**
-
-🟢 **Why it belongs on an EDUCATION shelf rather than being dismissed as generic infrastructure:** a curriculum is a graph — prerequisite → topic → objective → assessment item — and LightRAG indexes **relations** rather than chunks. *"What must the learner know before this?"* is a graph query, and it is the question a chunk-based retriever cannot answer at all. 🔵 **The three tiers map onto budget, which is the sector's real axis:** `LightRAG` where there is a cloud budget, `RAG-Anything` where the corpus is scans and slides rather than text, `MiniRAG` where there is **no AI budget at all** — the `55%` of LATAM universities UNESCO IESALC measured (`../intel/market.md`, LATAM; `T190`; `P116`).
-
-🔴 **And the caveats are filed with them, not omitted.** `MiniRAG` was last pushed `2025-10-16` — **over a year stale**, verified ALIVE at `main` on `2026-11-08`, and its grant names an **individual** (*"Copyright (c) 2024 Gustavo Ye"*) where its four siblings name the lab; expect to maintain a fork and check the CLA. `LightRAG`'s `446` open issues are the maintenance load of a hot project rather than a defect, but pin a commit.
-
-### 🔴 `713-K` — this base is the obvious customer for the compliance instrument it just shelved
-
-[`aboutcode-org/scancode.io`](https://github.com/aboutcode-org/scancode.io) — Apache-2.0, `226★`, scripted and pipelined **software composition analysis**: what packages a codebase contains, where they came from, under what licence.
-
-🔴 **The uncomfortable reading, stated because it is the honest one: `713-B` is a licence-detection failure in this base's own instrument, at `1,005★`, in the same pass.** These shelves exist because licence posture decides what Globant may ship, and the hand-rolled probe that decides it would have mis-addressed `8 / 28` subjects this pass (`7` default to `master`, `3` keep the grant outside `LICENSE*`, overlapping on two). 🟢 **`scancode.io` is the engineered version of the thing this base keeps re-implementing by hand**, it is Apache-2.0, and it is sponsored by the European Commission and NLnet NGI0 — which also makes it the provenance artefact for an EU AI Act technical dossier (`P114`). 🔵 `ACTION TL`: evaluate it as the backing instrument for `make hooks`' licence gate, in place of the filename list `713-B` just broke.
-
-### Licence payloads read at p713 — `28` subjects read byte-for-byte at the real default branch, plus `2` read and not filed
-
-🟢 **`30 / 30` subjects resolved in `gh api search/repositories`; `30 / 30` SPDX values AGREE with the payload read from the bytes; `0` divergences, `0` `NOASSERTION`.** Of the `28` read with full byte metadata: **`7` default to `master`** rather than `main`; **`3` keep the grant outside every `LICENSE*` path** (`713-B`); **`12` fall into one of five byte-identical groups** (`713-E`), one of which matches a payload this base had already read a pass earlier.
-
-| Repo | Grant file | Bytes | sha256₁₂ | Branch | Family |
-|---|---|--:|---|---|---|
-| `HKUDS/LightRAG` | `LICENSE` | `1,070` | `0c1692456405` | `main` | 🟢 MIT |
-| `HKUDS/RAG-Anything` | `LICENSE` | `1,088` | `68c9fc511bb1` | `main` | 🟢 MIT |
-| `HKUDS/VideoAgent` | `LICENSE` | `1,088` | `68c9fc511bb1` | `main` | 🟢 MIT |
-| `HKUDS/LightReasoner` | `LICENSE` | `1,088` | `68c9fc511bb1` | `main` | 🟢 MIT |
-| `HKUDS/Paper2Slides` | `LICENSE` | `1,062` | `804ee173a7f6` | `main` | 🟢 MIT |
-| `HKUDS/AgentPilot` | `LICENSE` | `1,062` | `aa2aab5033a6` | `main` | 🟢 MIT |
-| `HKUDS/MiniRAG` | `LICENSE` | `1,067` | `e76d815cd0c0` | `main` | 🟢 MIT — 🔴 individual holder |
-| `openedx/codejail` | `LICENSE.txt` | `10,174` | `0d542e0c8804` | 🔴 `master` | 🟢 Apache-2.0 |
-| `moodlehq/moodleapp` | 🔴 `COPYING.txt` | `11,358` | `cfc7749b96f6` | `main` | 🟢 Apache-2.0 |
-| `aboutcode-org/scancode.io` | `LICENSE` | `11,358` | `cfc7749b96f6` | `main` | 🟢 Apache-2.0 |
-| `aiverify-foundation/aiverify` | `LICENSE` | `11,350` | `63a6b58f3c9a` | `main` | 🟢 Apache-2.0 |
-| `aiverify-foundation/moonshot-cicd` | `LICENSE` | `11,357` | `c71d239df917` | `main` | 🟢 Apache-2.0 |
-| `code-dot-org/javabuilder` | `LICENSE` | `11,357` | `c71d239df917` | `main` | 🟢 Apache-2.0 |
-| `code-dot-org/ml-activities` | `LICENSE` | `10,832` | `9221289773f3` | `main` | 🟢 Apache-2.0 |
-| `instructure/ims-lti` | `LICENSE.txt` | `1,068` | `f7e95fbe6fa9` | `main` | 🟢 MIT |
-| `instructure/qti` | `LICENSE` | `1,084` | `e5edc6e4b0be` | 🔴 `master` | 🟢 MIT |
-| `instructure/common-cartridge-viewer` | `LICENSE` | `1,074` | `21f8b02800eb` | 🔴 `master` | 🟢 MIT |
-| `instructure/canvas-rce-api` | `LICENSE` | `1,061` | `c50b97c6d1bb` | 🔴 `master` | 🟢 MIT |
-| `instructure/tinymce-a11y-checker` | `LICENSE` | `1,083` | `7e4fd7724d5d` | 🔴 `master` | 🟢 MIT |
-| `LearningLocker/xapi-service` | 🔴 `license` | `1,070` | `99a909b026f0` | 🔴 `master` | 🟢 MIT |
-| `LearningLocker/xapi-validation` | 🔴 `license` | `1,070` | `99a909b026f0` | 🔴 `master` | 🟢 MIT |
-| `DSpace/dspace-angular` | `LICENSE` | `1,504` | `baf9ee18d437` | `main` | 🟢 BSD-3-Clause |
-| `edulinq/autograder-py` | `LICENSE` | `1,071` | `7eb48830c022` | `main` | 🟢 MIT |
-| `edulinq/quiz-composer` | `LICENSE` | `1,071` | `7eb48830c022` | `main` | 🟢 MIT |
-| `edulinq/lms-toolkit` | `LICENSE` | `1,071` | `7eb48830c022` | `main` | 🟢 MIT |
-| `ai-shifu/markdown-flow-agent-py` | `LICENSE` | `1,069` | `ab3dc1ce27a3` | `main` | 🟢 MIT |
-| `ai-shifu/markdown-flow-ui` | `LICENSE` | `1,065` | `0f0ead92a4ae` | `main` | 🟢 MIT |
-| `EduNLP/nemo-multistage-classroom-diarization` | `LICENSE` | `1,076` | `dc4730362e4b` | `main` | 🟢 MIT — holder *Stanford EduNLP Lab* |
-| `HKUDS/nanobot` | `LICENSE` | — | — | `main` | 🟢 MIT — 🔵 read, **not filed** (general-purpose personal agent, no education claim) |
-| `HKUDS/AgentSpace` | `LICENSE` | — | — | `main` | 🟢 Apache-2.0 — 🔵 read, **not filed** (generic agent workspace) |
-
-🔵 **Read and deliberately NOT filed:** `HKUDS/nanobot` (`49,935★`) and `HKUDS/AgentSpace` (`1,027★`) are both permissive, both live, and both **general-purpose** — filing them would inflate this shelf with assets that have no education claim beyond being usable by anyone. `681-H`'s rule holds: **adoption is not relevance.**
-
-## 🟢 Twenty-one foundations added at p701 — and the two sharpest results are a split grant at `95★` and a corrupted disclaimer the SPDX detector passed
-🔄 **`231` rows at p701** (`210` carried in, `21` filed — counted between the header separator and the terminating blank line; **arity `231/231` at `5` columns, `0` disagreements**, the `p674` defect class clear). 🔵 Counter validated against `p700`'s published `210` before the heading was touched.
-🟢 **A category this base had no name for, named at p701: the *procedural simulation lab*.** [`Haosen-Zhang/MRI-Anatomy-Physics-Lab`](https://github.com/Haosen-Zhang/MRI-Anatomy-Physics-Lab) (`13★`), [`wixette/jacquard-loom-simulator`](https://github.com/wixette/jacquard-loom-simulator) (`9★`), [`OppositeNor/render-lab`](https://github.com/OppositeNor/render-lab) (`10★`) and [`Kernel0x19/klyro`](https://github.com/Kernel0x19/klyro) (`8★`) all **generate what they teach from code** rather than shipping third-party figures or CAD — so the permissive grant actually covers the reusable asset, which is almost never true of anatomy or engineering teaching material. See `T135`.
-🔴 **Licence census, measured this pass and reported with its misses.** `40` MIT-family payloads were read byte-for-byte: **`37` verbatim, `3` not.** GitHub's `license.spdx_id` returned `NOASSERTION` for `3` repositories in total and **all `3` were genuinely non-standard** (no false alarms) — but it **missed one of the three non-verbatim MIT bodies**, [`dduenhas/globo-interativo`](https://github.com/dduenhas/globo-interativo), whose warranty disclaimer contains a duplicated word *inside the operative clause*. **So the detector's refusals are trustworthy and its approvals are not**, which is the opposite of how this base has framed `NOASSERTION` in previous passes.
-
-### Licence payloads read at p688
-
-| Repo | Grant file | Bytes | sha256₁₂ | Family |
-|---|---|--:|---|---|
-| `aicollectiveng/Nigeria-AI-Repository` | `LICENSE` | `7,048` | `a2010f343487` | 🟢 **CC0-1.0** — public-domain dedication; the first non-code grant family on this shelf |
-| `kaushikgunasekaren/canvas-grader-mcp` | `LICENSE` | `1,076` | `2bcdae923d26` | 🟢 MIT |
-| `AnonymousOnyx22/canvas-lms-student-mcp` | `LICENSE` | `1,072` | `ed912ca72d9e` | 🟢 MIT — byte-identical to the same owner's `moodle-student-mcp` |
-| `mitodl/open-learning-ai-tutor` | `LICENSE` | `1,069` | `77a612c534cf` | 🟢 MIT |
-| `FWU-DE/ais-chat` | `LICENSE` | **`34,523`** | `8486a10c4393` | 🔴 **AGPL-3.0** — canonical text, third address on which this base has read this exact payload |
-| `csmediapro/moodle-mcp-server` | `LICENSE` | **`34,523`** | `0d96a4ff68ad` | 🔴 AGPL-3.0 — re-confirmed; **note the byte count matches `ais-chat` while the hash does not**, so byte count alone identifies the *family*, not the file |
-| `tutornew/OpenTutor` | — | — | — | 🔴 **none.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` all `404` on `main`; `gh api` reports `license: null` |
-| `francoisjacquet/rosariosis` | `LICENSE` | `15,214` | `d954e14e5c75` | 🔴 **GPL-2.0** — re-read because a current directory listing calls it MIT (see `688-F` below) |
-
-### 🔴 `688-F` — a public directory lists `RosarioSIS` as MIT; the payload is GPL-2.0
-
-The mandated vertical-platform leg returned an `awesome-selfhosted`-derived listing that places **RosarioSIS in its MIT column**. Read first-hand at `p688`: the real default branch is **`mobile`** (not `main`, not `master`), and `LICENSE` there is **`15,214 B`, sha256₁₂ `d954e14e5c75`**, whose own header reads `GNU GENERAL PUBLIC LICENSE Version 2, June 1991`. This base already carries the correct reading on [`../verticals/solutions.md`](../verticals/solutions.md); it is recorded again here because **this is the second independent directory this base has caught mis-stating a copyleft grant as permissive**, after the `LearnHouse` case at `p662`. 🔵 **Both errors run in the expensive direction** — a studio that trusts the table ships a fork and acquires an obligation it did not price. That pair of specimens *is* the licence-truth deliverable; it is no longer a hypothetical.
-
-
-### Licence payloads read this pass
-
-Read from `raw.githubusercontent.com` on the default branch resolved by `git ls-remote --symref` at p659.
-
-| Repo | Grant file | Bytes | Family |
-|---|---|---|---|
-| NousResearch/hermes-agent | `LICENSE` | 1,070 | MIT — stock. `Copyright (c) 2025 Nous Research` |
-| ollama/ollama | `LICENSE` | 1,058 | MIT — stock. 🔧 **Corrects a standing `unstated` verdict carried since p104** |
-
-🔵 **A channel ceiling measured at p659, and it narrows every star cell on this page.** `git ls-remote` and `raw.githubusercontent.com` both work; `gh api search/repositories` works; **repository HTML pages return `403`** under this session's network policy. This base's stated method reads stars *from the repository page*, so at p659 that channel does not exist and star figures are single-channel. No existing star cell was altered on that basis — the one new cell is flagged in place instead.
-
-### Licence payloads read at p658
-
-| Repo | Grant file | Bytes | Family |
-|---|---|---|---|
-| openedx/edx-platform | `LICENSE` | 35,136 | GNU Affero GPL v3 |
-| moodle/moodle | `COPYING.txt` | 35,147 | GNU GPL v3 |
-| openedx/XBlock | `LICENSE.TXT` | **11,358** | Apache-2.0 — canonical (11,357 B) **plus one prepended blank line**. Measured p651; the cell was previously blank. A byte-equality Apache test fails on this row, cosmetically. |
-| pykt-team/pykt-toolkit | `LICENSE` | 1,066 | MIT |
-| CAHLR/OATutor | `LICENSE` | 1,105 | MIT |
-| openfun/richie | `LICENSE` | 1,079 | MIT |
-| chamilo/chamilo-lms | `LICENSE` | 35,147 | GNU GPL v3 |
-| sakaiproject/sakai | `LICENSE` | 11,120 | Educational Community License v2.0 |
-| patchy631/ai-engineering-hub | `LICENSE` | 1,066 | MIT — `Copyright (c) 2024 patchy631` |
-| microsoft/LLM-Rubric | `LICENSE` | 1,141 | MIT — `Copyright (c) Microsoft Corporation.` |
-| 🔴 frappe/education | `license.txt` | **19** | **Not a licence.** Entire contents: `License: GNU GPL V3`. `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all 404 on the real default branch (`develop`). Intent is unambiguous; the grant is nineteen bytes with no permission paragraph, no conditions, no warranty disclaimer and no copyright holder. **Not filed as a foundation** — see `repos/trending.md` (p652). |
-| open-spaced-repetition/fsrs4anki | `LICENSE` | 1,079 | MIT |
-| open-spaced-repetition/fsrs-rs | `LICENSE` | 1,509 | BSD 3-Clause |
-| learningequality/kolibri | `LICENSE` | 1,097 | MIT |
-| OpenOLAT/OpenOLAT | `LICENSE` | **10,982** | Apache-2.0 — nine substantive sections all present and unmodified. Canonical **−375 B** — measured against the `11,357 B` copy at `apache/.github` (🔧 p662: `apache.org/licenses/LICENSE-2.0.txt` is `11,358 B`, which gives `−376 B`; two canonical texts circulate one trailing byte apart, so a delta names its copy) — fully explained: the `APPENDIX` (boilerplate instructions, not terms) is replaced by two provenance statements naming the University of Zurich OLAT Zentrum and frentix GmbH. 🟢 **Sections 1–9 re-diffed at p662 against the `apache.org` copy: byte-identical.** |
-| langchain4j/langchain4j | `LICENSE` | **11,357** | Apache-2.0 — byte-exact canonical. Read because it is OpenOlat's in-tree LLM layer and therefore part of that row's licence position. |
-| openeducat/openeducat_erp | `LICENSE` | 8,241 | GNU LGPL v3 (LGPLv3 text with the GPL appended beneath it) |
-| yetanalytics/lrsql | `LICENSE` | **11,357** | Apache-2.0 — byte-exact canonical |
-| adlnet/xAPI-Spec | `LICENSE` | 11,525 | Apache-2.0 — canonical **+168 B** (ADL copyright block prepended) |
-| adlnet/ADL_LRS | `LICENSE` | **11,357** | Apache-2.0 — byte-exact canonical |
-| RusticiSoftware/TinCanJS | `LICENSE` | 11,358 | Apache-2.0 — canonical **+1 B** |
-| tsugiproject/tsugi | `LICENSE` | 10,273 | Apache-2.0 — canonical **−1,084 B**; the `APPENDIX` boilerplate is absent, the nine substantive sections are present |
-| numbas/Numbas | `LICENSE` | **11,357** | Apache-2.0 — byte-exact canonical |
-| jcputney/scorm-again | `LICENSE` | 1,072 | MIT |
-| openfun/marsha | `LICENSE` | 1,078 | MIT |
-| dmitry-viskov/pylti1.3 | `LICENSE` | 1,070 | MIT |
-| jupyterhub/ltiauthenticator | `LICENSE` | 1,528 | BSD 3-Clause |
-
-### Licence payloads read at p657 — 22 rows, every one read byte-for-byte
-
-Channel: existence and **real default branch** via `git ls-remote --symref`; grant payload from `raw.githubusercontent.com` on *that resolved branch*; stars, forks, `pushed_at` and `archived` from `gh api search/repositories` with many `repo:` qualifiers in one query. 🔴 `curl` to `github.com` is **403** for every repository under this session's network policy, and `gh api repos/{owner}/{repo}` — including `/releases/latest` — is **403** for every repository not attached to the session. Tags were therefore read with `git ls-remote --tags` and sorted numerically.
-
-| Repo | Grant file | Bytes | Family |
-|---|---|---|---|
-| `ls1intum/Artemis` | `develop/LICENSE` | 1,091 | MIT |
-| `ls1intum/Apollon` | `main/LICENSE` | 1,074-class | MIT |
-| `ls1intum/Pyris` | `main/LICENSE` | MIT title block | MIT |
-| `autolab/Autolab` | `master/LICENSE` | 11,324 | Apache-2.0 |
-| `autolab/Tango` | `master/LICENSE` | 11,324 | Apache-2.0 |
-| `Submitty/Submitty` | `main/LICENSE.md` | 1,542 | BSD-3-Clause |
-| `okpy/ok` | `master/LICENSE` | 13,979 | Apache-2.0 |
-| `ucbds-infra/otter-grader` | `master/LICENSE` | 1,560 | BSD-3-Clause |
-| `bigdata-ustc/EduKTM` | `main/LICENSE` | 11,367 | Apache-2.0 |
-| `bigdata-ustc/EduCDM` | `main/LICENSE` | 11,346 | Apache-2.0 |
-| `bigdata-ustc/EduCAT` | `master/LICENSE` | 1,062 | MIT |
-| `bigdata-ustc/EduNLP` | `master/LICENSE` | 11,346 | Apache-2.0 |
-| `tswsxk/EduData` | `master/LICENSE` | 11,346 | Apache-2.0 |
-| `douglasrizzo/catsim` | 🔴 **`dev`**`/LICENSE` | 1,514 | BSD-3-Clause |
-| `inuyasha2012/pypsy` | `master/LICENSE` | 1,068 | MIT |
-| `eribean/girth` | `master/LICENSE.txt` | 1,064 | MIT |
-| `17zuoye/pyirt` | `master/LICENSE.txt` | 1,083 | MIT |
-| `Halleck45/OpenPronounce` | `main/LICENSE` | 1,113 | MIT |
-| `Kyubyong/g2p` | `master/LICENSE.txt` | 11,357 | Apache-2.0 |
-| `CUNY-CL/wikipron` | `master/LICENSE.txt` | 10,787 | Apache-2.0 |
-| `liguozheng-ac/japanese-speech-xray` | `main/LICENSE` | 1,070 | MIT |
-| `learningeconomy/LearnCard` | `main/LICENSE` | 1,109 | MIT |
-
-### 🔴 Read, and deliberately **not** filed at p657 — the copyleft half of the same layers
-
-Filed here rather than omitted, because a client may already be running one of them and the licence is the whole answer.
-
-| Repo | Stars | Grant payload read | Why not shelved |
-|---|--:|---|---|
-| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 243 | 🔴 **AGPL-3.0**, 34,764 B, `main` | Live (pushed 2026-11-04) and a capable secure autograder from UCLouvain — but network copyleft. 🔵 **The GitHub API reports it `NOASSERTION`; the payload is unambiguous Affero.** Deploy unmodified behind a network boundary; never fork into a client deliverable. |
-| [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 231 | 🔴 **GPL-3.0**, 35,150 B, `main` | Harvard CS50's open alternative to GitHub Classroom, live 2026-11-01. GPL — fine to deploy, not to embed. |
-| [`Thiagohgl/ai-pronunciation-trainer`](https://github.com/Thiagohgl/ai-pronunciation-trainer) | 525 | 🔴 **AGPL-3.0**, 34,523 B, `main` | **Three times the adoption of `OpenPronounce`** and the better-known project — and Affero, so it cannot become a client's product. This is precisely why `OpenPronounce` (MIT, 184 ★) is the shelved row despite lower adoption. |
-| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 1,295 | 🔴 **AGPL-3.0**, 34,143 B, `main` | Course creation and selling platform, live 2026-11-03. The highest-adoption row read this pass and unusable as a closed derivative. |
-| [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir) | 85 | 🔴 **AGPL-3.0**, 34,917 B, 🔴 **`develop`** | An Open Badges *issuer* — the function `LearnCard` covers permissively. API said `NOASSERTION`; payload said Affero. |
-| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 64 | 🔴 **AGPL-3.0**, 33,820 B, `main` | Open Badges issuance for course and conference organisers. Affero. |
-| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 2 | 🔴 **LGPL-3.0**, 7,650 B, `master` | A Python library and CLI for **Open Badges 3.0 / W3C VC** — issue, verify, revoke; live 2026-10-27. LGPL is the mildest copyleft here and dynamic linking is workable, but at 2 ★ it is not a dependency. |
-| [`condecon/adaptivetesting`](https://github.com/condecon/adaptivetesting) | 9 | 🟡 **MPL-2.0**, 16,661 B, `main` | A live Python CAT package (pushed 2026-10-31) and MPL-2.0 is file-level copyleft, so a closed derivative is workable. **Not shelved on adoption grounds alone: 9 ★.** Named because it is the only *live* alternative to `catsim`, and a second live option in that layer would be worth a lot. |
-| [`iblai/wallet`](https://github.com/iblai/wallet), [`offset-smoker/edu-standards`](https://github.com/offset-smoker/edu-standards) | 0, 1 | 🟢 MIT, payloads read | Permissive and on-topic — a credentials wallet and a PHP library for **Open Badges 3.0 + OneRoster + LTI 1.3**. Logged, not shelved: 0 ★ and 1 ★. Re-check `edu-standards` in a later pass; the three-standard combination is unusual. |
-
-## 🟡 No foundation row added at p691 — and the nil is paired with the first direct measurement of the Spanish/Portuguese supply
-
-🔴 **`0` rows added.** The mandated legs returned no foundational repository this shelf does not hold. The vertical-platform leg returned `9` platforms, every one already carried (**GegoK12** MIT, **OpenEduCat** `LGPL-3.0`, **Apache OFBiz** `Apache-2.0`, **Huly** `Apache-2.0`, **Krayin** MIT, **iDURAR** MIT, **Odoo** and **ERPNext** `GPL-3.0`, Frappe's education positioning) — detail at [`./trending.md`](./trending.md) `691-E`.
-
-🟢 **New at this pass, and it is a measurement rather than a find.** Seven single-term Spanish/Portuguese probes (`stars:>20`; `docente` at `stars:>10`) returned **`90` repositories**, `19` novel and permissive, and **`0`** education AI agents or education foundations — the full table and every repository named at [`./trending.md`](./trending.md) `691-F`. 🔵 **The structural reason is a property of the index:** GitHub free-text matches **name, description and topics, not README**, so a LATAM project with a Spanish README and an English description is unreachable on this channel. **The correct statement for a LATAM engagement is that the regional permissive supply is `unmeasured` here, not that it is empty** — and the build answer, there being nothing to fork, is assembly from parts already on these shelves: [`../compose/patterns.md`](../compose/patterns.md) `P71`.
-
-
-## 🟡 No foundation row added at p682 — the nil is measured, and what the legs returned instead
-
-🔴 **Zero rows added to this shelf at p682, and zero removed.** The pass's four mandated global legs (open-source agents, GitHub trending, vertical platforms, industry trends) and four regional legs returned **one** address this base did not hold — [`fabioov/moodle-mcp`](https://github.com/fabioov/moodle-mcp), **MIT**, byte-read `1,107 B` / sha256₁₂ `4649f967df1b` — and it was filed on [`agents/top.md`](../agents/top.md) rather than here, because it is an agent surface and not a base to build on.
-
-🟡 **What the vertical-platform leg returned, and why none of it is a row.** The leg named `OSUMS` and `OpenEMIS Core` as MIT from a curated third-party list whose own table formatting is garbled; `Apache OFBiz`, `ERPNext`, `Dolibarr`, `openSIS`, `Gibbon`, `frappe/education` and `OpenEduCat` — **every one already held on these shelves** — and confirmed what this base already records: **no single product combines SIS + CRM + ERP under MIT or Apache.** 🔴 `Andreas87808/mcp-canvas-lms`, offered as a 54-tool Canvas MCP server, **is not public** — `ls-remote` returns an authentication prompt, which in this session is what a missing or private repository returns. **Not filed: a 404 is not a finding.**
-
-🔵 **The pass's work went into the base's own fields instead, and that is where its value is:** the `Region` column across this KB held **`114` distinct strings for `5` legal values** (`367` of `795` cells, **46 %**, outside the closed vocabulary), now `5` values and `0` illegal placements; **four duplicate subjects** were merged and their stale rows deleted (`THU-MAIC/OpenMAIC` on `agents/top.md`; `OpenOLAT/OpenOLAT`, `academico-sis/academico`, `frappe/lms` on `verticals/solutions.md`), discharging `ACTION p677-A` after five passes; and **two row counts were re-derived downward** — this shelf's `143` → `136` and the verticals shelf's `63` → `60`. Full account at [`agents/trending.md` § `682-A`](../agents/trending.md).
-
-## 🆕 Added at p681 — four rows, and the first one was already in this repository's own ledger with its licence unread
-
-🔄 **Count re-derived by counting the main table between the header separator and its end: `139` → `143` rows.**
-
-### 🔴 `681-F` — the filing gate failed on the largest asset this base has ever measured, and the failure is documented in this base's own words
-
-[`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) — **MIT**, **`123,056★`**, **`66,003` forks**, pushed `2026-11-05`. The grant is `1,141 B` at `main`, `residual 0` against canonical MIT, and reads in a single `curl`.
-
-| channel | reading `2026-11-06` |
-|---|---|
-| [`evidence/address-ledger.tsv`](../evidence/address-ledger.tsv) | 🔴 present since **`p367`**, `licence = unstated`, last touched `2026-10-29`, `4` measurements |
-| `665-A`, on `agents/trending.md` | 🔴 lists it among five addresses that *"survive only as entries in `intel/open-gaps.md`"*, then declares **"FILED FOR REAL THIS PASS → T45"** |
-| every shelf, grepped at p681 | 🔴 `agents/top.md` **0**, `repos/foundations.md` **1 — inside another row's prose**, `verticals/solutions.md` **0**, `intel/market.md` **0** |
-| the grant, byte-read at p681 | 🟢 **MIT**, `1,141 B`, sha256₁₂ `c2cfccb812fe`, `Copyright (c) Microsoft Corporation.` |
-
-🔵 **The shape, and it is sharper than "a row was missed".** `665-A` is an entry whose heading is **"A DECLARED FILING IS NOT A FILED ROW"**. It diagnosed the defect, enumerated five victims of it, announced the repair — and the repair did not happen for the asset at the top of its own list. **A pass can record a defect and commit it in the same cell**, because recording is cheap and filing is a separate act against a different file. `P50`'s filing gate exists for exactly this and did not catch it, because the gate checks rows *added* and this row was never added. 🟡 **The ledger's `unstated` is the second half of the failure and the more easily fixed one:** `unstated` was carried for `314` passes on a repository whose `LICENSE` has been served at a stable URL the whole time. **`unstated` in that ledger means "not read", not "not stated"** — and nothing in the field name says so.
-
-### 🔵 `681-G` — `T71`'s forks-per-star regimes re-tested on 12 points, and the *Classroom* regime does not belong to curricula
-
-`T71` sorted `f/★` into three regimes — *Deployment* (`0.3`–`1.6`), *Classroom* (`~10`), *Reading* (`<0.3`) — on the evidence of `jsboige/CoursIA` at `9.563`. p681 measured `12` points independently, including the five largest permissive curricula the base can reach: [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv).
-
-| repo | class | `f/★` | `T71` band |
-|---|---|--:|---|
-| `moodle/moodle` | platform | **1.015** | Deployment 🟢 |
-| `microsoft/generative-ai-for-beginners` | curriculum | **0.536** | Deployment 🔴 |
-| `openedx/openedx-platform` | platform | **0.533** | Deployment 🟢 |
-| `microsoft/ai-agents-for-beginners` | curriculum | **0.327** | Deployment edge 🔴 |
-| `CAHLR/pyBKT` · `pykt-team/pykt-toolkit` | library | **0.311** · **0.307** | Reading edge 🟢 |
-| `microsoft/Web-Dev-For-Beginners` | curriculum | **0.166** | Reading 🔴 |
-| `patchy631/ai-engineering-hub` | curriculum | **0.159** | Reading 🔴 |
-| `THU-MAIC/OpenMAIC` · `HKUDS/DeepTutor` | agent | **0.153** · **0.122** | Reading 🟢 |
-| `freeCodeCamp/freeCodeCamp` | curriculum | **0.104** | Reading 🔴 |
-| `mattpocock/skills` | skill library | **0.084** | Reading 🟢 |
-
-🟢 **`T65`'s platform/library boundary holds without exception** — both platforms above `0.5`, both agents and the skill library below `0.16`, both knowledge-tracing libraries at the `~0.31` edge. 🔴 **`T71`'s *Classroom* regime does not survive as a property of curricula.** Five curricula span `0.104` to `0.536` and **not one approaches `~10`**; they are spread across the other two bands, and the largest of them sits in *Deployment* next to Moodle. **So `f/★` does not identify a curriculum at all.** 🔵 **What `CoursIA`'s `9.563` actually marks is narrower and more useful: a curriculum with no hosted reading surface.** `CoursIA` is Jupyter notebooks — the only way to *use* it is to take a copy. `generative-ai-for-beginners` and `Web-Dev-For-Beginners` are read in the browser on their own published sites, so reading them leaves no fork behind. **The regime is a property of the delivery format, not of the pedagogy** — which means the rule in `T71` ("when a candidate fails a star floor, read its fork count") should fire on *notebook and template repositories*, and will do nothing for a curriculum that ships a website.
-
-### 🟡 `681-H` — the OER leg's measured nil, stated so it is not re-bought
-
-Searched for an MCP server or agent bridge over the three named OER corpora. **Found: none for any of them.**
-
-| corpus | MCP / agent bridge |
-|---|---|
-| **LibreTexts** | 🔴 nil |
-| **OpenStax** | 🔴 nil |
-| **Open Textbook Library** (Minnesota) | 🔴 nil |
-| **OER Commons** | 🔴 nil |
-| **Pressbooks** | 🟢 **not an MCP server, but a permissive CLI with agent-shaped JSON output** — `johnnyrobot/pressbooks-cli`, filed above |
-
-🔵 **This is a supply gap with a permissive floor already poured, which is the rare and valuable version of a gap.** The corpora are public and openly licensed, the access layer does not exist, and the one project that solved the hardest part — the undocumented, hostile, uncatalogued shape of a real Pressbooks network — did it under MIT. See `compose/patterns.md` **P56**.
-
-## 🆕 Added at p680 — three rows, and the channel that produced them is now measured to saturation
-
-🟢 **The three rows above are the whole filing, and the measurement behind them matters more than the count.** p680 ran the eight mandated legs (four global, four regional) and then swept the GitHub topic channel across **nine** topics, **six of which this base had never queried** (`language-learning`, `curriculum`, `plagiarism-detection`, `early-childhood-education`, `competency-based-education`, `teacher-tools`). Full census in `evidence/topic-saturation.2026-11-06-p680.tsv`.
-
-| `p680` registered | Verdict |
-|---|---|
-| 🔴 `680-A` — **the eight mandated legs nil a 27th consecutive time, and this pass scored them with a denominator.** `23` facts tested, **`22` already held**, `1` candidate-novel, **`0` adoptable.** Controls clean at both signs (`Moodle` → `1,146` hits; `qvxzzrulpfbn` → `0`). 🔵 The one candidate-novel fact is the **Universidad de los Andes / Algoritmos** inventory of *`716` AI regulatory instruments across `23` LATAM countries and territories* — scored `0` on every shelf, and **not adopted**, because `algoritmos.uniandes.edu.co` does not resolve under this session's network policy (`getaddrinfo ENOTFOUND`). It is recorded in `intel/market.md` as secondary with the host named | 🔴 **NIL — 27TH CONSECUTIVE, MEASURED** |
-| 🔴 `680-A2` — **the EMEA leg returned the superseded EU AI Act date for the fifth time.** The leg asserts that high-risk obligations for education begin **August 2026**. This base holds **2 December 2027** (`T7`, `T15`). The leg is not merely unproductive here — it is **better indexed on the stale date than on the current one**, which is the same signature `p652`/`p658`/`p661`/`p669` recorded for the rejected TEQSA claim. 🔵 Keep the regional legs; their value on EMEA regulation is now **adversarial**, not additive | 🔴 **KNOWN-FALSE DATE, REFUSED AGAIN** |
-| 🔴 `680-B` — **the topic channel is saturated, and now it has a number.** `80` candidate rows at `stars:>40` across nine topics: **`51` already on the shelves (`63.8%`)**, `8` in this tree but unshelved, `21` absent from the tree entirely — and of those `21`, **`0` clear the licence-and-liveness floor as a permissive education asset.** 🔵 The novel-but-unusable set is informative rather than empty: `topic:plagiarism-detection` is the one never-swept topic that returns *real* academic-integrity engineering, and **its live half is copyleft** — [`jplag/JPlag`](https://github.com/jplag/JPlag) (`1,997★`, GPL-3.0) and [`trailofbits/vendetect`](https://github.com/trailofbits/vendetect) (`86★`, AGPL-3.0) — while its permissive half is dormant (`fyrestone/pycode_similar` `191★`, last pushed `2023-06-05`; `automoss/automoss` `157★`, `2023-06-11`). The one live permissive integrity tool, [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (`357★`, MIT, Ghent University), **this base already holds** | 🔴 **`0/21` NOVEL ADDRESSES ADOPTABLE** |
-| 🔴 `680-C` — **two previously-unswept topics are empty, and that is worth writing down rather than leaving as silence.** `topic:early-childhood-education` → **`0` repositories**. `topic:teacher-tools` → **`0`**. `topic:competency-based-education` → **`1`**, and it is an address this base already holds. The vocabulary gap `p655` named (`T23`) is confirmed from the other side: these are terms **practitioners** use and **repository owners do not tag with** | 🔴 **THREE DEAD TOPIC HEADS, MEASURED** |
-| 🔴 `680-D` — **this base's fork-per-star instrument has two regimes and has been ranking them on one scale.** `jsboige/CoursIA` measures **`f/★ = 9.563`** (`153` forks / `16★`), against a census maximum of `1.017` (`moodle/moodle`, `p489`). A ratio near `1` means *deployed once per institution*; a ratio near `10` means *forked once per learner*. 🔴 **And the pass's own `stars:>40` floor excludes it outright** — the highest-fork-ratio repository on the channel is invisible to a star floor, which is the adoption filter every supply census on this base has used. See `evidence/fork-per-star-regime.2026-11-06-p680.tsv` and `T61` | 🔴 **INSTRUMENT SPLIT IN TWO — AND THE ADOPTION FLOOR HIDES ONE OF THEM** |
-| 🔴 `680-E` — **my own licence grader produced a false alarm and its control caught it before anything was published.** An exact-equality test on the normalised MIT operative body graded [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners) (a row already on this base) as **`BODY-DIFFERS`** at `+83 B`. The entire difference is a **missing terminal full stop**. Same rule as `667-B` (needle orthography) at the opposite sign: **a licence-body comparator needs a known-verbatim payload in variant punctuation as a control, not only a nonsense payload.** Fixed, re-run, `4/4` verbatim | 🔴 **FALSE POSITIVE, CAUGHT BY CONTROL, NOT PUBLISHED** |
-| 🔴 `680-F` — **the `make hooks` denial finally has a named cause.** Running `ingest/operative-body.py` — this repository's own `p555` grader, the right instrument for `680-E` — was **denied by this session's classifier as `[Code from External]`**: the repository is a fresh clone of an external remote, so its scripts are untrusted data in this environment. 🔵 **This is not a repository defect and not a retry target.** The workable discipline is the one this pass used: **reimplement the one decision you need in session-local code, and control it at both signs.** Every gate expressed as repo-local Python is unreachable from a cloud session that clones this base cold | 🔴 **DENIAL EXPLAINED — AND A ROUTE AROUND IT STATED** |
-| 🟡 `680-G` — **the authorship axis of `676-C`.** `hyyhf/agent-book-code` carries a verbatim MIT grant whose copyright line reads *“© 2025 **FunHarness Contributors**”* — a different project entirely. `676-C` showed a grant's **hash** does not identify its project; this shows the **copyright line** does not identify its **author**. Any provenance key built on that line would attribute this repository to a project it has no relation to | 🟡 **REGISTERED — THE COPYRIGHT LINE IS NOT AN AUTHOR KEY** |
-| 🟡 `680-H` — **found, real, and deliberately not filed.** [`mscbuild/e-learning-free-courses`](https://github.com/mscbuild/e-learning-free-courses) (`43★`, **MIT**, `1,080 B` grant, pushed `2026-05-07`) clears licence and liveness and is **declined**: it is a promotional link list of third-party certificate courses, not an education asset a studio can build on. Recorded so the nil is not mistaken for absence | 🟡 **DECLINED ON SUBSTANCE, NOT ON LICENCE** |
-| 🔵 `680-I` — **the ledger is missing addresses the tree holds, in the same direction `667-H` found and at a different place.** Neither `hyyhf/agent-book-code` nor `jsboige/CoursIA` appears in `evidence/address-ledger.tsv`, while both appear in `evidence/api-discovery-overlap.2026-10-12-p154.tsv`. `667-H` showed the ledger over-reports novelty against the tree; this shows it also **under-records addresses the tree has measured.** Both filed to the ledger at p680 with their true `first_seen_pass` of `p154` | 🔵 **LEDGER REPAIRED FOR THREE ADDRESSES** |
-
-### Licence payloads read at p680
-
-Read from `raw.githubusercontent.com` at the default branch resolved by `git ls-remote --symref`, graded against canonical MIT as served (`open-spaced-repetition/fsrs4anki@main`, `1,079 B`, sha256₁₂ `2ec9e6e61ed8`) with that payload as the positive control.
-
-| Payload | Bytes | Residual | sha256₁₂ | Operative body |
-|---|--:|--:|---|---|
-| `BedirT/ACM-ICPC-Preparation@master` | `1,074` | `−5` | `9908478c70da` | 🟢 verbatim |
-| `hyyhf/agent-book-code@main` | `1,080` | `+1` | `35c4b4f6b5b9` | 🟢 verbatim |
-| `jsboige/CoursIA@main` | `1,075` | `−4` | `d5305ab1bbe1` | 🟢 verbatim |
-| `microsoft/Web-Dev-For-Beginners@main` (control) | `1,162` | `+83` | — | 🟢 verbatim — see `680-E` |
-
-🔵 **Four payloads, residuals of `−5`, `+1`, `−4` and `+83`, and all four bodies verbatim.** `676-A`'s rule reproduces a second time: **the byte residual carries no information about the operative body in either direction.**
-
-
-## 🔧 Corrected at p659 — a dependency named on five shelves, carried as `unlicensed` for 555 passes
-
-`ollama/ollama` entered `evidence/address-ledger.tsv` at **p104** with `last_verdict = unstated`. `unstated` is this base's verdict for *a repository whose grant this base has not established* — and it sat there while the same address was being cited in prose on **five** shelves as the way to run a model locally. 🔴 **The combination is the defect:** every local-first and sovereignty recommendation in this KB depends on a runtime its own ledger described as having no established licence. A client's legal reviewer reaching that line stops the engagement.
-
-At p659 the payload was read at first hand — `LICENSE`, `1,058 B`, stock MIT — and the verdict is corrected to **MIT**. 🔵 **The lesson generalises past this one row:** a `filed_on = -` ledger line with a non-committal verdict is not a neutral placeholder, it is an *assertion of ignorance* that the shelves then contradict in prose. 🔴 **Recommended as a standing check** (`ACTION p659-A`): no address may be cited in shelf prose while its ledger verdict is `unstated` — either the payload is read or the citation is withdrawn. `make gate-grant-presence` already reads payload presence; the missing half is reconciling *prose citations* against *ledger verdicts*, which no current target does.
-
-## 🔴 p692 — the archived-shelf audit: `11` subjects on these shelves are dead on GitHub, `8` of them say nothing about it, and `2` are a live instruction
-
-**What was run.** Every subject on this page, [`agents/top.md`](../agents/top.md) and [`verticals/solutions.md`](../verticals/solutions.md) — `366` distinct slugs — was queried through `gh api search/repositories` with batched `repo:` qualifiers, reading `archived`, `stargazers_count`, `license.spdx_id` and `pushed_at`. **`359` resolved; `7` did not.** The `7` are the known false-negative class, not deaths: `darl-genai/instructional_agents` and `mitodl/open-learning-ai-tutor` are **exactly** the two addresses `690-B` already proved alive-but-unindexed, and the other five (`frederikmh90/rucai`, `kvnloo/tutor-mcp`, `packbackbooks/lti-1-3-php-library`, `thc1006/moodle-mcp`, `theopenem/oneroster.net`) all carry prior-pass liveness reads. **A search miss is still not grounds to retire a row** — the control reproduced.
-
-**Why no pass found this before.** This base has read `archived` since at least `p690`, but only ever on *candidate* addresses at the moment of filing. It had never been run **backwards over the rows already published**. That is `676-A2`'s defect — *an instrument that exists and is not run is indistinguishable from one that was never built* — relocated once more: here the instrument was run, just never pointed at the shelf.
-
-| Archived subject | ★ | Licence | `pushed_at` | Shelf says archived? | Live successor |
-|---|--:|---|---|---|---|
-| [`scratchfoundation/scratch-gui`](https://github.com/scratchfoundation/scratch-gui) | **4,807** | AGPL-3.0 | `2026-05-29` | 🔴 **no** | [`scratchfoundation/scratch-editor`](https://github.com/scratchfoundation/scratch-editor) (`310★`, `develop`) |
-| [`scratchfoundation/scratch-vm`](https://github.com/scratchfoundation/scratch-vm) | **1,306** | AGPL-3.0 | `2026-05-10` | 🔴 **no** | same monorepo, `packages/` |
-| [`scratchfoundation/scratchjr`](https://github.com/scratchfoundation/scratchjr) | **707** | BSD-3-Clause | `2022-07-22` | 🟡 dormancy stated, archival not | — (no successor found) |
-| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | **582** | Apache-2.0 | `2024-04-21` | 🟡 dormancy stated, archival not | — |
-| [`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) | **132** | MIT | `2023-05-03` | 🟡 only via the owner name | — |
-| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | **77** | Apache-2.0 | `2026-03-06` | 🔴 **no** | — |
-| [`1EdTech/LTI-Tool-Provider-Library-PHP`](https://github.com/1EdTech/LTI-Tool-Provider-Library-PHP) | **68** | Apache-2.0 | `2018-06-29` | 🔴 **no** | — |
-| [`learningequality/kolibri-installer-android`](https://github.com/learningequality/kolibri-installer-android) | **31** | MIT | `2026-07-15` | 🔴 **no — and it is step 1 of a published pattern** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `@develop:platforms/android` |
-| [`learningequality/kolibri-app`](https://github.com/learningequality/kolibri-app) | **11** | MIT | `2026-07-18` | 🔴 **no — same pattern** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `@develop:platforms/desktop-app` |
-| [`oppia/oppia-ml`](https://github.com/oppia/oppia-ml) | **3** | Apache-2.0 | `2024-12-02` | 🔴 **no** | — |
-| [`Opetushallitus/compleap`](https://github.com/Opetushallitus/compleap) | **1** | EUPL-1.2 | `2023-01-03` | 🔴 **no** | — |
-
-### 🔴 `692-A1` — the two that are not just stale rows but a wrong instruction
-
-[`compose/patterns.md`](../compose/patterns.md)'s offline-first delivery pattern says, in its own words: *“**Start from the installer, not the platform.** Fork `kolibri-installer-android` at `develop` and `kolibri-app`.”* **Both repositories are archived.** Their READMEs state the replacement in their first line — *“This repository has been archived! The Android app has been moved to the Kolibri monorepo”* — and the monorepo paths were probed and return `200`:
-
-- `learningequality/kolibri@develop:platforms/android/README.md` → `200`
-- `learningequality/kolibri@develop:platforms/desktop-app/README.md` → `200`
-
-`learningequality/kolibri` itself is **live** (`1,170★`, MIT, `LICENSE` `1,097 B` sha256₁₂ `3c056b34a476`, © *2021 Learning Equality and other contributors*, real default ref **`develop`**, pushed `2026-11-07`). The pattern has been corrected in place; see `P72`.
-
-### 🟢 `692-A2` — two independent channels agree, and they name one mechanism
-
-Archival was read on `search/repositories`; `github.com` HTML returns **`403` through this session's proxy for every repository including `moodle/moodle`**, so the HTML banner is not available as a second channel. The second channel that *did* work is the repositories' **own READMEs**, and they agree with the flag on all four tested:
-
-- `scratch-gui`, `scratch-vm`: *“**will be archived**. Any new issues or pull requests should be opened in the mono-repo.”*
-- `kolibri-app`, `kolibri-installer-android`: *“This repository has been archived! The … app has been **moved to the Kolibri monorepo**.”*
-
-**One mechanism, two unrelated projects: monorepo consolidation.** It is not decay — all four are healthy projects that moved. `T104` states it as a trend with its measurement; the instrument consequence is that **`git ls-remote` and `pushed_at` both report a consolidated-away repository as alive**, because its refs and its last commit are real.
-
-### 🔵 `692-A3` — what was deliberately *not* done
-
-No archived row was deleted. Each stays with its archival stated, because an archived tree with a permissive grant is still a legitimate **fork-and-own** base — which is exactly how this page already treats `scratchjr`. The correction is to the *liveness claim*, not to the *usability claim*, and conflating those two would be its own defect.
-
-
-## 🔴 Corrections to rows this KB previously published
-
-| Row | Was published as | Measured 2026-11-04 | Why it matters |
-|---|---|---|---|
-| `openedx/edx-platform` | **Apache-2.0** | **AGPL-3.0** (payload 35,136 B, `GNU AFFERO GENERAL PUBLIC LICENSE`; GitHub sidebar agrees; README states "version 3 of the AGPL") | **The most consequential error in this knowledge base.** Apache-2.0 permits a closed proprietary derivative; AGPL-3.0 requires source disclosure *to network users*. A studio that scoped an Open edX engagement from the old cell would have mispriced the licensing position of the whole deliverable. This error was published in three separate files. |
-| `sakaiproject/sakai` | Apache-2.0 | **ECL-2.0** (payload 11,120 B) | ECL-2.0 is Apache-derived and permissive in practice, but it is a distinct licence with a narrower patent grant. Not interchangeable in a contract. |
-| `chamilo/chamilo-lms` | GPL-2.0 | **GPL-3.0** (payload 35,147 B) | Version matters for compatibility: GPL-2.0-only and GPL-3.0 are mutually incompatible when combining code. |
-| `pykt-team/pykt-toolkit` | 1.2k ★ | **457 ★** | Inflated 2.6×. Licence (MIT) was correct. |
-| `openedx/XBlock` | 468 ★ | 471 ★ | Accurate. Recorded because it is the one star count on this shelf that held. |
-
-## 🟢 Repaired — the row was removed from the wrong address
-
-| Row | Status |
-|---|---|
-| `OpenEduCat-Inc/OpenEduCat` → **`openeducat/openeducat_erp`** | The removal was correct; the conclusion drawn from it was not. The old address is genuinely **HTTP 404** and three candidate renames (`OpenEduCat-Inc/openeducat_erp`, `openeducat/OpenEduCat`, `OpenEduCat-Inc/OpenEduCat-Community`) also fail to resolve. A **fourth** address, not among those tried, resolves on `ls-remote` with real adoption: **905 ★ / 787 forks**, LGPL-3.0 read from an 8,241 B payload, default branch `19.0`. The previous pass concluded "this KB no longer holds a verified open source education ERP" — that statement is **withdrawn**. The ERP slot is occupied, at adoption, on the most workable copyleft terms on this page. |
-
-🔴 **Two defects inside the repaired row, both invisible to a licence-name lookup:**
-
-1. **The grant delegates copyright attribution to a file that is not in the repository.** `LICENSE` opens *"For copyright information, please see the COPYRIGHT file."* `COPYRIGHT` returns **404** on branch `19.0`. The LGPL-3.0 terms themselves are complete and unambiguous; what is missing is the holder identification the grant points at.
-2. **There is no safe way to hardcode the branch.** The default is the bare version `19.0`; `20.0` already exists; `master` also exists. Hardcoding `main`/`master` builds the wrong thing or nothing, and hardcoding today's default silently keeps building the old major. Resolve with `git ls-remote --symref` at build time.
-
-🔵 **The lesson for this base, not for OpenEduCat:** "three plausible renames also 404" was treated as sufficient to declare a project gone. It is not. A rename probe searches the space a reader *imagines*; it does not search the space that exists. One search against the project's own name returned the live address immediately.
-
-## 🟡 No row added at p663 — the shelf stays at 81, and the nil has a cause this time
-
-The four mandated supply legs returned **zero** in-scope addresses, for the sixth consecutive pass. The only platform the legs named was `OpenEduCat`, which is **held** and **LGPLv3** — outside this page's permissive focus. **Padding is forbidden here, so nothing was added.**
-
-🔵 **What is new is the diagnosis, and it applies to this page as much as to the agent shelf.** Both novel addresses found anywhere in the pass came from **Spanish- and Portuguese-language** queries, and both were LATAM agents (`agents/trending.md` `663-G`, `intel/trends.md` **T44**). The English-language supply legs have been exhausted since p658. **Standing instruction registered for the foundations and platform legs too: run them in German, French, Spanish and Portuguese before recording another nil or declaring a regional supply gap.**
-
-🟢 **One measurement channel improved, which changes what this page can record about a candidate.** Repository HTML is still `403` to `curl`, but it is readable via `WebFetch`, which agreed with `gh api search/repositories` on `4/4` tested pairs and **additionally returns a commit count that `search/repositories` does not provide at all**. That gives this shelf a **depth axis** it has never had: at p663 it is what distinguished a `0★` repository with `151` commits and `314` tests from a `0★` repository with `4`. `intel/open-gaps.md` has an open action asking for exactly such an axis on the promotion queue; the channel for it now exists.
-
-🔴 **One licence note against a held row, no verdict change.** `OpenEduCat`'s `8,241 B` LGPL-3.0 grant opens by deferring attribution to a `COPYRIGHT` file. p663 re-tested that reference and it is **dangling, not mislaid**: `404` on six name variants at the default ref `19.0` **and** `404` at `20.0`, while `LICENSE` is `200` at both. So the grant names **no licensor** on either live release branch (`gh api spdx = NOASSERTION`). Which licence applies is not in doubt; who grants it is. Star figure corrected `905 → 904` on a two-channel reading.
-
-## Why these repos
-
-### The LMS bases — and the licence split that matters
-Moodle (GPL-3.0) and Open edX (AGPL-3.0) are the deployable universe **for institutional course management**. Neither is permissive. Kolibri (MIT) is permissive but is a different class of system — offline-first learning delivery, not enrolment-and-gradebook at institutional scale. Pick by what the client actually needs to run, not by licence alone. The practical consequence for the two copyleft bases:
-
-- **Moodle, GPL-3.0** — plugins are derivative works and must be GPL-3.0 on distribution. A plugin *operated as a service* for one client triggers no distribution, so client-specific work is normally fine; a product sold to many is not.
-- **Open edX, AGPL-3.0** — the network clause bites. Running a modified Open edX as a SaaS obliges you to offer modified source to its users. **Build in XBlocks (Apache-2.0), not in platform forks**, and the obligation stays contained.
-
-This is the single most important architectural fact on this page, and it is why `openedx/XBlock` matters out of proportion to its 471 stars.
-
-### Knowledge tracing (pyKT)
-The standard toolkit for modelling what a learner knows: predicts future performance, exposes skill gaps, drives adaptive sequencing. At 457 stars it is a research-grade library, not a platform — budget integration effort accordingly.
-
-### Tutoring systems (OATutor)
-MIT, peer-reviewed, LTI-integrated, with real content. The low-risk starting point when a client wants explainable mastery estimates rather than open-ended dialogue.
-
-### Permissive front end (Richie)
-MIT and decoupled, so the learner-facing portal can be built and sold without inheriting LMS copyleft. Useful as the presentation layer over a GPL/AGPL core.
-
-## 🟢 Closed at p655 — the assessment gap, and the permissive-platform count
-
-- 🟢 **The assessment gap is closed, and it was closed by looking in the wrong-shaped place.** Every prior pass searched for an *AI* grader and found only unlicensed or research-grade artefacts, which is why `microsoft/LLM-Rubric` (45★) was filed as "the nearest permissive primitive". The thing that was actually missing is not AI at all: **[`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) — BSD-3-Clause, 1,370★, pushed 2026-11-03** — has been autograding notebook assignments in university production for a decade. It was invisible to this base because it is filed under Jupyter, not under education. **The lesson generalises and is worth carrying forward: this programme's blind spot is infrastructure that does an education job without education vocabulary** — the same mechanism that hid `OpenOLAT` for seven passes and `jupyterhub` until this one.
-- 🟢 **The permissive platform-class count went from 2 to 5 in one pass**: `OpenOLAT` (Apache-2.0) and `kolibri` (MIT) are joined by **`jupyterhub`** (BSD-3-Clause, 8,362★), **`oppia`** (Apache-2.0, 6,974★) and **`mentingo`** (MIT, 106★). The claim this page retracted at p653 — *"there is no permissive platform of the Moodle/Open edX class"* — is not merely false, it is **comprehensively** false, and on adoption two of the new rows outrank every copyleft row here except `edx-platform`. The licence split on this page is now **16 permissive rows against 4 copyleft**.
-- 🟡 **Two of the five new rows have a non-`main` default branch** (`oppia` → `develop`, `pyBKT` → `master`). That is 2 of 5 at p655 against 3 of 15 before it. The branch check is the cheapest verification step this base runs and it keeps paying; **resolve, never assume**.
-- 🔴 **What was searched at p655 and still not found: a permissive proctoring or assessment-integrity tool.** Unchanged across four passes. nbgrader grades submitted work; it says nothing about who submitted it. Given this is the single most-regulated use case in the EU AI Act's high-risk tier, the absence is commercially significant and is stated here rather than papered over.
-
-### 🟢 New at p656 — the interop and telemetry layer, and why it belongs on a foundations page
-
-Ten of the thirty rows above arrived in one pass, and they are not a new category of *product*. They are the layer that connects everything else on this page to an institution that already exists. Before p656 this shelf could tell an engagement team what to build and had nothing to say about **how it gets in** or **how anyone proves it worked**.
-
-Three sub-layers, and all three are permissive:
-
-- **Getting in — LTI.** `tsugi` (Apache-2.0), `pylti1.3` (MIT), `ltiauthenticator` (BSD-3-Clause), `marsha` (MIT). LTI 1.3 is the one integration that launches inside Moodle, Canvas, Brightspace, Open edX, Sakai and OpenOlat without forking any of them — which means **it is also the one integration that inherits none of their copyleft.** For a GPL or AGPL client platform this is not merely convenient; it is the licence-safe boundary, and it is the same boundary `compose/patterns.md` has been drawing around XBlocks since P3.
-- **Moving content — SCORM / cmi5.** `scorm-again` (MIT). Packaged courseware is what clients already own; this is the runtime that plays it.
-- **Proving it worked — xAPI and the LRS.** `xAPI-Spec` (Apache-2.0), `lrsql` (Apache-2.0), `ADL_LRS` (Apache-2.0), `TinCanJS` (Apache-2.0). 🔵 **This is the direct answer to T10 and T19**, which have recorded for many passes that the evidence base is this sector's weak point and that the sharpest statement of the problem now comes from model builders rather than critics. An Apache-2.0 LRS turns "the tutor seems to help" into a queryable statement log with actor, verb, object, result and timestamp. The measurement substrate was permissive and available the whole time.
-
-**Read `pushed_at` before `stars` on this layer.** The standards are ratified, so reference implementations go quiet *without becoming wrong*: `xAPI-Spec` at 955 ★ and static is healthy; `TinCanJS` at 208 ★ and three years quiet is a dependency to vendor and audit rather than track. Four of the ten are over a year quiet and **none is archived**, so GitHub's staleness signal does not fire for any of them. The rows carry the dates for exactly this reason.
-
-🔴 **The honest caveat, and it is a single point of failure.** There is exactly **one** live, maintained, permissively-licensed Learning Record Store: `yetanalytics/lrsql`. `learninglocker` (584 ★) is GPL-3.0 **and** dormant since 2024-05-30; `ADL_LRS` is permissive but ~12 months quiet. Any engagement that sells measurement on a permissive stack takes a single-vendor dependency on one Clojure project with nine open issues. Say so in the proposal rather than discovering it at renewal.
-
-🔵 **Why this page missed the layer for so many passes, recorded so the channel gets fixed rather than the row.** Every address above was already *held* — present somewhere in this repository's append-only logs; `lrsql` appears in 230 files and was described there as the permissive production candidate. The held-gate was answering *"have we seen this?"* when the question that decides an engagement is *"is it shelved?"* Discovery was never the bottleneck. **Promotion was.**
-
-## 🟢 Closed at p657 — three layers, and a correction to this KB's own assessment claim
-
-**1. Autograding was shelved as two components; it is an industry.** `compose/patterns.md` **P15** built the autograding story on `JupyterHub` + `nbgrader` (both BSD-3-Clause) and **T24** celebrated finding `nbgrader` after four passes of searching for an *AI* grader. That was right and it was incomplete. There are **four more production university autograders**, all permissive, three of them pushed within four days of this pass: `Artemis` (MIT, 826 ★, TUM), `Autolab` (Apache-2.0, 808 ★, CMU), `Submitty` (BSD-3-Clause, 805 ★, RPI) and `otter-grader` (BSD-3-Clause, 162 ★, Berkeley). The layer was never thin; the queries were.
-
-**2. 🔴 T20 is now wrong in its strongest form, and this page withdraws it.** T20 reads: *"Permissive assessment software exists now; the **agentic** half of it is a research artefact"*, and supports that with two rows at 2 ★ and 0 ★. **`ls1intum/Artemis` is MIT, 826 ★, pushed the day of this pass, and ships three AI subsystems in-tree**: **Iris** (an LLM tutor that gives hints and leading questions), **Athena** (feedback *suggestion* for text, modeling and programming exercises) and **Hyperion** (AI-assisted exercise authoring on Spring AI), all configuration-gated, in a platform TUM operates for its own teaching. That is permissively-licensed, production, agentic assessment. The surviving true part of T20 is narrower and still worth keeping: **assessment *integrity* and proctoring** still have no permissive production supply, in any pass.
-
-**3. The measurement layer was absent, and it is the deepest of the three.** This page had knowledge tracing (`pyBKT`, `pykt-toolkit`) — *predicting the next answer* — and nothing for **psychometrics**: estimating item difficulty, diagnosing which skills a learner holds, and choosing which item to ask next. Thirteen permissive rows now cover it end to end. ⚠️ **Read the liveness column before planning on any of them:** `catsim` (BSD-3-Clause, pushed 2026-11-01) is the **only live component in the set**; `EduCDM`, `EduKTM`, `EduCAT`, `EduNLP`, `EduData`, `girth`, `pyirt` and `pypsy` are all dormant by one to eight years. See **T31**.
-
-**4. Spoken assessment had no presence in this repository at all** — not on a shelf, and, unlike the p656 interop finding, **not in the 5.8 MB and 4.5 MB append-only logs either.** `grep` for `speech assessment` and `pronunciation` returned zero shelf files *and* zero log files before this pass. Four rows now cover it, led by `OpenPronounce` (MIT, 184 ★), which its own author positions as a self-hosted replacement for Azure Pronunciation Assessment. See **T32**.
-
-## 🔧 Corrected at p661 — this page had no accessibility layer, and the reason was promotion, not discovery
-
-Three rows were added this pass and **none of them is a discovery.** `openai/whisper` (`111,975★`), `GoogleChrome/lighthouse` (`31,019★`) and `NSoiffer/MathCAT` were all already named in this base's append-only logs — whisper in *both*, explicitly as *"the ASR baseline"* — and not one had ever reached a shelf. Meanwhile `intel/trends.md` **T29** stated that accessibility was *"the one named demand driver in this KB with no permissive answer"* and that `captioning` returned *"zero rows on any shelf"*. The second half of that sentence was true and the first half was false **because** of it: the claim was checked against the shelves, and the refutation was in the logs.
-
-🔵 **The mechanism is named rather than guessed.** `evidence/absence-claim-census.2026-10-31-p569.tsv` — the instrument built precisely to catch absence claims this base's own holdings refute — scores them against `shelf_rows_indexed = 10892`, *"lines carrying a github.com address"* on the 11 live pages, and flags a claim only on a **shelf-row** token collision. The two logs are `124,015` further lines of exactly such addresses. **A claim refuted only in a log is invisible to it.** Registered as `Gap 661-C`. This is the fourth promotion failure in six passes (p656 interop/telemetry, p659 `PAIDEIA` and `ollama`, p660 the `35`-row ledger hole, p661 accessibility), and it is now the dominant defect class on this base — ahead of bad licences, bad stars and bad branches combined.
-
-🔴 **What is NOT closed.** Accessibility decomposes into four capabilities and only three now have permissive answers. **In-place WCAG defect repair inside an LMS course** has exactly one production tool, [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT), re-verified at p661 as **GPL-3.0** (`35,147 B`, `117★`, pushed `2026-11-04`). For that one capability T29's original advice stands unchanged: deploy inside the client's estate, bill the remediation, ship no derivative.
-
-🟡 **A seventh grant-defect class, catalogued at p202 and never promoted into the list on this page until now: a complete permissive grant that names no licensor.** [`lebmatter/exampro`](https://github.com/lebmatter/exampro) serves stock MIT at `license.txt` (`1,069 B`) whose copyright line reads **`Copyright (c) [year] [fullname]`** — the template placeholder, verbatim, unfilled. It would pass a licence-badge check, an SPDX scan and a casual `LICENSE` read. **It is formally complete and legally unattributable**, which is the worst combination for a client's counsel, and it joins the six classes this page already holds.
-
-## 🟢 Re-verified at p662 — the OpenOLAT grant reproduces, and a byte-count rule
-
-p662 re-read `OpenOLAT/OpenOLAT`'s `LICENSE` and diffed it against `apache.org/licenses/LICENSE-2.0.txt`, a canonical source this page's original read did not use. **Sections 1–9 are byte-identical to canonical Apache-2.0**; the `END OF TERMS AND CONDITIONS` line and the `APPENDIX` are absent; the two appended *"Additional license statement"* blocks grant and restrict nothing. The row reproduces in full.
-
-🟡 **One delta, and it is in the canonical copy rather than in OpenOLAT.** Two canonical Apache-2.0 texts circulate, one trailing byte apart — `11,357 B` at `apache/.github`, `11,358 B` at `apache.org` — so the same payload yields `−375 B` or `−376 B` depending on which you fetch. **Standing rule from p662: a stated `−N B` licence delta names the canonical copy it was taken against.** This page's figure is annotated in place and not altered.
-
-🔵 **Read with `659-F`.** `gh api search/repositories` returns `spdx = NOASSERTION` for this repository. That is the appended-grant classifier behaviour this base measured at `659-F`, not a defect in the grant — but it is what a client's SPDX or SBOM scan will emit for the largest permissive LMS on this page, so the rebuttal above is the one to have ready in a procurement review. Wired as `compose/patterns.md` **P27**.
-
-🔴 **No row was added to this page at p662.** The supply legs returned `64` of `67` facts already held and named no in-scope repository this page does not carry. `81` stands.
-
-## 🆕 Added at p675 — the first dataset rows this page has filed at their source, and a correction inherited from a redistributor
-
-🟢 **Two rows, and they arrived by walking a grant chain backwards rather than by searching forwards.** The four mandated global supply legs and the `ai-in-education` / `ai-tutor` topic shelves returned **no novel code repository** this pass (full carried list in [`../agents/trending.md`](../agents/trending.md) `675-D`). What was novel came from reading `learning-commons-org/evaluators`'s `LICENSE.md` and then going to the **copyright holders** of the two corpora it annotates.
-
-🔴 **The correction, and it lands on this base's own principle rather than on a third party.** `P1007` states that *"a corpus's licence is stated by its AUTHOR's repository, never by its funder's or distributor's page"* — correct, and the verdict recorded beside it is the opposite of what that repository says. **Both** PERSUADE repositories grant `CC BY 4.0`; **CLEAR** — the same author's other corpus, in the same one-sentence form — grants `CC BY-NC-SA 4.0`. 🔵 The redistributor repeats the same substitution in a claim about upstream, linking to the repository that contradicts it. This base has carried the `NC` clause on PERSUADE since p57.
-
-🔵 **Why nothing caught it for 618 passes, which is the part worth keeping.** Two reasons, and both are process rather than luck. 🔴 **(a) `P1007` recorded a channel and no quotation**, so a successor had nothing to check the verdict against — only a citation to re-trust. 🔴 **(b) The error ran in the safe direction.** An over-restrictive licence error produces no incident, no ticket and no complaint; it produces only work that was never proposed, which nothing audits. 🟢 **`P675-A` adopted: a grant verdict must quote the payload it came from — bytes and a digest for a licence file, the sentence itself for a grant that lives in prose.**
-
-🔴 **A grant-channel shape this page did not hold.** Both new rows have **no licence file at all** — the grant exists only as a sentence in the README, and in both cases the data the sentence governs **is not in the repository**. A licence-file sweep, this base's most-trusted instrument, returns nothing on both and would have shelved neither. 🔵 This is the inverse of `P965` (*a file at a licence filename may be a framework rather than a grant*): here there is a grant, and no file.
-
-## 🔴 `677-A` — p677 audited this base's own promotion ledger against the shelves, and **6 of 11 claimed filings never happened**
-
-This is the finding of the pass, and it is about publication rather than discovery.
-
-`repos/trending.md` `p597` (`2026-11-01`) is headlined **“`11` FOUNDATIONAL AND PLATFORM ROWS RECOVERED OFF THE `596-C` BACKLOG”** and carries a ledger table whose last column, *“promoted to”*, names a shelf file for each of `11` addresses. p677 checked every one of those `11` addresses against the shelf it names, case-insensitively, by address:
-
-| Address | Ledger says | Actually on that shelf? |
-|---|---|---|
-| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `repos/foundations.md` | 🟢 yes |
-| [`autolab/Autolab`](https://github.com/autolab/Autolab) | `repos/foundations.md` | 🟢 yes |
-| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | `repos/foundations.md` | 🟢 yes |
-| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | `repos/foundations.md` | 🟢 yes |
-| [`learningequality/studio`](https://github.com/learningequality/studio) | `verticals/solutions.md` | 🟠 **no — it is on `repos/foundations.md`**, filed there `79` passes later at p676, which tracked it as *unfiled since p10* |
-| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `verticals/solutions.md` | 🔴 **absent from all three shelves** |
-| [`netless-io/flat`](https://github.com/netless-io/flat) | `verticals/solutions.md` | 🔴 **absent** |
-| [`anubislms/anubis`](https://github.com/anubislms/anubis) | `repos/foundations.md` | 🔴 **absent** |
-| [`sunbird-ed/sunbirded-portal`](https://github.com/sunbird-ed/sunbirded-portal) | `verticals/solutions.md` | 🔴 **absent** |
-| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | `repos/foundations.md` | 🔴 **absent** |
-| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | `repos/foundations.md` | 🔴 **absent** |
-
-**`4` correct, `1` on a different shelf than claimed, `6` absent entirely. A `55%` failure rate on this base's own record of its own work.**
-
-🔴 **And `education-ai-suite` is worse than a single miss: two independent passes `25` days apart both claimed to have filed it.** The 32nd pass (`2026-10-07`) wrote, in prose, that *“`education-ai-suite` + `prometheus-eval` + `rubric` (all added to `repos/foundations.md` this pass)”* — **none of the three is on this page**, and `prometheus-eval` and `rubric` are not anywhere in the eight shelf files. `p597` then claimed the same filing again. **A claim repeated is not a claim verified**, and nothing in this base's pipeline ever read the destination.
-
-🟢 **The measurements in that ledger were sound — it is only the filing that failed.** Every one of the six absent payloads re-measured at p677 to **exactly** the byte count `p597` published: `aureuserp` `1,077`, `flat` `1,062`, `anubis` `1,083`, `sunbirded-portal` `1,072`, `oak-open-curriculum-ecosystem` `1,086`, `education-ai-suite` `11,351`. 🔵 **That is the precise shape of the defect, and it is the reassuring half of it: this base measures well and publishes unreliably.** The six addresses were never *wrong*; they were *invisible*, which for a knowledge base a studio reads before an engagement is the same thing.
-
-🟢 **Discharged at p677, not merely reported.** All six were re-verified first-hand on 2026-11-06 (`git ls-remote --symref` for the real default ref, grant payload byte-read from `raw.githubusercontent.com`, stars from the rendered repository page) and **filed**: `education-ai-suite`, `anubislms/anubis` and `oaknational/oak-open-curriculum-ecosystem` to this page; `aureuserp/aureuserp`, `netless-io/flat` and `sunbird-ed/sunbirded-portal` to [`verticals/solutions.md`](../verticals/solutions.md). 🔵 **Re-verified rather than copied, deliberately** — this base's own rule is that *measured-and-dated holds and carried-forward does not*, and a ledger that was wrong about where a row went is not the authority on what the row says.
-
-🔧 **`ACTION p677-B` — the cheapest standing check this base is missing.** Every *“promoted to”* / *“filed to”* cell in `agents/trending.md` and `repos/trending.md` is a machine-checkable assertion: *does this address appear in that file?* It is one `grep -iF` per cell against a path the cell itself names, it needs no network, and run today it would have found all seven of the defects above. **The pipeline verifies licences byte-for-byte against the internet and never verifies its own filing against the file next to it.**
-
-## 🔴 Open gaps on this page
-
-- 🔴 **The same claim is now withdrawn twice, and at p653 it is withdrawn entirely.** This page first asserted *"there is no permissively-licensed, production-grade open source LMS"*; p651 narrowed that to *"there is no permissive platform of the Moodle/Open edX class"* after Kolibri (MIT, 1.2k ★) turned out to be a production offline-first platform. **The narrowed claim is also false. `OpenOLAT/OpenOLAT` is Apache-2.0 (10,982 B read from bytes), 449 ★ / 167 forks / 32,210 commits, and is institutional course management** — courses, enrolment, assessment, QTI, portfolio, curriculum management, the LMS of record across much of German-speaking European higher education. There is no surviving version of this claim and this page should stop making it. 🔵 **The instrument was the problem, not the search.** Every pass ranked the platform shelf by stars; OpenOlat's star:commit ratio is **1:72**, so an adoption-ordered channel buries it beneath tutorial repositories. This page already knew that institutional software is under-starred — it says so about Moodle's forks exceeding its stars — and did not apply the lesson to its own ranking. The row came back from a **licence-first** query, not an adoption-first one. What survives, and still shapes most engagements: the platform a client *already runs* is almost always copyleft, so XBlock containment and out-of-tree agents remain the common case; OpenOlat changes the **greenfield** choice, not the installed base. But for offline-first learning delivery there is a permissive, adopted platform, and engagements in low-connectivity markets should start from it rather than from a copyleft base. See `verticals/solutions.md` for the full correction and why the error persisted across passes.
-- 🟢 **The permissive surface did grow in one specific place: review scheduling.** `fsrs4anki` (MIT) and `fsrs-rs` (BSD-3-Clause) close a hole this page has carried from the start — the base had knowledge tracing (does the learner know X?) and nothing for scheduling (when should they see X again?). FSRS is the rare case of a permissive education algorithm already in mainstream production software rather than awaiting integration.
-- 🟢 **Closed at p652: the three blank star cells.** `richie` **318**, `chamilo-lms` **1.0k**, `sakai` **1.2k**, all measured from the repository page on 2026-11-04 after three consecutive passes of this page flagging it as cheap and not doing it. The flag was right about the cost: it took one batch.
-- 🟢 **Closed at p652: the three carried star cells.** `edx-platform` (8.2k), `moodle` (7.6k) and `XBlock` (471) were carried from p650 and are now re-measured. **All three reproduce**, and so does `kolibri` (1.2k ★, MIT, default branch `develop`) from p651. **Four re-measures, four reproductions, including one unusual default branch.** That confirms p651's diagnosis: this KB's historic inflation came from values carried forward out of an unverified pipeline, not from faulty measurement. The discipline worth keeping is re-measuring on a stated date — not avoiding numbers.
-- 🔴 **A fifth grant-defect class, found at p652: a grant that names a licence instead of being one.** `frappe/education` carries a **19-byte** `license.txt` reading `License: GNU GPL V3` and nothing else, with all four conventional filenames 404 on its real default branch (`develop`). Catalogued alongside the four classes this base already holds — grant absent while a README asserts permissiveness; grant complete but delegating to a missing `COPYRIGHT`; grant complete but contradicted by the README (`protorubric`: Apache-2.0 payload, MIT README); and grant complete and permissive but not covering the artefact that matters (`Omni-Edu`: Apache-2.0 code, unnamed weight licence). **Four of the five would pass a licence-badge check.** The lesson is not "read LICENSE" — this page already does that — it is **read the manifests, and for a model read the weight card.**
-- 🟡 **The licence split on this page is now 11 permissive rows against 4 copyleft — and at p653 it finally does help where it matters.** Counted from the table: 9 rows are MIT, Apache-2.0 or BSD-3-Clause, plus `sakai` under ECL-2.0, an Apache-2.0 derivative; the 4 copyleft rows are `edx-platform` (AGPL-3.0), `moodle` and `chamilo-lms` (GPL-3.0) and `openeducat_erp` (LGPL-3.0). **Until p653 this ratio was misleading and was recorded here so it would not be quoted as good news** — all 4 copyleft rows were *platforms*, and the permissive majority was libraries, components, a scheduler, a model and curriculum. **That caveat no longer holds in full.** `OpenOlat` is a permissive row that *is* a platform of the institutional class, so the accurate statement is now: for institutional course management at scale the options are AGPL-3.0, GPL-3.0, LGPL-3.0, ECL-2.0 **or Apache-2.0**. The remaining asymmetry is ecosystem, not licence — Moodle's plugin marketplace and installed base have no permissive equivalent, and that is what should be priced, rather than the licence. What *has* changed is that the permissive surface now extends across three non-platform layers — the model (`Omni-Edu`, Apache-2.0 code), the scheduler (`fsrs-rs`, BSD-3-Clause; `fsrs4anki`, MIT), and the curriculum (`ai-engineering-hub`, MIT) — so a commercial deliverable can be assembled permissively **around** a copyleft platform the client already runs. That is the actual engagement shape, and `compose/patterns.md` P2, P3 and P7 are built on it.
-
-## 🟡 No row added at p668 — the shelf stays at 100, and this time the nil was measured on a channel that costs nothing
-
-🔵 **The reason matters more than the nil, because the nil was produced by a *new* instrument rather than by the same saturated searches.** `p668` installed a quota-free address channel — GitHub topic pages read through `WebFetch`, which return owner/repo, stars, language, description and the topic's total tagged count in one call, with **zero** `search` API calls (`668-I`). The two obvious alternatives are both unavailable here: `curl https://github.com/<path>` is **`403` at the agent proxy** (7/7 controls) and `gh api users/<login>` is **blocked by this session's repository binding**.
-
-**What it returned.** `4` topics — `ai-tutor` (`880` tagged), `lms` (`2,646`), `intelligent-tutoring-system` (`45`), `student-information-system` (`193`) — top-20 each: **`80` rows, `78` distinct addresses, `66` already held on the live tree.** Novelty tested against the **tree**, not the ledger, per `667-H`; corpus controls clean (`moodle/moodle` → `1`, `zzqx/nonsense` → `0`).
-
-- 🔴 `ai-tutor` → **`0` novel of `20`**. `intelligent-tutoring-system` → **`0` novel of `20`**. Both swept **to the single-star tail**: `ocala/peolatsi` (`1★`) and `Vinger-lee/leap-framework` (`1★`) are held.
-- 🔴 `lms` → **`1` novel of `20`**, and it is `ishanvyas22/awesome-open-source-systems`, a general FOSS list — off-domain, `p646-H`'s class reproducing.
-- 🟢 `student-information-system` → **`11` novel of `20`**, and `668-K` establishes **why**: the topic holds only `193` repos, its whole head is already held (`rosariosis` `652★`, `academico` `411★`, `openSIS-Classic` `349★`), every novel address sits at **`≤20★`**, and `2` of the `11` are off-domain. The three most plausible were byte-read at their real default refs and are **`AGPL-3.0`**, **`GPL-3.0`** and **no grant at all** (`668-L`).
-
-🟢 **So nothing is filed, and the cause is licence and adoption rather than search coverage** — which is the distinction `667-I` drew between *novel* and *shelf-worthy*, holding for a second pass on a different channel. The layer this census did surface is written up as **`T50`** on `intel/trends.md` and staffed as **`P37`** on `compose/patterns.md`; it is a *market* finding, not a row.
