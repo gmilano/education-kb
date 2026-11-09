@@ -6,13 +6,30 @@ updated: 2026-11-09
 
 # Foundational Repositories — Education
 
-**Pass p726 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+**Pass p727 · verified 2026-11-09.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
 Stars, SPDX licence and `pushed_at` read this pass via `gh api -X GET search/repositories`;
 existence confirmed on the raw channel. Where the search index has no entry for a
 repository that demonstrably exists, that is stated in the row rather than treated as absence.
+
+> 🔴 **`p727` added no row to this page, and that is a measured nil rather than a skipped leg.**
+> The mandated foundational leg (`open source platform {industry} ERP CRM MIT Apache`) returned
+> `openeducat/openeducat_erp`, `frappe/lms`, `OpenOLAT/OpenOLAT`, `francoisjacquet/rosariosis`
+> and `OS4ED/openSIS-Classic` — **`5 / 5` already held on this page or on
+> `verticals/solutions.md`.** The `grading agent LLM rubric` phrase leg returned **zero rows at
+> all**. `p727`'s three finds were all *agents* and are filed on `agents/top.md`.
+> 🟢 **What this page gained instead is four re-verifications, three of which contradict the
+> search index and none of which contradict this base:** `openeducat_erp` indexes
+> `NOASSERTION` and is **LGPL-3.0** by payload (`LICENSE`, `8,241 B`, read `2026-11-09` — the
+> vendor's own LGPL claim is correct); `rasbt/LLMs-from-scratch` indexes `NOASSERTION` and is
+> **Apache-2.0** (`11,505 B`, matching the `p687` cell); `OpenOLAT` indexes `NOASSERTION` and is
+> **Apache-2.0** (`10,982 B`, matching `p676`); `OS4ED/openSIS-Classic` returns **`404` on all
+> four root licence paths**, reproducing the standing finding that its terms exist only at
+> `docs/License.txt` (`GPL-2.0`) where no root-filename probe can reach them.
+> 🔵 **Three of four index fields are wrong; `4 / 4` of this base's payload-derived cells are
+> right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 ## Assessment and grading
 

@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Vertical Platforms — Education
 
-**Pass p726 · verified 2026-11-09.** Deployable systems a client may already run, or could
+**Pass p727 · verified 2026-11-09.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -16,13 +16,24 @@ before proposing a fork.
 
 ## Learning management systems
 
+> 🟢 **`p727` re-read the platform tier (`8` rows, `2026-11-09`).** All alive, `0` archived, no
+> licence changed. Two cells corrected: `canvas-lms` **6,905 → 6,908**, `oppia` **6,978 → 6,984**;
+> `sakai` re-pushed **`2026-11-07` → `2026-11-09`**. `moodle` `7,595`, `chamilo` `1,021`,
+> `OpenOLAT` `449`, `kolibri` `1,174` unchanged to the star. 🟡 `openedx/edx-platform` again
+> returned **`422` "cannot be searched"** from `gh api search/repositories`, reproducing the
+> `*not in search index*` cell below — **the repository exists; the search index has no row for
+> it.** 🔵 `OpenOLAT`'s licence was re-read from the bytes this pass (`LICENSE`, **`10,982 B`**,
+> Apache-2.0) because two sources returned by this pass's mandated legs call it `Apache-2.0`
+> while `gh api` still reports `NOASSERTION`: **the payload agrees with this shelf's cell and
+> with the blogs, and the index field is the thing that is wrong.**
+
 | Platform | Repo | Stars | Licence | Last push | Install base / posture |
 |---|---|--:|---|---|---|
 | **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | 7,595 | GPL-3.0 | 2026-10-30 | The largest open LMS by deployments (~200k active sites reported). GPL-3.0: customisations distributed to the client must ship source, but *hosting* it for them does not trigger disclosure. The default incumbent in LATAM and EMEA public education. |
 | **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | *not in search index* | **AGPL-3.0** | — | Second-most-deployed open LMS; stewarded by the non-profit Axim Collaborative, originally an MIT research project. ⚠️ **AGPL-3.0** — hosting a modified version for a client triggers source disclosure to its users. Plan integrations as separate services, not core patches. |
-| **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 6,905 | AGPL-3.0 | 2026-04-30 | Dominant in North American higher education. Open core, commercial Instructure cloud alongside. Same AGPL caution as Open edX. Instructure has since launched Canvas Career, a skills-first AI LMS for workforce learning. 🔴 **`726-H`: the mobile clients carry no grant at all.** [`instructure/canvas-ios`](https://github.com/instructure/canvas-ios) (925★) and [`instructure/canvas-android`](https://github.com/instructure/canvas-android) (155★) return `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` **and** `LICENSE-MIT` at `HEAD`, read this pass; `canvas-ios` has no `README.md` or `readme.md` either. **A Canvas engagement that includes the apps has an AGPL-3.0 server and an unlicensed client** — raise it before scoping mobile work. |
+| **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 6,908 | AGPL-3.0 | 2026-04-30 | Dominant in North American higher education. Open core, commercial Instructure cloud alongside. Same AGPL caution as Open edX. Instructure has since launched Canvas Career, a skills-first AI LMS for workforce learning. 🔴 **`726-H`: the mobile clients carry no grant at all.** [`instructure/canvas-ios`](https://github.com/instructure/canvas-ios) (925★) and [`instructure/canvas-android`](https://github.com/instructure/canvas-android) (155★) return `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` **and** `LICENSE-MIT` at `HEAD`, read this pass; `canvas-ios` has no `README.md` or `readme.md` either. **A Canvas engagement that includes the apps has an AGPL-3.0 server and an unlicensed client** — raise it before scoping mobile work. |
 | **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 1,021 | GPL-3.0 | 2026-11-09 | Strong Spanish- and French-speaking footprint, actively pushed. Materially relevant to LATAM engagements and consistently under-considered next to Moodle. |
-| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 1,240 | **ECL-2.0** | 2026-11-07 | Apereo Foundation, from a US university consortium. ⚠️ Licence correction: the Educational Community License 2.0 — an Apache-2.0 derivative with a patent-grant variation — **not** Apache-2.0 as previously published here and as several vendor blogs state. Still permissive and the most build-on-able LMS of this set. |
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 1,240 | **ECL-2.0** | 2026-11-09 | Apereo Foundation, from a US university consortium. ⚠️ Licence correction: the Educational Community License 2.0 — an Apache-2.0 derivative with a patent-grant variation — **not** Apache-2.0 as previously published here and as several vendor blogs state. Still permissive and the most build-on-able LMS of this set. |
 | **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 2,459 | AGPL-3.0 | 2026-11-09 | Modern, actively developed next-gen LMS — the credible "new stack" option versus the 20-year incumbents. AGPL-3.0. |
 | **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 109 | 🟢 **MIT** | 2026-11-09 | 🟢 **Promoted to this shelf at p723** (filed in the 128-row roster at p655, never surfaced here). AI-native LMS — AI mentor and role-play built in, rather than bolted on — positioned by its authors as a self-hosted alternative to Moodle and Docebo. **MIT, confirmed from the payload** (`LICENSE` reads *MIT License / Copyright (c) 2024 Selleo*, read this pass). Authored by **Selleo, Bielsko-Biała, Poland** — the first EMEA-authored platform on this shelf. ⚠️ Vendor-steered: Selleo also sells Mentingo as SaaS and as custom build, so treat it as **open core with a permissive grant on what is published**, and pin a commit. |
 | **eGovFrame MSA Edu** | [eGovFramework/egovframe-msa-edu](https://github.com/eGovFramework/egovframe-msa-edu) | 166 | 🟢 **Apache-2.0** | 2026-11-08 | 🟢 **New at p726, and the most consequential platform row this shelf has gained.** A **cloud-native microservice reference implementation of an online-education service, published by a national government** — Korea's eGovFrame standard framework (Ministry of the Interior and Safety), the stack Korean public institutions are mandated to build on. **Apache-2.0, payload byte-read this pass** (`LICENSE`, `11,357 B` — byte-exact stock Apache). Posture: it is a *reference implementation*, so expect to fork rather than deploy — but it arrives with the government's own component library ([`egovframe-common-components`](https://github.com/eGovFramework/egovframe-common-components), `253` functions, Apache-2.0) and its docs are Korean-first. **The only permissive, government-authored learner platform on this shelf. APAC.** |

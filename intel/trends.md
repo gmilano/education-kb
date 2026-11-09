@@ -6,7 +6,8 @@ updated: 2026-11-09
 
 # Education AI — Current Trends
 
-**Pass p726 · researched 2026-11-09.** Three new trends — **T250, T251, T252** — added above p725's
+**Pass p727 · researched 2026-11-09.** Two new trends — **T253, T254** — added above p726's
+**T250–T252**, p725's
 **T247–T249**, p724's **T245–T246** and p723's **T234–T244**, each with the evidence
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
@@ -17,6 +18,84 @@ registry **T1–T225** from prior passes is preserved in full below.
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T253–T254 — added at p727 (2026-11-09)
+
+## T253 — A `topic:` head has the same ambiguity defect a single search term has, and conjunction is the fix
+
+`p726` measured the `topic:` discovery channel and filed the result as `726-F`: **18 heads, 1,013
+distinct repositories, 600 novel (59.2 %), zero filed.** The cause was homonymy —
+`topic:adaptive-learning` returns concept-drift detection, adaptive sampling and gradient
+boosting, and `topic:xapi` returns Cisco Webex device code rather than the Experience API this
+industry's conformance tier is built on. **That measurement is sound and is not withdrawn.**
+
+**What `p727` withdraws is the generalisation.** Run conjunctively, the same channel produced
+every one of this pass's three rows:
+
+| Leg | Shape | Novel rows filed |
+|---|---|--:|
+| `topic:education topic:llm pushed:>2026-09-01 stars:>100` | domain head **AND** technique head | **3** |
+| `topic:ai-tutor pushed:>2026-09-01` | single domain-bearing head | 0 — all 12 already held |
+| `topic:intelligent-tutoring-system pushed:>2026-06-01` | single domain-bearing head | 0 — all already held |
+| `grading agent LLM rubric pushed:>2026-09-01 stars:>50` | phrase leg | 0 rows returned at all |
+
+🔵 **Mechanism — and this is `T252` arriving on a second channel rather than a new law.** `T252`
+established that *a single-term leg needs a domain-bearing term*, because `maestro` is a
+conductor and an orchestrator and `guru` is a teacher and a brand suffix. **A topic head is a
+term, and it carries the identical defect**: `adaptive-learning` is a pedagogy *and* a sampling
+strategy. Conjunction fixes it because it supplies the domain-bearing term as a **second filter
+the repository's author had to opt into**. `topic:education topic:llm` cannot return a
+gradient-boosting library — nobody tags one `education`.
+
+🟢 **Rule: run the `topic:` channel as a domain head ANDed with a technique head.** The
+single-head form is what `726-F` measured at `0 / 600` and there is no reason to run it again.
+⚠️ **Limit, measured not assumed:** the conjunctive leg returned only `12` rows. It is a
+*precision* instrument, not a volume one — it will not substitute for the publisher-estate
+enumeration that paid `8` rows at `p726`.
+
+## T254 — Licence follows the business model one tier further down: the local-first learner application is converging on AGPL while the skill tier stays MIT
+
+`T250` established that **the licence follows the business model of the publisher, not the
+maturity of the software** — a government mandating a framework must license it permissively
+because its suppliers are commercial, while an open-core vendor selling hosting chooses `AGPL`
+precisely to tax the hosting competitor. `p727` finds the same law operating *inside* the
+application tier, which `T250` did not reach.
+
+**The measurement.** Both of this pass's application-class finds are copyleft, and both are
+local-first desktop products:
+
+- [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) — **490★, AGPL-3.0** (`LICENSE`,
+  `34,523 B`, read this pass), explainer-video generation under an AI director agent,
+  local-first, 96 forks in the month since creation.
+- [`helixnow/deep-student`](https://github.com/helixnow/deep-student) — **309★, AGPL-3.0**
+  (`34,532 B`), a local-first AI learning workbench whose agent acts across every application
+  on a "Study Desktop", 60 forks.
+
+Against that, every **skill**-shaped artefact this base has filed recently is permissive:
+`universal-examprep-skill`, `teacher-to-skills`, `universal-diagnostic-tutor-skill`,
+`Good Learning` and `learn-anything-with-AI` — **all MIT**.
+
+🔵 **Why this is a trend and not two rows.** A local-first desktop application's only
+competitor is somebody who takes the code and runs it as a hosted service; **the network clause
+is the only defence that reaches that competitor**, so the application tier reaches for `AGPL`.
+A skill is a prompt artefact — there is no hosting to protect and nothing to tax — so it stays
+`MIT`. The licence is predicted by *what the publisher is defending*, which is exactly `T250`'s
+claim at a smaller scale.
+
+🟢 **Consequence for a studio, and it is a scoping fact rather than a licence opinion: the
+local-first application tier cannot be forked closed, and the skill tier can.** An engagement
+that wants a client-branded, closed derivative should compose skills over a permissive platform
+(`OpenOLAT` Apache-2.0, `oppia` Apache-2.0, `egovframe-msa-edu` Apache-2.0) rather than fork a
+desktop application — and should price an `AGPL` application as *deploy-and-contribute*, not as
+*fork-and-own*.
+
+⚠️ **The limit, stated so the next pass tests it rather than inheriting it.** This rests on
+**two** AGPL applications against five MIT skills. It is a consistent reading of `T250`'s
+mechanism, not an established base rate: `course2md` and `ClassCue` are both local-first
+desktop learner applications on this base's own shelf and both are **MIT**, which is a
+counterexample inside the same category. 🔵 The distinction that may matter — and that a later
+pass should measure rather than assume — is **whether the application has a hosted commercial
+version to protect**, not whether it runs locally.
 
 ## 🆕 T250–T252 — added at p726 (2026-11-09)
 

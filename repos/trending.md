@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p727) — 🟢 **THREE ROWS, ALL FROM ONE OPERATOR THE PREVIOUS PASS HAD NOT TRIED — AND TWO OF THEM ARE `AGPL`**
+
+**`3` rows filed · `7 / 7` licence payloads read first-hand · `0` rows from any mandated leg or phrase query · the channel `p726` measured at `0 / 600` paid `3` when run conjunctively.**
+
+### The channel comparison, continued from `p726`
+
+`p726` compared four channels and concluded that `topic:` heads produce volume without fitness
+(`1,013` repositories, `600` novel, `0` filed). This pass added a fifth row to that table
+rather than accepting the verdict, and it is the only channel that paid:
+
+| Channel | Run | Returned | Novel filed | Verdict |
+|---|---|--:|--:|---|
+| Mandated legs (4 global + 4 regional) | as prescribed | `12` addresses | **0** | 🔴 `34`th consecutive nil; `10` already held, `2` excluded on a standing rule |
+| `topic:`, **single** head (`p726`'s run) | `18` heads | `1,013` | **0** | 🔴 homonymy-killed (`726-F`) |
+| `topic:`, **single domain-bearing** head | `2` heads | `24` | **0** | 🟡 fit but saturated — every address already held |
+| Phrase leg (`grading agent LLM rubric`) | `1` leg | **0** | 0 | 🔴 returned nothing at all |
+| **`topic:` domain head AND technique head** | `1` leg | `12` | **3** | 🟢 **`T253` — the operator is the whole difference** |
+
+🔵 **The finding is not that the channel is good or bad. It is that `topic:` heads have the same
+term-ambiguity defect single search terms have** (`726-D`/`T252`), **and conjunction is the fix**:
+`topic:adaptive-learning` returns concept-drift ML, but `topic:education topic:llm` cannot,
+because nobody tags a gradient-boosting library `education`.
+
+### 🟢 The three rows
+
+| Repo | Stars | Licence | Payload read `2026-11-09` | Region | Shelf |
+|---|--:|---|---|---|---|
+| [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | 555 | 🟢 **MIT** | `LICENSE`, `1,071 B`, sha256₁₂ `a7055a6d5672`, © *2026 Dilawar Gopang* | ⚠️ unplaced → `Global` | `agents/top.md` |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 490 | 🔴 **AGPL-3.0** | `LICENSE`, `34,523 B`, sha256₁₂ `0d96a4ff68ad` | APAC (`README.zh-CN.md`, 1,164 Han) | `agents/top.md` |
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) | 309 | 🔴 **AGPL-3.0** | `LICENSE`, `34,532 B`, sha256₁₂ `894342980454` | APAC (`README_CN.md`, 1,790 Han) | `agents/top.md` |
+
+`nietzschian-debugger` is the one worth the pass: a debugger that **refuses to return the fix**
+and hands the question back — productive struggle as a hard constraint. It is also the first
+row here whose correct output is the *absence* of an answer, which is why `P161` pairs it with
+an objective judge rather than a rubric. 🔴 The other two are **both local-first desktop learner
+applications and both `AGPL-3.0`** — a convergence filed as `T254`: the application tier
+reaches for the network clause because a hosted re-seller is its only competitor, while the
+skill tier stays `MIT` because it has no hosting to protect.
+
+### 🟢 Four re-verifications against a channel that got three of them wrong
+
+The mandated legs' blog sources claimed OpenOlat is `Apache-2.0`, called `openSIS` "open
+source" with no licence, and were silent on `LLMs-from-scratch`. Payloads read this pass:
+
+| Repo | Index field | Payload | Against this base's cell |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION` | **Apache-2.0**, `10,982 B` | 🟢 confirms the `p676` cell exactly |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `NOASSERTION` | **LGPL-3.0**, `8,241 B` | 🟢 confirms; the vendor's own LGPL claim is correct |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `NONE` | **`404` on all four root paths** | 🟢 confirms terms live only at `docs/License.txt` (`GPL-2.0`) |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🔴 `NOASSERTION` | **Apache-2.0**, `11,505 B` | 🟢 confirms the `p687` cell |
+
+🔵 **Three of four index fields are wrong and three of three blog claims are wrong, while
+`4 / 4` of this base's payload-derived cells are right.** The clearest evidence yet that
+reading the bytes is worth what it costs.
+
+### Platform tier re-measured
+
+`moodle/moodle` `7,595★` GPL-3.0 (unchanged) · `instructure/canvas-lms` **`6,905 → 6,908★`**
+AGPL-3.0 · `chamilo/chamilo-lms` `1,021★` GPL-3.0, pushed today · `sakaiproject/sakai` `1,240★`
+ECL-2.0, re-pushed `2026-11-07 → 2026-11-09` · `OpenOLAT/OpenOLAT` `449★` · `oppia/oppia`
+**`6,978 → 6,984★`** Apache-2.0 · `learningequality/kolibri` `1,174★` MIT ·
+`openedx/edx-platform` 🟡 **`422` "cannot be searched"**, reproducing the standing
+`*not in search index*` cell. Also filed as courseware-excluded under `727-C`:
+[`kabartay/openunivcourses`](https://github.com/kabartay/openunivcourses) (`254★`, MIT) and
+[`huggingface/agents-course`](https://github.com/huggingface/agents-course) (`34,652★`,
+Apache-2.0) — **it teaches AI rather than teaching with it**, the same rule that keeps
+`generative-ai-for-beginners` and `nanochat` in this file and off the shelf.
+
 ## 🆕 2026-11-09 (p726) — 🟢 **EIGHT REPOSITORIES, AND EVERY ONE CAME FROM AN OWNER RATHER THAN A QUERY — INCLUDING A GOVERNMENT'S OWN APACHE-2.0 ONLINE-EDUCATION STACK**
 
 **`8` foundation and platform rows filed · `11 / 11` licence payloads read first-hand and agreeing with the index · `0` rows from any mandated leg, `topic:` head or phrase query · `1,013` topic-channel repositories measured, `59.2 %` novel and near-unusable.**

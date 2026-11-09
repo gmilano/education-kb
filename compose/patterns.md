@@ -6,18 +6,79 @@ updated: 2026-11-09
 
 # Composition Patterns — Education
 
-**Pass p726 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p727 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
 Licences are the real design input here. Every pattern states its resulting obligation.
 
-**Numbering.** This pass (`p726`) adds **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
+**Numbering.** This pass (`p727`) adds **`P161`**; `p726` added **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
 passes is preserved in full below the new entries — it is a registry with stable IDs, so new
 patterns continue the sequence rather than reusing it. (This pass initially drafted its six
 recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
 different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
 prior engagement may cite.)
+
+---
+
+## P161 — Socratic debugging with an objective oracle: teaching programming by withholding the answer, graded without a rubric (4–6 weeks to a pilot cohort) 🟢 new at p727
+
+**Use when:** the buyer teaches programming at scale and has the complaint that every
+AI-assistance pilot produces students who ship working code and cannot explain it. The ask is
+usually phrased as "we want AI that doesn't just give them the answer" — and until `p727` this
+base had no component that could honour it, because every tutor on the shelf is built to
+explain.
+
+**The design problem this pattern exists to solve.** `nietzschian-debugger` **refuses to return
+the fix**: it challenges the stated assumption and hands the question back. That makes it the
+right intervention and an **unassessable** one — an agent whose correct output is the *absence*
+of an answer cannot be scored by comparing its answer to a reference, and a rubric over its
+transcript measures the grader's patience rather than the student's learning. 🔵 **So the
+oracle has to come from outside the dialogue.** A program either passes its test cases or it
+does not, and that verdict is independent of whatever the tutor said. **The judge supplies
+ground truth, the learner model supplies the mastery state, and the Socratic agent supplies the
+intervention — three components precisely because no two of them can do each other's job.**
+
+**The chain, every link re-measured `2026-11-09`:**
+
+| Step | Component | Stars | Licence | Why this one |
+|---|---|--:|---|---|
+| 1. Intervene | [`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) | 555 | **MIT** (`1,071 B`, read this pass) | The only component on this base that is built to **withhold**. Python/PyPI, so it drops into an existing grading pipeline as a library rather than a service. |
+| 2. Judge | [`glowxq/glowxq-oj`](https://github.com/glowxq/glowxq-oj) | 331 | **Apache-2.0** | Online judge: objective pass/fail against test cases, with ACM/ICPC-contest, olympiad-training and coursework modes. **The one assessment component that is objective by construction** and the hardest for a client to dispute. ⚠️ Unpushed since `2026-02-25` — see limits. |
+| 3. Track mastery | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 279 | **MIT** | Bayesian Knowledge Tracing — a **peer-reviewed** mastery model from UC Berkeley's CAHLR lab. Consumes the judge's pass/fail as evidence and decides when the learner has actually mastered a skill rather than guessed once. |
+| 4. Submit + review | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 806 | **BSD-3-Clause** | Submission handling, autograding and the **TA grading workflow** — production-deployed at Rensselaer and other US universities. The human-in-the-loop half, which the other three do not provide. |
+
+**How it wires together.** Submitty takes the submission and runs the autograder; failing
+submissions are routed to `nietzschian-debugger` **instead of** to a solution, and the dialogue
+is kept but never graded; the student resubmits; `glowxq-oj` returns the objective verdict; that
+verdict — not the dialogue — is the evidence `OATutor`'s BKT model updates on. **The loop
+closes on the judge, so the measured outcome is "can the student now fix it unaided", which is
+the only claim the buyer actually wants to buy.**
+
+**Resulting obligation: none beyond attribution.** MIT + Apache-2.0 + MIT + BSD-3-Clause —
+**every link permissive, no copyleft anywhere in the chain, closed client-branded derivative
+permitted.** 🟢 This is the rarest property in this base's component set and the reason this
+recipe is worth four components instead of one.
+
+**Limits, because they decide staffing and whether to propose it at all:**
+
+- ⚠️ `glowxq-oj` has **not been pushed since `2026-02-25`** — eight months. It is Spring Boot 3
+  / Java 21 / Vue 3 and it works, but budget maintenance ownership of the judge, or substitute
+  Submitty's own autograder and lose the contest/olympiad modes.
+- ⚠️ `nietzschian-debugger` is **`555★`, 21 forks, a single author, created `2026-02-24`**. It is
+  nine months old. Pilot it behind a feature flag with a human escape hatch — a student stuck in
+  a Socratic loop at 2 a.m. with no way out is a support incident, not a pedagogy.
+- 🔴 **The pattern is confined to programming, and that is structural, not incidental.** It works
+  because an objective oracle exists. There is no judge for an essay, so **do not sell this
+  shape into writing, humanities or language instruction** — the oracle is the load-bearing part
+  and it does not generalise.
+- 🔵 **It is also the cheapest honest pilot on this shelf to *evaluate*,** which is worth saying
+  to a buyer: the outcome metric is unaided-resubmission pass rate, it needs no rubric, no human
+  rater agreement study and no vendor's evidence claim. 🟢 That matters commercially — this
+  base's own market page records that **only 45 % of the most-used tools have published research
+  meeting an ESSA evidence tier**, and adoption is near-universal while *evidence* is the
+  bottleneck. A pilot that generates defensible outcome data by construction is selling into
+  exactly that gap.
 
 ---
 

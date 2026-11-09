@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI Agents — Curated Top Set
 
-**Pass p726 · verified 2026-11-09.** Every row below was read this pass from
+**Pass p727 · verified 2026-11-09.** Every row below was read this pass from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
 (falling back to lowercase `readme.md`, then `README.rst`, then `LICENSE` — the case-ordered
@@ -22,8 +22,8 @@ can tell a stale cell from a fresh one.
 
 | Agent | Repo | Stars | Licence | Last push | Region | What it does |
 |---|---|--:|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,526 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,138 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,554 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,146 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,402 | MIT | 2025-10-26 | APAC | Agentic-AI curriculum used at national scale by Panaversity/GIAIC. ⚠️ **Stale: no push in >12 months** — treat as courseware, not live code. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | 387 | MIT | 2026-05-29 | APAC | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. ⚠️ See correction below — this is **387★, not ~12k**. |
 | moodle-ai-skill-navigator | [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 279 | GPL-3.0 | 2026-11-07 | Global | Moodle plugin: tutoring, quiz generation, mind maps and RAG over course materials. The clearest AI-on-top-of-incumbent-LMS bridge found. |
@@ -48,6 +48,118 @@ can tell a stale cell from a fresh one.
 | live-classroom | [internetphysics/live-classroom](https://github.com/internetphysics/live-classroom) | 102 | MIT | 2026-09-02 | Global | Type a topic; an LLM plans a one-minute lesson as twelve five-second beats, each rendered as a 1970s-style educational cartoon just before it airs. 🟢 **New at p724.** ⚠️ **MIT covers the wrapper, not the capability** — generation runs on hosted MiniMax H3 Max Turbo via fal. Take the beat-planning structure, not the stack. |
 | mather | [zzllrr/mather](https://github.com/zzllrr/mather) | 396 | MIT | 2026-02-25 | APAC | 小乐数学 — offline-capable mathematics learning, teaching and research assistant: problem generation, step solving and exploration, usable with no network at all. 🟢 **New at p726.** The only shelf row whose stated design constraint is *offline*, which is the constraint that decides a low-connectivity deployment. |
 | C2C-coding-coach | [Charlies2001/C2C-coding-coach](https://github.com/Charlies2001/C2C-coding-coach) | 379 | MIT | 2026-05-19 | APAC | 代码题刷题 + AI 教育平台 — a practice-problem platform with an AI coaching layer over it, rather than a chat bot beside it. 🟢 **New at p726.** The practice-and-feedback loop is the part of a tutoring product that is normally rebuilt from scratch per engagement. |
+| nietzschian-debugger | [DilawarShafiq/nietzschian-debugger](https://github.com/DilawarShafiq/nietzschian-debugger) | 555 | MIT | 2026-10-27 | Global | *"It won't fix your bug. It'll fix you."* A debugger that **refuses to return the answer**: it challenges the stated assumption and hands the question back. Python/PyPI, `main`, 21 forks, created 2026-02-24. 🟢 **New at p727.** The first agent on this shelf whose design goal is **withheld** output — productive struggle as a hard constraint rather than a prompt style, which is why it needs an objective oracle beside it (`P161`). Licence payload read this pass: `LICENSE`, `1,071 B`, sha256₁₂ `a7055a6d5672`, © *2026 Dilawar Gopang*. ⚠️ **Region unplaced and filed `Global` for honesty, not because it is a global project**: `0` Han characters, no country word, no localised README, and `gh api users/{owner}` is `403` here (control re-run this pass) — per the standing rule above, do not count it as supply in any region. |
+| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 490 | 🔴 **AGPL-3.0** | 2026-11-09 | APAC | 帧言 (*zhēn yán*) — turns source material into explainer videos under an **AI director agent**; local-first, any model, macOS desktop build. `main`, **96 forks**, created 2026-10-10 (one month old). 🟢 **New at p727.** The explainer-video half of the lecture-capture category `p726` completed in the other direction. 🔴 **`AGPL-3.0`** (`LICENSE`, `34,523 B`, sha256₁₂ `0d96a4ff68ad`) — **a closed derivative is not available**; see `T254`. Region from a maintained `README.zh-CN.md` (**1,164 Han characters**) plus the Chinese product name; English-primary, so this is weaker evidence than `Study-Mate`'s Chinese-primary README and is graded as such. |
+| deep-student | [helixnow/deep-student](https://github.com/helixnow/deep-student) | 309 | 🔴 **AGPL-3.0** | 2026-11-02 | APAC | DeepStudent — a **local-first AI learning workbench** whose study agent acts across every app on a "Study Desktop" rather than inside one tab. `main`, **60 forks**, created 2025-03-10. 🟢 **New at p727.** The desktop-scope counterpart to the browser-scope tutors on this shelf. 🔴 **`AGPL-3.0`** (`LICENSE`, `34,532 B`, sha256₁₂ `894342980454`) — closed derivative unavailable; `T254`. Region from a maintained `README_CN.md` (**1,790 Han characters**), English-primary — same evidence grade as `frametell`. |
+
+## 🆕 `p727` — the conjunctive `topic:` leg pays where eighteen single heads nilled, and the shelf is 29 rows
+
+**`3` new rows · `14 / 29` shelf rows re-measured (a partial re-read, and the denominator is stated because `T223` requires it) · `4` star cells corrected · `2` new trends (`T253`, `T254`) · `1` new pattern (`P161`) · `1` stale prose count fixed · the mandated legs nil a `34`th time · `4` controls re-run, `0` changed verdict.**
+
+### 🟢 `727-A` — the `topic:` channel is not unusable; a *single* `topic:` head is
+
+`p726` measured the `topic:` channel hard and filed the verdict in `726-F`: **`18` heads, `1,013`
+distinct repositories, `600` novel (`59.2 %`), `0` filed** — killed by homonymy, with
+`topic:adaptive-learning` returning concept-drift ML and `topic:xapi` returning Cisco Webex
+device code. **That measurement stands. Its generalisation does not.**
+
+This pass ran the same channel **conjunctively** and it produced every one of this pass's
+three rows:
+
+| Leg | Shape | Novel rows filed |
+|---|---|--:|
+| `topic:education topic:llm pushed:>2026-09-01 stars:>100` | two heads, ANDed | **3** |
+| `topic:ai-tutor pushed:>2026-09-01` | one domain-bearing head | 0 (all `12` already held) |
+| `topic:intelligent-tutoring-system pushed:>2026-06-01` | one domain-bearing head | 0 (all already held) |
+| `grading agent LLM rubric pushed:>2026-09-01 stars:>50` | phrase leg | 0 rows returned at all |
+
+🔵 **Mechanism, and it is `726-D`'s rule arriving on a second channel.** `726-D`/`T252`
+established that *a single-term leg needs a domain-bearing term*, because `maestro` is a
+conductor and an orchestrator. A `topic:` head has exactly the same defect —
+`adaptive-learning` is a pedagogy and a sampling strategy, `xapi` is the Experience API and a
+Cisco endpoint — and **conjunction is the fix, because it supplies the domain-bearing term as
+a second filter the author had to opt into.** `topic:education topic:llm` cannot return
+concept-drift detection: nobody tags a gradient-boosting library `education`.
+
+🟢 **Rule (`T253`): run the `topic:` channel as a domain head ANDed with a technique head, never
+as a single head.** The single-head form is what `726-F` measured, and at `0 / 600` it should
+not be run again.
+
+### 🟢 `727-B` — the three rows, and two of them are copyleft
+
+[`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger)
+(**`555★`, MIT**) is the find worth the pass. It is a debugger that **withholds the answer**
+and returns the question — productive struggle implemented as a refusal rather than a tone.
+🔵 This shelf holds many agents that *explain*; this is the first that is built not to.
+**And it creates a measurement problem the shelf has not had**: an agent whose correct output
+is the absence of an answer cannot be graded by comparing its answer to anything, which is
+why `P161` wires it to an objective judge rather than to a rubric.
+
+[`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) (**`490★`, AGPL-3.0**, `96` forks
+in one month) and [`helixnow/deep-student`](https://github.com/helixnow/deep-student)
+(**`309★`, AGPL-3.0**, `60` forks) are both **local-first desktop learner applications with
+maintained Simplified-Chinese translations** — and both are copyleft. That pairing is not a
+coincidence and is filed as `T254`.
+
+### 🟡 `727-C` — and one row this pass did *not* file, on a standing rule
+
+[`huggingface/agents-course`](https://github.com/huggingface/agents-course) returned from the
+mandated legs at **`34,652★`, Apache-2.0, pushed `2026-11-03`** — by stars it would be the
+third-largest row on this shelf. **It is deliberately not filed**, under the rule this base
+already applies to that whole class: it *teaches AI* rather than *teaching with it*, the same
+ground on which `microsoft/generative-ai-for-beginners` and `karpathy/nanochat` sit in
+`repos/trending.md` and not here. [`kabartay/openunivcourses`](https://github.com/kabartay/openunivcourses)
+(**`254★`, MIT**, an index of MIT/Stanford/Berkeley/CMU course materials) is excluded on the
+same rule. 🔵 **Recorded rather than silently dropped, because a `34,652★` Apache-2.0 omission
+looks like an oversight to anyone auditing this shelf** — and because the rule is in tension
+with the courseware rows this shelf *does* carry (`learn-agentic-ai`, `AILearningGuide`),
+which a later pass should either reconcile or state as an exception.
+
+### 🟢 `727-D` — the partial re-read, with its denominator
+
+**`14 / 29` rows re-measured**, not the full shelf: the eight platform-tier rows, the four
+`P161` chain components, and `DeepTutor` + `OpenMAIC`. All `14` alive, `0` archived, no licence
+changed. **`4` star cells corrected in the cell**, per `725-A`: `DeepTutor`
+**57,526 → 57,554**, `OpenMAIC` **43,138 → 43,146**, `canvas-lms` **6,905 → 6,908**, `oppia`
+**6,978 → 6,984**; `sakai` re-pushed `2026-11-07 → 2026-11-09`. Every delta is single- or
+double-digit — `725-B`'s magnitude test passing, drift rather than the `722-C` inflation class
+of failure. ⚠️ **The other `15` rows were not read this pass and their cells carry `p726`'s
+values.**
+
+### 🟢 `727-E` — controls, all four re-run, none changed a verdict
+
+| Control | Result | Verdict |
+|---|---|---|
+| `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md` | `200` for `HKUDS/DeepTutor`, `404` for an invented address | 🟢 discriminates; used for every existence call |
+| `curl -sI https://github.com/{owner}/{repo}` | returns the proxy's `200 Connection Established` line, not the repository's status | 🔴 **`8`th consecutive pass at zero discriminating power**; not used for any verdict |
+| `gh api users/{owner}` | `403` *"sessions are bound to their configured repositories"* for all `4` owners queried | 🔴 reproduces the standing finding; region placed from payload evidence instead |
+| `gh api search/repositories` on `openedx/edx-platform` | `422` *"cannot be searched"* | 🟡 reproduces the standing `*not in search index*` cell on `verticals/solutions.md` — the repository exists; the index has no row |
+
+### 🔴 `727-F` — the mandated legs nil a `34`th time, both halves
+
+**Supply: `10 / 10` addresses already held or excluded on a standing rule.** The four global
+legs returned `microsoft/ai-agents-for-beginners` (`79,296★`), `patchy631/ai-engineering-hub`
+(`41,614★`), `rasbt/LLMs-from-scratch` (`108,097★`), `THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`,
+`openeducat/openeducat_erp`, `frappe/lms`, `OpenOLAT/OpenOLAT`, `francoisjacquet/rosariosis`
+and `OS4ED/openSIS-Classic` — **every one already in this repository** — plus
+`huggingface/agents-course` and `kabartay/openunivcourses`, excluded per `727-C`.
+🔵 **Three licence claims in the blog sources were wrong and this base was already right on
+all three**: two sources called OpenOlat `Apache-2.0` where `gh api` says `NOASSERTION`
+(payload read this pass: Apache-2.0, `10,982 B` — the `p676` value, confirmed); `openSIS` was
+called "open source" with no licence named (this base carries `GPL-2.0 at docs/License.txt`,
+which the root-filename probe cannot see and which this pass reproduced as a five-path `404`);
+`LLMs-from-scratch` indexes as `NOASSERTION` and is `Apache-2.0` by payload (`11,505 B`, the
+`p687` value, confirmed).
+
+**Demand: every regional fact already held.** The four regional legs were run in full and
+checked individually against `intel/market.md` and `intel/open-gaps.md`: the Omnibus
+`Regulation (EU) 2026/1744` and its `2027-12-02` high-risk date, Korea's AI Basic Act and its
+`high-impact` education scope, TEQSA's institutional action plans, the UNESCO IESALC `87 % / 26 %`
+split, the Universidad de los Andes `716`-instrument count, Colombia's CONPES 4144, the DEC
+LATAM survey, the Ipsos Education Monitor and the ILIA index — **all present before this pass
+ran.** The single term not already on the shelf was the Commission's **Apply AI Alliance**,
+which `market.md` carries at four mentions. 🟢 **Recorded as a measured nil with its
+denominator, per `T223`.**
 
 ## 🆕 `p726` — the shelf is 26 rows, and the discovery instruments were measured rather than obeyed
 
@@ -382,8 +494,9 @@ this pass.
 
 ## The full roster — 345 rows
 
-The curated set above is the **verified-this-pass** shelf: nine education-native agents
-re-read on 2026-11-09, plus corrections. The table below is the **accumulated roster** built
+The curated set above is the **verified-this-pass** shelf: **29** education-native agents
+(26 carried into this pass plus `p727`'s three), plus corrections. 🟡 **`727-C`: this sentence
+read "nine" until `p727`** — a prose count left behind by the passes that grew the shelf past it. The table below is the **accumulated roster** built
 over prior passes — 345 rows, 369 distinct repositories, every row carrying a real
 `github.com` URL (checked: zero rows without one, zero placeholder or header rows filed as data).
 
