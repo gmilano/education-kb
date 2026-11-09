@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Vertical Platforms — Education
 
-**Pass p724 · verified 2026-11-09.** Deployable systems a client may already run, or could
+**Pass p725 · verified 2026-11-09.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -51,6 +51,8 @@ LMS in the industry. The cell is left marked rather than guessed.
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 908 | LGPL-3.0 | 2026-11-02 | Education ERP built on the Odoo framework: admissions, students, faculty, courses, exams, library, fees. The closest thing in education to "Odoo for ERP" — and in fact *is* Odoo underneath, so Odoo's module ecosystem and AI connectors apply directly. |
 | **Submitty** | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 806 | BSD-3-Clause | 2026-11-09 | Assessment-side system of record: submission, autograding, TA grading, plagiarism workflow. BSD-3-Clause. |
 | **MyClass** | [t1112000/tutor-management-app](https://github.com/t1112000/tutor-management-app) | 110 | **MIT** | 2026-11-03 | Self-hosted administration for a *private tutor or small tuition centre* — students, weekly schedules, session billing, calendar views, PWA push reminders. TypeScript; ships with `Asia/Ho_Chi_Minh` and VND formatting. 🟢 **New at p724.** 🔵 The only **MIT** row on this ERP/SIS shelf, and the only one aimed at the *sub-institutional* buyer — the tutoring businesses that make up most of the APAC private-education market. ⚠️ Single-tutor by design (one account owns the tenancy); multi-tenant use is a fork, not a setting. Places **Vietnam**, which no prior pass had placed. |
+| **giua@school** | [iisgiua/giuaschool](https://github.com/iisgiua/giuaschool) | 39 | **AGPL-3.0** | 2026-11-09 | Italian *registro elettronico* — the statutory electronic register an Italian school must keep: grades, attendance, disciplinary notes, class diary, parent communications, staff and timetable. 🟢 **New at p725.** 🔵 **The only platform on this shelf maintained by the institution that runs it** (I.I.S. Michele Giua, Sardinia) rather than by a vendor or a foundation — it ships CI, a Codacy grade and coverage badges, published releases and a docs site, and it was pushed today. That makes it the most credible reference available for *what an EMEA statutory register actually has to record* before anyone proposes an AI layer over one. 🔴 **AGPL-3.0, payload-confirmed** (`LICENSE` title window reads *GNU AFFERO GENERAL PUBLIC LICENSE Version 3*): hosting a modified build for a school triggers disclosure to its users — build alongside over its APIs, never as a private fork. PHP/Symfony. Places **Italy**. |
+| **Digitren** | [AhmadMuzayyin/digitren](https://github.com/AhmadMuzayyin/digitren) | 14 | 🟢 **MIT** | 2025-11-22 | Administration for an Indonesian **pesantren** (Islamic boarding school): santri records, staff, finance. 🟢 **New at p725 — places Indonesia's pesantren/madrasah segment, which no prior pass had placed at all.** **MIT, payload-confirmed** (`LICENSE` reads *MIT License / Copyright (c) 2023 Ahmad Muzayyin*). ⚠️ **Stale: last push `2025-11-22`, nearly twelve months.** Treat as a data-model reference for the segment, not as a maintained base — and see `725-G` for why the two *larger* repositories in this same segment cannot be staged at all. |
 
 ## Not open source — do not stage these as starting points
 
@@ -60,13 +62,15 @@ Both appear in open-source listings and both fail on reading the licence file. C
 |---|--:|---|---|
 | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 2,065 | **"PageLM Community License"** (custom) | Community NotebookLM-alike for education. `LICENSE.md` is a bespoke licence, not OSI-approved. Index reports `NOASSERTION`. |
 | [weponusa/teachany](https://github.com/weponusa/teachany) | 296 | **custom dual licence** | "Instructional Design OS" for K-12. `LICENSE` is a bespoke dual licence (English/Chinese). Not adoptable without legal review. |
+| [dibaliqaja/pesantren-cms](https://github.com/dibaliqaja/pesantren-cms) | 38 | **no licence at all** | Indonesian pesantren management CMS — the largest repository found in that segment. `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all return `404` on the raw channel, and the index reports `NONE`. 🔴 **No licence means no grant**: it is readable, not usable. 🟢 New at p725. |
+| [syauqi357/siakad-madrasah](https://github.com/syauqi357/siakad-madrasah) | 10 | **no licence at all** | Madrasah academic-information system (SvelteKit + REST), pushed `2026-07-09`. Same four-filename probe, same four `404`s. 🟢 New at p725. |
 
 ## Composition posture, by licence
 
-- **Permissive, customise freely:** Kolibri (MIT), **Mentingo (MIT)**, **MyClass (MIT, new at p724)**, Sakai (ECL-2.0), Submitty (BSD-3).
+- **Permissive, customise freely:** Kolibri (MIT), **Mentingo (MIT)**, **MyClass (MIT, new at p724)**, **Digitren (MIT, new at p725 — but stale since 2025-11-22)**, Sakai (ECL-2.0), Submitty (BSD-3).
 - **GPL, safe to host:** Moodle, Chamilo, H5P. Distributing a modified build to the client
   requires source; running it for them does not.
-- **AGPL, structure around it:** Open edX, Canvas, LearnHouse. Build AI as **separate
+- **AGPL, structure around it:** Open edX, Canvas, LearnHouse, **giua@school (new at p725)**. Build AI as **separate
   services talking over APIs/LTI**, not as core patches — this keeps the client's obligations
   unchanged and is also the cleaner upgrade path.
 - **LGPL, middle ground:** BigBlueButton, OpenEduCat. Link against, don't fork.
@@ -256,3 +260,28 @@ Sakai `ECL-2.0` correction above, which affects how this roster should be read.
 | **AI Verify** | [`aiverify-foundation/aiverify`](https://github.com/aiverify-foundation/aiverify) | 🟢 **Apache-2.0** (`LICENSE`, `11,350 B`, sha256₁₂ `63a6b58f3c9a`, read from the bytes at `main`; holder *“Copyright 2023 AI Verify Foundation”*) | `main` | Python + TypeScript, plugin architecture | 🆕 **New at p713, and it is the first row on this shelf that is a REGULATOR'S OWN INSTRUMENT rather than a vendor's (`713-G`).** AI Verify is Singapore's AI governance **testing framework and toolkit**, stewarded by the AI Verify Foundation under IMDA — the same toolkit the APAC regulatory leg named in prose, which turned out to be on GitHub under Apache-2.0. 🟢 **That inverts the standing read of the mandated regional legs.** `703-A` and `704-A` concluded they are a *market* instrument that returns no supply; here a regional leg named an instrument and the instrument resolved to a permissive repository this base can ship. **The leg's output was a product name, not a repository address — so the nil was in the EXTRACTION, not in the leg.** 🟢 **As a platform it is a customisation surface**: tests are plugins, so a *"show the ministry how this tutor was evaluated"* engagement is a plugin-authoring job on an Apache-2.0 base (`P114`), not a bespoke build. 🔵 README announces **AI Verify 2.0** as upcoming — re-read this row next pass. Pushed `2026-11-03`, only `6` open issues. `106★`. |
 | **DSpace (Angular UI)** | [`DSpace/dspace-angular`](https://github.com/DSpace/dspace-angular) | 🟢 **BSD-3-Clause** (`LICENSE`, `1,504 B`, sha256₁₂ `baf9ee18d437`, read from the bytes at `main`; holder *“Copyright (c) 2002-2021, LYRASIS. All rights reserved.”* — 🔵 **a `24`-year copyright range and a named non-profit steward**, which is the strongest institutional-continuity signal on this shelf) | `main` | Angular + TypeScript (REST client to the Java backend) | 🆕 **New at p713 — and it opens a SEGMENT this shelf did not cover: the institutional repository.** DSpace is the dominant open-source platform for university research repositories and theses; this is its Angular user interface. 🟢 **The AI read is that every institution running DSpace is already sitting on a curated, rights-cleared, metadata-rich corpus of its OWN scholarship** — which is the single best RAG source on campus and the one with the fewest copyright objections. Wire it to `HKUDS/LightRAG` and the retrieval layer is grounded in material the institution already owns the rights to (`P114`'s evidence leg). 🟢 **BSD-3-Clause is the most permissive licence on this shelf** — more so than the Apache rows, with no patent grant to reason about. 🔴 `597` open issues and a separate Java backend (`DSpace/DSpace`) that this row does NOT cover; the backend's licence must be read on its own before any deployment claim. Pushed `2026-11-06`. `178★`. |
 
+
+### 🟡 `725-G` — the pesantren/madrasah segment is real, sizeable and almost entirely unlicensed
+
+Indonesia's Islamic boarding schools and madrasahs are an administration market no pass of this
+base had placed. A single-term leg (`madrasah OR pesantren`, `stars:>3`) returned the segment in
+one query, and the licence distribution is the finding:
+
+| Repo | Stars | Licence (payload-read) | Stageable |
+|---|--:|---|---|
+| [`dibaliqaja/pesantren-cms`](https://github.com/dibaliqaja/pesantren-cms) | 38 | **none — 4 / 4 filenames `404`** | 🔴 No |
+| [`AhmadMuzayyin/digitren`](https://github.com/AhmadMuzayyin/digitren) | 14 | 🟢 **MIT**, verbatim | 🟡 Yes, but stale `2025-11-22` |
+| [`syauqi357/siakad-madrasah`](https://github.com/syauqi357/siakad-madrasah) | 10 | **none — 4 / 4 filenames `404`** | 🔴 No |
+
+🔵 **The two largest repositories in the segment carry no grant, and the only permissive one is the
+smallest and the least maintained.** So for an APAC engagement in this segment the honest posture is
+*build on a generic stack and bring the domain model* — `digitren`'s schema is the reference for
+santri records, finance and staff — rather than *adopt a platform*. 🟡 This is the same shape as
+`724-C`'s permissive-ERP gap, one tier further down: where the install base is, the licence is not.
+
+**Licence method, this pass.** Every new row above was confirmed from the **payload**, not from the
+index: `LICENSE` title windows read `MIT License` (`digitren`), `GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3` (`giuaschool`), and for the two nil rows all of `LICENSE`, `LICENSE.md`, `LICENSE.txt` and
+`COPYING` returned `404`. **`5 / 5` payload reads agreed with the index field this pass** — worth
+recording, because the recent history on this page is of index fields that did not (`724-L`, `722-L`,
+Sakai's ECL-2.0). The index being right is a measurement, not an assumption.

@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Foundational Repositories — Education
 
-**Pass p724 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+**Pass p725 · verified 2026-11-09.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -26,7 +26,7 @@ repository that demonstrably exists, that is stated in the row rather than treat
 
 | Repo | Stars | Licence | Last push | Why it is foundational |
 |---|--:|---|---|---|
-| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 278 | MIT | 2026-11-08 | The open Bayesian Knowledge Tracing implementation. BKT is the mastery model most ITS work still benchmarks against; this is the auditable version of it. **North America.** |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 279 | MIT | 2026-11-08 | The open Bayesian Knowledge Tracing implementation. BKT is the mastery model most ITS work still benchmarks against; this is the auditable version of it. **North America.** |
 | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | Skill-gap → learning-path generation as a multi-agent pipeline (WWW '25). CC0 means no attribution obligation at all. |
 | [klieret/AnkiPandas](https://github.com/klieret/AnkiPandas) | 156 | MIT | 2026-11-03 | Reads and manipulates an Anki collection as **pandas DataFrames** — review logs, intervals, ease factors, lapses. 🔵 This base already held `ankimcp/anki-mcp-server` (`551★`, MIT), which *writes* cards; this is the half that **measures whether they worked**, which is the evidence layer `T226` says is now the buying criterion. Documented, long-maintained (since 2019). 🟢 **New at p724.** |
 
@@ -65,6 +65,17 @@ The gap therefore **stays open**, but it is now a *licensing* gap rather than a 
 which is a different and more tractable problem: the rubric-evaluation pattern is public and
 reimplementable under whatever licence Globant needs.
 
+## Curriculum and pedagogy standards 🆕 new section at p725
+
+The layer `T203` named as the chokepoint between a demo and a delivery, and the one this page
+had no row for until this pass. Both rows are EMEA-authored, both are tiny, and neither is a
+platform — they are **vocabulary and access**.
+
+| Repo | Stars | Licence | Last push | Why it is foundational |
+|---|--:|---|---|---|
+| [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 13 | MIT | 2026-04-22 | MCP server over **all three Skolverket (Swedish National Agency for Education) open APIs**: Läroplan (curriculum), Skolenhetsregistret (school-unit register) and Planned Educations. 🔵 The only artefact in this base that reaches a **ministry's own curriculum data** as tool calls rather than as a scraped PDF — which is what turns "aligned to the national curriculum" from a claim into a query. TypeScript, stdio transport, published in the MCP registry. **Sweden — EMEA.** Also on [`../agents/top.md`](../agents/top.md). ⚠️ `13★`, single author, last push `2026-04-22`: pin a commit. |
+| [YannHY/scenarisation](https://github.com/YannHY/scenarisation) | 7 | **CC-BY-SA-4.0** | 2026-11-01 | Learning-design application (after the UCL Learning Designer) that encodes the **pedagogical vocabulary** as data: eight competency frameworks — Socle commun, **DigComp 3.0**, **GreenComp**, CRCN, Pix, **Pix IA**, PER romand, Florimont — Bloom's taxonomy, 28 generic scenario templates in eight families, and **the AIAS AI Assessment Scale as a first-class field on every activity**. School-system referentials for France, Switzerland, the United States, the three Belgian communities, England, Wales, Scotland, Northern Ireland, the European Schools, the IB and **ISCED 2011**. PHP. **France/Switzerland — EMEA.** ⚠️ **CC-BY-SA-4.0 is a content licence, not a software grant**: take the framework and AIAS vocabularies as *data* (attribution + share-alike on derivatives of that data) and do not vendor the PHP into a client codebase on the assumption it behaves like MIT. |
+
 ## Content and offline delivery
 
 | Repo | Stars | Licence | Last push | Why it is foundational |
@@ -73,6 +84,7 @@ reimplementable under whatever licence Globant needs.
 | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 154 | GPL-3.0 | 2026-11-04 (branch `master`; **no README/LICENSE file at HEAD** — see P142) | The interactive-content type system embedded in Moodle, Canvas and Drupal. Small star count badly understates its install base; it is a dependency, not a product. |
 | [drpwchen/lecture-to-notes](https://github.com/drpwchen/lecture-to-notes) | 117 | MIT | 2026-11-03 | Lecture recording → grounded notes + synced HTML viewer. **Whisper ASR, frame extraction, OCR and a slide-semantics vision model all run locally**; the LLM writes prose only at the last step, from evidence the pipeline already assembled. 🔵 Foundational because that ordering is the one deployable where recordings cannot leave the premises (`T229`), and because each stage is separable — the ASR and OCR stages are reusable on their own. 🟢 **New at p724.** |
 | [fabd/kanji-koohii](https://github.com/fabd/kanji-koohii) | 257 | **AGPL-3.0** | 2026-10-31 | Production kanji SRS (kanji.koohii.com) with shared mnemonics, maintained since 2017 — one of the longest-running retention systems with public source. 🔴 **AGPL-3.0 and operated as a hosted service**, which is precisely the fact pattern the network clause addresses: a **reference for retention and mnemonic-sharing design, never a base**. 🟢 **New at p724.** |
+| [h16nning/skola](https://github.com/h16nning/skola) | 56 | **AGPL-3.0** | 2026-07-12 | Local-first spaced-repetition flashcard PWA (TypeScript) — review scheduling that runs entirely in the browser with no server and no account, which is the shape the offline/low-connectivity deployments on this page need. 🟢 **New at p725.** 🔴 **AGPL-3.0: serving a modified build to learners triggers the network clause** — usable as a reference implementation or shipped unmodified, not as a base to fork quietly. Last push `2026-07-12`. |
 
 ## Reference and survey
 
@@ -80,9 +92,12 @@ reimplementable under whatever licence Globant needs.
 |---|--:|---|---|---|
 | [GeminiLight/awesome-ai-llm4education](https://github.com/GeminiLight/awesome-ai-llm4education) | 221 | **no licence file** | 2026-10-23 | Curated AI/LLM-for-education paper list — the best single literature map for this industry. ⚠️ No `LICENSE` file at HEAD (checked this pass): default copyright applies, so cite it, do not vendor it. Previously published here as "~800★, MIT"; both figures were wrong. |
 
-**Twelve foundational repositories, all verified today**, spanning assessment (2),
-learner modelling (2), benchmarks and corpora (4), delivery (2) and reference (1), with
-named regional coverage for North America, APAC and LATAM.
+**Fifteen foundational repositories, all verified today**, spanning assessment (3),
+learner modelling (3), benchmarks and corpora (6), **curriculum and pedagogy standards (2)**,
+delivery (4) and reference (1) — the section tallies overlap because three repositories are
+filed under two headings. Regional coverage is now named for **North America, EMEA, APAC and
+LATAM**; p724's page could name only three. 🟢 `p725` adds `Skolverket-MCP`, `scenarisation`
+and `h16nning/skola`.
 
 ## Gaps — searched and genuinely missing
 
@@ -91,9 +106,18 @@ Recorded explicitly so a later pass does not read silence as coverage:
 - **No permissively licensed open-source Student Information System.** Searched; every
   serious SIS is either proprietary or GPL/AGPL. For a client needing SIS customisation the
   honest answer is Odoo/OpenEduCat (LGPL) or build, not adopt.
-- **No EMEA-authored foundational *building block*.** The national-exam leg
-  (`Abitur`, `baccalauréat`, `Lernplattform`) again returns nothing above 34★, so the gap as
-  narrowly stated holds. 🔴 **But the wider claim this bullet used to make — "EMEA supply in
+- 🟢 **CLOSED at p725 — "no EMEA-authored foundational *building block*".** The gap is
+  closed by two rows found this pass and filed above:
+  [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) (`13★`,
+  **MIT**, Sweden) and [`YannHY/scenarisation`](https://github.com/YannHY/scenarisation)
+  (`7★`, CC-BY-SA-4.0, France/Switzerland). 🔵 **Both are small, and both were invisible to
+  every leg this bullet was ever based on**: the national-exam vocabulary (`Abitur`,
+  `baccalauréat`, `Lernplattform`) does not reach them, and neither does any multi-term
+  non-English phrase — see `725-D`. They were found by **single-term** legs (`skola`,
+  `enseignant`). The honest summary of EMEA supply is now: **thin, small-n, and shaped as
+  standards-and-vocabulary rather than as runnable platforms** — which is a different and more
+  useful statement than a nil. Historical note: the narrow nil was re-asserted for five
+  consecutive passes and the prior wider claim was withdrawn at p723. 🔴 **But the wider claim this bullet used to make — "EMEA supply in
   this industry is effectively absent from GitHub" — is withdrawn at p723 as false.**
   `Selleo/mentingo` (109★, **MIT**, pushed 2026-11-09) is a platform-scale, AI-native LMS from
   a Polish software house, and this base filed it at **p655** in the roster on

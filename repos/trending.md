@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p725) — 🟢 **FIVE REPOSITORIES, AND NOT ONE OF THEM WAS REACHABLE BY A MULTI-WORD QUERY: THE NON-ENGLISH LEGS WERE MEASURING SYNTAX**
+
+**`5` repositories newly filed · `0` delisted · `1` promoted to the curated shelf · `2` instrument failures reproduced with controls · `1` declared gap closed.**
+
+Each was checked against the addresses already filed across this base before being written. The English, star-ranked legs returned **nothing new at all** this pass — `topic:ai-education`, `topic:ai-in-education`, `topic:edtech`, `topic:ai-tutor`, `topic:intelligent-tutoring-system` and the MCP/LMS-bridge legs returned `Papermorph`, `claudemy`, `wordlink`, `book-to-skill`, `cn-math-taxonomy`, `PageLM`, `Moodle-MCP`, `canvas-mcp`, `brightspace-mcp-server`, `Smart-Study-Agent`, `freelingo`, `kaogong-skill`, `fsrs4anki`, `runno`, `classroomio` and `StudyOnTV`, **all already in this base**. Everything below came from **single-term non-English legs**, which is the whole finding (`725-D`).
+
+### 🟢 The five, read today
+
+| Repo | Stars | Licence (payload-read) | Lang | Created | Pushed | Region | What it is |
+|---|--:|---|---|---|---|---|---|
+| [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) | 13 | 🟢 **MIT** (`LICENSE` title window: *MIT License / Copyright (c) 2025 Skolverket Syllabus MCP Contributors*) | TypeScript | 2025-10-30 | 2026-04-22 | **EMEA** | MCP server over **all three Skolverket open APIs** — Läroplan (national curriculum), Skolenhetsregistret (school-unit register), Planned Educations. Published in the MCP registry; stdio transport; Swedish-language README. 🔵 **Promoted to [`../agents/top.md`](../agents/top.md) and filed on [`foundations.md`](foundations.md)** — the only artefact in this base that reaches a ministry's own curriculum data as tool calls. ⚠️ `13★`, single author, last push `2026-04-22`. |
+| [`YannHY/scenarisation`](https://github.com/YannHY/scenarisation) | 7 | 🟡 **CC-BY-SA-4.0** (`LICENSE` title window: *Attribution-ShareAlike 4.0 International*) | PHP | 2026-05-02 | 2026-11-01 | **EMEA** | Learning-design app after the UCL Learning Designer. Encodes **eight competency frameworks** (Socle commun, DigComp 3.0, GreenComp, CRCN, Pix, **Pix IA**, PER romand, Florimont), Bloom's taxonomy, 28 scenario templates in eight families, referentials for France, Switzerland, the US, three Belgian communities, England, Wales, Scotland, N. Ireland, European Schools, IB and **ISCED 2011** — and **the AIAS AI Assessment Scale as a field on every activity**. 🔴 **Content licence, not a software grant:** take the vocabularies as data under attribution + share-alike; do not vendor the PHP as if it were MIT. |
+| [`iisgiua/giuaschool`](https://github.com/iisgiua/giuaschool) | 39 | 🔴 **AGPL-3.0** (`LICENSE` title window: *GNU AFFERO GENERAL PUBLIC LICENSE Version 3*) | PHP | 2017-11-17 | 2026-11-09 | **EMEA** | Italian statutory *registro elettronico*: grades, attendance, disciplinary notes, class diary, parent communications, timetable. 🔵 **Maintained by the school that runs it** (I.I.S. Michele Giua, Sardinia) — CI, Codacy grade and coverage badges, published releases, docs site, pushed today. The best available reference for *what an EMEA statutory register must record* before anyone proposes an AI layer. Filed on [`../verticals/solutions.md`](../verticals/solutions.md). **AGPL: build alongside over APIs, never as a private hosted fork.** |
+| [`h16nning/skola`](https://github.com/h16nning/skola) | 56 | 🔴 **AGPL-3.0** (payload-read, same title window) | TypeScript | 2023-02-15 | 2026-07-12 | Global | Local-first spaced-repetition flashcard PWA: scheduling entirely in the browser, no server, no account — the shape the offline and low-connectivity deployments on [`foundations.md`](foundations.md) need. 🔴 AGPL network clause applies to a modified hosted build. |
+| [`AhmadMuzayyin/digitren`](https://github.com/AhmadMuzayyin/digitren) | 14 | 🟢 **MIT** (`LICENSE`: *MIT License / Copyright (c) 2023 Ahmad Muzayyin*) | JavaScript | 2023-09-05 | 2025-11-22 | **APAC** | Administration for an Indonesian **pesantren** (Islamic boarding school): santri records, staff, finance. 🟢 **Places Indonesia's pesantren/madrasah segment, which no prior pass had placed.** ⚠️ **Stale — nearly twelve months without a push.** A domain-model reference, not a maintained base; see `725-G`. |
+
+### 🔴 Measured and NOT stageable — recorded so the segment is not re-searched as unknown
+
+| Repo | Stars | Finding |
+|---|--:|---|
+| [`dibaliqaja/pesantren-cms`](https://github.com/dibaliqaja/pesantren-cms) | 38 | The **largest** repository in the pesantren segment and it carries **no grant at all**: `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` each return `404` on the raw channel; index `NONE`. Readable, not usable. |
+| [`syauqi357/siakad-madrasah`](https://github.com/syauqi357/siakad-madrasah) | 10 | Madrasah academic-information system (SvelteKit + REST), pushed `2026-07-09`. Same four-filename probe, same four `404`s. |
+
+### 🔵 What the single-term legs returned that is *already* filed, and why it is recorded anyway
+
+`educacao` returned [`portabilis/i-educar`](https://github.com/portabilis/i-educar) at **`724★`, GPL-2.0, pushed `2026-10-29`** and `Universidade-Livre/ciencia-da-computacao` at **`21,023★`, MIT** — both long filed, both **unreachable by any of the five multi-term Portuguese/Spanish legs this pass ran first**. That is the control that makes `725-D` a measurement rather than an anecdote: the single-term leg finds the base's own best-known LATAM rows, so its nil result on the phrase form cannot be supply.
+
+**Instruments.** `search/repositories` for all metadata (with the `725-E` parenthesisation fix); `raw.githubusercontent.com` for existence and for every licence payload above; `curl -sI https://github.com/...` **not used** — `403` for both a live repository and an invented one, sixth consecutive pass with zero discriminating power.
+
 ## 🆕 2026-11-09 (p724) — 🟢 **LECTURE-CAPTURE-TO-NOTES IS A REAL CATEGORY WITH TWO INDEPENDENT PERMISSIVE IMPLEMENTATIONS, AND THE LOCAL-FIRST ONE INVERTS THE USUAL LLM ORDERING**
 
 **`9` repositories newly filed · `0` delisted · `1` probe defect localised · `1` keyword leg abandoned as poisoned.**

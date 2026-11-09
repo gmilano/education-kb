@@ -6,18 +6,131 @@ updated: 2026-11-09
 
 # Composition Patterns — Education
 
-**Pass p724 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p725 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
 Licences are the real design input here. Every pattern states its resulting obligation.
 
-**Numbering.** This pass adds **P138–P143**. The accumulated registry **P1–P137** from prior
+**Numbering.** This pass (`p725`) adds **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
 passes is preserved in full below the new entries — it is a registry with stable IDs, so new
 patterns continue the sequence rather than reusing it. (This pass initially drafted its six
 recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
 different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
 prior engagement may cite.)
+
+---
+
+## P157 — Align a deliverable to the jurisdiction's own curriculum, and carry the permitted-AI level as a field (EMEA first — Sweden/France/Switzerland shipped; the shape generalises to all five regions; 4–6 weeks to a graded module) 🟢 new at p725
+
+**Use when:** the buyer's constraint is governance rather than capability (`T217`, `T221`), and the
+question that has to be answerable is *"which assessments in this course permit generative AI, at what
+level, and against which competency framework"* — the accreditor's question, not the demo's. It is also
+the right opening where "aligned to the national curriculum" has to survive an audit instead of a
+slide.
+
+**Components** (every one verified `2026-11-09`, licences read from the payload)
+
+| Part | Repo | Stars | Licence | Role |
+|---|--:|---|---|---|
+| Curriculum access | [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) | 13 | **MIT** | Läroplan (national curriculum), Skolenhetsregistret (school-unit register) and Planned Educations as MCP tools. The alignment oracle. |
+| Pedagogical vocabulary | [`YannHY/scenarisation`](https://github.com/YannHY/scenarisation) | 7 | **CC-BY-SA-4.0** | Eight competency frameworks, Bloom, 28 scenario templates, twelve-plus school-system referentials, ISCED 2011, and **AIAS as a field on every activity**. |
+| LMS surface (read) | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) · [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) · [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 204 · 119 · 64 | **MIT** ×3 | Read-only course, assignment, quiz and deadline data from whichever LMS the client already runs. |
+| Tutoring loop | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 99 | **MIT** | The ITS behaviour, as tool calls rather than as prompt text. |
+| Retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 551 | **MIT** | Spaced repetition as a tool call; `klieret/AnkiPandas` (156★, MIT) measures it. |
+
+**Wiring**
+
+1. **Pull the authority, don't scrape it.** `Skolverket-MCP` answers *what the curriculum says* for a
+   subject and year. Cache the response with the date read — the alignment claim's evidence is the
+   ministry's own payload, not your summary of it.
+2. **Adopt `scenarisation`'s vocabulary as the schema, not as an app.** Lift the framework lists, the
+   Bloom levels and the AIAS levels into your own activity model. Each activity carries three fields:
+   `framework_ref`, `bloom_level`, `aias_level`.
+3. **Join to the LMS read-only.** The relevant Moodle/Canvas/Brightspace MCP server supplies the real
+   course structure and deadlines. Nothing writes back in the pilot — `P57`'s audience-split write
+   surface is the follow-on, not the first increment.
+4. **Let the tutoring agent read all three.** `tutor-mcp` drives the session; it must refuse to exceed
+   the activity's `aias_level`, and that refusal is the demo.
+5. **Report, because the report is the product.** One table per course: activity → framework reference →
+   Bloom level → AIAS level → last curriculum read date. That table is what an accreditor, a parent or
+   a ministry reviewer can be handed.
+
+**Resulting obligation.** The code path is **MIT throughout** — six MIT components, nothing copyleft in
+the runtime. 🔴 **The one real constraint is `scenarisation`'s CC-BY-SA-4.0**: it is a *content* licence.
+Take the vocabularies as **data with attribution**, keep derivatives of that data share-alike, and do
+**not** vendor its PHP into a client codebase on the assumption it behaves like MIT. If the client needs
+the frameworks as their own proprietary asset, re-derive them from the primary framework publications —
+which are public — and cite `scenarisation` as the reference implementation.
+
+**🔴 Honest limits — state these in the SOW, before it is signed**
+
+- **Skolverket-MCP is Sweden only.** The *pattern* generalises; the *component* does not. For any other
+  jurisdiction this step is "find or build the ministry connector", and `P93` is the shape for that. No
+  equivalent was found for any other national curriculum in `725` passes of searching.
+- **`13★` and `7★`, single maintainers, one of them last pushed `2026-04-22`.** Pin commits, vendor a
+  copy, and put the maintenance in the price. This is infrastructure with a bus factor of one (`T247`).
+- **Nothing here proves LMS adoption of the AIAS field.** The field is specifiable and demonstrable;
+  it is not a standard anything reads yet (`T248`). Sell it as a differentiator, never as compliance.
+- **Not a detection control.** It records permitted use; it does not verify actual use. Pair with
+  `P60`'s three decidable controls if the client wants enforcement rather than declaration.
+
+---
+
+## P158 — The verification loop that cannot fabricate absence (any pass of this pipeline; one afternoon, then a standing gate) 🟢 new at p725
+
+**Use when:** a pass writes "not found", "not in index", "no licence", "none in region X" — i.e. every
+pass. This base's product is **verified absence** as much as verified presence, and absence is the claim
+an instrument can manufacture silently.
+
+**Why it exists: two failures in this single pass, both of which produced wrong data before being caught.**
+
+1. **`725-E` — mass false absence from a discarded error.** The shelf re-read ran
+   `gh api … --jq '[.full_name, …, .created_at|split("T")[0]]'`. Inside `[…]`, jq binds `|` **looser**
+   than `,`, so the pipe applied to the whole array; jq errored on every call; `2>/dev/null` threw the
+   message away; the empty stdout was read as "no result"; and the loop wrote **`NOT_IN_INDEX` for
+   `23 / 23` live repositories** — including one the same command had returned correctly a minute
+   earlier with explicit parentheses. **It was caught because `23 / 23` is absurd, not because anything
+   checked.**
+2. **`725-D` — categorical nil from query syntax.** Five multi-term non-English legs returned zero rows
+   each; the same languages as single terms returned dozens, including both of the pass's new finds.
+
+**The three rules**
+
+1. **Exit status and empty output are different facts.** Capture `stderr` to a file and the exit code to
+   a variable. `empty && rc==0` is a finding; `empty && rc!=0` is an instrument failure and must be
+   re-run, never recorded. Never `2>/dev/null` in a verification loop.
+2. **Every nil leg needs a positive control in the same shape.** Before writing *"no X in region Y"*,
+   run the same leg in a form known to return rows (a single term, a repository you have already
+   verified, a deliberately broad floor). If the control is also nil, the instrument is broken; if the
+   control returns, your nil was syntax. This is `725-D`'s remedy and the reason `T249` is stated as a
+   method lesson rather than a GitHub quirk.
+3. **Absence has a plausibility ceiling — abort above it.** If more than a third of a known-live cohort
+   comes back absent in one run, stop the loop and report the instrument. Shelf rows were alive last
+   pass; they do not vanish in a batch.
+
+**And the rule `725-A` adds, because it is the same family**
+
+4. **A measurement you did not write into the data row has not been published.** p724 re-measured four
+   shelf rows, reported the new values in prose, and left the table cells at the old ones. **The
+   compiler reads the cell, not the paragraph.** Any pass that reports a delta must leave the cell and
+   the prose agreeing, and a pass that cannot write the cell must not claim the delta.
+
+**Wiring it as a gate.** The checks are local, need no network, and run in seconds — the same posture as
+`P50`'s filing gate:
+
+- grep the pass's own diff for `NOT_IN_INDEX`, `not found`, `no licence`, `nil`, `0 rows`, and require
+  each hit to be accompanied in the same section by the control that was run;
+- recompute every star delta claimed in prose against the cell in the same file, and fail on
+  disagreement (`725-A`);
+- fail on any verification script in `compose/code/` containing `2>/dev/null`.
+
+**🔵 Why a client buys this.** The deliverable in a due-diligence or inventory engagement is frequently a
+list of what the client does *not* have — unlicensed dependencies, uncovered regions, missing controls.
+**A pipeline that cannot tell "I looked and it is not there" from "my tool errored" is worthless for
+exactly that deliverable**, and the failure is invisible in the output: both render as an empty row.
+These four rules are the cheapest available defence, and this pass is the evidence that they are needed
+by a mature pipeline, not a careless one.
 
 ---
 

@@ -6,15 +6,95 @@ updated: 2026-11-09
 
 # Education AI — Current Trends
 
-**Pass p724 · researched 2026-11-09.** Four new trends — **T234, T235, T239, T244** — added above p722's **T226–T233** — each with the evidence
+**Pass p725 · researched 2026-11-09.** Three new trends — **T247, T248, T249** — added above p724's
+**T245–T246** and p723's **T234–T244**, each with the evidence
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
 
 > **Two separate `T` numbering spaces exist in this KB and they are not the same series.**
-> This file's `T` numbers are *industry trends* (now T1–T233). The `T` numbers in
+> This file's `T` numbers are *industry trends* (now T1–T249, corrected at p725 — this line still read
+> "T1–T233" after p723 and p724 had both added trends above it). The `T` numbers in
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T247–T249 — added at p725 (2026-11-09)
+
+## T247 — The jurisdictional standards layer is becoming open, machine-readable infrastructure, and it is EMEA-authored
+
+For eight passes this base recorded the standards layer as the gap (`T203`: *the standards layer, not
+the model, is the chokepoint between a demo and a delivery*). At p725 it has supply, and the supply has
+a consistent shape: **small, single-author, EMEA, and built as access or vocabulary rather than as a
+platform.**
+
+- [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) — `13★`, **MIT**,
+  Sweden — serves all three Skolverket open APIs (national curriculum, school-unit register, planned
+  educations) as MCP tools, published in the MCP registry.
+- [`YannHY/scenarisation`](https://github.com/YannHY/scenarisation) — `7★`, CC-BY-SA-4.0,
+  France/Switzerland — encodes eight competency frameworks, Bloom, the AIAS scale and referentials for
+  twelve-plus school systems plus ISCED 2011.
+
+Read alongside the three read-only LMS bridges this base already holds — `Faixiang/Moodle-MCP`
+(`204★`, MIT), `boyuchengz/canvas-mcp` (`119★`, MIT), `RohanMuppa/brightspace-mcp-server` (`64★`,
+MIT) — the pattern is that **the integration surface for education AI is being published as MCP, by
+individuals, ahead of any vendor roadmap.** Four of the five are MIT.
+
+**Why it matters commercially.** "Aligned to the national curriculum" has been a claim a client had to
+take on trust, backed by a scraped PDF. Where a ministry publishes an API and someone has wrapped it,
+alignment becomes a *query against the ministry's own data* — auditable, and cheap to re-run when the
+curriculum changes. That is a defensible deliverable in exactly the regions where `T217` and `T221`
+say governance has overtaken capability as the buying constraint.
+
+**What complicates it.** Every one of these is `7–204★` with one maintainer and no institutional
+backing; two are months past their last push. **This is infrastructure with a bus factor of one.**
+Treat them as reference implementations to pin and adopt, and price the maintenance — not as
+dependencies to assume. Recipe and limits: `P157`.
+
+## T248 — The "when is AI allowed" control has moved from policy prose into a data field
+
+`T209` recorded detection being abandoned as a control and `T213` recorded that every region's 2026
+regulation converges on one control that open tooling did not have. The control is **the permitted
+level of AI use, per task**, and at p725 it exists as code: `scenarisation` carries the **AIAS AI
+Assessment Scale** as a first-class field on every activity in a learning design, next to the
+competency framework and the Bloom level.
+
+That is a different object from an AI policy document. A policy says what is allowed; **a field says
+it per activity, travels with the artefact, and can be reported on.** It is the difference between a
+district having a policy and a district being able to answer *"which assessments in this course permit
+generative AI, and at what level"* — the question an accreditor or a parent actually asks, and the one
+`T221` says accreditation is becoming the enforcement channel for.
+
+**Counter-signal, stated plainly.** One `7★` repository is an existence proof, not a standard. AIAS
+itself is a published scale with uptake in the literature, but nothing here shows an LMS writing or
+reading that field. **The honest claim is that the control is now specifiable and demonstrable, not
+that it is adopted.** The commercial read: a client's assessment redesign programme — where `T209`
+says the detection spend is moving — can now ship with a machine-readable permitted-use field instead
+of a PDF appendix, and that is a differentiator available today.
+
+## T249 — Regional supply measurement in this industry is query-syntax-bound, not supply-bound
+
+This base has declared regional nils repeatedly, has twice corrected itself about them (`T215`: the
+search language was the ceiling; `T234`: a declared nil is more often a fact about the base than about
+the region), and at p725 the mechanism is finally measured rather than inferred.
+
+**Five multi-term non-English legs returned zero rows each.** The same languages as **single terms**
+with a `stars:` floor returned real repositories by the dozen — including both of this pass's new
+finds and both of the base's best-known LATAM rows. The cause is not the language and not the supply:
+`search/repositories` **ANDs** every term and matches **name, description and topics only, never the
+README**, so a three- or four-word non-English query requires all of those words inside one short
+description. That essentially never happens.
+
+**The generalisable lesson, and it is not about GitHub.** A research leg that returns categorical zero
+is reporting on *itself* at least as often as on the world, and a pipeline that writes nils into a
+knowledge base without a positive control will accumulate confident absences that are artefacts. The
+control is cheap: **run the same leg in a form you know should return something.** If the known-good
+form is also nil, the instrument is broken; if it returns, the nil was syntax. Filed operationally as
+`P158`.
+
+**Direct consequence for engagement scoping.** Any claim of the form *"there is no open-source X in
+region Y"* in this base that predates p725 and rests on a phrase-shaped leg should be treated as
+**unmeasured, not as false and not as true** — `725-H` closed one such gap that had been re-asserted
+across five passes, and the artefacts that closed it had been sitting in the index the whole time.
 
 ## 🆕 T245–T246 — added at p724 (2026-11-09)
 

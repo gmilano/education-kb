@@ -6,7 +6,7 @@ updated: 2026-11-09
 
 # Education AI Agents — Curated Top Set
 
-**Pass p724 · verified 2026-11-09.** Every row below was read this pass from
+**Pass p725 · verified 2026-11-09.** Every row below was read this pass from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
 (falling back to lowercase `readme.md`, then `README.rst`, then `LICENSE` — the case-ordered
@@ -22,18 +22,19 @@ can tell a stale cell from a fresh one.
 
 | Agent | Repo | Stars | Licence | Last push | Region | What it does |
 |---|---|--:|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,462 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,124 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 57,511 | Apache-2.0 | 2026-11-07 | APAC | Lifelong personalized tutoring; persistent learner memory across sessions. HKU Data Science lab. The largest education-native agent project by stars. |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 43,133 | MIT | 2026-11-09 | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent lesson (teacher/peer/assistant roles). Tsinghua MAIC. |
 | learn-agentic-ai | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,402 | MIT | 2025-10-26 | APAC | Agentic-AI curriculum used at national scale by Panaversity/GIAIC. ⚠️ **Stale: no push in >12 months** — treat as courseware, not live code. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | 387 | MIT | 2026-05-29 | APAC | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. ⚠️ See correction below — this is **387★, not ~12k**. |
 | moodle-ai-skill-navigator | [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 279 | GPL-3.0 | 2026-11-07 | Global | Moodle plugin: tutoring, quiz generation, mind maps and RAG over course materials. The clearest AI-on-top-of-incumbent-LMS bridge found. |
-| OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 278 | MIT | 2026-11-08 | North America | Intelligent tutoring system with Bayesian Knowledge Tracing (ReactJS + Firebase). UC Berkeley CAHLR lab; peer-reviewed mastery model. |
+| OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 279 | MIT | 2026-11-08 | North America | Intelligent tutoring system with Bayesian Knowledge Tracing (ReactJS + Firebase). UC Berkeley CAHLR lab; peer-reviewed mastery model. |
 | OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 171 | MIT | 2026-11-08 | APAC | Spaced-repetition + knowledge-graph tutor. ⚠️ Previously filed here at "~900★"; real figure is 171★. |
 | gen-mentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 136 | CC0-1.0 | 2026-10-23 | APAC | LLM multi-agent framework for goal-oriented learning-path generation. WWW '25 oral paper, reference implementation. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 99 | MIT | 2026-11-09 | EMEA | MCP server that turns any LLM into an ITS, encoding 50 years of tutoring research. Smallest but most composable item here. |
-| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,402 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
+| Skolverket-MCP | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 13 | MIT | 2026-04-22 | EMEA | MCP server over **all three of the Swedish National Agency for Education's open APIs** — Läroplan (curriculum), Skolenhetsregistret (school-unit register) and Planned Educations — so an agent can query, compare and align to a *national* curriculum instead of a scraped PDF. Published in the MCP registry; Swedish-language README (places **Sweden**). 🟢 **Promoted at p725** — the smallest row on this shelf by stars and the only one that speaks a ministry's own data. ⚠️ `13★`, single author: pin a commit and expect to maintain it. |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,404 | MIT | 2026-11-06 | APAC | AI study partner: sets a route, teaches the knowledge, builds projects alongside the learner. Chinese-language README. The largest permissive education-native agent after the two headline projects. 🟢 **Promoted to the shelf at p723** (filed in the roster at p655 at 1,388★ → +14). |
 | anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 551 | MIT | 2026-11-07 | Global | MCP server exposing Anki to any LLM — spaced repetition as a tool call. The most composable retention primitive on this shelf. 🟢 **Promoted at p723** (roster at p655 at 546★ → +5). |
-| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 473 | Apache-2.0 | 2026-11-09 | APAC | Social-skills and conflict-handling coach built on realistic role-play. Same lab as `gen-mentor` below. The only social-emotional-learning agent verified on this shelf. 🟢 **Promoted at p723**; pushed today. |
+| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 474 | Apache-2.0 | 2026-11-09 | APAC | Social-skills and conflict-handling coach built on realistic role-play. Same lab as `gen-mentor` below. The only social-emotional-learning agent verified on this shelf. 🟢 **Promoted at p723**; pushed today. |
 | teacher-to-skills | [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) | 472 | Apache-2.0 | 2026-11-07 | APAC | Distils a human teacher into a source-backed skill that teaches until the learner can work unaided. 🟢 **Promoted at p723.** |
 | universal-examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 372 | MIT | 2026-10-27 | APAC | Exam-prep coach with cross-session memory and handout-traceable citation (its stated design goal is hallucination suppression). 🟢 **Promoted at p723.** |
 | Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 302 | MIT | 2026-10-20 | Global | Private tutor that infers how the learner actually learns and teaches the next lesson accordingly; named for Bloom's 2-sigma result. 🟢 **Promoted at p723.** |
@@ -45,6 +46,86 @@ can tell a stale cell from a fresh one.
 | lecture-to-notes | [drpwchen/lecture-to-notes](https://github.com/drpwchen/lecture-to-notes) | 117 | MIT | 2026-11-03 | APAC | Video/audio/slides/photos → grounded notes plus a synced HTML viewer (video highlights the live note; clicking a note seeks the video). Whisper ASR, frame extraction, OCR and slide-semantics vision model **all run locally**; the LLM writes prose only at the end, from evidence already assembled. 🟢 **New at p724** — the only shelf row that is deployable where recordings cannot leave the premises. |
 | ClassCue | [lu0973-cb02d/ClassCue](https://github.com/lu0973-cb02d/ClassCue) | 102 | MIT | 2026-10-18 | APAC | 课醒 — local-first Android class assistant: timetable, **offline** recording and transcription, roll-call/question alerts, post-class replay search, optional AI reference answers. Android 13–16, Kotlin/Compose. 🟢 **New at p724** — the first mobile-native, offline-capable row on this shelf. |
 | live-classroom | [internetphysics/live-classroom](https://github.com/internetphysics/live-classroom) | 102 | MIT | 2026-09-02 | Global | Type a topic; an LLM plans a one-minute lesson as twelve five-second beats, each rendered as a 1970s-style educational cartoon just before it airs. 🟢 **New at p724.** ⚠️ **MIT covers the wrapper, not the capability** — generation runs on hosted MiniMax H3 Max Turbo via fal. Take the beat-planning structure, not the stack. |
+
+## 🆕 `p725` — the shelf is 24 rows, and four of p724's own cells were stale
+
+**`24` education-native agents, every one verified `2026-11-09`.** That is the real count — no
+header rows, no example rows and no padding to reach an arbitrary minimum. `23` rows were
+inherited and all `23` were found in the index with **`0` archived**; `1` was promoted from the
+roster.
+
+### 🔴 `725-A` — p724 measured four rows, wrote the new values in prose, and left the table cells stale
+
+p724's own narrative below records `DeepTutor` **57,462 → 57,493**, `OpenMAIC` **43,124 → 43,131**,
+`Study-Mate` **1,402 → 1,404** and `moodle-ai-skill-navigator` **279 → 278**. **None of those four
+numbers was ever written into the table cell.** The table published the pre-measurement values
+while the prose two screens below reported the post-measurement ones.
+
+🔵 **The compiler reads the cell, not the paragraph.** A measurement that exists only in prose has
+not been published — it has been *mentioned*. The four cells are corrected in this pass's re-read,
+and the rule is filed as `P158`: **a pass may not report a re-measurement it did not write into the
+data row.** This is the second defect of its family in two passes (`724-T` published a data row as a
+table header; this one publishes a stale cell under fresh prose) and both share a cause — the shelf
+table gets treated as narrative rather than as the data product.
+
+### 🟢 `725-B` — the re-read, and what a star cell actually is
+
+`23 / 23` inherited rows present in the index, `0` archived, **no licence changed**, and the largest
+true delta against the **cells** was `DeepTutor` **57,462 → 57,509** (`+47`); against p724's prose
+figure it is `+16`. Other movement: `OpenMAIC` **+9**, `OATutor` **278 → 279**, `SocialCoach`
+**473 → 474**, `moodle-ai-skill-navigator` back to **279**, and eighteen rows unchanged to the star.
+`panaversity/learn-agentic-ai` remains stale at `2025-10-26` — now **over twelve months** without a
+push, and still correctly flagged as courseware rather than live code.
+
+⚠️ **`DeepTutor` was read twice during this pass, roughly 25 minutes apart: `57,509`, then `57,511`.**
+A star cell is therefore a *timestamped reading*, not a fact, and a small disagreement between two
+passes on a fast-moving repository is not evidence of the `722-C` inflation failure. The test that
+distinguishes them is magnitude: `722-C` was wrong by factors — claiming `~12k` for a `387★`
+repository — not by twos.
+
+### 🟢 `725-C` — the jurisdictional standards layer has arrived as open artefacts, and both are EMEA-authored
+
+[`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) (`13★`, **MIT**,
+TypeScript, Sweden) is promoted to the shelf above, and
+[`YannHY/scenarisation`](https://github.com/YannHY/scenarisation) (`7★`, CC-BY-SA-4.0, PHP,
+France/Switzerland) is filed on [`../repos/foundations.md`](../repos/foundations.md). Together they
+are the first instruments this base has found for the gap `T203` named — *the standards layer, not
+the model, is the chokepoint between a demo and a delivery*:
+
+- **Skolverket-MCP** exposes a *ministry's own* curriculum, school-unit register and
+  planned-education data as MCP tools. Curriculum alignment stops being a scraping problem.
+- **scenarisation** encodes the vocabulary: eight competency frameworks (Socle commun,
+  **DigComp 3.0**, **GreenComp**, CRCN, Pix, **Pix IA**, PER romand, Florimont), Bloom's taxonomy,
+  and — the part that matters most — **the AIAS AI Assessment Scale as a first-class field on every
+  activity**, with school-system referentials for France, Switzerland, the United States, the three
+  Belgian communities, England, Wales, Scotland, Northern Ireland, the European Schools, the IB and
+  ISCED 2011.
+
+🔵 `T213` recorded that *"every region's 2026 regulation converges on one control, and it is the
+control open education tooling was missing entirely."* **That control is "at what level is AI
+permitted on this task", and it is now shipped, open and multi-jurisdictional.** Both artefacts are
+tiny and single-author, and neither is a platform: they are **vocabulary and access**, which is
+precisely what the engagements this base describes keep rebuilding by hand. Recipe filed as `P157`.
+
+### 🔴 `725-D` — this base's non-English discovery legs have been returning a syntax artefact, not a regional nil
+
+Five multi-term non-English legs were run first and returned **`0` rows each**:
+`educación IA profesores` · `educação IA professores` · `escuela colegio docente IA` ·
+`Schule Lehrer KI Unterricht` · `école enseignant IA pédagogie`. The *same languages as single
+terms*, with a `stars:` floor, returned real repositories by the dozen — `educacao` →
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) `724★` and
+`Universidade-Livre/ciencia-da-computacao` `21,023★`; `docentes` → eight rows; `scuola` →
+`iisgiua/giuaschool`; `skola` → **`Skolverket-MCP`**; `enseignant` → **`scenarisation`**.
+
+🔵 **Cause:** `search/repositories` **ANDs** every term and matches only name, description and
+topics — **not the README**. A three- or four-word non-English query therefore requires every one of
+those words in a single short description, which essentially never happens. **Both of this pass's new
+finds came from single-term legs, and neither was reachable by any phrase leg.** Remedy, filed as
+`T249`: run non-English regional legs as **single terms plus a `stars:` floor**, never as phrases —
+and treat any leg returning categorical zero as an instrument failure to retest, not an absence to
+write down. This is the measured mechanism behind `T234` (*a declared regional nil is more often a
+fact about the base than about the region*) and `T215` (*the search language was the regional
+ceiling*): the ceiling is narrower than "language" — it is **term count**.
 
 ## 🆕 `p724` — four rows added, and the shelf re-measured clean
 

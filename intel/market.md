@@ -6,8 +6,18 @@ updated: 2026-11-09
 
 # Education AI — Market Intelligence
 
-**Pass p724 · researched 2026-11-09.** Figures below name their source and, where sources
-disagree, the disagreement is shown rather than averaged away. Market-sizing in this
+**Pass p725 · researched 2026-11-09.** Figures below name their source and, where sources
+disagree, the disagreement is shown rather than averaged away.
+
+> 🔴 **`725-F` — read every figure on this page as secondary-source-only, and that is now measured
+> rather than conceded.** Primary confirmation is **environmentally impossible in this session**:
+> `eur-lex.europa.eu`, `www.unesco.org`, `www.iesalc.unesco.org` and `digitaleducationcouncil.com`
+> **all fail DNS resolution** (`getaddrinfo ENOTFOUND`; `curl` → `http=000`), being outside the
+> session's allowed network domains. `724-E` established this for the four EU-law hosts; it now also
+> covers **the UNESCO and survey-publisher hosts that every LATAM and EMEA adoption figure below
+> traces to.** 🟢 Consequence, stated so later passes stop paying for it: **do not spend a leg on
+> primary confirmation in this environment.** Record the citation precisely enough that a reader
+> *with* access settles it in one lookup, and label the figure as what it is. Extends `T246`. Market-sizing in this
 industry is dominated by vendor-commissioned research with incompatible methodologies; a
 single confident number here would be a fabrication.
 
@@ -74,6 +84,22 @@ augmented — which is where displacement work comes from.
 
 ### North America
 
+> 🟢 **p725 reading (secondary sources only — see `725-F`).** The legislative count still does not
+> converge: one tracker reports **134 AI-in-education bills across 31 states** in the 2026 session,
+> another **~71 bills across 27 states** — a methodology gap, not a correction, and both are usable
+> only as *direction*. Named statutes re-confirmed this pass: **Maryland SB 720** (district AI
+> policies, designated AI coordinators, a statewide AI Education Collaborative), **North Carolina
+> Session Law 2026-41** (state model policy by `2026-12-31`, local school-unit policies by
+> `2027-06-30`), and **Illinois** AI-literacy instruction mandated for grades 6–12. Federal lever:
+> **Executive Order 14277**. 🔵 Two new facts for scoping: **most US public schools still have no
+> formal student AI policy**, and **55% of high-school principals report no block or restriction on
+> AI tools** — i.e. the deliverable is still the policy-plus-controls package against a statutory
+> date (`P143`), not a tool. ⚠️ **An April 2026 ADA accessibility deadline for large public
+> institutions** is reported as a live procurement driver; it is the one NA date on this page that
+> is about accessibility rather than AI, and it is pulling AI spend. 🔴 Supply remains the NA
+> weakness: **`0` of p725's `5` new repositories are North American** — the fourth consecutive pass
+> at `0`.
+
 **Demand drivers.** Largest single market (~38% of global by one estimate, though another
 has APAC overtaking). Canvas is the higher-education incumbent, so Canvas/LTI integration
 is the practical delivery surface. Federal money is moving: the US Department of Education
@@ -137,6 +163,25 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+> 🟢 **p725 reading (secondary sources only — see `725-F`).** The **Digital Omnibus** citation holds
+> across sources at **Regulation (EU) 2026/1744**, OJ **`2026-07-24`**, with Annex III education
+> obligations at **`2027-12-02`**; guidance still selling an **August 2026** education deadline is
+> selling urgency against a date the amendment moved. 🔴 **The primary text remains unread and the
+> cause is environmental, not diligence** (`725-F`: `eur-lex.europa.eu` fails DNS). European market
+> size is reported at **$2.64B for 2026** with **Finland, Estonia and the Netherlands** named as
+> K-12 integration leaders — single-source, uncorroborated. **UNESCO: 70% of institutions in Europe
+> and North America have or are developing AI guidance.** Gulf states are reported as moving faster
+> on formal governance than on infrastructure, with **Dubai's KHDA** having issued explicit
+> responsible-AI guidance to private schools; **nothing was found on any African national
+> AI-in-education policy, and that is recorded as a gap, not as absence of activity.** 🟢 **The
+> supply picture changes this pass and it changes in EMEA's favour**: both of p725's new
+> standards-layer artefacts are EMEA-authored (`Skolverket-MCP`, Sweden, MIT; `scenarisation`,
+> France/Switzerland), plus an Italian statutory register (`giuaschool`). **`3` of `5` new
+> repositories are EMEA** — and `725-H` closes the "no EMEA-authored building block" gap outright.
+> 🔵 Revised one-line read of EMEA supply: **thin, small-n, and shaped as
+> standards-and-vocabulary rather than as runnable platforms** — which is precisely the shape that
+> sells into a governance-constrained buyer.
 
 **Demand drivers.** Teacher-led adoption running ahead of institutional readiness. Across
 six countries, educators adopted AI **autonomously, without a regulatory framework**; in
@@ -234,6 +279,21 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+> 🟢 **p725 reading (secondary sources only — see `725-F`).** Binding statute, re-confirmed:
+> **South Korea's AI Basic Act in force `2026-01-22`** (the region's first comprehensive AI law) and
+> **Vietnam's Law on Artificial Intelligence in force `2026-03-01`**, with **education among the
+> sectors granted a longer transition** for systems already operating — which makes Vietnam the
+> clearest APAC case for *sell now, comply on a published schedule*. Singapore (voluntary
+> frameworks), Japan (guidelines and self-regulation), Australia (existing law plus voluntary
+> guidance) and China (targeted measures per use) remain non-statutory for education. Ipsos
+> Education Monitor 2026 support for *banning* AI in schools stays a minority everywhere surveyed in
+> the region (**23% Indonesia → 31% South Korea**) while **rising in Japan, Australia and South
+> Korea** — sell on capability, and in those three on safeguards as well. 🟢 **New segment placed at
+> p725: Indonesia's pesantren and madrasah administration market**, found in a single query and
+> **almost entirely unlicensed** (`725-G`) — the two largest repositories carry no grant at all, the
+> only MIT one is the smallest and stale. For that segment the posture is **bring the domain model,
+> not the platform**. APAC remains the dominant supplier of education-native open source.
+
 **Demand drivers.** The fastest-emerging region and, uniquely, the **largest open-source
 supplier** in this industry — the two biggest education agents on the shelf (DeepTutor, HKU;
 OpenMAIC, Tsinghua) are both APAC academic projects. Adoption is uneven and connectivity is
@@ -310,6 +370,24 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
 
+> 🟢 **p725 reading (secondary sources only — see `725-F`).** The adoption/governance gap is
+> re-confirmed from the strongest source available this pass: a **UNESCO IESALC** study of roughly
+> **200 higher-education institutions across 19 countries** finds **87% using AI in at least one
+> area against 26% with any formal framework**. At school level, **Brazil: 53% of school
+> administrators use AI, 22% report school guidelines** (Cetic.br). A **Digital Education Council**
+> survey (with Tecnológico de Monterrey) reports **92% of students and 79% of faculty actively
+> engaging with AI**. Regulatory shape: a 2026 **Universidad de los Andes** study counts **716
+> AI-related instruments, rules and legislative proposals across 23 countries and territories, >80%
+> initiated since 2023** — fragmentation, not a single AI law, and the commentary calls for common
+> definitions, risk categories, audit principles and mutual recognition rather than convergence.
+> 🟢 Institutional channel worth naming in a proposal: **UNESCO's Observatory on AI in Education for
+> Latin America and the Caribbean**, launched **April 2026 at ECLAC, Santiago**; national bodies
+> **Ceibal** (Uruguay) and **Cetic.br** (Brazil) publish the usage data a bid can cite. 🔴 Supply is
+> unchanged and still the thinnest: **`0` of p725's `5` new repositories are LATAM**, and the
+> region's two best-known rows (`i-educar` `724★` GPL-2.0, `Universidade-Livre` `21,023★` MIT) are
+> both long-filed. ⚠️ **Every figure in this paragraph traces to a host that fails DNS here**
+> (`725-F`) — cite them with their source named, never as this base's own measurement.
+
 **Demand drivers.** The sharpest adoption/governance gap in the world, which is itself the
 opportunity. A Digital Education Council survey with Tecnológico de Monterrey across 29
 institutions found **92% of students and 79% of faculty** actively using AI — while
@@ -383,6 +461,17 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+> 🟢 **p725 reading.** The structural claim this page has carried for several passes — build to EU AI
+> Act high-risk standards and the product sells in all five regions — is unchanged, and p725 adds the
+> missing *instrument* for it: the permitted-AI-use control is now expressible as data rather than as
+> policy prose (**AIAS**, carried as a first-class field in `scenarisation`; `T248`), and national
+> curricula are becoming queryable through MCP (`Skolverket-MCP`; `T247`). 🔵 **Design consequence:**
+> a deliverable that records, per assessment, *which competency framework it maps to and at what AIAS
+> level AI is permitted* satisfies the EU design target, the US state model-policy deadlines, APAC's
+> safeguard-sensitive markets and LATAM's governance gap **with one data model**. That is the
+> cross-region play, and `P157` is the recipe. ⚠️ It rests on two repositories of `13★` and `7★`:
+> adopt the vocabulary, pin the code, price the maintenance.
 
 Standards and framework bodies to align deliverables to: **OECD** (*Digital Education
 Outlook 2026*), **UNESCO** (teacher AI competency framework; IESALC for LATAM), **Council of
