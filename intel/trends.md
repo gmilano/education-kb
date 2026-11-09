@@ -4,6 +4,36 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 T210–T214 — added at p718 (2026-11-09)
+
+### 🔴 T210 — The open TTS layer has NO maintained permissive engine, and the roundups all still say "Piper, MIT"
+Measured from the payloads at p718. [`rhasspy/piper`](https://github.com/rhasspy/piper) is **MIT** (`LICENSE.md` `1,070 B`, sha256₁₂ `7fdf45feb790`) and **archived**, its README reduced to one line: *“Development has moved.”* The destination, [`OHF-Voice/piper1-gpl`](https://github.com/OHF-Voice/piper1-gpl), is **GPL-3.0** (`COPYING` `35,146 B`) and says so in its own name. The alternative, [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS), is **MPL-2.0** with upstream dead since `2024-08-16`; the live fork `idiap/coqui-ai-TTS` is MPL-2.0 with a payload **one byte** off upstream's.
+
+🟢 **The trend, not the datum: permissive-to-copyleft migration on the MAINTAINED path is now a recognisable pattern in voice and it is invisible to every licence table that keys on the best-known repository.** The star count stays attached to the archived MIT repo, so the layer *looks* permissive in aggregate and is not. **Generalised rule: when a project is archived, the licence of its successor is a separate fact that must be read separately.** `p707` saw the same shape in a live relicensing (`klyro`, MIT → AGPL-3.0 in seven days); this is its archival form.
+
+### 🔴 T211 — Source-available with production FORBIDDEN is now sitting on the highest-starred repo in a layer education needs
+[`tldraw/tldraw`](https://github.com/tldraw/tldraw), **`51,426★`**, `spdx_id` **`NOASSERTION`**, `LICENSE.md` `4,608 B` sha256₁₂ `777f0637ce8b`, under **Conditions**: *“Not to use the Software in Production Environments.”* Development use is granted, production is not, and a commercial key is sold separately.
+
+🟢 **Why it is a trend and not one repository's choice:** this is the third distinct *non-OSI* grant shape this KB has had to type in recent passes — `NOASSERTION`-because-modified (`MinerU`, Apache + additional terms), `NOASSERTION`-because-split (`litellm`, MIT outside named directories), and now `NOASSERTION`-because-bespoke-and-production-gated. 🔴 **All three sit on repositories a roundup would call open source, and all three carry five-figure star counts.** The defensive practice is now settled and cheap: `spdx_id == NOASSERTION` → read the payload bytes before the repository enters a proposal.
+
+### 🟢 T212 — Digital credentials are the one 2026 trend that arrived through two unrelated channels in the same pass
+1EdTech names **digital credentials and digital competencies** among its three trends to watch, driven by **employer expectations** rather than institutional demand — and independently, a `user:1EdTech` enumeration found this KB held `4` of the body's `46` repositories, with the mint-and-verify pair (`OpenCASE` for CASE competency frameworks, the Open Badges **public validator**, `cert-schema` for Blockcerts) entirely unheld until p718.
+
+🟢 **The composable consequence is the part worth keeping:** *align this learner's measured gap to an official curriculum outcome, then issue a credential an employer can verify* is a complete, demand-backed product arc — and **the join key is a machine-readable standards framework, which almost no institution has.** That is why `OpenCASE` is filed as a platform row and not a library: the gap between a tutor's diagnosis and a recognised outcome is a standards-publishing problem, not a model problem.
+
+### 🔴 T213 — Every region's 2026 regulation converges on ONE control, and it is the control open education tooling was missing entirely
+Independently, in four regional legs: **California AB 1159** bars student data from training AI models; **NYC DOE** guidance states the same; the **EU AI Act** makes education access and assessment Annex III high-risk with duties binding `2027-12-02` (and an NCII/CSAM prohibition from `2026-12-02`); **Vietnam's** July 2026 decision names automated educational assessment as high-risk; **Australia's** higher-education regulator already requires universities to file generative-AI risk plans; **UNESCO IESALC** measures only **`26%`** of LAC universities with any formal framework against **`87%`** adoption.
+
+🔴 **Against that, p718's presence check found `0` de-identification tools across `309` agent rows, `325` foundation rows and `125` platform rows.** The remedy is filed as a **three-rung ladder**, and the rungs are not substitutes: [`microsoft/presidio`](https://github.com/microsoft/presidio) (MIT) redacts identifiers from free text; [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) (Apache-2.0) handles the re-identifying *combination* in a table with no names in it; [`opendp/opendp`](https://github.com/opendp/opendp) (MIT) produces a bound an institution can publish and defend. 🟢 **The failure mode to name in any proposal: implementing rung one and reporting rung three.**
+
+### 🟢 T214 — The pedagogical argument has flipped from "give students AI access" to "gate it", and there is now a cited literature and shipped code for it
+[`epequeno/mathmate`](https://github.com/epequeno/mathmate) (MIT) is built around a finding it cites in its own README — **Bastani et al. 2025 and Lehmann et al. 2024: students with unguarded model access finish faster and learn *worse*** — and ships the countermeasure as the product: a Socratic hint ladder, a tool loop capped at three rounds, and path-scoped memory. [`fcescob/understand`](https://github.com/fcescob/understand) (MIT) implements the same idea as **mastery gating with an explicit escape hatch** — *“just tell me”* drops the gate — and [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya), already on this shelf, puts the gate on a **git commit**.
+
+🟢 **This is the clearest convergence of pedagogy and architecture this KB has recorded: the differentiating feature of a 2026 education agent is what it REFUSES to do.** 🔵 **And it is what separates a real education agent from the dominant false positive — p718's keyword sweep returned `102` novel repositories of which the great majority were curricula *teaching AI engineering*; none of them gate anything, because a curriculum has no learner model to gate against.**
+
+---
+
+
 ## 🆕 T205–T209 — added at p717 (2026-11-09)
 
 ### 🔴 T205 — The EU education AI deadline MOVED to `2027-12-02`, and the guidance still being published says `2026-08-02`

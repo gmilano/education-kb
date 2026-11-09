@@ -4,6 +4,139 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p718) — 🟢 **THIRTY-TWO ROWS, AND BOTH FINDINGS ARE ABSENCES: THIS KB COULD INGEST A TEXTBOOK AND TUTOR FROM IT BUT COULD NOT RENDER A FORMULA, SPEAK A WORD, OR DE-IDENTIFY A STUDENT**
+
+**`32` subjects filed** (`7` agents, `22` foundations, `3` platforms) out of `43` verified payload-by-payload and `~220` screened across `15` legs (`4` global + `4` regional + a Spanish/Portuguese pair + an institution-resolution channel + a structural presence check). [`top.md`](top.md) **`302` → `309`**. [`../repos/foundations.md`](../repos/foundations.md) **`325` → `347`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`125` → `128`**.
+
+**Region movement: `Global 137 → 143`, `APAC 76 → 77`, `North America 30` and `EMEA 34` unmoved on the agent shelf (both gained on foundations), `LATAM 25` UNMOVED and stated as frozen — see `718-N`.**
+
+### 🔴 `718-R` (primary) — the gap, found by a presence check and not by a search, and it is the SYMMETRIC COMPLEMENT of the one p717 found
+
+`p717` found this base had no **ingestion** layer and filed ten rows to close it. p718 ran the same instrument — a presence check of a capability across all three shelves — one layer further down the pipeline and found the **output** half missing just as completely. The measurement, run against `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and `../compose/patterns.md` before any row was written:
+
+| Capability an education product needs | mentions across all four files | filed at p718 |
+|---|--:|---|
+| Maths **rendering** (`mathjax`, `katex`) | **`0`** | `KaTeX` `20,505★`, `MathJax` `10,944★` |
+| Maths **OCR** (`pix2tex`, `LaTeX-OCR`) | **`0`** | `LaTeX-OCR` `16,611★` |
+| Explainer **animation** (`manim`) | **`0`** | `ManimCommunity/manim` `42,355★` + `3b1b/manim` `96,270★` |
+| **Speech synthesis** (`piper`, `coqui`) | **`0`** | 🔴 none filed — see `718-L2` |
+| **Forced alignment** (reading fluency, pronunciation) | **`0`** | `Montreal-Forced-Aligner`, `whisperX`, `torchaudio` |
+| **De-identification** of student data | **`0`** | `presidio`, `arx`, `opendp`, `deid` |
+| **Whiteboard** canvas | **`0`** | `Excalidraw` `135,359★` — and `718-L1` |
+| Courseware **publishing / distribution** | **`0`** | `jupyter-book`, `nbgitpuller` |
+
+🟢 **Why `0` is a defect here and not a scope decision.** This base is genuinely deep on education-*specific* software — `309` agent rows, `347` foundations, tutors, knowledge tracing, LMS connectors for Canvas, Moodle, Brightspace and ILIAS. But it held **both autograders** (`nbgrader`, `otter-grader`) and no way to *distribute* the notebooks they grade; it held tutors that teach mathematics and **no way to print an equation**; it held a Chinese AI-classroom platform whose proposition is a whiteboard and **no whiteboard**. These are not adjacent concerns in this industry — they are the last millimetre between a working model and a learner, and the engagement fails there.
+
+🔴 **The sharpest single cell is `De-identification: 0`.** Every regional leg this pass returned regulation that converges on exactly that control — California **AB 1159** barring student data from model training, New York City's guidance saying the same, EU **AI Act** Annex III duties on assessment systems, UNESCO IESALC measuring only **`26%`** of LAC universities with any formal framework — and this KB had `347` foundation rows and not one tool that implements it.
+
+### 🔴 `718-F` (primary, and the more durable of the two) — the gate built to stop stale shelf counts HAS BEEN ABSTAINING ON THE SHELF IT WAS BUILT FOR, and that is why five restatements never held
+
+Two of the three shelf headings were **stale on arrival**, measured before anything was written:
+
+| shelf | heading published | table actually held | stale by | whose rows |
+|---|--:|--:|--:|---|
+| `agents/top.md` | `302` | `302` | `0` 🟢 | — |
+| [`../repos/foundations.md`](../repos/foundations.md) | `315` | **`325`** | **`10`** 🔴 | `p717`'s ten |
+| [`../verticals/solutions.md`](../verticals/solutions.md) | `120` | **`125`** | **`5`** 🔴 | `p716`'s four + `p717`'s one |
+
+The record of this class now reads `p699`, `p702`, `p703`, `p712`, `p716`, and now `p717` twice. 🔴 **But `713-C` already diagnosed it correctly and said the remedy was a gate, not another restatement — *“Prose cannot enforce an invariant that a pass can simply not read.”* p718's finding is that THE GATE WAS BUILT, IS WIRED, AND CANNOT SEE A SINGLE SHELF COUNT.** Measured by running it:
+
+* `recount` (`p274`, in `HOOK_GATES`) — **`5` of `5` registered claims report `NO-ANCHOR`**: the sentences it grades are gone from the shelves. It prints `STALE=0` and **exits `0`**. A gate with nothing left to grade reports success.
+* `gate-derived-counts` (`p574`, in `HOOK_GATES`) — **`ABSTAIN` on `agents/top.md`** and **`DEFER` on `repos/foundations.md`**, and it never looked at `verticals/solutions.md` at all.
+
+🔴 **And the abstain has a cause worth naming, because it is the third instance of one mistake.** The predicate matched the *wording of the prose heading*: `p543` built it as `^## Shelf`, `p568` found it abstaining silently and widened it to `^## (the )?shelf\b` — and the heading has since been reworded to `## The agents — N rows`, so it went blind again. **Keying a structural check on prose guarantees the check dies at the next rewrite**, which is the same failure as the invariant it was meant to protect.
+
+🟢 **So p718 repaired the instrument instead of restating the rule.** `ingest/derive-counts.py` now locates each shelf by its **column-header signature** — `| Name | Repo | Licence | Stars | Region | Description |` and its two siblings, the contract the shelves' own prose already claims to use (`680-F2`) — and reads the figure from the file's **unique** canonical `## … — N rows` heading, graded as a singleton per `p699`'s rule. It grades all three shelves, and it also grades arity, missing links and duplicate subjects in the same pass.
+
+**Controls run at both signs, because a gate that cannot fail is the defect being reported:**
+
+| control | result |
+|---|---|
+| all three shelves as published | `GREEN` ×3, exit `0` |
+| `verticals` heading set to `127` over `128` rows | `RED heading claims 127, table holds 128`, exit `1` |
+| a 7th cell appended to one `verticals` row | `RED 1 row(s) disagree with the header's 6 columns`, exit `1` |
+| column-header signature altered | `RED column-header signature not found` (a blind gate is now itself a failure, not a silent pass) |
+
+### 🔴 `718-L1` — the highest-starred whiteboard on GitHub FORBIDS PRODUCTION USE, and this KB holds the platform that would reach for it
+
+[`tldraw/tldraw`](https://github.com/tldraw/tldraw) — **`51,426★`**, `spdx_id` **`NOASSERTION`**, `LICENSE.md` `4,608 B` sha256₁₂ `777f0637ce8b`. Read from the bytes, it opens *“# tldraw license … This License from tldraw, Inc.”* and states under **Conditions**, verbatim:
+
+> - Not to use the Software in Production Environments.
+
+🔴 **That is not a permissive licence, a copyleft licence, or an OSI licence of any kind — it is source-available with production prohibited and a commercial key sold separately.** It matters here specifically: this base holds `THU-MAIC/OpenMAIC`, whose entire proposition is an AI classroom *with a whiteboard*, and p718's own sweep turned up an education project (`SohailElskhawy/ai-live-tutor`) already built on the `tldraw` agent — so the trap is propagating into exactly this industry. 🟢 **The licence-safe answer is filed as a platform row: [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw), `135,359★`, MIT read from the bytes (`1,066 B`, sha256₁₂ `3522a395a4d9`).**
+
+### 🔴 `718-L2` — the open TTS layer: the MIT one is ARCHIVED and the maintained successor RELICENSED TO GPL-3.0
+
+The reason no speech-synthesis row was filed, stated as a refusal rather than left as a `0` in the table above:
+
+| subject | ★ | grant read from bytes | state |
+|---|--:|---|---|
+| [`rhasspy/piper`](https://github.com/rhasspy/piper) | `11,319` | 🟢 **MIT** · `LICENSE.md` `1,070 B` · sha256₁₂ `7fdf45feb790` | 🔴 **`archived: true`**, last push `2025-08-26`. Its README is one line: *“Development has moved: https://github.com/OHF-Voice/piper1-gpl”* |
+| [`OHF-Voice/piper1-gpl`](https://github.com/OHF-Voice/piper1-gpl) | `6,221` | 🔴 **GPL-3.0** · `COPYING` `35,146 B` · sha256₁₂ `c53a65c2fd56` | 🟢 Live, pushed `2026-11-07` — and the name says the relicensing out loud |
+| [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS) | `46,194` | 🟡 **MPL-2.0** · `LICENSE.txt` `16,725 B` · sha256₁₂ `c76f740d1521` | 🔴 Upstream dead: last push `2024-08-16` |
+| [`idiap/coqui-ai-TTS`](https://github.com/idiap/coqui-ai-TTS) | *not verified* | 🟡 **MPL-2.0** · `LICENSE.txt` **`16,724 B`** · sha256₁₂ `4b89d4518bd1` | 🟢 The live fork — note the payload is **one byte** off upstream's, so it is a *modified* MPL header, not a copy |
+
+🟢 **The transferable rule, and it generalises past TTS: on an abandoned permissive project, the licence of the MAINTAINED path is a separate fact that must be read separately.** A roundup saying *“Piper, MIT, 11k stars”* is accurate about a repository nobody is developing. The honest statement for an engagement is: **there is no maintained, permissively-licensed neural TTS engine in this layer today** — MIT is frozen, the live fork is GPL-3.0, and the alternative is MPL-2.0 with a dead upstream. That belongs in a build-versus-buy conversation, not in a table cell.
+
+### 🟡 `718-L4` — a third `NOASSERTION`, and this one really is Apache-2.0
+
+[`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) (`15,512★`): `COPYING` `17,263 B` sha256₁₂ `99f21e5105bd` is the Apache-2.0 text **with ~1.5 KB of legal notice prepended** about copyright-header conventions. 🟢 **Three passes have now reported that `spdx_id == NOASSERTION` is the detector correctly refusing to classify a modified grant (`p707`, `p717`, p718), and p718 adds the symmetric case: sometimes the modification is immaterial and the answer is still Apache-2.0.** `NOASSERTION` means *read the payload* — in neither direction does it mean *assume*.
+
+### 🔵 `718-X` — the index-miss class, now measured in three distinct shapes on one pass
+
+`gh api search/repositories` failed to resolve three subjects whose existence `git ls-remote --symref` confirms, and the three failures are **not the same failure**:
+
+| subject | `search/repositories` | `ls-remote --symref` | shape |
+|---|---|---|---|
+| [`NVIDIA/NeMo`](https://github.com/NVIDIA/NeMo) | absent, while siblings `NemoClaw` and `NeMo-Agent-Toolkit` resolve | 🟢 `refs/heads/main` | **per-repository** miss inside a searchable owner |
+| [`microsoft/presidio`](https://github.com/microsoft/presidio) | absent, while `presidio-genproto` resolves | 🟢 `refs/heads/main` | same shape, second owner — so it is not a one-off |
+| [`idiap/coqui-ai-TTS`](https://github.com/idiap/coqui-ai-TTS) | `user:idiap` returns **nothing at all** | 🟢 `refs/heads/dev` | **whole-owner** miss |
+
+🟢 **Both rows filed from this class carry `🔴 NOT VERIFIED` in the Stars cell rather than a number borrowed from a blog.** That is the only honest cell available, and it is better than the alternative this KB has fallen into before.
+
+### 🔵 `718-I2` — an instrument defect in p718's own placement probe, caught before it placed anything
+
+The first placement sweep grepped READMEs for institution names and scored `MIT` as a hit — returning *“MIT”* for `KaTeX`, `MathJax`, `manim`, `Excalidraw` and `libre-edutech-os`. 🔴 **Every one of those is the licence badge, not the Massachusetts Institute of Technology.** On this shelf, where the licence column is overwhelmingly MIT, a placement probe keyed on `MIT` is a near-guaranteed false positive. The sweep was re-run with context windows and each candidate read by hand; **`6` placements survived on repository-file evidence and `24` rows are filed `Global` with the refusal reason stated in-cell.**
+
+### `718-E` — placement evidence and refusals, itemised
+| Subject | Region | Evidence, or why REFUSED |
+|---|---|---|
+| [`m-bain/whisperX`](https://github.com/m-bain/whisperX) | **EMEA** | `main` README: *“supported by the VGG (Visual Geometry Group) and the University of Oxford”* |
+| [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | **North America** | the **grant payload's** copyright holder: *“Copyright (c) 2016 Montreal Corpus Tools”* |
+| [`opendp/opendp`](https://github.com/opendp/opendp) | **North America** | `main` README's community list is hosted at `g.harvard.edu` |
+| [`carsonhung/lti-moodle-integration`](https://github.com/carsonhung/lti-moodle-integration) | **APAC** | `main` README: *“Used in production by HKU TALIC projects”* — a named seat at the University of Hong Kong |
+| [`XianLiti123/MindEtude`](https://github.com/XianLiti123/MindEtude) | **APAC** | `master` README is primary in Simplified Chinese; app display name switches on system locale |
+| [`speechbrain/speechbrain`](https://github.com/speechbrain/speechbrain) | 🔴 **Global — REFUSED because the evidence is PLURAL** | README names **Mila** (Quebec), **Concordia** (Canada) and **Avignon University** (France) in one sentence. Three seats, two continents; choosing one would be a guess |
+| [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) | 🔴 **Global — REFUSED on a measured absence** | `master` `README.md` resolves and is **`0 B`**. No repo-file channel exists |
+| [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🔴 **Global — REFUSED** | **no README at the `main` root** |
+| [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) | 🔴 **Global — REFUSED** | the Khan Academy origin is well known and **the repository's files do not state it**. This base does not place on recollection |
+
+### 🔴 `718-N` — the LATAM freeze holds a THIRD pass, and here is exactly what was searched
+
+`LATAM 25`, unmoved since `p715`. Not silence — a measured nil:
+
+* **A dedicated Spanish/Portuguese sweep** of `7` legs (`tutor IA estudiantes español`, `plataforma educativa IA agente`, `professor IA alunos portugues`, `ENEM vestibular IA`, `educacion adaptativa IA open source`, `gestion escolar open source`, `tutor inteligente universidad`) returned exactly **`2`** novel permissive candidates, both **`0★`** bootcamp-challenge projects (`DoglasBSB/challenge-alura-agente-ia-fluentes`, `AngeGM20/mundo-agente-ia`). Neither is filed; padding the shelf with them would be worse than the freeze.
+* **The institution-resolution channel (`713-G`) was run on every LATAM body the regional leg named** — Ceibal (Uruguay), CENIA (Chile), Cetic.br (Brazil), Tecnológico de Monterrey (Mexico). 🔴 **`user:ceibal`, `user:cenia`, `user:CENIA-Chile` and `user:Tecnologico-de-Monterrey` ALL return HTTP `422` — the accounts do not exist under those names.** The channel that produced `aiverify-foundation` for APAC at `p713` produced nothing here, and the reason is specific: **these organisations publish research and policy, not repositories under a guessable org name.**
+* **One real LATAM subject was found and REFUSED:** [`FaridSandoval/LIA-Colombo-AI`](https://github.com/FaridSandoval/LIA-Colombo-AI) — an English tutor with a RAG and agentic tool-calling pipeline built for the **Centro Cultural Colombo Americano de Cali**, Colombia, which is precisely the kind of named-seat row this shelf wants. 🔴 **It has NO grant file at `main`** — probed across `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `License`, `LICENCE`, `COPYING`. Unlicensed means not usable, so it is recorded here as a lead rather than filed as a row.
+
+🟢 **The honest read of three frozen passes: LATAM demand is the best-evidenced of any region in this KB — `92%` of students and `87%` of universities per UNESCO IESALC — and LATAM *permissive supply on GitHub* is the thinnest. That asymmetry is the regional finding, and it argues that a LATAM engagement is a localisation-and-deployment engagement on `Global` components, not a composition one.**
+
+### 🔵 `718-S` — the standards body was 91% unread
+A `user:1EdTech` enumeration returned **`46`** repositories; this base held **`4`**. The consortium that publishes LTI, Open Badges, Caliper, OneRoster, QTI and CASE was represented by four library rows. p718 files `3` of the remainder (`OpenCASE`, the digital-credentials validator, `cert-schema`) and records a fourth as a refusal: 🔴 **[`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) (`205★`) has NO grant file at its `develop` default branch** — a specification with `205` stars that cannot be safely vendored.
+
+### `718-G` — what the eight mandated legs returned, scored honestly
+🔴 **The four global supply legs nil'd on addresses for a 34th consecutive pass.** `top open source AI agents education 2026 github MIT` returned a ranked list of *general-purpose* agents (OpenHands, CrewAI, OpenClaw, browser-use) and the search provider itself volunteered that it *“didn't turn up a ranked list of MIT-licensed AI agent projects specifically for education.”* `github trending education AI 2026` returned `DeepTutor`, `OpenMAIC`, `ai-engineering-hub` — **`3/3` already held**.
+
+🔴 **And `p699`'s diagnosis is re-confirmed with a number this time.** A `14`-leg GitHub keyword sweep returned `117` hits, `102` novel, of which the overwhelming majority were **curricula teaching AI engineering**, not AI serving education: `ai-engineering-curriculum/*` (four separate tracks), `agent-engineering-curriculum`, `llm-systems-cookbook`, `hands-on-modern-rl` (`4,876★`), `ml-curriculum-2026`. **The noun *“learning”* is the confound**, and no keyword form yet tried separates the two senses.
+
+🟢 **The four regional legs were again worth running as MARKET instruments and produced the whole of `718-N`'s evidence and every regional entry in [`../intel/market.md`](../intel/market.md) this pass** — adoption rates, bill counts, AI Act dates, UNESCO survey figures. Their supply yield was `0` addresses and `4` institution names, all four of which failed to resolve (`718-N`). **The `713-G` channel is real but it is not reliable; it worked for a regulator's toolkit in Singapore and failed for four LATAM bodies in a row.**
+
+### `718-P` — the structural presence check, as a reusable instrument
+The channel that produced `718-R` cost one command and is the highest-yield instrument this base has: for each capability an industry product needs, `grep -ci` the term across every live shelf **plus** `compose/patterns.md`, and read the zeros. 🟢 **It beats every search leg because it is keyed on what the KB LACKS rather than on what a search engine ranks**, and it cannot return a tutorial-about-AI false positive. `p717` found ingestion this way; p718 found rendering, speech, alignment and privacy. 🔵 **Its limit, stated: it only finds gaps you can name.** It cannot surface a capability nobody thought to grep for, so it should be run against a written pipeline — ingest → index → tutor → assess → render → speak → certify → de-identify — and not from memory.
+
+---
+
+
 ## 🆕 2026-11-09 (p717) — 🔴 **ZERO NEW AGENT ROWS, TEN NEW FOUNDATION ROWS, AND THE REASON IS A GAP THIS KB HAD NEVER DECLARED: IT CURATES TUTORS AND HAS NEVER NAMED AN INGESTION LAYER**
 
 **`11` subjects filed** (`0` agents, `10` foundations, `1` platform) out of `41` verified and `~60` screened across `12` search legs (`4` global + `4` regional + `4` gap-closing follow-ups). [`top.md`](top.md) **`302` → `302`** (nil, and stated as nil). [`../repos/foundations.md`](../repos/foundations.md) **`315` → `325`**. [`../verticals/solutions.md`](../verticals/solutions.md) **`124` → `125`**.

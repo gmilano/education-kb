@@ -93,41 +93,95 @@ if os.path.exists(tre):
     else:
         print("  GREEN header agrees with its page.")
 
-# --- agents/top.md: the shelf table (p543's original case) --------------------------------
-top = os.path.join(root, "agents", "top.md")
-if os.path.exists(top):
-    lines = open(top, encoding="utf-8").read().split("\n")
-    # p568: the page's heading is '## The shelf', not '## Shelf', so the exact-prefix test
-    # abstained SILENTLY on p543's original case -- the gate built to catch a stale shelf
-    # count could not see the shelf. Matched case-insensitively, with or without the article.
-    start = next((i for i, l in enumerate(lines)
-                  if re.match(r"^## (the )?shelf\b", l, re.I)), None)
-    if start is None:
-        print("agents/top.md         ABSTAIN no shelf heading ('## Shelf' / '## The shelf').")
-    else:
-        end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
-        rows = [l for l in lines[start + 1:end]
-                if l.startswith("|")
-                and not re.match(r"^\|[\s:|-]+\|", l)
-                and not re.match(r"^\| *Agent *\|", l)]
-        claimed = re.search(r"(\d+)", lines[start])
-        claimed = int(claimed.group(1)) if claimed else None
-        print(f"agents/top.md         shelf:   derived={len(rows)}  claimed={claimed}")
-        if claimed is None:
-            # p568: was GREEN here, which reported agreement with a claim that does not
-            # exist -- the other two blocks AMBER in this case and this one now matches.
-            # NOTE the scan spans every table between this '##' and the next, so a page
-            # with '###' sub-tables (carried-with-defect, skill bundles) derives MORE than
-            # its shelf. See gap 568-E: the shelf count lives in BODY prose, unreachable here.
-            print("  AMBER no count in the shelf heading; nothing to compare against.")
-        elif claimed != len(rows):
-            print(f"  RED  heading claims {claimed}, table holds {len(rows)}.")
-            rc = 1
-        else:
-            print("  GREEN heading agrees with its table.")
+# --- p718: all three shelves, located by COLUMN-HEADER SIGNATURE ------------------------
+# 🔴 p718's primary finding. This block previously looked for the *wording* of the prose
+# heading ('## Shelf', widened at p568 to '## The shelf'). agents/top.md's heading has since
+# been reworded to '## The agents -- N rows', so the predicate stopped matching and the gate
+# ABSTAINED -- silently passing -- on the one shelf it was built for. That is the THIRD time
+# this same predicate has been defeated by a rewrite (p543 built it, p568 widened it, p718
+# found it abstaining again), and in the interval foundations.md went stale by 10 and
+# solutions.md by 5 while `make hooks` reported no count defect at all.
+#
+# 🟢 The fix is to stop keying on prose. A shelf table is identified by its own COLUMN-HEADER
+# ROW -- a structural contract the shelves' own prose already says they use (`680-F2`) and
+# which a rewrite of the surrounding sentence cannot touch. The count claim is then read from
+# the nearest PRECEDING '## ' heading. Reword the heading however you like; the gate still
+# finds the table and still grades the number in it.
+SHELVES = [
+    ("agents/top.md",
+     "| Name | Repo | Licence | Stars | Region | Description |", 6),
+    ("repos/foundations.md",
+     "| Repo | Licence | Stars | Default branch | Why it is a foundation |", 5),
+    ("verticals/solutions.md",
+     "| Platform | Repo | Licence | Branch | Stack | Use case |", 6),
+]
 
-# --- repos/foundations.md: deferred, it needs declared dispositions -----------------------
-print("repos/foundations.md  DEFER -> ingest/derive-foundations.py (needs a declared")
-print("                      disposition per table; a census row is not a shelf row).")
+for rel, signature, ncol in SHELVES:
+    path = os.path.join(root, rel)
+    if not os.path.exists(path):
+        print("%-22s ABSTAIN file absent." % rel)
+        continue
+    lines = open(path, encoding="utf-8").read().split("\n")
+    hi = next((i for i, l in enumerate(lines) if l.strip() == signature), None)
+    if hi is None:
+        # Not a silent abstain: a shelf whose column header has changed is a RED, because
+        # that is exactly the condition under which this gate used to go blind.
+        print("%-22s RED  column-header signature not found; the table cannot be located." % rel)
+        print("                       expected: %s" % signature)
+        rc = 1
+        continue
+    i = hi + 2                      # skip the |---|---| separator
+    rows = []
+    while i < len(lines) and lines[i].strip().startswith("|"):
+        rows.append(lines[i])
+        i += 1
+    # p718: the count claim is NOT in the nearest preceding '## ' -- every shelf carries pass
+    # narrative between its count heading and its table. It lives in the file's UNIQUE
+    # canonical count heading, of the shape '## <name> -- N rows'. Graded as a SINGLETON
+    # (`p699`'s rule): zero such headings or more than one is itself a RED, because both are
+    # states in which a reader cannot tell which number is the shelf's.
+    CLAIM = re.compile(r"^## .*?[\u2014-]\s*(\d[\d,]*)\s+rows\b")
+    claims = [(j, m) for j, l in enumerate(lines)
+              if l.startswith("## ") for m in [CLAIM.match(l)] if m]
+    claimed = None
+    if len(claims) == 1:
+        claimed = int(claims[0][1].group(1).replace(",", ""))
+    elif len(claims) == 0:
+        print("  RED  no canonical count heading ('## <name> - N rows') in the file.")
+        rc = 1
+    else:
+        print("  RED  %d canonical count headings; the shelf's figure is ambiguous: lines %s."
+              % (len(claims), ", ".join(str(j + 1) for j, _ in claims)))
+        rc = 1
+    ragged = sum(1 for r in rows if len(r.strip().strip("|").split("|")) != ncol)
+    subj = []
+    for r in rows:
+        m = re.search(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", r)
+        subj.append(m.group(1).lower().rstrip(".)") if m else None)
+    nolink = sum(1 for s in subj if not s)
+    seen, dupes = set(), 0
+    for s in subj:
+        if s and s in seen:
+            dupes += 1
+        elif s:
+            seen.add(s)
+    print("%-22s shelf: derived=%d claimed=%s ragged=%d nolink=%d dupes=%d"
+          % (rel, len(rows), claimed, ragged, nolink, dupes))
+    if claimed is None:
+        print("  AMBER no 'N rows' claim in the heading above the table; nothing to compare.")
+    elif claimed != len(rows):
+        print("  RED  heading claims %d, table holds %d." % (claimed, len(rows)))
+        rc = 1
+    else:
+        print("  GREEN heading agrees with its table.")
+    if ragged:
+        print("  RED  %d row(s) disagree with the header's %d columns (the p674 L55 class)." % (ragged, ncol))
+        rc = 1
+    if nolink:
+        print("  RED  %d row(s) carry no repository link." % nolink)
+        rc = 1
+    if dupes:
+        print("  RED  %d duplicate subject(s)." % dupes)
+        rc = 1
 
 sys.exit(rc)

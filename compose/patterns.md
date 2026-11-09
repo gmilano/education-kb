@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 P127–P130 — added at p718 (2026-11-09)
+
+## P127 — The last-mile recipe: a tutor that can actually SHOW mathematics, on an all-permissive chain (any STEM engagement, any region)
+
+**The problem this exists for.** `P124` (p717) gets a client's PDF estate into a tutor. It stops at the tutor's answer — and p718's presence check found this KB had **no way to render a formula, read one from an image, or animate an explanation** across `325` foundation rows. A maths tutor that replies in plain text has lost the subject it is teaching.
+
+**Wiring, in order:**
+1. **Recover the mathematics the layout parser flattened** — [`lukas-blecher/LaTeX-OCR`](https://github.com/lukas-blecher/LaTeX-OCR) (**MIT**, `1,069 B`, `16,611★`) over the figures `docling`/`MinerU` hand back. 🔴 **Pin it:** last push `2025-01-18`.
+2. **Render in the learner's browser** — [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) (**MIT**, `20,505★`) by default: synchronous, no reflow, server-renderable. 🟢 **Switch to [`mathjax/MathJax`](https://github.com/mathjax/MathJax) (Apache-2.0) the moment accessibility is in scope** — MathJax emits MathML and drives assistive technology, which under the EU Web Accessibility Directive / EN 301 549 is an obligation, not a preference. Decide on that requirement, never on benchmarks.
+3. **Animate the misconception, do not describe it** — [`ManimCommunity/manim`](https://github.com/ManimCommunity/manim) (**MIT**, `42,355★`) as the generation target: the tutor emits a Manim scene for the specific error it diagnosed. 🔴 **Use the community fork, not [`3b1b/manim`](https://github.com/3b1b/manim)** despite the latter's `96,270★` — that is one author's personal tool with API churn; the stars measure a YouTube channel's reach.
+4. **Draw with the learner** — [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) (**MIT**, `135,359★`, self-hostable, embeddable component). 🔴 **Do NOT reach for `tldraw`** — `51,426★`, and its licence forbids production use outright (`718-L1`).
+
+🟢 **Licence posture of the whole chain: MIT / MIT / MIT / MIT**, every grant read from the bytes at the real default ref. There is no copyleft and no additional-terms rung anywhere in it — which is unusual enough to be worth saying in a proposal.
+
+## P128 — The privacy gate: the three-rung ladder that goes IN FRONT of every other recipe here (mandatory in North America and EMEA, prudent everywhere)
+
+**The problem this exists for.** `T213` records that every region's 2026 regulation converges on student-data handling — AB 1159, NYC DOE guidance, EU AI Act Annex III, Vietnam's high-risk list — and that this KB held **zero** de-identification tools. Every other recipe in this file ships student work to a model. This is the rung that makes that lawful.
+
+**Wiring, in order — and the rungs are NOT substitutes:**
+1. **Redact identifiers from free text and images** — [`microsoft/presidio`](https://github.com/microsoft/presidio) (**MIT**, `1,083 B` payload). Recognisers plus a configurable anonymisation policy; runs on the essay, the chat turn, the scanned worksheet. **Necessary, never sufficient.**
+2. **Generalise before any tabular release** — [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) (**Apache-2.0**, `739★`). *k*-anonymity, *l*-diversity, *t*-closeness and re-identification risk scoring. 🔴 **This is the rung teams skip and the one that catches them:** a cohort table with no names in it where *school × year group × postcode* identifies the pupil anyway. Step 1 cannot see that; this can.
+3. **Bound the leak with a proof when the output is published** — [`opendp/opendp`](https://github.com/opendp/opendp) (**MIT**, `448★`, Rust with Python bindings). The only rung that yields a guarantee an institution can defend publicly. 🔵 Pre-1.0.
+4. **Clinical teaching corpora only** — [`pydicom/deid`](https://github.com/pydicom/deid) (**MIT**) for header *and pixel* de-identification where identifiers are burned into the image. Out of domain for most engagements, unsubstitutable for a medical or dental faculty.
+
+🔴 **The failure mode to name explicitly in any proposal: implementing rung 1 and reporting rung 3.** Redacting names and then releasing an aggregate table is the most common way this goes wrong, and it reads as compliant right up to the re-identification.
+
+## P129 — Reading fluency and pronunciation scored on open components, with no TTS rung available (language learning, early literacy; strongest fit EMEA and APAC)
+
+**The problem this exists for.** Every language-learning and early-literacy engagement needs to know **which words a child actually said, when, and how well** — and no amount of LLM tutoring substitutes for per-phone timing. p718 found the alignment layer absent entirely.
+
+**Wiring, in order:**
+1. **Transcribe** — [`openai/whisper`](https://github.com/openai/whisper) (**MIT**, already on the shelf).
+2. **Get word-level timing and speaker turns** — [`m-bain/whisperX`](https://github.com/m-bain/whisperX) (**BSD-2-Clause**, `25,159★`, VGG / University of Oxford). This is what turns a recorded lesson into per-slide study material and a seminar into per-speaker participation data.
+3. **Align to the expected text at phone level** — [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) (**MIT**, grant holder *“Montreal Corpus Tools”*). 🟢 **This is the measurement instrument** — fluency rate, hesitation, substitution and omission all fall out of the alignment, not out of a model's opinion.
+4. **Lighter alternative when the toolchain is too heavy** — [`pytorch/audio`](https://github.com/pytorch/audio) (**BSD-2-Clause**) exposes a CTC forced-alignment API directly.
+5. **Score pronunciation** — [`speechbrain/speechbrain`](https://github.com/speechbrain/speechbrain) (**Apache-2.0**) recipes, or [`NVIDIA/NeMo`](https://github.com/NVIDIA/NeMo) (**Apache-2.0**) for an industrial deployment. 🔴 **`speechbrain`'s default branch is `develop`, not `main`** — pin accordingly.
+6. **Gate the audio before it leaves the device or the tenant** — `P128`, rung 1. Child voice is the most sensitive data in this whole KB.
+
+🔴 **Step 7 does not exist and that is the recipe's honest limit: there is no maintained permissively-licensed neural TTS to speak the model sentence back.** MIT `piper` is archived, its successor is GPL-3.0, Coqui is MPL-2.0 with a dead upstream (`T210`). **Options, stated so the choice is the client's: accept GPL-3.0 for a self-hosted binary, accept MPL-2.0's file-level obligations, buy a hosted voice, or ship without synthesis.** Do not present this rung as solved.
+
+## P130 — Diagnosis to recognised credential: closing the loop a tutor cannot close alone (higher education and workforce; demand evidenced in every region)
+
+**The problem this exists for.** `T212` records that digital credentials arrived through two independent channels, and that the join key — a machine-readable standards framework — is what institutions do not have. A tutor can say *“you have not mastered this”* and cannot say *“…against this official outcome, and here is a credential an employer can verify.”*
+
+**Wiring, in order:**
+1. **Publish the curriculum standards as data** — [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (**Apache-2.0**, pushed `2026-11-03`). Visual editor for competency frameworks, a standards-compliant **CASE** publishing API, multi-tenant so each body owns its own. 🟢 **This is the step that makes everything after it possible, and it is a standards-publishing engagement in its own right** — most institutions' outcomes live in PDFs.
+2. **Measure the gap against those outcomes** — [`Arseniiiii-ai/ai-learning-gap-detector-`](https://github.com/Arseniiiii-ai/ai-learning-gap-detector-) (**MIT**) for DKT plus a skill-dependency graph, or the heavier knowledge-tracing rows this shelf already holds. Key the skills to **CASE identifiers**, not to local strings — that is the whole point of step 1.
+3. **Carry it into the LMS the institution actually runs** — [`carsonhung/lti-moodle-integration`](https://github.com/carsonhung/lti-moodle-integration) (**Apache-2.0**, in production at **HKU TALIC**) for Express, or [`vstq5/lti-tool`](https://github.com/vstq5/lti-tool) (**Apache-2.0**) for Fastify. LTI 1.3 launch, Deep Linking, **AGS grade passback** so results land in the gradebook rather than in a side system.
+4. **Mint and verify** — [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) (**MIT**) for the Blockcerts schema and [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) (**Apache-2.0**, pushed `2026-11-04`) for the verification half an employer-facing service needs. 🔴 **Do NOT vendor [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)** — `205★` and **no grant file at all** (`718-S`).
+5. **Publish and distribute the courseware** — [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) (**BSD-3-Clause**) to build, [`jupyterhub/nbgitpuller`](https://github.com/jupyterhub/nbgitpuller) (**BSD-3-Clause**) to get it to a cohort by link without destroying student work on update, and `nbgrader` / `otter-grader` (already shelved) to grade.
+6. **Gate the whole thing** — `P128`.
+
+🟢 **Licence posture: Apache-2.0 / MIT / Apache-2.0 / BSD-3-Clause throughout, every payload read at p718.** 🔵 **Regional note: step 1 is the step that converts LATAM's `87%`-adoption-against-`26%`-frameworks gap into a deliverable**, and it needs no per-seat inference budget — which matters where `55%` of universities have no AI budget at all.
+
+---
+
+
 ## 🆕 P124–P126 — added at p717 (2026-11-09)
 
 ## P124 — The textbook-to-tutor pipeline: get a client's PDF estate into a tutor without touching a copyleft or an "additional terms" grant (any institution with a document corpus and a strict licence gate: 4–6 weeks to a working pilot) 🟢 new at p717

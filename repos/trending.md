@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-09
 ---
 
+## 🆕 2026-11-09 (p718) — 🟢 **TWENTY-TWO FOUNDATION ROWS: THE OUTPUT HALF OF THE PIPELINE, WHICH WAS AS COMPLETELY ABSENT AS THE INGESTION HALF p717 FOUND**
+
+**[`foundations.md`](foundations.md) `325` → `347`.** 🔴 **`325` carried in COUNTED — NOT the `315` this page's own heading published**, which was stale by exactly `p717`'s ten filed rows; full measurement and the instrument repair in [`../agents/trending.md`](../agents/trending.md) `718-F`. `22` filed, `347` published · arity `347/347` at `5` columns, `0` ragged · `347` distinct subjects, `0` duplicated against the existing shelf.
+
+**Regions on the `22`: `North America 2` · `EMEA 1` · `APAC 1` · `Global 18`.** All `18` `Global` rows are **explicit refusals with the reason in-cell** — not silent defaults — and `718-I2` records why the refusal rate is high this pass: the placement probe's first form scored the `MIT` licence badge as a hit for the Massachusetts Institute of Technology, so every candidate was re-read by hand and only repository-file evidence was accepted.
+
+### 🟢 `718-H` — the twenty-two rows as a pipeline stage, not a list
+
+`p717` filed **extract → retrieve → index → serve**. p718 files everything downstream of the tutor's answer, plus the gate that should sit in front of the whole thing:
+
+| Stage | Subject | Grant (payload-read) | ★ |
+|---|---|---|--:|
+| Render maths (fast) | [`KaTeX/KaTeX`](https://github.com/KaTeX/KaTeX) | **MIT** `1,106 B` `d3c8c167dfa0` | `20,505` |
+| Render maths (accessible) | [`mathjax/MathJax`](https://github.com/mathjax/MathJax) | **Apache-2.0** `11,357 B` `58d1e17ffe51` | `10,944` |
+| Read maths from an image | [`lukas-blecher/LaTeX-OCR`](https://github.com/lukas-blecher/LaTeX-OCR) | **MIT** `1,069 B` `68b54bae8850` | `16,611` |
+| Animate an explanation | [`ManimCommunity/manim`](https://github.com/ManimCommunity/manim) | **MIT** `1,071 B` `4862f3a15c08` | `42,355` |
+| Animate (upstream, not the default) | [`3b1b/manim`](https://github.com/3b1b/manim) | **MIT** `1,076 B` `8bd13b7b562d` | `96,270` |
+| Align speech to text | [`MontrealCorpusTools/Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) | **MIT** `1,065 B` `4cf4ae102ea5` | `1,916` |
+| Word-level timing + diarisation | [`m-bain/whisperX`](https://github.com/m-bain/whisperX) | **BSD-2-Clause** `1,296 B` `359060689ed0` | `25,159` |
+| Align without the full toolchain | [`pytorch/audio`](https://github.com/pytorch/audio) | **BSD-2-Clause** `1,337 B` `1aa454d3a7a5` | `2,962` |
+| Speech toolkit (research) | [`speechbrain/speechbrain`](https://github.com/speechbrain/speechbrain) | **Apache-2.0** `11,356 B` `43070e2d4e53` | `11,929` |
+| Speech toolkit (industrial) | [`NVIDIA/NeMo`](https://github.com/NVIDIA/NeMo) | **Apache-2.0** `11,356 B` `43070e2d4e53` | 🔴 not verified |
+| Recogniser abstraction | [`Uberi/speech_recognition`](https://github.com/Uberi/speech_recognition) | **BSD-3-Clause** `1,515 B` `4aa04a4e6f8d` | `8,999` |
+| ASR on-device / embedded | [`flashlight/flashlight`](https://github.com/flashlight/flashlight) | **MIT** `1,088 B` `155419f3d7fe` | `5,480` |
+| ASR substrate | [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟡 **Apache-2.0** reported `NOASSERTION` `17,263 B` `99f21e5105bd` — see `718-L4` | `15,512` |
+| **Redact PII (text, images)** | [`microsoft/presidio`](https://github.com/microsoft/presidio) | **MIT** `1,083 B` `ffe37ea6fa0b` | 🔴 not verified |
+| **Generalise tabular releases** | [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) | **Apache-2.0** `10,350 B` `ed630192ceef` | `739` |
+| **Bound the leak with a proof** | [`opendp/opendp`](https://github.com/opendp/opendp) | **MIT** `1,101 B` `6a4ed2aa685d` | `448` |
+| De-identify clinical imaging | [`pydicom/deid`](https://github.com/pydicom/deid) | **MIT** `1,062 B` `e7e8c21a6065` | `182` |
+| Publish a course | [`jupyter-book/jupyter-book`](https://github.com/jupyter-book/jupyter-book) | **BSD-3-Clause** `1,519 B` `677756d6dab1` | `4,289` |
+| Distribute to a cohort | [`jupyterhub/nbgitpuller`](https://github.com/jupyterhub/nbgitpuller) | **BSD-3-Clause** `1,523 B` `1a2dfa405df5` | `237` |
+| LTI 1.3 (Express, production seat) | [`carsonhung/lti-moodle-integration`](https://github.com/carsonhung/lti-moodle-integration) | **Apache-2.0** `11,344 B` `a9c64d77d32d` | `1` |
+| LTI 1.3 (Fastify, no database) | [`vstq5/lti-tool`](https://github.com/vstq5/lti-tool) | **Apache-2.0** `11,341 B` `ecabbe3c9c12` | `0` |
+| Credential schema | [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) | **MIT** `1,095 B` `d61b0bfb8f42` | `77` |
+
+🟢 **The privacy triple is a LADDER and should be read as one, because teams routinely buy the wrong rung.** `presidio` removes the identifier from free text — necessary, never sufficient. `arx` handles the case `presidio` cannot see: a table with no names in it where *school × year group × postcode* re-identifies the pupil anyway. `opendp` is the only rung that produces a bound an institution can publish and defend. **An engagement that redacts names and then releases a cohort table has implemented the first rung and reported the third.**
+
+🔵 **Two rows are filed with their own star counts marked `🔴 NOT VERIFIED`** — `NVIDIA/NeMo` and `microsoft/presidio` do not resolve through `search/repositories` while their own sibling repositories do. Existence, default ref and grant payload are all first-hand; the star count is not available, and the cell says so instead of carrying a figure from a roundup. See `718-X`.
+
+🔴 **One stage was researched and deliberately left EMPTY: text-to-speech.** The MIT engine is archived and its maintained successor is GPL-3.0; the alternative is MPL-2.0 with a dead upstream. Evidence in [`../agents/trending.md`](../agents/trending.md) `718-L2`. **A `0` in a pipeline is a finding when the reason is in the licences.**
+
+### `718-M` — maintenance flags on rows filed anyway, stated in-cell
+| Subject | Flag |
+|---|---|
+| [`lukas-blecher/LaTeX-OCR`](https://github.com/lukas-blecher/LaTeX-OCR) | last push `2025-01-18` — packaged on PyPI, effectively frozen. **Pin it.** |
+| [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) | last push `2025-10-01` |
+| [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) | last push `2024-05-24` — filed as a **specification artefact**, not live software |
+| [`3b1b/manim`](https://github.com/3b1b/manim) | alive but it is one author's personal tool; `ManimCommunity/manim` is the maintained fork |
+| [`speechbrain/speechbrain`](https://github.com/speechbrain/speechbrain) | default branch is **`develop`**, not `main` — a real trip hazard for a pinned clone |
+
+---
+
+
 ## 🆕 2026-11-09 (p717) — 🟢 **TEN FOUNDATION ROWS, AND THEY CLOSE THE LARGEST UNDECLARED GAP THIS KB HAS HAD: THERE WAS NO COMPOSITION LAYER AND NO INGESTION LAYER AT ALL**
 
 **[`foundations.md`](foundations.md) `315` → `325`.** `315` carried in (matches `p716`'s published `315`), `10` filed, `325` published · arity `325/325` at `5` columns, `0` ragged · `10` distinct new subjects, `0` duplicated against the existing shelf.
