@@ -1,0 +1,46 @@
+repo	path	bytes	branch	sha256_12	family_titleblock	holder_from_payload
+54yyyu/zotero-mcp	LICENSE	1080	main	bc3872332338	MIT	Zotero MCP Contributors
+54yyyu/zotero-mcp	plugin/LICENSE	34524	main	8d56b405468a	AGPL-3.0	FSF canonical text
+Galaxy-Dawn/claude-scholar	LICENSE	1069	main	5a1e92b9b489	MIT	Gaorui Zhang
+Galaxy-Dawn/claude-scholar	skills/frontend-design/LICENSE.txt	10174	main	0d542e0c8804	Apache-2.0	canonical (variant)
+Galaxy-Dawn/claude-scholar	skills/webapp-testing/LICENSE.txt	11357	main	58d1e17ffe51	Apache-2.0	canonical
+yilewang/llm-for-zotero	LICENSE	34520	main	76a97c878c9c	AGPL-3.0	FSF canonical text
+yilewang/llm-for-zotero	packages/claude-bridge/LICENSE	34520	main	76a97c878c9c	AGPL-3.0	FSF canonical text
+yilewang/llm-for-zotero	packages/claude-bridge/LICENSE-MIT	1069	main	9374ff7ad488	MIT	東亜重工
+yilewang/llm-for-zotero	addon/content/icons/providers/LICENSE	1064	main	add9d7531d1b	MIT	LobeHub
+poco-ai/Agentero	LICENSE	1064	main	f2b7f0cc6fb1	MIT	poco-ai
+poco-ai/Agentero	templates/vault/.agents/skills/deep-research/LICENSE	1028	main	b35c958b7972	CC-BY-NC-SA-4.0	Yuyu Luo (methodology) and contributors
+poco-ai/Agentero	templates/vault/.agents/skills/idea-evaluator/LICENSE	1028	main	b35c958b7972	CC-BY-NC-SA-4.0	Yuyu Luo (methodology) and contributors
+poco-ai/Agentero	templates/vault/.agents/skills/research-paper-writing/LICENSE	1066	main	34415967a8be	MIT	Master-cai
+wp-a/nature-academic-search	LICENSE	1061	main	19c109d0a12b	MIT	wp-a
+adityak74/mcp-scholarly	LICENSE	1070	main	cbdcb75547ea	MIT	Aditya Karnam
+zongmin-yu/semantic-scholar-fastmcp-mcp-server	LICENSE	1067	main	dd88ee6b87fa	MIT	Zongmin Yu
+Aryan-Pardeshi/CiteProof-AI-MCP	LICENSE	1071	main	d2ba69a545ad	MIT	Aryan Pardeshi
+Aryan-Pardeshi/CiteProof-AI-MCP	MCP/npm/LICENSE	1071	main	d2ba69a545ad	MIT	Aryan Pardeshi
+oksure/openalex-research-mcp	LICENSE	1076	master	a73a9cfbe629	MIT	OpenAlex MCP Server
+cyanheads/orcid-mcp-server	LICENSE	11317	main	7915fc5b0477	Apache-2.0	canonical (digest-identical to p743 pubmed-mcp-server)
+suren-kk/armenian-national-library-mcp	LICENSE	1073	main	c14af8d40b83	MIT	Suren Karapetyan
+ourresearch/oadoi	LICENSE	1079	master	6f1472c95b46	MIT	Impactstory
+ourresearch/openalex-guts	LICENSE	1068	main	233592e3c6b9	MIT	OurResearch
+ourresearch/openalex-guts	files-for-datadumps/standard-format/LICENSE.txt	7047	main	6d489af62926	CC0-1.0	data licence (not code)
+ourresearch/openalex-guts	files-for-datadumps/mag-format/LICENSE.txt	796	main	11ffd6776108	ODC-BY-1.0	data licence (not code)
+ourresearch/unpaywall-extension	LICENSE	1068	master	eeeb93141043	MIT	Impactstory
+CrossRef/pdfextract	LICENSE	1074	master	47dacb284910	MIT	CrossRef
+ORCID/orcid-model	LICENSE	1669	main	3eaeaa9ffbef	MIT-style-bespoke	ORCID, Inc. (trademark + look-and-feel carve-outs)
+openpreserve/jhove	COPYING	26419	integration	8392361080d8	LGPL-2.1	FSF canonical text
+openpreserve/jhove	LICENSE	880	integration	089e03a38164	LGPL-2.1-or-later	JSTOR + Harvard College + Open Preservation Foundation
+openpreserve/fido	LICENSE.txt	616	main	c13e7ca5d3d5	Apache-2.0	Open Preservation Foundation
+duraspace/pcdm	LICENSE	11325	main	cb5e8e7e5f4a	Apache-2.0	canonical (variant)
+folio-org/okapi	LICENSE	11357	master	c71d239df917	Apache-2.0	canonical
+folio-org/stripes	LICENSE	11357	main	c71d239df917	Apache-2.0	canonical
+vufind-org/vufind	LICENSE	15046	dev	2d902a7b5a7a	GPL-2.0	FSF canonical text
+vufind-org/vufind	themes/root/css/font/license.txt	11357	dev	58d1e17ffe51	Apache-2.0	canonical
+projectblacklight/blacklight	LICENSE	788	main	2c96b9dc9186	Apache-2.0	UVa + Stanford + Johns Hopkins + Data Curation Experts
+archivesspace/archivesspace	COPYING	748	master	2b0d256954a7	ECL-2.0	NYU + UC Regents + U Illinois
+archivesspace/archivesspace	common/lib/LICENSE-LGPL-2.1.txt	26436	master	5df070071989	LGPL-2.1	vendored
+omeka/omeka-s	LICENSE	35147	develop	8ceb4b9ee5ad	GPL-3.0	FSF canonical text
+openlibhums/janeway	LICENSE	34520	master	57c8ff33c9c0	AGPL-3.0	FSF canonical text
+eprints/eprints3.4	COPYING	7651	master	da7eabb7bafd	LGPL-3.0	FSF canonical text
+Koha-Community/Koha	LICENSE	35151	main	e79e9c8a0c85	GPL-3.0	FSF canonical text
+Koha-Community/Koha	debian/copyright	970	main	9c5ba57ac336	GPL-3.0-or-later	Koha contributors; maintainer address .nz (Catalyst IT)
+ckan/ckan	LICENSE.txt	2504	master	843897bdf5db	AGPL-3.0-or-later	Open Knowledge Foundation and contributors

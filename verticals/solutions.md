@@ -15,6 +15,51 @@ which is exactly what the AGPL network clause is written about. Read the posture
 before proposing a fork.
 
 
+## 🆕 `p744` — the library-services estate a university already runs, with the licence posture drawn per layer, `2026-11-10`
+
+> 🟢 **`9` rows, every grant byte-read today, `3` index values corrected from the bytes.** This is
+> the tier `p743` predicted but did not reach: not the research-data platform (Invenio,
+> Dataverse) and not the LMS, but the **library services platform, the catalogue and the
+> discovery layer** — the systems through which a university's students and faculty actually
+> reach content.
+>
+> 🔵 **Read the posture column, because this shelf's licence spread is the widest on this base
+> and it is not random.** The *catalogues* are copyleft (Koha `GPL-3.0-or-later`, VuFind
+> `GPL-2.0`, Omeka S `GPL-3.0`, CKAN `AGPL-3.0-or-later`, Janeway `AGPL-3.0`, EPrints
+> `LGPL-3.0`); the *platform frameworks and the discovery layer* are permissive (FOLIO
+> `Apache-2.0`, Blacklight `Apache-2.0`, ArchivesSpace `ECL-2.0`). 🟢 **`T360`'s rule — decide
+> "can we build on this?" by layer, not by repository — holds on `9 / 9` rows here**, and it is
+> the reason `P220` puts the permissive discovery layer in front of the copyleft catalogue rather
+> than forking the catalogue.
+>
+> 🔴 **`AGPL-3.0` is the decisive cell on this page and two rows carry it.** An LMS or a catalogue
+> is almost always *offered as a service*, which is exactly what the network clause is written
+> about. `ckan/ckan` indexes `NOASSERTION` and would read as unencumbered to anyone who trusts
+> the index.
+
+| Platform | Stars | Forks | Licence (byte-read, title block) | Region (basis) | Posture for a studio |
+|---|--:|--:|---|---|---|
+| [ckan/ckan](https://github.com/ckan/ckan) | **5,153** | **2,123** | 🔴 **`AGPL-3.0-or-later` by notice** · `2,504 B` · `843897bdf5db` — *"either version 3 of the License, or (at your option) any later version"*. **Index says `NOASSERTION`** | **EMEA** — payload holder `Open Knowledge Foundation and contributors` | The open-data portal platform ministries of education and national statistics offices run. 🔴 **Hosting a modified CKAN for a client triggers the network clause**: the client's users are entitled to the modified source. 🟢 **The supported shape is an extension** — CKAN's `ckanext-*` plugin boundary means an AI layer need not be a derivative of the core at all, and the `ckanext-harvest` / `ckanext-dcat` / `ckanext-scheming` estate is the proof the boundary is real |
+| [projectblacklight/blacklight](https://github.com/projectblacklight/blacklight) | **797** | 255 | 🟢 **`Apache-2.0` by short-form notice** · `788 B` · `2c96b9dc9186`. **Index says `NOASSERTION`** | **North America** — payload names `Rector and Visitors of the University of Virginia`, `Board of Trustees of the Leland Stanford Junior University`, `Johns Hopkins` and `Data Curation Experts` | Solr-backed **discovery layer** over any catalogue. 🟢 **The single most useful correction on this page:** permissive, modifiable, hostable, four named university holders — and the index publishes nothing. This is the layer where an AI search experience belongs when the catalogue underneath is GPL |
+| [Koha-Community/Koha](https://github.com/Koha-Community/Koha) | **600** | 305 | 🔴 **`GPL-3.0-or-later`**, and the `-or-later` arm is **not** in the root payload: `LICENSE` is the canonical GPL-3.0 full text (`35,151 B` · `e79e9c8a0c85`) and `debian/copyright` declares `GPL-3+` (`970 B` · `9c5ba57ac336`). **Index says the bare `GPL-3.0`** | ⚠️ **APAC, by maintainer address only** — `debian/copyright` names a maintainer at `catalyst.net.nz`; Koha originates with the Horowhenua Library Trust, New Zealand. 🔵 **Stated as what it is: a packaging-metadata address, not a copyright-holder placement** | The most-deployed open-source **ILS** in the world, and **the first APAC-rooted platform of real scale on this shelf** after three passes of declared APAC supply nils. 🟡 **Promoted out of the backlog (`P210`)** — held with `8` trending mentions across earlier passes and never shelved. Build against `Koha/REST/V1/*`, not the Perl internals |
+| [omeka/omeka-s](https://github.com/omeka/omeka-s) | 529 | 178 | 🔴 **`GPL-3.0`** · `35,147 B` · `8ceb4b9ee5ad` (canonical FSF text) | ⚠️ **unplaced by payload** — canonical text carries no holder; Omeka is published by RRCHNM at George Mason University (secondary, not read) | Multi-site digital-collections and exhibit platform; the thing humanities faculty build teaching collections in. ⚠️ **Default branch is `develop`** |
+| [archivesspace/archivesspace](https://github.com/archivesspace/archivesspace) | 448 | 254 | 🟢 **`ECL-2.0` by short-form notice** · `748 B` · `2b0d256954a7`. **Index says `NOASSERTION`** | **North America** — payload names `New York University`, `the Regents of the University of California` and `the Board of Trustees of the University of Illinois` | Archives management: accessions, finding aids, digital-object records. 🟢 **ECL-2.0 is Apache-2.0 with the patent grant narrowed to the contributing institution** — permissive for a studio's purposes, and the **second** ECL-2.0 system on this base after Sakai (which this base corrected from a wrong `Apache-2.0` claim) and Opencast. 🔵 Three ECL-2.0 systems now: the licence is a *sector* marker, not a curiosity |
+| [vufind-org/vufind](https://github.com/vufind-org/vufind) | 307 | **404** | 🔴 **`GPL-2.0`** · `15,046 B` · `2d902a7b5a7a` (canonical FSF text; the same payload is repeated at `module/VuFindSearch/LICENSE`, byte-identical) | ⚠️ **unplaced by payload** — Villanova University is the publisher (secondary, not read) | Discovery layer, the GPL alternative to Blacklight. 🔵 **Fork-to-star inversion is the strongest on this page** (`404` forks on `307★`) — `p743`'s rule marking a system that is *deployed and locally modified* rather than starred. 🔴 **GPL-2.0 has no patent grant and no Apache compatibility**: if the deliverable must be permissive, this is the row you decline in favour of Blacklight. ⚠️ Default branch is `dev` |
+| [openlibhums/janeway](https://github.com/openlibhums/janeway) | 241 | 98 | 🔴 **`AGPL-3.0`** · `34,520 B` · `57c8ff33c9c0` | **EMEA** — published by the Open Library of Humanities (UK); `src/themes/OLH/` is in-tree evidence of the publisher | Journal and preprint-repository platform. 🟢 **Worth a studio's attention for one design fact:** Janeway models **content licences as first-class objects** (`submissions.models.Licence`, fixtures at `src/utils/install/licence.json`), so an AI pipeline over the corpus can read per-article reuse terms from the platform instead of guessing them. 🔴 The *software* is AGPL-3.0: host a modified Janeway and the source obligation follows |
+| [folio-org/okapi](https://github.com/folio-org/okapi) + [folio-org/stripes](https://github.com/folio-org/stripes) | 133 / 21 | 85 / 20 | 🟢 **`Apache-2.0`**, and the two payloads are **byte-identical**: `11,357 B` · `c71d239df917` both | ⚠️ **unplaced by payload** — canonical Apache-2.0 carries no holder; FOLIO is a multi-party consortium (secondary, not read) | **FOLIO**, the microservice library services platform built to replace the integrated ILS: `okapi` is the API gateway and tenant/module registry, `stripes` the UI module framework. 🟢 **Apache-2.0 across a `456`-repository estate** — the largest permissive platform estate this base has found in education, and the one place on this shelf where a studio may build, modify and host a closed product on top. ⚠️ Star counts are low because adoption is institutional, not individual |
+| [eprints/eprints3.4](https://github.com/eprints/eprints3.4) | 46 | 40 | 🟡 **`LGPL-3.0`** · `COPYING` `7,651 B` · `da7eabb7bafd` (identical payload repeated at `license/license.txt`) | ⚠️ **unplaced by payload** — University of Southampton is the publisher (secondary, not read) | The institutional-repository platform that predates DSpace in UK/EMEA deployments. 🟡 **LGPL-3.0 is the friendliest copyleft on this page**: a *plugin* that links against EPrints need not be LGPL, which is why the `flavours/pub_lib/plugins/` tree is the integration point. ⚠️ `46★` and `40` forks — low absolute traction; filed for the installed base it represents, not its GitHub signal |
+
+### 🔴 The mandated vertical leg nil'd again — the `38`th consecutive time
+
+`open source education platform {industry} ERP CRM MIT Apache` returned OpenEduCat, Canvas, Sakai,
+ILIAS, Chamilo, OpenOlat and LearnHouse. **Every one is already held.** It also asserted that
+*"Sakai … has roots in a 2004 university consortium that included MIT"* in a result set about
+**licences** — a sentence a careless pass reads as `MIT` — and published Open edX's licence in two
+mutually contradictory forms in the same result set. 🔵 **This base already holds Sakai correctly
+as `ECL-2.0` and Open edX correctly as `AGPL-3.0`.** All `9` rows above came from `org:` legs on
+the index channel; the mandated prose leg produced `0`.
+
+
 ## 🆕 `p741` — the deployable TAO distribution and its LTI development kit, with the licence boundary drawn, `2026-11-10`
 
 > 🟢 **`2` rows, both byte-read today, both promoted out of the backlog.** These are the

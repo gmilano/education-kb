@@ -6,7 +6,9 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p742 · verified 2026-11-10.** 🟢 **`p742` executed `ACTION p741-A` as written — it spent itself promoting the LATAM backlog instead of searching — and the rediscovery rate went from `p741`'s `44%` to `0 / 15`.** Every row added this pass was an address this base had already discovered, licence-read and written up without ever promoting it. `4` agent rows, `6` foundations rows, `5` platform rows, **`21` licence payloads byte-read, `21 / 21` classified, `0` index-vs-payload disagreements**.
+**Pass p744 · verified 2026-11-10.** 🟢 **`8` agent rows added plus `2` backlog promotions, after `p742` added `0` and `p741` added `0`.** The highest-starred row added this pass is `5,841★`; `p743`'s three new rows topped out at `167★`. `45` licence payloads byte-read this pass, `45 / 45` classified from the title block, `6` index values corrected, `4` compliant grant-absent verdicts recorded with tree denominators (`T374`). 🔴 **Three of the new rows carry a second grant inside the repository that the index does not report — one of them `CC BY-NC-SA 4.0` inside an `MIT`-indexed repository at `2,285★` (`T372`, `T373`). Read the licence cell before the description.**
+
+**Carried header from p742:** 🟢 **`p742` executed `ACTION p741-A` as written — it spent itself promoting the LATAM backlog instead of searching — and the rediscovery rate went from `p741`'s `44%` to `0 / 15`.** Every row added this pass was an address this base had already discovered, licence-read and written up without ever promoting it. `4` agent rows, `6` foundations rows, `5` platform rows, **`21` licence payloads byte-read, `21 / 21` classified, `0` index-vs-payload disagreements**.
 
 🔴 **Two rows here carry warnings that are the point of the row, not footnotes to it.** `campus-cli` is ISC and routes every data command through a metered third-party relay (`T140` reproduced); `edukors_graph` on [`../repos/foundations.md`](../repos/foundations.md) ships **two** grants, MIT at depth 1 and GPL-3.0 at depth 3, and **the index reports `MIT` only**. Read the licence cell before the description on both.
 
@@ -43,6 +45,55 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p744` — 🟢 **THE SCHOLARLY TIER HAS AN AGENT LAYER AFTER ALL, AND IT IS BIG: `8` ROWS, `5,841★` AT THE TOP, FROM LEGS THAT ASK FOR *ZOTERO*, *OPENALEX*, *CROSSREF* AND *ORCID* INSTEAD OF FOR EDUCATION. 🔴 AN `MIT`-INDEXED REPOSITORY AT `2,285★` SHIPS `CC BY-NC-SA 4.0` INSIDE ITSELF, AND THE NONCOMMERCIAL PAYLOAD IS *SMALLER* THAN EVERY MIT PAYLOAD READ THIS PASS.**
+
+> **Pass p744 · every row byte-read 2026-11-10.** `45` licence payloads byte-read across the
+> whole pass, `45 / 45` classified from the **title block** (`P171`), `6` of the search index's
+> own values corrected, `4` compliant grant-absent verdicts recorded **with their tree
+> denominators** — see `T374`, because this base has said since `T302` that a compliant absence
+> was *unavailable* in this session and that is now refuted.
+>
+> 🟢 **`T363` generalises one tier further, and it is the same mechanism.** `p743` broke a
+> two-pass agent nil by asking who publishes what a research university *runs*. `p744` asks who
+> publishes agents against what a research university's **scholarly APIs** are — Zotero, OpenAlex,
+> Crossref, ORCID, Semantic Scholar — and the highest-starred *newly added* row jumps from `p743`'s `167★` to **`5,841★`**.
+> The `36`th and `37`th mandated global agent legs nil'd again in the same pass. **The vocabulary
+> is the constraint, not the market.**
+>
+> 🔴 **Read the licence cell before the description on rows `1`, `3` and `4`. On all three the
+> index is not wrong about the root — it is blind to the subtree you would actually ship.**
+
+| # | Agent | Stars | Forks | Licence (byte-read, title block) | Region | What it is, and the seam |
+|--:|---|--:|--:|---|---|---|
+| 1 | [54yyyu/zotero-mcp](https://github.com/54yyyu/zotero-mcp) | **5,841** | 458 | 🔴 **MIT at root** · `1,080 B` · `bc3872332338` — **AND `AGPL-3.0` at `plugin/LICENSE`** · `34,524 B` · `8d56b405468a`. Index says `MIT` **only** | ⚠️ **unplaced** — `users/{login}` is `403` here (`T289`), owner publishes no placing signal | Highest-starred Zotero MCP server: exposes a researcher's own library (search, full text, annotations, notes) to an agent. 🟢 **The MCP server half is MIT and shippable.** 🔴 **`plugin/` is the Zotero add-on half and is AGPL-3.0** — host a derivative of *that* as a service and the network clause fires. `T373` |
+| 2 | [Galaxy-Dawn/claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) | **6,025** | 470 | 🟢 **MIT** · `1,069 B` · `5a1e92b9b489`; bundled skills are **Apache-2.0** (`11,357 B` · `58d1e17ffe51`; `10,174 B` · `0d542e0c8804`) — **permissive end to end, `3 / 3` payloads** | ⚠️ **unplaced** | Agent-skill bundle for literature work: search, read, figure and table extraction, draft assembly. 🟢 **The cleanest high-star row on this shelf: no copyleft and no NonCommercial anywhere in the tree.** Holder `Gaorui Zhang` |
+| 3 | [yilewang/llm-for-zotero](https://github.com/yilewang/llm-for-zotero) | **3,541** | 221 | 🔴 **`AGPL-3.0` at root** · `34,520 B` · `76a97c878c9c`. 🟢 **But `packages/claude-bridge/` carries BOTH `LICENSE` (AGPL-3.0) and `LICENSE-MIT`** · `1,069 B` · `9374ff7ad488` — a **dual** grant the index cannot express | ⚠️ **unplaced** | In-Zotero LLM assistant. 🔵 **The usable half is the bridge, not the add-on:** `packages/claude-bridge` is offered under MIT *as well as* AGPL, so a studio may take the bridge permissively and leave the AGPL add-on in place. Vendored provider icons are MIT (holder `LobeHub`) |
+| 4 | [poco-ai/Agentero](https://github.com/poco-ai/Agentero) | **2,285** | 135 | 🔴 **MIT at root** · `1,064 B` · `f2b7f0cc6fb1` — **AND `CC BY-NC-SA 4.0` on TWO bundled skills** · `1,028 B` · `b35c958b7972` (`deep-research`, `idea-evaluator`), third skill MIT under a **different holder** (`Master-cai`) | ⚠️ **unplaced** (Organization) | Research-vault agent over an Obsidian-shaped store. 🔴 **This is the sharpest row on the shelf and the reason the licence column precedes the description.** A studio that ships `templates/vault/` into a client deliverable ships **NonCommercial** terms out of an `MIT`-indexed repository. ⚠️ **And the NC payload is `1,028 B` — smaller than every MIT payload read this pass (`1,061–1,080 B`) — so a size heuristic files it as MIT-ish.** `T372` |
+| 5 | [wp-a/nature-academic-search](https://github.com/wp-a/nature-academic-search) | 384 | 22 | 🟢 **MIT** · `1,061 B` · `19c109d0a12b` | ⚠️ **unplaced** | Academic search agent over multiple scholarly indexes. Smallest MIT payload read this pass |
+| 6 | [adityak74/mcp-scholarly](https://github.com/adityak74/mcp-scholarly) | 185 | 28 | 🟢 **MIT** · `1,070 B` · `cbdcb75547ea` | ⚠️ **unplaced** | MCP server for scholarly search (arXiv-first). ⚠️ Last push `2026-08-25` — the only row here not pushed within `70` days |
+| 7 | [zongmin-yu/semantic-scholar-fastmcp-mcp-server](https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server) | 166 | 25 | 🟢 **MIT** · `1,067 B` · `dd88ee6b87fa` | ⚠️ **unplaced** | FastMCP server over the Semantic Scholar Graph API: papers, authors, citation graph, recommendations. The citation-graph leg of `P221` |
+| 8 | [Aryan-Pardeshi/CiteProof-AI-MCP](https://github.com/Aryan-Pardeshi/CiteProof-AI-MCP) | 105 | 9 | 🟢 **MIT** · `1,071 B` · `d2ba69a545ad`; the `MCP/npm/` copy is **byte-identical** (same digest) — one grant, not two | ⚠️ **APAC, provisional** — the owner's adjacent repositories are India-specific (`gov-myscheme-dataset`, after the Government of India's MyScheme portal). **This is the owner's own publishing record, not a profile read**, which is unavailable here (`T378`) | Citation-verification MCP server: resolves a cited claim against the live record and reports whether the citation supports it. 🟢 **The teeth of `P221`**, and the first APAC-leaning agent row on this shelf for several passes |
+
+### 🟢 Promoted out of the backlog this pass (`P210` class — discovered, licence-read, never shelved)
+
+| Agent | Stars | Forks | Licence (byte-read) | Region | Why it is promoted now |
+|---|--:|--:|---|---|---|
+| [cyanheads/orcid-mcp-server](https://github.com/cyanheads/orcid-mcp-server) | 6 | 2 | 🟢 **Apache-2.0** · `11,317 B` · `7915fc5b0477` — **byte-identical to `p743`'s `cyanheads/pubmed-mcp-server` payload** | ⚠️ **unplaced** | Researcher-identity resolution over the ORCID public API. ⚠️ `6★`, `2` forks — filed for what it *completes* (`P221`'s identity leg), not for its traction. 🔵 The digest match is a real control paying out: one publisher, one canonical payload, confirmed across two passes without re-reading p743's bytes |
+| [suren-kk/armenian-national-library-mcp](https://github.com/suren-kk/armenian-national-library-mcp) | 7 | 0 | 🟢 **MIT** · `1,073 B` · `c14af8d40b83` | **EMEA** (Armenia) | Held in **both** trending logs with `4` mentions across earlier passes and **never promoted to a shelf** — the exact defect `P210` names. It is the only *national-library* agent this base has seen, and `P224` uses it as a shape rather than as a dependency |
+
+### 🔴 The mandated global agent leg nil'd again — the `37`th consecutive time
+
+`top open source AI agents education 2026 github MIT license` returned general-purpose frameworks
+(OpenHands, MetaGPT, CrewAI, AutoGen, DSPy, Pydantic AI, LlamaIndex, Hermes) with **the sources
+disagreeing with each other about the licences in the same result set**, and no
+education-specific list. `github trending education AI 2026 repositories` returned
+`THU-MAIC/OpenMAIC` and `patchy631/ai-engineering-hub` — **both already held** — plus two
+awesome-lists and one curriculum repository. 🔵 **Both legs are recorded in
+`evidence/websearch-legs.2026-11-10-p744.tsv` as nils with their contents**, because a nil that
+is not written down looks exactly like coverage. The rows above cost `12` `org:`/keyword legs on
+the index channel and `0` prose legs, which is `T326` holding for the `54`th leg.
+
 
 ## 🆕 `p741` — `0` rows added, and the nil is the finding, `2026-11-10`
 

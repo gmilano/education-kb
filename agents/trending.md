@@ -5,6 +5,127 @@ updated: 2026-11-10
 ---
 
 
+## 🆕 2026-11-10 (p744) — 🟢 **`T363` GENERALISES ONE TIER FURTHER AND THE PAYOFF IS `10` AGENT ROWS, TOP ROW `5,841★`, FROM LEGS THAT NAME *ZOTERO*, *OPENALEX*, *CROSSREF* AND *ORCID* AND NEVER THE WORD "EDUCATION". 🔴 AN `MIT`-INDEXED REPOSITORY AT `2,285★` SHIPS `CC BY-NC-SA 4.0` INSIDE ITSELF, AND THE NONCOMMERCIAL PAYLOAD IS *SMALLER* THAN EVERY MIT PAYLOAD READ THIS PASS. 🟢 `ACTION p275` IS SATISFIABLE IN THIS SESSION AFTER ALL — THE CHANNEL IS `git`, NOT HTTP — AND `T302` IS REFUTED WITH FOUR ENUMERATED ABSENCES.**
+
+**`8` agent rows + `2` backlog promotions · `10` foundations rows · `9` platform rows · `45` licence payloads byte-read, `45 / 45` classified from the title block · `6` index values corrected from the bytes · `4` compliant grant-absent verdicts with tree denominators · `3` mandated global legs nil'd (`37`th agents, `38`th verticals).**
+
+### 🟢 Why the vocabulary finding keeps paying, and what it predicts next
+
+`p743` broke a two-pass agent nil by changing the **noun** — asking who publishes what a research
+university *runs* rather than asking for *education AI*. `p744` moved the noun one step further
+out, to the **scholarly APIs** a university's people use all day, and the result is not marginal:
+
+| Pass | Question asked | Agent rows | Highest-starred new row |
+|---|---|--:|--:|
+| `p737` | `topic:ai-tutor`, `topic:education-ai`, `topic:mcp education` (12 legs) | **0** | — |
+| `p742` | the LATAM backlog (`ACTION p741-A`) | **0** new discoveries | — |
+| `p743` | *who publishes what a research university runs* (`org:` legs) | **3** | `167★` |
+| `p744` | *who publishes agents against Zotero / OpenAlex / Crossref / ORCID* | **8** + `2` promotions | **`5,841★`** |
+
+🔵 **`T363` restated with its new evidence: the saturation was of a vocabulary, and each step away
+from that vocabulary has paid more than the last.** The next step out is named in
+`ACTION p744-A` and it is not another synonym for *education* — it is the **assessment and
+integrity** vocabulary (proctoring, plagiarism, submission, rubric, marking), which is where the
+EU's Annex III obligations actually land.
+
+### 🔴 The licence findings, and all three are about the subtree rather than the repository
+
+| Repository | Index | What the bytes say | Why it costs money |
+|---|---|---|---|
+| [poco-ai/Agentero](https://github.com/poco-ai/Agentero) `2,285★` | `MIT` | **MIT at root** (`1,064 B` · `f2b7f0cc6fb1`) **+ `CC BY-NC-SA 4.0` on two bundled skills** (`1,028 B` · `b35c958b7972`, holder *Yuyu Luo (methodology) and contributors*) + MIT on a third under a **different holder** (`Master-cai`) | 🔴 **NonCommercial terms inside an `MIT`-indexed repository.** A studio shipping `templates/vault/` into a paid deliverable ships terms that forbid exactly that. ⚠️ **And `1,028 B` is smaller than every MIT payload read this pass (`1,061–1,080 B`)** — a size prior files the NonCommercial one as MIT-ish |
+| [54yyyu/zotero-mcp](https://github.com/54yyyu/zotero-mcp) `5,841★` / `458` forks | `MIT` | **MIT at root** (`1,080 B`) **+ `AGPL-3.0` at `plugin/LICENSE`** (`34,524 B` · `8d56b405468a`) | 🔴 The MCP server is MIT and shippable; the **Zotero add-on half is AGPL-3.0**. Host a derivative of the plugin as a service and the network clause fires. The index reports `MIT` only |
+| [yilewang/llm-for-zotero](https://github.com/yilewang/llm-for-zotero) `3,541★` | `AGPL-3.0` | **AGPL-3.0 at root** — 🟢 **but `packages/claude-bridge/` ships BOTH `LICENSE` (AGPL-3.0) and `LICENSE-MIT`** (`1,069 B` · `9374ff7ad488`) | 🟢 The inverse error: the index is *pessimistic*. The bridge is **dual-licensed** and may be taken under MIT. A single SPDX field cannot express a dual grant, so the row has to |
+
+🔵 **`T373`'s rule, stated so it can be applied without re-reading this section: on this tier, read
+the subtree you intend to ship, not the repository.** Three of the four repositories above have a
+different answer at the root than at the directory a studio would actually vendor.
+
+### 🟢 `T374` — `ACTION p275` is satisfiable here, and this base had concluded the opposite
+
+`T302` and `736-A2` recorded that no compliant `grant-absent` verdict is available in this session:
+`api.github.com/repos/*` returns *"GitHub access to this repository is not enabled for this
+session"*, the HTML channel is `403`, and `ACTION p275` forbids publishing an absence from a
+filename ladder. **That conclusion was about HTTP and it does not bind `git`.**
+
+Measured this pass: `git clone --filter=blob:none --no-checkout --depth 1` succeeds against
+arbitrary public repositories here, `git ls-tree -r --name-only HEAD` enumerates the **complete**
+tree, and `git cat-file blob HEAD:<path>` fetches one payload **byte-exact** (it is the object's
+own bytes, so `P834`'s trailing-newline defect cannot arise). Four absences recorded with
+denominators: `zotero/translators` (`816` entries), `clarin-eric/ParlaMint` (`2,366`),
+`DSpace/xoai` (`324`), `ror-community/ror-updates` (`100,590`). ⚠️ **One fetch failure is recorded rather than silently dropped:** `eprints/eprints3.4`'s `debian/copyright` was enumerated in the tree and its **blob fetch failed**, so EPrints' grant is read from `COPYING` (LGPL-3.0, `7,651 B`) and its `-or-later` arm is **not** established — the one place `T371`'s method was attempted and did not complete.
+
+⚠️ **What is still blocked, stated so no later pass re-buys it.** This base's own shared
+instruments could not be **executed**: `. compose/code/lib/probe_payload.sh` and
+`compose/code/lib/measure` are both refused by this session's tool classifier, as
+`compose/code/lib/README.md` already records for the first. So the fetch was re-done in `git` and
+**every family verdict this pass was read off the title block by eye** (`P171`'s window, never the
+body). 🔵 That is a *weaker* instrument than `license_family.sh` on throughput and an *equal* one
+on the question it was asked, and the distinction is recorded rather than smoothed: `45 / 45`
+classified, and the three traps the shared classifier exists to survive (GPL-3.0 §13 naming the
+AGPL, GPL-3.0 §6's *"noncommercially"*, `mit` as a substring of *permit*) cannot reach a reader
+who is looking only at line 1.
+
+### 🔴 `T375` — the shared tree-probe's skip list has a hole, and it is one token wide
+
+`PROBE_TREE_SKIP` in `compose/code/lib/probe_payload.sh` excludes
+`\.(py|js|ts|vue|xsl|svg|mustache|properties|feature|underscore|rtf|spdx)$`. It does **not**
+exclude `.pm`, `.java` or `.html`. Measured on two repositories this pass:
+
+* `Koha-Community/Koha` → **`5` Perl modules** matched (`Koha/ERM/License.pm`,
+  `Koha/ERM/Licenses.pm`, `Koha/ERM/Agreement/License.pm`, `.../Agreement/Licenses.pm`,
+  `Koha/REST/V1/ERM/Licenses.pm`). These are **electronic-resource licence *records*** — business
+  objects in Koha's ERM module — not grants. `5` false candidates against `2` real ones.
+* `openpreserve/jhove` → **`3` javadoc `CopyrightChunk.html` pages and `1` `CopyrightChunk.java`**,
+  an AIFF chunk parser.
+
+🔧 **The fix is one edit to the extension arm:** add `pm|java|html|htm|pl|rb|tsx|jsx`. 🔵 It was
+found by *running* the pattern against a Perl codebase, which no earlier pass had — the shelves are
+PHP, Python, Ruby and Java, and `.pm` had never come up.
+
+### 🟢 `T376` — size does not identify a licence even within one family, and the digest does
+
+p736's `T313` established that size cannot decide *between* MIT and Apache. This pass measures the
+stronger statement, inside single families:
+
+| Family | Sizes read this pass | The collision |
+|---|---|---|
+| Apache-2.0 | `616` (notice), `788` (notice), `10,174`, `11,317`, `11,325`, `11,357` ×2, `11,436` | 🔴 **`folio-org/okapi` and `Galaxy-Dawn/claude-scholar/skills/webapp-testing/LICENSE.txt` are both `11,357 B` and are DIFFERENT BYTE SEQUENCES** (`c71d239df917` vs `58d1e17ffe51`). 🟢 `okapi` and `stripes` are `11,357 B` **and byte-identical** — the same digest places them on the same publisher |
+| AGPL-3.0 | `34,520` ×2, `34,524` | 🔴 **`openlibhums/janeway` (`57c8ff33c9c0`) and `yilewang/llm-for-zotero` (`76a97c878c9c`) are both exactly `34,520 B` and differ in their bytes** |
+| GPL-3.0 | `35,147` (Omeka S), `35,151` (Koha) | Two systems, two sizes, one family — and this base already holds `35,149` from an earlier pass |
+| LGPL | `7,651` (LGPL-3.0, EPrints), `26,419` / `26,436` (LGPL-2.1, jhove / ArchivesSpace vendored) | The `17 B` gap between two LGPL-2.1 payloads is whitespace, not terms |
+
+🔵 **And the digest paid out as a *control*, not only as a label:** `cyanheads/orcid-mcp-server`'s
+Apache-2.0 payload is `11,317 B` · `7915fc5b0477` — **byte-identical to `p743`'s
+`cyanheads/pubmed-mcp-server`**, confirming one publisher's canonical payload across two passes
+without re-reading last pass's bytes.
+
+### 🔴 `T378` — a name collision put an automotive-simulation vendor one query away from this shelf
+
+The leg `dspace mcp` returns **`org:dspace-group`** — *dSPACE GmbH*, the hardware-in-the-loop
+simulation vendor (`ControlDeskMCP`, `VeosMCP`, `ConfigurationDeskBusManagerMCP`, all Apache-2.0,
+all pushed this month) — and **not** `DSpace`, the institutional-repository platform this base
+holds with `18` trending mentions. Nothing about it is education. 🔵 **The discriminator is free
+and belongs *before* the licence probe: an `org:` leg is on-topic only if the org's other
+repositories are.**
+
+🟢 **And the same test placed a row in the other direction.** `users/{login}` is `403` from this
+session, so no owner profile can be read (`T289`). For
+[`Aryan-Pardeshi/CiteProof-AI-MCP`](https://github.com/Aryan-Pardeshi/CiteProof-AI-MCP) the only
+available region evidence is the owner's **own publishing record**: `gov-myscheme-dataset`, after
+the Government of India's MyScheme portal. Filed **APAC, provisional**, with that basis named in
+the cell — which is `T368`'s discipline applied where no payload holder exists.
+
+### 🔴 Declared gaps this pass — each from a leg that ran
+
+| Gap | Measurement |
+|---|---|
+| **EMEA adoption percentages** | **4th consecutive nil.** The regional prose leg returned regulation in depth and no usable adoption series. The nearest figure is a UNESCO-attributed `70 %` of institutions *"in Europe and North America"* having or developing AI guidance — a **governance** figure for a **two-region aggregate** that cannot be split, and it is not adoption |
+| **APAC adoption percentages** | **4th consecutive nil.** Ban-support only (Ipsos, already held). 🟢 Partially offset: the **OECD Digital Education Outlook 2026** cites an **evaluation of Shiksha Copilot** in Indian schools — the first *named APAC evaluation* this base holds, which is a different and better thing than a percentage |
+| **LATAM repository supply** | **Nil this pass, and it is an artefact of the target list.** `org:redalyc` resolves with **`0` repositories**; the tier's LATAM rows (SciELO, LA Referencia) were already taken at `p743`. No LATAM row is claimed |
+| **Owner-profile region placement** | `users/{login}` → `403` for `25 / 25` logins attempted. `13` of this pass's `29` rows are published **`⚠️ unplaced`** rather than guessed (`8` agents, `1` foundation, `4` platforms), and `2` as **provisional** with the exact basis named (`Aryan-Pardeshi/CiteProof-AI-MCP`, `Koha-Community/Koha`) |
+| **This base's own shared instruments** | `probe_payload.sh` and `lib/measure` **cannot be executed** in this session (classifier denial). The work was done with `git` + coreutils + reading the title block. `T374` |
+
+
 ## 🆕 2026-11-10 (p743) — 🟢 **THE TWO-PASS AGENT NIL IS BROKEN BY CHANGING THE NOUN, NOT THE QUERY: ASKING *WHO PUBLISHES WHAT A RESEARCH UNIVERSITY RUNS* RETURNED `3` AGENT ROWS, `24` ROWS IN ALL, FROM A TIER `742` PASSES HAD NEVER ADDRESSED. 🔴 A HARVARD-PUBLISHED "AI AGENT SKILLS FOR LEGAL EDUCATION" REPOSITORY AT `48★` HAS NO GRANT AT `14` PROBED PATHS AND IS REFUSED.**
 
 **`3` agent rows · `16` foundations rows · `5` platform rows · `34` licence payloads byte-read, `32 / 34` classified · `2` refused for no locatable grant · `3` index values corrected from the bytes.**

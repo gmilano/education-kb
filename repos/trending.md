@@ -5,6 +5,101 @@ updated: 2026-11-10
 ---
 
 
+## 🆕 2026-11-10 (p744) — 🟢 **`29` PUBLISHER CHANNELS AND `2,316` REPOSITORIES OF THE LIBRARY-SERVICES AND OPEN-SCHOLARSHIP ESTATE WERE PROBED, `28` OF THEM NEVER ADDRESSED BEFORE: `219 / 229` CANDIDATE ADDRESSES NOVEL. 🟢 ONE PERMISSIVE ESTATE OF `456` REPOSITORIES (FOLIO, APACHE-2.0) IS THE LARGEST THIS BASE HAS FOUND IN EDUCATION. 🔴 THREE `NOASSERTION` PLATFORMS ARE PERMISSIVE AND THE INDEX CANNOT SAY SO, AND A FOURTH IS `AGPL-3.0-or-later`.**
+
+**`10` foundations rows (one new section) · `9` platform rows (one new section) · `45` payloads byte-read, `45 / 45` classified · `6` index corrections · `4` enumerated absences.**
+
+### The tier, with its denominators — every total read this pass from `gh api -X GET search/repositories`
+
+| Channel | Total repositories | Novel to this base |
+|---|--:|---|
+| `org:folio-org` | **456** | all — publisher never addressed |
+| `org:internetarchive` | **234** | all |
+| `org:TIBHannover` | **225** | all |
+| `org:clarin-eric` | **136** | all |
+| `org:crossref` | **129** | all |
+| `org:ourresearch` | **125** | all |
+| `org:omeka` | **117** | all |
+| `org:datacite` | **113** | all |
+| `org:hathitrust` | **86** | all |
+| `org:openlibhums` | **79** | all |
+| `org:ckan` | **78** | all |
+| `org:ORCID` | **70** | all |
+| `org:openpreserve` | **68** | all |
+| `org:zotero` | **58** | all |
+| `org:JabRef` | **54** | all but one (`JabRef/jabref`, `1` trending mention — `P210` backlog) |
+| `org:eprints` | **52** | all |
+| `org:projectblacklight` | **34** | all |
+| `org:openaire` | **29** | all |
+| `org:ror-community` | **29** | all |
+| `org:plos` | **26** | all |
+| `org:DSpace` | **25** | partly — `DSpace/DSpace` held (`18` mentions) |
+| `org:archivesspace` | **11** | all |
+| `org:vufind-org` | **10** | all |
+| `org:duraspace` | **8** | all |
+| `org:coar-repositories` | **8** | all — and **nil on supply**: nothing above `20★`, nothing with a software grant |
+| `org:eifl` | **3** | all — and **nil**: max `1★`, everything dormant since 2020 |
+| `org:koha-community` | **3** | `Koha` held in trending only (`8` mentions, `P210` backlog) |
+| `org:opencast` | **50** | 🟡 **already held** — `52` trending mentions. Probed because `ACTION p743-A`'s register pointed here; **no new row**, and the nil is recorded rather than padded |
+| `org:redalyc` | **0** | owner resolves, **zero repositories** — the LATAM leg of `ACTION p743-A`, and it is an empty channel |
+| `org:fedora-commons`, `org:dataverse`, `org:dariah-eu`, `org:ubiquitypress`, `org:evergreen-ils` | `422` ×5 | **No such owner from this session.** `4` of the `8` addresses `ACTION p743-A` named are invalid; `dataverse`'s real publisher is `IQSS`, already filed at `p743` |
+
+🟢 **The novelty measurement, committed at `evidence/tier-novelty.2026-11-10-p744.tsv`.** `229`
+candidate addresses were scored against **every live shelf, both trending logs, `README.md` and
+`evidence/address-ledger.tsv` (`3,382` rows)** *before* any row was drafted: **`219 / 229` appear
+nowhere at all.** The `10` that do are listed with their mention counts in the same file, and two
+of them (`Koha-Community/Koha`, `JabRef/jabref`) are the `P210` class — discovered, licence-read,
+written up, never promoted.
+
+### 🔴 The six index corrections, all decided by reading the payload's title block
+
+| Repository | Index says | Bytes say | Why the correction matters |
+|---|---|---|---|
+| [ckan/ckan](https://github.com/ckan/ckan) `5,153★` / `2,123` forks | `NOASSERTION` | **`AGPL-3.0-or-later`** · `2,504 B` · `843897bdf5db` | 🔴 **The expensive direction.** An unencumbered-looking index field over the strongest copyleft on this shelf, on the platform ministries run their open-data portals on |
+| [projectblacklight/blacklight](https://github.com/projectblacklight/blacklight) `797★` | `NOASSERTION` | **`Apache-2.0`** by notice · `788 B` · `2c96b9dc9186` | 🟢 A permissive, hostable **discovery layer** that reads as unknown-licence to anyone trusting the index |
+| [archivesspace/archivesspace](https://github.com/archivesspace/archivesspace) `448★` | `NOASSERTION` | **`ECL-2.0`** by notice · `748 B` · `2b0d256954a7` | 🟢 Third ECL-2.0 system on this base (with Sakai and Opencast) — the licence is a **sector marker** |
+| [openpreserve/fido](https://github.com/openpreserve/fido) `160★` | `NOASSERTION` | **`Apache-2.0`** by notice · `616 B` · `c13e7ca5d3d5` | 🟢 `616 B` is the smallest grant read this pass and it is a complete one |
+| [openpreserve/jhove](https://github.com/openpreserve/jhove) `204★` | `NOASSERTION` | **`LGPL-2.1-or-later`** · `COPYING` `26,419 B` + notice `880 B` | 🟡 LGPL draws a **linking** boundary, which is a design decision rather than a refusal |
+| [ORCID/orcid-model](https://github.com/ORCID/orcid-model) `99★` / `61` forks | `NOASSERTION` | **bespoke `"ORCID MIT-Style License (MIT)"`** · `1,669 B` · `3eaeaa9ffbef` | 🔴 **Here the index is right to refuse and a human would be wrong to simplify.** MIT's grant plus a **trademark clause**, a **branding/look-and-feel carve-out**, and full-text-or-link attribution |
+
+### 🟢 `T371` — the `-or-later` arm lives in the notice, never in the canonical text, and the index publishes the bare version
+
+Three specimens, one pass, three different families:
+
+| Repository | Canonical text in tree | Where `-or-later` is actually declared | Index |
+|---|---|---|---|
+| `Koha-Community/Koha` | `LICENSE`, GPL-3.0 full text, `35,151 B` | **`debian/copyright`** → `License: GPL-3+`, *"either version 3 … or (at your option) any later version"* | `GPL-3.0` (bare) |
+| `ckan/ckan` | — (no canonical text at root) | **`LICENSE.txt`** notice, `2,504 B` | `NOASSERTION` |
+| `openpreserve/jhove` | `COPYING`, LGPL-2.1 full text, `26,419 B` | **`LICENSE`** notice, `880 B` | `NOASSERTION` |
+
+🔵 **Why it is worth a client's time:** `-or-later` lets the client relicense forward onto terms
+the FSF has not written yet; `-only` does not. The canonical full text **cannot** answer the
+question — it is the same bytes either way — so the answer is always in the notice, and in
+Debian-packaged projects it is often **only** in `debian/copyright`. 🔴 **And the jhove notice
+misspells its own licence — *"GNU Lessor General Public License"*** — so a notice-only repository
+with that typo is unplaceable by exact-phrase matching.
+
+### 🔵 The fork-to-star inversion rule from `p743`, re-tested on a new tier and holding
+
+`p743` proposed ranking this tier on **forks** because deployed infrastructure is forked for local
+modification and not starred. Measured on this pass's rows:
+
+| Repository | Stars | Forks | Forks/star |
+|---|--:|--:|--:|
+| `vufind-org/vufind` | 307 | **404** | **1.32** |
+| `DSpace/dspace-angular` | 178 | **582** | **3.27** |
+| `ORCID/orcid-model` | 99 | 61 | 0.62 |
+| `archivesspace/archivesspace` | 448 | 254 | 0.57 |
+| `ckan/ckan` | 5,153 | 2,123 | 0.41 |
+| `projectblacklight/blacklight` | 797 | 255 | 0.32 |
+
+🟢 **Every repository above `0.3` on this tier is a system institutions deploy and locally patch**,
+and the two above `1.0` are both **discovery/UI layers** — the layer a library customises first.
+🔵 A plain star sort would have put `zotero/zotero` (`15,907★`, `1,179` forks, ratio `0.07`) at the
+top of this pass's harvest; it is a **desktop application**, not an institutional substrate, and it
+is not filed on any shelf.
+
+
 ## 🆕 2026-11-10 (p743) — 🟢 **SEVEN PUBLISHERS AND ~`800` REPOSITORIES OF RESEARCH-UNIVERSITY INFRASTRUCTURE WERE ABSENT FROM A `3,382`-ADDRESS LEDGER AND EVERY SHELF: `10 / 11` PROBE ADDRESSES NOVEL, AND THE ELEVENTH WAS DISCOVERED LONG AGO AND NEVER PROMOTED. 🟢 `11` OF `16` NEW FOUNDATIONS ROWS ARE MIT, WHICH INVERTS THE LICENCE POSTURE OF THE LMS LAYER. 🔴 A `1,565 B` FILE IS A VALID GPL-3.0 GRANT AND THE INDEX CALLS IT `NOASSERTION`.**
 
 **`16` foundations rows (two new sections) · `5` platform rows (one new section) · `34` payloads byte-read, `32 / 34` classified · `3` index corrections · `2` refusals.**

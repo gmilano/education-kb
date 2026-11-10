@@ -5,6 +5,243 @@ updated: 2026-11-10
 ---
 
 
+## 🆕 P220–P225 — added at p744 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the
+wiring.** 🔴 **Two of the six recipes exist primarily to draw a licence boundary**, because `T372`
+and `T373` found NonCommercial and AGPL terms *inside* repositories the index calls `MIT` — and a
+recipe that names the component without naming the subtree is how that reaches a client
+deliverable.
+
+### `P220` — Permissive discovery in front of a copyleft catalogue (academic or public library consortium; North America first)
+
+🔴 **The mis-scope this exists to prevent.** A studio sees a `GPL-3.0` ILS and either (a) proposes
+forking it, which obliges source release of the client's modifications, or (b) walks away. **Both
+are wrong, because the layer the user actually touches is permissive and separately published.**
+
+**The recipe — five components, the licence boundary on the API:**
+
+1. **System of record** → [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha)
+   (**GPL-3.0-or-later** — `LICENSE` `35,151 B`, arm declared in `debian/copyright`; `600★`,
+   `305` forks). **Do not fork it.** Leave the deployment stock and talk to
+   `Koha/REST/V1/*` — the REST API is the seam, and `Koha/REST/V1/ERM/Licenses.pm` et al. are
+   evidence the API surface is first-class.
+2. **Discovery layer you may modify and host** →
+   [`projectblacklight/blacklight`](https://github.com/projectblacklight/blacklight)
+   (**Apache-2.0** by notice, `788 B` — index says `NOASSERTION`; `797★`, `255` forks). This is
+   where the AI search experience is built: it is permissive, it is Solr-backed, and four named
+   universities hold the copyright.
+3. **The alternative you decline, in writing** →
+   [`vufind-org/vufind`](https://github.com/vufind-org/vufind) (**GPL-2.0**, `15,046 B`; `307★`,
+   **`404` forks**). Technically comparable, higher real deployment. 🔴 **GPL-2.0 has no patent
+   grant and no Apache compatibility**: if the deliverable must be permissive, name VuFind in the
+   assessment and say why it was not chosen. ⚠️ Default branch `dev`.
+4. **Catalogue search agent** →
+   [`adityak74/mcp-scholarly`](https://github.com/adityak74/mcp-scholarly) (**MIT**, `1,070 B`;
+   `185★`) + [`zongmin-yu/semantic-scholar-fastmcp-mcp-server`](https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server)
+   (**MIT**, `1,067 B`; `166★`). The first covers open preprint search, the second the **citation
+   graph** — together they answer *"what else should I read"* which no catalogue answers.
+5. **Format triage on ingest** → [`openpreserve/fido`](https://github.com/openpreserve/fido)
+   (**Apache-2.0** by notice, `616 B`).
+
+**Wiring.** Koha REST → nightly extract → Solr index that Blacklight already expects → MCP servers
+registered as tools against that same Solr plus the two scholarly APIs → the agent answers in the
+Blacklight UI. 🟢 **Nothing in the delivered tree is copyleft**: the only GPL component is the
+untouched upstream ILS, reached over HTTP.
+
+**First deliverable.** A measured baseline: catalogue queries that return zero results today, and
+how many of them the agent resolves. It is one report and it is the thing a library director can
+take to a budget committee.
+
+---
+
+### `P221` — The citation-integrity gate: a per-submission receipt, built from five permissive components (research university or journal publisher; Global)
+
+🔵 **Why this and not a plagiarism checker.** The EU's Annex III catches *assessment* systems, and
+`T321`'s Article 50 transparency duty is live **now**. A gate that produces a **receipt** — what
+was checked, against what, with what verdict — is an artefact an institution can file; a
+similarity score is not.
+
+**The recipe — five components, all byte-read permissive:**
+
+1. **Reference extraction** → [`CrossRef/pdfextract`](https://github.com/CrossRef/pdfextract)
+   (**MIT**, `1,074 B`; `508★`, `87` forks). 🔴 **Last pushed `2017-07-26`** — the oldest component
+   in any recipe on this base. It is here because Crossref's own layout-analysis reference
+   extractor has **no permissive alternative on this base**, and the staleness is the risk the
+   engagement must price, not hide.
+2. **DOI → open copy** → [`ourresearch/oadoi`](https://github.com/ourresearch/oadoi) (**MIT**,
+   `1,079 B`; `405★`, pushed `2026-10-26`). The Unpaywall service itself: establishes that a cited
+   work *exists* and where a legally readable copy is.
+3. **Author identity** → [`cyanheads/orcid-mcp-server`](https://github.com/cyanheads/orcid-mcp-server)
+   (**Apache-2.0**, `11,317 B` · `7915fc5b0477`; ⚠️ `6★`, `2` forks) over
+   [`ORCID/orcid-model`](https://github.com/ORCID/orcid-model) as the schema you validate against.
+   🔴 **`orcid-model` is NOT MIT** — it is a bespoke MIT-style grant with a **trademark clause**
+   and a branding carve-out (`T377`). The client's dependency report must say so, and the product
+   must not use ORCID's marks to suggest endorsement.
+4. **Claim-level verification** → [`Aryan-Pardeshi/CiteProof-AI-MCP`](https://github.com/Aryan-Pardeshi/CiteProof-AI-MCP)
+   (**MIT**, `1,071 B`; `105★`) — resolves whether the cited source actually supports the claim
+   made, which is the step that distinguishes this from reference-list validation.
+5. **Citation graph context** → [`ourresearch/openalex-guts`](https://github.com/ourresearch/openalex-guts)
+   (**MIT** code, `1,068 B`). 🔵 **Build against the CC0 standard-format dumps
+   (`7,047 B` · `6d489af62926`), not the ODC-BY MAG-format dumps (`796 B` · `11ffd6776108`)** —
+   same repository, two different data licences, and only one of them travels into a client product
+   without attribution obligations.
+
+**Wiring.** PDF in → `pdfextract` yields a reference list → each DOI resolved through Crossref and
+`oadoi` → each author resolved through the ORCID MCP server → `CiteProof` scores claim support →
+OpenAlex supplies the citation neighbourhood for "is this source itself contested" → a signed JSON
+receipt per submission, stored beside the submission.
+
+**First deliverable.** Run it over one past cohort's submissions and report the distribution of
+unresolvable citations. The number is always higher than the institution expects, and it is the
+business case.
+
+---
+
+### `P222` — The student literature workbench, and the refusal is half the product (higher education; Global)
+
+🔴 **Read this recipe's exclusions before its inclusions.** Three of the four highest-starred
+agents on this tier carry a grant in a subtree that the index does not report (`T372`, `T373`).
+
+**Include:**
+
+1. **Library access** → [`54yyyu/zotero-mcp`](https://github.com/54yyyu/zotero-mcp) (`5,841★`,
+   `458` forks) — 🟢 **the MCP server only.** Root `LICENSE` is **MIT** (`1,080 B`).
+   🔴 **Do NOT ship `plugin/`: it is `AGPL-3.0` (`34,524 B` · `8d56b405468a`).** The server talks
+   to Zotero over its API; the plugin runs inside it. Ship the former.
+2. **Reading and drafting skills** → [`Galaxy-Dawn/claude-scholar`](https://github.com/Galaxy-Dawn/claude-scholar)
+   (`6,025★`, `470` forks) — 🟢 **clean to ship end to end:** MIT root (`1,069 B`) plus
+   Apache-2.0 bundled skills (`11,357 B`, `10,174 B`). `3 / 3` payloads permissive.
+3. **Search breadth** → [`wp-a/nature-academic-search`](https://github.com/wp-a/nature-academic-search)
+   (**MIT**, `1,061 B`; `384★`) and
+   [`oksure/openalex-research-mcp`](https://github.com/oksure/openalex-research-mcp) (**MIT**,
+   `1,076 B`; `60★`).
+4. **If the client already runs Zotero plugins** →
+   [`yilewang/llm-for-zotero`](https://github.com/yilewang/llm-for-zotero) (`3,541★`) —
+   🟢 take **`packages/claude-bridge/` under its `LICENSE-MIT` arm** (`1,069 B` ·
+   `9374ff7ad488`), and leave the AGPL-3.0 add-on installed as upstream rather than forked.
+
+🔴 **Exclude, and say why in the assessment:**
+[`poco-ai/Agentero`](https://github.com/poco-ai/Agentero) (`2,285★`, index `MIT`). Two of its three
+bundled skills — `templates/vault/.agents/skills/deep-research/` and `.../idea-evaluator/` — are
+**CC BY-NC-SA 4.0** (`1,028 B` · `b35c958b7972`). `templates/vault/` is exactly the directory a
+team copies to stand the agent up. ⚠️ It may still be used for a **non-commercial pilot**, and
+that distinction belongs in the engagement letter, not in a footnote.
+
+**First deliverable.** A one-page licence map of the delivered tree: component, subtree, byte-read
+grant, digest. 🔵 It takes an afternoon, it is the artefact procurement actually asks for, and
+`p744` produced the method for it.
+
+---
+
+### `P223` — Repository ingest that explains its own failures (EMEA first: preservation and funder-mandate work)
+
+🔵 **Why EMEA first.** The funder mandates that pay for this are European (`P215`'s finding), and
+both components are published by a European body.
+
+**The recipe — two components, and the licence seam is the *process* boundary:**
+
+1. **Format identification** → [`openpreserve/fido`](https://github.com/openpreserve/fido)
+   (**Apache-2.0** by notice, `616 B` · `c13e7ca5d3d5`; `160★`, `49` forks, holder *Open
+   Preservation Foundation*). Identifies a deposited file's format from its bytes against PRONOM.
+   🟢 Permissive: embed it.
+2. **Format validation** → [`openpreserve/jhove`](https://github.com/openpreserve/jhove)
+   (🔴 **LGPL-2.1-or-later**, `COPYING` `26,419 B` + notice `880 B`; `204★`, `86` forks).
+   Answers *"is this well-formed and valid for its claimed format"*.
+   🔴 **The design decision: run JHOVE as a separate process and read its output, do not link it
+   into the deliverable.** LGPL's obligations attach to linking; a subprocess boundary leaves the
+   client's code unencumbered and is also how JHOVE is operationally deployed anyway.
+   ⚠️ **Default branch is `integration`** — pin it explicitly in the build, or CI will not find it.
+3. **Object model** → [`duraspace/pcdm`](https://github.com/duraspace/pcdm) (**Apache-2.0**,
+   `11,325 B`; `89★`) — the Portland Common Data Model, which Fedora, Islandora, Samvera and Hyrax
+   all describe objects with, so the agent's vocabulary matches the repository's.
+4. **Platform underneath** → `inveniosoftware/invenio-app-rdm` (MIT) from `P215`, or
+   `DSpace/DSpace` (BSD-3-Clause) where the institution already runs it.
+
+**Wiring.** Deposit → `fido` classifies → `jhove` validates as a subprocess → failures routed to an
+agent that reads the validator's own diagnostic and writes a depositor-facing explanation plus a
+suggested remediation → PCDM-shaped record on success.
+
+**First deliverable.** The ingest-failure taxonomy for one year of real deposits. Repositories
+universally have this data and universally have not read it.
+
+---
+
+### `P224` — The APAC national- and consortium-library engagement, built on an APAC-rooted platform (APAC; Koha estate)
+
+🟢 **Why this recipe exists now.** APAC supply has been a **declared nil for three passes**.
+`p744` does not close it with an agent — it closes it with the platform: **Koha is the
+most-deployed open-source ILS in the world and it is APAC-rooted.** Its `debian/copyright` names a
+maintainer at `catalyst.net.nz`, and the project originates with the Horowhenua Library Trust in
+New Zealand. ⚠️ **Stated precisely: that is packaging metadata and project history, not a
+copyright-holder placement.**
+
+**The recipe:**
+
+1. **The installed base** → [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha)
+   (**GPL-3.0-or-later**, `35,151 B`; `600★`, `305` forks). Already running at the client. The
+   engagement is additive.
+2. **The shape to copy** →
+   [`suren-kk/armenian-national-library-mcp`](https://github.com/suren-kk/armenian-national-library-mcp)
+   (**MIT**, `1,073 B`; ⚠️ **`7★`, `0` forks**). 🔵 **This is a reference design, not a
+   dependency**: it is the only *national-library* MCP server this base has seen, it is `~200`
+   lines of MIT-licensed wiring, and the useful content is its tool surface — catalogue search,
+   holdings, availability — which generalises to any OPAC. **Do not sell it as a product and do not
+   pretend `7★` is traction.**
+3. **Multilingual discovery** →
+   [`projectblacklight/blacklight`](https://github.com/projectblacklight/blacklight)
+   (**Apache-2.0**) as in `P220`, which matters more here: APAC consortia are routinely
+   multi-script, and the permissive licence is what lets the UI be rebuilt rather than themed.
+4. **Regulatory frame to cite in the proposal** — Japan's *Act on Promotion of R&D and Utilization
+   of AI-Related Technologies* (passed May 2025) with MEXT guidance that explicitly warns against
+   entering personal or sensitive data into generative systems; South Korea's **AI Basic Act in
+   force 22 Jan 2026**; Vietnam's **Decision 33/2026/QD-TTg** naming education high-risk and
+   naming automated assessment (`T370`). 🔵 **A library catalogue agent is the lowest-risk entry
+   under all three**, because it touches holdings rather than students.
+
+**First deliverable.** An OPAC natural-language search pilot over one consortium member's
+catalogue, with the MEXT data-handling constraint satisfied by construction: no student record ever
+enters the model context.
+
+---
+
+### `P225` — LATAM: the open-data portal and the journal platform, with the AGPL posture settled before the first commit (LATAM; ministry, university or SciELO member)
+
+🔴 **The licence conversation that must happen in week one.** Both platforms here are **network
+copyleft**, and a studio that hosts a modified instance for a ministry owes that ministry's users
+the modified source. **That is usually fine** — these are public-sector deployments where
+publishing the source is a feature — but it must be a decision, not a discovery.
+
+**The recipe:**
+
+1. **Open-data portal** → [`ckan/ckan`](https://github.com/ckan/ckan)
+   (🔴 **AGPL-3.0-or-later**, `2,504 B` · `843897bdf5db` — **index says `NOASSERTION`**;
+   `5,153★`, `2,123` forks, holder *Open Knowledge Foundation*). 🟢 **Build as a `ckanext-*`
+   extension, not a core fork** — CKAN's plugin boundary is real and well-populated
+   (`ckanext-harvest`, `ckanext-dcat`, `ckanext-scheming` are the proof), which keeps the studio's
+   code out of the derivative question entirely.
+2. **Journal / preprint platform** → [`openlibhums/janeway`](https://github.com/openlibhums/janeway)
+   (🔴 **AGPL-3.0**, `34,520 B` · `57c8ff33c9c0`; `241★`, `98` forks). 🟢 **Its decisive design
+   property for an AI pipeline:** Janeway models **content licences as first-class objects**
+   (`submissions.models.Licence`, default fixture `src/utils/install/licence.json`), so a pipeline
+   over the corpus **reads** each article's reuse terms instead of guessing them.
+3. **The regional record layer, already on this base from `p743`** → `scieloorg/packtools`,
+   `scieloorg/opac`, `scieloorg/articles_meta` (**BSD-2-Clause**) and
+   `lareferencia/dspace-stats-collector`. 🟢 Permissive, regional, and the only part of this recipe
+   a studio may close.
+4. **Agent layer** → `oksure/openalex-research-mcp` (**MIT**) +
+   `zongmin-yu/semantic-scholar-fastmcp-mcp-server` (**MIT**) for discovery across the regional and
+   global records at once.
+
+**First deliverable, and it is a measurement rather than a feature.** `P219` opened with usage
+events for a reason — `55 %` of LAC institutions report no AI budget, so the first artefact has to
+*create* the budget. Here that artefact is a **coverage report**: how much of the ministry's or
+consortium's published output is discoverable, correctly licensed in metadata, and resolvable to a
+DOI. 🔵 The IDB's own 2026 review of `193` AI-in-education solutions in the region and Rio de
+Janeiro's invoice-validation automation both point the same way: **the administrative deliverable
+lands before the pedagogical one.**
+
+
 ## 🆕 P215–P219 — added at p743 (2026-11-10)
 
 **All five recipes are built only from rows byte-verified this pass or already filed on this base.** Every component names its repository, its licence and what it does in the wiring; no recipe ends at a product name. `T363` is the reason these exist: the scholarly and research-data tier is where research universities already spend, and this base had no recipe that touched it.

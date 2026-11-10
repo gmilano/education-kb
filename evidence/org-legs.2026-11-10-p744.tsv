@@ -1,0 +1,35 @@
+leg	total_repositories	outcome
+org:duraspace	8	ran — 1 row filed (pcdm)
+org:openlibhums	79	ran — 1 row filed (janeway)
+org:eifl	3	ran — NIL, max 1 star, all dormant since 2020
+org:coar-repositories	8	ran — NIL, no software grant above 20 stars
+org:redalyc	0	ran — org resolves, 0 repositories
+org:ckan	78	ran — 1 row filed (ckan)
+org:fedora-commons	422	INVALID — no such owner from this session
+org:dataverse	422	INVALID — no such owner (IQSS is the publisher, filed p743)
+org:DSpace	25	ran — already held (18 trending mentions); xoai refused
+org:eprints	52	ran — 1 row filed (eprints3.4)
+org:openaire	29	ran — no row above threshold
+org:crossref	129	ran — 1 row filed (pdfextract)
+org:datacite	113	ran — no row above threshold this pass
+org:ORCID	70	ran — 2 rows filed (orcid-model, orcid-angular)
+org:ror-community	29	ran — ror-updates refused (absence enumerated)
+org:ourresearch	125	ran — 3 rows filed (oadoi, openalex-guts, unpaywall-extension)
+org:internetarchive	234	ran — not education-placeable this pass
+org:clarin-eric	136	ran — ParlaMint refused (absence enumerated)
+org:plos	26	ran — no row above threshold
+org:JabRef	54	ran — jabref held in trending (P210 backlog, not promoted this pass)
+org:zotero	58	ran — translators refused (absence enumerated)
+org:koha-community	3	ran — 1 row filed (Koha, P210 backlog promotion)
+org:folio-org	456	ran — 2 rows filed (okapi, stripes)
+org:vufind-org	10	ran — 1 row filed (vufind)
+org:projectblacklight	34	ran — 1 row filed (blacklight)
+org:hathitrust	86	ran — no row above threshold
+org:openpreserve	68	ran — 2 rows filed (jhove, fido)
+org:archivesspace	11	ran — 1 row filed (archivesspace)
+org:omeka	117	ran — 1 row filed (omeka-s)
+org:opencast	50	ran — ALREADY HELD (52 trending mentions), no new row
+org:TIBHannover	225	ran — no education-placeable row above threshold
+org:dariah-eu	422	INVALID — no such owner
+org:ubiquitypress	422	INVALID — no such owner
+org:evergreen-ils	422	INVALID — no such owner

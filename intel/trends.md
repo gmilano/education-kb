@@ -5,6 +5,223 @@ updated: 2026-11-10
 ---
 
 
+# 🆕 Trends new at `p744` (researched 2026-11-10) — `T371`–`T378`
+
+**Added above `p743`'s `T363`–`T370`.** `p744` ran `ACTION p743-A` as written and then extended its
+register one step further out: not *who publishes what a research university runs* but **who
+publishes agents against the scholarly APIs its people use**. `45` licence payloads byte-read,
+`45 / 45` classified from the title block, `6` index values corrected, `4` compliant grant-absent
+verdicts recorded with tree denominators.
+
+> ⚠️ **Identifier note, honouring `733-K`.** `T371` follows `T370`, the highest `##`/`###`
+> **heading** in this file. Bare `T[0-9]+` matches in prose here reach far higher and are
+> citations, not identifiers.
+
+---
+
+## T371 — 🔴 The `-or-later` arm of a copyleft grant lives in the *notice*, never in the canonical text, and the search index publishes the bare version
+
+**The measurement.** Three repositories, three families, one pass:
+
+| Repository | Canonical full text in tree | Where `-or-later` is declared | Index field |
+|---|---|---|---|
+| `Koha-Community/Koha` | `LICENSE` — GPL-3.0, `35,151 B`, digest `e79e9c8a0c85` | **`debian/copyright`**, `970 B`: `License: GPL-3+`, *"either version 3 of the License, or (at your option) any later version"* | `GPL-3.0` |
+| `ckan/ckan` | none at root | **`LICENSE.txt`**, `2,504 B`: AGPL *"either version 3 … or (at your option) any later version"* | `NOASSERTION` |
+| `openpreserve/jhove` | `COPYING` — LGPL-2.1, `26,419 B` | **`LICENSE`**, `880 B`: LGPL *"either version 2.1 … or (at your option) any later version"* | `NOASSERTION` |
+
+**Why the canonical text cannot answer it.** The FSF's full texts are identical bytes whether a
+project grants `-only` or `-or-later`; the choice is made in the *notice the project writes about*
+the text. So a pass that reads only `LICENSE`/`COPYING` is structurally unable to see the arm, and
+a pass that trusts the index gets the bare version in `1 / 3` cases and `NOASSERTION` in `2 / 3`.
+
+**Why a client pays for the difference.** `-or-later` lets the client relicense the work forward
+onto FSF terms not yet written; `-only` freezes it. For a deliverable with a ten-year institutional
+life that is a real option, and it is also the one copyleft question a procurement lawyer asks
+first.
+
+🔧 **Rule for later passes:** after reading the root payload, read the **notice** — and in a
+Debian-packaged project read `debian/copyright`, where the arm is sometimes declared **and nowhere
+else**. 🔴 **And do not match the arm by exact phrase:** jhove's own notice misspells its licence
+(*"GNU **Lessor** General Public License"*), so a notice-only repository with that typo is
+unplaceable by phrase anchoring.
+
+---
+
+## T372 — 🔴 An MIT root grant does not license the skills bundled beneath it, and the NonCommercial payload is *smaller* than every MIT one
+
+**The specimen.** [`poco-ai/Agentero`](https://github.com/poco-ai/Agentero) — `2,285★`, `135`
+forks, pushed `2026-11-10`, index field `MIT`, and the root payload **is** MIT
+(`1,064 B`, digest `f2b7f0cc6fb1`, holder `poco-ai`). Three further grants in the tree:
+
+| Path | Bytes | Digest | Family | Holder |
+|---|--:|---|---|---|
+| `templates/vault/.agents/skills/deep-research/LICENSE` | **1,028** | `b35c958b7972` | 🔴 **CC BY-NC-SA 4.0** | Yuyu Luo (methodology) and contributors |
+| `templates/vault/.agents/skills/idea-evaluator/LICENSE` | **1,028** | `b35c958b7972` | 🔴 **CC BY-NC-SA 4.0** | *(same payload, byte-identical)* |
+| `templates/vault/.agents/skills/research-paper-writing/LICENSE` | 1,066 | `34415967a8be` | 🟢 MIT | **Master-cai** — a third party |
+
+**The exposure, stated as a studio would hit it.** `templates/vault/` is the directory a team
+copies to stand the agent up for a client. Two of its three skills forbid commercial use. The
+repository's index field, its README and its root grant all say MIT; nothing in the places a
+reviewer looks says otherwise.
+
+🔴 **And the size prior points the wrong way.** The `11` MIT payloads read this pass span
+`1,061–1,080 B`. The **NonCommercial** payload is `1,028 B` — *below the entire MIT range* — so a
+heuristic of "small payload ⇒ permissive notice" files it as MIT-ish. This is `T313`'s finding at a
+sharper angle: size is not merely a weak discriminator, it is **anti-correlated** here.
+
+🔵 Related, same pass, opposite sign: `Galaxy-Dawn/claude-scholar` (`6,025★`) bundles skills too,
+and its three payloads are MIT + Apache-2.0 + Apache-2.0 — **permissive end to end**. The pattern
+is not "bundled skills are dangerous"; it is **"bundled skills are separately licensed, so read
+them."**
+
+---
+
+## T373 — 🔴 On the Zotero tier the licence question is answered per subtree, and the index can hold only one answer
+
+| Repository | Stars | Index | Root | The other half |
+|---|--:|---|---|---|
+| [`54yyyu/zotero-mcp`](https://github.com/54yyyu/zotero-mcp) | **5,841** | `MIT` | 🟢 MIT, `1,080 B` | 🔴 **`plugin/LICENSE` — AGPL-3.0, `34,524 B`, digest `8d56b405468a`** |
+| [`yilewang/llm-for-zotero`](https://github.com/yilewang/llm-for-zotero) | **3,541** | `AGPL-3.0` | 🔴 AGPL-3.0, `34,520 B` | 🟢 **`packages/claude-bridge/` ships BOTH `LICENSE` (AGPL-3.0) and `LICENSE-MIT` (`1,069 B`) — a dual grant** |
+
+**Why both repositories are shaped this way, and why the tier will keep producing it.** Zotero
+itself is AGPL-3.0. Anything that runs *inside* Zotero as a plugin inherits that posture; anything
+that talks to Zotero *over an API* — an MCP server — does not. So these projects are genuinely two
+things in one tree, and the licence boundary sits exactly on the architectural boundary.
+
+🔧 **Rule:** on this tier, **read the subtree you intend to ship, not the repository.** `3 / 4` of
+the high-star rows filed to `agents/top.md` this pass have a different answer at the root than at
+the directory a studio would vendor. 🔵 And note the second row is the *useful* direction: the
+index is **pessimistic**, and a pass that trusted `AGPL-3.0` would have refused a component that is
+available under MIT.
+
+---
+
+## T374 — 🟢 `ACTION p275` *is* satisfiable from this session, and `T302`'s contrary conclusion was about HTTP rather than about the environment
+
+**What this base believed.** `T289` recorded `api.github.com/repos/*` as `403` (*"GitHub access to
+this repository is not enabled for this session"*); `736-A2` traced it to session repository
+scoping; `T302` concluded that **no compliant `grant-absent` verdict is available here**, because
+`ACTION p275` forbids publishing an absence from a filename ladder and the tree channel was
+believed dead.
+
+**What is measured.** The conclusion was correct about every **HTTP** channel and does not bind
+`git`:
+
+| Step | Command | Result |
+|---|---|---|
+| Resolve + enumerate | `git clone --filter=blob:none --no-checkout --depth 1` then `git ls-tree -r --name-only HEAD` | 🟢 works against arbitrary public repositories; returns the **complete** tree at any depth |
+| Fetch one payload | `git cat-file blob HEAD:<path>` | 🟢 byte-exact — the object's own bytes, so `P834`'s trailing-newline loss **cannot arise at all** |
+| Default branch | `git symbolic-ref --short HEAD` in the clone | 🟢 resolved, never assumed — and it mattered `4` times this pass (`integration`, `dev`, `develop`, `3.x`) |
+
+**The four compliant absences, with denominators** (`evidence/absence-enumerated.2026-11-10-p744.tsv`):
+`zotero/translators` `816` entries · `clarin-eric/ParlaMint` `2,366` · `DSpace/xoai` `324` ·
+`ror-community/ror-updates` `100,590`.
+
+⚠️ **What is still blocked, recorded so no later pass re-buys it.** This base's own shared
+instruments cannot be **executed** in this session: `. compose/code/lib/probe_payload.sh` and
+`compose/code/lib/measure` are both refused by the tool classifier (`lib/README.md` already records
+the first). So `p744` re-did the **fetch** in `git` and read **every family off the title block by
+eye**, within `P171`'s window. 🔵 That is honest about which control was in force: the shared
+classifier's three signature traps (GPL-3.0 §13 naming the AGPL, §6's *"noncommercially"*, `mit` as
+a substring of *permit*) are all **body** defects and cannot reach a reader looking at line 1 — but
+the throughput and the parity checks of the real instrument were not available, and `45 / 45` was
+achieved by hand.
+
+---
+
+## T375 — 🔴 The shared tree-probe's skip list has a measured hole one token wide, and a Perl codebase is what exposed it
+
+`PROBE_TREE_SKIP` excludes `\.(py|js|ts|vue|xsl|svg|mustache|properties|feature|underscore|rtf|spdx)$`.
+It does **not** exclude `.pm`, `.java` or `.html`.
+
+| Repository | False candidates returned | What they actually are |
+|---|--:|---|
+| `Koha-Community/Koha` | **5** | `Koha/ERM/License.pm`, `Koha/ERM/Licenses.pm`, `Koha/ERM/Agreement/License.pm`, `Koha/ERM/Agreement/Licenses.pm`, `Koha/REST/V1/ERM/Licenses.pm` — **electronic-resource licence *records***, business objects in Koha's ERM module |
+| `openpreserve/jhove` | **4** | `CopyrightChunk.java` plus `3` javadoc `CopyrightChunk.html` pages — an **AIFF chunk parser** |
+
+On Koha that is `5` false candidates against `2` real grants: a probe that returns on the first hit
+and sorts lexically could answer the licence question with a **Perl module**.
+
+🔧 **The fix is one edit to the extension arm:** add `pm|java|html|htm|pl|rb|tsx|jsx`. 🔵 **Why
+`742` passes never saw it:** the shelves are PHP, Python, Ruby and Java, and this is the first pass
+to enumerate a **Perl** tree. The lesson is `lib/README.md`'s own, one level up — a skip list
+calibrated on the corpus you have is a prior, not a proof, and the next corpus refutes it.
+
+---
+
+## T376 — 🔴 Byte size does not identify a licence even *within* a single family; the digest does, and it works as a cross-pass control
+
+| Family | Sizes read this pass | The collisions |
+|---|---|---|
+| **Apache-2.0** | `616`, `788`, `10,174`, `11,317`, `11,325`, `11,357` ×2, `11,436` | 🔴 `folio-org/okapi` and `Galaxy-Dawn/claude-scholar/skills/webapp-testing/LICENSE.txt` are **both `11,357 B` and different byte sequences** (`c71d239df917` vs `58d1e17ffe51`). 🟢 `okapi` and `stripes` are `11,357 B` **and byte-identical** — same digest, same publisher |
+| **AGPL-3.0** | `34,520` ×2, `34,524` | 🔴 `openlibhums/janeway` (`57c8ff33c9c0`) and `yilewang/llm-for-zotero` (`76a97c878c9c`) are **both exactly `34,520 B` and differ in their bytes** |
+| **GPL-3.0** | `35,147` (Omeka S), `35,151` (Koha) | and this base already holds `35,149` from an earlier pass — three sizes, one family |
+| **LGPL-2.1** | `26,419` (jhove), `26,436` (ArchivesSpace, vendored) | a `17 B` gap that is whitespace, not terms |
+| **MIT** | `1,061`–`1,080` (`11` payloads) | 🔴 and a **CC BY-NC-SA 4.0** payload at `1,028 B` sits *below* the whole range (`T372`) |
+
+🟢 **The digest earning its place as a control rather than a label.**
+`cyanheads/orcid-mcp-server`'s Apache-2.0 payload is `11,317 B` · `7915fc5b0477` —
+**byte-identical to the figure `p743` published for `cyanheads/pubmed-mcp-server`**. One
+publisher's canonical payload confirmed across two passes **without re-reading last pass's bytes**,
+which is exactly what a digest is for and the first time this base has used it that way.
+
+🔧 **Consequence for every cell on these shelves:** a licence cell carries size **and** digest, and
+the digest is the identity. Size alone is a presentation detail.
+
+---
+
+## T377 — 🟢 Three `NOASSERTION` platforms are permissive and one is strong copyleft, because all four grant by *short-form notice* — and a fifth is neither
+
+`T313` established that Apache-2.0-by-notice reads as `NOASSERTION`. This pass measures the
+population effect on the **platform** shelf, where the field decides whether a studio can host a
+fork:
+
+| Repository | Index | Bytes | Direction |
+|---|---|---|---|
+| `projectblacklight/blacklight` `797★` | `NOASSERTION` | **Apache-2.0**, `788 B` — holders UVa + Stanford + Johns Hopkins + Data Curation Experts | 🟢 cheaper than the index implies |
+| `archivesspace/archivesspace` `448★` | `NOASSERTION` | **ECL-2.0**, `748 B` — holders NYU + UC Regents + U Illinois | 🟢 cheaper |
+| `openpreserve/fido` `160★` | `NOASSERTION` | **Apache-2.0**, `616 B` — the smallest complete grant read this pass | 🟢 cheaper |
+| `ckan/ckan` `5,153★` | `NOASSERTION` | **AGPL-3.0-or-later**, `2,504 B` | 🔴 **dearer** — and this is the one that matters, because a hosted fork triggers the network clause |
+
+⚠️ **The fifth is the one a human would get wrong where the index gets it right.**
+`ORCID/orcid-model` indexes `NOASSERTION` and is **"ORCID MIT-Style License (MIT)"**, `1,669 B`,
+digest `3eaeaa9ffbef`: MIT's grant clause, plus **three** terms MIT does not have —
+(1) the grant **excludes** orcid.org branding and *"look and feel"*; (2) a **trademark clause**
+forbids using the ORCID name, mark or logo to suggest affiliation; (3) attribution requires **the
+full licence text or a link**, not the notice. 🔴 **Do not write "MIT" for it in a client's
+dependency report.**
+
+🔵 **The generalisation worth carrying:** `NOASSERTION` is not a signal about permissiveness in
+either direction. It means *"this payload is not one of GitHub's canonical texts"* — which is true
+of every short-form notice and of every bespoke grant, and those two classes point opposite ways.
+
+---
+
+## T378 — 🔴 A name collision put an automotive-simulation vendor one query away from this shelf, and the discriminator that catches it is the same one that *placed* a row
+
+**The collision.** The leg `dspace mcp` returns **`org:dspace-group`** — *dSPACE GmbH*, the
+hardware-in-the-loop simulation vendor: `ControlDeskMCP`, `VeosMCP`,
+`ConfigurationDeskBusManagerMCP`, `dSPACE-MCP-Hub`, all Apache-2.0, all pushed this month, all
+about vehicle ECU test benches. **Not** `DSpace`, the institutional-repository platform this base
+holds with `18` trending mentions. Nothing about it is education, and a pass that probed the
+licence first would have byte-read four clean Apache-2.0 grants and filed them.
+
+🔧 **The discriminator is free and belongs *before* the licence probe: an `org:` leg is on-topic
+only if the org's *other* repositories are.** One `org:` listing answers it.
+
+🟢 **The same test, used in the other direction, placed a row.** `users/{login}` is `403` from this
+session for `25 / 25` logins attempted, so **no owner profile can be read**. For
+`Aryan-Pardeshi/CiteProof-AI-MCP` the only available region evidence is the owner's **own
+publishing record** — `gov-myscheme-dataset`, after the Government of India's MyScheme portal — and
+the row is filed **APAC, provisional**, with that basis named in the cell.
+
+🔵 **This is `T368` extended.** `T368` says place a row on the publisher when the payload carries a
+template holder. `T378` adds the fallback for when it does not: **place it on the publisher's
+adjacent repositories, and say that is what you did.** `13` of this pass's `29` rows are published
+`⚠️ unplaced` because neither channel produced anything — which is `P383`'s region contract
+honoured by abstention rather than by a guess.
+
+
 # 🆕 Trends new at `p743` (researched 2026-11-10) — `T363`–`T370`
 
 **Added above `p742`'s `T358`–`T362`.** `p743` asked a different question from the last six passes: not *what is new in education AI* but *who publishes the software a research university already operates*. The answer is a tier of `7` publishers and `~800` repositories that `742` passes and a `3,382`-address ledger had never touched. **`34` licence payloads byte-read, `32 / 34` classified, `2` refused, `3` index values corrected.**

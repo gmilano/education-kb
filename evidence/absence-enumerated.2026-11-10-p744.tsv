@@ -1,0 +1,6 @@
+repo	verdict	tree_entries	branch	note
+zotero/translators	ABSENCE-ENUMERATED	816	master	complete tree enumerated; no licence/copying/copyright path at any depth
+clarin-eric/ParlaMint	ABSENCE-ENUMERATED	2366	main	complete tree enumerated; corpora repository, no software grant in tree
+DSpace/xoai	ABSENCE-ENUMERATED	324	3.x	complete tree enumerated; default branch is 3.x, not main/master
+ror-community/ror-updates	ABSENCE-ENUMERATED	100590	master	complete tree enumerated; data/issue repository, no grant in tree
+eprints/eprints3.4	BLOB-FETCH-FAILED	-	master	debian/copyright enumerated in tree but the blob fetch failed; the row's grant is read from COPYING (LGPL-3.0, 7651 B) and the -or-later arm for EPrints is therefore NOT established

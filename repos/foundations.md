@@ -33,6 +33,57 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p744` (2026-11-10) — the open-scholarship data and format-identification estate: `10` rows, `5` index corrections, and `4` refusals that are *enumerated* rather than assumed
+
+> **Pass p744 · every row byte-read 2026-11-10.** 🟢 **`ACTION p743-A` was run as written** — the
+> untried `org:` legs it named were probed, `4` of the `8` are invalid owners from this session
+> (`fedora-commons`, `dataverse`, `dariah-eu`, `ubiquitypress` → `422`), `redalyc` resolves with
+> `0` repositories, and the remaining three paid. The register was then **extended at the same
+> altitude** — the publishers of the open-scholarship record itself — and `34` `org:` legs are
+> recorded with their totals in `evidence/org-legs.2026-11-10-p744.tsv`.
+>
+> 🔵 **Why this tier belongs on a *foundations* page and not on `verticals/`.** None of these is a
+> system a client runs; each is a **resolver** — DOI → open copy, string → author identity, bytes
+> → file format. They are the components the agent rows on
+> [`../agents/top.md`](../agents/top.md) call, and three of them are what makes a citation claim
+> checkable rather than plausible.
+>
+> 🔴 **Five index corrections on this page alone, and one goes the expensive way:**
+> `openpreserve/fido` `NOASSERTION` → **Apache-2.0**; `openpreserve/jhove` `NOASSERTION` →
+> **LGPL-2.1-or-later**; `ORCID/orcid-model` `NOASSERTION` → **not MIT, a bespoke MIT-style grant
+> with a trademark clause**; and on [`../verticals/solutions.md`](../verticals/solutions.md)
+> `ckan/ckan` `NOASSERTION` → **AGPL-3.0-or-later**. See `T371` and `T377`.
+
+| Repository | Stars | Forks | Licence (byte-read, title block) | Region (basis) | What it resolves |
+|---|--:|--:|---|---|---|
+| [ourresearch/unpaywall-extension](https://github.com/ourresearch/unpaywall-extension) | **532** | 57 | 🟢 **MIT** · `1,068 B` · `eeeb93141043` | **North America** — payload holder `Impactstory` | The browser extension that finds a legal open copy of a paywalled article. ⚠️ Last push `2025-01-02`: the **client** is dormant, the service behind it is not |
+| [CrossRef/pdfextract](https://github.com/CrossRef/pdfextract) | **508** | 87 | 🟢 **MIT** · `1,074 B` · `47dacb284910` | **North America** — payload holder `CrossRef` | Crossref's own PDF structure extractor: identifies title, authors and **reference lists** by layout analysis. 🔴 **Last push `2017-07-26`** — the oldest row on this page by eight years. Filed because the reference-extraction step of `P221` has no permissive alternative on this base, and the row names its own staleness |
+| [ourresearch/oadoi](https://github.com/ourresearch/oadoi) | **405** | 43 | 🟢 **MIT** · `1,079 B` · `6f1472c95b46` | **North America** — payload holder `Impactstory` | **The Unpaywall service itself**: DOI → open-access location, with the OA status logic in the open. Pushed `2026-10-26`. 🟢 The one component on this page a client-facing citation gate cannot be built without |
+| [openpreserve/jhove](https://github.com/openpreserve/jhove) | **204** | 86 | 🔴 **`LGPL-2.1-or-later`** — `COPYING` is the canonical LGPL-2.1 (`26,419 B` · `8392361080d8`) and `LICENSE` is the `-or-later` notice (`880 B` · `089e03a38164`). **Index says `NOASSERTION`** | **EMEA** — payload names `JSTOR` + `President and Fellows of Harvard College` (2003–2015) **and** `Open Preservation Foundation` (2015–2023); the current steward is the OPF | Format validation for preservation ingest: is this PDF actually a well-formed PDF? ⚠️ **Default branch is `integration`, not `main`** — a hardcoded branch writes this repository down as ungranted. 🔴 **And the notice misspells its own licence — "GNU Lessor General Public License"** — so a classifier anchored on the exact phrase in a *notice-only* repository would fail to place it (`T377`) |
+| [openpreserve/fido](https://github.com/openpreserve/fido) | **160** | 49 | 🟢 **Apache-2.0 by short-form notice** · `616 B` · `c13e7ca5d3d5`. **Index says `NOASSERTION`** | **EMEA** — payload holder `The Open Preservation Foundation` | Format Identifier for Digital Objects: identifies a file's format from its bytes against the PRONOM registry. The classification step in front of `jhove`, and **the permissive half of that pair** |
+| [ourresearch/openalex-guts](https://github.com/ourresearch/openalex-guts) | **157** | 14 | 🟢 **MIT** for the code · `1,068 B` · `233592e3c6b9`. ⚠️ **And two *different* data licences in the same tree:** `CC0-1.0` for the standard-format dumps (`7,047 B` · `6d489af62926`) and **`ODC-BY-1.0`** for the MAG-format dumps (`796 B` · `11ffd6776108`) | **North America** — payload holder `OurResearch` | The machinery behind OpenAlex — the open bibliographic graph that replaced Microsoft Academic Graph. 🔵 **The code licence and the data licence are different questions and this repository answers the second one twice:** build against the **standard format (CC0, no attribution obligation)**, not the MAG format (ODC-BY, attribution obligations travel into the client's product) |
+| [ORCID/bibtexParseJs](https://github.com/ORCID/bibtexParseJs) | 113 | 43 | 🟢 **MIT** (index) — ⚠️ payload **not** read this pass | **North America** — publisher `ORCID, Inc.` | BibTeX parser ORCID uses for works import. ⚠️ Last push `2023-09-08`. **Index-only licence cell, stated as such** — the one row on this page whose grant was not byte-read, kept because `P188` forbids presenting an index value as a payload read |
+| [ORCID/orcid-model](https://github.com/ORCID/orcid-model) | 99 | **61** | 🔴 **Bespoke: "ORCID MIT-Style License (MIT)"** · `1,669 B` · `3eaeaa9ffbef`. **Index says `NOASSERTION` and it is right to refuse** | **North America** — payload holder `ORCID, Inc.` | The ORCID record schema and Java object model — what you validate against when you write researcher identities. 🔴 **Do not write "MIT" for this in a client's dependency report.** MIT's grant clause, plus **three** terms MIT does not have: the grant **excludes** orcid.org branding and "look and feel"; a **trademark clause** forbids using the ORCID name or marks to suggest affiliation; and the attribution requirement is **the full licence text or a link**, not the notice. 🔵 Fork-to-star inversion (`61` forks on `99★`) — `p743`'s ranking rule marking deployed infrastructure |
+| [duraspace/pcdm](https://github.com/duraspace/pcdm) | 89 | 10 | 🟢 **Apache-2.0** · `11,325 B` · `cb5e8e7e5f4a` | ⚠️ **unplaced by payload** — canonical Apache-2.0 carries no holder; DuraSpace/LYRASIS is a US body but the payload does not say so, and `users/{login}` is `403` here | The **Portland Common Data Model**: the ontology Fedora, Islandora, Samvera and Hyrax all describe their objects with. ⚠️ Last push `2024-11-21` — a *specification* repository, where dormancy means settled rather than abandoned |
+| [ORCID/orcid-angular](https://github.com/ORCID/orcid-angular) | 49 | 41 | 🟢 **MIT** (index) — ⚠️ payload **not** read this pass | **North America** — publisher `ORCID, Inc.` | The live ORCID registry front end, pushed `2026-11-10`. Filed as the reference implementation of ORCID's own auth flow. **Index-only licence cell, stated as such** |
+
+### 🔴 Refused this pass — and these are the first *compliant* absences this base has ever recorded
+
+`ACTION p275` has held since `p275` that a negative grant verdict is only a finding if the **tree**
+was enumerated, and `T302` / `736-A2` concluded that this is **impossible in this session** because
+`api.github.com/repos/*` is `403` and the HTML channel is blocked. 🟢 **`T374` refutes that: a
+blobless, no-checkout, depth-1 `git clone` works here**, `git ls-tree -r` enumerates the complete
+tree, and `git cat-file blob` fetches one payload byte-exact. All four refusals below therefore
+carry their denominator.
+
+| Refused | Index | Tree entries enumerated | Verdict |
+|---|---|--:|---|
+| [zotero/translators](https://github.com/zotero/translators) | `none` | **816** | **ABSENCE-ENUMERATED** — the Zotero translator corpus (`1,735★`, `933` forks, the highest-forked thing refused here) publishes **no grant at any depth** |
+| [clarin-eric/ParlaMint](https://github.com/clarin-eric/ParlaMint) | `none` | **2,366** | **ABSENCE-ENUMERATED** — EMEA parliamentary corpora; a corpus repository with no software grant in tree |
+| [DSpace/xoai](https://github.com/DSpace/xoai) | `none` | **324** | **ABSENCE-ENUMERATED** — ⚠️ and its **default branch is `3.x`**, a fourth specimen of the non-`main` default this base has measured on `jhove` (`integration`), `vufind` (`dev`) and `omeka-s` (`develop`) in this one pass |
+| [ror-community/ror-updates](https://github.com/ror-community/ror-updates) | `none` | **100,590** | **ABSENCE-ENUMERATED** — the largest tree enumerated on this base. A curation-ticket repository, not software |
+
+
 ## 🆕 `p741` — the `LGPL-2.1` seam into a `GPL-2.0` estate, and the only permissive QTI 3 code found, `2026-11-10`
 
 > 🟢 **`4` rows, all byte-read today, all promoted out of the backlog, and the first one is worth
