@@ -4,6 +4,117 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p736)
+
+**`41` discovery legs across two rounds on the **authenticated** `gh api -X GET
+search/repositories` channel — the one `p735` declared dead and `p736` retracts (`T310`) —
+→ `~800` unique repositories read → `297` novel against a `3,343`-address ledger →
+`29` existence-probed → `25` licence payloads byte-read → `25` filed** across
+[`../agents/top.md`](../agents/top.md), [`foundations.md`](foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md). The `4` mandated prose legs contributed
+**`0`** addresses not already held — the **`40`th consecutive nil**, denominator `4 / 4`.
+
+### The channel, and why `p735`'s obituary was premature
+
+🟢 `topic:education-ai` → `69`. `topic:ai-education` → `581`. `topic:ai-tutor` → `891`.
+`topic:learning-analytics` → `403`. `user:mitodl` → `186`. `org:apereo` → `30`.
+**All `200`, all complete metadata, all on the channel `p735` reported as returning `422` for every
+query.** ⚠️ The one failing shape is `repo:{owner}/{name}` — **not a valid qualifier for the
+repository-search endpoint** — which is what `p735` tested with. 🔵 `gh auth status` still reports
+`GH_TOKEN` invalid while the channel works, so **the credential warning is not a health signal**.
+The unauthenticated endpoint still works too and remains the fallback that cannot expire.
+Controls: `evidence/channel-controls.2026-11-10-p736.tsv`.
+
+### What trended: infrastructure, found by enumerating publishers instead of describing wants
+
+🟢 **The single highest-value return of this pass is `11` years old.**
+[`apereo/cas`](https://github.com/apereo/cas) — **`11,393★`, Apache-2.0, pushed `2026-11-10`** —
+is higher education's SSO server, and **neither it nor its three client libraries were in this
+base's ledger** (`T314`). The leg that found it was `org:apereo`: **`30` repositories, `28`
+novel**. 🔴 **Three patterns already ended in an identity integration the base could not name a
+component for.** 🔵 **Diagnosis: phrase-led discovery finds applications and never infrastructure,
+because infrastructure is not described in the vertical's vocabulary** — `apereo/cas`'s description
+does not contain the word *education*. 🟢 **Remedy for every later pass: enumerate known
+institutional publishers by `org:`/`user:`.** This pass's `org:` legs (`apereo`, `h5p`,
+`instructure`, `oppia`, `sakaiproject`, `1EdTech`, `moodlehq`, `ILIAS-eLearning`, `ucfopen`)
+produced **all `14`** foundations rows.
+
+| Publisher leg | Repos returned | Novel | What the estate publishes | Licence posture |
+|---|--:|--:|---|---|
+| `org:apereo` | 30 | 28 | CAS SSO server + Java/PHP/.NET clients, overlays, initializr | **Apache-2.0 throughout** |
+| `org:h5p` | 145 | 28 of 30 read | interactive content types, editors, Moodle/WordPress plugins | **core GPL-3.0, content types MIT** (`T315`) |
+| `org:instructure` | 123 | 22 of 30 read | Canvas, design system, LTI library, cartridge viewer, mobile | **AGPL core, MIT integration surface, mobile no grant** (`T317`) |
+| `org:oppia` | 22 | 18 | learning platform, Android client, analytics platform, XBlock | **Apache-2.0 throughout** |
+| `org:ucfopen` | 65 | 23 of 30 read | Canvas API wrapper, UDOIT, Materia, LTI templates | MIT tools / **AGPL** Materia+Obojobo |
+| `org:moodlehq` | 139 | 24 of 30 read | Moodle app, docker, CI, coding standards, wiki-RAG | **GPL-2.0/3.0**, a few MIT/BSD utilities |
+| `org:1EdTech` | 46 | 5 of 30 read | LTI libraries, Open Badges, QTI examples, CASE, Caliper | Apache-2.0 / **several with no grant** |
+| `org:sakaiproject` | 14 | 13 | Sakai LMS + release/translation/stress tooling | **ECL-2.0** core, satellites mostly **no grant** |
+| `org:ILIAS-eLearning` | 16 | 15 | ILIAS LMS + plugin-slot scaffolds | **GPL-3.0 core, `9 / 16` no grant** (`T292` quantified) |
+
+### 🔴 Two archived rows this base holds, and the live replacement
+
+🔴 **`ucfopen/lti-template-flask` (`47★`, MIT) and `ucfopen/lti-template-flask-oauth-tokens`
+(`14★`, MIT) were both archived on `2026-07-20` and their descriptions now begin `DEPRECATED`.**
+`p731` filed the `ucfopen` estate as a North American institutional publisher tier; two of its LTI
+starting points have since been retired. 🟢 **The live successor is already held:
+[`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti)
+(`6★`, MIT, pushed `2026-05-12`) — LTI 1.3 rather than 1.1.** 🔵 **The transferable point: an
+archived row is worse than a missing one, because it reads as adoptable.** Any pass citing an LTI
+template must cite the cookiecutter, and `P186`/`P189` should be read with that substitution.
+🟢 Also live from the same estate and newly read: `ucfopen/quiz-extensions` (`16★`, MIT, pushed
+`2026-11-05`) — a complete, small, working LTI tool, now filed on
+[`foundations.md`](foundations.md).
+
+### 🔴 The licence instrument, and why this file now records clauses instead of digests
+
+🔴 **`T311`:** a whole-payload family match calls **every GPL-3.0 repository AGPL**, because
+GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"*. Measured `2 / 2`.
+🔴 **`T313`:** the `11` MIT payloads read today span **`1,060`–`2,285 B`** and **none** is at the
+published `1,020 B` constant; one valid Apache-2.0 grant is a **`2,321 B` short-form notice that is
+not the canonical text at all**. Size bands and canonical-text digests cannot decide these.
+🔴 **`T312`:** `3` grants are declared **only in a manifest** (`library.json`, `package.json`,
+`pom.xml`) with no licence file — so **a missing `LICENSE` is not evidence of a missing grant**.
+🟢 **What works, `25 / 25`:** classify on the first line naming a licence family, skipping
+decoration, then fall back to the operative clause — **`P188`**, runnable at
+`evidence/licence-gate.p736.py`, truth table at
+`evidence/licence-gate-controls.2026-11-10-p736.tsv`. **`4` GitHub index values corrected from the
+bytes:** `apereo/java-cas-client` → Apache-2.0, `instructure/instructure-ui` → MIT,
+`lenguaje-latino/latino` → MIT, `maxisimonazzi/Azukar-FPGA` → **CERN-OHL-P-2.0** (a permissive
+*hardware* licence, which is why no SPDX software value was ever going to appear).
+
+### 🟡 Trending by region, with the gaps written down
+
+- 🟢 **EMEA — the productive estate is interoperability, not agents, and this pass adds a
+  maintained permissive LMS backend.** `h5p/*` (Joubel, Norway) supplies the MIT interactive-content
+  layer; [`tough-dev-school/education-backend`](https://github.com/tough-dev-school/education-backend)
+  (**MIT, `488★`, pushed `2026-11-10`**) is the first *maintained* permissive LMS backend this base
+  has found, and [`ging/escapp`](https://github.com/ging/escapp) (GPL-3.0, UPM Madrid) adds gamified
+  assessment. 🔴 **Still `0` EMEA-authored learning *agents* — `T290` holds for a second pass.**
+- 🟢 **APAC — institutional publishers are shipping Apache-2.0 production pipelines.**
+  [`hallym-aiedu-center/ai_prof_lite`](https://github.com/hallym-aiedu-center/ai_prof_lite)
+  (Apache-2.0, Hallym University, Korea — lecture → slides → voice → avatar video → Moodle, on the
+  institution's own GPUs) and [`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills)
+  (Apache-2.0, `473★`). 🔵 `T305`'s "APAC supply is no longer only CJK" is **not** re-confirmed this
+  pass — every APAC row here is CJK or Korean, and `p735`'s Bahasa Indonesia row remains the single
+  non-CJK instance.
+- 🟢 **LATAM — two placements, both on evidence rather than on a leg's name.**
+  [`maxisimonazzi/Azukar-FPGA`](https://github.com/maxisimonazzi/Azukar-FPGA) (**CERN-OHL-P-2.0**,
+  UTN-FRT Argentina — an open-hardware FPGA teaching board) and
+  [`lenguaje-latino/latino`](https://github.com/lenguaje-latino/latino) (**MIT by payload**, `508★`
+  — a Spanish-syntax teaching language). 🔴 **The `latam-es` and `latam-pt` legs otherwise returned
+  what `T304` predicted: Spanish- and Portuguese-language *resource lists* for frontend, testing and
+  cyber-security, not education software.** 🔴 **And a specific nil worth recording: `platzi/python-fundamentos`
+  — published by Platzi, one of the region's largest edtech companies — carries no licence at all.**
+- 🟡 **North America — the richest estate and the one with the clearest licence geometry.**
+  `apereo/*` (Apache-2.0 identity), `instructure/*` (AGPL core, MIT integration surface),
+  `oppia/*` (Apache-2.0), `ucfopen/*`, `csev/wa4e` (BSD-2-Clause), `kstateome/canvas-api`
+  (LGPL-3.0 via `pom.xml`). 🔵 **This is where "build beside the platform, not inside it" is
+  actually supported by the vendor**, and `736-U` on
+  [`../verticals/solutions.md`](../verticals/solutions.md) maps it row by row.
+- 🔴 **Declared gap, from legs that RAN:** no permissively-licensed, *maintained* school-management
+  platform exists — `4` of the top `6` novel ones (`1,934★` combined) carry no grant and the `2`
+  permissive ones are idle (`736-T`). Re-measured independently of `p735` and unchanged.
+
 ## 🆕 2026-11-10 (p735)
 
 **`60` supply legs attempted (`60` valid) on a channel this base did not have yesterday —

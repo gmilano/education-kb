@@ -6,12 +6,16 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p735 · verified 2026-11-10.** The `7` rows added this pass were read today; rows carried
+**Pass p736 · verified 2026-11-10.** The `7` rows added this pass were read today; rows carried
 over name the date they were last read. Rows up to `p734` were read from
-`gh api -X GET search/repositories`; **that channel is dead from `p735` (`GH_TOKEN` invalid, `422`
-on every query), and `p735` onward reads stars, SPDX licence, `pushed_at` and `archived` from
-unauthenticated `curl https://api.github.com/search/repositories`** (`T298`)
-and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
+`gh api -X GET search/repositories`; `p735` declared that channel dead (`GH_TOKEN` invalid, `422`)
+and moved to unauthenticated `curl https://api.github.com/search/repositories` (`T298`).
+🟢 **`p736` RETRACTS that: the authenticated channel is alive and carried this entire pass.** It
+returns `200` with complete metadata for `topic:`, `org:`, `user:`, `language:` and `stars:`
+queries and `422` only for `repo:{owner}/{name}`, which **is not a valid qualifier for this
+endpoint** — so `p735` read an invalid-query error as an outage (`T310`). Both channels work; the
+unauthenticated one remains the fallback with no credential to expire.
+Every address is existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
 (falling back to lowercase `readme.md`, then `README.rst`, then `LICENSE` — the case-ordered
 chain corrected at `724-I`; the probe is case-sensitive and the fallback must stay ordered). Rows carry the date they were read so a later pass
 can tell a stale cell from a fresh one.
@@ -30,6 +34,89 @@ can tell a stale cell from a fresh one.
 
 ## Education-specific agents
 
+
+## 🆕 `p736` — reads and verifies `2026-11-10`
+
+> **`7` rows added below, every one read from the bytes today, and `1` high-star subject refused on
+> its grant.** 🟢 **The headline of this pass is an instrument retraction, and later passes must read
+> it before they trust `T298`: the supply channel `p735` declared dead is alive and was used for
+> this entire pass.** `gh api -X GET search/repositories` returned `200` with complete metadata for
+> **`topic:`, `org:`, `user:`, `language:` and `stars:` queries** — `topic:ai-education` → `581`,
+> `topic:ai-tutor` → `891`, `user:mitodl` → `186`, `org:apereo` → `30`. ⚠️ **It still returns `422`
+> for exactly one query shape: `repo:{owner}/{name}` — and that is because `repo:` is not a valid
+> qualifier for the repository-search endpoint at all, not because the credential failed.** `p735`
+> tested the channel with that one query, read the `422` as an outage and migrated the base off a
+> working instrument. `gh auth status` *does* still report `GH_TOKEN` invalid — so the credential
+> warning is **not predictive of channel health** and must not be used as one (`T310`).
+>
+> 🔴 **Second instrument finding, and this one is a defect in a gate this pass wrote itself.** A
+> licence gate that substring-matches family names **over the whole payload** misclassifies **every
+> GPL-3.0 repository as AGPL-3.0**, because the canonical GPL-3.0 text names the AGPL three times in
+> **§13, "Use with the GNU Affero General Public License"**. Measured on `2 / 2` GPL payloads
+> (`h5p/h5p-php-library`, `ging/escapp`) before it was caught; both are **GPL-3.0**, not AGPL. The
+> repair and its controls are published as **`P188`** and the full truth table as
+> `evidence/licence-gate-controls.2026-11-10-p736.tsv` — **`25 / 25` payloads classified correctly
+> under the repaired rule**, including `4` the GitHub index gets wrong and `3` the base's own
+> LICENSE-file probe would have scored as grant-absent (`T311`, `T312`).
+>
+> 🔵 **Why this pass reports raw bytes and a clause verdict instead of the published
+> `1020 B`/`fe2a9817987f` and `9942 B`/`3fda30957805` digests.** The `11` MIT payloads read today
+> span **`1,060 B` – `2,285 B`** raw, and one valid **Apache-2.0** grant
+> (`apereo/java-cas-client`) is a **`2,321 B` short-form notice that is not the canonical Apache
+> text at all** — so no size band, and no digest of a canonical text, can decide it. The operative
+> clause can, and did, `25 / 25` (`T313`). Rows below therefore state the licence file, its raw
+> size and the clause that decided it.
+>
+> 🔬 **Controls re-run, all four, none changed a verdict.** `curl -sI https://github.com/{o}/{r}`
+> → `403` for a repository proven alive **and** for an invented address, **`2 / 2`, still no
+> discriminating power**. The ordered raw chain discriminated the same pair **`2 / 2`**
+> (`200` for `openedx/edx-platform` at `README.rst` — third in the chain, so the order is still
+> load-bearing; `404` on all five filenames for the invented address).
+> `gh api repos/{owner}/{repo}` → `403`, and **`p736` can finally name the cause: the error body
+> says so** — *"GitHub access to this repository is not enabled for this session. Use add_repo to
+> request access."* `T289`'s dead `repos/` namespace is **session repository-scoping**, not a
+> GitHub or network property, which is why no pass here can enumerate a tree (`T302` stands).
+> 🔵 **And the Open edX index gap holds `1 / 1`:** `edx-platform in:name` returns forks only
+> (`Edraak` `13★`, `microsoftarchive` `5★`) while the raw channel returns `200` — the absent star
+> count on [`../verticals/solutions.md`](../verticals/solutions.md) is still correctly recorded as absent.
+
+| Agent | Repo | Stars | Licence | Last push | Region | What it does, and why it is filed |
+|---|---|--:|---|---|---|---|
+| **Teacher-to-Skills** | [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) | 473 | Apache-2.0 | **2026-11-07** | **APAC** | **Distils a specific human teacher into a reusable, source-backed agent skill.** You supply that teacher's own material — lecture recordings, slide decks, marked-up assignments, written feedback — and the pipeline extracts *how they look at a problem, how they judge an answer and how they correct an error*, then emits a skill package that runs in Claude Code, Codex or OpenClaw and keeps teaching until the learner can work unaided. Gate: `LICENSE`, `11,358 B` raw, title line `Apache License` + `Version 2.0` → **Apache-2.0**; index agrees. 🟢 **Filed as the most genuinely new *shape* on this shelf in several passes, and the distinction is worth stating precisely: every tutor row this base holds personalises to the **learner**. This one personalises to the **teacher**.** The asset it produces is an institution's own pedagogical practice, captured as an artefact that outlives the individual — which is exactly the thing a university cannot buy and a consultancy cannot supply. 🔵 **Why that is commercially sharp:** it converts the retiring-professor problem and the adjunct-churn problem into a data-capture engagement, and the deliverable is owned by the institution rather than rented from a vendor. 🔵 It is also **harness-agnostic by construction** — no application to deploy, which is the `T227` agent-native posture this base keeps arguing for. ⚠️ Chinese-primary README (an `README.en.md` exists); requires the source teacher's material, so it is useless without institutional consent to use it. 🟢 Region placed on a Chinese-primary corpus. |
+| **vistep.ai** | [int64ago/vistep](https://github.com/int64ago/vistep) | 247 | MIT | 2026-11-01 | **APAC** | Turns an explanation into a **visual, step-by-step, interactive model the learner can then experiment with** — "visualize every step", with synchronized narration and a manipulable model rather than a static diagram or a wall of generated text. Astro + strict TypeScript, bilingual English / 简体中文. Gate: `LICENSE`, `1,090 B` raw, `Permission is hereby granted, free of charge` → **MIT**; index agrees. 🟢 **Filed because it answers the one objection that kills AI tutoring pilots in STEM subjects: a generated paragraph is not an explanation of a mechanism.** This base holds tutors that converse (`DeepTutor`), tutors that quiz, and tutors that mark — it held nothing that *shows how a thing works and then lets the student change it*. 🔵 The "explore the model after watching it" loop is the cheapest demonstrable learning-gain artefact in a physics, chemistry or engineering engagement, and it is MIT. ⚠️ Content-authoring effort is the real cost — the repository is the renderer and the interaction layer, not a library of finished visualisations. 🟢 Region placed on a bilingual Chinese-primary corpus. |
+| **AI Professor Lite** | [hallym-aiedu-center/ai_prof_lite](https://github.com/hallym-aiedu-center/ai_prof_lite) | 2 | Apache-2.0 | 2026-10-07 | **APAC** | **A complete lecture-production line, published by a named university's AI education centre**: lecture planning → slide generation → synthesised voice → **professor-avatar video** → final MP4 → **deployment into Moodle**, as one flow. FastAPI web UI, SQLite job queue, and media generation on **per-GPU independent runners**. Gate: `LICENSE`, `11,357 B` raw, title line `Apache License` → **Apache-2.0**; index agrees. 🟢 **A `2★` repository is filed above rows with a hundred times the stars, for the same reason `p735` filed Intel's `14★` curriculum agent: the value is the publisher and the licence, not the popularity.** This is **Hallym University's AI Education Center** — a first-party institutional publisher — shipping Apache-2.0, **self-hosted, on its own GPUs**. 🔵 **It is also the first row on this shelf that treats lecture production as a pipeline with a queue and runners rather than as a prompt**, which is the difference between a demo and a thing a faculty of 400 can actually use. 🔵 **Composes directly into `P191`.** 🔵 Documented in Korean, English, Japanese and Chinese — unusually portable for an APAC institutional release. ⚠️ `v1.0.0`, `2★`, single institution, no external adopter; OpenAI is called for the lecture-planning stage, so the "sovereign" claim holds only for the media half unless that call is repointed at a local model. 🟢 Region placed on a named Korean institutional publisher and a Korean-primary corpus. |
+| **SelfSemester** | [munitkala/selfsemester](https://github.com/munitkala/selfsemester) | 71 | MIT | **2026-11-09** | Global ⚠️ | **Turns any subject into a full university-style course that then runs itself on a schedule.** The agent interviews the learner about goals and level, **states up front how well it can teach and mark that subject**, plans a syllabus, writes the entire course, and then releases material day by day with **hard deadlines**, auto-marks quizzes, marks written work and **photographs of handwritten working** against a rubric, and posts final marks to a transcript. A `course builder` lets a human author the same course with no model involved. Gate: `LICENSE`, `1,081 B` raw → **MIT**; index agrees. 🟢 **Filed for one design decision this base has wanted to see and never had: the system declares its own competence boundary before the learner commits.** That is the honest alternative to a tutor that confidently teaches a subject it cannot mark, and it is the single most reusable idea in the repository (see `P174`'s "grade state and process"). 🔵 **Second reason: the schedule and the deadline are enforced by the application, not suggested by the model** — scheduling and consequence are what distinguish a course from a chat, and most AI-tutor repositories ship neither. 🔵 The hand-written-working path is a genuine assessment-integrity asset under `T275`. ⚠️ **Windows desktop only**, single-learner, no cohort or institutional surface; depends on a Claude subscription. ⚠️ Region unplaced — English-only, no institutional or national signal. |
+| **edubot** | [HBComepass/edubot](https://github.com/HBComepass/edubot) | 298 | MIT | 2026-07-11 | Global ⚠️ | An **open-source education bot built by the Developer Circles community** — a conversational assistant for course and institutional Q&A, written in Go. Gate: `LICENSE`, `1,070 B` raw → **MIT**; index agrees. 🟡 **Filed with its weight stated honestly: `298★`, a permissive grant and a Go implementation, but last pushed July 2026 and with no release or named adopter.** 🔵 **Its genuine use is as the smallest permissive starting point on this shelf** — a Go single-binary conversational surface is the cheapest thing to put in front of a client's existing content when the alternative is standing up a Python service, and Go deploys where a Python runtime is unwelcome. ⚠️ Four months without a push; treat as a readable reference, not a maintained dependency. ⚠️ Region unplaced — "Developer Circles" is a global programme and the repository carries no national signal. |
+| **Moodle2IA** | [estevao-tarifa/moodle2ia](https://github.com/estevao-tarifa/moodle2ia) | 4 | MIT | 2026-07-07 | Global ⚠️ | **Exports any Moodle course into clean, AI-ready Markdown**: downloads the PDFs, extracts quiz questions **with their answer keys**, converts HTML pages to Markdown and organises the result topic-by-topic so a whole course can be fed to a model or a RAG pipeline. Gate: `LICENSE`, `1,071 B` raw → **MIT**; index agrees. 🟢 **Filed because it is the missing first step of six patterns already on [`../compose/patterns.md`](../compose/patterns.md), and `4★` does not change that.** Every recipe that begins "take the client's existing course material" has assumed that material is extractable; **Moodle is GPL-3.0 and the content lives behind it**, and this is an MIT tool that gets the content out **without deriving from the platform** — the same licence logic as the LTI route (`P186`), applied to content rather than to UI. 🔵 **The answer-key extraction is the part to notice**: a rubric-grounded grader or a practice-question generator needs the keys, and hand-extracting them is where these engagements actually stall. ⚠️ **Read the obligation before using it on a client's estate:** this pulls assessment answer keys out of an LMS, so it needs explicit institutional authorisation and an access-control story of its own. ⚠️ Tiny project, single maintainer, no tests advertised. ⚠️ **Region unplaced, and deliberately so:** the name's `IA` and the maintainer's name both suggest an Iberian-language author, but the README is English-only and carries no institutional or national evidence — a plausible inference is not a placement (`T309`). |
+| **Canvas Pilot** | [X-isdoingreat/canvas-pilot](https://github.com/X-isdoingreat/canvas-pilot) | 125 | **AGPL-3.0** ⚠️ | 2026-07-31 | Global ⚠️ | A **local-first Canvas LMS agent that learns each course's recurring assignment pattern**, then replays it through an explicit **scan → approval → execute** workflow producing review-ready drafts and run reports. Positions itself as a **Canvas MCP workflow layer** rather than another API wrapper: MCP servers give an agent access to Canvas, this adds the recurring-task memory on top. Gate: `LICENSE`, `34,523 B` raw, title line `GNU AFFERO GENERAL PUBLIC LICENSE` → **AGPL-3.0**; index agrees. 🔴 **Filed with a licence warning, not as a build-on candidate.** AGPL-3.0's network clause is triggered by offering the software as a service — which is how a studio would deploy this — so **Globant cannot build a hosted product on it** without releasing the derived source. 🟢 **It is filed anyway because the *architecture* is the finding and architecture is not licensed:** `scan → human approval → execute`, with the recurring pattern held as learned state, is the right shape for every "agent acts inside the client's LMS" engagement, and it is the shape an auditor will accept. Read it, do not fork it. 🔵 Pairs conceptually with the held `boyuchengz/canvas-mcp` (MIT, read-only) — the permissive route is MCP for access plus your own workflow layer. ⚠️ Region unplaced. |
+
+### 🔴 `736-R` — one subject refused, and it is the fourth-largest repository this pass enumerated
+
+[`walkinglabs/hands-on-modern-rl`](https://github.com/walkinglabs/hands-on-modern-rl) — **`4,886★`**,
+pushed `2026-10-23`, an open hands-on curriculum carrying learners from basic reinforcement learning
+to LLM alignment — is **not filed, and will not be filed**. The GitHub index reports `NOASSERTION`.
+The payload is a **`519 B` `LICENSE` whose first line reads
+`Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International`.**
+
+🔴 **`NonCommercial` is disqualifying, not merely restrictive.** Globant's use of anything on these
+shelves is commercial by definition, and `ShareAlike` would additionally reach derived teaching
+material. This is the first row this base has refused on a **NonCommercial** term rather than on a
+copyleft or an absence, and it is recorded here because **`4,886★` and "open-source curriculum" in
+the description is exactly the combination that gets a repository into a client deck unread**.
+🔵 Generalisable: a `NOASSERTION` index value means *read the bytes* (`T301`) — and sometimes the
+bytes say no.
+
+### 🟡 `736-S` — the agent shelf's discovery channel is clean, and its recency head is worthless
+
+`topic:ai-tutor` (`891` repositories) and `topic:ai-education` (`581`) are the two **cleanest** legs
+of this pass: sorted by stars they return this base's own held rows, which is the correct behaviour
+for a saturated namespace. 🔴 **Sorted by recency they return almost nothing usable: of the `20`
+most recently pushed `topic:ai-tutor` repositories, `20 / 20` carry `≤ 7★` and `17 / 20` carry
+`≤ 2★`**, all pushed `2026-11-09` or `2026-11-10`. The three rows this pass took from the fresh head
+(`selfsemester`, `vistep`, and `teacher-to-skills` from the conjunctive leg) were found on
+**stars-and-push** jointly, never on recency alone. 🔵 **Stated as a standing instruction because it
+is a cost finding: do not spend a leg on the recency head of a saturated topic.** Full denominators
+in `evidence/leg-pollution.2026-11-10-p736.tsv` (`16` legs, `4` measured nils, `6` pollution modes).
 
 ## 🆕 `p735` — reads and verifies `2026-11-10`
 

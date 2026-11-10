@@ -1,0 +1,31 @@
+address	licence_file	bytes	index_spdx	gate_p736_verdict	agreement	note
+apereo/cas	LICENSE	11358	Apache-2.0	Apache-2.0	agree	canonical Apache text
+apereo/phpCAS	LICENSE	11357	Apache-2.0	Apache-2.0	agree	canonical Apache text
+apereo/java-cas-client	LICENSE	2321	NOASSERTION	Apache-2.0	GATE-CORRECTS-INDEX	short-form Apereo notice, not canonical text; licensee cannot match it
+apereo/cas-initializr	LICENSE.txt	11358	Apache-2.0	Apache-2.0	agree	canonical Apache text
+h5p/h5p-boilerplate	LICENSE	1063	MIT	MIT	agree	-
+h5p/h5p-math-display	LICENSE	1060	MIT	MIT	agree	-
+h5p/h5p-php-library	LICENSE.txt	35146	GPL-3.0	GPL	agree	naive whole-file match returned AGPL: GPL-3.0 sec.13 names the AGPL 3x
+h5p/h5p-interactive-video	NONE-AT-ROOT	0	MIT	MIT-via-library.json	index-right-probe-wrong	grant declared in library.json + package.json, no LICENSE file
+h5p/h5p-course-presentation	NONE-AT-ROOT	0	MIT	MIT-via-library.json	index-right-probe-wrong	grant declared in library.json, no LICENSE file
+instructure/common-cartridge-viewer	LICENSE	1074	MIT	MIT	agree	-
+instructure/instructure-ui	LICENSE.md	1175	NOASSERTION	MIT	GATE-CORRECTS-INDEX	MIT body wrapped in YAML frontmatter; licensee cannot match it
+instructure/canvas-ios	NONE	0	NONE	no-grant-found	agree	LICENSE/LICENSE.md/COPYING/NOTICE/README all 404 on raw at HEAD
+kstateome/canvas-api	NONE-AT-ROOT	0	LGPL-3.0	LGPL-3.0-via-pom.xml	index-right-probe-wrong	grant declared in pom.xml <licenses>, no LICENSE file
+ucfopen/quiz-extensions	LICENSE	1129	MIT	MIT	agree	-
+csev/wa4e	LICENSE	1301	BSD-2-Clause	BSD-2-Clause	agree	leading Copyright line defeats a title-line-only anchor
+oppia/analytics-data-platform	LICENSE	11357	Apache-2.0	Apache-2.0	agree	-
+JuneYaooo/teacher-to-skills	LICENSE	11358	Apache-2.0	Apache-2.0	agree	-
+munitkala/selfsemester	LICENSE	1081	MIT	MIT	agree	-
+int64ago/vistep	LICENSE	1090	MIT	MIT	agree	-
+X-isdoingreat/canvas-pilot	LICENSE	34523	AGPL-3.0	AGPL-3.0	agree	-
+hallym-aiedu-center/ai_prof_lite	LICENSE	11357	Apache-2.0	Apache-2.0	agree	-
+estevao-tarifa/moodle2ia	LICENSE	1071	MIT	MIT	agree	-
+HBComepass/edubot	LICENSE	1070	MIT	MIT	agree	-
+tough-dev-school/education-backend	LICENSE	1097	MIT	MIT	agree	-
+sugarlabs/musicblocks	COPYING	34520	AGPL-3.0	AGPL-3.0	agree	-
+brownplt/pyret-lang	NONE	0	NONE	no-grant-found	agree	no LICENSE at root on raw at HEAD
+ging/escapp	LICENSE	35149	GPL-3.0	GPL	agree	naive whole-file match returned AGPL (sec.13 false positive)
+maxisimonazzi/Azukar-FPGA	LICENSE	2555	NOASSERTION	CERN-OHL-P-2.0	GATE-CORRECTS-INDEX	permissive HARDWARE licence, not an SPDX software grant
+lenguaje-latino/latino	LICENSE.txt	2285	NOASSERTION	MIT	GATE-CORRECTS-INDEX	MIT text plus appended third-party notices
+walkinglabs/hands-on-modern-rl	LICENSE	519	NOASSERTION	CC-BY-NC-SA-4.0	GATE-CORRECTS-INDEX	NonCommercial: Globant CANNOT build on this

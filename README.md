@@ -4,6 +4,33 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 `p736` — reads `2026-11-10`, commit `2026-11-10` — **🟢 THE SUPPLY CHANNEL `p735` DECLARED DEAD IS ALIVE AND CARRIED ALL `41` LEGS OF THIS PASS: IT WAS TESTED WITH `repo:`, A QUALIFIER THE REPOSITORY-SEARCH ENDPOINT DOES NOT SUPPORT, AND A `422` ABOUT QUERY CONTENTS WAS READ AS AN OUTAGE. 🟢 THE SSO SERVER HIGHER EDUCATION ACTUALLY RUNS — `apereo/cas`, `11,393★`, APACHE-2.0, PUSHED TODAY — WAS ABSENT FROM A `3,343`-ADDRESS LEDGER, BECAUSE PHRASE-LED DISCOVERY FINDS APPLICATIONS AND NEVER INFRASTRUCTURE. 🔴 A WHOLE-PAYLOAD LICENCE MATCH CALLS EVERY GPL-3.0 REPOSITORY `AGPL`, BECAUSE GPL-3.0 §13 NAMES THE AGPL.**
+
+**`25` rows filed and `1` verified subject refused on a NonCommercial term.** `agents/top.md`
+**+`7`**; `repos/foundations.md` **+`14`** including a new section (*Higher-education identity,
+interoperability standards and institutional substrates*); `verticals/solutions.md` **+`4`**
+including a new section. `intel/trends.md` gains **`T310`**–**`T320`**; `compose/patterns.md` gains
+**`P188`**–**`P191`**; opportunities published under the single existing
+`## Opportunities by region` heading for **all five** values, each carrying a dated instrument or a
+2026 survey this base did not hold.
+
+| `p736` registered | Verdict |
+|---|---|
+| 🟢 `736-A` → `T310` | **`T298` RETRACTED with controls.** `gh api -X GET search/repositories` returns `200` for `topic:` (`581`, `891`, `403`, `69`), `user:` (`186`), `org:` (`30`, `4`) and keyword+`stars:` queries, and carried every leg of this pass. It returns `422` for exactly one shape — `repo:{owner}/{name}`, **not a valid qualifier for this endpoint** — which is what `p735` tested with. `gh auth status` still reports `GH_TOKEN` invalid **and the channel works anyway**: a credential warning is not a channel-health signal. |
+| 🟢 `736-A2` | `T289`'s dead `repos/` namespace has its cause, from the error body: *"GitHub access to this repository is not enabled for this session. Use add_repo"* — **session repository-scoping**, an environment property. `T302` stands: no compliant `grant-absent` verdict is available here. |
+| 🔴 `736-C` → `T311` | **GPL-3.0 §13 is titled "Use with the GNU Affero General Public License", so a whole-payload family match reports every GPL-3.0 repository as AGPL-3.0** — measured `2 / 2`. Expensive direction: AGPL forbids hosting a derivative as a service and GPL does not. |
+| 🔴 `736-D` → `T313` | **Size and canonical-text digests cannot decide MIT or Apache.** The `11` MIT payloads read today span `1,060`–`2,285 B` and **none** is at the published `1,020 B` constant; `apereo/java-cas-client` is a valid **Apache-2.0** grant in a `2,321 B` short-form notice that is **not the canonical text**, which is why the index says `NOASSERTION`. |
+| 🔴 `736-E` → `T312` | **A missing `LICENSE` file is not evidence of a missing grant:** `3 / 3` grants this pass live only in a manifest — `h5p-interactive-video` and `h5p-course-presentation` (MIT in `library.json`), `kstateome/canvas-api` (LGPL-3.0 in `pom.xml`). In all three the index was right and a file-only probe was wrong. |
+| 🟢 `736-B` → `P188` | The gate repaired a **seventh** time, and this time on the clause rather than the size: **`25 / 25`** payloads correct, **`4`** index values corrected from the bytes, runnable at `evidence/licence-gate.p736.py`, `30`-row truth table in `evidence/`. |
+| 🟢 `736-F` → `T314` | `apereo/cas` + `phpCAS` + `java-cas-client` + `cas-initializr`, **all Apache-2.0, all novel**, from one `org:apereo` query (`30` repositories, `28` novel). Three patterns already ended at identity with no component named. **`org:` legs produced all `14` foundations rows; the `4` mandated prose legs produced `0` — the `40`th consecutive nil.** |
+| 🟢 `736-G` → `T315`/`P190` | **H5P's core is GPL-3.0 and its content types are MIT** — so a permissive drop-in content type reaches students inside Moodle, Canvas, Open edX, WordPress and Drupal with **no fork and no LTI registration**. Region-neutral, which almost nothing here is. |
+| 🔴 `736-I` → `T316` | **The recency head of a saturated topic is worthless:** of the `20` most recently pushed `topic:ai-tutor` repositories, `20 / 20` carry `≤ 7★` and `17 / 20` carry `≤ 2★`. Rank on stars and `pushed_at` jointly. |
+| 🔴 `736-J` | **Refused at `4,886★`:** `walkinglabs/hands-on-modern-rl` carries **CC-BY-NC-SA-4.0**. NonCommercial is disqualifying, and `4,886★` + "open-source curriculum" is exactly what reaches a deck unread. |
+| 🟡 `736-U` → `T317` | Instructure publishes the **integration surface permissive over a copyleft core**: `instructure-ui` MIT, `ims-lti` MIT, `common-cartridge-viewer` MIT, `canvas-lms` AGPL-3.0 — and **`canvas-ios`/`canvas-android` show no grant at the probed paths**. `canvas-lms` last pushed `2026-04-30`: plans built on its commit activity will be wrong. |
+| 🔴 `736-T` / `736-B2` | `T303`'s school-management licence nil **re-measured on a fresh leg and still binding** (`4` of top `6`, `1,934★`, no grant). `T292` quantified: **`9 / 16`** of the ILIAS estate carries no grant, including `5` plugin-slot scaffolds a developer must copy. |
+| 🟢 `T318`/`T319`/`T320` | Regulation is **binding in all four regions on four different instruments**, and the required artefact differs by region. LATAM quantified both sides: **`87 %` adoption vs `26 %` frameworks, `55 %` no budget** (UNESCO IESALC); **`92 %` students / `79 %` faculty** (DEC 2026). 2026 market spread narrowed to **≈ `16 %`** (`$10.6 B` vs `$12.3 B`). |
+| 🔴 Declared gaps | `0` EMEA-authored learning agents (`T290`, second consecutive pass). `T305`'s "APAC supply is no longer only CJK" **not re-confirmed** — every APAC row this pass is CJK/Korean. No APAC classroom-adoption percentages obtainable at usable quality. Iberian-language legs returned resource lists, not education software; **`platzi/python-fundamentos` carries no licence at all.** |
+
 ## 🆕 `p731` — reads `2026-11-10`, commit `2026-11-10` — **🟢 THE NORTH AMERICAN INSTITUTIONAL PUBLISHER TIER THIS BASE HAS RECORDED AS EMPTY HOLDS `436` REPOSITORIES, `275` PERMISSIVE AND `268` NOVEL — AND IT WAS NEVER ABSENT, ONLY NEVER ADDRESSED. 🔴 THE LICENCE GATE MADE MANDATORY AT `p728` REFUSES CORRECT PERMISSIVE GRANTS `3 of 33`, INCLUDING THE MOST REUSABLE COMPONENT OF THE PASS. 🟢 AND THE `MIT` CONSTANT `p729` DECLARED IRREPRODUCIBLE IS RECOVERED EXACTLY, ON `17` PAYLOADS ACROSS `14` PUBLISHERS.**
 
 **`34` rows filed and `1` verified subject refused.** `agents/top.md` **+`12`**;

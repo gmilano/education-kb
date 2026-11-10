@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
-**Pass p735 · verified 2026-11-10.** Deployable systems a client may already run, or could
+**Pass p736 · verified 2026-11-10.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -14,6 +14,70 @@ Licence is the decisive field here, because an LMS is almost always *offered as 
 which is exactly what the AGPL network clause is written about. Read the posture column
 before proposing a fork.
 
+
+## Permissive LMS backends, learning microworlds and a re-measured platform licence nil 🆕 new section at `p736`
+
+**`4` rows, all read `2026-11-10`, all live — and `5` platforms at `3,458★` combined deliberately
+left off the shelf.** 🟢 **`p735`'s permissive-LMS finding gets its first *maintained* row: an
+MIT-licensed LMS backend pushed the day it was read.** 🔴 **`T303`'s licence nil on the
+school-management shelf is re-measured on a fresh leg and still binding** — the two highest-star
+novel school-management platforms carry no grant at all (`736-T`).
+
+| Platform | Repo | Stars | Licence | Last push | Region | What it is, and the posture |
+|---|---|--:|---|---|---|---|
+| **tough-dev.school backend** | [tough-dev-school/education-backend](https://github.com/tough-dev-school/education-backend) | 488 | **MIT** | **2026-11-10** | **EMEA** | The **production Django backend of a running commercial online school** — course delivery, enrolment, orders and student records, with payment, transactional-email, S3 and Telegram integrations wired in, on Python 3.14 with `uv`. The Vue front end is a separate repository. Gate: `LICENSE`, `1,097 B` raw → **MIT**; index agrees. 🟢 **This is the row `p735`'s permissive-LMS section was looking for and did not find.** `p735` filed three permissive LMS candidates and said honestly of each that it had no install base, no release and no adopter (`CoreLMS` last pushed March, `ATLURI LMS` a portfolio exercise). **This one is the production code of a school that actually sells courses, pushed the day it was read, under MIT.** 🔵 **Posture — and read this before proposing it:** it is *somebody's product*, not a product-ised platform. There is no multi-tenancy story, no installer, and the integrations are specific to its own market (Tinkoff for payments, Dashamail for email). 🟢 **The genuine value is as a reference domain model under a licence that allows copying**: how a real, paying online school models courses, enrolments, orders, access windows and student progress in Django — which is the single most useful thing to have on hand when a client wants "our own academy" and the alternative is designing that schema from scratch or forking an AGPL platform. ⚠️ **Operational dependencies are regional and must be replaced** for any engagement outside its market. 🟢 Region placed on evidence in the repository: Tinkoff and Dashamail are Russian-market services named in its own README. |
+| **Music Blocks** | [sugarlabs/musicblocks](https://github.com/sugarlabs/musicblocks) | 927 | **AGPL-3.0** ⚠️ | **2026-11-10** | North America | A **musical microworld** — a block-based programming environment in which children compose music and, in doing so, meet pitch, rhythm, ratio, interval and transformation as mathematics. Published by **Sugar Labs**, the organisation that carries the One Laptop Per Child software lineage. Gate: `COPYING`, `34,520 B` raw, title line `GNU AFFERO GENERAL PUBLIC LICENSE` → **AGPL-3.0**; index agrees. 🔴 **Posture is the whole row: AGPL-3.0's network clause means a studio cannot host this as a service for a client without releasing its derived source.** It is on this shelf as **a system an institution deploys itself**, which is the use the licence permits cleanly, and **not** as a base for a hosted product. 🟢 **Filed because it is the only *microworld* on any shelf in this base, and the category is pedagogically distinct from everything else here.** A tutor explains, an assessment engine measures — a microworld is an environment in which the concept is the only way to get what you want, which is the constructionist tradition (Papert, Logo) that Sugar Labs descends from directly. 🔵 **Where it is relevant commercially: ministry and public-sector K-12 engagements**, where deployment is the client's own and the AGPL is therefore free, and where OLPC-lineage software already has institutional recognition — including across LATAM, where those deployments happened. 🟢 Pushed the day it was read, after sixteen years of development. ⚠️ Region placed on the publisher's seat (US non-profit); **its deployment history is strongest in LATAM and this row should be read with `T319` beside it.** |
+| **Escapp** | [ging/escapp](https://github.com/ging/escapp) | 69 | **GPL-3.0** ⚠️ | 2025-03-19 | **EMEA** | A **platform for running educational escape rooms** — team enrolment, puzzle progression, hint economy, timing and per-team analytics — published by **GING, the Next-Generation Internet group at Universidad Politécnica de Madrid**. Gate: `LICENSE`, `35,149 B` raw, title line `GNU GENERAL PUBLIC LICENSE` → **GPL-3.0**. 🔵 **Note the gate: a naive whole-payload match returned `AGPL` here, because GPL-3.0 §13 names the AGPL. It is GPL-3.0** (`T311`), which is materially different — the network clause does **not** apply, so a studio *may* host it. 🟢 **Filed because gamified assessment is a real, funded category in EMEA higher education and this base held no platform for it** — and because the publisher is a named European public-university research group, which is the EMEA institutional-supply shape `T290` recorded as productive-but-agentless. 🔵 **The AI composition is obvious and unbuilt: the puzzle content, the hint ladder and the difficulty calibration are exactly what a model generates well, and the platform already owns the progression and analytics.** That is a three-week engagement on top of an existing GPL platform you do not modify. ⚠️ **Last pushed March 2025** — nineteen months, the stalest row this pass files; verify it still runs before proposing it. ⚠️ GPL-3.0: distribution of a modified version triggers the obligation. 🟢 Region placed on a named Spanish public-university publisher. |
+| **Latino** | [lenguaje-latino/latino](https://github.com/lenguaje-latino/latino) | 508 | **MIT** (by payload; index says `NOASSERTION`) | 2026-07-07 | **LATAM** | A **general-purpose programming language whose entire syntax is Spanish** — keywords, built-ins, standard library and error messages — built for teaching programming to Spanish-speaking students without English as a prerequisite. Gate: `LICENSE.txt`, `2,285 B` raw, first line `The MIT License (MIT)` → **MIT** (the extra bytes over a stock payload are appended third-party notices). 🔴 Index says `NOASSERTION`; the payload is unambiguous. 🟢 **Filed as a platform rather than a library because in a teaching context the language *is* the platform**, and because it addresses the specific barrier every LATAM CS-education engagement meets first: the language of the keywords. 🔵 **`T304` recorded that the Iberian-language channel produces subjects and not grants, `6 / 6`. This is the counter-example — a `508★` Spanish-language education project with a real MIT grant** — and it is filed partly to keep that generalisation honest. 🔵 Composes with `belajar-ngoding-byGanzu` (Bahasa Indonesia, tests-as-examiner) as evidence that the **vernacular-first programming curriculum** is a repeatable, permissively-licensed pattern across two regions. ⚠️ Four months since last push; a niche language, so library ecosystem and employability arguments both cut against it beyond the first course. 🟢 Region placed on the project's own stated audience and `lenguaje-latino.org`. |
+
+### 🔴 `736-T` — `T303` re-measured on a fresh leg: the school-management licence nil holds
+
+The `school management system in:name,description stars:>100` leg returned **`34` repositories**, of
+which **`13` were novel**. Ranked by stars, the head is unusable and the pattern is the one `T303`
+named at `p735`:
+
+| Repo | Stars | Licence | Last push | Verdict |
+|---|--:|---|---|---|
+| [Yogndrr/MERN-School-Management-System](https://github.com/Yogndrr/MERN-School-Management-System) | 649 | **none** | 2026-06-07 | not adoptable |
+| [TareqMonwer/Django-School-Management](https://github.com/TareqMonwer/Django-School-Management) | 597 | **none** | 2026-10-30 | not adoptable |
+| [sumitkumar1503/schoolmanagement](https://github.com/sumitkumar1503/schoolmanagement) | 493 | MIT | 2024-03-29 | permissive but **stale 20 months** |
+| [adigunsherif/Django-School-Management-System](https://github.com/adigunsherif/Django-School-Management-System) | 396 | MIT | 2026-01-31 | permissive, 9 months idle |
+| [amirhamza05/Student-Management-System](https://github.com/amirhamza05/Student-Management-System) | 347 | **none** | 2023-03-02 | not adoptable |
+| [hassanhabib/OtripleS](https://github.com/hassanhabib/OtripleS) | 341 | **none** | 2024-07-18 | not adoptable |
+
+🔴 **`4` of the top `6`, totalling `1,934★`, carry no grant.** 🟡 **The two that do are permissive
+and both idle** — which is a *different* result from `p735`'s and worth distinguishing: at `p735`
+the permissive school-management shelf was empty, and at `p736` it is non-empty but unmaintained.
+🟢 **The actionable conclusion is unchanged and now rests on two independent measurements: do not
+plan a school-management engagement around adopting an open platform.** Build the AI layer against
+the client's existing SIS through its API, or start from `frappe/education` (`703★`, index
+`NOASSERTION`, held) and accept Frappe's licence posture knowingly. 🔵 Also re-measured this pass
+and unchanged: **`instructure/canvas-lms` is AGPL-3.0, `6,908★`, and last pushed `2026-04-30`** —
+six months, because Canvas is developed on an internal mirror; the GitHub repository is a release
+drop, not the development line, and a studio planning against its commit activity will be wrong.
+
+### 🔴 `736-U` — Instructure publishes its design system MIT and its mobile apps with no grant at all
+
+A licence split worth recording because it decides what a Canvas engagement may touch (`T317`):
+
+| Instructure repository | Stars | Licence | Last push |
+|---|--:|---|---|
+| `instructure/canvas-lms` (the LMS) | 6,908 | **AGPL-3.0** | 2026-04-30 |
+| `instructure/instructure-ui` (design system) | 486 | **MIT** (payload; index `NOASSERTION`) | **2026-11-10** |
+| `instructure/common-cartridge-viewer` | 95 | **MIT** | 2026-11-04 |
+| `instructure/ims-lti` (LTI library, held) | 203 | **MIT** | 2026-10-02 |
+| `instructure/canvas-ios` | 925 | **no grant found** | 2026-05-19 |
+| `instructure/canvas-android` | 155 | **no grant found** | 2026-08-27 |
+
+🟢 **Read top to bottom this is a coherent and genuinely useful posture: the platform is copyleft,
+the integration surface is MIT.** `instructure-ui`, `ims-lti` and `common-cartridge-viewer` are
+exactly the three things an outside developer needs — look native, speak LTI, read course exports —
+and all three are permissive and current. 🔴 **The mobile apps are the exception and the warning:
+`925★` and `155★` with `LICENSE`, `LICENSE.md`, `COPYING`, `NOTICE` and `README` all returning
+`404` on the raw channel at `HEAD`.** ⚠️ **Stated with the restraint `T302` requires: this pass
+cannot enumerate a repository tree in this environment, so the claim is "no grant found at the five
+probed paths", not "no grant exists".** Either way the operative guidance is the same — **do not
+plan to fork the Canvas mobile apps**; reach mobile through LTI and the web view.
 
 ## Permissive LMS platforms, and a measured licence nil on the rest of the shelf 🆕 new section at `p735`
 

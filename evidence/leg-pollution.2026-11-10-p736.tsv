@@ -1,0 +1,17 @@
+leg	query	total_count	rows_read	education_relevant	pollution_mode
+terms-grading	grading rubric LLM in:name,description,readme stars:>20	617	30	1	in:readme over 3 unquoted terms returns generic agent-skill collections
+terms-tutoring-agent	tutoring agent in:name,description,readme stars:>50 pushed:>2026-08-01	315	30	2	same; top rows are awesome-lists and prompt collections
+tutor-fresh	tutor in:name stars:>300 pushed:>2026-09-01	96	30	0	SUBSTRING: "tutor" matches "tutorials"; leg returns programming tutorials
+emea-de-fr	Bildung OR eucation in:name,description,readme stars:>20	12272	30	0	OR across two languages over readme; top rows are global dev tooling
+apac-cjk	kyoiku/jiaoyu AI in:name,description,readme stars:>100	740	30	1	CJK term over readme matches any repo with a Chinese readme
+maic	MAIC in:name classroom OR teacher in:description	123214	30	0	bare acronym in:name is a 123k-row noise floor
+ai-classroom	AI classroom in:name,description stars:>500	0	0	0	measured nil
+ai-teacher	AI teacher agent in:name,description stars:>300	5	5	1	near-nil; 3 of 5 rows are unrelated political repos
+terms-lesson-plan	lesson plan generator in:name,description stars:>20	0	0	0	measured nil
+accessibility-edu	accessibility WCAG course in:name,description stars:>20	2	2	0	measured nil in substance
+topic-ai-tutor	topic:ai-tutor	891	30 (sort=updated)	20	CLEAN leg; but recency head is all 0-7 stars
+topic-ai-education	topic:ai-education	581	30 (sort=updated)	18	CLEAN leg; same near-zero-star recency head
+org-apereo	org:apereo	30	30	30	CLEAN leg; highest-yield leg of the pass
+org-h5p	org:h5p	145	30	30	CLEAN leg
+org-instructure	org:instructure	123	30	8	CLEAN leg; mostly generic Ruby/Ember tooling
+school-mgmt	school management system in:name,description stars:>100	34	13	13	CLEAN leg; 2 highest-star rows carry no grant

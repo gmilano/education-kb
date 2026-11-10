@@ -4,6 +4,147 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p736) — 🟢 **THE SUPPLY CHANNEL `p735` BURIED IS ALIVE: IT WAS TESTED WITH A QUERY SHAPE THE ENDPOINT DOES NOT SUPPORT, AND A `422` ABOUT QUERY CONTENTS WAS READ AS AN OUTAGE. 🟢 AND THE SSO SERVER HIGHER EDUCATION ACTUALLY RUNS — `11,393★`, APACHE-2.0, PUSHED TODAY — WAS NOT IN A `3,343`-ADDRESS LEDGER, BECAUSE PHRASE-LED DISCOVERY FINDS APPLICATIONS AND NEVER INFRASTRUCTURE. 🔴 A WHOLE-PAYLOAD LICENCE MATCH CALLS EVERY GPL-3.0 REPOSITORY `AGPL`, BECAUSE GPL-3.0 §13 NAMES THE AGPL.**
+
+**`7` agent rows · `14` foundations rows · `4` platform rows · `11` new trends (`T310`–`T320`) ·
+`4` new patterns (`P188`–`P191`) · `29` addresses existence-probed and `25` licence payloads
+byte-read · **`25 / 25`** classified correctly under a gate repaired twice during the pass ·
+`4` GitHub index licence values **corrected from the bytes** · `3` grants found that a
+LICENSE-file-only probe scores as absent · `1` subject refused on a **NonCommercial** term at
+`4,886★` · `1` prior-pass instrument verdict **retracted with controls** (`T298`) · `41` discovery
+legs across two rounds · `5` measured nils · `6` named pollution modes · the `40`th consecutive
+mandated-prose-leg nil · `0` rows taken from a recency head.**
+
+### The retraction, because every pass after `p735` would have inherited it
+
+🟢 **`736-A` → `T310` — the authenticated search channel was never dead, and the evidence is four
+successful queries.** `p735` published `T298`: *"`gh api -X GET search/repositories` returns `422
+Validation Failed` for every query… because `GH_TOKEN` is invalid"*, and migrated the base onto an
+unauthenticated replacement. 🔬 **`p736` re-ran it: `topic:education-ai` → `200`, `69` repositories.
+`topic:ai-education` → `581`. `topic:ai-tutor` → `891`. `user:mitodl` → `186`.
+`org:openedx stars:>100` → `4`. `org:apereo` → `30`.** The channel carried **all `41` legs of this
+pass**. ⚠️ **One query shape does still fail, and it is the one `p735` tested with:**
+`repo:{owner}/{name}` → `422`, *"the listed users and repositories cannot be searched…"*. 🔵 **The
+cause is not the credential. `repo:` is not a valid qualifier for the repository-search
+endpoint at all** — it belongs to code and issue search — so the `422` is the endpoint correctly
+rejecting a malformed query, and it would have returned `422` on a healthy token too.
+🟢 **`gh auth status` *does* still report `GH_TOKEN` invalid, and the channel works anyway**, which
+is the part worth carrying forward: **a credential warning is not a channel-health signal, and a
+validation error about query *contents* is not an availability signal.** Test a channel with a
+query the endpoint supports. Full truth table: `evidence/channel-controls.2026-11-10-p736.tsv`.
+
+🟢 **`736-A2` — and the dead `repos/` namespace finally has its cause named, from the error body
+itself.** `gh api repos/openedx/edx-platform` returns `403` with: *"GitHub access to this repository
+is not enabled for this session. Use add_repo to request access."* 🔵 `T289`'s finding is therefore
+**session repository-scoping** — an environment property of how this base is run, not a GitHub or
+network fact. `T302`'s conclusion is unaffected and should stay: **tree enumeration is unavailable
+here, so no pass running in this environment may issue a compliant `grant-absent` verdict.**
+
+### The gate, broken twice in one pass and controlled both times
+
+🔴 **`736-C` → `T311` — a whole-payload family match calls every GPL-3.0 repository AGPL-3.0, and
+the cause is in GPL-3.0's own text.** The canonical GPL-3.0 names the AGPL **three times**, at
+**§13 "Use with the GNU Affero General Public License"**. A gate that greps the payload for
+`GNU AFFERO` therefore misclassifies GPL as AGPL — measured on `2 / 2` GPL payloads before it was
+caught (`h5p/h5p-php-library`, `35,146 B`; `ging/escapp`, `35,149 B`). 🟢 **This is not a cosmetic
+error: AGPL forbids hosting a derivative as a service and GPL does not**, so the defect would have
+made this base reject a usable platform. 🔵 Constants measured today, offered as *corroboration*
+rather than as a test: **GPL-3.0 `35,146`–`35,149 B`; AGPL-3.0 `34,520`–`34,523 B`; canonical
+Apache-2.0 `11,357`–`11,358 B`.**
+
+🔴 **`736-D` → `T313` — and the deeper result: for MIT and Apache, size and digest cannot work at
+all.** The `11` MIT payloads read today span **`1,060 B` to `2,285 B`** raw, and **none** sits at
+the base's published `1,020 B` stock constant. Worse, a fully valid **Apache-2.0** grant
+(`apereo/java-cas-client`) is a **`2,321 B` short-form notice that is not the canonical Apache text
+in any part** — so it matches no size band and no digest of the canonical text, and GitHub's own
+licensee cannot classify it either, which is exactly why the index reports `NOASSERTION`.
+🟢 **What does work, `25 / 25`: classify on the first line that *names a licence family*, skipping
+decoration, and fall back to the operative clause.** Published runnable as **`P188`** with
+`evidence/licence-gate.p736.py` and a `30`-row truth table. Its two controls are the payloads that
+defeated the intermediate versions: `instructure/instructure-ui` (MIT behind **YAML frontmatter**)
+and `csev/wa4e` (BSD-2-Clause behind a leading **`Copyright` line**).
+
+🔴 **`736-E` → `T312` — three grants this base's own probe would have scored as absent, and the
+index had them right.** `h5p/h5p-interactive-video` (`267★`) and `h5p/h5p-course-presentation`
+(`57★`) declare `"license": "MIT"` in **`library.json` and `package.json`** and ship **no licence
+file**; `kstateome/canvas-api` (`78★`) declares **LGPL-3.0** in **`pom.xml`** and ships none either.
+🟢 **Standing rule, and it points the same way as `T302`: a missing `LICENSE` file is not evidence
+of a missing grant.** Read the manifest — `package.json`, `library.json`, `pom.xml`, `Cargo.toml`,
+`pyproject.toml` — before recording an absence. Whole ecosystems declare grants only there.
+
+### What actually trended, and the one row that outranks everything else
+
+🟢 **`736-F` → `T314` — the identity layer.** [`apereo/cas`](https://github.com/apereo/cas) —
+**`11,393★`, Apache-2.0, pushed `2026-11-10`** — is the CAS/SAML2/OIDC single-sign-on server that
+higher education runs, and **it was not among this base's `3,343` recorded addresses**, nor were
+`phpCAS` (`800★`), `java-cas-client` (`948★`) or `cas-initializr` (`22★`). 🔴 **Three existing
+patterns — `P169`, `P183`, `P186` — already end in an identity integration.** The base had the
+conclusion and not the component. 🔵 **The diagnosis is the transferable part: discovery here has
+been phrase-led, and a phrase leg finds applications, never infrastructure, because infrastructure
+is not described in the vertical's vocabulary.** `apereo/cas`'s description does not contain the
+word *education*. 🟢 **`org:apereo` — one query — returned `30` repositories, `28` novel.** The
+`org:` legs produced **every** foundations row this pass; the `4` mandated prose legs produced
+**`0`**, the `40`th consecutive nil.
+
+🟢 **`736-G` → `T315` — H5P's licence split makes the interactive-content layer permissively
+extensible, and that is a new route into every LMS.** The H5P **core** (`h5p/h5p-php-library`) is
+**GPL-3.0**; the **content types** are **MIT** — `h5p-interactive-video` (`267★`),
+`h5p-course-presentation` (`57★`), `h5p-boilerplate` (`11★`, the official scaffold),
+`h5p-math-display`, `h5p-audio-recorder`, `h5p-speak-the-words`, `h5p-three-image`. 🔵 **So a studio
+can ship a new AI-driven interactive content type, under MIT, into an institution's existing H5P
+installation inside Moodle, Canvas, Open edX, WordPress or Drupal — without touching the GPL core
+and without an LTI registration.** That is a lighter route than `P186` and it is published as
+**`P190`**.
+
+🟢 **`736-H` — the teacher is now the thing being distilled, not the learner.**
+[`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) (**`473★`,
+Apache-2.0, pushed `2026-11-07`**) takes a *specific human teacher's* recordings, slides and marked
+work and emits a reusable agent skill that reproduces how that teacher judges and corrects.
+🔵 **Every tutor row this base holds personalises to the learner; this inverts it**, and the
+artefact it produces — an institution's own pedagogical practice, captured — is the one asset a
+university cannot buy and a consultancy cannot supply. Filed with `P191`'s institutional pipeline
+([`hallym-aiedu-center/ai_prof_lite`](https://github.com/hallym-aiedu-center/ai_prof_lite),
+Apache-2.0, Hallym University) as the two halves of a credible "capture the faculty" engagement.
+
+### 🔴 `736-I` → `T316` — the saturated-topic recency head is worthless, with its denominator
+
+`topic:ai-tutor` and `topic:ai-education` are the **cleanest** legs of this pass, and sorted by
+stars they correctly return this base's own held rows. 🔴 **Sorted by recency they return nothing
+usable: of the `20` most recently pushed `topic:ai-tutor` repositories, `20 / 20` carry `≤ 7★` and
+`17 / 20` carry `≤ 2★`, all pushed `2026-11-09` or `2026-11-10`.** The topic absorbs a continuous
+stream of one-person first commits and almost none survives. 🟢 **Standing instruction, because
+this is a cost finding: do not spend a leg on the recency head of a saturated topic — rank on stars
+and `pushed_at` jointly.** All three fresh-head rows this pass filed were found that way.
+
+### 🔴 `736-J` — the refusal, at `4,886★`
+
+[`walkinglabs/hands-on-modern-rl`](https://github.com/walkinglabs/hands-on-modern-rl) — an
+open "hands-on curriculum" from RL to LLM alignment, `4,886★`, pushed `2026-10-23`, indexed
+`NOASSERTION` — carries a **`519 B`** licence reading
+**`Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International`**. 🔴 **`NonCommercial`
+is disqualifying for every use this base exists to serve**, and `ShareAlike` would reach derived
+teaching material as well. The first row refused on a NonCommercial term rather than a copyleft or
+an absence — recorded because **`4,886★` plus the words "open-source curriculum" is precisely the
+combination that reaches a client deck unread.**
+
+### Pollution modes measured this pass, so later passes stop paying for them
+
+🔴 **`6` named modes across `41` legs** (`evidence/leg-pollution.2026-11-10-p736.tsv`):
+**(1) `in:readme` over three unquoted terms** — `grading rubric LLM` → `617` hits, `1` relevant;
+top rows are generic agent-skill collections. **(2) substring matching in `in:name`** — `tutor`
+matches **`tutorials`**, so a `tutor` leg returns `96` programming tutorials and `0` tutors
+(a fresh instance of `T281`, now with a denominator). **(3) bare acronyms** — `MAIC in:name` →
+`123,214`. **(4) cross-language `OR` over readme** — `Bildung OR éducation` → `12,272` hits,
+`0` relevant. **(5) CJK terms over readme** — matches any repository with a Chinese readme, not
+education. **(6) regional leg names mistaken for geography** — re-confirming `T309`: the
+`latam-es` leg's own highest-star returns are Spanish-language *frontend* resource lists, while
+this pass's two genuine LATAM placements came from **named institutional publishers**
+(UTN-FRT Argentina) and **a project's own stated audience**, never from the leg's name.
+🟢 **`5` measured nils, stated rather than left silent:** `lesson plan generator`
+(`0`), `AI classroom stars:>500` (`0`), `accessibility WCAG course` (`2`, neither relevant),
+`AI teacher agent stars:>300` (`5`, `3` of them unrelated political repositories), and the
+`4` mandated prose legs (`0` novel addresses).
+
 ## 🆕 2026-11-10 (p735) — 🔴 **THE SUPPLY CHANNEL EVERY PASS SINCE `p731` DEPENDED ON IS DEAD: `GH_TOKEN` IS INVALID AND `gh api search/repositories` RETURNS `422` FOR EVERY QUERY. 🟢 AN UNAUTHENTICATED REPLACEMENT WAS FOUND, CROSS-VALIDATED AGAINST `p734`'S OWN CELL AND CARRIED THE WHOLE PASS — AND A `NOASSERTION` ROW REPAIRED THE LICENCE GATE A SIXTH TIME. 🔴 THE IBERIAN-LANGUAGE LEGS RETURNED SIX SUBJECTS AND SIX LICENCE ABSENCES.**
 
 **`7` agent rows · `5` foundations rows · `3` platform rows · `12` new trends (`T298`–`T309`) ·

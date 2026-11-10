@@ -1,0 +1,14 @@
+channel	probe	result_p736	p735_claim	verdict_p736
+gh auth status	-	"The token in GH_TOKEN is invalid"	same	UNCHANGED
+gh api -X GET search/repositories	q=topic:education-ai	200, total_count=69	"422 for EVERY query"	REFUTED - channel alive
+gh api -X GET search/repositories	q=user:mitodl	200, total_count=186	"422 for every query"	REFUTED - channel alive
+gh api -X GET search/repositories	q=org:openedx stars:>100	200, total_count=4	"422 for every query"	REFUTED - channel alive
+gh api -X GET search/repositories	q=repo:openedx/edx-platform	422 Validation Failed	cited as proof channel is dead	CONFIRMED-BUT-MISREAD: repo: is not a valid qualifier for this endpoint
+curl api.github.com/search/repositories (unauth)	q=openedx/edx-platform in:name	200, returns full metadata	works	UNCHANGED - works
+curl api.github.com/search/repositories (unauth)	q=repo:openedx/edx-platform	no total_count returned	not tested	same invalid-qualifier failure, so not a credential effect
+gh api repos/{owner}/{repo}	openedx/edx-platform	403 "GitHub access to this repository is not enabled for this session. Use add_repo"	403, cause unstated	CONFIRMED + CAUSE NAMED: session repo-scoping, stated in the error body
+curl -sI https://github.com/{owner}/{repo}	openedx/edx-platform (alive)	403 Forbidden	403	CONFIRMED
+curl -sI https://github.com/{owner}/{repo}	gmilano/this-repo-does-not-exist-736 (invented)	403 Forbidden	403	CONFIRMED - 2/2, no discriminating power
+raw.githubusercontent.com/{o}/{r}/HEAD/README.*	openedx/edx-platform	200 (README.rst, 3rd in chain)	200	CONFIRMED - ordered chain required
+raw.githubusercontent.com/{o}/{r}/HEAD/README.md	invented address	404	404	CONFIRMED - discriminates 200/404
+gh api search/repositories	q=edx-platform in:name	returns forks only (Edraak 13*, microsoftarchive 5*); openedx/edx-platform ABSENT	index has no entry	CONFIRMED 1/1 - Open edX star count still correctly recorded as absent

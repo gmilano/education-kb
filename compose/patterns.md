@@ -6,13 +6,13 @@ updated: 2026-11-10
 
 # Composition Patterns — Education
 
-**Pass p735 · verified 2026-11-10.** Concrete recipes using only components verified this
+**Pass p736 · verified 2026-11-10.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
 Licences are the real design input here. Every pattern states its resulting obligation.
 
-**Numbering.** This pass (`p735`) adds **`P184`**–**`P187`**; `p734` added **`P180`**–**`P183`**; `p733` added **`P176`**–**`P179`**;
+**Numbering.** This pass (`p736`) adds **`P188`**–**`P191`**; `p735` added **`P184`**–**`P187`**; `p734` added **`P180`**–**`P183`**; `p733` added **`P176`**–**`P179`**;
 `p727` added **`P161`**; `p726` added **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
 passes is preserved in full below the new entries — it is a registry with stable IDs, so new
 patterns continue the sequence rather than reusing it. (This pass initially drafted its six
@@ -22,6 +22,243 @@ prior engagement may cite.)
 
 ---
 
+
+## P188 — The licence gate, repaired a seventh time: classify on the clause, not on the size (tooling, not a client pattern; 30 minutes, then a standing gate) 🟢 new at `p736`
+
+**Why a seventh repair, and why this one should be the last of its kind.** `P172`, `P173`, `P176`,
+`P180` and `P184` each repaired a gate that decides a licence by **normalising a payload and
+comparing its size or digest to a published constant**. `p736` measured why that approach keeps
+breaking: **the `11` MIT payloads read this pass span `1,060 B`–`2,285 B` and none is at the
+published `1,020 B` constant**, and one valid **Apache-2.0** grant
+(`apereo/java-cas-client`, `2,321 B`) **is not the canonical Apache text in any part**, so it
+matches no band and no digest — which is also why GitHub's own `licensee` reports `NOASSERTION` for
+it (`T313`). 🟢 **A licence is a legal instrument identified by its operative clause. Classify on
+the clause.**
+
+### The procedure
+
+1. Fetch the payload from the raw channel, trying names in order:
+   `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `License`.
+2. **If none returns `200`, do not record an absence — read the manifest** (`package.json`,
+   `library.json`, `pom.xml`, `Cargo.toml`, `pyproject.toml`, `composer.json`, `*.gemspec`).
+   `T312` measured `3 / 3` grants living only there this pass.
+3. Walk the payload line by line, **skipping decoration**: blank lines, lines that are pure
+   punctuation (`---`, `====`, `###`), lines beginning `Copyright`, and YAML-frontmatter keys
+   (`title:`, `category:`, `order:`, `isWIP:`, `SPDX-License-Identifier:`).
+4. **The family is the first surviving line that *names* a licence family**, tested in this order —
+   the order is load-bearing: `GNU AFFERO GENERAL PUBLIC` → `GNU LESSER GENERAL PUBLIC` →
+   `GNU GENERAL PUBLIC` → `Apache License` → `Educational Community License` →
+   `CERN Open Hardware Licence … Permissive` → `Mozilla Public License` → `MIT License` →
+   `Creative Commons Attribution-NonCommercial` → `Creative Commons` → `BSD`.
+5. **Only if no line names a family**, fall back to the operative clause:
+   `Permission is hereby granted, free of charge` → MIT;
+   `… licenses this file to you under the Apache License` → Apache-2.0;
+   `Redistribution and use in source and binary forms` → BSD.
+6. For BSD, the clause count is decided by the presence of `Neither the name` → 3-clause, else
+   2-clause.
+
+### Why the order in step 4 is load-bearing, measured
+
+🔴 **The canonical GPL-3.0 text names the AGPL three times, because §13 is titled "Use with the
+GNU Affero General Public License".** A whole-payload search for `GNU AFFERO` therefore reports
+**every GPL-3.0 repository as AGPL-3.0** — measured `2 / 2` this pass on `h5p/h5p-php-library`
+(`35,146 B`) and `ging/escapp` (`35,149 B`), both GPL-3.0 (`T311`). Because the rule reads only the
+**first family-naming line**, §13 is never reached. 🔵 **The consequence of getting this wrong runs
+in the expensive direction: AGPL forbids hosting a derivative as a service and GPL does not**, so
+the defect converts usable platforms into rejected ones.
+
+### Runnable
+
+`evidence/licence-gate.p736.py` — stdlib only, no network, takes payload paths and prints
+`family | bytes | filename`.
+
+### Controls to re-run before trusting it
+
+**`25 / 25` payloads classified correctly this pass**
+(`evidence/licence-gate-controls.2026-11-10-p736.tsv`, `30` rows including the manifest-only and
+no-grant cases). Four are the controls that matter, because each defeated an earlier version:
+
+| Control | Shape | Correct verdict |
+|---|---|---|
+| `h5p/h5p-php-library` | GPL-3.0 whose §13 names the AGPL | **GPL**, not AGPL |
+| `instructure/instructure-ui` | MIT body behind **YAML frontmatter** | **MIT** (index says `NOASSERTION`) |
+| `csev/wa4e` | BSD-2-Clause behind a leading **`Copyright`** line | **BSD-2-Clause** |
+| `apereo/java-cas-client` | Apache-2.0 **short-form notice**, not canonical text | **Apache-2.0** (index says `NOASSERTION`) |
+
+🔵 **Record bytes as corroboration, never as the test.** Constants observed today:
+Apache-2.0 canonical `11,357`–`11,358 B`; GPL-3.0 `35,146`–`35,149 B`; AGPL-3.0
+`34,520`–`34,523 B`; stock-ish MIT `1,060`–`1,175 B`.
+⚠️ **Limits, stated so they are not rediscovered:** the gate reads what is at `HEAD` on the default
+branch, it cannot see per-directory licensing in a monorepo, and **it still cannot certify an
+absence** — `T302` and `T312` together mean the only honest negative is *"no grant found at the
+probed paths"*.
+
+---
+
+## P189 — Enter a higher-education engagement through the identity federation, using the federation's own server (North America and EMEA first; 3–4 weeks to a working integration) 🟢 new at `p736`
+
+**The problem this solves.** `P169`, `P183` and `P186` all concluded that an engagement inside an
+institution begins at identity — and none of them could name the component, because this base did
+not hold one (`T314`). It does now, and it is Apache-2.0.
+
+### Components — every one verified first-hand at `p736`
+
+| Component | Licence | Role |
+|---|---|---|
+| [apereo/cas](https://github.com/apereo/cas) `11,393★` | **Apache-2.0** | The SSO server the institution already runs: CAS protocol, SAML2 IdP, OIDC OP, OAuth2, MFA, attribute release |
+| [apereo/cas-initializr](https://github.com/apereo/cas-initializr) `22★` | **Apache-2.0** | Generates the WAR overlay with only the modules needed — the step that makes CAS tractable in week one |
+| [apereo/java-cas-client](https://github.com/apereo/java-cas-client) `948★` | **Apache-2.0** | Makes an existing JVM service a CAS service provider |
+| [apereo/phpCAS](https://github.com/apereo/phpCAS) `800★` | **Apache-2.0** | The same for PHP — which is what Moodle and much of the installed estate is |
+| [instructure/ims-lti](https://github.com/instructure/ims-lti) `203★` (held) | **MIT** | LTI 1.1/1.3 tool provider, for reaching the LMS once identity is settled |
+| [ucfopen/cookiecutter-python-lti](https://github.com/ucfopen/cookiecutter-python-lti) `6★` (held) | **MIT** | LTI 1.3 Python scaffold ⚠️ **use this, not `ucfopen/lti-template-flask` — archived `2026-07-20`** |
+
+### Wiring
+
+1. **Week 1 — read, do not build.** Establish which protocol the institution's CAS actually speaks
+   (CAS 3.0, SAML2, OIDC are all served by the same server and institutions differ), and **which
+   attributes it will release**. The attribute-release policy, not the protocol, is what determines
+   whether your application can know a user's role, enrolments and programme.
+2. **Week 1–2 — stand up a matching CAS locally with `cas-initializr`**, with only the modules the
+   client's profile needs. You are building a test identity provider you control, so that
+   integration work does not queue behind the institution's change window.
+3. **Week 2–3 — make the deliverable a service provider**, with `java-cas-client` or `phpCAS` for
+   an existing application, or the OIDC/SAML2 path for anything new.
+4. **Week 3–4 — join the real federation**, and only then layer the LTI tool (`P186`) or the H5P
+   content type (`P190`) on top. Identity first means the LMS integration inherits a working
+   principal instead of inventing one.
+
+### Licence obligation
+
+**None beyond attribution.** Every identity component above is **Apache-2.0**; `ims-lti` and the
+LTI cookiecutter are **MIT**. 🟢 **This is the only layer of an institution's education stack where
+that is true** — Moodle is GPL-3.0, Open edX / Canvas / Frappe LMS are AGPL-3.0, Sakai is ECL-2.0 —
+which is exactly why starting here keeps a commercial deliverable clean.
+
+### The constraint that decides whether it fits
+
+⚠️ **It is a platform-engineering engagement, and it must be staffed as one.** CAS is Java/Spring
+Boot and the overlay model means the client builds and maintains their own WAR; this is not an
+afternoon's integration. 🔵 **It fits when** the client is a university or a multi-institution
+consortium, the deliverable must act *as* a user (marking, advising, admitting), or an auditor will
+ask who did what — which under `T306`'s Annex III obligations and `T318`'s North American statutes
+they now will. ⚠️ **It does not fit** a single-course pilot or a student-facing study tool, where
+`P190`'s content-type route is two weeks and no identity work at all.
+
+---
+
+## P190 — Ship an MIT H5P content type, not a fork of the GPL core: the lightest route to the student in any LMS (all four regions; 2–4 weeks to a pilot) 🟢 new at `p736`
+
+**The finding this is built on.** H5P's **core is GPL-3.0** and its **content types are MIT**
+(`T315`) — and H5P is already installed inside Moodle, Canvas, Open edX, WordPress and Drupal.
+🟢 **So the institution has already done the integration, the accessibility work and the
+procurement, and a content type is a drop-in.** That is lighter than `P186`'s LTI route, which
+needs a registration per tenancy, and far lighter than touching the LMS.
+
+### Components — every one verified first-hand at `p736`
+
+| Component | Licence | Role |
+|---|---|---|
+| [h5p/h5p-boilerplate](https://github.com/h5p/h5p-boilerplate) `11★` | **MIT** | The official content-type scaffold. Start here. |
+| [h5p/h5p-interactive-video](https://github.com/h5p/h5p-interactive-video) `267★` | **MIT** ⚠️ declared in `library.json`, **no licence file** (`T312`) | The reference implementation of a complex content type, and the most-used one in education |
+| [h5p/h5p-course-presentation](https://github.com/h5p/h5p-course-presentation) `57★` | **MIT** ⚠️ manifest-declared | Reference for slide-shaped content |
+| [h5p/h5p-math-display](https://github.com/h5p/h5p-math-display) `9★` | **MIT** | LaTeX rendering — needed on day one for any STEM subject |
+| [h5p/h5p-cli](https://github.com/h5p/h5p-cli) `79★` (held) | **MIT** | Build, package and validate the `.h5p` bundle |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) `154★` | 🔴 **GPL-3.0** | The core. **Do not modify it. Do not fork it.** You depend on the client's installed copy. |
+| [int64ago/vistep](https://github.com/int64ago/vistep) `247★` | **MIT** | Where the *interaction design* comes from: step-by-step visual mechanism plus a manipulable model |
+| [estevao-tarifa/moodle2ia](https://github.com/estevao-tarifa/moodle2ia) `4★` | **MIT** | Gets the client's existing Moodle course content out as Markdown, to generate from |
+
+### Wiring
+
+1. **Extract the client's existing course material** with `moodle2ia` (Moodle) or
+   `instructure/common-cartridge-viewer` (any LMS that exports Common Cartridge). This is the step
+   that used to stall these engagements and it is now MIT on both paths.
+2. **Generate the interactive content** — questions, branches, step-by-step explanations — from
+   that material with the client's own model endpoint. 🔵 **Generate at authoring time, not at
+   runtime**: the artefact you ship is a reviewed `.h5p` bundle, which means a human approved every
+   item a student sees. That is the difference between this and a chatbot, and it is what makes it
+   defensible under `T318`.
+3. **Build it as a content type** from `h5p-boilerplate`, reading `h5p-interactive-video` for how a
+   non-trivial one is structured; add `h5p-math-display` for STEM notation.
+4. **Package with `h5p-cli`** and hand the institution a `.h5p` file. It uploads into the H5P
+   installation it already runs. **No fork, no LTI registration, no infrastructure.**
+
+### Licence obligation
+
+**Attribution only.** Your content type is yours, under whatever licence you choose — **MIT if you
+start from the boilerplate and keep its notice**. 🟢 **The GPL-3.0 core is a *dependency you do not
+distribute*: the institution already has it installed, and a content type loaded by it is not a
+derivative work of it.** ⚠️ **Confirm each content type's grant individually** — `T312` measured
+two H5P content types declaring MIT in `library.json` with no licence file, so the estate is not
+uniform and "H5P content types are MIT" is a pattern, not a guarantee.
+
+### The constraint that decides whether it fits
+
+⚠️ **You inherit H5P's authoring and runtime model.** This fits **content-shaped** interventions —
+explain, practise, assess an item — and **not workflow-shaped** ones. An agent that acts across a
+course (scanning assignments, drafting, advising) needs `P186`'s LTI route or `P189`'s identity
+route, because a content type has no access to the course, the roster or the gradebook beyond what
+the xAPI/Caliper statement carries. 🔵 **It fits all four regions equally**, which almost nothing on
+these shelves does, because the dependency is an H5P installation rather than a vendor, a
+jurisdiction or a cloud.
+
+---
+
+## P191 — The sovereign lecture factory: an Apache-2.0 production line on the institution's own GPUs (APAC first, EMEA on residency; 5–7 weeks) 🟢 new at `p736`
+
+**The problem this solves.** Faculty-workload reduction is now the dominant adoption driver in every
+region (`T320`), and the artefact faculty actually want is **a finished lecture**, not a chat
+window. The objection that kills it is always the same: *the material and the lecturer's likeness
+cannot leave the institution.* 🟢 **`p736` found a first-party institutional implementation that
+answers that objection in its architecture**, and it is Apache-2.0.
+
+### Components — every one verified first-hand at `p736` or carried from `p735`
+
+| Component | Licence | Role |
+|---|---|---|
+| [hallym-aiedu-center/ai_prof_lite](https://github.com/hallym-aiedu-center/ai_prof_lite) `2★` | **Apache-2.0** | The pipeline itself: lecture plan → slides → voice → professor-avatar video → MP4 → **Moodle deployment**. FastAPI, SQLite job queue, **per-GPU independent runners.** |
+| [JuneYaooo/teacher-to-skills](https://github.com/JuneYaooo/teacher-to-skills) `473★` | **Apache-2.0** | Captures *this* lecturer's judgement and correction style from their own recordings and marked work, as a reusable skill |
+| [intel/university-curriculum-enabling-tool](https://github.com/intel/university-curriculum-enabling-tool) `14★` (held) | **Apache-2.0** | Curriculum Builder persona, running locally on CPU/GPU — the course-structure half |
+| [estevao-tarifa/moodle2ia](https://github.com/estevao-tarifa/moodle2ia) `4★` | **MIT** | Pulls the existing course out of Moodle as the input corpus |
+| `ollama` / `vllm` (held) | **MIT / Apache-2.0** | The local model serving that makes the sovereignty claim true rather than aspirational |
+| [h5p/h5p-boilerplate](https://github.com/h5p/h5p-boilerplate) `11★` | **MIT** | Turns the generated lecture into *interactive* content rather than a video to watch passively |
+
+### Wiring
+
+1. **Weeks 1–2 — corpus and consent.** Extract the existing course with `moodle2ia`. 🔴 **Get
+   explicit institutional and individual consent for the lecturer's voice and likeness before any
+   model work** — this is the step that sinks the project if it comes last, and under `T318`'s EMEA
+   obligations it is a documentation requirement, not a courtesy.
+2. **Weeks 2–3 — stand up the pipeline** from `ai_prof_lite` on the institution's own GPUs, with
+   its per-GPU runners. ⚠️ **Repoint its lecture-planning call at a local endpoint** (`ollama` or
+   `vllm`): as shipped that stage calls OpenAI, so the sovereignty claim holds only for the media
+   half until you do.
+3. **Weeks 3–5 — capture the lecturer, not just the content**, with `teacher-to-skills`, and use
+   the resulting skill to drive the planning and the marking rubric. 🔵 **This is the step that makes
+   the output *that department's* lecture rather than a generic one**, and it is the part a
+   competitor cannot copy because the input is the institution's own practice.
+4. **Weeks 5–7 — ship interactive, not passive.** Wrap the generated material as an H5P content
+   type (`P190`) so it lands in the LMS the institution already runs, with a human review gate on
+   every released item.
+
+### Licence obligation
+
+**Attribution only — the whole chain is Apache-2.0 and MIT.** 🟢 **There is no copyleft component
+anywhere in this pattern**, which is unusual on these shelves and is the reason it is worth
+preferring over a Moodle-plugin approach that would inherit GPL-3.0.
+
+### The constraint that decides whether it fits
+
+⚠️ **`ai_prof_lite` is `v1.0.0` with `2★` from a single institution and no external adopter.** This
+is a **reference implementation to adopt and harden**, and the engagement must be priced as
+hardening, not integration. ⚠️ **It needs real GPUs on the client's premises** — the per-runner
+design assumes them, and without them the sovereignty argument and the architecture both collapse.
+🔵 **It fits** APAC ministry and university engagements, where `T318` records the buyer as the
+ministry and the constraint as infrastructure, and **EMEA** where data residency is the binding
+objection (`T306`, `2 December 2027`). ⚠️ **It does not fit** a client whose first question is cost
+per lecture — a hosted commercial tool wins that comparison, and the only honest argument for this
+pattern is ownership, residency and the lecturer's own practice.
+
+---
 
 ## P184 — The licence gate, repaired a sixth time: the title line can be a Markdown heading (tooling, not a client pattern; 20 minutes, then a standing gate) 🟢 new at `p735`
 

@@ -4,7 +4,270 @@ region: Global
 updated: 2026-11-10
 ---
 
-# 🆕 Trends new at `p735` (researched 2026-11-10) — `T298`–`T309`
+# 🆕 Trends new at `p736` (researched 2026-11-10) — `T310`–`T320`
+
+**Added above `p735`'s `T298`–`T309`.** Four are instrument findings, four are supply findings and
+three are demand findings — and **one retracts a prior pass's published instrument verdict with
+controls**, which this base has not had to do before.
+
+## T310 — 🟢 `T298` RETRACTED: the supply channel was never dead, and a validation error about query contents was read as an outage
+
+`p735` published that `gh api -X GET search/repositories` *"returns `422 Validation Failed` for
+every query… because `GH_TOKEN` is invalid"*, and moved the base onto an unauthenticated
+replacement. 🔬 **`p736` re-ran the channel and it carried all `41` legs of this pass:**
+`topic:education-ai` → `200`/`69`; `topic:ai-education` → `581`; `topic:ai-tutor` → `891`;
+`topic:learning-analytics` → `403`; `user:mitodl` → `186`; `org:apereo` → `30`;
+`org:openedx stars:>100` → `4`. ⚠️ **Exactly one query shape still returns `422`, and it is the one
+`p735` tested with: `repo:{owner}/{name}`.** 🔵 **The cause is not the credential: `repo:` is not a
+valid qualifier for the repository-search endpoint** — it belongs to code and issue search — so the
+endpoint is correctly rejecting a malformed query and would have done so on a healthy token.
+🟢 **`gh auth status` *does* still report `GH_TOKEN` invalid, and the channel works anyway.** Two
+rules follow, and they generalise past GitHub entirely: **a credential warning is not a
+channel-health signal**, and **an error about the *contents* of a request is not evidence about the
+*availability* of the service**. Probe a channel with a request the endpoint supports before
+declaring it dead — and when a prior pass's instrument verdict is load-bearing, re-run its control
+rather than inheriting it. Cost of not doing so: one pass of migration work and four passes'
+exposure to a wrong rule. Controls: `evidence/channel-controls.2026-11-10-p736.tsv`.
+🔵 **Secondary result, with the cause finally named from the error body:** `gh api
+repos/{owner}/{repo}` returns `403` *"GitHub access to this repository is not enabled for this
+session. Use add_repo to request access."* — so `T289`'s dead `repos/` namespace is **session
+repository-scoping**, an environment property, not a GitHub or network fact. `T302` stands: tree
+enumeration is unavailable here, so no pass running in this environment may issue a compliant
+`grant-absent` verdict.
+
+## T311 — 🔴 A whole-payload licence match calls every GPL-3.0 repository AGPL-3.0, because GPL-3.0 §13 names the AGPL
+
+The canonical GPL-3.0 text contains the string *"GNU Affero General Public License"* **three
+times**, because **§13 is titled "Use with the GNU Affero General Public License"**. Any gate that
+searches the whole payload for `GNU AFFERO` before `GNU GENERAL` therefore classifies **every
+GPL-3.0 repository as AGPL-3.0**. 🔬 Measured `2 / 2` on the payloads that triggered it:
+`h5p/h5p-php-library` (`LICENSE.txt`, `35,146 B`) and `ging/escapp` (`LICENSE`, `35,149 B`) — both
+**GPL-3.0**, both initially reported AGPL. 🔴 **This is not a cosmetic misfile. AGPL-3.0's network
+clause forbids offering a derivative as a service and GPL-3.0's does not**, so the defect
+systematically converts usable platforms into rejected ones — the single most expensive direction
+for this base's errors to run. 🟢 **The repair is to anchor on the first line that *names a
+family*, skipping decoration, and it is published runnable as `P188`.** 🔵 Byte constants measured
+today as *corroboration only*, never as the test: **GPL-3.0 `35,146`–`35,149 B`, AGPL-3.0
+`34,520`–`34,523 B`, canonical Apache-2.0 `11,357`–`11,358 B`.** This is the seventh consecutive
+pass to repair this gate; `T313` explains why the repairs keep being needed.
+
+## T312 — 🔴 A missing `LICENSE` file is not evidence of a missing grant: three grants this pass live only in a manifest
+
+| Repository | Stars | Licence file at `HEAD` | Where the grant actually is | Grant |
+|---|--:|---|---|---|
+| `h5p/h5p-interactive-video` | 267 | **none** (5 names probed) | `library.json`, `package.json` | **MIT** |
+| `h5p/h5p-course-presentation` | 57 | **none** | `library.json` | **MIT** |
+| `kstateome/canvas-api` | 78 | **none** (6 names probed) | `pom.xml` `<licenses>` | **LGPL-3.0** |
+
+🔴 **In all three cases the GitHub index was right and a LICENSE-file-only probe was wrong** — the
+opposite direction from the index errors in `T313`, which is exactly why neither channel can be
+trusted alone. 🟢 **Standing rule: read the manifest — `package.json`, `library.json`, `pom.xml`,
+`Cargo.toml`, `pyproject.toml`, `composer.json`, `*.gemspec` — before recording an absence.** Whole
+ecosystems (npm, Maven, Cargo) conventionally declare the grant *only* there. 🔵 **This points the
+same way as `T302` from a different direction:** this base cannot enumerate a repository tree here,
+and it now also knows that the paths it *can* probe do not exhaust where grants live — so the
+honest verdict is always **"no grant found at the probed paths"**, never *"grant-absent"*.
+
+## T313 — 🔴 For MIT and Apache, byte size and canonical-text digests cannot decide a licence, and one valid Apache grant proves it alone
+
+The `11` MIT payloads read this pass span **`1,060 B` to `2,285 B`** raw, and **not one** sits at
+this base's published `1,020 B` stock constant: `1,060`, `1,063`, `1,070`, `1,070`, `1,071`,
+`1,074`, `1,081`, `1,090`, `1,097`, `1,129`, `1,175`, `2,285`. The variance is the copyright-holder
+line, the year, and — in two measured cases — **YAML frontmatter** (`instructure/instructure-ui`)
+and **appended third-party notices** (`lenguaje-latino/latino`).
+
+🔴 **The decisive case is Apache, and it is not a variance argument at all.**
+`apereo/java-cas-client` carries a **`2,321 B`** `LICENSE` whose operative sentence is *"Apereo
+licenses this file to you under the Apache License, Version 2.0"* — **a short-form notice that is
+not the canonical Apache text in any part.** It matches no size band and no digest of the canonical
+text, and **GitHub's own `licensee` cannot classify it either, which is precisely why the index
+reports `NOASSERTION`.** The grant is nonetheless unambiguous and fully permissive. 🟢 **Conclusion,
+and it should end seven passes of constant-chasing: a licence is a legal instrument identified by
+its operative clause, not a file identified by its length.** Classify on the clause; record bytes
+as corroboration. `P188`, `25 / 25`.
+
+## T314 — 🟢 Higher education's identity layer has a permissive first-party implementation with 11.4k stars, and this base did not hold it
+
+[`apereo/cas`](https://github.com/apereo/cas) — **`11,393★`, Apache-2.0, pushed `2026-11-10`** — is
+the CAS/SAML2/OpenID-Connect single-sign-on server that higher education actually runs, from the
+foundation that publishes Sakai and Opencast. 🔴 **It was absent from this base's `3,343`-address
+ledger, together with `phpCAS` (`800★`), `java-cas-client` (`948★`) and `cas-initializr` (`22★`) —
+and `org:apereo`, a single query, returned `30` repositories of which `28` were novel.** Meanwhile
+`P169`, `P183` and `P186` had each already concluded that an engagement begins at the identity
+integration.
+
+🔵 **The diagnosis is the generalisable finding, and it is about method rather than about CAS.**
+This base's discovery has been **phrase-led** — `tutoring agent`, `grading rubric LLM`,
+`lesson plan generator` — and **a phrase leg finds applications and never infrastructure, because
+infrastructure is not described in the vertical's vocabulary.** `apereo/cas`'s description does not
+contain the word *education*; neither would Postgres's, or Keycloak's. 🟢 **Remedy, cheap and
+immediately actionable: enumerate the known institutional publishers by `org:`/`user:` instead of
+describing what you want.** This pass's `org:` legs produced **all `14`** foundations rows while the
+`4` mandated prose legs produced **`0`** — the `40`th consecutive nil. 🔵 **Why it matters
+commercially:** every LMS this base holds is copyleft (Moodle GPL-3.0, Open edX / Canvas / Frappe
+AGPL-3.0, Sakai ECL-2.0) — **identity is the one layer of the institution's existing stack that is
+already Apache-2.0**, so it is where a studio can build with no licence argument at all. And under
+`T306`'s Annex III obligations, *who did what* is an identity question before it is a model
+question: an agent that marks, advises or admits must act as an authenticated principal.
+
+## T315 — 🟢 H5P's licence split makes the interactive-content layer permissively extensible, and that is a lighter route into an LMS than LTI
+
+The H5P **core** (`h5p/h5p-php-library`, `154★`) is **GPL-3.0** (`T311`). The **content types** are
+**MIT**: `h5p-interactive-video` (`267★`), `h5p-course-presentation` (`57★`),
+`h5p-boilerplate` (`11★` — the official scaffold), `h5p-math-display`, `h5p-audio-recorder`,
+`h5p-speak-the-words`, `h5p-three-image`, `h5p-multi-media-choice`, `h5p-drag-text`.
+🟢 **Consequence: a studio can ship a new AI-driven interactive content type, under MIT, into an
+institution's existing H5P installation — and H5P is already embedded in Moodle, Canvas, Open edX,
+WordPress and Drupal.** No fork of the GPL core, and **no LTI registration either**, which makes it
+strictly lighter than `P186`'s route. 🔵 **Why this is the cheapest reach-the-student path this
+base holds:** the institution has already done the integration, the accessibility work and the
+procurement; a content type is a drop-in. Published as **`P190`**. ⚠️ The limit is real: you inherit
+H5P's authoring and runtime model, so this fits content-shaped interventions and not workflow-shaped
+ones. ⚠️ And `h5p-interactive-video`'s grant is declared in `library.json` with **no licence file**
+(`T312`), so confirm each content type's manifest rather than assuming the estate is uniform.
+
+## T316 — 🔴 The recency head of a saturated topic is worthless, measured: 20/20 of the freshest `ai-tutor` repositories carry ≤7 stars
+
+`topic:ai-tutor` (`891` repositories) and `topic:ai-education` (`581`) are the **cleanest** legs of
+this pass — sorted by stars they return this base's own held rows, which is correct behaviour for a
+saturated namespace. 🔴 **Sorted by `updated`, the top `20` `topic:ai-tutor` rows carry `≤ 7★`,
+`17 / 20` carry `≤ 2★`, and all were pushed `2026-11-09` or `2026-11-10`.** The namespace absorbs a
+continuous stream of one-person first commits — personal study apps, kanji tutors, single-course
+helpers — of which essentially none survives to a second pass. 🟢 **Standing instruction, and it is
+a cost finding rather than a quality one: do not spend a leg on the recency head of a saturated
+topic. Rank on stars and `pushed_at` jointly.** All three fresh rows this pass filed
+(`selfsemester`, `vistep`, `teacher-to-skills`) were found that way. 🔵 **The corollary matters for
+reading this base's own history:** a pass that reports many new low-star agent rows has probably
+sampled churn, not supply.
+
+## T317 — 🟡 Instructure publishes Canvas's integration surface MIT and its mobile apps with no grant at all
+
+| Repository | Stars | Licence | Last push |
+|---|--:|---|---|
+| `instructure/canvas-lms` | 6,908 | **AGPL-3.0** | 2026-04-30 |
+| `instructure/instructure-ui` | 486 | **MIT** (payload; index `NOASSERTION`) | **2026-11-10** |
+| `instructure/ims-lti` | 203 | **MIT** | 2026-10-02 |
+| `instructure/common-cartridge-viewer` | 95 | **MIT** | 2026-11-04 |
+| `instructure/canvas-ios` | 925 | **no grant found** at 5 probed paths | 2026-05-19 |
+| `instructure/canvas-android` | 155 | **no grant found** | 2026-08-27 |
+
+🟢 **Read as a whole this is a deliberate and genuinely useful posture: the platform is copyleft and
+the integration surface is permissive.** `instructure-ui` (accessible React components Canvas itself
+is built from), `ims-lti` and `common-cartridge-viewer` are exactly the three capabilities an
+outside developer needs — **look native, speak LTI, read course exports** — and all three are MIT
+and current. 🔵 **The accessibility inheritance is the commercial edge:** with the **April 2026** ADA
+web-accessibility deadline now past for large US public institutions (`T318`), "our tool is
+accessible because it is built from the LMS vendor's own audited components" is a procurement answer
+rather than a promise. 🔴 **Two warnings.** The mobile apps show **no grant at the probed paths** —
+so do not plan to fork them; reach mobile through LTI and the web view. And **`canvas-lms` has not
+been pushed in six months** because Canvas is developed on an internal mirror and GitHub receives
+release drops — **any plan built on its apparent commit activity will be wrong.**
+
+## T318 — 🟢 Regulation crossed from guidance into binding instruments in all four regions, and the binding clause is different in each
+
+The 2026 position, with the instrument named per region so a proposal can cite it:
+
+- **North America — statute, at state level, and the operative clause is policy adoption plus
+  teacher training.** Roughly **`134` AI-in-education bills across `31` states** in the 2026
+  session. **Ohio** was first to require **every** K-12 district to adopt a formal AI-use policy,
+  deadline **`1 July 2026`**. **North Carolina** (Session Law 2026-41) mandates AI-literacy
+  standards, a state model policy by **`31 December 2026`**, district policies by
+  **`30 June 2027`** and **teacher professional development by June 2028**. **Maryland, Idaho,
+  Oklahoma and Virginia** carry 2026 laws requiring both state guidance and mandatory
+  district-level adoption. Federally, the **K-12 AI Literacy and Readiness Act of 2026** has
+  advanced out of House committee; there are still **no binding federal AI curriculum standards**.
+  🔵 Also binding and often missed: the **April 2026** ADA deadline for large public institutions
+  to meet updated web-accessibility guidance **including vendor apps**.
+- **EMEA — the EU AI Act, with education in Annex III and the date now `2 December 2027`.**
+  Admissions, student evaluation and exam scoring are **high-risk**. The Digital Omnibus
+  amendments were **adopted June 2026** and **entered into force `27 July 2026`**, moving
+  stand-alone Annex III obligations from `2 August 2026` to **`2 December 2027`**, with AI embedded
+  in regulated products at **`2 August 2028`**. National layers are already live: the **UK DfE's
+  January 2026 generative-AI product safety standards for education** and **Ofqual's March 2026
+  resources on AI and coursework integrity**. In the Gulf, **Dubai's KHDA** has issued explicit
+  responsible-AI guidance to private schools. 🔵 This confirms `T306`'s `2 December 2027` date from
+  a second independent reading.
+- **APAC — three divergent regimes, and the buyer is the ministry or the regulator.**
+  **South Korea's AI Basic Act entered into force `22 January 2026`**, with enforcement decrees
+  still being finalised and a guidance-first grace period through 2026. **Vietnam** names
+  **education — specifically automated assessment and behavioural analysis — as a high-risk
+  sector**. **Australia's TEQSA** requires **all** higher-education providers to file institutional
+  action plans addressing generative-AI risk. **China** regulates by targeted instrument; **Japan
+  and Singapore** remain light-touch.
+- **LATAM — volume without an education-specific instrument.** A 2026 Universidad de los Andes
+  study counts **`716` AI-related regulatory instruments, rules and legislative proposals across
+  `23` countries and territories**. **Brazil's PL 2.338/2023** is risk-based and still the main
+  bill; **Colombia** chose a budgeted government-wide programme through 2030 rather than horizontal
+  obligations. **Argentina, Brazil, Chile, Colombia, Costa Rica, Mexico and Peru** have adopted the
+  OECD AI Principles. 🔴 **No education-specific AI law was found in any of them.**
+
+🟢 **What this means for a proposal, and it is the same shape everywhere with a different noun:
+the deliverable the statute names is an artefact, not a model.** North America wants a **policy and
+a training record**; EMEA wants **traceability, human oversight and residency**; APAC wants an
+**institutional action plan**; LATAM wants a **register and a data boundary**. `P185`, `P187`,
+`P181` and `P191` each sell one of those. ⚠️ **Secondary sources only** — `725-F` holds, the
+primary-law hosts remain unreachable from this environment (`T246`), and every date above should be
+settled by a reader with access before it is quoted to a client.
+
+## T319 — 🔴 LATAM's adoption–governance gap is now quantified on both sides, and the governance side is the engagement
+
+**UNESCO IESALC**, surveying roughly **`200` higher-education institutions across `19` countries**:
+**`87 %` use AI in at least one area** while **just `26 %` have any formal framework**, and
+**`55 %` of universities have no specific AI budget**. The **Digital Education Council's 2026 LATAM
+survey** (run with **Tecnológico de Monterrey** and its Institute for the Future of Education):
+**`92 %` of students and `79 %` of faculty actively engage with AI**. In schools, **Chile and Brazil
+report more than `50 %` of teachers already using these tools while fewer than `10 %` of
+institutions have formal guidelines.** 🔴 **Adoption is driven by individual academics and students
+rather than institutional strategy** — which is the precise condition under which a data-protection
+or academic-integrity incident becomes inevitable rather than unlucky.
+
+🟢 **The engagement follows directly and it is not a tooling engagement:** the region has the users
+and lacks the frameworks, so the sellable first deliverable is **the governance artefact** — an AI
+register, a PII boundary, an approved-use policy, an integrity procedure — with tooling second
+(`P181`). 🔵 **Named counterparties, which is what makes this actionable:** UNESCO IESALC and
+UNESCO's **Observatory on AI in Education for Latin America and the Caribbean** (launched April
+2026), **Tecnológico de Monterrey** (UNESCO agreement), **CENIA** (Chile), **Ceibal** (Uruguay) and
+**Cetic.br** (Brazil) for national school data, **OECD** and **ECLAC**. 🔴 **And the supply side is
+measured too, re-confirming `T291` and `T304`:** this pass's Iberian-language legs returned
+Spanish- and Portuguese-language *resource lists* rather than education software, and
+**`platzi/python-fundamentos` — published by one of the region's largest edtech companies — carries
+no licence at all.** The two genuine LATAM finds came from a named public university
+(**UTN-FRT, Argentina** — `Azukar-FPGA`, CERN-OHL-P-2.0) and a project's stated audience
+(`lenguaje-latino/latino`, MIT). ⚠️ Secondary sources; IESALC's own launch date is reported
+inconsistently (8 vs 9 September 2026) and the figures should be checked against the primary report.
+
+## T320 — 🟡 The market's own framing moved from "adopt AI" to "purpose-built, governed and embedded", and the 2026 size range is still a factor of two
+
+🟢 **The consensus across 2026 sources is a shift from experimentation to governed, embedded use**,
+and three independent framings say the same thing: **1EdTech** — *"AI in education is shifting from
+experimentation to governance"*; **HolonIQ** — **"selective AI acceleration"**, institutions
+deliberately choosing where to invest; **Campus Technology's** industry panel — AI becoming
+**embedded infrastructure across admissions, advising and administration** rather than a set of
+pilots. 🔵 **The OECD's 2026 Digital Education Outlook is reported to recommend moving beyond
+general-purpose AI tools toward purpose-built educational AI designed for durable learning gains**
+— which is the single most useful sentence in this pass for positioning, because it is the argument
+*against* the generic-chatbot pilot that most institutions have already run and been disappointed
+by. 🔵 Reliability is now the stated bar: one source has teams holding AI *"to the same reliability
+standard as login or grade sync"*.
+
+🟡 **Market size remains unsettled and should be quoted as a range with its sources named.**
+**≈ `$10.6 B`** for 2026, up from `$7.52 B` in 2025 (attributed to Research and Markets) against
+**`$12.3 B`** for 2026 (HolonIQ) — **a spread of roughly `16 %` on the same year**, which is
+*narrower* than the factor-of-five spread `p664` recorded and consistent with `p732`'s finding that
+the 2026 base is converging. A US-only projection of `$2.01 B` (2025) → `$32.64 B` (2034) circulates
+widely and is **low-confidence vendor-blog material**. ⚠️ **Read every figure here as
+secondary-source-only** (`725-F`): `unesco.org`, `iesalc.unesco.org`, `eur-lex.europa.eu` and
+`digitaleducationcouncil.com` all fail DNS resolution from this environment, so **do not spend
+another leg on primary confirmation here** — cite precisely enough that a reader with access
+settles it in one lookup. 🔵 **Demand-side detail worth carrying:** **`67 %` of academics and
+`62 %` of students use generative AI weekly** (QS, Q3 2026), the **teacher-workload and burnout
+case** is now the dominant adoption driver rather than learning gains, and **skills-based pathways
+and digital credentials** are accelerating — Pearson's agreement to acquire **Workera** for AI-skill
+verification and **Instructure building an AI study coach into Canvas** are the two concrete vendor
+moves this quarter.
+
+
+## 🆕 T298–T309 — added at `p735` (2026-11-10)
 
 **Added above `p734`'s `T286`–`T297`.** Four are instrument findings about how this base reads
 anything at all, five are supply findings, three are demand findings — and one of the three closes a
