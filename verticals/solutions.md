@@ -6,6 +6,41 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
+## 🆕 `p752` — 🟢 **THE SKILLS-AND-CREDENTIAL PLATFORM SHELF: `4` DEPLOYABLE SYSTEMS, `4 / 4` PERMISSIVE, AND `2` OF THEM ARE WHAT A MINISTRY OR A STATE AGENCY ACTUALLY RUNS. 🟢 THE TWO NATIONAL STACKS ARE NAMED AND THEY DO NOT INTEROPERATE.**
+
+### 🟢 Adoptable — real install bases, permissive grants, AI can be layered on
+
+These are the Odoo/OpenMRS/Moodle-class systems of this register: deployable platforms an institution or agency runs, that an agent can be layered onto rather than replaced by.
+
+| Platform | Repo | Grant — **byte-read 2026-11-10** | Stars | What it is, and who runs it |
+|---|---|---|---|---|
+| **OSMT** — Open Skills Management Tool | [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | 🟢 **Apache-2.0** · `10,827 B` · sha256₁₂ `43508f2110ee` — 🔴 index says `NOASSERTION` | `67★` | 🆕 A deployable web application for authoring, curating and publishing **Rich Skill Descriptors (RSDs)** and collections of them. This is the system a US state workforce agency, community-college system or employer consortium stands up to publish a skills library that others can consume. 🟢 **Spring Boot + Kotlin + Angular, Dockerised, with a documented quickstart** — it is a product, not a research prototype. **North America (CTDL/RSD stack).** |
+| **Credential Registry** | [`CredentialEngine/CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) | 🟢 **Apache-2.0** · `11,352 B` · sha256₁₂ `cae6867b9927` | `15★` | 🆕 The registry service behind the US **Credential Transparency Description Language (CTDL)** — the authoritative store of credential, learning-opportunity, competency-framework and occupation descriptions, with a published API. Pushed `2026-11-05`. **This is the system of record an agent in the North America stack reads from.** |
+| **Tabiya Open Taxonomy Platform** | [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) | 🟢 **MIT** · `1,062 B` · sha256₁₂ `ba0f37a9ceeb` | `20★` | 🆕 A hosted, versioned taxonomy service: import an ESCO-derived reference model, then **derive and maintain a localised national taxonomy from it**. Pushed the day of this pass. 🟢 **The only platform on this shelf designed from the outset for a country that does not already have a national occupational classification** — which is precisely the LATAM, Sub-Saharan Africa and South Asia situation (`T462`). |
+| **Tabiya Compass** | [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) | 🟢 **MIT** · `1,062 B` · sha256₁₂ `30a6e6212d19` | `14★` | 🆕 The deployable jobseeker-facing conversational front end over that taxonomy, with [`compass-connect`](https://github.com/tabiya-tech/compass-connect) (MIT, pushed `2026-11-10`) and [`compass-analytics`](https://github.com/tabiya-tech/compass-analytics) (MIT) as the partner-integration and measurement companions. 🟢 **Elicits skills from informal and unpaid work** — the capability a CV parser structurally cannot provide. |
+
+### 🔵 The scoping question this shelf exists to force
+
+🟢 **There is no world platform in this register. There are two, and the choice is made by geography and procurement, not by preference:**
+
+| | **North America stack** | **EMEA stack** |
+|---|---|---|
+| Vocabulary | **CTDL** + **Rich Skill Descriptors**; **O\*NET** for occupations | **ESCO** (occupations, skills, qualifications) + **ISCO**; **EQF** for levels |
+| Authoring platform | 🟢 **OSMT** (Apache-2.0) | 🟡 No equivalent OSS authoring tool found — `skillab-project` components (EPL-2.0) are pipeline pieces, not a platform |
+| Registry | 🟢 **Credential Registry** (Apache-2.0) | 🔴 ESCO is served from a Commission portal; **licence unreadable in this session**, see below |
+| Extraction library | 🟡 Thin — `onet occupation api` → `2` repositories | 🟢 **`ojd_daps_skills`** (MIT, `162★`), **`esco-skill-extractor`** (MIT, `32★`) |
+| Learner-record join | 🟢 **CLR 2.0 → CTID** ([`transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher), Apache-2.0) | 🟡 **Europass**; `credential wallet europass` → **`0`** repositories |
+
+🟢 **Read the asymmetry, because it is the engagement:** **North America has the platforms and lacks the extractors; EMEA has the extractors and lacks the platforms.** A Globant engagement in the US stack layers agents onto OSMT and the Registry and must *write* the extraction; an engagement in the EMEA stack has extraction almost for free and must *build* the authoring and registry surface. **These are different proposals, different effort shapes and different risk profiles, and the same deck cannot serve both.**
+
+### 🔴 Boundaries on this shelf — stated, because an unstated boundary reads as coverage
+
+🔴 **ESCO's own licence terms are NOT asserted on this shelf.** `esco.ec.europa.eu` fails DNS resolution in this session (`ENOTFOUND`; `curl` → `000`). Every MIT grant above reaches the *code* that transforms or serves the taxonomy; **none of them can grant rights over the ESCO classification itself**, and this base already records that split on [`../repos/foundations.md`](../repos/foundations.md) for `tabiya-esco-datasets-and-tools`, where the README carries the carve-out and the `LICENSE` file does not. 🔴 **Before a client deliverable embeds ESCO content, counsel must read the Commission's terms from the Commission's own page — which this pipeline cannot reach.**
+
+🔵 **What *is* known about the North America data layer, from search-result text rather than the authoritative page** (`www.onetcenter.org` is also unreachable here, so this is marked second-hand and should be re-read before quoting): the **O\*NET Database is published under CC BY 4.0** with version-specific attribution — commercially usable — **but the API channel and the career-exploration tools are not the same grant.** O\*NET **Web Services** data reportedly may not be re-shared onward to third parties and may not be modified, and the **Career Exploration Tools are CC BY-ND 4.0** — *NoDerivatives*, which forbids exactly the adaptation an AI product performs. 🔴 **So the bulk database is buildable and the convenient API is not**, which is the opposite of the default engineering assumption. 🟢 **Design rule: ingest the O\*NET bulk database under CC BY 4.0; do not build a product surface on the Web Services response or on the career-tools content.**
+
+🔴 **No deployable platform in this register was found for APAC or LATAM.** `asean skills framework open source` → **`0`**, `clasificacion ocupaciones open source` → **`0`**. The route is localisation of Tabiya's platform, and it is recorded here as the measured answer rather than left as a blank.
+
 ## 🆕 `p751` — 🟢 **THE SCHEDULING PLATFORM SHELF: `4` DEPLOYABLE SYSTEMS, `3` OF THEM PERMISSIVE. 🟢 CERN'S ROOM-BOOKING AND EVENT PLATFORM IS **MIT** AT `2,128★` AND THIS BASE HELD IT AT `0` MENTIONS. 🔴 THE SCHOOL-PORTAL LAYER THAT EVERY EUROPEAN PARENT USES IS ENTIRELY PROPRIETARY — AND THAT IS THE INTEGRATION OPPORTUNITY, NOT A BLOCKER.**
 
 **Pass p751 · verified 2026-11-10.** Deployable systems for the scheduling, matching and resource-allocation register. 🔵 **The division of labour on this shelf: `UniTime` and `Indico` are systems a client may already run; `Timefold` is an engine you deploy *inside* something; the portals are systems you integrate *with* and cannot adopt.**

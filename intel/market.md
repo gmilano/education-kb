@@ -185,6 +185,26 @@ the generic-chatbot pilot most institutions have already run and been disappoint
 verification, and **Instructure building an AI study coach into Canvas** — both on the
 credentials-and-skills axis rather than the tutoring axis.
 
+## 🆕 `p752` — the education-to-employment register, and a verdict on this page that was `16` months stale
+
+**`2026-11-10`.** 🟢 **The register this pass took is the transition layer — skill extraction, occupational taxonomy, credential-to-job matching: the layer that decides what a learner's record is worth in a labour market.** It is the commercial end of everything this base already holds, because a tutoring agent sells to a faculty and an assessment agent to a registrar, **but a skills agent sells to a ministry of labour, a state workforce agency or an employer consortium — and those buyers procure against a national vocabulary.**
+
+🔴 **The correction this page needs, stated plainly.** `p681` placed this opportunity **under EMEA only** and recorded that *"the measured supply behind it is poor — three permissive ESCO projects were probed and all three are dormant."* Both halves of that need amending:
+
+1. 🟢 **The dormancy measurement was right and remains right** — `3 / 3` of those addresses are still dormant (`T453`). **But the live successors existed the whole time and were never promoted**, and two were pushed the day of this pass. The register is **actively maintained**, not poorly supplied.
+2. 🔴 **The EMEA-only placement was wrong**, and it was wrong in the specific way this base is instructed to avoid. **North America has a parallel, active, Apache-2.0 stack** — [`CredentialEngine`](https://github.com/CredentialEngine)'s CTDL registry, OSMT and CLR 2.0 matcher — which sat at **`0`–`4` mentions across `751` passes. An opportunity placed in one region when it exists in two is not a placement; it is a blind spot with a label on it.**
+
+🟢 **The structural finding, and it decides scope before architecture does:** this register has **two national stacks that do not interoperate and are not trying to** — **ESCO/ISCO** in EMEA, **CTDL/RSD/O\*NET** in North America — and they are **asymmetric in opposite directions**:
+
+| | **North America** | **EMEA** |
+|---|---|---|
+| Platforms (authoring, registry) | 🟢 **Present and Apache-2.0** | 🔴 **Absent** |
+| Extraction libraries | 🔴 **Thin** — `onet occupation api` → `2` | 🟢 **Present and MIT** — `162★` and `32★` |
+
+🔵 **So the same capability is two different engagements:** in the US you layer agents onto an existing platform and **write the extraction**; in Europe extraction is nearly free and you **build the authoring and registry surface**. 🔴 **One deck cannot serve both, and a proposal that assumes the European shape in a US engagement under-scopes the hardest part of the work.**
+
+🔴 **A boundary that governs every claim below.** `esco.ec.europa.eu`, `jobtechdev.se` and `www.onetcenter.org` are all unreachable in this session (`3 / 3`, DNS `ENOTFOUND` / `curl 000`). **ESCO's licence terms are therefore not asserted anywhere in this pass**, and the O\*NET grant split recorded below came from search-result text rather than the authoritative page and is marked second-hand. `p747`'s `T396` boundary, reproduced in a second register.
+
 ## Opportunities by region
 
 > **🟢 `724-R` — two structural corrections to this section, recorded so they are not re-derived.**
@@ -226,6 +246,29 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p752` (`2026-11-10`) — 🟢 the skills-and-credential stack this page never placed here, and it is Apache-2.0
+
+🔴 **The gap first, because it is this page's own.** `p681` placed the skills-and-credentials opportunity **under EMEA only**. North America has a parallel stack that is **active, deployable and permissively licensed**, and it sat at **`0`–`4` mentions across `751` passes** (`T453`).
+
+🟢 **What exists, all byte-read `2026-11-10`:**
+
+| Component | Repo | Grant | Stars | Last push |
+|---|---|---|---|---|
+| Skills authoring/publishing platform | [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | 🟢 **Apache-2.0** (index says `NOASSERTION` — corrected, `T457`) | `67★` | `2026-07-27` |
+| Credential registry (CTDL) | [`CredentialEngine/CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) | 🟢 Apache-2.0 | `15★` | `2026-11-05` |
+| Learner-record join (CLR 2.0 → `CTID`) | [`CredentialEngine/transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher) | 🟢 Apache-2.0 | `0★` | `2026-11-04` |
+
+🟢 **Three of four addresses pushed within the fortnight before this pass — this is a live stack, not an archive.**
+
+🔵 **Why it was invisible, and the lesson generalises:** `osmt`'s Apache-2.0 payload opens with a custom notice (`Copyright 2021 Open Skills Network`) instead of the standard title block, so the index reports `NOASSERTION` and any pipeline filtering on that value discards the most deployable artefact in the region as unlicensed.
+
+🔵 **Opportunity, placed.** 🟢 **The buyable engagement is `P264`/`P262` on [`../compose/patterns.md`](../compose/patterns.md): agent-assisted Rich Skill Descriptor authoring over OSMT, published to the Credential Registry as CTDL, joined to CLR 2.0 transcripts.** The buyers are **state workforce agencies, community-college systems and employer consortia**, and the whole stack is Apache-2.0. 🔴 **The hard part is extraction, not platform** — `onet occupation api` returns **`2`** repositories, so the skills-inference layer is written, not adopted. Price accordingly.
+
+🔴 **The data-licence trap, and it is the opposite of the default engineering assumption** (second-hand; `www.onetcenter.org` unreachable here, re-read before quoting): the **O\*NET bulk Database is `CC BY 4.0`** and commercially usable with version-specific attribution, but **Web Services data** reportedly may not be re-shared onward to third parties or modified, and the **Career Exploration Tools are `CC BY-ND 4.0`** — *NoDerivatives*. 🟢 **Ingest the bulk database; do not build a product surface on the convenient API or the career-tools content** (`T463`).
+
+🔵 **Regulatory context for a 2026 proposal.** Activity is overwhelmingly at **state** level: trackers count **`134` AI-in-education bills across `31` states in 2026**, with student-data privacy dominant — **California AB 1159** bars using student data to train AI models and **Idaho SB 1227** requires privacy protections for AI tools in schools. Restrictions are appearing too (**New York A 9190** would limit classroom AI to grade 9 and above; **Illinois HB2400** bars AI from giving direct instruction). Federally, the House Education and Workforce Committee advanced the **K-12 AI Literacy and Readiness Act of 2026**. 🔴 **An April 2026 deadline for updated ADA web accessibility rules reaches vendor applications** — which lands directly on any learner-facing surface Globant ships. **Canada's AI rules remain workplace-focused rather than school-focused.** 🔵 *State bill statuses move fast; verify against the legislature before quoting.*
+
 
 #### 🆕 `p751` — the scheduling and assignment register, placed in North America
 
@@ -1175,6 +1218,32 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p752` (`2026-11-10`) — 🟢 the ESCO procurement gate is now a dated regulation, and the open-source supply for its wallet layer is `0`
+
+🟢 **This page's existing EMEA placement of the skills register is reaffirmed and sharpened — the demand signal has hardened from a buying theme into an instrument with a date.**
+
+🔴 **The instrument:** the **EU Talent Pool Regulation took effect `2026-06-01`**, and it gives **ESCO the central role as the shared vocabulary** for matching skills and occupations across member states. The Commission's `2026-07` ESCO newsletter describes expanding use in **EURES** and **Europass** matching and introduces the Europass **"Smart CV"**, alongside an ongoing revamp of the ESCO skills pillar. 🔵 An implementer example the Commission itself publishes: **CPASS**, an AI-based skills-verification platform operating in **Kenya**, which maps each skill to an ESCO identifier and cites ESCO's skill-to-occupation links as the deciding factor — while noting that **ESCO's update cycle lags fast-moving sectors**, which is a real integration caveat rather than a detail.
+
+🔴 **The measured supply against that live instrument is nil where it matters most:** `credential wallet europass` → **`0`** repositories, `labour market intelligence open source` → **`0`** (`T461`). 🟢 **This is the cleanest demand-without-supply signal in the register.**
+
+🟢 **What EMEA does have, and it is the opposite asymmetry to North America — extraction is nearly free, platforms are absent:**
+
+| Component | Repo | Grant — byte-read | Stars |
+|---|---|---|---|
+| Job-advert → skills extractor | [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** | 🟢 **`162★`** |
+| ESCO/ISCO text extractor | [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** | `32★` |
+| ESCO taxonomy extension | [`dkavargy/ESCOPlus`](https://github.com/dkavargy/ESCOPlus) | 🟢 **MIT** | `6★` |
+| Full EU-funded pipeline | [`skillab-project`](https://github.com/skillab-project) (Horizon) | 🟡 **`EPL-2.0`**, `13 / 13` repos | `0★`–`1★` |
+
+🔴 **`EPL-2.0` is the licence most often mis-summarised in this subject area and it needs a legal review, not a dependency bump:** file-scoped copyleft, a patent-retaliation clause, and **a commercial distributor must indemnify the other contributors** for liability arising from that commercial offering. 🟢 **If the review fails, substitute the MIT extractor** — it is the same dependency Skillab itself imports (`T460`), so results stay comparable.
+
+🔵 **Opportunity, placed.** 🟢 **`P261` on [`../compose/patterns.md`](../compose/patterns.md) — curriculum-to-labour-market gap analysis — is the buyable engagement**, and ESCO is a **procurement gate**: an agent that speaks ESCO can be mapped to a European funding instrument and a national qualifications framework; one that invents its own taxonomy cannot be. 🔴 **The build is the authoring and registry surface**, because EMEA has no open-source equivalent of OSMT or the Credential Registry.
+
+🔴 **Boundaries, stated.** **ESCO's own licence terms are not asserted anywhere in this pass** — `esco.ec.europa.eu` fails DNS resolution here, so counsel must read the Commission's terms from the Commission's page before ESCO content enters a deliverable. 🔴 **The Nordic national stack is outside this instrument entirely:** `user:JobtechSwe` — the Swedish Public Employment Service, publisher of the national occupational taxonomy and job-matching APIs a Nordic engagement would build against — exposes **`2` public GitHub repositories** (`ontology-files`, `2★`, no grant, last pushed `2019-12-06`; `anonymisering`, MIT, `2023-06-28`). The live taxonomy is on `jobtechdev.se`, also unreachable. 🔵 **`0` mentions across `752` passes was never negligence; it is the shape of a GitHub-only instrument** (`T396`, `T463`).
+
+🔵 **Regulatory context.** The **AI Act** treats education AI affecting access, assessment or admissions as **high-risk**, **and recruitment systems likewise** — which puts a skills-matching agent in scope on *both* counts. Under the **Digital Omnibus** (political agreement `2026-05-07`, adopted June 2026, in force **`2026-07-27`**), stand-alone **Annex III obligations were deferred from `2026-08-02` to `2026-12-02`… specifically to `2 December 2027`**, with AI embedded in regulated products following **`2 August 2028`**. 🔴 **Read that as scoping runway, not a reprieve: a system designed now will be in scope when it ships.** An EU Council text of `2026-04-24` insists AI tools **support rather than replace or isolate teachers**, and a Commission brief of `2026-10-23` reports **only about a third of national school curricula include AI competences**. **UK:** DfE published **generative-AI product safety standards for education in January 2026**, and **Ofqual** issued coursework-integrity resources in **March 2026**. **Gulf:** Dubai's **KHDA** has issued explicit responsible-AI guidance to private schools.
+
 
 #### 🆕 `p751` — the scheduling and assignment register, placed in EMEA
 
@@ -2312,6 +2381,28 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p752` (`2026-11-10`) — 🔴 an informed nil on native supply, a named route in, and the sharpest education-specific high-risk rule in any region
+
+🔴 **The nil, measured and written down rather than left blank:** `asean skills framework open source` → **`0`** repositories. `india nco occupation classification` → **`4`** (all hobby-scale). 🔴 **There is no native open-source occupational-taxonomy or skills-extraction stack for this region.** That is a measurement, not an omission.
+
+🟢 **The route in, and it is the only one found.** Tabiya's publisher names **South Asia** among its partner regions, and [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) (**MIT**, `20★`, pushed `2026-11-10`) is built specifically to **derive a localised national taxonomy** from an ESCO-derived reference model — which is exactly the need in a country that has no maintained national classification, or has one that no API serves. 🟢 **`P263` on [`../compose/patterns.md`](../compose/patterns.md) is the engagement pattern**: localisation of a permissive platform, **not** adoption of a local stack, because no local stack exists (`T462`). 🟡 At `14★`–`20★` Globant adopts the architecture and carries the maintenance — say so in the proposal.
+
+🔴 **The regulatory picture is the most consequential for this register of any region, because one country names education AI as high-risk in sector-specific terms:**
+
+| Jurisdiction | Instrument | What it means for a skills or assessment agent |
+|---|---|---|
+| 🇻🇳 **Vietnam** | A **July 2026** decision identifies high-risk AI systems across **six sectors, including education** — naming automated assessment and behavioural tools | 🔴 **The most education-specific high-risk designation found in any region.** Note the qualifier: many listed systems count as high-risk **only when their output is used in certain ways**, so *how* a Globant deliverable's output is consumed is part of the compliance analysis, not just what it computes. |
+| 🇰🇷 **Korea** | **AI Basic Act**, in force **`2026-01-22`**; enforcement decrees still being finalised | 🟡 Grace period through 2026 focused on guidance rather than penalties — a window, and it is closing. |
+| 🇨🇳 **China** | Mandatory registration, strict content-labelling obligations | 🔴 Penalties to **¥50M**. The most developed framework in the region. |
+| 🇦🇺 **Australia** | **TEQSA** requires **all** higher-education providers to file institutional action plans addressing generative-AI risk | 🟢 **A named, universal, institution-level deliverable — this is a concrete services opportunity, not just a constraint.** |
+| 🇯🇵 **Japan** | Principles-based; cooperation and existing law rather than penalties | 🟡 Transparency expectations still apply. |
+| 🇸🇬 **Singapore** | **AI Verify** toolkits rather than hard law | 🟢 Testing-and-attestation route; useful as an assurance artefact. |
+
+🔴 **Cross-border exposure is real and often missed in APAC scoping:** the EU AI Act's education and recruitment high-risk categories **reach APAC providers serving EU learners or employers**, on the `2026-12-02`… **`2 December 2027`** Annex III timeline. 🔵 *Sources conflict on several of these dates; verify against final texts before quoting to a client.*
+
+🔵 **Opportunity, placed.** 🟢 **The two buyable engagements here are different in kind:** (a) **taxonomy localisation** via `P263` for ministries and development programmes in South and Southeast Asia, where supply is nil; and (b) **AI governance and assurance work** — Australia's TEQSA action plans, Singapore's AI Verify attestations, Korea's pre-decree readiness — which is advisory-plus-implementation work that the measured absence of local open-source supply does nothing to diminish. 🔴 **Do not propose a single APAC approach: the regulatory instruments differ by country more sharply here than in any other region.**
+
+
 #### 🆕 `p751` — the scheduling and assignment register, placed in APAC
 
 🔴 **APAC has the binding pre-launch control that no other region has, and it lands on exactly this register.** China's framework — covering algorithmic recommendation, deep synthesis and generative AI — requires public-facing services to complete a **security assessment and algorithm filing *before* launch**. 🔴 **A public-facing school-place allocation or timetable-publication service in China is therefore a filing exercise before it is an engineering exercise**, and that sequencing has to be in the plan from day one rather than discovered at go-live.
@@ -3354,6 +3445,30 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p752` (`2026-11-10`) — 🔴 an informed nil on native supply, and the one open platform whose publisher actually names this region
+
+🔴 **The nil, measured:** `clasificacion ocupaciones open source` → **`0`** repositories. `cbo ocupacoes brasil` → **`3`**, all hobby-scale. 🔴 **There is no native open-source occupational-taxonomy or skills-extraction stack for LATAM.** Written down because, as this base's own instructions put it, an informed gap is information while silence looks exactly like coverage.
+
+🟢 **The route in.** Tabiya's published material names **Latin America** among its partner regions, and [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) (**MIT**, `20★`, pushed `2026-11-10`) exists to **derive a localised national taxonomy** from an ESCO-derived reference model. 🟢 **Paired with [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) (**MIT**, pushed `2026-11-10`), which elicits skills from informal, subsistence and unpaid work, this is the single best-matched open stack in this base for the LATAM labour market** — because the informal sector is not an edge case here, and a CV-parser agent cannot see it at all (`T462`). 🟢 **`P263` on [`../compose/patterns.md`](../compose/patterns.md) is the engagement.** 🟡 `14★`–`20★`: adopt the architecture, carry the maintenance, price it that way.
+
+🔵 **The demand context is unusually well quantified this pass, and it is an adoption-versus-governance gap rather than an adoption gap:**
+
+| Measure | Figure | Source |
+|---|---|---|
+| HEIs using AI in at least one area | **`87%`** (200 institutions, 19 countries) | UNESCO **IESALC** study, Sept 2026 |
+| …using it in teaching and learning | **`74%`** | same |
+| 🔴 …with a **formal AI strategy** | 🔴 **`26%`** | same |
+| 🔴 Institutions with formal guidelines (regional) | 🔴 **fewer than `10%`** | UNESCO regional Observatory launch |
+| Students actively engaging with AI | **`92%`** (faculty **`79%`**) | Digital Education Council LATAM survey 2026, with **Tec de Monterrey** IFE (29 institutions) |
+| Uruguay public-school teachers using AI | **`75%`** | **Ceibal** |
+| Brazil internet users aged 9–17 using AI | **`65%`** — 🔴 but only **`22%`** report school guidelines | **Cetic.br** |
+| Regulatory instruments and proposals | **`716`** across **23** countries/territories | Universidad de los Andes, 2026 |
+
+🔵 **Key institutional players to name in a proposal:** **UNESCO** (regional **Observatory on AI in Education for LAC**, launched April 2026) and **UNESCO IESALC**; **Ceibal** (Uruguay) and **Cetic.br** (Brazil) for national data; **Tecnológico de Monterrey**'s Institute for the Future of Education; **CENIA** (Chile) on ethical AI in education. 🔴 **No binding AI-in-education law was found in the region** — governance is guidance and proposals, which is precisely why the `26%`/`<10%` figures are the opening of a conversation rather than a footnote.
+
+🔵 **Opportunity, placed, and it follows from the governance gap rather than from the supply.** 🟢 **Adoption is already near-universal and governance is nearly absent — so the first sellable deliverable in LATAM is usually not a model but an institutional AI strategy, policy and assurance framework, with implementation behind it.** 🟢 **Then, where the buyer is a labour ministry or employability programme rather than a university, `P263`: Tabiya localisation for informal-skills elicitation.** 🔴 **Scoping caveat worth stating in the room:** the survey bases differ by an order of magnitude (`200` institutions vs `29`), and the UNESCO study's launch date is reported inconsistently across sources — quote the direction confidently and the decimals carefully.
+
 
 #### 🆕 `p751` — the scheduling and assignment register, placed in LATAM
 
@@ -4466,6 +4581,25 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p752` (`2026-11-10`) — the register's one global rule, and three artefacts nobody may ship
+
+🟢 **The global rule, and it is the whole register in a sentence:** *the generic layer is saturated and the taxonomy-anchored education layer does not exist* — `resume parser` **`13,108`** repositories and `job matching agent llm` **`189`** against `skills taxonomy open source` **`4`**, `onet occupation api` **`2`**, `labour market intelligence open source` **`0`** and `credential wallet europass` **`0`** (`T454`). 🟢 **So Globant does not buy a career agent in any region: it buys a permissive extractor plus a permissive taxonomy service and writes the matching semantics itself.** The `189` "job matching agents" are CV-keyword matchers that cannot be mapped to any national qualifications framework, which is the only thing a ministry or an agency is buying.
+
+🔴 **Three artefacts that cannot enter a client deliverable, globally, and each one would be reached for by default:**
+
+| Address | Stars | What the bytes say |
+|---|---|---|
+| [`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap) | 🔴 **`371,756★`** | 🔴 **All rights reserved, personal use only** — no commercial, derivative or republication rights. Indexed `NOASSERTION`; grant at **lowercase `license`**. 🔴 **And it has moved owner** — `kamranahmedse/developer-roadmap` now returns `422`, while every published roundup consulted still cites it (`T458`, `T459`). |
+| [`workforce-data-initiative/skills-api`](https://github.com/workforce-data-initiative/skills-api) | `214★` | 🔴 **Non-commercial, and its licence names a different program** (`aequitas`, University of Chicago). Dead since `2018-07-24`. 🔵 Already held as `681-J` on [`measured-unusable.md`](measured-unusable.md), re-confirmed byte-identical. |
+| [`jensjorisdecorte/Skill-Extraction-benchmark`](https://github.com/jensjorisdecorte/Skill-Extraction-benchmark) | `17★` | 🔴 **No grant at `12` probed paths** — the dataset this research field evaluates against. 🔴 **A published accuracy claim measured on unlicensed data cannot be reproduced in a deliverable.** |
+
+🔵 **Why these three belong on a market page and not only on a licence page:** each is the artefact a competent team would reach for first — the most-cited learning-path asset, the most-starred "open skills API", and the field's standard benchmark — and **all three are unusable**. 🟢 **`P264` on [`../compose/patterns.md`](../compose/patterns.md) is the two-to-three-day gate that catches this, and it paid for itself four times in this single pass.**
+
+🟢 **Instrument gain worth recording on this page because it changes what "we checked" means:** `repo:{owner}/{name}` **is** a valid qualifier on `search/repositories` — `total_count: 1` for addresses that exist (`2 / 2`), `422` for those that do not (`3 / 3`), agreeing with the raw channel `5 / 5`. **`422` is an existence signal, not an instrument fault**, which corrects `p736`'s `T310` and gives this base a second oracle that does not need a `README` to exist (`T455`).
+
+🔴 **And the global demand signal under all of it, from the trends legs:** every 2026 leg this pass ran named **skills-based pathways and digital credentials** as a buying theme, driven by shifting employer expectations — while the OECD's 2026 Digital Education Outlook (as cited) pushes institutions **beyond general-purpose AI toward purpose-built educational AI**. 🟢 **Those two pressures point at the same product: a taxonomy-anchored, jurisdiction-aware skills agent — which is precisely what the `0`-repository heads above say nobody has built yet.**
+
 
 #### 🆕 `p751` — the scheduling and assignment register, placed globally
 

@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p752) — 🟢 **THE SKILLS-AND-CREDENTIAL SUBSTRATE: `9` ROWS, `7` PERMISSIVE, AND `3` OF THEM PUSHED WITHIN THE FORTNIGHT. 🟢 AN APACHE-2.0 US REGISTRY STACK WAS INVISIBLE FOR `751` PASSES BECAUSE ITS INDEX SAYS `NOASSERTION`. 🔴 THE ONLY COPYLEFT IN THE SUBSTRATE IS `EPL-2.0` AND IT CARRIES A COMMERCIAL-DISTRIBUTOR INDEMNITY CLAUSE.**
+
+### What is new this week in this register
+
+`7` foundation rows added on [`foundations.md`](foundations.md), all byte-read `2026-11-10`. The substrate under the education-to-employment layer has split into **two national stacks that do not interoperate** — and a pass that holds only one of them mis-scopes every engagement in the other.
+
+| Repo | Stars | Grant — **byte-read** | Last push | Stack |
+|---|---|---|---|---|
+| [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **`162★`** | 🟢 MIT · sha256₁₂ `3ffac39424a5` | `2025-06-09` | **EMEA** — ESCO/UK |
+| [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | `67★` | 🟢 **Apache-2.0** · sha256₁₂ `43508f2110ee` — index `NOASSERTION`, **corrected** | `2026-07-27` | **North America** — CTDL/RSD |
+| [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | `32★` | 🟢 MIT · sha256₁₂ `472a065dfc26` | `2025-06-12` | **EMEA** |
+| [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) | `20★` | 🟢 MIT · sha256₁₂ `ba0f37a9ceeb` | 🟢 **`2026-11-10`** | **Global / LATAM-capable** |
+| [`CredentialEngine/CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) | `15★` | 🟢 Apache-2.0 · sha256₁₂ `cae6867b9927` | 🟢 `2026-11-05` | **North America** |
+| [`colaberry/WorldOfTaxonomy`](https://github.com/colaberry/WorldOfTaxonomy) | `11★` | 🟢 MIT · sha256₁₂ `96af759baac2` | `2026-08-03` | crosswalk |
+| [`dkavargy/ESCOPlus`](https://github.com/dkavargy/ESCOPlus) | `6★` | 🟢 MIT · sha256₁₂ `46ba4782b3f8` | `2025-04-08` | **EMEA** |
+| [`CredentialEngine/transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher) | `0★` | 🟢 Apache-2.0 · sha256₁₂ `c95bae1d1ce0` | 🟢 `2026-11-04` | **North America** — CLR 2.0 join |
+| [`skillab-project/curriculum-skills`](https://github.com/skillab-project/curriculum-skills) | `0★` | 🟡 **EPL-2.0** · sha256₁₂ `8c349f80764d` | `2026-09-17` | **EMEA** — EU Horizon |
+
+### 🟢 The movement of the week: an active US stack that this base could not see
+
+Three of the four [`CredentialEngine`](https://github.com/CredentialEngine) addresses were **pushed within the fortnight before this pass** (`2026-11-04`, `2026-11-05`, `2026-11-09`). The organisation publishes the **CTDL** vocabularies, the **Credential Registry** that stores them, **OSMT** for authoring Rich Skill Descriptors, and a **CLR 2.0 transcript → registry matcher**. 🔴 **It sat at `≤4` mentions across `751` passes, and `osmt` at exactly `0`, for a mechanical reason worth generalising: its flagship repository is indexed `NOASSERTION` because its Apache-2.0 payload opens with a custom copyright notice (`Copyright 2021 Open Skills Network`) instead of the standard title block.** Any discovery pipeline that filters on the index value discards it as unlicensed. 🟢 **Byte-read, it is permissive and Globant can build on it.**
+
+🔵 **The byte-length discriminator, recorded because it is reusable.** Standard Apache-2.0 payloads measured **twice in this same pass** come to `11,352 B` (`CredentialRegistry`) and `11,358 B` (`transcript-ctid-matcher`); `osmt`'s is `10,827 B` — **`~525 B` shorter**, because the boilerplate appendix was replaced by a real notice. 🟢 **A payload that is Apache-length-minus-the-appendix and opens with a bare copyright line is the signature of a *completed* Apache-2.0 grant, not a missing one.** This refines `p751`'s `T440`, which found the MIT "exact constant" method fails for Apache-2.0: the constant fails, but the **length band plus the `"Licensed under the Apache License, Version 2.0"` line** is a sound classifier.
+
+### 🔴 The only copyleft here is `EPL-2.0`, and it is the one most often mis-summarised
+
+The EU-funded [`skillab-project`](https://github.com/skillab-project) consortium ships the complete pipeline for this register — curriculum-skills crawler, job-ads collector, occupational-demand forecaster, explainable occupation analyser, tracker — and **`13 / 13`** of its licensed repositories carry **`EPL-2.0`**, byte-identical at `14,197 B`, sha256₁₂ `8c349f80764d`.
+
+🔴 **`EPL-2.0` is neither permissive nor GPL and behaves like neither.** Copyleft is **file-scoped** (modified EPL files stay EPL; a larger work that links the component may stay proprietary), there is a **patent-retaliation clause**, and — the clause that actually bites a services business — **a party who distributes the software commercially must indemnify the other contributors** for liability arising from that commercial offering. 🟢 **Usable, but it is a legal review rather than a dependency bump.**
+
+### 🔵 Declared nils and boundaries — written down so they do not read as coverage
+
+🔴 **`labour market intelligence open source` → `0` repositories. `credential wallet europass` → `0`** — against an EU instrument that has been live since `2026-06-01`. 🔴 **`onet occupation api` → `2`**, for the United States' national occupational database.
+
+🔴 **Three authoritative hosts are unreachable in this session** (`esco.ec.europa.eu`, `jobtechdev.se`, `www.onetcenter.org` — `3 / 3`, DNS `ENOTFOUND` / `curl 000`). Consequence recorded honestly: **ESCO's data licence is not asserted anywhere in this pass**, and the Swedish national taxonomy — which `user:JobtechSwe` exposes on GitHub only as a `2★` ontology dump last pushed `2019-12-06` — cannot be evaluated through this instrument at all. `p747`'s `T396` boundary, reproduced in a second register.
+
+🔴 **APAC and LATAM have no native open-source supply in this substrate:** `asean skills framework open source` → **`0`**, `clasificacion ocupaciones open source` → **`0`**, `cbo ocupacoes brasil` → `3` (hobby-scale), `india nco occupation classification` → `4`. 🟢 **The route into both regions is therefore *localisation of a permissive platform* — `taxonomy-model-application` is built for exactly that — and not adoption of a local stack, because none exists.**
+
 ## 🆕 2026-11-10 (p751) — 🟢 **THE SOLVER SUBSTRATE: `15` ROWS, `13 / 13` GENERAL-PURPOSE SOLVERS PERMISSIVE, TOPPED BY `or-tools` AT `14,359★` PUSHED THE DAY OF THIS PASS. 🔴 THE COPYLEFT IS NOT IN THE SOLVERS — IT IS IN THE *EDUCATION* SOLVERS. 🟢 CERN'S MIT ROOM-BOOKING PLATFORM WAS AT `0` MENTIONS. 🔴 FIVE APACHE-2.0 PAYLOAD HASHES, TWO COLLIDING ON BYTE COUNT.**
 
 **`15` foundations rows · `3` routing rows · `4` platform rows · `41` addresses probed · `31` licence

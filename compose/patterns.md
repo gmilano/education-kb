@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 `P261`–`P264` — added at p752 (2026-11-10)
+
+🟢 **These four recipes serve the education-to-employment transition layer — the join between what a learner's record says and what a labour market will pay for.** Every component is named with its address, its byte-read grant and its region, because in this register **the stack is chosen by jurisdiction before it is chosen by architecture** (see [`../verticals/solutions.md`](../verticals/solutions.md) for the two-stack table).
+
+🔴 **A constraint that applies to all four and is not negotiable:** the MIT and Apache-2.0 grants below reach the **code**. They do **not** convey rights over the **taxonomy data** — ESCO remains under European Commission terms, which this session could not read (`esco.ec.europa.eu` → `ENOTFOUND`), and O\*NET's bulk database, API channel and career-exploration tools carry **three different** grants, one of which (`CC BY-ND 4.0`) forbids derivative work. **Settle the data licence before the architecture.**
+
+### 🟢 `P261` — Skills-based curriculum-to-labour-market gap analysis (the flagship, EMEA)
+
+**The ask it answers:** *"Does what we teach match what employers in this country are hiring for, and where exactly is the gap?"* — a ministry, a university system or a TVET authority, and the question behind most EMEA skills-funding instruments.
+
+**Wiring:**
+1. **Extract from the demand side.** [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) (**MIT**, `162★`, sha256₁₂ `3ffac39424a5`) over a job-advert corpus → skill spans mapped to a taxonomy. 🟡 `17` months cold — vendor it, pin it, expect to maintain it yourself.
+2. **Extract from the supply side.** [`skillab-project/curriculum-skills`](https://github.com/skillab-project/curriculum-skills) (**EPL-2.0**, sha256₁₂ `8c349f80764d`) → skills *taught* by each programme. 🔴 **EPL-2.0: file-scoped copyleft plus a commercial-distributor indemnity clause — legal review before it enters a deliverable.** 🟢 **If that review fails, substitute** [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) (**MIT**, `32★`, sha256₁₂ `472a065dfc26`) and run it over syllabus text — it is the same dependency Skillab itself imports, so the mapping stays comparable.
+3. **Normalise both sides onto one vocabulary** — ESCO/ISCO, optionally extended with [`dkavargy/ESCOPlus`](https://github.com/dkavargy/ESCOPlus) (**MIT**, sha256₁₂ `46ba4782b3f8`) for richer skill relations.
+4. **Agent layer:** an orchestrator that runs both extractions, diffs the two skill sets per programme and per region, and writes a ranked gap report with evidence links back to the source adverts and syllabi. 🔴 **Make the evidence link mandatory in the output schema** — a gap claim a dean cannot trace to adverts is a claim they will reject.
+5. **Serve it** behind the institution's existing identity federation (this base's `p747` register) so a faculty sees only its own programmes.
+
+**Effort:** `8`–`10` weeks. **Region: EMEA.** 🟢 **Why it wins here specifically:** this base already records ESCO as a *procurement gate* — an agent that speaks ESCO can be mapped to a European funding instrument and a national qualifications framework; one that invents its own taxonomy cannot. That is a tender requirement, not a feature.
+
+### 🟢 `P262` — Rich Skill Descriptor publishing pipeline with agent-assisted authoring (North America)
+
+**The ask it answers:** *"We have `400` courses and `60` credentials; publish them as machine-readable skills employers can actually consume."* — a state workforce agency, community-college system or employer consortium.
+
+**Wiring:**
+1. **Stand up the platform.** [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) (**Apache-2.0** on byte-read — `10,827 B`, sha256₁₂ `43508f2110ee` — against an index that says `NOASSERTION`; `67★`), Dockerised, as the authoring and publication surface for **Rich Skill Descriptors**.
+2. **Agent-assisted drafting.** An LLM agent reads course outlines and credential documents and drafts RSD statements — skill statement, category, alignment, occupation links — into OSMT **as drafts for human curation, never as published records.** 🔴 **The published/draft boundary is the control that makes this safe to sell**: a published RSD is a public claim about what a credential certifies.
+3. **Publish and join.** Push curated collections to [`CredentialEngine/CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) (**Apache-2.0**, sha256₁₂ `cae6867b9927`) as CTDL, then use [`CredentialEngine/transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher) (**Apache-2.0**, sha256₁₂ `c95bae1d1ce0`) to match **CLR 2.0** learner transcripts to registry entries and write back `CTID`s. 🟡 `0★`, pushed `2026-11-04` — early; budget to contribute fixes upstream.
+4. **Occupation context** from the **O\*NET bulk database** under **CC BY 4.0** with version-specific attribution. 🔴 **Not from the Web Services API and not from the career-exploration tools** — different grants, one of them `ND`.
+
+**Effort:** `6`–`8` weeks for the pipeline, plus curation capacity that is the client's to staff. **Region: North America.** 🟢 **Why it wins:** this is the join between the credential standards this base already holds on the LMS side and the labour-market side it did not — and the whole stack is Apache-2.0.
+
+### 🟢 `P263` — Informal-skills elicitation for a country with no national taxonomy (LATAM / Sub-Saharan Africa / South Asia)
+
+**The ask it answers:** *"Most of our workforce has no formal CV and much of their work is informal. Build employability services anyway."* — a labour ministry, a development programme or an NGO consortium. 🔴 **This is the pattern for the regions where `clasificacion ocupaciones open source` and `asean skills framework open source` both return `0`.**
+
+**Wiring:**
+1. **Derive a national taxonomy** rather than importing one. [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) (**MIT**, `20★`, sha256₁₂ `ba0f37a9ceeb`, pushed `2026-11-10`) hosts the ESCO-derived reference model and supports deriving a **localised** variant — local occupation names, local sectors, informal livelihoods that ESCO does not enumerate.
+2. **Elicit skills conversationally.** [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) (**MIT**, `14★`, sha256₁₂ `30a6e6212d19`, pushed `2026-11-10`) — built to surface skills from **informal, subsistence and unpaid work**. 🟢 **This is the capability no CV parser in the `13,108`-repository generic head provides**, and it is the whole reason this pattern exists.
+3. **Classify** with [`tabiya-tech/tabiya-livelihoods-classifier`](https://github.com/tabiya-tech/tabiya-livelihoods-classifier) (**MIT**, `7★`) for free-text → taxonomy entity extraction.
+4. **Integrate and measure** via [`compass-connect`](https://github.com/tabiya-tech/compass-connect) and [`compass-analytics`](https://github.com/tabiya-tech/compass-analytics) (both **MIT**, pushed `2026-11-10`/`2026-09-18`).
+5. **Localise the language properly** — not translation of ESCO labels but local occupational vocabulary, elicited and validated with local partners. 🔴 **The failure mode of every import-a-taxonomy project is that the categories do not name the work people actually do.**
+
+**Effort:** `10`–`14` weeks, dominated by taxonomy localisation and validation rather than engineering. **Region: LATAM, EMEA (Sub-Saharan Africa), APAC (South Asia).** 🟡 **Honest risk:** the entire stack is `≤20★`. Globant would adopt the architecture and carry the maintenance — price it that way, and say so in the proposal.
+
+### 🟢 `P264` — The licence-and-provenance gate for any skills or learning-path deliverable (all regions)
+
+**The ask it answers:** *"Can we ship this?"* — and in this register the answer is "no" far more often than teams expect. 🔴 **This pattern exists because the three highest-starred artefacts touched this pass are all unusable, and `2` of the `3` hide that fact at a non-canonical file path.**
+
+**Wiring — run this before any content or taxonomy enters a deliverable:**
+1. **Resolve the address.** `gh api -X GET search/repositories -f q=repo:{owner}/{name}` → `total_count: 1` means it exists; **`422` means the address is dead or moved**, not that the query is malformed (`T455`, controlled `5 / 5` against the raw channel this pass). 🔴 **`kamranahmedse/developer-roadmap` → `422`; the repository is now `nilbuild/developer-roadmap`.** Every published roundup consulted still cites the old owner.
+2. **Byte-read the grant, and probe the full ordered chain** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, **`LICENSE.TXT`**, `LICENCE`, `COPYING`, **lowercase `license`**. 🔴 **`2` of this pass's `3` most consequential payloads sat at non-canonical paths**: `LICENSE.txt` and lowercase `license`. A chain that stops at `LICENSE`/`LICENSE.md` publishes an all-rights-reserved repository as "no grant found", **which a client reads as permissive by omission** (`T464`).
+3. **Never trust the index value.** It was wrong in **both directions** this pass: `CredentialEngine/osmt` is indexed `NOASSERTION` and is **Apache-2.0** (buildable), while `nilbuild/developer-roadmap` is indexed `NOASSERTION` and is **all rights reserved, personal use only** (`923 B`, sha256₁₂ `875c1bdc92d1`, `371,756★`).
+4. **Read the README's licence section too, not only the grant file.** The code/data split in this register lives in prose: `tabiya-esco-datasets-and-tools` carries an unqualified MIT `LICENSE` over a directory of **EU-licensed** ESCO data, with the carve-out stated only in the README.
+5. **Take the upstream, never the copy.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT** (`1,065 B`, sha256₁₂ `ba2525637432`); third-party copies [`bhanuaraveti/OpenMAIC`](https://github.com/bhanuaraveti/OpenMAIC) and `guochaopeng110-maker/MAIC-AI-Classroom` relicense it to **AGPL-3.0**. `T355` reproduced.
+6. **Check the benchmark, not just the model.** [`jensjorisdecorte/Skill-Extraction-benchmark`](https://github.com/jensjorisdecorte/Skill-Extraction-benchmark) — the dataset this field evaluates against — carries **no grant at `12` probed paths**. 🔴 **A published accuracy claim measured on unlicensed data is a claim Globant cannot reproduce in a deliverable.**
+
+**Effort:** `2`–`3` days per engagement, and it has already paid for itself four times in one pass. 🟢 **Region: all.** 🔵 **The mandated `curl -sI https://github.com/{owner}/{repo}` control re-ran `2 / 2` this pass and still has no discriminating power here — a live repository and an invented one both return `403`, and the *first* line of output is the proxy's `HTTP/1.1 200 Connection Established`, which reads like success. Read the status code, not the first line.**
+
+
 ## 🆕 P256–P260 — added at p751 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the recipe.**

@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p752) — 🟢 **THE EDUCATION-TO-EMPLOYMENT AGENT LAYER: `p681`'S "SUPPLY IS POOR, ALL DORMANT" VERDICT IS STALE AND THE LIVE SUCCESSORS WERE PUSHED THE DAY OF THIS PASS. 🔴 THE MANDATED `github trending` LEG NILLED FOR THE `37`th CONSECUTIVE TIME — `4 / 4` ALREADY HELD. 🔴 A `371,756★` REPOSITORY IS PERSONAL-USE-ONLY AND HAS MOVED OWNER.**
+
+### What is new this week in this register
+
+🟢 **`6` agent rows added** (`5` MIT, `1` Apache-2.0), all byte-read `2026-11-10`. `38` addresses probed, `19` licence payloads byte-read, `21` query denominators measured, `2` index values materially corrected, `T453`–`T464` declared. Full rows and reasoning on [`top.md`](top.md).
+
+**The three movements worth a client's attention this week:**
+
+🟢 **1. A permissive, maintained, taxonomy-anchored career agent now exists, and it did not a week ago in this base's record.** [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) (**MIT**, `14★`) and [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) (**MIT**, `20★`) were both **pushed `2026-11-10`, the day of this pass**, and [`tabiya-tech/tabiya-livelihoods-classifier`](https://github.com/tabiya-tech/tabiya-livelihoods-classifier) (**MIT**, `7★`) on `2026-11-05`. The distinguishing capability is that Compass elicits skills from **informal** work — subsistence trade, care work, unpaid family labour — which is the half of the labour market that CV-parser agents structurally cannot see.
+
+🟢 **2. The North America stack surfaced for the first time in `751` passes.** [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) — **`67★`, Apache-2.0 on byte-read against an index that says `NOASSERTION`** — plus [`CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) (Apache-2.0, `15★`, pushed `2026-11-05`) and [`transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher) (Apache-2.0, pushed `2026-11-04`). 🟢 **Three of those four addresses were pushed within the fortnight: this is an active stack, not an archive.**
+
+🔴 **3. The most-cited learning-path asset in the industry is not usable and has moved.** [`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap), **`371,756★`** — all-rights-reserved, personal-use-only (`923 B`, sha256₁₂ `875c1bdc92d1`, at **lowercase `license`**), and `repo:kamranahmedse/developer-roadmap` now returns **`422`**. Every published roundup consulted this pass still cites the old owner.
+
+### 🔴 The mandated `github trending` leg nilled again — `37` consecutive passes — and here is the measurement
+
+The leg returned four repositories. **All four were already held**, and a shelf `grep` gives the mention counts:
+
+| Returned by the leg | **Verified this pass** | Grant — byte-read | Already held? |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **`43,228★`**, pushed `2026-11-10` | 🟢 **MIT** · `1,065 B` · sha256₁₂ `ba2525637432` | 🔵 **Yes — `682` mentions.** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`57,965★`**, pushed `2026-11-07` | 🟢 **Apache-2.0** · `11,408 B` · sha256₁₂ `cd2f54e1e506` | 🔵 **Yes — `1,217` mentions.** |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | **`41,712★`**, pushed `2026-11-01` | 🟢 **MIT** · `1,066 B` · sha256₁₂ `93123909818c` | 🔵 **Yes — `95` mentions.** |
+| [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) | **`84,335★`**, pushed `2026-10-26` | 🔴 **`NONE` — no grant** | 🔵 **Yes — `45` mentions.** |
+
+🔴 **And the secondary sources were wrong about the numbers, in the direction that matters.** The published roundup this leg surfaced put DeepTutor at *"about 45K stars"*; the verified count is **`57,965★`** — understated by roughly **`13,000`**. OpenMAIC was given as *"roughly 42K"* against a verified `43,228★`. 🟢 **`P210` holds and is now `37`-for-`37`: the mandated discovery legs trail these shelves, and the value this pass adds came entirely from register-specific heads (`esco skill extraction`, `onet occupation api`, `user:CredentialEngine`, `user:tabiya-tech`), not from the generic trending leg.**
+
+### 🔵 Informed gaps — declared, not silent
+
+🔴 **ESCO's own data licence could not be read in this session and is therefore NOT asserted anywhere in this pass.** `esco.ec.europa.eu` fails DNS resolution (`ENOTFOUND`) and `curl` returns `000`; so do `jobtechdev.se` and `www.onetcenter.org`, `3 / 3` hosts. This is the `p747` `T396` boundary exactly — a GitHub-only instrument cannot read a licence that lives on a government portal. **To quote ESCO's terms to a client, this pipeline needs those hosts allowed in the session's network policy.** What *is* recorded below on O\*NET came from search-result text, not from the authoritative page, and is marked as such.
+
+🔴 **The Swedish national stack is outside this instrument.** `user:JobtechSwe` — the Swedish Public Employment Service, which publishes the national occupational taxonomy and job-matching APIs that EMEA engagements in the Nordics would actually build against — returns **`2` public repositories**: `ontology-files` (`2★`, no grant, last pushed `2019-12-06`) and `anonymisering` (`0★`, MIT, `2023-06-28`). The live taxonomy and APIs are on `jobtechdev.se`, which is unreachable here. 🔵 **`0` mentions across `752` passes was never negligence; it is the shape of a GitHub-only instrument.**
+
+🔴 **APAC and LATAM returned no register-specific open-source supply, and that is written down rather than left blank.** `asean skills framework open source` → **`0`** repositories. `clasificacion ocupaciones open source` → **`0`**. `cbo ocupacoes brasil` → `3` (all hobby-scale). `india nco occupation classification` → `4`. 🟢 **The one exception, and it is the only open route into both regions:** Tabiya's publisher names Sub-Saharan Africa, **Latin America** and South Asia as partner regions, and its platform is explicitly built to derive *localised national* taxonomies from the reference model — so the LATAM and APAC path in this register is **localisation of a permissive platform, not adoption of a local one, because no local one exists** (`T462`).
+
 ## 🆕 2026-11-10 (p751) — 🔴 **THE SCHEDULING AND ALLOCATION LAYER: `750` PASSES HELD THE TIMETABLING APPLICATIONS AND `0` OF THE SOLVER UNDER THEM. 🔴 THE VERTICAL AGENT LAYER IS `110 : 1` AGAINST — `9` AGAINST `991`. 🔴 `8 / 9` "TIMETABLING AGENTS" READ A TIMETABLE AND `1` BUILDS ONE, AND IT IS `AGPL-3.0` AT `0★`. 🔴 TWO DEFECTS FOUND IN THIS BASE'S OWN LICENCE INSTRUMENT.**
 
 **`6` agent rows (all MIT) · `15` foundations rows · `4` platform rows · `41` addresses probed · `33`

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p752` (researched 2026-11-10) — `T453`–`T464`
+
+**Register: the education-to-employment transition layer.** `38` addresses probed, `19` licence payloads byte-read, `21` query denominators measured, `2` index values materially corrected — **one in each direction**.
+
+### 🟢 `T453` — a dormancy verdict is a statement about an address, never about a register
+
+`p681` placed this register under **EMEA** and concluded *"the measured supply behind it is poor… three permissive ESCO projects were probed and all three are dormant."* Re-measured `2026-11-10`, **`3 / 3` of those addresses are still dormant and `p681` was right about each one** (`nestauk/skills-taxonomy-v2` `2022-10-12`, `tabiya-open-dataset` `2024-03-06`, `tabiya-esco-datasets-and-tools` `2024-08-29`). 🔴 **The defect was in the inference, not the measurement:** all three probes were **dataset** repositories, and the **code** repositories in the same organisations were live the whole time — [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) and [`taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) were **pushed the day of this pass**, and the same publisher as the dormant Nesta repository ships [`ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) at `162★`. 🟢 **Rule: before quoting a scarcity verdict, re-probe the publisher, not the repository.**
+
+### 🔴 `T454` — the vertical-to-generic supply ratio in this register is roughly `1,000 : 1`
+
+`resume parser` → **`13,108`** repositories; `hr mcp server` → `223`; `job matching agent llm` → `189`; against `skills taxonomy open source` → **`4`**, `onet occupation api` → **`2`**, `labour market intelligence open source` → **`0`**, `credential wallet europass` → **`0`**. 🔵 **This is the `T402`/`T443` shape for the third consecutive register:** the commercial-generic layer is abundant and the taxonomy-anchored education layer does not exist. 🟢 **Consequence for proposals: buy the extractor and the taxonomy service, write the matching semantics.**
+
+### 🔴 `T455` — `repo:{owner}/{name}` *is* a valid qualifier, and `p736`'s `T310` is corrected
+
+`T310` recorded that `repo:{owner}/{name}` *"is not a valid qualifier for this endpoint"* and read its `422` as such. **Controlled `5 / 5` this pass against the raw channel:** `repo:` returns `total_count: 1` with complete metadata for every address that exists (`nestauk/ojd_daps_skills`, `CredentialEngine/osmt` — `2 / 2`) and `422` for every address that does not (`JobtechSwe/jobtech-taxonomy-api`, `dssg/skills-ml`, an invented address — `3 / 3`), **agreeing with the raw channel on all five**. 🟢 **`422` means the address is absent or moved — it is an existence signal, not an instrument fault.** This gives the base a **second existence oracle that does not depend on a `README` existing**, which the raw channel does. 🔵 `T289`'s separate finding stands unchanged: the `repos/` namespace is still `403` and must not be used.
+
+### 🔴 `T456` — a four-letter vertical acronym is not a search term where it collides with a Romance-language stem
+
+`esco mcp server` → `7` repositories, of which **`5` match `esco-`/`escola`/`escolar` as a substring** (a mail plugin, and Portuguese/Spanish *school* projects). **The real denominator is `2`.** 🔵 `p751`'s `T444` found the same failure on `school timetabling mcp server` (`8 / 9` matched a different word). 🟢 **Rule: on any head built from a short vertical acronym, read the results before reporting `total_count` — in this base's subject area that head over-reports the vertical by `3.5×`.**
+
+### 🔴 `T457` — the index hid a permissive grant, and a completed Apache-2.0 appendix is why
+
+[`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) (`67★`) is indexed **`NOASSERTION`**; its payload is **Apache-2.0**, `10,827 B`, sha256₁₂ `43508f2110ee`, opening `Copyright 2021 Open Skills Network` then *"Licensed under the Apache License, Version 2.0"*. The classifier refuses it because the customised notice displaces the title block. 🟢 **Discriminator, measured twice in the same pass:** standard Apache-2.0 payloads come to `11,352 B` and `11,358 B`; a *completed* one is **`~525 B` shorter** because the boilerplate appendix was replaced by a real notice. 🟢 **This refines `T440`** — the MIT "exact constant" method does fail for Apache-2.0, but **length-band plus the `"Licensed under the Apache License"` line** classifies it soundly. 🔴 **Commercial consequence: the most deployable artefact in the North America half of this register was invisible for `751` passes to any pipeline that filters on the index value.**
+
+### 🔴 `T458` — the most-cited learning-path repository in the industry has moved owner
+
+`repo:kamranahmedse/developer-roadmap` → **`422`** (raw channel `404`). The repository is now **[`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap)**, `371,756★`. 🔴 **Every published 2026 roundup consulted this pass still cites the old owner** — the `T359` "not a canonical current address" state, on the single highest-starred artefact this base has touched.
+
+### 🔴 `T459` — and it is all rights reserved, personal use only
+
+The only licence file is at **lowercase `license`** (`LICENSE`, `LICENSE.md`, `COPYING` → `404`, `3 / 3`). `923 B`, sha256₁₂ `875c1bdc92d1`, indexed `NOASSERTION`: *"You are allowed to use this material for **personal use** but are **not allowed to use it for any other purpose** including publishing the images, the project files or the content … in any form."* 🔴 **Globant cannot put this in a curriculum, a learning-path product, a deck or any client deliverable.** The only permissions granted are sharing *links* and read-only forks for contributing back.
+
+### 🟢 `T460` — an MIT library is load-bearing for an EU-funded pipeline
+
+[`skillab-project/curriculum-skills`](https://github.com/skillab-project/curriculum-skills) (EPL-2.0, EU Horizon) names [`esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) (**MIT**, `32★`, single maintainer) as its dependency. 🔵 **Worth recording as a supply-chain fact:** an EU research consortium's skills pipeline rests on one individual's MIT library. 🟢 **For Globant that is good news on licence terms and a concentration risk on maintenance — vendor and pin it.**
+
+### 🔴 `T461` — the EMEA demand signal is now a regulation with a date, and the open-source supply for it is `0`
+
+The **EU Talent Pool Regulation took effect `2026-06-01`**, with **ESCO as the shared vocabulary** for matching skills and occupations across member states; the Commission's `2026-07` ESCO newsletter describes expanding use in **EURES** and **Europass** matching and introduces the Europass **"Smart CV"** alongside a revamp of the ESCO skills pillar. 🔴 **Against that live instrument, `credential wallet europass` returns `0` repositories and `labour market intelligence open source` returns `0`.** 🟢 **This is the cleanest demand-without-supply signal in the register**, and it is a procurement gate rather than a preference: an agent that does not speak ESCO cannot be mapped to the instrument.
+
+### 🟢 `T462` — the only register row whose publisher names LATAM, and why that matters more than its star count
+
+Tabiya's published material names **Sub-Saharan Africa, Latin America and South Asia** as partner regions, with documented deployments in **Kenya** and **Ethiopia**, and its Open Taxonomy Platform is built to derive **localised national** taxonomies from an ESCO-derived reference model. 🔴 **Measured against that, native supply in those regions is nil:** `clasificacion ocupaciones open source` → **`0`**, `asean skills framework open source` → **`0`**, `cbo ocupacoes brasil` → `3` (hobby-scale), `india nco occupation classification` → `4`. 🟢 **Therefore the LATAM and APAC route in this register is localisation of a permissive platform, not adoption of a local one — because no local one exists.** 🟡 At `14★`–`20★`, Globant adopts the architecture and carries the maintenance.
+
+### 🔴 `T463` — the data layer carries three different grants and the convenient one is the unusable one
+
+🔴 **ESCO's terms could not be read in this session and are not asserted anywhere in this pass** — `esco.ec.europa.eu` fails DNS resolution (`ENOTFOUND`), as do `jobtechdev.se` and `www.onetcenter.org` (`3 / 3`). `p747`'s `T396` boundary, reproduced. 🔵 **For O\*NET, from search-result text rather than the authoritative page — marked second-hand, re-read before quoting:** the **bulk Database is CC BY 4.0** with version-specific attribution (commercially usable), while **Web Services** data reportedly may not be re-shared onward or modified, and the **Career Exploration Tools are `CC BY-ND 4.0`** — *NoDerivatives*, which forbids precisely the adaptation an AI product performs. 🟢 **Design rule: ingest the bulk database, not the API response or the career-tools content.** 🔵 Same shape as `p747`'s `REFEDS/eduperson` finding: the *vocabulary* is licensed more restrictively than the code that reads it.
+
+### 🔴 `T464` — the licence probe chain must carry lowercase and `.txt` variants, and this is the second consecutive pass to prove it
+
+`p751`'s `T441` extended the chain with `LICENSE.TXT` after a missing path would have published an `8,208★` repository as a false grant-absence. 🔴 **This pass, `2` of the `3` most consequential payloads again sat at non-canonical paths:** `LICENSE.txt` on the `681-J` repository (`214★`, non-commercial) and **lowercase `license`** on `nilbuild/developer-roadmap` (`371,756★`, all rights reserved). 🔴 **A chain that stops at `LICENSE`/`LICENSE.md` reports "no grant found" on both — and "no grant found" reads to a client as *permissive by omission*, which is the most expensive error this base can make.** 🟢 **Mandated chain, ordered:** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `LICENCE`, `LICENCE.md`, `COPYING`, `COPYING.txt`, `LICENSE-MIT`, `license`, `license.md`, `LICENSE.rst`. 🟢 **And count bytes from a file, never from a command substitution** — `T439`'s one-byte undercount was a shell artefact, and every byte constant in this pass was measured with `wc -c < file`.
+
 # 🆕 Trends new at `p751` (researched 2026-11-10) — `T439`–`T452`
 
 **Added above `p750`'s `T426`–`T438`.** `p751` changed the register to **scheduling, matching and resource allocation** — the constraint solver under the timetable, the exam diet, the room, the bus and the school place. `41` addresses probed, `33` licence-payload probes, **`31` payloads byte-read**, **`5` index values materially corrected (`5 / 5` toward a knowable grant)**, `21` query denominators measured, `5` boundary rows recorded not shelved, all `5` regional blocks written. 🔴 **Two of the fourteen findings are defects in *this base's own* licence instrument, both reproducible, and they invalidate byte constants written before this pass.**

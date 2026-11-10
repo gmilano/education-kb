@@ -6,6 +6,8 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
+**Pass p752 · verified 2026-11-10.** 🟢 **`6` agent rows added — `5` MIT and `1` Apache-2.0, all byte-read.** `38` addresses probed, `21` licence-payload probes, **`19` licence payloads byte-read**, **`2` index values materially corrected — `1` from `NOASSERTION` toward a permissive grant and `1` from `NOASSERTION` toward *all rights reserved*** — `21` query denominators measured, `T453`–`T464` declared. 🔴 **The register is the *education-to-employment transition layer* — skill extraction, occupational taxonomy and credential-to-job matching: the layer that decides what a learner's record is worth in a labour market.** 🟢 **This pass is not a new register but a *stale-verdict correction*, and that is the finding: `p681` placed this opportunity **EMEA-only** and recorded that *"the measured supply behind it is poor — three permissive ESCO projects were probed and all three are dormant."* Re-measured today, `3 / 3` of those are **still dormant** (`p681` was right about them) — **but the live, maintained successors existed the whole time and were never promoted**, and two of them were pushed *the day of this pass* (`T453`).** 🔴 **Read the licence cell before the description on the `developer-roadmap` row: the highest-starred artefact this pass touched — `371,756★` — is **all-rights-reserved, personal-use-only**, it is indexed `NOASSERTION`, and it is no longer at the address every published roundup cites (`T458`, `T459`).** 🟢 **Instrument gain: `repo:{owner}/{name}` *is* a valid qualifier on `search/repositories`, which corrects `p736`'s `T310` and gives this base a second existence oracle that needs no `README` to exist (`T455`).**
+
 **Pass p751 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT, all byte-read.** `41` addresses probed, `33` licence-payload probes, **`31` licence payloads byte-read**, **`5` index values materially corrected — `5 / 5` from `NOASSERTION` toward a knowable grant**, `21` query denominators measured, `5` boundary rows recorded not shelved, `T439`–`T452` declared. 🔴 **The register is the *scheduling, matching and resource-allocation layer* — the constraint solver under the timetable, the exam diet, the room, the bus and the school place — and this base held the timetabling *applications* while holding the solver substrate at a measured near-nil: `timefold` `0` mentions, `optaplanner` `0`, `minizinc` `0`, `pyomo` `0`, `constraint programming` `0`, `exam timetabling` `0`, `room allocation` `0`, `mixed integer` `0`, against `unitime` `87` and `timetable` `89` (`T443`).** 🔴 **Two instrument defects were found in *this base's own* licence procedure and both are reproducible: the read method under-counts every payload by one byte and hashes a truncated file (`T439`), and the documented probe chain misses `LICENSE.TXT`, which would have published an `8,208★` repository as a false grant-absence (`T441`). Re-read any byte constant written before this pass.** 🔴 **Read the licence cell before the description on the `UniTime/cpsolver` and `FET-MCP` rows: the solver engine under an Apache-2.0 product is `LGPL-3.0`, and the only agent in existence that *builds* a timetable is `AGPL-3.0` (`T450`).**
 
 **Pass p750 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT or Apache-2.0, all byte-read.** `45` addresses probed, `30` licence-payload probes, **`26` licence payloads byte-read**, **`11` index values materially corrected — `11 / 11` from `NOASSERTION` toward a knowable grant**, `4` compliant grant-absences recorded as `T302` honest negatives rather than as denominators, `5` addresses found in the `T359` dead state. 🔴 **The register is the *student-wellbeing and safeguarding layer* — the duty of care: screening, monitoring, disclosure, case management and the early-warning function under retention — and `749` passes held `0` of it.** 🔴 **The finding of the pass is an inversion: the one capability with abundant open-source supply (`facial emotion recognition`, **`8,216`** repositories) is the one EU education institutions are **forbidden** to use (AI Act Art. 5(1)(f), since `2025-02-02`, no grace period), while the capabilities the register needs return `0` (`student retention agent llm`, `child protection mcp`). 🔴 Read the licence cell before the description on the `PurpleLlama` and `mindlogger` rows: one is not an OSI licence at all and the other requires attribution inside the client's user interface (`T428`, `T431`).**
@@ -67,6 +69,102 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p752` — 🟢 **THE EDUCATION-TO-EMPLOYMENT TRANSITION LAYER: `p681` CALLED THIS SUPPLY "POOR AND ALL DORMANT" AND PLACED IT EMEA-ONLY. 🟢 THE DORMANT TRIO IS STILL DORMANT — AND THE LIVE SUCCESSORS WERE PUSHED THE DAY OF THIS PASS. 🔴 THE NORTH AMERICA COUNTERPART WAS AT `0` MENTIONS ACROSS `751` PASSES AND ITS INDEX HID AN APACHE-2.0 GRANT. 🔴 A `371,756★` REPOSITORY IS PERSONAL-USE-ONLY.**
+
+**`6` agent rows (`5` MIT, `1` Apache-2.0, all byte-read) · `38` addresses probed · `19` licence payloads byte-read · `2` index values materially corrected · `21` query denominators measured · `T453`–`T464` declared.**
+
+### 🟢 `T453` — the finding that defines the pass: a verdict went stale and nobody re-measured it
+
+`p681` (`2026-11-06`) placed the skills register on [`../intel/market.md`](../intel/market.md) under **EMEA** and wrote: *"the measured supply behind it is poor and the gap is the engagement: three permissive ESCO projects were probed and **all three are dormant**."* This pass re-measured those three addresses and **`p681` was correct about every one of them**:
+
+| `p681`'s dormant trio | Stars | Grant | Last push — **re-measured `2026-11-10`** | Verdict |
+|---|---|---|---|---|
+| [`nestauk/skills-taxonomy-v2`](https://github.com/nestauk/skills-taxonomy-v2) | `43★` | MIT | `2022-10-12` | 🔴 Still dormant — **4 years cold**. |
+| [`tabiya-tech/tabiya-open-dataset`](https://github.com/tabiya-tech/tabiya-open-dataset) | `7★` | 🔴 `NONE` | `2024-03-06` | 🔴 Still dormant, still no grant. |
+| [`tabiya-tech/tabiya-esco-datasets-and-tools`](https://github.com/tabiya-tech/tabiya-esco-datasets-and-tools) | `8★` | MIT | `2024-08-29` | 🔴 Still dormant — the row this base already holds. |
+
+🔴 **The defect is not in the measurement; it is in the conclusion drawn from it.** `p681` probed the *datasets* and inferred the *register* was poor. Measured against the same publishers on the same day, the register is not poor — it is **actively maintained, and the base was holding the wrong repository from each publisher**:
+
+| What `p681` held | What it should have held | Stars | Grant | Last push |
+|---|---|---|---|---|
+| `nestauk/skills-taxonomy-v2` — `43★`, dead `2022-10` | [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) — **the successor from the same publisher** | 🟢 **`162★`** | MIT | `2025-06-09` |
+| `tabiya-tech/tabiya-esco-datasets-and-tools` — the *data dump* | [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) — **the running platform** | `20★` | MIT | 🟢 **`2026-11-10` — the day of this pass** |
+| — nothing | [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) — **the conversational agent itself** | `14★` | MIT | 🟢 **`2026-11-10` — the day of this pass** |
+
+🟢 **The rule this yields, and it generalises past this register:** *a dormancy verdict is a statement about an address, never about a register.* `p681`'s three probes were all **data** repositories; the **code** repositories beside them in the same organisations are among the most actively maintained artefacts in this entire base. Before quoting a scarcity verdict to a client, re-probe the publisher, not the repository.
+
+### 🔴 `T454` — the supply ratio: the generic layer is abundant, the taxonomy-anchored education layer is a near-nil
+
+Measured this pass against `gh api -X GET search/repositories` `total_count`, `2026-11-10`:
+
+| Query | Repositories | Reading |
+|---|---|---|
+| `resume parser` | **`13,108`** | 🟢 The generic layer is saturated. |
+| `hr mcp server` | **`223`** | 🟢 Abundant. |
+| `job matching agent llm` | **`189`** | 🟢 Abundant — and `0` of the top `12` name a taxonomy. |
+| `recruiting mcp server` | **`121`** | 🟢 Abundant. |
+| `career guidance agent llm` | `37` | 🔴 `11 / 12` of the top results are student projects at `≤3★`. |
+| `esco skill extraction` | `19` | 🟢 **Where the real rows are.** |
+| `skill extraction job posting llm` | `17` | Mostly coursework. |
+| `resume job matching mcp server` | `13` | — |
+| `competency framework llm` | `9` | — |
+| `esco mcp server` | 🔴 **`7`** | 🔴 And `5 / 7` match a *different word* (`T456`). |
+| `skills passport open source` | 🔴 **`5`** | — |
+| `skills taxonomy open source` | 🔴 **`4`** | For the vocabulary two continents legislate against. |
+| `onet occupation api` | 🔴 **`2`** | For the US national occupational database. |
+| `labour market intelligence open source` | 🔴 **`0`** | — |
+| `credential wallet europass` | 🔴 **`0`** | Against an EU instrument live since `2026-06-01` (`T461`). |
+
+🟢 **The rule, for a proposal:** *in this register Globant does not buy a career agent — it buys a permissive **extractor** (`ojd_daps_skills`, `esco-skill-extractor`) and a permissive **taxonomy service** (`taxonomy-model-application`, `osmt`), and writes the matching semantics itself.* The ratio against the vertical is roughly **`1,000 : 1`** on the generic head (`13,108` vs `13`), and the `189` "job matching agents" are CV-keyword matchers that cannot be mapped to any national qualifications framework.
+
+### 🔴 `T456` — `esco mcp server` matches a different word, and the pollution is Romance-language
+
+`5` of the `7` results match **`esco-`/`escola`/`escolar`** as a *substring* — `escouade-io/escouade-mail-mcp` (a mail plugin), `andreferrazz/escoladobreno-mcp` and `josesaid/control-escolar-spring-ai-mcp` (Portuguese/Spanish *school*). 🔵 **This is the `T444` shape from `p751` reproduced in a second register:** a four-letter vertical acronym is not a usable search term where it collides with a Romance-language stem, and a pipeline that trusts `total_count` on such a head over-reports the vertical. **`esco mcp server` → `7` is really `2`.** The two genuine hits are `Dembelinho/ESCO-MCP-Server` (index `NONE`, not shelved) and `colaberry/WorldOfTaxonomy` (shelved below).
+
+### The agent rows — what Globant can build on and ship
+
+All `6` byte-read `2026-11-10`. 🔴 **Every row in this register is small except one; the register's value is the taxonomy behind it, not the star count.**
+
+| Agent | Repo | Grant — **byte-read 2026-11-10** | Stars | Last push | What it does |
+|---|---|---|---|---|---|
+| Nesta Skills Extractor | [`nestauk/ojd_daps_skills`](https://github.com/nestauk/ojd_daps_skills) | 🟢 **MIT** · `1,095 B` · sha256₁₂ `3ffac39424a5` · `Copyright (c) 2024, Nesta` | 🟢 **`162★`** | `2025-06-09` | Extracts skills from job adverts and maps them to a skills taxonomy — the library behind the UK's open jobs-data programme. 🟢 **The highest-starred *usable* artefact in the register and the successor `p681` missed.** 🟡 `17` months cold: production-grade code, no active maintenance. **Placement: EMEA** — published by Nesta (UK), and the shipped taxonomy is UK-oriented. |
+| OSMT — Open Skills Management Tool | [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | 🟢 **Apache-2.0** · `10,827 B` · sha256₁₂ `43508f2110ee` · `Copyright 2021 Open Skills Network` — 🔴 **index says `NOASSERTION`; the payload is a permissive grant (`T457`)** | 🟢 **`67★`** | `2026-07-27` | Authoring, management and publication of **Rich Skill Descriptors (RSDs)** — the tool US institutions and employers actually run to publish a skills library. 🟢 **`0` mentions across `751` passes.** **Placement: North America.** |
+| ESCO Skill Extractor | [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** · `1,068 B` · sha256₁₂ `472a065dfc26` | `32★` | `2025-06-12` | Extracts **ESCO skills and ISCO occupations** from free text — CVs, job descriptions, curricula. Embedding + cosine similarity against the ESCO vocabulary. 🟢 **The dependency the EU-funded `skillab-project` crawlers import** (`T460`). **Placement: EMEA.** |
+| Tabiya Compass | [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) | 🟢 **MIT** · `1,062 B` · sha256₁₂ `30a6e6212d19` · `Copyright (c) 2024 Tabiya` | `14★` | 🟢 **`2026-11-10`** | Conversational agent that elicits a jobseeker's skills from **formal *and informal* work** and maps them to an inclusive livelihoods taxonomy. 🟢 **The only actively-maintained, permissive, taxonomy-anchored career agent this pass found, and the only row in the register whose publisher names LATAM as a deployment region (`T462`).** 🟡 `14★` — adopt the architecture, expect to carry the maintenance. |
+| Tabiya Taxonomy Platform | [`tabiya-tech/taxonomy-model-application`](https://github.com/tabiya-tech/taxonomy-model-application) | 🟢 **MIT** · `1,062 B` · sha256₁₂ `ba0f37a9ceeb` · `Copyright (c) 2023 Tabiya` | `20★` | 🟢 **`2026-11-10`** | The **running service** behind Compass: hosts, versions and localises an occupational taxonomy so partners can derive a national variant from an ESCO-derived reference model. 🟢 **This is the row `p681` should have held instead of the dormant data dump.** |
+| Tabiya Livelihoods Classifier | [`tabiya-tech/tabiya-livelihoods-classifier`](https://github.com/tabiya-tech/tabiya-livelihoods-classifier) | 🟢 **MIT** · `1,062 B` · sha256₁₂ `30a6e6212d19` — **byte-identical to `compass`** | `7★` | `2026-11-05` | Entity-extraction + embedding pipeline that classifies free-text job descriptions into the taxonomy. The model layer under the agent above. |
+
+🔵 **Byte-identity note, and it is a useful signal rather than a curiosity:** `compass`, `compass-connect` and `tabiya-livelihoods-classifier` ship the **same `1,062 B` payload, sha256₁₂ `30a6e6212d19`**, while `taxonomy-model-application` differs only in its copyright year (`2023` vs `2024`) and `tabiya-esco-datasets-and-tools` names a different holder entirely (`Tabiya Youth Employment Technology Incubator`, `1,101 B`, sha256₁₂ `7b090f3447a7`). 🟢 **Org-wide grant hygiene is consistent here — which is why the `NONE` on `tabiya-open-dataset` is a deliberate data-licensing decision, not an oversight.**
+
+### 🔴 `T457` — the index hid a permissive grant on the one North America row
+
+[`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) is indexed **`NOASSERTION`**. The payload at `LICENSE` is `10,827 B`, sha256₁₂ `43508f2110ee`, and its first line is **`Copyright 2021 Open Skills Network`** followed by *"Licensed under the Apache License, Version 2.0"*. 🟢 **It is Apache-2.0 with the appendix completed** — which is exactly why the classifier refuses it: the customised header displaces the title block the index matches on. The standard Apache-2.0 payload read twice this same pass measures `11,352 B` (`CredentialRegistry`) and `11,358 B` (`transcript-ctid-matcher`); `osmt` is `525 B` shorter because the boilerplate appendix was replaced by a real notice.
+
+🔴 **Consequence, and it is a commercial one:** the single most deployable artefact in the North America half of this register has spent `751` passes invisible to this base, and any pipeline that filters on the index value alone would have discarded it as unlicensed. 🟢 **It is permissive and Globant can build on it.**
+
+### 🔴 `T458` / `T459` — the `371,756★` refusal, and the address every roundup cites no longer exists
+
+The mandated `github trending` leg surfaced `developer-roadmap` through a published 2026 roundup. Two independent defects, both reproducible:
+
+🔴 **`T458` — the address is wrong.** `repo:kamranahmedse/developer-roadmap` → **`422`**, the `T359` "not a canonical current address" state, cross-checked `404` on the raw channel. The repository now lives at **[`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap)** — `371,756★`, the highest-starred artefact this pass touched.
+
+🔴 **`T459` — the grant is not open source, and it is not merely absent.** The only licence file in the repository sits at **lowercase `license`** (`LICENSE`, `LICENSE.md` and `COPYING` all `404`, `3 / 3` controls). `923 B`, sha256₁₂ `875c1bdc92d1`, indexed `NOASSERTION`, and it reads:
+
+> *"Everything including text and images in this project are protected by the copyright laws. You are allowed to use this material for **personal use** but are **not allowed to use it for any other purpose** including publishing the images, the project files or the content … in any form either digital, non-digital, textual, graphical or written formats."* — `Copyright © 2017 - Present. Kamran Ahmed`
+
+🔴 **Globant cannot use this in a client deliverable, a curriculum, a slide or a learning-path product.** It is the most-cited learning-roadmap asset in the industry and it is **all rights reserved, personal use only**. The permission that *is* granted is narrow and explicit: sharing *links*, and read-only GitHub forks made for contributing back.
+
+🔵 **The instrument lesson, and it is the second of its kind in two passes.** `p751`'s `T441` extended the probe chain with `LICENSE.TXT` after a missing path would have published an `8,208★` repository as a false grant-absence. **This pass, `2` of the `3` most consequential payloads sat at non-canonical paths again** — `LICENSE.txt` on the `681-J` repository and lowercase **`license`** here. The chain must carry lowercase variants, and a pass that stops at `LICENSE`/`LICENSE.md` will publish a `371,756★` all-rights-reserved repository as "no grant found" — which reads to a client as *permissive by omission*. `T464`.
+
+### 🔴 Refusals — read these before proposing anything in this register
+
+| Address | Stars | Index | Grant — **byte-read** | Why Globant cannot build on it |
+|---|---|---|---|---|
+| [`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap) | 🔴 **`371,756★`** | `NOASSERTION` | 🔴 **All rights reserved, personal use only** · `923 B` · sha256₁₂ `875c1bdc92d1` · at lowercase `license` | Commercial, derivative and republication use all withheld in terms (`T459`). |
+| [`workforce-data-initiative/skills-api`](https://github.com/workforce-data-initiative/skills-api) | `214★` | `NOASSERTION` | 🔴 **Non-commercial, and names a different program** (`aequitas`, University of Chicago) · `1,975 B` · sha256₁₂ `b2d1db626769` | 🔵 **Already held — this is `681-J` on [`../intel/measured-unusable.md`](../intel/measured-unusable.md), re-confirmed byte-identical this pass, not a new finding.** Dead since `2018-07-24`. |
+| [`jensjorisdecorte/Skill-Extraction-benchmark`](https://github.com/jensjorisdecorte/Skill-Extraction-benchmark) | `17★` | `NONE` | 🔴 **No grant at `12` probed paths** | 🔴 **The benchmark the skill-extraction research literature evaluates against carries no licence at all** — the same shape as `p747`'s `REFEDS/eduperson` finding: the *measuring instrument* of a field is the thing nobody licensed. |
+| [`bhanuaraveti/OpenMAIC`](https://github.com/bhanuaraveti/OpenMAIC) | `0★` | `AGPL-3.0` | 🔴 **AGPL-3.0** · `34,523 B` · sha256₁₂ `0d96a4ff68ad` | 🔴 **A third-party copy that relicenses an MIT upstream to AGPL-3.0.** Upstream [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT** (`1,065 B`, sha256₁₂ `ba2525637432`). `T355` reproduced: **take the upstream address, never the copy** (`guochaopeng110-maker/MAIC-AI-Classroom` is the same trap). |
 
 ## 🆕 `p751` — 🔴 **THE SCHEDULING, MATCHING AND RESOURCE-ALLOCATION LAYER: `750` PASSES HELD THE TIMETABLING APPLICATIONS AND `0` OF THE SOLVER UNDER THEM. 🔴 THE EDUCATION-SPECIFIC OPTIMISATION AGENT LAYER DOES NOT EXIST WHILE THE GENERIC ONE DOES — `9` AND `7` AGAINST `991` AND `893`. 🔴 THE ONE AGENT THAT *BUILDS* A TIMETABLE IS `AGPL-3.0` AT `0★`; THE `8` THAT *READ* ONE ARE ALL EUROPEAN SCHOOL PORTALS. 🔴 TWO DEFECTS FOUND IN THIS BASE'S OWN LICENCE INSTRUMENT.**
 
