@@ -1,0 +1,205 @@
+0xnavarro/ia-para-todos	1	0xnavarro/IA-PARA-TODOS	26	5	Apache-2.0	2025-01-08	Python	false	El mayor repositorio de IA open source en Español del mundo.
+agenda-tech-brasil/agenda-tech-brasil	1	agenda-tech-brasil/agenda-tech-brasil	5886	316	NONE	2026-11-06	Python	false	Lista de eventos tech que acontecem no Brasil
+agentanywhere/shuddhi	1	agentanywhere/shuddhi	2	1	Apache-2.0	2026-11-09	Python	false	Prove what your model was trained on. Open-source data factory for LLM training corpora: provenance gating, dedup, PII redaction, contamination checks — sealed with a reproducible build manifest. Emits the EU AI Act Article 53(1)(d) training-content summary.
+agn3si/resultadosunam---data	1	agn3si/ResultadosUNAM---data	6	2	MIT	2026-08-13	HTML	false	Base de datos abierta (2021-2026, todas las áreas) de resultados del examen de admisión a la UNAM.
+agso-o/sigaa-calendar	1	Agso-o/sigaa-calendar	20	1	GPL-3.0	2026-10-09	Go	false	Uma ferramenta capaz de extrair prazos e horários do SIGAA diretamente para o ecossistema da Google. Sincronize prazos de entrega com o Google Tasks e organize seus horários com o Google Agenda.
+akiva-ai/toolkit-ml-provenance	1	akiva-ai/toolkit-ml-provenance	1	0	Apache-2.0	2026-10-02	Python	false	ML provenance and SBOM generator -- deterministic manifests with integrity verification and optional cryptographic signing for datasets, configs, code, and model weights.
+alcastaro/opendata-latam-mcp	1	alcastaro/opendata-latam-mcp	0	0	NOASSERTION	2026-10-28	Python	false	Unified MCP server for Latin American open government data — 7 CKAN portals (AR, CL, DO, EC, MX, PA, UY), 15,628 datasets, parallel cross-country search, DataStore row reading.
+alejooroncoy/campus-cli	1	alejooroncoy/campus-cli	13	1	ISC	2026-11-09	TypeScript	false	CLI no oficial para UPC Aula Virtual (Blackboard Learn) — terminal + MCP para Claude
+alguarito/conciencia-	1	alguarito/Conciencia-	0	0	NOASSERTION	2026-10-19	HTML	false	ConciencIA (versión PWA, sin servidor): asesor del debido proceso escolar de la I.E. Sor María Juliana con el Manual de Convivencia, la Ley 1620 y el SIEE. Funciona offline.
+alphacep/vosk-api	1	alphacep/vosk-api	15242	1770	Apache-2.0	2026-10-15	Jupyter Notebook	false	Offline speech recognition API for Android, iOS, Raspberry Pi and servers with Python, Java, C# and Node
+americasnlp/americasnlp2025	1	AmericasNLP/americasnlp2025	1	4	NONE	2025-04-07	JavaScript	false	Repository containing data and baselines for the 2025 AmericasNLP shared tasks.
+americasnlp/americasnlp2026	1	AmericasNLP/americasnlp2026	7	1	NONE	2026-06-01	Python	false	AmericasNLP 2026 Shared Task
+antonioalgmar/studyagent	1	ANTONIOALGMAR/StudyAgent	2	0	NONE	2026-11-04	Python	false	agente de estudo
+aoncevay/mt-peru	1	aoncevay/mt-peru	0	0	NONE	2021-07-28	-	false	Peru is Multilingual, Its Machine Translation Should Be Too?
+aprincar/curriculum-bncc	1	aprincar/curriculum-bncc	0	0	AGPL-3.0	2026-09-23	JavaScript	false	Brazilian National Common Curricular Base (BNCC) crosswalk and skill mapping for Aprincar.
+aquario-ufpb/aquario	1	aquario-ufpb/aquario	85	31	MIT	2026-11-03	TypeScript	false	Núcleo de informações do Centro de Informática (CI) da UFPB
+armandokeller/saep2026-agentes-ia-e-ferramentas	1	armandokeller/SAEP2026-Agentes-IA-e-Ferramentas	0	0	MIT	2026-10-03	Python	false	Material da oficina "Agentes de IA e suas ferramentas" da Semana Acadêmica da Escola Politécnica (SAEP) 2026, da Unisinos.
+arvoreeducacao/seedling	1	arvoreeducacao/seedling	1	0	Apache-2.0	2026-11-03	TypeScript	false	Coding interviews for people who build with AI agents
+asadbekme/education-crm	1	asadbekme/education-crm	2	0	NONE	2025-08-08	TypeScript	false	-
+assistentes-de-estudo-agentes/techtutor	1	Assistentes-de-estudo-Agentes/techTutor	3	1	MIT	2026-10-04	-	false	O TechLead AI Tutor (operando sob a arquitetura Antigravity Harness) é um agente inteligente projetado para revolucionar o aprendizado prático de programação e engenharia de software. Diferente de assistentes de IA convencionais que apenas entregam o código pronto, este ecossistema atua com a didática rigorosa de um Tech Lead Sênior e Mentor.
+aule-org/aimauta	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+ayrtonmoura1/conectabncc	1	ayrtonmoura1/conectabncc	0	0	MIT	2026-11-10	HTML	false	-
+belentani7/aprende-brasil	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+belentani7/lingua-aberta	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+bimbi-dev/openteacher	1	Bimbi-Dev/OpenTeacher	0	0	NONE	2026-08-29	TypeScript	false	OpenEd - agente de contencion emocional y registro de incidencias para docentes. Hackathon AIdea, Lima 2026.
+blockchain-certificates/cert-issuer	1	blockchain-certificates/cert-issuer	429	217	MIT	2026-08-19	Python	false	Issues Blockcerts using either the Bitcoin or Ethereum blockchain
+bonafe/inteligencia-aberta	1	bonafe/inteligencia-aberta	3	0	MIT	2026-11-01	Python	false	Este projeto contêm código fonte e especificadções que servem de base para sistemas de inteligência aberta.
+bootlegyouki/l.a.r.a	1	BootlegYouki/L.A.R.A	5	0	MIT	2026-11-10	Kotlin	false	Offline LAN-Based Classroom with Hybrid Socratic SLM Tutor and Paperless Quizzes for Philippine Elementary Schools (DepEd Grades 1-6)
+brasilapi/brasilapi	1	BrasilAPI/BrasilAPI	11530	802	MIT	2026-11-09	JavaScript	false	Vamos transformar o Brasil em uma API?
+caiocarvalhofre/moodle-mod_maici	1	caiocarvalhofre/moodle-mod_maici	16	5	NOASSERTION	2024-08-12	PHP	false	Moodle AI Chat Interface, abbreviated as “MAICI” and pronounced “MAY-see” is a chat-based learning activity providing students with natural language conversation with an an AI ChatBot.
+carlosarmijos1/tutor-tecnico-agentes	1	CarlosArmijos1/tutor-tecnico-agentes	0	0	MIT	2026-07-14	Python	false	Tutor educativo multi-agente con LangGraph y Groq: enseña materias técnicas dando pistas, no respuestas.
+carmonabernaldiego/sistema-escolar	1	carmonabernaldiego/sistema-escolar	158	27	AGPL-3.0	2023-09-09	PHP	false	Sistema de Gestión Escolar
+carpentries/instructor-training	1	carpentries/instructor-training	190	304	NOASSERTION	2026-11-10	-	false	Instructor Training
+ceanjonnube-negra/docente-ia	1	ceanjonnube-negra/docente-ia	0	0	NONE	2026-11-10	TypeScript	false	Plataforma IA para docentes mexicanos
+cenia-dev/mvps-cenia	1	CENIA-DEV/mvps-cenia	1	0	Apache-2.0	2026-09-09	HTML	false	Monorepository for MVPs developed at CENIA
+charliecardenastoledo/mcp-canvas-server	1	CharlieCardenasToledo/mcp-canvas-server	0	0	MIT	2026-10-31	TypeScript	false	MCP server for Canvas LMS — lets AI assistants manage courses, grades, quizzes, and more via natural language. 51 tools for teachers.
+ciia-educacao/evasao-escolar	1	ciia-educacao/evasao-escolar	1	0	MIT	2025-12-03	-	false	Solução IA para a prevenção da evasão escolar
+claudiorojasmon/ia-educacion-recursos	1	ClaudioRojasMon/ia-educacion-recursos	0	0	NONE	2026-01-18	-	false	Recursos para integración ética de IA generativa en educación - Framework y guías prácticas
+cleison-morais/koba	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+damasiormoura/mcp-dev-latam	NOTFOUND
+daniel-ux1026/tutor-inteligente	1	Daniel-ux1026/Tutor-Inteligente	1	0	NONE	2026-10-08	Java	false	Este es un proyecto de Tutor inteligente para profesores y estudiantes que funciona de manera offline.
+dasgltd/mcp-brasil	NOTFOUND
+datauy/elijoestudiar	1	datauy/ElijoEstudiar	5	5	GPL-3.0	2024-11-14	JavaScript	false	Herramienta para la búsqueda y visualización de cursos y centros de educación pública inicial, primaria, secundaria, técnica y formación en educación de todo Uruguay. Desarrollado en base a datos abiertos junto a la Administración Nacional de Eduación Pública (ANEP), con apoyo del fondo ALTEC de Avina y Luminate.
+datomatic/carta-del-docente	1	datomatic/carta-del-docente	7	1	MIT	2026-06-22	PHP	false	Il pacchetto non ufficiale per integrare facilmente la Carta del Docente in un progetto PHP
+davemckain/qtiworks	1	davemckain/qtiworks	67	55	NOASSERTION	2023-01-04	Java	false	**This project will be closed in early 2023!** IMS QTI 2.1 assessment delivery engine and Java development library (JQTI+). Supports the MathAssess extensions. Replacement for QTIEngine/JQTI and MathAssessEngine/JQTI. Note that this project has now ended and no further work is currently planned.
+despedite/siu-guarani	1	despedite/siu-guarani	8	0	GPL-3.0	2021-03-12	Python	false	Web scraper que revisa por vos si hay cupos disponibles en SIU Guaraní.
+dfdb76/bncc-mcp	1	dfdb76/bncc-mcp	14	3	NOASSERTION	2026-07-24	Python	false	MCP das habilidades da Base Nacional Comum Curricular
+diaslui/enem-extractor	1	diaslui/enem-extractor	37	2	MIT	2025-02-16	Python	false	Um CLI que extrai questões de provas do ENEM em JSON.
+diego694/lummer	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+diegon97/aranduia	1	Diegon97/AranduIA	0	0	MIT	2026-10-01	Python	false	Ecosistema Abierto, Soberano y Offline-First de IA Educativa para Paraguay 🇵🇾🧠
+digitalinnovationone/dio-agent	1	digitalinnovationone/dio-agent	3199	384	NONE	2026-10-29	-	false	Agente de IA criado pela DIO para apoiar seus estudos.
+digitalinnovationone/potencializando-estudos-carreira-com-ia	1	digitalinnovationone/potencializando-estudos-carreira-com-ia	7680	315	NONE	2026-05-05	-	false	Curso "Potencializando Seus Estudos e Carreira com IA: De Chatbots a Agentes"
+dillax/di-rio-de-classe-avalia-es-	1	Dillax/Di-rio-de-Classe-Avalia-es-	1	0	MIT	2026-11-03	JavaScript	false	Diário de Classe: aplicativo (PWA) para professores lançarem e acompanharem notas por turma e trimestre. Cadastro de avaliações, recuperação substitutiva, relatórios em PDF e Excel e backup. Funciona offline e os dados ficam só no aparelho do professor. HTML, CSS e JavaScript.
+dsvi-b/corretor-enem	1	dsvi-b/corretor-enem	8	1	MIT	2026-07-21	Python	false	Corretor de redação ENEM (5 competências) agnóstico de agent, calibrado em 11.147 redações reais. Sem API/ML.
+dummerchen/ucampus	1	dummerchen/Ucampus	34	16	GPL-2.0	2021-05-22	Python	false	解放双手，u校园的题再也不用写啦(暂停维护
+duspro/educacao-especial	1	DusPro/educacao-especial	0	0	MIT	2025-07-08	JavaScript	false	Plataforma inteligente para professores da educação especial: geração automática de diário, PEI, relatórios e atividades adaptadas com IA.
+eduagarcia/lm-evaluation-harness-pt	NOTFOUND
+edwin1719/avataracademy	1	Edwin1719/AvatarAcademy	1	0	MIT	2025-12-04	Python	false	Revoluciona el aprendizaje con tutores de video impulsados por IA. Esta plataforma en Python usa GPT-4o   y avatares realistas para generar lecciones dinámicas a partir de guiones, o facilita conversaciones interactivas en   vivo. Experimenta una educación personalizada, visual y profundamente atractiva. ¡Tu tutor inteligente, siempre   contigo!
+el-bid/edu-brazil-poc	1	EL-BID/edu-brazil-poc	3	1	NOASSERTION	2026-05-07	Jupyter Notebook	false	-
+elmaldelego/open-tutor-ia	1	Elmaldelego/OPEN-TUTOR-IA	0	0	AGPL-3.0	2025-08-26	Jupyter Notebook	false	El proyecto Open IA TUTOR es una iniciativa de colaboración con un objetivo claro y de gran relevancia social: utilizar el modelo de lenguaje Gemma 3n como base para desarrollar un asistente de IA enfocado en la educación. Su misión es mejorar los procesos de aprendizaje y el pensamiento critico de los alumnos.
+emiliogiordano/unsada-mcp	1	EmilioGiordano/unsada-mcp	0	0	AGPL-3.0	2026-11-01	TypeScript	false	Conecta tus agentes de IA al entorno virtual Moodle de la UNSAdA
+eol-uchile/edx-cla	1	eol-uchile/edx-cla	0	0	MIT	2026-06-03	Dockerfile	false	-
+eol-uchile/edx-fluentbit-tracking	1	eol-uchile/edx-fluentbit-tracking	0	0	Apache-2.0	2020-01-22	Dockerfile	false	-
+eol-uchile/edx-openuchile	1	eol-uchile/edx-openuchile	0	0	MIT	2026-11-05	Dockerfile	false	Imagen de OpenEdx para Open UChile de la Universidad de Chile
+eol-uchile/edx_photo_verification	1	eol-uchile/edx_photo_verification	0	3	MIT	2026-08-17	Python	false	Simple photo verification service for edX
+eol-uchile/eol-edx	1	eol-uchile/eol-edx	0	1	MIT	2026-11-05	Dockerfile	false	-
+eol-uchile/eol-uchile-theme-2020	1	eol-uchile/eol-uchile-theme-2020	1	0	MIT	2026-11-05	CSS	false	-
+eol-uchile/eol_learner_profiles	1	eol-uchile/eol_learner_profiles	0	0	AGPL-3.0	2026-11-10	Python	false	Perfilamiento y recomendaciones personalizadas para estudiantes
+eti-patagonia-ar/uplc	1	ETI-PATAGONIA-AR/uPLC	2	1	MIT	2026-04-28	C++	false	Interprete conversor Ladder o Bloques a Arduino
+eugeborzone/auto_grade_guarani	1	eugeborzone/Auto_Grade_Guarani	0	2	NONE	2025-07-05	Python	false	Sistema automatizado para cargar las notas en el sistema SIU Guaraní.
+eumakerdev/bncc_api	1	eumakerdev/bncc_api	17	1	MIT	2026-11-09	JavaScript	false	-
+fabianastudillo/cafe-con-prompts	1	fabianastudillo/cafe-con-prompts	1	0	NOASSERTION	2026-10-27	-	false	☕ Prompts de IA para docentes del canal de YouTube Café con Prompts. Un tip por video, lo que dura un café.
+fabrica-de-inovacao/expeditto	1	fabrica-de-inovacao/expeditto	1	0	AGPL-3.0	2026-10-22	Python	false	Expeditto: seu segundo expediente, resolvido. Prepara o RIT do SUAP (IFMA) como rascunho, via CLI e MCP.
+faridsandoval/lia-colombo-ai	1	FaridSandoval/LIA-Colombo-AI	1	0	NONE	2026-10-30	Python	false	LIA · AI-powered English tutor for the Centro Cultural Colombo Americano de Cali. RAG pipeline with agentic tool-calling, hybrid search, and real-time grammar correction. Built for A2 learners.
+fauzcategui/moodle-sence	1	fauzcategui/moodle-sence	29	8	GPL-3.0	2022-12-12	PHP	false	Plugin para registrar asistencia en la plataforma de SENCE
+fernandobrito/cursos_ufpb	1	fernandobrito/cursos_ufpb	6	1	GPL-3.0	2017-01-26	Ruby	false	Web app to help students from UFPB visualize their academic progress through charts and stats
+fernandobrito/ufpb_sigaa_api_old	1	fernandobrito/ufpb_sigaa_api_old	5	0	GPL-3.0	2016-02-07	Ruby	false	Unofficial UFPB SIGAA API. 
+fga-eps-mds/2017.2-merendamais	1	fga-eps-mds/2017.2-MerendaMais	8	6	GPL-3.0	2018-12-04	JavaScript	false	Aplicação mobile para auxiliar conselheiros na fiscalização da merenda escolar das escolas de sua região, desde planejar uma visita até a consolidação dos dados.
+filipecalegario/auto-sigaa	1	filipecalegario/auto-sigaa	9	0	MIT	2025-08-16	Python	false	Script de automatização de preenchimento de notas no SIGAA a partir de uma planilha de notas
+financeiroetica01-art/jogos-empreendedorismo-bncc	1	financeiroetica01-art/jogos-empreendedorismo-bncc	0	0	NONE	2026-11-05	HTML	false	Plataforma de jogos educativos sobre empreendedorismo para o Ensino Fundamental II, baseada nas competencias da BNCC
+fiuba-posgrado-inteligencia-artificial/aprendizaje_profundo	1	FIUBA-Posgrado-Inteligencia-Artificial/aprendizaje_profundo	32	71	NONE	2026-11-03	Jupyter Notebook	false	Material de clases para Aprendizaje Profundo (CEIA - FIUBA)
+franciscoaldun/synco	1	franciscoaldun/synco	1	0	MIT	2026-10-14	Go	false	Emulador del Proyecto Cybersyn (Chile, 1971-1973) para colegios y universidades: un curso completo opera en tiempo real las fábricas, la red de télex, el IBM 360 de ECOM, Cyberstride y la Sala de Operaciones desde sus celulares. Portable, sin internet.
+frjunioalves/suap-mcp	1	frjunioalves/suap-mcp	0	0	NONE	2026-05-22	Python	false	-
+geovaneschmitz/sigaa-api	1	GeovaneSchmitz/sigaa-api	61	22	MIT	2024-04-10	TypeScript	false	Unofficial high performance API for SIGAA (Sistema Integrado de Gestão de Atividades Acadêmicas) using web scraping.
+gerardbourguett/mcp-chilegob-dataset	1	gerardbourguett/mcp-chilegob-dataset	1	0	MIT	2026-11-04	TypeScript	false	-
+german-gimenez/komuny	1	german-gimenez/komuny	1	0	MIT	2026-10-30	JavaScript	false	IA para educadores latinoamericanos — Open Source
+gio0938/cocomath	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+glacy/evolutia	1	glacy/evolutIA	1	0	Apache-2.0	2026-07-08	Python	false	Evolutia es un motor de evaluación inteligente diseñado para educación superior en ciencias e ingeniería. Utiliza LLMs y RAG
+gpassero/uol-redacoes-xml	1	gpassero/uol-redacoes-xml	39	10	Apache-2.0	2020-08-05	Python	false	O banco de redações da UOL (http://educacao.uol.com.br/bancoderedacoes/) em XML como modelo de testes e validação de técnicas de PLN (Processamento de Linguagem Natural) sobre redações.
+guedesindev/ai_tutor_forge	1	guedesindev/ai_tutor_forge	19	8	GPL-3.0	2026-02-05	Python	false	Este é um agente de IA que transforma qualquer tópico de estudo em um professor IA Sênior personalizado usando o poder de qualquer LLM que o usuário desejar.
+h1bertto/professor-agent	1	H1bertto/professor-agent	0	0	MIT	2026-11-10	TypeScript	false	Local, open source study tutor with a 2D or 3D avatar on top of your apps. Talk to it by voice to learn languages or any subject, with your own AI provider.
+henriquebotelhogomes/educacao	1	henriquebotelhogomes/educacao	0	0	NONE	2026-09-30	Python	false	🎓 Tutor Inteligente IA: Aplicação educacional "Production-Ready" usando Advanced RAG. Construída com LangChain, Llama 3 (Groq), Docling (Visão/PDFs) e Qdrant Cloud.
+huggingface/transformers	1	huggingface/transformers	168731	35153	Apache-2.0	2026-11-10	Python	false	🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. 
+idavi/heidy_backend	1	iDavi/heidy_backend	1	0	GPL-3.0	2026-07-11	Elixir	false	-
+idavi/usp-mcp	1	iDavi/usp-mcp	5	0	GPL-3.0	2026-07-10	Python	false	MCP para integração com sistemas estudantis da Universidade de São Paulo: Moodle, JupiterWeb, etc.
+ignacio-ghub/asistente-docente-sin-conexion	1	Ignacio-Ghub/asistente-docente-sin-conexion	0	0	GPL-3.0	2026-11-03	HTML	false	Prototipo de asistente docente que funciona sin internet, con IA local. Código generado con IA (declarado).
+inepdadosabertos/api	1	inepdadosabertos/api	45	8	GPL-2.0	2014-05-18	-	false	API de dados abertos para o INEP
+innova-space-edu/eduai-platform	1	innova-space-edu/eduai-platform	0	0	MIT	2026-11-10	TypeScript	false	-
+ipti/br.tag	1	ipti/br.tag	20	4	GPL-2.0	2026-11-07	PHP	false	Software de apoio a gestão escolar baseado em Tecnologia Social
+ishandutta2007/awesome-higher-education-crm	1	ishandutta2007/Awesome-Higher-Education-CRM	0	0	MIT	2026-10-13	-	false	Top Higher Education CRM (Opensource)  Star if you like it! 
+ivanozono/ia-docentes-notebooklm	1	ivanozono/ia-docentes-notebooklm	0	0	NONE	2026-09-02	TypeScript	false	Premium interactive workshop for Mexican secondary school teachers to learn NotebookLM and AI integration in the Nueva Escuela Mexicana.
+jackstar6677-1/edudocente-studio	1	JackStar6677-1/edudocente-studio	1	0	MIT	2026-10-30	Python	false	Autonomous Multi-AI engine generating print-ready assessments, justified answer keys, study guides, rosters, lesson plans and annual plans in Word & Excel for K-12, IB & STEM curricula - with fully editable formats, a web panel and Spanish (Chile) defaults.
+jarodise/language-transfer	1	jarodise/Language-Transfer	32	4	NONE	2026-02-28	-	false	AI-powered Spanish tutor using the Language Transfer methodology. Runs inside Gemini CLI or Claude Code.
+jaxisreal/moodle-reporte-limpio	1	JaxisReal/Moodle-Reporte-Limpio	0	0	MIT	2026-11-01	PHP	false	Plugin para Moodle orientado a la generación, procesamiento y visualización de reportes de finalización de actividades, con dashboards de seguimiento, ranking de participantes y detección jerárquica de módulos, unidades y sesiones.
+jeanikt/tutor-ai-agent	1	Jeanikt/tutor-ai-agent	0	0	MIT	2026-10-07	TypeScript	false	Manu: open-source voice AI math tutor in Brazilian Portuguese that adapts from 1st grade to university. TypeScript + LiveKit Agents.
+jessic-amendes/acelera-ai-educacao	1	jessic-amendes/acelera-ai-educacao	0	0	MIT	2026-07-06	Jupyter Notebook	false	Agente de IA para monitoramento de indicadores educacionais globais (World Bank EdStats) — pipeline em Python + n8n + OpenAI
+johnmartinrb/ce-ipet424	1	JohnMartinRB/CE-IPET424	0	0	MIT	2026-11-10	HTML	false	Portal web institucional desarrollado por el Centro de Estudiantes para concentrar, digitalizar y facilitar el acceso a la información académica, solicitudes, formularios, trámites y herramientas interactivas para la comunidad educativa del IPET N° 424.
+joojdev/academic-tracker-mcp	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+josetra44/dutic-mcp	1	JOSETRA44/DUTIC-mcp	0	0	MIT	2026-11-07	TypeScript	false	Permite a agentes de IA y humanos interactuar con el aula virtual DUTIC
+jpmanson/siu-guarani-mcp	1	jpmanson/siu-guarani-mcp	1	0	MIT	2026-08-10	Python	false	CLI and MCP server for SIU Guarani Autogestion docente queries
+juanfelipemalaver00-arch/predictive-model-for-primary-school-dropout-in-colombia	1	juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia	1	0	NONE	2026-11-08	Jupyter Notebook	false	Prediction of the risk of early school dropout in Colombian public education system schools. CRISP-DM pipeline that integrates C-600, SIMAT, IPM and territorial variables to generate actionable alerts by the Education Secretariat through explainable ML models.
+juanfz/ada-ucv	1	JuanFZ/ada-ucv	0	0	NONE	2026-11-04	-	false	ADA (Asistente Docente Automatizado): agente inteligente tecnopedagógico basado en IA generativa para asistir a docentes de la Facultad de Ciencias de la UCV en la creación y configuración de recursos educativos en Moodle, con validación técnica y supervisión docente
+juani19t/sistema_asistencia	1	JuanI19T/Sistema_Asistencia	3	0	MIT	2026-11-06	C#	false	Sistema integral de gestión de asistencia escolar (Escritorio WinForms + API Node.js + App móvil Expo)
+juezun/inginious	NOTFOUND
+juliancasaburi/siu-guarani-promedio-extension	1	juliancasaburi/siu-guarani-promedio-extension	17	0	MIT	2025-07-08	JavaScript	false	Visualización de promedios en historia académica de SIU Guaraní - Extensión para navegadores basados en Chromium/Firefox
+justinolm/sti-matematicas	1	JustinoLM/STI-matematicas	0	0	NONE	2026-10-14	Python	false	Sistema de tutoría inteligente para practicar operaciones con decimales en sexto grado: práctica adaptativa, perfiles de aprendizaje con K-means, pistas con LLM y panel docente. Validado con 74 estudiantes de una escuela pública panameña.
+kbgr55/khat-tf	1	KBGR55/KHAT-TF	5	1	NONE	2026-01-16	JavaScript	false	Es una plataforma web académica con roles diferenciados para administradores, estudiantes y docentes. Incluye un laboratorio remoto que ofrece a los estudiantes acceso a una consola conectada a un módulo WiFi, permitiendo la comunicación con un router Cisco para realizar prácticas virtuales en entornos de redes.
+kcire42/saphiraeducationagent	1	kcire42/SaphiraEducationAgent	0	0	NONE	2026-10-29	Python	false	Es una Plataforma Educativa Inteligente (EdTech) donde los estudiantes interactúan con un tutor virtual desde su celular.
+lapi-unam/quinta_escuela_de_computo_cuantico	1	LAPI-UNAM/quinta_escuela_de_computo_cuantico	52	12	NOASSERTION	2026-08-07	Jupyter Notebook	false	En este repositorio se colocará el material utilizado durante la Quinta Escuela de Cómputo Cuántico.
+latam-gpt/lm-evaluation-harness	NOTFOUND
+latam-gpt/syco-bench	NOTFOUND
+lbhubedu/lbedu.me	1	lbhubedu/lbedu.me	0	0	NOASSERTION	2026-10-19	TypeScript	false	Receitas open source de IA em português: prompts, agentes, automações e MCPs para copiar, testar e adaptar.
+libreclass/libreclass	1	LibreClass/libreclass	32	18	GPL-3.0	2022-01-11	Blade	false	Sistema de gestão escolar
+lincolnmeira/mlp-evasao-ufrb	1	lincolnmeira/mlp-evasao-ufrb	1	0	NONE	2026-08-02	Jupyter Notebook	false	MLP para predição de evasão escolar - UFRB
+livekit/agents	1	livekit/agents	15162	4113	Apache-2.0	2026-11-10	Python	false	A framework for building realtime voice AI agents 🤖🎙️📹 
+llamacha/iwslt2023_quechua_data	1	Llamacha/IWSLT2023_Quechua_data	10	0	Apache-2.0	2023-11-29	JavaScript	false	-
+lnosiqueira/totem-ia-educacional	1	lnosiqueira/Totem-IA-Educacional	2	1	MIT	2025-10-31	Python	false	Totem IA - Projeto Educacional (FIAP + FlexMidia)
+loiane/javascript-datastructures-algorithms	1	loiane/javascript-datastructures-algorithms	4885	1248	MIT	2026-11-03	TypeScript	false	:books: collection of JavaScript and TypeScript data structures and algorithms for education purposes. Source code bundle of JavaScript algorithms and data structures book
+lplnufpi/essay-br	1	lplnufpi/essay-br	17	6	MIT	2023-05-08	Python	false	A corpus of essays written by high school students
+lucasspinola/assistentes-educacionais-com-ia	1	LucasSpinola/assistentes-educacionais-com-ia	2	0	MIT	2026-06-14	Jupyter Notebook	false	Trilha aberta e gratuita, do zero ao avançado, para construir assistentes educacionais inteligentes: NLP, Machine Learning, Deep Learning, Transformers, LLMs, RAG, agentes e Learning Analytics.
+luispitik/sinapsis	1	Luispitik/sinapsis	46	13	MIT	2026-08-21	Shell	false	Sistema de aprendizaje continuo para Claude Code: hooks que observan patrones de trabajo reales y los destilan en reglas atómicas con nivel de confianza, aplicadas en sesiones posteriores.
+luisr-nunes/educativia	1	Luisr-nunes/Educativia	1	0	NONE	2026-10-23	TypeScript	false	Copiloto pedagógico com IA para criar e adaptar planos de aula alinhados à BNCC. Protótipo do Squad 15 (Cesar School, ODS 4) em React e TypeScript exportado do Figma Make.
+luisricar-do/portugol-ai-tutor	NOTFOUND
+luizengdev/opensga-frontend	1	luizengdev/opensga-frontend	0	0	NONE	2026-10-14	TypeScript	false	Portal web do OpenSGA: site institucional, secretaria, diário do professor e área do aluno. Next.js, React e Tailwind. Regras e Stripe ficam na API.
+luizpicolo/code	1	luizpicolo/code	38	23	MIT	2016-10-31	Ruby	false	:book: C.O.D.E - Controle de ocorrências e desempenho escolar
+luketempestt/simulados-sedu	1	LuKeTempestt/simulados-sedu	0	0	MIT	2026-08-16	TypeScript	false	Plataforma full stack desenvolvida na Residência de Software II da UNIT, em parceria com a SEDUC Sergipe, para criação, aplicação e análise de simulados educacionais.
+macielti/sigaa-cli	1	macielti/sigaa-cli	3	0	GPL-3.0	2020-01-05	Python	false	Módulo Python (não oficial) para servir como base para o desenvolvimento de um Command Line Interface para a plataforma SIGAA.
+maiatechdev/avit	1	maiatechdev/avit	0	0	MIT	2026-11-08	JavaScript	false	Plataforma que transforma o celular em ferramenta de aprendizagem dentro da janela pedagógica que a Lei 15.100/2025 já autoriza. O professor ativa, o aluno escolhe seu caminho, e um mentor de IA socrático guia o raciocínio sem dar respostas prontas.
+marcellodesales/mcp-brasil	NOTFOUND
+marcorojasb/tero	1	marcorojasb/tero	0	0	MIT	2026-09-20	Python	false	tero — agente docente con AWS Strands Agents SDK (Agents for Humans). Tus fuentes, tu criterio: el agente prepara, el docente decide.
+marcosroriz/sete	1	marcosroriz/sete	22	8	MIT	2023-03-20	JavaScript	false	Sistema Eletrônico de Gestão do Transporte Escolar
+marlonmotta/prometheus-bridge-learn	1	marlonmotta/PROMETHEUS-BRIDGE-LEARN	18	1	MIT	2026-05-26	TypeScript	false	🔥 PROMETHEUS·BRIDGE·LEARN — AI-powered education system that rewrites how humans teach and learn. Adaptive, human-first, output-focused. Built for every student. No hype. Real results.
+matheusmach/quantofalta	1	MatheusMach/QuantoFalta	14	4	NONE	2026-10-21	JavaScript	false	Extensão do Chrome que mostra quantas faltas você tem em cada disciplina do SIGAA
+mauforonda/unidades_educativas_bolivia	1	mauforonda/unidades_educativas_bolivia	5	0	NONE	2026-01-23	Python	false	Datos de unidades educativas en Bolivia
+mgarlabx/edukors_graph	1	mgarlabx/edukors_graph	17	2	MIT	2026-10-25	PHP	false	An open framework for creating adaptive learning experiences. It turns courses into dynamic knowledge graphs, allowing content, activities, and assessments to adjust to each learner’s progress, needs, and goals, with support for AI-powered personalization, multilingual learning, and offline use.
+micel357/edu-mentor-ai	1	Micel357/Edu-mentor-AI	0	0	NONE	2026-10-17	-	false	Sistema multiagente pedagógico com agentes inteligentes para explicação de conteúdo, diagnóstico, motivação, geração de exercícios, avaliação e criação de relatórios.
+mumuki/mumuki-laboratory	1	mumuki/mumuki-laboratory	201	25	AGPL-3.0	2023-07-18	Ruby	false	 :microscope: Where students practice and receive automated and human feedback
+nelsondiasif/jogos-educativos-ia	1	nelsondiasif/jogos-educativos-ia	0	0	NONE	2026-10-22	HTML	false	Jogos educativos desenvolvidos com apoio de inteligência artificial generativa para o ensino de Ciências, a Educação Infantil e a formação inicial de professores.
+neuralmind-ai/portuguese-bert	1	neuralmind-ai/portuguese-bert	889	139	NOASSERTION	2024-06-17	Python	false	Portuguese pre-trained BERT models
+nmarafo/opendidactia	1	nmarafo/OpenDidactia	0	0	NOASSERTION	2026-10-17	HTML	false	OKF y esquemas curriculares estructurados para la generación automatizada de Programaciones Didácticas y Situaciones de Aprendizaje (LOMLOE / CCAA) mediante agentes de IA.
+novatrix-2030/sih-2026	1	novatrix-2030/SIH-2026	0	0	NONE	2026-09-08	JavaScript	false	Student dropout risk prediction and early-intervention management system built for SIH 2026.
+oksigeniasl/oga-veve	1	OksigeniaSL/oga-veve	0	1	NOASSERTION	2026-11-10	TypeScript	false	Browser flight simulator over Paraguay — own coefficient-based flight model, procedural terrain from public-domain NASADEM, es-PY + Guaraní. Free forever for Paraguayan education. Beta.
+oluiscabral/studorama	1	oluiscabral/studorama	111	13	MIT	2026-09-03	TypeScript	false	AI-powered study sessions to enhance your learning
+omniboyok/siglo21-canvas-mcp	1	omniboyOK/siglo21-canvas-mcp	2	1	NONE	2026-11-04	TypeScript	false	MCP no oficial del canvas de universidad siglo 21
+openolat/qtiworks	NOTFOUND
+opetushallitus/oppijanumerorekisteri	1	Opetushallitus/oppijanumerorekisteri	1	1	NOASSERTION	2026-11-10	Java	false	-
+opetushallitus/organisaatio	1	Opetushallitus/organisaatio	4	2	NOASSERTION	2026-11-10	Java	false	-
+opetushallitus/valtionavustus	1	Opetushallitus/valtionavustus	8	3	NOASSERTION	2026-11-10	TypeScript	false	-
+org-nexus-projects/ufabc-next	1	org-nexus-projects/ufabc-next	73	22	NONE	2026-11-10	TypeScript	false	📈 Plataforma web para auxiliar na graduação dos alunos da UFABC com informações sobre a performance, processo de matrículas e os discentes da universidade
+owner/repo	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+papayaykware/agente-educativo-psicocognitivo	1	papayaykware/agente-educativo-psicocognitivo	0	0	MIT	2026-10-18	Python	false	Agente educativo adaptativo basado en trazado de conocimiento (DKT), perfil psicocognitivo emergente, affective computing y planificación dinámica. Incluye roadmap completo, arquitectura, prototipos y código base para un tutor autónomo con seguimiento cognitivo y afectivo.
+pedroestevaodev/plataforma-estudo-personalizado	1	pedroestevaodev/plataforma-estudo-personalizado	8	1	MIT	2025-08-14	TypeScript	false	A personalized study platform developed with Gemini API. It helps students structure content, stay focused and learn more efficiently by generating personalized study modules based on chosen topics. Developed for Alura + Google contest [AI Immersion - 2nd Edition].
+pipeworx-io/mcp-datos-cl	1	pipeworx-io/mcp-datos-cl	0	0	MIT	2026-11-09	JavaScript	false	datos.gob.cl CKAN MCP.
+portabilis/pre-matricula-digital	1	portabilis/pre-matricula-digital	21	10	NOASSERTION	2026-09-21	PHP	false	Módulo de gestão de vagas e listas de espera integrado ao i-Educar
+prefeiturasp/dados-educacao	1	prefeiturasp/dados-educacao	57	18	NONE	2019-10-02	Jupyter Notebook	false	Análises e tutoriais das bases de dados abertos da Secretaria Municipal de Educação em formato aberto
+programadores-obreros/agente-editor-inet	1	programadores-obreros/Agente-editor-inet	2	0	GPL-3.0	2026-10-27	HTML	false	Tecnia Bot — asistente educativo de IA para enseñar Arduino y ESP32 en escuelas técnicas argentinas (programa INET). Capa educativa sobre OpenCode, offline y de un doble clic.
+project-sunbird/knowledge-platform	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+pucavaz/sigaa-tools	1	PucaVaz/sigaa-tools	30	5	MIT	2026-11-09	Python	false	-
+raphateixeira/labvirtual	1	raphateixeira/LabVirtual	7	7	NONE	2026-10-24	HTML	false	Laboratório virtual de sistemas dinâmicos e controle: simulações interativas (pêndulo, maglev, aeropêndulo, motor CC, drone) para a FEE/UFPA-Tucuruí.
+reamat/algebralinear	1	reamat/AlgebraLinear	73	49	NOASSERTION	2025-01-26	TeX	false	Escrita colaborativa de recursos educacionais abertos sobre álgebra linear.
+regexpattern/fiuba-reviews-backend	1	regexPattern/fiuba-reviews-backend	1	0	GPL-3.0	2025-02-15	Go	false	Implementación un backend serverless para https://fiuba-reviews.com y un scraper de cátedras y docentes del SIU Guaraní.
+rodrigmatrix/sigaa_ufc_android	1	rodrigmatrix/sigaa_ufc_android	33	1	Apache-2.0	2021-03-20	Kotlin	false	Aplicativo do Sigaa, RU e Pergamum da Universidade Federal do Ceará. Implementado usando APIs do Android Jetpack e Material Components
+ronda-ai/ronda-app	1	ronda-ai/ronda-app	4	2	GPL-3.0	2025-10-13	TypeScript	false	An open-source pedagogical assistant that uses generative AI to help educators create a more dynamic, inclusive, and personalized learning environment. The application goes beyond simple gamification; it's a tool to understand, support, and empower each student individually and collectively.
+roveloupe/essay-grader	1	roVeloupe/essay-grader	20	1	NONE	2026-10-22	JavaScript	false	Essay Grader: photo to OCR to proofreading to rubric-based grading to Word/Markdown/PDF export. Electron desktop app with a built-in free model channel, no API key required.
+rubsneto/sigaaui	1	RubsNeto/SigaaUI	17	1	MIT	2026-04-17	JavaScript	false	Extensão open-source que moderniza a interface do SIGAA, deixando páginas como Portal do Discente, Notas e Matrícula mais claras, organizadas e agradáveis de usar.
+savinoo/ai-grading-system	1	savinoo/ai-grading-system	2	0	NONE	2026-10-15	Python	false	Multi-agent system for grading discursive exams, with RAG support and conditional divergence arbitration. Capstone project (TCC) at Instituto Federal Fluminense. Built with LangGraph, LangChain, FastAPI, ChromaDB, and PostgreSQL.
+shayenefigueredo/iaprofept	1	ShayeneFigueredo/IAProfEPT	0	0	NONE	2026-09-22	HTML	false	Plataforma digital para formação continuada de professores de Matemática da Educação Profissional e Tecnológica com integração de ferramentas de Inteligência Artificial
+shayenefigueredo/iaprofept-plataforma	1	ShayeneFigueredo/IAProfEPT-plataforma	0	0	NONE	2026-10-22	HTML	false	Plataforma digital para formação continuada de professores de Matemática da Educação Profissional e Tecnológica com integração de ferramentas de Inteligência Artificial
+shishiv/educa	1	shishiv/EDUCA	1	0	MIT	2026-09-19	TypeScript	false	A planilha da secretaria de educação não aguenta mais. O EDUCA aguenta.
+sidneybissoli/ibge-br-mcp	1	SidneyBissoli/ibge-br-mcp	14	6	MIT	2026-11-09	TypeScript	false	MCP Server for IBGE APIs - Brazilian geographic, demographic and statistical data
+sidneybissoli/uis-mcp-server	1	SidneyBissoli/uis-mcp-server	1	1	MIT	2026-11-09	TypeScript	false	Provenance-first MCP server for UNESCO UIS statistics (education, science, culture) — remote, Cloudflare Workers
+siu-toba/docker-guarani	1	SIU-Toba/docker-guarani	4	7	NONE	2017-08-01	Shell	false	Contenedores docker para Guaraní.
+sizwinz/studysage-offline-online-ai-note-assistant	1	sizwinz/StudySage-Offline-Online-AI-Note-Assistant	12	2	MIT	2026-07-05	Python	false	StudySage 🧠 is an offline AI assistant for taking notes that helps students with summarizing their notes, making quizzes, extracting handwritten text from images (OCR), and exporting everything to PDF through a beautiful terminal or desktop GUI.
+startin-lab/brujula-educativa	1	startin-lab/brujula-educativa	0	0	MIT	2026-09-21	Python	false	Agente publico de consulta sobre datos educativos abertos de Colombia. Fundacion Startin.
+sugarlabs/sugar	1	sugarlabs/sugar	315	334	GPL-3.0	2026-10-22	Python	false	Sugar GTK shell
+sumeedu/bancodeitinerarios	1	sumeedu/bancodeitinerarios	6	2	Apache-2.0	2023-02-24	TypeScript	false	O Banco de Itinerários tem como principal objetivo oferecer uma ferramenta colaborativa para auxiliar instituições de ensino, secretarias educacionais e educadores das redes pública e privada.
+supoz9/edge-ai-education	1	Supoz9/edge-ai-education	2	0	MIT	2026-07-13	Python	false	Infrastucture d'IA souveraine, frugale et maïeutique distribuée par discipline au lycée
+swamperu/peru-ugel-geojson	1	swamperu/peru-ugel-geojson	0	0	NOASSERTION	2026-10-13	Python	false	Polígonos GeoJSON de las 226 UGEL del Perú, derivados de datos públicos del INEI y ESCALE. Incluye librería de mapas sin dependencias y una página para cargar tu propio Excel.
+sysadmins-cenia/cluster-ialab-docs	1	Sysadmins-CENIA/Cluster-IALab-Docs	2	0	NONE	2026-11-10	Shell	false	Documentación oficial CENIA del uso para el Clúster IALab
+tcheld0n/corrijai	1	tcheld0n/CorrijAI	0	0	MIT	2026-08-28	Jupyter Notebook	false	Agente de Inteligência Artificial para correção de redações no padrão ENEM. Projeto de conclusão de curso de IA e Machine Learning (Governo de Alagoas, Oxetech Academy e Instituto Vertex)
+teamspada/yachai	1	teamspada/yachai	1	0	Apache-2.0	2026-08-09	Dart	false	Tutor de comprensión lectora con IA 100% local (Gemma) para primaria, sin depender de internet.
+themeum/tutor	1	themeum/tutor	131	97	GPL-3.0	2026-11-10	PHP	false	A complete WordPress LMS plugin to create any e-learning website easily.
+thiagoluzin/pemara-edu-mira	1	thiagoluzin/pemara-edu-mira	1	0	MIT	2026-10-21	TypeScript	false	Sistema local para criar e apresentar aulas visuais, com acervo curricular e inteligência artificial opcional. Código aberto MIT.
+thiagoudweb/techtutor	NOTFOUND
+topics/ai-tutor	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+topics/education-ai	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+trindadetiago/sigaa-caiu	1	trindadetiago/sigaa-caiu	20	4	MIT	2026-09-03	TypeScript	false	-
+ufpa-lamic/eduacess	1	UFPA-LAMIC/EduAcess	0	1	MIT	2026-11-05	Python	false	O EduAccess Pro (Viva! Universidade 2025) utiliza Inteligência Artificial local e algoritmos para adaptar materiais didáticos universitários. A ferramenta converte PDFs em formatos acessíveis (áudios narrados e textos otimizados) para discentes com deficiência visual, TDAH, autismo e dislexia, promovendo autonomia e inclusão no ensino superior.
+universidade-livre/ciencia-da-computacao	1	Universidade-Livre/ciencia-da-computacao	21021	1691	MIT	2026-05-20	-	false	🎓 Um caminho para a educação autodidata em Ciência da Computação!
+utfpr-cm-dacom-bcc/learning-analytics	1	utfpr-cm-dacom-bcc/learning-analytics	1	0	MIT	2026-05-22	Python	false	Learning analytics application compatible with xAPI
+vilcaaguilerandrea-oss/carrera-lectora	1	vilcaaguilerandrea-oss/carrera-lectora	0	0	NONE	2026-09-20	HTML	false	"Juego interactivo para mejorar la fluidez lectora con reconocimiento de voz"
+virginiandujar/educa-ia	1	virginiandujar/educa-ia	0	0	NONE	2026-09-27	TypeScript	false	Material didáctico y presentación web sobre interacción con agentes de IA
+vnschneider/suap-mcp	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+willianangelomn-spec/curupiracode	1	willianangelomn-spec/curupiracode	0	0	MIT	2026-10-22	TypeScript	false	IA aberta, código sob seu controle — agentes locais com memória, pesquisa web e extensão Chrome/Edge para chat, automação, formulários e macros. Projeto brasileiro open source (MIT).
+willianmano/moodle-theme_moove	1	willianmano/moodle-theme_moove	193	167	GPL-3.0	2026-11-07	CSS	false	A Moodle Boost child theme

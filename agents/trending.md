@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p742) — 🟢 **`ACTION p741-A` RUN AS WRITTEN: THE LATAM BACKLOG WAS PROMOTED INSTEAD OF EXTENDED, AND REDISCOVERY WENT `44%` → `0 / 15`. 🔴 AN `Apache-2.0` GRANT SHIPPING UNRESOLVED GIT MERGE-CONFLICT MARKERS, WITH TWO COMPETING COPYRIGHT HOLDERS AND THE INDEX BLIND TO IT. 🟢 THE SEARCH ENDPOINT HAS *THREE* STATES, NOT TWO — WHICH REFUTES BOTH `p735` AND `p736` AND RECOVERS A RENAMED LATAM ADDRESS THE RAW PROBE CANNOT SEE.**
+
+**`4` agent rows · `6` foundations rows · `5` platform rows · `21` licence payloads byte-read, **`21 / 21` classified** · `0` index-vs-payload disagreements · `1` stale shelf address repaired · `109`-repository owner enumerated end to end · **all `4` mandated regional demand legs ran** · `5` global supply legs ran and **nil'd**, the `35`th consecutive time · `2` subjects measured and **REFUSED** · `1` region-misattribution trap caught before filing.**
+
+### 🟢 The headline is a procedure result, not a repo: promoting beats searching, and it is now measured on both sides
+
+`p741` closed with `ACTION p741-A`, which said in plain terms: **stop aiming at foreign owners, spend the pass on the `140` LATAM addresses already discovered, licence-read and written up but never promoted.** `p742` did exactly that and the two numbers are worth putting side by side:
+
+| | `p741` (discovery-led) | `p742` (backlog-led) |
+|---|--:|--:|
+| Candidate addresses considered | `27` | `205` |
+| Already on a sell shelf (rediscovery) | **`12` (`44%`)** | **`0`** |
+| Rows promoted | `6` | **`15`** |
+| Regions represented in promotions | `1` (EMEA) | **`2`** (LATAM `14`, APAC `1`) |
+
+🔵 **The mechanism is not mysterious: a backlog address has already paid its discovery cost and its licence-read cost, so the only work left is the judgement.** `P693-A` has said this for fifty passes; `p742` is the first pass to spend itself on it and report the ratio.
+
+### 🔴 `T358` — an `Apache-2.0` licence file with unresolved merge-conflict markers in it
+
+[`0xnavarro/ia-para-todos`](https://github.com/0xnavarro/ia-para-todos) (`26★`, Apache-2.0 per the index) ships a `LICENSE` of **`11,471 B`**, sha256₁₂ `81fd0ede357d`. The steward's own text at `https://www.apache.org/licenses/LICENSE-2.0.txt` is **`11,358 B`**, sha256₁₂ `cfc7749b96f6`. The `113 B` difference is **three git conflict markers and a second copyright line**:
+
+```
+   END OF TERMS AND CONDITIONS
+
+<<<<<<< HEAD
+   Copyright 2024 0xnavarro - IA-PARA-TODOS
+=======
+   APPENDIX: How to apply the Apache License to your work.
+   ...
+   Copyright [yyyy] [name of copyright owner]
+>>>>>>> 32db549aa17acfc812d4175d983a95945a02b728
+```
+
+🟢 **The arithmetic closes exactly, which is why this is filed as measured rather than observed:** `70 B` of marker lines `+ 44 B` of injected copyright line `− 1 B` of removed leading blank `= 113 B`, the whole delta. And **the operative text is byte-canonical against the steward through `END OF TERMS AND CONDITIONS`** — diffed line by line, zero differences. So the grant itself is unaltered Apache-2.0; what is broken is the attribution.
+
+🔴 **Why it matters, and it is not pedantry.** The file simultaneously asserts two different copyright states — a real holder and the unfilled template — and **does not say which is in force**. 🔴 **GitHub's licence index reports a clean `Apache-2.0` and is blind to all of it**, because the detector matched the operative body. That is a *new direction* for index error: not wrong about the family, **incomplete about the document**. A corporate licence scanner that greps for conflict markers will flag this; a studio that read the index will not have known.
+
+### 🟢 `T359` — the search endpoint has three states, and with the raw channel they form a complete address classifier
+
+🔴 **Both of this base's previous readings are wrong.** `p735` declared `repo:{owner}/{name}` a dead channel (an outage). `p736` retracted that and declared `repo:` **"not a valid qualifier for this endpoint"**. `p742` ran a controlled panel of `8` addresses:
+
+| Address | `repo:` result |
+|---|---|
+| `HKUDS/DeepTutor`, `moodle/moodle`, `sakaiproject/sakai`, `jupyterhub/jupyterhub`, `THU-MAIC/OpenMAIC`, `openedx/openedx-platform` | **`count=1`**, full metadata — `6 / 6` |
+| `openedx/edx-platform` (renamed) | **`422`** |
+| invented address | **`422`** |
+
+🟢 **So `repo:` *is* valid, and `422` is not an error — it is a verdict: "this is not a canonical current address."** Crossed with the raw channel on `9` further addresses, the two channels resolve into four states and **every one of them occurred in this pass's data**:
+
+| `search/repositories` | raw `HEAD` | Meaning | Seen at |
+|---|---|---|---|
+| `count ≥ 1` | `200` | live, canonical, indexed | the `15` promoted rows |
+| `count = 0` | `200` | **live and canonical but absent from the index** | `damasiormoura/mcp-dev-latam`, `dasgltd/mcp-brasil`, `eduagarcia/lm-evaluation-harness-pt` |
+| `422` | `200` | **renamed** — the address is a redirect | `diego694/lummer`, `openedx/edx-platform` |
+| `422` | `404` | **gone** — deleted or private | `aule-org/aimauta`, `belentani7/aprende-brasil`, `belentani7/lingua-aberta`, `cleison-morais/koba`, `gio0938/cocomath` |
+
+🔴 **The consequence for this base is direct and it is a defect, not a curiosity.** Its liveness probe is raw-only, and **the raw channel returns `200` for a renamed address because GitHub redirects raw too**. So a rename is *structurally invisible* to every check this base runs — which is exactly how `openedx/edx-platform` survived on these shelves for `145` passes after `p526` published the rename, and why the old address still appears **`15` times** across `agents/top.md` (`6`), `compose/patterns.md` (`5`), `verticals/solutions.md` (`3`) and `repos/foundations.md` (`1`).
+
+🟢 **Payoff, immediate and concrete.** The classifier recovered a LATAM row from a dead name: [`diego694/lummer`](https://github.com/diego694/lummer) → **[`dicowerrr/LUMMER`](https://github.com/dicowerrr/LUMMER)**, proven the same project by **byte-identical README (`17,495 B`, sha256₁₂ `a2a7698fce9b`)** at both addresses. The owner account `diego694` is itself `422` — `user:diego694` returns no such owner — so the *account* was renamed, not just the repository. It is now filed on [`../verticals/solutions.md`](../verticals/solutions.md) at its canonical address. **`ACTION p742-A` turns this into a gate.**
+
+### 🔴 Two subjects measured and REFUSED, with the reason, so no successor re-buys them
+
+| Address | Stars | Verdict |
+|---|--:|---|
+| [`papayaykware/agente-educativo-psicocognitivo`](https://github.com/papayaykware/agente-educativo-psicocognitivo) | `0` | 🔴 **REFUSED as a ROADMAP, not a system.** MIT and granted (`1,069 B`, sha256₁₂ `e34780266778`), `355 KB` of Python, pushed `2026-10-18`, and the subject matter is exactly what this shelf wants — DKT knowledge tracing, affective computing, A\* path planning. **But its own README describes "cuatro fases incrementales" toward a tutor that does not exist yet**, and names its conceptual author as *Copilot*. **Measured, granted, refused.** The nearest real thing on this base is `pyKT`. |
+| [`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente) | `7` | 🔴 **REFUSED as a REGION TRAP, and it is `T137` catching itself.** MIT (`1,099 B`, sha256₁₂ `e340e4990cdb`). It was swept into this pass's LATAM candidate pool by the token `docente` — which is **Italian** here as well as Spanish. *Carta del Docente* is the **Italian** state teacher-spending entitlement, so the subject is **EMEA**. 🟢 **A language token is not a region, and the closed `region` vocabulary makes a wrong guess worse than an abstention.** Caught before filing. |
+
+### 🟡 The five LATAM addresses this base wrote up that have since vanished
+
+`aule-org/aimauta`, `belentani7/aprende-brasil`, `belentani7/lingua-aberta`, `cleison-morais/koba`, `gio0938/cocomath` — all `422` on search **and** `404` on raw across `README.md` and `LICENSE`. 🔵 **Recorded because it prices the backlog honestly: `5` of `205` LATAM trending addresses (`2.4%`) decayed between discovery and promotion.** The backlog is worth promoting *and* it is perishable, which is an argument for promoting it sooner rather than an argument against trusting it.
+
+### 🟢 Star movement, re-read today
+
+| Agent | `p741` | `p742` | Δ |
+|---|--:|--:|--:|
+| `HKUDS/DeepTutor` | `57,805` | **`57,821`** | `+16` |
+| `openedx/openedx-platform` | `8,219` | **`8,226`** | `+7` |
+
 ## 🆕 2026-11-10 (p741) — 🔴 **THIS PASS DREW A PROMOTION ROW FOR THE SECOND-LARGEST AGENT IT ALREADY OWNS, CALLED IT A DISCOVERY, AND WAS CAUGHT BY A `grep` RATHER THAN BY A GATE — `12` OF `27` CANDIDATES WERE ALREADY SHELVED, A `44%` REDISCOVERY RATE. 🟢 A README CAN NAME ITS LICENCE FILE IN A REPOSITORY THAT DOES NOT EXIST. 🟢 `apache.org` RESOLVES, SO THE OPERATIVE-TEXT CONTROL HAS A PRIMARY REFERENCE AT LAST — AND THE FIRST THING IT CAUGHT WAS AN ALTERED `APACHE-2.0`.**
 
 **`0` agent rows · `4` foundations rows · `2` platform rows · `6` new trends (`T352`–`T357`) ·

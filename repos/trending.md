@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p742) — 🟢 **THE LICENCE SEAM IN EDUCATION OSS RUNS ALONG HOST-PLATFORM LINKAGE, AND IT WAS CONFIRMED TWICE INDEPENDENTLY IN ONE PASS: `12 / 12` OF AN ESTATE'S XBLOCKS ARE `AGPL` AND `12 / 12` OF ITS THEMES ARE `MIT`, WITH ZERO CROSSOVERS. 🔴 A REPOSITORY WITH `MIT` AT DEPTH 1 AND `GPL-3.0` AT DEPTH 3, WHICH THE INDEX REPORTS AS `MIT`. 🟢 LATAM SUPPLY IS ORGANISED AROUND *NATIONAL SUBSTRATES*, NOT A STANDARDS STACK — WHICH IS THE OPPOSITE OF EMEA.**
+
+**`11` institutional rows promoted (`6` foundations, `5` platforms) · `21` payloads byte-read, `21 / 21` classified · `0` index-vs-payload disagreements on the family · `1` index **incompleteness** found that no previous pass's instrument could see · `109`-repository owner enumerated end to end · `1` stale shelf address repaired.**
+
+### Promoted this pass, by region — and the imbalance is the *correction* of p741's
+
+| Repo | Stars | Forks | Licence (byte-read) | Region | Shelf |
+|---|--:|--:|---|---|---|
+| [eumakerdev/bncc_api](https://github.com/eumakerdev/bncc_api) | 17 | 1 | 🟢 **MIT** · `1,081 B` · `2eaaa245404c` | **LATAM** | foundations |
+| [diaslui/enem-extractor](https://github.com/diaslui/enem-extractor) | **37** | 2 | 🟢 **MIT** · `1,073 B` · `543bb8993dda` | **LATAM** | foundations |
+| [jpmanson/siu-guarani-mcp](https://github.com/jpmanson/siu-guarani-mcp) | 1 | 0 | 🟢 **MIT** · `1,074 B` · `53d0fa710f43` | **LATAM** | foundations |
+| [agn3si/resultadosunam---data](https://github.com/agn3si/resultadosunam---data) | 6 | 2 | 🟢 **MIT** · `1,063 B` · `13e4dd489fe9` | **LATAM** | foundations |
+| [mgarlabx/edukors_graph](https://github.com/mgarlabx/edukors_graph) | 17 | 2 | 🔴 **MIT @d1 + GPL-3.0 @d3** · `625342dc4d3d` / `e79e9c8a0c85` | **LATAM** | foundations |
+| [sidneybissoli/uis-mcp-server](https://github.com/sidneybissoli/uis-mcp-server) | 1 | 1 | 🟢 **MIT** · `1,088 B` · `2b1c57f64dac` | **Global** | foundations |
+| [aquario-ufpb/aquario](https://github.com/aquario-ufpb/aquario) | **85** | **31** | 🟢 **MIT** · `1,070 B` · `ca675f365799` | **LATAM** | platforms |
+| [pucavaz/sigaa-tools](https://github.com/pucavaz/sigaa-tools) | 30 | 5 | 🟢 **MIT** · `1,065 B` · `75d9af3e2e90` | **LATAM** | platforms |
+| [rubsneto/sigaaui](https://github.com/rubsneto/sigaaui) | 17 | 1 | 🟢 **MIT** · `1,073 B` · `c9c2e8ee59eb` | **LATAM** | platforms |
+| [dicowerrr/LUMMER](https://github.com/dicowerrr/LUMMER) 🔧 | 2 | 0 | 🟢 **MIT** · `1,100 B` · `11904957d7d2` | **LATAM** | platforms |
+| [eol-uchile/eol-uchile-theme-2020](https://github.com/eol-uchile/eol-uchile-theme-2020) | 1 | 0 | 🟢 **MIT** · `1,097 B` · `417032961673` | **LATAM** | platforms |
+
+🟢 **`10` of `11` are LATAM and that is deliberate.** `p741` promoted `6 / 6` EMEA and declared the imbalance its own artefact; `ACTION p741-A` instructed this pass to correct it from the existing backlog. **The base's longest-running regional gap moved for the first time in eight passes, with no new discovery spend.**
+
+### 🟢 `T360` — the seam is host-platform linkage, and the estate proves it without an argument
+
+`p742` enumerated **all `109` repositories** of [`eol-uchile`](https://github.com/eol-uchile) — *Educación Online*, Universidad de Chile, an Open edX operator this base already holds two AGPL rows from. Cross-tabulating the grant against the repository **name**:
+
+| Name contains | `AGPL-3.0` | `MIT` | no grant |
+|---|--:|--:|--:|
+| `xblock` | **`12`** | **`0`** | `5` |
+| `theme` | **`0`** | **`12`** | `5` |
+| `container` / docker | `0` | `2` | `4` |
+| everything else | `9` | `8` | `51` |
+
+🟢 **Zero crossovers on `24` granted repositories.** The mechanism is linkage, not policy: **an XBlock imports Open edX, which is AGPL-3.0, and inherits it; a CSS/HTML theme and a Dockerfile link nothing and the operator released them MIT.** Estate totals: **`65` no grant, `22` MIT, `21` AGPL-3.0, `1` Apache-2.0.**
+
+🔵 **The same seam, found independently the same pass, in a different ecosystem.** [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) carries **two** grants: root `LICENSE.md` is **MIT** (`1,087 B`, `625342dc4d3d`, containing **zero** occurrences of the string `GPL`), and `plugin/edukorsplayer/COPYING.txt` is **GPL-3.0** (`35,151 B`, `e79e9c8a0c85`). The README badge asserts *"MIT + GPL-3.0-or-later"*; **no root file resolves the boundary**, and the answer sits in Portuguese at depth 2 in `plugin/plugin.README.md`: *"A integração Moodle é licenciada sob **GPL-3.0-or-later**"*. **Moodle is GPL, a Moodle plugin links Moodle, so the plugin subtree is GPL — exactly as an XBlock is AGPL.**
+
+🔴 **And the index reports `MIT`.** It is not wrong about the root grant; it is **incomplete**, because it reports the shallowest grant and does not descend. 🟢 **Rule, stated so it can be applied rather than admired: in education OSS, read the licence at the *linkage boundary*, not at the repository root — and when a repository bundles a host-platform plugin, probe that subtree for a second grant.**
+
+### 🟢 `T361` — LATAM integration targets are national systems, one per country; EMEA's are shared standards
+
+The `205`-address LATAM backlog sweep makes the shape unmistakable once the rows are laid out by what they integrate *with*:
+
+| Country | National substrate | Permissive tooling found this pass |
+|---|---|---|
+| 🇧🇷 Brazil | **BNCC** (curriculum), **ENEM** (exam), **SIGAA/SIPAC** (university SIS) | `bncc_api`, `enem-extractor`, `corretor-enem`, `sigaa-tools`, `sigaaui`, `aquario` |
+| 🇦🇷 Argentina | **SIU-Guaraní** (university SIS) | `siu-guarani-mcp` |
+| 🇲🇽 Mexico | **UNAM admission exam** | `resultadosunam---data` |
+| 🇨🇱 Chile | **Open edX @ U. de Chile**, **SENCE** (state training registry) | `eol-uchile` themes (MIT), XBlocks (AGPL) |
+| 🇨🇴 Colombia | **ICFES / MinEducación / MinTIC / SECOP** open data | `brujula-educativa` |
+
+🔵 **Compare the EMEA shelf, which is `LTI 1.3`, `QTI`, `OneRoster`, `Open Badges`, `xAPI` — vendor-neutral standards maintained by consortia.** 🟢 **The consequence is an engagement-scoping rule and it is the most transferable thing in this pass: a LATAM engagement integrates one country's named system and does not port; an EMEA engagement implements a standard and does port.** A studio that scopes a Brazilian project from the EMEA playbook will look for a QTI bank and find an ENEM PDF. Wired as `P212`.
+
+### 🔴 Declared unusable or refused this pass, with probe depth
+
+| Address | Stars | Verdict |
+|---|--:|---|
+| [`1EdTech/qti-examples`](https://github.com/1EdTech/qti-examples) | 35 | 🔴 Carried from `p741` unchanged — `GRANT-REFERENCE-DANGLING`, licence named in a repository that does not exist. |
+| [`papayaykware/agente-educativo-psicocognitivo`](https://github.com/papayaykware/agente-educativo-psicocognitivo) | 0 | 🔴 **Granted MIT and refused anyway: a four-phase roadmap, not a system.** See [`../agents/trending.md`](../agents/trending.md). |
+| [`datomatic/carta-del-docente`](https://github.com/datomatic/carta-del-docente) | 7 | 🔴 **Region trap — *Carta del Docente* is Italian state policy; `docente` is not a LATAM token.** EMEA subject, caught pre-filing. |
+| `brasilapi/brasilapi` · `alphacep/vosk-api` · `huggingface/transformers` · `livekit/agents` | `11,530` · `15,242` · `168,731` · `15,162` | 🟡 **Large, permissive, and NOT education** — swept in by country or offline-capability tokens. Named so the next pass's LATAM leg does not re-surface them as finds. |
+
 ## 🆕 2026-11-10 (p741) — 🟢 **THE `GPL-2.0` ASSESSMENT ESTATE THIS BASE WROTE OFF ORGANISATION-WIDE HAS EXACTLY ONE `LGPL-2.1` COMPONENT, IT IS THE LTI BUNDLE, AND THAT TURNS "WE CANNOT USE TAO" INTO AN ARCHITECTURE. 🔴 THE STANDARDS BODY'S QTI CORPUS NAMES ITS LICENCE FILE IN A REPOSITORY THAT DOES NOT EXIST — `6 / 6` PROBES `404`, SEARCH RETURNS NO COUNT, AND THE OWNER HAS EXACTLY ONE `qti`-NAMED REPO. 🟡 AN EMEA STATE PUBLISHER NAMED AS A TOP TARGET IS `25` REPOSITORIES OF METADATA PLUMBING WITH A `4★` CEILING.**
 
 **`6` institutional rows promoted (`4` foundations, `2` platforms) · `23` payloads byte-read,

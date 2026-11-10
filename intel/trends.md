@@ -4,6 +4,137 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p742` (researched 2026-11-10) — `T358`–`T362`
+
+**Added above `p741`'s `T352`–`T357`.** `p742` ran `ACTION p741-A`: it promoted the LATAM backlog rather than searching for new addresses. `205` backlog addresses swept for metadata, `21` grants byte-read, **`21 / 21` classified**, `15` rows promoted, **`0` rediscoveries** against `p741`'s `44%`.
+
+🟢 **Two of these five are instrument findings that change how later passes should probe**, and one of them (`T359`) overturns both `p735`'s and `p736`'s readings of the same signal. 🟢 **Two are supply-structure findings that change how an engagement is scoped** (`T360`, `T361`). 🔴 **One is a defect in this base's own shelves** that its probes are structurally unable to see (`T362`).
+
+> ⚠️ **Identifier note, honouring `733-K`.** The maxima here were computed from `###`/`##` **headings**, not from bare `T[0-9]+` matches, because this file contains `T427` and `T429` and `compose/patterns.md` contains `P834` — all three cross-references into a sibling KB's series that sort above the live series. A regex maximum would have skipped this pass to `T430`.
+
+---
+
+## T358 — 🔴 A licence file can ship unresolved git merge-conflict markers, assert two copyright holders at once, and still be reported clean by the index
+
+**Subject:** [`0xnavarro/ia-para-todos`](https://github.com/0xnavarro/ia-para-todos), `26★`, Apache-2.0 per the index, `LICENSE` of **`11,471 B`**, sha256₁₂ `81fd0ede357d`.
+
+🟢 **Adjudicated against the steward's own text**, which `T353` established is reachable in this session: `https://www.apache.org/licenses/LICENSE-2.0.txt` → `200`, **`11,358 B`**, sha256₁₂ `cfc7749b96f6`.
+
+The `113 B` excess is three conflict markers and an injected copyright line, sitting between `END OF TERMS AND CONDITIONS` and the appendix:
+
+```
+<<<<<<< HEAD
+   Copyright 2024 0xnavarro - IA-PARA-TODOS
+=======
+   APPENDIX: How to apply the Apache License to your work.
+   ...
+   Copyright [yyyy] [name of copyright owner]
+>>>>>>> 32db549aa17acfc812d4175d983a95945a02b728
+```
+
+🟢 **The delta reconciles exactly**, which is what separates this from an observation: `70 B` of marker lines `+ 44 B` injected copyright `− 1 B` removed leading blank `= 113 B`. **And the operative text is byte-canonical against the steward through `END OF TERMS AND CONDITIONS`** — line-by-line diff, zero differences.
+
+🔴 **The defect is attribution, not grant.** The file asserts a real holder *and* the unfilled template, and does not say which governs. A conflict marker in a licence also means **a commit SHA is embedded in the licence file**.
+
+🔴 **A fourth index-failure direction.** `T338`/`T341`/`T344` recorded the index being *wrong about the family*. Here it is **right about the family and blind to the document's condition** — the detector matched the operative body and stopped. 🟢 **Procedure, cheap and worth adding to any grant read: `grep -cE '^(<<<<<<<|=======|>>>>>>>)'` the payload.** It is one line and it catches a class no byte-count or family check can.
+
+⚠️ **Disposition: not filed as a row.** The repository is a Spanish-language AI tutorial collection, last pushed `2025-01-08`, and is not education-sector software. **It is recorded here for the instrument result only.** Extends `T353`.
+
+---
+
+## T359 — 🟢 `search/repositories` has THREE response states, not two, and crossed with the raw channel they classify any address completely
+
+🔴 **This base has read the same signal wrong twice.** `p735` saw `422` on `repo:{owner}/{name}`, declared the authenticated channel dead and moved to unauthenticated `curl`. `p736` retracted that and declared **`repo:` "not a valid qualifier for this endpoint"**. **Both are wrong**, and a controlled panel settles it.
+
+**Control, `8` addresses:**
+
+| Address | Result |
+|---|---|
+| `HKUDS/DeepTutor`, `moodle/moodle`, `sakaiproject/sakai`, `jupyterhub/jupyterhub`, `THU-MAIC/OpenMAIC`, `openedx/openedx-platform` | **`count=1`** with full metadata — `6 / 6` |
+| `openedx/edx-platform` (known renamed) | **`422`** |
+| invented address | **`422`** |
+
+🟢 **`repo:` is a valid qualifier. `422` is a verdict, not a failure: "not a canonical current address."** And `count=0` is a *third*, distinct state — a valid address absent from the index — which `p742` observed on `3` live repositories.
+
+**Crossed with raw `HEAD`, the classifier is complete, and all four cells were populated by this pass's own data:**
+
+| search | raw | Verdict | Instances this pass |
+|---|---|---|---|
+| `count ≥ 1` | `200` | live · canonical · indexed | the `15` promoted rows |
+| `count = 0` | `200` | live · canonical · **unindexed** | `damasiormoura/mcp-dev-latam`, `dasgltd/mcp-brasil`, `eduagarcia/lm-evaluation-harness-pt` |
+| `422` | `200` | **RENAMED** — address is a redirect | `diego694/lummer`, `openedx/edx-platform` |
+| `422` | `404` | **GONE** — deleted or private | `aule-org/aimauta`, `belentani7/aprende-brasil`, `belentani7/lingua-aberta`, `cleison-morais/koba`, `gio0938/cocomath` |
+
+🔴 **Why this matters more than a tidy table: the raw channel returns `200` for a renamed address, because GitHub redirects raw as well.** This base's liveness probe is raw-only. **Therefore a rename has always been invisible to it** — see `T362`.
+
+🟢 **Proven payoff.** [`diego694/lummer`](https://github.com/diego694/lummer) → **[`dicowerrr/LUMMER`](https://github.com/dicowerrr/LUMMER)**, identified by **byte-identical README, `17,495 B`, sha256₁₂ `a2a7698fce9b`** at both addresses. `user:diego694` is itself `422`, so the **account** was renamed. A LATAM row this base had written up under a dead name is now shelved at its live one. 🔵 **Also recovered: a star count.** `verticals/solutions.md` carried Open edX as *"not in search index"*; at the canonical address it is **`8,226★`**. Corrects `p735` and `p736`. Wired as `P214`.
+
+---
+
+## T360 — 🟢 The licence seam in education OSS runs along HOST-PLATFORM LINKAGE, and two independent estates confirmed it in one pass
+
+**Estate 1 — [`eol-uchile`](https://github.com/eol-uchile)** (Educación Online, Universidad de Chile; Open edX operator). **All `109` repositories enumerated.**
+
+| Name contains | `AGPL-3.0` | `MIT` | no grant |
+|---|--:|--:|--:|
+| `xblock` | **`12`** | **`0`** | `5` |
+| `theme` | **`0`** | **`12`** | `5` |
+| `container` / docker | `0` | `2` | `4` |
+| everything else | `9` | `8` | `51` |
+
+🟢 **Zero crossovers across `24` granted repositories.** Totals: **`65` ungranted, `22` MIT, `21` AGPL-3.0, `1` Apache-2.0.**
+
+**Estate 2 — [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph)**, a different ecosystem (Moodle), found the same pass. **Two grants, two depths:** root `LICENSE.md` **MIT** `1,087 B` `625342dc4d3d` with **zero** occurrences of `GPL`; `plugin/edukorsplayer/COPYING.txt` **GPL-3.0** `35,151 B` `e79e9c8a0c85`. The README badge claims *"MIT + GPL-3.0-or-later"*; the boundary is stated **only** in Portuguese at depth 2 (`plugin/plugin.README.md`). 🔴 **The index reports `MIT`** — not wrong about the root, **incomplete about the repository.**
+
+🟢 **The mechanism is one sentence: code that links the host platform inherits the host's copyleft; code that does not is released permissively by the same authors.** Open edX is AGPL → its XBlocks are AGPL. Moodle is GPL → its plugins are GPL. Themes, schemas, validators and Dockerfiles link nothing → MIT.
+
+🔵 **This is `T356` generalised.** `p741` found that *"the `oat-sa` estate is GPL throughout"* concealed one `LGPL-2.1` component; `T360` says **where to look for that component in any estate** rather than discovering it by luck: **at the linkage boundary.** 🟢 **Operationally: take the themes, schemas and deployment layer; reimplement the pedagogy extensions.** Supersedes nothing; wired as `P213`.
+
+---
+
+## T361 — 🟢 LATAM integration targets are *national systems, one per country*; EMEA's are *shared standards* — and that changes how an engagement is scoped
+
+The `205`-address LATAM sweep resolves, once sorted by integration target rather than by subject:
+
+| Country | National substrate | Permissive tooling found |
+|---|---|---|
+| 🇧🇷 Brazil | **BNCC**, **ENEM**, **SIGAA/SIPAC** | `bncc_api`, `enem-extractor`, `corretor-enem`, `sigaa-tools`, `sigaaui`, `aquario` |
+| 🇦🇷 Argentina | **SIU-Guaraní** | `siu-guarani-mcp` |
+| 🇲🇽 Mexico | **UNAM admission exam** | `resultadosunam---data` |
+| 🇨🇱 Chile | **Open edX @ UCh**, **SENCE** | `eol-uchile` (MIT themes / AGPL XBlocks) |
+| 🇨🇴 Colombia | **ICFES, MinEducación, MinTIC, SECOP** | `brujula-educativa` |
+
+🔵 **Contrast the EMEA shelf: `LTI 1.3`, `QTI`, `OneRoster`, `Open Badges`, `xAPI`** — vendor-neutral standards from consortia, portable by construction.
+
+🟢 **The scoping rule, which is the transferable part: a LATAM engagement integrates one country's named system and does not port across borders; an EMEA engagement implements a standard and does port.** 🔴 **A studio that scopes a Brazilian engagement from the EMEA playbook will look for a QTI item bank and find an ENEM PDF** — and will cost the project as an integration when it is a parser plus a corpus.
+
+🔵 **It also reframes a six-pass conclusion.** `T152` said the three regions need three engagement shapes because their *supply* is constrained differently. `T361` says the LATAM constraint is not scarcity at all: **the supply exists, is permissive, and is bound to national substrates — so it looks absent to any search that expects portable products.** Extends `T152`, confirms `P693-A`. Wired as `P212`.
+
+---
+
+## T362 — 🔴 This base holds `15` references to a renamed flagship address, and its own liveness probe is structurally incapable of detecting them
+
+🔴 **A defect in these shelves, found by `T359`'s classifier and reported with its count.** `openedx/edx-platform` was renamed to `openedx/openedx-platform`; `p526` published the rename and `p671` repaired **one** row on `repos/foundations.md`. The old address still appears:
+
+| File | Occurrences |
+|---|--:|
+| `agents/top.md` | **`6`** |
+| `compose/patterns.md` | **`5`** |
+| `verticals/solutions.md` | **`3`** (one repaired at p742) |
+| `repos/foundations.md` | `1` |
+
+🔴 **The reason it persisted for `145`+ passes is not negligence, it is instrumentation.** The raw channel returns **`200` for both names**, byte-identical content, because GitHub redirects raw. **Every liveness and licence check this base runs passes on the dead name** — and `p671` recorded exactly that, then had no means to find the others.
+
+🟢 **`T359` supplies the means, and it is one call per address:** `search/repositories` answers `422` for the stale name and `count=1` for the canonical one. 🔵 **This is `T153` recurring** — *"a rule enforced on the page where the defect was last seen is not enforced"* — and this time the remedy is a gate rather than a reminder, because the discriminator finally exists. **`ACTION p742-A`.**
+
+🟢 **A SECOND stale shelf address was found and repaired the same pass, and it corrects a prior diagnosis rather than merely fixing a link.** [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) on `repos/foundations.md` → **[`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet)**. The row carried its star count as **"🔴 unavailable"** and attributed that to `688-B`/`690`'s **index false-negative class**. 🔴 **That attribution was wrong.** The address is *renamed*: search answers `422` for the old name and `count=1` for the new one, while raw answers `200` for both. **Identity proven twice: README byte-identical (`19,433 B`, sha256₁₂ `d22f8b56af46`) and LICENSE byte-identical (`1,092 B`, sha256₁₂ `1032f65dd2f6` — the digest the row already carried).** 🟢 **The star count was never unavailable; it was being asked for at a dead name. It is `91★`, pushed `2026-10-15`.** ⚠️ The owner is now a personal account rather than the Digital Credentials Consortium's, so the North America placement should be re-confirmed with the DCC.
+
+🔵 **Consequence worth stating, because it widens the gap's scope:** `688-B`/`690`'s "index false-negative" class **has at least one member that was actually a rename**, and this base has used that class to excuse blank metadata cells more than once. **Any row whose stars are recorded as unavailable should be re-run through `P214`'s classifier before the blank is accepted.**
+
+> 🟢 **Control, run because this pass's sweep used a lowercased address ledger and a case-sensitive qualifier would have manufactured false `count=0` verdicts.** `repo:` is **case-INSENSITIVE**: `hkuds/deeptutor` and `HKUDS/DeepTutor` both return `count=1`; `thu-maic/openmaic` and `THU-MAIC/OpenMAIC` both return `count=1`. 🟢 **So a lowercased ledger is safe to sweep, and `DaRL-GenAI/instructional_agents` returning `count=0` in *both* casings is a genuine `LIVE-UNINDEXED` state** (raw `200` on README and LICENSE), not a casing artefact.
+
+⚠️ **Scope stated honestly: `p742` repaired the `verticals/solutions.md` platform row and did not rewrite the other `14` references**, which sit inside historical prose and pattern text where a blind substitution would falsify what an earlier pass actually read. **The census that finds every stale address on every shelf was launched this pass and is reported partial: `375` of `1,198` addresses completed, `2` renames found and both repaired. See [`open-gaps.md`](open-gaps.md) and `ACTION p742-A`.**
+
 # 🆕 Trends new at `p741` (researched 2026-11-10) — `T352`–`T357`
 
 **Added above `p740`'s `T344`–`T351`.** `p741` ran at the two owners `ACTION p739-A` named,

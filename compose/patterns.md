@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P212–P214 — added at p742 (2026-11-10)
+
+### `P212` — The national-substrate-first LATAM engagement: integrate one country's named system, do not port a standards stack (ministry, public university, or edtech selling into one; LATAM; 4–7 weeks to a working pilot)
+
+🔴 **The mis-scope this exists to prevent.** A studio that has delivered in EMEA arrives in Brazil looking for a QTI item bank, a OneRoster feed and an LTI 1.3 tool slot. **None of those is where the work is.** `T361` measured it: LATAM's permissive education tooling is bound to **national substrates, one per country**, and nothing ports across the border. Scoped from the EMEA playbook, a parser-plus-corpus job gets costed as a standards integration and loses on both price and credibility.
+
+**The recipe, Brazil instance — four MIT repositories and no platform licence:**
+
+1. **Curriculum ground truth** → [`eumakerdev/bncc_api`](https://github.com/eumakerdev/bncc_api) (MIT, `17★`, FastAPI). Stand it up first. It serves the whole BNCC — all three stages, skills, competencies, taxonomy — so every later alignment claim becomes a lookup against an official code instead of a model's assertion.
+2. **Assessment items** → [`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) (MIT, `37★`) to get ENEM questions into JSON. ⚠️ Last pushed `2025-02-16`; re-validate the parse against the current exam PDF before trusting it.
+3. **Grading with its uncertainty attached** → [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) (MIT). Five official INEP competencies, anchored in `11,147` board-graded essays in a local SQLite corpus, **no external API and no ML**. Run `modo treino` for teaching and `modo banca` for a dry-run of how the board would actually zero a script.
+4. **Institutional data** → [`pucavaz/sigaa-tools`](https://github.com/pucavaz/sigaa-tools) (MIT, `30★`, CLI + MCP) for SIGAA/SIPAC. For Argentina substitute [`jpmanson/siu-guarani-mcp`](https://github.com/jpmanson/siu-guarani-mcp); for Colombia substitute [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) and its six ICFES/MinEducación/MinTIC/SECOP sources.
+
+**Wiring.** `bncc_api` and the SIS connector both behind MCP; `corretor-enem`'s methodology is markdown, so it runs inside whichever coding agent the client already licenses. **The deliverable is a graded script that cites the BNCC code and the INEP competency it was judged against, with a confidence range** — which is `P104` and `P109` composed, in Portuguese, against Brazilian instruments.
+
+🟢 **Why it closes.** Every component is MIT, byte-verified at p742, and runs on the client's own infrastructure with no per-seat model dependency — which answers the budget objection `P116` was built for. 🔴 **What to confirm in week one:** whether the client's SIGAA access permits programmatic reads under their account rules (`sigaa-tools` documents the constraint and ships a privacy note — use it as the template for the authorisation conversation, do not skip it).
+
+---
+
+### `P213` — The Open edX / Moodle operator estate harvest: take the layer that links nothing, reimplement the layer that links the host (any institution running a copyleft LMS; 3–5 weeks to a licence-clean architecture)
+
+🟢 **This pattern turns `T360` into a procurement answer, and it is decidable before anyone reads code.** The licence seam in education OSS follows **host-platform linkage**, not repository boundaries — measured on `eol-uchile`'s `109` repositories (**`12 / 12` `xblock`-named AGPL-3.0, `12 / 12` `theme`-named MIT, zero crossovers**) and confirmed independently on a Moodle project carrying MIT at depth 1 and GPL-3.0 at depth 3.
+
+**The decision table. Apply it to the estate before scoping:**
+
+| Layer | Grant you should expect | Action |
+|---|---|---|
+| Themes, static assets, JSON schemas, validators, Dockerfiles, deployment and backup scaffolding | **permissive** (MIT here) | **Take and adapt.** This is free architecture. |
+| XBlocks, Moodle plugins, runtime extensions, anything importing the platform | **host copyleft** — AGPL-3.0 for Open edX, GPL-3.0-or-later for Moodle | **Do not fork for a commercial client.** Reimplement against the extension API, or run your component as a **separate service** and integrate over LTI 1.3. |
+| Everything else in a public-sector estate | **frequently no grant at all** | **Ask the owner.** `65` of `109` repositories here had none. |
+
+**The steps.**
+
+1. **Enumerate the owner end to end** — `gh api -X GET search/repositories -f q=user:{owner} -f per_page=100`, paginated. Do not sample; the seam only shows on the full set.
+2. **Cross-tabulate grant against repository name** on the `xblock` / `theme` / `container` tokens. If the crossover count is not zero, you have found a real exception and should byte-read it.
+3. **Byte-read the grant at the linkage boundary, not the root** — and when a repository bundles a host-platform plugin, **probe that subtree** (`plugin/**/COPYING*`, `**/LICENSE*`). The index reports the shallowest grant and does not descend, so it will tell you `MIT` about a repository containing GPL-3.0.
+4. **`grep -cE '^(<<<<<<<|=======|>>>>>>>)'` every payload** you read (`T358`). One line; catches a class nothing else does.
+5. **Gate it in CI** with `P102`'s licence-drift check so the classification does not rot.
+
+🔵 **Worked instance, ready to quote:** Universidad de Chile's EOL estate. **Takeable** — `eol-uchile-theme-2020` and the `edx-*` Dockerfile deployment set (MIT). **Not takeable** — `eol-conditional-xblock`, `sence-xblock` and `eol-analytics-dashboard` (AGPL-3.0). 🟢 **The `sence-xblock` case is the one to show a LATAM public client:** it gates course units on login to **SENCE**, Chile's state training-funding body, and it demonstrates that a national-funding integration is an *identity-and-attendance gate* — but it is AGPL, so **build your own against the same gate rather than shipping theirs.**
+
+---
+
+### `P214` — The stale-address gate: one API call per address, because your liveness probe cannot see a rename (any KB, catalogue or dependency inventory; 1 day to implement)
+
+🔴 **The defect this closes is live on these shelves right now.** `openedx/edx-platform` was renamed to `openedx/openedx-platform`; this base carried the dead name for `145`+ passes and **still holds `15` references to it**, because **the raw channel returns `200` for both names** — GitHub redirects raw, byte-identically. **A raw-only liveness probe is structurally blind to renames** (`T362`).
+
+**The discriminator, from `T359`.** `search/repositories` with the `repo:` qualifier has **three** states, and crossing it with the raw channel classifies any address completely:
+
+| search | raw `HEAD` | Verdict | What to do |
+|---|---|---|---|
+| `count ≥ 1` | `200` | live · canonical · indexed | nothing |
+| `count = 0` | `200` | live · canonical · **unindexed** | keep; do **not** record "absent" |
+| `422` | `200` | **RENAMED** | **repair the address** |
+| `422` | `404` | **GONE** | delist, with the date |
+
+**Implementation.**
+
+```bash
+# canonical-address check; 422 means "not a canonical address", NOT an outage
+gh api -X GET search/repositories -f q="repo:$slug" --jq '.total_count' 2>/dev/null
+rc=$?   # rc!=0 + "422" in stderr  -> renamed or gone; confirm against raw
+curl -s -o /dev/null -w '%{http_code}' "https://raw.githubusercontent.com/$slug/HEAD/README.md"
+```
+
+🔴 **Three rules, each of which this base has paid for.** **(1)** Check exit status separately from empty output and never discard stderr — `P158`, which cost a near-delisting of `23` live rows. **(2)** `422` is a verdict, not a failure: `p735` read it as an outage and `p736` read it as an invalid qualifier, and **both were wrong**. **(3)** Abort if the absence rate crosses a plausibility threshold.
+
+🟢 **To recover a renamed target, byte-match the README.** `diego694/lummer` and `dicowerrr/LUMMER` both serve `17,495 B`, sha256₁₂ `a2a7698fce9b` — identical, so the same project. ⚠️ Probe the **owner** too (`user:{owner}`): `diego694` is itself `422`, so the account was renamed, not the repository.
+
+🔵 **Rate budget, measured:** the search endpoint allows **`30` requests/minute**, so a `1,198`-address shelf census takes ~`42` minutes at `2.1 s` spacing. **Run it detached and let it write incrementally** — it is a background cost, not a leg.
+
+🟢 **Immediate dividend beyond the repair: the canonical address carries metadata the stale one cannot.** `verticals/solutions.md` published Open edX as *"not in search index"*; at the live address it is **`8,226★`**, AGPL-3.0, `35,136 B`, sha256₁₂ `e12d78569742`.
+
+
 # 🆕 Patterns new at `p741` (2026-11-10) — `P209`–`P211`
 
 **Three recipes. Every component grant was byte-read at `p741` or carried from a named earlier pass
