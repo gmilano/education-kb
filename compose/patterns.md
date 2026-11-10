@@ -4,6 +4,119 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 `P265`–`P269` — added at p753 (2026-11-10)
+
+🟢 **These five recipes serve the Deaf-learner and sign-language access layer — producing a signed rendering of institutional content, and reading a signed contribution back.** Every component is named with its address, its byte-read grant and its region, because this register has **no permissive platform at all** (`verticals/solutions.md` is `0 / 3` permissive) and the licence boundary is therefore an **architecture** decision, not a procurement one.
+
+🔴 **Three constraints apply to all five and none is negotiable.**
+
+1. 🔴 **The pipeline turns NonCommercial at photorealism.** Everything up to and including the **pose** is MIT or Apache-2.0. [`pose-to-video`](https://github.com/sign-language-processing/pose-to-video) — the photorealistic renderer — is **CC BY-NC 4.0** (`19,301 B`, sha256₁₂ `e8bb0d05c06f`), and its training data [`signbank-plus`](https://github.com/sign-language-processing/signbank-plus) carries the **byte-identical** payload. **Render an avatar, never a photorealistic human** (`T469`).
+2. 🔴 **The data is the unlicensed layer.** `WLASL` (`1,290★`), `datasets` (`111★`), `transcription` (`50★`), `Uni-Sign` (`187★`), `slovo` (`98★`) — **no grant at `12` probed paths each**. Every recipe below assumes **client-owned or explicitly-licensed signing data, collected with Deaf-community consent**, as a funded work package (`T471`).
+3. 🔴 **The flagship is not free for Globant.** [`sign/translate`](https://github.com/sign/translate) is now **`Rylo Translate`**: CC BY-NC-SA 4.0 for individuals, non-profits and educational institutions; **a paid bespoke licence for for-profit organisations** (`research@rylo.com`). An institution may self-deploy it; Globant may not bill for building on it (`T470`).
+
+🔵 **And one design constraint that is law, not preference:** in the EU, **emotion recognition in education has been prohibited since `2025-02-02`** (AI Act Art. 5(1)(f), no grace period, `p750`). A camera trained on a signing learner is a camera. Document in the design that the system estimates **skeletal landmarks** and infers **no affective state**, and keep the model artefacts that could do so out of the deployment.
+
+---
+
+### 🟢 `P265` — Signed track for existing lecture video, fully permissive end to end (all regions; 8–10 weeks)
+
+**The problem it solves:** an institution has thousands of hours of recorded teaching and a legal duty of accessible digital content. Captions are necessary and, for learners whose first language is a signed language, **not sufficient** — reading a caption in a second language at lecture pace is the barrier.
+
+**Stack, every grant byte-read `2026-11-10`:**
+
+| Stage | Component | Grant |
+|---|---|---|
+| Transcript | the permissive captioning stack already on [`../repos/foundations.md`](../repos/foundations.md) | 🟢 permissive |
+| Sensing (reference signer capture) | [`google-ai-edge/mediapipe`](https://github.com/google-ai-edge/mediapipe) `37,636★` | 🟢 **Apache-2.0** · `12,331 B` · `8707eef05339` |
+| Hand-detection fix | [`sign-language-processing/mediapipe-hand-crop-fix`](https://github.com/sign-language-processing/mediapipe-hand-crop-fix) | 🟢 **MIT** · `1,081 B` · `e4375b39719a` |
+| Pose container | [`sign-language-processing/pose`](https://github.com/sign-language-processing/pose) `116★` | 🟢 **MIT** · `1,071 B` · `1c821db6b337` |
+| Text → gloss → pose | [`sign-language-processing/spoken-to-signed-translation`](https://github.com/sign-language-processing/spoken-to-signed-translation) `105★` | 🟢 **MIT** · `1,066 B` · `79c5160cf846` |
+| Fluency / prosody | [`sign-language-processing/fluent-pose-synthesis`](https://github.com/sign-language-processing/fluent-pose-synthesis) | 🟢 **MIT** · `1,081 B` · `e4375b39719a` |
+| Quality gate | [`sign-language-processing/pose-evaluation`](https://github.com/sign-language-processing/pose-evaluation) | 🟢 **MIT** · `1,068 B` · `04a767716fd5` |
+| Rendering | 🟢 **avatar** — client-owned rig, or `MMS-Player` as an isolated process (`P266` pattern) | 🔴 **never `pose-to-video`** |
+
+**Wiring:** transcript → sentence segmentation → per-sentence gloss lookup against the institution's **own** signed glossary (built in `P267`) → pose sequence → `fluent-pose-synthesis` for transitions → avatar render → publish as a selectable track beside the caption track in the LMS the institution already runs (Moodle, Open edX and Canvas are all already on [`../verticals/solutions.md`](../verticals/solutions.md)).
+
+🔴 **The honest limitation, which belongs in the proposal rather than in the retrospective:** dictionary-based gloss translation produces **signed vocabulary in spoken-language word order**, not fluent native grammar. It is a legitimate accessibility improvement and it is **not** a substitute for a human interpreter in high-stakes settings. Say so in writing, and scope human review of the signed glossary as a Deaf-led work package.
+
+**Where it lands:** North America inside the `2027-04-26` Title II cohort (`T475`); EMEA under national disability law and UNCRPD Art. 24 (**not** the EAA — `T476`).
+
+---
+
+### 🟢 `P266` — Libras-ready public-sector learning portal on the government's own stack (LATAM first; 6–8 weeks)
+
+**The problem it solves:** a Brazilian ministry, state secretariat or public university must serve Libras and does not want to own a translation engine.
+
+**Stack:**
+
+| Role | Component | Grant |
+|---|---|---|
+| Translation engine (service) | [`spbgovbr-vlibras/vlibras-translator-api`](https://github.com/spbgovbr-vlibras/vlibras-translator-api) `20★`, pushed **`2026-11-02`** | 🟡 **LGPL-3.0** · `7,650 B` · `ea8af5e789cb` |
+| Player | [`spbgovbr-vlibras/vlibras-player-webjs`](https://github.com/spbgovbr-vlibras/vlibras-player-webjs) | 🟡 **LGPL-3.0** · `7,651 B` · `da7eabb7bafd` |
+| Front-end embed | [`vue-a11y/vue-vlibras`](https://github.com/vue-a11y/vue-vlibras) `25★` | 🟢 **MIT** · `1,064 B` · `86926728b313` |
+| Reach beyond the portal | [`spbgovbr-vlibras/vlibras-web-browsers`](https://github.com/spbgovbr-vlibras/vlibras-web-browsers) | 🟡 **LGPL-3.0** |
+| Courseware host | Moodle / Open edX (already held) | per platform |
+
+🟡 **The licence architecture is the pattern.** LGPL-3.0 reaches code that **links** the library. Deploy `vlibras-translator-api` as a **network service in the client's own infrastructure**, call it over HTTP from the portal, and embed the player through the **MIT** Vue wrapper. The client's application code is then not a derivative work, and any modification Globant makes **to VLibras itself** is returned to the client under LGPL-3.0 — which, for a government client that already publishes the upstream, is a feature to put in the proposal rather than a cost to hide.
+
+🔴 **Do not use [`djpfs/react-vlibras`](https://github.com/djpfs/react-vlibras)** (`46★`, **no grant at `12` probed paths**). For React, call the player API directly or port the MIT Vue wrapper.
+
+🟢 **Why this engagement is unusually cheap for its visibility:** the engine, the player and the browser extensions are maintained by Brazil's federal digital-government secretariat and three of the five repositories were pushed within the fortnight before this pass (`T473`). Globant supplies integration, the subject-matter glossary and courseware — not an ML programme.
+
+---
+
+### 🟢 `P267` — The institution's own signed glossary, as reviewable text rather than video (all regions; 4–6 weeks)
+
+**The problem it solves:** every signed-content project fails first on **subject vocabulary** — the discipline's terms have no settled signs, and a video-only glossary cannot be diffed, searched, printed or version-controlled.
+
+**Stack:**
+
+| Role | Component | Grant |
+|---|---|---|
+| Notation substrate | [`sutton-signwriting/core`](https://github.com/sutton-signwriting/core) | 🟢 **MIT** · `1,128 B` · `d76493076fa3` |
+| SignWriting utilities | [`sign-language-processing/signwriting`](https://github.com/sign-language-processing/signwriting) | 🟢 **MIT** · `1,081 B` · `e4375b39719a` |
+| Text → SignWriting | [`sign-language-processing/signwriting-translation`](https://github.com/sign-language-processing/signwriting-translation) | 🟢 **MIT** · `1,081 B` · `e4375b39719a` |
+| Transcription of recorded signs | [`sign-language-processing/signwriting-transcription`](https://github.com/sign-language-processing/signwriting-transcription) | 🟢 **MIT** (index; byte-read pending) |
+| Dictionary platform to model on | [`signdict/website`](https://github.com/signdict/website) `87★` | 🟡 **MPL-2.0** · `16,726 B` · `393eaf2b92b3` |
+| Pose capture for new entries | `mediapipe` + `pose` | 🟢 Apache-2.0 / MIT |
+
+**Wiring:** Deaf subject-matter experts record each term once → pose extraction → **SignWriting** transcription → the glossary is stored as **text in the institution's repository**, reviewed like any other content, and consumed by `P265` as the gloss dictionary.
+
+🟢 **Why the notation step earns its cost:** SignWriting is Unicode-encoded, so the glossary becomes greppable, diffable in review, printable in materials, and portable between the LMS, the signed track and the assessment bank. A video-only glossary is none of those.
+
+🔴 **Data rule, restated because this is the pattern where it bites:** do **not** seed the glossary from `signbank-plus` (**CC BY-NC 4.0**) in a paid deliverable. Seed it from the institution's own recordings, or from SignBank under terms the client licenses directly.
+
+---
+
+### 🟢 `P268` — The `2027-04-26` Title II accessibility programme, sequenced (North America; 3 phases over 12–18 months)
+
+**The problem it solves:** a US district, state agency or public university in the `50,000`+ cohort has a moved deadline and an unchanged duty, and needs a programme rather than a sprint (`T475`).
+
+| Phase | Weeks | Deliverable | Stack |
+|---|---|---|---|
+| **1 — Conformance baseline** | 0–8 | WCAG 2.1 AA audit of the digital estate; captioning backlog cleared; remediation register with owners | the permissive captioning and accessibility-audit rows already on [`../repos/foundations.md`](../repos/foundations.md) |
+| **2 — Signed track pilot** | 8–24 | One high-enrolment course delivered with a signed track; Deaf-led review; measured quality gate | `P265` + `P267` |
+| **3 — Procurement and policy** | 24–52 | Accessibility clauses in edtech procurement; signed-glossary governance; evidence pack for the general Title II duty | institution policy + the `T475` dates |
+
+🔴 **Two things to say in the first meeting, both of which protect the client and the engagement.** First: the technical conformance date moved to **`2027-04-26`** (≥ `50,000`) / **`2028-04-26`** (below), WCAG 2.1 AA unchanged — **but DOJ restated that the general Title II obligation continues regardless**, so "we have until 2027" is wrong as a legal posture and right as a budget plan. Second: ⚠️ **these dates are corroborated across six independent secondary sources and were not primary-verified in this session** (`federalregister.gov`/`ada.gov` unreachable under this network policy); confirm against the Federal Register before they enter a signed document (`ACTION p753-A`).
+
+---
+
+### 🟢 `P269` — APAC sign-language programme that starts with licence clearance (APAC first; 10–12 weeks)
+
+**The problem it solves:** the region has the largest supply of sign-language code on GitHub and **`66%` of the top `50` carries no licence at all** (`T472`). A conventional "find a repo and extend it" approach produces an unshippable deliverable.
+
+| Phase | Weeks | Work |
+|---|---|---|
+| **1 — Clearance** | 0–3 | Byte-read the licence payload of every candidate over the `12`-path chain, including lowercase `license` and `LICENSE.TXT` (`p751`'s `T441`, `p752`'s `T464`); record grant-absences as refusals, not as "permissive by omission". **Expect to refuse roughly two-thirds.** |
+| **2 — Architecture** | 3–6 | Adopt the **Apache-2.0** [`AI4Bharat/OpenHands`](https://github.com/AI4Bharat/OpenHands) architecture (`140★`, `11,417 B`, sha256₁₂ `d32ce3191349`) as the reference for ISL recognition — 🔴 and plan to carry its maintenance: self-declared unmaintained since `2023-03-15`. 🔵 **Not the coding agent of the same name.** |
+| **3 — Data** | 6–12 | Collect **client-owned, consented** signing data with Deaf community partners; train; evaluate with [`pose-evaluation`](https://github.com/sign-language-processing/pose-evaluation) (MIT). 🔴 Do **not** train on `Uni-Sign` (`187★`, no grant) or `WLASL` (`1,290★`, no grant). |
+
+🟢 **The commercial point:** phase 1 is billable, scopeable work that a client cannot do itself and that de-risks everything after it. In a region where **two-thirds of the visible supply cannot be shipped**, the licence-clearance capability is the differentiator — and it is the capability this base has been building for `753` passes.
+
+🔴 **Regulatory note for the region:** the **UAE's `25` generative-AI prohibitions for schools (February 2026)** and the **UK DfE generative-AI safety standards (January 2026)** both reward a *narrowly scoped, non-generative* accessibility deliverable over an open-ended AI programme. Position the signed track as assistive infrastructure, with the affect-inference exclusion documented as in the preamble above.
+
+
 ## 🆕 `P261`–`P264` — added at p752 (2026-11-10)
 
 🟢 **These four recipes serve the education-to-employment transition layer — the join between what a learner's record says and what a labour market will pay for.** Every component is named with its address, its byte-read grant and its region, because in this register **the stack is chosen by jurisdiction before it is chosen by architecture** (see [`../verticals/solutions.md`](../verticals/solutions.md) for the two-stack table).

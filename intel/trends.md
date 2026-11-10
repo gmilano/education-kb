@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p753` (researched 2026-11-10) — `T465`–`T477`
+
+**Register: the Deaf-learner and sign-language access layer.** `35` addresses probed, `24` licence payloads byte-read, `16` query denominators plus `2` licence-distribution samples measured, `3` index values materially corrected — **all three in the refusing direction**, which is unusual for this base and is the register's signature. 🔴 **One cross-shelf stale date corrected: six shelves assert an "April 2026 ADA deadline" as a live demand driver and the deadline moved in April 2026 (`T475`).**
+
+### 🔴 `T465` — the register, and the shape of how it was missed
+
+`p749` took the **print-disability** estate — DAISY, `liblouis`, `readium`, `epubcheck` — and did it well. **Print disability and deafness are different estates with different publishers, different technology and different law**, and the second was at near-nil across `752` passes: `vlibras` `0` mentions, `signwriting` `0`, `sign language processing` `0`, `montreal forced` `0`, `common voice` `0`, `WLASL` `1`, `sign.mt` `1`, `Deaf` `7`. 🟢 **The lesson is the one `p752` reached from the other direction: "accessibility" is not a register — it is four registers, and holding one of them well is not coverage of the others.**
+
+### 🔴 `T466` — the direction asymmetry, and it is the commercial fact of the register
+
+`sign language recognition` → **`10,467`** repositories; `sign language translation` → **`4,980`**; `sign language avatar synthesis` → **`6`**; `sign language production avatar` → **`4`**. Education consumes the **text → sign** direction, because a Deaf learner is a receiver of institutional content; the open-source field supplies the **sign → text** direction, because that is what a hearing institution wants in order to read a Deaf person's input. **Ratio ≈ `2,600 : 1` against the direction education needs.** 🟢 **A studio that can assemble a production pipeline is not competing with ten thousand repositories — it is competing with four.**
+
+### 🔴 `T467` — `sign` is a colliding token, third reproduction in three passes
+
+`sign language mcp server` → `12`, of which **`0`** are sign-language artefacts (an e-signature MCP at `142★`, motor-current **signature** analysis, **signed** drone approvals). `sign language agent llm` → `14`, of which **`0`** are. 🔵 **`p751`'s `T444` (timetabling), `p752`'s `T456` (ESCO/escolar), now `T467` (sign/signature).** The generalisation is now firm enough to state as instrument policy: **a `total_count` on a query whose head word is a common English or Romance stem is an upper bound, not a measurement, and must be read result-by-result before it is published.** 🟢 **The corrected reading — there is no sign-language agent or MCP layer in open source at all — is a stronger finding than the inflated one.**
+
+### 🔴 `T468` — the ownership event: this field's reference stack is now a US for-profit's, and only the bytes show it
+
+The `sign-language-processing` organisation (`39` repositories, the academic reference stack of the field) now stamps **`Copyright (c) 2026 Nagish Inc.`** on its newest licence payloads, and [`sign/translate`](https://github.com/sign/translate) — the `800★` flagship — is now **`Rylo Translate`** (`rylo.com`, © 2022 Nagish Inc.). Three byte bands, all read this pass: MIT `1,081 B`/`e4375b39719a` (© Sign Language Processing, 2024), MIT `1,068 B`/`04a767716fd5` (🔴 © Nagish Inc., 2026), CC BY-NC 4.0 `19,301 B`/`e8bb0d05c06f` (🔴 © Nagish Inc., 2026). 🟢 **Instrument consequence: an index read says "mostly MIT"; a byte read says "permissive libraries, NonCommercial data, paid application."** 🔴 **Research-stack acquisitions do not announce themselves in the licence *name* — they announce themselves in the holder line, and this base only sees holder lines because it reads payloads.**
+
+### 🔴 `T469` — the permissive pipeline ends exactly where photorealism begins
+
+Sensing (`mediapipe`, Apache-2.0) → pose (`pose`, MIT) → text-to-gloss-to-pose (`spoken-to-signed-translation`, MIT) → segmentation (MIT) → fluency (MIT) → evaluation (MIT) is a complete, byte-read, commercially usable chain. **The last stage is not:** `pose-to-video` is **CC BY-NC 4.0**, and the training data beside it (`signbank-plus`) carries the byte-identical NonCommercial payload. 🟢 **Design rule for every engagement in this register: render the pose as an avatar, never as a photorealistic human** — the substitution is free at design time and impossible at delivery.
+
+### 🔴 `T470` — the first dual-tier, entity-type licence this base has recorded
+
+`Rylo Translate`'s single `LICENSE.md` (`17,404 B`, sha256₁₂ `82908ae3f300`) grants **CC BY-NC-SA 4.0 to individuals, non-profits and educational institutions** and **requires a paid bespoke licence from for-profit organisations** (fee quoted on request). Patents and trademarks are explicitly withheld; ShareAlike binds adaptations. 🔴 **The commercial shape is new to this base and worth naming: the client may use it free while the integrator may not.** 🟢 **Three honest options for a proposal — advise the institution to self-deploy with no Globant derivative work; buy the commercial licence with a quoted fee; or assemble the MIT chain in `T469`. This base recommends the third, because its cost is knowable today.**
+
+### 🔴 `T471` — the data and the benchmarks are the unlicensed artefacts, in a third consecutive register
+
+`dxli94/WLASL` (`1,290★`, the field's most-cited ASL dataset) — **no grant at `12` probed paths**. `sign-language-processing/datasets` (`111★`, the loaders every comparison imports) — **no grant**. `transcription` (`50★`, the text-to-pose model) — **no grant**. `ZechengLi19/Uni-Sign` (`187★`, ICLR'25) — **no grant**. `hukenovs/slovo` (`98★`, Russian SL) — **no grant**. 🔵 **`p747` found this on `REFEDS/eduperson`, `p752` on `Skill-Extraction-benchmark`, and here it is the norm rather than the exception.** 🟢 **Procurement consequence: in this register the budget line is Deaf-community-consented data collection, and an engagement that does not carry one is mispriced.**
+
+### 🔴 `T472` — the biggest regional supply is the least licensed
+
+`indian sign language` → **`2,732`** repositories. Licence distribution of the top `50` by stars: **`33` `NONE` (`66%`)**, `7` MIT, `4` Apache-2.0, `4` GPL-3.0, `2` GPL/LGPL-2.x. Byte-read control on the three highest-starred `NONE` rows: **`3 / 3` genuinely have no grant**; the one index-`Apache-2.0` control byte-read as a stock Apache payload (`11,357 B`). `american sign language` top `25`: `12` `NONE` (`48%`). 🟢 **This converts an impression into a scoping number: an APAC engagement in this register opens with a licence-clearance phase, and `66%` is how large that phase is.**
+
+### 🟢 `T473` — one region has a state-shipped stack, and it is LATAM
+
+**VLibras**, published by Brazil's federal digital-government secretariat (`spbgovbr-vlibras`): five repositories, **all LGPL-3.0**, byte-read, with the translation API pushed `2026-11-02`, the portal `2026-11-06` and the browser extensions `2026-10-27`. 🟢 **No other region has a government-maintained sign-language translation suite under an OSI licence.** 🔴 **And this base held `0` mentions of it across `752` passes while holding `30`+ mentions of a `0★` Libras application.** The permissive embedding wrapper is `vue-a11y/vue-vlibras` (MIT, `25★`); the more popular React wrapper (`46★`) has no grant.
+
+### 🔴 `T474` — the two existence oracles disagree precisely on renamed addresses
+
+`ai-forever/slovo`: `raw` README **`200`**, `repo:` `total_count` **`0`** — **renamed**; canonical is `hukenovs/slovo`. `sign-language-processing/pose-format`: `raw` **`404`** and `repo:` **`0`** — **gone**; the successor is `sign-language-processing/pose` while the *package* keeps the old name. 🟢 **Rule added to the probe chain: a `raw` `200` proves bytes are served, not that the address is canonical, because GitHub serves renames through a redirect. A `repo:` `0` against a `raw` `200` is the rename signal, and the response is a keyword query for the new owner.** 🔵 Both oracles were otherwise re-controlled clean, so `p752`'s `T455` holds.
+
+### 🔴 `T475` — the cross-shelf stale date: the April 2026 ADA Title II deadline moved, in April 2026
+
+**Six shelves of this base** — `agents/trending.md`, `repos/foundations.md` (four occurrences), `repos/trending.md`, `verticals/solutions.md` and `intel/market.md` — assert an **"April 2026 ADA deadline for large US public institutions"** as a **live demand driver**, in some places as the named reason a captioning row matters. **It moved:**
+
+| What | Date |
+|---|---|
+| DOJ **Interim Final Rule** published (`91 FR 20902`) | **`2026-04-20`** |
+| Old compliance date for public entities ≥ `50,000` population | `2026-04-22` *(the date this base's shelves encode as "April 2026")* |
+| 🔴 **New compliance date, entities ≥ `50,000`** | 🔴 **`2027-04-26`** |
+| 🔴 **New compliance date, entities < `50,000`** | 🔴 **`2028-04-26`** |
+| Technical standard — **unchanged** | **WCAG 2.1 Level AA** |
+| Public comment window on the IFR | to `2026-06-22`; DOJ signalled a possible later NPRM on substantive changes |
+| Separate HHS Section 504 IFR (funding recipients) | `2026-05-11` → **`2027-05-11`** |
+
+🔴 **What did *not* change, and it is the half a vendor deck omits:** DOJ stated in the IFR that covered entities **retain their ongoing Title II obligation** to make digital services accessible. The deadline for the *rule's* technical conformance moved; the underlying duty did not, and litigation risk under the general obligation is unaffected.
+
+🟢 **The commercial reading, and it is better news than it sounds:** the sales motion changes from **deadline panic** to **two budget cycles**. An institution that was being sold a remediation sprint can now be sold a programme — captioning, then signed tracks, then procurement standards — and the signed-track work in this register, which could not have been scoped inside a six-month panic, fits inside `2027-04-26`.
+
+⚠️ **Verification status, declared rather than implied: not primary-verified.** `WebFetch` resolved **`0 / 3`** non-allowlisted hosts under this session's network policy (`federalregister.gov`, `upcea.edu`, `audioeye.com` → `ENOTFOUND`), so the Federal Register text was not read. The dates above are corroborated across **six independent secondary sources** (two national law firms, a disability-rights organisation's statement on the IFR, and three accessibility-industry trackers), which agree on the rule date, the `91 FR 20902` citation, both compliance dates and the unchanged WCAG 2.1 AA standard. 🔴 **`ACTION p753-A`: re-read `ada.gov` or the Federal Register from a session whose policy allows it before quoting these dates in a signed proposal.**
+
+### 🔴 `T476` — the EMEA driver for this register is *not* the European Accessibility Act, and the gap is the finding
+
+**EN 301 549 V4.1.1 was published `2026-09-02`** by ETSI/CEN/CENELEC and maps directly onto the EAA's essential accessibility requirements. 🔴 **But the EAA does not mandate sign language in education.** Its sign-language expectations attach to **audiovisual media services** (interpretation for TV and streaming) and to **video-capable interactive computing devices** — not to educational provision. The European Union of the Deaf puts **~1 million deaf sign-language users in the EU/EEA** and has an EAA-implementation shortcomings report in progress. 🟢 **So in EMEA the legal driver for a signed track in education is national disability law plus **UNCRPD Article 24**, not the EAA — and a proposal that cites the EAA at a ministry will be corrected in the room.** 🔵 This is recorded as an **informed gap**: the instrument exists, it is current, and it does not reach this register.
+
+### 🔴 `T477` — the honest nils of the register
+
+`deaf education open source` → **`2`** repositories in all of GitHub (`0★` each; one AGPL-3.0 in-room captioning tool pushed `2026-11-10`, one student platform). `glossless sign language translation` → **`1`**. `sign language dataset license` → **`1`**. `sign language translation agent education` → **`1`**. 🔴 **"Deaf education" is not a software category on GitHub.** 🟢 **Which is the opportunity, stated without decoration: the components exist, the category does not, and the first studio to assemble the components into a named offering defines it.**
+
+### 🔵 The mandated global legs — `38`th consecutive nil, measured not asserted
+
+| Leg | Returned | Verified against the shelves |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | General-purpose agent roundups; one education directory page with no named projects | 🔴 **Nil for this register.** No education-specific MIT agent named that this base does not hold. |
+| `github trending education AI 2026` | `HKUDS/DeepTutor`, `TapXWorld/ChinaTextbook`, `geekjourneyx/interactive-learning`, `SirhanMacx/Claw-ED`, `microsoft/ai-agents-for-beginners` | 🔵 **`5 / 5` already held** — `630`, `34`, `15`, `94`, `251` mentions respectively. |
+| `open source platform education ERP CRM MIT Apache` | OpenEduCat only, and the leg's own sources describe it as LGPL | 🔵 **Held — `893` mentions**, and already recorded with the correct copyleft grant. |
+| `AI education industry trends 2026` | Market and adoption figures, no repositories | 🟢 **Paid on the market side** (see [`market.md`](market.md)), nil on supply. |
+
+🟢 **The region legs paid and the register legs paid; the two mandated *supply* legs did not.** `38` consecutive passes is long past the point where this is noise: **the mandated global supply legs trail these shelves and the register-specific legs are what produce rows.** That is an instrument finding about the procedure itself, recorded here for the pass that eventually revises it.
+
+### 🟢 Market and policy facts read this pass (non-register, all four region legs ran)
+
+- **EMEA.** Futuresource: **`67%` of teachers now use AI tools**, with adoption moving from pilots to structured implementation backed by formal policy and professional development. Epson survey (`~3,360` respondents, UK/FR/IT/DE/ES/PL, fielded July–August 2026): **`80%` of teachers worry AI is entering classrooms faster than schools can manage.** Digital Education Council EMEA summit (Paris): `41` leaders, `30` institutions, `14` countries; governance and measurement named as the gaps. 🔵 EU AI Act Annex III education high-risk date remains **`2027-12-02`** per Regulation (EU) 2026/1744 — **this base already holds that correctly**, re-controlled this pass against the region leg.
+- **North America.** At least **`15` states** have introduced or passed education-specific AI legislation; one tracker counts **~`100` state bills** this year touching student AI use in K-12. US Department of Education **$169M FIPSE** awards include responsible AI use in higher education. 🔴 **Chegg cut `45%` of staff (`388` roles)** as AI and search summaries took homework-help traffic — the clearest single datapoint on which edtech business models AI destroys rather than augments.
+- **APAC.** **UAE Ministry of Education issued `25` generative-AI prohibitions for schools (February 2026)** covering age suitability, privacy, academic integrity and exam restrictions — the most prescriptive school-level GenAI instrument read by any pass of this base. **UK DfE generative-AI safety standards for schools (January 2026).** World Bank **Global EdTech Policy Academy, Seoul, `2026-08-31`–`09-04`**. Ipsos Education Monitor 2026: support for banning AI in schools is *lower* across the Asian markets surveyed than elsewhere.
+- **LATAM.** Digital Education Council LATAM survey (`29` institutions): **`92%` of students and `79%` of faculty actively using AI**, and **only `30%` believe their institution has responded effectively.** UNESCO IESALC working paper (September 2026, `200` institutions across `19` countries): adoption "neither uniform nor evenly distributed", public-private gap pronounced. IDB has mapped **`193`** real AI initiatives in the region; EdTech Hub and **Fundación Ceibal** opened a partnership (September 2026).
+- 🔴 **Global, and recorded as a conflict rather than averaged:** the AI-in-education market figure returned this pass is **`$10.6B` (2026) → `$42.48B` (2030) at `41.5%` CAGR** — the same series this base already carries from `p732`, from a vendor-report lineage. **No new independent series was produced by the leg.** `~45%` of the most-used tools have published research meeting an ESSA evidence tier, which is the number to put next to any adoption claim.
+
+
 # 🆕 Trends new at `p752` (researched 2026-11-10) — `T453`–`T464`
 
 **Register: the education-to-employment transition layer.** `38` addresses probed, `19` licence payloads byte-read, `21` query denominators measured, `2` index values materially corrected — **one in each direction**.

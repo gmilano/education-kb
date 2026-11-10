@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p753) — 🟢 **THE SIGN-LANGUAGE SUBSTRATE: `7` ROWS, `6` PERMISSIVE, AND THE SENSING LAYER IS A `37,636★` APACHE-2.0 GOOGLE LIBRARY PUSHED THE DAY OF THIS PASS. 🔴 THE SAME ORGANISATION'S MIT PAYLOADS NOW NAME A US FOR-PROFIT. 🔴 THE FOUR THINGS THE REGISTER ACTUALLY NEEDS — CORPORA, A TEXT→POSE MODEL, AN AGENT LAYER AND A USABLE RENDERER — ARE ALL ABSENT.**
+
+### What is new this week in this register
+
+`7` foundation rows added on [`foundations.md`](foundations.md), all byte-read `2026-11-10`. The substrate under the Deaf-access register has four layers — **sensing**, **representation**, **notation**, **evaluation** — and `752` passes held `0` of them while holding one Libras application.
+
+| Repo | Stars | Grant — **byte-read** | Last push | Layer |
+|---|---|---|---|---|
+| [`google-ai-edge/mediapipe`](https://github.com/google-ai-edge/mediapipe) | 🟢 **`37,636★`** | 🟢 **Apache-2.0** · sha256₁₂ `8707eef05339` | 🟢 **`2026-11-10`** | Sensing |
+| [`sign-language-processing/pose`](https://github.com/sign-language-processing/pose) | 🟢 **`116★`** | 🟢 MIT · sha256₁₂ `1c821db6b337` | 🟢 `2026-09-19` | Representation — 🔴 **the `pose-format` address is dead (`T474`)** |
+| [`sign-language-processing/sign-language-processing.github.io`](https://github.com/sign-language-processing/sign-language-processing.github.io) | 🟢 **`149★`** | 🟡 **CC-BY-4.0** · sha256₁₂ `59726ab13774` · 🔴 © 2026 Nagish Inc. | `2026-08-11` | The field's reference survey — **attribution required** |
+| [`sign-language-processing/pose-evaluation`](https://github.com/sign-language-processing/pose-evaluation) | `11★` | 🟢 MIT · sha256₁₂ `04a767716fd5` · 🔴 © 2026 Nagish Inc. | `2026-05-10` | Evaluation |
+| [`sign-language-processing/mediapipe-hand-crop-fix`](https://github.com/sign-language-processing/mediapipe-hand-crop-fix) | `10★` | 🟢 MIT · sha256₁₂ `e4375b39719a` | `2026-06-25` | Sensing defect fix |
+| [`sutton-signwriting/core`](https://github.com/sutton-signwriting/core) | `7★` | 🟢 MIT · sha256₁₂ `d76493076fa3` | `2025-11-23` | Notation — the SignWriting reference implementation |
+| [`sign-language-processing/3d-hands-benchmark`](https://github.com/sign-language-processing/3d-hands-benchmark) | `6★` | 🟢 MIT · sha256₁₂ `04a767716fd5` · 🔴 © 2026 Nagish Inc. | `2026-05-10` | Benchmark |
+
+### 🔴 The two MIT byte bands, and why a substrate shelf has to read holder lines
+
+| Band | Bytes | sha256₁₂ | Holder |
+|---|---|---|---|
+| Research era | `1,081 B` | `e4375b39719a` | `Sign Language Processing` (2024) |
+| Research era | `1,071 B` | `1c821db6b337` | `Amit Moryossef` (2021) |
+| 🔴 **Post-acquisition** | `1,068 B` | `04a767716fd5` | 🔴 **`Nagish Inc.` (2026)** |
+
+🟢 **Rule recorded for this shelf:** *when one organisation's payloads differ only in the holder line, the organisation changed hands — read the newest repositories' posture, not the oldest.* The same owner's **data** (`signbank-plus`) and **renderer** (`pose-to-video`) are **CC BY-NC 4.0** at `19,301 B`/`e8bb0d05c06f` (`T468`, `T469`).
+
+### 🔴 What this shelf could not find, stated as an informed gap rather than left silent
+
+| Needed | Found | Measurement |
+|---|---|---|
+| Signing **corpora** | 🔴 Nothing usable | `WLASL` `1,290★` **no grant**, `slovo` `98★` **no grant**, `datasets` `111★` **no grant**, `signbank-plus` **CC BY-NC**. |
+| **Text → pose** model | 🔴 Nothing usable | `transcription` `50★` **no grant**, dead `2024-02-09`. |
+| **Agent / MCP** layer | 🔴 Nothing at all | `sign language mcp server` → `12`, **`0`** genuine (`T467`). |
+| **Photorealistic** renderer | 🔴 Nothing usable | `pose-to-video` **CC BY-NC 4.0**. |
+| A **permissive platform** | 🔴 None exists | [`solutions.md`](../verticals/solutions.md) is **`0 / 3` permissive** this pass. |
+
+🔴 **Regional gap, declared:** `deaf education open source` → **`2`** repositories in all of GitHub (both `0★`) — **there is no North American and no APAC Deaf-access platform**, and `66%` of the top `50` APAC sign-language repositories carry no grant (`T472`). 🟢 **LATAM is the exception and the exception is a government: VLibras, LGPL-3.0, five repositories, three pushed within the fortnight (`T473`).**
+
+
 ## 🆕 2026-11-10 (p752) — 🟢 **THE SKILLS-AND-CREDENTIAL SUBSTRATE: `9` ROWS, `7` PERMISSIVE, AND `3` OF THEM PUSHED WITHIN THE FORTNIGHT. 🟢 AN APACHE-2.0 US REGISTRY STACK WAS INVISIBLE FOR `751` PASSES BECAUSE ITS INDEX SAYS `NOASSERTION`. 🔴 THE ONLY COPYLEFT IN THE SUBSTRATE IS `EPL-2.0` AND IT CARRIES A COMMERCIAL-DISTRIBUTOR INDEMNITY CLAUSE.**
 
 ### What is new this week in this register

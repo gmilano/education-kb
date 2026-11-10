@@ -6,6 +6,8 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
+**Pass p753 · verified 2026-11-10.** 🟢 **`6` agent rows added — `4` MIT, `1` LGPL-3.0 and `1` GPL-3.0, all byte-read.** `35` addresses probed, **`24` licence payloads byte-read**, **`3` index values materially corrected — all `3` in the *refusing* direction**, `10` compliant grant-absences recorded as `T302` honest negatives, `16` query denominators plus `2` licence-distribution samples measured, `T465`–`T477` declared. 🔴 **The register is the *Deaf-learner and sign-language access layer* — and `p749` took the print-disability estate (DAISY, `liblouis`, `readium`) while leaving this one at near-nil: `vlibras` `0` mentions, `signwriting` `0`, `sign language processing` `0`, `WLASL` `1`, `sign.mt` `1` across `752` passes (`T465`).** 🔴 **The finding of the pass is an ownership event the index cannot show: the field's academic reference stack now carries `Copyright (c) 2026 Nagish Inc.` — a US for-profit — in three distinct licence bands, and the `800★` flagship `sign/translate` is now `Rylo Translate`, free for an educational institution and *paid for Globant* (`T468`, `T470`).** 🔴 **Read the licence cell before the description on every row: the permissive pipeline turns NonCommercial at exactly the stage that renders a photorealistic signer (`T469`), and the supply runs `2,600 : 1` in the wrong direction — `10,467` recognition repositories against `4` production ones (`T466`).**
+
 **Pass p752 · verified 2026-11-10.** 🟢 **`6` agent rows added — `5` MIT and `1` Apache-2.0, all byte-read.** `38` addresses probed, `21` licence-payload probes, **`19` licence payloads byte-read**, **`2` index values materially corrected — `1` from `NOASSERTION` toward a permissive grant and `1` from `NOASSERTION` toward *all rights reserved*** — `21` query denominators measured, `T453`–`T464` declared. 🔴 **The register is the *education-to-employment transition layer* — skill extraction, occupational taxonomy and credential-to-job matching: the layer that decides what a learner's record is worth in a labour market.** 🟢 **This pass is not a new register but a *stale-verdict correction*, and that is the finding: `p681` placed this opportunity **EMEA-only** and recorded that *"the measured supply behind it is poor — three permissive ESCO projects were probed and all three are dormant."* Re-measured today, `3 / 3` of those are **still dormant** (`p681` was right about them) — **but the live, maintained successors existed the whole time and were never promoted**, and two of them were pushed *the day of this pass* (`T453`).** 🔴 **Read the licence cell before the description on the `developer-roadmap` row: the highest-starred artefact this pass touched — `371,756★` — is **all-rights-reserved, personal-use-only**, it is indexed `NOASSERTION`, and it is no longer at the address every published roundup cites (`T458`, `T459`).** 🟢 **Instrument gain: `repo:{owner}/{name}` *is* a valid qualifier on `search/repositories`, which corrects `p736`'s `T310` and gives this base a second existence oracle that needs no `README` to exist (`T455`).**
 
 **Pass p751 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT, all byte-read.** `41` addresses probed, `33` licence-payload probes, **`31` licence payloads byte-read**, **`5` index values materially corrected — `5 / 5` from `NOASSERTION` toward a knowable grant**, `21` query denominators measured, `5` boundary rows recorded not shelved, `T439`–`T452` declared. 🔴 **The register is the *scheduling, matching and resource-allocation layer* — the constraint solver under the timetable, the exam diet, the room, the bus and the school place — and this base held the timetabling *applications* while holding the solver substrate at a measured near-nil: `timefold` `0` mentions, `optaplanner` `0`, `minizinc` `0`, `pyomo` `0`, `constraint programming` `0`, `exam timetabling` `0`, `room allocation` `0`, `mixed integer` `0`, against `unitime` `87` and `timetable` `89` (`T443`).** 🔴 **Two instrument defects were found in *this base's own* licence procedure and both are reproducible: the read method under-counts every payload by one byte and hashes a truncated file (`T439`), and the documented probe chain misses `LICENSE.TXT`, which would have published an `8,208★` repository as a false grant-absence (`T441`). Re-read any byte constant written before this pass.** 🔴 **Read the licence cell before the description on the `UniTime/cpsolver` and `FET-MCP` rows: the solver engine under an Apache-2.0 product is `LGPL-3.0`, and the only agent in existence that *builds* a timetable is `AGPL-3.0` (`T450`).**
@@ -69,6 +71,195 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p753` — 🔴 **THE DEAF-LEARNER AND SIGN-LANGUAGE ACCESS LAYER: `p749` TOOK THE PRINT-DISABILITY ESTATE AND LEFT THE DEAF ESTATE AT NEAR-NIL — `vlibras` `0`, `signwriting` `0`, `sign language processing` `0`, `WLASL` `1`. 🔴 THE WORLD'S LEADING OPEN SIGN-LANGUAGE STACK CHANGED OWNER IN 2026 AND ITS LICENCE POSTURE SPLIT THREE WAYS INSIDE ONE ORGANISATION. 🔴 THE `800★` FLAGSHIP IS NOW DUAL-TIER: FREE FOR THE CLIENT, PAID FOR GLOBANT. 🟢 THE ONE REGION WHERE THE STATE SHIPS THE STACK IS LATAM.**
+
+**`6` agent rows (`4` MIT, `1` LGPL-3.0, `1` GPL-3.0 — the copyleft rows are the register, not an oversight) · `35` addresses probed · `24` licence payloads byte-read · `3` index values materially corrected, **all `3` in the refusing direction** · `10` compliant grant-absences recorded as `T302` honest negatives · `16` query denominators plus `2` licence-distribution samples measured · `T465`–`T477` declared.**
+
+### 🔴 `T465` — the register, and why `752` passes missed it
+
+`p749` (`2026-11-10`) took the **alternative-format estate** — DAISY, `liblouis`, `readium`, `epubcheck` — and did it thoroughly. That estate serves **print disability**. The estate that serves **Deaf and hard-of-hearing learners** is a different technology stack with different publishers, different licences and different law, and this base held almost none of it. Mention counts across all eight live shelves, measured `2026-11-10`:
+
+| Term | Mentions across `752` passes | Reading |
+|---|---|---|
+| `vlibras` | 🔴 **`0`** | The Brazilian federal government's sign-language suite. |
+| `signwriting` | 🔴 **`0`** | The written notation the translation stack is built on. |
+| `pose-format` / `sign language processing` | 🔴 **`0`** | The field's substrate and its reference organisation. |
+| `montreal forced` / `common voice` | 🔴 **`0`** | — |
+| `WLASL` | 🔴 **`1`** | The most-cited ASL dataset in the literature. |
+| `sign.mt` | 🔴 **`1`** | The flagship application. |
+| `Deaf` | 🔴 **`7`** | The population the register exists for. |
+| `sign language` (any) | `~30` | Almost all of it one already-held LATAM row (`alfalibras`). |
+
+🟢 **The one thing the base did hold was right:** [`TechnoDark-ti/alfalibras`](https://github.com/TechnoDark-ti/alfalibras) — a Libras row placed in Brazil. **It was a single application sitting over a substrate this base had never opened.**
+
+### 🔴 `T466` — the finding that defines the register: the supply runs in the wrong direction
+
+Measured against `gh api -X GET search/repositories` `total_count`, `2026-11-10`:
+
+| Direction | Query | Repositories |
+|---|---|---|
+| **sign → text** (recognising what a signer says) | `sign language recognition` | 🟢 **`10,467`** |
+| **sign → text** | `sign language translation` | 🟢 **`4,980`** |
+| **text → sign** (producing a signed rendering) | `sign language avatar synthesis` | 🔴 **`6`** |
+| **text → sign** | `sign language production avatar` | 🔴 **`4`** — and `3 / 4` are not sign-language repositories at all (`T467`) |
+
+🔴 **Education needs the direction that does not exist.** A Deaf learner in a classroom is overwhelmingly a *receiver* of institutional content — the lecture, the courseware, the assessment rubric, the safeguarding notice — and rendering that content into a signed track is **text → sign**. The open-source field has spent its effort on **sign → text**, which is the direction a *hearing* institution wants in order to read a Deaf person's input. The ratio is roughly **`2,600 : 1`** (`10,467` against `4`).
+
+🟢 **The consequence for a proposal, stated plainly:** in this register Globant does not shop for a recognition model — there are ten thousand of them and they are mostly coursework. **It assembles a production pipeline**, and the whole permissive supply for that pipeline is `~6` repositories in one organisation plus one government suite.
+
+### 🔴 `T467` — `sign language mcp server` → `12` is really `0`, and this is the third reproduction
+
+`p751`'s `T444` and `p752`'s `T456` found that a short vertical token over-reports when it collides with a common stem. Here the collision is the English word **sign** (signature, signed, signing):
+
+| Returned for `sign language mcp server` (`12` total) | What it actually is |
+|---|---|
+| `DottedSign-Official/dottedsign-mcp` (`142★`) | 🔴 An **e-signature** MCP server. |
+| `LGDiMaggio/mcp-motor-current-signature-analysis` (`9★`) | 🔴 Motor current **signature** analysis. |
+| `SuperdeMan/drone-agent`, `pratikkp24/shio` | 🔴 **signed** approvals / policy language. |
+| `Soflutionltd/MemoryPilot`, `Bitget-AI/agent-mcp`, … | 🔴 Unrelated. |
+
+🔴 **`0 / 12` are sign-language artefacts. `sign language agent llm` → `14` is the same: `0` genuine hits** (an "AI slop" detector, a traffic-**sign** agent, a Spotify CLI). **There is no MCP server and no agent framework for sign language in open source as of `2026-11-10`.** That is a build opportunity, not a procurement one, and it is the clearest nil this base has measured in a register with a `10,467`-repository head.
+
+### 🔴 `T468` — the ownership event: the field's reference stack is now owned by a US for-profit, and the bytes prove it
+
+The `sign-language-processing` organisation (`39` repositories) is the academic reference stack of this field — Zurich NLP lineage, the `.pose` format, the SignWriting tooling, the field's documentation site. **Its copyright holder has changed, and the licence payloads carry the evidence as two distinct byte bands:**
+
+| Payload band | Bytes | sha256₁₂ | Holder line | Repositories |
+|---|---|---|---|---|
+| Older MIT | `1,081 B` | `e4375b39719a` | `Copyright (c) 2024 Sign Language Processing` | `signwriting`, `segmentation`, `signwriting-translation`, `fluent-pose-synthesis`, `mediapipe-hand-crop-fix` |
+| Older MIT | `1,071 B` | `1c821db6b337` | `Copyright (c) 2021 Amit Moryossef` | `pose` |
+| 🔴 **Newer MIT** | `1,068 B` | `04a767716fd5` | 🔴 **`Copyright (c) 2026 Nagish Inc.`** | `pose-evaluation`, `3d-hands-benchmark` |
+| 🔴 **Newer CC BY-NC** | `19,301 B` | `e8bb0d05c06f` | 🔴 **`Copyright (c) 2026 Nagish Inc.`** | `pose-to-video`, `signbank-plus` |
+| 🔴 **Newer CC BY** | `18,689 B` | `59726ab13774` | 🔴 **`Copyright (c) 2026 Nagish Inc.`** | `sign-language-processing.github.io` |
+| 🔴 **Dual-tier** | `17,404 B` | `82908ae3f300` | 🔴 **`Copyright (c) 2022 Nagish Inc.`** | `sign/translate` — now **`Rylo Translate`** at `rylo.com` |
+
+🔴 **The flagship was renamed.** [`sign/translate`](https://github.com/sign/translate) — `800★`, the application the whole field points at — opens its licence with *"License for `Rylo Translate` (https://rylo.com/sign/translate)"*. **Nagish Inc. is a US for-profit accessibility company.** The research artefacts are still public; the *terms* are now a commercial product's terms.
+
+🟢 **Why this is the finding and not a footnote:** a pass that read the index would see `MIT`, `MIT`, `NOASSERTION`, `MIT` and conclude the organisation is permissive. **Byte-read, the same organisation is permissive for the libraries, NonCommercial for the data and the renderer, and paid for the application.** Placement: **North America** on the holder line, **EMEA** on the research lineage — both are true and a proposal needs the first one.
+
+### 🔴 `T469` — the fault line runs through the pipeline, not around it
+
+The one end-to-end **text → sign** pipeline in open source is [`spoken-to-signed-translation`](https://github.com/sign-language-processing/spoken-to-signed-translation) — `105★`, **MIT**, `Copyright (c) 2026 ZurichNLP`, pushed `2026-10-18`. It is text → gloss → **pose** → video. Stage by stage, byte-read:
+
+| Stage | Component | Grant — **byte-read `2026-11-10`** | Usable in a paid Globant deliverable? |
+|---|---|---|---|
+| Sensing | [`google-ai-edge/mediapipe`](https://github.com/google-ai-edge/mediapipe) `37,636★` | 🟢 **Apache-2.0** · `12,331 B` · `8707eef05339` | 🟢 Yes |
+| Pose container | [`pose`](https://github.com/sign-language-processing/pose) `116★` | 🟢 **MIT** · `1,071 B` · `1c821db6b337` | 🟢 Yes |
+| Text → gloss → pose | [`spoken-to-signed-translation`](https://github.com/sign-language-processing/spoken-to-signed-translation) `105★` | 🟢 **MIT** · `1,066 B` · `79c5160cf846` | 🟢 Yes |
+| Segmentation | [`segmentation`](https://github.com/sign-language-processing/segmentation) `19★` | 🟢 **MIT** · `1,081 B` · `e4375b39719a` | 🟢 Yes |
+| Prosody / fluency | [`fluent-pose-synthesis`](https://github.com/sign-language-processing/fluent-pose-synthesis) `14★` | 🟢 **MIT** · `1,081 B` · `e4375b39719a` | 🟢 Yes |
+| Evaluation | [`pose-evaluation`](https://github.com/sign-language-processing/pose-evaluation) `11★` | 🟢 **MIT** · `1,068 B` · `04a767716fd5` | 🟢 Yes |
+| 🔴 **Pose → photorealistic video** | [`pose-to-video`](https://github.com/sign-language-processing/pose-to-video) `19★` | 🔴 **CC BY-NC 4.0** · `19,301 B` · `e8bb0d05c06f` | 🔴 **No** |
+| 🔴 **Text → pose model** | [`transcription`](https://github.com/sign-language-processing/transcription) `50★` | 🔴 **No grant at `12` probed paths** | 🔴 **No** |
+| 🔴 **Training data** | [`signbank-plus`](https://github.com/sign-language-processing/signbank-plus) `23★` | 🔴 **CC BY-NC 4.0** · byte-identical to `pose-to-video` | 🔴 **No** |
+
+🟢 **The rule, and it is the commercially useful sentence of this pass:** *everything up to and including the pose is permissive; the moment the pipeline turns a pose into a photorealistic human, the grant becomes NonCommercial.* An engagement that ships an **avatar** rendering of the pose is clear; one that ships **photorealistic video** of a signer is not, and the substitution is an engineering decision made at design time, not a licence question discovered at delivery.
+
+### The agent rows — what Globant can build on and ship
+
+All `6` byte-read `2026-11-10`. 🔴 **Two rows are copyleft and they are in the table anyway, because in this register the copyleft rows are what a ministry actually runs.** Read the licence cell before the description on all six.
+
+| Agent | Repo | Grant — **byte-read 2026-11-10** | Stars | Last push | What it does |
+|---|---|---|---|---|---|
+| Spoken→Signed Translation Pipeline | [`sign-language-processing/spoken-to-signed-translation`](https://github.com/sign-language-processing/spoken-to-signed-translation) | 🟢 **MIT** · `1,066 B` · sha256₁₂ `79c5160cf846` · `Copyright (c) 2026 ZurichNLP` | 🟢 **`105★`** | 🟢 `2026-10-18` | The only maintained, permissive **text → gloss → pose → video** pipeline in open source: spoken-language text in, a signed rendering out, with a dictionary-based gloss stage that can be localised per sign language. 🟢 **The single most important row in this register.** 🔴 **Do not ship its photorealistic renderer — that stage is a separate, NonCommercial repository (`T469`).** **Placement: EMEA** — ZurichNLP holder line, University of Zurich lineage. |
+| Pose Segmentation | [`sign-language-processing/segmentation`](https://github.com/sign-language-processing/segmentation) | 🟢 **MIT** · `1,081 B` · sha256₁₂ `e4375b39719a` · `Copyright (c) 2024 Sign Language Processing` | `19★` | `2026-04-29` | Segments a continuous pose stream at **sentence and sign level** — the component that turns a live signing feed into units a translation model or a caption track can consume. 🟢 **Required for any live-classroom use; there is no second permissive implementation.** **Placement: EMEA.** |
+| SignWriting Translation | [`sign-language-processing/signwriting-translation`](https://github.com/sign-language-processing/signwriting-translation) | 🟢 **MIT** · `1,081 B` · sha256₁₂ `e4375b39719a` | `16★` | 🟢 `2026-09-15` | Translates spoken-language text into **SignWriting** — a written, Unicode-encoded notation rather than a video. 🟢 **The route a curriculum or a glossary should take: text is reviewable, diffable, searchable and printable, which video is not.** **Placement: Global** — notation is language-independent; the dictionaries are not. |
+| Fluent Pose Synthesis | [`sign-language-processing/fluent-pose-synthesis`](https://github.com/sign-language-processing/fluent-pose-synthesis) | 🟢 **MIT** · `1,081 B` · sha256₁₂ `e4375b39719a` | `14★` | `2026-07-23` | Takes a sequence of isolated signs and produces a **fluent** pose sequence with transitions, intonation and prosody. 🟡 `14★` — the difference between a legible signed track and an unwatchable one, and Globant should expect to carry the maintenance. **Placement: EMEA.** |
+| VLibras Translator API | [`spbgovbr-vlibras/vlibras-translator-api`](https://github.com/spbgovbr-vlibras/vlibras-translator-api) | 🟡 **LGPL-3.0** · `7,650 B` · sha256₁₂ `ea8af5e789cb` | `20★` | 🟢 **`2026-11-02`** | Portuguese → **Libras** translation service of **VLibras**, the suite the Brazilian federal government ships for public-sector accessibility. 🟢 **The only sign-language translation stack on earth maintained by a national government under an OSI licence, and it was pushed days before this pass (`T473`).** 🟡 **LGPL-3.0: keep it behind a service boundary and the client's own code is not derived from it** — the architecture decision is in `../compose/patterns.md` (`P266`). **Placement: LATAM.** |
+| DFKI MMS-Player | [`DFKI-SignLanguage/MMS-Player`](https://github.com/DFKI-SignLanguage/MMS-Player) | 🔴 **GPL-3.0** · `35,149 B` · sha256₁₂ `3972dc9744f6` | `24★` | 🟢 `2026-10-20` | **Sign-language avatar animation synthesis** from a multi-channel score — the production end the permissive stack does not have. Published by **DFKI** (German Research Centre for AI). 🔴 **GPL-3.0: viral on the delivered artefact.** Usable as an isolated process a client deploys, not as a library inside Globant-delivered code. **Placement: EMEA.** |
+
+🔵 **Boundary rows — measured, placed, and deliberately not shelved as adoptable:**
+
+| Address | Stars | Grant — byte-read | Why it is a boundary and not a row |
+|---|---|---|---|
+| [`AI4Bharat/OpenHands`](https://github.com/AI4Bharat/OpenHands) | `140★` | 🟢 **Apache-2.0** · `11,417 B` · sha256₁₂ `d32ce3191349` · `Copyright 2021 - The AI4Bhārat team` | 🟢 **The only permissive Indian-Sign-Language baseline with a named research publisher** — and its own description says *"No longer actively maintained."* Last push `2023-03-15`. 🔴 **Name collision worth naming: this is not the `82,900★` `OpenHands` coding agent this base holds elsewhere.** A search for "OpenHands" in an education context returns the wrong artefact. **Placement: APAC.** |
+| [`signdict/website`](https://github.com/signdict/website) | `87★` | 🟡 **MPL-2.0** · `16,726 B` · sha256₁₂ `393eaf2b92b3` | A **German Sign Language (DGS) dictionary** platform, Elixir/Phoenix, pushed `2026-09-13`. Not an agent — it is a deployable platform and it is filed on [`../verticals/solutions.md`](../verticals/solutions.md). MPL-2.0 is file-level copyleft: usable, with the modified-files obligation. **Placement: EMEA.** |
+| [`sutton-signwriting/core`](https://github.com/sutton-signwriting/core) | `7★` | 🟢 **MIT** · `1,128 B` · sha256₁₂ `d76493076fa3` · `Copyright (c) 2007-2019 Steve Slevinski` | The **notation substrate** — SignWriting parsing, styling and transformation. `7★` understates it completely: this is the reference implementation of a Unicode-encoded writing system. Filed on [`../repos/foundations.md`](../repos/foundations.md). **Placement: Global.** |
+
+### 🔴 `T470` — the `800★` refusal, stated the way a proposal has to state it
+
+[`sign/translate`](https://github.com/sign/translate) — **`800★`**, index `NOASSERTION`, licence at `LICENSE.md`, `17,404 B`, sha256₁₂ `82908ae3f300` — is **two licences in one file**:
+
+> *"The license for `Rylo Translate` is divided into two tiers, based on the type of your legal entity. **Individuals, non-profit organizations, and educational institutions are permitted to use `Rylo Translate` for sign language translation without charge, while a separate license is required for for-profit commercial organizations.**"*
+
+- 🟢 **Free tier:** **CC BY-NC-SA 4.0**, `Copyright (c) 2022 Nagish Inc.` — Attribution, **NonCommercial**, **ShareAlike** on adaptations. *"Patent and trademark rights are not licensed under this Public License."*
+- 🔴 **Commercial tier:** required for any entity that does not meet the free criteria; *"the scope of its usage and the licensing fee will be provided upon request"* (`research@rylo.com`).
+
+🔴 **The distinction a client engagement turns on, and it is unusual enough to be worth a slide:** **the university can run this for free; Globant cannot bill for building on it.** An engagement can legitimately (a) advise the institution to deploy it under the free tier with Globant doing no derivative work, or (b) obtain the commercial licence with a quoted fee, or (c) assemble the MIT pipeline in `T469` instead. 🟢 **Option (c) is the one this base recommends, because it is the one whose cost is known today.**
+
+### 🔴 `T471` — the field's benchmarks and datasets are the artefacts nobody licensed, for the third register running
+
+`p747` found it on `REFEDS/eduperson`, `p752` on `Skill-Extraction-benchmark`. Here it is systemic — all **byte-read, `12` probed paths each**:
+
+| Dataset / benchmark | Stars | Index | Grant |
+|---|---|---|---|
+| [`dxli94/WLASL`](https://github.com/dxli94/WLASL) | 🔴 **`1,290★`** | `NONE` | 🔴 **No grant.** The most-cited word-level ASL dataset in the literature (WACV 2020). |
+| [`sign-language-processing/datasets`](https://github.com/sign-language-processing/datasets) | `111★` | `NONE` | 🔴 **No grant.** The TFDS loaders *every* comparison in this field imports. |
+| [`sign-language-processing/transcription`](https://github.com/sign-language-processing/transcription) | `50★` | `NONE` | 🔴 **No grant.** The text-to-pose model. |
+| [`ZechengLi19/Uni-Sign`](https://github.com/ZechengLi19/Uni-Sign) | `187★` | `NONE` | 🔴 **No grant.** ICLR'25 unified sign-language understanding. |
+| [`hukenovs/slovo`](https://github.com/hukenovs/slovo) | `98★` | `NONE` | 🔴 **No grant.** Russian Sign Language dataset and models. |
+| [`sign-language-processing/signbank-plus`](https://github.com/sign-language-processing/signbank-plus) | `23★` | `NOASSERTION` | 🔴 **CC BY-NC 4.0** — licensed, and NonCommercial. |
+
+🟢 **The one correct inference:** in this register the **model weights and the evaluation data are the procurement risk, not the code.** Every engagement must plan to train on **client-owned or explicitly-licensed** signing data, and the budget line for data collection with Deaf community consent is not optional — it is the project.
+
+### 🔴 `T472` — the largest regional supply is the least licensed, and it is APAC
+
+`indian sign language` → **`2,732`** repositories, the biggest regional head in the register. Licence distribution of the **top `50` by stars**, index values, `2026-11-10`:
+
+| Grant | Count |
+|---|---|
+| 🔴 **`NONE`** | 🔴 **`33 / 50` (`66%`)** |
+| 🟢 MIT | `7` |
+| 🟢 Apache-2.0 | `4` |
+| 🔴 GPL-3.0 | `4` |
+| 🔴 LGPL-2.1 / GPL-2.0 | `2` |
+
+🔵 **Control, because `p751`'s `T441` showed an index `NONE` can hide a payload at an odd path:** the three highest-starred `NONE` rows were byte-read against the `12`-path chain and **`3 / 3` genuinely have no grant** — `EvilPort2/Sign-Language` (`824★`), `satyam9090/Automatic-Indian-Sign-Language-Translator-ISL` (`140★`), `shag527/Indian-Sign-Language-Recognition` (`127★`). The one index-`Apache-2.0` control byte-read as a stock Apache payload (`Arshad221b/Sign-Language-Recognition`, `265★`, `11,357 B`, sha256₁₂ `c71d239df917`). **`4 / 4` — the index is trustworthy in this sample and the `66%` stands.**
+
+For comparison, `american sign language` top `25`: **`12` `NONE`**, `7` MIT, `4` Apache-2.0, `1` GPL-3.0, `1` BSD-2-Clause — **`48%` unlicensed**. 🟢 **The commercial reading: an APAC engagement in this register begins with a licence-clearance phase, and that phase is billable work this base can now scope with a number.**
+
+### 🟢 `T473` — the only region where the state ships the stack
+
+**VLibras**, published by Brazil's federal digital-government secretariat under `spbgovbr-vlibras`, all **LGPL-3.0**, all byte-read `2026-11-10`:
+
+| Component | Repo | Grant | Stars | Last push |
+|---|---|---|---|---|
+| Translation API | [`vlibras-translator-api`](https://github.com/spbgovbr-vlibras/vlibras-translator-api) | 🟡 LGPL-3.0 · `7,650 B` · `ea8af5e789cb` | `20★` | 🟢 **`2026-11-02`** |
+| Web portal | [`vlibras-portal`](https://github.com/spbgovbr-vlibras/vlibras-portal) | 🟡 LGPL-3.0 · `7,651 B` · `da7eabb7bafd` | `9★` | 🟢 **`2026-11-06`** |
+| Browser extensions | [`vlibras-web-browsers`](https://github.com/spbgovbr-vlibras/vlibras-web-browsers) | 🟡 LGPL-3.0 · `7,651 B` · `da7eabb7bafd` | `20★` | 🟢 `2026-10-27` |
+| Web player | [`vlibras-player-webjs`](https://github.com/spbgovbr-vlibras/vlibras-player-webjs) | 🟡 LGPL-3.0 · `7,651 B` · `da7eabb7bafd` | `8★` | `2025-11-11` |
+| Text core | [`vlibras-translator-text-core`](https://github.com/spbgovbr-vlibras/vlibras-translator-text-core) | 🟡 LGPL-3.0 (index; not byte-read this pass) | `5★` | `2026-08-20` |
+
+🟢 **Three of the five were pushed within the fortnight before this pass.** 🟢 **A permissive embedding path exists and is maintained outside the government:** [`vue-a11y/vue-vlibras`](https://github.com/vue-a11y/vue-vlibras) — **MIT**, `1,064 B`, sha256₁₂ `86926728b313`, `25★`. 🔴 **Its React counterpart is not usable:** [`djpfs/react-vlibras`](https://github.com/djpfs/react-vlibras) — `46★`, **no grant at `12` probed paths**. The higher-starred wrapper is the unlicensed one.
+
+### 🔴 `T474` — the two existence oracles disagree exactly on renamed addresses, and `raw` is the permissive one
+
+Both oracles were re-controlled this pass and `p752`'s `T455` holds — `repo:{owner}/{name}` *is* valid on `search/repositories`. The new finding is what their **disagreement** means:
+
+| Address | `raw…/HEAD/README.md` | `repo:` `total_count` | Truth |
+|---|---|---|---|
+| `ai-forever/slovo` | 🟢 **`200`** | 🔴 **`0`** | 🔴 **Renamed.** The canonical address is [`hukenovs/slovo`](https://github.com/hukenovs/slovo) (`98★`) — found by a keyword query, not by the probe. |
+| `sign-language-processing/pose-format` | 🔴 `404` | 🔴 `0` | 🔴 **Gone.** The library now lives at [`sign-language-processing/pose`](https://github.com/sign-language-processing/pose) (`116★`, MIT) while the **package** is still named `pose-format`. |
+| `sign/translate` | 🟢 `200` | 🟢 `800★` | 🟢 Alive at its own address — and renamed *inside* (`T468`). |
+
+🟢 **The rule to add to the probe chain:** *a `raw` `200` proves bytes are served, not that the address is canonical — GitHub serves renamed repositories through a redirect.* **`repo:` `total_count` `0` against a `raw` `200` is the rename signal**, and the response is to find the new owner by keyword before writing the row. A pass that trusted `raw` alone would have published `ai-forever/slovo` as a live address; a pass that trusted `repo:` alone would have published `pose-format`'s successor as nonexistent.
+
+> **Instrument note — the mandated control re-ran and still has no discriminating power.** `curl -sI https://github.com/{owner}/{repo}` returned the proxy's `HTTP/1.1 200 Connection Established` **followed by `403`** on an address proven alive (`ai-forever/slovo`). ⚠️ **`p746`'s trap reproduced exactly: the first line reads like success and is the proxy's, not GitHub's.** The working probe remains `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`, re-controlled `2 / 2` this pass (`200` alive / `404` on an invented address), now with the `T474` rename caveat attached. 🔴 **New channel limit recorded:** `WebFetch` resolved **`0 / 3`** non-allowlisted hosts this pass (`federalregister.gov`, `upcea.edu`, `audioeye.com` → `ENOTFOUND`), so `T475`'s regulatory correction is corroborated across independent secondary sources and **declared as not primary-verified**.
+
+### 🔴 Refusals — read these before proposing anything in this register
+
+| Address | Stars | Index | Grant — **byte-read** | Why Globant cannot build on it |
+|---|---|---|---|---|
+| [`sign/translate`](https://github.com/sign/translate) (**`Rylo Translate`**) | 🔴 **`800★`** | `NOASSERTION` | 🔴 **CC BY-NC-SA 4.0 free tier + bespoke paid commercial tier** · `17,404 B` · sha256₁₂ `82908ae3f300` · © 2022 Nagish Inc. | The flagship of the field. Free for the *client* if it is a non-profit or an educational institution; **a paid licence for Globant**. Patents and trademarks withheld; ShareAlike on adaptations (`T470`). |
+| [`sign-language-processing/pose-to-video`](https://github.com/sign-language-processing/pose-to-video) | `19★` | `NOASSERTION` | 🔴 **CC BY-NC 4.0** · `19,301 B` · sha256₁₂ `e8bb0d05c06f` · © 2026 Nagish Inc. | The photorealistic renderer — the last stage of the only end-to-end pipeline. Substitute an avatar renderer (`T469`). |
+| [`sign-language-processing/signbank-plus`](https://github.com/sign-language-processing/signbank-plus) | `23★` | `NOASSERTION` | 🔴 **CC BY-NC 4.0** · **byte-identical** to `pose-to-video` | The SignWriting translation dataset. NonCommercial data cannot train a model shipped in a paid deliverable. |
+| [`dxli94/WLASL`](https://github.com/dxli94/WLASL) | 🔴 **`1,290★`** | `NONE` | 🔴 **No grant at `12` probed paths** | The field's most-cited ASL dataset, dead since `2023-03-18`, and nobody licensed it (`T471`). |
+| [`sign-language-processing/datasets`](https://github.com/sign-language-processing/datasets) | `111★` | `NONE` | 🔴 **No grant at `12` probed paths** | The data loaders the comparisons import. |
+| [`sign-language-processing/transcription`](https://github.com/sign-language-processing/transcription) | `50★` | `NONE` | 🔴 **No grant at `12` probed paths** | The text-to-pose model itself. Dead since `2024-02-09`. |
+| [`ZechengLi19/Uni-Sign`](https://github.com/ZechengLi19/Uni-Sign) | `187★` | `NONE` | 🔴 **No grant at `12` probed paths** | ICLR'25 state of the art, APAC, unusable as shipped. |
+| [`djpfs/react-vlibras`](https://github.com/djpfs/react-vlibras) | `46★` | `NONE` | 🔴 **No grant at `12` probed paths** | The *higher-starred* VLibras React wrapper. Use [`vue-a11y/vue-vlibras`](https://github.com/vue-a11y/vue-vlibras) (MIT) or write the ten lines (`T473`). |
+
 
 ## 🆕 `p752` — 🟢 **THE EDUCATION-TO-EMPLOYMENT TRANSITION LAYER: `p681` CALLED THIS SUPPLY "POOR AND ALL DORMANT" AND PLACED IT EMEA-ONLY. 🟢 THE DORMANT TRIO IS STILL DORMANT — AND THE LIVE SUCCESSORS WERE PUSHED THE DAY OF THIS PASS. 🔴 THE NORTH AMERICA COUNTERPART WAS AT `0` MENTIONS ACROSS `751` PASSES AND ITS INDEX HID AN APACHE-2.0 GRANT. 🔴 A `371,756★` REPOSITORY IS PERSONAL-USE-ONLY.**
 

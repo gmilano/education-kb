@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p753) — 🔴 **THE DEAF-LEARNER ACCESS LAYER: `752` PASSES HELD ONE LIBRAS APP AND `0` OF THE STACK UNDER IT. 🔴 THE FIELD'S REFERENCE ORGANISATION CHANGED OWNER IN 2026 AND ITS `800★` FLAGSHIP IS NOW FREE FOR THE CLIENT AND PAID FOR GLOBANT. 🔴 THE SUPPLY RUNS `2,600 : 1` IN THE WRONG DIRECTION. 🔴 THE MANDATED SUPPLY LEGS NILLED FOR THE `38`th CONSECUTIVE PASS.**
+
+### What is new this week in this register
+
+🟢 **`6` agent rows added** (`4` MIT, `1` LGPL-3.0, `1` GPL-3.0), all byte-read `2026-11-10`. `35` addresses probed, `24` licence payloads byte-read, `16` query denominators plus `2` licence-distribution samples measured, `3` index values materially corrected — **all three in the refusing direction** — `10` compliant grant-absences recorded, `T465`–`T477` declared. Full rows and reasoning on [`top.md`](top.md).
+
+**The four movements worth a client's attention this week:**
+
+🔴 **1. The world's leading open sign-language stack changed hands, and only a byte read shows it.** The `sign-language-processing` organisation's newest licence payloads carry **`Copyright (c) 2026 Nagish Inc.`** — a US for-profit — in three bands: MIT `1,068 B`/`04a767716fd5`, CC BY-NC 4.0 `19,301 B`/`e8bb0d05c06f`, CC BY 4.0 `18,689 B`/`59726ab13774`. The older research-era payloads read `Sign Language Processing` (`1,081 B`/`e4375b39719a`) and `Amit Moryossef` (`1,071 B`/`1c821db6b337`). 🟢 **The libraries are still MIT; the data and the photorealistic renderer are NonCommercial.**
+
+🔴 **2. The flagship is dual-tier, and the tiers split exactly where an integrator sits.** [`sign/translate`](https://github.com/sign/translate) — `800★` — is now **`Rylo Translate`**: **CC BY-NC-SA 4.0 free for individuals, non-profits and educational institutions; a paid bespoke licence for for-profit organisations** (`17,404 B`, sha256₁₂ `82908ae3f300`, patents and trademarks withheld). **The university can run it for free. Globant cannot bill for building on it.**
+
+🟢 **3. The only government-shipped sign-language suite on earth is Brazilian, and it was pushed days before this pass.** `spbgovbr-vlibras` — five repositories, **all LGPL-3.0**, byte-read: [`vlibras-translator-api`](https://github.com/spbgovbr-vlibras/vlibras-translator-api) (`20★`, **`2026-11-02`**), [`vlibras-portal`](https://github.com/spbgovbr-vlibras/vlibras-portal) (`9★`, **`2026-11-06`**), [`vlibras-web-browsers`](https://github.com/spbgovbr-vlibras/vlibras-web-browsers) (`20★`, `2026-10-27`), plus the player and text core. 🔴 **`0` mentions across `752` passes.**
+
+🔴 **4. There is no agent or MCP layer for sign language at all.** `sign language mcp server` → `12` results, of which **`0`** are sign-language artefacts (an e-signature MCP at `142★`, motor-current **signature** analysis, **signed** drone approvals); `sign language agent llm` → `14`, of which **`0`** are. 🟢 **Build-not-buy, measured.**
+
+### The rows added this pass
+
+| Agent | Stars | Grant — **byte-read `2026-11-10`** | Last push | Region |
+|---|---|---|---|---|
+| [`sign-language-processing/spoken-to-signed-translation`](https://github.com/sign-language-processing/spoken-to-signed-translation) | 🟢 **`105★`** | 🟢 **MIT** · `1,066 B` · sha256₁₂ `79c5160cf846` · © 2026 ZurichNLP | 🟢 `2026-10-18` | EMEA |
+| [`sign-language-processing/segmentation`](https://github.com/sign-language-processing/segmentation) | `19★` | 🟢 **MIT** · `1,081 B` · sha256₁₂ `e4375b39719a` | `2026-04-29` | EMEA |
+| [`sign-language-processing/signwriting-translation`](https://github.com/sign-language-processing/signwriting-translation) | `16★` | 🟢 **MIT** · `1,081 B` · sha256₁₂ `e4375b39719a` | 🟢 `2026-09-15` | Global |
+| [`sign-language-processing/fluent-pose-synthesis`](https://github.com/sign-language-processing/fluent-pose-synthesis) | `14★` | 🟢 **MIT** · `1,081 B` · sha256₁₂ `e4375b39719a` | `2026-07-23` | EMEA |
+| [`spbgovbr-vlibras/vlibras-translator-api`](https://github.com/spbgovbr-vlibras/vlibras-translator-api) | `20★` | 🟡 **LGPL-3.0** · `7,650 B` · sha256₁₂ `ea8af5e789cb` | 🟢 **`2026-11-02`** | **LATAM** |
+| [`DFKI-SignLanguage/MMS-Player`](https://github.com/DFKI-SignLanguage/MMS-Player) | `24★` | 🔴 **GPL-3.0** · `35,149 B` · sha256₁₂ `3972dc9744f6` | 🟢 `2026-10-20` | EMEA |
+
+### 🔴 The refusals this pass, because they are larger than the rows
+
+| Address | Stars | Grant — byte-read | Verdict |
+|---|---|---|---|
+| [`sign/translate`](https://github.com/sign/translate) (**`Rylo Translate`**) | 🔴 **`800★`** | 🔴 CC BY-NC-SA 4.0 + paid commercial tier · `17,404 B` · `82908ae3f300` | 🔴 Free for the client, paid for Globant. |
+| [`dxli94/WLASL`](https://github.com/dxli94/WLASL) | 🔴 **`1,290★`** | 🔴 **No grant at `12` probed paths** | 🔴 The field's most-cited ASL dataset is unlicensed. |
+| [`ZechengLi19/Uni-Sign`](https://github.com/ZechengLi19/Uni-Sign) | `187★` | 🔴 **No grant** | 🔴 ICLR'25 state of the art, unusable as shipped. |
+| [`sign-language-processing/datasets`](https://github.com/sign-language-processing/datasets) | `111★` | 🔴 **No grant** | 🔴 The loaders every comparison imports. |
+| [`hukenovs/slovo`](https://github.com/hukenovs/slovo) | `98★` | 🔴 **No grant** | 🔴 Russian SL dataset — and reached only via `T474`'s rename rule. |
+| [`sign-language-processing/transcription`](https://github.com/sign-language-processing/transcription) | `50★` | 🔴 **No grant** | 🔴 The text-to-pose model itself. |
+| [`djpfs/react-vlibras`](https://github.com/djpfs/react-vlibras) | `46★` | 🔴 **No grant** | 🔴 Higher-starred than the MIT Vue wrapper, and unusable. |
+| [`sign-language-processing/pose-to-video`](https://github.com/sign-language-processing/pose-to-video) | `19★` | 🔴 **CC BY-NC 4.0** · `19,301 B` · `e8bb0d05c06f` | 🔴 The photorealistic renderer. |
+
+### 🔴 The mandated `github trending` leg nilled again — `38` consecutive passes — and here is the measurement
+
+| Returned by the leg | Already held? |
+|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔵 **Yes — `630` mentions.** |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🔵 **Yes — `251` mentions.** |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🔵 **Yes — `94` mentions.** |
+| [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) | 🔵 **Yes — `34` mentions.** |
+| [`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning) | 🔵 **Yes — `15` mentions.** |
+
+🔵 **`5 / 5` already held.** The vertical-platform leg returned **OpenEduCat** only (`893` mentions, already held with its copyleft grant recorded). 🟢 **The register-specific legs produced every row above; the mandated global supply legs produced none, for the `38`th pass running.**
+
+### 🔵 A record note on the ADA correction (`T475`)
+
+This file and [`../repos/trending.md`](../repos/trending.md) each contain a dated entry asserting an **"April 2026 ADA deadline"** as a live demand driver. **These files are append-only and the entries stand as written** — they were true to the record at the time. 🔴 **They are superseded: the compliance date is `2027-04-26` for US public entities of `50,000`+ population and `2028-04-26` below, moved by DOJ's interim final rule of `2026-04-20` (`91 FR 20902`), WCAG 2.1 AA unchanged, general Title II duty unchanged.** The live shelves were annotated in place this pass; see [`../intel/trends.md`](../intel/trends.md) `T475` and `ACTION p753-A`.
+
+
 ## 🆕 2026-11-10 (p752) — 🟢 **THE EDUCATION-TO-EMPLOYMENT AGENT LAYER: `p681`'S "SUPPLY IS POOR, ALL DORMANT" VERDICT IS STALE AND THE LIVE SUCCESSORS WERE PUSHED THE DAY OF THIS PASS. 🔴 THE MANDATED `github trending` LEG NILLED FOR THE `37`th CONSECUTIVE TIME — `4 / 4` ALREADY HELD. 🔴 A `371,756★` REPOSITORY IS PERSONAL-USE-ONLY AND HAS MOVED OWNER.**
 
 ### What is new this week in this register
