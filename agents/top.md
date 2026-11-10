@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p731 · verified 2026-11-10.** The `12` rows added at `p731` were read today; rows carried
+**Pass p733 · verified 2026-11-10.** The `12` rows added at `p731` were read today; rows carried
 over name the date they were last read. Every row below was read from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
@@ -20,6 +20,38 @@ can tell a stale cell from a fresh one.
 > not used. See `compose/patterns.md` (P142) for the working probe. Controls re-run this pass.
 
 ## Education-specific agents
+
+## 🆕 `p733` — reads and verifies `2026-11-10`
+
+> **`9` rows added below.** Every grant was read from the bytes and put through **`P176`**, the gate
+> published this pass. `P176` is `p732`'s `P172` with its **digest named** (`sha256`, first `12`
+> hex, over the terms-only form with newlines collapsed to spaces — `T277`) and **two
+> false-refusal defects repaired**: CRLF line endings are now normalised (`T278`) and the
+> `The MIT License (MIT)` title spelling is now matched (`T279`). **`9 / 9` MIT payloads read this
+> pass gate to `1020 B` / `fe2a9817987f`** across raw sizes `1,062`–`1,093 B` — holder-invariance
+> reproduced independently of `p732`.
+>
+> ⚠️ **Apache rows carry this pass's own constant, `9130 B` / `6e1ffb7fc4e2`, not `p732`'s
+> `8484 B` / `c7396247b0c2`.** The rule that reproduces the MIT constant to the byte does not
+> reproduce the Apache one; see `T280`. The discrepancy is declared, the rule is stated in full,
+> and no row is certified against a number this pass could not compute.
+>
+> 🔬 **The two repairs are controls, not guesses.** `T278`: one payload (`SkillWise`) misses by
+> exactly its `20` CR bytes and passes at the constant once they are stripped. `T279`: **two
+> unrelated publishers** (`popcode`, `BrainWaves`) miss at the *same* wrong value, `1042 B` /
+> `dcdd5bec314a`, and `1042 − 1020` is exactly the `22` bytes of the retained title string.
+
+| Agent | Repo | Stars | Licence | Last push | Region | What it does |
+|---|---|--:|---|---|---|---|
+| **notebooklm-ai-plugin** | [proyecto26/notebooklm-ai-plugin](https://github.com/proyecto26/notebooklm-ai-plugin) | 65 | MIT | 2026-11-04 | Global ⚠️ | An **agent plugin for Google NotebookLM** that drives it from Claude, OpenClaw and other harnesses to emit slide decks, audio overviews, videos, mind maps and flashcards from a source set. Gate: `LICENSE`, `1,069 B` raw → **`1020 B`/`fe2a9817987f`**. 🔵 **Why it is filed above higher-star rows:** it is the only row on this shelf that treats a *managed, non-open* study tool as an actuator rather than a competitor. Most institutions already have NotebookLM through their Google tenancy, so this is the rare composition that needs no procurement — it automates a seat the client has already bought. Pairs directly with `P178`. ⚠️ Region unplaced: a Spanish-language org name (`proyecto26`) is suggestive and **not** evidence; no country string in a `14,350`-character README, and no owner profile README exists to probe (`733-I`). |
+| **cortex** | [PndaMan/cortex](https://github.com/PndaMan/cortex) | 51 | Apache-2.0 | 2026-10-26 | Global ⚠️ | A **local-first desktop "study OS"** — an open NotebookLM alternative that turns slides, PDFs and lecture recordings into cheatsheets, flashcards and summaries **without sending the corpus anywhere**. Gate: `LICENSE`, `11,358 B` raw (stock Apache) → **`9130 B`/`6e1ffb7fc4e2`** (`P176`; see `T280` on why this is not `p732`'s number). 🟢 **This is the data-residency answer to the row above it**, and the two together are the whole of `P178`: same deliverable, one hosted and one on-premise, so a single engagement can serve a client whose legal team permits cloud processing of coursework and one whose does not. 🔵 Posture: under the EU AI Act's education provisions and the LATAM governance deliverable (`P143`), "the lecture corpus never leaves the institution" is a procurement argument, not a feature. ⚠️ Region unplaced. |
+| **mini-classroom · 微课堂** | [pipdax/mini-classroom](https://github.com/pipdax/mini-classroom) | 37 | MIT | 2026-11-07 | **APAC** | A **ten-minute-a-day micro-classroom**: it decomposes a stated learning goal into small units and schedules one short session per day against them. Gate: `LICENSE`, `1,064 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 Region placed on a **CJK-primary README** (`2,308` CJK characters). 🔵 **Filed because its unit of delivery is the constraint, not the content:** every courseware row this base holds assumes a learner with a free hour. This one assumes ten minutes, which is the actual shape of corporate and in-service teacher upskilling — the demand side named in `P179`. |
+| **Quiznote** | [grwth404/Quiznote](https://github.com/grwth404/Quiznote) | 29 | MIT | 2026-10-20 | Global ⚠️ | Generates quizzes **from the learner's own notes and textbooks** rather than from a model's recall of a subject, on Gemini. Gate: `LICENSE`, `1,086 B` raw → **`1020 B`/`fe2a9817987f`**. 🔵 The source-grounded direction is the point: it is assessable against a corpus the institution controls, which is what makes generated items reviewable. ⚠️ Region unplaced; a `2,113`-character README carries no country or institution string. |
+| **course-study-guide** | [C-xudco/course-study-guide](https://github.com/C-xudco/course-study-guide) | 27 | MIT | 2026-10-19 | **APAC** | A **progressive lesson-planning and study-plan skill** packaged for Codex, Doubao and other harnesses: parent-problem variants, bilingual worked explanations, difficulty rating and small-step sequencing. Gate: `LICENSE`, `1,065 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 Region placed on `1,599` CJK characters in a Chinese-primary README. 🔵 **Third consecutive pass with a row that ships as a harness skill rather than an application** — continued confirmation of `p732`'s `T273`. |
+| **Sachet** | [wyvern1723/sachet](https://github.com/wyvern1723/sachet) | 26 | MIT | 2026-11-09 | **APAC** | A **Flutter student app for a named university** — Xiangtan University (湘潭大学) — giving timetable, free-classroom lookup and campus services. Gate: `LICENSE`, `1,068 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 Region placed on `705` CJK characters **and** an explicit institution. 🔵 **Filed as an integration reference, not a product:** it is a worked example of a student-facing client built against one institution's existing systems, which is the shape of most APAC campus engagements. The reusable asset is the integration surface, not the UI. |
+| **tube-scholar** | [Shalaby-VBS/tube-scholar](https://github.com/Shalaby-VBS/tube-scholar) | 25 | MIT | 2026-11-07 | **EMEA** | Turns any YouTube video into a **bilingual Arabic/English study guide**: timestamped explanation, five-minute summary and animated concept cards. Gate: `LICENSE`, `1,069 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 **Region placed on an explicit publisher string** — `7+ years · Egypt · Turkey · Saudi Arabia · UK` — corroborated by a second, independent signal, the Arabic output language. **This row closes the EMEA gap `p732` declared** (`733-H`), and it closes it the way `p732` asked: two unrelated signals concurring, not one inference. 🔵 **Commercially the most interesting row this pass:** this base's EMEA coverage is Europe plus Gulf *policy*, with almost no Arabic-language *tooling*. Arabic-first study material generation is a named Gulf procurement priority and this is the only permissive implementation on the shelf. |
+| **colloq** | [colloq-edu/colloq](https://github.com/colloq-edu/colloq) | 22 | MIT | 2026-11-03 | Global ⚠️ | A **self-hosted classroom for teaching Python, data science and ML together**, where students join from a browser **with just a name** — no account provisioning, no per-student licence. Gate: `LICENSE`, `1,079 B` raw → **`1020 B`/`fe2a9817987f`**. 🔵 **The no-account property is the whole value and is usually mis-read as laziness:** it removes the data-protection review that blocks most workshop tooling in schools, because nothing identifying is collected. That makes it the only row here deployable into a one-day teacher-training session without a DPIA. ⚠️ Region unplaced; `50,296`-character README, no country string (the `28` Cyrillic characters are a quoted dependency name, not a provenance signal). |
+| **SkillWise** | [sizwinz/SkillWise](https://github.com/sizwinz/SkillWise) | 7 | MIT | 2026-10-20 | **APAC** | Turns a **résumé** into a personalised six-month learning roadmap with milestones. Gate: `LICENSE`, `1,086 B` raw, **`20` CR bytes** → `1034 B` under `p732`'s rule, **`1020 B`/`fe2a9817987f`** under `P176`. 🔬 **This is the control row for `T278`** and the reason it is filed at `7★`: it is the only payload read this pass that the prior gate *refused*, and the refusal was caused entirely by its line endings. Keeping it on the shelf keeps the defect falsifiable — if a later pass's gate refuses this row again, that gate has regressed. 🟢 Region placed on an explicit publisher string: `computer engineering student at Gujarat, India`. |
 
 ## 🆕 `p732` — reads and verifies `2026-11-10`
 

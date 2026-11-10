@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Composition Patterns — Education
 
-**Pass p731 · verified 2026-11-10.** Concrete recipes using only components verified this
+**Pass p733 · verified 2026-11-10.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -18,6 +18,169 @@ patterns continue the sequence rather than reusing it. (This pass initially draf
 recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
 different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
 prior engagement may cite.)
+
+---
+
+## P176 — The licence gate, with its digest named and its two false-refusal classes repaired (tooling, not a client pattern; one hour, then a standing gate) 🟢 new at p733
+
+**Supersedes `P172`.** Same intent — certify that a grant is stock before a repository reaches a
+client slide — with the three things `P172` left a reader unable to do: reproduce it, survive CRLF,
+and match the second-most-common MIT title spelling.
+
+**The rule, stated completely enough to re-run.**
+
+```bash
+terms() {                                   # stdin: a licence payload -> canonical terms-only form
+  tr -d '\r' \                              # T278: CRLF -> LF. Without this, stock payloads are refused.
+  | sed '/^[[:space:]]*APPENDIX:/,$d' \     # T280: Apache appendix is outside the terms. NOTE the
+                                            #       leading-space class: stock Apache INDENTS it, so a
+                                            #       literal ^APPENDIX: anchor never fires.
+  | grep -v '^[[:space:]]*$' \              # drop blank lines
+  | grep -viE '^[[:space:]]*(The )?(MIT |BSD |ISC )?Licen[cs]e( \(MIT\))?[[:space:]]*$' \
+                                            # T279: matches BOTH "MIT License" and "The MIT License (MIT)"
+  | grep -viE '^[[:space:]]*Copyright[[:space:]]*(\([cC]\)|©)?[[:space:]]*[0-9]{4}' \
+                                            # holder line by SHAPE, not by the substring "copyright":
+                                            # that is the p728 defect T272 repaired.
+  | tr '\n' ' ' | tr -s ' ' | sed 's/ $//'  # T277: collapse newlines to spaces. LOAD-BEARING --
+}                                           #       the newline-joined form is also 1020 B but hashes
+                                            #       differently. Length alone does not identify it.
+gate() { printf '%s' "$(terms < "$1")" | tee >(wc -c) | sha256sum | cut -c1-12; }
+```
+
+**Constants measured this pass.**
+
+| Family | Terms-only bytes | `sha256`/12 | n | Status |
+|---|--:|---|--:|---|
+| MIT (stock) | `1020` | `fe2a9817987f` | **9 / 9** | 🟢 Reproduces `p732`'s published constant exactly. Raw payloads `1,062`–`1,093 B`; holder lines vary; constant does not. |
+| Apache-2.0 | `9130` | `6e1ffb7fc4e2` | 3 / 3 | 🔴 **Does NOT match `P173`'s `8484 B`/`c7396247b0c2`.** See `T280`. Stable under this rule; discrepancy declared, not resolved. |
+| BSD-3-Clause | `1441` | `8cb6ec54329a` | 1 | 🟡 First `3`-clause payload on the shelf (`freeCodeCamp/classroom`). Handled without an exception. |
+
+**The controls, because a gate with no negative control is an assertion.** `T279`'s two payloads
+(`popcode`, `BrainWaves`) must land on `1042 B`/`dcdd5bec314a` under the *old* title rule and on the
+constant under this one. `T278`'s payload (`sizwinz/SkillWise`) must land on `1034 B` with CRLF
+retained and on the constant with it stripped. **Keep all three on the shelf**: if a later pass's
+gate refuses them, that gate has regressed.
+
+⚠️ **Inherited limit, restated because it is unfixed.** `P172` noted that a restriction *appended
+to the holder line* (`… NONCOMMERCIAL USE ONLY.`) is invisible, since the rule discards that line.
+`P176` does not fix this and **must** be paired with `P172`'s separate holder-line shape assertion.
+Holder-invariance and holder-line tamper detection cannot both come from one hash.
+
+---
+
+## P177 — Word-anchored supply and placement legs: stop a substring from inventing a finding or a region (tooling; half a day, and it precedes every discovery leg) 🟢 new at p733
+
+**The problem, measured rather than asserted (`T281`).** Four distinct corruptions in a single
+pass, all from the same cause: `eleve` → **ElevenLabs** / **Eleventy** (`20` of `42` EMEA hits);
+`grading` → **`enterprise-grade`** (Kubernetes at the head of an education sweep); `paris` inside
+**`comparison`** (a *false region written into a row*); `syllabus` / `curriculum` → RL
+curriculum-learning repositories.
+
+**The recipe.**
+
+1. **Anchor every token.** Use `\b` word boundaries on both sides for every short or non-English
+   token in a discovery or placement regex. `eleve`, `paris`, `peru`, `chile`, `mali`, `chad`,
+   `oman`, `iran` and `cuba` are all substrings of common English words or package names; so is
+   `grade` relative to `grading`.
+2. **Separate the false-friend classes before ranking.** Strip `(enterprise|production|
+   professional|industrial|commercial)-grade` *before* applying any education filter, then
+   exclude the *teaches-software-engineering* class under `727-C`. Without both, the top `50`
+   by stars contains no education repository at all.
+3. **Never place a region on a single lowercase substring.** Require one of: an explicit country
+   or institution string read in context; a non-Latin script count over a stated threshold
+   (`CJK > 300` characters placed four rows this pass); or a publisher location string from the
+   owner profile README (`3 / 18` usable — see step 5).
+4. **Rank by relevance, not stars.** On this instrument the two are **anti-correlated**: the head
+   was `128,965★` of noise and every filed row was under `3,802★`.
+5. **Do not query `users/{owner}`.** It is blocked in this environment — `18 / 18` returned
+   *"sessions are bound to their configured repositories"*. The reachable substitute is
+   `raw.githubusercontent.com/{owner}/{owner}/HEAD/README.md`, which yields a usable location in
+   about **`22 %`** of cases and **must be read in context** — one of its four hits this pass was
+   the false `paris`.
+
+**Expected yield, so a later pass can tell a bad run from a bad ecosystem.** `27` anchored legs →
+`820` unique → `537` novel → `245` novel-permissive-alive → `21` filable. **If a sweep returns
+nil, compare against these numbers before concluding the supply does not exist** — that inference
+has now been wrong twice (`730-G`, and the EMEA half of `T281`).
+
+---
+
+## P178 — The dual-residency study-material pipeline: one deliverable, two data-residency postures, decided by the client's legal team rather than by your architecture (any region, 3–5 weeks) 🟢 new at p733
+
+**The engagement.** A university or training provider wants lecture material — slides, PDFs,
+recordings — turned into study artefacts: summaries, cheatsheets, flashcards, audio overviews.
+**The question that actually decides the build is never pedagogical.** It is whether the corpus may
+leave the institution. Most proposals pick one answer, and lose the deal on the other.
+
+**Wire it so the answer is a deployment choice, not a rebuild.**
+
+| Residency | Component | Licence | What it does |
+|---|---|---|---|
+| Hosted | [`proyecto26/notebooklm-ai-plugin`](https://github.com/proyecto26/notebooklm-ai-plugin) | MIT | Drives **Google NotebookLM** from an agent harness to emit decks, audio overviews, mind maps and flashcards. **Needs no procurement** where the client already has a Google tenancy. |
+| On-premise | [`PndaMan/cortex`](https://github.com/PndaMan/cortex) | Apache-2.0 | Local-first desktop study OS over the same inputs. Corpus never leaves the machine. |
+| Retention | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | Apache-2.0 | Plain-text spaced repetition — cards are files under version control, so the output survives the engagement and diffs in review. |
+| Delivery | [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey) | Apache-2.0 | Timed exams and quizzes with analytics, **permissively licensed end to end**. |
+
+**Why these four and not the obvious ones.** Both generators emit the *same artefact classes*, so
+the pipeline downstream of them is identical — that is the whole trick, and it is why the residency
+decision can be deferred to the client. `hashcards` keeps the deliverable in text because a
+generated flashcard set locked in a vendor database is worth nothing after handover. And the
+delivery row is the one most proposals get wrong: **item generation has long been permissive while
+delivery was copyleft** (Moodle GPL-3.0, Open edX AGPL-3.0, Frappe LMS AGPL-3.0), so
+"generate assessments with AI" kept terminating on an AGPL host. `xiaoju-survey` (`3,802★`,
+Apache-2.0) is the first permissive delivery surface this base holds.
+
+**Obligation.** Apache-2.0 and MIT throughout: attribution and notice retention, **no copyleft
+reach, no source-disclosure trigger**. Deliverable may ship closed. ⚠️ `xiaoju-survey` is
+Chinese-primary in UI and docs — budget localisation outside APAC, and note it carries no
+proctoring or accommodations support.
+
+**Sequence.** Week 1: residency decision and corpus audit. Weeks 2–3: whichever generator the
+answer selects, wired to `hashcards` as the output format. Week 4: delivery through
+`xiaoju-survey` with a human review gate on every generated item. Week 5: handover, where the
+text-file corpus is the asset. **Fits `P121`'s demo-to-delivery chain as its missing delivery leg.**
+
+---
+
+## P179 — The ten-minute credential-anchored upskilling track: sell against a published standard, not against a model's opinion (EMEA/APAC-first, 6–8 weeks) 🟢 new at p733
+
+**The engagement, and the demand evidence for it.** The buyer is a ministry, employer or training
+provider under a **teacher-** or **workforce-capability** obligation. `T282`: the enforceable US
+instrument is educator capability, not student product — Virginia S.B. 394, plus state
+professional-development requirements. `T283`: in Europe `67 %` of teachers already use AI tools
+while `80 %` fear the pace, against `76 %` of students expecting access — a capability gap that is
+deliverable **now**, two years before the `2027-12-02` high-risk date. `T284`: in LATAM, `70 %` of
+universities have **no published AI policy** at all.
+
+**The constraint everyone gets wrong:** this learner has **ten minutes**, not an hour, and the
+engagement is judged against a **credential**, not a satisfaction score.
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| Session shape | [`pipdax/mini-classroom`](https://github.com/pipdax/mini-classroom) | MIT | Decomposes a goal into units sized for **one ten-minute session a day**. Every other courseware row this base holds assumes a free hour. |
+| Competency anchor | [`shawkynasr/HSK-official-Query-System`](https://github.com/shawkynasr/HSK-official-Query-System) | MIT | A **national graded competency standard** as a queryable corpus. The pattern generalises: substitute the standard your client is actually assessed against. |
+| Retention | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | Apache-2.0 | FSRS-style scheduling over plain text. |
+| Procedural drill | [`s-sigdel/vimhjkl`](https://github.com/s-sigdel/vimhjkl) | MIT | The only row here that schedules a **motor/procedural** skill. Vocational competence is procedural; quizzes measure nothing about it. |
+| Entry point | [`sizwinz/SkillWise`](https://github.com/sizwinz/SkillWise) | MIT | Résumé → six-month roadmap: turns "upskill the workforce" into a per-learner starting position. |
+| Evidence | [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey) | Apache-2.0 | Timed assessment with analytics — the artefact a funder audits. |
+
+**Why the competency anchor is the commercial core.** A mastery estimate produced by a model is an
+opinion. **Mapped onto a published graded standard it becomes a claim an employer or ministry
+already knows how to accept** — and `T285` is the reason this matters now: only `45 %` of the
+most-used tools meet an ESSA evidence tier, so an evidence claim is a differentiator US districts
+are **already permitted to procure against**, while category-growth pricing is collapsing
+(Chegg `−45 %` of staff).
+
+**Obligation.** MIT and Apache-2.0 throughout; attribution only, deliverable may ship closed.
+⚠️ The HSK corpus is a *Chinese-language* standard — for a non-Chinese engagement it is the
+**shape** that transfers (graded levels → scheduler → evidence), and substituting the local
+standard is week-one scope, not a detail.
+
+**Sequence.** Weeks 1–2: identify the governing standard and ingest it as the anchor. Weeks 3–4:
+`SkillWise` intake plus `mini-classroom` session generation against it. Weeks 5–6: `hashcards`
+retention and `vimhjkl`-style procedural drills for the practical competencies. Weeks 7–8:
+assessment and the evidence pack. **Deliverable: a capability claim tied to a published standard** —
+which is what `T282`, `T283` and `T284` each, in their own jurisdiction, actually require.
 
 ---
 

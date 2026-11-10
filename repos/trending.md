@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p733)
+
+**`27` supply legs via `gh api -X GET search/repositories` → `820` unique repositories → `537`
+novel against `5,848` held slugs → `245` novel + permissive + unarchived → `21` filed.**
+The `4` mandated prose legs contributed **`0`** addresses not already held, a `37`th consecutive nil.
+
+### What trended, and the two false-friend classes that polluted the measurement
+
+🟢 **Filed from this sweep** — `6` platforms, `6` foundations, `9` agents; see
+[`../verticals/solutions.md`](../verticals/solutions.md),
+[`foundations.md`](foundations.md) and [`../agents/top.md`](../agents/top.md).
+The sweep's single most valuable return is [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey)
+(`3,802★`, Apache-2.0) — **the highest-star permissive assessment-*delivery* platform this base has
+ever held**, closing a structural asymmetry in which item generation was permissive and delivery was
+copyleft.
+
+🔴 **The head of this sweep by stars is entirely noise, and the mechanism is measured (`T281`).**
+Ranked by stars, the top returns were [`kubernetes/kubernetes`](https://github.com/kubernetes/kubernetes)
+(`128,965★`), [`spring-projects/spring-boot`](https://github.com/spring-projects/spring-boot)
+(`81,789★`) and [`nestjs/nest`](https://github.com/nestjs/nest) (`76,989★`) — all matched because
+the token `grading` is a substring of **`enterprise-grade`**, **`production-grade`** and
+**`professional-grade`**. A further large block (`eugenp/tutorials` `37,308★`,
+`changkun/modern-cpp-tutorial` `25,950★`, `pytorch/tutorials`, `vercel/examples`, …) is
+*teaches-software-engineering* material, excluded under `727-C`. **Relevance and star rank are
+anti-correlated on this instrument**, so a pass that files the head files nothing useful.
+
+🔴 **The regional legs were worse, and this is why EMEA keeps nilling.** `12` targeted legs in
+Spanish, Portuguese, German, French, Dutch and Finnish returned `372` hits, of which roughly half
+of the permissive set were **ElevenLabs SDKs and Eleventy static-site starters** — matched because
+the French pupil token `eleve` is a substring of both. Measured, not estimated: `20` of `42`.
+🔵 This base has recorded EMEA supply nils for several passes and attributed them to the ecosystem
+(`T207` — "GitHub-only discovery systematically under-reports EMEA"). **At least one cause is the
+query, not the ecosystem.** Mitigation published as `P177`.
+
+### Standing nils, each with a denominator
+
+🔴 **LATAM-origin education repositories: `0` filed, second consecutive measured pass.** `372`
+regional hits; the nearest misses were courseware and an anti-assessment automation script, both
+described in [`../agents/trending.md`](../agents/trending.md) (`733-J`).
+🔴 **North America: `0` rows placed this pass.** The prescribed experiment — sweeping US school
+district and university GitHub organisations directly, since `729-B` showed the publisher class
+exists but does not surface on topic legs — **was not run** and remains open.
+🟡 **`users/{owner}` is unavailable in this environment** (`18 / 18` blocked); the owner profile
+README is reachable and places a region in `3 / 18` usable cases. Do not spend another leg on the
+API endpoint.
+
+---
+
 ## 🆕 2026-11-10 (p732) — 🟢 **`451` REPOSITORIES ACROSS FOUR LATAM PUBLISHERS: THE REGION THIS BASE CALLED EMPTY IS FULL OF COURSEWARE, NOT EDTECH — AND THAT IS A FINDING, NOT AN ABSENCE. 🔴 PLUS A `1,413★` APACHE GRANT THIS BASE'S GATE WRONGLY REFUSES ON A TWO-CHARACTER DIFFERENCE IN TEXT THAT IS NOT PART OF THE TERMS.**
 
 **`6` foundations rows (**new section**: *Retention engines and exam corpora*) · `4` platform rows

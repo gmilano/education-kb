@@ -4,6 +4,113 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p733) — 🟢 **THE MIT GATE'S HASH IS REPRODUCIBLE AND ITS ALGORITHM IS NOW NAMED (IT NEVER WAS). 🔴 THE SAME RULE HAS TWO DEFECTS THAT FALSELY REFUSE STOCK PAYLOADS — ONE OF THEM BIASED BY AUTHORING PLATFORM — AND THE APACHE CONSTANT PUBLISHED AT `p732` CANNOT BE REPRODUCED FROM THE RULE THAT PRODUCES THE MIT ONE.**
+
+**`9` agent rows · `6` foundations rows · `6` platform rows · `9` new trends (`T277`–`T285`) ·
+`4` new patterns (`P176`–`P179`) · `21` licence payloads byte-read · `9 / 9` MIT payloads at the
+exact published constant once two defects are repaired · `2` gate defects found under control and
+fixed · `1` published constant declared unreproducible with its denominator · `4` measured
+instances of one discovery defect · `1` new region-placement channel measured and rate-stated ·
+`820` repositories enumerated across `27` supply legs · `372` across `12` targeted regional legs ·
+`1` declared EMEA gap closed with a real placement · `1` LATAM nil confirmed a second time with a
+denominator · `3` stale cross-references reported · `1` probe-chain blind spot found by control.**
+
+### The instrument findings, because they affect every row this base holds
+
+🟢 **`733-A` → `T277` — the gate is reproducible, and the missing piece was never the rule but the
+digest.** `p732` published the repaired MIT constant as **`1020 B` / `fe2a9817987f`** and described
+the rule ("drop the holder line by shape, keep every term") but **named no hash algorithm anywhere
+in this KB** — `sha256`, `md5`, `sha1` and `blake` all appear in these files in other contexts, so
+a reader cannot tell which was meant. Reconstructed this pass: the canonical form is
+**terms-only** (drop the title line, drop the holder line by shape, drop blank lines) **with
+newlines collapsed to single spaces**, and the digest is **`sha256`, first `12` hex**. That
+combination reproduces `1020 B` / `fe2a9817987f` exactly. 🔵 **The newline-collapse step is
+load-bearing and was not stated:** the newline-joined form is also `1020 B` but hashes to
+`ee796286d939`. Length alone does not identify the canonical form, so a later pass checking only
+bytes would believe it had reproduced the gate when it had not. Rule and digest now both published
+as **`P176`**.
+
+🔴 **`733-B` → `T278` — the gate falsely refuses stock MIT payloads with CRLF line endings, and the
+bias has a direction.** [`sizwinz/SkillWise`](https://github.com/sizwinz/SkillWise) (`7★`, MIT)
+gates to **`1034 B` / `038fece50b26`** — a miss against the constant, which under this base's own
+procedure is a refusal. The payload carries **`20` CR bytes**; it is otherwise stock, and the
+`14`-byte overshoot is the CR bytes the canonicalisation retains. With `tr -d '\r'` added it gates
+to **`1020 B` / `fe2a9817987f`**, exactly. 🔵 **Why this is not a curiosity:** CRLF correlates with
+Windows authoring, and `729-B` already established that a prior instrument was biased against
+*institutional* publishers and that the bias produced a published regional nil. This is the same
+failure mode arriving through a different mechanism — and `p732`'s own `Tutor MCP` row notes that
+its institution-facing client "ships Windows x64 only". **An instrument that silently drops
+Windows-authored grants will under-report exactly the publisher class this base keeps declaring
+regions empty of.**
+
+🔴 **`733-C` → `T279` — a second false-refusal class: the second-most-common MIT title spelling.**
+[`popcodeorg/popcode`](https://github.com/popcodeorg/popcode) (`190★`) and
+[`makebrainwaves/BrainWaves`](https://github.com/makebrainwaves/BrainWaves) (`76★`) both gate to
+**`1042 B` / `dcdd5bec314a`** — *identical to each other*, which is the clue. Both open
+`The MIT License (MIT)` rather than `MIT License`, which a `^(MIT )?Licen[cs]e$`-shaped title rule
+does not match, so the title is retained: `The MIT License (MIT) ` is **exactly `22` bytes** and
+`1042 − 1020 = 22`. Terms are stock in both. 🟢 Repaired in `P176` by allowing an optional leading
+`The ` and a trailing `(MIT)`; both then gate to `1020 B` / `fe2a9817987f`. 🔵 **Two independent
+repositories hitting the same wrong constant is what distinguishes a payload variant from a rule
+defect** — a tampered payload would not collide with another publisher's.
+
+🔴 **`733-D` → `T280` — the Apache constant published at `p732` cannot be reproduced from the rule
+that reproduces the MIT one, and this pass does not pretend to resolve it.** `P173` publishes
+**`8484 B` / `c7396247b0c2`**, "measured identical across `5` payloads", from the rule *truncate at
+`^APPENDIX:`*. Applying that truncation inside the same canonicalisation that reproduces the MIT
+constant exactly yields **`9130 B` / `6e1ffb7fc4e2`**, stable across `3` payloads read this pass —
+[`PndaMan/cortex`](https://github.com/PndaMan/cortex) and
+[`papagiannakis/Elements`](https://github.com/papagiannakis/Elements) (both stock `11,358 B` raw)
+and [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey) (`11,413 B` raw — the extra `55 B`
+are in the appendix, so the gate is working as designed). 🔵 **The MIT half of the same rule matches
+the published constant to the byte and the hex; the Apache half misses by `646 B`.** The difference
+is therefore an **unpublished step in `P173`**, not a difference of digest — most likely the Apache
+header block (title, version, URL, `TERMS AND CONDITIONS`). ⚠️ **Declared, not guessed:** this pass
+publishes its own Apache constant with its rule fully stated and flags the discrepancy for a later
+pass rather than quietly adopting either number. Note for whoever takes it: stock Apache-2.0
+indents `APPENDIX:`, so a literal `^APPENDIX:` anchor never fires at all.
+
+🔴 **`733-E` → `T281` — unanchored substring matching on short regional tokens is corrupting both
+discovery and placement, and there are now `4` measured instances in one pass.** (1) The French
+pupil token `eleve` matched **ElevenLabs** and **Eleventy** — `20` of `42` permissive hits on the
+EMEA legs were ElevenLabs SDKs and Eleventy static-site starters. (2) `grading` matched
+**`enterprise-grade`**, **`production-grade`** and **`professional-grade`**, putting `kubernetes`,
+`spring-boot` and `nestjs` at the top of an education sweep by stars. (3) A region probe placed
+`Premshaw23/Learnova` in **Paris** on the string `paris` — which occurs inside **`comparison`**.
+(4) [`RyanNavillus/Syllabus`](https://github.com/RyanNavillus/Syllabus) (`125★`, MIT) is
+*curriculum learning for RL agents*, matched by both `syllabus` and `curriculum`. 🔵 **The causal
+reading: this base's EMEA legs have nilled repeatedly, and at least one mechanism is now measured
+rather than hypothesised** — the short non-English tokens that are supposed to find European
+publishers are the ones most likely to collide with English package names. 🟢 Mitigation in
+`P177`: word-anchor every token, and treat a single lowercase geographic substring as **unplaced**
+until it is read in context. Instance (3) is the one that matters most: it would have written a
+**wrong region into a typed entity**, which is worse than leaving it `Global`.
+
+### Supply and placement, with denominators
+
+| Finding | Status |
+|---|---|
+| 🔴 `733-F` — **the `4` mandated prose legs nil a `37`th time, and leg 1 again reported its own uselessness verbatim.** The global supply leg returned *"The search didn't turn up a clear, education-specific ranking of MIT-licensed agents"*; the trending leg named `DeepTutor`, `geekjourneyx/interactive-learning`, `Claw-ED` and `ChinaTextbook` — **`4 / 4` already held**; the ERP/CRM leg named `OpenEduCat`, `Krayin`, `Huly` and `ERPNext` — **`4 / 4` already held**. 🟢 **The demand leg was the exception and did pay**, below. | 🔴 **NIL ×37, DENOMINATOR STATED** |
+| 🟢 `733-G` — **the `gh api` channel pays a fourth consecutive pass.** `27` supply legs (`topic:`, phrase, star- and date-bounded) → **`820` unique repositories** → `537` novel against `5,848` held slugs → **`245` novel + permissive + unarchived** → `21` filed after the *teaches-AI-not-with-AI* exclusion (`727-C`) removed the entire high-star head. 🔵 The head was `kubernetes/kubernetes` at `128,965★`; the filed rows top out at `3,802★`. **Star rank and relevance are anti-correlated on this instrument**, which is why the false-friend classes in `T281` matter. | 🟢 **21 FILED, `0` FROM THE MANDATE** |
+| 🟢 `733-H` — **the declared EMEA gap from `p732` is closed with a real placement, not an inference.** [`Shalaby-VBS/tube-scholar`](https://github.com/Shalaby-VBS/tube-scholar) (`25★`, MIT) is placed **EMEA** on an explicit publisher string — `7+ years · Egypt · Turkey · Saudi Arabia · UK` — which agrees with a second, independent signal: the tool's output is **bilingual Arabic/English**. 🔵 Two unrelated signals concurring is the standard `p732` asked for and did not meet. | 🟢 **EMEA GAP CLOSED** |
+| 🟡 `733-I` — **a new region-placement channel, measured and rate-stated rather than promoted.** `users/{owner}` — the obvious source for a publisher's location — is **blocked in this environment**: `18 / 18` owners returned *"sessions are bound to their configured repositories"*. `search/repositories` works and `users/` does not, so **no later pass should spend a leg on it.** The **owner profile README** on the raw channel *is* reachable and carries a usable location string in **`4 / 18` cases (`22 %`)**, placing `3` rows that would otherwise have been `Global ⚠️` — one of them the EMEA closure above. ⚠️ And `1` of the `4` was the **false** `paris` match in `T281`, so the channel's true yield is `3 / 18` and it **must** be read in context. | 🟡 **CHANNEL ADDED AT 22 %, 1 FALSE POSITIVE** |
+| 🔴 `733-J` — **LATAM repository supply is nil for a second consecutive measured pass, and the denominator is bigger this time.** `12` targeted legs in Spanish, Portuguese, German, French, Dutch and Finnish (`docente`, `profesor`, `alumno`, `escola`, `aluno`, `aprendizaje`, `colegio`, `enem`, `vestibular`, `educacao`, …) → **`372` hits → `0` identifiably LATAM-origin education projects filed.** The nearest misses are courseware, not products: `BandTec/web-data-viz` (`163★`, MIT, a São Paulo college's data-viz teaching project, unpushed since `2026-06-12`) and `dr3yt/saladofuturoscript` (`81★`, MIT, an automation script *against* São Paulo's *Sala do Futuro* platform — **excluded: it defeats an assessment system rather than building one**). 🔵 Consistent with `728-K`: the LATAM announcement layer continues to run far ahead of the LATAM supply layer. **A LATAM engagement still cannot be staged on regional code.** | 🔴 **NIL ×2, `372` DENOMINATOR** |
+| 🟡 `733-L` — **the existence-probe chain has a blind spot, found by control rather than by a miss.** The chain corrected at `724-I` is `README.md` → `readme.md` → `README.rst` → `LICENSE`. Verifying the `27` addresses written this pass, **`26` resolved and `1` did not** — [`spring-projects/spring-boot`](https://github.com/spring-projects/spring-boot), which is self-evidently alive. Its readme is **`README.adoc`**: AsciiDoc, the house format of much of the Java ecosystem and absent from the chain. 🔵 **The address was cited only as `T281` noise, so nothing was mis-filed — but the same blind spot applied to a *candidate* would read as a dead repository and silently drop it.** 🟢 Add `README.adoc` after `README.rst`; the chain stays case- and order-sensitive. 🔴 **Controls re-run and both still hold:** the raw channel returns `404` for an address invented to be absent, while the procedure's mandated `curl -sI https://github.com/{owner}/{repo}` returns **`403` for a repository proven alive** (`didi/xiaoju-survey`). The mandated check still has no discriminating power here and was not used. | 🟡 **BLIND SPOT FOUND BY CONTROL** |
+| 🟡 `733-K` — **`3` stale cross-references reported rather than renumbered.** `intel/trends.md` cites **`T427`** and **`T429`** and `compose/patterns.md` cites **`P834`**, all three pointing at `open-gaps.md` — **a file that does not exist in this repository.** They sort above the live series (`T277`+, `P176`+) and will keep corrupting any `max(ID)` computed by regex, which is how a later pass would pick its next identifier. ⚠️ Not renumbered this pass: they may be live IDs in a sibling KB. Recorded so the next pass computes its maximum from `###` headings, not from bare token matches. | 🟡 **REPORTED, NOT TOUCHED** |
+
+### Rows filed this pass
+
+`9` agents → [`agents/top.md`](top.md) · `6` foundations → [`../repos/foundations.md`](../repos/foundations.md) ·
+`6` platforms → [`../verticals/solutions.md`](../verticals/solutions.md). Region split as filed:
+**APAC `9`** (six placed on CJK-primary READMEs or an explicit institution, three on publisher
+location), **EMEA `1`** (explicit publisher string), **Global ⚠️ `11`** (unplaced, and left
+unplaced), **LATAM `0`** (measured, `733-J`), **North America `0`** — ⚠️ **this pass placed no
+North American row and that is a gap, not coverage.** The `p729`/`703-G` prescription (sweep US
+district and university GitHub organisations directly, since the publisher class exists but does
+not surface on topic legs) was **not run this pass** and remains the open experiment.
+
+---
+
 ## 🆕 2026-11-10 (p732) — 🔴 **THIS BASE'S MANDATORY MIT LICENCE GATE HAS BEEN CERTIFYING A TEXT WITH MIT'S ONLY CONDITION AND PART OF ITS DISCLAIMER DELETED. 🟢 BOTH LICENCE GATES REPAIRED, BOTH CONSTANTS REPLACED, AND TWO RECORDED "ANOMALIES" OF THIS BASE DISSOLVE INTO THE NEW APACHE CONSTANT.**
 
 **`9` agent rows · `6` foundations rows (new section) · `4` platform rows (new section) ·

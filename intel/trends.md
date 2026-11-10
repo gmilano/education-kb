@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI — Current Trends
 
-**Pass p731 · researched 2026-11-10.** Seven new trends — **T265**–**T271** — added above p730's
+**Pass p733 · researched 2026-11-10.** Seven new trends — **T265**–**T271** — added above p730's
 **T262**–**T264**, which sit above p729's
 **T258–T261**, p728's **T255–T257**, p727's
 **T253–T254**, p726's
@@ -21,6 +21,143 @@ registry **T1–T225** from prior passes is preserved in full below.
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T277–T285 — added at `p733` (2026-11-10)
+
+> Nine trends. **`T277`–`T281` are findings about this base's own instruments**, each backed by a
+> control a later pass can re-run; **`T282`–`T285` are demand- and policy-side readings** from the
+> mandated regional legs, which paid this pass where the supply legs did not. `p733` checked all
+> nine identifiers against the standalone `T` headings present before this pass (max `T276`):
+> **no collision.** ⚠️ Note for the next pass: `T427` and `T429` appear in this file as
+> cross-references to `open-gaps.md`, **a file not present in this repository**. They are not
+> members of this series but they *do* sort above it, so compute the next identifier from `###`
+> headings rather than from bare `T[0-9]+` matches, or you will skip to `T430`.
+
+### 🟢 T277 — The licence gate was reproducible all along; what was missing was the name of its digest
+
+`p732` published `1020 B` / `fe2a9817987f` and described its rule but **named no hash algorithm
+anywhere in this KB**. Reconstructed and confirmed this pass: **`sha256`, first `12` hex, over the
+terms-only form with newlines collapsed to single spaces.** 🔵 **The collapse step is load-bearing
+and was never stated** — the newline-joined form is *also* `1020 B` but hashes to `ee796286d939`,
+so a later pass verifying only the length would believe it had reproduced the gate when it had not.
+**Transferable lesson: a published constant without its algorithm is a number, not a check.** Any
+instrument this base publishes from here should state rule *and* digest, as `P176` now does.
+
+### 🔴 T278 — The gate silently refused stock MIT payloads with Windows line endings, and that bias points at the publisher class this base keeps declaring regions empty of
+
+[`sizwinz/SkillWise`](https://github.com/sizwinz/SkillWise) is stock MIT and gated to `1034 B` —
+a refusal — because its payload carries **`20` CR bytes** that the canonicalisation retained.
+`tr -d '\r'` moves it to `1020 B` / `fe2a9817987f` exactly. 🔵 **The direction of the bias is the
+finding, not the byte count.** `729-B` already established that a prior instrument selected against
+*institutional* publishers and that the bias produced a **published regional nil**; CRLF correlates
+with Windows authoring, and Windows authoring correlates with schools, districts, ministries and
+non-specialist academic publishers. **The same failure mode has now arrived twice through two
+unrelated mechanisms**, which makes it a property of this pipeline rather than an accident.
+🟢 Repaired in `P176`. 🔬 The row is kept on the shelf at `7★` specifically as a regression control.
+
+### 🔴 T279 — Two unrelated publishers hit the same wrong constant, which is how you tell a rule defect from a tampered payload
+
+[`popcodeorg/popcode`](https://github.com/popcodeorg/popcode) and
+[`makebrainwaves/BrainWaves`](https://github.com/makebrainwaves/BrainWaves) both gated to
+**`1042 B` / `dcdd5bec314a`** — identical to each other. Cause: both open `The MIT License (MIT)`,
+which a `^(MIT )?Licen[cs]e$` title rule does not match, so the title survives canonicalisation;
+`The MIT License (MIT) ` is exactly **`22` bytes** and `1042 − 1020 = 22`. 🔵 **The transferable
+method lesson is diagnostic, not cosmetic:** a *tampered* payload is tampered uniquely and will not
+collide with another publisher's, so **a shared wrong constant is near-conclusive evidence that the
+rule is wrong rather than the grant.** A gate that reports only pass/fail cannot produce this
+evidence — which is the argument for publishing the computed value on every row, as this base does.
+
+### 🔴 T280 — The Apache constant published one pass ago cannot be reproduced from the rule that reproduces the MIT one
+
+`P173` publishes `8484 B` / `c7396247b0c2` from *truncate at `^APPENDIX:`*. The same
+canonicalisation that reproduces the MIT constant **to the byte and the hex** yields
+**`9130 B` / `6e1ffb7fc4e2`**, stable across `3` payloads including one whose raw size is non-stock
+(`didi/xiaoju-survey`, `11,413 B`, the excess sitting in the appendix exactly as designed). The gap
+is `646 B`, about the size of the Apache header block. 🔵 **Two further observations a later pass
+should start from:** stock Apache-2.0 **indents** `APPENDIX:`, so a literal `^APPENDIX:` anchor
+never fires at all; and `p731` recorded `uw-it-aca/myuw` as an *anomaly needing an exception* at
+`8,484 B`, which `p732` then reinterpreted as the canonical form — a reading now in doubt again.
+⚠️ **Declared, not resolved.** This pass publishes its own constant with its rule stated in full
+and certifies no row against a number it could not compute.
+
+### 🔴 T281 — Unanchored substring matching is corrupting discovery and placement in the same pass, with four measured instances
+
+(1) `eleve` (French, *pupil*) matched **ElevenLabs** and **Eleventy** — `20` of `42` permissive
+EMEA hits. (2) `grading` matched **`enterprise-grade`** / **`production-grade`** /
+**`professional-grade`**, putting Kubernetes and Spring Boot at the head of an education sweep.
+(3) A region probe placed `Premshaw23/Learnova` in **Paris** on `paris` inside **`comparison`**.
+(4) [`RyanNavillus/Syllabus`](https://github.com/RyanNavillus/Syllabus) (`125★`, MIT) is
+*curriculum learning for RL agents*, matched by both `syllabus` and `curriculum`.
+🔵 **Why this outranks the other instrument findings in consequence: instance (3) would have written
+a wrong region into a typed entity.** A licence miss refuses a good row — recoverable and visible.
+A false placement **publishes a confident falsehood** into exactly the field that regional
+filtering depends on. 🟢 `P177`: word-anchor every token; treat a single lowercase geographic
+substring as **unplaced** until read in context; and read `T207`'s "GitHub under-reports EMEA"
+with this in mind — **at least part of that nil was the query, not the ecosystem.**
+
+### 🟢 T282 — US state AI-in-education policy has crossed from guidance into enacted statute, and the binding instrument is teacher training
+
+The North America leg returned a **named enacted law** — Virginia's **S.B. 394**, directing the
+state education agency to issue guidance covering **teacher training** — against a backdrop of
+**at least 15 states** having introduced or passed AI-in-education legislation and one tracker
+counting **nearly 100 state bills** touching K-12 student AI use. The Education Commission of the
+States additionally reports states embedding **AI-literacy standards in curricula** and attaching
+**professional-development requirements for educators**; four states (Utah, North Carolina, West
+Virginia, Wisconsin) have published joint **Guiding Principles** through Panorama Education.
+Federal action remains **executive** — a national framework and a K-12 AI instruction task force by
+executive order — i.e. guidance, not binding rules. 🔵 **The commercial reading, and it inverts the
+usual pitch:** the enforceable obligation landing on US institutions is **educator capability**,
+not student-facing product. A proposal that ships a tutor answers nothing a state has actually
+mandated; one that evidences teacher training and AI-literacy coverage answers S.B. 394 directly.
+⚠️ Secondary sources only, per `725-F`.
+
+### 🟡 T283 — Europe's binding date slipped but the operative constraint is now teacher pace, and two independent surveys agree on it
+
+On the regulatory side the leg reproduced this base's `T205` position — education high-risk
+obligations applying from **`2027-12-02`** — and added the mechanism: a **Digital Omnibus political
+agreement reached `2026-05-07`**. 🔵 **The more useful half is the capability data, because two
+unrelated instruments concur.** Futuresource reports **`67 %` of teachers now using AI tools** and
+characterises K-12 and higher education as moving *from pilots to structured rollouts*; an
+Epson-commissioned survey across the **UK, France, Italy, Germany, Spain and Poland** finds
+**`76 %` of students expecting to be permitted AI use** while **`80 %` of teachers worry AI is
+entering classrooms faster than schools can manage**. The Commission's **Eurydice** network
+published a digital-education report in **September 2026**. 🟢 **Consequence for sequencing an EMEA
+engagement: the deadline is `2027`, the bottleneck is now.** The gap between `76 %` student
+expectation and `80 %` teacher anxiety is a change-management deliverable that can be sold and
+delivered before any high-risk dossier is due — and it is the demand side `P179` addresses.
+⚠️ The `2026-05-07` date comes from a single blog; treat as unconfirmed pending `eur-lex` access,
+which `725-F` establishes is impossible in this environment.
+
+### 🔴 T284 — LATAM's adoption-governance gap is now quantified on both sides, and the governance side is the engagement
+
+The LATAM leg returned matched figures for the first time: a Digital Education Council survey run
+with **Tecnológico de Monterrey** and its Institute for the Future of Education finds
+**`92 %` of students and `79 %` of faculty actively engaging with AI**, while **only `30 %` of
+Latin American universities have published policies on how to use it.** A **UNESCO IESALC / UNU-IAS**
+working paper (**`2026-09-01`**) maps institutional AI use across teaching, research, community
+engagement, administration and governance and describes adoption as *neither uniform nor evenly
+distributed*, with marked public/private divergence. New regional actor this pass: **EdTech Hub and
+Fundación Ceibal** launched a regional AI-in-education partnership in **September 2026**; **ECLAC**'s
+**eLAC** digital agenda is named as the policy coordination platform. 🟢 **This closes the
+reconciliation `728-K` left open.** That finding established the LATAM *supply* layer is effectively
+empty — reconfirmed this pass at `0 / 372` (`733-J`) — and the demand figures now explain why that
+does not block an engagement: **the binding deliverable is the `70 %` of institutions with no
+policy, which is governance work and needs no regional code.** Stage on `P143` plus Global/APAC
+components. ⚠️ DEC figures are self-reported and institution-count-limited; secondary per `725-F`.
+
+### 🟡 T285 — The forecast spread persists, but the demand-side casualty list is now concrete enough to price against
+
+`730-E` recorded a `2.5×` CAGR spread on one base year; this pass reproduces it unchanged
+(**`$10.6B` @ `41.5 %`** vs **`$9.58B` @ `>30 %`**) and adds a broader **`$238.4B` 2026 EdTech**
+figure from Hyde Park Capital that is a different denominator again. 🔴 **Against the forecasts,
+the realised data keeps pointing the other way:** **Chegg cut `45 %` of staff (`388` roles)** as AI
+eroded homework-help traffic, and only **`45 %` of the most-used tools have published research
+meeting an ESSA evidence tier**. 🟢 **The operative reading, extending `730-E` rather than
+restating it: the money is in substitution and evidence, not in category growth.** Chegg is what
+disruption looks like from the incumbent's side, and the ESSA figure is the procurement gate US
+districts are already allowed to apply. **A proposal that cannot produce an evidence claim is
+competing on price in a market whose prices are falling.** ⚠️ Vendor-commissioned research;
+`725-F` applies.
 
 ## 🆕 T272–T276 — added at `p732` (2026-11-10)
 
