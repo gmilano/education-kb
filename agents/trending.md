@@ -4,6 +4,105 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p732) — 🔴 **THIS BASE'S MANDATORY MIT LICENCE GATE HAS BEEN CERTIFYING A TEXT WITH MIT'S ONLY CONDITION AND PART OF ITS DISCLAIMER DELETED. 🟢 BOTH LICENCE GATES REPAIRED, BOTH CONSTANTS REPLACED, AND TWO RECORDED "ANOMALIES" OF THIS BASE DISSOLVE INTO THE NEW APACHE CONSTANT.**
+
+**`9` agent rows · `6` foundations rows (new section) · `4` platform rows (new section) ·
+`5` new trends (`T272`–`T276`) · `4` new patterns (`P172`–`P175`) · `18` MIT + `5` Apache licence
+payloads byte-read · `7` published controls on this base's own gate, `7 / 7` behaving as specified ·
+`2` licence constants replaced · `1` vendor market figure falsified by its own arithmetic ·
+`451` repositories enumerated across `4` LATAM publishers · `1` standing regional gap closed and
+re-described as a different finding · `1` prior-pass "anomaly" recovered as the correct canonical form.**
+
+### The two instrument findings, because they affect every row this base holds
+
+🔴 **`T272` — the MIT gate.** The line rule in force since `p728` drops **every line containing the
+substring `copyright`**. In a stock MIT payload that is **three** lines: the holder attribution
+(correct to drop), **the attribution obligation** — MIT's only condition — and **part of the
+liability disclaimer**. The `870 B`/`3d87852cf34a` constant is therefore computed over a text with
+two binding terms removed, and is holder-invariant *because* of that removal. Under control, the
+rule **passes at the exact stock constant** a payload whose attribution obligation has been negated
+(`shall be included` → `need NOT be included`) and one whose disclaimer has been inverted
+(`BE LIABLE` → `ARE FULLY LIABLE`). 🟢 Repaired as **`P172`** (drop the holder line by *shape*):
+new constant **`1020 B`/`fe2a9817987f`**, identical across **`18 / 18`** MIT payloads read this
+pass, holder lines `24`–`53 B`, one containing CJK. ⚠️ Published limit: a restriction appended to
+the holder line is invisible to **both** rules, so `P172` pairs the hash with a separate holder-line
+shape assertion.
+
+🔴 **`T274` — the Apache gate.** Whole-file canonicalisation hashes the **APPENDIX**, which the
+Apache text itself places outside the terms. [`evalle/dca`](https://github.com/evalle/dca)
+(`1,413★`) canonicalises to **exactly the stock `9,478 B` length with a different hash** — a genuine
+length collision — and the entire difference is `"[]"` → `"{}"` **in the appendix instructions**.
+The grant is stock; the gate refuses it. 🟢 Repaired as **`P173`** (truncate at `^APPENDIX:`):
+single constant **`8484 B`/`c7396247b0c2`**, measured identical across `5` payloads including the
+`{}` variant **and `uw-it-aca/myuw`, which `p731` filed as an anomaly needing its own exception**.
+`p731` computed `8,484 B` correctly and read it as a deficit; it is the correct canonical form.
+**One constant now replaces a constant plus a growing exception list.**
+
+### Supply — `9` agents, of which the first is the pass's real find
+
+🟢 **[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)** (`99★`, MIT) —
+*"generative teaching, deterministic pedagogy"*: **BKT + FSRS + a versioned skill graph exposed as
+MCP tools**, so the learner model travels across Claude Code, ChatGPT, Gemini CLI and Le Chat while
+mastery history stays in one place. Its own demo **publishes a refusal** — at `0.33` against a
+routing threshold of `0.85` it declines the transfer probe, runs two practice reps, re-probes on an
+unseen scenario and records against a **frozen rubric**. The first row in this base that is a
+*learning-state backend* rather than a tutor, and the backbone of `P174`.
+
+🟢 **[`jtangen/classbuild`](https://github.com/jtangen/classbuild)** (`144★`, MIT, **APAC**) — topic
+→ complete course on five evidence-based principles, emitting PPTX, five shuffled DOCX quiz
+versions, narrated MP3, and **SCORM 2004 for Blackboard**. Region placed on an explicit
+`University of Queensland, Australia` — the base's **first Australian academic publisher**. The
+SCORM output is the commercial point: it answers how generated material reaches the LMS the client
+already runs.
+
+Also filed: **`chrichuang218/ai-learning-coach`** (`228★`, APAC, pedagogy shipped as a *coding-agent
+plugin*), **`ctrlaltwill/learnkit`** (`183★`, Obsidian FSRS — the **second** independent one in two
+passes), **`sebastianhaba/book-to-course-skill`** (`77★`, exercises **checked by unit tests**),
+**`windchimeecho/read-bridge`** (`338★`, n+1 method encoded in the UI),
+**`kuankongy/studyflow`** (`138★`, models a *cohort*, not a learner),
+**`speechlab0210/video-production-skill`** (`105★`, APAC, **ASR-verifies its own narration**).
+
+🔴 **And one row filed as intelligence, explicitly not as a recommendation:**
+**`googlyblox/auto-mcgraw`** (`89★`, MIT) automates **McGraw Hill Smartbook** homework. `T275`: the
+integrity threat is no longer generic chatbot use but **permissively licensed automation targeting
+the exact courseware the client licensed by name**. Detection is inapplicable — the work arrives
+through the platform's own flow, as the student, on time. `P174` is written to that constraint.
+
+### The LATAM gap, closed — and it was the wrong gap
+
+🟢 This base has recorded "no LATAM supply" across several passes. **That was wrong in a misleading
+direction.** Ten single-term Spanish/Portuguese legs enumerated **`326` repositories**, `102`
+permissive, `43` permissive *and* 2026-fresh, **`294` novel to this base**. 🔴 **But of the `29`
+permissive-fresh-novel rows, essentially none is an agent, a platform or a tool — they are teaching
+materials.** The region's permissive output is **courseware, not education technology.** That is a
+finding, not an absence.
+
+🟢 It also contains the **LATAM counterpart to `p731`'s North American publisher tier**:
+**`451` repositories across four Spanish/Portuguese education publishers** — `wlsf82` (`360`,
+*Escola Talking About Testing*, Brazil), `anndreloopez012` (`47`, all pushed 2026, **Campuslands**
+Colombian bootcamp), `brayandiazc` (`33`, all permissive, *Desafío Latam*), `diplodatos` (`11`,
+Argentine university data-science programme). Three gate-verified at `1020 B`/`fe2a9817987f`.
+
+⚠️ **Declared gap, measured not assumed: `0` new EMEA rows placed.** The German and French legs
+returned `total_count=0` **as composed**; single-term diagnosis shows the pool is real but thin
+(`Bildung stars:>5` → `7` repositories total). The two plausibly-EMEA finds were **refused
+placement rather than guessed**: `tutor-mcp` (French name + French/English localisation, no country
+string) and `lobovit/gopherlab` (Portuguese, **ambiguous between Portugal and Brazil** — two
+different region buckets). Both `Global` per `T137`.
+
+### Market — one figure falsified without access to its publisher
+
+`725-F` re-run and holds at **`6 / 6`** unreachable hosts (two newly tested). 🟢 So `p732` checked
+the vendors **against themselves** instead: compounding each published base against its published
+endpoint. **`4 / 5` are internally consistent; Coherent Market Insights' `16.8%` CAGR from
+`$11.40B` (2026) to `$57.25B` (2033) is arithmetically impossible** — `16.8%` gives `$33.8B`, and
+its own endpoints imply `25.9%`. 🟢 **The 2026 base year is not in dispute** (`$9.58B`–`$11.4B`
+across four houses), and dropping the self-inconsistent entry **narrows the honest CAGR range from
+`16.8%–45%` to `~26%–45%`** (`T276`).
+
+---
+
+
 ## 🆕 2026-11-10 (p731) — 🟢 **THE NORTH AMERICAN INSTITUTIONAL PUBLISHER TIER THIS BASE HAS CALLED EMPTY HOLDS `436` REPOSITORIES, `268` OF THEM NOVEL AND PERMISSIVE. 🔴 AND THE LICENCE GATE THIS BASE MADE MANDATORY WOULD HAVE REFUSED THREE CORRECT PERMISSIVE GRANTS, INCLUDING THE MOST REUSABLE COMPONENT OF THE PASS.**
 
 **`34` new rows filed (`12` agents · `10` platforms · `13` foundations incl. one new section) ·

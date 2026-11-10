@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p732) — 🟢 **`451` REPOSITORIES ACROSS FOUR LATAM PUBLISHERS: THE REGION THIS BASE CALLED EMPTY IS FULL OF COURSEWARE, NOT EDTECH — AND THAT IS A FINDING, NOT AN ABSENCE. 🔴 PLUS A `1,413★` APACHE GRANT THIS BASE'S GATE WRONGLY REFUSES ON A TWO-CHARACTER DIFFERENCE IN TEXT THAT IS NOT PART OF THE TERMS.**
+
+**`6` foundations rows (**new section**: *Retention engines and exam corpora*) · `4` platform rows
+(**new section**: *Certification and vocational training platforms*) · `451` LATAM repositories
+enumerated across `4` publishers · `326`-repository Spanish/Portuguese pool measured ·
+`23` licence payloads byte-read · `2` constants replaced · `2` national-scale corpora filed, a tier
+this base has never held.**
+
+### The trending shape this week: corpora and credentials, not more tutors
+
+🟢 **Two national-scale corpora — the evaluation input this base has been shortest of in every region.**
+
+- [`maplexuci/pdf_book_download_from_zxxeducn`](https://github.com/maplexuci/pdf_book_download_from_zxxeducn)
+  (`69★`, MIT, **APAC**) — a harvester for **China's national smart-education platform**
+  (国家中小学智慧教育平台): current electronic textbooks for primary, junior and senior secondary
+  across **all publisher editions**, including the five-four system and **special-education**
+  titles. For an APAC K-12 engagement, curriculum alignment stops being an assertion.
+- [`puneet-chandna/vit-pyqps-paaji`](https://github.com/puneet-chandna/vit-pyqps-paaji)
+  (`125★`, CC0-1.0, **APAC**) — **~1,800+ real previous-year exam papers** from Vellore Institute of
+  Technology, India. A generated-question agent can finally be scored against real instruments from
+  a real institution.
+- ⚠️ **Both are access routes, not content licences.** The MIT grant covers the *downloader*;
+  `CC0-1.0` on a collection says nothing about the underlying papers' own copyright. Clear upstream
+  rights before any client use.
+
+🟢 **Certification platforms — a buyer this base's LMS-shaped shelf has been missing.**
+[`viktoruj/cks`](https://github.com/viktoruj/cks) (`1,685★`, Apache-2.0) trains and grades against
+**CKA/CKS/CKAD/ICA** by inspecting **cluster state**; [`evalle/dca`](https://github.com/evalle/dca)
+(`1,413★`, Apache-2.0) covers the Docker Certified Associate blueprint. The buyer here is the
+employer, not the faculty. ⚠️ `cks` has **no `README.md`, `readme.md` or `README.rst` at `HEAD`** —
+existence confirmed only at the **fifth** probe position (`LICENSE`, `http 200`), a live
+demonstration of why the ordered fallback chain exists (`724-I`).
+
+🟢 **Retention moved from "product category" to "component" and now to "plugin for the tool the
+learner already uses"** (`T273`, sharpening `p731`'s `T265`), with five permissive precedents across
+two passes: [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) (`1,188★`, Apache-2.0 —
+cards are **files in a repository**, so the corpus diffs like code and survives the engagement),
+[`ctrlaltwill/learnkit`](https://github.com/ctrlaltwill/learnkit) (`183★`, Obsidian — the
+**second** independent Obsidian FSRS plugin in two passes, after `true-recall`),
+[`kubk/memo-card`](https://github.com/kubk/memo-card) (`147★`, **Telegram mini-app, ~1k MAU** — the
+only component here reaching learners without a browser or an LMS),
+[`s-sigdel/vimhjkl`](https://github.com/s-sigdel/vimhjkl) (`548★`, schedules a **motor skill**, the
+vocational case where quizzes measure nothing) and
+[`hayesbarber/spaced-repetition-learning`](https://github.com/hayesbarber/spaced-repetition-learning)
+(`192★`). This is the supply basis for `P175` — schedule against the client's existing estate, zero
+migration.
+
+### The licence gate, twice repaired — read `T272` and `T274` before trusting any prior row
+
+🔴 **`evalle/dca` is why `P173` exists.** It canonicalises whole-file to **exactly the stock
+`9,478 B` length with hash `8a8071588bc2`** instead of `399d47608b81`. The entire difference is
+`"[]"` → `"{}"` **inside the APPENDIX boilerplate instructions**, which Apache-2.0 places outside
+the terms. A length-only check passes it by luck; a whole-file hash check **wrongly refuses a stock
+grant**. 🟢 Truncating at `^APPENDIX:` yields one constant, **`8484 B`/`c7396247b0c2`**, across all
+`5` Apache payloads read this pass — **including `uw-it-aca/myuw`, which `p731` recorded as an
+anomaly requiring a named exception.** It is not anomalous; it is byte-identical to stock on the
+terms.
+
+🔴 **And the MIT rule is worse (`T272`):** it drops every line containing `copyright` — three lines
+in a stock payload, two of them **binding terms** (MIT's only condition, and part of the
+disclaimer). Under control it **passes a payload whose attribution obligation has been negated at
+the exact stock constant.** 🟢 Repaired as `P172`; new constant **`1020 B`/`fe2a9817987f`** across
+**`18 / 18`** payloads.
+
+### LATAM — the standing gap closed, and re-described
+
+Ten single-term Spanish/Portuguese legs (`educacion`, `educativa`, `educacao`, `escola`,
+`aprendizaje`, `aprendizagem`, `ensino`, `profesores`, `estudiantes`, `colegio`) → **`326`
+repositories deduplicated**, `102` permissive, `102` pushed 2026, `43` both, **`294` novel**.
+🔴 Of the `29` permissive-fresh-novel rows, **essentially none is an agent, platform or tool.** The
+pool is exercise sets, bootcamp tracks and university course repositories — **courseware, not
+edtech.** 🟢 Four publisher estates, **`451` repositories**: `wlsf82` (`360`, Brazil),
+`anndreloopez012` (`47`, **all** pushed 2026, Campuslands Colombia), `brayandiazc` (`33`, **all**
+permissive), `diplodatos` (`11`, Argentina). 🔵 Consequence for engagements: Spanish/Portuguese
+graded material exists permissively at scale, so LATAM upskilling can start from real localised
+content rather than translation — and [`oomol-lab/epub-translator`](https://github.com/oomol-lab/epub-translator)
+(`881★`, MIT) makes bilingual conversion a pipeline step where it is still needed.
+
+⚠️ **`lobovit/gopherlab`** (`48★`, Apache-2.0, `8484 B`/`c7396247b0c2`) — an interactive **Go
+learning platform**, Portuguese-language throughout — is this pass's clearest placement refusal:
+Portuguese is **ambiguous between Portugal (EMEA) and Brazil (LATAM)**, and no country token
+appears. Filed `Global` per `T137`. **Language alone is not a placement instrument.**
+
+---
+
+
 ## 🆕 2026-11-10 (p731) — 🟢 **`436` REPOSITORIES ACROSS FOUR NORTH AMERICAN UNIVERSITY AND HIGHER-ED PUBLISHERS, `275` PERMISSIVE, `268` NOVEL — THE TIER THIS BASE HAS CALLED EMPTY IS THE INTEGRATION LAYER EVERY ENGAGEMENT QUOTES FOR. 🔴 AND ONE OF ITS BEST ROWS IS A GRANT THIS BASE'S OWN GATE WOULD HAVE REFUSED.**
 
 **`13` foundations rows including **one new section** (*North American institutional publisher

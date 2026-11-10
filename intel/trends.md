@@ -22,6 +22,194 @@ registry **T1–T225** from prior passes is preserved in full below.
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
 
+## 🆕 T272–T276 — added at `p732` (2026-11-10)
+
+> Five trends. **`T272` and `T274` are findings about this base's own instruments** and each is
+> backed by a published control that a later pass can re-run; `T273`, `T275` and `T276` are supply-
+> and demand-side readings. `p732` checked all five identifiers against the `202` standalone `T`
+> headings present before this pass (max `T271`): **no collision.** Per `p731`'s forward-only
+> repair, the four double-booked identifiers (`T31`, `T32`, `T39`, `T40`) are not cited below.
+
+## T272 — This base's MIT licence gate has been certifying a text with two of MIT's terms deleted 🔴 new at p732
+
+The gate published at `p728` and made mandatory since drops **every line containing the string
+`copyright`**. In a stock MIT payload that is not one line, it is **three**:
+
+| Line | Content | Is it a term? |
+|---|---|---|
+| 3 | `Copyright (c) 2026 Jason Tangen` | No — attribution metadata. Correct to drop. |
+| 12 | `The above copyright notice and this permission notice shall be included in all` | 🔴 **Yes — the attribution obligation, MIT's only condition.** |
+| 18 | `AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER` | 🔴 **Yes — part of the liability disclaimer.** |
+
+So the `870 B` / `3d87852cf34a` constant this base certifies MIT rows against is computed over a
+text **missing MIT's single condition and part of its disclaimer**. It is holder-invariant
+*because* it deletes the holder line — and it buys that invariance by also deleting two things
+that bind.
+
+**What this does and does not mean, measured rather than asserted.** `p732` built seven controls.
+Channel L **correctly flags** tampering that disturbs neighbouring retained lines: deleting the
+attribution clause outright moves it to `822 B`, gutting the disclaimer to `938 B`. But a tamper
+that **stays inside a dropped line** is invisible:
+
+| Control | Change | Channel L | Channel H |
+|---|---|---|---|
+| `stock` | none | `870`/`3d87852cf34a` ✅ pass | `1020`/`fe2a9817987f` ✅ pass |
+| `attr_negated` | `shall be included` → **`need NOT be included`** | `870`/`3d87852cf34a` 🔴 **passes** | `1023`/`8487e8205c74` ✅ flags |
+| `liable2` | `BE LIABLE FOR ANY CLAIM` → **`ARE FULLY LIABLE FOR EVERY CLAIM`** | `870`/`3d87852cf34a` 🔴 **passes** | `1027`/`01eb22566b08` ✅ flags |
+| `noncommercial` | holder line + **`NONCOMMERCIAL USE ONLY.`** | `870` 🔴 passes | `1020` 🔴 **passes** |
+
+The first two are the defect: **a payload that revokes MIT's only condition, or inverts its
+disclaimer, is certified by this base's current gate at the exact stock constant.** Both are
+realistic shapes for a licence altered to look permissive.
+
+🟢 **Repair, implemented and published as `P172`.** Drop only the holder-attribution line, matched
+on its *shape* (`^copyright\s*(\(c\)|©)?\s*\d{4}…`) rather than on the word appearing anywhere.
+New constant **`1020 B` / `fe2a9817987f`**, measured identical across **`18 / 18`** MIT payloads
+read this pass, with holder lines spanning `24`–`53` bytes and one containing CJK. Invariance
+preserved; nothing that binds is deleted.
+
+⚠️ **The limit is real and is published with the repair.** The `noncommercial` control passes
+*both* channels, because both discard the holder line and the restriction was appended to it. One
+hash cannot be both holder-invariant and holder-line-sensitive. `P172` therefore pairs the hash
+with a **separate shape assertion** on the holder line, which flags that control. `7 / 7` controls
+then behave as specified and `18 / 18` real payloads pass.
+
+🔵 **Consequence for this base, stated plainly.** Every MIT row certified before `p732` was
+certified by an instrument that could not see two classes of tamper. Nothing found this pass
+suggests any existing row *is* tampered — all `15` re-read payloads are stock under the stricter
+rule — but the earlier certifications are weaker than they were recorded as being. Re-reading the
+standing MIT rows under `P172` is cheap and is the recommended first leg of `p733`.
+
+## T273 — Retention tooling is now shipped as a plugin for the learner's existing tool, not as an app to migrate to 🟢 new at p732
+
+`p731` opened `T265` on spaced repetition becoming a component. `p732` sharpens it: the
+*distribution channel* is the change, and it is now measured across two consecutive passes.
+
+- [`ctrlaltwill/learnkit`](https://github.com/ctrlaltwill/learnkit) (`183★`, MIT) — FSRS, cloze and
+  image-occlusion cards, TTS and retention analytics **inside Obsidian**.
+- `pieralukasz/true-recall` (`66★`, MIT, filed `p731`) — FSRS v6 and image occlusion, also **inside
+  Obsidian**, by a different author.
+- [`kubk/memo-card`](https://github.com/kubk/memo-card) (`147★`, MIT) — delivered as a **Telegram
+  mini-app** with a stated ~1k MAU.
+- [`chrichuang218/ai-learning-coach`](https://github.com/chrichuang218/ai-learning-coach) (`228★`,
+  MIT) — installed with `claude plugin install` / `codex plugin marketplace add`; the pedagogy is a
+  **plugin for the learner's coding agent**.
+- [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) (`1,188★`, Apache-2.0) — the corpus
+  is **plain text in a repository**; the host is the learner's editor and version control.
+
+**Two independent Obsidian-native FSRS plugins in two passes is the hard signal.** The consistent
+shape is that the scheduler goes to where the learner's material already lives — notes, a chat
+client, a git repository, a coding agent — and the material never moves.
+
+🔵 **Engagement consequence.** The standard proposal for a retention programme assumes a platform
+the client adopts and populates, which is where these programmes die: the content migration is the
+cost and the behaviour change is the risk. The cheaper shape, now with five permissive precedents,
+is **to schedule against the document estate the client already has**. For a client that cannot be
+moved off its existing tooling, this is not a compromise — it is the only version that ships.
+
+## T274 — The Apache-2.0 APPENDIX is not part of the terms, and hashing it produces both false passes and false refusals 🔴 new at p732
+
+Apache-2.0 payloads in this base are canonicalised **whole-file**, APPENDIX included. The APPENDIX
+is headed *"How to apply the Apache License to your work"* and is boilerplate *instructions*; the
+licence text itself places it outside the terms. Hashing it has now produced errors in both
+directions, found in the same pass.
+
+**False refusal.** [`evalle/dca`](https://github.com/evalle/dca) (`1,413★`) canonicalises whole-file
+to **exactly `9,478 B`** — the stock length — with hash **`8a8071588bc2`** instead of
+`399d47608b81`. A diff against a known-stock payload returns a single opcode: `"[]"` → `"{}"`,
+**two characters, inside the APPENDIX instruction text**. The grant is stock Apache-2.0. The
+whole-file hash refuses it.
+
+**False pass.** That same row is a genuine **length collision**: a check on canonical *length*
+alone — which this base has used in prose as shorthand for the constant — passes a payload whose
+canonical bytes differ. Length and hash disagree here for the first time on record.
+
+🟢 **Repair, implemented and published as `P173`: canonicalise the terms only**, truncating at
+`^APPENDIX:`. Measured across four Apache payloads:
+
+| Repo | Whole-file | **Terms-only (`P173`)** |
+|---|---|---|
+| `eudoxia0/hashcards` | `9478`/`399d47608b81` | **`8484`/`c7396247b0c2`** |
+| `viktoruj/cks` | `9478`/`399d47608b81` | **`8484`/`c7396247b0c2`** |
+| `evalle/dca` | `9478`/**`8a8071588bc2`** ← refused | **`8484`/`c7396247b0c2`** |
+| `uw-it-aca/myuw` | `8484`/`c7396247b0c2` ← "anomaly" | **`8484`/`c7396247b0c2`** |
+
+🟢 **The fourth row is the result that matters, and it recovers a finding this base mis-read.**
+`p731` recorded `uw-it-aca/myuw` as an **Apache-2.0 anomaly** — *"Apache-2.0 without the APPENDIX,
+`10,173 B` raw → `8,484 B` canonical against the `9,478 B` constant, the `1,049 B` deficit is the
+boilerplate-instruction appendix"* — and gave it a named exception (`T269`). Under `P173` **MyUW is
+not anomalous at all: it is byte-identical to stock on the terms.** `p731` computed the right
+number (`8,484 B`) and interpreted it as a deficit requiring an exception, when it is the
+**correct canonical form**.
+
+🔵 **Net effect: one constant replaces a constant plus a growing exception list.** `P173` yields a
+single Apache-2.0 value, **`8484 B` / `c7396247b0c2`**, that accepts stock payloads, `{}`-variant
+appendices, and appendix-free payloads alike — because none of those differ in anything that binds.
+Two recorded "anomalies" of this base dissolve into it.
+
+## T275 — The academic-integrity threat is now courseware-specific automation, not generic chatbot use 🔴 new at p732
+
+Institutional AI policy — and most vendor integrity tooling — is written against a model of the
+student pasting an essay prompt into a general chatbot. The supply side has moved past that.
+
+[`googlyblox/auto-mcgraw`](https://github.com/googlyblox/auto-mcgraw) (`89★`, MIT, pushed
+`2026-09-30`) is a maintained, permissively licensed tool that **automates McGraw Hill Smartbook
+homework** with LLM integration. It does not target "assessment" in the abstract; it targets a
+**named commercial courseware platform** that thousands of institutions license by name.
+
+This is a different problem from the one policy addresses:
+
+- **Detection is irrelevant.** The work is submitted through the platform's own flow, as the
+  student, on time. There is no text whose provenance a classifier could judge.
+- **It scales per-platform, not per-student.** One tool, written once, serves everyone enrolled in
+  any course using that courseware.
+- **Permissive licensing makes removal meaningless.** `MIT` means every fork is lawful and the
+  artefact cannot be withdrawn.
+
+🔵 **Engagement consequence, and it is a commercial opening rather than only a risk.** When this
+studio is asked to advise on assessment design, the honest answer is that **completion-based and
+auto-graded coursework in a major platform is no longer evidence of learning**, and the client
+should be told so in those words. What survives is assessment of *state and process* rather than of
+submitted answers — exactly the shape of `p731`'s `dsoxlab` (grade the container),
+`viktoruj/cks` (grade the cluster), `sebastianhaba/book-to-course-skill` (exercises checked by
+**unit tests**), and `ArnaudGuiovanna/tutor-mcp` (mastery against a **frozen rubric**, with probes
+*refused* below threshold). `P174` and `P175` are written to that constraint. The base holds the
+components; the client's current assessment estate is the thing that has stopped working.
+
+## T276 — The AI-in-education market's 2026 base is agreed; the disagreement is entirely in the growth rate, and one published figure fails its own arithmetic 🟢 new at p732
+
+This base has carried the market question as "roughly `$10B`, high-30s-to-low-40s CAGR, and no
+agreement beyond that". `p732` tightened it by **checking each vendor's figures against each
+other** — which costs nothing and is possible even where primary sources are unreachable
+(`725-F`, re-confirmed this pass at `6 / 6` hosts).
+
+| Source | 2026 base | Endpoint | Claimed CAGR | Implied by its own endpoints | Consistent? |
+|---|---|---|---|--:|---|
+| Research and Markets | `$10.6B` | `$42.48B` (2030) | 41.5% | 41.5% | ✅ |
+| Precedence Research | `$9.58B` | `$136.79B` (2035) | 34.52% | 34.4% | ✅ |
+| Grand View Research | `$11.4B` | `$57.2B` (2033) | 25.9% | 25.9% | ✅ |
+| The Business Research Co (higher-ed only) | `$4.09B` | `$13.46B` (2030) | 34.7% | 34.7% | ✅ |
+| **Coherent Market Insights** | `$11.40B` | `$57.25B` (2033) | **16.8%** | **25.9%** | 🔴 **No** |
+
+**Two readings, both useful:**
+
+1. 🟢 **The base year is not in dispute.** Four independent houses put 2026 between **`$9.58B` and
+   `$11.4B`** — a `±9%` spread around `~$10.5B`. This base can now quote a 2026 figure with a
+   stated range instead of hedging.
+2. 🔴 **One widely cited CAGR is arithmetically impossible.** Coherent Market Insights publishes
+   `16.8%` from `$11.40B` (2026) to `$57.25B` (2033); `16.8%` compounded over seven years gives
+   **`$33.8B`**, not `$57.25B`, while its own endpoints imply `25.9%`. The figure set is internally
+   contradictory, so **at least one of its three published numbers is wrong** and none of them
+   should be cited.
+
+🔵 **Consequence: the honest CAGR range narrows from `16.8%–45%` to `~26%–45%`** once the
+self-inconsistent entry is dropped, and the remaining spread is explained by scope (whether
+embedded AI features and corporate training are counted) rather than by disagreement about
+trajectory. 🟢 **And the transferable method is the point:** vendor market figures can be
+**falsified without access to the vendor**, by compounding their own base against their own
+endpoint. `1 of 5` failed here. Run this check before quoting any market number in a deck —
+it is three lines of arithmetic and it caught a number this base might otherwise have carried.
+
 ## 🆕 T265–T271 — added at `p731` (2026-11-10)
 
 > 🔧 **`p731` instrument note on this registry itself.** `p671` recorded that `T31`, `T32`, `T39`

@@ -21,6 +21,223 @@ prior engagement may cite.)
 
 ---
 
+## P172 — The MIT licence gate, repaired: drop the holder line by shape, not the word `copyright` by substring (tooling, not a client pattern; one hour, then a standing gate) 🟢 new at p732
+
+**Supersedes the line rule of `P164`/`P168` for MIT payloads.** Those rules are executable and
+their constant is stable, but the constant is computed over a text **with MIT's only condition and
+part of its disclaimer deleted**, because they drop every line containing the substring
+`copyright` — which in a stock MIT payload is three lines, two of them substantive (`T272`).
+
+### The procedure
+
+Fetch the payload to a **file** (never through `$(curl …)` — `T143`). Then:
+
+1. Drop blank lines.
+2. Drop a title line matching `^(the\s+)?mit\s+license.*$`.
+3. **Drop a line only if it matches the holder *shape*:**
+   `^copyright\s*(\(c\)|\(C\)|©)?\s*((19|20)\d{2}(\s*[-–,]\s*(19|20)\d{2})?)\s+(.+?)\s*$`
+   Keep every other line, including the two that contain the word `copyright`.
+4. Join with single spaces, collapse whitespace, measure UTF-8 length and `sha256₁₂`.
+5. **Assert separately** that the captured holder text carries no added restriction
+   (`noncommercial`, `academic use only`, `research use only`, `all rights reserved`,
+   `not for redistribution`). This step is what step 3 costs you — see the limit below.
+
+### The constant
+
+**`1020 B` / `fe2a9817987f`** — measured identical across **`18 / 18`** MIT payloads read at
+`p732`, holder lines `24`–`53 B`, one containing CJK.
+
+### The limit, stated because it cannot be removed
+
+Holder-invariance and holder-line-tamper-detection **cannot both come from one hash**: step 3
+discards the line, so a restriction appended to it (`… Jason Tangen. NONCOMMERCIAL USE ONLY.`) is
+invisible to the hash. That is why step 5 exists and is not optional. With it, `7 / 7` of `p732`'s
+controls behave as specified; without it, one passes that should not.
+
+### Runnable
+
+```python
+#!/usr/bin/env python3
+"""MIT licence gate (p732). Channel H + holder-line shape assertion."""
+import sys, re, hashlib
+H_LEN, H_SHA = 1020, "fe2a9817987f"
+HOLDER = re.compile(r'^copyright\s*(\(c\)|\(C\)|©)?\s*((?:19|20)\d{2}(?:\s*[-–,]\s*(?:19|20)\d{2})?)\s+(.+?)\s*$', re.I)
+BANNED = re.compile(r'non[-\s]?commercial|no\s+commercial|academic\s+use\s+only|'
+                    r'research\s+use\s+only|all\s+rights\s+reserved|not\s+for\s+redistribution', re.I)
+
+def gate(path):
+    t = open(path, 'rb').read().decode('utf-8', 'replace')
+    body, holders, problems = [], [], []
+    for ln in t.splitlines():
+        s = ln.strip()
+        if not s:                                            continue
+        if re.match(r'^(the\s+)?mit\s+license.*$', s, re.I): continue
+        m = HOLDER.match(s)
+        if m:
+            holders.append(s)
+            if BANNED.search(m.group(3)):
+                problems.append(f"holder line carries an extra restriction: {m.group(3)!r}")
+            continue
+        body.append(s)
+    e = re.sub(r'\s+', ' ', ' '.join(body)).strip().encode('utf-8')
+    n, sha = len(e), hashlib.sha256(e).hexdigest()[:12]
+    if (n, sha) != (H_LEN, H_SHA):
+        problems.append(f"terms differ from stock MIT: {n}B/{sha} != {H_LEN}B/{H_SHA}")
+    if not holders:
+        problems.append("no holder-attribution line found")
+    return problems, n, sha
+
+for p in sys.argv[1:]:
+    probs, n, sha = gate(p)
+    print(f"{'PASS' if not probs else 'FLAG'}  {p.split('/')[-1]:<42} {n}B/{sha}")
+    for x in probs: print(f"      ↳ {x}")
+```
+
+### Controls to re-run before trusting it
+
+Build them from a stock payload with `sed`; all four must behave as shown (`T272`):
+negate the attribution clause (`shall be included` → `need NOT be included`) → **FLAG**;
+invert the disclaimer (`BE LIABLE FOR ANY CLAIM` → `ARE FULLY LIABLE FOR EVERY CLAIM`) → **FLAG**;
+append `NONCOMMERCIAL USE ONLY.` to the holder line → **FLAG** (via step 5);
+change only the holder name → **PASS**.
+
+---
+
+## P173 — The Apache-2.0 gate, repaired: canonicalise the terms, truncate at `APPENDIX:` (tooling; twenty minutes, then a standing gate) 🟢 new at p732
+
+**Replaces whole-file canonicalisation of Apache-2.0 payloads, and retires two recorded
+"anomalies" of this base.** The APPENDIX is headed *"How to apply the Apache License to your
+work"* and is boilerplate instructions, not terms. Hashing it caused a **false refusal** of a stock
+grant and a **length collision** in the same pass (`T274`).
+
+### The procedure
+
+1. Fetch the payload to a file.
+2. **Truncate at the first line matching `^\s*APPENDIX:`.**
+3. Drop blank lines; drop lines containing `copyright` (in the Apache body these are definitional
+   prose, not terms — unlike MIT, where dropping them is the defect `P172` fixes);
+   join with single spaces; collapse whitespace.
+4. Measure UTF-8 length and `sha256₁₂`.
+
+### The constant
+
+**`8484 B` / `c7396247b0c2`.**
+
+```python
+import re, hashlib
+def apache_terms(path):
+    t = open(path, 'rb').read().decode('utf-8', 'replace')
+    m = re.search(r'^\s*APPENDIX:', t, re.M)
+    if m: t = t[:m.start()]
+    body = [ln.strip() for ln in t.splitlines() if ln.strip() and 'copyright' not in ln.lower()]
+    e = re.sub(r'\s+', ' ', ' '.join(body)).strip().encode('utf-8')
+    return len(e), hashlib.sha256(e).hexdigest()[:12]      # -> (8484, 'c7396247b0c2')
+```
+
+### Why it is worth the twenty minutes
+
+Measured at `p732` across four payloads, **all four return `8484 B` / `c7396247b0c2`**: two
+stock-appendix repos (`eudoxia0/hashcards`, `viktoruj/cks`), the `{}`-variant appendix that the
+whole-file hash refused (`evalle/dca`), and `uw-it-aca/myuw`, which `p731` filed as an anomaly
+*"Apache-2.0 without the APPENDIX"* and gave a named exception. 🟢 **One constant now accepts all
+four**, and `p731`'s exception list is unnecessary — it had computed `8,484 B` correctly and read it
+as a deficit rather than as the canonical form.
+
+---
+
+## P174 — Assessment that survives courseware automation: grade state and process, never the submitted answer (client pattern; 6–8 weeks) 🟢 new at p732
+
+**The constraint this pattern exists for.** `T275`: permissively licensed tools now automate
+homework **in named commercial courseware**, submitted through the platform's own flow as the
+student. Detection is not merely unreliable here, it is inapplicable — there is no text whose
+provenance a classifier could judge. Any engagement that proposes "AI-assisted integrity
+monitoring" over this is selling the client something that does not address their problem.
+
+**What to propose instead.** Assess artefacts whose correctness a machine can check and whose
+production leaves a trace.
+
+### Components (every one verified at `p732` or `p731`, every one permissive)
+
+| Role | Component | Licence | What it contributes |
+|---|---|---|---|
+| Mastery state + routing | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | BKT + FSRS + skill graph behind **MCP tools**; routes on a mastery threshold and **refuses** probes below it; records against a **frozen rubric** |
+| Code exercises | [`sebastianhaba/book-to-course-skill`](https://github.com/sebastianhaba/book-to-course-skill) | MIT | Exercises **checked by unit tests** — fluent prose cannot satisfy them |
+| Infrastructure skills | [`viktoruj/cks`](https://github.com/viktoruj/cks) | Apache-2.0 | Grades **cluster state** against CKA/CKS/CKAD objectives |
+| Environment skills | `stephrobert/dsoxlab` (filed `p731`) | Apache-2.0 | Declarative lab → real machine + **pass/fail oracle on container state** |
+| Retention over time | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | Apache-2.0 | Plain-text corpus under version control; retention is **re-measured later**, so one-off automation does not produce it |
+| Delivery into the LMS | [`jtangen/classbuild`](https://github.com/jtangen/classbuild) | MIT | Emits **SCORM 2004**, so this lands in the Blackboard/Moodle tenant the client already runs |
+
+### Wiring
+
+1. **Model the subject once.** `tutor-mcp` builds and versions the skill graph; the rubric is frozen
+   and stored before any learner sees it. This is the audit record.
+2. **Attach a machine-checkable artefact to every leaf concept** — a unit-tested exercise
+   (`book-to-course-skill`), a cluster or container state assertion (`cks`, `dsoxlab`), or a
+   constructed-response probe graded against the frozen rubric by code.
+3. **Route on mastery, and let it refuse.** Keep `tutor-mcp`'s threshold behaviour: below
+   threshold the transfer probe does not run. A learner who automated step 2 never accumulates the
+   state that unlocks step 3, which is what makes the design hold rather than the detection.
+4. **Re-measure weeks later.** Schedule the same concepts through `hashcards`. Automation produces
+   a submission; it does not produce retention, and the gap is the signal.
+5. **Ship it into the existing LMS** as a SCORM 2004 package from `classbuild` — not a new portal.
+
+### Licence obligation
+
+MIT and Apache-2.0 throughout: attribution and `NOTICE` retention, no copyleft, no network clause.
+**Safe to embed in a client's proprietary platform.** ⚠️ If `openedx` or `moodle` is the delivery
+tenant, the SCORM package is *content* and does not inherit AGPL/GPL — do not let the platform's
+licence be attributed to this pipeline.
+
+### The constraint that decides whether it fits
+
+This pattern needs a client willing to **change what counts as credit**. If the contract fixes
+completion-based grading in a licensed courseware platform, steps 3–4 cannot bite and the honest
+recommendation is to say so (`T275`) rather than to deliver monitoring theatre.
+
+---
+
+## P175 — Retention programmes against the client's existing document estate (client pattern; 3–4 weeks) 🟢 new at p732
+
+**The constraint.** The standard retention proposal assumes a platform the client adopts and
+populates. The content migration is the cost and the behaviour change is the risk, and that is
+where these programmes die. `T273` records five permissive precedents for the opposite shape:
+**the scheduler goes to the material, and the material never moves.**
+
+### Pick the host by where the client's material already lives
+
+| If the estate is… | Use | Licence | Note |
+|---|---|---|---|
+| Markdown notes / Obsidian vaults | [`ctrlaltwill/learnkit`](https://github.com/ctrlaltwill/learnkit) | MIT | FSRS, cloze, **image occlusion**, TTS, retention analytics. Two independent Obsidian FSRS plugins now exist (`true-recall`, `p731`) — pick on card types and analytics, not on availability |
+| Git repositories / plain text | [`eudoxia0/hashcards`](https://github.com/eudoxia0/hashcards) | Apache-2.0 | Cards are files; reviews diff like code and survive the engagement |
+| Mobile-only or low-bandwidth cohorts | [`kubk/memo-card`](https://github.com/kubk/memo-card) | MIT | **Telegram mini-app**, ~1k MAU. The only component in this base reaching learners without a browser or an LMS |
+| Developers inside a coding agent | [`chrichuang218/ai-learning-coach`](https://github.com/chrichuang218/ai-learning-coach) | MIT | Installs as a Claude/Codex plugin; drives predict → observe → record-help-needed against the client's **own** repository |
+| Procedural / motor skills | [`s-sigdel/vimhjkl`](https://github.com/s-sigdel/vimhjkl) | MIT | Schedules a *skill*, not a fact — the vocational case where quizzes measure nothing |
+| Material in the wrong language | [`oomol-lab/epub-translator`](https://github.com/oomol-lab/epub-translator) | MIT | EPUB → **side-by-side bilingual**; on PyPI, so it is a pipeline step. The EMEA-multilingual and LATAM Spanish/Portuguese pre-step |
+
+### Wiring
+
+1. **Inventory, do not migrate.** Point the scheduler at the existing estate. If the only blocker
+   is language, insert `epub-translator` as a batch step and keep the source of truth upstream.
+2. **Generate cards from the client's own documents**, and keep them **next to** the source so the
+   card dies when the document dies. This is the maintenance property that platform-first
+   programmes lack.
+3. **Schedule with FSRS**, not with fixed intervals.
+4. **Pick the delivery channel from the cohort, not from the client's IT preference** — Obsidian
+   for knowledge workers, Telegram for field and mobile-only staff, the coding agent for engineers.
+5. **Report retention, not completion** — `learnkit`'s heatmaps and retention trends, which is the
+   number that distinguishes this from a course nobody remembers.
+
+### Licence obligation
+
+MIT and Apache-2.0 throughout: attribution only, no copyleft, no network clause. The client's
+documents remain the client's.
+
+### The constraint that decides whether it fits
+
+The estate must be **machine-readable and reachable** (Markdown, git, EPUB, documents a pipeline can
+open). A client whose knowledge lives in a proprietary SaaS wiki with no export is outside this
+pattern, and the first engagement is the export, not the retention programme.
+
 ## P168 — The licence gate, repaired: two normalisations, agreement as the pass, disagreement as a read (tooling, not a client pattern; half a day, then a standing gate) 🟢 new at p731
 
 **Amends `P164`, which is executable but single-channel.** `P164`'s procedure is correct and its
