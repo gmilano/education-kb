@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p745) — 🟢 **THE ASSESSMENT TIER'S LICENCE GRADIENT RUNS THE *OPPOSITE* WAY TO THE SCHOLARLY TIER'S: THE STANDARDS BODY IS PERMISSIVE AND EVERY DEPLOYABLE PLATFORM IS COPYLEFT. 🔴 A `149★` PLATFORM PUBLISHES ITS ONLY GRANT AT `Resources/LICENCE` AND THE TWO FILES IN IT NAMED `LICENSE` BELONG TO SOMEBODY ELSE. 🔴 THREE `AGPL-3.0` PAYLOADS AT *EXACTLY* `34,523 B`, TWO BYTE-IDENTICAL AND ONE NOT.**
+
+**`8` foundations rows (new section) · `5` platform rows (new section) · `42` payloads byte-read, `42 / 42` classified · `2` index corrections · `4` enumerated absences · `47%` novel / `~8%` yield (`T379`).**
+
+### The tier, with its denominators — every total read this pass from `gh api -X GET search/repositories`
+
+| Leg | Total | Verdict |
+|---|---|---|
+| `topic:exam` | `1,768` | 🔴 **Colonised** — IT-certification study notes (CKA, OSCP, CISSP, AZ-900). Price at zero |
+| `topic:plagiarism-detection` | `398` | ⚠️ Mostly coursework-grade TF-IDF demos; `3` usable |
+| `topic:grading` | `287` | 🔴 **Colonised** — *colour* grading. DaVinci DCTLs, Nuke tools, ACES |
+| `topic:rubric` | `201` | 🔴 **Colonised** — LLM-evaluation rubrics, not education rubrics |
+| `org:oat-sa` | `201` | 🟢 TAO's full estate — GPL-2.0 in `18 / 20`; **already held** (`T387`) |
+| `topic:proctoring` | `160` | 🟢 On topic; thin above `20★` |
+| `topic:academic-integrity` | `131` | 🟢 On topic; produced `2` agent rows |
+| `topic:autograding` | `96` | ⚠️ `0` novel on-topic rows |
+| `org:1EdTech` | `46` | 🟢 The standards body — Apache-2.0/MIT; **already held** |
+| `org:uniwise` | `28` | 🟢 WISEflow's vendor estate — produced the Moodle-gravity row |
+| `topic:e-assessment` | **`22`** | 🟢 **The best leg of the pass** — tiny and `100%` on topic; `5` of `8` foundation rows |
+| `org:learnosity` | `18` | 🟢 Apache-2.0 SDKs in `7` languages |
+| `org:SafeExamBrowser` | `14` | 🟢 MPL-2.0 estate, ETH Zürich |
+| `topic:invigilation` | **`3`** | 🟢 On topic, exhausted in one read |
+| `org:ans-delft`, `org:openassessments` | **`422`** | 🔴 Do not exist (HTTP 422). `ACTION p744-A` named both |
+
+🔵 **`T380`: in a colonised register the *small* topic is the trustworthy one.** A word too
+specialised to be annexed is also too specialised to be noise. Run `topic:e-assessment` (`22`,
+all usable) before `topic:exam` (`1,768`, none usable).
+
+### The licence gradient (`T381`) — inverted against `p743`'s scholarly tier
+
+| Layer | Posture | Evidence |
+|---|---|---|
+| **Specification** (`1EdTech` — owns QTI, LTI, OneRoster, Open Badges, CASE) | 🟢 **permissive** | Apache-2.0 ×5, MIT (`cert-schema`, `1,096 B`, `06d87bf42a0a`) |
+| **Vendor SDK** (`Learnosity`, commercial) | 🟢 **permissive** | Apache-2.0 in `7` languages |
+| **Deployable platform** (TAO; Safe Exam Browser) | 🔴 **copyleft** | GPL-2.0 `18 / 20`; MPL-2.0 estate-wide |
+| **LMS plugin** (anyone) | 🔴 **copyleft by force** | `UNIwise/moodle-plagiarism_uniwise` GPL-3.0 — *same company*, Apache-2.0 elsewhere |
+
+**Rule: build on the spec, integrate with the platform** (`P229`). The integration point sets the
+licence, not the vendor's preference.
+
+### 🔴 The sizing question is closed (`T383`)
+
+| Repo | Path | Bytes | sha256₁₂ |
+|---|---|---|---|
+| `tesla-ce/core` | `LICENSE` | `34,523` | `8486a10c4393` |
+| `aalramadan/PeerCheck` | `external/mubanal/LICENSE` | `34,523` | `8486a10c4393` |
+| `i4s-htwk/PySeA-public` | `LICENSE.txt` | `34,523` | 🔴 **`0d96a4ff68ad`** |
+
+Plus a **fourth** AGPL-3.0 length (`32,386 B`), a **third** GPL-3.0 length (`35,147 B`), and
+Apache-2.0 at `9,235 B` against a held set already spanning `682`–`11,565 B`. 🟢 The digest worked
+in the other direction too: `Learnosity`'s Apache-2.0 payload is byte-identical to its own vendored
+copy inside `learnosity-demos` (`4e3d4f2274df`), confirmed across two repositories in one pass.
+
+### 🔴 `4` enumerated grant absences, with tree denominators
+
+[`m8rex/rumbas`](https://github.com/m8rex/rumbas) (**`582`** entries — a real Numbas-adjacent
+assessment builder at `4★` with no licence anywhere in it),
+[`christianp/marking-algorithms`](https://github.com/christianp/marking-algorithms) (**`21`**),
+[`Felix-au/PrashnaSetu-Public`](https://github.com/Felix-au/PrashnaSetu-Public) (**`2`**),
+[`privateai0/proctoring-compatibility-2026`](https://github.com/privateai0/proctoring-compatibility-2026)
+(**`1`** — unusable as content, but its `2026` LockDown/Proctorio/ProctorU/Honorlock matrix is used
+as a competitor map in `intel/market.md`).
 
 ## 🆕 2026-11-10 (p744) — 🟢 **`29` PUBLISHER CHANNELS AND `2,316` REPOSITORIES OF THE LIBRARY-SERVICES AND OPEN-SCHOLARSHIP ESTATE WERE PROBED, `28` OF THEM NEVER ADDRESSED BEFORE: `219 / 229` CANDIDATE ADDRESSES NOVEL. 🟢 ONE PERMISSIVE ESTATE OF `456` REPOSITORIES (FOLIO, APACHE-2.0) IS THE LARGEST THIS BASE HAS FOUND IN EDUCATION. 🔴 THREE `NOASSERTION` PLATFORMS ARE PERMISSIVE AND THE INDEX CANNOT SAY SO, AND A FOURTH IS `AGPL-3.0-or-later`.**
 

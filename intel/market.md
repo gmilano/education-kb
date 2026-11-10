@@ -167,6 +167,41 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 `p745` (2026-11-10) — the assessment register: one supply row, a state-law surface that is now about *grading decisions*, and the first NA institution to ban AI in exams outright
+
+🟢 **Supply (`1` row, byte-read).** [`aalramadan/PeerCheck`](https://github.com/aalramadan/PeerCheck)
+(`2★`, Kent State University — placed on `aalramad@kent.edu` in the commit record). 🔴 Indexed
+`GPL-3.0`; it ships **`18` grants**, two of them **AGPL-3.0**, under `external/` (`T385`). Local,
+offline integrity checks on submissions and peer reviews.
+
+🔵 **Why the NA policy surface matters more than the NA supply this pass.** The `134` bills across
+`31` states that `p744` recorded are mostly *guidance and literacy*. The assessment register is
+where they turn into **binding constraints on a decision**: human oversight of high-stakes
+outcomes, parental opt-out, and student-data privacy (California **AB 1159**, Idaho **SB 1227**).
+An automated marking system is a high-stakes decision engine by construction, so it is the product
+category most exposed to the enforceable half of US state law.
+
+- **Ohio** is the first state to require **every** K-12 district to adopt a formal AI use policy
+  (deadline **`1 July 2026`**) — a dated, countable procurement trigger across one state's districts.
+- **SUNY** set a systemwide AI policy across all **`64`** campuses — the largest single
+  consolidated buyer in NA higher education for this category.
+- 🔴 **Berkeley Law banned AI for exams and credited coursework outright.** Filed because it is the
+  clearest statement of the commercial risk in this tier: **the deterministic, no-model path of
+  `P226` is sellable into an institution that has banned the model path**, and the LLM-first
+  product is not sellable there at all.
+- **Federal:** the Department of Education's AI grant-priority rule was finalised **`13 Apr 2026`**;
+  the K-12 AI Literacy and Readiness Act of 2026 advanced in committee; and a White House national
+  framework proposes **preempting state AI law** — ⚠️ recorded as a live uncertainty, since
+  preemption would invalidate the state-by-state procurement map above.
+- 🔴 **Competitor set, named:** LockDown Browser, Proctorio, ProctorU and Honorlock — the four
+  incumbents a Globant proposal is measured against, per the `2026` compatibility matrix at
+  [`privateai0/proctoring-compatibility-2026`](https://github.com/privateai0/proctoring-compatibility-2026)
+  (⚠️ **no grant across its `1`-entry tree** — read, do not reuse).
+
+⚠️ **Declared gap:** no NA-specific *assessment* adoption percentage was returned by any leg. The
+figures available (`88%` of students, `77%` of faculty, Digital Education Council across `35`
+countries) are global and cannot be split by region or by use case.
+
 #### 🆕 `p744` (2026-11-10) — the supply gap closes a second time, the statute list grows a federal arm, and the adoption numbers disagree with each other
 
 🟢 **Supply.** `p743` filed `8` NA rows from the research-data tier; `p744` files **`9` more** from
@@ -830,6 +865,51 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p745` (2026-11-10) — the assessment register is the one Annex III names, the clock is dated, and this is where the supply actually is
+
+🟢 **Supply (`7` of this pass's `13` software rows are EMEA, every grant byte-read, every placement
+from the repository's own record rather than inferred).**
+[`SafeExamBrowser/seb-mac`](https://github.com/SafeExamBrowser/seb-mac) (`149★`, **MPL-2.0**
+corrected from an index that says `NOASSERTION`),
+[`seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) (`368★`, MPL-2.0)
+and [`seb-screen-proctoring-server`](https://github.com/SafeExamBrowser/seb-screen-proctoring-server)
+(`7★`, MPL-2.0) — all **ETH Zürich, Switzerland**, from the source headers;
+[`tesla-ce/core`](https://github.com/tesla-ce/core) (AGPL-3.0 — **UOC, Spain**, Horizon 2020);
+[`oat-sa/lib-lti1p3-proctoring`](https://github.com/oat-sa/lib-lti1p3-proctoring) (GPL-2.0 — OAT,
+**Luxembourg**, from `taotesting.com` in the commit record);
+[`sellquiz/sellquiz`](https://github.com/sellquiz/sellquiz) (GPL-3.0 — **TH Köln, Germany**);
+[`i4s-htwk/PySeA-public`](https://github.com/i4s-htwk/PySeA-public) (AGPL-3.0 — **HTWK Leipzig,
+Germany**); [`UNIwise/moodle-plagiarism_uniwise`](https://github.com/UNIwise/moodle-plagiarism_uniwise)
+(GPL-3.0 — UNIwise, **Denmark**).
+
+🔵 **The structural read: Europe builds the assessment-integrity estate and America sells it.** The
+four incumbent proctoring vendors are US companies; **every open component in this tier is
+European and institutional** (two federal-institute-of-technology estates, one Horizon 2020
+project, two Fachhochschulen, one Luxembourg vendor, one Danish vendor). That is a sovereignty
+argument a European client will already have been given by its own procurement office, and `P227`
+is the build that answers it.
+
+**The clock, dated, because this is the tier where the dates bite:**
+
+- 🔴 **Exam proctoring is the AI Act Service Desk's *worked* Annex III example.** A vendor that
+  classifies itself by technique ("this is just face detection") mis-classifies itself. Annex III
+  also lists admissions, learning-outcome evaluation and placement — i.e. **marking**.
+- **High-risk obligations deferred to `2 Dec 2027`** by the Digital Omnibus on AI, published in the
+  Official Journal **`24 July 2026`** as **Regulation (EU) 2026/1744** — `~16` extra months.
+- 🔴 **Article 50 transparency was *not* deferred and is live from `2 Aug 2026`.** A candidate
+  interacting with an AI marker or proctor must be told. That duty applies **today**, to systems
+  already in production.
+- **Emotion recognition in schools is prohibited outright** (from Feb 2025) — this kills a feature
+  several commercial proctoring products still ship.
+- 🟢 **The AI-literacy duty requires no specific level** (2026 amendments), converting an unbounded
+  obligation into a **documented measure**: training, register, stated method. Sellable as a
+  deliverable.
+- Commission education guidelines issued **May 2026**; non-EU vendors are in scope whenever their
+  systems reach EU learners.
+
+⚠️ **Declared gap, 5th consecutive pass:** no EMEA-specific adoption **percentage**. The nearest
+figure remains a governance measure for a Europe-and-North-America aggregate that cannot be split.
 
 #### 🆕 `p744` (2026-11-10) — a fourth independent confirmation of the Omnibus dates, one amendment that changes the *deliverable*, and a fourth consecutive adoption nil
 
@@ -1666,6 +1746,39 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p745` (2026-11-10) — 🟢 the APAC regulation nil breaks: Vietnam names automated assessment as high-risk, and it is the first APAC instrument this base holds that is *about this tier*
+
+🟢 **`Decision No. 33/2026/QD-TTg`, issued `2 July 2026`, classifies education — naming
+automated assessment systems explicitly — among Vietnam's high-risk sectors.** This is the first
+*named, dated, assessment-specific* APAC instrument on this base, and it matters out of proportion
+to Vietnam's market size for one reason: **it is Annex III's structure appearing outside Europe.**
+A studio that builds `P226`/`P227` to the EU shape has built to Vietnam's shape too, and the
+reusability of a compliance architecture across jurisdictions is the thing that makes it worth
+building once rather than per-engagement.
+
+**The rest of the regional surface, which is general-purpose rather than education-specific:**
+
+- 🔴 **China — the only binding regime of the three majors.** Layered rules over algorithms, deep
+  synthesis and generative AI; public-facing services need **security assessment and algorithm
+  filing before launch**; mandatory AI content labelling since **`1 Sep 2025`**. For this tier the
+  labelling rule is the operative one: a generated exam item or an AI-written feedback comment is
+  labelled content.
+- **Japan — the AI Promotion Act is a fundamental law with no penalties**, relying on cooperation
+  and existing law. ⚠️ Note the contrast with `p744`'s MEXT guidance finding, which constrains
+  *student records in model context* — in Japan the binding constraint is data practice, not AI law.
+- **India — no standalone AI law**; stated priority is innovation over regulation. ⚠️ Sources
+  conflict on whether India mandates AI content labelling or merely urges notices; **published as
+  a conflict, not averaged.**
+- **Adoption ordering (general AI, not education):** Singapore leads, then Australia, Korea,
+  Taiwan. ⚠️ Two sources disagree on China's position — one places it behind Japan/India, another
+  ranks it 12th globally and *ahead* of Australia, Korea, Japan and India. **Unresolved; both recorded.**
+
+🔴 **Declared gap — APAC repository supply, `5`th consecutive nil.** Two candidates looked
+APAC-rooted and **neither survived `T378`'s test**: `Felix-au/PrashnaSetu-Public` (`5★`, a
+Sanskrit-derived name, Indian academic framing) publishes **no grant across a `2`-entry tree**, and
+`N0v0cain3/Kuizu` (`22★`, MIT) places on a **personal name only**. Both published **unplaced**.
+🔴 **Declared gap — APAC adoption percentages for education: `5`th consecutive nil.**
+
 #### 🆕 `p744` (2026-11-10) — the first *named APAC evaluation* this base holds, two more instruments, and the region's first platform of scale on the supply side
 
 🟢 **The supply nil is closed, and not by an agent.** APAC supply has been a declared nil for three
@@ -2442,6 +2555,41 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p745` (2026-11-10) — one new education instrument at state level, a Brazilian status this base will not average, and an honest double nil on this tier
+
+🟢 **The one new education-specific instrument.** The **Estado de México** approved a reform to
+**Article 61 of its Ley de Educación** in **April 2026**, mandating promotion of responsible,
+graduated AI use in upper-secondary and higher education. 🔵 Filed because of its *level*: LATAM's
+education AI rules are arriving **sub-nationally**, from state legislatures, while the national
+frameworks stall. A studio tracking only federal law will see an empty map and miss the actual
+procurement triggers.
+
+🔴 **Brazil — `PL 2338/2023` status is published as a conflict, not resolved.** Three sources,
+three incompatible accounts: (a) approved by the **Senate in December 2024**, awaiting the Câmara
+dos Deputados; (b) **approved in 2025** and in implementation through 2026; (c) detailed
+regulation expected **Q4 2026**. ⚠️ **These cannot all be true and this base does not pick one.**
+Before any Brazilian engagement quotes a compliance date, check the Senado/Câmara record directly.
+
+**Regional context:**
+
+- **Mexico has no general AI law** as of July 2026; the proposed **"Ley Nahui"** is still in
+  process. An academic review states plainly that Mexico has **no national law, regulation or
+  binding guidance** for AI in higher education.
+- **Latin America has no unified regulatory framework** for AI in higher education — which is both
+  the risk and the opening: there is no regional standard to comply with, and therefore no regional
+  standard to differentiate against either.
+- **Adoption:** AI use exceeds **`70%`** of digital users in the largest LATAM markets, with Brazil
+  and Mexico reported up to **`76%`**. ⚠️ General-population digital-user figures, **not education
+  and not assessment** — recorded with that limit attached.
+- 🔴 **The `p744` order-of-magnitude conflict stands unresolved.** A vendor figure putting Brazil at
+  `$61.1M` and Mexico at `$59.2M` (*"over `57%`"* of the region, implying `~$210M`) remains
+  irreconcilable with the `$1.5B → $4.2B` series this base also carries. **Same region, same year,
+  a factor of `~20`.** Still published as a conflict.
+
+🔴 **Declared gap — no LATAM assessment or exam regulation returned by any leg**, in either Spanish
+or Portuguese framing. 🔴 **Declared gap — no LATAM repository row in this tier** (`0` of `215`
+candidate addresses placed LATAM).
 
 #### 🆕 `p744` (2026-11-10) — a funded, dated, multi-country programme to name in a proposal; four current players; and a market figure that contradicts this base by an order of magnitude
 
@@ -3264,6 +3412,44 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p745` (2026-11-10) — the assessment tier sized for the first time, and the ratio is the usable number
+
+🟢 **First proctoring/e-assessment sizing this base holds.** Six independent `2026` bases:
+
+| Series | 2026 base | Forecast | CAGR |
+|---|---|---|---|
+| Online exam proctoring (The Business Research Company) | **`$1.56B`** | `$3.09B` by 2030 | `18.7%` |
+| Online exam proctoring (MarketReportsWorld) | **`$0.835B`** | `$3.58B` by 2035 | `17.4%` |
+| Online exam proctoring (Business Research Insights) | **`$1.07B`** | `$8.09B` by 2035 | 🔴 `25.27%` — outlier |
+| Online proctoring **software** (360iResearch) | **`$1.49B`** | `$2.68B` by 2032 | `10.14%` |
+| Proctoring solutions (Global Growth Insights) | **`$1.18B`** | `$2.97B` by 2035 | `10.8%` |
+| Exam & assessment software (Market Growth Reports) | **`$1.12B`** | `$2.76B` by 2035 | `11.9%` |
+
+🔵 **The usable read is the ratio, as it was at `p744`, and not any single figure.** The `2026`
+bases cluster **`$0.8–1.6B`** — a `1.9×` spread, which is *tight* by this base's standards (the
+broad AI-in-education series spread `4.8×`). Against Grand View's broad `$11.4B`, **assessment and
+proctoring is roughly `7–14%` of AI-in-education**, and against the agentic series (`$2.37B`,
+Mordor) it is **of the same order as the entire agentic segment**.
+
+🔴 **The CAGRs are the honest disagreement.** Five of six fall in **`10–19%`**, and they split
+cleanly by definition: the three *"proctoring software/solutions"* series sit at `10–12%`, the
+three *"exam proctoring"* market series at `17–19%`. The `25.27%` outlier is a single source.
+⚠️ **Which series a proposal cites should be chosen by scope, not by size** — software-only or
+market-wide — and the choice stated.
+
+🔵 **And the number that is not in any of these reports is the one `T386` measured.** Every series
+above prices a market served almost entirely by four US proprietary vendors. The open-source agent
+supply for that same market is **three repositories under `5★`**, with **zero** MCP servers for
+QTI, the interchange format all of it runs on. **A `$0.8–1.6B` market growing at `10–19%`, under a
+dated statutory mandate, with essentially no open composable layer** — that is the clearest
+build-vs-buy opening in this knowledge base, and `P226`–`P230` are the recipes.
+
+🟢 **Globally reusable, region-neutral supply:** the `1EdTech` standards estate is Apache-2.0 and
+MIT throughout (`lti-1-3-php-library`, `basiclti-util-java`, `openbadges-validator-core`,
+`OpenCASE`, `cert-schema` MIT `1,096 B` `06d87bf42a0a`), and Learnosity publishes Apache-2.0 SDKs
+in `7` languages. 🔴 **`T381`: the standards layer is permissive and every deployable platform in
+this tier is copyleft** — so the cross-region build target is the spec library, everywhere. `P229`.
 
 #### 🆕 `p744` (2026-11-10) — three series new to this base, including the first **agentic-specific** education sizing, and the spread on the 2026 base is now `4.8×`
 

@@ -1,0 +1,43 @@
+repo	branch	path	bytes	sha256_12	family_from_title_block	holder	tree_entries
+SafeExamBrowser/seb-mac	main	Pods/JitsiMeetSDK/LICENSE	558	1e4cf25b6507	Apache License	Copyright 2018-prese	2426
+SafeExamBrowser/seb-mac	main	Resources/LICENCE	16726	3f3d9e0024b1	Mozilla Public License	-	2426
+SafeExamBrowser/seb-mac	main	SEB/QRCodeReaderViewController/LICENSE	1089	413fe483076a	MIT License	Copyright (c) 2014-prese	2426
+SafeExamBrowser/seb-screen-proctoring-server	main	LICENSE	16725	1f256ecad192	Mozilla Public License	-	274
+isaacphysics/equality-checker	master	LICENSE.md	11357	b40930bbcf80	Apache License	-	27
+tesla-ce/core	main	LICENSE	34523	8486a10c4393	GNU AFFERO GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	534
+uzh-bf/p8-automated-correction	dev	LICENSE.md	32386	fb9ce8b6dfc4	GNU AFFERO GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	125
+sellquiz/sellquiz	main	LICENSE	35149	3972dc9744f6	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	133
+i4s-htwk/PySeA-public	main	LICENSE.txt	34523	0d96a4ff68ad	GNU AFFERO GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	202
+GowangInc/PacePaper	main	LICENSE	1071	ffe89a3f5288	MIT License	Copyright (c) 2026 	455
+Ezharjan/SteganoPrompt	master	LICENSE	1078	da28e2216c0e	MIT License	Copyright (c) 2026 Aizierjia	14
+szzxli/veripaper	main	LICENSE	1079	b0a8526e921a	MIT License	Copyright (c) 2026 veripaper co	118
+aalramadan/PeerCheck	main	LICENSE	35149	3972dc9744f6	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	669
+aalramadan/PeerCheck	main	NOTICE.md	5932	4d4eb4fa5f65	GNU General Public License	-	669
+aalramadan/PeerCheck	main	external/aclpubcheck/LICENSE	1098	284d44e52dff	MIT License	Copyright (c) 2022 Associatio	669
+aalramadan/PeerCheck	main	external/coconuts/LICENSE	1340	69458833514e	MIT license	-	669
+aalramadan/PeerCheck	main	external/hallucinator/LICENSE	748	588dab60f1ca	GNU Affero General Public License	Copyright (C) 2025 Gia	669
+aalramadan/PeerCheck	main	external/hallucinator/hallucinator-rs/crates/hallucinator-acl/LICENSE-MIT	1067	3a65b949f3e2	MIT License	Copyright (c) 2026 iDRAMA Lab	669
+aalramadan/PeerCheck	main	external/hallucinator/hallucinator-rs/crates/hallucinator-core/LICENSE-MIT	1067	3a65b949f3e2	MIT License	Copyright (c) 2026 iDRAMA Lab	669
+aalramadan/PeerCheck	main	external/hallucinator/hallucinator-rs/crates/hallucinator-dblp/LICENSE-MIT	1067	3a65b949f3e2	MIT License	Copyright (c) 2026 iDRAMA Lab	669
+aalramadan/PeerCheck	main	external/hallucinator/hallucinator-rs/crates/hallucinator-openalex/LICENSE-MIT	1067	3a65b949f3e2	MIT License	Copyright (c) 2026 iDRAMA Lab	669
+aalramadan/PeerCheck	main	external/hotcrp/LICENSE	1540	1ef39980a22f	MIT license	Copyright (c) 2006-2022 Eddie Kohler	669
+aalramadan/PeerCheck	main	external/mubanal/LICENSE	34523	8486a10c4393	GNU AFFERO GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	669
+aalramadan/PeerCheck	main	external/openreview-py/LICENSE	1067	9f5c0544e491	MIT License	Copyright (c) 2022 Ope	669
+aalramadan/PeerCheck	main	external/phantomlint/LICENSE	1535	3e2781603411	BSD 3-Clause	Copyright (c) 2025, Toby Murray, U	669
+aalramadan/PeerCheck	main	external/publicsuffix/LICENSE	16727	66a3107d5ad6	Mozilla Public License	-	669
+aalramadan/PeerCheck	main	external/snowball/LICENSE	1525	d714d7b98b85	UNCLASSIFIED	Copyright (c) 2001, Dr Marti	669
+aalramadan/PeerCheck	main	external/submission-checker/LICENSE	10173	0cec06e0e55f	Apache License	-	669
+aalramadan/PeerCheck	main	external/verapdf/LICENSE	18657	9ba9550ad484	Creative Commons Corporation 	-	669
+aalramadan/PeerCheck	main	tests/fixtures/hidden/crackedpdfs/LICENSE	1116	941c5a7889af	MIT License	Copyright (c) 2026 Pukaphol Thie	669
+oat-sa/lib-lti1p3-proctoring	main	LICENSE	18092	8177f9751321	GNU GENERAL PUBLIC LICENSE	Copyright (C) 1989, 1991 Free Software Fou	46
+Felix-au/PrashnaSetu-Public	main	NO-PAYLOAD	0	-	-	2
+Learnosity/learnosity-sdk-php	master	LICENSE.md	9235	4e3d4f2274df	Apache License	-	67
+Learnosity/learnosity-demos	develop	LICENSE	1077	417dd5a86a31	MIT License	Copyright (c) 2013 Lear	485
+Learnosity/learnosity-demos	develop	vendor/composer/LICENSE	1070	c8cce4b6b972	UNCLASSIFIED	-	485
+Learnosity/learnosity-demos	develop	vendor/learnosity/learnosity-sdk-php/LICENSE.md	9235	4e3d4f2274df	Apache License	-	485
+Learnosity/learnosity-demos	develop	www/static/vendor/ace/ace-builds/LICENSE	1490	850f545c5254	UNCLASSIFIED	Copyright (c) 2010, Ajax.org B.V.	485
+UNIwise/moodle-plagiarism_uniwise	master	COPYING.txt	35147	8ceb4b9ee5ad	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Fou	32
+m8rex/rumbas	main	NO-PAYLOAD	0	-	-	582
+christianp/marking-algorithms	master	NO-PAYLOAD	0	-	-	21
+N0v0cain3/Kuizu	master	LICENSE	1069	8323de618ca4	MIT License	Copyright (c) 2021 Shivam Mehta	63
+privateai0/proctoring-compatibility-2026	main	NO-PAYLOAD	0	-	-	1

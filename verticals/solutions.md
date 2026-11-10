@@ -15,6 +15,57 @@ which is exactly what the AGPL network clause is written about. Read the posture
 before proposing a fork.
 
 
+## 🆕 `p745` — the lockdown-and-proctoring estate a university already runs, and the `149★` platform the search index files as ungranted, `2026-11-10`
+
+> 🟢 **`5` rows, every grant byte-read today, `1` index value corrected from the bytes — and that
+> one correction is the row of the pass.** This is the estate that sits between the LMS and the
+> candidate at the moment an exam is taken: the layer the EU AI Act's Service Desk uses as its
+> *worked* Annex III example, and therefore the layer a studio cannot subcontract to a vendor
+> without taking on the vendor's classification.
+
+### 🔴 `T382` — Safe Exam Browser for macOS and iOS is MPL-2.0, and nothing in the search index can tell you so
+
+[`SafeExamBrowser/seb-mac`](https://github.com/SafeExamBrowser/seb-mac) is **`149★`, `69` forks,
+pushed `2026-11-09`**, and the GitHub index reports its licence as **`NOASSERTION`**. It is
+**MPL-2.0**. The grant is at **`Resources/LICENCE`** — and that single path trips *two* of the
+shared probe's three documented traps simultaneously:
+
+- **Trap #2, the licence lives in a subdirectory.** There is no root payload. A root-only ladder
+  returns nothing and writes the row down as ungranted.
+- **Trap #3, British spelling.** `LICENCE`, not `LICENSE`. `p14` priced the full case-and-spelling
+  ladder at `0` payouts in `98` repositories and `p15` re-bought `LICENCE` alone on one payout in
+  `44`. **This is that one request paying for itself at `149★`.**
+
+🔴 **And the trap inside the trap:** the repository *does* contain two files named exactly
+`LICENSE`, at `Pods/JitsiMeetSDK/LICENSE` (Apache-2.0, `558 B`) and
+`SEB/QRCodeReaderViewController/LICENSE` (MIT, `1,089 B`). **Both are vendored third parties.** A
+probe that searched the tree for `LICENSE` and stopped at the first hit would not have reported
+"ungranted" — it would have reported **Apache-2.0 or MIT for a Mozilla-licensed application**,
+which is a *worse* failure than the index's own abstention, and the one a hand-rolled sweep makes.
+
+🟢 **The three MPL-2.0 payloads in this estate also settle the sizing question for good** (`T383`):
+`seb-win-refactoring` is `16,726 B` / `fab3dd6bdab2`, `seb-mac` is `16,726 B` / `3f3d9e0024b1` —
+**identical byte count, different bytes** — and `seb-screen-proctoring-server` is `16,725 B`.
+Three files, one publisher, one licence, and **size identifies none of them**.
+
+### The rows
+
+| Platform | Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | What it is, and the posture to take |
+|---|---|---|---|---|---|---|
+| **Safe Exam Browser (macOS / iOS)** | [SafeExamBrowser/seb-mac](https://github.com/SafeExamBrowser/seb-mac) | 149 | 69 | 🔴 **MPL-2.0** · `Resources/LICENCE` · `16,726 B` · sha256₁₂ `3f3d9e0024b1` — 🔴 **index says `NOASSERTION`; CORRECTED from the bytes** | **EMEA** (Switzerland — `Copyright (c) 2010-2026 Daniel R. Schneider, ETH Zurich, IT Services` and `Copyright 2010 ETH Zurich LET`, from the source headers) | The Apple-platform half of the most widely deployed open lockdown browser in higher education. 🟢 **MPL-2.0 is the posture that makes this estate usable:** copyleft is **per-file**, so a studio's own modules stay its own and only edits to SEB's files travel back. That is a materially different conversation from TAO's GPL-2.0 or Moodle's GPL-3.0, and it is why `P227` can exist at all |
+| **Safe Exam Browser (Windows)** | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 368 | 228 | 🟢 **MPL-2.0** · `LICENSE.txt` · `16,726 B` · `fab3dd6bdab2` · *index agrees* | **EMEA** (Switzerland — ETH Zürich) | 🟢 **A `P210` backlog promotion, not a discovery.** It has carried `evidence/address-ledger.tsv` and trending-log rows for several passes and **was never promoted to a shelf** — the exact defect `P210` names, found here only because `seb-mac` forced a look at the estate. The highest-starred row in this tier |
+| **SEB Server** | [SafeExamBrowser/seb-server](https://github.com/SafeExamBrowser/seb-server) | 97 | — | 🟢 **MPL-2.0** · *already shelved; re-confirmed this pass, not re-filed* | **EMEA** (Switzerland) | Central configuration and exam administration for SEB clients — the piece that makes the estate an institutional deployment rather than a download |
+| **SEB Screen Proctoring** | [SafeExamBrowser/seb-screen-proctoring-server](https://github.com/SafeExamBrowser/seb-screen-proctoring-server) | 7 | 2 | 🟢 **MPL-2.0** · `LICENSE` · `16,725 B` · `1f256ecad192` · © *2024 ETH Zürich, IT Services* *(holder in the source headers)* · *index agrees* | **EMEA** (Switzerland) | 🔴 **Self-described "proof of concept", pushed `2026-11-10` — today.** Filed because of *what it is*, not what it is ready for: **an open, self-hosted screen-proctoring service**, which is the one component every institution currently rents from a US vendor and the one the Service Desk uses as its Annex III worked example. 🔵 **Watch this repository.** If ETH ships it, the build-vs-buy answer for European proctoring changes, and `P227` is the recipe already written for that day |
+| **UNIwise Originality for Moodle** | [UNIwise/moodle-plagiarism_uniwise](https://github.com/UNIwise/moodle-plagiarism_uniwise) | 1 | 0 | 🔴 **GPL-3.0** · `COPYING.txt` · **`35,147 B`** · `8ceb4b9ee5ad` — a **third** GPL-3.0 byte length here (`35,141` / `35,149` already held) · holder `copyright 2026 UNIwise` in `version.php` | **EMEA** (Denmark — basis: the UNIwise publishing record, stated as org provenance rather than a holder jurisdiction) | The WISEflow originality plugin. 🔵 **Filed for the rule it proves, not for `1★`:** the same company's infrastructure repositories are Apache-2.0 and MIT, and this one is GPL-3.0 **because Moodle's plugin API is**. The integration point sets the licence. A studio that plans a Moodle plugin has already chosen GPL-3.0, whatever its own policy says |
+
+### 🔵 One non-software row, filed because the tier's market map is a repository
+
+[`privateai0/proctoring-compatibility-2026`](https://github.com/privateai0/proctoring-compatibility-2026)
+ships **no grant across its `1`-entry tree** and is therefore unusable as content. But what it
+*contains* is a current compatibility matrix across **LockDown Browser, Proctorio, ProctorU and
+Honorlock** — the four incumbents a Globant engagement will be measured against. It is cited in
+`intel/market.md` as a competitor list, with its licence status stated, and nothing is copied from it.
+
 ## 🆕 `p744` — the library-services estate a university already runs, with the licence posture drawn per layer, `2026-11-10`
 
 > 🟢 **`9` rows, every grant byte-read today, `3` index values corrected from the bytes.** This is

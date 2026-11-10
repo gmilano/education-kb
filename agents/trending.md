@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p745) — 🔴 **`ACTION p744-A` EXECUTED: THE ASSESSMENT REGISTER HAS THE REGULATION AND ALMOST NO AGENTS. `qti assessment mcp server` RETURNS `0` REPOSITORIES; THE BEST ON-TOPIC GRADING AGENT ON EARTH IS `10★`; ANNEX III BITES `2 DEC 2027` AND ARTICLE 50 IS LIVE NOW. 🔴 A `2★` `GPL-3.0`-INDEXED REPOSITORY SHIPS `18` GRANTS, TWO OF THEM `AGPL-3.0`.**
+
+**`3` agent rows filed and `3` is all that exists · `8` foundations rows · `5` platform rows · `42` licence payloads byte-read, `42 / 42` classified from the title block · `2` index values corrected from the bytes · `4` enumerated grant absences with tree denominators · `3` mandated global legs nil'd (`39`th agents).**
+
+### 🔴 The agent nil, with its denominators — this is the finding, not a shortfall
+
+| Leg (`gh api -X GET search/repositories`) | Total | Best on-topic |
+|---|---|---|
+| `qti assessment mcp server` | **`0`** | — |
+| `autograder llm feedback` | `7` | `1★` |
+| `automated essay scoring llm` | `32` | `4★` |
+| `rubric grading agent llm` | `32` | `10★` (`bruchris/canvas-lms-mcp`, already held) |
+| `ai proctoring agent` | `57` | `11★` |
+
+Tutoring has agents at tens of thousands of stars. **Assessment — the register the EU actually
+regulates — has none above `11★`, and the interchange format all of it runs on has no MCP server
+at all.** Recorded at `T386`; the build case is `P226`–`P230`.
+
+### The `3` rows filed
+
+| Agent | Stars | Licence (byte-read) | Region | Note |
+|---|---|---|---|---|
+| [szzxli/veripaper](https://github.com/szzxli/veripaper) | 2 | 🟢 MIT · `1,079 B` · `b0a8526e921a` | ⚠️ unplaced | Resolves every citation in a draft against a live index — the consumer leg `p744`'s `P221` was missing |
+| [Ezharjan/SteganoPrompt](https://github.com/Ezharjan/SteganoPrompt) | 4 | 🟢 MIT · `1,078 B` · `da28e2216c0e` | ⚠️ unplaced | Invisible LLM-readable watermarks in the brief as an integrity tripwire — detection *by construction*, a category new to this base |
+| [aalramadan/PeerCheck](https://github.com/aalramadan/PeerCheck) | 2 | 🔴 GPL-3.0 root `35,149 B` `3972dc9744f6` **+ `17` more, `2`× AGPL-3.0** | **North America** (`kent.edu`, commit record) | Offline submission/peer-review integrity checks. The licence row of the pass (`T385`) |
+
+### 🔴 Two methodological corrections this pass makes to its own base
+
+1. **`T379` — novelty and relevance came apart by `~6×`.** `102 / 215` candidate addresses were
+   novel (`47%`), and **`8`** were worth a licence read (`~8%` yield). The standing scoreboard
+   measures only the first. Both numbers should be published from now on.
+2. **`T387` — `ACTION p744-A`'s own premise was partly wrong.** It named `org:oat-sa` and the other
+   assessment publishers as estates "never enumerated". **`17 / 21` already had ledger rows and
+   `14 / 21` were already shelved.** The register was still the right call; the stated reason was
+   not. An outgoing ACTION that asserts an absence should carry the count that makes the claim.
+
+### 🔴 Declared gaps
+
+**APAC repository supply: `5`th consecutive nil** — two APAC-looking candidates were tested under
+`T378` and **neither survived** (`Felix-au/PrashnaSetu-Public` has no grant across a `2`-entry
+tree; `N0v0cain3/Kuizu` places on a personal name only). Both published unplaced rather than
+guessed. **No LATAM repository row** in this tier (`0 / 215`). **EMEA and APAC education adoption
+percentages: `5`th consecutive nil.** 🟢 APAC is *not* nil in regulation — Vietnam's
+`Decision 33/2026/QD-TTg` (`2 Jul 2026`) names automated assessment as high-risk, the first
+assessment-specific APAC instrument this base holds.
 
 ## 🆕 2026-11-10 (p744) — 🟢 **`T363` GENERALISES ONE TIER FURTHER AND THE PAYOFF IS `10` AGENT ROWS, TOP ROW `5,841★`, FROM LEGS THAT NAME *ZOTERO*, *OPENALEX*, *CROSSREF* AND *ORCID* AND NEVER THE WORD "EDUCATION". 🔴 AN `MIT`-INDEXED REPOSITORY AT `2,285★` SHIPS `CC BY-NC-SA 4.0` INSIDE ITSELF, AND THE NONCOMMERCIAL PAYLOAD IS *SMALLER* THAN EVERY MIT PAYLOAD READ THIS PASS. 🟢 `ACTION p275` IS SATISFIABLE IN THIS SESSION AFTER ALL — THE CHANNEL IS `git`, NOT HTTP — AND `T302` IS REFUTED WITH FOUR ENUMERATED ABSENCES.**
 

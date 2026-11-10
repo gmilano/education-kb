@@ -1,0 +1,24 @@
+leg	total_repositories	channel	verdict
+topic:proctoring	160	gh api -X GET search/repositories	-
+topic:e-assessment	22	gh api -X GET search/repositories	-
+topic:plagiarism-detection	398	gh api -X GET search/repositories	-
+topic:rubric	201	gh api -X GET search/repositories	-
+topic:autograding	96	gh api -X GET search/repositories	-
+topic:academic-integrity	131	gh api -X GET search/repositories	-
+topic:exam	1768	gh api -X GET search/repositories	-
+topic:invigilation	3	gh api -X GET search/repositories	-
+topic:grading	287	gh api -X GET search/repositories	-
+topic:assessment education	198	gh api -X GET search/repositories	-
+org:oat-sa	201	gh api -X GET search/repositories	already-held (T387)
+org:1EdTech	46	gh api -X GET search/repositories	already-held (T387)
+org:uniwise	28	gh api -X GET search/repositories	novel row filed
+org:learnosity	18	gh api -X GET search/repositories	novel rows filed
+org:SafeExamBrowser	14	gh api -X GET search/repositories	novel rows filed
+org:IMSGlobal	1	gh api -X GET search/repositories	superseded by 1EdTech
+org:ans-delft	HTTP-422	gh api -X GET search/repositories	DOES NOT EXIST (named by ACTION p744-A)
+org:openassessments	HTTP-422	gh api -X GET search/repositories	DOES NOT EXIST (named by ACTION p744-A)
+qti assessment mcp server	0	gh api -X GET search/repositories	T386 nil
+autograder llm feedback	7	gh api -X GET search/repositories	T386
+automated essay scoring llm	32	gh api -X GET search/repositories	T386
+rubric grading agent llm	32	gh api -X GET search/repositories	T386
+ai proctoring agent	57	gh api -X GET search/repositories	T386

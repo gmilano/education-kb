@@ -2684,7 +2684,7 @@ SaadRahman01/moodle-mcp	p37	MIT	-	2026-10-29	5	4
 SabioTechTeam/Teacher-Hub	p8	MIT	-	2026-10-01	1	1
 sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit	p119	unstated	-	2026-10-05	1	1
 SafeExamBrowser/seb-server	p41	GPL-3.0	-	2026-10-21	10	7
-SafeExamBrowser/seb-win-refactoring	p41	MPL-2.0	-	2026-10-20	7	4
+SafeExamBrowser/seb-win-refactoring	p41	MPL-2.0	verticals/solutions.md	2026-11-10	8	5
 safytech/ulearn	p123	MIT	-	2026-11-01	2	2
 sage-is/ai-ui	p333	AGPL-3.0	-	2026-10-20	1	1
 sagefy/sagefy	p80	MIT	-	2026-10-28	3	3
@@ -3615,3 +3615,135 @@ zotero/zotero-android	p744	discovered-not-read	-	2026-11-10	1	1
 zotero/zotero-connectors	p744	discovered-not-read	-	2026-11-10	1	1
 zotero/zotero-docs	p744	discovered-not-read	-	2026-11-10	1	1
 zotero/zotero-ios	p744	discovered-not-read	-	2026-11-10	1	1
+szzxli/veripaper	p745	MIT	agents/top.md	2026-11-10	1	1
+ezharjan/steganoprompt	p745	MIT	agents/top.md	2026-11-10	1	1
+aalramadan/peercheck	p745	GPL-3.0 root +17 payloads incl 2x AGPL-3.0	agents/top.md	2026-11-10	1	1
+isaacphysics/equality-checker	p745	Apache-2.0	repos/foundations.md	2026-11-10	1	1
+learnosity/learnosity-sdk-php	p745	Apache-2.0 payload+packaging / MIT by notice	repos/foundations.md	2026-11-10	1	1
+learnosity/learnosity-demos	p745	MIT root + Apache-2.0 vendored	repos/foundations.md	2026-11-10	1	1
+oat-sa/lib-lti1p3-proctoring	p745	GPL-2.0	repos/foundations.md	2026-11-10	1	1
+tesla-ce/core	p745	AGPL-3.0	repos/foundations.md	2026-11-10	1	1
+i4s-htwk/pysea-public	p745	AGPL-3.0	repos/foundations.md	2026-11-10	1	1
+sellquiz/sellquiz	p745	GPL-3.0	repos/foundations.md	2026-11-10	1	1
+uzh-bf/p8-automated-correction	p745	AGPL-3.0	repos/foundations.md	2026-11-10	1	1
+safeexambrowser/seb-mac	p745	MPL-2.0 (index NOASSERTION; CORRECTED)	verticals/solutions.md	2026-11-10	1	1
+safeexambrowser/seb-screen-proctoring-server	p745	MPL-2.0	verticals/solutions.md	2026-11-10	1	1
+uniwise/moodle-plagiarism_uniwise	p745	GPL-3.0	verticals/solutions.md	2026-11-10	1	1
+1edtech/cert-schema	p745	MIT	repos/foundations.md	2026-11-10	1	1
+m8rex/rumbas	p745	NO GRANT (582 tree entries enumerated)	-	2026-11-10	1	1
+christianp/marking-algorithms	p745	NO GRANT (21 tree entries enumerated)	-	2026-11-10	1	1
+felix-au/prashnasetu-public	p745	NO GRANT (2 tree entries enumerated)	-	2026-11-10	1	1
+privateai0/proctoring-compatibility-2026	p745	NO GRANT (1 tree entry enumerated)	-	2026-11-10	1	1
+n0v0cain3/kuizu	p745	MIT (unplaced - personal name only, T378)	-	2026-11-10	1	1
+AI9Stars/LLM-Rubrics-Survey	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Amey-Thakur/WRITING-SUPPORT	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+AmnaaPatel/Proctoring-System-	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+AndrewNgGirl/SkillLens	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+AnubisLMS/Mayat	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+AzureMentor/Azure-AZ-900-Study-Guide	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+BlaCkinkGJ/catch-me-if-you-can	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+CurveAhoead/ScoreRune	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+DSL4-Digital/RefExists	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+DerAlexmeister/E-Assessment	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Ebazhanov/linkedin-skill-assessments-quizzes	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Evalle/DCA	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+GowangInc/PacePaper	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Hassaan-Elahi/Writing-Styles-Classification-Using-Stylometric-Analysis	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+IET-OU/moodle-auth_ouopenid	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+JonathanReeve/text-matcher	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+KQMATH/moodle-mod_capquiz	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Kawchar-Ahammed/Smart-Quiz-System	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+MarsPain/reward_harness	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+MarvinKweyu/AssessMe	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Memba/Memba-Widgets	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Mobin-Karam/moshaver	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+MrAshki/exam_product	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+MrLixm/nuke-tools-lxm	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+OleksiiDotsenko/test-builder	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+OpenEnvision/AutoRubric-as-Reward	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+SanyamSavla/Automatic-proctoring-system_BE-Project	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Sion612/rubrictrail	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Tencent-Hunyuan/DiagSafe	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+TristanPerry/plagiarism-detection-software	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+TrueFurina/soft-skills-platform	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+TylerJaacks/ItsJustACoincidenceProfessor	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Udayraj123/AndroidOMRHelper	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+WanyueKJ/education-online	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Yosef-AlSabbah/SecureGate.js-Anti-Emulator-VM-Sandbox-Motion-Verification-for-Web-Exams	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+Yva1nne/ZJU_Course	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+abhilampard/Simple-Plagiarism-Checker	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+adrienjoly/js-test	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+alphadl/AdaRubrics	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+anand-ctrl/Student_Monitoring_System	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+andrewmcloud/consimilo	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+asigalov61/tegridy-tools	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+chlebik/rhcsa-practice-questions	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+christianp/elm-quiz	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+codeclassroom/PlagCheck	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+cu-sanjay/Free-Turnitin-Plagiarism-Checker	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+danielcregg/moodle-mcq	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+devanshjsr/I.O.T.A	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+dimondevceo/turnitinFree	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+dpaluy/rubric_llm	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+drakeaxelrod/python-maven-projects-tester	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+erezweinstein5/eval-layer	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+fasredtech/faspep	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+fatosmorina/machine-learning-exams	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+fderyckel/ifitwala_ed_V0	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+floft/freetron	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+graciolli-f/Rubric	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+halfmoon-mind/rubric-evaluator	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+harirakul/Plagiarism-Detection	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+harshadulshan/code-plagiarism-detector	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+henriquegpb/gradesinteli	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+imgVOID/autograding-api	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+jayminwest/trellis	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+jialeuuz/askbench	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+jianruntech/geo-score	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+leandrocostam/cka-preparation-guide	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+liuyunc/exam_generator	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+lsgwr/spring-boot-online-exam	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+magento-notes/magento2-exam-notes	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+marcusgreen/moodle-report_advancedgrading	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+mergeos-bounties/NokaMan	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+mikaelsundell/photographic-dctls	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+mindskip/xzs	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+mindskip/xzs-mysql	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+miss-mumu/developer2gwy	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+mrtvillaret/fet-substitutions-manager	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+narender-rk10/proctoring	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+nick-myers/exam-timer	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+noraj/OSCP-Exam-Report-Template-Markdown	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+numbas/editor	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+nwuzmedoutlook/university	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+ongteckwu/hercules	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+oofdere/onproctoring	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+patois/HexraysToolbox	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+pisan-labs/code-viva	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+plateausteve/acjwebapp	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+prnvdixit/EproctorX	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+qiutiandefeng/yftrain	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+sameredu/webdb-fairness-analytics	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+sanket2000/proctoring	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+sattyamjjain/proofloop	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+selftune-dev/selftune	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+sellquiz/sellquiz-standalone	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+so87/CISSP-Study-Guide	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+suyash248/plagiarism_detection	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+tazzben/Assessment-Disaggregation	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+tc-imba/canvas-auto-rubric	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+tecnickcom/tcexam	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+thegraidenetwork/rubric-creator	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+thehale/git-authorship	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+theplatformlab/CKA-Certified-Kubernetes-Administrator	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+theunstopabble/InterviewMinds	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+thomasjbradley/markbot	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+trailofbits/vendetect	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+trimstray/test-your-sysadmin-skills	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+ubc/canvas-rubric	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+walidshaari/Kubernetes-Certified-Administrator	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+whoisflynn/OSCP-Exam-Report-Template	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+wongcyrus/Google-AI-Classroom	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+wzsisshadiao-crypto/dq-questionbank-core	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+yf-team/yf-boot	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+zxzin/runpro	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1

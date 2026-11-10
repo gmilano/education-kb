@@ -46,6 +46,61 @@ can tell a stale cell from a fresh one.
 
 ## Education-specific agents
 
+## 🆕 `p745` — 🔴 **THE REGISTER THE EU ACTUALLY REGULATES HAS ALMOST NO AGENT LAYER. `3` ROWS, TOP ROW `4★`, AND THE SCARCITY IS MEASURED RATHER THAN ASSERTED: `qti assessment mcp server` RETURNS `0` REPOSITORIES, THE BEST ON-TOPIC GRADING AGENT IN EXISTENCE IS `10★`, AND ANNEX III BITES `2 DEC 2027`.**
+
+> **Pass p745 · every grant byte-read 2026-11-10 over the `git` tree channel (`T374`).** This pass
+> executed `ACTION p744-A` — change the noun to **assessment** — and the honest headline is a
+> **nil with a denominator**, not a haul. 🟢 **`3` agent rows are filed and `3` is all that exists**;
+> the quality rule here is that three real rows beat ten padded ones, so the measurement is
+> published instead of the padding (`T386`).
+
+🔴 **`ACTION p744-A`'s own premise is partly refuted, and that is recorded before anything else.**
+It directed this pass at `org:oat-sa` and the other assessment publishers as estates "never
+enumerated". They were: **`17 / 21`** of the probe list already carry `evidence/address-ledger.tsv`
+rows and **`14 / 21`** are already on a live shelf. The assessment *standards* tier was not a blind
+spot. The blind spot was one layer up, in the agents (`T387`).
+
+### The measured scarcity, with its denominators
+
+| Leg (`gh api -X GET search/repositories`) | Total | Best on-topic row | Verdict |
+|---|---|---|---|
+| `qti assessment mcp server` | **`0`** | — | 🔴 The interchange format every assessment system speaks has **no MCP server at all** |
+| `autograder llm feedback` | `7` | `1★` | 🔴 Seven repositories worldwide; the top one is a student backend |
+| `automated essay scoring llm` | `32` | `4★` | 🔴 Every row is a Kaggle solution or a dissertation artefact |
+| `rubric grading agent llm` | `32` | `10★` ([`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp), already shelved) | 🔴 `2 / 10` of the top rows are *LLM-eval* rubrics, not education rubrics (`T380`) |
+| `ai proctoring agent` | `57` | `11★` | 🔴 Hackathon entries and capstone projects; `2` of the top `10` are AGPL-3.0 |
+
+🔵 **Why this matters commercially, and it is the sharpest read of the pass.** Tutoring — the
+register this base has swept for `744` passes — has agents at tens of thousands of stars. Assessment
+has agents at single digits. But it is **assessment**, not tutoring, that the EU lists in Annex III,
+that Vietnam's `Decision 33/2026/QD-TTg` names as high-risk, and whose transparency duty is **live
+now** under Article 50. **The open-source supply is absent exactly where the regulated demand is.**
+That is a build case, not a shopping list, and `P226`–`P230` are what it buys.
+
+### The `3` rows
+
+| Agent | Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | What it does, and why it is filed |
+|---|---|---|---|---|---|---|
+| **veripaper** | [szzxli/veripaper](https://github.com/szzxli/veripaper) | 2 | 0 | 🟢 **MIT** · `LICENSE` · `1,079 B` · sha256₁₂ `b0a8526e921a` · © *2026 veripaper* · *index agrees* | ⚠️ **unplaced** (noreply commit address, no holder beyond the project name) | **Resolves every citation in a draft against a live index and reports the ones that do not exist** — the hallucinated-reference check, as a gate rather than as advice. 🟢 **Filed because it completes a leg this base already owns**: `p744`'s `P221` built the identity side out of OpenAlex, Crossref and ORCID, and this is the consumer that turns those identifiers into a pass/fail on a submission. ⚠️ `2★`, `0` forks, pushed `2026-11-09` — a direction and a `~200`-line reference implementation, not a dependency to pin |
+| **SteganoPrompt** | [Ezharjan/SteganoPrompt](https://github.com/Ezharjan/SteganoPrompt) | 4 | 0 | 🟢 **MIT** · `LICENSE` · `1,078 B` · sha256₁₂ `da28e2216c0e` · © *2026 Aizierjia* · *index agrees* | ⚠️ **unplaced** (`T378` discipline: a personal name is not a publishing record) | **Invisible, LLM-readable watermarks hidden in an assignment brief, as an academic-integrity tripwire** — if the submission echoes the tripwire, a model read the brief. 🔵 **Filed as a category, not as a product.** It is the only *detection-by-construction* approach this base has seen in `745` passes: every other integrity row detects the output, this one marks the input. ⚠️ `14` files total, single author, `4★`. 🔴 **And it is the row most likely to be mis-sold:** a tripwire is evidence of model contact, never evidence of misconduct, and the gap between those two is where an institution gets sued |
+| **PeerCheck** | [aalramadan/PeerCheck](https://github.com/aalramadan/PeerCheck) | 2 | 0 | 🔴 **GPL-3.0 at root** · `LICENSE` · `35,149 B` · `3972dc9744f6` — **AND `17` further payloads beneath it, TWO of them `AGPL-3.0`** (`external/hallucinator`, `external/mubanal`), plus `8`×MIT from `6` holders, BSD-3-Clause, MPL-2.0, Apache-2.0 and a Creative Commons text (`T385`) | **North America** (USA — `aalramad@kent.edu`, Kent State University, from the commit record) | Local, offline checks of conference submissions and peer reviews: format, anonymity, hidden text, reference resolution. 🔴 **This is the licence row of the pass and the reason the licence cell precedes the description.** The index reports `GPL-3.0`. The repository contains **`18` distinct grants across `669` tree entries**, and **two of them are AGPL-3.0** — *network* copyleft, the one that reaches a hosted deliverable rather than a shipped binary. 🔵 A studio that vendors `external/` into a SaaS marking service inherits §13 from a `2★` repository whose index badge says nothing of the kind. `P230` is the sweep that catches it |
+
+### 🔴 What was searched and was not there — recorded so a later pass does not re-buy it
+
+The three **mandated global legs** were run for the `39`th consecutive pass and nil'd again
+(`top open source AI agents education 2026 github MIT` returns general-purpose agent listicles —
+OpenHands, MetaGPT, CrewAI — with no education row this base does not already hold). Their contents
+are at `evidence/websearch-legs.2026-11-10-p745.tsv`.
+
+🔴 **APAC repository supply: `5`th consecutive nil.** Two candidates looked APAC-rooted and **neither
+survived the `T378` test**: [`Felix-au/PrashnaSetu-Public`](https://github.com/Felix-au/PrashnaSetu-Public)
+(`5★`, a Sanskrit-derived name, "academic institutions", proctored Java quiz runner) publishes **no
+grant at all** across a `2`-entry tree, and [`N0v0cain3/Kuizu`](https://github.com/N0v0cain3/Kuizu)
+(`22★`, MIT, `1,069 B`, `8323de618ca4`, © *2021 Shivam Mehta*) places on a **personal name only**.
+Both are published **unplaced** rather than guessed. 🟢 APAC is not nil this pass in *regulation* —
+see `intel/market.md`, where Vietnam supplies the first named APAC assessment instrument this base
+holds.
+
 ## 🆕 `p744` — 🟢 **THE SCHOLARLY TIER HAS AN AGENT LAYER AFTER ALL, AND IT IS BIG: `8` ROWS, `5,841★` AT THE TOP, FROM LEGS THAT ASK FOR *ZOTERO*, *OPENALEX*, *CROSSREF* AND *ORCID* INSTEAD OF FOR EDUCATION. 🔴 AN `MIT`-INDEXED REPOSITORY AT `2,285★` SHIPS `CC BY-NC-SA 4.0` INSIDE ITSELF, AND THE NONCOMMERCIAL PAYLOAD IS *SMALLER* THAN EVERY MIT PAYLOAD READ THIS PASS.**
 
 > **Pass p744 · every row byte-read 2026-11-10.** `45` licence payloads byte-read across the

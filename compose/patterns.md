@@ -5,6 +5,179 @@ updated: 2026-11-10
 ---
 
 
+## 🆕 P226–P230 — added at p745 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the
+recipe.** This set is the assessment tier's, and it is written against a dated regulatory clock:
+Article 50 transparency is **live** (`2 Aug 2026`), Annex III education obligations bite
+**`2 Dec 2027`**, and `T386` measured the open-source agent supply for that demand at **three
+repositories under `5★`**.
+
+---
+
+## P226 — Deterministic marking that never sees a student: the CAS-equivalence gate in front of the model (all five regions; 3–5 weeks)
+
+**The problem.** A client wants AI marking for maths, physics, chemistry or engineering. The
+default build sends every answer to an LLM. That is expensive, non-reproducible, un-appealable, and
+under Annex III it puts the *whole* marking path in scope because the model is deciding the outcome.
+
+**The recipe, and the point is the ordering.**
+
+1. **Equivalence first, model never.**
+   [`isaacphysics/equality-checker`](https://github.com/isaacphysics/equality-checker) —
+   🟢 **Apache-2.0**, `11,357 B`, `b40930bbcf80` — answers *"is this expression mathematically the
+   same as that one"* with a CAS, deterministically. For a correctly-formed symbolic answer this
+   returns a verdict with **no model in the path at all**. On typical STEM item banks this is the
+   large majority of submissions.
+2. **Parameterise the items so sharing an answer is worthless.**
+   [`i4s-htwk/PySeA-public`](https://github.com/i4s-htwk/PySeA-public) (🔴 AGPL-3.0, `34,523 B`,
+   `0d96a4ff68ad`) or [`sellquiz/sellquiz`](https://github.com/sellquiz/sellquiz) (🔴 GPL-3.0,
+   `35,149 B`, `3972dc9744f6`) generate one item per candidate from one authored template.
+   🔴 **Both are copyleft: run them as an authoring-time service behind an API, do not link them
+   into the product.** Their output — the generated items — is yours.
+3. **Carry the items over the standard, not over a database.**
+   [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (🟢 Apache-2.0)
+   moves items and results between your service and the client's LMS as QTI over LTI 1.3.
+4. **Model last, and only for what is left.** Free-text and partial-credit cases route to the LLM
+   with the CAS verdict already attached as context — and every model-decided outcome carries
+   `P174`'s human-review step before it reaches a transcript.
+
+**Why it is worth selling.** The Annex III surface shrinks to step 4, which is a *minority* of
+submissions and is the only part needing logging, explanation and appeal. 🔵 **And the Article 50
+disclosure gets easier to write honestly**: "a deterministic checker marked your answer" is a true
+statement about most of the paper, and it is a better one than any vendor currently makes.
+
+---
+
+## P227 — Self-hosted lockdown and screen proctoring on MPL-2.0, instead of renting the Annex III classification from a US vendor (EMEA first; 6–9 weeks)
+
+**The problem.** The EU AI Act Service Desk uses **exam proctoring** as its worked Annex III
+example, so a vendor that classifies itself by *technique* ("we only do face detection")
+mis-classifies itself. An institution that rents Proctorio, ProctorU, Honorlock or LockDown Browser
+is a **deployer** of a high-risk system it cannot inspect, on a clock that runs out `2 Dec 2027`.
+
+**The recipe.**
+
+1. **Client:** [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring)
+   (🟢 MPL-2.0, `16,726 B`, `fab3dd6bdab2`) and
+   [`SafeExamBrowser/seb-mac`](https://github.com/SafeExamBrowser/seb-mac)
+   (🔴 **MPL-2.0 at `Resources/LICENCE`**, `16,726 B`, `3f3d9e0024b1` — the index says
+   `NOASSERTION`; see `T382` before you quote a licence for it).
+2. **Control plane:** [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server)
+   (🟢 MPL-2.0) for configuration, exam setup and client attestation.
+3. **Screen proctoring, watched not shipped:**
+   [`SafeExamBrowser/seb-screen-proctoring-server`](https://github.com/SafeExamBrowser/seb-screen-proctoring-server)
+   (🟢 MPL-2.0, `16,725 B`, `1f256ecad192`, ETH Zürich, pushed today). ⚠️ **It is a declared proof
+   of concept — scope it as a pilot, never as a committed deliverable.**
+4. **Standards seam, so the proctor and the LMS never share a database:**
+   [`oat-sa/lib-lti1p3-proctoring`](https://github.com/oat-sa/lib-lti1p3-proctoring)
+   (🔴 GPL-2.0, `18,092 B`, `8177f9751321`) — integrate across the LTI boundary per `P211`.
+5. **Read before you design:** [`tesla-ce/core`](https://github.com/tesla-ce/core) (🔴 AGPL-3.0,
+   `34,523 B`, `8486a10c4393`, UOC / Horizon 2020) is the EU's own privacy-preserving broker
+   architecture. ⚠️ Last pushed `2023-08-31` — **a reference, not a dependency.**
+
+🟢 **Why MPL-2.0 is what makes this sellable.** Copyleft here is **per-file**: the studio's own
+modules stay the studio's, and only edits to SEB's own files travel back. That is a completely
+different commercial conversation from TAO's GPL-2.0 or a Moodle plugin's GPL-3.0 — and it is the
+single reason this recipe exists while an equivalent one over Moodle would not.
+
+---
+
+## P228 — The citation-integrity gate: turning `p744`'s identifier estate into a pass/fail on a submission (all five regions; 2–3 weeks)
+
+**The problem.** Fabricated references are now the most common detectable artefact of undisclosed
+model use in written work, and they are the one an institution can act on without accusing anyone
+of anything — a reference either resolves or it does not.
+
+**The recipe.** `p744` filed the identity side; this is the consumer that makes it a gate.
+
+1. **Extract and resolve:** [`szzxli/veripaper`](https://github.com/szzxli/veripaper)
+   (🟢 MIT, `1,079 B`, `b0a8526e921a`) pulls every citation from a draft and checks each against a
+   live index.
+2. **Resolve against the estate already held, not against a scraper:**
+   `ourresearch/openalex-guts` (MIT), `cyanheads/crossref-mcp-server` and
+   `cyanheads/orcid-mcp-server` (🟢 Apache-2.0, `11,317 B`, `7915fc5b0477`) — `p744`'s `P221` legs.
+3. **Widen to the rest of the submission:**
+   [`aalramadan/PeerCheck`](https://github.com/aalramadan/PeerCheck) adds anonymity, hidden-text and
+   format checks. 🔴 **Run `P230` on it first.** It is indexed GPL-3.0 and ships **two AGPL-3.0
+   grants** under `external/` (`T385`); for a hosted marking service, read `external/` before you
+   vendor any of it.
+4. **Report, never accuse.** Output is *"`4` of `31` references did not resolve"* with the
+   identifiers, handed to a human. 🔴 **An unresolved citation is a fact; misconduct is a finding,
+   and only a person makes it.**
+
+🔵 **Why it sells into an engagement that has not bought AI yet.** It needs no model, so it carries
+no Annex III exposure, and it is the cheapest credible first delivery in an integrity programme —
+which makes it the natural wedge ahead of `P226` and `P227`.
+
+---
+
+## P229 — Build on the specification, integrate with the platform: the rule that keeps an assessment deliverable permissive (all five regions; architectural, 1 week to decide)
+
+**The problem.** A studio proposes an assessment product, picks the most-deployed open platform as
+its base, and discovers at delivery that it has committed to GPL-2.0 (TAO) or GPL-3.0 (anything
+inside Moodle). The licence was decided at architecture time by someone who thought they were
+choosing a technology.
+
+**The rule, from `T381`'s measured gradient.** In this tier the permissive artefacts are the ones
+that describe an **interface**, and the copyleft ones are the ones that are a **product**:
+
+| Build **on** (🟢 permissive) | Integrate **with** (🔴 copyleft) |
+|---|---|
+| `1EdTech/lti-1-3-php-library` (Apache-2.0) | TAO / `oat-sa/*` — GPL-2.0 across `18 / 20` repos |
+| `1EdTech/basiclti-util-java` (Apache-2.0) | Safe Exam Browser estate — MPL-2.0 (per-file, the mildest) |
+| `1EdTech/openbadges-validator-core` (Apache-2.0) | Moodle and **every plugin in it** — GPL-3.0, unavoidably |
+| `1EdTech/cert-schema` (MIT, `1,096 B`, `06d87bf42a0a`) | Open edX — AGPL-3.0 |
+| `Learnosity` SDKs (Apache-2.0, `7` languages) | ⚠️ the Learnosity **API** is commercial — `P26` |
+
+**The test, applied before any repository is cloned:** *does this component define how two systems
+talk, or is it one of the systems?* The first is safe to build on; the second is safe to talk to.
+
+🔵 **The proof that the rule is about the integration point and not about the vendor:** UNIwise
+publishes Apache-2.0 and MIT across its own infrastructure, and
+[`UNIwise/moodle-plagiarism_uniwise`](https://github.com/UNIwise/moodle-plagiarism_uniwise) is
+**GPL-3.0** (`35,147 B`, `8ceb4b9ee5ad`) — because it is a Moodle plugin. Same company, same year,
+opposite answer. **A studio that plans a Moodle plugin has already chosen GPL-3.0, whatever its
+policy says.**
+
+---
+
+## P230 — The vendored-tree licence sweep: the five-minute step that catches the grant the index cannot see (tooling, then a standing gate)
+
+**The problem, measured three times in one pass.** GitHub's licence index reports **depth 1**. This
+pass found three rows where that is wrong in a way that matters:
+
+- `aalramadan/PeerCheck` — indexed **GPL-3.0**, ships **`18`** payloads, **two AGPL-3.0** under
+  `external/` (`T385`).
+- `SafeExamBrowser/seb-mac` — indexed **`NOASSERTION`**, is **MPL-2.0** at `Resources/LICENCE`,
+  and its only two files named `LICENSE` are **vendored third parties** (`T382`).
+- `Learnosity/learnosity-demos` — indexed **MIT**, vendors **Apache-2.0** plus two unclassified
+  third-party texts.
+
+**The sweep, over the `git` tree channel (`T374`) — no HTTP, no clone of blobs:**
+
+1. `git clone --depth 1 --filter=blob:none --no-checkout` → `git ls-tree -r HEAD --name-only`.
+   Costs trees only; a `2,426`-entry repository lists in seconds.
+2. Match **every** path against `(^|/)(LICEN[CS]E|COPYING|NOTICE)([.-].*)?$` — case-insensitive,
+   **`LICENCE` included** (this is what finds `seb-mac`).
+3. 🔧 **Apply `T375`'s skip-list fix**: exclude `pm|java|html|htm|pl|rb|tsx|jsx|py|js|ts|go|php`.
+   Without it, Perl and Java trees return source modules as candidates.
+4. **Sort by depth and read the shallowest first.** A payload under `Pods/`, `vendor/`,
+   `node_modules/` or `external/` is a **dependency's** grant until proven otherwise — this is the
+   positional control from `T382`, and it is what stops a sweep confidently reporting Apache-2.0
+   for a Mozilla-licensed application.
+5. `git cat-file blob HEAD:<path>` → **byte count and sha256₁₂**. 🔴 Never size alone: `T383`
+   recorded three AGPL-3.0 payloads at *exactly* `34,523 B` of which one is a different file.
+6. Classify from the **title block only** (`P171`), then read the **notice** separately and record
+   it as its own channel — `T384` found a maintained vendor SDK whose headers say MIT and whose
+   payload and packaging both say Apache-2.0.
+
+**What to report.** Not "the licence", but *grant per subtree, with depth, digest and channel*.
+🔵 **A single licence field cannot express `18` grants, and three of this pass's rows needed more
+than one.**
+
+---
+
 ## 🆕 P220–P225 — added at p744 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the

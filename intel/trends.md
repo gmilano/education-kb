@@ -19,6 +19,212 @@ verdicts recorded with tree denominators.
 
 ---
 
+## T379 — 🔴 This base has been optimising the wrong number: novelty and relevance came apart by a factor of ten, and no pass before this one measured them separately
+
+`p744` closed by celebrating a rediscovery rate of `0 / 15`, and `p741` was marked down for `44%`.
+Both numbers describe **novelty** — is this address already on a shelf or in the ledger. `p745` ran
+`10` legs in a new register and measured novelty the same way: **`102 / 215` candidate addresses
+novel (`47%`)**, which by the standing scoreboard is a strong pass.
+
+🔴 **Almost none of it was usable.** Of the `102` novel addresses, the top of the ranking is
+`trimstray/test-your-sysadmin-skills` (`11,902★`, Linux sysadmin interview questions),
+`miss-mumu/developer2gwy` (`11,500★`, a Chinese civil-service exam guide),
+`walidshaari/Kubernetes-Certified-Administrator` (`4,455★`) and
+`noraj/OSCP-Exam-Report-Template-Markdown` (`4,222★`). **After filtering for on-topic, `8` of the
+`102` were worth a licence read.** The novelty rate was `47%`; the *yield* rate was `~8%`.
+
+🔵 **The correction is to the scoreboard, not to the method.** A novel address is cheap to
+recognise and tells you only that this base has not seen it. Relevance is the expensive question
+and it is the one that decides whether a row gets written. **Both numbers should be published from
+now on, and a pass that reports only the first is reporting the easy half.** `p745` publishes
+`47% novel / 8% yield` and considers the second number the honest one.
+
+---
+
+## T380 — 🔴 `T378`'s name-collision test generalises from `org:` to `topic:`, and three of this register's topics are colonised by unrelated industries
+
+`p744` found that `dspace mcp` returns dSPACE GmbH's automotive ECU test benches and concluded that
+an `org:` leg is on-topic only if the org's other repositories are. **The same failure occurs at
+`topic:` level, and it is worse there because a topic feels like a controlled vocabulary.** Measured
+this pass across `10` legs:
+
+| Leg | Total | What it actually returns |
+|---|---|---|
+| `topic:exam` | `1,768` | 🔴 **IT-certification study notes.** CKA, OSCP, CISSP, AZ-900, RHCSA. Almost nothing about *administering* an exam |
+| `topic:grading` | `287` | 🔴 **Colour grading.** DaVinci Resolve DCTLs, Nuke tools, ACES/LogC colour-science scripts. A film-post vocabulary wearing an education word |
+| `topic:rubric` | `201` | 🔴 **LLM-evaluation rubrics.** `rubric_llm`, `llm-eval-rubric-kit`, `geo-score`, `DiagSafe`. The word has been annexed by model evals since `2025` and the education sense is now the minority reading |
+
+🟢 **The clean legs are the narrow ones.** `topic:e-assessment` returns **`22`** repositories and
+**every one is on topic** — it produced `seb-mac`, `tesla-ce/core`, `equality-checker`, `sellquiz`
+and `PySeA`, which is `5` of this pass's `8` foundation rows out of a denominator of `22`.
+`topic:invigilation` returns **`3`**. 🔵 **The lesson inverts the instinct:** in a colonised
+register the *small* topic is the trustworthy one, because a word too specialised to be annexed is
+also too specialised to be noise. Run `topic:e-assessment` before `topic:exam`, and price
+`topic:exam` at zero.
+
+---
+
+## T381 — 🟢 The assessment tier's licence gradient runs the *opposite* way to the scholarly tier's, and the rule that falls out is architectural
+
+`T364` (p743) recorded an inversion inside one publisher: Invenio's framework is MIT and Zenodo, the
+famous instance built on it, is GPL-2.0. **In the assessment tier the inversion is tier-wide and it
+runs by layer, not by publisher:**
+
+- **The standards body is the permissive one.** `1EdTech` — which *owns* QTI, LTI, OneRoster, Open
+  Badges and CASE — publishes Apache-2.0 and MIT across its implementation libraries
+  (`lti-1-3-php-library`, `basiclti-util-java`, `openbadges-validator-core`, `OpenCASE`,
+  `cert-schema` MIT `1,096 B` `06d87bf42a0a`).
+- **A commercial vendor is permissive too.** `Learnosity` publishes Apache-2.0 SDKs in `7`
+  languages — its entire integration surface, under a licence a studio can build on.
+- **Every deployable implementation is copyleft.** TAO is GPL-2.0 across `18 / 20` repositories,
+  the SEB estate is MPL-2.0, and anything that enters Moodle is GPL-3.0 by force.
+
+🔵 **So the architectural rule is: build on the spec, integrate with the platform.** The permissive
+artefacts in this tier are exactly the ones that describe an *interface* — and an interface is what
+a studio wants to own anyway, because it is what survives the client changing LMS. `P229` prices it.
+
+---
+
+## T382 — 🔴 A `149★` platform publishes its only grant at `Resources/LICENCE`, and the two files in it named `LICENSE` belong to somebody else
+
+[`SafeExamBrowser/seb-mac`](https://github.com/SafeExamBrowser/seb-mac) — Safe Exam Browser for
+macOS and iOS, `149★`, `69` forks, pushed `2026-11-09` — is indexed `NOASSERTION` and is **MPL-2.0**
+(`16,726 B`, `3f3d9e0024b1`). Two of the shared probe's three documented traps fire on one path:
+the payload is in a **subdirectory** (trap #2) and it is spelled **`LICENCE`** (trap #3).
+
+🔴 **The part that is new, and that no previous pass has recorded, is the failure mode of the
+obvious workaround.** The repository contains two files named exactly `LICENSE`:
+`Pods/JitsiMeetSDK/LICENSE` (Apache-2.0, `558 B`) and
+`SEB/QRCodeReaderViewController/LICENSE` (MIT, `1,089 B`) — **both vendored dependencies**. A sweep
+that globs the tree for `LICENSE` and takes the first match does not abstain; it **asserts
+Apache-2.0 or MIT for a Mozilla-licensed application**. That is strictly worse than the index's own
+`NOASSERTION`, because it is confident.
+
+🔵 **The control that survives is positional, not lexical:** a payload at depth > 1 under
+`Pods/`, `vendor/`, `node_modules/` or `external/` is a *dependency's* grant until proven otherwise,
+and a project's own grant is the one at the shallowest depth — whatever it is spelled. `P230` makes
+this a step rather than an instinct.
+
+---
+
+## T383 — 🔴 Three AGPL-3.0 payloads at *exactly* `34,523 B`, two byte-identical and one not — the cleanest refutation of size-as-identity this base will get
+
+`T313` and `T376` established that byte size cannot identify a licence. This pass produced the
+limiting case, within one family, in one sitting:
+
+| Repo | Path | Bytes | sha256₁₂ |
+|---|---|---|---|
+| `tesla-ce/core` | `LICENSE` | **`34,523`** | `8486a10c4393` |
+| `aalramadan/PeerCheck` | `external/mubanal/LICENSE` | **`34,523`** | `8486a10c4393` |
+| `i4s-htwk/PySeA-public` | `LICENSE.txt` | **`34,523`** | 🔴 **`0d96a4ff68ad`** |
+
+**Same family, same byte count to the byte, three unrelated publishers — and the third file is not
+the same file.** 🟢 Meanwhile the digest did its job in both directions: the first two *are*
+byte-identical across unrelated publishers (canonical text confirmed), and
+`Learnosity/learnosity-sdk-php`'s Apache-2.0 payload matched its own vendored copy inside
+`learnosity-demos` at `4e3d4f2274df`.
+
+The same pass also added a **fourth** AGPL-3.0 byte length (`uzh-bf/p8-automated-correction` at
+`32,386 B`, against `34,280` / `34,520` / `34,523` already held), a **third** GPL-3.0 length
+(`35,147 B`, against `35,141` / `35,149`), and an Apache-2.0 at `9,235 B` against a held set that
+already spanned `682`–`11,565 B`. 🔵 **The band heuristic is not merely unreliable; it has no
+width left.** Nothing but the digest should ever be published as identity.
+
+---
+
+## T384 — 🟢 `ACTION p744-A`'s second carry paid out on first use, and what it found was a repository disagreeing with itself
+
+p744 told this pass to **read the notice, not only the canonical text**. Applied to
+[`Learnosity/learnosity-sdk-php`](https://github.com/Learnosity/learnosity-sdk-php), the three
+channels do not agree:
+
+| Channel | Says |
+|---|---|
+| Root payload (`LICENSE.md`, `9,235 B`, `4e3d4f2274df`) | **Apache-2.0** |
+| Packaging metadata (`composer.json` → `"license"`) | **Apache-2.0** |
+| 🔴 Source headers, every file | **`Copyright (c) 2021 / 2023 / 2025 Learnosity, MIT License`** |
+
+This is a **maintained, currently-released vendor SDK**, not an abandoned repository. Both grants
+are permissive, so nothing here is unshippable — which is precisely why it is worth recording:
+**the disagreement is invisible to every consequence-driven check.** Nobody notices, because
+nothing breaks.
+
+🔵 **The generalisation, and it is the useful part:** the notice is not a weaker copy of the
+payload, it is an **independent assertion**, and the two can diverge in either direction. `T371`
+found the notice carrying *more* than the payload (`-or-later`). `T384` finds it carrying
+*something else entirely*. A verdict should name the channel it came from — `Apache-2.0 (payload,
+packaging)` — rather than claiming the repository has a licence full stop.
+
+---
+
+## T385 — 🔴 A `2★` repository indexed `GPL-3.0` ships `18` grants, and two of them are AGPL-3.0
+
+[`aalramadan/PeerCheck`](https://github.com/aalramadan/PeerCheck) (Kent State University, `669`
+tree entries) carries GPL-3.0 at its root and **seventeen further licence payloads** under
+`external/`: **AGPL-3.0 ×2** (`hallucinator`, `mubanal`), MIT ×8 across six distinct holders
+(ACL, iDRAMA Lab ×4 at one digest `3a65b949f3e2`, OpenReview, HotCRP, and a test fixture),
+BSD-3-Clause, MPL-2.0, Apache-2.0 and a Creative Commons text.
+
+🔴 **The AGPL pair is the whole finding.** p744's `T372` found `CC BY-NC-SA` inside an MIT
+repository, which blocks a *commercial* deliverable. AGPL-3.0 §13 is narrower and lands harder in
+this industry: it reaches **hosted** software, and an AI marking service is hosted by definition.
+A studio that vendors `external/` into a SaaS assessment product inherits a network-copyleft
+obligation **from a `2★` repository whose badge says GPL-3.0**.
+
+🔵 **And the shape repeats across the pass**, which is what makes it a rule rather than an anecdote:
+`seb-mac` hides its own grant under vendored ones, `learnosity-demos` is MIT at root over Apache-2.0
+beneath, `PeerCheck` is GPL-3.0 at root over AGPL-3.0 beneath. **Three of this pass's rows carry a
+grant the index cannot see, and in all three cases the index is reporting depth-1 only.** `P230` is
+the sweep.
+
+---
+
+## T386 — 🔴 The register the EU actually regulates has no open-source agent layer, measured against `5` denominators
+
+Every `744` passes before this one swept *tutoring* vocabulary and found agents at tens of thousands
+of stars. `p745` swept **assessment** and found this:
+
+| Leg | Total repositories | Best on-topic row |
+|---|---|---|
+| `qti assessment mcp server` | **`0`** | — |
+| `autograder llm feedback` | `7` | `1★` |
+| `automated essay scoring llm` | `32` | `4★` |
+| `rubric grading agent llm` | `32` | `10★` (`bruchris/canvas-lms-mcp`, already held) |
+| `ai proctoring agent` | `57` | `11★` |
+
+**The interchange format that every assessment platform on earth speaks — QTI — has zero MCP
+servers.** The best open grading agent in existence is a `10★` Canvas wrapper. Everything else is a
+Kaggle solution, a capstone or a hackathon entry.
+
+🔵 **Set that against the regulatory clock and it stops being a gap and becomes a window.**
+Article 50 transparency duties are **live now** (`2 Aug 2026`); Annex III high-risk obligations for
+education bite **`2 Dec 2027`**; Vietnam's `Decision 33/2026/QD-TTg` already names automated
+assessment as high-risk. **Demand is statutory and dated. Supply is three repositories under `5★`.**
+Nothing else in this knowledge base has that shape.
+
+---
+
+## T387 — 🔴 `ACTION p744-A` was right about the register and wrong about the reason, and the error is one this base is structurally prone to
+
+p744 directed this pass at `org:oat-sa`, `org:learnosity`, `org:safeexambrowser` and the rest as
+estates "whose distribution this base holds but whose estate it has never enumerated". Measured
+before any row was written: of the `21` addresses on the probe list, **`17` already carry
+`evidence/address-ledger.tsv` rows** and **`14` are already on a live shelf**. The 1EdTech and
+oat-sa estates were not blind spots at all.
+
+🟢 **The register was still the right call** — `8` foundation rows, `5` platform rows and `3` agent
+rows came out of it, and `T386` is the most commercially useful finding of the last several passes.
+**But they came from the narrow topic legs and the agent legs, not from the orgs the ACTION named.**
+
+🔵 **The structural lesson:** an outgoing `ACTION` is written at the end of a pass, from what that
+pass *suspects*, and it is then read by the next pass as if it were a finding. p744's ACTION
+asserted an absence it had not measured, and the measurement was one `grep -F` away.
+**An ACTION that names an estate as unenumerated should carry the ledger count that makes the claim,
+or should say that it is a guess.** This pass's own ACTION below states which of its claims are
+measured and which are not.
+
+---
+
 ## T371 — 🔴 The `-or-later` arm of a copyleft grant lives in the *notice*, never in the canonical text, and the search index publishes the bare version
 
 **The measurement.** Three repositories, three families, one pass:

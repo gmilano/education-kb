@@ -33,6 +33,54 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p745` (2026-11-10) — the assessment and marking estate, and a licence gradient that runs the *opposite* way to the scholarly tier
+
+> **Pass p745 · every grant byte-read 2026-11-10 over the `git` tree channel.** `8` rows. 🟢 **The
+> reusable fact this tier produces is a gradient, not a list** (`T381`): in the scholarly tier
+> (`p743`) the *framework* was permissive and the *instance* was copyleft. Here it inverts — **the
+> standards body publishes Apache-2.0 and MIT, and every deployable implementation is copyleft.**
+> So the seam a studio builds on is the **specification library**, never the platform, and `P229`
+> is that rule priced out.
+
+### The gradient, measured across the whole tier
+
+| Layer | Publisher | Posture | Evidence |
+|---|---|---|---|
+| **Specification** | `1EdTech` (the standards body itself) | 🟢 **permissive** | `lti-1-3-php-library` Apache-2.0 (`124★`), `basiclti-util-java` Apache-2.0 (`60★`), `openbadges-validator-core` Apache-2.0 (`61★`), `cert-schema` **MIT** `1,096 B` `06d87bf42a0a` © *2016 Media Lab Learning* (`77★`), `OpenCASE` Apache-2.0, `digital-credentials-public-validator` Apache-2.0 — *all already shelved; re-confirmed, not re-filed* |
+| **Vendor SDK** | `Learnosity`, commercial | 🟢 **permissive** | Apache-2.0 SDKs in `7` languages — a closed-source assessment vendor publishing its whole integration surface permissively |
+| **Deployable platform** | `oat-sa` (TAO), `SafeExamBrowser` (ETH Zürich) | 🔴 **copyleft** | GPL-2.0 across `18 / 20` TAO repositories; MPL-2.0 across the SEB estate |
+| **LMS plugin** | anyone | 🔴 **copyleft, unavoidably** | `UNIwise/moodle-plagiarism_uniwise` is **GPL-3.0** because it is a *Moodle plugin* — the integration point sets the licence, not the vendor's preference |
+
+🔵 **That last row is the one to carry into a client room.** UNIwise's own infrastructure
+repositories are Apache-2.0 and MIT. The moment the same company ships *into Moodle*, the artefact
+is GPL-3.0. **A studio's licence answer therefore depends on where it integrates, not on who it
+integrates with** — and that is a question answerable at architecture time, before any code exists.
+
+### The rows
+
+| Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | What it is, and why it is filed |
+|---|---|---|---|---|---|
+| [isaacphysics/equality-checker](https://github.com/isaacphysics/equality-checker) | 7 | 2 | 🟢 **Apache-2.0** · `LICENSE.md` · `11,357 B` · sha256₁₂ `b40930bbcf80` · 🔴 **appendix unfilled — no holder in the payload** (`T368` class) | ⚠️ **EMEA-provisional** (UK; basis: the `isaacphysics` project identity *only* — the commit record is a GitHub noreply address and the payload names nobody) | **Tests whether two symbolic expressions are mathematically equivalent, as a server.** 🟢 **The most reusable single primitive in this tier and the reason the tier was worth a pass.** Marking a maths answer is not string comparison and is not an LLM call — it is a CAS equivalence test, it is deterministic, it is auditable, and **it never sees a student identifier**. `P226` is built on exactly this property. ⚠️ `7★`, `27`-entry tree, last pushed `2026-01-06`: small, quiet, and doing one thing |
+| [Learnosity/learnosity-sdk-php](https://github.com/Learnosity/learnosity-sdk-php) | 10 | 11 | 🔴 **Apache-2.0 by payload AND by packaging — but `MIT` by notice** · `LICENSE.md` · `9,235 B` · `4e3d4f2274df`; `composer.json` declares `"license": "Apache-2.0"`; **every source header reads `Copyright (c) 2021 / 2023 / 2025 Learnosity, MIT License`** (`T384`) | ⚠️ **unplaced** (the holder string is a company name with no jurisdiction in the record) | Signing and request-generation SDK for the Learnosity assessment APIs. 🔴 **Filed for the contradiction, which `ACTION p744-A`'s second carry found on its first use.** p744 told this pass to *read the notice, not only the canonical text*. The notice is where the disagreement was: **two of three channels say Apache-2.0 and the third says MIT, inside one repository, maintained and current.** 🔵 Both grants are permissive so nothing is unshippable — but a studio quoting "Apache-2.0, verified" for this SDK has verified two thirds of the record. ⚠️ **And `P26` still applies**: the SDK is permissive, the **API behind it is not free**, and no payload can tell you that |
+| [Learnosity/learnosity-demos](https://github.com/Learnosity/learnosity-demos) | 31 | 39 | 🔴 **MIT at root** · `LICENSE` · `1,077 B` · `417dd5a86a31` · © *2013 Learnosity* — **AND `Apache-2.0` vendored beneath it** (`vendor/learnosity/learnosity-sdk-php/LICENSE.md`, `9,235 B`, `4e3d4f2274df`) plus `2` unclassified third-party texts (Composer; Ajax.org `ace`) | ⚠️ **unplaced** | The vendor's own integration reference, and the highest-starred Learnosity repository that is not a Vagrant plugin. 🟢 **Filed as a working cross-repository digest control:** the vendored Apache-2.0 payload is **byte-identical** to the standalone SDK read in the same pass — `4e3d4f2274df` both times — confirming one publisher's canonical text across two repositories without re-reading either |
+| [oat-sa/lib-lti1p3-proctoring](https://github.com/oat-sa/lib-lti1p3-proctoring) | 3 | 3 | 🔴 **GPL-2.0** · `LICENSE` · `18,092 B` · `8177f9751321` · © *1989, 1991 Free Software Foundation* (canonical, no project holder) · *index agrees* | **EMEA** (Luxembourg — `sujith.kumar@taotesting.com` in the commit record; Open Assessment Technologies) | **The only standards-based proctoring library this base has found** — LTI 1.3 Proctoring Services, platform *and* tool side, in PHP. 🔵 **Why it matters out of proportion to `3★`:** it is the seam that lets a proctoring component talk to any LTI 1.3 LMS **without the LMS and the proctor sharing a database**, which is the architecture Annex III rewards. 🔴 GPL-2.0, so `P211`'s TAO seam governs: integrate across the LTI boundary, do not link |
+| [tesla-ce/core](https://github.com/tesla-ce/core) | 0 | 3 | 🔴 **AGPL-3.0** · `LICENSE` · `34,523 B` · `8486a10c4393` · canonical, no project holder | **EMEA** (Spain — `Xavier Baró`, `Roger Muñoz`, `UOC` in the repository's own documentation) | **TeSLA — the EU's own answer to commercial proctoring**, built under Horizon 2020 as an adaptive trust-based e-assessment system (biometric and behavioural instruments behind a privacy-preserving broker). 🟢 **Filed as the reference architecture, not as a dependency:** it is what a European institution can point at when asked why it did *not* buy Proctorio. 🔴 **AGPL-3.0 and last pushed `2023-08-31`** — read it, do not deploy it |
+| [i4s-htwk/PySeA-public](https://github.com/i4s-htwk/PySeA-public) | 1 | 0 | 🔴 **AGPL-3.0** · `LICENSE.txt` · `34,523 B` · `0d96a4ff68ad` — 🔴 **same byte count as `tesla-ce/core`, different bytes** (`T383`) | **EMEA** (Germany — `julian.schmidt@stud.htwk-leipzig.de`, HTWK Leipzig, from the commit record) | Python-scripted e-assessment: generates randomised ONYX tests programmatically. 🟢 The *parameterised-item* leg of this tier — one authored template, one item per candidate, which is the cheapest real defence against answer-sharing. ⚠️ **A student address at `1★`**: filed as a technique with working code, and the affiliation is stated because it is the placement evidence, not a credential |
+| [sellquiz/sellquiz](https://github.com/sellquiz/sellquiz) | 2 | 1 | 🔴 **GPL-3.0** · `LICENSE` · `35,149 B` · `3972dc9744f6` — 🟢 **byte-identical to `aalramadan/PeerCheck`'s root payload**, two unrelated publishers, canonical text confirmed | **EMEA** (Germany — `Copyright (c) 2019-2021 TH Köln` in the source headers) | A **domain-specific language for online assessment** — you write the item, the language generates and marks it. 🔵 Filed next to `PySeA` because together they bracket the same idea in two ecosystems, and `P226` can take either. ⚠️ Last pushed `2023-10-17` |
+| [uzh-bf/p8-automated-correction](https://github.com/uzh-bf/p8-automated-correction) | 0 | 0 | 🔴 **AGPL-3.0** · `LICENSE.md` · **`32,386 B`** · `fb9ce8b6dfc4` — 🔴 **a FOURTH AGPL-3.0 byte length for this base** (`34,280` / `34,520` / `34,523` already held) | ⚠️ **EMEA-provisional** (Switzerland; basis: the `uzh-bf` org name — University of Zurich, Banking & Finance — *only*. The commit record is a personal Gmail address and the single copyright notice in the tree belongs to **Microsoft**, from a devcontainer file) | University research on **automated correction of open-ended exam questions** — the hardest marking problem in the tier and the one every vendor claims to have solved. 🔴 **Filed with its provenance stated as thin on purpose:** `0★`, `0` forks, default branch `dev` (not `main` — trap #1 of the shared probe, paying out again), last pushed `2024-06-03`. It is a result to read, not software to run |
+
+### 🔴 `4` grant absences, enumerated with their tree denominators
+
+Recorded the way `p744` established, so a later pass reads a *measurement* rather than a silence —
+every path in each tree was listed over the `git` channel and matched against the probe ladder:
+
+| Repo | Tree entries probed | Verdict |
+|---|---|---|
+| [m8rex/rumbas](https://github.com/m8rex/rumbas) | **`582`** | 🔴 **No grant at any path.** The substantive one: a real Numbas-adjacent assessment builder at `4★` with a `582`-file tree and **no licence anywhere in it** |
+| [christianp/marking-algorithms](https://github.com/christianp/marking-algorithms) | **`21`** | 🔴 No grant. By the Numbas author; a language for describing marking algorithms. Interesting, unusable |
+| [Felix-au/PrashnaSetu-Public](https://github.com/Felix-au/PrashnaSetu-Public) | **`2`** | 🔴 No grant. A `2`-entry public shell for a closed project |
+| [privateai0/proctoring-compatibility-2026](https://github.com/privateai0/proctoring-compatibility-2026) | **`1`** | 🔴 No grant. 🔵 Content worth reading anyway — a `2026` compatibility matrix for LockDown Browser, Proctorio, ProctorU and Honorlock, which is a **market map** rather than software, and is used as one in `intel/market.md` |
+
 ## 🆕 `p744` (2026-11-10) — the open-scholarship data and format-identification estate: `10` rows, `5` index corrections, and `4` refusals that are *enumerated* rather than assumed
 
 > **Pass p744 · every row byte-read 2026-11-10.** 🟢 **`ACTION p743-A` was run as written** — the
