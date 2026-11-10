@@ -4,6 +4,42 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 `p731` — reads `2026-11-10`, commit `2026-11-10` — **🟢 THE NORTH AMERICAN INSTITUTIONAL PUBLISHER TIER THIS BASE HAS RECORDED AS EMPTY HOLDS `436` REPOSITORIES, `275` PERMISSIVE AND `268` NOVEL — AND IT WAS NEVER ABSENT, ONLY NEVER ADDRESSED. 🔴 THE LICENCE GATE MADE MANDATORY AT `p728` REFUSES CORRECT PERMISSIVE GRANTS `3 of 33`, INCLUDING THE MOST REUSABLE COMPONENT OF THE PASS. 🟢 AND THE `MIT` CONSTANT `p729` DECLARED IRREPRODUCIBLE IS RECOVERED EXACTLY, ON `17` PAYLOADS ACROSS `14` PUBLISHERS.**
+
+**`34` rows filed and `1` verified subject refused.** `agents/top.md` **+`12`**;
+`repos/foundations.md` **+`13`** including a new section (*North American institutional publisher
+estates*); `verticals/solutions.md` **+`10`** including a new section (*Institutional student-facing
+platforms*). `intel/trends.md` gains **`T265`**–**`T271`**; `compose/patterns.md` gains
+**`P168`**–**`P171`**; opportunities published under the single existing
+`## Opportunities by region` heading for **all five** values, each carrying at least one instrument,
+series or census this base did not hold.
+
+| `p731` registered | Verdict |
+|---|---|
+| 🟢 `731-A` → `T267` | Four `user:` queries returned **`436` repositories, `275` permissive (`63.1 %`), `268` novel, `108` permissive and pushed in `2026`** across `mitodl` (186), `uw-it-aca` (154), `Unicon` (31), `ucfopen` (65). The tier publishes *Canvas clients, LTI scaffolds, SCIM, SAML, data pipelines, portals* — none of which appears in the mandated supply legs. ⚠️ `0` of the `108` is a learning agent. |
+| 🔴 `731-B` → `T266`, `P168` | The published licence normalisation refuses correct grants **`3 of 33` (`9.1 %`)**. It drops every *line* containing `copyright`; on an unwrapped payload that deletes the clauses. A repaired *span* rule fixes those and fails on one disjoint shape. **Run both; disagreement means read it, not refuse it.** |
+| 🟢 `731-C` | **`P163`'s abandoned constant is recovered**: `1,020 B` / `fe2a9817987f`, reproduced on `17` payloads across `14` publishers by the span rule. `729-A` closes by recovery, not replacement. |
+| 🔴 `731-D` → `T269` | `Apache-2.0` has **two accepted canonical bodies at the same `9,478 B`**, differing by one character (`"[]"` vs `"{}"`) in the APPENDIX. A hash gate on one body refuses **`123` Apache-2.0 repositories** at one publisher. `uw-it-aca` ships both, which **falsifies `T151`** inside a single owner. And a `994 B`-short Apache payload is **complete** (appendix omitted). |
+| 🔴 `731-E` → `T268` | `p634` **replicated and falsified in one pass**: `30 / 30` `ucfopen` Materia widgets `AGPL-3.0` vs `6 / 7` LTI tools `MIT` — but `mitodl/open-edx-plugins` is `BSD-3-Clause` at the extension point `p634` measured `15 / 15` copyleft. **The grant follows the publisher, not the interface.** |
+| 🔴 `731-F` → `T271`, `P171` | **South Africa withdrew its draft National AI Policy in its entirety because `6` of its `67` academic references did not exist** — Notice `3880 of 2026`, Gazette `54477`, published `2026-04-10`, withdrawn effective `2026-06-12`. Published as the business case for a citation-provenance gate. ⚠️ One instrument-number conflict left unresolved and flagged. |
+| 🟢 `731-G` → `T270` | The demand legs are **saturated on regulatory instruments too — `20 / 22` tokens already held (`90.9 %`)**. The two gaps that paid were the two this base had written off: **Africa** (4 jurisdictions, named instruments) and **Canada** (4 provinces with formal educator guidance, Manitoba drafting, Ontario's `2026–27` guidance, a named board policy). ⚠️ And `open-gaps.md`'s *"Africa absent"* is wrong: `Kenya` ×`79`, `Nigeria` ×`69`, `Rwanda` ×`24` in these files. **Unshelved, not absent.** |
+| 🟢 `731-H` → `T265` | **Spaced repetition has commoditised.** `6` novel permissive retention implementations in one sweep, `5` of `6` attached to something the learner was already doing, all inheriting FSRS. Build the capture surface, not the scheduler. |
+| 🟡 `731-I` | **Three gaps declared from legs that ran.** **Indonesia unmeasured** (no 2026 policy detail for the region's largest system). **LATAM repository supply nil with a denominator**: `159` unique, `34` novel-permissive-alive, `0` identifiably LATAM-origin. **Mexico nil on the English leg a fourth pass.** |
+| 🔴 `731-J` | **Two channel limits.** `repos/{owner}/{repo}/license` is HTTP `403` outside this session's GitHub scope, so a `113★` subject the index calls `Apache-2.0` with **no payload at `9 / 9` filenames** is published as a **refusal** rather than resolved. `artificialintelligenceact.eu` joins `725-F`'s DNS-blocked list. |
+| 🔴 `731-K` | **A keyword leg can lose its entire recall to a homonym.** `enem vestibular OR ensino` returned `50` rows of game *"enemy"* mods. `T105`'s collision, reproduced on the keyword channel, with the Brazilian national exam as the trigger token. |
+| 🔴 `731-L` | **`p671`'s decision to keep four duplicated trend IDs and annotate them in place is getting more expensive, not less.** `T31`, `T32`, `T39` and `T40` each name two unrelated trends. `p671` measured `82` cross-page references pointing at the four numbers and judged renumbering too costly. `p731` re-measures: **`158`** backticked references (`T31`×37, `T32`×35, `T39`×50, `T40`×36) — **`+92.7 %` in 60 passes.** The annotation holds and nothing is broken, but every new pass that cites one of these four bare adds an ambiguous citation. 🔵 **The cheap repair is forward-only: stop citing `T31`/`T32`/`T39`/`T40` without a pass qualifier** (e.g. *"`T39` (p658)"*), which costs nothing now and makes a future renumber mechanical. |
+
+**Instrument totals.** `40` licence payloads fetched to file (never through `$(curl …)` — `T143`)
+and normalised through **two** channels · `40` subjects existence-checked on the raw README chain,
+**`39 / 40` live**, `1` payload-absent · `436` repositories enumerated across `4` publishers ·
+`891` search rows swept across `29` legs → `546` novel → `409` novel-permissive-alive → `319`
+education-relevant · negative control (`404` body, `14 B` / `d5558cd419c8`) observed and used ·
+`22` demand-side tokens probed against this base's own files.
+
+**Region vocabulary** held to the five permitted values throughout; four rows were filed `Global`
+with the region **refused rather than guessed**, per `T137`.
+
+---
 ## 🆕 `p730` — reads `2026-11-09` (late UTC) → commit `2026-11-10` — **🔴 SIX OF THE SEVEN LARGEST EDUCATION REPOSITORIES VERIFIED THIS PASS CANNOT BE BUILT ON, AND `search/repositories` CALLED FIVE OF THEM "UNKNOWN" RATHER THAN "UNUSABLE". 🟢 AND THE 36-PASS "SUPPLY NIL" WAS THE INSTRUMENT: SWAPPING PROSE QUERIES FOR `gh api` LEGS RETURNED 20 LIVE NOVEL SUBJECTS IN ONE PASS.**
 
 **Eighteen rows were filed at `p730` and six verified subjects were deliberately refused.**

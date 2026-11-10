@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Composition Patterns — Education
 
-**Pass p730 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p731 · verified 2026-11-10.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -21,6 +21,211 @@ prior engagement may cite.)
 
 ---
 
+## P168 — The licence gate, repaired: two normalisations, agreement as the pass, disagreement as a read (tooling, not a client pattern; half a day, then a standing gate) 🟢 new at p731
+
+**Amends `P164`, which is executable but single-channel.** `P164`'s procedure is correct and its
+constants hold; the defect is that it refuses correct permissive grants whose payload is not
+hard-wrapped — measured at `3 of 33` payloads (`9.1 %`) at `p731`, one of them the most reusable
+component the pass found (`T266`).
+
+### The procedure
+
+Run **both** channels on the same payload bytes.
+
+**Channel L — `P164`'s rule, unchanged.** Fetch the payload to a *file* (never through `$(curl …)`
+— `T143`); drop blank lines; drop the title line matching `^(the\s+)?mit\s+license.*$`; **drop every
+line containing `copyright`**; join with single spaces and collapse whitespace; measure UTF-8 length
+and `sha256₁₂`.
+
+**Channel S — new.** Split the payload on blank lines into paragraphs; collapse each paragraph's
+internal whitespace to single spaces; drop any paragraph matching the title pattern; **inside each
+paragraph, split on sentence boundaries and drop only sentences beginning `copyright` or
+`all rights reserved`**; join and collapse; measure length and `sha256₁₂`.
+
+### The accepted constants (measured on 40 payloads at `p731`)
+
+| Tier | Channel L | Channel S |
+|---|---|---|
+| `MIT` | `870 B` / `3d87852cf34a` | `1,020 B` / `fe2a9817987f` |
+| `Apache-2.0` | `9,478 B` / `399d47608b81` **or** `8a8071588bc2` | `10,178 B` / `0649bc87ac07` **or** `037c3ea46e3f` |
+| `Apache-2.0`, appendix absent | `≈8,484 B` | `≈9,129 B` |
+| `BSD-3-Clause` | `1,091 B` / `90bd78b45663` — single publisher, **not a gate** | `1,441 B` / `6a1dee59e06b` — **not a gate** |
+| *negative control* | `14 B` / `d5558cd419c8` (the `404` body) | same |
+
+### The decision rule
+
+1. **Either channel matches its tier constant → PASS.** Record which channel matched and both figures.
+2. **Both channels miss, and the two disagree with each other → READ THE PAYLOAD BY HAND.** On
+   `3 of 3` specimens at `p731` the cause was wrap state or punctuation and the grant was sound. This
+   is not a refusal.
+3. **Both channels miss and agree → genuine variance. Diff against the stock text** and report the
+   span. `p731`'s two real variances: a `+4 B` *"the Licensor"* insertion in Apache §1
+   (`FightTheStroke/MirrorBuddy`) and a `+8 B` curly-quote substitution in MIT
+   (`dralkh/spaceforge`).
+4. **`14 B` / `d5558cd419c8` → no payload at that filename.** Walk the filename chain
+   (`LICENSE`, `.md`, `.txt`, `LICENCE`, `COPYING`, `UNLICENSE`, lowercase `license`, `LICENSE-MIT`)
+   before concluding there is no grant.
+5. **Two or more `Apache-2.0` hashes at `9,478 B` is expected, not tampering** (`T269`). Accept the set.
+
+### Why it is worth the half day
+
+🔵 A single-channel gate run over `p731`'s own candidate set would have **refused `mitodl/mitx-grading-library`**
+— a `BSD-3-Clause` deterministic grading library that three of this base's published patterns need —
+and, had the hash arm been enforced, **the whole University of Washington estate (`123` Apache-2.0
+repositories)** over a bracket style in the licence's own appendix. The gate exists to stop a studio
+shipping a grant it has not read; it must not stop it reading one.
+
+---
+
+## P169 — The integration layer you do not build: start a North American institutional engagement from a peer institution's estate (higher education, North America first; 3–4 weeks to a working LTI tool inside the client's LMS) 🟢 new at p731
+
+**The premise, measured at `p731` (`T267`):** four North American higher-education publishers hold
+`436` public repositories, `275` of them permissively licensed, `108` of those pushed in `2026`. The
+Canvas clients, LTI scaffolds, SAML integrations, rostering and data pipelines an engagement would
+otherwise quote for have already been written, in production, by universities running the same
+systems as the client.
+
+### Components — all verified first-hand at `p731`
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Canvas API client (Python) | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | MIT | The mature client; `681★`, the estate's most-adopted artefact. |
+| Canvas REST client (alternative) | [`uw-it-aca/uw-restclients-canvas`](https://github.com/uw-it-aca/uw-restclients-canvas) | Apache-2.0 | Use when the engagement's licence policy wants one patent-granting family throughout. |
+| LTI launch + session | [`uw-it-aca/django-blti`](https://github.com/uw-it-aca/django-blti) | Apache-2.0 | Basic LTI as a reusable Django app. |
+| LTI tool scaffold | [`ucfopen/lti-template-flask`](https://github.com/ucfopen/lti-template-flask) | MIT | Nothing → a tool that launches in Canvas. |
+| Project generator | [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti) | MIT | The same, as one command. |
+| Rostering / provisioning | [`mitodl/keycloak-scim`](https://github.com/mitodl/keycloak-scim) | Apache-2.0 | SCIM into Keycloak — accounts and enrolment without CSVs. |
+| Entitlement, as tools | [`Unicon/grouper-mcp`](https://github.com/Unicon/grouper-mcp) | Apache-2.0 | MCP over Internet2 Grouper: lets the agent ask *who is allowed in this course*. |
+| Portal reference | [`uw-it-aca/myuw`](https://github.com/uw-it-aca/myuw) | Apache-2.0 | A real student portal over many institutional systems; read it for requirements. |
+| Accessibility audit | [`ucfopen/equal-access-server`](https://github.com/ucfopen/equal-access-server) | Apache-2.0 | Produces the audit record procurement asks for. |
+
+### Wiring
+
+1. **Week 0 — enumerate, do not search.** `gh api -X GET search/repositories -f q='user:<org>'` for
+   the client's peer institutions and consortium. This pass's four `user:` queries returned `268`
+   novel permissive repositories where the mandated supply legs had returned `13 / 13` already-held.
+   Run `P168` on every candidate before it enters the build.
+2. **Week 1 — scaffold.** `cookiecutter-python-lti` → a tool that launches; `django-blti` or
+   `lti-template-flask` depending on the client's stack.
+3. **Week 2 — identity and roster.** `keycloak-scim` for provisioning; `grouper-mcp` as the
+   authority for access questions, so entitlement is never inferred from the LMS payload.
+4. **Week 3 — the client's own pedagogy layer** on top: whichever agent from `agents/top.md` the
+   engagement actually sells. The integration is no longer in the critical path.
+5. **Before delivery** — run `equal-access-server` over the generated content and keep the report.
+
+### Honest limits — state these before the pattern is sold
+
+- 🔴 **`0` of the `108` live permissive estate rows is a learning agent.** This pattern removes the
+  integration cost and contributes nothing to teaching quality.
+- 🔴 **`ucfopen` is `21.5 %` permissive and the copyleft is where the learning objects are:**
+  `30 / 30` `*-materia-widget` repositories are `AGPL-3.0` (`T268`). Integrate with Materia; do not
+  embed it.
+- ⚠️ Several rows are `≤6★`. They are production code with an install base of one — read them, pin
+  commits, and expect to maintain your fork.
+
+---
+
+## P170 — The auto-graded lab: assess what the learner *built*, not what they wrote about it (vocational, TVET and engineering upskilling, all regions; 5–7 weeks to a graded module) 🟢 new at p731
+
+Every tutoring component on these shelves grades **text**. The engagements that are hardest to win
+and easiest to defend grade **state** — did the container end up configured, did the circuit
+converge, did the formula evaluate. `p731` found the missing pieces.
+
+### Components — all verified first-hand at `p731` unless noted
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Lab environment + oracle | [`stephrobert/dsoxlab`](https://github.com/stephrobert/dsoxlab) | Apache-2.0 | Declarative exercise → reproducible runnable environment → verifiable outcome. |
+| Deterministic answer grading | [`mitodl/mitx-grading-library`](https://github.com/mitodl/mitx-grading-library) | BSD-3-Clause ⚠️ | Numerical, symbolic and formula responses graded by code, with tolerance and partial credit. |
+| Question-bank authoring | [`ucfopen/yaml-to-qti`](https://github.com/ucfopen/yaml-to-qti) | MIT | YAML → QTI, so generated items load into the institution's own engine. |
+| Hardware in the loop | [`agharsallah/esp-labs-web`](https://github.com/agharsallah/esp-labs-web) | MIT (`p730`) | A real ESP32-S3 bench course, `11` languages — a few dollars per learner. |
+| Submission + TA workflow | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | BSD-3-Clause (held) | Where the attempts, the grades and the appeals live. |
+| Observable runtime | [`Hyr1sky/TheGrandQuiz`](https://github.com/Hyr1sky/TheGrandQuiz) | MIT (`p730`) | Trace replay and human-in-the-loop assessment as first-class runtime features. |
+
+### Wiring
+
+1. **Author the exercise once, declaratively** (`dsoxlab`). The definition is the spec *and* the
+   grader: the environment it builds carries the checks.
+2. **Grade the symbolic parts with code, not the model** (`mitx-grading-library`). The LLM's only
+   jobs are to explain the failure and to generate the next item.
+3. **Publish items into the institution's engine** (`yaml-to-qti` → the client's QTI runtime), so the
+   assessment survives the engagement and the institution owns its item bank.
+4. **Keep a replayable trace of every attempt** (`TheGrandQuiz`'s pattern), because the buying
+   criterion is *evidence that the tutor worked* (`T226`), and a trace is that evidence.
+5. **Where the discipline is physical, put the board in the loop** (`esp-labs-web`) rather than
+   simulating it — the simulator is the part a ministry budget cannot buy.
+
+### Why it is sellable, in the client's own words
+
+> *"Show me the learner can do the job, not that they can describe it."*
+
+A pass/fail oracle over machine state is defensible to an employer, an accreditor and a funder in a
+way a model's rubric score is not. 🔵 And it is the only assessment architecture that is unaffected
+by the thing every education client now raises first: it does not matter whether the learner used an
+AI to get there if the artefact is what is graded.
+
+### Honest limits
+
+- ⚠️ `mitx-grading-library`'s payload **names no copyright holder** while requiring its retention,
+  and is `BSD-3-Clause` only by reading clause 3 (`T266`). Get attribution confirmed in writing
+  before it ships in a deliverable.
+- 🔴 `dsoxlab` is `108★` and region-unplaced; this is a reference architecture, not a vendor.
+- ⚠️ Authoring cost is front-loaded: a declarative lab with a real oracle costs several times a
+  multiple-choice item. The pattern pays off on cohorts, not on pilots.
+
+---
+
+## P171 — The citation-provenance gate for public-sector education content (public sector, all regions; 2–3 weeks, and it sells itself) 🟢 new at p731
+
+### The argument you no longer have to make
+
+On `2026-04-10` South Africa published its final draft **National AI Policy** in the Government
+Gazette (**Notice 3880 of 2026**, Gazette **54477**). At least **`6` of its `67` academic references
+did not exist** — journal editors confirmed the attributed articles had never been published. On
+`2026-06-12` the minister withdrew the notice **in its entirety**. The country has had no national AI
+policy since (`T271`).
+
+**A ministry shipped AI-generated citations in a governing instrument and lost the whole instrument.**
+Every education engagement that generates curriculum, assessment items, reading lists or policy text
+is one unguarded step from the same outcome. This pattern is the guard, and the anecdote is the
+business case.
+
+### Components — all on these shelves
+
+| Component | Role |
+|---|---|
+| `P90`'s primary-source corpus | Generate **only** against a corpus of retrieved primary documents; no free-recall citation, ever. |
+| [`Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) · [`MCP-Dubai`](https://github.com/mahdi-salmanzade/MCP-Dubai) · [`Open-Education-AI/OEAI`](https://github.com/Open-Education-AI/OEAI) | Reach the jurisdiction's **own** curriculum, statistics and data vocabulary through a connector rather than a scrape (`P93`). |
+| `P168`'s two-channel gate | The same discipline applied to the *licences* of everything in the pipeline. |
+| `P91`'s auditable judge | Every claim carries a resolvable identifier; a deterministic checker, not the model, decides whether it resolves. |
+| [`ucfopen/equal-access-server`](https://github.com/ucfopen/equal-access-server) | Accessibility audit record for the same deliverable. |
+
+### Wiring
+
+1. **Retrieve first, write second.** The generator may cite only documents already in the corpus,
+   addressed by identifier. A citation the pipeline cannot resolve is a **build failure**, not a
+   warning — this is the single control that would have stopped Notice 3880.
+2. **Resolve every identifier against the publisher, by machine**, and keep the HTTP evidence. Record
+   negative results: the `14 B` `404` body is a result, not an error (`P168` step 4).
+3. **Emit a provenance appendix with the deliverable**: for each claim, the source, the identifier,
+   the retrieval date and the response. This is what the client shows their own auditor.
+4. **Separate the drafting model from the checking code.** A model asked to verify its own citations
+   is not a control.
+5. **Keep the refusal visible.** When a claim cannot be grounded, the deliverable says so in place.
+   This base's own practice — declaring gaps and unresolved conflicts rather than smoothing them — is
+   the deliverable's credibility, and it is demonstrable: show the client `intel/open-gaps.md`.
+
+### Honest limits
+
+- ⚠️ The South African instrument numbers rest on secondary reporting; the gazette PDF was not
+  reachable from this environment and one source calls the withdrawing notice *General Notice 3978*
+  (`T271`). **Quote the withdrawal, the date and the cause — not the second instrument number — until
+  someone with gazette access confirms it.** Mis-citing this fact while selling citation discipline
+  would be the most expensive own goal available.
+- 🔴 The gate raises generation cost and lowers throughput. That is the product, and it should be
+  priced as such rather than apologised for.
+
+---
 ## P164 — The licence gate, published with its procedure: one normalisation, one constant per tier, and a diff when they disagree (tooling, not a client pattern; half a day, then a standing gate) 🟢 new at p729
 
 **Replaces `P163`, which is not executable.** `P163` mandated a standing gate keyed on a normalised

@@ -6,7 +6,8 @@ updated: 2026-11-10
 
 # Education AI — Current Trends
 
-**Pass p730 · researched 2026-11-09.** Three new trends — **T262, T263, T264** — added above p729's
+**Pass p731 · researched 2026-11-10.** Seven new trends — **T265**–**T271** — added above p730's
+**T262**–**T264**, which sit above p729's
 **T258–T261**, p728's **T255–T257**, p727's
 **T253–T254**, p726's
 **T250–T252**, p725's
@@ -20,6 +21,257 @@ registry **T1–T225** from prior passes is preserved in full below.
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
 > pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T265–T271 — added at `p731` (2026-11-10)
+
+> 🔧 **`p731` instrument note on this registry itself.** `p671` recorded that `T31`, `T32`, `T39`
+> and `T40` each name **two unrelated trends** and chose to keep both with an in-place annotation,
+> because `82` cross-page references pointed at the four numbers. `p731` re-measured the same
+> citations: **`158`** (`T31`×37, `T32`×35, `T39`×50, `T40`×36) — **`+92.7 %` in 60 passes.** The
+> annotations still hold and nothing in this base is broken by them. 🔵 **Forward-only repair,
+> adopted from this pass: never cite those four identifiers without a pass qualifier** — write
+> *"`T39` (p658)"* or *"`T39` (p664)"*. It costs nothing now and makes a later renumber mechanical.
+> `p731`'s own `T265`–`T271` were checked against all `203` standalone `T` headings before
+> publication: **no collision.**
+
+## T265 — Spaced repetition stopped being a product category and became a component, and FSRS is the component 🟢 new at p731
+
+`p731`'s supply sweep returned **six novel permissive retention implementations in one pass**, and
+not one of them is a flashcard app you migrate to:
+
+| Repo | Stars | Grant (byte-read) | What it actually is |
+|---|--:|---|---|
+| [`pieralukasz/true-recall`](https://github.com/pieralukasz/true-recall) | 66 | MIT `870 B` | An **Obsidian plugin**. FSRS v6, AI-generated cards, image occlusion. |
+| [`dralkh/spaceforge`](https://github.com/dralkh/spaceforge) | 15 | MIT (unwrapped) | FSRS **and** SM-2 side by side, plus MCQ generation. |
+| [`dorianspitz23/booksum`](https://github.com/dorianspitz23/booksum) | 12 | MIT `870 B` | A **book summariser** whose last stage happens to be a review schedule. |
+| [`cert-pepper/cert-pepper`](https://github.com/cert-pepper/cert-pepper) | 6 | MIT `870 B` | A **CLI** for certification exams. |
+| [`Chain-Tang/AnnotationTutor`](https://github.com/Chain-Tang/AnnotationTutor) | 5 | MIT `870 B` | A **reading-annotation** tool that emits review items. |
+| [`harrystaley/Pre-Calculus_Anki`](https://github.com/harrystaley/Pre-Calculus_Anki) | 6 | MIT | **Content only** — decks, no scheduler, because the scheduler is assumed. |
+
+**The scheduler is no longer the differentiator; the capture surface is.** Five of the six attach
+to something the learner was already doing — their notes, their book, their terminal, their
+annotations — and inherit FSRS from a library. `p667` recorded that "retention is a layer, not an
+algorithm"; this pass gives that a second, sharper reading: **the layer has been commoditised and
+the contested ground moved to where the items come from.**
+
+🔵 **What this means for an engagement.** Do not build a scheduler and do not propose migrating a
+client's learners into a new review app — both are now undifferentiated and both lose. Build the
+*capture*: the integration that turns the client's existing material and the learner's existing
+behaviour into review items, and let FSRS do the scheduling. `AnnotationTutor` is the clearest
+reference and `true-recall` the clearest proof that the plugin route is viable.
+
+⚠️ **Honest limit:** all six are `≤66★` and five are single-author. This trend is a statement about
+*where new supply is arriving*, not a recommendation to take a production dependency on any one of them.
+
+## T266 — A licence gate needs two normalisations, because they fail on disjoint inputs — and disagreement between them diagnoses formatting, never a modified grant 🔴 new at p731
+
+This base published a mandatory licence normalisation at `p728` and corrected its specification at
+`p729`. `p731` ran it against **`33` payloads read first-hand**, alongside a repaired variant, and
+the two rules **disagree on `3 of 33` (`9.1 %`)** — every disagreement a formatting artefact, every
+underlying grant correct and permissive.
+
+**The published rule (drop every *line* containing `copyright`) fails on unwrapped payloads.**
+`2 of 33` payloads (`6.1 %`) are unwrapped — one paragraph per physical line:
+
+| Payload | Lines | Longest line | Line rule | Truth |
+|---|--:|--:|--:|---|
+| [`mitodl/mitx-grading-library`](https://github.com/mitodl/mitx-grading-library) | 5 | `755` cols | **`142 B`** | Complete `BSD-3-Clause`. Clauses 1, 2, 3 and the disclaimer each contain the word *copyright*, so the rule deleted **the grant** and left `142 B` of residue. |
+| [`dralkh/spaceforge`](https://github.com/dralkh/spaceforge) | 5 | `460` cols | **`436 B`** | Stock `MIT`, plus four curly quotation marks. |
+
+**The repaired rule — unwrap to paragraphs, then drop copyright *sentences* — fails on exactly one
+other shape.** `1 of 33`: [`The-Purple-Movement/Beyond-Syllabus`](https://github.com/The-Purple-Movement/Beyond-Syllabus)
+writes `Copyright (c) 2021 The Purple Movement` **with no terminal period, on the line immediately
+above the grant with no blank line between**. Sentence-splitting therefore treats the notice and the
+whole permission paragraph as one sentence and deletes both: `587 B` against a `1,020 B` constant.
+The *line* rule handles it perfectly (`870 B`, stock).
+
+🟢 **And the repaired rule recovers a constant this base gave up on.** `p729` recorded that
+`P163` had mandated a stock-`MIT` body of **`1,020 B` / sha256₁₂ `fe2a9817987f`** and that
+*"seven procedures reproduce none of it"*, so `p729` replaced it with the line rule. **`p731`
+reproduces it exactly, on `17` payloads across `14` independent publishers.** The procedure is:
+*unwrap to paragraphs → drop the title paragraph → drop copyright **sentences** → collapse
+whitespace → measure*. `P163`'s constant was never wrong; only its procedure was missing. `729-A`
+closes by recovery rather than by replacement.
+
+**Neither rule is safe alone. Run both. The constants, measured on `40` payloads this pass:**
+
+| Family | Line-rule canonical | Pubs | Span-rule canonical | Pubs |
+|---|---|--:|---|--:|
+| `MIT` | `870 B` / `3d87852cf34a` | `15` | **`1,020 B`** / **`fe2a9817987f`** | `14` |
+| `Apache-2.0` | `9,478 B` / `399d47608b81` | `8` | `10,178 B` / `0649bc87ac07` | `7` |
+| `Apache-2.0` *(second accepted body, `T269`)* | `9,478 B` / `8a8071588bc2` | `3` | `10,178 B` / `037c3ea46e3f` | `3` |
+| `BSD-3-Clause` | `1,091 B` / `90bd78b45663` | **`1`** — not a constant | `1,441 B` / `6a1dee59e06b` | **`1`** |
+| *control:* `404` body | `14 B` / `d5558cd419c8` | — | `14 B` / `d5558cd419c8` | — |
+
+The `17`-payload counts on the two `MIT` rows are **different sets**, which is the whole point:
+`Beyond-Syllabus` passes the line rule and fails the span rule, `spaceforge` does the reverse.
+The `BSD` rows remain single-publisher (all `mitodl`) and must not be used as gates.
+
+🔵 **The operative rule, stated so a later pass can run it mechanically:** compute both bodies.
+**Agreement with a constant on either channel is a pass.** Disagreement between the two channels is
+an instruction to **read the payload by hand**, not a refusal — on `3 of 3` specimens this pass the
+disagreement was wrap state or punctuation and the grant was sound. A single-channel gate would have
+refused three correct permissive grants, one of them the most reusable row of the pass.
+
+## T267 — North America's institutional open-source supply is large, permissive, and invisible to every leg phrased around tutors 🟢 new at p731
+
+This base has recorded the North American school-district and university publisher tier as absent or
+empty across several passes. `p731` enumerated four publishers in one pass:
+
+| Publisher | Repos | Permissive | % | Novel to this base | Permissive + pushed 2026 |
+|---|--:|--:|--:|--:|--:|
+| [`mitodl`](https://github.com/mitodl) — MIT Open Learning | 186 | 112 | `60.2 %` | 183 | 36 |
+| [`uw-it-aca`](https://github.com/uw-it-aca) — U. Washington | 154 | 126 | `81.8 %` | 154 | 64 |
+| [`Unicon`](https://github.com/Unicon) | 31 | 23 | `74.2 %` | 29 | 5 |
+| [`ucfopen`](https://github.com/ucfopen) — U. Central Florida | 65 | 14 | `21.5 %` | 60 | 3 |
+| **Total** | **436** | **275** | **`63.1 %`** | **268** | **108** |
+
+**`268` novel permissive repositories from four `user:` queries**, against a channel this base
+measured at `13 / 13` already-held as recently as `p703`.
+
+🔴 **The cause is a vocabulary mismatch, not a supply gap.** The estates publish *Canvas clients, LTI
+scaffolds, SCIM provisioning, SAML integrations, data pipelines, grading libraries, student portals*.
+Not one of those strings appears in the mandated supply legs, which ask for agents, tutors and
+platforms. **The tier was never empty; it was never addressed.**
+
+🔵 **What it changes commercially.** An institutional North American engagement should start by
+enumerating the client's *peer* institutions' GitHub organisations, because the integration layer the
+engagement will otherwise quote for has already been written, in production, under Apache-2.0 or
+BSD-3-Clause, by a university with the same systems. `uw-it-aca` alone is `126` permissive
+repositories of exactly that plumbing.
+
+⚠️ **Limit, stated plainly:** this is infrastructure, not pedagogy. `0` of the `108` live permissive
+rows is a learning agent. The estates solve the *integration* half of an engagement and none of the
+teaching half.
+
+## T268 — Inside one publisher the grant tracks the architectural layer; across publishers it tracks the publisher — so neither is a screening heuristic 🔴 new at p731
+
+Two measurements from the same pass, pointing opposite ways.
+
+**Within `ucfopen` the split is total and it follows the layer:**
+
+| Layer | Repos | Grant |
+|---|--:|---|
+| `*-materia-widget` — content/authoring | **30** | `AGPL-3.0`, **`30 / 30`**, no exceptions |
+| LTI tools and templates — integration | 7 | `MIT` **`6 / 7`** |
+
+The estate's most-adopted artefact, [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi)
+(`681★`), sits on the permissive side. The platform it protects — `Materia` (`52★`), `Obojobo`
+(`72★`) — sits on the copyleft side. **A studio can build Canvas integrations on this estate and
+cannot embed its learning objects.** This replicates `p634`'s Open edX reading on an independent
+publisher: permissive at the edges, copyleft at the core.
+
+🔴 **And then the same pass falsifies the generalisation `p634` drew from it.** `p634` measured
+`15 / 15` Open edX XBlocks `AGPL-3.0` and concluded the extension point carries the licence.
+[`mitodl/open-edx-plugins`](https://github.com/mitodl/open-edx-plugins) is a maintained set of Open
+edX plugins under **`BSD-3-Clause`**, pushed `2026-11-09`. Same platform, same extension point,
+opposite grant.
+
+🔵 **The rule that survives both:** *the grant is a property of the publisher's policy, and within a
+publisher, of the layer.* There is no inference from the extension point, the file type or the
+platform. **Read the payload, every time, per repository.** Both halves of this trend exist because
+a screening heuristic would have produced a wrong answer in one direction or the other.
+
+## T269 — `Apache-2.0` has two accepted canonical bodies at identical length, and a complete Apache grant can be `1,049 B` short of the constant 🔴 new at p731
+
+Three facts, all byte-read at `p731`, each of which defeats one of this base's licence instruments.
+
+**1. Two hashes, one length.** `10` Apache-2.0 payloads normalise to exactly `9,478 B`. They carry
+**two distinct `sha256₁₂` values**, and the divergence is a single character at position `8,662`, in
+the APPENDIX boilerplate instruction:
+
+| Body | sha256₁₂ | Appendix text | Publishers observed |
+|---|---|---|--:|
+| A | `399d47608b81` | `fields enclosed by brackets "[]"` | `mitodl`, `Unicon`, `stephrobert`, `MiniriceAI`, `uw-it-aca`, `tuc-urz`, `Open-Education-AI` |
+| B | **`8a8071588bc2`** | `fields enclosed by brackets "{}"` | `uw-it-aca`, `ucfopen`, `elixirschool` |
+
+Both are published Apache Foundation revisions. The difference is in the *instructions for applying*
+the licence, not in the terms. 🔴 **A hash gate admitting only `399d47608b81` refuses body B — and
+body B is what the University of Washington estate ships, `123` Apache-2.0 repositories.** Both
+hashes are hereby recorded as **accepted constants**.
+
+🔴 **2. `T151` is falsified.** `p731` registered that the licence-payload hash *"identifies the
+OWNER, not the repository"*. `uw-it-aca` publishes **both** bodies — `django-blti` and
+`uw-restclients-canvas` give `8a8071588bc2`, `pathways` gives `399d47608b81` — and body B appears
+across **three unrelated owners**. The hash identifies the **text revision the publisher copied**,
+which correlates with owner and is not determined by it.
+
+🟢 **3. A short Apache payload can be complete.** [`uw-it-aca/myuw`](https://github.com/uw-it-aca/myuw)
+normalises to `8,484 B`, `994 B` under the constant, and is **not truncated**: it ends at
+`END OF TERMS AND CONDITIONS` and omits the APPENDIX entirely (`1,049 B` on the span channel). The
+appendix is guidance, not terms; the grant is whole. Second instance of this shape after `p619`'s
+`597 B` case, and the first where the missing span is named rather than merely observed.
+
+🔵 **Consequence for the gate:** for `Apache-2.0`, *length alone* cannot detect a one-character
+appendix variant, and *hash alone* refuses two legitimate publishers. The gate must accept
+`{399d47608b81, 8a8071588bc2}` at `9,478 B`, and treat `~8,484 B` as "appendix absent — inspect the
+tail" rather than as tampering.
+
+## T270 — The demand legs are saturated on regulatory instruments too, and the two gaps that paid were the ones this base had declared hardest 🔴 new at p731
+
+`p730` re-scoped the long-running leg nil as *"market figures saturated, regulatory instruments and
+capital series were not"*. `p731` ran the mandated global and four regional legs and probed
+**`22` named tokens** from their output against this base's own intel files:
+
+**`20 / 22` already held (`90.9 %`).** `A.9190`, `134 bills / 31 states`, `FutureEd`, `SUNY`,
+`Florida`, `Ohio State`, `Utrecht`, `Estado de México`, `Ley Nahui`, `Article 61`, `2026-12-02`,
+`Digital Omnibus`, `Class 3`, `Beijing class-hours`, `Kenya`, `Nigeria`, `Rwanda`, `Singapore`,
+`Indonesia`, `Philippines` — every one of them present. The two that were not held are
+sub-details of an instrument this base already holds: China's April 2026 *AI + Education* plan
+requiring universities to run AI as **a basic public course**, issued by **five central departments**.
+
+🔴 **So the regulatory-instrument channel is now saturated as well, and the honest reading is that
+the leg's *phrasing* has been exhausted in all three of its halves** — supply, market figures and
+instruments.
+
+🟢 **What did pay were the two regions this base had written off.** Both were declared gaps, both
+were addressed with one targeted leg each, and both returned named instruments:
+
+- **Africa** — absent from the EMEA sweep for four consecutive passes. One leg returned four
+  jurisdictions with named instruments (`T271`, and the EMEA block of `intel/market.md`).
+- **Canada** — *"returned almost nothing"*, the North America limb recorded as US-only. One leg
+  returned **four provinces with formal AI guidance for educators** (British Columbia, New
+  Brunswick, Newfoundland and Labrador, Quebec), **Manitoba in progress**, Ontario's `2026–27`
+  guidance, and a named board policy (Vancouver School Board, 2026).
+
+🔵 **The transferable lesson, and it is the same one `p730` learned on the supply side:** a nil from
+a broad leg measures the leg. **A declared gap is a query specification** — spend the leg on the gap
+by name, not on the general phrasing that produced the gap.
+
+⚠️ **One correction to this base's own record while doing so.** `intel/open-gaps.md` says Africa is
+*absent* across four passes. Measured against the files: `Kenya` appears `79` times, `Nigeria` `69`,
+`Rwanda` `24`. **Africa was never absent from this base — it was absent from the leg, and never
+shelved.** That is `p610`'s *"mentioned and never shelved"* defect recurring in the regional axis,
+and the gap text should say "unshelved", not "absent".
+
+## T271 — A national AI policy was withdrawn in its entirety because its own citations were AI-generated, and it is an education-sector instrument 🔴 new at p731
+
+**South Africa**, 2026, in sequence:
+
+| Date | Event |
+|---|---|
+| `2026-04-10` | Final draft **National AI Policy** published in the Government Gazette — **Notice 3880 of 2026**, Gazette **54477**. |
+| `2026-04` | At least **`6` of its `67` academic references are found not to exist.** Journal editors confirm the attributed articles were never published. |
+| `2026-06-12` | Minister **Solly Malatsi** withdraws Notice 3880 **in its entirety**, effective on publication. |
+| `2026-11` → `2027-01` | Revised documents targeted for Cabinet (November 2026) and public comment (January 2027). South Africa has **no national AI policy** in the interim. |
+
+🔵 **Why this belongs in an education knowledge base rather than a governance one.** It is the single
+most usable argument a studio has in this sector, and it is not hypothetical: **a ministry published
+an AI policy containing fabricated sources, and had to retract the whole instrument.** Every
+education engagement that generates content — curriculum, assessment items, reading lists, policy
+drafts — is one step from the same failure, and the remedy is the provenance discipline this base
+already specifies (`P87`'s diligence gate, `P90`'s primary-source corpus, `P91`'s auditable judge).
+Lead with this fact when selling verification, grounding or citation-audit work into a public-sector
+education client. It ends the argument about whether the control is worth paying for.
+
+⚠️ **Source grade, stated because this base's rule is to state it.** The gazette PDF was not reached
+(`eur-lex.europa.eu` and peers fail DNS in this session per `725-F`; `artificialintelligenceact.eu`
+fails the same way and is added to that list). The sequence above is corroborated across independent
+outlets including ITWeb and African Business, and **one discrepancy is left open rather than
+smoothed:** the withdrawing instrument is called *General Notice 3978* by one source and a
+*Government Notice* by others. Check `gov.za` Gazette `54477` and the June withdrawal notice before
+quoting the instrument number in a deliverable. The withdrawal itself, the date and the cause are
+not in dispute.
 
 ## 🆕 T258–T261 — added at p729 (2026-11-09)
 

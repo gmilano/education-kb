@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p731) — 🟢 **`436` REPOSITORIES ACROSS FOUR NORTH AMERICAN UNIVERSITY AND HIGHER-ED PUBLISHERS, `275` PERMISSIVE, `268` NOVEL — THE TIER THIS BASE HAS CALLED EMPTY IS THE INTEGRATION LAYER EVERY ENGAGEMENT QUOTES FOR. 🔴 AND ONE OF ITS BEST ROWS IS A GRANT THIS BASE'S OWN GATE WOULD HAVE REFUSED.**
+
+**`13` foundations rows including **one new section** (*North American institutional publisher
+estates*) · `10` platform rows including **one new section** (*Institutional student-facing
+platforms*) · `436` repositories enumerated · `40` licence payloads byte-read through two
+normalisations · `1` `Apache-2.0` constant split into two accepted bodies · `1` abandoned `MIT`
+constant recovered · `1` of this base's published licence rules falsified.**
+
+### The estate census — `T267`
+
+| Publisher | Repos | Permissive | % | Novel | Perm. + 2026 | Dominant grant |
+|---|--:|--:|--:|--:|--:|---|
+| [`mitodl`](https://github.com/mitodl) — MIT Open Learning | 186 | 112 | `60.2 %` | 183 | 36 | `BSD-3-Clause` ×92 |
+| [`uw-it-aca`](https://github.com/uw-it-aca) — U. Washington | 154 | 126 | `81.8 %` | 154 | 64 | `Apache-2.0` ×123 |
+| [`Unicon`](https://github.com/Unicon) | 31 | 23 | `74.2 %` | 29 | 5 | `Apache-2.0` ×22, **zero copyleft** |
+| [`ucfopen`](https://github.com/ucfopen) — U. Central Florida | 65 | 14 | `21.5 %` | 60 | 3 | `AGPL-3.0` ×45 🔴 |
+| **Total** | **436** | **275** | **`63.1 %`** | **268** | **108** | — |
+
+🔴 **`ucfopen` is the outlier and the cause is nameable:** `30 / 30` `*-materia-widget` repositories
+are `AGPL-3.0`, `6 / 7` LTI and template repositories are `MIT` (`T268`). The estate's most-adopted
+artefact, `canvasapi` (`681★`), is on the permissive side; the learning-object platform it serves is
+not.
+
+### Filed to `repos/foundations.md`
+
+| Repo | Stars | Licence | Why it was taken |
+|---|--:|---|---|
+| [mitodl/keycloak-scim](https://github.com/mitodl/keycloak-scim) | 80 | Apache-2.0 | 🟢 **The most-adopted novel row of the pass and the least education-shaped** — SCIM provisioning for Keycloak, i.e. rostering without CSVs. Exactly why no tutor-shaped leg found it. |
+| [mitodl/ol-data-platform](https://github.com/mitodl/ol-data-platform) | 51 | BSD-3-Clause | MIT Open Learning's learning-data platform, in production, pushed today. Third observation of the `1,091 B` / `90bd78b45663` body — ⚠️ still **one publisher**, so still not a gate. |
+| [mitodl/mitx-grading-library](https://github.com/mitodl/mitx-grading-library) | 16 | BSD-3-Clause ⚠️ | 🟢 **The single most reusable row of the pass:** deterministic numerical, symbolic and formula grading with tolerance and partial credit. `T90`, `P62` and `P91` all require a non-LLM examiner and this base had to assemble one. ⚠️ Unwrapped payload → the published gate returns `142 B` and refuses it; and the grant **names no copyright holder** while requiring its retention. |
+| [mitodl/open-edx-plugins](https://github.com/mitodl/open-edx-plugins) | 10 | BSD-3-Clause | 🔴 **Falsifies `p634`'s XBlock rule**: permissive plugins at an extension point this base measured `15 / 15` `AGPL-3.0`. The grant follows the publisher, not the interface. |
+| [mitodl/ocw-studio](https://github.com/mitodl/ocw-studio) | 14 | BSD-3-Clause | The authoring and publishing system behind MIT OpenCourseWare — a permissive content pipeline for an OER estate at national scale. |
+| [ucfopen/lti-template-flask](https://github.com/ucfopen/lti-template-flask) | 47 | MIT | Nothing → a tool that launches inside Canvas, from a publisher running it across a 70,000-student system. |
+| [ucfopen/cookiecutter-python-lti](https://github.com/ucfopen/cookiecutter-python-lti) | 6 | MIT | The same scaffold as one command. |
+| [ucfopen/yaml-to-qti](https://github.com/ucfopen/yaml-to-qti) | 0 | MIT | 🔵 **Filed at `0★` deliberately.** This base holds a QTI *engine* (`p607`) and had no QTI *authoring* path — and a generated assessment is worthless if it cannot load into the institution's own engine. Stars measure attention, not fit. |
+| [uw-it-aca/uw-restclients-canvas](https://github.com/uw-it-aca/uw-restclients-canvas) | 6 | Apache-2.0 | Production Canvas client at a 60,000-student university; carries the **second** accepted Apache body `8a8071588bc2` (`T269`). |
+| [uw-it-aca/django-blti](https://github.com/uw-it-aca/django-blti) | 3 | Apache-2.0 | LTI launch, validation and session as a reusable Django app. |
+| [Unicon/grouper-mcp](https://github.com/Unicon/grouper-mcp) | 4 | Apache-2.0 | 🟢 **A category this base did not hold:** MCP over Internet2 Grouper. Every other MCP row here reaches a *learning* system; this one reaches the **entitlement** system that decides who is allowed into a course — the question an institutional pilot actually fails on. |
+| [ucfopen/equal-access-server](https://github.com/ucfopen/equal-access-server) | 1 | Apache-2.0 | The *enforcement* half `p730`'s accessibility finding lacked: a deployable accessibility-checking service that produces the audit record procurement asks for. |
+| [Open-Education-AI/OEAI](https://github.com/Open-Education-AI/OEAI) | 14 | Apache-2.0 | **EMEA (UK).** A standards-based data framework for schools and **multi-academy trusts** — the first row aimed at the buyer through which most English state schools now procure. |
+
+### Filed to `verticals/solutions.md` — new section *Institutional student-facing platforms*
+
+| Platform | Stars | Licence | Why it was taken |
+|---|--:|---|---|
+| [alexmojaki/futurecoder](https://github.com/alexmojaki/futurecoder) | **1,554** | MIT | 🟢 **The largest novel permissive education platform filed here in several passes.** A complete interactive Python course that runs entirely client-side — no accounts, no server, no per-learner cost. Its graduated-hints pedagogy is `P89` already implemented. ⚠️ No push since `2026-05-09`. |
+| [swe-labs/the-go-engineer](https://github.com/swe-labs/the-go-engineer) | 174 | MIT | Courseware with a stated progression rather than a link list — what vocational upskilling engagements actually buy. Maintained daily. |
+| [p2pu/course-in-a-box](https://github.com/p2pu/course-in-a-box) | 106 | MIT | A course as a repository, published without a server: the right substrate when there is no LMS tenant and no hosting budget. ⚠️ Stable, not live. |
+| [mitodl/micromasters](https://github.com/mitodl/micromasters) | 32 | BSD-3-Clause | The clearest open reference for **selling** a credential rather than delivering a course. |
+| [KOSASIH/Tsmart](https://github.com/KOSASIH/Tsmart) | 22 | MIT | A **microservice** decomposition on a shelf of monoliths — what an integration-heavy engagement needs. ⚠️ No push in ~12 months. |
+| [mitodl/mitxpro](https://github.com/mitodl/mitxpro) | 20 | BSD-3-Clause | The same publisher's answer for the non-degree, employer-paid market. |
+| [p2pu/learning-circles](https://github.com/p2pu/learning-circles) | 15 | MIT | The only row here whose unit of delivery is **a room with people in it** — the shape public-sector digital-inclusion funding is written for. Its `+4 B` line-rule anomaly is an artefact: `1,020 B` exactly on the span channel. |
+| [uw-it-aca/myuw](https://github.com/uw-it-aca/myuw) | 13 | Apache-2.0 ⚠️ | A real student portal over many institutional systems — read it for requirements. ⚠️ Apache **without the APPENDIX**: `994 B` short of the constant and **complete**, not truncated (`T269`). |
+| [youssef-imlyhen/kostudy](https://github.com/youssef-imlyhen/kostudy) | 9 | MIT | AI-first full-featured education web app. 🔴 **Region refused rather than guessed** — two inconsistent weak signals, filed `Global` per `T137`. |
+| [tuc-urz/olea](https://github.com/tuc-urz/olea) | 7 | Apache-2.0 | **EMEA (Germany).** The first German university-IT publisher on these shelves, pushed today — the EMEA counterpart to this pass's four North American estates. |
+
+### Channel notes
+
+- 🟢 **`gh api -X GET search/repositories` with `user:<org>` is the productive channel**, confirming
+  `p730`'s re-scoping: `4` queries → `268` novel permissive addresses, where the mandated prose legs
+  returned `13 / 13` already-held at `p703`.
+- 🔴 **`repos/{owner}/{repo}/license` is HTTP `403`** for any repository outside this session's GitHub
+  scope. `search/repositories` plus the raw channel are the only licence instruments available here.
+- 🔴 **A keyword leg can collide with a homonym and waste its whole recall.** The LATAM leg
+  `enem vestibular OR ensino` returned `50` rows, **almost all of them game "enemy" mods** (Hollow
+  Knight, Lethal Company, Godot). This is `T105`'s topic-head collision reproduced on the *keyword*
+  channel, and the Brazilian national exam is the token that triggers it. Spell it `ENEM` with a
+  qualifier (`enem redação`, `enem simulado`) or lose the leg.
+- 🔴 **Language tokens have no purchase at this star floor.** The leg
+  `swahili OR kiswahili OR yoruba OR amharic learning education` returned Chinese-language blogs and
+  Go examples. `0 of 34` novel-permissive-alive rows from the Africa census are identifiably
+  African-origin education projects — **declared, with the denominator, rather than left silent.**
+
+---
+
 ## 🆕 2026-11-09 (p730) — 🟢 **TEN COMPONENT AND PLATFORM ROWS, THE LARGEST PLATFORM EVER FILED HERE, AND A NEW COPYLEFT TIER THAT ACTUALLY PERMITS A CLOSED MODULE**
 
 **`4` foundations rows · `6` platform rows · `1` new foundations section (*Public-sector data

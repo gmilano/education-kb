@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Foundational Repositories — Education
 
-**Pass p728 · verified 2026-11-09.** Building blocks rather than deployable platforms:
+**Pass p731 · verified 2026-11-10.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -30,6 +30,38 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > `docs/License.txt` (`GPL-2.0`) where no root-filename probe can reach them.
 > 🔵 **Three of four index fields are wrong; `4 / 4` of this base's payload-derived cells are
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
+
+## North American institutional publisher estates 🆕 new section at `p731`
+
+**`436` repositories across four North American higher-education publishers were enumerated this
+pass, `275` of them under a permissive grant (`63.1 %`), `268` of them novel to this base, and `108`
+permissive *and* pushed in `2026`.** This base has recorded the North American institutional
+publisher tier as absent or empty across several passes; it is not absent, it is **infrastructure
+rather than pedagogy**, which is why every leg phrased around tutors and agents missed it. See
+`T267` for the measurement and `T268` for the one estate that inverts the pattern.
+
+| Publisher | Repos | Permissive | Dominant grant | Reading |
+|---|--:|--:|---|---|
+| **MIT Open Learning** — [`mitodl`](https://github.com/mitodl) | 186 | 112 (`60.2 %`) | `BSD-3-Clause` ×92 | The deepest estate: Open edX operations, learning-data platform, grading libraries. `11` AGPL-3.0 repos are the exception, not the rule. |
+| **University of Washington (Academic Experience Design)** — [`uw-it-aca`](https://github.com/uw-it-aca) | 154 | 126 (`81.8 %`) | `Apache-2.0` ×123 | The most permissive estate measured. Student-facing portal plus a full set of Canvas / LTI / SAML client libraries. `1` AGPL-3.0 repo in `154`. |
+| **Unicon** — [`Unicon`](https://github.com/Unicon) | 31 | 23 (`74.2 %`) | `Apache-2.0` ×22 | The sector's long-standing open-source services firm. **Zero copyleft repositories.** Identity, access and LTI reference tools. |
+| **University of Central Florida** — [`ucfopen`](https://github.com/ucfopen) | 65 | 14 (`21.5 %`) | `AGPL-3.0` ×45 | 🔴 **The outlier, and the cause is nameable: `30 / 30` `*-materia-widget` repositories are `AGPL-3.0` with no exceptions, while `6 / 7` LTI and template repositories are `MIT`.** The integration layer is permissive; the content-authoring platform is not. |
+
+| Repo | Stars | Licence | Last push | Why it is foundational |
+|---|--:|---|---|---|
+| [mitodl/keycloak-scim](https://github.com/mitodl/keycloak-scim) | 80 | Apache-2.0 | 2026-11-02 | **SCIM provisioning for Keycloak** — the piece that makes institutional rostering automatic instead of a CSV upload. `LICENSE`, `11,345 B` raw → `9,478 B` canonical, sha256₁₂ `399d47608b81`. The most-adopted novel row of this pass's estate census, and the one with the least education-specific surface — which is exactly why no tutoring-shaped leg found it. |
+| [mitodl/ol-data-platform](https://github.com/mitodl/ol-data-platform) | 51 | BSD-3-Clause | 2026-11-09 | MIT Open Learning's **learning-data platform** — the pipelines behind institutional learning analytics, in production, pushed today. `LICENSE`, `1,525 B` raw → `1,091 B` canonical, sha256₁₂ `90bd78b45663`. 🔵 This is the `BSD-3-Clause` constant this base recorded at `n=1`; it now has three observations, but **all three are `mitodl`**, so it stays `n=1` *publisher* and is still not a gate. |
+| [mitodl/mitx-grading-library](https://github.com/mitodl/mitx-grading-library) | 16 | BSD-3-Clause ⚠️ | 2026-11-07 | **Deterministic answer grading for Open edX** — numerical, symbolic and formula responses graded by code, with tolerance and partial credit. 🔵 **The single most directly reusable row of this pass:** `T90`, `P62` and `P91` all require a non-LLM examiner and this base has had to assemble one from parts. ⚠️ Two flags, both read from the bytes: the payload is **unwrapped** (`5` lines, longest `755` columns) so the published line rule returns `142 B` and would refuse it; and the grant **names no copyright holder at all** while its clauses require retaining "the above copyright notice". Clause 3 is present, so it is `BSD-3-Clause` in substance. Pin a commit and get the attribution confirmed in writing. |
+| [mitodl/open-edx-plugins](https://github.com/mitodl/open-edx-plugins) | 10 | BSD-3-Clause | 2026-11-09 | A maintained set of **Open edX plugins under a permissive grant**. 🔴 **This qualifies `p634`'s rule.** That pass measured `15 / 15` XBlocks `AGPL-3.0` and concluded the extension point carries the copyleft; here the same extension point is `BSD-3-Clause`. **The grant follows the publisher, not the plugin interface** — so "Open edX extensions are AGPL" must not be used as a screening heuristic. `LICENSE`, `1,496 B` raw → `1,070 B` canonical, sha256₁₂ `0b8bed1bcbbe`. |
+| [mitodl/ocw-studio](https://github.com/mitodl/ocw-studio) | 14 | BSD-3-Clause | 2026-11-09 | The authoring and publishing system behind **MIT OpenCourseWare**. `LICENSE`, `1,530 B` raw → `1,091 B` canonical, `90bd78b45663`. 🔵 A permissive content pipeline for an OER estate at national scale — the alternative to `ucfopen`'s AGPL-3.0 authoring layer. |
+| [ucfopen/lti-template-flask](https://github.com/ucfopen/lti-template-flask) | 47 | MIT | 2026-07-20 | **LTI tool scaffold in Flask**, from the publisher that runs it in production across a 70,000-student system. `LICENSE`, `1,130 B` raw → `870 B` canonical, `3d87852cf34a`. The fastest route from nothing to a tool that launches inside Canvas. |
+| [ucfopen/cookiecutter-python-lti](https://github.com/ucfopen/cookiecutter-python-lti) | 6 | MIT | 2026-05-12 | The same scaffold as a **cookiecutter template** — one command to a new LTI project. `LICENSE`, `1,130 B` raw → `870 B` canonical, `3d87852cf34a`. |
+| [ucfopen/yaml-to-qti](https://github.com/ucfopen/yaml-to-qti) | 0 | MIT | 2026-08-17 | **Authors QTI question banks from YAML.** `LICENSE`, `1,130 B` raw → `870 B` canonical, `3d87852cf34a`. 🔵 Filed at `0★` deliberately: this base holds a QTI *engine* (`p607`) and had no QTI *authoring* path, and a generated assessment is worthless if it cannot be loaded into the institution's own engine. Stars measure attention, not fit. |
+| [uw-it-aca/uw-restclients-canvas](https://github.com/uw-it-aca/uw-restclients-canvas) | 6 | Apache-2.0 | 2026-02-27 | **Canvas REST client** used in production by a 60,000-student university. `LICENSE`, `11,357 B` raw → `9,478 B` canonical, sha256₁₂ **`8a8071588bc2`** — the *second* accepted Apache-2.0 constant (`T269`), not a tampered payload. 🔵 The Apache-licensed alternative to `ucfopen/canvasapi` (`681★`, MIT) when the engagement's licence policy prefers a patent grant in the same family as the rest of the stack. |
+| [uw-it-aca/django-blti](https://github.com/uw-it-aca/django-blti) | 3 | Apache-2.0 | 2026-05-14 | **Basic LTI for Django** — the launch, validation and session half of building an LTI tool, as a reusable app. `LICENSE`, `11,358 B` raw → `9,478 B` canonical, `8a8071588bc2`. |
+| [Unicon/grouper-mcp](https://github.com/Unicon/grouper-mcp) | 4 | Apache-2.0 | 2026-10-27 | 🟢 **An MCP server over Internet2 Grouper** — higher-education group and access management, exposed as tools. `LICENSE`, `11,357 B` raw → `9,478 B` canonical, `399d47608b81`. 🔵 **A category this base did not hold:** every MCP row here reaches a *learning* system (Moodle, Anki, a curriculum API); this one reaches the **entitlement** system that decides who is allowed into a course at all. That is the question an institutional pilot actually fails on. ⚠️ `4★`, created this year. |
+| [ucfopen/equal-access-server](https://github.com/ucfopen/equal-access-server) | 1 | Apache-2.0 | 2026-09-18 | A deployable **accessibility-checking service** (IBM Equal Access rule engine) run by a university against its own course content. `LICENSE` (no README at HEAD), `11,363 B` raw → `9,478 B` canonical, `8a8071588bc2`. 🔵 Filed because `p730`'s accessibility finding had no *enforcement* component: this is the one that produces the audit record an EU or Section 508 procurement asks for. ⚠️ `1★`. |
+| [Open-Education-AI/OEAI](https://github.com/Open-Education-AI/OEAI) | 14 | Apache-2.0 | 2026-09-21 | **EMEA.** An open, standards-based **data framework for schools and multi-academy trusts** — the vocabulary layer between an English trust's MIS estate and anything built on top. `LICENSE`, `11,357 B` raw → `9,478 B` canonical, `399d47608b81`. Region placed on an explicit `UK` string and the word *trusts* in a `10,752 B` README. 🟢 New at p731; the first row this base holds aimed at the **multi-academy-trust** buyer, which is how most English state schools now procure. |
 
 ## Assessment and grading
 
