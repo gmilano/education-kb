@@ -4,6 +4,187 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P235–P240 — added at p747 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the recipe.**
+This set is the **federation layer's**: not *"who is this person"* (which `p736`'s `apereo/cas` rows
+answer) but **what an AI agent presents when it acts on a person's behalf across institutional
+boundaries.** 🟢 **The permissive core is complete and all of it was byte-read this pass** —
+`SATOSA`, `pysaml2`, `pyop`, `grouper`, `comanage-registry`, `casdoor`, `mcp-auth-proxy`,
+`OpenConext` — so the licence risk sits in **two specific places**: the PHP library estate
+(**LGPL-2.1**, `T407`) and the **standards** layer (`REFEDS/eduperson` is **`CC BY-NC-SA 4.0`**,
+`T397`). `P239` draws the first boundary and `P237` refuses the second.
+
+---
+
+## P235 — The federation-aware agent: the agent inherits the student's entitlements instead of holding a service account (all five regions; 6–10 weeks)
+
+**The problem, stated the way a CIO states it.** Every agent deliverable in this base — tutoring,
+assessment, EMIS, library — needs to read records about an identified person. The default
+implementation gives the agent a **service account with institutional authority**, which means it
+can read every student's records and the audit log says *"the agent did it"*. 🔴 **That is
+indefensible under FERPA, and under the EU AI Act's Annex III education obligations from
+`2 Dec 2027` it is indefensible with a date attached.**
+
+**The wiring, and the seam that makes it possible.** MCP authorises with **OAuth 2.1**; research-and
+-education federations authenticate with **SAML 2.0**. One component bridges them:
+
+| Step | Component | Licence (byte-read `2026-11-10`) |
+|---|---|---|
+| 1. Put the agent behind an OAuth client, not a credential | [`babs/mcp-auth-proxy`](https://github.com/babs/mcp-auth-proxy) `19★` | 🟢 Apache-2.0 · `11,357 B` |
+| 2. Translate the institution's SAML IdP into OIDC for that client | [`IdentityPython/SATOSA`](https://github.com/IdentityPython/SATOSA) `277★` | 🟢 Apache-2.0 · `10,177 B` |
+| 3. Underlying SAML implementation | [`IdentityPython/pysaml2`](https://github.com/IdentityPython/pysaml2) `618★` | 🟢 Apache-2.0 · `10,758 B` |
+| 4. Issue the OIDC tokens if the client has no IdP of its own | [`IdentityPython/pyop`](https://github.com/IdentityPython/pyop) `100★` | 🟢 Apache-2.0 · `10,177 B` |
+| 5. Resolve *"is this person allowed?"* from the authoritative group source | [`Internet2/grouper`](https://github.com/Internet2/grouper) `103★` | 🟢 Apache-2.0 (index says `NOASSERTION`) · `547 B` notice |
+| 6. Test the whole chain in CI without a federation membership | [`cdelmonte-zg/nanoidp`](https://github.com/cdelmonte-zg/nanoidp) `24★` | 🟢 MIT · `1,076 B` |
+| 7. Verify on the wire that only the intended attributes were released | [`simplesamlphp/SAML-tracer`](https://github.com/simplesamlphp/SAML-tracer) `188★` | 🟢 BSD-2-Clause · `1,308 B` |
+
+**The deliverable** is a deployed proxy, a SATOSA configuration with an explicit attribute-release
+policy, a Grouper-backed entitlement check in the agent's tool layer, and **a CI suite that proves
+the agent cannot read a record the signed-in person could not read.** 🔵 **Sell the last item** —
+it is the artefact an auditor asks for and the one no commercial agent platform currently ships.
+
+⚠️ **Where it does not apply:** a client with no federation membership at all. Use `P238`'s build
+instead, or `casdoor` (Apache-2.0, `14,806★`) as a self-contained IAM.
+
+---
+
+## P236 — The non-human identity register: giving every agent a human owner, a purpose and an expiry (North America first; 4–6 weeks)
+
+**Why now.** 🔴 **There is no ratified standard for agent identity** (`T406`): NIST CAISI opened its
+AI Agent Standards Initiative in **February 2026**, the NCCoE published a concept paper, the Cloud
+Security Alliance published guidance in **September 2026**, and vendors are shipping ahead of all of
+it. The control sets institutions are actually audited against are the **OWASP Non-Human Identity
+Top 10** and **NIST CSF 2.0 `PR.AC-4`**. 🟢 **The three requirements every one of those sources
+agrees on are the same three: each non-human identity needs an accountable human owner, a declared
+purpose, and a time limit.**
+
+**The pattern is to stop building that register in a spreadsheet.**
+
+| Step | Component | Licence |
+|---|---|---|
+| Register each agent as a non-person identity with an owner, role and validity window | [`Internet2/comanage-registry`](https://github.com/Internet2/comanage-registry) `16★` | 🟢 Apache-2.0 · `11,357 B` |
+| Express the agent's permission as a group membership, not as a config file | [`Internet2/grouper`](https://github.com/Internet2/grouper) `103★` | 🟢 Apache-2.0 |
+| Provision and **de-provision** it in the enterprise directory | [`darrenjrobinson/entra-scim-mcp`](https://github.com/darrenjrobinson/entra-scim-mcp) `2★` (Entra) · [`alpadalar/ActiveDirectoryMCP`](https://github.com/alpadalar/ActiveDirectoryMCP) `53★` (AD/LDAP) | 🟢 MIT · `1,073 B` / `1,070 B` |
+| Where the IdP is Keycloak | [`ChristophEnglisch/keycloak-model-context-protocol`](https://github.com/ChristophEnglisch/keycloak-model-context-protocol) `46★` | 🟢 MIT · `1,079 B` |
+
+🔴 **Do not use [`sshaaf/keycloak-mcp-server`](https://github.com/sshaaf/keycloak-mcp-server)
+(`49★`) — it is the highest-starred Keycloak MCP server and it has no grant at `7` probed paths.**
+The `46★` MIT row above is the substitute.
+
+**The deliverable** is a populated register, an expiry-enforcement job, and a one-page mapping from
+each registered agent to the OWASP NHI Top 10 and `PR.AC-4`. 🔵 **`comanage-registry` has existed
+for a decade for exactly this purpose — guest and collaborator identities — and this pattern is the
+observation that an agent is a collaborator who never leaves unless you make it.**
+
+---
+
+## P237 — Attribute-release minimisation: the agent gets an opaque identifier, not the directory (all five regions; 1–2 weeks, run before go-live)
+
+**The failure this prevents.** A federation IdP can release a full attribute bundle — name, e-mail,
+affiliation, student number, entitlements. An agent needs **one** of those in most designs: a
+stable, opaque, per-service identifier. 🔴 **Default SATOSA and SimpleSAMLphp configurations release
+more than the agent needs, and the release is invisible unless somebody reads the assertion.**
+
+**The procedure, and it is cheap enough to run on every engagement.**
+
+1. **Read the actual assertion on the wire** with
+   [`simplesamlphp/SAML-tracer`](https://github.com/simplesamlphp/SAML-tracer) (`188★`,
+   🟢 BSD-2-Clause, `1,308 B`) — not the configuration file, **the assertion**.
+2. **Name the minimum bundle** in the attribute-release policy, preferring the opaque
+   per-service identifier (`eduPersonTargetedID` / pairwise subject) over anything nameable.
+3. **Validate the resulting metadata** before publishing it to the federation, with
+   [`OpenConext/eduGAIN-Metadata-Validator`](https://github.com/OpenConext/eduGAIN-Metadata-Validator)
+   (🟢 Apache-2.0, `11,356 B`) or [`brunato/edugain-xml-validator`](https://github.com/brunato/edugain-xml-validator)
+   (🟢 BSD-3-Clause, `1,557 B`, SISSA).
+4. **Aggregate and publish** with [`IdentityPython/pyFF`](https://github.com/IdentityPython/pyFF)
+   (`59★`, 🟢 BSD-2-Clause, SUNET) where the client operates a federation rather than joining one.
+
+🔴 **The refusal, and it is the licence finding of the pass (`T397`).**
+[`REFEDS/eduperson`](https://github.com/REFEDS/eduperson) — the repository holding the schema that
+defines these very attributes — is **`CC BY-NC-SA 4.0`** (`20,848 B`), indexed `NOASSERTION`.
+🟢 **Reference the attribute names** (names are not copyrightable); **never vendor the schema files,
+LDIF or object-class definitions into a client deliverable.** Put this line in the engagement's
+licence register before anyone opens the repository.
+
+---
+
+## P238 — LATAM: build the federation rather than join one, with the copyleft boundary drawn before the first commit (LATAM; 12–16 weeks)
+
+**The measurement this pattern exists for (`T403`).** `8` probes — three of them in Portuguese and
+Spanish — return a LATAM research-and-education federation estate of **`3` repositories, newest
+pushed `2016`, `0` grants**: `org:RedCLARA`, `org:InnovaRed` and `org:cafe-rnp` are all `422`
+(not canonical addresses), `org:RNP` has `2` dead repositories and `org:reuna` has `1`.
+🔵 **Brazil's CAFe and RedCLARA's regional federation are operationally real; their code is not on
+this channel.** So the engagement is not integration — **it is construction**, and every component
+is permissive.
+
+| Layer | Component | Licence (byte-read) | Why this one |
+|---|---|---|---|
+| Protocol proxy | [`SATOSA`](https://github.com/IdentityPython/SATOSA) `277★` | 🟢 Apache-2.0 | SAML ↔ OIDC in both directions; the agent layer plugs in here |
+| SAML implementation | [`pysaml2`](https://github.com/IdentityPython/pysaml2) `618★` | 🟢 Apache-2.0 | The library everything else sits on |
+| Metadata aggregation | [`pyFF`](https://github.com/IdentityPython/pyFF) `59★` | 🟢 BSD-2-Clause | What makes it a *federation* rather than a pile of IdPs |
+| Entitlements | [`Internet2/grouper`](https://github.com/Internet2/grouper) `103★` | 🟢 Apache-2.0 | Institutional group authority |
+| IdP, if greenfield | [`casdoor/casdoor`](https://github.com/casdoor/casdoor) **`14,806★`** | 🟢 Apache-2.0 | Self-describes as agent-first; OIDC/OAuth2/SAML/CAS/LDAP/SCIM in one deployable |
+| IdP, if PHP-shop | [`simplesamlphp`](https://github.com/simplesamlphp/simplesamlphp) `1,146★` | ⚠️ **LGPL-2.1** | ⚠️ **Read `P239` first** |
+| Reference platform to copy | [`OpenConext`](https://github.com/OpenConext/OpenConext-engineblock) (`63` repos) | 🟢 Apache-2.0 | SURF runs a national federation on it; `OpenConext-deploy` is the Ansible |
+
+🔴 **Draw the boundary in week one, not at delivery:** if SimpleSAMLphp is chosen, the
+Globant-authored code is a **module** against its module interface. **A fork of its core carries
+LGPL-2.1 into the client's deliverable.** The precedent that this works is
+[`simplesamlphp-module-oidc`](https://github.com/simplesamlphp/simplesamlphp-module-oidc) — **MIT,
+written by RedIRIS, living inside an LGPL-2.1 project** (`T407`).
+
+🔵 **The demand case is on `intel/market.md`:** `92%` of LATAM students and `79%` of faculty actively
+using AI (DEC × Tec de Monterrey, 2026) against **~`30%` of universities with any published AI
+policy.** Governance starts with who the system thinks you are.
+
+---
+
+## P239 — Build in Python, integrate with PHP over its module interface: the licence rule for the whole federation tier (all five regions; architectural, 1 week to decide)
+
+**The gradient, measured on `37` payloads this pass (`T407`).** The tier does **not** split
+standards-permissive / platform-copyleft the way `p745`'s assessment tier did. It splits by
+**language estate**:
+
+| Estate | Read | Verdict |
+|---|--:|---|
+| Python (`IdentityPython`: `pysaml2`, `SATOSA`, `djangosaml2`, `pyop`) | `4 / 4` | 🟢 **Apache-2.0** |
+| PHP core (`simplesamlphp`, `saml2`) | `2 / 2` | ⚠️ **LGPL-2.1** (`24,487` / `24,459 B`) |
+| PHP module layer (`simplesamlphp-module-oidc`) | `1 / 1` | 🟢 **MIT** — the escape route |
+| Platform (`OpenConext`, `Internet2`, `incommon`, `REANNZ`) | `7 / 7` | 🟢 **Apache-2.0** |
+| Standards (`REFEDS`, `SeamlessAccess`) | — | 🔴 **NC / `NOASSERTION`** |
+
+**The rule:** 🟢 **Globant-owned components in Python against `SATOSA`/`pysaml2`; integration with
+SimpleSAMLphp as a module, never as a fork.** 🔴 **And the part to carry into the next tier: this
+gradient is the inverse of `T381`'s.** The standards layer here is the *least* clearly licensed part
+of the stack while the platforms are permissive — so **the posture must be re-derived per tier and
+never assumed from the last one.**
+
+---
+
+## P240 — The licence-and-liveness pre-flight, extended: what `p746`'s version still let through (all five regions; 1–2 days, run once per engagement)
+
+`p746`'s `P234` established a three-grep pre-flight. 🔴 **This pass broke it three ways on first
+reuse, and the repairs are each one line.**
+
+| # | Check | Why — the failure that motivated it |
+|---|---|---|
+| 1 | **Take `default_branch` from the search index on every probe.** Never assume `main`/`master` | 🔴 `T401`: `4` of `37` payloads live on `GROUPER_7_BRANCH`, `code-develop`, `maint-1` and `develop`. **All four are real grants** a hard-coded probe scores absent |
+| 2 | **Classify from the title block.** Use `grep -c 'END OF TERMS AND CONDITIONS'` only to detect *doubling* (`≥2`) | 🔴 `T398`: `OpenConext/Stepup-saml-bundle` is a valid Apache-2.0 body at `10,140 B` with **`EOT = 0`**. `p746`'s discriminator returns a false negative as a presence test |
+| 3 | **A digest match is a publisher signature only *within* one publisher** | 🔴 `T400`: `58d1e17ffe51` appears across **five unrelated publishers**. Across publishers it is only the SPDX text, and inferring a fork relationship from it is wrong |
+| 4 | 🆕 **If the payload's first non-blank character is `/*`, `#`, `<!--` or `//`, it is a source header, not a licence. If it contains `License:` followed by a path, the grant is *deferred* — go fetch it** | 🔴 `T399`: `GEANT/CAT`'s `LICENSE` is a C comment block pointing at `web/copyright.inc.php`. The real terms are a **bespoke English-law licence with no patent grant**. A `LICENSE`-exists gate scores it permissive |
+| 5 | **Probe `COPYING` and `LICENSE.txt`, not just `LICENSE`** | `IdentityPython/djangosaml2` publishes at `COPYING`; `Internet2/grouper` and `CSCfi/shibboleth-idp-oidc-extension` at `LICENSE.txt` |
+| 6 | **A `NOASSERTION` index value predicts nothing in either direction** | `6` corrections this pass: `4` toward permissive (MIT, BSD-2, BSD-3, Apache-2.0), **`2` toward refusal** (`CC BY-NC-SA 4.0`, bespoke). 🔵 Index-is-generous is as common as index-is-silent — `OpenConext/Mujina` (`388★`) is indexed Apache-2.0 with **no grant in the repository at all** |
+
+| 7 | 🆕 **Probe an extensionless `README` in the liveness chain:** `README.md` → `readme.md` → `README.rst` → **`README`** → `LICENSE` | 🔴 `T408`: `apereo/mod_auth_cas` (`150★`, alive, pushed `2026-05-27`) scores `404` on all four standing links because its readme has no extension and it has no root grant. **The hole bites hardest on the ungranted population — the repositories that most need classifying** |
+
+🔵 **Run this before the first line of code and once more before delivery.** On this pass it changed
+the disposition of **`4` rows** — two promoted from apparent-ungranted to permissive, two demoted
+from apparent-permissive to refused.
+
+---
+
 ## 🆕 P231–P234 — added at p746 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the

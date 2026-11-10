@@ -4,6 +4,108 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p747) — 🔴 **THE FEDERATION LAYER: `p736` SHELVED THE SSO SERVER AND LEFT WHAT IT JOINS AT `0` MENTIONS. 🔴 THE IdP GLOBAL R&E RUNS ON IS NOT ON GITHUB AND IS BLOCKED HERE. 🔴 THE ATTRIBUTE SCHEMA EVERY FEDERATION USES IS `CC BY-NC-SA 4.0`. 🟢 THE R&E AGENT LAYER IS A MEASURED NEAR-NIL AND THAT IS THE OPPORTUNITY.**
+
+**`6` agent rows (all MIT or Apache-2.0) · `13` foundations rows · `5` platform rows · `42`
+addresses probed · `37` licence payloads byte-read, `36 / 37` classified from the title block · `6`
+index values materially corrected, `2` of them in the *refusing* direction · `5` grant-absences
+recorded as `T302` honest negatives (NOT as denominators) · all `5` regional blocks written on
+`intel/market.md` · `T396`–`T408` declared.**
+
+### 🟢 The register, and why it paid
+
+This pass changed the noun for the fifth consecutive time. `p743` asked what a research university
+**runs**, `p744` what its **scholarly APIs** are, `p745` what the regulator **assesses**, `p746` what
+a ministry **runs its numbers on**, and `p747` asks **what a student signs in with — and what an
+agent must present to act on that student's behalf.**
+
+🔴 **The answer exposed a seam in this base's own coverage.** `p736` added `apereo/cas` (`11,393★`)
+and three CAS clients under the heading *"higher-education identity"*. That is the SSO **server**.
+**The federation it joins — metadata aggregation, protocol proxying, attribute release, entitlement
+authority — was at `0` mentions across every live shelf:** `shibboleth`, `simplesamlphp`,
+`IdentityPython`, `Internet2/grouper`, `OpenConext`, `REFEDS`, `SeamlessAccess`, `casdoor`.
+
+🔵 **The commercial point, in one line:** a tutoring agent sells to a faculty, an assessment agent to
+a registrar, an EMIS agent to a ministry — **but all three have to authenticate, and in
+research-and-education that means a federation, not a password.** The buyer of this tier is the CIO,
+and it is the gate every other agent in this base has to pass through.
+
+### The `6` agent rows
+
+| Agent | Stars | Licence (byte-read) | Region | Note |
+|---|--:|---|---|---|
+| [alpadalar/ActiveDirectoryMCP](https://github.com/alpadalar/ActiveDirectoryMCP) | 53 | 🟢 MIT · `1,070 B` · `e97632c92422` | ⚠️ unplaced (`T388`) | MCP over LDAP: users, groups, computers — the directory most institutions actually hold identities in |
+| [ChristophEnglisch/keycloak-model-context-protocol](https://github.com/ChristophEnglisch/keycloak-model-context-protocol) | 46 | 🟢 MIT · `1,079 B` · `4f8966b4d591` | ⚠️ unplaced | The highest-starred **granted** Keycloak MCP server |
+| [cdelmonte-zg/nanoidp](https://github.com/cdelmonte-zg/nanoidp) | 24 | 🟢 MIT · `1,076 B` · `fce98968213c` | ⚠️ unplaced | A test IdP speaking real OAuth2/OIDC **and** SAML 2.0 — filed as engagement tooling for CI, not as a product |
+| [babs/mcp-auth-proxy](https://github.com/babs/mcp-auth-proxy) | 19 | 🟢 Apache-2.0 · `11,357 B` · `58d1e17ffe51` | ⚠️ unplaced | **The architecturally decisive row:** OAuth 2.1 + OIDC in front of a private MCP server, so the agent inherits a person's entitlements instead of holding a service account. `P235` |
+| [HaithamOumerzoug/keycloak-mcp](https://github.com/HaithamOumerzoug/keycloak-mcp) | 13 | 🟢 MIT · `1,074 B` · `420f0649bdb0` | ⚠️ unplaced | Filed for the denominator: **`3` independent Keycloak MCP servers, none canonical** |
+| [darrenjrobinson/entra-scim-mcp](https://github.com/darrenjrobinson/entra-scim-mcp) | 2 | 🟢 MIT · `1,073 B` · `69b23a400f2b` | ⚠️ unplaced | SCIM 2.0 provisioning over MCP — the only artefact found that touches **granting and revoking** |
+
+🔵 **All six are commercial-IAM artefacts. None of them knows what eduGAIN, an entity category or
+`eduPersonTargetedID` is** — and that, measured, is the finding.
+
+### 🔴 `T402` — the identity agent layer exists for commercial IAM and does not exist for R&E federation
+
+| Commercial-IAM leg | Total | | R&E-federation leg | Total |
+|---|--:|---|---|--:|
+| `oidc mcp server` | `164` | | `shibboleth mcp server` | **`2`** |
+| `keycloak mcp server` | `106` | | `eduroam mcp` | **`0`** |
+| `identity governance mcp` | `102` | | `saml metadata agent llm` | **`0`** |
+| `ldap mcp server` | `29` | | `entitlement agent education` | **`0`** |
+| `scim mcp server` | `20` | | `federated identity agent education` | **`0`** |
+| `saml mcp server` | `16` | | `federacao CAFe shibboleth` | **`0`** |
+
+🟢 **`437` repositories on one side of that table and `2` on the other.** The two on the right are
+one held row (`wiestju/ilias-mcp`, MIT — the only MCP server on GitHub that authenticates *through*
+Shibboleth, `17` mentions, caught by `P210`) and one ungranted.
+
+### 🔴 The licence findings of the pass, and two of them refuse a row
+
+- **`T397`** — [`REFEDS/eduperson`](https://github.com/REFEDS/eduperson), the attribute vocabulary
+  **every** R&E federation releases attributes with, is indexed `NOASSERTION` and is
+  **`CC BY-NC-SA 4.0`** by payload (`20,848 B`, `9e502ba75fd0`). NonCommercial **on the schema**.
+  Reference the specification; never vendor the files into a deliverable (`P237`).
+- **`T399`** — [`GEANT/CAT`](https://github.com/GEANT/CAT)'s `LICENSE` is a C comment block that
+  **points at a file inside the deployed application**. Resolved: a bespoke English-law licence,
+  copyleft-shaped, **no patent grant**. A `LICENSE`-exists gate scores it permissive.
+- **`T407`** — the tier's licence gradient runs along the **language estate**: Python
+  (`IdentityPython`) `4 / 4` Apache-2.0; PHP (`simplesamlphp`) `2 / 2` **LGPL-2.1**; platform
+  (`OpenConext`/`Internet2`/`REANNZ`/`incommon`) `7 / 7` Apache-2.0. **Build in Python, integrate
+  with PHP over its module interface** (`P239`).
+- **`6` index corrections:** `simplesamlphp-module-oidc` → **MIT** (RedIRIS, ES); `pyFF` →
+  **BSD-2-Clause** (SUNET, SE); `Internet2/grouper` → **Apache-2.0** (notice form, `547 B`);
+  `gakunin-ds` → **BSD-3-Clause** (SWITCH lineage); `REFEDS/eduperson` → **CC BY-NC-SA 4.0**;
+  `GEANT/CAT` → **bespoke, deferred**. 🔵 **Four in the permissive direction, two in the refusing
+  one** — the index is wrong in both directions, which is the argument for reading the bytes.
+
+### 🔴 The instrument findings, and both correct the previous pass
+
+- **`T396`** — **Shibboleth is not reachable from this pipeline at all.** `org:shibboleth` → `422`;
+  `shibboleth.net`, `git.shibboleth.net` and the project wiki → proxy `CONNECT 403`, `3 / 3`. The
+  GitHub surface is third-party wrappers last pushed **2020**. 🔵 **`0` mentions in `746` passes was
+  an instrument boundary, not negligence** — and it is the honest answer to give a client who asks
+  this base about Shibboleth.
+- **`T398`** — `p746`'s `grep -c 'END OF TERMS AND CONDITIONS'` fails as a presence test on first
+  reuse: `OpenConext/Stepup-saml-bundle` is a valid Apache-2.0 body at `10,140 B` with `EOT = 0`.
+- **`T400`** — `p746`'s publisher-digest control does not generalise: `58d1e17ffe51` sits on **five
+  unrelated publishers**. Within a publisher, canonical; across publishers, meaningless.
+- **`T401`** — `4` of `37` payloads live outside `main`/`master` (`GROUPER_7_BRANCH`,
+  `code-develop`, `maint-1`, `develop`) and **all four are real grants**.
+- **`T388` holds a second time** — `api.github.com/repos/…` session-gated for both callers,
+  re-controlled against a `200` raw read in the same minute.
+
+### 🔴 Legs that returned only holdings — the mandated global legs, fourth consecutive pass
+
+| Leg | Verdict |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **`41`st consecutive nil.** General round-ups only (OpenHands, browser-use, MetaGPT, AutoGen), licences disagreeing between sources |
+| `github trending education AI 2026` | 🔴 **All leads held:** `DeepTutor` **`1,109`** mentions, `Claw-ED` `125`, `ChinaTextbook` `34`, `interactive-learning` held |
+| `open source platform education ERP CRM MIT Apache` | 🔴 Returned `OpenEduCat` only, already held and already corrected to LGPL by this base |
+| `AI education industry trends 2026` | 🔵 Paid on **market** rather than on repositories — `T406`'s standards picture and the regional figures on `intel/market.md` |
+
+🟢 **`P210` paid twice, once decisively.** `wiestju/ilias-mcp` was drafted as this pass's headline row
+and is held `17` times; `GEANT/CAT` was drafted as a clean platform find before its licence resolved.
+
 ## 🆕 2026-11-10 (p746) — 🟢 **THE EMIS AGENT TIER: `6` ROWS OVER A `252`-REPOSITORY PLATFORM THIS BASE HELD AT `0` MENTIONS. 🔴 THE MOST COMPLETE TOOLKIT IN THE TIER IS INDEXED `NOASSERTION` AND IS PROPRIETARY ON READING THE BYTES. 🔴 `p745`'s TREE-DENOMINATOR CHANNEL IS CLOSED IN THIS SESSION.**
 
 **`6` agent rows (`5` new + `1` `P210` promotion) · `12` foundations rows · `5` platform rows · `26` licence payloads byte-read, `26 / 26` classified from the title block · `2` index values materially corrected · `2` grant-absences recorded as `T302` honest negatives (NOT as denominators) · all `5` regional blocks written on `intel/market.md` · `T388`–`T395` declared.**

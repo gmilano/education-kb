@@ -4,6 +4,363 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p747` (researched 2026-11-10) — `T396`–`T408`
+
+**Added above `p746`'s `T388`–`T395`.** `p747` changed the register to **the inter-institutional
+federation layer** — what lets a student from one institution sign in at another's service, and what
+an AI agent must present to act on that student's behalf. `42` addresses probed, **`37` licence
+payloads byte-read**, `36 / 37` classified from the title block, **`6` index values materially
+corrected** (`4` permissive, `2` refusing), `5` grant-absences recorded as `T302` honest negatives
+with no denominator. **Three of this pass's twelve findings correct `p746`'s own new instruments on
+their first reuse.**
+
+> ⚠️ **Identifier note, honouring `733-K`.** `T396` follows `T395`, the highest `##`/`###`
+> **heading** in this file. Bare `T[0-9]+` matches in prose reach higher and are citations.
+
+---
+
+## T408 — 🔴 This base's existence-probe chain has a second hole, it is one filename wide, and it fails on exactly the population most likely to be refused
+
+`p747`'s own URL verification scored [`apereo/mod_auth_cas`](https://github.com/apereo/mod_auth_cas)
+**dead** — `404` on all four links of the standing chain (`README.md` → `readme.md` → `README.rst`
+→ `LICENSE`, the case-ordered form repaired at `724-I`). 🟢 **It is alive:** the search index
+returns `count=1`, `150★`, `default_branch=master`, pushed `2026-05-27`, and the raw channel serves
+`master/README` (**no extension**) and `master/configure.ac` with `200`.
+
+| Probe | Result |
+|---|--:|
+| `master/README.md` | `404` |
+| `master/README` | **`200`** |
+| `master/configure.ac` | **`200`** |
+| `HEAD/README` | **`200`** |
+
+🔴 **The hole is `README` with no extension, and the correlation is the dangerous part.** The
+chain's fourth link is `LICENSE`, so an extensionless `README` is only fatal when the repository
+*also* has no root grant — which is precisely the **ungranted** population. 🔵 **So the probe
+fails hardest on the repositories this base most needs to classify, and it converts an honest
+`T302` "no grant at `7` probed paths" refusal into a false "dead address" claim.** `p745`'s `T375`
+found this chain had "a hole one token wide"; this is a second, independent one.
+
+🟢 **The repair is one link:** `README.md` → `readme.md` → `README.rst` → **`README`** →
+`LICENSE`. Added as check `7` in `P240`. ⚠️ **And the liveness verdict of record for
+`apereo/mod_auth_cas` is ALIVE and UNGRANTED** — its refusal on `agents/top.md` stands on the
+grant absence, not on liveness.
+
+---
+
+## T396 — 🔴 The identity provider that most of global research-and-education runs is not on GitHub and is unreachable from this pipeline, which is why `746` passes never saw it
+
+**Shibboleth** is the IdP behind InCommon, eduGAIN, the UK Access Management Federation, AAF,
+GakuNin and most of the national federations this base has now enumerated. It has **`0` mentions
+across every live shelf**. That was never an oversight:
+
+| Probe | Result |
+|---|---|
+| `gh api -X GET search/repositories -f q='org:shibboleth'` | **`422`** — the `T359` *"not a canonical current address"* state |
+| `org:Shibboleth` (case variant) | **`422`** |
+| `curl -L https://www.shibboleth.net/` | **proxy `CONNECT` → `403`** |
+| `curl -L https://git.shibboleth.net/` | **proxy `CONNECT` → `403`** |
+| `curl -L https://shibboleth.atlassian.net/wiki/…` | **proxy `CONNECT` → `403`** |
+| `shibboleth-identity-provider` (keyword, sorted by stars) | `Unicon/shibboleth-idp-dockerized` `109★` Apache-2.0 **pushed 2020-01-11**; `uchicago/shibboleth-oidc` `82★` Apache-2.0 **pushed 2020-10-13** |
+
+🔴 **The project's source lives on its own Git service, which this environment's network policy does
+not reach, and GitHub holds only third-party wrappers that stopped five to six years ago.**
+🔵 **Three things follow, and the third is the valuable one.** First, this base's instrument is
+GitHub-shaped, so anything off-GitHub is structurally invisible to it — `T396` is the first finding
+to name that boundary explicitly. Second, **the absence of a project from these shelves is not
+evidence about the project.** Third, and operationally: **an engagement that must evaluate or extend
+Shibboleth cannot be served from this pipeline** and needs a channel that reaches
+`git.shibboleth.net`. That is a better answer to give a client than silence.
+
+🟢 **What this base *can* serve instead, all verified this pass:** the SAML libraries
+(`IdentityPython/pysaml2`, Apache-2.0), the protocol proxy (`SATOSA`, Apache-2.0), the metadata
+aggregator (`pyFF`, BSD-2-Clause), the alternative IdP (`simplesamlphp`, LGPL-2.1), the entitlement
+authority (`Internet2/grouper`, Apache-2.0) and the deployable federation platform (`OpenConext`,
+Apache-2.0).
+
+---
+
+## T397 — 🔴 The attribute vocabulary that every research-and-education federation on earth releases attributes with is `CC BY-NC-SA 4.0`
+
+[`REFEDS/eduperson`](https://github.com/REFEDS/eduperson) holds the **eduPerson** object class and
+schema files — `eduPersonPrincipalName`, `eduPersonTargetedID`, `eduPersonEntitlement`, the
+attributes an IdP actually asserts about a student. The GitHub index says **`NOASSERTION`**. The
+payload is **`Attribution-NonCommercial-ShareAlike 4.0 International`** (`20,848 B`, sha256₁₂
+`9e502ba75fd0`).
+
+🔴 **NonCommercial, on the schema, from the body that defines it.** `p744`'s `T372` found an
+`MIT`-indexed repository at `2,285★` shipping `CC BY-NC-SA 4.0` inside itself; this is the same
+defect one layer more consequential, because **the artefact is a standard rather than a tool.**
+
+🟢 **The operational rule, and it is narrow enough to follow:** *reference* the eduPerson
+specification by attribute name — attribute names are not copyrightable — and **never vendor the
+schema files, LDIF or object-class definitions into a client deliverable.** Enforced as a refusal in
+`P237`. 🔵 **And note the shape of the surrounding estate:** `org:refeds` is `5` repositories and
+`4 / 5` are `NOASSERTION` documents. The standards layer of this tier is the **least** clearly
+licensed part of it, which inverts `p745`'s `T381` (where the standards body was the permissive one).
+
+---
+
+## T398 — 🔴 `p746`'s `END OF TERMS AND CONDITIONS` discriminator fails as a presence test on its first reuse, and the corrected rule is narrower
+
+`p746` declared `T391`: an Apache-2.0 payload can be the licence concatenated with itself, and the
+discriminator is `grep -c 'END OF TERMS AND CONDITIONS'`. 🔴 **Used as a test for *whether* a payload
+is Apache-2.0, it returns a false negative.**
+
+[`OpenConext/Stepup-saml-bundle`](https://github.com/OpenConext/Stepup-saml-bundle): index
+`Apache-2.0`, payload `10,140 B`, digest `4cd13f7a31e9`, title block *"Apache License / Version 2.0,
+January 2004"*, body complete through clause 9 ("Accepting Warranty or Additional Liability") — and
+**no `END OF TERMS AND CONDITIONS` line and no appendix at all.** `EOT = 0`.
+
+| Rule | Status after `p747` |
+|---|---|
+| `EOT ≥ 2` ⇒ the payload contains the licence more than once | 🟢 **Holds.** `T391`'s actual finding |
+| `EOT = 1` ⇒ canonical single Apache-2.0 | 🟢 Holds on `33` of this pass's Apache payloads |
+| `EOT = 0` ⇒ not Apache-2.0 | 🔴 **FALSE.** `1` counter-example at `10,140 B` |
+
+🟢 **Classification stays with the title block, which was `36 / 37` this pass.** The grep is a
+*doubling* detector and nothing else. 🔵 **This is the third consecutive pass in which the previous
+pass's newest instrument needed narrowing on first use** (`p745`'s `T374` → `p746`'s `T388`;
+`p746`'s `T391` → this; `p746`'s `T392` → `T400`). **A finding declared in the pass that discovered
+it has not yet been tested; `p748` should treat `T396`–`T407` the same way.**
+
+---
+
+## T399 — 🔴 A file named `LICENSE` can be a pointer rather than a grant, and the real terms can require deploying the software to read
+
+[`GEANT/CAT`](https://github.com/GEANT/CAT) — `124★`, the eduroam **Configuration Assistant Tool**,
+the generator behind per-institution eduroam installers across Europe. Index: **`NOASSERTION`**.
+`LICENSE`: **`1,095 B`**, digest `e772049431f9`, and it opens `/*` — it is a **C comment block**. It
+records GÉANT's copyright and its EU framework-programme grant numbers (GN3 `238875`, GN3plus
+`605243`, GN4-1 `691567`, GN4-2 `731122`), its Amsterdam Chamber of Commerce registration, and then:
+
+> *"License: see the `web/copyright.inc.php` file in the file structure or
+> `<base_url>/copyright.php` after deploying the software"*
+
+🟢 **Resolved by a second fetch** — `web/copyright.inc.php` returns `200` on the raw channel
+(`copyright.php` at the root returns `404`). The terms are a **bespoke licence governed by English
+copyright law**: derivative works must be licensed under the same licence, no endorsement using
+GÉANT's name or marks, and explicitly **"No patent licence is granted"** beyond one narrow claim set.
+
+🔴 **Three gates score this wrongly and the third is this base's own.** The search index reports
+nothing. A `LICENSE`-exists probe reports *granted*. **A probe that reads the first line and
+pattern-matches `Copyright (c)` reports a BSD-family permissive grant** — because that is exactly
+what the top of this file looks like. 🟢 **The discriminator is cheap:** a payload whose first
+non-blank character is `/*`, `#`, `<!--` or `//` is a **source header**, not a licence, and the word
+`License:` followed by a path is a **deferral**. Wired into `P234`'s pre-flight as a fourth grep.
+⚠️ **Disposition: refused for build-on work**, filed on `verticals/solutions.md` for the market map
+and the integration surface only.
+
+---
+
+## T400 — 🔴 `p746`'s publisher-digest control does not generalise: cross-publisher byte-identity is the *norm* for Apache-2.0
+
+`p746` declared `T392`: a repeated licence digest identifies a publisher's canonical payload. 🔴 **On
+`37` payloads from `19` publishers, the same digests cross publisher boundaries freely.**
+
+| Digest | Size | Publishers carrying it |
+|---|--:|---|
+| `58d1e17ffe51` | `11,357 B` | **`IdentityPython`, `Internet2`, `REANNZ`, `CSCfi`, `babs`** — five unrelated |
+| `43070e2d4e53` | `11,356 B` | `casdoor`, `OpenConext` |
+| `c5accbbd8546` | `11,356 B` | `Unicon`, `uchicago` |
+| `ef777cb1e5f4` | `10,177 B` | `IdentityPython` ×2 (`SATOSA`, `pyop`) — **within** one publisher |
+| `0cec06e0e55f` | `10,173 B` | `OpenConext` ×2 (`engineblock`, `pdp`) — **within** one publisher |
+
+🟢 **Corrected statement:** *within* one publisher, a repeated digest is evidence of a canonical
+payload and is useful for `P210`-style duplicate detection. *Across* publishers it is evidence of
+nothing but the SPDX reference text, which thousands of projects copy byte-for-byte. 🔴 **The failure
+mode `p746` was one step away from:** inferring common authorship, or a fork relationship, from a
+shared digest. `babs/mcp-auth-proxy` and `CSCfi/shibboleth-idp-oidc-extension` share a digest and
+have nothing whatever to do with each other.
+
+🔵 **And `T383` is re-confirmed on a fifth licence family.** **Eight** distinct byte sizes read this
+pass — `10,140`, `10,173`, `10,177`, `10,758`, `11,323`, `11,337`, `11,356`, `11,357 B` — **all
+classify Apache-2.0 from the title block.** Size is not identity; the title block is.
+
+---
+
+## T401 — 🔴 `default_branch` is load-bearing, and four of this pass's grants live outside `main` and `master`
+
+| Repo | `default_branch` | Grant at that branch |
+|---|---|---|
+| `Internet2/grouper` | **`GROUPER_7_BRANCH`** | 🟢 Apache-2.0 notice, `LICENSE.txt`, `547 B`, `0946f91658fa` |
+| `REANNZ/saml-service` | **`code-develop`** | 🟢 Apache-2.0, `11,323 B`, `6dc0e068dcf3` |
+| `CSCfi/shibboleth-idp-oidc-extension` | **`maint-1`** | 🟢 Apache-2.0, `LICENSE.txt`, `11,357 B` |
+| `incommon/InCatalog` | **`develop`** | 🟢 Apache-2.0, `11,357 B` |
+
+🔴 **`4` of `37` (`11%`) — and a probe hard-coded to `main`/`master` scores every one of them
+grant-absent**, which would have produced four false refusals in a tier that is overwhelmingly
+permissive. 🔵 **The institutional-publisher correlation is worth naming:** all four are university,
+NREN or consortium publishers running long-lived maintenance branches, which is precisely the
+population this base now spends most of its passes in. 🟢 **Standing procedure (`P240`): take
+`default_branch` from the search index on every probe; never assume, and never use `HEAD` as a
+stand-in on a repository whose metadata you already hold.**
+
+---
+
+## T402 — 🟢 The identity agent layer exists for commercial IAM and does not exist for research-and-education federation, and the ratio is `437 : 2`
+
+| Commercial-IAM leg | Repos | R&E-federation leg | Repos |
+|---|--:|---|--:|
+| `oidc mcp server` | `164` | `shibboleth mcp server` | **`2`** |
+| `keycloak mcp server` | `106` | `eduroam mcp` | **`0`** |
+| `identity governance mcp` | `102` | `saml metadata agent llm` | **`0`** |
+| `ldap mcp server` | `29` | `entitlement agent education` | **`0`** |
+| `scim mcp server` | `20` | `federated identity agent education` | **`0`** |
+| `saml mcp server` | `16` | `federacao CAFe shibboleth` | **`0`** |
+| **Total** | **`437`** | **Total** | **`2`** |
+
+🔴 **And the `2` do not survive inspection:** `wiestju/ilias-mcp` (MIT, the only MCP server on GitHub
+that authenticates through Shibboleth) is **already held on this base, `17` mentions**, and
+`CoderrOne/claude-research-gateway` is `NOASSERTION`.
+
+🟢 **This is the cleanest opportunity statement this base has produced in several passes, and it is
+measured rather than asserted.** Every one of the six agent rows filed this pass is a commercial-IAM
+artefact — Keycloak, Active Directory, Entra SCIM — and **not one knows what an entity category, a
+REFEDS assurance profile or `eduPersonTargetedID` is.** The gap between `identity governance mcp`
+(`102`) and `entitlement agent education` (`0`) is where a Globant deliverable has no incumbent.
+
+🔵 **`T393`'s topic colonisation generalises a third time.** `grouper mcp` returns `859`
+repositories and is **unusable as a leg**, because the bare noun `grouper` is a fish. Added to
+`school` (Old School RuneScape) and `TAO`. `Nour-elhaq/scimcp` under `scim mcp server` is
+**computational materials science**.
+
+---
+
+## T403 — 🔴 LATAM's research-and-education federation layer is a measured nil: `3` repositories, newest pushed `2016`, `0` grants
+
+| Probe | Result |
+|---|---|
+| `org:RedCLARA` | **`422`** — not a canonical current address |
+| `org:InnovaRed` | **`422`** |
+| `org:cafe-rnp` | **`422`** |
+| `org:RNP` (Brazil) | **`2`** repositories: `rnp/test` (`1★`, pushed **2009-12-15**), `rnp/scale12x` (`0★`, **2014-02-21**), both `NOASSERTION` |
+| `org:reuna` (Chile) | **`1`** repository: `reuna/eduroam-utils` (`0★`, **2016-04-14**), `NOASSERTION` |
+| `federacao CAFe shibboleth` | **`0`** |
+| `RedCLARA identidad federada` | **`0`** |
+| `shibboleth brasil RNP` | **`0`** |
+
+🔴 **Brazil's CAFe federation and RedCLARA's regional federation both exist and are operationally
+real; their code is not on this channel.** Eight probes, three of them in Portuguese and Spanish to
+rule out `T378`-class language bias, and the live total is **three repositories, zero grants, nothing
+pushed in a decade.**
+
+🟢 **Recorded as an informed gap, which is the point.** `p746`'s `T395` observed that this base
+asserts its per-region convention more often than it meets it; a region that returns nothing is
+worth writing down **precisely**, because a nil that is enumerated is a finding and a nil that is
+silent is indistinguishable from coverage. 🔵 **And it changes the engagement shape rather than
+removing it:** the LATAM opportunity is not to integrate with a federation, it is to **stand one up**
+— on `SATOSA` + `pysaml2` + `pyFF`, all permissive, all verified this pass. `P238`.
+
+---
+
+## T404 — 🟢 National federation code crosses regions and keeps its grant: Japan's discovery service is a maintained Swiss derivative, and the index calls it `NOASSERTION`
+
+[`gakunin/gakunin-ds`](https://github.com/gakunin/gakunin-ds) is the discovery service of **GakuNin**,
+Japan's national academic access-management federation, operated by NII. Index: `NOASSERTION`. Pushed
+**`2026-10-22`**. The payload (`3,329 B`, digest `c8c7ba659fa2`) opens:
+
+> *"License note for the SWITCHwayf code — Copyright (c) 2012, SWITCH – Serving Swiss Universities.
+> All rights reserved."*
+
+…and continues as a textbook **BSD-3-Clause** (three conditions, non-endorsement clause naming
+SWITCH). 🟢 **So the APAC national service is a fourteen-year-lived derivative of the EMEA national
+service, still carrying the Swiss NREN's grant, actively maintained, and invisible to the index.**
+
+🔵 **Two consequences for engagement work.** First, **NREN code is a reuse network rather than a set
+of national silos** — the same artefact appears in Switzerland, Japan and (via
+`REANNZ/federationregistry2-Tuakiri`, the AAF's registry deployed for New Zealand's Tuakiri)
+Australia and New Zealand. A platform validated in one NREN is a credible proposal in another.
+Second, 🔴 **the estate around it is mostly ungranted:** `org:GakuNin` is `5` repositories, `5 / 5`
+indexed `NOASSERTION`, and of the two byte-probed, `gakunin/orthros-docs` (pushed `2026-11-06`) has
+**no grant at `7` probed paths** while `gakunin-ds` has a clean BSD-3-Clause. **The ratio of
+actively-pushed-to-clearly-licensed is the risk to raise in an APAC engagement**, and it is one
+`curl` per repository to establish.
+
+---
+
+## T405 — 🟢 `P210` paid twice more, once on what would have been the headline row, and the mandated legs returned only holdings for the fourth consecutive pass
+
+🔴 **The near-miss:** `wiestju/ilias-mcp` (MIT, `1,068 B`, pushed `2026-11-06`) is *the* artefact
+joining this pass's two layers — the only MCP server on GitHub that authenticates to an education
+platform **through Shibboleth**. It was drafted as the top agent row. A shelf `grep` found it held
+**`17` times**. `GEANT/CAT` was likewise drafted as a clean platform find before its licence resolved
+into `T399`.
+
+🔴 **The mandated legs, measured:** `github trending education AI 2026` returned `DeepTutor`
+(**`1,109`** mentions on this base), `SirhanMacx/Claw-ED` (`125`), `TapXWorld/ChinaTextbook` (`34`)
+and `geekjourneyx/interactive-learning` (held) — **`4 / 4` holdings, fourth consecutive pass**.
+`top open source AI agents education 2026 github MIT` nil'd for the **`41`st** consecutive time,
+returning general round-ups whose licence claims disagree with each other. The ERP/CRM leg returned
+`OpenEduCat` alone, **already held and already corrected to LGPL by this base**.
+
+🔵 **The regional legs are the exception and they paid, because they are read for market facts rather
+than for repositories.** Every regional block on `intel/market.md` gained new `2026` figures this
+pass; the P210 check found `Digital Omnibus` (`166` mentions), `Ceibal` (`198`), `CENIA` (`213`) and
+`Latam-GPT` (`154`) already held, and `non-human identity`, `NHI`, `CAISI`, `NCCoE`,
+`Cloud Security Alliance`, `PR.AC-4` and `SP 800-63` all at **`0`** — which is `T406`.
+
+---
+
+## T406 — 🟢 There is no ratified standard for what an AI agent presents as its identity, and higher education is the exposed sector — which is what makes this register commercial *now*
+
+| Instrument | Status, late `2026` |
+|---|---|
+| **NIST CAISI** (Center for AI Standards and Innovation) **AI Agent Standards Initiative** | Opened **February 2026**; drafting in progress as of mid-2026 |
+| **NIST NCCoE** | Concept paper published following the CAISI initiative |
+| **Cloud Security Alliance**, agentic-identity guidance | Published **September 2026** |
+| **OWASP Non-Human Identity Top 10** | Available and being used as the de-facto control set |
+| **NIST CSF 2.0 `PR.AC-4`** (least privilege) | The control existing audits are mapped to |
+| A ratified NHI/agent-identity standard | 🔴 **None.** Vendor platforms are shipping ahead of it, so *agent delegation* means something different in each one |
+
+🔴 **Why education is the exposed sector rather than an average one:** an agent acting for a student
+touches education records that are statutorily protected — FERPA in the United States, the EU AI
+Act's Annex III education obligations from **2 Dec 2027**, and a dozen national equivalents this
+base's `intel/policy-matrix.tsv` already tracks. **An agent with a service account has the
+institution's authority; an agent with a delegated assertion has the student's.** The second is
+defensible to a regulator and the first is not.
+
+🟢 **What this base can now put behind that argument, all verified this pass:**
+`babs/mcp-auth-proxy` (Apache-2.0) to make the agent an OAuth client rather than a credential
+holder; `IdentityPython/SATOSA` (Apache-2.0) to bridge OAuth to the federation's SAML;
+`Internet2/grouper` (Apache-2.0) as the entitlement source of truth;
+`Internet2/comanage-registry` (Apache-2.0) as the register where a non-human identity gets a
+**human owner, a purpose and an expiry** — the NHI Management Group's three requirements, satisfied
+by a platform that has existed for a decade. `P235` and `P236`.
+
+⚠️ **Sourcing note.** The standards-status rows above come from a CSA report, a CSO opinion piece, an
+EdTech Magazine article and vendor blogs; the **NIST CAISI and NCCoE outputs are the primary sources
+to track** and the vendor commentary should not be quoted to a client as fact.
+
+---
+
+## T407 — 🟢 The federation tier's licence gradient runs along the *language estate* rather than the layer, and the architectural rule falls straight out of it
+
+`p745`'s `T381` found the assessment tier's gradient running **standards-permissive /
+platform-copyleft**. This tier does not split that way at all.
+
+| Estate | Payloads read | Verdict | Sizes |
+|---|--:|---|---|
+| **Python** — `IdentityPython`: `pysaml2`, `SATOSA`, `djangosaml2`, `pyop` | `4 / 4` | 🟢 **Apache-2.0** | `10,758` · `10,177` · `11,357` · `10,177 B` |
+| **PHP** — `simplesamlphp`: core, `saml2` | `2 / 2` | ⚠️ **LGPL-2.1** | `24,487` · `24,459 B` |
+| **PHP module layer** — `simplesamlphp-module-oidc` | `1 / 1` | 🟢 **MIT** (RedIRIS, Spain) | `1,250 B` |
+| **Java** — `apereo` (held from `p736`) | — | 🟢 Apache-2.0 | — |
+| **Platform** — `OpenConext`, `Internet2`, `incommon`, `REANNZ` | `7 / 7` | 🟢 Apache-2.0 | `10,140`–`11,357 B` |
+| **Standards** — `REFEDS`, `SeamlessAccess` | `1` read, `7` indexed | 🔴 **`CC BY-NC-SA 4.0`** / `NOASSERTION` | `20,848 B` |
+
+🟢 **The rule, and it is architectural rather than legal:** **write the Globant-owned components in
+Python against `SATOSA` and `pysaml2`, and integrate with SimpleSAMLphp across its *module*
+interface rather than forking its core.** LGPL-2.1 at the library level means a module links
+cleanly and a fork of core carries the copyleft into the deliverable. 🔵 **The module layer proves
+the route exists:** `simplesamlphp-module-oidc` is **MIT inside an LGPL-2.1 publisher** — RedIRIS
+wrote an OIDC OP for SimpleSAMLphp without inheriting its licence, which is exactly the shape a
+Globant module should take. 🔴 **And the inversion against `T381` is the part to carry forward:** in
+this tier the **standards layer is the least clearly licensed** (`REFEDS` `4 / 5` `NOASSERTION`,
+eduPerson NonCommercial) while the **platforms are permissive** — the opposite of the assessment
+tier, so the posture must be re-derived per tier and never assumed. `P239`.
+
+---
+
 # 🆕 Trends new at `p746` (researched 2026-11-10) — `T388`–`T395`
 
 **Added above `p745`'s `T379`–`T387`.** `p746` changed the register to **the substrate a national

@@ -169,6 +169,44 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 `p747` (2026-11-10) — the identity layer the US already owns, and the standards vacuum an agent has to be sold into
+
+**Supply — 🟢 and this is the region's strongest position in several passes.** `p746`'s `T394`
+declared this base's standing North America candidate list a **measured nil**. 🟢 **That was an
+address problem, not a supply problem: the live NA federation estate is under `incommon` (`3`
+repositories) and `Internet2` (`29`), all Apache-2.0, all pushed within two months** — and three
+rows were filed from it this pass.
+
+| Asset | Licence (byte-read) | Why a NA engagement reaches for it |
+|---|---|---|
+| [`Internet2/grouper`](https://github.com/Internet2/grouper) `103★` | 🟢 **Apache-2.0** (index said `NOASSERTION`) | **The group and entitlement authority US higher education actually runs.** It answers *"is this person allowed?"*, which is the question an agent needs after the IdP has answered *"who is this person?"* |
+| [`Internet2/comanage-registry`](https://github.com/Internet2/comanage-registry) `16★` | 🟢 Apache-2.0 | Registers identities, roles and memberships for people **not on the payroll** — the natural home for a **non-human identity with a human owner, a purpose and an expiry** |
+| [`incommon/InCatalog`](https://github.com/incommon/InCatalog) `2★` | 🟢 Apache-2.0 | The InCommon/eduGAIN service catalogue, pushed `2026-11-05` |
+
+🔴 **Regulation — the agent-identity standard does not exist yet, and that is the sales position
+rather than an obstacle** (`T406`). **NIST CAISI** opened its **AI Agent Standards Initiative in
+February 2026** and the **NCCoE** followed with a concept paper; the **Cloud Security Alliance**
+published agentic-identity guidance in **September 2026**; there is **no ratified standard**, so
+every vendor platform interprets *agent delegation* differently. The control sets institutions are
+actually audited against today are the **OWASP Non-Human Identity Top 10** and **NIST CSF 2.0
+`PR.AC-4`** (least privilege). ⚠️ Secondary sources (CSA report, CSO opinion, EdTech Magazine,
+vendor blogs) — **the CAISI and NCCoE outputs are the primary ones to track.**
+
+🔵 **Why education is more exposed here than the average sector:** an agent acting for a student
+touches **FERPA-protected** education records. An agent holding a service account carries the
+*institution's* authority; an agent carrying a delegated assertion carries the *student's*. Only the
+second is defensible to a regulator — and `P236` builds the first artefact that proves which one you
+have.
+
+**Demand — the standing figures, carried and dated.** North America remains the largest regional
+market at **~`38%` of global AI-in-education revenue**; one tracker puts the **US market at
+`$3.28B` (2025) → `$15.25B` (2031)** (Ken Research, ~`29%` CAGR). ⚠️ **Both are commercial-research
+figures and disagree with the share-of-growth framings this page already carries (`41.7%`
+Technavio);** treat as indicative, not quotable. 🔵 The demand-side datum this base finds more
+credible is structural: **Chegg cut `45%` of staff (`388` roles)** as AI-assisted search displaced
+homework-help traffic — the clearest evidence that this market reprices incumbents rather than only
+adding budget.
+
 #### 🆕 p746 — North America
 
 **Regulation — the bill count resolves toward one number, on one secondary tracker.**
@@ -917,6 +955,45 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p747` (2026-11-10) — EMEA owns the open federation layer outright, and that changes what a European engagement can offer
+
+🟢 **The finding of the pass for this region: of `13` foundations rows and `5` platform rows filed,
+`11` are EMEA-published, and the region holds the *entire* permissive core of the federation tier.**
+No other region comes close, and it is a position Globant can both build on and contribute to.
+
+| Asset | Publisher (by payload holder line) | Licence (byte-read) |
+|---|---|---|
+| [`OpenConext`](https://github.com/OpenConext/OpenConext-engineblock) (`63` repos) | **SURF**, Netherlands | 🟢 Apache-2.0 — the deployable national federation platform |
+| [`simplesamlphp`](https://github.com/simplesamlphp/simplesamlphp) `1,146★` | SimpleSAMLphp project | ⚠️ **LGPL-2.1** — the IdP/SP non-Java Europe runs |
+| [`IdentityPython/pysaml2`](https://github.com/IdentityPython/pysaml2) `618★`, [`SATOSA`](https://github.com/IdentityPython/SATOSA) `277★`, [`pyop`](https://github.com/IdentityPython/pyop) `100★` | IdentityPython | 🟢 Apache-2.0 — the permissive core |
+| [`pyFF`](https://github.com/IdentityPython/pyFF) `59★` | **SUNET**, Sweden | 🟢 **BSD-2-Clause** (index said `NOASSERTION`) — the metadata aggregator federations actually run |
+| [`simplesamlphp-module-oidc`](https://github.com/simplesamlphp/simplesamlphp-module-oidc) `50★` | **RedIRIS**, Spain | 🟢 **MIT** (index said `NOASSERTION`) |
+| [`CSCfi/rems`](https://github.com/CSCfi/rems) `68★` | **CSC**, Finland | 🟢 **MIT** — apply-and-approve workflow for access to sensitive data |
+| [`brunato/edugain-xml-validator`](https://github.com/brunato/edugain-xml-validator) | **SISSA**, Italy | 🟢 BSD-3-Clause |
+| [`GEANT/CAT`](https://github.com/GEANT/CAT) `124★` | **GÉANT**, Amsterdam/Cambridge | 🔴 **Bespoke English-law licence deferred into the deployed app** — refused for build-on (`T399`) |
+
+🟢 **`CSCfi/rems` is the row to lead a European AI-governance conversation with.** Before an agent
+reads student or research records, something has to record **who approved that access, for what
+purpose and until when.** REMS is that something, it is MIT, and it is in national production in
+Finland — which makes an Annex III conversation concrete instead of abstract.
+
+**Regulation — no change to the dates, one new source on the school-level picture.** The EU AI Act's
+high-risk education obligations remain at **2 Dec 2027** following the Digital Omnibus agreement of
+**7 May 2026** (held on this page from `p736`; **not re-declared**). 🆕 New this pass: the
+Commission's **Eurydice report *"Digital education at school in Europe 2026"* (published 22 Sep
+2026)**, which maps how AI is being integrated across school education — the citable instrument for
+a schools-sector engagement, as distinct from the higher-education material this page already holds.
+
+**Adoption — two new 2026 surveys, both secondary.** ⚠️ **Futuresource Consulting:** `67%` of
+teachers now use AI tools, with schools moving *from pilots to structured implementation*.
+⚠️ **An Epson-commissioned survey** of ~`3,360` respondents across the **UK, France, Italy, Germany,
+Spain and Poland**: `76%` of students expect to be able to use AI in their learning, while `80%` of
+teachers worry AI is entering the classroom faster than schools can manage. 🔵 **The gap between
+those two numbers is the governance deliverable** — and it is the same gap `CSCfi/rems` closes
+mechanically. The **DEC Leadership Summit EMEA 2026** (Paris) convened `41` senior leaders from `30`
+institutions across `14` countries, which is a useful indicator of where the buying conversation is
+happening.
 
 #### 🆕 p746 — EMEA
 
@@ -1851,6 +1928,43 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p747` (2026-11-10) — the APAC federation layer is permissive, it travels between countries, and the national estates are mostly ungranted
+
+🟢 **Supply — and the structural finding matters more than the rows.** APAC's federation code is
+Apache-2.0 and BSD-3-Clause, and **it crosses national borders while keeping its grant**:
+
+| Asset | Country | Licence (byte-read) |
+|---|---|---|
+| [`REANNZ/federationregistry2-Tuakiri`](https://github.com/REANNZ/federationregistry2-Tuakiri) `4★` | **New Zealand** (Tuakiri), from the **Australian** Access Federation | 🟢 Apache-2.0 |
+| [`REANNZ/saml-service`](https://github.com/REANNZ/saml-service) | AAF metadata-generation service; branch **`code-develop`** | 🟢 Apache-2.0 |
+| [`gakunin/gakunin-ds`](https://github.com/gakunin/gakunin-ds) | **Japan** (NII GakuNin), derived from **SWITCH** (Switzerland) | 🟢 **BSD-3-Clause** (index said `NOASSERTION`) |
+
+🟢 **`T404` is the reusable insight for APAC business development: NREN code is a reuse network, not
+a set of national silos.** The AAF's registry runs New Zealand's federation; Japan's national
+discovery service is a maintained Swiss derivative, still carrying SWITCH's 2012 grant and pushed
+`2026-10-22`. **A platform validated at one NREN is a credible proposal at the next one** — which is
+exactly how a regional practice should be sold.
+
+🔴 **The risk to raise in an APAC engagement, measured:** `org:GakuNin` is `5` repositories,
+**`5 / 5` indexed `NOASSERTION`**, and of the two byte-probed one has a clean BSD-3-Clause and the
+other (`orthros-docs`, pushed `2026-11-06`) has **no grant at `7` probed paths**. `org:AARNet` has
+`18` repositories and **no identity estate at all** — its top row is a GitBook of digital skills.
+🔵 **Actively maintained and clearly licensed are different properties here, and establishing the
+second costs one `curl` per repository.**
+
+**Regulation and demand — new 2026 instruments, mixed sourcing.** 🆕 **The Philippines' DepEd
+launched `AGAP.AI` in January 2026**, a nationwide responsible-AI programme targeting **`1.5M`
+students, teachers and parents**, alongside a **National Education Plan 2026–2035** that embeds AI
+and digital literacy from primary school through university — 🟢 **the clearest ministry-scale buyer
+signal in the region this pass found, and it is a programme rather than a guideline.**
+⚠️ **EdTech Hub (March 2026)** puts South-East Asian teacher AI use at ~`86%` (primary source
+unverified); ⚠️ **Times Higher Education (April 2026)** finds uptake of advanced tools **uneven**
+across Asia with connectivity a likely constraint and virtual-tutor use at `30%`; the **Ipsos
+Education Monitor 2026** records weaker public support for classroom AI bans across the Asian
+markets it covers. 🔵 **Read together: high individual use, low institutional readiness, and at least
+one national programme with a budget** — the same shape the identity layer is sold into, because a
+`1.5M`-person programme cannot be run on per-service passwords.
+
 #### 🆕 p746 — APAC
 
 **Regulation — APAC now supplies the only *dated and closing* compliance window on this page.**
@@ -2706,6 +2820,45 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p747` (2026-11-10) — the federation layer is a measured nil here, and that makes the engagement greenfield rather than absent
+
+🔴 **Supply — `8` probes, `3` of them in Portuguese and Spanish, and the result is three
+repositories.** `T403`, enumerated so no successor re-buys it:
+
+| Probe | Result |
+|---|---|
+| `org:RedCLARA`, `org:InnovaRed`, `org:cafe-rnp` | **`422` ×3** — not canonical current addresses |
+| `org:RNP` (Brazil) | **`2`** repos — `rnp/test` (pushed **2009**), `rnp/scale12x` (**2014**), both `NOASSERTION` |
+| `org:reuna` (Chile) | **`1`** repo — `eduroam-utils` (**2016**), `NOASSERTION` |
+| `federacao CAFe shibboleth` / `RedCLARA identidad federada` / `shibboleth brasil RNP` | **`0` / `0` / `0`** |
+
+🔵 **Brazil's CAFe federation and RedCLARA's regional federation are operationally real; their code
+is not on this channel.** Three live repositories, zero grants, nothing pushed in a decade. **Written
+down precisely because an enumerated nil is a finding and a silent one is indistinguishable from
+coverage** (`p746`'s `T395`).
+
+🟢 **The opportunity inverts cleanly, and it is the largest single build in this register.** In EMEA
+and North America the federation layer exists and the work is integration. **In LATAM the engagement
+is to stand one up** — and every component needed is permissive and was verified this pass:
+`IdentityPython/SATOSA` + `pysaml2` (Apache-2.0) for the proxy and protocol, `pyFF` (BSD-2-Clause)
+for metadata aggregation, `simplesamlphp` (**LGPL-2.1 — boundary drawn before the first commit**)
+or `casdoor` (Apache-2.0, `14,806★`) for the IdP, `Internet2/grouper` (Apache-2.0) for
+entitlements. **`P238` is written specifically for this region.**
+
+**Demand — the 2026 figures are strong and consistent on the adoption/governance gap.** 🆕 **Digital
+Education Council × Tecnológico de Monterrey, LATAM 2026 survey: `92%` of students and `79%` of
+faculty actively engaging with AI** — against ⚠️ **only ~`30%` of Latin American universities having
+published a policy on how to use it.** 🆕 **UNESCO IESALC's working paper (September 2026)** maps
+higher-education AI use across teaching, research, community engagement, administration and
+governance in LAC and finds adoption *"neither uniform nor evenly distributed"*.
+
+🔵 **The institutional actors to route an engagement through, all named in 2026 sources:** **UNESCO
+IESALC**; **UNESCO with Chile's CENIA** (ethical-AI cooperation, Latam-GPT — both already held on
+this page); **EdTech Hub with Fundación Ceibal** (partnership launched September 2026 on AI in
+education across LAC); the **IDB** (Argentina and regional education work); and **ECLAC**'s eLAC
+digital agenda. 🟢 **`92%` use against `30%` policy coverage is the clearest
+demand-for-governance signal on this page — and governance starts at who the system thinks you are.**
 
 #### 🆕 p746 — LATAM
 
@@ -3617,6 +3770,45 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p747` (2026-11-10) — no ratified standard for what an agent presents as its identity, and a `14,806★` permissive IAM base that calls itself agent-first
+
+🔴 **The global instrument picture, as of late 2026 (`T406`):** **NIST CAISI** opened its **AI Agent
+Standards Initiative in February 2026**; the **NCCoE** published a concept paper; the **Cloud
+Security Alliance** published agentic-identity guidance in **September 2026**; the de-facto control
+sets in use are the **OWASP Non-Human Identity Top 10** and **NIST CSF 2.0 `PR.AC-4`**. **There is no
+ratified standard**, and vendor platforms are shipping ahead of it — so *agent delegation* means
+something different in each one. ⚠️ Sourced from a CSA report, a CSO opinion piece, an EdTech
+Magazine article and vendor blogs; **CAISI and NCCoE are the primary sources to track.**
+
+🟢 **The supply answer this base can now put behind that, every component byte-read this pass:**
+
+| Component | Licence | Role in the agent-identity chain |
+|---|---|---|
+| [`casdoor/casdoor`](https://github.com/casdoor/casdoor) **`14,806★`**, `1,904` forks | 🟢 Apache-2.0 | **The largest permissive IAM platform in open source, self-describing as *agent-first*** — OIDC, OAuth2, SAML, CAS, LDAP and SCIM in one deployable. 🟢 `0` mentions on this base before `p747`; the answer when a client has no identity layer at all |
+| [`babs/mcp-auth-proxy`](https://github.com/babs/mcp-auth-proxy) `19★` | 🟢 Apache-2.0 | OAuth 2.1 + OIDC **in front of** a private MCP server: the agent becomes a client, not a credential holder |
+| [`IdentityPython/SATOSA`](https://github.com/IdentityPython/SATOSA) `277★` | 🟢 Apache-2.0 | Bridges the OAuth the agent speaks to the SAML the federation speaks |
+| [`Internet2/grouper`](https://github.com/Internet2/grouper) `103★` | 🟢 Apache-2.0 | The entitlement source of truth |
+| [`Internet2/comanage-registry`](https://github.com/Internet2/comanage-registry) `16★` | 🟢 Apache-2.0 | Where a non-human identity gets a **human owner, a purpose and an expiry** |
+
+🔴 **And the demand-side measurement that makes this a market rather than a thesis (`T402`):**
+`437` repositories of commercial-IAM agent tooling (`oidc mcp server` `164`, `keycloak mcp server`
+`106`, `identity governance mcp` `102`, `ldap` `29`, `scim` `20`, `saml` `16`) against **`2` for
+research-and-education federation** — one of which this base already holds and the other ungranted.
+🔵 **`437 : 2` in a sector with statutory record protection in all four regions.**
+
+🔴 **The global supply caveat, and it is an honest limit on everything above (`T396`):**
+**Shibboleth** — the IdP behind most national R&E federations — **is not on GitHub and is not
+reachable under this environment's network policy.** The GitHub surface is third-party wrappers last
+pushed **2020**. An engagement whose first requirement is *"extend our Shibboleth IdP"* **cannot be
+scoped from this base** and needs a channel that reaches `git.shibboleth.net`. 🔵 Everything else in
+the federation layer — libraries, proxy, aggregator, registry, entitlements, platform — **is here and
+is permissive.**
+
+**Market size — unchanged this pass, and the spread is still the honest answer.** One April 2026
+figure puts AI-in-education at ~**`$10.6B` (2026) → ~`$42.5B` (2030)** (Research and Markets);
+this page's existing `p732` bracket is not displaced by it. ⚠️ A `$238.4B` figure in circulation is
+**EdTech overall, not AI**, and should not be quoted as this market.
 
 #### 🆕 p746 — Global
 

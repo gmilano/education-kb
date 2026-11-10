@@ -33,6 +33,98 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p747` (2026-11-10) — 🔴 **THE FEDERATION LAYER `p736` LEFT BEHIND: `13` ROWS, `6` INDEX CORRECTIONS, AND A LICENCE GRADIENT THAT SPLITS BY *LANGUAGE ESTATE* RATHER THAN BY LAYER. 🟢 A `14,806★` APACHE-2.0 IAM PLATFORM THAT CALLS ITSELF *AGENT-FIRST* WAS AT `0` MENTIONS.**
+
+**`13` rows · `37` payloads byte-read across `42` probed addresses · `36 / 37` classified from the
+title block · `6` index values materially corrected, `2` in the *refusing* direction · `5` grant
+absences recorded as `T302` honest negatives with a probed-path count and **no** denominator
+(`T388`).**
+
+🔵 **The register:** `p736` shelved the SSO *server* (`apereo/cas` and its three clients, above).
+This pass shelves **what that server joins** — SAML metadata aggregation, protocol proxying,
+attribute release and group/entitlement authority. Every address family in it was at `0` mentions.
+
+### 🟢 `T407` — the licence gradient runs along the *language estate*, and the architectural rule falls straight out
+
+| Estate | Rows read | Payload verdict | Size signature |
+|---|--:|---|---|
+| **Python** (`IdentityPython`: `pysaml2`, `SATOSA`, `djangosaml2`, `pyop`) | `4 / 4` | 🟢 **Apache-2.0** | `10,758` / `10,177` / `11,357` / `10,177 B` |
+| **PHP** (`simplesamlphp`: core + `saml2`) | `2 / 2` | ⚠️ **LGPL-2.1** | `24,487` / `24,459 B` |
+| **Java** (`apereo`, held from `p736`) | — | 🟢 Apache-2.0 | — |
+| **Platform** (`OpenConext`, `Internet2`, `incommon`, `REANNZ`) | `7 / 7` | 🟢 Apache-2.0 | `10,140`–`11,357 B` |
+
+🟢 **The rule, and it is architectural rather than legal:** **build the Globant-owned components in
+Python against `SATOSA` / `pysaml2`, and integrate with SimpleSAMLphp across its *module*
+interface rather than forking its core.** The PHP estate is weak copyleft at the library level, so a
+module links and a fork infects. This is the same shape as `T381`'s assessment gradient, measured on
+a different axis — wired as `P239`.
+
+### 🔴 `T400` — cross-publisher byte-identity is the *norm* for Apache-2.0, so a digest match proves nothing about the publisher
+
+`p746`'s `T392` used a repeated digest as a publisher signature. 🔴 **It does not generalise.**
+Digest `58d1e17ffe51` (`11,357 B`) was read this pass on **five unrelated publishers** —
+`IdentityPython/djangosaml2`, `Internet2/comanage-registry`, `REANNZ/federationregistry2-Tuakiri`,
+`CSCfi/shibboleth-idp-oidc-extension` and `babs/mcp-auth-proxy`. Digest `43070e2d4e53` (`11,356 B`)
+appears on `casdoor/casdoor` **and** `OpenConext/eduGAIN-Metadata-Validator`; `c5accbbd8546` on
+`Unicon/shibboleth-idp-dockerized` **and** `uchicago/shibboleth-oidc`.
+🟢 **Corrected statement of the control:** *within* one publisher a repeated digest is evidence of a
+canonical payload (`OpenConext` used `0cec06e0e55f` twice, `IdentityPython` used `ef777cb1e5f4`
+twice); *across* publishers it is evidence of nothing but the SPDX text.
+🔵 **And `T383` is re-confirmed on a fifth family:** **eight** distinct byte sizes — `10,140`,
+`10,173`, `10,177`, `10,758`, `11,323`, `11,337`, `11,356`, `11,357 B` — all classify Apache-2.0.
+
+### 🔴 `T398` — `p746`'s `END OF TERMS AND CONDITIONS` discriminator has a false-negative mode, found on first use
+
+`p746` declared `T391`: an Apache-2.0 payload can be the licence concatenated twice, discriminated by
+`grep -c 'END OF TERMS AND CONDITIONS'`. 🔴 **Used as a *presence* test it fails:**
+[`OpenConext/Stepup-saml-bundle`](https://github.com/OpenConext/Stepup-saml-bundle) is a complete,
+valid Apache-2.0 body at `10,140 B` that **ends at clause 9 with no appendix and no `END OF TERMS`
+line at all** — the grep returns `0`. 🟢 **Corrected rule: `EOT ≥ 2` detects doubling; `EOT = 0`
+says nothing.** Classification stays with the title block, which is `36 / 37` here.
+
+### 🔴 `T401` — four of this tier's repositories publish from a branch that is neither `main` nor `master`, and all four have grants
+
+| Repo | Default branch | Grant found |
+|---|---|---|
+| `Internet2/grouper` | **`GROUPER_7_BRANCH`** | 🟢 Apache-2.0 notice, `LICENSE.txt`, `547 B` |
+| `REANNZ/saml-service` | **`code-develop`** | 🟢 Apache-2.0, `11,323 B` |
+| `CSCfi/shibboleth-idp-oidc-extension` | **`maint-1`** | 🟢 Apache-2.0, `LICENSE.txt`, `11,357 B` |
+| `incommon/InCatalog` | **`develop`** | 🟢 Apache-2.0, `11,357 B` |
+
+🔴 **A raw probe hard-coded to `HEAD`-equivalent `main`/`master` scores all four grant-absent.** The
+branch must come from the search index's `default_branch` field on every probe — now standing
+procedure, wired as `P240`.
+
+### The `13` rows
+
+| Repo | Stars | Licence (byte-read) | Last push | Region | What it is, and why it is a building block |
+|---|--:|---|---|---|---|
+| [casdoor/casdoor](https://github.com/casdoor/casdoor) | **14,806** | 🟢 Apache-2.0 · `11,356 B` · `43070e2d4e53` | **2026-11-10** | Global | **The largest permissive IAM platform in open source, and it self-describes as *agent-first*.** `1,904` forks, OIDC/OAuth2/SAML/CAS/LDAP/SCIM in one deployable. 🟢 **`0` mentions on this base before this pass.** This is the row to reach for when a client has *no* identity layer and no NREN membership |
+| [simplesamlphp/simplesamlphp](https://github.com/simplesamlphp/simplesamlphp) | **1,146** | ⚠️ **LGPL-2.1** · `24,487 B` · `d359de83b1e4` | 2026-11-09 | EMEA | **The IdP and SP that non-Java Europe actually runs**, `706` forks. Read `T407` before touching it: modules link, forks infect |
+| [IdentityPython/pysaml2](https://github.com/IdentityPython/pysaml2) | 618 | 🟢 Apache-2.0 · `10,758 B` · `9fd89dbc4401` | 2026-11-03 | EMEA | The **Python SAML2 implementation** every row below depends on, `480` forks. Permissive, and the foundation of `P235` |
+| [simplesamlphp/saml2](https://github.com/simplesamlphp/saml2) | 310 | ⚠️ **LGPL-2.1** · `24,459 B` · `c645cc2837cf` | 2026-11-05 | EMEA | The low-level SAML2 PHP library under the core. ⚠️ Same copyleft boundary |
+| [IdentityPython/SATOSA](https://github.com/IdentityPython/SATOSA) | 277 | 🟢 Apache-2.0 · `10,177 B` · `ef777cb1e5f4` | 2026-09-30 | EMEA | **The proxy that translates between SAML2 and OIDC — the single component that makes an MCP agent usable inside a SAML federation.** 🟢 MCP speaks OAuth; eduGAIN speaks SAML; this is the seam. Core of `P235` and `P238` |
+| [IdentityPython/djangosaml2](https://github.com/IdentityPython/djangosaml2) | 272 | 🟢 Apache-2.0 · at **`COPYING`** · `11,357 B` · `58d1e17ffe51` | 2026-11-09 | EMEA | Django SP. 🔴 **Publishes its grant at `COPYING`, not `LICENSE`** — `T382`'s path finding recurring |
+| [simplesamlphp/SAML-tracer](https://github.com/simplesamlphp/SAML-tracer) | 188 | 🟢 **BSD-2-Clause** · `1,308 B` · `af41e4db2ac1` | 2026-10-18 | EMEA | Browser extension that shows the actual SAML assertion on the wire. 🔵 **The permissive exception in a copyleft publisher**, and the instrument for `P237`'s attribute-minimisation review |
+| [Internet2/grouper](https://github.com/Internet2/grouper) | 103 | 🟢 **Apache-2.0** (index says `NOASSERTION`) · `547 B` notice · `0946f91658fa` | 2026-11-09 | **North America** | **The group and entitlement authority of US higher education.** Answers *"is this person allowed?"* after the IdP has answered *"who is this person?"* — which is the question an agent actually needs. 🔴 Branch `GROUPER_7_BRANCH` (`T401`); grant is the Apache **notice** form, not the full text |
+| [IdentityPython/pyop](https://github.com/IdentityPython/pyop) | 100 | 🟢 Apache-2.0 · `10,177 B` · `ef777cb1e5f4` | 2026-09-28 | EMEA | OIDC Provider library. 🔵 Digest identical to `SATOSA` — publisher-canonical payload (`T400`, correct use of the control) |
+| [IdentityPython/pyFF](https://github.com/IdentityPython/pyFF) | 59 | 🟢 **BSD-2-Clause** (index says `NOASSERTION`) · `1,509 B` · `131c83e973d6` | **2026-11-10** | EMEA (**SUNET**, Sweden — by payload holder line) | **The SAML metadata aggregator that federation operators at eduGAIN scale actually run.** `59★` understates it by an order of magnitude: this is the pipeline that produces the metadata every IdP and SP in a federation consumes |
+| [simplesamlphp/simplesamlphp-module-oidc](https://github.com/simplesamlphp/simplesamlphp-module-oidc) | 50 | 🟢 **MIT** (index says `NOASSERTION`) · `1,250 B` · `9ae595afa436` | **2026-11-10** | EMEA (**RedIRIS**, Spain — by payload holder line) | Adds OIDC OP support to SimpleSAMLphp. 🟢 **MIT inside an LGPL-2.1 publisher**, which is exactly the module-interface escape route `T407` prescribes |
+| [Internet2/comanage-registry](https://github.com/Internet2/comanage-registry) | 16 | 🟢 Apache-2.0 · `11,357 B` · `58d1e17ffe51` | 2026-10-22 | **North America** | Collaboration registry: identities, roles and group memberships for people who are *not* on the institutional payroll. 🔵 The natural place to register a **non-human identity** with a human owner (`T406`, `P236`) |
+| [incommon/InCatalog](https://github.com/incommon/InCatalog) | 2 | 🟢 Apache-2.0 · `11,357 B` · `58d1e17ffe51` | 2026-11-05 | **North America** | The InCommon/eduGAIN **service catalogue**, live and pushed this month. 🟢 **This is the advance on `p746`'s `T394`:** the standing North America authority list was declared a measured nil, and the live NA federation authority estate was under `incommon` / `Internet2` all along — `3` + `29` repositories, all Apache-2.0 |
+
+### 🔴 Enumerated and found wanting — recorded so a later pass does not re-buy these
+
+| Address | Stars | Disposition |
+|---|--:|---|
+| **Shibboleth** (the project) | — | 🔴 **Not on GitHub as an organisation** (`org:shibboleth` → `422`) and **`shibboleth.net` / `git.shibboleth.net` unreachable under this environment's network policy** (`CONNECT` → `403`, `3 / 3`). The GitHub surface is third-party wrappers last pushed **2020**: `Unicon/shibboleth-idp-dockerized` (`109★`, Apache-2.0, `c5accbbd8546`), `uchicago/shibboleth-oidc` (`82★`, Apache-2.0, same digest). 🔵 **Not filed as a foundation because nothing current is reachable** — `T396` |
+| [REFEDS/eduperson](https://github.com/REFEDS/eduperson) | 15 | 🔴 **`CC BY-NC-SA 4.0`**, indexed `NOASSERTION`. NonCommercial on the attribute vocabulary itself. Reference the spec; never vendor the files (`T397`) |
+| [OpenConext/Mujina](https://github.com/OpenConext/Mujina) | 388 | 🔴 Index asserts Apache-2.0; **no grant at `7` probed paths**. The index is more generous than the repository |
+| [apereo/mod_auth_cas](https://github.com/apereo/mod_auth_cas) | 150 | 🔴 `NOASSERTION`, **no grant at `7` probed paths** |
+| [GEANT/edugain-openidfed](https://github.com/GEANT/edugain-openidfed) | 7 | ⚠️ **`CC0-1.0`** (`7,047 B`, `6d489af62926`) — a *content* dedication on what reads as code. Usable, but not a software grant; last push **2025-03-03** |
+| `org:RNP` (Brazil), `org:reuna` (Chile) | 2 + 1 | 🔴 **`3` repositories between them, newest pushed `2016`, `0` grants.** The LATAM half of `T403` |
+| `gakunin/orthros-docs`, `REANNZ/etcbd-public` | 1, 9 | 🔴 No grant at `7` probed paths — `T302` honest negatives, no denominator claimed (`T388`) |
+
 ## 🆕 `p746` (2026-11-10) — 🔴 **A `252`-REPOSITORY, `361★`, `BSD-3-CLAUSE` EDUCATION-DATA PLATFORM WAS ABSENT FROM THIS ENTIRE BASE. `12` ROWS, AND A LICENCE SEAM THAT CONFIRMS `T360` A THIRD TIME FROM A PUBLISHER THAT HAS NEVER BEEN READ HERE**
 
 > **Pass p746 · `26` payloads byte-read 2026-11-10 over the raw channel, `26 / 26` classified from

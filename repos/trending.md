@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p747) — 🔴 **THE FEDERATION LAYER WAS AT `0` MENTIONS ON A BASE THAT ALREADY HELD THE SSO SERVER. 🔴 THE IdP GLOBAL R&E ACTUALLY RUNS IS NOT ON GITHUB AND IS UNREACHABLE HERE. 🔴 `p746`'s DIGEST CONTROL AND ITS `END OF TERMS` DISCRIMINATOR BOTH FAIL ON FIRST REUSE — AND THE CORRECTED FORMS ARE PUBLISHED.**
+
+**`13` foundations rows · `5` platform rows · `6` agent rows · `42` addresses probed · `37` payloads
+byte-read · `6` index corrections · `5` grant absences as `T302` honest negatives · `T396`–`T408`
+declared · all `5` regional blocks written on `intel/market.md`.**
+
+### The estates probed this pass, with their denominators — every total from `gh api -X GET search/repositories`
+
+| Leg | Total | Verdict |
+|---|--:|---|
+| `org:CSCfi` | `494` | 🟢 Paid `1` platform row (`rems`, MIT) + `1` enumerated (`shibboleth-idp-oidc-extension`, branch `maint-1`) |
+| `org:simplesamlphp` | `87` | 🟢 Paid `4` rows. ⚠️ Core + `saml2` are **LGPL-2.1** (`T407`) |
+| `org:OpenConext` | `63` | 🟢 Paid the headline platform row. 🔴 Top repo by stars (`Mujina`, `388★`) is **ungranted** |
+| `org:GEANT` | `54` | ⚠️ Paid `1` flagged row (`CAT`, `T399`) + `1` enumerated (`edugain-openidfed`, `CC0-1.0`) |
+| `org:Internet2` | `29` | 🟢 Paid `2` rows (`grouper`, `comanage-registry`), both **North America** |
+| `org:IdentityPython` | `27` | 🟢 Paid `5` rows, `5 / 5` permissive — the permissive core of the whole tier |
+| `org:keycloak` | `27` | 🔵 Enumerated; the product is held, the MCP layer around it is on `agents/top.md` |
+| `org:REANNZ` | `22` | 🟢 Paid `2` **APAC** rows (AAF/Tuakiri) |
+| `org:AARNet` | `18` | 🔴 No identity estate — docs and a `restic` fork |
+| `org:GakuNin` | `5` | 🟢 Paid `1` **APAC** row. 🔴 `4 / 5` ungranted; `2` byte-probed, no grant at `7` paths |
+| `org:refeds` | `5` | 🔴 **Refused:** `eduperson` is `CC BY-NC-SA 4.0` (`T397`) |
+| `org:SeamlessAccess` | `3` | 🔴 `3` repositories, top one `1★`, all `NOASSERTION`, newest push `2025-11-18` |
+| `org:InCommon` | `3` | 🟢 Paid `1` row (`InCatalog`). **All `3` Apache-2.0, all pushed within `2` months** |
+| `org:RNP` (Brazil) | `2` | 🔴 Newest push **2014**, `0` grants |
+| `org:reuna` (Chile) | `1` | 🔴 `eduroam-utils`, push **2016**, `NOASSERTION` |
+| `org:shibboleth`, `org:RedCLARA`, `org:InnovaRed`, `org:cafe-rnp`, `org:nii-gakunin`, `org:incommon-org`, `org:aaf-sp`, `org:AustralianAccessFederation` | **`422` ×8** | 🔴 The `T359` *"not a canonical current address"* state, `8` times. **Not outages** |
+| `shibboleth` (keyword) | `1,168` | 🔵 Almost entirely third-party deployment recipes; the project's own code is elsewhere (`T396`) |
+| `eduroam` (keyword) | `468` | 🔵 Dominated by ESP32/ESP8266 hobby clients and Nix flakes |
+| `edugain` (keyword) | `42` | 🟢 Paid `2` tools (`OpenConext/eduGAIN-Metadata-Validator` Apache-2.0; `brunato/edugain-xml-validator` BSD-3-Clause, **SISSA, Italy**) |
+| `oidc mcp server` | `164` | 🔵 Commercial-IAM saturated — see `T402` |
+| `keycloak mcp server` | `106` | 🟢 Paid `2` agent rows; 🔴 the `49★` top row is **ungranted** |
+| `identity governance mcp` | `102` | 🔵 Commercial-IAM saturated |
+| `grouper mcp` | `859` | 🔴 **Unusable leg — the bare noun is a fish** (`T393` generalises) |
+| `shibboleth mcp server` | **`2`** | 🔴 `1` held (`ilias-mcp`, `17` mentions, `P210`), `1` ungranted |
+| `federated identity agent education`, `saml metadata agent llm`, `entitlement agent education`, `eduroam mcp`, `federacao CAFe shibboleth`, `RedCLARA identidad federada`, `shibboleth brasil RNP` | **`0` ×7** | 🔴 **Seven clean nils, enumerated so a successor does not re-buy them** |
+
+### 🟢 Every address written this pass was re-verified after writing — and the verification found a defect in the verifier
+
+`33` distinct addresses appear in this pass's new text. **`32 / 33` resolved `200` on the raw channel.** The one that did not is [`apereo/mod_auth_cas`](https://github.com/apereo/mod_auth_cas), and 🔴 **it is alive** — `150★`, pushed `2026-05-27`, serving `master/README` with `200`. Its readme has **no extension**, which the standing probe chain (`README.md` → `readme.md` → `README.rst` → `LICENSE`) cannot reach, and it has no root grant so the fourth link misses too. 🔵 **`T408`: the chain fails hardest on the ungranted population, turning an honest refusal into a false dead-address claim.** Chain repaired in `P240` check `7`.
+
+### 🔴 `T400` — the digest control fails across publishers, and the corrected form is one clause longer
+
+`58d1e17ffe51` (`11,357 B`) on **five** unrelated publishers; `43070e2d4e53` on `casdoor` **and**
+`OpenConext`; `c5accbbd8546` on `Unicon` **and** `uchicago`. 🟢 **Within** a publisher a repeat digest
+is a canonical payload (`OpenConext` `0cec06e0e55f` ×2; `IdentityPython` `ef777cb1e5f4` ×2); **across**
+publishers it is only the SPDX text. 🔵 **Eight distinct Apache-2.0 byte sizes read in one pass**
+(`10,140`–`11,357 B`) re-confirms `T383` on a fifth family.
+
+### 🔴 `T398` — `p746`'s brand-new `END OF TERMS AND CONDITIONS` grep fails as a presence test on first reuse
+
+`OpenConext/Stepup-saml-bundle`: complete Apache-2.0, `10,140 B`, ends at clause 9, **`EOT = 0`**.
+🟢 Corrected: `EOT ≥ 2` detects doubling; `EOT = 0` is not evidence of anything.
+
+### 🔴 `T401` — `default_branch` is load-bearing, measured
+
+`Internet2/grouper` → `GROUPER_7_BRANCH`; `REANNZ/saml-service` → `code-develop`;
+`CSCfi/shibboleth-idp-oidc-extension` → `maint-1`; `incommon/InCatalog` → `develop`. 🔴 **`4` of this
+pass's `37` payloads sit outside `main`/`master`, and all `4` are real grants** a hard-coded probe
+would have scored absent. The branch now comes from the index's `default_branch` on every probe
+(`P240`).
+
+### 🔴 The instrument correction — `T388` holds a second time
+
+`api.github.com/repos/…` session-gated for both callers; re-controlled on `dhis2/dhis2-core`
+(`403` on `gh api repos/…`, `200 / 1,517 B` on the raw channel, same minute). Absences on all
+shelves this pass are `T302` honest negatives with a probed-path count and **no denominator**.
+
+### 🔵 Also recorded
+
+🟢 **`T404` — NREN code crosses regions and keeps its grant.** `gakunin/gakunin-ds` (Japan, pushed
+`2026-10-22`) carries *"Copyright (c) 2012, SWITCH — Serving Swiss Universities"*, BSD-3-Clause.
+APAC's national discovery service is an EMEA derivative, and the index called it `NOASSERTION`.
+
+🟢 **`T394` advanced.** `p746` declared this base's standing North America authority list a measured
+nil. The live NA federation estate was under `incommon` (`3` repos) and `Internet2` (`29`) — all
+Apache-2.0, all pushed within two months. `3` rows filed.
+
 ## 🆕 2026-11-10 (p746) — 🔴 **A `252`-REPOSITORY, `361★`, `BSD-3-CLAUSE` EDUCATION-DATA PLATFORM WAS ABSENT FROM THIS ENTIRE BASE. 🟢 `T360`'s LAYER SEAM CONFIRMED A THIRD TIME, `7 / 7` WITH ZERO CROSSOVERS, ON A WHOLE ESTATE. 🟢 THE NAMED NORTH AMERICA CANDIDATE LIST IS ENUMERATED AND IS A NIL — AND THE REAL ESTATE WAS UNDER A DIFFERENT OWNER.**
 
 **`12` foundations rows (new section) · `5` platform rows (new section) · `26` payloads byte-read, `26 / 26` classified · `2` index corrections · `2` `T302` honest negatives · `3` publishers enumerated end-to-end · `T388`–`T395` declared.**

@@ -10,6 +10,54 @@ updated: 2026-11-10
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
+## 🆕 `p747` — the deployable federation: the platform an NREN already runs, with the licence posture drawn per region, `2026-11-10`
+
+**`5` rows · all `5` payloads byte-read · `1` filed **with a refusal flag** because its `LICENSE`
+file is a pointer rather than a grant (`T399`) · `3` platforms enumerated and NOT filed.**
+
+🔵 **What this shelf gains that `p736` did not give it.** `p736` filed the SSO *server*. A national
+research-and-education network does not deploy a server, it deploys a **federation**: a metadata
+registry, a discovery service, an entitlement workflow and a wireless-roaming configuration tool.
+Those are deployable systems with real install bases, and all five rows below are in production at a
+named NREN today.
+
+### 🔴 `T399` — a file named `LICENSE` can be a pointer rather than a grant, and it bit on the most-starred row
+
+[`GEANT/CAT`](https://github.com/GEANT/CAT) (`124★`, indexed `NOASSERTION`) has a `LICENSE` file of
+`1,095 B`, digest `e772049431f9`. 🔴 **It is a C comment block, not a licence.** It records GÉANT's
+copyright and EU framework-programme grant numbers (GN3 `238875`, GN3plus `605243`, GN4-1 `691567`,
+GN4-2 `731122`) and then says:
+
+> *"License: see the `web/copyright.inc.php` file in the file structure or `<base_url>/copyright.php`
+> after deploying the software"*
+
+🟢 **Resolved by a second fetch** (`web/copyright.inc.php`, `200` on the raw channel): the real terms
+are a **bespoke English-law licence** — derivative works must be licensed under the same licence,
+no endorsement, **and an explicit *"No patent licence is granted"*** beyond one narrow clause.
+🔴 **Three consequences, and the third is the one that matters:** the index says nothing; the
+root-filename probe says *"granted"*; and **the grant can only be read by deploying the software or
+fetching an application template by hand.** Any gate that treats `LICENSE`-exists as granted scores
+this permissive. ⚠️ **Not OSI-standard, copyleft-shaped, no patent grant — treat as refused for
+build-on work** and integrate over its published interfaces instead.
+
+### The `5` rows
+
+| Platform | Stars | Licence (byte-read) | Last push | Region | What it is, and the install base |
+|---|--:|---|---|---|---|
+| [OpenConext](https://github.com/OpenConext/OpenConext-engineblock) (`OpenConext-engineblock`) | 17 | 🟢 Apache-2.0 · `10,173 B` · `0cec06e0e55f` | **2026-11-10** | **EMEA** (SURF, Netherlands) | **The deployable national federation platform — this is SURFconext's engine.** `63` repositories in the estate: `engineblock` (the SAML 2.0 IdP/SP gateway), `OpenConext-deploy` (Ansible), `OpenConext-dashboard` (IdP-admin console for service connections) and `OpenConext-pdp` (XACML policy decision point). 🟢 **Permissive across the whole estate, pushed the day of this pass.** The reference answer when a ministry or NREN asks *"what do we run?"* |
+| [CSCfi/rems](https://github.com/CSCfi/rems) | 68 | 🟢 **MIT** · `1,088 B` · `b6f626a5d50b` | **2026-11-10** | **EMEA** (CSC — IT Center for Science, Finland) | **Resource Entitlement Management System: the apply-and-approve workflow for access to sensitive data.** 🟢 **The most directly AI-relevant platform on this page** — before an agent reads student or research records, *something* has to record who approved that access and for how long. REMS is that something, it is MIT, and it is in national production |
+| [GEANT/CAT](https://github.com/GEANT/CAT) | 124 | 🔴 **Bespoke English-law licence, deferred into the deployed application** (`T399`) · pointer file `1,095 B` · `e772049431f9` | 2026-10-26 | **EMEA** (GÉANT, Amsterdam/Cambridge) | The **eduroam Configuration Assistant Tool** — generates per-institution installers for the wireless federation that covers essentially every university in Europe. ⚠️ **Filed for the market map and the integration surface, NOT as a build-on base.** Read the licence cell twice |
+| [REANNZ/federationregistry2-Tuakiri](https://github.com/REANNZ/federationregistry2-Tuakiri) | 4 | 🟢 Apache-2.0 · `11,357 B` · `58d1e17ffe51` | 2025-09-29 | **APAC** (Tuakiri, New Zealand; AAF, Australia) | **Federation Registry 2 — the Australian Access Federation's registry, deployed for New Zealand's Tuakiri.** 🟢 The APAC federation layer *is* permissively licensed and it is published under an NREN that is not the one that wrote it — the clearest evidence on this page that NREN code travels between countries. Paired with [`REANNZ/saml-service`](https://github.com/REANNZ/saml-service) (Apache-2.0, `11,323 B`, branch **`code-develop`**), the AAF's metadata-generation service |
+| [gakunin/gakunin-ds](https://github.com/gakunin/gakunin-ds) | 0 | 🟢 **BSD-3-Clause** (index says `NOASSERTION`) · `3,329 B` · `c8c7ba659fa2` | 2026-10-22 | **APAC** (NII GakuNin, Japan) | **Japan's national federation discovery service.** 🟢 **And the payload is the finding (`T404`):** its title block reads *"License note for the SWITCHwayf code — Copyright (c) 2012, SWITCH — Serving Swiss Universities"*. **The Japanese national service is a maintained derivative of the Swiss NREN's discovery service**, carrying SWITCH's BSD-3-Clause fourteen years on |
+
+### 🔴 Enumerated and NOT filed — with the reason
+
+| Candidate | Why not filed |
+|---|---|
+| **Shibboleth IdP / SP** | 🔴 The deployable system this entire shelf would most want, and it is **unreachable**: no GitHub organisation (`422`), `shibboleth.net` and `git.shibboleth.net` blocked by this environment's network policy (`3 / 3`), and the GitHub wrappers (`Unicon` `109★`, `uchicago` `82★`, both Apache-2.0) were **last pushed in 2020**. Filed as an instrument boundary on `../intel/trends.md` (`T396`), not as a platform |
+| `org:AARNet` (Australia) | ⚠️ `18` repositories, but the identity estate is not among them — top row is a **GitBook of digital skills** (`27★`, `NOASSERTION`) and the only licensed rows are `CC-BY-SA-4.0` docs and a `BSD-2-Clause` `restic` fork. 🔵 AARNet's federation work surfaces through `REANNZ/*` instead, which is the row above |
+| `org:RedCLARA`, `org:InnovaRed`, `org:cafe-rnp` | 🔴 **All three are `422` — not canonical current addresses.** With `org:RNP` at `2` dead repositories (newest `2014`) and `org:reuna` at `1` (`2016`), **LATAM has no deployable federation platform on this channel at all** (`T403`). The response is `P238`, which treats it as greenfield rather than as a gap |
+
 ## 🆕 `p746` — the national EMIS tier: the deployable system a ministry already runs, with the copyleft posture drawn per layer, `2026-11-10`
 
 > **Pass p746 · every grant byte-read 2026-11-10.** This shelf exists for *"the Odoo for ERP,
