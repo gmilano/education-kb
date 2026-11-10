@@ -6,7 +6,15 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p744 · verified 2026-11-10.** 🟢 **`8` agent rows added plus `2` backlog promotions, after `p742` added `0` and `p741` added `0`.** The highest-starred row added this pass is `5,841★`; `p743`'s three new rows topped out at `167★`. `45` licence payloads byte-read this pass, `45 / 45` classified from the title block, `6` index values corrected, `4` compliant grant-absent verdicts recorded with tree denominators (`T374`). 🔴 **Three of the new rows carry a second grant inside the repository that the index does not report — one of them `CC BY-NC-SA 4.0` inside an `MIT`-indexed repository at `2,285★` (`T372`, `T373`). Read the licence cell before the description.**
+**Pass p746 · verified 2026-11-10.** 🟢 **`6` agent rows added — `5` new addresses plus `1` `P210`-class promotion — against `p745`'s `3` and `p744`'s `8`.** `26` licence payloads byte-read this pass, `26 / 26` classified from the title block, **`2` index values materially corrected**, `2` compliant grant-absences recorded as `T302` honest negatives rather than as denominators. 🔴 **The register is the *education-data substrate* — national EMIS and official statistics — and the headline is that `DHIS2` was absent from this entire base: `252` repositories, `361★` on the core, `BSD-3-Clause`, pushed the day of this pass, and `0` mentions across every live shelf (`T389`).**
+
+🔴 **Read the licence cell before the description on the `winterop-com` rows, and they are the reason the refusal table exists.** [`winterop-com/dhis2w`](https://github.com/winterop-com/dhis2w) and [`dhis2w-mcp`](https://github.com/winterop-com/dhis2w-mcp) are indexed **`NOASSERTION`** and the payload is **actively proprietary** — *"No license, express or implied, is granted… published for reference only"* (`785 B`, sha256₁₂ `3d2034562ea8`, byte-identical across both). **The most feature-complete DHIS2 agent toolkit this pass found is the one Globant may not build on** (`T390`).
+
+🔴 **Instrument correction, and it governs every absence claim on this page.** `p745` recorded `T374` — that compliant grant-absences could be published *with tree denominators* over "the `git` tree channel". **That channel is closed in this session: `api.github.com/repos/…` returns a session-gate message for both the authenticated (`gh api`) and unauthenticated (`curl`) callers, `2 / 2` controls, including on `dhis2/dhis2-emis-docs` whose bytes the raw channel serves happily.** Consequence: this pass publishes `T302` honest negatives (*"no grant at `6` probed paths"*) and **does not claim denominators**, and `T378` placement must come from a **payload holder line or README text**, never from a commit record. `T388`.
+
+> **Instrument note — the mandated `curl -sI https://github.com/{owner}/{repo}` control re-ran `4 / 4` and still has no discriminating power:** `openedx/openedx-platform`, `moodle/moodle`, `openedx/edx-platform` and an invented address **all returned `403`**, with and without `-L`. ⚠️ **New trap worth naming:** with header output shown, the *first* line is the proxy's `HTTP/1.1 200 Connection Established`, which reads like a success. **Read the status code, not the first line.** The working probe remains `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md` (`200` alive / `404` absent, re-controlled `2 / 2` this pass).
+
+**Carried header from p744:** **Pass p744 · verified 2026-11-10.** 🟢 **`8` agent rows added plus `2` backlog promotions, after `p742` added `0` and `p741` added `0`.** The highest-starred row added this pass is `5,841★`; `p743`'s three new rows topped out at `167★`. `45` licence payloads byte-read this pass, `45 / 45` classified from the title block, `6` index values corrected, `4` compliant grant-absent verdicts recorded with tree denominators (`T374`). 🔴 **Three of the new rows carry a second grant inside the repository that the index does not report — one of them `CC BY-NC-SA 4.0` inside an `MIT`-indexed repository at `2,285★` (`T372`, `T373`). Read the licence cell before the description.**
 
 **Carried header from p742:** 🟢 **`p742` executed `ACTION p741-A` as written — it spent itself promoting the LATAM backlog instead of searching — and the rediscovery rate went from `p741`'s `44%` to `0 / 15`.** Every row added this pass was an address this base had already discovered, licence-read and written up without ever promoting it. `4` agent rows, `6` foundations rows, `5` platform rows, **`21` licence payloads byte-read, `21 / 21` classified, `0` index-vs-payload disagreements**.
 
@@ -45,6 +53,73 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p746` — 🟢 **THE EMIS AND OFFICIAL-STATISTICS AGENT TIER: `6` ROWS OVER A SUBSTRATE THIS BASE DID NOT HOLD AT ALL. 🔴 THE MOST COMPLETE TOOLKIT IN THE TIER IS INDEXED `NOASSERTION` AND IS PROPRIETARY ON READING THE BYTES.**
+
+> **Pass p746 · every grant byte-read 2026-11-10 over the raw channel.** This pass changed the
+> noun again — `p743` asked what a research university *runs*, `p744` what its *scholarly APIs*
+> are, `p745` what the regulator *assesses* — and `p746` asks **what a national education
+> ministry runs its numbers on**. 🟢 **The answer was a `252`-repository platform at `0` mentions.**
+
+🟢 **Why this tier is commercially different from the three before it.** Tutoring agents sell to a
+faculty; assessment agents sell to a registrar. **An EMIS agent sells to a ministry**, which is the
+buyer with a procurement budget, a statutory reporting duty and a multi-year contract. The agent
+layer over that substrate is `6` repositories deep, the best of them is `7★`, and **the substrate
+underneath it is `BSD-3-Clause` and deployed in dozens of countries** — which is the combination
+this base exists to find. `P231` is the recipe.
+
+### The `6` rows
+
+| Agent | Repo | Stars | Forks | Licence (byte-read 2026-11-10, raw channel) | Region | What it does, and why it is filed |
+|---|---|--:|--:|---|---|---|
+| **dhis2-mcp** | [Dradebo/dhis2-mcp](https://github.com/Dradebo/dhis2-mcp) | 7 | 4 | 🟢 **MIT** · `LICENSE` · `1,064 B` · sha256₁₂ `bfd0de705cb7` · © *2025 Dradebo* · *index agrees* | ⚠️ **unplaced** (`T378`: the holder is a login, and the commit-record channel is closed this pass — `T388`) | **The broadest agent surface over DHIS2 found in the tier: `40+` tools spanning the aggregate data model (data elements, data sets, categories, validation rules), the event/tracker model (programs, tracked entities, enrolments) and analytics.** 🟢 **Filed as the tier's anchor row.** It is written against the *generic* Web API, so it reaches the education packages without modification — which is precisely why a health-rooted tool is fileable here. ⚠️ `7★`, pushed `2026-07-25` — the oldest push in the tier |
+| **Talk2YourData** | [EPFLiGHT/talk2yourdata](https://github.com/EPFLiGHT/talk2yourdata) | 1 | 1 | 🟢 **MIT** · `LICENSE` · `1,069 B` · sha256₁₂ `79f2967e5e35` · © *2026 Nathan Gromb* · *index agrees* | ⚠️ **unplaced, deliberately.** The owner login reads as a Swiss research institute, **but the org endpoint is gated this session (`T388`) and a login string is not a publishing record** — refused rather than guessed | **Natural-language → DHIS2 analytics as a four-stage `LangGraph` state machine**: query decomposition, parameter discovery (org units, data elements, periods), validation against the live API, then answer generation with iterative refinement — with **automatic ambiguity detection and human-in-the-loop clarification**. 🔵 **Filed as an architecture, not as a dependency.** It is the only row in the tier that treats "which indicator did you mean?" as a *routing* problem rather than a prompt problem, and that is the hard part of a ministry deployment. ⚠️ **Its domain is health data**; the education packages are the same API and the same ambiguity problem |
+| **unesco-mcp** | [lpicci96/unesco-mcp](https://github.com/lpicci96/unesco-mcp) | 3 | 0 | 🟢 **MIT** · `LICENSE` · `1,067 B` · sha256₁₂ `739af8aa6944` · © *2026 Luca Picci* · *index agrees* | ⚠️ **unplaced** | Agent access to the **UNESCO Institute for Statistics** series — the instrument behind most of the cross-country education figures on [`../intel/market.md`](../intel/market.md). 🟢 **Filed because it attacks this base's own most-cited weakness:** `725-F` says every market figure here is secondary and that `www.unesco.org` does not resolve in this session. **A UIS agent is the route by which a reader *with* network access settles those figures in one call** |
+| **dhis2-mcp (read-only)** | [brianmituka/dhis2-mcp](https://github.com/brianmituka/dhis2-mcp) | 0 | 0 | 🟢 **MIT** · `LICENSE` · `1,068 B` · sha256₁₂ `607bd2de0647` · © *2026 brianmituka* · *index agrees* | ⚠️ **unplaced** | **Read-only DHIS2 server built explicitly for small local models.** 🔵 **Filed for that property alone, and it is a real one in this sector:** the ministries that run DHIS2 are disproportionately in low-bandwidth, data-sovereignty-constrained settings where a frontier API call is the thing you cannot assume. ⚠️ `0★`, `0` forks — a direction, not a dependency |
+| **dhis2-mcp-server** | [ahasan722/dhis2-mcp-server](https://github.com/ahasan722/dhis2-mcp-server) | 0 | 0 | 🟢 **MIT** · `LICENSE` · `1,070 B` · sha256₁₂ `6db1640ce079` · © *2026 Md Abid Hasan* · *index agrees* | ⚠️ **unplaced** | A fourth independent MIT implementation against the same API. ⚠️ **Filed for the denominator it supplies, not for itself:** `4` of the `6` real rows in this tier are independent MIT re-implementations of the same server, which says the need is obvious and **no implementation has become canonical.** That is the gap `P231` builds into, and it is an argument for contributing upstream rather than adopting |
+| **MCP-Dubai** 🟢 *promotion* | [mahdi-salmanzade/MCP-Dubai](https://github.com/mahdi-salmanzade/MCP-Dubai) | 6 | 5 | 🟢 **MIT** · `LICENSE` · `1,074 B` · sha256₁₂ `33bad303f760` · © *2026 Mahdi Salmanzadeh* · *index agrees* | **EMEA** (UAE — and placed here **consistent with this base's own standing correction** that the UAE belongs in EMEA, not APAC, recorded at [`../intel/market.md`](../intel/market.md)) | MCP server over Dubai and UAE public APIs, **education among them**, alongside transport, statistics and health. 🟢 **`P210`-class promotion: it has sat in [`../compose/patterns.md`](../compose/patterns.md) since an earlier pass as a pattern component and was never given a shelf row** — the exact defect `P210` names. 🔵 It is also the only *national open-data* agent on this shelf, and the Gulf is the region where a ministry curriculum mandate and an open-data portal already coexist |
+
+### 🔴 Refused, with the reason, so no successor re-buys them
+
+| Address | Stars | What the index says | What the bytes say | Verdict |
+|---|--:|---|---|---|
+| [winterop-com/dhis2w](https://github.com/winterop-com/dhis2w) | 1 | `NOASSERTION` | 🔴 **`785 B` · sha256₁₂ `3d2034562ea8` · © *2026 Morten Olav Hansen* — `All rights reserved`. *"No license, express or implied, is granted to use, copy, modify, merge, publish, distribute, sublicense, or sell copies… The source is published for reference only. Any use beyond reading requires written permission."*** | 🔴 **REFUSED — proprietary.** And it is the **most complete** artefact in the tier: a Python client, a CLI, an MCP server and browser automation in one toolkit. `T390` |
+| [winterop-com/dhis2w-mcp](https://github.com/winterop-com/dhis2w-mcp) | 0 | `NOASSERTION` | 🔴 **Byte-identical payload** (`785 B`, `3d2034562ea8`) — **one grant, not two** | 🔴 **REFUSED — proprietary.** The plugin-pack packaging of the above |
+| [yifnli/uis-sdg4-mcp](https://github.com/yifnli/uis-sdg4-mcp) | 2 | `NONE` | ⚠️ **No grant at `6` probed paths** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT`) | ⚠️ **REFUSED as unusable** — and recorded as a `T302` honest negative, **not** as a compliant absence, because the denominator channel is closed (`T388`). On-topic otherwise: grounded agent access to UNESCO UIS **SDG-4** indicators |
+| [malkreide/swiss-statistics-mcp](https://github.com/malkreide/swiss-statistics-mcp) | 2 | `MIT` | not read | ⚠️ **NAMED AND EXCLUDED** — Swiss Federal Statistical Office, `682` datasets across `21` themes, **not education-specific.** Swept in by a statistics token |
+
+### 🟢 The control that paid, and the duplicate it caught
+
+[`cyanheads/oecd-mcp-server`](https://github.com/cyanheads/oecd-mcp-server) (`4★`) came off the
+statistics leg looking like a find. 🔴 **It is already a `p703` row on
+[`../repos/foundations.md`](../repos/foundations.md)** — `P210` caught it before a row was drafted.
+🟢 **And its payload is `Apache-2.0`, `11,317 B`, sha256₁₂ `7915fc5b0477` — byte-identical to the
+`cyanheads` payload recorded at `p703`, `p743` and `p744`.** That is **four independent
+confirmations across four passes** that this publisher ships one canonical grant, and it is the
+cheapest licence verdict available to this base: **a digest match against a known publisher is a
+read you do not have to repeat.**
+
+### 🔴 What was searched and was not there — recorded so a later pass does not re-buy it
+
+The **mandated global agent legs** ran for the `40`th consecutive pass and **nil'd again**.
+`top open source AI agents education 2026 github MIT` returned general-purpose listicles
+(OpenHands, browser-use, Mem0, MetaGPT, Hermes, Langflow) **with the sources disagreeing with each
+other** — one files Flowise as MIT, another as Apache-2.0 — and no education row this base does not
+hold. `github trending education AI 2026` returned **`5` repositories and a shelf `grep` found all
+`5` already held** (DeepTutor, `interactive-learning`, `Claw-ED`, `ChinaTextbook`,
+`ai-agents-for-beginners`) — **the third consecutive pass in which that leg returns only holdings.**
+🔵 Contents at `evidence/websearch-legs.2026-11-10-p746.tsv`.
+
+🔴 **The LMS agent tier is saturated for this base and should not be re-swept.** `moodle mcp server`
+returns `127` repositories; the top `5` carry **`28`, `261`, `384`, `148` and `36` mentions** on live
+shelves respectively. `openedx mcp server` returns `2`, both held. `xapi learning record mcp`
+returns `1`, held (`394` mentions). **`student information system mcp server` returns `5`, of which
+`3` are held.** Measured, not assumed.
+
+🔴 **`school data mcp server` is colonised by a video game, which is `T380` generalising a third
+time.** `2` of the top `6` results are **Old School RuneScape** repositories (`mcp-server-runescape`,
+`OSRS-MCP-Companion`) — "OSRS" expands to *Old School RuneScape* and the token `school` rides along.
+**A leg built on `school` as a bare noun is not an education leg.**
 
 ## 🆕 `p745` — 🔴 **THE REGISTER THE EU ACTUALLY REGULATES HAS ALMOST NO AGENT LAYER. `3` ROWS, TOP ROW `4★`, AND THE SCARCITY IS MEASURED RATHER THAN ASSERTED: `qti assessment mcp server` RETURNS `0` REPOSITORIES, THE BEST ON-TOPIC GRADING AGENT IN EXISTENCE IS `10★`, AND ANNEX III BITES `2 DEC 2027`.**
 

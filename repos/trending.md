@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p746) — 🔴 **A `252`-REPOSITORY, `361★`, `BSD-3-CLAUSE` EDUCATION-DATA PLATFORM WAS ABSENT FROM THIS ENTIRE BASE. 🟢 `T360`'s LAYER SEAM CONFIRMED A THIRD TIME, `7 / 7` WITH ZERO CROSSOVERS, ON A WHOLE ESTATE. 🟢 THE NAMED NORTH AMERICA CANDIDATE LIST IS ENUMERATED AND IS A NIL — AND THE REAL ESTATE WAS UNDER A DIFFERENT OWNER.**
+
+**`12` foundations rows (new section) · `5` platform rows (new section) · `26` payloads byte-read, `26 / 26` classified · `2` index corrections · `2` `T302` honest negatives · `3` publishers enumerated end-to-end · `T388`–`T395` declared.**
+
+### The estates probed this pass, with their denominators — every total from `gh api -X GET search/repositories`
+
+| Owner / leg | Total | Already held | Verdict |
+|---|--:|---|---|
+| `org:dhis2` | **`252`** | 🟢 **`0` mentions** | 🟢 **THE FIND. `dhis2-core` `361★` / `409` forks, `BSD-3-Clause`, pushed `2026-11-10`, official Education packages layer** |
+| `org:unicef` (`giga`) | **`32`** | 🟢 **`0` mentions** | 🟢 School mapping + connectivity. **`T389`'s layer seam, measured `7 / 7`** |
+| `org:CEDS-Collaborative-Exchange` | **`12`** | 🟢 **`0` mentions** | 🟢 **`Apache-2.0` throughout; the North America estate the standing list missed** |
+| `org:Ed-Fi-Alliance-OSS` | `30` | 🔴 **`469` mentions, `25` repositories named** | 🔴 **NOT a blind spot — measured BEFORE a row was drafted, per `T387`** |
+| `org:OpenEMIS` | `2` | 🟡 `241` mentions but **never on the platforms shelf** | 🟢 **`P210` promotion:** `OpenEMIS/core` `GPL-2.0`, `15,518 B`, `b6f03c6715ee`, **no network clause** |
+| `org:masakhane-io` | `25` | 🔴 **`159` mentions** | 🔴 Held. African-language MT; licences heterogeneous (MIT / GPL-3.0 / CC-BY-4.0) |
+| `org:Siyavula` | `74` | 🟡 `2` mentions | 🔴 **INFORMED NEGATIVE: `8★` ceiling, most activity 2011–2013. Not a live estate** |
+| `org:dhis2-metadata` | `85` | `0` | 🔴 **Health-dominated.** The education package (`EMIS_AGG`) is `0★` and **carries no grant** |
+| `org:18F` | **`994`** | — | 🔴 **`2` education repositories, both last pushed 2017** (`T394`) |
+| `org:GSA` | **`840`** | — | 🔴 **`0` education** |
+| `org:canada-ca` | `68` | — | 🔴 **`0` education**, queried in both official languages |
+| `usedgov` / `cdssnc` / `DigitalService` | — | — | 🔴 **Not real orgs.** `3` of `6` names on this base's own standing list |
+| `nigeria school management system` | `59` | — | 🔴 Unlicensed or `1–2★` projects |
+| `kenya education platform open source` | `2` | — | 🔴 Neither is education |
+| `egypt education ai` | `15` | — | 🔴 Only recent on-topic row carries **no grant** |
+
+### 🟢 `T389` — the layer seam, on one publisher, both halves byte-read
+
+| Layer | Repositories | Grant | Reads |
+|---|---|---|--:|
+| Models, analysis, research | `giga-global-school-mapping`, `giga-mlab-school-connectivity-cop`, `giga-open-cost-model` | 🟢 **Apache-2.0** | `3 / 3` |
+| Hosted services and backends | `giga-spatial`, `giga-maps-backend`, `giga-meter-backend`, `project-connect-daily-check-app` | 🔴 **AGPL-3.0** | `4 / 4` |
+
+🔵 **`7 / 7`, zero crossovers, one publisher — the third independent confirmation after
+`eol-uchile` and `edukors_graph`, and the first sweeping a whole estate in one pass.**
+**Commercially: take Giga's mapping models under Apache-2.0; do not host a modified `giga-maps` or
+`giga-meter`, because §13 reaches the hosted service.** ⚠️ The Giga Meter **client and its backend
+share one byte-identical payload** (`34,693 B`, `b25b37948bd2`).
+
+### 🟢 `T391` — an Apache payload can be the licence twice over
+
+[`unicef/giga-open-cost-model`](https://github.com/unicef/giga-open-cost-model) serves
+**`22,713 B`** against the steward's `11,358 B` — far outside the `1,184 B` spread `693-G`/`p739`
+established. 🔴 **It is the Apache text concatenated with itself:** `2` occurrences of
+`END OF TERMS AND CONDITIONS` (lines `176`, `377`), `8` of `Apache License`, **no added clause**.
+🟢 **New one-line control, and it belongs beside `P742-C`'s conflict-marker grep:**
+`grep -c 'END OF TERMS AND CONDITIONS'` — `> 1` means duplicated, not altered.
+
+### 🟢 The publisher-digest control, fourth confirmation
+
+`cyanheads` ships one canonical `Apache-2.0` payload — `11,317 B`, `7915fc5b0477` — now confirmed
+at `p703`, `p743`, `p744` and `p746`. 🔵 Same pattern inside `CEDS-Collaborative-Exchange`:
+`3 / 3` payloads at `11,357 B` / `c71d239df917`. **A digest match against a known publisher is a
+read you do not have to repeat.**
+
+### 🔴 The instrument correction — `T388`
+
+`api.github.com/repos/…` is **session-gated for the authenticated and unauthenticated caller
+alike** (`2 / 2` controls), `codeload` returns `403`, and `curl -sI https://github.com/…` returns
+`403` for every address including an invented one (`4 / 4`). 🔴 **So `p745`'s tree-denominator
+channel (`T374`) is not available here:** absences are reported as *"no grant at `N` probed
+paths"*, and placement comes from payload holder lines, README text or publishing programme.
+⚠️ **New trap:** with headers shown, `curl -sI`'s first line is the proxy's
+`HTTP/1.1 200 Connection Established`, which reads like success. **Read the status code.**
+🟢 **Working channels, re-controlled: `gh api -X GET search/repositories` for metadata,
+`raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}` for bytes (`200`/`404`, `2 / 2`).**
+
+### 🔴 Also recorded
+
+- **`725-F` re-controlled and EXTENDED from `4` hosts to `7`:** `eur-lex.europa.eu`,
+  `www.unesco.org`, `www.iesalc.unesco.org`, `digitaleducationcouncil.com`,
+  **`data.consilium.europa.eu`**, **`digital-strategy.ec.europa.eu`** and **`www.multistate.us`**
+  all return `http=000`. **Do not spend a leg on primary confirmation in this environment.**
+- 🔴 **`T395` — this base's own per-region convention is claimed more often than met:** `p741` `1`
+  block, `p742` `1`, `p743` `0`, `p744` `1` (described as *"all five"*), `p745` `0`.
+  🟢 **`p746` wrote all `5`.**
+- ⚠️ **`OpenEduCat`** came off the mandated vertical-platform leg **with no licence stated by any
+  source** — not filed, named as a standing candidate for a pass that will byte-read it.
+
 ## 🆕 2026-11-10 (p745) — 🟢 **THE ASSESSMENT TIER'S LICENCE GRADIENT RUNS THE *OPPOSITE* WAY TO THE SCHOLARLY TIER'S: THE STANDARDS BODY IS PERMISSIVE AND EVERY DEPLOYABLE PLATFORM IS COPYLEFT. 🔴 A `149★` PLATFORM PUBLISHES ITS ONLY GRANT AT `Resources/LICENCE` AND THE TWO FILES IN IT NAMED `LICENSE` BELONG TO SOMEBODY ELSE. 🔴 THREE `AGPL-3.0` PAYLOADS AT *EXACTLY* `34,523 B`, TWO BYTE-IDENTICAL AND ONE NOT.**
 
 **`8` foundations rows (new section) · `5` platform rows (new section) · `42` payloads byte-read, `42 / 42` classified · `2` index corrections · `4` enumerated absences · `47%` novel / `~8%` yield (`T379`).**

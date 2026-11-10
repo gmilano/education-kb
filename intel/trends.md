@@ -4,6 +4,208 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p746` (researched 2026-11-10) — `T388`–`T395`
+
+**Added above `p745`'s `T379`–`T387`.** `p746` changed the register to **the substrate a national
+education ministry runs its numbers on** and found a `252`-repository, `BSD-3-Clause` platform at
+`0` mentions on this base. `26` licence payloads byte-read, `26 / 26` classified from the title
+block, `2` index values materially corrected, `2` grant-absences recorded as `T302` honest
+negatives.
+
+> ⚠️ **Identifier note, honouring `733-K`.** `T388` follows `T387`, the highest `##`/`###`
+> **heading** in this file. Bare `T[0-9]+` matches in prose reach higher and are citations.
+
+> 🔴 **Housekeeping defect in this file, recorded rather than silently fixed.** `p745` wrote its
+> findings (`T379`–`T387`) **under a heading that reads `Trends new at p744`**. The identifiers are
+> correct and the content is p745's; only the heading is wrong. **Not rewritten here, because a
+> blind edit to a prior pass's heading would falsify what that pass published** — flagged so a
+> reader does not date `T379`–`T387` to the wrong pass.
+
+---
+
+## T388 — 🔴 `T374` is NOT satisfiable in this session: the whole `api.github.com/repos/` namespace is gated, so tree denominators and commit-record placement are both unavailable
+
+`p745` published compliant grant-absences **with tree denominators** (`669` tree entries, `18`
+distinct grants) and placed a row as **North America** from *"the commit record"*, citing a working
+`git` tree channel as `T374` — and explicitly recorded that `T302`'s contrary conclusion had been
+"about HTTP rather than about the environment".
+
+🔴 **In this session the channel is closed, on `2 / 2` controls, and it fails identically for both
+callers:**
+
+| Channel | Call | Result |
+|---|---|---|
+| Authenticated | `gh api repos/dhis2-metadata/EMIS_AGG/git/trees/HEAD?recursive=1` | 🔴 session-gate message: *"GitHub access to this repository is not enabled for this session"* |
+| Unauthenticated | `curl https://api.github.com/repos/dhis2/dhis2-emis-docs/git/trees/HEAD?recursive=1` | 🔴 **the same session-gate message** — including for a repository whose **bytes the raw channel serves happily** |
+| Archive | `curl https://codeload.github.com/dhis2-metadata/EMIS_AGG/tar.gz/refs/heads/master` | 🔴 `403`, `378 B` body |
+
+🔵 **The discriminating detail: the gate is not about whether the repository exists or is public.**
+`dhis2/dhis2-emis-docs` returns a full `BSD-3-Clause` payload over
+`raw.githubusercontent.com` in the same minute that `api.github.com/repos/…` refuses to describe it.
+**It is a namespace gate, not a liveness signal** — which is exactly the shape of `T289`, now
+established for the whole `repos/` namespace and for the unauthenticated caller too.
+
+🟢 **Consequences, stated so the next pass does not re-derive them:**
+1. **Grant-absence verdicts revert to `T302`'s honest negative** — *"no grant at `N` probed paths"* —
+   and **must not claim a denominator.** This pass recorded `2` such absences that way.
+2. **Commit-record placement is unavailable.** `T378` placement must come from a **payload holder
+   line** (strongest), **README text**, or a **publishing programme**; never from a commit e-mail.
+3. 🔴 **`p745`'s `669`-entry and `18`-grant figures cannot be reproduced here and should not be
+   re-quoted to a client without a fresh read.** Whether the environment changed or the figures came
+   from elsewhere is undecidable from inside this session, and that uncertainty is the finding.
+
+🔵 **What *is* confirmed working, re-controlled this pass:** `gh api -X GET search/repositories`
+(full metadata, `T359`/`T310`) and `raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}`
+(`200` alive / `404` absent, `2 / 2`). **Metadata from search, bytes from raw — and nothing from
+`repos/`.**
+
+---
+
+## T389 — 🟢 `T360`/`P213`'s layer seam confirmed a third time, independently, and for the first time measured across an entire estate in one pass
+
+The **UNICEF–ITU Giga** estate (`32` repositories) was byte-read across both of its layers:
+
+- 🟢 **Models, analysis, research → `Apache-2.0`, `3 / 3`** (`giga-global-school-mapping`,
+  `giga-mlab-school-connectivity-cop`, `giga-open-cost-model`)
+- 🔴 **Hosted services and backends → `AGPL-3.0`, `4 / 4`** (`giga-spatial`, `giga-maps-backend`,
+  `giga-meter-backend`, `project-connect-daily-check-app`)
+
+**`7 / 7`, zero crossovers, one publisher.** `p742` found this seam on `eol-uchile` (xblock vs theme)
+and again on `edukors_graph`; this is the third independent confirmation and the first where the
+*whole* publisher was swept rather than a sample.
+
+🔵 **Why this is now a rule rather than a correlation.** Three publishers, three countries, three
+technology stacks, same boundary: **the thing you *run* is copyleft and the thing you *learn from*
+is permissive.** The mechanism is not mysterious — a funder protects the service it operates and
+releases the research it wants adopted. 🟢 **Operationally: ask "which layer is this?" before
+"who published this?", and read the licence of the subtree you will actually ship.** `P234`.
+
+---
+
+## T390 — 🔴 A `NOASSERTION` index value can conceal an actively proprietary grant, and the most complete artefact in a tier is where it bit
+
+[`winterop-com/dhis2w`](https://github.com/winterop-com/dhis2w) and
+[`winterop-com/dhis2w-mcp`](https://github.com/winterop-com/dhis2w-mcp) are indexed
+**`NOASSERTION`**. The payload (`785 B`, sha256₁₂ `3d2034562ea8`, **byte-identical across both**,
+© *2026 Morten Olav Hansen*) reads:
+
+> *"No license, express or implied, is granted to use, copy, modify, merge, publish, distribute,
+> sublicense, or sell copies of this software or its derivatives. The source is published for
+> reference only. Any use beyond reading requires written permission from the copyright holder."*
+
+🔴 **This is worse than `T302`'s honest negative and worse than `P741-B`'s dangling reference,
+because `NOASSERTION` reads as *"licence not detected, probably fine"* while the text actively
+forbids use.** `P739-A` established that the index is wrong in both directions about the licence
+*family*; this is a third direction — **the index has no vocabulary for "source-available but
+all rights reserved"**, and files it under the same value it uses for an unparseable `MIT`.
+
+⚠️ **And the cost is real rather than theoretical:** these two repositories are the **most
+feature-complete** DHIS2 agent artefacts this pass found — client, CLI, MCP server and browser
+automation in one toolkit — published by a developer whose name appears on the DHIS2 estate itself.
+**The best tool in the tier is the one Globant may not build on.** 🟢 **Procedure: treat
+`NOASSERTION` as "unknown, read the bytes", never as "permissive by default"** — and read them
+*before* building a recipe around the artefact, not after.
+
+---
+
+## T391 — 🟢 An `Apache-2.0` payload can be the licence concatenated with itself, and the discriminator is one `grep`
+
+[`unicef/giga-open-cost-model`](https://github.com/unicef/giga-open-cost-model) serves
+**`22,713 B`** of `Apache-2.0` against the steward's `11,358 B` — **roughly double**, and far
+outside the **`1,184 B`** spread that `693-G` and `p739` established across every Apache payload
+this base had read (`10,173`–`11,357 B`).
+
+🔴 **It is not a variant and it has no added clause.** The file contains **`2` occurrences of
+`END OF TERMS AND CONDITIONS`** (lines `176`, `377`) and **`8` of `Apache License`**: the licence is
+duplicated in place.
+
+🟢 **Rule, and it costs nothing — it belongs beside `P742-C`'s conflict-marker check on every
+grant read:**
+
+```
+grep -c 'END OF TERMS AND CONDITIONS'   # > 1  =>  concatenated payload, not an altered one
+```
+
+🔵 **Why it matters practically:** a size heuristic — the thing a reader reaches for first — files
+`22,713 B` as *"modified Apache, find the extra clause"* and sends them hunting for a restriction
+that does not exist. The operative terms here are the stock terms, **twice**.
+
+---
+
+## T392 — 🟢 The publisher-digest control paid out a fourth time, and `P210` caught the row it arrived on
+
+[`cyanheads/oecd-mcp-server`](https://github.com/cyanheads/oecd-mcp-server) came off this pass's
+statistics leg looking like a find. 🔴 **It is already a `p703` row on `repos/foundations.md`** —
+caught by the shelf `grep` before a row was drafted. 🟢 **And its payload is `Apache-2.0`,
+`11,317 B`, sha256₁₂ `7915fc5b0477` — identical to the `cyanheads` payload recorded at `p703`,
+`p743` and `p744`.**
+
+🔵 **Four independent confirmations across four passes that one publisher ships one canonical
+grant.** This is the cheapest licence verdict available to this base: **a digest match against a
+known publisher is a read you do not have to repeat**, and it is the one control here that gets
+*stronger* every time it is exercised. 🔵 The same pattern held inside
+`CEDS-Collaborative-Exchange` this pass — `3 / 3` payloads at `11,357 B` / `c71d239df917`.
+
+---
+
+## T393 — 🔴 `T380`'s topic colonisation generalises again: the bare noun `school` is owned by a video game
+
+The leg `school data mcp server` returns `36` repositories, of which **`2` of the top `6` are
+Old School RuneScape** (`mcp-server-runescape` at `13★`, `OSRS-MCP-Companion` at `4★`) — "OSRS"
+expands to *Old School RuneScape* and the token `school` rides along. The remainder are a family
+sports-schedule server, a city open-data server and a lead-scraping pipeline.
+
+🔵 **`T380` found this for `topic:`; `T378` found it for `org:`; this is the keyword register.**
+**A leg built on a bare sector noun is not a sector leg.** The productive legs this pass were the
+ones naming a *system* — `dhis2 mcp` (`10` results, `6` real), `oneroster` (`123`),
+`moodle mcp server` (`127`) — not the ones naming a *setting*.
+
+---
+
+## T394 — 🟢 This base's standing North America authority list is now enumerated, and it is a measured nil — but the register it belongs to paid anyway
+
+`intel/market.md` has carried a standing candidate list *"named here so the work is not
+re-derived"*: `18f`, `GSA`, `usedgov`, `cdssnc`, `canada-ca`, `DigitalService`, plus state education
+agencies. **No pass had enumerated it.** `p746` did:
+
+| Owner | Repositories in org | Education repositories | Verdict |
+|---|--:|--:|---|
+| `org:18F` | **994** | **2** | 🔴 Both last pushed **2017** (`18f-education-discovery`, `ED-API-Program`) |
+| `org:GSA` | **840** | **0** | 🔴 Nil |
+| `org:canada-ca` | **68** | **0** | 🔴 Nil, queried in **both official languages** (`education`, `apprentissage`) |
+| `org:usedgov` | — | — | 🔴 **Not a real org** (does-not-exist validation error) |
+| `org:cdssnc` | — | — | 🔴 **Not a real org** |
+| `org:DigitalService` | — | — | 🔴 **Not a real org** |
+
+🟢 **The list is spent and should be struck rather than carried.** 🔵 **But the register was still
+right, which is `T387` recurring with the opposite sign:** the North America education-data estate
+*does* exist, it is **`CEDS-Collaborative-Exchange`** (`12` repositories, `Apache-2.0`, actively
+pushed), and **it was not on the list.** A horizontal-government-digital-service owner is the wrong
+place to look for sector software; **the sector's own standards collaborative is the right one.**
+
+---
+
+## T395 — 🔴 This base claims its own per-region convention more often than it meets it, and the count was one `grep` away
+
+`intel/market.md` requires each pass to add a `#### 🆕 pNNN` block under **each** of the five
+`###` region headings. Several pass headers assert this was done *"for all five"*. Measured:
+
+| Pass | `#### 🆕 pNNN` blocks present | Header claim |
+|---|--:|---|
+| `p741` | **1** | — |
+| `p742` | **1** | *"each region's newest block is `#### 🆕 p742`"* |
+| `p743` | **0** | — |
+| `p744` | **1** | *"for **all five** values"* |
+| `p745` | **0** | — |
+
+🔴 **`3` of the last `5` passes added one block or none, and two of them described it as five.**
+🔵 **This is `T153` recurring once more** — *a rule enforced on the page where the defect was last
+seen is not enforced* — and it is precisely what `Gap 247`'s `gate-region-headings` would catch if
+the hook suite were runnable in this session. 🟢 **`p746` writes all five**, and the count is
+published above so the next pass can check it with one `grep -c` rather than trusting a header.
+
+---
+
 
 # 🆕 Trends new at `p744` (researched 2026-11-10) — `T371`–`T378`
 

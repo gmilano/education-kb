@@ -4,6 +4,183 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P231–P234 — added at p746 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the
+recipe.** This set is the **education-data substrate's**: the system a ministry or a state agency
+already runs its statutory numbers on. 🟢 **Unlike `p745`'s assessment set, the substrate here is
+permissive end to end — `BSD-3-Clause` and `Apache-2.0` — so the licence risk sits in the *service*
+layer rather than in the core** (`T389`), and `P234` is the sweep that finds it.
+
+---
+
+## P231 — The national EMIS conversational layer: an agent over the system the ministry already files its statistics from (EMEA / APAC / LATAM / Global; 8–12 weeks)
+
+**The buyer.** A ministry of education, or a state/provincial authority, that already runs **DHIS2**
+and has a statutory reporting duty. 🔵 **This is the only recipe on this shelf whose buyer has a
+procurement budget, a legal filing deadline and a multi-year contract** — tutoring sells to a
+faculty, assessment to a registrar, **an EMIS sells to a ministry**.
+
+**Components, all byte-read 2026-11-10:**
+
+| Layer | Component | Grant |
+|---|---|---|
+| System of record | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) — `361★`, `409` forks | 🟢 **BSD-3-Clause** (`1,517 B`, `4fc00af93f1b`, © *University of Oslo*) |
+| Education configuration | [`dhis2/dhis2-emis-docs`](https://github.com/dhis2/dhis2-emis-docs) — the Education packages | 🟢 **BSD-3-Clause** (`1,492 B`, `7a337e1b37bd`) |
+| Supported extension point | [`dhis2/app-platform`](https://github.com/dhis2/app-platform) | 🟢 **BSD-3-Clause** (`1,518 B`, `923e34a49433`) |
+| Native look and feel | [`dhis2/ui`](https://github.com/dhis2/ui) | 🟢 **BSD-3-Clause** (`1,505 B`, `a7456f880530`) |
+| Agent surface | [`Dradebo/dhis2-mcp`](https://github.com/Dradebo/dhis2-mcp) — `40+` tools over the Web API | 🟢 **MIT** (`1,064 B`, `bfd0de705cb7`) |
+| Query-routing architecture | [`EPFLiGHT/talk2yourdata`](https://github.com/EPFLiGHT/talk2yourdata) — LangGraph state machine | 🟢 **MIT** (`1,069 B`, `79f2967e5e35`) |
+| Offline / low-bandwidth variant | [`brianmituka/dhis2-mcp`](https://github.com/brianmituka/dhis2-mcp) — small local models | 🟢 **MIT** (`1,068 B`, `607bd2de0647`) |
+| Field capture | [`dhis2/dhis2-android-capture-app`](https://github.com/dhis2/dhis2-android-capture-app) | 🟢 **BSD-3-Clause** (`1,478 B`, `eee2d8a9e7f7`) |
+
+**Wiring.** DHIS2 is the **system of record and the only writer**. Ship the conversational layer as
+a **DHIS2 app through `app-platform`**, not as a patched server or an external portal — that single
+decision is what keeps this an integration rather than a migration, and it is why `app-platform`
+is in the table. The agent reads through the MCP server; `talk2yourdata`'s four-stage shape supplies
+the hard part: **query decomposition → parameter discovery (org units, data elements, periods) →
+validation against the live API → answer generation**, with **ambiguity routed to a human** instead
+of guessed. Render answers into [`dhis2/dashboard-app`](https://github.com/dhis2/dashboard-app)
+(`BSD-3-Clause`, `1,519 B`, `3212fbc149ec`) so the output lands in a surface staff already trust.
+
+🔴 **The two cautions that decide the estimate.**
+1. **No agent implementation in this tier is canonical.** `4` of the `6` real rows are independent
+   MIT re-implementations of the same server, the best at `7★`. **Budget to harden and own one, and
+   prefer contributing upstream to adopting a `0★` dependency.**
+2. 🔴 **The education metadata package
+   [`dhis2-metadata/EMIS_AGG`](https://github.com/dhis2-metadata/EMIS_AGG) carries NO grant**
+   (`6` paths probed, index agrees `NONE`). **The engine is `BSD-3-Clause`; the education
+   configuration is ungranted.** Get terms from the implementing ministry before shipping the
+   package itself.
+🔴 **And never wire in [`winterop-com/dhis2w`](https://github.com/winterop-com/dhis2w)** despite it
+being the most complete toolkit in the tier — it is **proprietary, all rights reserved** behind a
+`NOASSERTION` index value (`T390`).
+
+**Alternative system of record.** If the client runs **OpenEMIS** rather than DHIS2, substitute
+[`OpenEMIS/core`](https://github.com/OpenEMIS/core) (🟡 **GPL-2.0**, `15,518 B`, `b6f03c6715ee`) —
+and note the posture: **`GPL-2.0` carries no network clause** (`0` occurrences of
+`Remote Network Interaction` / `Affero` in the payload), so **hosting it is unencumbered**;
+only distributing a *modified* version triggers reciprocity. ⚠️ Deploy from source:
+`OpenEMIS/core-docker` is ungranted and was last pushed in 2020.
+
+---
+
+## P232 — The statutory-submission copilot: AI over a US state agency's federal special-education filing (North America; 6–9 weeks)
+
+**The buyer.** A **state education agency**. 🟢 **The reason this is the most procurement-credible
+North America recipe on this shelf: the submission is not discretionary.** IDEA reporting is a
+federal obligation with a deadline, the open application that produces it already exists, and
+there is no AI anywhere near it.
+
+**Components, all byte-read 2026-11-10:**
+
+| Layer | Component | Grant |
+|---|---|---|
+| Submission builder | [`CEDS-Collaborative-Exchange/Generate`](https://github.com/CEDS-Collaborative-Exchange/Generate) — `10★`, from the Center for the Integration of IDEA Data | 🟢 **Apache-2.0** (`11,357 B`, `c71d239df917`) |
+| Report definitions | [`CEDS-Collaborative-Exchange/CIID-Reports`](https://github.com/CEDS-Collaborative-Exchange/CIID-Reports) | 🟢 **Apache-2.0** (byte-identical payload) |
+| Conformance gate | [`CEDS-Collaborative-Exchange/CEDS-SHACL-Generator`](https://github.com/CEDS-Collaborative-Exchange/CEDS-SHACL-Generator) — SHACL shapes over the CEDS ontology | 🟢 **Apache-2.0** (byte-identical payload) |
+| Operational data store | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) — carried, already held at `469` mentions | 🟢 **Apache-2.0** |
+| Rostering bridge | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) — carried | 🟢 **Apache-2.0** |
+
+**Wiring, and the one design decision that matters.** `Generate` reads the state longitudinal data
+store (Ed-Fi ODS in most states) and builds the federal submission. **Put the model on the
+*exception* path, never on the submission path.** Concretely: `CEDS-SHACL-Generator` emits
+machine-checkable constraints; run them first; **the agent's job is to explain and triage the
+records that fail a shape and propose a correction** — it never writes a submitted value. The
+accepted correction is the audited action, performed by a named officer.
+
+🔵 **Why that split is the whole product.** A statutory filing cannot be probabilistic, so an agent
+that drafts the filing is unsellable. **An agent that turns `4,000` validation failures into a
+ranked, explained worklist is sellable immediately**, and it is deterministic where it has to be:
+SHACL decides conformance, the model only explains it. 🟢 **Permissive end to end — `Apache-2.0`
+across all five components, `3 / 3` byte-identical CEDS payloads** — so there is no copyleft
+question to negotiate.
+
+⚠️ **Price the maturity honestly:** `Generate` is `10★` / `3` forks. It is credible because of what
+it files, not its traction. Budget hardening, tests and a maintenance owner.
+
+---
+
+## P233 — School-register construction where no authoritative register exists, with the AGPL boundary drawn in advance (Global; LATAM / EMEA-Africa / APAC first; 10–14 weeks)
+
+**The problem this solves, and it precedes every other recipe here.** An EMIS cannot report on a
+school nobody has recorded. 🔵 **In the markets where `P231` sells, the register itself is
+incomplete** — which is why `P231` and `P233` are often one engagement in two phases.
+
+**Components, all byte-read 2026-11-10 — 🟢 the permissive half of `T389`'s seam only:**
+
+| Layer | Component | Grant |
+|---|---|---|
+| School detection from satellite imagery | [`unicef/giga-global-school-mapping`](https://github.com/unicef/giga-global-school-mapping) — `16★` | 🟢 **Apache-2.0** (`11,357 B`, `c71d239df917`) |
+| Connectivity cost modelling, per site | [`unicef/giga-open-cost-model`](https://github.com/unicef/giga-open-cost-model) | 🟢 **Apache-2.0** (`22,713 B`, `a7793c0afb53` — ⚠️ the licence **twice over**, `T391`, not an added clause) |
+| Connectivity community practice / methods | [`unicef/giga-mlab-school-connectivity-cop`](https://github.com/unicef/giga-mlab-school-connectivity-cop) | 🟢 **Apache-2.0** (`11,357 B`, `c71d239df917`) |
+| Register of record (destination) | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) org-unit hierarchy | 🟢 **BSD-3-Clause** |
+
+**Wiring.** Detect candidate schools from imagery → **reconcile against the ministry's existing
+org-unit hierarchy in DHIS2** rather than creating a parallel register → price connectivity per
+site with the cost model → hand the ministry a **ranked, costed, per-school plan**. 🔵 That last
+artefact is the deliverable, because it is the shape a ministry proposal and a donor submission
+both have to take.
+
+🔴 **The boundary, stated before the build and not after.** The Giga **services** —
+[`giga-spatial`](https://github.com/unicef/giga-spatial) (`34,523 B`, `8486a10c4393`),
+[`giga-maps-backend`](https://github.com/unicef/giga-maps-backend), `giga-meter-backend` and
+[`project-connect-daily-check-app`](https://github.com/unicef/project-connect-daily-check-app)
+(`34,693 B`, `b25b37948bd2`) — are **`AGPL-3.0`, `4 / 4`**.
+- 🟢 **Permitted:** deploy them **unmodified** for the ministry; run `giga-spatial` as an analysis
+  tool; hand the client Giga Meter as-is.
+- 🔴 **Not permitted without accepting §13:** folding a **modified** `giga-maps` or `giga-meter`
+  into a hosted, branded client service. **Network copyleft reaches the hosted service, not just a
+  shipped binary.**
+⚠️ **The `giga-meter` client and its backend share one byte-identical payload**, so there is no
+"the desktop app is different" argument to fall back on.
+
+---
+
+## P234 — The licence-layer pre-flight: three greps that catch what the index cannot say (all five regions; 1–2 days, run once per engagement)
+
+🔵 **Not a product — the gate that protects the three recipes above**, and it exists because this
+pass found **two** index-level misreadings in `26` payloads. **Run it before a component enters a
+proposal, not before a release.**
+
+**1. Ask which *layer* a repository is, before asking who published it** (`T389` / `T360` / `P213`).
+The seam runs along the layer, confirmed now on three unrelated publishers — `eol-uchile`,
+`edukors_graph`, and `unicef/giga` at `7 / 7` with zero crossovers.
+
+| If the component is… | Expect | Action |
+|---|---|---|
+| A model, dataset, notebook, analysis library | 🟢 Permissive (Apache-2.0 / MIT / BSD) | Read the payload and proceed |
+| A hosted service, backend, platform app | 🔴 Often **AGPL-3.0** | Read the payload **and the subtree you will ship** before costing |
+| A host-platform plugin (Moodle, Open edX, Zotero) | 🔴 Often **GPL/AGPL** even under a permissive root | Probe that subtree specifically (`P742-B`) |
+
+**2. Never read `NOASSERTION` as "probably fine"** (`T390`). It is the value the index uses for an
+unparseable permissive grant **and** for *"source-available, all rights reserved"*. This pass found
+the most feature-complete tool in an entire tier behind it, unusable. **`NOASSERTION` means "read
+the bytes", full stop.**
+
+**3. Three one-line checks on every grant payload** — each one caught a real defect on these
+shelves:
+
+```
+grep -cE '^(<<<<<<<|=======|>>>>>>>)'      # P742-C: unresolved merge conflict inside a LICENSE
+grep -c 'END OF TERMS AND CONDITIONS'      # T391: > 1 means the licence is concatenated, not altered
+grep -ciE 'Remote Network Interaction|Affero'   # T344: the ONLY reliable GPL-vs-AGPL discriminator
+```
+
+🟢 **Check 3 is the one that changes a commercial answer most often**, and it did so this pass:
+`OpenEMIS/core` is `GPL-2.0` and returns **`0`** — so **hosting it is unencumbered**, against the
+reflex that treats any GPL as disqualifying for a SaaS deliverable.
+
+⚠️ **Environmental limits this pass re-measured, so the gate is not specified against channels that
+do not work here** (`T388`): `api.github.com/repos/…` is **session-gated for both the authenticated
+and unauthenticated caller**, so **tree-wide grant censuses and commit-record placement are not
+available**; `curl -sI https://github.com/…` returns `403` for every address including invented
+ones. **Metadata from `gh api -X GET search/repositories`, bytes from
+`raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}` — and an absence is reported as
+"no grant at `N` probed paths", never as a denominator.**
+
+---
+
 
 ## 🆕 P226–P230 — added at p745 (2026-11-10)
 

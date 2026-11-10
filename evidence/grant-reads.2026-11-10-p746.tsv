@@ -1,0 +1,28 @@
+address	stars	forks	index_spdx	payload_path	bytes	sha256_12	title_block_family	holder_line	conflict_markers	index_vs_payload	disposition
+dhis2/dhis2-core	361	409	BSD-3-Clause	LICENSE	1517	4fc00af93f1b	BSD-3-Clause	Copyright (c) 2004-2025, University of Oslo	0	AGREES	foundations row; placed EMEA from the holder line
+dhis2/dhis2-emis-docs	0	1	BSD-3-Clause	LICENSE	1492	7a337e1b37bd	BSD-3-Clause	Copyright (c) 2025, DHIS2	0	AGREES	foundations row; the education package documentation
+dhis2/dhis2-android-capture-app	65	142	BSD-3-Clause	LICENSE	1478	eee2d8a9e7f7	BSD-3-Clause (title block opens on the copyright line, not the licence name)	Copyright (c) 2004-2019, University of Oslo	0	AGREES	foundations row; fork ratio 2.2:1 = P739-C deployment signal
+dhis2/dhis2-android-sdk	40	67	BSD-3-Clause	LICENSE	1477	67a5e1d977d8	BSD-3-Clause (title block opens on the copyright line)	Copyright (c) 2004-2019, University of Oslo	0	AGREES	foundations row; fork ratio 1.7:1
+dhis2/app-platform	32	22	BSD-3-Clause	LICENSE	1518	923e34a49433	BSD-3-Clause	Copyright (c) 2019, University of Oslo	0	AGREES	foundations row
+dhis2/ui	54	34	BSD-3-Clause	LICENSE	1505	a7456f880530	BSD-3-Clause	Copyright (c) 2018, DHIS 2	0	AGREES	foundations row; design system
+dhis2-metadata/EMIS_AGG	0	2	NONE	none	n/a	n/a	NO GRANT at 6 probed paths (LICENSE, LICENSE.md, LICENSE.txt, LICENCE, COPYING, LICENSE-MIT)	n/a	n/a	index says NONE and the raw channel agrees	NOT filed as usable; T302 honest negative. DENOMINATOR UNAVAILABLE - see T388, the tree channel is gated in this session
+CEDS-Collaborative-Exchange/Generate	10	3	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	none (stock Apache payload carries no holder line)	0	AGREES	foundations row; placed North America from the publishing programme, not the payload
+CEDS-Collaborative-Exchange/CEDS-SHACL-Generator	1	2	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	none	0	AGREES	foundations row; byte-identical payload to Generate
+CEDS-Collaborative-Exchange/CIID-Reports	3	3	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	none	0	AGREES	foundations row; byte-identical payload to Generate
+unicef/giga-global-school-mapping	16	6	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	none	0	AGREES	foundations row; the MODEL layer of the Giga seam
+unicef/giga-mlab-school-connectivity-cop	5	3	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	none	0	AGREES	the MODEL/analysis layer of the Giga seam
+unicef/giga-open-cost-model	0	2	Apache-2.0	LICENSE	22713	a7793c0afb53	Apache-2.0 CONCATENATED TWICE	none	0	family agrees, SIZE DOES NOT	T391: 22713 B is the Apache text twice over (2x END OF TERMS AND CONDITIONS at lines 176 and 377, 8x "Apache License"). Not an altered licence - a duplicated one
+unicef/giga-spatial	30	17	AGPL-3.0	LICENSE	34523	8486a10c4393	AGPL-3.0	Copyright (C) 2007 Free Software Foundation (stock preamble)	0	AGREES	the SERVICE layer of the Giga seam - network copyleft
+unicef/giga-maps-backend	2	3	AGPL-3.0	LICENSE	34522	4df3c306ddda	AGPL-3.0	stock preamble	0	AGREES	the SERVICE layer - network copyleft
+unicef/giga-meter-backend	2	0	AGPL-3.0	LICENSE	34693	b25b37948bd2	AGPL-3.0	stock preamble	0	AGREES	the SERVICE layer - network copyleft; 171 B larger than the other two AGPL payloads
+Dradebo/dhis2-mcp	7	4	MIT	LICENSE	1064	bfd0de705cb7	MIT	Copyright (c) 2025 Dradebo	0	AGREES	agent row; 40+ tools over the DHIS2 Web API
+EPFLiGHT/talk2yourdata	1	1	MIT	LICENSE	1069	79f2967e5e35	MIT	Copyright (c) 2026 Nathan Gromb	0	AGREES	agent row; LangGraph + MCP conversational analytics
+brianmituka/dhis2-mcp	0	0	MIT	LICENSE	1068	607bd2de0647	MIT	Copyright (c) 2026 brianmituka	0	AGREES	agent row; read-only, built for small local models
+ahasan722/dhis2-mcp-server	0	0	MIT	LICENSE	1070	6db1640ce079	MIT	Copyright (c) 2026 Md Abid Hasan	0	AGREES	agent row; thinnest of the DHIS2 agent tier
+lpicci96/unesco-mcp	3	0	MIT	LICENSE	1067	739af8aa6944	MIT	Copyright (c) 2026 Luca Picci	0	AGREES	agent row; UNESCO UIS statistics
+mahdi-salmanzade/MCP-Dubai	6	5	MIT	LICENSE	1074	33bad303f760	MIT	Copyright (c) 2026 Mahdi Salmanzadeh	0	AGREES	P210-class PROMOTION: held in compose/patterns.md since an earlier pass, never given a shelf row
+winterop-com/dhis2w	1	0	NOASSERTION	LICENSE	785	3d2034562ea8	PROPRIETARY - ALL RIGHTS RESERVED	Copyright (c) 2026 Morten Olav Hansen <morten@winterop.com>	0	INDEX IS MISLEADING	REFUSED. T390. "No license, express or implied, is granted to use, copy, modify... published for reference only"
+winterop-com/dhis2w-mcp	0	0	NOASSERTION	LICENSE	785	3d2034562ea8	PROPRIETARY - ALL RIGHTS RESERVED	Copyright (c) 2026 Morten Olav Hansen <morten@winterop.com>	0	INDEX IS MISLEADING	REFUSED. Byte-identical payload to dhis2w - one grant, not two
+yifnli/uis-sdg4-mcp	2	3	NONE	none	n/a	n/a	NO GRANT at 6 probed paths	n/a	n/a	index says NONE and the raw channel agrees	REFUSED as unusable. T302 honest negative; denominator unavailable per T388
+cyanheads/oecd-mcp-server	4	2	Apache-2.0	LICENSE	11317	7915fc5b0477	Apache-2.0	none	0	AGREES	NOT a new row - already a p703 foundations row (P210 caught it). Filed as a CONTROL: 4th independent confirmation of the cyanheads canonical payload across p703, p743, p744, p746
+malkreide/swiss-statistics-mcp	2	1	MIT	not read	n/a	n/a	n/a	n/a	n/a	n/a	NAMED AND EXCLUDED - Swiss federal statistics, not education-specific. Recorded so no successor re-buys it

@@ -10,6 +10,39 @@ updated: 2026-11-10
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
+## 🆕 `p746` — the national EMIS tier: the deployable system a ministry already runs, with the copyleft posture drawn per layer, `2026-11-10`
+
+> **Pass p746 · every grant byte-read 2026-11-10.** This shelf exists for *"the Odoo for ERP,
+> OpenMRS for healthcare"* class. 🟢 **This pass found the missing sibling of that very comparison:
+> `DHIS2` is to education data what `OpenMRS` is to clinical records — same sector, same funders,
+> often the same ministry — and it was absent from every live shelf on this base.** `5` platform
+> rows, `1` of them a `P210` promotion that has been sitting in the trending logs unshelved.
+
+🔵 **The posture question a buyer actually asks, answered once for the whole tier.** Three different
+copyleft regimes appear here and they are **not** interchangeable:
+
+| Platform | Grant (byte-read) | Can a studio host a modified derivative as a client service? |
+|---|---|---|
+| **DHIS2** | 🟢 `BSD-3-Clause` | 🟢 **Yes, with no reciprocal obligation.** The most permissive posture of any platform on this shelf at this size |
+| **OpenEMIS** | 🟡 `GPL-2.0` | 🟡 **Yes — `GPL-2.0` has no network clause.** Verified by bytes: `0` occurrences of `Remote Network Interaction` or `Affero` in the payload (`T344`'s discriminator). Distributing a *modified binary* carries the obligation; **hosting it does not** |
+| **Giga services** (`giga-meter`, `giga-maps`) | 🔴 `AGPL-3.0` | 🔴 **No, not without accepting §13.** Network copyleft reaches the hosted service itself |
+
+### The `5` rows
+
+| Platform | Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | What it is, and the seam |
+|---|---|--:|--:|---|---|---|
+| **DHIS2** | [dhis2/dhis2-core](https://github.com/dhis2/dhis2-core) | **361** | **409** | 🟢 **BSD-3-Clause** · `1,517 B` · sha256₁₂ `4fc00af93f1b` · © *2004-2025, University of Oslo* | **EMEA** (Norway, from the payload holder) | **The platform row of the pass.** A national-scale aggregate + tracker + analytics system for student and staff information at school, district and national level, with an official **Education packages** configuration layer ([`dhis2-emis-docs`](https://github.com/dhis2/dhis2-emis-docs), `BSD-3-Clause`, `1,492 B`, `7a337e1b37bd`). 🟢 **Customisation is a supported extension point, not a fork:** [`dhis2/app-platform`](https://github.com/dhis2/app-platform) (`BSD-3-Clause`, `1,518 B`, `923e34a49433`) ships custom apps *into* DHIS2 with inverted app control, and [`dhis2/ui`](https://github.com/dhis2/ui) (`1,505 B`, `a7456f880530`) supplies the native design system. ⚠️ **Install-base claims are NOT carried here** — the figures circulating for DHIS2 country deployments are vendor- and foundation-published and `725-F` applies. **What this pass verified by instrument: `409` forks, `252` repositories in the org, and a push on `2026-11-10`** |
+| **DHIS2 Android** | [dhis2/dhis2-android-capture-app](https://github.com/dhis2/dhis2-android-capture-app) | 65 | 142 | 🟢 **BSD-3-Clause** · `1,478 B` · sha256₁₂ `eee2d8a9e7f7` · © *2004-2019, University of Oslo* | **EMEA** (Norway, payload holder) | **Offline-first** field data capture — the half of an EMIS deployment that decides whether rural schools report at all. 🔵 Paired with [`dhis2/dhis2-android-sdk`](https://github.com/dhis2/dhis2-android-sdk) (`1,477 B`, `67a5e1d977d8`) when the client has to be bespoke rather than branded. ⚠️ **Offline-first is a licence-adjacent design fact, not a marketing one:** it is why the `brianmituka/dhis2-mcp` small-local-model row on [`../agents/top.md`](../agents/top.md) is filed at all |
+| **DHIS2 dashboards** | [dhis2/dashboard-app](https://github.com/dhis2/dashboard-app) | 45 | 46 | 🟢 **BSD-3-Clause** · `1,519 B` · sha256₁₂ `3212fbc149ec` · © *2004-2017, University of Oslo* | **EMEA** (Norway, payload holder) | The reporting surface a ministry official actually opens. 🔵 Filed because it is the natural host for an AI-authored indicator narrative: **the agent writes into a dashboard the user already trusts**, rather than into a new tool nobody has adopted |
+| **OpenEMIS** 🟢 *promotion* | [OpenEMIS/core](https://github.com/OpenEMIS/core) | 24 | 20 | 🟡 **GPL-2.0** · `LICENSE` · `15,518 B` · sha256₁₂ `b6f03c6715ee` · stock FSF preamble · *index agrees* · 🟢 **`0` occurrences of `Remote Network Interaction` / `Affero` — no network clause** | **Global** (the OpenEMIS programme is a UNESCO-associated EMIS deployed through national ministries; **no single-country placement is asserted**) | Student and staff information management at school, district and national level — **the direct functional alternative to a DHIS2 education deployment.** 🟢 **`P210`-class promotion and a long-overdue one: this base carries `241` `OpenEMIS` mentions and an MCP bridge for it in the trending logs, and has never given the platform itself a row on this shelf.** 🔴 **The licence posture is the reason to read the cell: `GPL-2.0` is often reflexively treated as disqualifying for a hosted deliverable, and the bytes say it is not** — the reciprocal duty attaches to *distributing a modified version*, and this payload carries no network clause. ⚠️ Pushed `2026-11-04`; [`OpenEMIS/core-docker`](https://github.com/OpenEMIS/core-docker) (`7★`) carries **no grant** and was last pushed 2020 — deploy from source, not from that image |
+| **Giga Meter** | [unicef/project-connect-daily-check-app](https://github.com/unicef/project-connect-daily-check-app) | 9 | 9 | 🔴 **AGPL-3.0** · `LICENSE` · `34,693 B` · sha256₁₂ `b25b37948bd2` — 🔵 **byte-identical to `unicef/giga-meter-backend`**, so the client and its backend ship one grant, not two | **Global** (UNICEF–ITU) | Windows desktop application that **automatically measures a school's real connectivity** and reports it — the ground-truth feed behind Giga's school-connectivity map. 🔴 **Read the licence cell before the description: this is the AGPL half of `T389`'s seam.** 🟢 **Deployable as-is to a ministry at no licence cost**; 🔴 **not forkable into a branded client service** without accepting §13. ⚠️ Pushed `2026-11-10` — the most actively maintained Giga artefact |
+
+### 🔴 Enumerated and NOT filed — with the reason
+
+- 🔴 **[`dhis2-metadata/EMIS_AGG`](https://github.com/dhis2-metadata/EMIS_AGG), the actual education metadata package, carries no grant** at `6` probed paths (index agrees: `NONE`). ⚠️ **So the deployable engine is `BSD-3-Clause` and the education configuration on top of it is ungranted** — a `P742-B`-shaped split. **Terms for the package must come from the implementing ministry; the engine is not in question.** Recorded as a `T302` honest negative, **not** a compliant absence, because the denominator channel is closed this session (`T388`).
+- ⚠️ **`org:dhis2-metadata` is health-dominated and should not be re-swept for education:** `85` packages, of which the education one is the `0★` row above. The rest are malaria, immunisation-safety, neglected tropical diseases and integrated disease surveillance. **Measured, so no successor pays for it twice.**
+- ⚠️ **`OpenEduCat`** surfaced on the mandated vertical-platform leg as an Odoo-based education ERP, **and the leg's own sources did not state its licence.** 🔴 **Not filed on that basis** — an unread grant is not a row. Named here as the standing candidate it is, for a pass that will byte-read it.
+
 Licence is the decisive field here, because an LMS is almost always *offered as a service* —
 which is exactly what the AGPL network clause is written about. Read the posture column
 before proposing a fork.

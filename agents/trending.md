@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p746) — 🟢 **THE EMIS AGENT TIER: `6` ROWS OVER A `252`-REPOSITORY PLATFORM THIS BASE HELD AT `0` MENTIONS. 🔴 THE MOST COMPLETE TOOLKIT IN THE TIER IS INDEXED `NOASSERTION` AND IS PROPRIETARY ON READING THE BYTES. 🔴 `p745`'s TREE-DENOMINATOR CHANNEL IS CLOSED IN THIS SESSION.**
+
+**`6` agent rows (`5` new + `1` `P210` promotion) · `12` foundations rows · `5` platform rows · `26` licence payloads byte-read, `26 / 26` classified from the title block · `2` index values materially corrected · `2` grant-absences recorded as `T302` honest negatives (NOT as denominators) · all `5` regional blocks written on `intel/market.md` · `T388`–`T395` declared.**
+
+### 🟢 The register, and why it paid
+
+This pass changed the noun for the fourth consecutive time — `p743` asked what a research university
+**runs**, `p744` what its **scholarly APIs** are, `p745` what the regulator **assesses**, and `p746`
+asks **what a national education ministry runs its numbers on**. 🟢 **The answer was
+[`DHIS2`](https://github.com/dhis2/dhis2-core): `361★`, `409` forks, `252` repositories,
+`BSD-3-Clause`, pushed the day of this pass, with an official Education packages layer — and `0`
+mentions across every live shelf on this base.**
+
+🔵 **The commercial point of the tier, in one line:** tutoring agents sell to a faculty and
+assessment agents sell to a registrar, but **an EMIS agent sells to a ministry** — the buyer with a
+procurement budget, a statutory filing deadline and a multi-year contract.
+
+### The `6` agent rows
+
+| Agent | Stars | Licence (byte-read) | Region | Note |
+|---|--:|---|---|---|
+| [Dradebo/dhis2-mcp](https://github.com/Dradebo/dhis2-mcp) | 7 | 🟢 MIT · `1,064 B` · `bfd0de705cb7` | ⚠️ unplaced | `40+` tools across the aggregate, tracker and analytics models — the tier's anchor |
+| [EPFLiGHT/talk2yourdata](https://github.com/EPFLiGHT/talk2yourdata) | 1 | 🟢 MIT · `1,069 B` · `79f2967e5e35` | ⚠️ unplaced (org endpoint gated — a login is not a publishing record) | LangGraph four-stage NL→DHIS2 analytics with **ambiguity routed to a human**. Filed as an architecture |
+| [lpicci96/unesco-mcp](https://github.com/lpicci96/unesco-mcp) | 3 | 🟢 MIT · `1,067 B` · `739af8aa6944` | ⚠️ unplaced | UNESCO UIS statistics — the instrument behind most figures on `intel/market.md` |
+| [brianmituka/dhis2-mcp](https://github.com/brianmituka/dhis2-mcp) | 0 | 🟢 MIT · `1,068 B` · `607bd2de0647` | ⚠️ unplaced | Read-only, **explicitly for small local models** — the low-bandwidth property |
+| [ahasan722/dhis2-mcp-server](https://github.com/ahasan722/dhis2-mcp-server) | 0 | 🟢 MIT · `1,070 B` · `6db1640ce079` | ⚠️ unplaced | Filed for the denominator: `4` independent MIT re-implementations, **none canonical** |
+| [mahdi-salmanzade/MCP-Dubai](https://github.com/mahdi-salmanzade/MCP-Dubai) 🟢 *promotion* | 6 | 🟢 MIT · `1,074 B` · `33bad303f760` | **EMEA** (UAE) | `P210` class: held in `compose/patterns.md` for passes, never shelved |
+
+### 🔴 The licence finding of the pass — `T390`
+
+[`winterop-com/dhis2w`](https://github.com/winterop-com/dhis2w) and
+[`dhis2w-mcp`](https://github.com/winterop-com/dhis2w-mcp) are indexed **`NOASSERTION`**; the
+payload (`785 B`, `3d2034562ea8`, **byte-identical across both**) says *"No license, express or
+implied, is granted… published for reference only."* 🔴 **They are the most feature-complete DHIS2
+agent artefacts this pass found — client, CLI, MCP server, browser automation — and Globant may not
+build on them.** `NOASSERTION` reads as *"probably fine"* and here it conceals an active
+prohibition.
+
+### 🔴 The instrument correction — `T388`, and it governs every absence claim
+
+`p745` published grant-absences **with tree denominators** over "the `git` tree channel" and placed
+a row from "the commit record". 🔴 **That namespace is gated in this session:
+`api.github.com/repos/…` returns a session-gate message for **both** the authenticated (`gh api`)
+and unauthenticated (`curl`) caller — including for a repository whose bytes
+`raw.githubusercontent.com` serves in the same minute.** `codeload` returns `403`.
+🟢 **Consequence: absences revert to `T302` honest negatives with a probed-path count and no
+denominator, and placement must come from a payload holder line, README text or publishing
+programme — never a commit e-mail.** `p745`'s `669`-entry / `18`-grant figures **cannot be
+reproduced here and should not be re-quoted without a fresh read.**
+
+### 🔴 Legs that returned only holdings — the LMS agent tier is saturated for this base
+
+| Leg | Total | Verdict |
+|---|--:|---|
+| `moodle mcp server` | `127` | 🔴 Top `5` carry **`28`, `261`, `384`, `148`, `36`** mentions on live shelves |
+| `openedx mcp server` | `2` | 🔴 Both held |
+| `xapi learning record mcp` | `1` | 🔴 Held (`394` mentions) |
+| `student information system mcp server` | `5` | 🔴 `3 / 5` held |
+| `github trending education AI 2026` (mandated) | `5` | 🔴 **All `5` held** — third consecutive pass returning only holdings |
+| `top open source AI agents education 2026 github MIT` (mandated) | — | 🔴 **`40`th consecutive nil**; sources disagree with each other on Flowise's licence |
+| `school data mcp server` | `36` | 🔴 **`2` of top `6` are Old School RuneScape** (`T393`) |
+
+🟢 **`P210` paid three times this pass and one of them would have been a headline error:**
+`tixuz/openemis-mcp` (**`35` mentions**, the OpenEMIS estate at `241`) and `masakhane-io`
+(**`159`**) were both drafted as finds; `cyanheads/oecd-mcp-server` turned out to be an existing
+`p703` row. 🔵 **And `P210` extends to *findings*, not just addresses:** this pass nearly declared
+"the UAE is mis-filed under APAC" as new — `intel/market.md` **already carries that correction.**
+
 ## 🆕 2026-11-10 (p745) — 🔴 **`ACTION p744-A` EXECUTED: THE ASSESSMENT REGISTER HAS THE REGULATION AND ALMOST NO AGENTS. `qti assessment mcp server` RETURNS `0` REPOSITORIES; THE BEST ON-TOPIC GRADING AGENT ON EARTH IS `10★`; ANNEX III BITES `2 DEC 2027` AND ARTICLE 50 IS LIVE NOW. 🔴 A `2★` `GPL-3.0`-INDEXED REPOSITORY SHIPS `18` GRANTS, TWO OF THEM `AGPL-3.0`.**
 
 **`3` agent rows filed and `3` is all that exists · `8` foundations rows · `5` platform rows · `42` licence payloads byte-read, `42 / 42` classified from the title block · `2` index values corrected from the bytes · `4` enumerated grant absences with tree denominators · `3` mandated global legs nil'd (`39`th agents).**

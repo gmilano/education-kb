@@ -33,6 +33,73 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p746` (2026-11-10) — 🔴 **A `252`-REPOSITORY, `361★`, `BSD-3-CLAUSE` EDUCATION-DATA PLATFORM WAS ABSENT FROM THIS ENTIRE BASE. `12` ROWS, AND A LICENCE SEAM THAT CONFIRMS `T360` A THIRD TIME FROM A PUBLISHER THAT HAS NEVER BEEN READ HERE**
+
+> **Pass p746 · `26` payloads byte-read 2026-11-10 over the raw channel, `26 / 26` classified from
+> the title block.** The register is **the substrate a national education ministry runs its numbers
+> on**. 🔴 **The finding is an absence in this base, not in the market:** `grep` across every live
+> shelf returns **`0`** for `dhis2`, `0` for every `unicef/giga-*` address and `0` for
+> `CEDS-Collaborative`. All three are live, granted, permissive-or-knowable estates.
+
+🟢 **`T387`'s discipline was applied before a single row was drafted, and it saved the pass from a
+false headline.** The obvious candidate for "the US education-data estate" is **Ed-Fi**, and this
+pass measured it first: **`469` mentions and `25` distinct `Ed-Fi-Alliance-OSS` repositories are
+already named on live shelves.** Ed-Fi is not a blind spot. **CEDS, which sits beside it in the same
+procurement conversation, is at `0`.** The blind spot was one publisher sideways, exactly as `T387`
+predicted it would be.
+
+### 🔴 `T389` — the Giga estate confirms the layer seam a third time, independently, and this one is measured on `6` payloads with zero crossovers
+
+`T360`/`P213` says the licence boundary in education OSS follows **the layer**, not the repository or
+the publisher. The **UNICEF–ITU Giga** estate (`32` repositories, school connectivity and school
+mapping) is the cleanest instance this base has read, and the only one measured on a whole estate in a single pass:
+
+| Layer | Repositories byte-read | Grant | Payload |
+|---|---|---|---|
+| **Models, analysis, research** | `giga-global-school-mapping`, `giga-mlab-school-connectivity-cop`, `giga-open-cost-model` | 🟢 **Apache-2.0**, `3 / 3` | `11,357 B` · `c71d239df917` (×2) and `22,713 B` · `a7793c0afb53` |
+| **Hosted services and platform backends** | `giga-spatial`, `giga-maps-backend`, `giga-meter-backend`, `project-connect-daily-check-app` | 🔴 **AGPL-3.0**, `4 / 4` | `34,523 B` · `8486a10c4393`; `34,522 B` · `4df3c306ddda`; `34,693 B` · `b25b37948bd2` (the last **shared byte-for-byte** by the Giga Meter client and its backend) |
+
+🔵 **`7 / 7`, zero crossovers, one publisher.** The commercial consequence is immediate and it is the
+whole value of the rule: **a studio may take Giga's school-mapping models into a client deliverable
+under Apache-2.0, and must not host a derivative of `giga-maps` or `giga-meter`**, because AGPL §13
+reaches a *hosted* service rather than a shipped binary. `P233` is built on exactly that boundary.
+
+### 🟢 `T391` — an Apache-2.0 payload can be the licence twice over, and the discriminator is one `grep`
+
+[`unicef/giga-open-cost-model`](https://github.com/unicef/giga-open-cost-model) serves an
+`Apache-2.0` of **`22,713 B`** — roughly **double** the `11,357 B` steward text, and far outside the
+**`1,184 B`** spread that `693-G` and `p739` established across every Apache payload this base had
+read. 🔴 **It is not a variant.** The file contains **`2` occurrences of `END OF TERMS AND
+CONDITIONS`** (lines `176` and `377`) and **`8` of `Apache License`**: the licence is **concatenated
+with itself**. 🟢 **Rule, cheap, and it should join every Apache read beside `P742-C`'s
+conflict-marker check: `grep -c 'END OF TERMS AND CONDITIONS'` — `> 1` means a duplicated payload,
+not an altered one.** A size heuristic alone would have flagged this as a modified licence and sent
+a reader hunting for an added clause that does not exist.
+
+### The `12` rows
+
+| Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | Why it is filed |
+|---|--:|--:|---|---|---|
+| [dhis2/dhis2-core](https://github.com/dhis2/dhis2-core) | **361** | **409** | 🟢 **BSD-3-Clause** · `LICENSE` · `1,517 B` · sha256₁₂ `4fc00af93f1b` · © *2004-2025, University of Oslo* · *index agrees* | **EMEA** (Norway — **placed from the payload holder line**, which is the strongest placing evidence class available this pass and needs no commit record) | **The anchor row of the pass, and the largest permissive education-data platform this base now holds.** Java service layer and Web API for aggregate, tracker and analytics data at school, district and national level. 🟢 **`BSD-3-Clause` is the most permissive grant on any platform of this size on these shelves** — no copyleft, no network clause, no NonCommercial. ⚠️ **Pushed `2026-11-10`, the day of this pass** — a live estate, not an artefact. 🔵 **Fork ratio `1.1 : 1` (`409` forks / `361★`) — stated because it does NOT clear `P739-C`'s `3 : 1` deployment threshold, and the rule is not going to be bent to fit a row this pass wants.** On a platform of this size the absolute fork count is the readable signal: `409` organisations have taken a copy |
+| [dhis2/dhis2-android-capture-app](https://github.com/dhis2/dhis2-android-capture-app) | 65 | **142** | 🟢 **BSD-3-Clause** · `1,478 B` · sha256₁₂ `eee2d8a9e7f7` · © *2004-2019, University of Oslo* · *index agrees* | **EMEA** (Norway, payload holder) | Offline-first Android data capture against the above. ⚠️ **`142` forks to `65★` is `2.2 : 1`, which is this estate's highest ratio and still BELOW `P739-C`'s `3 : 1` threshold — so the deployment signal is NOT claimed here.** ⚠️ **Licence-reading note:** the payload's title block opens on the *copyright* line, not on `BSD 3-Clause License` — so a classifier keyed to the first line alone mis-reads it. The three clauses are present and the family is BSD-3 |
+| [dhis2/dhis2-android-sdk](https://github.com/dhis2/dhis2-android-sdk) | 40 | 67 | 🟢 **BSD-3-Clause** · `1,477 B` · sha256₁₂ `67a5e1d977d8` · © *2004-2019, University of Oslo* · *index agrees* | **EMEA** (Norway, payload holder) | The SDK beneath the capture app — the layer a studio actually builds a bespoke field client on. `1.7 : 1` fork ratio, again below `P739-C`'s threshold. Same title-block caveat as the row above |
+| [dhis2/app-platform](https://github.com/dhis2/app-platform) | 32 | 22 | 🟢 **BSD-3-Clause** · `1,518 B` · sha256₁₂ `923e34a49433` · © *2019, University of Oslo* · *index agrees* | **EMEA** (Norway, payload holder) | **The supported extension point, and the row that decides build-vs-fork.** DHIS2's application platform layer with inverted app control: a custom analytics or AI app ships **as a DHIS2 app** rather than as a patched server. 🔵 This is what makes `P231` an integration rather than a migration |
+| [dhis2/ui](https://github.com/dhis2/ui) | 54 | 34 | 🟢 **BSD-3-Clause** · `1,505 B` · sha256₁₂ `a7456f880530` · © *2018, DHIS 2* · *index agrees* | **EMEA** (Norway — placed on the project holder; note the holder string here is `DHIS 2`, not the University, across the same estate) | The design system. 🔵 Filed because a ministry deliverable that looks like the system the staff already use is adopted, and one that does not is trained around |
+| [dhis2/dhis2-emis-docs](https://github.com/dhis2/dhis2-emis-docs) | 0 | 1 | 🟢 **BSD-3-Clause** · `1,492 B` · sha256₁₂ `7a337e1b37bd` · © *2025, DHIS2* · *index agrees* | **EMEA** (Norway, payload holder) | 🔴 **The single most important row here despite `0★`, because it is the evidence that the education surface exists at all.** Documentation of the **DHIS2 Education packages** — the configured metadata that turns a general-purpose aggregate/tracker platform into an EMIS. ⚠️ **`0★` and `1` fork: the packages are real and almost nobody outside the implementing ministries is looking at them.** That is the opportunity and the risk in one cell |
+| [CEDS-Collaborative-Exchange/Generate](https://github.com/CEDS-Collaborative-Exchange/Generate) | 10 | 3 | 🟢 **Apache-2.0** · `LICENSE` · `11,357 B` · sha256₁₂ `c71d239df917` · *index agrees*; ⚠️ **stock payload, so it carries no copyright holder line** | **North America** (USA — **placed from the publishing programme, not the payload**: CEDS is the US **Common Education Data Standards** effort and `Generate` is stated to be developed by the **Center for the Integration of IDEA Data (CIID)**, the federal special-education data programme) | **Reporting application that builds US federal special-education (IDEA) submissions out of a state longitudinal data system.** 🟢 **This is the most procurement-credible North America row added in several passes, and North America has been this base's thinnest supply region.** A state education agency has a *statutory* submission it must file; this is the open application that files it |
+| [CEDS-Collaborative-Exchange/CIID-Reports](https://github.com/CEDS-Collaborative-Exchange/CIID-Reports) | 3 | 3 | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` — **byte-identical to `Generate`** · *index agrees* | **North America** (USA, same programme) | The report definitions that accompany `Generate`. 🔵 The digest match across the estate is the `cyanheads` control recurring in a public-sector publisher: **one organisation, one canonical payload** |
+| [CEDS-Collaborative-Exchange/CEDS-SHACL-Generator](https://github.com/CEDS-Collaborative-Exchange/CEDS-SHACL-Generator) | 1 | 2 | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` — **byte-identical** · *index agrees* | **North America** (USA, same programme) | Generates **SHACL** shapes for the CEDS ontology. 🔵 **Filed because it is the validation layer an agent needs and almost never has:** SHACL turns "does this education record conform?" into a machine-checkable constraint instead of a prompt. `P232` wires it in as a gate |
+| [unicef/giga-global-school-mapping](https://github.com/unicef/giga-global-school-mapping) | 16 | 6 | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` · *index agrees* | **Global** (UNICEF–ITU; the published case studies are Africa- and Asia-weighted) | **Locating schools from satellite imagery with ML, where no authoritative register exists.** 🟢 **Apache-2.0 and therefore the usable half of the Giga seam (`T389`).** 🔵 Filed because it answers a question that precedes every other row on this shelf: *an EMIS cannot report on a school nobody has recorded.* ⚠️ Last push `2024-12-30` — the oldest row in this section |
+| [unicef/giga-spatial](https://github.com/unicef/giga-spatial) | 30 | 17 | 🔴 **AGPL-3.0** · `LICENSE` · `34,523 B` · sha256₁₂ `8486a10c4393` · *index agrees* | **Global** (UNICEF–ITU) | Python library for humanitarian, development, connectivity and climate geospatial analysis (WorldPop and similar sources). 🔴 **The highest-starred Giga repository and it is network copyleft — read the licence cell before the description.** 🔵 Usable as a **deployed, unmodified** analysis tool; **not** as a component of a hosted client service without accepting §13 |
+| [unicef/giga-open-cost-model](https://github.com/unicef/giga-open-cost-model) | 0 | 2 | 🟢 **Apache-2.0** · `22,713 B` · sha256₁₂ `a7793c0afb53` — 🔴 **the Apache text CONCATENATED TWICE** (`T391`) · family agrees with the index, **size does not** | **Global** (UNICEF–ITU) | Models the cost of connecting a given school, deployable as a standalone app. 🔵 **Filed for the costing method as much as the code:** it converts "connect these schools" into a priced, per-site plan, which is the shape a ministry proposal has to take. ⚠️ `0★` |
+
+### 🔴 Enumerated and found wanting — recorded so a later pass does not re-buy these
+
+- 🔴 **[`dhis2-metadata/EMIS_AGG`](https://github.com/dhis2-metadata/EMIS_AGG) — the actual education metadata package — carries NO GRANT.** `6` paths probed over the raw channel (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT`), all `404`; the index agrees (`NONE`). ⚠️ **Recorded as a `T302` honest negative and explicitly NOT as a compliant absence, because the denominator channel is closed this session (`T388`).** 🔵 **This matters more than a `0★` repository normally would:** the platform is `BSD-3-Clause` and **the education configuration on top of it is ungranted**, which is a `P742-B`-shaped split — permissive engine, unlicensed domain content. **Ask the implementing ministry for terms before shipping the package itself; the engine is not in question.**
+- 🔴 **`org:Siyavula` — an informed negative on South Africa's best-known open-textbook publisher.** `74` repositories, **`8★` ceiling** (`siyavula.latex2image`, MIT), and the bulk of the estate last touched **2011–2013**. **Not a live estate.** Named so the obvious Africa leg is not re-run a third time.
+- 🔴 **The named North America authority list on [`../intel/market.md`](../intel/market.md) is now ENUMERATED, and it is a measured nil** (`T394`). `org:18F` = **`994`** repositories, of which **`2`** are education and **both were last pushed in 2017**; `org:GSA` = `840` repositories, **`0`** education; `org:canada-ca` = `68` repositories, **`0`** education, queried in **both official languages**. ⚠️ **And `3` of the `6` names on that list — `usedgov`, `cdssnc`, `DigitalService` — are not real orgs**, returning the does-not-exist validation error. 🟢 **The standing candidate list is spent; `CEDS-Collaborative-Exchange` is what replaced it and it was not on the list.**
+- ⚠️ **Africa country legs returned nothing fileable.** `nigeria school management system` (`59` results) is unlicensed or `1–2★` student and landing-page projects; `kenya education platform open source` (`2`) returns a Congolese media catalogue and a community-health directory; `egypt education ai` (`15`) yields only `revolover00/Bakloriya-AI-SKILLS` (`2★`, pushed `2026-11-09`, **no grant**) and a `3★` demo. 🔵 **Stated as a measured nil with its denominators rather than left silent** — Africa's supply, unlike LATAM's at `T361`, did **not** turn out to be bound to a national substrate that this pass could name. **It is thin, and the one live Africa-relevant estate found is published from Oslo and New York, not from the continent.**
+
 ## 🆕 `p745` (2026-11-10) — the assessment and marking estate, and a licence gradient that runs the *opposite* way to the scholarly tier
 
 > **Pass p745 · every grant byte-read 2026-11-10 over the `git` tree channel.** `8` rows. 🟢 **The
