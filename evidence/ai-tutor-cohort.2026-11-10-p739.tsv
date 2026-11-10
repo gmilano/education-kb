@@ -1,0 +1,12 @@
+measure	count_of_100	note
+query	-	topic:ai-tutor created:>2026-10-01 sort=stars  (total_count 225, top 100 read)
+MIT	59	
+Apache-2.0	4	
+GPL-3.0	3	
+AGPL-3.0	3	
+NONE	22	no licence at all
+NOASSERTION	9	index could not match
+permissive_total	63	MIT + Apache + BSD
+unusable_grant_total	31	NONE + NOASSERTION
+harness_plugin_or_skill	28	skill|plugin|Claude Code|Codex|MCP|harness|DSH in description
+permissive_at_8_stars_or_more	7	of which 3 already shelved (ari, selfsemester, PractiSQL)

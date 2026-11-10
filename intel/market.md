@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI — Market Intelligence
 
-**Pass p738 · researched 2026-11-10.** Figures below name their source and, where sources
+**Pass p739 · researched 2026-11-10.** Figures below name their source and, where sources
 disagree, the disagreement is shown rather than averaged away.
 
 > 🔴 **`725-F` — read every figure on this page as secondary-source-only, and that is now measured
@@ -162,6 +162,43 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p739` (2026-11-10) — the integration substrate is Apache-2.0 and already agreed; sell conformance, not a platform
+
+🔴 **Demand leg: `0` novel facts, `35th` consecutive nil.** Everything the leg returned is held —
+`134` AI-in-education bills across `31` states; Maryland `SB 720` (state guidance plus district
+policies and AI coordinators); New York `A 9190` (classroom AI restricted to grade 9+); Illinois
+`HB2400` (no direct AI instruction); the K-12 AI Literacy and Readiness Act advanced in committee;
+North Carolina's `$10 M` Khanmigo earmark in `SB 1006`; NEA/AFT guidance. The denominators and the
+diagnosis are at [`trends.md`](trends.md) `T343`.
+
+🟢 **The supply side did produce, and it reframes the North American pitch.** `p739`'s promotion
+census surfaced **`19` unpromoted `Ed-Fi-Alliance-OSS` repositories, `30` in the organisation,
+every one `Apache-2.0`** — and the **standard itself**
+([`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard), `46★`) had
+never been filed, though its implementations had.
+
+🔵 **The opportunity, stated as the sentence to use in a proposal.** `p738`'s finding was that only
+**`6%`** of US teachers call their school's AI policy clear — a legibility problem. `p739` adds the
+**technical** half of the same diagnosis: the reason a district pilot does not reach production is
+roster, assessment and attendance plumbing, and **that plumbing is already standardised and
+permissively licensed**. `Ed-Fi-ODS` and `Data-Management-Service` were both pushed `2026-11-10`;
+`edfi-oneroster` serves a **OneRoster 1.2** API directly off an Ed-Fi database, so a studio can
+meet a district on whichever standard its incumbent vendors speak. **Conformance is the
+differentiator; a new platform is the thing the district already rejected.**
+
+🟢 **Two adjacent North American estates, both promoted this pass and both one-licence-review
+clean.** (1) **Digital Credentials Consortium** — `92` repositories, **MIT throughout**, payloads
+byte-identical at `1,087 B`; `verifier-plus` pushed `2026-11-09`. This is the buildable form of
+the credentials-and-skills-pathways demand 1EdTech names for 2026 (recipe `P201`).
+(2) **Yet Analytics** — `lrsql` (`144★`), `datasim`, `xapipe`, all `Apache-2.0`: the xAPI learning-
+record layer, and `datasim` removes the *"we have no data to show you"* blocker without a DPIA
+(recipe `P202`).
+
+⚠️ **Caveat to carry into pricing.** Apache-2.0 is permissive but carries §4 attribution and
+`NOTICE` duties, and `Ed-Fi` conformance is a committee-paced moving target — read the version
+matrix before promising it in a statement of work.
+
 
 #### 🆕 `p738` (2026-11-10) — the policy exists and nobody can read it: sell legibility, not policy
 
@@ -623,6 +660,52 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p739` (2026-11-10) — a state ministry's school-information system is `BSD-3-Clause`, and the most regulated module in it is the sale
+
+🔴 **Demand leg: `0` novel facts.** All held — `Regulation (EU) 2026/1744` (Digital Omnibus, in
+force `2026-07-27`); Annex III high-risk education duties, assessment included, deferred to
+**`2 December 2027`**; Article 50 transparency applying since `2026-08-02` with machine-readable
+marking to `2026-12-02`; the emotion-recognition-in-education ban and the AI-literacy duty since
+`2025-02-02`, the latter softened by the Omnibus to *supporting* literacy; South Africa's draft
+national AI policy with `POPIA` as the operative instrument; Rwanda's `MINICT` policy and the
+2026 Rwanda–Anthropic MoU; UAE AI as a mandatory school subject from `2025–26`. `T343`.
+
+🟢 **The supply side produced this pass's single best procurement artefact, and it is a
+government's.** [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) — `40★`, pushed
+**2026-11-10**, `42` repositories — is the school-information system of **North Rhine-Westphalia**,
+Germany's largest federal state, and its grant is **`BSD-3-Clause`**, holder
+`Ministerium für Schule und Bildung des Landes NRW`. 🔴 GitHub's index says `NOASSERTION`; the
+bytes say otherwise (`T338`).
+
+🔵 **Why this changes the EMEA engagement shape.** This page already carries `HPI Schul-Cloud` as
+the reference answer to *"what does a compliant German school platform look like"* — but it is
+**`AGPL-3.0`**, so a studio cannot host a derivative as a product. **`SVWS` is non-reciprocal.** A
+studio may fork it, extend it, host it and keep its own layer closed, with only the notice,
+disclaimer and the `Neither the name of` no-endorsement clause to honour. **That is the difference
+between reading a reference and building a business on one.** Recipe `P203`.
+
+🟢 **And the highest-value module is the most regulated one.**
+[`SVWS-Prognos`](https://github.com/SVWS-NRW/SVWS-Prognos) predicts a pupil's probable leaving
+qualification — Annex III territory. Today it is examination-ordinance arithmetic (`APO-SI-20`).
+🔴 **The moment a model replaces that arithmetic, the client needs conformity assessment, logging,
+human oversight and technical documentation on a `2027-12-02` clock.** The client owns the rules
+engine and the data; **the governance scaffolding is the engagement**, and the deferral is a
+delivery window rather than a reprieve.
+
+🟢 **A second, independent instance of the same shape — Norway.**
+[`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public)
+(**Apache-2.0**) is open code from the national examination administration system, with `pifu`
+(pupil information flow), `KL06-LK20-public` (the `LK20` curriculum interface),
+`Grep-komponenter` (pushed `2026-11-06`) and `designsystem` (**MIT**, pushed `2026-11-10`, built on
+`digdir/designsystemet`). ⚠️ It is an **openly published subset**, not the whole system.
+
+🔵 **Reusable reading of both:** `p739`'s promotion census found `10` unpromoted repositories each
+under `svws-nrw`, `utdanningsdirektoratet`, `bycs-lp` (Bavaria), `esupportail` (French higher
+education) and `9` under `kennisnet` (Netherlands). **European state education publishers are the
+densest unexploited seam in this base** (`T337`) — and a ministry's own licence is an argument no
+competitor can reproduce.
+
 
 #### 🆕 `p738` (2026-11-10) — teachers are past the adoption question, the hard deadline is 2027, and 2026 is the soft-law year to sell into
 
@@ -1229,6 +1312,61 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p739` (2026-11-10) — India's national content stack is MIT across all `77` repositories, and its forks are the adoption number
+
+🔴 **Demand leg: `0` novel facts.** All held — Ipsos Education Monitor 2026 support for banning AI
+in schools (India `26%`, Thailand `25%`, Singapore `28%`, Japan and Malaysia `29%`, Japan up from
+`21%`); Japan's AI Promotion Act in force since `2025-09-01`; India's AI-content labelling duty
+from `2026-02-20` and its July 2026 signal toward dedicated legislation; China's
+service-specific generative-AI and labelling rules with no general statute; the China tutoring ban
+and `BYJU'S` collapse, with `TAL` pivoting to AI learning hardware and `PhysicsWallah` shipping
+its own tutor. `T343`.
+
+🟢 **The supply finding is a licence uniformity that is rare at national scale.** `p739` read all
+**`77` `project-sunbird` repositories: MIT throughout.** Sunbird is the open stack behind India's
+national school content estate, and a single permissive grant across the whole platform makes the
+licence review **one exercise rather than a per-module audit** — which for a government-facing bid
+is a schedule item, not a formality.
+
+🔴 **Read its adoption in forks, not stars, and the gap is extreme.**
+[`sunbird-collection-editor`](https://github.com/project-sunbird/sunbird-collection-editor):
+**`3★` / `45` forks (`15 : 1`)**.
+[`sunbird-quml-player`](https://github.com/project-sunbird/sunbird-quml-player):
+**`6★` / `39` forks (`6.5 : 1`)**. An authoring editor and an item renderer are forked when an
+organisation is **branding and deploying** them — state education departments and implementation
+partners — so the fork count is the installed base and the star count is nothing (`T340`).
+🔵 **Consequence for a proposal: do not present Sunbird components as niche because they are
+low-starred.** They are infrastructure with a deployment trail.
+
+🟢 **For an Indian assessment engagement the format is already decided.** The content exists as
+**QuML**, so `sunbird-quml-player` is the renderer and `Khan/perseus` is not — a choice that looks
+technical and is actually about whose content you inherit (`P204`).
+
+🟢 **China: the usable layer is the method layer, and the boundary is now measured.**
+[`bigdata-ustc/CAT4AI`](https://github.com/bigdata-ustc/CAT4AI) (**MIT**) applies IRT adaptive
+testing to **evaluating models** rather than learners — a published method for answering *"why
+this model in front of students?"*. It sits beside the lab's held `EduCAT` (MIT, `77★`),
+`EduCDM` (Apache-2.0, `203★`), `EduKTM` (Apache-2.0, `267★`) and `EduNLP` (Apache-2.0).
+🔴 **But `738-A` measured the asymmetry and it holds: this lab grants its LLM-methods work
+(`5 / 5` MIT or Apache-2.0) and not its education work (`4 / 4` ungranted, including `AutoSkill`
+at `613★`).** Budget the probe before the README.
+
+🔵 **A placement refused, recorded so it is not re-bought.**
+[`BaronCyrus/dsh-aha-tutor`](https://github.com/BaronCyrus/dsh-aha-tutor) (MIT, `42★`) is
+**`45.5%` CJK prose** yet names **no** Chinese curriculum or examination authority
+(`高考` `0`, `中考` `0`, `义务教育` `0`, `人教版` `0`, `课标` `0`, `教育部` `0`). Filed `Global`
+per `683-B` and `693-E`: **a language is not a jurisdiction.** 🟢 It does carry one real APAC
+signal — it is a **DeepSeek Harness** plugin, so the harness itself can be domestically hosted,
+which matters for a China-facing deployment.
+
+🟢 **And the low-resource-language seam opened for the first time.**
+[`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion)
+(MIT) teaches Assam's `SEBA` / `AHSEC` syllabus **in Assamese** — two named statutory boards, so
+the placement is evidential. Its pitch is that *"most AI study tools answer in English with generic
+examples"*, and India has `22` scheduled languages: **the under-served language, not the
+under-served subject, is the APAC product gap.**
+
+
 #### 🆕 `p738` (2026-11-10) — the region's supply is institutional and language-shaped, and the restrictive–permissive axis does not run East–West
 
 🟢 **The sharpest APAC supply finding this pass is a language stack, and it answers a question no
@@ -1788,6 +1926,54 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p739` (2026-11-10) — a Chilean public university's Open edX estate, and the finding that LATAM supply is a compliance-integration market
+
+🔴 **Demand leg: `0` novel facts, `8th` consecutive nil.** All held — the UNESCO Observatory on AI
+in Education for Latin America and the Caribbean (Santiago, Chile); TALIS teacher AI use Brazil
+`56%` and Chile `55%` against an OECD average of `36%`; fewer than `10%` of regional institutions
+with formal guidelines; Cetic.br school administrators `53%` using AI against `22%` with
+guidelines; UNESCO IESALC `87%` of universities using AI against `26%` with a strategy;
+Brazil's `PL 2338/2023` passed the Senate and slipping in the Chamber past the October 2026
+elections; Chile's `Boletín 16.821-19` at second constitutional stage; Peru the only enacted AI
+law in the region; `7` countries on the OECD AI Principles. `T343`.
+
+🟢 **Supply produced `2` placed rows, and their value is not their star count.** `p739`'s
+promotion census surfaced **`7` unpromoted `eol-uchile` repositories** — `EOL`, the Open edX
+operation of the **Universidad de Chile**, `109` repositories, `eol-analytics-dashboard` pushed
+**2026-11-02**.
+
+🔵 **The reframing, and it is the useful part of this pass for LATAM.** This base has repeatedly
+recorded LATAM as a **governance-gap** market — high teacher adoption, almost no institutional
+policy — and inferred that the sale is policy work. `EOL`'s estate says the delivery-side sale is
+**compliance integration**:
+[`sence-xblock`](https://github.com/eol-uchile/sence-xblock) gates course content until the student
+has logged in to **`SENCE`**, Chile's national training-and-employment service, which funds and
+certifies workforce training. **State-subsidised training reimbursement depends on provable
+participation, so the integration *is* the product.** Alongside it: `ecommerce-webpay` (the Chilean
+payment rail, not a generic one), `uchileedxlogin`, `eol_completion`.
+🟢 **Say it plainly: in Chile, workforce-training delivery is an evidence problem, and whoever owns
+the registry integration owns the engagement.**
+
+🔴 **The licence constraint is strict and must be priced in.** Both rows are **`AGPL-3.0`**
+(`34,628 B` and `34,523 B`, byte-read), inherited from Open edX itself. **A studio cannot fork
+these into a hosted client product without releasing the derived source.** The licence-clean
+engagement is layering over the platform via **LTI or the XBlock API** (`P186`) — which is also the
+larger and safer piece of work where an institution already runs Open edX.
+
+⚠️ **Two honest weaknesses in the rows.** `sence-xblock` has **no `README` at any of `5` probed
+paths** — the integration contract is in the code only, so budget a read; and at `1★` / `0` forks
+it is one institution's integration, so `SENCE`'s API may have moved. 🔵 Recorded against `p693`'s
+note that a bare `sence` substring matched nothing in prose: **it matched nothing because the
+evidence was an organisation's repository name, not a README sentence** — a fourth channel for
+`693-F`'s word-boundary rule.
+
+🔵 **And the standing LATAM diagnosis is unchanged and now better evidenced.** `P693-A` measured
+`140` LATAM addresses discovered and never promoted; p739 promoted `2` and confirmed the backlog —
+not the search frontier — is where LATAM supply actually lives (`T337`). ⚠️ **No Brazilian or
+Mexican institutional publisher surfaced this pass**; the `eol-uchile` seam is Chilean, and the
+gap is named rather than papered over.
+
 
 #### 🆕 `p738` (2026-11-10) — 92% / 79% / 30%, and the reason this region reads thin on a GitHub-sourced base
 

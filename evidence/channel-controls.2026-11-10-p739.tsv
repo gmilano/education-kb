@@ -1,0 +1,7 @@
+channel	subject	result	discriminates
+curl -sI https://github.com/{owner}/{repo}	openedx/edx-platform (alive)	403	NO
+curl -sI https://github.com/{owner}/{repo}	zzz-no-such-org-9931/zzz-no-such-repo-9931 (invented)	403	NO
+raw.githubusercontent.com/{o}/{r}/HEAD/README.rst	openedx/edx-platform	200	YES
+raw.githubusercontent.com/{o}/{r}/HEAD/README.md	zzz-no-such-org-9931/zzz-no-such-repo-9931	404	YES
+gh api -X GET search/repositories q=topic:...	education topic query	200 + full metadata	YES
+gh api repos/{o}/{r}/git/trees/HEAD	1281504089-cell/kaixin-k12-tutor	403 out-of-session-scope	NO

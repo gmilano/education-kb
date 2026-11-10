@@ -1,0 +1,9 @@
+measure	count	note
+trending_addresses_raw	4603	github.com/{owner}/{repo} matches in agents/trending.md + repos/trending.md
+non_addresses_removed	42	Gap 248: topics/* x38, orgs/* x2, search/repositories, trending/* x3
+trending_addresses_clean	4561	after filter
+shelf_addresses	1145	agents/top.md + repos/foundations.md + verticals/solutions.md
+unpromoted_backlog	3695	discovered, licence-read, written up, never promoted
+owners_with_2plus_unpromoted	278	
+distinct_owners_in_backlog	2973	
+p739_byte_reads_from_backlog	16	of 19 total byte-reads this pass

@@ -4,6 +4,146 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Patterns new at `p739` (2026-11-10) — `P201`–`P204`
+
+**Four recipes, each naming the specific repositories and the wiring.** All component grants were
+byte-read at `p739`; the licence verdict is repeated in each recipe because the licence is what
+decides whether the recipe is sellable.
+
+## P201 — Verifiable academic credentials, end to end, with no proprietary component
+
+**For:** a university, ministry or workforce programme that must issue credentials an employer can
+verify without phoning the registrar. **Region:** North America first (the publisher is a US
+university consortium) but the standards are global.
+
+**Components — all MIT, all Digital Credentials Consortium, payloads byte-identical at
+`1,087 B`:**
+
+| Step | Component | Grant |
+|---|---|---|
+| 1. Sign / revoke | [digitalcredentials/signing-service](https://github.com/digitalcredentials/signing-service) — minimal VC-API signer (Node.js) | MIT · `1,087 B` · sha256₁₂ `ca28a7ae5c7e` |
+| 2. Resolve the context | [digitalcredentials/open-badges-context](https://github.com/digitalcredentials/open-badges-context) — the OBv3 JSON-LD `@context`, vendored as npm | MIT · `1,087 B` · sha256₁₂ `85569d7ed8fc` |
+| 3. Issue and manage | [digitalcredentials/issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) (`11★`) + [dcc-admin-dashboard](https://github.com/digitalcredentials/dcc-admin-dashboard) (`12★`) | MIT |
+| 4. Verify (the user-visible surface) | [digitalcredentials/verifier-plus](https://github.com/digitalcredentials/verifier-plus) (`19★`, pushed **2026-11-09**) | MIT · `1,087 B` · sha256₁₂ `85569d7ed8fc` |
+| 5. Status / revocation list | [digitalcredentials/status-service-db](https://github.com/digitalcredentials/status-service-db) — `vc-bitstring-status-list` on Mongo | MIT |
+
+**Wiring.** The registrar's SIS calls `issuer-coordinator`, which calls `signing-service` to
+produce a signed OBv3 credential and writes a revocation entry to `status-service-db`. The learner
+holds the credential; an employer resolves it in `verifier-plus`, which fetches the status list and
+the vendored `@context` — **vendor step 2 rather than resolving it over the network**, or
+verification inherits a third-party availability dependency.
+
+🟢 **Why it sells:** `1EdTech`'s 2026 reading is that institutions are moving to verified digital
+credentials tied to workforce skills. This is that, in code, from a consortium a provost already
+recognises — and the whole chain is MIT, so **one licence review covers the estate** and the studio
+may host and brand every piece. 🔵 **Where the work actually is:** the SIS integration at step 1
+and the institutional policy for revocation. Not the cryptography. ⚠️ Verifiable Credentials are a
+moving target; read the `verifier-core` / `verifier-plus` split before building. ⚠️
+`signing-service` last pushed `2025-07-31` — pin it and budget a read.
+
+## P202 — A learning-analytics pilot that can be demonstrated before any real learner data exists
+
+**For:** the engagement that stalls at *"we cannot show you a dashboard because we have no data,
+and we cannot give you data because it is learner records."* **Region:** North America
+(publisher), but the pattern travels anywhere a DPIA is the blocker.
+
+**Components — all Apache-2.0, all Yet Analytics, operative terms verified identical:**
+
+1. **Generate** — [yetanalytics/datasim](https://github.com/yetanalytics/datasim) (`23★`,
+   Apache-2.0, `11,357 B`, operative `8,967` chars): simulate a cohort emitting
+   **Profile-conformant xAPI statements**. No personal data exists at any point, so **no DPIA, no
+   FERPA review and no ethics board gates the demo.**
+2. **Store** — [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) (`144★`, Apache-2.0,
+   pushed `2026-11-08`): a SQL-backed Learning Record Store. The same LRS the production system
+   will use, so the pipeline you demo is the pipeline you ship.
+3. **Route** — [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) (`17★`,
+   Apache-2.0): forward statements between LRSs, governed by xAPI Profiles.
+4. **Swap the source** — replace `datasim` with the real emitters (`adlnet` xAPI libraries,
+   Moodle/Open edX xAPI plugins) once clearance lands. **Nothing downstream changes**, which is the
+   whole point of the pattern.
+
+🔵 **Then layer the model.** With the LRS populated, a dropout or at-risk model has a stable
+schema to read. 🔴 **The hard rule, and state it to the client in writing: synthetic data validates
+the pipeline and never the model.** Any accuracy number earned on `datasim` output is a number
+about `datasim`. Report pipeline latency, conformance and throughput from the simulation; report
+accuracy only from real records. ⚠️ Clojure/JVM throughout. ⚠️ Realism is bounded by the xAPI
+Profile you author — the Profile is the deliverable, not the generator.
+
+## P203 — Extending a state's own school-information system instead of proposing a platform
+
+**For:** an EMEA public-sector education engagement, especially German-speaking.
+**Region:** EMEA.
+
+**Base — and the licence is the reason this pattern exists:**
+[`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) (`40★`, pushed **2026-11-10**),
+**BSD-3-Clause**, `1,611 B`, sha256₁₂ `966b53671a2c`, holder
+**`Ministerium für Schule und Bildung des Landes NRW`**. 🔴 Byte-read, because the index says
+`NOASSERTION` (`T338`).
+
+**Wiring.**
+
+1. **Stand up a realistic instance with no pupil data** — the ministry ships anonymised test
+   databases (`SVWS-TestSqlites`, `SVWS-TestMDBs`) for several school types. Start here, always.
+2. **Read the contract** — `SVWS-Dokumentation` is the technical manual; `SVWS-API-Change` tracks
+   API movement, so pin against it rather than against a release tag.
+3. **Build beside, not inside** — the web clients (`SVWS-GradeHub` marks, `SVWS-Prognos`
+   qualification prognosis, `SVWS-Conference`, `SVWS-Import`, `SVWS-KOOP`, all BSD-3-Clause) are
+   the pattern to copy: separate browser clients against the server's REST API. An AI module is
+   another one of these.
+4. **Keep your layer closed if the client wants that** — BSD-3-Clause is non-reciprocal, so unlike
+   the `AGPL-3.0` `HPI Schul-Cloud` on the same shelf, a studio may host a derivative as a product.
+   🔴 **Honour the `Neither the name of` clause:** retain the notice and the disclaimer, and **do
+   not imply ministry endorsement** — the single most likely way to lose a public-sector bid on a
+   technicality.
+5. **Treat `SVWS-Prognos` as the compliance frontier, not a feature.** It predicts a pupil's
+   probable leaving qualification: Annex III education territory. Today it is ordinance arithmetic
+   (`APO-SI-20`). 🔴 **Replace that arithmetic with a model and the engagement acquires the full
+   high-risk programme on a `2 December 2027` clock** (`Regulation (EU) 2026/1744`, `T321`):
+   conformity assessment, logging, human oversight, technical documentation. 🟢 **Sell that
+   programme.** The client owns the rules and the data; the governance scaffolding is the work.
+
+🔵 **The same shape, one country over:** [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public)
+(Apache-2.0) with `pifu` (interop), `KL06-LK20-public` (curriculum interface),
+`Grep-komponenter` and `designsystem` (**MIT**, built on `digdir/designsystemet`, so the front end
+looks like a Norwegian public service by default). ⚠️ `PAS2-Public` is an **openly published
+subset**, not the whole examination system — scope accordingly.
+
+## P204 — A deterministic-marking tutor: the model explains, code assigns the mark
+
+**For:** any tutoring or practice product that will eventually be assessed, audited or regulated.
+**Region:** Global; the compliance driver is EMEA.
+
+**The rule first:** 🔴 **the model may write the question and explain the answer; it must not be
+the thing that assigns the mark.** `T342`.
+
+**Reference implementation, small and MIT:**
+[`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion)
+(MIT, `1,069 B`, sha256₁₂ `3395c29fceb8`) — a four-step loop where step 3 is *"answers are marked
+in plain Python code (not by the AI), so scores are always exact"*, over Assam's `SEBA` / `AHSEC`
+syllabus in Assamese.
+
+**Production wiring — replace the toy scorer with a real engine:**
+
+| Layer | Use | Grant |
+|---|---|---|
+| Item rendering + **deterministic scoring** | [Khan/perseus](https://github.com/Khan/perseus) (`1,598★`) — mathematical-equivalence input, graph targets, sorting, matching, per-widget hints | MIT (`T329`) |
+| …or, for an Indian engagement | [project-sunbird/sunbird-quml-player](https://github.com/project-sunbird/sunbird-quml-player) — **QuML**, the markup the Sunbird/DIKSHA content estate is already authored in | MIT · `1,072 B` |
+| Learner model / next-item selection | [bigdata-ustc/EduCAT](https://github.com/bigdata-ustc/EduCAT) (`77★`, MIT), [EduCDM](https://github.com/bigdata-ustc/EduCDM) (`203★`, Apache-2.0) for IRT/MIRT | MIT / Apache-2.0 |
+| Model evaluation of the tutor itself | [bigdata-ustc/CAT4AI](https://github.com/bigdata-ustc/CAT4AI) (MIT, `1,062 B`) — adaptive testing applied to the model, so *"why this model?"* has a published method behind it | MIT |
+| Generative layer | any LLM, for explanation and item **drafting** only | — |
+| Evidence trail | emit each attempt as xAPI into `lrsql` (`P202`) | Apache-2.0 |
+
+**Choosing the renderer — do not get this wrong twice.** 🔵 **`perseus` if the content is yours or
+web-native; `sunbird-quml-player` if the client's content already exists as QuML; a QTI engine
+(`oat-sa` estate) if the client is an assessment authority that exchanges items with others.**
+QuML is not QTI and neither is interchangeable with Perseus's widget JSON — the format follows the
+content you inherit, not the engine you prefer.
+
+⚠️ **The honest limits.** Deterministic scoring fixes reproducibility, not validity: a reproducible
+mark on a bad item is still a bad mark, so the rubric and `P174`'s human-review step stay.
+⚠️ `axomiya-study-companion` is a hackathon entry hard-wired to the `BharatCode` API
+(`qwen-3.8-27b`, OpenAI-compatible) — copy the **design**, re-point the model layer.
+
 # Composition Patterns — Education
 
 **Pass p738 · verified 2026-11-10.** Concrete recipes using only components verified this

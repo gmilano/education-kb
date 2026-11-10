@@ -1,0 +1,4 @@
+repo	raw_bytes	appendix_present	operative_chars_sec1_to_sec9	operative_sha256_12	verdict
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	10173	NO	8967	b7e7e94fb666	operative terms identical
+Utdanningsdirektoratet/PAS2-Public	11325	YES	8967	b7e7e94fb666	operative terms identical
+yetanalytics/datasim	11357	YES	8967	b7e7e94fb666	operative terms identical

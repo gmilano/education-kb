@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p738 · verified 2026-11-10.** The `2` rows added this pass were read today; rows carried
+**Pass p739 · verified 2026-11-10.** The `3` rows added this pass were read today; rows carried
 over name the date they were last read. Rows up to `p734` were read from
 `gh api -X GET search/repositories`; `p735` declared that channel dead (`GH_TOKEN` invalid, `422`)
 and moved to unauthenticated `curl https://api.github.com/search/repositories` (`T298`).
@@ -33,6 +33,36 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p739` — reads and verifies `2026-11-10`
+
+> **`3` rows added below, all three byte-read today, all three MIT. 🔴 One placement REFUSED on
+> this base's own rule after the evidence was measured — `45.5 %` CJK prose is not a jurisdiction.**
+>
+> 🟢 **`p739` is a PROMOTION pass, and the reason is arithmetic.** `P693-A` measured `825`
+> region-labelled trending slugs absent from every sell shelf and prescribed *"spend part of every
+> pass promoting the backlog rather than extending it."* p739 re-ran that census with `Gap 248`'s
+> non-address filter applied — **`42` path fragments removed (`topics/*` ×38, `orgs/*` ×2,
+> `search/repositories`, `trending/*` ×3)** — and the true figure is larger than p693's:
+> **`4,561` trending addresses, `1,145` shelf addresses, `3,695` discovered-and-never-promoted.**
+> So the backlog, not the search frontier, is this base's largest asset. **`16` of this pass's `19`
+> byte-reads came out of it.**
+>
+> 🔵 **Why the agent shelf gets only `3` of those rows, stated rather than padded.** The promotion
+> census returns overwhelmingly *institutional* software — data standards, credential services,
+> state school-administration systems — which belongs on
+> [`../repos/foundations.md`](../repos/foundations.md) and
+> [`../verticals/solutions.md`](../verticals/solutions.md), where `13` of p739's rows went. The
+> consumer tutor layer, by contrast, is **measurably saturated on this base**: `topic:ai-tutor
+> created:>2026-10-01` returns **`225`** repositories, and of the `7` permissive ones at `≥8★`,
+> **`3` were already shelved** (`nichochar/ari`, `munitkala/selfsemester`, `canyrtcn/PractiSQL`).
+> The three below are the rest of that band.
+
+| Agent | Repo | Stars | Licence | Last push | Region | What it does, and why it is filed |
+|---|---|--:|---|---|---|---|
+| **Axomiya Study Companion** | [prayashcloud/axomiya-study-companion](https://github.com/prayashcloud/axomiya-study-companion) | 3 | MIT | 2026-11-02 | **APAC** | **A study companion for Assam's two statutory examination boards that explains in Assamese and marks in Python.** Gate: `LICENSE`, `1,069 B` raw, `Permission is hereby granted, free of charge` → **MIT**, holder `Copyright (c) 2026 prayashcloud`; index agrees. 🟢 **Filed for one architectural decision that the whole shelf should copy, and it is stated in the README's own numbered loop: `Grade: answers are marked in plain Python code (not by the AI), so scores are always exact`.** Explanation and item generation are the model's; **scoring is deterministic code**. That is the separation an EU Annex III assessment duty asks for (`T321`), arrived at independently by a hackathon entry in Guwahati — and it is the cheapest credible answer to *"can you show the marking is reproducible?"*, a question every proctoring and grading bid now asks. 🔵 **Placement is evidential, not linguistic.** The README names **SEBA** (Board of Secondary Education, Assam) and **AHSEC** (Assam Higher Secondary Education Council) — two named statutory boards, which is a jurisdiction under p675's rule, not a language guess. 🟢 **And it is this base's first row aimed at a low-resource Indian language**: the pitch is explicit that *"most AI study tools answer in English with generic examples"*. ⚠️ `3★`, `0` forks, created and last pushed the same day (`2026-11-02`) — a Build League entry, so treat it as a **design to copy, not a dependency**. ⚠️ **Hard dependency on the `BharatCode` API (`qwen-3.8-27b`, OpenAI-compatible)** — a league-provided endpoint, so the model layer must be re-pointed before any real deployment; the OpenAI-compatible shape makes that a config change rather than a rewrite. |
+| **Socratic Workshop** | [smashburger-dev/socratic-workshop](https://github.com/smashburger-dev/socratic-workshop) | 23 | MIT | 2026-10-28 | Global | **A Socratic tutoring skill for Claude Code and Codex: you learn a topic by explaining it back, against your own books, papers and codebases.** Gate: `LICENSE`, `1,072 B`, sha256₁₂ `7f3dec641d9f` → **MIT**, holder `Copyright (c) 2026 smashburger-dev`; index agrees. 🟢 **Filed as the highest-star permissive entrant in the `topic:ai-tutor` October cohort that this base did not already hold**, and as the clean representative of the structural shift measured at `T339`: **`28 / 100`** repositories in that cohort are **harness plugins or agent skills** rather than applications. 🔵 **The commercial reading is the one to carry into a staffing conversation:** a skill of this shape is days of work, not months, because the harness supplies the loop, the file access and the UI — so the *defensible* part of an education engagement moves to curriculum, rubric and evidence, which is exactly where `P174`'s human-review step and `T337`'s institutional substrate live. ⚠️ `2` forks, last pushed `2026-10-28`; single-author. ⚠️ Runs inside a specific harness, so it is **not a product a client can hand to a learner** without one. |
+| **开窍 / DSH Aha Tutor** | [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | 42 | MIT | 2026-11-09 | Global 🔴 *APAC refused* | **A personal-tutor plugin for DeepSeek Harness that builds a course for you and teaches it while writing on a handwriting blackboard.** Gate: `LICENSE`, `1,067 B`, sha256₁₂ `c83a57edd27c` → **MIT**, holder `Copyright (c) 2026 BaronCyrus`; index agrees. 🟢 **The `42★` leader of the October permissive cohort, and the live example of a non-Anthropic harness carrying an education plugin** — `DeepSeek` appears `4×` in the README and nowhere does another vendor. That matters for a China-facing engagement where the harness itself must be domestically hosted. 🔴 **The placement was measured and then refused, and the refusal is the finding.** The README is **`3,010 / 6,618` chars CJK (`45.5 %`)** — above the `JuneYaooo` threshold that `683-B` accepted — **but the probe for a named jurisdiction returned nil at every term: `高考` `0`, `中考` `0`, `义务教育` `0`, `人教版` `0`, `课标` `0`, `教育部` `0`.** `683-B` and `693-E` both bind: a Romance or CJK token spans continents, and a language is not a jurisdiction. **Filed `Global` with the CJK ratio recorded, so a later pass that finds a curriculum token can place it without re-measuring.** ⚠️ `6` forks; harness-bound; the blackboard is the differentiator and is also the part most likely to be brittle. |
 
 ## 🆕 `p738` — reads and verifies `2026-11-10`
 

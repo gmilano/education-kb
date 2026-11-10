@@ -4,6 +4,157 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p739` (researched 2026-11-10) — `T337`–`T343`
+
+**Added above `p738`'s `T329`–`T336`.** Two are supply findings, three are instrument findings,
+one is a design finding and one records the mandated demand legs and what they did **not** return.
+🔴 **`T338` and `T341` are a matched pair and should be read together** — the licence index is
+wrong in both directions on the same pass.
+
+## T337 — 🟢 This base's largest asset is its own backlog, and the backlog is institutional
+
+`p739` re-ran `P693-A`'s promotion census with `Gap 248`'s non-address filter applied.
+**`42` path fragments removed** — `topics/*` ×38, `orgs/*` ×2, `search/repositories`,
+`trending/*` ×3 — leaving **`4,561` distinct trending addresses against `1,145` shelf addresses:
+`3,695` repositories discovered, licence-read, written up and never promoted.** p693 put the
+region-labelled subset at `825`; the unrestricted figure is `4.5×` that.
+
+🟢 **The composition is the finding, not the count.** The owners with the deepest unpromoted
+estates are not hobbyists: `digitalcredentials` (`29`), `openedx` (`20`),
+`ed-fi-alliance-oss` (`19`), `openstax` (`14`), `edanalytics` (`14`),
+`apereo-learning-analytics-initiative` (`14`), `adlnet` (`13`), `yetanalytics` (`11`),
+`bycs-lp` (`11`), `utdanningsdirektoratet` (`10`), `svws-nrw` (`10`), `esupportail` (`10`),
+`open-spaced-repetition` (`10`), `project-sunbird` (`7`), `eol-uchile` (`7`). **Consortia,
+standards bodies, state ministries and public universities — `278` owners with `≥2` unpromoted
+repositories each.**
+
+🔵 **So the standing recommendation inverts the usual one.** A pass that wants a procurement-grade,
+region-placed row should **read the backlog, not the search frontier**: `16` of p739's `19`
+byte-reads came from it, and they produced a government ministry's BSD-3 SIS, a national
+examination directorate's Apache-2.0 code, the US K-12 data standard and India's national content
+authoring stack. The frontier, meanwhile, produced `3` single-author tutor skills.
+
+## T338 — 🔴 GitHub's licence index reports `NOASSERTION` on a government ministry's BSD-3 grant
+
+[`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) (`40★`, pushed **2026-11-10**)
+indexes as **`NOASSERTION`** via `gh api -X GET search/repositories`. Its `LICENSE` is
+**`1,611 B`**, sha256₁₂ `966b53671a2c`, contains `Redistribution and use in source and binary
+forms` plus a `Neither the name of` clause → **`BSD-3-Clause`**, holder
+**`Copyright (c) Ministerium für Schule und Bildung des Landes NRW`**.
+
+🔴 **The cost of trusting the index here would have been the most procurement-credible platform row
+on the shelf** — a German state education ministry's production school-information system, under a
+non-reciprocal licence, pushed today. 🔵 The index is not lying; `NOASSERTION` means *"no SPDX
+match"*, and a ministry's lightly reworded BSD text does not match. **But `NOASSERTION` is read as
+"no licence" by every pipeline that does not open the file,** which is why this base reads bytes.
+Extends `p736`'s index-vs-payload census (`3 / 4` index fields wrong) to a fifth case.
+
+## T339 — 🟢 The education agent supply has moved into harness-plugin form, and a third of it carries no usable grant
+
+`topic:ai-tutor created:>2026-10-01` → **`225`** repositories; the top `100` by stars read in full.
+
+| Measure | Count of `100` |
+|---|--:|
+| MIT | **59** |
+| Apache-2.0 | 4 |
+| GPL-3.0 / AGPL-3.0 | 6 |
+| 🔴 `NONE` (no licence) | **22** |
+| 🔴 `NOASSERTION` | 9 |
+| **Permissive (MIT / Apache / BSD)** | **63** |
+| **Harness plugin or agent skill** (`skill`, `plugin`, `Claude Code`, `Codex`, `MCP`, `harness`, `DSH` in the description) | **28** |
+
+🟢 **Two readings, and both are commercial.** First, **`63 %` permissive** is the healthiest grant
+ratio this base has measured on a fresh cohort — the hobbyist education layer defaults to MIT.
+🔴 Second, **`31 / 100` carry no usable grant**, so a third of what a keyword leg returns is
+unbuyable however good it looks. 🔵 Third, and the structural one: **`28 %` are plugins to someone
+else's agent harness.** Those are days of work, not months, because the harness supplies the loop,
+the file access and the UI — **which moves the defensible part of an education engagement off the
+agent entirely, onto curriculum, rubric, evidence and integration** (`T337`'s institutional
+substrate, `P174`'s review step). A studio that sells "an AI tutor" in 2026 is selling a weekend;
+one that sells the assessment evidence around it is selling the engagement.
+
+## T340 — 🟢 On deployment artefacts, forks measure adoption and stars measure nothing
+
+| Repo | Stars | Forks | Ratio |
+|---|--:|--:|--:|
+| [project-sunbird/sunbird-collection-editor](https://github.com/project-sunbird/sunbird-collection-editor) | 3 | **45** | **15.0 : 1** |
+| [project-sunbird/sunbird-quml-player](https://github.com/project-sunbird/sunbird-quml-player) | 6 | **39** | **6.5 : 1** |
+
+🟢 **The mechanism is specific to this class of software.** You star a framework you admire; you
+**fork** an item renderer or an authoring editor because you are branding it, re-pointing it at
+your own content service and shipping it. For the Sunbird estate — the stack behind India's
+national school content platform — the forks are state education departments and implementation
+partners, which is exactly the adoption a star count cannot show.
+🔵 **Rule for later passes: on a renderer, editor, theme or installer, read `forks_count` before
+`stargazers_count`, and treat a ratio above `3 : 1` as a deployment signal.** 🔴 It does **not**
+generalise: on a library or a research repository, a high fork ratio usually means coursework.
+
+## T341 — 🔴 The exact inverse of `T338`: the index asserts `GPL-3.0` and the grant is not in the repository at all
+
+[`1281504089-cell/kaixin-k12-tutor`](https://github.com/1281504089-cell/kaixin-k12-tutor)
+(`1★`, created `2026-11-06`, pushed `2026-11-08`, a DeepTutor-derived K-12 desktop app shipping
+`136` Chinese textbooks) indexes as **`GPL-3.0`**. `README.md` returns `200`, so the repository is
+alive. **`19` probed licence paths all return `404`** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+`LICENCE`, `LICENCE.md`, `License`, `License.md`, `license`, `license.md`, `LICENSE-GPL`,
+`GPL-license.txt`, `COPYING`, `COPYING.txt`, `COPYING.md`, `NOTICE`, `LICENSE.rst`, `docs/LICENSE`,
+`.github/LICENSE`, `src/LICENSE`.
+
+🟢 **The mechanism was found, and it is new to this base.** The README's own licence section says
+**`源码归档内附 LICENSE 与 THIRD_PARTY_NOTICES.md`** — *"the source archive ships with a LICENSE"*.
+**The grant lives inside a release artefact, not in the default ref.** So the honest verdict is
+not *"no grant exists"* (`T302`) and not *"GPL-3.0"* either: it is **"the grant is not readable
+from the repository, and a studio cloning `HEAD` receives no licence file."**
+🔵 **Actionable rule: when the index asserts a copyleft id and no payload exists on the default
+ref, look for a release asset and say so** — and treat the repository as unusable until the
+archive is opened, because copyleft asserted-but-unreadable is the worst of both states.
+🔴 **Paired with `T338`, the conclusion is symmetrical and should end the question: the index is
+wrong in both directions, on the same pass, and only the bytes decide.** `T289` and `P693-H` also
+re-confirmed: `gh api repos/{owner}/{repo}/git/trees/HEAD` returned `403` for this repository
+while the `search/repositories` channel returned full metadata for it.
+
+## T342 — 🟢 Separating deterministic scoring from generative explanation is appearing from the bottom of the market, and it is the Annex III answer
+
+[`prayashcloud/axomiya-study-companion`](https://github.com/prayashcloud/axomiya-study-companion)
+(MIT, `3★`, `2026-11-02`) states the split in its own README as step `3` of a four-step loop:
+**`Grade: answers are marked in plain Python code (not by the AI), so scores are always exact`.**
+The model explains and generates items; **code marks**.
+
+🟢 **This is the architecture that the deferred Annex III duties ask for, arrived at by a hackathon
+entry in Guwahati rather than by a compliance team.** Under `Regulation (EU) 2026/1744` the
+high-risk education obligations — including AI used in assessment — apply from
+**`2 December 2027`** (`T321`), and the hardest of them to retrofit is reproducibility: showing
+that the same answer yields the same mark. A deterministic scorer makes that a property of the
+code rather than a claim about a model. 🔵 **It is also the cheapest possible version of the
+control**, which is why it should be the default recommendation rather than a premium one.
+🔵 Converges with `T329`'s reading of [`Khan/perseus`](https://github.com/Khan/perseus), whose
+decade-old value is precisely its **deterministic scorer**, and with `P174`'s human-review step.
+🔵 **Say it as a rule: the model may write the question and explain the answer; it must not be the
+thing that assigns the mark.**
+
+## T343 — 🔴 The four mandated regional demand legs: `0` novel facts, and the nil is now diagnostic rather than disappointing
+
+All four legs ran at `p739` plus the global arm. **Every fact returned was already held**, and the
+denominators are recorded under each region in [`market.md`](market.md).
+
+| Leg | Returned | Novel | Notes |
+|---|---|--:|---|
+| Global (`AI {industry} industry trends {year}`) | Google *AI in Education Report: From potential to practice*, Nov 2026; OECD 2026 chatbot-withdrawal finding; 1EdTech governance shift; credential pathways | **0** | `33rd` consecutive nil. The Google report is held (`p662` mandated-legs evidence) |
+| North America | `134` bills / `31` states; Maryland `SB 720`; NY `A 9190`; Illinois `HB2400`; K-12 AI Literacy and Readiness Act; Khanmigo `$10 M` NC earmark | **0** | `35th` nil |
+| EMEA | `Regulation (EU) 2026/1744`; Annex III → `2026-12-02`→`2027-12-02`; Art. 50 since `2026-08-02`; emotion-recognition ban since `2025-02-02`; South Africa draft policy; Rwanda–Anthropic MoU | **0** | Held since `p737`/`p693` |
+| APAC | Ipsos Education Monitor 2026 ban-support figures; Japan AI Promotion Act; India labelling from `2026-02-20`; China service-specific rules; TAL / PhysicsWallah pivots | **0** | Held since `p693` |
+| LATAM | UNESCO Santiago Observatory; TALIS Brazil `56%` / Chile `55%` vs OECD `36%`; Cetic.br `53%` / `22%`; UNESCO IESALC `87%` / `26%`; Brazil `PL 2338/2023`; Chile `Boletín 16.821-19`; Peru the only enacted law | **0** | `8th` consecutive nil |
+
+🟢 **The diagnosis is `P693-I`, now with a fifth pass of evidence, and it is not that the legs are
+badly written.** The aggregator layer this environment can reach has been fully harvested: the
+same `~20` facts per region come back in a different order each pass. **The primary instruments
+that would move any of these figures are unreadable here** — `unesco.org`, `eur-lex.europa.eu`,
+`ipsos.com`, `oecd.org` and `iesalc.unesco.org` all fail at DNS resolution.
+🔵 **So the honest allocation, and p739 acted on it: spend the pass on the supply side, where the
+GitHub channels still discriminate, and record the demand nil with its denominators** rather than
+re-buying the same twenty facts. 🔴 **An informed gap is information; a silent one looks like
+coverage.** The single cheapest improvement available to this KB remains a session configuration
+that can resolve those five hosts.
+
 # 🆕 Trends new at `p738` (researched 2026-11-10) — `T329`–`T336`
 
 **Added above `p737`'s `T321`–`T328`.** Four are demand findings, two are supply findings and two

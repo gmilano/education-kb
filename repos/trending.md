@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p739) — 🟢 **THE US K-12 DATA STANDARD WAS IN THE BACKLOG FOR `19` PASSES WHILE ITS IMPLEMENTATIONS SAT ON THE SHELF. 🟢 INDIA'S NATIONAL CONTENT STACK IS MIT ACROSS ALL `77` REPOSITORIES AND ITS AUTHORING EDITOR IS FORKED `15 : 1` AGAINST ITS STARS. 🔵 THREE APACHE-2.0 PAYLOADS SPANNING `1,184 B` NORMALISE TO ONE DIGEST, INCLUDING ONE WITH NO `APPENDIX` AT ALL.**
+
+**`13` institutional rows promoted (`6` foundations, `7` platforms) · `19` payloads byte-read ·
+`4` regions placed on evidence, `1` placement refused · the promotion census re-measured at
+`3,695` unpromoted addresses.**
+
+### Promoted this pass, by region
+
+| Repo | Stars | Forks | Licence (byte-read) | Region | Shelf |
+|---|--:|--:|---|---|---|
+| [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | 46 | 14 | Apache-2.0 · `10,173 B` · sha256₁₂ `a6cba85bc92e` · operative `8,967` | **North America** | foundations |
+| [yetanalytics/datasim](https://github.com/yetanalytics/datasim) | 23 | 13 | Apache-2.0 · `11,357 B` · sha256₁₂ `c71d239df917` · operative `8,967` | **North America** | foundations |
+| [digitalcredentials/verifier-plus](https://github.com/digitalcredentials/verifier-plus) | 19 | 15 | MIT · `1,087 B` · sha256₁₂ `85569d7ed8fc` | **North America** | platforms |
+| [digitalcredentials/open-badges-context](https://github.com/digitalcredentials/open-badges-context) | 6 | 2 | MIT · `1,087 B` · sha256₁₂ `85569d7ed8fc` | **North America** | foundations |
+| [digitalcredentials/signing-service](https://github.com/digitalcredentials/signing-service) | 5 | 8 | MIT · `1,087 B` · sha256₁₂ `ca28a7ae5c7e` | **North America** | foundations |
+| [SVWS-NRW/SVWS-Server](https://github.com/SVWS-NRW/SVWS-Server) | 40 | 13 | **BSD-3-Clause** · `1,611 B` · sha256₁₂ `966b53671a2c` 🔴 *index: `NOASSERTION`* | **EMEA** | platforms |
+| [Utdanningsdirektoratet/PAS2-Public](https://github.com/Utdanningsdirektoratet/PAS2-Public) | 8 | 2 | Apache-2.0 · `11,325 B` · sha256₁₂ `cb5e8e7e5f4a` · operative `8,967` | **EMEA** | platforms |
+| [SVWS-NRW/SVWS-Prognos](https://github.com/SVWS-NRW/SVWS-Prognos) | 1 | 0 | BSD-3-Clause | **EMEA** | platforms |
+| [project-sunbird/sunbird-quml-player](https://github.com/project-sunbird/sunbird-quml-player) | 6 | **39** | MIT · `1,072 B` · sha256₁₂ `47022c44beee` | **APAC** | foundations |
+| [project-sunbird/sunbird-collection-editor](https://github.com/project-sunbird/sunbird-collection-editor) | 3 | **45** | MIT · `1,074 B` · sha256₁₂ `fbafd6479167` · holder `EkStep` | **APAC** | platforms |
+| [bigdata-ustc/CAT4AI](https://github.com/bigdata-ustc/CAT4AI) | 8 | 2 | MIT · `1,062 B` · sha256₁₂ `f54657b48631` · holder `tswsxk` | **APAC** | foundations |
+| [eol-uchile/eol-conditional-xblock](https://github.com/eol-uchile/eol-conditional-xblock) | 2 | 3 | 🔴 AGPL-3.0 · `34,523 B` · sha256₁₂ `8486a10c4393` | **LATAM** | platforms |
+| [eol-uchile/sence-xblock](https://github.com/eol-uchile/sence-xblock) | 1 | 0 | 🔴 AGPL-3.0 · `34,628 B` · sha256₁₂ `856864c98178` | **LATAM** | platforms |
+
+🟢 **Region placement is `13 / 13` on evidence, not on language.** Germany via a ministry named in
+the copyright line; Norway via a national directorate; India via `SEBA`/`AHSEC` and the Sunbird
+estate; China via a named university laboratory; Chile via the **`SENCE`** national training
+registry. 🔴 **One candidate refused:** `BaronCyrus/dsh-aha-tutor` at `45.5 %` CJK prose with `0`
+curriculum or examination tokens — `683-B`/`693-E`, a language is not a jurisdiction.
+
+### The gate finding: Apache-2.0 payload size carries no information about the terms
+
+| Repo | Raw bytes | `APPENDIX` present | Operative §1–§9 | Digest |
+|---|--:|---|--:|---|
+| `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` | `10,173` | 🔴 **NO** | `8,967` chars | sha256₁₂ `b7e7e94fb666` |
+| `Utdanningsdirektoratet/PAS2-Public` | `11,325` | YES | `8,967` chars | sha256₁₂ `b7e7e94fb666` |
+| `yetanalytics/datasim` | `11,357` | YES | `8,967` chars | sha256₁₂ `b7e7e94fb666` |
+
+🟢 **A spread of `1,184 B` across three independent publishers, one identical digest for the
+operative terms.** This reproduces `693-G` a second time on fresh payloads and **extends it to a
+payload that drops the `APPENDIX` entirely**, which p693's four could not test. **Read the
+operative text; the byte count is noise.**
+
+### Owners worth a pass of their own — measured, not guessed
+
+Deepest unpromoted estates found by the census, each one institutional:
+`digitalcredentials` `29`, `openedx` `20`, `ed-fi-alliance-oss` `19`, `microsoft` `17`,
+`openstax` `14`, `edanalytics` `14`, `apereo-learning-analytics-initiative` `14`, `adlnet` `13`,
+`jupyterhub` `12`, `iblai` `12`, `yetanalytics` `11`, `bycs-lp` `11`,
+`utdanningsdirektoratet` `10`, `svws-nrw` `10`, `open-spaced-repetition` `10`, `esupportail` `10`,
+`ai-for-education` `10`, `phetsims` `9`, `kennisnet` `9`, `oat-sa` `8`, `bigdata-ustc` `8`,
+`ai4bharat` `8`, `1edtech` `8`, `project-sunbird` `7`, `mathworks-teaching-resources` `7`,
+`eol-uchile` `7`. **`278` owners hold `≥2` unpromoted repositories each.**
+🔵 **Next pass's cheapest high-value target, named so it is not re-derived:** `oat-sa` (the TAO
+assessment estate — the QTI engine `P204` says to use when the client is an assessment authority)
+and `1edtech` (the LTI / OneRoster / QTI specifications themselves), then `kennisnet` and
+`esupportail` for two more EMEA state publishers.
+
+---
+
 ## 🆕 2026-11-10 (p738)
 
 **`58` discovery legs — `47` publisher legs (`org:` / `user:`), `7` `topic:` legs and `5`

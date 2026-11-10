@@ -1,0 +1,18 @@
+repo	stars	forks	index_spdx	licence_path	raw_bytes	sha256_12	payload_verdict	holder_in_payload	region	placement_basis	shelf
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	46	14	Apache-2.0	LICENSE	10173	a6cba85bc92e	Apache-2.0	(no copyright line; §1 Definitions)	North America	publisher is the US Ed-Fi Alliance	foundations
+yetanalytics/datasim	23	13	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	(no copyright line; §1 Definitions)	North America	publisher Yet Analytics (US)	foundations
+digitalcredentials/verifier-plus	19	15	MIT	LICENSE	1087	85569d7ed8fc	MIT	Copyright (c) 2022 Digital Credentials Consortium	North America	MIT-hosted university consortium	platforms
+digitalcredentials/open-badges-context	6	2	MIT	LICENSE	1087	85569d7ed8fc	MIT	Copyright (c) 2022 Digital Credentials Consortium	North America	MIT-hosted university consortium	foundations
+digitalcredentials/signing-service	5	8	MIT	LICENSE	1087	ca28a7ae5c7e	MIT	Copyright (c) 2023 Digital Credentials Consortium	North America	MIT-hosted university consortium	foundations
+SVWS-NRW/SVWS-Server	40	13	NOASSERTION	LICENSE	1611	966b53671a2c	BSD-3-Clause	Copyright (c) Ministerium fuer Schule und Bildung des Landes NRW	EMEA	ministry named in the copyright line	platforms
+SVWS-NRW/SVWS-GradeHub	2	0	BSD-3-Clause	LICENSE	1504	000d9e90268c	BSD-3-Clause	Copyright (c) 2026, Frank Pfotenhauer	EMEA	NRW estate; holder is an individual (flagged)	platforms
+Utdanningsdirektoratet/PAS2-Public	8	2	Apache-2.0	LICENSE	11325	cb5e8e7e5f4a	Apache-2.0	(no copyright line; §1 Definitions)	EMEA	Norwegian national education directorate	platforms
+project-sunbird/sunbird-quml-player	6	39	MIT	LICENSE	1072	47022c44beee	MIT	Copyright (c) 2020 Project Sunbird	APAC	Sunbird = India national school content stack	foundations
+project-sunbird/sunbird-collection-editor	3	45	MIT	LICENSE	1074	fbafd6479167	MIT	Copyright (c) 2015 EkStep	APAC	Sunbird estate; holder is EkStep Foundation (flagged)	platforms
+bigdata-ustc/CAT4AI	8	2	MIT	LICENSE	1062	f54657b48631	MIT	Copyright (c) 2019 tswsxk	APAC	USTC laboratory; holder is an individual (flagged)	foundations
+eol-uchile/sence-xblock	1	0	AGPL-3.0	LICENSE	34628	856864c98178	AGPL-3.0	Copyright (C) 2007 Free Software Foundation, Inc.	LATAM	integrates SENCE, Chile national training registry	platforms
+eol-uchile/eol-conditional-xblock	2	3	AGPL-3.0	LICENSE	34523	8486a10c4393	AGPL-3.0	Copyright (C) 2007 Free Software Foundation, Inc.	LATAM	Universidad de Chile Open edX estate	platforms
+prayashcloud/axomiya-study-companion	3	0	MIT	LICENSE	1069	3395c29fceb8	MIT	Copyright (c) 2026 prayashcloud	APAC	README names SEBA and AHSEC (Assam statutory boards)	agents
+smashburger-dev/socratic-workshop	23	2	MIT	LICENSE	1072	7f3dec641d9f	MIT	Copyright (c) 2026 smashburger-dev	Global	no jurisdiction token; placement not claimed	agents
+BaronCyrus/dsh-aha-tutor	42	6	MIT	LICENSE	1067	c83a57edd27c	MIT	Copyright (c) 2026 BaronCyrus	Global	APAC REFUSED: 45.5pct CJK but 0 curriculum tokens	agents
+1281504089-cell/kaixin-k12-tutor	1	0	GPL-3.0	NONE-AT-19-PATHS	-	-	no payload on default ref	-	-	grant ships inside release archive per README	REFUSED

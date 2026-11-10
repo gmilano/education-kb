@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p739) — 🟢 **A GOVERNMENT MINISTRY GRANTS `BSD-3-CLAUSE` ON ITS LIVE SCHOOL-INFORMATION SYSTEM AND THE LICENCE INDEX SAYS `NOASSERTION`. 🔴 THE EXACT INVERSE ON THE SAME PASS: THE INDEX ASSERTS `GPL-3.0` AND `19` PROBED PATHS RETURN `404` BECAUSE THE GRANT SHIPS INSIDE A RELEASE ARCHIVE. 🟢 THE PROMOTION BACKLOG IS `3,695` ADDRESSES AND IT IS INSTITUTIONAL — `16` OF THIS PASS'S `19` BYTE-READS CAME OUT OF IT. 🔴 FORKS BEAT STARS `15 : 1` ON INDIA'S NATIONAL AUTHORING EDITOR.**
+
+**`3` agent rows · `6` foundations rows · `7` platform rows · `7` new trends (`T337`–`T343`) ·
+`4` new patterns (`P201`–`P204`) · `19` licence payloads byte-read, **`19 / 19`** classified ·
+`2` index-vs-payload disagreements found **in opposite directions** · the Apache-2.0 operative-text
+control re-run on `3` fresh payloads spanning `1,184 B` → **`8,967` chars, one digest, `3 / 3`** ·
+`1` region placement REFUSED after its evidence was measured · the `topic:ai-tutor` October cohort
+enumerated (`225` total, top `100` read) · the promotion census re-run with `Gap 248`'s filter
+applied, removing `42` non-addresses · **all `4` mandated regional demand legs ran and all `4`
+returned `0` novel facts, with denominators published.**
+
+### This was a promotion pass, and the arithmetic is why
+
+`P693-A` told successors to stop extending the frontier and start promoting the backlog. p739 did
+that and measured the backlog properly for the first time: **`4,561` trending addresses, `1,145`
+shelf addresses, `3,695` never promoted** — `4.5×` p693's region-labelled estimate of `825`,
+because p693 counted only region-bearing lines and did not strip `Gap 248`'s path fragments
+(`topics/*` ×38, `orgs/*` ×2, `search/repositories`, `trending/*` ×3).
+
+🟢 **The backlog's composition is the real finding.** Its deepest owners are consortia, standards
+bodies, state ministries and public universities — `digitalcredentials` `29`, `openedx` `20`,
+`ed-fi-alliance-oss` `19`, `openstax` `14`, `edanalytics` `14`,
+`apereo-learning-analytics-initiative` `14`, `adlnet` `13`, `yetanalytics` `11`, `bycs-lp` `11`,
+`utdanningsdirektoratet` `10`, `svws-nrw` `10`, `esupportail` `10`, `project-sunbird` `7`,
+`eol-uchile` `7` — **`278` owners with `≥2` unpromoted repositories.** The frontier, by contrast,
+gave p739 three single-author tutor skills. `T337`.
+
+### The three agent rows
+
+| Agent | Repo | Stars | Licence (byte-read) | Region | One line |
+|---|---|--:|---|---|---|
+| **Axomiya Study Companion** | [prayashcloud/axomiya-study-companion](https://github.com/prayashcloud/axomiya-study-companion) | 3 | MIT · `1,069 B` · sha256₁₂ `3395c29fceb8` | **APAC** | Assam `SEBA`/`AHSEC` syllabus in Assamese, and **marks in Python, not with the model** — `T342`'s reference implementation |
+| **Socratic Workshop** | [smashburger-dev/socratic-workshop](https://github.com/smashburger-dev/socratic-workshop) | 23 | MIT · `1,072 B` · sha256₁₂ `7f3dec641d9f` | Global | Learn by explaining back, as a Claude Code / Codex skill — the clean representative of `T339`'s `28 %` harness-plugin shift |
+| **开窍 / DSH Aha Tutor** | [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | 42 | MIT · `1,067 B` · sha256₁₂ `c83a57edd27c` | Global 🔴 *APAC refused* | DeepSeek Harness tutor with a handwriting blackboard; `45.5 %` CJK prose but **`0` curriculum tokens**, so no placement |
+
+### The matched pair of index errors, and why it should settle the question
+
+🟢 **`T338`.** [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) — `40★`, pushed
+today, the school-information system of **North Rhine-Westphalia** — indexes `NOASSERTION`.
+`LICENSE` is `1,611 B`, sha256₁₂ `966b53671a2c`, `Redistribution and use in source and binary
+forms` + `Neither the name of` → **`BSD-3-Clause`**, holder
+**`Copyright (c) Ministerium für Schule und Bildung des Landes NRW`**. A pass trusting the index
+would have dropped the most procurement-credible platform row in weeks.
+
+🔴 **`T341`, the inverse.**
+[`1281504089-cell/kaixin-k12-tutor`](https://github.com/1281504089-cell/kaixin-k12-tutor) indexes
+**`GPL-3.0`**; `README.md` returns `200`; **`19` probed licence paths all return `404`**. The
+README explains it: `源码归档内附 LICENSE 与 THIRD_PARTY_NOTICES.md` — *"the source archive ships
+with a LICENSE"*. **The grant is a release artefact, not a repository file.** So the verdict is
+neither `GPL-3.0` nor `T302`'s *"no grant found"*: it is **"a studio cloning `HEAD` receives no
+licence file"**, which for asserted copyleft is the worst possible state.
+
+🔵 **Read together: the index is wrong in both directions on a single pass. It is a hint; the
+bytes are the verdict.** Controls re-run: `curl -sI https://github.com/{owner}/{repo}` returned
+`403` for both a live repository and an invented one (`2 / 2`, no discriminating power);
+`raw.githubusercontent.com` returned `200` / `404` on the same pair; `gh api
+repos/{owner}/{repo}/git/trees/HEAD` returned `403` while `search/repositories` returned full
+metadata for the same repository (`T289`, `P693-H` — both still dead, both still worked around).
+
+### The `topic:ai-tutor` October cohort, enumerated
+
+`225` repositories created since `2026-10-01`; top `100` by stars read in full. **MIT `59`,
+Apache-2.0 `4`, GPL/AGPL `6`, 🔴 `NONE` `22`, 🔴 `NOASSERTION` `9` → `63` permissive and `31`
+unbuyable.** **`28 / 100` are harness plugins or agent skills** rather than applications (`T339`).
+🔵 Of the `7` permissive rows at `≥8★`, **`3` were already shelved** (`nichochar/ari`,
+`munitkala/selfsemester`, `canyrtcn/PractiSQL`) — **the consumer tutor layer on this base is
+saturated**, which is the second half of the argument for spending passes on the backlog.
+🔴 **`Gap 500-F` re-run and UNCHANGED:** no education **tutor** agent *first released* in October
+or November 2026 cleared the bar; `topic:intelligent-tutoring-system created:>2026-09-01` returned
+`10` repositories, `0` fileable.
+
+### The demand legs, and the nil stated with its denominators
+
+All four regional legs ran, plus the global arm. **`0` novel facts in all five.** Global `33rd`
+consecutive nil, North America `35th`, LATAM `8th`. Every fact returned is already held — the
+Google *AI in Education Report* (Nov 2026), the OECD chatbot-withdrawal finding, `Regulation (EU)
+2026/1744` and the `2027-12-02` Annex III deferral, the Ipsos Education Monitor ban-support
+figures, the UNESCO Santiago Observatory, TALIS Brazil `56%` / Chile `55%` vs OECD `36%`.
+🔴 **The diagnosis is `P693-I` at a fifth pass: the reachable aggregator layer is harvested, and
+the primary instruments that would move any figure — `unesco.org`, `eur-lex.europa.eu`,
+`ipsos.com`, `oecd.org`, `iesalc.unesco.org` — all fail at DNS resolution here.** Full table with
+denominators at [`../intel/trends.md`](../intel/trends.md) `T343`. **An informed gap is
+information; a silent one looks like coverage.**
+
+---
+
 ## 🆕 2026-11-10 (p738) — 🟢 **THE UN'S EDUCATION AGENCY SHIPS MIT: `github.com/unesco` IS A FIRST-PARTY PUBLISHER WITH `5 / 8` BYTE-VERIFIED MIT GRANTS, AND TWO OF ITS PIPELINES ARE FILED HERE. 🔴 CHINA'S LEADING EDUCATION-AI LAB GRANTS ITS METHODS AND NOT ITS EDUCATION WORK — `4 / 4` UNGRANTED AGAINST `5 / 5` MIT/APACHE, INCLUDING A `613★` REFUSAL. 🔴 THE KEYWORD LEGS DO NOT MATCH EDUCATION AT ALL: `tutor` MATCHES `tutorial`, `grading` MATCHES `upgrading`, `0 / 79`.**
 
 **`2` agent rows · `13` foundations rows · `6` platform rows · `8` new trends (`T329`–`T336`) ·
