@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p740) — 🟢 **THE PUBLISHER OF THE xAPI SPECIFICATION IS A US DEPARTMENT OF DEFENSE PROGRAMME, ITS ESTATE IS `APACHE-2.0` WITH AN `MIT` CONFORMANCE SUITE, AND ITS REFERENCE ARCHITECTURE IS PUBLIC DOMAIN — ALL OF IT SAT UNREAD IN THE BACKLOG WHILE THIS BASE'S OWN MARKET PAGE CALLED IT THE PREREQUISITE FOR AI IN EDUCATION. 🟢 THE ED-FI PIPELINE SHIPS A SYNTHETIC-DATA GENERATOR, WHICH IS WHAT MAKES A K-12 ENGAGEMENT STARTABLE. 🔴 FOUR OF ITS PACKAGES ARE `MPL-2.0` AND EVERY ONE OF THEM CONTAINS THE STRING "GNU GENERAL PUBLIC LICENSE".**
+
+**`24` institutional rows promoted (`15` foundations, `9` platforms) · `36` payloads byte-read,
+`36 / 36` classified · `4` regions placed on evidence · `4` index-vs-payload disagreements, **three
+of them running toward permissive** · the promotion census re-measured at `3,590` unpromoted
+addresses across `271` owners.**
+
+### Promoted this pass, by region
+
+| Repo | Stars | Forks | Licence (byte-read) | Region | Shelf |
+|---|--:|--:|---|---|---|
+| [adlnet/xAPIWrapper](https://github.com/adlnet/xAPIWrapper) | 224 | 123 | Apache-2.0 · `10,273 B` · `73ba74dfaa52` · 🔴 operative `9,113` | **North America** | foundations |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | 78 | 53 | **MIT** · `1,046 B` · `c0fc02a86ae2` | **North America** | foundations |
+| [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | 60 | 34 | Apache-2.0 · `11,357 B` · `b40930bbcf80` | **North America** | foundations |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | 59 | 35 | Apache-2.0 · `11,358 B` · `cfc7749b96f6` | **North America** | platforms |
+| [adlnet/xapi-authored-profiles](https://github.com/adlnet/xapi-authored-profiles) | 45 | **54** | Apache-2.0 · `11,357 B` · `b40930bbcf80` | **North America** | foundations |
+| [adlnet/tla](https://github.com/adlnet/tla) | 19 | 14 | 🟢 **Unlicense** · `1,211 B` · `6b0382b16279` | **North America** | foundations |
+| [adlnet/xapi-ontology](https://github.com/adlnet/xapi-ontology) | 18 | 10 | Apache-2.0 · `11,525 B` · `a1587287ff04` | **North America** | foundations |
+| [adlnet/MasterObjectModel](https://github.com/adlnet/MasterObjectModel) | 12 | 13 | Apache-2.0 · `11,525 B` · `a1587287ff04` | **North America** | foundations |
+| [adlnet/Moodle-mod_cmi5launch](https://github.com/adlnet/Moodle-mod_cmi5launch) | 9 | 12 | Apache-2.0 · `11,357 B` · `c71d239df917` | **North America** | platforms |
+| [edanalytics/earthmover](https://github.com/edanalytics/earthmover) | 31 | 5 | Apache-2.0 · `11,349 B` · `428201d4f1cd` | **North America** | foundations |
+| [edanalytics/edu_wh](https://github.com/edanalytics/edu_wh) | 20 | 4 | 🔴 **MPL-2.0** · `16,727 B` · `d8d2562a7cb6` | **North America** | foundations |
+| [edanalytics/edfi_api_client](https://github.com/edanalytics/edfi_api_client) | 14 | 2 | Apache-2.0 · `11,357 B` · `c71d239df917` | **North America** | foundations |
+| [edanalytics/lightbeam](https://github.com/edanalytics/lightbeam) | 13 | 4 | Apache-2.0 · `11,349 B` · `428201d4f1cd` | **North America** | foundations |
+| [edanalytics/dbt_synth_data](https://github.com/edanalytics/dbt_synth_data) | 10 | 6 | Apache-2.0 · `11,357 B` · `c71d239df917` | **North America** | foundations |
+| [openstax/openstax-cms](https://github.com/openstax/openstax-cms) | 110 | 19 | 🔴 **AGPL-3.0** · `34,541 B` · `6179a3052bab` | **North America** | platforms |
+| [openstax/fine_print](https://github.com/openstax/fine_print) | 40 | 15 | **MIT** at `MIT-LICENSE` · `1,055 B` · `0a9ed2a2ba71` | **North America** | foundations |
+| [openstax/exercises](https://github.com/openstax/exercises) | 13 | 6 | 🔴 **three grants** — AGPL-3.0 code / MIT vendored / **All Rights Reserved content** | **North America** | platforms |
+| [Apereo-Learning-Analytics-Initiative/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 8 | 3 | Apache-2.0 · `11,358 B` · `cfc7749b96f6` | **North America** | platforms |
+| [EsupPortail/Esup-Pod](https://github.com/EsupPortail/Esup-Pod) | 48 | **83** | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` · *index: `LGPL-3.0`* | **EMEA** | platforms |
+| [EsupPortail/esup-signature](https://github.com/EsupPortail/esup-signature) | 36 | 23 | Apache-2.0 · `11,361 B` · `0f370fbf6184` | **EMEA** | platforms |
+| [EsupPortail/esup-emargement](https://github.com/EsupPortail/esup-emargement) | 12 | 13 | Apache-2.0 · `11,358 B` · `cfc7749b96f6` | **EMEA** | platforms |
+| [bycs-lp/moodle-tiny_ai](https://github.com/bycs-lp/moodle-tiny_ai) | 9 | 8 | 🟢 **GPL-3.0** · `35,178 B` · `ccb349b4132e` · *index: `NOASSERTION`* | **EMEA** | platforms |
+| [project-sunbird/sunbird-ml-workbench](https://github.com/project-sunbird/sunbird-ml-workbench) | 17 | 12 | MIT · `1,063 B` · `4ff07e32ea3b` · holder `EkStep` | **APAC** | foundations |
+| [project-sunbird/sunbird-telemetry-sdk](https://github.com/project-sunbird/sunbird-telemetry-sdk) | 4 | **46** | MIT · `1,072 B` · `7dde06716f25` | **APAC** | foundations |
+
+🟢 **Region placement is `24 / 24` on evidence, not on language.** North America via the US DoD's
+ADL Initiative, a US Ed-Fi tooling vendor, Rice University and the Apereo HE consortium; France via
+the ESUP-Portail consortium of French public universities; Germany via `bycs-lp`, the engineering
+organisation behind the Free State of Bavaria's ByCS school platform; India via Project Sunbird and
+the `EkStep` copyright holder. 🔴 **LATAM placed `0` rows and the nil is censused, not assumed** —
+see the Latam-GPT enumeration below.
+
+### The gate finding: the interoperability substrate was in the backlog, and it is the thing the market says it needs
+
+This base's own market page has carried the 2026 reading for several passes: **AI in education is
+bottlenecked on AI-ready data** — consistent formats, consistent definitions, timely availability —
+with **xAPI plus a Learning Record Store** for activity data and **Ed-Fi** for K-12
+system-of-record data. 🟢 **Both have complete permissive reference implementations, published by
+the standards' own authors, and neither was on any shelf.** `adlnet` held `11` unpromoted
+addresses and `edanalytics` held `14`.
+
+🔵 **What makes it sellable rather than merely available:**
+[`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) is
+**MIT** and tests the `MUST` requirements of the specification against a running LRS. **That turns
+"your learning data is now AI-ready" from a claim into a test run the client can re-execute** —
+which is precisely the artefact a procurement framework (`T350`) and a US district
+vendor-agreement clause ask for. `P205` is the recipe.
+
+🟢 **And `edanalytics/dbt_synth_data` is the row that makes a K-12 engagement startable.** Build
+and demonstrate the entire Ed-Fi warehouse on synthetic data, then point it at the real ODS inside
+the district's boundary. With `35+` states holding departmental AI guidance, **Ohio requiring every
+district to adopt a formal AI policy covering vendor agreements and third-party tools**, and
+Oklahoma's `SB 1734` reported to add parent opt-out before 2027–28, *"we can build this without
+touching a student record"* removes the largest objection in the procurement. `P206`.
+
+### The licence corrections, and three of the four run toward permissive
+
+| Repo | Index says | Payload says | Why it matters |
+|---|---|---|---|
+| [EsupPortail/Esup-Pod](https://github.com/EsupPortail/Esup-Pod) | `LGPL-3.0` | 🔴 **GPL-3.0** | `LGPL` permits proprietary linking; `GPL` does not. Integrate as a service over its API, not as linked code. |
+| [bycs-lp/moodle-tiny_ai](https://github.com/bycs-lp/moodle-tiny_ai) | `NOASSERTION` | 🟢 **GPL-3.0** | A usable grant where the index reports none. |
+| `bycs-lp/moodle-local_ai_manager`, `-block_ai_chat`, `-quizaccess_ai` | `None` | 🟢 **GPL-3.0-or-later, per-file header** | `16 / 16` licence paths `404`; the grant is in `version.php`. Three ministry components rescued from "unbuildable" (`T347`). |
+| [edanalytics/edu_wh](https://github.com/edanalytics/edu_wh) + `edu_edfi_source`, `edu_ext_oneroster`, `edu_edfi_airflow`, `startingblocks_oss` | `MPL-2.0` | **MPL-2.0** (the index was right) | 🔴 A keyword classifier reads these as `GPL-3.0`, because `MPL-2.0` **defines "Secondary License" by naming the GNU GPL** (`T345`). File-level copyleft, not project-level. |
+| [openstax/fine_print](https://github.com/openstax/fine_print) | `MIT` | **MIT** at `MIT-LICENSE` | Four conventional paths `404`; found by extending the chain (`T347`). |
+
+### Owners worth a pass of their own — measured, not guessed
+
+The promotion census, re-run with p740's extraction (same non-address filter; `intel/*` counted as
+shelf because a promoted row can land there): **`4,568` trending addresses, `1,282` shelf
+addresses, `3,590` never promoted, `271` owners with `≥2` unpromoted each.** p739 reported
+`4,561 / 1,145 / 3,695` without the `intel/*` files, so the two are consistent.
+
+🟢 **The deepest unpromoted owners now:** `digitalcredentials` (`26`), `openedx` (`20`),
+`ed-fi-alliance-oss` (`18`), **`microsoft` (`16`)**, `openstax` (`14`),
+`apereo-learning-analytics-initiative` (`14`), **`jupyterhub` (`12`)**, **`jeanlucio` (`12`)**,
+**`iblai` (`12`)**, `bycs-lp` (`11`), `adlnet` (`11`), `yetanalytics` (`10`),
+`open-spaced-repetition` (`10`), `esupportail` (`10`), **`ai-for-education` (`10`)**.
+⚠️ **Five of these — `microsoft`, `jupyterhub`, `jeanlucio`, `iblai`, `ai-for-education` — were not
+named by p739 and have never been read. The last two are education-AI publishers by name.**
+
+### 🔴 LATAM: the estate censused `8 / 8`, and `7` of `8` have no grant
+
+[`latam-gpt`](https://github.com/latam-gpt) — CENIA-led, `30+` institutions across eight countries,
+the region's flagship open-AI programme — enumerated repository by repository:
+
+| Repo | Stars | Licence paths probed | Grant |
+|---|--:|--:|---|
+| `latam-gpt/llm-data-eval` | 16 | **16** | 🔴 none |
+| `latam-gpt/toxicity-classifier` | 5 | 10 | 🔴 none |
+| `latam-gpt/language_identifier` | 3 | 10 | 🔴 none |
+| `latam-gpt/training-estimations` | 2 | 10 | 🔴 none |
+| `latam-gpt/anonymization-filter` | 1 | 10 | 🟢 **MIT** · `1,072 B` · `6e86a35874d6` |
+| `latam-gpt/data-deduplication` | 0 | 10 | 🔴 none |
+| `latam-gpt/fasttext-classifiers` | 0 | 10 | 🔴 none |
+| `latam-gpt/.github` | 0 | 10 | 🔴 none |
+
+🔵 **The only grant in the estate is on its least-starred code repository.** This confirms `p734`'s
+reading on a full enumeration rather than a sample, and it is now a fact with a denominator: **the
+estate is a research-corpus pipeline, not a supply shelf.** Searches that returned nothing usable,
+recorded so the next pass does not pay for them: `org:ceibal`, `org:CENIA-Chile`, `org:rnp-br`
+(none exist), `ceibal uruguay` (`9` hits, all student coursework, max `1★`), `latam-gpt` as free
+text (`5` hits, unrelated tutorials). **`T330` holds: LATAM's institutions are in the sector and
+not on GitHub, so the region's engagement is compliance integration over imported permissive
+parts.**
+
 ## 🆕 2026-11-10 (p739) — 🟢 **THE US K-12 DATA STANDARD WAS IN THE BACKLOG FOR `19` PASSES WHILE ITS IMPLEMENTATIONS SAT ON THE SHELF. 🟢 INDIA'S NATIONAL CONTENT STACK IS MIT ACROSS ALL `77` REPOSITORIES AND ITS AUTHORING EDITOR IS FORKED `15 : 1` AGAINST ITS STARS. 🔵 THREE APACHE-2.0 PAYLOADS SPANNING `1,184 B` NORMALISE TO ONE DIGEST, INCLUDING ONE WITH NO `APPENDIX` AT ALL.**
 
 **`13` institutional rows promoted (`6` foundations, `7` platforms) · `19` payloads byte-read ·

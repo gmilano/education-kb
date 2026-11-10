@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI — Market Intelligence
 
-**Pass p739 · researched 2026-11-10.** Figures below name their source and, where sources
+**Pass p740 · researched 2026-11-10.** Figures below name their source and, where sources
 disagree, the disagreement is shown rather than averaged away.
 
 > 🔴 **`725-F` — read every figure on this page as secondary-source-only, and that is now measured
@@ -162,6 +162,55 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p740` (2026-11-10) — the AI-ready-data substrate is permissive and testable, and the governance mandates now name the artefact to sell
+
+🟢 **Demand leg: facts returned, and the shape of the ask has changed.** As of June 2026,
+**`35+` states have official AI guidance from their departments of education**, against **`134`
+bills across `31` states** (the lower, consistent count this base settled on at `p737`). Three
+state instruments carry a nameable deliverable:
+
+- **Ohio** — first state to **require every K-12 district to adopt a formal AI use policy**, with a
+  **July 1** deadline; its model policy covers *privacy, vendor agreements, and third-party AI
+  tools*.
+- **Idaho** — a March law requiring districts and charter schools to **devise local AI policies**,
+  setting **AI-literacy standards**, and providing that **AI does not replace human teachers**.
+- **Maryland** — the state education department must issue guidance, with an **AI coordinator in
+  each school system**; reported effective **June 1, 2026**.
+- **Oklahoma `SB 1734`** — reported to add **parent opt-out rights** and district policies before
+  the **2027–28** school year.
+
+⚠️ **Read as secondary.** Several of these came from advocacy and vendor trackers whose bill
+numbers and dates conflict; `p737`'s rule stands — **cite the lower bill count and name the
+artefact, not the statute number.**
+
+🟢 **The opportunity, and p740 is the pass that makes it deliverable.** Every one of those
+instruments asks a district for an **artefact**: a policy, a record of who accepted which AI-use
+terms, a vendor-agreement position, a defensible data flow. **The permissive substrate for all of
+it was in this base's backlog and is now on the shelves**:
+
+1. **Learner-activity data** — the ADL Initiative (US DoD) publishes the xAPI specification and a
+   complete `Apache-2.0` implementation, **with an `MIT` conformance test suite**
+   ([`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite),
+   `78★`). The deliverable is a **test run the client re-executes**, not a dashboard. `P205`.
+2. **System-of-record data** — the Ed-Fi pipeline
+   ([`earthmover`](https://github.com/edanalytics/earthmover),
+   [`lightbeam`](https://github.com/edanalytics/lightbeam),
+   [`edfi_api_client`](https://github.com/edanalytics/edfi_api_client)) is `Apache-2.0`, and
+   [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) means **the build never
+   touches a student record**. `P206`.
+3. **The consent record** — [`openstax/fine_print`](https://github.com/openstax/fine_print) (`40★`,
+   MIT) answers *"which version of the AI-use terms did this parent accept, and when"* as a schema
+   rather than a spreadsheet.
+
+🔵 **So the North America pitch is conformance, not platform.** The district is not buying a
+tutor; it is buying the ability to answer its own board's questions with a re-runnable test and a
+data flow that never left the building. 🔴 **One licence warning for the region's two biggest
+content estates:** [`openstax/openstax-cms`](https://github.com/openstax/openstax-cms) (`110★`) is
+genuinely **`AGPL-3.0`** — hosting a modified instance triggers the section 13 source offer — and
+[`openstax/exercises`](https://github.com/openstax/exercises) splits three ways with **all
+non-programmatic content "All Rights Reserved"** (`T348`). **The engine is open; the items are
+not.** Price content separately or supply your own.
 
 #### 🆕 `p739` (2026-11-10) — the integration substrate is Apache-2.0 and already agreed; sell conformance, not a platform
 
@@ -660,6 +709,66 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p740` (2026-11-10) — France has bound what schools may *buy*, and the region's own consortium published the sovereign architecture without a licence
+
+🟢 **The pass's biggest demand finding, and it is a new *kind* of instrument for this base.**
+Every EMEA obligation filed here so far regulates **how an institution uses** AI: the AI Act's
+Annex III tier at **`2027-12-02`** (stand-alone) and **`2028-08`** (product-embedded) under
+**Regulation 2026/1744**, the Digital Omnibus in force July 2026; the transparency and literacy
+duties already live; the national designation layer, still stalled in France (the DDADUE bill
+passed the Senate in February 2026 and is held in the Assemblée nationale, with DGCCRF listed
+provisionally).
+
+🟢 **France's Interoperability Framework for Digital Services for Education, adopted January 2026,
+regulates what an institution may buy.** Per 1EdTech's announcement, it requires **public middle
+and high schools to use digital tools and services complying with technical requirements for
+security, interoperability and responsible digital technology set by the Minister**, and the
+framework **favours open standards**. ⚠️ Vendor source; read as secondary and cite it as such.
+
+🔵 **Why that is commercially different from everything else on this page.** An Annex III duty is a
+reason to buy **governance**, which is consultative, open-ended and hard to fix-price. A
+procurement framework is a reason to buy **conformance**, which is **testable** — and therefore
+scopeable, fixed-price-able and acceptance-criteria-able. 1EdTech's own reading is that a vendor
+conforming to the framework can **sell into other markets using the same standards**, so the
+conformance work amortises across the region. **`P205`'s xAPI conformance spine is the delivery
+vehicle and its `MIT` test suite is the acceptance artefact.**
+
+🟡 **The demand context, and it is a counter-signal to `p738`'s `T336`.** The OECD *Digital
+Education Outlook 2026* reports **`94 %` of over `23,000` German higher-education students used AI
+in 2025, `65 %` daily or weekly** — adoption is settled. But on the same instrument, **teacher
+agreement that AI helps with lesson plans runs from `18 %` in France to `91 %` in Viet Nam**.
+⚠️ **France is simultaneously the EMEA market with the most binding procurement obligation and the
+least convinced teaching workforce.** A proposal whose first slide is *"AI helps teachers"* is
+aimed at the `18 %`. A proposal whose first slide is *"this is the conformant, sovereign,
+French-hosted way to run it"* is aimed at the obligation — and an obligation does not need
+convincing.
+
+🟢 **The supply side answered in the same week, from the region's own institutions.**
+[`EsupPortail/esup-myia`](https://github.com/EsupPortail/esup-myia) (`10★`), out of the **Ateliers
+IA Esup 2025/2026** (Université de Strasbourg, Université de la Polynésie Française), publishes the
+whole sovereign stack: **ILaaS (CINES)** as first-choice inference — Mistral Medium 3 default, plus
+Mistral Small, Llama, Qwen, Gemma, `bge-m3` embeddings — **LiteLLM** gateway for quotas and
+load-balancing, **OpenWebUI** interface, PostgreSQL for logs/budgets/keys, Redis for cache; AMUE or
+Pro Mistral keys as alternatives. 🔵 **The named national inference provider is what makes this
+quotable in a procurement conversation** — this base has prescribed EMEA sovereign stacks for many
+passes without being able to name who hosts the model in-country. 🔴 **And `16` probed licence
+paths return `404`, with no per-file header: a studio cloning `HEAD` receives no licence.**
+**So read it as a specification, build from the named components, and ask ESUP for a grant.**
+`P207`.
+
+🟢 **Germany supplies the adoptable half.** `bycs-lp` — the engineering organisation behind
+**ByCS**, the Free State of Bavaria's school platform — ships a five-plugin AI estate for Moodle:
+a provider gateway with tenants, quotas and accounting
+([`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager), `30★`/`24` forks),
+a chat surface, a TinyMCE authoring surface, a per-course teacher switch, and a quiz-boundary
+access rule. 🔴 **Three of the five index `None` with `16 / 16` licence paths returning `404`** —
+and the grant is in every source file: **`GPL-3.0`-or-later**, per Moodle's plugin policy
+(`T347`). 🟢 **And it is `GPL`, not `AGPL` (`T344`)** — so a studio may host a modified instance for
+a client **without** section 13's duty to offer source to its users, which is what makes this a
+pattern rather than a curiosity. `P208`. ⚠️ Also corrected here:
+[`Esup-Pod`](https://github.com/EsupPortail/Esup-Pod) (`48★`, **`83` forks** — one per university
+instance) **indexes `LGPL-3.0` and is `GPL-3.0`**; integrate over its API, not as linked code.
 
 #### 🆕 `p739` (2026-11-10) — a state ministry's school-information system is `BSD-3-Clause`, and the most regulated module in it is the sale
 
@@ -1312,6 +1421,54 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p740` (2026-11-10) — India has put AI on a dated curriculum calendar, and the stack it will run on is MIT
+
+🟢 **Demand leg: the region's firmest calendar in any market this base covers.** India's Ministry
+of Education announced (October 2025) that **AI and Computational Thinking will be introduced
+progressively from Class 3 in 2026–27**, with **Classes 9 and 10 following in 2027–28**,
+coordinated with **CBSE, NCERT, KVS, NVS** and the state and Union Territory authorities. Alongside
+it: CBSE already offers a **15-hour AI skills module from Class VI** with AI as an optional subject
+for Classes IX–XII, and a **45-hour *AI for Educators* module** runs under SOAR covering AI
+pedagogy, classroom tool use, project design and ethics. ⚠️ The curriculum dates come from
+practitioner guides rather than the gazette; cite the MoE announcement and the school year, not a
+circular number.
+
+🔵 **Why a dated curriculum mandate is a better signal than an adoption percentage.** It names the
+year, the grade and the coordinating bodies — so the procurement that follows it is **scheduled**,
+not speculative, and teacher-capability work (the `45`-hour module) is the part that must happen
+first. **That is a training-and-content engagement with a published deadline**, which is rarer in
+this industry than it sounds.
+
+🟢 **And the delivery substrate is permissive.** **Sunbird** — the open-source stack anchoring
+**DIKSHA**, developed and maintained by the **EkStep Foundation**, described by a 2026 *British
+Journal of Educational Technology* evaluation as a public–private partnership upgraded toward a
+**Personalised Adaptive Learning** experience — is **MIT across the estate**. p740 promoted two
+components with their grants byte-read:
+[`sunbird-telemetry-sdk`](https://github.com/project-sunbird/sunbird-telemetry-sdk) (MIT,
+`7dde06716f25`) and
+[`sunbird-ml-workbench`](https://github.com/project-sunbird/sunbird-ml-workbench) (MIT,
+`4ff07e32ea3b`, holder `EkStep`).
+
+⚠️ **One discrepancy to carry rather than smooth over.** The publisher's own description is
+*"a micro-services stack of more than 100 building blocks"*; the GitHub organisations expose **`77`
+repositories under `project-sunbird` and `58` under `Sunbird-Ed`**, and `p739` measured all `77` as
+MIT. **The "100+ building blocks" figure is architectural, not a repository count** — do not quote
+it as one.
+
+🟢 **The adoption number for this stack is forks, not stars, and `T340` holds a third time.**
+`sunbird-telemetry-sdk` carries **`46` forks against `4★` — `11.5 : 1`, the most extreme ratio on
+these shelves**; `project-sunbird/sunbird-devops` runs `392` forks against `62★`;
+`Sunbird-Ed/SunbirdEd-portal` runs `318` against `41★`. **On a national deployment artefact each
+fork is a state or an integrator standing up its own instance**, and a proposal that cites stars
+for this estate is citing the wrong number.
+
+🔵 **Also on the OECD instrument:** **Viet Nam shows `91 %` teacher agreement that AI helps with
+lesson plans — the highest in the OECD set**, against France's `18 %` low. ⚠️ **Opportunity read:
+APAC is where the teaching workforce is already persuaded, so the regional bottleneck is capability
+and content, not change management** — the inverse of EMEA. ⚠️ **Standing gap, unresolved for an
+eighth pass: no region-wide APAC regulatory picture.** The legs return India, and the rest of the
+region's AI and data-protection instruments remain unmeasured here.
+
 #### 🆕 `p739` (2026-11-10) — India's national content stack is MIT across all `77` repositories, and its forks are the adoption number
 
 🔴 **Demand leg: `0` novel facts.** All held — Ipsos Education Monitor 2026 support for banning AI
@@ -1926,6 +2083,63 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p740` (2026-11-10) — the flagship open-AI estate censused `8 / 8`, and `7` of `8` cannot be built on
+
+🔴 **Supply: `0` rows promoted, and for the first time the nil is a census rather than an
+impression.** [`latam-gpt`](https://github.com/latam-gpt) — led by Chile's **CENIA** with support
+from **`30+` institutions across eight countries**, the first open-source language model trained on
+Latin American data and aimed at education among other sectors — was enumerated repository by
+repository:
+
+| Repo | Stars | Grant |
+|---|--:|---|
+| `llm-data-eval` | 16 | 🔴 none (`16` paths probed) |
+| `toxicity-classifier` | 5 | 🔴 none |
+| `language_identifier` | 3 | 🔴 none |
+| `training-estimations` | 2 | 🔴 none |
+| `anonymization-filter` | 1 | 🟢 **MIT** · `1,072 B` · sha256₁₂ `6e86a35874d6` |
+| `data-deduplication` | 0 | 🔴 none |
+| `fasttext-classifiers` | 0 | 🔴 none |
+| `.github` | 0 | 🔴 none |
+
+🔵 **`7 / 8` unbuildable, and the single grant sits on the least-starred code repository in the
+estate.** This confirms `p734`'s reading on a complete enumeration rather than a sample, and it now
+has a denominator. 🟢 **The honest characterisation: this is a research-corpus pipeline, not a
+supply shelf** — data filtering, deduplication, toxicity labelling and language identification for
+training a model, which is exactly what it was built to be. ⚠️ **A proposal citing Latam-GPT as a
+component is citing something a studio cannot license.** Cite it as a regional capability signal
+and build on imported permissive parts.
+
+🔴 **Searches run and returning nothing usable, recorded so the next pass does not pay for them:**
+`org:ceibal`, `org:CENIA-Chile`, `org:rnp-br` — **no such organisations**; `ceibal uruguay` — `9`
+results, all student coursework, maximum `1★`; `latam-gpt` as free text — `5` results, all
+unrelated tutorials. **`T330` holds and is now closed for a second time: LATAM's institutions are
+in the sector and not on GitHub.**
+
+🟢 **The regulatory picture, which is where the region's engagement actually is.** **Peru's Law
+31814 (2023) remains the region's only *enacted* AI statute.** **Brazil's** EU-modelled bill — tiered
+risk categories, civil liability provisions — is the most advanced and still the main candidate for
+a comprehensive horizontal statute. **Chile's** is pending, built on transparency, fairness and
+human oversight, with **regulatory sandboxes and SME measures** alongside stricter high-risk rules.
+**Mexico** has **no comprehensive horizontal AI law**, with 2026 reforms moving it toward a more
+structured environment; sources describe those reforms inconsistently, so verify before quoting.
+Sector context: the **Latin American Index of AI (ILIA) 2025**, third edition, published March 2026;
+a Linux Foundation report on the economic and workforce impacts of AI in LatAm; and **five
+countries — Brazil, Mexico, Colombia, Chile, Argentina — holding `~87 %` of the region's active AI
+researchers.** One source notes education systems across the region integrating AI tools **often
+without oversight or guidelines**, which is this base's adoption–governance scissors restated by a
+third party.
+
+🔵 **So the LATAM opportunity is unchanged by this pass and better evidenced: compliance
+integration over imported permissive parts.** The region supplies demand, a regulatory calendar
+that mostly has not landed, and a governance deficit — not components. The components come from
+`P205`, `P206` and `P208`, all of which are permissive and none of which are regional. ⚠️ **And the
+one regional platform estate this base does hold —
+[`eol-uchile`](https://github.com/eol-uchile)'s Open edX work, promoted at `p739` — is
+`AGPL-3.0`**, re-confirmed on p740's corrected discriminator (`Remote Network Interaction` present,
+`8486a10c4393`). Copyleft is the regional default, so the licence conversation is the first
+conversation.
 
 #### 🆕 `p739` (2026-11-10) — a Chilean public university's Open edX estate, and the finding that LATAM supply is a compliance-integration market
 
@@ -2576,6 +2790,45 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p740` (2026-11-10) — what is true in every region: the grant is not where the index says, and the licence text quotes itself
+
+🟢 **One finding holds in all four regions and it changes how every row on these shelves should be
+read.** p740 byte-read **`36` licence payloads (`36 / 36` classified)** and found **three distinct
+defects in the obvious way of classifying them** — each caused by licences naming other licences:
+
+1. 🔴 **`GPL-3.0` cannot be told from `AGPL-3.0` by keyword**, because `GPL-3.0`'s **section 13 is
+   titled "Use with the GNU Affero General Public License"** and names it three times. The working
+   discriminator is `AGPL-3.0`'s own section 13 heading, **`Remote Network Interaction`**:
+   `7 / 7` decided this pass, **`2` corrections toward `GPL`**. `T344`.
+2. 🔴 **`MPL-2.0` contains the string `GNU GENERAL PUBLIC LICENSE`**, because that is how it defines
+   a *"Secondary License"*. Four payloads misfiled before correction. `T345`.
+3. 🔴 **The `Apache-2.0` operative-text digest is not universal**: `7 / 8` payloads normalise
+   identically and the eighth — the xAPI specification publisher's own —
+   **drops the `(a)`–`(d)` labels from section 4's redistribution conditions**. The verdict is
+   unchanged and **a digest gate rejects it**. `T349`.
+
+🔵 **The commercial reading, in one sentence a partner can use:** *the `GPL`/`AGPL` line is the
+line that decides whether we may host a modified system for you without publishing our source, and
+until this pass this base was one `grep` away from getting it wrong in both directions.* 🟢 **The
+fix costs nothing — order the classifier by specificity, not by alphabet** — and every pattern on
+[`../compose/patterns.md`](../compose/patterns.md) that quotes a copyleft verdict written before
+`p740` should be re-checked against the discriminator before it reaches a client.
+
+🟢 **A second global finding, and it is the one that recovers value.** *No licence file* is **not**
+*no grant*. p740 found grants in three places a path probe misses — **per-file headers** (the whole
+Moodle, WordPress and Drupal plugin world works this way), **ecosystem-conventional filenames**
+(`MIT-LICENSE` for RubyGems), and **a `COPYRIGHT` file named only in the README**. That reclassified
+**four repositories from unbuildable to usable on this pass alone** (`T347`), including a `30★`
+state-ministry AI gateway. ⚠️ **Conversely, one repository survived all three checks and still has
+no grant** — `EsupPortail/esup-myia` — which is what a genuine absence now looks like.
+
+🔴 **And one shape to check for on every content-bearing repository, everywhere.**
+[`openstax/exercises`](https://github.com/openstax/exercises) carries **three grants in one
+repository**: `AGPL-3.0`-or-later code, `MIT/X11` vendored components, and **every
+non-programmatic asset "All Rights Reserved"** with derivations forbidden from using them
+(`T348`). **The code a client can have; the items they assumed they were buying they cannot.**
+Read the `COPYRIGHT`/`NOTICE` text for an asset carve-out **before the SOW is signed**, not after.
 
 #### 🆕 `p737` (2026-11-10) — the compliance artefact is the same everywhere, and the sandbox under the grader was the real gap
 

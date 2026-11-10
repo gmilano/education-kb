@@ -4,6 +4,230 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p740` (researched 2026-11-10) — `T344`–`T351`
+
+**Added above `p739`'s `T337`–`T343`.** 🔴 **Six of the eight are instrument findings, and three of
+them say the same thing: `p739` was right that the bytes are the verdict, and wrong to assume that
+reading the bytes is easy.** A keyword classifier applied to a licence payload in the obvious order
+misfiles `GPL-3.0` as `AGPL-3.0`, misfiles `MPL-2.0` as `GPL-3.0`, and rejects a valid `Apache-2.0`
+grant. All three were caught on this pass against **`36` byte-read payloads (`36 / 36`
+classified)**, and all three have fixes that are one line of ordering each.
+
+## T344 — 🔴 A keyword classifier cannot tell `GPL-3.0` from `AGPL-3.0`, because `GPL-3.0` names the Affero licence in its own section 13
+
+`GPL-3.0`'s section 13 is **titled** *"Use with the GNU Affero General Public License"* and the
+string `Affero` occurs **`3` times** in a plain `GPL-3.0` payload. So the natural test —
+`grep -i "GNU AFFERO GENERAL PUBLIC LICENSE"` — **matches `GPL-3.0`**, and every `GPL-3.0`
+repository on the pass was initially filed as `AGPL-3.0`.
+
+🟢 **The discriminator that works is `AGPL-3.0`'s own section 13 heading, `Remote Network
+Interaction`**, which has no counterpart in `GPL-3.0`. Measured on `7` copyleft payloads this pass,
+`7 / 7` decided:
+
+| Repo | Licence path | `Remote Network Interaction` | Verdict | Payload | sha256₁₂ |
+|---|---|:-:|---|--:|---|
+| [openstax/openstax-cms](https://github.com/openstax/openstax-cms) | `LICENSE` | **1** | **AGPL-3.0** | `34,541 B` | `6179a3052bab` |
+| [openstax/exercises](https://github.com/openstax/exercises) | `GNU-AGPL-3.0` | **1** | **AGPL-3.0** | `34,519 B` | `91b65277959e` |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `LICENSE` | **1** | **AGPL-3.0** | `35,136 B` | `e12d78569742` |
+| [eol-uchile/eol-conditional-xblock](https://github.com/eol-uchile/eol-conditional-xblock) | `LICENSE` | **1** | **AGPL-3.0** | `34,523 B` | `8486a10c4393` |
+| [EsupPortail/Esup-Pod](https://github.com/EsupPortail/Esup-Pod) | `COPYING` | **0** | 🟢 **GPL-3.0** | `35,149 B` | `3972dc9744f6` |
+| [bycs-lp/moodle-block_ai_control](https://github.com/bycs-lp/moodle-block_ai_control) | `LICENSE` | **0** | 🟢 **GPL-3.0** | `35,149 B` | `3972dc9744f6` |
+| [bycs-lp/moodle-tiny_ai](https://github.com/bycs-lp/moodle-tiny_ai) | `LICENSE.md` | **0** | 🟢 **GPL-3.0** | `35,178 B` | `ccb349b4132e` |
+
+🔵 **Why this is the most consequential instrument finding this base has recorded.** The
+`GPL-3.0` / `AGPL-3.0` line is the line that decides whether a studio may **host a modified
+instance for a client without publishing its source**. Filing `GPL-3.0` as `AGPL-3.0` kills a
+sellable engagement on a false premise; the reverse exposes the client. Two of this pass's three
+`GPL-3.0` repositories — **a state ministry's Moodle plugins** — would have been filed `AGPL-3.0`.
+🟢 **It also independently confirms `p739`'s AGPL call on `eol-uchile`:** that one really does
+carry `Remote Network Interaction`.
+
+⚠️ **One index disagreement falls out of it.** `EsupPortail/Esup-Pod` **indexes `LGPL-3.0`**; its
+`COPYING` is `GPL-3.0`, byte-identical (`3972dc9744f6`) to a Bavarian ministry's plugin. `LGPL`
+permits proprietary linking and `GPL` does not, so this is the third index error in two passes and
+the second in the permissive direction.
+
+## T345 — 🔴 `MPL-2.0` names the GNU GPL in its own definitions, so the same ordering misfiles it as `GPL-3.0`
+
+`MPL-2.0` defines a *"Secondary License"* as **"the GNU General Public License, Version 2.0, the
+GNU Lesser General Public License, Version 2.1, the GNU Affero General Public License, Version
+3.0, or any later versions"**, and repeats the family in Exhibit B. The string
+`GNU GENERAL PUBLIC LICENSE` is therefore **present in every `MPL-2.0` payload**.
+
+Measured on `4` fresh `edanalytics` payloads, all four initially misfiled as `GPL-3.0`:
+
+| Repo | Licence path | Payload | sha256₁₂ | Verdict |
+|---|---|--:|---|---|
+| [edanalytics/edu_wh](https://github.com/edanalytics/edu_wh) | `LICENSE.md` | `16,727 B` | `d8d2562a7cb6` | **MPL-2.0** |
+| [edanalytics/edu_edfi_source](https://github.com/edanalytics/edu_edfi_source) | `LICENSE.md` | `16,727 B` | `d8d2562a7cb6` | **MPL-2.0** |
+| [edanalytics/edu_ext_oneroster](https://github.com/edanalytics/edu_ext_oneroster) | `LICENSE.md` | `16,727 B` | `d8d2562a7cb6` | **MPL-2.0** |
+| [edanalytics/startingblocks_oss](https://github.com/edanalytics/startingblocks_oss) | `LICENSE` | `16,725 B` | `1f256ecad192` | **MPL-2.0** |
+
+🟢 **`T344` and `T345` are one rule, and it is one line of code: order the classifier by
+specificity, not by alphabet.** Test `Mozilla Public License` and `released into the public
+domain` **before** the GPL family; inside the GPL family, test `Remote Network Interaction`
+before the title line; test the title line before any body text. Under that order all `21`
+payloads on this pass classify correctly. 🔵 **The index was right about all four of these and the
+naive payload read was wrong — which is the mirror image of `p739`'s `T338`.** The lesson is not
+"trust the index" or "trust the bytes": it is **read the bytes with a classifier that knows the
+licences quote each other.**
+
+## T346 — 🟢 Copyleft payload size does not merely fail to identify the licence; it points the wrong way
+
+| Family | Payloads this pass | Range |
+|---|--:|---|
+| **AGPL-3.0** | `4` | `34,519` – `35,136 B` |
+| **GPL-3.0** | `3` | `35,149` – `35,178 B` |
+
+🔴 **Every `GPL-3.0` payload measured is larger than every `AGPL-3.0` payload measured** — and the
+more permissive of the pair is the bigger file. `p739`'s `693-G` established that `Apache-2.0`
+payload size carries no information about the terms. **`T346` strengthens that from "uninformative"
+to "actively misleading": a reviewer using size as a sanity check on a copyleft call will be
+confirmed in the wrong answer.** Size is not a weak signal here. It is an inverted one.
+
+## T347 — 🟢 A grant can be present in `HEAD` and absent from every licence path, and this pass found three distinct hiding places
+
+`p739`'s `T341` found a repository whose asserted `GPL-3.0` grant existed only inside a release
+archive, and concluded that "a studio cloning `HEAD` receives no licence file". **That is one
+branch of three.** p740 probed `16` licence paths per repository and found grants living in three
+other places:
+
+| Hiding place | Case | What `16` probed paths return | Where the grant actually is |
+|---|---|---|---|
+| **Per-file headers** | [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager) (`30★`), [moodle-block_ai_chat](https://github.com/bycs-lp/moodle-block_ai_chat) (`16★`), [moodle-quizaccess_ai](https://github.com/bycs-lp/moodle-quizaccess_ai) (`1★`) | **`16 / 16` → `404`**, index `None` | `version.php`, `lib.php`, `classes/manager.php` each carry *"Moodle is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License … either version 3 of the License, or (at your option) any later version"* — **`3 / 3` files checked, `3 / 3` carry it** |
+| **Non-standard filename** | [openstax/fine_print](https://github.com/openstax/fine_print) (`40★`) | `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` all `404` | **`MIT-LICENSE`** — the Rails/RubyGems convention — `1,055 B`, sha256₁₂ `0a9ed2a2ba71`, **MIT**. The index said MIT and was right. |
+| **A `COPYRIGHT` file named in the README** | [openstax/exercises](https://github.com/openstax/exercises) (`13★`, pushed **2026-11-10**) | `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING` all `404` | an HTML comment at the top of `README.md` points to `COPYRIGHT` (`1,186 B`), which points to a file named **`GNU-AGPL-3.0`** (`34,519 B`, `91b65277959e`) |
+
+🟢 **So `T341` gets its missing branches, and the rule becomes decidable:** *no licence file* is
+**not** *no grant*. Before filing "no grant found", check (1) the source-file headers of the
+ecosystem the repository belongs to — Moodle, WordPress and Drupal plugins all mandate one —
+(2) `MIT-LICENSE` and the other ecosystem-conventional filenames, and (3) whatever the README
+points at. ⚠️ **Only after all three does `T302`'s "no grant found" verdict apply.** On this pass
+that reclassified **`3` repositories from "unbuildable" to `GPL-3.0`-or-later** and **`1` from
+"unbuildable" to MIT** — four rows that a path-only probe would have discarded.
+
+## T348 — 🔴 One repository, three grants, and neither the index nor a single-file byte read can express it
+
+[`openstax/exercises`](https://github.com/openstax/exercises) — Rice University, pushed
+**2026-11-10** — splits its grant three ways in the `COPYRIGHT` file:
+
+1. **Programmatic source** → `AGPL-3.0`-or-later;
+2. **Vendored components** (Rails, jQuery, Devise) → `MIT/X11`, *"All unmodified files from these
+   and other sources retain their original copyright and license notices"*;
+3. 🔴 **Everything non-programmatic** — *"logos, images, videos, marketing materials, and text
+   copy"* — **`Copyright Rice University, All Rights Reserved"`**, and *"derivations … may not use
+   these materials"*.
+
+🔵 **For a studio this is the single most expensive shape a grant can take**, because the part that
+is All-Rights-Reserved is the part a client sees. The exercise *content* a buyer assumes is open is
+the asset explicitly withheld. The index reports one SPDX string per repository and cannot say
+this; a byte read of one file says only `AGPL-3.0`. ⚠️ **File this shape, not just the licence: for
+any content-bearing repository, read the `COPYRIGHT`/`NOTICE` text for an asset carve-out before
+the SOW is signed.** Extends `p737`'s `T327` (permissive components over a copyleft core) with its
+commercial inverse: **copyleft code over proprietary content.**
+
+## T349 — 🔴 The `Apache-2.0` operative-text digest is not universal, and the variant that breaks it is the US Department of Defense's
+
+`p739`'s `693-G` normalised three `Apache-2.0` payloads spanning `1,184 B` to one operative digest
+and concluded the byte count is noise. p740 re-ran the control on **`8` fresh payloads** under its
+own normalisation (strip from `APPENDIX`, collapse whitespace) and got **`7 / 8` identical at
+`9,129` chars, digest sha256₁₂ `59d8f0ba87ad` — and one outlier**:
+
+| Repo | Raw | `APPENDIX` | Operative chars | Operative sha256₁₂ |
+|---|--:|:-:|--:|---|
+| [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | `11,357 B` | yes | `9,129` | `59d8f0ba87ad` |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | `11,358 B` | yes | `9,129` | `59d8f0ba87ad` |
+| [adlnet/xapi-ontology](https://github.com/adlnet/xapi-ontology) | `11,525 B` | yes | `9,129` | `59d8f0ba87ad` |
+| [edanalytics/earthmover](https://github.com/edanalytics/earthmover) | `11,349 B` | yes | `9,129` | `59d8f0ba87ad` |
+| [EsupPortail/esup-signature](https://github.com/EsupPortail/esup-signature) | `11,361 B` | yes | `9,129` | `59d8f0ba87ad` |
+| [adlnet/xapi-authored-profiles](https://github.com/adlnet/xapi-authored-profiles) | `11,357 B` | yes | `9,129` | `59d8f0ba87ad` |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | `11,357 B` | yes | `9,129` | `59d8f0ba87ad` |
+| 🔴 [adlnet/xAPIWrapper](https://github.com/adlnet/xAPIWrapper) | `10,273 B` | yes | **`9,113`** | **`da0ea9556182`** |
+
+🟢 **The `16`-character difference was localised by diff, and it is in the one section that binds a
+redistributor.** `xAPIWrapper`'s copy **drops the `(a)`, `(b)`, `(c)`, `(d)` labels from section 4's
+four redistribution conditions** — give a copy of the Licence, mark modified files, retain the
+notices, reproduce `NOTICE`. **The conditions survive as prose; only the enumeration is gone.**
+
+🔵 **So the verdict stands and the gate fails.** The grant is `Apache-2.0` and a studio's
+obligations are unchanged — but a licence gate that compares the operative digest against a single
+known-good value **rejects a valid `Apache-2.0` grant from the publisher of the xAPI specification
+itself.** ⚠️ **Consequence for `P61`'s lockfile and any digest gate: carry an allowlist of
+known-good operative digests, or compare clause presence rather than a hash.** `693-G` was true of
+its four payloads and does not generalise to eight. 🟢 **One further confirmation falls out of the
+larger sample:** `adlnet/ADL_LRS` and `adlnet/xapi-authored-profiles` have *different raw digests*
+(`58d1e17ffe51` and `b40930bbcf80`) at the *same* `11,357 B` and *identical* operative text — the
+whole difference is in the filled-in `APPENDIX` boilerplate. **Raw digest varies for reasons that
+carry no legal weight; the operative digest is the only comparison worth making, and even it needs
+an allowlist.**
+
+## T350 — 🟢 France has bound the *tool* rather than the *use*, and it is the first instrument in this base that reaches procurement
+
+Every EMEA instrument this base has filed — the AI Act's Annex III tier at `2027-12-02`, the
+transparency and literacy duties live since `2025`, the national designation layer — regulates
+**how an institution uses** an AI system. **France's Interoperability Framework for Digital
+Services for Education, adopted January 2026, regulates what an institution may buy.** Per
+1EdTech's announcement (vendor source, so read as secondary), it requires **public middle and high
+schools to use digital tools and services that comply with technical requirements for security,
+interoperability and responsible digital technology set by the Minister**, and the framework
+favours **open standards**.
+
+🟢 **Why this is a different kind of opportunity from everything else on the EMEA shelf.** An
+Annex III obligation is a reason for a client to buy *governance*. A procurement framework is a
+reason for a client to buy *conformance* — and conformance is testable, which means it is
+deliverable on a fixed price with an acceptance criterion. It also travels: 1EdTech's own reading is
+that a French vendor conforming to the framework can **sell into other markets using the same
+standards**, which makes the same conformance work reusable across the region.
+
+🔵 **The demand context sharpens it, and it is a counter-signal to `p738`'s `T336`.** The OECD's
+*Digital Education Outlook 2026* puts teacher agreement that AI helps with lesson plans at
+**`18 %` in France — the lowest in its set — against `91 %` in Viet Nam**, the highest; and a
+German survey of **over `23,000` higher-education students** finds **`94 %` used AI in 2025,
+`65 %` daily or weekly**. ⚠️ **So France is simultaneously the EMEA market with the most binding
+procurement obligation and the least convinced teaching workforce.** A pitch built on "AI helps
+teachers" is aimed at the `18 %`. A pitch built on "this is the conformant, sovereign,
+French-hosted way to run it" is aimed at the obligation — and the obligation does not need
+convincing. See `P207` and the EMEA section of `intel/market.md`.
+
+## T351 — 🟡 The four mandated regional legs all ran; the record is what each returned, and the LATAM supply nil is now a measured census rather than an impression
+
+**All four legs ran and all four returned demand facts** — the first pass in several where no leg
+came back empty. What varies is whether the region also returned **supply**:
+
+| Region | Demand returned | Institutional supply promoted | Note |
+|---|---|--:|---|
+| **North America** | `35+` states with departmental AI guidance as of June 2026; `134` bills across `31` states; **Ohio** first state requiring every district to adopt a formal AI policy, model policy covering vendor agreements and third-party tools; **Idaho** (March) local policies + AI-literacy standards + AI may not replace teachers; **Maryland** guidance + an AI coordinator per system | **`14`** | `adlnet` + `edanalytics` + `openstax` + Apereo LAI |
+| **EMEA** | France's **Interoperability Framework decree** (`T350`); OECD DEO 2026 Germany `94 % / 65 %` of `23,000+` HE students; France teacher agreement `18 %`; AI Act high-risk duties at `2027-12-02` per **Regulation 2026/1744** (Digital Omnibus, in force July 2026), product-embedded tier `2028-08` | **`8`** | `EsupPortail` + `bycs-lp` |
+| **APAC** | India's MoE: **AI and Computational Thinking from Class 3 in 2026–27**, Classes 9–10 in 2027–28, coordinated with CBSE/NCERT/KVS/NVS and the states; CBSE's `15`-hour AI module from Class VI; a `45`-hour *AI for Educators* module under SOAR; Viet Nam `91 %` teacher agreement (OECD) | **`2`** | `project-sunbird` |
+| 🔴 **LATAM** | Peru's **Law 31814 (2023)** remains the region's only *enacted* AI statute; Brazil's EU-modelled bill is the most advanced; Chile's includes regulatory sandboxes and SME measures; Mexico has no horizontal law, with 2026 reforms moving toward one; ILIA 2025 (3rd edition, published March 2026); five countries hold **`~87 %`** of the region's active AI researchers | **`0`** | see the census below |
+
+🔴 **The LATAM supply nil, measured rather than asserted.** The region's flagship open-AI estate,
+[`latam-gpt`](https://github.com/latam-gpt) (CENIA-led, `30+` institutions across eight countries),
+was re-censused **repository by repository, `8 / 8`** (`16` licence paths on `llm-data-eval`, `10`
+on the rest):
+`llm-data-eval` (`16★`), `toxicity-classifier` (`5★`), `language_identifier` (`3★`),
+`training-estimations` (`2★`), `data-deduplication` (`0★`), `fasttext-classifiers` (`0★`) and
+`.github` (`0★`) return **`404` on all `16` paths**; only `anonymization-filter` (`1★`) carries a
+grant — **MIT, `1,072 B`, sha256₁₂ `6e86a35874d6`** — and it is the least-starred code repository
+in the estate. **`7 / 8` unbuildable.** 🟢 This confirms `p734`'s reading on a full enumeration
+rather than a sample, and it is now a fact with a denominator: **the estate is a research corpus
+pipeline, not a supply shelf.** Searches run for LATAM institutional publishers and returning
+nothing usable: `org:ceibal` (no such org), `org:CENIA-Chile` (none), `org:rnp-br` (none),
+`ceibal uruguay` (`9` results, all student coursework, max `1★`), `latam-gpt` as free text (`5`
+results, all unrelated tutorials). **`T330` holds: LATAM's institutions are in the sector and not
+on GitHub.** The region's engagement is therefore a **compliance-integration** engagement over
+imported permissive parts, which is what `p739` concluded and `p740` did not dislodge.
+
+🟢 **The promotion backlog, re-measured, and the owners `p739` did not name.** Under p740's own
+extraction — the same non-address filter, with `intel/*` counted as shelf because a promoted row
+can land there — **`4,568` distinct trending addresses, `1,282` shelf addresses, `3,590` never
+promoted**, across **`271` owners with `≥2` unpromoted repositories**. p739 reported
+`4,561 / 1,145 / 3,695` without the `intel/*` files, so the two figures are consistent and the
+backlog fell by roughly the `27` addresses this pass promoted plus the shelf-definition change.
+⚠️ **Five deep owners `p739` did not name, for the next pass:** `microsoft` (`16`),
+`jupyterhub` (`12`), `jeanlucio` (`12`), **`iblai` (`12`)** and **`ai-for-education` (`10`)** — the
+last two are education-AI publishers by name and have never been read.
+
 # 🆕 Trends new at `p739` (researched 2026-11-10) — `T337`–`T343`
 
 **Added above `p738`'s `T329`–`T336`.** Two are supply findings, three are instrument findings,

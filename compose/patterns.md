@@ -4,6 +4,197 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Patterns new at `p740` (2026-11-10) — `P205`–`P208`
+
+**Four recipes, each naming the specific repositories and the wiring.** Every component grant was
+byte-read at `p740` with the corrected classifier (`T344`, `T345`), and the verdict is repeated in
+each recipe because the licence is what decides whether the recipe is sellable.
+
+🔴 **One cross-cutting warning for every pattern on this page, new at `p740`.** If your licence
+gate compares an `Apache-2.0` payload's operative digest against a single known-good value, it
+will **reject a valid grant** — `adlnet/xAPIWrapper` normalises to `9,113` chars where five other
+payloads give `9,129`, because ADL's copy drops the `(a)`–`(d)` labels from section 4's
+redistribution conditions (`T349`). **`P61`'s lockfile needs an allowlist of known-good operative
+digests, or a clause-presence comparison, not a single hash.**
+
+## P205 — The xAPI conformance spine: make the client's learning data AI-ready, and hand over a test run rather than a dashboard
+
+**For:** any institution, ministry or training organisation whose AI programme is blocked on data
+rather than on models — which, per the 2026 interoperability reading, is most of them.
+**Region:** North America first (the publisher is a US federal programme and the US K-12 data
+conversation is the most advanced), but the standards are global and the same spine satisfies
+France's procurement framework (`T350`). **4–6 weeks to a passing conformance run.**
+
+### The parts — all byte-read at `p740`, all permissive
+
+| Step | Component | Grant |
+|---|---|---|
+| 0. The specification | [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) (`955★`) | Apache-2.0 · `11,525 B` · sha256₁₂ `a1587287ff04` · operative `9,129` |
+| 1. Emit statements | [adlnet/xAPIWrapper](https://github.com/adlnet/xAPIWrapper) (`224★`, `123` forks) | Apache-2.0 · `73ba74dfaa52` · 🔴 operative `9,113`, the `T349` outlier |
+| 2. Store them | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) (`335★`) — reference LRS — **or** [Apereo-Learning-Analytics-Initiative/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) (`8★`) for a HE-consortium provenance story | Apache-2.0 · ADL_LRS `58d1e17ffe51` / Larissa `cfc7749b96f6` · both operative `9,129` |
+| 3. Constrain the vocabulary | [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) (`60★`) + [adlnet/xapi-authored-profiles](https://github.com/adlnet/xapi-authored-profiles) (`45★`, `54` forks) + [adlnet/MasterObjectModel](https://github.com/adlnet/MasterObjectModel) (`12★`) for progress tracking | Apache-2.0 · `b40930bbcf80` / `a1587287ff04` |
+| 4. 🟢 **Gate on conformance** | [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) (`78★`) | **MIT** · `1,046 B` · `c0fc02a86ae2` |
+| 5. Publish the data model | [adlnet/xapi-ontology](https://github.com/adlnet/xapi-ontology) (`18★`) — statements as RDF classes and properties | Apache-2.0 · `a1587287ff04` |
+| 6. Bring the SCORM archive | [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) (`59★`) + [adlnet/Moodle-mod_cmi5launch](https://github.com/adlnet/Moodle-mod_cmi5launch) (`9★`) | Apache-2.0 · `cfc7749b96f6` / `c71d239df917` |
+
+### Wiring
+
+Instrument the client's LMS, app or simulation with `xAPIWrapper`; point it at an LRS from step 2.
+**Author an xAPI Profile for the client's own activity model before a single statement is written**
+— an unconstrained LRS accepts any vocabulary and the result is a log, not an asset. Legacy SCORM
+packages come in through `CATAPULT`/`cmi5launch`, which emits the same statements. Then run the
+**conformance test suite against the running LRS and keep the output**. Expose `xapi-ontology` to
+the client's data team so their existing graph and BI tooling can read the statements without a
+translation layer.
+
+🟢 **Why it sells, in the client's words.** The deliverable is not a dashboard, it is **"your
+learning data now conforms to the xAPI specification, here is the test run, re-execute it
+yourself."** That is testable, fixed-price-able, and it is what a procurement framework
+(`T350`) and a US district vendor-agreement clause both actually ask for. MIT on the test
+suite means the run can be branded and shipped. 🔵 **Where the work really is:** authoring the
+profile and deciding what counts as an activity. Not the plumbing. ⚠️ **State the limit:** a
+conformant LRS makes AI possible and does not make it good — the pedagogy work is `P41`, `P42`
+and `P60`, and this pattern is their precondition.
+
+## P206 — Ed-Fi to an AI-ready warehouse, built entirely on synthetic data so no student record leaves the district during the build
+
+**For:** a US K-12 district, state agency or regional service centre that wants analytics or agents
+over its system of record. **Region:** North America. **6–8 weeks**, of which the first four need
+no access to real data at all.
+
+### The parts — all byte-read at `p740` or `p739`
+
+| Step | Component | Grant |
+|---|---|---|
+| 0. The standard | [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) (`46★`, promoted `p739`) | Apache-2.0 · `a6cba85bc92e` |
+| 1. 🟢 **Generate the data you do not have** | [edanalytics/dbt_synth_data](https://github.com/edanalytics/dbt_synth_data) (`10★`) | Apache-2.0 · `c71d239df917` |
+| 2. Transform source → Ed-Fi | [edanalytics/earthmover](https://github.com/edanalytics/earthmover) (`31★`) + [earthmover_edfi_bundles](https://github.com/edanalytics/earthmover_edfi_bundles) (`14★`) | Apache-2.0 · `428201d4f1cd` / `c71d239df917` |
+| 3. Validate and transmit | [edanalytics/lightbeam](https://github.com/edanalytics/lightbeam) (`13★`) | Apache-2.0 · `428201d4f1cd` |
+| 4. Read/write the ODS | [edanalytics/edfi_api_client](https://github.com/edanalytics/edfi_api_client) (`14★`) | Apache-2.0 · `c71d239df917` |
+| 5. Model it | [edanalytics/edu_wh](https://github.com/edanalytics/edu_wh) (`20★`) + [edu_edfi_source](https://github.com/edanalytics/edu_edfi_source) | 🔴 **MPL-2.0** · `d8d2562a7cb6` |
+| 6. Orchestrate | [edanalytics/edu_edfi_airflow](https://github.com/edanalytics/edu_edfi_airflow) (`6★`) | 🔴 **MPL-2.0** · `16,727 B` · `d8d2562a7cb6` |
+| 7. Record the consent | [openstax/fine_print](https://github.com/openstax/fine_print) (`40★`) | **MIT** · at `MIT-LICENSE` · `0a9ed2a2ba71` |
+
+### Wiring
+
+**Build the whole pipeline against `dbt_synth_data` output first.** `earthmover` maps the
+district's spreadsheets and vendor extracts into Ed-Fi JSONL; `lightbeam` validates each payload
+and transmits it to the Ed-Fi API; `edu_wh` models the ODS into the warehouse an agent or a
+dashboard reads; `edu_edfi_airflow` schedules the extract-load. Only at step 4 does the pipeline
+point at the real ODS — **inside the district's boundary, with nothing exported.** `fine_print`
+holds the AI-use consent versions and who accepted which.
+
+🔴 **The licence boundary, and draw it in the SOW.** Steps 1–4 are `Apache-2.0`: use, modify,
+redistribute, no source duty. **Steps 5–6 are `MPL-2.0`: file-level copyleft.** Modify a `.sql` or
+`.yml` *in those packages* and that file must be published; code that merely *uses* them need not
+be. ⚠️ **And `MPL-2.0` payloads contain the string `GNU GENERAL PUBLIC LICENSE`** — it is how the
+licence defines a "Secondary License" — so a keyword scanner will report these as GPL and alarm a
+client's counsel for no reason (`T345`). Put the digest `d8d2562a7cb6` and the words "MPL-2.0,
+file-level, §3.3" in the licence annex pre-emptively.
+
+🟢 **Why it sells.** `35+` US states have departmental AI guidance; **Ohio requires every district
+to hold a formal AI policy and its model policy names vendor agreements and third-party AI
+tools**; Oklahoma's `SB 1734` is reported to add parent opt-out before 2027–28. **"We can build and
+demonstrate the entire thing without touching a student record"** removes the single largest
+objection in a K-12 procurement, and the synthetic-data step is what makes it true rather than
+reassuring.
+
+## P207 — The sovereign higher-education assistant: build from France's reference architecture, because the reference architecture has no licence
+
+**For:** a European university, ministry or HE consortium that must offer a ChatGPT-equivalent
+without sending prompts to a US hyperscaler. **Region:** EMEA, France first. **5–7 weeks to a
+pilot cohort.**
+
+### The finding this pattern exists to handle
+
+[`EsupPortail/esup-myia`](https://github.com/EsupPortail/esup-myia) (`10★`), published out of the
+**Ateliers IA Esup 2025/2026** by Université de Strasbourg and Université de la Polynésie
+Française, documents the whole stack: **ILaaS (CINES)** as first-choice sovereign inference —
+Mistral Medium 3 by default, with Mistral Small, Llama, Qwen, Gemma and `bge-m3` embeddings —
+**LiteLLM** as the API gateway for quotas and load-balancing, **OpenWebUI** as the interface,
+PostgreSQL for logs, budgets and keys, Redis for caching; an AMUE or Pro Mistral key as the
+alternative. 🔴 **And `16` probed licence paths all return `404`, the index says `None`, and there
+is no per-file header to fall back on.** `T347`'s three remedies are exhausted, so `T302` applies:
+**a studio cloning `HEAD` receives no licence.**
+
+### The wiring — rebuilt from the named components, each with its own grant
+
+1. **Inference.** Request an ILaaS *application* key from CINES (not an individual key — the
+   README is explicit that production needs the validated application key). Mistral Medium 3 as
+   the default; keep the OpenAI-compatible shape so the provider can be swapped.
+2. **Gateway.** `LiteLLM` (MIT) in front of it: per-faculty budgets, per-purpose model routing,
+   request logging. This is the component that makes the deployment auditable.
+3. **Interface.** `OpenWebUI` for the chat surface, branded.
+4. **State.** PostgreSQL for keys, budgets and the request log; Redis for the cache.
+5. **If the client runs Moodle,** do not build a second interface: adopt the Bavarian estate from
+   `P208` instead and let the gateway serve both.
+6. 🔴 **Before copying a line of `esup-myia` itself, ask ESUP for a grant.** It is a consortium of
+   public universities and an explicit `MIT`/`Apache-2.0` grant is a plausible ask; until then the
+   repository is a **specification you read**, not a dependency you vendor.
+
+🟢 **Why it sells, and why the usual pitch does not.** France adopted its **Interoperability
+Framework for Digital Services for Education in January 2026**, requiring public middle and high
+schools to use tools meeting ministerially-set security, interoperability and
+responsible-digital-technology requirements, and favouring open standards (`T350`). Meanwhile the
+OECD's *Digital Education Outlook 2026* puts French teacher agreement that AI helps with lesson
+plans at **`18 %` — the lowest in its set.** ⚠️ **So a pitch built on "AI helps teachers" is aimed
+at the least convinced workforce in the region.** A pitch built on *"this is the conformant,
+sovereign, French-hosted way to run it, and here is the architecture your own consortium
+published"* is aimed at an obligation, and obligations do not need convincing. 🔵 **Pair it with
+`P205`** so the assistant's usage lands in a conformant LRS rather than a vendor's analytics.
+
+## P208 — The state-ministry Moodle AI gateway: adopt a ministry's estate instead of building one, and draw the GPL boundary where the ministry drew it
+
+**For:** any ministry, state, district group or university already running Moodle — which is most
+of the public sector in EMEA and LATAM. **Region:** EMEA, Germany first; transfers anywhere Moodle
+is the incumbent. **3–4 weeks to a pilot cohort**, because the components exist.
+
+### The parts — the Bavarian ByCS estate, grants resolved at `p740`
+
+| Role | Component | Stars / forks | Grant |
+|---|---|--:|---|
+| Provider gateway, tenants, quotas, accounting | [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager) | `30` / `24` | 🟢 **GPL-3.0-or-later, per-file header** · `16` paths `404` |
+| Learner + teacher chat surface | [bycs-lp/moodle-block_ai_chat](https://github.com/bycs-lp/moodle-block_ai_chat) | `16` / `13` | 🟢 GPL-3.0-or-later, per-file header |
+| Authoring surface inside TinyMCE | [bycs-lp/moodle-tiny_ai](https://github.com/bycs-lp/moodle-tiny_ai) | `9` / `8` | 🟢 **GPL-3.0** · `LICENSE.md` · `ccb349b4132e` |
+| Per-course teacher on/off control | [bycs-lp/moodle-block_ai_control](https://github.com/bycs-lp/moodle-block_ai_control) | `3` / `5` | 🟢 **GPL-3.0** · `3972dc9744f6` |
+| AI availability during a quiz attempt | [bycs-lp/moodle-quizaccess_ai](https://github.com/bycs-lp/moodle-quizaccess_ai) | `1` / `0` | 🟢 GPL-3.0-or-later, per-file header |
+| The LMS | [moodle/moodle](https://github.com/moodle/moodle) | — | GPL-3.0 |
+
+### How it wires together
+
+`local_ai_manager` holds the provider credentials, the per-purpose model selection, the quotas and
+the usage accounting — **one place where a prompt leaves the institution, which is the sentence a
+data-protection officer needs.** `block_ai_chat` is the conversational surface; `tiny_ai` puts
+generation where teachers already type; `block_ai_control` gives each teacher a per-course switch;
+`quizaccess_ai` decides AI availability at the quiz boundary, in Moodle's own access-rule API
+rather than by trying to detect AI in submitted text. Point the gateway at whatever inference the
+client's sovereignty rules allow — **`P207`'s ILaaS/LiteLLM layer drops in here unchanged.**
+
+### 🔴 The grant, because three of the five look unlicensed and are not
+
+`local_ai_manager`, `block_ai_chat` and `quizaccess_ai` return **`404` on all `16` probed licence
+paths** and GitHub indexes them `None`. **The grant is in the source files:** `version.php`,
+`lib.php` and `classes/manager.php` each carry *"Moodle is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License … either version 3 of the
+License, or (at your option) any later version"* — mandated by Moodle's plugin policy and
+delivered the way that ecosystem delivers it (`T347`). 🟢 **And it is `GPL-3.0`, not `AGPL-3.0`:**
+the two payloads that do exist have `0` occurrences of `Remote Network Interaction` (`T344`).
+**Commercially that is the whole pattern:** a studio may host a modified instance for a client
+**without** section 13's duty to offer source to its users; any modified plugin it *distributes*
+must ship source. ⚠️ Put the file-header quotation and the `ccb349b4132e` / `3972dc9744f6` digests
+in the licence annex, because a client's counsel running an SPDX scanner will see `None`.
+
+### Why a client buys this
+
+🟢 **Provenance.** The publisher is the engineering organisation behind **ByCS**, the Free State of
+Bavaria's school platform. *"The gateway your pilot runs on is the one a German state runs in
+production"* is a stronger opening than any architecture diagram, and it is checkable. 🔵 **And the
+cost structure is the argument:** five existing GPL plugins plus configuration is weeks; an
+equivalent bespoke gateway with tenancy, quotas and accounting is months. ⚠️ **Honest limits:**
+deeply Moodle-coupled — these are `local_`, `block_`, `tiny_` and `quizaccess_` plugins, not
+standalone services; documentation is German-first; and `quizaccess_ai` at `1★`/`0` forks is a
+**design to copy, not a dependency**.
+
 # 🆕 Patterns new at `p739` (2026-11-10) — `P201`–`P204`
 
 **Four recipes, each naming the specific repositories and the wiring.** All component grants were

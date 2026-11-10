@@ -6,8 +6,10 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p739 · verified 2026-11-10.** The `3` rows added this pass were read today; rows carried
-over name the date they were last read. Rows up to `p734` were read from
+**Pass p740 · verified 2026-11-10.** The `4` rows added this pass were read today; rows carried
+over name the date they were last read. 🔴 **`p740` found and fixed three defects in this base's
+own licence classifier (`T344`, `T345`, `T349`) — re-read any copyleft cell written before this
+pass against `T344`'s discriminator before quoting it to a client.** Rows up to `p734` were read from
 `gh api -X GET search/repositories`; `p735` declared that channel dead (`GH_TOKEN` invalid, `422`)
 and moved to unauthenticated `curl https://api.github.com/search/repositories` (`T298`).
 🟢 **`p736` RETRACTS that: the authenticated channel is alive and carried this entire pass.** It
@@ -33,6 +35,41 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p740` — reads and verifies `2026-11-10`
+
+> **`4` rows added below. 🟢 Three of them are a state education ministry's own AI estate, and all
+> three were within one probe of being filed "unbuildable" — the index says `None`, `16` licence
+> paths return `404`, and the grant is in every source file (`T347`). 🔴 The fourth publishes the
+> reference architecture for sovereign AI in European higher education and carries no grant at all.**
+>
+> 🟢 **p740 continued `p739`'s promotion pass and the arithmetic still says to.** The backlog
+> re-measures at **`4,568` trending addresses, `1,282` shelf addresses, `3,590` never promoted**
+> across **`271` owners with `≥2` unpromoted repositories**. `27` addresses were promoted this pass,
+> **`36` licence payloads byte-read, `36 / 36` classified**, `7` repositories probed across the
+> full `16`-path chain and `3` source-file headers read — but only after **three separate defects
+> in the classifier itself** were found and fixed (`T344`, `T345`, `T349`).
+>
+> 🔴 **Read `T344` before trusting any copyleft cell on this shelf, including the ones written
+> before this pass.** `GPL-3.0`'s section 13 is *titled* "Use with the GNU Affero General Public
+> License", so a keyword test for the Affero licence matches plain `GPL-3.0`. Two of the rows below
+> were initially filed `AGPL-3.0` and are **`GPL-3.0`** — the difference between a studio that may
+> host a modified instance for a client and one that may not. The working discriminator is
+> `AGPL-3.0`'s own section 13 heading, **`Remote Network Interaction`**, which `GPL-3.0` does not
+> contain: `7 / 7` decided this pass.
+>
+> 🔵 **Why the agent shelf gets institutional rows this pass and not tutor rows.** `p739` measured
+> the consumer tutor band as swept (`T316`, `T339`) and prescribed publisher legs. p740 spent all
+> of its legs on publishers in the backlog and the result is the opposite kind of row: **not an
+> agent a learner installs, but the AI gateway a ministry already runs in front of `400M`-user
+> Moodle.** That is a less exciting row and a far more sellable one.
+
+| Agent | Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | What it does, and why it is filed |
+|---|---|--:|--:|---|---|---|
+| **ByCS AI Manager** | [bycs-lp/moodle-local_ai_manager](https://github.com/bycs-lp/moodle-local_ai_manager) | 30 | 24 | 🟢 **GPL-3.0-or-later**, granted **per file** · `16` licence paths → `404` · index `None` | **EMEA** | **The AI provider gateway that the Bavarian state school platform runs inside Moodle: tenant configuration, per-purpose provider selection, quotas and usage accounting.** 🟢 **Filed as the single most procurement-credible AI component on this shelf**, because the publisher is `bycs-lp` — the engineering organisation behind **ByCS**, the Free State of Bavaria's school platform — and because it solves the problem every ministry Moodle engagement hits in week two: *which model, for which purpose, paid by whom, capped at what.* 🔴 **The grant is the finding.** `16` licence paths return `404` and GitHub indexes `None`, so a path-only probe files this "no grant found" and discards a `30★`/`24`-fork ministry component. **The grant is in the headers:** `version.php`, `lib.php` and `classes/manager.php` each carry *"Moodle is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License … either version 3 of the License, or (at your option) any later version"* — `3 / 3` files checked. That is `GPL-3.0`-or-later, mandated by Moodle's plugin policy and delivered the way that ecosystem delivers it (`T347`). 🔵 **Commercially: `GPL`, not `AGPL` (`T344`).** A studio may host a modified instance for a client without section 13's network-source duty; any modified plugin it *distributes* must ship source. ⚠️ Deeply Moodle-coupled — it is a `local_` plugin, not a standalone service. ⚠️ German-language documentation first. |
+| **ByCS AI Chat** | [bycs-lp/moodle-block_ai_chat](https://github.com/bycs-lp/moodle-block_ai_chat) | 16 | 13 | 🟢 **GPL-3.0-or-later**, granted **per file** · `16` licence paths → `404` · index `None` | **EMEA** | **The learner- and teacher-facing chat surface for the gateway above, as a Moodle block.** Filed because it is the half of the ByCS estate a user actually touches, and because together with `local_ai_manager` it makes the pattern in `P208` adoptable rather than buildable. 🟢 **The pairing is the point:** the gateway holds the credential, the quota and the audit trail; the block holds the conversation. A client's data-protection officer can be shown exactly one place where a prompt leaves the institution. ⚠️ Same grant mechanism and the same `404`s as above — `version.php` carries the GPL header. ⚠️ `13` forks against `16★`, a ratio `T340` reads as deployment rather than interest. |
+| **ByCS Quiz AI Access** | [bycs-lp/moodle-quizaccess_ai](https://github.com/bycs-lp/moodle-quizaccess_ai) | 1 | 0 | 🟢 **GPL-3.0-or-later**, granted **per file** · `16` licence paths → `404` · index `None` | **EMEA** | **A Moodle `quizaccess` rule that governs AI availability during a quiz attempt.** 🟢 **Filed small and filed deliberately, because it is the assessment-integrity control a regulator can actually be shown** — it decides at the quiz boundary, in the LMS's own access-rule API, rather than attempting to detect AI in submitted text. That is `P60`'s third control implemented by a ministry rather than described by this base. ⚠️ `1★`, `0` forks, last pushed `2026-09-03`: **a design to copy, not a dependency.** ⚠️ Grant again by file header only. |
+| **EsupMyIA** | [EsupPortail/esup-myia](https://github.com/EsupPortail/esup-myia) | 10 | 1 | 🔴 **No grant in `HEAD`** — `16` licence paths probed, `16 / 16` → `404`; index `None`; no per-file header | **EMEA** | **The French higher-education consortium's reference stack for a sovereign ChatGPT-equivalent — and it is a specification, not a dependency.** The README is explicit: *"votre IA souveraine pour l'enseignement supérieur"*, first choice **ILaaS (CINES)** for inference — Mistral Medium 3 by default, plus Mistral Small, Llama, Qwen, Gemma and `bge-m3` embeddings — with **LiteLLM** as the gateway (quotas, load-balancing), **OpenWebUI** as the interface, PostgreSQL for logs/budgets/keys and Redis for caching; alternatives are an AMUE or Pro Mistral key. Published out of the **Ateliers IA Esup 2025/2026** by Université de Strasbourg and Université de la Polynésie Française. 🟢 **Filed because the architecture is the finding.** This base has prescribed EMEA sovereign stacks for many passes; here is a French HE consortium publishing one with the **national inference provider named** — which is what makes it quotable in a procurement conversation under `T350`'s interoperability framework. 🔴 **And it is unbuildable as published.** `16` paths return `404`, there is no file header to fall back on, and `T347`'s three remedies are exhausted — so `T302` applies: **a studio cloning `HEAD` receives no licence.** ⚠️ **Therefore: read it, do not vendor it.** `P207` rebuilds the same architecture from the named components, each of which carries its own grant, and says to ask ESUP for a grant before copying a line. ⚠️ Hard dependency on an ILaaS key, which requires a French HE account. |
 
 ## 🆕 `p739` — reads and verifies `2026-11-10`
 
