@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p737)
+
+**`62` discovery legs — `53` on the **authenticated** `gh api -X GET search/repositories` channel
+(alive, `T310` confirmed again) and `9` WebSearch prose legs → `~290` repositories read →
+`~200` novel against a `6,063`-address ledger → `20` licence payloads byte-read, **`20 / 20`**
+classified and **`20 / 20`** agreeing with the index → **`14` filed** across
+[`../repos/foundations.md`](foundations.md) (`10`) and
+[`../verticals/solutions.md`](../verticals/solutions.md) (`4`).
+🔴 **`0` agent rows filed — the agent shelf is saturated** (`12` legs, `9` returning only held rows,
+`12 / 12` with no fileable row). The `9` prose legs contributed **`0`** repository addresses not
+already held — the **`41`st consecutive nil**.
+
+🟢 **Where every single fileable row came from: `org:` legs against publishers this base had never
+addressed.** `T314`'s rule is now `53` legs deep and no longer in doubt — **`13` of the `53` index
+legs produced at least one row, and `all 14` fileable rows came from `org:` legs.** The publishers:
+**`openHPI`** (Hasso Plattner Institute, Germany), **`CSCfi`** (Finland's national IT centre for
+science), **`serlo`** (German non-profit), **`1024pix`** and **`betagouv`** (French state),
+**`edumeet`** (European research-network lineage), **`virtUOS`** (Universität Osnabrück),
+**`sikt-no`** (Norway) and **`ELEVATE-Project`** (Indian DPI).
+
+### The trend this pass actually records: the trending channel and the useful channel have diverged
+
+🔴 **Every saturated `topic:` leg returned rows this base already holds** —
+`topic:intelligent-tutoring-system` `6 / 6`, `topic:learning-analytics` `6 / 6`, `topic:lti` `6 / 6`,
+`topic:qti` `6 / 6`, `topic:spaced-repetition stars:>200` `6 / 6`, `topic:mcp education stars:>10`
+`7 / 7`, `topic:education-ai stars:>15` `3 / 3`. 🟢 **Meanwhile a single `org:` query against a
+publisher nobody writes listicles about returned a production-grade, BSD-3-Clause assessment
+platform and its MIT execution orchestrator.** The star-ranked trending surface is now a mirror of
+this base's own shelves; the institutional publisher tier is not. **That asymmetry is the finding,
+and it should set the next pass's budget** (`T326`).
+
+### New this week — `14` rows, all byte-verified, all from publishers new to this base
+
+🟢 **The pair that matters most:** **`openHPI/codeocean`** (**BSD-3-Clause**, `73★`, pushed
+2026-09-28) — in-browser programming assessment with teacher test suites and per-test feedback, in
+production for openHPI's own cohorts — and **`openHPI/poseidon`** (**MIT**, `11★`) — the execution
+orchestrator beneath it: isolated runner per submission, resource limits, reclamation, Nomad-backed,
+and **separable over its HTTP API.** 🔴 **This base held graders, rubric skills and LMS connectors
+and no permissive execution substrate at all**, so every code-marking proposal it supported was
+standing on an unnamed component. `P192`.
+
+🟢 **`edumeet/edumeet`** — **MIT**, **`1,350★`**, **pushed the day it was read** — multiparty
+education conferencing on mediasoup/WebRTC, with `edumeet-docker` (MIT, `68★`) as the maintained
+deployment path. **The first permissive classroom-conferencing platform on these shelves**, against
+BigBlueButton's **LGPL-3.0 core and AGPL-3.0 HTML5 client**. 🔵 Decisive because putting AI *inside*
+a live class means **modifying the client** — a product decision under MIT, a licence decision under
+AGPL (`P195`). ⚠️ Not feature parity with BBB.
+
+🟢 **`serlo/frontend`, `serlo/api.serlo.org`, `serlo/database-layer`** — **Apache-2.0, all three,
+end to end** — the platform, public GraphQL API and Rust content layer of **serlo.org, Germany's
+largest free non-profit learning platform**, with openly licensed curriculum content behind a typed
+taxonomy. **No other national-scale learning platform in this base is permissive** (Moodle GPL-3.0,
+Open edX AGPL-3.0, Canvas AGPL-3.0, ILIAS GPL-3.0, Chamilo GPL-3.0). `P193`. Plus
+**`serlo/serlo-abc`** (Apache-2.0, `31★`) — refugee literacy training, a category nothing else here
+occupies. ⚠️ Last pushed April 2022; a design reference, not a dependency.
+
+🟢 **`CSCfi/rems`** — **MIT**, `68★`, pushed 2026-11-06 — application-and-approval workflow for
+access to restricted resources, from **Finland's national IT centre for science**. 🔵 Filed because
+it is the artefact `T321` says Europe actually owes: **traceable human oversight of decisions about
+people**, already implemented and nationally deployed.
+
+🟢 **`betagouv/ComparIA`** — **Apache-2.0**, `87★`, pushed 2026-11-09 — a blind two-model arena
+published **by the French state**. 🔵 Filed for the *method*, not the pedagogy (it has none): a
+defensible, state-published way to justify a model choice in writing (`P194`).
+
+🟡 **`1024pix/pix-ui`** — **MIT**, `20★` — the accessible assessment component library of **France's
+statutory digital-skills certification service**, whose core (`1024pix/pix`, `286★`) is
+**AGPL-3.0**. 🔵 Fourth instance of **permissive components over a copyleft core** (`T327`).
+
+🟡 **`ELEVATE-Project/mentoring-bap-service`** (**MIT**, `7★`) and **`ELEVATE-Project/user`**
+(**MIT**, `3★`) — teacher mentoring on India's Beckn/DPI protocol stack, consumer and provider
+services separated so a national system reaches teachers without one platform owning the
+relationship. 🟢 **The only non-CJK APAC supply this pass found**, against **`0` fileable rows from
+`org:tekdi`, `org:Samagra-Development` and `org:Shikshalokam` combined** — the top repositories in
+those estates carry **no licence at all**, or were last pushed in 2024.
+
+🟡 **`virtUOS/librechat_exporter`** — **GPL-3.0** ⚠️, `40★`, pushed 2026-11-04 — Prometheus metrics
+for a university-run LibreChat deployment. 🔵 Filed as evidence of a shape worth noticing — **a
+European university running its own LLM service in production and publishing the observability for
+it** — and as this pass's live `T311` control: it is **GPL-3.0, not AGPL**, despite GPL-3.0 §13
+naming the AGPL. **Deploy as-is; do not fork it into a product.**
+
+### Measured nils and refusals this week
+
+🔴 **`10` non-English legs → `45` novel repositories, max `18★`, `0` fileable** (`T323`) — the
+"we search in English" explanation for the regional gaps is **refuted**, not merely doubted.
+🔴 **`org:laboratoria`** (`962` repositories) **refused**: the flagship curriculum is
+**CC-BY-SA-4.0** — not a software grant — and the rest of the estate carries no licence.
+🔴 **`org:ifrn`** — GPL only, last pushed 2017–2019. 🔴 **`org:oeru`**, **`org:openeduhub`**,
+**`org:SURFnet`**, **`org:uclouvain`**, **`org:jisc`**, **`org:Shikshalokam`**,
+**`org:Project-Tech4Dev`** → `0` rows each. 🔴 **`org:italia scuola`**,
+`AI teaching assistant stars:>150`, `lesson plan generator AI stars:>60`,
+`plataforma educativa IA stars:>20` → **`0` results at all**.
+🟢 **`org:LearningLocker`, `org:Chamilo`, `org:ILIAS-eLearning`, `org:inria` → saturated**, which is
+the correct outcome for publishers this base already swept. Full denominators:
+`evidence/leg-ledger.2026-11-10-p737.tsv`.
+
 ## 🆕 2026-11-10 (p736)
 
 **`41` discovery legs across two rounds on the **authenticated** `gh api -X GET

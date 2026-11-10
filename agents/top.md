@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p736 · verified 2026-11-10.** The `7` rows added this pass were read today; rows carried
+**Pass p737 · verified 2026-11-10.** The `7` rows added this pass were read today; rows carried
 over name the date they were last read. Rows up to `p734` were read from
 `gh api -X GET search/repositories`; `p735` declared that channel dead (`GH_TOKEN` invalid, `422`)
 and moved to unauthenticated `curl https://api.github.com/search/repositories` (`T298`).
@@ -34,6 +34,62 @@ can tell a stale cell from a fresh one.
 
 ## Education-specific agents
 
+
+## 🔴 `p737` — `0` rows added, and the denominators are the finding
+
+> **`p737` adds no agent to this shelf. That is a measured result, not a skipped leg, and the
+> numbers are published so the next pass does not pay for the same search.** `12` discovery legs
+> were aimed at this shelf — `topic:intelligent-tutoring-system`, `topic:ai-tutor` (with a
+> `pushed:>2026-10-15` floor), `topic:education-ai`, `topic:ai-grading`, `topic:llm education`,
+> `topic:mcp education`, `topic:learning-analytics`, `topic:grading`, plus four keyword legs with
+> star floors. 🔴 **`9` of the `12` returned rows this base already holds, and `12 / 12` produced
+> zero fileable rows.** On the four legs with the strongest filters the result was total:
+> `topic:education-ai stars:>15` → **`3 / 3` held**; `topic:mcp education stars:>10` → **`7 / 7`
+> held**; `topic:ai-tutor stars:>25 pushed:>2026-10-15` → **`7 / 7` held**; `topic:intelligent-
+> tutoring-system` → **`6 / 6` held**. Three legs returned **`0` results at all**
+> (`AI teaching assistant stars:>150`, `lesson plan generator AI stars:>60`,
+> `plataforma educativa IA stars:>20`). Full denominators in
+> `evidence/leg-ledger.2026-11-10-p737.tsv`.
+>
+> 🟢 **Read positively, this is a statement about the shelf's condition rather than about the
+> pass: the English-language AI-education agent namespace is saturated against this base, and
+> `p736`'s `7` rows plus `p735`'s were the tail of it.** The novel rows that remain carry
+> **`≤ 6★`, no grant, or both** — `topic:ai-grading` returned `4` novel addresses whose maximum was
+> `6★`; the one novel row on `rubric grading LLM stars:>25` has no licence and was last pushed in
+> 2024. ⚠️ **`T316` therefore generalises beyond recency:** it is not only the recency head of a
+> saturated topic that is worthless, it is the *whole* of a saturated topic once this base has
+> swept it. Spend the legs on publishers instead (`T326`).
+>
+> 🔴 **And the most natural explanation for the regional gaps was tested and refuted — see
+> `T323`.** If this shelf is `0` for EMEA-authored learning agents (`T290`) and thin for LATAM, the
+> obvious hypothesis is that discovery is being run in the wrong language. `p737` ran **`10`
+> non-English legs** — `lernplattform`, `nachhilfe`, `tuteur intelligent`,
+> `plateforme pédagogique IA`, `tutor IA educación`, `asistente educativo IA`,
+> `tutor inteligente IA estudiantes`, `plataforma educacional IA`, `corretor redação IA`,
+> `plataforma educativa IA` — returning **`45` novel repositories whose maximum was `18★`, with
+> `0` fileable.** The best Iberian-language rows the channel returns are **already held**
+> (`matheussilvano/mooose`, Apache-2.0, ENEM essay marking; `LabSirius/TutorIA`, MIT, Colombian
+> rural higher education). **The regional shortage is a supply fact, not a discovery-language
+> artefact**, and no later pass should spend legs re-testing it.
+>
+> 🟢 **Where `p737`'s budget went instead, and why it was the right call:** to the publisher tier,
+> which produced **`14` fileable rows** — `10` on [`../repos/foundations.md`](../repos/foundations.md)
+> and `4` on [`../verticals/solutions.md`](../verticals/solutions.md), plus a corrected gate. The
+> single most consequential of them is a pair: **`openHPI/codeocean` (BSD-3-Clause) and
+> `openHPI/poseidon` (MIT) — a permissive, production-proven sandbox that executes student code.**
+> Every grading agent on this shelf needs one and this base held none, so the gap that was actually
+> blocking delivery was never an agent (`P192`, `737-A`).
+>
+> 🔬 **Controls re-run, and both of `p736`'s instrument findings hold.** `gh api -X GET
+> search/repositories` is **alive** and carried all `53` repository legs of this pass (`T310`
+> confirmed, `topic:` / `org:` / `user:` / keyword+`stars:` all returning `200`); the ordered raw
+> chain discriminated `2 / 2` (`openedx/edx-platform` `200`, an invented address `404` on all
+> probed names). ⚠️ **`p737` records one new dead channel, and it bounds what any pass here can
+> verify:** `WebFetch` against arbitrary external hosts fails at DNS resolution — `2 / 2`
+> (`www.i-scoop.eu`, `digital-strategy.ec.europa.eu`) — because this session's network policy
+> allows only an allow-list. **`T246`'s "primary-law hosts unreachable" is therefore not a property
+> of those hosts but of the environment, and it extends to every host off the allow-list.** `T321`
+> is published on corroborated secondary sources with that limitation stated in the tenet.
 
 ## 🆕 `p736` — reads and verifies `2026-11-10`
 

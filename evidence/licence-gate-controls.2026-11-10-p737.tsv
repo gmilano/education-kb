@@ -1,0 +1,29 @@
+# p737 licence gate controls. Gate = evidence/licence-gate.p737.py (p736 gate + GPL/LGPL version resolution).
+# Every verdict decided from the LICENSE payload fetched to a file from raw.githubusercontent.com/{repo}/HEAD/{file}.
+# index = GitHub repository-search spdx_id for the same repository, read the same day.
+repo	licence_file	raw_bytes	p736_gate	p737_gate	index	agree	note
+edumeet/edumeet	LICENSE.md	1075	MIT	MIT	MIT	yes	
+edumeet/edumeet-docker	LICENSE	1075	MIT	MIT	MIT	yes	
+openHPI/codeocean	LICENSE	1550	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	yes	"Neither the name" present -> 3-clause
+openHPI/poseidon	LICENSE	1157	MIT	MIT	MIT	yes	
+serlo/frontend	LICENSE	11357	Apache-2.0	Apache-2.0	Apache-2.0	yes	
+serlo/api.serlo.org	LICENSE	11357	Apache-2.0	Apache-2.0	Apache-2.0	yes	
+serlo/serlo-abc	LICENSE	11357	Apache-2.0	Apache-2.0	Apache-2.0	yes	
+CSCfi/rems	LICENSE	1088	MIT	MIT	MIT	yes	
+1024pix/pix	LICENSE.md	34280	AGPL-3.0	AGPL-3.0	AGPL-3.0	yes	T311 trap held: GPL-3.0 s.13 names AGPL; this payload IS AGPL and is scored AGPL on its family line
+1024pix/pix-ui	LICENSE.md	1066	MIT	MIT	MIT	yes	
+betagouv/ComparIA	LICENSE	11357	Apache-2.0	Apache-2.0	Apache-2.0	yes	
+sikt-no/graphitron	LICENSE	1137	MIT	MIT	MIT	yes	
+ELEVATE-Project/mentoring-bap-service	LICENSE	1068	MIT	MIT	MIT	yes	
+virtUOS/librechat_exporter	LICENSE	35149	GPL	GPL-3.0	GPL-3.0	yes	p737 ADDS the version; p736 returned a bare family. Correctly NOT AGPL despite s.13.
+oat-sa/qti-sdk	LICENSE	18025	GPL	GPL-2.0	GPL-2.0	yes	version control: GPL-2.0, materially different compatibility verdict from GPL-3.0
+ILIAS-eLearning/ILIAS	LICENSE	35147	GPL	GPL-3.0	GPL-3.0	yes	version control
+chamilo/chamilo-lms	LICENSE	35147	GPL	GPL-3.0	GPL-3.0	yes	version control
+kstateome/canvas-api	(none at 6 probed paths)	-	n/a	n/a	LGPL-3.0	n/a	T312 re-confirmed 1/1: grant lives in pom.xml, not in a licence file
+ELEVATE-Project/user	LICENSE	1069	MIT	MIT	MIT	yes	
+ELEVATE-Project/mentoring-bpp-service	LICENSE	1068	MIT	MIT	MIT	yes	
+serlo/database-layer	LICENSE	11357	Apache-2.0	Apache-2.0	Apache-2.0	yes	
+# TOTALS: 20 payloads classified, 20/20 agree with the index.
+# p737 vs p736 delta: 4/4 GPL-family payloads gained a resolved version; 1 of the 4 (oat-sa/qti-sdk) is GPL-2.0,
+# a materially different compatibility verdict that the p736 gate could not express at all.
+# Size is still not a discriminator (T313 stands): GPL-3.0 at 35,149 and 35,147 B vs AGPL-3.0 at 34,280 B are 2.5% apart.

@@ -1,0 +1,70 @@
+# p737 discovery legs, with denominators. channel: ghsearch = gh api -X GET search/repositories (ALIVE, T310 confirmed); websearch = WebSearch tool.
+leg	channel	total_count	returned	novel	fileable	max_stars_novel	verdict
+org:1024pix	ghsearch	111	6	6	2	286	HIT: national public skills-certification estate, AGPL core + MIT design system
+org:CSCfi	ghsearch	494	6	6	1	121	HIT: CSCfi/rems MIT, research-data entitlement management
+org:openHPI	ghsearch	56	6	6	2	73	HIT: codeocean BSD-3 + poseidon MIT, assessment + execution sandbox
+org:sikt-no	ghsearch	14	6	6	0	43	NOT FILED: graphitron MIT 18* is real but infra, not education-specific
+org:tekdi	ghsearch	107	6	6	0	6	NIL on licence: top rows carry no grant
+org:ELEVATE-Project	ghsearch	78	6	6	2	7	THIN but permissive: Indian DPI teacher-mentoring, MIT, low stars
+org:navgurukul	ghsearch	138	6	6	0	30	NIL on licence: AGPL/GPL across the estate
+org:Project-Tech4Dev	ghsearch	10	6	6	0	1	NIL
+org:serlo	ghsearch	117	12	12	4	40	HIT: Apache-2.0 across the whole estate
+org:openeduhub	ghsearch	56	5	5	0	5	THIN: German OER metadata infra, <=5 stars, mixed grants
+org:LearningLocker	ghsearch	9	5	2	0	585	SATURATED: base already holds the LRS and both xAPI packages
+org:virtUOS	ghsearch	86	5	5	1	40	HIT (with copyleft warning): university LLM-operations exporter, GPL-3.0
+org:Shikshalokam	ghsearch	37	5	5	0	1	NIL: stale, <=1 star
+org:Samagra-Development	ghsearch	92	5	5	0	48	NIL on licence: top rows carry no grant, last push 2024
+org:oeru	ghsearch	22	5	5	0	5	NIL: WordPress/Moodle recipes, GPL, stale
+org:edumeet	ghsearch	19	5	5	1	1350	HIT: MIT classroom web-meeting, GEANT-lineage, pushed 2026-11-09
+org:inria	ghsearch	27	5	3	0	244	SATURATED on the education rows (scikit-learn-mooc held)
+org:betagouv	ghsearch	599	5	5	1	348	HIT: ComparIA Apache-2.0, government LLM arena
+org:uclouvain	ghsearch	4	4	4	0	1121	NIL: no education software in the org
+org:jisc	ghsearch	1	1	1	0	8	NIL: one repository, GPL-3.0
+org:Chamilo	ghsearch	14	5	4	0	1021	SATURATED: LMS already held
+org:ILIAS-eLearning	ghsearch	16	5	4	0	2	SATURATED + T292 re-confirmed (unlicensed scaffolds)
+org:SURFnet	ghsearch	97	5	5	0	21	NIL for education: identity/MFA components only
+org:ifrn	ghsearch	38	5	4	0	6	NIL: stale (2017-2019), GPL
+org:laboratoria	ghsearch	962	5	5	0	486	REFUSED: curriculum is CC-BY-SA-4.0, not a software grant; rest carry no licence
+org:italia scuola	ghsearch	0	0	0	0	-	MEASURED NIL
+topic:intelligent-tutoring-system	ghsearch	46	6	0	0	-	SATURATED 6/6 held
+topic:learning-analytics	ghsearch	404	6	0	0	-	SATURATED 6/6 held
+topic:grading stars:>30	ghsearch	18	6	1	0	86	SATURATED 5/6 held; the 1 novel row carries no grant
+topic:lti	ghsearch	185	6	0	0	-	SATURATED 6/6 held
+topic:qti	ghsearch	53	6	0	0	-	SATURATED 6/6 held
+topic:spaced-repetition stars:>200	ghsearch	43	6	0	0	-	SATURATED 6/6 held
+topic:education-ai stars:>15	ghsearch	3	3	0	0	-	SATURATED 3/3 held
+topic:mcp education stars:>10	ghsearch	35	7	0	0	-	SATURATED 7/7 held
+topic:ai-tutor stars:>25 pushed:>2026-10-15	ghsearch	20	7	0	0	-	SATURATED 7/7 held
+topic:llm education stars:>40	ghsearch	53	7	1	0	547	SATURATED 6/7 held; novel row is GPL-3.0 and not education-specific
+topic:ai-grading	ghsearch	56	7	4	0	6	NIL on weight: novel rows <=6 stars
+exam question generator AI stars:>30	ghsearch	1	1	0	0	-	SATURATED 1/1 held
+AI teaching assistant stars:>150	ghsearch	0	0	0	0	-	MEASURED NIL
+lesson plan generator AI stars:>60	ghsearch	0	0	0	0	-	MEASURED NIL
+rubric grading LLM stars:>25	ghsearch	1	1	1	0	54	NIL: no grant, last push 2024
+student agent university stars:>40	ghsearch	1	1	1	0	78	NIL: a bibliography, not software
+lernplattform (DE)	ghsearch	410	5	4	0	6	MEASURED NIL -- see T323
+nachhilfe (DE)	ghsearch	330	5	5	0	3	MEASURED NIL -- see T323
+tuteur intelligent (FR)	ghsearch	26	5	5	0	1	MEASURED NIL -- see T323
+plateforme pedagogique IA (FR)	ghsearch	31	5	5	0	2	MEASURED NIL -- see T323
+plataforma educativa IA stars:>20 (ES)	ghsearch	0	0	0	0	-	MEASURED NIL -- see T323
+tutor IA educacion (ES)	ghsearch	11	5	2	0	1	MEASURED NIL -- see T323
+asistente educativo IA (ES)	ghsearch	29	5	4	0	2	MEASURED NIL -- see T323
+tutor inteligente IA estudiantes (ES)	ghsearch	6	5	5	0	1	MEASURED NIL -- see T323
+plataforma educacional IA (PT)	ghsearch	92	5	4	0	18	MEASURED NIL -- see T323
+corretor redacao IA (PT)	ghsearch	15	5	3	0	3	MEASURED NIL -- see T323
+top open source AI agents education 2026 github MIT	websearch	-	18 links	-	0	-	NIL for rows: returned general-purpose agent listicles, disputed licences, no education repo address
+github trending education AI 2026	websearch	-	18 links	-	0	-	NIL for rows: named DeepTutor (held) and three repos without dates or grants
+open source platform education ERP CRM MIT Apache	websearch	-	16 links	-	0	-	NIL for rows: OpenEduCat vendor pages, licence not stated by any result
+AI education industry trends 2026	websearch	-	10 links	-	0	-	NIL for rows; USED for intel (1EdTech, HolonIQ, Campus Technology)
+AI education North America 2026 adoption regulation players	websearch	-	9 links	-	0	-	NIL for rows; USED for intel (T321, T324)
+AI education EMEA 2026 adoption regulation players	websearch	-	9 links	-	0	-	NIL for rows; USED for intel (T321)
+AI education APAC 2026 adoption regulation players	websearch	-	9 links	-	0	-	NIL for rows; USED for intel (T322 -- fills a p736 declared gap)
+AI education LATAM 2026 adoption regulation players	websearch	-	9 links	-	0	-	NIL for rows; USED for intel (T325)
+# TOTALS: 62 legs. 53 ghsearch + 9 websearch.
+# ghsearch: 8 legs produced at least one fileable row; ALL 14 fileable rows came from org: legs.
+#   Per publisher: serlo 4, openHPI 2, 1024pix 2, ELEVATE-Project 2, CSCfi 1, betagouv 1, virtUOS 1, edumeet 1 = 14.
+#   org:sikt-no returned a permissive novel row (graphitron, MIT, 18*) that was NOT filed: infrastructure, not education-specific.
+# websearch: 9 legs, 0 fileable repository rows -- the 41st consecutive prose-leg nil for repos/foundations.md (T314 stands).
+#   The 5 prose legs that asked about regions DID carry this pass's intel; the 4 that asked about repositories carried nothing.
+# Non-English legs: 10 legs (4 DE/FR at p737 + 6 ES/PT), 45 novel repositories, max 18 stars, 0 fileable. See T323.
+# Saturation: of 12 topic:/keyword legs aimed at the AGENT shelf, 9 returned rows this base already holds, 12/12 produced 0 fileable rows.

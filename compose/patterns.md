@@ -146,6 +146,299 @@ they now will. ⚠️ **It does not fit** a single-course pilot or a student-fac
 
 ---
 
+## P192 — The sandbox under the grader: BSD/MIT code execution so an LLM can mark programming work honestly (all four regions; 3–4 weeks) 🟢 new at `p737`
+
+**The problem this solves.** This base holds graders, rubric skills, MCP servers into Canvas and
+Gradescope, and an essay marker. **Every one of them, applied to a programming assignment, is
+guessing.** A model can read code and say it looks correct; only an execution harness can say it
+compiles, passes the teacher's tests, and does so within time and memory limits. 🔴 **Until `p737`
+this base had no permissive execution substrate at all**, which means every code-marking proposal it
+supported was quietly standing on a component nobody had named — usually "we'll containerise it",
+which is a sprint of scheduling and isolation work discovered after the statement of work is signed.
+
+### Components — all verified first-hand at `p737` unless marked carried
+
+| Component | Licence | Role |
+|---|---|---|
+| [openHPI/codeocean](https://github.com/openHPI/codeocean) `73★` | **BSD-3-Clause** | The assessment application: exercise, teacher test suite, in-browser editor, per-test feedback, score. Production software for openHPI's own cohorts. |
+| [openHPI/poseidon](https://github.com/openHPI/poseidon) `11★` | **MIT** | The execution orchestrator: isolated runner per submission, resource limits, reclamation, Nomad-backed. **Separable — drive it from your own grader over its HTTP API.** |
+| [ChantillyAn/homework-grader](https://github.com/ChantillyAn/homework-grader) `8★` (held) | **MIT** | Rubric-driven marking with chain-of-thought scoring — the *judgement* half, which now receives real test output instead of reading code |
+| [Yuanpeng-Li/gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) `8★` (held) | **MIT** | Writes marks and rubric decisions back where the institution already keeps them |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) `1,370★` (held) | **BSD-3-Clause** | The notebook-native alternative when the course is taught in Jupyter — same role, different substrate |
+
+### Wiring
+
+1. **Week 1 — stand up `poseidon` alone, and prove the isolation before anything else.** Nomad,
+   one runner image per language, hard CPU/memory/wall-clock limits, no network egress from the
+   runner. 🔴 **Write the adversarial tests first: a fork bomb, an infinite loop, a submission that
+   tries to read another student's files, a submission that calls out to the internet.** This is the
+   artefact that makes the engagement defensible, and it is cheap in week 1 and expensive in week 6.
+2. **Week 2 — wire the grader to the harness, not to the code.** The marking agent submits to
+   `poseidon`, receives **per-test pass/fail, stdout/stderr and timings**, and only then forms a
+   judgement. 🟢 **The prompt discipline that makes this work: the model may reason about *style,
+   structure and explanation*; it may not assert correctness — correctness comes from the test
+   results.** That division is also the honest answer to "do you trust an AI to grade?"
+3. **Week 3 — rubric and partial credit.** `homework-grader` supplies the rubric scaffold. Partial
+   credit is computed from the test matrix (which tests passed), with the model writing the
+   *explanation* of the mark rather than the mark itself.
+4. **Week 4 — write-back and the appeal path.** `gradescope-mcp` or the institution's LMS takes the
+   mark. 🔴 **Keep the full run record — submission, test output, rubric decision, model
+   rationale — because a contested grade is the one event this system must survive**, and under
+   `T321` a European deployment owes exactly that traceability anyway.
+
+### Why this composition and not a simpler one
+
+🟢 **`codeocean` is optional and `poseidon` is not.** If the client already has an assessment
+front end, take `poseidon` alone under MIT and leave the Rails application behind — that is the
+whole reason the licence split in `T327` matters. If the client has nothing, `codeocean` is a
+working BSD-3-Clause front end with the pedagogy already modelled, and adopting it saves a month.
+
+⚠️ **Honest constraints.** `poseidon` was last pushed March 2026 at `11★` — pin the version and
+budget for reading it. Nomad is real operational surface; if the client is Kubernetes-only, you are
+writing an adapter. `codeocean` is Ruby on Rails, which some teams will not accept. 🔵 **Regional
+note: this pattern is region-neutral in a base where almost nothing is** — the components are
+German-published, the pedagogy is universal, and the compliance artefact it produces (a complete,
+reviewable grading record) is what North America's policy mandates, EMEA's Article 50 and high-risk
+duties, APAC's institutional action plans and LATAM's register all ask for in their own vocabulary.
+
+## P193 — The grounded German tutor: an Apache-2.0 platform plus openly licensed curriculum content (EMEA; 4–6 weeks) 🟢 new at `p737`
+
+**The problem this solves.** A retrieval-grounded tutor needs three things that rarely come
+together: **curriculum-aligned content**, a **licence that permits reuse**, and a **machine surface
+to fetch it through**. In EMEA the usual outcome is that the content exists but belongs to a
+publisher, so the project stalls in licensing before a line of code is written.
+
+### Components — verified first-hand at `p737` unless marked carried
+
+| Component | Licence | Role |
+|---|---|---|
+| [serlo/frontend](https://github.com/serlo/frontend) `40★` | **Apache-2.0** | The learner-facing platform — forkable, hostable, sellable, with a patent grant |
+| [serlo/api.serlo.org](https://github.com/serlo/api.serlo.org) `17★` | **Apache-2.0** | GraphQL surface over the taxonomy: subjects, courses, articles, exercises, solutions |
+| [serlo/database-layer](https://github.com/serlo/database-layer) `11★` | **Apache-2.0** | The content model in code — read this for the schema |
+| serlo.org content | **CC-licensed** ⚠️ | The corpus: German school mathematics and sciences, openly licensed, curriculum-aligned |
+| `ollama` / `vllm` (held) | **MIT / Apache-2.0** | Local serving, which is what makes the EU residency answer true |
+| [openfun/ralph](https://github.com/openfun/ralph) `51★` (held) | **MIT** | Learning Record Store — the xAPI trail that `T321`'s oversight duty wants |
+
+### Wiring
+
+1. **Weeks 1–2 — index the taxonomy, not the pages.** Pull the content tree through
+   `api.serlo.org` and build retrieval over **exercise-and-solution pairs keyed to curriculum
+   topics**, not over flattened prose. The reason is pedagogical: a tutor that can cite *the
+   exercise this learner just failed and its worked solution* is grounded; one that retrieves
+   paragraphs is a chatbot with footnotes.
+2. **Week 3 — the tutor loop, with citation enforced.** Every explanation carries the content ID it
+   came from. 🟢 **This is also the Article 50 artefact**: the learner sees that they are talking to
+   an AI and sees where the material came from, which is disclosure and provenance in one move.
+3. **Week 4 — emit xAPI to `ralph`.** Attempts, hints taken, topics mastered. 🔵 This is what makes
+   the pilot measurable to a ministry, and it is the same record `T321`'s 2027 obligations will ask
+   for.
+4. **Weeks 5–6 — local serving and the residency claim.** Repoint generation at `ollama`/`vLLM`
+   inside the institution's own boundary.
+
+### Why this composition and not a simpler one
+
+🟢 **Because the licence stack is clean end to end, which no other national-scale platform in this
+base offers.** Moodle is GPL-3.0, Open edX and Canvas are AGPL-3.0, Chamilo and ILIAS are GPL-3.0 —
+with all of them the route to the student is LTI (`P186`) or a content type (`P190`), and you do not
+own the platform. **With Serlo you own the product.**
+
+⚠️ **Two honest constraints, and the first is the one that will decide the proposal.**
+**Confirm the content licence per item** — Apache-2.0 covers the code, CC terms cover the material,
+and a `CC-BY-SA` item propagates its ShareAlike condition into derived teaching material. Second,
+**Serlo is German-primary and non-profit-scale**: outside German-language education the platform is
+reusable but the corpus is not, and at `40★` you are doing the platform engineering yourself. 🔵
+**For a client who wants to extend what they already run, propose `P186` instead** — this pattern is
+for a client who wants to own a product.
+
+## P194 — The model-choice record: a two-week, state-published method for justifying which model teaches (EMEA first, all regions; 2 weeks) 🟢 new at `p737`
+
+**The problem this solves.** "Why this model?" is now a procurement question with a paper trail, not
+a technical preference — `T321` puts EMEA's live duties on documentation and oversight, North
+America's statutes name a **policy and a training record** (`T324`), and APAC regulators want an
+**institutional action plan** (`T318`). 🔴 **Vendor benchmarks cannot answer it**, because the
+question is not which model is best in general but which is better *at this subject, for these
+learners, in this language*.
+
+### Components
+
+| Component | Licence | Role |
+|---|---|---|
+| [betagouv/ComparIA](https://github.com/betagouv/ComparIA) `87★` | **Apache-2.0** | Blind two-model arena with vote capture and post-hoc reveal — **published by the French state**, which is itself the provenance argument |
+| [openfun/ralph](https://github.com/openfun/ralph) `51★` (held) | **MIT** | Stores the comparison events as a durable record |
+| `ollama` / `vllm` (held) | **MIT / Apache-2.0** | Serves the candidate models locally so the prompts never leave the institution |
+| [CSCfi/rems](https://github.com/CSCfi/rems) `68★` | **MIT** | If the evaluation prompts contain student work, this is the access-approval record for using it |
+
+### Wiring
+
+1. **Days 1–3 — build the prompt set from the client's own material**, not from a benchmark: fifty
+   to a hundred real questions from the actual syllabus, in the actual language, including the ones
+   teachers say models get wrong.
+2. **Days 4–8 — run the arena blind with the client's own teachers as judges.** Two undisclosed
+   candidates per prompt, teacher votes, identities revealed afterwards.
+3. **Days 9–10 — publish the record.** Win rates by subject and by question type, the prompt set,
+   the rubric the judges used, and the decision. 🟢 **The deliverable is the document, not the
+   model** — and it is the artefact every regional instrument in `T318`/`T321`/`T324` asks for in
+   different words.
+
+### Why this is worth two weeks
+
+🟢 **It converts the most common stalling objection into a billable, self-contained engagement**, it
+is defensible precisely because the method is published by a government rather than invented for the
+proposal, and it produces a reusable asset: the client's prompt set becomes their regression suite
+for every model change afterwards. ⚠️ **`ComparIA` is not an education tool** — no pedagogy, no
+curriculum, Gradio-based and built for the French public-sector context; you are adopting the
+harness and the method, and supplying the education semantics yourself.
+
+## P195 — The AI-attended classroom, under MIT: transcription, translation and participation analytics without a copyleft trap (all four regions; 5–7 weeks) 🟢 new at `p737`
+
+**The problem this solves.** Putting AI *inside* a live class — live transcription, real-time
+translation, a summariser that attends and writes the notes, participation analytics — **requires
+modifying the conferencing client**. 🔴 **That is exactly the act the AGPL reaches**, and the
+platform this base has always reached for, **BigBlueButton, is LGPL-3.0 with an AGPL-3.0 HTML5
+client**. So the standard answer has been to host a modified AGPL client for a client, which either
+obliges source release or quietly ignores the licence.
+
+### Components — verified first-hand at `p737` unless marked carried
+
+| Component | Licence | Role |
+|---|---|---|
+| [edumeet/edumeet](https://github.com/edumeet/edumeet) `1,350★` | **MIT** | The conferencing platform: mediasoup/WebRTC rooms, roles, breakouts, recorder. **Fork it, modify it, host it, sell it.** |
+| [edumeet/edumeet-docker](https://github.com/edumeet/edumeet-docker) `68★` | **MIT** | The maintained deployment path |
+| `whisper`-family local ASR (held) | **MIT / Apache-2.0** | Transcription inside the institution's boundary |
+| [openfun/marsha](https://github.com/openfun/marsha) `152★` (held) | **MIT** | LTI content management — puts the recording and transcript back into the LMS the class actually uses |
+| [openfun/ralph](https://github.com/openfun/ralph) `51★` (held) | **MIT** | Participation and attendance as xAPI statements |
+| [virtUOS/librechat_exporter](https://github.com/virtUOS/librechat_exporter) `40★` | **GPL-3.0** ⚠️ | Prometheus metrics for an institution-run LLM service — **deploy as-is, do not fork into a product** |
+
+### Wiring
+
+1. **Weeks 1–2 — deploy `edumeet` and win the operations argument first.** mediasoup is an SFU:
+   TURN, bandwidth and scaling are the real work, and a pilot that fails does so here, not in the
+   AI layer.
+2. **Week 3 — transcription as a participant.** The ASR joins as a room member and emits a
+   timestamped, speaker-attributed transcript. 🔴 **Consent gate before this ships: recording and
+   transcribing a class is processing of minors' or students' data in every region, and under
+   `T321` it also triggers the live Article 50 duty to tell participants an AI system is present.**
+3. **Week 4 — translation, which is where the measurable value usually is.** Live captions in a
+   second language turn one lecture into a multilingual one — the clearest ROI in APAC and LATAM
+   engagements and in European institutions teaching international cohorts.
+4. **Weeks 5–6 — the summariser and the analytics.** Notes, action items and open questions per
+   session; participation as xAPI into `ralph`. 🔴 **Draw the line explicitly in the statement of
+   work: session-level participation analytics are defensible; per-student attention or engagement
+   scoring is the thing that gets the project cancelled**, and in the EU it is the shape that walks
+   toward Annex III.
+5. **Week 7 — put it back in the LMS** via `marsha` so the artefacts live where the course lives.
+
+### Why MIT changes the shape of this and not just the paperwork
+
+🟢 **Under MIT the modified client is a product decision; under AGPL it is a licence decision.** A
+studio can brand the room, embed it in the client's portal, add the AI layer and host it as a
+service with no reciprocal obligation. ⚠️ **State the trade honestly in the proposal: BigBlueButton
+is the more complete teaching platform** — deeper whiteboard, polling and mature Moodle/Canvas
+plugins. **eduMEET buys licence freedom and self-hosting, not feature parity**, and if the client
+needs BBB's teaching features more than it needs to own a modified client, propose BBB and deploy it
+unmodified.
+
+## P196 — The live-obligations pack: the compliance work that is due in 2026, not 2027 (EMEA first, adaptable to all four regions; 3–4 weeks) 🟢 new at `p737`
+
+**The problem this solves.** `T321` establishes that the EU AI Act's **high-risk** education
+obligations moved to **`2 December 2027`** — and that the **transparency, marking and AI-literacy
+duties did not move**. 🔴 **The predictable failure is an institution that reads "delayed" and does
+nothing, while the cheap, live duties go unmet.** The same split exists elsewhere in different
+words: North America's near-term deliverable is **a policy and a training record** with hard 2026–27
+dates (`T324`), APAC's is **a safeguard and consent story** where ban-support is rising (`T322`),
+LATAM's is **a usable policy and a data boundary** for a `22 %`-governed school estate (`T325`).
+
+### Components
+
+| Component | Licence | Role |
+|---|---|---|
+| [CSCfi/rems](https://github.com/CSCfi/rems) `68★` | **MIT** | Access-approval and entitlement record: who may use which learner data, approved by whom, on what grounds, expiring when |
+| [openfun/ralph](https://github.com/openfun/ralph) `51★` (held) | **MIT** | The event trail — what the system did, to whom, when |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) `970★` (held) ⚠️ `NOASSERTION` | — | Staff AI-literacy material. 🔴 **Licence unresolved — use as a curriculum reference, do not redistribute** |
+| [betagouv/ComparIA](https://github.com/betagouv/ComparIA) `87★` | **Apache-2.0** | The model-choice record (`P194`), which is one page of this pack |
+| [1024pix/pix](https://github.com/1024pix/pix) `286★` ⚠️ AGPL | — | **Reference only**: a statutory digital-skills framework to map the AI-literacy measure against |
+
+### Wiring
+
+1. **Week 1 — the disclosure and marking inventory.** Walk every learner-facing surface and answer
+   two questions per surface: *does the learner know an AI system is involved*, and *is generated
+   material marked*. 🟢 **This is the whole of the live EU duty and it is usually a week of work,
+   because the gaps are in places nobody listed** — the feedback comment on a returned assignment,
+   the chatbot in the portal, the generated practice question.
+2. **Week 2 — the AI-literacy measure, as a record and not a slogan.** A staff session, a student
+   module, an attendance record. 🔵 The 2026 rewording asks for *measures that support* AI literacy,
+   which is satisfiable and auditable; "we encourage awareness" is not.
+3. **Week 3 — the data boundary.** `rems` for access approvals over any learner corpus, `ralph` for
+   the event trail. 🟢 **This is also the first instalment of the 2027 high-risk apparatus** — the
+   logging and data-governance pieces are needed either way, so the pack is a down payment rather
+   than a detour.
+4. **Week 4 — the register and the regional adapter.** One document naming every AI system in use,
+   its purpose, its owner, its data and its human-oversight step. **Relabel per region:** the EU
+   calls it technical documentation, North Carolina calls it a district policy, TEQSA calls it an
+   institutional action plan, LATAM ministries call it a register. 🟢 **The content is the same
+   artefact; only the noun changes** (`T318`'s closing argument, now with the live/deferred split
+   separated out).
+
+### Why this sells in 2026
+
+🟢 **Because it is small, dated and unavoidable, which is the easiest thing to get signed.** Three
+to four weeks, no model training, no platform migration — and it ends with the client holding the
+document their regulator will ask for. 🔵 **It is also the best-qualified lead generator in this
+base**: the inventory in week 1 enumerates every AI surface the institution runs, which is precisely
+the input to `P192`, `P193`, `P195` and `P197`. ⚠️ **Not legal advice, and say so in writing:** the
+dates in `T321` and `T324` rest on corroborated secondary sources because primary legal hosts are
+unreachable from this environment (`T328`), and one of them — the Article 50 date — **is published
+as a conflict**. The pack's value is the artefact and the inventory; the client's counsel confirms
+the dates.
+
+## P197 — The district-scale governance engagement: LATAM's 53/22 gap at school level (LATAM first, adaptable; 3–5 weeks per district) 🟢 new at `p737`
+
+**The problem this solves.** `T325` measures the adoption–governance scissors **in schools** and it
+is wider than in higher education: **`53 %` of Brazilian school administrators report using AI while
+`22 %` have any guidelines** (Cetic.br); **`75 %` of Uruguayan public-school teachers report using AI
+tools** (Ceibal). 🟢 **The usage is already there. What is missing is institutional, and that is the
+cheaper half to supply.**
+
+### Components
+
+| Component | Licence | Role |
+|---|---|---|
+| `P196`'s pack | — | The policy, register, literacy record and data boundary — the same artefact, scoped to a district |
+| [estevao-tarifa/moodle2ia](https://github.com/estevao-tarifa/moodle2ia) `4★` (held) | **MIT** | Gets the district's existing course material out of its LMS, permissively |
+| [matheussilvano/mooose](https://github.com/matheussilvano/mooose) `5★` (held) | **Apache-2.0** | ENEM essay marking — **the Brazil-specific capability that makes the engagement concrete** |
+| [sugarlabs/musicblocks](https://github.com/sugarlabs/musicblocks) `927★` (held) ⚠️ AGPL | — | Deployed **by the institution for itself**, which the AGPL permits cleanly; OLPC-lineage recognition across the region |
+| [openfun/ralph](https://github.com/openfun/ralph) `51★` (held) | **MIT** | The measurement trail a ministry needs to see |
+| `ollama` (held) | **MIT** | Local serving where connectivity and budget rule out per-token cost |
+
+### Wiring
+
+1. **Week 1 — measure the district against its own numbers.** Who is already using what, with no
+   policy behind it. 🟢 **Lead with the `53 / 22` and the `75 %`**: this is not a pitch to adopt AI,
+   it is a pitch to govern what teachers are already doing, which is a much easier conversation with
+   a secretariat.
+2. **Weeks 2–3 — the pack, in the local language and the local legal frame.** Policy, register,
+   teacher training record, data boundary. ⚠️ **No education-specific AI law exists in any LATAM
+   country** (`T318`), so the frame is the national data-protection law plus child-safeguarding
+   rules, which vary sharply by country.
+3. **Week 4 — one capability, chosen because it is visibly useful to teachers.** In Brazil, ENEM
+   essay marking via `mooose` — the highest-leverage, most-recognised teacher workload in the
+   system. Elsewhere, whatever the equivalent high-stakes marking burden is.
+4. **Week 5 — the evidence pack for the ministry**, from `ralph`: usage, coverage, teacher time
+   saved. 🔵 **This is what turns one district into a programme**, and ECLAC/CENIA's ILIA 2026
+   naming *implementation* rather than authorship as the region's gap is the argument for funding it.
+
+### Why district scale rather than university scale
+
+🟢 **Lower cost, higher volume and a more governable unit.** `T319`'s university engagement is a
+single `87 %`/`26 %` institution; a district is dozens of schools under one secretariat with one
+policy decision to make. 🔵 **And the regional institutions now exist to anchor it**: UNESCO's
+LAC Observatory on AI in Education (launched `14 April 2026`, with CAF, CENIA, Cetic.br, ECLAC, the
+Ceibal Foundation, Fundación Santillana, Tecnológico de Monterrey, ProFuturo and IRCAI) is a citable
+counterparty that did not exist for earlier passes to point at. ⚠️ **Connectivity and device access
+remain the binding constraint outside urban areas** — adoption is concentrated in better-resourced
+schools, and a pilot sited only in those schools will not generalise, which Uruguay's `75 %` shows
+from the other direction: it is the country with the longest-running national device programme.
+
 ## P190 — Ship an MIT H5P content type, not a fork of the GPL core: the lightest route to the student in any LMS (all four regions; 2–4 weeks to a pilot) 🟢 new at `p736`
 
 **The finding this is built on.** H5P's **core is GPL-3.0** and its **content types are MIT**

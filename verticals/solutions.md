@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
-**Pass p736 · verified 2026-11-10.** Deployable systems a client may already run, or could
+**Pass p737 · verified 2026-11-10.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -14,6 +14,42 @@ Licence is the decisive field here, because an LMS is almost always *offered as 
 which is exactly what the AGPL network clause is written about. Read the posture column
 before proposing a fork.
 
+
+## Sovereign national education services, and an MIT classroom-conferencing platform 🆕 new section at `p737`
+
+**`4` rows, all read `2026-11-10`, all live, all from European publishers this base had never
+addressed, `4 / 4` licence verdicts from the payload.** 🟢 **The headline is a licence fact with
+immediate commercial consequence: the classroom video platform this shelf has always answered with
+BigBlueButton has an actively-maintained MIT alternative at `1,350★`, pushed the day it was read.**
+🟢 **The other three rows are *national public services* rather than products — France's statutory
+digital-skills certification and Germany's largest free learning platform — which is a shelf
+category this base did not have and which is exactly what a European public-sector engagement is
+compared against.**
+
+| Platform | Repo | Stars | Licence | Last push | Region | What it is, and the posture |
+|---|---|--:|---|---|---|---|
+| **eduMEET** | [edumeet/edumeet](https://github.com/edumeet/edumeet) | 1,350 | **MIT** | **2026-11-09** | **EMEA** | **Multiparty web conferencing built for education**, on mediasoup and WebRTC: rooms, lobbies, moderator roles, screen sharing, breakout rooms and chat, with a separate room server and recorder, designed to be run by an institution on its own infrastructure and to federate with research-network identity. It comes out of the European research-and-education networking community (GÉANT/NORDUnet lineage). Gate: `LICENSE.md`, `1,075 B` raw, `Permission is hereby granted, free of charge` → **MIT**; index agrees. 🟢 **Posture, and it is the reason this row matters more than its star count: this is the first *permissive* classroom-conferencing platform on this shelf.** BigBlueButton — the answer this base has given every time — is **LGPL-3.0 with an AGPL-3.0 HTML5 client**, so a studio hosting a modified version for a client inherits obligations it usually does not want. **eduMEET is MIT: fork it, brand it, embed it in a product, host it as a service, no reciprocal obligation.** 🔵 **Where that changes a proposal:** "AI in the live classroom" — transcription, real-time translation, participation analytics, an agent that attends and summarises — requires modifying the conferencing client, which is precisely the act the AGPL reaches. Under MIT it is a product decision instead of a licence decision (`P195`). 🔵 Pushed the day it was read; `edumeet-docker` (`68★`, MIT, `LICENSE`, `1,075 B`) is the maintained deployment path. ⚠️ **Honest comparison: BigBlueButton is the more complete *teaching* platform** — whiteboard, polling, breakouts and LMS integrations are deeper, and its Moodle and Canvas plugins are mature. eduMEET buys you licence freedom and self-hosting, not feature parity. ⚠️ mediasoup means real SFU operations (TURN, bandwidth, scaling) — not a managed service. 🟢 Region placed on the publisher's documented European research-network lineage. |
+| **Pix** | [1024pix/pix](https://github.com/1024pix/pix) | 286 | **AGPL-3.0** ⚠️ | **2026-11-09** | **EMEA** | **France's public service for assessing and certifying digital skills** — adaptive position tests across sixteen competence areas, a scored certification with legal standing in French education and employment, and institutional dashboards for schools, universities and employers. It is a *national statutory service*, used across French secondary and higher education, and its code is published in the open. Gate: `LICENSE.md`, `34,280 B` raw, family line `GNU AFFERO GENERAL PUBLIC LICENSE` → **AGPL-3.0**; index agrees. 🔴 **Posture first, because it decides everything: AGPL-3.0's network clause is triggered by offering the software as a service, which is how a studio would deploy an assessment platform. Globant cannot build a hosted product on this.** 🟢 **It is filed anyway, and deliberately, for three uses the licence does permit.** 🔵 **One — it is the reference specification for adaptive certification.** When a ministry or a sector body asks for "a national skills certification like Pix", this *is* Pix: the competence framework, the adaptive item-selection logic, the scoring and the certification workflow, readable in full. Architecture is not licensed. 🔵 **Two — the component layer is MIT.** `1024pix/pix-ui` carries a separate MIT grant (on [`../repos/foundations.md`](../repos/foundations.md)), so the accessible assessment front end *can* be reused commercially while the AGPL core is not (`T327`). 🔵 **Three — an institution deploying it for itself triggers no obligation**, which is the clean route for a public-sector client who wants to run it rather than buy it. ⚠️ Large monorepo (API, several front ends, admin, LCMS), French-primary documentation, and the competence framework is tied to the French and EU DigComp reference. 🟢 Region placed on a named French public operator. |
+| **Serlo** | [serlo/frontend](https://github.com/serlo/frontend) | 40 | **Apache-2.0** | 2026-10-31 | **EMEA** | **The application serving serlo.org — Germany's largest free, non-profit, openly-licensed learning platform**, covering school mathematics, the sciences and more as a structured taxonomy of articles, courses, exercises and worked solutions, with its own content editor. Gate: `LICENSE`, `11,357 B` raw, title line `Apache License` → **Apache-2.0**; index agrees. 🟢 **Posture, and it is the best on this entire shelf: Apache-2.0 across the whole estate — frontend, API and database layer alike.** A studio may fork it, host it, modify it and ship it commercially, with a patent grant. **No other national-scale learning platform this base holds is permissive**: Moodle is GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0, ILIAS GPL-3.0, Chamilo GPL-3.0. 🟢 **Why that is the finding rather than a detail:** every "can we build a product on an open LMS" conversation in this base has ended in a copyleft caveat. This one does not, and it comes with a real install base and a maintained content model. 🔵 **The AI composition is direct and unbuilt:** the platform already holds curriculum-aligned, openly-licensed German content in a typed taxonomy with a public GraphQL API — the retrieval corpus a grounded tutor needs — and the Apache-2.0 grant means the tutor can ship as a product (`P193`). ⚠️ Confirm the **content** licence per item separately: the code is Apache-2.0, the material is CC-licensed. ⚠️ `40★` and non-profit-scale engineering; it is a real platform but not a vendor product, and German-primary throughout. 🟢 Region placed on a named German non-profit publisher. |
+| **Serlo ABC** | [serlo/serlo-abc](https://github.com/serlo/serlo-abc) | 31 | **Apache-2.0** | 2022-04-14 | **EMEA** | A **literacy-training application built for refugees** — first-language-independent alphabet and reading instruction, designed for low-literacy adult learners on a phone. Gate: `LICENSE`, `11,357 B` raw → **Apache-2.0**; index agrees. 🟡 **Filed with its staleness stated plainly: last pushed April 2022, the stalest row of this pass.** 🟢 **It is here because the *category* is one no other row in this base occupies, and because EMEA is where that category is funded.** Adult and migrant literacy is a standing, publicly-financed education obligation across Europe, the learner cannot read the interface by definition, and this is a permissively-licensed, purpose-built design for exactly that constraint. 🔵 **Read it for the interaction model rather than the code**: what an instructional UI looks like when text cannot carry the instructions is a hard design problem already solved here, and it transfers directly to any low-literacy or early-years AI tutor. ⚠️ **Four years without a push — treat it as a design reference, not a dependency**, and expect to rebuild the application around the model. 🟢 Region placed on a named German non-profit publisher. |
+
+### 🟢 `737-C` — the permissive-platform gap this shelf has declared for many passes is closed, and it was closed by a non-profit
+
+This shelf's `## Composition posture, by licence` section and `724-C` have recorded, repeatedly,
+that the deployable-platform tier is **copyleft all the way down** — the reason every pattern in
+this base reaches an LMS through LTI, MCP or a content type rather than by forking it.
+
+🟢 **`p737` files the exception: `serlo/frontend`, `serlo/api.serlo.org` and `serlo/database-layer`
+are all Apache-2.0, all from one publisher, and the platform they serve is a national-scale
+learning site with openly licensed content.** The estate is permissive end to end, which no other
+LMS-shaped thing on this shelf is.
+
+⚠️ **The honest size of the claim.** Serlo is a **German non-profit at `40★`**, not Moodle at
+`6,000★` with a plugin market and a certified-partner network. What closed is the *licence* gap, not
+the *maturity* gap: a studio can now build and sell on an open national-scale learning platform,
+and it will be doing the platform engineering itself. 🔵 **The two therefore compose rather than
+compete** — propose Serlo when the client wants to *own a product*, and Moodle-plus-LTI when the
+client wants to *extend what they already run* (`P186`).
 
 ## Permissive LMS backends, learning microworlds and a re-measured platform licence nil 🆕 new section at `p736`
 

@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p737) — 🔴 **THE AGENT SHELF IS SATURATED AND THIS PASS FILES ZERO AGENTS: `12` LEGS, `9` RETURNING ONLY ROWS ALREADY HELD, `12 / 12` WITH NO FILEABLE ROW. 🔴 THE OBVIOUS EXPLANATION FOR THE REGIONAL GAPS — "WE SEARCH IN ENGLISH" — WAS TESTED ON `10` NON-ENGLISH LEGS AND REFUTED: `45` NOVEL REPOSITORIES, MAX `18★`, `0` FILEABLE. 🟢 EMEA'S SUPPLY IS REAL AND PERMISSIVE AND IT IS NOT SHAPED LIKE AN AGENT — IT IS A SANDBOX, AN ACCESS RECORD, A GRAPHQL CONTENT API AND AN MIT CLASSROOM.**
+
+**`0` agent rows · `10` foundations rows · `4` platform rows · `8` new trends (`T321`–`T328`) ·
+`6` new patterns (`P192`–`P197`) · `20` licence payloads byte-read, **`20 / 20`** classified and
+**`20 / 20`** agreeing with the index · the gate gains **GPL/LGPL version resolution** and one
+held verdict is corrected from a bare family to **GPL-2.0** · `62` discovery legs
+(`53` index + `9` prose) · `12` measured nils · **`3`** of this base's own published claims
+corrected (`T318` on the EU split, `T318` on KHDA, `T318` on North Carolina) · **`1`** figure
+refused outright for want of a second source · `1` new dead channel named and bounded (`WebFetch`)
+· the `41`st consecutive mandated-prose-leg nil for repository rows.**
+
+### The nil, with its denominators, because the next pass should not pay for this search again
+
+🔴 **`12` legs were aimed at this shelf and none produced a row.** `topic:education-ai stars:>15`
+→ **`3 / 3` held**. `topic:mcp education stars:>10` → **`7 / 7` held**.
+`topic:ai-tutor stars:>25 pushed:>2026-10-15` → **`7 / 7` held**.
+`topic:intelligent-tutoring-system` → **`6 / 6` held**. `topic:learning-analytics`, `topic:lti`,
+`topic:qti`, `topic:spaced-repetition stars:>200` → **`6 / 6` held each**. Three legs returned
+**`0` results at all**. The novel addresses that remain carry **`≤ 6★`, no grant, or both**.
+
+🟢 **This is a statement about the shelf's condition, not about the pass.** `p736`'s `7` rows and
+`p735`'s were the tail of the English-language AI-education agent namespace as this base sees it.
+⚠️ **`T316` therefore generalises: it is not only the recency head of a saturated topic that is
+worthless — it is the whole topic, once swept.** Spend legs on publishers (`T326`).
+
+### The hypothesis test that matters most, because it closes a line of inquiry
+
+🔴 **If this shelf is `0` for EMEA-authored learning agents (`T290`) and thin for LATAM, the
+natural explanation is that discovery runs in English. It is wrong.** `p737` ran **`10`
+non-English legs** — `lernplattform`, `nachhilfe`, `tuteur intelligent`,
+`plateforme pédagogique IA`, `tutor IA educación`, `asistente educativo IA`,
+`tutor inteligente IA estudiantes`, `plataforma educacional IA`, `corretor redação IA`,
+`plataforma educativa IA` — over totals from `0` to `410`. Result: **`45` novel repositories,
+maximum `18★`, `0` fileable**, overwhelmingly student projects and coursework with **no licence at
+all**. The best Iberian-language rows the channel returns are **already held**
+(`matheussilvano/mooose`, Apache-2.0, ENEM essay marking; `LabSirius/TutorIA`, MIT, Colombian rural
+higher education). 🟢 **The regional shortage is a supply fact, not a discovery artefact**
+(`T323`) — stop spending legs there.
+
+### What the budget bought instead, and why it was the better trade
+
+🟢 **`14` rows from the publisher tier, and the most consequential is a pair that closes a hole every
+grading pattern in this base was standing over.** An LLM that marks programming work can read the
+code; **only an execution harness can say it compiles and passes the teacher's tests.** This base
+held graders, rubrics and LMS connectors and **no permissive execution substrate at all.**
+**`openHPI/codeocean` (BSD-3-Clause, `73★`) + `openHPI/poseidon` (MIT, `11★`)** — published by the
+Hasso Plattner Institute, in production for its own MOOC cohorts — close it (`P192`), and the
+pattern is **region-neutral** in a base where almost nothing is.
+
+🟢 **The rest, placed:** `CSCfi/rems` (MIT) — Finland's national access-approval record, which is
+the traceable-human-oversight artefact `T321` says Europe actually owes; `serlo/*` (**Apache-2.0
+end to end**) over a national-scale German platform with openly licensed curriculum content, the
+only permissive national-scale learning platform on these shelves (`P193`);
+`edumeet/edumeet` (**MIT, `1,350★`, pushed the day it was read**) — the first permissive classroom
+conferencing platform here, against BigBlueButton's LGPL/AGPL split, which is what makes AI *inside*
+the live classroom a product decision instead of a licence decision (`P195`);
+`betagouv/ComparIA` (Apache-2.0) — a state-published method for **justifying a model choice** in
+writing (`P194`); `1024pix/pix-ui` (MIT) over an AGPL core (`T327`); and **two Indian MIT rows**
+(`ELEVATE-Project/*`), the only non-CJK APAC supply this pass found, against `0` fileable rows from
+`org:tekdi`, `org:Samagra-Development` and `org:Shikshalokam` combined — **an unlicensed
+national-scale estate, stated rather than glossed.**
+
+### Three of this base's own claims corrected, and one figure refused
+
+🔴 **`T318` on the EU: the obligations split in two and the live half was unstated.** The Digital
+Omnibus (**Regulation (EU) 2026/1744**, OJ **24 July 2026**, in force **27 July 2026**) moved
+stand-alone high-risk education duties to **`2 December 2027`** — confirmed from a **third**
+independent reading. 🔴 **But Article 50 was not deferred and the AI-literacy duty has applied since
+February 2025**: disclosure, marking of generated material and a demonstrable literacy measure are
+**due now**. ⚠️ Sources conflict on whether that date is `2 August 2026` or the marking deadline
+`2 December 2026`; **published as a conflict, not resolved** (`T321`).
+
+🔴 **`T318` on KHDA was overstated.** Dubai has **not** published classroom AI-use guidelines — they
+are reported as expected in **2027**. What exists: the **nine FutuReady Standards** (one covering
+AI-enabled guidance, three-year window); an **AI-literacy programme announced February 2026** with
+the DP World Foundation and **MIT RAISE** for **Grades 6–8**; and from **term 1 of 2026-27**,
+**AI-assisted targeting of inspections with ≤24 hours' notice** — 🟢 **the regulator is itself the
+AI deployer.**
+
+🔴 **`T318` on North Carolina: the dates hold, the literacy claim is mis-dated.** Model policy
+`31 December 2026`, district policies `30 June 2027`, teacher PD `30 June 2028` — all corroborated.
+**But AI literacy enters the K-12 computer-science standards only from `2028-29`**, and the
+"mandates AI-literacy standards" phrasing traces to the **2025 draft bills** (SB 787, SB 864).
+⚠️ Also: `p736`'s **`134` bills / `31` states** has a rival count of **`~71` / `27`** (FutureEd) —
+**cite the lower figure or name the definitional gap** (`T324`).
+
+🔴 **And one claim is refused rather than filed:** *"Illinois requires AI-literacy instruction for
+grades 6–12 effective `1 August 2026`"* appeared in one reading and **could not be confirmed by a
+targeted second search**. Not a fact of this base. Recorded because a specific, quotable, dated
+mandate is exactly what reaches a client deck unchecked.
+
+### Instruments
+
+🟢 **`T310` confirmed again: `gh api -X GET search/repositories` is alive** and carried all `53`
+repository legs (`topic:`, `org:`, `user:`, keyword+`stars:` all `200`). 🟢 The ordered raw chain
+discriminated **`2 / 2`**. 🔴 **New dead channel, and it bounds every regulatory claim here:
+`WebFetch` to hosts outside this session's allow-list fails at DNS resolution — `2 / 2`
+(`www.i-scoop.eu`, `digital-strategy.ec.europa.eu`).** `T246`'s "primary-law hosts unreachable" is
+an **environment** property, not a property of those hosts: EUR-Lex, the Official Journal, state
+legislatures and ministry portals are all off-list, so **no pass running here can verify regulation
+against primary text** (`T328`). 🟢 **Mitigation used and working: corroborate across independent
+secondary readings and publish the disagreement.**
+
+🔴 **The gate gained a version, and a held verdict was incomplete.** `p736`'s clause-based gate
+returned a bare **`GPL`** / **`LGPL`**, discarding the version — not a usable verdict, since GPL-2.0
+and GPL-3.0 differ on patents and compatibility. `p737` resolves it from the version line
+**following** the family line, never from size: **GPL-3.0 payloads measured `35,149 B` and
+`35,147 B` against AGPL-3.0's `34,280 B`, `2.5 %` apart** (`T313` holds). Measured `4 / 4`, of which
+**`oat-sa/qti-sdk` is GPL-2.0**. 🟢 The `T311` trap passed again: `virtUOS/librechat_exporter` is
+**GPL-3.0, not AGPL**, despite §13 naming the AGPL. 🔵 `T312` re-confirmed `1 / 1` —
+`kstateome/canvas-api` still `404`s on all six licence filenames while its grant sits in `pom.xml`.
+Gate at `evidence/licence-gate.p737.py`; `18`-row truth table with both gates side by side at
+`evidence/licence-gate-controls.2026-11-10-p737.tsv`; `62`-leg ledger at
+`evidence/leg-ledger.2026-11-10-p737.tsv`.
+
+### Declared gaps
+
+🔴 **`0` EMEA-authored learning *agents* — but `T290` was the wrong question** (`737-A`): the count
+is right, the inference was wrong, and EMEA's supply is **infrastructural**, not agentic.
+🔴 **No EMEA adoption numbers at usable quality** — the regional leg returned regulation, not
+measurement; second consecutive region where governance is better evidenced than usage.
+🟡 **`T305` only partially confirmed:** two Indian MIT rows exist, but the wider Indian DPI estate
+carries **no licence**. 🔴 **No APAC adoption series** — what was obtainable is **ban-support**
+(Ipsos Education Monitor 2026: `23 %` Indonesia → `31 %` South Korea, **AU/NZ higher and rising**),
+which is a different quantity and must not be restated as adoption (`T322`).
+🔴 **LATAM supply still thin and now tested to exhaustion** (`T323`); `org:laboratoria` refused —
+the flagship curriculum is **CC-BY-SA-4.0**, not a software grant.
+
 ## 🆕 2026-11-10 (p736) — 🟢 **THE SUPPLY CHANNEL `p735` BURIED IS ALIVE: IT WAS TESTED WITH A QUERY SHAPE THE ENDPOINT DOES NOT SUPPORT, AND A `422` ABOUT QUERY CONTENTS WAS READ AS AN OUTAGE. 🟢 AND THE SSO SERVER HIGHER EDUCATION ACTUALLY RUNS — `11,393★`, APACHE-2.0, PUSHED TODAY — WAS NOT IN A `3,343`-ADDRESS LEDGER, BECAUSE PHRASE-LED DISCOVERY FINDS APPLICATIONS AND NEVER INFRASTRUCTURE. 🔴 A WHOLE-PAYLOAD LICENCE MATCH CALLS EVERY GPL-3.0 REPOSITORY `AGPL`, BECAUSE GPL-3.0 §13 NAMES THE AGPL.**
 
 **`7` agent rows · `14` foundations rows · `4` platform rows · `11` new trends (`T310`–`T320`) ·
