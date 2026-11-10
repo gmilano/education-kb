@@ -1,8 +1,58 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-09
+updated: 2026-11-10
 ---
+
+## 🆕 `p730` — reads `2026-11-09` (late UTC) → commit `2026-11-10` — **🔴 SIX OF THE SEVEN LARGEST EDUCATION REPOSITORIES VERIFIED THIS PASS CANNOT BE BUILT ON, AND `search/repositories` CALLED FIVE OF THEM "UNKNOWN" RATHER THAN "UNUSABLE". 🟢 AND THE 36-PASS "SUPPLY NIL" WAS THE INSTRUMENT: SWAPPING PROSE QUERIES FOR `gh api` LEGS RETURNED 20 LIVE NOVEL SUBJECTS IN ONE PASS.**
+
+**Eighteen rows were filed at `p730` and six verified subjects were deliberately refused.**
+`agents/top.md` shelf **`48` → `56`**. `repos/foundations.md` **+`4`**, including one new section
+(*Public-sector data layers*). `verticals/solutions.md` **+`6`**, plus **six refusal rows** under
+*Not open source*. `intel/trends.md` gains **`T262`**–**`T264`**; `compose/patterns.md` gains
+**`P166`** and **`P167`**; opportunities published under the single existing
+`## Opportunities by region` heading for **all five** values, each carrying at least one instrument
+or series this base did not hold.
+
+⚠️ **Date note, stated rather than smoothed over:** the pass's reads were taken from `2026-11-09`
+late UTC and completed after `00:00` on `2026-11-10`, so every row reads *"verified 2026-11-09"*
+while the frontmatter `updated` is `2026-11-10`. The row dates are the read dates; the frontmatter is
+the publication date.
+
+| `p730` registered | Verdict |
+|---|---|
+| 🔴 `730-A` → `T262` — **the licence trap is concentrated in the high-star education repositories, and the author class explains why.** Of `20` subjects verified, **`6` of the `7` largest by stars cannot be used in client work**: [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (`7,244★`, **CC BY-NC 4.0**), [`StudyOnTV`](https://github.com/chadyi/StudyOnTV) (`1,159★`, *"Source Available — Personal Use Only"*), [`education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (`969★`, **CC BY-SA 4.0**), [`advisingapp`](https://github.com/canyongbs/advisingapp) (`340★`, **Elastic License 2.0**), [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) (`167★`, licence resolved **per dataset**), [`Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) (`102★`, **no grant at any of six ladder paths**). 🔴 **`search/repositories` reported `NOASSERTION` for five and `NONE` for the sixth** — *could not classify*, never *cannot use*; a pass that read the field would have filed all six. 🔵 **These are curriculum graphs, teacher skill libraries, children's software and institutional platforms — authored by educators, publishers and institutions rather than software vendors**, and that author class reaches for Creative Commons, where `NC` and `SA` are the first options offered. **The more pedagogically valuable the artefact, the likelier its author considered commercial use and declined it.** Posture: in this domain `NOASSERTION` is a stop, not a flag — and `NC` is a licence, not a wall, so the good ones can be asked for | 🔴 **`6` REFUSED, EVERY REASON PUBLISHED AS A ROW** |
+| 🟢 `730-G` — **the "36th consecutive supply nil" was an artefact of the query channel, and one pass of a different channel refutes it.** `p729` recorded the mandated global supply legs nil for a 36th time and the regional legs as saturated. Run instead as `gh api -X GET search/repositories` legs — `18` queries across `topic:`, star-bounded and date-bounded heads — the same supply side returned **`20` live, novel, education-shaped subjects, `18` filable**. 🔵 **A prose query returns an article about agents; a `topic:`+`stars:`+`pushed:` query returns addresses.** 🟡 **Saturation was two-thirds right and is re-scoped, not retired:** market *figures* were indeed all already held, but **four regulatory instruments and two 2026 capital series were not** — so run the regional legs for instruments and capital, and stop costing them as market sizing | 🟢 **NIL REFUTED; SATURATION PARTIAL** |
+| 🟢 `730-B` — **`724-C`'s permissive-education-ERP gap, the longest-standing on the verticals page, is narrowed.** [`yungifez/skuul`](https://github.com/yungifez/skuul) — **`477★`, MIT** (`LICENSE`, `1,069 B`, sha256₁₂ `b0fe88bfb0d2`), pushed `2026-11-01` — is a **multi-school** management system under a permissive grant. 🔵 Every other SIS/ERP row here is copyleft or vendor-licensed, and the one MIT SIS this base held is single-tenant and unpushed since 2021. **Multi-tenancy is what separates selling a platform from selling an installation.** Gap narrowed, not closed — it is a mid-sized project, not an Odoo-scale ecosystem | 🟢 **GAP NARROWED** |
+| 🟢 `730-D` → `T263` + `P166` — **four jurisdictions put school AI curriculum into force in the same school year, and every instrument names its own delivery channel.** China's **AI + Education Action Plan** (MoE + four departments, April 2026) with Beijing's **≥ 8 class-hours/year**; India's **CBSE Computational Thinking & AI, Classes 3–8**, launched `2026-04-01` under circular `Acad-15/2026`, **IIT Madras**-chaired committee, **~500,000 teachers through NISHTHA**; **Saudi Arabia**'s **50 AI learning units across 22 updated subjects** for **6M+** students (**SDAIA** + MoE + National Centre for Curriculum + MCIT); the **UAE** Cabinet's curriculum for **all** public and private schools, **22,000 teachers**, **MBZUAI** + Emirates College for Advanced Education, **Code.org** advising — **plus a mechanism to hand the curriculum to other countries' ministries**, which makes localisation a recurring product. 🟢 **None of the four is buying a tutor; all four are buying teacher capability and localised curriculum artefacts on a deadline** — which is why `esp-labs-web` (MIT, **11 languages shipped**) outranks every tutoring agent here against this demand. Wired as `P166` | 🟢 **FOUR INSTRUMENTS, THREE REGIONS** |
+| 🔴 `730-E` → `T264` — **the forecast spread widened while actual capital fell, and the gap names the buyer.** `2026` base year: **`$9.58B`** @ `34.52%` (Precedence) · **`$10.6B`** @ `41.5%` → `$42.48B` by 2030 (Research and Markets) · **`$11.40B`** @ `16.8%` → `$57.25B` by 2033 (Coherent). 🔴 **A `2.5×` CAGR spread on one base year is three definitions of the market, not one forecast.** Against it, HolonIQ: **`$1.0B` edtech VC in H1 2026, `−26%` YoY**, after `$2.4B` full-year 2024 — **`−89%` below the `$20.8B` 2021 peak** — with **East Asia deal volume `+37%`**. 🟢 **The reconciliation is operational: the forecasts describe institutional budget and the funding series describes venture appetite.** Every dated commitment this base holds is procurement — Ohio's districts, India's teachers, Saudi's students, the UAE's teachers, UNESCO's campuses. **Longer cycles, named buyers, compliance artefacts as deliverables — and stop pricing against `41.5%`** | 🔴 **SPREAD WIDER, CAPITAL DOWN** |
+| 🟢 `730-C` — **one licence payload constant extended, one new tier opened, and a cross-pass byte match.** **AGPL-3.0** at `34,523 B` / sha256₁₂ `0d96a4ff68ad` reads **`n=3`, `0 B` spread** (`p728`'s `lector` + `gygy-open/question-bank` + `JudgePeach/math-question-bank`). **MPL-2.0 opens at `n=2`, `0 B` spread** — `16,725 B` / `1f256ecad192` for both `rolling-scopes/rsschool-app` and `edrys-org/edrys` — and it is **the only copyleft tier on the verticals shelf that permits a closed module beside the platform** (file-level copyleft), which is what makes `P167` buildable where the AGPL alternatives are not. 🔵 `codelion/adaptive-classifier`'s Apache payload (`11,357 B` / `c71d239df917`) is **byte-identical to `p714`'s `mwalimulens-agent`** | 🟢 **`n=3` AGPL · `n=2` MPL, NEW USABLE TIER** |
+| 🟡 `730-I` — **this pass broke its own region vocabulary and a counter caught it before publication.** `3` of the `8` roster inserts were first written as `**EMEA**`, `**APAC**` and `APAC *(weak)*` — emphasis markup inside the region cell, each of which becomes **its own bucket** in any filter over the column. Normalised to the five bare permitted values and re-counted: **`353/353` legal, `0` illegal** (`Global 158 · APAC 93 · EMEA 39 · LATAM 32 · North America 31`). 🔵 Left on the record because it is `T262`'s failure mode turned on this base itself: **a value that looks right and does not match is worse than one that is missing** | 🟡 **CAUGHT BY COUNTING, NOT BY INSTRUCTION** |
+| 🟡 `730-F` — **two gaps declared from legs that ran, and two source conflicts left unresolved on purpose.** (1) 🔴 **Africa is unmeasured.** The Middle East/Africa leg returned **the Gulf in detail and nothing on any African ministry, curriculum, adoption figure or named player.** This base's `EMEA` intelligence is Europe plus the Gulf; **the African third of the region is a hole, not coverage**, and the fix is a leg naming specific bodies rather than the continent. (2) 🔴 **India's delivery vendors are unknown** — instrument, committee, circular and training platform all documented, **procurement entirely absent**, which for a `~500,000`-teacher programme is the most commercially relevant unknown in the APAC section. Unresolved and recorded: **CBSE's own two documents disagree** (*"advises"* vs *"directed to introduce"*), and **Beijing's `8` class-hours conflicts with an Australian government analysis** of the same plan (`6` / `10` / ~1-per-fortnight) | 🟡 **DECLARED, NOT INFERRED** |
+
+**Filed:** `18` rows — `8` agents, `6` platforms, `4` foundations (`8+6+4 = 18`, counted after the
+inserts). **`20` subjects probed, `20` alive, `18` filed, `6` refused.** Every grant read **from the
+bytes** at the default ref over the case-ordered ladder (`LICENSE` → `LICENSE.md` → `LICENSE.txt` →
+`LICENCE` → `COPYING` → `UNLICENSE`); `0` licence claims taken from `spdx_id` alone, `0` from a
+secondary source. Stars, `spdx_id`, `pushed_at` and `archived` cross-read from
+`gh api -X GET search/repositories`. 🔵 **Two channel notes for the next pass:**
+`curl -sI https://github.com/…` returns **`403`** through this proxy for every address, live or
+invented — re-tested once, no discriminating power, not used; and **`api.github.com/repos/…` is
+unavailable in this session** (repository access is scoped), so `search/repositories` with a `repo:`
+qualifier is the only metadata channel that works here.
+
+**Gates, re-derived by counting after the inserts:** agents shelf **`56/56`** at `7` columns ·
+agents roster **`353/353`** · foundations roster **`369/369`** · verticals main roster **`134/134`**
+(the `725-G` sub-table's `3` rows counted separately, which is why a naive counter over the section
+reads `138`) — `0` ragged rows, `0` header/placeholder/example rows surviving as data, `0`
+duplicated slugs, region vocabulary **`353/353` legal**.
+
+**Declared gaps this pass:** (1) **Africa — entirely unmeasured**, the leg ran and returned the Gulf
+only; (2) **India's rollout vendors and procurement** — unknown for a `~500,000`-teacher programme;
+(3) **CBSE advisory-vs-mandatory** — the board's own two documents disagree and neither reading is
+adopted; (4) **Beijing's AI class-hour floor** — two incompatible official-source figures; (5)
+**whether education is named in Brazil's PL 2338/2023 high-risk list** — the Senate text's categories
+were not retrievable, so this base does not claim it.
 
 ## 🆕 `p729` — reads `2026-11-09`, commit `2026-11-09` — **🔴 THE LICENCE GATE `p728` PUBLISHED AS STANDING AND MANDATORY CANNOT BE RUN: IT RECORDED A CONSTANT AND NOT THE NORMALISATION, AND SEVEN PROCEDURES REPRODUCE NONE OF IT. 🔴 THE BAND IT REPLACED WAS REJECTING SCHOOL DISTRICTS AND UNIVERSITY SYSTEMS — THE EXACT PUBLISHER TIER THIS BASE DECLARED NORTH AMERICA EMPTY OF. 🟢 `19` ROWS FILED, `0` FROM THE MANDATE, AND THE LARGEST OPENS A CATEGORY `728` PASSES MISSED.**
 

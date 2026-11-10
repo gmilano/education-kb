@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-09
+updated: 2026-11-10
 ---
 
 # Composition Patterns — Education
 
-**Pass p728 · verified 2026-11-09.** Concrete recipes using only components verified this
+**Pass p730 · verified 2026-11-09.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -94,6 +94,109 @@ on the ladder `404`s and the field is still populated, it is coming from a **pac
 `729-E`. Record the refusal; do not silently drop the row.
 
 ---
+
+## P166 — National AI-curriculum delivery kit: the thing four ministries are actually buying (EMEA + APAC first; 10–14 weeks to a first cohort) 🟢 new at p730
+
+**The demand this serves is `T263`, and it is not a tutor.** China, India, Saudi Arabia and the UAE
+each put a school AI curriculum into force for the `2026-27` year, each named a teacher-training
+channel, and each has a scale its own institutions cannot staff — `~500,000` teachers in India,
+`22,000` in the UAE, `6M+` students in Saudi Arabia. **What they need delivered is material a
+teacher can teach, in the local language, with evidence that it was taught.** Every component below
+is permissive and verified at `p730`.
+
+### The stack, and why each piece is there
+
+| Layer | Repo | Licence | Job |
+|---|---|---|---|
+| Hands-on lab surface | [`agharsallah/esp-labs-web`](https://github.com/agharsallah/esp-labs-web) (`722★`) | MIT | A real ESP32-S3 board taught through live pinout, interactive simulators and a bench log — **already shipped in `11` languages**, which is the expensive half of any national rollout. |
+| Explanation generation | [`int64ago/vistep`](https://github.com/int64ago/vistep) (`247★`) | MIT | Concept → stepwise visual explanation with synchronised narration. Produces an artefact a teacher can pause and correct, unlike a chat transcript. |
+| Accessibility layer | [`beltromatti/get-it`](https://github.com/beltromatti/get-it) (`1,153★`) | Apache-2.0 | Re-presents a text for a reader who cannot take it in as written. **Non-optional under EU and Gulf public-sector accessibility obligations**, and normally retrofitted at triple cost. |
+| Prerequisite structure | [`miuuyy/Clew`](https://github.com/miuuyy/Clew) (`212★`) | MIT | Renders the curriculum as a topic/prerequisite graph. "Where in the programme is this taught" is the question a ministry reviewer asks first. |
+| Placement + mastery | [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) (`83★`) | MIT | One harness over cognitive diagnosis **and** knowledge tracing, so placement decisions are comparable rather than per-library. |
+| Host LMS | `moodle/moodle` (GPL-3.0) **or** `openedx/openedx-platform` (AGPL-3.0) | copyleft | Whatever the ministry already runs. Attach over APIs/LTI — never patch the core (`T132`). |
+| LMS context, read-only | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (`205★`) | MIT | Courses, assignments, deadlines and files as MCP tools, **read-only and zero-dependency** — the posture that survives an institutional security review. |
+| Routing | [`codelion/adaptive-classifier`](https://github.com/codelion/adaptive-classifier) (`577★`) | Apache-2.0 | Tutor / human / safeguarding / off-topic. The label set changes weekly in a first term, which is where static fine-tuning fails. |
+
+### Wiring
+
+1. **Author once, localise by construction.** Curriculum units live as files in the repo, not in the
+   LMS. `esp-labs-web`'s `11`-language structure is the template: one unit, `n` locale files,
+   `vistep` generating the visual steps per locale. 🔴 **Hard constraint: every artefact must export
+   as the ministry's own file format** — SCORM or QTI into the host LMS via `Numbas`-style export,
+   plus flat PDF/DOCX for teachers with no device. A kit that only works inside your runtime is not
+   deliverable to a ministry.
+2. **Place the learner before teaching.** `EduStudio` runs the diagnostic; `Clew`'s prerequisite graph
+   turns the result into "start here", which is the output a teacher can act on.
+3. **Teacher-facing first, learner-facing second.** The buyer is a training programme. Ship the
+   teacher's lesson pack, rubric and bench log before anything a student touches.
+4. **`Moodle-MCP` read-only, always.** It reads context into the assistant. **Grades are written by a
+   human in the LMS**, and that boundary is the sentence that gets the project approved.
+5. **`adaptive-classifier` in front of every learner message**, with safeguarding routed to a named
+   human and logged.
+
+### Licence posture
+
+All eight permissive components are MIT or Apache-2.0. The only copyleft is the host LMS, and it is
+the client's existing deployment — so the obligation is theirs and unchanged. 🔴 **Do not substitute
+`cn-math-taxonomy` for the prerequisite graph** however well it fits: it is **CC BY-NC** and the
+engagement is commercial (`T262`).
+
+### What to measure, because the buyer will ask
+
+Teachers trained and certified · units delivered per locale · learner placement accuracy against the
+diagnostic · accessibility conformance evidence · **and the proportion of material the ministry can
+open without your software.** That last one is what makes a second contract possible.
+
+## P167 — Permissive multi-school operations with an AI layer, on the jurisdiction's own data (LATAM first on data supply; 8–10 weeks) 🟢 new at p730
+
+**The gap this fills is `724-C`, this page's longest-standing one**: every education SIS/ERP in this
+base was copyleft or vendor-licensed, so a studio could host one but never ship one. `p730` narrowed
+it — and found the second missing half, which is the public data a deployment has to be scoped
+against.
+
+### The stack, and why each piece is there
+
+| Layer | Repo | Licence | Job |
+|---|---|---|---|
+| Multi-school SIS | [`yungifez/skuul`](https://github.com/yungifez/skuul) (`477★`) | 🟢 **MIT** | School tenancy, academic years and terms, classes, students, staff, timetables, promotions. **Multi-tenant**, so one deployment serves many schools — the difference between selling a platform and selling an installation. |
+| Programme operations | [`rolling-scopes/rsschool-app`](https://github.com/rolling-scopes/rsschool-app) (`10,391★`) | 🟡 MPL-2.0 | **Mentor matching, task cross-check, peer review, certificates** — the operational half nothing else here implements, for programmes where teaching capacity is the scarce resource. File-level copyleft: your new modules stay yours. |
+| Public data layer | [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (`139★`) | MIT | Chile's education, geography and demographic series, cleaned and loadable in one line. **The pattern is the asset** — one of these per target country. |
+| Routing / triage | [`codelion/adaptive-classifier`](https://github.com/codelion/adaptive-classifier) (`577★`) | Apache-2.0 | Early-warning triage over attendance, grades and contact logs; relabel as the programme learns what a real risk signal looks like. |
+| Mastery evidence | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (BKT) + [`fasiha/ebisu.js`](https://github.com/fasiha/ebisu.js) | MIT · Unlicense | Two independent, auditable mastery models — a defensible answer to "on what basis do you claim this student is behind?" |
+| Objective assessment | [`CTFd/CTFd`](https://github.com/CTFd/CTFd) (`6,904★`) | Apache-2.0 | Where the subject is technical and skills must be *proved*: machine-checkable verdicts, a decade of real contest load. |
+
+### Wiring
+
+1. **Start from the public data, not the software.** Load the national series first and answer "which
+   schools, how many learners, which districts, what is the baseline" **before** a line of
+   configuration. 🔵 This is also the cheapest credibility a studio can buy in a public-sector
+   conversation: arriving with the ministry's own numbers already cleaned.
+2. **`skuul` is the system of record; `rsschool-app` is the programme layer beside it.** Do not merge
+   them. Mentor matching, cross-check and certificates live in the MPL side; enrolment, timetable and
+   promotion live in the MIT side; they join on a learner identifier you own.
+3. **Triage is advisory and logged, never automatic.** `adaptive-classifier` ranks; a named human
+   decides; the decision and its reason are stored. 🔴 **This is the design the EU AI Act's Annex III
+   education class is about** (`2027-12-02`): an output that *sets a learner's level* is high-risk, an
+   output that *queues a human review* is not. Keep the boundary explicit in the data model, not in a
+   policy document.
+4. **Mastery claims carry two models.** BKT for the pedagogically-defensible number, Ebisu for a
+   current recall probability. Where they disagree, show both — a disagreement is information.
+5. **`CTFd` only where the evidence must be objective.** It replaces a marking argument with a verdict.
+
+### Licence posture, stated plainly
+
+**MIT + Apache-2.0 + Unlicense core, with one MPL-2.0 component.** MPL-2.0 is file-level copyleft:
+publish your changes to `rsschool-app`'s own files, keep new files proprietary. 🟢 **This is the only
+copyleft tier on the verticals shelf that permits a closed module beside the platform**, which is why
+this pattern is buildable and the AGPL alternatives are not. 🔴 **`canyongbs/advisingapp` fits the
+functional brief better than anything here and is `Elastic License 2.0` — no hosted-service
+delivery.** Read it as a specification of what a student-success platform must do; do not stage it.
+
+### What to measure
+
+Schools onboarded per deployment-month · mentor-to-learner ratio sustained · early-warning precision
+and recall against outcomes · **and the share of triage decisions a human overturned** — that number
+is both the model's honest error rate and the evidence of human oversight a regulator will ask for.
 
 ## P165 — Grounded admissions and pathway advice: the decision made before any learning happens (APAC first on supply, the shape is global; 5–7 weeks to a pilot) 🟢 new at p729
 

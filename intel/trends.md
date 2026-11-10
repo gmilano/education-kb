@@ -1,12 +1,13 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-09
+updated: 2026-11-10
 ---
 
 # Education AI — Current Trends
 
-**Pass p728 · researched 2026-11-09.** Three new trends — **T255, T256, T257** — added above p727's
+**Pass p730 · researched 2026-11-09.** Three new trends — **T262, T263, T264** — added above p729's
+**T258–T261**, p728's **T255–T257**, p727's
 **T253–T254**, p726's
 **T250–T252**, p725's
 **T247–T249**, p724's **T245–T246** and p723's **T234–T244**, each with the evidence
@@ -21,6 +22,99 @@ registry **T1–T225** from prior passes is preserved in full below.
 > been distinct. Recorded here so a later pass does not merge or renumber them.
 
 ## 🆕 T258–T261 — added at p729 (2026-11-09)
+
+## T262 — In education, the bigger the repository, the likelier its grant is one Globant cannot build on — and the index field will not tell you 🟢 new at p730
+
+`p730` verified `20` subjects. **Six of the seven largest by stars cannot be used in client work**,
+and the licences are each a different flavour of almost-open:
+
+| Repo | Stars | Grant, read from the bytes | Why it fails |
+|---|--:|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **7,244** | CC BY-**NC** 4.0 | Non-commercial. The restriction is on *use*, so no API boundary cures it. |
+| [`chadyi/StudyOnTV`](https://github.com/chadyi/StudyOnTV) | 1,159 | *"Source Available License — Personal Use Only"*, © all rights reserved | Source-available ≠ open source. No commercial use, no fork. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 969 | CC BY-**SA** 4.0 | Commercial use allowed; **adaptations must be released under the same licence**. |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | **Elastic License 2.0** | Not OSI. Forbids providing the software as a hosted/managed service — the usual studio delivery model. |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 167 | **resolved per dataset** | `LICENSE.md` grants nothing; each dataset carries its own terms in a separate catalogue. |
+| [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | 102 | **none** | `LICENSE`, `.md`, `.txt`, `LICENCE`, `COPYING`, `UNLICENSE` → all `404`. |
+
+**The instrument finding is the useful half.** `search/repositories` reported **`NOASSERTION` for
+five of the six** and `NONE` for the sixth. `NOASSERTION` does not mean *unusual licence*; it means
+**the classifier could not identify the file**, which happens precisely when the file is a bespoke
+licence, a Creative Commons text, a vendor licence or a pointer to somewhere else. 🔴 **So in this
+domain `NOASSERTION` is not a soft warning to resolve later — it is the single highest-yield
+signal that a payload read will end in a refusal.**
+
+**Why education specifically.** The pattern is not random. The six are curriculum graphs, teacher
+skill libraries, children's software and institutional platforms — **artefacts whose authors are
+educators, publishers or institutions rather than software vendors**, and that author class reaches
+for Creative Commons (where `NC` and `SA` are the defaults offered first) or for a protective
+custom licence. The more pedagogically valuable the artefact, the more likely its author thought
+about commercial use and said no.
+
+**What to do with it.**
+1. **Treat `NOASSERTION` as a stop, not a flag.** Read the payload before the repo enters a proposal.
+2. **Separate the two failure modes when advising a client.** `NC` and personal-use are *refusals*;
+   `SA` and `MPL` are *constraints you can design around*; per-dataset licensing is a *lookup task*.
+3. **Budget for licensing the good ones.** `cn-math-taxonomy` is the prerequisite graph every tutor
+   on these shelves lacks. `NC` is a licence, not a wall: the author can be asked.
+
+## T263 — Four jurisdictions put school AI curriculum into force in the same school year, and every one of them names its delivery channel 🟢 new at p730
+
+Not four pilots. Four instruments, each with a named implementing body and a named training channel:
+
+| Jurisdiction | Instrument | Scale named | Delivery channel named in the instrument |
+|---|---|---|---|
+| **China** | AI + Education Action Plan, Ministry of Education + 4 departments, April 2026; Beijing floor **≥ 8 class-hours/year** | national, 2030 integration target | local curriculum authorities |
+| **India** | CBSE **Computational Thinking & AI**, Classes 3–8, launched `2026-04-01` for `2026-27`, circular `Acad-15/2026` | **~500,000 teachers** | **NISHTHA** platform; framework by an **IIT Madras**-chaired committee |
+| **Saudi Arabia** | **50 AI learning units** across **22 updated subjects** | **6M+** students | **SDAIA** + MoE + **National Centre for Curriculum** + MCIT |
+| **UAE** | Cabinet-approved AI curriculum, **all public and private schools**, plus a mechanism to offer it to other countries' ministries | **22,000 teachers** | **MBZUAI** + Emirates College for Advanced Education; **Code.org** advising on content |
+
+🟢 **The commercial reading is the inversion of what an AI studio instinctively proposes.** None of
+these four jurisdictions is buying a tutor. All four are buying **teacher capability and localised
+curriculum artefacts**, on a deadline, at a scale their own institutions cannot staff. The
+deliverables are lesson sequences, assessment rubrics, teacher-training content and the localisation
+of all of it — and the UAE instrument makes localisation a *recurring* product by committing to hand
+the curriculum to other ministries.
+
+🔵 **It also explains which open-source supply is actually relevant.** `p730`'s `esp-labs-web`
+(MIT, ESP32-S3 labs, **`11` languages shipped**) and `get-it` (Apache-2.0, comprehension
+accessibility) are worth more against this demand than any tutoring agent on these shelves, because
+the hard part of a national rollout is *material a teacher can deliver in the local language*, not
+inference.
+
+🔴 **Two things this trend must not be read as saying.** China's national plan reads as direction and
+guidance, **not** as a compulsory statute, whatever secondary coverage says; and CBSE's own documents
+disagree with each other on whether its curriculum is advised or directed. Both conflicts are
+recorded in `intel/market.md` § *Declared gaps*.
+
+## T264 — Forecast CAGR and actual capital are moving in opposite directions, and the gap names the buyer 🟢 new at p730
+
+**The forecasts have stopped converging.** Three `2026` base-year estimates: **`$9.58B`** at
+`34.52%` (Precedence), **`$10.6B`** at `41.5%` to `$42.48B` by 2030 (Research and Markets),
+**`$11.40B`** at `16.8%` to `$57.25B` by 2033 (Coherent). 🔴 **A `2.5×` spread in CAGR on the same
+base year means the three are not measuring the same market.** Quote a range with its source
+attached, never one number.
+
+**Actual capital went the other way.** HolonIQ: **`$1.0B` of edtech venture capital in H1 2026,
+`−26%` year on year**, after `$2.6B` in 2025 and `$2.4B` in full-year 2024 — **`−89%` below the
+`$20.8B` 2021 peak**. Inside the decline, **East Asia deal volume rose `37%`** and early-childhood
+deal count more than tripled.
+
+🟢 **These are not contradictory, and reconciling them is the actionable part: the forecasts are
+describing institutional budget, and the funding series is describing venture appetite.** Every
+large, dated, named AI-in-education commitment this base holds is public procurement — Ohio's
+district mandate (`2026-07-01`), India's `500,000` teachers, Saudi's `6M` students, the UAE's
+`22,000` teachers, UNESCO's `8` CONALEP/DGETI campuses. **None of it is venture-funded, and all of
+it is budget-funded.**
+
+**What follows for a studio.**
+1. **Sell to the procurement motion, not the product motion**: longer cycles, named institutional
+   buyers, compliance artefacts as first-class deliverables (`T262`'s licence posture is one).
+2. **Expect reference transfer across jurisdictions** — a UAE curriculum built for export, a UNESCO
+   model built to be copied, an Ohio model policy built to be adapted. One delivered reference is
+   worth more here than in any venture-funded market.
+3. 🔴 **Stop pricing against the `41.5%` CAGR.** The capital series says the available money this
+   year is institutional, and institutional budgets do not compound at `41.5%`.
 
 ## T258 — A published constant without its normalisation procedure is not a measurement, and two correct procedures can agree on the byte count while disagreeing on the hash
 
