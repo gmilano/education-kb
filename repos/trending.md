@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-11-10
 ---
+
+## 🆕 2026-11-10 (p735)
+
+**`60` supply legs attempted (`60` valid) on a channel this base did not have yesterday —
+unauthenticated `curl https://api.github.com/search/repositories` → `1,104` unique repositories →
+`~94` novel + permissive + live + education-relevant after filtering against `6,011` held slugs →
+`15` byte-verified → `15` filed** across [`../agents/top.md`](../agents/top.md),
+[`foundations.md`](foundations.md) and [`../verticals/solutions.md`](../verticals/solutions.md).
+The `4` mandated prose legs contributed **`0`** addresses not already held — the **`39`th
+consecutive nil**, denominator `4 / 4`.
+
+### The channel, because this sweep should not have been possible
+
+🔴 **`p734`'s instrument is dead: `GH_TOKEN` is invalid and `gh api -X GET search/repositories`
+returns `422` for every query.** 🟢 **The anonymous HTTP endpoint is open and complete**, returning
+stars, SPDX licence, `pushed_at` and `archived`; it was cross-validated against `p734`'s own filed
+cell for `didi/xiaoju-survey` (`3,802★ / Apache-2.0 / 2026-11-09`, identical in every field) before
+a single row was written. ⚠️ `api.github.com/repos/…` is `403` unauthenticated, so the split `T289`
+found with an authenticated client is a property of the **environment**, reproduced on a second
+client (`T302`) — which means tree enumeration, and therefore any compliant `grant-absent` verdict,
+is unavailable to every pass running here.
+
+### What trended, and what the star rank was worth
+
+🟢 **The sweep's single most valuable return is
+[`intel/university-curriculum-enabling-tool`](https://github.com/intel/university-curriculum-enabling-tool)**
+(`14★`, **Apache-2.0**, pushed `2026-11-03`, read `2026-11-10`) — **Intel's first-party curriculum
+agent**, fine-tuned LMs plus RAG in three personas, documented as running **locally on one
+machine** on Intel CPUs and GPUs. 🔵 **It outranks every higher-star result in this sweep for the
+same reason `p734`'s `google/moodle-on-gcp` did: it is a licensing and sovereignty result.** A
+permissive, first-party, **no-outbound-call** education agent is the answer to the first objection
+in every EMEA and public-sector conversation, and after `T306` it is the answer to a dated legal
+obligation as well. ⚠️ Intel calls it pre-production and single-user; file accordingly.
+
+🔴 **`T281` reproduced for a third consecutive pass: relevance and star rank are anti-correlated on
+this instrument, and this pass can quantify it.** Ranked by stars, the head of the
+education-filtered candidate list is
+[`aadi1011/AI-ML-Roadmap-from-scratch`](https://github.com/aadi1011/AI-ML-Roadmap-from-scratch)
+(`4,315★`), [`phlippe/uvadlc_notebooks`](https://github.com/phlippe/uvadlc_notebooks) (`3,208★`,
+University of Amsterdam deep-learning course notebooks) and
+[`Java-Edge/Java-Interview-Tutorial`](https://github.com/Java-Edge/Java-Interview-Tutorial)
+(`2,864★`) — **all three are study *material*, none is an education *system*.** The legs match
+`learn`, `tutorial`, `curriculum` and `adaptive` as substrings, so an ML paper on "adaptive"
+attention and a roadmap of reading links rank above every row this pass actually filed. 🔵 **The
+`15` filed rows span `4`–`181★`.** A sweep read top-down by stars would have filed none of them.
+
+🟢 **Filed from this sweep**, with the gate result in each row:
+
+| Repo | Stars | Licence | Gate (`P184`) | Shelf |
+|---|--:|---|---|---|
+| [IssacW228/student-llm-wiki](https://github.com/IssacW228/student-llm-wiki) | 181 | MIT | `1,056 B` → **`1020 B`/`fe2a9817987f`** 🔵 new MIT floor | agents |
+| [salikhussain71-code/MS-AI-Admission-Eligibility-Engine](https://github.com/salikhussain71-code/MS-AI-Admission-Eligibility-Engine) | 115 | MIT | `1,070 B` → **`1020 B`/`fe2a9817987f`** | agents |
+| [rojim666/SztuCode](https://github.com/rojim666/SztuCode) | 110 | MIT | `1,078 B` → **`1020 B`/`fe2a9817987f`** | agents |
+| [wink-wink-wink555/WordNest](https://github.com/wink-wink-wink555/WordNest) | 94 | MIT | `1,094 B` → **`1020 B`/`fe2a9817987f`** 🔵 new MIT ceiling | agents |
+| [itsme-ganzu/belajar-ngoding-byGanzu](https://github.com/itsme-ganzu/belajar-ngoding-byGanzu) | 65 | MIT | `1,062 B` → **`1020 B`/`fe2a9817987f`** | agents |
+| [vancece/word-teacher](https://github.com/vancece/word-teacher) | 47 | MIT | `1,070 B` → **`1020 B`/`fe2a9817987f`** | agents |
+| [intel/university-curriculum-enabling-tool](https://github.com/intel/university-curriculum-enabling-tool) | 14 | Apache-2.0 | `11,356 B` → **`9942 B`/`3fda30957805`** | agents |
+| [adaptive-machine-learning/CapyMOA](https://github.com/adaptive-machine-learning/CapyMOA) | 153 | BSD-3-Clause | `1,509 B` → `1459 B`/`4f44b17a7ff4` ⚠️ uncertified | foundations |
+| [DavidMiserak/GoCard](https://github.com/DavidMiserak/GoCard) | 59 | MIT | `1,070 B` → **`1020 B`/`fe2a9817987f`** | foundations |
+| [hypothesis/lms](https://github.com/hypothesis/lms) | 53 | BSD-2-Clause | `1,320 B` → `1283 B`/`fdb05aeb1085` ⚠️ uncertified | foundations + verticals |
+| [zyy-2001/DisKT](https://github.com/zyy-2001/DisKT) | 26 | MIT | `1,066 B` → **`1020 B`/`fe2a9817987f`** | foundations |
+| [infolab-kaist/KiteProject](https://github.com/infolab-kaist/KiteProject) | 18 | Apache-2.0 | `11,337 B` → **`9942 B`/`3fda30957805`** 🔵 new Apache floor | foundations |
+| [udondan/anton](https://github.com/udondan/anton) | 4 | MIT | `1,073 B` → **`1020 B`/`fe2a9817987f`** | foundations |
+| [ATLURI0001/LMS](https://github.com/ATLURI0001/LMS) | 79 | MIT | `1,073 B` → **`1020 B`/`fe2a9817987f`** | verticals 🟡 weight stated |
+| [FitzyCodesThings/core-lms](https://github.com/FitzyCodesThings/core-lms) | 62 | **MIT by payload**, index `NOASSERTION` | `1,083 B` → **`1020 B`/`fe2a9817987f`** 🟢 after `P184` | verticals |
+
+### The two results that are absences, filed with denominators
+
+🔴 **The Iberian-language channel: `6` subjects, `6` licence absences, `0` rows.** `educacion ai`
+returned `total_count: 1`; `educacao ia` returned `5`. All six exist on the raw channel; all six
+report index licence `null` and `404` on `7` root grant paths. 🔵 **A lead generator, never a row
+source** — and the one lead worth an issue is
+[`namerico/antigravity-education-kit`](https://github.com/namerico/antigravity-education-kit),
+a Portuguese-language *"framework modular de agentes de IA especializados em educação"* with no
+licence file.
+
+🔴 **The platform shelf: `1,246★` of novel school-management supply, `0` adoptable.**
+[`Yogndrr/MERN-School-Management-System`](https://github.com/Yogndrr/MERN-School-Management-System)
+(`649★`), [`TareqMonwer/Django-School-Management`](https://github.com/TareqMonwer/Django-School-Management)
+(`597★`), [`mwinamijr/django-scms`](https://github.com/mwinamijr/django-scms) and
+[`igweze/wizgrade`](https://github.com/igweze/wizgrade) all return index licence `null` and `404`
+on `7` root paths, while their `README.md` returns `200`. 🔵 **Recorded as `no readable grant`, not
+`grant-absent`** — `T302` establishes this environment cannot prove the stronger claim. Full
+treatment and the remedy in [`../verticals/solutions.md`](../verticals/solutions.md) (`735-J`).
+
 ## 🆕 2026-11-10 (p734)
 
 **`38` supply legs attempted (`36` valid) via `gh api -X GET search/repositories` → `626` unique

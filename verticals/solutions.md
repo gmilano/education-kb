@@ -6,13 +6,58 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
-**Pass p734 · verified 2026-11-10.** Deployable systems a client may already run, or could
+**Pass p735 · verified 2026-11-10.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
 Licence is the decisive field here, because an LMS is almost always *offered as a service* —
 which is exactly what the AGPL network clause is written about. Read the posture column
 before proposing a fork.
+
+
+## Permissive LMS platforms, and a measured licence nil on the rest of the shelf 🆕 new section at `p735`
+
+**`3` rows, all read `2026-11-10`, all live — and the three rows are less of this section's finding
+than the `4` repositories that are deliberately NOT rows below them.** 🔴 **The four highest-star
+novel school-management platforms this pass enumerated carry no grant at all**, which is recorded
+here with its denominator rather than left as a thin section (`T303`).
+
+| Platform | Repo | Stars | Licence | Last push | Region | What it is, and the posture |
+|---|---|--:|---|---|---|---|
+| **CoreLMS** | [FitzyCodesThings/core-lms](https://github.com/FitzyCodesThings/core-lms) | 62 | **MIT** (by payload; index says `NOASSERTION`) | 2026-03-16 | Global ⚠️ | An **online learning management system with e-commerce built in**, written in **ASP.NET Core MVC** and developed in the open on Twitch, with a stated goal of clean, pragmatic patterns in modern .NET. Gate: `LICENSE.md`, `1,083 B` raw → **`1020 B`/`fe2a9817987f`** — **stock MIT**, certified. 🟢 **This row is why `P184` exists, and it is the pass's sharpest instrument finding (`T301`).** GitHub's licence index reports **`NOASSERTION`** for it, and under `P180` the gate reported `1049 B`/`a8494dc0f02d` — `29 B` over the MIT constant, which reads as a non-stock grant. **Both channels were wrong in the same direction for the same reason:** the payload titles itself `# Released Under MIT License`, a **Markdown heading**, and `P180`'s title-line strip matches only a bare `MIT License` form. The residue is that one line — `28 B` plus its separator space = **exactly `29 B`**. With the strip widened, the payload is **byte-identical to stock MIT**. 🔵 **The transferable lesson: an index value of `NOASSERTION` is a reason to read the bytes, never a reason to discard a repository** — and `p735` makes that a gate repair rather than an anecdote. 🔵 **Posture, and it is a real gap-filler:** every LMS on this page is Java (Moodle, Sakai), Python (Open edX, Frappe) or PHP — this is the **only .NET LMS this base holds**, which matters for the large population of institutions whose IT estate is Microsoft-first. ⚠️ Honest limits and they are significant: a personal, stream-developed project last pushed **March 2026**, with no release, no install base and no institutional adopter. File it as a readable permissive .NET starting point, **not** as a Moodle alternative. ⚠️ Region unplaced. |
+| **hypothesis/lms (LTI integration app)** | [hypothesis/lms](https://github.com/hypothesis/lms) | 53 | BSD-2-Clause | **2026-11-09** | Global | The **deployable LTI service** that connects the Hypothesis annotation layer into Canvas, Moodle, Blackboard and D2L. Listed here as well as on [`../repos/foundations.md`](../repos/foundations.md) because it is both a component to reuse and **a system an institution actually installs and runs**. Gate: `LICENSE`, `1,320 B` raw → `1283 B`/`fdb05aeb1085`; ⚠️ **not certified — BSD, per `T288`**. 🟢 **Posture: this is the adoption path that does not require touching the LMS licence.** The institution keeps its AGPL/GPL LMS exactly as it is; the AI layer ships as an LTI tool beside it. 🔵 Its documented per-region deployment (`docs/setting-up-a-region.md`) is the residency answer for an EU engagement under `T306`. ⚠️ Operationally real but not trivial — Postgres, Docker and an LTI registration per institution. |
+| **ATLURI LMS** | [ATLURI0001/LMS](https://github.com/ATLURI0001/LMS) | 79 | MIT | **2026-11-07** | Global ⚠️ | A **multi-stack learning management system** — the same academic workflows implemented across Python, Java and a MERN stack, with a modular architecture. Gate: `LICENSE`, `1,073 B` raw → **`1020 B`/`fe2a9817987f`** (stock MIT). 🟡 **Filed with its weight stated honestly, because the row is worth less than its `79★` suggests.** There is no release, no named institutional adopter and no deployment documentation; the multi-stack framing reads as a portfolio exercise rather than a production system. 🔵 **The one genuine use: it is a permissive, side-by-side reference for the *same* LMS domain model in three ecosystems**, which is occasionally exactly what a studio needs when a client has already chosen the stack and wants the academic workflow shape. ⚠️ Do not propose as a platform. ⚠️ Region unplaced. |
+
+### 🔴 `735-J` — the licence nil on the novel platform shelf, with its denominator
+
+The platform-shaped leg of this pass's sweep returned **`33`** novel, unarchived, platform-shaped
+repositories. Ranked by stars, **the top of that list is unusable**, and the cause is uniform:
+
+| Repo | Stars | Index licence | Grant on `7` root paths | Verdict |
+|---|--:|---|---|---|
+| [Yogndrr/MERN-School-Management-System](https://github.com/Yogndrr/MERN-School-Management-System) | 649 | `null` | **none** | 🔴 no readable grant |
+| [TareqMonwer/Django-School-Management](https://github.com/TareqMonwer/Django-School-Management) | 597 | `null` | **none** | 🔴 no readable grant |
+| [mwinamijr/django-scms](https://github.com/mwinamijr/django-scms) | 59 | `null` | **none** | 🔴 no readable grant |
+| [igweze/wizgrade](https://github.com/igweze/wizgrade) | 48 | `null` | **none** | 🔴 no readable grant |
+
+🔵 **All four exist** — `README.md` returns `200` on the raw channel for each — so this is a grant
+problem, not a dead-address problem. **Two independent channels agree** (GitHub's licence index is
+`null`; `7` root filenames return `404`), which is the strongest verdict this environment permits.
+⚠️ **It is still NOT an enumerated absence, and `p735` will not call it one.** `ACTION p275`
+requires a tree enumeration for a negative grant verdict, and `735-B` establishes that the
+enumeration channel is **unreachable here**: `api.github.com/repos/{owner}/{repo}` is `403`
+unauthenticated, exactly as `T289` found for the authenticated client. **Recorded as
+`no readable grant`, not as `grant-absent`.**
+
+🟢 **Why this belongs on this page rather than in a footnote.** The single most-requested artefact in
+an education engagement is a **student information / school-management system**, and a studio
+cannot put an unlicensed repository into a client deliverable at any star count. `1,246★` of
+apparent supply across these four resolves to **zero adoptable platforms** — which is why
+`openeducat_erp` (LGPL-3.0), `Moodle` (GPL-3.0) and `SchoolOS-backend` (MIT) remain the real
+shelf, and why `CoreLMS` above, at `62★`, outranks a `649★` repository for this purpose.
+🔵 **The remedy is cheap and should be tried:** these are small, active projects whose authors can
+simply be asked to add a licence file — the same remedy `p689` recorded for the two unlicensed
+tutor benchmarks.
 
 ## Hyperscaler reference deployments and EMEA campus platforms 🆕 new section at `p734`
 

@@ -3,6 +3,198 @@ industry: education
 region: Global
 updated: 2026-11-10
 ---
+
+## 🆕 2026-11-10 (p735) — 🔴 **THE SUPPLY CHANNEL EVERY PASS SINCE `p731` DEPENDED ON IS DEAD: `GH_TOKEN` IS INVALID AND `gh api search/repositories` RETURNS `422` FOR EVERY QUERY. 🟢 AN UNAUTHENTICATED REPLACEMENT WAS FOUND, CROSS-VALIDATED AGAINST `p734`'S OWN CELL AND CARRIED THE WHOLE PASS — AND A `NOASSERTION` ROW REPAIRED THE LICENCE GATE A SIXTH TIME. 🔴 THE IBERIAN-LANGUAGE LEGS RETURNED SIX SUBJECTS AND SIX LICENCE ABSENCES.**
+
+**`7` agent rows · `5` foundations rows · `3` platform rows · `12` new trends (`T298`–`T309`) ·
+`4` new patterns (`P184`–`P187`) · `24` licence payloads byte-read · `14 / 14` MIT and `3 / 3`
+Apache payloads at the published constants under a repaired gate, `0` regressions on `p734`'s own
+controls · `1` gate defect found, diffed to the byte and fixed · `1,104` repositories enumerated
+across `60 / 60` valid supply legs on a channel that did not exist for this base yesterday ·
+`1` standing declared gap CLOSED (`719-D`, open since `p719`) · `6` LATAM subjects measured to
+`0` grants · `4` platform repositories at `1,246★` combined measured to `0` adoptable ·
+`1` mandated channel re-controlled and still inert · `39`th consecutive prose-leg nil.**
+
+### The instrument findings, because they decide whether any later pass can read anything at all
+
+🔴 **`735-A` → `T298` — `p734`'s primary metadata channel is gone, and the cause is credentials, not GitHub.**
+`gh auth status` reports *"The token in GH_TOKEN is invalid"*, and `gh api -X GET
+search/repositories -f q=repo:openedx/edx-platform` — a query `p734` ran successfully — now returns
+**`422 Validation Failed`**: *"the listed users and repositories cannot be searched either because
+the resources do not exist or you do not have permission to view them."* Every `p731`–`p734` cell
+for stars, SPDX licence, `pushed_at` and `archived` came through that channel.
+🟢 **The replacement, and it was validated before it was trusted:** plain
+`curl https://api.github.com/search/repositories?q=…` **unauthenticated** returns the complete
+metadata object. 🔬 **Control: queried for `didi/xiaoju-survey` it returns `3,802★`,
+`Apache-2.0`, `pushed 2026-11-09`, `archived false` — identical in every field to the cell `p734`
+filed from the authenticated channel.** A second control ran the full sweep: **`60 / 60` legs
+returned items**, enumerating `1,104` unique repositories. 🔵 **Why this is worth the space: the
+channel is anonymous, so it cannot be revoked by a token expiring**, which is precisely how this
+one broke. A base that reads its own supply through a credential has a single point of failure; one
+that reads it through a public endpoint does not.
+
+🔴 **`735-B` → `T302` — the `repos/` namespace is `403` unauthenticated too, so `ACTION p275` cannot be satisfied in this environment at all.**
+`api.github.com/repos/openedx/edx-platform` returns **`403`**; `api.github.com/search/repositories`
+returns **`200`**. 🔵 **This reproduces `T289` on a completely independent client** — `p734` found
+the same split with an authenticated `gh`, and the agreement of two clients makes it a property of
+the environment rather than of the token. ⚠️ **The consequence is a standing limit on what this base
+may claim, and it is not cosmetic.** `ACTION p275` requires an **enumerated tree** before any
+negative grant verdict; tree enumeration lives under `repos/`. **Therefore no pass running in this
+environment can state `grant-absent`.** The strongest available verdict is
+**`no readable grant`** — index `null` plus `N` root filenames at `404` — and `p735` has relabelled
+its own findings accordingly (`735-J`, `735-K`). 🟢 Recorded so a later pass stops re-deriving an
+absence it is not instrumented to prove.
+
+🟢 **`735-C` → `T301` and `P184` — the licence gate was defeated by a Markdown `#`, and the row that defeated it is a real platform.**
+`P180` reproduced `p734`'s two published constants **exactly** from a clean reimplementation —
+`3 / 3` controls, `popcodeorg/popcode` and `open-spaced-repetition/rs-fsrs` at
+`1020 B`/`fe2a9817987f` and `google/moodle-on-gcp` at `9942 B`/`3fda30957805` — which independently
+confirms `T286` and `T287`. **Then [`FitzyCodesThings/core-lms`](https://github.com/FitzyCodesThings/core-lms)
+gated to `1049 B`/`a8494dc0f02d`, `29 B` over the MIT constant, while GitHub's index reported
+`NOASSERTION`.** 🔬 **Both channels were wrong for one reason, and the arithmetic closes:** the
+payload titles itself **`# Released Under MIT License`**, and `P180`'s title-line strip matches only
+a bare `MIT License`-shaped line. `printf '%s' '# Released Under MIT License' | wc -c` = **`28`**;
+plus the separator space introduced by `tr '\n' ' '` = **exactly the `29 B` residue**. With the
+strip widened to allow an optional Markdown heading marker and a `Released Under` preamble, the
+payload is **byte-identical to stock MIT**. 🟢 **Published as `P184`, and regression-tested rather
+than asserted: `18` payloads re-gated — `14 / 14` MIT at `1020 B`/`fe2a9817987f`, `3 / 3` Apache at
+`9942 B`/`3fda30957805`, `2` BSD unchanged and still uncertified, and every `p734` control
+unchanged. `0` regressions.** 🔵 **The transferable rule, which is worth more than the repair:
+`NOASSERTION` in the index is an instruction to read the bytes, not permission to discard a
+repository.** This is the sixth time this base has rewritten the gate and the first time the cause
+was found in the *payload's* formatting rather than in the rule's own arithmetic.
+
+🟢 **`735-D` → `T299`/`T300` — both published raw bands are too narrow, and the constants do not care.**
+`p734` published a stock-MIT raw band of `1,061`–`1,087 B` and a stock-Apache band of
+`11,356`–`11,412 B`. This pass breaks **three** of those four bounds while every payload still
+gates to the constant: [`IssacW228/student-llm-wiki`](https://github.com/IssacW228/student-llm-wiki)
+at **`1,056 B`** (`5 B` under the MIT floor),
+[`wink-wink-wink555/WordNest`](https://github.com/wink-wink-wink555/WordNest) at **`1,094 B`**
+(`7 B` over the MIT ceiling), and
+[`infolab-kaist/KiteProject`](https://github.com/infolab-kaist/KiteProject) at **`11,337 B`**
+(`19 B` under the Apache floor). 🔵 **So the bands are descriptive and the gate is decisive** — a
+payload outside the band is a read instruction, never a verdict, which is `P168` restated with
+three fresh counterexamples. The MIT band widens to **`1,056`–`1,094 B`** on `14` payloads and the
+Apache floor drops to **`11,337 B`** on `3`.
+
+⚠️ **`735-E` — the mandated `curl -sI` check is inert for a second consecutive pass, re-controlled.**
+`curl -sI https://github.com/{owner}/{repo}` returned **`403` for `openedx/edx-platform` (alive) and
+`403` for an invented address**, `2 / 2` — no discriminating power, exactly as `p734` recorded. The
+ordered raw chain discriminated the same controls **`6 / 6`**. 🔵 **And the chain's case order was
+shown to be load-bearing, not decorative:**
+[`singaporezoo/codebreaker-official`](https://github.com/singaporezoo/codebreaker-official) returns
+`404` on `README.md` and **`200` on lowercase `readme.md`**, reproducing `724-I` on a fresh subject.
+`openedx/edx-platform` needed the third link (`README.rst`). A chain truncated at `README.md` would
+have discarded both.
+
+### What the regions returned, measured
+
+🔴 **`735-K` → `T304` — the Iberian-language legs returned `6` subjects and `6` licence absences. This is the LATAM nil, with a denominator for once.**
+`educacion ai` returned **`1`** repository in total (`total_count: 1`). `educacao ia` returned
+**`5`**. All six exist on the raw channel (`README.md` → `200`, `6 / 6`) and **all six report index
+licence `null` and return `404` on `7` root grant paths**: `Samuel1390/segment-ai`,
+`kaledbarreto/SophIA`, `Dc-Alencar/CivIA-Educacao-Politica-Acessiva-`,
+`namerico/antigravity-education-kit`, `Natalia-Timote/ia-educacao`,
+`matheusaragao21/academia-digital`. 🔵 **The honest reading is `p689`'s correction applied to a
+fresh measurement: this is a LEG result, not a base result.** The agents shelf still holds LATAM
+rows placed by `.br`-TLD and statute-citation channels. **What is measured here is that the
+Spanish- and Portuguese-language *name/description* channel produces subjects but not grants —
+`6 / 6` — so it is a lead generator and never a row source.** 🟢 **One lead is worth naming for a
+later pass:** [`namerico/antigravity-education-kit`](https://github.com/namerico/antigravity-education-kit)
+describes itself as a *"framework modular de agentes de IA especializados em educação: tutores,
+criadores…"* — a Portuguese-language modular education-agent framework, which is exactly the shape
+this base wants from the region. It has no licence. **Ask the author**, as `p689` recommended for
+the two unlicensed tutor benchmarks; it costs one issue.
+
+🟢 **`735-L` → `T305` — this pass's supply is APAC-dominated and the notable part is that it is not all CJK.**
+**`6` of `7`** agent rows are APAC. Five are Chinese-primary, and
+[`itsme-ganzu/belajar-ngoding-byGanzu`](https://github.com/itsme-ganzu/belajar-ngoding-byGanzu)
+(`65★`, MIT) is **the first Bahasa Indonesia row on any shelf in this base's `735` passes**. 🔵 **Why
+that single row carries weight: every APAC row this base held before today was CJK**, which left the
+region's largest education systems after China and India entirely unrepresented in supply while the
+market sections called APAC the fastest-growing region. It is also, independently, a clean
+implementation of `P62`/`P89` — its own learning contract states that *"the judge of your code's
+correctness is the automated test in the terminal, not the AI's sweet talk."*
+
+🔴 **`735-M` — the `4` mandated prose legs produced `0` novel addresses: the `39`th consecutive nil, and the denominator is `4 / 4`.**
+Every repository the prose legs named was **already held**: `SirhanMacx/Claw-ED` and
+`geekjourneyx/interactive-learning` (from the GitHub-trending leg), `HKUDS/DeepTutor` (named by an
+aggregator as trending `2026-10-30`), and `openeducat/openeducat_erp` (the ERP/CRM leg, which again
+returned only the vendor's own marketing pages). 🔵 **The vertical-platform leg is now
+diagnostically interesting rather than merely empty:** it returned **ten OpenEduCat pages in seven
+languages** and nothing else, and the vendor's own glossary confirms the licence as **LGPL**, not
+the MIT/Apache the leg asks for. 🟢 **A pass should keep running these legs for their DEMAND
+intelligence, which was rich this pass, and should stop expecting repositories from them.**
+`735`'s entire supply came from the `api.github.com` sweep.
+
+### The demand finding that closes a gap this base has carried since `p719`
+
+🟢 **`735-F` → `T306` — `719-D` IS CLOSED. The EU AI Act Annex III date for education is `2 December 2027`.**
+`p719` recorded that sources split between **2 August 2026** and **2 December 2027** and explicitly
+refused to adopt either, requiring every EU engagement statement to carry both dates. **Six
+independent legal-practice and regulatory-analysis sources now agree**, and they agree on the
+instrument, not merely the date: the deferral is **Regulation (EU) 2026/1744** (the "Digital
+Omnibus"), **published in the Official Journal on 24 July 2026** and **in force 27 July 2026**,
+moving the stand-alone Annex III high-risk obligations — **education is an Annex III area** — from
+`2 August 2026` to **`2 December 2027`**. Annex I embedded-product systems move to
+`2 August 2028`; legacy public-authority systems keep `2 August 2030`. 🔴 **Three things were NOT
+delayed and a proposal that reads only the headline will get them wrong:** **Article 50 transparency
+duties have applied since `2 August 2026`**, two **new Article 5 prohibitions** phase in
+`2 December 2026`, and the obligations themselves are unchanged — only their start date moved.
+⚠️ **Confidence stated precisely: this is high-confidence secondary consensus, not a primary
+reading.** `eur-lex.europa.eu` remains `CONNECT`-blocked in this environment (`705-C`, gap `(5)`),
+so the Official Journal text was **not** read. 🔵 **What changes for an engagement: the `2027` date
+is a planning window, not a reprieve** — an EU institution procuring an admissions or assessment
+system now is procuring an Annex III high-risk system, and the compliant architecture is
+demonstrable today. [`salikhussain71-code/MS-AI-Admission-Eligibility-Engine`](https://github.com/salikhussain71-code/MS-AI-Admission-Eligibility-Engine)
+(`115★`, MIT, filed this pass) is a deterministic, source-cited, explicitly non-predictive
+eligibility engine — the shape the regulation asks for, with a readable grant. Published as `P185`.
+
+🟢 **`735-G` → `T307` — the first sovereign first-party curriculum agent, and it is Intel's.**
+[`intel/university-curriculum-enabling-tool`](https://github.com/intel/university-curriculum-enabling-tool)
+(`14★`, **Apache-2.0**, pushed `2026-11-03`) is a fine-tuned-LM-plus-RAG curriculum system in three
+personas — Curriculum Builder (faculty), Expert Advisor (lecturers), Learning Companion (students) —
+that its README states runs **locally on a single system**, on Intel CPUs and GPUs. 🔵 **Why it
+outranks every higher-star return in this sweep, and it is the `p734` argument repeated: this is a
+licensing and sovereignty result, not a feature.** This base held sovereign *infrastructure*
+(Ollama, vLLM) and sovereign *platforms*, and had **no first-party education agent that makes no
+outbound model call** — which is the first objection raised in every EMEA and public-sector
+conversation and now the direct consequence of `T306`. ⚠️ **Intel's own stated limits are
+disqualifying for production and must travel with the row:** *"pre-production status"*,
+single-system, **single-user** — the personas are for one user to test perspectives, not concurrent
+access. A reference implementation to adopt and harden.
+
+🔵 **`735-H` → `T308` — the demand legs agree on one thing across all four regions, and it is not adoption.**
+Adoption is no longer the question anywhere: North America reports **institution-wide
+implementation at `66%`**; EMEA reports **`67%` of teachers using AI tools** (Futuresource) and
+**`76%` of students expecting to**, against **`80%` of teachers worried AI is arriving faster than
+schools can manage** (Epson, `~3,360` respondents across UK, France, Italy, Germany, Spain,
+Poland); LATAM reports **`92%` of students and `79%` of faculty** actively engaging (Digital
+Education Council, `7,319` faculty across `29` institutions). 🔴 **What every region also reports is
+that governance has not followed:** LATAM records only **`30%`** believing their institution has
+responded effectively, and a UNESCO-affiliated survey of **`200` institutions across `19`
+countries** finds the adoption-governance gap *"particularly pronounced"* in the region; EMEA's
+Digital Education Council summit names **governance and measurement gaps** as its headline signals;
+North America has **~`100` state bills in `2026`** and **`≥15` states** legislating, which is
+volume rather than settlement. 🟢 **So the sellable deliverable in `2026` is the governance
+artefact, not the tutor** — a register, a review record, a training log, an audit trail — and that
+is what `P181` (LATAM), `P185` (EU high-risk) and `P187` (the training record) are each shaped to
+produce. 🔵 This is `T292`/`T296` arriving simultaneously in all four regions in one pass.
+
+⚠️ **`735-I` → `T309` — a region-placement error this pass caught in its own returns, recorded because the leg invites it.**
+The **APAC** regional leg returned, as two of its most concrete regulatory findings, the **UK's**
+generative-AI safety standards for schools (January 2026) and the **UAE** Ministry of Education's
+**25** generative-AI prohibitions (February 2026). **Both are EMEA geographies** and both were
+filed under EMEA, not APAC. 🔵 **The mechanism is worth naming because it will recur: the search
+channel returns documents about "Asia Pacific AI in education" that are published by
+globally-scoped outlets covering the UK and the Gulf in the same article.** A pass that trusts the
+leg's name over the finding's geography silently corrupts the region field — the exact failure
+`724-R` closed structurally for *headings* and which can still enter through *content*. 🔴 **And
+the African third of EMEA returned nothing again**: the region's returns were EU plus Gulf, with no
+African ministry, figure or named player. That re-opens `p730`'s Africa gap for a fourth
+consecutive pass, and the fix remains the one `p730` named — a leg that names specific bodies
+rather than the continent.
+
 ## 🆕 2026-11-10 (p734) — 🟢 **THE LICENCE GATE THIS BASE HAS REWRITTEN FIVE TIMES WAS ONE TRAILING SPACE AWAY FROM ITS OWN PUBLISHED CONSTANT, AND THE APACHE CONSTANT DECLARED UNREPRODUCIBLE ONE PASS AGO IS REPRODUCED ON FIVE PAYLOADS. 🔴 THE SAME GATE CANNOT CERTIFY BSD AT ALL, AND LATAM'S FLAGSHIP OPEN-AI PROGRAMME HOLDS ZERO LIVE PERMISSIVE REPOSITORIES.**
 
 **`7` agent rows · `5` foundations rows · `6` platform rows · `12` new trends (`T286`–`T297`) ·

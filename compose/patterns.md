@@ -6,13 +6,13 @@ updated: 2026-11-10
 
 # Composition Patterns — Education
 
-**Pass p734 · verified 2026-11-10.** Concrete recipes using only components verified this
+**Pass p735 · verified 2026-11-10.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
 Licences are the real design input here. Every pattern states its resulting obligation.
 
-**Numbering.** This pass (`p734`) adds **`P180`**–**`P183`**; `p733` added **`P176`**–**`P179`**;
+**Numbering.** This pass (`p735`) adds **`P184`**–**`P187`**; `p734` added **`P180`**–**`P183`**; `p733` added **`P176`**–**`P179`**;
 `p727` added **`P161`**; `p726` added **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
 passes is preserved in full below the new entries — it is a registry with stable IDs, so new
 patterns continue the sequence rather than reusing it. (This pass initially drafted its six
@@ -21,6 +21,191 @@ different, real recipes. Recorded because reusing a live ID silently rewrites a 
 prior engagement may cite.)
 
 ---
+
+
+## P184 — The licence gate, repaired a sixth time: the title line can be a Markdown heading (tooling, not a client pattern; 20 minutes, then a standing gate) 🟢 new at `p735`
+
+**Supersedes `P180`.** `P180` was correct and reproduced both its published constants exactly from
+a clean reimplementation this pass (`3 / 3` controls). It then **refused a stock MIT grant**, and
+the cause was in the payload's formatting, not in the rule's arithmetic.
+
+**What was wrong.** `P180`'s title-line strip is
+`^[[:space:]]*(The )?(MIT |BSD |ISC )?Licen[cs]e( \(MIT\))?[[:space:]]*$`. It matches `MIT License`
+and `The MIT License (MIT)` — and **not** `# Released Under MIT License`, which is how
+[`FitzyCodesThings/core-lms`](https://github.com/FitzyCodesThings/core-lms) titles a payload whose
+terms are otherwise byte-for-byte stock MIT. The surviving line is `28 B`; `tr '\n' ' '` adds its
+separator space; the gate reported **`1049 B`/`a8494dc0f02d`**, exactly `29 B` over the constant
+(`T301`).
+
+**The rule, with the strip widened.** One line changes from `P180`; everything else is `P180`
+verbatim, including `T286`'s trailing-space strip.
+
+```bash
+terms() {                                   # stdin: a licence payload -> canonical terms-only form
+  tr -d '\r' \                              # T278: CRLF -> LF
+  | sed '/^[[:space:]]*APPENDIX:/,$d' \     # Apache appendix is outside the terms (indented in stock)
+  | grep -v '^[[:space:]]*$' \              # drop blank lines
+  | grep -viE '^[[:space:]]*#{0,6}[[:space:]]*(released under[[:space:]]+)?(the )?(mit |bsd |isc )?licen[cs]e( \(mit\))?[[:space:]]*$' \
+                                            # ⬅️ P184: optional Markdown heading marker + optional
+                                            #    "Released Under" preamble. Covers "MIT License",
+                                            #    "The MIT License (MIT)", "# License",
+                                            #    "# Released Under MIT License".
+  | grep -viE '^[[:space:]]*(Copyright|\(c\))' \
+                                            # drop the holder line by SHAPE, not substring (P168)
+  | tr '\n' ' ' \
+  | sed 's/ *$//'                           # T286: the trailing-space strip
+}
+gate() { local g; g=$(terms < "$1")
+  printf '%sB/%s' "$(printf '%s' "$g" | wc -c | tr -d ' ')" \
+                  "$(printf '%s' "$g" | sha256sum | cut -c1-12)"; }
+```
+
+**The constants are unchanged, and the bands widen.**
+
+| Family | Constant | Reproduced on at `p735` | Raw band | Status |
+|---|---|--:|---|---|
+| **MIT** | **`1020 B`/`fe2a9817987f`** | **`14 / 14`** payloads | **`1,056`–`1,094 B`** (was `1,061`–`1,087`) | 🟢 certify |
+| **Apache-2.0** | **`9942 B`/`3fda30957805`** | **`3 / 3`** payloads | floor drops to **`11,337 B`** | 🟢 certify |
+| **BSD (any clause count)** | — none exists | `2` payloads → `2` values | — | 🔴 do not certify (`T288`) |
+
+**Regression evidence, because a sixth rewrite needs it.** `18` payloads re-gated under `P184`:
+`14 / 14` MIT at the constant, `3 / 3` Apache at the constant, `2` BSD unchanged and still
+uncertified, and **every `p734` control unchanged** (`popcodeorg/popcode`,
+`open-spaced-repetition/rs-fsrs`, `google/moodle-on-gcp`). **`0` regressions.**
+
+**How to use it.** Exactly as `P180`: gate every MIT and Apache payload before a repository reaches
+a slide, a miss is a read instruction rather than a refusal, never run the gate through
+`$(curl …)` (`T143`). ⚠️ **Two environment facts that now bound every licence verdict:** metadata
+comes from **unauthenticated `curl https://api.github.com/search/repositories`**, because
+`gh api` is dead here (`T298`); and `api.github.com/repos/…` is `403`, so **tree enumeration is
+impossible and `ACTION p275` cannot be satisfied — no pass in this environment may write
+`grant-absent`, only `no readable grant`** (`T302`). 🔵 **And the standing lesson from the row that
+caused the repair: `NOASSERTION` in the index is an instruction to read the bytes, never grounds to
+discard a repository.**
+
+---
+
+## P185 — The defensible admissions gate: ship the rules engine, not the classifier, because admission is Annex III high-risk (EMEA / Gulf higher education; 5–7 weeks) 🟢 new at `p735`
+
+**The constraint that defines the engagement.** **Admission to education is an Annex III high-risk
+category under the EU AI Act**, and after `T306` the obligations are dated: **`2 December 2027`**,
+with **Article 50 transparency already in force since `2 August 2026`**. The duties are
+explainability, traceability and human oversight. 🔴 **A model that scores applicants cannot
+discharge them**, whatever its accuracy — there is no traceable rule to show a rejected applicant,
+and "the model learned it" is not an audit trail.
+
+**The recipe, and the architectural inversion is the whole point.** The LLM never decides; it reads.
+
+| Step | Component | Licence | Role |
+|---|---|---|---|
+| **1. Rules** | [salikhussain71-code/MS-AI-Admission-Eligibility-Engine](https://github.com/salikhussain71-code/MS-AI-Admission-Eligibility-Engine) | **MIT** (`1020 B`/`fe2a9817987f`) | the deterministic core: published criteria → structured rules → explainable per-criterion verdict. Already models **MBZUAI**, **KAUST** and **LUMS** |
+| **2. Extraction** | an LLM, held strictly to extraction | — | turn an applicant's transcript and certificates into the engine's typed inputs (CGPA, English proficiency, GRE status, prerequisites). **It proposes values; it never evaluates them** |
+| **3. Provenance** | the engine's own source-citation requirement | MIT | every rule traces to the institution's published admissions document — the traceability obligation, satisfied by construction |
+| **4. Oversight** | human review queue on every negative and every low-confidence extraction | — | the Article 14 human-oversight duty, as a workflow rather than a claim |
+| **5. Residency** | [intel/university-curriculum-enabling-tool](https://github.com/intel/university-curriculum-enabling-tool) pattern, or Ollama / vLLM | **Apache-2.0** | run the extraction model on-premises so no applicant PII leaves the institution |
+| **6. Delivery** | [hypothesis/lms](https://github.com/hypothesis/lms) as the LTI reference | BSD-2-Clause ⚠️ uncertified | surface outcomes in the institution's existing LMS without touching its copyleft core (see `P186`) |
+
+**Obligation produced.** MIT and Apache throughout the decision path; the only BSD component is the
+optional delivery layer, and `T288` means its terms are recorded rather than certified. **No
+copyleft anywhere in the decision path.**
+
+**What makes it defensible, in the words the regulation uses.** Every rejection is explainable to a
+*rule*, every rule to a *published document*, every extraction to a *human who confirmed it*. 🔵
+**The engine's own README is the sales line and the risk disclosure at once:** *"The goal is not to
+predict admission"* — only whether a profile satisfies published criteria. ⚠️ **Carry its stated
+limit verbatim into any proposal: eligibility is not admission**, and published minimums guarantee
+neither admission, scholarship, interview, supervisor availability nor funding; requirements change
+between cycles, so the rule set needs an owner and a review date. ⚠️ **And the date is secondary
+consensus, not primary** (`eur-lex` unreachable, `705-C`): confirm against the Official Journal
+before signing a compliance commitment.
+
+---
+
+## P186 — Reach the students without touching the LMS licence: ship an LTI tool, not a fork (all four regions; 3–5 weeks to a pilot tenancy) 🟢 new at `p735`
+
+**The problem this solves is the oldest one in this base.** Every pattern that ends *"…and surface
+it in the LMS"* has been hand-waving, because **every LMS on the shelf is copyleft**: Moodle
+**GPL-3.0**, Open edX **AGPL-3.0**, Frappe LMS **AGPL-3.0**, Canvas **AGPL-3.0**. Fork one to add an
+AI feature and the AGPL network clause reaches a hosted deployment — which is exactly how an LMS is
+delivered. 🔴 More proposals in this base's history have died on that than on any technical
+obstacle.
+
+**The recipe.** **LTI is the supported extension point, and using it means deriving from nothing.**
+
+1. **Read the reference implementation.** [`hypothesis/lms`](https://github.com/hypothesis/lms)
+   (`53★`, BSD-2-Clause, `1,320 B` → `1283 B`/`fdb05aeb1085`, ⚠️ uncertified per `T288`) is a
+   **production** LTI application — Pyramid/Python, Postgres, Docker — that integrates one service
+   into Canvas, Moodle, Blackboard and D2L. It is the readable answer to "how does an external tool
+   become a thing inside the course".
+2. **Keep the institution's LMS untouched.** No patch, no fork, no plugin in the LMS tree. The
+   licence obligation stays entirely with the institution's existing deployment.
+3. **Put your own component behind the LTI boundary.** Any agent from
+   [`../agents/top.md`](../agents/top.md) — the Intel curriculum tool, the admissions engine of
+   `P185`, a `DisKT` learner model — runs in **your** service under **your** permissive grant.
+4. **Register per institution and per region.** The repository documents
+   `docs/setting-up-a-region.md`: **per-geographic-region deployment as a standard operation.** 🟢
+   That is the data-residency answer EU and LATAM procurement asks for (`T306`, `T308`), and it is
+   documented rather than improvised.
+5. **Grade and report through the LMS gradebook**, so the institution's records stay canonical and
+   nothing needs migrating.
+
+**Obligation produced.** Your component keeps its own licence. The LMS keeps its copyleft, and you
+never trigger it. 🔵 **The one-line argument for a client: LTI converts a licensing problem into a
+deployment problem**, and a deployment problem has a price.
+
+⚠️ **Honest costs.** LTI registration is per-institution administrative work, not code, and it is
+the schedule risk. Postgres and Docker are the operational floor. And the reference is **BSD**, so
+`T288` applies: read and record its bytes, make no stock claim.
+
+---
+
+## P187 — The training record: sell the artefact the statute names, not the tool it regulates (North America and APAC; 4–6 weeks) 🟢 new at `p735`
+
+**Why this exists.** The demand legs agree across all four regions that **adoption is settled and
+governance is not** (`T308`). The purchasable consequence is narrower than it sounds, and two
+regions name it outright: **Virginia's enacted S.B. 394** directs the state education agency to
+issue guidance **including teacher training**, and APAC is running a **`34,000`-teacher** rollout
+through 2026. 🔵 **A district facing ~`100` state bills cannot buy a position on each one. It can
+buy one auditable record of who was trained, on what, against which guidance, and when.**
+
+**The recipe — a documentation and workflow system, deliberately not a model system.**
+
+1. **Pin the guidance corpus.** Ingest the jurisdiction's own instruments — state guidance, the
+   enacted statute, district policy, and for APAC the ASEAN–UK SAGE topic briefs and ministry
+   circulars. **Primary sources only**, each with retrieval date and a stable citation; `P90` is the
+   pattern for answering "what is this institution actually allowed to do" from a primary corpus
+   rather than from a search leg.
+2. **Model the record, not the course.** Staff member → module → guidance clause → completion date
+   → evidence artefact. The deliverable is the **join**: which clause each person's training
+   actually discharges. That is what an auditor, a board or a journalist asks for, and it is what no
+   LMS report produces today.
+3. **Use the courseware harness instead of building one.**
+   [`infolab-kaist/KiteProject`](https://github.com/infolab-kaist/KiteProject) (`18★`,
+   **Apache-2.0**, `9942 B`/`3fda30957805`) is a working **GitHub-Classroom distribution plus
+   automated grading plus leaderboard** loop from a named national university. The three database
+   projects do not generalise; **the harness does**, and it is the delivery mechanism for cohort
+   upskilling in any domain.
+4. **Make completion mean something.** Borrow the tests-as-examiner contract from
+   [`itsme-ganzu/belajar-ngoding-byGanzu`](https://github.com/itsme-ganzu/belajar-ngoding-byGanzu)
+   (`65★`, MIT): an automated check is the judge, not an attendance tick. A training record whose
+   evidence is a passed check survives scrutiny; one whose evidence is a signature does not.
+5. **Schedule the refresher, don't hope for it.** Guidance changes yearly;
+   [`DavidMiserak/GoCard`](https://github.com/DavidMiserak/GoCard) (`59★`, MIT) plus
+   [`open-spaced-repetition/rs-fsrs`](https://github.com/open-spaced-repetition/rs-fsrs) (MIT) give
+   a Markdown-on-disk, Git-reviewable capture surface and a scheduler you do not write — so the
+   refresher cycle is a component, and every change to the corpus is a diff.
+6. **Surface it where staff already are** via `P186`, so the record lives beside the institution's
+   own systems rather than in a portal nobody opens.
+
+**Obligation produced.** **MIT and Apache-2.0 throughout** — the entire stack is permissive, with
+no copyleft and no uncertified component in the critical path.
+
+🔵 **Why it sells, and it is the Chegg argument inverted (`735`'s North America reading).** Chegg
+cut **`45%` of staff** because it was a content destination, and content is what AI made free. A
+compliance record is a **workflow**, and workflows embedded in records and audit survive the thing
+that removed Chegg's traffic. ⚠️ **Scope honestly: this is not a pedagogy engagement.** It will be
+judged on completeness, auditability and defensibility, so the acceptance criterion to agree up
+front is *"can the client answer an auditor from this system without a spreadsheet"*.
 
 ## P180 — The licence gate, completed: the missing step, and the two families it may certify (tooling, not a client pattern; one hour, then a standing gate) 🟢 new at p734
 
