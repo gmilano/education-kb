@@ -373,3 +373,56 @@ finch04/online-mooc	1	finch04/online-mooc	347	60	Apache-2.0	2026-05-10	Java	fals
 finereli/yarareads	1	finereli/yarareads	28	2	MIT	2026-11-09	JavaScript	false	A free reading app for kids who just learned their phonics sounds: every word in a story can be sounded out, tap a word for its sounds. Bring your own agent (MCP). Cloudflare Workers.
 fitzycodesthings/core-lms	1	FitzyCodesThings/core-lms	62	27	NOASSERTION	2026-03-16	C#	false	An open source online learning management system project in ASP.Net Core MVC. Explores many best practices and patterns in modern software development.
 flashlearn-ai/flashlearn	1	flashlearn-ai/flashlearn	5	0	MIT	2026-09-24	TypeScript	false	Agentic AI for compounding learning velocity with spaced repetition
+flashlight/flashlight	1	flashlight/flashlight	5481	504	MIT	2026-10-27	C++	false	A C++ standalone library for machine learning
+flatironinstitute/psyphy	1	flatironinstitute/psyphy	5	3	MIT	2026-11-10	Python	false	Active-learning-driven adaptive experiments in psychophysics.
+flysheep-ai/education-skills	1	flysheep-ai/education-skills	123	24	MIT	2026-01-30	Shell	false	教育类 Claude Code Skills 集合 - 包含各类教学辅导和学习支持工具
+forkphorus/forkphorus	1	forkphorus/forkphorus	151	122	MIT	2026-10-25	TypeScript	false	JavaScript compiler for Scratch 3, 2, and 1 projects.
+framerslab/agentos	1	framerslab/agentos	686	104	Apache-2.0	2026-11-10	TypeScript	false	TypeScript AI agent framework: cognitive memory, dynamic personalities, emergent behaviors and self-building designs
+francoisjacquet/rosariosis	1	francoisjacquet/rosariosis	653	396	GPL-2.0	2026-11-09	PHP	false	RosarioSIS Student Information System for school management. GitLab mirror: https://gitlab.com/francoisjacquet/rosariosis/
+frappe/education	1	frappe/education	703	489	NOASSERTION	2026-10-30	Python	false	Open source education / school management system
+frappe/frappe	1	frappe/frappe	11078	5520	MIT	2026-11-10	Python	false	Low code web framework for real world applications, in Python and Javascript
+frappe/lms	1	frappe/lms	3401	1585	AGPL-3.0	2026-11-10	TypeScript	false	Easy to Use, 100% Open Source Learning Management System
+frederikmh90/rucai	APIERR	rc=1	gh: Validation Failed (HTTP 422) 
+freecodecamp/classroom	1	freeCodeCamp/classroom	156	141	BSD-3-Clause	2026-11-10	TypeScript	false	-
+freecodecamp/freecodecamp	1	freeCodeCamp/freeCodeCamp	458850	47443	BSD-3-Clause	2026-11-10	TypeScript	false	freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.
+freecodecamp/freecodecampos	1	freeCodeCamp/freeCodeCampOS	78	32	BSD-3-Clause	2026-07-23	Rust	false	Test repo for external freeCodeCamp courses
+frostysl/anki-card-forge	1	FrostySL/anki-card-forge	9	2	MIT	2026-10-26	Python	false	Turn PDFs and lecture notes into high-quality Anki flashcards with Claude Code — evidence-based card rules, grounding checks against the source, visual self-review, real Anki-engine validation. Any topic, any language. Optional AnkiConnect integration to push decks straight into Anki.
+frypan05/philosopher-okf	1	frypan05/philosopher-OKF	107	8	MIT	2026-10-11	HTML	false	Agent skill that turns any topic into one self-contained HTML study page: minimal, light focused, research-paper styled.
+functionsid/smart-tutor	1	FunctionSid/smart-tutor	0	0	Apache-2.0	2026-09-21	Python	false	Smart Tutor by Siddharth Kalantri — accessible agent-native AI learning workspace for documents, RAG, exams, memory, voice tutoring, CLI, WebSocket API, and Python SDK.
+fundacion-sadosky/microbitml	1	fundacion-sadosky/microbitML	2	2	GPL-3.0	2026-04-06	Python	false	framework Microbit para actividades grupales guiadas
+fwu-de/ais-chat	1	FWU-DE/ais-chat	27	9	AGPL-3.0	2026-11-10	TypeScript	false	AIS.chat – Der KI-Chatbot für die Schule
+g36maid/moodle-mcp	1	G36maid/moodle-mcp	29	1	MIT	2026-10-20	Rust	false	MCP server that lets AI agents operate Moodle: courses, assignments, forums, grades and files-as-markdown.
+gabors-data-analysis/da-w-ai	1	gabors-data-analysis/da-w-ai	22	12	MIT	2026-11-10	HTML	false	Data Analysis with AI course
+gaok1/raven-riscv	1	Gaok1/Raven-RiscV	113	5	Apache-2.0	2026-11-09	Rust	false	RISC-V simulator and IDE for learning assembly — RV32IMF, step-by-step debugger,cache , pipeline, multi-core simulator
+garethmanning/education-agent-skills	1	GarethManning/education-agent-skills	971	132	NOASSERTION	2026-11-03	TypeScript	false	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders—pedagogy, learning science, curriculum, assessment and regeneration. Claude, Codex and Hermes.
+gatoreducator/gatorgrader	1	GatorEducator/gatorgrader	85	38	GPL-3.0	2026-10-06	Python	false	:heavy_check_mark: Automated Grading Tool that Checks the Work of Writers and Programmers
+gauss-tpac/agent-de-revision-programme-terminale-scientifique	1	GAUSS-TPAC/agent-de-revision-programme-Terminale-scientifique	0	0	MIT	2026-10-31	Python	false	AI revision tutor for Cameroon's Terminale C program (MINESEC): Gradio UI powered by Gemini, LaTeX rendering, syllabus-grounded prompts.
+geant/edugain-openidfed	1	GEANT/edugain-openidfed	7	2	CC0-1.0	2025-03-03	-	false	-
+gego-k12/gegok12	1	Gego-K12/gegok12	56	107	NOASSERTION	2026-09-23	PHP	false	A full featured School Management System build with Laravel. Mobile Apps Ready. API First Design.
+geminilight/awesome-ai-llm4education	1	GeminiLight/awesome-ai-llm4education	221	28	NONE	2026-10-23	Jupyter Notebook	false	Awesome artificial intelligence (AI) and large language model (LLM) for education papers.
+geminilight/gen-mentor	1	GeminiLight/gen-mentor	136	23	CC0-1.0	2026-10-23	TypeScript	false	[WWW '25 Oral - GenMentor] Official code of our paper "LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System", accepted by WWW 2025 (Industry Track) as an Oral Presentation.
+geminilight/socialcoach	1	GeminiLight/SocialCoach	474	64	Apache-2.0	2026-11-09	TypeScript	false	Your personal EQ coach. Build social skills and learn to handle conflict through realistic role-play and personalized feedback.
+genaiwithms/lms	1	GenAIwithMS/LMS	4	2	MIT	2026-11-08	Python	false	A modern, AI-powered Learning Management System (LMS) featuring role-based access and an agentic chatbot built with LangGraph for natural language database operations.
+gentilpedro/rumo	1	gentilpedro/rumo	0	0	MIT	2026-11-05	C#	false	Rumo: plataforma aberta e gratuita de estudos para provas brasileiras. Cada prova é uma trilha com roadmap, questões comentadas, simulados, desafios semanais e comunidade. Hoje: ENEM 2026 e ENADE ADS; IFs a caminho.
+geoguess/geoguess	1	GeoGuess/GeoGuess	594	137	MIT	2026-08-03	Vue	false	GeoGuess is an open-source geography game with Google Map StreetView. You can play solo or with your friends simultaneously.
+georgekimaninjoroge/meridian	1	georgekimaninjoroge/Meridian	0	0	Apache-2.0	2026-11-09	JavaScript	false	Lightweight, fully-featured, offline-first LMS
+gibbonedu/core	1	GibbonEdu/core	638	431	GPL-3.0	2026-11-10	PHP	false	Gibbon is a flexible, open source school management platform designed to make life better for teachers, students, parents and leaders.
+gil612/special-ed-doc-intelligence	1	gil612/special-ed-doc-intelligence	0	0	MIT	2026-07-30	TypeScript	false	AI-powered document intelligence service that extracts structured data from Israeli special-education documents (IEPs / inclusion-committee decisions) using Vertex AI + Gemini, with built-in PII redaction.
+gilsonnogueira/notebooklm-para-concursos	1	gilsonnogueira/notebooklm-para-concursos	64	12	MIT	2026-10-11	-	false	Ecossistema de Engenharia de Estudos com IA Fundamentada (NotebookLM + Gemini Estudantes). Metodologia N.A.G. (Nucleo de Aprendizagem Guiada) com 19 Prompts calibrados, Raio-X estatistico de bancas e Metodo MIT.
+ging/escapp	1	ging/escapp	69	11	GPL-3.0	2025-03-19	SCSS	false	Platform for organizing and managing educational escape rooms
+githubdaily/ai-course-generator	1	GitHubDaily/AI-Course-Generator	35	7	MIT	2025-11-01	TypeScript	false	基于讯飞星辰 Agent 开源平台构建的 AI 教育工具，帮助教师快速生成课程大纲和教学内容。
+gjlmotea/blockhand-mcp	1	gjlmotea/blockhand-mcp	4	0	MIT	2026-11-02	TypeScript	false	BlockHand: MCP server for Minecraft Education Edition over the official /connect (/wsserver) WebSocket. No add-on or behavior pack needed. 44 tools: control the Agent robot, build 24 shapes merged into minimal /fill commands, read blocks, compare regions, subscribe to game events. For Claude Code, Codex, Gemini CLI, Grok.
+glowxq/glowxq-oj	1	glowxq/glowxq-oj	332	59	Apache-2.0	2026-02-25	Vue	false	Glowxq-OJ OJ 专业开源在线编程测评系统 | 基于Spring Boot 3.x + Java 21 + Vue 3构建 | 支持ACM/ICPC竞赛、信奥赛训练、编程教育 | 多语言判题、实时竞赛、在线IDE | Docker一键部署 | Modern Online Judge Platform for Competitive Programming & Coding Education
+google/comprehensive-rust	1	google/comprehensive-rust	33514	2096	Apache-2.0	2026-11-03	Rust	false	This is the Rust course used by the Android team at Google. It provides you the material to quickly teach Rust.
+google/moodle-on-gcp	1	google/moodle-on-gcp	74	27	Apache-2.0	2026-11-07	HTML	false	-
+googlechrome/lighthouse	1	GoogleChrome/lighthouse	31034	9786	Apache-2.0	2026-11-10	JavaScript	false	Automated auditing, performance metrics, and best practices for the web.
+googlyblox/auto-mcgraw	1	GooglyBlox/auto-mcgraw	89	27	MIT	2026-09-30	JavaScript	false	Automate your McGraw Hill Smartbook homework with AI integration
+govtechsg/oobee	1	GovTechSG/oobee	173	58	MIT	2026-11-03	EJS	false	Oobee (formerly known as Purple A11y) is a customisable, automated web accessibility testing tool that allows software development teams to find and fix accessibility problems to improve persons with disabilities (PWDs) access to digital services.
+govtechsg/oobee-desktop	1	GovTechSG/oobee-desktop	60	14	MIT	2026-11-05	HTML	false	Oobee Desktop (formerly Purple A11y) is a customisable, automated web accessibility testing tool that allows software development teams to find and fix accessibility problems to improve persons with disabilities (PWDs) access to digital services.
+groundworklms/cartridge	1	groundworklms/cartridge	0	0	Apache-2.0	2026-09-12	JavaScript	false	Course JSON → a SCORM 1.2/2004 cartridge that drops into any LMS and reports scores.
+groundworklms/coursewright	1	groundworklms/coursewright	0	0	Apache-2.0	2026-09-12	JavaScript	false	Objectives + sources → a full cited course (lessons, tests, scenario) as JSON.
+groundworklms/schoolcirclelms	1	groundworklms/SchoolCircleLMS	0	0	Apache-2.0	2026-10-08	JavaScript	false	SchoolCircle — grounded, offline, human-led LMS. Every answer cites the manual or refuses.
+groundworklms/sextant	1	groundworklms/sextant	0	0	Apache-2.0	2026-09-12	JavaScript	false	Learning artifacts → learning gain, class gaps, and competency evidence (Bloom's).
+grvrajput/llm-eval-rubric-kit	1	Grvrajput/llm-eval-rubric-kit	0	0	MIT	2026-08-21	Python	false	Rubric-based grading toolkit for scoring LLM & coding-agent outputs — binary PASS/FAIL criteria, weighted categories, evidence-based rationales.
+grwth404/quiznote	1	grwth404/Quiznote	29	0	MIT	2026-10-20	TypeScript	false	An AI-powered quiz generator for creating quizes from your notes and textbooks | Powered by Google Gemini
+guanzhuiguo/open-character-memory	1	GuanZhuiGuo/open-character-memory	0	0	Apache-2.0	2026-11-10	JavaScript	false	Open-source role-user memory runtime for role-play and tutoring agents | 面向角色陪聊与 AI 教育的角色-用户双向记忆模块

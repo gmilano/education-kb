@@ -73,6 +73,15 @@ curl -s -o /dev/null -w '%{http_code}' "https://raw.githubusercontent.com/$slug/
 
 🟢 **To recover a renamed target, byte-match the README.** `diego694/lummer` and `dicowerrr/LUMMER` both serve `17,495 B`, sha256₁₂ `a2a7698fce9b` — identical, so the same project. ⚠️ Probe the **owner** too (`user:{owner}`): `diego694` is itself `422`, so the account was renamed, not the repository.
 
+🔴 **Precision rule, and skipping it will corrupt a KB rather than repair one.** A `422` says the *address* is non-canonical; it does **not** say the *row* is wrong. Before rewriting anything, classify the hit by where the address sits:
+
+| Where the address appears | Action |
+|---|---|
+| A row's link cell | **Repair it**, and recover the metadata the dead name was hiding. |
+| Prose, a historical note, a pattern's worked example, a quoted README | **Leave it.** Rewriting falsifies what an earlier pass actually read. |
+
+🔵 **Measured on this base: of `3` non-canonical shelf addresses found, `2` were row defects and `1` was a deliberate prose reference** (`Frederikmh90/RUCAI`, which `agents/top.md` cites in prose while its row correctly uses the organisation address). **A blind `sed` would have been wrong one time in three.**
+
 🔵 **Rate budget, measured:** the search endpoint allows **`30` requests/minute**, so a `1,198`-address shelf census takes ~`42` minutes at `2.1 s` spacing. **Run it detached and let it write incrementally** — it is a background cost, not a leg.
 
 🟢 **Immediate dividend beyond the repair: the canonical address carries metadata the stale one cannot.** `verticals/solutions.md` published Open edX as *"not in search index"*; at the live address it is **`8,226★`**, AGPL-3.0, `35,136 B`, sha256₁₂ `e12d78569742`.
