@@ -10,6 +10,68 @@ updated: 2026-11-10
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
+## 🆕 `p749` — the alternative-format office a university already runs: the deployable readers, braille producers and conversion servers, with the licence posture drawn per region, `2026-11-10`
+
+🔴 **The register is the *alt-format production office* — a real, staffed, budgeted unit inside
+almost every university, and this base held `0` of its software.** These are deployable systems, not
+building blocks: a disability-services office runs them, and an AI layer is sold **on top of** them.
+
+| Platform | Repository | Licence — **byte-read this pass** | Stars | What a client already runs it for |
+|---|---|---|---|---|
+| **Thorium Reader** | [`edrlab/thorium-reader`](https://github.com/edrlab/thorium-reader) | **BSD-3-Clause** · `1,506 B` · `Copyright (c) 2017, EDRLab` | `2,937★` | Desktop EPUB reader built **for** accessibility rather than retrofitted. 🟢 **The highest-starred permissive row in the whole tier, and it is European** — EDRLab, Paris — which makes it the natural reference reading app for an EAA-era EMEA deployment. Default branch `develop`. |
+| **NVDA** | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | 🔴 **GPL-2.0-or-later *with two named exceptions*** · `copying.txt`, `53,408 B` | `2,688★` | The screen reader an institution's content **must be tested against** — it is free, so it is what students actually use. See `T420`: the index reads `NOASSERTION` and that is misleading. |
+| **Bookworm** | [`blindpandas/bookworm`](https://github.com/blindpandas/bookworm) | 🔴 **GPL-2.0-or-later** — self-declared `SPDX-License-Identifier` on line `3` of an `18,693 B` payload; index reads **`NOASSERTION`** | `192★` | Accessible document reader across many formats for blind users. The row that covers the formats Thorium does not. Default branch `develop`. |
+| **BrailleBlaster** | [`APHTech/brailleblaster`](https://github.com/APHTech/brailleblaster) | **GPL-3.0** | `17★` | American Printing House's braille transcription desktop — the production tool of an actual alt-format office. Pushed `2026-11-10`: **live today**, despite the star count. |
+| **DAISY Pipeline 2** | [`daisy/pipeline`](https://github.com/daisy/pipeline) | 🔴 **No grant file at `6` probed paths**; README carries no licence statement (`T425`) | `25★` | The document-conversion **server** an alt-format office runs: DOCX / EPUB / PDF → DAISY, braille-ready XML, large print. ⚠️ **Deployable, but not vendorable** — the grant could not be established through this session's channels. |
+
+### 🔴 `T419` — `NOASSERTION` has two distinct causes in this tier and they must not be conflated
+
+Two rows above are indexed `NOASSERTION`, for completely different reasons, and a shelf that treats
+them alike will mis-advise a client:
+
+1. **The grant is present and self-declares SPDX, but the title block is the project name.**
+   `blindpandas/bookworm` opens `Bookworm` / `Copyright (c) 2026 …` / `SPDX-License-Identifier: GPL-2.0-or-later`.
+   🟢 **The licence is knowable with certainty from the payload** — GitHub's classifier simply could not
+   see it. This is `p748`'s `T412` failure mode, recurring on a different estate.
+2. **The grant is a composite of vendored third-party licences with no single primary.**
+   [`ryersondmp/sa11y`](https://github.com/ryersondmp/sa11y) (`338★`) ships a `21,244 B` `LICENSE.md`
+   naming **MIT `×25`** and **ISC `×3`**. The project's own grant is MIT; the bulk is its dependencies'.
+   🔵 Filed here rather than as a platform row: Sa11y is an *in-page* authoring checker, which makes it
+   a strong candidate for `verticals` at a later pass once somebody decides whether the composite
+   payload is acceptable to a client's legal review.
+
+### 🔴 `T420` — the grant of the single most important program in this tier is at a path nobody probes, and it is not a clean SPDX id
+
+`nvaccess/nvda` publishes its licence at lowercase **`copying.txt`** (`53,408 B`). It is absent from
+all `6` capitalised paths this pass probes, and `COPYING.txt` returns `404` — **the case matters**.
+The payload's own first substantive line:
+
+> *NVDA is available under the GNU General Public License version 2 or later, **with two special exceptions**.*
+
+The exceptions are named as **"Non-GPL Components in Plugins and Drivers"** and **"Microsoft
+Distributable Code"**, and the file states it is authoritative over per-file headers.
+🔴 **So the honest statement to a client is "GPL-2.0-or-later with two exceptions", not "unlicensed"
+and not "GPL-2.0".** That is why the index says `NOASSERTION`: there is no SPDX identifier for it.
+
+### 🔴 Measured nil — recorded because silence looks exactly like coverage
+
+🔴 **There is no deployable, LMS-integrated open-source accessibility platform.**
+`course accessibility checker lms` returns **`1`** repository
+([`johnnyrobot/canvas-accessible-content`](https://github.com/johnnyrobot/canvas-accessible-content),
+Apache-2.0, **`0★`**). The category that institutions actually buy — a checker wired into Canvas or
+Moodle that scores a course and nags the instructor — is **owned outright by the commercial layer**
+(Anthology Ally and its peers). 🟢 **This is the clearest build-versus-buy gap in the education KB:**
+every component needed to construct it is permissively licensed and on `repos/foundations.md`, and
+the integrated product does not exist in open source. See `P246`.
+
+### 🔴 Enumerated and NOT filed — with the reason
+
+- [`brailleapps/dotify`](https://github.com/brailleapps/dotify) — **`ARCHIVED`**, last pushed `2016-10-17`, `3★`, no grant indexed. Ten years dead. Recorded so the braille-formatting layer is not re-searched under this name.
+- [`fluid-project/infusion`](https://github.com/fluid-project/infusion) — `140★`, index `NOASSERTION`, last pushed `2025-01-15`. The Inclusive Design Research Centre's UI toolkit; on-topic and historically important, **not filed** on staleness plus an unresolved grant.
+- [`rhasspy/piper`](https://github.com/rhasspy/piper) — MIT, `11,322★`, but **`ARCHIVED`** and last pushed `2025-08-26`. 🔵 Worth flagging loudly: it is the obvious permissive TTS for a speech-output product, it is MIT, it has eleven thousand stars — **and it is archived**. A successor will find it and assume it is live. It is not.
+- `daisy/pipeline-assembly` — `7★`, no grant at `5` paths; a build harness, not a deployable system.
+
+
 ## 🆕 `p748` — the money layer a client already runs: the deployable aid, fee and scholarship systems, with the licence posture drawn per region, `2026-11-10`
 
 **`10` rows · `2` of them **promotions** of addresses this base has held on a discovery shelf

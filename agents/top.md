@@ -64,6 +64,58 @@ can tell a stale cell from a fresh one.
 
 ## Education-specific agents
 
+## 🆕 `p749` — 🔴 **THE ALTERNATIVE-FORMAT LAYER: THE WHOLE DAISY ESTATE WAS AT `0` MENTIONS ACROSS `748` PASSES — `daisy/ace` `0`, `daisy/pipeline` `0`, `epubcheck` `0`, `liblouis` `0`, `readium` `0`. 🔴 THE AGENT LAYER IS A MEASURED NIL ON ITS TWO CENTRAL QUERIES — `alt text generation llm accessibility` → `0` REPOSITORIES, `captioning lecture accessibility open source` → `0`. 🟢 THE ONE STRONG ROW IS PUBLISHED BY A UNIVERSITY.**
+
+**`6` agent rows (all MIT, all byte-read) · `1` boundary row recorded not shelved · `2` refusals with reasons · `39` addresses probed · `20` licence payloads byte-read · `2` addresses in the `T359` dead-address state · `2` `T302` honest negatives · `T417`–`T425` declared.**
+
+🔴 **The register is *alternative-format production* — what actually converts a course document into something a blind, low-vision or dyslexic student can use.** This base already held the accessibility *testing* layer in part (`axe-core` `30` mentions, `pa11y` `8`, `veraPDF` `55`, `nvaccess` `15`). It held **none of the production layer**: `daisy/ace` `0`, `daisy/pipeline` `0`, `readium` `0`, `epubcheck` `0`, `liblouis` `0`, `speech-rule-engine` `0`, `brailleblaster` `0`, `IBMa/equal-access` `0`, `AccessibilityInsights` `0`, `tactile` `0`, `alternative format` `0`. 🔵 **Testing tells an institution it has a problem; this tier is what fixes it, and it was absent.**
+
+### 🔴 The agent nil, with its denominators — this is the finding, not a shortfall
+
+Every total below from `gh api -X GET search/repositories`, this pass:
+
+| Demand query | Repositories | Best on-topic row |
+|---|---|---|
+| `alt text generation llm accessibility` | **`0`** | — |
+| `captioning lecture accessibility open source` | **`0`** | — |
+| `course accessibility checker lms` | **`1`** | `johnnyrobot/canvas-accessible-content`, **`0★`**, Apache-2.0 |
+| `wcag remediation agent llm` | **`1`** | `marcia-pippin/ai-accessibility-advisor`, **`0★`**, **no grant** |
+| `epub accessibility checker` | **`4`** | `daisy/ace`, `101★` |
+| `a11y mcp server` | **`69`** | `ronantakizawa/a11ymcp`, `95★`, MIT |
+| `pdf accessibility remediation` | **`85`** | `ASUCICREPO/PDF_Accessibility`, `137★`, MIT |
+| `alt text llm` | **`59`** | `lukeslp/alt-text-local-llm`, `13★`, MIT |
+
+🟢 **Read the table as a shape, not a shortage (`T424`).** The *MCP sub-layer* is alive — `69` repositories, four of them real and MIT — because wiring `axe-core` to an agent is a weekend's work. The *remediation* sub-layer is alive only for PDF. **The two things an institution is actually bought for — generating alt text at corpus scale and captioning lecture media — return `0` repositories each.** That is the gap, and it is enormous relative to the deadline in the next section.
+
+### The `6` rows
+
+| Agent | Repository | Licence — **byte-read this pass** | Stars | What it does in this register |
+|---|---|---|---|---|
+| **ASU PDF Accessibility** | [`ASUCICREPO/PDF_Accessibility`](https://github.com/ASUCICREPO/PDF_Accessibility) | **MIT** · `1,064 B` · title block `MIT License` / `Copyright (c) 2025 ASU CIC` | `137★` | AWS-deployed pipeline that remediates untagged PDFs at scale: adds structure tags, fixes reading order, generates alt text. 🟢 **The only row in this tier published by a university** — Arizona State University's Cloud Innovation Center — so it is the one row whose provenance a provost recognises. |
+| **a11y MCP** | [`ronantakizawa/a11ymcp`](https://github.com/ronantakizawa/a11ymcp) | **MIT** · `1,071 B` | `95★` | MCP server exposing `axe-core`'s rule set to any agent. The cheapest way to give an existing agent a WCAG opinion. |
+| **MCP Accessibility Scanner** | [`JustasMonkev/mcp-accessibility-scanner`](https://github.com/JustasMonkev/mcp-accessibility-scanner) | **MIT** · `1,064 B` | `59★` | Playwright + `axe-core` over MCP; returns annotated screenshots, so a human reviewer sees *where* the violation is rather than a selector. |
+| **mcp-axe** | [`manoj9788/mcp-axe`](https://github.com/manoj9788/mcp-axe) | **MIT** · `1,068 B` | `10★` | `axe-core` over Playwright **and** Selenium, with batch URL scanning — the row to use when the estate to scan is a course catalogue, not a page. |
+| **alt-text-local-llm** | [`lukeslp/alt-text-local-llm`](https://github.com/lukeslp/alt-text-local-llm) | **MIT** · `1,084 B` | `13★` | Alt text from a **local** vision model, no cloud egress. 🟢 **This is the FERPA / GDPR-safe row**: student-submitted images never leave the institution. Small, but it is the only row in the tier that clears the data-protection objection by construction. |
+| **alt-text-llm** | [`AlexanderMattTurner/alt-text-llm`](https://github.com/AlexanderMattTurner/alt-text-llm) | **MIT** · `1,085 B` | `9★` | Finds missing alt text across a Markdown / static-site corpus and drafts it **for human review** rather than committing it. The review step is the point: see `T424` and `P247`. |
+
+### 🟡 Recorded as a boundary, not shelved as a row
+
+- [`priyankark/a11y-mcp`](https://github.com/priyankark/a11y-mcp) — **MPL-2.0**, byte-read at `16,725 B` (`Mozilla Public License Version 2.0`), `53★`. MPL-2.0 is **file-level** copyleft: perfectly shippable as a separate service, a decision that needs making if it is vendored into a client codebase. Not a refusal — a row with a condition on it.
+
+### 🔴 Refused, with the reason, so no successor re-buys them
+
+- [`marcia-pippin/ai-accessibility-advisor`](https://github.com/marcia-pippin/ai-accessibility-advisor) — **`0★`, no grant file.** The *only* result for `wcag remediation agent llm`. Refused on the grant, not the stars.
+- [`jonathanalgar/alttexter`](https://github.com/jonathanalgar/alttexter) — **GPL-3.0**, `6★`, **last pushed `2024-06-30`** — roughly `28` months stale as of this pass. On-topic and genuinely the earliest of its kind; refused as an agent row on staleness, recorded here so it is not rediscovered as new.
+
+### 🔴 The instrument findings that govern this pass — read before trusting any address above
+
+🔴 **`T417` — the URL-verification channel this register is specified to use is closed in this session.** `curl -sI https://github.com/<owner>/<repo>` returns **`403`** on `3 / 3` hosts probed; the agent proxy does not pass `github.com` HTML. **A `403` here is not a `404`** and must never be recorded as a dead address. The channel that does work is `gh api -X GET search/repositories -f q="repo:<owner>/<name>"`, where `total_count == 0` or HTTP `422` is the real "not a canonical current address" signal. Every address on this page was confirmed through that channel.
+
+🔴 **`T418` — `gh api repos/<owner>/<repo>` returns `403` for every repository outside this session's grant**, while `gh api search/repositories` answers for the *same* repository. Per-repo licence and star metadata must therefore be read through the **search** endpoint.
+
+🔴 **`T422` — the two addresses the accessibility literature actually cites are both dead.** `zorkow/speech-rule-engine` → **`422`** and `NSoiffer/MathCAT` → **`422`**. Both moved to organisations: [`Speech-Rule-Engine/speech-rule-engine`](https://github.com/Speech-Rule-Engine/speech-rule-engine) and [`daisy/MathCAT`](https://github.com/daisy/MathCAT). A successor citing the author-named forms will write two `404`s.
+
+
 ## 🆕 `p748` — 🔴 **THE MONEY LAYER: THIS BASE SCORED `financial aid` AT `0` AND NEVER BUILT THE SHELF. 🔴 THE AGENT LAYER IS A MEASURED NEAR-NIL AND A PRE-REGISTERED STUDY SAYS WHY — `κ ≤ 0.079` IN `12 / 12` CELLS. 🔴 THE GOVERNMENT REFERENCE ARCHITECTURE DEPENDS ON A NON-PRODUCTION-ONLY LICENCE.**
 
 **`6` rows · all MIT or Apache-2.0 · all `6` payloads byte-read · `58` addresses probed ·

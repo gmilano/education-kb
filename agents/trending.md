@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p749) — 🔴 **THE ALTERNATIVE-FORMAT LAYER: `748` PASSES HELD THE ACCESSIBILITY *TESTING* TIER AND `0` OF THE *PRODUCTION* TIER. 🔴 THE TWO THINGS CLIENTS ACTUALLY BUY RETURN `0` REPOSITORIES EACH. 🔴 THE PRESCRIBED `curl -sI` VERIFICATION CHANNEL IS PROXY-BLOCKED AND A `403` IS NOT A `404`. 🟢 THE STRONGEST ROW IN THE TIER IS PUBLISHED BY A UNIVERSITY.**
+
+**`6` agent rows (all MIT) · `10` foundations rows · `5` platform rows · `39` addresses probed ·
+`20` licence payloads byte-read · `2` `T359` dead addresses found · `2` `T302` honest negatives ·
+`1` MPL-2.0 boundary row recorded not shelved · `2` refusals with reasons · `T417`–`T425` declared ·
+all `5` regional blocks written this pass.**
+
+### What is new this week in this register
+
+🟢 **`daisy/MathCAT` is live today** — pushed `2026-11-10`, MIT, `131★`. MathML → speech **and**
+braille (Nemeth, UEB). 🔴 **And the address the literature cites for it, `NSoiffer/MathCAT`, is now
+`422`** — it moved into the `daisy` organisation. Same story for
+`zorkow/speech-rule-engine` → [`Speech-Rule-Engine/speech-rule-engine`](https://github.com/Speech-Rule-Engine/speech-rule-engine)
+(Apache-2.0, `105★`, pushed `2026-10-30`). **Two of the tier's canonical citations are dead links** (`T422`).
+
+🟢 **`ASUCICREPO/PDF_Accessibility` (MIT, `137★`) is the find of the pass** — Arizona State
+University's Cloud Innovation Center shipping an AWS-deployed PDF remediation pipeline under MIT.
+🔵 **It is the only agent row in this tier with university provenance**, which is exactly what makes it
+sellable into a provost's office.
+
+🔴 **`rhasspy/piper` is archived.** MIT, `11,322★`, last pushed `2025-08-26`, flag `ARCHIVED`. It is the
+obvious permissive TTS choice and a successor *will* reach for it. Recorded here so that does not happen.
+
+### The demand measurement, which is the point of the section
+
+All totals from `gh api -X GET search/repositories`, this pass:
+
+| Demand query | Repositories | Reading |
+|---|---|---|
+| `alt text generation llm accessibility` | **`0`** | 🔴 The single highest-volume remediation task in education has **no** open-source agent. |
+| `captioning lecture accessibility open source` | **`0`** | 🔴 Lecture capture is universal; its accessibility layer is absent. |
+| `course accessibility checker lms` | **`1`** (`0★`) | 🔴 The product institutions actually buy does not exist in the open. |
+| `wcag remediation agent llm` | **`1`** (`0★`, no grant) | 🔴 Refused. |
+| `epub accessibility checker` | **`4`** | `daisy/ace` at `101★` is the whole category. |
+| `accessible math braille` | **`3`** | `daisy/MathCAT` is effectively alone. |
+| `a11y mcp server` | **`69`** | 🟢 The one healthy sub-layer. |
+| `pdf accessibility remediation` | **`85`** | 🟢 Healthy, and ASU's row leads it. |
+| `braille translation` | **`332`** | Mature, and uniformly copyleft (`T423`). |
+| `screen reader` | **`3,583`** | Mature; the runtime tier, not the build tier. |
+
+🟢 **`T424`, stated as a shape:** where the work is *wiring an existing rules engine to an agent*, open
+source is alive (`a11y mcp server` → `69`). Where the work is *generating content at corpus scale* —
+alt text, captions — it is **`0`**. The gap is not that nobody wants it; it is that the generation tier
+is where the per-item cost and the human-review obligation live. See `P247`.
+
+### 🔴 The instrument corrections, and they govern every address in this pass
+
+🔴 **`T417` — the channel this register specifies for URL verification does not work here.**
+`curl -sI https://github.com/<owner>/<repo>` → **`403`** on `3 / 3` hosts. The agent proxy refuses
+`github.com` HTML. ⚠️ **A `403` is not a `404`**, and a pass that recorded these as dead addresses would
+have deleted a correct shelf. The working channels are
+`gh api -X GET search/repositories -f q="repo:<o>/<n>"` for existence, licence and stars, and
+`raw.githubusercontent.com` for byte-reading payloads — **both confirmed working this pass** (`20 / 20`
+payload reads succeeded on the paths that exist).
+
+🔴 **`T418` — `gh api repos/<owner>/<repo>` is `403` for anything outside this session's repository grant**,
+while `search/repositories` answers for the same repository. All per-repo metadata on this pass came
+through the search endpoint.
+
+🔴 **`T421` — `default_branch` is load-bearing, and in this tier it is the *majority*:** `6` rows publish
+from neither `main` nor `master` (`main-4.x`, `develop` ×`4`, `integration`). A probe hard-coded to
+`master` would have produced **six fabricated grant-absences**. Confirms `p747`'s `T401` on a new estate.
+
+### Mandated global supply legs — nil for new rows, the `37`th consecutive time (`P210`)
+
+🟢 **Run as written, recorded as a nil rather than dressed up as rows.**
+`top open source AI agents education 2026 github MIT` returned general-purpose roundups (OpenHands,
+MetaGPT, Aider, Cline, Langflow) with **no education-specific MIT list**, and one useful warning that
+"open source" is increasingly applied to source-available licences that forbid competing with the
+vendor's hosted offering. `github trending education AI 2026` returned **DeepTutor, ChinaTextbook,
+Claw-ED, interactive-learning and microsoft/ai-agents-for-beginners — all already held**.
+`open source platform education ERP CRM MIT Apache` returned **OpenEduCat vendor pages**, already held
+and already correctly licensed on this base; the leg surfaced Krayin (MIT) and Huly (Apache-2.0), neither
+education-specific, and ERPNext (GPL-3.0), already held. 🔴 **A shelf `grep` found every named repository
+already present.** Every row filed this pass came from register-shaped `gh` queries, not from the
+mandated legs — which now trail the shelves by a wide margin.
+
+
 ## 🆕 2026-11-10 (p748) — 🔴 **THE MONEY LAYER: `financial aid` WAS SCORED `0` AND THE SHELF WAS NEVER BUILT. 🔴 THE AGENT TIER IS A MEASURED NEAR-NIL — `0` REPOSITORIES ON THREE OF THE SIX DEMAND QUERIES — AND A PRE-REGISTERED STUDY SAYS WHY: `κ ≤ 0.079` IN `12 / 12` CELLS. 🔴 THE GOVERNMENT REFERENCE ARCHITECTURE PINS A NON-PRODUCTION-ONLY LICENCE.**
 
 **`6` agent rows (all MIT or Apache-2.0) · `10` foundations rows · `10` platform rows · `58`

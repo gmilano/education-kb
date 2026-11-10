@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P246–P250 — added at p749 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the recipe.**
+This set is the **alternative-format layer's**: converting course content into something a blind,
+low-vision or dyslexic student can use. 🔴 **One finding governs all five and should be read first
+(`T424`): the generation tier — alt text at corpus scale, lecture captions — returns `0` repositories,
+while the wiring tier returns `69`.** 🟢 **So every pattern here sells the *pipeline and the review
+workflow*, and uses open source for the parts that are solved.** The second governing finding is
+`T423`: the checkers are permissive `10 / 10`, the assistive runtime is copyleft `8 / 8`, and `P248`
+is what keeps that from contaminating client code.
+
+## P246 — The Title II remediation pipeline: validate, score, remediate, re-validate, and keep the evidence (North America first, all regions; 6–10 weeks)
+
+**The demand is a dated legal obligation, not a preference.** The DOJ's ADA Title II web and mobile
+rule now bites **2027-04-26** for public entities serving `≥ 50,000` people and **2028-04-26** for
+smaller entities and special districts, at **WCAG 2.1 AA** — see `intel/market.md` for the extension and
+why it does not reduce the work. Public universities and school systems are squarely in scope.
+
+**Wire it in this order. Every component is byte-read permissive except where marked.**
+
+1. **Inventory and triage** — [`manoj9788/mcp-axe`](https://github.com/manoj9788/mcp-axe) (**MIT**, `1,068 B`, `10★`) for batch URL scanning across the course catalogue, because it is the one agent row that takes a *list* rather than a page. Pair with [`GoogleChrome/lighthouse`](https://github.com/GoogleChrome/lighthouse) (**Apache-2.0**, `31,035★`) as the CI gate.
+2. **Scanned back catalogue first** — [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/OCRmyPDF) (**MPL-2.0**, `35,288★`). 🔵 In practice most of an institution's inaccessible content is **scanned PDF**, which no checker can even read until this step runs. Note the address: `jbarlow83/OCRmyPDF` is `422`.
+3. **Remediate the PDFs** — [`ASUCICREPO/PDF_Accessibility`](https://github.com/ASUCICREPO/PDF_Accessibility) (**MIT**, `1,064 B`, `137★`). 🟢 **Lead with this one in the proposal**: it is published by **Arizona State University's Cloud Innovation Center**, so its provenance answers the "has a real university done this?" question before it is asked.
+4. **Conformance-check the output** — [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) (**GPL-3.0**, `353★`, default branch `integration`) for **PDF/UA**. 🔴 Copyleft: run it as a **CLI step in the pipeline**, never linked into a product (`P248`).
+5. **For EPUB and OER content** — [`w3c/epubcheck`](https://github.com/w3c/epubcheck) (**BSD-3-Clause**, `1,990★`) for structural validity, then [`daisy/ace`](https://github.com/daisy/ace) (**MIT**, `LICENSE.txt`, `101★`) for the **EPUB Accessibility 1.1 conformance report**. Order matters: Ace's output is unreliable on a structurally invalid EPUB.
+6. **Auditor-legible reporting** — [`microsoft/accessibility-insights-web`](https://github.com/microsoft/accessibility-insights-web) (**MIT**, grant on line `3`) and/or [`IBMa/equal-access`](https://github.com/IBMa/equal-access) (**Apache-2.0**, default branch `main-4.x`). 🔵 **This step is the deliverable, not a nicety.** The obligation is evidentiary: the client has to show what it fixed and when.
+
+🟢 **What Globant sells here is the pipeline, the review workflow and the evidence trail** — because
+`course accessibility checker lms` returns **`1`** repository at **`0★`** (`T424`), the integrated product
+genuinely does not exist in open source while every component of it is permissively licensed.
+
+## P247 — Alt text at corpus scale with a local model, because the blocker is egress and review, not the model (all five regions; 3–4 weeks to a reviewed pilot)
+
+🔴 **`alt text generation llm accessibility` returns `0` repositories.** The two usable rows found this
+pass are small and must be treated as starting points:
+[`lukeslp/alt-text-local-llm`](https://github.com/lukeslp/alt-text-local-llm) (**MIT**, `1,084 B`, `13★`)
+and [`AlexanderMattTurner/alt-text-llm`](https://github.com/AlexanderMattTurner/alt-text-llm)
+(**MIT**, `1,085 B`, `9★`).
+
+**Two design rules, and both come from the register rather than from taste:**
+
+- 🟢 **Run the vision model locally.** `alt-text-local-llm` exists precisely so images never leave the institution. Student-submitted media is **FERPA** material in North America and **GDPR** special-category data the moment it depicts a person in EMEA. 🔵 **The data-protection objection kills cloud alt-text pilots in universities far more often than quality does**, and this row clears it by construction.
+- 🔴 **Never auto-commit.** `alt-text-llm`'s design — find the gaps, draft, queue **for human review** — is the correct one. A confidently wrong alt text is **worse than a missing one**: a missing one tells the student to ask, a wrong one lies to them. The review queue is the product.
+
+**Wire it as:** corpus crawl → gap list (`alt-text-llm`) → local VLM draft (`alt-text-local-llm`) →
+**human review queue** → commit → regression scan (`mcp-axe`). 🔵 Refused for this pattern:
+[`jonathanalgar/alttexter`](https://github.com/jonathanalgar/alttexter) — on-topic and the earliest of its
+kind, but **GPL-3.0 and last pushed `2024-06-30`**.
+
+## P248 — The copyleft boundary for assistive technology: ship the checker, *call* the runtime (architectural; 1 week to decide, binding thereafter)
+
+**The rule, from `T423`'s `18 / 18` zero-crossover measurement:**
+
+| Layer | Licences | What Globant may do |
+|---|---|---|
+| Checkers, validators, format specs | MIT ×`4`, Apache-2.0 ×`3`, BSD-3-Clause ×`3` | 🟢 **Vendor, modify, embed, ship closed.** No obligation reaches client code. |
+| Assistive-technology runtime | LGPL-2.1, LGPL-3.0, GPL-2.0+ ×`2`, GPL-3.0 ×`3`, MPL-2.0 ×`2` | 🔴 **Call it, deploy it unmodified, or package it. Do not link it into the product.** |
+
+**The three boundaries that actually come up:**
+
+- [`liblouis/liblouis`](https://github.com/liblouis/liblouis) is **LGPL-2.1** (`COPYING.LESSER`, `26,530 B`, `353★`) — essentially all braille output passes through it. 🟢 **Dynamic linking keeps client code clean**; this is the one copyleft row with a comfortable answer. But [`liblouis/liblouisutdml`](https://github.com/liblouis/liblouisutdml) is **GPL-3.0**, one tier up, and it is the one that formats *documents*. 🔴 Teams reach for the second while thinking of the first.
+- [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) is **MPL-2.0** (`7,792★`, default branch `develop`) and sits under **four of the six agent rows** on `agents/top.md`. File-level copyleft, so it is shippable — **but it must be declared**, and a team that adopted an MIT MCP server rarely notices it inherited an MPL dependency.
+- `nvaccess/nvda` is **GPL-2.0-or-later with two named exceptions** (`copying.txt`, `53,408 B`, `T420`). 🔵 It is not a dependency at all — it is the **test target**. Budget it as QA, not as code.
+
+## P249 — EMEA: the EN 301 549 version pre-flight, run before anything is promised in writing (EMEA; 2–5 days)
+
+🔴 **There are two live versions of the harmonised standard and they are not interchangeable.**
+**EN 301 549 V4.1.1** was published by ETSI/CEN/CENELEC on **2026-09-02** and is the first to carry a
+compliance framework built for the **European Accessibility Act**. **V3.2.1 remains the version cited in
+the Official Journal**, which is what confers the presumption of conformity.
+
+**So the pre-flight, in order:**
+
+1. **Check the Official Journal citation yourself, on the day.** 🔵 If v4.1.1 has not been cited, conformance claims must still be made against **v3.2.1** — v4.1.1 is published but not yet harmonised.
+2. **Separate the two legal regimes**, because clients conflate them: **public** universities sit under the Web Accessibility Directive and its national transpositions (Spain's **RD 1112/2018** is the clearest example); **private** providers' digital services sit under the **EAA**, applicable since **2025-06-28**.
+3. **Pin the WCAG version in the contract.** The instruments cite **2.0 / 2.1**; W3C's current Recommendation is **2.2**. 🟢 **Build to 2.2 and certify against whatever the instrument names** — the delta is small, and it makes the deliverable durable instead of needing a re-audit on the next citation.
+4. **Then run `P246`'s pipeline**, with [`IBMa/equal-access`](https://github.com/IBMa/equal-access) (**Apache-2.0**) as the reporting engine — its rule set maps to EN 301 549 clauses rather than only to WCAG success criteria, which is what an EMEA audit asks for.
+
+⚠️ Also in scope for EMEA and frequently missed: **EU AI Act Annex III** high-risk obligations for
+education apply from **2027-12-02**, and **emotion recognition in educational institutions is a
+*prohibited* practice**, in force since February 2025 (`p748`). An "engagement-detection" feature
+attached to an accessibility product is unsellable in EMEA, not merely regulated.
+
+## P250 — Accessible mathematics, which is the one tier where open source is genuinely complete (all five regions; 4–6 weeks)
+
+🟢 **This is the pattern to lead with when the client is a STEM faculty**, because the stack is MIT and
+Apache-2.0 end to end and the problem is otherwise notoriously expensive.
+
+1. **Rendering** — [`mathjax/MathJax`](https://github.com/mathjax/MathJax) (**Apache-2.0**, `10,946★`). Already present in most HE course content, so step one is usually "confirm it is there".
+2. **Speech** — [`Speech-Rule-Engine/speech-rule-engine`](https://github.com/Speech-Rule-Engine/speech-rule-engine) (**Apache-2.0**, `10,174 B`, `105★`, default branch `develop`). MathML → spoken maths.
+3. **Braille and speech together** — [`daisy/MathCAT`](https://github.com/daisy/MathCAT) (**MIT**, `1,065 B`, `131★`, pushed `2026-11-10`). MathML → **Nemeth and UEB braille** plus speech. 🔴 **Cite this address, not `NSoiffer/MathCAT`, which is now `422`** (`T422`).
+4. **Reading surface** — [`edrlab/thorium-reader`](https://github.com/edrlab/thorium-reader) (**BSD-3-Clause**, `1,506 B`, `2,937★`, default branch `develop`) plus [`readium/css`](https://github.com/readium/css) (**BSD-3-Clause**, `127★`) for the user-settings model that low-vision and dyslexic readers need.
+5. **Deliverable** — [`marisademeglio/eleventypub`](https://github.com/marisademeglio/eleventypub) (**MIT**, `87★`) to emit accessible EPUB from a static course site, then [`daisy/ace`](https://github.com/daisy/ace) to produce the conformance report.
+
+🔵 **Scarcity note, so the pitch is honest:** `accessible math braille` returns **`3`** repositories and
+`mathml accessibility` returns **`26`**. `daisy/MathCAT` is effectively the entire category. That is a
+**concentration risk** worth naming to the client — and also why this capability is a differentiator
+rather than a commodity.
+
+
 ## 🆕 P241–P245 — added at p748 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the recipe.**

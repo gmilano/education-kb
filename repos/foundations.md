@@ -33,6 +33,74 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p749` (2026-11-10) — 🟢 **THE ALTERNATIVE-FORMAT ESTATE: `10` PERMISSIVE ROWS FROM A TIER THIS BASE HELD AT `0` MENTIONS. 🔴 THE LICENCE GRADIENT RUNS ALONG THE *LAYER* AND IT IS CLEAN: EVERY CHECKER AND EVERY FORMAT SPEC IS PERMISSIVE, EVERY ASSISTIVE-TECHNOLOGY RUNTIME IS COPYLEFT, `8 / 8`, NO CROSSOVERS. 🔴 TWO `daisy` REPOSITORIES HAVE NO GRANT FILE AT ALL.**
+
+### 🟢 `T423` — the gradient, measured on the whole tier, and the architectural rule falls straight out
+
+This confirms `T360`'s layer seam a **fourth** time, on an estate no prior pass had touched, and this
+time with **zero crossovers in either direction**:
+
+| Layer | Rows | Licences observed | Crossovers |
+|---|---|---|---|
+| **Checkers, validators and format specs** — what tells you the content is broken | `10` | MIT ×`4`, Apache-2.0 ×`3`, BSD-3-Clause ×`3` | **`0`** |
+| **Assistive-technology runtime** — what the disabled student actually runs | `8` | LGPL-2.1, LGPL-3.0, GPL-2.0+, GPL-3.0 ×`3`, MPL-2.0 ×`2` | **`0`** |
+
+🟢 **The rule, stated once so this shelf stops rediscovering it:** *Globant can own and ship the
+checking, conversion and reporting layer outright. It cannot vendor the assistive-technology
+runtime — it must call it, package it, or deploy it unmodified.* Nothing in this tier forces a
+copyleft obligation onto client code **unless somebody links the braille or speech engine into the
+product**, and `P248` is the pattern that keeps that from happening by accident.
+
+### The permissive core — what Globant can build on and ship
+
+| Repository | Licence — **byte-read this pass** | Stars | Role in the pipeline |
+|---|---|---|---|
+| [`w3c/epubcheck`](https://github.com/w3c/epubcheck) | **BSD-3-Clause** · `1,561 B` · `LICENSE.md`, redistribution + "Neither the name" clauses confirmed | `1,990★` | EPUB conformance validator. **The gate that runs before Ace** — structural validity first, accessibility second. |
+| [`daisy/ace`](https://github.com/daisy/ace) | **MIT** · `1,073 B` · `LICENSE.txt` · `Copyright (c) 2017 DAISY Consortium` | `101★` | The EPUB **accessibility** checker, and the reference implementation of the EPUB Accessibility 1.1 conformance report. 🔵 Note `LICENSE.txt`, not `LICENSE` — `5` capitalised paths missed it. |
+| [`daisy/MathCAT`](https://github.com/daisy/MathCAT) | **MIT** · `1,065 B` · `Copyright (c) 2022 NSoiffer` | `131★` | MathML → **speech and braille** (Nemeth, UEB). This is the engine that makes STEM content usable, and it is MIT. |
+| [`Speech-Rule-Engine/speech-rule-engine`](https://github.com/Speech-Rule-Engine/speech-rule-engine) | **Apache-2.0** · `10,174 B` | `105★` | MathML / MathJax → speech rules; the layer under MathJax's own accessibility extension. Default branch **`develop`**. |
+| [`mathjax/MathJax`](https://github.com/mathjax/MathJax) | **Apache-2.0** | `10,946★` | The rendering layer the two rows above plug into. Already the de-facto standard in HE course content. |
+| [`readium/css`](https://github.com/readium/css) | **BSD-3-Clause** · `1,507 B` · `Copyright (c) 2017, Readium` | `127★` | Reading-system CSS including the user-settings model (font, spacing, contrast) that low-vision and dyslexic readers depend on. |
+| [`AccessKit/accesskit`](https://github.com/AccessKit/accesskit) | **BSD-3-Clause** | `1,555★` | Cross-platform accessibility-tree infrastructure. The row to reach for when the client's artefact is a **native or desktop** app, which no web checker can see. |
+| [`microsoft/accessibility-insights-web`](https://github.com/microsoft/accessibility-insights-web) | **MIT** · `1,092 B` — 🔴 **title block is a copyright line; the grant is on line `3`** | `962★` | WCAG assessment tooling (FastPass + guided assessment). The row that produces an **auditor-legible** report rather than a machine list. |
+| [`IBMa/equal-access`](https://github.com/IBMa/equal-access) | **Apache-2.0** · `11,362 B` | `786★` | IBM Equal Access checker engine + CLI. 🔴 Default branch is **`main-4.x`** — see `T421`. |
+| [`GoogleChrome/lighthouse`](https://github.com/GoogleChrome/lighthouse) | **Apache-2.0** | `31,035★` | Its accessibility category is the cheapest CI gate in existence. Not sufficient for conformance, necessary for regression. |
+| [`marisademeglio/eleventypub`](https://github.com/marisademeglio/eleventypub) | **MIT** · `1,071 B` · `Copyright (c) 2019 Marisa DeMeglio` | `87★` | Eleventy → accessible EPUB. The **publishing bridge**: it is how an OER site becomes an alt-format deliverable without a manual conversion step. |
+
+### 🔴 The copyleft runtime layer — a boundary, not a refusal
+
+These are shelved deliberately. An institution's accessibility posture **is** these programs; a
+proposal that omits them is not credible. The licence is a constraint on *linking*, not on *use*.
+
+| Repository | Licence — **byte-read** | Stars | Why it is unavoidable |
+|---|---|---|---|
+| [`liblouis/liblouis`](https://github.com/liblouis/liblouis) | **LGPL-2.1** · `COPYING.LESSER`, `26,530 B` | `353★` | The braille translation tables. **Essentially all braille output on earth goes through this.** LGPL-2.1 — dynamic linking keeps client code clean. |
+| [`liblouis/liblouisutdml`](https://github.com/liblouis/liblouisutdml) | **GPL-3.0** | `31★` | Document → formatted braille. One licence tier **above** `liblouis`, and that step matters. |
+| [`espeak-ng/espeak-ng`](https://github.com/espeak-ng/espeak-ng) | **GPL-3.0** | `7,022★` | The TTS voice NVDA ships with. Testing against NVDA means testing against this. |
+| [`APHTech/brailleblaster`](https://github.com/APHTech/brailleblaster) | **GPL-3.0** | `17★` | American Printing House's braille transcription desktop. Low stars, institutional weight — APH is the US alt-format producer of record. |
+| [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library) | **GPL-3.0** | `353★` | **PDF/UA** and PDF/A validation — the only open conformance check for tagged PDF. Default branch **`integration`** (`T421`). |
+| [`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) | **MPL-2.0** | `7,792★` | The rules engine under **four of the six agent rows** on `agents/top.md`. MPL-2.0 is file-level; it reaches the agent tier as a dependency and should be declared there. Default branch **`develop`**. |
+| [`pa11y/pa11y`](https://github.com/pa11y/pa11y) | **LGPL-3.0** | `4,599★` | CI-oriented accessibility runner. |
+| [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/OCRmyPDF) | **MPL-2.0** | `35,288★` | Scanned PDF → searchable text. 🟢 **This is step one of remediating a scanned course pack**, and in practice most of a university's inaccessible back catalogue *is* scanned. Note the address: `jbarlow83/OCRmyPDF` is now **`422`**. |
+
+### 🔴 `T425` — `T302` honest negatives: no grant text found, and no denominator claimed
+
+- [`daisy/pipeline`](https://github.com/daisy/pipeline) — `25★`, pushed `2026-11-09`, index **`NONE`**. **No grant file at `6` probed paths** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.LESSER`, `LICENCE`), and the `3,599 B` README carries **no licence statement of any kind** — `grep -i 'licen|GPL|copyright'` returns nothing. This is the DAISY Pipeline 2 umbrella; its modules are licensed individually. **Deploy it, do not vendor it.**
+- [`daisy/pipeline-assembly`](https://github.com/daisy/pipeline-assembly) — `7★`, pushed `2026-09-04`. **No grant at `5` probed paths.**
+
+⚠️ Both are recorded as honest negatives in the `T302` sense: *this pass did not find a grant through the channels it has*, which is **not** the claim that none exists. Neither is counted in any licence denominator above.
+
+### 🔴 `T421` — default branch is load-bearing, and in this tier it is the majority finding
+
+`6` of this tier's repositories do **not** publish from `main` or `master`:
+`IBMa/equal-access` → **`main-4.x`**; `dequelabs/axe-core` → **`develop`**;
+`Speech-Rule-Engine/speech-rule-engine` → **`develop`**; `edrlab/thorium-reader` → **`develop`**;
+`veraPDF/veraPDF-library` → **`integration`**; `blindpandas/bookworm` → **`develop`**.
+🔵 **This confirms `p747`'s `T401` on a second estate.** A licence probe hard-coded to `master` would have
+returned `404` on all six and this pass would have reported six fake grant-absences. Read
+`default_branch` from the search payload first, always.
+
+
 ## 🆕 `p748` (2026-11-10) — 🔴 **THE ELIGIBILITY-ENGINE LAYER: `9 / 9` AGPL-3.0 ACROSS FOUR REGIONS AND TWO PUBLISHERS, WITH AN MIT AGENT LAYER DIRECTLY ABOVE IT. 🔴 THE `317★` FLAGSHIP CARRIES NO GRANT FILE. 🔴 TWO MIT PAYLOADS HAVE NO TITLE BLOCK.**
 
 **`10` rows · `31` payloads byte-read this pass, `29 / 31` classified from the title block

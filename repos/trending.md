@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p749) — 🔴 **THE WHOLE DAISY / BRAILLE / EPUB ESTATE WAS AT `0` MENTIONS: `daisy/ace` `0`, `daisy/pipeline` `0`, `epubcheck` `0`, `liblouis` `0`, `readium` `0`, `speech-rule-engine` `0`, `brailleblaster` `0`, `IBMa/equal-access` `0`. 🟢 THE LAYER SEAM IS CONFIRMED A FOURTH TIME AT `18 / 18` WITH ZERO CROSSOVERS. 🔴 TWO `daisy` REPOSITORIES PUBLISH NO GRANT AT ALL.**
+
+**`10` foundations rows · `5` platform rows · `6` agent rows · `39` addresses probed ·
+`20` payloads byte-read · `2` `T302` honest negatives · `2` `T359` dead addresses · `T417`–`T425`
+declared · all `5` regional blocks written.**
+
+### The estates probed this pass, with their denominators — every total from `gh api -X GET search/repositories`
+
+| Estate | Repositories | Top permissive row | Top copyleft row |
+|---|---|---|---|
+| `braille translation` | `332` | — (none in top band) | `liblouis/liblouis` LGPL-2.1 `353★` |
+| `screen reader` | `3,583` | `AccessKit/accesskit` BSD-3 `1,555★` | `nvaccess/nvda` GPL-2.0+ `2,688★` |
+| `wcag checker` | `515` | `GoogleChrome/lighthouse` Apache-2.0 `31,035★` | `pa11y/pa11y` LGPL-3.0 `4,599★` |
+| `accessibility remediation` | `321` | `ASUCICREPO/PDF_Accessibility` MIT `137★` | — |
+| `document accessibility ai` | `692` | `ASUCICREPO/PDF_Accessibility` MIT `137★` | — |
+| `epub accessibility` | `209` | `daisy/ace` MIT `101★` | `blindpandas/bookworm` GPL-2.0+ `192★` |
+| `epub accessibility checker` | **`4`** | `daisy/ace` MIT `101★` | — |
+| `mathml accessibility` | `26` | `daisy/MathCAT` MIT `131★` | — |
+| `accessible math braille` | **`3`** | `daisy/MathCAT` MIT `131★` | — |
+| `tactile graphics` | `49` | — | — |
+| `daisy talking book` | `16` | — | — |
+| `pdf ua tagging` | `33` | `vouchagent/Emboss` Apache-2.0 `24★` | — |
+| `a11y mcp server` | `69` | `ronantakizawa/a11ymcp` MIT `95★` | `priyankark/a11y-mcp` MPL-2.0 `53★` |
+| `alt text llm` | `59` | `lukeslp/alt-text-local-llm` MIT `13★` | `jonathanalgar/alttexter` GPL-3.0 `6★` |
+| `alt text generation llm accessibility` | **`0`** | — | — |
+| `captioning lecture accessibility open source` | **`0`** | — | — |
+| `course accessibility checker lms` | **`1`** | `johnnyrobot/canvas-accessible-content` Apache-2.0 `0★` | — |
+
+### 🟢 `T423` — the layer seam, confirmed a fourth time, and this one has zero crossovers in either direction
+
+`18` rows, split by what the software *does* rather than who publishes it:
+
+- **Checkers, validators, format specs (`10` rows): MIT ×`4`, Apache-2.0 ×`3`, BSD-3-Clause ×`3`.**
+  Not one copyleft row.
+- **Assistive-technology runtime (`8` rows): LGPL-2.1, LGPL-3.0, GPL-2.0-or-later ×`2`, GPL-3.0 ×`3`, MPL-2.0 ×`2`.**
+  Not one permissive row.
+
+🟢 **`0` crossovers.** This is the cleanest confirmation of `T360`'s seam the base has recorded, and it is
+on an estate that no earlier pass had touched. The architectural consequence is `P248`.
+
+### Licence-channel results — `20` payloads byte-read, and the three path findings that matter
+
+🔴 **`daisy/ace` publishes at `LICENSE.txt`.** Five capitalised paths miss it. MIT, `1,073 B`,
+`Copyright (c) 2017 DAISY Consortium`.
+
+🔴 **`nvaccess/nvda` publishes at lowercase `copying.txt`** (`53,408 B`); `COPYING.txt` is a `404`.
+**Case is load-bearing** (`T420`). The grant is **GPL-2.0-or-later with two named exceptions**, which is
+why the index reads `NOASSERTION` — there is no SPDX id for it.
+
+🔴 **`daisy/pipeline` and `daisy/pipeline-assembly` have no grant at `6` and `5` probed paths**, and
+`daisy/pipeline`'s `3,599 B` README has no licence statement (`grep -i 'licen|GPL|copyright'` → empty).
+Recorded as `T302` honest negatives; **neither is counted in any denominator above** (`T425`).
+
+### Index-vs-payload: `2` disagreements, and both are informative
+
+🟢 `18 / 20` payloads agreed with the index. The two that did not:
+
+1. **`blindpandas/bookworm`** — index `NOASSERTION`, payload **self-declares
+   `SPDX-License-Identifier: GPL-2.0-or-later`** on line `3`. The classifier failed only because the title
+   block is the project name. `p748`'s `T412`, recurring.
+2. **`ryersondmp/sa11y`** — index `NOASSERTION`, payload `21,244 B` naming **MIT ×`25`** and **ISC ×`3`**: a
+   composite of vendored dependency licences over an MIT project. 🔵 These two are **not the same defect**,
+   and `T419` separates them.
+
+### 🔵 Also recorded
+
+- `jbarlow83/OCRmyPDF` → **`422`**; the live address is [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/OCRmyPDF) (MPL-2.0, `35,288★`).
+- `brailleapps/dotify` → **`ARCHIVED`**, last pushed `2016-10-17`.
+- `rhasspy/piper` → MIT, `11,322★`, **`ARCHIVED`**, last pushed `2025-08-26`.
+- `fluid-project/infusion` → `140★`, `NOASSERTION`, last pushed `2025-01-15`; on-topic, not filed.
+- `readium/readium-css` → **`422`**; the live address is [`readium/css`](https://github.com/readium/css).
+
+
 ## 🆕 2026-11-10 (p748) — 🔴 **THE ELIGIBILITY-ENGINE LAYER WAS AT `0` MENTIONS: `openfisca` `0`, `policyengine` `0`, `camunda` `0`, `rules-as-code` `0`. 🔴 `9 / 9` ENGINES ARE AGPL-3.0 ACROSS FOUR REGIONS AND TWO PUBLISHERS. 🔴 THE `317★` FLAGSHIP HAS NO GRANT FILE AND ITS ONLY LICENCE STATEMENT IS A PACKAGING CLASSIFIER. 🔴 TWO MIT PAYLOADS HAVE NO TITLE BLOCK.**
 
 **`10` foundations rows · `10` platform rows · `6` agent rows · `58` addresses probed ·

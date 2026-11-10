@@ -6,6 +6,21 @@ updated: 2026-11-10
 
 # Education AI — Market Intelligence
 
+**Pass p749 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
+facts**; the mandated market leg ran and returned a figure range with an explicit education-sector
+**nil**. 🟢 **Each region's newest block is `#### 🆕 p749` under
+[`## Opportunities by region`](#opportunities-by-region), and all five are written this pass — no region
+left at silence.** The register is the **alternative-format layer**: converting course content into
+something a blind, low-vision or dyslexic student can use. 🔴 **The headline is a regulatory correction
+that invalidates most published guidance: the DOJ moved the ADA Title II web-accessibility deadlines to
+`2027-04-26` and `2028-04-26` by interim final rule effective `2026-04-20`, and left the WCAG 2.1 AA
+standard and the underlying obligation untouched.** 🔴 **The second headline is an EMEA version trap:
+EN 301 549 `v4.1.1` was published `2026-09-02` but `v3.2.1` is still the Official-Journal-cited version
+that confers presumption of conformity.** 🔴 **The third is a measured supply nil: the two tasks every
+institution needs — corpus-scale alt text and lecture captioning — return `0` open-source repositories
+each.**
+
+
 **Pass p748 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
 facts**; the mandated market leg paid as well. 🟢 **Each region's newest block is `#### 🆕 p748`
 under [`## Opportunities by region`](#opportunities-by-region), and all five are written this pass —
@@ -182,6 +197,55 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p749` (2026-11-10) — the alternative-format layer: the deadline moved by one year, the obligation did not, and the agent supply is `0`
+
+🔴 **The single most important datum for any North America accessibility engagement: the ADA Title II
+deadline was extended, and most published guidance is now wrong.** DOJ issued an **interim final rule,
+effective `2026-04-20`**, moving the web and mobile accessibility compliance dates of its 2024 Title II
+rule:
+
+| Covered public entity | Was | 🔴 **Now** |
+|---|---|---|
+| Total population **`≥ 50,000`** | `2026-04-24` | **`2027-04-26`** |
+| Total population **`< 50,000`**, and special district governments | `2027-04-26` | **`2028-04-26`** |
+
+🟢 **What did *not* change, and this is the sales point:** the **technical standard is unchanged —
+WCAG 2.1 AA**, and DOJ stated explicitly in the IFR that covered entities **retain their ongoing Title II
+obligation** to make digital services accessible. ⚠️ **Public universities, community colleges and school
+systems are squarely in scope** as public entities. DOJ accepted comments through **`2026-06-22`** and
+signalled a possible separate NPRM for substantive changes. 🔵 The National Federation of the Blind is
+reported to have sued to undo the extension; **no ruling found as of `2026-10-12`** — so the dates above
+are the planning basis, not a settled one.
+
+🔴 **Read the extension correctly or lose the engagement.** A twelve-month slip on a multi-year
+remediation backlog is not relief — for a large university with tens of thousands of untagged PDFs and
+thousands of lecture hours, it is the difference between "late" and "very late". 🟢 **It is also the best
+possible commercial window: the deadline is far enough out to fund a real programme and close enough to
+make it urgent.** Separately, HHS's Section 504 web accessibility deadline in **May 2026** was **not**
+extended by this rule, and it reaches federally-funded education and health-professions programmes.
+
+**Supply — 🔴 the gap is severe and it is measured, not asserted.** `alt text generation llm accessibility`
+→ **`0`** repositories; `captioning lecture accessibility open source` → **`0`**;
+`course accessibility checker lms` → **`1`** at `0★`. The integrated product US institutions actually buy
+is **owned by the commercial layer** (Anthology Ally and peers), while every component needed to build it
+is permissively licensed (`repos/foundations.md`, `10` rows).
+
+🟢 **The one row with the right provenance for this region is American and academic:**
+[`ASUCICREPO/PDF_Accessibility`](https://github.com/ASUCICREPO/PDF_Accessibility) — **MIT**, `137★`,
+Arizona State University's Cloud Innovation Center. 🔵 **Lead with it.** It answers the procurement
+question "has a peer institution actually done this?" before it is asked, and the licence lets Globant
+extend and ship it.
+
+**Market sizing — honest and unflattering.** Digital accessibility *software* is roughly
+**`$0.85B`–`$1.0B`** in 2026 across publishers (Mordor `~$0.85B`; Grand View `$886.7M`; Fortune Business
+Insights `$0.93B`; Precedence `$0.97B`), with the wider market including services near **`$1.75B`**
+(Straits). 🔴 **No publisher found this pass quantifies education-sector remediation spending**; the
+closest is a `6.84%` 2026–2035 education-segment CAGR (Market Research Future, a table fragment, thin
+evidence) and a `> $320M` 2024 North American enterprise ADA-solutions figure that does not break out
+education. ⚠️ **Do not quote an education-accessibility market size to a client — there isn't a credible
+one.** Quote the deadline and the backlog instead; both are verifiable and both are more persuasive.
+
 
 #### 🆕 `p748` (2026-11-10) — the money layer: the register with the clearest budget, the worst agent supply, and a federal portal with no API
 
@@ -1022,6 +1086,55 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p749` (2026-11-10) — the alternative-format layer: two live versions of the harmonised standard, and only one of them confers conformity
+
+🟢 **The finding of the pass for this region, and it is fresh: ETSI, CEN and CENELEC published
+EN 301 549 **V4.1.1** on `2026-09-02`** — the first version carrying a compliance framework designed for
+the **European Accessibility Act**. 🔴 **But `V3.2.1` remains the version cited in the Official Journal**,
+and it is the OJ citation that confers the **presumption of conformity**. ⚠️ **So v4.1.1 is published but
+not yet harmonised**, and a conformance claim made against it today may not be worth anything.
+**Check the Official Journal on the day** — this is `P249`'s step one, and it is a two-hour task that
+protects a whole deliverable.
+
+**The two legal regimes, which clients routinely conflate:**
+
+| Provider | Instrument | Since |
+|---|---|---|
+| **Public** universities, schools, public bodies | **Web Accessibility Directive** + national transpositions (e.g. Spain's **RD 1112/2018**, which references UNE/EN 301 549 directly) | in force |
+| **Private** education providers' digital services | **European Accessibility Act** | **`2025-06-28`** |
+
+🔵 A provost who says "we're covered by the EAA" is usually a public body covered by the WAD, with
+different enforcement and a different reporting duty. Getting this wrong mis-scopes the audit.
+
+**Also binding, and in scope for any accessibility product with an AI layer:** EU AI Act **Annex III**
+high-risk obligations for education apply from **`2027-12-02`** (consistent with this base's `p745`), with
+Article 50 transparency duties already live. 🔴 **And emotion recognition in educational institutions is a
+*prohibited* practice** under the Act, in force since February 2025 (`p748`). ⚠️ **An "engagement" or
+"attention" detection feature bolted onto an accessibility product is unsellable in EMEA, not merely
+regulated** — and vendors do bolt it on, because the same camera pipeline is already there.
+
+**Supply — 🟢 and this is the region where the open-source story is strongest.** The highest-starred
+permissive row in the entire tier is **European**:
+[`edrlab/thorium-reader`](https://github.com/edrlab/thorium-reader) — **BSD-3-Clause**, `2,937★`, built by
+**EDRLab in Paris**, designed for accessibility rather than retrofitted. 🔵 **That provenance is worth
+real money in an EMEA procurement**, where "built in Europe, BSD-licensed" answers both the sovereignty
+and the licence question at once. Pair it with
+[`readium/css`](https://github.com/readium/css) (**BSD-3-Clause**, `127★`) and
+[`IBMa/equal-access`](https://github.com/IBMa/equal-access) (**Apache-2.0**, `786★`), whose rule set maps
+to **EN 301 549 clauses** rather than only to WCAG success criteria — which is exactly the form an EMEA
+audit asks for.
+
+**Adoption context (mandated leg).** Futuresource reports **`67%`** of teachers now using AI tools and
+schools moving from isolated pilots to structured implementation with formal policies; an Epson survey
+across the UK, France, Italy, Germany, Spain and Poland found teachers worried AI is arriving faster than
+schools can manage, with **`76%`** of students expecting to be allowed to use it. The Digital Education
+Council's **EMEA summit (Paris)** gathered `41` leaders from `30` institutions across `14` countries and
+reported governance and measurement gaps as the leading signal. The Commission's **Eurydice** 2026 report
+covers digital/AI integration in school education, and education ministers approved Council conclusions on
+teachers in the era of AI in **May 2026**. 🔵 **Governance maturity is the EMEA buying trigger** — and
+accessibility conformance is the one governance obligation that is already dated and already enforceable.
+
 
 #### 🆕 `p748` (2026-11-10) — the money layer: the strongest public-sector supply of any region, and the only region where a whole technique is banned outright
 
@@ -2043,6 +2156,43 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p749` (2026-11-10) — the alternative-format layer: the standard is being revised upward, the regulator is not yet conformant itself, and private institutions are now on the hook
+
+🔴 **Japan is the region's live story, and it has three distinct moving parts.**
+
+1. **The standard is being revised toward WCAG 2.2** — `JIS X 8341-3`, reported `2026-10-19` as its first substantive revision in roughly a decade. ⚠️ **Sources conflict on the target**: one account says the revision aims at **WCAG 2.1 AA** with government sites expected to comply by **end-2026**, another says it targets **WCAG 2.2**. 🔵 **Recorded as a conflict rather than resolved**, because the difference changes a client's test plan materially. The Digital Agency's own policy page currently names **`JIS X 8341-3:2016` and WCAG 2.2**, at **Level AA**.
+2. 🔴 **The regulator is not yet conformant itself.** The Digital Agency's FY2025 accessibility review, published **`2026-03-31`**, reported only **partial Level A** compliance on its own pages. 🔵 **This is a useful and disarming fact in a Japanese engagement:** the benchmark is aspirational across the board, so a credible staged remediation plan beats a promise of full conformance.
+3. 🟢 **Private institutions are now in scope.** The **2024 amendment** to Japan's disability discrimination act made **reasonable accommodation mandatory for private bodies** — which reaches private schools, universities and *juku*. ⚠️ Several sources still describe private-sector web compliance as voluntary; **those two statements are about different duties** and the accommodation duty is the one that bites.
+
+**The rest of the region, with its gaps stated.** 🟡 **Australia**: federal government sites are required to
+meet **WCAG 2.1 AA** under the Digital Service Standard — **not confirmed against a primary government
+source this pass**, and the Disability Discrimination Act is the underlying instrument. 🟡 **India**:
+**IS 17802** is the national ICT accessibility standard, aligned to WCAG and updated in 2023, with the
+**RPWD Act** framework described as enforceable — 🔴 **nothing found on how either reaches universities**.
+🔴 **No APAC country was found this pass with an education-specific digital accessibility deadline of the
+kind North America and EMEA now have.** ⚠️ **That is an informed gap, not coverage:** the duties exist, but
+they arrive through disability-discrimination law and procurement standards rather than through a dated
+education rule, so the commercial trigger is weaker and the sales motion is different.
+
+**Supply — nothing in this tier is APAC-published.** 🔴 All `18` rows filed this pass originate in North
+America or Europe (DAISY Consortium, W3C, EDRLab, Readium, IBM, Microsoft, Google, ASU, APH, NV Access).
+🔵 **The language consequence is the opportunity.** `liblouis` carries braille tables for many languages
+and is **LGPL-2.1**, so it can be extended; but the *speech* layer is thin for the region's languages, and
+`espeak-ng` (**GPL-3.0**, `7,022★`) is the only broad open voice set — copyleft, so `P248`'s boundary
+applies. 🟢 **CJK and Indic alternative-format production is the clearest unclaimed niche in this whole
+register**, and the permissive checker layer (`daisy/ace`, `epubcheck`, `MathCAT`) works regardless of
+script.
+
+**Adoption context (mandated leg).** Times Higher Education (April 2026) describes **uneven** uptake of
+advanced AI across the region with connectivity a likely constraint, and virtual tutors used by **`30%`**
+of a surveyed cohort; Ipsos's Education Monitor 2026 found **weaker** public support for banning AI in
+Asian schools than for restricting children's social media. The **UAE Ministry of Education** reportedly
+introduced **`25`** generative-AI prohibitions for schools in **February 2026** (secondary source — verify
+against the ministry's own publication). EdTech Hub launched AI-in-education briefs for **Southeast Asia**
+in March 2026, explicitly covering **marginalised learners** — 🟢 the closest thing in the region to an
+accessibility-adjacent policy hook, and worth tracking.
+
+
 #### 🆕 `p748` (2026-11-10) — the money layer: the region with real national entitlement code, and the only region where both new agent rows were built in-market
 
 **Demand — 🟢 fast adoption, fragmented governance, and that combination is the sale.** Growth is
@@ -2983,6 +3133,50 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p749` (2026-11-10) — the alternative-format layer: the statute is the strongest in any region, the enforcement machinery is the weakest, and the university layer is thin
+
+🟢 **Brazil has the region's clearest instrument, and on paper it is more sweeping than the US or EU
+rules.** The **Lei Brasileira de Inclusão (LBI, Lei 13.146/2015)** guarantees digital accessibility across
+websites, applications and online services, and **for education it requires that educational content and
+platforms be accessible at *all levels* of education** — a scope statement broader than ADA Title II,
+which reaches only public entities. Companion standards: **eMAG** (the government's WCAG-derived
+guidelines) and the **ABNT NBR 17225** technical standard, named in a 2026 academic source. Federal
+universities are required to eliminate barriers, provide assistive resources and operate
+**núcleos de acessibilidade**. ⚠️ **Sources disagree on the WCAG baseline** — one cites 2.0, another
+2.1 AA — so pin it per contract (`P249`'s step 3 applies here too).
+
+🔴 **The rest of the region is government-facing, not education-facing.**
+**Argentina**: **Ley 26.653** with standards set by **ONTI provision 6/2019** — aimed principally at
+**government** websites. **Mexico**: a **Norma Mexicana** obliging **federal agencies** to WCAG 2.1 AA;
+🔴 **nothing found this pass on Mexican *university* obligations**. **No confirmed 2026 change** was found
+to either the Argentine or the Mexican instrument.
+
+🔴 **The honest gap, stated plainly: the university-specific accessibility layer is thin across LATAM
+outside Brazil, and most of the available sourcing is vendor compliance marketing rather than primary
+law.** Primary texts — **Planalto** (BR), **Infoleg** (AR), **DOF** (MX) — were not reachable for
+verification through this session's channels and should be read before anything is promised in writing.
+⚠️ **Recorded as a measured gap rather than left silent**, because silence here reads exactly like coverage.
+
+**The structural asymmetry that should drive the pitch.** 🟢 **LATAM's adoption numbers are the highest
+of any region and its governance is the weakest** — the Digital Education Council's February 2026 survey
+found **`92%` of students** and **`79%` of faculty** actively using AI (faculty component: `7,319`
+respondents across `29` institutions), while only about **`30%` of Latin American universities have
+published any AI-use policy**, and UNESCO IESALC's survey of `200` institutions across `19` countries found
+the adoption-versus-governance gap **most pronounced in this region**. 🔵 **Accessibility conformance is the
+easiest governance win to sell into that gap:** unlike AI policy, it has a statute behind it (the LBI), a
+measurable pass/fail, and a deliverable a rector can point to.
+
+**Supply — 🔴 nothing in this tier is LATAM-published, and the Portuguese/Spanish alt-format layer is
+the regional gap.** All `18` rows originate in North America or Europe. 🟢 **But the permissive core is
+language-agnostic**: `daisy/ace`, `w3c/epubcheck`, `daisy/MathCAT` and `eleventypub` work on
+Portuguese and Spanish content unchanged, and `liblouis` (**LGPL-2.1**) already carries braille tables that
+can be extended for regional needs. 🔵 **The buildable product is a Portuguese/Spanish alt-format
+pipeline** — `P246` plus `P247`'s local-model alt text, which also sidesteps the data-residency objection
+that LATAM public institutions raise. Regional actors to engage: **UNESCO IESALC**, **Fundación Ceibal**
+(with EdTech Hub), **Tecnológico de Monterrey's Institute for the Future of Education**, **ECLAC/eLAC**,
+and Chile's **CENIA**, whose UNESCO partnership covers **Latam-GPT**, an open LLM for the region.
+
 
 #### 🆕 `p748` (2026-11-10) — the money layer: the highest adoption and the lowest governance of any region, and a platform nil measured in-language
 
@@ -3988,6 +4182,53 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p749` (2026-11-10) — the alternative-format layer: one structural fact holds in all five regions, and it is the sales argument
+
+🔴 **The cross-regional fact: the standard written into law lags the standard the W3C actually
+recommends, everywhere.** WCAG **2.2** has been the W3C Recommendation since 2023. What the binding
+instruments cite:
+
+| Region | Instrument | Cited standard |
+|---|---|---|
+| **North America** | ADA Title II web/mobile rule (DOJ 2024, dates extended 2026) | **WCAG 2.1 AA** |
+| **EMEA** | EN 301 549 **v3.2.1** (OJ-cited) / **v4.1.1** (published `2026-09-02`, not yet harmonised) | WCAG **2.1**-aligned |
+| **APAC** | `JIS X 8341-3:2016`, under revision; Australia DSS; India IS 17802 | **2.0 / 2.1**, revision aiming higher |
+| **LATAM** | Brazil LBI + eMAG + ABNT NBR 17225; AR Ley 26.653; MX Norma Mexicana | **2.0 / 2.1 AA** (sources conflict) |
+
+🟢 **The architectural recommendation falls straight out and it is the same in every region: build to
+WCAG 2.2, certify against whatever the local instrument names.** The delta between 2.1 AA and 2.2 AA is
+small; the cost of re-auditing an estate when a citation updates is not. 🔵 **This single rule makes an
+accessibility deliverable durable across jurisdictions**, which is exactly what a global client with
+campuses in several regions is buying.
+
+🔴 **The second global fact: the two tasks every institution needs have `0` open-source agents.**
+`alt text generation llm accessibility` → **`0`** repositories.
+`captioning lecture accessibility open source` → **`0`**.
+`course accessibility checker lms` → **`1`** at `0★`. Meanwhile `a11y mcp server` → **`69`** and
+`pdf accessibility remediation` → **`85`**. 🟢 **`T424` explains the split, and the explanation is the
+commercial case:** wiring a rules engine to an agent is free to run and needs no human in the loop, so
+open source does it; generating alt text for tens of thousands of images or captions for thousands of
+lecture hours has a real unit cost **and** an irreducible human-review obligation, because a confidently
+wrong alt text is worse for a blind student than a missing one. 🔵 **That is a services business, not a
+repository** — which is precisely why it belongs to Globant rather than to a maintainer.
+
+🟢 **The third global fact: the licence gradient is clean and it is architecturally decisive** (`T423`).
+Across `18` rows measured this pass with **zero crossovers**: the checker, validator and format-spec layer
+is **permissive `10 / 10`** (MIT ×`4`, Apache-2.0 ×`3`, BSD-3-Clause ×`3`), and the assistive-technology
+runtime is **copyleft `8 / 8`**. 🟢 **Globant can own, extend and ship the entire checking and conversion
+layer outright**; it must call, deploy or package the braille and speech runtime (`P248`). No engagement in
+this register needs a licence negotiation, provided that boundary is drawn on day one.
+
+**Market sizing — stated with its uncertainty.** Digital accessibility *software* is roughly
+**`$0.85B`–`$1.0B`** in 2026 across five publishers, with the broader market including services near
+**`$1.75B`**; forecast CAGRs span **`~6%` to `~20%`**, a spread wide enough that the midpoint is not
+meaningful. 🔴 **No publisher found this pass quantifies education-sector accessibility remediation
+spending.** ⚠️ **So do not quote a market size for this register.** Quote the dated obligations — Title II
+at `2027-04-26` / `2028-04-26`, EAA since `2025-06-28`, EU AI Act Annex III at `2027-12-02` — and the
+measured supply nils. Both are verifiable, and for a buyer facing a deadline they are far more persuasive
+than a market forecast.
+
 
 #### 🆕 `p748` (2026-11-10) — the money layer, globally: the architectural question got a pre-registered answer this pass, and it is the most portable finding in the base
 

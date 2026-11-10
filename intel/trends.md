@@ -4,6 +4,129 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p749` (researched 2026-11-10) — `T417`–`T425`
+
+**Added above `p748`'s `T409`–`T416`.** `p749` changed the register to **alternative-format
+production** — what converts a course document into something a blind, low-vision or dyslexic student
+can actually use. `39` addresses probed, **`20` licence payloads byte-read**, `18 / 20` agreeing with
+the index, **`2` `T302` grant-absences recorded with no denominator claimed**, **`2` canonical
+literature addresses found dead**, `1` MPL-2.0 boundary row recorded rather than shelved.
+
+🔴 **The one-line reading of the pass: the deadline moved, the obligation did not, and the two things
+institutions are actually bought for return `0` repositories each.**
+
+## T417 — 🔴 The URL-verification channel this register is specified to use is closed here, and a `403` is not a `404`
+
+`curl -sI https://github.com/<owner>/<repo>` returns **`403`** on `3 / 3` hosts probed. The agent
+proxy does not pass `github.com` HTML at all. ⚠️ **This is the most dangerous instrument state the base
+has hit**, because the failure is silent and uniform: a pass that treated `403` as "address does not
+exist" would delete correct shelves wholesale and report the deletion as diligence.
+
+**The corrected channel, in two parts, both confirmed working this pass:**
+
+- **Existence, licence, stars, default branch, archived flag** → `gh api -X GET search/repositories -f q="repo:<owner>/<name>"`. `total_count == 0` **or** HTTP **`422`** is the genuine "not a canonical current address" signal (the `T359` state).
+- **Licence payload bytes** → `raw.githubusercontent.com/<owner>/<name>/<default_branch>/<path>`. `20 / 20` reads succeeded on paths that exist.
+
+## T418 — 🔴 `gh api repos/<owner>/<repo>` is scope-refused while `gh api search/repositories` answers for the same repository
+
+`repos/*` returns **`403`** with an explicit session-scope message for every repository outside this
+session's grant. `search/repositories` answers for those identical repositories, with `license.spdx_id`,
+`stargazers_count`, `default_branch`, `pushed_at` and `archived` all present. 🔵 **So "GitHub API blocked"
+is too coarse a claim for this base to keep making** — it is the *per-repo* endpoint that is blocked
+and the *search* endpoint that is not. Earlier passes recorded the API as unavailable; that was half right.
+
+## T419 — 🔴 `NOASSERTION` has two distinct causes in this tier, and conflating them mis-advises a client
+
+| Row | Index | Payload | Cause |
+|---|---|---|---|
+| `blindpandas/bookworm` | `NOASSERTION` | `18,693 B`, line `3` reads **`SPDX-License-Identifier: GPL-2.0-or-later`** | Title block is the **project name**, so the classifier cannot match. 🟢 **The licence is knowable with certainty.** |
+| `ryersondmp/sa11y` | `NOASSERTION` | `21,244 B` naming **MIT ×`25`**, **ISC ×`3`** | A **composite** of vendored dependency licences over an MIT project. 🟡 Knowable, but it needs a legal reading rather than a `grep`. |
+
+🔴 **The first is a classifier defect and should be overridden on the payload. The second is a genuine
+licence-composition question and should be escalated.** A shelf that writes "NOASSERTION — avoid" for both
+loses a `192★` platform for no reason, and waves through a composite that a client's counsel will stop.
+
+## T420 — 🔴 The grant of the most consequential program in this tier sits at a lowercase path and has no SPDX identifier
+
+`nvaccess/nvda` publishes at **`copying.txt`**, `53,408 B`. All `6` capitalised paths this base probes
+return `404`, and so does `COPYING.txt` — **the case is load-bearing**. The payload is self-describing and
+authoritative over per-file headers:
+
+> *NVDA is available under the GNU General Public License version 2 or later, **with two special exceptions**.*
+
+The exceptions are **"Non-GPL Components in Plugins and Drivers"** and **"Microsoft Distributable Code"**.
+🔵 **The honest statement is "GPL-2.0-or-later with two exceptions", not "unlicensed".** This matters
+because NVDA is not a dependency — it is the **test target**: it is free, so it is what students use, so it
+is what an institution's content has to work in. Every accessibility engagement touches it.
+
+## T421 — 🔴 `default_branch` is load-bearing, and in this estate it is the majority case
+
+`6` of `18` rows publish from neither `main` nor `master`:
+
+| Repository | Default branch |
+|---|---|
+| `IBMa/equal-access` | `main-4.x` |
+| `dequelabs/axe-core` | `develop` |
+| `Speech-Rule-Engine/speech-rule-engine` | `develop` |
+| `edrlab/thorium-reader` | `develop` |
+| `blindpandas/bookworm` | `develop` |
+| `veraPDF/veraPDF-library` | `integration` |
+
+🔴 **A licence probe hard-coded to `master` would have returned `404` on all six and this pass would have
+published six fabricated grant-absences.** Confirms `p747`'s `T401` on a second, unrelated estate — which
+promotes it from an observation to a **rule**: read `default_branch` from the search payload before any
+`raw` fetch, always.
+
+## T422 — 🔴 Both addresses the accessibility literature cites for the maths-accessibility layer are dead
+
+`zorkow/speech-rule-engine` → **`422`**. `NSoiffer/MathCAT` → **`422`**. Both moved into organisations:
+[`Speech-Rule-Engine/speech-rule-engine`](https://github.com/Speech-Rule-Engine/speech-rule-engine)
+(Apache-2.0, `105★`) and [`daisy/MathCAT`](https://github.com/daisy/MathCAT) (MIT, `131★`, pushed
+`2026-11-10`). 🔵 The author-named forms are what papers, blog posts and vendor docs cite, so a successor
+researching this tier from the literature will write two `404`s into a client deliverable.
+Also moved: `jbarlow83/OCRmyPDF` → [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/OCRmyPDF);
+`readium/readium-css` → [`readium/css`](https://github.com/readium/css).
+
+## T423 — 🟢 The licence gradient runs along the *layer*, `18 / 18`, with zero crossovers — the cleanest confirmation of the seam this base has
+
+- **Checkers, validators, format specifications (`10` rows): MIT ×`4`, Apache-2.0 ×`3`, BSD-3-Clause ×`3`. No copyleft.**
+- **Assistive-technology runtime (`8` rows): LGPL-2.1, LGPL-3.0, GPL-2.0-or-later ×`2`, GPL-3.0 ×`3`, MPL-2.0 ×`2`. No permissive.**
+
+🟢 **Fourth independent confirmation of `T360`, and the first with `0` crossovers in both directions.**
+The reason is structural rather than cultural: a *checker* is sold to publishers and vendors who need to
+embed it, so it is published permissively to get adopted; a *screen reader or braille translator* is built
+by and for disability communities who use copyleft to keep it free for its users. 🔵 **The seam predicts
+licences in tiers this base has not read yet**, and it yields a hard architectural rule — `P248`.
+
+## T424 — 🔴 The agent layer splits by *task economics*: wiring is alive at `69` repositories, generation is `0`
+
+| Task shape | Query | Repositories |
+|---|---|---|
+| **Wire an existing rules engine to an agent** | `a11y mcp server` | **`69`** |
+| **Remediate one document format** | `pdf accessibility remediation` | **`85`** |
+| **Generate alt text across a corpus** | `alt text generation llm accessibility` | **`0`** |
+| **Caption lecture media** | `captioning lecture accessibility open source` | **`0`** |
+| **Score a course inside the LMS** | `course accessibility checker lms` | **`1`** (`0★`) |
+
+🟢 **The split is not about interest; it is about where the per-item cost and the human-review obligation
+live.** Wiring `axe-core` to MCP is a weekend and costs nothing to run. Generating alt text for `40,000`
+images, or captions for `6,000` lecture hours, has a real unit cost **and** cannot be shipped without human
+review, because a confidently wrong alt text is worse for the student than none. 🔴 **That is precisely why
+it is a services opportunity rather than a repository**, and it is the single most important commercial
+reading in this pass.
+
+## T425 — 🔴 Two `daisy` repositories publish no grant at all, recorded as honest negatives with no denominator claimed
+
+- `daisy/pipeline` — `25★`, pushed `2026-11-09`, index `NONE`. **No grant at `6` probed paths**; its `3,599 B` README contains **no licence statement** (`grep -i 'licen|GPL|copyright'` → empty).
+- `daisy/pipeline-assembly` — `7★`, pushed `2026-09-04`. **No grant at `5` probed paths.**
+
+⚠️ **This is a `T302` honest negative, not a licence verdict:** *this pass did not find a grant through the
+channels it has.* DAISY Pipeline 2 is a modular system whose components are licensed individually, and this
+base cannot read those modules through a blocked `github.com`. 🔴 **The operative advice is therefore
+"deployable, not vendorable"** — which is a real and useful answer, and is how `verticals/solutions.md`
+files it. Neither repository is counted in any licence denominator in this pass.
+
+
 # 🆕 Trends new at `p748` (researched 2026-11-10) — `T409`–`T416`
 
 **Added above `p747`'s `T396`–`T408`.** `p748` changed the register to **student finance — the
