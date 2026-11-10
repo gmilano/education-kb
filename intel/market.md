@@ -165,6 +165,16 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 `p743` (2026-11-10) — the buyer that owns the repository estate, and a statute that names the deliverable
+
+🟢 **Supply here stopped being the NA weakness this pass.** `p724` recorded `0 / 9` new repositories as North American and `p731` found the institutional publisher tier non-empty; `p743` files **`8` NA rows from one tier**: [`IQSS/dataverse`](https://github.com/IQSS/dataverse) (`1,078★`, **Apache-2.0** by payload against an index that says `NOASSERTION`), [`samvera/hyrax`](https://github.com/samvera/hyrax) (`201★`, Apache-2.0), [`samvera/browse-everything`](https://github.com/samvera/browse-everything) (`115★`), [`samvera/hyku`](https://github.com/samvera/hyku) (`108★`), [`pkp/ojs`](https://github.com/pkp/ojs) (`1,051★` / `1,039` forks, GPL-3.0), [`pkp/citeproc-php`](https://github.com/pkp/citeproc-php) (MIT), [`ilios/ilios`](https://github.com/ilios/ilios) (`88★`, **MIT**) and [`Islandora/Crayfish`](https://github.com/Islandora/Crayfish) (MIT).
+
+🔵 **The opportunity shape is different from the district-policy shape this section has repeated for three passes.** These systems are run by *research universities and their libraries* — a buyer with a capital budget, an accreditation calendar and no legislative deadline. The entry points are `P215` (research-data platform), `P216` (permissive microservices over a copyleft estate) and `P217` (health-professions curriculum mapping on an MIT platform).
+
+🟢 **And the statute now names the artefact.** `T369` obtains instrument numbers: **Illinois `HB 316` / Public Act `964`** (AI literacy, grades 6–12, from `1 Aug 2026`) closes `p737`'s declared Illinois nil; **Idaho `SB 1227`** prohibits AI as the *primary basis* for grading, discipline or placement; **New York `A 9190`** restricts classroom AI to grade 9 and above; **California `AB 1159`** would bar student data from model training; **Idaho, Maryland, Oklahoma and Virginia** mandate state guidance **and** district policy. The US Department of Education has finalised a rule prioritising grants for AI-literacy work. ⚠️ **Cite `~71` bills / `27` states (FutureEd), not `134` / `31`** — `p737`'s ruling, re-tested and unchanged.
+
+🔴 **What is still missing here:** no NA row in this tier is an *agent*. The one NA agent row this pass ([`mitodl/agent-kit`](https://github.com/mitodl/agent-kit), BSD-3-Clause) carries `5★` and `0` forks. The region publishes substrate, not agents — third consecutive pass.
+
 #### 🆕 `p742` (2026-11-10) — the state-bill count is contested between sources, and the sellable artefact is still the record rather than the policy
 
 🟡 **All figures below are secondary, per `725-F`.** This pass's North America leg returned **three mutually inconsistent counts of the same thing**, and the disagreement is reported rather than averaged:
@@ -766,6 +776,18 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p743` (2026-11-10) — a permissive research-data stack exists today, and it is CERN's and Germany's
+
+🟢 **`p737` found `serlo` to be the first permissive national-scale education platform here. This pass finds the second, and it is larger and older:** the **Invenio** estate at CERN is **MIT end to end — `6 / 6` payloads byte-read** ([`invenio`](https://github.com/inveniosoftware/invenio) `664★`, [`invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) `187★`, [`invenio-app-ils`](https://github.com/inveniosoftware/invenio-app-ils) `95★`, [`react-searchkit`](https://github.com/inveniosoftware/react-searchkit) `83★`, [`invenio-rdm-records`](https://github.com/inveniosoftware/invenio-rdm-records), [`orcha`](https://github.com/inveniosoftware/orcha)). Germany's NFDI programme adds [`rdmorganiser/rdmo`](https://github.com/rdmorganiser/rdmo) (**Apache-2.0**, `137★`, byte-canonical payload) and [`nfdi4plants/ARCitISA`](https://github.com/nfdi4plants/ARCitISA) (**MIT**, `48★`); the Netherlands adds [`J535D165/datahugger`](https://github.com/J535D165/datahugger) (**MIT**, `91★`).
+
+🔵 **So the sovereignty argument this region keeps making now has a stack to point at** that is permissive, European-authored, actively maintained (three of the six pushed on the day they were read) and does not require a US vendor at any layer. `P215` is that engagement end to end.
+
+🔴 **The licence inversion is the detail to carry into a client conversation (`T364`):** the framework is MIT, but [`zenodo/zenodo`](https://github.com/zenodo/zenodo) — the famous instance built on it — is **GPL-2.0**. Build on `invenio-app-rdm`; do not start from Zenodo's tree.
+
+⚠️ **Regulatory position carried from `T321`, unchanged and still live:** Digital Omnibus = **Regulation (EU) 2026/1744**, in force **`27 Jul 2026`**, high-risk education obligations deferred to **`2 Dec 2027`** — but **Article 50 was not deferred and the AI-literacy duty has applied since Feb 2025**, so disclosure, marking and a literacy measure are due now. The `2 Aug 2026` vs `2 Dec 2027` disagreement is still published by live sources and is still published here as a conflict. `T328` binds: EUR-Lex and the OJ are unreachable from this session, so this is corroboration, not verification.
+
+🔴 **Declared gap, third consecutive pass: no EMEA classroom or institutional adoption numbers at usable quality.** Governance evidence here is strong and usage evidence is absent. The legs run this pass returned regulation and vendor commentary only.
 
 #### 🆕 `p742` (2026-11-10) — the AI Act education date is still contradicted, and the region added two *primary-institution* reports this base can cite by name
 
@@ -1537,6 +1559,16 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p743` (2026-11-10) — the first education-specific instruments, and a measured supply nil in this pass's tier
+
+🟢 **`T370`: APAC now has operative education-AI provisions, not only sentiment.** **Vietnam Decision `33/2026/QD-TTg`** names education among six high-risk sectors and **names automated assessment explicitly** — the most directly usable provision this base holds for the region. **South Korea's AI Basic Act** has been in force since **`22 Jan 2026`**, with enforcement decrees unfinished and a **guidance-first grace period through 2026**. **Australia's TEQSA** requires **every** higher-education provider to file an **institutional action plan** on generative-AI risk.
+
+🔵 **The deliverable is therefore a document, and the regulator has already specified it.** An institutional action plan (AU) and an automated-assessment risk file (VN) are both writable work with a named recipient — the cheapest credible entry into a region where this base has no adoption data. Regional shape for positioning: comprehensive risk-based statutes (South Korea, Vietnam) · targeted regulation (China) · light-touch and principles-based (Japan, Singapore, Australia).
+
+🔴 **Supply nil in this pass's tier, and it was measured rather than assumed.** `org:jpcoar` — Japan's national open-access consortium — returns **`2` repositories (`9★`, `2★`), with no grant on either**. `org:NII-Japan` returns `422`: no such organisation under that name. Against `org:scieloorg`'s **`158`** and `org:lareferencia`'s **`38`**, **LATAM's scholarly infrastructure is on GitHub under reachable organisation names and APAC's is not.** That is a discovery-surface finding, not a claim that the systems do not exist — Japanese and Korean national infrastructure may well be published elsewhere or under names this pass could not reach.
+
+🔴 **Declared gap, third consecutive pass: no APAC classroom or institutional adoption percentages at usable quality.** `p737`'s Ipsos ban-support series (`23 %` Indonesia → `31 %` South Korea, AU/NZ higher) is still the only quantified reading, and **ban-support is not adoption** — the Anglophone APAC markets remain the restrictive ones, which inverts the usual framing.
+
 #### 🆕 `p742` (2026-11-10) — the Philippines is this pass's concrete APAC instrument, and for once the region supplied code as well as regulation
 
 🟢 **The long-standing APAC complaint on this page — "regulated hard, measured not at all", and no supply — is partially answered this pass, in both halves.**
@@ -2255,6 +2287,16 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p743` (2026-11-10) — the region's own scholarly infrastructure is permissive, published and instrumentable
+
+🟢 **This pass places the new tier in LATAM with four rows, three of them permissive and all authored by regional institutions:** [`scieloorg/packtools`](https://github.com/scieloorg/packtools) (**BSD-2-Clause**, pushed `2026-11-09`), [`scieloorg/opac`](https://github.com/scieloorg/opac) (**BSD-2-Clause**), [`scieloorg/articles_meta`](https://github.com/scieloorg/articles_meta) (**BSD-2-Clause**) and [`lareferencia/dspace-stats-collector`](https://github.com/lareferencia/dspace-stats-collector) (**GPL-3.0 by notice**, pushed `2026-11-08`). Denominators: `org:scieloorg` **`158`** repositories, `org:lareferencia` **`38`**.
+
+🔵 **Why this matters next to `T325`'s scissors.** `P197` aims at the district, which is the cheap *school-level* entry. This is the cheap *university-system* entry: the repository and open-access estate is already deployed, already shared across public universities, and its tooling is published by SciELO and LA Referencia themselves rather than by a vendor. `P219` is the recipe, and its first deliverable is a **measurement** (usage events into Matomo) rather than a promise — which is the correct opening in a region where `55 %` of institutions report no budget.
+
+**Carried and re-cited, unchanged:** UNESCO IESALC (Sept 2026, `200` institutions, `19` countries) **`87 %` using AI in at least one area, `74 %` in teaching and learning, `26 %` with any formal framework, `55 %` no budget** · Digital Education Council LATAM 2026 **`92 %` students / `79 %` faculty** · Cetic.br **`53 %` of Brazilian school administrators using AI vs `22 %` with guidelines** · Ceibal **`75 %` of Uruguayan public-school teachers** · UNESCO's LAC Observatory on AI in Education launched **`14 Apr 2026`** · Universidad de los Andes 2026: **`716` AI regulatory instruments across `23` countries and territories, `>80 %` initiated since 2023.**
+
+⚠️ **One licence caution to carry into the first meeting.** `dspace-stats-collector` asserts GPL-3.0 **by notice with the licence body not shipped** (`1,565 B` against `~35,145 B`; `T368`). It is usable and it is the right first component — but raise it before counsel finds it.
 
 #### 🆕 `p742` (2026-11-10) — the adoption/governance gap is now measured on a large sample, and this pass finally supplied the region with code
 
@@ -3021,6 +3063,18 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p743` (2026-11-10) — a tier-sized blind spot, and the three facts from it that travel to any region
+
+🔴 **The finding is about this base before it is about the market.** `11` publisher addresses probed against every shelf, both trending logs and a `3,382`-row address ledger: **`10 / 11` novel, `0` on a live shelf, `0` in the ledger** (`evidence/tier-novelty.2026-11-10-p743.tsv`). The eleventh, `ilios/ilios`, was discovered and byte-read by an earlier pass and never promoted — a backlog defect, not a blind spot, and recorded as the former. CERN/Invenio, Harvard IQSS/Dataverse, Samvera, Islandora, PKP, SciELO, LA Referencia — roughly **`800` repositories across seven publishers**, none of which had ever been addressed in `742` passes. **Cause: every discovery leg ever run here asked for the word *education*, and this tier says *research data*, *institutional repository*, *scholarly publishing* instead (`T363`).** Before any later pass declares supply exhausted, it should change the noun.
+
+🟢 **Three facts from this tier that sell in every region:**
+
+1. **Permissive is the norm here, not the exception.** Of `16` foundations rows filed this pass, `11` are MIT, `3` BSD-2-Clause, `4` Apache-2.0 and `1` GPL-3.0 — the inverse of the LMS layer, where Moodle is GPL-3.0 and Open edX and Canvas are AGPL-3.0.
+2. **The permissive-edge seam is now `7` publishers deep with `0` counter-examples (`T365`).** Islandora, PKP and Opencast join H5P, Instructure, Pix and openHPI. *Enumerate a publisher's components before writing off a copyleft estate* is the single most reusable sales fact this base holds.
+3. **Fork-to-star inversion identifies deployed infrastructure.** `invenio-rdm-records` carries `128` forks on `23★`; `invenio-app-rdm` `207` on `187`; `pkp/ojs` `1,039` on `1,051`. **Rank institutional software on forks, not stars** — stars measure attention and forks measure deployment.
+
+🔴 **And one standing caution, re-measured.** `2` subjects were refused this pass for having no locatable grant at `14` probed paths, one of them an **AI-agent-skills collection published by Harvard** at `48★` ([`harvard-lil/lawskills-hub`](https://github.com/harvard-lil/lawskills-hub), `T366`). Institutional provenance plus an on-topic description is exactly the combination that reaches a client deck unread. ⚠️ **`T328` still binds every regulatory claim on this page:** primary-law hosts are unreachable from this session, so instruments are corroborated across independent secondary sources and disagreements are published rather than resolved.
 
 #### 🆕 `p742` (2026-11-10) — the market-size spread is unchanged, and this pass adds a licence-structure fact that applies in every region
 

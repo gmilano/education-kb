@@ -1,0 +1,35 @@
+address	exists	payload_path	bytes	gate_verdict
+inveniosoftware/invenio	200(README.rst)	LICENSE	1068	MIT
+inveniosoftware/invenio-app-rdm	200(README.md)	LICENSE	1244	MIT
+inveniosoftware/invenio-app-ils	200(README.rst)	LICENSE	1062	MIT
+inveniosoftware/react-searchkit	200(README.md)	LICENSE	1067	MIT
+inveniosoftware/orcha	200(README.md)	LICENSE	1061	MIT
+inveniosoftware/invenio-rdm-records	200(README.rst)	LICENSE	1149	MIT
+IQSS/dataverse	200(README.md)	LICENSE.md	10889	Apache-2.0
+IQSS/dataverse-frontend	200(README.md)	LICENSE	11357	Apache-2.0
+samvera/hyrax	200(README.md)	LICENSE	11565	Apache-2.0
+samvera/hyku	200(README.md)	LICENSE	682	Apache-2.0
+samvera/browse-everything	200(README.md)	LICENSE.txt	11565	Apache-2.0
+samvera/serverless-iiif	200(README.md)	LICENSE	11565	Apache-2.0
+Islandora/Crayfish	200(README.md)	LICENSE	1104	MIT
+Islandora/Alpaca	200(README.md)	LICENSE	1109	MIT
+Islandora/documentation	200(README.md)	LICENSE	1104	MIT
+pkp/ojs	200(README.md)	LICENSE	35149	GPL-3.0
+pkp/citeproc-php	200(README.md)	LICENSE.txt	1085	MIT
+pkp/pkp-lib	200(README.md)	LICENSE	35149	GPL-3.0
+harvard-lil/h2o	200(README.md)	LICENSE	34520	AGPL-3.0
+harvard-lil/lawskills-hub	200(README.md)	-	-	no grant found at probed paths
+ilios/ilios	200(README.md)	LICENSE	1110	MIT
+mitodl/agent-kit	200(README.md)	LICENSE	1499	BSD-3-Clause
+rdmorganiser/rdmo	200(README.md)	LICENSE	11358	Apache-2.0
+cyanheads/pubmed-mcp-server	200(README.md)	LICENSE	11317	Apache-2.0
+J535D165/datahugger	200(README.md)	LICENSE	1074	MIT
+nfdi4plants/ARCitISA	200(README.md)	LICENSE	1066	MIT
+zenodo/zenodo	200(README.rst)	LICENSE	18092	GPL-2.0
+kitodo/kitodo-production	200(README.md)	-	-	no grant found at probed paths
+HicServices/RDMP	200(README.md)	LICENSE	35141	GPL-3.0
+rspace-os/rspace-web	200(README.md)	LICENSE	34523	AGPL-3.0
+scieloorg/packtools	200(README.md)	LICENSE	1289	BSD-2-Clause
+scieloorg/opac	200(README.md)	LICENSE	1294	BSD-2-Clause
+scieloorg/articles_meta	200(README.md)	LICENSE	1319	BSD-2-Clause
+lareferencia/dspace-stats-collector	200(README.md)	LICENSE	1565	GPL-3.0

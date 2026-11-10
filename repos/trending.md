@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-10
 ---
 
+
+## 🆕 2026-11-10 (p743) — 🟢 **SEVEN PUBLISHERS AND ~`800` REPOSITORIES OF RESEARCH-UNIVERSITY INFRASTRUCTURE WERE ABSENT FROM A `3,382`-ADDRESS LEDGER AND EVERY SHELF: `10 / 11` PROBE ADDRESSES NOVEL, AND THE ELEVENTH WAS DISCOVERED LONG AGO AND NEVER PROMOTED. 🟢 `11` OF `16` NEW FOUNDATIONS ROWS ARE MIT, WHICH INVERTS THE LICENCE POSTURE OF THE LMS LAYER. 🔴 A `1,565 B` FILE IS A VALID GPL-3.0 GRANT AND THE INDEX CALLS IT `NOASSERTION`.**
+
+**`16` foundations rows (two new sections) · `5` platform rows (one new section) · `34` payloads byte-read, `32 / 34` classified · `3` index corrections · `2` refusals.**
+
+### The tier, with its denominators — all read this pass from `gh api -X GET search/repositories`
+
+| Channel | Total | Novel to this base |
+|---|--:|---|
+| `org:inveniosoftware` | **166** | all — publisher never addressed |
+| `org:IQSS` | **183** | all |
+| `org:samvera` | **28** | all |
+| `org:Islandora` | **54** | all |
+| `org:pkp` | **87** | all |
+| `org:scieloorg` | **158** | all |
+| `org:lareferencia` | **38** | all |
+| `org:jpcoar` | **2** | 🔴 both, and **neither carries a grant** (APAC nil, measured) |
+| `topic:research-data-management` | **266** | tier not previously swept |
+| `topic:institutional-repository` | **89** | tier not previously swept |
+
+### Filed this pass, by region
+
+| Repo | Stars | Forks | Licence (byte-read) | Region | Shelf |
+|---|--:|--:|---|---|---|
+| [inveniosoftware/invenio](https://github.com/inveniosoftware/invenio) | **664** | 293 | 🟢 **MIT** · `1,068 B` · `bb94102b891c` | **EMEA** | foundations |
+| [inveniosoftware/invenio-app-rdm](https://github.com/inveniosoftware/invenio-app-rdm) | 187 | 207 | 🟢 **MIT** · `1,244 B` · `5bc24a42896d` | **EMEA** | foundations |
+| [inveniosoftware/invenio-rdm-records](https://github.com/inveniosoftware/invenio-rdm-records) | 23 | **128** | 🟢 **MIT** · `1,149 B` · `08fa54ff51ed` | **EMEA** | foundations |
+| [inveniosoftware/react-searchkit](https://github.com/inveniosoftware/react-searchkit) | 83 | 48 | 🟢 **MIT** · `1,067 B` · `8f9ff717c9e9` | **EMEA** | foundations |
+| [rdmorganiser/rdmo](https://github.com/rdmorganiser/rdmo) | 137 | 60 | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` **byte-canonical** | **EMEA** | foundations |
+| [J535D165/datahugger](https://github.com/J535D165/datahugger) | 91 | 17 | 🟢 **MIT** · `1,074 B` · `3217f9308991` | **EMEA** | foundations |
+| [nfdi4plants/ARCitISA](https://github.com/nfdi4plants/ARCitISA) | 48 | 13 | 🟢 **MIT** · `1,066 B` · `f4249e32bb68` | **EMEA** | foundations |
+| [IQSS/dataverse](https://github.com/IQSS/dataverse) | **1,078** | 572 | 🟢 **Apache-2.0** · `10,889 B` · `194b865caa80` ⚠️ index `NOASSERTION` | **North America** | foundations |
+| [samvera/hyrax](https://github.com/samvera/hyrax) | 201 | 141 | 🟢 **Apache-2.0** · `11,565 B` · `a6f86c647017` | **North America** | foundations |
+| [samvera/browse-everything](https://github.com/samvera/browse-everything) | 115 | 21 | 🟢 **Apache-2.0** · `11,565 B` · `a6f86c647017` (same digest, `LICENSE.txt`) | **North America** | foundations |
+| [Islandora/Crayfish](https://github.com/Islandora/Crayfish) | 10 | 29 | 🟢 **MIT** · `1,104 B` · `fcdd83b0db05` | **North America** | foundations |
+| [pkp/citeproc-php](https://github.com/pkp/citeproc-php) | 76 | 44 | 🟢 **MIT** · `1,085 B` · `729e05ddb41a` | **North America** | foundations |
+| [scieloorg/packtools](https://github.com/scieloorg/packtools) | 10 | 25 | 🟢 **BSD-2-Clause** · `1,289 B` · `03aa7e926b57` | **LATAM** | foundations |
+| [scieloorg/opac](https://github.com/scieloorg/opac) | 10 | 22 | 🟢 **BSD-2-Clause** · `1,294 B` · `edc3be5186be` | **LATAM** | foundations |
+| [scieloorg/articles_meta](https://github.com/scieloorg/articles_meta) | 7 | 20 | 🟢 **BSD-2-Clause** · `1,319 B` · `d0ca1bb82451` | **LATAM** | foundations |
+| [lareferencia/dspace-stats-collector](https://github.com/lareferencia/dspace-stats-collector) | 14 | 3 | 🟡 **GPL-3.0 by notice** · `1,565 B` · `ef542e81f188` ⚠️ index `NOASSERTION` | **LATAM** | foundations |
+| [ilios/ilios](https://github.com/ilios/ilios) | 88 | 42 | 🟢 **MIT** · `1,110 B` · `39caa20174d9` | **North America** | platforms |
+| [inveniosoftware/invenio-app-ils](https://github.com/inveniosoftware/invenio-app-ils) | 95 | 60 | 🟢 **MIT** · `1,062 B` · `f4e75a3ce00e` | **EMEA** | platforms |
+| [samvera/hyku](https://github.com/samvera/hyku) | 108 | 55 | 🟢 **Apache-2.0** · `682 B` short-form · `76f849a868d5` ⚠️ index `NOASSERTION` | **North America** | platforms |
+| [pkp/ojs](https://github.com/pkp/ojs) | **1,051** | **1,039** | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | **North America** | platforms |
+| [harvard-lil/h2o](https://github.com/harvard-lil/h2o) | 44 | 30 | 🔴 **AGPL-3.0** · `34,520 B` · `57c8ff33c9c0` | **North America** | platforms |
+
+### 🔴 The mandated vertical-platform leg nil'd again, and its content was wrong where this base is right
+
+`open source platform education ERP CRM MIT Apache` returned OpenEduCat marketing pages and a general ERP/CRM listicle; it **asserted no licence for OpenEduCat at all** and offered Krayin (MIT), Huly (Apache-2.0), ERPNext (GPL-3.0) and Monica (AGPL-3.0) — none of them education systems. This base already holds `openeducat/openeducat_erp` as **LGPL-3.0 by payload** (`8,241 B`, `p727`). **`37`th consecutive nil on the mandated vertical leg.**
+
+### 🟢 Three instrument findings worth re-reading before the next pass
+
+1. **Fork-to-star inversion marks deployed infrastructure** — `invenio-rdm-records` `128` forks / `23★`; `pkp/ojs` `1,039` / `1,051`. Rank this tier on forks.
+2. **The digest, not the byte count, decides a licence cell** (`T367`): Apache-2.0 appeared at `682`, `10,889`, `11,317`, `11,358` and `11,565 B` in one pass, and two repositories shipped the **same digest at different filenames**.
+3. **A grant can be valid and still unusable as evidence** (`T368`): `rdmo` ships canonical Apache-2.0 with the holder template unfilled, so its region had to be placed on the publisher.
+
 ## 🆕 2026-11-10 (p742) — 🟢 **THE LICENCE SEAM IN EDUCATION OSS RUNS ALONG HOST-PLATFORM LINKAGE, AND IT WAS CONFIRMED TWICE INDEPENDENTLY IN ONE PASS: `12 / 12` OF AN ESTATE'S XBLOCKS ARE `AGPL` AND `12 / 12` OF ITS THEMES ARE `MIT`, WITH ZERO CROSSOVERS. 🔴 A REPOSITORY WITH `MIT` AT DEPTH 1 AND `GPL-3.0` AT DEPTH 3, WHICH THE INDEX REPORTS AS `MIT`. 🟢 LATAM SUPPLY IS ORGANISED AROUND *NATIONAL SUBSTRATES*, NOT A STANDARDS STACK — WHICH IS THE OPPOSITE OF EMEA.**
 
 **`11` institutional rows promoted (`6` foundations, `5` platforms) · `21` payloads byte-read, `21 / 21` classified · `0` index-vs-payload disagreements on the family · `1` index **incompleteness** found that no previous pass's instrument could see · `109`-repository owner enumerated end to end · `1` stale shelf address repaired.**

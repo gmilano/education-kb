@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-10
 ---
 
+
+# 🆕 Trends new at `p743` (researched 2026-11-10) — `T363`–`T370`
+
+**Added above `p742`'s `T358`–`T362`.** `p743` asked a different question from the last six passes: not *what is new in education AI* but *who publishes the software a research university already operates*. The answer is a tier of `7` publishers and `~800` repositories that `742` passes and a `3,382`-address ledger had never touched. **`34` licence payloads byte-read, `32 / 34` classified, `2` refused, `3` index values corrected.**
+
+> ⚠️ **Identifier note, honouring `733-K`.** `T363` follows `T362`, the highest `###`/`##` **heading** in this file. Bare `T[0-9]+` matches in prose here reach `T430` and are citations, not identifiers.
+
+---
+
+## T363 — 🔴 A whole publisher tier was invisible to `742` passes because every discovery leg asked for the word "education", and this tier does not use it
+
+**The measurement.** `11` publisher addresses were probed against every live shelf, `README.md`, both trending logs and `evidence/address-ledger.tsv` (`3,382` rows) before any row was written: **`10 / 11` appeared nowhere at all, and `11 / 11` appeared on no live shelf and in no ledger row.** The measurement is committed at `evidence/tier-novelty.2026-11-10-p743.tsv`.
+
+⚠️ **The eleventh is named rather than rounded away, honouring `p742`'s precision rule.** `ilios/ilios` carries `2` mentions, both in the **trending logs**: an earlier pass found it, byte-read its MIT grant, wrote it up and never promoted it to a shelf. That is the `P210` backlog class, not a discovery failure, and the two defects have different fixes — so the headline figure here is `10 / 11`, not `11 / 11`. The publishers are CERN (Invenio — the framework under Zenodo), Harvard IQSS (Dataverse), Samvera, Islandora, PKP (Open Journal Systems), SciELO and LA Referencia.
+
+**Denominators, all read this pass from `gh api -X GET search/repositories`:** `org:inveniosoftware` **`166`** · `org:IQSS` **`183`** · `org:samvera` **`28`** · `org:Islandora` **`54`** · `org:pkp` **`87`** · `org:scieloorg` **`158`** · `org:lareferencia` **`38`** · `topic:research-data-management` **`266`** · `topic:institutional-repository` **`89`** · `topic:digital-library` **`26`** at `>20★` · `topic:open-access` **`52`** at `>20★`.
+
+🔵 **The cause is vocabulary, and it is a generalisation of `p736`'s finding** that phrase-led discovery finds applications and never infrastructure. This tier describes itself as *research data*, *institutional repository*, *digital library*, *scholarly publishing*. Not one of the `40`-plus topics this base has swept (`topic:education`, `topic:ai-tutor`, `topic:edtech`, `topic:lms`, `topic:lti`, `topic:qti`, …) intersects that vocabulary.
+
+🟢 **Consequence for later passes.** The agent-shelf saturation recorded at `p737` across `12` legs is saturation *of a vocabulary*, not of a market. Before declaring supply exhausted, change the noun: ask who runs the system, not who sells the AI.
+
+---
+
+## T364 — 🟢 A permissive estate at CERN scale exists, and the licence inversion inside it is the part that matters
+
+**`6 / 6` payloads across the Invenio estate are MIT**, byte-read this pass: `invenio` (`1,068 B`), `invenio-app-rdm` (`1,244 B`), `invenio-app-ils` (`1,062 B`), `invenio-rdm-records` (`1,149 B`), `react-searchkit` (`1,067 B`), `orcha` (`1,061 B`). All © CERN.
+
+🔴 **And the deployment is copyleft.** [`zenodo/zenodo`](https://github.com/zenodo/zenodo) — the best-known Invenio instance, `1,047★` — is **GPL-2.0** (`LICENSE`, `18,092 B`, read this pass). So the *framework* is MIT and the *instance built on it* is GPL-2.0.
+
+🔵 **Why that is good news rather than a trap.** It is the inverse of `T327`'s pattern: there, permissive components sat over a copyleft core and only the edges were reusable. Here the **core is permissive and only one published instance is copyleft**, so a studio builds on `invenio-app-rdm` and never touches Zenodo's tree. `p737` found `serlo` to be the first permissive national-scale education platform; this is the second and it is older, larger and research-facing.
+
+---
+
+## T365 — 🟢 "Permissive components over a copyleft core" reaches `7` unrelated publishers and still has `0` counter-examples
+
+`p737` recorded `4` instances (H5P, Instructure, Pix, openHPI). This pass adds **three**, all byte-read:
+
+| Publisher | Core | Permissive components |
+|---|---|---|
+| **Islandora** | GPL-3.0 Drupal solution packs (`9` read) | `Crayfish` **MIT** (`1,104 B`), `Alpaca` **MIT** (`1,109 B`), `documentation` **MIT** |
+| **PKP** | `ojs` + `pkp-lib` **GPL-3.0** (`35,149 B`, identical payload) | `citeproc-php` **MIT** (`1,085 B`) |
+| **Opencast** (re-counted) | `opencast` **ECL-2.0** | `studio` **MIT**, `editor` **Apache-2.0**, `octoka` **Apache-2.0** |
+
+🟢 **The operative rule is unchanged and now better evidenced:** enumerate a publisher's component repositories before writing off a copyleft estate. `P216` is the pattern that sells it.
+
+---
+
+## T366 — 🔴 Two refusals this pass, both with real stars, both with no grant at `14` probed paths — and one of them is an AI-agent artefact from a named institution
+
+| Refused | Stars | Index | Probe result |
+|---|--:|---|---|
+| [`harvard-lil/lawskills-hub`](https://github.com/harvard-lil/lawskills-hub) | **48** | `none` | `README.md` → `200`; **`14 / 14` licence paths `404`** |
+| [`kitodo/kitodo-production`](https://github.com/kitodo/kitodo-production) | **77** | `NOASSERTION` | `README.md` → `200`; **`14 / 14` licence paths `404`** |
+
+🔴 **`lawskills-hub` is the dangerous one.** It is literally described as *"a collection of AI agent skills for legal education"*, pushed `2026-10-16`, published by **Harvard's Library Innovation Lab**. Institutional provenance plus an on-topic description plus `48★` is exactly the combination that reaches a client deck unread — and there is no grant to rely on. `736-J` refused `4,886★` on a NonCommercial term; this refuses on the absence of any term at all.
+
+🔵 **Neither is a dead repository**, so neither is a `404` finding: both exist, are maintained and simply do not publish terms at any path the `p738` chain covers. The correct cell is *refused, grant not locatable*, not *no licence*.
+
+---
+
+## T367 — 🟢 Apache-2.0 spans four byte lengths in one pass, one payload is byte-canonical, and the digest — not the size — is the instrument
+
+| Address | Bytes | sha256₁₂ | Note |
+|---|--:|---|---|
+| `IQSS/dataverse` | `10,889` | `194b865caa80` | `LICENSE.md`, one-line preamble above canonical text → index reads `NOASSERTION` |
+| `cyanheads/pubmed-mcp-server` | `11,317` | `7915fc5b0477` | appendix **filled** (`Copyright 2026 Casey Hand @cyanheads`) |
+| `rdmorganiser/rdmo` | `11,358` | `cfc7749b96f6` | **byte-canonical** — identical to the steward's own text read at `T358` |
+| `samvera/hyrax` · `samvera/browse-everything` | `11,565` | `a6f86c647017` | **identical digest at two different filenames** (`LICENSE`, `LICENSE.txt`) |
+| `samvera/hyku` | `682` | `76f849a868d5` | complete short-form notice, no canonical text |
+
+🔴 **`T313` holds and is now sharper.** The spread is `682 B` to `11,565 B` for one family within a single pass, so size carries no information. The **digest does**: `cfc7749b96f6` proves canonicality, and `a6f86c647017` proves two repositories ship the same file. Every Apache cell written from a byte band should be re-read against its digest.
+
+🔵 Same pass, same lesson on the copyleft side: GPL-3.0 at `35,149 B` (`pkp/ojs`, `pkp/pkp-lib`) and `35,141 B` (`HicServices/RDMP`); AGPL-3.0 at `34,520 B` (`harvard-lil/h2o`) and `34,523 B` (`rspace-os/rspace-web`), against `p737`'s `34,280 B`. **Three AGPL byte values now, none diagnostic.**
+
+---
+
+## T368 — 🔴 Two ways a valid grant still fails to answer the question a client's counsel asks
+
+**1. A grant that names no holder.** [`rdmorganiser/rdmo`](https://github.com/rdmorganiser/rdmo) (`137★`, Apache-2.0, byte-canonical) ships the appendix **unfilled**: `Copyright [yyyy] [name of copyright owner]`. The grant is complete and the attribution is absent, so **the row must be placed on its publisher, not its payload** — here the German DFG/NFDI programme. Any region or ownership cell derived from this payload alone would be derived from a template.
+
+**2. A grant asserted by notice, with the terms not shipped.** [`lareferencia/dspace-stats-collector`](https://github.com/lareferencia/dspace-stats-collector) carries a `1,565 B` `LICENSE` that names *GNU GENERAL PUBLIC LICENSE Version 3*, states the standard *"either version 3 of the License, or (at your option) any later version"* notice under `© (C) 2019 LA Referencia` — and then pastes the GPL's own **"how to apply"** boilerplate instead of the licence body. Against GPL-3.0's `~35,145 B` of canonical text this is `4.5 %` of the document.
+
+🟢 **The `p738` gate classifies both correctly** (`Apache-2.0`; `GPL-3.0`) because it decides on the family-name line and the operative clause, never on size — `1,565 B` would defeat any byte-band heuristic. 🔴 **But the index reports `NOASSERTION` for the second one**, which is the third index correction of this pass.
+
+---
+
+## T369 — 🟢 North American AI-in-education law is now citable by instrument number, and `p737`'s Illinois nil is closed
+
+`p737` recorded *"Illinois grades 6–12 / `1 Aug 2026`: unconfirmed and NOT published"*. This pass obtains the instrument: **Illinois `HB 316` / Public Act `964`**, AI-literacy instruction for **grades 6–12**, effective **`1 Aug 2026`**. Also newly named:
+
+- **New York `A 9190`** — classroom AI restricted to **grade 9 and above**, excepting diagnostics and special-education interventions.
+- **California `AB 1159`** — would bar the use of student data to train AI models.
+- **Idaho `SB 1227`** — privacy protections for school AI tools **and** a prohibition on AI as the *primary basis* for grading, discipline or placement.
+- **Four states — Idaho, Maryland, Oklahoma, Virginia —** require **both** state guidance **and** mandatory district-level policy adoption in 2026 law.
+- **US Department of Education**: final rule prioritising federal education grants for projects advancing AI understanding or its ethical use.
+
+🔴 **`p737`'s instruction to cite the lower bill count stands.** The `134` bills / `31` states figure reappeared this pass from the same tracker family, against FutureEd's **`~71` / `27`**. Cite the lower; state the disagreement.
+
+🟢 **The sellable artefact follows from Idaho's wording, not from a vendor's roadmap.** *"Not the primary basis for a decision"* is a requirement for a recorded human-in-the-loop step with an audit trail — the same artefact `T321` says Europe owes, arriving in NA statute.
+
+⚠️ **`T328` binds:** primary-law hosts are unreachable from this session, so every instrument above is corroborated across independent secondary trackers and **not** verified against enacted text.
+
+---
+
+## T370 — 🟢 APAC finally has education-specific instruments rather than only ban-support sentiment, and one of them names automated assessment
+
+- **Vietnam — Decision `33/2026/QD-TTg`** identifies high-risk AI systems across six sectors and **education is one of them, with automated assessment tools named explicitly.** This is the most directly operative education-AI provision this base holds for the region.
+- **South Korea — AI Basic Act in force `22 Jan 2026`**, enforcement decrees still being finalised, with a **guidance-first grace period through 2026** rather than penalties.
+- **Australia — TEQSA** requires **all** higher-education providers to file **institutional action plans** addressing generative-AI risk. The regulator asks for a document, which makes the document the deliverable.
+- **Regional shape:** comprehensive risk-based statutes (South Korea, Vietnam) · targeted regulation (China) · light-touch and principles-based (Japan, Singapore, Australia).
+
+🔴 **The declared APAC gap is not closed and this is its third consecutive pass.** No classroom or institutional **adoption percentages** at usable quality; `p737`'s Ipsos ban-support series (`23 %` Indonesia → `31 %` South Korea) remains the only quantified APAC reading, and ban-support is not adoption.
+
+🔴 **APAC supply in this pass's tier is near-nil and that was measured, not assumed:** `org:jpcoar` — the Japanese national open-access consortium — returns **`2` repositories, `9★` and `2★`, with no grant on either**. `org:NII-Japan` returns `422` (does not exist under that name). Against `org:scieloorg`'s `158` and `org:lareferencia`'s `38`, **LATAM's scholarly infrastructure is on GitHub and APAC's is not** — at least not under the organisation names this pass could reach.
+
 # 🆕 Trends new at `p742` (researched 2026-11-10) — `T358`–`T362`
 
 **Added above `p741`'s `T352`–`T357`.** `p742` ran `ACTION p741-A`: it promoted the LATAM backlog rather than searching for new addresses. `205` backlog addresses swept for metadata, `21` grants byte-read, **`21 / 21` classified**, `15` rows promoted, **`0` rediscoveries** against `p741`'s `44%`.

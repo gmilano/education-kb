@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-10
 ---
 
+
+## 🆕 P215–P219 — added at p743 (2026-11-10)
+
+**All five recipes are built only from rows byte-verified this pass or already filed on this base.** Every component names its repository, its licence and what it does in the wiring; no recipe ends at a product name. `T363` is the reason these exist: the scholarly and research-data tier is where research universities already spend, and this base had no recipe that touched it.
+
+### `P215` — The research-office engagement: a turn-key MIT research-data platform with an agent layer, and not an LMS in sight (research university or national funder; EMEA first)
+
+🔴 **The mis-scope this exists to prevent.** A studio hears *university* and proposes an LMS integration. The research office's budget is not in the LMS — it is in **data-management compliance** (funder mandates, FAIR, DOI minting), and the software that serves it is permissive.
+
+**The recipe — five repositories, four MIT and one Apache-2.0:**
+
+1. **Platform** → [`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) (**MIT**, `187★`, `207` forks, pushed `2026-11-10`). Stand it up first; it is turn-key. Deposit, communities, access requests and DataCite DOI minting out of the box.
+2. **Metadata model** → [`inveniosoftware/invenio-rdm-records`](https://github.com/inveniosoftware/invenio-rdm-records) (**MIT**, `128` forks on `23★`). Extend here, not in the platform tree, when the client's schema does not fit.
+3. **Planning layer** → [`rdmorganiser/rdmo`](https://github.com/rdmorganiser/rdmo) (**Apache-2.0**, `137★`, byte-canonical payload). Questionnaire-driven data-management plans; already the instrument German institutions file against.
+4. **Ingest** → [`J535D165/datahugger`](https://github.com/J535D165/datahugger) (**MIT**, `91★`) pulls deposited datasets by DOI from many sources, so migration is a job rather than a scraper project.
+5. **Agent layer** → [`inveniosoftware/orcha`](https://github.com/inveniosoftware/orcha) (**MIT**, CERN's own research-data AI workflows) plus [`cyanheads/pubmed-mcp-server`](https://github.com/cyanheads/pubmed-mcp-server) (**Apache-2.0**, `167★`) for literature retrieval over MCP.
+
+**Wiring.** InvenioRDM's REST API is the single system of record. `rdmo` writes the plan; a plan-approval webhook creates the draft record in InvenioRDM. `datahugger` runs as a batch job into the deposit API for migration. `orcha` and `pubmed-mcp-server` sit behind MCP so they are callable from whichever coding agent the client already licenses — the agent never writes to the repository directly, it proposes and a curator accepts.
+
+⚠️ **`orcha` is `10★` and first-year.** Pin the commit, budget for its API changing, and keep the deliverable's dependency on it to one adapter module.
+
+🟢 **Why it closes.** Every layer is MIT or Apache-2.0, so the client keeps the result; the compliance driver is a funder mandate with a date, not a strategy slide; and the regulatory artefact `T321`/`T369` both demand — a recorded human decision — is the curator-accept step, which is in the architecture rather than bolted on. **`8`–`10` weeks.**
+
+### `P216` — Permissive microservices over a copyleft repository estate: ship MIT code beside GPL code without a licence argument (library, archive or consortium; North America)
+
+🟢 **`T365` made operational.** Islandora's Drupal modules are GPL-3.0; its microservices are MIT. The engagement lives entirely in the MIT half.
+
+**The recipe:**
+
+1. **Leave the core alone.** The client's Islandora/Drupal install and its GPL-3.0 solution packs are deployed, unmodified, at arm's length.
+2. **Build in the microservice tier** → [`Islandora/Crayfish`](https://github.com/Islandora/Crayfish) (**MIT**, `1,104 B` payload) is the pattern and the host: OCR, format identification and derivative generation as standalone HTTP services.
+3. **Event glue** → [`Islandora/Alpaca`](https://github.com/Islandora/Alpaca) (**MIT**, Apache Camel middleware). New services subscribe to repository events rather than being called from Drupal.
+4. **Add the AI service as one more Crayfish-shaped microservice** — description generation, transcript correction, subject suggestion — speaking the same HTTP contract.
+5. **Derivative storage and delivery** → the existing Fedora/Drupal path; nothing new to license.
+
+**Wiring.** Drupal emits an event → Alpaca routes it → your MIT microservice responds → the derivative or metadata returns through the standard ingest path. **No GPL-3.0 file is edited, so nothing in the deliverable is a derivative work of a copyleft program.**
+
+🟢 **Why it closes.** The licence conversation ends in one sentence, and the same shape transfers to the other six `T365` publishers — PKP's plugin API, Opencast's ECL-2.0 core with MIT `studio`, H5P's MIT content types. **`6`–`8` weeks.**
+
+### `P217` — Health-professions curriculum intelligence on an MIT platform (medical, nursing, dental or pharmacy school; North America)
+
+🔵 **Why this one is unusually sellable.** [`ilios/ilios`](https://github.com/ilios/ilios) is **MIT** (`1,110 B`, © The Regents of the University of California) and models exactly the thing accreditors ask about: **which session teaches which competency.** Competency mapping is manual, annual, high-stakes and perfectly agent-shaped.
+
+**The recipe:**
+
+1. **Platform** → `ilios/ilios` (**MIT**, `88★`) with [`ilios/frontend`](https://github.com/ilios/frontend) (**MIT**, `32★`) — both already maintained, pushed `2026-11-09`.
+2. **LMS bridge, unmodified** → [`ilios/moodle-enrol-ilios`](https://github.com/ilios/moodle-enrol-ilios) (**GPL-3.0**). Install it as a plugin; do not edit it. Enrolment flows from the curriculum system into the client's existing Moodle.
+3. **Agent over the API** → an MCP server against the Ilios REST API that answers *"which sessions cover this competency, and where is the gap"* and drafts mappings for a curriculum committee to accept. Build it with [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) (**BSD-3-Clause**) if the client wants a university-published starting point.
+4. **Evidence layer** → [`cyanheads/pubmed-mcp-server`](https://github.com/cyanheads/pubmed-mcp-server) (**Apache-2.0**) so a proposed mapping can cite current literature rather than only the existing syllabus.
+
+**Wiring.** Ilios is the system of record and the only writer. The agent reads the API and writes **proposals** to a review queue; a committee member accepts, and the accept is the audited action. ⚠️ Keep the GPL-3.0 Moodle plugin as a deployed artefact, never a modified one.
+
+🟢 **Why it closes.** An accreditation deadline is a real date; the platform is MIT so the mapping logic stays the client's; and `T369`'s *"not the primary basis for a decision"* language is satisfied by construction. **`6`–`9` weeks.**
+
+### `P218` — AI at the permissive edges of a GPL journal platform (university press or journal programme; Global)
+
+🔴 **The constraint first.** [`pkp/ojs`](https://github.com/pkp/ojs) is **GPL-3.0** (`35,149 B`, byte-read) with `1,039` forks — it is deployed everywhere and it cannot be forked into a proprietary deliverable. So nothing in this recipe modifies it.
+
+**The recipe:**
+
+1. **Core, unmodified** → `pkp/ojs` on the client's existing install.
+2. **Extend through the plugin API only.** The deliverable is a plugin, distributed under GPL-3.0, and the client is told that up front — it is their platform, not a product line.
+3. **Citation handling** → [`pkp/citeproc-php`](https://github.com/pkp/citeproc-php) (**MIT**, `76★`) used standalone. Reference formatting, validation and CSL style handling live here, outside the copyleft boundary.
+4. **Reference and literature checks** → [`cyanheads/pubmed-mcp-server`](https://github.com/cyanheads/pubmed-mcp-server) (**Apache-2.0**) to resolve and verify cited works against PubMed / Europe PMC / Unpaywall during editorial triage.
+5. **LATAM instance** → substitute or add [`scieloorg/packtools`](https://github.com/scieloorg/packtools) (**BSD-2-Clause**) for SciELO PS/JATS XML validation and packaging, and [`scieloorg/articles_meta`](https://github.com/scieloorg/articles_meta) (**BSD-2-Clause**) for metadata retrieval. Both permissive, both SciELO's own.
+
+**Wiring.** The OJS plugin is a thin hook that calls out; the value — citation processing, retrieval, XML validation — sits in MIT/BSD/Apache services the studio can reuse on the next engagement. **The permissive share of the deliverable is a commercial design decision, made explicitly.**
+
+🟢 **Why it closes. `5`–`7` weeks**, and the same seam pattern is already proven on four other publishers (`T365`).
+
+### `P219` — The LATAM scholarly-infrastructure entry: instrument the repository estate that already exists (public university system or national aggregator; LATAM)
+
+🔵 **Why this is the cheap LATAM entry.** `T325` measured the region's scissors — adoption far ahead of governance — and `P197` aimed at districts. This aims at the other asset LATAM public universities already share: **an open-access repository and journal estate, with permissive tooling published by the region's own institutions.**
+
+**The recipe — four regional repositories, three BSD-2-Clause:**
+
+1. **Usage instrumentation first** → [`lareferencia/dspace-stats-collector`](https://github.com/lareferencia/dspace-stats-collector) (**GPL-3.0 by notice**, `14★`, pushed `2026-11-08`) sends DSpace usage events to Matomo. Deploy it before anything else: it produces the baseline numbers that justify the rest of the engagement. ⚠️ The grant is a notice without the licence body (`T368`) — flag it to the client's counsel rather than discovering it later.
+2. **Repository core** → [`DSpace/DSpace`](https://github.com/DSpace/DSpace) (**BSD-3-Clause**, `1,109★`) already filed here, plus `DSpace/dspace-angular` for the UI.
+3. **Content pipeline** → [`scieloorg/packtools`](https://github.com/scieloorg/packtools) (**BSD-2-Clause**) for SciELO PS XML validation and packaging, [`scieloorg/articles_meta`](https://github.com/scieloorg/articles_meta) (**BSD-2-Clause**) for metadata services, [`scieloorg/opac`](https://github.com/scieloorg/opac) (**BSD-2-Clause**) as the reader-facing catalogue.
+4. **Retrieval and summarisation layer** → an MCP service over `articles_meta` + [`cyanheads/pubmed-mcp-server`](https://github.com/cyanheads/pubmed-mcp-server) (**Apache-2.0**), answering in Spanish and Portuguese over the client's own collection first and external indexes second.
+
+**Wiring.** Matomo gives the before-and-after. `packtools` validates on ingest so the AI layer reads well-formed XML rather than guessing. The retrieval service never answers from the model alone: it cites the local record, which is both a quality control and the governance artefact the region's `716` regulatory instruments (`T325`, re-cited) will ask for.
+
+🟢 **Why it closes.** Every component is published by a LATAM institution or already deployed by the client, the permissive share is high, and the first deliverable is a measurement rather than a promise. **`6`–`8` weeks.**
+
 ## 🆕 P212–P214 — added at p742 (2026-11-10)
 
 ### `P212` — The national-substrate-first LATAM engagement: integrate one country's named system, do not port a standards stack (ministry, public university, or edtech selling into one; LATAM; 4–7 weeks to a working pilot)

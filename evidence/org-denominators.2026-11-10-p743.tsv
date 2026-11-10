@@ -1,0 +1,18 @@
+channel	total_count	note
+org:inveniosoftware	166	CERN; MIT 6/6 payloads read
+org:IQSS	183	Harvard IQSS; dataverse index NOASSERTION -> Apache-2.0
+org:samvera	28	hyrax/hyku/browse-everything Apache-2.0
+org:Islandora	54	MIT microservices over GPL-3.0 Drupal packs
+org:pkp	87	GPL-3.0 core, MIT citeproc-php
+org:scieloorg	158	LATAM; BSD-2-Clause 3/3 read
+org:lareferencia	38	LATAM; GPL-3.0 by notice
+org:jpcoar	2	APAC nil: 2 repos, 0 grants
+org:NII-Japan	422	does not exist under this name
+org:mitodl	186	agent-kit BSD-3-Clause promoted
+org:harvard-lil	143	lawskills-hub REFUSED (no grant)
+org:ilios	23	ilios/ilios MIT core; frontend already held
+org:opencast	50	ECL-2.0 core, MIT studio, Apache-2.0 editor
+topic:research-data-management	266	rdmo, datahugger, ARCitISA
+topic:institutional-repository	89	invenio
+topic:digital-library stars:>20	26	zenodo GPL-2.0 vs invenio MIT
+topic:open-access stars:>20	52	pubmed-mcp-server, joss (held)

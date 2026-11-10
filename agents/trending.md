@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-10
 ---
 
+
+## 🆕 2026-11-10 (p743) — 🟢 **THE TWO-PASS AGENT NIL IS BROKEN BY CHANGING THE NOUN, NOT THE QUERY: ASKING *WHO PUBLISHES WHAT A RESEARCH UNIVERSITY RUNS* RETURNED `3` AGENT ROWS, `24` ROWS IN ALL, FROM A TIER `742` PASSES HAD NEVER ADDRESSED. 🔴 A HARVARD-PUBLISHED "AI AGENT SKILLS FOR LEGAL EDUCATION" REPOSITORY AT `48★` HAS NO GRANT AT `14` PROBED PATHS AND IS REFUSED.**
+
+**`3` agent rows · `16` foundations rows · `5` platform rows · `34` licence payloads byte-read, `32 / 34` classified · `2` refused for no locatable grant · `3` index values corrected from the bytes.**
+
+### 🟢 Why the nil broke, and it was not a better query
+
+`p737` declared the agent shelf saturated over `12` legs; `p742` added `0` agents. Both were asking `topic:ai-tutor`, `topic:education-ai`, `topic:mcp education` — the vocabulary of *education AI*. This pass ran `org:` legs against the publishers of **research-university infrastructure** and the agent rows came out of the same tier as the platform rows. **`T363`: the saturation was of a vocabulary, not of a market.**
+
+| Agent row | Stars | Forks | Licence (byte-read) | Region | Why filed |
+|---|--:|--:|---|---|---|
+| [cyanheads/pubmed-mcp-server](https://github.com/cyanheads/pubmed-mcp-server) | **167** | 25 | 🟢 **Apache-2.0** · `11,317 B` · `7915fc5b0477` | ⚠️ **unplaced** | First literature-retrieval MCP server on this shelf; appendix holder filled |
+| [inveniosoftware/orcha](https://github.com/inveniosoftware/orcha) | 10 | 11 | 🟢 **MIT** · `1,061 B` · `070a3fa3acb9` | **EMEA** | CERN's own research-data AI workflows ⚠️ `10★`, first-year |
+| [mitodl/agent-kit](https://github.com/mitodl/agent-kit) | 5 | 0 | 🟢 **BSD-3-Clause** · `1,499 B` · `8afd1cd502a7` | **North America** | MIT Open Learning's agent/MCP toolkit ⚠️ `5★`, `0` forks; **promoted from backlog (`P210` class)** |
+
+### 🔴 Refused this pass — both exist, both maintained, neither publishes terms
+
+| Refused | Stars | Index | Probe |
+|---|--:|---|---|
+| [harvard-lil/lawskills-hub](https://github.com/harvard-lil/lawskills-hub) | **48** | `none` | `README.md` `200`; **`14 / 14` licence paths `404`** |
+| [kitodo/kitodo-production](https://github.com/kitodo/kitodo-production) | **77** | `NOASSERTION` | `README.md` `200`; **`14 / 14` licence paths `404`** |
+
+🔵 **The first is the cautionary one:** an institution's name, an on-topic description (*"AI agent skills for legal education"*) and `48★`, with nothing to rely on. `736-J` refused `4,886★` on a NonCommercial term; this refuses on the absence of any term.
+
+### 🔴 The mandated global agent leg nil'd again — the `36`th consecutive time
+
+`top open source AI agents education 2026 github MIT` returned general-purpose frameworks (OpenHands, MetaGPT, browser-use, AutoGPT, LangChain) with **conflicting licences between sources in the result set itself** and no education-specific MIT list. `github trending education AI 2026` returned `DeepTutor`, `geekjourneyx/interactive-learning` and `TapXWorld/ChinaTextbook` — **`3 / 3` already held**, exactly as `p742` recorded. The nil is published rather than padded.
+
 ## 🆕 2026-11-10 (p742) — 🟢 **`ACTION p741-A` RUN AS WRITTEN: THE LATAM BACKLOG WAS PROMOTED INSTEAD OF EXTENDED, AND REDISCOVERY WENT `44%` → `0 / 15`. 🔴 AN `Apache-2.0` GRANT SHIPPING UNRESOLVED GIT MERGE-CONFLICT MARKERS, WITH TWO COMPETING COPYRIGHT HOLDERS AND THE INDEX BLIND TO IT. 🟢 THE SEARCH ENDPOINT HAS *THREE* STATES, NOT TWO — WHICH REFUTES BOTH `p735` AND `p736` AND RECOVERS A RENAMED LATAM ADDRESS THE RAW PROBE CANNOT SEE.**
 
 **`4` agent rows · `6` foundations rows · `5` platform rows · `21` licence payloads byte-read, **`21 / 21` classified** · `0` index-vs-payload disagreements · `1` stale shelf address repaired · `109`-repository owner enumerated end to end · **all `4` mandated regional demand legs ran** · `5` global supply legs ran and **nil'd**, the `35`th consecutive time · `2` subjects measured and **REFUSED** · `1` region-misattribution trap caught before filing.**
