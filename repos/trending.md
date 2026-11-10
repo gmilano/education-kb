@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p748) — 🔴 **THE ELIGIBILITY-ENGINE LAYER WAS AT `0` MENTIONS: `openfisca` `0`, `policyengine` `0`, `camunda` `0`, `rules-as-code` `0`. 🔴 `9 / 9` ENGINES ARE AGPL-3.0 ACROSS FOUR REGIONS AND TWO PUBLISHERS. 🔴 THE `317★` FLAGSHIP HAS NO GRANT FILE AND ITS ONLY LICENCE STATEMENT IS A PACKAGING CLASSIFIER. 🔴 TWO MIT PAYLOADS HAVE NO TITLE BLOCK.**
+
+**`10` foundations rows · `10` platform rows · `6` agent rows · `58` addresses probed ·
+`31` payloads byte-read · `29 / 31` classified from the title block · `3` grant absences as `T302`
+honest negatives · `2` sell-shelf promotions · `28 / 28` addresses existence-confirmed on the raw
+channel · `T409`–`T416` declared · all `5` regional blocks written on
+[`../intel/market.md`](../intel/market.md).**
+
+### The estates probed this pass, with their denominators — every total from `gh api -X GET search/repositories`
+
+| Estate / query | Repositories | What the first page actually contained |
+|---|--:|---|
+| `school fee management` | `1,976` | 🔴 **Student-project tier.** Top `10` by stars: `155★` GPL-3.0 Laravel, `120★` NOASSERTION, `84★` GPL-3.0 **pushed 2017**, `59★` GPL-3.0 **2020**. 🟢 One usable row: `biprodas/school-erp` `52★` **MIT**, pushed `2026-10-29` |
+| `tuition management` | `1,396` | Same population, same licences |
+| `student billing` | `936` | Same population |
+| `bursar` | `656` | Noise — the term does not partition code |
+| `scholarship management` | `856` | 🔴 Top result `33★`; **the rest of page 1 is `≤10★` and mostly unlicensed.** The `33★` is `gems-uff/sapos`, **MIT**, and it is real |
+| `financial aid` | `260` | 🔴 Dominated by *"how to apply for Coursera financial aid"* repositories (`654★`, `61★`, `25★`). 🟢 **Two real systems in the whole page:** `bcgov/SIMS` `29★` Apache-2.0 and `tcet-opensource/erp-backend` `43★` GPL-2.0 (stale) |
+| `fafsa` | `180` | 🔴 **Nothing above `3★`.** Scrapers, form-availability checkers, a `2014` MIT API shell, one Shiny template pushed the day of this pass |
+| `scholarship chatbot` | `260` | 🔴 Top result `4★`; page 1 entirely `≤4★` |
+| `openfisca` | `327` | 🟢 **The find of the pass.** `openfisca-france` `317★`, `openfisca-core` `252★` AGPL-3.0, plus national models for NZ, Japan, Tunisia and a French state-run simulator |
+| `policyengine` / `org:policyengine` | `234` / `359` | 🟢 `policyengine-us` `171★`, `-uk` `53★`, `-canada` `19★`, `-api` `18★` — all AGPL-3.0 — **and an MIT agent layer above them** |
+| `rules as code benefits eligibility` | 🔴 **`1`** | And that one is the pre-registered evidence bundle, `jcatster7/benefits-as-code`, Apache-2.0 |
+| `grant management system open source` | `12` | 🔴 Best on-topic is `mike-marcacci/gandhi` `47★` AGPL-3.0, **pushed 2022-10-25** — abandoned |
+| `benefits navigator screener` | `5` | 🔴 Top result `1★` (`HamzaKhanBUIC/BISP-Benefits-Navigator`, MIT, filed for architecture) |
+| `enrollment management agent ai university` | 🔴 **`0`** | — |
+| `tuition fee agent llm education` | 🔴 **`0`** | — |
+| `student accounts receivable higher education` | 🔴 **`0`** | — |
+| `becas sistema gestion` | `42` | 🔴 **Top result `1★`**, every page-1 hit an unlicensed student project. The LATAM nil, measured in-language (`P244`) |
+| `bolsa de estudos sistema` | `12` | 🔴 Same |
+| `gestion matricula pagos universidad` | 🔴 **`1`** | Same |
+
+### Licence-channel results — `31` payloads byte-read, and the two channel failures that matter
+
+| Channel | Result this pass |
+|---|---|
+| 🟢 `raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}` | **`28 / 28` addresses existence-confirmed**, `200`/`404` discriminating correctly. Controls re-run: `moodle/moodle` `200`, `frappe/erpnext` `200`, an invented address `404` |
+| 🟢 `gh api -X GET search/repositories` | **ALIVE**, full metadata for `topic:`, `org:`, keyword and `repo:{owner}/{name}` forms. `p736`'s retraction of `p735`'s death notice holds |
+| 🔴 `curl -sI https://github.com/{owner}/{repo}` | **`403` on a proven-live repository**, `1 / 1`. Still no discriminating power. ⚠️ The first line of header output is the proxy's `HTTP/1.1 200 Connection Established` — **read the status code, not the first line** |
+| 🔴 Title-block classification | **`29 / 31`.** Two MIT payloads carry **no title line at all** — `policyengine-taxsim` (`1,060 B` `ff117700ce78`) and `gorules/zen` (`1,057 B` `2493262dd0c0`), both opening on `Copyright …`. Corrected discriminator: the operative clause **`Permission is hereby granted, free of charge`**, and note both use **typographic quotes** (`T412`) |
+| 🆕 Packaging-metadata classifier | **A third grant channel this base has never read.** `openfisca-france`'s only licence statement anywhere is `"License :: OSI Approved :: GNU Affero General Public License v3"` in its packaging config — a publisher **assertion**, not a grant. It corroborated correctly where both channels existed (`gems-uff/sapos`: `package.json` MIT, payload MIT) (`T413`) |
+| 🔴 Licence files outside the root | **Camunda 8's grant is at `licenses/CAMUNDA-LICENSE-1.0.txt`** — a root-only probe reports a false absence on a `4,360★` repository (`T411`) |
+
+### Index-vs-payload: `0` disagreements, and that is worth recording
+
+🟢 **Every one of the `28` indexed licences that had a payload matched the payload this pass** —
+including all nine AGPL-3.0 engines and all seven MIT agent-layer repositories. The `3` `NONE`
+indexes (`openfisca-france`, `openfisca-tunisia`, `camunda/camunda`) were all **correct** that the
+index could not find a root grant; in one case the grant existed elsewhere. ⚠️ **So the index was
+not wrong this pass — it was incomplete in exactly the way its own documentation says it can be**,
+which is a cleaner result than `p747`'s `6` corrections and should not be read as the index
+improving.
+
+### Digest observations
+
+🔵 **Cross-publisher Apache-2.0 byte-identity again (`T400` holds):** `bcgov/SIMS`,
+`jcatster7/benefits-as-code`, `Activiti/Activiti` and `flowable/flowable-engine` all ship
+`11,358 B` / `cfc7749b96f6` — four publishers, one digest. 🔵 **And AGPL-3.0 splits into two bands:**
+`34,523 B` `8486a10c4393` (PolicyEngine core/api/canada, openfisca-core) versus `34,519 B`
+`d8de517917a5` (country-template, aotearoa, gandhi), with `OpenFisca-Japan` a third
+(`34,519 B` `fdce1ee3fbf8`) and `aides-jeunes` a fourth (`34,363 B` `5ffb8eaf206c`, as `LICENSE.md`).
+**Digest identity tracks the boilerplate, not the publisher** — so a digest match is evidence about
+the text and never about provenance.
+
+
 ## 🆕 2026-11-10 (p747) — 🔴 **THE FEDERATION LAYER WAS AT `0` MENTIONS ON A BASE THAT ALREADY HELD THE SSO SERVER. 🔴 THE IdP GLOBAL R&E ACTUALLY RUNS IS NOT ON GITHUB AND IS UNREACHABLE HERE. 🔴 `p746`'s DIGEST CONTROL AND ITS `END OF TERMS` DISCRIMINATOR BOTH FAIL ON FIRST REUSE — AND THE CORRECTED FORMS ARE PUBLISHED.**
 
 **`13` foundations rows · `5` platform rows · `6` agent rows · `42` addresses probed · `37` payloads

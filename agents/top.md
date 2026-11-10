@@ -64,6 +64,55 @@ can tell a stale cell from a fresh one.
 
 ## Education-specific agents
 
+## 🆕 `p748` — 🔴 **THE MONEY LAYER: THIS BASE SCORED `financial aid` AT `0` AND NEVER BUILT THE SHELF. 🔴 THE AGENT LAYER IS A MEASURED NEAR-NIL AND A PRE-REGISTERED STUDY SAYS WHY — `κ ≤ 0.079` IN `12 / 12` CELLS. 🔴 THE GOVERNMENT REFERENCE ARCHITECTURE DEPENDS ON A NON-PRODUCTION-ONLY LICENCE.**
+
+**`6` rows · all MIT or Apache-2.0 · all `6` payloads byte-read · `58` addresses probed ·
+`29 / 31` classified from the title block (`2` failures — `T412`) · `3` grant-absences as `T302`
+honest negatives · `2` sell-shelf promotions, counted as promotions and not as discoveries.**
+
+🔴 **Read the star column before the description, and read this paragraph before quoting any row to
+a client.** This is the **weakest agent tier this base has filed**: the top row is `31★`, three rows
+are under `5★`, and one is an explicitly self-declared hackathon prototype. That is not a filing
+standard that slipped — **it is the measurement** (`T415`): `enrollment management agent ai
+university` returns `0` repositories, `tuition fee agent llm education` returns `0`, and
+`student accounts receivable higher education` returns `0`, against `1,976` for
+`school fee management` on the platform side. 🟢 **Rows are filed at their real size, labelled
+`PROTOTYPE` or `PRE-PRODUCTION` where that is what they are, and the tier is sold as an
+*opportunity*, not as a mature estate.** Fewer real rows beat padding.
+
+🟢 **The commercial point of the tier, in one line:** every other agent in this base advises — a
+tutor suggests, an assessment agent marks, an EMIS agent reports — **but the money layer has to
+commit to a number, and a number has an appeal process behind it.** That is why `T415` matters more
+than any row below it: the architecture that survives an appeal puts the determination in a
+deterministic engine (`P241`, `P242`) and uses the agent for intake, explanation and
+chase-the-missing-document. Sell the explanation, never the determination.
+
+| Agent | Repo | Licence (byte-read this pass) | ★ | Pushed | Region | What it does — and what it is not |
+|---|---|---|--:|---|---|---|
+| PolicyEngine Claude | [`PolicyEngine/policyengine-claude`](https://github.com/PolicyEngine/policyengine-claude) | 🟢 `MIT` `1,069 B` `2e8c8527caa6` | `31` | `2026-11-08` | Global | **The strongest row and the model for the whole tier.** An agent plugin over a tax-and-benefit **rules engine**: skills `encode-policy-v2`, `review-program`, `fix-pr` — it encodes and reviews *policy as code*, and does not compute entitlements itself. Generated from `policyengine-skills`; the README says do not edit it directly. The engine beneath it is **AGPL-3.0** (`T410`) — call it, do not vendor it (`P242`) |
+| PolicyEngine Skills | [`PolicyEngine/policyengine-skills`](https://github.com/PolicyEngine/policyengine-skills) | 🟢 `MIT` `1,069 B` `2e8c8527caa6` (byte-identical to the row above) | `0` | `2026-11-09` | Global | The **upstream** of the row above and the thing to fork if you want your own jurisdiction's skills. `0★` because it is a build input, not a product — filed so an engagement forks the source rather than the generated wrapper |
+| Admit (admissions + aid copilot) | [`emili-kosik/admission-skills`](https://github.com/emili-kosik/admission-skills) | 🟢 `MIT` `1,068 B` `e0b022000387` | `3` | `2026-07-07` | North America | A Claude Code plugin turning a local folder into a family's admissions and **financial-aid** command centre: FAFSA and scholarship tooling, a college list built on *live federal data*, Common App / UC / CSU / ApplyTexas and F-1 support. 🟢 **Essay coaching that "never writes the essay"** — a guardrail worth copying. ⚠️ `PRE-PRODUCTION` at `3★`; has a commercial companion site, grant is clean MIT |
+| AI Scholar Hunt | [`Asad-Aziz-001/AI-Scholar-Hunt`](https://github.com/Asad-Aziz-001/AI-Scholar-Hunt) | 🟢 `MIT` `1,079 B` `b5377f89f87e` | `4` | `2026-05-17` | APAC | LLM + RAG scholarship-discovery platform **built for Pakistani students** (`51+` scholarships, `20+` destination countries), Flask, hosted as a HuggingFace Space, and claims **no external inference API — local models only**, which is the interesting part for a data-residency conversation. ⚠️ `PRE-PRODUCTION` at `4★` |
+| BISP Benefits Navigator | [`HamzaKhanBUIC/BISP-Benefits-Navigator`](https://github.com/HamzaKhanBUIC/BISP-Benefits-Navigator) | 🟢 `MIT` `1,068 B` `2639ddea99af` | `1` | `2026-11-03` | APAC | 🟢 **Filed at `1★` for its architecture, not its traction, and it is the reference shape of `P241`:** a voice-first pre-screener for Pakistan's Benazir Income Support Programme where *"Gemini only extracts the answers; a TypeScript rules engine produces the estimate."* Built for low-literacy users shut out by text portals. ⚠️ `PROTOTYPE`, self-declared: hackathon build (top-10 finalist, `#9 / 424` qualifiers), hosted demo **offline**, runs locally with your own keys |
+| Rules-as-Code vs SLMs (evidence bundle) | [`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | `0` | `2026-04-22` | North America | 🟢 **Not an agent — the acceptance suite for one, and the most valuable address in this register.** `199` eligibility fixtures across SNAP / Medicaid / SSI / VA pension / EITC / WIC, a Rust **and** a Python oracle **bit-identical on `199 / 199` to the cent**, `21,492` logged model calls, κ / bootstrap / McNemar scoring code, a pre-registration hash frozen before the first call, and a `quarterly_diff.py` that measures statutory churn (`T416`). Use it as the regression gate (`P245`), and read `T415` before promising eligibility accuracy to anyone |
+
+### Also verified, and deliberately **not** filed as an agent
+
+| Address | Licence | ★ | Why it is not on this shelf |
+|---|---|--:|---|
+| [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) | 🟢 `MIT` `1,089 B` `98c72093bf63` | `115` | **The highest-starred permissive thing in the register, and it is not an agent** — it is a curated calendar aggregator for scholarships, graduate programmes, internships and conferences, served from GitHub Pages. 🟢 **Promoted this pass to [`verticals/solutions.md`](../verticals/solutions.md) instead**, where it is honest. Carries a `README-pt.md`, which is its LATAM placement evidence (`T378`) |
+| [`mattebad/monarch-studentaid-sync`](https://github.com/mattebad/monarch-studentaid-sync) | 🟢 `MIT` `1,072 B` `a385529d29c9` | `11` | Real, MIT and on-register, but it is a **personal-finance scraper**, not an institutional agent: Playwright drives a login to a US federal student-loan servicer portal, with email-MFA via Gmail IMAP, to sync balances into a budgeting app. 🔵 **Filed here for one reason worth an engagement's time: its existence is evidence that `StudentAid.gov` has no usable API and must be driven as a browser.** Expect that constraint in any North America loan-servicing integration |
+
+### The refusals that govern this register — read these before the rows
+
+| Address | Index | Payload, byte-read | Verdict |
+|---|---|---|---|
+| [`camunda/camunda`](https://github.com/camunda/camunda) (Camunda 8) | `NONE` | **Camunda License 1.0**, `3,559 B` `bc6a88b51407`, at the non-probed path `licenses/CAMUNDA-LICENSE-1.0.txt` | 🔴 **REFUSE for production.** Grant limited to *"Non-Production Environment … development, staging"*. `4,360★`, pushed the day of this pass. **It is the engine `bcgov/SIMS` pins (`@camunda8/sdk ^8.8.18`)** — so the public-sector architecture worth copying carries a dependency Globant may not ship (`T411`, `P243`) |
+| [`openfisca/openfisca-france`](https://github.com/openfisca/openfisca-france) | `NONE` | 🔴 **no grant at `12` probed paths**; only licence statement is a PyPI trove classifier asserting AGPL-3.0 | 🔴 `T302` honest negative, **no denominator claimed.** ALIVE and UNGRANTED-AT-`12`-PATHS at `317★` — the largest holding in the register (`T413`) |
+| [`openfisca/openfisca-tunisia`](https://github.com/openfisca/openfisca-tunisia) | `NONE` | 🔴 no grant; README advertises `master/LICENSE`, which **`404`s on `master` and on `main`** | 🔴 `T302` honest negative (`T414`) |
+| The whole eligibility-engine layer — `openfisca-core`, `policyengine-us`/`-uk`/`-canada`/`-api`, `aides-jeunes`, `openfisca-aotearoa`, `OpenFisca-Japan`, `country-template` | `AGPL-3.0` | 🔴 `AGPL-3.0`, `9 / 9`, four regions, two publishers | ⚠️ **Not a refusal — a boundary.** Run as a separate network service, unmodified, and keep client code in its own repository (`P242`). `AGPL-3.0 §13` is the clause that decides this, and it decides it on *modification plus network interaction* (`T410`) |
+
+
 ## 🆕 `p747` — 🔴 **THE FEDERATION LAYER: `p736` TOOK THE SSO SERVER AND LEFT THE FEDERATION IT JOINS AT `0` MENTIONS. 🔴 THE IdP THAT GLOBAL RESEARCH-AND-EDUCATION ACTUALLY RUNS IS NOT ON GITHUB AND IS UNREACHABLE HERE. 🔴 THE ATTRIBUTE SCHEMA EVERY FEDERATION USES IS `CC BY-NC-SA 4.0`.**
 
 **`6` rows · all MIT or Apache-2.0 · all `6` payloads byte-read · `1` refusal at `49★` · the R&E-specific agent leg is a measured near-nil (`T402`).**

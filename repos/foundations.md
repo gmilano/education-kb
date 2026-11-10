@@ -33,6 +33,59 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p748` (2026-11-10) — 🔴 **THE ELIGIBILITY-ENGINE LAYER: `9 / 9` AGPL-3.0 ACROSS FOUR REGIONS AND TWO PUBLISHERS, WITH AN MIT AGENT LAYER DIRECTLY ABOVE IT. 🔴 THE `317★` FLAGSHIP CARRIES NO GRANT FILE. 🔴 TWO MIT PAYLOADS HAVE NO TITLE BLOCK.**
+
+**`10` rows · `31` payloads byte-read this pass, `29 / 31` classified from the title block
+(`T412`) · `3` grant-absences recorded as `T302` honest negatives with no denominator ·
+`28 / 28` addresses existence-confirmed on the raw channel.**
+
+This is the layer under the money: the thing that computes **who is entitled to what**. It is the
+most sharply licence-split tier this base has filed — see `T410` — and the split is not along the
+language estate (as `T407` found for federation) but along the **layer**: the engine is AGPL-3.0,
+the tooling over it is MIT, from the same publishers in the same week. 🟢 **The consequence is an
+architecture rather than a refusal, and it is written up as `P242`.**
+
+### The permissive core — what Globant can build on and ship
+
+| Repo | Licence (byte-read) | ★ | Pushed | Region | Role in this register |
+|---|---|--:|---|---|---|
+| [`Activiti/Activiti`](https://github.com/Activiti/Activiti) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | `10,554` | `2026-11-10` | Global | BPMN workflow + decision engine. **The permissive substitute for the Camunda 8 dependency in `bcgov/SIMS`** (`T411`, `P243`). Larger and more recently pushed than the Apache-2.0 Camunda 7 it replaces |
+| [`flowable/flowable-engine`](https://github.com/flowable/flowable-engine) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | `9,642` | `2026-11-04` | Global | The other Apache-2.0 BPMN/DMN engine, same lineage. Pick on DMN decision-table support and Java-version fit; both grants are byte-identical |
+| [`gorules/zen`](https://github.com/gorules/zen) | 🟢 `MIT` `1,057 B` `2493262dd0c0` — ⚠️ **no title block** (`T412`) | `2,119` | `2026-11-10` | Global | 🟢 **The pick when you need decision tables and not a whole BPM suite:** Rust decision engine with bindings, JDM decision models as JSON. MIT means aid-policy rules can live in a client's own closed repository |
+| [`CacheControl/json-rules-engine`](https://github.com/CacheControl/json-rules-engine) | 🟢 `ISC` (index) | `3,146` | `2026-02-16` | Global | Lightweight JS rules engine — the shape `BISP-Benefits-Navigator` uses for a TypeScript screening pass. ⚠️ `ISC` is permissive; last pushed `2026-02`, so check maintenance before a 3-year engagement |
+| [`PolicyEngine/policyengine-taxsim`](https://github.com/PolicyEngine/policyengine-taxsim) | 🟢 `MIT` `1,060 B` `ff117700ce78` — ⚠️ **no title block** (`T412`) | `18` | `2026-11-10` | North America | TAXSIM emulator over the US federal + state tax-benefit model. 🟢 **MIT, and it is the seam that lets you call the AGPL model without inheriting it** |
+| [`PolicyEngine/microdf`](https://github.com/PolicyEngine/microdf) | 🟢 `MIT` `1,067 B` `b8fb3e012627` | `16` | `2026-10-25` | Global | Survey-microdata DataFrames — the analysis layer for "how many of our students would this aid rule move", MIT and safe to vendor |
+| [`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | `0` | `2026-04-22` | North America | 🟢 **The acceptance suite for the whole register.** `199` fixtures, dual oracle bit-identical `199 / 199`, κ/McNemar scoring, `quarterly_diff.py`. Filed at `0★` because evidence bundles do not attract stars — it is still the most useful thing here (`T415`, `T416`, `P245`) |
+
+### The AGPL-3.0 engine layer — a boundary, not a refusal
+
+⚠️ **All nine grants below were byte-read this pass. None is a reason to walk away; each is a reason
+to draw the service boundary before the first commit (`P242`).** `AGPL-3.0 §13` bites on
+**modification combined with network interaction** — so an *unmodified* upstream engine, run as its
+own service behind an API, with your rules and your agent in your own repository, is the posture
+that keeps a client's code closed.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Region | Why you would still reach for it |
+|---|---|--:|---|---|---|
+| [`openfisca/openfisca-core`](https://github.com/openfisca/openfisca-core) | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | `252` | `2026-11-01` | EMEA (FR) | The engine the francophone and much of the EMEA/Africa public sector models benefits in. Jurisdiction models are separate packages, which is what makes the service boundary natural |
+| [`PolicyEngine/policyengine-us`](https://github.com/PolicyEngine/policyengine-us) | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | `171` | `2026-11-10` | North America | US federal + state rules engine, pushed daily. The substrate for any US aid-eligibility explanation agent |
+| [`PolicyEngine/policyengine-api`](https://github.com/PolicyEngine/policyengine-api) | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | `18` | `2026-11-10` | Global | 🟢 **The most architecturally important row on this shelf:** the engine already ships a REST API, so `P242`'s boundary is the project's own supported interface rather than a workaround |
+| [`PolicyEngine/policyengine-uk`](https://github.com/PolicyEngine/policyengine-uk) | 🔴 `AGPL-3.0` `34,520 B` `76a97c878c9c` | `53` | `2026-11-10` | EMEA (UK) | UK tax-benefit microsimulation — the maintained path for a UK student-finance engagement |
+| [`PolicyEngine/policyengine-canada`](https://github.com/PolicyEngine/policyengine-canada) | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | `19` | `2026-10-12` | North America | Canada's model — pairs directly with `bcgov/SIMS` on [`../verticals/solutions.md`](../verticals/solutions.md) |
+| [`PolicyEngine/policyengine-core`](https://github.com/PolicyEngine/policyengine-core) | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | `22` | `2026-11-09` | Global | The microsimulation core, forked from OpenFisca — note the lineage: **two publishers, one engine family, one licence** |
+| [`openfisca/country-template`](https://github.com/openfisca/country-template) | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | `44` | `2026-11-09` | Global | 🟢 **The build path for a jurisdiction nobody has modelled** — which is the LATAM position exactly (`P244`). Starting here means starting AGPL, deliberately and with the client told in advance |
+| [`BetterRules/openfisca-aotearoa`](https://github.com/BetterRules/openfisca-aotearoa) | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | `45` | `2025-03-13` | APAC (NZ) | New Zealand legislation as code. ⚠️ **Last pushed `2025-03-13` — `20` months stale.** Read as a reference model, not a maintained dependency |
+| [`project-inclusive/OpenFisca-Japan`](https://github.com/project-inclusive/OpenFisca-Japan) | 🔴 `AGPL-3.0` `34,519 B` `fdce1ee3fbf8` | `39` | `2026-11-08` | APAC (JP) | Japan's benefit rules plus a web front end, actively pushed. 🔵 Note the digest differs from the other three `34,519 B` payloads — same licence, different publisher boilerplate (`T400` holds) |
+
+### `T302` honest negatives — no grant text found, no denominator claimed
+
+| Repo | ★ | Index | What was actually probed |
+|---|--:|---|---|
+| [`openfisca/openfisca-france`](https://github.com/openfisca/openfisca-france) | `317` | `NONE` | 🔴 **No grant at `12` probed paths**; README silent on licence; the *only* statement is a PyPI trove classifier asserting AGPL-3.0 — a publisher assertion, not a grant (`T413`). Default branch `master` (`T401`) |
+| [`openfisca/openfisca-tunisia`](https://github.com/openfisca/openfisca-tunisia) | `25` | `NONE` | 🔴 **No grant file**; README states AGPL-3.0 twice and links `master/LICENSE`, which `404`s on `master` **and** `main` (`T414`) |
+| [`camunda/camunda`](https://github.com/camunda/camunda) | `4,360` | `NONE` | 🔴 Not an absence but a **non-OSI grant** found off the probe list: Camunda License 1.0, `3,559 B` `bc6a88b51407`, **non-production only** (`T411`) |
+
+
 ## 🆕 `p747` (2026-11-10) — 🔴 **THE FEDERATION LAYER `p736` LEFT BEHIND: `13` ROWS, `6` INDEX CORRECTIONS, AND A LICENCE GRADIENT THAT SPLITS BY *LANGUAGE ESTATE* RATHER THAN BY LAYER. 🟢 A `14,806★` APACHE-2.0 IAM PLATFORM THAT CALLS ITSELF *AGENT-FIRST* WAS AT `0` MENTIONS.**
 
 **`13` rows · `37` payloads byte-read across `42` probed addresses · `36 / 37` classified from the

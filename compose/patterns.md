@@ -4,6 +4,185 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P241–P245 — added at p748 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the recipe.**
+This set is the **money layer's**: fees, financial aid, scholarships and the eligibility
+determination under all three. 🔴 **One finding governs all five patterns and should be read first
+(`T415`): a small language model asked to decide eligibility agrees with the statutory oracle at
+`κ ≤ 0.079` across `12 / 12` measured cells and misstates the monthly amount by `$276`–`$486`.**
+🟢 **So every pattern here puts the number in a deterministic engine and sells the agent as the
+intake, explanation and chase layer.** That is not a hedge — it is the only shape that survives an
+appeals process.
+
+🔴 **Two licence facts shape the component list, both byte-read this pass.** The eligibility engines
+are **`AGPL-3.0`, `9 / 9`, across four regions and two publishers** (`T410`) — a service boundary,
+drawn in `P242`. And the engine in the one government reference architecture, **Camunda 8**, is
+**non-production only** (`T411`) — replaced in `P243` before it reaches a pilot.
+
+---
+
+## P241 — The two-channel aid determination: the model does the talking, the engine does the arithmetic (all five regions; 8–12 weeks)
+
+**The problem.** A student asks *"how much aid do I get, and why not more?"* Institutions want to
+answer it with a chatbot. 🔴 **An agent that computes the answer is wrong one time in two
+(`T415`), and an aid determination is appealable** — so a wrong number is not a bad user
+experience, it is a dispute with a paper trail.
+
+**The shape, and it is already proven twice in this base's own rows.**
+[`HamzaKhanBUIC/BISP-Benefits-Navigator`](https://github.com/HamzaKhanBUIC/BISP-Benefits-Navigator)
+(MIT, `1★`, prototype) states it exactly: *"Gemini only extracts the answers; a TypeScript rules
+engine produces the estimate."* [`bcgov/SIMS`](https://github.com/bcgov/SIMS) (Apache-2.0,
+production, a provincial government) states the same thing in procurement language: *"a business
+rules engine that can accommodate regular changes in alignment with policy."*
+
+| Step | Component | Licence (byte-read) | What it does here |
+|---|---|---|---|
+| 1. Intake | any frontier model + [`gorules/zen`](https://github.com/gorules/zen) schema | 🟢 `MIT` `1,057 B` `2493262dd0c0` | The model's **only** job: turn speech or messy text into a **typed, schema-validated fact sheet** (household size, income, dependency status, enrolment intensity). It extracts; it never concludes |
+| 2. Determination | [`gorules/zen`](https://github.com/gorules/zen) (decision tables) **or** [`Activiti/Activiti`](https://github.com/Activiti/Activiti) / [`flowable/flowable-engine`](https://github.com/flowable/flowable-engine) (DMN + workflow) | 🟢 `MIT` / 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | The number. Deterministic, versioned, unit-tested, reproducible on appeal. 🔴 **Never Camunda 8** (`P243`) |
+| 3. Policy math | [`PolicyEngine/policyengine-api`](https://github.com/PolicyEngine/policyengine-api) over HTTP | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | Where statutory means-testing is genuinely hard, call the maintained engine **as a service** rather than re-deriving it. Boundary per `P242` |
+| 4. Explanation | the agent again, fed the engine's **trace** | — | 🟢 **This is the sellable part.** The engine emits which rule fired and on which input; the model turns that into plain language, in the student's language, at the student's reading level. It is paraphrasing a decision, not making one |
+| 5. Acceptance | [`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | `199` fixtures, dual oracle bit-identical `199 / 199`. Gate the build on it (`P245`) |
+| 6. Identity | the federation rows from `P235` | 🟢 Apache-2.0 | A student's aid record is the most sensitive thing in the institution; the agent inherits their entitlements rather than holding a service account |
+
+🟢 **How to price the sale.** Steps 1, 4 and 6 are the engagement. Step 2 is a fortnight of rules
+work the client's policy staff can read. 🔴 **Refuse step 2-as-LLM even when asked for it**, and
+show `T415`'s κ table as the reason — it is a better answer than a caveat.
+
+⚠️ **Scope honesty:** `T415` measures `3`–`4 B` local models on SNAP, not frontier models on
+student aid. The pattern does not depend on the stronger claim: **the number must be reproducible on
+appeal**, and a sampled model is not reproducible even when it is right.
+
+---
+
+## P242 — The AGPL boundary for eligibility engines: the engine is a service you call, never a dependency you vendor (architectural; 1 week to decide, binding thereafter)
+
+**The measurement that forces this** (`T410`): **`9 / 9`** eligibility engines byte-read this pass
+are `AGPL-3.0` — `openfisca-core` (`252★`), `policyengine-us` (`171★`), `aides-jeunes` (`84★`),
+`policyengine-uk` (`53★`), `openfisca-aotearoa` (`45★`), `country-template` (`44★`),
+`OpenFisca-Japan` (`39★`), `policyengine-canada` (`19★`), `policyengine-api` (`18★`) — across four
+regions and two independent publishers. 🟢 **And the agent layer immediately above is MIT from the
+same publishers** (`policyengine-claude`, `policyengine-skills`, `policyengine-taxsim`, `microdf`).
+
+**The rule, in four lines a client's counsel can approve:**
+
+1. 🟢 **Run the engine unmodified**, as its own container, behind its own API. `policyengine-api` is
+   the project's own supported interface, so this is the intended posture rather than a workaround.
+2. 🟢 **Keep jurisdiction rules, prompts, UI and agent code in your own repository** under the
+   client's licence of choice. Calling a program over a network is not a derivative work.
+3. 🔴 **The moment you patch the engine**, `AGPL-3.0 §13` attaches: modification **plus** network
+   interaction obliges you to offer the modified source to its users. Patch upstream instead, or
+   keep the fork public and say so in the SoW.
+4. 🔴 **Never vendor the engine into a client monolith**, and never copy rule files out of an AGPL
+   country model into a permissive repository — the rules are the copyrighted part.
+
+⚠️ **Where this bites hardest: a jurisdiction nobody has modelled** (LATAM, most of Africa, much of
+APAC). The only sane starting point is [`openfisca/country-template`](https://github.com/openfisca/country-template),
+which **is itself AGPL-3.0** — so that engagement starts copyleft by construction. 🟢 **Say so in
+week one**, price the public-repository obligation in, and the project is fine; discover it at
+delivery and it is a renegotiation. `P244`.
+
+🔵 **Contrast with `T407`:** the federation tier's licence gradient ran along the *language estate*;
+here it runs along the **layer**. The engine/agent seam is where the licence changes, which is
+conveniently the same place the architecture already wanted a boundary.
+
+---
+
+## P243 — Replace Camunda 8 before the pilot ships: the pre-flight that keeps a public-sector reference architecture shippable (North America / Global; 2–5 days)
+
+**Why this is a pattern and not a footnote.** The strongest artefact in this register is a
+government production system published in the open, and the obvious move is to copy its
+architecture. 🔴 **Do that literally and you inherit a licence that forbids production use**
+(`T411`):
+
+| Fact | Evidence, this pass |
+|---|---|
+| `bcgov/SIMS` pins `"@camunda8/sdk": "^8.8.18"` | `sources/packages/backend/package.json` |
+| `camunda/camunda` index | `NONE`; **no grant at `6` probed root paths** |
+| Actual grant | **Camunda License 1.0**, `licenses/CAMUNDA-LICENSE-1.0.txt`, `3,559 B`, sha256₁₂ `bc6a88b51407` |
+| Operative limit | *"the Use in or for the purpose of Using the Software in **Non-Production Environment**"* |
+| Apache-2.0 predecessor | `camunda/camunda-bpm-platform`, `4,260★`, **last pushed `2025-11-04`** |
+
+**The pre-flight, run once per engagement:**
+
+1. `grep -r "camunda8\|zeebe\|camunda-platform" ` the dependency manifests of **every** public-sector
+   repository you are using as a reference. The licence is not in the repository root — it is under
+   `licenses/`, so a root-only probe reports a false absence (this is `T413`'s shape again).
+2. Decide the replacement on what you actually need:
+   - **Decision tables only** → [`gorules/zen`](https://github.com/gorules/zen), 🟢 `MIT`
+     `1,057 B` `2493262dd0c0`, `2,119★`, pushed `2026-11-10`.
+   - **BPMN workflow + DMN** → [`Activiti/Activiti`](https://github.com/Activiti/Activiti) 🟢
+     `Apache-2.0` `11,358 B` `cfc7749b96f6`, `10,554★`, or
+     [`flowable/flowable-engine`](https://github.com/flowable/flowable-engine) 🟢 same grant digest,
+     `9,642★`.
+   - **Durable orchestration of long aid cases** → `temporalio/temporal`, MIT (already held by this
+     base).
+3. 🔴 **Do not take Camunda 7 as the safe option** because it is Apache-2.0. It is, and it has been
+   frozen for twelve months.
+4. Keep SIMS as the **domain** reference — its assessment workflow, its student/institution/ministry
+   role split, its Keycloak posture — and swap only the engine.
+
+🟢 **The deliverable a client values here is one page:** *"we copied the government's architecture
+and replaced the one component you could not have shipped."*
+
+---
+
+## P244 — LATAM: build the aid register from the one MIT system that exists, because the regional platform layer is a measured nil (LATAM; 10–14 weeks)
+
+🔴 **The nil, measured in-language this pass rather than assumed.** `becas sistema gestion` →
+`42` repositories, **top result `1★`**, every first-page hit an unlicensed student project.
+`bolsa de estudos sistema` → `12`. `mensalidade escolar sistema` → `5`.
+`gestion matricula pagos universidad` → **`1`**. There is no Odoo-of-becas.
+
+🟢 **What does exist, and it is enough to start:**
+
+| Role | Component | Licence | Why it is the right starting point |
+|---|---|---|---|
+| System of record | [`gems-uff/sapos`](https://github.com/gems-uff/sapos) | 🟢 `MIT` `1,116 B` `6704cf9cffae`, `33★`, pushed `2026-11-09` | Already models enrolments, advisement **and scholarships** for graduate programmes; proven at Universidade Federal Fluminense; MIT means a client fork stays closed. Rails, tested, CI green |
+| Architecture reference | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) | 🟢 `Apache-2.0` | Read it for the ministry/institution/student role split and the assessment-automation workflow — then build it on `P243`'s engine, not Camunda 8 |
+| Opportunity feed | [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) | 🟢 `MIT` `1,089 B` `98c72093bf63`, `115★` | A maintained, Portuguese-documented dataset of scholarship and programme deadlines — the cheapest possible *useful* first increment: wrap it, do not rebuild it |
+| Entitlement rules | [`openfisca/country-template`](https://github.com/openfisca/country-template) | 🔴 `AGPL-3.0` | 🔴 **Only if the engagement needs statutory means-testing.** No LATAM jurisdiction is modelled, so this is a from-scratch country model — **and it starts copyleft** (`P242`). Price the public-repository obligation in week one |
+| Regional model | Latam-GPT (via the UNESCO–CENIA agreement) | — | For Spanish/Portuguese intake at reading level; relevant to the `P241` step-1/step-4 channels, not to the determination |
+
+⚠️ **The sequencing that makes this sellable:** start with the opportunity/deadline layer (weeks
+1–3, visible value, no statutory risk), add the `sapos`-based record (weeks 4–9), and only commit to
+an entitlement engine once a ministry is actually the counterparty — because that is the step that
+drags AGPL and a new country model into the contract.
+
+---
+
+## P245 — The aid-agent regression gate: `199` fixtures, a dual oracle and a statutory diff, wired before the first demo (all five regions; 2–3 days to wire, then standing)
+
+🔴 **The failure this prevents is specific and it is the one a demo hides.** Accuracy on an
+imbalanced eligibility set is a base-rate artefact: in `T415`, handing a model the **verbatim
+statute** produced the table's *best* accuracy (`0.645`) with a κ of `0.018`. 🟢 **A gate that
+scores accuracy passes that build. A gate that scores κ fails it.**
+
+**The suite, already written and Apache-2.0:**
+[`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code).
+
+| Asset in the bundle | Use it as |
+|---|---|
+| `fixtures/` — `199` cases over SNAP, Medicaid, SSI, VA pension, EITC, WIC | The test corpus. Replace the programme set with the client's aid schemes, keep the **fixture schema** |
+| `rust-runtime/` + `runners/py_oracle/` — bit-identical on `199 / 199` to the integer cent | 🟢 **The pattern for your own oracle: implement the statute twice, in two languages, and diff.** Cheap, and it finds spec ambiguity before a student does |
+| `runners/llm/scoring.py` — 3-bucket scoring, **Cohen's κ**, bootstrap CIs, McNemar | The gate. 🔴 **Report κ as the headline, with accuracy beside it, never instead of it** |
+| `runners/llm/outlines_probe.py` | Backend-sensitivity cross-check — proves a result is not an artefact of one serving stack |
+| `quarterly_diff.py` + `results/quarterly-diff.json` | 🟢 **The standing gate.** Measured 2025→2026: `166` unchanged, **`30` amount changes, `3` eligibility flips** — `16.6%` of cases move in one parameter year (`T416`) |
+| `HARNESS_CONTRACT.md` + `metadata.json` (pre-registration hash `b8bc676b…`) | 🟢 Copy the discipline: freeze the evaluation design **before** the first model call, and record the hash. It is what makes the result quotable to a client |
+| `LIMITATIONS.md` (`10` entries) | Read it before citing the study, and write your own |
+
+**Thresholds to put in the SoW:**
+
+- 🔴 **Determination path: exact match against the oracle on `100%` of fixtures.** It is
+  deterministic; anything less is a defect, not a score.
+- 🟢 **Extraction path (step 1 of `P241`): measure schema-validity and field-level accuracy** — this
+  is what the model is actually for, and it is where it performs.
+- 🟢 **Explanation path (step 4): human review on a sample, scored for faithfulness to the engine
+  trace**, not for fluency.
+- 🔴 **Re-run the whole suite on every parameter release**, and diff. One case in six changes within
+  a year.
+
+
 ## 🆕 P235–P240 — added at p747 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the recipe.**

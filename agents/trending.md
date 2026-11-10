@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p748) — 🔴 **THE MONEY LAYER: `financial aid` WAS SCORED `0` AND THE SHELF WAS NEVER BUILT. 🔴 THE AGENT TIER IS A MEASURED NEAR-NIL — `0` REPOSITORIES ON THREE OF THE SIX DEMAND QUERIES — AND A PRE-REGISTERED STUDY SAYS WHY: `κ ≤ 0.079` IN `12 / 12` CELLS. 🔴 THE GOVERNMENT REFERENCE ARCHITECTURE PINS A NON-PRODUCTION-ONLY LICENCE.**
+
+**`6` agent rows (all MIT or Apache-2.0) · `10` foundations rows · `10` platform rows · `58`
+addresses probed · `31` licence payloads byte-read, `29 / 31` classified from the title block
+(`2` failures — `T412`) · `3` grant-absences recorded as `T302` honest negatives (NOT as
+denominators) · `2` sell-shelf promotions counted as promotions, not discoveries · all `5` regional
+blocks written on [`../intel/market.md`](../intel/market.md) · `T409`–`T416` declared ·
+`P241`–`P245` added.**
+
+### What is new this week in this register
+
+🔴 **The honest headline is that the register is young, not that it is rich.** The top agent row is
+`31★`; three of the six are under `5★`; one is a self-declared hackathon prototype with its demo
+offline. **That is the measurement, not a filing failure** — and it is written on the rows.
+
+| New this week | Address | Licence | Why it is new | ★ | Pushed |
+|---|---|---|---|--:|---|
+| 🆕 Agent over a benefits **rules engine** | [`PolicyEngine/policyengine-claude`](https://github.com/PolicyEngine/policyengine-claude) | 🟢 `MIT` `1,069 B` `2e8c8527caa6` | `0` mentions across every live shelf before this pass. Skills that **encode and review policy as code** rather than compute entitlements — the only mature shape in the tier | `31` | `2026-11-08` |
+| 🆕 Its upstream | [`PolicyEngine/policyengine-skills`](https://github.com/PolicyEngine/policyengine-skills) | 🟢 `MIT`, byte-identical payload | The fork target for a new jurisdiction's skills | `0` | `2026-11-09` |
+| 🆕 Admissions + aid copilot | [`emili-kosik/admission-skills`](https://github.com/emili-kosik/admission-skills) | 🟢 `MIT` `1,068 B` `e0b022000387` | FAFSA and scholarship tooling in a local-folder agent; **essay coaching that refuses to write the essay** | `3` | `2026-07-07` |
+| 🆕 APAC scholarship discovery | [`Asad-Aziz-001/AI-Scholar-Hunt`](https://github.com/Asad-Aziz-001/AI-Scholar-Hunt) | 🟢 `MIT` `1,079 B` `b5377f89f87e` | LLM + RAG for Pakistani students; claims **local inference only, no external API** | `4` | `2026-05-17` |
+| 🆕 The architecture, at `1★` | [`HamzaKhanBUIC/BISP-Benefits-Navigator`](https://github.com/HamzaKhanBUIC/BISP-Benefits-Navigator) | 🟢 `MIT` `1,068 B` `2639ddea99af` | *"Gemini only extracts the answers; a TypeScript rules engine produces the estimate"* — the reference shape of `P241`, filed for its design | `1` | `2026-11-03` |
+| 🆕 The evidence bundle | [`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | Pre-registered rules-as-code-vs-SLM study: `199` fixtures, dual oracle bit-identical `199 / 199`, `21,492` logged calls, κ scoring, statutory diff | `0` | `2026-04-22` |
+| 🔄 **PROMOTED** (held since `611-D`, never on a sell shelf) | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) | 🟢 `Apache-2.0` | A province's **production** student financial aid system → [`../verticals/solutions.md`](../verticals/solutions.md) | `29` | `2026-11-10` |
+| 🔄 **PROMOTED** (held as `1` trending mention) | [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) | 🟢 `MIT` `1,089 B` `98c72093bf63` | The highest-starred permissive thing in the register — and **not an agent**, so filed as a platform | `115` | `2026-11-10` |
+
+### The demand measurement, which is the point of the section
+
+| Query (`gh api -X GET search/repositories`, totals) | Repositories |
+|---|--:|
+| `enrollment management agent ai university` | 🔴 **`0`** |
+| `tuition fee agent llm education` | 🔴 **`0`** |
+| `student accounts receivable higher education` | 🔴 **`0`** |
+| `school counseling software` | 🔴 **`0`** |
+| `financial aid mcp server` | `1` |
+| `student finance agent llm` | `2` |
+| `benefits eligibility agent llm` | `3` (**`0`** on-topic) |
+| `wellbeing chatbot education` | `4` |
+| — platform side, same pass, for contrast — | |
+| `school fee management` | `1,976` |
+| `tuition management` | `1,396` |
+| `student billing` | `936` |
+| `bursar` | `656` |
+
+🔵 **`T402` measured `437 : 2` for research-and-education federation. This is the same shape a
+second time, independently, in the register with the clearest budget.** The gap is the
+opportunity — but only for the `P241` architecture, because `T415` prices the alternative.
+
+### Mandated global supply legs — nil for new rows, the `36`th consecutive time (`P210`)
+
+🟢 **Run as written, and recorded as a nil rather than dressed up as rows.** `top open source AI
+agents education 2026 github MIT` returned general-purpose agent roundups (OpenHands, MetaGPT,
+browser-use, Langflow) with **no education-specific MIT list**; `github trending education AI 2026`
+returned **DeepTutor, ChinaTextbook, Claw-ED and interactive-learning — all four already held**;
+`open source platform education ERP CRM MIT Apache` returned **OpenEduCat vendor pages**, already
+held and already correctly licensed on this base. 🔴 **A shelf `grep` found every named repository
+already present.** The legs now trail the shelves by a wide margin; every row above came from
+register-shaped `gh` queries, not from the mandated legs.
+
+### Secondary register measured and deliberately not built: student wellbeing
+
+🔵 **Probed because `mental health` sat at `1` mention and `wellbeing` at `6`** — and it is a real
+gap. 🔴 **Not built this pass, with the reason recorded:** `school counseling software` returns
+**`0`** repositories, `wellbeing chatbot education` returns `4`, `student mental health agent llm`
+returns `1`. ⚠️ **And the regulatory edge is sharper than anything in the aid register:** under the
+EU AI Act, **emotion recognition in educational institutions is a *prohibited* practice** (in force
+since February 2025), not a high-risk one — so a wellbeing-inference product is unsellable in EMEA
+rather than merely regulated. Registered as the candidate for a later pass; see
+[`../intel/open-gaps.md`](../intel/open-gaps.md).
+
+
 ## 🆕 2026-11-10 (p747) — 🔴 **THE FEDERATION LAYER: `p736` SHELVED THE SSO SERVER AND LEFT WHAT IT JOINS AT `0` MENTIONS. 🔴 THE IdP GLOBAL R&E RUNS ON IS NOT ON GITHUB AND IS BLOCKED HERE. 🔴 THE ATTRIBUTE SCHEMA EVERY FEDERATION USES IS `CC BY-NC-SA 4.0`. 🟢 THE R&E AGENT LAYER IS A MEASURED NEAR-NIL AND THAT IS THE OPPORTUNITY.**
 
 **`6` agent rows (all MIT or Apache-2.0) · `13` foundations rows · `5` platform rows · `42`

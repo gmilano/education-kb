@@ -10,6 +10,45 @@ updated: 2026-11-10
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
+## 🆕 `p748` — the money layer a client already runs: the deployable aid, fee and scholarship systems, with the licence posture drawn per region, `2026-11-10`
+
+**`10` rows · `2` of them **promotions** of addresses this base has held on a discovery shelf
+without ever filing them here (`T409`) · all grants byte-read this pass · `3` rows carry a refusal
+or a boundary that changes the architecture, not just the paperwork.**
+
+🟢 **Why this shelf matters more than its star counts suggest.** The fee and aid systems below are
+the ones with an **install base and a budget**: a bursar's office that cannot close a term is a
+procurement emergency in a way that a tutoring pilot never is. 🔴 **And the headline is a
+dependency, not a platform:** the single most credible system here — a province's production student
+financial aid platform, Apache-2.0, shipping every sprint — pins **Camunda 8**, whose grant is
+**non-production only** (`T411`). Copy the architecture; replace that component before the pilot
+ships (`P243`).
+
+| Platform | Repo | Licence (byte-read this pass) | ★ | Pushed | Region | What it is, and the catch |
+|---|---|---|--:|---|---|---|
+| **StudentAid BC — SIMS** | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) | 🟢 `Apache-2.0` `11,358 B` `cfc7749b96f6` | `29` | `2026-11-10` | North America (CA) | 🟢 **PROMOTED this pass** — held on [`../repos/trending.md`](../repos/trending.md) since `611-D` and on no sell shelf until now (`T409`). The Government of British Columbia's replacement for its **provincial student financial aid systems**: students, institutions and ministry staff in one application, *"automation of assessments and other workflows to reduce manual processing"*, a business rules engine *"that can accommodate regular changes in alignment with policy"*, NestJS + TypeORM + Keycloak + Redis, new features every 3-week sprint. ⚠️ **The catch is `@camunda8/sdk ^8.8.18`** (`T411`, `P243`) |
+| **SAPOS** | [`gems-uff/sapos`](https://github.com/gems-uff/sapos) | 🟢 `MIT` `1,116 B` `6704cf9cffae` | `33` | `2026-11-09` | **LATAM (BR)** | 🟢 **The best LATAM row in this register by a wide margin, and it is MIT.** Graduate-programme administration — enrolments, courses, advisement, **scholarships**, requirements — Ruby on Rails, CI green, coverage published. Built at **Universidade Federal Fluminense** (placement evidence from payload text, `T378`), initiated by named faculty and continued through four undergraduate term projects. ⚠️ Institution-scale, Portuguese-first domain model; its own MIT badge points at `master/LICENSE` while the default branch is `main` |
+| **Opportunity Tracker** | [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) | 🟢 `MIT` `1,089 B` `98c72093bf63` | `115` | `2026-11-10` | **LATAM** + Global | 🟢 **PROMOTED this pass** from a single mention on a trending shelf (`T409`). Curated, subscribable **calendars** of scholarships, graduate programmes, internships and conferences — the deadline problem stated plainly: *"many people only find them after the deadline has passed."* Served from GitHub Pages; `README-pt.md` is its LATAM placement evidence. ⚠️ **Not an agent and not a system of record** — it is a maintained dataset with a UI, which is exactly why it is cheap to wrap (`P241`) |
+| **school-erp** | [`biprodas/school-erp`](https://github.com/biprodas/school-erp) | 🟢 `MIT` `1,069 B` `d9beb4f20b37` | `52` | `2026-10-29` | Global | Student records, attendance, **fees** and exams in one MIT codebase, actively pushed. 🟢 **The permissive small-school fee module**, which matters because the rest of that tier is GPL (see the copyleft rows below) or abandoned student work |
+| **aides-jeunes** | [`DNUM-SocialGouv/aides-jeunes`](https://github.com/DNUM-SocialGouv/aides-jeunes) | 🔴 `AGPL-3.0` `34,363 B` `5ffb8eaf206c` | `84` | `2026-11-06` | **EMEA (FR)** | 🟢 **A state-operated benefits simulator, in production, run by a French ministry digital unit** — the closest thing in open source to "what would a student actually receive", covering study grants among other youth benefits. ⚠️ **AGPL-3.0: boundary, not refusal** (`P242`). The most transferable EMEA reference for a public-sector aid front end |
+| **OpenFisca Aotearoa** | [`BetterRules/openfisca-aotearoa`](https://github.com/BetterRules/openfisca-aotearoa) | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | `45` | `2025-03-13` | **APAC (NZ)** | New Zealand legislation encoded as executable rules, including student-support provisions. ⚠️ **`20` months stale** — a reference model for how a jurisdiction encodes entitlement, not a maintained dependency |
+| **OpenFisca Japan** | [`project-inclusive/OpenFisca-Japan`](https://github.com/project-inclusive/OpenFisca-Japan) | 🔴 `AGPL-3.0` `34,519 B` `fdce1ee3fbf8` | `39` | `2026-11-08` | **APAC (JP)** | Japan's benefit rules **plus a deployed web front end** for citizens, actively pushed. 🟢 The APAC proof that a national entitlement calculator can be run as a public service on open code |
+| **TCET ERP** | [`tcet-opensource/erp-backend`](https://github.com/tcet-opensource/erp-backend) | ⚠️ `GPL-2.0` `18,092 B` `8177f9751321` | `43` | `2024-01-16` | **APAC (IN)** | An Indian engineering college's own ERP backend, automating institutional operations. ⚠️ **Two problems, both disclosed:** `GPL-2.0` is the wrong licence to vendor into client work, and it has been **unpushed since January 2024** |
+| **OpenFisca Tunisia** | [`openfisca/openfisca-tunisia`](https://github.com/openfisca/openfisca-tunisia) | 🔴 **no grant text** — README asserts AGPL-3.0 and links a `LICENSE` that `404`s on `master` **and** `main` | `25` | `2026-11-09` | **EMEA (TN)** | Tunisia's tax-and-benefit model, actively pushed — **the only EMEA-Africa entitlement model this pass reached.** 🔴 Filed as a `T302` honest negative with the asserted licence recorded as an assertion (`T414`). Usable as a reference; do not treat the README as a grant |
+| **Camunda 8** | [`camunda/camunda`](https://github.com/camunda/camunda) | 🔴 **Camunda License 1.0** `3,559 B` `bc6a88b51407` — **non-production only** | `4,360` | `2026-11-10` | Global | 🔴 **REFUSE for production, and filed here so nobody re-derives it from the SIMS architecture.** The grant covers *"Non-Production Environment … development, staging"* and nothing else. 🟢 Replace with [`Activiti/Activiti`](https://github.com/Activiti/Activiti) or [`flowable/flowable-engine`](https://github.com/flowable/flowable-engine) (both `Apache-2.0`, both larger), or [`gorules/zen`](https://github.com/gorules/zen) (`MIT`) for decision tables alone (`P243`). ⚠️ Camunda 7 (`camunda-bpm-platform`, genuinely `Apache-2.0`, `4,260★`) is **frozen since `2025-11-04`** |
+
+### Measured nil — recorded because silence looks like coverage
+
+🔴 **LATAM scholarship-administration supply is a near-nil, and it was searched in-language.**
+`becas sistema gestion` returns `42` repositories and the **highest-starred is `1★`**; every result
+on the first page is an unlicensed student project (`RaisingSoftV2/sgb` `1★` `2012`,
+`eugeluz/becas-unt` `1★`, `Mapeflo/GestionBecas` `0★`). `bolsa de estudos sistema` returns `12`,
+`mensalidade escolar sistema` returns `5`, `gestion matricula pagos universidad` returns **`1`**.
+🟢 **So the LATAM path in this register is `sapos` (MIT, real, institution-proven) plus
+`bcgov/SIMS` as the architectural reference, not a regional platform** — which is what `P244`
+builds from.
+
+
 ## 🆕 `p747` — the deployable federation: the platform an NREN already runs, with the licence posture drawn per region, `2026-11-10`
 
 **`5` rows · all `5` payloads byte-read · `1` filed **with a refusal flag** because its `LICENSE`

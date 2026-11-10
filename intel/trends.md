@@ -4,6 +4,314 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p748` (researched 2026-11-10) — `T409`–`T416`
+
+**Added above `p747`'s `T396`–`T408`.** `p748` changed the register to **student finance — the
+money layer of an institution**: fees, financial aid, scholarships and loan servicing, and the
+eligibility determination that sits under all four. `58` addresses probed, **`31` licence payloads
+byte-read**, `29 / 31` classified from the title block (**`2` failures, and they are `T412`**),
+**`3` grant-absences recorded as `T302` honest negatives with no denominator**, `2` sell-shelf
+promotions of addresses this base already held.
+
+🔴 **The register was scored and never built.** A prior pass scored `financial aid / scholarship`
+at **`0`** on the demand side and filed exactly `1` row for it on a *trending* shelf; `bcgov/SIMS`
+— a government production student-financial-aid system, Apache-2.0 — has sat on
+[`repos/trending.md`](../repos/trending.md) since `611-D` and reached **no sell shelf at all**
+(`agents/top.md` `0`, `repos/foundations.md` `0`, `verticals/solutions.md` `0`). `T409`.
+
+🟢 **The pass's most useful output is not a row, it is a measured answer to the architectural
+question the register turns on** — *can a language model compute an eligibility determination?* —
+and it is **no, for the model class measured**, at `κ ≤ 0.079` across `12 / 12` model×condition
+cells of a pre-registered study. `T415`. Read it before quoting any "AI financial-aid advisor"
+proposal to a client.
+
+---
+
+## T409 — 🔴 This base scored the student-finance register at `0` and then never built it, and one Apache-2.0 government system sat on a discovery shelf for ~137 passes without reaching a sell shelf
+
+The money layer is the one office in an institution that **has to** say a number: what a student
+owes, what they are owed, and on what authority. This base held it at near-nil:
+
+| Probe across all `8` live shelves | Mentions before `p748` |
+|---|--:|
+| `financial aid` | **`2`** (one trending row, one README tally) |
+| `FAFSA` | **`1`** |
+| `bursar` | **`0`** |
+| `student loan` | **`0`** |
+| `rules as code` / `rules-as-code` | **`0`** / **`0`** |
+| `openfisca` | **`0`** |
+| `policyengine` | **`0`** |
+| `camunda` | **`0`** |
+| `tuition` | `8` |
+
+🔴 **And the omission is not a discovery failure, which is what makes it worth recording.** The
+base had already *found* the register's flagship. [`bcgov/SIMS`](https://github.com/bcgov/SIMS) —
+the Government of British Columbia's replacement for its provincial student financial aid systems,
+`Apache-2.0`, `29★`, **pushed the day of this pass** — was promoted onto `repos/trending.md` at
+`611-D` and is on **`0`** of the three sell shelves. The same is true of
+[`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) (`MIT`, `115★`,
+pushed `2026-11-10`): `1` mention, on `agents/trending.md`, as the note that *"`financial aid`
+scored `0`; first row in the tier"* — and then nothing.
+
+🔵 **This is `P693-A` again** — *promote the backlog rather than extend it* — and `p748` discharges
+it for this register rather than restating it: **both addresses are promoted to sell shelves this
+pass**, SIMS to [`verticals/solutions.md`](../verticals/solutions.md) and `opportunity-tracker`
+alongside it. Neither is counted as a discovery.
+
+---
+
+## T410 — 🟢 The eligibility-determination layer is AGPL-3.0 in every jurisdiction that grants at all, and the agent layer directly above it is MIT — the gradient runs along the *layer*, not the language
+
+Every rules-as-code engine that computes who gets money, in every jurisdiction this pass reached:
+
+| Engine / model | ★ | Byte-read grant | Region |
+|---|--:|---|---|
+| [`openfisca/openfisca-core`](https://github.com/openfisca/openfisca-core) | `252` | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | EMEA (FR) |
+| [`PolicyEngine/policyengine-us`](https://github.com/PolicyEngine/policyengine-us) | `171` | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | North America |
+| [`DNUM-SocialGouv/aides-jeunes`](https://github.com/DNUM-SocialGouv/aides-jeunes) | `84` | 🔴 `AGPL-3.0` `34,363 B` `5ffb8eaf206c` | EMEA (FR, state-run) |
+| [`PolicyEngine/policyengine-uk`](https://github.com/PolicyEngine/policyengine-uk) | `53` | 🔴 `AGPL-3.0` `34,520 B` `76a97c878c9c` | EMEA (UK) |
+| [`BetterRules/openfisca-aotearoa`](https://github.com/BetterRules/openfisca-aotearoa) | `45` | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | APAC (NZ) |
+| [`openfisca/country-template`](https://github.com/openfisca/country-template) | `44` | 🔴 `AGPL-3.0` `34,519 B` `d8de517917a5` | Global |
+| [`project-inclusive/OpenFisca-Japan`](https://github.com/project-inclusive/OpenFisca-Japan) | `39` | 🔴 `AGPL-3.0` `34,519 B` `fdce1ee3fbf8` | APAC (JP) |
+| [`PolicyEngine/policyengine-canada`](https://github.com/PolicyEngine/policyengine-canada) | `19` | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | North America |
+| [`PolicyEngine/policyengine-api`](https://github.com/PolicyEngine/policyengine-api) | `18` | 🔴 `AGPL-3.0` `34,523 B` `8486a10c4393` | Global |
+
+**`9 / 9` AGPL-3.0, across four regions, five jurisdictions and two independent publishers.**
+
+🟢 **And the layer immediately above is permissive, from the same publishers:**
+[`policyengine-claude`](https://github.com/PolicyEngine/policyengine-claude) (`MIT` `1,069 B`
+`2e8c8527caa6`), [`policyengine-skills`](https://github.com/PolicyEngine/policyengine-skills)
+(`MIT`, byte-identical payload), [`policyengine-taxsim`](https://github.com/PolicyEngine/policyengine-taxsim)
+(`MIT` `1,060 B` `ff117700ce78`), [`microdf`](https://github.com/PolicyEngine/microdf) (`MIT`
+`1,067 B` `b8fb3e012627`).
+
+🔵 **`T407` found this tier's gradient running along the *language estate* (Python permissive, PHP
+copyleft). This register inverts that: the gradient runs along the *layer*.** The same organisation
+ships its engine AGPL and its agent tooling MIT, in the same week, in the same language. The
+operational consequence is not a refusal but an **architecture**, and it is written up as `P242`:
+*the engine is a service you call, never a dependency you vendor.*
+
+---
+
+## T411 — 🔴 The government reference architecture for student financial aid depends on a component that is not open source, and the Apache-2.0 predecessor has been frozen for a year
+
+[`bcgov/SIMS`](https://github.com/bcgov/SIMS) is the most credible thing in this register: a
+province's production aid system, `Apache-2.0` (`11,358 B` `cfc7749b96f6`), *"new features released
+every sprint"*, whose README states it *"includes implementation of a business rules engine that can
+accommodate regular changes in alignment with policy."* 🟢 **That is the right architecture.**
+🔴 **The engine it names is not one Globant may ship.**
+
+`sources/packages/backend/package.json` pins **`"@camunda8/sdk": "^8.8.18"`**. The core it drives,
+[`camunda/camunda`](https://github.com/camunda/camunda) (`4,360★`, pushed the day of this pass), is
+indexed **`NONE`** and has **no grant at `6` probed root paths**. The licence is at a non-probed
+path, `licenses/CAMUNDA-LICENSE-1.0.txt` — **`3,559 B`, sha256₁₂ `bc6a88b51407`** — and it is the
+**Camunda License Version 1.0**, whose grant is limited to:
+
+> *"the Use in or for the purpose of Using the Software in Non-Production Environment. Non-Production
+> Environment means a setting in which the Software is used for development, staging…"*
+
+🔴 **Source-available, non-production only.** Parts are Apache-2.0 and the README enumerates them;
+the engine is not among them.
+
+🔴 **And the escape hatch is rusting.** [`camunda/camunda-bpm-platform`](https://github.com/camunda/camunda-bpm-platform)
+— Camunda 7, genuinely `Apache-2.0`, `4,260★` — was **last pushed `2025-11-04`, twelve months before
+this pass.**
+
+🟢 **The permissive replacements exist, are larger, and were byte-read this pass:**
+[`Activiti/Activiti`](https://github.com/Activiti/Activiti) (`Apache-2.0` `11,358 B`
+`cfc7749b96f6`, `10,554★`, pushed `2026-11-10`),
+[`flowable/flowable-engine`](https://github.com/flowable/flowable-engine) (`Apache-2.0`, same
+digest, `9,642★`, pushed `2026-11-04`) and, for decision tables specifically,
+[`gorules/zen`](https://github.com/gorules/zen) (`MIT` `1,057 B` `2493262dd0c0`, `2,119★`, pushed
+`2026-11-10`). `P243` makes the substitution a pre-flight step rather than a migration.
+
+⚠️ **Read this finding the right way: it is not a defect in SIMS.** A provincial ministry buying a
+Camunda 8 licence is doing nothing wrong. The defect appears only when a systems integrator copies
+the architecture of a published public-sector repository **and inherits its commercial
+dependencies without reading them.**
+
+---
+
+## T412 — 🔴 Two MIT payloads in one pass carry no title block at all, so this base's "classify from the title block" method fails `2 / 31` — and the corrected discriminator is the operative clause
+
+This base reports its licence reads as *"`n / n` classified from the title block"* (`36 / 37` at
+`p747`, `26 / 26` at `p746`). 🔴 **`p748` scores `29 / 31`, and both failures are the same shape:**
+
+| Repository | Index | Payload | First line | Classified by |
+|---|---|--:|---|---|
+| [`PolicyEngine/policyengine-taxsim`](https://github.com/PolicyEngine/policyengine-taxsim) | `MIT` | `1,060 B` `ff117700ce78` | `Copyright 2024 PolicyEngine` | operative clause |
+| [`gorules/zen`](https://github.com/gorules/zen) | `MIT` | `1,057 B` `2493262dd0c0` | `Copyright 2023 GoRules.io` | operative clause |
+
+**Neither payload contains the string `MIT License` anywhere.** Both open on the copyright line and
+go straight into the grant. A title-block classifier returns `UNRECOGNISED` on both — and an
+`UNRECOGNISED` verdict on a permissive payload is the expensive direction of error, because it
+pushes a usable repository into the refusal table.
+
+🟢 **The repair, and it is one string:** classify MIT from the operative clause
+**`Permission is hereby granted, free of charge`**, which is present and byte-stable in both.
+⚠️ **Second trap, and it will bite a `grep`:** both payloads use **typographic quotes** —
+`(the “Software”)`, `U+201C`/`U+201D` — not ASCII `"`. A pattern written with ASCII quotes matches
+neither. Added to `P240` as check `8`.
+
+🔵 **Scope stated honestly:** `1,057–1,069 B` is the MIT size band, so the *size* channel already
+flagged both correctly. The finding is that the base's **primary** channel is the fragile one, and
+the cheap corroborator was sitting next to it unused.
+
+---
+
+## T413 — 🔴 The largest holding in this register carries no grant file, and its only licence statement is a packaging classifier — a third grant channel this base does not read
+
+[`openfisca/openfisca-france`](https://github.com/openfisca/openfisca-france) is the French national
+tax-and-benefit model: **`317★`, pushed `2026-11-09`, the single most-starred artefact this pass
+reached**, and the thing a French student-aid engine is actually built on. The GitHub index says
+**`NONE`**. 🔴 **There is no grant at `12` probed paths** (`LICENSE`, `LICENSE.md`, `LICENCE`,
+`LICENSE.txt`, `COPYING`, `COPYING.md`, `LICENSE.AGPL`, `AGPL-3.0.txt`, `license.md`,
+`LICENSE-AGPL.txt`, `doc/LICENSE`, `.github/LICENSE`), and **its README says nothing about a
+licence** (`0` matches for `licen[cs]e|AGPL|GPL|copyright`).
+
+🟢 **The licence statement exists, in a channel this base has never read:** the Python packaging
+metadata.
+
+```
+"License :: OSI Approved :: GNU Affero General Public License v3"
+```
+
+That is a **PyPI trove classifier** in the project's packaging config — a *declaration* of a grant,
+not a grant text. 🔵 **Three channels, now ranked by what they actually are:** the payload is the
+grant; the platform index is a reading of the payload; the packaging classifier is the publisher's
+**assertion**, binding on nobody and absent from every tool this base runs.
+
+🟢 **It corroborates rather than decides**, and it corroborates correctly where both exist:
+[`gems-uff/sapos`](https://github.com/gems-uff/sapos)'s `package.json` says `"license": "MIT"` and
+its payload is MIT (`1,116 B` `6704cf9cffae`). ⚠️ **Verdict of record for `openfisca-france`:
+ALIVE and UNGRANTED-AT-`12`-PATHS, publisher-asserted AGPL-3.0.** For an engagement that means: the
+`T302` refusal stands on the grant absence, **and** the asserted grant is the most restrictive one
+in the register, so nothing is gained by litigating it. `3` honest negatives this pass, no
+denominators claimed (`T388` still governs).
+
+---
+
+## T414 — 🔴 A national model's README advertises a `LICENSE` file that does not exist, on either candidate branch — `p741`'s finding reproduced independently one layer up
+
+[`openfisca/openfisca-tunisia`](https://github.com/openfisca/openfisca-tunisia) (`25★`, pushed
+`2026-11-09`, index `NONE`) states its grant twice, in French and English, and links it:
+
+> *"Son code source est distribué sous la licence GNU Affero General Public Licence version 3 ou
+> ultérieure (cf. [LICENSE](…/blob/master/LICENSE))."*
+
+| Advertised path | Result |
+|---|---|
+| `openfisca-tunisia/master/LICENSE` | 🔴 **`404`** |
+| `openfisca-tunisia/main/LICENSE` | 🔴 **`404`** |
+| `openfisca-france/master/LICENSE` | 🔴 **`404`** |
+
+🔵 **`p741` recorded that "a README can name a licence file in a repository that does not exist."
+This is the second independent instance, and it is a worse one**, because here the README is the
+*only* prose statement of the grant and it points at nothing. A pipeline that trusts README prose
+records `AGPL-3.0`; a pipeline that fetches the advertised path records a dead link; only a pipeline
+that probes a **path list** records the truth, which is *no grant text in the repository at all*.
+
+⚠️ **`default_branch` is load-bearing here exactly as `T401` said:** `openfisca-france` and
+`openfisca-tunisia` default to **`master`**, while `openfisca-core` and `country-template` default
+to **`main`**, inside one organisation. The `HEAD` form of the raw channel is what makes the probe
+branch-agnostic; a hard-coded `main` would have reported `3` false absences this pass.
+
+---
+
+## T415 — 🟢 The agent layer for this register is a measured near-nil, and a pre-registered study says why: small models agree with the statutory oracle at `κ ≤ 0.079` in `12 / 12` cells
+
+**The supply measurement first** (`gh api -X GET search/repositories`, totals, this pass):
+
+| Query | Repositories |
+|---|--:|
+| `enrollment management agent ai university` | **`0`** |
+| `tuition fee agent llm education` | **`0`** |
+| `student accounts receivable higher education` | **`0`** |
+| `financial aid mcp server` | `1` |
+| `student finance agent llm` | `2` |
+| `benefits eligibility agent llm` | `3` (**`0`** on-topic) |
+| `school counseling software` | `0` |
+| — *platform side, for contrast* — | |
+| `school fee management` | `1,976` |
+| `tuition management` | `1,396` |
+| `student billing` | `936` |
+| `bursar` | `656` |
+
+🔴 **The platform layer is four orders of magnitude larger than the agent layer.** `T402` measured
+the same shape for R&E federation (`437 : 2`); this is a second, independent instance, and the
+highest-starred *on-topic agent* this pass found anywhere in the register is `31★`.
+
+🟢 **And unlike `T402`, this nil now has a measured cause rather than a guess.**
+[`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code) (`Apache-2.0`
+`11,358 B` `cfc7749b96f6`, `0★`) is the reproduction bundle for a **pre-registered** study of
+rules-as-code versus small language models on US federal benefits eligibility — `199` fixtures
+across SNAP, Medicaid, SSI, VA pension, EITC and WIC; a Rust oracle and a Python oracle
+**bit-identical on `199 / 199` fixtures to the integer cent**; `21,492` logged main-pass model calls;
+pre-registration hash `b8bc676b…` frozen before the first call.
+
+**Re-scored from the shipped `results/llm-snap-scored.json` (`108` cells, SNAP, oracle ground
+truth), averaged over `9` seed/variant runs per cell:**
+
+| Model | Condition | Accuracy | **Cohen's κ** | Grant MAE | Parse-fail |
+|---|---|--:|--:|--:|--:|
+| Phi-3.5-mini-instruct | zero_shot | `0.602` | `0.066` | `$322` | `0.000` |
+| Phi-3.5-mini-instruct | english_rules | `0.588` | `0.030` | `$432` | `0.020` |
+| Phi-3.5-mini-instruct | **statute_ctx** | **`0.645`** | `0.018` | `$441` | `0.009` |
+| Phi-3.5-mini-instruct | cot | `0.504` | 🔴 `-0.103` | `$392` | `0.102` |
+| Qwen2.5-3B-Instruct | statute_ctx | `0.362` | 🔴 `-0.180` | `$425` | `0.003` |
+| Qwen2.5-3B-Instruct | cot | 🔴 `0.119` | 🔴 `-0.519` | — | `0.014` |
+| gemma-3-4b-it | zero_shot | `0.626` | **`0.079`** | `$486` | `0.005` |
+| gemma-3-4b-it | cot | `0.616` | `0.078` | `$366` | `0.014` |
+| gemma-3-4b-it | statute_ctx | `0.556` | 🔴 `-0.045` | `$399` | `0.012` |
+
+🔴 **`κ ≤ 0.079` in all `12` model×condition cells; negative in `6` of `12`.** On every standard
+reading that is *no* agreement beyond chance. The monthly benefit amount is wrong by **`$276`–`$486`
+on average**, against an oracle that reproduces to the cent.
+
+🟢 **The most instructive row is `statute_ctx`, and it is the one a vendor demo would quote.**
+Handing Phi-3.5 the **verbatim CFR text** produces the best accuracy in the table (`0.645`) and a κ
+of `0.018` — i.e. **the accuracy gain is base-rate guessing on an imbalanced binary, not
+agreement.** Anyone evaluating an aid agent on accuracy alone will buy this. **Score κ, or score
+nothing.**
+
+⚠️ **Scope, stated because it bounds the claim and a client will ask.** The models are **`3`–`4 B`
+parameter local models** (Phi-3.5-mini, Qwen2.5-3B, gemma-3-4b) served under schema-constrained
+vLLM; the scored file covers **SNAP only**; the repository is `0★`, single-author, and the paper is
+not shown to be peer-reviewed. 🔴 **This does NOT measure frontier models, and it must not be
+quoted as "LLMs cannot do eligibility."** What it supports is narrower and still decisive for
+architecture: **a small model asked to *be* the determination is not fit for the purpose, and the
+honest architecture puts the number in a deterministic engine.** `P241`.
+
+---
+
+## T416 — 🟢 Statutory churn in an eligibility register is measurable, and it is `33 / 199` fixtures in one year — `3` eligibility flips and `30` amount changes
+
+From the same bundle's `results/quarterly-diff.json`, 2025 → 2026 parameter year:
+
+| Outcome | Fixtures |
+|---|--:|
+| Unchanged | `166` |
+| **Amount changed, eligibility same** | **`30`** |
+| **Eligibility flipped** | **`3`** |
+| Total | `199` |
+
+🟢 **`16.6%` of cases change answer in a single parameter year, and the split is the useful part:**
+eligibility is comparatively stable (`1.5%` flip) while **the money moves (`15.1%`)**. A
+determination cached, fine-tuned into weights, or hard-coded in application logic is wrong for one
+case in six within a year — and wrong *quietly*, because the eligible/ineligible headline still
+matches.
+
+🔵 **This is the strongest available argument for the `P242` architecture** — rules as versioned
+data in an engine, parameters dated, the agent explaining rather than computing — and it is the
+`P245` regression gate: re-run the fixture suite on every parameter release and diff, which is
+exactly what the bundle's `quarterly_diff.py` does.
+
+⚠️ **Scope:** US federal programmes, `6` of them, one year-over-year step. The *mechanism*
+(annual indexation moves amounts, statute moves eligibility) is general; the `16.6%` is not a
+constant and should be re-measured per jurisdiction.
+
+---
+
 # 🆕 Trends new at `p747` (researched 2026-11-10) — `T396`–`T408`
 
 **Added above `p746`'s `T388`–`T395`.** `p747` changed the register to **the inter-institutional

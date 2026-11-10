@@ -6,6 +6,20 @@ updated: 2026-11-10
 
 # Education AI — Market Intelligence
 
+**Pass p748 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
+facts**; the mandated market leg paid as well. 🟢 **Each region's newest block is `#### 🆕 p748`
+under [`## Opportunities by region`](#opportunities-by-region), and all five are written this pass —
+no region left at silence.** The register is **the money layer**: fees, financial aid, scholarships
+and the eligibility determination under all three. 🔴 **The portable finding is `T415`: a small
+language model asked to decide eligibility agrees with the statutory oracle at `κ ≤ 0.079` in
+`12 / 12` measured cells, and the verbatim-statute condition produces the best *accuracy* in the
+table at `κ = 0.018`.** Evaluate on κ. 🔴 **The portable licence findings are `T410` (`9 / 9`
+eligibility engines are AGPL-3.0, with an MIT agent layer directly above) and `T411` (the one
+government reference architecture pins a non-production-only engine).** ⚠️ **Two numbers carried
+from the legs are single-source and are labelled as such in the regional blocks: LATAM's `30%`
+university-AI-policy figure, and the "Regulation (EU) 2026/1744" citation, which could not be
+corroborated this pass.**
+
 **Pass p746 · researched 2026-11-10.** All four mandated regional legs ran and all four returned facts; the mandated market leg paid as well. 🟢 **Each region's newest block is `#### 🆕 p746` under [`## Opportunities by region`](#opportunities-by-region), and this pass writes all five — see `T395`, which measured that `3` of the last `5` passes added one block or none while describing it as five.** 🟢 **The three findings most worth a buyer's time this pass:** the EU date conflict this base has carried for dozens of passes now has **a named instrument on one side** — *Regulation (EU) 2026/1744*, published in the Official Journal `24 July 2026`, with Annex III stand-alone high-risk applying **`2 December 2027`** and AI embedded in regulated products **`2 August 2028`**; **South Korea's AI Basic Act is already in force (`22 January 2026`)** and covers education as high-impact, with the regulator treating 2026 as a grace period — which makes it the one jurisdiction with a *dated, closing* compliance window; and the LATAM governance gap is now quantified on **four** axes rather than two (`87%` using AI, `74%` in teaching and learning, **`26%` with a formal AI strategy, `55%` with no AI budget**). 🔴 **The global market figures came back `4×` apart from the ones this base already carries and are published as a conflict, not averaged.** 🔴 **North America's own named supply-side candidate list was enumerated this pass and is a measured nil — but the register was right and the estate exists under a different owner (`T394`).**
 
 **Pass p744 · researched 2026-11-10.** All four mandated regional legs ran and all four returned facts; the mandated market leg also paid. Each region's newest block is `#### 🆕 p744` under [`## Opportunities by region`](#opportunities-by-region), for **all five** values. 🟢 **The three findings most worth a buyer's time this pass:** the **first agentic-specific education market sizing** this base holds (Mordor: `$2.37B` 2026 → `$11.83B` 2031 @ `37.92 %`, with intelligent tutoring at `26.04 %` of it) against broad-market bases `4.8×` apart — so quote the **segment ratio**, not a headline number; the EU 2026 amendment stating the **AI-literacy duty requires no specific level**, which converts an unbounded obligation into a **documented measure** a studio can scope and price; and a funded, dated LATAM programme to name in a proposal (**Google.org `$4.6M`, `9` countries, `1.25M` students by 2028, delivered by the Raspberry Pi Foundation**). 🔴 **A LATAM market figure came back an order of magnitude below the one this base already carries and is published as a conflict, not averaged.** 🔴 **EMEA and APAC adoption percentages are nil for the fourth consecutive pass, and both nils are recorded with the legs that produced them.**
@@ -168,6 +182,59 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p748` (2026-11-10) — the money layer: the register with the clearest budget, the worst agent supply, and a federal portal with no API
+
+**Demand — 🟢 and it is regulatory as much as commercial.** The mandated NA leg returned a policy
+picture, not a product one: **roughly `100` state bills** tracked this year that bear on students'
+use of AI in K-12; **Illinois** required its state board to publish district AI guidance by
+**1 July 2026**; **Virginia's S.B. 394** directs its education agency to issue guidance including
+teacher training; **North Carolina** tied AI guidance to its Digital Learning Standards; at least
+**`15` states** have introduced or passed education-specific AI legislation. Federal: a national
+framework for AI in education and a K-12 AI instruction task force, a US Department of Education
+**AI in Education** discretionary-grant priority with first competitions expected in the
+**2026-27** cycle, and **$169M** in FIPSE awards including responsible AI use in higher education.
+🔴 **Against that, the Stanford AI Index reading is the one to quote to a client: half of schools
+have no AI policy at all and only `6%` of teachers call their school's policy clear.**
+
+**Supply — 🔴 the worst-supplied agent tier this base has filed, and the shape is now measured
+(`T415`).** `enrollment management agent ai university` → **`0`** repositories.
+`student accounts receivable higher education` → **`0`**. `fafsa` → `180`, **nothing above `3★`**.
+`financial aid` → `260`, dominated by *"how to apply for Coursera financial aid"* guides.
+
+🟢 **What NA actually has, and it is better than the agent tier suggests:**
+
+- [`bcgov/SIMS`](https://github.com/bcgov/SIMS) — **Apache-2.0**, `29★`, pushed the day of this
+  pass: a **province's production student financial aid platform**, with the ministry /
+  institution / student role split and assessment automation already modelled. 🔄 **Promoted to a
+  sell shelf this pass** after sitting on a discovery shelf since `611-D` (`T409`).
+  ⚠️ **It pins Camunda 8, which is non-production-only — replace it (`T411`, `P243`).**
+- [`PolicyEngine/policyengine-us`](https://github.com/PolicyEngine/policyengine-us) (`171★`) and
+  [`-canada`](https://github.com/PolicyEngine/policyengine-canada) (`19★`) — 🔴 **AGPL-3.0**, pushed
+  continuously: the maintained federal+state and Canadian means-testing engines. Boundary per
+  `P242`.
+- [`PolicyEngine/policyengine-claude`](https://github.com/PolicyEngine/policyengine-claude) —
+  🟢 **MIT**, `31★`: **the strongest agent row in the register**, and it encodes and reviews policy
+  rather than computing entitlements.
+- [`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code) — 🟢 **Apache-2.0**:
+  the `199`-fixture, dual-oracle acceptance suite over SNAP/Medicaid/SSI/VA pension/EITC/WIC
+  (`P245`).
+
+🔴 **One integration constraint, found in a payload and worth more than its `11★`:**
+[`mattebad/monarch-studentaid-sync`](https://github.com/mattebad/monarch-studentaid-sync) drives
+**`StudentAid.gov` with Playwright and email-MFA over Gmail IMAP** to read loan balances. **There is
+no usable API.** Price any US loan-servicing integration as browser automation with an MFA
+dependency, not as an API client.
+
+**Opportunity, ranked.**
+1. 🟢 **The aid-explanation agent for a state system or large district, on `P241`** — the engine
+   decides, the agent explains in the family's language. The regulatory wave above is a *guidance*
+   wave, and `P241`'s audit trail is what makes an agent approvable under it.
+2. 🟢 **The Camunda-8 extraction** (`P243`): a one-page deliverable for any integrator that copied a
+   published public-sector architecture. Short, high-trust, opens the larger engagement.
+3. 🟢 **The κ-based evaluation harness** (`P245`) sold as procurement diligence — `T415` shows a
+   statute-fed model producing the best *accuracy* in its table at `κ = 0.018`. Districts are
+   buying on accuracy claims right now.
 
 #### 🆕 `p747` (2026-11-10) — the identity layer the US already owns, and the standards vacuum an agent has to be sold into
 
@@ -955,6 +1022,54 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p748` (2026-11-10) — the money layer: the strongest public-sector supply of any region, and the only region where a whole technique is banned outright
+
+**Demand — 🟢 dated and binding, with one correction to the usual framing.** The EU AI Act's
+high-risk obligations for education (Annex III) were **pushed from August 2026 to `2 December 2027`**
+by the amending agreement of **7 May 2026** — a slip this base already held and which this pass
+re-confirms. 🔴 **But the prohibition is already live and is the sharper fact: emotion recognition
+in educational institutions is a *prohibited* practice, in force since February 2025** — not
+high-risk, not mitigable with documentation. Chatbot transparency duties attach from **August 2026**.
+The Commission published draft Article 6 guidelines with consultation open to **23 June 2026**, and
+Eurydice's *Digital education at school in Europe 2026* finds access to advanced AI at school level
+**uneven**. Council of Europe published its *Compass for AI and education*; UNESCO's generative-AI
+guidance and teacher AI competency framework and the **OECD Digital Education Outlook 2026** are the
+reference frameworks national ministries cite. ⚠️ **One widely-circulated citation — a
+"Regulation (EU) 2026/1744" as the amending act — could not be corroborated this pass and should not
+be quoted to a client without checking the Official Journal.**
+
+**Supply — 🟢 the best in the world for this register, and it is state-operated.**
+
+- [`DNUM-SocialGouv/aides-jeunes`](https://github.com/DNUM-SocialGouv/aides-jeunes) — 🔴 **AGPL-3.0**
+  (`34,363 B` `5ffb8eaf206c`), `84★`, pushed `2026-11-06`: **a French ministry digital unit's
+  production benefits simulator for young people**, study grants included. The closest thing in open
+  source to *"what would this student actually receive"*.
+- [`openfisca/openfisca-core`](https://github.com/openfisca/openfisca-core) (`252★`) and
+  [`openfisca/openfisca-france`](https://github.com/openfisca/openfisca-france) (`317★`) — the
+  francophone entitlement stack. 🔴 **The `317★` national model has no grant file at `12` probed
+  paths**; its only licence statement is a packaging classifier asserting AGPL-3.0 (`T413`).
+- [`PolicyEngine/policyengine-uk`](https://github.com/PolicyEngine/policyengine-uk) — 🔴 AGPL-3.0,
+  `53★`, pushed daily: the maintained UK path.
+- [`openfisca/openfisca-tunisia`](https://github.com/openfisca/openfisca-tunisia) — `25★`, pushed
+  `2026-11-09`: 🟢 **the only EMEA-Africa entitlement model this pass reached.** 🔴 Its README
+  asserts AGPL-3.0 and links a `LICENSE` that `404`s on both candidate branches (`T414`) — usable as
+  a reference, not as a licensed dependency.
+
+**Opportunity, ranked.**
+1. 🟢 **The sovereign aid-determination service** — `P242`'s posture is a *selling point* here, not a
+   constraint: an unmodified AGPL engine run on the institution's own infrastructure, rules as
+   versioned data, the agent explaining only. It answers the data-residency question and the
+   AI Act audit question with the same architecture.
+2. 🟢 **Annex III readiness work on a `2 December 2027` clock**, with `P245`'s κ gate as the
+   conformity evidence. The slip created a `13`-month window that is **closing**, and
+   `P241`'s engine/agent split is the cheapest way to keep an aid tool out of the
+   high-risk-determination category in the first place.
+3. 🔴 **The refusal that wins trust:** tell an EMEA client plainly that a wellbeing or engagement
+   product inferring emotion in a classroom is **prohibited**, not merely regulated. That is a
+   conversation competitors are getting wrong.
+4. ⚠️ **Africa-facing work has one reference model and no grant on it.** Say so rather than
+   implying coverage.
 
 #### 🆕 `p747` (2026-11-10) — EMEA owns the open federation layer outright, and that changes what a European engagement can offer
 
@@ -1928,6 +2043,54 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p748` (2026-11-10) — the money layer: the region with real national entitlement code, and the only region where both new agent rows were built in-market
+
+**Demand — 🟢 fast adoption, fragmented governance, and that combination is the sale.** Growth is
+the strongest of any region (MarketsandMarkets puts the regional AI-in-education CAGR at **`20.9%`**
+for 2024-29, while North America still holds revenue share); an EdTech Hub figure reports roughly
+**`86%` of Southeast Asian teachers already using AI tools**, and **fewer than half** of surveyed
+educators express strong confidence in existing institutional or government AI policy. Governance is
+**per-ministry**: EdTech Hub notes each ministry integrates AI into its own sector, with the
+Philippines' DepEd working through **SEAMEO INNOTECH** and launching **AGAP.AI** in January 2026 as
+its first nationwide responsible-AI programme in basic education. **Clarivate** published a
+comparative study of AI policy across **seven** Asia-Pacific jurisdictions; Cambridge English
+convened **200+** senior leaders including ministries. ⚠️ **Gap recorded honestly: the mandated leg
+surfaced no primary regulatory text for China, Japan, Korea, Australia or India** — the picture is
+Southeast-Asia-weighted and partly vendor-sourced.
+
+**Supply — 🟢 and this is the register's surprise: APAC has the most *national* entitlement code and
+both of this pass's in-market agent rows.**
+
+- [`project-inclusive/OpenFisca-Japan`](https://github.com/project-inclusive/OpenFisca-Japan) —
+  🔴 **AGPL-3.0** (`34,519 B` `fdce1ee3fbf8`), `39★`, pushed `2026-11-08`: Japan's benefit rules
+  **plus a deployed citizen-facing web front end**. 🟢 The proof that a national entitlement
+  calculator can run as a public service on open code.
+- [`BetterRules/openfisca-aotearoa`](https://github.com/BetterRules/openfisca-aotearoa) — 🔴
+  AGPL-3.0, `45★`: New Zealand legislation as code. ⚠️ **`20` months stale** (pushed `2025-03-13`) —
+  a reference, not a dependency.
+- [`Asad-Aziz-001/AI-Scholar-Hunt`](https://github.com/Asad-Aziz-001/AI-Scholar-Hunt) — 🟢 **MIT**
+  (`1,079 B` `b5377f89f87e`), `4★`: LLM + RAG scholarship discovery **built for Pakistani students**
+  (`51+` schemes, `20+` destinations), claiming **local inference only, no external API** — directly
+  relevant to a data-residency conversation. ⚠️ `PRE-PRODUCTION`.
+- [`HamzaKhanBUIC/BISP-Benefits-Navigator`](https://github.com/HamzaKhanBUIC/BISP-Benefits-Navigator)
+  — 🟢 **MIT**, `1★`: 🟢 **filed for its architecture, which is `P241`'s reference shape** —
+  *"Gemini only extracts the answers; a TypeScript rules engine produces the estimate"* — and built
+  for **low-literacy users shut out by text-heavy portals**, voice-first. ⚠️ `PROTOTYPE`, demo
+  offline.
+- [`tcet-opensource/erp-backend`](https://github.com/tcet-opensource/erp-backend) — ⚠️ **GPL-2.0**,
+  `43★`, **unpushed since January 2024**: an Indian college's own ERP. Disclosed, not recommended.
+
+**Opportunity, ranked.**
+1. 🟢 **Voice-first, low-literacy aid screening is an APAC-native product, and the region already
+   built the prototype.** `P241` with the voice intake channel foregrounded: the determination stays
+   deterministic, the conversation carries the literacy load. This travels directly to LATAM and to
+   EMEA-Africa.
+2. 🟢 **National entitlement calculators as public services** — Japan is the working reference; the
+   same shape fits ministries with a scholarship scheme and no digital front door.
+3. 🟢 **Per-ministry governance is a repeatable deliverable**, not a nuisance: the `P245` κ gate plus
+   `P241`'s audit trail is the same artefact sold `n` times across fragmented jurisdictions.
+4. ⚠️ **Price `openfisca-aotearoa`'s staleness** before promising a NZ engagement on it.
+
 #### 🆕 `p747` (2026-11-10) — the APAC federation layer is permissive, it travels between countries, and the national estates are mostly ungranted
 
 🟢 **Supply — and the structural finding matters more than the rows.** APAC's federation code is
@@ -2820,6 +2983,61 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p748` (2026-11-10) — the money layer: the highest adoption and the lowest governance of any region, and a platform nil measured in-language
+
+**Demand — 🟢 the firmest regional numbers in this pass, and they describe a governance gap, not a
+technology gap.** The **Digital Education Council** survey (February 2026, with **Tecnológico de
+Monterrey** and the Institute for the Future of Education) found **`92%` of students and `79%` of
+faculty actively engaging with AI**, with `67%` of students using it at least weekly. 🔴 **Against
+that, only about `30%` of Latin American universities have published policies on AI use.** The
+**UNESCO IESALC / UNU-IAS** working paper (September 2026) maps AI across teaching, research,
+administration and governance from a survey of **200 institutions in 19 countries** and finds
+adoption *"neither uniform nor evenly distributed"*, with a clear public/private split. **UNESCO and
+Chile's CENIA** signed a cooperation agreement on ethical AI in education that includes integrating
+**Latam-GPT**, an open model built for the region; **EdTech Hub and Fundación Ceibal** partnered in
+September 2026; the **IDB** published on AI in education in Argentina with a regulation-and-financing
+focus; **ECLAC's eLAC** agenda is the regional coordination platform. ⚠️ **Recorded as a gap: the
+mandated leg surfaced almost no national AI-in-education regulatory text for the region** — the
+`30%` policy figure comes from a single survey quote and should be presented as such.
+
+**Supply — 🔴 the platform layer is a nil, and this pass measured it in Spanish and Portuguese
+rather than assuming it.**
+
+| Query | Repositories | Top result |
+|---|--:|---|
+| `becas sistema gestion` | `42` | 🔴 **`1★`**, every page-1 hit an unlicensed student project |
+| `bolsa de estudos sistema` | `12` | 🔴 Same tier |
+| `mensalidade escolar sistema` | `5` | 🔴 Same tier |
+| `gestion matricula pagos universidad` | 🔴 **`1`** | — |
+
+🟢 **But the region is not empty where it counts, and the best row is MIT:**
+
+- [`gems-uff/sapos`](https://github.com/gems-uff/sapos) — 🟢 **MIT** (`1,116 B` `6704cf9cffae`),
+  `33★`, pushed `2026-11-09`: graduate-programme administration including **scholarships**,
+  enrolments and advisement, built and run at **Universidade Federal Fluminense** (placement from
+  payload text, `T378`), Rails, CI green, coverage published. 🟢 **The best LATAM row in this
+  register by a wide margin, and a client fork stays closed.**
+- [`lumiis2/opportunity-tracker`](https://github.com/lumiis2/opportunity-tracker) — 🟢 **MIT**
+  (`1,089 B` `98c72093bf63`), `115★`, pushed `2026-11-10`, **`README-pt.md`**: maintained,
+  subscribable calendars of scholarship and graduate-programme deadlines. 🔄 **Promoted to a sell
+  shelf this pass** (`T409`). **The cheapest useful first increment in the region — wrap it, do not
+  rebuild it.**
+- 🔴 **No LATAM jurisdiction is modelled in any entitlement engine.** A statutory means-testing
+  engagement starts from [`openfisca/country-template`](https://github.com/openfisca/country-template),
+  which is **AGPL-3.0** — so it starts copyleft by construction (`P242`, `P244`).
+
+**Opportunity, ranked.**
+1. 🟢 **The `92%`/`30%` spread is the sale, and it is a governance product before it is an AI
+   product.** `P241`'s engine/agent split plus `P245`'s κ gate is exactly the artefact a university
+   needs to publish a defensible AI-use policy — and `70%` of them have not published one.
+2. 🟢 **`P244`'s three-phase sequencing**: deadline/opportunity layer (weeks 1-3, visible, no
+   statutory risk) → `sapos`-based scholarship record (weeks 4-9) → entitlement engine only when a
+   ministry is the counterparty. It is the lowest-risk way into a region with no platform incumbent.
+3. 🟢 **Latam-GPT for the intake and explanation channels** (`P241` steps 1 and 4) — Spanish and
+   Portuguese at the student's reading level, with the determination still deterministic.
+4. ⚠️ **Do not quote a LATAM platform incumbent.** There is none; the honest pitch is that the
+   region is greenfield and `sapos` plus `bcgov/SIMS`-as-reference is the starting kit.
 
 #### 🆕 `p747` (2026-11-10) — the federation layer is a measured nil here, and that makes the engagement greenfield rather than absent
 
@@ -3770,6 +3988,72 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p748` (2026-11-10) — the money layer, globally: the architectural question got a pre-registered answer this pass, and it is the most portable finding in the base
+
+**The market frame, unchanged and still a range, not a number.** The AI-in-education market is cited
+between **~$9.6B and ~$10.6B for 2026**, with a path to roughly **$42.5B by 2030** at a **~41.5%**
+CAGR — figures from vendor-adjacent market research that this base continues to publish **as a
+range** rather than a point. Adoption readings cluster high (**86%** of education organisations using
+generative AI per one Microsoft-sourced figure, a less well-sourced **94%** elsewhere). 🔵 **Two
+2026 framings matter more than the sizing:** the sector has moved *"past the panic phase"* from
+policing integrity to managing cognitive load, with the OECD's **Digital Education Outlook 2026**
+warning that AI helps learning only where pedagogy stays in control; and buyers now demand evidence
+— one analysis finds **only `45%`** of the most-used tools have published research meeting an **ESSA
+evidence tier**. 🟢 **Skills-based microcredentials are named as having real momentum and blockchain
+credentialing as fading**, and Instructure's **Canvas Career** is the flagship workforce-learning
+launch.
+
+**The finding this pass contributes to every region, and it is the reason to read `T415`.**
+
+🔴 **A small language model asked to decide benefits eligibility agrees with the statutory oracle at
+`κ ≤ 0.079` in `12 / 12` measured model×condition cells — negative in `6` of `12` — and misstates
+the monthly amount by `$276`–`$486`.** Measured from a **pre-registered** study (hash frozen before
+the first call) with `199` fixtures over six US federal programmes, a Rust and a Python oracle
+**bit-identical on `199 / 199` to the integer cent**, and `21,492` logged calls:
+[`jcatster7/benefits-as-code`](https://github.com/jcatster7/benefits-as-code), Apache-2.0.
+
+🟢 **And the single most useful sentence to carry into a client meeting:** feeding the model the
+**verbatim statute** produced the study's **best accuracy** (`0.645`) at a κ of **`0.018`** — the
+gain was base-rate guessing on an imbalanced binary, not agreement. **Evaluate on κ, or the demo
+will sell you.**
+
+⚠️ **The claim's boundary, stated because a client will test it.** The study measures **`3`–`4 B`
+parameter local models** (Phi-3.5-mini, Qwen2.5-3B, gemma-3-4b) on **SNAP**; the repository is
+`0★` and single-author; it is **not** a measurement of frontier models and must not be quoted as
+*"LLMs cannot do eligibility."* 🟢 **The architectural conclusion does not need the stronger claim:
+an aid determination must be reproducible on appeal, and a sampled model is not reproducible even
+when it is right.** Hence `P241` everywhere.
+
+**The two global licence facts that shape every engagement in this register.**
+
+1. 🔴 **`9 / 9` eligibility engines byte-read this pass are `AGPL-3.0`** — across four regions, five
+   jurisdictions and two independent publishers — **while the agent layer directly above them is
+   MIT from the same publishers** (`T410`). The seam where the licence changes is the seam the
+   architecture already wanted: `P242`.
+2. 🔴 **The one government reference architecture worth copying pins a component that is
+   non-production-only.** `bcgov/SIMS` → `@camunda8/sdk ^8.8.18` → `camunda/camunda`, **Camunda
+   License 1.0** (`3,559 B` `bc6a88b51407`), *"Non-Production Environment"* only; the Apache-2.0
+   predecessor has been **frozen since `2025-11-04`** (`T411`). Permissive replacements exist and
+   are larger: `Activiti` (`10,554★`), `Flowable` (`9,642★`), `gorules/zen` (`2,119★`, MIT).
+   `P243`.
+
+🟢 **Statutory churn, measured rather than asserted (`T416`):** `33 / 199` fixtures change answer
+across one parameter year — **`30` amount changes and `3` eligibility flips**. `16.6%` of cases move
+in twelve months, and they move *quietly*, because the eligible/ineligible headline still matches.
+**That is the argument for rules-as-versioned-data and for the `P245` standing gate**, in any
+jurisdiction.
+
+**Global opportunity, ranked.**
+1. 🟢 **`P241` as the house architecture for any "AI financial aid / fees / scholarship advisor"
+   request** — the model talks, the engine computes, the trace is the product.
+2. 🟢 **`P245` sold as procurement diligence**, to buyers who are currently being shown accuracy
+   numbers. The ESSA-evidence finding above says the market is already asking for proof; this is the
+   proof instrument.
+3. 🟢 **`P243` as a short, high-trust entry engagement** wherever a public-sector reference
+   architecture has been copied.
+4. 🔴 **Refuse the determination-as-LLM build** and show the κ table. It is a better answer than a
+   caveat, and it is the one competitors are not giving.
 
 #### 🆕 `p747` (2026-11-10) — no ratified standard for what an agent presents as its identity, and a `14,806★` permissive IAM base that calls itself agent-first
 
