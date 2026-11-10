@@ -3,6 +3,93 @@ industry: education
 region: Global
 updated: 2026-11-10
 ---
+## 🆕 2026-11-10 (p734)
+
+**`38` supply legs attempted (`36` valid) via `gh api -X GET search/repositories` → `626` unique
+repositories → `394` novel against `5,704` held slugs → `97` novel + permissive + unarchived →
+`18` filed.** The `4` mandated prose legs contributed **`0`** addresses not already held — a
+**`38`th consecutive nil**, and this pass records the denominator: `7 / 7` of the repositories those
+legs named were already in this base.
+
+### What trended, and the two channels that actually paid
+
+🟢 **Filed from this sweep** — `6` platforms, `5` foundations, `7` agents; see
+[`../verticals/solutions.md`](../verticals/solutions.md),
+[`foundations.md`](foundations.md) and [`../agents/top.md`](../agents/top.md).
+The sweep's single most valuable return is
+[`google/moodle-on-gcp`](https://github.com/google/moodle-on-gcp) (`74★`, **Apache-2.0**, pushed
+`2026-11-07`) — a **first-party Google Cloud reference architecture and deployment kit for Moodle**
+on containers and Kubernetes. 🔵 **Why it outranks higher-star returns: it is a licensing result,
+not a feature.** Moodle is **GPL-3.0** and the most-deployed LMS in the world, so nearly every
+Moodle proposal in this base's history ended on a copyleft host. This repository **deploys Moodle
+without deriving from it**, so the operations layer carries a permissive grant even though the
+application does not. Published as **`P182`**.
+
+🔴 **`T281` reproduced exactly, one pass later: relevance and star rank are anti-correlated on this
+instrument.** Ranked by stars, the head of this sweep is almost entirely noise.
+[`laradock/laradock`](https://github.com/laradock/laradock) (`12,682★`) matched because *Moodle*
+appears in a list of PHP applications it can host; `Java-Edge/Java-Interview-Tutorial` (`2,864★`),
+`asyml/texar` (`2,392★`), `deepset-ai/haystack-tutorials` (`378★`) and a large block of
+`*-tutorial*` repositories are **teaches-software-engineering** material, excluded under `727-C`.
+🔴 **A second and larger false-friend class was `adaptive learning`**, which returned machine-learning
+papers rather than education: `agentic-learning-ai-lab/adajepa`, `pairlab/Adapt3R`, `EtaYang10th/DARE`,
+`William-Liwei/APCL`, `alzayats/UDnet`, `wyuaq/FPN-OAMP-THz-Channel-Estimation` — *adaptive* as in
+adaptive optimisation, not adaptive instruction. **A pass that files the head of this sweep files
+nothing useful.**
+
+🟢 **The channel that paid is `user:` on institutional publishers, and it paid in the region this
+base keeps nilling.** `10` legs → **`181` repositories → `152` novel** across `openfun` (France
+Université Numérique) `40`, `opencast` `40`, `SURFnet` `39`, `oeru` `22`, `ILIAS-eLearning` `16`,
+`sakaiproject` `14`, `latam-gpt` `7`. **`4` EMEA rows filed — the first time this base has placed
+four European rows in one pass.** 🔴 **But `0` of the `152` is a learning agent** — the tier
+publishes identity, conferencing and operations (`T290`), exactly as `p731` found in North America.
+⚠️ `2` of the `10` legs failed outright: `user:fundacionceibal` and `user:CENIA-Chile` returned
+`422 Validation Failed` — those organisation names do not exist on GitHub under those spellings,
+despite both bodies being named in this pass's LATAM policy sources. Recorded so a later pass does
+not re-spend the legs.
+
+🔴 **The education interop-substrate channel is saturated, measured this pass.** `6` legs for the
+formats education actually integrates on — `QTI`, `xAPI`/learning record store, `LTI 1.3`, `SCORM`,
+Caliper analytics, item banks — returned **`1`** novel permissive live repository in total, and it
+is [`SanDiegoCodeSchool/lti-node-example`](https://github.com/SanDiegoCodeSchool/lti-node-example)
+(`24★`, MIT, last pushed **`2023-09-27`**), an LTI 1.3 teaching example. 🔵 **Not filed** — a
+three-year-stale example is not a foundation. Recorded as a **nil with a denominator**: this base
+already holds the interop substrates, and the channel should not be re-run for several passes.
+
+### The LATAM enumeration, which is this pass's clearest negative result
+
+🔴 **`latam-gpt` — the programme every LATAM policy source names — holds `0` live permissively
+licensed repositories.**
+
+| Measure | Value |
+|---|--:|
+| Repositories | `8` |
+| **No licence field at all** | **`7 / 8`** |
+| Permissively licensed | `1 / 8` (MIT) |
+| **Archived** | **`6 / 8`** |
+| **Live *and* permissive** | **`0`** |
+| Latest push to any *code* repository | `2025-07-09` |
+
+The single MIT repository, [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter),
+is **archived**; the only live code repository (`language_identifier`) carries **no licence**. The
+remainder is data-pipeline tooling — toxicity classifier, deduplication scripts, training
+estimations, fastText classifiers — all archived, none of it education software.
+🟢 **Filed anyway, once, with the archive status in its first sentence**, because the
+**Latin-American national-ID regular expressions** are the one component nobody should write twice
+and **MIT is irrevocable**. Vendor it, own it, take no dependency. See `T291` and **`P181`**.
+🔬 **The `archived` field nearly cost this pass a wrong row:** the first unfiltered view printed
+name, stars, licence and push date but **not `archived`**, and the MIT repository looked live.
+
+### Channel and probe failures recorded this pass
+
+| Channel / probe | Result | Consequence |
+|---|---|---|
+| `curl -sI https://github.com/{o}/{r}` | 🔴 `403` for a live repo **and** an invented one, `2 / 2` | No discriminating power. The procedure's mandated check cannot be used here; `p733`'s note holds. |
+| `gh api repos/{o}/{r}` | 🔴 `403` for every out-of-scope repository, `9 / 9` | **Whole namespace dead**, not just `/license` (`731-J`). Never use it for verification (`T289`). |
+| `gh api search/repositories` | 🟢 Full metadata incl. `archived` for the same repositories | The metadata channel. Limit `30`/min, ample headroom. |
+| `raw.githubusercontent.com/.../HEAD/{file}` | 🟢 `200` live / `404` absent, discriminating | The existence and bytes channel. |
+| `grep -oP '[\x{4e00}-\x{9fff}]'` | 🔴 Returned **`0`** on READMEs that are `27 %`–`32 %` CJK | This pass's **own** probe, silently matching nothing. Re-measured in Python. A zero is not absence until the probe returns non-zero on a known positive. |
+| Case-ordered README fallback chain (`724-I`) | 🟢 Load-bearing, confirmed on `25 / 25` | Verifying every `p734` URL needed the ordered chain: `opencast/helper-scripts` resolves only at lowercase **`readme.md`**, and `openedx/edx-bootstrap` and `openedx/edx-cookiecutters` only at **`README.rst`**. A `README.md`-only probe would have called `3` live repositories absent. **`724-I` re-validated independently.** |
 
 ## 🆕 2026-11-10 (p733)
 

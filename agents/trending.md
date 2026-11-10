@@ -3,6 +3,188 @@ industry: education
 region: Global
 updated: 2026-11-10
 ---
+## 🆕 2026-11-10 (p734) — 🟢 **THE LICENCE GATE THIS BASE HAS REWRITTEN FIVE TIMES WAS ONE TRAILING SPACE AWAY FROM ITS OWN PUBLISHED CONSTANT, AND THE APACHE CONSTANT DECLARED UNREPRODUCIBLE ONE PASS AGO IS REPRODUCED ON FIVE PAYLOADS. 🔴 THE SAME GATE CANNOT CERTIFY BSD AT ALL, AND LATAM'S FLAGSHIP OPEN-AI PROGRAMME HOLDS ZERO LIVE PERMISSIVE REPOSITORIES.**
+
+**`7` agent rows · `5` foundations rows · `6` platform rows · `12` new trends (`T286`–`T297`) ·
+`4` new patterns (`P180`–`P183`) · `24` licence payloads byte-read · `12 / 12` MIT payloads at the
+published constant once one missing step is supplied · `1` constant declared unreproducible last
+pass now reproduced on `5` payloads / `5` publishers / `3` filenames · `1` licence family removed
+from the gate's scope with the cause diffed at word level · `626` repositories enumerated across
+`36` valid supply legs · `394` novel · `181` across `10` institutional legs in two regions ·
+`4` EMEA platform rows filed, a first for this base · `1` LATAM estate measured to `0` ·
+`1` API namespace found dead · `2` stale self-references corrected · `1` of this pass's own probes
+caught returning a false zero.**
+
+### The instrument findings, because they affect every row this base holds
+
+🟢 **`734-A` → `T286` — the gate was never irreproducible; it was missing a trailing space.**
+`p733` named the digest and published `1020 B` / `fe2a9817987f`, and `P176` states the rule as a
+runnable function. **Run exactly as written it lands one byte over on every payload** —
+`1021 B` / `783d6159681f`, itself perfectly stable across `6` MIT payloads. `tr '\n' ' '` converts
+the payload's **final** newline into a **trailing space** and nothing removes it. Add
+`sed 's/ *$//'` and the published constant reproduces **exactly**.
+🔬 **Controlled on `p733`'s own evidence, which is why this is a repair and not a disagreement:**
+[`popcodeorg/popcode`](https://github.com/popcodeorg/popcode), the row `p733` cited for its `T279`
+repair, gives `1021 B`/`783d6159681f` as-written and `1020 B`/`fe2a9817987f` stripped.
+🔵 **Why one byte mattered this much:** a gate whose published form disagrees with its published
+constant refuses *every* correct grant, so a later pass either abandons the constant (`p729` did) or
+silently re-derives it (`p731` did). Both already happened. Published complete as **`P180`**.
+
+🟢 **`734-B` → `T287` — the Apache constant `p733` called unreproducible is reproducible, and it is
+not the published number.** With the trailing-space step the Apache family resolves to
+**`9942 B` / `3fda30957805`**, reproduced on **`5` independent payloads across `5` publishers,
+`3` filenames (`LICENSE`, `LICENSE.txt`, `LICENSE.md`) and a `56`-byte spread of raw sizes**:
+`didi/xiaoju-survey` (corporate APAC), `zhangjiarui530/OpenEduECNU` (academic APAC),
+`openedx/edx-cookiecutters`, `openedx/edx-bootstrap` and `google/moodle-on-gcp` (hyperscaler).
+🔴 **`p733`'s `9130 B` / `6e1ffb7fc4e2` is retired** — no normalisation tested reproduces it, not
+even on `xiaoju-survey`, the payload it was computed from. `T280` closes by **resolution**, not by
+replacement.
+⚠️ **And `p733`'s raw byte counts are systematically `+1`:** `11,413` vs `11,412`, `1,514` vs
+`1,513`, `1,088` vs `1,087` — **`3 / 3`, exactly one over.** Two opposite off-by-ones in one pass is
+the signature of a harness that adds a byte on read and a gate that strips one on write.
+
+🔴 **`734-C` → `T288` — the gate cannot certify BSD at all, and the cause is formatting rather than
+the holder.** Three BSD payloads → **three different values**: `freeCodeCamp/classroom`
+`1451 B`/`99f846c132c0`, `SURFnet/pea-poc` `1480 B`/`96fabc6ac22e`, `opencast/helper-scripts`
+`1278 B`/`ab132540e375`.
+🔬 **Diffed at word level rather than guessed at.** `helper-scripts` is the **2-clause** text
+(`0` numbered clauses) — correctly a different constant. The two **3-clause** payloads differ by
+`29 B` for three reasons, **none of them the holder name**: `-` bullets versus `1.` `2.` `3.`;
+*"All rights reserved."* present or absent; *"contributors"* present or absent in clause 3. Both
+carry the stock holder-invariant clause-3 wording.
+🔵 **This is a scope correction to a gate this base made mandatory.** MIT and Apache are
+holder-invariant once the copyright line is stripped; **BSD is reformatted freely while staying
+semantically stock**, so any byte-exact BSD gate refuses correct grants — the exact failure `P168`
+and `P172` were each written to stop. `P180` restricts certification to MIT and Apache; BSD rows
+carry measured bytes and **no stock claim**. ⚠️ `p733`'s `1441 B`/`8cb6ec54329a` for `classroom` is
+not reproducible under either rule.
+
+🔴 **`734-D` → `T289` — the whole `repos/` API namespace is dead here, not just `repos/…/license`.**
+`gh api repos/{owner}/{repo}` returns `403` for every out-of-scope repository — including ones this
+pass went on to verify alive and file — while
+`gh api -X GET search/repositories -f q=repo:{owner}/{repo}` returns **full metadata for the same
+repository**. Measured `9 / 9` on the first batch attempted. `p731`'s `731-J` found this for the
+`/license` sub-path only. 🔵 **Metadata from the search channel, bytes from the raw channel,
+`repos/` never.** A pass that reaches for it reads a `403` and can record a live repository as
+absent.
+
+🟢 **`734-E` — the mandated `curl -sI` control re-run, `2 / 2`.** `curl -sI
+https://github.com/{owner}/{repo}` returned `403` for both `openedx/edx-platform` (alive) and an
+invented address. The raw channel discriminated the same pair correctly (`200` / `404`). `p733`'s
+instrument note holds unchanged.
+
+🔴 **`734-F` — the four mandated prose legs returned `0` novel addresses, a `38`th consecutive nil,
+and this pass states the denominator.** Every repository the prose legs named was **already held**:
+`HKUDS/DeepTutor`, `SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`,
+`TapXWorld/ChinaTextbook`, `Selleo/mentingo`, `moodlehq/wiki-rag`, `openeducat/openeducat_erp` —
+**`7 / 7` held.** 🔵 The prose legs remain worth running for **demand-side** material, where they
+paid well this pass (all four regional legs returned usable policy and adoption evidence). They are
+not a supply channel and have not been one for `38` passes.
+
+🟡 **`734-G` — one of this pass's own probes returned a false zero, caught by control.** A CJK-density
+probe written as `grep -oP '[\x{4e00}-\x{9fff}]'` reported **`0` CJK characters** for READMEs that
+are in fact `27 %` and `32 %` Chinese. The construct silently matches nothing in this environment.
+Re-measured in Python: `Geogebra-WebChat` `32.3 %`, `xl-frontend` `27.0 %`, `gpt-wordbook` `18.6 %`.
+🔵 **Method lesson, and it is the same shape as `734-D` and `T291`:** a **zero from a probe is not
+evidence of absence until the probe has been shown to return non-zero on a known positive.** Three
+separate near-misses in one pass — a dead API returning `403`, a hidden `archived` field, and a
+regex matching nothing — all of which would have published absence as a finding.
+
+### What was filed, and the one row that is deliberately an exception
+
+🟢 **`7` agent rows** on [`top.md`](top.md), `5` of them **APAC**, and `p734` sharpens *who*
+publishes APAC supply: **first-party vendor platforms, academic institutions and established
+independent developers — not community projects.** `AI-Course-Generator` runs on **iFlytek's** Spark
+platform; `OpenEduECNU` is an academic on-device system; `gpt-wordbook`, `Geogebra-WebChat` and
+`xl-frontend` are individually published products. `p733` filed **DiDi's** `XIAOJUSURVEY`.
+🔵 **The exact inverse of the LATAM finding below** — and it says where to look: vendor and
+university estates, not community topics.
+
+🔵 **Two reusable assets worth lifting out of those rows.** The **handwriting-OCR-to-marking loop**
+in `xl-frontend` — every other marking agent this base holds assumes typed input, and school work is
+on paper. And the **generate-ahead-into-a-static-site** architecture in `gpt-wordbook`: content is
+produced in advance into a static site rather than per-request at the tutor, which makes cost
+predictable, output reviewable before a learner sees it, and the deployment CDN-cheap. That is the
+standard answer to *"we cannot put a live model in front of children"*.
+
+⚠️ **`1` row filed with an explicitly weak region placement, and `1` with none at all.**
+`OpenEduECNU` is placed **APAC** on the acronym `ECNU` in its own repository name and a `152`-byte
+README — **no location string was found**, and the row says so. `learn-anything-fast` is left
+**`Global`**: `73` incidental CJK characters (`0.8 %`) is below any signal this base acts on, and
+`T137` says refuse rather than guess. `p733` was burned by placing a row in **Paris** on the
+substring `paris` inside **`comparison`**; this pass declines twice rather than repeat it.
+
+### The two regional findings, which point in opposite directions
+
+🔴 **`734-H` → `T291` — LATAM's flagship open-AI programme holds `0` live permissive repositories,
+and that is now a measurement rather than a nil.** Every regional leg names **Latam-GPT**; UNESCO's
+cooperation agreement with Chile's **CENIA** cites it as the regional open model. `p734` enumerated
+it: **`8` repositories · `7` with no licence field at all · `6` archived · `0` live *and*
+permissive.** The one MIT repository is **archived**; the only live code repository is
+**unlicensed**; the rest is data-pipeline tooling (toxicity classifier, deduplication, fastText
+classifiers), not education software. Latest push to any code repository: **`2025-07-09`**.
+🟢 **This closes a long vagueness in the right direction:** the LATAM supply nil is **not** a
+discovery failure — the region's flagship estate is genuinely unbuildable today. Set against
+**`92 %` student and `79 %` faculty usage** and **`30 %`** policy coverage (`T296`), the engagement
+follows: **ship the governance artefact**, which is **`P181`**.
+⚠️ **And this is why an archived `1★` repository earned a foundations row.** The **Latin-American
+national-ID regular expressions** in `latam-gpt/anonymization-filter` are the one piece nobody
+should write twice; **MIT is irrevocable so the code is reusable regardless of archive status** —
+vendored and owned, never depended on. The archive status is in the row's first sentence.
+🔬 **Method note, and it nearly became a wrong row.** The first unfiltered view of that estate
+printed name, stars, licence and push date **but not `archived`**, and the MIT repository looked
+like a live LATAM find. Caught by re-reading the field on purpose. `archived` is the one field whose
+default rendering hides it.
+
+🔴 **`734-I` → `T290` — EMEA's institutional publishers are real, productive, and publish no
+learning agents whatsoever.** This base has recorded EMEA supply nils for many passes, blaming the
+ecosystem (`T207`) and then query construction (`T281`). `p734` addressed the tier directly via the
+`user:` channel `p731` proved in North America: **`7` organisations → `181` repositories → `152`
+novel** (`openfun` `40`, `opencast` `40`, `SURFnet` `39`, `oeru` `22`, `ILIAS-eLearning` `16`,
+`sakaiproject` `14`, `latam-gpt` `7`).
+🟢 **`4` EMEA rows filed — the first time this base has placed four European rows in one pass.**
+🔴 **And `0` of the `152` is a learning agent.** The tier publishes **identity, conferencing and
+operations**: SAML and MFA extensions, Jitsi and Jibri images, federation onboarding, RPM build
+infrastructure, stress harnesses.
+🔵 **Identical in shape to `p731`'s `T267` in North America** (`436` repositories, `268` novel and
+permissive, `0` learning agents). **So this is a property of institutional publishers everywhere,
+not of Europe.** Stop asking the institutional tier for agents; ask it for the **integration
+surface**, which is what it has and what the mandated legs never return. Published as **`P183`**:
+join the federation before you build the feature.
+
+⚠️ **`734-J` → `T292` — one EMEA licensing trap, found while enumerating.** `ILIAS` (`507★`,
+GPL-3.0) is widely deployed in German-speaking education and **documents its extension points with
+unlicensed scaffolds** — of `16` repositories in the organisation, the plugin examples
+(`TestRepositoryObject`, `FieldTypeHookExample`, `TestCalendarCustomGrid`, `TestSoapHook`, …) index
+as **`NONE`**. The normal way to build an ILIAS plugin is to copy the official scaffold for your
+slot; copying a repository with **no grant** gives **no rights** — more restrictive than the
+GPL-3.0 core it plugs into. 🟢 **Open edX does the opposite**: AGPL-3.0 core, **Apache-2.0**
+cookiecutters and theming substrate, both filed this pass. **Compare the extension-point grant, not
+the core licence.** `731-E` already generalises it: the grant follows the publisher, not the
+interface.
+
+### Corrections to this base's own files
+
+🔴 **`734-K` — `intel/trends.md` mis-stated its own most recent addition, for the second time.**
+Before this pass its header read *"Seven new trends — **T265**–**T271**"* and attributed them to
+`p733`. **`p733` added `T277`–`T285` — nine, not seven; `T265`–`T271` were `p731`'s.** The same
+class of error is already recorded in that file's numbering-space note after `p723`/`p724`.
+Corrected, with the cheap mechanical fix stated: **derive the series head from `###` headings at
+write time** rather than editing the sentence by hand — which is also what `p733`'s own warning says
+to do for the next identifier. `p734` computed `T286` that way; max prior heading was `T285`, no
+collision.
+
+🟡 **`734-L` — `compose/patterns.md` still announced `p727` as "this pass".** Its numbering
+paragraph read *"This pass (`p727`) adds `P161`"* through `p728`–`p733`, six passes that each added
+patterns. Updated to lead with `p734`'s `P180`–`P183` and `p733`'s `P176`–`P179`, with `p727`
+retained in the chain. 🔵 Same root cause as `734-K`: a hand-maintained sentence about machine-known
+state.
+
+🔵 **`T427` / `T429` confirmed still dangling.** `p733` flagged that these appear in
+`intel/trends.md` only as cross-references to `open-gaps.md`, **a file still not present in this
+repository**. Re-checked this pass: unchanged. They sort above the live series without belonging to
+it, which is why the next identifier must come from headings rather than from bare `T[0-9]+`
+matches.
 
 ## 🆕 2026-11-10 (p733) — 🟢 **THE MIT GATE'S HASH IS REPRODUCIBLE AND ITS ALGORITHM IS NOW NAMED (IT NEVER WAS). 🔴 THE SAME RULE HAS TWO DEFECTS THAT FALSELY REFUSE STOCK PAYLOADS — ONE OF THEM BIASED BY AUTHORING PLATFORM — AND THE APACHE CONSTANT PUBLISHED AT `p732` CANNOT BE REPRODUCED FROM THE RULE THAT PRODUCES THE MIT ONE.**
 

@@ -6,18 +6,192 @@ updated: 2026-11-10
 
 # Composition Patterns — Education
 
-**Pass p733 · verified 2026-11-10.** Concrete recipes using only components verified this
+**Pass p734 · verified 2026-11-10.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
 Licences are the real design input here. Every pattern states its resulting obligation.
 
-**Numbering.** This pass (`p727`) adds **`P161`**; `p726` added **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
+**Numbering.** This pass (`p734`) adds **`P180`**–**`P183`**; `p733` added **`P176`**–**`P179`**;
+`p727` added **`P161`**; `p726` added **`P159`–`P160`**; `p725` added **`P157`–`P158`**; `p724` added **P138–P143**. The accumulated registry **P1–P137** from prior
 passes is preserved in full below the new entries — it is a registry with stable IDs, so new
 patterns continue the sequence rather than reusing it. (This pass initially drafted its six
 recipes as P120–P125 and caught the collision before publishing: P120–P125 already name six
 different, real recipes. Recorded because reusing a live ID silently rewrites a pattern a
 prior engagement may cite.)
+
+---
+
+## P180 — The licence gate, completed: the missing step, and the two families it may certify (tooling, not a client pattern; one hour, then a standing gate) 🟢 new at p734
+
+**Supersedes `P176`.** Same intent — certify that a grant is stock before a repository reaches a
+client slide. `P176` was correct in every part a reader could check and still could not be run to
+its own published constant. Two changes: **one missing step**, and **a scope restriction**.
+
+**What was wrong.** `P176` ends with `tr '\n' ' '`, which converts the payload's *final* newline
+into a **trailing space**. Nothing removes it, so the canonical form is **one byte longer** than the
+constant `P176` publishes. Run as written it yields a perfectly stable `1021 B` / `783d6159681f`
+across every stock MIT payload — a real constant, just not the published one (`T286`).
+
+**The rule, complete.**
+
+```bash
+terms() {                                   # stdin: a licence payload -> canonical terms-only form
+  tr -d '\r' \                              # T278: CRLF -> LF. Without this, stock payloads are refused.
+  | sed '/^[[:space:]]*APPENDIX:/,$d' \     # Apache appendix is outside the terms. NOTE the leading-space
+                                            #       class: stock Apache INDENTS it, so a literal
+                                            #       ^APPENDIX: anchor never fires.
+  | grep -v '^[[:space:]]*$' \              # drop blank lines
+  | grep -viE '^[[:space:]]*(The )?(MIT |BSD |ISC )?Licen[cs]e( \(MIT\))?[[:space:]]*$' \
+                                            # T279: matches BOTH "MIT License" and "The MIT License (MIT)"
+  | grep -viE '^[[:space:]]*(Copyright|\(c\))' \
+                                            # drop the holder line by SHAPE, not by substring (P168)
+  | tr '\n' ' ' \
+  | sed 's/ *$//'                           # ⬅️ T286: THE MISSING STEP. Without it every payload is +1 B.
+}
+gate() { local g; g=$(terms < "$1")
+  printf '%sB/%s' "$(printf '%s' "$g" | wc -c | tr -d ' ')" \
+                  "$(printf '%s' "$g" | sha256sum | cut -c1-12)"; }
+```
+
+**Digest:** `sha256`, **first `12` hex**, over the terms-only form with newlines collapsed to single
+spaces **and the trailing space removed**.
+
+**The constants, and what they were verified on.**
+
+| Family | Constant | Reproduced on | Status |
+|---|---|--:|---|
+| **MIT** | **`1020 B` / `fe2a9817987f`** | `12` payloads / `12` publishers, raw `1,061`–`1,087 B` | 🟢 certify against this |
+| **Apache-2.0** | **`9942 B` / `3fda30957805`** | `5` payloads / `5` publishers / `3` filenames, raw `11,356`–`11,412 B` | 🟢 certify against this — **new at `p734`**, replaces `p733`'s unverified `9130 B` (`T287`) |
+| **BSD (any clause count)** | — **none exists** | `3` payloads → `3` values | 🔴 **do not certify**; record bytes, make no stock claim (`T288`) |
+
+**Why BSD is excluded rather than pending.** Publishers reformat BSD freely while keeping the terms
+semantically stock: `-` bullets instead of `1.` `2.` `3.`, *"All rights reserved."* present or
+absent, *"contributors"* present or absent in clause 3. The variation is **not** the holder name, so
+no holder-stripping rule fixes it, and 2-clause and 3-clause are different texts besides. A
+byte-exact BSD gate therefore refuses correct grants — which is the failure mode `P168` and `P172`
+were each written to stop.
+
+**How to use it.** Gate every MIT and Apache payload before a repository reaches a slide. A **miss
+is a read instruction, not a refusal** (`P168`): a short Apache payload is often just the appendix
+omitted, and `p731` confirmed a `994 B`-short payload complete. Record raw bytes, gate bytes and
+digest in the row, as every `p734` row does. **Never run the gate through `$(curl …)`** (`T143`);
+fetch to a file first. And do not reach for `gh api repos/{owner}/{repo}` to check a licence —
+it is `403` in this environment for anything out of scope (`T289`).
+
+---
+
+## P181 — The LATAM governance front door: ship the register and the PII boundary, because the region supplies neither (LATAM, 4–6 weeks) 🟢 new at p734
+
+**The situation this is built for, stated as measurements rather than impressions.** LATAM has the
+highest AI *usage* in this base's files — **`92 %` of students, `79 %` of faculty** across `29`
+institutions — and **`30 %`** of its universities have published any policy on AI use (`T296`).
+Meanwhile the region's flagship open-AI programme, `latam-gpt`, holds **`0` live permissively
+licensed repositories** (`T291`). So the client has the usage, lacks the governance, and **cannot
+buy a regional platform to put the governance on**.
+
+**Therefore the deliverable is the governance artefact, not a tutor.** Three components, all
+verified at `p734`:
+
+1. **The approved-tools register** — [`SURFnet/pea-poc`](https://github.com/SURFnet/pea-poc)
+   (BSD-3-Clause, EMEA, `verticals/solutions.md` at `p734`). A national research-and-education
+   network's own platform for recording, reviewing and comparing the ed-tech applications
+   institutions use. This is the exact artefact a LATAM university needs and has no regional
+   equivalent of. ⚠️ A pilot, `3★`, Dutch-first — budget localisation to Spanish/Portuguese, and
+   note `T288`: BSD, so read the payload, do not certify it.
+2. **The PII boundary** — [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter)
+   (MIT, **archived**). Presidio plus **Latin-American national-ID regular expressions** over
+   Spanish, Portuguese and English. **Vendor it, own it, take no dependency** — it is archived, and
+   MIT is irrevocable so that is legally fine and operationally your problem.
+3. **The residency posture** — `P178` (`p733`) unchanged: one deliverable, two data-residency
+   configurations, chosen by the client's legal team rather than by your architecture.
+
+**Wiring.** The register is the system of record and the only client-facing surface. The
+anonymisation filter runs **at ingest**, before any student text reaches a model, as a batch job
+over LMS exports — not inline per request, which is where it would become a latency and
+availability problem. Each register entry carries the residency posture that was approved for it, so
+"which tools are approved" and "where may their data live" are answered by one query.
+
+**Why this sells.** It is the artefact a rector can show a ministry, and it is what the governance
+half of the UNESCO IESALC mapping (`T296`) asks institutions for. 🔵 **And note what is deliberately
+absent:** no model, no tutor, no content generation. Those are already in use at `92 %`; the
+unserved need is the paperwork that makes the use defensible.
+⚠️ **The honest risk:** two of three components are small, and one is archived. This is an
+*assembly* engagement with real ownership transfer, and it should be priced and described that way.
+
+---
+
+## P182 — Moodle on Kubernetes with a permissive AI layer, without touching the GPL core (any region, 5–8 weeks) 🟢 new at p734
+
+**The licensing knot this unties.** Moodle is **GPL-3.0** and the most-deployed LMS in the world, so
+nearly every Moodle proposal in this base's history ended on a copyleft host. `p734` filed the
+component that resolves it: [`google/moodle-on-gcp`](https://github.com/google/moodle-on-gcp)
+(**Apache-2.0**, `74★`, pushed `2026-11-07`) — a first-party Google Cloud reference architecture and
+deployment kit for Moodle on containers and Kubernetes, with architecture, load-test and cost
+documentation. **It deploys Moodle; it is not a derivative of Moodle.** The operations layer is
+therefore permissive even though the application is not.
+
+**The stack, all verified and all permissive outside the core.**
+
+| Layer | Component | Licence | Obligation |
+|---|---|---|---|
+| Application | Moodle | **GPL-3.0** | unchanged, unmodified, deployed as-is |
+| Deployment / scale / ops | [`google/moodle-on-gcp`](https://github.com/google/moodle-on-gcp) | **Apache-2.0** | permissive — gate `9942 B`/`3fda30957805` |
+| Retrieval over institutional content | [`moodlehq/wiki-rag`](https://github.com/moodlehq/wiki-rag) | BSD-3-Clause | permissive; ⚠️ not certified (`T288`) |
+| Retention scheduling | [`open-spaced-repetition/rs-fsrs`](https://github.com/open-spaced-repetition/rs-fsrs) | **MIT** | permissive — gate `1020 B`/`fe2a9817987f` |
+
+**Wiring, and the one rule that keeps the grant clean.** Moodle runs unmodified behind its standard
+plugin and web-service interfaces. `wiki-rag` — published by Moodle HQ itself, and exposing an
+OpenAI-compatible interface — serves retrieval over institutional content **as a separate service**,
+reached over HTTP. `rs-fsrs` schedules review items in a service of your own, keyed by Moodle user
+and activity IDs pulled through the web-services API. **Nothing links into the Moodle process and
+no Moodle source is modified**, so no deliverable of yours is a GPL derivative. The moment you
+patch Moodle core, this pattern's entire argument collapses — if core must change, contribute the
+change upstream and keep it out of the engagement's deliverables.
+
+**What the client gets.** Their existing LMS, on Kubernetes, with autoscaling and a documented cost
+model, plus retrieval and retention as replaceable services — and a licence position that survives
+review. ⚠️ The Terraform is GCP-specific; the architecture transfers to any Kubernetes but the
+infrastructure code does not. ⚠️ `wiki-rag` describes itself as experimental: prototype the
+retrieval quality before committing to it.
+
+---
+
+## P183 — EMEA campus delivery, identity first: join the federation before you build the feature (EMEA, 3–5 weeks to first integration) 🟢 new at p734
+
+**The finding this encodes.** `p734` enumerated `181` repositories across `7` European education
+publishers and found **`0` learning agents** — what the tier actually publishes is identity,
+conferencing and operations (`T290`). That is not a gap in the ecosystem; it is the ecosystem
+telling you what the hard part is. In European education, **an application that cannot join the
+national identity federation cannot be sold to its institutions**, whatever it does.
+
+**Sequence the engagement in that order.**
+
+1. **Federation onboarding first** — [`SURFnet/sp-dashboard`](https://github.com/SURFnet/sp-dashboard)
+   (Apache-2.0, pushed `2026-11-09`) is the first-party self-service surface by which a service
+   provider gets connected to and trusted by SURFconext, the Dutch national education identity
+   federation. Read it as the reference for what onboarding demands — entity metadata, attribute
+   release, review — and build to satisfy it on day one, not at the end. ⚠️ Its own payload is
+   **non-stock Apache** (`9911 B`/`8444a594ee05`, `31 B` short): diff before relying on it.
+2. **Then the synchronous surface** — [`openfun/jitsi-magnify`](https://github.com/openfun/jitsi-magnify)
+   (**MIT**, `1020 B`/`fe2a9817987f`, pushed `2026-11-09`), France Université Numérique's
+   authentication plus room and meeting management for Jitsi. Universities can already run Jitsi;
+   what they lack is *who may open a room and how that maps to campus identity*. Permissive, and
+   independent of Jitsi itself.
+3. **Then the asynchronous surface** — Opencast for lecture capture, with
+   [`opencast/helper-scripts`](https://github.com/opencast/helper-scripts) (BSD-2-Clause; ⚠️ not
+   certified, `T288`) as the migration, metadata-repair and health-check layer. Existing recordings
+   are where transcription, indexing and search actually attach.
+4. **Only then the AI feature**, layered on recordings and sessions that are already identity-scoped.
+
+**Why this order and not the reverse.** `T294` moved the AI Act's high-risk education obligations to
+**`2027-12-02`**, and two independent surveys put the binding constraint on **teacher pace** rather
+than capability (`80 %` of European teachers say AI is arriving faster than schools can manage,
+against `67 %` already using it). The extra two years are change-management time, not build time.
+🔵 **So the EMEA engagement is rollout governance on systems the institution already runs** — which
+is why every component above is an integration surface and none of them is a model.
+⚠️ Both SURF components are Dutch-first and `pea-poc` is explicitly a pilot; `jitsi-magnify` is the
+only row here above `20★`. Price localisation and hardening in.
 
 ---
 

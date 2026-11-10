@@ -6,8 +6,9 @@ updated: 2026-11-10
 
 # Education AI — Current Trends
 
-**Pass p733 · researched 2026-11-10.** Seven new trends — **T265**–**T271** — added above p730's
-**T262**–**T264**, which sit above p729's
+**Pass p734 · researched 2026-11-10.** Twelve new trends — **T286**–**T297** — added above
+p733's **T277**–**T285**, which sit above p731's **T265**–**T271**, p730's
+**T262**–**T264**, p729's
 **T258–T261**, p728's **T255–T257**, p727's
 **T253–T254**, p726's
 **T250–T252**, p725's
@@ -15,12 +16,281 @@ updated: 2026-11-10
 that supports it and, where it exists, the evidence that complicates it. The accumulated
 registry **T1–T225** from prior passes is preserved in full below.
 
+> 🔴 **`p734` corrected this header, and the error is worth naming because it recurs.** Before this
+> pass the line above read *"Seven new trends — **T265**–**T271**"* and attributed them to `p733`.
+> **`p733` added `T277`–`T285` (nine, not seven); `T265`–`T271` were `p731`'s.** The file has now
+> mis-stated its own most recent addition twice — the numbering-space note below records the same
+> class of failure after `p723`/`p724`. 🔵 **The cheap fix is mechanical and this pass used it:**
+> derive the series head from `###` headings at write time rather than editing the sentence by
+> hand, which is also how `p733`'s own warning says to compute the next identifier.
+
 > **Two separate `T` numbering spaces exist in this KB and they are not the same series.**
-> This file's `T` numbers are *industry trends* (now T1–T257, extended at p728 — this line still read
+> This file's `T` numbers are *industry trends* (now **T1–T297**, extended at `p734` — this line still read
 > "T1–T233" after p723 and p724 had both added trends above it). The `T` numbers in
 > [`../agents/trending.md`](../agents/trending.md) are *transferable method lessons* about the
-> pipeline's own instruments (T173–T178 as of this pass). They collide by name and have always
+> pipeline's own instruments. They collide by name and have always
 > been distinct. Recorded here so a later pass does not merge or renumber them.
+
+## 🆕 T286–T297 — added at `p734` (2026-11-10)
+
+> Twelve trends. **`T286`–`T292` are findings about this base's own instruments and supply**, each
+> backed by a control a later pass can re-run; **`T293`–`T297` are demand- and policy-side
+> readings**, and this pass is the first in a long run where **all four mandated regional legs
+> returned relevant material** — there is no regional demand nil to declare. `p734` computed its
+> next identifier from the `###` headings present before this pass (max `T285`): **no collision.**
+> ⚠️ The note left by `p733` is confirmed: `T427` and `T429` appear in this file only as
+> cross-references to `open-gaps.md`, **a file still not present in this repository**, and they
+> sort above this series without belonging to it.
+
+### 🟢 T286 — The licence gate was never irreproducible or unnamed; it was missing a trailing space
+
+`p733` named the digest (`sha256`, first `12` hex) and published `1020 B` / `fe2a9817987f`, and
+`P176` states the rule as a runnable shell function. **Run exactly as published, it lands one byte
+over on every payload tested** — `1021 B` / `783d6159681f`, itself a perfectly stable constant
+across `6` MIT payloads. The cause is the last step: `tr '\n' ' '` converts the payload's **final**
+newline into a **trailing space**, which the published rule never removes. Adding `sed 's/ *$//'`
+reproduces `1020 B` / `fe2a9817987f` **exactly**.
+🔬 **Controlled against `p733`'s own evidence, which is why this is a repair and not a disagreement:**
+the control payload is [`popcodeorg/popcode`](https://github.com/popcodeorg/popcode) — the row
+`p733` cited for its `T279` repair. As-written `1021 B` / `783d6159681f`; trailing-space-stripped
+`1020 B` / `fe2a9817987f`. 🔵 **Why it matters beyond one byte:** a gate whose published form
+disagrees with its published constant refuses *every* correct grant, so a later pass either
+abandons the constant (as `p729` did) or silently re-derives it (as `p731` did). Both have now
+happened. Published complete as **`P180`**.
+
+### 🟢 T287 — The Apache constant `p733` declared unreproducible is reproducible, and it is not the published number
+
+`T280` recorded that the rule reproducing the MIT constant does not reproduce the Apache one, and
+published `9130 B` / `6e1ffb7fc4e2` as unverified. With `T286`'s trailing-space step the Apache
+family **does** resolve to a single constant: **`9942 B` / `3fda30957805`**.
+🔬 **Reproduced on `5` independent payloads, across `5` publishers, `3` filenames and a `56`-byte
+spread of raw sizes** — [`didi/xiaoju-survey`](https://github.com/didi/xiaoju-survey) (`LICENSE`,
+`11,412 B`), [`zhangjiarui530/OpenEduECNU`](https://github.com/zhangjiarui530/OpenEduECNU)
+(`LICENSE`, `11,357 B`), [`openedx/edx-cookiecutters`](https://github.com/openedx/edx-cookiecutters)
+(`LICENSE.txt`, `11,358 B`), [`openedx/edx-bootstrap`](https://github.com/openedx/edx-bootstrap)
+(`LICENSE`, `11,356 B`) and [`google/moodle-on-gcp`](https://github.com/google/moodle-on-gcp)
+(`LICENSE.md`, `11,357 B`) — corporate APAC, academic APAC, two foundation repos and a hyperscaler.
+🔴 **`9130 B` / `6e1ffb7fc4e2` is retired.** No normalisation tested here produces it, including on
+`xiaoju-survey`, the payload `p733` computed it from. ⚠️ **And `p733`'s raw byte counts are
+systematically `+1`:** it reported `11,413 B` where this pass measures `11,412`, `1,514` where this
+pass measures `1,513`, and `1,088` where this pass measures `1,087` — **`3 / 3`, exactly one over.**
+Two opposite off-by-ones in one pass, which is the signature of a measurement harness that adds a
+byte on read and a gate that strips one on write.
+
+### 🔴 T288 — The gate cannot certify BSD at all, and the cause is formatting rather than the holder name
+
+A hash gate works on MIT and Apache because their stock terms are **holder-invariant**: strip the
+title and the copyright line and every publisher's bytes agree. **BSD does not behave this way.**
+Three BSD payloads read this pass produced **three different values**:
+[`freeCodeCamp/classroom`](https://github.com/freeCodeCamp/classroom) `1451 B`/`99f846c132c0`,
+[`SURFnet/pea-poc`](https://github.com/SURFnet/pea-poc) `1480 B`/`96fabc6ac22e`, and
+[`opencast/helper-scripts`](https://github.com/opencast/helper-scripts) `1278 B`/`ab132540e375`.
+🔬 **Diffed at word level rather than guessed at.** `helper-scripts` is the **2-clause** text
+(`0` numbered clauses) — a different licence, correctly a different constant. The two **3-clause**
+payloads differ by `29 B` for three reasons, none of them the holder: `classroom` renders its
+clauses as `-` bullets where `pea-poc` numbers them `1.` `2.` `3.`; `classroom` omits
+*"All rights reserved."*; and `classroom` omits the word *"contributors"* from clause 3. Both carry
+the stock holder-invariant *"Neither the name of the copyright holder"* wording.
+🔵 **Consequence, and it is a scope correction to a gate this base made mandatory:** BSD terms are
+reformatted freely by publishers while remaining semantically stock, so **any** byte-exact BSD gate
+refuses correct grants. `P180` restricts certification to MIT and Apache and requires BSD rows to
+be filed with measured bytes and **no stock claim**. ⚠️ `p733` published `1441 B`/`8cb6ec54329a` for
+`classroom`; this pass measures `1451`/`1452 B` and cannot reproduce it under either rule.
+
+### 🔴 T289 — The whole `repos/` API namespace is dead in this environment, not just `repos/.../license`
+
+`p731`'s `731-J` recorded `repos/{owner}/{repo}/license` returning `403` outside this session's
+GitHub scope. **It is the entire namespace.** `gh api repos/{owner}/{repo}` returns `403` with
+*"GitHub access to this repository is not enabled for this session"* for every out-of-scope
+repository — including ones this pass then verified as alive and filed —
+while `gh api -X GET search/repositories -f q=repo:{owner}/{repo}` returns **full metadata for the
+very same repository**: stars, SPDX licence, `pushed_at` and `archived`.
+🔬 Measured `9 / 9` on the first batch attempted. 🔵 **Consequence:** metadata comes from the
+**search** channel, bytes come from the **raw** channel, and `repos/` must not appear in a
+verification path in this environment. A pass that reaches for it reads a `403` and can easily
+record a live repository as absent. ⚠️ This is also why `archived` must be read deliberately: see
+`T291`, where this pass nearly filed an archived repository as live.
+
+### 🔴 T290 — EMEA's institutional publishers are real and productive, and they publish no learning agents whatsoever
+
+This base has recorded EMEA supply nils for many passes and attributed them to the ecosystem
+(`T207`), then to query construction (`p733`'s `T281`). `p734` addressed the tier directly, using
+the `user:` channel `p731` found productive for North America: **`7` organisations enumerated →
+`181` repositories → `152` novel.**
+Per publisher: `openfun` (France Université Numérique) `40`, `opencast` `40`, `SURFnet` `39`,
+`oeru` `22`, `ILIAS-eLearning` `16`, `sakaiproject` `14`, `latam-gpt` `7`.
+🟢 **The tier is not empty — this pass filed `4` EMEA rows from it**, the first time this base has
+placed four European platform rows in one pass. 🔴 **But `0` of the `152` novel repositories is a
+learning agent.** What the tier actually publishes is **identity, conferencing and operations**:
+SAML and MFA extensions, Jitsi and Jibri images, Docker and OpenShift scaffolds, RPM build
+infrastructure, stress-test harnesses, SURFconext onboarding.
+🔵 **This is the same shape `p731`'s `T267` measured in North America** (Canvas clients, LTI
+scaffolds, SCIM, SAML, data pipelines, `0` learning agents from `436` repositories) — so it is a
+property of **institutional publishers everywhere**, not of Europe. **Stop asking the institutional
+tier for agents; ask it for the integration surface, which is what it has and what the mandated
+supply legs never return.**
+
+### 🔴 T291 — LATAM's flagship regional-AI programme has zero live permissively-licensed repositories, and that is now a measurement
+
+Every regional leg this base runs names the **Latam-GPT** programme — UNESCO's cooperation
+agreement with Chile's **CENIA** cites it as the regional open model, and this pass's LATAM demand
+leg surfaced it again. `p734` enumerated the organisation itself. **`user:latam-gpt` → `8`
+repositories, and the estate does not support a build:**
+
+| Measure | Value |
+|---|--:|
+| Repositories | `8` |
+| Carrying **no licence field at all** | **`7 / 8`** |
+| Permissively licensed | `1 / 8` (MIT) |
+| **Archived** | **`6 / 8`** |
+| **Live *and* permissively licensed** | **`0`** |
+| Most recent push to any *code* repository | `2025-07-09` |
+
+The single MIT repository, [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter),
+is **archived**; the only live code repository, `language_identifier`, carries **no licence**. The
+rest are a toxicity classifier, deduplication scripts, training estimations and fastText
+classifiers — **data-pipeline tooling, not education software**, and all archived.
+🟢 **This closes a long-running vagueness in the right direction.** This base has published LATAM
+supply nils with denominators before (`p731`'s `731-I`: `159` unique, `34` novel-permissive-alive,
+`0` identifiably LATAM-origin) but never examined the one programme every policy source names. The
+nil is **not** a discovery failure: the region's flagship estate is genuinely unbuildable today.
+🔵 **What is salvageable is narrow and worth naming:** the Latin-American national-ID regular
+expressions in the archived MIT filter. MIT is irrevocable, so that code is reusable — vendored and
+owned, never depended on. Filed on `repos/foundations.md` with the archive status in its first
+sentence, and built into **`P181`**.
+⚠️ **A method note that nearly became a wrong row.** This pass's first unfiltered view of the
+estate printed name, stars, licence and push date **but not `archived`**, and the MIT repository
+looked like a live LATAM find. It was caught by re-reading the field explicitly. `archived` is the
+one field whose default rendering hides it; read it on purpose (`T289`).
+
+### 🔴 T292 — ILIAS demonstrates its own extension points with unlicensed scaffolds
+
+[`ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) (`507★`) is **GPL-3.0** and one of the most
+widely deployed LMS platforms in German-speaking education. Of the **`16`** repositories in its
+organisation, the core is GPL-3.0 and **the plugin examples that document each extension point
+carry no licence at all** — `TestRepositoryObject`, `FieldTypeHookExample`,
+`TestCalendarCustomGrid`, `TestCalendarCustomModal`, `TestOrgUnitExtension`, `TestSoapHook`,
+`TestPDFRenderer`, `TestPluginSetup` and others index as `NONE`.
+🔵 **Why this is a trap rather than a curiosity:** the normal way to build an ILIAS plugin is to
+copy the official scaffold for the slot you are targeting. Copying a repository with **no grant**
+gives you **no rights** — the default is all rights reserved, which is more restrictive than the
+GPL-3.0 core it plugs into. 🟢 **The counter-pattern is `openedx`'s** (`T287`, and
+`repos/foundations.md` at `p734`): Open edX is AGPL-3.0 but publishes its cookiecutters and theming
+substrate as **Apache-2.0**, so extension work carries a usable grant. **Compare the two before
+recommending either platform**, and `731-E` already generalises the rule: the grant follows the
+publisher, not the interface.
+
+### 🟢 T293 — US state AI-in-education law has crossed from guidance into statute, and teacher training is the binding clause
+
+`T282` (`p733`) recorded the crossing; `p734`'s North American leg sharpens the volume and the
+mechanism. **Nearly `100` state bills** tracked this year that could directly affect students' use
+of AI in K-12, and **at least `15` states** have introduced or passed legislation specifically
+addressing AI in education. Virginia's **S.B. 394** is the clearest instance of the shape: it
+directs the state education agency to issue guidance that **must include teacher training**.
+Federally, executive orders issued between 2025 and early 2026 produced a national framework, with
+agency action plans and a **K-12 AI instruction task force**; the White House *Pledge to America's
+Youth: Investing in AI Education* is the voluntary-commitment track. A parallel **child-safety**
+track is moving separately — a California ballot initiative announced in January 2026 addressing
+how AI companies may interact with minors.
+🔵 **Engagement consequence, unchanged from `T282` and now better evidenced:** the deliverable that
+satisfies a statute is **evidence that staff were trained**, not a model evaluation. Guidance is
+proliferating faster than hard regulation, so the near-term buyer is a district or state agency
+that must *show* a training and governance record. ⚠️ Secondary sources throughout, per `725-F`;
+`mlex` coverage of newer state laws was paywalled and is unread.
+
+### 🟡 T294 — Europe's high-risk education date moved to December 2027, and the teacher-pace gap is now measured twice
+
+`T283` (`p733`) recorded the slip; this pass fixes the instrument and the dates. Per secondary
+sources, the **Digital Omnibus** simplifying the AI Act was proposed `2025-11-19` and reached
+**Council–Parliament political agreement on `2026-05-07`**, moving the application of **high-risk**
+rules — education among them, alongside employment and biometrics — to **`2027-12-02`**. The
+Commission published **Article 6** draft guidelines on classifying high-risk systems on
+`2026-05-19`, with consultation open to **`2026-06-23`**. Education ministers approved **Council
+conclusions on teachers in the era of AI on `2026-05-11`**. The Commission's **Eurydice** report
+*"Digital education at school in Europe 2026: Bridging gaps in access, teaching and learning"*
+(September 2026) is the official mapping.
+🔴 **Two independent surveys agree the constraint is teacher pace, not capability.** Futuresource
+puts teacher AI-tool use at **`67 %`** with institutions now adding governance frameworks; Epson's
+six-country European teacher survey finds **`80 %` of teachers worry AI is arriving faster than
+schools can manage** against **`76 %` of students expecting to be allowed to use it**. Futuresource
+also forecasts AI-enabled devices at **`15 %` of institutional PC shipments in 2026**.
+🔵 **Read together with `T290`:** the extra `24` months are change-management time, and the European
+institutional tier's published work is identity and integration — so the EMEA engagement is
+*rollout governance on existing systems*, not a new agent.
+⚠️ **All of the above is secondary.** `725-F` holds: `eur-lex.europa.eu`,
+`digitaleducationcouncil.com`, `www.unesco.org` and `www.iesalc.unesco.org` are unreachable from
+this session, so these dates are recorded precisely enough for a reader with access to settle them
+in one lookup, and are **not** primary-confirmed.
+
+### 🟡 T295 — APAC's constraint is infrastructure and its buyer is the ministry, with public opinion permissive
+
+The APAC leg returns a consistent and unusual picture: **demand-side permission, supply-side
+infrastructure limits.** The **Ipsos Education Monitor 2026** finds **lower support for banning AI
+in schools across the Asian markets surveyed** than elsewhere, even while support for restricting
+children's social-media use stays high — so the political constraint that dominates North American
+and European policy is weaker here. What binds instead is reach: a Times Higher Education survey
+(April 2026) reports **patchy uptake across the region with limited connectivity as a barrier**,
+and **virtual-tutor adoption at `30 %`** for the full cohort. Teacher capacity is being addressed
+at scale — **`34,000` lead teachers** in training through 2026 in one reported national rollout.
+🔵 **The channel is governmental and the forums name the buyer:** Cambridge English convened
+**`200`+ senior leaders including ministries of education** (May 2026); the **World Bank's Global
+EdTech Policy Academy on AI** ran in **Seoul, `2026-08-31`–`09-04`**; Acer's Edu Summit Asia Pacific
+2026 is a policy-facing device-and-infrastructure play. The vendor market is **fragmented, `3,000`+
+players**, so there is no incumbent to displace.
+🟢 **Consistent with this pass's own supply evidence:** every APAC row filed to `agents/top.md` at
+`p734` is a *first-party or academic* publisher (iFlytek's platform, an ECNU teaching system, three
+independent Chinese developers), and `p733` filed DiDi's. **APAC supply is corporate and academic,
+not community** — which is the opposite of the LATAM finding in `T291`. ⚠️ No consolidated source
+for national frameworks (China, Singapore, Australia, South Korea) was found; that gap is declared,
+not closed. The UK and UAE instruments the leg surfaced are outside this region's vocabulary value
+and are not filed here.
+
+### 🔴 T296 — LATAM's adoption-governance gap is confirmed on both sides, and the supply side is now measured too
+
+The demand side is stark and well-sourced: a Digital Education Council survey across **`29`
+institutions** finds **`92 %` of students and `79 %` of faculty actively engaging with AI**
+(co-produced with Tec de Monterrey), while **only `30 %` of Latin American universities have
+published a policy on how to use it**. A UNESCO **IESALC** working paper (September 2026) maps AI
+across five university dimensions including governance and reports adoption *"neither uniform nor
+evenly distributed"*; an earlier UNESCO-affiliated survey of **`200` institutions across `19`
+countries** found the same adoption-versus-governance gap. Institutional actors are organising —
+**UNESCO–CENIA** (Chile) on ethical AI including Latam-GPT, **EdTech Hub with Fundación Ceibal**
+(Uruguay) from September 2026, **ECLAC's eLAC** agenda as the cooperation platform, **IADB** on
+evaluation at scale.
+🟢 **What `p734` adds is the other half, and it changes the engagement.** `T291` measures the
+region's flagship open-AI estate at **`0` live permissive repositories**. So LATAM has the highest
+measured *usage* of any region in this base's files, the lowest *governance* coverage, **and** no
+regional open-source platform to build that governance on.
+🔵 **Therefore the LATAM deliverable is the governance artefact itself** — an approved-tools
+register, a data-residency posture and a PII boundary for Spanish and Portuguese student data —
+assembled from components the region does not supply. That is exactly `P181`, and it is why an
+archived `1★` repository earned a row. ⚠️ No national AI-in-education statute was found for Brazil,
+Mexico or Chile; the Mexico-focused source asserts a need for regulatory alignment without naming
+an instrument. **Declared as an open gap, fourth consecutive pass.**
+
+### 🟡 T297 — The money is in services and credentials while the evidence base stays thin, and three heavily-sold categories are fading
+
+Market sizing is unchanged in shape and the spread is still the story — roughly **`$10.6B` (2026) →
+`$42.48B` (2030)** on the figure this base has carried since cycle 2, against a much larger
+all-EdTech framing (**`$238.4B`** for 2026, Hyde Park Capital) that is **not** comparable in scope.
+Adoption remains the firm number: **`86 %`** of education organisations using generative AI, the
+highest of any industry.
+🔴 **The evidence gap is the finding.** Only **`45 %` of the most-used tools have published research
+meeting an ESSA evidence tier** — in a sector whose buyers are increasingly required to justify
+procurement. And the direction of travel is away from the categories that were easiest to sell:
+**blockchain credentialing, full-classroom VR, and the chatbot-as-tutor pitch** are all reported
+fading, while the focus shifts *from policing academic integrity to managing cognitive load*.
+🟢 **Where it is going instead is specific and matches this base's shelf:** skills and credentials
+(**Instructure's Canvas Career**, a skills-focused AI LMS, GA January 2026), **industry-aligned
+microcredentials**, and **in-flow-of-work learning** (HolonIQ, January 2026). The US Department of
+Education released **`$169M`** in FIPSE awards including support for responsible AI use. The
+**OECD Digital Education Outlook 2026** warns AI helps learning **only when pedagogy stays in
+control**.
+🔵 **Two consequences for proposals.** First, lead with the credential rather than the tutor —
+`p733`'s `P179` and the certification shelf at `p732` are the right artefacts, and `T297` is the
+demand-side justification for them. Second, **an outcomes claim now needs an evidence plan
+attached**; with `45 %` of incumbents unable to produce one, a measurable-outcome design is a
+differentiator rather than a cost. ⚠️ Vendor-commissioned sourcing throughout; `725-F` applies.
 
 ## 🆕 T277–T285 — added at `p733` (2026-11-10)
 

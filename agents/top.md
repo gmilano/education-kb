@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p733 · verified 2026-11-10.** The `12` rows added at `p731` were read today; rows carried
+**Pass p734 · verified 2026-11-10.** The `7` rows added this pass were read today; rows carried
 over name the date they were last read. Every row below was read from
 `gh api -X GET search/repositories` (stars, SPDX licence, `pushed_at`, `archived`)
 and existence-checked against `raw.githubusercontent.com/{owner}/{repo}/HEAD/README.md`
@@ -18,8 +18,46 @@ can tell a stale cell from a fresh one.
 > returns **`403` for every address in this environment** — including repositories proven
 > alive and an address invented to be absent. It has no discriminating power here and was
 > not used. See `compose/patterns.md` (P142) for the working probe. Controls re-run this pass.
+> 🔵 **`p734` re-ran it and it holds `2 / 2`:** `openedx/edx-platform` (alive) and an invented
+> address both returned `403`. The raw channel discriminated the same pair correctly (`200` / `404`).
+> ⚠️ **`p734` also records a second dead channel:** `gh api repos/{owner}/{repo}` returns **`403`
+> for every repository outside this session's GitHub scope**, while `gh api -X GET
+> search/repositories -f q=repo:{owner}/{repo}` returns full metadata for the *same* repository.
+> `p731`'s `731-J` found this for the `/license` sub-path; it is the whole `repos/` namespace. Use
+> the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p734` — reads and verifies `2026-11-10`
+
+> **`7` rows added below.** Every grant was read from the bytes and put through **`P180`**, the gate
+> published this pass. `P180` is `p733`'s `P176` with **one missing step supplied** and **its scope
+> narrowed to the two families it can actually certify**. The missing step is a *trailing-space
+> strip*: `tr '\n' ' '` turns the payload's final newline into a trailing space, so `P176` run
+> exactly as written lands **one byte over** its own published constant on every payload. With the
+> strip, **`6 / 6` MIT payloads read this pass gate to `1020 B` / `fe2a9817987f`** — the constant
+> `p733` published — across raw sizes `1,061`–`1,076 B`. See `T286`.
+>
+> 🟢 **The Apache constant `p733` declared unreproducible (`T280`) is reproducible, and this pass
+> computes it: `9942 B` / `3fda30957805`.** Reproduced on **`5` independent payloads across `5`
+> publishers and `3` filenames** (`LICENSE`, `LICENSE.txt`, `LICENSE.md`), raw `11,356`–`11,412 B`.
+> `p733`'s `9130 B` / `6e1ffb7fc4e2` is not reproducible from any rule tested here and is retired
+> by `T287`. The Apache row below carries the new constant.
+>
+> ⚠️ **The gate is not applied to BSD at all this pass, and that is a correction rather than an
+> omission.** Three BSD payloads produced three different values; the cause is measured (`T288`)
+> and it is not the holder name. BSD rows on this base's pages are filed with their measured bytes
+> and **explicitly not certified**.
+
+| Agent | Repo | Stars | Licence | Last push | Region | What it is, and the posture |
+|---|---|--:|---|---|---|---|
+| **AI-generated English podcast videos** | [liangdabiao/AI-generated-English-podcast-videos](https://github.com/liangdabiao/AI-generated-English-podcast-videos) | 188 | MIT | 2026-06-25 | **APAC** | One-command generation of **short English-teaching videos**: a two-speaker dialogue script, synthesised narration and per-word illustration, output sized for short-form social distribution. Gate: `LICENSE`, `1,061 B` raw → **`1020 B`/`fe2a9817987f`**. 🔵 **Posture: this is the content-factory half of a language-learning engagement, and it is the half clients underestimate.** The tutor agent is the part everyone demos; the thing that actually has to run every week is bulk lesson-asset production. Permissive, and the pipeline stages are separable — script, voice, imagery — so each can be swapped for a client's own vendor. ⚠️ Honest limit: it targets a social-video format, so classroom use means replacing the distribution stage, not the generation stage. |
+| **GPT-Wordbook (智析单词书)** | [nicejade/gpt-wordbook](https://github.com/nicejade/gpt-wordbook) | 173 | MIT | 2026-09-01 | **APAC** | An **English vocabulary platform that generates deep per-word analysis** — sense, example sentences, roots and affixes, cultural context and mnemonics — rather than storing flashcard pairs. Astro static site plus GPT content generation. Gate: `LICENSE`, `1,076 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 Region placed on **`1,699` CJK characters (`18.6 %` of the README)**. 🔵 **Why the architecture is the reusable part:** content is generated *ahead of time* into a static site, not per-request at the tutor. That makes cost predictable, output reviewable before a learner sees it, and the whole thing CDN-cheap — which is the standard answer to "we cannot put a live model in front of children". |
+| **learn-anything-fast** | [zgl610329-wq/learn-anything-fast](https://github.com/zgl610329-wq/learn-anything-fast) | 53 | MIT | 2026-08-09 | Global ⚠️ | An **AI learning loop that turns a topic into a measurable roadmap**, then drives it with active recall and adaptive quizzes, grounded in cited sources rather than free generation. Gate: `LICENSE`, `1,064 B` raw → **`1020 B`/`fe2a9817987f`**. 🔵 **Filed for the word "measurable":** this base holds many generators and few things that define *completion*. Source-grounding plus a roadmap with checkable states is the shape a client can report against. ⚠️ **Region explicitly unplaced.** The README is English-primary with `73` incidental CJK characters (`0.8 %`) — below anything this base treats as a placement signal, so it is left `Global` rather than guessed (`T137`). |
+| **Geogebra-WebChat** | [liangdabiao/Geogebra-WebChat](https://github.com/liangdabiao/Geogebra-WebChat) | 50 | MIT | 2026-11-06 | **APAC** | **Natural language to GeoGebra construction**: one sentence produces a maths-geometry figure, over a deliberately minimal chat + model + GeoGebra chain. Gate: `LICENSE`, `1,068 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 Region placed on **`3,833` CJK characters (`32.3 %`)** — the densest signal read this pass. 🔵 **Posture, and it is the most transferable row here:** the output is a *GeoGebra construction*, not prose and not an image — a deterministic artefact a teacher can manipulate, verify and correct. That is the generally correct answer to "the model is wrong about maths": have it drive a tool that cannot be wrong about maths. 🟡 Pushed four days before it was read. |
+| **xl-frontend (小鹿老师)** | [QwenStorm/xl-frontend](https://github.com/QwenStorm/xl-frontend) | 47 | MIT | 2026-04-07 | **APAC** | A **K-12 marking platform**: AI paper assembly, automatic homework and essay marking, OCR of handwritten work, and cohort analytics, on Spring Boot + Vue 3. Gate: `LICENSE`, `1,061 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 Region placed on **`1,357` CJK characters (`27.0 %`)** plus `K12`. 🔵 **The OCR-of-handwriting stage is the asset.** Marking agents in this base assume typed input; the actual constraint in school work is paper. A permissive implementation that goes handwriting → OCR → marking → analytics is a complete loop, and the loop is what gets bought. ⚠️ Last push `2026-04-07`, the least recently maintained live row in this section. |
+| **AI-Course-Generator** | [GitHubDaily/AI-Course-Generator](https://github.com/GitHubDaily/AI-Course-Generator) | 35 | MIT | 2025-11-01 | **APAC** | Generates **course outlines and teaching content** for teachers, built on **iFlytek's Spark agent platform**. Gate: `LICENSE`, `1,068 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 **Region placed on a named vendor rather than on language**: the README is English-primary (`0.1 %` CJK) but names **`iFLYTEK` `9` times**. Recorded because it is the inverse of this section's other APAC placements and shows the vendor channel works where the language channel would have returned `Global`. ⚠️ **Honest limits, and they are real:** the dependency on one regional agent platform is the whole runtime, so lifting this outside that platform is a rewrite, not a config change; and last push `2025-11-01` makes it the stalest row in this section. Filed as a **reference implementation of the teacher-facing outline flow**, not as a dependency. |
+| **OpenEduECNU** | [zhangjiarui530/OpenEduECNU](https://github.com/zhangjiarui530/OpenEduECNU) | 89 | Apache-2.0 | 2024-04-15 | **APAC** ⚠️ | An **integrated local-LLM teaching platform built for on-device AI PCs**: AI teaching assistant, interactive Q&A, automatic item generation, syllabus and mind-map generation, and a code assistant. Gate: `LICENSE`, `11,357 B` raw → **`9942 B`/`3fda30957805`** — **stock Apache at this pass's newly computed constant**, and one of the `5` payloads that establishes it (`T287`). 🔵 **Filed for the deployment posture, which is rare in this base:** everything runs *locally on the endpoint*, so no student work leaves the device. That is the only architecture that answers several EMEA and APAC procurement objections outright, and this is a permissive, academic-published instance of it. ⚠️ **Two limits stated plainly.** Last push **`2024-04-15`** — unmaintained for over two years, so treat it as a design reference, not a base to fork. And 🟡 **the region placement is weak and labelled as such:** `ECNU` appears twice, in a `152`-byte README and in the repository name, and this pass **did not find a location string** confirming East China Normal University. The acronym is a reasonable read, materially weaker than the CJK-density placements above. |
 
 ## 🆕 `p733` — reads and verifies `2026-11-10`
 

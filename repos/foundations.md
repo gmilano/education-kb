@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Foundational Repositories — Education
 
-**Pass p733 · verified 2026-11-10.** Building blocks rather than deployable platforms:
+**Pass p734 · verified 2026-11-10.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -30,6 +30,23 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > `docs/License.txt` (`GPL-2.0`) where no root-filename probe can reach them.
 > 🔵 **Three of four index fields are wrong; `4 / 4` of this base's payload-derived cells are
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
+
+## Retention schedulers, platform scaffolds and regional compliance components 🆕 new section at `p734`
+
+**`5` rows, all read `2026-11-10`.** Substrates rather than deployable systems. **`4` are live;
+`1` is archived and is filed with that status in its first sentence**, because an archived
+repository is still a valid grant and its code is still reusable — what it is not is maintained.
+🟢 **Licence verification this pass is stronger than the row count suggests:** the Apache constant
+`p733` declared unreproducible is computed here (`9942 B` / `3fda30957805`) and **two of the five
+payloads below are part of the `5`-publisher set that establishes it** (`T287`).
+
+| Repo | Stars | Licence | Last push | Region | What it is, and why it is a building block |
+|---|--:|---|---|---|---|
+| [open-spaced-repetition/rs-fsrs](https://github.com/open-spaced-repetition/rs-fsrs) | 53 | MIT | 2026-07-20 | Global | The **FSRS spaced-repetition scheduler implemented in Rust** — the scheduling core on its own, with no UI, no store and no learner model attached. Gate: `LICENSE`, `1,079 B` raw → **`1020 B`/`fe2a9817987f`**. 🔵 **This is the row `T265` asked for and this base did not have.** `p731` established that spaced repetition has commoditised and that the asset is the *capture surface*, not the scheduler — which is only actionable if the scheduler is available as a component you do not write. A Rust core binds into Python, Node, Swift, Kotlin and WASM, so one scheduler serves a web app, a mobile app and a batch job without three reimplementations of the same algorithm. |
+| [openedx/edx-cookiecutters](https://github.com/openedx/edx-cookiecutters) | 30 | Apache-2.0 | 2026-10-28 | Global | **First-party Open edX project templates** for new apps, libraries and services. Gate: `LICENSE.txt`, `11,358 B` raw → **`9942 B`/`3fda30957805`** (stock Apache, and one of the `5` payloads establishing the constant). 🔵 **Why a template repo is filed as a foundation:** Open edX itself is **AGPL-3.0**, which is the single most common blocker on this base's platform shelf. These scaffolds are **Apache-2.0** and they are the sanctioned extension path — so work done at the extension point carries a permissive grant even though the host does not. That distinction decides whether an Open edX engagement is sellable, and `p731`'s `731-E` found the same pattern (`mitodl/open-edx-plugins` is BSD-3-Clause at an extension point measured copyleft elsewhere). |
+| [openedx/edx-bootstrap](https://github.com/openedx/edx-bootstrap) | 32 | Apache-2.0 | 2026-09-08 | Global | The **Bootstrap theming substrate for Open edX** — the SCSS layer institutional skinning is built on. Gate: `LICENSE`, `11,356 B` raw → **`9942 B`/`3fda30957805`** (stock Apache; the smallest raw payload in the `5`-payload constant set). 🔵 Filed alongside the cookiecutters for the same reason and as the second half of the same argument: **theming and scaffolding are the two things every Open edX engagement actually touches**, and both are permissive. ⚠️ Lower activity than its sibling; check it still tracks the Open edX release you are targeting. |
+| [opencast/helper-scripts](https://github.com/opencast/helper-scripts) | 11 | BSD-2-Clause | 2026-10-30 | **EMEA** | Operational tooling for **Opencast**, the lecture-capture and video-management system run by a large number of European universities — migration, bulk metadata repair and health-check scripts. Gate: `LICENSE`, `1,355 B` raw → `1278 B`/`ab132540e375`. ⚠️ **Not certified, and the reason is a finding rather than a doubt:** this is BSD, and `T288` establishes that the gate cannot certify BSD at all. Payload read, bytes recorded, **no stock claim made**. 🔵 **Posture: this is the unglamorous half of a lecture-capture engagement.** Clients with Opencast do not need the capture built; they need migrations, metadata cleanup and monitoring — exactly what this holds — and it is the natural insertion point for transcription and indexing on existing recordings. 🟢 Region placed on the project's European institutional base. |
+| [latam-gpt/anonymization-filter](https://github.com/latam-gpt/anonymization-filter) | 1 | MIT | 2025-05-19 | **LATAM** | ⚠️ **Archived, and read this row for the code rather than the project.** Batch **PII anonymisation for large text corpora in Spanish, Portuguese and English**: Microsoft Presidio for general PII plus **custom regular expressions for Latin-American national identity numbers**, as three composable filters (IDs only, PII only, full pipeline). Gate: `LICENSE`, `1,072 B` raw → **`1020 B`/`fe2a9817987f`**. 🟢 **Why a `1★` archived repository is filed at all:** it is the **only permissively-licensed artefact in the entire public estate of `latam-gpt`**, the regional-model programme named in UNESCO's cooperation agreement with Chile's CENIA — and the Latin-American ID regex set is the part nobody wants to write twice, because getting it wrong is a data-protection incident rather than a bug. **MIT is irrevocable, so the code is reusable regardless of archive status.** ⚠️ **What it is not:** maintained, a platform, or evidence that LATAM has buildable regional AI infrastructure — `T291` measures that estate exactly and the answer is `0` live permissive repositories. Vendor the filters, own them, and do not take a dependency. |
 
 ## Learner-model corpora, classroom instruments and teaching substrates 🆕 new section at `p733`
 
