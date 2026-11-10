@@ -6,6 +6,35 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
+## 🆕 `p754` — 🟢 **THE ECEC PLATFORM SHELF: `4` DEPLOYABLE SYSTEMS, AND THE ONLY TRUE ECEC-NATIVE ERP ON EARTH IS A FINNISH MUNICIPAL ONE AT `59★`. 🟢 THE ONE PERMISSIVE SYSTEM IS NOT ECEC SOFTWARE AT ALL — IT IS FRONT-LINE-WORKER CASE MANAGEMENT, AND THAT IS THE ARCHITECTURE. 🔴 THERE IS NO "ODOO OF CHILDCARE".**
+
+### 🔴 Say this in the first meeting
+
+This register has **no mature permissive vertical platform**, and `T479` is the measurement behind that sentence: four open repositories above `20★` worldwide, one of them grant-absent. 🔵 **So the honest shelf below has two tiers, and the second is the one that wins engagements:**
+
+- **ECEC-native** — `evaka` and `Bebbo`. Real, deployed, and **both copyleft**.
+- **ECEC-adjacent but permissive and already at government scale** — `commcare-hq` and `kolibri`. **Not** marketed as early-childhood software, which is exactly why they are unoccupied: an ECEC deployment is a configuration of a front-line-worker platform plus an offline content runtime.
+
+### 🟢 Adoptable — real install bases, AI can be layered on, **read the grant first**
+
+| Platform | Repo | Grant (byte-read `2026-11-10`) | Install base / scale | Stack | What you would actually build on it |
+|---|---|---|---|---|---|
+| **eVaka** — *"ERP for early childhood education"* | [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) `59★` | 🟡 **`LGPL-2.1-or-later`** (REUSE v3.0, per-file SPDX; second in-repo grant `MIT`). 🔴 Index `NOASSERTION` — corrected this pass | **City of Espoo**, built jointly with **Tampere, Turku and Oulu** — four of Finland's largest municipalities; Finnish and Swedish | Cloud-targeted; actively developed (pushed the day of this pass) | 🟢 **The ECEC admission, placement, child–guardian-relationship and fee system.** This is the municipal system of record — the thing a city runs to decide which child gets which daycare place. 🔴 **Weak copyleft: link, do not absorb.** 🔴 **And its placement function is the single most legally loaded surface in this register** — an LLM in that decision path is evaluative, not pedagogical (`T483`). `P270`. |
+| **CommCare HQ** | [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) `525★` | 🟢 **`BSD-3-Clause`** — `1,554 B`, sha256₁₂ `3414ba95afd1` | Front-line health and social programmes across dozens of countries; the substrate family behind **India's ICDS/anganwadi** digitisation (`~1.37M` centres) | Python; offline-first Android data collection; longitudinal case records | 🟢 **The permissive route into public ECEC at national scale, and the commercially strongest row on this shelf.** Child registration, growth and nutrition monitoring, home-visit scheduling, referral tracking, supervisor dashboards — the anganwadi/ECD worker's whole day. 🟢 **BSD-3 means fork, extend, rebrand, bill.** `P272`. |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `1,175★` | 🟢 **`MIT`** | Deployed in low-connectivity schools and community sites worldwide | Python; offline-first, LAN-served, shared-device | 🟢 **The pre-primary content delivery runtime.** Pre-primary provision skews rural, unconnected and shared-device; Kolibri already solves exactly that and is permissive. Build a pre-primary **channel** and an educator-facing planning agent, not a platform. `P274`. |
+| **Bebbo** (app + CMS) | [`parenting-app-bebbo-mobile`](https://github.com/UNICEFECAR/parenting-app-bebbo-mobile) `21★` · [`parenting-app-bebbo-CMS`](https://github.com/UNICEFECAR/parenting-app-bebbo-CMS) `2★` | 🔴 **`GPL-3.0`** — `35,149 B`, sha256₁₂ `3972dc9744f6`, **byte-identical across both repos and the `-uz-` country fork** | **UNICEF ECARO**; bebbo.app; multi-country, localised deployments | React Native app + separate content CMS | 🟢 **The parent-engagement channel, with a reusable content pipeline.** The CMS being a separate repository is the architecturally valuable part: the curated ECD content estate (health, nutrition, play, responsive caregiving) is consumable without adopting the app. 🔴 **`GPL-3.0` on both halves — integrate over the API, do not fork into a proprietary product.** `P273`. |
+
+### 🔴 Not adoptable, and worth naming so nobody re-finds them
+
+| Candidate | Why not |
+|---|---|
+| [`yuxink/joye-preschool`](https://github.com/yuxink/joye-preschool) `39★` | 🔴 **No grant at `8` probed paths.** The highest-starred preschool application on GitHub, and legally unusable. |
+| [`Amarjha01/InfantCareCompass`](https://github.com/Amarjha01/InfantCareCompass) `29★` | 🟢 MIT, 🔴 but last pushed `2025-11-09` — twelve months stale. A reference, not a deployment base. |
+| Brightwheel, Procare, Famly, Kindertales and the rest of the commercial childcare-management category | 🔴 **Entirely proprietary; no open core.** 🟢 **And that is the integration opportunity, not a blocker** — the pattern `p751` recorded for European school portals applies here verbatim: the centre's system of record stays, and the agent layer attaches to it. |
+| ASQ-3 / Denver II / M-CHAT-R/F instrument banks | 🔴 **Copyrighted commercial instruments.** No open equivalent exists with published norms. Licence them or use the client's own validated content (`T485`). |
+
+🔵 **Shelf licence posture: `2 / 4` permissive (`BSD-3-Clause`, `MIT`), `1` weak copyleft (`LGPL-2.1-or-later`), `1` strong copyleft (`GPL-3.0`).** Better than `p753`'s `0 / 3` and worse than `p752`'s `4 / 4` — and note that **both permissive rows got here by not being ECEC products.**
+
 ## 🆕 `p753` — 🟢 **THE DEAF-ACCESS PLATFORM SHELF: `3` DEPLOYABLE SYSTEMS, AND THE ONE WITH A NATIONAL INSTALL BASE IS SHIPPED BY A GOVERNMENT. 🔴 ALL THREE ARE COPYLEFT — THERE IS NO PERMISSIVE PLATFORM IN THIS REGISTER AT ALL.**
 
 ### 🟢 Adoptable — real install bases, AI can be layered on, **read the grant first**

@@ -4,6 +4,129 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p754` (researched 2026-11-10) — `T478`–`T489`
+
+**Register: the early-childhood education and care (ECEC) layer, ages `0`–`8`.** `18` addresses probed, `15` licence payloads byte-read, `6` query denominators plus `20` shelf-mention counts measured, `3` index values materially corrected — **`3 / 3` toward a knowable grant**, `5` compliant grant-absences recorded as `T302` honest negatives. 🔴 **One legal claim corrected in the refusing direction against this base's own first reading (`T482`), and one instrument claim qualified (`T489`).**
+
+### 🔴 `T478` — the register, and the shape of how it was missed
+
+`753` passes of an *education* knowledge base held the sector that serves ages `0`–`8` at near-nil: `childcare` `0` mentions, `daycare` `0`, `nursery` `0`, `developmental screening` `0`, `ASQ` `0`, `ECERS` `0`, `parent engagement` `0`, `anganwadi` `0`, `foundational learning` `0`, `under-five` `0`, against `preschool` `3`, `pre-k` `3`, `kindergarten` `3`, `head start` `1`, `early childhood` `7`, `ECEC` `8`.
+
+🟢 **The mechanism is worth recording because it will recur.** Every shelf on this base is headed *education*, and every row underneath silently assumed **a learner who is already enrolled in schooling** — with a timetable, a transcript, a faculty and an LMS. ECEC has none of those. Its buyer is a **municipality or a ministry of social development**, not a faculty; its practitioner is an **early-years educator or a community health worker**; its instrument is a **psychometric screen**, not an exam; and its delivery channel is a **parent**. 🔵 **`p752` learned that "employability" was several registers and `p753` that "accessibility" was four. `T478` is the same lesson applied to the base's own title word.**
+
+### 🔴 `T479` — the supply vacuum, and it is the most extreme this base has measured
+
+`total_count` from `search/repositories`, `2026-11-10` — totals, not samples:
+
+| Query | `total_count` |
+|---|---|
+| `early childhood education stars:>20` | 🔴 **`2`** |
+| `childcare management stars:>20` | 🔴 **`1`** |
+| `preschool stars:>30` | 🔴 **`1`** (and it carries **no grant**) |
+| `child development milestone stars:>20` | 🔴 **`0`** |
+| `early grade reading assessment` | 🔴 **`2`**, both `0★` |
+| `topic:early-childhood` | 🟡 **`17`**, top entry `1★` |
+
+**Four repositories above `20★` serve the entire global open ECEC software register.** Against this base's own prior measurements — `8,216` repositories for facial emotion recognition (`p750`), `10,467` for sign recognition (`p753`) — this is a different order of absence. 🔵 **It also means the long tail is not a tail:** of `18` addresses probed this pass, `9` were pushed on or within days of `2026-11-10` with `0`–`3★` and a single author. This pass added `6` rows and **declined to pad**.
+
+### 🟢 `T480` — the inversion that sells the register: a `$337B` market with a `$0.3B` software layer
+
+| Series | `2026` | Later | CAGR | Source |
+|---|---|---|---|---|
+| Early childhood education (whole market) | **`$337.4B`** | `$482.07B` (`2030`) | `9.3%` | Research and Markets |
+| Childcare management software | 🔴 **`$264.69M`** | `$383.55M` (`2031`) | `7.70%` | Mordor Intelligence |
+| Childcare management software | 🔴 **`$290.55M`** | `$567.57M` (`2034`) | `8.73%` | Fortune Business Insights |
+| Childcare software (broader) | `$521.8M` | `$935.6M` (`2033`) | — | Coherent Market Insights |
+
+🟢 **The ratio is the pitch: ECEC *delivery* is a `$337.4B` market and its *software* layer is sized at roughly `$0.29B` — about `1,160 : 1`.** Compare schooling and higher education, where the software layer is a double-digit percentage of spend. 🔵 **Read it as the sector being under-digitised rather than as the software opportunity being small**, and note the corroborating structural facts: `0` permissive ECEC-native platforms (`verticals/solutions.md`), and a commercial category (Brightwheel, Procare, Famly) that is entirely closed-source.
+
+### 🔴 `T481` — the market-sizing trap on this register: the *same year*, `42×` apart
+
+"Daycare management software" is given as **`$11.09B` in `2026`** (→ `$13.93B` by `2030`, `5.9%` CAGR, Research and Markets) while "childcare management software" is given as **`$264.69M` in `2026`** (Mordor). 🔴 **That is a `~42×` divergence for adjacent category names in the same year, and it is a definition artefact, not growth or disagreement about growth.** The large figure plainly absorbs general-purpose centre operations — billing, payroll, compliance; the small one counts a specialist application category.
+
+🔵 **The rule this base should carry into any ECEC deck: never quote an ECEC software TAM without quoting the category label and the house beside it.** Quote the `$337.4B` delivery market and the under-digitisation ratio instead — those are robust across sources. (This is the third register where the mandated market leg failed to converge: `p750` `2.7×`, `p751` arithmetic failure, `p754` `42×`.)
+
+### 🔴 `T482` — CORRECTION, refusing direction: do not tell a client that Annex III names ECEC
+
+🔴 **This pass's own first research leg returned the claim that EU AI Act Annex III names *"early childhood education and care (ECEC)"* explicitly. A second, targeted leg does not support that, and this base must not publish the first version.** What the measurements support:
+
+- **Annex III point 3(a) text** covers AI systems used to determine **access or admission**, or to **assign** persons to, *"educational and vocational training institutions at all levels"*. 🔴 **The phrase "early childhood education and care" is not in the Annex text.**
+- **The ECEC reading comes from the European Commission's *draft* guidelines**, which read *"at all levels"* broadly as covering early childhood, primary, secondary, tertiary, vocational and adult education, public or private, online or in person. 🔴 **Draft guidance is not the Regulation, and it is not final.**
+- **Timing is disputed across sources.** Several place Annex III obligations at `2027-12-02`; the Digital Omnibus amendment's status was reported as unsettled (Council adoption / Official Journal publication) as of mid-`2026`. 🔴 **This base records the disagreement and asserts no date.**
+
+⚠️ **Not primary-verified, and the reason is an instrument boundary:** `artificialintelligenceact.eu` and `eur-lex.europa.eu` **both fail DNS resolution under this session's network policy (`2 / 2`)**, exactly as `shibboleth.net` did at `p747`. See `ACTION p754-A`. 🟢 **The honest form of the finding is still commercially usable and is stronger for being accurate:** *an ECEC admission or placement system is very likely in scope of Annex III point 3(a) on the Commission's own reading of it, so design as if it is* — which is `T483`.
+
+### 🟢 `T483` — the Article 6(3) split is an *architecture* boundary, not a compliance afterthought
+
+The operative distinction in the same guidance: AI that provides **pedagogical support** may qualify for the **Article 6(3) filter** and fall outside high-risk, whereas **evaluative** uses that affect a learner's future remain high-risk regardless.
+
+🟢 **For this register that draws a clean architectural line, and it is the single most actionable sentence this pass produced:**
+
+- 🔴 **Evaluative, treat as high-risk** — eVaka's **placement and admission** decision; any developmental **screen** whose output routes a child to intervention; any school-readiness **determination**.
+- 🟢 **Pedagogical/administrative, filter-candidate** — parent-facing content and guidance (Bebbo), educator planning and documentation support, the parent-report drafting workload, Kolibri content curation.
+
+🔵 **Consequence for design: keep the agent out of the decision and on the evidence.** An agent that assembles, translates and explains the record for a human decision-maker, and never emits the placement or the screening verdict, is a different regulatory object from one that does. Every recipe at `P270`–`P274` is built on that separation.
+
+### 🔴 `T484` — North America: the pre-K regulatory vacuum, measured
+
+Per NASBE, as of **August `2026`**, **`37` US states have adopted AI guidance for public schools — few of them touch kindergarten, and pre-K is left out altogether.** Separately, **`16` states considered bills restricting classroom education technology in `2026` and `6` enacted them**; **Alabama's HB 78** pairs new **early-childhood screen-time standards** with required training for teachers and staff.
+
+🔵 **Two consequences, and they point in opposite directions.** 🟢 A pre-K deployment faces **no state AI guidance to comply with** — unusually free ground. 🔴 But "no guidance" is not "no risk": it means the rules will be written *during* a multi-year engagement, and the enacted bills show the direction of travel is **restriction of screens for young children**. 🟢 **Design for it now: voice-first or screen-free interfaces, and educator-facing rather than child-facing AI, are the postures that survive the rule that has not been written yet** — which is why [`nikjain15/toddler-learning-companion`](https://github.com/nikjain15/toddler-learning-companion) (MIT, voice-first, screen-free) is on the agents shelf despite `0★`.
+
+### 🔴 `T485` — the register's defining licence structure: the code is open, the instrument is not
+
+In ECEC the asset with value is a **validated psychometric instrument** — a question set with published norms — and the dominant ones are **commercial copyrighted products**: **ASQ-3** (Brookes), **Denver II** (Denver Developmental Materials, Inc.), **M-CHAT-R/F**. 🔴 **An MIT or Apache-2.0 grant on a screening application conveys no right whatsoever to the instrument inside it.**
+
+🟢 **The compliant pattern is already visible in the two honest projects on the shelf**, which is why they earned rows at `3★` and `0★`:
+
+- [`hsongra11/mychild-app`](https://github.com/hsongra11/mychild-app) (Apache-2.0) **substitutes** a public-domain bank — CDC-derived milestones — and states that it avoids ASQ-3, M-CHAT-R/F and Denver.
+- [`khorihutama/tumbuh-kembang`](https://github.com/khorihutama/tumbuh-kembang) **carves its Denver II–derived dataset out of its own MIT grant** and disclaims affiliation.
+
+🔴 **In an engagement this is a funded work package — instrument licensing, or the client's own validated content — never a scrape.** 🟢 Public-domain substrates that *are* usable: **CDC milestone checklists** and, for population measurement, instruments published for open use by multilateral bodies. `P271` is built entirely around this constraint.
+
+### 🟢 `T486` — APAC is the only region where the **state** ships ECE AI at scale
+
+- **China.** The Ministry of Education with four other departments launched an **"AI + Education" action plan in April `2026` that explicitly spans early childhood through lifelong learning** — the only national AI-in-education plan found this pass that names the early years. Scale: **~`36M` children across `250,000`+ kindergartens**. Research is already operational rather than aspirational: a `2026` study tests **LLMs as assessment teammates for teacher–child interaction quality** in Chinese preschools, framing AI as the only way quality monitoring at that scale becomes feasible. A March `2026` study of `50` Froebelian practitioners found a **"dual-track"** practice — hands-on nature-based play alongside AI personalisation — with explicit concern about displacing sensory experience.
+- **India.** Public pre-primary runs through **~`1.37M` anganwadi centres** under ICDS, with nutrition tracked via **Poshan Tracker**; the **first "AI-powered anganwadi"** (Waddhamna, near Nagpur) uses VR, smartboards and tablets with plans to scale to `40` more. 🔴 **But the curriculum policy excludes the early years: AI and computational thinking enter from Class `3` in the `2026`–`27` session**, while the `3`–`6` band — where AI literacy arguably starts — is not addressed.
+
+🟢 **Commercially this is the register's clearest opportunity, and `T488` explains why nobody has taken it:** the demand is state-scale and named, and the permissive substrate that fits it ([`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq), `BSD-3-Clause`) is already the family deployed under the anganwadi network. `P272`.
+
+### 🟢 `T487` — the register's only real agent is Australian, MIT, and *safety-aware* by design
+
+[`MengC-OvO/easy-teaching`](https://github.com/MengC-OvO/easy-teaching) — **`58★`, MIT** (`1,082 B`, sha256₁₂ `f755cdc76e68`), Python, pushed `2026-09-16` — is a **safety-aware teacher agent for Australian early-childhood education**, and it is simultaneously the highest-starred permissive artefact in the register and one of only two repositories the `early childhood education stars:>20` query returns at all.
+
+🔵 **"Safety-aware" is the finding, not the adjective.** In ECEC the binding constraint on an agent is **duty of care** — what it must not say to or about a child, what it must escalate to a human, what it must refuse. 🟢 **An agent for this sector that treats those constraints as the product rather than as a guardrail bolted on afterwards is the correct shape**, and this is the one public implementation of it. 🔴 At `58★` and single-author it is a pattern to learn from and extend, not a dependency to deploy.
+
+### 🔴 `T488` — LATAM: an informed gap, stated explicitly — policy present, supply absent
+
+🟢 **The policy layer in LATAM is real and ahead of its supply.** **Chile**: the Ministry of Science presented a new **AI policy with `100`+ actions committed for `2026`**; Mineduc's curricular-bases work addresses AI **from the preschool stage**, and it published *"PotencIA el aprendizaje"* (`2025`) as explicitly non-prescriptive guidance; the **6th Congress on Innovation in Early Childhood Education (CIEI `2026`)** carries a responsible-AI-in-*educación inicial* track. **Mexico**: the Presidency and SEP opened a national debate on AI, social media and devices in schools, with forums toward a law covering minors' use of platforms and AI; SEP ran a generative-AI survey drawing **`1.5M`+ student responses**; **MXN `284.1M`** was allocated to teacher professional development in `2026`, a figure specialists call insufficient. Regional standing (ILIA `2024`): **Chile `73.07`, Brazil `69.30`, Mexico `51.40`**.
+
+🔴 **The gap, written down rather than left as silence.** Searched this pass, in English and Spanish: **no open-source ECEC platform, screening tool or early-childhood agent originating in LATAM was found**, and **no Brazilian federal AI policy specific to early childhood** was found. `0` of the `18` addresses probed this pass are LATAM-origin.
+
+🔴 **A second gap worth naming because it is routinely mis-cited.** The Digital Education Council's `2026` LATAM survey — **`92%` of students and `79%` of faculty actively engaging with AI, only `30%` saying institutional use meets their expectations, `30,000`+ respondents across `29` institutions** — is **higher education only**. It says nothing about ECEC and must not be quoted as if it did.
+
+🔵 **Reading: LATAM is a *demand-led* ECEC opportunity, not a supply-led one.** The region has the policy mandate, the public-provision scale and (via Chile) explicit preschool AI curriculum intent, with no domestic open stack to build on — so the engagement shape is to bring `commcare-hq` or `kolibri` and localise, not to adopt a regional platform.
+
+### 🔵 `T489` — instrument: `search/repositories` is **not** an existence oracle, and the primary legal channel is closed
+
+Two reproducible divergences this pass, both qualifying `p752`'s `T455` (which established `repo:{owner}/{name}` as a valid second existence oracle):
+
+1. [`UNICEFECAR/parenting-app-uz-CMS`](https://github.com/UNICEFECAR/parenting-app-uz-CMS) — `repo:` query returns **`total_count: 0`**, while the raw channel serves its `README.md` (`200`) **and** a `35,149 B` `GPL-3.0` payload byte-identical to the canonical repositories. **Alive, licence-readable, invisible to search.**
+2. `cybasoft/carepro` — raw channel `200`; the same `repo:` query returns **`422 Validation Failed`** (*"resources do not exist or you do not have permission"*). Secondary sources report it archived in `2022` under a different name.
+
+🔴 **Rule: `search/repositories` returning `0` or `422` is NOT evidence of absence. The raw channel remains the existence oracle (`200` alive / `404` absent, controls re-run `2 / 2` this pass: `openedx/edx-platform` alive via `README.rst`, an invented address absent at `4` paths).** `T455` stands for *metadata*, and is hereby qualified for *existence*.
+
+🔵 **Two further instrument notes.** (a) **The primary legal channel is unavailable**: `artificialintelligenceact.eu` and `eur-lex.europa.eu` both fail DNS, `2 / 2`, so every legal claim at `T482` is search-channel-sourced and flagged as such (`ACTION p754-A`). (b) **`p751`'s `T441` reproduced and its fix vindicated**: [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine)'s grant sits at **`LICENSE.txt`**, and a chain stopping at `LICENSE` would have published a `119★` platform as a false grant-absence. 🟢 **Keep the case-ordered chain.**
+
+🟢 **`P210` leg report — the mandated global supply legs nilled again, the `39`th consecutive time.** The `github trending` leg returned `DeepTutor`, `geekjourneyx/interactive-learning`, `SirhanMacx/Claw-ED` and `TapXWorld/ChinaTextbook` — **the identical four `p744` recorded, all already held**. The open-source-agents leg returned `OpenHands`, `MetaGPT`, `browser-use`, `AutoGen` and `LangChain`: general frameworks, all held, none ECEC. 🔵 **The web-search channel also handed this pass a *non-canonical* address as its headline Bebbo result (`parenting-app-uz-CMS`, a country fork) while the canonical pair `parenting-app-bebbo-mobile` / `-CMS` existed and is better** — a `P210`-class trap in a new form: not an already-held repository, but the **wrong address for a correct finding**. `0` of this pass's `6` agent rows came from a mandated leg; all came from register-directed denominator queries.
+
+### 🟥 `ACTION p754-A` — for the next pass
+
+**Primary-verify `T482`.** Every legal claim about Annex III point 3(a), the Article 6(3) filter and the Annex III application date is **search-channel-sourced only**, because `eur-lex.europa.eu` and `artificialintelligenceact.eu` are both unreachable here. A pass with a channel to EUR-Lex should byte-read Annex III point 3 of Regulation (EU) 2024/1689, confirm whether the Commission guidelines naming ECEC are final or still draft, and settle the `2027-12-02` date. 🔴 **Until then, no deck may state that Annex III names early childhood education.**
+
+**Second action — `ACTION p754-B`.** This pass established that the base's shelves silently scoped out the pre-enrolment years (`T478`). Run the same mention-count test for the **other** end of the age range and for the **non-formal** sector — adult literacy, prison education, community and second-chance provision — before assuming they are held.
+
+
 # 🆕 Trends new at `p753` (researched 2026-11-10) — `T465`–`T477`
 
 **Register: the Deaf-learner and sign-language access layer.** `35` addresses probed, `24` licence payloads byte-read, `16` query denominators plus `2` licence-distribution samples measured, `3` index values materially corrected — **all three in the refusing direction**, which is unusual for this base and is the register's signature. 🔴 **One cross-shelf stale date corrected: six shelves assert an "April 2026 ADA deadline" as a live demand driver and the deadline moved in April 2026 (`T475`).**

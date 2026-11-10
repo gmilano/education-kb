@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 `P270`–`P274` — added at p754 (2026-11-10)
+
+🟢 **These five recipes serve the early-childhood (ECEC, `0`–`8`) register.** Every component is named with its address, its byte-read grant and its region.
+
+🔴 **Four constraints apply to all five and none is negotiable.**
+
+1. 🔴 **There is no permissive ECEC-native platform to build on.** `T479`: four open ECEC repositories above `20★` worldwide, one grant-absent. **So every recipe below founds on an *adjacent* permissive substrate — front-line-worker case management ([`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq), `BSD-3-Clause`) or offline learning delivery ([`learningequality/kolibri`](https://github.com/learningequality/kolibri), `MIT`)** — and treats the ECEC-native systems (`evaka`, `Bebbo`, both copyleft) as **systems of record to integrate with, never to absorb**.
+2. 🔴 **The instrument is not covered by the code licence.** ASQ-3, Denver II and M-CHAT-R/F are copyrighted commercial products (`T485`). Every recipe assumes **public-domain items (CDC-derived), a licensed instrument, or the client's own validated content** as a funded work package.
+3. 🔴 **Keep the agent out of the decision and on the evidence** (`T483`). Admission, placement and screening verdicts are **evaluative** and high-risk on the Commission's own reading of Annex III point 3(a); an agent that assembles, translates and explains a record for a human decision-maker is a different regulatory object from one that emits the verdict. ⚠️ `T482`: that legal reading is **search-channel-sourced, not primary-verified**.
+4. 🔴 **Assume the child-facing screen will be restricted.** `T484`: US states are legislating early-childhood screen time (Alabama HB 78) while leaving pre-K out of AI guidance entirely. **Prefer educator-facing and voice-first/screen-free surfaces.**
+
+---
+
+### `P270` — ECEC placement-and-admission evidence agent, on eVaka
+**Time**: `10`–`14` weeks | **Region**: EMEA (Finland first; any municipal ECEC authority) | 🔴 **Highest legal load of any recipe on this base**
+
+**Components.** [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) `59★` — 🟡 **`LGPL-2.1-or-later`** (REUSE v3.0; index `NOASSERTION`, corrected `p754`) as the municipal system of record for applications, child–guardian relationships and placements · [`MengC-OvO/easy-teaching`](https://github.com/MengC-OvO/easy-teaching) `58★` MIT as the **safety-constraint pattern** · an orchestration layer the client already licenses.
+
+**Wiring.**
+1. eVaka stays the system of record and **keeps the decision**. 🔴 **Integrate over its API; do not fork it into the product** — `LGPL-2.1-or-later` is weak copyleft, so linking is fine and absorbing is not.
+2. The agent reads the application set and produces, for each case, a **reviewable evidence pack**: siblings, catchment and distance, stated needs, language, continuity of care, statutory priority rules cited by rule-ID, and **the arithmetic shown**.
+3. 🔴 **The agent emits no placement.** It ranks nothing and scores nothing. The human allocator decides; the agent explains the inputs and flags incomplete or contradictory records.
+4. Every pack carries provenance: which field came from which record at which timestamp, so a contested placement is auditable.
+5. Borrow `easy-teaching`'s posture: duty-of-care constraints are **declared refusals in the agent's contract**, not post-hoc filters.
+
+🟢 **Why it sells.** Placement season is a municipal crunch with statutory deadlines and appeal exposure; the labour is assembling evidence, not making the call. 🔴 **Why it is designed this way:** the placement decision itself is the **evaluative** use that stays high-risk under Article 6(3) (`T483`). Keeping the agent on the evidence side is what makes the engagement shippable — and if the client wants the agent to decide, that is a different, heavier, conformity-assessed project and should be priced as one.
+
+---
+
+### `P271` — Developmental-screening copilot with a clean instrument bank
+**Time**: `8`–`12` weeks | **Region**: Global | 🔴 **Instrument licensing is a budget line, not a detail**
+
+**Components.** [`hsongra11/mychild-app`](https://github.com/hsongra11/mychild-app) `3★` 🟢 **Apache-2.0** (`12,049 B`, sha256₁₂ `362e4604db3c`) as the **rules reference** — `129` items, `8` domains, evidence weighting, **corrected age for prematurity**, rule simulator, explainability · [`khorihutama/tumbuh-kembang`](https://github.com/khorihutama/tumbuh-kembang) 🟡 **MIT code only, dataset excluded** as a localisation shell · [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) `BSD-3-Clause` for the longitudinal child record.
+
+**Wiring.**
+1. **Settle the instrument before writing code.** Three lawful routes: **(a)** public-domain CDC-derived milestone items, as `mychild-app` does; **(b)** a **licensed** commercial instrument (ASQ-3 etc.) with the fee negotiated; **(c)** the client's own validated bank. 🔴 **Never lift Denver II or ASQ items from a repository — `tumbuh-kembang` carves its dataset out of its own MIT grant precisely to tell you this** (`T485`).
+2. Take `mychild-app`'s **rule structure**, not its content: domain weighting, corrected-age handling, and the explainability trace.
+3. Persist results as longitudinal cases in CommCare so a screen is a trajectory, not an event.
+4. The agent's job is **narration and triage support**: plain-language explanation for the caregiver in their language, flagging of missing items, and surfacing of prior results — 🔴 **it does not emit a pass/fail or a diagnosis.** Both source projects declare themselves non-diagnostic; keep that.
+5. Route a flag to a named human pathway with an SLA. A screen that fires into nothing is worse than no screen.
+
+🟢 **Why it sells.** Early identification is the highest-leverage intervention in the whole education system, and the bottleneck is practitioner time per child plus caregiver comprehension. 🔵 Pair with `P272` where the screener is a community worker rather than a clinician.
+
+---
+
+### `P272` — Anganwadi / ECD front-line-worker copilot on CommCare HQ
+**Time**: `12`–`16` weeks | **Region**: APAC (India first; any ministry-scale ECD network) | 🟢 **The register's best commercial fit**
+
+**Components.** [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) `525★` 🟢 **`BSD-3-Clause`** (`1,554 B`, sha256₁₂ `3414ba95afd1`), pushed `2026-11-10` — offline-first Android data collection, longitudinal household and child cases, scheduled visits, supervisor dashboards · an on-device or edge-hosted small model for the offline path · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) MIT for the content the worker shows a parent.
+
+**Wiring.**
+1. Found on CommCare and **say why in the first meeting**: it is permissive (`BSD-3` — fork, extend, rebrand, bill), `17` years mature, and **already the substrate family under India's ICDS/anganwadi digitisation** across `~1.37M` centres (`T486`).
+2. 🔴 **Design offline-first, not offline-tolerant.** The agent must do useful work with no connectivity and reconcile later; an anganwadi centre is the canonical intermittent-network site. Put the assistive model on-device or at the block level.
+3. Copilot surfaces, in the worker's language, all **educator-facing**: today's visit list with reasons; growth-faltering and immunisation-gap flags from the case history; a spoken-prompt script for the caregiver conversation; voice-and-form-filling assistance to cut the register-keeping burden.
+4. Bridge nutrition and ECD: the nutrition record (Poshan-Tracker-shaped) and the **developmental** record are the same child. 🟢 **Joining them is the differentiator — in practice they are two systems and nobody holds the join.**
+5. Supervisor layer: caseload equity, overdue visits, and data-quality anomalies — not worker ranking.
+
+🟢 **Why it sells.** State-scale, named, funded demand with a permissive substrate already in place and no incumbent AI layer. 🔴 **Procurement reality:** the buyer is a ministry, so expect data-residency, language-coverage and audit requirements as first-class requirements, and expect the deployment to be the hard part, not the model.
+
+---
+
+### `P273` — Parent-engagement agent over Bebbo's content estate
+**Time**: `6`–`10` weeks | **Region**: EMEA origin, globally localisable | 🔴 **`GPL-3.0` boundary is the architecture**
+
+**Components.** [`UNICEFECAR/parenting-app-bebbo-CMS`](https://github.com/UNICEFECAR/parenting-app-bebbo-CMS) + [`-mobile`](https://github.com/UNICEFECAR/parenting-app-bebbo-mobile) 🔴 **`GPL-3.0`** (`35,149 B`, sha256₁₂ `3972dc9744f6`, byte-identical across both and the `-uz-` fork) — UNICEF's curated ECD content estate: health, nutrition, play, responsive caregiving, age-banded · [`photospherestudio/Saisha-Bloom`](https://github.com/photospherestudio/Saisha-Bloom) MIT as the **calm-tracker** interaction pattern · a messaging channel the caregiver already uses.
+
+**Wiring.**
+1. 🔴 **Consume the content over the CMS API; do not fork the CMS into a proprietary product.** `GPL-3.0` on both halves means a distributed derivative must be offered on the same terms. 🟢 **The separate-CMS architecture is what makes this recipe legal and cheap** — the content pipeline is reusable without adopting the app.
+2. The agent is a **content retriever and explainer**, not an advisor: it answers a caregiver's question by returning the age-appropriate Bebbo guidance, in their language, at their literacy level, with the source shown.
+3. Deliver on WhatsApp or SMS, not a new app. 🔵 This register's caregivers are reached on the channel they already have — and a messaging surface sidesteps the child-screen-time constraint entirely (`T484`).
+4. Borrow `Saisha-Bloom`'s **notice-and-record** posture over score-and-alert: caregiver-visible tracking without a scored verdict. 🟢 **That posture is also what keeps the service on the pedagogical-support side of the Article 6(3) line** (`T483`).
+5. 🔴 **Hard refusals in the contract**: no diagnosis, no medication guidance, and a named escalation path to a human service for any red-flag disclosure — `p750`'s safeguarding rules apply in full to a channel that reaches families.
+
+🟢 **Why it sells.** Ministries and NGOs hold large curated ECD content estates and reach almost none of their intended audience with them; the gap is comprehension, language and channel — exactly what an LLM layer is good for, with no new content needed.
+
+---
+
+### `P274` — Pre-primary offline delivery plus early-grade oral assessment
+**Time**: `10`–`14` weeks | **Region**: LATAM and Africa deployments; Global code | 🟡 **Mixed-licence by design — read the split**
+
+**Components.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `1,175★` 🟢 **MIT**, pushed `2026-11-10` — offline-first, LAN-served, shared-device learning runtime · [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) `119★` 🔴 **`GPL-3.0`** (`35,147 B`, sha256₁₂ `8ceb4b9ee5ad`, **grant at `LICENSE.txt`**) — tablet-based one-on-one oral assessment (EGRA/EGMA-shaped) for the youngest learners · [`montessoritheory/us-public-prek-kindergarten`](https://github.com/montessoritheory/us-public-prek-kindergarten) 🟢 **`CC BY 4.0`** data + MIT scripts, for North American benchmarking.
+
+**Wiring.**
+1. 🔴 **Draw the licence line at the deployment boundary, deliberately.** Kolibri (MIT) carries the **product**; Tangerine (`GPL-3.0`) carries the **assessment instrument delivery** and is deployed as a **separate service** to the ministry, not linked into a proprietary binary. 🟢 For a funded national-assessment programme `GPL-3.0` is usually acceptable and sometimes mandatory; keeping it in its own process is what preserves that choice.
+2. Build a **pre-primary Kolibri channel**: oral-language, phonological-awareness and early-numeracy activities, packaged for shared devices and zero connectivity.
+3. Agent layer, **educator-facing only**: from Tangerine results, generate a plain-language class profile, group suggestions and a next-two-weeks plan drawn from the Kolibri channel. 🔴 No child-facing chat.
+4. 🔴 **The assessment items are the licensing question, not the platform.** Tangerine delivers instruments; it does not grant you one. Use the client's or the funder's validated items (`T485`).
+5. Close the loop: assessment → grouping → content → re-assessment, with the educator approving each step. 🔵 This is the one recipe here that produces a **measurable learning outcome**, which is what a funder buys.
+
+🟢 **Why it sells in LATAM specifically.** `T488`: the region has the policy mandate (Chile's AI policy with `100`+ `2026` actions and preschool-stage curricular intent; Mexico's SEP process) and the public-provision scale, and **no domestic open ECEC stack** — so the engagement is *bring a permissive stack and localise it*, not *adopt a regional platform*. Spanish and Portuguese localisation is the first work package, not an afterthought.
+
+
 ## 🆕 `P265`–`P269` — added at p753 (2026-11-10)
 
 🟢 **These five recipes serve the Deaf-learner and sign-language access layer — producing a signed rendering of institutional content, and reading a signed contribution back.** Every component is named with its address, its byte-read grant and its region, because this register has **no permissive platform at all** (`verticals/solutions.md` is `0 / 3` permissive) and the licence boundary is therefore an **architecture** decision, not a procurement one.

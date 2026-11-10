@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p754) — 🟢 **THE ECEC SUBSTRATE: THE ONLY ECEC-NATIVE ERP ON EARTH IS A FINNISH MUNICIPAL ONE AT `59★`, INDEXED `NOASSERTION` AND ACTUALLY `LGPL-2.1-or-later`. 🟢 THE PERMISSIVE WINNER IS NOT ECEC SOFTWARE AT ALL — IT IS A `BSD-3-Clause` FRONT-LINE-WORKER PLATFORM ALREADY RUNNING INDIA'S ANGANWADI NETWORK. 🔴 `child development milestone stars:>20` → `0`.**
+
+**`6` foundations rows · `3` index values materially corrected, `3 / 3` toward a knowable grant · every grant byte-read `2026-11-10`.**
+
+### 🔴 The denominators — totals from `search/repositories`, not samples
+
+`early childhood education stars:>20` → **`2`** · `childcare management stars:>20` → **`1`** · `preschool stars:>30` → **`1`** (grant-absent) · `child development milestone stars:>20` → **`0`** · `early grade reading assessment` → **`2`**, both `0★` · `topic:early-childhood` → **`17`**, top entry `1★`. 🔵 **Against this base's own `8,216` (facial emotion recognition, `p750`) and `10,467` (sign recognition, `p753`), this is a different order of absence** (`T479`).
+
+### 🟢 Trending / newly held
+
+| Repo | Licence (byte-read) | ★ | Pushed | Region | Signal |
+|---|---|---|---|---|---|
+| [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) | 🟡 **`LGPL-2.1-or-later`** — `LICENSE` is a **REUSE v3.0 pointer, not a grant** (`1,001 B`, `b889788fbc7b`); resolved to `LICENSES/LGPL-2.1-or-later.txt` (`25,906 B`) with a second in-repo `MIT` (`1,078 B`). 🔴 Index `NOASSERTION` → **CORRECTED** | `59★` | 🟢 **`2026-11-10`** | **EMEA** (Finland) | 🟢 **The find of the pass — its own description reads *"ERP for early childhood education"*.** City of Espoo with Tampere, Turku and Oulu; applications, child–guardian relationships, placements; Finnish and Swedish. 🔴 Weak copyleft: link, do not absorb. `P270`. |
+| [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) | 🟢 **`BSD-3-Clause`** — `1,554 B`, `3414ba95afd1` | `525★` | 🟢 **`2026-11-10`** | APAC deployment | 🟢 **The commercially strongest row.** `17`-year-old offline-first front-line-worker case management; the substrate family under **India's ICDS/anganwadi** digitisation (`~1.37M` centres). Fork, extend, rebrand, bill. `P272`. |
+| [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | 🔴 **`GPL-3.0`** — `35,147 B`, `8ceb4b9ee5ad`. 🔵 **grant at `LICENSE.txt`** | `119★` | `2026-09-04` | LATAM + Africa | Tablet-based one-on-one oral assessment (EGRA/EGMA-shaped) for the youngest learners, offline-first. 🔵 **Reproduces `p751`'s `T441`:** a chain stopping at `LICENSE` would have published a `119★` platform as a false grant-absence. `P274`. |
+| [`UNICEFECAR/parenting-app-bebbo-mobile`](https://github.com/UNICEFECAR/parenting-app-bebbo-mobile) · [`-CMS`](https://github.com/UNICEFECAR/parenting-app-bebbo-CMS) | 🔴 **`GPL-3.0`** — `35,149 B`, `3972dc9744f6`, **byte-identical across both and the `-uz-` fork** | `21★` / `2★` | 🟢 **`2026-11-10`** / `2026-11-05` | **EMEA** (UNICEF ECARO) | UNICEF's ECD parenting estate — health, nutrition, play, responsive caregiving. 🟢 **The separate CMS is the architecturally useful half:** the content pipeline is consumable without adopting the app. `P273`. |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | `1,175★` | 🟢 **`2026-11-10`** | Global | 🔵 Already held (`545` mentions); re-listed as **the only permissive offline-first delivery runtime in the register's reach** — pre-primary provision is rural, unconnected and shared-device. `P274`. |
+| [`montessoritheory/us-public-prek-kindergarten`](https://github.com/montessoritheory/us-public-prek-kindergarten) | 🟡 **Dual: `CC BY 4.0` data + `MIT` `scripts/`** — `753 B`, `8fb47e9cfad1`. 🔴 Index `NOASSERTION` → **CORRECTED** | `0★` | `2026-11-02` | **North America** | 🔵 The only **commercially quotable ECEC dataset** found: US public pre-K and kindergarten enrolment by state, falls `2010`–`2022`, from NCES Digest tables `203.40`, `203.45`, `202.25` (public domain). CC BY 4.0 permits commercial use with attribution. |
+
+### 🔵 Instrument notes this week (`T489`)
+
+🔴 **`search/repositories` is not an existence oracle.** `repo:UNICEFECAR/parenting-app-uz-CMS` → **`total_count: 0`** while the raw channel serves its `README.md` **and** a `35,149 B` `GPL-3.0` payload. `cybasoft/carepro` → **`422 Validation Failed`**, raw channel `200`. **A `0` or `422` from search is not evidence of absence**; the raw channel remains the oracle (controls `2 / 2` this pass). `p752`'s `T455` stands for *metadata* and is qualified for *existence*.
+
+🔴 **The primary legal channel is closed:** `eur-lex.europa.eu` and `artificialintelligenceact.eu` both fail DNS (`2 / 2`), so `T482`'s legal reading is search-channel-sourced and flagged (`ACTION p754-A`).
+
+---
+
+
 ## 🆕 2026-11-10 (p753) — 🟢 **THE SIGN-LANGUAGE SUBSTRATE: `7` ROWS, `6` PERMISSIVE, AND THE SENSING LAYER IS A `37,636★` APACHE-2.0 GOOGLE LIBRARY PUSHED THE DAY OF THIS PASS. 🔴 THE SAME ORGANISATION'S MIT PAYLOADS NOW NAME A US FOR-PROFIT. 🔴 THE FOUR THINGS THE REGISTER ACTUALLY NEEDS — CORPORA, A TEXT→POSE MODEL, AN AGENT LAYER AND A USABLE RENDERER — ARE ALL ABSENT.**
 
 ### What is new this week in this register

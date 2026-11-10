@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p754) — 🔴 **THE EARLY-CHILDHOOD (ECEC, `0`–`8`) AGENT LAYER: THE WHOLE WORLD'S OPEN ECEC ESTATE ABOVE `20★` IS **FOUR** REPOSITORIES, AND `child development milestone stars:>20` RETURNS **`0`**. 🟢 THE ONE REAL AGENT IN THE REGISTER IS AUSTRALIAN, MIT AND *SAFETY-AWARE* BY DESIGN. 🔴 THE CODE IS OPEN AND THE SCREENING INSTRUMENT IS NOT.**
+
+**`6` agent rows added (`4` MIT, `1` Apache-2.0, `1` MIT-with-a-dataset-carve-out) · `18` addresses probed · `15` licence payloads byte-read · `3` index values materially corrected, `3 / 3` toward a knowable grant · `5` `T302` honest negatives · `6` query denominators and `20` shelf-mention counts measured · `T478`–`T489`.**
+
+### 🔴 The register, and `753` passes of silence
+
+`childcare` `0` mentions · `daycare` `0` · `nursery` `0` · `developmental screening` `0` · `ASQ` `0` · `ECERS` `0` · `parent engagement` `0` · `anganwadi` `0` · `foundational learning` `0` · `under-five` `0` · against `preschool` `3`, `kindergarten` `3`, `head start` `1`, `early childhood` `7`. 🔵 **Every shelf on this base is headed *education* and every row assumed a learner who is already enrolled** (`T478`).
+
+### 🟢 New this week — what actually exists
+
+| Agent | Repo | Licence (byte-read) | ★ | Region | Signal |
+|---|---|---|---|---|---|
+| **EasyTeaching** | [`MengC-OvO/easy-teaching`](https://github.com/MengC-OvO/easy-teaching) | 🟢 MIT (`1,082 B`, `f755cdc76e68`) | `58★` | **APAC** (Australia) | 🟢 **The register's only real agent and its highest-starred permissive artefact.** *Safety-aware* teacher agent for Australian ECE — duty-of-care constraints as the product, not a guardrail (`T487`). Pushed `2026-09-16`. |
+| **MyChild Engine** | [`hsongra11/mychild-app`](https://github.com/hsongra11/mychild-app) | 🟢 Apache-2.0 (`12,049 B`, `362e4604db3c`) | `3★` | Global | `129`-item screening engine, `0`–`36` months, `8` domains, corrected age for prematurity, explainability. 🔵 **Deliberately substitutes public-domain CDC items for ASQ-3 / M-CHAT / Denver** — the compliant pattern (`T485`). Non-diagnostic. |
+| **TumbuhKembang** | [`khorihutama/tumbuh-kembang`](https://github.com/khorihutama/tumbuh-kembang) | 🟡 **MIT code, dataset EXCLUDED** (`1,579 B`, `b0369ce354a9`) | `0★` | **APAC** (Indonesia) | 🔴 **Read the licence before the description.** A scope note precedes the grant: MIT does **not** cover `js/data.js`, a Denver II–derived approximation; unaffiliated with the rights-holder. Index `NOASSERTION` → corrected. Pushed `2026-11-10`. |
+| **Saisha Bloom** | [`photospherestudio/Saisha-Bloom`](https://github.com/photospherestudio/Saisha-Bloom) | 🟢 MIT (`1,067 B`, `1b840915e039`) | `1★` | Global | *Calm* child-development tracker — notice-and-record rather than score-and-alert, the posture the Article 6(3) line rewards (`T483`). |
+| **Toddler Learning Companion** | [`nikjain15/toddler-learning-companion`](https://github.com/nikjain15/toddler-learning-companion) | 🟢 MIT (`1,065 B`, `47d0c6e03872`) | `0★` | Global | 🟢 **Voice-first, screen-free** — a regulatory feature, not an aesthetic one, given US states legislating early-childhood screen time (`T484`). |
+| **InfantCareCompass** | [`Amarjha01/InfantCareCompass`](https://github.com/Amarjha01/InfantCareCompass) | 🟢 MIT (`1,065 B`, `a4014b4295c4`) | `29★` | Global | 🟢 The **entire** result set for `childcare management stars:>20` (`total = 1`). 🔴 Last pushed `2025-11-09` — stale by a year. |
+
+### 🔴 Grant-absent this week — `5` `T302` honest negatives (alive, no grant at `8` probed paths)
+
+[`yuxink/joye-preschool`](https://github.com/yuxink/joye-preschool) `39★` — 🔴 **the highest-starred preschool app on GitHub, legally unusable** · [`gummy789j/kid-assessment-writer`](https://github.com/gummy789j/kid-assessment-writer) `0★` — an AI agent drafting parent report comments, exactly the workload educators want lifted · [`mois-khan/child-development-assessment`](https://github.com/mois-khan/child-development-assessment) `1★` · [`kyhsa93/toddler-milestone-checklist`](https://github.com/kyhsa93/toddler-milestone-checklist) `0★` · [`cefolar01/Childcare_Solution`](https://github.com/cefolar01/Childcare_Solution).
+
+🔵 **Cohort-quality note, because the star counts are not an accident.** `9` of `18` addresses probed were pushed on or within days of `2026-11-10` with `0`–`3★` and a single author. **This pass declined to pad the shelf.** Four real repositories above `20★` is the finding (`T479`); twenty rows would have hidden it.
+
+### 🟢 `P210` leg report — `39`th consecutive supply nil
+
+`github trending` returned `DeepTutor`, `interactive-learning`, `Claw-ED`, `ChinaTextbook` — **the identical four `p744` recorded, all already held.** The open-source-agents leg returned `OpenHands`, `MetaGPT`, `browser-use`, `AutoGen`, `LangChain` — general frameworks, all held, none ECEC. 🔵 **New trap form: the web channel handed this pass the *wrong address for a correct finding*** — a Bebbo country fork (`-uz-`) as the headline while the canonical pair existed (`T489`). `0 / 6` rows came from a mandated leg.
+
+---
+
+
 ## 🆕 2026-11-10 (p753) — 🔴 **THE DEAF-LEARNER ACCESS LAYER: `752` PASSES HELD ONE LIBRAS APP AND `0` OF THE STACK UNDER IT. 🔴 THE FIELD'S REFERENCE ORGANISATION CHANGED OWNER IN 2026 AND ITS `800★` FLAGSHIP IS NOW FREE FOR THE CLIENT AND PAID FOR GLOBANT. 🔴 THE SUPPLY RUNS `2,600 : 1` IN THE WRONG DIRECTION. 🔴 THE MANDATED SUPPLY LEGS NILLED FOR THE `38`th CONSECUTIVE PASS.**
 
 ### What is new this week in this register

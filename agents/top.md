@@ -6,6 +6,8 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
+**Pass p754 · verified 2026-11-10.** 🟢 **`6` agent rows added — `4` MIT, `1` Apache-2.0 and `1` MIT-with-a-carve-out, all byte-read.** `18` addresses probed, **`15` licence payloads byte-read**, **`3` index values materially corrected — `3 / 3` from `NOASSERTION` toward a knowable grant**, `5` compliant grant-absences recorded as `T302` honest negatives, `6` query denominators plus `20` shelf-mention counts measured, `T478`–`T489` declared. 🔴 **The register is the *early-childhood education and care layer* — ECEC, ages `0`–`8`: the centre, the childminder, the developmental screen, the parent and the pre-primary year — and `753` passes held almost none of it: `childcare` `0` mentions, `daycare` `0`, `nursery` `0`, `developmental screening` `0`, `ASQ` `0`, `ECERS` `0`, `parent engagement` `0`, `anganwadi` `0`, `foundational learning` `0`, against `preschool` `3` and `early childhood` `7` (`T478`).** 🔴 **The finding of the pass is a supply vacuum with no parallel on this base: the *entire* open-source ECEC estate above `20★` on GitHub is **four repositories**, and `child development milestone stars:>20` returns **`0`** (`T479`). `p753` found a `2,600 : 1` oversupply of recognition code; this register is the inverse — a `$337.4B` delivery market whose software layer is sized at `~$0.29B` and whose open estate is four repositories (`T480`).** 🔴 **Read the licence cell before the description on the `tumbuh-kembang` row and on every screening row: the *code* is MIT but the *instrument* is not open — ASQ-3, Denver II and M-CHAT-R/F are proprietary, and the honest projects substitute public-domain CDC milestones rather than reproduce them (`T485`).** 🔵 **EMEA correction in the refusing direction: this base should not tell a client that Annex III names ECEC. The Annex text says *"educational and vocational training institutions at all levels"*; the ECEC reading comes from **draft** Commission guidance, and the primary text was unreachable this pass (`T482`, `ACTION p754-A`).**
+
 **Pass p753 · verified 2026-11-10.** 🟢 **`6` agent rows added — `4` MIT, `1` LGPL-3.0 and `1` GPL-3.0, all byte-read.** `35` addresses probed, **`24` licence payloads byte-read**, **`3` index values materially corrected — all `3` in the *refusing* direction**, `10` compliant grant-absences recorded as `T302` honest negatives, `16` query denominators plus `2` licence-distribution samples measured, `T465`–`T477` declared. 🔴 **The register is the *Deaf-learner and sign-language access layer* — and `p749` took the print-disability estate (DAISY, `liblouis`, `readium`) while leaving this one at near-nil: `vlibras` `0` mentions, `signwriting` `0`, `sign language processing` `0`, `WLASL` `1`, `sign.mt` `1` across `752` passes (`T465`).** 🔴 **The finding of the pass is an ownership event the index cannot show: the field's academic reference stack now carries `Copyright (c) 2026 Nagish Inc.` — a US for-profit — in three distinct licence bands, and the `800★` flagship `sign/translate` is now `Rylo Translate`, free for an educational institution and *paid for Globant* (`T468`, `T470`).** 🔴 **Read the licence cell before the description on every row: the permissive pipeline turns NonCommercial at exactly the stage that renders a photorealistic signer (`T469`), and the supply runs `2,600 : 1` in the wrong direction — `10,467` recognition repositories against `4` production ones (`T466`).**
 
 **Pass p752 · verified 2026-11-10.** 🟢 **`6` agent rows added — `5` MIT and `1` Apache-2.0, all byte-read.** `38` addresses probed, `21` licence-payload probes, **`19` licence payloads byte-read**, **`2` index values materially corrected — `1` from `NOASSERTION` toward a permissive grant and `1` from `NOASSERTION` toward *all rights reserved*** — `21` query denominators measured, `T453`–`T464` declared. 🔴 **The register is the *education-to-employment transition layer* — skill extraction, occupational taxonomy and credential-to-job matching: the layer that decides what a learner's record is worth in a labour market.** 🟢 **This pass is not a new register but a *stale-verdict correction*, and that is the finding: `p681` placed this opportunity **EMEA-only** and recorded that *"the measured supply behind it is poor — three permissive ESCO projects were probed and all three are dormant."* Re-measured today, `3 / 3` of those are **still dormant** (`p681` was right about them) — **but the live, maintained successors existed the whole time and were never promoted**, and two of them were pushed *the day of this pass* (`T453`).** 🔴 **Read the licence cell before the description on the `developer-roadmap` row: the highest-starred artefact this pass touched — `371,756★` — is **all-rights-reserved, personal-use-only**, it is indexed `NOASSERTION`, and it is no longer at the address every published roundup cites (`T458`, `T459`).** 🟢 **Instrument gain: `repo:{owner}/{name}` *is* a valid qualifier on `search/repositories`, which corrects `p736`'s `T310` and gives this base a second existence oracle that needs no `README` to exist (`T455`).**
@@ -71,6 +73,80 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p754` — 🔴 **THE EARLY-CHILDHOOD (ECEC, `0`–`8`) LAYER: `753` PASSES HELD IT AT NEAR-NIL — `childcare` `0`, `daycare` `0`, `developmental screening` `0`, `ASQ` `0`, `anganwadi` `0`. 🔴 THE WHOLE WORLD'S OPEN ECEC ESTATE ABOVE `20★` IS FOUR REPOSITORIES. 🔴 THE CODE IS OPEN AND THE SCREENING INSTRUMENT IS NOT. 🟢 THE ONE REAL AGENT IN THE REGISTER IS AUSTRALIAN AND MIT; THE ONE REAL PLATFORM IS FINNISH AND MUNICIPAL.**
+
+**`6` agent rows (`4` MIT, `1` Apache-2.0, `1` MIT-with-a-dataset-carve-out) · `18` addresses probed · `15` licence payloads byte-read · `3` index values materially corrected, `3 / 3` toward a knowable grant · `5` compliant grant-absences recorded as `T302` honest negatives · `6` query denominators plus `20` shelf-mention counts measured · `T478`–`T489` declared.**
+
+### 🔴 `T478` — the register, and the shape of how it was missed
+
+`p749` took **print disability**, `p753` took the **Deaf estate**, `p750` took **wellbeing**, `p752` took the **exit** to employment. Every one of those registers serves a learner who is **already enrolled in schooling**. The register below serves the years **before** that — and it is a different sector with different buyers (a municipality, not a faculty), different staff (an early-years educator or a community health worker, not a lecturer), different instruments and different law. Mention counts across all eight live shelves, measured `2026-11-10`:
+
+| Term | Mentions across `753` passes | Reading |
+|---|---|---|
+| `childcare` / `daycare` / `nursery` | 🔴 **`0` / `0` / `0`** | The three words the sector trades under. |
+| `developmental screening` | 🔴 **`0`** | The clinical function that routes a child to support. |
+| `ASQ` / `ECERS` | 🔴 **`0` / `0`** | The dominant screening and quality-rating instruments. |
+| `parent engagement` | 🔴 **`0`** | The primary delivery channel before enrolment. |
+| `anganwadi` | 🔴 **`0`** | India's `~1.37M`-centre public pre-primary network. |
+| `foundational learning` / `under-five` | 🔴 **`0` / `0`** | The sector's own term of art, and its age band. |
+| `preschool` / `pre-k` / `kindergarten` | 🔴 **`3` / `3` / `3`** | Incidental mentions, no rows. |
+| `head start` | 🔴 **`1`** | The largest US federal ECEC programme. |
+| `early childhood` / `montessori` / `early literacy` | 🟡 **`7` / `7` / `7`** | Prose only. |
+| `ECEC` / `numeracy` | 🟡 **`8` / `8`** | Prose only. |
+
+🟢 **The lesson generalises `p752`'s and `p753`'s.** This base has repeatedly discovered that a word it treats as one register — "accessibility", "employability" — is several. **"Education" is the same word, and ECEC is the part of it this base had silently scoped out:** every shelf heading says *education*, and every row underneath assumed a student with a timetable.
+
+### 🔴 `T479` — the supply vacuum, measured
+
+Six denominators, measured against `search/repositories` on `2026-11-10`. These are not samples; they are the **totals** the endpoint reports.
+
+| Query | `total_count` | Top result |
+|---|---|---|
+| `early childhood education stars:>20` | 🔴 **`2`** | `espoon-voltti/evaka` `59★`; `MengC-OvO/easy-teaching` `58★` |
+| `childcare management stars:>20` | 🔴 **`1`** | `Amarjha01/InfantCareCompass` `29★` |
+| `preschool stars:>30` | 🔴 **`1`** | `yuxink/joye-preschool` `39★` — 🔴 **no grant** |
+| `child development milestone stars:>20` | 🔴 **`0`** | — |
+| `early grade reading assessment` | 🔴 **`2`** | both `0★` |
+| `topic:early-childhood` | 🟡 **`17`** | top entry is `1★` |
+
+🔴 **Four repositories above `20★` serve the entire global ECEC software register, and one of the four carries no grant.** For contrast on this same base: `p750` measured `8,216` repositories for facial emotion recognition alone, and `p753` measured `10,467` for sign recognition. 🟢 **Read commercially, a vacuum is not bad news — it is the absence of an incumbent.** But it is fatal to the usual pitch, because *there is no mature permissive platform in this register to stand on*. What exists is listed below, and the honest total is small.
+
+### The `p754` rows
+
+| Agent | Repo | Licence (byte-read `2026-11-10`) | ★ | Region | What it is, and the warning |
+|---|---|---|---|---|---|
+| **EasyTeaching** | [`MengC-OvO/easy-teaching`](https://github.com/MengC-OvO/easy-teaching) | 🟢 **MIT** — `1,082 B`, sha256₁₂ `f755cdc76e68`, `Copyright (c) 2026 EasyTeaching contributors` | `58★` | **APAC** (Australia) | 🟢 **The register's only real agent, and the highest-starred permissive artefact in it.** A *safety-aware* teacher agent for Australian early-childhood education — Python, pushed `2026-09-16`. "Safety-aware" is the differentiator that matters here: in ECEC the agent's duty-of-care constraints are the product, not a wrapper on it. Pairs with `P270`. |
+| **MyChild Engine** | [`hsongra11/mychild-app`](https://github.com/hsongra11/mychild-app) | 🟢 **Apache-2.0** — `12,049 B`, sha256₁₂ `362e4604db3c` | `3★` | Global | Developmental-screening **engine**, `0`–`36` months: `129` questions across `8` domains, evidence-weighted, corrected-age support (for prematurity), a rule simulator and explainability. 🔵 **Its question bank is deliberately built from public-domain milestone checklists and explicitly avoids ASQ-3, M-CHAT-R/F and Denver** — that substitution is the compliant pattern for this whole layer (`T485`). 🔴 Self-declared **not a diagnostic tool**; `3★`, single author — treat as a reference implementation of the *rules*, not a product. |
+| **TumbuhKembang** | [`khorihutama/tumbuh-kembang`](https://github.com/khorihutama/tumbuh-kembang) | 🟡 **MIT for code, dataset expressly EXCLUDED** — `1,579 B`, sha256₁₂ `b0369ce354a9`. Index says `NOASSERTION` → **corrected** | `0★` | **APAC** (Indonesia) | 🔴 **Read the licence cell, then do not ship the data.** A scope note *precedes* the MIT grant: it "does NOT cover the milestone dataset in `js/data.js`, which is a simplified approximation based on Denver II milestones", and the project states it is unaffiliated with and unendorsed by Denver Developmental Materials, Inc. **The MIT grant covers the HTML/CSS/JS only.** Pushed `2026-11-10`. Useful as an Indonesian-language screening **shell**; the instrument must be replaced (`P271`). |
+| **Saisha Bloom** | [`photospherestudio/Saisha-Bloom`](https://github.com/photospherestudio/Saisha-Bloom) | 🟢 **MIT** — `1,067 B`, sha256₁₂ `1b840915e039`, `Copyright (c) 2026 Sourav Deb` | `1★` | Global | A deliberately *calm* child-development tracker for parents and caregivers — TypeScript, pushed `2026-09-02`. Design posture is the point: notice-and-record rather than score-and-alert, which is the posture the EMEA legal boundary rewards (`T483`). Early-stage. |
+| **Toddler Learning Companion** | [`nikjain15/toddler-learning-companion`](https://github.com/nikjain15/toddler-learning-companion) | 🟢 **MIT** — `1,065 B`, sha256₁₂ `47d0c6e03872`, `Copyright (c) 2026 Nik Jain` | `0★` | Global | **Voice-first, screen-free** learning companion for toddlers with persistent state — Python, pushed `2026-08-09`. 🟢 **Screen-free is a regulatory feature, not an aesthetic one:** Alabama's HB 78 pairs early-childhood *screen-time* standards with mandatory staff training (`T484`), and a voice-only interface is the one modality that survives such a rule. Early-stage. |
+| **InfantCareCompass** | [`Amarjha01/InfantCareCompass`](https://github.com/Amarjha01/InfantCareCompass) | 🟢 **MIT** — `1,065 B`, sha256₁₂ `a4014b4295c4`, `Copyright (c) 2025 Amar Jha` | `29★` | Global | 🟢 **The single highest-starred result in all of GitHub for `childcare management stars:>20` — the denominator for that query is `1`.** A JavaScript caregiver-facing platform for infant-care coordination. 🔴 Last pushed **`2025-11-09`**, i.e. twelve months before this pass: read it as a maintained-risk reference, not a base to build a client deployment on. |
+
+### 🔴 `T485` — the row-level rule for this entire register: the code is open, the instrument is not
+
+This is the register's defining licence structure and it does not appear anywhere else on this base. In ECEC the valuable asset is a **psychometric instrument** — a validated question set with norms — and the dominant instruments are **commercial copyrighted products**: ASQ-3 (Brookes), Denver II (Denver Developmental Materials, Inc.), M-CHAT-R/F. **An MIT licence on a screening app does not convey any right to the instrument inside it.**
+
+🟢 **The honest projects in this register already know this and show the compliant pattern**, which is why `mychild-app` and `tumbuh-kembang` are on the shelf despite low star counts:
+
+- `mychild-app` **substitutes** a public-domain bank (CDC-derived milestones) and says so.
+- `tumbuh-kembang` **carves the dataset out of its own MIT grant** and names the rights-holder it is not affiliated with.
+
+🔴 **Both are telling you the same thing: in an ECEC engagement the instrument is a licensing work package with a budget, or it is the client's own validated content.** Never a scrape. `P271` is written around this constraint.
+
+### 🔴 `T302` honest negatives this pass — `5` compliant grant-absences
+
+No grant at `8` probed paths (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `LICENCE`, `COPYING`, `LICENSE-LGPL`, `LICENSE.LGPL`). Each is **alive** on the raw channel, so this is an absence of grant, not an absence of repository. No denominator is claimed (`T388`).
+
+| Address | ★ | Note |
+|---|---|---|
+| [`yuxink/joye-preschool`](https://github.com/yuxink/joye-preschool) | `39★` | 🔴 **The single highest-starred preschool repository on GitHub, and Globant may not build on it.** Chinese 幼小衔接 (school-readiness) app for `6`-year-olds — maths, pinyin and English modules. Pushed `2026-04-02`. |
+| [`gummy789j/kid-assessment-writer`](https://github.com/gummy789j/kid-assessment-writer) | `0★` | An **AI agent that drafts end-of-term comments for parents** from guided Q&A — exactly the workload ECEC educators ask to have lifted. TypeScript, pushed `2026-06-13`. No grant. |
+| [`mois-khan/child-development-assessment`](https://github.com/mois-khan/child-development-assessment) | `1★` | Parent-led `0`–`6` assessment, public-domain milestone content, self-described placeholder. Pushed `2026-11-10`. |
+| [`kyhsa93/toddler-milestone-checklist`](https://github.com/kyhsa93/toddler-milestone-checklist) | `0★` | Installable PWA, `2`–`36` months, CDC-derived items, reproduces no clinical instrument. Pushed `2026-11-10`. |
+| [`cefolar01/Childcare_Solution`](https://github.com/cefolar01/Childcare_Solution) | — | Node/Express/SQLite/React enrolment and check-in/out tracker. Student-grade. |
+
+🔵 **Honest note on cohort quality, because the star counts above are not an accident.** Of the `18` addresses probed this pass, **`9` were pushed on `2026-11-10` or within days of it and carry `0`–`3★` with a single author**. This register's long tail is overwhelmingly new single-author work, much of it plausibly AI-generated. **This pass declined to pad the shelf with it:** `6` rows were added, the `5` above were recorded as grant-absent negatives, and the remainder were left off. Four real repositories above `20★` is the finding (`T479`) — it is not fixed by writing twenty rows.
 
 ## 🆕 `p753` — 🔴 **THE DEAF-LEARNER AND SIGN-LANGUAGE ACCESS LAYER: `p749` TOOK THE PRINT-DISABILITY ESTATE AND LEFT THE DEAF ESTATE AT NEAR-NIL — `vlibras` `0`, `signwriting` `0`, `sign language processing` `0`, `WLASL` `1`. 🔴 THE WORLD'S LEADING OPEN SIGN-LANGUAGE STACK CHANGED OWNER IN 2026 AND ITS LICENCE POSTURE SPLIT THREE WAYS INSIDE ONE ORGANISATION. 🔴 THE `800★` FLAGSHIP IS NOW DUAL-TIER: FREE FOR THE CLIENT, PAID FOR GLOBANT. 🟢 THE ONE REGION WHERE THE STATE SHIPS THE STACK IS LATAM.**
 
