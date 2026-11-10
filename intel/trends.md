@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p751` (researched 2026-11-10) — `T439`–`T452`
+
+**Added above `p750`'s `T426`–`T438`.** `p751` changed the register to **scheduling, matching and resource allocation** — the constraint solver under the timetable, the exam diet, the room, the bus and the school place. `41` addresses probed, `33` licence-payload probes, **`31` payloads byte-read**, **`5` index values materially corrected (`5 / 5` toward a knowable grant)**, `21` query denominators measured, `5` boundary rows recorded not shelved, all `5` regional blocks written. 🔴 **Two of the fourteen findings are defects in *this base's own* licence instrument, both reproducible, and they invalidate byte constants written before this pass.**
+
+### 🔴 `T439` — the licence-reading method under-counts every payload by one byte and hashes a truncated file
+
+Reading a licence through shell command substitution strips the trailing newline. Controlled on `google/or-tools`: byte-exact **`11,358 B` / `cfc7749b96f6`** against the method in use **`11,357 B` / `58d1e17ffe51`**. 🔴 **The failure is worse than off-by-one: `11,357 B` is the true size of the stock Apache-2.0 payload, so the defective read produced a false match to the stock constant while the hash silently disagreed.** All byte figures in `p751` were read byte-exact to a file. 🟢 **`p750`'s stock figure is corroborated, not contradicted:** `11,357 B` / `c71d239df917`, re-confirmed on a third independent repository (`timefold-quickstarts`).
+
+### 🔴 `T440` — `728-A`'s "exact constant" method holds for MIT and fails for Apache-2.0
+
+**Five** distinct Apache-2.0 payload hashes were read in a `52`-byte band, and **two collide on byte count**: `c71d239df917` (`11,357 B`, stock), `58d1e17ffe51` (**`11,357 B`**, stock + leading blank line − trailing newline, `UniTime/unitime`), `cfc7749b96f6` (`11,358 B`, stock + leading blank line — `or-tools`, `timefold-solver`, `scip`), `94d81cb282da` (`11,344 B`, `cvxpy`), `df825c8e037a` (`11,396 B`, `ORLM`). 🔴 **Quote the hash, never the size.**
+
+### 🔴 `T441` — the documented probe chain misses `LICENSE.TXT`, and it cost an `8,208★` repository
+
+`Project-OSRM/osrm-backend` returned no grant at `8` probed paths and would have been published as a false `T302` negative. `raw.githubusercontent.com` is case-sensitive: `LICENSE.txt` → `404`, **`LICENSE.TXT` → `200`**, BSD-2-Clause, `1,297 B`, `df207517bc08`. 🟢 **Corrected chain, to be used by every successor pass:** `LICENSE, LICENSE.md, LICENSE.txt, LICENSE.TXT, COPYING, COPYING.txt, COPYING.md, LICENSE-APACHE, LICENSE.rst, LICENCE, license`. Second instance of the `724-I` case-sensitivity class.
+
+### 🔴 `T442` — the pointer-licence pattern recurs, and this time it hides a *more* permissive grant
+
+`valhalla/valhalla` is indexed `NOASSERTION` and its `LICENSE.md` is **`44 B`**: *"For license information see [here](COPYING)"*. Resolved, `COPYING` is **MIT** (`1,135 B`, `8bdb14aebb00`). `p747` found this shape on `GEANT/CAT` hiding a bespoke licence. 🔵 **The rule is procedural and direction-neutral: a payload under ~`200 B` is a pointer and must be resolved before the cell is written.**
+
+### 🔴 `T443` — the education-specific optimisation agent layer does not exist while the generic one is abundant
+
+`scheduling mcp server` **`991`** and `optimization mcp server` **`893`** against `school timetabling mcp server` **`9`**, `timetabling agent llm` **`7`**, `natural language to constraint programming` **`4`**, `school assignment deferred acceptance` **`3`**, `exam scheduling llm agent` **`2`**, `constraint model llm education` **`1`**. Roughly **`110 : 1`** against the vertical. This is `p747`'s `T402` shape repeating in a new tier: the horizontal capability exists, the education specialisation does not.
+
+### 🔴 `T444` — `school timetabling mcp server` matches a different word, and what it matches is organically EMEA
+
+**`8 / 9` results *read* a timetable out of a national school portal; `1` *builds* one.** The portals are European — EduPage (🇸🇰), Pronote (🇫🇷), WebUntis (🇦🇹🇩🇪), Bakaláři (🇨🇿) — plus Comci (🇰🇷). 🔵 **Nobody placed this supply by region; the supply placed itself where the portal has a national install base.** `p738`'s `738-B` class ("the keyword legs are matching a different word"), now with a regional consequence.
+
+### 🔴 `T445` — FET is in the `T359` dead state *and* its upstream is unreachable
+
+`lalescu/fet` → `404`, `fet-timetabling/fet` → `404`; **`lalescu.ro` and `lalescu.ro/liviu/fet/` both `000` (`2 / 2`)**. The highest-starred GitHub artefacts are third-party copies last pushed **2019** (`sisardor/FET-scheduling-system`, `14★`, **no licence**) and **2018** (`karandit/fet`, `5★`, index `AGPL-3.0`, `LICENSE` → `404`). Second instance of `p747`'s `T396` Shibboleth pattern: **a widely-deployed tool that a GitHub-only instrument cannot see.**
+
+### 🔴 `T446` — Chile's SAE: nationally deployed, fully published, and not open source
+
+An adaptation of Gale–Shapley deferred acceptance allocates school places nationally; the algorithm, rules, data and a simulator are published; under the law-adapted stability notions **a stable assignment may not always exist**, so ties are broken **at the family level**. 🔴 **The implementation is not public:** `ConsiliumBots`, which held the `2022–2024` Ministry maintenance contract, has `7` public repositories and the mechanism is not among them — only `school-choice-dashboard` (**MIT**, `0★`, `2025-05-20`). 🟢 **Pattern public, code private — favourable, because the defensible part is the published mechanism.**
+
+### 🟡 `T447` — OptaPlanner is archived; Timefold is the successor, by the same team
+
+`apache/incubator-kie-optaplanner`: `3,513★`, `archived=true`, last push `2026-07-14`, `README.md` → `404`. **Timefold was forked from OptaPlanner on `2023-04-20` by the original OptaPlanner team**, stated in `timefold-solver`'s own `README`. The archive notice names `apache/incubator-kie-drools`, whose raw channel answers `200` but which the `repo:` search channel does not return. 🔵 **Never put OptaPlanner in a proposal; it is the name a studio reaches for first.**
+
+### 🔴 `T448` — two pollution modes in this register's discovery channel, both measured
+
+(i) `or-tools mcp server` sorted by stars returns `Dataojitori/nocturne_memory` at **`1,426★`** — a memory server with no optimisation content — above every real row, whose true top is `22★`: **an unread star-sorted head is `60×` wrong here.** (ii) `student sectioning` returns **`2,970`** repositories by matching two common words independently; the real artefact is one repository inside UniTime.
+
+### 🔴 `T449` — the AI Act boundary that depends on the implementation, not the function
+
+Allocating a school place is **Annex III point 3(a)**. But the Act regulates *AI systems*, and a hand-written CP-SAT or MIP model is rules defined entirely by natural persons — the category the definition is generally read to exclude. 🔴 **The same business function may therefore sit inside or outside Annex III depending on how it is built:** an explicit constraint model or a deferred-acceptance mechanism plausibly out, an LLM that *infers* constraints or a learned applicant ranker plausibly in. 🟢 **A real architectural lever — keep the LLM on the authoring side and let a human approve each constraint before it binds.** ⚠️ **An open legal reading requiring counsel, not settled law**, and it cuts both ways: prototyping with an LLM can convert an unregulated scheduler into a high-risk system. ⚠️ **The date is disputed:** most sources say Annex III point 3 applies from **`2027-12-02`** after the Digital Omnibus on AI, **Regulation (EU) 2026/1744** (OJ `2026-07-24`); at least one argues point 3 was not amended. **This base does not pick a side.**
+
+### 🔴 `T450` — the licence seam in this register runs between the general and the vertical
+
+🟢 **General-purpose solvers: `13 / 13` permissive** (Apache-2.0, MIT, BSD-3, BSD-2, MPL-2.0), no copyleft at all. 🔴 **Education-specific solving: copyleft wherever it exists** — `UniTime/cpsolver` **LGPL-3.0** sitting under Apache-2.0 `UniTime`, `yuroyami/FET-MCP` **AGPL-3.0**, `karandit/fet` indexed **AGPL-3.0**, FET itself GPL-family. 🟢 **Reading: the permissive education scheduler is an unoccupied position — build on `or-tools` or `timefold-solver`, do not extend `cpsolver` or FET.** The inverse of `p750`'s seam, where measuring was permissive and record-holding was copyleft.
+
+### 🟢 `T451` — `5` index corrections, `5 / 5` toward a knowable grant, `0` in the refusing direction
+
+`MiniZinc/libminizinc` → **MPL-2.0** (with a per-file header carve-out); `Pyomo/pyomo` → **BSD-3-Clause** (Sandia, `DE-NA0003525`, US Government retains certain rights); `coin-or/pulp` → **MIT**; `jump-dev/JuMP.jl` → **MPL-2.0** (grant stated in prose above the text, which is why the index missed it); `valhalla/valhalla` → **MIT** (via `T442`). 🔵 **In this register `NOASSERTION` means "the index could not parse a composite or pointer grant", not "there is no grant"** — the opposite of its meaning in `p746`'s `winterop-com` rows, where the payload was actively proprietary.
+
+### 🔴 `T452` — the register's agent head is stale, and the freshest row is the smallest
+
+The highest-starred agent in the register, `Jacck/mcp-ortools` (`22★`), was last pushed **`2024-12-26`** — `23` months. The freshest, `PraveshKoirala/optimization-mcp` (pushed `2026-07-27`), has **`1★`**. `teshnizi/OptiMUS` (`308★`) is `12` months stale and `Cardinal-Operations/ORLM` (`283★`) `14` months; the `2026` follow-up literature (ORPilot, Opti-Agent-Bench, VeriSimpl) produced **papers this pass found no maintained permissive code for**. 🔵 **Treat every agent row in this register as a reference implementation, not a dependency** — the maintained artefacts here are the *solvers*, not the agents.
+
+
 # 🆕 Trends new at `p750` (researched 2026-11-10) — `T426`–`T438`
 
 **Added above `p749`'s `T417`–`T425`.** `p750` changed the register to **student wellbeing and

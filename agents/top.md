@@ -6,6 +6,8 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
+**Pass p751 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT, all byte-read.** `41` addresses probed, `33` licence-payload probes, **`31` licence payloads byte-read**, **`5` index values materially corrected — `5 / 5` from `NOASSERTION` toward a knowable grant**, `21` query denominators measured, `5` boundary rows recorded not shelved, `T439`–`T452` declared. 🔴 **The register is the *scheduling, matching and resource-allocation layer* — the constraint solver under the timetable, the exam diet, the room, the bus and the school place — and this base held the timetabling *applications* while holding the solver substrate at a measured near-nil: `timefold` `0` mentions, `optaplanner` `0`, `minizinc` `0`, `pyomo` `0`, `constraint programming` `0`, `exam timetabling` `0`, `room allocation` `0`, `mixed integer` `0`, against `unitime` `87` and `timetable` `89` (`T443`).** 🔴 **Two instrument defects were found in *this base's own* licence procedure and both are reproducible: the read method under-counts every payload by one byte and hashes a truncated file (`T439`), and the documented probe chain misses `LICENSE.TXT`, which would have published an `8,208★` repository as a false grant-absence (`T441`). Re-read any byte constant written before this pass.** 🔴 **Read the licence cell before the description on the `UniTime/cpsolver` and `FET-MCP` rows: the solver engine under an Apache-2.0 product is `LGPL-3.0`, and the only agent in existence that *builds* a timetable is `AGPL-3.0` (`T450`).**
+
 **Pass p750 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT or Apache-2.0, all byte-read.** `45` addresses probed, `30` licence-payload probes, **`26` licence payloads byte-read**, **`11` index values materially corrected — `11 / 11` from `NOASSERTION` toward a knowable grant**, `4` compliant grant-absences recorded as `T302` honest negatives rather than as denominators, `5` addresses found in the `T359` dead state. 🔴 **The register is the *student-wellbeing and safeguarding layer* — the duty of care: screening, monitoring, disclosure, case management and the early-warning function under retention — and `749` passes held `0` of it.** 🔴 **The finding of the pass is an inversion: the one capability with abundant open-source supply (`facial emotion recognition`, **`8,216`** repositories) is the one EU education institutions are **forbidden** to use (AI Act Art. 5(1)(f), since `2025-02-02`, no grace period), while the capabilities the register needs return `0` (`student retention agent llm`, `child protection mcp`). 🔴 Read the licence cell before the description on the `PurpleLlama` and `mindlogger` rows: one is not an OSI licence at all and the other requires attribution inside the client's user interface (`T428`, `T431`).**
 
 **Pass p747 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT or Apache-2.0, all byte-read.** `42` addresses probed, **`37` licence payloads byte-read**, `36 / 37` classified from the title block, **`6` index values materially corrected** (`2` of them in the *refusing* direction), `5` compliant grant-absences recorded as `T302` honest negatives rather than as denominators. 🔴 **The register is the *inter-institutional federation layer* — what lets a student from one institution sign in at another's service, and what an AI agent must present to act on that student's behalf — and `p736` took the SSO *server* (`apereo/cas`, `4` rows) while leaving the federation it joins entirely unheld: `shibboleth`, `simplesamlphp`, `IdentityPython`, `Internet2/grouper`, `OpenConext`, `REFEDS`, `SeamlessAccess` and `casdoor` were at `0` mentions across every live shelf.**
@@ -65,6 +67,109 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p751` — 🔴 **THE SCHEDULING, MATCHING AND RESOURCE-ALLOCATION LAYER: `750` PASSES HELD THE TIMETABLING APPLICATIONS AND `0` OF THE SOLVER UNDER THEM. 🔴 THE EDUCATION-SPECIFIC OPTIMISATION AGENT LAYER DOES NOT EXIST WHILE THE GENERIC ONE DOES — `9` AND `7` AGAINST `991` AND `893`. 🔴 THE ONE AGENT THAT *BUILDS* A TIMETABLE IS `AGPL-3.0` AT `0★`; THE `8` THAT *READ* ONE ARE ALL EUROPEAN SCHOOL PORTALS. 🔴 TWO DEFECTS FOUND IN THIS BASE'S OWN LICENCE INSTRUMENT.**
+
+**`6` agent rows (all MIT, all byte-read) · `5` boundary rows recorded not shelved · `41` addresses probed · `33` licence-payload probes · `31` payloads byte-read · `5` index values materially corrected · `21` query denominators measured · `T439`–`T452` declared.**
+
+### 🔴 `T443` — the finding that defines the register: the generic optimisation agent layer exists, the education one does not
+
+This is the `T402` shape again (`p747` found it for identity: commercial IAM had an agent layer, research-and-education federation did not). Measured this pass against `gh api -X GET search/repositories` `total_count`:
+
+| Query | Repositories | Reading |
+|---|---|---|
+| `scheduling mcp server` | **`991`** | 🟢 The generic layer is abundant. |
+| `optimization mcp server` | **`893`** | 🟢 Abundant. |
+| `timetable llm` | `87` | Mostly calendar readers. |
+| `school bus routing optimization` | `43` | Real but hobby-scale. |
+| `course scheduling llm` | `36` | Student projects. |
+| `or-tools mcp server` | `23` | 🟢 **Where the real rows are** — and `1` of the top `8` is pollution (`T448`). |
+| `room allocation optimization university` | `14` | — |
+| `school timetabling mcp server` | 🔴 **`9`** | 🔴 And `8 / 9` match a *different word* (`T444`). |
+| `timetabling agent llm` | 🔴 **`7`** | — |
+| `natural language to constraint programming` | 🔴 **`4`** | The whole research-to-product channel. |
+| `school assignment deferred acceptance` | 🔴 **`3`** | For a mechanism that allocates school places nationally (`T446`). |
+| `exam scheduling llm agent` | 🔴 **`2`** | — |
+| `constraint model llm education` | 🔴 **`1`** | — |
+| `india school timetable open source` | 🔴 **`0`** | APAC-specific nil, recorded as an informed gap. |
+| `escuela horario open source` | 🔴 **`0`** | LATAM-specific nil, Spanish-language leg. |
+
+🟢 **The rule, for a proposal:** *in this register Globant does not buy an education agent — it buys a permissive general solver (`or-tools`, `timefold-solver`, `HiGHS`) and writes the education semantics itself.* The supply ratio is roughly **`110 : 1`** against the vertical (`991` vs `9`), and the vertical `9` are not what the query appears to promise.
+
+### 🔴 `T444` — `school timetabling mcp server` matches a different word, and what it matches is organically EMEA
+
+All `9` results were read. **`8` of `9` *read* a timetable out of a national school portal; `1` *builds* one.** The eight are not a market in timetabling — they are a market in **parent-and-pupil portal access**, and the portals are European:
+
+| Agent | Portal | Country | Grant — **byte-read** | Stars |
+|---|---|---|---|---|
+| [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | EduPage | 🇸🇰 Slovakia / CEE | **MIT** · `1,070 B` · sha256₁₂ `e99290e1540b` | `4★` |
+| [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | Pronote | 🇫🇷 France | **MIT** · `1,063 B` · sha256₁₂ `1db908a46bbb` | `2★` |
+| [`toughIQ/webuntis-mcp`](https://github.com/toughIQ/webuntis-mcp) | WebUntis | 🇦🇹🇩🇪 DACH | **MIT** · `1,064 B` · sha256₁₂ `e9b0fea768a2` | `0★` |
+| [`kohlsalem/untis-mcp`](https://github.com/kohlsalem/untis-mcp) | WebUntis | 🇦🇹🇩🇪 DACH | `Unlicense` (index) — **not byte-read**, last push `2026-03-25` | `0★` |
+| [`Aero-Apex/bakalari-mcp`](https://github.com/Aero-Apex/bakalari-mcp) | Bakaláři | 🇨🇿 Czechia | 🔴 **index `NONE`** — not shelved | `0★` |
+| [`techkwon/comci-agent`](https://github.com/techkwon/comci-agent) | Comci | 🇰🇷 Korea | 🔴 **index `NOASSERTION`** — not shelved | `1★` |
+
+🔵 **Why this is a finding and not a list.** The task asks for findings *placed* by region. Nobody placed these — **the supply placed itself**: an MCP server exists for a school portal exactly where that portal has a national install base, and four of the six are EU/EEA. 🟢 **The EMEA consequence for Globant is concrete:** a parent-facing or pupil-facing assistant in France, DACH, Slovakia or Czechia has a permissive, maintained read adapter *already written*, and the integration cost is a licence review rather than a reverse-engineering project. 🔴 **The North America and LATAM consequence is the mirror image:** no equivalent adapter was found for any US SIS (PowerSchool, Infinite Campus) or any LATAM portal, and `escuela horario open source` returned `0`.
+
+### The agent rows — what Globant can build on and ship
+
+All `6` byte-read this pass. 🔴 **Every row in this register is small; the register's value is the solver behind it, not the star count.**
+
+| Agent | Repo | Grant — **byte-read 2026-11-10** | Stars | Last push | What it does |
+|---|---|---|---|---|---|
+| mcp-ortools | [`Jacck/mcp-ortools`](https://github.com/Jacck/mcp-ortools) | **MIT** · `1,080 B` · sha256₁₂ `e2983ee71115` | `22★` | 🔴 **`2024-12-26`** | Exposes OR-Tools CP-SAT constraint solving as MCP tools. 🔴 **The highest-starred agent in the register and it has not been touched in `23` months (`T452`)** — treat as a reference implementation, not a dependency. |
+| mcp-optimizer | [`dmitryanchikov/mcp-optimizer`](https://github.com/dmitryanchikov/mcp-optimizer) | **MIT** · `1,070 B` · sha256₁₂ `16c7b36dd6ec` | `5★` | `2025-11-05` | Mathematical-optimisation MCP server over **both** PuLP and OR-Tools — the only row holding two backends. |
+| optimization-mcp | [`PraveshKoirala/optimization-mcp`](https://github.com/PraveshKoirala/optimization-mcp) | **MIT** · `1,072 B` · sha256₁₂ `602c16c0967e` | `1★` | 🟢 `2026-07-27` | Exact optimisation **and SMT** (OR-Tools + Z3) as LLM tools. 🟢 **The freshest solver-side row**; Z3 matters because timetable *feasibility* questions ("is this policy satisfiable at all?") are SMT questions, not MIP questions. |
+| edupage-mcp | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** · `1,070 B` · sha256₁₂ `e99290e1540b` | `4★` | 🟢 `2026-10-26` | Full-coverage EduPage read layer: timetables, grades, homework, meals. 🇸🇰 CEE. |
+| mcp-pronotes | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** · `1,063 B` · sha256₁₂ `1db908a46bbb` | `2★` | 🟢 `2026-10-30` | Pronote read layer: grades, timetables, homework, absences. 🇫🇷 France. |
+| webuntis-mcp | [`toughIQ/webuntis-mcp`](https://github.com/toughIQ/webuntis-mcp) | **MIT** · `1,064 B` · sha256₁₂ `e9b0fea768a2` | `0★` | 🟢 `2026-09-13` | WebUntis read layer for parents: timetables, homework, exams, absences. 🇦🇹🇩🇪 DACH. |
+
+### 🔴 Recorded, not shelved — and in this register the refusals carry more information than the rows
+
+| Artefact | Grant — **byte-read** | Stars | Why it is not a row |
+|---|---|---|---|
+| [`yuroyami/FET-MCP`](https://github.com/yuroyami/FET-MCP) | 🔴 **`AGPL-3.0`** · `34,523 B` · sha256₁₂ `0d96a4ff68ad` | `0★`, pushed `2026-09-19` | 🔴 **The only MCP server on GitHub that lets an AI *build* a school timetable** — `1 / 9` — and it is network copyleft. Hosting it as a service triggers §13 for the whole combined work. Not usable in a client deliverable without a reciprocity decision made by counsel, not by a studio. |
+| [`apache/incubator-kie-optaplanner`](https://github.com/apache/incubator-kie-optaplanner) | Apache-2.0 · `16,989 B` · sha256₁₂ `ab899a206188` | `3,513★` | 🔴 **`ARCHIVED`** (`archived=true`, last push `2026-07-14`, `README.md` → `404`). The name a studio would reach for first is read-only. The live successor is **Timefold**, forked from OptaPlanner on **`2023-04-20` by the original OptaPlanner team** (stated in `timefold-solver`'s own `README`). `T447`. |
+| [`UniTime/cpsolver`](https://github.com/UniTime/cpsolver) | 🔴 **`LGPL-3.0`** · `7,650 B` · sha256₁₂ `ea8af5e789cb` | `82★`, pushed `2026-10-14` | 🔴 **The solver engine underneath Apache-2.0 `UniTime` is copyleft.** Dynamic linking is fine; folding it into a proprietary client artefact is not. A studio reading only `UniTime/unitime`'s `Apache-2.0` badge will get this wrong. `T450`. |
+| **FET** (Free Evolutionary Timetabling) | 🔴 **not readable here** | — | 🔴 **`T359` dead state plus an unreachable upstream (`T445`).** `lalescu/fet` → `404`, `fet-timetabling/fet` → `404`; **`lalescu.ro` and `lalescu.ro/liviu/fet/` both return `000` under this environment's network policy (`2 / 2`)**. The highest-starred GitHub artefacts are third-party copies last pushed in **2019** (`sisardor/FET-scheduling-system` `14★`, **no licence**) and **2018** (`karandit/fet` `5★`, index `AGPL-3.0`, and its `LICENSE` path returns `404`). An engagement that must evaluate FET needs a channel this pipeline does not have — the `T396` Shibboleth pattern, second instance. |
+| **Chile's SAE assignment mechanism** | 🔴 **not open source** | — | 🔴 See `T446`. The org that held the Ministry contract, [`ConsiliumBots`](https://github.com/ConsiliumBots), has **`7` public repositories and the assignment algorithm is not among them**; the only permissive one is [`school-choice-dashboard`](https://github.com/ConsiliumBots/school-choice-dashboard) (**MIT** · `1,070 B` · sha256₁₂ `550db3b76ed5`, `0★`, last push `2025-05-20`) — monitoring, not mechanism. |
+
+### 🔴 `T449` — the boundary that decides whether this register is regulated at all, and it depends on the implementation
+
+Allocating a school place is **Annex III point 3(a)** of the EU AI Act — admission or assignment of natural persons to educational institutions — and therefore high-risk, with obligations now applying from **`2026-12-02`**… **and this is exactly where a studio must not guess.** The sources read this pass **disagree**: most place Annex III point 3 at **`2027-12-02`** following the Digital Omnibus on AI, **Regulation (EU) 2026/1744** (published in the Official Journal `2026-07-24`), while at least one argues point 3 **was not amended** by that regulation. 🔵 **This base does not pick a side on the date and neither should a proposal: verify against the Official Journal text before putting a deadline in a client document.**
+
+🔴 **The substantive boundary is sharper than the date.** The AI Act regulates *AI systems*. A classical CP-SAT or MIP model is a system of rules defined entirely by natural persons, which is the category the Act's own definition is generally read to exclude — so **the same business function may sit inside or outside Annex III depending on how it is built**: a deferred-acceptance mechanism or a hand-written constraint model is plausibly out of scope, while an LLM that *infers* the constraints, or a learned ranker that orders applicants, is plausibly in. 🟢 **This is a genuine architectural lever and should be stated to clients as one** — but it is an open legal reading, not settled law, and it must be confirmed by counsel. ⚠️ It also cuts the other way: a studio that reaches for an LLM because it is faster to prototype may convert an unregulated scheduler into a high-risk system.
+
+### 🔬 The instrument findings — read these before trusting any byte constant in this base
+
+**`T439` — this base's licence-reading method under-counts every payload by one byte and hashes a truncated file.** Reading a payload through shell command substitution strips the trailing newline. Controlled on `google/or-tools`' `LICENSE`:
+
+| Method | Bytes | sha256₁₂ |
+|---|---|---|
+| Byte-exact (`curl -o` to a file) | **`11,358`** | **`cfc7749b96f6`** |
+| Command substitution (the method in use) | `11,357` | `58d1e17ffe51` |
+
+🔴 **The failure mode is worse than an off-by-one.** `11,357 B` *is* the true size of the stock Apache-2.0 payload, so the defective read of `or-tools` **produced a false match to the stock constant** while the hash silently disagreed. Every Apache-2.0 size in this base written before this pass should be treated as `n` or `n+1` until re-read byte-exact. 🟢 **`p750`'s figure was right and is hereby corroborated:** the stock payload is `11,357 B` · sha256₁₂ **`c71d239df917`**, re-confirmed this pass on [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts), a third independent repository.
+
+**`T440` — `728-A`'s "exact constant" method holds for MIT and fails for Apache-2.0.** Five distinct payload hashes were read this pass in a `52`-byte band, and **two of them collide on byte count**:
+
+| sha256₁₂ | Bytes | Shape | Seen on |
+|---|---|---|---|
+| `c71d239df917` | `11,357` | 🟢 **stock** | `timefold-quickstarts`, and `p750`'s `detoxify` / `granite-guardian` (byte-identical pair, re-confirmed) |
+| `58d1e17ffe51` | **`11,357`** | stock **+ leading blank line, − trailing newline** | `UniTime/unitime` |
+| `cfc7749b96f6` | `11,358` | stock **+ leading blank line** | `or-tools`, `timefold-solver`, `scipopt/scip` |
+| `94d81cb282da` | `11,344` | variant | `cvxpy/cvxpy` |
+| `df825c8e037a` | `11,396` | variant | `Cardinal-Operations/ORLM` |
+
+🔴 **Two different payloads at `11,357 B`. Quote the hash, never the size.**
+
+**`T441` — the documented probe chain misses `LICENSE.TXT`, and it cost an `8,208★` repository.** [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) returned **no grant at `8` probed paths** under the chain as written and would have been published as a `T302` honest negative. The grant is at **`LICENSE.TXT`** — uppercase extension — and `raw.githubusercontent.com` is case-sensitive: `LICENSE.txt` → `404`, `LICENSE.TXT` → `200`, **BSD-2-Clause**, `1,297 B`, sha256₁₂ `df207517bc08`. 🟢 **The chain used for the rest of this pass was corrected to `LICENSE, LICENSE.md, LICENSE.txt, LICENSE.TXT, COPYING, COPYING.txt, COPYING.md, LICENSE-APACHE, LICENSE.rst, LICENCE, license`** and every successor pass should use that ordering. This is the `724-I` case-sensitivity class, second instance.
+
+**`T442` — the pointer-licence pattern recurs, and the second instance resolves to a *more* permissive grant, not a worse one.** [`valhalla/valhalla`](https://github.com/valhalla/valhalla) is indexed `NOASSERTION` and its `LICENSE.md` is **`44 B`**: `For license information see [here](COPYING)`. Resolved by a second fetch, `COPYING` is **MIT**, `1,135 B`, sha256₁₂ `8bdb14aebb00`. `p747` found this shape on `GEANT/CAT`, where it hid a *bespoke* licence; here it hides an ordinary MIT. 🔵 **The lesson is the procedure, not the direction: a payload under ~`200 B` is a pointer, and a pointer must be resolved before the cell is written.**
+
+**`T448` — two pollution modes in this pass's discovery channel, both measured.** (i) `or-tools mcp server` sorted by stars returns `Dataojitori/nocturne_memory` at **`1,426★`** — a long-term-memory server with no optimisation content — ahead of every real row; the register's true top is `22★`. (ii) `student sectioning` returns **`2,970`** repositories by matching the two words independently; UniTime's actual student-sectioning solver is one repository. 🔴 **An unread star-sorted head in this register is `60×` wrong.**
+
+**`T451` — `5` index corrections this pass, `5 / 5` toward a knowable grant, `0` in the refusing direction.** `MiniZinc/libminizinc` `NOASSERTION` → **MPL-2.0**; `Pyomo/pyomo` `NOASSERTION` → **BSD-3-Clause** (Sandia, `DE-NA0003525`, US Government retains certain rights); `coin-or/pulp` `NOASSERTION` → **MIT**; `jump-dev/JuMP.jl` `NOASSERTION` → **MPL-2.0**; `valhalla/valhalla` `NOASSERTION` → **MIT**. All five are on [`../repos/foundations.md`](../repos/foundations.md) with payload bytes and hashes. 🔵 **`NOASSERTION` in this register means "the index could not parse a composite or pointer grant", not "there is no grant"** — the opposite of its meaning in `p746`'s `winterop-com` rows, where the payload was actively proprietary.
 
 ## 🆕 `p750` — 🔴 **THE STUDENT-WELLBEING AND SAFEGUARDING LAYER: THE DUTY OF CARE. `749` PASSES HELD THE TEACHING, ASSESSMENT, MONEY, IDENTITY AND ALT-FORMAT TIERS AND `0` OF THIS ONE. 🔴 THE HIGHEST-CAPABILITY SAFETY CLASSIFIER IN EXISTENCE IS NOT OPEN SOURCE AT ALL. 🔴 THE CAPABILITY WITH `8,216` REPOSITORIES BEHIND IT IS THE ONE EMEA FORBIDS OUTRIGHT. 🟢 THE ONE APACHE-2.0 ANSWER IS PUBLISHED BY IBM AND NOBODY IN EDUCATION HAS NOTICED IT (`189★`).**
 

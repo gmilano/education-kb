@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p751) — 🔴 **THE SCHEDULING AND ALLOCATION LAYER: `750` PASSES HELD THE TIMETABLING APPLICATIONS AND `0` OF THE SOLVER UNDER THEM. 🔴 THE VERTICAL AGENT LAYER IS `110 : 1` AGAINST — `9` AGAINST `991`. 🔴 `8 / 9` "TIMETABLING AGENTS" READ A TIMETABLE AND `1` BUILDS ONE, AND IT IS `AGPL-3.0` AT `0★`. 🔴 TWO DEFECTS FOUND IN THIS BASE'S OWN LICENCE INSTRUMENT.**
+
+**`6` agent rows (all MIT) · `15` foundations rows · `4` platform rows · `41` addresses probed · `33`
+licence-payload probes · `31` payloads byte-read · `5` index values materially corrected (`5 / 5` toward
+a knowable grant) · `21` query denominators measured · `5` boundary rows recorded not shelved ·
+`T439`–`T452` declared · all `5` regional blocks written this pass.**
+
+### What is new this week in this register
+
+🔴 **The register itself is new, and the `P210` pre-check is why it was chosen.** Across all `8` live
+shelves: `unitime` `87` mentions, `timetable` `89`, `scheduling` `130` — but `timefold` **`0`**,
+`optaplanner` **`0`**, `minizinc` **`0`**, `pyomo` **`0`**, `highs` **`0`**, `constraint programming`
+**`0`**, `exam timetabling` **`0`**, `room allocation` **`0`**, `vehicle routing` **`0`**, `mixed integer`
+**`0`**, and `or-tools` just `3`. 🔵 **This base could name the product and not the engine.**
+
+🔴 **The agent layer, measured rather than asserted (`T443`).** `scheduling mcp server` **`991`** and
+`optimization mcp server` **`893`** against `school timetabling mcp server` **`9`**, `timetabling agent
+llm` **`7`**, `natural language to constraint programming` **`4`**, `school assignment deferred
+acceptance` **`3`**, `exam scheduling llm agent` **`2`**, `constraint model llm education` **`1`**.
+
+🔴 **And the `9` are not what the query promises (`T444`).** All `9` were read: **`8` *read* a timetable
+out of a national school portal, `1` *builds* one.** The one that builds —
+[`yuroyami/FET-MCP`](https://github.com/yuroyami/FET-MCP) — is **`AGPL-3.0`** (`34,523 B`, sha256₁₂
+`0d96a4ff68ad`) at **`0★`**. 🟢 **The eight that read are an unplanned EMEA asset:** EduPage 🇸🇰
+(**MIT**, `e99290e1540b`), Pronote 🇫🇷 (**MIT**, `1db908a46bbb`), WebUntis 🇦🇹🇩🇪 (**MIT**,
+`e9b0fea768a2`) — all shelved — plus Bakaláři 🇨🇿 and Comci 🇰🇷, **both without a usable grant and both
+refused**.
+
+🟢 **The six agent rows, all MIT, all byte-read.** [`Jacck/mcp-ortools`](https://github.com/Jacck/mcp-ortools)
+(`22★`, 🔴 **pushed `2024-12-26`**), [`dmitryanchikov/mcp-optimizer`](https://github.com/dmitryanchikov/mcp-optimizer)
+(`5★`, PuLP **and** OR-Tools), [`PraveshKoirala/optimization-mcp`](https://github.com/PraveshKoirala/optimization-mcp)
+(`1★`, 🟢 freshest, adds **Z3/SMT** feasibility), plus the three portal adapters above.
+🔴 **`T452`: the head of this register is stale and the fresh rows are tiny — treat all six as reference
+implementations, not dependencies. The maintained artefacts here are the solvers.**
+
+### 🔬 Two defects in this base's own licence instrument, both reproducible
+
+🔴 **`T439` — the read method under-counts every payload by one byte and hashes a truncated file.**
+Command substitution strips the trailing newline. Controlled on `google/or-tools`: byte-exact
+**`11,358 B` / `cfc7749b96f6`** against the method in use **`11,357 B` / `58d1e17ffe51`**. 🔴 **The trap:
+`11,357 B` is the true stock Apache-2.0 size, so the defective read produced a false match to the stock
+constant while the hash disagreed.** 🟢 **`p750`'s stock figure is corroborated on a third repository:**
+`11,357 B` / `c71d239df917` (`timefold-quickstarts`).
+
+🔴 **`T441` — the documented probe chain misses `LICENSE.TXT`, and it cost an `8,208★` repository.**
+`Project-OSRM/osrm-backend` showed no grant at `8` paths and would have been published as a false
+`T302` negative; the grant is at **`LICENSE.TXT`** (uppercase extension, raw is case-sensitive) —
+BSD-2-Clause, `1,297 B`, `df207517bc08`. 🟢 **Corrected chain for every successor pass:** `LICENSE,
+LICENSE.md, LICENSE.txt, LICENSE.TXT, COPYING, COPYING.txt, COPYING.md, LICENSE-APACHE, LICENSE.rst,
+LICENCE, license`.
+
+### 🔴 The refusals and boundaries, so no successor re-buys them
+
+- [`apache/incubator-kie-optaplanner`](https://github.com/apache/incubator-kie-optaplanner) — `3,513★`, **`ARCHIVED`**, `README.md` → `404`. **Timefold is the successor, forked `2023-04-20` by the original OptaPlanner team** (`T447`). The name a studio reaches for first is read-only.
+- [`UniTime/cpsolver`](https://github.com/UniTime/cpsolver) — **`LGPL-3.0`** (`7,650 B`, `ea8af5e789cb`) **under Apache-2.0 `UniTime`** (`T450`). The most expensive licence mistake available in this register.
+- **FET** — `T359` dead state **and** unreachable upstream: `lalescu/fet` `404`, `fet-timetabling/fet` `404`, **`lalescu.ro` `000` (`2 / 2`)**. GitHub copies are third-party, last pushed `2019` (no licence) and `2018` (`LICENSE` → `404`). The `T396` Shibboleth pattern, second instance (`T445`).
+- **Chile's SAE mechanism** — nationally deployed, algorithm/rules/data/simulator published, **implementation not open source**: `ConsiliumBots` has `7` public repositories and the mechanism is not among them (`T446`).
+
+
 ## 🆕 2026-11-10 (p750) — 🔴 **THE DUTY-OF-CARE LAYER: `749` PASSES AND `0` OF THE WELLBEING AND SAFEGUARDING TIER. 🔴 THE BEST SAFETY CLASSIFIER ON EARTH IS NOT OPEN SOURCE AND THE MOST-STARRED PERMISSIVE ONE IS ARCHIVED. 🔴 THE EARLY-WARNING TIER IS `7 / 7` AT `0★`. 🔴 THE ONE ABUNDANT CAPABILITY (`8,216` REPOS) IS BANNED IN EU EDUCATION. 🟢 THE ANSWER IS AN IBM REPO AT `189★`.**
 
 **`6` agent rows (all MIT or Apache-2.0) · `6` foundations rows · `11` platform rows · `45` addresses

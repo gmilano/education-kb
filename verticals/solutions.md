@@ -6,6 +6,41 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
+## 🆕 `p751` — 🟢 **THE SCHEDULING PLATFORM SHELF: `4` DEPLOYABLE SYSTEMS, `3` OF THEM PERMISSIVE. 🟢 CERN'S ROOM-BOOKING AND EVENT PLATFORM IS **MIT** AT `2,128★` AND THIS BASE HELD IT AT `0` MENTIONS. 🔴 THE SCHOOL-PORTAL LAYER THAT EVERY EUROPEAN PARENT USES IS ENTIRELY PROPRIETARY — AND THAT IS THE INTEGRATION OPPORTUNITY, NOT A BLOCKER.**
+
+**Pass p751 · verified 2026-11-10.** Deployable systems for the scheduling, matching and resource-allocation register. 🔵 **The division of labour on this shelf: `UniTime` and `Indico` are systems a client may already run; `Timefold` is an engine you deploy *inside* something; the portals are systems you integrate *with* and cannot adopt.**
+
+### 🟢 Adoptable — real install bases, permissive grants, AI can be layered on
+
+| Platform | Repo | Grant — **byte-read 2026-11-10** | Stars | Last push | What it is, and where AI goes on top |
+|---|---|---|---|---|---|
+| **UniTime** | [`UniTime/unitime`](https://github.com/UniTime/unitime) | **Apache-2.0** · `11,357 B` · sha256₁₂ `58d1e17ffe51` | `358★` | `2026-11-10` | 🟢 **The only production-grade open university timetabling system.** Course timetabling, examination timetabling, room sharing, student sectioning, instructor assignment. An Apereo project. **AI layer:** a natural-language constraint authoring front end — a registrar states a policy in prose, an LLM emits the UniTime constraint, a human approves it. 🔴 **Licence trap: its solver [`UniTime/cpsolver`](https://github.com/UniTime/cpsolver) is `LGPL-3.0`, not Apache-2.0 (`T450`).** |
+| **Indico** | [`indico/indico`](https://github.com/indico/indico) | 🟢 **MIT** · `1,101 B` · sha256₁₂ `c8fb5198b415` · CERN | **`2,128★`** | `2026-11-10` | 🟢 **The find of this shelf, and this base held it at `0` mentions.** CERN's event-management and **room-booking** system, widely run by research universities. **AI layer:** conflict-aware room allocation, agenda assembly, and a booking assistant that reasons over real availability. 🔵 `p743` took CERN's `Invenio` estate and missed `Indico` entirely — the `P210` discipline cuts both ways. |
+| **Timefold** | [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) + [`timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) | 🟢 **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` / `11,357 B` · `c71d239df917` | `1,863★` / `607★` | `2026-11-10` | 🟢 **Not a product — the engine to build the product with**, and the live successor to the archived OptaPlanner (`T447`). The quickstarts repository ships a runnable **school timetabling** example, which is the shortest honest route from workshop to demo. |
+| **FET** | 🔴 **not readable here** | 🔴 **GPL-family, not verifiable in this environment** | — | — | 🔴 Widely deployed in schools, and **unreachable: `lalescu.ro` returns `000` (`2 / 2` hosts) and the canonical GitHub addresses `404` (`T445`)**. Named because a client may already run it; **do not quote its licence from this base** — the only GitHub copies are third-party, unlicensed or `AGPL-3.0`-indexed, and last pushed `2019` and `2018`. |
+
+### 🔴 Integration targets, not adoption targets — the European school-portal layer
+
+These are **proprietary** platforms with large national install bases. A studio cannot adopt them; it integrates with them — and for four of them a **permissive, maintained MCP adapter already exists** (see [`../agents/top.md`](../agents/top.md), `T444`).
+
+| Portal | Region | Country | Open adapter found | Grant |
+|---|---|---|---|---|
+| **EduPage** | EMEA | 🇸🇰 Slovakia / CEE | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) `4★` | **MIT** · `1,070 B` · `e99290e1540b` |
+| **Pronote** | EMEA | 🇫🇷 France | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) `2★` | **MIT** · `1,063 B` · `1db908a46bbb` |
+| **WebUntis** | EMEA | 🇦🇹🇩🇪 DACH | [`toughIQ/webuntis-mcp`](https://github.com/toughIQ/webuntis-mcp) `0★` | **MIT** · `1,064 B` · `e9b0fea768a2` |
+| **Bakaláři** | EMEA | 🇨🇿 Czechia | [`Aero-Apex/bakalari-mcp`](https://github.com/Aero-Apex/bakalari-mcp) `0★` | 🔴 index **`NONE`** — **not shelved**, no grant to rely on |
+| **Comci** | APAC | 🇰🇷 Korea | [`techkwon/comci-agent`](https://github.com/techkwon/comci-agent) `1★` | 🔴 index **`NOASSERTION`** — **not shelved** |
+| **PowerSchool / Infinite Campus** | North America | 🇺🇸 US | 🔴 **none found** | 🔴 **An informed gap, not silence** — searched and absent. |
+| *(any LATAM portal)* | LATAM | — | 🔴 **none found** | 🔴 `escuela horario open source` → **`0`**. Recorded as a measured nil. |
+
+🟢 **The asymmetry is the commercial point.** In EMEA the last mile to a parent-facing scheduling assistant is **already written and MIT-licensed**. In North America and LATAM it is not, and it is the billable part.
+
+### 🔬 Recorded so a successor does not re-buy it
+
+- **`meeting-room-booking-system/mrbs`** — probed at the obvious address and **not there** (`README` chain `404`, no search metadata): the `T359` "not a canonical current address" state. MRBS exists as a project; this pass did not locate its current canonical repository and **shelved nothing** rather than guess.
+- **`apache/incubator-kie-optaplanner`** — `3,513★`, **archived**, `README.md` → `404`. Its archive notice names `apache/incubator-kie-drools`, whose raw channel answers `200` but which the search channel does not return for a `repo:` query. 🔵 Use **Timefold**, and do not put OptaPlanner in a proposal.
+
+
 **Pass p741 · verified 2026-11-10.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.

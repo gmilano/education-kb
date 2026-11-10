@@ -6,7 +6,20 @@ updated: 2026-11-10
 
 # Education AI — Market Intelligence
 
-**Pass p750 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
+**Pass p751 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
+facts**; the mandated market leg returned a **segment nil for this register** inside a parent category
+that does not converge, and an **arithmetic audit failed one of the two headline series** (`25.9%`
+implied against `16.8%` claimed — see the Global block). 🟢 **Each region's newest block is
+`#### 🆕 p751` under [`## Opportunities by region`](#opportunities-by-region), and all five are written
+this pass — no region left at silence.** The register is **scheduling, matching and resource
+allocation**: the constraint solver under the timetable, the exam diet, the room, the bus and the school
+place. 🔴 **The headline is that this register is already operating at national scale in LATAM — Chile's
+SAE allocates school places by deferred acceptance with the algorithm, rules, data and simulator all
+published — while its implementation is not open source, and in EMEA the same function is Annex III
+point 3(a) high-risk whose in-scope status may turn on whether it is built with an LLM or with a
+classical solver (`T449`).**
+
+**Carried header from p750:** **Pass p750 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
 facts**; the mandated market leg ran and returned a **segment nil** inside a conflicting adjacent range.
 🟢 **Each region's newest block is `#### 🆕 p750` under
 [`## Opportunities by region`](#opportunities-by-region), and all five are written this pass — no region
@@ -213,6 +226,16 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p751` — the scheduling and assignment register, placed in North America
+
+🔴 **The regulatory hook for this register is placement, and it is already written into district policy.** Of the measures read this pass: **`134` AI-in-education bills were introduced across `31` states in 2026**, and **Idaho, Maryland, Oklahoma and Virginia** enacted education-specific AI measures. 🔴 **Oklahoma's law prohibits AI tools used *solely* for grading, discipline or student promotion**, and board-approved district policies read this pass prohibit AI from being the **sole basis for high-stakes decisions, naming placement explicitly**. Ohio districts had to adopt an AI-use policy by **`2026-07-01`**; New York City runs a one-year moratorium barring students through 8th grade from generative AI; a Florida proposal would require district AI instructional-tool policies by **`2027-07-01`**. There is **no comprehensive federal K-12 AI law**.
+
+🟢 **Why that is an opportunity rather than a wall.** A constraint solver that allocates places or builds a timetable is a *decision-support* system with a human approver by construction — which is precisely the shape these statutes demand. **The sellable artefact in North America is not the optimiser, it is the optimiser plus the audit trail**: why this student got this seat, which constraint bound, and who approved the override.
+
+🟢 **The one hard money number in this register is North American.** Boston's joint school-start-time and bus-routing work (the **BiRD** algorithm, published in *PNAS*) reports **`$5M` in annual savings alongside a `50`-bus fleet reduction** with service quality maintained. ⚠️ **The same literature also reports `530` buses, an `18%` reduction and `$10–15M` in savings — these two figures do not reconcile, and this base does not pick between them.** Quote the `$5M`/`50`-bus pair, which is the one tied directly to the deployed implementation, and say it is a published case rather than a Globant result. 🔴 **The BiRD implementation itself was not found publicly released** — the rebuild is billable.
+
+🔴 **The measured supply gap, and it is the clearest regional asymmetry this pass found.** EMEA has permissive, maintained MCP adapters for four national school portals; **North America has none for any major US SIS** (`PowerSchool`, `Infinite Campus`) — searched and absent. The only US-placed open artefact found is [`jcirni/school-bus-router`](https://github.com/jcirni/school-bus-router) (**MIT** · `1,075 B` · sha256₁₂ `8fb07e0d8f81`, `0★`, pushed `2026-10-22`) — OSM + nearest-neighbour + 2-opt, **one bus per route, with multi-bus splitting declared as unstarted "Phase 2"**. 🟢 **Opportunity:** the SIS adapter layer and district-scale multi-bus routing are both unoccupied and both buildable on `or-tools` + `VROOM` + `OSRM`, all permissive.
 
 #### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: the gate is consent, it is dated, and it is being enforced this week
 
@@ -1152,6 +1175,18 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p751` — the scheduling and assignment register, placed in EMEA
+
+🔴 **This register sits directly on top of Annex III point 3 of the EU AI Act.** Point 3 covers four education functions, and **the first is admission or assignment of natural persons to educational institutions** — which is what a school-placement mechanism or an allocating timetabler does. The other three are evaluating learning outcomes, assessing the level of education a person will attain, and **monitoring prohibited behaviour during tests**.
+
+⚠️ **This base does not state the date with confidence, and a proposal must not either.** Most sources read this pass place the Annex III high-risk obligations at **`2027-12-02`**, moved from `2026-08-02` by the **Digital Omnibus on AI, Regulation (EU) 2026/1744** (Official Journal, `2026-07-24`). **At least one source argues point 3 was not amended by that regulation and therefore keeps its original date.** 🔵 **Verify against the Official Journal text before any client-facing deadline.** Nearer-term and less disputed: **chatbot transparency and AI-literacy obligations from August 2026**, and **emotion recognition has been prohibited in education since `2025-02-02`** with no grace period (`p750`'s finding, which still governs).
+
+🔴 **The architectural lever, and it is the most commercially useful thing in this pass (`T449`).** The Act regulates *AI systems*. A hand-written CP-SAT or MIP model is a set of rules defined entirely by natural persons — the category the definition is generally read to exclude. **So the same business function may fall inside or outside Annex III depending on how it is built**: a deferred-acceptance mechanism or an explicit constraint model is plausibly out of scope; an LLM that *infers* the constraints, or a learned ranker that orders applicants, is plausibly in. 🟢 **Sell the classical solver as the compliance-cheap architecture and keep the LLM on the authoring side, where a human approves every constraint before it binds.** ⚠️ **This is an open legal reading, not settled law — it must be confirmed by counsel, and it cuts both ways: reaching for an LLM to prototype faster can convert an unregulated scheduler into a high-risk system.**
+
+🟢 **EMEA has the best open supply in this register, and nobody placed it there deliberately (`T444`).** Permissive, maintained MCP adapters exist for **`4` national school portals, all EU/EEA**: EduPage (🇸🇰 **MIT**), Pronote (🇫🇷 **MIT**), WebUntis (🇦🇹🇩🇪 **MIT**) and Bakaláři (🇨🇿 — 🔴 **no grant, not usable**). The supply exists where the portal has a national install base. 🟢 **Consequence: a parent- or pupil-facing scheduling assistant in France, DACH or CEE starts from a licence review, not a reverse-engineering project.**
+
+🔴 **The EMEA-specific instrument gap.** **FET**, widely deployed in European schools, is **unreachable from this environment** — `lalescu.ro` and `lalescu.ro/liviu/fet/` both return `000`, and the canonical GitHub addresses `404` (`T445`). An EMEA engagement that must evaluate FET needs a channel this pipeline does not have. Also EMEA-placed: [`chocoteam/choco-solver`](https://github.com/chocoteam/choco-solver) (**BSD-3-Clause**, IMT Atlantique 🇫🇷) and [`indico/indico`](https://github.com/indico/indico) (**MIT**, CERN 🇨🇭), both verified alive and pushed this pass.
 
 #### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: required to monitor, forbidden to infer affect, and both halves are dated
 
@@ -2277,6 +2312,16 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p751` — the scheduling and assignment register, placed in APAC
+
+🔴 **APAC has the binding pre-launch control that no other region has, and it lands on exactly this register.** China's framework — covering algorithmic recommendation, deep synthesis and generative AI — requires public-facing services to complete a **security assessment and algorithm filing *before* launch**. 🔴 **A public-facing school-place allocation or timetable-publication service in China is therefore a filing exercise before it is an engineering exercise**, and that sequencing has to be in the plan from day one rather than discovered at go-live.
+
+🟢 **Curriculum demand is the strongest in the world here.** **China and the UAE are the only countries with compulsory national AI curricula**, starting in the 2025-26 school year, and China's Ministry of Education has published K-12 AI-literacy curriculum guidelines. **India** plans AI and computational thinking compulsory **from Class 3**, tied to the IndiaAI Mission with a large teacher-training push, placed in the **2026-27 academic year**. 🔵 Compulsory curriculum at national scale is a timetabling problem before it is a pedagogy problem — every mandated subject has to be fitted into a fixed week, and that is this register's core product.
+
+🔴 **Vietnam is the APAC jurisdiction that names this register's risk directly.** A **July 2026 decision identifies high-risk AI systems in six sectors, including education**, with coverage read as extending to **automated assessment**. **India's** statutory position is contested in the sources read this pass — one July 2026 source says the government signalled it may pursue dedicated AI legislation, another says no comprehensive law is close; the **February 2026 amendments to the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 took effect `2026-02-20`** and target AI-generated content rather than allocation decisions. 🔵 **This base records the disagreement rather than resolving it.**
+
+🔴 **The APAC open-source supply for this register is a measured nil, and it is a real finding rather than a thin search.** `india school timetable open source` returns **`0` repositories**. The one APAC-placed portal agent found, [`techkwon/comci-agent`](https://github.com/techkwon/comci-agent) (Comci, 🇰🇷 Korea, `1★`), is indexed **`NOASSERTION`** and was **not shelved** — there is no grant to rely on. 🟢 **Opportunity:** the largest school systems on earth are adopting compulsory AI curricula into fixed timetables with **no permissive regional scheduling stack at all**; the substrate (`or-tools`, `timefold-solver`) is permissive and jurisdiction-neutral, and the localisation — calendars, shift patterns, exam boards, language — is the billable layer.
+
 #### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: the region is moving to restriction rather than governance, and the one MIT artefact in the register was publicly funded here
 
 🟢 **The region's live story is Australia, and it broke the day before this pass.** On **`2026-11-09`**
@@ -3309,6 +3354,16 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p751` — the scheduling and assignment register, placed in LATAM
+
+🟢 **LATAM is the region where this register is already *operating at national scale*, and that makes it the strongest reference story in the pass.** **Chile's Sistema de Admisión Escolar (SAE)** allocates school places nationally using an adaptation of the **Gale–Shapley deferred-acceptance** mechanism, extended to Chilean law and Ministry requirements — retaining the current seat of a student who changes school, and favouring sibling assignment to the same school. The adaptation is not cosmetic: under the modified stability notions **a stable assignment may not always exist**, so the published approach breaks ties **at the family level**. A 2026 working paper characterises SAE as strategy-proof deferred acceptance with unrestricted preference lists and **full publication of the algorithm, the rules, the data and a simulator**.
+
+🔴 **And the implementation is not open source (`T446`).** The organisation that held the Ministry contract (`2022–2024`) for maintaining the assignment code, [`ConsiliumBots`](https://github.com/ConsiliumBots), has **`7` public repositories and the assignment algorithm is not among them**. The only permissively licensed one is [`school-choice-dashboard`](https://github.com/ConsiliumBots/school-choice-dashboard) (**MIT** · `1,070 B` · sha256₁₂ `550db3b76ed5`, `0★`, last push `2025-05-20`) — **monitoring, not mechanism**. 🔵 **So the pattern is public and the code is not.** That is the opposite of the usual LATAM gap and it is unusually favourable: *the hard part — a defensible, published, legally-adapted mechanism — is documented in the open literature, and the implementation is a build.* The permissive building block is [`daffidwilde/matching`](https://github.com/daffidwilde/matching) (**MIT**, `170★`) — 🔴 **`13` months stale, and one of only `3` repositories matching `school assignment deferred acceptance`.**
+
+🟢 **Demand is measured and the governance gap is measured with it.** A **UNESCO Observatory on AI in Education for Latin America and the Caribbean launched April 2026 at ECLAC in Santiago**. It reports that in countries such as Chile and Brazil **more than `50%` of teachers already use AI tools while fewer than `10%` of institutions have formal guidelines**. On 2024 figures: **`56%` of secondary teachers in Brazil and `55%` in Chile** had used AI in the previous year against an **OECD average of `36%`** — LATAM teachers are ahead of the OECD, not behind it. In Brazil **`53%` of school administrators use AI and only `22%` report school guidelines**. 🟢 **The `50%`-use / `10%`-guidelines spread is the engagement:** governance, audit and oversight scaffolding for AI that is already in the building.
+
+🔵 **Regulation: the most developed framework in the region, and a status this base will not overstate.** **Brazil's PL 2338** is described as the region's most developed framework, with tiered risk categories and civil liability, with political signals pointing to a vote in **late 2026**. **Chile's** bill status is disputed in the sources read this pass — one says it cleared the lower chamber in October 2025 and sits in Senate second reading, another lists it as **Boletín 16821-19, pending**. **Peru's Ley N° 31814** (published `2023-07-05`) is identified as the first enacted national AI statute in Latin America. 🔴 **`escuela horario open source` returns `0` repositories** — the Spanish-language supply leg for this register is an outright nil, recorded as an informed gap rather than left as silence.
 
 #### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: Brazil has the region's binding instrument and it names AI review explicitly; the university tier has the problem and no measurement
 
@@ -4411,6 +4466,23 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p751` — the scheduling and assignment register, placed globally
+
+🔴 **The market leg for *this* register returned a segment nil, and that is recorded rather than filled.** No source read this pass sizes "AI scheduling, timetabling or student assignment in education" as a segment. What exists is the parent category, and **it does not converge**: estimates for AI in education in **2026** run from about **`$6B` to `$12.5B`**, and the broader edtech market is put at **`$213B`** by one source and **`$380B`** by another for the same year — a gap that is definitional, not empirical. 🔵 **Quote a range with its source, never a point estimate.**
+
+🔧 **An arithmetic audit, in the `p695` tradition, and one of the two headline series fails it.** This base recomputed both:
+
+| Series | Claimed CAGR | **Implied by its own endpoints** | Verdict |
+|---|---|---|---|
+| `$10.6B` (2026) → `$42.48B` (2030) | `41.5%` | **`41.5%`** | 🟢 **Internally consistent.** Usable. |
+| `$11.40B` (2026) → `$57.25B` (2033) | `16.8%` | 🔴 **`25.9%`** | 🔴 **Internally inconsistent.** At `16.8%` the 2033 endpoint would be **`$33.81B`**, not `$57.25B`; reaching `$57.25B` at `16.8%` takes **`10.4` years**, not `7`. **One of the three numbers is wrong and the source does not say which.** Do not quote this series. |
+
+🟢 **The structural trends that matter to this register, as opposed to to edtech generally.** Sources converge on three: **AI has moved from pilots into core systems**, bringing new demands on reliability, **agent permissions** and assessment design; **agentic AI is moving into campus operations** and multi-step administrative work rather than only answering questions; and **governance and interoperability have become purchasing criteria** — buyers now ask not only where data is stored but what models see and how decisions are made. 🔵 **All three describe this register precisely:** timetabling, exam diets, room allocation and place assignment *are* campus operations, they *are* decisions that must be explained, and they are bought by registrars and ministries who will ask exactly those questions.
+
+⚠️ **Adoption statistics in this area are weak and should be handled as such.** Figures such as "`84%` of high-school students use generative AI" come from aggregator pages that mix measured results with forecasts, and several `2026` roundups carry inconsistent publication dates. 🔵 **This base cites them only with the caveat attached, and prefers the UNESCO/OECD teacher-use figures in the LATAM block, which name their year and their comparator.**
+
+🟢 **The global supply fact, in one line, and it is the thesis of the pass:** *the solver substrate for every education scheduling problem on earth is permissive and actively maintained — `13 / 13` general-purpose solvers read this pass carry Apache-2.0, MIT, BSD or MPL grants, with `or-tools` at `14,359★` pushed the day of this pass — while the education-specific agent layer above it does not exist (`9` repositories against `991` for the generic equivalent) and what little exists is copyleft.* **The gap between those two facts is the product.**
 
 #### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: the segment is not sized anywhere, and the obligation is dated in three regions
 

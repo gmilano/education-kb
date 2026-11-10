@@ -6,6 +6,67 @@ updated: 2026-11-10
 
 # Foundational Repositories — Education
 
+## 🆕 `p751` — 🟢 **THE SOLVER SUBSTRATE: `15` ROWS UNDER A TIER THIS BASE HELD ONLY AT THE APPLICATION LAYER. 🟢 THE SUBSTRATE IS OVERWHELMINGLY PERMISSIVE — `13 / 15` MIT, APACHE-2.0, BSD OR MPL. 🔴 THE COPYLEFT IS NOT IN THE SOLVERS, IT IS IN THE *EDUCATION* SOLVERS. 🔴 `5` INDEX VALUES CORRECTED, `5 / 5` FROM `NOASSERTION` TOWARD A KNOWABLE GRANT.**
+
+**Pass p751 · verified 2026-11-10.** `31` licence payloads byte-read, `5` index corrections, `21` denominators measured, `T439`–`T452` declared. 🔴 **Every byte figure below was read byte-exact to a file, not through command substitution — see `T439` on [`../agents/top.md`](../agents/top.md), which found that this base's previous read method under-counted every payload by one byte and, on `or-tools`, produced a false match to the stock Apache-2.0 constant.**
+
+### 🟢 Why this shelf exists: the base held the timetable and not the thing that computes it
+
+`P210` pre-check across all `8` live shelves before any row was drafted: `unitime` `87` mentions, `timetable` `89`, `scheduling` `130` — but `timefold` **`0`**, `optaplanner` **`0`**, `minizinc` **`0`**, `pyomo` **`0`**, `highs` **`0`**, `jacop` **`0`**, `gurobi` **`0`**, `cplex` **`0`**, `constraint programming` **`0`**, `mixed integer` **`0`**, `linear programming` **`0`**, `exam timetabling` **`0`**, `room allocation` **`0`**, `vehicle routing` **`0`**, `nurse rostering` **`0`**, and `or-tools` just `3`. 🔵 **This base could name the product and not the engine.** That is the gap this shelf closes.
+
+### The solver substrate — all byte-read `2026-11-10`
+
+| Repo | Grant — **byte-read, byte-exact** | Stars | Last push | Role in an education build |
+|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | 🟢 **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` | **`14,359★`** | `2026-11-10` | 🟢 **The default.** CP-SAT is the strongest open solver for timetabling, exam diets, invigilator cover and bus routing, and it is the backend of every real agent row in this register. |
+| [`cvxpy/cvxpy`](https://github.com/cvxpy/cvxpy) | **Apache-2.0** · `11,344 B` · sha256₁₂ `94d81cb282da` | `6,390★` | `2026-11-09` | Convex modelling. Right for load-balancing and smoothing objectives; **wrong** for the integer assignment at the core of a timetable. |
+| [`Pyomo/pyomo`](https://github.com/Pyomo/pyomo) | 🔧 index `NOASSERTION` → **BSD-3-Clause** · `16,947 B` · sha256₁₂ `a57ea3ac2d2d` | `2,564★` | `2026-11-05` | Algebraic modelling in Python, solver-agnostic. ⚠️ **Sandia/`DE-NA0003525`: the US Government retains certain rights** — harmless for commercial use, but name it in a public-sector bid rather than let a client's counsel find it. |
+| [`coin-or/pulp`](https://github.com/coin-or/pulp) | 🔧 index `NOASSERTION` → **MIT** · `1,127 B` · sha256₁₂ `b41bca287571` | `2,497★` | `2026-11-03` | The lowest-friction LP/MIP modelling layer in Python. 🟢 **The most permissive grant on this shelf and the index does not say so.** |
+| [`jump-dev/JuMP.jl`](https://github.com/jump-dev/JuMP.jl) | 🔧 index `NOASSERTION` → **MPL-2.0** · `18,080 B` · sha256₁₂ `d587b94a3a84` | `2,490★` | `2026-11-10` | Julia modelling language. File-level weak copyleft — fine to depend on, and the grant is stated in prose above the licence text, which is why the index missed it. |
+| [`ERGO-Code/HiGHS`](https://github.com/ERGO-Code/HiGHS) | 🟢 **MIT** · `1,062 B` · sha256₁₂ `795e6090936b` | `1,915★` | `2026-11-10` | 🟢 **The permissive LP/MIP engine to pair with PuLP or Pyomo** when a client refuses a Google dependency. Copyright line reads `2026`. |
+| [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) | 🟢 **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` | `1,863★` | `2026-11-10` | 🟢 **The JVM answer, and the live successor to OptaPlanner** — forked `2023-04-20` by the original OptaPlanner team (`T447`). Ships school-timetabling, employee-rostering and VRP as first-class use cases. |
+| [`chocoteam/choco-solver`](https://github.com/chocoteam/choco-solver) | **BSD-3-Clause** · `1,515 B` · sha256₁₂ `a588924b4e91` · IMT Atlantique | `783★` | `2026-11-10` | Java CP library. Useful where the constraint model must be *explained* to a registrar, not just solved. |
+| [`MiniZinc/libminizinc`](https://github.com/MiniZinc/libminizinc) | 🔧 index `NOASSERTION` → **MPL-2.0** · `16,925 B` · sha256₁₂ `438c2e1e733f` | `705★` | `2026-11-10` | 🟢 **The modelling language to write the policy in.** ⚠️ **Composite grant:** the payload opens *"If not noted otherwise in individual file headers"* — a per-file carve-out, so a vendored subtree needs its headers checked, not just this file. |
+| [`scipopt/scip`](https://github.com/scipopt/scip) | **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` | `677★` | `2026-11-10` | Strong MIP/CIP solver, Apache-2.0 since v8. The serious alternative to CP-SAT for exam-diet scale. |
+| [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` 🟢 **(the stock constant, third independent confirmation — `T440`)** | `607★` | `2026-11-09` | 🟢 **Start here, not at the solver.** Contains a runnable **school-timetabling** quickstart plus employee rostering and VRP — the fastest honest path from a client workshop to a working demo. |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | **Apache-2.0** · `11,357 B` · sha256₁₂ `58d1e17ffe51` 🔴 **(not the stock payload despite the identical byte count — `T440`)** | `358★` | `2026-11-10` | The only production university timetabling *system* on this shelf: course and exam timetables, room sharing, student sectioning. 🔴 **Read the next row before quoting its licence.** |
+| [`optframe/optframe`](https://github.com/optframe/optframe) | **MIT** · `1,062 B` · sha256₁₂ `5c28f30cedce` | `92★` | ⚠️ `2025-09-15` | C++ metaheuristic framework; the most-starred `topic:timetabling` repo after UniTime. Payload is MIT text **without the `MIT License` title line**, which is why a title-block classifier must fall through to the grant body. |
+| [`UniTime/cpsolver`](https://github.com/UniTime/cpsolver) | 🔴 **`LGPL-3.0`** · `7,650 B` · sha256₁₂ `ea8af5e789cb` | `82★` | `2026-10-14` | 🔴 **The engine under Apache-2.0 UniTime is copyleft (`T450`).** Link dynamically and ship it unmodified; do not fold it into a proprietary artefact. The single most expensive licence mistake available in this register. |
+| [`spoorendonk/coso`](https://github.com/spoorendonk/coso) | **MIT** · `1,074 B` · sha256₁₂ `db3ef67eca09` | `7★` | 🟢 `2026-11-04` | Typed model API + C++23 engine for routing, scheduling, assignment and packing. Early, but actively pushed and permissive — worth watching. |
+
+### 🟢 The school-transport sub-shelf — routing is a *solved* permissive problem
+
+| Repo | Grant — **byte-read** | Stars | Last push | Note |
+|---|---|---|---|---|
+| [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) | **BSD-2-Clause** · `1,297 B` · sha256₁₂ `df207517bc08` | **`8,208★`** | `2026-11-07` | 🔴 **The grant is at `LICENSE.TXT` and the documented probe chain missed it (`T441`)** — this `8,208★` repository would have been published as a false grant-absence. |
+| [`valhalla/valhalla`](https://github.com/valhalla/valhalla) | 🔧 index `NOASSERTION` → **MIT** · `1,135 B` · sha256₁₂ `8bdb14aebb00` | `6,440★` | `2026-11-10` | 🔴 **`LICENSE.md` is a `44 B` pointer** to `COPYING` (`T442`). Resolved: plain MIT. Supports time-dependent routing — which is what a bell-time-constrained bus plan actually needs. |
+| [`VROOM-Project/vroom`](https://github.com/VROOM-Project/vroom) | **BSD-2-Clause** · `1,296 B` · sha256₁₂ `60cc4d664a30` | `1,913★` | `2026-11-09` | 🟢 **The VRP layer to put on top of OSRM or Valhalla** — multi-vehicle, capacity and time windows, which is the school-bus problem exactly. |
+
+### 🔴 The matching and assignment sub-shelf — and it is nearly empty, which is the finding
+
+| Repo | Grant — **byte-read** | Stars | Last push | Note |
+|---|---|---|---|---|
+| [`daffidwilde/matching`](https://github.com/daffidwilde/matching) | **MIT** · `1,078 B` · sha256₁₂ `af6d91d1f6e0` | `170★` | 🔴 **`2025-10-03`** | Gale–Shapley / deferred acceptance, hospital-resident and stable-marriage games. 🔴 **The only credible permissive implementation this pass found of the mechanism that allocates school places in Chile, New York and Boston — and it is `13` months stale.** `school assignment deferred acceptance` returns `3` repositories in total (`T443`). |
+| [`ConsiliumBots/school-choice-dashboard`](https://github.com/ConsiliumBots/school-choice-dashboard) | **MIT** · `1,070 B` · sha256₁₂ `550db3b76ed5` | `0★` | ⚠️ `2025-05-20` | 🌎 **LATAM-placed.** Multi-country school-choice monitoring dashboard from the org that held Chile's SAE Ministry contract. 🔴 **The dashboard is public; the assignment mechanism is not (`T446`).** |
+
+### 🟡 The natural-language-to-model layer — research-grade, and named so a successor does not oversell it
+
+| Repo | Grant — **byte-read** | Stars | Last push | Honest status |
+|---|---|---|---|---|
+| [`microsoft/OptiGuide`](https://github.com/microsoft/OptiGuide) | **MIT** · `1,141 B` · sha256₁₂ `c2cfccb812fe` | `729★` | 🟢 `2026-11-04` | 🟢 **The most-starred and most-maintained artefact in the NL→optimisation tier, and it is MIT from Microsoft.** Built for supply chain; the *pattern* — LLM writes and explains the model, solver decides — transfers directly to timetabling. |
+| [`teshnizi/OptiMUS`](https://github.com/teshnizi/OptiMUS) | **MIT** · `1,069 B` · sha256₁₂ `17b0a6b26154` | `308★` | ⚠️ `2025-11-04` | The reference agent for MILP-from-natural-language, with the `NLP4LP` dataset. 🟡 **A paper implementation, `12` months stale.** `2026` follow-ups (ORPilot, Opti-Agent-Bench, VeriSimpl) are papers this pass did **not** find maintained permissive code for. |
+| [`Cardinal-Operations/ORLM`](https://github.com/Cardinal-Operations/ORLM) | **Apache-2.0** · `11,396 B` · sha256₁₂ `df825c8e037a` | `283★` | ⚠️ `2025-09-18` | Trained LLMs for optimisation modelling. Useful as a baseline; not a dependency. |
+
+### 🔴 `T450` — the licence seam in this register, and it is the opposite of the one `p750` found
+
+`p750` recorded a seam where *measuring* was permissive and *holding the record* was copyleft. **This register's seam runs between the general and the vertical:**
+
+- 🟢 **General-purpose solvers: `13 / 13` permissive** — Apache-2.0, MIT, BSD-3, BSD-2 or MPL-2.0. Not one copyleft grant among them.
+- 🔴 **Education-specific solving: copyleft wherever it exists** — `UniTime/cpsolver` **LGPL-3.0**, `yuroyami/FET-MCP` **AGPL-3.0**, `karandit/fet` indexed **AGPL-3.0**, FET itself **GPL-family**.
+
+🟢 **The commercial reading, in one line:** *the moment someone writes the education semantics down, the result has historically been copyleft — which means the permissive education scheduler is an unoccupied position, and Globant can occupy it by building on `or-tools` or `timefold-solver` rather than by extending `cpsolver` or FET.*
+
+
 **Pass p741 · verified 2026-11-10.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.

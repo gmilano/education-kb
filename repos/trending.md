@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p751) — 🟢 **THE SOLVER SUBSTRATE: `15` ROWS, `13 / 13` GENERAL-PURPOSE SOLVERS PERMISSIVE, TOPPED BY `or-tools` AT `14,359★` PUSHED THE DAY OF THIS PASS. 🔴 THE COPYLEFT IS NOT IN THE SOLVERS — IT IS IN THE *EDUCATION* SOLVERS. 🟢 CERN'S MIT ROOM-BOOKING PLATFORM WAS AT `0` MENTIONS. 🔴 FIVE APACHE-2.0 PAYLOAD HASHES, TWO COLLIDING ON BYTE COUNT.**
+
+**`15` foundations rows · `3` routing rows · `4` platform rows · `41` addresses probed · `31` licence
+payloads byte-read · `5` index corrections · `21` denominators measured · `T439`–`T452` declared.**
+
+### What is new this week in this register
+
+🟢 **The substrate is permissive and alive, `13 / 13`.** [`google/or-tools`](https://github.com/google/or-tools)
+(**Apache-2.0**, `11,358 B`, sha256₁₂ `cfc7749b96f6`, **`14,359★`**, pushed `2026-11-10`),
+[`cvxpy/cvxpy`](https://github.com/cvxpy/cvxpy) (**Apache-2.0**, `11,344 B`, `94d81cb282da`, `6,390★`),
+[`ERGO-Code/HiGHS`](https://github.com/ERGO-Code/HiGHS) (**MIT**, `1,062 B`, `795e6090936b`, `1,915★`),
+[`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) (**Apache-2.0**, `11,358 B`,
+`cfc7749b96f6`, `1,863★`), [`chocoteam/choco-solver`](https://github.com/chocoteam/choco-solver)
+(**BSD-3-Clause**, `1,515 B`, `a588924b4e91`, `783★`, IMT Atlantique 🇫🇷),
+[`scipopt/scip`](https://github.com/scipopt/scip) (**Apache-2.0**, `11,358 B`, `cfc7749b96f6`, `677★`),
+[`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) (**Apache-2.0**,
+`11,357 B`, 🟢 **`c71d239df917` — the stock constant**, `607★`, ships a **school-timetabling** example),
+[`optframe/optframe`](https://github.com/optframe/optframe) (**MIT**, `1,062 B`, `5c28f30cedce`, `92★`)
+and [`spoorendonk/coso`](https://github.com/spoorendonk/coso) (**MIT**, `1,074 B`, `db3ef67eca09`, `7★`,
+pushed `2026-11-04`). **Not one copyleft grant among the general-purpose solvers.**
+
+🔧 **`5` index corrections, `5 / 5` from `NOASSERTION` toward a knowable grant (`T451`).**
+[`Pyomo/pyomo`](https://github.com/Pyomo/pyomo) → **BSD-3-Clause** (`16,947 B`, `a57ea3ac2d2d`, `2,564★`;
+⚠️ Sandia `DE-NA0003525`, **US Government retains certain rights**);
+[`coin-or/pulp`](https://github.com/coin-or/pulp) → **MIT** (`1,127 B`, `b41bca287571`, `2,497★`);
+[`jump-dev/JuMP.jl`](https://github.com/jump-dev/JuMP.jl) → **MPL-2.0** (`18,080 B`, `d587b94a3a84`,
+`2,490★`; the grant is stated in **prose above** the licence text, which is why the index missed it);
+[`MiniZinc/libminizinc`](https://github.com/MiniZinc/libminizinc) → **MPL-2.0** (`16,925 B`,
+`438c2e1e733f`, `705★`; ⚠️ **per-file header carve-out** — a vendored subtree needs its headers checked);
+[`valhalla/valhalla`](https://github.com/valhalla/valhalla) → **MIT** (`1,135 B`, `8bdb14aebb00`,
+`6,440★`, **via a `44 B` pointer**, `T442`). 🔵 **In this register `NOASSERTION` means the index could
+not parse a composite or pointer grant — not that no grant exists.** The opposite of `p746`'s
+`winterop-com` rows, where the payload was actively proprietary.
+
+🟢 **The find nobody was looking for.** [`indico/indico`](https://github.com/indico/indico) — **MIT**,
+`1,101 B`, sha256₁₂ `c8fb5198b415`, **`2,128★`**, pushed `2026-11-10`, **CERN** — the event-management
+and **room-booking** system many research universities already run, and this base held it at **`0`
+mentions**. 🔵 `p743` took CERN's `Invenio` estate and walked straight past `Indico`.
+
+🟢 **The school-transport sub-shelf is a solved permissive problem.**
+[`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) (**BSD-2-Clause**, `1,297 B`,
+`df207517bc08`, **`8,208★`** — 🔴 **grant at `LICENSE.TXT`, missed by the documented chain, `T441`**),
+`valhalla` (**MIT**, time-dependent routing) and
+[`VROOM-Project/vroom`](https://github.com/VROOM-Project/vroom) (**BSD-2-Clause**, `1,296 B`,
+`60cc4d664a30`, `1,913★` — multi-vehicle, capacity, time windows: **the school-bus problem exactly**).
+
+🔴 **The matching sub-shelf is nearly empty, and that is the finding.**
+[`daffidwilde/matching`](https://github.com/daffidwilde/matching) (**MIT**, `1,078 B`, `af6d91d1f6e0`,
+`170★`) is the only credible permissive deferred-acceptance implementation found — **`13` months stale
+(`2025-10-03`)** — for the mechanism that allocates school places in Chile, New York and Boston.
+`school assignment deferred acceptance` returns **`3`** repositories in total.
+
+🟡 **The NL→model tier, named so a successor does not oversell it.**
+[`microsoft/OptiGuide`](https://github.com/microsoft/OptiGuide) (**MIT**, `1,141 B`, `c2cfccb812fe`,
+`729★`, pushed `2026-11-04` — 🟢 **the most maintained artefact in the tier**),
+[`teshnizi/OptiMUS`](https://github.com/teshnizi/OptiMUS) (**MIT**, `1,069 B`, `17b0a6b26154`, `308★`,
+⚠️ `2025-11-04`) and [`Cardinal-Operations/ORLM`](https://github.com/Cardinal-Operations/ORLM)
+(**Apache-2.0**, `11,396 B`, `df825c8e037a`, `283★`, ⚠️ `2025-09-18`). 🔴 **The `2026` follow-up
+literature — ORPilot, Opti-Agent-Bench, VeriSimpl — produced papers this pass found no maintained
+permissive code for.**
+
+### 🔴 `T440` — `728-A`'s exact-constant method holds for MIT and **fails** for Apache-2.0
+
+| sha256₁₂ | Bytes | Shape | Seen on |
+|---|---|---|---|
+| `c71d239df917` | `11,357` | 🟢 **stock** | `timefold-quickstarts`; `p750`'s `detoxify`/`granite-guardian` pair re-confirmed byte-identical |
+| `58d1e17ffe51` | **`11,357`** | stock **+ leading blank line, − trailing newline** | `UniTime/unitime` |
+| `cfc7749b96f6` | `11,358` | stock **+ leading blank line** | `or-tools`, `timefold-solver`, `scip` |
+| `94d81cb282da` | `11,344` | variant | `cvxpy` |
+| `df825c8e037a` | `11,396` | variant | `ORLM` |
+
+🔴 **Two different payloads at `11,357 B`. Quote the hash, never the size.**
+
+### 🔴 `T450` — the licence seam, and it is the inverse of `p750`'s
+
+🟢 **General-purpose solvers: `13 / 13` permissive.** 🔴 **Education-specific solving: copyleft wherever
+it exists** — `UniTime/cpsolver` **LGPL-3.0**, `yuroyami/FET-MCP` **AGPL-3.0**, `karandit/fet` indexed
+**AGPL-3.0**, FET itself GPL-family. 🟢 **Reading: the permissive education scheduler is an unoccupied
+position.** Build on `or-tools` or `timefold-solver`; do not extend `cpsolver` or FET.
+
+### 🔬 Recorded, not shelved
+
+- **`meeting-room-booking-system/mrbs`** — probed and **not at that address** (`README` chain `404`, no search metadata): `T359`. MRBS exists; this pass did not locate its canonical repository and **shelved nothing rather than guess**.
+- **`Dataojitori/nocturne_memory`** `1,426★` — returned at the top of `or-tools mcp server` sorted by stars with **no optimisation content**; the register's real top is `22★`. `student sectioning` returns **`2,970`** by matching two common words independently. 🔴 **An unread star-sorted head in this register is `60×` wrong (`T448`).**
+
+
 ## 🆕 2026-11-10 (p750) — 🟢 **THE WELLBEING SENSING ESTATE: `6` PERMISSIVE ROWS, FOUR OF THEM HARVARD'S, FROM A TIER THIS BASE HELD AT `0`. 🟢 THE LICENCE SEAM CONFIRMS FOR THE FIFTH TIME AND IS NOW A LAW: MEASURING IS PERMISSIVE, HOLDING THE RECORD IS COPYLEFT (`7 / 7` vs `4 / 4`, NO CROSSOVERS). 🔴 `NOASSERTION` GAINS A THIRD CAUSE. 🔴 `11` INDEX VALUES CORRECTED, `11 / 11` IN THE SAME DIRECTION.**
 
 **`6` foundations rows · `11` platform rows · `45` addresses probed · `26` licence payloads byte-read ·

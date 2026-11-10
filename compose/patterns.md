@@ -4,6 +4,132 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P256–P260 — added at p751 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the recipe.**
+This set is the **scheduling, matching and resource-allocation layer's**: the timetable, the exam diet,
+the room, the bus and the school place. 🔴 **Three findings govern all five and should be read first.**
+`T443`: the education-specific optimisation agent layer **does not exist** (`9` repositories against
+`991` for the generic equivalent), so every recipe below builds the education semantics on a **general**
+permissive solver rather than adopting a vertical agent. `T450`: the general solvers are `13 / 13`
+permissive while **education-specific solving is copyleft wherever it exists** — so the architectural
+rule is *never extend `cpsolver` or FET; always build on `or-tools` or `timefold-solver`*. `T449`: in
+the EU the **same function may be high-risk or out of scope depending on the implementation**, which is
+why in every recipe below **the LLM authors constraints and a human approves them, and the solver —
+not the model — makes the allocation.**
+
+> ⚠️ **One shared caveat, stated once.** `T452`: the agent rows in this register are reference
+> implementations, not dependencies — the highest-starred (`Jacck/mcp-ortools`, `22★`) has not been
+> pushed since `2024-12-26`. **Read them, then write your own tool layer against the solver directly.**
+> The maintained artefacts here are the solvers.
+
+### 🟢 `P256` — Natural-language constraint authoring over a production timetabler (the flagship)
+
+**The problem.** A registrar's scheduling policy lives in prose and in people's heads — *"no student sits
+two exams on one day", "protect Friday afternoons", "lab blocks stay contiguous", "this instructor does
+not teach before 10:00"*. Encoding it is a specialist job, re-encoding it every term is the actual cost,
+and nobody can audit what was encoded.
+
+**The stack.**
+- [`UniTime/unitime`](https://github.com/UniTime/unitime) — **Apache-2.0** · `11,357 B` · sha256₁₂ `58d1e17ffe51` · `358★` — the system of record: courses, rooms, exams, student sectioning.
+- 🔴 [`UniTime/cpsolver`](https://github.com/UniTime/cpsolver) — **`LGPL-3.0`** · `7,650 B` · sha256₁₂ `ea8af5e789cb` — **its engine, and it is copyleft.** Deploy it **unmodified and dynamically linked**; put none of your own logic inside it.
+- [`microsoft/OptiGuide`](https://github.com/microsoft/OptiGuide) — **MIT** · `1,141 B` · sha256₁₂ `c2cfccb812fe` · `729★`, pushed `2026-11-04` — the *pattern* to copy: an LLM that writes **and explains** the model while the solver decides.
+- [`MiniZinc/libminizinc`](https://github.com/MiniZinc/libminizinc) — **MPL-2.0** (index said `NOASSERTION`, `T451`) · `16,925 B` · sha256₁₂ `438c2e1e733f` — the human-readable intermediate the policy is written into.
+
+**Wiring.** Registrar states a policy in prose → LLM emits a **named, versioned MiniZinc constraint
+fragment plus a plain-language restatement** → registrar approves the *restatement*, never the code →
+approved fragment is compiled into the UniTime/cpsolver model → solve → every published timetable
+carries the list of constraint IDs that bound it. 🟢 **The approval step is the product.** It is what makes
+the thing sellable to a registrar and, per `T449`, what keeps the allocation decision with a human.
+
+**`4–6` weeks** to a term-scale pilot on a client's real UniTime instance. 🔴 **Gate on the LGPL
+boundary at week 1** — if the client requires a single proprietary artefact, drop UniTime and go to `P257`.
+
+### 🟢 `P257` — Greenfield timetabler on a fully permissive stack (when `P256`'s copyleft is unacceptable)
+
+**The problem.** The client wants to own and relicense the result, or has no UniTime instance, and
+`cpsolver`'s `LGPL-3.0` is a blocker.
+
+**The stack.**
+- [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) — **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` 🟢 *(the stock constant, `T440`)* · `607★` — **start from its school-timetabling quickstart, not from a blank solver.**
+- [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) — **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` · `1,863★`, pushed `2026-11-10` — the engine. 🟢 The OptaPlanner team's own fork (`2023-04-20`); **OptaPlanner itself is archived, `T447`.**
+- [`google/or-tools`](https://github.com/google/or-tools) — **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` · `14,359★` — CP-SAT, for the sub-problems where a dedicated exact solve beats local search (exam diets, invigilator cover).
+- [`PraveshKoirala/optimization-mcp`](https://github.com/PraveshKoirala/optimization-mcp) — **MIT** · `1,072 B` · sha256₁₂ `602c16c0967e` — read it for the **Z3/SMT** half: *"is this policy satisfiable at all?"* is a feasibility question, and answering *"these two rules cannot both hold"* is worth more to a registrar than a better schedule.
+
+**Wiring.** Quickstart domain model → replace its constraints with the client's → CP-SAT for the exam
+sub-problem → **SMT pre-flight that reports the conflicting pair before any solve runs** → publish.
+🟢 **The infeasibility explainer is the differentiator;** every commercial timetabler returns "no solution".
+
+**`6–8` weeks.** Everything in the stack is Apache-2.0 or MIT; the deliverable is relicensable.
+
+### 🟢 `P258` — School-place assignment with a published, defensible mechanism (LATAM-first)
+
+**The problem.** A ministry or large district allocates places across schools under law — sibling
+priority, retained seats, catchment, quotas — and needs a mechanism that is **strategy-proof,
+explainable and auditable**, not a black box.
+
+**The stack.**
+- [`daffidwilde/matching`](https://github.com/daffidwilde/matching) — **MIT** · `1,078 B` · sha256₁₂ `af6d91d1f6e0` · `170★` — Gale–Shapley / deferred acceptance, hospital-resident and stable-marriage. 🔴 **Last push `2025-10-03`: fork it and own it, do not depend on it.**
+- [`google/or-tools`](https://github.com/google/or-tools) — **Apache-2.0** — for the law-specific side constraints that pure DA cannot express.
+- [`ConsiliumBots/school-choice-dashboard`](https://github.com/ConsiliumBots/school-choice-dashboard) — **MIT** · `1,070 B` · sha256₁₂ `550db3b76ed5` — a **monitoring** reference for congestion and progress reporting. ⚠️ `0★`, `2025-05-20`.
+- **The published Chilean SAE literature** as the design input — 🔴 **not code (`T446`): the mechanism is public, the implementation is not.**
+
+**Wiring.** Preference collection → DA core from `matching` → law-specific extensions (retained seat,
+sibling-together, **family-level tie-breaking**, which the Chilean work adopted precisely because under
+the law-adapted stability notions **a stable assignment may not always exist**) → assignment →
+congestion reporting → **publish the algorithm, the rules and a simulator**, which is what Chile's SAE
+does and what makes transparency meaningful rather than nominal.
+
+**`8–12` weeks.** 🔴 **Two gates.** (1) `T449`: keep this a **rules-based mechanism** — an LLM anywhere
+in the allocation path converts a plausibly out-of-scope system into an Annex III point 3(a) high-risk
+one in the EU. (2) North America: district policy read this pass **prohibits AI as the sole basis for
+placement** — the human-approval and override trail is mandatory, not a nice-to-have.
+
+### 🟢 `P259` — School transport: multi-bus routing on a permissive geo stack (North America–first)
+
+**The problem.** A district runs routes built by hand or by a vendor tool and cannot test alternatives —
+and the published Boston result (**`$5M`/year with a `50`-bus reduction**, *PNAS*) is the single hardest
+money number in this register. ⚠️ **The same literature also reports `530` buses / `18%` / `$10–15M`;
+those do not reconcile — quote the `$5M`/`50`-bus pair, attribute it, and never present it as a Globant
+result.** 🔴 **The BiRD implementation was not found publicly released: this is a rebuild.**
+
+**The stack.**
+- [`VROOM-Project/vroom`](https://github.com/VROOM-Project/vroom) — **BSD-2-Clause** · `1,296 B` · sha256₁₂ `60cc4d664a30` · `1,913★` — the VRP layer: multi-vehicle, capacities, time windows. **This is the school-bus problem exactly.**
+- [`valhalla/valhalla`](https://github.com/valhalla/valhalla) — **MIT** (index `NOASSERTION`; grant at `COPYING` behind a `44 B` pointer, `T442`) · `1,135 B` · sha256₁₂ `8bdb14aebb00` · `6,440★` — 🟢 **time-dependent routing**, which is what bell-time constraints actually need.
+- [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) — **BSD-2-Clause** · `1,297 B` · sha256₁₂ `df207517bc08` · `8,208★` — the alternative matrix backend. 🔴 **Its grant is at `LICENSE.TXT`, which the documented probe chain missed (`T441`).**
+- [`google/or-tools`](https://github.com/google/or-tools) — **Apache-2.0** — for the **joint** bell-time-and-routing formulation, which is where the Boston saving came from and which VROOM alone will not express.
+- [`jcirni/school-bus-router`](https://github.com/jcirni/school-bus-router) — **MIT** · `1,075 B` · sha256₁₂ `8fb07e0d8f81` — read as a scoping reference only: `0★`, **one bus per route, multi-bus declared unstarted "Phase 2"**.
+
+**Wiring.** Student addresses → geocode and matrix via Valhalla or OSRM → VROOM for per-tier routing →
+OR-Tools for the joint bell-time/fleet decision → compare against the incumbent plan on distance, fleet
+count and ride time. 🟢 **The deliverable a superintendent buys is the comparison, not the optimiser.**
+
+**`6–10` weeks.** Fully permissive: BSD-2, MIT and Apache-2.0 throughout.
+
+### 🟢 `P260` — Parent- and pupil-facing scheduling assistant on the EMEA portal layer (fastest to value)
+
+**The problem.** A client in Europe wants a conversational assistant over *real* school data —
+timetable, homework, exams, absences — and the data lives in a proprietary national portal.
+
+**The stack — and `T444` is why this recipe is EMEA-first.** A permissive, maintained adapter already
+exists per country:
+- 🇫🇷 [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) — **MIT** · `1,063 B` · sha256₁₂ `1db908a46bbb` · `2★`, pushed `2026-10-30`.
+- 🇸🇰 / CEE [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) — **MIT** · `1,070 B` · sha256₁₂ `e99290e1540b` · `4★`, pushed `2026-10-26` — the most complete (adds meals).
+- 🇦🇹🇩🇪 [`toughIQ/webuntis-mcp`](https://github.com/toughIQ/webuntis-mcp) — **MIT** · `1,064 B` · sha256₁₂ `e9b0fea768a2` · `0★`, pushed `2026-09-13`.
+- 🔴 🇨🇿 Bakaláři and 🇰🇷 Comci adapters exist but are **index `NONE` / `NOASSERTION`** — **no grant, not usable**; write your own against the portal API.
+
+**Wiring.** Portal MCP adapter (read-only) → assistant with a **strict read-only tool boundary** →
+optional write-back only through the portal's own API with explicit user confirmation.
+
+**`2–4` weeks per country** — 🟢 **the fastest recipe in this set, and the reason is the licence rather
+than the engineering.** 🔴 **Gates.** (1) These are small repositories (`0–4★`) by individual authors:
+**fork, pin and review before shipping** — an MIT grant is not a maintenance guarantee. (2) These
+adapters touch children's data under GDPR; DPIA before pilot, not after. (3) 🔴 **Do not replicate this
+recipe in North America or LATAM from this base** — `PowerSchool`/`Infinite Campus` adapters were
+searched for and **none were found**, and `escuela horario open source` returns **`0`**. In those regions
+the adapter is the build, and `P260` becomes a `P259`-sized project rather than a `2`-week one.
+
+
 ## 🆕 P251–P255 — added at p750 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the recipe.**
