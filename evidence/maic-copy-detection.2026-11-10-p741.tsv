@@ -1,0 +1,14 @@
+# p741 — T352. Copy detection on the OpenMAIC cohort. GitHub's `fork` field reports False for
+# every row below. The licence-payload digest plus the copyright HOLDER LINE separates the
+# originals from the copies; the `fork` flag does not.
+repo	owner	stars	forks	fork_flag	created	pushed	licence_sha256_12	holder_line	verdict
+THU-MAIC/OpenMAIC	THU-MAIC	43190	6652	False	2026-03-11	2026-11-10	ba2525637432	Copyright (c) 2026 THU-MAIC	ORIGIN
+THU-MAIC/OpenMAIC-Project	THU-MAIC	7	0	False	2026-06-26	-	ba2525637432	Copyright (c) 2026 THU-MAIC	SELF-COPY (same owner)
+THU-MAIC/dsh-openmaic	THU-MAIC	122	20	False	2026-08-13	2026-08-13	1c78bffe1e04	Copyright (c) 2026 OpenMAIC contributors	SAME OWNER, OWN PAYLOAD
+THU-MAIC/MAIC-Vibe	THU-MAIC	8	3	False	2026-04-29	-	4f726f7a9e40	(differs)	SAME OWNER, OWN PAYLOAD
+Tyche-MKR/SmartOpenMAIC	Tyche-MKR	39	18	False	2026-08-31	2026-08-31	ba2525637432	Copyright (c) 2026 THU-MAIC	THIRD-PARTY COPY - do not file as a distinct agent
+YizukiAme/SpiralMAIC	YizukiAme	10	3	False	2026-07-04	2026-11-07	ba2525637432	Copyright (c) 2026 THU-MAIC	THIRD-PARTY COPY - do not file as a distinct agent
+# Corroborating signal on Tyche-MKR/SmartOpenMAIC: its `description` field is byte-identical to
+# THU-MAIC/OpenMAIC's ("Open Multi-Agent Interactive Classroom - Get an immersive, multi-agent
+# learning experience..."). SpiralMAIC rewrote its description, so description-matching alone
+# catches one of the two and the holder line catches both.

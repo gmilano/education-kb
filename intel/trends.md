@@ -4,6 +4,256 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p741` (researched 2026-11-10) — `T352`–`T357`
+
+**Added above `p740`'s `T344`–`T351`.** `p741` ran at the two owners `ACTION p739-A` named,
+`oat-sa` and `1edtech`, plus the third it named, `kennisnet`. `33` addresses probed,
+**`23` grants byte-read, `23 / 23` classified**, `10` addresses with no readable grant.
+
+🔴 **The most useful finding of this pass is against the pass itself, and it is `T355`.** The
+discovery channel returned [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) as a
+`43,190★` trending find, `p741` byte-read it, wrote a promotion row calling it *"the largest
+education agent this base has ever filed"* — and **the base has held it for roughly twenty passes,
+with a carried row on this very shelf and `223` mentions.** The row was withdrawn before
+publication by a shelf check, **not by a gate, because the gate that checks exactly this is
+unrunnable in this session (`Gap 247`).** Measured across the whole pass, **`12` of `27` candidate
+addresses were already on a sell shelf — a `44%` rediscovery rate.**
+
+🟢 **Two instrument results are genuinely new and both are good.** `apache.org` resolves in this
+session, so the `Apache-2.0` operative control finally has a **primary** reference instead of an
+internal majority — and the first thing it found was an altered copy of the licence (`T353`). And
+a README can name a licence file in a repository that **does not exist**, which is a fourth
+grant-readability state and the only one that reads as resolved (`T352`).
+
+⚠️ **Three findings this pass were drafted as new and are NOT.** The base already records that the
+`oat-sa` estate is `GPL`/`LGPL` throughout (Pass 222, `2026-10-15`), that
+[`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) carries an IMS Specification
+Document Licence at `12,402 B`, and that
+[`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) has no
+grant file. **They are recorded here as re-verifications with their probe depth stated, not as
+discoveries.** Saying so is the point of `T355`.
+
+---
+
+## T352 — 🔴 A fourth grant-readability state: the terms are asserted, their exact path is named, and the repository holding it does not exist
+
+**`P739-B` established three states** — grant present at a probed path; grant absent from every
+probed path (`T302`'s honest negative); grant present in `HEAD` but only at an unconventional path
+(`T347`). **`p741` found a fourth, and it is the most dangerous of the four because it reads as
+resolved rather than as a gap.**
+
+🟡 **The base already holds the outer finding.** `p718` recorded
+[`1EdTech/qti-examples`](https://github.com/1EdTech/qti-examples) (`35★`, `20` forks, pushed
+`2026-08-18`) as **unusable — `6` paths, all `404`**. `p741` re-probed it across the full `17`-name
+chain, `17 / 17` absent, and then **read the README, which `p718` did not.** It has a
+`## License` section and the section is specific:
+
+> *"This project is licensed under the terms of the 1EdTech Consortium Specification Document
+> License. See the [LICENSE](https://github.com/1EdTech/qti-central/blob/main/LICENSE) file for
+> details."* · `©2026 1EdTech Consortium, Inc. All Rights Reserved.`
+
+🔴 **`1EdTech/qti-central` does not exist.** Three independent channels agree:
+
+| Channel | Probe | Result |
+|---|---|---|
+| raw | `qti-central` × {`README.md`,`LICENSE`} × {`HEAD`,`main`,`master`} | **`6 / 6` → `404`** |
+| search | `gh api -X GET search/repositories -f q=repo:1EdTech/qti-central` | **no count returned at all** |
+| enumeration | `org:1edtech qti in:name` | **exactly `1` repository — `qti-examples` itself** |
+
+🔵 **Why the fourth state is worse than the second, and this is the transferable part.** A studio
+that probes paths and finds nothing records *"no grant found"* and escalates to the publisher. A
+studio that reads this README concludes the terms are **known** — a named licence, a named file —
+and proceeds. It has in fact been told the licence is a **Specification Document Licence** (so, per
+the base's existing `caliper-spec` record, *not a software grant*) and pointed at a file nobody can
+open, in the same block as **`All Rights Reserved`**. **The safe reading is that the QTI example
+corpus is not open-source-granted**, which is where `p718` already put it — but now with the reason
+attached, so the verdict survives a client challenging it.
+
+**Verdict form for a successor: `GRANT-REFERENCE-DANGLING`. Record the dangling target explicitly,
+and never upgrade a *named* licence to a *read* one.** 🟢 **Procedure change, cheap and general:
+when a licence chain returns nil, read the README's licence section before filing the nil** — it
+either names a path worth probing (`T347`) or names one that does not exist (this finding).
+
+## T353 — 🟢 `apache.org` is reachable, so the operative-text control has a primary reference at last — and the first thing it found was an altered `Apache-2.0`
+
+🟢 **The reachability result first, because it narrows a standing conclusion.**
+`P693-I` tested six primary domains (`unesco.org`, `iesalc.unesco.org`, `ipsos.com`,
+`teqsa.gov.au`, `eur-lex.europa.eu`, `joinup.ec.europa.eu`), found all six unresolvable, and
+concluded that this base *"can read GitHub and web-search summaries; it cannot read the primary
+text"*. `p741` fetched **`https://www.apache.org/licenses/LICENSE-2.0.txt` → `http=200`,
+`11,358 B`.** 🔵 **`P693-I` holds for governments, UN agencies, national regulators and academic
+publishers. It does not extend to licence stewards.** Keep the distinction: **licence text is
+adjudicable in this session; law and statistics are not.**
+
+🟢 **With a primary reference the control is a different instrument.** `693-G`, `692-G` and `T349`
+all compared payloads to **each other** and could say "`7 / 8` agree" but never *which* side was
+canonical. Canonical operative text — §1–§9 between `1. Definitions.` and
+`END OF TERMS AND CONDITIONS`, whitespace collapsed — is **`8,951` chars at sha256₁₂
+`db834674d194`**. Of `7` `Apache-2.0` payloads read this pass, **`6` reproduce it exactly**, across
+total file sizes from **`11,264 B` to `13,185 B`** — a **`1,921 B` spread carrying zero terms**,
+reproducing `693-G` for a third independent pass at a wider spread than `p739`'s `1,184 B`.
+
+⚠️ **Window note, stated so nobody compares incomparable numbers.** `p741`'s normalisation window
+is its own and yields `8,951` for canonical; `p739`'s yielded `8,967`. **The two figures are not
+comparable — only within-pass comparison against the fetched canonical is.**
+
+🔴 **The seventh payload is an altered copy, and the direction is now provable.**
+[`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (`12★`, pushed `2026-11-03`, already on
+[`../verticals/solutions.md`](../verticals/solutions.md)) normalises to `8,957` chars at
+`0ea735f186e8` — **three edits**, localised by diff and each counted against apache.org's own text:
+
+| Offset | Canonical (occurrences in apache.org text) | OpenCASE (occurrences) |
+|--:|---|---|
+| `2109` | `intentionally submitted to Licensor` (`1`) | `intentionally submitted to **the** Licensor` (`0`) |
+| `2910` | `has been received by Licensor` (`1`) | `has been received by **the** Licensor` (`0`) |
+| `5209` | `excluding **those** notices that do not pertain` (`2`) | `excluding **any** notices that do not pertain` (`0`) |
+
+🔵 **So `OpenCASE` is the altered party, not the majority** — the opposite shape from `T349`, where
+ADL's variant dropped section labels while preserving every word. ⚠️ **How to treat it:** the first
+two edits are grammatical and change nothing; **the third is in §4(d), the NOTICE-attribution
+clause**, where `those`→`any` widens what a redistributor may exclude from a NOTICE file. The
+practical verdict is unchanged — **it is `Apache-2.0` and it is usable** — but a studio mirroring
+licence files under a digest gate will see this payload fail. **Rule, extending `P61`: gate on the
+operative digest, and when it fails, diff before you judge.**
+
+## T354 — 🟢 `fork = false` is not evidence of independence; the licence payload's **copyright holder line** is
+
+**Measured, `evidence/maic-copy-detection.2026-11-10-p741.tsv`.** A search for the pass's
+highest-starred education agent returned it alongside three lookalikes in the same result set.
+🔴 **GitHub reports `fork: false` for every one of them.**
+
+| Repo | Owner | Stars | `fork` | Licence sha256₁₂ | Holder line |
+|---|---|--:|---|---|---|
+| `THU-MAIC/OpenMAIC` | THU-MAIC | `43,190` | `false` | `ba2525637432` | `Copyright (c) 2026 THU-MAIC` |
+| `Tyche-MKR/SmartOpenMAIC` | **Tyche-MKR** | `39` | `false` | **`ba2525637432`** | **`Copyright (c) 2026 THU-MAIC`** |
+| `YizukiAme/SpiralMAIC` | **YizukiAme** | `10` | `false` | **`ba2525637432`** | **`Copyright (c) 2026 THU-MAIC`** |
+| `THU-MAIC/OpenMAIC-Project` | THU-MAIC | `7` | `false` | `ba2525637432` | `Copyright (c) 2026 THU-MAIC` |
+| `THU-MAIC/dsh-openmaic` | THU-MAIC | `122` | `false` | `1c78bffe1e04` | `Copyright (c) 2026 OpenMAIC contributors` |
+| `THU-MAIC/MAIC-Vibe` | THU-MAIC | `8` | `false` | `4f726f7a9e40` | *(differs)* |
+
+🟢 **The mechanism, and why the digest alone is not the rule.** An `MIT` payload is `~1,065 B` and
+differs between projects *only* in its copyright line, so **a matching digest proves a verbatim
+copy including the holder.** Whether that copy is notable is then decided by the **owner** field:
+`OpenMAIC-Project` carries the identical payload under the *same* owner — a self-copy, unremarkable
+— while `Tyche-MKR` and `YizukiAme` are **third parties shipping THU-MAIC's own copyright notice**.
+Meanwhile `dsh-openmaic` and `MAIC-Vibe` are the same owner with **their own** payloads, which is
+how an independent sibling looks.
+
+🔵 **Corroboration, and the limit of each signal.** `SmartOpenMAIC`'s `description` field is
+byte-identical to `OpenMAIC`'s; `SpiralMAIC` rewrote its description. **Description-matching catches
+one of the two; the holder line catches both** — which is why the holder line is the rule and the
+description is only corroboration.
+
+**Rule: before filing a row in a cohort, compare the licence-payload digest and the holder line
+against the rows already held. `fork: false` means nothing** — a detached copy or a re-initialised
+repository reports it exactly as an original does. ⚠️ This is **discovery hygiene, not a licence
+finding**: all three are genuinely `MIT` and nothing here says the copies are unlawful. It says
+they are **not three projects, they are one.**
+
+## T355 — 🔴 This pass nearly published a promotion row for its own second-largest holding, and that prices `Gap 247` instead of merely restating it
+
+**This is a finding about the method, and it is the one worth carrying forward.**
+
+`ACTION p739-A` aimed `p741` at named owners, which is good practice and worked. But the pass also
+ran the mandated `github trending {industry} AI {year}` leg, which surfaced
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) at `43,190★` as a trending education
+agent. `p741` byte-read it (`MIT`, `1,065 B`, `ba2525637432`), confirmed `v1.5.0-rc.1` shipped
+**today**, and **drafted a promotion row describing it as "the largest education agent this base
+has ever filed".**
+
+🔴 **Every part of that framing was false.** The base has held `OpenMAIC` for roughly twenty
+passes: a carried row on `agents/top.md`, **`223` mentions** across the live shelves, and per-pass
+star-movement ledgers tracking it from `43,124` at `p724` to `43,147` at `p740`. It is **not** the
+largest row — `microsoft/autogen` (`61,761★`) and `HKUDS/DeepTutor` (`57,805★`, re-read this pass,
+`+234` since `p740`) are both larger, and `p728` already recorded an `84,290★` refusal.
+
+🟢 **It was caught, and the catch is the generalisable part: a `grep` of the candidate slug against
+the live shelves, run *before* writing, not after.** Extended to the whole candidate set:
+
+| Candidate addresses probed | Already on a sell shelf | Novel to sell shelves | Rediscovery rate |
+|--:|--:|--:|--:|
+| `27` | **`12`** | `15` | **`44%`** |
+
+🔴 **Why this prices `Gap 247` rather than restating it.** `Gap 247` ("run `make hooks` every
+pass") has been recorded as UNMET at `p664`, `p693`, `p739` and now `p741`, each time with the same
+environmental cause — every recipe `cd`s into `compose/code/*` and executes code **from the cloned
+repository**, which this session refuses. It has read for several passes as a procedural nag.
+**It is not.** `gate-promotion-ledger` is precisely the control that rejects a row whose address is
+already shelved, and in its absence this pass got within one step of publishing a duplicate of a
+`43,000★` holding. **The missing gate is worth one such defect per pass at the observed
+rediscovery rate.** 🔵 **Interim remedy a successor can run with no permissions at all, and it cost
+`p741` one command:**
+`grep -rF "{owner}/{repo}" --include=*.md . | grep -v '^./archive/'` **before writing any row.**
+Zero mentions means novel; a hit on `agents/top.md`, `repos/foundations.md` or
+`verticals/solutions.md` means **do not file a row — file a re-verification instead.**
+
+## T356 — 🟢 "The `oat-sa` estate is `GPL`/`LGPL` throughout" is true and hides the one component that matters: the `LGPL-2.1` seam, now named
+
+🟡 **The base already knows the headline.** Pass 222 (`2026-10-15`) recorded an organisation-wide
+licence exclusion — *"all `6` `oat-sa` rows declare `GPL-2.0-only`"* — with the consequence that
+the combination with GPLv3 Moodle **cannot be distributed**; elsewhere the estate is described as
+*"`GPL`/`LGPL` throughout"*. `p741` re-read it by payload and **confirms it, `6 / 6`, twenty-five
+passes later**, with the index agreeing with the payload on `6 / 6` — worth recording after `T338`,
+`T341` and `T344`: **the index is unreliable, not uniformly wrong, and on a long-established
+European vendor estate it was right.**
+
+| Repo | Stars | Verdict (byte-read `2026-11-10`) | Bytes | sha256₁₂ |
+|---|--:|---|--:|---|
+| [`oat-sa/package-tao`](https://github.com/oat-sa/package-tao) | `138` | **GPL-2.0** | `18,027` | `a45d0bb572ed` |
+| [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | `86` | **GPL-2.0** | `18,025` | `a01259a1b522` |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `64` | **GPL-2.0** | `18,025` | `a01259a1b522` |
+| [`oat-sa/devkit-lti1p3`](https://github.com/oat-sa/devkit-lti1p3) | `20` | **GPL-2.0** | `18,092` | `8177f9751321` |
+| [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | `8` | **GPL-2.0** | `18,026` | `39db8f9acf03` |
+| [`oat-sa/bundle-lti1p3`](https://github.com/oat-sa/bundle-lti1p3) | `9` | 🟢 **LGPL-2.1** | `26,525` | `814cf1a7e79d` |
+| [`oat-sa/tao-community`](https://github.com/oat-sa/tao-community) | `11` | 🔴 no grant at `17` paths | — | — |
+
+🟢 **What is new is the second word of "GPL/LGPL throughout".** An organisation-wide verdict tells a
+studio to walk away; it does not say **where the boundary is.** `p741` names it:
+[`oat-sa/bundle-lti1p3`](https://github.com/oat-sa/bundle-lti1p3) — a Symfony bundle for LTI 1.3
+as platform and/or tool — is **`LGPL-2.1`**, `26,525 B`, `814cf1a7e79d`, and it is **the one
+component in the estate a proprietary service may link rather than inherit from.** The address
+appears nowhere in this base's finding corpus before this pass.
+
+🔵 **Combined with the `Apache-2.0` LTI 1.3 libraries the base already holds on
+[`../repos/foundations.md`](../repos/foundations.md), the integration seam into TAO is permissive
+even though TAO is not.** That inverts the engagement shape from *"we cannot use TAO"* to *"we
+integrate with the client's TAO over a permissive seam and keep our code on our side of it"* —
+which is the whole content of `P211`. ⚠️ **`GPL-2.0-only` has no `or-later` clause**, so Pass 222's
+Moodle-GPLv3 incompatibility stands untouched: **the seam is for integration, never for
+redistribution in one artefact.**
+
+## T357 — 🟡 `kennisnet` was named as an EMEA state publisher worth `9` repositories; all `25` were enumerated and the owner is metadata plumbing, not platforms
+
+**An informed negative on a named target, recorded so a successor does not re-buy it.**
+
+`ACTION p739-A` listed `kennisnet` (`9` unpromoted) among the highest-value remaining owners, as
+"a further EMEA state publisher" alongside `esupportail` — which `p740` promoted to `6` rows.
+`p741` enumerated the **whole owner: `25` repositories.** The verdict is not a platform estate:
+
+- 🔴 **Maximum `4★` across all `25`.** The largest is `edurep-xslt` (`4★`, no grant) — a collection
+  of XSLTs. `20` of `25` sit at `0★` or `1★`.
+- 🟢 **The licence posture is genuinely good:** `15` of `25` index `MIT`, and the two byte-read
+  this pass confirm it — [`php-qti3`](https://github.com/kennisnet/php-qti3) (`1,066 B`,
+  `27fb6d463569`, holder `Copyright (c) 2026 Kennisnet`) and
+  [`phpEdurepSearch`](https://github.com/kennisnet/phpEdurepSearch) (`1,086 B`, `a732a2ae1c48`).
+- 🔵 **What the owner actually is:** the Dutch national education-ICT foundation's **metadata
+  plumbing** — OAI-PMH providers, NL-LOM and ECK CatalogService readers/writers, Eduterm clients,
+  SPARQL endpoints, and FORA/FOSA ArchiMate reference models. **Learning-object metadata
+  interchange for the Dutch sector, not deployable systems.**
+
+🟢 **Two rows are worth promoting anyway and both are filed this pass**, because small and MIT beats
+large and copyleft when the job is a seam: `php-qti3` is **the only permissive QTI 3 implementation
+this pass found**, directly against `T356`'s copyleft wall, and `phpEdurepSearch` is a working
+national-repository search client. ⚠️ **Stated plainly: `php-qti3` has `0★`, `0` forks and is `9`
+months old. It is the only permissive QTI 3 code found, and it is not yet something to ship a
+client dependency on.** Named so it can be **re-measured** rather than re-searched.
+
+🔵 **Closing the target:** `kennisnet` should not appear in a future `ACTION` list as an
+institutional-platform lead. **The remaining high-value owners from `p739`'s list are `oat-sa`
+(answered this pass, with a licence wall) and `1edtech` (answered across `p718`/`p741`), so the
+list is now spent and a successor needs a fresh census** — see [`open-gaps.md`](open-gaps.md).
+
+
 # 🆕 Trends new at `p740` (researched 2026-11-10) — `T344`–`T351`
 
 **Added above `p739`'s `T337`–`T343`.** 🔴 **Six of the eight are instrument findings, and three of

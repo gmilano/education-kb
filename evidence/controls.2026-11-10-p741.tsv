@@ -1,0 +1,11 @@
+# p741 channel controls, re-run before any row was written. 2026-11-10.
+control	method	result	verdict
+curl -sI https://github.com/{owner}/{repo}	HEAD on openedx/edx-platform (proven alive)	403	NO DISCRIMINATING POWER - the procedure's mandated check is still useless here (p734 holds, 3rd re-run)
+raw.githubusercontent.com existence probe	oat-sa/tao-core (alive)	200	DISCRIMINATES
+raw.githubusercontent.com existence probe	invented-xyz/nope (absent by construction)	404	DISCRIMINATES - 2/2 this pass
+raw.githubusercontent.com existence probe	1edtech/openapi-specs (guessed address, not enumerated)	404	DISCRIMINATES - a guessed slug is correctly refused
+gh api -X GET search/repositories -f q=org:{org}	org:oat-sa	200, total_count=201	ALIVE - p736's retraction of p735's death notice holds (T310)
+gh api -X GET search/repositories -f q=repo:{owner}/{name}	repo:HKUDS/DeepTutor	200, full metadata	ALIVE - contradicts p735's 422 claim; p736 was right
+gh api -X GET search/repositories -f q=repo:1EdTech/qti-central	absent repo	total_count=None	REFUSES CORRECTLY - a non-existent address returns no count
+www.apache.org/licenses/LICENSE-2.0.txt	GET	200, 11358 B	REACHABLE - a primary licence text IS readable in this session (see P693-I note, T354)
+make hooks	not attempted	n/a	UNMET - Gap 247 stands; see intel/open-gaps.md p741 row

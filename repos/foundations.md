@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Foundational Repositories — Education
 
-**Pass p740 · verified 2026-11-10.** Building blocks rather than deployable platforms:
+**Pass p741 · verified 2026-11-10.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -32,6 +32,31 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > 🔵 **Three of four index fields are wrong; `4 / 4` of this base's payload-derived cells are
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
+
+## 🆕 `p741` — the `LGPL-2.1` seam into a `GPL-2.0` estate, and the only permissive QTI 3 code found, `2026-11-10`
+
+> 🟢 **`4` rows, all byte-read today, all promoted out of the backlog, and the first one is worth
+> the pass.** `ACTION p739-A` sent this pass at `oat-sa` — the TAO estate, i.e. the **QTI** engine
+> this base's own `P204` recommends when the client is an assessment authority. The estate is
+> `GPL-2.0`, which Pass 222 already recorded organisation-wide. 🟢 **What `p741` adds is the
+> boundary: exactly one component is `LGPL-2.1`, and it is the LTI integration bundle** — so a
+> proprietary service may *link* it rather than inherit from it, and the seam into a client's TAO
+> becomes permissive even though TAO is not (`T356`, `P211`).
+>
+> 🔵 **The second theme is a deliberately small bet against a copyleft wall.**
+> [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) is the **only permissive QTI 3
+> implementation this pass found** anywhere. ⚠️ **It has `0★`, `0` forks and is `9` months old, and
+> that is stated in its row rather than buried** — it is a watch item and a last-resort build base,
+> not a dependency to ship. Filed because `T357`'s enumeration of the whole `kennisnet` owner
+> (`25` repositories, max `4★`) found nothing larger, and because naming it lets a successor
+> re-measure it instead of re-searching for it.
+
+| Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | Why it is a foundation |
+|---|--:|--:|---|---|---|
+| [oat-sa/bundle-lti1p3](https://github.com/oat-sa/bundle-lti1p3) | 9 | 13 | 🟢 **LGPL-2.1** · `LICENSE` · `26,525 B` · sha256₁₂ `814cf1a7e79d` · *index agrees* | **EMEA** | **The one linkable component in an otherwise `GPL-2.0` estate, and the most commercially consequential row on this page this pass.** A Symfony bundle implementing LTI 1.3 as platform and/or tool, from Open Assessment Technologies — the vendor behind TAO. 🟢 **`LGPL-2.1` permits linking from a proprietary service**, so a studio can integrate with a client's TAO deployment over LTI without the engagement inheriting `GPL-2.0`. 🔵 **This converts the standing verdict from "we cannot use TAO" into "we integrate over a permissive seam and keep our code on our side of it"** — see `P211` for the wiring. ⚠️ **`GPL-2.0-only` has no `or-later` clause**, so Pass 222's Moodle-GPLv3 incompatibility is untouched: **link for integration, never redistribute in one artefact.** `13` forks against `9★` is a `1.4 : 1` ratio — `T340`'s deployment signal, consistent with teams wiring it into their own platforms. Pushed `2026-07-30`. |
+| [oat-sa/oneroster-import](https://github.com/oat-sa/oneroster-import) | 8 | 7 | **GPL-2.0** · `LICENSE` · `18,026 B` · sha256₁₂ `39db8f9acf03` · *index agrees* | **EMEA** | **A working OneRoster import implementation** — the 1EdTech roster-exchange standard, i.e. how a district's class lists, enrolments and teacher assignments get into an assessment system without a bespoke ETL. 🟢 **Filed as reference code rather than a dependency, and the distinction is the licence:** `GPL-2.0` means reading it to learn the standard's edge cases is free and shipping it inside a client deliverable is not. 🔵 **Worth holding because OneRoster is the roster half of what `P206` calls AI-ready learning data** and this base's permissive roster coverage is thin. Pushed `2026-07-16`. |
+| [kennisnet/php-qti3](https://github.com/kennisnet/php-qti3) | **0** | **0** | 🟢 **MIT** · `LICENSE` · `1,066 B` · sha256₁₂ `27fb6d463569` · holder `Copyright (c) 2026 Kennisnet` | **EMEA** | **The only permissive QTI 3 implementation this pass found, and the direct answer to `T356`'s copyleft wall.** QTI 3 is the current assessment-item interchange standard; the canonical engine ([`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk), `86★`) is `GPL-2.0`, and 1EdTech's own QTI corpus is not granted at all (`T352`). **This is `MIT`, from the Netherlands' national education-ICT foundation**, pushed **`2026-11-05`**. ⚠️ **Stated plainly and not padded: `0★`, `0` forks, created `2026-01-27`.** It is **not** a dependency to ship — it is the only permissive starting point on the board, so it is filed to be **re-measured** each pass rather than re-discovered. 🔵 **Use it as a reading reference and a fork base when a client needs QTI 3 and cannot take copyleft**; otherwise integrate TAO over the `LGPL-2.1` seam above. |
+| [kennisnet/phpEdurepSearch](https://github.com/kennisnet/phpEdurepSearch) | 1 | 5 | 🟢 **MIT** · `LICENSE` · `1,086 B` · sha256₁₂ `a732a2ae1c48` | **EMEA** | **A client for Edurep, the Dutch national learning-object repository** — search a state-run catalogue of curriculum-aligned teaching material from code. 🟢 **Filed as the retrieval end of a sovereign-content pattern:** where `P198` needs a trusted corpus and `P207` needs it to stay in-jurisdiction, a national repository already curated by a ministry-backed foundation is the corpus, and this is the `MIT` way in. `5` forks against `1★` — the highest fork-to-star ratio in the `kennisnet` estate, which on `T340`'s rule means the people using it are **deploying** it. ⚠️ Dutch-language metadata (NL-LOM), so it is a Netherlands engagement tool specifically, not a generic EMEA one. Pushed `2026-01-27`. |
 
 ## 🆕 `p740` — the xAPI specification estate and the Ed-Fi pipeline, `14` rows promoted out of the backlog, `2026-11-10`
 

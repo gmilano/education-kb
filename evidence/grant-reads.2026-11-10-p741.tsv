@@ -1,0 +1,38 @@
+# p741 licence byte-reads, 2026-11-10. Channel: raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}
+# Chain (ordered, case-sensitive per 724-I), 17 names: LICENSE LICENSE.md LICENSE.txt COPYING LICENCE
+#   License LICENSE-MIT LICENSE-APACHE LICENSE-GPLv3.txt license license.txt licence LICENSE.rst
+#   COPYING.md MIT-LICENSE COPYRIGHT
+# Classifier: evidence/licence-gate.p738.py, run unmodified. 29 addresses probed, 23 grants read.
+repo	owner_region	verdict	path	bytes	sha256_12	index_says	note
+THU-MAIC/OpenMAIC	APAC	MIT	LICENSE	1065	ba2525637432	MIT	holder "Copyright (c) 2026 THU-MAIC"; relicensed to MIT at v0.3.0 (2026-06-28) per README news
+THU-MAIC/dsh-openmaic	APAC	MIT	LICENSE	1078	1c78bffe1e04	MIT	holder "Copyright (c) 2026 OpenMAIC contributors" - distinct from the parent
+THU-MAIC/MAIC-Core	APAC	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	operative 8951 / db834674d194 = canonical
+THU-MAIC/MAIC-Vibe	APAC	MIT	LICENSE	1065	4f726f7a9e40	MIT	same byte count as OpenMAIC, DIFFERENT digest - holder line differs
+THU-MAIC/OpenMAIC-Project	APAC	MIT	LICENSE	1065	ba2525637432	MIT	byte-identical to OpenMAIC; same owner, so a self-copy
+THU-MAIC/MAIC-UI	APAC	NO-GRANT-AT-17-PATHS	-	-	-	None	185 stars, no readable grant
+THU-MAIC/Awesome-AI-Era-Edu	APAC	NO-GRANT-AT-17-PATHS	-	-	-	None	93 stars, no readable grant
+THU-MAIC/SimClass	APAC	NO-GRANT-AT-17-PATHS	-	-	-	None	NAACL 2025 paper code; no licence section in README either
+Tyche-MKR/SmartOpenMAIC	APAC	MIT	LICENSE	1065	ba2525637432	MIT	T352: DIFFERENT owner, THU-MAIC holder line, fork=False. Third-party copy.
+YizukiAme/SpiralMAIC	APAC	MIT	LICENSE	1065	ba2525637432	MIT	T352: DIFFERENT owner, THU-MAIC holder line, fork=False. Third-party copy.
+1EdTech/lti-1-3-php-library	North America	Apache-2.0	LICENSE	11343	78b49eeaddbf	Apache-2.0	operative 8951 / db834674d194 = canonical
+1EdTech/LTI-Tool-Provider-Library-PHP	North America	Apache-2.0	LICENSE	11357	b40930bbcf80	Apache-2.0	operative 8951 / db834674d194 = canonical
+1EdTech/basiclti-util-java	North America	Apache-2.0	LICENSE	13185	ba1f153bdba3	Apache-2.0	operative 8951 / db834674d194 = canonical; +1842 B of decoration
+1EdTech/openbadges-validator-core	North America	Apache-2.0	LICENSE	13185	ba1f153bdba3	Apache-2.0	operative 8951 / db834674d194 = canonical
+1EdTech/digital-credentials-public-validator	North America	Apache-2.0	LICENSE	11357	c71d239df917	Apache-2.0	operative 8951 / db834674d194 = canonical
+1EdTech/OpenCASE	North America	Apache-2.0	LICENSE	11264	ccf5a4564e72	Apache-2.0	T354: operative 8957 / 0ea735f186e8 - THREE edits vs canonical, lone deviant of 7
+1EdTech/cert-schema	North America	MIT	LICENSE	1096	06d87bf42a0a	MIT	holder "Copyright (c) 2016 Media Lab Learning Initiative"
+1EdTech/CaliperBootcamp	North America	MIT	LICENSE.md	1075	d4d2e27cd960	MIT	
+1EdTech/caliper-spec	North America	UNCLASSIFIED (T352-family)	LICENSE.md	12402	6178707d6c68	NOASSERTION	T352: IMS Global SPECIFICATION DOCUMENT LICENSE - not a software grant
+1EdTech/openbadges-specification	North America	NO-GRANT-AT-22-PATHS	-	-	-	None	205 stars, the org's most-starred repo; +5 HTML/NOTICE paths also 404; README names no licence
+1EdTech/qti-examples	North America	GRANT-REFERENCE-DANGLING	-	-	-	None	T355: README names 1EdTech/qti-central/blob/main/LICENSE; that repo does not exist (6/6 404)
+1EdTech/lti-postmessage-library	North America	NO-GRANT-AT-17-PATHS	-	-	-	None	
+1EdTech/openbadges-discussion	North America	NO-GRANT-AT-17-PATHS	-	-	-	None	
+oat-sa/package-tao	EMEA	GPL-2.0	LICENSE	18027	a45d0bb572ed	GPL-2.0	T356: the TAO distribution meta-package
+oat-sa/tao-core	EMEA	GPL-2.0	LICENSE	18025	a01259a1b522	GPL-2.0	T356: digest identical to qti-sdk
+oat-sa/qti-sdk	EMEA	GPL-2.0	LICENSE	18025	a01259a1b522	GPL-2.0	T356: the canonical PHP QTI engine
+oat-sa/devkit-lti1p3	EMEA	GPL-2.0	LICENSE	18092	8177f9751321	GPL-2.0	T356
+oat-sa/oneroster-import	EMEA	GPL-2.0	LICENSE	18026	39db8f9acf03	GPL-2.0	T356
+oat-sa/bundle-lti1p3	EMEA	LGPL-2.1	LICENSE	26525	814cf1a7e79d	LGPL-2.1	T356: the ONE linkable component in the estate
+oat-sa/tao-community	EMEA	NO-GRANT-AT-17-PATHS	-	-	-	None	
+kennisnet/php-qti3	EMEA	MIT	LICENSE	1066	27fb6d463569	MIT	holder "Copyright (c) 2026 Kennisnet"; 0 stars, pushed 2026-11-05
+kennisnet/phpEdurepSearch	EMEA	MIT	LICENSE	1086	a732a2ae1c48	MIT	

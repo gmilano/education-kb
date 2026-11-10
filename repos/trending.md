@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p741) — 🟢 **THE `GPL-2.0` ASSESSMENT ESTATE THIS BASE WROTE OFF ORGANISATION-WIDE HAS EXACTLY ONE `LGPL-2.1` COMPONENT, IT IS THE LTI BUNDLE, AND THAT TURNS "WE CANNOT USE TAO" INTO AN ARCHITECTURE. 🔴 THE STANDARDS BODY'S QTI CORPUS NAMES ITS LICENCE FILE IN A REPOSITORY THAT DOES NOT EXIST — `6 / 6` PROBES `404`, SEARCH RETURNS NO COUNT, AND THE OWNER HAS EXACTLY ONE `qti`-NAMED REPO. 🟡 AN EMEA STATE PUBLISHER NAMED AS A TOP TARGET IS `25` REPOSITORIES OF METADATA PLUMBING WITH A `4★` CEILING.**
+
+**`6` institutional rows promoted (`4` foundations, `2` platforms) · `23` payloads byte-read,
+`23 / 23` classified · `0` index-vs-payload disagreements — the first clean pass on that axis in
+weeks · `10` addresses with no readable grant · `3` owners enumerated end to end (`oat-sa` `201`
+repos, `1edtech` `46`, `kennisnet` `25`).**
+
+### Promoted this pass, by region
+
+| Repo | Stars | Forks | Licence (byte-read) | Region | Shelf |
+|---|--:|--:|---|---|---|
+| [oat-sa/package-tao](https://github.com/oat-sa/package-tao) | **138** | 78 | 🔴 GPL-2.0-only · `18,027 B` · `a45d0bb572ed` | **EMEA** | platforms |
+| [oat-sa/devkit-lti1p3](https://github.com/oat-sa/devkit-lti1p3) | 20 | 12 | 🔴 GPL-2.0-only · `18,092 B` · `8177f9751321` | **EMEA** | platforms |
+| [oat-sa/bundle-lti1p3](https://github.com/oat-sa/bundle-lti1p3) | 9 | 13 | 🟢 **LGPL-2.1** · `26,525 B` · `814cf1a7e79d` | **EMEA** | foundations |
+| [oat-sa/oneroster-import](https://github.com/oat-sa/oneroster-import) | 8 | 7 | 🔴 GPL-2.0 · `18,026 B` · `39db8f9acf03` | **EMEA** | foundations |
+| [kennisnet/php-qti3](https://github.com/kennisnet/php-qti3) | **0** | **0** | 🟢 **MIT** · `1,066 B` · `27fb6d463569` | **EMEA** | foundations |
+| [kennisnet/phpEdurepSearch](https://github.com/kennisnet/phpEdurepSearch) | 1 | 5 | 🟢 **MIT** · `1,086 B` · `a732a2ae1c48` | **EMEA** | foundations |
+
+⚠️ **All six are EMEA, and that imbalance is the pass's own, not the world's.** `ACTION p739-A`
+named three owners and two of the three (`oat-sa` Luxembourg/France, `kennisnet` Netherlands) are
+European. **No North America, APAC or LATAM row was promoted this pass** — the APAC leg produced
+re-verifications only (`T355`), and **LATAM produced nothing again**, which is now its own standing
+gap rather than a per-pass observation.
+
+### 🔴 Declared unusable this pass, with probe depth stated
+
+| Address | Stars | Verdict |
+|---|--:|---|
+| [1EdTech/qti-examples](https://github.com/1EdTech/qti-examples) | 35 | 🔴 **`GRANT-REFERENCE-DANGLING` (`T352`)** — `17 / 17` paths `404`; README names `1EdTech/qti-central/blob/main/LICENSE`; **that repository does not exist** (`6 / 6` raw probes `404`, search returns no count, `org:1edtech qti in:name` → `1` repo, itself). Same block says `All Rights Reserved`. `p718` had this as "unusable, `6` paths" — **now with the reason.** |
+| [1EdTech/openbadges-specification](https://github.com/1EdTech/openbadges-specification) | **205** | 🔴 **No grant, re-confirmed at `22` paths** (the `17`-name chain plus `LICENSE.html`, `license.html`, `speclicense.html`, `NOTICE`). The org's **most-starred** repo. README discusses workgroup process only. Confirms `p718` at `3.7×` the probe depth. |
+| [THU-MAIC/MAIC-UI](https://github.com/THU-MAIC/MAIC-UI) | 185 | 🔴 **No grant at `17` paths**, no README licence section. Generative-UI courseware from the lab whose flagship is MIT. **The grant does not extend; ask the lab.** |
+| [THU-MAIC/Awesome-AI-Era-Edu](https://github.com/THU-MAIC/Awesome-AI-Era-Edu) | 93 | 🔴 No grant at `17` paths. |
+| [THU-MAIC/SimClass](https://github.com/THU-MAIC/SimClass) | 20 | 🔴 No grant at `17` paths. NAACL 2025 paper code. |
+| [oat-sa/tao-community](https://github.com/oat-sa/tao-community) | 11 | 🔴 No grant at `17` paths, in an estate where `6 / 6` siblings grant explicitly. |
+| [1EdTech/lti-postmessage-library](https://github.com/1EdTech/lti-postmessage-library) · [1EdTech/openbadges-discussion](https://github.com/1EdTech/openbadges-discussion) | 6 · 11 | 🔴 No grant at `17` paths each. |
+
+### 🟢 The `Apache-2.0` operative-text control, now against a primary reference
+
+**`apache.org` resolves** (`http=200`, `11,358 B`) — which `P693-I`'s unreachable-primaries finding
+had not tested, and which narrows that finding to governments, UN agencies, regulators and academic
+publishers rather than licence stewards. Canonical operative §1–§9 = **`8,951` chars at
+`db834674d194`**. Of `7` payloads read this pass:
+
+- 🟢 **`6 / 7` reproduce it exactly**, across totals from `11,264 B` to `13,185 B` — a
+  **`1,921 B` spread carrying zero terms**, reproducing `693-G` at a wider spread than `p739`'s
+  `1,184 B`.
+- 🔴 **`1EdTech/OpenCASE` is an altered copy**, `8,957` chars at `0ea735f186e8`: two grammatical
+  `the` insertions and **`those`→`any` in §4(d)'s NOTICE-attribution clause.** Verdict still
+  `Apache-2.0` and still usable; **a digest gate will reject it, and now the reason is on record.**
+
+⚠️ `p741`'s normalisation window yields `8,951` for canonical where `p739`'s yielded `8,967`. **The
+numbers are not comparable across passes — only within a pass, against the fetched canonical.**
+
+
 ## 🆕 2026-11-10 (p740) — 🟢 **THE PUBLISHER OF THE xAPI SPECIFICATION IS A US DEPARTMENT OF DEFENSE PROGRAMME, ITS ESTATE IS `APACHE-2.0` WITH AN `MIT` CONFORMANCE SUITE, AND ITS REFERENCE ARCHITECTURE IS PUBLIC DOMAIN — ALL OF IT SAT UNREAD IN THE BACKLOG WHILE THIS BASE'S OWN MARKET PAGE CALLED IT THE PREREQUISITE FOR AI IN EDUCATION. 🟢 THE ED-FI PIPELINE SHIPS A SYNTHETIC-DATA GENERATOR, WHICH IS WHAT MAKES A K-12 ENGAGEMENT STARTABLE. 🔴 FOUR OF ITS PACKAGES ARE `MPL-2.0` AND EVERY ONE OF THEM CONTAINS THE STRING "GNU GENERAL PUBLIC LICENSE".**
 
 **`24` institutional rows promoted (`15` foundations, `9` platforms) · `36` payloads byte-read,

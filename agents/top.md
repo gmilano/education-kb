@@ -6,7 +6,9 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p740 · verified 2026-11-10.** The `4` rows added this pass were read today; rows carried
+**Pass p741 · verified 2026-11-10.** 🔴 **`p741` added `0` agent rows and the nil is the finding: of `10` addresses in this pass's cohort, `3` were already on this shelf, `3` carry no readable grant and `2` are third-party copies (`T354`, `T355`). Read `P210` before adding a row to any shelf — this pass drafted a promotion for a repository the base has held for twenty passes.**
+
+**Carried header from p740:** The `4` rows added this pass were read today; rows carried
 over name the date they were last read. 🔴 **`p740` found and fixed three defects in this base's
 own licence classifier (`T344`, `T345`, `T349`) — re-read any copyleft cell written before this
 pass against `T344`'s discriminator before quoting it to a client.** Rows up to `p734` were read from
@@ -35,6 +37,54 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p741` — `0` rows added, and the nil is the finding, `2026-11-10`
+
+> 🔴 **`p741` adds no agent row, and this section exists because a nil that is not written down
+> looks exactly like coverage.** The agent cohort this pass was `8` addresses under
+> [`THU-MAIC`](https://github.com/THU-MAIC) — Tsinghua's MAIC lab, publisher of the highest-starred
+> education agent in open source — plus `2` lookalikes from the same search result. **The
+> disposition of all `10` is below. Not one is filable.**
+>
+> | Disposition | Count | Addresses |
+> |---|--:|---|
+> | 🟡 **Already on this shelf** — re-verified, not promoted | `3` | `OpenMAIC` (`43,190★`, `MIT`), `dsh-openmaic` (`122★`, `MIT`), `MAIC-Core` (`42★`, `Apache-2.0`) |
+> | 🔴 **No grant readable at `17` paths, and no licence section in the README** | `3` | `MAIC-UI` (`185★`), `Awesome-AI-Era-Edu` (`93★`), `SimClass` (`20★`) |
+> | 🔴 **Third-party copies of `OpenMAIC`, deliberately not filed** (`T354`) | `2` | `Tyche-MKR/SmartOpenMAIC` (`39★`), `YizukiAme/SpiralMAIC` (`10★`) |
+> | 🟡 **Permissive but too thin to sell** | `2` | `MAIC-Vibe` (`8★`, `MIT`), `OpenMAIC-Project` (`7★`, `MIT`, a self-copy) |
+>
+> 🔴 **The `3` re-verifications are the pass's own correction and they are recorded at `T355`.** The
+> mandated `github trending` leg returned `OpenMAIC` as a novel trending find; `p741` byte-read it
+> and drafted a promotion row calling it *"the largest education agent this base has ever filed"*.
+> **It has been on this shelf for roughly twenty passes with `223` mentions, and it is not the
+> largest — `autogen` (`61,761★`) and `DeepTutor` (`57,805★`) are both larger.** The row was
+> withdrawn by a pre-write shelf `grep`, **not by a gate, because `gate-promotion-ledger` is
+> unrunnable here (`Gap 247`).** Across the whole pass, **`12` of `27` candidates were already
+> shelved — a `44%` rediscovery rate.**
+>
+> 🔴 **`MAIC-UI` is the expensive absence and is named so it is not re-bought.**
+> [`THU-MAIC/MAIC-UI`](https://github.com/THU-MAIC/MAIC-UI) — *"Making Interactive Courseware with
+> Generative UI"*, `185★`, `39` forks — is generative interactive courseware from the lab whose
+> flagship is `MIT`, and it returns **`404` on all `17` licence paths with no licence section in its
+> README.** ⚠️ **Do not assume the flagship's grant extends to it.** The lab grants per repository
+> and demonstrably varies: `OpenMAIC` is `MIT`, `MAIC-Core` is `Apache-2.0`, and three siblings
+> carry nothing. **Ask the lab; this is a worthwhile email, not a worthwhile assumption.**
+>
+> 🟢 **Two carried rows were re-read today and their numbers refreshed in passing:**
+> `HKUDS/DeepTutor` **`57,571 → 57,805`** (`+234` since `p740`, `7,046` forks, `Apache-2.0`, pushed
+> `2026-11-07`) and `THU-MAIC/OpenMAIC` **`43,147 → 43,190`** (`+43`, `6,652` forks, `v1.5.0-rc.1`
+> shipped **today**). ⚠️ **One licence-history fact on `OpenMAIC` that a studio must carry and that
+> this shelf did not previously state: it was relicensed to `MIT` at `v0.3.0` on `2026-06-28`**, so
+> **any fork or vendored copy taken before that date is under different terms and must be
+> re-checked.** It has also published `3` `GHSA` advisories (sanitised slide HTML, SSRF/DNS-
+> rebinding, hardened cloud parsing, Aug–Oct 2026) — read as a maturity signal, but **pin at or
+> after `v1.1.3`.**
+>
+> 🔵 **Where this pass's promotions went instead:** `4` rows to
+> [`../repos/foundations.md`](../repos/foundations.md) and `2` to
+> [`../verticals/solutions.md`](../verticals/solutions.md), all from the `oat-sa` and `kennisnet`
+> owners `ACTION p739-A` named. See `T356` and `T357`.
+
 
 ## 🆕 `p740` — reads and verifies `2026-11-10`
 

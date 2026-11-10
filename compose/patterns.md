@@ -4,6 +4,174 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Patterns new at `p741` (2026-11-10) — `P209`–`P211`
+
+**Three recipes. Every component grant was byte-read at `p741` or carried from a named earlier pass
+with its digest, and the verdict is repeated in each component line so a reader never has to leave
+the pattern to know what they may ship.** `P209` and `P211` exist because of one finding — the
+`LGPL-2.1` seam at `T356` — and they are the two halves of it: `P211` integrates with a copyleft
+engine a client already runs, `P209` avoids needing one at all. `P210` is tooling: the
+pre-write shelf check that `T355` says this base cannot afford to skip.
+
+---
+
+## P209 — Assessment interoperability without inheriting copyleft: QTI 3 and OneRoster on a permissive stack (all four regions; 5–7 weeks)
+
+**The client is an assessment authority, a ministry, a courseware publisher or an LMS vendor that
+needs to exchange items and rosters to standards, and cannot take a `GPL` obligation into its
+product.** The obvious answer is TAO, and `T356` is why that answer fails: the canonical QTI engine
+([`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk), `86★`) is **`GPL-2.0-only`**, with no
+`or-later` clause and no distributable combination with GPLv3 Moodle.
+
+### The parts — grants byte-read at `p741` unless marked carried
+
+| Role | Component | Grant (byte-read) |
+|---|---|---|
+| QTI 3 item read/write | [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) | **MIT** · `1,066 B` · `27fb6d463569` |
+| LTI 1.3 launch + grade passback | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | **Apache-2.0** · `11,343 B` · `78b49eeaddbf` · operative **canonical** |
+| LTI 1.3 on the JVM | [`1EdTech/basiclti-util-java`](https://github.com/1EdTech/basiclti-util-java) | **Apache-2.0** · `13,185 B` · `ba1f153bdba3` · operative **canonical** |
+| Credential issue + verify | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** · `11,357 B` · `c71d239df917` *(carried, `p718`; re-read `p741`)* |
+| Open Badges validation | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | **Apache-2.0** · `13,185 B` · `ba1f153bdba3` |
+| Learner-activity record | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) + [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | Apache-2.0 / **MIT** *(carried, `p740`)* |
+| Roster semantics reference | [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | 🔴 **GPL-2.0 — READ ONLY, DO NOT SHIP** |
+
+### Wiring
+
+1. **Items.** `php-qti3` parses and emits QTI 3. Author items with an LLM into QTI 3 XML, then
+   **validate on the way in** — never trust generated XML against a standard.
+2. **Rosters.** Implement OneRoster ingest yourself, reading `oat-sa/oneroster-import` as a
+   specification commentary for the edge cases (enrolment churn, mid-term transfers, demographic
+   field optionality). 🔴 **Read it, do not link it** — `GPL-2.0`.
+3. **Delivery.** Expose the item bank as an LTI 1.3 tool via the `Apache-2.0` library matching the
+   client's runtime (PHP or JVM). The client's existing LMS launches it; grades return over AGS.
+4. **Telemetry.** Emit xAPI to an LRS; gate the deployment on the `MIT` conformance suite and hand
+   the test run over as a deliverable (`P205`).
+5. **Credentials.** On completion, issue an Open Badge / CLR and verify it with the `Apache-2.0`
+   validators, so the outcome is portable (`P201`).
+
+### 🔴 The licence obligation, stated once and plainly
+
+**Everything shipped is `MIT` or `Apache-2.0`.** The two copyleft components
+(`oneroster-import`, and TAO itself if present) stay **outside the shipped artefact** — one as
+reading, one as a separate service (`P211`). ⚠️ **`php-qti3` has `0★` and `0` forks** (`T357`):
+budget a fork and a test suite of your own around it, and **do not present it to a client as a
+mature dependency.** It is the only permissive QTI 3 code on the board, which is a reason to use it
+carefully, not a reason to oversell it.
+
+### Why a client buys this
+
+Because the alternative quotes they receive will either be proprietary, or `GPL` with the
+obligation undisclosed. **This pattern's differentiator is that every grant was read at the byte
+level and can be shown**, which — per `T350`'s procurement finding and `P205`'s conformance
+argument — is increasingly what a public-sector buyer's framework actually asks for.
+
+---
+
+## P210 — The pre-write shelf check: one command that stops this base publishing its own holdings as discoveries (tooling, not a client pattern; 2 minutes per pass, then a standing gate)
+
+🔴 **`p741` drafted a promotion row for [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)
+describing it as "the largest education agent this base has ever filed". The base has held it for
+roughly twenty passes with `223` mentions and a carried row, and it is not the largest.** The row
+was withdrawn before publication. **`12` of `27` candidate addresses this pass were already on a
+sell shelf — a `44%` rediscovery rate** (`T355`).
+
+### Why the existing gate does not catch it
+
+`gate-promotion-ledger` is exactly the control for this, and `Gap 247` has recorded it as
+**unrunnable at `p664`, `p693`, `p739` and `p741`** — every `make hooks` recipe `cd`s into
+`compose/code/*` and executes code **from the cloned repository**, which this session refuses.
+🔵 **That gap has read for several passes as a procedural nag. It is not: the missing gate is worth
+roughly one duplicate-row defect per pass at the observed rediscovery rate.**
+
+### Runnable, with no permissions beyond reading the clone
+
+```sh
+# Run from the repository root, once per candidate, BEFORE writing a row.
+check() {
+  hits=$(grep -rF "$1" --include='*.md' . | grep -v '^./archive/' | wc -l)
+  shelf=$(grep -lF "$1" agents/top.md repos/foundations.md verticals/solutions.md 2>/dev/null)
+  if [ -n "$shelf" ]; then echo "🔴 $1 ALREADY SHELVED in: $shelf -> file a RE-VERIFICATION, not a row"
+  elif [ "$hits" -gt 0 ]; then echo "🟡 $1 known ($hits mentions, not on a sell shelf) -> legitimate PROMOTION"
+  else echo "🟢 $1 novel ($hits mentions) -> new row"; fi
+}
+```
+
+### The three verdicts and what each one means
+
+| Verdict | Meaning | Correct action |
+|---|---|---|
+| 🟢 `0` mentions | genuinely novel | file a new row |
+| 🟡 mentions `> 0`, not on a sell shelf | **in the backlog** — the `3,590`-address pool `P693-A` says to spend passes on | **file a promotion** and say it is one |
+| 🔴 on a sell shelf | already sold | **file a re-verification with the date and digest**, never a row |
+
+### Controls run at `p741`
+
+Run over all `27` candidates: `12` 🔴, `3` 🟡, `12` 🟢. **The `12` 🔴 verdicts include `OpenMAIC`
+(`223` mentions), `tao-core` (`70`), `lti-1-3-php-library` (`50`) and
+`openbadges-validator-core` (`42`)** — every one of which this pass had byte-read and was prepared
+to write up. ⚠️ **The check is substring-based and inherits `P693-F`'s false-positive class**, so
+read the hit before acting on it: a `0`-mention verdict is reliable, a nonzero one needs an eye.
+
+---
+
+## P211 — Integrating with a client's `GPL-2.0` assessment platform without inheriting it: the TAO seam (EMEA first, then global; 4–6 weeks)
+
+**The client already runs TAO** — it is the engine behind national and international large-scale
+assessment programmes, so this is a real and recurring situation, not a hypothetical. The studio's
+instinct is to fork it. 🔴 **Do not.** `T356`: the estate is **`GPL-2.0-only`**, byte-confirmed
+`6 / 6` this pass, and `-only` means **no `or-later` upgrade path and no distributable combination
+with GPLv3 Moodle** (Pass 222).
+
+### 🟢 The finding this pattern exists to exploit
+
+Of the `201` repositories under [`oat-sa`](https://github.com/oat-sa), **exactly one of the seven
+read this pass is `LGPL-2.1`**: [`oat-sa/bundle-lti1p3`](https://github.com/oat-sa/bundle-lti1p3)
+(`9★`, `13` forks, `26,525 B`, `814cf1a7e79d`) — the Symfony bundle implementing LTI 1.3 as
+platform and/or tool. **`LGPL-2.1` permits linking from proprietary code.** The base already knew
+the estate was "`GPL`/`LGPL` throughout"; **what it did not record is which component is the `LGPL`
+one, and that is the difference between walking away and having an architecture.**
+
+### The wiring — the boundary is the pattern
+
+1. **TAO stays whole and stays theirs.** Deploy or leave
+   [`oat-sa/package-tao`](https://github.com/oat-sa/package-tao) (`138★`, `GPL-2.0-only`)
+   **unmodified**, as its own service with its own process and its own repository. 🟢 **Nothing
+   the studio writes enters that boundary**, so nothing the studio writes is a derivative work.
+2. **The seam is LTI 1.3 over the `LGPL-2.1` bundle.** Link `bundle-lti1p3` from the integration
+   service to speak platform-or-tool LTI against TAO. ⚠️ **`LGPL` conditions still apply to the
+   bundle itself:** keep it a *separately replaceable* dependency (Composer, unvendored,
+   unforked) and ship the obligation notice. **If you patch the bundle, publish the patch.**
+3. **Develop against the devkit, ship the permissive library.** Stand both sides of the handshake
+   up locally with [`oat-sa/devkit-lti1p3`](https://github.com/oat-sa/devkit-lti1p3) (`20★`,
+   `GPL-2.0-only`) — **a test harness beside your code, never a library inside it** — then ship
+   against [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library)
+   (`Apache-2.0`, operative text canonical per `T353`).
+4. **The AI work lives entirely on the studio's side.** Item generation, distractor analysis,
+   rubric drafting, difficulty calibration and reporting all run in the studio's own service,
+   exchanging **QTI 3** items and **AGS** grades across the seam. 🟢 **The model never touches
+   TAO's source**, so the AI layer carries no copyleft at all.
+5. **Telemetry out, not in.** Emit xAPI from the integration service to an LRS (`P205`), rather
+   than instrumenting TAO internally.
+
+### 🔴 What this pattern must never become
+
+⚠️ **A fork of TAO with AI features merged in.** That is a derivative work of `GPL-2.0-only` code:
+the client's platform and the studio's model-serving code become one distributable artefact, the
+source-offer duty attaches to all of it, and **the Moodle combination becomes undistributable.**
+If an engagement genuinely requires engine changes, the honest options are (a) contribute them
+upstream under `GPL-2.0`, or (b) build on `php-qti3` under `P209` instead. **Say this in the
+proposal rather than discovering it at delivery.**
+
+### Why a client buys this
+
+Because they have already been told by someone that their platform is "open source, so we can
+change it", and the first legal review will contradict that. **Arriving with the boundary already
+drawn — the one `LGPL` component named, the digest of its licence on record, the AI layer provably
+outside the copyleft perimeter — is a different conversation from arriving with a fork plan.**
+🔵 EMEA-first because the vendor and its largest deployments are European and the procurement
+frameworks there ask the licence question explicitly (`T350`), but the pattern is jurisdiction-free.
+
+
 # 🆕 Patterns new at `p740` (2026-11-10) — `P205`–`P208`
 
 **Four recipes, each naming the specific repositories and the wiring.** Every component grant was

@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
-**Pass p739 · verified 2026-11-10.** Deployable systems a client may already run, or could
+**Pass p741 · verified 2026-11-10.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -14,6 +14,25 @@ Licence is the decisive field here, because an LMS is almost always *offered as 
 which is exactly what the AGPL network clause is written about. Read the posture column
 before proposing a fork.
 
+
+## 🆕 `p741` — the deployable TAO distribution and its LTI development kit, with the licence boundary drawn, `2026-11-10`
+
+> 🟢 **`2` rows, both byte-read today, both promoted out of the backlog.** These are the
+> *deployable* end of the `oat-sa` estate that `ACTION p739-A` sent this pass to read:
+> [`tao-core`](https://github.com/oat-sa/tao-core) (the extension) was already on this shelf;
+> **the installable distribution and the LTI development kit were not.**
+>
+> 🔴 **Read the licence column before proposing either, and read `T356` before quoting it.** Both
+> are **`GPL-2.0-only`**, byte-confirmed, and `GPL-2.0-only` has **no `or-later` clause** — so the
+> combination with GPLv3 Moodle that Pass 222 recorded as undistributable is unchanged. 🟢 **The
+> usable architecture is not a fork:** run TAO as its own service and integrate over the
+> `LGPL-2.1` [`bundle-lti1p3`](https://github.com/oat-sa/bundle-lti1p3) seam now filed on
+> [`../repos/foundations.md`](../repos/foundations.md). `P211` is that pattern end to end.
+
+| Platform | Repo | Stars | Forks | Licence (byte-read 2026-11-10) | Region | What it is, and what it is for |
+|---|---|--:|--:|---|---|---|
+| **TAO (distribution)** | [oat-sa/package-tao](https://github.com/oat-sa/package-tao) | **138** | 78 | 🔴 **GPL-2.0-only** · `LICENSE` · `18,027 B` · sha256₁₂ `a45d0bb572ed` · *index agrees* | **EMEA** | **The installable TAO platform — the most-starred address in the `oat-sa` estate and the artefact a client actually deploys**, as opposed to [`tao-core`](https://github.com/oat-sa/tao-core) which is one extension inside it. TAO is a full computer-based assessment platform: item authoring in **QTI**, test assembly, delivery, proctoring, results. 🟢 **Procurement-credible in a way few open platforms are** — it is the engine behind national and international large-scale assessment programmes, which is the provenance an assessment authority or ministry asks for. `78` forks against `138★` (`1 : 1.8`) reads as institutions standing up their own instances (`T340`). 🔴 **`GPL-2.0-only`, and the `-only` is the whole risk:** no `or-later` clause means no upgrade path to GPLv3 and **no distributable combination with Moodle**. ⚠️ Pushed `2024-08-29` — the meta-package lags its extensions, several of which were pushed **today**, so install from it and track the extensions. **Deploy it unmodified as a service; integrate over LTI; never vendor it into a client codebase.** |
+| **TAO LTI 1.3 Development Kit** | [oat-sa/devkit-lti1p3](https://github.com/oat-sa/devkit-lti1p3) | 20 | 12 | 🔴 **GPL-2.0-only** · `LICENSE` · `18,092 B` · sha256₁₂ `8177f9751321` · *index agrees* | **EMEA** | **A runnable LTI 1.3 platform *and* tool in one package — the thing that makes an LTI integration demonstrable in an afternoon instead of a sprint.** It stands up both sides of the handshake locally, so a studio can prove a tool launches, exchanges claims and posts grades back before touching the client's estate. 🟢 **Filed for the discovery and demo phase of an engagement specifically**, which is where LTI work actually fails. 🔴 **`GPL-2.0-only`: use it as a test harness beside your code, never as a library inside it** — and because it is a development kit, that boundary is the natural one anyway. Pushed `2026-11-04`. 🔵 Pair it with 1EdTech's `Apache-2.0` LTI libraries already on [`../repos/foundations.md`](../repos/foundations.md): **develop against the devkit, ship the Apache-2.0 library.** |
 
 ## 🆕 `p740` — cmi5 players, a French university estate, and a three-way split grant 🆕 new section at `p740`
 

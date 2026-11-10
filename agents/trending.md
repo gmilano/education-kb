@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p741) — 🔴 **THIS PASS DREW A PROMOTION ROW FOR THE SECOND-LARGEST AGENT IT ALREADY OWNS, CALLED IT A DISCOVERY, AND WAS CAUGHT BY A `grep` RATHER THAN BY A GATE — `12` OF `27` CANDIDATES WERE ALREADY SHELVED, A `44%` REDISCOVERY RATE. 🟢 A README CAN NAME ITS LICENCE FILE IN A REPOSITORY THAT DOES NOT EXIST. 🟢 `apache.org` RESOLVES, SO THE OPERATIVE-TEXT CONTROL HAS A PRIMARY REFERENCE AT LAST — AND THE FIRST THING IT CAUGHT WAS AN ALTERED `APACHE-2.0`.**
+
+**`0` agent rows · `4` foundations rows · `2` platform rows · `6` new trends (`T352`–`T357`) ·
+`3` new patterns (`P209`–`P211`) · **`23` licence payloads byte-read, `23 / 23` classified** ·
+`10` addresses with no readable grant · `33` addresses probed · the `Apache-2.0` operative control
+adjudicated against **apache.org's own text** for the first time, `6 / 7` canonical and `1` altered
+copy localised to three edits · **all `4` mandated regional demand legs ran** · `0` index-vs-payload
+disagreements, which is itself new · `3` drafted findings withdrawn as already-held.**
+
+### 🔴 The agent shelf gained nothing, and here is the whole cohort
+
+The pass's agent leg was the `THU-MAIC` estate (Tsinghua's MAIC lab) plus two lookalikes that
+arrived in the same search result. **`10` addresses, `0` filable.**
+
+| Disposition | Count | Addresses |
+|---|--:|---|
+| 🟡 Already on `agents/top.md` — re-verified | `3` | `OpenMAIC` `43,190★` MIT · `dsh-openmaic` `122★` MIT · `MAIC-Core` `42★` Apache-2.0 |
+| 🔴 No grant at `17` paths, no README licence section | `3` | `MAIC-UI` `185★` · `Awesome-AI-Era-Edu` `93★` · `SimClass` `20★` |
+| 🔴 Third-party copies, not independent projects (`T354`) | `2` | `Tyche-MKR/SmartOpenMAIC` `39★` · `YizukiAme/SpiralMAIC` `10★` |
+| 🟡 Permissive but too thin to sell | `2` | `MAIC-Vibe` `8★` MIT · `OpenMAIC-Project` `7★` MIT (self-copy) |
+
+🔴 **`T354` — `fork: false` is not evidence of independence.** `SmartOpenMAIC` and `SpiralMAIC` are
+owned by third parties, report `fork: false`, and ship **`Copyright (c) 2026 THU-MAIC`** in a
+licence payload byte-identical to the original (`ba2525637432`, `1,065 B`). An `MIT` payload differs
+between projects *only* in its copyright line, so **a matching digest proves a verbatim copy
+including the holder; the owner field then decides whether that is a self-copy or a stranger's.**
+`SmartOpenMAIC` also copied the `description` verbatim; `SpiralMAIC` rewrote it — **so
+description-matching catches one and the holder line catches both.**
+
+### 🟢 Star movement, re-read today
+
+| Agent | `p740` | `p741` | Δ |
+|---|--:|--:|--:|
+| `HKUDS/DeepTutor` | `57,571` | **`57,805`** | `+234` |
+| `THU-MAIC/OpenMAIC` | `43,147` | **`43,190`** | `+43` |
+
+⚠️ **One licence-history fact on `OpenMAIC` this base had not recorded: it was relicensed to `MIT`
+at `v0.3.0` on `2026-06-28`.** Any fork or vendored copy taken before that date is under different
+terms. It has also filed `3` `GHSA` advisories (Aug–Oct 2026) — a maturity signal, but **pin at or
+after `v1.1.3`.** `v1.5.0-rc.1` shipped **today**.
+
+### 🔴 What the mandated discovery legs actually returned
+
+| Leg | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **NIL for education.** Returned general-purpose frameworks only — OpenHands, CrewAI, Langflow, Hermes Agent, `ashishpatel26/500-AI-Agents-Projects`. **No education-specific agent.** Same shape as every prior run of this leg. |
+| `github trending education AI 2026` | 🟡 **`3` names, `0` novel.** `OpenMAIC` (held), `DeepTutor` (held), `patchy631/ai-engineering-hub` (`40k★`, not education). **This is the leg that produced the near-duplicate at `T355`.** |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **NIL, reproducing `p727` exactly.** OpenEduCat (LGPL-3), `frappe/education`, RosarioSIS (GPL-2), openSIS, Gibbon — **`5 / 5` already held.** Also `0 / 5` permissive, which is the standing shape of this leg. |
+| `AI {industry} industry trends 2026` | 🟢 **Produced trend content, filed on [`../intel/trends.md`](../intel/trends.md) and [`../intel/market.md`](../intel/market.md).** Notably 1EdTech's own 2026 outlook — *experimentation → governance*, and digital credentials rising on a skills-driven ecosystem — which is coherent with the estate this pass read. |
+
+🔵 **The honest reading of that table: the web-search discovery channel is saturated for this base
+on the agent axis.** Three of four legs returned nothing novel, and the one that returned names
+returned names already held. **The backlog census (`3,590` unpromoted addresses at `p740`) remains
+a far better source of rows than the search legs**, which is `P693-A` at a fifth confirmation.
+
+
 ## 🆕 2026-11-10 (p740) — 🔴 **`GPL-3.0`'S OWN SECTION 13 IS TITLED "USE WITH THE GNU AFFERO GENERAL PUBLIC LICENSE", SO EVERY KEYWORD CLASSIFIER ON THIS BASE HAS BEEN ONE `grep` AWAY FROM FILING `GPL` AS `AGPL` — TWO STATE-MINISTRY PLUGINS WERE CORRECTED THIS PASS. 🔴 `MPL-2.0` NAMES THE GPL TOO, AND MISFILED FOUR MORE. 🟢 A `30★` MINISTRY AI GATEWAY RETURNS `404` ON `16` LICENCE PATHS AND IS `GPL-3.0` IN EVERY SOURCE FILE. 🔴 FRANCE'S HE CONSORTIUM PUBLISHED THE SOVEREIGN-AI REFERENCE ARCHITECTURE AND NO LICENCE AT ALL.**
 
 **`4` agent rows · `15` foundations rows · `9` platform rows · `8` new trends (`T344`–`T351`) ·

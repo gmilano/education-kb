@@ -1,0 +1,28 @@
+# p741 — T354. The Apache-2.0 operative-text control, adjudicated against the STEWARD'S OWN TEXT
+# for the first time on this base. p739/693-G compared payloads to an internal majority; p741
+# fetched https://www.apache.org/licenses/LICENSE-2.0.txt (http=200, 11358 B) and compared to that.
+# NOTE ON THE WINDOW: p741's normalisation window is its own (regex from "1. Definitions." to
+# "END OF TERMS AND CONDITIONS", whitespace collapsed) and yields 8951 chars for canonical.
+# p739's window yielded 8967. The two numbers are NOT comparable; only within-pass comparison is.
+payload	total_bytes	operative_chars	operative_sha256_12	verdict_vs_canonical
+apache.org/licenses/LICENSE-2.0.txt (CANONICAL)	11358	8951	db834674d194	REFERENCE
+1EdTech/lti-1-3-php-library	11343	8951	db834674d194	IDENTICAL
+1EdTech/LTI-Tool-Provider-Library-PHP	11357	8951	db834674d194	IDENTICAL
+1EdTech/digital-credentials-public-validator	11357	8951	db834674d194	IDENTICAL
+1EdTech/basiclti-util-java	13185	8951	db834674d194	IDENTICAL
+1EdTech/openbadges-validator-core	13185	8951	db834674d194	IDENTICAL
+THU-MAIC/MAIC-Core	11357	8951	db834674d194	IDENTICAL
+1EdTech/OpenCASE	11264	8957	0ea735f186e8	DEVIANT - three edits, localised below
+#
+# The three edits in 1EdTech/OpenCASE, by character offset in the normalised operative text:
+# offset	kind	canonical	OpenCASE
+# 2109	insert	"intentionally submitted to Licensor"	"intentionally submitted to the Licensor"
+# 2910	insert	"has been received by Licensor"	"has been received by the Licensor"
+# 5209	replace	"excluding those notices that do not pertain"	"excluding any notices that do not pertain"
+#
+# Canonical probe counts, run against apache.org's own text (1 = present, 0 = absent):
+#   1  intentionally submitted to Licensor          0  intentionally submitted to the Licensor
+#   1  has been received by Licensor                0  has been received by the Licensor
+#   2  excluding those notices that do not pertain  0  excluding any notices that do not pertain
+# => OpenCASE is the altered copy; the six others reproduce the steward's text exactly.
+# Decoration spread across the IDENTICAL set: 11264..13185 B = 1921 B carrying zero terms.
