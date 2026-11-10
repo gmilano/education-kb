@@ -4,6 +4,197 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p750` (researched 2026-11-10) — `T426`–`T438`
+
+**Added above `p749`'s `T417`–`T425`.** `p750` changed the register to **student wellbeing and
+safeguarding** — the duty of care: screening, monitoring, disclosure, case management and the
+early-warning function that sits under retention. `45` addresses probed, `30` licence-payload probes,
+**`26` payloads byte-read**, **`11` index values materially corrected**, `4` `T302` grant-absences with
+no denominator claimed, `5` addresses in the `T359` dead state, **`37` query denominators measured**.
+
+🔴 **The one-line reading of the pass: in this register the institution is required to monitor, forbidden
+to infer affect, and has nothing to buy in the open — and the one capability with abundant open-source
+supply (`8,216` repositories) is the exact capability EMEA prohibits.**
+
+> ⚠️ **Numbering note.** The strings `T427`, `T429` and `T430` also occur in this base's pre-reset
+> trending history as unrelated dangling cross-references, flagged at `p733` and never renumbered. The
+> definitions below are authoritative on the live shelves.
+
+## T426 — 🔵 The four-channel instrument state is re-controlled and `T417`/`T418` hold a second time
+
+`2` controls per channel, one proven-alive address and one invented address, run this pass:
+
+| Channel | Alive address | Invented address | Verdict |
+|---|---|---|---|
+| `curl -sI https://github.com/{owner}/{repo}` | **`403`** | **`403`** | 🔴 **No discriminating power.** ⚠️ And the *first* line of output is the proxy's `HTTP/1.1 200 Connection Established` — read the status code, not the first line. |
+| `gh api repos/{owner}/{repo}` | **`403`** + explicit session-scope message | — | 🔴 Scope-refused for every repository outside this session's grant. |
+| `gh api -X GET search/repositories -f q=repo:{owner}/{name}` | `total_count` **`1`** with full metadata | **`422` Validation Failed** | 🟢 **The working metadata channel.** `422` or `total_count == 0` is the genuine `T359` dead-address signal. |
+| `raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}` | **`200`** | **`404`** | 🟢 **The working bytes channel.** |
+
+🔵 **Nothing new, and that is the point:** this is the third consecutive pass to reproduce the same four
+states, so the channel map can now be treated as stable rather than re-derived each pass.
+
+## T427 — 🟢 The layer seam, fifth confirmation, and now stated as a law: *measuring is permissive, holding the record is copyleft*
+
+| Layer | Rows | Licences observed | Crossovers |
+|---|---|---|---|
+| Sensing, instrumentation, measurement | `7` | BSD-3-Clause ×`5`, Apache-2.0 ×`2` | **`0`** |
+| The record about the person | `4` | AGPL-3.0 ×`3`, CPAL-1.0 ×`1` | **`0`** |
+
+Five independent estates now agree (`T360` the platform/agent seam, `T410` the eligibility-engine seam,
+`T423` the checker/assistive-runtime seam, and this). 🟢 **Portable consequence:** in any education
+engagement, assume the system of record is copyleft and the measurement library is not, and design the
+process boundary *before* the architecture review rather than after it (`P253`).
+
+## T428 — 🔴 The safeguarding classifier tier has exactly one maintained, permissive, broad-coverage member
+
+[`meta-llama/PurpleLlama`](https://github.com/meta-llama/PurpleLlama) (`4,473★`) is the strongest
+artefact and is **not open source**: the `7,669 B` payload is the `LLAMA 3.2 COMMUNITY LICENSE
+AGREEMENT`, with the Acceptable Use Policy incorporated by reference, a `700 million MAU` commercial
+gate, and no trademark licence. [`protectai/llm-guard`](https://github.com/protectai/llm-guard) (MIT,
+`3,218★`) is **`ARCHIVED`**. [`whylabs/langkit`](https://github.com/whylabs/langkit) (Apache-2.0,
+`1,005★`) last shipped `2024-11-22`. 🟢 **The answer is
+[`ibm-granite/granite-guardian`](https://github.com/ibm-granite/granite-guardian)** — Apache-2.0,
+pushed `2026-10-16`, and at `189★` it is `4.2%` of Llama Guard's visibility. 🔵 **Record this as a
+procurement finding, not a technical one:** a studio that reaches for the obvious artefact here imports
+a use restriction into a client's safeguarding system.
+
+## T429 — 🔴 The entire open-source early-warning tier is `7 / 7` at `0★` and `6 / 7` without a usable grant
+
+Enumerated in full on [`../agents/top.md`](../agents/top.md). All seven are built on the same two public
+datasets (OULAD and the UCI dropout set); the single licensed member is MIT with `0★`. 🟢 **The honest
+client statement: there is no system to adopt, there is a recipe to implement** — and the components
+that make it defensible (`OpenLRW` for the record store, `OnTask` for the intervention, a subgroup
+audit for the fairness claim) are all held and all permissive-or-ECL. See `P254`.
+
+## T430 — 🔴 The capability with `8,216` repositories behind it is the one capability EMEA forbids
+
+`facial emotion recognition` returns **`8,216`** repositories; `emotion recognition education` returns
+`44`; `attention detection classroom` returns `55`. Meanwhile the agent layer this register actually
+needs is a measured desert: `student retention agent llm` **`0`**, `child protection mcp` **`0`**,
+`early warning agent education` `2`, `school safety llm agent` `2`, `mental health mcp server` `8`.
+
+🔴 **And the abundant capability is a per-se prohibition in the EU.** AI Act **Article 5(1)(f)** bans
+AI systems that infer emotions of natural persons **in the workplace and in education institutions**,
+applicable since **`2025-02-02`** with **no grace period**, subject only to a narrow *medical or safety*
+exception. Inferring student attention or interest, detecting affect during an admission test, and
+adding affect detection to proctoring are the worked examples the commentary converges on.
+
+🟢 **The operational rule, and it is the most useful sentence in this pass:** *every open-source
+component a wellbeing build needs is a classifier of **content** (text, image, URL), not of
+**affect** — and that is a legal requirement in EMEA, not a design preference.* `P251` is written to
+that constraint.
+
+## T431 — 🔴 `NOASSERTION` has a third cause: a licence the classifier does not recognise at all
+
+`ChildMindInstitute/mindlogger-app`'s `27,886 B` `LICENSE.md` is the **Common Public Attribution License
+1.0** — OSI-approved, and indexed `NOASSERTION`. It requires **visible attribution in the user
+interface** of derivatives and treats network deployment as distribution. 🔴 **A white-label student
+wellbeing app cannot be built on it without negotiating the attribution clause.** This extends `T419`'s
+two causes (title block is a project name; composite of vendored grants) with a third: **an uncommon but
+real licence family**.
+
+## T432 — 🟢 `11` index values materially corrected from the payload, `11 / 11` in the direction of *knowable*
+
+Every one indexed `NOASSERTION`; every one resolved with certainty by reading the bytes:
+
+| Repository | Index | Payload verdict |
+|---|---|---|
+| `primeroIMS/primero` | `NOASSERTION` | **AGPL-3.0-or-later** (`35,475 B`) |
+| `rapidpro/rapidpro` | `NOASSERTION` | **AGPL-3.0-or-later** (`35,189 B`) |
+| `getodk/collect` | `NOASSERTION` | **Apache-2.0** (`10,494 B`) |
+| `Apereo-Learning-Analytics-Initiative/OpenLRW` | `NOASSERTION` | **ECL-2.0** (`9,878 B`) |
+| `GantMan/nsfw_model` | `NOASSERTION` | **MIT**, with a third-party-material caveat (`1,243 B`) |
+| `pi-hole/pi-hole` | `NOASSERTION` | **EUPL** (`14,204 B`) |
+| `LimeSurvey/LimeSurvey` | `NOASSERTION` | **GPL-2.0-or-later**, LGPL text appended (`49,469 B`) |
+| `ChildMindInstitute/mindlogger-app` | `NOASSERTION` | **CPAL-1.0** (`27,886 B`) |
+| `NVIDIA-NeMo/Guardrails` | `NOASSERTION` | **Apache-2.0**, self-declared SPDX (`654 B`) |
+| `allenai/wildguard` | `NOASSERTION` | **Apache-2.0** by reference stub (`688 B`) |
+| `meta-llama/PurpleLlama` | `NOASSERTION` | 🔴 **Llama 3.2 Community Licence — not OSI** (`7,669 B`) |
+
+🔵 **`0` disagreements ran the other way** — no payload read contradicted a cell this base already held.
+Fourth consecutive pass in which reading the bytes beat the index, and the ratio this pass is the widest
+yet recorded.
+
+## T433 — 🔴 `4` `T302` honest negatives, and one of them is the register's most credible platform
+
+`BIDMCDigitalPsychiatry/LAMP-platform`, `BIDMCDigitalPsychiatry/LAMP-server`,
+`ChildMindInstitute/mindlogger-backend-refactor` and `anoopsachdev/student-dropout-early-warning` each
+return **no grant at `12` probed paths**. Per `T418` no denominator is claimed. 🔴 **mindLAMP is the most
+academically credible wellbeing platform found this pass and a client cannot be advised to build on
+it** — the same *deployable but not vendorable* verdict `p749` reached on `daisy/pipeline`.
+
+## T434 — 🔴 Canonical-address death, third consecutive pass, and one case is a genuine absence rather than a move
+
+`NVIDIA/NeMo-Guardrails` → `422`, live at [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails).
+`apereo/OpenLRW` → `422`, live at
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW).
+🔴 **But `apereo/student-success-plan` is `422` with no successor anywhere this pipeline can see:**
+`org:apereo` lists `30` repositories and none match `ssp|student|success|lrs|lrw|analytic`. Apereo's
+Student Success Plan — the named open-source early-alert product of the US HE consortium — is a
+`T396`-class instrument boundary, not a market gap.
+
+## T435 — 🔴 Read the first *paragraph* of the payload, not the title block: three composite shapes in one pass
+
+| Repository | Shape |
+|---|---|
+| `GantMan/nsfw_model` | Title block is a **disclaimer** — *"contains third-party copyrighted material under different licenses"* — and the grant (`MIT`) appears on line `4`. |
+| `formbricks/formbricks` | Root `LICENSE` (`35,154 B`) is a **per-directory map**: `apps/web/modules/ee` under a separate enterprise licence, some `packages/*` under MIT, the rest copyleft. |
+| `LimeSurvey/LimeSurvey` | One payload carrying **two licence texts** — GPL-2.0 from line `20`, LGPL from line `400`. |
+
+🟢 **Rule for this base's classifier, stated as a gate:** a verdict may be taken from the title block
+**only** when the first `4` lines contain no disclaimer, no per-directory enumeration and no second
+licence name. Otherwise the whole payload must be scanned. `p750` found `3 / 26` payloads failing that
+test — an `11.5%` rate, which is too high to classify from the head alone.
+
+## T436 — 🔴 The EMEA pincer: the same institution is *required to monitor* and *forbidden to infer affect*
+
+- **Required.** The UK's **Keeping Children Safe in Education 2026** was published `2026-07-07` and is in
+  force from **`2026-09-01`**. It makes the filtering-and-monitoring review an at-least-annual,
+  evidenced duty (reported at **paragraph 171**), and the DfE standards now ask whether systems can
+  handle *"real-time, dynamic, personalised and AI-generated content"*, pointing schools at the DfE's
+  **Generative AI: Product Safety Expectations (January 2026)**. Commentary reports that filtering must
+  block tools capable of generating or altering sexually explicit imagery.
+- **Forbidden.** AI Act **Article 5(1)(f)** — affect inference in education, prohibited since
+  `2025-02-02`.
+
+🟢 **Design consequence, and it is sellable:** the compliant architecture monitors **content and
+behaviour signals** and never **emotional state**; the evidence pack for the annual review is a
+deliverable in its own right. ⚠️ **Date caution carried from `p748`:** the `Regulation (EU) 2026/1744`
+citation and the `2027-12-02` high-risk date remain single-source in this base and are reported, not
+asserted.
+
+## T437 — 🔴 The North America gate is **consent**, it is dated, and it is being enforced right now
+
+- The US Department of Education's **August 2026** student-privacy guidance states that for behavioural
+  health screeners probing emotional or psychological states, schools must obtain **written parental
+  consent before administration** — grounded in **PPRA**, which covers surveys touching on *"mental or
+  psychological problems of the student or the student's family"*.
+- 🔴 **Live enforcement:** the Department's Student Privacy Policy Office has **demanded Illinois revise**
+  its guidance on conducting mental-health screenings without parental consent and on holding results
+  outside the education record, with an **ISBE response deadline of `2026-11-13`** — three days after
+  this pass. Its stated position is that *"temporary records"*, separate repositories and withholding
+  from parents all infringe FERPA parental rights.
+- The amended **COPPA** rule carries a compliance deadline of **`2026-04-22`**, with separate parental
+  consent required for AI training uses; a school's consent covers educational use only.
+
+🟢 **Consequence for a proposal:** in North America the consent flow and the records architecture are
+**the first two work packages**, not compliance appendices, and a screening product that stores results
+outside the education record is now an identified legal risk rather than a privacy nicety (`P252`).
+
+## T438 — 🔴 The market-sizing nil: the two segments this register sells into are not sized anywhere
+
+The mandated market leg and a targeted sweep returned **no published sizing for school-safety
+monitoring or for student-success / retention platforms**. The nearest adjacent series disagree by a
+factor of **`2.7×`** on the same year: digital mental health `2026` estimates span **`$11.69B` to
+`$32.06B`**; mental-health technology is put at **`$6.43B` (2026) → `$15.8B` (2035) @ `10.5%`** by one
+house and **`$7.48B` (2025) → `$8.6B` (2026) @ `15.5%`** by another; a campus-specific series reads
+**`$4.95B` (2025) → `$17.27B` (2034)** with **North America at `42%`** of `2025`. 🟢 **Published as a
+conflict, not averaged** — and the segment nil is the more useful fact: *quote the obligation, not the
+market.* The obligation has dates (`T436`, `T437`); the market does not have a number.
+
+---
+
 # 🆕 Trends new at `p749` (researched 2026-11-10) — `T417`–`T425`
 
 **Added above `p748`'s `T409`–`T416`.** `p749` changed the register to **alternative-format

@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p750) — 🔴 **THE DUTY-OF-CARE LAYER: `749` PASSES AND `0` OF THE WELLBEING AND SAFEGUARDING TIER. 🔴 THE BEST SAFETY CLASSIFIER ON EARTH IS NOT OPEN SOURCE AND THE MOST-STARRED PERMISSIVE ONE IS ARCHIVED. 🔴 THE EARLY-WARNING TIER IS `7 / 7` AT `0★`. 🔴 THE ONE ABUNDANT CAPABILITY (`8,216` REPOS) IS BANNED IN EU EDUCATION. 🟢 THE ANSWER IS AN IBM REPO AT `189★`.**
+
+**`6` agent rows (all MIT or Apache-2.0) · `6` foundations rows · `11` platform rows · `45` addresses
+probed · `30` licence-payload probes · `26` payloads byte-read · `11` index values materially corrected
+· `5` `T359` dead addresses found · `4` `T302` honest negatives · `5` boundary rows recorded not
+shelved · `37` query denominators measured · `T426`–`T438` declared · all `5` regional blocks written
+this pass.**
+
+### What is new this week in this register
+
+🔴 **`NVIDIA/NeMo-Guardrails` is `422`.** The address every tutorial, paper and blog post cites for
+the most-used dialogue-rails framework is dead; it is live at
+[`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) — Apache-2.0 by payload
+(`654 B`, self-declared SPDX), `7,471★`, pushed `2026-11-10`, default branch **`develop`**. 🔵 **Third
+consecutive pass to find a canonical citation dead** (`p749`: `NSoiffer/MathCAT`,
+`zorkow/speech-rule-engine`). `T434`.
+
+🔴 **`protectai/llm-guard` is archived.** MIT, `3,218★`, last push `2026-07-08`, flag `ARCHIVED`. It is
+the obvious permissive guardrail toolkit and a successor *will* reach for it. Recorded so that does not
+happen — the same service `p749` performed for `rhasspy/piper`.
+
+🟢 **[`ibm-granite/granite-guardian`](https://github.com/ibm-granite/granite-guardian) is the find of
+the pass** — Apache-2.0 (`11,357 B`, sha256₁₂ `c71d239df917`), pushed `2026-10-16`, and at `189★` it is
+**`4.2%` of Llama Guard's star count** while being the only maintained permissive broad-coverage safety
+classifier in the tier. 🔵 **Nobody in education has noticed it.**
+
+🔴 **`meta-llama/PurpleLlama` is not open source and the index does not say so.** The `7,669 B` payload
+is the `LLAMA 3.2 COMMUNITY LICENSE AGREEMENT`: Acceptable Use Policy incorporated **by reference**
+(§1.b.iv), a **`700 million MAU`** commercial gate (§2), **no trademark licence** (§5.a). Index reads
+`NOASSERTION`. `T428`.
+
+🟢 **`techmatters/hrm` and `techmatters/flex-plugins` both pushed `2026-11-10`** — AGPL-3.0, `8★` and
+`12★`. Aselo, the child-helpline contact-record system. 🔵 **The star counts are telling you about the
+market, not the maturity**: this is production software for national 116-111-class helplines.
+
+🟢 **`primeroIMS/primero` pushed `2026-11-10`** — UNICEF's child-protection case-management system,
+**AGPL-3.0 by payload** against a `NOASSERTION` index. ⚠️ **And its licence file carries a procurement
+trap:** the CPIMS+ / GBVIMS+ **configuration bundles are not in the repository** and are released by the
+programme on request.
+
+🔴 **`abelardopardo/ontask_b` is the most under-known artefact this base has found in months** — **MIT**,
+`45★`, payload line: *"Copyright (c) 2017 Office for Learning and Teaching. **Australian Government**"*.
+It is the intervention half of early warning, publicly funded, permissive, and ⚠️ last pushed
+`2025-04-10`.
+
+### The demand measurement, which is the point of the section
+
+| Query | `total_count` this pass |
+|---|---|
+| `student retention agent llm` | **`0`** |
+| `child protection mcp` | **`0`** |
+| `early warning agent education` | `2` |
+| `school safety llm agent` | `2` |
+| `wellbeing mcp server` | `5` |
+| `wellbeing survey platform` | `6` |
+| `mental health mcp server` | `8` |
+| `crisis detection llm agent` | `10` |
+| `student wellbeing agent` | `11` |
+| `counselling agent llm` | `20` |
+| `suicide risk detection nlp` | `34` |
+| 🔴 `facial emotion recognition` | **`8,216`** |
+
+🔴 **The inversion is the finding.** The capability with `8,216` repositories behind it — affect
+inference — is **prohibited in EU education institutions** under AI Act Art. 5(1)(f) since
+`2025-02-02`, no grace period. The capabilities the register actually needs return `0`, `0`, `2`, `2`.
+🟢 **`T430`, and `P251` is written to the constraint.**
+
+### 🔴 The mandated global legs nil'd again — the `36`th consecutive time
+
+The `top open source AI agents education 2026 github MIT` leg returned general-purpose roundups with no
+education shortlist and mutually contradictory star counts. The `github trending education AI 2026` leg
+returned **`DeepTutor`**, **`TapXWorld/ChinaTextbook`** and **`geekjourneyx/interactive-learning`** —
+🔴 **all three already held on these shelves**, exactly as `p744` recorded. The
+`open source platform education ERP CRM MIT Apache` leg returned **OpenEduCat** and asserted no
+education ERP is MIT or Apache — 🔵 **this base already holds OpenEduCat correctly as LGPL-3.0 by
+payload read** (`p727`). 🟢 **`P210` is why this is recorded as a nil rather than as rows**, and the
+register-specific sweep is what paid.
+
+### ⚠️ Instrument note — re-controlled `2 / 2` per channel
+
+`curl -sI https://github.com/{owner}/{repo}` returned **`403` for both** a proven-alive address and an
+invented one. ⚠️ **The first output line is the proxy's `HTTP/1.1 200 Connection Established`** — read
+the status code, not the first line. `gh api repos/{owner}/{repo}` → `403` scope refusal.
+`gh api -X GET search/repositories -f q=repo:…` → `total_count 1` vs **`422`**; raw channel → `200` vs
+`404`. **`T426`: `T417` and `T418` hold a third consecutive pass.**
+
+---
+
 ## 🆕 2026-11-10 (p749) — 🔴 **THE ALTERNATIVE-FORMAT LAYER: `748` PASSES HELD THE ACCESSIBILITY *TESTING* TIER AND `0` OF THE *PRODUCTION* TIER. 🔴 THE TWO THINGS CLIENTS ACTUALLY BUY RETURN `0` REPOSITORIES EACH. 🔴 THE PRESCRIBED `curl -sI` VERIFICATION CHANNEL IS PROXY-BLOCKED AND A `403` IS NOT A `404`. 🟢 THE STRONGEST ROW IN THE TIER IS PUBLISHED BY A UNIVERSITY.**
 
 **`6` agent rows (all MIT) · `10` foundations rows · `5` platform rows · `39` addresses probed ·

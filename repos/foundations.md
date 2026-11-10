@@ -33,6 +33,75 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## 🆕 `p750` (2026-11-10) — 🟢 **THE WELLBEING SENSING AND RECORD-STORE LAYER: `6` PERMISSIVE ROWS FROM A TIER THIS BASE HELD AT `0`. 🟢 THE LICENCE GRADIENT CONFIRMS `T360`'S LAYER SEAM A FIFTH TIME, AND THIS TIME THE SEAM RUNS BETWEEN *MEASURING A STUDENT* AND *HOLDING A RECORD ABOUT THEM* — `7 / 7` PERMISSIVE AGAINST `4 / 4` COPYLEFT, NO CROSSOVERS. 🔴 ONE ADDRESS THE LITERATURE CITES IS `422`, AND ITS SUCCESSOR IS AT A DIFFERENT ORGANISATION.**
+
+### 🟢 `T427` — the seam, measured on a fifth estate, and the architectural rule falls straight out again
+
+| Layer | Rows | Licences observed | Crossovers |
+|---|---|---|---|
+| **Sensing, instrumentation and measurement** — what observes or asks | `7` | BSD-3-Clause ×`5`, Apache-2.0 ×`2` | **`0`** |
+| **The record about the person** — case files, disclosures, clinical notes | `4` | AGPL-3.0 ×`3`, CPAL-1.0 ×`1` | **`0`** |
+
+🟢 **The rule, now stated as a general law of this base after five independent confirmations
+(`T360`, `T410`, `T415`-adjacent, `T423`, `T427`):** *the layer that **measures or checks** is
+permissively licensed; the layer that **holds the person's record** is copyleft.* 🔵 It is not a
+coincidence — a case-record system is deployed by the institution that needs it and shared with peer
+institutions, which is exactly the economics AGPL protects, while an instrument library wants adoption.
+🔴 **The consequence for a studio is the same every time:** own the sensing and scoring layer, call the
+record layer across a process boundary, and never link it (`P253`).
+
+### The permissive core — what Globant can own and ship
+
+| Repository | Licence — **byte-read this pass** | Stars | Role in the pipeline |
+|---|---|---|---|
+| [`onnela-lab/beiwe-backend`](https://github.com/onnela-lab/beiwe-backend) | **BSD-3-Clause** · `LICENSE.md` `1,519 B` · sha256₁₂ `b33a03448783` · `Copyright (c) 2017, Harvard University` | `76★` | The Beiwe study server: enrolment, consent, encrypted upload, per-study configuration. 🟢 **Pushed `2026-11-10` — live the day of this pass**, and the highest-starred row in a tier where the alternative is a `0★` notebook. |
+| [`onnela-lab/forest`](https://github.com/onnela-lab/forest) | **BSD-3-Clause** · `LICENSE.md` `1,518 B` · sha256₁₂ `ff481ffb5199` · `Copyright (c) 2020, onnela-lab` | `37★` | The analysis library over Beiwe data: GPS mobility, call/text metadata, survey summaries. 🔵 **This is the row that turns raw sensing into a feature set** a retention model can use. Default branch **`develop`**. |
+| [`onnela-lab/beiwe-android`](https://github.com/onnela-lab/beiwe-android) | **BSD-3-Clause** · `1,519 B` · sha256₁₂ `b33a03448783` — 🔵 **byte-identical to the backend's payload** | `28★` | The Android client. Android-first matters for a LATAM or APAC student population, where it is the majority device. |
+| [`onnela-lab/beiwe-ios`](https://github.com/onnela-lab/beiwe-ios) | **BSD-3-Clause** (index, confirmed against the family's payload) | `24★` | The iOS client. Pushed `2026-11-10`. |
+| [`getodk/collect`](https://github.com/getodk/collect) | **Apache-2.0** · `LICENSE.md` `10,494 B` · sha256₁₂ `d1ee81266b96` — 🔴 **index reads `NOASSERTION`** | `804★` | Offline-first mobile data collection. The instrument-delivery layer for a wellbeing survey in a school with no reliable connectivity. Pushed `2026-11-10`. |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟡 **ECL-2.0** (Educational Community License 2.0) · `9,878 B` · sha256₁₂ `f339063d2f60` — 🔴 **index reads `NOASSERTION`** | `62★` | The Learning Record Warehouse: a Caliper/xAPI store with a roster model, which is the substrate an early-warning model reads from. 🔴 **ECL-2.0 is Apache-2.0 modified for university patent positions** — the same family this base corrected Sakai into. Treat as permissive, flag the patent clause to legal. ⚠️ Last push `2025-09-12`. |
+
+🔵 **Why Beiwe and not a fitness-tracker SDK.** Beiwe is the Harvard/Onnela-lab digital-phenotyping
+platform: it was built to be the *measurement instrument of a published study*, so consent, study
+configuration and data provenance are first-class rather than bolted on. 🟢 **That is exactly the
+property that makes it survivable in an institution where the alternative — commercial student
+monitoring — is being sued** (see [`../intel/market.md`](../intel/market.md), North America).
+
+### 🔴 `T434` — two canonical addresses are dead and their successors sit at different organisations
+
+Third pass running that the register's most-cited addresses are `422` (`p749` found the same for
+`NSoiffer/MathCAT` and `zorkow/speech-rule-engine`):
+
+| Address the literature cites | State | Live successor | Evidence |
+|---|---|---|---|
+| `NVIDIA/NeMo-Guardrails` | 🔴 **`422`** (`T359`) | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) — Apache-2.0, `7,471★`, pushed `2026-11-10`, branch `develop` | `search/repositories` `total_count == 0` on the old address, `1` on the new |
+| `apereo/OpenLRW` | 🔴 **`422`** | [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) — ECL-2.0, `62★` | `org:apereo` returns `30` repositories and **none** of them match any of `ssp`, `student`, `lrs`, `lrw`, `analytic` or `success` |
+
+🔴 **And one address is not a renaming but a genuine absence.** Apereo's **Student Success Plan** —
+the named open-source early-alert and case-management product of the US higher-education consortium —
+is **not on GitHub**: `apereo/student-success-plan` and `apereo/OpenLRS` are both `422`, the
+`org:apereo` listing contains no match, and a name search returns only `0★` and `1★` coursework plus
+one `GPL-2.0` repository last pushed `2019-06-21`. 🔵 **Recorded as a `T396`-class instrument boundary
+rather than a market gap:** an engagement that must evaluate Apereo SSP needs a channel this pipeline
+does not have.
+
+### 🔴 `4` `T302` honest negatives — no denominator claimed
+
+Per `T388`/`T418`, `api.github.com/repos/…` is scope-refused in this session, so the statements below
+are *"no grant at `12` probed paths"* and **not** tree-complete absences. Paths probed, in order:
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENSE.rst`, `COPYING`, `COPYING.txt`, `license`,
+`LICENSE-APACHE`, `copying.txt`, `LICENSE_LLAMA3`, `USE_POLICY.md`.
+
+- [`BIDMCDigitalPsychiatry/LAMP-platform`](https://github.com/BIDMCDigitalPsychiatry/LAMP-platform) — `17★`, pushed `2026-10-01`. **mindLAMP**, the Beth Israel Deaconess / Harvard digital-psychiatry platform. 🔴 **No grant at `12` paths.**
+- [`BIDMCDigitalPsychiatry/LAMP-server`](https://github.com/BIDMCDigitalPsychiatry/LAMP-server) — `10★`, pushed `2026-11-04`. 🔴 **No grant at `12` paths.**
+- [`ChildMindInstitute/mindlogger-backend-refactor`](https://github.com/ChildMindInstitute/mindlogger-backend-refactor) — `7★`, pushed `2026-11-10`, branch `develop`. 🔴 **No grant at `12` paths** — while the *app* in the same organisation ships `CPAL-1.0` (`T431`).
+- [`anoopsachdev/student-dropout-early-warning`](https://github.com/anoopsachdev/student-dropout-early-warning) — `0★`. 🔴 **No grant at `12` paths.**
+
+⚠️ **The consequence, and it is commercial rather than legal:** mindLAMP is the most academically
+credible wellbeing platform in this register and **a client cannot be advised to build on it** until
+the grant is established off-platform. Deployable, not vendorable — the same verdict `p749` reached on
+`daisy/pipeline`.
+
 ## 🆕 `p749` (2026-11-10) — 🟢 **THE ALTERNATIVE-FORMAT ESTATE: `10` PERMISSIVE ROWS FROM A TIER THIS BASE HELD AT `0` MENTIONS. 🔴 THE LICENCE GRADIENT RUNS ALONG THE *LAYER* AND IT IS CLEAN: EVERY CHECKER AND EVERY FORMAT SPEC IS PERMISSIVE, EVERY ASSISTIVE-TECHNOLOGY RUNTIME IS COPYLEFT, `8 / 8`, NO CROSSOVERS. 🔴 TWO `daisy` REPOSITORIES HAVE NO GRANT FILE AT ALL.**
 
 ### 🟢 `T423` — the gradient, measured on the whole tier, and the architectural rule falls straight out

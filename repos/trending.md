@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p750) — 🟢 **THE WELLBEING SENSING ESTATE: `6` PERMISSIVE ROWS, FOUR OF THEM HARVARD'S, FROM A TIER THIS BASE HELD AT `0`. 🟢 THE LICENCE SEAM CONFIRMS FOR THE FIFTH TIME AND IS NOW A LAW: MEASURING IS PERMISSIVE, HOLDING THE RECORD IS COPYLEFT (`7 / 7` vs `4 / 4`, NO CROSSOVERS). 🔴 `NOASSERTION` GAINS A THIRD CAUSE. 🔴 `11` INDEX VALUES CORRECTED, `11 / 11` IN THE SAME DIRECTION.**
+
+**`6` foundations rows · `11` platform rows · `45` addresses probed · `26` licence payloads byte-read ·
+`11` index corrections · `4` `T302` grant-absences · `5` `T359` dead addresses · `3` composite-grant
+shapes found (`T435`) · `T426`–`T438` declared.**
+
+### What is new this week in this register
+
+🟢 **The Beiwe estate is alive and permissive, `4 / 4`.**
+[`onnela-lab/beiwe-backend`](https://github.com/onnela-lab/beiwe-backend) (**BSD-3-Clause**, `1,519 B`,
+sha256₁₂ `b33a03448783`, *Copyright (c) 2017, Harvard University*, `76★`, **pushed `2026-11-10`**),
+[`beiwe-ios`](https://github.com/onnela-lab/beiwe-ios) (`24★`, pushed `2026-11-10`),
+[`beiwe-android`](https://github.com/onnela-lab/beiwe-android) (`28★` — 🔵 **payload byte-identical to the
+backend's**) and [`onnela-lab/forest`](https://github.com/onnela-lab/forest) (**BSD-3-Clause**,
+`1,518 B`, sha256₁₂ `ff481ffb5199`, *Copyright (c) 2020, onnela-lab*, `37★`, branch `develop`).
+🟢 **This is the only tier in the register where the entire stack is ownable.**
+
+🔴 **`apereo/OpenLRW` is `422` and the project moved organisations.** It is live at
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+— **ECL-2.0** by payload (`9,878 B`, sha256₁₂ `f339063d2f60`) against a `NOASSERTION` index, `62★`,
+⚠️ last push `2025-09-12`.
+
+🔴 **Apereo's Student Success Plan is not on GitHub at all.** `apereo/student-success-plan` and
+`apereo/OpenLRS` are both `422`; `org:apereo` lists `30` repositories and **none** match
+`ssp|student|success|lrs|lrw|analytic`; a name search returns `0★`/`1★` coursework plus one GPL-2.0
+repository last pushed `2019-06-21`. 🔵 **Recorded as a `T396` instrument boundary, not a market gap.**
+
+🔴 **`getodk/collect` is Apache-2.0 and the index says `NOASSERTION`** (`LICENSE.md`, `10,494 B`,
+sha256₁₂ `d1ee81266b96` — byte-identical to `getodk/central`'s). `804★`, pushed `2026-11-10`.
+
+🔴 **mindLAMP has no grant file.** [`BIDMCDigitalPsychiatry/LAMP-platform`](https://github.com/BIDMCDigitalPsychiatry/LAMP-platform)
+(`17★`) and [`LAMP-server`](https://github.com/BIDMCDigitalPsychiatry/LAMP-server) (`10★`) each return
+**no grant at `12` probed paths**, as does
+[`ChildMindInstitute/mindlogger-backend-refactor`](https://github.com/ChildMindInstitute/mindlogger-backend-refactor)
+(`7★`, pushed `2026-11-10`) — while the *app* in the same organisation ships **CPAL-1.0**. ⚠️ **The most
+academically credible wellbeing platform in this register is deployable and not vendorable** (`T433`).
+
+### 🟢 `T427` — the seam, fifth confirmation, now stated as a law
+
+| Layer | Rows | Licences | Crossovers |
+|---|---|---|---|
+| Sensing, instrumentation, measurement | `7` | BSD-3-Clause ×`5`, Apache-2.0 ×`2` | **`0`** |
+| The record about the person | `4` | AGPL-3.0 ×`3`, CPAL-1.0 ×`1` | **`0`** |
+
+🟢 *The layer that measures or checks is permissive; the layer that holds the person's record is
+copyleft.* Confirmed independently at `T360`, `T410`, `T423` and now `T427`. 🔵 **Not coincidence — it
+is the economics**: a case-record system is shared between peer institutions, which is what AGPL
+protects; an instrument library wants adoption. `P253` is the boundary pattern.
+
+### 🔴 `T435` — three composite-grant shapes in one pass, which is too many to classify from a title block
+
+- [`GantMan/nsfw_model`](https://github.com/GantMan/nsfw_model) — title block is a **disclaimer**; the MIT grant is on line `4`.
+- [`formbricks/formbricks`](https://github.com/formbricks/formbricks) (`13,231★`) — root `LICENSE` (`35,154 B`, sha256₁₂ `b32292faef23`) is a **per-directory map**: `apps/web/modules/ee` under a separate enterprise licence, some `packages/*` MIT.
+- [`LimeSurvey/LimeSurvey`](https://github.com/LimeSurvey/LimeSurvey) — **two licence texts in one payload**: GPL-2.0 from line `20`, LGPL from line `400`.
+
+🟢 **New gate for this base's classifier:** take a verdict from the title block **only** when the first
+`4` lines contain no disclaimer, no per-directory enumeration and no second licence name. `3 / 26`
+payloads failed that test this pass — **`11.5%`**.
+
+### 🔴 `11` index corrections, `11 / 11` toward *knowable*
+
+`primero` → AGPL-3.0 · `rapidpro` → AGPL-3.0 · `getodk/collect` → Apache-2.0 · `OpenLRW` → ECL-2.0 ·
+`nsfw_model` → MIT+caveat · `pi-hole` → **EUPL** · `LimeSurvey` → GPL-2.0-or-later ·
+`mindlogger-app` → **CPAL-1.0** · `NVIDIA-NeMo/Guardrails` → Apache-2.0 · `wildguard` → Apache-2.0
+(stub) · `PurpleLlama` → **Llama 3.2 Community, not OSI**. 🔵 **`0` corrections ran the other way and no
+payload contradicted a cell this base already held.**
+
+---
+
 ## 🆕 2026-11-10 (p749) — 🔴 **THE WHOLE DAISY / BRAILLE / EPUB ESTATE WAS AT `0` MENTIONS: `daisy/ace` `0`, `daisy/pipeline` `0`, `epubcheck` `0`, `liblouis` `0`, `readium` `0`, `speech-rule-engine` `0`, `brailleblaster` `0`, `IBMa/equal-access` `0`. 🟢 THE LAYER SEAM IS CONFIRMED A FOURTH TIME AT `18 / 18` WITH ZERO CROSSOVERS. 🔴 TWO `daisy` REPOSITORIES PUBLISH NO GRANT AT ALL.**
 
 **`10` foundations rows · `5` platform rows · `6` agent rows · `39` addresses probed ·

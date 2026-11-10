@@ -6,6 +6,22 @@ updated: 2026-11-10
 
 # Education AI — Market Intelligence
 
+**Pass p750 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
+facts**; the mandated market leg ran and returned a **segment nil** inside a conflicting adjacent range.
+🟢 **Each region's newest block is `#### 🆕 p750` under
+[`## Opportunities by region`](#opportunities-by-region), and all five are written this pass — no region
+left at silence.** The register is **student wellbeing and safeguarding**: the duty of care, from
+screening and monitoring through disclosure, case management and the early-warning function under
+retention. 🔴 **The headline is a pincer, and it is the most actionable thing on this page: in EMEA the
+same institution is *required to monitor* — UK KCSIE 2026, in force `2026-09-01`, annual evidenced
+filtering-and-monitoring review — and *forbidden to infer affect* — AI Act Art. 5(1)(f), applicable
+since `2025-02-02` with no grace period.** 🔴 **The second headline is live North American enforcement:
+ED's Student Privacy Policy Office has ordered Illinois to revise its mental-health-screening guidance,
+with a response deadline of `2026-11-13` — three days after this pass.** 🔴 **The third is `T438`: there
+is no published market sizing for school-safety monitoring or for student-success platforms at all,
+while the adjacent digital-mental-health series disagree by `2.7×` on the same year. Quote the
+obligation, not the market.**
+
 **Pass p749 · researched 2026-11-10.** All four mandated regional legs ran and **all four returned
 facts**; the mandated market leg ran and returned a figure range with an explicit education-sector
 **nil**. 🟢 **Each region's newest block is `#### 🆕 p749` under
@@ -197,6 +213,56 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: the gate is consent, it is dated, and it is being enforced this week
+
+🔴 **The single most important datum for any North America wellbeing engagement: parental consent is a
+precondition, not a preference.** The US Department of Education's **August 2026** student-privacy
+guidance states that for behavioural-health screeners probing emotional or psychological states, schools
+must obtain **written parental consent prior to administration**, grounded in **PPRA**, which covers
+surveys and screenings touching on *"mental or psychological problems of the student or the student's
+family"*.
+
+🔴 **And it is being enforced right now, on exactly the architecture most products ship.** The
+Department's Student Privacy Policy Office has **demanded that the Illinois State Board of Education
+revise** its guidance on conducting mental-health screenings without parental consent and on holding
+results apart from the education record. **ISBE's response deadline is `2026-11-13`.** The stated
+federal position is that treating screening results as *"temporary records"*, storing them in separate
+repositories, or withholding them from parents **each infringe FERPA parental rights**. 🟢 **For a
+proposal this converts the records architecture from an appendix into work package one** (`P252`).
+
+**The other dated instrument:** the amended **COPPA** rule carries a compliance deadline of
+**`2026-04-22`**, with separate parental consent required for AI-training uses; a school's consent
+covers educational use only, not AI training or third-party sharing. FERPA keeps the district as the
+responsible party, and a vendor reaches student records only as a *"school official"* with a
+*"legitimate educational interest"*.
+
+🟢 **The commercial opening, and it is the clearest in the register: the incumbent category is under
+legal attack on four fronts at once.**
+
+| Pressure | What is on record |
+|---|---|
+| Federal legislative scrutiny | Senators Markey and Warren opened an investigation into **GoGuardian, Gaggle, Bark and Securly**, reporting *"regulatory and legal gaps"* and recommending federal action. 🔴 **No federal statute specifically regulating student monitoring software has been enacted.** |
+| Constitutional litigation | **Nine** current and former students of **Lawrence Public Schools (Kansas)** filed a federal civil-rights suit alleging the district's Gaggle use violates their **First and Fourth Amendment** rights. |
+| Transparency litigation | A **Knight First Amendment Institute** suit seeks records on how a district uses monitoring tools. |
+| Accuracy | An advocacy-group analysis reports that **roughly two-thirds of `1,200` Gaggle alerts over `10` months** in Lawrence were **false positives**; Gaggle's own published figure is **`6.9` billion student items scanned in 2024–25**. ⚠️ Advocacy-sourced — labelled as such. |
+
+⚠️ **Securly** faced a 2023 California class action alleging collection and onward sale of student
+information; **no 2026 ruling was found** this pass. A docket-dated commentary (August 2026) states
+there is **no landmark class action or student-privacy verdict against GoGuardian** — a patchwork
+including a Texas public-records case.
+
+🔴 **Measured supply nil for this region's named demand.** `student retention agent llm` returns **`0`**
+repositories and `school safety llm agent` returns `2`; the entire open early-warning tier is `7 / 7` at
+`0★` (`T429`). 🟢 **So the North America play is a build, and its differentiator is the consent and
+evidence architecture that the incumbents are being sued over** — not a better classifier.
+
+**Regional policy context carried from the mandated leg:** more than **4 in 5** teens have used AI tools
+with over two-thirds reporting regular use, while roughly **half of their schools have no AI policy at
+all**; the PIE Network tracked **nearly 100** state bills this year touching student AI use; Illinois
+required guidance by **`2026-07-01`**; a Stanford AI Index 2026 reading reports **only `6%`** of teachers
+call their school's AI policy clear. ⚠️ A vendor-blog claim that *"at least 15 states"* have legislated
+on AI in education could not be corroborated against a primary source.
 
 #### 🆕 `p749` (2026-11-10) — the alternative-format layer: the deadline moved by one year, the obligation did not, and the agent supply is `0`
 
@@ -1086,6 +1152,61 @@ package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes sh
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
 ### EMEA
+
+#### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: required to monitor, forbidden to infer affect, and both halves are dated
+
+🔴 **This is the pincer, and it is the finding of the pass for this region.** The same school is under a
+positive duty to monitor and a prohibition on inferring emotion, and a vendor that confuses the two
+breaks the law rather than the contract.
+
+**The duty — UK, and it is inspected.** **Keeping Children Safe in Education 2026** was published
+**`2026-07-07`** and is in force from **`2026-09-01`**. What changed for this register:
+
+- The **filtering-and-monitoring review** is an at-least-annual duty that must be *properly led,
+  evidenced and recorded* — reported as prescribed at **paragraph 171**.
+- The DfE's filtering-and-monitoring standards now ask whether systems can handle **"real-time,
+  dynamic, personalised and AI-generated content"**, and point schools at the DfE's **Generative AI:
+  Product Safety Expectations (January 2026)** and its guidance on applying filtering and monitoring
+  rules to AI tools.
+- Commentary reports that filtering must **actively block tools capable of creating or altering sexually
+  explicit imagery or deepfakes**, treated as a serious form of child-on-child abuse. ⚠️ Secondary
+  summary — verify against the statutory text before quoting to a client.
+- ⚠️ **Date conflict, recorded not resolved:** one source dates the DfE filtering-and-monitoring standard
+  update to **June 2026** alongside revised UK Safer Internet Centre guidance; the others do not mention
+  June.
+
+**The prohibition — EU, and there is no grace period.** AI Act **Article 5(1)(f)** bans AI systems that
+**infer emotions of natural persons in the workplace and in education institutions**, applicable since
+**`2025-02-02`**, with a narrow exception only *"for medical or safety reasons"*. Emotion recognition
+outside those two settings is **high-risk** rather than prohibited. The worked examples the commentary
+converges on are all education-native: **inferring student attention or interest, affect detection during
+an admission test, and affect detection added to online proctoring** — a proctoring tool that flags a
+student's stress or nervousness falls inside the ban.
+
+🟢 **The design consequence, stated as the sales argument:** *a compliant EMEA safeguarding build
+classifies content and behaviour and never emotional state, and the annual-review evidence pack is the
+deliverable.* That is `P251`, and the components are permissive or deployable-as-appliance
+(`e2guardian` GPL-2.0, `pi-hole` EUPL, `nsfwjs` MIT, `detoxify` Apache-2.0, `granite-guardian`
+Apache-2.0).
+
+⚠️ **Dates this page still does not assert.** The Digital-Omnibus shift of Annex III high-risk education
+obligations to **`2027-12-02`** and the **`Regulation (EU) 2026/1744`** citation remain **single-source**
+in this base across three passes. Reported, not asserted.
+
+**Non-EU EMEA, from the mandated leg.** The **UAE** Ministry of Education issued **25 generative-AI
+prohibitions for schools in February 2026**, covering age suitability, privacy, academic integrity and
+exam use — the most prescriptive school-level AI instrument found in the region this pass.
+
+**Adoption context.** An **Epson**-commissioned survey of ~**`3,360`** respondents across the UK, France,
+Italy, Germany, Spain and Poland found students driving adoption and **`80%` of teachers worried AI is
+entering the classroom faster than schools can manage** — which is, precisely, demand for the governance
+layer rather than for more AI. The **DEC Leadership Summit EMEA 2026** convened `41` senior leaders from
+`30` institutions across `14` countries in Paris; Eurydice's *Digital education at school in Europe 2026*
+and the **OECD Digital Education Outlook 2026** are the two non-vendor baselines to cite.
+
+🔴 **Regional supply note.** The one platform row in this register with EU provenance is a **copyleft
+appliance** (`pi-hole`, **EUPL** — a licence whose governing-law clause is EU-specific and which legal
+*will* ask about). 🔵 **Say it before they do** (`T432`).
 
 #### 🆕 `p749` (2026-11-10) — the alternative-format layer: two live versions of the harmonised standard, and only one of them confers conformity
 
@@ -2156,6 +2277,61 @@ settle in a single lookup, and later passes in this environment should stop spen
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
 ### APAC
 
+#### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: the region is moving to restriction rather than governance, and the one MIT artefact in the register was publicly funded here
+
+🟢 **The region's live story is Australia, and it broke the day before this pass.** On **`2026-11-09`**
+the ABC reported the federal government moving to reduce classroom screen time via a new **"digital
+detox" taskforce**, with generative AI to be **restricted in primary schools and in high-school
+assessment**. 🔵 **Read the direction, not just the policy:** APAC's leading system is answering the
+wellbeing question with *less* technology in the classroom, which reframes a studio's pitch from
+"deploy AI" to "govern and evidence what is already there".
+
+**The safeguarding incidents are AI-native and already counted.** eSafety warned in **July 2026** about
+AI misuse of school photography, after **more than `100` reports in early 2026** of anonymous accounts
+targeting schools and staff with **AI-manipulated content harvested from school social media**, advising
+a risk-based approach to posting student images plus an incident-response plan. 🔴 **This is the same
+demand KCSIE 2026 creates in the UK, arriving through a regulator's advisory instead of statutory
+guidance.**
+
+**Exposure is measured.** eSafety reported in **March 2026** that **`79%` of children aged 10–17 had used
+an AI assistant or AI companion**. 🔵 **That figure is the whole business case for the wellbeing register
+in this region:** the companion relationship is already normal, and nobody is governing it.
+
+**The governance instrument is voluntary.** The Australian Framework for Generative AI in Schools is
+**guidance, not law** — `6` principles supported by **`25` guiding statements**, with **no enforcement
+mechanism**; its wellbeing principle requires that tools not compromise student mental health. On data,
+**`7` of the `8`** government school systems limit or advise against identifiable student information in
+AI tools, and **Western Australia has no public departmental AI policy**. 🟢 **A voluntary framework plus
+a per-jurisdiction data rule is exactly the shape that sells an assurance and evidence engagement.**
+
+🟢 **The supply-side find, and it belongs to this region.** The one **MIT**-licensed intervention engine
+in the whole register — [`abelardopardo/ontask_b`](https://github.com/abelardopardo/ontask_b) (`45★`) —
+carries the payload line *"Copyright (c) 2017 **Office for Learning and Teaching. Australian
+Government**"*. 🔵 **Publicly funded in APAC, permissively licensed, and effectively unknown**: lead with
+it in a regional proposal (`P254`). ⚠️ Last push `2025-04-10`.
+
+**India — the mandate exists and the evaluation does not.** **CBSE** affiliation bye-laws require each
+affiliated secondary and senior-secondary school to appoint a **Counsellor and Wellness Teacher**;
+Navodaya Vidyalayas provide for **two contractual counsellors** per school. The Ministry of Education's
+**Manodarpan** programme runs a national helpline plus *Sahyog* sessions and *Paricharcha* webinars, and
+had taken **`332,877` helpline calls by `2026-03-10`**. 🔴 **A 2026 analysis states no single summative
+impact evaluation has been conducted and flags sustainability risk from reliance on voluntary
+counsellors.** 🟢 **That gap — a national programme at scale with no measurement layer — is a
+ministry-tier opportunity, and `getodk/central` + `commcare-hq` are the permissive instruments for it.**
+⚠️ A blog claim that a national School Mental Health Policy was due **`2026-06-01`** could not be
+confirmed against an official source.
+
+**Regional attitude.** The **Ipsos Education Monitor 2026** finds **weaker support for banning AI in
+schools** across the Asian markets surveyed, even while support for restricting children's social media
+stays high. 🔵 **So the APAC buyer wants AI with guardrails, not AI removed** — which is in direct
+tension with the Australian direction above, and the tension is the thing to name in a regional pitch.
+
+🔴 **Informed gap — the leg ran and returned nothing.** The targeted leg for **Japan and South Korea**
+school suicide-prevention and AI-based risk screening **returned no usable facts**. Korea's AI Basic Act
+(in force `2026-01-22`, education treated as high-impact) is held elsewhere on this page; **the
+wellbeing-specific instruments for both countries remain unmeasured by this base.** Recorded as a gap so
+silence is not read as coverage.
+
 #### 🆕 `p749` (2026-11-10) — the alternative-format layer: the standard is being revised upward, the regulator is not yet conformant itself, and private institutions are now on the hook
 
 🔴 **Japan is the region's live story, and it has three distinct moving parts.**
@@ -3133,6 +3309,59 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
 ### LATAM
+
+#### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: Brazil has the region's binding instrument and it names AI review explicitly; the university tier has the problem and no measurement
+
+🟢 **Brazil's ECA Digital is the strongest instrument in the region for this register, and unlike most
+LATAM AI policy it is law with a regulator attached.** **Lei 15.211/2025**, in force since
+**`2026-03-17`** (date fixed by **Lei 15.352/2026**), regulated by **Decreto 12.880/2026**, enforced by
+the **ANPD**. What it does that matters here:
+
+- It builds a **shared-responsibility model** across families, platforms, public authorities **and
+  educational institutions** — i.e. the school is a named duty-holder, not a bystander.
+- It targets **digital dependency and the mental health of minors**, including the inducement,
+  incitement or instigation of behaviours causing **physical or mental harm**, and preventive measures
+  against content encouraging **self-harm and suicide**.
+- 🔴 **It requires periodic review of AI tools, with expert participation**, to ensure suitability for
+  children and adolescents, with the ability to **disable non-essential functions**. 🟢 **That is a
+  recurring, billable assurance obligation written into a statute** — the LATAM analogue of KCSIE's
+  annual review, and the first one this base has found in the region.
+- Digital and media education in the curriculum from 2026 — though the Lemann Foundation notes that duty
+  already flowed from **BNCC Computação**.
+
+⚠️ **Scope caution:** the law does not address schools in every one of its `41` articles; the school-facing
+duties come from the shared-responsibility provisions plus the regulating decree. Quote the decree, not a
+summary.
+
+**The higher-education demand signal is the strongest in the region and it is a retention story.**
+
+| Finding | Source quality |
+|---|---|
+| **`92%` of students and `79%` of faculty** in LATAM higher education actively engaging with AI (`7,319` faculty, `29` institutions) | Digital Education Council with **Tec de Monterrey**, 2026 — the firmest LATAM AI figure this base holds |
+| Mental-health deterioration is associated with **higher dropout risk**; prevalence of mental disorders among low-performing university students exceeds general-community rates; **selective prevention targeting first-year students** is the recurring recommendation | Peer-reviewed regional literature (Redalyc, Veritas) — 🟢 the most-replicated regional finding |
+| **`30–50%`** of LATAM university students do not complete their studies | ⚠️ **UNESCO-attributed via a consultancy; primary source not reached this pass** |
+| Dropout rates of **`25–35%`**, linked to emotional difficulties | ⚠️ **Single journal source, methodology not verifiable** |
+| Only **`30%`** of LATAM universities have published AI-use policies | ⚠️ **Single-source, carried from `p748` and still uncorroborated** |
+
+🟢 **Institutional programmes to name in a proposal, both dated 2026:** the **Universidad de El Salvador**
+launched an institutional *Ruta para la Prevención, Detección y Atención de la Conducta Suicida*, with
+protocols covering students, faculty and staff — 🔵 **a university-wide protocol is exactly the artefact an
+AI triage layer must route into, and it now exists as a reference**; and Mexico's **Universidad Latina de
+América** ran a Mental Health Week (`2026-10-05` to `2026-10-09`) focused on early-warning signs and
+emotional exhaustion.
+
+**Regional AI-in-education actors for the register:** **UNESCO IESALC** with **UNU-IAS** (2026 working
+paper mapping AI across teaching, research, administration and governance, and describing adoption as
+*"neither uniform nor evenly distributed"*, with public/private gaps); **UNESCO + Chile's CENIA**
+(cooperation on ethical AI in education, including **Latam-GPT**); **EdTech Hub + Fundación Ceibal**;
+the **IDB**, whose agenda includes AI-supported teacher accompaniment and the regulation-and-financing
+problem; and **ECLAC** via the **eLAC** digital agenda.
+
+🟢 **The LATAM play, in one line:** *the statutory hook is Brazilian and recurring (`Decreto 12.880/2026`
+AI review), the budget holder is a university retention office, and the channel is SMS/WhatsApp* —
+which is why [`rapidpro/rapidpro`](https://github.com/rapidpro/rapidpro) (**AGPL-3.0**, `912★`, UNICEF
+and Nyaruka) is the register's most regionally apt platform row, operated unmodified behind a permissive
+integration layer (`P253`, `P254`).
 
 #### 🆕 `p749` (2026-11-10) — the alternative-format layer: the statute is the strongest in any region, the enforcement machinery is the weakest, and the university layer is thin
 
@@ -4182,6 +4411,52 @@ no code dependency) the right opening move here and makes a code-first pitch the
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
 ### Global
+
+#### 🆕 `p750` (2026-11-10) — the wellbeing and safeguarding layer: the segment is not sized anywhere, and the obligation is dated in three regions
+
+🔴 **`T438` — the mandated market leg ran and returned a segment nil.** There is **no published market
+sizing for school-safety monitoring, nor for student-success / retention platforms** — the two segments
+this register sells into. What exists are adjacent series that disagree with each other:
+
+| Series | 2026 reading | Trajectory | Spread note |
+|---|---|---|---|
+| Digital mental health | **`$11.69B` – `$32.06B`** | — | 🔴 **`2.7×` on the same year.** Published as a conflict, not averaged. |
+| Mental-health technology (house A) | `$6.43B` | → `$15.8B` by 2035 @ **`10.5%`** | — |
+| Mental-health technology (house B) | `$8.6B` *(estimate)* | from `$7.48B` (2025) @ **`15.5%`** | ⚠️ 2026 value is an estimate, not an observation |
+| Mental-health campus | — | `$4.95B` (2025) → `$17.27B` (2034) | **North America `42%`** of 2025 |
+| Student mood-tracking apps | — | **`~17%` CAGR** | Trend commentary only; no base value published |
+
+🟢 **So the cross-regional rule for this register, and it is the opposite of the usual advice: quote the
+obligation, not the market.** The obligations have dates and the market does not have a number:
+
+| Region | Instrument | Date |
+|---|---|---|
+| North America | PPRA/FERPA written parental consent before behavioural-health screeners; ED enforcement against Illinois | guidance **Aug 2026**; ISBE response **`2026-11-13`** |
+| North America | Amended COPPA rule compliance | **`2026-04-22`** |
+| EMEA | UK KCSIE 2026, annual evidenced filtering-and-monitoring review | in force **`2026-09-01`** |
+| EMEA | EU AI Act Art. 5(1)(f) — affect inference in education **prohibited** | since **`2025-02-02`**, no grace period |
+| LATAM | Brazil ECA Digital + `Decreto 12.880/2026` — periodic AI-tool review with expert participation | in force **`2026-03-17`** |
+| APAC | Australian framework (voluntary, `6` principles / `25` statements); UAE's `25` school AI prohibitions *(EMEA)* | **2026** |
+
+🔴 **One structural fact holds in all five regions and it is the whole sales argument:** the integrated
+product institutions actually buy — a system that watches, scores and alerts — **does not exist in open
+source**, while **every component needed to build it is permissively licensed or deployable as an
+appliance**. The measured supply: `student retention agent llm` **`0`**, `child protection mcp` **`0`**,
+`wellbeing survey platform` **`6`**, and the entire early-warning tier at `7 / 7` × `0★` (`T429`,
+`T430`).
+
+🔴 **And one capability is abundant and unusable.** `facial emotion recognition` returns **`8,216`**
+repositories; affect inference in education is **prohibited** in the EU and is the single fastest way to
+make a global engagement unlawful in one region while shipping it in another. 🟢 **A global studio's
+advantage here is precisely that it knows this before the demo** (`T430`, `P251`).
+
+**Global adoption context carried from the mandated leg:** Microsoft's reading puts **`86%`** of
+education organisations using generative AI; UK undergraduate use of AI for assessed work rose from
+**`53%` (2024) to `94%` (2026)**; only **`45%`** of the most-used tools have published research meeting
+an ESSA evidence tier; and the **OECD Digital Education Outlook 2026** warns AI helps learning only when
+pedagogy stays in control. 🔵 **The evidence-tier figure is the one to carry into a wellbeing pitch:**
+in a register where the buyer is personally accountable under statute, *"can you prove it works"* stops
+being rhetorical.
 
 #### 🆕 `p749` (2026-11-10) — the alternative-format layer: one structural fact holds in all five regions, and it is the sales argument
 

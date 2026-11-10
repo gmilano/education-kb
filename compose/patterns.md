@@ -4,6 +4,114 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 P251–P255 — added at p750 (2026-11-10)
+
+**Every component below names its repository, its byte-read licence and what it does in the recipe.**
+This set is the **student-wellbeing and safeguarding layer's**: screening, monitoring, disclosure,
+case management and early warning. 🔴 **Two findings govern all five and should be read first.**
+`T430`: the only abundant open-source capability in the register — affect inference, `8,216`
+repositories — is a **per-se prohibition in EU education** (AI Act Art. 5(1)(f), since `2025-02-02`,
+no grace period), so **every pattern here classifies content and behaviour, never emotion**.
+`T427`: the record layer is copyleft `4 / 4` and the sensing layer is permissive `7 / 7`, so `P253` is
+what keeps the first from contaminating client code.
+
+🟢 **And one commercial framing governs the set:** `T438` found **no market sizing** for either segment
+these patterns sell into, while `T436` and `T437` found **dated statutory obligations** in EMEA and
+North America. *Price the obligation, not the market.*
+
+## P251 — The KCSIE-2026 filtering-and-monitoring evidence pipeline, built without touching affect (EMEA/UK first, then all regions; 6–9 weeks)
+
+**The demand is a dated, inspected duty.** Keeping Children Safe in Education **2026** is in force from
+**`2026-09-01`**; the filtering-and-monitoring review is an at-least-annual evidenced duty (reported at
+**para 171**), and the DfE standards now ask whether systems cope with *"real-time, dynamic,
+personalised and AI-generated content"*, pointing at **Generative AI: Product Safety Expectations
+(Jan 2026)**. See [`../intel/market.md`](../intel/market.md), EMEA.
+
+**Wire it in this order. Every component is byte-read; copyleft components are marked and are never linked.**
+
+1. **Network layer — block the named categories.** [`e2guardian/e2guardian`](https://github.com/e2guardian/e2guardian) (**GPL-2.0**, `15,764 B`, `541★`, branch `v5.5`) for HTTP/S category filtering, plus [`pi-hole/pi-hole`](https://github.com/pi-hole/pi-hole) (**EUPL**, `14,204 B`, `61,770★`) for DNS-level blocking of nudification and deepfake-generation domains. 🔴 Both copyleft: **deployed unmodified as appliances**, configured not patched (`P253`).
+2. **Image classes on the device.** [`infinitered/nsfwjs`](https://github.com/infinitered/nsfwjs) (**MIT**, `1,075 B`, `9,030★`). 🟢 **Lead with the client-side property in the DPIA**: the image is classified in the browser and never leaves the student's device, which is the argument a cloud classifier cannot make.
+3. **Image classes at batch scale**, for the back catalogue on shared drives — [`GantMan/nsfw_model`](https://github.com/GantMan/nsfw_model) (**MIT** with a third-party caveat, `1,243 B`, `2,105★`). ⚠️ Last push `2024-02-26`; pin the version.
+4. **Text — peer harm, not affect.** [`unitaryai/detoxify`](https://github.com/unitaryai/detoxify) (**Apache-2.0**, `11,357 B`, `1,314★`) for toxicity, threat, insult and identity attack. 🔴 **It is not a self-harm classifier. Do not sell it as one** (`T428`).
+5. **Escalation policy as code.** [`guardrails-ai/guardrails`](https://github.com/guardrails-ai/guardrails) (**Apache-2.0**, `7,600★`) to express *what is flagged, to whom, within what time, and what is never auto-actioned*. 🔵 **This file is the artefact an inspector reads.**
+6. **Risk gate in front of the human.** [`ibm-granite/granite-guardian`](https://github.com/ibm-granite/granite-guardian) (**Apache-2.0**, `11,357 B`, `189★`) — the only maintained permissive broad-coverage classifier in the tier. 🔴 **Not** `meta-llama/PurpleLlama`: Llama 3.2 Community Licence, `700M` MAU gate, AUP by reference (`T428`).
+7. **The deliverable: the annual-review evidence pack.** What was blocked, what was flagged, what a human did, how long it took, what was wrong. 🟢 **This is the billable artefact** — the duty is evidentiary, and the school has to show it.
+
+🔴 **The hard constraint, stated in the SOW:** no component infers emotional state. Attention
+detection, engagement scoring from webcam and affect-aware proctoring are **prohibited** in EU
+education institutions and are the fastest way to make the whole engagement unlawful (`T430`).
+
+## P252 — Consent-first wellbeing screening, because in North America the consent flow *is* the product (North America first; 4–6 weeks to a compliant pilot)
+
+🔴 **Build the gate before the instrument.** ED's August 2026 guidance requires **written parental
+consent before** a behavioural-health screener probing emotional or psychological states (PPRA), and
+the Department is **actively enforcing**: ISBE was ordered to revise guidance on screening without
+parental consent, with a response deadline of **`2026-11-13`**, on the stated position that *"temporary
+records"* and separate repositories **do not** exempt results from parental review (`T437`).
+
+1. **Instrument delivery.** [`LimeSurvey/LimeSurvey`](https://github.com/LimeSurvey/LimeSurvey) (**GPL-2.0-or-later**, `49,469 B`, `3,792★`) when the institution already runs it, or [`getodk/central`](https://github.com/getodk/central) + [`getodk/collect`](https://github.com/getodk/collect) (**Apache-2.0** both, `10,494 B`, `232★` / `804★`) when collection must work offline. 🟢 ODK is the permissive option and the one that survives a rural deployment.
+2. **The consent gate as a first-class record** — consent state, who gave it, when, for what purpose, and its withdrawal, stored **inside** the education record rather than beside it. 🔴 This is the exact point the Illinois action turns on.
+3. **Validated instruments, not a chatbot.** [`ChildMindInstitute/mindlogger-app`](https://github.com/ChildMindInstitute/mindlogger-app) (**CPAL-1.0**, `27,886 B`) is the open artefact built for youth assessment. 🔴 **Price the CPAL attribution clause before promising a white-label** (`T431`); if branding is non-negotiable, deliver the instruments on the ODK stack instead.
+4. **Case follow-up.** [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) (**BSD-3-Clause**, `1,554 B`, `525★`) — 🟢 **the one permissive case-management platform in the register**, so it is the only one that can be modified and shipped as part of a product.
+5. **Scope the model out of the first release.** Scoring is a scale question; consent, records and reviewer workflow are the compliance question. The pilot that passes legal review has no model in it.
+
+🔵 **Why this ordering wins the deal:** every competitor proposal leads with the screener. The ED action
+makes the records architecture the thing that can stop the programme, so leading with it is both
+honest and differentiating.
+
+## P253 — Running a copyleft system of record without contaminating the client's product (all five regions; applies to every engagement in this register)
+
+🔴 **`T427` is now a law of this base across five estates: the layer holding the person's record is
+copyleft.** In this register that is `4 / 4` — Primero **AGPL-3.0**, Aselo **AGPL-3.0**, RapidPro
+**AGPL-3.0**, MindLogger **CPAL-1.0** — and AGPL's network clause means *offering it as a service is
+distribution*.
+
+**The boundary pattern, and it is three rules:**
+
+1. **Deploy, do not vendor.** [`primeroIMS/primero`](https://github.com/primeroIMS/primero) (`35,475 B`, `79★`, UNICEF) and [`techmatters/hrm`](https://github.com/techmatters/hrm) + [`techmatters/flex-plugins`](https://github.com/techmatters/flex-plugins) (`34,523 B`, `8★`/`12★`) run as **separate services** the client operates. Configuration is not modification; a fork that ships inside a product is.
+2. **Integrate across a process boundary** — HTTP, queue or file drop — with the Globant-authored layer under MIT or Apache-2.0 on the other side. The classifier (`granite-guardian`, Apache-2.0), the rails (`guardrails-ai`, Apache-2.0) and the sensing libraries (`onnela-lab/forest`, BSD-3-Clause) all sit on the permissive side of that line.
+3. **Name the procurement trap in the first workshop.** Primero's own licence payload states the **CPIMS+ / GBVIMS+ configuration bundles are not in the repository** and are released by the programme on request. 🔴 **A plan that assumes a working child-protection configuration ships with the clone is wrong by a procurement cycle.**
+
+🟢 **The sentence to put in the architecture doc:** *"The system of record is AGPL-3.0 and is operated
+unmodified; all Globant-authored components are permissively licensed and communicate with it over a
+network interface."* That one line has survived four of this base's five licence-seam findings.
+
+## P254 — Early warning that is defensible rather than demo-grade (LATAM and APAC first; 8–12 weeks)
+
+🔴 **Start from `T429`: all `7` open-source early-warning repositories are `0★` coursework and `6 / 7`
+have no usable grant.** So this is a build, and the value is in the parts nobody demos.
+
+1. **The record store.** [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) (**ECL-2.0**, `9,878 B`, `62★`) for Caliper/xAPI events with a roster model. 🔴 Note the address — `apereo/OpenLRW` is `422` (`T434`) — and flag ECL-2.0's university patent clause to legal. ⚠️ Last push `2025-09-12`: fork and pin.
+2. **The intervention engine, and it is the half that gets skipped.** [`abelardopardo/ontask_b`](https://github.com/abelardopardo/ontask_b) (**MIT**, `1,112 B`, `45★`, *Office for Learning and Teaching, Australian Government*). 🟢 **Lead with it in an APAC proposal:** it is MIT, it was publicly funded in the region, and it turns a risk score into personalised staff-authored outreach. A score with no intervention path changes nothing and the literature says so.
+3. **The model, last.** Temporal snapshots rather than end-of-term features — the `0★` cohort's one genuinely reusable idea is scoring at days `0`–`84` — with a **subgroup false-negative audit** as a release gate, because the failure mode that ends the programme is missing at-risk students in one demographic.
+4. **The dataset problem, named up front.** Every open repository in the tier trains on OULAD or the UCI set; neither resembles a LATAM public university or an APAC vocational institute. 🔴 **Transfer is an assumption to test in week one, not a given.**
+5. **Passive signals only if the ethics case exists** — see `P255`, and never affect inference (`T430`).
+
+🔵 **The LATAM framing:** UNESCO-cited figures put non-completion at `30–50%` regionally and journal
+figures at `25–35%` (both single-source in this base — see [`../intel/market.md`](../intel/market.md)),
+and the mental-health-to-dropout link is the most-replicated finding in the regional literature. The
+engagement is a retention engagement that happens to need a wellbeing signal.
+
+## P255 — Research-grade passive sensing with Beiwe, as the defensible alternative to commercial monitoring (all five regions; 10–14 weeks, ethics-gated)
+
+🟢 **The opportunity is that the commercial category is under legal attack.** Student monitoring vendors
+face a federal senatorial investigation finding *"regulatory and legal gaps"*, a Knight Institute
+records suit, a First/Fourth Amendment suit by nine Kansas students, and an advocacy-reported false-positive
+rate of roughly **two-thirds of `1,200` alerts over `10` months** in one district
+([`../intel/market.md`](../intel/market.md), North America). 🔵 **An institution that wants the signal
+without the exposure needs a consented, auditable instrument.**
+
+1. **The platform.** [`onnela-lab/beiwe-backend`](https://github.com/onnela-lab/beiwe-backend) (**BSD-3-Clause**, `1,519 B`, `76★`, Harvard) with [`beiwe-android`](https://github.com/onnela-lab/beiwe-android) (`28★`) and [`beiwe-ios`](https://github.com/onnela-lab/beiwe-ios) (`24★`). 🟢 **Permissive, so Globant can own the deployment and the extensions outright** — the rare case in this register where the whole stack is ownable.
+2. **The feature layer.** [`onnela-lab/forest`](https://github.com/onnela-lab/forest) (**BSD-3-Clause**, `1,518 B`, `37★`, branch `develop`) for mobility, communication-metadata and survey summaries. 🔵 This is what converts sensing into something `P254`'s model can read.
+3. **Ethics and consent before code.** Beiwe is a study instrument: it expects a protocol, an enrolment flow and a withdrawal path. 🟢 **Treat the IRB / ethics submission as a project deliverable** — it is the artefact that distinguishes this from surveillance, and it is why the row exists.
+4. **Hard exclusions, in writing.** No affect inference (`T430`, unlawful in EU education). No content capture from personal accounts. No alerting without a named human owner and a response time.
+5. **Where the record goes.** Disclosures and case notes land in the copyleft record layer across a process boundary (`P253`) — Primero for a child-protection context, CommCare when the deliverable must be modifiable, Aselo when a helpline is the escalation target.
+
+⚠️ **Do not oversell the science.** Digital phenotyping predicts group-level trends far better than
+individual crises, and no open artefact in this register is a validated suicide-risk instrument
+(`suicide risk detection nlp` returns `34` repositories and `0` deployables). 🟢 **The sellable claim is
+a consented, auditable, lawful signal that routes to a human — not prediction.**
+
 ## 🆕 P246–P250 — added at p749 (2026-11-10)
 
 **Every component below names its repository, its byte-read licence and what it does in the recipe.**

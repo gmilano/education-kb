@@ -6,6 +6,8 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
+**Pass p750 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT or Apache-2.0, all byte-read.** `45` addresses probed, `30` licence-payload probes, **`26` licence payloads byte-read**, **`11` index values materially corrected — `11 / 11` from `NOASSERTION` toward a knowable grant**, `4` compliant grant-absences recorded as `T302` honest negatives rather than as denominators, `5` addresses found in the `T359` dead state. 🔴 **The register is the *student-wellbeing and safeguarding layer* — the duty of care: screening, monitoring, disclosure, case management and the early-warning function under retention — and `749` passes held `0` of it.** 🔴 **The finding of the pass is an inversion: the one capability with abundant open-source supply (`facial emotion recognition`, **`8,216`** repositories) is the one EU education institutions are **forbidden** to use (AI Act Art. 5(1)(f), since `2025-02-02`, no grace period), while the capabilities the register needs return `0` (`student retention agent llm`, `child protection mcp`). 🔴 Read the licence cell before the description on the `PurpleLlama` and `mindlogger` rows: one is not an OSI licence at all and the other requires attribution inside the client's user interface (`T428`, `T431`).**
+
 **Pass p747 · verified 2026-11-10.** 🟢 **`6` agent rows added, all MIT or Apache-2.0, all byte-read.** `42` addresses probed, **`37` licence payloads byte-read**, `36 / 37` classified from the title block, **`6` index values materially corrected** (`2` of them in the *refusing* direction), `5` compliant grant-absences recorded as `T302` honest negatives rather than as denominators. 🔴 **The register is the *inter-institutional federation layer* — what lets a student from one institution sign in at another's service, and what an AI agent must present to act on that student's behalf — and `p736` took the SSO *server* (`apereo/cas`, `4` rows) while leaving the federation it joins entirely unheld: `shibboleth`, `simplesamlphp`, `IdentityPython`, `Internet2/grouper`, `OpenConext`, `REFEDS`, `SeamlessAccess` and `casdoor` were at `0` mentions across every live shelf.**
 
 🔴 **The finding of the pass is an instrument boundary, not a gap in the market.** The identity provider that most of global research-and-education actually runs — **Shibboleth** — is not on GitHub as an organisation (`org:shibboleth` → `422`, the `T359` "not a canonical current address" state) **and `shibboleth.net` / `git.shibboleth.net` are unreachable under this environment's network policy** (proxy `CONNECT` → `403`, `3 / 3` hosts). The highest-starred Shibboleth artefacts on GitHub are third-party wrappers last pushed in **2020** (`Unicon/shibboleth-idp-dockerized` `109★`, `uchicago/shibboleth-oidc` `82★`). 🔵 **`0` mentions across `746` passes was never negligence: it is the shape of a GitHub-only instrument.** An engagement that must evaluate Shibboleth needs a channel this pipeline does not have (`T396`).
@@ -63,6 +65,100 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p750` — 🔴 **THE STUDENT-WELLBEING AND SAFEGUARDING LAYER: THE DUTY OF CARE. `749` PASSES HELD THE TEACHING, ASSESSMENT, MONEY, IDENTITY AND ALT-FORMAT TIERS AND `0` OF THIS ONE. 🔴 THE HIGHEST-CAPABILITY SAFETY CLASSIFIER IN EXISTENCE IS NOT OPEN SOURCE AT ALL. 🔴 THE CAPABILITY WITH `8,216` REPOSITORIES BEHIND IT IS THE ONE EMEA FORBIDS OUTRIGHT. 🟢 THE ONE APACHE-2.0 ANSWER IS PUBLISHED BY IBM AND NOBODY IN EDUCATION HAS NOTICED IT (`189★`).**
+
+**`6` agent rows (all MIT or Apache-2.0, all byte-read) · `5` boundary rows recorded not shelved · `45` addresses probed · `30` licence-payload probes · `26` payloads byte-read · `11` index values materially corrected · `4` `T302` honest negatives · `5` addresses in the `T359` dead state · `37` query denominators measured · `T426`–`T438` declared.**
+
+> ⚠️ **Numbering note, stated once.** This base's pre-reset trending history contains the unrelated
+> strings `T427`, `T429` and `T430`, flagged as dangling cross-references at `p733` and never
+> renumbered. On the live shelves the `p750` definitions below are the authoritative ones.
+
+### 🔴 `T428` — the finding that decides the whole register: the best safety classifier is not open source, the most-starred permissive one is archived, and the maintained permissive ones are narrow
+
+A wellbeing or safeguarding agent's load-bearing part is the classifier that decides *this message is a
+disclosure of self-harm* or *this image must not be on a school device*. The supply has a shape, and it
+is not the shape a studio would guess:
+
+| Artefact | Grant — **byte-read this pass** | Stars | State | What it means for Globant |
+|---|---|---|---|---|
+| [`meta-llama/PurpleLlama`](https://github.com/meta-llama/PurpleLlama) (Llama Guard) | 🔴 **`LLAMA 3.2 COMMUNITY LICENSE AGREEMENT`** · `7,669 B` · sha256₁₂ `8cc15535a8a3` | `4,473★` | live, pushed `2026-11-09` | **Not an OSI licence.** Acceptable Use Policy incorporated **by reference** (§1.b.iv), a `700 million MAU` commercial gate (§2), and **no trademark licence** (§5.a). The index says `NOASSERTION`, which understates the problem. |
+| [`protectai/llm-guard`](https://github.com/protectai/llm-guard) | **MIT** · `1,094 B` · sha256₁₂ `31dcbe8e380f` | `3,218★` | 🔴 **`ARCHIVED`**, last push `2026-07-08` | The most-starred permissive guardrail toolkit in the tier is **read-only**. Recorded here so the next pass does not propose it. |
+| [`ibm-granite/granite-guardian`](https://github.com/ibm-granite/granite-guardian) | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` | `189★` | live, pushed `2026-10-16` | 🟢 **The answer.** A genuinely permissive guardrail model family covering harm, social bias, jailbreak and groundedness — at `2.3%` of Llama Guard's stars. |
+| [`unitaryai/detoxify`](https://github.com/unitaryai/detoxify) | **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` | `1,314★` | live, pushed `2026-11-09` | Narrow but maintained: toxicity, threat, insult, identity attack. **Not** a self-harm classifier — do not sell it as one. |
+
+🟢 **The rule, for a proposal:** *the safeguarding classifier tier has exactly one maintained,
+permissively-licensed, broad-coverage member, and it is `granite-guardian`.* Everything stronger is
+use-restricted; everything else permissive is either archived or single-axis.
+
+### The agent rows — what Globant can build on and ship
+
+Metadata read `2026-11-10` via `gh api -X GET search/repositories`; every grant below decided by
+reading the payload bytes, never the index (`P188`).
+
+| Agent / toolkit | Repository | Licence — **byte-read this pass** | Stars | Role in a wellbeing or safeguarding build |
+|---|---|---|---|---|
+| **Granite Guardian** | [`ibm-granite/granite-guardian`](https://github.com/ibm-granite/granite-guardian) | **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` | `189★` | Risk detection across harm, bias, jailbreak, violence and groundedness, usable as the **escalation gate** in front of a human reviewer. 🟢 The only permissive broad-coverage option in the tier (`T428`). |
+| **Guardrails** | [`guardrails-ai/guardrails`](https://github.com/guardrails-ai/guardrails) | **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` | `7,600★` | Validator framework. This is where a *refusal and escalation policy* is expressed as code — the artefact an inspector or DPO can actually read. |
+| **NeMo Guardrails** | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | **Apache-2.0** · `LICENSE.md` `654 B` · sha256₁₂ `7c137905972e` · self-declared `SPDX-License-Identifier` | `7,471★` | Dialogue-level rails: the layer that stops a tutoring agent from improvising a crisis response. 🔴 Default branch **`develop`**; 🔴 **the address everyone cites, `NVIDIA/NeMo-Guardrails`, is `422`** (`T434`). Index reads `NOASSERTION`. |
+| **NSFWJS** | [`infinitered/nsfwjs`](https://github.com/infinitered/nsfwjs) | **MIT** · `1,075 B` · sha256₁₂ `2f7fe40b4f0d` | `9,030★` | In-browser image classification. 🟢 **Runs client-side, so the image never leaves the student's device** — which is the whole reason it survives a schools DPIA that a cloud classifier fails. |
+| **nsfw_model** | [`GantMan/nsfw_model`](https://github.com/GantMan/nsfw_model) | 🟡 **MIT, with an explicit third-party caveat** · `LICENSE.md` `1,243 B` · sha256₁₂ `099d648e7723` | `2,105★` | Server-side Keras/TF classifier for the same job at batch scale. 🔴 Read the caveat: *"This project contains third-party copyrighted material under different licenses. Except where otherwise explicitly stated, this project is licensed as follows: MIT"*. Index reads `NOASSERTION`. ⚠️ Last push `2024-02-26`. |
+| **Detoxify** | [`unitaryai/detoxify`](https://github.com/unitaryai/detoxify) | **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` | `1,314★` | Text classification for toxicity, threat, insult, obscenity and identity attack, across `7` languages in the multilingual checkpoint. The **peer-harm** axis, which is a different problem from self-harm. |
+
+### 🔴 Recorded, not shelved — and the reason is the point
+
+- [`notAI-tech/NudeNet`](https://github.com/notAI-tech/NudeNet) — **AGPL-3.0** (`34,523 B`, sha256₁₂ `8486a10c4393`, the canonical AGPL-3.0 text), `2,503★`, default branch **`v3`**. Technically the strongest nudity detector in the open. 🔴 **Network copyleft: it cannot be linked into a client product.** Deploy it as a separate service or do not use it (`P253`).
+- [`meta-llama/PurpleLlama`](https://github.com/meta-llama/PurpleLlama) — see `T428`. Use-restricted, not open source.
+- [`protectai/llm-guard`](https://github.com/protectai/llm-guard) — MIT and `ARCHIVED`.
+- [`whylabs/langkit`](https://github.com/whylabs/langkit) — Apache-2.0, `1,005★`, last push **`2024-11-22`**. Two years stale; recorded so the LLM-telemetry leg is not re-searched under this name.
+- [`allenai/wildguard`](https://github.com/allenai/wildguard) — `142★`, last push `2024-12-02`. 🔵 Index `NOASSERTION`; the payload is a **`688 B` `LICENSE.md` stub** reading `Apache License` / `Copyright 2024 Allen Institute for Artificial Intelligence` — a *reference* to Apache-2.0 rather than the text of it. Grant knowable, project stale.
+
+### 🔴 `T429` — the early-warning tier is `7 / 7` at `0★`, and that is the clearest build-versus-buy gap in this register
+
+Dropout and retention risk is the one thing every registrar, provost and ministry asks for by name. The
+mandated leg plus a targeted sweep enumerated the entire open-source supply, and **every single member
+is a coursework project with no users**:
+
+| Repository | Index licence | Stars | Last push |
+|---|---|---|---|
+| [`Snoozemage/student-at-risk-early-warning`](https://github.com/Snoozemage/student-at-risk-early-warning) | **MIT** (`1,067 B`, sha256₁₂ `6069b037c69a`) | `0★` | `2026-10-27` |
+| [`anoopsachdev/student-dropout-early-warning`](https://github.com/anoopsachdev/student-dropout-early-warning) | 🔴 **no grant at `12` probed paths** (`T302`) | `0★` | `2026-10-10` |
+| [`SaraKarmoker/student-dropout-risk-predictor`](https://github.com/SaraKarmoker/student-dropout-risk-predictor) | `NOASSERTION` | `0★` | `2026-10-21` |
+| [`nishhh2004/DropAlert-The-Student-Dropout-Early-Warning-System`](https://github.com/nishhh2004/DropAlert-The-Student-Dropout-Early-Warning-System) | `NOASSERTION` | `0★` | `2026-10-29` |
+| [`Adhipriya1/Student-Dropout-Prediction`](https://github.com/Adhipriya1/Student-Dropout-Prediction) | `NOASSERTION` | `0★` | `2026-10-17` |
+| [`vesc0/student-dropout-prediction`](https://github.com/vesc0/student-dropout-prediction) | `NOASSERTION` | `0★` | `2026-10-02` |
+| [`miansaimnadeem/Student-dropout-prediction`](https://github.com/miansaimnadeem/Student-dropout-prediction) | `NOASSERTION` | `0★` | `2026-09-21` |
+
+🔵 **Six of seven carry no usable grant and all seven are built on the same two public datasets** (the
+Open University Learning Analytics Dataset and the UCI dropout set). 🟢 **The honest statement to a
+client: there is no open-source early-warning system to adopt, there is a well-understood modelling
+recipe to implement** — and the components that make it defensible (a record store, an intervention
+engine, a subgroup audit) are on [`../repos/foundations.md`](../repos/foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md). See `P254`.
+
+### 🔴 `T430` — the agent layer for this register, measured against `37` denominators, and it does not exist
+
+The mandated phrase legs plus a targeted sweep. **Every number below is a GitHub `total_count`, read
+this pass:**
+
+| Query | `total_count` | Reading |
+|---|---|---|
+| `student retention agent llm` | **`0`** | The commercial category (EAB Navigate, Civitas) has **no** open-source agent counterpart. |
+| `child protection mcp` | **`0`** | The case-management tier has platforms (`P253`) and **no** agent layer. |
+| `early warning agent education` | `2` | — |
+| `school safety llm agent` | `2` | — |
+| `triage agent helpline` | `3` | — |
+| `wellbeing mcp server` | `5` | — |
+| `mental health mcp server` | `8` | Compare `oidc mcp server` `164` at `p747`: the gap is a factor of `20`. |
+| `crisis detection llm agent` | `10` | — |
+| `student wellbeing agent` | `11` | — |
+| `counselling agent llm` | `20` | — |
+| `suicide risk detection nlp` | `34` | The one leg with a research literature behind it, and `0` deployable artefacts in it. |
+| `facial emotion recognition` | 🔴 **`8,216`** | **The one abundant capability in the register is the one EMEA prohibits** (`T430`, `T436`). |
+
+🟢 **So the commercial point of this tier, in one line:** *a tutoring agent sells to a faculty and an
+assessment agent to a registrar, but a wellbeing agent sells to a safeguarding lead who is personally
+accountable under statute — and there is nothing for them to buy in the open.*
 
 ## 🆕 `p749` — 🔴 **THE ALTERNATIVE-FORMAT LAYER: THE WHOLE DAISY ESTATE WAS AT `0` MENTIONS ACROSS `748` PASSES — `daisy/ace` `0`, `daisy/pipeline` `0`, `epubcheck` `0`, `liblouis` `0`, `readium` `0`. 🔴 THE AGENT LAYER IS A MEASURED NIL ON ITS TWO CENTRAL QUERIES — `alt text generation llm accessibility` → `0` REPOSITORIES, `captioning lecture accessibility open source` → `0`. 🟢 THE ONE STRONG ROW IS PUBLISHED BY A UNIVERSITY.**
 

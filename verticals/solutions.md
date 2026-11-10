@@ -10,6 +10,62 @@ updated: 2026-11-10
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
+## 🆕 `p750` — the safeguarding office a school and a ministry already run: case management, helplines, screening instruments and the filtering estate, with the licence posture drawn per layer, `2026-11-10`
+
+🔴 **The register is the *duty of care*: the designated safeguarding lead, the counselling service, the
+student-success office and the child-protection unit of a ministry.** These are deployable systems with
+real install bases — UNICEF runs two of them in production across dozens of countries — and an AI layer
+is sold **on top of** them, never instead of them.
+
+| Platform | Repository | Licence — **byte-read this pass** | Stars | What a client already runs it for |
+|---|---|---|---|---|
+| **Primero / CPIMS+ / GBVIMS+** | [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | 🔴 **AGPL-3.0-or-later** · `35,475 B` · sha256₁₂ `27affec55ad7` · `Copyright (c) 2014 UNICEF` — 🔴 **index reads `NOASSERTION`** | `79★` | **UNICEF's child-protection case-management system**, the one ministries and humanitarian agencies actually use for individual case files on vulnerable children. Pushed `2026-11-10`. ⚠️ **Procurement trap worth naming:** the payload's own first paragraph states the CPIMS+ and GBVIMS+ **configuration bundles (JSON) are not in the repository** and are obtained by emailing the programme. The *code* is AGPL; the *configuration that makes it a child-protection system* is gated. |
+| **Aselo** (child helpline) | [`techmatters/hrm`](https://github.com/techmatters/hrm) + [`techmatters/flex-plugins`](https://github.com/techmatters/flex-plugins) | 🔴 **AGPL-3.0** · `34,523 B` · sha256₁₂ `8486a10c4393` (canonical AGPL-3.0 text) | `8★` + `12★` | Tech Matters' contact-record manager and agent console for **national child helplines** — the 116-111-class services a school escalates to. Both pushed `2026-11-10`: 🟢 **live today, and the star count is telling you about the market, not the maturity.** |
+| **RapidPro** | [`rapidpro/rapidpro`](https://github.com/rapidpro/rapidpro) | 🔴 **AGPL-3.0-or-later** · `35,189 B` · sha256₁₂ `4364faddd538` · `Copyright (C) 2012-2023 Nyaruka, Inc., UNICEF` — 🔴 **index reads `NOASSERTION`** | `912★` | The SMS/WhatsApp flow engine behind **U-Report** and most ministry-scale youth messaging in LATAM, Africa and APAC. The channel a wellbeing check-in actually reaches a student on when the student has no smartphone. ⚠️ Last push `2026-04-21`. |
+| **CommCare** | [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) | 🟢 **BSD-3-Clause** · `1,554 B` · sha256₁₂ `3414ba95afd1` · `Copyright (c) 2009-2020, Dimagi Inc.` | `525★` | Frontline case management with offline mobile forms — used for home visits and follow-up in exactly the low-connectivity settings where a school counsellor is a travelling role. 🟢 **The one permissive case-management platform in the tier.** Pushed `2026-11-10`. |
+| **ODK Central** | [`getodk/central`](https://github.com/getodk/central) | **Apache-2.0** · `LICENSE.md` `10,494 B` · sha256₁₂ `d1ee81266b96` | `232★` | The server for offline survey collection: wellbeing screeners, attendance audits, safeguarding incident forms. Pairs with `getodk/collect` on [`../repos/foundations.md`](../repos/foundations.md). Pushed `2026-11-06`. |
+| **OnTask** | [`abelardopardo/ontask_b`](https://github.com/abelardopardo/ontask_b) | 🟢 **MIT** · `1,112 B` · sha256₁₂ `40fc48348283` · `Copyright (c) 2017 Office for Learning and Teaching. Australian Government` | `45★` | 🟢 **The intervention engine, and it is MIT and government-funded.** It takes a learner dataset, lets staff write rules, and sends personalised feedback at scale — i.e. the half of "early warning" that is not the model. 🔵 **This is the single most under-known row in the register.** ⚠️ Last push `2025-04-10`: `19` months stale, maintained-by-one-academic risk. |
+| **MindLogger** | [`ChildMindInstitute/mindlogger-app`](https://github.com/ChildMindInstitute/mindlogger-app) | 🔴 **CPAL-1.0** · `LICENSE.md` `27,886 B` · sha256₁₂ `a567832fb787` — 🔴 **index reads `NOASSERTION`** | `17★` | The Child Mind Institute's instrument-delivery app for youth mental-health assessment (validated instruments, not chat). 🔴 **Read `T431` before proposing it:** CPAL-1.0 is OSI-approved **and carries a visible-attribution requirement plus a network clause**. ⚠️ Last push `2023-08-29`. |
+| **mindLAMP** | [`BIDMCDigitalPsychiatry/LAMP-platform`](https://github.com/BIDMCDigitalPsychiatry/LAMP-platform) | 🔴 **No grant at `12` probed paths** (`T302`) | `17★` | The Harvard/BIDMC digital-psychiatry platform — sensing, surveys and clinician dashboard in one. ⚠️ **Deployable, not vendorable**: the grant could not be established through this session's channels. |
+| **LimeSurvey** | [`LimeSurvey/LimeSurvey`](https://github.com/LimeSurvey/LimeSurvey) | 🟡 **GPL-2.0-or-later** · `49,469 B` · sha256₁₂ `00dd3dc986ef` — 🔴 **index reads `NOASSERTION`**; payload carries the **GPL-2.0 text from line `20` and an LGPL text from line `400`** | `3,792★` | The survey platform a university already has a licence-free instance of. For a PPRA/consent-gated wellbeing screener this is the boring, defensible choice. Pushed `2026-11-10`. |
+| **e2guardian** | [`e2guardian/e2guardian`](https://github.com/e2guardian/e2guardian) | 🔴 **GPL-2.0** · `15,764 B` · sha256₁₂ `27a53ad36062` · payload line `2`: `Version 2, June 1991` | `541★` | The web content filter that *is* the "filtering" half of a UK KCSIE filtering-and-monitoring duty, and the one an institution can self-host. Default branch **`v5.5`**, pushed `2026-10-23`. |
+| **Pi-hole** | [`pi-hole/pi-hole`](https://github.com/pi-hole/pi-hole) | 🟡 **EUPL** (European Union Public Licence) · `14,204 B` · sha256₁₂ `cca641b5b8b2` — 🔴 **index reads `NOASSERTION`** | `61,770★` | DNS-level blocking: the cheapest way to make a named list of nudification and deepfake-generation sites unreachable on a school network, which KCSIE 2026 expects. 🔵 **The EUPL is a copyleft licence with an explicit EU-law governing clause** — unusual enough that legal will ask about it; say so first. |
+
+### 🔴 `T431` — CPAL-1.0 is an OSI licence that still breaks a white-label, and this base had no scope for that shape
+
+`ChildMindInstitute/mindlogger-app` ships the **Common Public Attribution License 1.0** — a `27,886 B`
+payload whose own header points at the OSI listing. 🟢 **It is genuinely open source.** 🔴 **And it
+carries two clauses a studio must price in before the pitch:**
+
+1. **Attribution.** CPAL exists to require a *visible* attribution — the original author's name or logo
+   displayed in the user interface of every derivative. **A client expecting their own branding on a
+   student-facing wellbeing app cannot have it on this codebase without negotiating.**
+2. **Network use.** Like AGPL, deploying it as a service counts as distribution.
+
+🔵 **Why this matters more than the licence itself:** `p749` recorded `NOASSERTION` as having two causes
+(`T419`); this is a **third** — *a licence GitHub's classifier does not recognise at all*. The shelf
+rule stays the same and gets stronger: **read the payload, and read its first paragraph, not just its
+title block** (`T435`).
+
+### 🔴 Measured nil — recorded because silence looks exactly like coverage
+
+🔴 **There is no integrated, open-source student-safety or student-success platform.** The commercial
+category — a system that watches school-issued accounts and devices, scores risk and alerts an adult —
+is owned outright by proprietary vendors (Gaggle, GoGuardian, Securly, Bark, Lightspeed; EAB Navigate
+and Civitas on the retention side). The open-source searches that would find a counterpart return:
+`wellbeing survey platform` **`6`** repositories (top result `1★`); `student counseling management`
+`105` (top result `4★`); `behavior intervention school` `16`; `safeguarding school` **`31`, and its
+highest-starred result at `3★` is a USB-attack C2 tool that merely contains the word**. 🟢 **Every
+component needed to assemble the real thing is on this page and on
+[`../repos/foundations.md`](../repos/foundations.md), permissively licensed or deployable; the
+integrated product does not exist.** See `P251` and `P252`.
+
+### 🔴 Enumerated and NOT filed — with the reason
+
+- [`formbricks/formbricks`](https://github.com/formbricks/formbricks) — `13,231★`, pushed `2026-11-10`, index `NOASSERTION`. A strong survey platform on capability, **not filed on licence shape**: the root `LICENSE` is a `35,154 B` composite (sha256₁₂ `b32292faef23`) that licenses `apps/web/modules/ee` under a **separate enterprise licence** and only some `packages/*` under MIT. 🔵 Filed here rather than shelved so a later pass can decide whether a per-directory composite is acceptable to a client's legal review — the `T435` shape.
+- [`ohcnetwork/care`](https://github.com/ohcnetwork/care) — **MIT**, `421★`, pushed `2026-11-10`. Open Healthcare Network's patient-care platform. On-topic for a campus *health* service, **not filed** because it belongs to the healthcare KB rather than this one; recorded so the boundary is deliberate.
+- `apereo/student-success-plan` — 🔴 **`422`.** See `T434`: Apereo's Student Success Plan is not reachable on GitHub at all, which is an instrument boundary rather than evidence it does not exist.
+
 ## 🆕 `p749` — the alternative-format office a university already runs: the deployable readers, braille producers and conversion servers, with the licence posture drawn per region, `2026-11-10`
 
 🔴 **The register is the *alt-format production office* — a real, staffed, budgeted unit inside
