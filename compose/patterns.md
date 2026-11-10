@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Composition Patterns — Education
 
-**Pass p736 · verified 2026-11-10.** Concrete recipes using only components verified this
+**Pass p738 · verified 2026-11-10.** Concrete recipes using only components verified this
 pass. Each pattern names the specific repos, their licences, how they wire together, and the
 constraint that decides whether it fits a given engagement.
 
@@ -22,6 +22,312 @@ prior engagement may cite.)
 
 ---
 
+
+## P197 — The licence gate, repaired an eighth time: CC0 is not CC-BY, and the filename chain is 14 names long (tooling, not a client pattern; 30 minutes, then a standing gate) 🟢 new at `p738`
+
+**Why an eighth repair, and what makes this one different from the first seven.** `P172`–`P188`
+each repaired a gate that decided a licence from a **size, a digest or a whole-payload match**.
+`P188` fixed that properly by classifying on the **first family-naming line**, and that rule is
+sound — `p738` re-ran it on `27` payloads and it was right `24` times with `0` regressions.
+🟢 **The two defects `p738` found are not in the classification rule. They are in the *vocabulary*
+it classifies against and in the *paths* it reads from** — which is why this repair adds entries
+rather than rewriting logic.
+
+### Defect 1 — CC0-1.0 was reported as `CC-BY-family (not a software grant)`, `3 / 3`
+
+| Payload | Raw bytes | First surviving line | `p736` verdict | Correct |
+|---|--:|---|---|---|
+| [`GEANT/edugain-openidfed`](https://github.com/GEANT/edugain-openidfed) | 7,048 | `Creative Commons Legal Code` | CC-BY-family | **CC0-1.0** |
+| [`dini-ag-kim/amb`](https://github.com/dini-ag-kim/amb) | 7,048 | `Creative Commons Legal Code` | CC-BY-family | **CC0-1.0** |
+| [`openjournals/jose-reviews`](https://github.com/openjournals/jose-reviews) | 6,555 | `CC0 1.0 Universal` | CC-BY-family | **CC0-1.0** |
+
+🔴 **The consequence runs in the expensive direction, as every one of these defects has.** CC0 is a
+**public-domain dedication**: it imposes *no* obligation, not even attribution, so it is strictly
+more permissive than CC-BY and more permissive than MIT. The old verdict's parenthetical —
+*"not a software grant"* — then files the most freely usable material this base encounters as
+unusable. Two of the three payloads are exactly what a studio wants: a **national metadata profile**
+and a **federation specification**.
+
+🔵 **Note the two layouts, because a fix that handles one and not the other looks correct and
+is not.** Two payloads open with a bare `Creative Commons Legal Code` preamble and name CC0 on the
+*next* surviving line; the third names `CC0 1.0 Universal` first. So:
+
+1. Add `CC0 1\.0 Universal` → `CC0-1.0` to the family table **above** the generic `Creative Commons`
+   entry (rule order is load-bearing, exactly as it is for AGPL-before-GPL).
+2. Add the exact line `Creative Commons Legal Code` to the **decoration** predicate, so it cannot
+   terminate the walk before CC0 is reached. It names no family and carries no grant.
+
+### Defect 2 — the six-name filename chain missed two real grants
+
+| Repo | Grant actually at | Raw bytes | Verdict | Why missed |
+|---|---|--:|---|---|
+| [`iansan5653/open-mcr`](https://github.com/iansan5653/open-mcr) | **`license.txt`** | 32,423 | GPL-3.0 | lowercase — the raw probe is **case-sensitive** (`724-I`) |
+| [`kiwix/kiwix-js`](https://github.com/kiwix/kiwix-js) | **`LICENSE-GPLv3.txt`** | 35,147 | GPL-3.0 | suffixed filename |
+
+The chain goes from `6` names to `14`, in this order:
+
+```
+LICENSE  LICENSE.md  LICENSE.txt  COPYING  LICENCE  License
+LICENSE-MIT  LICENSE-APACHE  LICENSE-GPLv3.txt  license  license.txt
+licence  LICENSE.rst  COPYING.md
+```
+
+🔵 **The lowercase variants are load-bearing, not defensive** — one of the two recoveries is
+lowercase. 🟢 **And `T302`'s honest-negative discipline is what made both recoverable**: because the
+verdict must be written *"no grant found at the probed paths"* and never *"no grant"*, these were
+open questions rather than closed refusals.
+
+### Defect 3 — a procedure change, not a code change: do not trust a manifest alone (`T331`)
+
+`T312` established that a missing licence file is not evidence of a missing grant, because grants
+live in manifests. 🔴 **`p738` measured the inverse failure.**
+[`cast-org/clusive`](https://github.com/cast-org/clusive) has **no licence file at `14` probed
+paths**, a `package.json` declaring `"license": "ISC"`, and a `README.md` §License reading *"made
+available under the BSD 3-clause license"*. **`ISC` is the value `npm init` writes when nobody
+chooses one.** The repaired order is:
+
+> **licence file → README licence section → manifest**, and a manifest-only value is recorded as
+> **uncorroborated**.
+
+⚠️ `ISC` and `MIT` in a `package.json` with no payload are the two scaffold defaults and carry the
+least evidential weight of anything this gate reads. For a client build, get the grant in writing
+from the publisher — a README sentence is not a licence file.
+
+### Runnable
+
+`evidence/licence-gate.p738.py` — stdlib only, no network, takes payload paths and prints
+`family | bytes | filename`. Carries forward `p737`'s GPL/LGPL version resolution and `p736`'s
+family-line rule unchanged.
+
+### Controls re-run before trusting it
+
+**`27 / 27` payloads classified this pass: `3` corrected, `24` unchanged, `0` regressions**
+(`evidence/gate-controls.2026-11-10-p738.tsv`,
+`evidence/licence-gate-run.2026-11-10-p738.tsv`). The controls that matter, because each defeated a
+version of this gate:
+
+| Control | Shape | Correct verdict |
+|---|---|---|
+| `pressbooks/pressbooks-book` | GPL-3.0 whose §13 names the AGPL | **GPL-3.0**, not AGPL (`T311` holds) |
+| `dini-ag-kim/amb` | CC0 **behind** a `Creative Commons Legal Code` preamble | **CC0-1.0** |
+| `openjournals/jose-reviews` | CC0 with **no** preamble | **CC0-1.0** |
+| `kiwix/kiwix-js` | grant only at `LICENSE-GPLv3.txt` | **GPL-3.0**, not a nil |
+| `iansan5653/open-mcr` | grant only at lowercase `license.txt` | **GPL-3.0**, not a nil |
+| `cast-org/clusive` | manifest says `ISC`, README says BSD-3 | **BSD-3-Clause, uncorroborated** |
+| `ECNU-ICALK/EasyCL` | Apache-2.0 at `11,324 B`, `33 B` below canonical | **Apache-2.0** (size is not the test) |
+| `bigbluebutton/greenlight` | LGPL-3.0, `7,651 B` | **LGPL-3.0** (version resolved, `p737`) |
+
+⚠️ **Limits unchanged:** the gate reads `HEAD` on the default branch, cannot see per-directory
+licensing in a monorepo, and **cannot certify an absence** (`T302`, `T312`).
+
+---
+
+## P198 — The UNESCO-provenance content line: lecture to assessment, audio and plain language, under MIT with a name a ministry trusts (all four regions, LATAM and APAC first; 4–6 weeks) 🟢 new at `p738`
+
+🟢 **The engagement this answers is the commonest one in public-sector education and the hardest to
+win on technology alone: a ministry or public university has a large archive of existing teaching
+material and no safe, defensible way to turn it into AI-era learning assets.** The obstacle is almost
+never capability. It is the procurement conversation about whose software is touching the material.
+
+### Components — every one verified first-hand at `p738` unless marked carried
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| Lecture video → quiz items | [`unesco/video-to-quiz`](https://github.com/unesco/video-to-quiz) | **MIT** (`1,063 B`) | `p738` |
+| Document → spoken dialogue | [`unesco/pdf-to-podcast`](https://github.com/unesco/pdf-to-podcast) | **MIT** (`1,113 B`) | `p738` |
+| PII detection and redaction | [`unesco/pii-detector`](https://github.com/unesco/pii-detector) | **MIT** (`1,063 B`) | `p738` |
+| Course content extraction | `estevao-tarifa/moodle2ia` | **MIT** | carried, `p736` |
+| Item runtime and scoring | [`Khan/perseus`](https://github.com/Khan/perseus) | **MIT** | `p738` (`P200`) |
+| Metadata for findability (EMEA) | [`dini-ag-kim/amb`](https://github.com/dini-ag-kim/amb) | **CC0-1.0** | `p738` |
+| Local model hosting | Ollama / vLLM | **MIT** / **Apache-2.0** | carried |
+| Offline delivery (where needed) | [`kiwix`](https://github.com/kiwix/kiwix-js) | **GPL-3.0** (unmodified) | `p738` |
+
+### Wiring
+
+1. **Extract** with `moodle2ia`: the client's Moodle course becomes Markdown, PDFs and quiz
+   questions with answer keys.
+2. **Redact** with `pii-detector` before anything leaves the client's perimeter — and tune it for
+   **locally shaped identifiers**, because a generic detector misses a CPF, an Aadhaar or an NIE.
+3. **Point every model call at a local runtime.** All three UNESCO pipelines are configurable this
+   way (`video-to-quiz` names faster-whisper, LLaVA and Llama 3.2 explicitly), so the material never
+   leaves the estate. This is the step that makes the rest of it saleable under EU live transparency
+   duties (`T321`) and in a LATAM governance vacuum (`T333`).
+4. **Transform, three ways in parallel**: `video-to-quiz` turns each lecture recording into draft
+   assessment items **using the slides and board as well as the audio**; `pdf-to-podcast` turns the
+   set readings into a spoken two-voice explanation; and the extracted text feeds a plain-language
+   rewrite for the reading-support path.
+5. **Review, then harden.** Draft items go into the **Perseus** editor for expert approval and then
+   score deterministically (`P200`). Audio is published as a **study aid, never as normative
+   assessed content** — generated narration restates a source confidently and sometimes wrongly.
+6. **Describe and publish**: emit **AMB** (CC0) metadata in EMEA so the output is findable in the
+   national OER infrastructure rather than merely existing; ship a `.zim` via **Kiwix** where
+   connectivity is the constraint.
+
+### Licence obligation
+
+🟢 **MIT end to end for everything you modify.** CC0 imposes nothing at all. Kiwix is **GPL-3.0 but
+shipped unmodified**, so no reciprocity is triggered — and even if modified, GPL-3.0 reciprocity
+turns on **distribution, not hosting** (`738-G`).
+
+### Why this sells, and why the provenance is not a decoration
+
+🔵 **This is the only pattern on this base whose core components are published by an
+intergovernmental agency.** In a ministry or public-university procurement, *"this is UNESCO's own
+MIT-licensed pipeline, adapted to your curriculum, running on your hardware"* is a materially
+different sentence from *"we built a content pipeline"* — and UNESCO is already the body whose
+*Recommendation on the Ethics of AI* and *AI competency framework for teachers* those same
+procurement documents cite. 🔵 **It also reaches the learner population every tutoring pitch
+misses**: audio-first delivery serves visually impaired students, commuting adult learners, and
+phone-only learners for whom video data is unaffordable.
+
+⚠️ **State the engineering reality plainly in the proposal.** These repositories are **`0`–`3★`,
+last pushed April 2026, with no releases and no named adopters** — they are **reference pipelines to
+adapt and then maintain yourself**, not dependencies to track. The value is the assembled design
+plus the provenance; budget for hardening, tests and a maintenance owner. ⚠️ Redaction is
+mitigation, never a lawful basis for processing. ⚠️ Verify the UNESCO attribution with the client
+rather than from the GitHub profile alone (`738-A`), and do not confuse the organisation's
+repositories with the similarly named personal repository that disclaims representing it.
+
+---
+
+## P199 — The multilingual lecture archive: make an existing course usable in a language its lecturer never spoke (APAC and LATAM first; 6–8 weeks) 🟢 new at `p738`
+
+🟢 **A university or ministry with a decade of recorded lectures in one language is sitting on its
+largest unexploited asset, and the reason it stays unexploited is that machine translation alone is
+not publishable for accredited material.** This pattern is built around the correction step, which
+is the part everyone underestimates and the part that makes the output usable.
+
+### Components — every one verified first-hand at `p738` unless marked carried
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| Transcribe + translate + subtitle, **with human review UI** | [`AI4Bharat/Chitralekha`](https://github.com/AI4Bharat/Chitralekha) | **MIT** (`1,079 B`) | `p738` |
+| ASR for Indic and code-switched speech | [`AI4Bharat/IndicConformerASR`](https://github.com/AI4Bharat/IndicConformerASR) | **MIT** (`1,067 B`) | `p738` |
+| ASR elsewhere | faster-whisper (via `unesco/video-to-quiz`'s stack) | **MIT** | `p738` |
+| Assessment items from the corrected transcript | [`unesco/video-to-quiz`](https://github.com/unesco/video-to-quiz) | **MIT** | `p738` |
+| Audio explanation of set readings | [`unesco/pdf-to-podcast`](https://github.com/unesco/pdf-to-podcast) | **MIT** | `p738` |
+| Live classroom captioning | BigBlueButton + `bbb-transcription-controller` | **LGPL-3.0** / ⚠️ no grant | `p738` |
+| Offline distribution | [`kiwix`](https://github.com/kiwix/kiwix-js) | **GPL-3.0** | `p738` |
+
+### Wiring
+
+1. **Ingest** the archive into `Chitralekha`. Transcribe with `IndicConformerASR` for Indian
+   languages — where general ASR degrades badly on code-switched classroom speech — and with
+   faster-whisper elsewhere.
+2. **Correct, and resource this step honestly.** `Chitralekha`'s review workflow is why it is the
+   component of record: a reviewer fixes the transcript, then the translation. For accredited
+   material this stage is **mandatory**, and it is the project's real cost line. Plan reviewer hours
+   per lecture-hour and put the ratio in the statement of work.
+3. **Publish subtitles** in each target language against the original video — the cheapest visible
+   win, and the one that demonstrates value in week two.
+4. **Reuse the corrected transcript** as the clean source it now is: `video-to-quiz` drafts
+   assessment items from it (then `P200` for scoring), `pdf-to-podcast` handles the set readings,
+   and the transcript itself becomes searchable course text.
+5. **Distribute** by `.zim` through Kiwix where connectivity is the binding constraint —
+   the APAC survey reading names limited connectivity as a barrier directly, and it is a LATAM
+   constraint too.
+6. **For new teaching, caption live** in BigBlueButton. ⚠️ `bbb-transcription-controller` carries
+   **no grant at the probed paths**, so treat the live path as a design reference until that is
+   resolved with the project, and keep the asynchronous path as the contracted deliverable.
+
+### Licence obligation
+
+🟢 **MIT for every component you modify.** Kiwix is GPL-3.0 and shipped unmodified. BigBlueButton is
+**LGPL-3.0**, the mildest copyleft on this base — reciprocity reaches modifications to BigBlueButton
+itself, and a separately licensed layer around it is explicitly contemplated (`738-G`).
+⚠️ The ungranted transcription controller is the one licence risk; do not build the commercial
+deliverable on it.
+
+### Why this composition and not machine translation alone
+
+🔵 **Because the deliverable is accreditable material, and an uncorrected machine transcript is
+not.** Every serious objection to this engagement — *the translation will embarrass us, the
+terminology will be wrong, we cannot put this in front of an examiner* — is an objection to
+publishing uncorrected output, and the answer is a tool whose design assumes correction.
+🔵 **The second-order value is larger than the first**: once a corrected, aligned transcript exists,
+the archive stops being video and becomes **text** — searchable, quotable, indexable, and the input
+to every other pattern on this base. 🔵 **And the regional fit is exact.** APAC supply is
+language-shaped (`p738`'s APAC reading), India has a national lecture programme whose speech corpus
+the same group publishes, and LATAM's institutions publish nothing reusable (`T330`) — so in LATAM
+this is built from these components rather than found locally.
+
+⚠️ `Chitralekha` was last pushed **October 2025** and `IndicConformerASR` **June 2025**: maintained
+enough to adopt, not actively developed — pin versions and own the fork.
+⚠️ **The synthesis half of the Indic stack is unavailable on these terms**: `AI4Bharat/IndicF5`
+(TTS) carries no grant at `14` probed paths, so dubbed audio needs a different component.
+⚠️ Indic-first by design; other language families need the ASR swapped and the review workflow
+kept.
+
+---
+
+## P200 — The defensible auto-marker: an LLM authors the item, Khan Academy's engine scores it (all four regions; 5–7 weeks) 🟢 new at `p738`
+
+🔴 **The objection that kills AI grading pilots is not accuracy, it is reproducibility.** A registrar,
+an awarding body or an EU AI Act Annex III assessor asks: *can you reproduce this mark, and explain
+it, without reference to which model version answered that day?* An LLM in the marking path cannot
+answer that. 🟢 **This pattern takes the model out of the marking path and leaves it where it is
+genuinely good: writing the questions.**
+
+### Components — every one verified first-hand at `p738` unless marked carried
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| Item runtime and **scorer** | [`Khan/perseus`](https://github.com/Khan/perseus) | **MIT** (`1,052 B`) | `p738`, pushed 2026-11-10 |
+| Item authoring UI | `Khan/perseus` editor packages | **MIT** | `p738` |
+| Learner-facing components | [`Khan/wonder-blocks`](https://github.com/Khan/wonder-blocks) | **MIT** (`1,069 B`) | `p738` |
+| Accessibility layer / UDL evidence | [`cast-org/figuration`](https://github.com/cast-org/figuration) | **MIT** (`1,128 B`) | `p738` |
+| Code-answer execution | `openHPI/codeocean` + `openHPI/poseidon` | **BSD-3** / **MIT** | carried, `p737` (`P192`) |
+| LMS mounting | LTI 1.3 — `Simon-Initiative/lti_1p3_ecto_provider` (Elixir) or held `tsugiproject` (PHP/Node) | **MIT** | `p738` / carried |
+| Source material extraction | `estevao-tarifa/moodle2ia` | **MIT** | carried, `p736` |
+| Student-data redaction | [`unesco/pii-detector`](https://github.com/unesco/pii-detector) | **MIT** (`1,063 B`) | `p738` |
+
+### Wiring
+
+1. **Extract** the client's existing course content with `moodle2ia` — PDFs, pages and **quiz
+   questions with their answer keys** — into Markdown. The keys are what make step 2 grounded
+   rather than inventive.
+2. **Author**: the LLM emits **Perseus item JSON**, not prose. One prompt per item type
+   (numeric, expression, graph, sorting, labelled image), each constrained to the schema. The model
+   writes the question, the distractors, the hints and the scoring parameters.
+3. **Review**: a subject-matter expert opens each generated item in the **Perseus editor** and
+   approves, edits or rejects it. This is a human-authored item bank with machine-drafted
+   candidates — which is what an awarding body will accept and what *"AI-generated assessment"*
+   is not.
+4. **Serve and score**: Perseus renders the approved item and **scores it deterministically**.
+   Expression answers are marked for mathematical equivalence, graphs against a target, sorting
+   against an order. **No model is invoked at marking time.**
+5. **Programming questions** route to `codeocean`/`poseidon` instead (`P192`): the sandbox runs the
+   learner's code against tests, so that mark is also deterministic.
+6. **Mount** the whole thing in the client's existing LMS over **LTI 1.3**, so no derivation from a
+   GPL/AGPL platform occurs (`P186`).
+7. **Redact** before any model call — authoring prompts should never carry learner data at all, and
+   `pii-detector` sits in front of anything that might.
+
+### Licence obligation
+
+🟢 **MIT and BSD-3 throughout, plus Apache-2.0 if `CrypTool-2` is added for a cryptography
+curriculum. No copyleft anywhere in the delivered artefact**, and the LTI boundary keeps the client's
+Moodle or Open edX licence out of scope entirely. This is the cleanest-licensed pattern on this base.
+
+### Why this composition and not a simpler one
+
+🔵 **Because "an LLM marks the work" and "an LLM writes items a human approves and a deterministic
+engine marks" are the same demo and completely different products.** The first cannot be audited,
+cannot be reproduced, drifts when the model is upgraded, and fails Annex III's record-keeping
+expectations when those bite on 2 December 2027 (`T321`, `T336`). The second produces a mark whose
+provenance is a reviewed item plus a published scoring rule — defensible to a registrar today.
+🔵 **And the economics favour it**: item authoring is the genuine cost in assessment, Perseus makes
+scoring free, and the review step is the only recurring human expense.
+🔵 **Provenance is a sales asset here**, not incidental: the engine is **Khan Academy's own**,
+the accessibility layer is **UDL's authors'**, the sandbox is **Hasso Plattner Institute's** and the
+redaction step is **UNESCO's** — four institutional names in one architecture diagram (`T329`).
+
+⚠️ **Constraints that decide fit.** Perseus is a **front-end library**: there is no item bank, no
+gradebook and no auth, so budget for those. Some widgets assume Khan conventions. It suits
+**mathematics, physics, chemistry, statistics and programming** — subjects with structured answers;
+it does **not** mark an essay, and `P174`'s rubric-grounded route remains the honest answer there.
+
+---
 
 ## P188 — The licence gate, repaired a seventh time: classify on the clause, not on the size (tooling, not a client pattern; 30 minutes, then a standing gate) 🟢 new at `p736`
 

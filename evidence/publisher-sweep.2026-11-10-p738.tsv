@@ -1,0 +1,921 @@
+leg	total	full_name	stars	license	pushed	archived	held
+org:oppia	22	oppia/oppia	6984	Apache-2.0	2026-11-08	False	HELD
+org:oppia	22	oppia/oppia-android	420	Apache-2.0	2026-11-09	False	HELD
+org:oppia	22	oppia/oppiabot	28	Apache-2.0	2026-01-28	False	NEW
+org:oppia	22	oppia/lessons-team	22	NONE	2022-09-25	False	NEW
+org:oppia	22	oppia/oppia-web-developer-docs	19	Apache-2.0	2026-11-06	False	NEW
+org:oppia	22	oppia/xblock	7	Apache-2.0	2020-06-30	False	NEW
+org:oppia	22	oppia/foundation-website	7	Apache-2.0	2022-04-09	False	NEW
+org:oppia	22	oppia/oppia.github.io	6	Apache-2.0	2023-01-18	False	NEW
+org:oppia	22	oppia/oppia-ml	3	Apache-2.0	2024-12-02	True	HELD
+org:oppia	22	oppia/creator-documentation	3	Apache-2.0	2026-06-09	False	NEW
+org:oppia	22	oppia/oppia-bazel-tools	2	Apache-2.0	2021-02-11	False	NEW
+org:oppia	22	oppia/oppia-ml-proto	1	Apache-2.0	2024-12-23	True	NEW
+org:oppia	22	oppia/.github	1	Apache-2.0	2025-12-16	False	NEW
+org:oppia	22	oppia/stale-review-request-notifier	1	Apache-2.0	2026-09-17	False	NEW
+org:oppia	22	oppia/oppia-proto-api	1	Apache-2.0	2026-10-16	False	NEW
+org:oppia	22	oppia/hacktoberfest-2022-non-code-contributions	0	NONE	2022-10-07	False	NEW
+org:oppia	22	oppia/oppia-android-licenses	0	Apache-2.0	2022-02-10	False	NEW
+org:oppia	22	oppia/qa-team	0	NONE	2025-02-24	False	NEW
+org:oppia	22	oppia/analytics-data-platform	0	Apache-2.0	2026-11-02	False	HELD
+org:oppia	22	oppia/product-operations-team	0	NONE	2026-11-08	False	NEW
+org:oppia	22	oppia/common-actions	0	Apache-2.0	2025-01-06	False	NEW
+org:oppia	22	oppia/design-team	0	NONE	2026-10-23	False	NEW
+org:Khan	207	Khan/aphrodite	5339	NONE	2025-07-24	False	NEW
+org:Khan	207	Khan/style-guides	2126	NONE	2024-09-06	False	NEW
+org:Khan	207	Khan/khan-exercises	1671	NONE	2020-10-21	True	NEW
+org:Khan	207	Khan/perseus	1598	MIT	2026-11-10	False	NEW
+org:Khan	207	Khan/genqlient	1325	MIT	2026-11-04	False	NEW
+org:Khan	207	Khan/react-components	990	MIT	2018-11-12	True	NEW
+org:Khan	207	Khan/live-editor	774	NOASSERTION	2024-12-17	False	NEW
+org:Khan	207	Khan/flow-to-ts	390	NONE	2024-01-26	True	NEW
+org:Khan	207	Khan/khan-api	381	NONE	2020-07-29	True	NEW
+org:Khan	207	Khan/gae_mini_profiler	269	NONE	2019-04-23	True	NEW
+org:Khan	207	Khan/khan-mobile	237	NONE	2014-08-05	True	NEW
+org:Khan	207	Khan/Prototope	229	NONE	2016-06-21	True	NEW
+org:Khan	207	Khan/math-input	220	MIT	2022-05-04	True	NEW
+org:Khan	207	Khan/snippets	214	MIT	2023-07-26	False	NEW
+org:Khan	207	Khan/pull-request-comment-trigger	207	NONE	2024-08-10	True	NEW
+org:Khan	207	Khan/structuredjs	198	NONE	2018-10-18	False	NEW
+org:Khan	207	Khan/react-multi-select	182	MIT	2024-01-30	True	NEW
+org:Khan	207	Khan/wonder-blocks	163	MIT	2026-11-10	False	NEW
+org:Khan	207	Khan/guacamole	149	MIT	2017-11-27	True	NEW
+org:Khan	207	Khan/react-render-server	138	MIT	2020-08-12	True	NEW
+org:Khan	207	Khan/slicker	123	NONE	2021-04-12	True	NEW
+org:Khan	207	Khan/KAS	115	MIT	2021-04-13	True	NEW
+org:Khan	207	Khan/math-facts	78	NONE	2016-02-29	True	NEW
+org:Khan	207	Khan/tutoring-accuracy-dataset	57	NOASSERTION	2024-08-29	False	HELD
+org:Khan	207	Khan/hivemind	48	NONE	2017-08-07	True	NEW
+org:code-dot-org	66	code-dot-org/code-dot-org	902	NOASSERTION	2026-11-10	False	HELD
+org:code-dot-org	66	code-dot-org/blockly	63	Apache-2.0	2026-01-27	True	NEW
+org:code-dot-org	66	code-dot-org/craft	22	NOASSERTION	2022-09-15	False	NEW
+org:code-dot-org	66	code-dot-org/dance-party	15	NONE	2025-11-17	False	NEW
+org:code-dot-org	66	code-dot-org/browser	11	Apache-2.0	2023-07-24	True	NEW
+org:code-dot-org	66	code-dot-org/ml-activities	9	Apache-2.0	2026-04-11	False	HELD
+org:code-dot-org	66	code-dot-org/curriculumbuilder	9	NOASSERTION	2023-08-08	True	NEW
+org:code-dot-org	66	code-dot-org/aiproxy	7	NONE	2026-04-15	False	NEW
+org:code-dot-org	66	code-dot-org/maze	6	NOASSERTION	2025-06-16	False	NEW
+org:code-dot-org	66	code-dot-org/ml-playground	6	Apache-2.0	2026-05-28	False	NEW
+org:code-dot-org	66	code-dot-org/javabuilder	6	Apache-2.0	2026-09-23	False	HELD
+org:code-dot-org	66	code-dot-org/remark-redactable	6	NONE	2022-02-11	False	NEW
+org:code-dot-org	66	code-dot-org/redactable-markdown	6	NOASSERTION	2024-08-31	False	NEW
+org:code-dot-org	66	code-dot-org/dsco_	5	NONE	2022-03-04	False	NEW
+org:code-dot-org	66	code-dot-org/code-dot-org.github.io	4	NONE	2019-06-14	False	NEW
+org:code-dot-org	66	code-dot-org/generate-pdf-scripts	3	NONE	2022-12-30	False	NEW
+org:code-dot-org	66	code-dot-org/js-interpreter-tyrant	3	Apache-2.0	2023-09-07	False	NEW
+org:code-dot-org	66	code-dot-org/blockly-demo	3	NONE	2023-01-14	False	NEW
+org:code-dot-org	66	code-dot-org/engineering-culture	2	NONE	2019-10-23	False	NEW
+org:code-dot-org	66	code-dot-org/artist	2	NOASSERTION	2023-01-07	False	NEW
+org:code-dot-org	66	code-dot-org/cdo-styleguide	2	NONE	2026-11-10	False	NEW
+org:code-dot-org	66	code-dot-org/circlarify	2	Apache-2.0	2018-03-13	False	NEW
+org:code-dot-org	66	code-dot-org/csa-se-lesson2c	2	NONE	2023-08-18	False	NEW
+org:code-dot-org	66	code-dot-org/pythonlab-packages	2	Apache-2.0	2025-02-06	True	NEW
+org:code-dot-org	66	code-dot-org/powerschool	2	Apache-2.0	2018-06-20	False	NEW
+org:concord-consortium	403	concord-consortium/codap	107	MIT	2026-11-10	False	NEW
+org:concord-consortium	403	concord-consortium/lab	59	MIT	2023-07-18	False	NEW
+org:concord-consortium	403	concord-consortium/drawing-tool	53	MIT	2026-09-26	False	NEW
+org:concord-consortium	403	concord-consortium/shutterbug	26	NOASSERTION	2015-12-03	True	NEW
+org:concord-consortium	403	concord-consortium/tectonic-explorer	24	MIT	2025-05-06	False	NEW
+org:concord-consortium	403	concord-consortium/energy3d	18	MIT	2025-09-16	False	NEW
+org:concord-consortium	403	concord-consortium/build-ngspice-js	15	MIT	2015-01-30	True	NEW
+org:concord-consortium	403	concord-consortium/lab-interactives-site	15	NOASSERTION	2025-09-17	False	NEW
+org:concord-consortium	403	concord-consortium/CEASAR	11	MIT	2023-05-04	False	NEW
+org:concord-consortium	403	concord-consortium/collaborative-learning	10	MIT	2026-11-10	False	NEW
+org:concord-consortium	403	concord-consortium/building-models	10	MIT	2026-09-10	False	NEW
+org:concord-consortium	403	concord-consortium/rigse	9	MIT	2026-10-31	False	NEW
+org:concord-consortium	403	concord-consortium/energy2d-js	9	NONE	2012-05-18	True	NEW
+org:concord-consortium	403	concord-consortium/mysystem_sc	9	MIT	2013-06-14	True	NEW
+org:concord-consortium	403	concord-consortium/seismic-explorer	7	MIT	2026-09-11	False	NEW
+org:concord-consortium	403	concord-consortium/codap-data-interactives	6	NONE	2026-11-09	False	NEW
+org:concord-consortium	403	concord-consortium/circuit-solver	6	NONE	2014-05-27	True	NEW
+org:concord-consortium	403	concord-consortium/video-processing-experiments	6	NONE	2014-03-24	True	NEW
+org:concord-consortium	403	concord-consortium/codap-data	5	NONE	2026-02-06	False	NEW
+org:concord-consortium	403	concord-consortium/flow-server	5	MIT	2019-10-07	True	NEW
+org:concord-consortium	403	concord-consortium/geogebra	5	NONE	2010-11-25	False	NEW
+org:concord-consortium	403	concord-consortium/goio_sdk	4	NONE	2011-07-14	True	NEW
+org:concord-consortium	403	concord-consortium/flow	4	MIT	2019-11-07	False	NEW
+org:concord-consortium	403	concord-consortium/hurricane-model	4	MIT	2026-09-18	False	NEW
+org:concord-consortium	403	concord-consortium/lara	4	MIT	2026-10-11	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/oli-torus	119	MIT	2026-11-09	False	HELD
+org:Simon-Initiative	34	Simon-Initiative/lti_1p3	16	MIT	2026-04-06	False	HELD
+org:Simon-Initiative	34	Simon-Initiative/authoring-client	6	MIT	2023-10-06	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/authoring-dev	6	MIT	2021-08-13	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/DataShopLogger	3	MIT	2023-04-10	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/course-digest	2	MIT	2026-10-09	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/authoring-server	2	MIT	2023-10-06	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/authoring-eval	1	MIT	2026-03-09	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/dataset	1	NONE	2026-03-18	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/lti-example-tool	1	NONE	2026-04-10	False	HELD
+org:Simon-Initiative	34	Simon-Initiative/torus_tutorial	1	NONE	2026-03-15	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/sample-torus-activity	0	NONE	2020-06-09	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/lightbulb	0	MIT	2026-04-10	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/oli-lightside	0	NONE	2022-02-04	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/OLIActivityXBlock	0	NOASSERTION	2017-08-23	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/xlsx-to-oli	0	MIT	2022-12-10	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/conversion	0	MIT	2024-04-16	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/prereq-navigator	0	MIT	2019-09-12	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/ltijs-demo-server	0	NONE	2026-01-29	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/proving-ground	0	MIT	2023-01-04	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/Torus-visualization	0	NONE	2024-10-16	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/lti_1p3_ecto_provider	0	MIT	2026-03-13	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/torus-activity-tf	0	MIT	2022-04-27	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/authoring-admin	0	NONE	2023-10-06	False	NEW
+org:Simon-Initiative	34	Simon-Initiative/RT_RoboTutor_2017_06_16	0	NOASSERTION	2019-03-05	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-gui	4808	AGPL-3.0	2026-05-29	True	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-blocks	2771	Apache-2.0	2026-11-09	False	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-www	1692	AGPL-3.0	2026-11-10	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-flash	1358	GPL-2.0	2019-02-05	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-vm	1306	AGPL-3.0	2026-05-10	True	HELD
+org:scratchfoundation	45	scratchfoundation/scratchjr	707	BSD-3-Clause	2022-07-22	True	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-desktop	430	AGPL-3.0	2026-11-10	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-html5	394	GPL-2.0	2018-06-18	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-editor	313	AGPL-3.0	2026-11-10	False	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-render	270	AGPL-3.0	2026-06-01	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratchx	197	NONE	2023-04-04	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-paint	185	AGPL-3.0	2026-07-14	True	NEW
+org:scratchfoundation	45	scratchfoundation/Scratch_1.4	126	NOASSERTION	2018-06-18	True	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-link	122	AGPL-3.0	2026-11-06	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-audio	72	AGPL-3.0	2026-11-09	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-l10n	72	AGPL-3.0	2026-11-09	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-parser	71	AGPL-3.0	2026-11-06	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-storage	62	AGPL-3.0	2026-07-14	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-rest-api	60	NONE	2015-12-08	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratchjr-website	55	BSD-3-Clause	2026-08-20	False	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-svg-renderer	45	AGPL-3.0	2026-06-01	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-analysis	36	BSD-3-Clause	2026-06-16	False	HELD
+org:scratchfoundation	45	scratchfoundation/scratch-extension-docs	26	NONE	2015-05-15	True	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-resources	22	NONE	2026-01-21	False	NEW
+org:scratchfoundation	45	scratchfoundation/scratch-render-fonts	21	Apache-2.0	2026-11-09	False	NEW
+org:phetsims	216	phetsims/phet-info	114	NONE	2026-10-20	False	NEW
+org:phetsims	216	phetsims/scenery	83	MIT	2026-09-13	False	HELD
+org:phetsims	216	phetsims/paper-land	39	MIT	2026-03-11	False	NEW
+org:phetsims	216	phetsims/example-sim	23	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/circuit-construction-kit-dc	22	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/wave-interference	20	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/circuit-construction-kit-common	17	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/chipper	17	MIT	2026-07-07	False	HELD
+org:phetsims	216	phetsims/kite	17	MIT	2026-09-13	False	HELD
+org:phetsims	216	phetsims/projectile-motion	16	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/alpenglow	15	MIT	2026-03-31	False	HELD
+org:phetsims	216	phetsims/forces-and-motion-basics	14	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/build-an-atom	14	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/dot	14	MIT	2026-09-13	False	HELD
+org:phetsims	216	phetsims/qa	13	MIT	2026-10-21	False	NEW
+org:phetsims	216	phetsims/sherpa	12	NOASSERTION	2026-06-29	False	NEW
+org:phetsims	216	phetsims/phet-core	12	MIT	2026-09-13	False	NEW
+org:phetsims	216	phetsims/bending-light	12	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/gravity-and-orbits	12	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/states-of-matter	12	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/axon	12	MIT	2026-09-13	False	HELD
+org:phetsims	216	phetsims/wave-on-a-string	10	NONE	2026-10-09	False	NEW
+org:phetsims	216	phetsims/joist	10	MIT	2026-09-13	False	HELD
+org:phetsims	216	phetsims/scenery-phet	10	MIT	2026-09-13	False	NEW
+org:phetsims	216	phetsims/geometric-optics	9	NONE	2026-10-09	False	NEW
+org:unizin	ERR	-NO-RESULTS-					
+org:ccctechcenter	8	ccctechcenter/alpine-nginx-phpfpm-pgsql	0	NONE	2025-06-05	False	NEW
+org:ccctechcenter	8	ccctechcenter/college-reported-fraud	0	Apache-2.0	2023-09-19	False	NEW
+org:ccctechcenter	8	ccctechcenter/colleague-dmi-client	0	NONE	2021-04-26	False	NEW
+org:ccctechcenter	8	ccctechcenter/college-adaptor-client	0	NONE	2022-11-16	False	NEW
+org:ccctechcenter	8	ccctechcenter/composer-laravel	0	NONE	2025-11-24	False	NEW
+org:ccctechcenter	8	ccctechcenter/demo	0	NONE	2026-10-09	False	NEW
+org:ccctechcenter	8	ccctechcenter/registry	0	NONE	2022-02-23	False	NEW
+org:ccctechcenter	8	ccctechcenter/alpine-nginx-php7-pgsql	0	NONE	2020-06-03	False	NEW
+org:openupresources	6	openupresources/heroku-buildpack-pandoc	1	NONE	2024-12-06	False	NEW
+org:openupresources	6	openupresources/spyder	0	NONE	2025-06-25	False	NEW
+org:openupresources	6	openupresources/pg-dump	0	MIT	2026-10-20	False	NEW
+org:openupresources	6	openupresources/install-postgresql	0	MIT	2025-12-25	False	NEW
+org:openupresources	6	openupresources/buildpack-static-curriculum	0	NONE	2019-08-01	False	NEW
+org:openupresources	6	openupresources/clickup-progresstep-migrator	0	NONE	2025-09-25	False	NEW
+org:CAST-org	9	cast-org/figuration	31	MIT	2026-10-26	False	NEW
+org:CAST-org	9	cast-org/clusive	16	NOASSERTION	2026-04-22	False	NEW
+org:CAST-org	9	cast-org/cwm-drawtool	3	NONE	2016-11-09	False	NEW
+org:CAST-org	9	cast-org/cast-wicket-modules	2	NONE	2025-05-22	False	NEW
+org:CAST-org	9	cast-org/figuration-slider	1	MIT	2018-08-02	False	NEW
+org:CAST-org	9	cast-org/cisl-demo	1	NONE	2019-04-05	False	NEW
+org:CAST-org	9	cast-org/udl-curriculum-toolkit	0	NONE	2020-10-13	False	NEW
+org:CAST-org	9	cast-org/cwm-app-skeleton	0	NONE	2019-03-27	False	NEW
+org:CAST-org	9	cast-org/figuration-table	0	NOASSERTION	2017-03-22	False	NEW
+org:lumenlearning	18	lumenlearning/candela	6	NOASSERTION	2020-10-10	True	NEW
+org:lumenlearning	18	lumenlearning/candela-citation	5	MIT	2022-04-18	True	NEW
+org:lumenlearning	18	lumenlearning/candela-thin-exports	5	MIT	2018-02-16	True	NEW
+org:lumenlearning	18	lumenlearning/candela-vagrant	2	NONE	2014-10-24	True	NEW
+org:lumenlearning	18	lumenlearning/candela-lti	1	MIT	2019-01-19	True	NEW
+org:lumenlearning	18	lumenlearning/Solver	1	NONE	2017-02-24	True	NEW
+org:lumenlearning	18	lumenlearning/codereviewvue	1	NONE	2021-10-12	True	NEW
+org:lumenlearning	18	lumenlearning/candela-utility	1	GPL-2.0	2020-11-18	True	NEW
+org:lumenlearning	18	lumenlearning/candela-analytics	0	GPL-2.0	2019-01-19	True	NEW
+org:lumenlearning	18	lumenlearning/astronauts-js	0	NONE	2021-04-15	True	NEW
+org:lumenlearning	18	lumenlearning/codereviewrb	0	NONE	2021-12-07	True	NEW
+org:lumenlearning	18	lumenlearning/codereviewts	0	NONE	2025-07-02	True	NEW
+org:lumenlearning	18	lumenlearning/candela-outcomes	0	MIT	2019-03-28	True	NEW
+org:lumenlearning	18	lumenlearning/candela-bombadil	0	GPL-2.0	2019-01-17	True	NEW
+org:lumenlearning	18	lumenlearning/codereviewkt	0	NONE	2020-04-11	True	NEW
+org:lumenlearning	18	lumenlearning/candela-hypothesis	0	NONE	2019-01-19	True	NEW
+org:lumenlearning	18	lumenlearning/agentic-assessment	0	NONE	2026-07-13	False	NEW
+org:lumenlearning	18	lumenlearning/astronauts-py	0	NONE	2021-04-16	True	NEW
+org:edx	159	edx/ux-pattern-library	281	Apache-2.0	2024-02-29	False	NEW
+org:edx	159	edx/jenkins-configuration	178	Apache-2.0	2026-09-24	False	NEW
+org:edx	159	edx/xserver	73	AGPL-3.0	2021-01-18	True	NEW
+org:edx	159	edx/insights	47	AGPL-3.0	2018-12-10	True	NEW
+org:edx	159	edx/jenkins-job-dsl	36	AGPL-3.0	2026-10-08	False	NEW
+org:edx	159	edx/snowflake_timetravel_table	22	Apache-2.0	2026-01-12	False	NEW
+org:edx	159	edx/edx-ora	20	AGPL-3.0	2026-08-05	True	NEW
+org:edx	159	edx/edx-load-tests	20	Apache-2.0	2019-08-09	True	NEW
+org:edx	159	edx/pa11ycrawler	18	Apache-2.0	2019-04-18	True	NEW
+org:edx	159	edx/cookiecutter-django-app	16	Apache-2.0	2020-05-21	True	NEW
+org:edx	159	edx/edx-oauth2-provider	15	AGPL-3.0	2019-09-18	True	NEW
+org:edx	159	edx/edx-video-pipeline	14	AGPL-3.0	2020-09-30	True	NEW
+org:edx	159	edx/harprofiler	13	Apache-2.0	2019-07-24	True	NEW
+org:edx	159	edx/notifier	13	AGPL-3.0	2020-10-27	True	NEW
+org:edx	159	edx/api-manager	12	AGPL-3.0	2026-10-27	False	NEW
+org:edx	159	edx/braze-client	11	AGPL-3.0	2026-08-26	False	NEW
+org:edx	159	edx/loghandlersplus	11	AGPL-3.0	2016-09-01	True	NEW
+org:edx	159	edx/commerce-coordinator	11	AGPL-3.0	2026-11-09	False	NEW
+org:edx	159	edx/edx-exams	11	AGPL-3.0	2026-10-26	False	NEW
+org:edx	159	edx/edxanalytics	11	AGPL-3.0	2017-01-19	True	NEW
+org:edx	159	edx/dbt-schema-builder	11	AGPL-3.0	2026-11-05	False	NEW
+org:edx	159	edx/cookiecutter-django-ida	10	Apache-2.0	2020-05-21	True	NEW
+org:edx	159	edx/js-test-tool	8	Apache-2.0	2017-01-19	True	NEW
+org:edx	159	edx/django-openid-auth	8	BSD-2-Clause	2019-05-23	True	NEW
+org:edx	159	edx/edx-solutions-jquery-xblock	8	AGPL-3.0	2016-09-20	True	NEW
+org:byuhbll	8	byuhbll/ILLiadPlus	5	BSD-3-Clause	2016-06-29	False	NEW
+org:byuhbll	8	byuhbll/byu-ws-sdk-python	0	MIT	2014-03-14	False	NEW
+org:byuhbll	8	byuhbll/git-demo	0	NONE	2019-07-19	False	NEW
+org:byuhbll	8	byuhbll/barcodeReplacer	0	NONE	2013-02-02	False	NEW
+org:byuhbll	8	byuhbll/discoveryExport	0	BSD-3-Clause	2015-03-30	False	NEW
+org:byuhbll	8	byuhbll/filmmatch	0	BSD-3-Clause	2016-06-29	False	NEW
+org:byuhbll	8	byuhbll/spineLabeler	0	NONE	2013-02-26	False	NEW
+org:byuhbll	8	byuhbll/ostinato	0	NONE	2016-06-29	False	NEW
+org:OpenOLAT	7	OpenOLAT/OpenOLAT	449	NOASSERTION	2026-11-10	False	HELD
+org:OpenOLAT	7	OpenOLAT/openmeetingsws	4	Apache-2.0	2023-03-31	False	NEW
+org:OpenOLAT	7	OpenOLAT/OpenOLAT-docs	4	NONE	2026-11-10	False	NEW
+org:OpenOLAT	7	OpenOLAT/viterows	2	Apache-2.0	2025-07-02	False	NEW
+org:OpenOLAT	7	OpenOLAT/OpenOLAT-gatling	2	Apache-2.0	2026-02-26	False	NEW
+org:OpenOLAT	7	OpenOLAT/manifest	0	Apache-2.0	2026-07-13	False	NEW
+org:OpenOLAT	7	OpenOLAT/edusharingws	0	NONE	2023-03-31	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/jitsi-deployment	214	MIT	2021-06-22	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-server	81	AGPL-3.0	2026-11-09	False	HELD
+org:hpi-schul-cloud	131	hpi-schul-cloud/gamification	46	AGPL-3.0	2020-02-18	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-client	34	AGPL-3.0	2026-11-10	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/nuxt-client	33	AGPL-3.0	2026-11-09	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-flutter	20	AGPL-3.0	2021-04-19	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/edtrio	19	AGPL-3.0	2021-07-13	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/tldraw-client	11	AGPL-3.0	2026-11-09	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-mobile-android	9	GPL-3.0	2021-02-23	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/dof_app_deploy	8	AGPL-3.0	2026-11-10	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/end-to-end-tests	8	Apache-2.0	2024-07-11	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/libreoffice-online-builder	8	AGPL-3.0	2019-03-15	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/infra-otc-cert-manager-webhook	8	MIT	2025-03-11	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/cui	6	AGPL-3.0	2021-01-27	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/superhero-dashboard	6	AGPL-3.0	2026-11-09	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-mobile-ios	6	GPL-3.0	2020-01-11	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/filepreview	5	AGPL-3.0	2019-07-30	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-calendar	5	AGPL-3.0	2026-11-09	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-content-editor	5	AGPL-3.0	2020-04-23	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/schulcloud-documentation	4	NONE	2026-11-03	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/e2e-system-tests	4	AGPL-3.0	2026-11-04	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/infra-tools	4	AGPL-3.0	2026-05-19	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/docker-compose	3	NONE	2024-07-10	True	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/antivirus_check_service	3	AGPL-3.0	2026-10-29	False	NEW
+org:hpi-schul-cloud	131	hpi-schul-cloud/node-notification-service	3	AGPL-3.0	2021-07-13	True	NEW
+org:studip	4	studip/studip-rest.ip	19	GPL-2.0	2017-11-17	True	NEW
+org:studip	4	studip/studip-plugin-oauth-consumer-example	4	NONE	2015-12-11	True	NEW
+org:studip	4	studip/StudipDownloader	1	NONE	2016-05-25	False	NEW
+org:studip	4	studip/PluginMarket	1	NONE	2021-06-08	True	NEW
+org:edu-sharing-community	ERR	-NO-RESULTS-					
+org:GEANT	54	GEANT/CAT	124	NOASSERTION	2026-10-26	False	HELD
+org:GEANT	54	GEANT/gitlab-to-forgejo	32	GPL-3.0	2026-01-10	False	NEW
+org:GEANT	54	GEANT/TRANSITS	25	NOASSERTION	2024-07-24	False	NEW
+org:GEANT	54	GEANT/CAT-Android	24	Apache-2.0	2021-06-12	False	NEW
+org:GEANT	54	GEANT/accountlinker	9	NONE	2025-05-08	True	NEW
+org:GEANT	54	GEANT/simplesamlphp-module-selfregister	9	MIT	2021-09-02	False	NEW
+org:GEANT	54	GEANT/CloudDrive	8	NONE	2013-02-28	False	NEW
+org:GEANT	54	GEANT/edugain-openidfed	7	CC0-1.0	2025-03-03	False	NEW
+org:GEANT	54	GEANT/rpki-validation-tools	7	GPL-3.0	2019-12-02	False	NEW
+org:GEANT	54	GEANT/ansible-shibboleth	6	Apache-2.0	2021-10-25	False	NEW
+org:GEANT	54	GEANT/eduroam-training-FreeRADIUS-configuration	5	NONE	2018-11-27	False	NEW
+org:GEANT	54	GEANT/ansible-fusioninventoryagent	4	NONE	2018-10-31	False	NEW
+org:GEANT	54	GEANT/digicert2sectigo	4	NONE	2020-07-10	False	NEW
+org:GEANT	54	GEANT/CampusIdP	4	MIT	2020-07-31	False	NEW
+org:GEANT	54	GEANT/edugain-oidf-pilot	4	NONE	2026-05-15	False	NEW
+org:GEANT	54	GEANT/shib-idp-profile	4	Apache-2.0	2026-10-30	False	NEW
+org:GEANT	54	GEANT/incubator_mock_metadata	3	NONE	2021-06-25	False	NEW
+org:GEANT	54	GEANT/edugain-training	3	NONE	2025-07-30	False	NEW
+org:GEANT	54	GEANT/geant-rpki-invalid	3	NONE	2020-12-08	False	NEW
+org:GEANT	54	GEANT/bubo	3	MIT	2025-07-28	False	NEW
+org:GEANT	54	GEANT/FOD	3	GPL-3.0	2026-09-09	False	NEW
+org:GEANT	54	GEANT/RADIUS	2	NONE	2020-02-20	False	NEW
+org:GEANT	54	GEANT/geant-argus	2	MIT	2026-10-07	False	NEW
+org:GEANT	54	GEANT/nomad_cni	2	GPL-3.0	2026-05-04	False	NEW
+org:GEANT	54	GEANT/SAT-SurveyManager	2	NOASSERTION	2018-04-17	False	NEW
+org:dataesr	92	dataesr/react-dsfr	44	MIT	2026-03-09	False	NEW
+org:dataesr	92	dataesr/works-magnet	28	MIT	2026-09-09	False	NEW
+org:dataesr	92	dataesr/affiliation-matcher	25	MIT	2026-07-02	False	NEW
+org:dataesr	92	dataesr/openalex-affiliations	9	MIT	2026-02-04	False	NEW
+org:dataesr	92	dataesr/scanr-ui-v1	7	MIT	2024-05-21	True	NEW
+org:dataesr	92	dataesr/scientific-tagger	6	MIT	2024-06-04	False	NEW
+org:dataesr	92	dataesr/bso-publications	4	MIT	2026-10-06	False	NEW
+org:dataesr	92	dataesr/paysage-api	3	MIT	2026-10-29	False	NEW
+org:dataesr	92	dataesr/bso-ui	3	MIT	2026-11-06	False	NEW
+org:dataesr	92	dataesr/ovh-s3-deploy	2	MIT	2023-05-11	False	NEW
+org:dataesr	92	dataesr/scanr-ui	2	MIT	2026-10-23	False	NEW
+org:dataesr	92	dataesr/eCorda-data	2	MIT	2026-11-03	False	NEW
+org:dataesr	92	dataesr/harvest-theses	2	MIT	2026-10-23	False	NEW
+org:dataesr	92	dataesr/harvest-issn	1	MIT	2026-06-30	False	NEW
+org:dataesr	92	dataesr/grobid-ui	1	Apache-2.0	2026-08-07	False	NEW
+org:dataesr	92	dataesr/lm-skolar	1	MIT	2026-09-16	False	NEW
+org:dataesr	92	dataesr/bso3-analyse-publications	1	MIT	2026-06-25	False	NEW
+org:dataesr	92	dataesr/catalogue	1	MIT	2026-11-05	False	NEW
+org:dataesr	92	dataesr/paysage-ui	1	MIT	2026-10-30	False	NEW
+org:dataesr	92	dataesr/open-alex-poc	1	MIT	2024-04-19	False	NEW
+org:dataesr	92	dataesr/open-crawler	1	MIT	2024-02-19	False	NEW
+org:dataesr	92	dataesr/bso-parser-html	1	MIT	2026-09-29	False	NEW
+org:dataesr	92	dataesr/bso-coverage	1	MIT	2023-12-14	False	NEW
+org:dataesr	92	dataesr/harvest-patstat	1	MIT	2026-09-02	False	NEW
+org:dataesr	92	dataesr/llm-finetuning	1	MIT	2026-09-29	True	NEW
+org:Selleo	109	Selleo/pattern	722	MIT	2024-08-16	False	NEW
+org:Selleo	109	Selleo/mentingo	109	MIT	2026-11-09	False	HELD
+org:Selleo	109	Selleo/business_process	48	MIT	2021-07-16	False	NEW
+org:Selleo	109	Selleo/terraform-aws-frontend	35	MIT	2021-12-28	False	NEW
+org:Selleo	109	Selleo/crystular	30	MIT	2021-10-22	False	NEW
+org:Selleo	109	Selleo/amazon-ecs-render-task-definition-secrets	13	MIT	2026-10-13	False	NEW
+org:Selleo	109	Selleo/healthdex	9	NONE	2023-01-03	False	NEW
+org:Selleo	109	Selleo/rspec-tapas	6	MIT	2023-03-16	False	NEW
+org:Selleo	109	Selleo/recruitment-exercises	5	NONE	2024-04-11	False	NEW
+org:Selleo	109	Selleo/boilerplate	5	MIT	2026-05-06	False	NEW
+org:Selleo	109	Selleo/design-system	4	NONE	2023-08-21	False	NEW
+org:Selleo	109	Selleo/templates	4	MIT	2026-08-25	False	NEW
+org:Selleo	109	Selleo/branding-resources	4	NONE	2023-02-28	False	NEW
+org:Selleo	109	Selleo/terraform-aws-backend	4	MIT	2024-02-16	False	NEW
+org:Selleo	109	Selleo/merit-money-api	3	MIT	2018-07-10	False	NEW
+org:Selleo	109	Selleo/washing-machine	2	NONE	2020-02-03	False	NEW
+org:Selleo	109	Selleo/frontend_packages_observatory	2	NONE	2023-02-23	False	NEW
+org:Selleo	109	Selleo/terraform-aws-ssm	2	MIT	2023-06-24	False	NEW
+org:Selleo	109	Selleo/repolisher	2	NONE	2022-12-30	False	NEW
+org:Selleo	109	Selleo/nestjs-workshops	2	NONE	2022-01-21	False	NEW
+org:Selleo	109	Selleo/selleo-controller_tests	2	MIT	2016-04-18	False	NEW
+org:Selleo	109	Selleo/ReactNativeSimpleToastExample	2	NONE	2023-01-05	False	NEW
+org:Selleo	109	Selleo/guidebook	2	MIT	2025-10-28	False	NEW
+org:Selleo	109	Selleo/frame_app	2	NONE	2021-09-10	False	NEW
+org:Selleo	109	Selleo/cli	2	NONE	2026-11-02	False	NEW
+user:skolverket	5	skolverket/dnp-usermanagement	7	NONE	2026-08-31	False	HELD
+user:skolverket	5	skolverket/dnp-ss12000-reference-api	5	Apache-2.0	2026-01-26	False	HELD
+user:skolverket	5	skolverket/dnp-access-management	1	NONE	2026-04-22	False	HELD
+user:skolverket	5	skolverket/dnp-provplattform	0	NONE	2026-08-25	False	HELD
+user:skolverket	5	skolverket/learning-assessments-f1	0	NONE	2026-06-30	False	HELD
+org:dini-ag-kim	38	dini-ag-kim/amb	24	CC0-1.0	2026-10-30	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/avram	6	NONE	2026-05-12	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/fdm-lernziele	6	CC-BY-4.0	2026-11-06	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/hs-oer-lom-profil	6	NONE	2024-06-07	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/kompendium	5	NONE	2025-03-18	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/skos-einfuehrung	5	CC-BY-4.0	2023-06-02	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/schulfaecher	4	CC0-1.0	2026-07-14	False	HELD
+org:dini-ag-kim	38	dini-ag-kim/service-ontology	4	NONE	2013-11-24	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/vocabs-edu	4	NONE	2024-02-06	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/hochschulfaechersystematik	4	NONE	2026-09-07	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/stoeberspecs	3	NONE	2025-11-13	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/holding-ontology	2	NONE	2019-09-27	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/school-curriculum-pg	2	NONE	2026-01-06	False	HELD
+org:dini-ag-kim	38	dini-ag-kim/glossar	2	NONE	2017-11-27	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/oer-metadata-schemas	2	NONE	2019-10-16	True	NEW
+org:dini-ag-kim	38	dini-ag-kim/modell_lehrplaene	2	NONE	2022-11-30	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/holding-ontology-examples	1	NONE	2013-12-11	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/schularten	1	CC0-1.0	2024-01-25	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/hcrt	1	NONE	2026-10-30	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/eduvocs	1	MIT	2025-11-03	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/school-curriculum-examples	1	NOASSERTION	2025-09-12	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/digComp	0	NONE	2024-04-24	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/eaf-sachgebietssystematik	0	NONE	2023-03-15	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/kmk-vocabs	0	NONE	2023-03-14	False	NEW
+org:dini-ag-kim	38	dini-ag-kim/curricula-gruppe	0	NONE	2023-04-03	False	NEW
+org:UNESCO	8	unesco/pdf-to-podcast	3	MIT	2026-04-13	False	NEW
+org:UNESCO	8	unesco/open-sciences	2	NONE	2026-09-09	False	NEW
+org:UNESCO	8	unesco/design-system	1	NONE	2023-11-28	False	NEW
+org:UNESCO	8	unesco/pii-detector	1	MIT	2026-04-13	False	NEW
+org:UNESCO	8	unesco/video-to-quiz	0	MIT	2026-04-13	False	NEW
+org:UNESCO	8	unesco/sdg-classifier	0	MIT	2026-04-13	False	NEW
+org:UNESCO	8	unesco/.github	0	CC0-1.0	2026-04-13	False	NEW
+org:UNESCO	8	unesco/heritage-3d-generator	0	MIT	2026-08-17	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/EduChat	974	NONE	2025-07-18	False	HELD
+org:ECNU-ICALK	24	ECNU-ICALK/AutoSkill	613	NONE	2026-05-10	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/ELL-StuLife	73	NONE	2026-10-15	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/PsychEval	63	NOASSERTION	2026-01-13	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/CL-MoE	63	NONE	2025-06-16	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/EduChat-Math	60	NONE	2024-10-20	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/MELO	29	NONE	2024-04-09	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/EasyCL	28	Apache-2.0	2025-07-29	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/Foundation-LMs-based-Continual-Learning	27	NONE	2025-10-06	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/PsychAgent	19	NONE	2026-04-05	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/BPT-VLM	18	NONE	2023-09-18	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/SocraticMath	18	NONE	2026-04-02	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/SkillGym	17	MIT	2026-09-24	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/ConvRAG	7	NONE	2024-05-16	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/AutoMem	7	Apache-2.0	2026-09-07	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/HeteroFusion	6	NONE	2026-08-26	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/DiaHalu	6	NONE	2025-03-17	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/Ecology-Harness	4	MIT	2026-05-02	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/TextualRL	3	MIT	2026-10-21	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/PI-Fed	1	NONE	2024-05-26	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/DiscernMem	1	MIT	2026-10-26	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/EcologyRSI-DSH	1	NOASSERTION	2026-11-06	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/EcologyRSI	1	NOASSERTION	2026-08-16	False	NEW
+org:ECNU-ICALK	24	ECNU-ICALK/.github	0	NONE	2024-08-07	False	NEW
+org:ai4bharat	115	AI4Bharat/indicnlp_catalog	641	NONE	2024-12-14	False	HELD
+org:ai4bharat	115	AI4Bharat/IndicTrans2	493	MIT	2025-10-03	False	HELD
+org:ai4bharat	115	AI4Bharat/Indic-TTS	417	MIT	2024-11-08	False	HELD
+org:ai4bharat	115	AI4Bharat/IndicLLMSuite	413	MIT	2024-10-07	False	HELD
+org:ai4bharat	115	AI4Bharat/Indic-BERT-v1	297	MIT	2023-05-11	False	NEW
+org:ai4bharat	115	AI4Bharat/indicnlp_corpus	207	NONE	2023-04-16	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicF5	155	NONE	2025-09-24	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicXlit	146	MIT	2023-10-13	False	NEW
+org:ai4bharat	115	AI4Bharat/indicTrans	145	MIT	2024-01-02	False	NEW
+org:ai4bharat	115	AI4Bharat/OpenHands	140	Apache-2.0	2023-03-15	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicBERT	125	MIT	2025-04-06	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicWav2Vec	122	MIT	2025-08-28	False	HELD
+org:ai4bharat	115	AI4Bharat/Chitralekha	118	MIT	2025-10-31	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicConformerASR	106	MIT	2025-06-20	False	NEW
+org:ai4bharat	115	AI4Bharat/vistaar	95	MIT	2025-06-08	False	NEW
+org:ai4bharat	115	AI4Bharat/NPTEL2020-Indian-English-Speech-Dataset	86	NONE	2026-04-02	False	NEW
+org:ai4bharat	115	AI4Bharat/Shoonya	72	MIT	2026-06-23	False	HELD
+org:ai4bharat	115	AI4Bharat/IndicVoices-R	67	CC-BY-4.0	2024-12-11	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicNLP-Transliteration	60	Apache-2.0	2021-07-09	True	NEW
+org:ai4bharat	115	AI4Bharat/indic-bart	52	MIT	2022-07-20	False	NEW
+org:ai4bharat	115	AI4Bharat/Svarah	42	NONE	2025-07-03	False	NEW
+org:ai4bharat	115	AI4Bharat/INCLUDE	42	MIT	2021-05-16	False	NEW
+org:ai4bharat	115	AI4Bharat/Indic-Swipe-v2	40	MIT	2026-07-13	False	NEW
+org:ai4bharat	115	AI4Bharat/IndicLID	39	NONE	2025-12-02	False	NEW
+org:ai4bharat	115	AI4Bharat/Chitralekha-Backend	33	MIT	2026-02-13	False	NEW
+org:THUDM	127	THUDM/slime	8809	Apache-2.0	2026-11-05	False	NEW
+org:THUDM	127	THUDM/AgentBench	3819	Apache-2.0	2026-02-08	False	NEW
+org:THUDM	127	THUDM/GLM	3695	MIT	2023-11-03	False	NEW
+org:THUDM	127	THUDM/P-tuning-v2	2079	Apache-2.0	2023-11-16	False	NEW
+org:THUDM	127	THUDM/LongWriter	1882	Apache-2.0	2025-06-24	False	NEW
+org:THUDM	127	THUDM/CogDL	1820	MIT	2024-02-01	False	NEW
+org:THUDM	127	THUDM/WebGLM	1598	Apache-2.0	2025-03-25	False	NEW
+org:THUDM	127	THUDM/AgentTuning	1507	NONE	2023-10-31	False	NEW
+org:THUDM	127	THUDM/LongBench	1255	MIT	2025-01-15	False	NEW
+org:THUDM	127	THUDM/SwissArmyTransformer	1121	Apache-2.0	2024-12-26	False	NEW
+org:THUDM	127	THUDM/P-tuning	939	MIT	2022-10-06	False	NEW
+org:THUDM	127	THUDM/AutoWebGLM	932	Apache-2.0	2024-09-27	False	NEW
+org:THUDM	127	THUDM/ReST-MCTS	711	NONE	2025-01-20	False	NEW
+org:THUDM	127	THUDM/GraphMAE	595	NONE	2023-04-12	False	NEW
+org:THUDM	127	THUDM/INFTY	578	MIT	2026-09-01	False	NEW
+org:THUDM	127	THUDM/WebRL	540	NONE	2025-06-06	False	NEW
+org:THUDM	127	THUDM/GATNE	538	MIT	2022-01-11	False	NEW
+org:THUDM	127	THUDM/LongCite	523	Apache-2.0	2024-12-31	False	NEW
+org:THUDM	127	THUDM/CogQA	457	MIT	2023-03-31	False	NEW
+org:THUDM	127	THUDM/AlignBench	433	NONE	2025-10-25	False	NEW
+org:THUDM	127	THUDM/AgentRL	367	MIT	2026-01-17	False	NEW
+org:THUDM	127	THUDM/DeepDive	348	NONE	2026-06-17	False	NEW
+org:THUDM	127	THUDM/HGB	346	NONE	2023-07-28	False	NEW
+org:THUDM	127	THUDM/GCC	331	MIT	2023-07-06	False	NEW
+org:THUDM	127	THUDM/Android-Lab	328	MIT	2025-08-18	False	NEW
+org:zjunlp	112	zjunlp/DeepKE	4487	MIT	2026-07-13	False	NEW
+org:zjunlp	112	zjunlp/LLMAgentPapers	3143	NONE	2026-11-07	False	NEW
+org:zjunlp	112	zjunlp/EasyEdit	2938	MIT	2026-11-07	False	NEW
+org:zjunlp	112	zjunlp/SkillNet	1451	MIT	2026-11-02	False	NEW
+org:zjunlp	112	zjunlp/KnowLM	1386	MIT	2025-01-11	False	NEW
+org:zjunlp	112	zjunlp/KnowledgeEditingPapers	1256	MIT	2026-08-20	False	NEW
+org:zjunlp	112	zjunlp/LightMem	1219	MIT	2026-11-06	False	NEW
+org:zjunlp	112	zjunlp/Prompt4ReasoningPapers	1010	MIT	2025-05-21	False	NEW
+org:zjunlp	112	zjunlp/PromptKG	735	MIT	2024-03-22	False	NEW
+org:zjunlp	112	zjunlp/OmniThink	483	MIT	2025-08-23	False	NEW
+org:zjunlp	112	zjunlp/AutoKG	471	MIT	2025-01-14	False	NEW
+org:zjunlp	112	zjunlp/EasyInstruct	408	MIT	2024-12-23	False	NEW
+org:zjunlp	112	zjunlp/OpenUE	328	MIT	2022-09-19	False	NEW
+org:zjunlp	112	zjunlp/SkillX	300	MIT	2026-09-03	False	NEW
+org:zjunlp	112	zjunlp/Mol-Instructions	295	MIT	2024-10-28	False	NEW
+org:zjunlp	112	zjunlp/KnowAgent	266	Apache-2.0	2025-01-29	False	NEW
+org:zjunlp	112	zjunlp/AutoAct	241	Apache-2.0	2025-01-13	False	NEW
+org:zjunlp	112	zjunlp/MKGformer	217	MIT	2025-04-21	False	NEW
+org:zjunlp	112	zjunlp/IEPile	214	NOASSERTION	2025-01-09	False	NEW
+org:zjunlp	112	zjunlp/KnowPrompt	207	MIT	2023-06-20	False	NEW
+org:zjunlp	112	zjunlp/OneKE	197	MIT	2025-07-28	False	NEW
+org:zjunlp	112	zjunlp/MolGen	194	MIT	2024-12-17	False	NEW
+org:zjunlp	112	zjunlp/KnowledgeCircuits	174	MIT	2025-11-14	False	NEW
+org:zjunlp	112	zjunlp/SciAtlas	170	MIT	2026-10-22	False	NEW
+org:zjunlp	112	zjunlp/WKM	168	Apache-2.0	2024-12-17	False	NEW
+org:RNP	2	rnp/test	1	NONE	2009-12-15	False	NEW
+org:RNP	2	rnp/scale12x	0	NONE	2014-02-21	False	NEW
+org:lappis-unb	ERR	-NO-RESULTS-					
+org:USPCodeLab	15	uspcodelab/codelab-bits	8	MIT	2020-11-30	False	NEW
+org:USPCodeLab	15	uspcodelab/ts-ms-boilerplate	7	NONE	2021-02-10	False	NEW
+org:USPCodeLab	15	uspcodelab/bootcamp-2022	5	MIT	2023-08-04	False	NEW
+org:USPCodeLab	15	uspcodelab/webmun	5	AGPL-3.0	2026-10-24	False	NEW
+org:USPCodeLab	15	uspcodelab/codeclass	3	NONE	2025-09-24	False	NEW
+org:USPCodeLab	15	uspcodelab/ime-workshop.github.io	2	NONE	2016-10-06	False	NEW
+org:USPCodeLab	15	uspcodelab/arquigrafia	1	NONE	2023-09-11	False	NEW
+org:USPCodeLab	15	uspcodelab/kotlin-ms-boilerplate	1	MIT	2021-02-24	False	NEW
+org:USPCodeLab	15	uspcodelab/grupo-A-wordle	1	NONE	2026-08-27	False	NEW
+org:USPCodeLab	15	uspcodelab/hackfools2022	0	NONE	2022-07-05	False	NEW
+org:USPCodeLab	15	uspcodelab/site-hackathonusp	0	MIT	2018-11-13	False	NEW
+org:USPCodeLab	15	uspcodelab/example-js-chess	0	NONE	2018-04-29	False	NEW
+org:USPCodeLab	15	uspcodelab/webdev23	0	NONE	2023-04-03	False	NEW
+org:USPCodeLab	15	uspcodelab/example-js-calculator	0	NONE	2018-04-29	False	NEW
+org:USPCodeLab	15	uspcodelab/site-uspcodelab	0	MIT	2024-07-13	False	NEW
+org:AGESIC	1	agesic/firma.gub.uy	2	NONE	2026-08-19	False	NEW
+org:govbr	17	govbr/wsin.govbr	23	Unlicense	2015-02-02	False	NEW
+org:govbr	17	govbr/barra.govbr	20	NOASSERTION	2018-02-20	False	NEW
+org:govbr	17	govbr/catalogo-govbr	7	NONE	2016-12-16	False	NEW
+org:govbr	17	govbr/suindara.govbr	6	GPL-2.0	2016-09-28	False	NEW
+org:govbr	17	govbr/w3c-validator	3	NONE	2017-09-27	False	NEW
+org:govbr	17	govbr/vocab-govbr	2	NONE	2016-07-07	False	NEW
+org:govbr	17	govbr/conectagov-interface	2	NONE	2017-12-26	False	NEW
+org:govbr	17	govbr/ml-data	1	GPL-3.0	2020-03-03	False	NEW
+org:govbr	17	govbr/caixapostal-cli	1	MIT	2026-03-18	False	NEW
+org:govbr	17	govbr/mpdg-govbr-faleconosco	1	NONE	2018-02-02	False	NEW
+org:govbr	17	govbr/manualbarra.govbr	0	NONE	2017-03-17	False	NEW
+org:govbr	17	govbr/mpdg.govbr.faleconosco	0	NONE	2017-04-10	False	NEW
+org:govbr	17	govbr/mpdg.govbr.observatorio	0	NONE	2017-04-10	False	NEW
+org:govbr	17	govbr/qwtransfer	0	MIT	2026-03-06	False	NEW
+org:govbr	17	govbr/mpdg.govbr.biblioteca	0	NONE	2017-04-10	False	NEW
+org:govbr	17	govbr/avaliador-api	0	NONE	2016-08-10	False	NEW
+org:govbr	17	govbr/orgaosbr	0	MIT	2018-01-12	False	NEW
+org:mec-br	ERR	-NO-RESULTS-					
+org:inep	ERR	-NO-RESULTS-					
+org:SEDUC-SP	ERR	-NO-RESULTS-					
+org:mineduc-cl	ERR	-NO-RESULTS-					
+org:educacionar	ERR	-NO-RESULTS-					
+org:unam	2	unam/Taller-Ciencia-de-Datos	0	NONE	2017-08-15	False	NEW
+org:unam	2	unam/claudia_confiabilidad	0	NONE	2016-10-30	False	NEW
+org:uniandes	ERR	-NO-RESULTS-					
+org:pucp	0	-NO-RESULTS-					
+org:fundacion-telefonica	ERR	-NO-RESULTS-					
+org:pressbooks	53	pressbooks/pressbooks	461	GPL-3.0	2026-11-10	False	HELD
+org:pressbooks	53	pressbooks/pressbooks-book	21	GPL-3.0	2026-11-10	False	NEW
+org:pressbooks	53	pressbooks/ideas	13	GPL-3.0	2023-01-24	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-aldine	11	GPL-3.0	2026-11-10	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-lti-provider	5	GPL-3.0	2022-09-12	True	NEW
+org:pressbooks	53	pressbooks/pb-cli	5	GPL-3.0	2026-01-28	False	NEW
+org:pressbooks	53	pressbooks/pb-mathjax	5	GPL-3.0	2026-10-30	False	NEW
+org:pressbooks	53	pressbooks/buckram	5	GPL-3.0	2026-09-10	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-donham	5	NONE	2024-08-30	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-austenclassic	4	GPL-2.0	2022-05-03	True	NEW
+org:pressbooks	53	pressbooks/pressbooks-stats	4	GPL-3.0	2026-06-25	True	NEW
+org:pressbooks	53	pressbooks/snippets	4	GPL-3.0	2026-10-14	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-clarke	3	GPL-3.0	2024-08-30	False	NEW
+org:pressbooks	53	pressbooks/local-dev-environment	3	NONE	2026-02-06	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-saml-sso	3	GPL-3.0	2026-11-10	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-jacobs	3	GPL-3.0	2024-08-30	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-publisher	3	MIT	2022-10-21	True	NEW
+org:pressbooks	53	pressbooks/excalibur	3	GPL-3.0	2026-07-15	True	NEW
+org:pressbooks	53	pressbooks/pressbooks-fitzgerald	3	GPL-2.0	2023-01-24	True	NEW
+org:pressbooks	53	pressbooks/pressbooks-build-tools	2	GPL-3.0	2026-03-09	False	NEW
+org:pressbooks	53	pressbooks/coding-standards	2	GPL-3.0	2026-08-10	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-custom-css	2	GPL-2.0	2022-05-04	True	NEW
+org:pressbooks	53	pressbooks/pressbooks-network-catalog	2	NONE	2026-11-10	False	NEW
+org:pressbooks	53	pressbooks/pressbooks-cas-sso	2	GPL-3.0	2026-11-10	False	NEW
+org:pressbooks	53	pressbooks/heroicons-webfont	2	NONE	2024-11-06	False	NEW
+org:bigbluebutton	79	bigbluebutton/bigbluebutton	9272	LGPL-3.0	2026-11-10	False	HELD
+org:bigbluebutton	79	bigbluebutton/greenlight	850	LGPL-3.0	2026-11-09	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-install	663	LGPL-3.0	2026-10-28	False	HELD
+org:bigbluebutton	79	bigbluebutton/docker	436	LGPL-3.0	2026-11-03	False	NEW
+org:bigbluebutton	79	bigbluebutton/bigbluebutton-api-php	192	LGPL-3.0	2026-08-19	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-webrtc-sfu	53	LGPL-3.0	2026-11-01	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-playback	30	LGPL-3.0	2026-10-20	False	NEW
+org:bigbluebutton	79	bigbluebutton/bigbluebutton.github.io	26	NONE	2023-03-22	True	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-events	26	LGPL-3.0	2026-02-12	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-air-client	24	NOASSERTION	2015-05-06	True	NEW
+org:bigbluebutton	79	bigbluebutton/docker-dev	21	NONE	2026-08-27	False	NEW
+org:bigbluebutton	79	bigbluebutton/bigbluebutton-mobile	18	NONE	2025-12-26	False	NEW
+org:bigbluebutton	79	bigbluebutton/deepspeech-web	18	NONE	2022-04-12	True	NEW
+org:bigbluebutton	79	bigbluebutton/bigbluebutton-html-plugin-sdk	17	NONE	2026-10-06	False	NEW
+org:bigbluebutton	79	bigbluebutton/screenshare-chrome-extension	13	NONE	2018-08-07	True	NEW
+org:bigbluebutton	79	bigbluebutton/plugins	13	NONE	2026-10-28	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-app-rooms	12	LGPL-3.0	2026-10-29	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-transcription-controller	11	NONE	2026-10-08	False	NEW
+org:bigbluebutton	79	bigbluebutton/bigbluebutton-api-java	10	GPL-3.0	2023-05-18	False	NEW
+org:bigbluebutton	79	bigbluebutton/perfect-freehand-python	10	MIT	2023-04-26	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-presentation-video	10	GPL-3.0	2026-11-06	False	NEW
+org:bigbluebutton	79	bigbluebutton/webcams-to-screenshare	9	LGPL-3.0	2020-12-09	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-recording-api	9	NONE	2022-04-12	True	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-webrtc-recorder	8	LGPL-3.0	2026-11-09	False	NEW
+org:bigbluebutton	79	bigbluebutton/bbb-lti-broker	8	LGPL-3.0	2026-11-04	False	NEW
+org:kiwix	28	kiwix/kiwix-desktop	1545	GPL-3.0	2026-11-09	False	NEW
+org:kiwix	28	kiwix/kiwix-android	1534	GPL-3.0	2026-11-09	False	NEW
+org:kiwix	28	kiwix/kiwix-tools	992	GPL-3.0	2026-11-09	False	HELD
+org:kiwix	28	kiwix/kiwix-apple	815	GPL-3.0	2026-11-10	False	NEW
+org:kiwix	28	kiwix/kiwix-js	495	GPL-3.0	2026-11-07	False	NEW
+org:kiwix	28	kiwix/kiwix-js-pwa	299	GPL-3.0	2026-11-07	False	NEW
+org:kiwix	28	kiwix/libkiwix	209	GPL-3.0	2026-11-09	False	NEW
+org:kiwix	28	kiwix/kiwix-build	137	GPL-3.0	2026-10-08	False	NEW
+org:kiwix	28	kiwix/kiwix-xulrunner	114	GPL-3.0	2019-07-29	True	NEW
+org:kiwix	28	kiwix/overview	93	NONE	2026-08-20	False	NEW
+org:kiwix	28	kiwix/container-images	33	NONE	2026-11-05	False	NEW
+org:kiwix	28	kiwix/kiwix-android-branded	25	GPL-3.0	2026-11-04	False	NEW
+org:kiwix	28	kiwix/seeder	21	GPL-3.0	2026-10-05	False	NEW
+org:kiwix	28	kiwix/borg-backup	21	GPL-3.0	2026-09-22	False	NEW
+org:kiwix	28	kiwix/operations	18	NONE	2026-11-09	False	NEW
+org:kiwix	28	kiwix/ipfs-portal	13	NONE	2025-05-04	False	NEW
+org:kiwix	28	kiwix/java-libkiwix	11	GPL-3.0	2026-10-21	False	NEW
+org:kiwix	28	kiwix/web	9	NONE	2026-09-21	False	NEW
+org:kiwix	28	kiwix/metrics	8	GPL-3.0	2022-12-27	False	NEW
+org:kiwix	28	kiwix/kiwix-apache	6	Apache-2.0	2021-01-06	True	NEW
+org:kiwix	28	kiwix/mirrors-qa	5	GPL-3.0	2025-04-28	False	NEW
+org:kiwix	28	kiwix/kiwix-apple-branded	5	GPL-3.0	2026-11-04	False	NEW
+org:kiwix	28	kiwix/.github	3	GPL-3.0	2026-05-12	False	NEW
+org:kiwix	28	kiwix/autorun	3	NONE	2019-06-22	True	NEW
+org:kiwix	28	kiwix/test-gateway	3	GPL-3.0	2020-02-01	True	NEW
+org:LibreTexts	46	LibreTexts/Libretext	31	GPL-3.0	2026-10-20	False	NEW
+org:LibreTexts	46	LibreTexts/ngshare	21	BSD-3-Clause	2025-09-17	False	NEW
+org:LibreTexts	46	LibreTexts/metalc	13	MIT	2024-07-31	False	NEW
+org:LibreTexts	46	LibreTexts/jupyterhub-templates	10	MIT	2024-04-16	False	NEW
+org:LibreTexts	46	LibreTexts/adapt	7	MIT	2026-11-04	False	NEW
+org:LibreTexts	46	LibreTexts/conductor	5	MIT	2026-11-09	False	HELD
+org:LibreTexts	46	LibreTexts/ckeditor-binder-plugin	4	GPL-3.0	2024-07-28	False	NEW
+org:LibreTexts	46	LibreTexts/default-env	3	MIT	2025-05-05	False	NEW
+org:LibreTexts	46	LibreTexts/analytics-dashboard	3	NONE	2023-12-15	False	NEW
+org:LibreTexts	46	LibreTexts/LibreOne	2	MIT	2026-10-27	False	HELD
+org:LibreTexts	46	LibreTexts/protogalaxy	2	MIT	2024-07-31	False	NEW
+org:LibreTexts	46	LibreTexts/custom-docker-deploy	1	NONE	2023-07-06	False	NEW
+org:LibreTexts	46	LibreTexts/PolyglotEngine	1	MIT	2024-07-28	False	NEW
+org:LibreTexts	46	LibreTexts/NewSite	1	CC-BY-4.0	2024-01-15	True	NEW
+org:LibreTexts	46	LibreTexts/h5p-service	1	GPL-3.0	2026-11-07	False	NEW
+org:LibreTexts	46	LibreTexts/ckeditor-a11ychecker-plugin	0	GPL-3.0	2024-07-31	False	NEW
+org:LibreTexts	46	LibreTexts/LibreOne-CAS	0	Apache-2.0	2025-12-12	True	NEW
+org:LibreTexts	46	LibreTexts/ngshare_exchange	0	BSD-3-Clause	2024-10-03	False	NEW
+org:LibreTexts	46	LibreTexts/SupportWidget	0	NONE	2026-05-11	False	NEW
+org:LibreTexts	46	LibreTexts/ckeditor-query-plugin	0	GPL-3.0	2023-07-19	False	NEW
+org:LibreTexts	46	LibreTexts/react-sidebar-v2	0	NONE	2026-08-20	False	NEW
+org:LibreTexts	46	LibreTexts/widget-testing	0	NONE	2021-04-07	False	NEW
+org:LibreTexts	46	LibreTexts/adaptdetect	0	NONE	2024-08-31	False	NEW
+org:LibreTexts	46	LibreTexts/miniSidewinder	0	MIT	2024-07-28	False	NEW
+org:LibreTexts	46	LibreTexts/LibreOne-CAS-7	0	Apache-2.0	2026-06-19	False	NEW
+topic:educational-technology	525	pythonarcade/arcade	2103	NOASSERTION	2026-10-30	False	NEW
+topic:educational-technology	525	jcputney/scorm-again	364	MIT	2026-11-09	False	HELD
+topic:educational-technology	525	watch-devtube/web	293	NONE	2025-12-31	False	NEW
+topic:educational-technology	525	tutors-sdk/tutors	125	MIT	2026-07-23	False	HELD
+topic:educational-technology	525	vkaravir/JSAV	116	MIT	2026-11-03	False	HELD
+topic:educational-technology	525	kyle-fox/ios-eye-tracking	113	MIT	2020-07-25	False	NEW
+topic:educational-technology	525	ls1intum/Apollon	104	MIT	2026-11-10	False	HELD
+topic:educational-technology	525	ATLURI0001/LMS	82	MIT	2026-11-07	False	HELD
+topic:educational-technology	525	engrshuvodas/LMS-POINT	76	NONE	2026-03-09	False	NEW
+topic:educational-technology	525	yh2072/edgameclaw	73	AGPL-3.0	2026-03-26	False	HELD
+topic:educational-technology	525	snap-cloud/snapCloud	64	GPL-3.0	2026-11-03	False	NEW
+topic:educational-technology	525	098765d/AI_Tutor	62	MIT	2026-06-23	False	HELD
+topic:educational-technology	525	StaticSweep/ChromaScape	58	GPL-3.0	2026-07-12	False	NEW
+topic:educational-technology	525	openjournals/jose-reviews	46	CC0-1.0	2026-06-12	False	NEW
+topic:educational-technology	525	AzimKrishna/Tuition-Management-System	45	NONE	2023-11-12	False	NEW
+topic:educational-technology	525	classclock/ClassClock	35	AGPL-3.0	2025-09-08	False	NEW
+topic:educational-technology	525	HolonIQ/learning-landscape	34	NONE	2020-11-27	False	NEW
+topic:educational-technology	525	vanderbilt-data-science/knowledge-spaces	30	MIT	2026-02-13	False	HELD
+topic:educational-technology	525	openfun/jitsi-box	30	MIT	2022-04-21	False	NEW
+topic:educational-technology	525	trcwm/BasicDSP	29	GPL-2.0	2026-08-20	False	NEW
+topic:educational-technology	525	meevans1/How-to-rediscover-the-Higgs	26	GPL-3.0	2019-08-05	False	NEW
+topic:educational-technology	525	moodle/moodlenet	26	AGPL-3.0	2025-05-28	True	NEW
+topic:educational-technology	525	VRiend-Lab/circlesxr	24	MIT	2026-10-06	False	NEW
+topic:educational-technology	525	rubatopy/rubato	24	GPL-3.0	2023-03-22	False	NEW
+topic:educational-technology	525	terracotta-education/terracotta	22	Apache-2.0	2026-11-06	False	HELD
+topic:edtech	5433	virgiliojr94/book-to-skill	37510	MIT	2026-11-08	False	HELD
+topic:edtech	5433	xiaoyang111222/cn-math-taxonomy	7320	NOASSERTION	2026-11-09	False	HELD
+topic:edtech	5433	Kaustubh-Natuskar/moreThanFAANGM	5264	MIT	2026-08-10	False	HELD
+topic:edtech	5433	CaviraOSS/PageLM	2065	NOASSERTION	2026-11-04	False	HELD
+topic:edtech	5433	classroomio/classroomio	1738	AGPL-3.0	2026-11-09	False	HELD
+topic:edtech	5433	DozenTwelve/Papermorph	1495	MIT	2026-11-09	False	HELD
+topic:edtech	5433	chadyi/StudyOnTV	1250	NOASSERTION	2026-11-10	False	HELD
+topic:edtech	5433	learningequality/kolibri	1174	MIT	2026-11-08	False	HELD
+topic:edtech	5433	beltromatti/get-it	1153	Apache-2.0	2026-06-29	False	HELD
+topic:edtech	5433	GarethManning/education-agent-skills	970	NOASSERTION	2026-11-03	False	HELD
+topic:edtech	5433	assafkip/claudemy	663	MIT	2026-10-29	False	HELD
+topic:edtech	5433	menthorlabs/menthor	582	Apache-2.0	2024-04-21	True	HELD
+topic:edtech	5433	aaryansamanta/ai-ethos	496	NONE	2026-09-20	False	HELD
+topic:edtech	5433	sitor-ai/frametell	492	AGPL-3.0	2026-11-09	False	HELD
+topic:edtech	5433	JudgePeach/math-question-bank	391	AGPL-3.0	2026-11-02	False	HELD
+topic:edtech	5433	tsugiproject/tsugi	377	Apache-2.0	2026-11-09	False	HELD
+topic:edtech	5433	jcputney/scorm-again	364	MIT	2026-11-09	False	HELD
+topic:edtech	5433	canyongbs/advisingapp	340	NOASSERTION	2026-11-07	False	HELD
+topic:edtech	5433	edrys-org/edrys	334	MPL-2.0	2024-08-12	False	HELD
+topic:edtech	5433	Li-Evan/Bloom	304	MIT	2026-10-20	False	HELD
+topic:edtech	5433	SJRiz/pytogether	262	MIT	2026-10-21	False	HELD
+topic:edtech	5433	elmsln/elmsln	253	GPL-3.0	2026-08-14	False	HELD
+topic:edtech	5433	artcc/freelingo	252	AGPL-3.0	2026-11-07	False	HELD
+topic:edtech	5433	hkalant/awesome-edtech-tools	219	NONE	2025-09-02	False	NEW
+topic:edtech	5433	Halleck45/OpenPronounce	202	MIT	2026-11-09	False	HELD
+topic:e-learning	1341	netless-io/flat	6444	MIT	2026-10-30	False	HELD
+topic:e-learning	1341	OpenVidu/openvidu	2143	Apache-2.0	2026-11-09	False	HELD
+topic:e-learning	1341	Ilyas-Codes/eCourse	519	MIT	2024-07-04	True	HELD
+topic:e-learning	1341	wingkwong/react-quiz-component	407	MIT	2026-11-10	False	HELD
+topic:e-learning	1341	syauqi/learnify	321	MIT	2022-06-10	False	HELD
+topic:e-learning	1341	roshan9419/LearnEd_E-learning_Website	213	MIT	2022-05-26	False	NEW
+topic:e-learning	1341	wesleyscholl/credly-badge	199	MIT	2026-06-04	False	NEW
+topic:e-learning	1341	jcryptool/core	180	EPL-1.0	2023-09-01	False	NEW
+topic:e-learning	1341	CrypToolProject/CrypTool-2	169	Apache-2.0	2026-11-02	False	NEW
+topic:e-learning	1341	cybercussion/SCOBot	165	NOASSERTION	2026-11-07	False	HELD
+topic:e-learning	1341	geli-lms/geli	157	Apache-2.0	2022-12-22	True	HELD
+topic:e-learning	1341	yuanjiusheng/cloud-learning-ce	125	NOASSERTION	2023-09-24	False	HELD
+topic:e-learning	1341	abinth11/TutorTrek	121	MIT	2023-12-01	False	NEW
+topic:e-learning	1341	manjurulhoque/laravel-udemy-clone	116	MIT	2026-08-08	False	NEW
+topic:e-learning	1341	arttet/Ozon-Go-Course	97	NONE	2021-12-05	True	NEW
+topic:e-learning	1341	iblai/lms	95	MIT	2026-11-06	False	HELD
+topic:e-learning	1341	ahmedEid1/lumen	92	MIT	2026-10-30	False	HELD
+topic:e-learning	1341	DiscoDurodeRoer/tareas-dam-daw-e-learning	84	NONE	2025-01-26	False	NEW
+topic:e-learning	1341	zreecespieces/jamstack-ecommerce-course	77	NONE	2021-10-05	False	NEW
+topic:e-learning	1341	jcryptool/crypto	76	EPL-1.0	2023-09-01	False	NEW
+topic:e-learning	1341	acanas/swad-core	76	AGPL-3.0	2026-11-09	False	HELD
+topic:e-learning	1341	corsego/corsego	68	GPL-3.0	2026-02-27	False	NEW
+topic:e-learning	1341	lambiengcode/cloudmate-classroom-flutter	68	MIT	2023-08-20	False	NEW
+topic:e-learning	1341	amoldalwai/E-learning-Website	59	NONE	2024-06-22	False	NEW
+topic:e-learning	1341	amitsingh6391/Academic-master	55	MIT	2023-06-10	False	NEW
+topic:proctoring	160	vardanagarwal/Proctoring-AI	633	MIT	2024-12-10	False	HELD
+topic:proctoring	160	SafeExamBrowser/seb-win-refactoring	366	MPL-2.0	2026-11-02	False	HELD
+topic:proctoring	160	narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	236	NONE	2026-10-30	False	HELD
+topic:proctoring	160	tusharnankani/Aankh	86	GPL-3.0	2024-12-18	False	HELD
+topic:proctoring	160	aesophor/hacklympics	69	MPL-2.0	2021-02-17	False	HELD
+topic:proctoring	160	meefik/ITMOproctor	40	GPL-3.0	2023-03-04	True	HELD
+topic:proctoring	160	AgnellusX1/GodsEye	31	NONE	2021-07-13	True	HELD
+topic:proctoring	160	eLearning-BS23/moodle-quizaccess_proctoring	30	NOASSERTION	2026-08-03	False	HELD
+topic:proctoring	160	N0v0cain3/Kuizu	22	MIT	2021-06-09	False	NEW
+topic:proctoring	160	oat-sa/devkit-lti1p3	20	GPL-2.0	2026-11-04	False	HELD
+topic:proctoring	160	sanket2000/proctoring	19	NONE	2024-12-17	False	NEW
+topic:proctoring	160	theunstopabble/InterviewMinds	14	NONE	2026-11-01	False	NEW
+topic:proctoring	160	narender-rk10/proctoring	12	NOASSERTION	2021-12-15	False	NEW
+topic:proctoring	160	SanyamSavla/Automatic-proctoring-system_BE-Project	8	NONE	2022-05-26	False	NEW
+topic:proctoring	160	Nuthi-Sriram/IntelliProc	7	MIT	2022-05-31	False	HELD
+topic:proctoring	160	Felix-au/PrashnaSetu-Public	5	NONE	2026-09-04	False	NEW
+topic:proctoring	160	devanshjsr/I.O.T.A	5	NONE	2021-04-13	False	NEW
+topic:proctoring	160	Yosef-AlSabbah/SecureGate.js-Anti-Emulator-VM-Sandbox-Motion-Verification-for-Web-Exams	5	NOASSERTION	2025-12-21	False	NEW
+topic:proctoring	160	AmnaaPatel/Proctoring-System-	5	NONE	2023-07-28	False	NEW
+topic:proctoring	160	Kawchar-Ahammed/Smart-Quiz-System	5	MIT	2025-09-11	False	NEW
+topic:proctoring	160	oofdere/onproctoring	4	NONE	2021-02-06	False	NEW
+topic:proctoring	160	prnvdixit/EproctorX	3	NONE	2017-07-16	False	NEW
+topic:proctoring	160	privateai0/proctoring-compatibility-2026	3	NONE	2026-04-03	False	NEW
+topic:proctoring	160	oat-sa/lib-lti1p3-proctoring	3	GPL-2.0	2026-08-19	False	NEW
+topic:proctoring	160	lavsharmaa/proctxam-ai-proctoring	3	MIT	2022-04-26	False	HELD
+topic:academic-integrity	131	Imalwayshere/Open-Detector	254	MIT	2026-03-31	False	HELD
+topic:academic-integrity	131	Yva1nne/ZJU_Course	124	NONE	2026-08-10	False	NEW
+topic:academic-integrity	131	NoplagLabs/noplag-engine	88	Apache-2.0	2026-07-20	False	HELD
+topic:academic-integrity	131	cabbage2000-lab/paper-tutor-skills	48	NOASSERTION	2026-11-04	False	HELD
+topic:academic-integrity	131	peopleworks/SignsofAI	30	MIT	2026-09-16	False	HELD
+topic:academic-integrity	131	sunilgentyala/aegis-integrity	20	AGPL-3.0	2026-11-06	False	HELD
+topic:academic-integrity	131	rpatrik96/hallmark	16	MIT	2026-10-22	False	HELD
+topic:academic-integrity	131	BridgeSuite/GradeBridge-Student-Submission	7	MIT	2026-11-03	False	HELD
+topic:academic-integrity	131	HoneyMeta/geng-skills	4	MIT	2026-10-08	False	HELD
+topic:academic-integrity	131	Amey-Thakur/WRITING-SUPPORT	4	CC-BY-4.0	2026-09-06	False	NEW
+topic:academic-integrity	131	Ezharjan/SteganoPrompt	4	MIT	2026-08-10	False	NEW
+topic:academic-integrity	131	SOHAM-3T/LMS	3	MIT	2025-09-13	False	HELD
+topic:academic-integrity	131	constructorfabric/reference-audit	3	Apache-2.0	2026-10-26	False	HELD
+topic:academic-integrity	131	harshadulshan/code-plagiarism-detector	3	MIT	2026-10-31	False	HELD
+topic:academic-integrity	131	sam-illingworth/Integrity-Debt-Audit	2	MIT	2026-04-10	False	HELD
+topic:academic-integrity	131	Vic-Nas/EditorWatch	2	NOASSERTION	2026-03-27	False	HELD
+topic:academic-integrity	131	mikuuuuuuk/ai-behavior-forensics	2	NONE	2026-05-01	False	HELD
+topic:academic-integrity	131	MORSHEDMDMONOARUL/ExamShield	2	MIT	2026-08-02	False	HELD
+topic:academic-integrity	131	szzxli/veripaper	2	MIT	2026-11-09	False	NEW
+topic:academic-integrity	131	danialtranz/sentinel-agent-proctoring	2	NOASSERTION	2026-06-07	False	HELD
+topic:academic-integrity	131	aclascollege/aegis-graph	2	NOASSERTION	2026-10-18	False	HELD
+topic:academic-integrity	131	SaiHarsha9992/Plagarism-Check	2	NONE	2025-07-21	False	HELD
+topic:academic-integrity	131	pisan-labs/code-viva	2	MIT	2026-11-08	False	HELD
+topic:academic-integrity	131	DSL4-Digital/RefExists	2	MIT	2026-09-26	False	HELD
+topic:academic-integrity	131	yashh1323/Clio	2	MIT	2026-11-04	False	NEW
+topic:open-educational-resources	464	codelitdev/courselit	1297	AGPL-3.0	2026-11-10	False	HELD
+topic:open-educational-resources	464	upb-lea/reinforcement_learning_course_materials	1200	NOASSERTION	2026-01-05	False	HELD
+topic:open-educational-resources	464	GarethManning/education-agent-skills	970	NOASSERTION	2026-11-03	False	HELD
+topic:open-educational-resources	464	spatialaudio/digital-signal-processing-lecture	888	NOASSERTION	2026-11-02	False	HELD
+topic:open-educational-resources	464	0voice/Awesome-CS-OpenCourse	649	NOASSERTION	2025-10-27	False	HELD
+topic:open-educational-resources	464	programminghistorian/jekyll	557	NONE	2026-10-30	False	NEW
+topic:open-educational-resources	464	spatialaudio/signals-and-systems-lecture	388	NOASSERTION	2026-10-26	False	HELD
+topic:open-educational-resources	464	swcarpentry/git-novice	378	NOASSERTION	2026-11-10	False	HELD
+topic:open-educational-resources	464	datacarpentry/R-ecology-lesson	339	NOASSERTION	2026-11-10	False	HELD
+topic:open-educational-resources	464	merely-useful/py-rse	263	NOASSERTION	2024-12-16	False	HELD
+topic:open-educational-resources	464	iansan5653/open-mcr	212	GPL-3.0	2023-12-09	False	NEW
+topic:open-educational-resources	464	tscheipel/HaDes-V	197	MIT	2026-02-02	False	HELD
+topic:open-educational-resources	464	carpentries/instructor-training	190	NOASSERTION	2026-11-10	False	HELD
+topic:open-educational-resources	464	swcarpentry/r-novice-inflammation	175	NOASSERTION	2026-11-10	False	HELD
+topic:open-educational-resources	464	spatialaudio/computational_acoustics	162	NOASSERTION	2018-10-23	False	NEW
+topic:open-educational-resources	464	programminghistorian/ph-submissions	153	NONE	2026-11-10	False	NEW
+topic:open-educational-resources	464	reamat/CalculoNumerico	152	NOASSERTION	2025-01-12	False	NEW
+topic:open-educational-resources	464	datacarpentry/r-raster-vector-geospatial	119	NOASSERTION	2026-10-01	True	HELD
+topic:open-educational-resources	464	datacarpentry/image-processing	113	NOASSERTION	2026-11-10	False	HELD
+topic:open-educational-resources	464	cagix/pandoc-lecture	108	MIT	2026-06-22	False	HELD
+topic:open-educational-resources	464	cagix/pandoc-thesis	104	MIT	2026-06-22	False	HELD
+topic:open-educational-resources	464	TUBAF-IfI-LiaScript/VL_Softwareentwicklung	78	CC0-1.0	2026-07-17	False	NEW
+topic:open-educational-resources	464	reamat/AlgebraLinear	73	NOASSERTION	2025-01-26	False	HELD
+topic:open-educational-resources	464	LibraryCarpentry/lc-open-refine	58	NOASSERTION	2026-11-10	False	HELD
+topic:open-educational-resources	464	hanhuark/machine-learning-for-engineers	55	BSD-3-Clause	2026-10-18	False	HELD
+topic:school-management	1240	changeweb/Unifiedtransform	3005	GPL-3.0	2026-06-22	False	HELD
+topic:school-management	1240	4jean/lav_sms	1176	MIT	2024-03-06	False	HELD
+topic:school-management	1240	hrshadhin/school-management-system	1154	AGPL-3.0	2025-04-18	False	HELD
+topic:school-management	1240	frappe/education	703	NOASSERTION	2026-10-30	False	HELD
+topic:school-management	1240	francoisjacquet/rosariosis	653	GPL-2.0	2026-11-09	False	HELD
+topic:school-management	1240	ketanchoyal/Our-E-School	504	MIT	2021-08-19	True	HELD
+topic:school-management	1240	yungifez/skuul	477	MIT	2026-11-01	False	HELD
+topic:school-management	1240	OS4ED/openSIS-Classic	349	NONE	2026-10-26	False	HELD
+topic:school-management	1240	ProjectsAndPrograms/school-management-system	210	NONE	2025-09-21	False	HELD
+topic:school-management	1240	ghrimx/StudX	138	NONE	2023-04-21	False	NEW
+topic:school-management	1240	galibBd/OnlineSchoolManagementSystem	134	NONE	2020-05-28	False	NEW
+topic:school-management	1240	PapillonApp/papillon-v6	118	GPL-3.0	2024-07-10	True	HELD
+topic:school-management	1240	DJ-Raven/java-swing-school-management-dashboard	89	NONE	2024-04-16	False	NEW
+topic:school-management	1240	aisuresh/School-Management-System	80	Apache-2.0	2021-05-29	False	HELD
+topic:school-management	1240	Tiththa/school-management-system	72	NONE	2022-06-21	False	NEW
+topic:school-management	1240	iafthab/kollege	68	MIT	2024-06-20	False	NEW
+topic:school-management	1240	abdelkarimhajji/waiting_coder	65	NONE	2025-03-03	False	NEW
+topic:school-management	1240	wmhello/workManger	64	MIT	2021-11-24	False	NEW
+topic:school-management	1240	meravi/school-management	59	GPL-3.0	2020-09-30	False	NEW
+topic:school-management	1240	mwinamijr/django-scms	59	NONE	2026-02-13	False	HELD
+topic:school-management	1240	Niyiojeyinka/PHP-Multi-Cloud-School-Management-	57	MIT	2020-08-27	True	NEW
+topic:school-management	1240	Gego-K12/gegok12	56	NOASSERTION	2026-09-23	False	HELD
+topic:school-management	1240	lahirudanushka/School-Management-System---PHP-MySQL	55	NONE	2022-10-01	False	NEW
+topic:school-management	1240	mr-teslaa/Taqwa-EDMS	52	NONE	2024-12-24	False	NEW
+topic:school-management	1240	CodeBreez/collejo	51	MIT	2019-07-16	True	HELD
+education created:>2026-09-01 stars:>40	67	xiaoyang111222/cn-math-taxonomy	7319	NOASSERTION	2026-11-09	False	HELD
+education created:>2026-09-01 stars:>40	67	DozenTwelve/Papermorph	1495	MIT	2026-11-09	False	HELD
+education created:>2026-09-01 stars:>40	67	Miaotofu01/Study-Mate	1409	MIT	2026-11-06	False	HELD
+education created:>2026-09-01 stars:>40	67	dmoshehun-prog/learn-from-materials	1363	MIT	2026-10-19	False	HELD
+education created:>2026-09-01 stars:>40	67	chadyi/StudyOnTV	1250	NOASSERTION	2026-11-10	False	HELD
+education created:>2026-09-01 stars:>40	67	agharsallah/esp-labs-web	740	MIT	2026-11-09	False	HELD
+education created:>2026-09-01 stars:>40	67	assafkip/claudemy	663	MIT	2026-10-29	False	HELD
+education created:>2026-09-01 stars:>40	67	sitor-ai/frametell	492	AGPL-3.0	2026-11-09	False	HELD
+education created:>2026-09-01 stars:>40	67	tonyzedginidze/librecalculator	319	MIT	2026-11-06	False	HELD
+education created:>2026-09-01 stars:>40	67	int64ago/vistep	247	MIT	2026-11-01	False	HELD
+education created:>2026-09-01 stars:>40	67	Takamatsu-Hikaru/AI-Research-Guide	220	NONE	2026-11-01	False	HELD
+education created:>2026-09-01 stars:>40	67	nichochar/ari	218	MIT	2026-11-09	False	HELD
+education created:>2026-09-01 stars:>40	67	Faixiang/Moodle-MCP	205	MIT	2026-11-01	False	HELD
+education created:>2026-09-01 stars:>40	67	cclank/clay-safari	183	MIT	2026-09-07	False	NEW
+education created:>2026-09-01 stars:>40	67	EricWang1358/dsh-web-studyhub	179	MIT	2026-11-10	False	HELD
+education created:>2026-09-01 stars:>40	67	brunnojob/devstart-lab	179	MIT	2026-11-06	False	HELD
+education created:>2026-09-01 stars:>40	67	antoniosantos02df-hue/awesome-digital-public-infrastructure	149	NONE	2026-11-10	False	NEW
+education created:>2026-09-01 stars:>40	67	s4ntrx/S4ntrx-Bot	145	MIT	2026-10-20	False	NEW
+education created:>2026-09-01 stars:>40	67	keithligh/hk-traffic-intelligence	141	MIT	2026-11-03	False	HELD
+education created:>2026-09-01 stars:>40	67	SalmeronDevZone/azure-lab	138	NONE	2026-10-30	False	HELD
+education created:>2026-09-01 stars:>40	67	tanle-mtr/ChinaStudyFree	127	MIT	2026-10-27	False	HELD
+education created:>2026-09-01 stars:>40	67	egplnt/-student-study-framework	124	NOASSERTION	2026-10-27	False	HELD
+education created:>2026-09-01 stars:>40	67	hashcott/ghostline	123	GPL-3.0	2026-11-09	False	NEW
+education created:>2026-09-01 stars:>40	67	boyuchengz/canvas-mcp	119	MIT	2026-10-27	False	HELD
+education created:>2026-09-01 stars:>40	67	maplexrain/unyra	103	MIT	2026-11-10	False	HELD
+tutor created:>2026-09-01 stars:>30	47	AI-FanGe/Microduck-build-tutorial	1758	MIT	2026-09-11	False	NEW
+tutor created:>2026-09-01 stars:>30	47	3yangyang9/DeepTutor-AILearning	258	Apache-2.0	2026-10-09	False	HELD
+tutor created:>2026-09-01 stars:>30	47	zuhairhalawa/studyai	248	MIT	2026-10-24	False	HELD
+tutor created:>2026-09-01 stars:>30	47	jzhoujg/megamoe-tutorials	132	NONE	2026-11-10	False	NEW
+tutor created:>2026-09-01 stars:>30	47	brian901106/japanese-tutor-mugi	104	MIT	2026-11-02	False	HELD
+tutor created:>2026-09-01 stars:>30	47	Buptropz/equity-research-tutor	101	NONE	2026-11-01	False	NEW
+tutor created:>2026-09-01 stars:>30	47	pacewisdomhq/TutorLoom	91	Apache-2.0	2026-11-10	False	HELD
+tutor created:>2026-09-01 stars:>30	47	apimartat5/llm-api-tutorial	87	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartmk8/multi-model-api-tutorial	81	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartc30lq1/unified-ai-tutorial	78	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartgz0l/api-relay-tutorial	74	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	Ephemera1117/ai-daily-rules-tutorial	73	NOASSERTION	2026-10-19	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartpx0d7edg8/llm-gateway-tutorial	67	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartcmwlrmkd/video-api-tutorial	66	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	itsme-ganzu/belajar-ngoding-byGanzu	65	MIT	2026-10-27	False	HELD
+tutor created:>2026-09-01 stars:>30	47	apimarthe2ht/ai-api-proxy-tutorial	64	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartjz/ai-api-gateway-tutorial	62	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartmqf3ytv9z/image-api-tutorial	60	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartlh08lf9/unified-ai-api-tutorial	59	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartuys8r2uo/api-router-tutorial	58	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimarthuv1qma/llm-api-gateway-tutorial	58	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartu1n/llm-api-proxy-tutorial	57	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartw94zu4z/ai-gateway-tutorial	56	NOASSERTION	2026-11-09	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimartmgu3/api-aggregator-tutorial	55	NOASSERTION	2026-10-12	False	NEW
+tutor created:>2026-09-01 stars:>30	47	apimarta6j/image-api-gateway-tutorial	55	NOASSERTION	2026-10-02	False	NEW
+grading created:>2026-09-01 stars:>20	81	alchaincyf/huashu-motion	2580	MIT	2026-11-10	False	NEW
+grading created:>2026-09-01 stars:>20	81	andyhuo520/digital-human-koubo	1902	MIT	2026-10-31	False	NEW
+grading created:>2026-09-01 stars:>20	81	zhuyansen/awesome-claude-video-skills	1838	NOASSERTION	2026-11-09	False	NEW
+grading created:>2026-09-01 stars:>20	81	jwuthri-cloud/Tracely-ai	947	MIT	2026-11-09	False	NEW
+grading created:>2026-09-01 stars:>20	81	Xu123-Bob/Baize	654	MIT	2026-11-10	False	NEW
+grading created:>2026-09-01 stars:>20	81	charlie947/motion-graphics-skills	625	MIT	2026-10-11	False	NEW
+grading created:>2026-09-01 stars:>20	81	jaikydota/BullFlow	431	MIT	2026-10-14	False	NEW
+grading created:>2026-09-01 stars:>20	81	wh000wh000/awesome-jev-live	378	NOASSERTION	2026-11-10	False	NEW
+grading created:>2026-09-01 stars:>20	81	apekshik/anyscene	356	MIT	2026-11-04	False	NEW
+grading created:>2026-09-01 stars:>20	81	vibe-motion/sound	342	NONE	2026-10-29	False	NEW
+grading created:>2026-09-01 stars:>20	81	wh000wh000/awesome-claude-mods	310	NOASSERTION	2026-10-17	False	NEW
+grading created:>2026-09-01 stars:>20	81	hety0211/lumen-raw	259	MIT	2026-11-05	False	NEW
+grading created:>2026-09-01 stars:>20	81	WeaveSeekerJinx/wise-care	253	NONE	2026-11-08	False	NEW
+grading created:>2026-09-01 stars:>20	81	gh9ko8y/graphmemory	201	MIT	2026-10-30	False	NEW
+grading created:>2026-09-01 stars:>20	81	kingdee/lingee-bench	187	Apache-2.0	2026-11-06	False	NEW
+grading created:>2026-09-01 stars:>20	81	Rylaispirit/cinematic-video-prompt-skill	182	MIT	2026-09-27	False	NEW
+grading created:>2026-09-01 stars:>20	81	Sunwood-ai-labs/hyperframes-motion-reel-skill	182	MIT	2026-09-29	False	NEW
+grading created:>2026-09-01 stars:>20	81	modelsphere/modelsphere	179	Apache-2.0	2026-11-09	False	NEW
+grading created:>2026-09-01 stars:>20	81	TencentCloud/octop-harness	150	MIT	2026-11-10	False	NEW
+grading created:>2026-09-01 stars:>20	81	oilcorporatebarn/aegis-skinfees	148	MIT	2026-10-31	False	NEW
+grading created:>2026-09-01 stars:>20	81	AcidGr/agent-mobile-use	122	MIT	2026-11-05	False	NEW
+grading created:>2026-09-01 stars:>20	81	Noisyxl/brier	116	MIT	2026-09-20	False	NEW
+grading created:>2026-09-01 stars:>20	81	Ta0p1/ResolveLab	104	MIT	2026-11-09	False	HELD
+grading created:>2026-09-01 stars:>20	81	zhuyansen/awesome-ai-reverse-engineering	97	NOASSERTION	2026-11-09	False	NEW
+grading created:>2026-09-01 stars:>20	81	erictrainnlpinxihu/Grader-agent	92	MIT	2026-09-28	False	HELD
+curriculum created:>2026-09-01 stars:>25	11	xiaoyang111222/cn-math-taxonomy	7319	NOASSERTION	2026-11-09	False	HELD
+curriculum created:>2026-09-01 stars:>25	11	madhvantyagi/Gnos	348	MIT	2026-11-10	False	HELD
+curriculum created:>2026-09-01 stars:>25	11	woolimi/robotics-roadmap	96	NOASSERTION	2026-11-08	False	HELD
+curriculum created:>2026-09-01 stars:>25	11	munitkala/selfsemester	71	MIT	2026-11-09	False	HELD
+curriculum created:>2026-09-01 stars:>25	11	GuidoPenta/the-candidates-guide-to-the-galaxy	61	NOASSERTION	2026-11-09	False	NEW
+curriculum created:>2026-09-01 stars:>25	11	santiagocastellanos-glitch/level-up-web-forge	56	NONE	2026-10-08	False	NEW
+curriculum created:>2026-09-01 stars:>25	11	kelsierbot/GrimoireTUI	35	MIT	2026-11-04	False	NEW
+curriculum created:>2026-09-01 stars:>25	11	abderaoufsec/CCNA-PacketTracerlabs	34	NONE	2026-09-22	False	NEW
+curriculum created:>2026-09-01 stars:>25	11	zeroa234/cs-math-skill-tree	34	MIT	2026-11-08	False	HELD
+curriculum created:>2026-09-01 stars:>25	11	altuzar/OpenFounderSchool	27	MIT	2026-10-29	False	NEW
+curriculum created:>2026-09-01 stars:>25	11	dlobosd/folio	27	MIT	2026-11-01	False	NEW
+student created:>2026-09-01 stars:>40	17	AGNIKLOL/winrar-license-manager	149	MIT	2026-11-10	False	NEW
+student created:>2026-09-01 stars:>40	17	s4ntrx/MUST-Campus	135	NONE	2026-09-24	False	NEW
+student created:>2026-09-01 stars:>40	17	egplnt/-student-study-framework	124	NOASSERTION	2026-10-27	False	HELD
+student created:>2026-09-01 stars:>40	17	pacewisdomhq/TutorLoom	91	Apache-2.0	2026-11-10	False	HELD
+student created:>2026-09-01 stars:>40	17	Forrest404/unidex	83	NOASSERTION	2026-11-06	False	NEW
+student created:>2026-09-01 stars:>40	17	shahidazam2020-oss/Student-Awareness-And-Acceptance-Of-Block-Chain-Authentication-framework-In-IoT-Applications	73	NONE	2026-10-09	False	NEW
+student created:>2026-09-01 stars:>40	17	piyushkushwah0123/Sky-Study-Lounge	70	NONE	2026-11-10	False	NEW
+student created:>2026-09-01 stars:>40	17	nateherkai/hyperframes-video-pipeline	65	NOASSERTION	2026-09-08	False	NEW
+student created:>2026-09-01 stars:>40	17	lucidrains/learn-attention	61	MIT	2026-11-07	False	NEW
+student created:>2026-09-01 stars:>40	17	Stop85/Basis-Level-Explorer	56	NONE	2026-11-09	False	NEW
+student created:>2026-09-01 stars:>40	17	jawadelyousfi17/elite-1337	53	NONE	2026-11-08	False	NEW
+student created:>2026-09-01 stars:>40	17	Mr-Karan3376/code-unnati-3rd-Year	51	NONE	2026-09-03	False	NEW
+student created:>2026-09-01 stars:>40	17	BioNanomics/openflexure-light-sheet	49	NONE	2026-10-24	False	NEW
+student created:>2026-09-01 stars:>40	17	OwenxuSH/shanghaitech-elrc-study	49	NONE	2026-09-28	False	NEW
+student created:>2026-09-01 stars:>40	17	Jeng-linLi/student-absence-system	47	NOASSERTION	2026-11-09	False	NEW
+student created:>2026-09-01 stars:>40	17	PINTO0309/High-Angle_Robust_Fast_Head_Pose_Estimation	42	MIT	2026-11-01	False	NEW
+student created:>2026-09-01 stars:>40	17	lordsinstitute/star-projects	41	NONE	2026-09-22	False	NEW

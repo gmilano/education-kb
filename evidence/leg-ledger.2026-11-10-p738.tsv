@@ -1,0 +1,59 @@
+leg	leg_type	total_count	rows_read	novel	fileable	note
+curriculum created:>2026-09-01 stars:>25	publisher-or-topic	11	11	6		
+education created:>2026-09-01 stars:>40	publisher-or-topic	67	25	4		
+grading created:>2026-09-01 stars:>20	publisher-or-topic	81	25	23		
+org:AGESIC	publisher-or-topic	1	1	1		
+org:CAST-org	publisher-or-topic	9	9	9		
+org:ECNU-ICALK	publisher-or-topic	24	24	23		
+org:GEANT	publisher-or-topic	54	25	24		
+org:Khan	publisher-or-topic	207	25	24		
+org:LibreTexts	publisher-or-topic	46	25	23		
+org:OpenOLAT	publisher-or-topic	7	7	6		
+org:RNP	publisher-or-topic	2	2	2		
+org:SEDUC-SP	publisher-or-topic	ERR	0	0		
+org:Selleo	publisher-or-topic	109	25	24		
+org:Simon-Initiative	publisher-or-topic	34	25	22		
+org:THUDM	publisher-or-topic	127	25	25		
+org:UNESCO	publisher-or-topic	8	8	8		
+org:USPCodeLab	publisher-or-topic	15	15	15		
+org:ai4bharat	publisher-or-topic	115	25	19		
+org:bigbluebutton	publisher-or-topic	79	25	23		
+org:byuhbll	publisher-or-topic	8	8	8		
+org:ccctechcenter	publisher-or-topic	8	8	8		
+org:code-dot-org	publisher-or-topic	66	25	22		
+org:concord-consortium	publisher-or-topic	403	25	25		
+org:dataesr	publisher-or-topic	92	25	25		
+org:dini-ag-kim	publisher-or-topic	38	25	23		
+org:edu-sharing-community	publisher-or-topic	ERR	0	0		
+org:educacionar	publisher-or-topic	ERR	0	0		
+org:edx	publisher-or-topic	159	25	25		
+org:fundacion-telefonica	publisher-or-topic	ERR	0	0		
+org:govbr	publisher-or-topic	17	17	17		
+org:hpi-schul-cloud	publisher-or-topic	131	25	24		
+org:inep	publisher-or-topic	ERR	0	0		
+org:kiwix	publisher-or-topic	28	25	24		
+org:lappis-unb	publisher-or-topic	ERR	0	0		
+org:lumenlearning	publisher-or-topic	18	18	18		
+org:mec-br	publisher-or-topic	ERR	0	0		
+org:mineduc-cl	publisher-or-topic	ERR	0	0		
+org:openupresources	publisher-or-topic	6	6	6		
+org:oppia	publisher-or-topic	22	22	18		
+org:phetsims	publisher-or-topic	216	25	18		
+org:pressbooks	publisher-or-topic	53	25	24		
+org:pucp	publisher-or-topic	0	0	0		
+org:scratchfoundation	publisher-or-topic	45	25	17		
+org:studip	publisher-or-topic	4	4	4		
+org:unam	publisher-or-topic	2	2	2		
+org:uniandes	publisher-or-topic	ERR	0	0		
+org:unizin	publisher-or-topic	ERR	0	0		
+org:zjunlp	publisher-or-topic	112	25	25		
+student created:>2026-09-01 stars:>40	publisher-or-topic	17	17	15		
+topic:academic-integrity	publisher-or-topic	131	25	5		
+topic:e-learning	publisher-or-topic	1341	25	14		
+topic:edtech	publisher-or-topic	5433	25	1		
+topic:educational-technology	publisher-or-topic	525	25	16		
+topic:open-educational-resources	publisher-or-topic	464	25	6		
+topic:proctoring	publisher-or-topic	160	25	14		
+topic:school-management	publisher-or-topic	1240	25	11		
+tutor created:>2026-09-01 stars:>30	publisher-or-topic	47	25	20		
+user:skolverket	publisher-or-topic	5	5	0		

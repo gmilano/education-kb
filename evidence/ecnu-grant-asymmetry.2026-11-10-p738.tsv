@@ -1,0 +1,11 @@
+repo	subject_class	stars	licence_file	raw_bytes	gate_verdict	usable_by_globant
+ECNU-ICALK/AutoSkill	education	613	none at 14 paths	-	NO-GRANT-FOUND	no
+ECNU-ICALK/ELL-StuLife	education	73	none at 14 paths	-	NO-GRANT-FOUND	no
+ECNU-ICALK/EduChat-Math	education	60	none at 14 paths	-	NO-GRANT-FOUND	no
+ECNU-ICALK/SocraticMath	education	18	none at 14 paths	-	NO-GRANT-FOUND	no
+ECNU-ICALK/PsychEval	education-adjacent	63	LICENSE	19346	CC-BY-family (content, not software)	not as software
+ECNU-ICALK/SkillGym	LLM-method	17	LICENSE	1078	MIT	yes
+ECNU-ICALK/EasyCL	LLM-method	28	LICENSE	11324	Apache-2.0	yes
+ECNU-ICALK/AutoMem	LLM-method	7	LICENSE	11357	Apache-2.0	yes
+ECNU-ICALK/TextualRL	LLM-method	3	LICENSE	1078	MIT	yes
+ECNU-ICALK/DiscernMem	LLM-method	1	LICENSE	1080	MIT	yes

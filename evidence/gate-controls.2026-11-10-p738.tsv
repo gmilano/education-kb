@@ -1,0 +1,16 @@
+control	repo	licence_file	raw_bytes	p736_gate_verdict	p738_gate_verdict	index_says	correct_verdict	defeats
+CC0-with-preamble	GEANT/edugain-openidfed	LICENSE	7048	CC-BY-family (not a software grant)	CC0-1.0	CC0-1.0	CC0-1.0	p736 generic Creative Commons rule
+CC0-with-preamble	dini-ag-kim/amb	LICENSE	7048	CC-BY-family (not a software grant)	CC0-1.0	CC0-1.0	CC0-1.0	p736 generic Creative Commons rule
+CC0-no-preamble	openjournals/jose-reviews	LICENSE	6555	CC-BY-family (not a software grant)	CC0-1.0	CC0-1.0	CC0-1.0	p736 generic Creative Commons rule; no 'Creative Commons Legal Code' line
+chain-lowercase	iansan5653/open-mcr	license.txt	32423	NO-GRANT-FOUND-AT-PROBED-PATHS	GPL-3.0	GPL-3.0	GPL-3.0	p736 six-name chain (case-sensitive probe)
+chain-suffixed	kiwix/kiwix-js	LICENSE-GPLv3.txt	35147	NO-GRANT-FOUND-AT-PROBED-PATHS	GPL-3.0	GPL-3.0	GPL-3.0	p736 six-name chain
+manifest-is-scaffold	cast-org/clusive	MANIFEST package.json	-	ISC (from manifest)	BSD-3-Clause (from README section)	NOASSERTION	BSD-3-Clause	T312 manifest-trust rule; ISC is npm init default
+apache-below-band	ECNU-ICALK/EasyCL	LICENSE	11324	Apache-2.0	Apache-2.0	Apache-2.0	Apache-2.0	size band (33 B below canonical 11357)
+gpl-sec13-regression	pressbooks/pressbooks-book	LICENSE.md	35147	GPL	GPL-3.0	GPL-3.0	GPL-3.0	whole-payload AGPL match (T311 control, re-run clean)
+agpl-positive	hpi-schul-cloud/schulcloud-client	LICENSE	34520	AGPL-3.0	AGPL-3.0	AGPL-3.0	AGPL-3.0	-
+lgpl-positive	bigbluebutton/greenlight	LICENSE	7651	LGPL	LGPL-3.0	LGPL-3.0	LGPL-3.0	-
+true-nil	ECNU-ICALK/AutoSkill	none at 14 paths	-	NO-GRANT-FOUND	NO-GRANT-FOUND	NONE	no grant found at 14 probed paths	-
+true-nil	ECNU-ICALK/SocraticMath	none at 14 paths	-	NO-GRANT-FOUND	NO-GRANT-FOUND	NONE	no grant found at 14 probed paths	-
+true-nil	ECNU-ICALK/ELL-StuLife	none at 14 paths	-	NO-GRANT-FOUND	NO-GRANT-FOUND	NONE	no grant found at 14 probed paths	-
+true-nil	ECNU-ICALK/EduChat-Math	none at 14 paths	-	NO-GRANT-FOUND	NO-GRANT-FOUND	NONE	no grant found at 14 probed paths	-
+true-nil	AI4Bharat/IndicF5	none at 14 paths	-	NO-GRANT-FOUND	NO-GRANT-FOUND	NONE	no grant found at 14 probed paths	-

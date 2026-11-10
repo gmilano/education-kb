@@ -4,6 +4,195 @@ region: Global
 updated: 2026-11-10
 ---
 
+# 🆕 Trends new at `p738` (researched 2026-11-10) — `T329`–`T336`
+
+**Added above `p737`'s `T321`–`T328`.** Four are demand findings, two are supply findings and two
+are instrument findings. **One corrects a region placement that a secondary source got wrong**
+(`T334`), and **one closes a question `T323` and `p737` left half-open** (`T330`).
+
+## T329 — 🟢 The world's most-used open-source assessment engine is MIT, and this base spent dozens of passes declaring the gap it fills
+
+[`Khan/perseus`](https://github.com/Khan/perseus) — **MIT, `1,598★`, pushed 2026-11-10** — is Khan
+Academy's exercise and question engine: the renderer, authoring editor and **deterministic scorer**
+behind its interactive items. Expression input marked for *mathematical equivalence* rather than
+string identity, draggable graphs scored against a target, labelled images, sorting, matching, with
+per-widget hint flows. It has run at Khan Academy's scale for a decade.
+
+🔴 **This base has asserted an "assessment component" gap repeatedly while Perseus sat in the open
+under the most permissive grant available.** The reason is diagnosable and is the transferable part:
+**every leg that would have found it was aimed at the word "AI".** Perseus is not an AI project, does
+not carry an AI topic, and does not appear in `topic:ai-education` or `topic:ai-grading`. It is
+infrastructure. 🟢 **Standing correction to this base's own search model: the components that make an
+education AI product shippable are mostly not AI components**, and they are therefore invisible to
+every AI-shaped leg. The publisher leg found it in one request.
+
+🔵 **Why it changes the shape of a grading engagement.** The current pitch — an LLM marks the work —
+fails the question a registrar asks: *can you reproduce this mark?* Perseus inverts the architecture:
+**the model authors the item, the engine scores it**, and the score is deterministic, reproducible
+and explainable without reference to a model version. That is the difference between a pilot and
+something that can carry credit (`P200`).
+
+## T330 — 🔴 LATAM's institutions are not missing from the sector, they are missing from GitHub — and that question is now closed
+
+`T323` refuted the discovery-language explanation for LATAM's thin supply on `10` non-English legs.
+The one remaining explanation was that this base was querying the wrong publishers. `p738` tested it
+directly by naming the obvious ones: **`14` publisher legs at Latin American ministries, agencies and
+universities returned `0` fileable rows, and `8 / 14` returned *no such organisation*** —
+`SEDUC-SP`, `mec-br`, `inep`, `mineduc-cl`, `educacionar`, `uniandes`, `fundacion-telefonica`,
+`lappis-unb`. `org:govbr` has `17` repositories and none is educational; `org:RNP` has `2`, both
+inactive since 2014; `org:USPCodeLab` is a student club.
+
+🟢 **Both candidate explanations are now refuted, so the finding is a supply fact with a named
+cause: in this region, institutional educational capability is not published as reusable
+software.** 🔵 **And it is commercially the better of the two possible worlds.** Where a European
+ministry has already open-sourced its school platform, the engagement is integration into someone
+else's estate. Where a LATAM ministry has published nothing, **the institutional artefact itself is
+unbuilt** — the governance framework, the model-choice record, the teacher-capability programme, the
+reusable platform — and that is a larger, earlier and stickier piece of work. 🔵 It also resolves the
+apparent paradox that LATAM reads **thin on this base and first in the world on adoption** (`T333`):
+adoption is happening in classrooms, not in repositories. ⚠️ Practical consequence: stop spending
+publisher legs on LATAM government orgs. Spend them on the named regional programmes that *do*
+publish (`Plan Ceibal`, `Fundación Ceibal`, `LATAM-GPT`, `portabilis`, `bncc-dev`) and treat the rest
+of LATAM supply as something to be *created* in engagements.
+
+## T331 — 🔴 A manifest licence can be the scaffolding tool's default, which makes `T312`'s rule half a rule
+
+`T312` established that a missing `LICENSE` file is not evidence of a missing grant, because grants
+live in manifests — measured `3 / 3`. `p738` measures the inverse failure on
+[`cast-org/clusive`](https://github.com/cast-org/clusive): **no licence file at `14` probed paths,
+`package.json` declaring `"license": "ISC"`, and a `README.md` §License reading
+*"made available under the BSD 3-clause license"*.**
+
+🔴 **`ISC` is the value `npm init` writes when the author does not choose one.** So is `MIT` under
+some tooling. A manifest field is therefore evidence of *whatever the scaffold wrote* unless
+something corroborates it, and here it contradicted the project's own prose statement.
+
+🟢 **The repaired rule, and it costs one extra fetch:** **licence file → README licence section →
+manifest**, and a manifest-only value is recorded as *uncorroborated*. 🔵 Generalisable beyond this
+base: when an index says `NOASSERTION` and a manifest says `ISC` or `MIT` with no payload, the
+honest record is the README's claim plus a flag — and for a client build, a written confirmation
+from the publisher, because **a README sentence is not a licence file and does not grant anything.**
+
+## T332 — 🔴 GitHub repository search matches keywords as substrings, so the obvious education words are unusable — and one of them is farmed
+
+`T326` established that prose legs produce rows and publisher legs do. `p738` names the mechanism
+for half of it: **`tutor` matches inside `tutorial`; `grading` matches inside `upgrading`.**
+
+- `tutor created:>2026-09-01 stars:>30` → `47` total, `25` read, **`0` education rows**.
+  ⚠️ **`16` of the `25` are a single operator**: `apimart*` throwaway accounts, all `NOASSERTION`,
+  all named `*-api-*-tutorial`, all in a uniform **`55`–`87★`** band, all created in one window.
+  Organised star inflation on LLM-API-reseller promos, captured by this leg purely on the substring.
+- `grading created:>2026-09-01 stars:>20` → `81` total, `25` read, **`0` education rows**, top row
+  `2,580★`, all `upgrading` matches in unrelated tooling.
+- `student`, `education` and `curriculum` legs: `3` more legs, `29` rows, **`0` education rows**.
+
+🟢 **Five legs, `79` rows, `0` usable — and the rule that follows is cheap to obey: a keyword leg
+must not use a word that is a prefix of a common unrelated word.** 🔵 `topic:` and `org:` legs are
+immune, because neither matches prose; this is an argument for the structured channels on
+mechanism, not just on observed yield. ⚠️ **Star counts in a recency window are not a quality
+signal**, because they can be manufactured faster than they can be earned —
+`evidence/substring-pollution.2026-11-10-p738.tsv`.
+
+## T333 — 🟢 LATAM higher education now has the sharpest adoption-vs-readiness number in any region: 92% / 79% / 30%
+
+A **Digital Education Council** *AI in Higher Education LATAM Survey 2026*, run with
+**Tecnológico de Monterrey** and its **Institute for the Future of Education**, reports
+**`92%` of students and `79%` of faculty actively engaging with AI**, and **only `30%` believing
+their institution has responded effectively.**
+
+🟢 **This is the `T319`/`T325` "scissors" measured a third time, on a named instrument, with an
+institutional co-author a client will recognise — and it is the widest reading yet.** Corroborating
+and complicating it: a **UNESCO IESALC** working paper (September 2026) finds adoption *"neither
+uniform nor evenly distributed"*, with a significant **public-versus-private university gap**; a
+2025 UNESCO regional survey of **200 institutions across 19 countries** finds the
+adoption-governance gap especially pronounced in LAC; and the **IDB** has catalogued
+**193 AI initiatives** across the region.
+
+🔵 **The commercial reading, and it is the opposite of the usual one.** A `92%` student-adoption
+figure is not a reason to sell adoption — adoption already happened without anyone's permission.
+**The `30%` is the sellable number**, and the deliverable it names is institutional: a policy that
+is actually operative, a model-choice record, an assessment-integrity position, a faculty
+capability programme. 🔵 **Faculty at `79%` is the detail to put in a proposal**, because it kills
+the "our professors will resist" objection before it is raised; a separate DEC reading characterises
+that faculty use as *high adoption, conservative usage*, which is exactly the population a
+capability programme converts. ⚠️ All of this is survey self-report on a secondary channel
+(`T328` bounds what this base can confirm); the MarketsandMarkets *"Rest of Latin America"*
+figure (~USD `18M`, 2024) that appeared alongside is **refused** as a basis for anything.
+
+## T334 — 🔴 The UAE's 25 classroom AI prohibitions are an EMEA fact, and the source that supplied them filed it under APAC
+
+**February 2026: the UAE Ministry of Education issued a set of roughly `25` generative-AI
+prohibitions for schools**, covering age suitability, privacy, academic integrity and examination
+rules. 🔴 **The secondary source that reported it presented it as an APAC regulatory development,
+alongside a UK item it also misplaced.** Both belong to **EMEA** — the `E` in EMEA is Europe, the
+`M` is the Middle East, and the Gulf states are the `M`.
+
+🟢 **Recorded as a trend rather than buried as a correction, because the error is systematic and
+will recur.** English-language market coverage routinely sorts the Gulf into "Asia-Pacific" or
+"Asia", and this base's `region` field is a **closed five-value vocabulary** precisely so that a
+source's loose geography cannot silently become a filter bucket. 🔵 **Standing instruction: place
+the region from the country, never from the source's section heading.** Country in the prose,
+region in the field.
+
+🔵 **The substance matters too, and it cuts against the regional stereotype.** The Gulf is usually
+sold as the permissive, build-fast AI market; here it is the **most prescriptive school regulator
+of 2026** on this base's reading, more so than any EU member state's national layer. Meanwhile the
+**Ipsos Education Monitor 2026** finds *lower* support for banning classroom AI across the Asian
+markets it examined. 🔴 **So the restrictive-permissive axis does not run East-West**, and a
+proposal that assumes it does will be wrong in both directions.
+
+## T335 — 🟢 North America's binding constraint moved from "is there a policy" to "is the policy legible", and the number is 6%
+
+Adoption and policy have decoupled further. **A June 2026 reading has more than `4` in `5` teens
+having used AI tools and over two-thirds using them regularly, with around half of their schools
+having no policy at all** — and, from the **Stanford AI Index 2026** reporting,
+**only `6%` of teachers say their school's AI policy is clear.**
+
+🟢 **`6%` is the most useful single figure this base holds for North America, and the reason is
+that it is not an adoption number or a compliance number — it is a *legibility* number.** The
+policy volume is already enormous: the **Public Impact / PIE Network** count of **~`100` state
+bills** this year touching students' AI use, **at least `15` states** with enacted or introduced
+AI-in-education legislation, **Illinois** statutorily requiring its state board to publish district
+guidance **by 1 July 2026**, and the **Education Commission of the States** issuing a set of
+**nine recommendations** plus an April 2026 state-guidelines compilation.
+
+🔵 **Which identifies the deliverable exactly, and it is not a policy document.** Districts have
+policies; `94%` of teachers cannot read them. The sellable artefact is **translation and
+operationalisation** — the role-specific one-page rule, the classroom decision tree, the
+training record that evidences it — which is also the artefact the statutes themselves name
+(`T324`, `P196`). 🔵 **Funding is attached**: a federal grant priority on AI literacy and educator
+training with first competitions in the **2026-27** cycle, and **`$169M` in FIPSE awards** that
+include responsible AI use. ⚠️ The teen-usage figures come from vendor and aggregator summaries;
+the ECS material is the firmest of the set.
+
+## T336 — 🟡 Europe's teachers are past the adoption question and the AI Act's high-risk rules are two years out, which makes 2026 a soft-law year
+
+**Futuresource reports `67%` of teachers now using AI tools** and expects **AI-enabled devices to
+be `15%` of institutional PC shipments in 2026**. An **Epson-commissioned survey of ~`3,360`
+respondents across the UK, France, Italy, Germany, Spain and Poland** finds **`80%` of teachers
+worried that AI is entering classrooms faster than schools can manage** and **`76%` of students
+expecting to be allowed to use AI in their learning**.
+
+🟢 **The regulatory half is now confirmed from a third independent direction and it matches what
+this base published**: a **Digital Omnibus deal reached 7 May 2026** means the **high-risk rules,
+which include education, apply from 2 December 2027** — the slip from the original August 2026 date
+that `T306` closed and `T321` split in two. Two live 2026 items sit under it: the Commission's
+consultation on **draft high-risk classification guidelines** (open to **23 June 2026**) and the
+Council education ministers' **conclusions on teachers in the AI era, adopted 11 May 2026**.
+
+🟡 **So 2026 in EMEA is a soft-law year with a hard deadline behind it, and that is a specific
+selling position rather than a lull.** The binding Annex III duties are 2027; what is live now is
+**AI literacy, transparency, and the ministerial expectation about teacher capability** — plus the
+standards an auditor will reach for in the absence of applicable regulation, named explicitly in
+this pass's sources as **ISO/IEC 42001** alongside **UNESCO's generative-AI guidance** and the
+**OECD Digital Education Outlook 2026**. 🔵 **The OECD's framing is the one to quote in a proposal**,
+because it is the sentence that justifies the whole engagement rather than the tool: *AI helps
+learning only when pedagogy stays in control.* 🔵 **`Eurydice`'s "Digital education at school in
+Europe 2026"** is the comparative instrument for a multi-country bid. ⚠️ The `67%` and `15%` figures
+are a market-research house's; the Epson survey is vendor-commissioned. Both are reported as
+sourced, not adopted as this base's own.
+---
+
 # 🆕 Trends new at `p737` (researched 2026-11-10) — `T321`–`T328`
 
 **Added above `p736`'s `T310`–`T320`.** Three are demand findings, three are supply findings and

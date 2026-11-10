@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Vertical Platforms — Education
 
-**Pass p737 · verified 2026-11-10.** Deployable systems a client may already run, or could
+**Pass p738 · verified 2026-11-10.** Deployable systems a client may already run, or could
 adopt, and that AI can be layered onto. This is the "Odoo for ERP, OpenMRS for healthcare"
 shelf: real systems with real install bases that accept customisation.
 
@@ -15,6 +15,71 @@ which is exactly what the AGPL network clause is written about. Read the posture
 before proposing a fork.
 
 
+## The classroom-conferencing estate, a German sovereign school cloud, and three copyleft content platforms 🆕 new section at `p738`
+
+**`6` rows, every licence read from the bytes today.** 🟡 **The honest summary of this pass's
+platform shelf: the deployable systems are real, mature and almost all copyleft — and the
+*gradient* within copyleft is the finding, because it decides what a studio may actually ship.**
+`p738` read **LGPL-3.0**, **GPL-3.0** and **AGPL-3.0** platforms in the same sweep, and they are
+three materially different commercial positions that this shelf has previously lumped together.
+
+| Platform | Repo | Stars | Licence (gate · file · raw bytes) | Last push | Region | Posture — what you may and may not do |
+|---|--:|---|---|---|---|---|
+| **BigBlueButton** (Greenlight front end) | [bigbluebutton/greenlight](https://github.com/bigbluebutton/greenlight) | 850 | **LGPL-3.0** · `LICENSE` · `7,651 B` | **2026-11-09** | Global | 🟢 **The open-source virtual-classroom platform, and the one every LMS already integrates with.** Not a generic meeting tool: multi-user whiteboard, breakout rooms, polling, shared notes, a presenter model built for teaching, and **session recording with playback** (`bbb-playback`). The estate is `79` repositories and is pushed daily. 🟢 **Posture — and this is why it is filed above the AGPL rows: LGPL-3.0 is the mildest copyleft on this shelf.** Its reciprocity reaches **modifications to BigBlueButton itself**, and it explicitly contemplates being *linked to* by separately licensed software — so a studio can build and keep a proprietary layer *around* it and must publish only what it changes *inside* it. AGPL would not permit that for a hosted service. 🔵 **The AI entry points are first-party and already there**: `bbb-lti-broker` (LGPL-3.0, `7,652 B`) mounts it inside Moodle, Canvas or Open edX over LTI, `bbb-transcription-controller` is the live-captioning hook, and `bigbluebutton-html-plugin-sdk` is the documented surface for adding panels to the live classroom. ⚠️ `bbb-transcription-controller` and the plugin SDK carry **no grant at the probed paths** — the hooks you most want are the ones whose licence is unstated, so read before depending. ⚠️ Heavy to self-host (media servers, TURN, recording workers). |
+| **HPI Schul-Cloud** | [hpi-schul-cloud/schulcloud-client](https://github.com/hpi-schul-cloud/schulcloud-client) | 34 | **AGPL-3.0** · `LICENSE` · `34,520 B` | **2026-11-10** | **EMEA** | 🟡 **Germany's state-funded school cloud, as a live codebase rather than a policy document** — the Hasso Plattner Institute lineage behind the `dBildungscloud` / Niedersachsen and Thüringen deployments. `131` repositories, pushed today: `nuxt-client` (the current front end), `schulcloud-calendar`, a **tldraw-based collaborative whiteboard client**, `antivirus_check_service`, and `dof_app_deploy` — the **actual Kubernetes deployment** of a national school platform, in the open. 🔴 **Posture: AGPL-3.0, so Globant cannot host a derivative as a product** without releasing the derived source. Do not fork it for a client product. 🟢 **Read it, and sell against it, for two concrete reasons.** First, it is the **reference answer to "what does a GDPR-and-AI-Act-compliant school platform actually look like in production"** — a question every EMEA public-sector bid asks and almost nobody can answer with running code (`T321`, `P196`). Second, where a German state *already runs it*, the engagement is **integration and AI layering over an existing estate**, which is licence-clean over LTI (`P186`) and is a larger and safer piece of work than a replacement. ⚠️ German-language-first; heavily coupled to German school-administration concepts. |
+| **CrypTool 2** | [CrypToolProject/CrypTool-2](https://github.com/CrypToolProject/CrypTool-2) | 169 | **Apache-2.0** · `LICENSE` · `11,357 B` | 2026-11-02 | **EMEA** | 🟢 **The only Apache-2.0 deployable learning platform this pass found, and it is EMEA-authored and still maintained after two decades.** A visual-programming e-learning environment for cryptography and cryptanalysis from the German CrypTool project (university-led, Kassel/Siegen lineage): learners assemble ciphers, attacks and analyses as data-flow workflows and watch them run. 🟢 **Filed because it is a working, permissively licensed answer to the hardest ask in technical education — "teach a subject by letting the learner operate it"** — and because its shape generalises far past cryptography: the workflow canvas plus a library of inspectable components is exactly what a security, data-engineering or networking curriculum needs, and Apache-2.0 means a studio can take it there. 🔵 Pairs with the held sandbox pair (`openHPI/codeocean` + `poseidon`, `737-A`) for the half of such a curriculum that needs to run arbitrary learner code. ⚠️ **.NET/WPF, Windows-first** — the real constraint, and it is a serious one for a browser-delivered engagement. ⚠️ Subject-specialised content; the platform generalises, the component library does not. |
+| **Kiwix** | [kiwix/kiwix-js](https://github.com/kiwix/kiwix-js) | 495 | **GPL-3.0** · `LICENSE-GPLv3.txt` · `35,147 B` | **2026-11-07** | Global | 🟢 **Offline content delivery, which is the unglamorous precondition for most of this base's LATAM, African and rural-APAC opportunity.** Kiwix serves whole compressed libraries — Wikipedia, Wiktionary, Project Gutenberg, Stack Exchange, and `.zim` archives you build yourself — with **no connectivity at all**, across browser, desktop (`1,545★`), Android (`1,534★`) and iOS (`815★`). The estate is pushed daily. 🔴 **Posture: GPL-3.0 — reciprocal on distribution, but *not* on hosting**, so the network clause that blocks AGPL platforms does not apply here; a studio that ships an unmodified Kiwix alongside its own separately licensed content has no source-release duty, and a studio that *modifies* Kiwix and distributes it does. 🟢 **The AI pattern is RAG without a network**: a `.zim` library plus a local model gives a tutor that works in a school with no internet, and the corpus is auditable because it is a file. 🔵 **Its licence file is also this pass's `738-E` control** — the grant lives at `LICENSE-GPLv3.txt`, which the old six-name chain could not see. ⚠️ `.zim` authoring is its own toolchain. |
+| **Pressbooks** | [pressbooks/pressbooks-book](https://github.com/pressbooks/pressbooks-book) | 21 | **GPL-3.0** · `LICENSE.md` · `35,147 B` | **2026-11-10** | North America | 🟡 **The open-textbook publishing platform university libraries actually run** — WordPress-multisite-based authoring and multi-format export (web, EPUB, PDF) for OER, with `53` repositories pushed today, an **LTI provider**, **SAML and CAS single sign-on** (both pushed today), MathJax rendering and a network catalogue. 🟢 Filed because the **OER production pipeline** is where AI has an unarguable role — generating ancillaries, alternative explanations, question banks and translations for an open textbook the institution already owns — and this is the system that holds those textbooks. 🔴 **Posture: GPL-3.0, WordPress-plugin ecosystem**, so your extensions are plugins and are themselves GPL; distribution-reciprocal, not hosting-reciprocal. 🔵 The SSO and LTI plugins mean it slots into an existing campus estate rather than replacing anything. ⚠️ WordPress operational burden; the whole estate inherits it. |
+| **Clusive** | [cast-org/clusive](https://github.com/cast-org/clusive) | 16 | ⚠️ **BSD-3-Clause, on the README's statement only** · no licence file at `14` probed paths · `package.json` says `ISC` | 2026-04-22 | North America | 🟢 **CAST's adaptive reading-and-learning environment — Universal Design for Learning implemented by UDL's own authors**, with learner-configurable text presentation, vocabulary and comprehension supports, reflection prompts and a teacher dashboard. Ships with **over 300 public-domain and openly licensed EPUBs**. 🟢 Filed because UDL is named in US state guidance and in accessibility procurement language, and because *adaptive reading support* is a far more defensible AI claim than *AI tutor*: the model reshapes presentation and scaffolding, not the curriculum. 🔴 **Read `738-F` before you depend on this.** There is **no licence payload**: the README says BSD-3-Clause, the `package.json` says `ISC` (which is `npm init`'s default value), and the GitHub index says `NOASSERTION`. The README is the most credible of the three and BSD-3-Clause would be excellent — **but get it in writing from CAST before a client build**, because a README sentence is not a licence file. ⚠️ Django + Python, `16★`, last pushed April 2026. |
+
+### 🟢 `738-G` — the copyleft gradient, written down once so this shelf stops flattening it
+
+This shelf has for many passes sorted platforms into *permissive* and *copyleft*. `p738` read all
+three copyleft families in one sweep and the distinction inside that second bucket is the one that
+actually decides engagements:
+
+| Licence | Reciprocity triggers on | Can Globant host a modified version as a service? | Read on this shelf at `p738` |
+|---|---|---|---|
+| **LGPL-3.0** | modifying the library itself; linking is contemplated and permitted | 🟢 **Yes** — publish only your changes *inside* it | BigBlueButton (`7,651 B`) |
+| **GPL-3.0** | **distributing** a derivative | 🟢 **Yes** — hosting is not distribution | Kiwix (`35,147 B`), Pressbooks (`35,147 B`) |
+| **AGPL-3.0** | **offering it over a network**, modified | 🔴 **No** — not without releasing the derived source | HPI Schul-Cloud (`34,520 B`) |
+
+🔵 **Why this is worth a table rather than a sentence:** the single most common way these
+engagements go wrong is treating "copyleft" as one verdict and refusing a GPL platform that is in
+fact deployable as a hosted service, or accepting an AGPL platform that is not. 🔴 **And it is
+precisely the distinction `p736`'s gate defect destroyed** — a whole-payload match called every
+GPL-3.0 repository AGPL-3.0 (`T311`), which would have moved Kiwix and Pressbooks from the green
+row to the red one. The gate repair is load-bearing commercially, not just tidily.
+
+### 🔴 `738-H` — the LATAM institutional-publisher channel is empty, measured on `14` legs
+
+🔴 **The leg type that produced every fileable row in this pass and in `p737` produces *nothing*
+in LATAM.** `p738` ran `14` publisher legs at Latin American ministries, agencies and
+universities. The result:
+
+| Leg | `total_count` | Fileable |
+|---|--:|---|
+| `org:SEDUC-SP`, `org:mec-br`, `org:inep`, `org:mineduc-cl`, `org:educacionar`, `org:uniandes`, `org:fundacion-telefonica`, `org:lappis-unb` | **no such organisation** | 0 |
+| `org:pucp` | 0 | 0 |
+| `org:AGESIC` | 1 (an e-signature utility) | 0 |
+| `org:RNP` | 2 (both inactive since 2014) | 0 |
+| `org:unam` | 2 | 0 |
+| `org:USPCodeLab` | 15 (a student club: boilerplates, hackathon sites) | 0 |
+| `org:govbr` | 17 (portal furniture and a mail CLI; nothing educational) | 0 |
+
+🟢 **Read this together with `T323` and the conclusion is firm rather than gloomy: LATAM's
+education institutions are not absent from the sector, they are absent from GitHub.** `T323`
+already refuted the discovery-language explanation on `10` non-English legs. `p738` refutes the
+remaining explanation — *"we are querying the wrong publishers"* — by querying the obvious
+publishers by name and finding that **most of those organisations do not exist on GitHub at all.**
+🔵 **Which relocates the LATAM opportunity precisely, and makes it bigger rather than smaller:**
+the region's institutional capability is **not published as reusable software**, so a LATAM
+engagement is not "integrate with what the ministry already open-sourced" (there is nothing) but
+"build the institutional artefact, and the governance around it, from the regional components that
+*do* exist" — the held `Plan Ceibal` / `Fundación Ceibal` estate, `LATAM-GPT`, `portabilis`,
+`bncc-dev`, and the Iberian-language rows on the agent shelf. 🔵 It also explains why LATAM reads
+thin on a GitHub-sourced base while reading **first in the world on adoption** in survey data
+(`T333`). Denominators in `evidence/leg-ledger.2026-11-10-p738.tsv`.
 ## Sovereign national education services, and an MIT classroom-conferencing platform 🆕 new section at `p737`
 
 **`4` rows, all read `2026-11-10`, all live, all from European publishers this base had never

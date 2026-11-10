@@ -1,0 +1,6 @@
+leg	total_count	rows_read	education_rows	pollution_mode	operator_signature
+tutor created:>2026-09-01 stars:>30	47	25	0	substring: 'tutor' matches inside 'tutorial'	16 of 25 rows are apimart* throwaway accounts, all NOASSERTION, 55-87 stars, created in one window
+grading created:>2026-09-01 stars:>20	81	25	0	substring: 'grading' matches inside 'upgrading'	none; generic LLM/video-skill repos
+student created:>2026-09-01 stars:>40	17	17	0	recency head of a generic word	none
+curriculum created:>2026-09-01 stars:>25	11	11	0	'curriculum' used for developer-learning-path repos, not school curricula	none
+education created:>2026-09-01 stars:>40	67	25	0	generic word; top rows are unrelated tools naming 'education' in prose	none

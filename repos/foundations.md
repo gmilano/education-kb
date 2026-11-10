@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Foundational Repositories — Education
 
-**Pass p737 · verified 2026-11-10.** Building blocks rather than deployable platforms:
+**Pass p738 · verified 2026-11-10.** Building blocks rather than deployable platforms:
 assessment engines, learner-model implementations, exam corpora and evaluation benchmarks.
 Deployable systems (LMS, ERP, conferencing) are on `verticals/solutions.md`.
 
@@ -33,6 +33,90 @@ repository that demonstrably exists, that is stated in the row rather than treat
 > right.** Recorded as the clearest evidence yet that reading the bytes is worth its cost.
 
 
+## Khan Academy's own assessment engine, the NSF data-science estate, and the Indic lecture stack 🆕 new section at `p738`
+
+**`13` rows, every licence read from the bytes today, every one permissive or public-domain.**
+🟢 **The finding that reorganises this page: the single most-used piece of open-source assessment
+software in the world was never on it.** [`Khan/perseus`](https://github.com/Khan/perseus) is
+**MIT**, `1,598★`, and was pushed **today** — it is the exercise-and-question engine that renders
+and grades every interactive item on Khan Academy, and this base has spent dozens of passes
+declaring an assessment-component gap while it sat in the open under the most permissive grant
+there is. Three of this pass's publishers (`Khan`, `concord-consortium`, `AI4Bharat`) are
+**first-party operators of systems with tens of millions of learners**, publishing the components
+of those systems rather than demos of them — which is the distinction `T326` was reaching for.
+
+| Repo | Stars | Licence (gate verdict · file · raw bytes) | Last push | Region | What it is, and what it is for |
+|---|--:|---|---|---|---|
+| [Khan/perseus](https://github.com/Khan/perseus) | **1,598** | **MIT** · `LICENSE` · `1,052 B` | **2026-11-10** | North America | **Khan Academy's exercise and question engine**: the renderer, the editor and the scorer behind its interactive items — numeric and expression input, graphing and interactive-graph widgets, multiple choice, sorting, matching, labelled images, with per-widget scoring and hint flows. React/TypeScript, published as versioned npm packages. 🟢 **This is the component every grading and practice pattern on this base has been assuming and none has named.** An LLM can write an item and mark prose; it cannot render a draggable number line, validate an algebraic expression as *equivalent* rather than *identical*, or score a graph the learner dragged. Perseus does all three, has done at Khan Academy's scale for a decade, and is MIT. 🔵 **Pair it with an LLM as the item *author* and Perseus as the item *runtime*** — the model generates the Perseus JSON, the engine renders and scores it deterministically, and the score is defensible to a registrar because no model is in the marking path (`P200`). ⚠️ A front-end library, not an application: no item bank, no gradebook, no auth. ⚠️ Khan's own stack is the reference consumer, so some widgets assume Khan conventions; budget integration time. |
+| [Khan/wonder-blocks](https://github.com/Khan/wonder-blocks) | 163 | **MIT** · `LICENSE` · `1,069 B` | **2026-11-10** | North America | Khan Academy's **production React design system** — accessible components built against the needs of a learner-facing product used by children and by assistive technology. 🟢 Filed as the practical companion to Perseus: the two share conventions, and an accessibility story that has survived a decade of real classroom use is worth more than a generic component library in any public-sector bid where WCAG conformance is a scored criterion. ⚠️ Opinionated visual language; expect to re-theme. |
+| [concord-consortium/codap](https://github.com/concord-consortium/codap) | 107 | **MIT** · `LICENSE.md` · `1,090 B` | **2026-11-10** | North America | **CODAP — the Common Online Data Analysis Platform**: a browser data-exploration environment built for *learners* rather than analysts, from the NSF-funded Concord Consortium. Drag-and-drop tables, graphs, maps and hierarchical data, with a documented plugin API. 🟢 **Filed because data literacy is the one AI-era curriculum requirement that every region's 2026 policy documents name, and this is the mature open implementation of it.** 🔵 **The plugin API is the AI surface**: an agent that proposes a hypothesis, builds the graph that tests it and asks the learner what they see fits CODAP without forking it. ⚠️ Large, long-lived codebase; it is a platform-sized dependency despite being filed as a component. |
+| [concord-consortium/lara](https://github.com/concord-consortium/lara) | 4 | **MIT** · `LICENSE` · `1,085 B` | 2026-10-11 | North America | **LARA — the authoring and runtime harness the Concord Consortium's investigations actually run in**: sequences of pages, embedded interactives, prompts and learner-response capture, with reporting. 🟢 Filed low-star and deliberately: it is the **glue** between a content author, an interactive and a report, and this base has repeatedly had components but no harness to sequence them. ⚠️ `4★`, Rails, built for one organisation's workflow — read it as a worked design, fork only with intent. |
+| [concord-consortium/collaborative-learning](https://github.com/concord-consortium/collaborative-learning) | 10 | **MIT** · `LICENSE` · `1,075 B` | **2026-11-10** | North America | A **multi-learner shared-workspace environment** — groups build on a common document in real time, with teacher visibility into each group's state. Actively pushed today. 🟢 Filed because **group work is where AI tutoring pilots are weakest**: the held shelf personalises to one learner, and a classroom is not a set of individuals. 🔵 Teacher-visibility surface is the part worth lifting into any cohort engagement. ⚠️ `10★`; Firebase-coupled. |
+| [AI4Bharat/Chitralekha](https://github.com/AI4Bharat/Chitralekha) | 118 | **MIT** · `LICENSE` · `1,079 B` | 2025-10-31 | **APAC** | **A transcription, translation and subtitling workbench for Indian-language video**, from **AI4Bharat (IIT Madras)** — upload a lecture, get a machine transcript, machine translation and a **human review workflow** to correct both, then export subtitles. 🟢 **Filed as the answer to a question LATAM and APAC engagements ask and this base could not answer: how do you make an existing lecture library usable in a language the lecturer did not speak?** 🔵 **The human-in-the-loop review stage is why this is filed over a bare ASR model** — for accredited material, an uncorrected machine transcript is not publishable, and the correction UI is the expensive part to build. 🔵 Composes with `unesco/pdf-to-podcast` and `Moodle2IA` into a whole-course localisation line (`P199`). ⚠️ Last pushed October 2025 — the newest row here is not this one; treat as a maintained-enough reference. ⚠️ Indic-first by design; other language families need the models swapped. |
+| [AI4Bharat/IndicConformerASR](https://github.com/AI4Bharat/IndicConformerASR) | 106 | **MIT** · `LICENSE` · `1,067 B` | 2025-06-20 | **APAC** | **Conformer speech-recognition models and recipes covering the major Indian languages**, from the same group. 🟢 Filed as the component under the workbench above: it is the piece that makes lecture capture work where Whisper's accuracy on Indic languages and code-switched classroom speech falls off. ⚠️ Model weights and recipes, not a service — you host it. ⚠️ **`AI4Bharat/IndicF5` (TTS) was probed and refused: no grant at `14` probed paths**, so the synthesis half of this stack is not available on the same terms. |
+| [unesco/pii-detector](https://github.com/unesco/pii-detector) | 1 | **MIT** · `LICENSE` · `1,063 B` | 2026-04-13 | **Global** | **Detects and redacts personally identifiable information**, published first-party by UNESCO (see `738-A` on the attribution). 🟢 **Filed because it is the component that every pattern on this base needs and that no client will let you skip: the thing that stops a learner's name reaching a model API.** 🔵 **The provenance is the product here.** A redaction step a DPO can trace to the UN education agency's own repository is a materially easier conversation than one traced to a vendor, under the EU AI Act's live transparency duties (`T321`), FERPA, and LATAM's governance gap (`T325`). ⚠️ `1★`, April 2026, Python; a starting point to be tuned per language and per jurisdiction — a generic PII detector will miss locally shaped identifiers (an Indian Aadhaar, a Brazilian CPF, a Spanish NIE) unless you add them. ⚠️ Redaction is mitigation, never a lawful basis. |
+| [cast-org/figuration](https://github.com/cast-org/figuration) | 31 | **MIT** · `LICENSE` · `1,128 B` | 2026-10-26 | North America | An **accessibility-first front-end framework from CAST** — the organisation that authored **Universal Design for Learning**. 🟢 Filed because UDL is written into US state guidance and into procurement language, and this is UDL's authors shipping their own component layer MIT. 🔵 Pairs with Khan's `wonder-blocks`: Khan's is proven at scale, CAST's is proven against the framework an auditor will cite. ⚠️ Bootstrap-lineage CSS framework, not a React library — a styling layer, not a component model. |
+| [Simon-Initiative/lti_1p3_ecto_provider](https://github.com/Simon-Initiative/lti_1p3_ecto_provider) | 0 | **MIT** · `LICENSE` · `1,082 B` | 2026-03-13 | North America | **An LTI 1.3 tool-provider implementation in Elixir/Ecto**, from Carnegie Mellon's **Simon Initiative** (the publisher of OLI Torus, held). 🟢 Filed because `P186`'s whole argument is that **LTI is the licence-clean way into a GPL/AGPL LMS** — you integrate over the standard instead of deriving from the platform — and that argument needs a permissive provider implementation per runtime. This is the BEAM one, and `0★` does not change that it is a correct implementation by the team that runs a production LTI tool. ⚠️ `0★`, niche runtime; read with the held Node (`tsugiproject`) and Python options. |
+| [phetsims/paper-land](https://github.com/phetsims/paper-land) | 39 | **MIT** · `LICENSE` · `1,106 B` | 2026-03-11 | North America | **PhET's toolkit for building multimodal, tangible interactive learning** — physical paper programs that drive a simulation, with sound, speech and description as first-class outputs rather than retrofitted alt text. 🟢 **Filed for the licence as much as the idea: PhET's simulations themselves are GPL-3.0, and this is the part of PhET's estate that is MIT.** That is the same permissive-component-over-copyleft-core pattern `T327` identified at H5P, now measured at a third publisher. 🔵 The multimodal-description work is directly reusable for blind and low-vision learners in a STEM engagement. ⚠️ Research-grade; the paper-program hardware loop is not a mainstream deployment target. |
+| [code-dot-org/ml-playground](https://github.com/code-dot-org/ml-playground) | 6 | **Apache-2.0** · `LICENSE` · `11,357 B` | 2026-05-28 | North America | **Code.org's in-browser machine-learning teaching tool** — learners train a simple classifier on a supplied dataset and inspect what it learned. 🟢 Filed as the one usable artefact from a `66`-repository sweep of Code.org, and as an honest AI-literacy component: AI-literacy mandates are now statutory in several US states (`T318`, `T324`), and they require something a 13-year-old can *use*, not a lecture. ⚠️ `6★`; most of the `org:code-dot-org` estate carries **no grant** — notably `aiproxy`, its AI-teaching-assistant proxy, which is ungranted and therefore not filed. |
+| [dini-ag-kim/amb](https://github.com/dini-ag-kim/amb) | 24 | **CC0-1.0** · `LICENSE` · `7,048 B` | 2026-10-30 | **EMEA** | **AMB — the *Allgemeines Metadatenprofil für Bildungsressourcen***, the German-language general metadata profile for educational resources, from the DINI/KIM competence group. JSON-LD schema plus vocabularies. 🟢 **Filed as the thing an EMEA content engagement needs on day one and always improvises: the agreed shape of a learning-object record.** It is what German OER repositories (including the held `openeduhub` estate) actually index against, so emitting AMB makes generated content *findable* in the national infrastructure instead of merely existing. 🔵 **CC0 means no obligation at all** — not even attribution — which is the correct licence for a schema and is what `738-D` had to repair the gate to see. ⚠️ A schema and vocabularies, not code. ⚠️ German-language-first; the profile encodes German educational structures (`Schularten`, `Hochschulfächersystematik`). |
+
+### 🟢 `738-D` — the licence gate called CC0 a CC-BY licence, `3 / 3`, and that error ran in the expensive direction
+
+🔴 **`p736`'s gate classified every **CC0-1.0** payload as `CC-BY-family (not a software grant)` —
+measured `3 / 3`**: [`GEANT/edugain-openidfed`](https://github.com/GEANT/edugain-openidfed)
+(`7,048 B`), [`dini-ag-kim/amb`](https://github.com/dini-ag-kim/amb) (`7,048 B`) and
+[`openjournals/jose-reviews`](https://github.com/openjournals/jose-reviews) (`6,555 B`). The cause
+is the rule order: the generic `Creative Commons` pattern fires before anything can recognise CC0.
+
+🔴 **This is not a cosmetic mislabel. CC0 is a public-domain dedication — it imposes *no*
+obligation, not even attribution — so it is strictly *more* permissive than CC-BY and more
+permissive than MIT.** The old verdict's parenthetical, *"not a software grant"*, then pushes the
+most freely usable material this base encounters into the cannot-use bucket. Two of the three
+payloads are exactly the kind of asset a studio wants: a national metadata profile and a
+federation specification.
+
+🟢 **Repaired and published as `P197`**, with the controls in
+`evidence/gate-controls.2026-11-10-p738.tsv`: `CC0 1.0 Universal` is matched **above** the generic
+rule, and the bare preamble line `Creative Commons Legal Code` is treated as decoration so it
+cannot terminate the walk — **both layouts occur** (two payloads carry the preamble, one begins
+`CC0 1.0 Universal` directly), so the fix must survive both and does. **`27 / 27` payloads
+classified this pass, `3` corrected, `24` unchanged, `0` regressions** — including the `T311`
+GPL-§13 control, which still returns `GPL-3.0` and not AGPL.
+
+### 🔴 `738-E` — "no grant found" was wrong twice, and the filename chain is why
+
+🔴 **Two repositories that do carry a grant were scored *grant-not-found* by `p736`'s six-name
+chain, and both were recovered by extending it:**
+
+| Repo | Found at | Raw bytes | Verdict | Why the old chain missed it |
+|---|---|--:|---|---|
+| [iansan5653/open-mcr](https://github.com/iansan5653/open-mcr) | **`license.txt`** | 32,423 | GPL-3.0 | lowercase; the raw probe is case-sensitive (`724-I`) |
+| [kiwix/kiwix-js](https://github.com/kiwix/kiwix-js) | **`LICENSE-GPLv3.txt`** | 35,147 | GPL-3.0 | suffixed filename, not in the chain |
+
+🟢 **The chain is extended from `6` names to `14` at `P197`, and the lowercase variants are
+load-bearing rather than defensive** — one of the two recoveries is a lowercase filename.
+🔵 **And the honest-negative discipline earned its keep**: because `T302` requires the verdict to
+be written *"no grant found at the probed paths"* rather than *"no grant"*, these two were
+recoverable rather than wrongly refused. ⚠️ `open-mcr` is **GPL-3.0** optical-mark recognition for
+paper multiple-choice sheets — genuinely useful in low-connectivity assessment, last pushed 2023 —
+and it is recorded here as a **read-only reference**, not filed as a build-on component.
+
+### 🔴 `738-F` — a manifest licence can be npm's default value, which turns `T312` into a two-step rule
+
+🔴 **[`cast-org/clusive`](https://github.com/cast-org/clusive)** — CAST's UDL adaptive reading
+environment, `16★`, pushed 2026-04-22, indexed `NOASSERTION` — **has no licence file at any of
+`14` probed paths**, and its `package.json` declares `"license": "ISC"`. 🔴 **`ISC` is the value
+`npm init` writes when nobody chooses one.** Its `README.md` §License says something different and
+specific: *"made available under the BSD 3-clause license"*.
+
+🟢 **`T312` said: when there is no licence file, read the manifest. `p738` adds the second half:
+do not trust the manifest alone.** The repaired order is **licence file → README licence section →
+manifest**, and a manifest-only value must be corroborated before it is recorded — `ISC` and
+`MIT` in a `package.json` with no licence file are the two scaffold defaults and carry the least
+evidential weight of anything the gate reads. 🔵 Clusive is recorded as **BSD-3-Clause on the
+README's own statement**, flagged as uncorroborated by a payload, and is filed on
+[`../verticals/solutions.md`](../verticals/solutions.md) with that caveat attached rather than here.
 ## European research-and-education network estates, and the permissive execution sandbox 🆕 new section at `p737`
 
 **`10` rows, all read `2026-11-10`, all live, `0` archived, `10 / 10` licence verdicts decided from the

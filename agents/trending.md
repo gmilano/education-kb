@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p738) — 🟢 **THE UN'S EDUCATION AGENCY SHIPS MIT: `github.com/unesco` IS A FIRST-PARTY PUBLISHER WITH `5 / 8` BYTE-VERIFIED MIT GRANTS, AND TWO OF ITS PIPELINES ARE FILED HERE. 🔴 CHINA'S LEADING EDUCATION-AI LAB GRANTS ITS METHODS AND NOT ITS EDUCATION WORK — `4 / 4` UNGRANTED AGAINST `5 / 5` MIT/APACHE, INCLUDING A `613★` REFUSAL. 🔴 THE KEYWORD LEGS DO NOT MATCH EDUCATION AT ALL: `tutor` MATCHES `tutorial`, `grading` MATCHES `upgrading`, `0 / 79`.**
+
+**`2` agent rows · `13` foundations rows · `6` platform rows · `8` new trends (`T329`–`T336`) ·
+`4` new patterns (`P197`–`P200`) · `27` licence payloads byte-read, **`27 / 27`** classified,
+**`3` verdicts corrected** and **`0` regressions** · the gate gains **CC0 resolution** and a
+**`14`-name filename chain**, recovering `2` grants previously scored as nils · `58` discovery legs
+(`47` publisher + `7` topic + `5` keyword, minus overlap) · `14` LATAM publisher legs → **`0`
+fileable, `8` organisations that do not exist** · `2` more dead channels named
+(`orgs/*/repos`, `users/*/repos`, `graphql`) · `5` subjects refused on their grant.**
+
+### The two rows, and why a `0★` repository leads the pass
+
+🟢 **[`unesco/video-to-quiz`](https://github.com/unesco/video-to-quiz) (MIT, `0★`) and
+[`unesco/pdf-to-podcast`](https://github.com/unesco/pdf-to-podcast) (MIT, `3★`)** are filed above
+rows with a thousand times the stars, and the reason is the same one that filed Intel's `14★`
+curriculum agent at `p735` and Hallym University's `2★` lecture line at `p736`: **the publisher and
+the licence are the value, not the popularity.** `video-to-quiz` reads a lecture recording's
+**audio *and sampled frames*** — faster-whisper plus LLaVA plus Llama 3.2 — so the blackboard and the
+slide are not discarded, which every transcript-only row on this shelf does silently.
+🔵 In a ministry procurement, *"UNESCO's own MIT pipeline, adapted, on your hardware"* clears a
+review that *"we built a quiz generator"* does not.
+
+⚠️ **Attribution held to `T309`'s standard**: the organisation self-declares as official, `T328`
+means no pass here can confirm that against `unesco.org`, and it is corroborated instead on an
+independent secondary channel which also names a **personal repository that disclaims representing
+UNESCO** — do not stage that one.
+
+### The refusals are the other half of the pass
+
+🔴 **`ECNU-ICALK` (East China Normal University, the `EduChat` group) publishes `4 / 4` of its
+education repositories with no grant at `14` probed paths — `AutoSkill` (`613★`), `ELL-StuLife`
+(`73★`), `EduChat-Math` (`60★`), `SocraticMath` (`18★`) — while `5 / 5` of its LLM-methods
+repositories carry MIT or Apache-2.0.** `AutoSkill` is the largest education-subject repository this
+pass enumerated anywhere and it cannot be used. 🟢 **The transferable rule: for a university lab,
+the grant tracks the artefact's audience, not the lab's policy** — so probe the grant before reading
+the README, and expect the lab's *neighbouring method* repositories to be the usable ones
+(`evidence/ecnu-grant-asymmetry.2026-11-10-p738.tsv`).
+
+### `T332` — the keyword legs were matching a different word, and one of them is farmed
+
+🔴 **`5` keyword legs, `79` rows read, `0` education rows** — and the mechanism is substring capture:
+`tutor` matches inside **`tutorial`**, `grading` matches inside **`upgrading`**.
+⚠️ **`16` of the `25` rows on the `tutor` leg are a single operator**: `apimart*` throwaway accounts,
+all `NOASSERTION`, all named `*-api-*-tutorial`, all in a uniform `55`–`87★` band, all created in one
+window — **organised star inflation**, captured purely on the substring. 🟢 **Standing instruction:
+a keyword leg must not use a word that is a prefix of a common unrelated word.** `topic:` and `org:`
+legs are immune by construction, because neither matches prose — which is an argument for the
+structured channels on *mechanism* and not merely on observed yield
+(`evidence/substring-pollution.2026-11-10-p738.tsv`).
+
+### Saturation holds, and `T326` is now `100`-plus legs deep
+
+🟡 **The English-language AI-education agent namespace remains swept** (`T316`, `p737`), and `p738`
+did not re-test it — per `p737`'s own instruction. Every agent row this pass came from an `org:`
+leg at a publisher this base had never addressed, which is the fourth consecutive pass where that
+is true.
+
+---
 ## 🆕 2026-11-10 (p737) — 🔴 **THE AGENT SHELF IS SATURATED AND THIS PASS FILES ZERO AGENTS: `12` LEGS, `9` RETURNING ONLY ROWS ALREADY HELD, `12 / 12` WITH NO FILEABLE ROW. 🔴 THE OBVIOUS EXPLANATION FOR THE REGIONAL GAPS — "WE SEARCH IN ENGLISH" — WAS TESTED ON `10` NON-ENGLISH LEGS AND REFUTED: `45` NOVEL REPOSITORIES, MAX `18★`, `0` FILEABLE. 🟢 EMEA'S SUPPLY IS REAL AND PERMISSIVE AND IT IS NOT SHAPED LIKE AN AGENT — IT IS A SANDBOX, AN ACCESS RECORD, A GRAPHQL CONTENT API AND AN MIT CLASSROOM.**
 
 **`0` agent rows · `10` foundations rows · `4` platform rows · `8` new trends (`T321`–`T328`) ·

@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-10
 ---
 
+## 🆕 2026-11-10 (p738)
+
+**`58` discovery legs — `47` publisher legs (`org:` / `user:`), `7` `topic:` legs and `5`
+keyword+recency legs, all on `gh api -X GET search/repositories` (alive; `T310` confirmed a third
+time, and cross-validated byte-identical against the unauthenticated
+`curl https://api.github.com/search/repositories` fallback) → `~920` repository rows read →
+`~780` novel against a `4,867`-address ledger → `29` licence payloads probed across up to `14`
+filenames each, `27` byte-read and **`27 / 27` classified** → **`21` filed** across
+[`../agents/top.md`](../agents/top.md) (`2`),
+[`foundations.md`](foundations.md) (`13`) and
+[`../verticals/solutions.md`](../verticals/solutions.md) (`6`).**
+
+🟢 **Where every fileable row came from, for the fourth consecutive pass: `org:` legs against
+publishers this base had never addressed.** `T326`'s rule is no longer being tested, it is being
+used. The publishers that produced rows this pass: **`unesco`** (the UN education agency — `5 / 8`
+repositories MIT), **`Khan`** (Khan Academy), **`concord-consortium`** (NSF-funded, `403`
+repositories), **`AI4Bharat`** (IIT Madras), **`cast-org`** (the authors of Universal Design for
+Learning), **`Simon-Initiative`** (Carnegie Mellon / OLI Torus), **`phetsims`** (PhET, Colorado),
+**`code-dot-org`**, **`dini-ag-kim`** (German OER metadata), **`GEANT`** (the European research
+network), **`dataesr`** (the French higher-education ministry's data team),
+**`bigbluebutton`**, **`hpi-schul-cloud`** (Germany's state school cloud), **`kiwix`**,
+**`pressbooks`** and **`CrypToolProject`**.
+
+### 🟢 The single most consequential row, and why it took 738 passes to find
+
+[`Khan/perseus`](https://github.com/Khan/perseus) — **MIT, `1,598★`, pushed today** — is Khan
+Academy's exercise and question engine: renderer, authoring editor and **deterministic scorer**,
+marking expression answers for *mathematical equivalence* and graphs against a target.
+🔴 **This base declared an "assessment component" gap for dozens of passes while Perseus sat in the
+open under the most permissive grant available.** The diagnosis is the transferable part:
+**every leg that could have found it was aimed at the word "AI"**, and Perseus is not an AI project,
+carries no AI topic and appears in no `topic:ai-*` result. It is infrastructure.
+🟢 **Standing correction to this base's search model: the components that make an education AI
+product shippable are mostly not AI components, and are therefore invisible to every AI-shaped leg**
+(`T329`). The publisher leg found it in one request.
+
+### 🔴 The LATAM publisher channel is empty, and that is now a closed question
+
+**`14` publisher legs at Latin American ministries, agencies and universities → `0` fileable rows,
+and `8 / 14` returned *no such organisation*** (`SEDUC-SP`, `mec-br`, `inep`, `mineduc-cl`,
+`educacionar`, `uniandes`, `fundacion-telefonica`, `lappis-unb`). `org:govbr` → `17` repositories,
+none educational. `org:RNP` → `2`, inactive since 2014. `org:USPCodeLab` → a student club.
+🟢 With `T323` having refuted the discovery-language explanation on `10` non-English legs,
+**both candidate explanations for LATAM's thin supply are refuted: the region's institutions are not
+absent from the sector, they are absent from GitHub** (`T330`). 🔵 Which makes the LATAM engagement
+*building* the institutional artefact rather than integrating with one — larger, earlier, stickier.
+
+### 🔴 Leg-type yield, measured, and two words that are unusable
+
+| Leg type | Legs | Rows read | Fileable rows |
+|---|--:|--:|--:|
+| `org:` / `user:` publisher | 47 | ~800 | **21** |
+| `topic:` | 7 | ~175 | 0 |
+| keyword + `created:`/`stars:` | 5 | 79 | **0** |
+
+🔴 **The keyword legs returned `0` education rows out of `79`, and the mechanism is substring
+capture: `tutor` matches inside `tutorial`, `grading` inside `upgrading`.** ⚠️ **`16` of the `25`
+rows on the `tutor` leg are one operator** — `apimart*` throwaway accounts, all `NOASSERTION`, all
+`*-api-*-tutorial`, uniform `55`–`87★`, same creation window: organised star inflation.
+🟢 `topic:` and `org:` legs cannot fail this way because neither matches prose (`T332`,
+`evidence/substring-pollution.2026-11-10-p738.tsv`).
+
+### 🔬 Instruments: three controls hold, three more channels confirmed dead
+
+🔬 `gh api -X GET search/repositories` **alive**, carried all `58` legs; the unauthenticated
+fallback returns byte-identical counts (`topic:ai-tutor` → `891` on both). Ordered raw chain
+discriminated **`2 / 2`**. `curl -sI https://github.com/{o}/{r}` → **`403` for the live repository
+too, `2 / 2`, still no discriminating power.**
+⚠️ **New dead channels:** `api.github.com/orgs/{org}/repos` → `403`;
+`api.github.com/users/{user}/repos` → `403`; `api.github.com/graphql` → `403` with the explicit
+body *"GitHub GraphQL is not available from Claude Code sessions; use the REST API."*
+🔵 **Budget consequence:** `search/repositories` is the **only** enumeration channel, capped at
+`30` requests/minute authenticated and `10` unauthenticated, returning one sort key at a time — so
+a publisher leg sees only the head of a publisher's list. Every leg this pass therefore records its
+`total_count` beside its rows read, so a later pass can see what was *not* seen
+(`evidence/leg-ledger.2026-11-10-p738.tsv`, `evidence/publisher-sweep.2026-11-10-p738.tsv`).
+
+### 🟢 The gate's eighth repair recovered two grants it had scored as nils
+
+**`27 / 27` payloads classified, `3` corrected, `24` unchanged, `0` regressions.**
+🔴 **CC0-1.0 was being reported as `CC-BY-family (not a software grant)`, `3 / 3`** — which files
+the *most* permissive licence this base encounters as unusable. 🔴 **And the six-name filename chain
+scored two real grants as absent**: `iansan5653/open-mcr` at lowercase **`license.txt`** and
+`kiwix/kiwix-js` at **`LICENSE-GPLv3.txt`**, both GPL-3.0. The chain is now `14` names and the
+lowercase variants are load-bearing. 🔴 **Third finding, a procedure change:** a licence found only
+in a manifest may be the **scaffolding tool's default** — `cast-org/clusive` declares
+`"license": "ISC"` (npm's default) while its README says BSD-3-Clause, so the order is now
+**licence file → README → manifest, manifest-only recorded as uncorroborated** (`P197`,
+`T331`, `evidence/gate-controls.2026-11-10-p738.tsv`).
+
+### 🟡 Measured nils, recorded so a later pass does not pay for them again
+
+- **`org:unizin`, `org:edu-sharing-community`** → the organisation does not exist under that name.
+- **`org:Selleo`** → `109` repositories, and the held `mentingo` is its **only** education
+  repository. ⚠️ A publisher leg at the author of a held row does not reliably transfer.
+- **`org:THUDM`, `org:zjunlp`** → `239` repositories between them, strong permissive grants, and
+  **`0` education-subject rows**: these are general LLM labs, not education publishers.
+- **`org:oppia`** (`22`), **`org:ccctechcenter`** (`8`), **`org:openupresources`** (`6`),
+  **`org:byuhbll`** (`8`), **`org:lumenlearning`** (`18`, `17 / 18` already held) → nothing novel
+  and fileable. `lumenlearning/agentic-assessment` is the one tempting title and it carries **no
+  grant**.
+- **`org:scratchfoundation`** → `45` repositories, and the finding is a **licence migration**: the
+  modern estate (`scratch-www`, `scratch-desktop`, `scratch-render`, `scratch-paint`, `scratch-link`,
+  `scratch-audio`) is **AGPL-3.0**, where the archived generation (`scratch-flash`, `scratch-html5`)
+  was GPL-2.0. ⚠️ Anyone planning a hosted Scratch-derived product should read that before, not
+  after.
+- **`org:phetsims`** → `216` repositories; the **simulations are GPL-3.0** and only the
+  infrastructure (`paper-land`, `phet-core`, `scenery-phet`, `qa`) is MIT — a third publisher
+  showing `T327`'s permissive-component-over-copyleft-core split.
+- **`topic:school-management`** (`1,240`) → `11` novel, all single-author CRUD projects,
+  `T303`'s licence nil re-measured and holding.
+- **`topic:edtech`** (`5,433`) → sorted by stars, `24 / 25` already held: the correct behaviour for
+  a saturated namespace, and the one novel row is an unlicensed awesome-list.
+
+---
 ## 🆕 2026-11-10 (p737)
 
 **`62` discovery legs — `53` on the **authenticated** `gh api -X GET search/repositories` channel

@@ -6,7 +6,7 @@ updated: 2026-11-10
 
 # Education AI Agents — Curated Top Set
 
-**Pass p737 · verified 2026-11-10.** The `7` rows added this pass were read today; rows carried
+**Pass p738 · verified 2026-11-10.** The `2` rows added this pass were read today; rows carried
 over name the date they were last read. Rows up to `p734` were read from
 `gh api -X GET search/repositories`; `p735` declared that channel dead (`GH_TOKEN` invalid, `422`)
 and moved to unauthenticated `curl https://api.github.com/search/repositories` (`T298`).
@@ -33,6 +33,125 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p738` — reads and verifies `2026-11-10`
+
+> **`2` rows added below, both read from the bytes today, both from a publisher this base had
+> never addressed, and `5` subjects refused on their grant — including the highest-star education
+> repository this pass enumerated anywhere.**
+>
+> 🟢 **The headline is a publisher, and it is the one publisher in this industry whose name a
+> client already trusts: `github.com/unesco` ships MIT.** UNESCO — the UN agency whose
+> *Recommendation on the Ethics of AI* and whose *AI competency framework for teachers* are cited
+> in half the education-AI policy documents this base has read — maintains a small, deliberate
+> set of **MIT-licensed Python pipelines** for exactly the content work these engagements begin
+> with. `5 / 8` repositories in the organisation carry a byte-verified MIT grant
+> (`1,063 B`–`1,113 B`, `Permission is hereby granted, free of charge`). Two are agents and are
+> filed here; `pii-detector` is filed as a building block on
+> [`../repos/foundations.md`](../repos/foundations.md).
+>
+> 🔵 **Attribution, stated to the standard `T309` demands rather than taken from the profile.**
+> The organisation's own `profile/README.md` calls itself *"UNESCO's official open-source hub"* —
+> which is a **self-declaration**, and `T328` means no pass in this environment can confirm it
+> against `unesco.org`, because `WebFetch` to arbitrary hosts fails at DNS resolution.
+> 🟢 **It is corroborated instead on an independent secondary channel**, which identifies
+> `github.com/UNESCO` as the official UNESCO organisation and names `pdf-to-podcast`,
+> `video-to-quiz`, `sdg-classifier` and `heritage-3d-generator` as its public repositories, and
+> which separately records a **UNESCO presence on Hugging Face**. ⚠️ **That same channel names a
+> near-miss that a studio would otherwise stage by accident:**
+> `emanuelqueiroga/unesco-ai-procurement-tool` is a **personal repository whose own README
+> disclaims speaking for UNESCO** — do not file it and do not cite it as UNESCO's.
+> 🔵 Region is **Global**, correctly and not as a shrug: an intergovernmental publisher is the one
+> case where `Global` is a placement rather than an absence of one.
+
+| Agent | Repo | Stars | Licence | Last push | Region | What it does, and why it is filed |
+|---|---|--:|---|---|---|---|
+| **UNESCO video-to-quiz** | [unesco/video-to-quiz](https://github.com/unesco/video-to-quiz) | 0 | MIT | 2026-04-13 | **Global** | **A multimodal pipeline that turns a lecture recording into structured assessment items**, published first-party by UNESCO. The flow is explicit in the README and is the whole point: `Video (.mp4) → Audio + Frames → AI analysis → structured JSON`, with **faster-whisper** for transcription, **LLaVA** reading sampled frames so what is *written on the board* is not lost, and **Llama 3.2** generating multiple-choice items (QCM format), video metadata or summaries. Gate: `LICENSE`, `1,063 B` raw, `Permission is hereby granted, free of charge` → **MIT**; index agrees. 🟢 **Filed as the most useful `0★` repository on this shelf, and the star count is the wrong thing to look at twice over.** First, the components are the proven ones — Whisper, a vision model, a local Llama — so the engineering risk is near zero and the value is the **assembled pipeline plus the institutional provenance**. Second, and this is the commercial point: in a ministry or public-university engagement, *"this is UNESCO's own MIT-licensed pipeline, adapted"* survives a procurement review that *"we built a quiz generator"* does not. 🔵 **The frame analysis is the part to keep.** Every held lecture-to-assessment row this base carries works from the transcript alone, which silently discards the blackboard, the slide and the diagram — the content that actually carries a STEM lecture. 🔵 Runs against **local models by configuration**, which makes it the data-resident option under `T321`'s live EU duties and under LATAM's governance gap. ⚠️ `0★`, no release, no named adopter, last pushed April 2026 — this is a **reference pipeline to adapt, not a maintained dependency**. ⚠️ Quiz quality is the model's, so the rubric and the human review step are yours to add (`P174`). |
+| **UNESCO pdf-to-podcast** | [unesco/pdf-to-podcast](https://github.com/unesco/pdf-to-podcast) | 3 | MIT | 2026-04-13 | **Global** | **Turns a scientific or technical PDF into a podcast-style spoken conversation between two voices** — not a read-aloud of the text, a dialogue that explains it. Python 3.9+, first-party UNESCO. Gate: `LICENSE`, `1,113 B` raw → **MIT**; index agrees. 🟢 **Filed because it is the cheapest accessibility and reach artefact in this base, and because it addresses a population the whole shelf has been ignoring: the learner who cannot or will not read the set text.** That includes visually impaired students (a direct `cast-org` / UDL alignment), commuting and shift-working adult learners, and — the case that actually sells in LATAM and in rural APAC — learners on a phone with audio but with data too expensive for video. 🔵 **Composes with `Moodle2IA` (MIT, held), which extracts a course's PDFs, to give a whole-syllabus audio track from material the institution already owns** — see `P199`. ⚠️ `3★`, April 2026, single-purpose. ⚠️ Generated narration can restate a source confidently and wrongly; for anything assessed, the audio is a study aid and the text remains normative. |
+
+### 🔴 `738-A` — five subjects refused, and the pattern in the refusals is the finding
+
+> 🔴 **China's leading education-AI laboratory publishes its education work with no grant and its
+> general LLM-methods work under MIT or Apache-2.0. Measured `4 / 4` against `5 / 5`.**
+>
+> `ECNU-ICALK` is the **East China Normal University** group behind `EduChat` (already held on this
+> shelf). `p738` read the bytes of ten of its repositories across **14 probed licence filenames
+> each**. The split is total and it falls exactly along the subject line:
+
+| Subject | Repo | Stars | Grant at 14 probed paths |
+|---|---|--:|---|
+| Education | [ECNU-ICALK/AutoSkill](https://github.com/ECNU-ICALK/AutoSkill) | **613** | 🔴 none |
+| Education | [ECNU-ICALK/ELL-StuLife](https://github.com/ECNU-ICALK/ELL-StuLife) | 73 | 🔴 none |
+| Education | [ECNU-ICALK/EduChat-Math](https://github.com/ECNU-ICALK/EduChat-Math) | 60 | 🔴 none |
+| Education | [ECNU-ICALK/SocraticMath](https://github.com/ECNU-ICALK/SocraticMath) | 18 | 🔴 none |
+| LLM method | [ECNU-ICALK/EasyCL](https://github.com/ECNU-ICALK/EasyCL) | 28 | 🟢 Apache-2.0 (`11,324 B`) |
+| LLM method | [ECNU-ICALK/SkillGym](https://github.com/ECNU-ICALK/SkillGym) | 17 | 🟢 MIT (`1,078 B`) |
+| LLM method | [ECNU-ICALK/AutoMem](https://github.com/ECNU-ICALK/AutoMem) | 7 | 🟢 Apache-2.0 (`11,357 B`) |
+| LLM method | [ECNU-ICALK/TextualRL](https://github.com/ECNU-ICALK/TextualRL) | 3 | 🟢 MIT (`1,078 B`) |
+| LLM method | [ECNU-ICALK/DiscernMem](https://github.com/ECNU-ICALK/DiscernMem) | 1 | 🟢 MIT (`1,080 B`) |
+
+> 🔴 **`AutoSkill` at `613★` is the single largest education-subject repository this pass
+> enumerated and it cannot be used.** Nor can `SocraticMath`, which is the shape this base has
+> repeatedly said it wants — Socratic rather than answer-giving maths tutoring.
+> ⚠️ **`ECNU-ICALK/PsychEval` (`63★`) does carry a `19,346 B` licence, and it is a
+> `CC-BY`-family *content* licence, not a software grant** — a distinction that matters because an
+> evaluation corpus under CC-BY can be *cited* and *redistributed* but does not license the
+> harness around it.
+> 🟢 **Why this is worth publishing rather than just skipping five rows:** it is a reusable
+> prediction. For a research group of this kind, **the grant tracks the artefact's audience, not
+> the group's policy** — methods go out permissively because the group wants them cited and built
+> on, and the education systems stay ungranted because they are tied to a product, a partner
+> institution or a dataset the group does not own outright. So when a leg returns a high-star
+> education repository from a university lab, **probe the grant before reading the README**, and
+> expect the lab's *neighbouring* method repositories to be the usable ones. Denominators in
+> `evidence/ecnu-grant-asymmetry.2026-11-10-p738.tsv`. ⚠️ `T302` still binds: the honest negative
+> is *"no grant found at 14 probed paths"*, not *"no grant exists"*.
+
+### 🔴 `738-B` — the keyword legs are not merely low-yield, they are matching a different word
+
+> 🔴 **`0` education rows from `46` read, across two keyword legs, and the mechanism is
+> substring capture: `tutor` matches inside `tutorial`, and `grading` matches inside
+> `upgrading`.** This is a sharper statement than `T326`'s "prose legs produce none" — it names
+> *why*, and it tells a later pass which words are unusable rather than which channel is.
+>
+> - `tutor created:>2026-09-01 stars:>30` → `47` total, `25` read, **`0` education**. ⚠️ **`16` of
+>   the `25` are one operator**: `apimart*` throwaway accounts (`apimartat5`, `apimartmk8`,
+>   `apimartjz`, `apimartu1n`, `apimarta6j`, …), every one `NOASSERTION`, every one named
+>   `*-api-*-tutorial`, all in a uniform **`55`–`87★`** band, all created in the same window.
+>   That is **organised star inflation on LLM-API-reseller promos**, and it matched this leg only
+>   because `tutorial` contains `tutor`.
+> - `grading created:>2026-09-01 stars:>20` → `81` total, `25` read, **`0` education**, top row
+>   `2,580★`. The matches are `upgrading` inside the prose of generic video-skill and
+>   motion-graphics repositories.
+>
+> 🟢 **Standing instruction, because it is cheap to obey:** a keyword leg in this industry must use
+> a word that is **not a prefix of a common unrelated word**. `tutor`, `grading`, `student`,
+> `education` and `curriculum` all failed this pass (`5` legs, `79` rows read, **`0`
+> education rows**); `topic:` legs and `org:` legs did not fail this way at all, because neither
+> matches prose. Full denominators in `evidence/substring-pollution.2026-11-10-p738.tsv`.
+
+### 🔬 `738-C` — controls re-run, and two more channels are dead
+
+> 🔬 **All of `p736`/`p737`'s instrument findings hold.** `gh api -X GET search/repositories`
+> is **alive** and carried all `58` repository legs (`topic:`, `org:`, `user:` and
+> keyword+`stars:` all `200`); the unauthenticated `curl https://api.github.com/search/repositories`
+> fallback returns **byte-identical** metadata (`topic:ai-tutor` → `891` on both, `2 / 2`), so both
+> channels work and `T310` stands. The ordered raw chain discriminated **`2 / 2`**
+> (`openedx/edx-platform` `200`; an invented address `404`). `curl -sI https://github.com/{o}/{r}`
+> → **`403` for the live repository too, `2 / 2`, still no discriminating power.**
+>
+> ⚠️ **`p738` names two new dead channels, and together they close the question of whether this
+> base can ever enumerate a publisher's tree cheaply.** `T289` said the `repos/` namespace is dead
+> under session repository-scoping. `p738` measures that the alternatives are too:
+> **`api.github.com/orgs/{org}/repos` → `403`**, **`api.github.com/users/{user}/repos` → `403`**,
+> and **`api.github.com/graphql` → `403` with an explicit body**: *"GitHub GraphQL is not
+> available from Claude Code sessions; use the REST API."* 🔵 **Consequence, stated as a budget
+> fact:** `search/repositories` is the *only* enumeration channel, it is capped at **`30`
+> requests/minute** authenticated and **`10`** unauthenticated, and it returns at most `100` rows
+> per call sorted by one key. A publisher leg therefore costs one request and sees only the head of
+> that publisher's list — which is why `p738` read `25` rows per leg and recorded the
+> `total_count` beside every one (`evidence/leg-ledger.2026-11-10-p738.tsv`), so a later pass can
+> see what it did *not* see.
 
 
 ## 🔴 `p737` — `0` rows added, and the denominators are the finding
