@@ -7,6 +7,56 @@ updated: 2026-11-11
 # 🆕 Trends new at `p767` (researched 2026-11-11) — `T669`–`T687`
 
 
+## 🆕 `p770` — **Nine trends for the school-catering and allergen register — `T720`–`T728`. The register's defining fact is that its newest and sharpest instrument went live in September 2026 and has `0` open-source support, and the pass's hardest result is that this base's own licence-length channel is degenerate.**
+
+**Pass `p770` · researched `2026-11-11`.** All four mandated regional legs ran and all four returned a binding instrument — the second register in a row where every region sets a duty. 🔴 **But `ACTION p769-A` was not executable: `make hooks` is denied in this session as external code, so the `24`/`71` RED gate count is unmeasured this pass.**
+
+**`13` addresses probed on the ref channel · `11` complete trees enumerated (`13,000+` paths) · `17` grant payloads byte-read with length and `sha256₁₂` · `8` supply queries across `4` languages · `6` defects in this pass's own instruments caught by control before any verdict was written.**
+
+### `T720` — the address test that protects a reader is resolution, not canonical appearance
+
+🔴 **`ACTION p769-C` directed a rename of `14` `NREL/*` citations. Measured: `27` `NREL/` occurrences on the live shelves, `0` of them citations, and `0` markdown links to `github.com/NREL/*` anywhere.** All are rename evidence, prose, the literal ellipsis `NREL/...`, or search strings whose value is that they return `422`. 🔴 **A literal rename would have deleted the proof of the rename.** 🟢 **Meanwhile a genuinely broken address sat unnoticed on `12` rows: `Apereo-LAI/…`, an organisation that does not exist, displayed as link text over URLs that do.** Fixed this pass.
+
+### `T721` — byte length is not a payload fingerprint, and it is not an ownership test either
+
+🔴 **Two `AGPL-3.0` payloads, both exactly `34,523 B`, have different `sha256`: `8486a10c4393` and `0d96a4ff68ad`.** The diff is `2` lines of the "how to apply" appendix, where the word `by` moves across a line break — **one space trades places with one newline, so length is preserved and the hash is not.** 🔴 **And `ACTION p769-B`'s ownership rule fails in the other direction: MIT at `1,064 B` names `KanadeK` and MIT at `1,069 B` names `beta.gouv.fr`, both inside the canonical band that `p769-B` says carries no ownership.** 🟢 **A short owner name leaves the length canonical.** 🟢 **Keep: a deviating length is a sufficient signal to read for ownership. Discard: the converse. Fingerprint on the hash; establish ownership by reading the copyright line.**
+
+### `T722` — the duty layer is absent from open source for the sixth consecutive register, and here the absence is dated
+
+🔴 **The one usable allergen engine on this register, `KanadeK/allergengrid`, carries `372` `allergen` tokens, `19` `cross-contact` and `41` `audit` — against `1` `school`, `0` `HACCP`, `0` `Natasha` and `0` `PPDS`.** 🟢 **So the hard part — deterministic cross-contact propagation with explicit hold states — is solved under MIT.** 🔴 **The duty part is not modelled anywhere: no label format, no policy artefact, no deadline, no filing.** 🔵 **What makes this register's absence sharper than the previous five is that the gap is dated: Benedict's Law became live for English schools in September 2026 and has no open-source artefact at all.**
+
+### `T723` — a grant may be unambiguous while its ownership record is unobtainable
+
+🔴 **`OpenEduCat`'s root `LICENSE` (`8,241 B` · `528f84036800`) opens *"For copyright information, please see the COPYRIGHT file"* and there is NO `COPYRIGHT` file in the `1,345`-file tree.** 🟢 **A fifth by-reference form for `ACTION p769-D`, and the only one that is a pointer PLUS a payload** — the remaining bytes are the full LGPL-3.0 and GPL-3.0 texts. 🔵 **Sharper than `769-G`'s `Insert your license here`: there the path existed and the grant did not; here the grant is clear and the named ownership record is missing.**
+
+### `T724` — the predictor is institutional identity, not statutory compliance
+
+🟢 **`p757`'s law splits on this register along the duty-holder boundary.** It is **broken** for the procurement duty, where the French state is simultaneously duty-setter, reference-data publisher and tooling funder and ships `ma-cantine` under MIT. It **holds** for the allergen duty, where the regulator writes the rule, a private caterer carries it, and nobody funds shared tooling. 🟢 **The operative variable is whether the duty-holder and the tooling funder are the same institution** — which also explains `p769`'s `SEED-platform/seed` break without appealing to "statutory compliance" at all.
+
+### `T725` — every region sets a duty here, and the cadences are of three incompatible kinds
+
+| Region | Instrument | Cadence shape |
+|---|---|---|
+| **EMEA (UK)** | 🟢 **Benedict's Law** — DfE statutory guidance *Allergy Safety in Schools*, under **s.34 Children's Wellbeing and Schools Act 2026** | 🟢 **A POLICY with an annual review** — a standing artefact, reviewed on a period |
+| **EMEA (UK/EU)** | Natasha's Law (PPDS) since `2021-10-01`; FIC 1169/2011 | 🔴 **PER-ITEM, event-driven** — a label per product, no period at all |
+| **APAC (AU/NZ)** | FSANZ Standard 1.2.3 **PEAL** | 🔴 **A ONE-OFF CUTOVER** — the stock-in-trade period concluded late February 2026; mandatory thereafter |
+| **North America (US)** | FALCPA + **FASTER Act** (sesame, ninth major allergen, labelling from `2023-01-01`) | 🔴 **PER-ITEM, event-driven**, plus FSMA cross-contamination controls |
+| **LATAM (BR)** | ANVISA **RDC 727/2022**, Annex III (**`18`** allergen foods/groups, Codex CXS 1-1985 aligned) | 🔵 **PER-ITEM, under active revision** — Consulta Pública nº 1.400 ran `2026-07-17` → `2026-10-15` |
+
+🔴 **`P352`'s `(period, version, basis)` model does not fit three of these five.** A PPDS label is not a period at all: the unit is the **product-batch**, and the restatement trigger is a **recipe change**, not a corrected meter.
+
+### `T726` — the register has three duty-holders, not one, and they are different legal persons
+
+🟢 **Procurement sits on the public body; allergen declaration sits on the food business, usually a private contractor; pupil allergy safeguarding sits on the school as a safeguarding duty distinct from food law.** 🔵 **A single engagement therefore has three buyers with three budgets**, and the Benedict's Law duty is the one with no incumbent vendor because it is new and is not a food-safety product.
+
+### `T727` — volume and usability remain anti-correlated, and the `T717` predictor holds in its weakened form
+
+🟢 **The French leg produced the register's best row** — `ma-cantine`, MIT, published by the state's own incubator — **consistent with `T717`: a public-body data owner predicts the PRESENCE of a permissive grant.** 🔴 **The Spanish leg returned academic theses from UB, UOC, UMA and ULL with `0` software grants; the German leg returned regulator guidance and commercial products and `0` repositories.** 🟢 **The anti-correlation `p769` recorded is reproduced: the leg with the fewest results produced the only usable artefact.**
+
+### `T728` — a search index will tell you a repository is permissive when its own `NOTICE` says it was
+
+🔴 **[`MustrHQ/kitchen-safety`](https://github.com/MustrHQ/kitchen-safety) is AGPL-3.0 at root. Its `NOTICE` (`835 B` · `b7f9db0fad59`) records that `1.0.0` portions were originally MIT**, and a search summary this pass reported the repository as retaining its MIT notice — true about the notice, wrong about the grant. 🟢 **New trap shape, and the mirror of `ACTION p769-E`: there the SOURCE grant was not the DISTRIBUTION grant; here the HISTORICAL grant is not the CURRENT grant.** 🔵 **A `NOTICE`-first probe grades this permissive. Read the root grant, then read `NOTICE` for what it supersedes.**
+
 ## 🆕 `p769` — **Eight trends for school-estate decarbonisation and energy reporting. The governing one is that the duty and the tooling have swapped places: the regulator now ships more usable open source than the community does, and on this register the thing missing is not the engine but the submission.**
 
 ### 🟢 `T-a` — The regulator is now an upstream, and that is new

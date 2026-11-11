@@ -5,6 +5,50 @@ updated: 2026-11-11
 ---
 
 
+## 🆕 `p770` — `2026-11-11` — **GitHub trending for the school-catering and allergen register: the trending signal is `0` and the measurement that matters is a licence-identity result. Two `AGPL-3.0` payloads of identical `34,523`-byte length have different `sha256`, and the mechanism is a line rewrap.**
+
+**Append-only. This section is added above `p769`'s; the history below it is unchanged.**
+
+### 🔴 The trending measurement, stated as a number rather than a mood
+
+🔴 **Nothing on this register is trending, and the supply is the thinnest this base has measured since `p766`'s playground register.** The `allergens` GitHub topic holds **`44`** repositories in total. Of the `20` served on its first page, the star distribution is:
+
+| Band | Count | Repositories |
+|---|---|---|
+| `>1,000★` | `1` | `openfoodfacts/openfoodfacts-server` (`1.2k`) |
+| `100`–`500★` | `2` | `openfoodfacts-python` (`476`), `openfoodfacts-dart` (`231`) |
+| `10`–`99★` | `2` | `dsanchez07/react-allergens` (`11`), `raghavagps/algpred2` (`10`) |
+| `1`–`9★` | `12` | including `theKaido/Kaleidogram` (`1`), `NiqueWrld/SafeEats` (`1`) |
+| `0★` | `3` | including `KanadeK/allergengrid`, the register's only usable allergen engine |
+
+🔴 **Three of the top four are one organisation.** Remove Open Food Facts and the entire topic's remaining first page tops out at `11★`. 🟢 **The practical consequence for a studio: on this register you adopt a METHOD and a DATA SOURCE, and you build the product.**
+
+### 🔴 The licence-identity finding, which outranks the trending signal
+
+| Repository | Grant | Bytes | `sha256₁₂` |
+|---|---|---|---|
+| [`MustrHQ/kitchen-safety`](https://github.com/MustrHQ/kitchen-safety) | AGPL-3.0 | `34,523` | `8486a10c4393` |
+| `ladybug-tools/honeybee-energy` *(recorded at `769-B`, different register)* | AGPL-3.0 | `34,523` | `8486a10c4393` |
+| [`openfoodfacts/openfoodfacts-server`](https://github.com/openfoodfacts/openfoodfacts-server) | AGPL-3.0 | `34,523` | 🔴 **`0d96a4ff68ad`** |
+| [`theKaido/Kaleidogram`](https://github.com/theKaido/Kaleidogram) | AGPL-3.0 | `34,523` | 🔴 **`0d96a4ff68ad`** |
+
+🟢 **Two variants, two pairs, one byte length.** The diff is `2` lines in the AGPL's "how to apply" appendix: `…as published` / `by the Free Software Foundation…` against `…as published by` / `the Free Software Foundation…`. **A space and a newline exchange places.** 🔴 **Any census keyed on byte length treats these as one payload; any census keyed on the hash sees two** (`T721`).
+
+### 🔴 New to this base this week, and why each one is here
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Branch | Signal |
+|---|---|---|---|---|
+| [`KanadeK/allergengrid`](https://github.com/KanadeK/allergengrid) | `0` | 🟢 MIT · `1,064 B` · `17a20307c83f` | `main` | 🟢 **New to this base and the register's only usable allergen engine.** `4` commits, CI and release workflows, `CITATION.cff`, `SECURITY.md`, and a Simplified-Chinese README alongside the English one |
+| [`betagouv/ma-cantine`](https://github.com/betagouv/ma-cantine) | `20` | 🟢 MIT · `1,069 B` · `84ef26a90205` | 🔴 `staging` | 🟢 **New to this base, and a state-published school-catering platform under MIT.** `1,975` files, `12` forks |
+| [`openfoodfacts/openfoodfacts-server`](https://github.com/openfoodfacts/openfoodfacts-server) | `1.2k` | 🔴 AGPL-3.0 · `34,523 B` · `0d96a4ff68ad` | `main` | 🔴 **New to this base as the register's reference corpus, and refused at the server tier** |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | `—` | 🔴 LGPL-3.0 · `8,241 B` · `528f84036800` | 🔴 **`19.0`** | 🔵 **Re-addressed.** `openeducat/openeducat` does **not** resolve; the canonical address is `OpenEduCat/openeducat_erp` on a version-numbered default branch |
+
+### 🔴 Absences in the trending channel, stated rather than left silent
+
+- 🔴 **`0` repositories on this register were created or substantially pushed in the last `7` days** that this pass could establish; GitHub's own trending page was not reachable for this topic and the star counts above come from repository HTML pages.
+- 🔴 **The GitHub API is `403` for every address outside this session's own repositories**, so `pushed_at`, `stargazers_count` and `created_at` could not be read on the API channel for any row. The ref channel (`git ls-remote`) and the HTML page were the only two channels available (`ACTION p770-F`).
+- 🔴 **`ACTION p769-F`'s Chinese exclusion list was prepared and NOT exercised**: no Chinese-language supply leg was run this register, because the register's instruments are UK, US, Australian/NZ and Brazilian. The list stands unused and uncorroborated.
+
 ## 🆕 `p769` — `2026-11-11` — **GitHub trending for the school-estate energy register: the live repositories are the national-lab stack, and three of them were pushed on the day of this pass.**
 
 **Append-only. This section is added above `p768`'s; the history below it is unchanged.**
@@ -9327,14 +9371,14 @@ it as 🟢. The API sees it only when the licence title carries the parenthetica
 | repo | API `spdx_id` | byte-read title | bytes | real grant | API |
 | --- | --- | --- | --: | --- | --- |
 | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `Educational Community License, Version 2.0 (ECL-2.0)` | `11,120` | 🟢 **ECL-2.0** | ✅ |
-| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🔴 `NOASSERTION` | `Educational Community License` / `Version 2.0, April 2007` | `9,878` | 🟢 **ECL-2.0** | ❌ |
-| [Apereo-LAI/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🔴 `NOASSERTION` | `Educational Community License, Version 2.0` | `11,087` | 🟢 **ECL-2.0** | ❌ |
-| [Apereo-LAI/OpenDashboard-legacy](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🔴 `NOASSERTION` | `Educational Community License` | `9,919` | 🟢 **ECL-2.0** | ❌ |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🔴 `NOASSERTION` | `Educational Community License` / `Version 2.0, April 2007` | `9,878` | 🟢 **ECL-2.0** | ❌ |
+| [Apereo-Learning-Analytics-Initiative/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🔴 `NOASSERTION` | `Educational Community License, Version 2.0` | `11,087` | 🟢 **ECL-2.0** | ❌ |
+| [Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🔴 `NOASSERTION` | `Educational Community License` | `9,919` | 🟢 **ECL-2.0** | ❌ |
 | [apereo/java-cas-client](https://github.com/apereo/java-cas-client) | 🔴 `NOASSERTION` | `====` | `2,321` | 🟢 **Apache-2.0** — by the *declaration* line, `594-F` stage 2 | ❌ |
 | [uPortal-Project/CoursesPortlet](https://github.com/uPortal-Project/CoursesPortlet) | 🔴 `NOASSERTION` | `Copyright (c) 2008, News Reader Portlet Development Team` | `1,529` | 🟡 **BSD-3-Clause**, holder names the **wrong project** | ❌ |
 | [uPortal-Project/NewsReaderPortlet](https://github.com/uPortal-Project/NewsReaderPortlet) | 🔴 `NOASSERTION` | same file, byte-identical | `1,529` | 🟡 **BSD-3-Clause** | ❌ |
-| [Apereo-LAI/SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🔴 `NOASSERTION` | 🔴 no grant file, `16` variants | `0` | 🟢 **ECL-2.0** via `pom.xml` (`598-A`) | ❌ |
-| [Apereo-LAI/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 🟢 `Apache-2.0` | `Apache License, Version 2.0` | `11,358` | 🟢 **Apache-2.0** | ✅ |
+| [Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🔴 `NOASSERTION` | 🔴 no grant file, `16` variants | `0` | 🟢 **ECL-2.0** via `pom.xml` (`598-A`) | ❌ |
+| [Apereo-Learning-Analytics-Initiative/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 🟢 `Apache-2.0` | `Apache License, Version 2.0` | `11,358` | 🟢 **Apache-2.0** | ✅ |
 
 🔵 **Why this matters commercially and not just methodologically.** A licence screen reading
 `spdx_id` rejects the Apereo consortium — Sakai's own analytics stack, uPortal, CAS — as
@@ -9364,7 +9408,7 @@ have graded `SakaiXAPI-Provider` correctly — but it grades **REVIEW**, never �
 | --- | --: | --- | --- | --- | --- |
 | [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **254** | 🟢 **MIT** `1,076 B` | `main` | `2026-10-18` | `repos/foundations.md` |
 | [edmozley/freeitsm](https://github.com/edmozley/freeitsm) | **119** | 🟢 **MIT** `1,066 B` | `main` | 🟢 `2026-10-31` | `verticals/solutions.md` |
-| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **62** | 🟢 **ECL-2.0** `9,878 B` | 🔴 `master` | 🟡 `2025-09-12` | `repos/foundations.md` |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **62** | 🟢 **ECL-2.0** `9,878 B` | 🔴 `master` | 🟡 `2025-09-12` | `repos/foundations.md` |
 | [guillermoscript/lms-front](https://github.com/guillermoscript/lms-front) | **44** | 🟢 **MIT** `1,072 B` | 🔴 `master` | 🟢 `2026-11-01` | `verticals/solutions.md` |
 | [gradescope/gradescope-utils](https://github.com/gradescope/gradescope-utils) | **38** | 🟢 **MIT** `1,070 B` | 🔴 `master` | `2026-08-14` | `repos/foundations.md` |
 | [quickfeed/quickfeed](https://github.com/quickfeed/quickfeed) | 27 | 🟢 **MIT** `1,115 B` | 🔴 `master` | `2026-10-27` | `repos/foundations.md` |
@@ -42662,7 +42706,7 @@ unpinned. `P1025` says size is not identity. It is pinned now.**
 |---|---|---|---|
 | A | 11 120 | `0688f62d04f14e4b` | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) |
 | B | 11 340 | `76a975068930323e` | [`opencast/opencast`](https://github.com/opencast/opencast) |
-| C | 11 087 | `a9ea5cca8da2c8d5` | [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) |
+| C | 11 087 | `a9ea5cca8da2c8d5` | [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) |
 | 🟢 **D** | 9 919 | `fb10d1260ddc8dff` | 🟢 **[`LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) · [`OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) · [`OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) — byte- AND `sha256`-identical** |
 
 🟢 **Six repositories, four distinct texts, and all six declare *Educational Community License,

@@ -7,6 +7,75 @@ updated: 2026-11-11
 # Foundational Repositories — Education
 
 
+## 🆕 `p770` — **The foundation layer of the school-catering register is a product-level allergen corpus at global scale, and the one state-published platform on it handles the PROCUREMENT duty and contains `0` allergen tokens. `6` foundation rows byte-read over complete trees, `1` licence payload proven to be a dangling pointer, and the length channel this base was told to trust at `p769-B` shown to be degenerate.**
+
+Every grant located by **complete-tree enumeration** and read from the cloned blob with `wc -c` and `sha256`; every branch from `git ls-remote --symref`. **No path guessed, no licence taken from an index.**
+
+### 🟢 The foundation rows
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Path | Branch | Files | Region | Why it is foundational here |
+|---|---|---|---|---|---|---|---|
+| [`betagouv/ma-cantine`](https://github.com/betagouv/ma-cantine) | `20` | 🟢 **MIT** · `1,069 B` · `84ef26a90205` | `LICENSE` | 🔴 **`staging`** | `1,975` | EMEA | 🟢 **The register's most significant row, and the second time this base has found the duty artefact itself shipped permissively by the state.** The French government's own platform for collective-catering compliance with the **loi EGalim** — `Copyright (c) 2022 beta.gouv.fr`. 🟢 **Private GPAO caterers are required to interface with it**, so it is the statutory data seam, not a demo. 🔴 **Default branch is `staging`** — a guessed `main` or `master` finds nothing at all |
+| [`openfoodfacts/openfoodfacts-python`](https://github.com/openfoodfacts/openfoodfacts-python) | `476` | 🟢 **MIT** · `1,182 B` · `fb5829669b3c` | `LICENSE` | 🔴 **`develop`** | `70` | Global | 🟢 **The allergen reference-data client, and the row every pattern below depends on.** Open Food Facts is the only open corpus that maps a barcode to a declared-allergen set at global scale |
+| [`openfoodfacts/openfoodfacts-dart`](https://github.com/openfoodfacts/openfoodfacts-dart) | `231` | 🟢 **Apache-2.0** · `11,345 B` · `4ae4ca3576b2` | `LICENSE` | `master` | `348` | Global | 🟢 **The same corpus for a Flutter parent-facing app** — the channel through which a school actually reaches a family |
+| [`KanadeK/allergengrid`](https://github.com/KanadeK/allergengrid) | `0` | 🟢 **MIT** · `1,064 B` · `17a20307c83f` | `LICENSE` | `main` | `54` | Global | 🟢 **The cross-contact model, which is the part of the register that is genuinely hard.** Deterministic hold/block propagation through shared boards, pots, oil, appliances and utensils, with a hash-verifiable output pack |
+| [`dsanchez07/react-allergens`](https://github.com/dsanchez07/react-allergens) | `11` | 🔵 **MIT declared in `package.json`; NO payload in the `42`-file tree** | *(none)* | `master` | `42` | Global | 🔵 **The label/board presentation layer.** Usable, with the caveat that there is no licence text to reproduce — `598-A`'s manifest channel, now evidenced on npm |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | `—` | 🔴 **LGPL-3.0** · `8,241 B` · `528f84036800` | `LICENSE` | 🔴 **`19.0`** | `1,345` | Global | 🔵 **The education ERP a school already runs, and the boundary a catering module would sit behind.** Weak copyleft: linkable, **not embeddable**. 🔴 **Default branch is `19.0` — a VERSION NUMBER**, a shape this base has not previously recorded; `main`, `master` and `develop` all fail |
+
+### 🔴 A fifth by-reference form for `ACTION p769-D`, and this one points at a file that is not there
+
+`p769-D` listed four by-reference grant forms: DEP-5, the CRAN field stub, the Sphinx `.. include::` and Eigen's prose licence map. **`OpenEduCat`'s root `LICENSE` is a fifth, and structurally unlike all four.**
+
+```
+For copyright information, please see the COPYRIGHT file.
+
+OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3
+(LGPLv3), as included below. Since the LGPL is a set of additional
+permissions on top of the GPL, the text of the GPL is included at the
+bottom as well.
+```
+
+🟢 **It is a POINTER PLUS PAYLOAD**: the first line delegates ownership to another file, and the remaining `8,200`-odd bytes are the full LGPL-3.0 and GPL-3.0 texts. The other four forms are pointer-*only*, so a classifier that treats `byref:` and `grant:` as exclusive grades this wrongly either way.
+
+🔴 **And the pointer dangles: there is NO `COPYRIGHT` file anywhere in the `1,345`-file tree.** 🟢 **So the grant is unambiguous and the ownership is unobtainable from the repository** — a sharper case than `769-G`'s `Insert your license here`, where the path existed and the grant did not. Here the grant exists and the named ownership record does not (`T723`, `ACTION p770-D`).
+
+### 🔴 The length channel is degenerate, which disposes of `ACTION p769-B` as written
+
+`p769-B` told this base to grade every published grant `ownership-readable` or `ownership-blind` by diffing its byte length against the canonical census. **Both halves of the rule fail on this register's payloads.**
+
+| Test | `p769-B` predicts | Measured | Outcome |
+|---|---|---|---|
+| MIT at `1,064 B` (`allergengrid`), inside the canonical band | `ownership-blind` | 🔴 **`Copyright (c) 2026 KanadeK`** | 🔴 **False negative** |
+| MIT at `1,069 B` (`ma-cantine`), inside the canonical band | `ownership-blind` | 🔴 **`Copyright (c) 2022 beta.gouv.fr`** | 🔴 **False negative** |
+| MIT at `1,182 B` (`openfoodfacts-python`), deviating | `ownership-readable` | 🟢 `Copyright (c) 2016 OpenFoodFacts, Inc.` | 🟢 **Held** |
+| Two AGPL payloads at `34,523 B` each | same payload | 🔴 **`8486a10c4393` vs `0d96a4ff68ad`** | 🔴 **The channel itself is degenerate** |
+
+🟢 **Mechanism for the fourth row, diffed rather than inferred:** the payloads differ on `2` lines of the AGPL's "how to apply" appendix, where the word `by` sits at the end of one line in one copy and the start of the next in the other. **One space trades places with one newline: the length is preserved and the hash is not.**
+
+🟢 **Corrected rule, which keeps the half that works:** a deviating length is a *sufficient* signal that a payload **may** be read for ownership; a canonical length is **not** evidence that it may not, because a short owner name leaves the length canonical. **Fingerprint on the hash. Establish ownership by reading the copyright line.** (`T721`.)
+
+### 🔴 `ACTION p769-E` — the second licensing question, asked for the first time and answered empty
+
+`p769-E` directed this pass to start asking what grant the **distributed artefact** carries, not only the source: *"for every row whose deliverable is a shipped binary, enumerate `*license*.in`, `installer/`, `packaging/` and `debian/` for a distribution-time grant."*
+
+🟢 **Executed over all `11` enumerated trees on this register. Result: `0` distribution-time grants, and the reason is structural rather than reassuring** — not one row on this register ships a built installer. They are a Django service (`ma-cantine`), two client libraries, a Python CLI, a React component, a PHP app and an Odoo module set. 🔵 **The question is now in the enumerator and costs nothing to keep asking; this register simply does not exercise it.** 🔴 **`EnergyPlus`'s CMake-templated EULA (`9,407 B`) remains the only instance this base holds, and it is still unresolved for a redistributing studio** (`ACTION p770-E`).
+
+### 🟢 `ACTION p768-B` corroborated for a copyleft family for the first time
+
+The prohibition — never prove identity, a redirect or ownership with a canonical licence payload — has been evidenced on MIT and Apache-2.0 templates across five repositories. 🟢 **This pass adds AGPL-3.0:** `34,523 B` · `8486a10c4393` is byte-identical on [`MustrHQ/kitchen-safety`](https://github.com/MustrHQ/kitchen-safety) (a UK kitchen-temperature log) and on `ladybug-tools/honeybee-energy` as recorded at `769-B` **on an unrelated register** — and `34,523 B` · `0d96a4ff68ad` is byte-identical on [`openfoodfacts/openfoodfacts-server`](https://github.com/openfoodfacts/openfoodfacts-server) and [`theKaido/Kaleidogram`](https://github.com/theKaido/Kaleidogram). 🔵 **Two distinct AGPL variants, each shared by two unrelated projects, at one byte length.**
+
+### 🔴 Four non-`main` default branches on eleven trees, which is the pass's most repeatable practical warning
+
+| Repository | Default branch |
+|---|---|
+| [`betagouv/ma-cantine`](https://github.com/betagouv/ma-cantine) | 🔴 `staging` |
+| [`openfoodfacts/openfoodfacts-python`](https://github.com/openfoodfacts/openfoodfacts-python) | 🔴 `develop` |
+| [`theKaido/Kaleidogram`](https://github.com/theKaido/Kaleidogram) | 🔴 `develop` |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **`19.0`** |
+| [`openfoodfacts/openfoodfacts-dart`](https://github.com/openfoodfacts/openfoodfacts-dart) | `master` |
+
+🔴 **`4` of `11` trees have a default branch that is neither `main` nor `master`, and one of them is a release number.** 🟢 **`T713`'s instruction to take the branch from `--symref` rather than assume it is upheld, and `19.0` is a new shape: a grant probe that iterates `main`, `master`, `develop` still misses it.**
+
 ## 🆕 `p769` — **The foundation layer of this register is the strongest open-source substrate this base has measured in any vertical — and its root grant is a lie by omission in both directions. `9` foundation rows byte-read over complete trees; `EnergyPlus` carries `27` grant paths and `9` families across `11,712` files, including `GPL-2.0`, `GPL-3.0` and `LGPL-2.1`, and the exposure is removable with one compile flag the upstream publishes.**
 
 Every grant located by **complete-tree enumeration** and read with `cat-file blob`; no path guessed, no licence taken from the index.

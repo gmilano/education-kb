@@ -7,6 +7,42 @@ updated: 2026-11-11
 # Vertical Platforms — Education
 
 
+## 🆕 `p770` — **The platform layer on the school-catering register splits cleanly in two, and neither half does the register's job: the education ERP a school already runs has `0` catering tokens, and the one state-published catering platform has `0` allergen tokens. `p757`'s law is re-tested on a seventh register and this time it HOLDS for the allergen duty while breaking for the procurement duty.**
+
+Every platform below was probed on the ref channel and its grant byte-read over a complete tree.
+
+### 🟢 The platform rows
+
+| Platform | Repository | Grant, byte-read `2026-11-11` | Branch | Files | Region | What it is, and what it is not |
+|---|---|---|---|---|---|---|
+| **ma cantine** | [`betagouv/ma-cantine`](https://github.com/betagouv/ma-cantine) | 🟢 **MIT** · `1,069 B` · `84ef26a90205` | 🔴 **`staging`** | `1,975` | EMEA | 🟢 **The French state's collective-catering compliance platform, published permissively by the regulator's own incubator** (`Copyright (c) 2022 beta.gouv.fr`). It models the **loi EGalim** duty: sourcing thresholds, sustainable and quality-label percentages, food-waste and plastics obligations, and the statutory declaration. 🟢 **Private GPAO caterers are required to interface with it.** 🔴 **`allergene`, `allergène` and `allergen` each appear `0` times across `1,975` files** against `6,432` `EGalim` and `14,084` `cantine` |
+| **OpenEduCat** | [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **LGPL-3.0** · `8,241 B` · `528f84036800` | 🔴 **`19.0`** | `1,345` | Global | 🔵 **The Odoo-based education ERP: admissions, SIS, attendance, gradebook, exams, timetable, fees, facility, library, parent portal.** 🔴 **`allergen`, `catering`, `canteen`, `meal` and `cafeteria` each appear `0` times across `1,345` files** — there is no catering module at all. 🔴 Weak copyleft: **linkable behind a process boundary, not embeddable**. 🔴 **The address `openeducat/openeducat` does not resolve**; and the default branch is a **version number** |
+| **Open Food Facts (Product Opener)** | [`openfoodfacts/openfoodfacts-server`](https://github.com/openfoodfacts/openfoodfacts-server) | 🔴 **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` | `main` | `8,362` | Global | 🔵 **The reference-data platform: the only open corpus mapping a product barcode to a declared-allergen set at global scale.** 🔴 **Refused as a hosted platform** (network copyleft). 🟢 **Usable as a data source through the MIT and Apache-2.0 clients.** 🔵 A `5`-grant tree, including a `110 B` Citeo icon licence tied to the French packaging-marking system |
+
+🔴 **`3` platform rows, below this base's usual `5`, and the shortfall is the finding rather than a gap to pad.** Named and measured as absent: there is **no** open-source school-catering platform that handles allergens, in any of the four regions' languages searched.
+
+### 🔴 The split that `ACTION p769-H` predicted, now measured on the platform layer
+
+`p769-H` chose this register partly because *"the duty-holder is a **private contractor operating on public premises**, which is a split this base has never modelled."* 🟢 **The split is real, and it is visible as two different platforms with two different owners:**
+
+| Duty | Duty-holder | Instrument | Platform that models it |
+|---|---|---|---|
+| 🟢 **Procurement and sourcing** | The **public body** (the school or its authority) | loi EGalim (France); PNAE/FNDE (Brazil); USDA school-meal rules (US) | 🟢 **`ma-cantine`, MIT, published by the state** |
+| 🔴 **Allergen declaration and labelling** | The **food business** — usually the private caterer | FIC 1169/2011 + Natasha's Law (UK/EU); FALCPA + FASTER Act (US); FSANZ 1.2.3 PEAL (AU/NZ); RDC 727/2022 (BR) | 🔴 **Nothing. `0` platforms, all regions** |
+| 🔴 **Pupil allergy safeguarding** | The **school**, as a safeguarding duty distinct from food law | 🟢 **Benedict's Law** — statutory guidance live for English schools since **September 2026** | 🔴 **Nothing** |
+
+🟢 **This is the register's commercial shape in one table: the public duty has a permissive platform, the private duty has none, and the newest duty of the three — a safeguarding duty on the school itself — has neither platform nor instrument support anywhere.**
+
+### 🔵 `p757`'s law re-tested, and it splits rather than holding or breaking
+
+`p757` held that **no permissive platform is published by the community in a statutory-compliance vertical**. `p769` broke it with `SEED-platform/seed`, explaining the break by three roles collapsing into one public institution.
+
+🟢 **On this register the law splits along the duty-holder boundary, which is a cleaner result than either outcome:**
+- 🟢 **BROKEN for the procurement duty**, and by the same mechanism `p769` identified: `ma-cantine`'s duty-holder, reference-data publisher and tooling funder are all the French state.
+- 🔴 **HOLDS for the allergen duty**, because the duty-holder is a private caterer and the three roles do **not** collapse: the regulator publishes the rule, the caterer carries the duty, and nobody funds shared tooling.
+
+🟢 **So the predictor is not about statutory compliance at all. It is about whether the duty-holder and the tooling funder are the same institution** (`T724`).
+
 ## 🆕 `p769` — **`p757`'s law finally has a counter-example. For the first time in six registers there IS a permissive, production-grade, community-maintained platform in a statutory-compliance vertical — `SEED-platform/seed`, BSD-3-Clause — and the reason it exists is that the duty-holder and the data publisher are the same public body.**
 
 | Platform | Grant, byte-read `2026-11-11` | Branch | Region | Verdict for a school-estate deliverable |

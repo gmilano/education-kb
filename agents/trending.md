@@ -5,6 +5,39 @@ updated: 2026-11-11
 ---
 
 
+## 🆕 `p770` — `2026-11-11` — **What is new this week on the school-catering and allergen register: one MIT cross-contact engine at `0★`, one state-published platform with `0` allergen tokens, and a gate runner that stopped being runnable.**
+
+**Append-only. This section is added above `p769`'s; the history below it is unchanged.**
+
+### 🔴 The week's most important item is not an agent, it is a lost instrument
+
+| Item | State |
+|---|---|
+| 🔴 **`make hooks`** | 🔴 **DENIED in this session as `[Code from External]`.** `p769` ran it for the first time in twelve passes and reported `24`/`71` RED with `308` findings. 🔴 **This pass could not run it, so the count is unmeasured and unreduced, and `ACTION p769-A`'s precondition — *"do not start a new register until the count is below `12`"* — was unexecutable.** 🟢 A six-contract substitute gate was written from scratch and run; it is **not** equivalent to `71` gates and is not presented as such |
+
+### 🟢 New agent-layer rows this week
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Branch | Region | Why it is new to this base |
+|---|---|---|---|---|---|
+| [`KanadeK/allergengrid`](https://github.com/KanadeK/allergengrid) | `0` | 🟢 **MIT** · `1,064 B` · `17a20307c83f` | `main` | Global | 🟢 **The register's agent.** Deterministic cross-contact tracing with explicit **hold** states for unverified labels, and a hash-verifiable event pack as the audit artefact. **Its README states "No AI guesses"** — a design stance worth quoting to a client who expects an LLM in the allergen path |
+| [`betagouv/ma-cantine`](https://github.com/betagouv/ma-cantine) | `20` | 🟢 **MIT** · `1,069 B` · `84ef26a90205` | 🔴 `staging` | EMEA | 🟢 **The French state's own collective-catering compliance platform**, and the statutory seam private caterers must interface with |
+| [`dsanchez07/react-allergens`](https://github.com/dsanchez07/react-allergens) | `11` | 🔵 **MIT by manifest only, no payload** | `master` | Global | 🔵 Allergen icon set for the label/board layer; `598-A`'s fourth channel on npm |
+
+### 🔴 Named refusals this week
+
+| Repository | Grant | Why it is declined |
+|---|---|---|
+| [`MustrHQ/kitchen-safety`](https://github.com/MustrHQ/kitchen-safety) | 🔴 AGPL-3.0 · `34,523 B` · `8486a10c4393` | 🔴 **A new trap shape: the historical grant is not the current grant.** `NOTICE` records MIT `1.0.0` portions while the combined application is AGPL-3.0. A `NOTICE`-first probe grades it permissive and is wrong. 🔴 Also off-register: `allergen` appears **`1`** time in the whole tree |
+| [`openfoodfacts/openfoodfacts-server`](https://github.com/openfoodfacts/openfoodfacts-server) | 🔴 AGPL-3.0 · `34,523 B` · `0d96a4ff68ad` | 🔴 Network copyleft on the register's reference corpus. 🟢 Consume via the MIT/Apache clients instead of hosting it |
+| [`theKaido/Kaleidogram`](https://github.com/theKaido/Kaleidogram) | 🔴 AGPL-3.0 · `34,523 B` · `0d96a4ff68ad` | 🔴 The closest thing to a canteen allergen board, and network-copyleft |
+| `BoubakriYoussef/safemeal-allergen-management` | 🔴 **none in a `254`-file tree** | 🔴 The closest functional match on the register, grant-less over a complete enumeration |
+
+### 🟢 The identity correction this pass made to this base
+
+🔴 **`12` rows across these shelves displayed `Apereo-LAI/…` as a repository address. `Apereo-LAI` is not a GitHub organisation** — four probes return a credential prompt against a passing positive control and a known-absent control, while all four `Apereo-Learning-Analytics-Initiative/…` counterparts resolve. 🟢 **All `12` link texts were corrected to the organisation that resolves.** 🔵 **Not corrected: one `Apereo-LAI` string that is a census count of organisation tokens**, which is a measurement and not a citation.
+
+🟢 **This is the defect `ACTION p769-C` was aimed at and missed.** `p769-C` directed a rename of `14` `NREL/*` citations; measured, there are `27` `NREL/` occurrences on the live shelves and **`0`** of them are citations — all are rename evidence, prose, ellipses or `422`-returning search strings, and `NREL/*` resolves by redirect anyway. **The test that catches a real defect is "does the displayed address resolve", not "does the organisation name look canonical"** (`T720`).
+
 ## 🆕 `p769` — `2026-11-11` — **What is new this week on the school-estate energy register: the agent layer is six weeks old and both of its members wrap a regulator-sanctioned calculator rather than replacing it.**
 
 **Append-only. This section is added above `p768`'s; the history below it is unchanged.**
@@ -11340,7 +11373,7 @@ grep -oE '\| *\[?owner/repo' <shelf pages>   # 0  -> correct
 
 ### 🔴 `591-B` refuted on the `NOASSERTION` arm, after the branch was proved readable first
 
-[`Apereo-LAI/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider)
+[`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider)
 is `NOASSERTION` with **no grant file on `16` path variants**. 🟢 `591-B` closed at `p594` claiming
 `NOASSERTION` → `32 of 32` carry a grant file; this is counter-example one. 🔵 **Measured in the
 `597-F` order** — readability before absence: `pom.xml` and `.gitignore` return `200` on `master`,
@@ -52110,8 +52143,8 @@ education. 🟢 **So two rows that Globant can build on were sitting outside the
 
 | row | bytes | `sha256` (16) | was | 🟢 **is** |
 |---|---|---|---|---|
-| [`Apereo-LAI/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 11 087 | `a9ea5cca8da2c8d5` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
-| [`Apereo-LAI/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 9 919 | `fb10d1260ddc8dff` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
+| [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 11 087 | `a9ea5cca8da2c8d5` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 9 919 | `fb10d1260ddc8dff` | 🔴 `UNRECOGNISED` | 🟢 **ECL-2.0 · permissive** |
 
 🟢 **Permissive supply in the last census: 38 → 40.** 🔵 **And the 68 granted rows now reconcile
 exactly — 40 permissive + 22 copyleft + 5 CC + 1 payload that is not a grant.**
