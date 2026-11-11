@@ -1,0 +1,92 @@
+EN	energy management MCP server	chrismbori/eagles-mcp	0	MIT	2026-05-01T18:44:37Z	MCP server proxy for the Eagles Energy Management Portal
+EN	energy management MCP server	game4automation/janitza	0	MIT	2026-01-26T08:41:36Z	MCP Server for Janitza GridVis energy management systems
+EN	energy management MCP server	2000teddy/idm-mcp	0	NONE	2026-03-30T19:28:15Z	MCP Server für IDM Navigator 2.0 Wärmepumpen (Modbus TCP) — Smart Home Energy Management
+EN	energy management MCP server	MartyBonacci/task-manager-mcp	0	MIT	2025-12-29T04:11:51Z	Production-grade MCP server for conversational task management with energy tracking, smart prioritization, and
+EN	energy management MCP server	aryaamejari-art/ecosaver-agent	0	NONE	2026-06-30T15:08:29Z	EcoSaver Agent is a complete intelligent sustainability assistant built on Google's ADK 2.0. It evaluates hous
+EN	carbon accounting agent LLM	sp-ankitprajapati/carbonledger	0	NONE	2026-10-28T08:17:36Z	AI-agent carbon accounting pipeline for CSRD/ESRS compliance reporting
+EN	GHG protocol open source	greencalculus/greencalculus-calculator-demo	13	MIT	2026-06-24T02:04:12Z	Open-source, zero-dependency demos of production carbon calculators from GreenCalculus — Scope 1 stationary co
+EN	GHG protocol open source	gaiaaiagent/ghg-calculator	3	NONE	2026-02-17T23:01:11Z	Open source GHG Protocol emissions calculator — 967 factors, all 3 scopes, CLI, MCP server, Claude Code skill
+EN	GHG protocol open source	henriducasse/open-carbon-tool	2	MIT	2026-07-15T14:43:11Z	Bilan carbone d'entreprise, local-first et open source. Bilan Carbone® V9 / GHG Protocol, ~230 facteurs ADEME.
+EN	GHG protocol open source	mindiply/mindcarbon	1	MIT	2025-04-25T17:41:13Z	Open-source Carbon Calculator platform based on the GHG protocol
+EN	GHG protocol open source	sajjad-ahmed20/ghg-emissions-calculator	1	NONE	2026-07-01T14:39:35Z	Open-source GHG emissions calculator covering Scope 1, 2 & 3 — GHG Protocol aligned, BRSR Principle 6 ready, w
+EN	GHG protocol open source	carbonsyncdashboard/carbonsync	1	MIT	2026-02-13T11:53:03Z	Open-source AI dashboard for SME carbon tracking. Sync costs with carbon emissions using IPCC/GHG Protocol sta
+EN	GHG protocol open source	virbahu/ghg-protocol-toolkit	0	NONE	2026-02-20T13:26:17Z	Open-source Python toolkit for GHG Protocol Scope 1, 2, and 3 emissions calculations, reporting, and visualiza
+EN	GHG protocol open source	memirutku/rebot-api	0	Apache-2.0	2026-05-16T21:18:10Z	Open-source ESG verification API for SMEs — BDDK YVO + GHG Protocol compliant. Apache 2.0 (code) + CC BY-SA 4.
+EN	building energy model openstudio	NatLabRockies/OpenStudio	658	NOASSERTION	2026-11-11T05:08:00Z	OpenStudio is a cross-platform collection of software tools to support whole building energy modeling using En
+EN	building energy model openstudio	NatLabRockies/alfalfa	63	NOASSERTION	2026-10-31T22:59:34Z	Alfalfa is a web service that enables runtime interaction with building energy models (OpenStudio/EnergyPlus a
+EN	building energy model openstudio	NatLabRockies/OpenStudio-server	59	NOASSERTION	2026-11-10T03:34:18Z	The OpenStudio Server is a docker or Helm deployable instance which allows for large-scale parametric analyses
+EN	building energy model openstudio	Argonne-National-Laboratory/BCUS	13	NOASSERTION	2020-02-07T21:02:20Z	Bayesian Calibration, Uncertainty, and Sensitivity analysis for OpenStudio building energy models
+EN	building energy model openstudio	jmarrec/geomeffibem	11	MIT	2026-02-05T01:34:50Z	A small library to facilitate some building energy modeling geometry operations with OpenStudio and EnergyPlus
+EN	building energy model openstudio	ORNL-BTRIC/AutoBEM-DynamicArchetypes	9	BSD-3-Clause	2022-02-09T16:02:55Z	Automatic Building Energy Modeling (AutoBEM, https://bit.ly/AutoBEM) has been used to create an OpenStudio and
+EN	building energy model openstudio	ian-quinn/emorph	0	NONE	2024-09-27T14:07:47Z	OpenStudio workflow for building energy model prototyping, gbXML import, floorplan extrusion
+EN	building energy model openstudio	meftaH416/Openstudio_Measures_meftah	0	BSD-2-Clause	2025-10-10T04:28:35Z	This is my personal measure repo for building energy modelers.
+EN	building energy model openstudio	anchapin/openstudio-bcl-mcp	0	NONE	2025-08-05T06:57:22Z	OpenStudio MCP Server 2.0 - Model Context Protocol server for AI-driven building energy modeling
+EN	building energy model openstudio	nishanthask/nsk	0	Apache-2.0	2026-01-28T17:51:53Z	how to create building component library and upload on openstudio  to do energy modeling. 
+EN	energyplus	NatLabRockies/EnergyPlus	1622	NOASSERTION	2026-11-11T13:44:52Z	EnergyPlus™ is a whole building energy simulation program that engineers, architects, and researchers use to m
+EN	energyplus	NatLabRockies/OpenStudio	658	NOASSERTION	2026-11-11T05:08:00Z	OpenStudio is a cross-platform collection of software tools to support whole building energy modeling using En
+EN	energyplus	ugr-sail/sinergym	242	MIT	2026-09-18T01:51:02Z	Gym environment for building simulation and control using reinforcement learning
+EN	energyplus	IBM/rl-testbed-for-energyplus	220	MIT	2025-09-18T05:01:17Z	Reinforcement Learning Testbed for Power Consumption Optimization using EnergyPlus
+EN	energyplus	santoshphilip/eppy	201	MIT	2026-08-26T20:58:22Z	scripting language for E+,  Energyplus
+EN	energyplus	openstudiocoalition/OpenStudioApplication	189	NOASSERTION	2026-11-09T16:36:34Z	The OpenStudio Application is a fully featured graphical interface to OpenStudio models including envelope, lo
+EN	energyplus	NatLabRockies/resstock	148	NOASSERTION	2026-11-10T16:57:02Z	Highly granular modeling of residential building stocks at national, regional, and local scales using OpenStud
+EN	energyplus	ladybug-tools/honeybee-legacy	130	NOASSERTION	2021-09-21T16:16:16Z	:bee: Honeybee is a free and open source plugin to connect Grasshopper3D to EnergyPlus, Radiance, Daysim and O
+EN	energyplus	LBNL-ETA/EnergyPlus-MCP	126	NOASSERTION	2026-11-04T03:26:34Z	The first open-source Model Context Protocol server enabling AI assistants and applications to interact progra
+EN	energyplus	BIM2SIM/bim2sim	101	LGPL-3.0	2026-11-04T10:10:07Z	A python tool to create simulation models for different domains based on BIM IFC models.
+EN	energyplus	bsl546/energym	88	NOASSERTION	2021-11-17T14:23:08Z	Energym is an open source building simulation library designed  to test climate control and energy management 
+EN	energyplus	mechyai/RL-EmsPy	81	Apache-2.0	2023-05-10T00:28:12Z	API for RL algorithm design & testing of BCA (Building Control Agent) HVAC on EnergyPlus building energy simul
+EN	energyplus	building-energy/epw	79	MIT	2022-05-11T15:04:58Z	Lightweight Python package for editing EnergyPlus Weather (epw) files
+EN	energyplus	hongyuanjia/eplusr	75	NOASSERTION	2026-11-05T01:21:05Z	A Toolkit for Using EnergyPlus in R.
+EN	energyplus	NatLabRockies/OpenStudio-HPXML	70	NOASSERTION	2026-11-11T01:52:11Z	Modeling of residential buildings in EnergyPlus using OpenStudio/HPXML.
+EN	energyplus	openstudiocoalition/openstudio-sketchup-plugin	64	NOASSERTION	2026-04-07T09:18:08Z	The OpenStudio SketchUp Plug-in is an extension to Trimble’s popular 3D modeling tool that adds OpenStudio con
+EN	energyplus	NatLabRockies/alfalfa	63	NOASSERTION	2026-10-31T22:59:34Z	Alfalfa is a web service that enables runtime interaction with building energy models (OpenStudio/EnergyPlus a
+EN	energyplus	airboxlab/rllib-energyplus	62	MIT	2026-10-23T07:49:06Z	Simple EnergyPlus environments for control optimization using reinforcement learning
+EN	energyplus	jmarrec/OpenStudio_to_EnergyPlusAPI	61	NONE	2026-07-09T15:22:45Z	Python: using OpenStudio Bindings, EnergyPlus API, and matplotlib
+EN	energyplus	ladybug-tools/spider	51	NONE	2021-09-21T16:05:34Z	:spider_web: 3D interactive analysis in your browser mostly written around the Three.js JavaScript library
+EN	SEED standard energy efficiency data	SEED-platform/seed	121	NOASSERTION	2026-11-11T15:40:25Z	Standard Energy Efficiency Data (SEED) Platform™ is a web-based application that helps organizations easily ma
+EN	SEED standard energy efficiency data	afrojet/seed	2	NOASSERTION	2014-07-12T00:11:13Z	Standard Energy Efficiency Data (SEED)
+EN	energy audit agent	dungnotnull/building-energy-audit-carbon-agent-skill	5	NONE	2026-06-22T15:53:08Z	🌱 Building Energy Audit & Carbon Optimization | Production-grade green building engine. Computes EUI, models S
+EN	energy audit agent	sreenjoyroy/smart-energy-optimizer	3	NONE	2025-03-13T12:39:41Z	Smart Energy Optimization Model integrates AI-driven agents to reduce energy consumption in smart buildings, h
+EN	energy audit agent	romanchaa997/auditorsec-platform-poc	2	NONE	2025-12-14T17:26:21Z	PoC AI-SOC for Gov/Energy sectors. Multi-agent platform with detection, orchestration, analytics. Built on Aud
+EN	energy audit agent	DaScient/Energy	1	NOASSERTION	2026-07-26T18:44:38Z	A vendor-agnostic evaluation harness for assessing AI agents across the "Critical Quad": Data Centers, Energy,
+EN	energy audit agent	FoziaFawad/ThermoAgentAI-Web-App	1	NONE	2026-08-16T22:20:37Z	ThermoAgent-AI is an autonomous multi-agent geospatial AI for real-time Urban Heat Island mitigation. Combinin
+EN	energy audit agent	gepapak/accounting-options-rl	1	MIT	2026-10-17T18:49:33Z	Controlled audit showing how simulator shortcuts (no liquidity cap, no solvency, zero-floor cash accounting) t
+EN	energy audit agent	llamasearchai/OpenGov-BuildingDesign	1	MIT	2025-10-09T11:06:33Z	OpenGov-BuildingDesign supports mechanical building design and compliance workflows. It integrates the OpenAI 
+EN	energy audit agent	BryceWDesign/IX-ASTRA	1	MIT	2025-05-28T15:39:45Z	A containment-first AGI architecture built for safe, auditable, real-time control of autonomous machines—featu
+EN	energy audit agent	voronindenis5/appliance-energy-audit	0	MIT	2026-08-28T17:03:07Z	Hermes Agent skill
+EN	energy audit agent	pratham2021/home-energy-audit-agent	0	NONE	2026-07-08T18:07:21Z	
+EN	energy audit agent	thibaudcolas/web-sustainability-agents	0	MIT	2026-11-10T08:51:30Z	Experiments with agentic web sustainability audits
+EN	energy audit agent	weiliweng/hvac-agent-energy-mapping	0	MIT	2026-09-06T08:41:51Z	Auditable BAS point-to-HVAC equipment mapping with synthetic data, abstention, and reproducible evaluation.
+EN	energy audit agent	Jaco5-art/agent-based-datacenter-energy-simulation	0	MIT	2026-08-14T09:56:30Z	Transparent reconstruction and reproducibility audit of an agent-based datacenter energy simulation project
+EN	energy audit agent	Paul-Lin-wj/Paul-Lin-wj	0	NONE	2026-09-19T06:34:40Z	Personal profile — JUNO energy calibration & auditable agent tooling
+EN	energy audit agent	RamanaGR/agentic-battery-trader	0	NONE	2026-04-17T18:19:05Z	A ReAct-based agent using specialized tools to audit energy market performance.
+EN	energy audit agent	DadiDevaki1166/EcoTrace	0	NONE	2026-10-10T15:58:01Z	Agentic AI Project for Energy and Carbon Emissions Audit
+EN	energy audit agent	Haifawaeedd/building-data-ai-agent	0	NONE	2026-09-29T23:03:20Z	Auditable LangGraph Text-to-SQL agent for Government of Canada facility-energy data
+EN	energy audit agent	genkidesu7/agentic-star-electricity-retail-billing-disclosure-compliance-checker-agent	0	MIT	2026-09-23T11:19:20Z	ENE-C2-100 audits a batch of Japanese electricity-retailer customer bills and tariff metadata against the Elec
+EN	energy audit agent	srcfl/hugin-agent	0	MIT	2026-07-19T07:45:09Z	Thin local agent for Hugin (https://hugin.sourceful-labs.net) — scans LAN, talks Modbus, runs Lua drivers. Ope
+EN	energy audit agent	Alpha-Park/genpark-personal-agent-home-appliance-energy-vampire-phantom-draw-skill	0	NOASSERTION	2026-10-21T06:42:18Z	Smart plug circuit standby phantom load audit, appliance vampire power waste identification, and automated sma
+EN	emissions factors database open	rhozacc/Open-Emission-Factors-DB	2	NOASSERTION	2021-11-16T08:15:22Z	An open access, contributer-led database of emission factors, validated by the team at Climatiq
+EN	emissions factors database open	palmgrove/nefdb	0	NOASSERTION	2026-10-30T16:24:49Z	Nigeria Emission Factor Database (NEFDB) is an open, versioned collection of emission factors built specifical
+EN	utility bill parsing open source	mpaltsev/OptiVolt	0	AGPL-3.0	2026-07-14T20:56:10Z	An open-source utility that parses monthly electricity usage data to automatically match you with the most cos
+ZH	能耗监测平台	Dujltqzv/Some-Many-Books	25956	NONE	2026-06-18T05:36:05Z	个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+ZH	能耗监测平台	cirosantilli/china-dictatorship	3332	CC-BY-SA-4.0	2026-02-05T07:59:11Z	反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造
+ZH	能耗监测平台	gege-circle/.github	2091	NONE	2025-10-04T07:56:18Z	这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community p
+ZH	能耗监测平台	pxvr-official/1	563	NONE	2021-03-15T13:23:42Z	無許諾配信 企業理念剽窃 動物の森収益化 大神ミオ権利者削除 戌神権利侵害発言 常闇トワ炎上 夜空メルストーカー被害 建築王サポーター放置 赤十字マーク 魔乃アロエ卒業 一つの中國支持声明 大空昴3Dライブ 無限延期清掃
+ZH	能耗监测平台	cirosantilli/china-dictatroship-7	389	CC-BY-SA-4.0	2026-02-05T07:59:02Z	反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中
+ZH	能耗监测平台	mRFWq7LwNPZjaVv5v6eo/cihna-dictattorshrip-8	216	CC-BY-SA-4.0	2026-02-05T07:59:02Z	反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中
+ZH	能耗监测平台	panbinibn/OpenPacketFix_	214	MIT	2022-08-12T01:54:00Z	大陆修宪香港恶法台湾武统朝鲜毁约美中冷战等都是王沪宁愚弄习思想极左命运共同体的大策划中共窃国这半个多世纪所犯下的滔天罪恶，前期是毛泽东策划的，中期6.4前后是邓小平策划的，黄牛数据分析后期是毛的极左追随者三朝罪恶元凶王沪
+ZH	能耗监测平台	zhitancloud/zhitan-ems	134	NOASSERTION	2026-10-16T07:31:39Z	能源管理系统+能源管理系统源码+能源管理平台+EMS 能源管理系统。通过系统性的能源挖掘和深度能源适配，适用管理场景：企业能源管理、工商业能源管理、低碳园区能源管理、化工企业能源管理、工矿能源管理、公共建筑能源管理等多维
+ZH	能耗监测平台	zpc1314521/PCL2	133	MIT	2022-08-12T02:54:51Z	[stays mad] 反PCL宣传库。Anti PCL propaganda. 大陆修宪香港恶法台湾武统朝鲜毁约美中冷战等都是王沪宁愚弄习思想极左命运共同体的大策划中共窃国这半个多世纪所犯下的滔天罪恶，前期是毛泽东策划
+ZH	能耗监测平台	qq1748766088/yike	20	NONE	2020-06-23T06:28:09Z	软件介绍 No.1  软件工作原理     QQ群监控软件的核心功能批量监控QQ群，对新进群成员自动推送广告邮件，利用QQ群分类做到精准引流，通俗易懂的讲就是利用软件自动化实时化的优势对自己有需求的QQ群进行监控，群里每
+ZH	能耗监测平台	xiaobaicai2023/Java---YJ---EMS---2026	17	MulanPSL-2.0	2026-08-31T05:17:54Z	能源管理系统源码，开源能源管理系统源码，能源管理+能源管理系统+能源系统+能量系统+能耗监测+能耗监测系统+能源管理系统源码+能源管理平台+能源管理系统（EMS）+能源监测+能源管控+能源系统+能源监控+能源预测，适用于
+ZH	能耗监测平台	xiaobaicai2023/Java---qiye---EMS	17	NONE	2026-08-31T05:07:15Z	能源管理系统+能源管理系统源码+能源管理平台+能源管理系统（EMS）+能源监测+能源管控+能源系统+能源监控+能源预测，适用于高能耗企业能源企业
+ZH	能耗监测平台	Zhidian2024/Energy-and-Carbon-Management-System-based-on-Java-Language	5	MulanPSL-2.0	2026-09-21T05:06:42Z	能源管理系统+能源管理系统源码+能源管理+能碳管理系统+能源系统+能量系统+能耗监测+能耗监测系统+能源管理系统源码+能源管理平台+能源管理系统（EMS）+能源监测+能源管控+能源系统+能源监控+能源预测，适用于企业能源
+ZH	能耗监测平台	Zhidian2024/energy-management-system021	5	NONE	2026-09-03T07:23:58Z	能源管理系统+能源管理系统源码+能源管理平台+能源管理系统（EMS）+能源监测+能源管控+能源系统+能源监控+能源预测，适用于高能耗企业能源企业
+ZH	能耗监测平台	shiki0127/Campus-Energy-Management-System	2	NONE	2025-12-29T05:57:51Z	智慧校园能耗监测与管理平台 
+ZH	能耗监测平台	Zhidian2024/Energy-Management-System8	2	NONE	2026-08-31T05:29:14Z	能源管理系统+能源管理系统源码+能源管理平台+能源管理系统（EMS）+能源监测+能源管控+能源系统+能源监控+能源预测，适用于高能耗企业能源企业
+ZH	能耗监测平台	fuoes/TwinParkOS	2	NONE	2026-06-23T14:46:28Z	智慧产业园区数字孪生可视化管控平台，集成三维园区、虚拟设备、能耗分析、安防环境监测、告警工单闭环、企业空间管理与 RBAC 权限控制。
+ZH	能耗监测平台	Ren-TQ/energy_management_system	1	NONE	2026-01-09T20:12:25Z	智慧校园能耗监测与管理平台是一个基于Spring Boot + Vue 3的现代化能耗监测系统，用于对校园内智能电表设备的电压、电流、功率及能耗数据进行实时采集、存储、异常告警及可视化展示。
+ZH	能耗监测平台	KDayInSummer/APITokenWatcher	1	NONE	2026-05-15T03:22:05Z	多 API 平台的 Token 用量实时监控工具。  支持 DeepSeek等主定时监测 Token 消耗、费用金额及剩余额度，帮助开发者避免预算超支。提供可视化仪表盘与阈值告警功能。
+ZH	能耗监测平台	1KWQ/smart-farm-onenet	1	NONE	2026-07-17T01:18:59Z	基于 STM32F1+FreeRTOS 开发的智慧农场环境监测物联网终端，搭载 ESP8266 通过 AT-MQTT 对接中国移动 OneNET 云平台；实现传感器数据双向云交互、片内 Flash 断电参数保存、W25Q
+PT	eficiencia energetica escola	EuGeanCarlos/EnergIA-slz	0	NONE	2026-10-14T18:01:38Z	🌱 Energia Inteligente SLZ:  É um assistente web de eficiência energética para São Luís, focado em residências,
+FR	suivi consommation energetique batiment	nafyssat/suivi-energetique-agences-etl	0	NONE	2025-07-10T09:58:05Z	Pipeline ETL batch pour analyser la consommation électrique d'un réseau de bâtiments à partir de données open 
+FR	suivi consommation energetique batiment	ANGELlNE/SmartEnergyManager	0	NONE	2026-05-30T13:15:29Z	Le thème de cette année est la maîtrise de l’économie énergétique. L’objectif de ce projet est de concevoir et

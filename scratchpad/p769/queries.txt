@@ -1,0 +1,43 @@
+EN|display energy certificate
+EN|energy performance certificate
+EN|SECR streamlined energy carbon reporting
+EN|school carbon footprint
+EN|building energy benchmarking
+EN|energy star portfolio manager
+EN|net zero estate
+EN|school energy management
+EN|greenhouse gas inventory school
+EN|scope 3 emissions reporting
+DE|Energieausweis
+DE|Verbrauchsausweis
+DE|Energiebericht
+DE|Energiemanagement Schule
+DE|Gebaeudeenergie
+DE|Gebäudeenergie
+DE|Energieverbrauchskennwert
+FR|diagnostic de performance energetique
+FR|diagnostic de performance énergétique
+FR|decret tertiaire
+FR|décret tertiaire
+FR|OPERAT ADEME
+FR|bilan carbone
+FR|decret BACS
+PT|eficiencia energetica edificios
+PT|eficiência energética edifícios
+PT|etiqueta ENCE
+PT|inventario emissoes
+PT|inventário emissões
+PT|PBE Edifica
+ES|certificado eficiencia energetica
+ES|certificado eficiencia energética
+ES|certificacion energetica edificios
+ES|certificación energética edificios
+ES|huella de carbono
+JA|建築物省エネ法
+JA|省エネ法 定期報告
+JA|CASBEE
+JA|エネルギー管理 学校
+KO|건물에너지
+KO|녹색건축
+ZH|建筑能耗
+ZH|碳排放核算

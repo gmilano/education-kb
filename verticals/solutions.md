@@ -6,6 +6,37 @@ updated: 2026-11-11
 
 # Vertical Platforms — Education
 
+
+## 🆕 `p769` — **`p757`'s law finally has a counter-example. For the first time in six registers there IS a permissive, production-grade, community-maintained platform in a statutory-compliance vertical — `SEED-platform/seed`, BSD-3-Clause — and the reason it exists is that the duty-holder and the data publisher are the same public body.**
+
+| Platform | Grant, byte-read `2026-11-11` | Branch | Region | Verdict for a school-estate deliverable |
+|---|---|---|---|---|
+| [`SEED-platform/seed`](https://github.com/SEED-platform/seed) | 🟢 **BSD-3-Clause** · `4,610 B` · `630588a10340` at `LICENSE.md` | `develop` | North America | 🟢 **ADOPT. The counter-example to `p757`.** The **Standard Energy Efficiency Data** platform: a web application for managing building performance data at portfolio scale, with the jurisdictional benchmarking duty as its design premise. `1,721`-file tree, **pushed `2026-11-11`**, `121★`. 🟢 **It models the duty, not just the asset** — datasets by compliance cycle, per-jurisdiction programmes, and the data-quality checks a submission has to survive |
+| [`NatLabRockies/OpenStudio`](https://github.com/NatLabRockies/OpenStudio) | 🟢 **BSD-3-Clause** · `2,624 B` · `25ae267f7da9` at `LICENSE.md` | `develop` | North America | 🟢 **ADOPT as the modelling tier.** `658★`. Its **measure** abstraction — a scriptable, parameterised model edit — is the right unit for an agent to emit and for a human to review. 🔴 **Three `LICENSE.md` files in the tree read `Insert your license here`**: BCL measure templates, counted as licensed by any existence probe |
+| [`NatLabRockies/alfalfa`](https://github.com/NatLabRockies/alfalfa) | 🟢 **BSD-3-Clause** · `1,679 B` · `6969322757e0` at `LICENSE.md` | `develop` | North America | 🟢 **ADOPT for the interactive tier.** A web service for runtime interaction with a running model, so an agent can act on a simulation mid-run. The seam between a static compliance model and a live operational one |
+| [`BBSR-GEG-Portal/webservice-fuer-energieausweise`](https://github.com/BBSR-GEG-Portal/webservice-fuer-energieausweise) + [`BBSR-GEG-Portal/druckapplication-fuer-energieausweise`](https://github.com/BBSR-GEG-Portal/druckapplication-fuer-energieausweise) | 🟢 **MIT** · `1,153 B` · `0f9ca359cef6` (dual: **GPL-3.0** · `35,149 B` · `3972dc9744f6` at `LICENSE_GPLv3`) | `main` | EMEA | 🟢 **ADOPT for a German engagement, and this pair is the register's most interesting artefact.** A **web service plus a print application for statutory `GEG` energy certificates, published under MIT by the federal institute BBSR/BBR itself.** 🟢 **Not a platform by size (`141` and `43` files) but a platform by *authority*: it is the regulator's own renderer of the regulated document** |
+| [`ABC-TransitionBasCarbone/bilan-carbone`](https://github.com/ABC-TransitionBasCarbone/bilan-carbone) | 🟢 **MIT** · `1,081 B` · `462aa2e3cb35` at `LICENSE` | `develop` | EMEA | 🟢 **ADOPT for a French engagement.** `1,977`-file tree, pushed `2026-11-10` — a real application, published by the **Association Bilan Carbone**, which owns the method the French market uses. 🔴 Branch `develop`, not `main` |
+| [`BIM2SIM/bim2sim`](https://github.com/BIM2SIM/bim2sim) | 🔴 **LGPL-3.0** · `7,632 B` · `f97bc4bb9b7a` at `LICENSE` | `development` | EMEA | 🔴 **BEHIND A PROCESS BOUNDARY ONLY.** `101★`, RWTH Aachen. IFC-to-energy-model generation — the bridge for an estate that already has BIM records. Weak copyleft: invoke it as a service, do not link it into the deliverable |
+| [`ladybug-tools/honeybee-energy`](https://github.com/ladybug-tools/honeybee-energy) | 🔴 **AGPL-3.0** · `34,523 B` · `8486a10c4393` at `LICENSE` | `master` | Global | 🔴 **REFUSE for a hosted deliverable, and this is the register's licensing trap.** The Ladybug Tools stack is the most widely taught building-energy toolchain, which means it is the default a team reaches for — and its grant is **network copyleft**, which reaches a SaaS deliverable |
+| `zhitancloud/zhitan-ems` *(code span deliberately, never a link: the grant forbids removing the vendor's branding)* | 🔴 **ZTPL-1.0 brand-lock** · `6,892 B` · `cb5754049818` | `zhitan_master` | APAC | 🔴 **REFUSE.** `134★` — the most-starred EMS platform on the register and structurally the closest thing to a turnkey answer. **Derivatives may be sold, but the vendor's logo, copyright and `zhitancloud` string may not be removed from the running UI.** A white-labelled client deliverable is impossible. 🔴 Branch `zhitan_master` — neither `main` nor `master` |
+| `openMAINT` | 🔴 **No verdict is published, because none can be byte-read** | — | EMEA | 🔴 **Structural absence, confirmed a THIRD time.** `p766`'s `T666` and `p767`'s two-channel re-test recorded that the facility and asset-maintenance platform this duty family belongs in is **not canonically on GitHub**. It is still not. **Its native feature is scheduled-maintenance modelling, and this base cannot licence-verify it on any instrument it has** |
+
+### 🟢 Why `p757`'s law broke here, stated as a mechanism rather than an exception
+
+`p757`'s law held for five consecutive registers: **there is no permissive platform published by the community in a statutory-compliance vertical.** `p768` refined it — the publisher changes with who holds the duty, and where no public body holds it, no community platform appears.
+
+🟢 **This register breaks the law, and the mechanism is a three-way coincidence the previous five never had:**
+
+| Condition | Previous five registers | This register |
+|---|---|---|
+| Who holds the duty | 🔵 A private operator, or a school as employer | 🟢 **A public body — the school district or the ministry** |
+| Who publishes the reference data | 🔵 Nobody, or a paid standards body | 🟢 **The same public body** (ENERGY STAR, EPC/DEC registers, EEGS, INMETRO) |
+| Who funds the tooling | 🔴 Nobody | 🟢 **The same public body** — SEED and EnergyPlus are US DOE-funded; the certificate renderer is BBSR-funded |
+
+🟢 **So the corrected law: a permissive platform appears in a statutory-compliance vertical exactly when the duty-holder, the data publisher and the tooling funder are the same public institution.** On this register all three collapse into one, and the result is a BSD-3 platform at `121★` plus a BSD-3 engine at `1,622★` plus the regulator's own MIT certificate renderer. 🔵 **The previous five registers each broke at least one of the three conditions, which is why they produced copyleft or nothing** (`T715`).
+
+🔴 **And the counter-example is regional.** It holds in **North America** (DOE funding) and partly in **EMEA** (BBSR, ABC). It does **not** hold in **APAC**, where Japan's ministries publish the duty and the filing portal but no tooling, nor in **LATAM**, where INMETRO publishes the label scheme and no code at all. **The law is broken, not repealed** (`T716`).
+
 ## 🆕 `p768` — **School transport fleet compliance: the platform layer is where this register is weakest, and the reason is structural — the duty-holder is a private operator, so there is no public body publishing the system. `p757`'s law survives a fifth consecutive register with no counter-example.**
 
 | Platform | Grant, byte-read `2026-11-11` | Branch | Region | Verdict for a school-transport deliverable |

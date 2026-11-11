@@ -1,0 +1,22 @@
+# ACTION p768-A executed: accented vs unaccented form of every non-English term, pass p769.
+# p768 stated "GitHub does not fold diacritics, so the correct spelling reaches the smaller
+# bucket". Measured on 4 pairs by SET comparison, not count comparison, the rule is wrong in
+# its prescription and the mechanism is different: the UNACCENTED form is a SUPERSET, because
+# a GitHub repository SLUG cannot carry a diacritic. Indexed prose IS folded; the slug is ASCII.
+lang	plain_form	accented_form	n_plain	n_accented	common	plain_only	accented_only	verdict
+PT	eficiencia energetica edificios	eficiência energética edifícios	17	17	17	0	0	IDENTICAL SET - folded
+PT	inventario emissoes	inventário emissões	8	8	8	0	0	IDENTICAL SET - folded
+FR	diagnostic de performance energetique	diagnostic de performance énergétique	20	20	17	3	3	PARTIAL - plain-only are slug matches
+FR	decret tertiaire	décret tertiaire	15	13	13	2	0	PLAIN IS SUPERSET - both extras are slug matches
+DE	Gebaeudeenergie	Gebäudeenergie	1	0	0	1	0	ASCII TRANSLITERATION BEATS THE UMLAUT
+ES	certificado eficiencia energetica	certificado eficiencia energética	2	1	1	1	0	PLAIN IS SUPERSET
+# plain_only rows, French: AymenOuhiba/Diagnostic-de-performance-energetique,
+#   MarceauMacq/Le-diagnostic-de-performance-energetique-DPE-, borabii/Diagnostics-de-Performance-Energetique
+#   -- all three carry the term UNACCENTED IN THE REPOSITORY NAME. That is the mechanism.
+# plain_only rows, decret tertiaire: louisondelestre/cabs-decret-tertiaire,
+#   louisondelestre/consommations-decret-tertiaire -- again both slug matches.
+# accented_only rows, French (AlexisGabrysch/m2_enedis, QL2111/m2_enedis,
+#   valentino014/dpe-logement-existant) carry the accented term in DESCRIPTION text only,
+#   so folding is not symmetric either. Both forms are still required; the PREFERENCE inverts.
+# Direction held on 6 of 6 pairs: n_plain >= n_accented, never the reverse. p768's own
+# tacografo(57)/tacografo-accented(28) datum has the same sign and was mis-prescribed.

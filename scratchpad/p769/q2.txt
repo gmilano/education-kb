@@ -1,0 +1,22 @@
+EN|energy management MCP server
+EN|carbon accounting agent LLM
+EN|GHG protocol open source
+EN|building energy model openstudio
+EN|energyplus
+EN|SEED standard energy efficiency data
+EN|energy audit agent
+EN|CRREM carbon risk real estate
+EN|emissions factors database open
+EN|utility bill parsing open source
+EN|school estate asset management energy
+EN|decarbonisation pathway model open source
+JA|省エネ 報告 ツール
+JA|エネルギー消費量 建物
+JA|カーボンニュートラル 自治体
+KO|건물 에너지 효율
+ZH|能耗监测平台
+PT|eficiencia energetica escola
+ES|gestion energetica edificios publicos
+DE|Energieausweis GEG
+DE|Liegenschaft Energie Monitoring
+FR|suivi consommation energetique batiment

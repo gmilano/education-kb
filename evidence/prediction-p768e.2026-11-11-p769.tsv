@@ -1,0 +1,19 @@
+# ACTION p768-E: prediction RECORDED BEFORE any supply query was run, pass p769, 2026-11-11
+# Hypothesis under test (p768-E, T690): non-English open-source supply is rich where the
+# data owner is a PUBLIC BODY, and near-nil where the duty-holder is a PRIVATE OPERATOR.
+# Register: school-estate decarbonisation and energy reporting (ACTION p768-F).
+leg	language	term_planned	data_owner_of_the_duty	prediction	predicted_grant_rate
+EN	english	display energy certificate / SECR / school carbon	mixed	rich-but-homograph-polluted	medium
+DE	german	Energieausweis / Verbrauchsausweis / Energiebericht Schule	public (Länder + Kommune publish the Ausweis register)	RICH	high
+FR	french	diagnostic de performance energetique / decret BACS / decret tertiaire	public (ADEME publishes DPE open data; OPERAT is a state platform)	RICH	high
+PT	portuguese	etiqueta ENCE / eficiencia energetica escola / PBE Edifica	public (INMETRO/Procel publish; municipal school estates)	MEDIUM	medium
+ES	spanish	certificado eficiencia energetica / certificacion energetica edificios	public (CCAA registers are public)	MEDIUM	medium
+JA	japanese	建築物省エネ法 / 省エネ法 定期報告 / CASBEE	public (METI/MLIT; 自治体 publish 省エネ performance)	MEDIUM	low-medium
+KO	korean	건물에너지관리시스템 / 녹색건축인증	public (MOLIT building energy DB is public)	LOW	low
+# Directional prediction, stated so it can fail:
+# DE and FR are predicted to be the two richest non-English legs on this register, BECAUSE the
+# certificate register is published by a public body in both jurisdictions. If the German and
+# French legs return fewer grant-carrying repositories than the English leg, T690 is WRONG as
+# a predictor and must be withdrawn rather than restated.
+# Counter-prediction that would also falsify it: SECR is a duty on a PRIVATE company, so the
+# English SECR leg specifically is predicted near-nil in grants even though English is rich overall.

@@ -1,0 +1,43 @@
+# p769: every address written as a LINK this pass, re-verified on the git ls-remote
+# channel AFTER writing. The ZTPL-licensed address and the pollution addresses appear only
+# as code spans and are deliberately absent from this list.
+address	symref_HEAD	verdict
+ABC-TransitionBasCarbone/bilan-carbone	refs/heads/develop	LIVE
+BBSR-GEG-Portal/druckapplication-fuer-energieausweise	refs/heads/main	LIVE
+BBSR-GEG-Portal/webservice-fuer-energieausweise	refs/heads/main	LIVE
+BIM2SIM/bim2sim	refs/heads/development	LIVE
+CarlosBeltranVelamazan/NBEM	refs/heads/main	LIVE
+ChangyangOpenSource/carbon-energy-management	refs/heads/main	LIVE
+IBM/rl-testbed-for-energyplus	refs/heads/master	LIVE
+LBNL-ETA/EnergyPlus-MCP	refs/heads/main	LIVE
+NatLabRockies/EnergyPlus	refs/heads/develop	LIVE
+NatLabRockies/OpenStudio	refs/heads/develop	LIVE
+NatLabRockies/alfalfa	refs/heads/develop	LIVE
+NatLabRockies/resstock	refs/heads/develop	LIVE
+ORNL-BTRIC/AutoBEM-DynamicArchetypes	refs/heads/main	LIVE
+SEED-platform/py-seed	refs/heads/develop	LIVE
+SEED-platform/seed	refs/heads/develop	LIVE
+Urban-Informatics-Lab/Open-Data-Benchmarking	refs/heads/master	LIVE
+airboxlab/rllib-energyplus	refs/heads/main	LIVE
+bsl546/energym	refs/heads/master	LIVE
+buds-lab/building-prediction-benchmarking	refs/heads/master	LIVE
+buds-lab/energystar-plus-plus	refs/heads/master	LIVE
+building-energy/epw	refs/heads/master	LIVE
+centrefornetzero/epc-ppd-address-matching	refs/heads/main	LIVE
+christophwaibel/BEOBenchmark	refs/heads/master	LIVE
+energiacte/cteepbd	refs/heads/main	LIVE
+getodk/collect	refs/heads/master	LIVE
+greencalculus/greencalculus-calculator-demo	refs/heads/main	LIVE
+hongyuanjia/eplusr	refs/heads/master	LIVE
+jkbrzt/rrule	refs/heads/master	LIVE
+jmarrec/geomeffibem	refs/heads/main	LIVE
+jmcaamanog/CE3X-MCP-Server	refs/heads/main	LIVE
+ladybug-tools/honeybee-energy	refs/heads/master	LIVE
+mechyai/RL-EmsPy	refs/heads/main	LIVE
+openstudiocoalition/OpenStudioApplication	refs/heads/develop	LIVE
+pachi/envolventecte	refs/heads/master	LIVE
+santoshphilip/eppy	refs/heads/master	LIVE
+traccar/traccar	refs/heads/master	LIVE
+ugr-sail/sinergym	refs/heads/main	LIVE
+xiaobaicai2023/Java---YJ---EMS---2026	refs/heads/master	LIVE
+zehengl/yyc-building-energy-benchmarking	refs/heads/main	LIVE

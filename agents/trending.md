@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-11
 ---
 
+
+## 🆕 `p769` — `2026-11-11` — **What is new this week on the school-estate energy register: the agent layer is six weeks old and both of its members wrap a regulator-sanctioned calculator rather than replacing it.**
+
+**Append-only. This section is added above `p768`'s; the history below it is unchanged.**
+
+| New or moved this window | Evidence, byte-read `2026-11-11` | Why it is new |
+|---|---|---|
+| 🟢 [`LBNL-ETA/EnergyPlus-MCP`](https://github.com/LBNL-ETA/EnergyPlus-MCP) — **`126★`, BSD-3-Clause** (`2,474 B` · `107827bf9e23` at `License.txt`, branch `main`) | Pushed **`2026-11-04`**; `76`-file tree; a second grant path `Copyright.txt` (`903 B` · `b480dd6f4a99`) that is a **notice, not a refusal** | 🟢 **The register's first agent, and it is from a US national lab.** Describes itself as the first open-source MCP server over EnergyPlus. **Six weeks old at `126★`** — the fastest-rising artefact on this register |
+| 🟢 [`jmcaamanog/CE3X-MCP-Server`](https://github.com/jmcaamanog/CE3X-MCP-Server) — **`3★`, MIT** (`1,090 B` · `c2f76d1b42fa`, branch `main`) | Pushed **`2026-10-29`**; `61`-file tree | 🟢 **The second MCP server, and the only one aimed at a statutory certificate.** Automates Spanish **Certificados de Eficiencia Energética** through CE3X, the certified national tool. The pattern — wrap the regulator's own desktop tool — is the transferable part |
+| 🟢 [`SEED-platform/seed`](https://github.com/SEED-platform/seed) and [`SEED-platform/py-seed`](https://github.com/SEED-platform/py-seed) | **Both pushed `2026-11-11`** — the day of this pass | 🟢 **Actively maintained, not archived.** The US benchmarking system of record is BSD-3-Clause and moving |
+| 🟢 [`ABC-TransitionBasCarbone/bilan-carbone`](https://github.com/ABC-TransitionBasCarbone/bilan-carbone) — **MIT** (`1,081 B` · `462aa2e3cb35`, branch `develop`) | Pushed **`2026-11-10`**; `1,977`-file tree | 🟢 **The French method's owning body is shipping an application, not a spreadsheet.** New to this base |
+| 🟢 [`BBSR-GEG-Portal/webservice-fuer-energieausweise`](https://github.com/BBSR-GEG-Portal/webservice-fuer-energieausweise) and [`BBSR-GEG-Portal/druckapplication-fuer-energieausweise`](https://github.com/BBSR-GEG-Portal/druckapplication-fuer-energieausweise) — **MIT, dual with GPL-3.0** | Both repositories pushed **`2026-02-19`** | 🟢 **New to this base and the most consequential row of the pass:** a German **federal institute** publishing the statutory certificate's web service and renderer under MIT |
+| 🔴 **`NREL` → `NatLabRockies`** | 🟢 **Proven on refs: `613b9a754fa0` at both addresses, `4,714` complete refs each, `0` differing lines** | 🔴 **An organisation rename on the foundational stack of this register.** `NREL/*` still resolves by redirect, but `14` citations on this base name an address that is no longer canonical (`ACTION p769-C`) |
+| 🔴 `zhitancloud/zhitan-ems` — **`134★`, `ZTPL-1.0` brand-lock** (`6,892 B` · `cb5754049818`, branch `zhitan_master`) | Pushed `2026-10-16` | 🔴 **New to this base as a REFUSAL, and a new refusal class.** Derivatives may be sold; the vendor's logo may not be removed from the running UI. **GitHub indexes it `NOASSERTION`** |
+| 🟢 `MulanPSL-2.0` — **a licence family this base could not see until this pass** | `xiaobaicai2023/Java---YJ---EMS---2026`, `9,247 B` · `f0dade5c9337`, bilingual payload | 🟢 **木兰宽松许可证第2版 is OSI-approved, permissive, with a patent grant and patent-retaliation clause.** It graded `UNRECOGNISED` before `769-D2`. **Every Chinese-origin row this base graded before today may be mis-graded for this reason** (`ACTION p769-G`) |
+
+### 🔴 What did NOT appear, stated so the silence is not read as coverage
+
+- 🔴 **No open-source agent for a *reporting* duty anywhere.** Both MCP servers drive a *calculation*. **Nothing on GitHub assembles a filing, tracks its deadline, or handles a restatement** — the one component that encodes the duty is absent for the fifth consecutive register.
+- 🔴 **`0` Japanese-language results across `7` legs**, including 建築物省エネ法, 省エネ法 定期報告, エネルギー管理 学校 and カーボンニュートラル 自治体. Japan has the most precisely dated cadence on the register and no open-source supply in its own language.
+- 🔴 **Korean: `1`, `1`, `0` across `3` legs.** No Korean school-energy instrument was established either; **no verdict is published for Korea.**
+- 🔴 **`SECR streamlined energy carbon reporting` returns `0` repositories**, and `greenhouse gas inventory school` returns `0`. **The counter-prediction recorded before the queries ran — that a duty on a private company yields near-nil supply — held exactly.**
+- 🔴 **No Brazilian or Spanish-American repository on this register carries a grant.** `17`, `8`, `2`, `1` and a `450`-result Spanish leg of coursework.
+
 ## 🆕 `2026-11-11` — `p768` — what is new this week on the agent layer of school transport fleet compliance
 
 🟢 **Pushed within the last `10` days, and all three are permissive:**

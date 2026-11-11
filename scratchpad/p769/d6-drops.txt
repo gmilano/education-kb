@@ -1,0 +1,3 @@
+DROPPED-D6 xiaobaicai2023/Java---YJ---EMS---2026 YunPowerEMS/yunpower-ui/src/locale/en-US/manage/notice.ts
+DROPPED-D6 xiaobaicai2023/Java---YJ---EMS---2026 YunPowerEMS/yunpower-ui/src/locale/zh-CN/manage/notice.ts
+DROPPED-D6 zhitancloud/zhitan-ems zhitan-web/src/api/system/notice.js
