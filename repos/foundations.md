@@ -6,6 +6,82 @@ updated: 2026-11-11
 
 # Foundational Repositories — Education
 
+## 🆕 `p765` — **The substrate for a school statutory-compliance system is permissive almost all the way down — `25` MIT payloads and `11` Apache-2.0 payloads byte-read — and the three components that are *not* usable are the three that encode the law: the specification is NoDerivatives, the standards body took its code private, and the one artefact that knows schools exist is NonCommercial.**
+
+**`27` permissive and weak-copyleft foundation rows, each naming the branch its grant was read from.** Register: **school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing, playground-equipment inspection (`ACTION p764-A`). The register's technical content is three layers: **field capture** (an inspection happens away from a desk), **the asset model** (the thing inspected has to be identifiable), and **the interval engine** (a statutory duty is a date, not a state).
+
+**`61` licence payloads byte-read with length and `sha256₁₂` · `32` licence-family paths per address including capitalisation of stem **and extension** · `16` language manifests on failure · `5` `COPYING.LESSER`-family paths on any GPL title · every family confirmed by **operative clause text**, never by byte count (`ingest/p765-grant-classifier.py`) · `54` new addresses and `18` re-reads, marked per row.**
+
+### 🟢 Field capture — the layer an inspection actually runs on, and it is Apache-2.0 without exception
+
+🟢 **`ACTION p761-E` closes here, with a mechanism.** `getodk`'s `NOASSERTION` has been unexplained since it was raised and `p764` explicitly declined to claim a cause. The cause is that the Apache text is **reformatted as Markdown** at `LICENSE.md` — a setext underline, italics on the version line, HTML-escaped angle brackets — so the index, which matches canonical text, declines (`T633`).
+
+| Repository | ★ | Grant, byte-read | Path | Branch | Pushed | Role |
+|---|---|---|---|---|---|---|
+| [`getodk/collect`](https://github.com/getodk/collect) | `804` | **Apache-2.0** · `10,494 B` · `d1ee81266b96` | **`LICENSE.md`** | `master` | `2026-11-10` | 🟢 Android offline form capture — the field instrument. Index `NOASSERTION`, **grant real and complete**. `25` prior mentions |
+| [`getodk/central`](https://github.com/getodk/central) | `232` | **Apache-2.0** · `10,494 B` · `d1ee81266b96` (byte-identical) | `LICENSE.md` | `master` | `2026-11-06` | 🟢 The server half. `24` prior mentions |
+| [`getodk/javarosa`](https://github.com/getodk/javarosa) | `60` | **Apache-2.0** · `10,493 B` · `c93c2d53df30` (one byte different) | `LICENSE.md` | `master` | `2026-11-11` | 🟢 The XForms engine under the whole ecosystem. **New to this base** |
+| [`dimagi/commcare-android`](https://github.com/dimagi/commcare-android) | `48` | **Apache-2.0** · `11,341 B` · `775622d51047` | `LICENSE` | `master` | `2026-11-11` | 🟢 Offline-first Android client, independent lineage from ODK. **New** |
+| [`enketo/enketo-core`](https://github.com/enketo/enketo-core) | `79` | **Apache-2.0** · `10,266 B` · `887d7172ff57` | `LICENSE` | `master` | `2023-11-29` | 🔴 **ARCHIVED**, as is `enketo/enketo-express` (`118★`). The web form-rendering path for the ODK ecosystem is **frozen**. **New** |
+| [`kobotoolbox/kpi`](https://github.com/kobotoolbox/kpi) | `190` | **AGPL-3.0** · `34,488 B` · `7ac1d3861781` | `LICENSE` | `main` | `2026-11-11` | 🔴 Copyleft, network-use trigger. The alternative to ODK Central and not usable in a proprietary deliverable. **New** |
+
+🔵 **The reading: the field-capture layer is solved and permissive, with one caveat that matters.** Choose `getodk/collect` + `getodk/central` (both Apache-2.0, both pushed this week) over KoboToolbox (AGPL-3.0), and do not build on `enketo-*`, which is archived.
+
+### 🟢 The asset model — where a fire door becomes an addressable object
+
+| Repository | ★ | Grant, byte-read | Branch | Pushed | Role |
+|---|---|---|---|---|---|
+| [`FreeCAD/FreeCAD`](https://github.com/FreeCAD/FreeCAD) | `35,355` | **LGPL-2.1** · `27,030 B` · `7ffe1954587c` | `main` | `2026-11-11` | 🔵 Weak copyleft — linkable from closed code if kept replaceable. **New** |
+| [`pascalorg/editor`](https://github.com/pascalorg/editor) | `25,443` | **MIT** · `1,074 B` · `9c9dde8dcf11` (Pascal Group Inc.) | `main` | `2026-11-10` | 🟢 **`ACTION p764-F` discharged**: `3,164` forks, created `2025-10-16`, `190,542 KB`, `54` open issues. 🔴 **Two delivery modes — the MIT grant covers the self-host path (`pascal mcp connect`, SQLite, "nothing is uploaded"), not the account-bound hosted workspace** (`T648`). `16` prior mentions |
+| [`ThatOpen/engine_web-ifc`](https://github.com/ThatOpen/engine_web-ifc) | `1,094` | **MPL-2.0** · `16,725 B` · `1f256ecad192` | `main` | `2026-11-11` | 🔵 File-level weak copyleft — modifications to *its* files must be published, your files need not be. `6` prior mentions |
+| [`OpenAEC-Foundation/open-pdf-studio`](https://github.com/OpenAEC-Foundation/open-pdf-studio) | `1,124` | **LGPL-3.0** · `7,652 B` · `e3a994d82e64` · `LICENSE.md` | `main` | `2026-11-11` | 🔵 The certificate layer — a statutory compliance file is a PDF with a signature on it. **New** |
+| [`ThatOpen/web-ifc-viewer`](https://github.com/ThatOpen/web-ifc-viewer) | `1,041` | **MIT** · `1,054 B` · `68c9c1c6d1e7` (IFC.js) | `master` | `2023-09-29` | 🔴 **Three years stale.** Title-less MIT, correctly indexed (`T634`). **New** |
+| [`opensourceBIM/BIMsurfer`](https://github.com/opensourceBIM/BIMsurfer) | `432` | **MIT** · `1,042 B` · `ec1895358ea0` (TNO) | `master` | `2025-12-30` | 🟢 Usable IFC web viewer. Title-less MIT. **New** |
+| [`buildingSMART/bSDD`](https://github.com/buildingSMART/bSDD) | `197` | **MIT** · `1,089 B` · `87388f74ee2d` | `master` | `2026-10-21` | 🟢 The data dictionary — classification for the thing being inspected. `10` prior mentions |
+| [`DynamoDS/Dynamo`](https://github.com/DynamoDS/Dynamo) | `2,052` | **Apache-2.0** · `11,348 B` · `ba665b8054e1` · `LICENSE.txt` | `master` | `2026-11-10` | 🟢 Graphical computational design — the rule-authoring surface for non-programmers. **New** |
+| [`Siraj-zaki/spatial-map`](https://github.com/Siraj-zaki/spatial-map) | `5` | **MIT** · `1,086 B` · `987d3715cab8` | `main` | `2026-10-18` | 🟢 Floor plans (PDF/DWG) → live 3D indoor maps. **The cheapest route from a school's existing drawings to an addressable asset.** **New** |
+| [`waceinc/vexplor-aas`](https://github.com/waceinc/vexplor-aas) | `2` | **Apache-2.0** · `11,357 B` · **`b40930bbcf80`** | `main` | `2026-11-10` | 🟢 Asset Administration Shell authoring and validation. 🔵 **A second distinct sha at exactly `11,357 B`** (`T632`). **New** |
+| [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) | `115` | **MIT** · `1,059 B` · `2b47d728e281` | `main` | `2026-10-07` | 🟢 A standard for describing the accessibility of the **physical** world. Accessibility is itself a statutory estate duty. `12` prior mentions |
+
+🔴 **And the specification that would let any of this check a statutory requirement is the one component that may not be adapted.** [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) (`333★`, branch `development`) is **`CC BY-ND 4.0`**, by reference, `287 B` · `e0af6597dc57` — `T618`'s finding, re-read this pass and reproducing byte for byte. 🟢 **Implement against it and author your own `.ids` files, which are not derivatives of the standard's text; never republish the spec changed** (`T637`). The MIT reader this base already holds, [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp), stays the right component.
+
+### 🟢 The work-order and interval layer — permissive, and smaller than it should be
+
+| Repository | ★ | Grant, byte-read | Branch | Pushed | Role |
+|---|---|---|---|---|---|
+| [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) | `41` | **MIT** · `1,085 B` · `97448209d29a` | `master` | `2026-11-11` | 🟢 **Northwestern University Core Facility Management** — an actively-pushed, MIT, *university* facility system. Title-less MIT. `13` prior mentions |
+| [`liberusoftware/project-maintenance-laravel-filament`](https://github.com/liberusoftware/project-maintenance-laravel-filament) | `73` | **MIT** · `1,072 B` · `646ce5c70c0e` · `LICENSE.md` | `main` | `2026-11-11` | 🟢 A CMMS in Laravel + Filament — the fastest permissive route to a work-order UI. `10` prior mentions |
+| [`SuperCMMS/Open-Source-CMMS`](https://github.com/SuperCMMS/Open-Source-CMMS) | `44` | **MIT** · `1,066 B` · `d8ab557c05da` | `main` | `2026-05-31` | 🟢 Permissive CMMS. `6` prior mentions |
+| [`SafetyMP/Autonomous-EHS-Management`](https://github.com/SafetyMP/Autonomous-EHS-Management) | `9` | **Apache-2.0** · `10,831 B` · `1f28d90fd142` | `main` | `2026-11-10` | 🟢 Incident → verified CAPA, with a TRIR that uses annual hours. 🔵 **`526 B` short of canonical Apache with every operative clause intact** — formatting, not a missing grant (`T632`). **New** |
+| [`DougTrier/trier-os`](https://github.com/DougTrier/trier-os) | `18` | **MIT** · `1,067 B` · `4b3d1aa45cfe` | `main` | `2026-09-18` | 🟢 Offline-first scan-to-execute workflows — the pattern a fire-door round actually is. `4` prior mentions |
+| [`ImMaddd/Institutional-Asset-Management-and-Inventory-System`](https://github.com/ImMaddd/Institutional-Asset-Management-and-Inventory-System) | `2` | **MIT** · `1,073 B` · `71d236ead170` | `main` | `2026-07-19` | 🔵 Role-based PHP institutional asset management. Small, but institutional by design. **New** |
+| [`microsoftarchive/microsoft-teams-apps-inspection`](https://github.com/microsoftarchive/microsoft-teams-apps-inspection) | `17` | **MIT** · `1,141 B` · `c2cfccb812fe` | `main` | `2023-03-22` | 🔴 **ARCHIVED.** Recorded because it is the only front-line inspection app with a Microsoft grant, and it is abandoned. **New** |
+
+### 🟢 Fire engineering — the physics layer, and the licence correction that unlocked it
+
+| Repository | ★ | Grant, byte-read | Branch | Verdict |
+|---|---|---|---|---|
+| [`FireDynamics/fdsreader`](https://github.com/FireDynamics/fdsreader) | `79` | `LICENSE` **GPL-3.0** `35,131 B` `8a4c9551082a` **+ `LICENSE.LESSER` LGPL-3.0** `7,652 B` `e3a994d82e64` → **effective LGPL-3.0** | `master` | 🟢 **Usable, and GitHub's index is wrong.** The index reads `GPL-3.0`; the pair is LGPL-3.0, which permits linking. First case on this base where the two-file read corrects **the platform** (`T631`). **New** |
+| [`bewygs/pycfast`](https://github.com/bewygs/pycfast) | `7` | **MIT** · `1,081 B` · `a2b2b1d21c9a` (Orano) | `main` | 🟢 Python interface for building, running and analysing NIST CFAST zone-model fire simulations. **New** |
+| [`bewygs/cfast-bin`](https://github.com/bewygs/cfast-bin) | `1` | **MIT** · `1,081 B` · `d2118fa312c7` | `main` | 🟢 The NIST CFAST binaries repackaged as a Python wheel — **the deployment half of the row above**. 🔵 Same `1,081 B` as its sibling, different sha (`T632`). **New** |
+| [`aamks/aamks`](https://github.com/aamks/aamks) | `23` | **GPL-3.0** · `35,149 B` · `3972dc9744f6` (canonical) | `master` | 🔴 Copyleft. The only probabilistic *building* fire-risk framework found, and the only on-topic hit in `30` for `fire risk assessment` (`T628`). **New** |
+| [`whchien/deep-floor-plan-recognition`](https://github.com/whchien/deep-floor-plan-recognition) | `81` | **GPL-3.0** · `35,149 B` · `3972dc9744f6` | `main` | 🔴 Copyleft. Extracts structured features from floor plans — the obvious bridge from a school's drawings to an asset register, and refused. **New** |
+| [`DINFO-UniFI/RoofClassify`](https://github.com/DINFO-UniFI/RoofClassify) | `10` | **GPL-2.0** · `18,092 B` · `8177f9751321` | `master` | 🔴 Copyleft, and worth the row anyway: a QGIS plugin that **identifies asbestos roofing from satellite imagery** (University of Florence). **School roofs are this register's asbestos surface, and this is the only artefact on earth that detects it remotely.** **New** |
+
+### 🟢 The two LATAM artefacts on this exact register
+
+| Repository | ★ | Grant, byte-read | Branch | Reading |
+|---|---|---|---|---|
+| [`Aikenort26/geovisor-asbesto`](https://github.com/Aikenort26/geovisor-asbesto) | `1` | **MIT** · `1,232 B` · `642b1cca083e` — **plus `CC BY 4.0` on the geodata in `public/data` and `public/tiles`**, stated in Spanish in the payload's tail | `main` | 🟢 A **public asbestos geoviewer for Cartagena de Indias, Colombia**, carrying a national public-investment (`BPIN`) code. Index: `NOASSERTION`. 🔴 **For an asbestos geoviewer the data is the deliverable, so CC BY 4.0 attribution is the operative term** (`T644`). **New** |
+| [`Sergiorsantana/rota-segura`](https://github.com/Sergiorsantana/rota-segura) | `1` | **MIT** · `1,072 B` · `29b0c50c3abf` | `main` | 🟢 Computes fire-escape routes for an arbitrary building (Brazil). 🔵 Same `1,072 B` as a different MIT grant in this pass (`T632`). **New** |
+
+### 🔴 Named absences, so the silence is not read as coverage
+
+- **`11` addresses published as absences** after `32` licence paths and `16` manifests each: `Batool-Jaber/ifc-compliance-checker`, `Gariknik/FireCodeCheckerAgent`, `mightyoung/young-agent-app`, `phoenixgit321/ai-property-safety-inspection`, `itmicus/cmdbuild_docker`, `chowtao123-design/shopfloor-cmms`, `Ramki-K/asbestos-material-detection`, `ryjord/Argus`, `kerwinarlan/dorm-evacuation-signage`, `Safety-Bin/ehs-system`, `rhyspaul192/AsTrak`. 🟢 **A twelfth was refuted** — `TowerScout/TowerScout` at `LICENSE.TXT` (`T630`), which is why `ACTION p765-A` now requires a README read before an absence is published.
+- 🔴 **No interval engine exists.** A statutory duty is a recurring date with a competent-person attribute and an evidence artefact. Nothing on this shelf models that; every candidate models a *work order*, which is a task without a legal deadline. **This is the gap a Globant deliverable fills, and it is small enough to build.**
+- 🔴 **`topic:asbestos` returns `5` repositories worldwide** and `topic:legionella` returns `12`, against `topic:compliance`'s `10,822` — which is the software-compliance register, not this one (`T629`).
+- 🔴 **No permissive artefact encodes a statutory interval table for any jurisdiction.** The intervals exist in England, India and three US states (`T642`–`T645`); none is in code under any licence this base could find.
+
 ## 🆕 `p764` — **The permissive substrate for the school estate exists, is maintained, and was built by a national energy laboratory whose GitHub organisation renamed itself out from under every citation in the sector. `18` permissive rows, every grant byte-read. And a `25,442★` MIT building editor that ships an MCP server is the single best starting point this base has ever filed for a physical-asset register.**
 
 **`18` permissive and weak-copyleft foundation rows, each naming the branch its grant was read from.** The register is the school estate — buildings, work orders, the deferred-maintenance backlog, the utility bill and the capital programme. 🟢 **The measuring and modelling layer is permissive end to end, again** (`T622`). 🔴 **The layer that *operates* the estate is copyleft or source-available without exception, and is named separately in `verticals/solutions.md`.**

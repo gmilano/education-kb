@@ -1,0 +1,15 @@
+shelf	line	cells	header_cells	dropped_cell_opens_with
+agents/trending.md	42513	6	5	🟢 **CORROBORATED `p276`, independently and at payload:** `LICENSE` rea
+agents/trending.md	49994	5	4	🔴 **SUPERSEDED `p276`:** enumerated at the same ref `60e422c` — the tr
+agents/trending.md	50028	4	3	🔴 **SUPERSEDED `p276`:** enumerated at the same ref `29208f2` — the tr
+agents/trending.md	56820	4	3	🟢 **CORROBORATED `p276`:** `pom.xml` `<licenses>` read first-hand — *T
+agents/trending.md	56979	3	2	🔴 **SUPERSEDED `p276`:** `package.json` l.66 declares **`"license": "M
+agents/trending.md	57399	5	4	🔴 **SUPERSEDED `p276`:** this is `CreveXTech/canvas-lms-mcp`, whose ab
+agents/trending.md	62487	5	4	🔴 **SUPERSEDED `p276`:** the tree serves **`debian/copyright`** — DEP-
+agents/trending.md	64191	6	5	🔴 **SUPERSEDED `p276` — AND THE ADVICE WAS WRONG.** `package.json` l.6
+repos/trending.md	32337	4	3	🔵 **REFINED `p276` — not a refutation; this row already named the `NOT
+repos/trending.md	40482	5	4	🔴 **SUPERSEDED `p276`:** `license.txt`, **GPL-3.0**, `39 890` B at the
+repos/trending.md	40525	5	4	🔴 **SUPERSEDED `p276`:** `License`, **MIT**, `1 079` B. Permissive. [`
+repos/trending.md	43966	6	5	🟢 **SUPERSEDED `p276` — the hypothesis on this very line was RIGHT and
+repos/trending.md	46890	4	3	🟢 **CORROBORATED `p276`:** `pom.xml` `<licenses>` Apache-2.0 (`distrib
+repos/trending.md	49979	5	4	🔴 **SUPERSEDED `p276`:** **`debian/copyright`**, DEP-5, **GPL-2+**, `1

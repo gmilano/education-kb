@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P326`–`P333` — added at p765 (2026-11-11)
+
+**Register: school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing, playground-equipment inspection (`ACTION p764-A`).
+
+🔴 **Five licence constraints govern every pattern below, and four of them are invisible on the repository page.** Read these before costing anything here.
+
+1. **`buildingSMART/IDS` is `CC BY-ND 4.0`** (`287 B` · `e0af6597dc57`, by reference). You may implement against the specification and author your own `.ids` files — those are your work. **You may not publish a modified or extended IDS specification**, so no "client IDS profile" as a derivative of the spec (`T637`, confirming `T618`).
+2. **`FireDynamics/fdsreader` is LGPL-3.0, not the `GPL-3.0` its GitHub page shows** — `LICENSE` is GPL-3.0 (`35,131 B` · `8a4c9551082a`) **plus** `LICENSE.LESSER` (`7,652 B` · `e3a994d82e64`). Linkable from closed code if kept replaceable (`T631`).
+3. **`TowerScout/TowerScout` is `CC BY-NC-SA 4.0`** at `LICENSE.TXT` — **NonCommercial, refused**, although it is the one artefact here that mentions schools (`T630`).
+4. **`pascalorg/editor`'s MIT grant covers the self-host path only** — `pascal mcp connect`, SQLite at `~/.pascal/data/pascal.db`, "nothing is uploaded". The hosted workspace at `editor.pascal.app/api/mcp` is account-bound and its terms could not be read (`T648`). **Every pattern below that uses it specifies local.**
+5. **`uchit/mcp-regulated-ai-compliance` is Apache-2.0 *plus* `CC BY 4.0` on its embedded knowledge base**, and `Aikenort26/geovisor-asbesto` is MIT *plus* `CC BY 4.0` on its geodata. **Both attribution obligations attach to the part that carries the value** (`T632`, `T644`).
+
+🔴 **And the gap every pattern has to fill itself: nothing on this register models a statutory interval.** A statutory duty is a recurring date **plus** a competent-person attribute **plus** an evidence artefact. Every open-source candidate models a *work order* — a task without a legal deadline. **This is the component Globant writes; everything else is assembly.**
+
+---
+
+### `P326` — The statutory compliance register for a multi-school trust (EMEA, England) — **8–11 weeks**
+
+**The buyer and the obligation.** A responsible body — academy trust, local authority or diocese — which **from autumn 2026 must make an annual return through *Manage Your Education Estate*** confirming it meets the School Estate Management Standards, against evidence it holds in spreadsheets, PDFs and contractors' portals (`T642`).
+
+**Wire it together:**
+- **Capture** — [`getodk/collect`](https://github.com/getodk/collect) (Apache-2.0, `10,494 B` · `d1ee81266b96` at `LICENSE.md`) on Android for the fire-door round, the asbestos condition check, the legionella temperature log. Offline by design, which is what a boiler room requires.
+- **Server** — [`getodk/central`](https://github.com/getodk/central) (Apache-2.0, byte-identical grant), self-hosted. 🔴 **Not `kobotoolbox/kpi`** (AGPL-3.0) and 🔴 **not `enketo/*`**, which is archived.
+- **Asset identity** — [`Siraj-zaki/spatial-map`](https://github.com/Siraj-zaki/spatial-map) (MIT, `1,086 B` · `987d3715cab8`) turns the trust's existing PDF/DWG floor plans into addressable 3D space, so "fire door FD-204, east corridor, block B" resolves to a location without a BIM programme. [`buildingSMART/bSDD`](https://github.com/buildingSMART/bSDD) (MIT) for classification.
+- **Requirement expression** — author `.ids` files against the IDS specification and read them with [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT). **Constraint 1 applies: your files, not a republished spec.**
+- **Work order + evidence** — [`liberusoftware/project-maintenance-laravel-filament`](https://github.com/liberusoftware/project-maintenance-laravel-filament) (MIT, `1,072 B` · `646ce5c70c0e`) for the task layer, [`OpenAEC-Foundation/open-pdf-studio`](https://github.com/OpenAEC-Foundation/open-pdf-studio) (LGPL-3.0) to hold and stamp the certificate.
+- **The interval engine — you write it.** A table of `{duty, instrument, interval, competent person, evidence type}` per statutory duty, driving the schedule. 🔴 **No open-source artefact anywhere encodes this for England and `knowledge.bsigroup.com` is refused at this tunnel, so the fire-door interval must come from the client's own fire risk assessment, not from this base.**
+- **The deliverable** — the *Manage Your Education Estate* return, pre-filled from evidence, with every unmet duty named.
+
+🔵 **Why this sequence.** The return is an attestation; the value is being able to make it truthfully. Build the evidence store first and the attestation falls out of it.
+
+---
+
+### `P327` — Public-domain-corpus statutory agent (North America) — **5–7 weeks**
+
+**The buyer and the obligation.** A US district safety office owing New York's annual **Fire and Building Safety Report**, or Florida's **certification to the State Fire Marshal** under Statute 1013.12 by a certified inspector (`T645`).
+
+**Wire it together:**
+- **Corpus** — fork [`dtjohnson83/osha-mcp`](https://github.com/dtjohnson83/osha-mcp) (MIT) and keep its architecture exactly: `scripts/ingest-standards.ts` pulls `29 CFR 1910` and `1926` **from eCFR** into self-hosted Supabase. 🟢 **US federal regulation carries no copyright, so there is no vendor and no per-query cost.**
+- 🔴 **Do not substitute [`contextkits/osha-compliance-assistant`](https://github.com/contextkits/osha-compliance-assistant).** Its MIT grant covers a thin client against a metered API — Sandbox `10`/day, Developer `$79`/mo, Team `$199`/mo, Enterprise `$499`/mo. Same licence, entirely different cost structure (`T639`).
+- **State layer** — the state instrument is not federal and not in eCFR. Encode New York's and Florida's requirements as your own interval table (constraint: the gap above).
+- **Capture and evidence** — `getodk/collect` + `getodk/central` (Apache-2.0) as in `P326`; [`SafetyMP/Autonomous-EHS-Management`](https://github.com/SafetyMP/Autonomous-EHS-Management) (Apache-2.0, `10,831 B` · `1f28d90fd142`) for the incident → verified-CAPA loop the fire marshal's deficiency notice becomes.
+- **The deliverable** — the filed report, plus a defensible audit trail from each assertion to the inspection record behind it.
+
+🔵 **Why this is the cheapest version of this pattern in any region**: the law is free to obtain, so the whole budget goes into the interval engine and the filing.
+
+---
+
+### `P328` — Asbestos management plan, remote-first (EMEA + LATAM) — **6–8 weeks**
+
+**The buyer and the obligation.** A duty holder under CAR 2012 who must identify, locate, condition-assess and manage asbestos across an estate in which **any building predating 2000 is presumed to contain it** and around four in five schools do — with **no national register**, because the government rejected one in April 2026 (`T642`).
+
+**Wire it together:**
+- **Remote triage** — [`DINFO-UniFI/RoofClassify`](https://github.com/DINFO-UniFI/RoofClassify) (🔴 **GPL-2.0**, `18,092 B` · `8177f9751321`) identifies asbestos roofing from satellite imagery. **The only artefact on earth that does this.** 🔴 Copyleft: run it as a **separate, unmodified process behind an API boundary** to triage which roofs get a surveyor; do not link it into the deliverable.
+- **The register itself** — model it on [`Aikenort26/geovisor-asbesto`](https://github.com/Aikenort26/geovisor-asbesto) (MIT + **CC BY 4.0 on the geodata**), a working municipal public asbestos geoviewer from Cartagena de Indias with a national `BPIN` investment code. 🟢 **Proof that a public buyer will publish this openly when it has somewhere to put it.** Constraint 5 applies to the data.
+- **Survey capture** — `getodk/collect` (Apache-2.0) with a form per the CAR 2012 fields: location, material type, condition score, risk assessment, management action, review date.
+- **Document extraction** — a school's asbestos history is in old survey PDFs. `open-pdf-studio` (LGPL-3.0) plus your own extraction; 🔴 `Ramki-K/asbestos-material-detection` does OCR material extraction **for asbestos registers** and has **no grant** across `32` paths — read it, do not ship it.
+- **The deliverable** — a live asbestos register with a review-date engine, and a remote-triage ranking that tells the client which surveys to buy first.
+
+🔵 **The commercial argument writes itself**: the government declined to build the national register, so each responsible body owns the problem individually, and remote triage is the only way to prioritise a 30-school estate without 30 surveys.
+
+---
+
+### `P329` — Legionella water-safety scheduling, stated with its one refusal — **4–6 weeks**
+
+**The buyer and the obligation.** The duty holder's water-safety plan: risk assessment by a competent person, temperature monitoring, sampling, and review on a stated interval.
+
+**Wire it together:**
+- **Capture** — `getodk/collect` (Apache-2.0) for the monthly temperature round and sampling log, offline. [`DougTrier/trier-os`](https://github.com/DougTrier/trier-os) (MIT, `1,067 B` · `4b3d1aa45cfe`) is the right model for **scan-to-execute**: scan the outlet's tag, get its due checks.
+- **Asset identity** — outlets and tanks as addressable assets via `spatial-map` (MIT) + `bSDD` (MIT).
+- **Interval engine** — you write it. 🔴 **This base could not reach HSE's ACOP L8 to confirm the review interval** (`www.hse.gov.uk` refused at this tunnel); one secondary source says two years or on system change. **Take the interval from the client's own risk assessment and record its provenance in the system.**
+- 🔴 **The one artefact you must not ship.** [`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout) identifies cooling towers from aerial imagery — the built-environment legionella pathway, used by real health departments, and **the only artefact on this register that mentions schools at all**. It is **`CC BY-NC-SA 4.0`**. **Refused for a paid deliverable.** 🟢 Usable as evidence in a pro-bono or research framing, and cite it properly.
+- 🔵 **And know what you will find if you search for more**: `legionella` returns `153` repositories of which `24` in the top `30` are *Legionella pneumophila* genomics. **There is no second built-environment artefact to find** (`T628`).
+
+---
+
+### `P330` — Fire-engineering evidence for a non-standard school building — **6–9 weeks**
+
+**The buyer.** A trust or district with a building whose fire strategy cannot be read off a code table — an atrium, a converted hall, a phased evacuation.
+
+**Wire it together:**
+- **Simulation** — [`bewygs/pycfast`](https://github.com/bewygs/pycfast) (MIT, `1,081 B` · `a2b2b1d21c9a`) drives the **NIST CFAST** zone model, with [`bewygs/cfast-bin`](https://github.com/bewygs/cfast-bin) (MIT) supplying the binaries as a wheel — **the deployment half, and both are MIT.**
+- **Reading full-physics output** — [`FireDynamics/fdsreader`](https://github.com/FireDynamics/fdsreader). 🟢 **Constraint 2: this is LGPL-3.0, not GPL-3.0 as its page says**, so it may be linked from closed code if kept replaceable. **This single two-file read is what makes the pattern deliverable at all.**
+- **Geometry** — `pascalorg/editor` (MIT) **on the local self-host path only** (constraint 4), with its MCP server giving an agent the model; `ThatOpen/engine_web-ifc` (MPL-2.0) for IFC I/O, `opensourceBIM/BIMsurfer` (MIT) to show it.
+- **Escape routing** — [`Sergiorsantana/rota-segura`](https://github.com/Sergiorsantana/rota-segura) (MIT, Brazil) computes escape routes for an arbitrary building; small, permissive, and the right starting point.
+- 🔴 **Not [`aamks/aamks`](https://github.com/aamks/aamks)** (GPL-3.0) in the deliverable, though it is the only probabilistic building fire-risk framework in open source — run it as a separate unmodified process if you need it.
+- **The deliverable** — a fire strategy with reproducible simulation evidence attached to the asset register, so the next inspection starts from it.
+
+---
+
+### `P331` — The university / college core-facility compliance system — **7–9 weeks**
+
+**The buyer.** A university estates office, which unlike a school district already runs a facility-booking and recharge system and needs compliance attached to it rather than beside it.
+
+**Wire it together:**
+- **The spine** — [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) (MIT, `1,085 B` · `97448209d29a`, pushed `2026-11-11`). **Northwestern University's core facility management system, MIT, actively maintained** — the only *education-sector* facility system on this register with a permissive grant. Extend it; do not replace it.
+- **Compliance layer** — `getodk/central` (Apache-2.0) for inspection capture, keyed to NUcore's existing facility and instrument records.
+- **Accessibility duties** — [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) (MIT, `1,059 B` · `2b47d728e281`) is a standard for describing the accessibility of the **physical** world. **Accessibility is itself a statutory estate duty and this is the only schema for it.**
+- **Asset model** — `FreeCAD` (LGPL-2.1) or `pascalorg/editor` (MIT, local) where drawings exist; `waceinc/vexplor-aas` (Apache-2.0, `11,357 B` · `b40930bbcf80`) where plant has an Asset Administration Shell.
+- 🔵 **Reference implementations to read, not ship**: [`braedonsaunders/beaconhs`](https://github.com/braedonsaunders/beaconhs) (AGPL-3.0) is functionally the closest thing to the target — incidents, inspections and training records in one system. Read its data model; its grant forbids shipping it.
+
+---
+
+### `P332` — The district-scale audit return (APAC, India) — **5–7 weeks**
+
+**The buyer and the obligation.** A District Chief Education Officer who, per **proceedings of 7 May 2026**, must complete a safety and infrastructure audit **in all schools before the June reopening**, benchmarked on the *School Child Safety Handbook 2024-2025*, and report back to the Directorate — plus the mid-2026 circulars requiring schools to self-audit against the *Manual of Safety & Security in School* and report deficiencies (`T643`).
+
+**Wire it together:**
+- **Capture at district scale, offline** — `getodk/collect` + `getodk/central` (Apache-2.0), or [`dimagi/commcare-android`](https://github.com/dimagi/commcare-android) (Apache-2.0, `11,341 B` · `775622d51047`) where an independent lineage is preferred. **The handbook becomes the form; the form is the audit.**
+- **Statutory-reference validation** — [`PerryLink/dsh-eia-guide-check`](https://github.com/PerryLink/dsh-eia-guide-check) (Apache-2.0, `11,339 B` · `9dac4ebe34dc`) is the closest artefact anywhere to a **guideline-name-and-current-standard cross-checker**. Adapt its shape to NBC Part 4 Group B occupancy and the CBSE SARAS document set.
+- **Fire reasoning** — [`buptlg/fireagent`](https://github.com/buptlg/fireagent) (MIT, `77★`): evidence-grounded retrieval with **conservative refusal when evidence is weak**, and scene routing that already includes `campus`. 🟢 **The highest-starred permissive on-register agent anywhere, and the refusal behaviour is the right default for a statutory finding.**
+- 🔵 **Count it once.** [`lucksmiler-A1/Hazard-Image-Analysis-Agent`](https://github.com/lucksmiler-A1/Hazard-Image-Analysis-Agent) is the same artefact — a copy whose grant differs by one trailing space (`T640`).
+- **Work order** — `liberusoftware/project-maintenance-laravel-filament` (MIT).
+- **The deliverable** — the district's return to the Directorate, with the per-school deficiency list that the circulars require, and the **fire safety certificate and building safety certificate** status per school for SARAS.
+
+---
+
+### `P333` — The grant-clearance instrument, as a reusable deliverable — **2–3 weeks**
+
+**The buyer.** Any studio engagement that will ship open-source components, which is all of them. This pattern exists because **this pass's own instrument was wrong five times before it was right** (`T646`).
+
+**Wire it together:**
+- **The classifier** — `ingest/p765-grant-classifier.py` on this base. It anchors the licence family on the **title line**, confirms with discriminator clauses, accepts incorporation by reference, and reads composite and restriction flags from the payload's **tail only**.
+- **The path set** — `32` licence-family paths crossing the capitalisation of **stem and extension** (`License.txt`, `LICENSE.TXT`), `16` language manifests on failure, and `COPYING.LESSER` / `COPYING.LIB` / `LICENSE.LESSER` on any GPL title line.
+- **The absence rule** — 🟢 **`ACTION p765-A`: before publishing "no licence", read the README's own License section.** One fetch; it is what recovered `TowerScout`'s NonCommercial grant after `32` paths and `16` manifests came back empty.
+- **The liveness rule** — 🟢 **`ACTION p765-B`: a payload fetch proves the bytes, never the address.** Batch `10` `repo:` qualifiers per `search/repositories` call and set-difference the result; then re-probe individually, because `422` (absent) and `200` + `total_count:0` (present but unindexed) are **different facts** (`T636`).
+- **What it refuses to do** — key a licence on a byte count. This pass read Apache-2.0 at **`9` distinct sizes** spanning `1,961` bytes and AGPL-3.0 at **`8`**, and found **five sizes carrying more than one grant text** (`T632`).
+
+🔵 **Why it is a deliverable and not a chore.** Of `72` addresses written this pass, the platform's own licence index was **wrong or silent on five that mattered**: a NonCommercial grant, a NoDerivatives specification, a ShareAlike agent skill, a GPL-labelled LGPL library, and two composite payloads whose second grant covered the data rather than the code. **Each one of those five would have shipped.**
+
 ## 🆕 `P318`–`P325` — added at p764 (2026-11-11)
 
 **Register: the school estate** — the buildings, the work orders, the deferred-maintenance backlog, the utility bill and the capital programme. Every component named below was byte-read for its grant on `2026-11-11` and every address resolved.

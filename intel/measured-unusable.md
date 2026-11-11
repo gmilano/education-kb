@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p765` — `2026-11-11` — **🔴 FIVE ROWS WHERE THE PLATFORM'S LICENCE INDEX WAS WRONG OR SILENT, AND ALL FIVE WOULD HAVE SHIPPED. 🔴 A NONCOMMERCIAL GRANT HIDDEN BY AN UPPERCASE FILE EXTENSION. 🔴 A STANDARDS BODY THAT MOVED ITS CODE TO PRIVATE REPOSITORIES. 🟢 AND ONE ROW THAT MOVED THE OTHER WAY — A GPL-LABELLED LIBRARY THAT IS ACTUALLY LGPL AND IS THEREFORE USABLE.**
+
+Every row below was byte-read on `2026-11-11` from the `default_branch` derived from `search/repositories`, and every family was determined by **operative clause text**, never by byte count (`ingest/p765-grant-classifier.py`). Register: school-estate safety and statutory compliance (`ACTION p764-A`).
+
+### 🔴 `765-A` — `TowerScout/TowerScout`: NonCommercial, hidden from `32` licence paths by one uppercase extension
+
+[`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout) · `21★` · branch `main` · index **`NOASSERTION`**.
+
+It identifies cooling towers from satellite and aerial imagery for Legionnaires' disease outbreak investigation, is used by local health departments, and is published with a peer-reviewed paper. On this register it is the **only** artefact addressing the built-environment legionella pathway rather than the bacterium, and the **only** one of `15` agent READMEs that says `school` — four times.
+
+**Grant: `CC BY-NC-SA 4.0` · `20,843 B` · `5b8e7938e1b5` · at `LICENSE.TXT`.**
+
+🔴 **Verdict: refused for any paid deliverable.** NonCommercial, and ShareAlike on top.
+🔴 **How it was nearly missed.** `32` licence-family paths and `16` manifests returned nothing. `LICENSE.txt` is a `404` at this address; `LICENSE.TXT` is a `200`. **`raw.githubusercontent.com` is case-sensitive on the extension as well as the stem** — `INS-003` was right and `ACTION p764-B`'s widening was still too narrow (`T630`).
+🟢 **How it should have been caught in one fetch**: the README's own `## License` section names the licence and links the file. **`ACTION p765-A`.**
+
+### 🔴 `765-B` — `buildingSMART/IDS`: NoDerivatives on the one component that expresses a statutory requirement
+
+[`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) · `333★` · branch **`development`** · index **`NOASSERTION`**.
+
+**Grant: `CC BY-ND 4.0`, by reference · `287 B` · `e0af6597dc57`.** 🔵 **`T618`'s finding, re-read this pass and reproducing byte for byte one pass later.**
+
+🔴 **Verdict: the specification may not be adapted or republished changed**, so a national or client-specific *profile of IDS* presented as a derivative of the spec is refused — `T618`'s ministry warning.
+🟢 **What this pass adds is the scope line, because the obvious reading is wrong in both directions.** An `.ids` document you author that conforms to the spec is **your own work, not a derivative of the standard's text**. Implement against it, author your own, never republish it changed. The MIT reader this base already holds, [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp), remains the right component.
+
+### 🔴 `765-C` — `arrley/whs-professional-skill`: ShareAlike on an agent skill, and the index said nothing
+
+[`arrley/whs-professional-skill`](https://github.com/arrley/whs-professional-skill) · `4★` · branch `main` · index **`NOASSERTION`**.
+
+An agent skill for AU/NZ Work Health and Safety professionals whose industry coverage includes education.
+
+**Grant: `CC BY-SA 4.0` · `3,267 B` · `1aa5bca8c8b9`.**
+
+🔴 **Verdict: refused for a proprietary deliverable.** ShareAlike means a skill derived from it must itself be ShareAlike — which reaches the deliverable, not just the component. 🔵 **The pattern across `765-A`, `765-B` and `765-C` is the same and it is `ACTION p761-C`'s point sharpened: `NOASSERTION` is not "licence unknown", it is "the index declined", and on this register it declined on three grants that each forbid something a client would pay for.**
+
+### 🔴 `765-D` — `1EdTech/caliper-js`: not restricted, **withdrawn**
+
+`1EdTech/caliper-js` · cited **`11` times** on this base · **`422`** on the search channel · `raw` `404`.
+
+A surviving third-party fork carries the notice: *"1EdTech will be moving Caliper to private repositories on June 1"*.
+
+🔴 **Verdict: unavailable, and unlike every other row here that is permanent.** A restricted grant can be worked around; a private repository cannot. 🔵 **This is a different failure class from `765-B` and the harder one**: `765-B` is a standards body restricting what you may do with its text, `765-D` is a standards body removing the text. **Both belong to `T637`'s finding that the standards bodies are this register's chokepoint.**
+
+### 🔴 `765-E` — two composite payloads whose second grant covers the data, not the code
+
+| Repository | Family (title + clauses) | Second grant, in the payload's tail | Why it matters |
+|---|---|---|---|
+| [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) `1★` | **Apache-2.0** · `12,227 B` · `6828b74db122` | **`CC BY 4.0`** on the embedded knowledge base, plus a *"NOT LEGAL ADVICE"* notice; the canonical Apache `APPENDIX` is **absent** | 🔵 **Usable with an attribution obligation on the regulation knowledge base — which is the entire value of the artefact.** The index reports plain `Apache-2.0` |
+| [`Aikenort26/geovisor-asbesto`](https://github.com/Aikenort26/geovisor-asbesto) `1★` | **MIT** · `1,232 B` · `642b1cca083e` | **`CC BY 4.0`** on the geographic data in `public/data` and `public/tiles`, **stated in Spanish** | 🔵 **Usable with attribution. For an asbestos geoviewer the data *is* the deliverable**, so the CC term is operative and the MIT grant is not the whole story. The index reports `NOASSERTION` |
+
+🔴 **The second row is also the payload that defeated this pass's own composite detector**, because MIT has no `END OF TERMS AND CONDITIONS` to mark where the grant ends and because the second grant is named in Spanish prose rather than by a `creativecommons.org` URL. **`ACTION p765-C`: test any text detector against a non-English instance before trusting it** (`T646`, defect `D4`).
+
+### 🟢 `765-F` — the row that moved the other way: a GPL-labelled library that is LGPL and is therefore usable
+
+[`FireDynamics/fdsreader`](https://github.com/FireDynamics/fdsreader) · `79★` · branch `master` · index **`GPL-3.0`**.
+
+| Path | Bytes | `sha256₁₂` | Family |
+|---|---|---|---|
+| `LICENSE` | `35,131` | `8a4c9551082a` | GNU **General** Public License v3 |
+| `LICENSE.LESSER` | `7,652` | `e3a994d82e64` | GNU **Lesser** General Public License v3 |
+
+**GPL-3.0 plus a Lesser-permissions file is LGPL-3.0, and GitHub's index is wrong.**
+
+🟢 **Verdict: usable.** Under the index's reading, linking the only fire-engineering data reader on this register into a proprietary deliverable would infect the deliverable. Under the payload it does not, provided the library stays replaceable.
+🔵 **`ACTION p764-B`'s `COPYING.LESSER` clause paid out on its first use, and on a harder case than the one that prompted it**: `T619`'s `IfcOpenShell` is indexed `LGPL-3.0` **correctly**, so only a careless reader would have mis-graded it. Here **the platform itself is wrong** and the two-file read is the only thing that catches it (`T631`).
+
+### 🔵 `765-G` — recorded so it is not double-counted: a copy identified by one trailing space
+
+[`lucksmiler-A1/Hazard-Image-Analysis-Agent`](https://github.com/lucksmiler-A1/Hazard-Image-Analysis-Agent) (`1★`, MIT, `1,080 B`, `50f4fa4a7be0`) is a copy of [`buptlg/fireagent`](https://github.com/buptlg/fireagent) (`77★`, MIT, `1,079 B`, `523f007cf103`). Its README describes "FireAgent" and its grant names the same holder — `Copyright (c) 2026 FireAgent contributors`. `diff` returns one hunk: **a single trailing space on the copyright line.**
+
+🔵 **Three passes, three distinct one-character mechanisms that break a sha while preserving a grant** — `p761` a bracket-for-brace swap, `p763` a blank line added and a trailing newline stripped, `p765` a trailing space. **Corollary, and the half `ACTION p762-A` never stated: sha *inequality* does not prove independence any more than sha equality proves identity** (`T640`).
+
+### 🔴 `765-I` — `14` corrections that are in the file and have never been on the page
+
+Not a licence row, recorded here because the register this file keeps is *"measured and unusable"* and these are measurements rendered unusable by their own markup.
+
+**`14` data rows across `agents/trending.md` (`8`) and `repos/trending.md` (`6`) carry one cell more than their table's header**, and a markdown renderer drops the surplus. **In all `14` the dropped cell is `p276`'s correction** — `SUPERSEDED p276`, `CORROBORATED p276`, `REFINED p276`, including one reading *"AND THE ADVICE WAS WRONG"*.
+
+🟢 **Enumerated in `evidence/overwide-rows.2026-11-11-p765.tsv`**; the substitute gate now fails only on new over-wide rows, so the debt is bounded. 🟢 **`ACTION p765-G` repairs it additively — add the missing column, never rewrite the correction** (`T649`).
+
+🔵 **And this pass's own control for it was wrong first**: splitting rows on every `|` produced `58` false positives, because a cell may legitimately contain a pipe inside an inline-code span or escaped as `\|`. **This base had documented that exact failure class at `672-E` — "the naive implementation is unusable" — in the very file being checked.** Cells are now split on unescaped pipes outside code spans, and `58` became `14` true findings (defect `D6`, `T646`'s family).
+
+### 🔴 `765-H` — `11` addresses published as absences, and the rule that would have made them `10`
+
+After `32` licence paths and `16` manifests each, and with no README licence statement found: `Batool-Jaber/ifc-compliance-checker` (the closest artefact on this register to what the patterns need) · `Gariknik/FireCodeCheckerAgent` · `mightyoung/young-agent-app` · `phoenixgit321/ai-property-safety-inspection` · `itmicus/cmdbuild_docker` (`125★`, and the only resolvable packaging of `openMAINT`) · `chowtao123-design/shopfloor-cmms` · `Ramki-K/asbestos-material-detection` · `ryjord/Argus` · `kerwinarlan/dorm-evacuation-signage` · `Safety-Bin/ehs-system` · `rhyspaul192/AsTrak`.
+
+🔴 **These are absences of a published grant, not licence states.** `ACTION p761-C` holds: none is recorded as "unlicensed" and none may be used.
+🟢 **A twelfth was refuted mid-pass** — `765-A` — which is why the README read is now a rule and not a courtesy.
+
 ## 🆕 `p764` — `2026-11-11` — **🔴 THE THREE MOST-STARRED CANDIDATES ON THE SCHOOL-ESTATE REGISTER ARE EACH UNUSABLE FOR A DIFFERENT REASON, ALL THREE ARE INDEXED `NOASSERTION`, AND NONE OF THE THREE REASONS IS VISIBLE WITHOUT OPENING THE PAYLOAD. 🔴 ONE `1,620★` PLATFORM HAS NO GRANT AT `42` PROBED ADDRESSES.**
 
 Every row below was byte-read on `2026-11-11` from the `default_branch` derived from the search channel. Stars are the platform's own count on the same day.

@@ -4,6 +4,336 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p765` (researched 2026-11-11) — `T627`–`T650`
+
+**The register is school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing and playground-equipment inspection. `ACTION p764-A` named it and this pass built it. It is a different buyer from `p764`'s condition register (risk and compliance, not capital planning) and a different cadence (dated statutory intervals, not bond cycles).
+
+**`73` addresses probed for a grant · `61` licence payloads byte-read with length and `sha256₁₂` · `32` licence-family paths per address, now crossing the capitalisation of the **extension** as well as the stem · `16` language manifests on failure · `5` `COPYING.LESSER`-family paths whenever a GPL title line was seen · `15` agent READMEs fetched and counted at `125,076` bytes · `78` supply queries on `search/repositories` · `563` batched liveness calls and `377` individual re-probes across the whole base · every `default_branch` derived from the search channel, none guessed.**
+
+## `T627` — the register, and the measurement that says it was empty
+
+Before this pass the register was nil on every shelf. Counted across all eleven shelves with `grep -oiF`:
+
+| Token | Count | Token | Count |
+|---|---|---|---|
+| `fire safety` | **`0`** | `RIDDOR` | **`0`** |
+| `fire risk assessment` | **`0`** | `building safety` | **`0`** |
+| `EICR` | **`0`** | `golden thread` | **`0`** |
+| `water hygiene` | **`0`** | `duty holder` | **`0`** |
+| `electrical safety` | **`0`** | `evacuation drill` | **`0`** |
+| `gas safety` | **`0`** | `fire alarm` | **`0`** |
+| `lift inspection` | **`0`** | `sprinkler` | **`0`** |
+| `PAT testing` | **`0`** | `permit to work` | **`0`** |
+| `playground safety` | **`0`** | `contractor management` | **`0`** |
+| `radon` | **`0`** | `indoor air quality` | **`0`** |
+| `accident reporting` | **`0`** | `CO2 monitoring` | **`0`** |
+
+🔴 **And the six tokens that were *not* zero are the more exact finding.** `asbestos` `2` · `legionella` `2` · `fixed-wire` `2` · `fire door` `1` · `playground inspection` `1` · `statutory compliance` `1` — **every one of the nine occurrences sits inside `intel/open-gaps.md` lines `25` and `29`, which are `p764`'s own text naming the register it declined to build.** Not one traces to a shelved row. The register was at `0` as data and at `9` as a promise.
+
+## `T628` — 🔴 `INS-005`: on this register plain-language search does not return a noisy answer, it returns **another discipline**
+
+`T592` and `INS-002` established that `in:name` is not a safe supply denominator. This register shows a harder case: three of its five statutory vocabulary terms are **homographs whose GitHub majority belongs to a different field entirely.** Measured on the top `30` by stars for each query:
+
+| Query | `total_count` | What the top `30` actually are |
+|---|---|---|
+| `legionella` | `153` | **`24`** are *Legionella pneumophila* genomics, sequence-based typing and microbial ecology (`UPHL-BioNGS/Grandeur`, `tseemann/legsta`, four `CDCgov/*` pipelines, `phac-nml/legiovue`). **Exactly `1`** addresses the built-environment pathway — [`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout) at `21★`. The remainder include a heat-pump Modbus integration and an air-purifier spam page |
+| `fire risk assessment` | `174` | **`22`** are wildfire and forest-fire modelling (`steidani/FireDanger`, `IAM-FIRE`, a dozen student wildfire-ML projects). The **top hit by stars is floor-plan computer vision** (`whchien/deep-floor-plan-recognition`, `81★`). **Exactly `1`** is building fire engineering — [`aamks/aamks`](https://github.com/aamks/aamks) at `23★` |
+| `playground inspection` | `46` | **`29 / 30`** are software playgrounds, sandboxes, debuggers and REPLs. **`0`** concern playground equipment |
+
+🔴 **The consequence is stated precisely: `153`, `174` and `46` are not supply figures for this register and must never be published as such.** A denominator is only a denominator once the discipline has been checked. 🔵 **This is `INS-002`'s class arriving through a different door**: there `in:name` tokenised a hyphen, here the English word is simply owned by another science.
+
+## `T629` — 🟢 the usable denominators, topic-qualified, for this register
+
+`topic:` remains the one safe qualifier (`INS-002`). Measured this pass:
+
+| Qualifier | Repositories | Qualifier | Repositories |
+|---|---|---|---|
+| `topic:inspection` | `403` | `topic:cmms` | `135` |
+| `topic:facility-management` | `147` | `topic:fire-safety` | `100` |
+| `topic:maintenance-management` | `92` | `topic:ehs` | `50` |
+| `topic:work-order` | `23` | `topic:health-and-safety` | `13` |
+| `topic:legionella` | `12` | `topic:asbestos` | **`5`** |
+
+🔴 **`topic:asbestos` at `5` and `topic:legionella` at `12` are the real supply.** Against them, `topic:compliance` returns `10,822` and `topic:audit` `6,139` — both of which are, on inspection, the software-and-security compliance register, not the building one. 🔵 **The ratio `5 : 10,822` is this register's structural fact**: the word is crowded, the subject is not.
+
+## `T630` — 🔴 `INS-003` was right and still too narrow: capitalisation must cross the **extension**
+
+`ACTION p764-B` widened the path set to cross capitalisation after Berkeley Lab's grant was found at `License.txt`. This pass built `32` paths on that instruction — and still missed a grant.
+
+[`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout) (`21★`, index `NOASSERTION`) returned **no payload across `32` licence paths and `16` manifests**. Its grant is at **`LICENSE.TXT`** — uppercase *extension*, which was not in the set. `LICENSE.txt` returns `404` at the same address; `LICENSE.TXT` returns `200`, `20,843 B`, `5b8e7938e1b5`.
+
+🔴 **And the verdict it was hiding is the one that matters: `CC BY-NC-SA 4.0` — NonCommercial.** The platform's index said `NOASSERTION`; the truth is a grant that forbids the delivery model. 🟢 **The recovery was free and should have been first**: the README's own `## License` section names the licence and links the file. **`ACTION p765-A`: when no payload is found, read the README's License section *before* publishing an absence.** One fetch, and this pass would not have needed a second pass over the same address.
+
+## `T631` — 🔴 `T619`'s `COPYING.LESSER` rule paid out again, and this time it corrected **the platform's index**, not just a one-file read
+
+`p764` raised `INS-004` on [`IfcOpenShell/IfcOpenShell`](https://github.com/IfcOpenShell/IfcOpenShell) and `ACTION p764-B` carried it forward: on a GPL payload, probe `COPYING.LESSER` before recording a verdict. It fired once this pass, on [`FireDynamics/fdsreader`](https://github.com/FireDynamics/fdsreader) (`79★`, branch `master`), the reader for Fire Dynamics Simulator output:
+
+| Path | Bytes | `sha256₁₂` | Family |
+|---|---|---|---|
+| `LICENSE` | `35,131` | `8a4c9551082a` | GNU **General** Public License v3 |
+| `LICENSE.LESSER` | `7,652` | `e3a994d82e64` | GNU **Lesser** General Public License v3 |
+
+**GPL-3.0 plus a Lesser-permissions file is LGPL-3.0.**
+
+🔴 **The advance on `T619` is in who was wrong.** `IfcOpenShell`'s own index reads `LGPL-3.0` correctly — only a one-file *reader* would have mis-graded it. **GitHub's index reports `fdsreader` as `GPL-3.0`.** So this is the first instance on this base where the two-file read corrects **the platform**, not merely a careless instrument, and the only check that catches it is the one `p764` wrote.
+
+🟢 **It moves a row from refused to usable.** Under `GPL-3.0`, linking `fdsreader` into a proprietary deliverable infects the deliverable; under LGPL-3.0 it does not, provided the library stays replaceable. **The only fire-engineering data reader on this register changed verdict because one extra path was probed.** 🔵 `e3a994d82e64` is the same payload `T619` recorded on `IfcOpenShell`, so it was recognised the instant it was read — the defect was never in reading it, only in asking.
+
+## `T632` — 🔴 `ACTION p764-E` is settled: `9` Apache sizes, `8` AGPL sizes, and `5` sizes that hold more than one grant
+
+The size-and-sha heuristic for licence identity is dead, and this pass can say so with a census rather than an argument. Every row below was classified by **operative clause text**, not by length:
+
+| Family | Payloads | Distinct sizes | Range | Spread |
+|---|---|---|---|---|
+| Apache-2.0 | `11` | **`9`** | `10,266` – `12,227 B` | **`1,961 B`** |
+| AGPL-3.0 | `12` | **`8`** | `33,709` – `34,523 B` | `814 B` |
+| MIT | `25` | **`19`** | `1,042` – `1,232 B` | `190 B` |
+| GPL-3.0 | `5` | `3` | `35,131` – `35,149 B` | `18 B` |
+
+🔴 **And five sizes carry more than one distinct grant text in this pass alone:** `1,068 B` (`9f2d6a2cf5be`, `68c2844b7dc2`) · `1,070 B` (`294b8870e941`, `44b6757fb430`) · `1,072 B` (`29b0c50c3abf`, `646ce5c70c0e`) · `1,081 B` (**three** — `3ec492c23fbe`, `a2b2b1d21c9a`, `d2118fa312c7`) · `11,357 B` (`c71d239df917`, `b40930bbcf80`). In every case the differing bytes are the copyright holder's name. **`ACTION p762-A` re-proved five more times, and for the first time at scale in the MIT family.**
+
+🟢 **The replacement instrument is committed, not described**: `ingest/p765-grant-classifier.py` anchors the family on the title line, confirms it with discriminator clauses, accepts incorporation by reference, and reads composite and restriction flags from the payload's tail only.
+
+## `T633` — 🟢 `ACTION p761-E` closed with a mechanism: `getodk` is Markdown-decorated Apache-2.0
+
+`p761-E` has been open since it was raised: `getodk`'s `NOASSERTION` had no explanation and `p764` explicitly declined to claim one. It is explained now.
+
+[`getodk/collect`](https://github.com/getodk/collect) (`804★`) carries its grant at **`LICENSE.md`**, `10,494 B`, `d1ee81266b96`, and the first line is:
+
+```
+Apache License
+==============
+_Version 2.0, January 2004_
+_&lt;<http://www.apache.org/licenses/>>_
+```
+
+**The Apache text is present and complete; it has been reformatted as Markdown** — a setext underline for the heading, italics around the version line, and HTML-escaped angle brackets around the URL. The index matches canonical text and declines. 🟢 **Confirmed across the organisation**: [`getodk/central`](https://github.com/getodk/central) is byte-identical (`10,494 B`, `d1ee81266b96`) and [`getodk/javarosa`](https://github.com/getodk/javarosa) differs by one byte (`10,493 B`, `c93c2d53df30`). 🔵 **This is `T588`'s family — `NOASSERTION` on bytes that are a real grant — with the cause finally named: not an attribution line, a Markdown renderer.**
+
+## `T634` — 🔴 the title-less MIT census narrows `p764`'s own proposed mechanism
+
+`p764` offered a mechanism for the DSSG `NOASSERTION` case: *one attribution line prepended above `MIT License` is enough for the index to decline.* This pass read four MIT payloads with **no title line at all** — the file opens on the copyright notice:
+
+| Repository | Bytes | `sha256₁₂` | First line | Index |
+|---|---|---|---|---|
+| [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) | `1,085` | `97448209d29a` | `Copyright (c) 2010 Jeffrey Weiss and Northwestern University` | 🟢 `MIT` |
+| [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) | `1,059` | `2b47d728e281` | `Copyright (c) 2017 Sozialhelden e.V` | 🟢 `MIT` |
+| [`ThatOpen/web-ifc-viewer`](https://github.com/ThatOpen/web-ifc-viewer) | `1,054` | `68c9c1c6d1e7` | `Copyright (c) 2020-2022 IFC.js` | 🟢 `MIT` |
+| [`opensourceBIM/BIMsurfer`](https://github.com/opensourceBIM/BIMsurfer) | `1,042` | `ec1895358ea0` | `Copyright 2019 TNO` | 🟢 `MIT` |
+
+🔴 **All four are indexed `MIT` correctly.** So the missing title line is *not* sufficient to make the index decline, and `p764`'s mechanism is narrower than it was stated: whatever defeats the index in the DSSG case, it is not the absence of the words `MIT License`. 🔵 `p761-E`'s sibling question stays answered only for `getodk` (`T633`).
+
+## `T635` — 🔴 `INS-006`: a `200` from `raw.githubusercontent.com` is not proof that an address is current
+
+This is the defect that has let this base carry dead addresses for hundreds of passes, and it is two lines to state.
+
+**`raw.githubusercontent.com` follows an organisation or repository rename silently. The search channel does not.** Measured on three addresses:
+
+| Address as this base writes it | `repo:` on `search/repositories` | `raw.githubusercontent.com` | Current address |
+|---|---|---|---|
+| `openedx/edx-platform` | **`422`** | **`200`** (`master/README.rst`) | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) `8,231★` |
+| `snipe/snipe-it` | **`422`** | **`200`** (`master/LICENSE`) | [`grokability/snipe-it`](https://github.com/grokability/snipe-it) `15,168★` |
+| `NVIDIA/NeMo-Guardrails` | **`422`** | **`200`** (`main/README.md`) | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) `7,474★` |
+
+🔴 **Every verification this base has ever done by fetching a file would have scored all three green.** 🟢 **The working instrument is the one `p764` built**: `422` on `repo:<address>` plus a hit on `<name> in:name` or `org:<owner>`. **`ACTION p765-B`: liveness is a search-channel property; a payload fetch proves the bytes, never the address.**
+
+## `T636` — 🔴 `ACTION p764-C` discharged across the whole base, and `p764`'s own figure corrected
+
+`p764` asked for a scripted sweep for renamed organisations and estimated the exposure at *"`20` `NREL` mentions"*. Both halves needed correcting.
+
+🟢 **First, a cheaper instrument.** Multiple `repo:` qualifiers in one `search/repositories` query are OR'd, and an absent address does **not** fail the batch — it is simply absent from the results. So liveness is a set-difference at **`10` addresses per call**, a tenth of the cost of `T621`'s per-address probe. `563` calls covered the base.
+
+🟢 **Second, the census.** `5,621` distinct `github.com/<a>/<b>` addresses were extracted from the eleven shelves. **`50` were not repository addresses at all** — `topics/…`, `search/…`, `trending/…`, `repos/…` URL paths that the shape filter admitted, and all `50` were among the sweep's "missing", which is a defect in this pass's own instrument, found and removed before any number was published. Corrected denominator **`5,571`**:
+
+| Class | Count | Share |
+|---|---|---|
+| `LIVE` — returned by `repo:` | **`5,194`** | `93.2 %` |
+| absent or unindexed | **`377`** | `6.8 %` |
+
+🔴 **Third, the response classes, which the batched form conflates and an individual re-probe separates.** All `377` were re-probed one at a time:
+
+| Response | Count | Meaning |
+|---|---|---|
+| **`422 Validation Failed`** | **`229`** | the address does not resolve on the search channel — renamed, deleted or made private |
+| **`200` with `"total_count":0`** | **`148`** | the address resolves but the repository is **not in the search index** — it is *not* dead |
+
+🔴 **Fourth, a units correction to `p764`, which wrote that this base "held `20` of them".** Measured three ways, that figure matches none: `NREL` appears as a **token** `387` times, as an **address** in exactly **`2`** distinct forms — `NREL/EnergyPlus` and the literal ellipsis `NREL/...` used in prose — and `NREL/EnergyPlus` carries **`10`** mentions. **There is one real dead `NREL` address on this base, not twenty.** `ACTION p765-D` is sized against `229`, not against a token count. And the real exposure is elsewhere: **`openedx/edx-platform` is `422` and is cited `49` times**, while this base *also* already carries the live successor `openedx/openedx-platform` `147` times. **It has known the new address all along and never retired the old one.** The `377` absent addresses carry **`1,246` mentions** in total.
+
+🔵 **Resolved successors, each by `in:name` or `org:`:** `openedx/edx-platform` → `openedx/openedx-platform` (`8,231★`) · `microsoft/presidio` → [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) (`11,833★`) · `NVIDIA/NeMo-Guardrails` → [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) (`7,474★`) · `UCL-INGI/INGInious` → [`INGInious/INGInious`](https://github.com/INGInious/INGInious) (`243★`) · `NSoiffer/MathCAT` → [`daisy/MathCAT`](https://github.com/daisy/MathCAT) (`131★`, moved to the DAISY Consortium) · `IMSGlobal/openbadges-validator-core` → [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) (`61★`; `org:IMSGlobal` now returns **`1`** repository against `org:1EdTech`'s `46`). 🔴 **`trilogy-group/oneroster-ts` has no establishable successor** — two same-named repositories exist at `0★` and neither is provably the same code; it is recorded as absent with the successor unresolved.
+
+🔴 **One address resists both classes and is recorded as the anomaly it is:** `digitalcredentials/learner-credential-wallet` returns `422` on `repo:` while `learner-credential-wallet in:name` returns that exact `full_name` at `1★`, and `org:digitalcredentials` returns `92` repositories. The channel contradicts itself on one address. No story is offered.
+
+## `T637` — 🔴 the standards bodies are this register's chokepoint, and three of them closed in different ways
+
+Statutory compliance is a register where the code is cheap and **the law is the asset**. Measured across four standards bodies this pass:
+
+| Body | Instrument | What this pass measured |
+|---|---|---|
+| **buildingSMART International** | IDS — Information Delivery Specification, the computer-interpretable XML standard for *requiring* information of a model | 🔵 **`T618`'s finding, re-read and reproduced exactly**: [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) `333★`, index `NOASSERTION`, branch `development`, grant **by reference** at `287 B` / `e0af6597dc57` — **`CC BY-ND 4.0`, NoDerivatives**. Same bytes, same sha, one pass later |
+| **1EdTech** (formerly IMS Global) | Caliper analytics | `1EdTech/caliper-js` is **`422`** and cited `11` times here. A surviving third-party fork carries the notice: *"1EdTech will be moving Caliper to private repositories on June 1"*. **Withdrawn, not renamed** |
+| **BSI** | BS 8214, the fire-door code of practice | A paid standard. 🔵 **Verification blocked**: `knowledge.bsigroup.com` is refused at this tunnel |
+| **Saudi Building Code** | SBC 201-CC-2024 | [`Kaiiser-ai/sbc-mcp-server`](https://github.com/Kaiiser-ai/sbc-mcp-server) is MIT and states in its own README: *"The Saudi Building Code (SBC 201-CC-2024) content is **not included** in this repository due to copyright."* **Permissive server, absent corpus** |
+
+🔴 **What this pass adds to `T618` is the scope line, because the obvious reading is wrong in both directions.** NoDerivatives means a *modified or extended IDS specification* may not be published — so a "Globant statutory-compliance IDS profile" presented as a derivative of the spec is refused, which is `T618`'s ministry warning. 🟢 **It does not restrict IDS *files***: an `.ids` document you author that conforms to the spec is your own work, not a derivative of the standard's text, and the statutory intervals of `T642` and `T645` are exactly what such a file would encode. **Implement against it, author your own, never republish it changed** — and the MIT reader this base already holds, [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp), stays the right component.
+
+🔴 **The genuinely new reading here is `1EdTech`.** `T618` found a standards body restricting its grant; this pass finds one **withdrawing its code from public view entirely**, with the notice preserved only on a third-party fork. A restricted grant can be worked around. A private repository cannot.
+
+## `T638` — 🔴 the agent layer on this register has heard of schools even less than `p764`'s did, and the one artefact that has is the one with no grant
+
+`p764` counted `154,443` bytes of agent README on the estate register and found `school` **once**. This register is counted the same way: `15` READMEs, **`125,076` bytes**, fetched and counted rather than skimmed.
+
+| Token | Occurrences across all `15` agent READMEs |
+|---|---|
+| `school` | **`4`** — **all four in [`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout)**, the one artefact on the shelf whose grant is NonCommercial |
+| `campus` | `1` — [`buptlg/fireagent`](https://github.com/buptlg/fireagent), in a list of retrieval scenes (`campus, residential, industrial, construction`) |
+| `educat…` | `2` — one a copyright scope limit (*"for educational and research purposes"*), one an industry list item. **Neither is a use case** |
+| `classroom` · `pupil` · `student` · `teacher` · `k-12`/`k12` · `universit…` · `college` · `district` · `nursery` · `kindergarten` | **`0`** each |
+
+🟢 **As with `p764`, this is an addressable market and not a supply failure**: `8` of the `15` carry a grant usable in a proprietary deliverable. The education framing is the thing that does not exist, and it is the cheapest thing to add.
+
+## `T639` — 🟢 the one architecture on this register with no vendor in the data path, and the copyright asymmetry that places it
+
+Two MIT OSHA servers were read. They are the same idea and opposite deliverables.
+
+| Repository | Grant | Where the regulation comes from | Verdict |
+|---|---|---|---|
+| [`contextkits/osha-compliance-assistant`](https://github.com/contextkits/osha-compliance-assistant) `2★` | MIT, `1,068 B`, `9f2d6a2cf5be` | **A hosted API with an API key and published tiers: Sandbox `10` calls/day free, Developer `$79`/mo, Team `$199`/mo, Enterprise `$499`/mo** | 🔴 the MIT grant covers a **thin client**; the compliance knowledge is a metered subscription. `T584`'s vendor-portal class, in its sharpest form yet |
+| [`dtjohnson83/osha-mcp`](https://github.com/dtjohnson83/osha-mcp) `1★` | MIT, declared in `package.json` (`1,542 B`, `80c18d157945`) | **`npx tsx scripts/ingest-standards.ts  # Fetch from eCFR`** into a self-hosted Supabase, covering `29 CFR 1910` and `1926`, with `5` tools including `get_standard_text` | 🟢 **no vendor anywhere in the data path** |
+
+🔵 **The reason the second one can exist is jurisdictional, and it is the governing commercial fact of this register.** US federal regulation is a work of the United States government and carries no copyright, so the corpus can be ingested and redistributed. England's statutory content splits: HSE guidance is Crown copyright published under open terms, while the British Standards it points to (`BS 8214` for fire doors) are paid BSI products. Saudi Arabia's SBC is copyrighted and its own MIT server ships without it (`T637`).
+
+🔴 **So the same agent is buildable in North America, half-buildable in England, and not buildable from open sources in the Gulf — and the code licence tells you none of that.** 🔵 **Verification blocked and labelled**: `www.ecfr.gov`, `www.hse.gov.uk`, `www.flsenate.gov` and `knowledge.bsigroup.com` are all refused at this session's tunnel. **Four primary verifications blocked; every statutory interval and figure on these shelves this pass is marked search-sourced.**
+
+## `T640` — 🔴 a copy found by a single trailing space, and the third mechanism in three passes
+
+[`lucksmiler-A1/Hazard-Image-Analysis-Agent`](https://github.com/lucksmiler-A1/Hazard-Image-Analysis-Agent) (`1★`, MIT, `1,080 B`, `50f4fa4a7be0`) is **a copy of [`buptlg/fireagent`](https://github.com/buptlg/fireagent)** (`77★`, MIT, `1,079 B`, `523f007cf103`). Its README describes "FireAgent", and its grant names the same holder — `Copyright (c) 2026 FireAgent contributors`. `diff` returns exactly one hunk:
+
+```
+3c3
+< Copyright (c) 2026 FireAgent contributors
+---
+> Copyright (c) 2026 FireAgent contributors·
+```
+
+**One trailing space.** Recorded so the two are not counted as two agents.
+
+🔵 **Three passes, three distinct one-character mechanisms that break a sha while preserving a grant**: `p761` a bracket-for-brace swap, `p763` a blank line added and a trailing newline stripped, `p765` a single trailing space. **Corollary, and it is the half `ACTION p762-A` never stated: sha *inequality* does not prove independence any more than sha equality proves identity.**
+
+## `T641` — 🔴 there is no permissive statutory-compliance platform, and this is the third consecutive register to say so
+
+`14` platform-tier systems were byte-read. **`13` are AGPL-3.0 or GPL-3.0.** The single permissive one, [`vtellier/OpenMaintenance`](https://github.com/vtellier/OpenMaintenance) (Apache-2.0, `11,357 B`, `c71d239df917`), has **`2★`**.
+
+🔴 **And the vertical's own named platform is not on GitHub at all.** `openMAINT` is the facility-management vertical of CMDBuild and the obvious system of record here. Every `openmaint` address that resolves is a **third-party dockerisation** — `itmicus/cmdbuild_docker` (`125★`, no payload across `32` paths and `16` manifests), `rsilva4-zz/docker-openmaint` (`36★`, MIT **on the wrapper**), `chabala/docker-openmaint` (`10★`), `astmnk/docker-openmaint` (`2★`, archived), `bigdoods/openmaint` (`1★`, archived). **The platform is distributed off-platform and its grant cannot be read from here.**
+
+🟢 **`p757`'s law holds for a third register running**: `p757` found the system of record copyleft, `p762` found *"there is no permissive HRIS"*, and `p765` finds there is no permissive statutory-compliance system either. **Three registers, no counter-example. This is now a prior, not an observation.**
+
+## `T642` — EMEA: the statutory instrument is dated, the return is becoming digital, and the national register was refused
+
+🟢 **England is the most precisely specified school-estate compliance regime this base has measured.** The duty sits on the employer — local authority, governing body or academy trust — under the Health and Safety at Work Act 1974, the Management of Health and Safety at Work Regulations 1999, the Regulatory Reform (Fire Safety) Order 2005 and the **Control of Asbestos Regulations 2012**. Asbestos: any school built or refurbished **before 2000 must be presumed to contain it** until a specialist proves otherwise, and a 2019 DfE survey is reported as finding **around four in five schools** do.
+
+🟢 **The buyer's instrument now has a name and a date.** The DfE's second Condition Data Collection (**CDC2**) covers about **`22,000` school buildings**, added RAAC in 2021 and concludes in **2026**; responsibility for condition data moves to responsible bodies, with pilots in 2026–27 and national rollout from autumn 2027. **From autumn 2026 responsible bodies make an annual return through a new digital service, *Manage Your Education Estate*, confirming they meet the School Estate Management Standards.**
+
+🔴 **And the decisive negative: a parliamentary committee recommended a national digital asbestos register for schools and the government rejected it in April 2026.** RAAC is reported as confirmed in around **`1 %`** of schools and colleges.
+
+🔵 **What this means commercially**: the compliance *return* is being digitised centrally while the *evidence* behind it — the fire-door log, the asbestos register, the legionella sample — stays with thousands of responsible bodies and has no open system of record. 🔴 **All figures search-sourced; `www.hse.gov.uk` and the DfE primary pages are refused at this tunnel, and one consultancy source contradicts the CDC rollout timeline. Both readings are recorded; neither is adopted.**
+
+## `T643` — APAC is the mandate region and a real supply region, measured
+
+🟢 **India is the clearest mandate.** A Government Resolution dated **13 December 2025** makes the Ministry of Education's *Guidelines on School Safety and Security-2021* mandatory in one state, building on a 13 May 2025 resolution; directorate circulars in mid-2026 require schools to **physically audit themselves against the *Manual of Safety & Security in School* and report deficiencies**. In Tamil Nadu, proceedings of the Director of School Education dated **7 May 2026** direct every District Chief Education Officer to complete a school safety and infrastructure audit **before the June reopening**, benchmarked on the *School Child Safety Handbook 2024-2025*, with each district reporting back. For buildings: from the **2026-27** session CBSE made the state NOC optional, but a **fire safety certificate and a building safety certificate remain mandatory on the SARAS portal**; schools are Group B (Educational) occupancy under the National Building Code Part 4.
+
+🟢 **APAC also supplies code on this register**, which is unusual: [`buptlg/fireagent`](https://github.com/buptlg/fireagent) (`77★`, MIT, China) is the highest-starred on-register agent anywhere; [`PerryLink/dsh-eia-guide-check`](https://github.com/PerryLink/dsh-eia-guide-check) (Apache-2.0, `11,339 B`, `9dac4ebe34dc`) cross-checks environmental-assessment guideline references; [`AnuwatThisuka/cmms-mcp-server`](https://github.com/AnuwatThisuka/cmms-mcp-server) (MIT, Thailand) is an MES/CMMS MCP server; `Safety-Bin/ehs-system` (Korea) reviews statutory items and amendment impact but **publishes no grant**.
+
+🔴 **`ACTION p763-D` fired again and is now a standing hazard, not an incident.** The mandated APAC search leg returned, inside an APAC result set, the **UAE's** February 2026 generative-AI school prohibitions and a **UK** standard. Both are EMEA in this base's closed vocabulary. Neither is filed under APAC. **`region` is never populated from a source's own regional framing.**
+
+## `T644` — LATAM: two real artefacts on this exact register, and a gap stated rather than implied
+
+🟢 **The most interesting single row this pass is LATAM public-sector.** [`Aikenort26/geovisor-asbesto`](https://github.com/Aikenort26/geovisor-asbesto) — a **public asbestos geoviewer for Cartagena de Indias, Colombia**, carrying a national public-investment code (`BPIN`) in its own description, created 2026-10-10, pushed 2026-10-17. Index: `NOASSERTION`. Byte-read: **MIT, `1,232 B`, `642b1cca083e` — and a second grant in the tail**: *"Los datos geográficos de `public/data` y `public/tiles` se publican bajo licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0)."* **Code MIT, data CC BY 4.0.** For an asbestos geoviewer the data *is* the deliverable, so the attribution obligation is the operative term.
+
+🟢 Second: [`Sergiorsantana/rota-segura`](https://github.com/Sergiorsantana/rota-segura) (MIT, `1,072 B`, `29b0c50c3abf`, Brazil) computes fire-escape routes for an arbitrary building.
+
+🔴 **The gap, stated so the silence is not read as coverage.** A Spanish-language search for 2026 school-infrastructure safety inspection rules across Brazil, Mexico and Chile returned: **Chile** — Decreto 548 MINEDUC on the physical plant of educational premises (amended by Decretos 393/2009 and 40/2021), compliance required for state recognition, plus a MINEDUC **self-diagnostic infrastructure checklist that is guidance, not a mandatory inspection**; **Brazil** — only state laws on metal detectors and bag searches (Acre, Rondônia), which are physical *security*, not estate safety; **Mexico** — NOM-002-STPS-2010 on extinguishers and emergency exits and a SEP civil-protection committee, both blog-sourced and unverified, plus an **old draft** Mexican standard on supervising educational-infrastructure works. 🔴 **No building-level school estate census was found for any of the three**, and no federal Brazilian or Mexican school building-safety inspection regime was found. **That is a measured absence in the search channel, not a claim that none exists.**
+
+## `T645` — North America: the instrument is state-level and the artefact is a filed report
+
+🟢 **Two states specify it precisely enough to build against.** New York's 2026 manual requires **every building owned, operated or leased by a public school district or BOCES** to be inspected for fire safety, with school officials filing the annual **Fire and Building Safety Report**. Florida Statute **1013.12** requires district fire safety inspections by persons certified by the Division of State Fire Marshal, reports to the local fire authority, and **the district certifying completion to the State Fire Marshal**. South Carolina's Office of School Facilities manual carries fire and smoke protection provisions effective **16 February 2026**.
+
+🔵 **The shape of the deliverable follows from that: the output is not a dashboard, it is a filed statutory return with a named signatory and a deadline** — which is the same shape as England's *Manage Your Education Estate* annual return (`T642`). 🔴 **No federal school requirement for indoor air quality or lead in water surfaced in this pass's searches**, and the ASCE `$85B` deferred-maintenance figure circulating in vendor material is **not** adopted here; `p764`'s `$90B` *State of Our Schools* reading stands and is the one this base cites. 🔵 **All three state instruments search-sourced; `www.flsenate.gov` is refused at this tunnel.**
+
+## `T646` — 🔴 five defects in this pass's own classifier, each caught by a payload whose answer was already known
+
+The instrument this pass was asked to build was wrong five times before it was right, and every correction was forced by a control rather than noticed by inspection. It is recorded because the failure modes are general.
+
+| # | Defect | How it was caught | Fix |
+|---|---|---|---|
+| `D1` | GPL-3.0 classified as **AGPL-3.0** | `aamks/aamks` and `opf/openproject` are independently known GPL-3.0. Canonical GPL-3.0 **names "GNU Affero General Public License" three times** in sec 13 and the how-to-apply note | Anchor the family on the **title line**; confirm with a discriminator (`Remote Network Interaction`: AGPL `1`, GPL `0`) |
+| `D2` | LGPL-3.0 classified GPL-3.0; MPL-2.0 classified LGPL-3.0 | `LICENSE.LESSER` and `engine_web-ifc` have known families. LGPL **incorporates GPL by reference** and therefore contains its name and `Version 3` | A partial match may never outrank a full one; title line settles it |
+| `D3` | **Every** copyleft payload flagged `NONCOMMERCIAL` | Canonical AGPL-3.0 flagged itself. Both GPL-3.0 and AGPL-3.0 contain the word `noncommercial` in their own sec 5 / sec 7 text | Read restriction and composite flags from the **tail only** — after the body's own `END OF TERMS AND CONDITIONS` |
+| `D4` | **The one payload the classifier existed to catch was missed** | `geovisor-asbesto`: MIT has no `END OF TERMS AND CONDITIONS`, so the tail was empty; and the composite detector matched only an English `creativecommons.org` URL, while this grant names CC BY 4.0 **in Spanish prose** | Tail starts after the matched family's own last operative sentence; second grants matched **by name, across languages** |
+| `D5` | `D4` regressed: `18` false composites against `3` true ones | Canonical AGPL-3.0 and GPL-3.0 flagged themselves — **every copyleft family names itself in its own appendix** | Explicit per-family self-name exclusion |
+
+🟢 **Final state, verified against `23` controls**: `5` flags, all true — `TowerScout` NonCommercial, `buildingSMART/IDS` NoDerivatives, `geovisor-asbesto` MIT + CC BY 4.0, `uchit/mcp-regulated-ai-compliance` Apache-2.0 + CC BY 4.0, and `xeokit/xeokit-sdk` AGPL-3.0 + a bundled third-party notices block naming four MIT components and MPL-2.0 for `web-ifc`. **`0` false positives on canonical payloads.**
+
+🔵 **`D4` is the one to carry forward.** An instrument built to catch a class can be blind to that class in the only form it actually occurs in — here, a second grant stated in prose in the project's own language. **`ACTION p765-C`: any text detector on these shelves must be tested against a non-English instance before it is trusted.**
+
+## `T647` — 🔴 the mandated trending leg answered about a different register, and that is the finding
+
+The mandated trending query for this register — new open-source building-safety and compliance work with an agent layer — returned, almost without exception, **the AI-agent governance register**: MCP security scanners, agent audit kits, tool-call firewalls, EU AI Act conformance checklists. `compliance` in a 2026 search channel means *software* compliance.
+
+🔵 **Filed where it belongs rather than where it was found.** The one item with any bearing on education is the EU AI Act strand, which matters here only because education is a high-risk area under it — already this base's `T601` and not a school-estate finding. 🟢 **The register's genuine new work was found instead by `created:>2026-08-11` against the topic-qualified denominators of `T629`**, which is now the method of record for this leg.
+
+## `T648` — 🟢 `ACTION p764-F` discharged: `pascalorg/editor` verified independently, and the seam `p764` suspected is real
+
+`p764` filed [`pascalorg/editor`](https://github.com/pascalorg/editor) at `25,442★` MIT with its own MCP server, called it the largest permissive agent-native artefact on any physical-asset register, and asked for independent verification because a single-pass reading of a repository that large is thin evidence.
+
+| Property | Measured `2026-11-11` |
+|---|---|
+| Stars | **`25,443`** — `p764`'s `25,442` was right at the time |
+| **Forks** | **`3,164`** — a `1 : 8` fork-to-star ratio, consistent with use rather than with starring |
+| Grant | MIT, byte-read `1,074 B` / `9c9dde8dcf11`, `Copyright (c) 2026 Pascal Group Inc.` |
+| Created / pushed | `2025-10-16` / `2026-11-10` — **`13` months old, pushed the day before this pass** |
+| Repository size / open issues | `190,542 KB` / `54` |
+| Default branch | `main`, derived from the search channel |
+
+🔴 **And the specific question `p764` raised is answered in the affirmative: there are two delivery modes and they are not the same artefact.** The README documents a **local path** — `pascal mcp connect`, projects in `~/.pascal/data/pascal.db`, *"nothing is uploaded"*, self-hostable as one container with SQLite — and a **hosted workspace** at `editor.pascal.app/api/mcp` which requires a Pascal account. 🟢 **The MIT grant covers the self-hostable artefact, and every pattern on these shelves that leans on this repository must specify the local path.** 🔵 **The hosted service's own terms could not be read: `editor.pascal.app` is refused at this tunnel.** The reliance is sound for self-host and unverified for hosted.
+
+## `T649` — 🔴 `p276` wrote `14` corrections into these shelves and **a markdown renderer discards every one of them**
+
+Found by a control added to this pass's substitute gate, not by reading. **`14` data rows across `agents/trending.md` and `repos/trending.md` carry one cell more than their table's header.** A markdown renderer renders the header's worth of cells and **silently drops the rest**.
+
+🔴 **In all `14`, the dropped cell is the correction.** It opens `🔴 **SUPERSEDED `p276`**`, `🟢 **CORROBORATED `p276`**` or `🔵 **REFINED `p276`**`. One of them reads *"SUPERSEDED `p276` — AND THE ADVICE WAS WRONG."* **`p276` appended its re-verification to rows in two-, three-, four- and five-column tables that had no column for it, so its entire correction run is invisible to anyone reading the rendered page.** The content is in the file and has never been on the page.
+
+| Shelf | Rows | Shape |
+|---|---|---|
+| `agents/trending.md` | `8` | `3>2`, `4>3` ×2, `5>4` ×3, `6>5` ×2 |
+| `repos/trending.md` | `6` | `4>3` ×2, `5>4` ×3, `6>5` |
+
+🟢 **Every location is enumerated in `evidence/overwide-rows.2026-11-11-p765.tsv`** and the gate now fails only on **new** over-wide rows, so the debt is bounded rather than silently carried. 🟢 **The repair is additive and must not rewrite the corrections**: give each of those `14` tables the column its fourth, fifth or sixth cell already assumes. **`ACTION p765-G`.**
+
+🔵 **The general lesson, which is why this is a `T` and not a footnote.** An append-only shelf protects the *text* of a correction and guarantees nothing about its *visibility*. `p276`'s work was done, written and lost in the same pass. **A correction that renders into nothing is indistinguishable from a correction never made**, and nothing in this base's gates could see it until a column-count check existed.
+
+## `T650` — 🔴 `Gap 248` was mitigated and this pass re-opened it, because it built its own extractor instead of reading the ledger
+
+This pass's address sweep extracted `5,621` `github.com/<a>/<b>` strings from the shelves and **`50` of them were not repository addresses** — `topics/…`, `search/repositories`, `trending/…`, `repos/…` URL paths. All `50` landed in the sweep's "missing" bucket, because a non-repository path is also `422`. They were removed and the denominator corrected to `5,571` before any figure was published (`T636`).
+
+🔴 **But this base had already solved that.** `Gap 248` in `intel/open-gaps.md` records the same class — *"the address ledger contains non-addresses"* — as **mitigated in practice `29` passes after declaration**, with `42` fragments removed: `topics/*` ×38, `orgs/*` ×2, `search/repositories`, `trending/*` ×3. **The filter exists, in `evidence/address-ledger.tsv` and the instruments around it.** This pass re-derived the problem because it built a fresh `grep` extractor rather than reading the ledger the base maintains.
+
+🔵 **`ACTION p765-H`: an instrument that needs the set of addresses on this base must read `evidence/address-ledger.tsv`, not re-extract from the shelves.** Re-extraction reproduces every defect the ledger was built to absorb, and `Gap 248` is the proof that it has been absorbed once already.
+
+## Actions adopted at `p765`
+
+🟢 **`ACTION p765-A` — read the README's License section before publishing an absence.** One fetch. It would have caught `TowerScout`'s NonCommercial grant without a second pass over the same address (`T630`).
+
+🔴 **`ACTION p765-B` — liveness is a search-channel property.** A `200` from `raw.githubusercontent.com` proves the bytes, never that the address is current, because raw follows rename redirects and search does not (`T635`). Every address-verification instrument on this base must be re-read against this.
+
+🔴 **`ACTION p765-C` — test any text detector against a non-English instance before trusting it** (`T646`, `D4`).
+
+🔴 **`ACTION p765-D` — retire the `229` `422`-absent addresses from the live shelves, successor-first.** The dated history stays untouched; the `49` citations of `openedx/edx-platform` are the place to start, and this base already carries the successor `147` times (`T636`). **Do not touch the `148` `200`-unindexed addresses: they are alive.**
+
+🟢 **`ACTION p765-E` — keep running `ACTION p760-A`, which has now paid five times.** The register to point it at next is named in `intel/open-gaps.md`.
+
+🟢 **`ACTION p765-G` — give the `14` over-wide rows the column their extra cell already assumes**, so `p276`'s correction run becomes visible. Locations are enumerated in `evidence/overwide-rows.2026-11-11-p765.tsv`. **Additive only: do not rewrite the corrections** (`T649`).
+
+🔵 **`ACTION p765-H` — read `evidence/address-ledger.tsv` rather than re-extracting addresses from the shelves** (`T650`, `Gap 248`).
+
 # 🆕 Trends new at `p763` (researched 2026-11-11) — `T604`–`T614`
 
 # 🆕 Trends new at `p764` (researched 2026-11-11) — `T615`–`T626`

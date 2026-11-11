@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p765) — **The new work on school-estate safety is `90` days old, permissive, and regional: a Colombian public asbestos geoviewer, a Brazilian escape-route calculator, a German CAFM created six weeks ago, a Korean statutory-review app and a Chinese guideline cross-checker. And the mandated trending leg, asked about compliance agents, returned a different register entirely.**
+
+**Register: school-estate safety and statutory compliance** (`ACTION p764-A`). `15` agent READMEs fetched and token-counted at `125,076` bytes · `78` supply queries on `search/repositories` · `created:>2026-08-11` run against the topic-qualified denominators of `T629`.
+
+### 🔴 The week's first finding is a defect in the mandated leg itself
+
+The mandated trending query for this register — new open-source building-safety and compliance work with an agent layer — returned, almost without exception, **the AI-agent governance register**: MCP security scanners, agent audit kits, tool-call firewalls, EU AI Act conformance checklists, `357`-rule static analysers for agent pipelines. **In a 2026 search channel, `compliance` + `agent` means *software* compliance.**
+
+🔵 **Filed where it belongs rather than where it was found.** The only item with any bearing on education is the EU AI Act strand, and it bears only because education is a high-risk area under the Act — already this base's `T601`, not a school-estate finding. 🟢 **The register's genuine new work was found a different way**, and that way is now the method of record for this leg: `created:>2026-08-11` against `topic:cmms`, `topic:fire-safety`, `topic:ehs`, `topic:asbestos` and `topic:legionella` (`T647`).
+
+### 🟢 The agent layer, dated, with the grant byte-read
+
+| Agent | Repository | ★ | Grant | Created | Pushed | Region |
+|---|---|---|---|---|---|---|
+| Multimodal fire-safety agent, two-hop reasoning, conservative refusal | [`buptlg/fireagent`](https://github.com/buptlg/fireagent) | `77` | MIT · `1,079 B` · `523f007cf103` | — | `2026-06-18` | APAC |
+| OSHA MCP over `29 CFR 1910`/`1926`, **corpus ingested from eCFR** | [`dtjohnson83/osha-mcp`](https://github.com/dtjohnson83/osha-mcp) | `1` | MIT, in `package.json` | — | `2026-04-03` | North America |
+| Swedish OVK ventilation + energy declarations | [`Domera-proptech/mcp-server`](https://github.com/Domera-proptech/mcp-server) | `0` | MIT · `1,081 B` · `3ec492c23fbe` | — | `2026-10-30` | EMEA |
+| Saudi Building Code hybrid RAG + MCP | [`Kaiiser-ai/sbc-mcp-server`](https://github.com/Kaiiser-ai/sbc-mcp-server) | `1` | MIT · `1,070 B` · `294b8870e941` | — | `2026-03-05` | EMEA |
+| EU AI Act / regulated-industry compliance MCP | [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | `1` | Apache-2.0 **+ CC BY 4.0 on the knowledge base** | — | `2026-06-06` | Global |
+| IFC analysis MCP | [`ekkodale/IFC-MCP`](https://github.com/ekkodale/IFC-MCP) | `11` | MIT · `1,070 B` · `44b6757fb430` | — | `2025-12-04` | EMEA |
+| MES/CMMS MCP bridge | [`AnuwatThisuka/cmms-mcp-server`](https://github.com/AnuwatThisuka/cmms-mcp-server) | `0` | MIT · `1,077 B` · `447dc02d6824` | — | `2025-12-13` | APAC |
+| Digital-twin CMMS with LangGraph agents | [`ishan-patle/digital-twin-cmms`](https://github.com/ishan-patle/digital-twin-cmms) | `5` | 🔴 AGPL-3.0 · `34,037 B` · `f0f6d3a0a4b8` | — | `2026-04-05` | Global |
+| AU/NZ Work Health & Safety agent skill | [`arrley/whs-professional-skill`](https://github.com/arrley/whs-professional-skill) | `4` | 🔴 **CC BY-SA 4.0** · `3,267 B` · `1aa5bca8c8b9` (index: `NOASSERTION`) | — | `2026-10-10` | APAC |
+| AI-assisted IFC compliance checker (IfcOpenShell + RAG) | [`Batool-Jaber/ifc-compliance-checker`](https://github.com/Batool-Jaber/ifc-compliance-checker) | `1` | 🔴 **No payload** | `2026-08-13` | `2026-09-30` | — |
+| Fire-code auditor against DBN V.1.1-7:2016 | [`Gariknik/FireCodeCheckerAgent`](https://github.com/Gariknik/FireCodeCheckerAgent) | `0` | 🔴 **No payload** | — | `2026-11-05` | EMEA |
+
+### 🟢 New in the last `90` days on this register — the regional spread is the story
+
+| Repository | ★ | Grant, byte-read | Created | Pushed | What it is | Region |
+|---|---|---|---|---|---|---|
+| [`Aikenort26/geovisor-asbesto`](https://github.com/Aikenort26/geovisor-asbesto) | `1` | **MIT** `1,232 B` `642b1cca083e` **+ CC BY 4.0 on the geodata** | `2026-10-10` | `2026-10-17` | Public asbestos geoviewer for Cartagena de Indias, with a national `BPIN` investment code | **LATAM** |
+| [`OpenGewerk/opengewerk-haustechnik`](https://github.com/OpenGewerk/opengewerk-haustechnik) | `1` | 🔴 AGPL-3.0 `34,513 B` `8cc0027c55fa` | `2026-10-01` | `2026-11-10` | Open-source **CAFM** for technical building management, self-hosted | **EMEA** |
+| [`Sergiorsantana/rota-segura`](https://github.com/Sergiorsantana/rota-segura) | `1` | **MIT** `1,072 B` `29b0c50c3abf` | `2026-10-16` | `2026-10-16` | Fire-escape route calculation for an arbitrary building | **LATAM** |
+| [`PerryLink/dsh-eia-guide-check`](https://github.com/PerryLink/dsh-eia-guide-check) | `1` | **Apache-2.0** `11,339 B` `9dac4ebe34dc` | `2026-10-07` | `2026-11-10` | Cross-checks environmental-assessment guideline names against current standards | **APAC** |
+| [`waceinc/vexplor-aas`](https://github.com/waceinc/vexplor-aas) | `2` | **Apache-2.0** `11,357 B` `b40930bbcf80` | `2026-10-06` | `2026-11-10` | Asset Administration Shell authoring, validation, data collection | Global |
+| [`bewygs/cfast-bin`](https://github.com/bewygs/cfast-bin) | `1` | **MIT** `1,081 B` `d2118fa312c7` | `2026-10-11` | `2026-10-26` | NIST CFAST fire-model binaries as a Python package | **EMEA** |
+| `Safety-Bin/ehs-system` | `0` | 🔴 **No payload** | `2026-08-26` | `2026-10-18` | EHS web app that compiles statutory review items and **amendment impact** for a site | **APAC** |
+| `Ramki-K/asbestos-material-detection` | `1` | 🔴 **No payload** | `2026-10-29` | `2026-10-29` | OCR material extraction and database matching **for asbestos registers** | — |
+| `chowtao123-design/shopfloor-cmms` | `2` | 🔴 **No payload** | `2026-10-21` | `2026-11-11` | Offline-first self-hosted CMMS | — |
+| `kerwinarlan/dorm-evacuation-signage` | `1` | 🔴 **No payload** | `2026-08-31` | `2026-08-31` | Automated room-by-room evacuation signage generator — **the only new artefact aimed at an education building** | — |
+| `rhyspaul192/AsTrak` | `0` | 🔴 **No payload** | `2026-08-26` | `2026-08-26` | "Asbestos Management Software" — one push, never returned to | — |
+
+🔵 **The reading: this register's new work is being written by people solving one jurisdiction's problem, in their own language, and publishing it small.** Five of the eleven rows above are regionally placed and none has more than two stars. 🔴 **Five of the eleven have no grant at all**, which is the register's real supply constraint — not absence of work, absence of a licence on the work.
+
+### 🔴 The measurement that will not move until someone writes an education row
+
+`15` agent READMEs, `125,076` bytes: `school` **`4`** (all in the NonCommercial one), `classroom` **`0`**, `student` **`0`**, `teacher` **`0`**, `k-12` **`0`**, `universit…` **`0`**, `district` **`0`**. `p764` measured `154,443` bytes on the estate register and found `school` once. **Two registers, `279,519` bytes of agent documentation, and five mentions of a school between them** (`T638`).
+
 ## 🆕 2026-11-11 (p764) — **The school-estate agent layer was built in the last twelve months, is permissive almost without exception, and has never heard of a school: `14` MCP servers, `154,443` bytes of README, one occurrence of the word *school* — in an example prompt. The week's biggest signal is a `25,442★` MIT building editor that ships its own MCP server.**
 
 **Register: the school estate — buildings, work orders, the deferred-maintenance backlog, the utility bill and the capital programme** · `14` agent rows filed, `13` usable in a proprietary deliverable · `2` grants recovered that the platform's own index reports as `NOASSERTION` · `1` grant recovered only by a **capitalisation variant** of its filename · `83` supply probes · `0` of the `14` published by an education organisation.

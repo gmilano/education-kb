@@ -6,6 +6,16 @@ updated: 2026-11-11
 
 # Education AI — Market Intelligence
 
+**Pass `p765` · researched 2026-11-11.** All four mandated regional legs ran and all four returned facts. **The register is school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing and playground-equipment inspection — which `ACTION p764-A` named and directed this pass at. It is a different buyer from `p764`'s condition register (risk and compliance, not capital planning) and a different cadence: **dated statutory intervals, not bond cycles.** Before this pass the register stood at `0` on this base across `22` tokens, and the only six nonzero tokens sat inside `p764`'s own directive naming it (`T627`).
+
+🟢 **Each region's newest block is `#### 🆕 p765` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`ACTION p756-C` honoured and verified after writing).**
+
+🔴 **The governing commercial finding of this pass is jurisdictional, not technical, and no licence file states it.** On a statutory-compliance register the code is cheap and **the law is the asset**. US federal regulation is a work of the United States government and carries no copyright, so `29 CFR 1910`/`1926` can be ingested and redistributed — which is exactly what the one artefact with no vendor in its data path does (`dtjohnson83/osha-mcp`, MIT, ingests from eCFR). England's statutory content splits: HSE guidance is Crown copyright on open terms, while the British Standards it points to are paid BSI products. Saudi Arabia's SBC is copyrighted and its own MIT server ships **without the code it exists to serve**. **So the same agent is buildable in North America, half-buildable in England, and not buildable from open sources in the Gulf — and the repository licence tells you none of that** (`T639`, `T637`).
+
+🔴 **A second structural finding: there is no permissive statutory-compliance platform.** `14` platform systems byte-read, `13` AGPL-3.0 or GPL-3.0, the one Apache-2.0 platform has `2★`, and the vertical's own named system of record (`openMAINT`) is not on GitHub at all. **`p757`'s law now holds across three consecutive registers with no counter-example** (`T641`).
+
+🔴 **`ACTION p760-C` applied throughout: every figure below is attributed to the party that published it, and vendor-published figures are marked as such.** 🔴 **Four primary verifications were blocked by this session's domain allowlist** — `www.ecfr.gov`, `www.hse.gov.uk`, `www.flsenate.gov`, `knowledge.bsigroup.com` — **so every statutory interval and monetary figure in the `p765` blocks below is labelled search-sourced, not primary-verified.** 🔴 **`ACTION p763-D` fired again and is now a standing hazard rather than an incident: the mandated APAC leg returned the UAE's February 2026 school AI prohibitions and a UK standard inside an APAC result set. Both are EMEA in this base's closed vocabulary, and neither is filed under APAC.**
+
 **Pass p762 · researched 2026-11-11.** All four mandated regional legs ran and all four returned facts. **The register is the school HR back office — teacher recruitment, certification and licensure, substitute staffing and absence management, payroll and position control — and it is the largest budget line in any school system: `70%` to more than `80%` of a US district's general fund (Burbio, June 2026) and `91%` of Mexican federal education spending, concentrated in one fund whose name is education payroll (FONE, Mexicanos Primero). Before this pass it appeared on these eight shelves at `human resources` `0`, `substitute staffing` `0`, `licensure` `0`, `position control` `0`, `applicant tracking` `0`, `payroll` `4` — while the ERP and solver substrate that is its entire technical content appeared `1,304` times (`T593`, second consecutive discharge of `ACTION p760-A`).** 🟢 **Each region's newest block is `#### 🆕 p762` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`ACTION p756-C` honoured and verified after writing).** 🔴 **A correction to this base's own published claim: `p761` called student transport and school feeding "the two largest operational line items in a school system's budget." They are not. Personnel is, by a factor, and the transport and feeding lines are a minority share of it.** 🔴 **A correction to this pass's own first measurement, caught before it reached these shelves: the opening vocabulary census reported `ATS` at `531` mentions and `HRIS` at `266`; counted with word boundaries they are `0` and `1`. A substring count is not a mention count (`T594`, `ACTION p762-C`).** 🔴 **The governing licence finding is a defect in this base's most-cited repository: `google/or-tools` carries plain Apache-2.0 (`11,358 B`, `cfc7749b96f6`) on its default branch `stable` and Apache-plus-bundled-notices (`45,765 B`, `b1282fbc0b7a`) on `main`, and every pass before this one published the non-default reading. `2` of `8` default-branch checks disagreed, both on the largest repositories in the batch (`T597`, `ACTION p762-B`).** 🔴 **One procurement landmine named and byte-read, and it is the second consecutive register whose key component forbids the delivery model: `workforce-data-initiative/skills-ml` has a README saying MIT over a University of Chicago grant that excludes "any service or part of selling a service that uses the Program" (`T598`).** 🔵 **The structural market reading: there is no permissive HRIS — every open-source system of record for the employment relationship is GPL-3.0, LGPL or AGPL-3.0, and the one non-GPL-family exception is dual-licensed under a bespoke 2007 modified-MPL (`T599`). And the open-source agent layer is built for the applicant, not the district: `29.2k★` candidate-side against `7.3k★` employer-side (`T600`).** 🔴 **`ACTION p760-C` applied throughout: every adoption and savings figure below is attributed to the party that published it, and the vendor-published ones are marked as such.** 🔴 **Every regulatory cell is `search-sourced, not primary-verified` — primary hosts refuse at this tunnel and `api.github.com` returns `403`, so `default_branch` was read from rendered pages (`ACTION p758-B` carried).**
 
 
@@ -268,6 +278,26 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 p765 — the statutory instrument is state-level, the deliverable is a **filed return**, and the regulation corpus is public domain
+
+**Register: school-estate safety and statutory compliance.** The buyer is the district's risk, safety or facilities office, and what it owes is not a dashboard — it is a signed statutory filing with a named signatory and a deadline.
+
+🟢 **Three states specify it precisely enough to build against.**
+
+| Jurisdiction | Instrument | What is owed |
+|---|---|---|
+| **New York** | NYSED public-school fire-safety manual, 2026 edition | **Every building owned, operated or leased** by a public school district or BOCES must be inspected for fire safety, and school officials must file the annual **Fire and Building Safety Report** |
+| **Florida** | Statute **1013.12** (2026) | District fire-safety inspections by persons **certified by the Division of State Fire Marshal**; reports to the local fire authority; **the district certifies completion to the State Fire Marshal** |
+| **South Carolina** | Office of School Facilities Policy and Procedures Manual | Fire and smoke protection inspection provisions **effective 16 February 2026** |
+
+🔵 **Search-sourced**: the NYSED manual and the Florida statute are published at `nysed.gov` and `flsenate.gov`; **`www.flsenate.gov` is refused at this tunnel and was not fetched.** Treated as directional on the exact subsection numbers, firm on the shape of the obligation.
+
+🟢 **The opportunity is the cleanest on this register because the corpus is free.** US federal regulation carries no copyright, and `29 CFR 1910` and `1926` are retrievable from the government's own eCFR service. [`dtjohnson83/osha-mcp`](https://github.com/dtjohnson83/osha-mcp) (`1★`, MIT) already does exactly this — `npx tsx scripts/ingest-standards.ts  # Fetch from eCFR` into a self-hosted Supabase, with `get_standard_text` among five tools — **and is therefore the only architecture on this register with no vendor anywhere in the data path** (`T639`).
+
+🔴 **The contrast row is the one to price against.** [`contextkits/osha-compliance-assistant`](https://github.com/contextkits/osha-compliance-assistant) is also MIT, and its MIT grant covers **a thin client against a metered API**: Sandbox `10` calls/day free, Developer **`$79`/mo**, Team **`$199`/mo**, Enterprise **`$499`/mo`**. A proposal that cites "MIT-licensed OSHA tooling" without reading the README has committed the client to a subscription (`T584`'s class).
+
+🔴 **Declared gaps, measured not assumed.** **No federal school requirement for indoor air quality, radon or lead in water surfaced in this pass's searches**, against `0` prior mentions of each on this base. The ASCE `$85B` deferred-maintenance figure circulating in vendor material is **not adopted here**: `p764`'s `$90B` *State of Our Schools* reading stands as this base's figure. **And no open-source artefact produces New York's Fire and Building Safety Report or Florida's State Fire Marshal certification, which is the actual deliverable in both states.**
 
 #### 🆕 p764 — the register with the largest measured unmet need on this base: **`$90` billion a year**, and the engines to address it are published in the same country
 
@@ -1446,6 +1476,28 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 p765 — the most precisely specified school-estate compliance regime this base has measured, a central return going digital in **autumn 2026**, and a national asbestos register that was **refused**
+
+**Register: school-estate safety and statutory compliance.** England is the reference jurisdiction, and it is unusually legible.
+
+🟢 **The duty and its owner.** The duty holder is the employer — local authority, governing body or academy trust — under the Health and Safety at Work Act 1974, the Management of Health and Safety at Work Regulations 1999, the Regulatory Reform (Fire Safety) Order 2005 and the **Control of Asbestos Regulations 2012**.
+
+| Element | What this pass measured |
+|---|---|
+| **Asbestos presumption** | Any school **built or refurbished before 2000 must be presumed to contain asbestos** until a specialist proves otherwise. A 2019 DfE survey is reported as finding **around four in five schools** do. CAR 2012 requires the duty holder to identify, record location and condition, assess risk and manage it |
+| **Condition data** | The DfE's second Condition Data Collection (**CDC2**) covers about **`22,000` school buildings**, added RAAC in 2021, **concludes in 2026**. Responsibility for condition data moves to responsible bodies — academy trusts, local authorities, dioceses — with pilots in **2026–27** and national rollout from **autumn 2027** |
+| **The annual return** | 🟢 **From autumn 2026, responsible bodies make a light-touch annual return through a new digital service, *Manage Your Education Estate*, confirming they meet the School Estate Management Standards** |
+| **RAAC** | Confirmed in around **`1 %`** of schools and colleges in England |
+| **The decisive negative** | 🔴 **A parliamentary committee recommended a national digital asbestos register for schools and the government rejected the recommendations in its April 2026 response**, pointing instead to the existing CAR 2012 duty |
+
+🔵 **Search-sourced, and one source conflicts.** A consultancy blog reports the DfE will conduct **no** future Condition Data Collection surveys, which contradicts the rollout timeline above. **Both readings are recorded; neither is adopted.** `www.hse.gov.uk` and the DfE primary pages are refused at this tunnel, so no statutory interval below is primary-verified. Specifically: one vendor claims `BS 8214` recommends six-monthly professional fire-door surveys for school premises and another says no fixed interval applies and the fire risk assessment sets it; **this pass could not reach the standard to settle it, and `knowledge.bsigroup.com` is refused.** A claimed `BS 8214:2026` publication on 20 March 2026 is **unverified**.
+
+🟢 **The opportunity is structural and specific.** **The compliance *return* is being digitised centrally while the *evidence* behind it stays with thousands of responsible bodies and has no open system of record.** The fire-door log, the asbestos management plan, the legionella sample record and the fixed-wire certificate are the evidence; *Manage Your Education Estate* is the attestation. **A trust with 30 schools must assert compliance annually against evidence held in spreadsheets, PDFs and contractors' portals.** That is the engagement.
+
+🟢 **EMEA also supplies the only agents on this register that address a named national statutory regime**: [`Domera-proptech/mcp-server`](https://github.com/Domera-proptech/mcp-server) (MIT, Sweden) serves **OVK statutory ventilation inspection and energy declarations**; [`Gariknik/FireCodeCheckerAgent`](https://github.com/Gariknik/FireCodeCheckerAgent) audits against **DBN V.1.1-7:2016** (Ukraine, 🔴 no grant); [`OpenGewerk/opengewerk-haustechnik`](https://github.com/OpenGewerk/opengewerk-haustechnik) is an open-source **CAFM** created **1 October 2026** (🔴 AGPL-3.0); and [`DINFO-UniFI/RoofClassify`](https://github.com/DINFO-UniFI/RoofClassify) (University of Florence, 🔴 GPL-2.0) **identifies asbestos roofing from satellite imagery** — the only artefact found anywhere that detects this register's asbestos surface remotely.
+
+🔴 **And the licence facts that decide an EMEA engagement.** The standards bodies are the chokepoint: `buildingSMART/IDS` is **CC BY-ND 4.0**, so a national *profile* of the specification is refused while `.ids` files you author are not (`T637`, confirming `T618`); `1EdTech` has **moved Caliper to private repositories**; BSI's fire-door standard is a paid product. **Every permissive artefact in the EMEA column above is a tool. Every piece of the law it needs is restricted.**
 
 #### 🆕 p764 — the school estate is a **statutory condition return** here, the survey that feeds it completes this year, and nobody has said what replaces it
 
@@ -2823,6 +2875,30 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 p765 — the mandate region **and** a genuine supply region, with a dated audit obligation in two Indian jurisdictions
+
+**Register: school-estate safety and statutory compliance.** APAC is the only region this pass found that both mandates school safety audits on a schedule **and** publishes on-register code.
+
+🟢 **India is the clearest mandate on this register anywhere.**
+
+| Instrument | Date | What is owed |
+|---|---|---|
+| Government Resolution making the Ministry of Education's *Guidelines on School Safety and Security-2021* **mandatory** in one state, building on an earlier resolution of 13 May 2025 | **13 December 2025** | Compliance with the national guidelines |
+| Directorate-level circulars | **mid-2026** | Schools must **physically audit themselves** against the *Manual of Safety & Security in School* and **report deficiencies** to the relevant authority |
+| Proceedings of the Director of School Education, **Tamil Nadu** | **7 May 2026** | **Every District Chief Education Officer** must complete a school safety and infrastructure audit **in all schools before the June reopening**, benchmarked on the *School Child Safety Handbook 2024-2025*, with each district reporting back to the Directorate |
+| **CBSE** affiliation, SARAS portal | **2026-27 session** | The state NOC became **optional**, but a **fire safety certificate from the Fire Services department and a building safety certificate remain mandatory documents** |
+| National Building Code of India, Part 4 — Fire and Life Safety | standing | Schools are **Group B (Educational) occupancy** |
+
+🔵 **All of the above is search-sourced from legal and consultancy commentary; no ministry or directorate page was fetched.** One source's claim of a `37 %` first-inspection rejection rate for CBSE affiliation is **not adopted** — no official corroboration was found.
+
+🟢 **APAC supplies code on this register, which is unusual and worth stating plainly.** [`buptlg/fireagent`](https://github.com/buptlg/fireagent) (`77★`, **MIT**, China) is the **highest-starred on-register agent anywhere** — multimodal fire-safety reasoning with evidence grounding, conservative refusal and scene routing that includes `campus`. [`PerryLink/dsh-eia-guide-check`](https://github.com/PerryLink/dsh-eia-guide-check) (**Apache-2.0**) cross-checks environmental-assessment guideline names against current standards — **the closest artefact found anywhere to a statutory-reference validator.** [`AnuwatThisuka/cmms-mcp-server`](https://github.com/AnuwatThisuka/cmms-mcp-server) (**MIT**, Thailand) bridges MES and CMMS work orders. `Safety-Bin/ehs-system` (Korea) compiles statutory review items **and amendment impact** for a site but 🔴 **publishes no grant across `32` paths and `16` manifests.**
+
+🔴 **One APAC artefact is refused on its grant, and the index hid it.** [`arrley/whs-professional-skill`](https://github.com/arrley/whs-professional-skill) (`4★`) is an agent skill for AU/NZ Work Health and Safety professionals whose industry coverage includes education. GitHub's index says `NOASSERTION`; the byte-read grant is **`CC BY-SA 4.0`** (`3,267 B`, `1aa5bca8c8b9`). **ShareAlike on a skill means a derived skill must also be ShareAlike — refused for a proprietary deliverable, and the repository page does not say so** (`T630`, `T646`).
+
+🔴 **`ACTION p763-D` fired again.** The mandated APAC leg returned the **UAE's** February 2026 generative-AI school prohibitions and a **UK** safety standard inside an APAC result set. **Both are EMEA in this base's closed vocabulary. Neither is filed here.** `region` is never populated from a source's own regional framing.
+
+🔴 **Declared gap**: no APAC jurisdiction's statutory interval table was found in code under any licence, and no APAC artefact produces the audit return that India's directorates now require.
+
 #### 🆕 p764 — the largest estate on earth is measured annually to one decimal place, and the two indicators that fail are the two that need design work
 
 **Register: the school estate.** 🟢 **APAC has the best condition telemetry of any region on this register**, and it is published: India's **UDISE+ 2025-26** report, reference year 2025-26, cutoff **`31` March 2026**, covering **`14.67` lakh schools** (`≈1.467` million).
@@ -4118,6 +4194,31 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 p765 — **two real artefacts on this exact register**, Chile's is the only legible national instrument, and the building-level census does not exist in any of the three largest systems
+
+**Register: school-estate safety and statutory compliance.** This is the first pass in which LATAM contributes **working code** on the register rather than only demand-side figures — and the first in which the demand side comes back largely empty, which is recorded as a measurement rather than passed over.
+
+🟢 **The supply side: two artefacts, both permissive, both byte-read.**
+
+| Repository | ★ | Grant, byte-read | Reading |
+|---|---|---|---|
+| [`Aikenort26/geovisor-asbesto`](https://github.com/Aikenort26/geovisor-asbesto) | `1` | **MIT** · `1,232 B` · `642b1cca083e` — **plus `CC BY 4.0` on the geographic data in `public/data` and `public/tiles`**, stated in Spanish in the payload's own tail | A **public asbestos geoviewer for Cartagena de Indias, Colombia**, carrying a national public-investment (`BPIN`) code in its own description. Index: `NOASSERTION`. 🔴 **For an asbestos geoviewer the data *is* the deliverable, so the CC BY 4.0 attribution obligation is the operative term, not the MIT grant** |
+| [`Sergiorsantana/rota-segura`](https://github.com/Sergiorsantana/rota-segura) | `1` | **MIT** · `1,072 B` · `29b0c50c3abf` | Computes fire-escape routes for an arbitrary building (Brazil) |
+
+🔵 **Also placed here by language rather than by origin**: [`AnabasaSoft/MantPro`](https://github.com/AnabasaSoft/MantPro) is a Spanish-language GMAO/CMMS with Android apps (🔴 AGPL-3.0, `34,523 B`, `0d96a4ff68ad`), which makes it the readiest copyleft reference implementation for a Spanish-speaking engagement.
+
+🔴 **The demand side, searched in Spanish and Portuguese, and reported as found — including where it was not found.**
+
+| Country | What was found | Grade |
+|---|---|---|
+| **Chile** | 🟢 **Decreto 548 MINEDUC**, approving norms for the physical plant of educational premises, **amended by Decreto 393 (2009) and Decreto 40 (2021)**. Establishments seeking any state certification **must** comply with educational-infrastructure norms; MINEDUC's `roaf.mineduc.cl` publishes the infrastructure scope for official recognition. MINEDUC also publishes a **self-diagnostic infrastructure-condition checklist** | 🟢 the only legible national instrument found in LATAM. 🔴 **The checklist is guidance, not a mandatory inspection** |
+| **Brazil** | 🔴 Only **state-level laws on metal detectors and bag searches** (Acre, Rondônia). **This is physical security, not estate safety**, and does not belong to this register | 🔴 **No federal school building-safety inspection regime was found** |
+| **Mexico** | 🔵 NOM-002-STPS-2010 on extinguishers, emergency exits and refuge spaces, and a SEP civil-protection committee under *Acuerdo 535* — **both blog-sourced and unverified against the DOF**. Plus an **old draft** Mexican standard (Secretaría de Economía / CAPFCE) on minimum requirements for supervising educational physical-infrastructure works | 🔴 **not a current 2026 instrument**; recorded as a draft, not as law |
+
+🔴 **And the gap stated explicitly, so the silence is not read as coverage: no building-level school estate census was found for Brazil, Mexico or Chile.** `p764` could place `MXN 58,415M` against Mexico's 2026 infrastructure line and `14.67` lakh schools against India; **this register's equivalent — how many school buildings exist, their condition and their compliance status — returned nothing in any of the three.** A Chilean parliamentary research note of June 2026 compares school *physical security* across the US, England, Brazil and Mexico, which is the adjacent register and not this one.
+
+🟢 **The opportunity that follows from exactly that.** Chile has the norm and a self-diagnostic checklist and no system to collect it; Colombia has a municipality that already publishes an asbestos register as open data under MIT + CC BY 4.0. **The deliverable is the collection layer between the two: ODK Central (Apache-2.0) for capture, a permissive work-order core, and the Chilean checklist encoded as the interval table that `repos/foundations.md` records as missing everywhere.** 🔵 **The Colombian geoviewer is the proof that a LATAM public buyer will publish this data openly when it has somewhere to put it.**
 
 #### 🆕 p764 — the programme money is appropriated and school-by-school, the verification problem is the product, and the repository supply is `1★`
 
@@ -5501,6 +5602,26 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 p765 — the cross-region law of this register: **the code is permissive, the law is not, and which half you can obtain is decided by jurisdiction**
+
+**Register: school-estate safety and statutory compliance.** One finding governs every region above and it is not visible in any licence file.
+
+🔴 **On a statutory-compliance register the software is the cheap half.** `61` licence payloads were byte-read this pass and the substrate is permissive almost throughout — `25` MIT payloads, `11` Apache-2.0, the field-capture layer Apache-2.0 without exception. **The three components that are *not* usable are the three that encode the law:**
+
+| Component | What it is | Grant | Consequence |
+|---|---|---|---|
+| [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) | The computer-interpretable grammar in which *"this fire door shall carry an inspection date and a certificate reference"* becomes machine-checkable | **CC BY-ND 4.0** | 🔴 A national or client **profile of the specification** is refused. 🟢 `.ids` files you author are not derivatives |
+| `1EdTech/caliper-js` | A standards body's reference implementation | 🔴 **moved to private repositories** | 🔴 `422`; cited `11` times on this base. **A restricted grant can be worked around; a private repository cannot** |
+| [`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout) | The only artefact addressing the built-environment legionella pathway, used by real health departments, and the only one on this register that says `school` | **CC BY-NC-SA 4.0** at `LICENSE.TXT` | 🔴 **NonCommercial.** Index said `NOASSERTION` |
+
+🔴 **The jurisdictional asymmetry is the thing to put in a proposal.** US federal regulation is a work of the United States government and carries no copyright, so the corpus can be ingested and redistributed — which is why the one artefact on this register with **no vendor in its data path** is American. England splits: HSE guidance is Crown copyright on open terms, the British Standards it points to are paid BSI products. Saudi Arabia's SBC is copyrighted, and the MIT server built to serve it ships **without the code it exists to serve**, by its own README. **The same agent is buildable in North America, half-buildable in England and not buildable from open sources in the Gulf — and the repository licence tells you none of this** (`T639`, `T637`).
+
+🟢 **The shape of the deliverable is the same in every region, which is the commercially useful part.** England's *Manage Your Education Estate* annual return, New York's Fire and Building Safety Report, Florida's certification to the State Fire Marshal, Tamil Nadu's district audit report to the Directorate: **the output is a filed statutory return with a named signatory and a deadline, not a dashboard.** One artefact, five jurisdictions' interval tables.
+
+🔴 **And the gap is identical everywhere: nothing models a statutory interval.** A statutory duty is a recurring date with a competent-person attribute and an evidence artefact attached. Every candidate on this register models a **work order** — a task without a legal deadline. `topic:asbestos` returns `5` repositories worldwide and `topic:legionella` returns `12`, against `topic:compliance`'s `10,822`, which is the software-compliance register (`T629`). **`5 : 10,822` is this register's structural fact: the word is crowded, the subject is not.**
+
+🔴 **Cross-region instrument warning, carried from this pass's own defects.** Plain-language search on this register does not return a noisy answer, it returns **another discipline**: `legionella` is `24/30` microbiology, `fire risk assessment` is `22/30` wildfire, `playground inspection` is `29/30` software sandboxes. **None of `153`, `174` or `46` is a supply figure for this register** (`T628`). And `raw.githubusercontent.com` returning `200` does **not** mean an address is current — it follows renames silently where the search channel does not, which is how this base came to cite `openedx/edx-platform` `49` times while already carrying its live successor `147` times (`T635`, `T636`).
 
 #### 🆕 p764 — the school estate, in one table: four regions, four statutory instruments, four condition datasets, and zero open-source systems
 

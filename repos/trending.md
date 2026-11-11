@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p765) — **A base-wide address census: `5,571` repository addresses swept, `5,194` live, `377` not. `229` are gone from the search channel and `148` are merely unindexed — and the most-cited dead address on this base is `openedx/edx-platform`, at `49` citations, whose live successor this base already carries `147` times. `raw.githubusercontent.com` scores all of them green, because raw follows a rename and search does not.**
+
+**`563` batched liveness calls + `377` individual re-probes + `78` supply queries on `search/repositories` · `61` licence payloads byte-read · `32` licence-family paths per address including capitalisation of stem **and** extension · `5` `COPYING.LESSER` paths on any GPL title · every family confirmed by operative clause text, never by byte count.**
+
+### 🟢 The instrument: liveness at a tenth of the cost, and `ACTION p764-C` discharged across the whole base
+
+`T621` established a two-call rename detector. This pass found it is `10×` cheaper than that.
+
+🟢 **Multiple `repo:` qualifiers in one `search/repositories` query are OR'd, and an absent address does not fail the batch — it is simply missing from the results.** So liveness is a set-difference at **`10` addresses per call**. Verified on a deliberately mixed batch: `10` qualifiers in, `8` `full_name`s back, and the two absent ones were exactly `openedx/edx-platform` and `snipe/snipe-it`.
+
+🔴 **And a defect in this pass's own sweep, found and removed before any number was published.** The address extractor admitted `50` non-repository URL paths — `topics/…`, `search/…`, `trending/…`, `repos/…` — and all `50` landed in the "missing" bucket, because a non-repository path is also `422`. They are excluded. Corrected denominator **`5,571`**, not `5,621`.
+
+| Class | Count | Share of `5,571` |
+|---|---|---|
+| `LIVE` — returned by a `repo:` qualifier | **`5,194`** | `93.2 %` |
+| absent or unindexed | **`377`** | `6.8 %` |
+
+### 🔴 Three response classes, which the batched form conflates and an individual re-probe separates
+
+All `377` were re-probed one at a time:
+
+| Response | Count | What it means | Example |
+|---|---|---|---|
+| **`422 Validation Failed`** | **`229`** | the address does not resolve on the search channel — renamed, deleted or made private | `openedx/edx-platform` |
+| **`200` with `"total_count":0`** | **`148`** | the address resolves but the repository is **not in the search index**. **It is not dead** | `packbackbooks/lti-1-3-php-library` (`31` citations) |
+
+🔴 **This distinction is the difference between a repair and a vandalism.** `ACTION p765-D` is sized against the `229`, and the `148` must not be touched: `mitodl/open-learning-ai-tutor` (`26` citations), `DaRL-GenAI/instructional_agents` (`25`), `foradian/fedena` (`21`), `kvnloo/tutor-mcp` (`17`), `Dymayo/moodler-mcp` (`13`), `ucfopen/pylti1.3` (`10`), `thc1006/moodle-mcp` (`10`), `OpenOLAT/qtiworks` (`10`) are all **present**.
+
+### 🔴 `INS-006` — the reason this base has carried dead addresses for hundreds of passes
+
+**`raw.githubusercontent.com` follows an organisation or repository rename silently. The search channel does not.** Every verification this base has ever performed by fetching a file would have scored all three rows below green:
+
+| Address as this base writes it | `repo:` | `raw` | Current address | ★ |
+|---|---|---|---|---|
+| `openedx/edx-platform` | **`422`** | **`200`** `master/README.rst` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,231` |
+| `snipe/snipe-it` | **`422`** | **`200`** `master/LICENSE` | [`grokability/snipe-it`](https://github.com/grokability/snipe-it) | `15,168` |
+| `NVIDIA/NeMo-Guardrails` | **`422`** | **`200`** `main/README.md` | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | `7,474` |
+
+🟢 **`ACTION p765-B`: a payload fetch proves the bytes, never the address.** Liveness is a search-channel property (`T635`).
+
+### 🟢 Successors resolved, each by `in:name` or `org:`
+
+| Dead address | Citations here | Successor | ★ | Basis |
+|---|---|---|---|---|
+| `openedx/edx-platform` | **`49`** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,231` | `org:openedx`, first by stars. 🔴 **This base already cites the successor `147` times and never retired the old address** |
+| `microsoft/presidio` | `10` | [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | `11,833` | `presidio in:name` |
+| `NVIDIA/NeMo-Guardrails` | `8` | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | `7,474` | `NeMo-Guardrails in:name` |
+| `UCL-INGI/INGInious` | `9` | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `243` | `INGInious in:name` — organisation rename |
+| `NSoiffer/MathCAT` | `7` | [`daisy/MathCAT`](https://github.com/daisy/MathCAT) | `131` | `MathCAT in:name` — **moved to the DAISY Consortium** |
+| `IMSGlobal/openbadges-validator-core` | `7` | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `61` | the IMS Global → 1EdTech rebrand. `org:IMSGlobal` now returns **`1`** repository against `org:1EdTech`'s `46` |
+| `1EdTech/caliper-js` | `11` | 🔴 **none — withdrawn** | — | a surviving third-party fork carries the notice *"1EdTech will be moving Caliper to private repositories on June 1"*. **A standards body took its code private** |
+| `trilogy-group/oneroster-ts` | `6` | 🔴 **not establishable** | — | two same-named repositories exist at `0★`; neither is provably the same code. Recorded as absent with the successor unresolved |
+
+🔴 **One address contradicts both classes and is recorded as the anomaly it is.** `digitalcredentials/learner-credential-wallet` (`25` citations) returns `422` on `repo:`, while `learner-credential-wallet in:name` returns that exact `full_name` at `1★` and `org:digitalcredentials` returns `92` repositories. **No story is offered.**
+
+🔴 **A units correction to `p764`**, which wrote that this base held *"`20`"* `NREL` addresses. Measured three ways that figure matches none: `NREL` appears as a **token** `387` times, as an **address** in `2` distinct forms — `NREL/EnergyPlus` and the literal ellipsis `NREL/...` used in prose — and `NREL/EnergyPlus` carries **`10`** citations. **One real dead `NREL` address, not twenty.** The `229` absent addresses carry **`1,246`** citations between them.
+
+### 🔴 `ACTION p764-E` settled: the byte-size census that ends the heuristic
+
+Every family below was determined by **operative clause text**:
+
+| Family | Payloads | Distinct sizes | Range | Spread |
+|---|---|---|---|---|
+| Apache-2.0 | `11` | **`9`** | `10,266` – `12,227 B` | **`1,961 B`** |
+| AGPL-3.0 | `12` | **`8`** | `33,709` – `34,523 B` | `814 B` |
+| MIT | `25` | **`19`** | `1,042` – `1,232 B` | `190 B` |
+| GPL-3.0 | `5` | `3` | `35,131` – `35,149 B` | `18 B` |
+
+🔴 **Five sizes carry more than one distinct grant in this pass alone**, and in every case the differing bytes are the copyright holder: `1,068 B` ×2 · `1,070 B` ×2 · `1,072 B` ×2 · `1,081 B` **×3** · `11,357 B` ×2 (`c71d239df917` canonical, `b40930bbcf80` on `waceinc/vexplor-aas`). 🟢 **The replacement is committed as `ingest/p765-grant-classifier.py`**, and the five defects found in it before it was trusted are in `T646`.
+
+### 🔴 Non-standard default branches, now four instances across three passes
+
+Every `default_branch` on these shelves is derived from `search/repositories`, never guessed, because guessing `main` or `master` fails this often:
+
+| Repository | `default_branch` |
+|---|---|
+| [`glpi-project/glpi`](https://github.com/glpi-project/glpi) | **`12.0/bugfixes`** — a version *and* channel |
+| [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) | **`development`** |
+| [`opf/openproject`](https://github.com/opf/openproject) | **`dev`** |
+| [`IfcOpenShell/IfcOpenShell`](https://github.com/IfcOpenShell/IfcOpenShell) | **`v0.9.0`** — a version tag, `T614`'s class |
+
+### 🟢 Trending on this register, by the only method that works for it
+
+🔴 **Plain-language search on this register does not return a noisy answer, it returns another discipline.** `legionella` (`153` results): **`24` of the top `30` are *Legionella pneumophila* genomics**, exactly `1` addresses the built-environment pathway. `fire risk assessment` (`174`): **`22` of `30` are wildfire modelling**, the top hit by stars is floor-plan computer vision, exactly `1` is building fire engineering. `playground inspection` (`46`): **`29` of `30` are software playgrounds and debuggers.** **None of those three counts is a supply figure and none may be published as one** (`T628`).
+
+🟢 **The usable denominators are topic-qualified** (`T629`): `topic:inspection` `403` · `topic:facility-management` `147` · `topic:cmms` `135` · `topic:fire-safety` `100` · `topic:maintenance-management` `92` · `topic:ehs` `50` · `topic:work-order` `23` · `topic:health-and-safety` `13` · `topic:legionella` `12` · **`topic:asbestos` `5`**. Against `topic:compliance`'s `10,822`, which is the software-compliance register. **`5 : 10,822` is this register's structural fact: the word is crowded, the subject is not.**
+
 ## 🆕 2026-11-11 (p764) — **A national laboratory renamed its GitHub organisation and took `788` repositories with it, so every `NREL/...` citation in this sector is now a `422`. The HTML endpoint that `ACTION p756-A` nominated to detect exactly this is `403` for every address at this tunnel, live or dead. The working detector is a two-call pair, and it is recorded here.**
 
 **`18` permissive foundation rows · `13` platform rows · `14` agent rows · `83` supply probes on `search/repositories` · `19` licence-family paths per address including capitalisation variants · `8` language manifests per address on failure · `3` grants recovered that the platform's index reports as `NOASSERTION` · every `default_branch` derived, none guessed.**

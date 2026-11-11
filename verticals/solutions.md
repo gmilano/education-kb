@@ -6,6 +6,59 @@ updated: 2026-11-11
 
 # Vertical Platforms — Education
 
+## 🆕 `p765` — **There is no permissive statutory-compliance platform. `14` platform-tier systems byte-read, `13` are AGPL-3.0 or GPL-3.0, and the one Apache-2.0 platform has `2★`. The vertical's own named system of record, `openMAINT`, is not on GitHub at all — every address that resolves is a third-party Docker wrapper. And the `15,168★` asset platform this register would start from has changed its address.**
+
+**`14` platform rows · every licence byte-read with length and `sha256₁₂` · every row naming the branch the grant was read from, derived from `search/repositories` · `3` refusals and `1` structural absence recorded as rows.**
+
+Register: **school-estate safety and statutory compliance** (`ACTION p764-A`). The platform question on this register is narrow: **what holds the asset register, the inspection history and the statutory evidence file?**
+
+### 🔴 The governing finding: a third consecutive register with no permissive system of record
+
+| Platform | Repository | ★ | Grant, byte-read | Branch | Pushed | Verdict |
+|---|---|---|---|---|---|---|
+| **Snipe-IT** — the most-deployed open-source asset/licence management system | [`grokability/snipe-it`](https://github.com/grokability/snipe-it) | `15,168` | **AGPL-3.0** · `34,519 B` · `91b65277959e` | `master` | `2026-11-09` | 🔴 Copyleft. 🔴 **ADDRESS CHANGED: `snipe/snipe-it` is `422` on the search channel** while still serving `200` on raw — the defect of `T635`. **New** |
+| **OpenProject** — work packages, scheduling, document evidence | [`opf/openproject`](https://github.com/opf/openproject) | `17,260` | **GPL-3.0** · `35,149 B` · `3972dc9744f6` | **`dev`** | `2026-11-11` | 🔴 Copyleft. 🔵 Non-standard default branch. `6` prior mentions |
+| **GLPI** — asset and service management with a large European public-sector install base | [`glpi-project/glpi`](https://github.com/glpi-project/glpi) | `6,580` | **GPL-3.0** · `35,148 B` · `8b1ba204bb69` | **`12.0/bugfixes`** | `2026-11-10` | 🔴 Copyleft. 🔵 **Default branch is a version-and-channel string** — `T614`'s class (Ed-Fi's `v6.2.0`), third instance. **New** |
+| **BIMserver** — the open BIM model server | [`opensourceBIM/BIMserver`](https://github.com/opensourceBIM/BIMserver) | `1,773` | **AGPL-3.0** · `34,520 B` · `76a97c878c9c` | `master` | `2026-03-13` | 🔴 Copyleft, and eight months without a push. `2` prior mentions |
+| **xeokit SDK** — IFC/BIM/point-cloud viewer SDK for AEC | [`xeokit/xeokit-sdk`](https://github.com/xeokit/xeokit-sdk) | `951` | **AGPL-3.0** · `33,709 B` · `87817672a88b` — **plus a bundled third-party notices block** naming Canvas2Image, K3D.js, Pako and Earcut (MIT) and **`web-ifc` under MPL-2.0** | `master` | `2026-11-02` | 🔴 Copyleft **and** a notices file. `p762`'s *"read the tail before shipping a notices file"* reproduced on this register (`T646`). `4` prior mentions |
+| **OpenConstructionERP** — construction ERP with BOQ and PDF/CAD/BIM takeoff | [`datadrivenconstruction/OpenConstructionERP`](https://github.com/datadrivenconstruction/OpenConstructionERP) | `1,369` | **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` (canonical) | `main` | `2026-11-11` | 🔴 Copyleft. `4` prior mentions |
+| **Grash CMMS** — self-hosted CMMS, web and mobile | [`Grashjs/cmms`](https://github.com/Grashjs/cmms) | `863` | **AGPL-3.0** · `34,522 B` · `4df3c306ddda` | `main` | `2026-11-09` | 🔴 Copyleft. The most complete self-hostable CMMS on the register. `10` prior mentions |
+| **KoboToolbox** — form-based field data collection at scale | [`kobotoolbox/kpi`](https://github.com/kobotoolbox/kpi) | `190` | **AGPL-3.0** · `34,488 B` · `7ac1d3861781` | `main` | `2026-11-11` | 🔴 Copyleft — use ODK Central (Apache-2.0) instead for a proprietary deliverable. **New** |
+| **CMDBuild** — the configuration-database platform `openMAINT` is built on | [`Pat-srl/cmdbuild`](https://github.com/Pat-srl/cmdbuild) | `13` | **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` · at **`COPYING`** | `main` | `2026-10-14` | 🔴 Copyleft, and the grant is not at any `LICENSE*` path. **New** |
+| **BeaconHS** — open HSE platform: incidents, inspections, training | [`braedonsaunders/beaconhs`](https://github.com/braedonsaunders/beaconhs) | `12` | **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` | `main` | `2026-11-11` | 🔴 Copyleft. 🟢 **Functionally the closest platform on the register to the buyer's need** — inspections and training records in one system. **New** |
+| **openGewerk Haustechnik** — open-source **CAFM** for technical building management, self-hosted | [`OpenGewerk/opengewerk-haustechnik`](https://github.com/OpenGewerk/opengewerk-haustechnik) | `1` | **AGPL-3.0** · `34,513 B` · `8cc0027c55fa` | `main` | `2026-11-10` | 🔴 Copyleft. 🟢 **Created `2026-10-01` — the newest platform on this register anywhere, and it is EMEA and CAFM-native.** **New** |
+| **MantPro** — GMAO/CMMS libre: preventive and corrective maintenance, stores, Android apps | [`AnabasaSoft/MantPro`](https://github.com/AnabasaSoft/MantPro) | `8` | **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` | `main` | `2026-11-11` | 🔴 Copyleft. 🔵 Spanish-language, which places it for LATAM and Iberian delivery. **New** |
+| **CMMS-OEE** — CMMS with overall-equipment-effectiveness reporting | [`opensourceoeesoftware/CMMS-OEE-Software`](https://github.com/opensourceoeesoftware/CMMS-OEE-Software) | `6` | **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` | `main` | `2026-02-21` | 🔴 Copyleft. **New** |
+| **OpenMaintenance** — web app to track maintenance tasks | [`vtellier/OpenMaintenance`](https://github.com/vtellier/OpenMaintenance) | **`2`** | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` (canonical) | `main` | `2026-10-31` | 🟢 **The ONLY permissive platform on this register — and it has two stars.** Recorded as the whole permissive platform tier. **New** |
+
+🟢 **`p757`'s law now holds across three consecutive registers with no counter-example**: `p757` found the system of record copyleft, `p762` found *"there is no permissive HRIS"*, `p765` finds no permissive statutory-compliance platform either (`T641`). **This is a prior to price into a proposal, not an observation to re-derive each time.**
+
+### 🔴 `openMAINT` — the structural absence, recorded as a row
+
+`openMAINT` is the facility-and-asset-management vertical of CMDBuild and is the obvious system of record for a school estate. **It has no canonical repository on GitHub.** Every address that resolves is a third-party packaging:
+
+| Address | ★ | What it is | Grant |
+|---|---|---|---|
+| [`itmicus/cmdbuild_docker`](https://github.com/itmicus/cmdbuild_docker) | `125` | CMDBuild 4.2 + READY2USE 2.4 + openMAINT 2.4 in Docker | 🔴 **No payload** across `32` paths and `16` manifests |
+| [`rsilva4-zz/docker-openmaint`](https://github.com/rsilva4-zz/docker-openmaint) | `36` | A docker-compose image | 🔵 MIT — **on the wrapper, not on openMAINT** |
+| [`chabala/docker-openmaint`](https://github.com/chabala/docker-openmaint) | `10` | Demo image, last touched 2016 | 🔴 No grant |
+| [`astmnk/docker-openmaint`](https://github.com/astmnk/docker-openmaint) | `2` | 🔴 **Archived** | 🔵 MIT on the wrapper |
+| [`bigdoods/openmaint`](https://github.com/bigdoods/openmaint) | `1` | 🔴 **Archived** | 🔴 No grant |
+
+🔴 **The consequence for an engagement is concrete: `openMAINT`'s own grant cannot be read from this channel at all, so it cannot be cleared for a deliverable from here.** 🟢 **The usable substitute is its base, [`Pat-srl/cmdbuild`](https://github.com/Pat-srl/cmdbuild), whose AGPL-3.0 grant *was* byte-read** — which at least makes the copyleft explicit rather than unknown.
+
+### 🔴 Three refusals on grant terms, named so the next pass does not propose them
+
+| Platform / artefact | ★ | Grant, byte-read | Why it is refused |
+|---|---|---|---|
+| [`TowerScout/TowerScout`](https://github.com/TowerScout/TowerScout) | `21` | **`CC BY-NC-SA 4.0`** · `20,843 B` · `5b8e7938e1b5` at **`LICENSE.TXT`** | 🔴 **NonCommercial.** The only artefact on this register that addresses the built-environment legionella pathway, the only one that says `school`, used by real health departments — and unusable in a paid deliverable. Index said `NOASSERTION` (`T630`) |
+| [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) | `333` | **`CC BY-ND 4.0`** by reference · `287 B` · `e0af6597dc57` | 🔴 **NoDerivatives** on the specification. A national or client-specific *profile of the spec* is refused; 🟢 `.ids` files you author are not derivatives (`T637`, confirming `T618`) |
+| `1EdTech/caliper-js` | — | — | 🔴 **Withdrawn.** `422` on the search channel, cited `11` times on this base; a surviving third-party fork carries the notice *"1EdTech will be moving Caliper to private repositories on June 1"*. **A standards body took its code private** (`T637`) |
+
+### 🔵 What a school statutory-compliance platform would have to be, given the above
+
+🟢 **ODK Central (Apache-2.0) for capture + a permissive work-order core (`liberusoftware/project-maintenance-laravel-filament`, MIT, or `wyeworks/nucore-open`, MIT) + an interval engine that does not yet exist anywhere.** The copyleft platforms above are the right *reference implementations* to read and the wrong things to ship. 🔴 **The missing piece is the same one `repos/foundations.md` names: nothing on this register models a statutory interval — a recurring date with a competent-person attribute and an evidence artefact attached.** Every candidate models a work order, which is a task without a legal deadline.
+
 ## 🆕 `p764` — **The obvious platform for a school-building sensor estate is `22,665★`, is indexed as `NOASSERTION`, and is a Business Source Licence that permits production use on **one server**. The standard that expresses a building requirement is **NoDerivatives**. And the flagship open CMMS is AGPL-3.0. Three refusals, all of them the first thing a studio would reach for.**
 
 **`13` platform rows · every licence byte-read with length and sha256₁₂ · every row naming the branch it was read from.** The register is the school estate. 🔴 **Nothing that operates an estate is permissive. The three most-starred candidates are each unusable for a different reason, and none of the three reasons is visible on the repository page.**
