@@ -269,6 +269,37 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 p764 — the register with the largest measured unmet need on this base: **`$90` billion a year**, and the engines to address it are published in the same country
+
+**Register: the school estate** — buildings, work orders, the deferred-maintenance backlog, the utility bill and the capital programme.
+
+🟢 **The demand side is quantified by a named primary report.** *State of Our Schools: America's K–12 Facilities 2025*, by the **21st Century School Fund**, the **International WELL Building Institute** and the **National Council on School Facilities**, puts the annual US public K-12 facilities shortfall at **`$90` billion a year**:
+
+| Component | Annual spend | Annual gap |
+|---|---|---|
+| Capital improvements | **`$82B`** | **`$56B`** |
+| Facility operations and maintenance | **`$70B`** | **`$34B`** |
+| **Total** | **`$152B`** | **`$90B`** |
+
+- **The benchmark the gap is measured against** is `7 %` of district budgets on facilities — `4 %` capital, `3 %` operations and maintenance. Actual spending falls well short.
+- **Who pays**: local districts **`80 %`**, states **`17 %`**, the federal government **`3 %`**. 🔵 **This is the opposite of `p763`'s register**, where a `$28.5M` federal programme set the agenda. Here the buyer is the district and the bond, not the ministry.
+- **The trajectory**: `$46B` (2016) → `$85B` (2021) → `$90B` (2025). The 2025 edition reads this as slowing growth, not reversal. Lead author Mary Filardo: districts raised annual facilities spending from **`$95B` in 2016 to more than `$150B` now** and are still falling behind.
+- 🔵 **Search-sourced**: figures above are from the report's own summary coverage; the primary PDF is published at `21csf.org` and was **not fetched this pass** (outside this session's allowed domains). The `$80B` and `$85B` variants circulating in October 2026 trade press are earlier or differently-scoped numbers and are **not** used here.
+- **`$82B` of K-12 bond activity in 2026** is reported separately as a *surge*, which is the same money seen from the capital-markets side rather than the budget side. 🔵 Trade-press-sourced; treated as directional.
+
+🟢 **The opportunity is unusually clean: the demand and the engines are in the same jurisdiction and have never been joined.** `LBNL-ETA/EnergyPlus-MCP` (Berkeley Lab), the four `NatLabRockies` engines (EnergyPlus, OpenStudio, SAM, ComStock), `VOLTTRON` (Battelle/PNNL) and `wyeworks/nucore-open` (Northwestern) are all North-America-published, all permissive, all byte-read this pass — and **not one of them references a school district as a user.**
+
+🔴 **The savings claim is where this engagement will be won or lost, and the honest bracket is narrow.** Measured this pass across the available evidence:
+
+| Source | Claim | Grade |
+|---|---|---|
+| Stockholm study of educational properties, via trade press | **`−3.12 %`** district heating, **`−8.93 %`** electricity from AI-driven HVAC | 🟢 the only research-shaped figure found |
+| Fairfax, VA chiller-plant optimisation | `−33 %` annual electricity (`152,000 kWh`) | 🔴 vendor case study, unverified |
+| Vendor blogs | `15–25 %`, `25 %+` | 🔴 no methodology; not usable in a proposal |
+| IoT guidance | `10–20 %` of *controllable* HVAC energy | 🔵 estimate, explicitly not measured |
+
+🟢 **And the buyer has already learned to ask.** Mendota Township HSD 280 (Illinois) heard a `$95,500` HVAC-optimisation proposal with `$25,027`/year projected savings in December 2025 and **tabled it pending references and verification of incentive guarantees**; Aurora East USD 131 is running a six-school tune-up pilot with ComEd incentives and *will monitor billing afterwards* (June 2026). 🔵 **The deliverable a district will buy is measured, weather-normalised before-and-after — which is an evidence product, not a dashboard.**
+
 #### 🆕 p763 — the federal programme that funds this register is flat at `$28.5M`, has reached every state, and has **`0`** repositories carrying its name
 
 **Register: the education data warehouse and the statutory return** — where learning telemetry lands, who is accountable for it, and the report that is the actual deliverable.
@@ -1415,6 +1446,34 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 p764 — the school estate is a **statutory condition return** here, the survey that feeds it completes this year, and nobody has said what replaces it
+
+**Register: the school estate.** 🟢 **EMEA is the region where this register has a dated legal instrument**, in the same way `p763` found the UK's s537A census for the data return.
+
+**England — Condition Data Collection 2 (CDC2):**
+- CDC2 **surveyed every government-funded school in England** and is completing in 2026; earlier DfE material gave a completion date of **March 2026**.
+- 🟢 **The survey is not a report, it is a funding formula input.** The DfE's *Condition funding methodology and spend guidance* (March 2026) states that CDC2 data is used to calculate **the condition weighting component of School Condition Allocations in 2026-27 where CDC2 reports are available**. CDC2 scores **replace CDC1 condition band grades** for that purpose.
+- 🔴 **It redistributes money, visibly**: the transition produced *significant reductions in annual maintenance funding for some multi-academy trusts*. A trust's condition data is now directly its revenue.
+- CDC data also informed selection into the **School Rebuilding Programme**.
+
+**The capital programme attached to it:**
+
+| Instrument | Figure |
+|---|---|
+| School Rebuilding Programme | **almost `£20B`** to 2034-35, **`750+` schools** |
+| Capital maintenance | **almost `£3B` per year** by 2034-35 |
+| Renewal and Retrofit Programme | **over `£700M`** to 2029-30 |
+| RAAC | permanently removed from **`71`** schools and colleges |
+| Delivered via SRP | **`51`** schools rebuilt |
+
+🔵 RAAC and SRP counts are from the **February 2026 Education Estates Strategy**; all figures in this block are search-sourced from government and sector reporting, with the primary gov.uk documents not fetched this pass.
+
+🔴 **The open question is the successor.** Sector commentary is explicit that it *remains to be seen whether a further national programme will be announced or whether an alternative, more effective approach to gathering up-to-date condition data will be adopted.* 🟢 **That sentence is the engagement.** A continuous, instrumented condition baseline — rather than a decade-long national survey round — is the thing the department has not yet decided to buy, and the permissive components to build it (`pascalorg/editor`, `vinnividivicci/ifc-ids-mcp`, `IfcOpenShell`) all exist today.
+
+🟢 **`ACTION p761-F` generalises from transport to the whole estate: in Europe the school building is a municipal asset.** The region's supply reflects it exactly — [`City-of-Helsinki/respa`](https://github.com/City-of-Helsinki/respa) (MIT, a municipality's own resource-reservation API, `31` months stale), [`razbakov/bim-portal-mcp`](https://github.com/razbakov/bim-portal-mcp) (MIT, the **German BIM Portal**), [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) (MIT, physical-accessibility schema), [`indico/indico`](https://github.com/indico/indico) (MIT, CERN), [`opf/openproject`](https://github.com/opf/openproject) (GPL-3.0, capital programme) and [`OpenEMS/openems`](https://github.com/OpenEMS/openems) (`1,620★`, **licence unconfirmed across `42` probes**).
+
+🔴 **The gap, stated so it is not read as coverage: no open-source implementation of CDC2, SCA, or any European condition return exists at any licence.** The region has the statute, the money and the municipal buyer, and zero software.
 
 #### 🆕 p763 — the statutory return is the buyer here too, it has four dated deadlines, and the EU's own credential standard has essentially no public code
 
@@ -2764,6 +2823,35 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 p764 — the largest estate on earth is measured annually to one decimal place, and the two indicators that fail are the two that need design work
+
+**Register: the school estate.** 🟢 **APAC has the best condition telemetry of any region on this register**, and it is published: India's **UDISE+ 2025-26** report, reference year 2025-26, cutoff **`31` March 2026**, covering **`14.67` lakh schools** (`≈1.467` million).
+
+| UDISE+ 2025-26 indicator | Share of schools |
+|---|---|
+| Drinking water | **`99.5 %`** |
+| Any toilet | `99.1 %` |
+| Girls' toilets | `98.5 %` |
+| Boys' toilets | `97.2 %` |
+| Handwashing facility | `96.9 %` |
+| Electricity connection | **`95.0 %`** |
+| Library | `90.5 %` |
+| Computers | `69.9 %` |
+| Internet | `67.4 %` (from `63.5 %` in 2024-25) |
+| **Ramps with handrails** | 🔴 **`58.2 %`** |
+| **CWSN-friendly toilets** | 🔴 **`40.1 %`** |
+| Functional rainwater harvesting | 🔴 `29.9 %` |
+
+🟢 **The two failing indicators are the commercially interesting ones.** Water, toilets and electricity are effectively solved at the national level; **accessibility is not** — `40.1 %` for toilets usable by children with special needs, `58.2 %` for ramps with handrails. That is roughly `880,000` schools needing a ramp or an accessible toilet, each requiring a survey, a specification and a works programme.
+
+🔴 **And the indicator is binary.** The report measures whether a facility **exists**, not whether it **functions** — stated in the coverage of the report itself. A `99.5 %` water figure and a broken tap are the same row. 🟢 **Functional-status measurement is the gap, and it is exactly what a condition instrument is for.**
+
+🟢 **The permissive component for the failing indicators already exists and is EMEA-published**: [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) (MIT, `1,059 B` · `2b47d728e281`) is a schema for describing the accessibility of physical places, and [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT) turns a written accessibility requirement into an automated check. Neither has ever been pointed at UDISE+.
+
+🔴 **APAC's own supply on this register is a data layer with no grant.** [`datameet/udise_schools`](https://github.com/datameet/udise_schools) (`9★`) and [`gsidhu/udise-district-dump`](https://github.com/gsidhu/udise-district-dump) (`2★`) both returned **no licence payload across `19` paths and `8` manifests** — they are unlicensed scrapes of a national dataset, which is the same shape `p763` recorded for Indonesia's PDDikti. The region's agent-side contributions are real but generic: [`smartaec/ifcMCP`](https://github.com/smartaec/ifcMCP) (Apache-2.0, Tsinghua University, **`17` months stale**), [`General-Soju/BimOnMcp`](https://github.com/General-Soju/BimOnMcp) (MIT) and [`nguyenngocdue/DeepBIM-MCP-Revit-Plugin`](https://github.com/nguyenngocdue/DeepBIM-MCP-Revit-Plugin) (MIT).
+
+🔵 **Regional-framing control, per `ACTION p763-D`**: `p763` recorded that sources return UAE and UK material inside APAC result sets. This block contains **only** instruments of APAC jurisdictions, and every row was placed from the jurisdiction the instrument belongs to, not from the regional framing of the page it was found on.
+
 #### 🆕 p763 — two national databases with hard annual deadlines, and their entire public client estate is one AGPL repository with `2` stars
 
 **Register: the education data warehouse and the statutory return.**
@@ -4030,6 +4118,37 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 p764 — the programme money is appropriated and school-by-school, the verification problem is the product, and the repository supply is `1★`
+
+**Register: the school estate.** 🟢 **LATAM is the region where this register's money is allocated per school rather than per formula**, which makes verification — not planning — the deliverable.
+
+**Mexico — 2026 federal education-infrastructure investment:**
+
+| Line | 2026 amount |
+|---|---|
+| Total education infrastructure | **`MXN 58,415` million** (≈`59` mil mdp as announced) |
+| Educación Básica | `MXN 37,715` M |
+| Educación Media Superior | `MXN 10,916.4` M |
+| Educación Superior | `MXN 9,783.9` M |
+| **La Escuela es Nuestra** (the basic-education instrument) | **`71,482` schools · `MXN 22,694` M** |
+
+🔴 **The same programme is reported at two sizes within weeks**: `71,482` schools / `MXN 22,694` M and `73,443` schools / `MXN 23,320` M. **Both are recorded; neither is preferred**, because the dates differ and this base does not silently pick the larger. 🔵 The figures exclude state contributions made directly (via the Fondo de Aportaciones Múltiples and the programme itself). Announced `2026-07-13` by the Presidencia and the SEP; search-sourced.
+
+🟢 **The architecture of *La Escuela es Nuestra* is why this register matters here**: money goes to a school-level committee, and the accountability artefact is evidence that works were done. **`71,482` separate works programmes is a verification problem at a scale no CMMS addresses**, and it is the clearest open-source-shaped opportunity in the region on this register.
+
+**Brazil — Novo PAC:**
+- **`117` Indigenous schools authorised across `17` states at `≈R$785` million** (February 2026), selected under a joint MEC/FNDE ordinance against deficits recorded in the **Censo Escolar** — which counts **`3,572`** Indigenous schools. 🔵 **`117` of `3,572` is `3.3 %`**; the selection is a pilot tranche, not a programme completion.
+- Phase 1 is reported as **up to `625` full-time schools at `≈R$5.24` billion**. 🔴 **Commercial press release; flagged, not relied on.**
+- 🟢 **The infrastructure indicators come from the same Censo Escolar `p763` registered**: internet in basic-education schools rose from `82.8 %` (2021) to `94.5 %` (2025), with the largest remaining gap in the **North** region.
+
+**Chile and Colombia — declared gaps, not silence:**
+- 🔴 **Chile**: the only result for 2026 school-infrastructure investment was a **commercial guide** citing *"Más Aulas para Chile"* at `300` establishments and *"over US$2.5 billion"*. **That source contradicts itself** on the share of GDP (`2.1 %` and `6.8 %` in the same document), so **no Chilean figure is published in this block.** The primary sources — MINEDUC and DIPRES — were not reachable this pass.
+- 🔴 **Colombia**: the Spanish-language probe returned **nothing relevant** on 2026 school-infrastructure investment or reconstruction programmes. **This is an informed nil, not an unsearched one.**
+
+🔴 **The repository supply is the worst of the four regions, and it was probed in Spanish.** `infraestructura escolar in:name,description` → **`16`** results, maximum **`1★`**; `mantenimiento escolar` → **`22`**, maximum **`2★`**. Every hit is student coursework or an unrelated bootcamp project. The one artefact worth naming is [`dayronlalay8/qgis-plugin-localizacion-escolar`](https://github.com/dayronlalay8/qgis-plugin-localizacion-escolar) — a QGIS plugin for school siting — which returned **no licence payload across `19` paths and `8` manifests**, so it cannot be built on.
+
+🟢 **The one LATAM capability on this register that *is* usable is a maintainer, not a repository**: [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) (MIT, `41★`, pushed `2026-11-11`) is Northwestern University's core-facility system, maintained by a Montevideo firm. 🔵 **Filed under North America**, because the software and its copyright holder are Northwestern's — the regional field records the artefact, not its contractor (`ACTION p763-D`).
 
 #### 🆕 p763 — a statutory return that allocates money for ~`40` million students, with a `2026-12-11` deadline, and a supply side of `12` repositories whose maximum is `3` stars
 
@@ -5382,6 +5501,22 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 p764 — the school estate, in one table: four regions, four statutory instruments, four condition datasets, and zero open-source systems
+
+**Register: the school estate.** 🔵 This block exists so the cross-region shape is not inferred from five separate readings.
+
+| | North America | EMEA (UK) | APAC (India) | LATAM (MX / BR) |
+|---|---|---|---|---|
+| **The instrument** | District capital budget + bond | **CDC2 → School Condition Allocations** | **UDISE+** annual return | **La Escuela es Nuestra** / **Novo PAC** + Censo Escolar |
+| **The number** | **`$90B`/yr gap** (`$56B` capital + `$34B` O&M) | **`£20B`** SRP to 2034-35; `≈£3B`/yr maintenance | **`14.67` lakh** schools measured annually | **`MXN 58,415M`** (2026); **`R$785M`** / `117` schools |
+| **Who buys** | The district and its bond counsel | The department, allocating by condition score | The ministry, by indicator | The school-level committee, per works programme |
+| **What it needs** | Measured, weather-normalised savings evidence | A continuous condition baseline to replace a survey round | **Functional** status, not binary existence | Verification that works were done |
+| **Open-source supply** | 🟢 **all the engines**, none pointed at schools | 🟢 municipal reference designs, `31` months stale | 🔴 unlicensed data scrapes | 🔴 `1–2★` coursework |
+
+🔴 **The one finding that is true in all five blocks: no open-source system anywhere, at any licence, implements a school-estate condition return.** `p763` recorded the identical shape for the statutory *data* return. Two consecutive registers, two statutory deliverables, the same hole — which is now the strongest repeated signal on this base about where education software is not written.
+
+🟢 **The licence split is the same in every region and it is now a five-register law** (`T622`): engines, schemas and models are permissive and come from laboratories, standards bodies and universities; systems an organisation logs into are AGPL-3.0, GPL-3.0 or source-available and come from companies with a hosted edition. **A studio's leverage is therefore always in the measuring layer, and the delivery risk is always in the layer that holds the record.**
 
 #### 🆕 p763 — the measuring layer is permissive, the layer that holds the record is copyleft, and the best-known open LRS has been stale for `18` months
 

@@ -1,0 +1,15 @@
+topic:cmms                                 135
+topic:maintenance-management               92
+topic:facility-management                  147
+topic:facilities-management                77
+topic:work-order                           23
+topic:work-orders                          228
+topic:preventive-maintenance               61
+topic:building-automation                  350
+topic:ifc                                  638
+topic:bim                                  1298
+topic:energy-management                    715
+topic:asset-management                     1618
+topic:predictive-maintenance               2177
+topic:school-management                    1245
+topic:openmaint                            4

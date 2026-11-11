@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p764) — **A national laboratory renamed its GitHub organisation and took `788` repositories with it, so every `NREL/...` citation in this sector is now a `422`. The HTML endpoint that `ACTION p756-A` nominated to detect exactly this is `403` for every address at this tunnel, live or dead. The working detector is a two-call pair, and it is recorded here.**
+
+**`18` permissive foundation rows · `13` platform rows · `14` agent rows · `83` supply probes on `search/repositories` · `19` licence-family paths per address including capitalisation variants · `8` language manifests per address on failure · `3` grants recovered that the platform's index reports as `NOASSERTION` · every `default_branch` derived, none guessed.**
+
+### 🔴 The channel finding: `NREL` → `NatLabRockies`, and how it was caught
+
+| Probe | Result |
+|---|---|
+| `repo:NREL/EnergyPlus` | **`422 Validation Failed`** — *"the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them"* |
+| `repo:nrel/energyplus` | `422` — **case is not the cause** |
+| `org:NREL energyplus in:name` | `422` — **the organisation, not the repository, is what is gone** |
+| `energyplus in:name` | **`370`**, first hit [`NatLabRockies/EnergyPlus`](https://github.com/NatLabRockies/EnergyPlus) `1,622★`, pushed `2026-11-11` |
+| `org:NatLabRockies` | **`788`** repositories |
+| `https://github.com/NREL/EnergyPlus` (HTML) | **`403`** |
+| `https://github.com/CEDStandards/CEDS-IDS` (HTML, **known live**, verified by `p763` and again today) | **`403`** |
+
+🔴 **`ACTION p756-A` is answered in the negative.** It directed a later pass to *"probe the GitHub HTML endpoint, which does redirect, and record which channel answered"*. At this tunnel the HTML endpoint returns `403` for a live address and `403` for a renamed one — **it cannot distinguish them, so it cannot be the rename channel.** 🟢 **What works, and is now the recorded instrument: `422` on `repo:<old>` plus a hit on `<repo-name> in:name`.** Two calls, no credentials, and it reports the new address directly.
+
+🔵 **The rename is corroborated inside the grant bytes.** `OpenStudio` and `SAM` now read *"Alliance for **Energy Innovation**, LLC"*; `ComStock`, in the same organisation on the same day, still reads *"Alliance for **Sustainable** Energy, LLC"*. The operating entity's name changed and the estate is mid-migration — which is why a size-or-name heuristic would have mis-filed all three.
+
+### 🟢 Trending into this register this week
+
+| Repo | Stars | Grant | Pushed | Why it is trending into the school estate |
+|---|---|---|---|---|
+| [`pascalorg/editor`](https://github.com/pascalorg/editor) | `25,442★` | MIT `1,074 B` · `9c9dde8dcf11` | `2026-11-10` | 🟢 **The largest permissive AEC repository this base has filed**, and it ships its own MCP server, CLI and local-first store. The digital-twin substrate question is now answered for every register that owns buildings |
+| [`NatLabRockies/EnergyPlus`](https://github.com/NatLabRockies/EnergyPlus) | `1,622★` | EnergyPlus modified BSD `3,169 B` | `2026-11-11` | Moved, not stopped: pushed on the day of this pass under its new organisation |
+| [`liberusoftware/project-maintenance-laravel-filament`](https://github.com/liberusoftware/project-maintenance-laravel-filament) | `73★` | MIT `1,072 B` | `2026-11-11` | 🟢 **An MIT CMMS under active daily development** — the permissive alternative to the AGPL-3.0 flagship, `20×` smaller and `100 %` usable |
+| [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) | `41★` | MIT `1,085 B` | `2026-11-11` | 🟢 The one education-placed facility system on the register, pushed today, `16` years after its first copyright line |
+| [`datadrivenconstruction/OpenConstructionERP`](https://github.com/datadrivenconstruction/OpenConstructionERP) | `1,368★` | AGPL-3.0 `34,523 B` | `2026-11-11` | Capital-programme ERP, active, copyleft |
+| [`Grashjs/cmms`](https://github.com/Grashjs/cmms) | `863★` | AGPL-3.0 `34,522 B` | `2026-11-09` | The flagship open CMMS, self-described *"#1 self hosted"*. Active and unusable in a closed deliverable |
+| [`classroombookings/classroombookings`](https://github.com/classroombookings/classroombookings) | `226★` | AGPL-3.0 `34,520 B` | `2026-10-30` | The only estate platform whose first line names schools |
+| [`eclipse-volttron/volttron`](https://github.com/eclipse-volttron/volttron) | `0★` | Apache-2.0 `11,927 B` | `2026-07-21` | 🔴 **Trending downward, and worth recording as such**: the Eclipse Foundation home of a `505★` project, at zero stars |
+
+### 🔵 Supply counts, with the qualifier `ACTION p763-C` requires
+
+`topic:` only — plain-language `total_count` is not reported here as supply, because this pass re-confirmed why. `school estate in:name,description` returns **`318`** results whose top hits are residential real-estate coursework, and `condition data collection in:name,description` returns **`92`** whose top hit is a `369★` dotfiles repository.
+
+| Topic | Repositories | Topic | Repositories |
+|---|---|---|---|
+| `topic:predictive-maintenance` | `2,177` | `topic:cmms` | `135` |
+| `topic:asset-management` | `1,618` | `topic:maintenance-management` | `92` |
+| `topic:bim` | `1,298` | `topic:facilities-management` | `77` |
+| `topic:school-management` | `1,245` | `topic:preventive-maintenance` | `61` |
+| `topic:energy-management` | `715` | `topic:work-order` | `23` |
+| `topic:ifc` | `638` | `topic:openmaint` | `4` |
+| `topic:building-automation` | `350` | — | — |
+| `topic:work-orders` | `228` | — | — |
+| `topic:facility-management` | `147` | — | — |
+
+🔴 **The intersection is where the supply disappears.** `topic:school-management` holds `1,245` repositories and `topic:facility-management` holds `147`; the education∩facilities probes return coursework at one and two stars in every language tried:
+
+| Probe | `total_count` | Highest stars found |
+|---|---|---|
+| `school maintenance in:name` | `68` | **`1★`** |
+| `campus facilities in:name` | `40` | **`1★`** |
+| `mantenimiento escolar in:name,description` | `22` | **`2★`** |
+| `infraestructura escolar in:name,description` | `16` | **`1★`** |
+| `deferred maintenance in:name,description` | `16` | `4★` ([`JupiterOne/deferred-maintenance`](https://github.com/JupiterOne/deferred-maintenance), MIT — **a software-debt tool, not a building one**) |
+
 ## 🆕 2026-11-11 (p763) — **The GitHub search channel came back, so for the first time in three passes every licence was read from a derived `default_branch` rather than a guessed one — and the first thing it caught was a standards body whose default branch is a version tag. A third distinct sha256 now sits at exactly `11,357` bytes. And half of this pass's "no grant" verdicts were wrong until a language manifest was probed.**
 
 **`24` permissive foundation rows · `8` platform rows · `53` addresses resolved · `47` licence payloads byte-read with length and sha256₁₂ · `157` licence-path probes · `102` exhaustive probes across `6` no-payload addresses, `3` of them refuted by a manifest follow-up and `3` published as absences · `1` p762 control reproduced exactly · `2026-11-11`.**

@@ -6,6 +6,51 @@ updated: 2026-11-11
 
 # Education AI Agents — Curated Top Set
 
+## 🆕 `p764` — **The school estate is a `$90` billion-a-year hole in one country alone, and its agent layer does not know that schools exist: `14` MCP servers, `154,443` bytes of documentation, and the word *school* appears **once** — inside an example prompt. `13` of the `14` carry a permissive grant and `2` of those grants are invisible to the platform's own licence index.**
+
+**Register: the school estate** — the buildings, the work orders, the deferred-maintenance backlog, the utility bill and the capital programme. The second-largest line in any school budget after payroll (`p762`'s register), and the first one on this base whose entire usable supply was published by people building offices, factories and hospitals. `14` addresses byte-read for a grant · `19` licence-family paths probed per address, now including **capitalisation variants** · `8` language manifests per address on failure · `83` GitHub supply probes on `search/repositories` · every `default_branch` derived from the search channel, none guessed.
+
+### 🔴 The central measurement: the agent layer is AEC/FM, not education
+
+Fourteen READMEs were fetched and counted, not skimmed. Across **`154,443` bytes** the education vocabulary returns:
+
+| Token | Occurrences across all `14` agent READMEs |
+|---|---|
+| `school` | **`1`** — [`louistrue/ifcx-mcp`](https://github.com/louistrue/ifcx-mcp) line `138`, an example prompt: *"Create an IFCX model for a small school campus"* |
+| `classroom` | **`0`** |
+| `campus` | `2` — both in the same repository, same example |
+| `educatio…` | **`0`** |
+| `k-12` / `k12` | **`0`** |
+| `universit…` | `2` — **neither is a use case**: the Regents of the University of California as copyright holder, and a Tsinghua department as author affiliation |
+
+🟢 **This is good news for a studio and bad news for a product.** The tools are real, permissive and maintained; nobody has pointed them at the buyer who has `$90` billion of unmet annual need. There is no incumbent to displace because there is no incumbent.
+
+### The shelf — `13` usable, `1` grant-less, every cell byte-read `2026-11-11`
+
+| Agent | Stars | Grant (payload length · sha256₁₂) | Branch | Region | Role on the school estate |
+|---|---|---|---|---|---|
+| [`LBNL-ETA/EnergyPlus-MCP`](https://github.com/LBNL-ETA/EnergyPlus-MCP) | `126★` | **BSD-3-Clause-LBNL** · `License.txt` `2,474 B` · `107827bf9e23` (+ `Copyright.txt` `903 B`) | `main` | North America | 🟢 **The register's most valuable single artefact.** The first open-source MCP server over EnergyPlus: an agent can build, run and read a whole-building energy model. Berkeley Lab. 🔴 **Its grant is invisible to a case-insensitive path set** — see `T616` |
+| [`LGDiMaggio/predictive-maintenance-mcp`](https://github.com/LGDiMaggio/predictive-maintenance-mcp) | `114★` | MIT · `1,080 B` · `43bf5912113f` | `main` | Global | 🟢 Vibration diagnostics with **ISO-cited severity**, `44` tools + `4` prompts, blind-benchmarked on the CWRU Bearing Data Center. 🔵 **Plant room, not fabric** — boiler pumps, AHU fans, chillers; it says nothing about a roof |
+| [`Show2Instruct/ifc-bonsai-mcp`](https://github.com/Show2Instruct/ifc-bonsai-mcp) | `69★` | MIT · `1,075 B` · `8c2d70c6869e` | `main` | Global | Connects an LLM to IFC/BIM editing in Blender through the Bonsai add-on — the free end of the model-authoring chain |
+| [`smartaec/ifcMCP`](https://github.com/smartaec/ifcMCP) | `34★` | Apache-2.0 · `11,357 B` · `c71d239df917` (**canonical**) | `main` | APAC | Agents query IFC files. Department of Civil Engineering, **Tsinghua University**. 🔴 **Last push `2025-06-08`** — `17` months |
+| [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) | `28★` | MIT · `1,072 B` · `4dac9896e204` | `master` | Global | 🟢 **The compliance writer.** Produces IDS files *deterministically* via IfcOpenShell's `IfcTester` — this is how a condition or accessibility requirement becomes machine-checkable |
+| [`louistrue/ifcx-mcp`](https://github.com/louistrue/ifcx-mcp) | `26★` | **MIT declared in `package.json` only** · `1,027 B` · `442815dc7a7f` · **no grant file at `19` paths** | `main` | Global | Authors IFC5/IFCX models through an assistant. 🔵 **The only artefact on the register that has ever typed the word *school*** |
+| [`flinker-app/ifc-mcp`](https://github.com/flinker-app/ifc-mcp) | `13★` | Apache-2.0 · **`10,254 B`** · `6201176f48e4` | `main` | Global | Node MCP server for IFC workflows. 🔵 **A fourth Apache-2.0 payload size measured this pass** (`T624`) |
+| [`General-Soju/BimOnMcp`](https://github.com/General-Soju/BimOnMcp) | `12★` | MIT · `1,176 B` · `e6af1a6724ae` | `main` | APAC | Drives Autodesk Revit / Navisworks / AutoCAD + Dynamo from an assistant. 🔴 **Index reads `NOASSERTION`**; the payload is verbatim MIT with two contact lines appended — `p763`'s `dssg/triage` class, reproduced |
+| [`ekkodale/IFC-MCP`](https://github.com/ekkodale/IFC-MCP) | `11★` | MIT · `1,070 B` · `44b6757fb430` | `main` | EMEA | Automated querying and analysis of building information models. Placed from its own grant bytes: *ekkodale **GmbH***. 🔴 Last push `2025-12-04` |
+| [`kenpro0/bimbridge-mcp`](https://github.com/kenpro0/bimbridge-mcp) | `8★` | MIT · `1,066 B` · `9ce0337b3308` | `main` | Global | BIM bridge for agent clients. 🔵 No description and no region evidence — filed as `Global` rather than guessed |
+| [`nguyenngocdue/DeepBIM-MCP-Revit-Plugin`](https://github.com/nguyenngocdue/DeepBIM-MCP-Revit-Plugin) | `3★` | MIT · `LICENSE.txt` `1,078 B` · `05cc1e0659ac` | `master` | APAC | Revit-side plugin half of a BIM MCP pair. Placed from its own grant bytes (Vietnamese diacritics in the copyright line) |
+| [`razbakov/bim-portal-mcp`](https://github.com/razbakov/bim-portal-mcp) | `2★` | MIT · `1,073 B` · `330fddfc1c88` | `main` | EMEA | 🟢 **The only agent on this register that addresses a national public-sector building registry**: the **German BIM Portal** REST API. `2` stars |
+| [`FCBRTH/facilitybot-MCP-agent-skills`](https://github.com/FCBRTH/facilitybot-MCP-agent-skills) | `2★` | MIT · `1,068 B` · `64189aa2b550` | `main` | Global | Agent Skills and domain guidelines for a **commercial** FM product's MCP server. 🔵 **The skills are MIT; the server they drive is not open source** — the `p614` vehicle, now in facilities management |
+
+**`13 / 14` usable in a proprietary deliverable.** `12` byte-read permissive grants plus one manifest-declared MIT. The exception is not a refusal — it is an absence of any grant at `19` paths and `8` manifests, and it is `louistrue/ifcx-mcp`'s neighbour in every other respect.
+
+### 🔴 What is not here, stated so the silence is not read as coverage
+
+- **No agent anywhere, at any licence, in any region, that writes or validates a statutory condition return** — not the UK's CDC2, not India's UDISE+ infrastructure block, not Brazil's Censo Escolar infrastructure section, not a US state's facility inventory. The same shape of hole `p763` found on the statutory *data* return, one register over.
+- **No agent over a CMMS.** `topic:cmms` holds `135` repositories and the flagship is AGPL-3.0; not one MCP server addresses any of them. A work order is the register's atomic unit of work and no agent can create one.
+- **No deferred-maintenance or capital-prioritisation agent.** The `$56` billion capital half of the US gap has no tooling on this shelf at all.
+
 ## 🆕 `p763` — **The agent layer on the education data register is reader-side, global, and `9` months old: every artefact wraps a *published statistics portal*, and not one produces, validates or reconciles the statutory return that is the register's entire budget. The pass's worst landmine is a Business Source Licence whose own `Licensed Work` field names a different repository. And the University of Chicago ships its ML pipeline under MIT and its education model under a grant that forbids selling a service.**
 
 **Register: the education data warehouse and the statutory return** — where learning telemetry lands, who is accountable for it, and the report that is the actual deliverable. `53` addresses resolved · **`47` licence payloads byte-read** with length and sha256₁₂ · `157` licence-path probes · **every `default_branch` derived from the search channel rather than guessed** (`ACTION p762-B`, discharged in full for the first time) · `6` addresses returned no payload at `17` paths each and **`3` of those `6` were refuted by a manifest probe** · `1` p762 control reproduced exactly · `T604`–`T614` declared.

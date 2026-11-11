@@ -6,6 +6,92 @@ updated: 2026-11-11
 
 # 🆕 Trends new at `p763` (researched 2026-11-11) — `T604`–`T614`
 
+# 🆕 Trends new at `p764` (researched 2026-11-11) — `T615`–`T626`
+
+**The register is the school estate** — the buildings, the work orders, the deferred-maintenance backlog, the utility bill and the capital programme. `ACTION p760-A` / `p761-G` directed this pass at an institutional buyer defined by a held technical property; the property was the physical asset itself, and the buyer is the district or ministry facilities office. `14` agent addresses, `18` permissive foundation addresses and `13` platform addresses byte-read today.
+
+**A note on form, stated once.** Plain declarative prose, the shelves' structural conventions, pass id, byte-read licence cells with length and sha256₁₂, region placement from artefacts only, `T` tokens, `INS` tokens for instrument defects.
+
+### `T615` 🔴 The school estate is the largest unmet need this base has ever measured, and it has no software
+
+`$90` billion a year in the United States alone — `$56B` capital, `$34B` operations and maintenance, against `$152B` of actual annual spending (*State of Our Schools 2025*). Add the UK's `£20B` rebuilding programme, India's `14.67` lakh schools measured annually, and Mexico's `MXN 58,415M` for 2026. Against that: **no open-source system, in any region, at any licence, that implements a school-estate condition return, a facility condition index, or a deferred-maintenance ledger.** `topic:school-management` holds `1,245` repositories and `topic:facility-management` holds `147`; the intersection returns coursework at one and two stars in English, Spanish and Portuguese. 🟢 **Every usable component on this register was published for offices, factories and hospitals.**
+
+### `T616` 🔴 `INS-003`: capitalisation alone defeats a licence path set, and it hid a national laboratory's grant
+
+[`LBNL-ETA/EnergyPlus-MCP`](https://github.com/LBNL-ETA/EnergyPlus-MCP) (`126★`) returned **nothing across `14` LICENSE-family paths and `8` language manifests** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `license`, `license.md`, `COPYING`, and more. The grant is at **`License.txt`**: capital `L`, lowercase remainder, `2,474 B` · `107827bf9e23`, a **BSD-3-Clause-LBNL** modified BSD naming the Regents of the University of California, with `Copyright.txt` (`903 B`) alongside. `raw.githubusercontent.com` is case-sensitive and `license.txt` is a `404` while `License.txt` is a `200`.
+
+🔴 **`ACTION p763-B` said the path set must cross language ecosystems. It must also cross capitalisation**, and the cost of not doing so is the highest-value single artefact on this register recorded as grant-less. The path set used for the rest of this pass carries `19` entries including `License`, `License.md`, `License.txt`, `Licence.txt` and `license.txt`, and it is the first version of this instrument that would have found this grant.
+
+### `T617` 🔴 ThingsBoard `4.4.0` and later is a Business Source Licence, and the licence depends on the **version**
+
+[`thingsboard/thingsboard`](https://github.com/thingsboard/thingsboard) is `22,665★`, is indexed `NOASSERTION`, and its `LICENSE` is **BSL 1.1** (`6,844 B` · `9baf8f3e02ba`). The `Licensed Work` field reads *"The ThingsBoard platform, **version 4.4.0 or later**"*; free production use requires either *"no more than one server"* or a free licence key issued to the Organization which the user does *"not disable, bypass, or circumvent"*.
+
+🔵 **This generalises `p762`'s "a licence that depends on the branch" and `p764`'s own Speckle finding ("a licence that depends on the path") into a single rule: the grant is a function of *which* artefact, and version, branch and path are all coordinates on it.** A district estate is tens of buildings on tens of servers, so for this register BSL is a refusal, not a caveat.
+
+### `T618` 🔴 The standard that expresses a building requirement is **NoDerivatives**
+
+[`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) (`333★`, indexed `NOASSERTION`) is **CC BY-ND 4.0** — `287 B` · `e0af6597dc57`. Information Delivery Specification is the grammar in which *"every classroom shall have a ramp with handrails"* becomes machine-checkable, and **it may not be adapted**. Its sibling [`buildingSMART/bSDD`](https://github.com/buildingSMART/bSDD) is **MIT**.
+
+🟢 **The split is usable if it is known**: tooling that *reads and emits* IDS is unaffected, so [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT) remains the right component. 🔴 A ministry engagement that wants a national *profile* of IDS has a licence problem, and the repository page does not say so.
+
+### `T619` 🔴 `INS-004`: LGPL is a two-file read, and a one-file read returns the wrong licence
+
+[`IfcOpenShell/IfcOpenShell`](https://github.com/IfcOpenShell/IfcOpenShell) (`2,949★`) carries `COPYING` = **GPL-3.0** full text (`32,473 B` · `1b3782ccad7b`). Read alone, that convicts the library the entire register stands on as GPL-3.0 — which would make every derived tool GPL. The repository also carries **`COPYING.LESSER`** (`7,652 B` · `e3a994d82e64`), and the pair is **LGPL-3.0**, which permits linking.
+
+🔴 **Every LGPL project in open source has this shape**, because the LGPL is defined as a set of additional permissions on top of the GPL. A licence instrument that stops at the first payload it finds will mis-grade all of them in the most expensive possible direction. 🟢 **The rule: on finding a GPL payload, probe `COPYING.LESSER`, `COPYING.LIB` and `LICENSE.LESSER` before recording a verdict.**
+
+### `T620` 🔴 An organisation rename killed `788` repositories' addresses, and the copyright holder changed with it
+
+`repo:NREL/EnergyPlus` → **`422`**. `org:NREL` → **`422`**. `energyplus in:name` → **`370`**, first hit [`NatLabRockies/EnergyPlus`](https://github.com/NatLabRockies/EnergyPlus) `1,622★` pushed `2026-11-11`. `org:NatLabRockies` → **`788`** repositories.
+
+🔵 **The rename is corroborated in the grant bytes, which is why it is a fact and not an inference**: `OpenStudio` (`2,624 B`) and `SAM` (`1,548 B`) now name *"Alliance for **Energy Innovation**, LLC"*, while `ComStock` (`2,415 B`) in the same organisation on the same day still names *"Alliance for **Sustainable** Energy, LLC"*. The lab's operating entity renamed and the estate is mid-migration. 🔴 **Every `NREL/...` citation in every knowledge base is now a dead API address**, and this base held `20` of them.
+
+### `T621` 🔴 `ACTION p756-A`'s proposed rename channel is unavailable, and the working one costs two calls
+
+`p756` directed a later pass to *"probe the GitHub HTML endpoint, which **does** redirect"* to separate renames from deletions. Measured: `https://github.com/NREL/EnergyPlus` → **`403`**; `https://github.com/CEDStandards/CEDS-IDS`, live and verified twice → **`403`**; `https://github.com/Grashjs/cmms`, live → **`403`**. **The HTML endpoint is blocked for every address at this tunnel, so it cannot distinguish a rename from a deletion.**
+
+🟢 **The instrument that works, recorded for reuse: `422` on `repo:<old-address>` plus a hit on `<repo-name> in:name`.** It needs no credentials, returns the new address directly, and it is how `NatLabRockies` and `openremote/core` were both recovered this pass.
+
+### `T622` 🟢 `p757`'s law holds a fifth consecutive register — and gains its first partial counter-example
+
+Permissive and byte-read today: `pascalorg/editor` (MIT, `25,442★`), Home Assistant (Apache-2.0), four `NatLabRockies` engines (modified BSD / BSD-3), `Brick` (BSD-3), both VOLTTRONs (Apache-2.0), Indico (MIT, CERN), A11yJSON (MIT), bSDD (MIT), NUcore (MIT), trier-os (MIT), respa (MIT), `engine_web-ifc` (MPL-2.0). Copyleft or source-available: Atlas CMMS (AGPL-3.0), classroombookings (AGPL-3.0), OpenProject (GPL-3.0), BIMserver (AGPL-3.0), OpenConstructionERP (AGPL-3.0), xeokit (AGPL-3.0), seatsurfing (GPL-3.0), ThingsBoard (BSL), Speckle (split), IDS (CC BY-ND).
+
+🔵 **The counter-example**: [`liberusoftware/project-maintenance-laravel-filament`](https://github.com/liberusoftware/project-maintenance-laravel-filament) (`73★`, MIT, pushed `2026-11-11`) and [`SuperCMMS/Open-Source-CMMS`](https://github.com/SuperCMMS/Open-Source-CMMS) (`44★`, MIT) **are** permissive systems of record for maintenance. 🟢 **The law should now read: what holds the record *at scale* is copyleft.** The permissive record-holders exist at roughly one-twentieth the size.
+
+### `T623` 🔴 The register's agent layer has never heard of a school, and it is measured, not asserted
+
+`14` MCP servers, **`154,443` bytes** of README fetched and counted. `school`: **`1`** occurrence, in an example prompt (`louistrue/ifcx-mcp`, line `138`). `classroom`: `0`. `educatio…`: `0`. `k-12` / `k12`: `0`. `universit…`: `2`, both of them a copyright holder or an author affiliation rather than a user.
+
+🟢 **For a studio this is the finding of the pass.** Thirteen of the fourteen are usable in a proprietary deliverable, the components are maintained, and the buyer with `$90` billion of annual unmet need has not been addressed by any of them. There is no incumbent to displace.
+
+### `T624` 🔵 Apache-2.0 measured at four payload sizes in one pass, and a `906`-byte grant is still Apache-2.0
+
+| Payload | Size · sha256₁₂ | Where |
+|---|---|---|
+| Canonical full text | `11,357 B` · `c71d239df917` | `home-assistant/core`, `smartaec/ifcMCP` — and `p763`'s `CEDStandards` rows |
+| Full text with the appendix completed | `11,927 B` · `9a2bb4060023` | `eclipse-volttron/volttron` |
+| Full text without the appendix | `10,254 B` · `6201176f48e4` | `flinker-app/ifc-mcp` |
+| **Pointer grant** | **`906 B`** · `be9790f2c517` | `VOLTTRON/volttron` — *"Copyright 2023, Battelle Memorial Institute. Licensed under the Apache License, Version 2.0"* |
+
+🔴 **No size gate and no sha allowlist can grade this licence**, which `p761` and `p763` each established from one direction; this pass adds a fourth size and the first *pointer* form, where the grant is a reference rather than a copy. 🟢 **Only a text classifier over the payload works, and the `906`-byte case proves it must accept an incorporation-by-reference as a valid grant.**
+
+### `T625` 🔴 The education-placed supply on this register is `1★` coursework in every language probed
+
+| Probe | `total_count` | Max stars |
+|---|---|---|
+| `school maintenance in:name` | `68` | `1★` |
+| `campus facilities in:name` | `40` | `1★` |
+| `mantenimiento escolar in:name,description` | `22` | `2★` |
+| `infraestructura escolar in:name,description` | `16` | `1★` |
+
+🔵 **This is the inverse of `p700`'s finding.** There, LATAM's supply looked nil because a star floor hid `108` real repositories. Here there is no floor to lower: the population is genuinely student projects. 🟢 **Two exceptions exist and both are platforms, not projects**: [`classroombookings/classroombookings`](https://github.com/classroombookings/classroombookings) (`226★`, AGPL-3.0, *"for schools"* in its first line) and [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) (`41★`, MIT, Northwestern University).
+
+### `T626` 🔴 Donation to a foundation moved the governance and left the audience: `505★` against `0★`
+
+[`VOLTTRON/volttron`](https://github.com/VOLTTRON/volttron) — Battelle Memorial Institute / PNNL — holds `505★`, pushed `2026-11-03`. [`eclipse-volttron/volttron`](https://github.com/eclipse-volttron/volttron) — the Eclipse Foundation home of the same project — holds **`0★`**, pushed `2026-07-21`.
+
+🔵 `p763`'s technology register recorded goose's donation to the Linux Foundation's Agentic AI Foundation as a maturity signal. **This is the same move with the counter-measurement: the new home can hold the governance and none of the stars**, and a studio choosing a dependency by star count will pick the repository the project is migrating *away* from. 🟢 **Record both addresses, pin the one that is pushed, and say which is canonical.**
+
 **The register is the education data warehouse and the statutory return** — where learning telemetry lands, who is accountable for it, and the annual report that is the real deliverable. `ACTION p760-A`/`p761-G`/`p762-F` was pointed, as instructed, at the telemetry substrate these shelves already hold (`xAPI` `1,109` · `LTI` `1,633` · `OneRoster` `645` · `Ed-Fi` `533` · `Caliper` `402` · `LRS` `354`) and asked which institutional buyer's procurement is defined by it. **It returned the data office of the state or national education authority, at `SLDS` `0` · `institutional research` `0` · `P20W` `0` · `EDFacts` `0` · `accountability reporting` `0` · `record linkage` `0` · `data warehouse` `1`.** Third consecutive discharge of that rule, and the third consecutive buyer this base had never held.
 
 **A note on form, stated once.** Plain declarative prose, the shelves' structural conventions, pass id, byte-read licence cells with length and sha256₁₂, region placement, `T` tokens, `INS` tokens for instrument findings (`ACTION p762-G`), `ACTION` tokens. 🔴 marks a refusal or a defect, 🟢 a usable finding, 🔵 a reading or reclassification.

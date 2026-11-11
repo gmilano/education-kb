@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P318`–`P325` — added at p764 (2026-11-11)
+
+**Register: the school estate** — the buildings, the work orders, the deferred-maintenance backlog, the utility bill and the capital programme. Every component named below was byte-read for its grant on `2026-11-11` and every address resolved.
+
+🔴 **Four licence constraints govern every pattern here, and three of them are invisible on the repository page.** They are stated once:
+
+1. **The viewer decides the licence of the whole portal.** [`xeokit/xeokit-sdk`](https://github.com/xeokit/xeokit-sdk) (`951★`) is **AGPL-3.0**; [`ThatOpen/engine_web-ifc`](https://github.com/ThatOpen/engine_web-ifc) (`1,094★`) is **MPL-2.0**, file-level weak copyleft. **Every pattern below uses `engine_web-ifc`.** Choosing xeokit makes a client's facilities portal AGPL.
+2. **`IfcOpenShell` is LGPL-3.0 and must be *linked*, never vendored-and-modified** — and that verdict needs both `COPYING` and `COPYING.LESSER` to establish (`T619`).
+3. **The sensor platform is not ThingsBoard.** `22,665★`, indexed `NOASSERTION`, actually **BSL 1.1** from version `4.4.0`, production use on **one server** (`T617`). The patterns use [`home-assistant/core`](https://github.com/home-assistant/core) (Apache-2.0) at the edge and [`VOLTTRON/volttron`](https://github.com/VOLTTRON/volttron) (Apache-2.0) for equipment control.
+4. **Do not profile or extend IDS.** [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) is **CC BY-ND 4.0** (`T618`). Emit and consume IDS with [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT); express client-specific extensions in [`buildingSMART/bSDD`](https://github.com/buildingSMART/bSDD) classification (MIT) instead.
+
+### `P318` — The school-estate condition baseline, from a phone and a scan
+
+**The buyer**: a district or ministry facilities office with a statutory condition return (UK CDC2/SCA, UDISE+ infrastructure block, Censo Escolar) and a survey cycle measured in years.
+
+**The build.** [`pascalorg/editor`](https://github.com/pascalorg/editor) (MIT, `25,442★`) is the model store and the agent surface: it runs locally via `npx @pascal-app/cli editor`, keeps projects in `~/.pascal/data/pascal.db`, takes 3D scans as reference layers for scan-to-BIM, and **exposes its own MCP server** so an agent can *read, edit, validate and save* a building scene. Survey crews capture rooms; the agent models editable elements over the scan. [`IfcOpenShell`](https://github.com/IfcOpenShell/IfcOpenShell) (LGPL-3.0, linked) handles IFC geometry and queries. [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT) turns each line of the return's requirements into an IDS check, run against every building. [`ThatOpen/engine_web-ifc`](https://github.com/ThatOpen/engine_web-ifc) (MPL-2.0) renders the result in the browser. Condition grades, element inventories and lifecycle flags are typed against [`BrickSchema/Brick`](https://github.com/BrickSchema/Brick) (BSD-3) so the asset graph survives the survey round.
+
+**Why it holds**: the deliverable is a *continuously* refreshable baseline rather than a decade-long survey, which is precisely the successor question England has not answered (`intel/market.md`, EMEA). **`8`–`10` weeks** for one estate of `20`–`40` buildings.
+
+### `P319` — The deferred-maintenance ledger and the capital-prioritisation case
+
+**The buyer**: the district CFO or bond counsel facing the `$56B` capital / `$34B` O&M split, who must rank works across schools and defend the ranking publicly.
+
+**The build.** [`liberusoftware/project-maintenance-laravel-filament`](https://github.com/liberusoftware/project-maintenance-laravel-filament) (**MIT**, `73★`, pushed `2026-11-11`) is the system of record — chosen over the `863★` AGPL-3.0 flagship [`Grashjs/cmms`](https://github.com/Grashjs/cmms) for exactly one reason, and that reason is the licence. Assets, work orders and preventive schedules key to the Brick graph from `P318`. [`opf/openproject`](https://github.com/opf/openproject) (GPL-3.0) runs the capital programme as a project portfolio **as a separate deployed service**, integrated over its API so no GPL code enters the studio's deliverable. The prioritisation model is scripted against the condition grades, not against vendor scores.
+
+**Why it holds**: the ledger's output is a ranked, evidenced list with a per-item cost and a per-item consequence of deferral — the artefact a bond prospectus and a board meeting both require. **`6`–`8` weeks** after `P318`.
+
+### `P320` — Plant-room predictive maintenance, with the evidence in the response
+
+**The buyer**: the operations manager whose boiler, chiller and air-handling failures close schools.
+
+**The build.** [`LGDiMaggio/predictive-maintenance-mcp`](https://github.com/LGDiMaggio/predictive-maintenance-mcp) (MIT, `114★`) is the diagnostic agent: `44` tools and `4` prompts, vibration spectra with **ISO-cited severity**, blind-benchmarked on the CWRU Bearing Data Center, and explicitly returning *"the server's evidence, not the model's opinion"*. [`VOLTTRON/volttron`](https://github.com/VOLTTRON/volttron) (Apache-2.0, Battelle/PNNL) collects from equipment; [`home-assistant/core`](https://github.com/home-assistant/core) (Apache-2.0) covers the long tail of cheap sensors a school can actually afford. Points are named through [`BrickSchema/Brick`](https://github.com/BrickSchema/Brick) so *"the AHU serving the east wing classrooms"* is a query. Findings open work orders in `P319`'s ledger. [`DougTrier/trier-os`](https://github.com/DougTrier/trier-os) (MIT, `18★`) carries the **offline-first** field half — a boiler room has no wifi, and a work order closed from memory is not evidence.
+
+🔵 **Scope honestly**: this stack diagnoses **rotating machinery**. It says nothing about a roof, a window or a floor, and `P318` is the only pattern here that touches the fabric.
+
+**Why it holds**: every claim the agent makes cites a standard and a measurement. **`6` weeks** for one plant estate.
+
+### `P321` — The energy-retrofit business case, built to survive a school board
+
+**The buyer**: the district that has already been pitched `25 %` savings by three vendors and has learned to ask for verification (Mendota Township HSD 280, December 2025).
+
+**The build.** [`LBNL-ETA/EnergyPlus-MCP`](https://github.com/LBNL-ETA/EnergyPlus-MCP) (**BSD-3-Clause-LBNL**, `126★`) puts the whole-building model behind an agent: build, run and read an EnergyPlus model conversationally. [`NatLabRockies/EnergyPlus`](https://github.com/NatLabRockies/EnergyPlus) and [`NatLabRockies/OpenStudio`](https://github.com/NatLabRockies/OpenStudio) are the engine and the measures layer; [`NatLabRockies/ComStock`](https://github.com/NatLabRockies/ComStock) benchmarks the district against the national school cohort **before a single sensor is installed**; [`NatLabRockies/SAM`](https://github.com/NatLabRockies/SAM) prices the rooftop-solar and storage option. Metered reality comes from `P320`'s VOLTTRON/Home-Assistant layer, weather-normalised.
+
+🔴 **The business case must quote the measured bracket, not the vendor bracket.** The only research-shaped figure available is **`−3.12 %` district heating and `−8.93 %` electricity** across educational properties (Stockholm study, via trade press). Vendor claims of `15–25 %` have no published methodology. 🟢 **Quoting the low number and beating it is the only version of this engagement that survives year two.**
+
+**Why it holds**: the deliverable is a weather-normalised before-and-after with a named engine behind it. **`8` weeks**, plus a heating season.
+
+### `P322` — EMEA: the condition return as a municipal service
+
+**The buyer**: a European municipality that owns the school buildings, and the department that allocates by condition score.
+
+**The build.** `P318`'s baseline, plus [`City-of-Helsinki/respa`](https://github.com/City-of-Helsinki/respa) (MIT, `84★`) as the **reference design** for municipal resource booking — 🔴 `31` months stale, so read it and reimplement, never depend on it. [`razbakov/bim-portal-mcp`](https://github.com/razbakov/bim-portal-mcp) (MIT, `2★`) is the pattern for talking to a national public-building registry; Germany's BIM Portal is the only one with an agent today and the same shape applies to any other. [`indico/indico`](https://github.com/indico/indico) (MIT, CERN, `2,128★`) supplies the space-utilisation evidence that answers *"do we need the building, or do we need the timetable?"* — the cheapest capital argument in existence. [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) (MIT) types the accessibility findings.
+
+**Why it holds**: it is shaped like the funding formula. Condition score in, allocation out, and a trust that can see why its number moved. **`10`–`12` weeks.**
+
+### `P323` — APAC: closing the two UDISE+ indicators that fail
+
+**The buyer**: a state or national education ministry reporting against UDISE+, where drinking water is `99.5 %` and **CWSN-friendly toilets are `40.1 %`** and **ramps with handrails `58.2 %`**.
+
+**The build.** [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) (MIT) is the data model for accessibility of a physical place — the thing UDISE+'s accessibility indicators have no software for. Survey capture runs through `P318`'s `pascalorg/editor` + scan path; each accessibility requirement becomes an IDS check via [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT); works are tracked in `P319`'s MIT ledger. 🔴 **Do not build on the region's existing data layer**: [`datameet/udise_schools`](https://github.com/datameet/udise_schools) (`9★`) and [`gsidhu/udise-district-dump`](https://github.com/gsidhu/udise-district-dump) (`2★`) returned **no licence payload across `19` paths and `8` manifests** each. Ingest the ministry's published data directly.
+
+🟢 **The product insight is the indicator's own weakness**: UDISE+ records whether a facility **exists**, not whether it **functions**. A functional-status layer over an existence-status return is new information for the buyer at no extra survey cost. **`10` weeks** for one state.
+
+### `P324` — LATAM: verifying `71,482` school-level works programmes
+
+**The buyer**: the programme office of *La Escuela es Nuestra* (**`71,482` schools · `MXN 22,694` M**) or Novo PAC (**`117` Indigenous schools · `R$785` M**), where money goes to a school-level committee and the accountability artefact is evidence that the works happened.
+
+**The build.** 🔵 **Deliberately the lightest pattern here, because the unit is a school committee with a phone, not an estate office with a BIM model.** Geotagged, timestamped photo evidence against a works line item; condition and element vocabulary from [`BrickSchema/Brick`](https://github.com/BrickSchema/Brick) (BSD-3) and accessibility from [`sozialhelden/a11yjson`](https://github.com/sozialhelden/a11yjson) (MIT) so a committee's record joins the ministry's; the works ledger is `P319`'s MIT CMMS with one row per programme; reconciliation to the Censo Escolar infrastructure block is a read of published data, not an integration. **No IFC anywhere in this pattern** — authoring a building model is the wrong instrument for a `MXN 300,000` roof repair.
+
+🔴 **The region's repository supply cannot contribute**: `infraestructura escolar` → `16` results, max `1★`; `mantenimiento escolar` → `22`, max `2★`; the one relevant artefact ([`dayronlalay8/qgis-plugin-localizacion-escolar`](https://github.com/dayronlalay8/qgis-plugin-localizacion-escolar)) has no grant. 🟢 **The regional capability that *is* available is delivery**: [`wyeworks/nucore-open`](https://github.com/wyeworks/nucore-open) (MIT) is a US university's facility system maintained from Montevideo, and has been pushed as recently as today.
+
+**Why it holds**: `71,482` verification events per cycle is a volume problem, and a volume problem with a photo and a checklist is the one thing agents are unambiguously good at. **`6`–`8` weeks.**
+
+### `P325` — The licence gate this pass's own instruments now require
+
+**The problem.** Three grants on this register are misreported by the platform's index, one was hidden by **capitalisation**, one is wrong unless **two files** are read together, and one changes with the **version**. A studio that trusts a licence badge on this register ships a BSL platform across a district estate.
+
+**The gate, as six ordered checks:**
+
+1. **Capitalisation variants in the path set.** `LICENSE`, `License`, `license` × `""`, `.md`, `.txt`, plus `LICENCE`/`Licence`/`licence`. 🔴 `License.txt` is the only address of Berkeley Lab's grant (`T616`).
+2. **Language manifests on failure** — `package.json`, `pyproject.toml`, `DESCRIPTION`, `composer.json`, `version.php`, `Cargo.toml`, `pom.xml`, `setup.py` (`ACTION p763-B`). 🟢 `louistrue/ifcx-mcp`'s MIT exists only in `package.json`.
+3. **On a GPL payload, probe `COPYING.LESSER` / `COPYING.LIB` before recording a verdict** (`T619`).
+4. **Read the BSL parameter block, not the licence name** — `Licensed Work`, `Additional Use Grant`, `Change Date`. 🔴 ThingsBoard's grant is *one server* and its `Licensed Work` is version-scoped (`T617`); `p763`'s OpenEMIS pair named the *wrong repository* in the same field.
+5. **Read the head of the payload for a path split** — *"Portions of this software are licensed as follows"*. 🔴 Speckle's Apache-2.0 excludes `workspaces/` and `gatekeeper/`, which are the multi-tenancy and entitlement modules.
+6. **Accept a pointer grant.** `906 B` of *"Licensed under the Apache License, Version 2.0"* is a valid Apache-2.0 grant (`T624`), so a length floor rejects a real licence.
+
+🟢 **Run order matters: `1` then `2` are cheap and resolved `2` of this pass's `3` recoveries. `4` and `5` are the two that carry commercial risk**, and neither is detectable without opening the file.
+
 ## 🆕 `P311`–`P317` — added at p763 (2026-11-11)
 
 **Register: the education data warehouse and the statutory return** — the warehouse telemetry lands in, the office accountable for it, and the dated annual report that is the actual deliverable. Every component named below was byte-read for its licence on `2026-11-11`, **every licence was read from the branch the search channel reported as `default_branch`, and the branch is named** (`ACTION p762-B`).

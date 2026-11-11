@@ -1,8 +1,76 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-06
+updated: 2026-11-11
 ---
+
+## 🆕 `p764` — `2026-11-11` — **🔴 THE THREE MOST-STARRED CANDIDATES ON THE SCHOOL-ESTATE REGISTER ARE EACH UNUSABLE FOR A DIFFERENT REASON, ALL THREE ARE INDEXED `NOASSERTION`, AND NONE OF THE THREE REASONS IS VISIBLE WITHOUT OPENING THE PAYLOAD. 🔴 ONE `1,620★` PLATFORM HAS NO GRANT AT `42` PROBED ADDRESSES.**
+
+Every row below was byte-read on `2026-11-11` from the `default_branch` derived from the search channel. Stars are the platform's own count on the same day.
+
+### 🔴 `764-A` — `thingsboard/thingsboard`: a Business Source Licence with a one-server production grant, at `22,665★`
+
+**`22,665★`, `default_branch` `master`, pushed `2026-11-11`, index `NOASSERTION`.** The obvious IoT platform for a school building-sensor estate, and the first result any search for one returns.
+
+| channel | reading `2026-11-11` |
+|---|---|
+| `LICENSE` payload | `6,844 B` · `9baf8f3e02ba` — **Business Source License 1.1** (MariaDB BSL text) |
+| `Licensor` | *ThingsBoard, Inc.* |
+| `Licensed Work` | *"The ThingsBoard platform, **version 4.4.0 or later**"*, (c) 2026 |
+| `Additional Use Grant` | production use at no charge only if **(i)** *"no more than one server"* **or (ii)** under a free licence key issued to the Organization, which the user does *"not disable, bypass, or circumvent"* |
+
+🔴 **Why it is disqualifying for this register and not merely restrictive**: a school district estate is tens of buildings, which is tens of servers or one licence-key negotiation per client. 🔵 **And the licence is version-scoped**, so a tag before `4.4.0` and a tag after it are different legal objects in the same repository (`T617`). **Use `home-assistant/core` (Apache-2.0) and `VOLTTRON/volttron` (Apache-2.0) instead.**
+
+### 🔴 `764-B` — `buildingSMART/IDS`: the grammar of a building requirement is **NoDerivatives**
+
+**`333★`, `default_branch` `development`, pushed `2026-09-25`, index `NOASSERTION`.**
+
+| channel | reading `2026-11-11` |
+|---|---|
+| `LICENSE` payload | **`287 B`** · `e0af6597dc57` |
+| text | *"This work is licensed under the Creative Commons Attribution-**NoDerivatives** 4.0 …"*, (c) buildingSMART International Ltd. |
+| sibling | [`buildingSMART/bSDD`](https://github.com/buildingSMART/bSDD) `197★` — **MIT**, `1,089 B` · `87388f74ee2d` |
+
+🔵 **Scoped precisely so it is not over-read**: software that *emits and consumes* IDS is unaffected, so [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) (MIT) stays usable. 🔴 **A national or client-specific *profile* of IDS — the obvious ministry deliverable — is a derivative work and is forbidden on its face.** Express extensions in bSDD classification instead (`P325`).
+
+### 🔴 `764-C` — `specklesystems/speckle-server`: the licence depends on the directory, and the excluded directories are the ones a district needs
+
+**`862★`, `default_branch` `main`, pushed `2026-11-11`, index `NOASSERTION`.**
+
+| channel | reading `2026-11-11` |
+|---|---|
+| `LICENSE` payload | `12,240 B` · `87f24ea37511` |
+| head of payload | *"Portions of this software are licensed as follows:"* |
+| Apache-2.0 | everything **except** the two paths below |
+| **Speckle Enterprise Edition** | `packages/server/modules/**workspaces**/` · `packages/server/modules/**gatekeeper**/` |
+
+🔴 **Multi-tenancy and entitlements are exactly what a multi-school deployment is**, and they are the two EE directories. A studio that clones the repository, reads the Apache-2.0 body and ships a tenanted deployment has shipped the EE modules.
+
+### 🔴 `764-D` — `OpenEMS/openems`: `1,620★`, and no grant at `42` probed addresses
+
+**`1,620★`, `default_branch` `develop`, pushed `2026-11-10`, index claims `AGPL-3.0`.**
+
+| channel | reading `2026-11-11` |
+|---|---|
+| `19` LICENSE-family paths on `develop` (incl. capitalisation variants) | **no payload** |
+| `8` language manifests on `develop` | **no payload with a licence field** |
+| `5` paths × `3` branches (`develop`, `main`, `master`) | **no payload** |
+| total probes | **`42`** |
+
+🔵 **This is an honest negative, not a refusal.** The index's `AGPL-3.0` is plausible and may well be correct; **this base does not confirm a licence it could not read**, and a studio should treat the row as unresolved until the upstream publishes a grant at a conventional address. 🔴 Recorded here rather than on the foundations shelf precisely so it is not reached for.
+
+### 🔵 `764-E` — two addresses carried as data, not as dependencies
+
+| Address | Stars | Finding |
+|---|---|---|
+| [`datameet/udise_schools`](https://github.com/datameet/udise_schools) | `9★` | 🔴 **No licence payload across `19` paths + `8` manifests.** An unlicensed scrape of India's national school dataset — the same shape `p763` recorded for Indonesia's PDDikti client |
+| [`gsidhu/udise-district-dump`](https://github.com/gsidhu/udise-district-dump) | `2★` | 🔴 **No licence payload across `19` paths + `8` manifests**, although the platform's index reports MIT. Index-only MIT with no readable grant is not a grant |
+
+### 🔴 `764-F` — `openmaint`: the sector's most-recommended open maintenance system is not in the channel this base can measure
+
+`openmaint in:name,description` → **`22`** results. Every one is a Docker wrapper, an installer or a client; the highest-starred is [`itmicus/cmdbuild_docker`](https://github.com/itmicus/cmdbuild_docker) at `125★` with **no grant file**. `cmdbuild in:name,description` → `19` results, the two with grants both **AGPL-3.0** and one last pushed in **2014**.
+
+🔵 **Recorded as a channel limit, not as an absence of software.** openMAINT and CMDBuild are distributed from their own site under their own terms, and nothing on GitHub represents them. 🔴 **A studio evaluating them must read the upstream distribution terms directly; the GitHub population is misleading in both directions.**
 
 ## 🆕 `p681` — `2026-11-06` — **🔴 A `214★` REPOSITORY PRESENTED AS AN OPEN API IS NON-COMMERCIAL *AND* ITS LICENCE NAMES A DIFFERENT PROGRAM. 🔴 THE STUDENT-WELLBEING HEAD RETURNS FIVE CANDIDATES AND ZERO GRANTS. 🔴 TWO LEGS CLAIMED MIT ON REPOSITORIES WITH NO LICENCE FILE AT ALL.**
 

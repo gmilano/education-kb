@@ -6,6 +6,42 @@ updated: 2026-11-11
 
 # Vertical Platforms — Education
 
+## 🆕 `p764` — **The obvious platform for a school-building sensor estate is `22,665★`, is indexed as `NOASSERTION`, and is a Business Source Licence that permits production use on **one server**. The standard that expresses a building requirement is **NoDerivatives**. And the flagship open CMMS is AGPL-3.0. Three refusals, all of them the first thing a studio would reach for.**
+
+**`13` platform rows · every licence byte-read with length and sha256₁₂ · every row naming the branch it was read from.** The register is the school estate. 🔴 **Nothing that operates an estate is permissive. The three most-starred candidates are each unusable for a different reason, and none of the three reasons is visible on the repository page.**
+
+### 🔴 The three refusals, byte-read `2026-11-11`
+
+| Platform | Stars | What the index says | What the bytes say | Why it fails for a district estate |
+|---|---|---|---|---|
+| [`thingsboard/thingsboard`](https://github.com/thingsboard/thingsboard) | `22,665★` | `NOASSERTION` | **BSL 1.1** · `6,844 B` · `9baf8f3e02ba` · `master` | 🔴 **`Licensed Work: The ThingsBoard platform, version 4.4.0 or later`**, Licensor *ThingsBoard, Inc.*, (c) 2026. Free production use only if **(i)** on *"no more than one server"* **or (ii)** under a free licence key issued to your Organization, which you *"do not disable, bypass, or circumvent"*. A district estate is tens of buildings — **this is a commercial licence conversation, not a deployment** |
+| [`buildingSMART/IDS`](https://github.com/buildingSMART/IDS) | `333★` | `NOASSERTION` | **CC BY-ND 4.0** · `287 B` · `e0af6597dc57` · `development` | 🔴 **NoDerivatives.** The specification that defines how a building requirement is expressed — the exact instrument a condition or accessibility standard needs — **may not be adapted**. 🟢 Its sibling [`buildingSMART/bSDD`](https://github.com/buildingSMART/bSDD) is MIT, so the *dictionary* is open and the *requirement grammar* is not. Tooling that *reads* IDS is unaffected; a studio that wants to profile or extend IDS for a ministry is not |
+| [`specklesystems/speckle-server`](https://github.com/specklesystems/speckle-server) | `862★` | `NOASSERTION` | **split grant** · `12,240 B` · `87f24ea37511` · `main` | 🔴 **The licence depends on the path.** Apache-2.0 *except* `packages/server/modules/workspaces/` and `packages/server/modules/gatekeeper/`, which are *"The Speckle Enterprise Edition (EE) license"*. Multi-tenancy and entitlements — precisely what a multi-school deployment needs — are the two EE directories. A `p762`-class finding one axis over: **licence by path, not by branch** |
+
+### The copyleft estate layer — real, maintained, and off-limits to a closed deliverable
+
+| Platform | Stars | Grant | Payload (length · sha256₁₂) | Branch | Role |
+|---|---|---|---|---|---|
+| [`opf/openproject`](https://github.com/opf/openproject) | `17,257★` | GPL-3.0 | `35,149 B` · `3972dc9744f6` | `dev` | EMEA — 🟢 **the capital-programme layer**: a rebuilding or retrofit programme is a portfolio of projects with budgets, phases and dependencies, and this is the open system that models one |
+| [`Grashjs/cmms`](https://github.com/Grashjs/cmms) | `863★` | AGPL-3.0 | `34,522 B` · `4df3c306ddda` | `main` | 🟢 **The flagship open CMMS** (Atlas CMMS) — web + mobile, work orders, assets, preventive schedules, parts. 🔴 **AGPL-3.0, and the mobile app makes the network-use clause bite immediately** |
+| [`openremote/core`](https://github.com/openremote/core) | `2,132★` | pending classification | `LICENSE.txt` `172,958 B` · `c6b373c3f20f` | `main` | 🔴 **Renamed** — `repo:openremote/openremote` is `422`; the estate is at `openremote/core`. 🔵 A `172,958`-byte licence file is a bundled third-party notice set, not a single grant: **classified as unresolved this pass rather than guessed** |
+| [`opensourceBIM/BIMserver`](https://github.com/opensourceBIM/BIMserver) | `1,773★` | AGPL-3.0 | `34,520 B` · `76a97c878c9c` | `master` | The model server for an estate's IFC files. 🔴 Last push `2026-03-13` — `8` months |
+| [`OpenEMS/openems`](https://github.com/OpenEMS/openems) | `1,620★` | 🔴 **no payload across `42` probes** | — | `develop` | EMEA — energy management system. `19` licence paths × `3` branches plus `8` manifests returned nothing; the index claims AGPL-3.0 and **this base does not confirm it** |
+| [`datadrivenconstruction/OpenConstructionERP`](https://github.com/datadrivenconstruction/OpenConstructionERP) | `1,368★` | AGPL-3.0 | `34,523 B` · `0d96a4ff68ad` | `main` | Construction/ERP layer for a capital programme, pushed `2026-11-11` |
+| [`xeokit/xeokit-sdk`](https://github.com/xeokit/xeokit-sdk) | `951★` | AGPL-3.0 | `33,709 B` · `87817672a88b` | `master` | The BIM/IFC viewer a facilities portal would embed — **and the one licence choice that makes that portal AGPL** |
+| [`IfcOpenShell/IfcOpenShell`](https://github.com/IfcOpenShell/IfcOpenShell) | `2,949★` | **LGPL-3.0, and only as a pair** | `COPYING` GPL-3.0 `32,473 B` · `1b3782ccad7b` **+** `COPYING.LESSER` `7,652 B` · `e3a994d82e64` | `v0.9.0` | 🟢 The IFC library and geometry engine the whole register stands on. 🔴 **A single-file read convicts it as GPL-3.0 and that verdict is wrong** (`T619`). 🔵 `default_branch` is a **version tag**, `v0.9.0` |
+| [`classroombookings/classroombookings`](https://github.com/classroombookings/classroombookings) | `226★` | AGPL-3.0 | `LICENSE.txt` `34,520 B` · `cb7e580b2aad` | `master` | 🟢 **The only platform on this entire register whose own first line names schools**: *"the open source hassle-free room booking system for schools"*. Pushed `2026-10-30`. 🔴 AGPL-3.0 |
+| [`seatsurfing/seatsurfing`](https://github.com/seatsurfing/seatsurfing) | `317★` | GPL-3.0 | `35,149 B` · `3972dc9744f6` | `main` | Space utilisation and booking — the evidence base for *"this wing is `38 %` occupied"*, which is the cheapest capital argument available |
+
+### 🔵 The pattern across both halves of this shelf
+
+The register divides on **who the software is for**, and the licence follows exactly:
+
+- **Engines, schemas and models** — simulation, ontology, parsing, classification — are **permissive** and were published by laboratories, standards bodies and universities. A studio can take them.
+- **Systems that an organisation logs into** — CMMS, BMS, booking, project portfolio — are **AGPL-3.0, GPL-3.0 or source-available**, and were published by companies with a hosted edition to protect.
+
+🔴 **There is no permissive system of record for a building estate at scale.** `p757`'s law survives its fifth register; what is new is that this time the *measuring* half is where all the agent-native work is happening, which is why `compose/patterns.md` builds every pattern on an engine and never on a platform.
+
 ## 🆕 `p763` — **Every platform that *holds* the education record is copyleft, and the one that UNESCO ships to ministries is GPL-2.0. The best-known open learning-record store is GPL-3.0 and has not been pushed for `18` months. `p757`'s law survives the warehouse register without a single counter-example.**
 
 **`8` platform rows · every licence byte-read · every row naming the branch it was read from.** The register is the education data warehouse and the statutory return. 🔴 **The split is clean and it is now measured on four consecutive registers: what measures, defines and validates is permissive; what holds the record is copyleft** (`T608`).

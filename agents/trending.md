@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p764) — **The school-estate agent layer was built in the last twelve months, is permissive almost without exception, and has never heard of a school: `14` MCP servers, `154,443` bytes of README, one occurrence of the word *school* — in an example prompt. The week's biggest signal is a `25,442★` MIT building editor that ships its own MCP server.**
+
+**Register: the school estate — buildings, work orders, the deferred-maintenance backlog, the utility bill and the capital programme** · `14` agent rows filed, `13` usable in a proprietary deliverable · `2` grants recovered that the platform's own index reports as `NOASSERTION` · `1` grant recovered only by a **capitalisation variant** of its filename · `83` supply probes · `0` of the `14` published by an education organisation.
+
+### 🟢 The week's largest signal: an MIT building editor with an MCP server, at `25,442★`
+
+[`pascalorg/editor`](https://github.com/pascalorg/editor) — **MIT**, `1,074 B` · `9c9dde8dcf11`, `main`, pushed `2026-11-10`. Its own README: *"Create and edit 3D building models in your browser, run Pascal locally with its CLI, or connect AI agents through the Model Context Protocol"*, and *"let an agent read, edit, validate, and save"*. Scans come in as reference layers for scan-to-BIM. Two deployment shapes, both stated: local via `npx @pascal-app/cli editor` with data in `~/.pascal/data/pascal.db` and nothing uploaded, or a hosted workspace at `editor.pascal.app/api/mcp`.
+
+🔵 **Why this is the week's signal and not just the week's biggest number**: every other agent on this register wraps someone else's authoring tool — Revit, Blender, Navisworks, a portal API. This one *is* the authoring tool, and the agent interface is in the same repository under the same MIT grant. For a school-estate digital twin there is no licence negotiation, no desktop CAD seat, and no vendor in the loop.
+
+### 🟢 The register's agent inventory, newest first
+
+| Agent | Stars | Grant | Pushed | What arrived |
+|---|---|---|---|---|
+| [`FCBRTH/facilitybot-MCP-agent-skills`](https://github.com/FCBRTH/facilitybot-MCP-agent-skills) | `2★` | MIT `1,068 B` | `2026-11-03` | **Agent Skills for a commercial FM product.** `p614`'s vehicle — *skill packages for somebody else's coding agent* — has reached facilities management. The skills are MIT; the MCP server they drive is proprietary |
+| [`General-Soju/BimOnMcp`](https://github.com/General-Soju/BimOnMcp) | `12★` | MIT `1,176 B` | `2026-11-02` | Revit / Navisworks / AutoCAD + Dynamo driven from Claude. 🔴 Index: `NOASSERTION`; bytes: verbatim MIT with a YouTube line and an email appended above the body |
+| [`LBNL-ETA/EnergyPlus-MCP`](https://github.com/LBNL-ETA/EnergyPlus-MCP) | `126★` | BSD-3-Clause-LBNL `2,474 B` | `2026-11-04` | 🟢 **Berkeley Lab puts the whole-building energy engine behind an MCP server** and calls it the first to do so. The retrofit business case becomes a conversation |
+| [`LGDiMaggio/predictive-maintenance-mcp`](https://github.com/LGDiMaggio/predictive-maintenance-mcp) | `114★` | MIT `1,080 B` | `2026-11-11` | Vibration diagnostics with **ISO-cited severity**, `44` tools + `4` prompts, blind-benchmarked against the CWRU Bearing Data Center. Its README is explicit that the server returns *"the server's evidence, not the model's opinion"* |
+| [`kenpro0/bimbridge-mcp`](https://github.com/kenpro0/bimbridge-mcp) | `8★` | MIT `1,066 B` | `2026-10-17` | BIM bridge, no description, no region evidence |
+| [`flinker-app/ifc-mcp`](https://github.com/flinker-app/ifc-mcp) | `13★` | Apache-2.0 `10,254 B` | `2026-09-24` | Node-side IFC server, and **a fourth distinct Apache-2.0 payload size this pass** |
+| [`nguyenngocdue/DeepBIM-MCP-Revit-Plugin`](https://github.com/nguyenngocdue/DeepBIM-MCP-Revit-Plugin) | `3★` | MIT `1,078 B` | `2026-08-28` | APAC, placed from the diacritics in its own copyright line |
+| [`Show2Instruct/ifc-bonsai-mcp`](https://github.com/Show2Instruct/ifc-bonsai-mcp) | `69★` | MIT `1,075 B` | `2026-07-10` | LLM → IFC in Blender via Bonsai: the zero-licence-cost authoring path |
+| [`louistrue/ifcx-mcp`](https://github.com/louistrue/ifcx-mcp) | `26★` | **MIT in `package.json` only** | `2026-04-12` | IFC5/IFCX authoring — and **the only repository on the register that has typed the word *school***, at line `138` of its README |
+| [`vinnividivicci/ifc-ids-mcp`](https://github.com/vinnividivicci/ifc-ids-mcp) | `28★` | MIT `1,072 B` | `2026-04-06` | 🟢 Deterministic IDS generation via `IfcTester` — the bridge from a written requirement to an automated check |
+| [`razbakov/bim-portal-mcp`](https://github.com/razbakov/bim-portal-mcp) | `2★` | MIT `1,073 B` | `2025-09-23` | EMEA — the **German BIM Portal** REST API behind an MCP server. The only national public-building registry on the register, at `2` stars |
+| [`ekkodale/IFC-MCP`](https://github.com/ekkodale/IFC-MCP) | `11★` | MIT `1,070 B` | `2025-12-04` | EMEA (*ekkodale GmbH* in the grant bytes). `11` months since last push |
+| [`smartaec/ifcMCP`](https://github.com/smartaec/ifcMCP) | `34★` | Apache-2.0 `11,357 B` | `2025-06-08` | APAC — Tsinghua University, Department of Civil Engineering. 🔴 **`17` months stale**, and still the fourth-most-starred agent on the register |
+
+### 🔴 What this week's signals do **not** include
+
+- **No agent writes a work order.** `topic:cmms` holds `135` repositories; zero MCP servers address any of them.
+- **No agent reads a condition survey.** Four regional statutory instruments demand one (`intel/market.md`); none has software, open or closed, on this shelf.
+- **No education organisation published any of these `14`.** The publishers, named only where an artifact evidences it: a US national energy laboratory (*Regents of the University of California* in the grant bytes), a university civil-engineering department (Tsinghua, stated in its README), a German company (*ekkodale GmbH* in the grant bytes), a commercial FM vendor (its own product name), and seven individuals or small firms for whom **this base has no location evidence and therefore records none**.
+
 ## 🆕 2026-11-11 (p763) — **The education-data agent layer was built in the last nine months, is spread across five regions, and tops out at `13` stars — and every single artefact reads statistics that are already published. The standards body shipped Agent Skills for coding assistants yesterday. And the only OpenEMIS agents in existence are Business Source Licence 1.1, under a licence that names a different repository than the one it sits in.**
 
 **Register: the education data warehouse and the statutory return — where telemetry lands, who answers for it, and the dated annual report that is the deliverable** · `10` agent rows filed of which `8` are usable in a proprietary deliverable, `4` refusals named, `1` byte-identical copy recorded · `53` addresses resolved · **`47` licence payloads byte-read** · `6` no-payload addresses of which **`3` were refuted by a manifest probe**, `3` published as absences · `1` p762 control reproduced exactly · `T604`–`T614`.
