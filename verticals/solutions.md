@@ -6,6 +6,39 @@ updated: 2026-11-11
 
 # Vertical Platforms — Education
 
+## 🆕 `p767` — **`7` platform-tier rows for tree and grounds safety. The tier splits by *who published it*: every community-built platform on this register is copyleft, and the only permissive one was published by a national ministry. `1` structural absence re-confirmed from a second, independent channel.**
+
+**Every grant byte-read `2026-11-11` from a path **enumerated from the complete tree**; every branch from `git ls-remote --symref`.** Register: **tree and grounds safety on the school estate** (`ACTION p766-F`).
+
+| Platform | Repository | ★ | Grant, byte-read `2026-11-11` | Branch | Region | Verdict for a proprietary deliverable |
+|---|---|---|---|---|---|---|
+| **Tree-management ledger (台帳)** | [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) | `4` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | `main` | APAC | 🟢 **YES — the only permissive platform on this register.** Park and street trees on a 2D/3D map with a management ledger. Copyright assigned to **国土交通省 (MLIT, Japan)**; patent grant included. 🔵 `4★` — adopt it for its *data model and legal posture*, not its community |
+| **Urban-forestry platform** | [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) | `194` | 🔴 **AGPL-3.0** · `35,366 B` · `1350c224c8d4` | `develop` | Global | 🔴 **NO.** Crowdsourced inventory, ecosystem-services calculation, urban-forestry analysis — the register's canonical system of record. Network copyleft, **shown as `NOASSERTION`**, last pushed `2023-08-03` |
+| **Eco-benefit service** | [`OpenTreeMap/otm-ecoservice`](https://github.com/OpenTreeMap/otm-ecoservice) | `20` | 🔴 **AGPL-3.0** · `35,366 B` · `1a77c4d143ca` | `develop` | Global | 🔴 **NO.** REST eco-benefit calculations — the quantified-value half of a canopy business case. 🔵 Vendors MIT (`lib/pq`) |
+| **European tree-management platform** | [`naturalsolutions/ecoteka`](https://github.com/naturalsolutions/ecoteka) | `14` | 🔴 **GPL-3.0** · `35,122 B` · `8f1bd3b5a9c6` | `master` | 🔵 unplaced | 🔴 **NO.** The nearest European peer of OpenTreeMap. Copyleft, last pushed `2023-03-05`. 🔵 **Region left unplaced: the repository names no jurisdiction** — the only "France" and "Peru" hits in its tree failed a word-boundary re-check (`ACTION p763-D`) |
+| **Municipal register query layer** | [`plepe/baumkataster-wien`](https://github.com/plepe/baumkataster-wien) | `3` | 🔴 **AGPL-3.0** · `34,521 B` · `10ede613cce8` | `master` | EMEA | 🔴 **NO.** Vienna's tree register, queryable. The strictest grant on the register sitting on one of its lightest artefacts |
+| **Field data collection** | [`treekit/treekit`](https://github.com/treekit/treekit) | `9` | 🔴 **AGPL-3.0** · `34,520 B` · `57c8ff33c9c0` | `master` | 🔵 unplaced | 🔴 **NO.** Mobile street-tree data collection — structurally the inspector's client. Last pushed `2015-06-02` |
+| **Municipal register (LATAM)** | `neocizee/arboladoMun` *(code span, not a link)* | `2` | 🔴 **PROPRIETARY** · `1,524 B` · `1fb380555f1d` | `main` | LATAM | 🔴 **NO, and it forbids more than copyleft does.** *"Proprietary License … All Rights Reserved"*: no commercial use, no modification, no derivative works, **no production use**. Viewing is granted for portfolio and educational purposes. **GitHub indexes it `NOASSERTION`** (`767-A`) |
+
+### 🔴 The structural absence, re-confirmed on a second channel
+
+**`openMAINT`** — the open-source facility and asset-maintenance platform that a school-estate tree register properly belongs inside — **is still not on GitHub.** `p766` established this from the search channel (`T666`). This pass tested it independently:
+
+| Channel | `CMDBuild/openMAINT` |
+|---|---|
+| `search/repositories` (`repo:` qualifier) | 🔴 `422` |
+| `git ls-remote` | 🔴 **FAIL** — `could not read Username for 'https://github.com'` |
+
+🟢 **Two independent channels, same answer.** `openMAINT` is distributed from its own site under AGPL-3.0; **this base publishes no licence verdict for it, because it cannot byte-read a grant it cannot address.** 🔵 Only third-party container wrappers exist, from `2016` and `2017`.
+
+### 🔴 The platform tier's governing finding
+
+**Seven platform rows. One permissive. Six copyleft or proprietary. And the permissive one was published by a ministry rather than built by a community** (`T677`).
+
+Across four consecutive registers — school condition, school-estate safety, playground-equipment inspection, and now tree and grounds safety — **`p757`'s law has no counter-example: the open-source platform tier of a statutory-compliance vertical is copyleft.** What changes by region is only *who else* publishes: Japan's MLIT ships an Apache-2.0 ledger, Germany's municipalities ship MIT-licensed readers over their own open data, and no region ships a permissive platform.
+
+🔵 **The practical consequence for a studio engagement:** on this register you do not adopt a platform, you **assemble** one — a permissive ledger (`Project-PLATEAU`), a permissive field client (`getodk/collect`, Apache-2.0), a permissive map (`maplibre-gl-js`, BSD-3), a permissive detector (`DeepForest`, MIT) and a permissive cadence engine (`jkbrzt/rrule`, BSD-3), with PostGIS and QGIS kept behind a protocol and a desktop respectively. That assembly is `P341`–`P344`.
+
 ## 🆕 `p766` — **The platform that would own this register is not on GitHub at all. `9` platform-tier systems byte-read: `7` are copyleft, `1` is a per-directory commercial split, and the only permissive one is a framework you must build the vertical on yourself. A structural absence, stated as one.**
 
 **`9` platform rows · every licence byte-read with length and `sha256₁₂` · every branch derived from `search/repositories` · `1` structural absence, `2` address corrections and `1` grant recovered from a non-root path.** Register: **playground-equipment inspection** (`ACTION p765-E`).

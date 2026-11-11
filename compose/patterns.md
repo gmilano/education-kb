@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P340`–`P345` — added at p767 (2026-11-11)
+
+**Register: tree and grounds safety on the school estate** (`ACTION p766-F`). Every component named below had its grant **byte-read on `2026-11-11` from a path enumerated out of the complete git tree**, on the branch returned by `git ls-remote --symref`. No path was guessed, no branch was assumed and no family was taken from GitHub's licence index.
+
+🔴 **Five licence constraints govern everything below. Four are invisible on the repository page.**
+
+1. 🔴 **`OpenTreeMap/otm-core` is AGPL-3.0** (`35,366 B` · `1350c224c8d4`), and GitHub shows `NOASSERTION`. It is the register's canonical platform. **Do not vendor it, fork it into a deliverable, or run it as the backend of a hosted client offering** — network copyleft reaches a SaaS deployment. The same applies to `otm-ecoservice`, `ecoteka` (GPL-3.0), `baumkataster-wien` (AGPL-3.0) and `treekit` (AGPL-3.0).
+2. 🔴 **`neocizee/arboladoMun` is proprietary, all rights reserved** (`1,524 B` · `1fb380555f1d`) despite `NOASSERTION` on the page: no commercial use, no derivative works, **no production use**. **Do not fork it or borrow from it.** It grants viewing only.
+3. 🔴 **`3DFin/dendromatics` and `3DFin/3DFin` are GPL-3.0** (`35,149 B` · `3972dc9744f6`). The register's only maintained dendrometry library. **Service boundary only** — see `P344`.
+4. 🔵 **`qgis/QGIS` carries `9` licence families across `126` grant paths** and `postgis/postgis` carries `5` across `11`, with **two root grants** (`COPYING` *and* `LICENSE.TXT`). Both are GPL-2.0 at the root, and **that is fine as long as neither is vendored**: PostGIS is reached over a protocol, QGIS is a surveyor's desktop tool you ship to nobody. **Do not copy a path out of either.**
+5. 🟢 **`Project-PLATEAU/Tree-management-system` is Apache-2.0** (`11,357 B` · `c71d239df917`) with its copyright assigned to 国土交通省 (MLIT, Japan) — **the only permissive, platform-shaped artefact on this register, with a patent grant.** It is the foundation of `P341`–`P343`.
+
+🔴 **And one jurisdictional constraint that no licence file states.** On this register the instruments are **national and incompatible** (`T677`): ANSI A300 Part 9 + ISA TRAQ in North America, FLL Baumkontrollrichtlinie over § 823 BGB in Germany, Occupiers' Liability + LANTRA `LANTw31` in England, AS 4373/AS 4970 + TCAA guidelines in Australia, ABNT NBR 16246-3 in Brazil. **The FLL, ABNT and Standards Australia texts are paid products and were not read.** Every tier name below is search-sourced; **no deck may state a hard inspection interval on this base's authority.**
+
+### `P340` — Licence due diligence over a client's whole tree, as a pre-engagement deliverable (`2–3 weeks`)
+
+🟢 **This is the pass's most portable pattern and it is not register-specific.** Every studio engagement that forks, vendors or redistributes open source needs to know what grants are actually in the tree. `T683` shows the answer is routinely not what the repository page says.
+
+**Wire it:** `ingest/p767-enum-grants.sh` → `ingest/p767-grant-classifier.py` → a per-path TSV.
+1. `git ls-remote --symref <addr> HEAD` — authoritative default branch, and **liveness** (`T671`). No branch guessing.
+2. `git clone --depth 1 --filter=blob:none --no-checkout` — the complete tree with no blob transfer. `364,679` paths cost one fetch on `aphis-inspection-reports`.
+3. `ls-tree -r --name-only` filtered for grant-shaped paths at **any depth, any capitalisation, any extension, British or American spelling** — then `cat-file blob` only those.
+4. Classify each by **operative clause text**, normalising quote class, dashes and `©` first (`T684`), and emit `{path, scope, vendored, bytes, sha256₁₂, family, basis, flags}`.
+
+**Acceptance tests — all four are real cases this pass ran:** it must find `openSIS`'s GPL-2.0 at `docs/License.txt` **where no root grant exists**; it must report **both** of PostGIS's root grants; it must report QGIS's `debian/copyright` as **LGPL-3.0** alongside its GPL-2.0 root; and it must separate `la-trees`'s MIT root from the `48` vendored grants in its committed `node_modules/`.
+
+🔴 **Known limits, stated so a client is not surprised:** `95` of QGIS's `126` matched paths are `cpt-city` colour-gradient `COPYING.xml` metadata — **a path named like a grant is not a grant**; the classifier refuses them correctly, so the pipeline is safe but noisy. Creative Commons **3.0** and by-reference prose grants are not yet classified (`ACTION p767-D`), and `.rtf`/`.docx` grants are not read at all.
+
+### `P341` — The German cadence engine: a *Regelkontrolle* register for a school estate (`8–10 weeks`, EMEA)
+
+🟢 **Build it in Germany because Germany is the only region that publishes a cadence, a competence definition and a model work instruction as three separate citable artefacts** (`T680`).
+
+**Wire it:**
+- **Duty model** — `evidence/statutory-intervals.2026-11-11-p766.tsv` extended with the tree duties, each interval expressed as an **RFC 5545 `RRULE`** and consumed by [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3-Clause, `3,493 B` · `6c12f89b62fc`, at `LICENCE`) or `dateutil` for the maintained option. This is `P334`'s engine reused unchanged — the point of `ACTION p766-F`'s *"same evidence shape"*.
+- **Ledger** — [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) (Apache-2.0) as the asset register and 2D/3D map model.
+- **Field capture** — [`getodk/collect`](https://github.com/getodk/collect) (Apache-2.0, `10,494 B` · `d1ee81266b96`) for the offline inspection form: photo evidence, GPS, resumable drafts. **This is the single most reusable component on the register.**
+- **Map** — [`maplibre-gl-js`](https://github.com/maplibre/maplibre-gl-js) (BSD-3-Clause, `5,984 B` · `ee5fc05a0677`) or [`Leaflet`](https://github.com/Leaflet/Leaflet) (BSD-2-Clause) — Leaflet is what the `Baumkataster` cluster actually uses.
+- **Data shape reference** — [`codeforbielefeld/baumkataster`](https://github.com/codeforbielefeld/baumkataster) (MIT) and [`tyrasd/Baumkataster-Graz`](https://github.com/tyrasd/Baumkataster-Graz) (MIT; 🔵 **BSD-3-Clause at `icons/LICENSE.txt`**) for how a German-speaking municipality already publishes this data.
+- **Store** — PostGIS behind a protocol boundary, never vendored.
+
+🔴 **Scope honestly.** The FLL Baumkontrollrichtlinie is a **paid product that was not read**. Ship the cadence as **operator-configurable**, pre-populated with the published *Richtwert* (annual for frequented urban trees) and labelled *search-sourced, not primary-verified*. **The duty itself is § 823 BGB as the courts have developed it — no legal norm prescribes an interval**, so the product's job is to record the professional risk weighting that chose one, not to assert a statutory period.
+
+### `P342` — The Brazilian three-level assessment, which is the only region with levels to encode (`6–8 weeks`, LATAM)
+
+🟢 **`T678`: LATAM holds the most codified instrument on this register.** `ABNT NBR 16246-3` defines three assessment levels, and that maps directly onto a data model — which no other region here supplies.
+
+**Wire it:** the `P341` stack, with the assessment entity typed by level:
+- **Level 1** — limited visual, permitted *on foot, by vehicle, by drone or other aerial inspection*. 🟢 This is the one level an automated pass can feed: [`weecology/DeepForest`](https://github.com/weecology/DeepForest) (MIT, `1,071 B` · `5487293ab54d`) detects crowns from RGB imagery, producing a dated canopy record attributable to a Level 1 sweep.
+- **Level 2** — 360° external analysis with hand tools. **A human Level 2 record is the product's core row**, captured in `getodk/collect`.
+- **Level 3** — tomography, radar, penetrometers. Model it as an **external report attachment**, not as an instrument integration.
+
+🟢 **The school-sector worked example exists and is in this region:** [`Salfonsogar/inventario-arboreo-escolar`](https://github.com/Salfonsogar/inventario-arboreo-escolar) — the only *school* tree inventory on GitHub in any language, naming the **municipio de Valledupar (Cesar)** and the **Universidad Popular del Cesar**. 🔴 **It has no grant** (`7` paths enumerated, `0` grants) — **read it as a requirements document, take no code.**
+
+🔴 **Scope honestly.** ABNT text is copyrighted and was not read; the levels above are search-sourced. A claimed **March 2025 revision of NBR 16246-3 is unconfirmed against ABNT** — state the edition as *2019, revision status unconfirmed*. 🟢 And expect municipal narrowing: **Niterói's manual directs Level 2 only**, so make the permitted level set a per-municipality configuration, not a constant.
+
+### `P343` — The North American inversion: sell the *justification*, because there is no cadence (`6–8 weeks`, North America)
+
+🔴 **Second consecutive register where the US instrument deliberately sets no interval** (`T679`, after `T657`). ANSI A300 Part 9 and ISA TRAQ specify method, qualification and report content — **and no frequency.** A cadence-driven product has nothing to anchor on.
+
+🟢 **So invert the deliverable.** The sellable artefact is a **defensible, dated, authored, cited rationale** for the cadence the district chose, plus the evidence that each assessment was performed by a qualified person.
+
+**Wire it:**
+- **Assessment record** — `getodk/collect` forms shaped to ANSI A300 Part 9's required report content: identification and location of each tree assessed, methods used, assessment data, and recommendations for mitigation or further evaluation.
+- **Qualification attribution** — a first-class `competent_person` entity holding the assessor's **TRAQ** status, its award date and its **seven-year expiry**, because TRAQ is personal and **non-transferable** (`T681`). 🔴 **Nothing in open source models this; it is the one entity you must build.** An inspection by an unqualified person is not a discharged duty.
+- **Rationale document** — generated, versioned and citation-bearing, with the justification for the chosen interval and the reviewer who approved it.
+- **Register and map** — `Project-PLATEAU` ledger + `maplibre-gl-js`; data-shape references under MIT at [`Public-Tree-Map/public-tree-map`](https://github.com/Public-Tree-Map/public-tree-map) (`1,072 B` · `7cf7cf0c018a`, ~`35,000` Santa Monica trees) and [`stiles/la-trees`](https://github.com/stiles/la-trees) (`1,068 B` · `254e97ff10c1`, `1.6M+` trees across `40+` LA County municipalities).
+- **Evidence-publication shape** — [`data-liberation-project/aphis-inspection-reports`](https://github.com/data-liberation-project/aphis-inspection-reports) is the live worked example of statutory inspection evidence published as bulk data. 🔴 No grant (`364,679` paths, `0` grants) — **study the shape, take nothing.**
+
+🔴 **Scope honestly.** Sources disagree on whether ANSI A300 was consolidated into one document on 1 January 2024 or whether Part 9's current revision is 2017. **State the edition as contested**, and do not print a Part 9 revision year on a client deck without checking ANSI directly.
+
+### `P344` — Canopy and condition evidence from imagery, with a licence boundary that is the whole design (`4–6 weeks`, any region)
+
+The detection layer is the one layer of this register where open source is genuinely strong — **and its best components are copyleft or grant-less**, so the architecture is determined by the grants.
+
+**Wire it:**
+- 🟢 **In the deliverable:** [`weecology/DeepForest`](https://github.com/weecology/DeepForest) (MIT) for crown detection from RGB. Permissive, current, embeddable.
+- 🔴 **Behind a service boundary, never linked:** [`3DFin/dendromatics`](https://github.com/3DFin/dendromatics) (GPL-3.0, `35,149 B` · `3972dc9744f6`) for stem detection, diameter and height from terrestrial point clouds. Run it as a separate process the deliverable **calls**; ship no part of it.
+- 🔴 **Evaluation only, never shipped:** [`WHU-USI3DV/WHU-STree`](https://github.com/WHU-USI3DV/WHU-STree) (`34★`, APAC/China, pushed `2026-07-27`) — the register's only multi-modal street-tree benchmark. **`17` paths enumerated, `0` grants.** Benchmark your model against it; put none of it in a product.
+- 🟢 **Presentation:** [`shiwaku/tokyo-gairoju-3d-on-maplibre`](https://github.com/shiwaku/tokyo-gairoju-3d-on-maplibre) (MIT, `1,071 B` · `37e84b77a12b`) is a working permissive precedent for rendering a municipal street-tree dataset in 3D.
+
+🔵 **Acceptance test:** imagery-derived condition may populate a **Level 1** record (Brazil explicitly permits drone and aerial inspection at Level 1) and must **never** populate a Level 2 or an FLL *Regelkontrolle* result, both of which require a person on site. **Enforce that in the data model, not in the documentation.**
+
+### `P345` — Address canonicality as a maintained instrument, run base-wide (`1 week`)
+
+🟢 **`T671` and `T672` turn the `229`-address "resolution queue" from a multi-pass project into a single job.**
+
+**Wire it:** for every address cited on these shelves —
+1. `git ls-remote --symref <addr> HEAD`. A live `HEAD` means the address resolves; **`422` on the search channel is not evidence of anything** (`7` of `10` "dead" addresses are alive on git).
+2. Where a successor is suspected, compare the **complete ref set** of both addresses. **Identical ref sets prove one repository** — a fork cannot reproduce `585` refs, let alone `49,906` (`T672`).
+3. Repair live shelf rows by **rename**, naming the basis and the date. **Dated history sections stay untouched.**
+4. Retire an address only when `ls-remote` fails **and** a name search returns nothing — and record that git's failure mode (`could not read Username`) is itself ambiguous between absent and private.
+
+🟢 **Already paid for by this pass:** `ryjones/learner-credential-wallet` is proven the canonical address of `digitalcredentials/learner-credential-wallet` (`585/585` refs), which **unblocks `P336`'s wallet leg**, and `openedx/edx-platform`'s `49` citations are proven to need a rename rather than a replacement (`49,906/49,906` refs).
+
 ## 🆕 `P334`–`P339` — added at p766 (2026-11-11)
 
 **Register: playground-equipment inspection** (`ACTION p765-E`). Every component named below was byte-read for its grant on `2026-11-11` from the `default_branch` returned by `search/repositories`.

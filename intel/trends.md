@@ -4,6 +4,147 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p767` (researched 2026-11-11) — `T669`–`T687`
+
+**The register is tree and grounds safety on the school estate** — `ACTION p766-F` named it, for a stated reason: *"the adjacent register with the same buyer as this pass's, the same evidence shape, and a different instrument family."* **The buyer and the evidence shape held. The instrument family claim understates it: there is no instrument family here, there are five mutually incompatible national ones** — and the register's regional gradient runs **opposite** to this base's expectation.
+
+**`46` supply queries (`20` English, `15` targeted, `11` non-English) · `24` full trees enumerated (`376,000+` paths) · `93` grant payloads byte-read with length and `sha256₁₂` · `13` addresses probed on two independent channels · `4` complete ref-set comparisons · `3` defects in this pass's own instruments caught by control before any verdict was written.**
+
+## `T669` — the register, and the measurement that says it was a promise
+
+`19` of `23` register tokens stood at exactly `0` across all eleven shelves. Of the four nonzero, **two are inside `ACTION p766-F` itself** — this base's own directive naming the register — one is a `0★` portfolio project `p766` already rejected, and one is a historic trending mention. 🔴 **And the census had to be re-run before it could be published: `VTA` returns `8` under `grep -oiF` and `0` under `grep -oE '\bVTA\b'`, all eight being substrings of `vTanco` and `DevTalk`.** `ACTION p762-C` reproduced live, by this pass, three passes after it was written.
+
+## `T670` — 🟢 the licence path matrix is obsolete: grant paths are **enumerable**
+
+`T665` declared a root-only path matrix to have *"a blind spot that widening cannot close."* True — and the conclusion drawn from it (widen further, read READMEs) was the wrong one. **`api.github.com/repos/*` is closed to this session, but the git transport is not**, and a blobless clone lists every path in a repository for the cost of one fetch:
+
+```
+git ls-remote --symref https://github.com/OWNER/REPO HEAD   # authoritative default branch
+git clone --depth 1 --filter=blob:none --no-checkout …      # complete tree, no blobs
+git -C r ls-tree -r --name-only HEAD                        # every path, any depth
+git -C r cat-file blob HEAD:PATH                            # fetch only that blob
+```
+
+🟢 **Four known-truth controls, all four found with zero guesses:** `openSIS`'s `docs/License.txt` (non-root), `rrule`'s `LICENCE` (British stem), `TowerScout`'s `LICENSE.TXT` (uppercase extension), `collect`'s `LICENSE.md`. **Every path-capitalisation, path-spelling and path-depth rule this base has accumulated over nine passes is now dead weight** — superseded by a listing. Committed as `ingest/p767-enum-grants.sh`.
+
+## `T671` — 🟢 liveness and canonicality are **one call**, and `422` is not even weak evidence
+
+`ACTION p766-A` — this base's self-described most important instruction — specified four steps across two channels to resolve a non-canonical address, with a known false-proof mode (raw's `404` body hashing identically on both sides). `git ls-remote` collapses it:
+
+**`7` of the `10` addresses `p765-D` ordered retired as dead return a live `HEAD` on the git channel.** `openedx/edx-platform`, `digitalcredentials/learner-credential-wallet`, `microsoft/presidio`, `UCL-INGI/INGInious`, `NVIDIA/NeMo-Guardrails`, `NSoiffer/MathCAT`, `IMSGlobal/openbadges-validator-core` — all `422` on search, all `OK` on git. 🔵 **Two of them serve `refs/heads/develop`, not `main`** — so the same call that proves liveness also removes the last reason to guess a branch.
+
+🔴 **The git channel is not unambiguous either**: the `3` genuine failures (`1EdTech/caliper-js`, `trilogy-group/oneroster-ts`, `CMDBuild/openMAINT`) fail with `could not read Username for 'https://github.com'`, which GitHub returns for *absent or private* alike. **But it fires on `3` of `13` where `422` fired on `13` of `13`.** The `229`-address list is a resolution queue; this is the instrument to run it with.
+
+## `T672` — 🟢 **ref-set identity** distinguishes a redirect from a fork, and it settles `ACTION p766-C`
+
+An identical `HEAD` object is consistent with both a transfer redirect and an exactly-even fork. **A complete ref set is not.**
+
+| Pair | Refs | Result |
+|---|---|---|
+| `digitalcredentials/learner-credential-wallet` ↔ `ryjones/learner-credential-wallet` | **`585` each** | 🟢 **identical** |
+| `openedx/edx-platform` ↔ `openedx/openedx-platform` | **`49,906` each** | 🟢 **identical** |
+
+A fork carries its own ref namespace; it does not reproduce `585` refs — every pull-request ref and tag — byte for byte. 🟢 **`ryjones/learner-credential-wallet` is proven the canonical address, so `P336`'s wallet leg may be promised**, and `openedx/edx-platform`'s `49` citations need a **rename, not a replacement**. 🔵 Stated honestly: identity proves one repository behind two addresses; *transfer-with-redirect* is the only mechanism consistent with the old address `422`-ing while the new one indexes.
+
+## `T673` — 🔴 `ACTION p765-G` / `p766-E` is withdrawn: the `14` rows it was carried for were never broken
+
+Re-detected live, the first run returned `48` over-wide rows. **`41` were this pass's own defect:** in GFM only an *unescaped* pipe splits a cell, and the detector counted `\|`. Every row that quotes a markdown table inside a cell scored over-wide. 🔵 **This base had already recorded this exact defect** — `agents/trending.md` carries *"table-width probe counted escaped `\|` as separators"* — and this pass reproduced it in full before consulting the record.
+
+🔴 **Counted correctly, the ledger's two shelves hold `7` over-wide rows — and not one is a `p276` correction.** All seven are unescaped pipes inside inline code spans — `` `… | head -3` ``, `` `grep -c "^|"` ``, `api.github.com/repos|search|orgs`. **The author meant a literal pipe, so the fix is an escape, not a column**; adding a column would have created a spurious empty cell and left the real breakage. 🔴 **And the ledger covered only `2` of the `11` shelves: run base-wide, the detector found `20` more of the same class in `intel/open-gaps.md` and `README.md`.** 🟢 **`27` rows corrected in total; `0` over-wide rows now remain across all eleven shelves.** The `14` `p276` corrections render correctly and always did.
+
+## `T674` — 🔴 an evidence ledger of **line numbers** into **append-only files** is stale the moment it is written
+
+`evidence/overwide-rows.2026-11-11-p765.tsv` stores absolute line numbers. `p766` prepended a dated section to both trending shelves. **`11` of the `14` recorded coordinates no longer point at a table row.** Two passes carried an instruction against coordinates that had already moved. 🟢 **Rule: an evidence row that locates something in an append-only file must be content-addressed — a quoted substring, a `sha256` of the line — never a line number.** Generalises to every `evidence/*.tsv` on this base that records a `line` column (`ACTION p767-E`).
+
+## `T675` — 🔴 **the register's supply is language-partitioned, and the mandated English queries report North America as the world**
+
+| Query | Repositories | What they are |
+|---|---|---|
+| `tree inventory management` (English) | `149` | 🔴 overwhelmingly data-structure homographs |
+| 🟢 **`Baumkataster`** (German) | **`45`** | 🟢 **real municipal tree registers under MIT and AGPL-3.0** — Graz, Vienna, Bielefeld, Karlsruhe, Heilbronn, Zürich |
+| `arbolado urbano` / `arborizacao urbana` / `inventario arboreo` (es/pt) | `32` / `21` / `11` | LATAM supply, almost all `0★`, almost all grant-less |
+| `樹木 管理 台帳` (Japanese) | **`1`** | 🟢 the only permissive ledger on the register |
+| `arbre cadastre patrimoine` (French) | **`0`** | 🔴 **informed gap** — French-origin supply exists under an English name |
+
+🔴 **This is a defect in this base's standing method, not in this register.** The scheduled instruction mandates per-region *news* legs but leaves the *supply* queries in English. On any register whose buyer is a municipality, the supply is held in the municipality's language. **Registered as `ACTION p767-A`.**
+
+## `T676` — the homograph is worse here than on any previous register
+
+`tree risk` returns **`3,052`** repositories and `tree management system` **`1,988`** — decision trees, fault trees, Monte-Carlo tree search, B+-tree storage engines, family-tree apps, Unity scene-tree managers. `p765` measured `playground inspection` at `29/30` software sandboxes; this register's core noun is a **data structure**, so the noise floor is two orders of magnitude higher. 🟢 **The queries that work are the ones carrying a domain term the software world does not use**: `arboricultural survey` (`0`, honest), `Baumkataster` (`45`, real), `樹木 管理 台帳` (`1`, real).
+
+## `T677` — 🔴 the instruments are **national and mutually incompatible** — the inverse of `p766`'s register
+
+`p765-E` chose playground inspection *because* EN 1176/1177 is international, so a deliverable would not need rebuilding per jurisdiction. **This register is the opposite case, and it is the more common one:**
+
+| Region | Instrument | Nature | Cadence |
+|---|---|---|---|
+| North America | **ANSI A300 Part 9**; **ISA TRAQ** qualification | Private consensus standard + personal qualification | 🔴 **none set** |
+| EMEA (England) | Occupiers' Liability duty; **LANTRA NOS `LANTw31`** for survey competence | Statutory duty, no instrument-set interval | 🔴 condition-driven |
+| EMEA (Germany) | **FLL Baumkontrollrichtlinie (2020)** + **§ 823 BGB** | 🟢 Private technical rule as *Stand der Technik*, over a court-developed civil duty | 🟢 **risk-weighted, annual as the published *Richtwert* for frequented urban trees** |
+| APAC (Australia) | **AS 4373** (pruning), **AS 4970** (protection); **TCAA** guidelines | Standards + industry guideline | 🔵 TCAA names **Level 2 as the school-appropriate tier** |
+| LATAM (Brazil) | 🟢 **ABNT NBR 16246-3** — *Avaliação de risco de árvores* | 🟢 **National standard with three explicit assessment levels** | 🔵 levels specified, interval not |
+
+🔴 **Five regions, five instruments, no shared vocabulary and no shared tiering.** The `{duty, instrument, interval, competent person, evidence}` model `P334` built on `p766`'s register still applies — **but every field is re-populated per jurisdiction, and the *competent person* field changes meaning**: a TRAQ holder, an FLL-qualified *Baumkontrolleur*, a LANTRA-assessed surveyor and an NBR Level-2 assessor are not interchangeable.
+
+## `T678` — 🟢 **LATAM holds the most codified instrument on this register and North America the least.** The gradient is inverted
+
+This base's regional default — confirmed across several registers — is that LATAM is where the instrument is missing. **Here it is where the instrument is most specific.** **ABNT NBR 16246-3** (first edition 2019) defines **three assessment levels**: Level 1 a limited visual analysis, permitted *on foot, by vehicle, by drone or other aerial inspection*; Level 2 a 360° external analysis with hand tools; Level 3 advanced instrumentation — tomography, radar, penetrometers. The series runs Part 1 (pruning), Part 2 (arboricultural safety, in preparation), Part 3 (risk assessment), Part 4 (planting and transplanting, in preparation).
+
+🟢 **And a municipal regulator has already narrowed it:** Niterói's municipal arboriculture manual directs that **Levels 1 and 3 are not to be applied locally and assessment should preferentially be at Level 2** — a municipality tightening a national standard, which is the exact shape `p766` found in São Paulo for playgrounds (`T668`). 🔴 **A claimed March 2025 revision of NBR 16246-3 appears only on a vendor blog and is unconfirmed against ABNT.** 🔴 **ABNT normative text is copyrighted and was not read**; levels and scope are search-sourced.
+
+## `T679` — 🔴 North America declines to set a cadence for the **second consecutive register**
+
+`T657` recorded that the CPSC playground handbook deliberately sets no inspection interval. **ANSI A300 Part 9 and ISA TRAQ do the same thing for trees**: they specify *method* (likelihood of failure × consequence of failure), *qualification* (TRAQ, requiring Certified Arborist status, a field component, and retest every seven years), and *report content* (identification and location of each tree assessed, methods used, assessment data, recommendations) — **and no frequency.** 🔴 Sources even disagree on the standard's own edition: consolidated into one document since 1 January 2024 per one source, Part 9 revision 2017 per another.
+
+🟢 **The commercial reading, now holding twice:** in North America there is no cadence to encode, so the deliverable inverts — **a cadence-driven compliance product has nothing to sell against, and the sellable artefact is a defensible, dated, authored, cited *justification* of the cadence chosen,** attributed to a named qualified person. `P343` builds it.
+
+## `T680` — 🟢 Germany is the one jurisdiction where the duty, the rule and the cadence are all separately published
+
+The duty is **§ 823 BGB** as the courts have developed it (*Verkehrssicherungspflicht*) — **no legal norm prescribes an inspection interval.** The technical rule is the **FLL Baumkontrollrichtlinie**, 2020 edition, which is **not law** but counts as *Stand der Technik* and requires a professional risk weighting rather than a fixed period. 🟢 **And the operational instrument exists as a published model: the GALK working group's *Musterdienstanweisung für Regelkontrollen von Bäumen*, adapted in 2021 to the 2020 edition.**
+
+🔴 **Sources conflict on the periods and this base states none as authoritative**: an annual *Regelkontrolle* is cited as the *Richtwert* for frequented urban trees; two-yearly for young trees; up to three-yearly for healthy mature trees with low safety expectation; and one blog's flat "1–2 year minimum for public roads" is not corroborated. 🔴 **The FLL text is a paid product and was not read.** 🟢 **Even so, Germany is the only region on this register that hands you a cadence, a competence definition and a model work instruction as three citable artefacts** — which is why `P341` is built there.
+
+## `T681` — 🔴 the **competent person** is unmodelled for the third consecutive register, and here the standard makes it personal
+
+Every regime on this register names a qualified assessor, and **TRAQ is explicitly an attribute of a human, not of a record**: it requires ISA Certified Arborist status plus a course with a field component, a written and a performance-based exam, **retest every seven years**, and it **may not be transferred**. Germany requires a qualified *Baumkontrolleur*; England's competence route runs through Arboricultural Association training and the LANTRA national occupational standard `LANTw31` *Carry out tree surveys and inspections*; Brazil's levels imply graded competence.
+
+🔴 **No open-source artefact on this register models inspection *authority*.** Every candidate models an inspection *event*. **An inspection by an unqualified person is not a discharged duty**, so a record that cannot prove who held what qualification on the date of inspection produces evidence that fails on audit. `T660` said this of playgrounds; it is now true of three registers running.
+
+## `T682` — 🔴 proprietary behind `NOASSERTION`, second consecutive register
+
+`neocizee/arboladoMun` (`2★`) — a Django REST backend for a **municipal tree register**, by description the single best-fitting artefact in LATAM — carries a `LICENSE` reading **"Proprietary License … All Rights Reserved"** (`1,524 B` · `1fb380555f1d`): no commercial use, no distribution, no modification, no derivative works, **no production use**. **GitHub indexes it `NOASSERTION`** — the identical value carried by `getodk/collect`'s genuine Apache-2.0 and `otm-core`'s genuine AGPL-3.0. 🔵 Its grant explicitly permits viewing *"for portfolio and educational purposes"*, so reading it was lawful. 🔴 `p766` found this shape one register ago. **`NOASSERTION` is not a weak signal; it is an absent one, and it is absent equally over permissive, copyleft and prohibitive payloads.**
+
+## `T683` — 🔴 a repository does not have a licence; it has a **map from path scope to grant**
+
+`ACTION p766-D(ii)` cited Metabase's two-family split as the case to handle. Tree enumeration shows two is low:
+
+| Repository | Grant paths | Families | What a root probe publishes |
+|---|---|---|---|
+| `qgis/QGIS` | `126` | 🔴 **`9`** | `GPL-2.0`, and nothing about the LGPL-3.0 in `debian/copyright` |
+| `postgis/postgis` | `11` | `5` | 🔴 one of **two root grants** — `COPYING` *and* `LICENSE.TXT` |
+| `OS4ED/openSIS-Classic` | `20` | `5` | 🔴 **nothing: there is no root grant.** The project grant is GPL-2.0 at `docs/License.txt` |
+| `stiles/la-trees` | `49` | `3` | `MIT`, and not that `node_modules/` is committed |
+
+🟢 **Three scopes, operationally distinct:** a **root** grant governs the repository; a **non-root non-vendored** grant is a project statement over its subtree; a non-root grant under `vendor/`, `node_modules/`, `third_party/`, `libraries/` or `assets/` is a **vendored third party a fork inherits**. `ingest/p767-grant-classifier.py` emits all three per path.
+
+## `T684` — 🔴 the classifier's third axis is **typography**, and it was silently wrong on clean payloads
+
+`ACTION p766-D` named two axes: operative text over family name, and multiple families per repository. **A third was wrong without ever failing loudly.** `p765`'s MIT discriminator required `the software is provided "as is"` with ASCII double quotes. Four unambiguous MIT payloads scored `UNRECOGNISED` because they write `'Software'` with single quotes (`node_modules/debug`, `node_modules/basic-auth`) or `Copyright ©` with a typographic symbol (`markbaker/complex`, `markbaker/matrix`). 🟢 **Normalising quote class, dashes and `©` before matching corrected all four.** **Quote class is not meaning; a detector that depends on it reports absence where there is a grant.**
+
+## `T685` — 🔴 **ISC was missing from the family table entirely**
+
+`node_modules/mapbox/LICENSE` scored `UNRECOGNISED` on a clean, complete **ISC** grant — an OSI-approved permissive licence, ubiquitous in the npm ecosystem, and absent from `p765`'s family list. Added this pass, anchored on its own operative clause (*"with or without fee is hereby granted"*), together with `0BSD`, `Unlicense` and `SIL-OFL-1.1`. 🔴 **Total UNRECOGNISED across `93` payloads fell `9` → `4`, and the `4` survivors are correct refusals**: one bespoke proprietary grant, one truncated `SIL ()` field, one per-file licensing note mixing public domain with LGPL, and one by-reference Apache notice in a JS comment with an unexpanded `<%= version %>` template.
+
+## `T686` — 🟢 the EU AI Act date this base refused to state is now **resolvable**, and the answer is `2 December 2027`
+
+`p766` recorded the EU AI Act's high-risk application date as *"genuinely unresolved"* with `2 December 2027`, `August 2026` and `2 December 2026` all appearing, and ruled that **no single date may be stated.** That ruling was correct for the sources then held and is now superseded by a mechanism: the **Digital Omnibus** deferred the Annex III obligations — which include **education** — from August 2026 to **2 December 2027**. Council and Parliament reached political agreement on **7 May 2026**; one source reports formal adoption as **Regulation (EU) 2026/1744**, in force **27 July 2026**.
+
+🔵 **Stated with its residual uncertainty:** `2 December 2027` is consistent across the Council's own press release and several independent law-firm analyses, so **the date may now be stated for education**. The **adoption status** rests substantially on one source and is **not** primary-verified — the Official Journal was not read at this tunnel. 🔵 Adjacent dates recorded: Annex I embedded high-risk → `2 August 2028`; regulatory sandboxes → `2 August 2027`; a transparency/watermarking obligation → `2 December 2026`, which is the likely origin of `p766`'s third candidate date.
+
+## `T687` — 🔴 vendored paths corrupt **region** placement, not only licence verdicts
+
+`ACTION p763-D` has fired for four consecutive passes on region contamination. A new mechanism this pass: `Afh21/TreesProject`'s only word-boundary match for any jurisdiction is **"An example in French:"** inside `public/css/css_dashboard/plugins/flot/API.md` — **a vendored jQuery plugin's documentation.** Placing it EMEA on that evidence would have been wrong twice over: wrong file, wrong continent. 🟢 **The `vendored` path predicate built for licences applies unchanged to region evidence**, and three repositories this pass are recorded **region-unplaced** rather than guessed: `naturalsolutions/ecoteka`, `Afh21/TreesProject` and `hmarichal93/deepcstrd`. 🟢 **Meanwhile the placements that did hold came from repository evidence naming a jurisdiction outright** — Valledupar and the Universidad Popular del Cesar (Colombia), 国土交通省 (Japan), Wuhan and China LiDAR Co (China), *"informes tipo ISA, Argentina"* in a `CLAUDE.md`, and Graz, Wien, Bielefeld and Heilbronn in repository names.
+
 # 🆕 Trends new at `p766` (researched 2026-11-11) — `T651`–`T668`
 
 **The register is playground-equipment inspection** — `ACTION p765-E` named it and this pass built it, for the reason `p765` gave: it is the one sub-register of school-estate safety with an **international** rather than a national instrument. That reason held in EMEA and APAC, **failed in North America for an instructive reason**, and LATAM turned out to hold an instrument this pass expected to have to declare missing.

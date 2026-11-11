@@ -6,6 +6,121 @@ updated: 2026-11-11
 
 # Education AI Agents — Curated Top Set
 
+## 🆕 `p767` — **Tree and grounds safety on the school estate (`ACTION p766-F`). `24` addresses had their licence paths **enumerated from the full git tree** rather than guessed, because this pass found that the session's git proxy serves arbitrary public repositories — so `T665`'s non-root blind spot is closed structurally, not mitigated. `14` permissive agent-layer rows, `1` proprietary refusal behind `NOASSERTION`, `5` grant-less. And the register's supply turns out to be **language-partitioned**: the mandated English queries never see the `45`-repository German civic-tech ecosystem that is its largest permissive cluster.**
+
+**`20` English supply queries + `15` targeted + `11` non-English on `search/repositories` · `24` full trees enumerated (`376,000+` paths swept) · `93` grant payloads byte-read with length and `sha256₁₂` · every `default_branch` from `git ls-remote --symref`, **none guessed and none taken from the search index** · `4` known-truth controls passed · `3` defects in this pass's own instruments caught by control before any verdict was written.**
+
+### 🔴 First, the measurement: the register was `0` as data and `2` as a promise
+
+Counted across all eleven shelves on `2026-11-11`, **with word boundaries**:
+
+| Token | Count | Token | Count |
+|---|---|---|---|
+| `tree risk` | **`0`** | `arborist` | **`0`** |
+| `tree survey` | **`0`** | `TRAQ` | **`0`** |
+| `QTRA` | **`0`** | `ANSI A300` | **`0`** |
+| `tree preservation` | **`0`** | `grounds maintenance` | **`0`** |
+| `AS 4373` | **`0`** | `NBR 16246` | **`0`** |
+| `LANTRA` | **`0`** | `Occupiers Liability` | **`0`** |
+| `deadwood` | **`0`** | `windthrow` | **`0`** |
+| `canopy` | **`0`** | `i-Tree` / `OpenTreeMap` | **`0`** / **`0`** |
+| `VTA` | **`0`** *(see below)* | `tree failure` | **`0`** |
+| `tree inspection` | `1` | `arboricultur*` | `1` |
+| `urban forestry` | `1` | `tree inventory` | `1` |
+
+🔴 **`19` of `23` tokens at exactly `0`.** The four nonzero ones are: **two inside `ACTION p766-F` itself** — this base's own directive naming the register — one a `0★` portfolio project `p766` measured and rejected, and one a historic trending mention. The register was a promise, not data (`T669`).
+
+🔴 **And `VTA` reproduced `ACTION p762-C` live.** `grep -roiF VTA` returns **`8`**; `grep -roE '\bVTA\b'` returns **`0`**. All eight are substrings of `vTanco` and `DevTalk`. **A substring count is still not a mention count**, and this pass's own first census published the wrong number before the word-boundary re-run caught it.
+
+### 🟢 The instrument finding that matters more than the register
+
+`T665` (`p766`) established a blind spot presented as permanent: a root-only licence path matrix *"has a blind spot that widening cannot close"*, because `openSIS`'s grant sits at `docs/License.txt`. `ACTION p766-B` proposed mitigating it by always reading the README's License section.
+
+**It does not need mitigating. It needs deleting.** `api.github.com/repos/*` is closed to this session — but **the git proxy serves `git ls-remote` and a blobless clone of any public repository**, so a licence path is not a guess:
+
+```
+git ls-remote --symref https://github.com/OWNER/REPO HEAD     # default branch, authoritative
+git clone --depth 1 --filter=blob:none --no-checkout …        # full tree, no blobs
+git -C r ls-tree -r --name-only HEAD | grep -iE '…licen[sc]e…'  # every grant path, any depth
+git -C r cat-file blob HEAD:PATH                              # fetch only that blob
+```
+
+🟢 **Validated against four known-truth controls, all four found with zero guesses** (`T670`):
+
+| Control | What previous passes needed | What enumeration returned |
+|---|---|---|
+| `OS4ED/openSIS-Classic` | `16` root paths + `8` manifests, then the README, to reach one grant | **`20` grant paths**, `docs/License.txt` among them, from a `5,656`-file tree |
+| `jkbrzt/rrule` | the British stem `LICENCE` guessed | `LICENCE` |
+| `TowerScout/TowerScout` | `32` paths missed `LICENSE.TXT` (uppercase *extension*) | `LICENSE.TXT` |
+| `getodk/collect` | the `.md` extension guessed | `LICENSE.md` |
+
+🔴 **This pass's enumerator was wrong on its first run and a control caught it:** the path pattern matched `assets/notice.png` and `docs/LICENSE.rtf`, and byte-read a PNG as a grant. Binary and word-processor extensions are now excluded; `22` paths became `20`, and `docs/License.txt` — the one that matters — stayed. 🔵 **Recorded limit:** `openSIS` *also* carries `docs/LICENSE.rtf`, which this instrument does not read. The plain-text grant at `docs/License.txt` is the one verdict published.
+
+### 🔴 The supply is language-partitioned, and the mandated queries cannot see it
+
+Run on `search/repositories`, `2026-11-11`:
+
+| Query | Repositories | What they are |
+|---|---|---|
+| `tree risk` | **`3,052`** | 🔴 almost entirely **decision trees, fault trees, Monte-Carlo tree search** |
+| `tree management system` | **`1,988`** | 🔴 B+-tree DBMS implementations, family-tree apps, scene-tree managers |
+| `tree inspection management` | **`5`** | 🔴 a patient-record binary tree, a random-number generator — `ACTION p766-F` measured this correctly |
+| `arboricultural survey` | **`0`** | — |
+| `school grounds safety` | **`0`** | — |
+| 🟢 **`Baumkataster`** | **`45`** | 🟢 **the register's largest permissive cluster anywhere** — municipal tree registers from Graz, Vienna, Bielefeld, Karlsruhe, Heilbronn, Zürich, under **MIT** and **AGPL-3.0** |
+| `arbolado urbano` | `32` | LATAM + Spain, almost all `0★`, almost all grant-less |
+| `arborizacao urbana` | `21` | Brazil, all `0★`, **`0` with a grant** |
+| `inventario arboreo` | `11` | includes the one **school** tree inventory on the register |
+| `樹木 管理 台帳` | **`1`** | 🟢 a Japanese government ledger system under **Apache-2.0** |
+| `arbre cadastre patrimoine` | **`0`** | 🔴 **an informed gap: the French-language query returns nothing, while French-origin supply exists under an English name** (`ecoteka`) |
+
+🔴 **`T675`: the mandated English-language supply queries systematically under-measure EMEA and LATAM.** The German term for a municipal tree register returns **`45`** repositories with real grants; the English phrase for the same artefact returns `149` that are overwhelmingly homograph. **This is a defect in this base's own standing method, not in this register.**
+
+### The agent-layer rows — `14` with a verified permissive or copyleft grant
+
+Every grant below was byte-read on `2026-11-11` from the branch named, which came from `git ls-remote --symref`. Every path came from a full tree enumeration. Family determined by **operative clause text**, never by GitHub's index and never by the licence's own name.
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Path | Branch | Region | Verdict for a proprietary deliverable |
+|---|---|---|---|---|---|---|
+| [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) | `194` | 🔴 **AGPL-3.0** · `35,366 B` · `1350c224c8d4` | `LICENSE` | `develop` | Global | 🔴 **NO — and GitHub's index says `NOASSERTION`.** The register's canonical platform (crowdsourced tree inventory, ecosystem-services calculation, urban-forestry analysis) is network-copyleft, and **the page tells you nothing.** 🔴 Last pushed `2023-08-03` |
+| [`Public-Tree-Map/public-tree-map`](https://github.com/Public-Tree-Map/public-tree-map) | `47` | 🟢 **MIT** · `1,072 B` · `7cf7cf0c018a` | `LICENSE` | `master` | North America | 🟢 **YES.** ~`35,000` public street and park trees in Santa Monica, California, with contextual attributes. The cleanest permissive worked example of a municipal register on the shelf |
+| [`weecology/DeepForest`](https://github.com/weecology/DeepForest) | — | 🟢 **MIT** · `1,071 B` · `5487293ab54d` | `LICENSE` | `main` | Global | 🟢 **YES.** Tree-crown detection from RGB imagery. The condition-evidence primitive for `P344`; supersedes the archived `DeepForest-pytorch` |
+| [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) | `4` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | `LICENSE` | `main` | APAC | 🟢 **YES, and it is the find of the pass.** A **tree-management 台帳 (ledger) system** — 2D/3D map visualisation of park and street trees — whose README assigns copyright to **国土交通省 (MLIT, Japan)**. 🟢 **The only permissive, platform-shaped, government-published artefact on this register in any region** (`T677`) |
+| [`stiles/la-trees`](https://github.com/stiles/la-trees) | `10` | 🟢 **MIT** · `1,068 B` · `254e97ff10c1` | `LICENSE` | `main` | North America | 🟢 Yes at the root — 🔴 **but read the tree first.** `1.6M+` street trees across `40+` Los Angeles County municipalities, and **`node_modules/` is committed**: `48` vendored grants (MIT, ISC, BSD-3-Clause). A fork inherits all of them (`T683`) |
+| [`tyrasd/Baumkataster-Graz`](https://github.com/tyrasd/Baumkataster-Graz) | `7` | 🟢 **MIT** · `1,080 B` · `48442f06b983` | `LICENSE` | `gh-pages` | EMEA | 🟢 Yes. Graz's municipal tree register. 🔵 **Two grants, scoped by path:** `icons/LICENSE.txt` is **BSD-3-Clause** (`1,496 B` · `6692f90aeb6b`) — attribution and no-endorsement apply to the icon set only. 🔴 Branch is **`gh-pages`**, not `main` — a guess would have missed every path |
+| [`codeforbielefeld/baumkataster`](https://github.com/codeforbielefeld/baumkataster) | `5` | 🟢 **MIT** · `1,075 B` · `fc8ac18c2676` | `LICENSE` | `main` | EMEA | 🟢 Yes. Analysis over Bielefeld's published tree-register data — the civic-tech read pattern, under a permissive grant |
+| [`opendata-heilbronn/trees`](https://github.com/opendata-heilbronn/trees) | `0` | 🟢 **MIT** · `1,076 B` · `8b3efd3511da` | `LICENSE` | `master` | EMEA | 🟢 Permissive, 🔴 **and dead: last pushed `2017-03-04`.** Useful as a data-shape reference for a `Baumkataster` feed, not as a dependency |
+| [`shiwaku/tokyo-gairoju-3d-on-maplibre`](https://github.com/shiwaku/tokyo-gairoju-3d-on-maplibre) | `0` | 🟢 **MIT** · `1,071 B` · `37e84b77a12b` | `LICENSE` | `main` | APAC | 🟢 Yes. Tokyo's 街路樹 (street-tree) dataset rendered in 3D on MapLibre. The presentation layer for `P342`'s APAC leg |
+| [`OpenTwinCities/adopt-a-tree`](https://github.com/OpenTwinCities/adopt-a-tree) | `8` | 🟢 **BSD-3-Clause** · `1,479 B` · `66dbf19752ff` | `LICENSE` | `main` | North America | 🟢 Yes, with attribution and the no-endorsement clause. Civic stewardship rather than inspection — the *public* half of a grounds programme. 🔴 Last pushed `2021-12-10` |
+| [`hmarichal93/deepcstrd`](https://github.com/hmarichal93/deepcstrd) | — | 🟢 **MIT** · `1,085 B` · `e6392cdd0963` | `LICENSE` | `main` | 🔵 **unplaced** | 🟢 Yes. `DeepCS-TRD`, a cross-section tree-ring detector (ICIAP 2025). 🔵 **Region deliberately left unplaced: no jurisdiction appears anywhere in the repository** (`ACTION p763-D`) |
+| [`naturalsolutions/ecoteka`](https://github.com/naturalsolutions/ecoteka) | `14` | 🔴 **GPL-3.0** · `35,122 B` · `8f1bd3b5a9c6` | `LICENSE` | `master` | 🔵 **unplaced** | 🔴 **NO.** Describes itself as an open-source tree-management system — the closest thing to a European platform peer of OpenTreeMap. Copyleft. 🔴 Last pushed `2023-03-05`. 🔵 **A third distinct GPL-3.0 payload length this pass** (`35,122` / `35,149` / `17,286`) |
+| [`plepe/baumkataster-wien`](https://github.com/plepe/baumkataster-wien) | `3` | 🔴 **AGPL-3.0** · `34,521 B` · `10ede613cce8` | `LICENSE` | `master` | EMEA | 🔴 **NO.** A query layer over Vienna's tree register. Network copyleft on a thin client — the strictest grant on the lightest artefact here |
+| [`treekit/treekit`](https://github.com/treekit/treekit) | `9` | 🔴 **AGPL-3.0** · `34,520 B` · `57c8ff33c9c0` | `LICENSE` | `master` | 🔵 **unplaced** | 🔴 **NO.** Mobile street-tree data collection — structurally the field-capture client this register wants. 🔴 Last pushed `2015-06-02` |
+| [`3DFin/dendromatics`](https://github.com/3DFin/dendromatics) | `33` | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | `LICENSE` | `main` | 🔵 **unplaced** | 🔴 **NO**, but 🟢 **the best-maintained measurement library on the register** (pushed `2026-06-25`). Automatic dendrometry in terrestrial point clouds. Service-boundary only — see `P344` |
+| [`3DFin/3DFin`](https://github.com/3DFin/3DFin) | — | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | `LICENSE` | `main` | 🔵 **unplaced** | 🔴 **NO.** The GUI over `dendromatics`; `qt-files/assets/license.txt` is GPL-3.0 again — **one family, two paths, no conflict** |
+
+### 🔴 The proprietary refusal — second consecutive register, same disguise
+
+| Repository | ★ | What the platform shows | What the payload says |
+|---|---|---|---|
+| `neocizee/arboladoMun` *(code span deliberately, not a link)* | `2` | `NOASSERTION` | 🔴 **"Proprietary License … All Rights Reserved."** `1,524 B` · `1fb380555f1d`. Viewing is granted *"for portfolio and educational purposes only"*; commercial use, distribution, modification, derivative works and **production use** are each expressly forbidden. A Django REST backend for a **municipal tree register** — by description the single best-fitting artefact in LATAM (`T682`, `767-A`) |
+
+🔴 **`p766` found this exact shape one register ago** (`shaunakmirajgaonkar/public-playground-safety-inspector`). Twice running, the artefact whose description best matches the register is proprietary, and **GitHub shows the same `NOASSERTION` it shows for permissive payloads.** 🔵 This grant explicitly permits reading, so reading it was lawful; nothing in it may be copied.
+
+### 🔴 The grant-less — `5` addresses whose trees were **enumerated**, not sampled
+
+An absence below means *every path in the repository's tree was listed and none was a grant* — a stronger statement than any previous pass could make.
+
+| Repository | ★ | Branch | Tree | Region | Why it is named anyway |
+|---|---|---|---|---|---|
+| [`WHU-USI3DV/WHU-STree`](https://github.com/WHU-USI3DV/WHU-STree) | `34` | `main` | `17` paths, **`0` grants** | APAC | **The register's benchmark dataset** — multi-modal street-tree inventory, Wuhan University, pushed `2026-07-27`. 🔴 No grant: **evaluate against it, never ship it** |
+| [`Salfonsogar/inventario-arboreo-escolar`](https://github.com/Salfonsogar/inventario-arboreo-escolar) | `0` | `main` | `7` paths, **`0` grants** | LATAM | 🟢 **The only repository on GitHub that is a *school* tree inventory.** README names the **municipio de Valledupar (Cesar)** and the **Universidad Popular del Cesar** — region placed from repository evidence, not from the language it is written in. 🔴 Unusable without a grant |
+| [`juliobarbol/ArborRisk`](https://github.com/juliobarbol/ArborRisk) | `0` | 🔴 `claude/arborisk-github-deploy-fsowc6` | `10` paths, **`0` grants** | LATAM | Tree **risk** analysis and register. 🔴 **Its default branch is not `main`** — every root-path guess on this address returns nothing. Its `CLAUDE.md` names *"informes tipo ISA, Argentina"*: **the North American method crossing into LATAM inside an AI-generated application** (`T678`) |
+| [`aiconsilium-dev/savetree-demo`](https://github.com/aiconsilium-dev/savetree-demo) | `0` | `main` | `3` paths, **`0` grants** | APAC | A Korean 수목 관리 (tree-management) demo. Named to record that the Korean-language leg returned supply at all — `4` repositories, every one `0★` and grant-less |
+| [`data-liberation-project/aphis-inspection-reports`](https://github.com/data-liberation-project/aphis-inspection-reports) | `18` | `main` | 🔴 **`364,679` paths, `0` grants** | North America | USDA **Animal and Plant Health Inspection Service** reports and PDFs, pushed `2026-11-10`. 🔵 Not arboriculture, but **the only live worked example on this register of statutory inspection evidence published as bulk data** — the output shape `P343` has to produce |
+
+🔵 **What this pass did not find, stated as an absence rather than left silent:** no repository anywhere implements `ANSI A300 Part 9`, `QTRA`, `AS 4373`, `NBR 16246-3` or the `FLL Baumkontrollrichtlinie` as a cadence or assessment engine. `ANSI A300` returns **`1`** repository and `QTRA tree` returns **`1`**, and neither is an inspection system. **The register has a data layer, a detection layer and a presentation layer in open source, and no duty layer at all** — the third consecutive register on which that is true.
+
 ## 🆕 `p766` — **Playground-equipment inspection as its own register (`ACTION p765-E`). The supply is the thinnest this base has ever measured: `EN1176` returns `0` repositories, `EN 1176 playground` returns **exactly one**, and it is `1★`. `15` artefacts byte-read, `6` usable — and the one repository whose description reads like a real playground-safety platform is **proprietary, "All Rights Reserved"**, which GitHub indexes as `NOASSERTION`.**
 
 **Register: playground-equipment inspection** — `ACTION p765-E` named it and this pass built it. It is the sub-register of school-estate safety that `p765` singled out for one reason: **it is the only one with an international rather than a national instrument** (the EN 1176 / EN 1177 family), so a deliverable built against it does not have to be rebuilt per jurisdiction. That reason survived measurement in EMEA and APAC and **failed in North America**, for a reason worth more than the register itself (`T651`, `T657`).

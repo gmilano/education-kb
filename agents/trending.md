@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p767) — **The register's agent layer is almost entirely `0★` and under 18 months old, and its one government-published artefact is the only permissive platform in it. New this window: a Chinese street-tree benchmark with no grant, a Colombian *school* tree inventory with no grant, an Argentine risk app on a non-`main` default branch — and the discovery that the German-language query returns `45` repositories where the English one returns homographs.**
+
+**Register: tree and grounds safety on the school estate** (`ACTION p766-F`). `46` supply queries (`20` English + `15` targeted + `11` non-English) · `24` full trees enumerated · `93` grant payloads byte-read · every `default_branch` from `git ls-remote --symref`, none guessed.
+
+### What is actually new in this window
+
+| Pushed | Artefact | Grant, byte-read | Region | Why it is new work and not a restatement |
+|---|---|---|---|---|
+| `2026-07-27` | [`WHU-USI3DV/WHU-STree`](https://github.com/WHU-USI3DV/WHU-STree) (`34★`) | 🔴 **no grant** · `17` paths enumerated | APAC (China) | **The register's first benchmark dataset.** Multi-modal street-tree inventory from Wuhan University; its README names **China LiDAR Co.** A benchmark is the one artefact class this register had none of — and it cannot be shipped |
+| `2026-06-25` | [`3DFin/dendromatics`](https://github.com/3DFin/dendromatics) (`33★`) | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | 🔵 unplaced | **The only actively maintained measurement library on the register.** Automatic dendrometry in terrestrial point clouds — stem detection, diameter, height. Copyleft, so service boundary only (`P344`) |
+| `2026-10-16` | [`juliobarbol/ArborRisk`](https://github.com/juliobarbol/ArborRisk) (`0★`) | 🔴 **no grant** · `10` paths | LATAM (Argentina) | 🔴 **Default branch `claude/arborisk-github-deploy-fsowc6`.** Tree risk analysis *and* register, and its `CLAUDE.md` specifies *"informes tipo ISA, Argentina"* — **the ANSI/ISA method applied in a jurisdiction that has its own standard**, inside an AI-generated application |
+| `2026-10-16` | [`Salfonsogar/inventario-arboreo-escolar`](https://github.com/Salfonsogar/inventario-arboreo-escolar) (`0★`) | 🔴 **no grant** · `7` paths | LATAM (Colombia) | 🟢 **The only *school* tree inventory on GitHub in any language.** Named for the **municipio de Valledupar (Cesar)** and the **Universidad Popular del Cesar**. Exactly this register's buyer, exactly this register's asset — and no grant |
+| `2026-09-06` | [`shiwaku/tokyo-gairoju-3d-on-maplibre`](https://github.com/shiwaku/tokyo-gairoju-3d-on-maplibre) (`0★`) | 🟢 **MIT** · `1,071 B` · `37e84b77a12b` | APAC (Japan) | Tokyo's 街路樹 street-tree data in 3D on MapLibre. Permissive, current, and the presentation half of the only permissive ledger on the register |
+| `2026-05-18` · `2026-07-21` | `baumsicht/Baumkataster` (`3★`), `CodeforKarlsruhe/baumkataster` (`3★`) | 🔵 not byte-read this pass | EMEA (Germany) | Named to record that the `Baumkataster` cluster is **live**, not archival: two of its members were pushed within six months. Grants not yet read — queued as `ACTION p767-C` |
+| `2026-03-30` | [`aiconsilium-dev/savetree-demo`](https://github.com/aiconsilium-dev/savetree-demo) (`0★`) | 🔴 **no grant** · `3` paths | APAC (Korea) | The whole Korean-language leg: 수목 관리 returns `4` repositories, all `0★`, **none with a grant**. Written down because an informed gap is information |
+| `2026-11-10` | [`data-liberation-project/aphis-inspection-reports`](https://github.com/data-liberation-project/aphis-inspection-reports) (`18★`) | 🔴 **no grant** · 🔴 **`364,679` paths** | North America | Not arboriculture — **statutory inspection evidence published as bulk data**, from the USDA's Animal and Plant Health Inspection Service. The output shape `P343` must produce, and the largest tree this pass enumerated |
+
+### 🔴 The window's correction to this base's own method
+
+🔴 **The mandated English-language supply queries cannot see this register's largest permissive cluster.** `Baumkataster` — the German term for a municipal tree register — returns **`45`** repositories carrying real **MIT** and **AGPL-3.0** grants (Graz, Vienna, Bielefeld, Karlsruhe, Heilbronn, Zürich). The English phrase for the same artefact, `tree inventory management`, returns `149` that are overwhelmingly data-structure homographs. `arbre cadastre patrimoine` returns **`0`** while French-origin supply exists under an English name.
+
+**Generalised as `T675`:** on any register whose buyer is a municipality, supply is held in the municipality's language. A query set in English alone measures North America and reports it as the world.
+
+### 🔴 Two refusals recorded in this window
+
+- `neocizee/arboladoMun` *(code span, not a link)* — `NOASSERTION` on the page, **"Proprietary License … All Rights Reserved"** in the payload (`1,524 B` · `1fb380555f1d`): no commercial use, no derivatives, no production. **Second consecutive register whose best-described artefact is proprietary behind `NOASSERTION`** (`T682`).
+- [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) (`194★`) — `NOASSERTION` on the page, **AGPL-3.0** in the payload (`35,366 B` · `1350c224c8d4`). The register's canonical platform, and the index is silent on the one fact that decides whether it can be used.
+
 ## 🆕 2026-11-11 (p766) — **The register's agent layer is `90` days old, `0★` almost throughout, and its single best-described artefact is proprietary. New this window: an EMEA EN 1176 assistant with no vendor in its data path, an APAC statutory mine-safety platform with CAPA workflows, and two offline MIT checklist clients — and the one "public" playground-safety platform forbids use.**
 
 **Register: playground-equipment inspection** (`ACTION p765-E`). `20` supply queries on `search/repositories` · `4` on `search/code` · `20` addresses byte-read · every `default_branch` derived, none guessed.
@@ -42873,7 +42901,7 @@ claims: ## ACTION UG — THE GATE: run before publishing any "there is no X"
 |---|---|---|
 | 🟢 `GUARDED` / `CONSUMED` | `36` / `39` | `gate-offline`'s `34` steps, plus the asserting lines of `exists`, `carried`, `reach` |
 | 🔴 `SWALLOWED-TRUE` | **`1`** | 🔴 **`claims`** — fixed this pass |
-| 🟡 `SWALLOWED-PIPE` | `1` | `index` — `… | head -3`; **uncontracted on purpose**: it prints three counts for a human and its own `main` handles `BrokenPipeError` by design |
+| 🟡 `SWALLOWED-PIPE` | `1` | `index` — `… \| head -3`; **uncontracted on purpose**: it prints three counts for a human and its own `main` handles `BrokenPipeError` by design |
 | 🟡 `SWALLOWED-SUBST` | `4` | `status` — every line is `echo "… $$(cmd)"`; uncontracted, it asserts nothing |
 | 🟢 `REPORT` | `2` | `exists`, `gate-mit-tier` — a pipeline that only FORMATS a file an already-consumed step wrote |
 
@@ -72616,7 +72644,7 @@ equivalentes (*«licencia declarada sólo en el manifiesto del registro»*). Med
 
 | Pieza | Declaraciones de licencia que EXISTEN en el mundo | Medición |
 |---|---|---|
-| ⚠️ **`Timadey/proctor`** | 🟢 **TRES, y todas en el árbol** | 1) campo `license` del manifiesto npm: **MIT**; 2) **`package.json` del árbol: `"license": "MIT"`**; 3) **`README.md` del árbol: badge *«License: MIT»*** *y* sección *«This project is licensed under the MIT License — see the [LICENSE] file for details»*. 🔴 **Y el archivo `LICENSE` no existe en NINGUNA rama ni en NINGÚN commit de toda la historia** (`git log --all --name-only`, 0 coincidencias con `licen|copying`) |
+| ⚠️ **`Timadey/proctor`** | 🟢 **TRES, y todas en el árbol** | 1) campo `license` del manifiesto npm: **MIT**; 2) **`package.json` del árbol: `"license": "MIT"`**; 3) **`README.md` del árbol: badge *«License: MIT»*** *y* sección *«This project is licensed under the MIT License — see the [LICENSE] file for details»*. 🔴 **Y el archivo `LICENSE` no existe en NINGUNA rama ni en NINGÚN commit de toda la historia** (`git log --all --name-only`, 0 coincidencias con `licen\|copying`) |
 | 🔴 **`@ink-waffle/sisu-mcp`** | 🔴 **UNA, en todo el mundo** | sólo el campo `license` de npm. **El tarball (44.781 bytes, 17 archivos `dist/*.js`, 1 sola versión 0.1.0 del 2026-09-17) no trae `LICENSE`, y tampoco trae `README`.** Sin `repository`, sin `homepage` |
 
 🟢 **`Timadey/proctor` deja de ser un caso de licencia dudosa y pasa a ser un caso de archivo faltante, y se puede
@@ -73881,7 +73909,7 @@ que **xAPI/LRS no tiene puerta MCP** (**gap 60**). **Es falso, y la refutación 
 | Dónde | Desde cuándo | Qué dice |
 |---|---|---|
 | `agents/top.md`, tabla principal (fila `learnmcp-xapi`) | **pase 6** | *«Servidor MCP que le da a un agente memoria de aprendizaje conforme al estándar: tres tools sobre un Learning Record Store xAPI»* |
-| `agents/top.md`, mapa por estándar | **pase 27** | **`| xAPI | ✅ learnmcp-xapi (desde el pase 6) |`** |
+| `agents/top.md`, mapa por estándar | **pase 27** | **`\| xAPI \| ✅ learnmcp-xapi (desde el pase 6) \|`** |
 | `repos/foundations.md`, capa de telemetría | **pase 6** | `learnmcp-xapi` **MIT**, con `lrsql` (Apache-2.0) y `Ralph` (MIT) |
 | `compose/patterns.md` | varios | **más de quince patrones** ya componen `learnmcp-xapi` + `lrsql` |
 

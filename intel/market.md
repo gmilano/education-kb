@@ -6,6 +6,18 @@ updated: 2026-11-11
 
 # Education AI — Market Intelligence
 
+**Pass `p767` · researched 2026-11-11.** All four mandated regional legs ran and all four returned facts. **The register is tree and grounds safety on the school estate** — statutory duty of care over trees in public grounds — which `ACTION p766-F` named and directed this pass at. It is the same buyer as `p766`'s playground register and the same evidence shape, **and a completely different instrument situation**: where playgrounds had one international standard family, trees have **five mutually incompatible national instruments** (`T677`). Before this pass the register stood at `0` on this base across `19` of `23` tokens, and the four nonzero included **two inside `ACTION p766-F` itself** (`T669`).
+
+🟢 **Each region's newest block is `#### 🆕 p767` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`ACTION p756-C` honoured and verified after writing).**
+
+🔴 **The governing commercial finding of this pass is that the regional gradient is INVERTED relative to this base's default.** On most registers LATAM is where the instrument is missing. Here **LATAM holds the most codified instrument** — ABNT NBR 16246-3's three explicit assessment levels — and **North America holds the least**, because ANSI A300 Part 9 and ISA TRAQ specify method, qualification and report content and **deliberately set no inspection frequency** (`T678`, `T679`). That inverts the deliverable per region: in Brazil you encode levels, in Germany you encode a cadence, and in the United States you sell a **defensible justification of the cadence the client chose** (`P342`, `P341`, `P343`).
+
+🔴 **A second finding, and it is a defect in this base's own method rather than in the market: supply is language-partitioned.** `Baumkataster` — German for a municipal tree register — returns **`45`** repositories under real MIT and AGPL-3.0 grants; the English phrase for the same artefact returns `149` that are overwhelmingly data-structure homographs; `arbre cadastre patrimoine` returns **`0`** while French-origin supply exists under an English name. **The mandated supply queries are English-only, so they measure North America and report it as the world** (`T675`, `ACTION p767-A`).
+
+🟢 **One open question from `p766` is now closed.** `p766` ruled that the EU AI Act's high-risk application date was *"genuinely unresolved"* and that **no single date may be stated.** The mechanism is now in hand: the **Digital Omnibus** deferred the Annex III obligations — education among them — to **2 December 2027** (political agreement `7 May 2026`; formal adoption reported as Regulation (EU) 2026/1744, in force `27 July 2026`). **The date may now be stated for education, with the adoption status flagged as resting on a single source and not primary-verified** (`T686`).
+
+🔴 **`ACTION p760-C` applied throughout: every figure below is attributed to the party that published it, and vendor-published and market-research figures are marked as such.** 🔴 **Every statutory interval and tier name below is labelled search-sourced, not primary-verified** — the FLL Baumkontrollrichtlinie, ABNT NBR 16246-3 and the Standards Australia texts are all **paid products that were not read**, and ANSI's own edition status is contested across sources. 🔴 **`ACTION p763-D` fired for a fourth consecutive pass and in a new way: the mandated APAC leg returned the UAE's February 2026 school generative-AI restrictions and the UK's January 2026 school AI safety standards inside an APAC result set. Both are EMEA in this base's closed vocabulary, and neither is filed under APAC** (`T687`).
+
 **Pass `p765` · researched 2026-11-11.** All four mandated regional legs ran and all four returned facts. **The register is school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing and playground-equipment inspection — which `ACTION p764-A` named and directed this pass at. It is a different buyer from `p764`'s condition register (risk and compliance, not capital planning) and a different cadence: **dated statutory intervals, not bond cycles.** Before this pass the register stood at `0` on this base across `22` tokens, and the only six nonzero tokens sat inside `p764`'s own directive naming it (`T627`).
 
 🟢 **Each region's newest block is `#### 🆕 p765` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`ACTION p756-C` honoured and verified after writing).**
@@ -278,6 +290,35 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p767` — 🔴 the region that **refuses to set a cadence**, for the second consecutive register — so the product is the justification, not the schedule
+
+🔴 **The structural finding, now holding twice.** `T657` recorded that the CPSC playground handbook deliberately sets no inspection interval. **ANSI A300 Part 9 and the ISA Tree Risk Assessment Qualification do exactly the same for trees.** They specify:
+
+- **method** — risk rated by categorising the likelihood of failure against the severity of its consequences;
+- **qualification** — TRAQ, requiring ISA Certified Arborist status plus a course with a field component, a written and a performance-based exam, **retest every seven years**, and it **may not be transferred**;
+- **report content** — identification and location of each tree assessed, the methods used, the assessment data, and recommendations for mitigating risk or conducting further evaluation;
+- 🔴 **and no frequency at all.**
+
+🔴 **Sources disagree on the standard's own edition**: ANSI A300 consolidated into a single document since **1 January 2024** per one source, Part 9's revision dated **2017** per another. **State the edition as contested on any client deck** (`T679`). 🔴 A TRAQ handbook and several arborist-firm pages are the sources here; **ANSI and ISA were not read directly.**
+
+🟢 **The opportunity, inverted.** With no cadence to encode, the sellable artefact is a **dated, authored, cited justification** of the interval a district chose, bound to proof that each assessment was performed by a currently-qualified person. `P343` builds it. 🔴 **The `competent_person` entity — TRAQ status, award date, seven-year expiry — has no open-source implementation anywhere on this register and must be built** (`T681`).
+
+**Supply placed in this region, every grant byte-read `2026-11-11`:**
+
+| Artefact | ★ | Grant | Region basis |
+|---|---|---|---|
+| [`Public-Tree-Map/public-tree-map`](https://github.com/Public-Tree-Map/public-tree-map) | `47` | 🟢 **MIT** · `1,072 B` · `7cf7cf0c018a` | Santa Monica, California — named in the repository description |
+| [`stiles/la-trees`](https://github.com/stiles/la-trees) | `10` | 🟢 **MIT** · `1,068 B` · `254e97ff10c1` | `1.6M+` trees across `40+` Los Angeles County municipalities — named in the description. 🔴 `node_modules/` committed: `48` vendored grants |
+| [`OpenTwinCities/adopt-a-tree`](https://github.com/OpenTwinCities/adopt-a-tree) | `8` | 🟢 **BSD-3-Clause** · `1,479 B` · `66dbf19752ff` | Twin Cities — named in the organisation. 🔴 Last pushed `2021-12-10` |
+| [`data-liberation-project/aphis-inspection-reports`](https://github.com/data-liberation-project/aphis-inspection-reports) | `18` | 🔴 **no grant** · 🔴 `364,679` paths enumerated | USDA Animal and Plant Health Inspection Service. 🔵 The only live worked example on this register of statutory inspection evidence published as bulk data |
+
+**Education-market context for this region (`ACTION p760-C` attribution applied):**
+- 🔵 **Policy volume is the story, not market size.** The PIE Network tracked **nearly 100 state bills** this year that could affect students' use of AI in K-12; an August 2026 MLex report describes states moving quickly, including on human oversight and student use; Virginia's enacted **S.B. 394** directs the state education agency to issue guidance covering teacher training. One source counts **at least 15 states** with AI-in-education legislation and frames it as a vendor compliance problem. Another holds that guidance is proliferating while hard regulation remains limited — **the two readings are not reconciled in the sources read.**
+- 🔵 Federal: executive orders issued between 2025 and early 2026 produced a national framework for AI in education and a task force supporting K-12 AI instruction. A **California ballot initiative** announced January 2026 could reshape how AI companies interact with minors.
+- 🔴 **Adoption and market figures are market-research or vendor-published and not primary-verified.** Technavio reports institution-wide AI implementation at `66%` and generative-AI adoption at `86%` of North American educational organisations; Ken Research projects the US AI-in-education market from `USD 3.28B` (2025) to `USD 15.25B` by 2031; one vendor blog claims student AI use rising `66%` (2024) → `92%` (2025), **which could not be traced to a primary survey.**
+- 🔵 Named incumbents: Pearson, Cengage, Instructure, Coursera, Udemy. **Chegg is the cautionary datapoint** — cut `45%` of staff (`388` roles) and recalled its former CEO as AI and Google AI Overviews took its homework-help traffic.
+
 
 #### 🆕 p766 — 🔴 the one region where this register's "international instrument" advantage **breaks**: the US instrument deliberately sets **no inspection interval**
 
@@ -1489,6 +1530,46 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 `p767` — 🟢 the region that **hands you all three artefacts**: a published cadence, a competence definition, and a model work instruction — and the register's largest permissive supply cluster, invisible to an English query
+
+🟢 **Germany is the strongest jurisdiction on this entire register** (`T680`). It is the only one where the duty, the technical rule and the operational cadence are three separately published, separately citable artefacts:
+
+| Layer | Artefact | Nature |
+|---|---|---|
+| Duty | **§ 823 BGB**, as the courts have developed it (*Verkehrssicherungspflicht*) | 🔴 **No legal norm prescribes an inspection interval** |
+| Technical rule | **FLL Baumkontrollrichtlinie**, 2020 edition | 🔵 **Not law** — counts as *Stand der Technik*, and requires a professional risk weighting rather than a fixed period |
+| Operational instrument | 🟢 **GALK *Musterdienstanweisung für Regelkontrollen von Bäumen***, adapted in 2021 to the 2020 edition | 🟢 A published **model service instruction** for the party carrying the duty |
+
+🔴 **Periods conflict across sources and this base states none as authoritative**: an annual *Regelkontrolle* is cited as the **published *Richtwert*** for frequented urban trees; two-yearly for young trees; up to three-yearly for healthy mature trees with low safety expectation; and one blog's flat "1–2 year minimum for public roads" is uncorroborated. 🔴 **The FLL text is a paid product and was not read.**
+
+🔵 **England is the weaker half of the same region.** The duty arises under health-and-safety and occupiers'-liability law and **no DfE or statutory rule setting a mandatory interval could be found**; frequency is tied to tree condition and failure risk. Competence runs through Arboricultural Association training and the **LANTRA national occupational standard `LANTw31` — *Carry out tree surveys and inspections***. One arboricultural report recommends **18-monthly** survey by a qualified consultant; sources otherwise disagree, and several recommend event-driven staff checks after high winds.
+
+### 🟢 The supply finding: this region holds the register's largest permissive cluster, and the mandated queries cannot see it
+
+| Query | Repositories | What they are |
+|---|---|---|
+| 🟢 **`Baumkataster`** | **`45`** | 🟢 **Municipal tree registers under real MIT and AGPL-3.0 grants** — Graz, Vienna, Bielefeld, Karlsruhe, Heilbronn, Zürich. A **civic-tech** ecosystem: Code for Bielefeld, Code for Karlsruhe |
+| `tree inventory management` (English) | `149` | 🔴 overwhelmingly data-structure homographs |
+| `arbre cadastre patrimoine` (French) | **`0`** | 🔴 **informed gap** — and French-origin supply exists under an English name (`ecoteka`) |
+| `alberi censimento` (Italian) | `3` | All `0★`, none a platform |
+
+| Artefact | ★ | Grant, byte-read `2026-11-11` | Region basis |
+|---|---|---|---|
+| [`tyrasd/Baumkataster-Graz`](https://github.com/tyrasd/Baumkataster-Graz) | `7` | 🟢 **MIT** · `1,080 B` · `48442f06b983` · branch 🔴 **`gh-pages`** | Graz — named in the repository. 🔵 `icons/LICENSE.txt` is **BSD-3-Clause** |
+| [`codeforbielefeld/baumkataster`](https://github.com/codeforbielefeld/baumkataster) | `5` | 🟢 **MIT** · `1,075 B` · `fc8ac18c2676` | Bielefeld — named in the organisation |
+| [`opendata-heilbronn/trees`](https://github.com/opendata-heilbronn/trees) | `0` | 🟢 **MIT** · `1,076 B` · `8b3efd3511da` | Heilbronn — named in the organisation. 🔴 Dead since `2017-03-04` |
+| [`plepe/baumkataster-wien`](https://github.com/plepe/baumkataster-wien) | `3` | 🔴 **AGPL-3.0** · `34,521 B` · `10ede613cce8` | Wien — named in the repository |
+
+🔵 **Two EMEA-shaped artefacts deliberately left region-unplaced**, because no jurisdiction appears anywhere in their trees: `naturalsolutions/ecoteka` (GPL-3.0) and `Afh21/TreesProject` (MIT). 🔴 **`TreesProject`'s only word-boundary jurisdiction match is "An example in French:" inside a vendored jQuery plugin's documentation** — placing it EMEA on that would have been wrong twice over (`T687`).
+
+**Education-market context for this region (attribution applied):**
+- 🟢 **The EU AI Act date is now statable for education: `2 December 2027`.** The **Digital Omnibus** deferred the Annex III high-risk obligations — which include education — from the original August 2026 date; Council and Parliament reached political agreement on **7 May 2026**, and formal adoption is reported as **Regulation (EU) 2026/1744**, in force **27 July 2026**. 🔵 The date is consistent across the Council's own press release and several independent law-firm analyses; **the adoption status rests substantially on one source and is not primary-verified** (`T686`). 🔵 Adjacent: Annex I embedded high-risk → `2 August 2028`; sandboxes → `2 August 2027`; a transparency/watermarking obligation → `2 December 2026`.
+- 🔵 The Commission published draft Article 6 high-risk guidelines in May 2026, with consultation open to **23 June 2026**.
+- 🔴 **Adoption figures are market-research or vendor-commissioned.** Futuresource Consulting reports **`67%`** of teachers using AI tools and describes a shift from pilots to structured implementation, projecting AI PCs in higher education from `4.3M` units (2026) to `15M` by 2030. An **Epson-commissioned** survey of ~`3,360` people across six European countries found **`76%`** of students expect to use AI in learning while teachers worry deployment outpaces school readiness.
+- 🔵 Institutional actors: the European Commission's **Eurydice** 2026 digital-education report, the **OECD Digital Education Outlook 2026** (which warned AI helps learning only where pedagogy stays in control), England's **Ofqual** principles for AI in high-stakes marking, and the **DEC Leadership Summit EMEA 2026** (`41` leaders, `30` institutions, `14` countries, Paris).
+- 🔵 **Filed here rather than where the leg returned them** (`ACTION p763-D`): the **UAE's** February 2026 school generative-AI restrictions (`25` prohibitions covering age suitability, privacy, academic integrity and exams) and the **UK's** January 2026 generative-AI school safety standards — both surfaced inside an APAC result set, both EMEA in this base's closed vocabulary.
+
 
 #### 🆕 p766 — 🟢 the region that *hands you the interval*: a three-tier cadence, a named competent person, and a statute corpus under **MIT**
 
@@ -2901,6 +2982,36 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 `p767` — 🟢 the region that publishes the only **permissive platform** on the register, and it is a ministry that published it
+
+🟢 **The find of the pass sits in this region.** [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) — a tree-management **台帳 (ledger)** system visualising park and street trees in 2D/3D on a map — is **Apache-2.0** (`11,357 B` · `c71d239df917`, branch `main`), and its README assigns copyright to **国土交通省 (MLIT, Japan's Ministry of Land, Infrastructure, Transport and Tourism)**. Region placed from repository evidence, not inference.
+
+🔴 **It is the only permissive, platform-shaped artefact on this register in any region**, and it is permissive **because a ministry published it**, not because the market produced it. Every community-built platform here is GPL-3.0 or AGPL-3.0 (`T677`). It carries `4★` — **adopt it for its data model and its legal posture, not its community.**
+
+**Supply placed in this region, every grant byte-read or absence enumerated `2026-11-11`:**
+
+| Artefact | ★ | Grant | Region basis |
+|---|---|---|---|
+| [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) | `4` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | 国土交通省 named in the README's copyright assignment |
+| [`shiwaku/tokyo-gairoju-3d-on-maplibre`](https://github.com/shiwaku/tokyo-gairoju-3d-on-maplibre) | `0` | 🟢 **MIT** · `1,071 B` · `37e84b77a12b` | 東京都街路樹 — Tokyo street trees, named in the description |
+| [`WHU-USI3DV/WHU-STree`](https://github.com/WHU-USI3DV/WHU-STree) | `34` | 🔴 **no grant** · `17` paths enumerated | Wuhan and **China LiDAR Co.** named in the README |
+| [`aiconsilium-dev/savetree-demo`](https://github.com/aiconsilium-dev/savetree-demo) | `0` | 🔴 **no grant** · `3` paths | Korean 수목 관리 (tree management) |
+
+🔵 **The register's only benchmark dataset anywhere is in this region and cannot be shipped.** `WHU-STree` is multi-modal street-tree inventory from Wuhan University, pushed `2026-07-27`, with **zero grant paths in a fully enumerated tree**. **Evaluate against it; put none of it in a product** (`P344`).
+
+🔴 **Informed gaps, written down rather than left silent:** `樹木 管理 台帳` returns **exactly `1`** repository; `街路樹` returns `5`, of which one is an unrelated `25,954★` book list; `수목 관리` returns `4`, **all `0★` and all grant-less**; `pohon inventaris` (Indonesian) returns `3`, none a platform. **The Japanese-language leg found the register's best artefact with one query; the Korean and Indonesian legs found supply with no grants at all.**
+
+**Instrument position (search-sourced, not primary-verified):**
+- **Australia** — **AS 4373** (pruning of amenity trees, editions cited as 2007) and **AS 4970** (protection of trees on development sites, 2009; a claimed 2025 revision appears on a commercial page and **could not be verified**). Neither is a school inspection standard. 🟢 **The school-specific tiering comes from an industry association, not a statute**: the **Tree Contractors Association of Australia** guidelines hold that a **Level 2 assessment suits school settings**, since a Level 1 inspection is not fit for purpose there unless the area is fenced biodiversity land, and that low-use areas such as campsites or bush trails need an annual-checklist inspection before entry.
+- 🔴 **No tree-inspection instrument was found for Japan, China, Korea, India or Singapore** in the sources read. The Japanese artefact is a ledger system, not a standard.
+
+**Education-market context for this region (attribution applied):**
+- 🔵 **The Philippines** launched **AGAP.AI** in January 2026, described by its Department of Education as the country's first nationwide responsible-AI integration programme in basic education, targeting `1.5M` students, teachers and parents; its **National Education Plan 2026–2035** embeds AI and digital literacy from primary to university. **`34,000` lead teachers** are reported to be in training through 2026.
+- 🔴 **A widely-repeated `86%` figure for Southeast Asian teachers already using AI tools is attributed to EdTech Hub (March 2026) by a secondary source and could not be verified against the original.** A separate regional survey put virtual-tutor adoption at only `30%`.
+- 🔵 The **Ipsos Education Monitor 2026** reports lower support for banning AI in schools across the Asian markets it examined. **Cambridge English** convened Asia Pacific leaders on AI in education in May 2026. One analysis holds North America still dominates revenue while **the fastest expansion is in Asia-Pacific** — a market-research claim.
+- 🔴 **Regulatory coverage for this region is genuinely thin in the sources read**: nothing was found on China's, Japan's, Korea's, Singapore's or Australia's AI-in-education rules. 🔵 **The two regulatory items the APAC leg did return — the UAE's and the UK's — are filed under EMEA**, where they belong (`ACTION p763-D`, `T687`).
+
+
 #### 🆕 p766 — 🔵 the instrument is a **mirror** of EMEA's, and the region holds the closest structural match to this register anywhere — behind no grant at all
 
 **Register: playground-equipment inspection** (`ACTION p765-E`). APAC inherits the EMEA advantage by reference: the **AS 4685** series is reported to mirror the EN 1176 structure, with **AS/NZS 4422** as the surfacing counterpart to EN 1177. 🔵 So a deliverable built to EN 1176-7's tiering ports to Australia and New Zealand at low cost — **the one place this register's "build once" claim holds across regions.** 🔴 Honest limit: the AS 4685 text was not read this pass, and `AS 4685` is `0` across this entire base.
@@ -4233,6 +4344,53 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 `p767` — 🟢 the region with the **most codified instrument on this register**, which inverts this base's regional default — and the region whose supply exists, is school-shaped, and has no grants
+
+🟢 **`T678`: on this register LATAM holds the most specific instrument and North America the least.** That is the opposite of this base's usual gradient, and it changes what a LATAM engagement is: **here you encode levels, where in the United States you have nothing to encode.**
+
+**ABNT NBR 16246-3 — *Avaliação de risco de árvores*** (first edition 2019) defines **three assessment levels**:
+
+| Level | Method (search-sourced) |
+|---|---|
+| **Level 1** | Limited visual analysis — permitted *on foot, by vehicle, by drone or other form of aerial inspection* |
+| **Level 2** | 🟢 **360° external visual analysis with hand tools** — the level a school estate will actually buy |
+| **Level 3** | Advanced instrumentation — tomography, radar, penetrometers |
+
+The series runs **Part 1** (pruning of trees, shrubs and other woody plants in urban areas, which itself requires a visual inspection of every target tree before work), **Part 2** (arboricultural safety, in preparation), **Part 3** (risk assessment), **Part 4** (planting and transplanting, in preparation).
+
+🟢 **And a municipal regulator has already narrowed the national standard** — the same shape `p766` found in São Paulo for playgrounds (`T668`): **Niterói's municipal arboriculture manual directs that Levels 1 and 3 are not to be applied locally and that assessment should preferentially be at Level 2.** Capivari (SP) cites NBR 16246-1 in its own management guide. 🟢 **Make the permitted level set a per-municipality configuration, not a constant** (`P342`).
+
+🔴 **Caveats, stated rather than buried.** ABNT normative text is **copyrighted and was not read**; every level description above is search-sourced. A claimed **March 2025 revision of NBR 16246-3** appears only on a vendor blog and **is unconfirmed against ABNT** — state the edition as *2019, revision status unconfirmed*. 🔴 **No tree-inspection instrument was found for Mexico, Argentina, Chile, Colombia or Peru** in the sources read; Brazil is the only LATAM jurisdiction on this register with a national standard.
+
+### 🟢 The region's supply is real, is school-shaped, and is entirely grant-less
+
+| Query | Repositories | Grants |
+|---|---|---|
+| `arbolado urbano` | `32` | 🔴 almost all `0★`, almost all grant-less |
+| `arborizacao urbana` | `21` | 🔴 **`0` with a grant** |
+| `inventario arboreo` | `11` | 🔴 includes the register's only *school* inventory — no grant |
+| `catastro arbolado` | `2` | 🔴 one of them the register's only *risk* application — no grant |
+
+| Artefact | ★ | Grant | Region basis |
+|---|---|---|---|
+| [`Salfonsogar/inventario-arboreo-escolar`](https://github.com/Salfonsogar/inventario-arboreo-escolar) | `0` | 🔴 **no grant** · `7` paths enumerated | 🟢 README names the **municipio de Valledupar (Cesar)** and the **Universidad Popular del Cesar** — Colombia |
+| [`juliobarbol/ArborRisk`](https://github.com/juliobarbol/ArborRisk) | `0` | 🔴 **no grant** · `10` paths · 🔴 branch `claude/arborisk-github-deploy-fsowc6` | 🟢 `CLAUDE.md` specifies *"informes tipo ISA, Argentina"* |
+| `neocizee/arboladoMun` *(code span, not a link)* | `2` | 🔴 **PROPRIETARY, all rights reserved** · `1,524 B` · `1fb380555f1d` | Spanish-language municipal tree register |
+
+🟢 **The most useful single artefact in this region is the one with no licence.** `inventario-arboreo-escolar` is **the only *school* tree inventory on GitHub in any language** — exactly this register's buyer and exactly its asset. **Read it as a requirements document; take no code** (`P342`).
+
+🔴 **The most interesting is the one with a non-`main` default branch.** `ArborRisk` is tree **risk** analysis plus register, built by an AI coding agent (its default branch is `claude/arborisk-github-deploy-fsowc6`, its evidence file is a `CLAUDE.md`), and it specifies **ISA-type reports applied in Argentina** — **the North American method crossing into a jurisdiction whose region has its own standard.** 🔴 Every root-path probe on this address returns nothing, because the branch is not `main`: a concrete case for deriving `default_branch` rather than guessing it (`T671`).
+
+🔴 **And the one that looks most like the product forbids being used.** `neocizee/arboladoMun`, a Django REST backend for a municipal tree register, carries *"Proprietary License … All Rights Reserved"*: no commercial use, no modification, no derivative works, **no production use** — while GitHub indexes it `NOASSERTION`, the same value it shows for genuine Apache-2.0 and genuine AGPL-3.0 payloads. **Second consecutive register with this exact shape** (`T682`, `767-A`).
+
+**Education-market context for this region (attribution applied):**
+- 🔵 **Adoption is high and governance is absent — the sources agree on this and it is the region's defining gap.** The **Digital Education Council's AI in Higher Education LATAM Survey 2026**, run with **Tecnológico de Monterrey**, reports **`92%` of students and `79%` of faculty** actively engaging with AI, from `7,319` faculty responses across `29` institutions.
+- 🔵 A **UNESCO IESALC** survey covering `200` institutions in `19` countries found the gap between adoption and institutional governance especially wide in the region; a UNESCO IESALC / UNU-IAS working paper maps adoption across teaching, research, community engagement, administration and governance and calls for stronger governance and digital-literacy investment. Times Higher Education's coverage summarises adoption as *"neither uniform nor evenly distributed"*, with notable gaps between private and public universities.
+- 🔵 One survey quotation states plainly that **there is a lack of formal policies for the use of AI in universities in Latin America.** 🔴 **No national AI-in-education regulatory framework was found for Brazil, Mexico or Argentina** in the sources read — an informed gap, not an absence of interest.
+- 🔵 The **IDB** has catalogued **`193`** AI initiatives across the region and reports that Latin America is building hybrid, context-sensitive systems rather than importing models wholesale. **EdTech Hub and Fundación Ceibal** announced a partnership to help regional education systems respond to AI.
+- 🔴 MarketsandMarkets publishes regional AI-in-education estimates; **treated as market-research figures and not relied on here.**
+
 
 #### 🆕 p766 — 🟢 the LATAM instrument **exists and is specific** — ABNT NBR 16071 **Part 7** — and a municipal regulator has already published that the national standard is defective
 
@@ -5654,6 +5812,31 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 `p767` — the register placed in one table, and the two findings that are about this base's method rather than the market
+
+| Region | Instrument | Sets a cadence? | Permissive supply |
+|---|---|---|---|
+| **North America** | ANSI A300 Part 9; ISA TRAQ qualification | 🔴 **No — deliberately** | 🟢 `3` artefacts (MIT ×2, BSD-3 ×1) — all data, none a platform |
+| **EMEA** | § 823 BGB + FLL Baumkontrollrichtlinie (2020) + GALK model work instruction; England: Occupiers' Liability + LANTRA `LANTw31` | 🟢 **Yes — risk-weighted, annual as the published *Richtwert*** | 🟢 `3` MIT + `1` AGPL-3.0, from a `45`-repository `Baumkataster` cluster |
+| **APAC** | AS 4373 / AS 4970 + TCAA guidelines (Australia); no instrument found elsewhere | 🔵 Level-tiered for schools by an industry body, not a statute | 🟢 **The register's only permissive platform** (Apache-2.0, published by MLIT) + `1` MIT; `2` grant-less |
+| **LATAM** | 🟢 **ABNT NBR 16246-3** — three explicit assessment levels | 🔵 Levels specified, interval not | 🔴 **None.** `64` repositories across three languages, `0` with a usable grant, `1` proprietary |
+| **Global** | — | — | 🟢 `getodk/collect` (Apache-2.0), `DeepForest` (MIT), `maplibre-gl-js` (BSD-3), `Leaflet`/`openlayers` (BSD-2), `jkbrzt/rrule` (BSD-3) |
+
+🔴 **Finding 1 — the gradient is inverted.** LATAM has the most codified instrument and no usable supply; North America has the least codified instrument and the most permissive data. **A LATAM engagement is a standards-encoding problem; a North American engagement is a justification-authoring problem; an EMEA engagement is a cadence problem; an APAC engagement is an adoption problem with the best platform already published.** Four different deliverables, one register (`P341`–`P343`).
+
+🔴 **Finding 2 — this base's supply queries are English-only, and that is a measurement defect.** `Baumkataster` returns `45` repositories with real grants; `tree inventory management` returns `149` homographs; `arbre cadastre patrimoine` returns `0` while French-origin supply exists under an English name. **On any register whose buyer is a municipality, the supply is held in the municipality's language** (`T675`, `ACTION p767-A`).
+
+🟢 **The one component that works everywhere.** [`getodk/collect`](https://github.com/getodk/collect) (**Apache-2.0**, `10,494 B` · `d1ee81266b96`, at `LICENSE.md`) is the register's single most reusable artefact in every region: offline inspection forms, photo evidence, GPS, resumable drafts — a Level 1 or Level 2 field assessment, a *Regelkontrolle* record, or an ANSI A300 Part 9 report, with only the form definition changing. 🔵 Its index entry reads `NOASSERTION` because the payload is **Markdown-reformatted** Apache-2.0 (`T633`).
+
+🔴 **And the duty layer is absent in every region.** No repository anywhere implements `ANSI A300 Part 9`, `QTRA`, `AS 4373`, `NBR 16246-3` or the `FLL Baumkontrollrichtlinie` as a cadence or assessment engine: `ANSI A300` returns `1` repository, `QTRA tree` returns `1`, and neither is an inspection system. **The register has a data layer, a detection layer and a presentation layer in open source, and no duty layer at all — the third consecutive register on which that is true.** `P334`'s `{duty, instrument, interval, competent person, evidence}` engine remains the only thing on this base that models it, and it is this base's own artefact, not the market's.
+
+**Global education-market context (attribution applied):**
+- 🔴 **Market size does not converge and should not be quoted as a point estimate.** One April 2026 estimate puts global AI-in-education at **`$10.6B` (2026)** rising to **`$42.48B` by 2030**; another cites **`$9.58B`** without a clear date; another projects **`$136.79B` by 2035**; Technavio puts the global market at **`$3.37B`**. **These are market-research figures spanning more than an order of magnitude on overlapping years.**
+- 🔵 A Microsoft 2025 report found **`86%`** of education organisations using generative AI — the highest of any industry it measured.
+- 🔵 One analysis characterises the sector as **rising revenue and falling investment**, rewarding products that can prove results, and notes that **only `45%`** of the most-used tools have published research meeting an ESSA evidence tier. It lists AI tutoring and adaptive learning, AI-assisted teaching and grading, and skills-based micro-credentials as gaining, and blockchain credentialing, full-classroom VR and the chatbot-as-tutor pitch as fading.
+- 🔵 The **OECD Digital Education Outlook 2026** warned that AI helps learning only where pedagogy stays in control. **Instructure** launched Canvas Career, a skills-first AI LMS for workforce learning. The US Department of Education released **`$169M`** in FIPSE awards including support for responsible AI use.
+
 
 #### 🆕 p766 — the register placed in one table, and the measurement that makes it a market rather than a gap
 

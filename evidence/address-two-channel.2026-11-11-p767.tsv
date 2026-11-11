@@ -1,0 +1,14 @@
+address	search_repo_qualifier	git_ls_remote	resolved_head_ref	head_sha	refs	verdict	basis
+openedx/edx-platform	422	OK	refs/heads/master	d3a86602dcf70bbf4f7925727bcc50ff10e51109	49906	ALIVE_NON_CANONICAL	ref-set identical to openedx/openedx-platform (49906/49906) -> rename redirect, repair by RENAME
+openedx/openedx-platform	1	OK	refs/heads/master	d3a86602dcf70bbf4f7925727bcc50ff10e51109	49906	CANONICAL	indexed on search channel
+digitalcredentials/learner-credential-wallet	422	OK	refs/heads/main	1c46a82ba38447f164998903e88944b67fc2a2e6	585	ALIVE_NON_CANONICAL	ref-set identical to ryjones/learner-credential-wallet (585/585) -> transfer redirect; ACTION p766-C DISCHARGED
+ryjones/learner-credential-wallet	1	OK	refs/heads/main	1c46a82ba38447f164998903e88944b67fc2a2e6	585	CANONICAL	indexed on search channel; proven successor
+microsoft/presidio	422	OK	refs/heads/main	1d7005932261a4b676e045d16fa2965dbc4b4ba2	-	ALIVE_NON_CANONICAL	live HEAD on git channel; p765-D retirement order was wrong
+UCL-INGI/INGInious	422	OK	refs/heads/main	98d56ade03512df25916e87b6a82bd56181135b4	-	ALIVE_NON_CANONICAL	live HEAD on git channel
+NVIDIA/NeMo-Guardrails	422	OK	refs/heads/develop	093ae1fc7b3eb4701864e9604d6849977947713d	-	ALIVE_NON_CANONICAL	live HEAD; default branch is develop, not main
+NSoiffer/MathCAT	422	OK	refs/heads/main	a4ae93ed7669b79612d1b03d531fdbf8a17cdbd2	-	ALIVE_NON_CANONICAL	live HEAD on git channel
+IMSGlobal/openbadges-validator-core	422	OK	refs/heads/develop	0a66b52a8a0b7841469a35b056e5c3f8e5ce87d1	-	ALIVE_NON_CANONICAL	live HEAD; default branch is develop, not main
+1EdTech/caliper-js	422	FAIL	-	-	-	UNRESOLVED_BOTH_CHANNELS	git fails with 'could not read Username' = absent OR private; mark, do not replace
+trilogy-group/oneroster-ts	422	FAIL	-	-	-	UNRESOLVED_BOTH_CHANNELS	no establishable successor on either channel
+CMDBuild/openMAINT	422	FAIL	-	-	-	OFF_PLATFORM	T666 corroborated from a second independent channel; no licence verdict published
+1EdTech/caliper-spec	1	OK	refs/heads/master	-	-	CANONICAL	control: sibling repo of caliper-js resolves, so the failure is per-repository not per-owner

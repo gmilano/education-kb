@@ -6,6 +6,44 @@ updated: 2026-11-11
 
 # Foundational Repositories — Education
 
+## 🆕 `p767` — **`11` foundation rows, every grant path **enumerated from the full tree** instead of guessed. The pass's structural result: a repository does not have *a* licence, it has a **map from path scope to grant** — and `qgis/QGIS` proves it at a scale that settles `ACTION p766-D(ii)` nine times over, where `p766`'s Metabase case proved it twice.**
+
+**`5` geospatial substrate repositories + `6` register and field-capture repositories · `45,540` tree paths swept for the substrate alone · every `default_branch` from `git ls-remote --symref` · every family from **operative clause text**, never the index and never the licence's own name.**
+
+### 🔴 `ACTION p766-D(ii)` discharged — and "one licence per repository" is not an approximation, it is wrong
+
+`p766-D` asked the detector to *"admit more than one family per repository, scoped by path,"* citing Metabase's AGPL-outside / commercial-inside-`enterprise/` split. Enumerating whole trees shows that split is ordinary:
+
+| Repository | Grant paths in tree | Distinct families | The reading a root-only probe publishes |
+|---|---|---|---|
+| [`qgis/QGIS`](https://github.com/qgis/QGIS) | **`126`** | 🔴 **`9`** — GPL-2.0, GPL-3.0, LGPL-3.0, Apache-2.0, MIT, ISC, BSD-2-Clause, BSD-3-Clause, SIL-OFL-1.1 | `GPL-2.0`, and nothing about the `LGPL-3.0` declared in `debian/copyright` |
+| [`postgis/postgis`](https://github.com/postgis/postgis) | **`11`** | **`5`** — GPL-2.0, Apache-2.0, ISC, BSD-3-Clause | 🔴 **`COPYING` *and* `LICENSE.TXT` are BOTH root grants** (`18,092 B` · `8177f9751321`; `3,580 B` · `c6932c2f9051`). A probe that stops at its first hit reports one of two |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `20` | `5` | 🔴 **nothing — there is no root grant.** The project grant is **GPL-2.0 at `docs/License.txt`** (`17,286 B` · `224ac3d403e3`) |
+| [`stiles/la-trees`](https://github.com/stiles/la-trees) | `49` | `3` | `MIT` — and not that `node_modules/` is committed |
+| [`tyrasd/Baumkataster-Graz`](https://github.com/tyrasd/Baumkataster-Graz) | `2` | `2` | `MIT` — and not the **BSD-3-Clause** icon set at `icons/LICENSE.txt` |
+
+🟢 **The rule this base should carry forward:** a **root** grant governs the repository; a **non-root, non-vendored** grant governs its own subtree and is a *project* statement (openSIS, QGIS's `debian/copyright`); a non-root grant under `vendor/`, `node_modules/`, `third_party/`, `libraries/` or `assets/` is a **vendored third party** that a fork inherits. `ingest/p767-grant-classifier.py` emits all three distinctions per path (`T683`).
+
+🔴 **And the enumerator's precision cost, measured rather than hidden:** of QGIS's `126` matched paths, **`95` are `cpt-city` colour-gradient metadata files named `COPYING.xml`** — not grants at all. The classifier correctly refuses them (`UNRECOGNISED`), so the pipeline is *safe but noisy*: **a path named like a grant is not a grant, and only a byte-read settles it.** `2` more are Creative Commons **3.0** statements in prose, for which the family table — carrying only 4.0 — has no entry (`ACTION p767-D`).
+
+### The substrate — permissive, current, and byte-read this pass
+
+| Repository | Grant, byte-read `2026-11-11` | Path | Bytes · `sha256₁₂` | Branch | Why it is on this register |
+|---|---|---|---|---|---|
+| [`maplibre/maplibre-gl-js`](https://github.com/maplibre/maplibre-gl-js) | 🟢 **BSD-3-Clause** | `LICENSE.txt` | `5,984` · `ee5fc05a0677` | `main` | 🟢 The map canvas. The one artefact on this register that is both permissive and current in every region's stack — Tokyo's 街路樹 3D viewer is built on it |
+| [`Leaflet/Leaflet`](https://github.com/Leaflet/Leaflet) | 🟢 **BSD-2-Clause** | `LICENSE` | `1,369` · `6cca66c5533d` | `main` | 🟢 The lighter alternative, and what the `Baumkataster` civic-tech cluster actually uses. Two-clause: attribution only, no no-endorsement clause |
+| [`openlayers/openlayers`](https://github.com/openlayers/openlayers) | 🟢 **BSD-2-Clause** | `LICENSE.md` | `1,337` · `6c4347b83a8c` | `main` | 🟢 The heavier GIS-native option — WMS/WFS against a municipal server without a tile pipeline |
+| [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** | `LICENSE.md` | `10,494` · `d1ee81266b96` | `master` | 🟢 **The field-capture client, and the register's single most reusable component.** Offline forms, photo evidence, GPS — exactly a Level 1/Level 2 tree assessment in the field. 🔵 Index says `NOASSERTION` because the payload is **Markdown-reformatted** Apache-2.0 (`T633`, `p765`) |
+| [`weecology/DeepForest`](https://github.com/weecology/DeepForest) | 🟢 **MIT** | `LICENSE` | `1,071` · `5487293ab54d` | `main` | 🟢 Tree-crown detection from RGB. Produces the **canopy evidence** a Level 1 drone or vehicle pass is allowed to rely on under `NBR 16246-3` |
+| [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) | 🟢 **Apache-2.0** | `LICENSE` | `11,357` · `c71d239df917` | `main` | 🟢 **The only permissive ledger (台帳) on the register, and it is government-published** — README assigns copyright to 国土交通省 (MLIT, Japan). Patent grant included |
+| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 🟢 **BSD-3-Clause** | 🔴 `LICENCE` | `3,493` · `6c12f89b62fc` | `master` | 🟢 The cadence engine, carried from `p766`. 🔴 **Re-confirmed by enumeration rather than by guessing the British stem.** Still last pushed `2024-06-27` |
+| [`postgis/postgis`](https://github.com/postgis/postgis) | 🔴 **GPL-2.0** | `COPYING` **and** `LICENSE.TXT` | `18,092` · `8177f9751321` | `master` | 🔵 **Copyleft, and it does not matter**: PostGIS is a database extension reached over a protocol, not linked into a deliverable. 🔵 `doc/xsl/LICENSE` is **BSD-3-Clause** |
+| [`qgis/QGIS`](https://github.com/qgis/QGIS) | 🔴 **GPL-2.0** | `COPYING` | `18,801` · `dba313854f65` | `master` | 🔵 **Copyleft, and it does not matter either** — QGIS is the surveyor's desktop tool, shipped to nobody by you. 🔴 **Do not vendor any path from it:** `9` families live in its tree |
+| [`3DFin/dendromatics`](https://github.com/3DFin/dendromatics) | 🔴 **GPL-3.0** | `LICENSE` | `35,149` · `3972dc9744f6` | `main` | 🔴 **Service boundary only.** The register's only maintained dendrometry library (pushed `2026-06-25`) |
+| [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) | 🔴 **AGPL-3.0** | `LICENSE` | `35,366` · `1350c224c8d4` | `develop` | 🔴 **NO.** The canonical urban-forestry platform, network-copyleft, and the page says `NOASSERTION`. 🔵 `otm-ecoservice` is the same family at a different `sha256₁₂` (`1a77c4d143ca`) — the differing bytes are the copyright line |
+
+🔵 **Five byte-read refusals, stated as refusals:** `otm-core`, `otm-ecoservice`, `ecoteka`, `baumkataster-wien` and `treekit` are the five artefacts that most resemble the product, and **all five are GPL-3.0 or AGPL-3.0.** 🔴 **`p757`'s law now holds across four consecutive registers with no counter-example: there is no permissive platform in a statutory-compliance vertical.** The one permissive platform-shaped artefact found this pass — `Project-PLATEAU/Tree-management-system` — is permissive **because a ministry published it**, not because the market produced it (`T677`).
+
 ## 🆕 `p766` — **The register has almost no tooling but the *substrate* is permissive and complete, and this pass found the one primitive eight previous patterns said did not exist: a statutory interval is an **RFC 5545 recurrence rule**, and the two libraries that implement it are BSD-3 and Apache-2.0. `3` licence-index errors corrected by byte-read, one of them a licence reachable only from a README.**
 
 **`12` permissive and weak-copyleft foundation rows, each naming the branch its grant was read from.** Register: **playground-equipment inspection** (`ACTION p765-E`). Every grant below was byte-read on `2026-11-11` from the `default_branch` returned by `search/repositories`; no branch was guessed and no family was taken from GitHub's licence index.

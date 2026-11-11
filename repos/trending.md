@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p767) — **`422` was never the right channel to ask. `git ls-remote` answers liveness and canonicality in one call, and it says `8` of the `13` addresses this base has been told are dead are alive and serving a `HEAD`. `ACTION p766-C` is settled by **ref-set identity**: `585 / 585` refs, so the wallet's successor is proven, not guessed. And `ACTION p766-E`'s premise is false — the `14` rows it was carried for were never broken.**
+
+**`13` addresses probed on both channels · `4` complete ref-set comparisons (`585` and `49,906` refs) · `24` full trees enumerated · `48` → `7` → `0` over-wide rows · `3` instrument defects caught by control.**
+
+### 🟢 The channel finding: one call replaces `ACTION p766-A`'s four-step procedure
+
+`ACTION p766-A` was this base's most important instruction: *resolve, never retire*, by (1) observing `422`, (2) name search, (3) **proving** the redirect with byte-identical payloads while excluding raw's `404` sentinel, (4) rewriting the row. Four steps, two channels, one known false-proof mode.
+
+🟢 **The git transport answers it directly.** `git ls-remote --symref https://github.com/OWNER/REPO HEAD` returns the live `HEAD` **and** the authoritative default branch, and it follows a rename or transfer redirect:
+
+| Address | `search/repositories` | `git ls-remote` | Resolved `HEAD` ref |
+|---|---|---|---|
+| `openedx/edx-platform` | 🔴 **`422`** | 🟢 **OK** | `refs/heads/master` |
+| `digitalcredentials/learner-credential-wallet` | 🔴 **`422`** | 🟢 **OK** | `refs/heads/main` |
+| `microsoft/presidio` | 🔴 **`422`** | 🟢 **OK** | `refs/heads/main` |
+| `UCL-INGI/INGInious` | 🔴 **`422`** | 🟢 **OK** | `refs/heads/main` |
+| `NVIDIA/NeMo-Guardrails` | 🔴 **`422`** | 🟢 **OK** | 🔵 **`refs/heads/develop`** — not `main` |
+| `NSoiffer/MathCAT` | 🔴 **`422`** | 🟢 **OK** | `refs/heads/main` |
+| `IMSGlobal/openbadges-validator-core` | 🔴 **`422`** | 🟢 **OK** | 🔵 **`refs/heads/develop`** |
+| `1EdTech/caliper-js` | 🔴 **`422`** | 🔴 **FAIL** | — |
+| `trilogy-group/oneroster-ts` | 🔴 **`422`** | 🔴 **FAIL** | — |
+| `CMDBuild/openMAINT` | 🔴 **`422`** | 🔴 **FAIL** | — |
+
+🟢 **`7` of the `10` named "dead" addresses are alive on the git channel.** 🔴 **And the `3` that fail do so with `could not read Username for 'https://github.com'`** — git falling back to credential prompting, which GitHub returns for *absent or private*. **So the git channel carries the same ambiguity as `422`, but it fires on `3` of `13` instead of `13` of `13`** (`T671`).
+
+🟢 **`CMDBuild/openMAINT` fails on both channels independently** — corroborating `T666` from a second direction. openMAINT is not on GitHub.
+
+### 🟢 `ACTION p766-C` is DISCHARGED — by ref-set identity, which cannot be faked by a fork
+
+`p766` left `digitalcredentials/learner-credential-wallet` (`25` citations) unresolved because `ryjones/learner-credential-wallet` (`91★`, `fork=false`) *"cannot be proven the successor."* It can:
+
+| Comparison | Result | What it proves |
+|---|---|---|
+| `HEAD` object, both addresses | `1c46a82ba38447f164998903e88944b67fc2a2e6` — **identical** | same commit |
+| **Complete ref set**, both addresses | **`585` refs each, byte-identical after sort** | 🟢 **same repository.** A fork carries its own ref namespace; it does not reproduce `585` refs including every pull-request ref and tag |
+| `openedx/edx-platform` vs `openedx/openedx-platform` | **`49,906` refs each, identical** | 🟢 same repository, reached through a rename redirect |
+
+🟢 **So `P336`'s wallet leg may be promised, naming the canonical address `ryjones/learner-credential-wallet` and the basis (`585/585` ref identity, `2026-11-11`).** 🔵 **Stated honestly:** identity proves the addresses serve one repository; the *mechanism* is a transfer with redirect rather than a fork, which is the only reading consistent with the old address `422`-ing on the search index while the new one indexes. 🟢 **And the `49` citations of `openedx/edx-platform` need a rename, not a replacement.**
+
+### 🔴 `ACTION p766-E` / `p765-G`: the premise is false and the instruction is withdrawn
+
+Carried twice, refused twice, and this pass found out why: **it was never executable and never needed to be.**
+
+1. 🔴 **`evidence/overwide-rows.2026-11-11-p765.tsv` stores ABSOLUTE LINE NUMBERS into APPEND-ONLY shelves.** `p766` prepended a dated section to both trending files, shifting every line. **Of the `14` recorded coordinates, `11` no longer point at a table row at all.** The ledger was stale before either `p765-G` or `p766-E` could act on it (`T674`).
+2. 🔴 **Re-detected live, the first run found `48` over-wide rows — and `41` of them were this pass's own defect.** In GFM only an **unescaped** pipe splits a cell; the detector counted `\|` as a separator, so **every row that quotes a markdown table inside a cell scored over-wide.** 🔵 **This base had already recorded this exact defect** (`agents/trending.md`: *"table-width probe counted escaped `\|` as separators"`) — reproduced in full before the record was consulted.
+3. 🔴 **Counted correctly, the `p765` ledger's two shelves hold `7` over-wide rows — and not one of them is a `p276` correction.** All seven are **unescaped pipes inside inline code spans** — `` `… | head -3` ``, `` `grep -c "^|"` ``, `api.github.com/repos|search|orgs`. The author meant a literal pipe.
+
+🟢 **So the fix is not a column — it is an escape.** Adding a header column to these rows would have *created* a spurious empty cell and left the real breakage in place. 🔴 **And the ledger covered only `2` of `11` shelves: extending the detector base-wide found `20` more of the same class in `intel/open-gaps.md` and `README.md`, which `p765` never examined.** 🟢 **`27` rows corrected in total by escaping the pipe inside the code span; `0` over-wide rows now remain across all eleven shelves.** The `14` `p276` correction rows **render correctly and always did** (`T673`).
+
+🔴 **Two consecutive passes have now been handed an instruction whose premise was an instrument defect** — `p765-D`'s retirement order and `p765-G`'s column order. Both were refused on measurement. **The lesson is not to be more careful with instructions; it is that an instruction must carry the measurement that justifies it, in a form the next pass can re-run.**
+
+### 🟢 Tree enumeration replaces the licence path matrix
+
+`api.github.com/repos/*` is closed to this session. **The git proxy is not.** A blobless, no-checkout clone yields every path in a repository, so a grant is **enumerated**:
+
+| Repository | Tree | Grant paths found | The one a path matrix would have missed |
+|---|---|---|---|
+| `data-liberation-project/aphis-inspection-reports` | **`364,679`** | **`0`** | — a genuine absence, stated over a complete tree |
+| `OS4ED/openSIS-Classic` | `5,656` | **`20`** | 🟢 `docs/License.txt` — **GPL-2.0**, `17,286 B` · `224ac3d403e3`, and **no root grant exists at all** |
+| `stiles/la-trees` | `2,148` | **`49`** | `node_modules/` committed — MIT, ISC, BSD-3-Clause vendored into the repository |
+| `TowerScout/TowerScout` | `150` | `2` | `LICENSE.TXT`, uppercase extension |
+| `jkbrzt/rrule` | `63` | `1` | `LICENCE`, British stem |
+| `tyrasd/Baumkataster-Graz` | `699` | `2` | `icons/LICENSE.txt` — **BSD-3-Clause** under an MIT root |
+
+🔴 **This pass's enumerator was wrong first and a control caught it:** it matched `assets/notice.png` and byte-read a PNG as a grant. Binary and word-processor extensions excluded; `22` → `20` paths on `openSIS`, with `docs/License.txt` retained.
+
 ## 🆕 2026-11-11 (p766) — **`422` does not mean dead. It means the address is not canonical, and `8` of the `10` addresses `ACTION p765-D` told this pass to retire are *alive and busy* at a new name — including one pushed the same day this pass ran. The `229`-address retirement is cancelled and replaced by a redirect-resolution rule.**
 
 **`13` non-canonical addresses resolved · `7` redirects **proven by byte-identical payloads** at both addresses · `1` false proof caught in this pass's own first attempt and corrected · `2` addresses confirmed genuinely withdrawn · `1` structural absence · `20` supply queries + `4` code-search queries on the register.**
@@ -28770,7 +28836,7 @@ alongside the host and the path.**
 | channel | reach | 🔵 what it means |
 |---|---|---|
 | `raw.githubusercontent.com` | 🟢 **NOT bound.** `14` payloads from `14` unrelated repositories read first-hand this pass | 🟢 **VERIFICATION is open at full reach.** Any repo that can be *named* can have its grant read, byte-for-byte |
-| `github.com` · `api.github.com/repos|search|orgs` | 🔴 closed by session binding | 🔴 **DISCOVERY is shut.** No topic page, no search, no star count, no default-branch lookup |
+| `github.com` · `api.github.com/repos\|search\|orgs` | 🔴 closed by session binding | 🔴 **DISCOVERY is shut.** No topic page, no search, no star count, no default-branch lookup |
 
 🔴 **This is the mechanism behind a finding this base has recorded for several passes without a
 cause: the prescribed query battery keeps returning this shelf's own contents.** It is not that
@@ -55466,10 +55532,10 @@ código versionado del repo (`[Code from External]`), igual que en el pase 50.**
 
 | Magnitud | Valor | Instrumento |
 |---|---|---|
-| líneas de pipe en `agents/top.md` | **485** | `grep -c "^|"` |
-| separadores `\|---\|` | **60** | `grep -c "^|---"` |
+| líneas de pipe en `agents/top.md` | **485** | `grep -c "^\|"` |
+| separadores `\|---\|` | **60** | `grep -c "^\|---"` |
 | **filas de datos y encabezado** | **425** | resta de las dos anteriores — **coincide con el conteo del pase 50** |
-| filas con URL de `github.com` | **176** | `grep "^|" \| grep -c "github\.com"` |
+| filas con URL de `github.com` | **176** | `grep "^\|" \| grep -c "github\.com"` |
 | **`org/repo` distintos** | **167** | `grep -oE` + `sort -u`, **0 descartes** por rutas que no son repos (`/orgs/`, `/topics/`…) |
 | ⚠️ **filas SIN URL de GitHub** | **249** | **fuera del alcance de este instrumento, no «sin medir»**: son paquetes de registro, especificaciones y plataformas, medibles por registro + tarball |
 
