@@ -4,6 +4,180 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p756` (researched 2026-11-11) — `T509`–`T520`
+
+**`ACTION p755-A` EXECUTED IN FULL, AND THE `unstated` CLASS IS NOW CLOSED.** All **`968`** remaining `unstated` rows of `evidence/address-ledger.tsv` were swept over the one channel that works in this session, **`565`** readable grants were recovered, every verdict was written back `CRLF`-preserving, and the class went **`968` → `0`**. 🔴 **The finding is not the recovery rate. It is that `unstated` was concealing a `45`-row tier this base may not build on at all.** 🔴 **Three corrections are recorded against this pass's own first readings (`T514`), and `8` real defects against the shelves (`T513`).** 🔵 `ACTION p755-B`'s refusal re-measured and still in force; `ACTION p755-C` not executed and carried forward with its reason.
+
+### 🔴 `T509` — `ACTION p755-A` executed: the `unstated` class is closed, and the yield beat its own projection by `+105`
+
+One denominator, **`968`** rows, no sampling. Channel: `raw.githubusercontent.com` (`T501`), `19` licence paths at ref `HEAD`, plus an `8`-path existence probe. Instrument preserved at `ingest/p756-unstated-sweep.sh`; full result at `evidence/unstated-sweep.2026-11-11-p756.tsv`.
+
+| Verdict | Rows | Share | What it means |
+|---|---|---|---|
+| readable grant found | 🟢 **`565`** | `58.4%` | licence payload byte-read, length + sha256₁₂ recorded |
+| readable, **no** licence file | `319` | `33.0%` | a `T302`-compliant **measured absence** across `19` paths |
+| **not readable at this address** | 🔴 `84` | `8.7%` | *not* "does not exist" — see `T511` |
+
+🟢 **`T505` projected `~460` grants at the sampled `47.5%`. The true yield on the full population is `58.4%` — `565`, `+105` over projection.** The sample under-read because it used `main`+`master` and this sweep uses `HEAD` (`T511`).
+
+**The `565` grants by what Globant may actually do with them:**
+
+| Tier | Rows | Share |
+|---|---|---|
+| 🟢 permissive (MIT, Apache-2.0, BSD, ISC, CC0, CC-BY, ECL-2.0, NLOD, W3C, OGL) | **`412`** | `72.9%` |
+| 🔵 copyleft (GPL, AGPL, LGPL, MPL, EPL, EUPL, CC-BY-SA) | `106` | `18.8%` |
+| 🔴 **blocked — non-commercial, source-available or proprietary** | **`45`** | `8.0%` |
+| 🔵 declared absence / unresolved | `2` | `0.4%` |
+
+`33` distinct licence families. The permissive head is `MIT` **`260`** and `Apache-2.0` **`99`**; the copyleft head is `AGPL-3.0` **`43`** and `GPL-3.0` **`41`**.
+🔵 **None of the families recovered is new to this base** — `PolyForm`, `Elastic-2.0`, `BUSL`, `NLOD`, `OGL` and the W3C text were all checked against the corpus before any novelty was claimed, and all were already held. **The novelty is the volume, not the vocabulary.**
+
+### 🔴 `T510` — the commercial finding: `unstated` was concealing a `45`-row tier that Globant may not build on
+
+🔴 **`unstated` is a word that reads like "unknown, probably fine". For `45` of these rows it meant "restricted, and nobody had looked".**
+
+| Family | Rows | Why it blocks |
+|---|---|---|
+| `PolyForm Noncommercial 1.0.0` | 🔴 **`13`** (+`1` other PolyForm) | commercial use withheld outright |
+| proprietary / all-rights-reserved | 🔴 **`10`** | no grant at all |
+| bespoke non-commercial | 🔴 **`8`** | hand-written terms, commercial use prohibited |
+| `CC-BY-NC*` | `6` | NonCommercial on content |
+| spec-document licence (1EdTech) | `2` | may not be re-implemented freely |
+| `Elastic-2.0` | `2` | source-available, not open |
+| `BUSL-1.1` | `2` | time-delayed grant |
+| `OpenGaokao-SAL-1.0` | `1` | explicitly *"not an OSI-recognised open source licence"* |
+
+🔴 **The three that matter most, because each would otherwise be an obvious pick:**
+- [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) — **Khan Academy's own tutoring-accuracy evaluation dataset**, `2,690 B`, sha256₁₂ `53cf7aa78a89`: *"Use of the Dataset shall be restricted to internal **non-commercial** evaluation of models"*, and it explicitly bars evaluation of products *"intended for commercial use"*. 🔴 **The best-sourced tutoring-quality eval set in the industry cannot be used to evaluate a Globant deliverable.**
+- [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — a real higher-education **student-advising platform**, `3,860 B`, `48255018b41f`: **Elastic License 2.0**. Source-available, not open; cannot be offered as a managed service.
+- [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) — a **Google Classroom MCP server**, `6,489 B`, `df6edfe0375d`: bespoke *"AStheTECH Community License"*, non-commercial basis only, and *"integration into commercial products or services, is strictly prohibited"*.
+
+🟢 **Posture: the tier is `8.0%`, which means `92%` of the recovered backlog is usable — but it is `8.0%` concentrated exactly where a studio reaches first** (a ready dataset, a ready platform, a ready MCP server). **Read the licence cell before the description.**
+
+### 🔴 `T511` — instrument: ref `HEAD` beats `main`+`master`, and a `raw` `404` is not evidence of non-existence
+
+🟢 **Change one, and it is free.** p755's script probed `main` **and** `master` × `5` filenames = up to `10` requests. Ref **`HEAD` resolves the repository's true default branch**, so one branch leg replaces two — **half the requests** — and `develop`/`dev`/`trunk` repositories stop scoring as false absences.
+**Reproduction:** [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) → `main` **`404`**, `master` `200`, `develop` `200`, **`HEAD` `200`** (`18,025 B`). Any repository whose default is `develop` *only* was a false `NONE` in p755's instrument.
+
+🔴 **Change two is a limit, not an improvement, and it changes how `84` rows must be reported.** `raw.githubusercontent.com` **does not follow repository renames or organisation moves.**
+**Reproduction:** [`apereo/opencast`](https://github.com/apereo/opencast) → `404` on `README.md`, while **`opencast/opencast` → `200`**. Same project; the org moved.
+🔴 So the verdict written to the ledger is **`unreadable-at-address`**, never `absent`. The channel that would separate *renamed* from *deleted* is `git ls-remote`, and it is **credential-denied in this session** (`p293`, `p755`). 🔵 **p755's single `NONE` label conflated three different facts** — no licence file, renamed, and deleted. This pass separates the first from the other two and declines to split the other two.
+
+### 🔴 `T512` — a `200` on `LICENSE` is not a grant, and it failed three different ways in one sweep
+
+**1. The R-package stub is a `POINTER`, not a grant** (`p307`'s three-valued classifier, now with a concrete population). Three repositories return `200` on `LICENSE` with a two-line metadata file:
+
+| Repo | `LICENSE` bytes | Content | Real grant, from `DESCRIPTION` |
+|---|---|---|---|
+| [`rstudio/gradethis`](https://github.com/rstudio/gradethis) | `49 B` | `YEAR: 2021` / `COPYRIGHT HOLDER: Posit Software, PBC` | 🟢 **`MIT`** (`License: MIT + file LICENSE`) |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | `46 B` | `YEAR: 2025-2026` / `COPYRIGHT HOLDER: tna authors` | 🟢 **`MIT`** |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | `108 B` | adds `ORGANIZATION:` | 🟢 **`BSD-3-Clause`** |
+
+🔵 **The R convention is `License: <SPDX> + file LICENSE`, where the file carries only the copyright *fields*.** A sweep that stops at the `200` records an unclassifiable grant; the grant is one fetch away in `DESCRIPTION`. **This sweep therefore refuses any payload under `40 B` as a pointer.**
+
+**2. A `LICENSE` file can document the *absence* of a grant.** [`murderszn/open-tutor`](https://github.com/murderszn/open-tutor), `869 B`, `c341a936e405`: *"This repository has **not** declared a project-wide reuse license. This notice documents that status and **does not grant additional rights**."* 🔴 **Filed `no-grant`, from a `200`.**
+
+**3. On a dual-licensed repository the canonical filename can hold the *other* grant.**
+
+| Repo | `LICENSE` holds | the **code** grant is at |
+|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🔴 **`CC-BY-4.0`**, `18,650 B` (docs) | 🟢 `LICENSE-CODE`, **`MIT`**, `1,141 B`, `c2cfccb812fe` |
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | **`OGL-3.0`** for `ontology/`, `data/`, `docs/` | 🟢 `CODE-LICENSE`, **`MIT`**, for `scripts/`, `.github/` |
+
+🔴 **A first-match glob on `LICENSE` reports `CC-BY-4.0` for the most-used multi-agent framework in this industry's stack.** 🟢 Oak's `OGL-3.0` half is the better news: UK Open Government Licence v3.0 **permits commercial exploitation with attribution**, so the curriculum ontology is usable — the row just needs two cells, not one.
+
+### 🔴 `T513` — the ledger-shelf crosscheck: `90 / 98` confirm the shelves, and `8` are real defects
+
+`ACTION p755-A` required reconciliation **before** the sweep, because `T506` measured `~21%` of resolved rows already published. Done boundary-aware over all `9` shelves: **`98 / 968` (`10.1%`)** of `unstated` rows carry an **attributable licence cell** on a shelf table row — the ledger said unread, the shelf had already published a grant. Full table at `evidence/ledger-shelf-desync.2026-11-11-p756.tsv`.
+
+🟢 **`90` of the `98` confirm the shelf** — `83` agree directly, `3` agree after adjudication (below), `2` are dual-licence rows right about the code, `2` resolve on the package channel. **The shelves were right and the ledger was stale, which is `T506` reproduced at `4.9×` the sample size.**
+
+🔴 **`8` are defects, and `4` are wrong licence cells:**
+
+| Row | Shelf published | 🔴 Bytes say | Why it matters |
+|---|---|---|---|
+| [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | `MIT` | 🔴 **`GPL-3.0`** (`35,183 B`, `3b39dd1dc47e`) | **the worst error of the pass** — an MCP server shelved as permissive is strong copyleft |
+| [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) | `ISC` | **`Apache-2.0`** (`11,357 B`, `c71d239df917`) | wrong family; patent grant and `NOTICE` duty were not stated |
+| [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | `GPL-3.0` | 🟢 **`LGPL-3.0`** (`7,651 B`, `da7eabb7bafd`) | **less** restrictive than published — **linking is permitted**, so an LTI bridge is buildable |
+| [`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) | `AGPL-3.0` | 🟢 **`GPL-3.0`** (`35,146 B`, `c53a65c2fd56`) | **less** restrictive — **§13 does not reach hosting**, and an online judge is hosted by definition |
+
+🔵 **Two errors in each direction.** A base that only over-stated restriction would be merely cautious; this one is wrong both ways, which means neither direction can be trusted without the bytes.
+
+🔴 **`3` are dead citations** — the shelf publishes a grant for an address that `404`s on all `13` probed paths: [`Eduware-Inc/eduware-oneroster`](https://github.com/Eduware-Inc/eduware-oneroster) (shelf: MIT), [`ibm-skills-network/mark`](https://github.com/ibm-skills-network/mark) (shelf: Apache-2.0), [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) (shelf: MIT). 🔵 Under `T511` these may be renames rather than deletions, so they are flagged, **not** retracted.
+🔴 **`1` is unsupported**: [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) is shelved `MIT` and carries no grant in the **file**, **package** or **README** channel. The repository is readable; the licence cell has no source.
+
+🟢 **`2` agreed only on a second channel** (`p280` package-provenance), and both are correct on the shelf: [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) `ISC` and [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) `MIT`, each declared in `package.json` with **no licence file at all**.
+
+### 🔴 `T514` — three corrections against this pass's own first readings
+
+🔴 **1. A substring address match inflated the desynchronisation count `3.3×`.** The first reconciliation reported **`328`** shelf licence cells. Boundary-aware matching reports **`98`**. The defect: `a/b` matched **inside** `sebastianhab`**`a/b`**`ook-to-course-skill`, and `O/R` inside ordinary prose. **`233` of the `328` were licence tokens belonging to a *different* repository on the same line.** 🔵 **An address is only matched when neither neighbour is `[A-Za-z0-9_.-]`, and a licence is only attributed when it sits in its own table cell.**
+
+🔴 **2. A `90`-character title block misread `4` BSD payloads as proprietary, because the BSD text's own words are "All rights reserved."** First reading filed [`jupyterhub/kerberosauthenticator`](https://github.com/jupyterhub/kerberosauthenticator), [`jupyterhub/yarnspawner`](https://github.com/jupyterhub/yarnspawner), [`mitodl/pylti`](https://github.com/mitodl/pylti) and [`uPortal-Project/CoursesPortlet`](https://github.com/uPortal-Project/CoursesPortlet) as *proprietary / all-rights-reserved*. **All four are BSD** (`BSD-3-Clause` ×3 at `1,492`/`1,492`/`1,529 B`; `BSD-2-Clause` for `pylti` at `1,316 B`). The distinguishing clause — *"Neither the name ... may be used to endorse"* — sits **past** the truncation. 🔵 `P171` says classify from the title block; **this is the counter-example that bounds it** — the title block is sufficient for *titled* texts and insufficient for notice-form GPL, untitled LGPL and every BSD variant. **`92` payloads were therefore re-read in full.**
+
+🔴 **3. A keyword classifier read a *permission* as a *prohibition*.** `oaknational/oak-curriculum-ontology` was first filed `CC-BY-NC*` because the payload contains `non-commercially` — inside the sentence *"Exploit the information **commercially and non-commercially**"*, which is the **OGL-3.0 grant**. 🔵 **A NonCommercial verdict now requires either a titled `Attribution-NonCommercial` text or a matched prohibition clause**, never the bare token.
+
+🟢 **All three were caught before publication and all three moved a verdict. `3` of this pass's own instruments were wrong on first use; the symmetric count against the shelves is `8` (`T513`).**
+
+### 🔴 `T515` — the ledger's address harvester admits things that are not repositories, and `gate-address-shape` passes them
+
+**`14` of the `84` unreadable rows are not addresses at all** (`evidence/unreadable-classes.2026-11-11-p756.tsv`). They are shape-valid `owner/repo`, so `gate-address-shape` (`p351`) accepts every one:
+
+| Class | Rows | Specimens | Mechanism |
+|---|---|---|---|
+| **API-URL fragment** | 🔴 `6` | `repos/HKUDS`, `repos/moodle`, `repos/openedx`, `repos/gmilano`, `repos/dodona-edu`, `repos/packbackbooks` | harvested from `api.github.com/`**`repos/<owner>`**`/<repo>` — the *path prefix* was taken as the owner |
+| documentation placeholder | `4` | `a/b`, `O/R`, `owner/repo`, `owner/name` | copied out of example snippets |
+| **hyphen-truncated** | 🔴 `1` | `JushBJJ/Mr` | real repo is `JushBJJ/Mr-Ranedeer-AI-Tutor`, and 🔴 **that address is not in the ledger at all** — the truncation displaced it |
+| `owner == repo` artefact | `3` | `gegok12/gegok12`, `hablala/hablala`, `iep-ui/iep-ui` | duplicated path segment |
+
+🔵 **`a/b` had been carried since `p410` with `2` mentions across `2` passes, and `O/R` likewise.** They cost one `curl` each per sweep forever and they can never resolve.
+🟢 **The fix is a shape rule, not a licence rule:** reject a leading segment of `repos`, reject a single-character segment, reject `owner == repo`, and flag any address that is a strict prefix of another ledger address at a hyphen boundary. **`ACTION p756-B`.**
+
+### 🟢 `T516` — the recovery is real supply: `141` permissive, education-named rows the shelves had never published
+
+Of the `412` permissive recoveries, **`141` are education-named and carry no attributable shelf cell** — genuinely unpublished supply that was sitting in this base's own unread backlog. `11` are filed this pass across three shelves. 🔴 **And two self-declare as unusable, which is why each row was opened and not just counted:** [`nsip/curriculum-mapper`](https://github.com/nsip/curriculum-mapper) opens *"DEPRECATED (RETIRED) ... obsolete and retired (archived) ... not being updated with security patches"* and is filed **archive-only**; [`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) calls itself *"in progress"* and requires **JDK 7 and Tomcat 6.x**.
+
+🟢 **The highest-value recovery answers `p745`'s standing assessment nil directly.** `p745` measured that assessment — the register Annex III names — *"has none above `11★`"*. The backlog held three permissive scoring tools the shelves never carried:
+
+- [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) — **Apache-2.0**, `11,358 B`, `e11d83966208`. **ETS's own** Rater Scoring Modeling Tool: build, evaluate and compare automated scoring models. 🟢 **The organisation behind TOEFL and the GRE publishes its scoring-model toolchain permissively** — and `p745` recorded automated essay scoring as a near-nil without it.
+- [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) — **Apache-2.0**, `11,357 B`, `c71d239df917`. An **LTI 1.1** AI grader: grades with an LLM and **writes the grade back into the LMS**. 🟢 The integration half of every grading engagement, already built. **EMEA** (Universitat Politècnica de València, `Valencia` in its own README).
+- [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) — **MIT**, `1,103 B`, `ffaa010382b0`. A *framework* for pipelining student-work analysis, not a single tool.
+
+### 🟢 `T517` — the LATAM repository nil **breaks**, on two rows placed from their own artifacts
+
+🔴 **`p745` recorded "No LATAM repository row (`0 / 215`)" and the nil had been standing for several passes.** It breaks here, and both rows were placed on evidence found **inside the repository**, per `T378`:
+
+- [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) — **MIT**, `1,218 B`, `bc85403bdf2c`. **An MCP server over the BNCC** — *Base Nacional Comum Curricular*, **Brazil's** national curriculum framework. Published to PyPI with CI. Placement: `BNCC` ×`70` and `MEC` (*Ministério da Educação*) in its own README. 🟢 **LATAM**. 🔵 This is the shape that sells: the national curriculum of the region's largest education system, addressable by an agent, under MIT.
+- [`RandMelville/slm-writing-feedback-tutor-ptbr`](https://github.com/RandMelville/slm-writing-feedback-tutor-ptbr) — **MIT**, `1,085 B`, `b7e21ba75eea`. *"A Diagnostic Evaluation of Small Language Models for Offline Writing-Feedback Tutoring in Brazilian Portuguese ... under Public-School Infrastructure Constraints"*, with a Zenodo DOI. Placement: `Brazil` and `Portuguese` in its own README. 🟢 **LATAM**. 🔵 **Offline, small-model, public-school constraints** — the exact constraint set `p755` established for the adult/non-formal register, independently arrived at for Brazilian schools.
+
+🟢 **EMEA gains a production government service and a state ontology:**
+- [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) — **MIT**, `1,094 B`, `1018ba112e86`. The **UK Department for Education's live service** at `apply-for-teacher-training.service.gov.uk`. 🟢 **A national government's production teacher-recruitment system, MIT, in the open.**
+- [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) — **Unlicense**, `1,211 B`, `6b0382b16279`. MCP server over the **MEM** (Metadata for Education Media) ontology modelling **German school curricula across all Bundesländer**, with SPARQL. 🟢 **Public-domain dedication on sixteen states' curriculum metadata.**
+
+🟢 **APAC gains two curriculum-knowledge rows** — [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map) (**MIT**, `1,544 B`, `5464fb2fa5ef`) and [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) (**MIT**, `1,118 B`, `d20c5af7d2b5`).
+🔴 **Two Spanish-language candidates are published `⚠️ unplaced` rather than guessed** — [`villadalmine/study-cybercirujas`](https://github.com/villadalmine/study-cybercirujas) (Apache-2.0) and [`innova-space-edu/eduai-platform`](https://github.com/innova-space-edu/eduai-platform) (MIT): both read as River Plate Spanish, **neither README names a country**, and Spanish is not evidence of LATAM because Spain is EMEA.
+
+### 🔵 `T518` — a governance migration the index cannot show: the credential wallet now has two homes and one payload
+
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) and [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) are **both live, both `MIT`**, and their licence payloads are **byte-identical** — `1,092 B`, sha256₁₂ **`1032f65dd2f6`** — as are their READMEs at `19,433 B`. 🟢 **The MIT/DCC learner-credential wallet has moved under OpenWallet Foundation Labs (Linux Foundation).** 🔵 Same pattern as `p755`'s rename event and the Linux Foundation donations tracked on the technology base: **the institution changes, the grant does not.** 🔴 **Cite the OpenWallet address for anything forward-looking; both resolve today, and only one is the governance home.**
+
+### 🟢 `T519` — all four regional legs ran; three returned instruments and one returned a sixth consecutive nil
+
+🟢 **LATAM is the best-measured region this pass, and the figures are adoption percentages — the thing this base has nilled for passes.** UNESCO **IESALC** (with UNU-IAS), across **`200` higher-education institutions in `19` countries**: **`87%`** use AI in at least one area and **`74%`** in teaching and learning, while only **`26%`** have a formal AI strategy, **`55%`** have **no AI budget**, and dedicated funding at **public** universities is **`4%`**. The **Digital Education Council** LATAM 2026 survey (with Tecnológico de Monterrey) reports **`92%` of students** and **`79%` of faculty** actively engaging with AI. UNESCO launched an **Observatory on AI in Education for Latin America and the Caribbean on `2026-04-14`**. Universidad de los Andes counts **`716` AI regulatory instruments across `23` countries**, `>80%` initiated since 2023.
+🔵 **The usable read is the gap, not the adoption:** `87%` using against `26%` with a strategy and `4%` of public institutions funded. **Governance and funding are the billable layer; adoption already happened.**
+
+🟢 **North America is legislating at state level and not federally.** **`134` bills across `31` states**; California **AB 1159** bars using student data to train models; Idaho **SB 1227** requires privacy protections for school AI tools; **`34` states plus DC and Puerto Rico** have issued guidance. In higher education: **SUNY** approved a systemwide AI policy in spring 2026 with AI literacy in general education; **Florida's Board of Governors** moved toward requiring every public college to hold an AI policy, with only two having adopted one.
+
+🟢 **APAC is mandating curriculum.** China's Ministry of Education formalised **"Artificial Intelligence and Technology"** as a school subject for **2026–27**; **India** brings AI and computational thinking into all schools **from Grade 3** in **2026–27** under NEP 2020; **Vietnam** classes education as high-risk and names automated assessment (`p745`'s `Decision No. 33/2026/QD-TTg`, reproduced on the search channel). Ipsos Education Monitor 2026: support for banning AI in schools is **`26%` in India**, higher in Australia and New Zealand.
+
+🔴 **EMEA returned no sourced adoption percentage, for the sixth consecutive pass.** The leg ran; the results were vendor guides and aggregators with no sourced rate, and the one institutional source (European University Association, January 2026) urges prioritising European LLMs without giving a figure. 🔴 **Written down as a nil rather than filled with a number from a blog.** The Annex III date remains **conflicting across secondary sources** (one reports the Digital Omnibus provisional agreement of `2026-05-07` extending the high-risk deadline; `p745` holds `2 Dec 2027` via Reg (EU) 2026/1744) and **Article 50 transparency is consistently reported as not deferred**.
+
+### 🔴 `T520` — `ACTION p755-B`'s refusal re-measured at DNS and still in force; `ACTION p755-C` not executed
+
+🔴 **`5 / 5` primary legal hosts remain `NXDOMAIN`**, re-measured with `getent hosts` in this session: `eur-lex.europa.eu`, `data.consilium.europa.eu`, `www.coe.int`, `artificialintelligenceact.eu`, `www.dol.gov` — while `raw.githubusercontent.com` resolves in the same shell. 🔵 **A network-policy domain restriction, third pass running.** So `ACTION p754-A` is **unexecuted for a third pass and its refusal stands: no deck may state that Annex III names early childhood education**, and `CM/Rec(2026)12`, `ST-14902-2026`, the DOL framework, `TEN 07-25` and the ULLAS figures remain **search-channel-sourced only**.
+🔴 **`ACTION p755-C` (build the tutor `T494` specifies) was not executed.** This pass spent itself on `ACTION p755-A`, which was the primary and which closed a `968`-row class. **The action is carried forward unchanged and unweakened** — `UnlockedLabs/unlocked-core` is still Apache-2.0 with a publicly declared tutor-shaped hole, and `unlocked-hiset-ai` is still unreadable on both channels.
+
+---
+
 # 🆕 Trends new at `p755` (researched 2026-11-11) — `T490`–`T508`
 
 **Register: the adult, non-formal and second-chance layer — learners aged `15`+ outside formal schooling.** `ACTION p754-B` executed in full. `33` terms × `8` shelves mention-counted, `5` query denominators measured, `19` licence payloads byte-read, `26` compliant grant-absences recorded, `1` index value materially corrected (refusing direction), `1` rename event recorded, and **`40` of the base's own `unstated` ledger rows swept with the one channel that works in this session**. 🔴 **One correction against this base's own first reading of its own ledger (`T505`).** 🔴 **`ACTION p754-A` is still not executable and the reason is now measured at DNS level, `5 / 5` (`T502`) — the refusal stands.**

@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p756) — 🟢 **`968` REQUESTS AGAINST THIS BASE'S OWN BACKLOG RETURNED MORE USABLE SUPPLY THAN ANY SEARCH LEG: `565` GRANTS BYTE-READ, `412` PERMISSIVE, `141` EDUCATION-NAMED AND NEVER PUBLISHED HERE.**
+
+**`7` foundations rows · `5` verticals · `565` licence payloads byte-read `2026-11-11` · `968` `unstated` ledger rows swept and the class CLOSED `968` → `0` · `8` real shelf defects found (`T513`) · `3` corrections against this pass's own instruments (`T514`) · `14` non-addresses found in the ledger's own harvest (`T515`).**
+
+### 🟢 The denominator, and it is a full population rather than a sample
+
+| Verdict | Rows | Share |
+|---|---|---|
+| readable grant found, byte-read | 🟢 **`565`** | `58.4%` |
+| readable, **no** licence file across `19` paths | `319` | `33.0%` |
+| not readable **at this address** (`T511`) | 🔴 `84` | `8.7%` |
+
+🟢 **`T505` projected `~460` at the sampled `47.5%`; the true population yield is `58.4%` — `+105`.** The sample under-read because it probed `main`+`master`; this sweep probes ref **`HEAD`**, which resolves the true default branch. **Reproduction:** [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) → `main` **`404`**, `HEAD` **`200`** (`18,025 B`). One leg instead of two, **half the requests**, and no `develop`-only repository scores as a false absence.
+
+🔴 **And the limit that changes how `84` rows are reported: `raw.githubusercontent.com` does not follow renames or org moves.** [`apereo/opencast`](https://github.com/apereo/opencast) → `404`, while **`opencast/opencast` → `200`**. 🔴 **So the verdict is `unreadable-at-address`, never `absent`** — and `git ls-remote`, the channel that would separate renamed from deleted, is credential-denied here.
+
+### 🟢 Trending by recovery — the rows that were in the ledger all along
+
+| Repo | Licence (byte-read) | Region | Why it is a signal |
+|---|---|---|---|
+| [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | 🟢 Apache-2.0 (`11,358 B`, `e11d83966208`) | North America | 🟢 **ETS's own automated-scoring model laboratory.** `p745` recorded open AES supply as effectively nil; **it was unread, not absent** |
+| [`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core) | 🟢 Apache-2.0 (`13,185 B`, `ba1f153bdba3`) | North America | The spec owner's reference validator, with HTTP + Python + CLI surfaces. 🔵 New Apache-2.0 byte length for this base |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟢 MIT (`1,092 B`, `1032f65dd2f6`) | North America | 🔵 Governance migration: byte-identical to the DCC original, **both live** (`T518`) |
+| [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) | 🟢 MIT (`1,094 B`, `1018ba112e86`) | 🟢 **EMEA** (UK) | 🟢 **A national government's *live production* service, MIT, in the open** |
+| [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 **Unlicense** (`1,211 B`, `6b0382b16279`) | 🟢 **EMEA** (Germany) | 🟢 Sixteen states' curriculum metadata, **public domain** |
+| [`INRIA/scikit-learn-mooc`](https://github.com/INRIA/scikit-learn-mooc) | 🟢 **CC0-1.0** (`18,658 B`, `f5b745ef9808`) | 🟢 **EMEA** (France) | A complete institutional MOOC under a public-domain dedication |
+| [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | 🟢 MIT (`1,218 B`, `bc85403bdf2c`) | 🟢 **LATAM** (Brazil) | 🟢 **Breaks the LATAM repository nil**; Brazil's national curriculum, agent-addressable |
+| [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map) | 🟢 MIT (`1,544 B`, `5464fb2fa5ef`) | 🟢 **APAC** (Korea) | National curriculum structure — the graph adaptive learning needs to trace against |
+| [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) | 🟢 MIT (`1,118 B`, `d20c5af7d2b5`) | 🟢 **APAC** (China) | Same asset class, largest primary cohort on earth, tightest subject |
+| [`wiwaszko-intel/education-ai-suite`](https://github.com/wiwaszko-intel/education-ai-suite) | 🟢 Apache-2.0 (`11,351 B`, `3f17cff4210f`) | — | OpenVINO education pipelines **plus benchmarking** — answers "what hardware does this classroom need" |
+| [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 🟢 MIT (`1,103 B`, `ffaa010382b0`) | ⚠️ unplaced | The **pipeline framework** the two graders plug into |
+
+🔴 **`★` unmeasured on every row (`api.github.com` `403`). Grants, byte lengths and digests are byte-read.**
+
+### 🔴 Refused after opening the README — both would pass a licence gate and a star filter
+
+[`nsip/curriculum-mapper`](https://github.com/nsip/curriculum-mapper) (Apache-2.0, Australia's NSIP, ML curriculum-to-curriculum mapping): **"DEPRECATED (RETIRED) ... archived ... not being updated with security patches"**. [`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) (Apache-2.0, deployable xAPI LRS): **"in progress"**, requires **JDK 7 / Tomcat 6.x**. 🔵 **`2` of `13` opened repositories self-declared unusable — open the README, always.**
+
+### 🔴 `14` rows in this base's own ledger are not repositories, and `gate-address-shape` passes all of them
+
+| Class | Rows | Specimens |
+|---|---|---|
+| **API-URL fragment** | 🔴 `6` | `repos/HKUDS`, `repos/moodle`, `repos/openedx`, `repos/gmilano` — harvested from `api.github.com/`**`repos/<owner>`**`/<repo>` |
+| documentation placeholder | `4` | `a/b`, `O/R`, `owner/repo`, `owner/name` |
+| **hyphen-truncated** | 🔴 `1` | `JushBJJ/Mr` — real repo is `JushBJJ/Mr-Ranedeer-AI-Tutor`, and 🔴 **that address is not in the ledger at all** |
+| `owner == repo` | `3` | `gegok12/gegok12`, `hablala/hablala`, `iep-ui/iep-ui` |
+
+🔵 `a/b` has been carried since `p410`. **It costs one request per sweep, forever, and can never resolve** (`T515`, `ACTION p756-B`).
+
+---
+
 ## 🆕 2026-11-11 (p755) — 🟢 **THE ADULT / NON-FORMAL SUBSTRATE: `7` ROWS AND NOT ONE IS ADULT-EDUCATION SOFTWARE. 🔴 THE `0%` RULE — FOUR OF THE FIVE BEST-STARRED ON-TOPIC REPOS HAVE NO GRANT AND THE FIFTH IS `CC BY-SA`. 🔵 FIRST HARDWARE LICENCE THIS BASE HAS BYTE-READ, AND IT CAME OUT OF THE BASE'S OWN UNREAD LEDGER.**
 
 **`7` foundations rows · `19` licence payloads byte-read `2026-11-11` · `1` index value materially corrected (refusing direction) · `26` compliant grant-absences · `40` of this base's own `unstated` ledger rows swept, `19` resolved · `1` correction against this pass's own first reading (`T506`).**

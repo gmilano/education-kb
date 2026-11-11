@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P280`–`P283` — added at p756 (2026-11-11)
+
+🟢 **Four recipes, and every component in them was recovered from this base's own unread ledger this pass** (`ACTION p755-A`, `T509`). Each is named with its address, its byte-read grant and its region.
+
+🔴 **Three constraints apply to all four.**
+
+1. 🔴 **Check the licence tier before the architecture.** `T510`: `45` of `565` recovered grants (`8.0%`) are non-commercial, source-available or proprietary, and they cluster on exactly the ready-made artefacts a recipe wants — a dataset, a platform, an MCP server. **`canyongbs/advisingapp` (Elastic-2.0) may not be hosted for a client; `Khan/tutoring-accuracy-dataset` may not evaluate a commercial deliverable.** Neither fact was in this base before today.
+2. 🔴 **`★` is unknown for every component below.** `api.github.com` returns `403` in this session, so **do not promise a client a community size**. Grants, byte lengths and digests are byte-read and citable; popularity is not.
+3. 🔵 **Prefer the national curriculum structure over a model.** Three of the four recipes found on a permissive curriculum graph (`bncc-mcp`, `mem-mcp`, `korean-elementary-learning-map`, `cn-primary-math-knowledge-graph`), because a recommendation an agent cannot explain against a published competency code is a recommendation no ministry will accept.
+
+---
+
+### `P280` — Curriculum-grounded tutoring on a national framework (Brazil first, then anywhere with a published curriculum)
+
+**Problem.** Every tutoring pilot in a public system dies at the same question: *"which competency does this cover?"* Ministries buy against their own curriculum codes, and a tutor that cannot cite them is unprocurable.
+
+**Parts, all byte-read this pass:**
+- [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) — **MIT**, `1,218 B`, sha256₁₂ `bc85403bdf2c`, **LATAM (Brazil)**. MCP server over the *Base Nacional Comum Curricular*; the agent resolves BNCC competency and skill codes directly.
+- [`RandMelville/slm-writing-feedback-tutor-ptbr`](https://github.com/RandMelville/slm-writing-feedback-tutor-ptbr) — **MIT**, `1,085 B`, `b7e21ba75eea`, **LATAM (Brazil)**. The pedagogical-adherence method and its evaluation, with a Zenodo DOI to cite.
+- [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) — 🟡 **AGPL-3.0**, `34,520 B`, `76a97c878c9c` (held since `p755`) — delivery surface **as the client's own deployment**, never Globant-hosted.
+- A **self-hosted small model**, on the sizing evidence in [`wiwaszko-intel/education-ai-suite`](https://github.com/wiwaszko-intel/education-ai-suite) (**Apache-2.0**, `11,351 B`, `3f17cff4210f`).
+
+**Wiring.** `planet` (or the ministry's existing LMS) → an orchestrator holding two MCP servers: `bncc-mcp` for curriculum lookup and a retrieval server over the client's own materials → small model on-premise → every generated response **annotated with the BNCC code it addresses**, which becomes the reporting artefact. Feedback quality is evaluated with the pt-BR tutor's published structural/pedagogical adherence rubric, **not** with a generic LLM judge.
+
+🔴 **Why the small model is not a compromise here.** The pt-BR study's own framing is *"under Public-School Infrastructure Constraints"*, and `T519` measures the reason: `87%` of LATAM institutions use AI while **`55%` have no AI budget and public-university dedicated funding is `4%`**. A per-token hosted tutor is unaffordable at system scale in exactly the systems that need it. **Size for offline from day one.**
+
+**Effort.** `6`–`8` weeks: `1` week curriculum-mapping integration, `2` weeks retrieval + annotation, `2` weeks adherence evaluation against the published rubric, `1`–`2` weeks on-premise sizing and deployment, `1` week reporting.
+
+---
+
+### `P281` — The assessment stack `p745` said did not exist: scorer, harness and gradebook round-trip
+
+**Problem.** `p745` measured that assessment — **the register EU AI Act Annex III names, whose Article 50 transparency duty is already live** — had no open agent above `11★` and no QTI MCP server at all. So engagements were quoting a scorer **and** an evaluation harness **and** an LMS integration as greenfield. 🟢 **Two of those three were already permissive and unread.**
+
+**Parts, all recovered and byte-read this pass:**
+- [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) — **Apache-2.0**, `11,358 B`, `e11d83966208`, **North America**. **ETS's** scoring-model laboratory: build, evaluate, compare and report automated scoring models, with cross-validation and subgroup/fairness reporting.
+- [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) — **Apache-2.0**, `11,357 B`, `c71d239df917`, **EMEA (Spain)**. LLM grading that **writes the grade back into the LMS over LTI 1.1**.
+- [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) — **MIT**, `1,224 B`, `4c8368a01cb6`. Rubrics as **structured XML** for multi-step derivations and open-ended justification.
+- [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) — **MIT**, `1,103 B`, `ffaa010382b0`. The pipeline framework the others compose inside.
+
+**Wiring.** `pedal` is the pipeline. Stage 1: deterministic checks (unit tests, static analysis). Stage 2: `llmgrader`'s XML rubric drives the LLM scorer. Stage 3: **`rsmtool` is the harness, not a scorer** — it consumes human-rated and machine-rated score pairs and produces the agreement, bias and subgroup report. Stage 4: `lti-ai-grader` returns the grade to the LMS.
+
+🟢 **The architectural insight is that `rsmtool` sits *outside* the scoring path.** It is the instrument that answers *"is this fair and does it agree with human raters, by subgroup"* — which is precisely the evidence an Annex III conformity assessment and any academic board will demand. **Having ETS's own harness do it is a provenance argument no bespoke eval script can match.**
+
+🔴 **Two warnings.** `lti-ai-grader` implements **LTI 1.1**; an institution on **LTI 1.3 / Advantage** needs that handshake rewritten — budget it, keep the pipeline. And 🔴 **`Khan/tutoring-accuracy-dataset` cannot be your eval set** (`T510`): non-commercial evaluation only, and it explicitly bars evaluating commercially intended products. **Human-rated samples from the client's own graders are the only clean ground truth.**
+
+**Effort.** `8`–`10` weeks, of which `rsmtool` reporting is `2` and the LTI work is `2`.
+
+---
+
+### `P282` — Federated curriculum intelligence across jurisdictions, on public-domain and permissive metadata
+
+**Problem.** A multi-country school group or a publisher needs the *same* content aligned to *different* national curricula. This is normally the single most licence-encumbered problem in EMEA education, and it is usually quoted as manual mapping.
+
+**Parts, all byte-read this pass:**
+- [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) — 🟢 **Unlicense** (public domain, **no attribution condition**), `1,211 B`, `6b0382b16279`, **EMEA (Germany)**. SPARQL over the MEM ontology covering **all German Bundesländer**.
+- [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) — **MIT**, **LATAM (Brazil)**.
+- [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map) — **MIT**, `1,544 B`, `5464fb2fa5ef`, **APAC (Korea)**.
+- [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) — **MIT**, `1,118 B`, `d20c5af7d2b5`, **APAC (China)**.
+- [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) — 🟢 **OGL-3.0** (ontology/data — **commercial exploitation permitted with attribution**) **+ MIT** (scripts), **EMEA (UK)**. 🔴 **Read both cells:** `T512` shows the canonical `LICENSE` holds the *data* grant, not the code grant.
+
+**Wiring.** One alignment service, four curriculum backends behind a common interface; an embedding index per framework; agent-proposed candidate alignments with the **source competency code on both sides**, and a human curriculum specialist approving. Output is a mapping table the client owns.
+
+🔵 **Why this is now cheap.** Four national frameworks, four permissive or public-domain grants, **zero licence negotiation** — and the attribution obligation exists on exactly one of them (Oak's OGL half). 🔴 **Verify the edition each dataset encodes** against the current national standard before it drives sequencing; a curriculum graph is a snapshot, and China's **2026–27** introduction of *"Artificial Intelligence and Technology"* as a school subject (`T519`) is about to move one of them.
+
+**Effort.** `10`–`12` weeks for four frameworks; `3`–`4` weeks for the first one, then `~2` per additional framework.
+
+---
+
+### `P283` — Audit your own inventory before you buy: the licence-and-provenance sweep, as a client deliverable
+
+**Problem.** Every enterprise with an education or content estate has a dependency and repository inventory whose licence column is mostly empty or wrong. This pass ran exactly that audit on this base's own ledger and found **both** defect classes — and the findings are the sales pitch.
+
+**What `968` rows and `~5,000` requests returned (`T509`–`T515`):**
+
+| Finding | Number | Why a client cares |
+|---|---|---|
+| grants simply unread | 🟢 `565` recovered | `72.9%` permissive — **usable supply the inventory called unknown** |
+| 🔴 **non-commercial / source-available / proprietary** | 🔴 `45` | **the ones that end an engagement**, and they look like the best picks |
+| inventory disagreed with the record of truth | `98` crosschecked | `90` confirmed the shelves; 🔴 **`4` were wrong licence cells, in both directions** |
+| 🔴 dead citations | `3` | a grant published for an address that `404`s on `13` paths |
+| 🔴 entries that are not repositories at all | `14` | API-URL fragments, doc placeholders, a hyphen-truncated address |
+
+**The instrument, preserved and runnable:** `ingest/p756-unstated-sweep.sh`.
+
+🔵 **Five method rules, each paid for by a defect this pass made or found:**
+1. **Probe ref `HEAD`, never `main`+`master`.** Half the requests, and no `develop`-only repository scores as a false absence — [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk): `main` `404`, `HEAD` `200` (`T511`).
+2. 🔴 **A `404` is "not readable at this address", never "gone".** `apereo/opencast` `404` while `opencast/opencast` `200` — raw does not follow org moves (`T511`).
+3. 🔴 **A `200` on `LICENSE` is not a grant.** Refuse payloads under `40 B` as pointers — the R convention puts the grant in `DESCRIPTION` (`rstudio/gradethis` `49 B` → **MIT**); a `LICENSE` can *document an absence* (`murderszn/open-tutor`); and on a dual-licensed repo the canonical filename can hold the **other** grant (`microsoft/autogen`: `LICENSE` = CC-BY-4.0, `LICENSE-CODE` = **MIT**) (`T512`).
+4. 🔴 **Classify from the title block, then full-read everything unresolved.** A truncated title block misread **four BSD payloads as proprietary**, because the BSD text's own words are *"All rights reserved."* (`T514`).
+5. 🔴 **Reconcile against the record of truth *first*, and match addresses on boundaries.** A substring match inflated the desynchronisation count `3.3×` — `a/b` matched inside `sebastianhab`**`a/b`**`ook-to-course-skill` (`T514`). **Verify by address-set difference, never by line count** (`T508`).
+
+🟢 **Report the two defect classes separately, because they have different owners.** Unread backlog is a *procurement* finding — supply you already have. Desynchronisation is a *governance* finding — your record of truth is wrong, and it is the one that decides what gets bought next.
+
+**Effort.** `2`–`3` weeks for a few thousand entries: `2` days instrument and sweep, `3` days classification with full-read fallbacks, `3` days reconciliation against the existing record, `2` days adjudicating disagreements by hand, `3` days reporting the classes separately.
+
+---
+
 ## 🆕 `P275`–`P279` — added at p755 (2026-11-11)
 
 🟢 **These five recipes serve the adult, non-formal and second-chance register (`15`+, outside formal schooling).** Every component is named with its address, its byte-read grant and its region.

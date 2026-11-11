@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p756) — 🟢 **SEVEN AGENTS, ZERO SEARCHES: EVERY ROW THIS PASS CAME OUT OF THIS BASE'S OWN UNREAD LEDGER. 🔴 AND `unstated` TURNED OUT TO BE HIDING A `45`-ROW TIER GLOBANT MAY NOT BUILD ON — INCLUDING KHAN ACADEMY'S OWN TUTORING-ACCURACY EVAL SET.**
+
+**`ACTION p755-A` executed in full · all `968` remaining `unstated` ledger rows swept · `565` licence payloads byte-read (`58.4%` yield, against `T505`'s projected `~460`) · class closed `968` → `0` · `98` ledger-shelf desynchronisations crosschecked, `8` real shelf defects found · `3` corrections against this pass's own instruments · `7` agent rows, `7` foundations, `5` verticals filed · `T509`–`T520`.**
+
+### 🟢 The signal of the week is a method, not a repository
+
+🔴 **`p745` measured the assessment register as having no agent above `11★` and `qti assessment mcp server` returning `0` repositories. That nil was measured against the *search* channel.** Sweeping this base's own unread ledger returned **three permissive grading engines** nobody had published here: [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) (**Apache-2.0** — *ETS*, the organisation behind TOEFL and the GRE), [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) (**Apache-2.0**, writes grades back over LTI 1.1) and [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) (**MIT**, XML rubrics for multi-step derivations).
+🔵 **The supply existed. The discovery method missed it.** `968` requests against a backlog beat every search leg this pass — and `rsmtool` runs its CI on **GitLab and Azure DevOps**, so a GitHub-activity filter would have discarded it twice over.
+
+### 🟢 New agent rows — all `7` byte-read, all `7` from the ledger
+
+| Agent | Repo | Licence | Region | Signal |
+|---|---|---|---|---|
+| **BNCC MCP** | [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | 🟢 MIT (`1,218 B`, `bc85403bdf2c`) | 🟢 **LATAM** (Brazil) | 🟢 **Breaks this base's standing LATAM repository nil.** MCP server over Brazil's national curriculum framework; on PyPI with green CI. Placed from `BNCC` ×`70` + `MEC` in its own README |
+| **SLM Writing-Feedback Tutor (pt-BR)** | [`RandMelville/slm-writing-feedback-tutor-ptbr`](https://github.com/RandMelville/slm-writing-feedback-tutor-ptbr) | 🟢 MIT (`1,085 B`, `b7e21ba75eea`) | 🟢 **LATAM** (Brazil) | Offline small-model writing feedback *"under Public-School Infrastructure Constraints"*, Zenodo DOI `10.5281/zenodo.20388846` |
+| **LTI AI Grader** | [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 🟢 Apache-2.0 (`11,357 B`, `c71d239df917`) | 🟢 **EMEA** (Spain, UPV) | 🟢 The gradebook round-trip, already built — 🔴 on **LTI 1.1**, not 1.3 |
+| **LLM Grader** | [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) | 🟢 MIT (`1,224 B`, `4c8368a01cb6`) | ⚠️ unplaced | Autograder for *"multi-step derivations, design tradeoffs, approximations"*; rubrics as reviewable XML |
+| **OB3 MCP Server** | [`maxxeddev/open-badges-mcp`](https://github.com/maxxeddev/open-badges-mcp) | 🟢 MIT (`1,079 B`, `5dffe4772d98`) | ⚠️ unplaced | Open Badges 3.0 **spec** as queryable tools; pure-WASM SQLite, zero native deps |
+| **MEM Ontology MCP** | [`fwu-de/mem-mcp`](https://github.com/fwu-de/mem-mcp) | 🟢 **Unlicense** (`1,211 B`, `6b0382b16279`) | 🟢 **EMEA** (Germany) | 🟢 German **Bundesländer** curriculum metadata, SPARQL-queryable, **public domain, not even attribution** |
+| **Schulmanager Online MCP** | [`kohlsalem/schulmanager-mcp`](https://github.com/kohlsalem/schulmanager-mcp) | 🟢 **Unlicense** (`1,212 B`, `b5065838cbac`) | 🟢 **EMEA** (Germany) | Parent/pupil-side live school data for an LLM — 🔴 unofficial, and **DSGVO work is the main work package** |
+
+🔴 **`★` is `unmeasured` on all seven: `api.github.com` returns `403` in this session, and a star count off a search snippet is not a read value.**
+
+### 🔴 The warning of the week — `unstated` was not "probably fine"
+
+🔴 **`45` of the `565` recovered grants (`8.0%`) cannot be built on commercially**, and the three worst are the three a studio would reach for first:
+- [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) — **Khan Academy's own tutoring-accuracy evaluation dataset** (`2,690 B`, `53cf7aa78a89`): *"restricted to internal **non-commercial** evaluation"*, and it explicitly bars evaluating products *"intended for commercial use"*. 🔴 **The best-sourced tutoring-quality eval set in the industry cannot be used to evaluate a Globant deliverable.**
+- [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — a complete **HE student-advising platform**, **Elastic-2.0**: may not be offered as a hosted or managed service.
+- [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) — a **Google Classroom MCP server**, bespoke community licence: *"integration into commercial products or services, is strictly prohibited"*.
+
+🔵 **`PolyForm Noncommercial` is spreading by copy-paste** — three identical `4,563 B` payloads (`ffcca38841ad`) across unrelated owners. **This tier grows; keep reading the licence cell.**
+
+### 🔵 Governance event — one wallet, two live homes, one byte-identical grant
+
+[`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) are **both live, both MIT**, with **byte-identical** licence payloads (`1,092 B`, `1032f65dd2f6`) and byte-identical READMEs (`19,433 B`). 🟢 **The MIT/DCC learner-credential wallet has moved under OpenWallet Foundation Labs (Linux Foundation).** Cite the OpenWallet address forward; keep the other as an alias (`T518`).
+
+---
+
 ## 🆕 2026-11-11 (p755) — 🔴 **THE ADULT / NON-FORMAL / SECOND-CHANCE AGENT LAYER (`15`+, OUTSIDE SCHOOLING): `GED OR HiSET OR "high school equivalency"` RETURNS **`9`** REPOSITORIES AND **EVERY ONE HAS `0★`**. 🔴 THE REGISTER'S ONE REAL AI TUTOR IS NAMED IN A PUBLIC README AND IS NOT PUBLICLY READABLE.**
 
 **`3` agent rows added — and `3` is all that exists, so the nil is the finding · `33` terms × `8` shelves mention-counted · `5` query denominators measured · `19` licence payloads byte-read · `1` index value materially corrected (🔴 **refusing** direction) · `26` `T302` compliant grant-absences · `1` rename event filed · `ACTION p754-B` executed.**

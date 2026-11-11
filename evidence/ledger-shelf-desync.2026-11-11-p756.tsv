@@ -1,0 +1,99 @@
+address	shelf	shelf_licence_cell	p756_byte_read	verdict	note
+24kchengYe/human-skill-tree	agents/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+AIEd-Innovations/assessment_agent	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+AmirF194/canvas-mcp	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+AnkitClassicVision/tutor-engine	repos/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+AnonymousOnyx22/brightspace-d2l-mcp	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+Bbar0n234/learnflow-ai	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+Chocobozzz/PeerTube	agents/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+DavidLMS/learnmcp-xapi	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+Eduware-Inc/eduware-oneroster	repos/trending.md	MIT	unreadable	DEAD-CITATION	shelf publishes MIT; 404 on 13 paths incl README/package.json
+GeminiLight/awesome-ai-llm4education	repos/trending.md	MIT	UNSUPPORTED	SHELF-UNSUPPORTED	shelf publishes MIT; no licence in file, package or README channel
+GenAI-Gurus/awesome-eu-ai-act	repos/trending.md	CC0-1.0	CC0-1.0	AGREE	byte read agrees with the published shelf cell
+HandsOnLLM/Hands-On-Large-Language-Models	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+Jawadh-Salih/moodle-mcp-server	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+Jeanikt/tutor-ai-agent	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+JhostinAleck/brightspace-mcp	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+LearnPress/learnpress	repos/trending.md	ISC	ISC (package.json)	AGREE-other-channel	no licence FILE; package.json declares ISC - p280 package-provenance channel
+Mcp-Brasil/mcp-brasil	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+Orenda-Project/rumi-platform	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+PerryLink/dsh-essay-rubric-check	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+PrepLabsAI/InterviewMentor	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+SimonsTang/feifei-companion	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+Tangerine-Community/Tangerine	repos/trending.md	GPL-3.0	GPL-3.0	AGREE	byte read agrees with the published shelf cell
+UOC/java-lti-1.3-provider-example	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+VIJAYAPANDIANT/online-examination-system	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+Yuanpeng-Li/gradescope-mcp	compose/patterns.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+abr-Projects/canvas-mcp	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+adlnet/lrs-conformance-test-suite	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+agharsallah/esp-labs-web	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+ai-infra-curriculum/ai-infra-engineer-learning	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+aicademyorg/aicademy	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+aiverify-foundation/moonshot-cicd	compose/patterns.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+alejooroncoy/campus-cli	agents/trending.md	ISC	ISC	AGREE	byte read agrees with the published shelf cell
+apache/ofbiz	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+apache/ofbiz-framework	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+aryankeluskar/canvas-mcp	repos/trending.md	ISC	ISC	AGREE	byte read agrees with the published shelf cell
+aswanth9495/exam-guard	agents/trending.md	ISC	Apache-2.0	SHELF-WRONG	shelf published ISC; payload is Apache-2.0 11357 B c71d239df917
+aureuserp/aureuserp	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+autolab/Tango	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+boyuchengz/canvas-mcp	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+celtic-project/LTI-PHP	repos/trending.md	GPL-3.0	LGPL-3.0	SHELF-WRONG-less-restrictive	shelf published GPL-3.0; payload is LGPL-3.0 7651 B da7eabb7bafd - LINKING IS PERMITTED
+classroomio/classroomio	repos/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+codeXsidd/Studivexa	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+cortezaproject/corteza	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+dasgltd/mcp-brasil	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+dequelabs/axe-core	repos/foundations.md	MPL-2.0	MPL-2.0	AGREE	byte read agrees with the published shelf cell
+dodona-edu/dolos	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+eclipse-ee4j/jersey	agents/trending.md	EPL-2.0	EPL-2.0	AGREE	byte read agrees with the published shelf cell
+edanalytics/edu_ext_oneroster	intel/trends.md	MPL-2.0	MPL-2.0	AGREE	byte read agrees with the published shelf cell
+exelearning/exelearning	repos/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+fairlearn/fairlearn	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+faizan45640/google-classroom-mcp-server	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+felipedias-ie/blackboard-mcp	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+gafapa/moodle-local_moodlia	agents/trending.md	GPL-3.0	GPL-3.0	AGREE-after-adjudication	shelf right; p756 title-block classifier failed on a GPL NOTICE (652 B), not the canonical text
+google/prog-edu-assistant	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+hantang/smartedu-dl-go	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+hcengineering/platform	agents/trending.md	EPL-2.0	EPL-2.0	AGREE	byte read agrees with the published shelf cell
+hpi-schul-cloud/schulcloud-server	repos/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+huggingface/smolagents	agents/top.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+ibm-skills-network/mark	agents/trending.md	Apache-2.0	unreadable	DEAD-CITATION	shelf publishes Apache-2.0; 404 on 13 paths
+ink-waffle/moodle-mcp	agents/trending.md	MIT	MIT (package.json)	AGREE-other-channel	no licence FILE; package.json declares MIT - p280 package-provenance channel
+isakskogstad/Skolverket-MCP	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+joojdev/academic-tracker-mcp	agents/trending.md	MIT	unreadable	DEAD-CITATION	shelf publishes MIT; 404 on 13 paths
+jupyterhub/jupyterhub-tutorial	repos/trending.md	BSD-3-Clause	BSD-3-Clause	AGREE	byte read agrees with the published shelf cell
+jupyterhub/yarnspawner	repos/trending.md	BSD-3-Clause	BSD-3-Clause	AGREE	byte read agrees with the published shelf cell
+kaldi-asr/kaldi	repos/trending.md	Apache-2.0	Apache-2.0	AGREE-after-adjudication	shelf right; COPYING prepends a 2012 legal clarification before the Apache text
+karanb192/algo-sensei	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+kltn-moolde/moodle-adaptive-learning-plugin	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+krayin/laravel-crm	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+langchain-ai/langgraph	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+learning-commons-org/agent-skills	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+lindsay-cheng/canvas-mcp	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+localis-ai/student-discovery-agent	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+ls1intum/Iris	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+mhlavac/edupage-mcp	agents/trending.md	MIT	GPL-3.0	SHELF-WRONG-more-restrictive	shelf published MIT; payload is GPL-3.0 35183 B 3b39dd1dc47e - WORST ERROR OF THE PASS
+microsoft/autogen	agents/trending.md	MIT	CC-BY-4.0 (LICENSE) + MIT (LICENSE-CODE, 1141 B, c2cfccb812fe)	DUAL-shelf-right-for-code	canonical filename holds the DOCS grant; the code grant is at LICENSE-CODE
+mitodl/open-learning-ai-tutor	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+mjnaderi/Sharif-Judge	repos/trending.md	AGPL-3.0	GPL-3.0	SHELF-WRONG-less-restrictive	shelf published AGPL-3.0; payload is GPL-3.0 35146 B c53a65c2fd56 - no s13 hosting reach
+moodlehq/moodle-tool_dataprivacy	agents/trending.md	GPL-3.0	GPL-3.0	AGREE	byte read agrees with the published shelf cell
+nichochar/ari	agents/top.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+oaknational/oak-curriculum-ontology	agents/trending.md	MIT	OGL-3.0 (ontology/data/docs) + MIT (scripts/.github)	DUAL-shelf-right-for-code	explicit dual licence; OGL-3.0 permits commercial exploitation with attribution
+ocala/peolatsi	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+openeduhub/edu-sharing-python-client	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+openedx/edx-proctoring	agents/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+openfun/xblock-proctor-exam	agents/trending.md	AGPL-3.0	AGPL-3.0	AGREE	byte read agrees with the published shelf cell
+panaversity/ksor	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+pelotech/xapi-lrs	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+pguso/agents-from-scratch	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+ronantakizawa/a11ymcp	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+sonstellar969/open-moodle	repos/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+startin-lab/brujula-educativa	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+stella/folio	repos/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
+temporalio/temporal	compose/patterns.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+tutors-sdk/tutors	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+ucfopen/cookiecutter-python-lti	repos/foundations.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+ucfopen/pylti1.3	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+untisapi/untis4j	repos/trending.md	LGPL-3.0	LGPL-3.0	AGREE-after-adjudication	shelf right; UNTITLED LGPL payload (no title line) defeated the title-block classifier
+virgiliojr94/book-to-skill	agents/trending.md	MIT	MIT	AGREE	byte read agrees with the published shelf cell
+yetanalytics/xapipe	agents/trending.md	Apache-2.0	Apache-2.0	AGREE	byte read agrees with the published shelf cell
