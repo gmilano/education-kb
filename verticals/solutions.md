@@ -7,6 +7,40 @@ updated: 2026-11-11
 # Vertical Platforms — Education
 
 
+## 🆕 `p771` — **The platform layer a school medical-conditions deliverable sits on, graded by grant rather than by feature list. 🔴 Of `10` real education platforms measured this pass, exactly ONE is permissive — and the single school-medical-specific platform in existence carries no grant at all.**
+
+🟢 **This is the clearest licence result the vertical layer has produced on this base.** Every row was resolved on the ref channel and its grant byte-read this pass.
+
+| Platform | Repo | Grant (bytes · `sha256₁₂`) | Branch · `HEAD` | Verdict for a Globant build |
+|---|---|---|---|---|
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** (`1,097 B` · `3c056b34a476`, owner *Learning Equality and other contributors*) | `develop` · `2d29598fc66f` | 🟢 **THE ONE.** The only permissive platform in the whole delivery layer. Offline-first by design, which is exactly the constraint on staff-competence training in a school with no reliable network |
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** (`COPYING.txt`, `35,147 B` · `8ceb4b9ee5ad`) | `main` · `afbcc55fa1bd` | 🔴 Strong copyleft. Plugins are a derivative work. 🔵 **Its payload is byte-identical to OpenEMR's — see below** |
+| **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** (`35,136 B` · `e12d78569742`) | `master` · `d3a86602dcf7` | 🔴 Network copyleft — §13 reaches a hosted deployment. The hardest grant in this table for a studio |
+| **Tutor** (Open edX distro) | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** (`LICENSE.txt`, `34,523 B` · **`0d96a4ff68ad`**) | `release` · `bca91d56136f` | 🔴 Same reach. 🟢 **The payload is byte-identical to the one `p770` recorded on `openfoodfacts-server` and `Kaleidogram` — a third instance on an unrelated register, corroborating `ACTION p768-B` for a copyleft family** |
+| **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** (`34,520 B` · `57c8ff33c9c0`) | `master` · `1c9f0bb8013e` | 🔴 Network copyleft. 🔵 **`3` bytes from Tutor's payload and a different hash — another near-collision; see `T729`** |
+| **OpenEduCat** | [OpenEduCat/openeducat_erp](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **LGPL-3.0 / GPL-3.0, `byref:DANGLING`** (`8,241 B` · `528f84036800`) | **`19.0`** · `46a5d7d40082` | 🔴 Odoo-based education ERP. **Its `LICENSE` delegates ownership to a `COPYRIGHT` file that does not exist** — `ACTION p770-D` re-confirmed on the raw channel, `404` on all four spellings |
+| **Gibbon** | [GibbonEdu/core](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** (`35,121 B` · `93178a43d6d3`) | **`v31.0.00`** · `329ca2f07b49` | 🔴 Strong copyleft. 🔵 **Default branch is a version-shaped name, not `main`** — a trap for any tooling that assumes `main` |
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** (`15,214 B` · `d954e14e5c75`) | **`mobile`** · `e4cd20a48bf1` | 🔴 Strong copyleft. 🔴 **Its default branch is `mobile`** — the most surprising branch name measured on this base. Cloning `master` gets you a non-default tree silently |
+| **Frappe Education** | [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3.0, `declaration-only`** (`license.txt`, **`19 B`** · `1fcecf395312`) | `develop` · `61408d3da518` | 🔴 The whole grant is the string `License: GNU GPL V3`. **A family named, no text shipped, no pointer** (`T734`) |
+| **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT** — `10` filenames probed, `10` × `404` | `master` · `8348cd069aa2` | 🔴 Unusable. A vendor comparison table claims `GPL-2.0`; **the repository ships nothing** |
+| **School Medical Management System** | [NHTung-0801/School-Medical-Management-System](https://github.com/NHTung-0801/School-Medical-Management-System) | 🔴 **NO GRANT** — `10` filenames probed, `10` × `404` | `main` · `f512a63837c3` | 🔴 **The only school-medical-specific platform that exists, and it is unusable.** Spring Boot + MySQL, Vietnamese documentation, with a nurse module that logs parent-supplied medicine and dose times — **precisely this register's product, with no licence** |
+
+### 🟢 The clinical platforms, which is where the register's data model actually lives
+
+| Platform | Repo | Grant | Verdict |
+|---|---|---|---|
+| **OpenMRS** | [openmrs/openmrs-core](https://github.com/openmrs/openmrs-core) · [openmrs-module-fhir2](https://github.com/openmrs/openmrs-module-fhir2) | 🔵 **MPL-2.0** (`18,199 B` · `cdac49b80fab`; `18,792 B` · `628e0ecc1ee3`) | 🔵 **Weak, file-level copyleft — the most favourable copyleft in this document.** Modified MPL files stay MPL; code around them need not. **With the FHIR2 module it speaks the same resources as the permissive stack** |
+| **Open Hospital** | [informatici/openhospital](https://github.com/informatici/openhospital) | 🔴 **GPL-3.0** (`35,149 B` · `3972dc9744f6`) | 🔴 Runs fully offline, which is attractive here — and strong copyleft, which is not |
+| **OpenEMR** | [openemr/openemr](https://github.com/openemr/openemr) | 🔴 **GPL-3.0** (`35,147 B` · `8ceb4b9ee5ad`) | 🔴 Strong copyleft. 🟢 **Byte-identical payload to Moodle's `COPYING.txt`** — an LMS and an EMR, unrelated projects, one identical grant file. A fourth corroboration of `ACTION p768-B`: **a canonical payload identifies the TEXT, never the repository** |
+| **LibreHealth EHR** | [LibreHealthIO/lh-ehr](https://github.com/LibreHealthIO/lh-ehr) | 🔴 **NO GRANT** — `10` × `404` | 🔴 Unusable, against a search claim of MPL-2.0 |
+
+### 🔴 `T727` — the vertical layer's permissive rate is `1` in `10`, and the one is not an SIS
+
+🔴 **Nine of ten education platforms are copyleft, dangling, declaration-only or absent.** The single permissive platform — Kolibri — is a **content-delivery and offline-learning** system. **There is no permissive student information system, no permissive school ERP and no permissive school-health module anywhere in this measurement.**
+
+🟢 **So the deliverable's shape is forced, and this is useful rather than discouraging:** the pupil-health record cannot be a fork of an SIS. It has to be **a service of its own, speaking FHIR, federated to whatever SIS the client already owns** — which is what `P771-1` builds, and why the permissive FHIR stack in `repos/foundations.md` is the register's real platform layer. 🔵 **`p757`'s law — no permissive platform published by the community in a statutory-compliance vertical — holds again here.** `p769`'s `SEED-platform/seed` counter-example required the duty-holder, the data publisher and the funder to be one public body; **on this register they are three different legal persons (`T735`), so the condition fails and the law stands.**
+
+
 ## 🆕 `p770` — **The platform layer on the school-catering register splits cleanly in two, and neither half does the register's job: the education ERP a school already runs has `0` catering tokens, and the one state-published catering platform has `0` allergen tokens. `p757`'s law is re-tested on a seventh register and this time it HOLDS for the allergen duty while breaking for the procurement duty.**
 
 Every platform below was probed on the ref channel and its grant byte-read over a complete tree.

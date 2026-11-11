@@ -7,6 +7,41 @@ updated: 2026-11-11
 # Foundational Repositories — Education
 
 
+## 🆕 `p771` — **Foundations for school medical conditions and medication administration: the record store, the consent record, the authorisation layer, the schedule and — the row that makes the whole register demonstrable — synthetic patients, so nothing is built against a real child's health data.**
+
+🟢 **Every input a per-pupil health-plan engine needs now exists permissively at once** — this is the second register where that is true (`p768` was the first). 🔴 **And the duty layer itself is absent for the SEVENTH consecutive register.** The gap is still one component wide.
+
+| # | Repo | Licence (bytes · `sha256₁₂`) | Branch · `HEAD` | Why it is foundational here |
+|---|---|---|---|---|
+| 1 | [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | **Apache-2.0** (`11,357 B` · `c71d239df917`) · body **canonical** | `master` · `3f77c0353b0b` | `CarePlan` is the IHP; `MedicationAdministration` is the dose event; `AllergyIntolerance` carries over from `p770`'s register unchanged. **The data model does not have to be invented** |
+| 2 | [medplum/medplum](https://github.com/medplum/medplum) | **Apache-2.0** (`9,765 B` · `0477dcb7f150`) · body **canonical** | `main` · `564ed95b4c13` | Same resources with auth, audit log and subscriptions already wired — the fastest route to a defensible access trail |
+| 3 | [synthetichealth/synthea](https://github.com/synthetichealth/synthea) | **Apache-2.0** (`11,357 B` · `b40930bbcf80`) · body **canonical** | `master` · `bd8a52ba0a54` | 🟢 **Synthetic patients with real condition and medication structure.** `p770-I` asked whether a versioned-policy model *"survives contact with personal data and retention limits."* **This row is how you answer that without acquiring any** |
+| 4 | [HL7-FAST/consent-management-server](https://github.com/HL7-FAST/consent-management-server) | **Apache-2.0** (`11,357 B` · `58d1e17ffe51`) · body **canonical** | `main` · `9eebec939d91` | HL7's reference implementation of the Scalable Consent IG — grant, edit, revoke, deny-by-default. **The parental consent record is not a bespoke table** |
+| 5 | [openfga/openfga](https://github.com/openfga/openfga) | **Apache-2.0** (`10,176 B` · `1c46d7b2bed9`) · body **canonical** | `main` · `8e4909c4ac5a` | Who may read which plan, expressed as relationships rather than roles. A first-aider, a class teacher, a supply teacher and a parent are four different relations to one record |
+| 6 | [getodk/collect](https://github.com/getodk/collect) + [getodk/central](https://github.com/getodk/central) | **Apache-2.0** (`10,494 B` · `d1ee81266b96`, **identical on both**) · body **canonical** | `master` · `64860ba746e7` / `20025c1175ec` | Offline-first capture of the signed authorisation and the two-person controlled-drug witness record |
+| 7 | [microsoft/presidio](https://github.com/microsoft/presidio) | **MIT** (`1,084 B` · `f3e86ee59a49`) | `main` · `1d7005932261` | De-identification at the boundary. A pupil's name must not reach a log, a metric label or a model prompt |
+| 8 | [jakubroztocil/rrule](https://github.com/jakubroztocil/rrule) | **BSD-3** (`LICENCE`, `3,493 B` · `6c12f89b62fc`) | `master` · `9f2061febeeb` | RFC 5545 recurrence for the dose schedule and the training-expiry date. 🔵 **The legacy `jkbrzt/rrule` address this base has cited resolves to the same `HEAD` — see `T724` below** |
+| 9 | [dateutil/dateutil](https://github.com/dateutil/dateutil) | **Apache-2.0 *and* BSD-3 in one payload** (`2,889 B` · `ba00f51a0d92`) | `master` · `a78cbd81d5d0` | The Python half of the same cadence layer |
+| 10 | [LinuxForHealth/FHIR](https://github.com/LinuxForHealth/FHIR) | **Apache-2.0** (`11,358 B` · `c6596eb7be85`) · body **canonical** | `main` · `8429bf7e1f6c` | Profile validation strict enough to reject an IHP missing a required field at write time |
+| 11 | [google/fhir-data-pipes](https://github.com/google/fhir-data-pipes) | **Apache-2.0** (`11,358 B` · `cfc7749b96f6`) · body **canonical** | `master` · `38fcd2c6ce5c` | Analytics without querying the operational store — the channel for *"how many plans are overdue for review?"* |
+| 12 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (`1,097 B` · `3c056b34a476`, owner *Learning Equality and other contributors*) | `develop` · `2d29598fc66f` | 🟢 **The only MIT platform in the education-delivery layer** — see `verticals/solutions.md`. Offline-first, which matches the staff-training delivery problem |
+
+### 🔵 `T724` — the legacy `rrule` citation resolves, so it is harmless
+
+`ACTION p770-B` prescribed the right test: *does the DISPLAYED ADDRESS RESOLVE?* Applied to this base's long-standing `jkbrzt/rrule` citation: **`jkbrzt/rrule` and `jakubroztocil/rrule` both return `HEAD` `9f2061febeeb63d03352efe33d30c33073a0242`** — the same repository by owner redirect. 🟢 **Harmless, same class as `NREL/*`.** 🔵 The canonical form is published above because it is the one that will still resolve if the redirect is ever dropped.
+
+### 🔴 The refused foundations, and one of them is a government page's claim
+
+| Address | Measured | Verdict |
+|---|---|---|
+| `CDCgov/IZGateway` | 🔴 **Credential prompt on the ref channel under BOTH spellings** (`IZGateway`, `iz-gateway`), against passing positive controls in the same run | 🔴 **ABSENT-OR-PRIVATE.** The CDC's own immunization-gateway page states the project is *"available to the public under the Apache 2.0 License"*. **No resolvable GitHub address under `CDCgov` corresponds to it.** A published open-source claim by a federal agency with no reachable repository — a class this base has not recorded (`T725`) |
+| [LHNCBC/phr](https://github.com/LHNCBC/phr) | `LICENSE.md` `2,709 B` · `e0f0a9f61c8f`, read in full | 🔴 **ALL RIGHTS RESERVED for the work itself.** *"The Owner of this software, PHR, is the National Institutes of Health… All rights reserved."* Only its **third-party elements** are open (PrototypeJS, jQuery, Rails — MIT; SoundManager 2 — BSD). A search result called it *"BSD-licensed"* (`T732`) |
+| [LibreHealthIO/lh-ehr](https://github.com/LibreHealthIO/lh-ehr) | Resolves `master` · `144776eb0550`; **`10` grant filenames all `404`** | 🔴 **No root grant**, against a search claim of *"licensed mainly under MPL 2.0"* |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | Resolves `master` · `8348cd069aa2`; **`10` grant filenames all `404`** | 🔴 **No root grant**, against a vendor comparison table claiming `GPL-2.0` |
+| [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | `LICENSE.txt` `20,849 B` · `1349a4b61484` | 🔴 **CC-BY-NC-SA-4.0 — NonCommercial.** Reported by a trending aggregator at `86,704★`, the largest education repository in this window. **Globant cannot build on it** (`T739`) |
+| [openmrs/openmrs-core](https://github.com/openmrs/openmrs-core) · [openmrs/openmrs-module-fhir2](https://github.com/openmrs/openmrs-module-fhir2) | **MPL-2.0** (`18,199 B` · `cdac49b80fab`; `18,792 B` · `628e0ecc1ee3`) | 🔵 **Weak, file-level copyleft — usable with care, not a refusal.** Modified MPL files must stay MPL; surrounding proprietary code need not |
+
+
 ## 🆕 `p770` — **The foundation layer of the school-catering register is a product-level allergen corpus at global scale, and the one state-published platform on it handles the PROCUREMENT duty and contains `0` allergen tokens. `6` foundation rows byte-read over complete trees, `1` licence payload proven to be a dangling pointer, and the length channel this base was told to trust at `p769-B` shown to be degenerate.**
 
 Every grant located by **complete-tree enumeration** and read from the cloned blob with `wc -c` and `sha256`; every branch from `git ls-remote --symref`. **No path guessed, no licence taken from an index.**

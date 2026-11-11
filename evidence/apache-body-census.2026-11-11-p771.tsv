@@ -1,0 +1,12 @@
+addr	path	bytes	sha256_12	body_verdict	word_deltas	ownership_slot
+hapifhir/hapi-fhir	LICENSE.txt	11357	c71d239df917	CANONICAL	0	UNFILLED
+mlabonne/llm-course	LICENSE	11357	c71d239df917	CANONICAL	0	UNFILLED
+HL7-FAST/consent-management-server	LICENSE	11357	58d1e17ffe51	CANONICAL	0	UNFILLED
+synthetichealth/synthea	LICENSE	11357	b40930bbcf80	CANONICAL	0	UNFILLED
+LinuxForHealth/FHIR	LICENSE	11358	c6596eb7be85	CANONICAL	0	UNFILLED
+google/fhir-data-pipes	LICENSE	11358	cfc7749b96f6	CANONICAL	0	UNFILLED
+getodk/collect	LICENSE.md	10494	d1ee81266b96	CANONICAL	0	UNFILLED
+getodk/central	LICENSE.md	10494	d1ee81266b96	CANONICAL	0	UNFILLED
+openfga/openfga	LICENSE	10176	1c46d7b2bed9	CANONICAL	0	UNFILLED
+medplum/medplum	LICENSE.txt	9765	0477dcb7f150	CANONICAL	0	UNFILLED
+HKUDS/DeepTutor	LICENSE	11408	cd2f54e1e506	ALTERED	4	Copyright 2025 Data Intelligence Lab, The University of Hong Kong

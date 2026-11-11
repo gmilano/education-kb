@@ -5,6 +5,73 @@ updated: 2026-11-11
 ---
 
 
+## 🆕 `p771` — `2026-11-11` — **GitHub trending for the school medical-conditions register: the register's trending signal is `0`, and the measurement that matters is that `11` Apache-2.0 payloads with `6` different byte lengths and `9` different `sha256` hashes have `10` byte-identical operative bodies.**
+
+🟢 **`ACTION p770-C` said: fingerprint on the hash, not the length. That is correct and this pass corroborates it — and then shows it is not enough.** The hash separates payloads that are the same licence; the length separates payloads that are the same licence; **only the normalised operative body answers the question a studio actually asks.**
+
+### 🟢 The full Apache-2.0 census, measured this pass
+
+| Repo | Bytes | `sha256₁₂` | Operative body | Ownership slot |
+|---|---|---|---|---|
+| [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | `11,357` | `c71d239df917` | 🟢 **canonical** | *unfilled* |
+| [mlabonne/llm-course](https://github.com/mlabonne/llm-course) | `11,357` | `c71d239df917` | 🟢 **canonical** | *unfilled* |
+| [HL7-FAST/consent-management-server](https://github.com/HL7-FAST/consent-management-server) | `11,357` | **`58d1e17ffe51`** | 🟢 **canonical** | *unfilled* |
+| [synthetichealth/synthea](https://github.com/synthetichealth/synthea) | `11,357` | **`b40930bbcf80`** | 🟢 **canonical** | *unfilled* |
+| [LinuxForHealth/FHIR](https://github.com/LinuxForHealth/FHIR) | `11,358` | `c6596eb7be85` | 🟢 **canonical** | *unfilled* |
+| [google/fhir-data-pipes](https://github.com/google/fhir-data-pipes) | `11,358` | **`cfc7749b96f6`** | 🟢 **canonical** | *unfilled* |
+| [getodk/collect](https://github.com/getodk/collect) | `10,494` | `d1ee81266b96` | 🟢 **canonical** | *unfilled* |
+| [getodk/central](https://github.com/getodk/central) | `10,494` | `d1ee81266b96` | 🟢 **canonical** | *unfilled* |
+| [openfga/openfga](https://github.com/openfga/openfga) | `10,176` | `1c46d7b2bed9` | 🟢 **canonical** | *unfilled* |
+| [medplum/medplum](https://github.com/medplum/medplum) | `9,765` | `0477dcb7f150` | 🟢 **canonical** | *unfilled* |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `11,408` | `cd2f54e1e506` | 🔴 **ALTERED — `4` deltas** | 🟢 *Data Intelligence Lab, The University of Hong Kong* |
+
+**`6` distinct byte lengths · `9` distinct hashes · `10` identical bodies · `1` real alteration.**
+
+### 🟢 `T729` — the unit of licence identity is the normalised operative body
+
+🔴 **Neither length nor hash tracks the grant.** Three payloads at exactly `11,357 B` carry **three different hashes** and **one identical body**. Two payloads at `11,358 B` carry two different hashes and the same body. One payload `1,643 B` *shorter* than another (`9,765` vs `11,408`) is the **canonical** one, and the longer is the altered one.
+
+🟢 **The mechanism for the `11,357 B` / different-hash pair, proven at byte level:**
+
+- `HL7-FAST/consent-management-server`: **first byte `\n`**, last byte `.` — **no trailing newline**
+- `hapifhir/hapi-fhir`: first byte *space*, **last byte `\n`**
+
+🟢 **One newline moved from the end of the file to the beginning.** Length preserved exactly; hash changed. 🔵 **`p770` found the same degenerate channel in the AGPL family — *"one space trades places with one newline"* — and this is the Apache family's cleaner version: a single byte relocated, nothing substituted.** Two families, two mechanisms, one conclusion.
+
+### 🔴 `T731` — `p770-C`'s ownership rule is inapplicable to the family that dominates this register
+
+`p770-C` prescribed: *"to establish ownership, READ THE COPYRIGHT LINE."*
+
+🔴 **Measured on `11` Apache payloads: it returns an owner on `1`.** The other `10` have an **unfilled or removed appendix slot**. And a naive first-match is worse than useless — Apache-2.0's own §1 Definitions contains *"the copyright owner or entity authorized by…"*, so `grep -i copyright | head -1` returns **boilerplate on `11` of `11`** and looks like a successful read.
+
+🟢 **Corrected, family-aware rule:**
+
+| Family | Where ownership lives | Reliability measured this pass |
+|---|---|---|
+| **MIT** | Line `1`–`3` of the payload | 🟢 **`13` of `13` returned a real owner** — *Microsoft Corporation*, *Learning Equality*, *THU-MAIC*, *Educhain*, *Zachary A. Pardos — CAHL research lab*, *Panaversity*, *OpenHands contributors*, *crewAI, Inc.* |
+| **Apache-2.0** | Appendix, after `END OF TERMS AND CONDITIONS` | 🔴 **`1` of `11`.** The slot is template boilerplate and almost nobody fills it |
+| **GPL / AGPL** | 🔴 **Nowhere in the payload** — the text is jurisdiction-neutral and names no owner | 🔴 `0` of `8` |
+
+🟢 **So: `ownership:UNOBTAINABLE-FROM-GRANT` is the normal case, not a defect.** Reading the copyright line is a *cheap* test worth keeping; it is not an *ownership* test.
+
+### 🔵 Two more by-reference and declaration-only forms, bringing the catalogue to seven
+
+| Form | Instance | Measured |
+|---|---|---|
+| 🔴 **`byref:DANGLING`** (pointer **plus** payload, target absent) | [OpenEduCat/openeducat_erp](https://github.com/OpenEduCat/openeducat_erp) `LICENSE` `8,241 B` · `528f84036800` | Opens *"For copyright information, please see the COPYRIGHT file."* 🔴 **`ACTION p770-D` executed on the raw channel: `COPYRIGHT`, `COPYRIGHT.txt`, `COPYRIGHT.md` and `copyright` all return `404`.** `p770` inferred this from a tree enumeration; **confirmed independently on a second channel** |
+| 🔵 **`byref:EXTERNAL-URL`** — *new, a seventh form* | [smart-on-fhir/client-js](https://github.com/smart-on-fhir/client-js) `LICENSE` `571 B` · `465cc184a5cb` | *"Copyright 2015 Boston Children's Hospital / Licensed under the Apache License, Version 2.0… You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0"*. 🟢 **Ownership filled, grant real, text absent from the tree.** 🔴 **The first by-reference form whose target is NOT in the repository at all** — the grant's text depends on a third party's website (`T733`) |
+| 🔴 **`declaration-only`** — *new, an eighth form* | [frappe/education](https://github.com/frappe/education) `license.txt` **`19 B`** · `1fcecf395312` | The entire file is `License: GNU GPL V3`. 🔴 **It names a family, ships none of its text and points at no target — neither a payload nor a resolvable pointer** (`T734`) |
+
+### 🔴 Two defects in this pass's own instrument, caught by control before any verdict was written
+
+| Defect | What it did | Fix |
+|---|---|---|
+| **`D1`** | The body-diff gate flagged [getodk/collect](https://github.com/getodk/collect) with **`113` word-level deltas**, which would have published a false `ALTERED` verdict on a clean Apache grant | 🟢 **Its `LICENSE.md` is a Markdown rendering**: typographic quotes (`“Licensor”`), an autolink `<<http://…>>`, a `====` heading rule and `*`/`#` emphasis. Normalising quotes and stripping Markdown took `113` → `37` |
+| **`D2`** | `37` survivors were still presentation: Title Case instead of `ALL CAPS` section headings (`TERMS AND CONDITIONS` vs `Terms and Conditions`) and dropped trailing periods (`Definitions.` → `Definitions`) | 🟢 **Case-folded and stripped `.,:;` — `37` → `0`.** `collect` and `central` are **body-canonical** |
+
+🟢 **The control is the whole point: the same corrected gate that cleared `getodk` still returns `4` deltas on `DeepTutor`.** 🔵 **Without `D1`/`D2` this pass would have published two false alterations and one true one, and had no way to tell them apart.** Presentation variance and clause mutation are distinguishable only by normalising the former away first.
+
+
 ## 🆕 `p770` — `2026-11-11` — **GitHub trending for the school-catering and allergen register: the trending signal is `0` and the measurement that matters is a licence-identity result. Two `AGPL-3.0` payloads of identical `34,523`-byte length have different `sha256`, and the mechanism is a line rewrap.**
 
 **Append-only. This section is added above `p769`'s; the history below it is unchanged.**

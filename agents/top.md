@@ -7,6 +7,73 @@ updated: 2026-11-11
 # Education AI Agents — Curated Top Set
 
 
+## 🆕 `p771` — **School medical conditions and medication administration (`ACTION p770-I`). 🔴 First, as `ACTION p770-A` requires: `make hooks` was TRIED and DENIED again — `[Code from External]` — so the `24`/`71` RED count is unmeasured for a second consecutive pass and this is no longer a one-session accident. 🟢 The register itself answers `p770-I`'s question, and the answer inverts its premise: the duty-holder is NOT the school alone. 🟢 And the pass's largest result is instrumental — `ACTION p770-C` is correct but INSUFFICIENT, and `11` Apache payloads prove it: `6` byte lengths, `9` distinct `sha256`, **`10` byte-identical operative bodies.**
+
+**`58` addresses probed on the ref channel with `git ls-remote --symref` · `45` grant payloads byte-read with length and `sha256₁₂` · `11` Apache-2.0 bodies normalised and diffed against a held canonical · `8` default branches that are **not** `main`/`master` (`Dev`, `develop`×3, `19.0`, `v31.0.00`, `mobile`, `release`) · `2` defects in this pass's own instruments caught by control before any verdict was written · `1` clause-altered licence found on a `>50k★` repository.**
+
+### 🔴 First, the instruction this pass was required to try, and its result
+
+`ACTION p770-A` was explicit: **try `make hooks` first, and if it is denied, say so in the first line of the pass.** It was tried as the fourth command of this pass, before any research.
+
+🔴 **Denied again, same reason: `[Code from External]`.** `p770` recorded the denial as possibly *"per-session, not settled"* — **it is now denied in two consecutive sessions, so the honest reading is that it is settled against this base until the harness changes.** The `23` standing RED gates and their `308` findings are **unmeasured for a second pass** and remain this base's largest known liability (`ACTION p771-A`).
+
+🟢 **What was done instead, stated as a fraction and not as parity.** A licence-integrity gate was written from scratch this pass (not copied from the repository) covering **one** contract the repo's runner does not implement at all: *does a payload that declares a licence family actually contain that family's operative text?* 🔴 **One contract against seventy-one is not parity and is not offered as such.** 🟢 **But it is not a substitute either — it is new, and it found a defect `make hooks` would not have caught.**
+
+### 🟢 The verified permissive set — `22` rows, `0` padded
+
+Every row below was resolved on the ref channel this pass and its grant payload byte-read on `raw.githubusercontent.com`. 🔴 **The `★` column is absent by decision, not by omission: see `ACTION p770-F` below — the API and HTML channels are both `403` at this tunnel, so a star count cannot be sourced for any row. `default branch` and `HEAD` are published instead because they were obtainable for all `58` addresses.**
+
+| Agent / component | Repo | Licence (bytes · `sha256₁₂`) | Branch · `HEAD` | What it does on this register |
+|---|---|---|---|---|
+| **HAPI FHIR** | [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | **Apache-2.0** (`11,357 B` · `c71d239df917`) · body **canonical** | `master` · `3f77c0353b0b` | The reference Java FHIR server. Holds `CarePlan` (the individual healthcare plan) and `MedicationAdministration` (the dose event) as first-class resources |
+| **Medplum** | [medplum/medplum](https://github.com/medplum/medplum) | **Apache-2.0** (`9,765 B` · `0477dcb7f150`) · body **canonical** | `main` · `564ed95b4c13` | FHIR-native backend with auth and audit built in; the shortest path to a per-pupil record with an access log |
+| **Microsoft FHIR Server** | [microsoft/fhir-server](https://github.com/microsoft/fhir-server) | **MIT** (`1,162 B` · `27ebda9d51f0`, owner *Microsoft Corporation*) | `main` · `746200b40348` | The MIT option where Apache's patent clause is contested in procurement |
+| **IBM / LinuxForHealth FHIR** | [LinuxForHealth/FHIR](https://github.com/LinuxForHealth/FHIR) | **Apache-2.0** (`11,358 B` · `c6596eb7be85`) · body **canonical** | `main` · `8429bf7e1f6c` | Server with strong profile validation — the piece that can reject a malformed IHP at write time |
+| **FAST Consent Management Server** | [HL7-FAST/consent-management-server](https://github.com/HL7-FAST/consent-management-server) | **Apache-2.0** (`11,357 B` · `58d1e17ffe51`) · body **canonical** | `main` · `9eebec939d91` | HL7's own reference implementation of scalable consent. **The parental-consent record `p770-I` asked about has a permissive reference implementation** |
+| **OpenFGA** | [openfga/openfga](https://github.com/openfga/openfga) | **Apache-2.0** (`10,176 B` · `1c46d7b2bed9`) · body **canonical** | `main` · `8e4909c4ac5a` | Relationship-based authorisation (CNCF). Answers *"may this teaching assistant read this pupil's plan?"* — the question an EHR's role model cannot express |
+| **SMART on FHIR client** | [smart-on-fhir/client-js](https://github.com/smart-on-fhir/client-js) | **Apache-2.0 `byref:EXTERNAL-URL`** (`571 B` · `465cc184a5cb`, owner *Boston Children's Hospital*) | `master` · `c004216e55fb` | Browser/Node client. 🔵 **A seventh by-reference grant form — see `T733`: the pointer leaves the tree entirely** |
+| **Google FHIR Data Pipes** | [google/fhir-data-pipes](https://github.com/google/fhir-data-pipes) | **Apache-2.0** (`11,358 B` · `cfc7749b96f6`) · body **canonical** | `master` · `38fcd2c6ce5c` | Turns the record store into a queryable warehouse without touching the operational server |
+| **Synthea** | [synthetichealth/synthea](https://github.com/synthetichealth/synthea) | **Apache-2.0** (`11,357 B` · `b40930bbcf80`) · body **canonical** | `master` · `bd8a52ba0a54` | 🟢 **The register's most important row.** Generates synthetic patients with conditions and medications, so an IHP pipeline can be built and demonstrated **without a single real child's health data** |
+| **Presidio** | [microsoft/presidio](https://github.com/microsoft/presidio) | **MIT** (`1,084 B` · `f3e86ee59a49`) | `main` · `1d7005932261` | PII detection and de-identification. The piece that keeps a pupil's name out of a log line or an LLM prompt |
+| **ODK Collect** | [getodk/collect](https://github.com/getodk/collect) | **Apache-2.0** (`10,494 B` · `d1ee81266b96`) · body **canonical** | `master` · `64860ba746e7` | Offline Android capture — the signed parental authorisation and the witness signature, collected where there is no network |
+| **ODK Central** | [getodk/central](https://github.com/getodk/central) | **Apache-2.0** (`10,494 B` · `d1ee81266b96`) · body **canonical** | `master` · `20025c1175ec` | The server half of the above. 🔵 **Byte-identical grant to `collect` — a passing positive control for the hash channel** |
+| **OpenHands** | [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | **MIT** (`1,096 B` · `e1d1fa9f3a8d`, owner *OpenHands contributors*) | `main` · `b759f8a7f4cf` | General coding agent; the one that can be pointed at an LMS plugin tree |
+| **LangGraph** | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | **MIT** (`1,072 B` · `d9bb52f2e354`) | `main` · `5ea88ecbcdb9` | Stateful graphs. The duty engine in `P771-4` is a graph with one policy node per jurisdiction |
+| **CrewAI** | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | **MIT** (`1,055 B` · `28868731966f`, owner *crewAI, Inc.*) | `main` · `4254a835b1e5` | Role-based multi-agent. 🔵 **Its payload omits the MIT title line entirely — a title-line classifier returns `UNRECOGNISED`; same defect class as `p769`'s Zlib `D7`** |
+| **Pydantic AI** | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | **MIT** (`1,100 B` · `bc0e89738f36`) | `main` · `e07dc6e283e0` | Typed, validated agent output — the right shape when the output is a dose and a time |
+| **OpenAI Agents SDK** | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | **MIT** (`1,063 B` · `13df7812ca53`) | `main` · `64fbde5d02b4` | Lightweight handoffs and guardrails |
+| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** (`1,065 B` · `ba2525637432`, owner *THU-MAIC, 2026*) | `main` · `8c29069daf43` | Tsinghua's multi-agent classroom — turns a document into an interactive class. The staff-competence training in `P771-3` is a document today |
+| **Educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | **MIT** (`1,092 B` · `e3321a1b62cd`, owner *Educhain*) | `main` · `38adb1e9459d` | Generates questions, lesson plans and quizzes from source material — the competence assessment, not the policy |
+| **OATutor** | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | **MIT** (`1,105 B` · `5baaaf977a28`, owner *Zachary A. Pardos — CAHL research lab*) | `main` · `fae8cc474484` | Berkeley's open ITS with Bayesian knowledge tracing — the only row here with a published mastery model |
+| **AI Agents for Beginners** | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | **MIT** (`1,141 B` · `c2cfccb812fe`, owner *Microsoft Corporation*) | `main` · `4bcf574c06d3` | Curriculum. 🔵 **Grant byte-identical to `microsoft/generative-ai-for-beginners` — same org, a second passing control** |
+| **Learn Agentic AI** | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | **MIT** (`1,068 B` · `8ea022e30a9b`, owner *Panaversity*) | `main` · `dd7426f65b24` | Curriculum for agent engineering at scale |
+
+### 🔴 The row that looks like the register's product, and carries no grant at all — fourth consecutive register
+
+🔴 **`NHTung-0801/School-Medical-Management-System` is the only school-medical-specific repository this pass found in any language, and it has NO licence file.** It resolves (`main` · `f512a63837c3`); `10` grant filenames were probed on the raw channel and **all `10` return `404`**.
+
+🔴 **A search result stated *"its listed license is MIT."*** It is not. **The payload is the authority and there is no payload** — the same class as `T691`, and the fourth register running where the artefact that looks most like the product is the one a studio cannot use.
+
+### 🔴 `HKUDS/DeepTutor` declares the Apache License and does not ship it — the pass's headline finding
+
+This base has cited DeepTutor since `p754` and third-party trending lists put it above `50k★`. Its `LICENSE` is **`11,408 B` · `cd2f54e1e506`**, which deviates `+51 B` from the canonical `11,357 B`. 🔴 **`p769`'s rule read a deviation as *"the owner line was filled in."* It was — and something else was changed in the same edit.**
+
+Normalised and diffed against the held canonical body, **`4` substantive word-level deltas sit inside the operative text, not the appendix**:
+
+| Location | Canonical Apache-2.0 | DeepTutor's text |
+|---|---|---|
+| §1 Definitions ("Contribution") | `submitted to Licensor for inclusion` | `submitted to **the** Licensor for inclusion` |
+| §1 Definitions ("Contributor") | `received by Licensor and` | `received by **the** Licensor and` |
+| **§4(b) — the NOTICE redistribution condition** | `excluding **those** notices that do not` | `excluding **any** notices that do not` |
+| Appendix instruction | `...included on the same "printed page" as the copyright notice...` | `...get an "Alarm or alarm" copyright header... (Alarm is the umbrella trademark for a collection of Open Source projects)` |
+
+🟢 **The ownership slot IS filled, and it is real:** `Copyright 2025 Data Intelligence Lab, The University of Hong Kong`.
+
+🔴 **So the verdict is not "Apache-2.0" and not "no licence". It is: a bespoke licence that resembles Apache-2.0, from an identified owner.** The `those` → `any` substitution is in a **redistribution condition** — exactly the clause a studio shipping a derivative must satisfy. 🔵 **The appendix text naming an *"Alarm"* umbrella trademark is not Apache's text in any version and reads as a find-and-replace or rewriting artefact.**
+
+🟢 **Recorded as `grant:BESPOKE-APACHE-LIKE`, `ownership:ESTABLISHED`, `legal-review:REQUIRED`. Not refused — flagged.** A studio may well be able to use it; it may not do so on the strength of the string *"Apache License"*.
+
+
 ## 🆕 `p770` — **School catering and allergen compliance (`ACTION p769-H`). 🔴 `ACTION p769-A` — *"run `make hooks` first, fix gates, do not start a new register until RED is below `12`"* — **could not be executed: the gate runner is DENIED in this session as external code**, so the `24`/`71` RED count is neither measured nor reduced this pass and the register was built under a substitute instrument that is honestly weaker. 🟢 The register itself answers `p769-H`'s question: the duty-holder split is real, and the allergen duty layer does not exist in open source for the **sixth** consecutive register. 🟢 And the pass's largest result is instrumental: `ACTION p769-B`'s length rule is **falsified in both directions**, with a mechanism — two `AGPL-3.0` payloads of **identical `34,523`-byte length** have **different `sha256`**.**
 
 **`13` addresses probed on the ref channel with `git ls-remote --symref` · `11` complete git trees enumerated (`13,000+` paths) · `17` grant payloads byte-read with length and `sha256₁₂` · `4` default branches that are **not** `main`/`master` (`staging`, `develop`, `master`, `19.0`) · `6` defects in this pass's own instruments caught by control before any verdict was written · `2` real structural defects found and FIXED on this base.**

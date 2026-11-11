@@ -5,6 +5,32 @@ updated: 2026-11-11
 ---
 
 
+## 🆕 `p771` — `2026-11-11` — **What is new this week on the school medical-conditions and medication register: the trending signal for the register itself is `0` for the seventh consecutive register, and the week's real movement is a licence-integrity result on a repository this base has cited for seventeen passes.**
+
+🔴 **Register-specific trending: `0`.** No school medical-conditions, IHP or medication-administration repository appears in any trending list, in any language, this week. The only school-medical-specific repository found at all — `NHTung-0801/School-Medical-Management-System` — **carries no licence file** and is not in any trending feed.
+
+### 🟢 New this week, and it changes a row rather than adding one
+
+| What moved | Measured this pass | Why it matters |
+|---|---|---|
+| 🔴 **`HKUDS/DeepTutor` is not Apache-2.0** | `LICENSE` `11,408 B` · `cd2f54e1e506`; normalised body diff vs canonical → **`4` substantive deltas in §1 and §4(b)**; ownership slot filled: *Copyright 2025 Data Intelligence Lab, The University of Hong Kong* | The most-cited education agent on this base ships a **bespoke Apache-like licence**. `those`→`any` sits in the NOTICE redistribution condition. **`legal-review:REQUIRED`** (`T730`) |
+| 🔴 **`datawhalechina/hello-agents` is NonCommercial** | `LICENSE.txt` `20,849 B` · `1349a4b61484` = **CC-BY-NC-SA-4.0** | Reported at `86,704★` (`+3,550` since `2026-10-15`) — **the largest education repository in this trending window is one Globant cannot build on** (`T739`) |
+| 🔵 **`THU-MAIC/OpenMAIC` confirmed MIT and confirmed 2026** | `LICENSE` `1,065 B` · `ba2525637432`, owner *THU-MAIC*, **`Copyright (c) 2026`** | Tsinghua's multi-agent classroom, reported at ~`42k★`. 🟢 **A clean permissive grant with a filled owner line and a current year** — the counter-example to the row above |
+| 🔵 **`mlabonne/llm-course` carries the licence-picker template** | `LICENSE` `11,357 B` · **`c71d239df917`** | The template fingerprint `p768` first recorded. **The census of unrelated repositories sharing this exact payload now stands at `8` across three continents** |
+| 🔵 **`patchy631/ai-engineering-hub` MIT, verified** | `LICENSE` `1,066 B` · `93123909818c` | Reported at ~`40,466★`. Grant is clean; no ownership name in the payload |
+
+### 🔴 The trending signal this base keeps measuring and keeps not finding
+
+Seven consecutive registers have now returned **`0`** trending repositories for the statutory duty itself. 🟢 **The pattern is stable enough to state as a market fact rather than a measurement failure:** GitHub's trending surface tracks *developer-facing tooling*, and a statutory duty on a school is **procurement-facing**. The supply that exists for these registers appears as a single public body's repository at `<200★`, never as a trend.
+
+🔵 **So this shelf's honest function on a compliance register is to record movement in the *components*, which is what the table above does, and to say plainly that the register has none of its own.**
+
+### 🔴 Declared gaps for this week
+
+- 🔴 **No star count on this shelf was read first-hand.** The GitHub REST API and the HTML page are both `403` at this tunnel (`ACTION p770-F`, re-measured and unchanged). Every `★` figure above is **attributed to the third-party aggregator that reported it** and is not endorsed.
+- 🔴 **`0` grant-carrying Japanese, Spanish, Portuguese or German repositories on this register.** Four non-English legs run; see `intel/open-gaps.md` for the counts and the mechanism.
+
+
 ## 🆕 `p770` — `2026-11-11` — **What is new this week on the school-catering and allergen register: one MIT cross-contact engine at `0★`, one state-published platform with `0` allergen tokens, and a gate runner that stopped being runnable.**
 
 **Append-only. This section is added above `p769`'s; the history below it is unchanged.**

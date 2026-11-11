@@ -5,6 +5,87 @@ updated: 2026-11-11
 ---
 
 
+## 🆕 `p771` — `P771-1`–`P771-5` — **school medical conditions and medication administration: five recipes over the `22` permissive artefacts verified this pass, plus the duty layer that must be written because — for the seventh consecutive register — nobody open-sources it.**
+
+🟢 **`ACTION p770-H` discharged as a measurement, and the pass-scoped prefix is adopted as a permanent convention rather than a stopgap — see the note at the end of this section.**
+
+### `P771-1` — The individual healthcare plan as a versioned record with a separable consent
+
+🔴 **The failure mode this register introduces is not restatement (`P352`) or omission (`P350`). It is that the PLAN and the CONSENT have different lifetimes and different legal bases, and a single record cannot hold both.** A parent withdraws consent for a specific medication; the plan itself remains in force. Retention limits reach the consent evidence long before they reach the safeguarding record.
+
+🟢 **Wire:**
+- **Record store:** [medplum/medplum](https://github.com/medplum/medplum) (**Apache-2.0**, `9,765 B` · `0477dcb7f150`, body canonical) or [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) (**Apache-2.0**, `11,357 B` · `c71d239df917`). The IHP is a **FHIR `CarePlan`**; conditions are `Condition`; allergy carries over from `p770`'s register as `AllergyIntolerance` **unchanged** — the two registers share a resource, a first on this base.
+- **Consent, as its OWN aggregate:** [HL7-FAST/consent-management-server](https://github.com/HL7-FAST/consent-management-server) (**Apache-2.0**, `11,357 B` · `58d1e17ffe51`, body canonical). Deny-by-default, with grant / edit / revoke as events. 🟢 **Never a boolean column on the plan.**
+- **Key:** `(pupil, plan_version, consent_version)`. **Never `UPDATE` a published plan** — insert `version = n+1`, retain `n`. 🔵 Inherited from `P352` and it survives contact with personal data **only because consent is separate**: a consent revocation must not create a new clinical plan version, and a plan revision must not silently re-grant a withdrawn consent.
+- **Authorisation:** [openfga/openfga](https://github.com/openfga/openfga) (**Apache-2.0**, `10,176 B` · `1c46d7b2bed9`). A first-aider, a class teacher, a supply teacher and a parent are **four different relations to one record**, which a role column cannot express.
+- **Capture:** [getodk/collect](https://github.com/getodk/collect) + [getodk/central](https://github.com/getodk/central) (**Apache-2.0**, both `10,494 B` · `d1ee81266b96`) for the signed parental authorisation, offline.
+- 🟢 **Build it on [synthetichealth/synthea](https://github.com/synthetichealth/synthea)** (**Apache-2.0**, `11,357 B` · `b40930bbcf80`). **No real pupil health data enters a demo, a test fixture or a model prompt.** This is the row that makes the register deliverable at all.
+- **Boundary:** [microsoft/presidio](https://github.com/microsoft/presidio) (**MIT**, `1,084 B` · `f3e86ee59a49`) on every log line, metric label and LLM prompt.
+- 🔴 **EMEA constraint, hard:** the EU AI Act's **emotion-recognition ban in education has been in force since February 2025**. Inferring pupil distress from camera or voice is **prohibited**, not risky. Do not design it.
+- **Effort:** `8`–`10` weeks.
+
+### `P771-2` — The medication administration record as an append-only event log with a witness
+
+🟢 **Wire:** **FHIR `MedicationAdministration`**, one resource per dose **given or refused**, on the same store as `P771-1`.
+- 🔴 **`UPDATE` is forbidden here for a different reason than in `P352`:** a dose event is a contemporaneous safety record. A correction is a **new event with a `status` of `entered-in-error` pointing at the original**, never an edit. The original stays readable forever.
+- **Schedule:** [jakubroztocil/rrule](https://github.com/jakubroztocil/rrule) (**BSD-3**, `3,493 B` · `6c12f89b62fc`) and [dateutil/dateutil](https://github.com/dateutil/dateutil) (**Apache-2.0 and BSD-3 in one payload**, `2,889 B` · `ba00f51a0d92`) for *"twice daily with food, school days only, term time only"* — 🔵 **a recurrence that must respect a school calendar, which is an exclusion set, not an `RRULE`.**
+- **Controlled drugs:** a two-person witness signature captured through **ODK Collect**, stored as a `Provenance` with two `agent` entries. 🔴 **The quantity-remaining balance is a running total that must reconcile to a physical count** — model the count as its own event, not as a derived field.
+- 🔵 **Queensland's rule is the cleanest test of the model:** over-the-counter medication may be given **only if medically authorised**, while in an anaphylaxis emergency staff **administer without delay and without authorisation**. 🟢 **So `authorisation_required` is a property of the EVENT CLASS, not of the medication.**
+- **Effort:** `4`–`6` weeks on top of `P771-1`.
+
+### `P771-3` — The staff-competence register, keyed on the device and not only the date
+
+🔴 **This is the North American and APAC deliverable, and it is a different product from `P771-1`.** The US sets no plan cadence and a firm **training** cadence; Australia prescribes the **device**.
+
+🟢 **Wire:**
+- **Key: `(staff, device, jurisdiction, course)` → expiry.** 🔴 **Not `(staff, date)`.** Victoria's `2026` Neffy-and-Jext workshop requirement proves why: **a new approved device invalidates existing competence without any date passing.** Australia has **`4` TGA-approved devices — EpiPen®, Anapen®, Jext®, Neffy® — and they are not administered the same way.**
+- **Cadence:** `rrule` per jurisdiction — `FREQ=YEARLY` for Virginia (`≥2` staff beyond the nurse, *not less than annually*), Illinois (ISBE annual) and California (annual refresher); a **recommendation rather than a rule** for Colorado; and a **device-event trigger** with no recurrence at all for Victoria.
+- **Evidential export:** 🟢 **Illinois requires documentation kept on file.** That is the hook — the product's output is a signed, dated register a district can hand an inspector.
+- **Training delivery:** [learningequality/kolibri](https://github.com/learningequality/kolibri) (**MIT**, `1,097 B` · `3c056b34a476`) — 🟢 **the only permissive platform in the whole education delivery layer**, and offline-first, which matches a school hall with no network. Assessment items generated with [satvik314/educhain](https://github.com/satvik314/educhain) (**MIT**, `1,092 B` · `e3321a1b62cd`); mastery tracked with [CAHLR/OATutor](https://github.com/CAHLR/OATutor) (**MIT**, `1,105 B` · `5baaaf977a28`) if a published BKT model is wanted.
+- 🔴 **US positioning constraint:** a 2026 DC-area policy bars AI from **grading, discipline, IEP decisions and teacher evaluations**. An IHP is adjacent to an IEP. 🟢 **Position any AI here as a drafting aid attributed to a named human, never a decision-maker.**
+- **Effort:** `6`–`8` weeks.
+
+### `P771-4` — The four-shape duty engine, because the regions do not share an addressee
+
+🔴 **`P350` assumed one data model and four cadence rules. `P352` added version and basis. Neither survives this register, because the four regions bind four different LEGAL PERSONS** (`T735`).
+
+🟢 **Wire:** [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) (**MIT**, `1,072 B` · `d9bb52f2e354`) with **one policy node per jurisdiction**, each declaring `addressee`, `artefact`, `cadence_shape` and `evidence`:
+
+| Node | `addressee` | `artefact` | `cadence_shape` |
+|---|---|---|---|
+| `england` | **the school** (s.100 CFA 2014) | versioned plan **+ a PUBLISHED policy** | review interval, **to be set by final guidance** |
+| `us_state` | **the district/administrator** | **competence register** + documentation on file | staff-count rule + annual or biennial interval |
+| `au_state` | **the school**, procedure set by the state | device holding + Action Plan | **device-change event**, not a date |
+| `br_cofen` | 🔴 **the NURSE**, supervised by an **ERT** | nursing record + supervision trail | none stated |
+
+- 🔴 **The Brazilian node must be able to answer *"this school has no nurse, so the duty does not attach"*** — a state no other node can represent. 🟢 **Make `addressee` a first-class field and the switch is declarative instead of four codebases.**
+- 🔴 **Typed outputs:** [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) (**MIT**, `1,100 B` · `bc0e89738f36`) — when the output is a dose, a time or a statutory deadline, a free-text answer is a defect.
+- 🔴 **England's final text is NOT confirmed published** (consultation closed `15 May 2026`, in force *intended* September 2026). 🟢 **So the cadence is configuration, loaded at runtime — not a constant in the engine.**
+- **Effort:** `10`–`12` weeks for all four nodes; `4` weeks for any one.
+
+### `P771-5` — The licence-integrity gate, as a build step rather than a pass's one-off
+
+🟢 **This pass built it and it immediately found a clause-altered licence on a repository above `50k★` that every scanner in the ecosystem passes.** It is `~40` lines and it belongs in CI.
+
+🟢 **Wire:**
+1. **Resolve** every dependency address on the ref channel — `git ls-remote --symref` — and record the real `default_branch`. 🔴 **Never guess `main`:** this pass measured `8` that are not `main`/`master`, including `mobile` and `v31.0.00`.
+2. **Byte-read** the grant from `raw.githubusercontent.com/<addr>/HEAD/<path>`, over the `10`-filename probe set. Record **bytes and `sha256₁₂`**.
+3. **Normalise** before comparing: split at `END OF TERMS AND CONDITIONS`, fold typographic quotes, strip Markdown (`*_#`` ` ``<>=`) and HTML entities, strip `.,:;`, collapse whitespace, **case-fold**. 🔴 **Steps `3` is not optional — without it a legitimate Markdown rendering of Apache-2.0 reports `113` false deltas.** That was this pass's `D1`/`D2`.
+4. **Diff** the normalised body against a **held canonical** for the declared family and fail the build on `body:ALTERED`.
+5. **Then** read ownership — **from the payload head for MIT, from the appendix for Apache-2.0** — and grade `ownership:ESTABLISHED` or `ownership:UNOBTAINABLE-FROM-GRANT`. 🔵 Expect the latter: measured `1`/`11` on Apache, `0`/`8` on GPL/AGPL, `13`/`13` on MIT.
+6. **Grade the by-reference forms rather than silently accepting them:** `byref:resolved`, `byref:DANGLING` (OpenEduCat's absent `COPYRIGHT`), `byref:EXTERNAL-URL` (smart-on-fhir), `declaration-only` (frappe/education's `19` bytes).
+
+🔴 **Known limit, stated plainly:** this is **one** contract. The repository's own `make hooks` runs **`71`** and **has now been denied in two consecutive sessions as external code** (`ACTION p771-A`). 🟢 **One against seventy-one is not parity — but this one is additive: `make hooks` does not implement it, and it caught a real defect this pass.**
+
+### 🟢 `ACTION p770-H` discharged — and `p770` understated the collision by roughly `170×`
+
+`p770` wrote: *"`P347` already means two things."* 🔴 **Measured base-wide this pass: `171` `P` ids appear in BOTH `compose/patterns.md` and `repos/trending.md`.** `794` distinct `P` ids live on the shelves, `250` are defined as patterns in this file, and the highest allocated is `P1065`.
+
+🔴 **So `p770`'s prescribed remedy — renumber the legacy ids — is not safely executable.** It would require rewriting `171` ids across two **append-only** history shelves, which destroys the record it is meant to protect. 🔵 **Same error class as `ACTION p769-C`, where literal execution would have deleted its own evidence.**
+
+🟢 **Resolution adopted: the pass-scoped form `P{pass}-{n}` is not a stopgap, it is the fix.** It cannot collide with a bare `P\d+` by construction and it requires **zero edits to history**. 🟢 **The bare `P\d+` namespace is hereby CLOSED to new allocation.** `p770` used `P770-1`…`P770-5` and called it *"safe but not a convention"* — **it is now the convention.**
+
+
 ## 🆕 `p770` — `P770-1`–`P770-5` — **school catering and allergen compliance: five recipes over the `4` permissive artefacts this register actually has, plus the duty layer that has to be written because nothing open implements it.**
 
 Every repository named below was byte-read for its grant this pass over a **complete git tree**, with the branch taken from `git ls-remote --symref`. **Four non-`main` default branches appear in these recipes — `staging`, `develop`, `master` and `19.0` — and a build script that assumes `main` fails on all four.**

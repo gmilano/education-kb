@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p771` (researched 2026-11-11) — `T724`–`T739`
+
+**Register: school medical conditions and medication administration** (`ACTION p770-I`). 🔴 **`make hooks` tried first as `ACTION p770-A` requires, and DENIED again — `[Code from External]`, second consecutive session.**
+
+### 🟢 `T729` — the unit of licence identity is the normalised operative body, not the file, not its length, and not its hash
+
+**`11` Apache-2.0-declared payloads: `6` distinct byte lengths, `9` distinct `sha256`, `10` byte-identical operative bodies.** Three payloads at exactly `11,357 B` carry three different hashes and one identical body. A payload `1,643 B` shorter than another is the canonical one; the longer is the altered one.
+
+🟢 **Supersedes the sequence `p768-B` → `p769-B` → `p770-C` by completing it.** `p768-B` (never prove identity from a canonical payload) **holds**. `p769-B` (length deviation as the ownership test) was **falsified at `p770`**. `p770-C` (fingerprint on the hash, establish ownership by reading the copyright line) is **correct and insufficient**: the hash separates payloads that are the same licence, and the copyright line misses a changed clause. 🟢 **The test that answers the studio's question: normalise and diff the body against a held canonical, then grade `body:canonical` or `body:ALTERED`.**
+
+### 🔴 `T730` — a repository can declare a licence family and ship a modified text, and nothing in the ecosystem catches it
+
+[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) — cited on this base since `p754`, reported above `50k★` — ships `LICENSE` `11,408 B` · `cd2f54e1e506` titled **"Apache License"** with **`4` substantive deltas against the canonical text**, including `excluding those notices` → `excluding any notices` in **§4(b), a redistribution condition**, and an appendix instruction replaced by text naming an *"Alarm"* umbrella trademark that appears in no version of Apache-2.0.
+
+🟢 **Ownership is establishable and real:** `Copyright 2025 Data Intelligence Lab, The University of Hong Kong`. 🔴 **The verdict is `grant:BESPOKE-APACHE-LIKE`, `legal-review:REQUIRED` — neither "Apache-2.0" nor "unlicensed".** A title-line classifier, an SPDX scanner and a length-band check all pass it.
+
+### 🔴 `T731` — ownership is unobtainable from the grant in the normal case, and the rate is family-determined
+
+Measured: **MIT `13`/`13`** returned a real owner from the payload head. **Apache-2.0 `1`/`11`** — the appendix slot is template boilerplate and almost nobody fills it. **GPL/AGPL `0`/`8`** — the text names no owner at all, by design. 🔴 **And a naive `grep -i copyright | head -1` returns Apache §1's *"the copyright owner or entity authorized by…"* on `11` of `11`, which looks exactly like a successful read.** 🟢 **`ownership:UNOBTAINABLE-FROM-GRANT` is the expected state, not a finding.**
+
+### 🔴 `T732` — "All rights reserved" is a true positive and a false positive, and the discriminator is whether a grant follows
+
+`p769`'s `D5` recorded a defect where `PROPRIETARY/ARR` fired wrongly on LBNL's `Copyright.txt`, because *"All rights reserved"* opens almost every BSD payload. 🔴 **Here the same string is correct:** [LHNCBC/phr](https://github.com/LHNCBC/phr) `LICENSE.md` (`2,709 B` · `e0f0a9f61c8f`) reads *"The Owner of this software, PHR, is the National Institutes of Health… **All rights reserved**"* and then lists only its **third-party** elements as open. A search result called it *"BSD-licensed"*. 🟢 **The rule: `ARR` is dispositive only when NO grant of rights follows it in the same payload. The phrase is never the evidence; the absence of a grant is.**
+
+### 🔵 `T733` — `byref:EXTERNAL-URL`, a seventh by-reference grant form
+
+[smart-on-fhir/client-js](https://github.com/smart-on-fhir/client-js) `LICENSE` is `571 B` · `465cc184a5cb`: a filled copyright line (*Boston Children's Hospital*) plus *"Licensed under the Apache License, Version 2.0… You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0"*. 🟢 **Grant real, ownership filled, text absent from the tree.** 🔴 **The first by-reference form whose target is outside the repository entirely** — `p770-D`'s rule (*"resolve it in the same tree"*) has no in-tree path to resolve. 🟢 **Extend the grading: `byref:resolved` · `byref:DANGLING` · `byref:EXTERNAL-URL`.**
+
+### 🔴 `T734` — `declaration-only`, an eighth form: a family named with no text and no pointer
+
+[frappe/education](https://github.com/frappe/education) `license.txt` is **`19` bytes**: `License: GNU GPL V3`. 🔴 **Not a payload, and not a pointer either — there is no target to resolve.** It asserts a family and ships nothing. 🔵 **Distinguishable from `p769`'s `Insert your license here` (no grant) and `p770`'s dangling pointer (a named target that is absent): this names a *family* rather than a *path*.**
+
+### 🔴 `T735` — the first register where a region's duty binds a PROFESSION rather than an institution
+
+Brazil's only live instrument, **`Resolução COFEN nº 805/2026`**, is a professional-council resolution addressed to the nurse, under an **ERT** supervision requirement — while a **COREN-SP parecer (2024)** confirms **no Brazilian legislation requires a nurse in a school at all**. 🔴 **A Brazilian school with no nurse is outside the duty.** 🟢 **So the LATAM deliverable is a nursing product sold to the health side, not a school-compliance product — a different buyer, budget and regulator.** `p770-I` predicted *"the school alone, the clean single-buyer control"*; **the premise is falsified and the four regions bind four different legal persons.**
+
+### 🔴 `T736` — the duty layer is absent for the seventh consecutive register, and here the absence has a named victim
+
+🔴 **The only school-medical-specific repository in existence, [NHTung-0801/School-Medical-Management-System](https://github.com/NHTung-0801/School-Medical-Management-System), carries NO licence file** — `10` filenames probed, `10` × `404` — against a search result asserting MIT. 🟢 **Every component the duty layer needs is permissive and verified; the layer binding them is not published by anyone.** Fourth consecutive register with the gap exactly one component wide.
+
+### 🔴 `T737` — non-English supply is coursework at `0` grants, and `T690` survives in its weakened form
+
+Four legs run — **Japanese, Spanish, Portuguese, German-adjacent**. Returns: a Vietnamese Spring Boot project (no grant), a Spanish `enfermeria-escolar` web system (no grant), a Spanish Django `CuidARP` (no grant), Brazilian `farmacore`, `enfermagemUnifor`, `MedControl`, `nursing` (no grants), a Japanese `school-barcode` labelled only *薬品管理* (no grant). 🔴 **`0` grant-carrying repositories across all four languages.**
+
+🟢 **This corroborates `T690`'s surviving form exactly and sharpens it:** non-English supply is rich where the **data owner is a public body** and near-nil where the duty-holder is a **single institution or an individual professional**. 🟢 **On this register the addressee is a school or a nurse in every region — so the predictor said "near-nil" in advance and measured near-nil.** 🔵 **First register where `T690` was used as a prediction rather than fitted after the fact.**
+
+### 🔴 `T738` — the market spread is now a standing instruction, not an observation
+
+One search returned **`$2.21B` to `$11.40B` for the same year, 2026**, on the AI-in-education market — a **`5.2×`** spread — with CAGRs from **`12.7%` to `45%`**. 🟢 **`p769` reached the same conclusion on a `100×` carbon-accounting spread. Promoted: quote the duty's dates and the addressable estate's COUNT; never quote a single market size on this base.** 🟢 **`24,499` schools in England (DfE, Jan 2026) is the kind of number that survives contact with a client.**
+
+### 🔴 `T739` — the largest education repository in this trending window is NonCommercial
+
+[datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) — reported at **`86,704★`, `+3,550` since `2026-10-15`** — carries `LICENSE.txt` `20,849 B` · `1349a4b61484` = **CC-BY-NC-SA-4.0**. 🔴 **Globant cannot build on it.** 🔵 **Third consecutive register where the most prominent artefact in the category is the one a commercial studio must refuse** (`p768` PolyForm, `p769` ZTPL, `p771` CC-BY-NC-SA).
+
+### 🔵 `T724` — the legacy address resolves, so `p770-B`'s test clears it
+
+`jkbrzt/rrule` and `jakubroztocil/rrule` both return `HEAD` `9f2061febeeb63d03352efe33d30c33073a0242` — one repository by owner redirect. 🟢 **Harmless, same class as `NREL/*`.** 🟢 **`p770-B`'s instrument — *does the DISPLAYED ADDRESS RESOLVE* — is the right question and it passes here.**
+
+### 🔴 `T725` — a federal agency can publish an open-source claim with no reachable repository
+
+The CDC's immunization-gateway page states the project is *"available to the public under the Apache 2.0 License"*. 🔴 **`CDCgov/IZGateway` and `CDCgov/iz-gateway` both return a credential prompt on the ref channel**, against passing positive controls in the same run. 🔴 **ABSENT-OR-PRIVATE under both spellings.** 🔵 **`p769` found the opposite and better case — a regulator shipping the duty artefact itself under MIT. Both are now on the record, and the lesson is the same: the claim is not the repository.**
+
+### 🔴 `T726` — the API and HTML channels are both `403`, re-measured, so `★` is withdrawn from this pass's shelves
+
+`ACTION p770-F` asked for a third channel for stars and `pushed_at` **or** for the column to be dropped. 🔴 **Measured again this pass: `api.github.com/repos/*` returns an access error for every address outside this session's own repositories; `github.com/<owner>/<repo>` returns `403`; `search/repositories` returns `total_count: 0`.** 🟢 **`git ls-remote --symref` and `raw.githubusercontent.com` both work for every address.** 🟢 **So `★` is replaced on this pass's tables by `default branch` and `HEAD`, which were obtainable for all `58` addresses, and by grant bytes + `sha256₁₂`, obtainable for all `45` payloads.** 🔵 **Every star figure that appears on this pass's shelves is attributed to the third-party aggregator that reported it and is not endorsed.**
+
+### 🔵 `T727` — the education vertical layer is `1`-in-`10` permissive, and the one permissive platform is not an SIS
+
+Measured this pass: of `10` real education platforms, **`1` is permissive** (Kolibri, MIT) and it is a content-delivery system. **`4` are GPL, `3` AGPL, `1` LGPL-with-a-dangling-pointer, `1` declaration-only, `2` have no grant at all.** 🔴 **There is no permissive student information system, school ERP or school-health module in existence.** 🟢 **So the pupil-health record cannot be a fork of an SIS — it must be a FHIR service federated to whatever SIS the client owns.** The deliverable's shape is forced by the licence map, not chosen.
+
+### 🔵 `T728` — eight default branches that are not `main` or `master`, and one is actively dangerous
+
+`Dev` · `develop` (×3) · **`19.0`** (OpenEduCat) · **`v31.0.00`** (Gibbon) · **`mobile`** ([francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis)) · `release` (Tutor). 🔴 **RosarioSIS's default branch is `mobile`** — tooling that assumes `master` clones a non-default tree **silently and without error**. 🟢 **`git ls-remote --symref` is the only channel this base has that returns the real default branch, and it is the reason no branch on this pass's shelves is guessed.**
+
+
 # 🆕 Trends new at `p767` (researched 2026-11-11) — `T669`–`T687`
 
 

@@ -1,0 +1,46 @@
+addr	path	http	bytes	sha256_12	title_line
+LHNCBC/phr	LICENSE.md	200	2709	e0f0a9f61c8f	## LICENSE
+informatici/openhospital	LICENSE	200	35149	3972dc9744f6	                    GNU GENERAL PUBLIC LICENSE
+openmrs/openmrs-core	LICENSE	200	18199	cdac49b80fab	Mozilla Public License, version 2.0
+hapifhir/hapi-fhir	LICENSE.txt	200	11357	c71d239df917	                                 Apache License
+microsoft/fhir-server	LICENSE	200	1162	27ebda9d51f0	    MIT License
+medplum/medplum	LICENSE.txt	200	9765	0477dcb7f150	                              Apache License
+HL7-FAST/consent-management-server	LICENSE	200	11357	58d1e17ffe51	                                 Apache License
+openemr/openemr	LICENSE	200	35147	8ceb4b9ee5ad	                    GNU GENERAL PUBLIC LICENSE
+getodk/collect	LICENSE.md	200	10494	d1ee81266b96	Apache License
+learningequality/kolibri	LICENSE	200	1097	3c056b34a476	MIT License
+moodle/moodle	COPYING.txt	200	35147	8ceb4b9ee5ad	                    GNU GENERAL PUBLIC LICENSE
+openedx/edx-platform	LICENSE	200	35136	e12d78569742	                    GNU AFFERO GENERAL PUBLIC LICENSE
+OpenEduCat/openeducat_erp	LICENSE	200	8241	528f84036800	For copyright information, please see the COPYRIGHT file.
+frappe/education	license.txt	200	19	1fcecf395312	License: GNU GPL V3
+GibbonEdu/core	LICENSE	200	35121	93178a43d6d3	GNU GENERAL PUBLIC LICENSE
+francoisjacquet/rosariosis	LICENSE	200	15214	d954e14e5c75	                    GNU GENERAL PUBLIC LICENSE
+overhangio/tutor	LICENSE.txt	200	34523	0d96a4ff68ad	                    GNU AFFERO GENERAL PUBLIC LICENSE
+instructure/canvas-lms	LICENSE	200	34520	57c8ff33c9c0	                    GNU AFFERO GENERAL PUBLIC LICENSE
+HKUDS/DeepTutor	LICENSE	200	11408	cd2f54e1e506	                                 Apache License
+THU-MAIC/OpenMAIC	LICENSE	200	1065	ba2525637432	MIT License
+satvik314/educhain	LICENSE	200	1092	e3321a1b62cd	MIT License
+huggingface/smolagents	LICENSE	200	11357	c71d239df917	                                 Apache License
+CAHLR/OATutor	LICENSE	200	1105	5baaaf977a28	MIT License
+panaversity/learn-agentic-ai	LICENSE	200	1068	8ea022e30a9b	MIT License
+microsoft/ai-agents-for-beginners	LICENSE	200	1141	c2cfccb812fe	    MIT License
+All-Hands-AI/OpenHands	LICENSE	200	1096	e1d1fa9f3a8d	The MIT License (MIT)
+openfga/openfga	LICENSE	200	10176	1c46d7b2bed9	                                 Apache License
+dateutil/dateutil	LICENSE	200	2889	ba00f51a0d92	Copyright 2017- Paul Ganssle <paul@ganssle.io>
+jakubroztocil/rrule	LICENCE	200	3493	6c12f89b62fc	rrule.js: Library for working with recurrence rules for calendar dates.
+SEED-platform/seed	LICENSE.md	200	4610	630588a10340	SEED Platform™, Copyright (c) 2017, 2026 Alliance for Energy Innovation, LLC, and other 
+synthetichealth/synthea	LICENSE	200	11357	b40930bbcf80	                                 Apache License
+microsoft/presidio	LICENSE	200	1084	f3e86ee59a49	The MIT License (MIT)
+LinuxForHealth/FHIR	LICENSE	200	11358	c6596eb7be85	                                 Apache License
+getodk/central	LICENSE.md	200	10494	d1ee81266b96	Apache License
+smart-on-fhir/client-js	LICENSE	200	571	465cc184a5cb	Copyright 2015 Boston Children's Hospital
+google/fhir-data-pipes	LICENSE	200	11358	cfc7749b96f6	                                 Apache License
+openmrs/openmrs-module-fhir2	LICENSE	200	18792	628e0ecc1ee3	Mozilla Public License Version 2.0
+langchain-ai/langgraph	LICENSE	200	1072	d9bb52f2e354	MIT License
+crewAIInc/crewAI	LICENSE	200	1055	28868731966f	Copyright (c) 2025 crewAI, Inc.
+pydantic/pydantic-ai	LICENSE	200	1100	bc0e89738f36	The MIT License (MIT)
+openai/openai-agents-python	LICENSE	200	1063	13df7812ca53	MIT License
+patchy631/ai-engineering-hub	LICENSE	200	1066	93123909818c	MIT License
+datawhalechina/hello-agents	LICENSE.txt	200	20849	1349a4b61484	Attribution-NonCommercial-ShareAlike 4.0 International
+microsoft/generative-ai-for-beginners	LICENSE	200	1141	c2cfccb812fe	    MIT License
+mlabonne/llm-course	LICENSE	200	11357	c71d239df917	                                 Apache License
